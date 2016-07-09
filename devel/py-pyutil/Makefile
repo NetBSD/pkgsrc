@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/07/09 13:03:43 wiz Exp $
 
 DISTNAME=	pyutil-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-zbase32-[0-9]*:../../converters/py-zbase32
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted via py-setuptools_trial, py-zbase32
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted via py-setuptools_trial, py-zbase32
 
 REPLACE_PYTHON+=	pyutil/test/current/test_mathutil.py
 REPLACE_PYTHON+=	pyutil/benchmarks/bench_xor.py pyutil/lineutil.py pyutil/scripts/*.py pyutil/test/*/*.py

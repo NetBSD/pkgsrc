@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:03:42 wiz Exp $
 
 DISTNAME=		PQueue-0.2
 PKGNAME=		${PYPKGPREFIX}-pqueue-0.2
@@ -19,7 +19,7 @@ BUILD_TARGET=		default
 
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.2
 
 PYQ_DOCDIR=	${PREFIX}/share/doc/${PYPKGPREFIX}-PQueue
 

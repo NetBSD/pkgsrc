@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/12/05 21:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/09 13:03:51 wiz Exp $
 
 DISTNAME=	gnuplot-py-1.8
 PKGNAME=	${PYPKGPREFIX}-gnuplot-1.8
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
 USE_LANGUAGES=	# empty
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.8
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/03/07 18:36:05 nros Exp $
+# $NetBSD: Makefile,v 1.16 2016/07/09 13:04:09 wiz Exp $
 
 DISTNAME=	libplist-1.12
 CATEGORIES=	textproc
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	libplist++.pc.in
 PKGCONFIG_OVERRIDE+=	libplist.pc.in
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.8
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../devel/py-cython/tool.mk"

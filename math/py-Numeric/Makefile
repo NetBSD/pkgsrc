@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.54 2016/07/09 13:03:54 wiz Exp $
 
 DISTNAME=	Numeric-24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://numeric.scipy.org/
 COMMENT=	Adds multidimensional numeric arrays to Python
 
 PYSETUP=	setup.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 24.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 24.2
 
 PLIST_VARS+=	blas
 .if exists(/System/Library/Frameworks/vecLib.framework)
