@@ -167,3 +167,44 @@ func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
 
 	c.Check(s.Output(), equals, "NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.\n")
 }
+
+func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+
+	fname := s.CreateTmpFileLines(c, "PLIST",
+		"@comment $"+"NetBSD$",
+		"lib/libvirt/connection-driver/libvirt_driver_storage.la",
+		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la",
+		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la",
+		"lib/libvirt/lock-driver/lockd.la",
+		"share/augeas/lenses/virtlockd.aug",
+		"share/doc/${PKGNAME}/html/32favicon.png",
+		"share/doc/${PKGNAME}/html/404.html",
+		"share/doc/${PKGNAME}/html/acl.html",
+		"share/doc/${PKGNAME}/html/aclpolkit.html",
+		"share/doc/${PKGNAME}/html/windows.html",
+		"share/examples/libvirt/libvirt.conf",
+		"share/locale/zh_CN/LC_MESSAGES/libvirt.mo",
+		"share/locale/zh_TW/LC_MESSAGES/libvirt.mo",
+		"share/locale/zu/LC_MESSAGES/libvirt.mo",
+		"@pkgdir share/examples/libvirt/nwfilter",
+		"@pkgdir        etc/libvirt/qemu/networks/autostart",
+		"@pkgdir        etc/logrotate.d",
+		"@pkgdir        etc/sasl2")
+	lines := LoadExistingLines(fname, false)
+	ChecklinesPlist(lines)
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: ~/PLIST:3: \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_storage.la\".\n"+
+		"WARN: ~/PLIST:4: \"lib/libvirt/connection-driver/libvirt_driver_libxl.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\".\n")
+
+	s.UseCommandLine(c, "-Wall", "--autofix")
+	ChecklinesPlist(lines)
+
+	fixedLines := LoadExistingLines(fname, false)
+
+	c.Check(s.Output(), equals, ""+
+		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
+		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
+	c.Check(len(lines), equals, len(fixedLines))
+}
