@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/09 06:22:48 ryoon Exp $
+
+SHA1 (noto-emoji-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = fa4da135a4dd9fa580554d963f5360b0b88acc23
+RMD160 (noto-emoji-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = 3e6ed0715dfd68331f650e34a7899457817f1b28
+SHA512 (noto-emoji-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = 496a9449da24513b73c65d6a6663766be851f910dc6c822c1cf1c80bded36b65484008e5a6a61388aeec97b7786042be29664abc3ca1d73da6354282fbd90a1d
+Size (noto-emoji-1.05/NotoEmoji-Regular-2f1ffdd6fbbd05d6f382138a3d3adcd89c5ce800.tar.gz) = 14472470 bytes
