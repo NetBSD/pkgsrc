@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/02/25 16:20:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/07/09 11:50:36 rillig Exp $
 
 DISTNAME=	host-20070128
 CATEGORIES=	net
@@ -9,13 +9,13 @@ HOMEPAGE=	http://www.weird.com/~woods/projects/host.html
 COMMENT=	Powerful DNS query and testing tool
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
-NO_CONFIGURE =	yes
+NO_CONFIGURE=		yes
 
 CONFLICTS+=	bind-[0-9]*
 
 USE_BSD_MAKEFILE=	yes
-MAKE_FILE=	Makefile.BSD
-MAKE_FLAGS+=	__NetBSD__=1
+MAKE_FILE=		Makefile.BSD
+MAKE_FLAGS+=		__NetBSD__=1
 
 USE_TOOLS+=	nroff
 
