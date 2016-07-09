@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/12/05 21:25:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2016/07/09 13:03:37 wiz Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 REPLACE_PYTHON=	create-credits.py info.py
 
 USE_TOOLS+=	msgfmt

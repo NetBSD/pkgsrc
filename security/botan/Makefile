@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/06/19 05:26:37 markd Exp $
+# $NetBSD: Makefile,v 1.40 2016/07/09 13:04:03 wiz Exp $
 
 DISTNAME=	Botan-1.10.12
 PKGNAME=	${DISTNAME:tl}
@@ -15,7 +15,7 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8.14; 1.10 is supposedly better
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.8.14; 1.10 is supposedly better
 
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	./configure.py
