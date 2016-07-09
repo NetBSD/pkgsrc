@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.62 2016/07/09 10:25:27 rillig Exp $
+# $NetBSD: Makefile,v 1.63 2016/07/09 10:39:37 rillig Exp $
 
 DISTNAME=		wdm-1.28
-PKGREVISION=		18
+PKGREVISION=		19
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://voins.program.ru/wdm/
 COMMENT=		WINGs display manager
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
@@ -28,6 +29,8 @@ CONFIGURE_ENV+=		SYSTEM_SHELL=${SH:Q}
 RCD_SCRIPTS=		wdm
 
 PKG_SYSCONFSUBDIR=	wdm
+
+BUILD_DEFS+=		VARBASE
 
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/authdir			\
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
