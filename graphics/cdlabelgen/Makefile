@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2015/06/12 10:50:08 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/07/09 06:38:19 wiz Exp $
 
 DISTNAME=	cdlabelgen-4.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.aczoom.com/pub/tools/
 EXTRACT_SUFX=	.tgz
