@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2733 2016/07/09 09:44:00 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2734 2016/07/09 12:24:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3958,3 +3958,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Starlet to 0.30 [wen 2016-07-09]
 	Updated www/p5-POE-Component-Server-SimpleHTTP to 2.22 [wen 2016-07-09]
 	Updated pkgtools/pkglint to 5.4.4 [rillig 2016-07-09]
+	Updated graphics/freetype2 to 2.6.4 [adam 2016-07-09]
