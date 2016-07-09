@@ -252,7 +252,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_variable(c *check.C) {
 
 	ChecklinesBuildlink3Mk(mklines)
 
-	c.Check(s.Output(), equals, "WARN: buildlink3.mk:3: Please use \"py\" instead of \"${PYPKGPREFIX}\".\n")
+	c.Check(s.Output(), equals, "WARN: buildlink3.mk:3: Please use \"py\" instead of \"${PYPKGPREFIX}\" (also in other variables in this file).\n")
 }
 
 func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_unknown_variable(c *check.C) {
@@ -275,6 +275,6 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_unknown_variable(c *che
 	ChecklinesBuildlink3Mk(mklines)
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string.\n"+
+		"WARN: buildlink3.mk:3: Please replace \"${LICENSE}\" with a simple string (also in other variables in this file).\n"+
 		"WARN: buildlink3.mk:13: This line should contain the following text: BUILDLINK_TREE+=\t-${LICENSE}-wxWidgets\n")
 }
