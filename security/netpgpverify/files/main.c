@@ -95,20 +95,22 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 	size_t		 cookie;
 	char		*data;
 	int		 el;
+	int		 ok;
 
 	cursor = pgpv_new_cursor();
+	ok = 0;
 	if (strcasecmp(cmd, "cat") == 0) {
 		if ((cookie = pgpv_verify(cursor, pgp, in, cc)) != 0) {
 			if ((size = pgpv_get_verified(cursor, cookie, &data)) > 0) {
 				write(STDOUT_FILENO, data, size);
 			}
-			return 1;
+			ok = 1;
 		}
 	} else if (strcasecmp(cmd, "dump") == 0) {
 		if ((cookie = pgpv_verify(cursor, pgp, in, cc)) != 0) {
 			size = pgpv_dump(pgp, &data);
 			write(STDOUT_FILENO, data, size);
-			return 1;
+			ok = 1;
 		}
 	} else if (strcasecmp(cmd, "verify") == 0 || strcasecmp(cmd, "trust") == 0) {
 		modifiers = (strcasecmp(cmd, "trust") == 0) ? "trust" : NULL;
@@ -117,14 +119,16 @@ verify_data(pgpv_t *pgp, const char *cmd, const char *inname, char *in, ssize_t 
 			ptime(pgpv_get_cursor_num(cursor, "sigtime"));
 			el = pgpv_get_cursor_element(cursor, 0);
 			pentry(pgp, el, modifiers);
-			return 1;
+			ok = 1;
+		} else {
+			fprintf(stderr, "Signature did not match contents -- %s\n",
+				pgpv_get_cursor_str(cursor, "why"));
 		}
-		fprintf(stderr, "Signature did not match contents -- %s\n",
-			pgpv_get_cursor_str(cursor, "why"));
 	} else {
 		fprintf(stderr, "unrecognised command \"%s\"\n", cmd);
 	}
-	return 0;
+	pgpv_cursor_close(cursor);
+	return ok;
 }
 
 int
