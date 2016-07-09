@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 17:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/09 13:03:42 wiz Exp $
 
 DISTNAME=	logilab-common-0.63.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 .endif
 
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mxDateTime
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

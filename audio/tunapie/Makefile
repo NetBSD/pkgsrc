@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/09 13:03:32 wiz Exp $
 
 DISTNAME=	tunapie-2.1.18
 PKGREVISION=	1
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-wxWidgets
 
 USE_LANGUAGES=	# none
 

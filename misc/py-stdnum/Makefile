@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:57 wiz Exp $
 
 DISTNAME=	python-stdnum-0.9
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-suds
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-suds
 
 DEPENDS+=   ${PYPKGPREFIX}-suds>=0.4:../../net/py-suds
 

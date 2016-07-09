@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:53 wiz Exp $
 
 DISTNAME=	tegaki-python-0.3.1
 PKGREVISION=	1
@@ -23,7 +23,7 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	tegaki/engine.py
 SUBST_SED.prefix=	-e 's|/usr/local/share|${PREFIX}/share|g'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-zinnia
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-zinnia
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

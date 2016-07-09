@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/12/05 21:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.19 2016/07/09 13:04:04 wiz Exp $
 
 DISTNAME=	cryptkit-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/cryptkit/
 COMMENT=	Python Cryptographic Toolkit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.9
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.9
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

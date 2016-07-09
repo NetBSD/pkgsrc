@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/04/11 19:01:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.51 2016/07/09 13:04:02 wiz Exp $
 
 DISTNAME=	PackageKit-0.4.0
 PKGREVISION=	37
@@ -48,7 +48,7 @@ PKGCONFIG_OVERRIDE+=	data/packagekit-qt.pc.in
 PKGCONFIG_OVERRIDE+=	data/packagekit-glib.pc.in
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.4.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.4.0
 
 REPLACE_PYTHON=	backends/test/helpers/PackageKitDbusTest.py	\
 		lib/python/packagekit/client.py		\

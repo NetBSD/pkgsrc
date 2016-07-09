@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.10 2016/07/09 13:03:44 wiz Exp $
 
 # used by meta-pkgs/py-tryton-platform/Makefile
 # used by devel/py-proteus/Makefile
@@ -134,4 +134,4 @@ MASTER_SITES=   ${TRYTON_SITES}
 
 DIST_SUBDIR=	tryton-${TRYTON_BASEVER}
 
-PYTHON_VERSIONS_INCOMPATIBLE=   33 34 35 # py-gtk2 via py-pycha via py-relatorio
+PYTHON_VERSIONS_INCOMPATIBLE=   34 35 # py-gtk2 via py-pycha via py-relatorio

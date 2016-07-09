@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/12/05 21:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/09 13:03:31 wiz Exp $
 
 DISTNAME=	CDDB-1.4
 PKGNAME=	${PYPKGPREFIX}-cddb-1.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://cddb-py.sourceforge.net/
 COMMENT=	Python module to access the CDDB online database
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.4
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

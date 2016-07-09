@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:42 wiz Exp $
 
 DISTNAME=	python-memcached-1.54
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 DOCDIR=			${PREFIX}/share/doc/py-memcached
 INSTALLATION_DIRS=	${DOCDIR}
 REPLACE_PYTHON+=	memcache.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.53
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.53
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/memcache.html ${DESTDIR}${DOCDIR}

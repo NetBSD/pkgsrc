@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:03:31 wiz Exp $
 
 DISTNAME=	python-musicbrainz2-0.4.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 .include "../../audio/libdiscid/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

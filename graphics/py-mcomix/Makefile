@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/06/11 14:34:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/09 13:03:51 wiz Exp $
 
 DISTNAME=	mcomix-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 EGG_NAME=	${DISTNAME:S/01/1/}
 
 PYTHON_SELF_CONFLICT=	yes
