@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestParser_PkgbasePattern(c *check.C) {
+func (s *Suite) Test_Parser_PkgbasePattern(c *check.C) {
 	checkRest := func(pattern, expected, rest string) {
 		parser := NewParser(dummyLine, pattern, false)
 		actual := parser.PkgbasePattern()
@@ -19,7 +19,7 @@ func (s *Suite) TestParser_PkgbasePattern(c *check.C) {
 	checkRest("${PYPKGPREFIX}-metakit-[0-9]*", "${PYPKGPREFIX}-metakit", "-[0-9]*")
 }
 
-func (s *Suite) TestParser_Dependency(c *check.C) {
+func (s *Suite) Test_Parser_Dependency(c *check.C) {
 
 	checkRest := func(pattern string, expected DependencyPattern, rest string) {
 		parser := NewParser(dummyLine, pattern, false)
@@ -49,27 +49,4 @@ func (s *Suite) TestParser_Dependency(c *check.C) {
 	check("xulrunner10>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}", DependencyPattern{"xulrunner10", ">=", "${MOZ_BRANCH}${MOZ_BRANCH_MINOR}", "", "", ""})
 	checkRest("gnome-control-center>=2.20.1{,nb*}", DependencyPattern{"gnome-control-center", ">=", "2.20.1", "", "", ""}, "{,nb*}")
 	// "{ssh{,6}-[0-9]*,openssh-[0-9]*}" is not representable using the current data structure
-}
-
-// @Beta
-func (s *Suite) Test_Parser_ShAst(c *check.C) {
-	f := func(args ...interface{}) interface{} { return nil }
-	Commands := f
-	Command := f
-	Arg := f
-	Varuse := f
-	Varassign := f
-	Subshell := f
-	Pipe := f
-
-	_ = "cd ${WRKSRC}/doc/man/man3; PAGES=\"`ls -1 | ${SED} -e 's,3qt$$,3,'`\";"
-
-	Commands(
-		Command("cd",
-			Arg(Varuse("WRKSRC"), "/doc/man/man3")),
-		Varassign("PAGES", Subshell(
-			Pipe(
-				Command("ls", "-1"),
-				Command(Varuse("SED"), "-e", "s,3qt$,3,")))))
-
 }

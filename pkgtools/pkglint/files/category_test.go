@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestCheckdirCategory_TotallyBroken(c *check.C) {
+func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 	G.globalData.InitVartypes()
 	s.CreateTmpFile(c, "archivers/Makefile", ""+
 		"# $\n"+
@@ -33,7 +33,7 @@ func (s *Suite) TestCheckdirCategory_TotallyBroken(c *check.C) {
 		"ERROR: ~/archivers/Makefile:4: The file should end here.\n")
 }
 
-func (s *Suite) TestCheckdirCategory_InvalidComment(c *check.C) {
+func (s *Suite) Test_CheckdirCategory_invalid_comment(c *check.C) {
 	G.globalData.InitVartypes()
 	s.CreateTmpFile(c, "archivers/Makefile", ""+
 		"# $"+"NetBSD$\n"+

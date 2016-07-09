@@ -76,7 +76,7 @@ func (ck *PatchChecker) Check() {
 		}
 
 		ck.exp.Advance()
-		ck.previousLineEmpty = line.Text == "" || hasPrefix(line.Text, "diff ") || hasPrefix(line.Text, "=============")
+		ck.previousLineEmpty = ck.isEmptyLine(line.Text)
 		if !ck.previousLineEmpty {
 			ck.seenDocumentation = true
 		}
@@ -143,7 +143,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	}
 	if !ck.exp.EOF() {
 		line := ck.exp.CurrentLine()
-		if line.Text != "" && !matches(line.Text, rePatchUniFileDel) && !hasPrefix(line.Text, "Index:") && !hasPrefix(line.Text, "diff ") {
+		if !ck.isEmptyLine(line.Text) && !matches(line.Text, rePatchUniFileDel) {
 			line.Warn0("Empty line or end of file expected.")
 			Explain3(
 				"This empty line makes the end of the patch clearly visible.",
@@ -247,6 +247,14 @@ func (ck *PatchChecker) checktextRcsid(text string) {
 			ck.exp.PreviousLine().Warn1("Found RCS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
 		}
 	}
+}
+
+func (ck *PatchChecker) isEmptyLine(text string) bool {
+	return text == "" ||
+		hasPrefix(text, "index ") ||
+		hasPrefix(text, "Index: ") ||
+		hasPrefix(text, "diff ") ||
+		hasPrefix(text, "=============")
 }
 
 type FileType uint8

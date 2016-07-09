@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestCheckDirent_outside(c *check.C) {
+func (s *Suite) Test_CheckDirent_outside(c *check.C) {
 	s.CreateTmpFile(c, "empty", "")
 
 	CheckDirent(s.tmpdir)
@@ -12,7 +12,7 @@ func (s *Suite) TestCheckDirent_outside(c *check.C) {
 	c.Check(s.Output(), equals, "ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".\n")
 }
 
-func (s *Suite) TestCheckDirent(c *check.C) {
+func (s *Suite) Test_CheckDirent(c *check.C) {
 	s.CreateTmpFile(c, "mk/bsd.pkg.mk", "")
 	s.CreateTmpFile(c, "category/package/Makefile", "")
 	s.CreateTmpFile(c, "category/Makefile", "")

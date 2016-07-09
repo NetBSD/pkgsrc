@@ -151,7 +151,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("BUILDLINK_TRANSFORM", lkShell, CheckvarWrapperTransform, "*: append")
 	acl("BUILDLINK_TRANSFORM.*", lkShell, CheckvarWrapperTransform, "*: append")
 	acl("BUILDLINK_TREE", lkShell, CheckvarIdentifier, "buildlink3.mk: append")
-	acl("BUILD_DEFS", lkShell, CheckvarVarname, "Makefile, Makefile.common, options.mk: append")
+	acl("BUILD_DEFS", lkShell, CheckvarVariableName, "Makefile, Makefile.common, options.mk: append")
 	acl("BUILD_DEPENDS", lkSpace, CheckvarDependencyWithPath, "Makefile, Makefile.common, *.mk: append")
 	pkglist("BUILD_DIRS", lkShell, CheckvarWrksrcSubdirectory)
 	pkglist("BUILD_ENV", lkShell, CheckvarShellWord)
@@ -162,10 +162,10 @@ func (gd *GlobalData) InitVartypes() {
 	pkg("BUILD_USES_MSGFMT", lkNone, CheckvarYes)
 	acl("BUILTIN_PKG", lkNone, CheckvarIdentifier, "builtin.mk: set, use-loadtime, use")
 	acl("BUILTIN_PKG.*", lkNone, CheckvarPkgName, "builtin.mk: set, use-loadtime, use")
-	acl("BUILTIN_FIND_FILES_VAR", lkShell, CheckvarVarname, "builtin.mk: set")
+	acl("BUILTIN_FIND_FILES_VAR", lkShell, CheckvarVariableName, "builtin.mk: set")
 	acl("BUILTIN_FIND_FILES.*", lkShell, CheckvarPathname, "builtin.mk: set")
 	acl("BUILTIN_FIND_GREP.*", lkNone, CheckvarString, "builtin.mk: set")
-	acl("BUILTIN_FIND_HEADERS_VAR", lkShell, CheckvarVarname, "builtin.mk: set")
+	acl("BUILTIN_FIND_HEADERS_VAR", lkShell, CheckvarVariableName, "builtin.mk: set")
 	acl("BUILTIN_FIND_HEADERS.*", lkShell, CheckvarPathname, "builtin.mk: set")
 	acl("BUILTIN_FIND_LIBS", lkShell, CheckvarPathname, "builtin.mk: set")
 	acl("BUILTIN_IMAKE_CHECK", lkShell, CheckvarUnchecked, "builtin.mk: set")
@@ -232,7 +232,7 @@ func (gd *GlobalData) InitVartypes() {
 	usr("DEPENDS_TARGET", lkShell, CheckvarIdentifier)
 	acl("DESCR_SRC", lkShell, CheckvarPathname, "Makefile: set, append; Makefile.common: default, set")
 	sys("DESTDIR", lkNone, CheckvarPathname)
-	acl("DESTDIR_VARNAME", lkNone, CheckvarVarname, "Makefile, Makefile.common: set")
+	acl("DESTDIR_VARNAME", lkNone, CheckvarVariableName, "Makefile, Makefile.common: set")
 	sys("DEVOSSAUDIO", lkNone, CheckvarPathname)
 	sys("DEVOSSSOUND", lkNone, CheckvarPathname)
 	pkglist("DISTFILES", lkShell, CheckvarFilename)
@@ -320,7 +320,7 @@ func (gd *GlobalData) InitVartypes() {
 	pkg("FILESDIR", lkNone, CheckvarRelativePkgPath)
 	pkglist("FILES_SUBST", lkShell, CheckvarShellWord)
 	acl("FILES_SUBST_SED", lkShell, CheckvarShellWord, "")
-	pkglist("FIX_RPATH", lkShell, CheckvarVarname)
+	pkglist("FIX_RPATH", lkShell, CheckvarVariableName)
 	pkglist("FLEX_REQD", lkShell, CheckvarVersion)
 	acl("FONTS_DIRS.*", lkShell, CheckvarPathname, "Makefile: set, append, use; Makefile.common: append, use")
 	sys("GAMEDATAMODE", lkNone, CheckvarFileMode)
@@ -410,7 +410,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("MAINTAINER", lkNone, CheckvarMailAddress, "Makefile: set; Makefile.common: default")
 	sys("MAKE", lkNone, CheckvarShellCommand)
 	pkglist("MAKEFLAGS", lkShell, CheckvarShellWord)
-	acl("MAKEVARS", lkShell, CheckvarVarname, "buildlink3.mk, builtin.mk, hacks.mk: append")
+	acl("MAKEVARS", lkShell, CheckvarVariableName, "buildlink3.mk, builtin.mk, hacks.mk: append")
 	pkglist("MAKE_DIRS", lkShell, CheckvarPathname)
 	pkglist("MAKE_DIRS_PERMS", lkShell, CheckvarPerms)
 	acl("MAKE_ENV", lkShell, CheckvarShellWord, "Makefile, Makefile.common: append, set, use; buildlink3.mk, builtin.mk: append; *.mk: append, use")
@@ -484,7 +484,7 @@ func (gd *GlobalData) InitVartypes() {
 	pkglist("ONLY_FOR_PLATFORM", lkSpace, CheckvarMachinePlatformPattern)
 	pkg("ONLY_FOR_UNPRIVILEGED", lkNone, CheckvarYesNo)
 	sys("OPSYS", lkNone, CheckvarIdentifier)
-	acl("OPSYSVARS", lkShell, CheckvarVarname, "Makefile, Makefile.common: append")
+	acl("OPSYSVARS", lkShell, CheckvarVariableName, "Makefile, Makefile.common: append")
 	acl("OSVERSION_SPECIFIC", lkNone, CheckvarYes, "Makefile, Makefile.common: set")
 	sys("OS_VERSION", lkNone, CheckvarVersion)
 	pkg("OVERRIDE_DIRDEPTH*", lkNone, CheckvarInteger)
@@ -548,7 +548,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("PKG_GECOS.*", lkNone, CheckvarMessage, "Makefile: set")
 	acl("PKG_GID.*", lkNone, CheckvarInteger, "Makefile: set")
 	acl("PKG_GROUPS", lkShell, CheckvarShellWord, "Makefile: set, append")
-	pkglist("PKG_GROUPS_VARS", lkShell, CheckvarVarname)
+	pkglist("PKG_GROUPS_VARS", lkShell, CheckvarVariableName)
 	acl("PKG_HOME.*", lkNone, CheckvarPathname, "Makefile: set")
 	acl("PKG_HACKS", lkShell, CheckvarIdentifier, "hacks.mk: append")
 	sys("PKG_INFO", lkNone, CheckvarShellCommand)
@@ -584,7 +584,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("PKG_SYSCONFVAR", lkNone, CheckvarIdentifier, "") // FIXME: name/type mismatch.
 	acl("PKG_UID", lkNone, CheckvarInteger, "Makefile: set")
 	acl("PKG_USERS", lkShell, CheckvarShellWord, "Makefile: set, append")
-	pkg("PKG_USERS_VARS", lkShell, CheckvarVarname)
+	pkg("PKG_USERS_VARS", lkShell, CheckvarVariableName)
 	acl("PKG_USE_KERBEROS", lkNone, CheckvarYes, "Makefile, Makefile.common: set")
 	// PLIST.* has special handling code
 	pkglist("PLIST_VARS", lkShell, CheckvarIdentifier)
@@ -658,7 +658,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("SUBST_MESSAGE.*", lkNone, CheckvarMessage, "Makefile, Makefile.*, *.mk: set")
 	acl("SUBST_SED.*", lkNone, CheckvarSedCommands, "Makefile, Makefile.*, *.mk: set, append")
 	pkg("SUBST_STAGE.*", lkNone, CheckvarStage)
-	pkglist("SUBST_VARS.*", lkShell, CheckvarVarname)
+	pkglist("SUBST_VARS.*", lkShell, CheckvarVariableName)
 	pkglist("SUPERSEDES", lkSpace, CheckvarDependency)
 	pkglist("TEST_DIRS", lkShell, CheckvarWrksrcSubdirectory)
 	pkglist("TEST_ENV", lkShell, CheckvarShellWord)
@@ -724,25 +724,25 @@ func enum(values string) *VarChecker {
 	}
 	name := "enum: " + values + " " // See IsEnum
 	return &VarChecker{name, func(cv *VartypeCheck) {
-		if cv.op == opUseMatch {
-			if !vmap[cv.value] && cv.value == cv.valueNovar {
+		if cv.Op == opUseMatch {
+			if !vmap[cv.Value] && cv.Value == cv.ValueNoVar {
 				canMatch := false
 				for value := range vmap {
-					if ok, err := path.Match(cv.value, value); err != nil {
-						cv.line.Warnf("Invalid match pattern %q.", cv.value)
+					if ok, err := path.Match(cv.Value, value); err != nil {
+						cv.Line.Warnf("Invalid match pattern %q.", cv.Value)
 					} else if ok {
 						canMatch = true
 					}
 				}
 				if !canMatch {
-					cv.line.Warnf("The pattern %q cannot match any of { %s } for %s.", cv.value, values, cv.varname)
+					cv.Line.Warnf("The pattern %q cannot match any of { %s } for %s.", cv.Value, values, cv.Varname)
 				}
 			}
 			return
 		}
 
-		if cv.value == cv.valueNovar && !vmap[cv.value] {
-			cv.line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.value, cv.varname, values)
+		if cv.Value == cv.ValueNoVar && !vmap[cv.Value] {
+			cv.Line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.Value, cv.Varname, values)
 		}
 	}}
 }

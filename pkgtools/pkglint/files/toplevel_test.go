@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestCheckdirToplevel(c *check.C) {
+func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 	s.CreateTmpFile(c, "Makefile", ""+
 		"# $"+"NetBSD$\n"+
 		"\n"+
