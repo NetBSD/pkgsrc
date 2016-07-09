@@ -9,7 +9,7 @@ func (w *MkShWalker) Walk(list *MkShList, callback func(node interface{})) {
 	}
 }
 
-func (w *MkShWalker) iterate(list *MkShList) chan interface{} {
+func (w *MkShWalker) iterate(list *MkShList) <-chan interface{} {
 	elements := make(chan interface{})
 
 	go func() {
@@ -20,7 +20,7 @@ func (w *MkShWalker) iterate(list *MkShList) chan interface{} {
 	return elements
 }
 
-func (w *MkShWalker) walkList(list *MkShList, collector chan interface{}) {
+func (w *MkShWalker) walkList(list *MkShList, collector chan<- interface{}) {
 	collector <- list
 
 	for _, andor := range list.AndOrs {
@@ -28,7 +28,7 @@ func (w *MkShWalker) walkList(list *MkShList, collector chan interface{}) {
 	}
 }
 
-func (w *MkShWalker) walkAndOr(andor *MkShAndOr, collector chan interface{}) {
+func (w *MkShWalker) walkAndOr(andor *MkShAndOr, collector chan<- interface{}) {
 	collector <- andor
 
 	for _, pipeline := range andor.Pipes {
@@ -36,7 +36,7 @@ func (w *MkShWalker) walkAndOr(andor *MkShAndOr, collector chan interface{}) {
 	}
 }
 
-func (w *MkShWalker) walkPipeline(pipeline *MkShPipeline, collector chan interface{}) {
+func (w *MkShWalker) walkPipeline(pipeline *MkShPipeline, collector chan<- interface{}) {
 	collector <- pipeline
 
 	for _, command := range pipeline.Cmds {
@@ -44,7 +44,7 @@ func (w *MkShWalker) walkPipeline(pipeline *MkShPipeline, collector chan interfa
 	}
 }
 
-func (w *MkShWalker) walkCommand(command *MkShCommand, collector chan interface{}) {
+func (w *MkShWalker) walkCommand(command *MkShCommand, collector chan<- interface{}) {
 	collector <- command
 
 	switch {
@@ -59,7 +59,7 @@ func (w *MkShWalker) walkCommand(command *MkShCommand, collector chan interface{
 	}
 }
 
-func (w *MkShWalker) walkSimpleCommand(command *MkShSimpleCommand, collector chan interface{}) {
+func (w *MkShWalker) walkSimpleCommand(command *MkShSimpleCommand, collector chan<- interface{}) {
 	collector <- command
 
 	w.walkWords(command.Assignments, collector)
@@ -70,7 +70,7 @@ func (w *MkShWalker) walkSimpleCommand(command *MkShSimpleCommand, collector cha
 	w.walkRedirects(command.Redirections, collector)
 }
 
-func (w *MkShWalker) walkCompoundCommand(command *MkShCompoundCommand, collector chan interface{}) {
+func (w *MkShWalker) walkCompoundCommand(command *MkShCompoundCommand, collector chan<- interface{}) {
 	collector <- command
 
 	switch {
@@ -89,7 +89,7 @@ func (w *MkShWalker) walkCompoundCommand(command *MkShCompoundCommand, collector
 	}
 }
 
-func (w *MkShWalker) walkCase(caseClause *MkShCaseClause, collector chan interface{}) {
+func (w *MkShWalker) walkCase(caseClause *MkShCaseClause, collector chan<- interface{}) {
 	collector <- caseClause
 
 	w.walkWord(caseClause.Word, collector)
@@ -100,13 +100,13 @@ func (w *MkShWalker) walkCase(caseClause *MkShCaseClause, collector chan interfa
 	}
 }
 
-func (w *MkShWalker) walkFunctionDefinition(funcdef *MkShFunctionDefinition, collector chan interface{}) {
+func (w *MkShWalker) walkFunctionDefinition(funcdef *MkShFunctionDefinition, collector chan<- interface{}) {
 	collector <- funcdef
 
 	w.walkCompoundCommand(funcdef.Body, collector)
 }
 
-func (w *MkShWalker) walkIf(ifClause *MkShIfClause, collector chan interface{}) {
+func (w *MkShWalker) walkIf(ifClause *MkShIfClause, collector chan<- interface{}) {
 	collector <- ifClause
 	for i, cond := range ifClause.Conds {
 		w.walkList(cond, collector)
@@ -117,13 +117,13 @@ func (w *MkShWalker) walkIf(ifClause *MkShIfClause, collector chan interface{}) 
 	}
 }
 
-func (w *MkShWalker) walkLoop(loop *MkShLoopClause, collector chan interface{}) {
+func (w *MkShWalker) walkLoop(loop *MkShLoopClause, collector chan<- interface{}) {
 	collector <- loop
 	w.walkList(loop.Cond, collector)
 	w.walkList(loop.Action, collector)
 }
 
-func (w *MkShWalker) walkWords(words []*ShToken, collector chan interface{}) {
+func (w *MkShWalker) walkWords(words []*ShToken, collector chan<- interface{}) {
 	collector <- words
 
 	for _, word := range words {
@@ -131,11 +131,11 @@ func (w *MkShWalker) walkWords(words []*ShToken, collector chan interface{}) {
 	}
 }
 
-func (w *MkShWalker) walkWord(word *ShToken, collector chan interface{}) {
+func (w *MkShWalker) walkWord(word *ShToken, collector chan<- interface{}) {
 	collector <- word
 }
 
-func (w *MkShWalker) walkRedirects(redirects []*MkShRedirection, collector chan interface{}) {
+func (w *MkShWalker) walkRedirects(redirects []*MkShRedirection, collector chan<- interface{}) {
 	collector <- redirects
 
 	for _, redirect := range redirects {
@@ -144,7 +144,7 @@ func (w *MkShWalker) walkRedirects(redirects []*MkShRedirection, collector chan 
 	}
 }
 
-func (w *MkShWalker) walkFor(forClause *MkShForClause, collector chan interface{}) {
+func (w *MkShWalker) walkFor(forClause *MkShForClause, collector chan<- interface{}) {
 	collector <- forClause
 
 	collector <- forClause.Varname
