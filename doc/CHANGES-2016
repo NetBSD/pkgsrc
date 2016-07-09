@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2731 2016/07/09 07:08:33 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2732 2016/07/09 08:09:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3956,3 +3956,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/revbump to 2.14 [wiz 2016-07-09]
 	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.36 [wen 2016-07-09]
 	Updated www/p5-Starlet to 0.30 [wen 2016-07-09]
+	Updated www/p5-POE-Component-Server-SimpleHTTP to 2.22 [wen 2016-07-09]
