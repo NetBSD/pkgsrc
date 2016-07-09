@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 11:27:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/09 13:11:10 rillig Exp $
 #
 
 DISTNAME=	libmrss-0.19.2
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES =	c c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	mrss.pc.in
 
