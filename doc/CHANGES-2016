@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2738 2016/07/09 13:17:38 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2739 2016/07/09 17:20:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3963,3 +3963,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed lang/python33 [wiz 2016-07-09]
 	Updated meta-pkgs/bulk-medium to 20160709 [wiz 2016-07-09]
 	Updated pkgtools/pkglint to 5.4.5 [rillig 2016-07-09]
+	Updated security/netpgpverify to 20160708 [agc 2016-07-09]
+	Updated security/libnetpgpverify to 20160708 [agc 2016-07-09]
