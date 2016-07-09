@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:26:03 adam Exp $
-#
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:04:11 wiz Exp $
 
 .include "../../textproc/yamcha/Makefile.common"
 
@@ -12,7 +11,7 @@ COMMENT=	YamCha python module
 USE_LANGUAGES=	c c++
 
 PYSETUPSUBDIR=	python
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.33
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.33
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
 

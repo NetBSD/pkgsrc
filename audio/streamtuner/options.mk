@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: options.mk,v 1.6 2016/07/09 13:03:32 wiz Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.streamtuner
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-xiph
 .if !empty(PKG_OPTIONS:Mpython)
 PLIST.python=		yes
 CONFIGURE_ARGS+=	--enable-python
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 .  include "../../x11/py-gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-python

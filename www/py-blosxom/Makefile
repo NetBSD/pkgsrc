@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/12/05 21:26:04 adam Exp $
+# $NetBSD: Makefile,v 1.21 2016/07/09 13:04:13 wiz Exp $
 
 PYBLOXSOMVERS=	1.5.3
 DISTNAME=	pyblosxom-${PYBLOXSOMVERS}
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	${DOC_SUBDIR}
 
 REPLACE_PYTHON=		Pyblosxom/data/pyblosxom.cgi
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 pre-configure:
 	cd ${WRKSRC} && ${FIND} Pyblosxom -type f -name '*.orig' \
