@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: options.mk,v 1.8 2016/07/09 13:03:44 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
@@ -11,17 +11,17 @@ PKG_SUGGESTED_OPTIONS+=	psycopg pytz simplejson sphinx
 # XXX python-Levenshtein (http://github.com/miohtama/python-Levenshtein) options
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-cdecimal is obsolete for that version and thus not available
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-cdecimal is obsolete for that version and thus not available
 DEPENDS+=		${PYPKGPREFIX}-cdecimal-[0-9]*:../../math/py-cdecimal
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mysqldb
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mysqldb
 DEPENDS+=		${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 .endif
 
 .if !empty(PKG_OPTIONS:Mpydot)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-dot
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-dot
 DEPENDS+=		${PYPKGPREFIX}-dot-[0-9]*:../../graphics/py-dot
 .endif
 
@@ -42,6 +42,6 @@ DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 .endif
 
 .if !empty(PKG_OPTIONS:Mwebdav)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-pywebdav
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-pywebdav
 DEPENDS+=		${PYPKGPREFIX}-pywebdav-[0-9]*:../../www/py-pywebdav
 .endif

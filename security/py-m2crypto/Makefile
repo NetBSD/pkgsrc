@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/06/08 17:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/07/09 13:04:04 wiz Exp $
 
 DISTNAME=		M2Crypto-0.22.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,7 +19,7 @@ BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7i{,nb*}
 
 PYSETUPBUILDARGS=	build_ext --openssl=${BUILDLINK_PREFIX.openssl}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.21.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.21.1
 
 .include "../../lang/python/egg.mk"
 .include "../../devel/swig/buildlink3.mk"

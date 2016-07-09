@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:47 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:53 wiz Exp $
 
 DISTNAME=	tegaki-tools-0.3.1
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	tegaki-pygtk>=0.3:../../inputmethod/tegaki-pygtk
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.3.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

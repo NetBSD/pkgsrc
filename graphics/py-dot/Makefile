@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 13:03:51 wiz Exp $
 
 DISTNAME=	pydot-1.0.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,7 @@ LICENSE=      	mit
 DEPENDS+=	${PYPKGPREFIX}-pyparsing-[0-9]*:../../devel/py-pyparsing
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.0.28
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.0.28
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/README

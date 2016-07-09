@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/12/05 21:25:48 adam Exp $
+# $NetBSD: Makefile,v 1.11 2016/07/09 13:03:54 wiz Exp $
 
 DISTNAME=	libgmail-0.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-mechanize-[0-9]*:../../www/py-mechanize
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mechanize
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mechanize
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

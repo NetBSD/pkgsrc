@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/03/05 09:55:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2016/07/09 13:04:09 wiz Exp $
 
 DISTNAME=	dblatex-0.3.7
 CATEGORIES=	textproc
@@ -43,7 +43,7 @@ USE_TOOLS+=	gmake
 .include "options.mk"
 
 REPLACE_PYTHON+=	scripts/dblatex lib/dbtexmf/dblatex/xetex/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.2
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing man page installation path.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:26 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 13:03:43 wiz Exp $
 
 VERS=		0.9.3
 DISTNAME=	rope-${VERS}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://rope.sourceforge.net/
 COMMENT=	Rope is a python refactoring library
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 # XXX tests in contrib.codeassisttest fail
 do-test:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:25:51 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/07/09 13:03:58 wiz Exp $
 
 .include "Makefile.common"
 
@@ -9,7 +9,7 @@ CONFLICTS=		bittorrent-[0-9]*
 DEPENDS+=	${PYPKGPREFIX}-cursespanel-[0-9]*:../../devel/py-cursespanel
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.3.18
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.18
 
 EGG_NAME=	BitTornado-T_${PKGVERSION_NOREV}._BitTornado_
 
