@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/10 11:15:41 rillig Exp $
 
 DISTNAME=	pypcap-1.1
 PKGNAME=	${PYPKGPREFIX}-pcap-1.1
@@ -13,19 +13,20 @@ LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 
-SUBST_CLASSES+=         python
-SUBST_FILES.python=     Makefile
-SUBST_SED.python+=      -e 's,@PYTHON@,${PYTHONBIN},g'
-SUBST_STAGE.python=     post-patch
-SUBST_CLASSES+=         prefix
-SUBST_FILES.prefix=     Makefile
-SUBST_SED.prefix=       -e "s|@PREFIX@|${PREFIX}|g"
-SUBST_STAGE.prefix=     post-patch
+SUBST_CLASSES+=		python
+SUBST_FILES.python=	Makefile
+SUBST_SED.python+=	-e 's,@PYTHON@,${PYTHONBIN},g'
+SUBST_STAGE.python=	post-patch
 
-PYDISTUTILSPKG= yes
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	Makefile
+SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_STAGE.prefix=	post-patch
+
+PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-pyrex
 
-FILES_SUBST+=   PYTHONBIN=${PYTHONBIN:Q}
+FILES_SUBST+=	PYTHONBIN=${PYTHONBIN:Q}
 
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
