@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.23 2016/07/09 16:07:35 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.24 2016/07/10 07:46:29 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -145,9 +145,9 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
     For example, in <filename>Makefile</filename>:</para>
 
 <programlisting>
-PLIST_VARS+=	foo
+PLIST_VARS+=    foo
 .if <replaceable>condition</replaceable>
-PLIST.foo=	yes
+PLIST.foo=      yes
 .else
 </programlisting>
 
