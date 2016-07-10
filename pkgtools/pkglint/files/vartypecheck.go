@@ -970,7 +970,7 @@ func (cv *VartypeCheck) Version() {
 		if !matches(cv.Value, `^[\d?\[][\w\-.*?\[\]]+$`) {
 			cv.Line.Warn1("Invalid version number pattern %q.", cv.Value)
 		}
-	} else if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^\d[\w.]+$`) {
+	} else if cv.Value == cv.ValueNoVar && !matches(cv.Value, `^\d[\w.]*$`) {
 		cv.Line.Warn1("Invalid version number %q.", cv.Value)
 	}
 }
