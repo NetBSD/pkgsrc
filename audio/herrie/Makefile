@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/04/20 12:10:26 nros Exp $
+# $NetBSD: Makefile,v 1.27 2016/07/10 09:42:07 rillig Exp $
 #
 
 DISTNAME=	herrie-2.2
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	verbose
 EGDIR=			${PREFIX}/share/examples/herrie
 CONF_FILES=		${EGDIR}/herrie.conf ${PKG_SYSCONFDIR}/herrie.conf
 
-CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ENV+=		CONFDIR=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		TRANSDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
