@@ -80,7 +80,7 @@ type MkShCaseClause struct {
 type MkShCaseItem struct {
 	Patterns  []*ShToken
 	Action    *MkShList
-	Separator *MkShSeparator
+	Separator MkShSeparator
 }
 
 type MkShIfClause struct {
@@ -163,11 +163,11 @@ type MkShRedirection struct {
 	Target *ShToken
 }
 
-// One of ";", "&", "\n"
-type MkShSeparator string
+type MkShSeparator uint8
 
-var (
-	SEP_SEMI       MkShSeparator = ";"
-	SEP_BACKGROUND MkShSeparator = "&"
-	SEP_NEWLINE    MkShSeparator = "\n"
+const (
+	sepNone       MkShSeparator = iota
+	sepSemicolon                // ;
+	sepBackground               // &
+	sepNewline                  // \n
 )
