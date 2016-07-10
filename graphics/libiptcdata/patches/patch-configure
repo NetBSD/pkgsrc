@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/07/10 21:57:47 kamil Exp $
+
+Fix unportable shell construct.
+
+--- configure.orig	2009-07-06 00:02:26.000000000 +0000
++++ configure
+@@ -20251,7 +20251,7 @@ $as_echo_n "checking for Python library 
+                 py_version=`$PYTHON -c "from distutils.sysconfig import *; \
+                         from string import join; \
+                         print join(get_config_vars('VERSION'))"`
+-                if test "$py_version" == "None"; then
++                if test "$py_version" = "None"; then
+                         if test -n "$PYTHON_VERSION"; then
+                                 py_version=$PYTHON_VERSION
+                         else
