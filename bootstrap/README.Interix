@@ -1,6 +1,173 @@
-$NetBSD: README.Interix,v 1.16 2015/01/19 00:12:43 obache Exp $
+$NetBSD: README.Interix,v 1.17 2016/07/10 01:25:16 sevan Exp $
 
-Please read the general README file, and the Interix installation
-instructions in the pkgsrc Guide at:
+Interix is a POSIX-compatible subsystem for the Windows NT kernel, providing a
+Unix-like environment with a tighter kernel integration than available with
+Cygwin. It is part of the Windows Services for Unix package, available for free
+for any licensed copy of Windows 2000, XP (not including XP Home), or 2003. SFU
+can be downloaded from http://www.microsoft.com/windows/sfu/.
 
-    http://www.NetBSD.org/docs/pkgsrc/platforms.html#interix
+Services for Unix 3.5 has been tested. 3.0 or 3.1 may work, but are not
+officially supported. (The main difference in 3.0/3.1 is lack of pthreads, but
+other parts of libc may also be lacking.)
+
+Services for Unix Applications (aka SUA) is an integrated component of Windows
+Server 2003 R2 (5.2), Windows Vista and Windows Server 2008 (6.0), Windows 7 and
+Windows Server 2008 R2 (6.1). As of this writing, the SUA's Interix 6.0 (32bit)
+and 6.1 (64bit) subsystems have been tested. Other versions may work as well.
+The Interix 5.x subsystem has not yet been tested with pkgsrc.
+
+When installing Interix/SFU
+---------------------------
+
+At an absolute minimum, the following packages must be installed from the
+Windows Services for Unix 3.5 distribution in order to use pkgsrc:
+
+Utilities -> Base Utilities
+
+Interix GNU Components -> (all)
+
+Remote Connectivity
+
+Interix SDK
+
+When using pkgsrc on Interix, DO NOT install the Utilities subcomponent "UNIX
+Perl". That is Perl 5.6 without shared module support, installed to /usr/local,
+and will only cause confusion. Instead, install Perl 5.8 from pkgsrc (or from a
+binary package).
+
+The Remote Connectivity subcomponent "Windows Remote Shell Service" does not
+need to be installed, but Remote Connectivity itself should be installed in
+order to have a working inetd.
+
+During installation you may be asked whether to enable setuid behavior for
+Interix programs, and whether to make pathnames default to case-sensitive.
+Setuid should be enabled, and case-sensitivity MUST be enabled. (Without
+case-sensitivity, a large number of packages including perl will not build.)
+
+NOTE: Newer Windows service packs change the way binary execution works (via the
+Data Execution Prevention feature). In order to use pkgsrc and other
+gcc-compiled binaries reliably, a hotfix containing POSIX.EXE, PSXDLL.DLL,
+PSXRUN.EXE, and PSXSS.EXE (899522 or newer) must be installed. Hotfixes are
+available from Microsoft through a support contract; however, Debian Interix
+Port has made most Interix hotfixes available for personal use from
+http://www.debian-interix.net/hotfixes/.
+
+In addition to the hotfix noted above, it may be necessary to disable Data
+Execution Prevention entirely to make Interix functional. This may happen only
+with certain types of CPUs; the cause is not fully understood at this time. If
+gcc or other applications still segfault repeatedly after installing one of the
+hotfixes note above, the following option can be added to the appropriate
+"boot.ini" line on the Windows boot drive: /NoExecute=AlwaysOff (WARNING, this
+will disable DEP completely, which may be a security risk if applications are
+often run as a user in the Administrators group!).
+
+What to do if Interix/SFU is already installed
+----------------------------------------------
+
+If SFU is already installed and you wish to alter these settings to work with
+pkgsrc, note the following things.
+
+To uninstall UNIX Perl, use Add/Remove Programs, select Microsoft Windows
+Services for UNIX, then click Change. In the installer, choose Add or Remove,
+then uncheck Utilities->UNIX Perl.
+
+To enable case-sensitivity for the file system, run REGEDIT.EXE, and change the
+following registry key:
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
+
+Set the DWORD value "obcaseinsensitive" to 0; then reboot.
+
+To enable setuid binaries (optional), run REGEDIT.EXE, and change the following
+registry key:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Services for UNIX
+
+Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.
+
+Important notes for using pkgsrc
+--------------------------------
+
+The package manager (either the pkgsrc "su" user, or the user running "pkg_add")
+must be a member of the local Administrators group. Such a user must also be
+used to run the bootstrap. This is slightly relaxed from the normal pkgsrc
+requirement of "root".
+
+The package manager should use a umask of 002. "make install" will automatically
+complain if this is not the case. This ensures that directories written in
+/var/db/pkg are Administrators-group writeable.
+
+The popular Interix binary packages from http://www.interopsystems.com/ use an
+older version of pkgsrc's pkg_* tools. Ideally, these should NOT be used in
+conjunction with pkgsrc. If you choose to use them at the same time as the
+pkgsrc packages, ensure that you use the proper pkg_* tools for each type of
+binary package.
+
+The TERM setting used for DOS-type console windows (including those invoked by
+the csh and ksh startup shortcuts) is "interix". Most systems don't have a
+termcap/terminfo entry for it, but the following .termcap entry provides
+adequate emulation in most cases:
+
+interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
+
+Limitations of the Interix platform
+-----------------------------------
+
+Though Interix suffices as a familiar and flexible substitute for a full
+Unix-like platform, it has some drawbacks that should be noted for those
+desiring to make the most of Interix.
+
+X11:
+
+Interix comes with the standard set of X11R6 client libraries, and can run X11
+based applications, but it does not come with an X server. Some options are
+StarNet X-Win32 http://www.starnet.com/products/xwin32/, Hummingbird Exceed
+http://connectivity.hummingbird.com/products/nc/exceed/ (available in a trimmed
+version for Interix from Interop Systems as the Interop X Server
+http://www.interopsystems.com/InteropXserver.htm), and the free X11 server
+included with Cygwin http://x.cygwin.com/.
+
+X11 acceleration:
+
+Because Interix runs in a completely different NT subsystem from Win32
+applications, it does not currently support various X11 protocol extensions for
+acceleration (such as MIT-SHM or DGA). Most interactive applications to a local
+X server will run reasonably fast, but full motion video and other graphics
+intensive applications may require a faster-than-expected CPU.
+
+Audio:
+
+Interix has no native support for audio output. For audio support, pkgsrc uses
+the esound client/server audio system on Interix. Unlike on most platforms, the
+audio/esound package does not contain the esd server component. To output audio
+via an Interix host, the emulators/cygwin_esound package must also be installed.
+
+CD/DVDs, USB, and SCSI:
+
+Direct device access is not currently supported in Interix, so it is not
+currently possible to access CD/DVD drives, USB devices, or SCSI devices through
+non-filesystem means. Among other things, this makes it impossible to use
+Interix directly for CD/DVD burning.
+
+Tape drives:
+
+Due to the same limitations as for CD-ROMs and SCSI devices, tape drives are
+also not directly accessible in Interix. However, support is in work to make
+tape drive access possible by using Cygwin as a bridge (similarly to audio
+bridged via Cygwin's esound server).
+
+Known issues for pkgsrc on Interix
+----------------------------------
+
+It is not necessary, in general, to have a "root" user on the Windows system;
+any member of the local Administrators group will suffice. However, some
+packages currently assume that the user named "root" is the privileged user. To
+accommodate these, you may create such a user; make sure it is in the local
+group Administrators (or your language equivalent).
+
+pkg_add creates directories of mode 0755, not 0775, in $PKG_DBDIR. For the time
+being, install packages as the local Administrator (or your language
+equivalent), or run the following command after installing a package to work
+around the issue:
+
+# chmod -R g+w $PKG_DBDIR
