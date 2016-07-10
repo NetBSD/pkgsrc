@@ -1,8 +1,6 @@
 package main
 
 import (
-	"strings"
-
 	check "gopkg.in/check.v1"
 )
 
@@ -498,24 +496,6 @@ func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C)
 	NewMkLines(lines).Check()
 
 	c.Check(s.Output(), equals, "WARN: ~/Makefile:3--4: A shell comment does not stop at the end of line.\n")
-}
-
-func (s *Suite) Test_ShQuote(c *check.C) {
-	traceQuoting := func(input string) (result string) {
-		sq := NewShQuote("")
-		for _, part := range strings.Split(input, "x") {
-			sq.Feed(part)
-			result += part + "[" + sq.q.String() + "]"
-		}
-		return
-	}
-
-	c.Check(traceQuoting("x\"x`x`x\"x'x\"x'"), equals, "[plain]\"[d]`[db]`[d]\"[plain]'[s]\"[s]'[plain]")
-	c.Check(traceQuoting("x\"x`x'x'x`x\""), equals, "[plain]\"[d]`[db]'[dbs]'[db]`[d]\"[plain]")
-	c.Check(traceQuoting("x\\\"x\\'x\\`x\\\\"), equals, "[plain]\\\"[plain]\\'[plain]\\`[plain]\\\\[plain]")
-	c.Check(traceQuoting("x\"x\\\"x\\'x\\`x\\\\"), equals, "[plain]\"[d]\\\"[d]\\'[d]\\`[d]\\\\[d]")
-	c.Check(traceQuoting("x'x\\\"x\\'x\\`x\\\\"), equals, "[plain]'[s]\\\"[s]\\'[plain]\\`[plain]\\\\[plain]")
-	c.Check(traceQuoting("x`x\\\"x\\'x\\`x\\\\"), equals, "[plain]`[b]\\\"[b]\\'[b]\\`[b]\\\\[b]")
 }
 
 func (s *Suite) Test_ShellLine_unescapeBackticks(c *check.C) {

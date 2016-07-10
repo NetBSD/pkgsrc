@@ -7,8 +7,8 @@ import (
 func (s *Suite) Test_GlobalData_InitVartypes(c *check.C) {
 	G.globalData.InitVartypes()
 
-	c.Check(G.globalData.vartypes["BSD_MAKE_ENV"].checker.name, equals, "ShellWord")
-	c.Check(G.globalData.vartypes["USE_BUILTIN.*"].checker.name, equals, "YesNoIndirectly")
+	c.Check(G.globalData.vartypes["BSD_MAKE_ENV"].basicType.name, equals, "ShellWord")
+	c.Check(G.globalData.vartypes["USE_BUILTIN.*"].basicType.name, equals, "YesNoIndirectly")
 }
 
 func (s *Suite) Test_parselinesSuggestedUpdates(c *check.C) {

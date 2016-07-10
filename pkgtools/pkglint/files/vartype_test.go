@@ -8,13 +8,13 @@ func (s *Suite) Test_Vartype_EffectivePermissions(c *check.C) {
 	G.globalData.InitVartypes()
 
 	if t := G.globalData.vartypes["PREFIX"]; c.Check(t, check.NotNil) {
-		c.Check(t.checker.name, equals, "Pathname")
+		c.Check(t.basicType.name, equals, "Pathname")
 		c.Check(t.aclEntries, check.DeepEquals, []AclEntry{{glob: "*", permissions: aclpUse}})
 		c.Check(t.EffectivePermissions("Makefile"), equals, aclpUse)
 	}
 
 	if t := G.globalData.vartypes["EXTRACT_OPTS"]; c.Check(t, check.NotNil) {
-		c.Check(t.checker.name, equals, "ShellWord")
+		c.Check(t.basicType.name, equals, "ShellWord")
 		c.Check(t.EffectivePermissions("Makefile"), equals, aclpAppend|aclpSet)
 		c.Check(t.EffectivePermissions("../Makefile"), equals, aclpAppend|aclpSet)
 		c.Check(t.EffectivePermissions("options.mk"), equals, aclpUnknown)

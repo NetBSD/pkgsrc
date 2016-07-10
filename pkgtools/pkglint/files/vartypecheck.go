@@ -83,7 +83,7 @@ const (
 	reEmulArch = reMachineArch // Just a wild guess.
 )
 
-func enumFromRe(re string) *VarChecker {
+func enumFromRe(re string) *BasicType {
 	values := strings.Split(re, "|")
 	sort.Strings(values)
 	seen := make(map[string]bool)
@@ -274,7 +274,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 			line.Warn0("Please use USE_TOOLS+=gmake instead of this dependency.")
 		}
 
-		cv.MkLine.CheckVartypePrimitive(cv.Varname, CheckvarDependency, cv.Op, pattern, cv.MkComment, cv.Guessed)
+		cv.MkLine.CheckVartypePrimitive(cv.Varname, BtDependency, cv.Op, pattern, cv.MkComment, cv.Guessed)
 		return
 	}
 
@@ -339,7 +339,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 }
 
 func (cv *VartypeCheck) FetchURL() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, CheckvarURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
 	for siteURL, siteName := range G.globalData.MasterSiteURLToVar {
 		if hasPrefix(cv.Value, siteURL) {
@@ -399,7 +399,7 @@ func (cv *VartypeCheck) FileMode() {
 }
 
 func (cv *VartypeCheck) Homepage() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, CheckvarURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
 	if m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`); m {
 		baseURL := G.globalData.MasterSiteVarToURL[sitename]
@@ -486,7 +486,8 @@ func (cv *VartypeCheck) LdFlag() {
 }
 
 func (cv *VartypeCheck) License() {
-	checklineLicense(cv.MkLine, cv.Value)
+	licenseChecker := &LicenseChecker{cv.MkLine}
+	licenseChecker.Check(cv.Value, cv.Op)
 }
 
 func (cv *VartypeCheck) MachineGnuPlatform() {
@@ -608,7 +609,7 @@ func (cv *VartypeCheck) Option() {
 // The PATH environment variable
 func (cv *VartypeCheck) Pathlist() {
 	if !contains(cv.Value, ":") && cv.Guessed {
-		cv.MkLine.CheckVartypePrimitive(cv.Varname, CheckvarPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+		cv.MkLine.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 		return
 	}
 
@@ -671,7 +672,7 @@ func (cv *VartypeCheck) PkgName() {
 }
 
 func (cv *VartypeCheck) PkgOptionsVar() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, CheckvarVariableName, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtVariableName, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 	if matches(cv.Value, `\$\{PKGBASE[:\}]`) {
 		cv.Line.Error0("PKGBASE must not be used in PKG_OPTIONS_VAR.")
 		Explain3(
@@ -846,7 +847,7 @@ func (cv *VartypeCheck) SedCommands() {
 						"",
 						"This way, short sed commands cannot be hidden at the end of a line.")
 				}
-				mkline.CheckVartypePrimitive(cv.Varname, CheckvarSedCommand, cv.Op, tokens[i], cv.MkComment, cv.Guessed)
+				mkline.CheckVartypePrimitive(cv.Varname, BtSedCommand, cv.Op, tokens[i], cv.MkComment, cv.Guessed)
 			} else {
 				line.Error0("The -e option to sed requires an argument.")
 			}
@@ -888,10 +889,6 @@ func (cv *VartypeCheck) Stage() {
 	}
 }
 
-func (cv *VartypeCheck) String() {
-	// No further checks possible.
-}
-
 func (cv *VartypeCheck) Tool() {
 	if cv.Varname == "TOOLS_NOOP" && cv.Op == opAssignAppend {
 		// no warning for package-defined tool definitions
@@ -910,8 +907,8 @@ func (cv *VartypeCheck) Tool() {
 	}
 }
 
-func (cv *VartypeCheck) Unchecked() {
-	// Do nothing, as the name says.
+func (cv *VartypeCheck) Unknown() {
+	// Do nothing.
 }
 
 func (cv *VartypeCheck) URL() {
@@ -994,7 +991,7 @@ func (cv *VartypeCheck) WrapperTransform() {
 }
 
 func (cv *VartypeCheck) WrkdirSubdirectory() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, CheckvarPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 }
 
 // A directory relative to ${WRKSRC}, for use in CONFIGURE_DIRS and similar variables.
