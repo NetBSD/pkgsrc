@@ -1364,21 +1364,16 @@ NetBSD, when you use make(1) from the base system, it is in the directory /etc
 /. In all other cases the default location is ${PREFIX}/etc/, depending on
 where you told the bootstrap program to install the binary packages.
 
-During the bootstrap, an example configuration file is created. To use that,
-you have to create the directory ${PREFIX}/etc and copy the example file there.
-
 The format of the configuration file is that of the usual BSD-style Makefiles.
 The whole pkgsrc configuration is done by setting variables in this file. Note
 that you can define all kinds of variables, and no special error checking (for
-example for spelling mistakes) takes place, so you have to try it out to see if
-it works.
+example for spelling mistakes) takes place.
 
 5.1. General configuration
 
-In this section, you can find some variables that apply to all pkgsrc packages.
-A complete list of the variables that can be configured by the user is
-available in mk/defaults/mk.conf, together with some comments that describe
-each variable's intent.
+The following variables apply to all pkgsrc packages. A complete list of the
+variables that can be configured by the user is available in mk/defaults/
+mk.conf, together with some comments that describe each variable's intent.
 
   * LOCALBASE: Where packages will be installed. The default is /usr/pkg. Do
     not mix binary packages with different LOCALBASEs!
@@ -1562,8 +1557,7 @@ LDFLAGS+=        -your -linkerflags
     will not display the commands as they are executed (normal, default, quiet
     operation); the value 1 will display all shell commands before their
     invocation, and the value 2 will display both the shell commands before
-    their invocation, and their actual execution progress with set -x will be
-    displayed.
+    their invocation, as well as their actual execution progress with set -x.
 
 5.6. Selecting Build Options
 
@@ -1646,9 +1640,8 @@ distribute it.
 To create a binary package, change into the appropriate directory in pkgsrc,
 and run make package:
 
-# cd misc/figlet
-# make package
-
+$ cd misc/figlet
+$ make package
 
 This will build and install your package (if not already done), and then build
 a binary package from what was installed. You can then use the pkg_* tools to
@@ -1683,8 +1676,8 @@ instance, when you have multiple machines that should run the same software, it
 is wasted time if they all build their packages themselves from source. Or you
 may want to build a list of packages you want and check them before deploying
 onto production system. There is a way of getting a set of binary packages: The
-bulk build system, or pbulk ("p" stands for "parallel). This chapter describes
-how to set it up so that the packages are most likely to be usable later.
+bulk build system, or pbulk ("p" stands for "parallel"). This chapter describes
+how to set it up.
 
 7.1. Preparations
 
@@ -1693,12 +1686,12 @@ set of them. Full bulk builds usually consume a lot more resources, both space
 and time, than builds for some practical sets of packages. There exists a
 number of particularly heavy packages that are not actually interesting to a
 wide audience. For a limited bulk builds you need to make a list of packages
-you want to build. Note, that all their dependencies will be built, so you
-don't need to track them manually.
+you want to build. Note that all their dependencies will be built, so you don't
+need to track them manually.
 
 During bulk builds various packages are installed and deinstalled in /usr/pkg
 (or whatever LOCALBASE is), so make sure that you don't need any package during
-the builds. Essentially, you should provide fresh system, either a chroot
+the builds. Essentially, you should provide a fresh system, either a chroot
 environment or something even more restrictive, depending on what the operating
 system provides, or dedicate the whole physical machine. As a useful side
 effect this makes sure that bulk builds cannot break anything in your system.
@@ -1716,11 +1709,11 @@ Running a pbulk-style bulk build works roughly as follows:
 
 7.2.1. Configuration
 
-To simplify configuration we provide helper script mk/pbulk/pbulk.sh.
+To simplify configuration, we provide the helper script mk/pbulk/pbulk.sh.
 
 In order to use it, prepare a clear system (real one, chroot environment, jail,
 zone, virtual machine). Configure network access to fetch distribution files.
-Create user with name "pbulk".
+Create a user with name "pbulk".
 
 Fetch and extract pkgsrc. Use a command like one of these:
 
@@ -1741,12 +1734,13 @@ Note
 mk.conf.frag is a fragment of mk.conf that contains settings you want to apply
 to packages you build. For instance,
 
-PKG_DEVELOPER=          yes             # perform more checks
-X11_TYPE=               modular         # use pkgsrc X11
-SKIP_LICENSE_CHECK=     yes             # accept all licences (useful when building all packages)
+PKG_DEVELOPER=          yes     # perform more checks
+X11_TYPE=               modular # use pkgsrc X11
+SKIP_LICENSE_CHECK=     yes     # accept all licences (useful
+                                # when building all packages)
 
 If configured for limited list, replace the list in /usr/pbulk/etc/pbulk.list
-with your list of packages one per line without empty lines or comments. E.g.:
+with your list of packages, one per line without empty lines or comments. E.g.:
 
 www/firefox
 mail/thunderbird
