@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/05/15 14:15:14 taca Exp $
+# $NetBSD: Makefile,v 1.23 2016/07/10 18:42:50 rillig Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_RUBY}
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
-LICENSE=	${RUBY_LICENSE}
 
 RUBY_VERSION_SUPPORTED=	21
 
