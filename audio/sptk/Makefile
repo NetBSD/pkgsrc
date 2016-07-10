@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/10/07 13:06:04 obache Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/10 12:06:21 mef Exp $
 #
 
-DISTNAME=	SPTK-3.6
+DISTNAME=	SPTK-3.9
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sp-tk/}

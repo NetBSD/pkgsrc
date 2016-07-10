@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/10/07 13:06:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/07/10 12:06:21 mef Exp $
 SPTK/bin/acep
 SPTK/bin/acorr
 SPTK/bin/agcep
@@ -8,9 +8,9 @@ SPTK/bin/b2mc
 SPTK/bin/bcp
 SPTK/bin/bcut
 SPTK/bin/bell
-SPTK/bin/bell.sh
 SPTK/bin/c2acr
 SPTK/bin/c2ir
+SPTK/bin/c2ndps
 SPTK/bin/c2sp
 SPTK/bin/cat2
 SPTK/bin/cdist
@@ -40,18 +40,14 @@ SPTK/bin/freqt
 SPTK/bin/gc2gc
 SPTK/bin/gcep
 SPTK/bin/glogsp
-SPTK/bin/glogsp.sh
 SPTK/bin/glsadf
 SPTK/bin/gmm
 SPTK/bin/gmmp
 SPTK/bin/gnorm
 SPTK/bin/grlogsp
-SPTK/bin/grlogsp.sh
 SPTK/bin/grpdelay
 SPTK/bin/gseries
-SPTK/bin/gseries.sh
 SPTK/bin/gwave
-SPTK/bin/gwave.sh
 SPTK/bin/histogram
 SPTK/bin/idct
 SPTK/bin/ifft
@@ -71,6 +67,7 @@ SPTK/bin/lpc2c
 SPTK/bin/lpc2lsp
 SPTK/bin/lpc2par
 SPTK/bin/lsp2lpc
+SPTK/bin/lsp2sp
 SPTK/bin/lspcheck
 SPTK/bin/lspdf
 SPTK/bin/ltcdf
@@ -80,11 +77,10 @@ SPTK/bin/merge
 SPTK/bin/mfcc
 SPTK/bin/mgc2mgc
 SPTK/bin/mgc2mgclsp
-SPTK/bin/mgc2mgclsp.sh
 SPTK/bin/mgc2sp
 SPTK/bin/mgcep
 SPTK/bin/mgclsp2mgc
-SPTK/bin/mgclsp2mgc.sh
+SPTK/bin/mgclsp2sp
 SPTK/bin/mglsadf
 SPTK/bin/minmax
 SPTK/bin/mlpg
@@ -92,6 +88,7 @@ SPTK/bin/mlsacheck
 SPTK/bin/mlsadf
 SPTK/bin/msvq
 SPTK/bin/nan
+SPTK/bin/ndps2c
 SPTK/bin/norm0
 SPTK/bin/nrand
 SPTK/bin/par2lpc
@@ -103,7 +100,6 @@ SPTK/bin/poledf
 SPTK/bin/psgr
 SPTK/bin/ramp
 SPTK/bin/raw2wav
-SPTK/bin/raw2wav.sh
 SPTK/bin/rawtowav
 SPTK/bin/reverse
 SPTK/bin/rmse
@@ -122,15 +118,15 @@ SPTK/bin/uels
 SPTK/bin/ulaw
 SPTK/bin/us
 SPTK/bin/us16
-SPTK/bin/us16.sh
 SPTK/bin/uscd
-SPTK/bin/uscd.sh
+SPTK/bin/vc
 SPTK/bin/vopr
 SPTK/bin/vq
 SPTK/bin/vstat
 SPTK/bin/vsum
 SPTK/bin/wav2raw
-SPTK/bin/wav2raw.sh
+SPTK/bin/wavjoin
+SPTK/bin/wavsplit
 SPTK/bin/window
 SPTK/bin/x2x
 SPTK/bin/xgr
@@ -143,12 +139,15 @@ SPTK/share/SPTK/lpfcoef.2to3f
 SPTK/share/SPTK/lpfcoef.2to3s
 SPTK/share/SPTK/lpfcoef.3to2
 SPTK/share/SPTK/lpfcoef.3to4
+SPTK/share/SPTK/lpfcoef.3to5
 SPTK/share/SPTK/lpfcoef.4to3
 SPTK/share/SPTK/lpfcoef.4to5
 SPTK/share/SPTK/lpfcoef.5to2dn
 SPTK/share/SPTK/lpfcoef.5to2up
 SPTK/share/SPTK/lpfcoef.5to7
 SPTK/share/SPTK/lpfcoef.5to8
+SPTK/share/SPTK/lpfcoef.7to4
+SPTK/share/SPTK/lpfcoef.7to8
 share/doc/sptk/README
 share/doc/sptk/SPTKexamples-${PKGVERSION}.pdf
 share/doc/sptk/SPTKref-${PKGVERSION}.pdf
