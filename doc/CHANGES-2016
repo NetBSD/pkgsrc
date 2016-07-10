@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2742 2016/07/09 21:43:31 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2743 2016/07/10 11:37:38 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3969,3 +3969,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libnetpgpverify to 20160709 [agc 2016-07-09]
 	Added archivers/py-czipfile version 1.0.0 [wiz 2016-07-09]
 	Added security/bunny version 0.93 [rillig 2016-07-09]
+	Updated pkgtools/pkglint to 5.4.6 [rillig 2016-07-10]
