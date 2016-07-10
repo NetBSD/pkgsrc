@@ -61,17 +61,6 @@ I. The pkgsrc user's guide
         3.2. Bootstrapping pkgsrc
         3.3. Platform-specific notes
 
-            3.3.1. Cygwin
-            3.3.2. Darwin (Mac OS X)
-            3.3.3. FreeBSD
-            3.3.4. GNU/kFreeBSD
-            3.3.5. Interix
-            3.3.6. IRIX
-            3.3.7. Linux
-            3.3.8. MirBSD
-            3.3.9. OpenBSD
-            3.3.10. Solaris
-
     4. Using pkgsrc
 
         4.1. Using binary packages
@@ -707,17 +696,6 @@ Table of Contents
     3.2. Bootstrapping pkgsrc
     3.3. Platform-specific notes
 
-        3.3.1. Cygwin
-        3.3.2. Darwin (Mac OS X)
-        3.3.3. FreeBSD
-        3.3.4. GNU/kFreeBSD
-        3.3.5. Interix
-        3.3.6. IRIX
-        3.3.7. Linux
-        3.3.8. MirBSD
-        3.3.9. OpenBSD
-        3.3.10. Solaris
-
 4. Using pkgsrc
 
     4.1. Using binary packages
@@ -975,17 +953,6 @@ Table of Contents
 3.2. Bootstrapping pkgsrc
 3.3. Platform-specific notes
 
-    3.3.1. Cygwin
-    3.3.2. Darwin (Mac OS X)
-    3.3.3. FreeBSD
-    3.3.4. GNU/kFreeBSD
-    3.3.5. Interix
-    3.3.6. IRIX
-    3.3.7. Linux
-    3.3.8. MirBSD
-    3.3.9. OpenBSD
-    3.3.10. Solaris
-
 3.1. Binary distribution
 
 See Section 4.1, "Using binary packages".
@@ -1030,458 +997,8 @@ build and install packages.
 
 3.3. Platform-specific notes
 
-3.3.1. Cygwin
-
-Cygwin 1.7.x and later are supported.
-
-You need to install minimal base packages in `Base' category plus any of
-compiler, gcc, gcc4, and/or clang. For gcc and gcc4, C and C++ compiler will be
-installed by default, but you can install Fortran compiler additionally because
-it will be required to use libtool. If it is not installed (or too old),
-Fortran compiler will be installed with pkgsrc automatically.
-
-As noted in Cygwin FAQ: `Why doesn't su work?', su(1) command has been in
-Cygwin distribution, but it has never worked. Unless you bootstrap pkgsrc with
-the --unprivileged option, workaround is:
-
-  * Right click "Cygwin Terminal" in your Start Menu, then pick "Run as
-    administrator".
-
-3.3.2. Darwin (Mac OS X)
-
-Darwin 8.x and up are supported.
-
-Before you start, you need to download and install the Mac OS X Developer Tools
-from Apple's Developer Connection. This requires (free) membership. See http://
-developer.apple.com/macosx/ for details. Also, make sure you install X11 (an
-optional package included with the Developer Tools) if you intend to build
-packages that use the X11 Window System. (If you don't want or need the full
-Xcode GUI, download and install Command Line Tools for Xcode.)
-
-3.3.3. FreeBSD
-
-FreeBSD 8.3 and 9.0 have been tested and are supported, other versions may
-work.
-
-Care should be taken so that the tools that this kit installs do not conflict
-with the FreeBSD userland tools. There are several steps:
-
- 1. FreeBSD stores its ports pkg database in /var/db/pkg. It is therefore
-    recommended that you choose a different location (e.g. /usr/pkgdb) by using
-    the --pkgdbdir option to the bootstrap script.
-
- 2. If you do not intend to use the FreeBSD ports tools, it's probably a good
-    idea to move them out of the way to avoid confusion, e.g.
-
-    # cd /usr/sbin
-    # mv pkg_add pkg_add.orig
-    # mv pkg_create pkg_create.orig
-    # mv pkg_delete pkg_delete.orig
-    # mv pkg_info pkg_info.orig
-
-
- 3. An example mk.conf file will be placed in /etc/mk.conf.example file when
-    you use the bootstrap script.
-
-3.3.4. GNU/kFreeBSD
-
-Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now. Debian GNU/
-kFreeBSD 7.0 or later is tested and supported.
-
-You should install ncurses (libncurses and libncurses-dev) packages.
-
-3.3.5. Interix
-
-Interix is a POSIX-compatible subsystem for the Windows NT kernel, providing a
-Unix-like environment with a tighter kernel integration than available with
-Cygwin. It is part of the Windows Services for Unix package, available for free
-for any licensed copy of Windows 2000, XP (not including XP Home), or 2003. SFU
-can be downloaded from http://www.microsoft.com/windows/sfu/.
-
-Services for Unix 3.5 has been tested. 3.0 or 3.1 may work, but are not
-officially supported. (The main difference in 3.0/3.1 is lack of pthreads, but
-other parts of libc may also be lacking.)
-
-Services for Unix Applications (aka SUA) is an integrated component of Windows
-Server 2003 R2 (5.2), Windows Vista and Windows Server 2008 (6.0), Windows 7
-and Windows Server 2008 R2 (6.1). As of this writing, the SUA's Interix 6.0
-(32bit) and 6.1 (64bit) subsystems have been tested. Other versions may work as
-well. The Interix 5.x subsystem has not yet been tested with pkgsrc.
-
-3.3.5.1. When installing Interix/SFU
-
-At an absolute minimum, the following packages must be installed from the
-Windows Services for Unix 3.5 distribution in order to use pkgsrc:
-
-  * Utilities -> Base Utilities
-
-  * Interix GNU Components -> (all)
-
-  * Remote Connectivity
-
-  * Interix SDK
-
-When using pkgsrc on Interix, DO NOT install the Utilities subcomponent "UNIX
-Perl". That is Perl 5.6 without shared module support, installed to /usr/local,
-and will only cause confusion. Instead, install Perl 5.8 from pkgsrc (or from a
-binary package).
-
-The Remote Connectivity subcomponent "Windows Remote Shell Service" does not
-need to be installed, but Remote Connectivity itself should be installed in
-order to have a working inetd.
-
-During installation you may be asked whether to enable setuid behavior for
-Interix programs, and whether to make pathnames default to case-sensitive.
-Setuid should be enabled, and case-sensitivity MUST be enabled. (Without
-case-sensitivity, a large number of packages including perl will not build.)
-
-NOTE: Newer Windows service packs change the way binary execution works (via
-the Data Execution Prevention feature). In order to use pkgsrc and other
-gcc-compiled binaries reliably, a hotfix containing POSIX.EXE, PSXDLL.DLL,
-PSXRUN.EXE, and PSXSS.EXE (899522 or newer) must be installed. Hotfixes are
-available from Microsoft through a support contract; however, Debian Interix
-Port has made most Interix hotfixes available for personal use from http://
-www.debian-interix.net/hotfixes/.
-
-In addition to the hotfix noted above, it may be necessary to disable Data
-Execution Prevention entirely to make Interix functional. This may happen only
-with certain types of CPUs; the cause is not fully understood at this time. If
-gcc or other applications still segfault repeatedly after installing one of the
-hotfixes note above, the following option can be added to the appropriate
-"boot.ini" line on the Windows boot drive: /NoExecute=AlwaysOff (WARNING, this
-will disable DEP completely, which may be a security risk if applications are
-often run as a user in the Administrators group!)
-
-3.3.5.2. What to do if Interix/SFU is already installed
-
-If SFU is already installed and you wish to alter these settings to work with
-pkgsrc, note the following things.
-
-  * To uninstall UNIX Perl, use Add/Remove Programs, select Microsoft Windows
-    Services for UNIX, then click Change. In the installer, choose Add or
-    Remove, then uncheck Utilities->UNIX Perl.
-
-  * To enable case-sensitivity for the file system, run REGEDIT.EXE, and change
-    the following registry key:
-
-    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
-
-    Set the DWORD value "obcaseinsensitive" to 0; then reboot.
-
-  * To enable setuid binaries (optional), run REGEDIT.EXE, and change the
-    following registry key:
-
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Services for UNIX
-
-    Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.
-
-3.3.5.3. Important notes for using pkgsrc
-
-The package manager (either the pkgsrc "su" user, or the user running
-"pkg_add") must be a member of the local Administrators group. Such a user must
-also be used to run the bootstrap. This is slightly relaxed from the normal
-pkgsrc requirement of "root".
-
-The package manager should use a umask of 002. "make install" will
-automatically complain if this is not the case. This ensures that directories
-written in /var/db/pkg are Administrators-group writeable.
-
-The popular Interix binary packages from http://www.interopsystems.com/ use an
-older version of pkgsrc's pkg_* tools. Ideally, these should NOT be used in
-conjunction with pkgsrc. If you choose to use them at the same time as the
-pkgsrc packages, ensure that you use the proper pkg_* tools for each type of
-binary package.
-
-The TERM setting used for DOS-type console windows (including those invoked by
-the csh and ksh startup shortcuts) is "interix". Most systems don't have a
-termcap/terminfo entry for it, but the following .termcap entry provides
-adequate emulation in most cases:
-
-interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
-
-
-3.3.5.4. Limitations of the Interix platform
-
-Though Interix suffices as a familiar and flexible substitute for a full
-Unix-like platform, it has some drawbacks that should be noted for those
-desiring to make the most of Interix.
-
-  * X11:
-
-    Interix comes with the standard set of X11R6 client libraries, and can run
-    X11 based applications, but it does not come with an X server. Some options
-    are StarNet X-Win32, Hummingbird Exceed (available in a trimmed version for
-    Interix from Interop Systems as the Interop X Server), and the free X11
-    server included with Cygwin.
-
-  * X11 acceleration:
-
-    Because Interix runs in a completely different NT subsystem from Win32
-    applications, it does not currently support various X11 protocol extensions
-    for acceleration (such as MIT-SHM or DGA). Most interactive applications to
-    a local X server will run reasonably fast, but full motion video and other
-    graphics intensive applications may require a faster-than-expected CPU.
-
-  * Audio:
-
-    Interix has no native support for audio output. For audio support, pkgsrc
-    uses the esound client/server audio system on Interix. Unlike on most
-    platforms, the audio/esound package does not contain the esd server
-    component. To output audio via an Interix host, the emulators/cygwin_esound
-    package must also be installed.
-
-  * CD/DVDs, USB, and SCSI:
-
-    Direct device access is not currently supported in Interix, so it is not
-    currently possible to access CD/DVD drives, USB devices, or SCSI devices
-    through non-filesystem means. Among other things, this makes it impossible
-    to use Interix directly for CD/DVD burning.
-
-  * Tape drives:
-
-    Due to the same limitations as for CD-ROMs and SCSI devices, tape drives
-    are also not directly accessible in Interix. However, support is in work to
-    make tape drive access possible by using Cygwin as a bridge (similarly to
-    audio bridged via Cygwin's esound server).
-
-3.3.5.5. Known issues for pkgsrc on Interix
-
-It is not necessary, in general, to have a "root" user on the Windows system;
-any member of the local Administrators group will suffice. However, some
-packages currently assume that the user named "root" is the privileged user. To
-accommodate these, you may create such a user; make sure it is in the local
-group Administrators (or your language equivalent).
-
-pkg_add creates directories of mode 0755, not 0775, in $PKG_DBDIR. For the time
-being, install packages as the local Administrator (or your language
-equivalent), or run the following command after installing a package to work
-around the issue:
-
-# chmod -R g+w $PKG_DBDIR
-
-
-3.3.6. IRIX
-
-You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
-compiler (cc/c89). Please set the CC environment variable according to your
-preference. If you do not have a license for the MIPSpro compiler suite, you
-can download a gcc tardist file from http://freeware.sgi.com/.
-
-Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
-version of IRIX providing support for if_indextoname(3), if_nametoindex(3),
-etc.
-
-At this point in time, pkgsrc only supports one ABI at a time. That is, you
-cannot switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit
-ABI. If you start out using "abi=n32", that's what all your packages will be
-built with.
-
-Therefore, please make sure that you have no conflicting CFLAGS in your
-environment or the mk.conf. Particularly, make sure that you do not try to link
-n32 object files with lib64 or vice versa. Check your /etc/compiler.defaults!
-
-If you have the actual pkgsrc tree mounted via NFS from a different host,
-please make sure to set WRKOBJDIR to a local directory, as it appears that IRIX
-linker occasionally runs into issues when trying to link over a network-mounted
-file system.
-
-The bootstrapping process should set all the right options for programs such as
-imake(1), but you may want to set some options depending on your local setup.
-Please see pkgsrc/mk/defaults/mk.conf and, of course, your compiler's man pages
-for details.
-
-If you are using SGI's MIPSPro compiler, please set
-
-PKGSRC_COMPILER=        mipspro
-
-
-in mk.conf. Otherwise, pkgsrc will assume you are using gcc and may end up
-passing invalid flags to the compiler. Note that bootstrap should create an
-appropriate mk.conf.example by default.
-
-If you have both the MIPSPro compiler chain installed as well as gcc, but want
-to make sure that MIPSPro is used, please set your PATH to not include the
-location of gcc (often /usr/freeware/bin), and (important) pass the
-'--preserve-path' flag.
-
-3.3.7. Linux
-
-Some versions of Linux (for example Debian GNU/Linux) need either libtermcap or
-libcurses (libncurses). Installing the distributions libncurses-dev package (or
-equivalent) should fix the problem.
-
-pkgsrc supports both gcc (GNU Compiler Collection) and icc (Intel C++
-Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
-
-To bootstrap using icc, assuming the default icc installation directory:
-
-env ICCBASE=/opt/intel/cc/10.1.008 ./bootstrap --compiler=icc
-
-
-Note
-
-For icc 8.0 you must add `LDFLAGS=-static-libcxa' to this.
-
-For icc 8.1 you must add `LDFLAGS=-i-static' instead.
-
-For icc 10.1 neither of these appears to be necessary.
-
-Use a value for ICCBASE that corresponds to the directory where icc is
-installed. After bootstrapping, set ICCBASE in mk.conf:
-
-ICCBASE=                /opt/intel/cc/10.1.008
-
-
-The pkgsrc default for ICCBASE is /opt/intel_cc_80. This is the default install
-directory for icc 8.0. If you are using a more recent version, be sure to set
-the correct path explicitly.
-
-pkgsrc uses the static linking method of the runtime libraries provided by icc,
-so binaries can be run on other systems which do not have the shared libraries
-installed.
-
-Libtool, however, extracts a list of libraries from the ld(1) command run when
-linking a C++ shared library and records it, throwing away the -Bstatic and
--Bdynamic options interspersed between the libraries. This means that
-libtool-linked C++ shared libraries will have a runtime dependency on the icc
-libraries until this is fixed in libtool.
-
-3.3.8. MirBSD
-
-pkgsrc has been tested on MirBSD #10-current (2011 and newer). Older versions
-might also work. Releases before #10 are not supported.
-
-The package tools of the (older) native ports tree, MirPorts, have the same
-names as the ones used by pkgsrc. Care should be taken that the right tools are
-used. When installing packages from source, use the bmake command for pkgsrc
-and mmake for MirPorts.
-
-pkgsrc and MirPorts use the same location for the package database, /var/db/
-pkg. It is strongly recommended to use /usr/pkg/db instead, so that the pkgsrc
-tree is self-contained. This is also the default setting used in the binary
-package builds.
-
-Binary packages for MirBSD/i386 can be found on the pkgsrc ftp server. The
-bootstrap kit there already contains the pkgin package manager. See the pkgsrc
-on MirOS page for more details.
-
-3.3.9. OpenBSD
-
-OpenBSD 5.1 has been tested and supported, other versions may work.
-
-Care should be taken so that the tools that this kit installs do not conflict
-with the OpenBSD userland tools. There are several steps:
-
- 1. OpenBSD stores its ports pkg database in /var/db/pkg. It is therefore
-    recommended that you choose a different location (e.g. /usr/pkgdb) by using
-    the --pkgdbdir option to the bootstrap script.
-
- 2. If you do not intend to use the OpenBSD ports tools, it's probably a good
-    idea to move them out of the way to avoid confusion, e.g.
-
-    # cd /usr/sbin
-    # mv pkg_add pkg_add.orig
-    # mv pkg_create pkg_create.orig
-    # mv pkg_delete pkg_delete.orig
-    # mv pkg_info pkg_info.orig
-
-
- 3. An example mk.conf file will be placed in /etc/mk.conf.example file when
-    you use the bootstrap script. OpenBSD's make program uses mk.conf as well.
-    You can work around this by enclosing all the pkgsrc-specific parts of the
-    file with:
-
-    .ifdef BSD_PKG_MK
-    # pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-    .else
-    # OpenBSD stuff
-    .endif
-
-
-3.3.10. Solaris
-
-Solaris 2.6 through 10 are supported on both x86 and sparc. You will need a
-working C compiler. Both gcc 4.5.3 and Sun WorkShop 5 have been tested.
-
-The following packages are required on Solaris 8 for the bootstrap process and
-to build packages.
-
-  * SUNWsprot
-
-  * SUNWarc
-
-  * SUNWbtool
-
-  * SUNWtoo
-
-  * SUNWlibm
-
-Please note that the use of GNU binutils on Solaris is not supported, as of
-June 2006.
-
-Whichever compiler you use, please ensure the compiler tools and your $prefix
-are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
-{bin,sbin}.
-
-3.3.10.1. If you are using gcc
-
-It makes life much simpler if you only use the same gcc consistently for
-building all packages.
-
-It is recommended that an external gcc be used only for bootstrapping, then
-either build gcc from lang/gcc46 or install a binary gcc package, then remove
-gcc used during bootstrapping.
-
-Binary packages of gcc can be found through http://www.sunfreeware.com/.
-
-3.3.10.2. If you are using Sun WorkShop
-
-You will need at least the following packages installed (from WorkShop 5.0)
-
-  * SPROcc - Sun WorkShop Compiler C 5.0
-
-  * SPROcpl - Sun WorkShop Compiler C++ 5.0
-
-  * SPROild - Sun WorkShop Incremental Linker
-
-  * SPROlang - Sun WorkShop Compilers common components
-
-You should set the following variables in your mk.conf file:
-
-CC=     cc
-CXX=    CC
-CPP=    cc -E
-CXXCPP= CC -E
-
-Note
-
-The CPP setting might break some packages that use the C preprocessor for
-processing things other than C source code.
-
-3.3.10.3. Building 64-bit binaries with SunPro
-
-To build 64-bit packages, you just need to have the following lines in your
-mk.conf file:
-
-PKGSRC_COMPILER=        sunpro
-ABI=                    64
-
-Note
-
-This setting has been tested for the SPARC architecture. Intel and AMD machines
-need some more work.
-
-3.3.10.4. Common problems
-
-Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
-workaround is to use another shell for the configure scripts, for example by
-installing shells/bash and adding the following lines to your mk.conf:
-
-CONFIG_SHELL=   ${LOCALBASE}/bin/bash
-WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
-
-
-Then, rebuild the devel/libtool-base package.
+For platform-specific notes consult the README files found in the notes column
+of Table 1.1, "Platforms supported by pkgsrc"
 
 Chapter 4. Using pkgsrc
 
@@ -4087,7 +3604,6 @@ Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
 @comment $NetBSD$
 
-
 13.2. Semi-automatic PLIST generation
 
 You can use the make print-PLIST command to output a PLIST that matches any new
@@ -4104,7 +3620,6 @@ For example, to get all files inside the libdata/foo directory removed from the
 resulting PLIST:
 
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
-
 
 13.4. Variable substitution in PLIST
 
@@ -4147,7 +3662,6 @@ MESSAGE_SUBST (see Section 11.5, "Optional files"):
 
 PLIST_SUBST+=   SOMEVAR="somevalue"
 
-
 This replaces all occurrences of "${SOMEVAR}" in the PLIST with "somevalue".
 
 The PLIST_VARS variable can be used to simplify the common case of
@@ -4161,7 +3675,6 @@ PLIST_VARS+=    foo
 PLIST.foo=      yes
 .else
 
-
 And then in PLIST:
 
 @comment $NetBSD$
@@ -4170,7 +3683,6 @@ man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
-
 
 13.5. Man page compression
 
@@ -4214,8 +3726,7 @@ PLIST
 
 You can find one example in editors/xemacs:
 
-      GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
-
+GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
 
 which will append something like bin/xemacs-21.4.23-54e8ea71.dmp to the PLIST.
 
@@ -4234,7 +3745,6 @@ If a package needs an empty directory to work, create the directory during
 installation as usual, and also add an entry to the PLIST:
 
 @pkgdir path/to/empty/directory
-
 
 or take a look at MAKE_DIRS and OWN_DIRS.
 
@@ -6204,74 +5714,28 @@ interaction. This should be done in the package's Makefile, e.g.:
 
 INTERACTIVE_STAGE=      configure install
 
-
 The user can then decide to skip this package by setting the BATCH variable.
 Packages that require interaction are also excluded from bulk builds.
 
 19.1.3. Handling licenses
 
 Authors of software can choose the licence under which software can be copied.
-This is due to copyright law, and reasons for license choices are outside the
-scope of pkgsrc. The pkgsrc system recognizes that there are a number of
-licenses which some users may find objectionable or difficult or impossible to
-comply with. The Free Software Foundation has declared some licenses "Free",
-and the Open Source Initiative has a definition of "Open Source". The pkgsrc
-system, as a policy choice, does not label packages which have licenses that
-are Free or Open Source. However, packages without a license meeting either of
-those tests are labeled with a license tag denoting the license. Note that a
-package with no license to copy trivially does not meet either the Free or Open
-Source test.
+The Free Software Foundation has declared some licenses "Free", and the Open
+Source Initiative has a definition of "Open Source".
 
-For packages which are not Free or Open Source, pkgsrc will not build the
-package unless the user has indicated to pkgsrc that packages with that
-particular license may be built. Note that this documentation avoids the term
-"accepted the license". The pkgsrc system is merely providing a mechanism to
-avoid accidentally building a package with a non-free license; judgement and
-responsibility remain with the user. (Installation of binary packages are not
-currently subject to this mechanism; this is a bug.)
+By default, pkgsrc allows packages with Free or Open Source licenses to be
+built. To allow packages with other licenses to be built as well, the pkgsrc
+user needs to add these licenses to the ACCEPTABLE_LICENSES variable in mk.conf
+. Note that this variable only affects which packages may be built, while the
+license terms often also restrict the actual use of the package and its
+redistribution.
 
 One might want to only install packages with a BSD license, or the GPL, and not
 the other. The free licenses are added to the default ACCEPTABLE_LICENSES
-variable. The user can override the default by setting the ACCEPTABLE_LICENSES
-variable with "=" instead of "+=". The licenses accepted by default are:
-
-        apache-1.1 apache-2.0
-        arphic-public
-        artistic artistic-2.0
-        boost-license
-        cc-by-sa-v3.0
-        cc0-1.0-universal
-        cddl-1.0
-        cpl-1.0
-        epl-v1.0
-        gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
-        gnu-gpl-v1
-        gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
-        gnu-gpl-v3 gnu-lgpl-v3
-        ibm-public-license-1.0
-        ipafont
-        isc
-        lppl-1.3c
-        lucent
-        miros
-        mit
-        mpl-1.0 mpl-1.1 mpl-2.0
-        mplusfont
-        ofl-v1.0 ofl-v1.1
-        original-bsd modified-bsd 2-clause-bsd
-        php
-        png-license
-        postgresql-license
-        public-domain
-        python-software-foundation
-        qpl-v1.0
-        sgi-free-software-b-v2.0
-        sleepycat-public
-        unlicense
-        x11
-        zlib
-        zpl
-
+variable. The pkgsrc user can override the default by setting the
+ACCEPTABLE_LICENSES variable with "=" instead of "+=". The licenses accepted by
+default are defined in the DEFAULT_ACCEPTABLE_LICENSES variable in the file
+pkgsrc/mk/license.mk.
 
 The license tag mechanism is intended to address copyright-related issues
 surrounding building, installing and using a package, and not to address
@@ -6284,7 +5748,6 @@ string identifying the license, e.g. in graphics/xv:
 
 LICENSE=        xv-license
 
-
 When trying to build, the user will get a notice that the package is covered by
 a license which has not been placed in the ACCEPTABLE_LICENSES variable:
 
@@ -6295,40 +5758,11 @@ a license which has not been placed in the ACCEPTABLE_LICENSES variable:
 ===>     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1
 
-
 The license can be viewed with make show-license, and if the user so chooses,
 the line printed above can be added to mk.conf to convey to pkgsrc that it
 should not in the future fail because of that license:
 
 ACCEPTABLE_LICENSES+=xv-license
-
-
-When adding a package with a new license, the following steps are required:
-
- 1. Check if the file can avoid the -license filename tag as described above by
-    referencing Various Licenses and Comments about Them and Licenses by Name |
-    Open Source Initiative. If this is the case, additionally add the license
-    filename to:
-
-      + DEFAULT_ACCEPTABLE_LICENSES in pkgsrc/mk/license.mk
-
-      + default_acceptable_licenses in pkgsrc/pkgtools/pkg_install/files/lib/
-        license.c
-
-      + the ACCEPTABLE_LICENSES list in pkgsrc/doc/guide/files/fixes.xml
-
-    with the proper syntax as demonstrated in those files, respectively.
-
- 2. The license text should be added to pkgsrc/licenses for displaying. A list
-    of known licenses can be seen in this directory.
-
-When the license changes (in a way other than formatting), please make sure
-that the new license has a different name (e.g., append the version number if
-it exists, or the date). Just because a user told pkgsrc to build programs
-under a previous version of a license does not mean that pkgsrc should build
-programs under the new licenses. The higher-level point is that pkgsrc does not
-evaluate licenses for reasonableness; the only test is a mechanistic test of
-whether a particular text has been approved by either of two bodies.
 
 The use of LICENSE=shareware, LICENSE=no-commercial-use, and similar language
 is deprecated because it does not crisply refer to a particular license text.
@@ -6336,22 +5770,47 @@ Another problem with such usage is that it does not enable a user to tell
 pkgsrc to proceed for a single package without also telling pkgsrc to proceed
 for all packages with that tag.
 
+19.1.3.1. Adding a package with a new license
+
+When adding a package with a new license, the following steps are required:
+
+ 1. Check whether the license qualifies as Free or Open Source by referencing
+    Various Licenses and Comments about Them and Licenses by Name | Open Source
+    Initiative. If this is the case, the filename in pkgsrc/licenses/ does not
+    need the -license suffix, and the license name should be added to:
+
+      + DEFAULT_ACCEPTABLE_LICENSES in pkgsrc/mk/license.mk
+
+      + default_acceptable_licenses in pkgsrc/pkgtools/pkg_install/files/lib/
+        license.c
+
+ 2. The license text should be added to pkgsrc/licenses for displaying. A list
+    of known licenses can be seen in this directory.
+
+19.1.3.2. Change to the license
+
+When the license changes (in a way other than formatting), make sure that the
+new license has a different name (e.g., append the version number if it exists,
+or the date). Just because a user told pkgsrc to build programs under a
+previous version of a license does not mean that pkgsrc should build programs
+under the new licenses. The higher-level point is that pkgsrc does not evaluate
+licenses for reasonableness; the only test is a mechanistic test of whether a
+particular text has been approved by either of two bodies (FSF or OSI).
+
 19.1.4. Restricted packages
 
-Some licenses restrict how software may be re-distributed. Because a license
-tag is required unless the package is Free or Open Source, all packages with
-restrictions should have license tags. By declaring the restrictions, package
-tools can automatically refrain from e.g. placing binary packages on FTP sites.
+Some licenses restrict how software may be re-distributed. By declaring the
+restrictions, package tools can automatically refrain from e.g. placing binary
+packages on FTP sites.
 
-There are four restrictions that may be encoded, which are the cross product of
-sources (distfiles) and binaries not being placed on FTP sites and CD-ROMs.
-Because this is rarely the exact language in any license, and because non-Free
-licenses tend to be different from each other, pkgsrc adopts a definition of
-FTP and CD-ROM. Pkgsrc uses "FTP" to mean that the source or binary file should
-not be made available over the Internet at no charge. Pkgsrc uses "CD-ROM" to
-mean that the source or binary may not be made available on some kind of media,
-together with other source and binary packages, and which is sold for a
-distribution charge.
+There are four possible restrictions, which are the cross product of sources
+(distfiles) and binaries not being placed on FTP sites and CD-ROMs. Because
+this is rarely the exact language in any license, and because non-Free licenses
+tend to be different from each other, pkgsrc adopts a definition of FTP and
+CD-ROM. "FTP" means making the source or binary file available over the
+Internet at no charge. "CD-ROM" means making the source or binary available on
+some kind of media, together with other source and binary packages, which is
+sold for a distribution charge.
 
 In order to encode these restrictions, the package system defines five make
 variables that can be set to note these restrictions:
@@ -6388,10 +5847,10 @@ variables that can be set to note these restrictions:
     this variable to ${RESTRICTED}. If this variable is set, the distfile(s)
     will not be mirrored on ftp.NetBSD.org.
 
-Please note that packages will to be removed from pkgsrc when the distfiles are
+Please note that packages will be removed from pkgsrc when the distfiles are
 not distributable and cannot be obtained for a period of one full quarter
-branch. Packages with manual / interactive fetch must have a maintainer and it
-is his/her responsibility to ensure this.
+branch. Packages with manual/interactive fetch must have a maintainer and it is
+his/her responsibility to ensure this.
 
 19.1.5. Handling dependencies
 
@@ -6415,7 +5874,6 @@ The format for a BUILD_DEPENDS and a DEPENDS definition is:
 
 <pre-req-package-name>:../../<category>/<pre-req-package>
 
-
 Please note that the "pre-req-package-name" may include any of the wildcard
 version numbers recognized by pkg_info(1).
 
@@ -6424,12 +5882,10 @@ version numbers recognized by pkg_info(1).
 
     .include "../../graphics/jpeg/buildlink3.mk"
 
-
  2. If your package needs another package's binaries or libraries only for
     building, and if that package has a buildlink3.mk file available, use it:
 
     .include "../../graphics/jpeg/buildlink3.mk"
-
 
     but set BUILDLINK_DEPMETHOD.jpeg?=build to make it a build dependency only.
     This case is rather rare.
@@ -6438,7 +5894,6 @@ version numbers recognized by pkg_info(1).
     BUILD_DEPENDS definition:
 
     BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
-
 
  4. If your package needs a library with which to link and there is no
     buildlink3.mk file available, create one. Using DEPENDS won't be sufficient
@@ -6450,7 +5905,6 @@ version numbers recognized by pkg_info(1).
     binary from the teTeX package when it runs, and that is specified:
 
     DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
-
 
  6. You can use wildcards in package dependencies. Note that such wildcard
     dependencies are retained when creating binary packages. The dependency is
@@ -6464,7 +5918,6 @@ version numbers recognized by pkg_info(1).
     against a certain minimum version of a pre-requisite:
 
     DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
-
 
     This means that the package will build using version 6.0 of ImageMagick or
     newer. Such a dependency may be warranted if, for example, the command line
@@ -6501,11 +5954,9 @@ set in foo/bar/Makefile:
 
 CONFLICTS=      baz-[0-9]*
 
-
 and in pkgsrc/foo/baz/Makefile:
 
 CONFLICTS=      bar-[0-9]*
-
 
 19.1.7. Packages that cannot or should not be built
 
@@ -6572,7 +6023,6 @@ e.g.
 DISTNAME=       foo-17.42
 PKGREVISION=    9
 
-
 will result in a PKGNAME of "foo-17.42nb9". If you want to use the original
 value of PKGNAME without the "nbX" suffix, e.g. for setting DIST_SUBDIR, use
 PKGNAME_NOREV.
@@ -6582,7 +6032,6 @@ removed, e.g. on a new minor release of the above package, things should be
 like:
 
 DISTNAME=       foo-17.43
-
 
 PKGREVISION should be incremented for any non-trivial change in the resulting
 binary package. Without a PKGREVISION bump, someone with the previous version
@@ -6626,7 +6075,6 @@ SUBST_FILES.fix-paths=          src/*.c
 SUBST_FILES.fix-paths+=         scripts/*.sh
 SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
 SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
-
 
 SUBST_CLASSES is a list of identifiers that are used to identify the different
 SUBST blocks that are defined. The SUBST framework is heavily used by pkgsrc,
@@ -6680,7 +6128,6 @@ before aborting the build. Example:
 FETCH_MESSAGE=  "Please download the files"
 FETCH_MESSAGE+= "    "${DISTFILES:Q}
 FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
-
 
 19.2.2. How to handle modified distfiles with the 'old' name
 
@@ -6742,7 +6189,6 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 
-
 19.2.3.3. Fetch based on release
 
 If your distfile URL looks similar to http://github.com/username/exampleproject
@@ -6754,7 +6200,6 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 GITHUB_PROJECT= exampleproject
 GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
 EXTRACT_SUFX=   .zip
-
 
 19.3. The configure phase
 
@@ -6788,7 +6233,6 @@ Here's how to use libtool in a package in seven simple steps:
             -rpath ${PREFIX}/lib \
             -version-info major:minor
 
-
     Note that the library is changed to have a .la extension, and the objects
     are changed to have a .lo extension. Change OBJS as necessary. This
     automatically creates all of the .a, .so.major.minor, and ELF symlinks (if
@@ -6815,7 +6259,6 @@ Here's how to use libtool in a package in seven simple steps:
     If two libraries have identical CURRENT and AGE numbers, then the
     dynamic linker chooses the library with the greater REVISION number.
 
-
     The "-release" option will produce different results for a.out and ELF
     (excluding symlinks) in only one case. An ELF library of the form "
     libfoo-release.so.x.y" will have a symlink of "libfoo.so.x.y" on an a.out
@@ -6841,11 +6284,9 @@ Here's how to use libtool in a package in seven simple steps:
 
     ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
 
-
     should be changed to:
 
     ${LIBTOOL} --mode=link ${CC} -o someprog ../somelib/somelib.la
-
 
     and it will do the right thing with the libraries.
 
@@ -6853,7 +6294,6 @@ Here's how to use libtool in a package in seven simple steps:
     {LIBTOOL} --mode=install", and change the library name to .la. e.g.
 
     ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
-
 
     This will install the static .a, shared library, any needed symlinks, and
     run ldconfig(8).
@@ -6912,7 +6352,6 @@ pre-configure:
 
 ...
 
-
 and for packages that need automake and autoconf:
 
 AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
@@ -6924,7 +6363,6 @@ pre-configure:
         aclocal; autoheader; automake -a --foreign -i; autoconf
 
 ...
-
 
 Packages which use GNU Automake will almost certainly require GNU Make.
 
@@ -7148,7 +6586,6 @@ like this:
 ${INSTALL_DATA_DIR} ${PREFIX}/dir1
 ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
-
 You can also just append "dir1 dir2" to the INSTALLATION_DIRS variable, which
 will automatically do the right thing.
 
@@ -7198,7 +6635,6 @@ OWN_DIRS_PERMS+=        ${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
 REQD_FILES_PERMS+=      /dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
 SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
 
-
 Various INSTALL_* variables are also available: INSTALL_GAME to install setgid
 game binaries, INSTALL_GAME_DIR to install game directories that are needed to
 be accessed by setgid games and INSTALL_GAME_DATA to install scorefiles.
@@ -7242,7 +6678,6 @@ REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
 REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 # relative to ${WRKSRC}, just as in REPLACE_PERL
 
-
 Note
 
 Before March 2006, these variables were called _REPLACE.* and _REPLACE_FILES.*.
@@ -7262,7 +6697,6 @@ a space-separated list of packlist files relative to PERL5_PACKLIST_DIR
 (PERL5_INSTALLVENDORARCH by default), e.g.:
 
 PERL5_PACKLIST= auto/Pg/.packlist
-
 
 The perl5 config variables installarchlib, installscript, installvendorbin,
 installvendorscript, installvendorarch, installvendorlib, installvendorman1dir,
@@ -8349,7 +7783,6 @@ CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
 
 CFLAGS+=                -Wall
-
 
 This code shows how the use of the := operator can quickly lead to unexpected
 results. The first paragraph is fairly common code. The second paragraph

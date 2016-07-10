@@ -78,18 +78,6 @@
 <dt><span class="sect1"><a href="#binarydist">3.1. Binary distribution</a></span></dt>
 <dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.2. Bootstrapping pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#platform-specific-notes">3.3. Platform-specific notes</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#cygwin">3.3.1. Cygwin</a></span></dt>
-<dt><span class="sect2"><a href="#darwin">3.3.2. Darwin (Mac OS X)</a></span></dt>
-<dt><span class="sect2"><a href="#freebsd">3.3.3. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#gnukfreebsd">3.3.4. GNU/kFreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.3.5. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.3.6. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.3.7. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#mirbsd">3.3.8. MirBSD</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.3.9. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.3.10. Solaris</a></span></dt>
-</dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#using">4. Using pkgsrc</a></span></dt>
 <dd><dl>
@@ -827,18 +815,6 @@ minutes!</p>
 <dt><span class="sect1"><a href="#binarydist">3.1. Binary distribution</a></span></dt>
 <dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.2. Bootstrapping pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#platform-specific-notes">3.3. Platform-specific notes</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#cygwin">3.3.1. Cygwin</a></span></dt>
-<dt><span class="sect2"><a href="#darwin">3.3.2. Darwin (Mac OS X)</a></span></dt>
-<dt><span class="sect2"><a href="#freebsd">3.3.3. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#gnukfreebsd">3.3.4. GNU/kFreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.3.5. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.3.6. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.3.7. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#mirbsd">3.3.8. MirBSD</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.3.9. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.3.10. Solaris</a></span></dt>
-</dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#using">4. Using pkgsrc</a></span></dt>
 <dd><dl>
@@ -1111,18 +1087,6 @@ release -d
 <dt><span class="sect1"><a href="#binarydist">3.1. Binary distribution</a></span></dt>
 <dt><span class="sect1"><a href="#bootstrapping-pkgsrc">3.2. Bootstrapping pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#platform-specific-notes">3.3. Platform-specific notes</a></span></dt>
-<dd><dl>
-<dt><span class="sect2"><a href="#cygwin">3.3.1. Cygwin</a></span></dt>
-<dt><span class="sect2"><a href="#darwin">3.3.2. Darwin (Mac OS X)</a></span></dt>
-<dt><span class="sect2"><a href="#freebsd">3.3.3. FreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#gnukfreebsd">3.3.4. GNU/kFreeBSD</a></span></dt>
-<dt><span class="sect2"><a href="#interix">3.3.5. Interix</a></span></dt>
-<dt><span class="sect2"><a href="#irix">3.3.6. IRIX</a></span></dt>
-<dt><span class="sect2"><a href="#linux">3.3.7. Linux</a></span></dt>
-<dt><span class="sect2"><a href="#mirbsd">3.3.8. MirBSD</a></span></dt>
-<dt><span class="sect2"><a href="#openbsd">3.3.9. OpenBSD</a></span></dt>
-<dt><span class="sect2"><a href="#solaris">3.3.10. Solaris</a></span></dt>
-</dl></dd>
 </dl>
 </div>
 <div class="sect1">
@@ -1180,502 +1144,8 @@ release -d
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="platform-specific-notes"></a>3.3. Platform-specific notes</h2></div></div></div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="cygwin"></a>3.3.1. Cygwin</h3></div></div></div>
-<p>Cygwin 1.7.x and later are supported.</p>
-<p>You need to install minimal base packages in `Base' category
-      plus any of compiler, gcc, gcc4, and/or clang.
-      For gcc and gcc4, C and C++ compiler will be installed by default,
-      but you can install Fortran compiler additionally
-      because it will be required to use libtool.
-      If it is not installed (or too old), Fortran compiler will be
-      installed with pkgsrc automatically.</p>
-<p>As noted in
-      <a class="ulink" href="http://cygwin.com/faq-nochunks.html#faq.using.su" target="_top">Cygwin FAQ: `Why doesn't su work?'</a>,
-      su(1) command has been in Cygwin distribution, but it has never worked.
-      Unless you bootstrap pkgsrc with the --unprivileged option, workaround is:
-      </p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Right click "Cygwin Terminal" in your Start Menu,
-          then pick "Run as administrator".</p></li></ul></div>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="darwin"></a>3.3.2. Darwin (Mac OS X)</h3></div></div></div>
-<p>Darwin 8.x and up are supported.</p>
-<p>Before you start, you need to download and install
-      the Mac OS X Developer Tools from Apple's Developer Connection.
-      This requires (free) membership. See
-      <a class="ulink" href="http://developer.apple.com/macosx/" target="_top">http://developer.apple.com/macosx/</a>
-      for details. Also, make sure you install X11 (an optional
-      package included with the Developer Tools) if you intend
-      to build packages that use the X11 Window System.
-      (If you don't want or need the full Xcode GUI,
-      download and install Command Line Tools for Xcode.)</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="freebsd"></a>3.3.3. FreeBSD</h3></div></div></div>
-<p>FreeBSD 8.3 and 9.0 have been tested and are supported,
-      other versions may work.</p>
-<p>Care should be taken so that the tools that this kit installs do not conflict
-      with the FreeBSD userland tools. There are several steps:</p>
-<div class="orderedlist"><ol class="orderedlist" type="1">
-<li class="listitem"><p>FreeBSD stores its ports pkg database in
-	  <code class="filename">/var/db/pkg</code>. It is therefore
-	  recommended that you choose a different location (e.g.
-	  <code class="filename">/usr/pkgdb</code>) by
-	  using the --pkgdbdir option to the bootstrap script.</p></li>
-<li class="listitem">
-<p>If you do not intend to use the FreeBSD ports tools, it's probably a
-	  good idea to move them out of the way to avoid confusion, e.g.</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sbin</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_add pkg_add.orig</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_create pkg_create.orig</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_delete pkg_delete.orig</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_info pkg_info.orig</code></strong>
-	  </pre>
-</li>
-<li class="listitem"><p>An example <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file will be placed in
-	  <code class="filename">/etc/mk.conf.example</code> file
-	  when you use the bootstrap script.</p></li>
-</ol></div>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="gnukfreebsd"></a>3.3.4. GNU/kFreeBSD</h3></div></div></div>
-<p>Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now.
-      Debian GNU/kFreeBSD 7.0 or later is tested and supported.</p>
-<p> You should install ncurses (libncurses and libncurses-dev)
-      packages.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="interix"></a>3.3.5. Interix</h3></div></div></div>
-<p>Interix is a POSIX-compatible subsystem for the Windows NT kernel,
-      providing a Unix-like environment with a tighter kernel integration than
-      available with Cygwin.  It is part of the Windows Services for Unix
-      package, available for free for any licensed copy of Windows 2000, XP
-      (not including XP Home), or 2003.  SFU can be downloaded from <a class="ulink" href="http://www.microsoft.com/windows/sfu/" target="_top">http://www.microsoft.com/windows/sfu/</a>.</p>
-<p>Services for Unix 3.5 has been tested.  3.0 or 3.1 may work, but
-      are not officially supported.  (The main difference in 3.0/3.1 is lack
-      of pthreads, but other parts of libc may also be lacking.)</p>
-<p>Services for Unix Applications (aka SUA) is an integrated
-      component of Windows Server 2003 R2 (5.2), Windows Vista and
-      Windows Server 2008 (6.0), Windows 7 and Windows Server 2008 R2
-      (6.1).  As of this writing, the SUA's Interix 6.0 (32bit) and
-      6.1 (64bit) subsystems have been tested.  Other versions may
-      work as well. The Interix 5.x subsystem has not yet been tested
-      with pkgsrc.</p>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-sfu-install"></a>3.3.5.1. When installing Interix/SFU</h4></div></div></div>
-<p>At an absolute minimum, the following packages must be installed from
-	the Windows Services for Unix 3.5 distribution in order to use pkgsrc:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>Utilities -&gt; Base Utilities</p></li>
-<li class="listitem"><p>Interix GNU Components -&gt; (all)</p></li>
-<li class="listitem"><p>Remote Connectivity</p></li>
-<li class="listitem"><p>Interix SDK</p></li>
-</ul></div>
-<p>When using pkgsrc on Interix, DO NOT install the Utilities subcomponent
-	"UNIX Perl".  That is Perl 5.6 without shared module support, installed to
-	/usr/local, and will only cause confusion. Instead, install Perl 5.8 from
-	pkgsrc (or from a binary package).</p>
-<p>The Remote Connectivity subcomponent "Windows Remote Shell Service" does
-	not need to be installed, but Remote Connectivity itself should be
-	installed in order to have a working inetd.</p>
-<p>During installation you may be asked whether to enable setuid
-	behavior for Interix programs, and whether to make pathnames default to
-	case-sensitive.  Setuid should be enabled, and case-sensitivity MUST be
-	enabled.  (Without case-sensitivity, a large number of packages including
-	perl will not build.)</p>
-<p>NOTE:  Newer Windows service packs change the way binary execution
-	works (via the Data Execution Prevention feature).  In order to use
-	pkgsrc and other gcc-compiled binaries reliably, a hotfix containing
-	POSIX.EXE, PSXDLL.DLL, PSXRUN.EXE, and PSXSS.EXE (899522 or newer)
-	must be installed.  Hotfixes are available from Microsoft through a
-	support contract; however, Debian Interix Port has made most Interix
-	hotfixes available for personal use from <a class="ulink" href="http://www.debian-interix.net/hotfixes/" target="_top">http://www.debian-interix.net/hotfixes/</a>.</p>
-<p>In addition to the hotfix noted above, it may be necessary to
-	disable Data Execution Prevention entirely to make Interix functional.
-	This may happen only with certain types of CPUs; the cause is not fully
-	understood at this time.  If gcc or other applications still segfault
-	repeatedly after installing one of the hotfixes note above, the
-	following option can be added to the appropriate "boot.ini" line on the
-	Windows boot drive:  /NoExecute=AlwaysOff
-	(WARNING, this will disable DEP completely, which may be a security
-	risk if applications are often run as a user in the Administrators
-	group!)</p>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-sfu-postinstall"></a>3.3.5.2. What to do if Interix/SFU is already installed</h4></div></div></div>
-<p>If SFU is already installed and you wish to alter these settings to work
-	with pkgsrc, note the following things.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>To uninstall UNIX Perl, use Add/Remove Programs, select Microsoft
-	    Windows Services for UNIX, then click Change.  In the installer, choose
-	    Add or Remove, then uncheck Utilities-&gt;UNIX Perl.</p></li>
-<li class="listitem">
-<p>To enable case-sensitivity for the file system, run REGEDIT.EXE, and
-	    change the following registry key:</p>
-<p>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel</p>
-<p>Set the DWORD value "obcaseinsensitive" to 0; then reboot.</p>
-</li>
-<li class="listitem">
-<p>To enable setuid binaries (optional), run REGEDIT.EXE, and change the
-	    following registry key:</p>
-<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Services for UNIX</p>
-<p>Set the DWORD value "EnableSetuidBinaries" to 1; then reboot.</p>
-</li>
-</ul></div>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-notes"></a>3.3.5.3. Important notes for using pkgsrc</h4></div></div></div>
-<p>The package manager (either the pkgsrc "su" user, or the user
-	running "pkg_add") must be a member of the local Administrators
-	group.  Such a user must also be used to run the bootstrap.  This is
-	slightly relaxed from the normal pkgsrc requirement of "root".</p>
-<p>The package manager should use a umask of 002.  "make install" will
-	automatically complain if this is not the case.  This ensures that
-	directories written in /var/db/pkg are Administrators-group writeable.</p>
-<p>The popular Interix binary packages from http://www.interopsystems.com/
-	use an older version of pkgsrc's pkg_* tools.  Ideally, these should
-	NOT be used in conjunction with pkgsrc.  If you choose to use them at
-	the same time as the pkgsrc packages, ensure that you use the proper
-	pkg_* tools for each type of binary package.</p>
-<p>The TERM setting used for DOS-type console windows (including those
-	invoked by the csh and ksh startup shortcuts) is "interix".  Most systems
-	don't have a termcap/terminfo entry for it, but the following .termcap
-	entry provides adequate emulation in most cases:</p>
-<pre class="programlisting">
-interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
-	</pre>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-limits"></a>3.3.5.4. Limitations of the Interix platform</h4></div></div></div>
-<p>Though Interix suffices as a familiar and flexible substitute
-	for a full Unix-like platform, it has some drawbacks that should
-	be noted for those desiring to make the most of Interix.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p><span class="strong"><strong>X11:</strong></span></p>
-<p>Interix comes with the standard set of X11R6 client libraries,
-	  and can run X11 based applications, but it does
-	  <span class="emphasis"><em>not</em></span> come with an X server.  Some options are
-	  <a class="ulink" href="http://www.starnet.com/products/xwin32/" target="_top">StarNet X-Win32</a>,
-	  <a class="ulink" href="http://connectivity.hummingbird.com/products/nc/exceed/" target="_top">Hummingbird Exceed</a>
-	  (available in a trimmed version for Interix from Interop Systems as the
-	  <a class="ulink" href="http://www.interopsystems.com/InteropXserver.htm" target="_top">Interop X Server</a>),
-	  and the free X11 server included with
-	  <a class="ulink" href="http://x.cygwin.com/" target="_top">Cygwin</a>.</p>
-</li>
-<li class="listitem">
-<p><span class="strong"><strong>X11 acceleration:</strong></span></p>
-<p>Because Interix runs in a completely different NT subsystem from
-	  Win32 applications, it does not currently support various X11
-	  protocol extensions for acceleration (such as MIT-SHM or DGA).
-	  Most interactive applications to a local X server will run
-	  reasonably fast, but full motion video and other graphics
-	  intensive applications may require a faster-than-expected CPU.</p>
-</li>
-<li class="listitem">
-<p><span class="strong"><strong>Audio:</strong></span></p>
-<p>Interix has no native support for audio output.  For audio
-	  support, pkgsrc uses the <span class="command"><strong>esound</strong></span> client/server
-	  audio system on Interix.  Unlike on most platforms, the
-	  <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/audio/esound/README.html" target="_top"><code class="filename">audio/esound</code></a> package does
-	  <span class="emphasis"><em>not</em></span> contain the <span class="command"><strong>esd</strong></span>
-	  server component.  To output audio via an Interix host, the
-	  <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/emulators/cygwin_esound/README.html" target="_top"><code class="filename">emulators/cygwin_esound</code></a> package
-	  must also be installed.</p>
-</li>
-<li class="listitem">
-<p><span class="strong"><strong>CD/DVDs, USB, and SCSI:</strong></span></p>
-<p>Direct device access is not currently supported in Interix, so it
-	  is not currently possible to access CD/DVD drives, USB devices,
-	  or SCSI devices through non-filesystem means.  Among other things,
-	  this makes it impossible to use Interix directly for CD/DVD
-	  burning.</p>
-</li>
-<li class="listitem">
-<p><span class="strong"><strong>Tape drives:</strong></span></p>
-<p>Due to the same limitations as for CD-ROMs and SCSI devices, tape
-	  drives are also not directly accessible in Interix.  However,
-	  support is in work to make tape drive access possible by using
-	  Cygwin as a bridge (similarly to audio bridged via Cygwin's
-	  esound server).</p>
-</li>
-</ul></div>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="platform.interix-knownissues"></a>3.3.5.5. Known issues for pkgsrc on Interix</h4></div></div></div>
-<p>It is not necessary, in general, to have a "root" user on the
-	Windows system; any member of the local Administrators group will
-	suffice.  However, some packages currently assume that the user
-	named "root" is the privileged user.  To accommodate these, you
-	may create such a user; make sure it is in the local group
-	Administrators (or your language equivalent).</p>
-<p><span class="command"><strong>pkg_add</strong></span> creates directories of mode
-	0755, not 0775, in <code class="filename">$PKG_DBDIR</code>.  For the
-	time being, install packages as the local Administrator (or
-	your language equivalent), or run the following command after
-	installing a package to work around the issue:</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>chmod -R g+w $PKG_DBDIR</code></strong>
-	</pre>
-</div>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="irix"></a>3.3.6. IRIX</h3></div></div></div>
-<p>You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
-      compiler (cc/c89).  Please set the <code class="varname">CC</code> environment variable
-      according to your preference.  If you do not have a license for the MIPSpro
-      compiler suite, you can download a gcc tardist file from <a class="ulink" href="http://freeware.sgi.com/" target="_top">http://freeware.sgi.com/</a>.</p>
-<p>Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
-      version of IRIX providing support for <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?if_indextoname+3+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">if_indextoname</span>(3)</span></a>, <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?if_nametoindex+3+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">if_nametoindex</span>(3)</span></a>,
-      etc.</p>
-<p>At this point in time, pkgsrc only supports one ABI at a time.  That is, you cannot
-	switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
-	you start out using "abi=n32", that's what all your packages will be built
-	with.</p>
-<p>Therefore, please make sure that you have no conflicting
-      <code class="varname">CFLAGS</code> in your environment or the
-      <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.  Particularly, make sure that you do not
-      try to link n32 object files with lib64 or vice versa.  Check your
-      <code class="filename">/etc/compiler.defaults</code>!</p>
-<p>If you have the actual pkgsrc tree mounted via NFS from a different host,
-      please make sure to set <code class="varname">WRKOBJDIR</code> to a local directory,
-      as it appears that IRIX linker occasionally runs into issues when trying to
-      link over a network-mounted file system.</p>
-<p>The bootstrapping process should set all the right options for programs such
-      as imake(1), but you may want to set some options depending on your local
-      setup.  Please see <code class="filename">pkgsrc/mk/defaults/mk.conf</code> and, of
-      course, your compiler's man pages for details.</p>
-<p>If you are using SGI's MIPSPro compiler, please set
-
-      </p>
-<pre class="programlisting">
-PKGSRC_COMPILER=        mipspro
-      </pre>
-<p>
-
-      in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.  Otherwise, pkgsrc will assume you
-      are using gcc and may end up passing invalid flags to the compiler.  Note that
-      bootstrap should create an appropriate <code class="filename">mk.conf.example</code> by
-      default.</p>
-<p>If you have both the MIPSPro compiler chain installed as well as gcc,
-      but want to make sure that MIPSPro is used, please set your <code class="varname">PATH</code>
-      to <span class="emphasis"><em>not</em></span> include the location of gcc (often
-      <code class="filename">/usr/freeware/bin</code>), and (important) pass the
-      '--preserve-path' flag.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="linux"></a>3.3.7. Linux</h3></div></div></div>
-<p>Some versions of Linux (for example Debian GNU/Linux) need
-      either libtermcap or libcurses (libncurses).  Installing the
-      distributions libncurses-dev package (or equivalent) should fix
-      the problem.</p>
-<p>pkgsrc supports both gcc (GNU Compiler Collection) and icc
-      (Intel C++ Compiler). gcc is the default. icc 8.0 and 8.1 on
-      i386 have been tested.</p>
-<p>To bootstrap using icc, assuming the default icc installation
-      directory:</p>
-<pre class="programlisting">
-env ICCBASE=/opt/intel/cc/10.1.008 ./bootstrap --compiler=icc
-      </pre>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>For icc 8.0 you must add `LDFLAGS=-static-libcxa' to this.</p>
-<p>For icc 8.1 you must add `LDFLAGS=-i-static' instead.</p>
-<p>For icc 10.1 neither of these appears to be necessary.</p>
-</div>
-<p>Use a value for ICCBASE that corresponds to the directory
-      where icc is installed. After bootstrapping, set
-      <code class="varname">ICCBASE</code> in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
-<pre class="programlisting">
-ICCBASE=                /opt/intel/cc/10.1.008
-      </pre>
-<p>The pkgsrc default for <code class="varname">ICCBASE</code> is
-      <code class="filename">/opt/intel_cc_80</code>. This is the default
-      install directory for icc 8.0. If you are using a more recent
-      version, be sure to set the correct path explicitly.
-      </p>
-<p>pkgsrc uses the static linking method of the runtime libraries
-      provided by icc, so binaries can be run on other systems which do not
-      have the shared libraries installed.</p>
-<p>Libtool, however, extracts a list of libraries from the
-      <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ld+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">ld</span>(1)</span></a> command run when linking a C++ shared library and
-      records it, throwing away the -Bstatic and -Bdynamic options
-      interspersed between the libraries.  This means that
-      libtool-linked C++ shared libraries will have a runtime
-      dependency on the icc libraries until this is fixed in
-      libtool.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="mirbsd"></a>3.3.8. MirBSD</h3></div></div></div>
-<p>pkgsrc has been tested on MirBSD #10-current (2011 and newer).
-      Older versions might also work. Releases before #10 are not
-      supported.</p>
-<p>The package tools of the (older) native ports tree,
-      <a class="ulink" href="//www.mirbsd.org/ports.htm" target="_top">MirPorts</a>,
-      have the same names as the ones used by pkgsrc. Care should be taken
-      that the right tools are used. When installing packages from source,
-      use the <code class="filename">bmake</code> command for pkgsrc and
-      <code class="filename">mmake</code> for MirPorts.</p>
-<p>pkgsrc and MirPorts use the same location for the package
-      database, <code class="filename">/var/db/pkg</code>. It is strongly recommended
-      to use <code class="filename">/usr/pkg/db</code> instead, so that the pkgsrc
-      tree is self-contained. This is also the default setting used in the
-      binary package builds.</p>
-<p>Binary packages for MirBSD/i386 can be found on the pkgsrc ftp
-      server. The bootstrap kit there already contains the
-      <span class="command"><strong>pkgin</strong></span> package manager. See the
-      <a class="ulink" href="https://www.mirbsd.org/pkgsrc.htm" target="_top">pkgsrc on MirOS</a>
-      page for more details.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="openbsd"></a>3.3.9. OpenBSD</h3></div></div></div>
-<p>OpenBSD 5.1 has been tested and supported,
-      other versions may work.</p>
-<p>Care should be taken so that the tools that this kit installs do not conflict
-      with the OpenBSD userland tools. There are several steps:</p>
-<div class="orderedlist"><ol class="orderedlist" type="1">
-<li class="listitem"><p>OpenBSD stores its ports pkg database in
-	  <code class="filename">/var/db/pkg</code>. It is therefore
-	  recommended that you choose a different location (e.g.
-	  <code class="filename">/usr/pkgdb</code>) by
-	  using the --pkgdbdir option to the bootstrap script.</p></li>
-<li class="listitem">
-<p>If you do not intend to use the OpenBSD ports tools, it's probably a
-	  good idea to move them out of the way to avoid confusion, e.g.</p>
-<pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>cd /usr/sbin</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_add pkg_add.orig</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_create pkg_create.orig</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_delete pkg_delete.orig</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>mv pkg_info pkg_info.orig</code></strong>
-	  </pre>
-</li>
-<li class="listitem">
-<p>An example <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file will be placed in
-	  <code class="filename">/etc/mk.conf.example</code> file
-	  when you use the bootstrap script. OpenBSD's make program uses
-	  <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>
-	  as well. You can work around this by enclosing all the pkgsrc-specific parts
-	  of the file with:</p>
-<pre class="programlisting">
-.ifdef BSD_PKG_MK
-# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-.else
-# OpenBSD stuff
-.endif
-	  </pre>
-</li>
-</ol></div>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="solaris"></a>3.3.10. Solaris</h3></div></div></div>
-<p>Solaris 2.6 through 10 are supported on both x86 and sparc.
-      You will need a working C compiler. Both gcc 4.5.3 and
-      Sun WorkShop 5 have been tested.</p>
-<p>The following packages are required on Solaris 8 for the bootstrap
-      process and to build packages.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>SUNWsprot</p></li>
-<li class="listitem"><p>SUNWarc</p></li>
-<li class="listitem"><p>SUNWbtool</p></li>
-<li class="listitem"><p>SUNWtoo</p></li>
-<li class="listitem"><p>SUNWlibm</p></li>
-</ul></div>
-<p>Please note that the use of GNU binutils on Solaris is
-      <span class="emphasis"><em>not</em></span> supported, as of June 2006.</p>
-<p>Whichever compiler you use, please ensure the compiler tools and
-      your $prefix are in your <code class="varname">PATH</code>. This includes
-      <code class="filename">/usr/ccs/{bin,lib}</code>
-      and e.g. <code class="filename">/usr/pkg/{bin,sbin}</code>.</p>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-gcc-note"></a>3.3.10.1. If you are using gcc</h4></div></div></div>
-<p>It makes life much simpler if you only use the same gcc consistently
-	for building all packages.</p>
-<p>It is recommended that an external gcc be used only for bootstrapping,
-	then either build gcc from
-	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/gcc46/README.html" target="_top"><code class="filename">lang/gcc46</code></a> or install a binary gcc
-	package, then remove gcc used during bootstrapping.</p>
-<p>Binary packages of gcc can be found through <a class="ulink" href="http://www.sunfreeware.com/" target="_top">http://www.sunfreeware.com/</a>.</p>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-sun-workshop-note"></a>3.3.10.2. If you are using Sun WorkShop</h4></div></div></div>
-<p>You will need at least the following packages installed (from WorkShop
-	5.0)</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>SPROcc
-	  - Sun WorkShop Compiler C 5.0</p></li>
-<li class="listitem"><p>SPROcpl
-	  - Sun WorkShop Compiler C++ 5.0</p></li>
-<li class="listitem"><p>SPROild
-	  - Sun WorkShop Incremental Linker</p></li>
-<li class="listitem"><p>SPROlang
-	  - Sun WorkShop Compilers common components</p></li>
-</ul></div>
-<p>You should set the following variables in your
-	<a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file:</p>
-<pre class="programlisting">
-CC=     cc
-CXX=    CC
-CPP=    cc -E
-CXXCPP= CC -E
-</pre>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>The <code class="varname">CPP</code> setting might break some
-	packages that use the C preprocessor for processing things other
-	than C source code.</p>
-</div>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="solaris-sunpro-64"></a>3.3.10.3. Building 64-bit binaries with SunPro</h4></div></div></div>
-<p>To build 64-bit packages, you just need to have the
-	following lines in your <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file:</p>
-<pre class="programlisting">
-PKGSRC_COMPILER=        sunpro
-ABI=                    64
-</pre>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>This setting has been tested for the SPARC
-	architecture. Intel and AMD machines need some more
-	work.</p>
-</div>
-</div>
-<div class="sect3">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="plat.sunos.problems"></a>3.3.10.4. Common problems</h4></div></div></div>
-<p>Sometimes, when using <span class="command"><strong>libtool</strong></span>,
-      <code class="filename">/bin/ksh</code> crashes with a segmentation fault.
-      The workaround is to use another shell for the configure
-      scripts, for example by installing <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a> and adding the following lines
-      to your <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>:</p>
-<pre class="programlisting">
-CONFIG_SHELL=   ${LOCALBASE}/bin/bash
-WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
-      </pre>
-<p>Then, rebuild the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/libtool-base/README.html" target="_top"><code class="filename">devel/libtool-base</code></a> package.</p>
-</div>
-</div>
+<p>For platform-specific notes consult the <code class="filename">README</code>
+    files found in the notes column of <a class="xref" href="#supported-platforms" title="Table 1.1. Platforms supported by pkgsrc">Table 1.1, &#8220;Platforms supported by pkgsrc&#8221;</a></p>
 </div>
 </div>
 <div class="chapter">
@@ -4800,7 +4270,7 @@ the following code: <code class="code">${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.<
     <code class="filename">PLIST</code> file you write:</p>
 <pre class="programlisting">
 @comment $NetBSD$
-    </pre>
+</pre>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -4823,7 +4293,7 @@ the following code: <code class="code">${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.<
     resulting PLIST:</p>
 <pre class="programlisting">
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
-    </pre>
+</pre>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -4876,7 +4346,7 @@ well as searching the <code class="filename">pkgsrc/mk</code> directory with <sp
     following way, similar to <code class="varname">MESSAGE_SUBST</code> (see <a class="xref" href="#components.optional" title="11.5. Optional files">Section 11.5, &#8220;Optional files&#8221;</a>):</p>
 <pre class="programlisting">
 PLIST_SUBST+=   SOMEVAR="somevalue"
-    </pre>
+</pre>
 <p>This replaces all occurrences of <span class="quote">&#8220;<span class="quote">${SOMEVAR}</span>&#8221;</span>
     in the <code class="filename">PLIST</code> with
     <span class="quote">&#8220;<span class="quote">somevalue</span>&#8221;</span>.</p>
@@ -4896,7 +4366,7 @@ PLIST_VARS+=	foo
 .if <em class="replaceable"><code>condition</code></em>
 PLIST.foo=	yes
 .else
-    </pre>
+</pre>
 <p>And then in <code class="filename">PLIST</code>:</p>
 <pre class="programlisting">
 @comment $NetBSD$
@@ -4905,7 +4375,7 @@ man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
-    </pre>
+</pre>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -4956,8 +4426,8 @@ ${PLIST.foo}share/bar/foo.data
     will be appended to the PLIST</p>
 <p>You can find one example in editors/xemacs:</p>
 <pre class="programlisting">
-      GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
-    </pre>
+GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
+</pre>
 <p>which will append something like
     <code class="filename">bin/xemacs-21.4.23-54e8ea71.dmp</code> to the
     <code class="filename">PLIST</code>.
@@ -4978,11 +4448,13 @@ ${PLIST.foo}share/bar/foo.data
 <p>If a package needs an empty directory to work, create
     the directory during installation as usual, and also add an
     entry to the PLIST:
-    </p>
+
+</p>
 <pre class="programlisting">
 @pkgdir path/to/empty/directory
-    </pre>
+</pre>
 <p>
+
     or take a look at <code class="varname">MAKE_DIRS</code> and
     <code class="varname">OWN_DIRS</code>.
     </p>
@@ -7373,7 +6845,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     done in the package's <code class="filename">Makefile</code>, e.g.:</p>
 <pre class="programlisting">
 INTERACTIVE_STAGE=      configure install
-    </pre>
+</pre>
 <p>The user can then decide to skip this package by setting the
     <code class="varname">BATCH</code> variable. Packages that require interaction
     are also excluded from bulk builds.</p>
@@ -7381,80 +6853,30 @@ INTERACTIVE_STAGE=      configure install
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="handling-licenses"></a>19.1.3. Handling licenses</h3></div></div></div>
-<p>Authors of software can choose the licence under which
-    software can be copied.  This is due to copyright law, and reasons
-    for license choices are outside the scope of pkgsrc.  The pkgsrc
-    system recognizes that there are a number of licenses which some
-    users may find objectionable or difficult or impossible to comply
-    with.  The Free Software Foundation has declared some licenses
-    "Free", and the Open Source Initiative has a definition of "Open
-    Source".  The pkgsrc system, as a policy choice, does not label
-    packages which have licenses that are Free or Open Source.
-    However, packages without a license meeting either of those tests
-    are labeled with a license tag denoting the license.  Note that a
-    package with no license to copy trivially does not meet either the
-    Free or Open Source test.</p>
-<p>For packages which are not Free or Open Source, pkgsrc will
-    not build the package unless the user has indicated to pkgsrc that
-    packages with that particular license may be built.  Note that
-    this documentation avoids the term "accepted the license".  The
-    pkgsrc system is merely providing a mechanism to avoid
-    accidentally building a package with a non-free license;
-    judgement and responsibility remain with the user.  (Installation
-    of binary packages are not currently subject to this mechanism;
-    this is a bug.)</p>
+<p>Authors of software can choose the licence under which software
+    can be copied.  The Free Software Foundation has declared some
+    licenses "Free", and the Open Source Initiative has a definition of
+    "Open Source".</p>
+<p>By default, pkgsrc allows packages with Free or Open Source
+    licenses to be built.  To allow packages with other licenses to be
+    built as well, the pkgsrc user needs to add these licenses to the
+    <code class="varname">ACCEPTABLE_LICENSES</code> variable in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>.  Note
+    that this variable only affects which packages may be
+    <span class="emphasis"><em>built</em></span>, while the license terms often also
+    restrict the actual use of the package and its redistribution.</p>
 <p>One might want to only install packages with a BSD license,
     or the GPL, and not the other.  The free licenses are added to the
-    default <code class="varname">ACCEPTABLE_LICENSES</code> variable.  The
+    default <code class="varname">ACCEPTABLE_LICENSES</code> variable.  The pkgsrc
     user can override the default by setting the
     <code class="varname">ACCEPTABLE_LICENSES</code> variable with "=" instead
-    of "+=".  The licenses accepted by default are:
-    </p>
-<pre class="programlisting">
-	apache-1.1 apache-2.0
-	arphic-public
-	artistic artistic-2.0
-	boost-license
-	cc-by-sa-v3.0
-	cc0-1.0-universal
-	cddl-1.0
-	cpl-1.0
-	epl-v1.0
-	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
-	gnu-gpl-v1
-	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
-	gnu-gpl-v3 gnu-lgpl-v3
-	ibm-public-license-1.0
-	ipafont
-	isc
-	lppl-1.3c
-	lucent
-	miros
-	mit
-	mpl-1.0 mpl-1.1 mpl-2.0
-	mplusfont
-	ofl-v1.0 ofl-v1.1
-	original-bsd modified-bsd 2-clause-bsd
-	php
-	png-license
-	postgresql-license
-	public-domain
-	python-software-foundation
-	qpl-v1.0
-	sgi-free-software-b-v2.0
-	sleepycat-public
-	unlicense
-	x11
-	zlib
-	zpl
-    </pre>
-<p>
-    </p>
+    of "+=".  The licenses accepted by default are defined in the
+    <code class="varname">DEFAULT_ACCEPTABLE_LICENSES</code> variable in the file
+    <code class="filename">pkgsrc/mk/license.mk</code>.</p>
 <p>The license tag mechanism is intended to address
     copyright-related issues surrounding building, installing and
     using a package, and not to address redistribution issues (see
     <code class="varname">RESTRICTED</code> and
-    <code class="varname">NO_SRC_ON_FTP</code>, etc.).  
+    <code class="varname">NO_SRC_ON_FTP</code>, etc.).
     Packages with redistribution restrictions should set these
     tags.</p>
 <p>Denoting that a package may be copied according to a
@@ -7464,7 +6886,7 @@ INTERACTIVE_STAGE=      configure install
     license, e.g. in <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/graphics/xv/README.html" target="_top"><code class="filename">graphics/xv</code></a>:</p>
 <pre class="programlisting">
 LICENSE=        xv-license
-    </pre>
+</pre>
 <p>When trying to build, the user will get a notice that the
     package is covered by a license which has not been placed in the
     <code class="varname">ACCEPTABLE_LICENSES</code> variable:</p>
@@ -7475,7 +6897,7 @@ LICENSE=        xv-license
 ===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
 ===&gt;     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1
-    </pre>
+</pre>
 <p>The license can be viewed with <span class="command"><strong>make
     show-license</strong></span>, and if the user so chooses, the line
     printed above can be added to <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> to
@@ -7483,30 +6905,7 @@ LICENSE=        xv-license
     that license:</p>
 <pre class="programlisting">
 ACCEPTABLE_LICENSES+=xv-license
-    </pre>
-<p>When adding a package with a new license, the following steps
-    are required:</p>
-<div class="orderedlist"><ol class="orderedlist" type="1">
-<li class="listitem">
-<p>Check if the file can avoid the -license filename tag as described above by referencing <a class="ulink" href="http://www.gnu.org/licenses/license-list.html" target="_top">Various Licenses and Comments about Them</a> and <a class="ulink" href="http://opensource.org/licenses/alphabetical" target="_top">Licenses by Name | Open Source Initiative</a>.  If this is the case, additionally add the license filename to:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>DEFAULT_ACCEPTABLE_LICENSES in <code class="filename">pkgsrc/mk/license.mk</code></p></li>
-<li class="listitem"><p>default_acceptable_licenses in <code class="filename">pkgsrc/pkgtools/pkg_install/files/lib/license.c</code></p></li>
-<li class="listitem"><p>the ACCEPTABLE_LICENSES list in <code class="filename">pkgsrc/doc/guide/files/fixes.xml</code></p></li>
-</ul></div>
-<p>with the proper syntax as demonstrated in those files, respectively.</p>
-</li>
-<li class="listitem"><p>The license text should be added to <code class="filename">pkgsrc/licenses</code> for displaying.  A list of known licenses can be seen in this directory.</p></li>
-</ol></div>
-<p>When the license changes (in a way other than formatting),
-    please make sure that the new license has a different name (e.g.,
-    append the version number if it exists, or the date).  Just
-    because a user told pkgsrc to build programs under a previous
-    version of a license does not mean that pkgsrc should build
-    programs under the new licenses.  The higher-level point is that
-    pkgsrc does not evaluate licenses for reasonableness; the only
-    test is a mechanistic test of whether a particular text has been
-    approved by either of two bodies.</p>
+</pre>
 <p>The use of <code class="varname">LICENSE=shareware</code>,
     <code class="varname">LICENSE=no-commercial-use</code>, and similar language
     is deprecated because it does not crisply refer to a particular
@@ -7514,26 +6913,62 @@ ACCEPTABLE_LICENSES+=xv-license
     enable a user to tell pkgsrc to proceed for a single package
     without also telling pkgsrc to proceed for all packages with that
     tag.</p>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="new-license"></a>19.1.3.1. Adding a package with a new license</h4></div></div></div>
+<p>When adding a package with a new license, the following steps
+    are required:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem">
+<p>Check whether the license qualifies as Free or Open
+    Source by referencing <a class="ulink" href="http://www.gnu.org/licenses/license-list.en.html" target="_top">Various Licenses
+    and Comments about Them</a> and <a class="ulink" href="http://opensource.org/licenses/alphabetical" target="_top">Licenses by Name |
+    Open Source Initiative</a>.  If this is the case, the filename in
+    <code class="filename">pkgsrc/licenses/</code> does not need the
+    <code class="filename">-license</code> suffix, and the license name should be
+    added to:</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>DEFAULT_ACCEPTABLE_LICENSES in <code class="filename">pkgsrc/mk/license.mk</code></p></li>
+<li class="listitem"><p>default_acceptable_licenses in <code class="filename">pkgsrc/pkgtools/pkg_install/files/lib/license.c</code></p></li>
+</ul></div>
+</li>
+<li class="listitem"><p>The license text should be added to <code class="filename">pkgsrc/licenses</code> for displaying.  A list of known licenses can be seen in this directory.</p></li>
+</ol></div>
+</div>
+<div class="sect3">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="change-license"></a>19.1.3.2. Change to the license</h4></div></div></div>
+<p>When the license changes (in a way other than formatting),
+    make sure that the new license has a different name (e.g.,
+    append the version number if it exists, or the date).  Just
+    because a user told pkgsrc to build programs under a previous
+    version of a license does not mean that pkgsrc should build
+    programs under the new licenses.  The higher-level point is that
+    pkgsrc does not evaluate licenses for reasonableness; the only
+    test is a mechanistic test of whether a particular text has been
+    approved by either of two bodies (FSF or OSI).</p>
+</div>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="restricted-packages"></a>19.1.4. Restricted packages</h3></div></div></div>
 <p>Some licenses restrict how software may be re-distributed.
-    Because a license tag is required unless the package is Free or
-    Open Source, all packages with restrictions should have license
-    tags.  By declaring the restrictions, package tools can
+    By declaring the restrictions, package tools can
     automatically refrain from e.g. placing binary packages on FTP
     sites.</p>
-<p>There are four restrictions that may be encoded, which are
+<p>There are four possible restrictions, which are
     the cross product of sources (distfiles) and binaries not being
     placed on FTP sites and CD-ROMs.  Because this is rarely the exact
     language in any license, and because non-Free licenses tend to be
     different from each other, pkgsrc adopts a definition of FTP and
-    CD-ROM.  Pkgsrc uses "FTP" to mean that the source or binary file
-    should not be made available over the Internet at no charge.
-    Pkgsrc uses "CD-ROM" to mean that the source or binary may not be
-    made available on some kind of media, together with other source
-    and binary packages, and which is sold for a distribution charge.
+    CD-ROM.
+
+    "FTP" means making the source or binary file available over the
+    Internet at no charge.
+
+    "CD-ROM" means making the source or binary available on some kind of
+    media, together with other source and binary packages, which is sold
+    for a distribution charge.
     </p>
 <p>In order to encode these restrictions, the package system
     defines five make variables that can be set to note these
@@ -7577,11 +7012,11 @@ ACCEPTABLE_LICENSES+=xv-license
 	the distfile(s) will not be mirrored on ftp.NetBSD.org.</p>
 </li>
 </ul></div>
-<p>Please note that packages will to be removed from pkgsrc
-    when the distfiles are not distributable and cannot be obtained
-    for a period of one full quarter branch. Packages with manual /
-    interactive fetch must have a maintainer and it is his/her
-    responsibility to ensure this.</p>
+<p>Please note that packages will be removed from pkgsrc when the
+    distfiles are not distributable and cannot be obtained for a period
+    of one full quarter branch. Packages with manual/interactive fetch
+    must have a maintainer and it is his/her responsibility to ensure
+    this.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -7607,7 +7042,7 @@ ACCEPTABLE_LICENSES+=xv-license
     <code class="varname">DEPENDS</code> definition is:</p>
 <pre class="programlisting">
 &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
-    </pre>
+</pre>
 <p>Please note that the <span class="quote">&#8220;<span class="quote">pre-req-package-name</span>&#8221;</span>
     may include any of the wildcard version numbers recognized by
     <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_info+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a>.</p>
@@ -7618,7 +7053,7 @@ ACCEPTABLE_LICENSES+=xv-license
 	<code class="filename">buildlink3.mk</code> file available, use it:</p>
 <pre class="programlisting">
 .include "../../graphics/jpeg/buildlink3.mk"
-	</pre>
+</pre>
 </li>
 <li class="listitem">
 <p>If your package needs another package's binaries or
@@ -7626,7 +7061,7 @@ ACCEPTABLE_LICENSES+=xv-license
 	<code class="filename">buildlink3.mk</code> file available, use it:</p>
 <pre class="programlisting">
 .include "../../graphics/jpeg/buildlink3.mk"
-	</pre>
+</pre>
 <p>but set
 	<code class="varname">BUILDLINK_DEPMETHOD.<em class="replaceable"><code>jpeg</code></em>?=build</code>
 	to make it a build dependency only. This case is rather
@@ -7637,7 +7072,7 @@ ACCEPTABLE_LICENSES+=xv-license
 	use the <code class="varname">BUILD_DEPENDS</code> definition:</p>
 <pre class="programlisting">
 BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
-	</pre>
+</pre>
 </li>
 <li class="listitem"><p>If your package needs a library with which to link and
 	there is no <code class="filename">buildlink3.mk</code> file
@@ -7654,7 +7089,7 @@ BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 	when it runs, and that is specified:</p>
 <pre class="programlisting">
 DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
-	</pre>
+</pre>
 </li>
 <li class="listitem">
 <p>You can use wildcards in package dependencies. Note that
@@ -7671,7 +7106,7 @@ DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 	pre-requisite:</p>
 <pre class="programlisting">
 DEPENDS+=       ImageMagick&gt;=6.0:../../graphics/ImageMagick
-	</pre>
+</pre>
 <p>This means that the package will build using version 6.0
 	of ImageMagick or newer. Such a dependency may be warranted
 	if, for example, the command line options of an executable
@@ -7711,11 +7146,11 @@ DEPENDS+=       ImageMagick&gt;=6.0:../../graphics/ImageMagick
     <code class="filename">foo/bar/Makefile</code>:</p>
 <pre class="programlisting">
 CONFLICTS=      baz-[0-9]*
-    </pre>
+</pre>
 <p>and in <code class="filename">pkgsrc/foo/baz/Makefile</code>:</p>
 <pre class="programlisting">
 CONFLICTS=      bar-[0-9]*
-    </pre>
+</pre>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -7797,7 +7232,7 @@ CONFLICTS=      bar-[0-9]*
 <pre class="programlisting">
 DISTNAME=       foo-17.42
 PKGREVISION=    9
-    </pre>
+</pre>
 <p>will result in a <code class="varname">PKGNAME</code> of
     <span class="quote">&#8220;<span class="quote">foo-17.42nb9</span>&#8221;</span>. If you want to use the original
     value of <code class="varname">PKGNAME</code> without the <span class="quote">&#8220;<span class="quote">nbX</span>&#8221;</span>
@@ -7808,7 +7243,7 @@ PKGREVISION=    9
     minor release of the above package, things should be like:</p>
 <pre class="programlisting">
 DISTNAME=       foo-17.43
-    </pre>
+</pre>
 <p><code class="varname">PKGREVISION</code> should be incremented for any
     non-trivial change in the resulting binary package.  Without a
     <code class="varname">PKGREVISION</code> bump, someone with the previous
@@ -7861,7 +7296,7 @@ SUBST_FILES.fix-paths=          src/*.c
 SUBST_FILES.fix-paths+=         scripts/*.sh
 SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
 SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
-    </pre>
+</pre>
 <p><code class="varname">SUBST_CLASSES</code> is a list of identifiers
     that are used to identify the different SUBST blocks that are
     defined. The SUBST framework is heavily used by pkgsrc, so it is
@@ -7927,7 +7362,7 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
 FETCH_MESSAGE=  "Please download the files"
 FETCH_MESSAGE+= "    "${DISTFILES:Q}
 FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
-    </pre>
+</pre>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -7992,7 +7427,7 @@ DISTNAME=       example-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
-      </pre>
+</pre>
 </div>
 <div class="sect3">
 <div class="titlepage"><div><div><h4 class="title">
@@ -8007,7 +7442,7 @@ MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 GITHUB_PROJECT= exampleproject
 GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
 EXTRACT_SUFX=   .zip
-      </pre>
+</pre>
 </div>
 </div>
 </div>
@@ -8049,7 +7484,7 @@ ${LIBTOOL} --mode=link \
         ${OBJS:.o=.lo} \
         -rpath ${PREFIX}/lib \
         -version-info major:minor
-	</pre>
+</pre>
 <p>Note that the library is changed to have a
 	<code class="filename">.la</code> extension, and the objects are
 	changed to have a <code class="filename">.lo</code>
@@ -8079,7 +7514,7 @@ AGE' to `CURRENT'.
 
 If two libraries have identical CURRENT and AGE numbers, then the
 dynamic linker chooses the library with the greater REVISION number.
-	</pre>
+</pre>
 <p>The <span class="quote">&#8220;<span class="quote">-release</span>&#8221;</span> option will produce
 	different results for a.out and ELF (excluding symlinks)
 	in only one case. An ELF library of the form
@@ -8115,11 +7550,11 @@ dynamic linker chooses the library with the greater REVISION number.
 	<code class="filename">.la</code> file. e.g.</p>
 <pre class="programlisting">
 ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
-	</pre>
+</pre>
 <p>should be changed to:</p>
 <pre class="programlisting">
 ${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></em> <em class="replaceable"><code>../somelib/somelib.la</code></em>
-	</pre>
+</pre>
 <p>and it will do the right thing with the libraries.</p>
 </li>
 <li class="listitem">
@@ -8129,7 +7564,7 @@ ${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></e
 	<code class="filename">.la</code>. e.g.</p>
 <pre class="programlisting">
 ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
-	</pre>
+</pre>
 <p>This will install the static <code class="filename">.a</code>,
 	shared library, any needed symlinks, and run
 	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ldconfig+8+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">ldconfig</span>(8)</span></a>.</p>
@@ -8197,7 +7632,7 @@ pre-configure:
         cd ${WRKSRC} &amp;&amp; autoconf
 
 ...
-    </pre>
+</pre>
 <p>and for packages that need automake and autoconf:</p>
 <pre class="programlisting">
 AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
@@ -8209,7 +7644,7 @@ pre-configure:
         aclocal; autoheader; automake -a --foreign -i; autoconf
 
 ...
-    </pre>
+</pre>
 <p>Packages which use GNU Automake will almost certainly
     require GNU Make.</p>
 <p>There are times when the configure process makes
@@ -8525,7 +7960,7 @@ of functions.</p>
 <pre class="programlisting">
 ${INSTALL_DATA_DIR} ${PREFIX}/dir1
 ${INSTALL_DATA_DIR} ${PREFIX}/dir2
-    </pre>
+</pre>
 <p>You can also just append <span class="quote">&#8220;<span class="quote"><code class="literal">dir1
     dir2</code></span>&#8221;</span> to the
     <code class="varname">INSTALLATION_DIRS</code> variable, which will
@@ -8592,7 +8027,7 @@ BUILD_DEFS+=		VARBASE
 OWN_DIRS_PERMS+=	${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
 REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
 SPECIAL_PERMS+=		${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
-    </pre>
+</pre>
 <p>Various <code class="varname">INSTALL_*</code> variables are also available:
     <code class="varname">INSTALL_GAME</code> to install setgid game binaries,
     <code class="varname">INSTALL_GAME_DIR</code> to install game directories that are
@@ -8647,7 +8082,7 @@ REPLACE.tcl.old=        .*/bin/tclsh
 REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
 REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 # relative to ${WRKSRC}, just as in REPLACE_PERL
-    </pre>
+</pre>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>Before March 2006, these variables were called
@@ -8677,7 +8112,7 @@ REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
     e.g.:</p>
 <pre class="programlisting">
 PERL5_PACKLIST= auto/Pg/.packlist
-    </pre>
+</pre>
 <p>The perl5 config variables
     <code class="varname">installarchlib</code>,
     <code class="varname">installscript</code>,
@@ -9379,7 +8814,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79349520"></a><dl>
+<a name="idp140663383225904"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9424,7 +8859,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79349008"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idp140663383226608"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9440,7 +8875,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79345040"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idp140663383231072"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9458,7 +8893,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79340560"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idp140663383236080"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9476,7 +8911,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79336464"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idp140663383240992"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9489,7 +8924,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79334288"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idp140663383243616"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9505,7 +8940,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79331088"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idp140663383247488"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9529,7 +8964,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79324176"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idp140663383255152"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9554,7 +8989,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79320464"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idp140663383260064"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9602,7 +9037,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79313936"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idp140663383268864"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9730,7 +9165,9 @@ USE_TOOLS+=gmake
 <li class="listitem">
 <p>If the package uses pkg-config to detect dependencies, add this
     tool to the list of required utilities:</p>
-<pre class="programlisting">USE_TOOLS+=pkg-config</pre>
+<pre class="programlisting">
+USE_TOOLS+=pkg-config
+</pre>
 <p>Also use <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/verifypc/README.html" target="_top"><code class="filename">pkgtools/verifypc</code></a> at
     the end of the build process to ensure that you did not miss to
     specify any dependency in your package and that the version
@@ -9747,14 +9184,18 @@ USE_TOOLS+=gmake
     documentation anyway; if it does not, it is a bug that you ought to
     report.  For such packages you should disable gtk-doc (unless it is
     the default):</p>
-<pre class="programlisting">CONFIGURE_ARGS+=--disable-gtk-doc</pre>
+<pre class="programlisting">
+CONFIGURE_ARGS+=--disable-gtk-doc
+</pre>
 <p>The default location of installed HTML files
     (<code class="filename">share/gtk-doc/&lt;package-name&gt;</code>) is correct
     and should not be changed unless the package insists on installing
     them somewhere else.  Otherwise programs as
     <span class="command"><strong>devhelp</strong></span> will not be able to open them.  You can
     do that with an entry similar to:</p>
-<pre class="programlisting">CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...</pre>
+<pre class="programlisting">
+CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...
+</pre>
 </li>
 </ul></div>
 <p>GNOME uses multiple <span class="emphasis"><em>shared</em></span> directories and
@@ -10091,7 +9532,7 @@ CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
 
 CFLAGS+=                -Wall
-	</pre>
+</pre>
 <p>This code shows how the use of the <code class="literal">:=</code>
 	operator can quickly lead to unexpected results. The first
 	paragraph is fairly common code. The second paragraph evaluates
