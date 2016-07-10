@@ -314,6 +314,16 @@ func (p *MkParser) mkCondAtom() *Tree {
 					return NewTree("compareVarStr", *lhs, op, repl.m[0])
 				} else if rhs := p.VarUse(); rhs != nil {
 					return NewTree("compareVarVar", *lhs, op, *rhs)
+				} else if repl.PeekByte() == '"' {
+					mark := repl.Mark()
+					if repl.AdvanceStr("\"") {
+						if quotedRHS := p.VarUse(); quotedRHS != nil {
+							if repl.AdvanceStr("\"") {
+								return NewTree("compareVarVar", *lhs, op, *quotedRHS)
+							}
+						}
+					}
+					repl.Reset(mark)
 				}
 			} else {
 				return NewTree("not", NewTree("empty", *lhs)) // See devel/bmake/files/cond.c:/\* For \.if \$/

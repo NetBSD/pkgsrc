@@ -159,6 +159,10 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 		NewTree("compareVarStr", varuse("VARNAME"), "!=", "Value"))
 	check("\"${VARNAME}\" != Value",
 		NewTree("compareVarStr", varuse("VARNAME"), "!=", "Value"))
+	check("${pkg} == \"${name}\"",
+		NewTree("compareVarVar", varuse("pkg"), "==", varuse("name")))
+	check("\"${pkg}\" == \"${name}\"",
+		NewTree("compareVarVar", varuse("pkg"), "==", varuse("name")))
 	check("(defined(VARNAME))",
 		NewTree("defined", "VARNAME"))
 	check("exists(/etc/hosts)",
