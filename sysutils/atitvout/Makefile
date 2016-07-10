@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/23 19:50:51 asau Exp $
+# $NetBSD: Makefile,v 1.15 2016/07/10 10:45:40 rillig Exp $
 
 DISTNAME=	atitvout-0.4
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Allows TV-Out connector support under Linux/NetBSD
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 # Linux-*-i386 [gnumakefile needs work]
 
 WRKSRC=			${WRKDIR}/atitvout
-USE_CONFIGURE=		YES
+HAS_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
