@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2016/07/10 10:40:23 rillig Exp $
+# $NetBSD: Makefile,v 1.248 2016/07/10 10:41:38 rillig Exp $
 
 DISTNAME=		openssh-7.2p2
 PKGNAME=		${DISTNAME:S/p2/.2/}
@@ -44,13 +44,13 @@ BUILDLINK_PASSTHRU_DIRS+= /usr/local/lib/bind
 CONFIGURE_ENV+=		ac_cv_func_openpty=no
 CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
 CPPFLAGS+=		-DIOV_MAX=16 # default is INT_MAX, way too large
-.if exists(/usr/local/include/bind/resolv.h)
+.  if exists(/usr/local/include/bind/resolv.h)
 CPPFLAGS+=		-I/usr/local/include/bind
 BUILDLINK_PASSTHRU_DIRS+= /usr/local/include/bind
-.elif exists(/usr/local/bind/include/resolv.h)
+.  elif exists(/usr/local/bind/include/resolv.h)
 CPPFLAGS+=		-I/usr/local/bind/include
 BUILDLINK_PASSTHRU_DIRS+= /usr/local/bind/include
-.endif
+.  endif
 LDFLAGS+=		-L/usr/local/lib/bind
 LIBS+=			-lbind -ldb -lcrypt
 
@@ -70,13 +70,13 @@ PKG_SYSCONFSUBDIR=	ssh
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 
 .if ${OPSYS} != "Interix"
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT:Q}
-CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER:Q}
+CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER}
 .endif
 
 # pkgsrc already enforces a "secure" version of zlib via dependencies,
@@ -173,7 +173,7 @@ RCD_SCRIPTS=		sshd
 RCD_SCRIPT_SRC.sshd=	${WRKDIR}/sshd.sh
 SMF_METHODS=		sshd
 
-FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
+FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
 
 SUBST_CLASSES+=		patch
 SUBST_STAGE.patch=	pre-configure
@@ -199,7 +199,7 @@ post-configure:
 		${SED} -e '/HAVE_ECDSA_START/,/HAVE_ECDSA_STOP/d' \
 			${FILESDIR}/sshd.sh > ${WRKDIR}/sshd.sh; \
 	fi
-	${SED} -e 's,@VARBASE@,${VARBASE:Q},g' \
+	${SED} -e 's,@VARBASE@,${VARBASE},g' \
 		< ${FILESDIR}/org.openssh.sshd.sb.in \
 		> ${WRKDIR}/org.openssh.sshd.sb
 
