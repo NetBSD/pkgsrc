@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2016/07/09 13:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2016/07/10 19:27:52 rillig Exp $
 
 DISTNAME=	calibre-2.62.0
 CATEGORIES=	misc
@@ -35,29 +35,29 @@ DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
 # dateutil>=1.4.1
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
-EXTRACT_USING=  bsdtar
+EXTRACT_USING=	bsdtar
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config pax
+USE_LANGUAGES=			c c++
+USE_LIBTOOL=			yes
+USE_TOOLS+=			pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not ported as of 2.1.0; also: py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
-PYDISTUTILSPKG=	yes
-PYSETUPOPTARGS=	# empty
-PYSETUPINSTALLARGS=	--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
+PYDISTUTILSPKG=			yes
+PYSETUPOPTARGS=			# empty
+PYSETUPINSTALLARGS=		--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}
 
 INSTALLATION_DIRS=	share/applications
 INSTALLATION_DIRS=	share/icons
 INSTALLATION_DIRS=	share/calibre/recipes
 
-FIX_PYTHON_PATHS+=	*.py
-FIX_PYTHON_PATHS+=	recipes/*.recipe
-FIX_PYTHON_PATHS+=	*/*.py
-FIX_PYTHON_PATHS+=	*/*/*.py
-FIX_PYTHON_PATHS+=	*/*/*/*.py
-FIX_PYTHON_PATHS+=	*/*/*/*/*.py
-FIX_PYTHON_PATHS+=	*/*/*/*/*/*.py
-FIX_PYTHON_PATHS+=	*/*/*/*/*/*/*.py
+FIX_PYTHON_FILES+=	*.py
+FIX_PYTHON_FILES+=	recipes/*.recipe
+FIX_PYTHON_FILES+=	*/*.py
+FIX_PYTHON_FILES+=	*/*/*.py
+FIX_PYTHON_FILES+=	*/*/*/*.py
+FIX_PYTHON_FILES+=	*/*/*/*/*.py
+FIX_PYTHON_FILES+=	*/*/*/*/*/*.py
+FIX_PYTHON_FILES+=	*/*/*/*/*/*/*.py
 
 SUBST_CLASSES+=		prefix
 SUBST_SED.prefix=	-e "s,^QMAKE =.*,QMAKE = '${PREFIX}/qt5/bin/qmake',"
@@ -70,7 +70,7 @@ SUBST_CLASSES+=		path
 SUBST_SED.path=		-e "s,\#! */usr/bin/env *[Pp]ython[0-9.]*,\#!${PYTHONBIN},"
 SUBST_MESSAGE.path=	Fixing path to python.
 SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	${FIX_PYTHON_PATHS}
+SUBST_FILES.path=	${FIX_PYTHON_FILES}
 
 REPLACE_BASH+=		resources/calibre-portable.sh
 
