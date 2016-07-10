@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.52 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.53 2016/07/10 07:46:29 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -435,7 +435,7 @@ monitor_file(...)
         int fd = kqueue();
         ...
 #else
-	...
+        ...
 #endif
 }
 </programlisting>
