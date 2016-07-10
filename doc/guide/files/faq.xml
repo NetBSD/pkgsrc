@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.53 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.54 2016/07/10 07:46:29 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -261,7 +261,7 @@ provide <varname>FETCH_CMD</varname>, <varname>FETCH_BEFORE_ARGS</varname>,
 like:</para>
 
 <programlisting>
-FETCH_USING=	wget
+FETCH_USING=    wget
 </programlisting>
 
 </sect1>
