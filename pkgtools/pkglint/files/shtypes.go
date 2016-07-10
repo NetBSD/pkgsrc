@@ -44,14 +44,6 @@ type ShAtom struct {
 	Data    interface{}
 }
 
-func NewShAtom(typ ShAtomType, text string, quoting ShQuoting) *ShAtom {
-	return &ShAtom{typ, text, quoting, nil}
-}
-
-func NewShAtomVaruse(text string, quoting ShQuoting, varname string, modifiers ...string) *ShAtom {
-	return &ShAtom{shtVaruse, text, quoting, NewMkVarUse(varname, modifiers...)}
-}
-
 func (token *ShAtom) String() string {
 	if token.Type == shtWord && token.Quoting == shqPlain && token.Data == nil {
 		return fmt.Sprintf("%q", token.MkText)
@@ -79,7 +71,6 @@ const (
 	shqSubshSquot
 	shqDquotBacktDquot
 	shqDquotBacktSquot
-	shqUnknown
 )
 
 func (q ShQuoting) String() string {
@@ -88,7 +79,6 @@ func (q ShQuoting) String() string {
 		"d", "s", "b", "S",
 		"db", "bd", "bs", "Ss",
 		"dbd", "dbs",
-		"unknown",
 	}[q]
 }
 

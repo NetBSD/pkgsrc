@@ -19,7 +19,7 @@ func (s *ShSuite) Test_ShellParser_program(c *check.C) {
 		b.List())
 
 	s.test("echo ;",
-		b.List().AddCommand(b.SimpleCommand("echo")).AddSeparator(";"))
+		b.List().AddCommand(b.SimpleCommand("echo")).AddSemicolon())
 
 	s.test("echo",
 		b.List().AddCommand(b.SimpleCommand("echo")))
@@ -37,48 +37,48 @@ func (s *ShSuite) Test_ShellParser_program(c *check.C) {
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.SimpleCommand("${CAT}", "${PKGDIR}/PLIST"),
 			b.While(
-				b.List().AddCommand(b.SimpleCommand("read", "entry")).AddSeparator(";"),
-				b.List().AddCommand(b.SimpleCommand(":")).AddSeparator(";"))))))
+				b.List().AddCommand(b.SimpleCommand("read", "entry")).AddSemicolon(),
+				b.List().AddCommand(b.SimpleCommand(":")).AddSemicolon())))))
 
 	s.test("while read entry ; do case \"$$entry\" in include/c-client/* ) ${INSTALL_DATA} $$src $$dest ; esac ; done",
 		b.List().AddCommand(b.While(
-			b.List().AddCommand(b.SimpleCommand("read", "entry")).AddSeparator(";"),
+			b.List().AddCommand(b.SimpleCommand("read", "entry")).AddSemicolon(),
 			b.List().AddCommand(b.Case(
 				b.Token("\"$$entry\""),
 				b.CaseItem(
 					b.Words("include/c-client/*"),
 					b.List().AddCommand(b.SimpleCommand("${INSTALL_DATA}", "$$src", "$$dest")),
-					&SEP_SEMI))).AddSeparator(";"))))
+					sepSemicolon))).AddSemicolon())))
 
 	s.test("command | while condition ; do case selector in pattern ) : ; esac ; done",
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.SimpleCommand("command"),
 			b.While(
-				b.List().AddCommand(b.SimpleCommand("condition")).AddSeparator(";"),
+				b.List().AddCommand(b.SimpleCommand("condition")).AddSemicolon(),
 				b.List().AddCommand(b.Case(
 					b.Token("selector"),
 					b.CaseItem(
 						b.Words("pattern"),
 						b.List().AddCommand(b.SimpleCommand(":")),
-						&SEP_SEMI))).AddSeparator(";"))))))
+						sepSemicolon))).AddSemicolon())))))
 
 	s.test("command1 \n command2 \n command3",
 		b.List().
 			AddCommand(b.SimpleCommand("command1")).
-			AddSeparator(SEP_NEWLINE).
+			AddNewline().
 			AddCommand(b.SimpleCommand("command2")).
-			AddSeparator(SEP_NEWLINE).
+			AddNewline().
 			AddCommand(b.SimpleCommand("command3")))
 
 	s.test("if condition; then action; else case selector in pattern) case-item-action ;; esac; fi",
 		b.List().AddCommand(b.If(
-			b.List().AddCommand(b.SimpleCommand("condition")).AddSeparator(";"),
-			b.List().AddCommand(b.SimpleCommand("action")).AddSeparator(";"),
+			b.List().AddCommand(b.SimpleCommand("condition")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("action")).AddSemicolon(),
 			b.List().AddCommand(b.Case(
 				b.Token("selector"),
 				b.CaseItem(
 					b.Words("pattern"),
-					b.List().AddCommand(b.SimpleCommand("case-item-action")), nil))).AddSeparator(";"))))
+					b.List().AddCommand(b.SimpleCommand("case-item-action")), sepNone))).AddSemicolon())))
 }
 
 func (s *ShSuite) Test_ShellParser_list(c *check.C) {
@@ -92,15 +92,15 @@ func (s *ShSuite) Test_ShellParser_list(c *check.C) {
 	s.test("echo1 ; echo2",
 		b.List().
 			AddCommand(b.SimpleCommand("echo1")).
-			AddSeparator(";").
+			AddSemicolon().
 			AddCommand(b.SimpleCommand("echo2")))
 
 	s.test("echo1 ; echo2 &",
 		b.List().
 			AddCommand(b.SimpleCommand("echo1")).
-			AddSeparator(";").
+			AddSemicolon().
 			AddCommand(b.SimpleCommand("echo2")).
-			AddSeparator("&"))
+			AddBackground())
 }
 
 func (s *ShSuite) Test_ShellParser_and_or(c *check.C) {
@@ -153,8 +153,8 @@ func (s *ShSuite) Test_ShellParser_pipe_sequence(c *check.C) {
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.SimpleCommand("command1"),
 			b.If(
-				b.List().AddCommand(b.SimpleCommand("true")).AddSeparator(";"),
-				b.List().AddCommand(b.SimpleCommand(":")).AddSeparator(";"))))))
+				b.List().AddCommand(b.SimpleCommand("true")).AddSemicolon(),
+				b.List().AddCommand(b.SimpleCommand(":")).AddSemicolon())))))
 }
 
 func (s *ShSuite) Test_ShellParser_command(c *check.C) {
@@ -166,20 +166,20 @@ func (s *ShSuite) Test_ShellParser_command(c *check.C) {
 	s.test("while 1; do 2; done",
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.While(
-				b.List().AddCommand(b.SimpleCommand("1")).AddSeparator(";"),
-				b.List().AddCommand(b.SimpleCommand("2")).AddSeparator(";"))))))
+				b.List().AddCommand(b.SimpleCommand("1")).AddSemicolon(),
+				b.List().AddCommand(b.SimpleCommand("2")).AddSemicolon())))))
 
 	s.test("while 1; do 2; done 1>&2",
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.While(
-				b.List().AddCommand(b.SimpleCommand("1")).AddSeparator(";"),
-				b.List().AddCommand(b.SimpleCommand("2")).AddSeparator(";"),
+				b.List().AddCommand(b.SimpleCommand("1")).AddSemicolon(),
+				b.List().AddCommand(b.SimpleCommand("2")).AddSemicolon(),
 				b.Redirection(1, ">&", "2"))))))
 
 	s.test("func(){ echo hello;} 2>&1",
 		b.List().AddCommand(b.Function(
 			"func",
-			b.Brace(b.List().AddCommand(b.SimpleCommand("echo", "hello")).AddSeparator(";")).Compound,
+			b.Brace(b.List().AddCommand(b.SimpleCommand("echo", "hello")).AddSemicolon()).Compound,
 			b.Redirection(2, ">&", "1"))))
 }
 
@@ -188,7 +188,7 @@ func (s *ShSuite) Test_ShellParser_compound_command(c *check.C) {
 
 	s.test("{ brace ; }",
 		b.List().AddCommand(b.Brace(
-			b.List().AddCommand(b.SimpleCommand("brace")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("brace")).AddSemicolon())))
 
 	s.test("( subshell )",
 		b.List().AddCommand(b.Subshell(
@@ -198,7 +198,7 @@ func (s *ShSuite) Test_ShellParser_compound_command(c *check.C) {
 		b.List().AddCommand(b.For(
 			"i",
 			b.Words("*"),
-			b.List().AddCommand(b.SimpleCommand("echo", "$i")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("echo", "$i")).AddSemicolon())))
 
 	s.test("case $i in esac",
 		b.List().AddCommand(b.Case(
@@ -210,8 +210,8 @@ func (s *ShSuite) Test_ShellParser_subshell(c *check.C) {
 	b := s.init(c)
 
 	sub3 := b.Subshell(b.List().AddCommand(b.SimpleCommand("sub3")))
-	sub2 := b.Subshell(b.List().AddCommand(sub3).AddSeparator(";").AddCommand(b.SimpleCommand("sub2")))
-	sub1 := b.Subshell(b.List().AddCommand(sub2).AddSeparator(";").AddCommand(b.SimpleCommand("sub1")))
+	sub2 := b.Subshell(b.List().AddCommand(sub3).AddSemicolon().AddCommand(b.SimpleCommand("sub2")))
+	sub1 := b.Subshell(b.List().AddCommand(sub2).AddSemicolon().AddCommand(b.SimpleCommand("sub1")))
 	s.test("( ( ( sub3 ) ; sub2 ) ; sub1 )", b.List().AddCommand(sub1))
 }
 
@@ -236,32 +236,32 @@ func (s *ShSuite) Test_ShellParser_for_clause(c *check.C) {
 		b.List().AddCommand(b.For(
 			"var",
 			b.Words("\"$$@\""),
-			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
 	// Only linebreak is allowed, but not semicolon.
 	s.test("for var \n do echo $var ; done",
 		b.List().AddCommand(b.For(
 			"var",
 			b.Words("\"$$@\""),
-			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
 	s.test("for var in a b c ; do echo $var ; done",
 		b.List().AddCommand(b.For(
 			"var",
 			b.Words("a", "b", "c"),
-			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
 	s.test("for var \n \n \n in a b c ; do echo $var ; done",
 		b.List().AddCommand(b.For(
 			"var",
 			b.Words("a", "b", "c"),
-			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
 	s.test("for var in in esac ; do echo $var ; done",
 		b.List().AddCommand(b.For(
 			"var",
 			b.Words("in", "esac"),
-			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
 	// No semicolon necessary between the two “done”.
 	s.test("for i in 1; do for j in 1; do echo $$i$$j; done done",
@@ -271,7 +271,7 @@ func (s *ShSuite) Test_ShellParser_for_clause(c *check.C) {
 			b.List().AddCommand(b.For(
 				"j",
 				b.Words("1"),
-				b.List().AddCommand(b.SimpleCommand("echo", "$$i$$j")).AddSeparator(";"))))))
+				b.List().AddCommand(b.SimpleCommand("echo", "$$i$$j")).AddSemicolon())))))
 }
 
 func (s *ShSuite) Test_ShellParser_case_clause(c *check.C) {
@@ -283,33 +283,33 @@ func (s *ShSuite) Test_ShellParser_case_clause(c *check.C) {
 	s.test("case selector in pattern) ;; pattern) esac",
 		b.List().AddCommand(b.Case(
 			b.Token("selector"),
-			b.CaseItem(b.Words("pattern"), b.List(), nil),
-			b.CaseItem(b.Words("pattern"), b.List(), nil))))
+			b.CaseItem(b.Words("pattern"), b.List(), sepNone),
+			b.CaseItem(b.Words("pattern"), b.List(), sepNone))))
 
 	s.test("case $$i in *.c | *.h ) echo C ;; * ) echo Other ; esac",
 		b.List().AddCommand(b.Case(
 			b.Token("$$i"),
-			b.CaseItem(b.Words("*.c", "*.h"), b.List().AddCommand(b.SimpleCommand("echo", "C")), nil),
-			b.CaseItem(b.Words("*"), b.List().AddCommand(b.SimpleCommand("echo", "Other")), &SEP_SEMI))))
+			b.CaseItem(b.Words("*.c", "*.h"), b.List().AddCommand(b.SimpleCommand("echo", "C")), sepNone),
+			b.CaseItem(b.Words("*"), b.List().AddCommand(b.SimpleCommand("echo", "Other")), sepSemicolon))))
 
 	s.test("case $$i in *.c ) echo ; esac",
 		b.List().AddCommand(b.Case(
 			b.Token("$$i"),
-			b.CaseItem(b.Words("*.c"), b.List().AddCommand(b.SimpleCommand("echo")), &SEP_SEMI))))
+			b.CaseItem(b.Words("*.c"), b.List().AddCommand(b.SimpleCommand("echo")), sepSemicolon))))
 
 	s.test("case selector in pattern) case-item-action ; esac",
 		b.List().AddCommand(b.Case(
 			b.Token("selector"),
 			b.CaseItem(
 				b.Words("pattern"),
-				b.List().AddCommand(b.SimpleCommand("case-item-action")), &SEP_SEMI))))
+				b.List().AddCommand(b.SimpleCommand("case-item-action")), sepSemicolon))))
 
 	s.test("case selector in pattern) case-item-action ;; esac",
 		b.List().AddCommand(b.Case(
 			b.Token("selector"),
 			b.CaseItem(
 				b.Words("pattern"),
-				b.List().AddCommand(b.SimpleCommand("case-item-action")), nil))))
+				b.List().AddCommand(b.SimpleCommand("case-item-action")), sepNone))))
 
 }
 
@@ -319,17 +319,17 @@ func (s *ShSuite) Test_ShellParser_if_clause(c *check.C) {
 	s.test(
 		"if true ; then echo yes ; else echo no ; fi",
 		b.List().AddCommand(b.If(
-			b.List().AddCommand(b.SimpleCommand("true")).AddSeparator(";"),
-			b.List().AddCommand(b.SimpleCommand("echo", "yes")).AddSeparator(";"),
-			b.List().AddCommand(b.SimpleCommand("echo", "no")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("true")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("echo", "yes")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("echo", "no")).AddSemicolon())))
 
 	// No semicolon necessary between the two “fi”.
 	s.test("if cond1; then if cond2; then action; fi fi",
 		b.List().AddCommand(b.If(
-			b.List().AddCommand(b.SimpleCommand("cond1")).AddSeparator(";"),
+			b.List().AddCommand(b.SimpleCommand("cond1")).AddSemicolon(),
 			b.List().AddCommand(b.If(
-				b.List().AddCommand(b.SimpleCommand("cond2")).AddSeparator(";"),
-				b.List().AddCommand(b.SimpleCommand("action")).AddSeparator(";"))))))
+				b.List().AddCommand(b.SimpleCommand("cond2")).AddSemicolon(),
+				b.List().AddCommand(b.SimpleCommand("action")).AddSemicolon())))))
 }
 
 func (s *ShSuite) Test_ShellParser_while_clause(c *check.C) {
@@ -337,8 +337,8 @@ func (s *ShSuite) Test_ShellParser_while_clause(c *check.C) {
 
 	s.test("while condition ; do action ; done",
 		b.List().AddCommand(b.While(
-			b.List().AddCommand(b.SimpleCommand("condition")).AddSeparator(";"),
-			b.List().AddCommand(b.SimpleCommand("action")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("condition")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("action")).AddSemicolon())))
 }
 
 func (s *ShSuite) Test_ShellParser_until_clause(c *check.C) {
@@ -346,8 +346,8 @@ func (s *ShSuite) Test_ShellParser_until_clause(c *check.C) {
 
 	s.test("until condition ; do action ; done",
 		b.List().AddCommand(b.Until(
-			b.List().AddCommand(b.SimpleCommand("condition")).AddSeparator(";"),
-			b.List().AddCommand(b.SimpleCommand("action")).AddSeparator(";"))))
+			b.List().AddCommand(b.SimpleCommand("condition")).AddSemicolon(),
+			b.List().AddCommand(b.SimpleCommand("action")).AddSemicolon())))
 }
 
 func (s *ShSuite) Test_ShellParser_function_definition(c *check.C) {
@@ -362,9 +362,9 @@ func (s *ShSuite) Test_ShellParser_brace_group(c *check.C) {
 	// No semicolon necessary after the closing brace.
 	s.test("if true; then { echo yes; } fi",
 		b.List().AddCommand(b.If(
-			b.List().AddCommand(b.SimpleCommand("true")).AddSeparator(";"),
+			b.List().AddCommand(b.SimpleCommand("true")).AddSemicolon(),
 			b.List().AddCommand(b.Brace(
-				b.List().AddCommand(b.SimpleCommand("echo", "yes")).AddSeparator(";"))))))
+				b.List().AddCommand(b.SimpleCommand("echo", "yes")).AddSemicolon())))))
 }
 
 func (s *ShSuite) Test_ShellParser_simple_command(c *check.C) {
@@ -477,10 +477,10 @@ func (s *ShSuite) test(program string, expected *MkShList) {
 
 	if ok1, ok2 := c.Check(succeeded, equals, 0), c.Check(lexer.error, equals, ""); ok1 && ok2 {
 		if !c.Check(lexer.result, deepEquals, expected) {
-			actualJson, actualErr := json.MarshalIndent(lexer.result, "", "  ")
-			expectedJson, expectedErr := json.MarshalIndent(expected, "", "  ")
+			actualJSON, actualErr := json.MarshalIndent(lexer.result, "", "  ")
+			expectedJSON, expectedErr := json.MarshalIndent(expected, "", "  ")
 			if c.Check(actualErr, check.IsNil) && c.Check(expectedErr, check.IsNil) {
-				c.Check(string(actualJson), deepEquals, string(expectedJson))
+				c.Check(string(actualJSON), deepEquals, string(expectedJSON))
 			}
 		}
 	} else {
@@ -584,7 +584,7 @@ func (b *MkShBuilder) Case(selector *ShToken, items ...*MkShCaseItem) *MkShComma
 	return &MkShCommand{Compound: &MkShCompoundCommand{Case: &MkShCaseClause{selector, items}}}
 }
 
-func (b *MkShBuilder) CaseItem(patterns []*ShToken, action *MkShList, separator *MkShSeparator) *MkShCaseItem {
+func (b *MkShBuilder) CaseItem(patterns []*ShToken, action *MkShList, separator MkShSeparator) *MkShCaseItem {
 	return &MkShCaseItem{patterns, action, separator}
 }
 

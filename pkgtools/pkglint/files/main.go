@@ -67,7 +67,7 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 		CheckDirent(item)
 	}
 
-	checktoplevelUnusedLicenses()
+	checkToplevelUnusedLicenses()
 	pkglint.PrintSummary()
 	if G.opts.Profiling {
 		G.loghisto.PrintStats("loghisto", G.logOut, 0)

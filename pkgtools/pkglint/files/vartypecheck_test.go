@@ -231,6 +231,24 @@ func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:4: Unknown linker flag \"-unknown\".\n")
 }
 
+func (s *Suite) Test_VartypeCheck_License(c *check.C) {
+	runVartypeChecks("LICENSE", opAssign, (*VartypeCheck).License,
+		"gnu-gpl-v2",
+		"AND mit")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:1: License file /licenses/gnu-gpl-v2 does not exist.\n"+
+		"ERROR: fname:2: Parse error for license condition \"AND mit\".\n")
+
+	runVartypeChecks("LICENSE", opAssignAppend, (*VartypeCheck).License,
+		"gnu-gpl-v2",
+		"AND mit")
+
+	c.Check(s.Output(), equals, ""+
+		"ERROR: fname:1: Parse error for appended license condition \"gnu-gpl-v2\".\n"+
+		"WARN: fname:2: License file /licenses/mit does not exist.\n")
+}
+
 func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
 	runVartypeMatchChecks("MACHINE_GNU_PLATFORM", (*VartypeCheck).MachineGnuPlatform,
 		"x86_64-pc-cygwin",

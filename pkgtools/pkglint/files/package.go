@@ -394,7 +394,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 	}
 
 	if gnuLine, useLine := vardef["GNU_CONFIGURE"], vardef["USE_LANGUAGES"]; gnuLine != nil && useLine != nil {
-		if matches(useLine.Comment(), `(?-i)\b(?:c|empty|none)\b`) {
+		if matches(useLine.VarassignComment(), `(?-i)\b(?:c|empty|none)\b`) {
 			// Don't emit a warning, since the comment
 			// probably contains a statement that C is
 			// really not needed.
@@ -453,7 +453,7 @@ func (pkg *Package) determineEffectivePkgVars() {
 		pkgname = pkg.pkgnameFromDistname(pkgname, distname)
 	}
 
-	if pkgname != "" && pkgname == distname && pkgnameLine.Comment() == "" {
+	if pkgname != "" && pkgname == distname && pkgnameLine.VarassignComment() == "" {
 		pkgnameLine.Note0("PKGNAME is ${DISTNAME} by default. You probably don't need to define PKGNAME.")
 	}
 

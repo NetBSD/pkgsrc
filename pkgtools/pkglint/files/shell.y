@@ -153,9 +153,9 @@ term : term separator and_or {
 
 for_clause : tkFOR tkWORD linebreak do_group {
 	args := NewShToken("\"$$@\"",
-		NewShAtom(shtWord, "\"",shqDquot),
-		NewShAtom(shtWord, "$$@",shqDquot),
-		NewShAtom(shtWord,"\"",shqPlain))
+		&ShAtom{shtWord, "\"",shqDquot, nil},
+		&ShAtom{shtWord, "$$@",shqDquot, nil},
+		&ShAtom{shtWord,"\"",shqPlain, nil})
 	$$ = &MkShForClause{$2.MkText, []*ShToken{args}, $4}
 }
 for_clause : tkFOR tkWORD linebreak tkIN sequential_sep do_group {
@@ -208,20 +208,20 @@ case_selector : pattern tkRPAREN {
 }
 
 case_item_ns : case_selector linebreak {
-	$$ = &MkShCaseItem{$1, &MkShList{}, nil}
+	$$ = &MkShCaseItem{$1, &MkShList{}, sepNone}
 }
 case_item_ns : case_selector linebreak term linebreak {
-	$$ = &MkShCaseItem{$1, $3, nil}
+	$$ = &MkShCaseItem{$1, $3, sepNone}
 }
 case_item_ns : case_selector linebreak term separator_op linebreak {
-	$$ = &MkShCaseItem{$1, $3, &$4}
+	$$ = &MkShCaseItem{$1, $3, $4}
 }
 
 case_item : case_selector linebreak tkSEMISEMI linebreak {
-	$$ = &MkShCaseItem{$1, &MkShList{}, nil}
+	$$ = &MkShCaseItem{$1, &MkShList{}, sepNone}
 }
 case_item : case_selector compound_list tkSEMISEMI linebreak {
-	$$ = &MkShCaseItem{$1, $2, nil}
+	$$ = &MkShCaseItem{$1, $2, sepNone}
 }
 
 pattern : tkWORD {
@@ -401,22 +401,22 @@ linebreak : /* empty */ {
 }
 
 separator_op : tkBACKGROUND {
-	$$ = "&"
+	$$ = sepBackground
 }
 separator_op : tkSEMI {
-	$$ = ";"
+	$$ = sepSemicolon
 }
 
 separator : separator_op linebreak {
 	/* empty */
 }
 separator : newline_list {
-	$$ = "\n"
+	$$ = sepNewline
 }
 
 sequential_sep : tkSEMI linebreak {
-	$$ = ";"
+	$$ = sepSemicolon
 }
 sequential_sep : tkNEWLINE linebreak {
-	$$ = "\n"
+	$$ = sepNewline
 }

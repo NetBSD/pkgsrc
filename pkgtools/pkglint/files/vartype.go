@@ -9,7 +9,7 @@ import (
 // See vardefs.go for examples, and vartypecheck.go for the implementation.
 type Vartype struct {
 	kindOfList KindOfList
-	checker    *VarChecker
+	basicType  *BasicType
 	aclEntries []AclEntry
 	guessed    bool
 }
@@ -110,8 +110,8 @@ func (vt *Vartype) IsConsideredList() bool {
 	case lkSpace:
 		return false
 	}
-	switch vt.checker {
-	case CheckvarAwkCommand, CheckvarSedCommands, CheckvarShellCommand, CheckvarShellCommands:
+	switch vt.basicType {
+	case BtAwkCommand, BtSedCommands, BtShellCommand, BtShellCommands, BtLicense:
 		return true
 	}
 	return false
@@ -124,24 +124,24 @@ func (vt *Vartype) MayBeAppendedTo() bool {
 func (vt *Vartype) String() string {
 	switch vt.kindOfList {
 	case lkNone:
-		return vt.checker.name
+		return vt.basicType.name
 	case lkSpace:
-		return "SpaceList of " + vt.checker.name
+		return "SpaceList of " + vt.basicType.name
 	case lkShell:
-		return "ShellList of " + vt.checker.name
+		return "ShellList of " + vt.basicType.name
 	default:
 		panic("Unknown list type")
 	}
 }
 
 func (vt *Vartype) IsShell() bool {
-	switch vt.checker {
-	case CheckvarCFlag, // Subtype of ShellWord
-		CheckvarLdFlag, // Subtype of ShellWord
-		CheckvarSedCommands,
-		CheckvarShellCommand,
-		CheckvarShellCommands,
-		CheckvarShellWord:
+	switch vt.basicType {
+	case BtCFlag, // Subtype of ShellWord
+		BtLdFlag, // Subtype of ShellWord
+		BtSedCommands,
+		BtShellCommand,
+		BtShellCommands,
+		BtShellWord:
 		return true
 	}
 	return false
@@ -150,127 +150,125 @@ func (vt *Vartype) IsShell() bool {
 // The basic vartype consists only of characters that don’t
 // need escaping in most contexts, like A-Za-z0-9-_.
 func (vt *Vartype) IsBasicSafe() bool {
-	switch vt.checker {
-	case CheckvarBuildlinkDepmethod,
-		CheckvarCategory,
-		CheckvarDistSuffix,
-		CheckvarEmulPlatform,
-		CheckvarFileMode,
-		CheckvarFilename,
-		CheckvarIdentifier,
-		CheckvarInteger,
-		CheckvarMachineGnuPlatform,
-		CheckvarMachinePlatform,
-		CheckvarOption,
-		CheckvarPathname,
-		CheckvarPerl5Packlist,
-		CheckvarPkgName,
-		CheckvarPkgOptionsVar,
-		CheckvarPkgPath,
-		CheckvarPkgRevision,
-		CheckvarPrefixPathname,
-		CheckvarPythonDependency,
-		CheckvarRelativePkgDir,
-		CheckvarRelativePkgPath,
-		CheckvarStage,
-		CheckvarUserGroupName,
-		CheckvarVersion,
-		CheckvarWrkdirSubdirectory,
-		CheckvarYesNo,
-		CheckvarYesNoIndirectly:
+	switch vt.basicType {
+	case BtBuildlinkDepmethod,
+		BtCategory,
+		BtDistSuffix,
+		BtEmulPlatform,
+		BtFileMode,
+		BtFilename,
+		BtIdentifier,
+		BtInteger,
+		BtMachineGnuPlatform,
+		BtMachinePlatform,
+		BtOption,
+		BtPathname,
+		BtPerl5Packlist,
+		BtPkgName,
+		BtPkgOptionsVar,
+		BtPkgPath,
+		BtPkgRevision,
+		BtPrefixPathname,
+		BtPythonDependency,
+		BtRelativePkgDir,
+		BtRelativePkgPath,
+		BtStage,
+		BtUserGroupName,
+		BtVersion,
+		BtWrkdirSubdirectory,
+		BtYesNo,
+		BtYesNoIndirectly:
 		return true
 	}
 	return false
 }
 
 func (vt *Vartype) IsPlainString() bool {
-	switch vt.checker {
-	case CheckvarComment, CheckvarMessage, CheckvarString:
+	switch vt.basicType {
+	case BtComment, BtMessage, BtUnknown:
 		return true
 	}
 	return false
 }
 
-type VarChecker struct {
+type BasicType struct {
 	name    string
 	checker func(*VartypeCheck)
 }
 
-func (vc *VarChecker) IsEnum() bool {
-	return hasPrefix(vc.name, "enum: ")
+func (bt *BasicType) IsEnum() bool {
+	return hasPrefix(bt.name, "enum: ")
 }
-func (vc *VarChecker) HasEnum(value string) bool {
-	return !contains(value, " ") && contains(vc.name, " "+value+" ")
+func (bt *BasicType) HasEnum(value string) bool {
+	return !contains(value, " ") && contains(bt.name, " "+value+" ")
 }
-func (vc *VarChecker) AllowedEnums() string {
-	return vc.name[6 : len(vc.name)-1]
+func (bt *BasicType) AllowedEnums() string {
+	return bt.name[6 : len(bt.name)-1]
 }
 
 var (
-	CheckvarAwkCommand             = &VarChecker{"AwkCommand", (*VartypeCheck).AwkCommand}
-	CheckvarBasicRegularExpression = &VarChecker{"BasicRegularExpression", (*VartypeCheck).BasicRegularExpression}
-	CheckvarBuildlinkDepmethod     = &VarChecker{"BuildlinkDepmethod", (*VartypeCheck).BuildlinkDepmethod}
-	CheckvarCategory               = &VarChecker{"Category", (*VartypeCheck).Category}
-	CheckvarCFlag                  = &VarChecker{"CFlag", (*VartypeCheck).CFlag}
-	CheckvarComment                = &VarChecker{"Comment", (*VartypeCheck).Comment}
-	CheckvarDependency             = &VarChecker{"Dependency", (*VartypeCheck).Dependency}
-	CheckvarDependencyWithPath     = &VarChecker{"DependencyWithPath", (*VartypeCheck).DependencyWithPath}
-	CheckvarDistSuffix             = &VarChecker{"DistSuffix", (*VartypeCheck).DistSuffix}
-	CheckvarEmulPlatform           = &VarChecker{"EmulPlatform", (*VartypeCheck).EmulPlatform}
-	CheckvarFetchURL               = &VarChecker{"FetchURL", (*VartypeCheck).FetchURL}
-	CheckvarFilename               = &VarChecker{"Filename", (*VartypeCheck).Filename}
-	CheckvarFilemask               = &VarChecker{"Filemask", (*VartypeCheck).Filemask}
-	CheckvarFileMode               = &VarChecker{"FileMode", (*VartypeCheck).FileMode}
-	CheckvarHomepage               = &VarChecker{"Homepage", (*VartypeCheck).Homepage}
-	CheckvarIdentifier             = &VarChecker{"Identifier", (*VartypeCheck).Identifier}
-	CheckvarInteger                = &VarChecker{"Integer", (*VartypeCheck).Integer}
-	CheckvarLdFlag                 = &VarChecker{"LdFlag", (*VartypeCheck).LdFlag}
-	CheckvarLicense                = &VarChecker{"License", (*VartypeCheck).License}
-	CheckvarMachineGnuPlatform     = &VarChecker{"MachineGnuPlatform", (*VartypeCheck).MachineGnuPlatform}
-	CheckvarMachinePlatform        = &VarChecker{"MachinePlatform", (*VartypeCheck).MachinePlatform}
-	CheckvarMachinePlatformPattern = &VarChecker{"MachinePlatformPattern", (*VartypeCheck).MachinePlatformPattern}
-	CheckvarMailAddress            = &VarChecker{"MailAddress", (*VartypeCheck).MailAddress}
-	CheckvarMessage                = &VarChecker{"Message", (*VartypeCheck).Message}
-	CheckvarOption                 = &VarChecker{"Option", (*VartypeCheck).Option}
-	CheckvarPathlist               = &VarChecker{"Pathlist", (*VartypeCheck).Pathlist}
-	CheckvarPathmask               = &VarChecker{"Pathmask", (*VartypeCheck).Pathmask}
-	CheckvarPathname               = &VarChecker{"Pathname", (*VartypeCheck).Pathname}
-	CheckvarPerl5Packlist          = &VarChecker{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
-	CheckvarPerms                  = &VarChecker{"Perms", (*VartypeCheck).Perms}
-	CheckvarPkgName                = &VarChecker{"PkgName", (*VartypeCheck).PkgName}
-	CheckvarPkgPath                = &VarChecker{"PkgPath", (*VartypeCheck).PkgPath}
-	CheckvarPkgOptionsVar          = &VarChecker{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
-	CheckvarPkgRevision            = &VarChecker{"PkgRevision", (*VartypeCheck).PkgRevision}
-	CheckvarPrefixPathname         = &VarChecker{"PrefixPathname", (*VartypeCheck).PrefixPathname}
-	CheckvarPythonDependency       = &VarChecker{"PythonDependency", (*VartypeCheck).PythonDependency}
-	CheckvarRelativePkgDir         = &VarChecker{"RelativePkgDir", (*VartypeCheck).RelativePkgDir}
-	CheckvarRelativePkgPath        = &VarChecker{"RelativePkgPath", (*VartypeCheck).RelativePkgPath}
-	CheckvarRestricted             = &VarChecker{"Restricted", (*VartypeCheck).Restricted}
-	CheckvarSedCommand             = &VarChecker{"SedCommand", (*VartypeCheck).SedCommand}
-	CheckvarSedCommands            = &VarChecker{"SedCommands", nil}
-	CheckvarShellCommand           = &VarChecker{"ShellCommand", nil}
-	CheckvarShellCommands          = &VarChecker{"ShellCommands", nil}
-	CheckvarShellWord              = &VarChecker{"ShellWord", nil}
-	CheckvarStage                  = &VarChecker{"Stage", (*VartypeCheck).Stage}
-	CheckvarString                 = &VarChecker{"String", (*VartypeCheck).String}
-	CheckvarTool                   = &VarChecker{"Tool", (*VartypeCheck).Tool}
-	CheckvarUnchecked              = &VarChecker{"Unchecked", (*VartypeCheck).Unchecked}
-	CheckvarURL                    = &VarChecker{"URL", (*VartypeCheck).URL}
-	CheckvarUserGroupName          = &VarChecker{"UserGroupName", (*VartypeCheck).UserGroupName}
-	CheckvarVariableName           = &VarChecker{"VariableName", (*VartypeCheck).VariableName}
-	CheckvarVersion                = &VarChecker{"Version", (*VartypeCheck).Version}
-	CheckvarWrapperReorder         = &VarChecker{"WrapperReorder", (*VartypeCheck).WrapperReorder}
-	CheckvarWrapperTransform       = &VarChecker{"WrapperTransform", (*VartypeCheck).WrapperTransform}
-	CheckvarWrkdirSubdirectory     = &VarChecker{"WrkdirSubdirectory", (*VartypeCheck).WrkdirSubdirectory}
-	CheckvarWrksrcSubdirectory     = &VarChecker{"WrksrcSubdirectory", (*VartypeCheck).WrksrcSubdirectory}
-	CheckvarYes                    = &VarChecker{"Yes", (*VartypeCheck).Yes}
-	CheckvarYesNo                  = &VarChecker{"YesNo", (*VartypeCheck).YesNo}
-	CheckvarYesNoIndirectly        = &VarChecker{"YesNoIndirectly", (*VartypeCheck).YesNoIndirectly}
+	BtAwkCommand             = &BasicType{"AwkCommand", (*VartypeCheck).AwkCommand}
+	BtBasicRegularExpression = &BasicType{"BasicRegularExpression", (*VartypeCheck).BasicRegularExpression}
+	BtBuildlinkDepmethod     = &BasicType{"BuildlinkDepmethod", (*VartypeCheck).BuildlinkDepmethod}
+	BtCategory               = &BasicType{"Category", (*VartypeCheck).Category}
+	BtCFlag                  = &BasicType{"CFlag", (*VartypeCheck).CFlag}
+	BtComment                = &BasicType{"Comment", (*VartypeCheck).Comment}
+	BtDependency             = &BasicType{"Dependency", (*VartypeCheck).Dependency}
+	BtDependencyWithPath     = &BasicType{"DependencyWithPath", (*VartypeCheck).DependencyWithPath}
+	BtDistSuffix             = &BasicType{"DistSuffix", (*VartypeCheck).DistSuffix}
+	BtEmulPlatform           = &BasicType{"EmulPlatform", (*VartypeCheck).EmulPlatform}
+	BtFetchURL               = &BasicType{"FetchURL", (*VartypeCheck).FetchURL}
+	BtFilename               = &BasicType{"Filename", (*VartypeCheck).Filename}
+	BtFilemask               = &BasicType{"Filemask", (*VartypeCheck).Filemask}
+	BtFileMode               = &BasicType{"FileMode", (*VartypeCheck).FileMode}
+	BtHomepage               = &BasicType{"Homepage", (*VartypeCheck).Homepage}
+	BtIdentifier             = &BasicType{"Identifier", (*VartypeCheck).Identifier}
+	BtInteger                = &BasicType{"Integer", (*VartypeCheck).Integer}
+	BtLdFlag                 = &BasicType{"LdFlag", (*VartypeCheck).LdFlag}
+	BtLicense                = &BasicType{"License", (*VartypeCheck).License}
+	BtMachineGnuPlatform     = &BasicType{"MachineGnuPlatform", (*VartypeCheck).MachineGnuPlatform}
+	BtMachinePlatform        = &BasicType{"MachinePlatform", (*VartypeCheck).MachinePlatform}
+	BtMachinePlatformPattern = &BasicType{"MachinePlatformPattern", (*VartypeCheck).MachinePlatformPattern}
+	BtMailAddress            = &BasicType{"MailAddress", (*VartypeCheck).MailAddress}
+	BtMessage                = &BasicType{"Message", (*VartypeCheck).Message}
+	BtOption                 = &BasicType{"Option", (*VartypeCheck).Option}
+	BtPathlist               = &BasicType{"Pathlist", (*VartypeCheck).Pathlist}
+	BtPathmask               = &BasicType{"Pathmask", (*VartypeCheck).Pathmask}
+	BtPathname               = &BasicType{"Pathname", (*VartypeCheck).Pathname}
+	BtPerl5Packlist          = &BasicType{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
+	BtPerms                  = &BasicType{"Perms", (*VartypeCheck).Perms}
+	BtPkgName                = &BasicType{"PkgName", (*VartypeCheck).PkgName}
+	BtPkgPath                = &BasicType{"PkgPath", (*VartypeCheck).PkgPath}
+	BtPkgOptionsVar          = &BasicType{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
+	BtPkgRevision            = &BasicType{"PkgRevision", (*VartypeCheck).PkgRevision}
+	BtPrefixPathname         = &BasicType{"PrefixPathname", (*VartypeCheck).PrefixPathname}
+	BtPythonDependency       = &BasicType{"PythonDependency", (*VartypeCheck).PythonDependency}
+	BtRelativePkgDir         = &BasicType{"RelativePkgDir", (*VartypeCheck).RelativePkgDir}
+	BtRelativePkgPath        = &BasicType{"RelativePkgPath", (*VartypeCheck).RelativePkgPath}
+	BtRestricted             = &BasicType{"Restricted", (*VartypeCheck).Restricted}
+	BtSedCommand             = &BasicType{"SedCommand", (*VartypeCheck).SedCommand}
+	BtSedCommands            = &BasicType{"SedCommands", (*VartypeCheck).SedCommands}
+	BtShellCommand           = &BasicType{"ShellCommand", nil}
+	BtShellCommands          = &BasicType{"ShellCommands", nil}
+	BtShellWord              = &BasicType{"ShellWord", nil}
+	BtStage                  = &BasicType{"Stage", (*VartypeCheck).Stage}
+	BtTool                   = &BasicType{"Tool", (*VartypeCheck).Tool}
+	BtUnknown                = &BasicType{"Unknown", (*VartypeCheck).Unknown}
+	BtURL                    = &BasicType{"URL", (*VartypeCheck).URL}
+	BtUserGroupName          = &BasicType{"UserGroupName", (*VartypeCheck).UserGroupName}
+	BtVariableName           = &BasicType{"VariableName", (*VartypeCheck).VariableName}
+	BtVersion                = &BasicType{"Version", (*VartypeCheck).Version}
+	BtWrapperReorder         = &BasicType{"WrapperReorder", (*VartypeCheck).WrapperReorder}
+	BtWrapperTransform       = &BasicType{"WrapperTransform", (*VartypeCheck).WrapperTransform}
+	BtWrkdirSubdirectory     = &BasicType{"WrkdirSubdirectory", (*VartypeCheck).WrkdirSubdirectory}
+	BtWrksrcSubdirectory     = &BasicType{"WrksrcSubdirectory", (*VartypeCheck).WrksrcSubdirectory}
+	BtYes                    = &BasicType{"Yes", (*VartypeCheck).Yes}
+	BtYesNo                  = &BasicType{"YesNo", (*VartypeCheck).YesNo}
+	BtYesNoIndirectly        = &BasicType{"YesNoIndirectly", (*VartypeCheck).YesNoIndirectly}
 )
 
 func init() { // Necessary due to circular dependency
-	CheckvarSedCommands.checker = (*VartypeCheck).SedCommands
-	CheckvarShellCommand.checker = (*VartypeCheck).ShellCommand
-	CheckvarShellCommands.checker = (*VartypeCheck).ShellCommands
-	CheckvarShellWord.checker = (*VartypeCheck).ShellWord
+	BtShellCommand.checker = (*VartypeCheck).ShellCommand
+	BtShellCommands.checker = (*VartypeCheck).ShellCommands
+	BtShellWord.checker = (*VartypeCheck).ShellWord
 }
