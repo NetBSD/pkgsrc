@@ -9,10 +9,6 @@ type MkVarUse struct {
 	modifiers []string // E.g. "Q", "S/from/to/"
 }
 
-func NewMkVarUse(varname string, modifiers ...string) *MkVarUse {
-	return &MkVarUse{varname, modifiers}
-}
-
 func (vu *MkVarUse) Mod() string {
 	mod := ""
 	for _, modifier := range vu.modifiers {
