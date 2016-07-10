@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:08 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/10 10:34:16 rillig Exp $
 
 DISTNAME=	hyphen-romansh
 PKGNAME=	tex-${DISTNAME}-2016
+PKGREVISION=	1
 TEXLIVE_REV=	40340
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Romansh hyphenation patterns
-LICESNE=	lppl-1.3c
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
