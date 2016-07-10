@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.49 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.50 2016/07/10 07:43:23 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -13,22 +13,16 @@ that file depends on the installation. On NetBSD, when you use
 <literal>${PREFIX}/etc/</literal>, depending on where you told the
 bootstrap program to install the binary packages.</para>
 
-<para>During the bootstrap, an example configuration file is created. To
-use that, you have to create the directory
-<filename>${PREFIX}/etc</filename> and copy the example file
-there.</para>
-
 <para>The format of the configuration file is that of the usual
 BSD-style <filename>Makefile</filename>s. The whole pkgsrc configuration
 is done by setting variables in this file. Note that you can define all
 kinds of variables, and no special error checking (for example for
-spelling mistakes) takes place, so you have to try it out to see if it
-works.</para>
+spelling mistakes) takes place.</para>
 
   <sect1 id="general-configuration">
     <title>General configuration</title>
 
-    <para>In this section, you can find some variables that apply to all
+    <para>The following variables apply to all
     pkgsrc packages. A complete list of the variables that can be
     configured by the user is available in
     <filename>mk/defaults/mk.conf</filename>, together with some
@@ -366,8 +360,8 @@ LDFLAGS+=        -your -linkerflags
 	(normal, default, quiet operation); the value 1 will display
 	all shell commands before their invocation, and the value 2
 	will display both the shell commands before their invocation,
-	and their actual execution progress with <command>set
-	-x</command> will be displayed.</para></listitem>
+	as well as their actual execution progress with <command>set
+	-x</command>.</para></listitem>
       </itemizedlist>
     </para>
   </sect1>

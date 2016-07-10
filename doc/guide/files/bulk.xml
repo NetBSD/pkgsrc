@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.21 2014/07/27 08:28:28 wiz Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.22 2016/07/10 07:43:23 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -11,9 +11,8 @@ it is wasted time if they all build their packages themselves from source.
 Or you may want to build a list of packages you want and check them before
 deploying onto production system.
 There is a way of getting a set of binary packages:
-The bulk build system, or pbulk ("p" stands for "parallel).
-This chapter describes how to set it up so that the packages
-are most likely to be usable later.</para>
+The bulk build system, or pbulk ("p" stands for "parallel").
+This chapter describes how to set it up.</para>
 
 <sect1 id="bulk.pre">
 <title>Preparations</title>
@@ -25,13 +24,13 @@ There exists a number of particularly heavy packages that are not actually
 interesting to a wide audience.
 <!-- approximate resource consumption for full bulk build is given in section <put a reference here/> -->
 For a limited bulk builds you need to make a list of packages you want to build.
-Note, that all their dependencies will be built, so you don't need to track them manually.
+Note that all their dependencies will be built, so you don't need to track them manually.
 </para>
 
 <para>During bulk builds various packages are installed and deinstalled
 in <filename>/usr/pkg</filename> (or whatever <filename>LOCALBASE</filename> is),
 so make sure that you don't need any package during the builds.
-Essentially, you should provide fresh system, either a chroot environment
+Essentially, you should provide a fresh system, either a chroot environment
 or something even more restrictive, depending on what the operating system provides,
 or dedicate the whole physical machine.
 As a useful side effect this makes sure that bulk builds cannot
@@ -87,11 +86,11 @@ unprivileged user doesn't work well at the moment.</para></listitem>
 <sect2 id="bulk.pbulk.conf">
 <title>Configuration</title>
 
-<para>To simplify configuration we provide helper script <filename>mk/pbulk/pbulk.sh</filename>.</para>
+<para>To simplify configuration, we provide the helper script <filename>mk/pbulk/pbulk.sh</filename>.</para>
 
 <para>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
 Configure network access to fetch distribution files.
-Create user with name "pbulk".</para>
+Create a user with name "pbulk".</para>
 
 <para>Fetch and extract pkgsrc. Use a command like one of these:</para>
 
@@ -116,23 +115,22 @@ Create user with name "pbulk".</para>
 apply to packages you build. For instance,</para>
 
 <programlisting>
-PKG_DEVELOPER=		yes		# perform more checks
-X11_TYPE=		modular		# use pkgsrc X11
-SKIP_LICENSE_CHECK=	yes		# accept all licences (useful when building all packages)
+PKG_DEVELOPER=		yes	# perform more checks
+X11_TYPE=		modular	# use pkgsrc X11
+SKIP_LICENSE_CHECK=	yes	# accept all licences (useful
+				# when building all packages)
 </programlisting>
 </note>
 <!-- Think how to merge this or maintain short reference of useful settings.
 <itemizedlist>
-<listitem><para><literal><varname>PKG_DEVELOPER</varname>=yes</literal>, to enable many consistency checks,</para></listitem>
 <listitem><para><literal><varname>WRKOBJDIR</varname>=/tmp/pbulk-outer</literal>, to keep <filename>/usr/pkgsrc</filename> free from any modifications,</para></listitem>
 <listitem><para><literal><varname>DISTDIR</varname>=/distfiles</literal>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</para></listitem>
 <listitem><para><literal><varname>ACCEPTABLE_LICENSES</varname>+=...</literal>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</para></listitem>
-<listitem><para><literal><varname>SKIP_LICENSE_CHECK</varname>=yes</literal>, to bypass the license checks.</para></listitem>
 </itemizedlist>
 -->
 
 <para>If configured for limited list, replace the list in <filename>/usr/pbulk/etc/pbulk.list</filename>
-with your list of packages one per line without empty lines or comments. E.g.:</para>
+with your list of packages, one per line without empty lines or comments. E.g.:</para>
 
 <programlisting>
 www/firefox
