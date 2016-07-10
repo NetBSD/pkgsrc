@@ -16,7 +16,7 @@ func (s *Suite) Test_MkLine_CheckVartype_simple_type(c *check.C) {
 	vartype := mkline.getVariableType("COMMENT")
 
 	c.Assert(vartype, check.NotNil)
-	c.Check(vartype.checker.name, equals, "Comment")
+	c.Check(vartype.basicType.name, equals, "Comment")
 	c.Check(vartype.guessed, equals, false)
 	c.Check(vartype.kindOfList, equals, lkNone)
 
@@ -157,8 +157,8 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 		"# whole line comment",
 		"",
 		".  if !empty(PKGNAME:M*-*) # cond comment",
-		".include \"../../mk/bsd.prefs.mk\" # include comment",
-		".include <subdir.mk> # sysinclude comment",
+		".    include \"../../mk/bsd.prefs.mk\" # include comment",
+		".    include <subdir.mk> # sysinclude comment",
 		"target1 target2: source1 source2",
 		"target : source",
 		"VARNAME+=value"))
@@ -170,13 +170,12 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 	c.Check(ln[0].Varparam(), equals, "param")
 	c.Check(ln[0].Op(), equals, opAssignDefault)
 	c.Check(ln[0].Value(), equals, "value")
-	c.Check(ln[0].Comment(), equals, "# varassign comment")
+	c.Check(ln[0].VarassignComment(), equals, "# varassign comment")
 
 	c.Check(ln[1].IsShellcmd(), equals, true)
 	c.Check(ln[1].Shellcmd(), equals, "shell command # shell comment")
 
 	c.Check(ln[2].IsComment(), equals, true)
-	c.Check(ln[2].Comment(), equals, " whole line comment")
 
 	c.Check(ln[3].IsEmpty(), equals, true)
 
@@ -184,22 +183,20 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 	c.Check(ln[4].Indent(), equals, "  ")
 	c.Check(ln[4].Directive(), equals, "if")
 	c.Check(ln[4].Args(), equals, "!empty(PKGNAME:M*-*)")
-	c.Check(ln[4].Comment(), equals, "") // Not needed
 
 	c.Check(ln[5].IsInclude(), equals, true)
+	c.Check(ln[5].Indent(), equals, "    ")
 	c.Check(ln[5].MustExist(), equals, true)
 	c.Check(ln[5].Includefile(), equals, "../../mk/bsd.prefs.mk")
-	c.Check(ln[5].Comment(), equals, "") // Not needed
 
 	c.Check(ln[6].IsSysinclude(), equals, true)
+	c.Check(ln[6].Indent(), equals, "    ")
 	c.Check(ln[6].MustExist(), equals, true)
 	c.Check(ln[6].Includefile(), equals, "subdir.mk")
-	c.Check(ln[6].Comment(), equals, "") // Not needed
 
 	c.Check(ln[7].IsDependency(), equals, true)
 	c.Check(ln[7].Targets(), equals, "target1 target2")
 	c.Check(ln[7].Sources(), equals, "source1 source2")
-	c.Check(ln[7].Comment(), equals, "") // Not needed
 
 	c.Check(ln[9].IsVarassign(), equals, true)
 	c.Check(ln[9].Varname(), equals, "VARNAME")
@@ -766,7 +763,7 @@ func (s *Suite) Test_MkLine_CheckCond_comparison_with_shell_command(c *check.C) 
 	c.Check(s.Output(), equals, "") // Don’t warn about unknown shell command "cc".
 }
 
-func (s *Suite) disabled_Test_MkLine_Pkgmandir(c *check.C) {
+func (s *Suite) Test_MkLine_Pkgmandir(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("chat/ircII/Makefile",

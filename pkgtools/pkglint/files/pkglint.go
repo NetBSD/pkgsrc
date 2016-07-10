@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	reMkInclude = `^\.\s*(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`
+	reMkInclude = `^\.(\s*)(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`
 	rePkgname   = `^([\w\-.+]+)-(\d(?:\w|\.\d)*)$`
 )
 

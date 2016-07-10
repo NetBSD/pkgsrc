@@ -114,7 +114,7 @@ func (gd *GlobalData) loadTools() {
 		fname := G.globalData.Pkgsrcdir + "/mk/tools/bsd.tools.mk"
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			if m, _, includefile := match2(line.Text, reMkInclude); m {
+			if m, _, _, includefile := match3(line.Text, reMkInclude); m {
 				if !contains(includefile, "/") {
 					toolFiles = append(toolFiles, includefile)
 				}

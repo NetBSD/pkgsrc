@@ -291,7 +291,7 @@ func (va *VaralignBlock) Finish() {
 }
 
 func (va *VaralignBlock) fixalign(mkline *MkLine, prefix, oldalign string) {
-	if mkline.Value() == "" && mkline.Comment() == "" {
+	if mkline.Value() == "" && mkline.VarassignComment() == "" {
 		return
 	}
 

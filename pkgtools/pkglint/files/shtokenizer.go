@@ -137,7 +137,7 @@ func (p *ShTokenizer) shAtomSub() *ShAtom {
 	repl := p.parser.repl
 	mark := repl.Mark()
 	atom := func(typ ShAtomType) *ShAtom {
-		return NewShAtom(typ, repl.Since(mark), shqSubsh)
+		return &ShAtom{typ, repl.Since(mark), shqSubsh, nil}
 	}
 	switch {
 	case repl.AdvanceHspace():
@@ -151,7 +151,7 @@ func (p *ShTokenizer) shAtomSub() *ShAtom {
 	case repl.AdvanceRegexp(`^#.*`):
 		return &ShAtom{shtComment, repl.m[0], q, nil}
 	case repl.AdvanceStr(")"):
-		return NewShAtom(shtWord, repl.s, shqPlain)
+		return &ShAtom{shtWord, repl.s, shqPlain, nil}
 	case repl.AdvanceRegexp(`^(?:[!#%*+,\-./0-9:=?@A-Z\[\]^_a-z{}~]+|\\[^$]|` + reShDollar + `)+`):
 		return &ShAtom{shtWord, repl.m[0], q, nil}
 	}
