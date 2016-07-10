@@ -1,15 +1,16 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:12:52 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/07/10 12:06:21 mef Exp $
 
-SHA1 (SPTK-3.6.tar.gz) = ecc5190c08cc64e40bd1274398a54e1556eb0206
-RMD160 (SPTK-3.6.tar.gz) = e7c324af7130b862a897f7ef997da05d1b1a99d1
-SHA512 (SPTK-3.6.tar.gz) = fe2d8e263fef38ed917d579656b8005f7c18d71fcc5ecacf4997e1ec6f0123f8087fc53d4a60b75db665e45524b658a505dfacff2e86e09808ae5971c6f1d34f
-Size (SPTK-3.6.tar.gz) = 674941 bytes
-SHA1 (SPTKexamples-3.6.pdf) = affd351e043783a0ecce5013aab1b0a0530075e1
-RMD160 (SPTKexamples-3.6.pdf) = b4bdc6551f6ec673c4e1382627bb3066c1a1419f
-SHA512 (SPTKexamples-3.6.pdf) = 74c7a4d429cc09b984ee771d8331ce90af3f09322b2a4abbe0a9e035ce9006631ae0cc333706d0faee9e1c5ddca8ac35a09e2375b2b4cfaed3fb611d4bee03c6
-Size (SPTKexamples-3.6.pdf) = 2409914 bytes
-SHA1 (SPTKref-3.6.pdf) = eebd4ed6dfb7536a10cbb2379bd17e71f2331a23
-RMD160 (SPTKref-3.6.pdf) = bda884198f437c78eda6ded60f5087c40dbaad07
-SHA512 (SPTKref-3.6.pdf) = 030aadbdcbc937f3a5cacdf5eaf1280379a1a2520bf282f278cea8da29cd691d07e3fcffde6eb56a8669c7bdf266bce58cc56bc9a0d3058d4d8d1f170b9411fb
-Size (SPTKref-3.6.pdf) = 1155970 bytes
-SHA1 (patch-bin_pitch_swipe_swipe.c) = 9e94f498992938fda8886dd93283627c2901513a
+SHA1 (SPTK-3.9.tar.gz) = 76eb657d9b7b7005090ec2515d7c02da4fa69b74
+RMD160 (SPTK-3.9.tar.gz) = c19b651e653cf26b49e2220afd8cd435bd255089
+SHA512 (SPTK-3.9.tar.gz) = b4005c83723d07c873240f48ab66af476017211151ee69b1b4abc2478604bae1c7794906a95d9e6ff4d2c7e4fd6687cab95470abb5f2f15cb75ad57327cae86e
+Size (SPTK-3.9.tar.gz) = 1077702 bytes
+SHA1 (SPTKexamples-3.9.pdf) = 1a0588b36de6da08df45f35ccf950269899fb23e
+RMD160 (SPTKexamples-3.9.pdf) = cf5cfbc4908246a380080195fa15ec8baa2967ae
+SHA512 (SPTKexamples-3.9.pdf) = 56d1e22d99567e46ff5fc050aebf72eb327aad6872635b1a627d69d89e008fd39e170f82bce7b4bb847bde8e7ab23e91afb84acb7046ef4dec1494e4f7d73e49
+Size (SPTKexamples-3.9.pdf) = 2752695 bytes
+SHA1 (SPTKref-3.9.pdf) = 01c4d94bbf3b2b6ccad25b68dacf90cad7cc7adb
+RMD160 (SPTKref-3.9.pdf) = 4f6650ea5e648ebc602e60b1c51b7e334344b17e
+SHA512 (SPTKref-3.9.pdf) = d145adad6cfc78d8e04f546feb6eaf17e27f79a3f03e1af9ff86f213b675e4648d965670e1fa3f62d4101f9bacebf7a710947c70d7f302fe7c694c8f73e6d31c
+Size (SPTKref-3.9.pdf) = 1044287 bytes
+SHA1 (patch-bin_pitch_swipe_swipe.c) = af7013843ddf1a801be32d10c65f8ec525c481c2
+SHA1 (patch-bin_vc_hts__engine__API_HTS__misc.c) = cc4a4ab182e93323280d3b777e3eef4bc55050fa
