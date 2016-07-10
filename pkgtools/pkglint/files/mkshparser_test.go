@@ -25,7 +25,7 @@ func (s *ShSuite) Test_ShellParser_program(c *check.C) {
 		b.List().AddCommand(b.SimpleCommand("echo")))
 
 	s.test(""+
-		"cd ${WRKSRC} && ${FIND} ${${_list_}} -type f ! -name '*.orig' 2 > /dev/null "+
+		"cd ${WRKSRC} && ${FIND} ${${_list_}} -type f ! -name '*.orig' 2> /dev/null "+
 		"| pax -rw -pm ${DESTDIR}${PREFIX}/${${_dir_}}",
 		b.List().AddAndOr(b.AndOr(
 			b.Pipeline(false, b.SimpleCommand("cd", "${WRKSRC}"))).Add("&&",
@@ -163,20 +163,20 @@ func (s *ShSuite) Test_ShellParser_command(c *check.C) {
 	s.test("simple_command",
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false, b.SimpleCommand("simple_command")))))
 
-	s.test("while 1 ; do 2 ; done",
+	s.test("while 1; do 2; done",
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.While(
 				b.List().AddCommand(b.SimpleCommand("1")).AddSeparator(";"),
 				b.List().AddCommand(b.SimpleCommand("2")).AddSeparator(";"))))))
 
-	s.test("while 1 ; do 2 ; done 1 >& 2",
+	s.test("while 1; do 2; done 1>&2",
 		b.List().AddAndOr(b.AndOr(b.Pipeline(false,
 			b.While(
 				b.List().AddCommand(b.SimpleCommand("1")).AddSeparator(";"),
 				b.List().AddCommand(b.SimpleCommand("2")).AddSeparator(";"),
 				b.Redirection(1, ">&", "2"))))))
 
-	s.test("func ( ) { echo hello ; } 2 >& 1",
+	s.test("func(){ echo hello;} 2>&1",
 		b.List().AddCommand(b.Function(
 			"func",
 			b.Brace(b.List().AddCommand(b.SimpleCommand("echo", "hello")).AddSeparator(";")).Compound,
@@ -439,6 +439,15 @@ func (s *ShSuite) Test_ShellParser_io_redirect(c *check.C) {
 				{4, ">&", b.Token("5")},
 				{6, "<", b.Token("input")},
 				{-1, ">>", b.Token("append")}}}}))
+
+	s.test("${MAKE} print-summary-data  2>&1 > /dev/stderr",
+		b.List().AddCommand(&MkShCommand{Simple: &MkShSimpleCommand{
+			Assignments: nil,
+			Name:        b.Token("${MAKE}"),
+			Args:        []*ShToken{b.Token("print-summary-data")},
+			Redirections: []*MkShRedirection{
+				{2, ">&", b.Token("1")},
+				{-1, ">", b.Token("/dev/stderr")}}}}))
 }
 
 func (s *ShSuite) Test_ShellParser_io_here(c *check.C) {
@@ -477,6 +486,37 @@ func (s *ShSuite) test(program string, expected *MkShList) {
 	} else {
 		c.Check(lexer.remaining, deepEquals, []string{})
 	}
+}
+
+func (s *ShSuite) Test_ShellLexer_Lex__redirects(c *check.C) {
+	tokens, rest := splitIntoShellTokens(dummyLine, "${MAKE} print-summary-data  2>&1 > /dev/stderr")
+
+	c.Check(tokens, deepEquals, []string{"${MAKE}", "print-summary-data", "2>&", "1", ">", "/dev/stderr"})
+	c.Check(rest, equals, "")
+
+	lexer := NewShellLexer(tokens, rest)
+	var llval shyySymType
+
+	c.Check(lexer.Lex(&llval), equals, tkWORD)
+	c.Check(llval.Word.MkText, equals, "${MAKE}")
+
+	c.Check(lexer.Lex(&llval), equals, tkWORD)
+	c.Check(llval.Word.MkText, equals, "print-summary-data")
+
+	c.Check(lexer.Lex(&llval), equals, tkIO_NUMBER)
+	c.Check(llval.IONum, equals, 2)
+
+	c.Check(lexer.Lex(&llval), equals, tkGTAND)
+
+	c.Check(lexer.Lex(&llval), equals, tkWORD)
+	c.Check(llval.Word.MkText, equals, "1")
+
+	c.Check(lexer.Lex(&llval), equals, tkGT)
+
+	c.Check(lexer.Lex(&llval), equals, tkWORD)
+	c.Check(llval.Word.MkText, equals, "/dev/stderr")
+
+	c.Check(lexer.Lex(&llval), equals, 0)
 }
 
 type MkShBuilder struct {

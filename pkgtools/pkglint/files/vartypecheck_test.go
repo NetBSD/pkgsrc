@@ -386,6 +386,17 @@ func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:2: \"VarBase\" is not a valid variable name.\n")
 }
 
+func (s *Suite) Test_VartypeCheck_Version(c *check.C) {
+	runVartypeChecks("PERL5_REQD", opAssignAppend, (*VartypeCheck).Version,
+		"0",
+		"1.2.3.4.5.6",
+		"4.1nb17",
+		"4.1-SNAPSHOT",
+		"4pre7")
+
+	c.Check(s.Output(), equals, "WARN: fname:4: Invalid version number \"4.1-SNAPSHOT\".\n")
+}
+
 func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 	runVartypeChecks("APACHE_MODULE", opAssign, (*VartypeCheck).Yes,
 		"yes",
