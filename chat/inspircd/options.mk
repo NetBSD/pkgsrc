@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/07/28 22:52:15 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2016/07/10 09:52:21 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inspircd
 
@@ -97,8 +97,8 @@ MODULES+=		m_filter_pcre.cpp
 ###
 .if !empty(PKG_OPTIONS:Minspircd-sqlauth)
 INSPIRCD_STORAGE_DRIVER?=	mysql
-MODULES+=		m_sqlauth.cpp m_sqlutils.cpp
-HEADERS+=		m_sqlutils.h
+MODULES+=			m_sqlauth.cpp m_sqlutils.cpp
+HEADERS+=			m_sqlutils.h
 .endif
 
 ###
@@ -106,7 +106,7 @@ HEADERS+=		m_sqlutils.h
 ###
 .if !empty(PKG_OPTIONS:Minspircd-sqllog)
 INSPIRCD_STORAGE_DRIVER?=	mysql
-MODULES+=		m_sqllog.cpp
+MODULES+=			m_sqllog.cpp
 .endif
 
 ###
@@ -114,8 +114,8 @@ MODULES+=		m_sqllog.cpp
 ###
 .if !empty(PKG_OPTIONS:Minspircd-sqloper)
 INSPIRCD_STORAGE_DRIVER?=	mysql
-MODULES+=		m_sqloper.cpp m_sqlutils.cpp
-HEADERS+=		m_sqlutils.h
+MODULES+=			m_sqloper.cpp m_sqlutils.cpp
+HEADERS+=			m_sqlutils.h
 .endif
 
 ###
