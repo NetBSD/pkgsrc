@@ -1,4 +1,12 @@
-$NetBSD: patch-src_system_ByteOrder.hxx,v 1.4 2015/04/06 00:08:34 mrg Exp $
+$NetBSD: patch-src_system_ByteOrder.hxx,v 1.5 2016/07/10 13:38:58 mef Exp $
+
+r 1.1
+patches/patch-src_system_ByteOrder.hxx:
+  Fix compilation error on Darwin/ppc
+
+r 1.4
+also look in <machine/endian.h> on netbsd for endian info (fixes
+non x86, mipsel and armel builds.)
 
 --- src/system/ByteOrder.hxx.orig	2014-08-23 05:29:55.000000000 -0700
 +++ src/system/ByteOrder.hxx	2015-04-05 16:29:48.000000000 -0700
