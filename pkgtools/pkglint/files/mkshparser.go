@@ -190,9 +190,6 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 	}
 
 	switch {
-	case matches(token, `^\d+$`) && len(lex.remaining) != 0 && matches(lex.remaining[0], `^[<>]`):
-		ttype = tkIO_NUMBER
-		lval.IONum, _ = strconv.Atoi(token)
 	case lex.sinceFor == 2 && token == "in":
 		ttype = tkIN
 		lex.atCommandStart = false
