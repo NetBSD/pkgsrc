@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2016/07/09 06:38:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/10 06:36:40 wiz Exp $
 
-GITHUB_PROJECT=	shoebill
-DISTNAME=	0.0.5
-PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=	shoebill-0.0.5
 PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pruten/}
-DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/pruten/shoebill/
@@ -20,8 +17,6 @@ USE_TOOLS+=	perl gtar
 EXTRACT_USING=	gtar
 
 REPLACE_PERL+=	core/macro.pl
-
-WRKSRC=		${WRKDIR}/${PKGNAME}
 
 DOCDIR=		share/doc/shoebill
 INSTALLATION_DIRS= bin ${DOCDIR}
