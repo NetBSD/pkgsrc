@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2744 2016/07/10 12:06:37 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2745 2016/07/10 13:39:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3971,3 +3971,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/bunny version 0.93 [rillig 2016-07-09]
 	Updated pkgtools/pkglint to 5.4.6 [rillig 2016-07-10]
 	Updated audio/sptk to 3.9 [mef 2016-07-10]
+	Updated audio/musicpd to 0.19.17 [mef 2016-07-10]
