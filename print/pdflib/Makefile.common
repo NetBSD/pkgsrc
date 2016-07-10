@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2013/01/06 13:39:12 gdt Exp $
+# $NetBSD: Makefile.common,v 1.25 2016/07/10 10:32:57 rillig Exp $
 #
 # used by print/pdflib/Makefile
 # used by print/tcl-pdflib/Makefile
@@ -21,8 +21,8 @@ PDFLIB_BASE_VERS=	4.0.3
 # Available only as a pdf, so it is not present in licenses/
 LICENSE=		pdflib-license
 RESTRICTED=		No permission to redistribute
-NO_SOURCE_ON_FTP=	${RESTRICTED}
-NO_SOURCE_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
