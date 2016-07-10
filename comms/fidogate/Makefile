@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2016/07/09 06:37:55 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2016/07/10 09:59:07 rillig Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
@@ -16,11 +16,11 @@ USE_TOOLS+=		gmake makeinfo perl:run yacc
 MAKE_ENV+=		DEBUG="${CFLAGS} -Werror"
 BUILDLINK_SETENV.CC=	CC="cc ${_STRIPFLAG_CC}"
 
-EGDIR=		${PREFIX}/share/examples/fidogate
-CONF_FILES=	${EGDIR}/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
-RCD_SCRIPTS=	fidogate
-RCD_SCRIPT_SRC.fidogate=	${WRKSRC}/scripts/maintenance/rc.fidogate
-INFO_FILES=	yes # PLIST
+EGDIR=			${PREFIX}/share/examples/fidogate
+CONF_FILES=		${EGDIR}/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
+RCD_SCRIPTS=		fidogate
+RCD_SCRIPT_SRC.fidogate= ${WRKSRC}/scripts/maintenance/rc.fidogate
+INFO_FILES=		yes # PLIST
 
 PKG_GROUPS=	news
 PKG_USERS=	news:news
@@ -31,10 +31,10 @@ NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config.make
-SUBST_SED.paths=	-e "s,@PREFIX@,"${PREFIX:Q}",g"
-SUBST_SED.paths+=	-e "s,@PKG_SYSCONFDIR@,"${PKG_SYSCONFDIR:Q}",g"
-SUBST_SED.paths+=	-e "s,@PKGINFODIR@,"${PKGINFODIR:Q}",g"
-SUBST_SED.paths+=	-e "s,@PERL@,"${TOOLS_PATH.perl:Q}",g"
+SUBST_SED.paths=	-e "s,@PREFIX@,"${PREFIX}",g"
+SUBST_SED.paths+=	-e "s,@PKG_SYSCONFDIR@,"${PKG_SYSCONFDIR}",g"
+SUBST_SED.paths+=	-e "s,@PKGINFODIR@,"${PKGINFODIR}",g"
+SUBST_SED.paths+=	-e "s,@PERL@,"${TOOLS_PATH.perl}",g"
 SUBST_STAGE.paths=	pre-build
 
 # Too many schar/uchar issues.
