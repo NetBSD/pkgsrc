@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.22 2016/07/10 07:43:23 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.23 2016/07/10 07:46:29 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -115,10 +115,10 @@ Create a user with name "pbulk".</para>
 apply to packages you build. For instance,</para>
 
 <programlisting>
-PKG_DEVELOPER=		yes	# perform more checks
-X11_TYPE=		modular	# use pkgsrc X11
-SKIP_LICENSE_CHECK=	yes	# accept all licences (useful
-				# when building all packages)
+PKG_DEVELOPER=          yes     # perform more checks
+X11_TYPE=               modular # use pkgsrc X11
+SKIP_LICENSE_CHECK=     yes     # accept all licences (useful
+                                # when building all packages)
 </programlisting>
 </note>
 <!-- Think how to merge this or maintain short reference of useful settings.

@@ -1,4 +1,4 @@
-<!-- $NetBSD: regression.xml,v 1.3 2016/06/11 13:28:09 rillig Exp $ -->
+<!-- $NetBSD: regression.xml,v 1.4 2016/07/10 07:46:29 rillig Exp $ -->
 
 <chapter id="regression"> <?dbhtml filename="regression.html"?>
 <title>Regression tests</title>
@@ -62,7 +62,7 @@
 
 <programlisting>
 do_test() {
-	echo "Example output"
+        echo "Example output"
 } 1>$TEST_OUTFILE 2>&1
 </programlisting>
 
@@ -77,10 +77,10 @@ do_test() {
 
 <programlisting>
 check_result() {
-	exit_status 0
-	output_require "Example"
-	output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
-	output_prohibit "no such file or directory"
+        exit_status 0
+        output_require "Example"
+        output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
+        output_prohibit "no such file or directory"
 }
 </programlisting>
 
