@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2016/07/09 06:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2016/07/10 11:31:31 rillig Exp $
 
 DISTNAME=	eb-4.3
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
@@ -54,7 +54,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-zlib
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONF_FILES=		${EGDIR}/eb.conf.default ${PKG_SYSCONFDIR}/eb.conf
 
@@ -76,12 +76,12 @@ INSTALLATION_DIRS=	share/eb/appendix
 .include "../../devel/zlib/buildlink3.mk"
 
 post-install:
-	( \
-		cd ${DESTDIR}${EB_APPENDIXDIR} && \
-		for f in ${EB_APPENDICES}; do \
-			${EXTRACT_CMD} ${_DISTDIR}/$${f}; \
-		done \
-	)
+.for f in ${EB_APPENDICES:Ngendai2000*}
+	cd ${DESTDIR}${EB_APPENDIXDIR} && ${EXTRACTOR:M*} ${_DISTDIR}/${f}
+.endfor
+.for f in ${EB_APPENDICES:Mgendai2000*}
+	cd ${DESTDIR}${EB_APPENDIXDIR} && ${EXTRACTOR:M*} -x ${_DISTDIR}/${f} "*/CVS*"
+.endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/eb.conf ${DESTDIR}${EGDIR}/eb.conf.default
 
