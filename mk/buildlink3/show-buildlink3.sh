@@ -1,13 +1,13 @@
 #!/bin/sh
 #
-# $NetBSD: show-buildlink3.sh,v 1.3 2009/10/05 02:40:06 obache Exp $
+# $NetBSD: show-buildlink3.sh,v 1.4 2016/07/10 07:08:21 rillig Exp $
 #
 # This script is a helper for the show-buildlink3 target and outputs
 # the arguments as tree.
 #
 
-while test $# -gt 0; do
-	pkg="$1"
+indentation=""
+for pkg in "$@"; do
 	case $pkg in
 	-*)
 		indentation=${indentation#    }
@@ -17,5 +17,4 @@ while test $# -gt 0; do
 		indentation="${indentation}    "
 		;;
 	esac
-	shift
 done
