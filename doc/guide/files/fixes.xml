@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.141 2016/07/09 16:19:15 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.142 2016/07/10 07:46:29 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1409,13 +1409,13 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     binary:</para>
 
 <programlisting>
-USE_GAMESGROUP=		yes
+USE_GAMESGROUP=         yes
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=            VARBASE
 
-OWN_DIRS_PERMS+=	${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
-REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
-SPECIAL_PERMS+=		${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
+OWN_DIRS_PERMS+=        ${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
+REQD_FILES_PERMS+=      /dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
+SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
 </programlisting>
 
     <para>Various <varname>INSTALL_*</varname> variables are also available:
