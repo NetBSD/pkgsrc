@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2014/10/09 14:07:07 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/07/10 10:52:41 rillig Exp $
 
-VER=		3.0.2
-DISTNAME=	ical-${VER}
+DISTNAME=	ical-3.0.2
 PKGREVISION=	4
 CATEGORIES=	time
-MASTER_SITES=	https://launchpad.net/ical-tcl/3.x/${VER}/+download/
-EXTRACT_SUFFIX=	.tar.gz
+MASTER_SITES=	https://launchpad.net/ical-tcl/3.x/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/ical-tcl/
@@ -13,7 +11,7 @@ COMMENT=	Calendar application
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --prefix=${PREFIX:Q} \
+CONFIGURE_ARGS+= --prefix=${PREFIX} \
 		--with-tclconfig=${BUILDLINK_PREFIX.tcl}/lib \
 		--with-tclsh=${BUILDLINK_PREFIX.tcl}/bin/tclsh \
 		--with-tkconfig=${BUILDLINK_PREFIX.tk}/lib
@@ -22,7 +20,7 @@ CPPFLAGS+=	-DUSE_INTERP_RESULT
 
 USE_TOOLS+=	gmake gsed
 
-PLIST_SUBS+=	"PKGVERSION=${VER}"
+PLIST_SUBST+=	PKGVERSION=${PKGVERSION_NOREV}
 
 post-configure:
 	${TOUCH} ${WRKDIR}/${DISTNAME}/Makefile \

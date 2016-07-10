@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:31 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/10 11:15:41 rillig Exp $
 
 SHA1 (pypcap-1.1.tar.gz) = 966f62deca16d5086e2ef6694b0c795f273da15c
 RMD160 (pypcap-1.1.tar.gz) = 119dcc393d42678e6fa8f0b0f8b82536ab1efb13
 SHA512 (pypcap-1.1.tar.gz) = f4fefb48f01b9080446d83fca3793f97aba3b3677d38520c977c49be061568163299a89c5bc6ec552d68c01fc211e1501b75a835eb68412ab8f6e4307eb0b599
 Size (pypcap-1.1.tar.gz) = 22951 bytes
 SHA1 (patch-aa) = 6fb58b55262a9b28bdc9e681b3b3ea07523bd8e3
-SHA1 (patch-ab) = 3be8dad4d70e56fc07a7acfea2d1fc5d0dd2e413
+SHA1 (patch-ab) = 0dc6f05e5f5fc56b4fcdd06c3cdd1845cef813af
 SHA1 (patch-ac) = 4a4f28578b27b4605787ea566217397bf60fdea8
