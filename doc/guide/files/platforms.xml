@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.99 2016/07/10 01:32:43 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.100 2016/07/10 01:49:39 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -67,7 +67,8 @@
   <sect1 id="platform-specific-notes">
     <title>Platform-specific notes</title>
 
-    <para>For details related to supported versions consult the platform-specific README files found in <xref linkend="supported-platforms"/></para>
+    <para>For platform-specific notes consult the <filename>README</filename>
+    files found in the notes column of <xref linkend="supported-platforms"/></para>
 
   </sect1>
 </chapter>
