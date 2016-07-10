@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:17:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/07/10 11:31:31 rillig Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -69,9 +69,6 @@ share/eb/appendix/dd75-2.0/chujiten.app
 share/eb/appendix/dd75-2.0/chujiten/appendix
 share/eb/appendix/dd75-2.0/koujien.app
 share/eb/appendix/dd75-2.0/koujien/appendix
-share/eb/appendix/gendai2000-1.0/CVS/Entries
-share/eb/appendix/gendai2000-1.0/CVS/Repository
-share/eb/appendix/gendai2000-1.0/CVS/Root
 share/eb/appendix/gendai2000-1.0/catalog
 share/eb/appendix/gendai2000-1.0/catalog.app
 share/eb/appendix/gendai2000-1.0/gn00eb01.app
@@ -109,10 +106,10 @@ share/eb/appendix/heritage-2.2/roget.app
 share/eb/appendix/heritage-2.2/roget/appendix
 share/eb/appendix/heritage-2.2/root.app
 share/eb/appendix/heritage-2.2/root/appendix
-share/eb/appendix/hyogen-1.0/catalogs.app
 share/eb/appendix/hyogen-1.0/catalogs
-share/eb/appendix/hyogen-1.0/hyogen/data/furoku
+share/eb/appendix/hyogen-1.0/catalogs.app
 share/eb/appendix/hyogen-1.0/hyogen.app
+share/eb/appendix/hyogen-1.0/hyogen/data/furoku
 share/eb/appendix/izumi-2.0/catalog
 share/eb/appendix/izumi-2.0/catalog.app
 share/eb/appendix/izumi-2.0/file1.app
