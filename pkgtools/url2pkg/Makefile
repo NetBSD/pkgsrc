@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2016/07/09 06:38:49 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2016/07/10 13:31:54 rillig Exp $
 
 PKGNAME=	url2pkg-2.27
 PKGREVISION=	1
@@ -10,6 +10,7 @@ COMMENT=	Tool to automate initial steps in building a package
 LICENSE=	original-bsd
 
 WRKSRC=		${WRKDIR}
+NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run
