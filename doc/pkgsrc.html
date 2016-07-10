@@ -1595,20 +1595,15 @@ that file depends on the installation. On NetBSD, when you use
 <code class="filename">/etc/</code>. In all other cases the default location is
 <code class="literal">${PREFIX}/etc/</code>, depending on where you told the
 bootstrap program to install the binary packages.</p>
-<p>During the bootstrap, an example configuration file is created. To
-use that, you have to create the directory
-<code class="filename">${PREFIX}/etc</code> and copy the example file
-there.</p>
 <p>The format of the configuration file is that of the usual
 BSD-style <code class="filename">Makefile</code>s. The whole pkgsrc configuration
 is done by setting variables in this file. Note that you can define all
 kinds of variables, and no special error checking (for example for
-spelling mistakes) takes place, so you have to try it out to see if it
-works.</p>
+spelling mistakes) takes place.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="general-configuration"></a>5.1. General configuration</h2></div></div></div>
-<p>In this section, you can find some variables that apply to all
+<p>The following variables apply to all
     pkgsrc packages. A complete list of the variables that can be
     configured by the user is available in
     <code class="filename">mk/defaults/mk.conf</code>, together with some
@@ -1882,8 +1877,8 @@ LDFLAGS+=        -your -linkerflags
 	(normal, default, quiet operation); the value 1 will display
 	all shell commands before their invocation, and the value 2
 	will display both the shell commands before their invocation,
-	and their actual execution progress with <span class="command"><strong>set
-	-x</strong></span> will be displayed.</p></li>
+	as well as their actual execution progress with <span class="command"><strong>set
+	-x</strong></span>.</p></li>
 </ul></div>
 <p>
     </p>
@@ -1982,9 +1977,9 @@ PKG_OPTIONS.apache=     suexec </pre>
     directory in pkgsrc, and run <span class="command"><strong>make
     package</strong></span>:</p>
 <pre class="screen">
-<code class="prompt">#</code> <strong class="userinput"><code>cd misc/figlet</code></strong>
-<code class="prompt">#</code> <strong class="userinput"><code>make package</code></strong>
-    </pre>
+<code class="prompt">$</code> <strong class="userinput"><code>cd misc/figlet</code></strong>
+<code class="prompt">$</code> <strong class="userinput"><code>make package</code></strong>
+</pre>
 <p>This will build and install your package (if not already done),
     and then build a binary package from what was installed. You can
     then use the <span class="command"><strong>pkg_*</strong></span> tools to manipulate
@@ -2023,9 +2018,8 @@ it is wasted time if they all build their packages themselves from source.
 Or you may want to build a list of packages you want and check them before
 deploying onto production system.
 There is a way of getting a set of binary packages:
-The bulk build system, or pbulk ("p" stands for "parallel).
-This chapter describes how to set it up so that the packages
-are most likely to be usable later.</p>
+The bulk build system, or pbulk ("p" stands for "parallel").
+This chapter describes how to set it up.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="bulk.pre"></a>7.1. Preparations</h2></div></div></div>
@@ -2036,12 +2030,12 @@ There exists a number of particularly heavy packages that are not actually
 interesting to a wide audience.
 
 For a limited bulk builds you need to make a list of packages you want to build.
-Note, that all their dependencies will be built, so you don't need to track them manually.
+Note that all their dependencies will be built, so you don't need to track them manually.
 </p>
 <p>During bulk builds various packages are installed and deinstalled
 in <code class="filename">/usr/pkg</code> (or whatever <code class="filename">LOCALBASE</code> is),
 so make sure that you don't need any package during the builds.
-Essentially, you should provide fresh system, either a chroot environment
+Essentially, you should provide a fresh system, either a chroot environment
 or something even more restrictive, depending on what the operating system provides,
 or dedicate the whole physical machine.
 As a useful side effect this makes sure that bulk builds cannot
@@ -2062,10 +2056,10 @@ certain packages tried to install files outside the
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="bulk.pbulk.conf"></a>7.2.1. Configuration</h3></div></div></div>
-<p>To simplify configuration we provide helper script <code class="filename">mk/pbulk/pbulk.sh</code>.</p>
+<p>To simplify configuration, we provide the helper script <code class="filename">mk/pbulk/pbulk.sh</code>.</p>
 <p>In order to use it, prepare a clear system (real one, chroot environment, jail, zone, virtual machine).
 Configure network access to fetch distribution files.
-Create user with name "pbulk".</p>
+Create a user with name "pbulk".</p>
 <p>Fetch and extract pkgsrc. Use a command like one of these:</p>
 <pre class="screen">
 <code class="prompt">#</code> <strong class="userinput"><code>(cd /usr &amp;&amp; ftp -o - http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc.tar.gz | tar -zxf-)</code></strong>
@@ -2085,13 +2079,14 @@ Create user with name "pbulk".</p>
 <code class="filename">mk.conf</code> that contains settings you want to
 apply to packages you build. For instance,</p>
 <pre class="programlisting">
-PKG_DEVELOPER=		yes		# perform more checks
-X11_TYPE=		modular		# use pkgsrc X11
-SKIP_LICENSE_CHECK=	yes		# accept all licences (useful when building all packages)
+PKG_DEVELOPER=          yes     # perform more checks
+X11_TYPE=               modular # use pkgsrc X11
+SKIP_LICENSE_CHECK=     yes     # accept all licences (useful
+                                # when building all packages)
 </pre>
 </div>
 <p>If configured for limited list, replace the list in <code class="filename">/usr/pbulk/etc/pbulk.list</code>
-with your list of packages one per line without empty lines or comments. E.g.:</p>
+with your list of packages, one per line without empty lines or comments. E.g.:</p>
 <pre class="programlisting">
 www/firefox
 mail/thunderbird
@@ -2491,7 +2486,7 @@ provide <code class="varname">FETCH_CMD</code>, <code class="varname">FETCH_BEFO
 <code class="filename">wget</code> to download, you'll have to use something
 like:</p>
 <pre class="programlisting">
-FETCH_USING=	wget
+FETCH_USING=    wget
 </pre>
 </div>
 <div class="sect1">
@@ -3782,7 +3777,7 @@ monitor_file(...)
         int fd = kqueue();
         ...
 #else
-	...
+        ...
 #endif
 }
 </pre>
@@ -4362,9 +4357,9 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
     <span class="quote">&#8220;<span class="quote"><code class="literal">"@comment "</code></span>&#8221;</span>.
     For example, in <code class="filename">Makefile</code>:</p>
 <pre class="programlisting">
-PLIST_VARS+=	foo
+PLIST_VARS+=    foo
 .if <em class="replaceable"><code>condition</code></em>
-PLIST.foo=	yes
+PLIST.foo=      yes
 .else
 </pre>
 <p>And then in <code class="filename">PLIST</code>:</p>
@@ -4622,20 +4617,20 @@ BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
 <pre class="programlisting">
 # $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp $
 
-BUILDLINK_TREE+=	tiff
+BUILDLINK_TREE+=        tiff
 
 .if !defined(TIFF_BUILDLINK3_MK)
 TIFF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.tiff+=	tiff&gt;=3.6.1
-BUILDLINK_ABI_DEPENDS.tiff+=	tiff&gt;=3.7.2nb1
-BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
+BUILDLINK_API_DEPENDS.tiff+=    tiff&gt;=3.6.1
+BUILDLINK_ABI_DEPENDS.tiff+=    tiff&gt;=3.7.2nb1
+BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .endif # TIFF_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-tiff
+BUILDLINK_TREE+=        -tiff
 </pre>
 <p>The header and footer manipulate
       <code class="varname">BUILDLINK_TREE</code>, which is common across all
@@ -8020,13 +8015,13 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     and <code class="varname">SPECIAL_PERMS</code> is used to install setgid the game
     binary:</p>
 <pre class="programlisting">
-USE_GAMESGROUP=		yes
+USE_GAMESGROUP=         yes
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=            VARBASE
 
-OWN_DIRS_PERMS+=	${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
-REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
-SPECIAL_PERMS+=		${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
+OWN_DIRS_PERMS+=        ${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
+REQD_FILES_PERMS+=      /dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
+SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
 </pre>
 <p>Various <code class="varname">INSTALL_*</code> variables are also available:
     <code class="varname">INSTALL_GAME</code> to install setgid game binaries,
@@ -8814,7 +8809,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idp140663383225904"></a><dl>
+<a name="idm87310496"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8859,7 +8854,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idp140663383226608"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm87310112"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8875,7 +8870,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idp140663383231072"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm87297824"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8893,7 +8888,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idp140663383236080"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm87293472"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8911,7 +8906,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idp140663383240992"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm87289248"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8924,7 +8919,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idp140663383243616"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm87287072"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8940,7 +8935,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idp140663383247488"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm87284000"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8964,7 +8959,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idp140663383255152"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm87277088"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8989,7 +8984,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idp140663383260064"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm87273248"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9037,7 +9032,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idp140663383268864"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm87266720"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9749,7 +9744,7 @@ CFLAGS+=                -Wall
 	Example:</p>
 <pre class="programlisting">
 do_test() {
-	echo "Example output"
+        echo "Example output"
 } 1&gt;$TEST_OUTFILE 2&gt;&amp;1
 </pre>
 </dd>
@@ -9761,10 +9756,10 @@ do_test() {
 	the next section. Example:</p>
 <pre class="programlisting">
 check_result() {
-	exit_status 0
-	output_require "Example"
-	output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
-	output_prohibit "no such file or directory"
+        exit_status 0
+        output_require "Example"
+        output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
+        output_prohibit "no such file or directory"
 }
 </pre>
 </dd>
