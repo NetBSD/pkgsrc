@@ -1,8 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.66 2016/05/18 21:04:07 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.67 2016/07/10 13:28:41 rillig Exp $
 #
 # Don't include this file manually!  It will be included as necessary
 # by bsd.buildlink3.mk.
-
+#
 # x11-links is sorted first in mk/buildlink3/bsd.buildlink3.mk,
 # so that symlinks created from it can be overriden by other packages.
 #
