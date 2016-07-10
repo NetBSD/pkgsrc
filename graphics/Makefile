@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.742 2016/06/13 00:27:01 youri Exp $
+# $NetBSD: Makefile,v 1.743 2016/07/10 21:59:38 kamil Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -294,6 +294,7 @@ SUBDIR+=	libgiigic
 SUBDIR+=	libgltf
 SUBDIR+=	libgnomecanvas
 SUBDIR+=	libgnomecanvasmm
+SUBDIR+=	libiptcdata
 SUBDIR+=	libjpeg-turbo
 SUBDIR+=	libkdcraw
 SUBDIR+=	libkdcraw-kde3
