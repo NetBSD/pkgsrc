@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.34 2007/09/18 08:17:21 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.35 2016/07/10 07:43:23 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -17,10 +17,10 @@
     directory in pkgsrc, and run <command>make
     package</command>:</para>
 
-    <screen>
-&rprompt; <userinput>cd misc/figlet</userinput>
-&rprompt; <userinput>make package</userinput>
-    </screen>
+<screen>
+&uprompt; <userinput>cd misc/figlet</userinput>
+&uprompt; <userinput>make package</userinput>
+</screen>
 
     <para>This will build and install your package (if not already done),
     and then build a binary package from what was installed. You can
