@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 13:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/10 04:07:08 nonaka Exp $
 
 DISTNAME=	mcomix-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcomix/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.12.0:../../x11/py-gtk2
 DEPENDS+=	{${PYPKGPREFIX}-imaging>=1.1.5,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
 DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
+DEPENDS+=	${PYPKGPREFIX}-czipfile-[0-9]*:../../archivers/py-czipfile
 
 USE_LANGUAGES=	# none
 
