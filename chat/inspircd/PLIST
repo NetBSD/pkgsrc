@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:04:58 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/07/10 09:52:21 rillig Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -131,8 +131,8 @@ share/inspircd/modules/m_lockserv.so
 share/inspircd/modules/m_md5.so
 share/inspircd/modules/m_messageflood.so
 share/inspircd/modules/m_namesx.so
-share/inspircd/modules/m_nicklock.so
 share/inspircd/modules/m_nickflood.so
+share/inspircd/modules/m_nicklock.so
 share/inspircd/modules/m_noctcp.so
 share/inspircd/modules/m_noinvite.so
 share/inspircd/modules/m_nokicks.so
