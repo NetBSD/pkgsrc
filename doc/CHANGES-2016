@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2749 2016/07/11 05:23:03 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2750 2016/07/11 09:55:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3976,3 +3976,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/libiptcdata version 1.0.4 [kamil 2016-07-10]
 	Updated filesystems/glusterfs to 3.8.1 [manu 2016-07-11]
 	Added editors/kilo version 20160710 [agc 2016-07-11]
+	Updated multimedia/mpv to 0.18.1 [leot 2016-07-11]
