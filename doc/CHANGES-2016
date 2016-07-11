@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2754 2016/07/11 18:27:01 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.2755 2016/07/11 22:04:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/samba4 to 4.3.11nb2 [wiz 2016-07-11]
 	Removed www/contao41 [taca 2016-07-11]
 	Updated devel/astyle to 2.05.1 [schmonz 2016-07-11]
+	Removed mail/mutt-kz [wiz 2016-07-11]
