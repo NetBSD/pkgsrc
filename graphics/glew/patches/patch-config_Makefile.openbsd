@@ -1,0 +1,18 @@
+$NetBSD: patch-config_Makefile.openbsd,v 1.1 2016/07/11 16:18:29 jperkin Exp $
+
+Allow linking with CC.
+
+--- config/Makefile.openbsd.orig	2015-08-10 11:47:22.000000000 +0000
++++ config/Makefile.openbsd
+@@ -14,9 +14,9 @@ LIB.SONAME    = lib$(NAME).so.$(SO_MAJOR
+ LIB.DEVLNK    = lib$(NAME).so
+ LIB.SHARED    = lib$(NAME).so.$(SO_VERSION)
+ LIB.STATIC    = lib$(NAME).a
+-LDFLAGS.SO    = -shared -soname $(LIB.SONAME)
++LDFLAGS.SO    = -shared -Wl,-soname=$(LIB.SONAME)
+ LIB.SONAME.MX = lib$(NAME)mx.so.$(SO_MAJOR)
+ LIB.DEVLNK.MX = lib$(NAME)mx.so
+ LIB.SHARED.MX = lib$(NAME)mx.so.$(SO_VERSION)
+ LIB.STATIC.MX = lib$(NAME)mx.a
+-LDFLAGS.SO.MX = -shared -soname $(LIB.SONAME.MX)
++LDFLAGS.SO.MX = -shared -Wl,-soname=$(LIB.SONAME.MX)
