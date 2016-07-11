@@ -1,4 +1,4 @@
-# $NetBSD: toplevel.mk,v 1.6 2014/06/02 10:24:05 wiz Exp $
+# $NetBSD: toplevel.mk,v 1.7 2016/07/11 22:53:48 wiz Exp $
 #
 # This file contains the make targets that can be used from the
 # top-level Makefile. They are in this separate file to keep the
@@ -19,7 +19,7 @@ README.html: .PRECIOUS
 		BMAKE=${MAKE}						\
 		./mk/scripts/mkreadme --pkgsrc ${.CURDIR} 		\
 		--packages ${PACKAGES} ${_README_TYPE_FLAG}		\
-		--prune
+		--prune --quiet
 .else
 	@${ECHO} "ERROR:  please do not use the README.html target directly."
 	@${ECHO} "        Instead use either the \"readme\" or \"cdrom-readme\""
