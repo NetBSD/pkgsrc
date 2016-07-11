@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2016/07/09 13:04:02 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/07/11 12:28:17 wiz Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -16,6 +16,8 @@ VERSION=	4.3.11
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 BUILD_DEFS+=		VARBASE
 
