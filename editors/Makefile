@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2016/06/16 02:29:27 kamil Exp $
+# $NetBSD: Makefile,v 1.176 2016/07/11 05:21:59 agc Exp $
 #
 
 COMMENT=	Editors
@@ -67,6 +67,7 @@ SUBDIR+=	kate
 SUBDIR+=	kdissert
 SUBDIR+=	kile
 SUBDIR+=	kile-kde3
+SUBDIR+=	kilo
 SUBDIR+=	leafpad
 SUBDIR+=	leim20
 SUBDIR+=	leim21
