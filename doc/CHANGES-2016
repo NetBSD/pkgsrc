@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2752 2016/07/11 12:28:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2753 2016/07/11 14:33:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3979,3 +3979,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mpv to 0.18.1 [leot 2016-07-11]
 	Updated lang/python27 to 2.7.12nb1 [ryoon 2016-07-11]
 	Updated net/samba4 to 4.3.11nb2 [wiz 2016-07-11]
+	Removed www/contao41 [taca 2016-07-11]
