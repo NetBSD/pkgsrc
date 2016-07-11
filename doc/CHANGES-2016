@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2747 2016/07/10 22:00:48 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2748 2016/07/11 03:16:47 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3974,3 +3974,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/musicpd to 0.19.17 [mef 2016-07-10]
 	Updated pkgtools/pkglint to 5.4.7 [rillig 2016-07-10]
 	Added graphics/libiptcdata version 1.0.4 [kamil 2016-07-10]
+	Updated filesystems/glusterfs to 3.8.1 [manu 2016-07-11]
