@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 03:27:14 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/07/11 18:26:52 schmonz Exp $
 
-SHA1 (astyle_2.04_linux.tar.gz) = 8d7701afa3ecb7fb24d3647d8b278dcf17f3ae3e
-RMD160 (astyle_2.04_linux.tar.gz) = 94d237759e5d2e4d45db5614ee091996f1a995f2
-SHA512 (astyle_2.04_linux.tar.gz) = bc0f6351fac4198ab969251342c4e453064b07512a2d06825a93c75daf86b06469c9971f35fbadad872d23368dc546019d8d174e07ceaad6e10007f562fdeffd
-Size (astyle_2.04_linux.tar.gz) = 156974 bytes
-SHA1 (patch-src_astyle__main.cpp) = be94921cda22bd0c2037625e0b127b93bbd8a598
+SHA1 (astyle_2.05.1_linux.tar.gz) = b2ccedbb49f7f892afd6a9a59a67b57c36c41df3
+RMD160 (astyle_2.05.1_linux.tar.gz) = fc3bc88bc18a6d7177f3e645fda7cc79c497a968
+SHA512 (astyle_2.05.1_linux.tar.gz) = 853bf84cb196f2300ca00fb7f18fe336764f1205ae0674a75c1a019bf734495d8fb3d9b6aca0ea258b6632921fb268906128c1afb80596532489749cd2cbe495
+Size (astyle_2.05.1_linux.tar.gz) = 152765 bytes
