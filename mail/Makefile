@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2016/07/11 22:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.478 2016/07/11 22:05:14 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -164,6 +164,7 @@ SUBDIR+=	mpop
 SUBDIR+=	msmtp
 SUBDIR+=	mush
 SUBDIR+=	mutt
+SUBDIR+=	neomutt
 SUBDIR+=	netbiff
 SUBDIR+=	newmail
 SUBDIR+=	newspipe
