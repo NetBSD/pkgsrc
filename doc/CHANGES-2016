@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2753 2016/07/11 14:33:59 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2754 2016/07/11 18:27:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3980,3 +3980,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/python27 to 2.7.12nb1 [ryoon 2016-07-11]
 	Updated net/samba4 to 4.3.11nb2 [wiz 2016-07-11]
 	Removed www/contao41 [taca 2016-07-11]
+	Updated devel/astyle to 2.05.1 [schmonz 2016-07-11]
