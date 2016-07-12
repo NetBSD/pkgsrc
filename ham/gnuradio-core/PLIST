@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/03/19 23:44:13 dbj Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/07/12 11:36:46 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -158,6 +158,7 @@ include/gnuradio/blocks/moving_average_cc.h
 include/gnuradio/blocks/moving_average_ff.h
 include/gnuradio/blocks/moving_average_ii.h
 include/gnuradio/blocks/moving_average_ss.h
+include/gnuradio/blocks/multiply_by_tag_value_cc.h
 include/gnuradio/blocks/multiply_cc.h
 include/gnuradio/blocks/multiply_conjugate_cc.h
 include/gnuradio/blocks/multiply_const_cc.h
@@ -249,6 +250,7 @@ include/gnuradio/blocks/tagged_stream_multiply_length.h
 include/gnuradio/blocks/tagged_stream_mux.h
 include/gnuradio/blocks/tagged_stream_to_pdu.h
 include/gnuradio/blocks/tags_strobe.h
+include/gnuradio/blocks/test_tag_variable_rate_ff.h
 include/gnuradio/blocks/threshold_ff.h
 include/gnuradio/blocks/throttle.h
 include/gnuradio/blocks/transcendental.h
@@ -493,6 +495,7 @@ include/volk/volk_16i_permute_and_scalar_add.h
 include/volk/volk_16i_s32f_convert_32f.h
 include/volk/volk_16i_x4_quad_max_star_16i.h
 include/volk/volk_16i_x5_add_quad_16i_x4.h
+include/volk/volk_16ic_convert_32fc.h
 include/volk/volk_16ic_deinterleave_16i_x2.h
 include/volk/volk_16ic_deinterleave_real_16i.h
 include/volk/volk_16ic_deinterleave_real_8i.h
@@ -500,6 +503,8 @@ include/volk/volk_16ic_magnitude_16i.h
 include/volk/volk_16ic_s32f_deinterleave_32f_x2.h
 include/volk/volk_16ic_s32f_deinterleave_real_32f.h
 include/volk/volk_16ic_s32f_magnitude_32f.h
+include/volk/volk_16ic_x2_dot_prod_16ic.h
+include/volk/volk_16ic_x2_multiply_16ic.h
 include/volk/volk_16u_byteswap.h
 include/volk/volk_16u_byteswappuppet_16u.h
 include/volk/volk_32f_8u_polarbutterfly_32f.h
@@ -514,6 +519,7 @@ include/volk/volk_32f_convert_64f.h
 include/volk/volk_32f_cos_32f.h
 include/volk/volk_32f_expfast_32f.h
 include/volk/volk_32f_index_max_16u.h
+include/volk/volk_32f_index_max_32u.h
 include/volk/volk_32f_invsqrt_32f.h
 include/volk/volk_32f_log2_32f.h
 include/volk/volk_32f_null_32f.h
@@ -547,12 +553,14 @@ include/volk/volk_32f_x3_sum_of_poly_32f.h
 include/volk/volk_32fc_32f_dot_prod_32fc.h
 include/volk/volk_32fc_32f_multiply_32fc.h
 include/volk/volk_32fc_conjugate_32fc.h
+include/volk/volk_32fc_convert_16ic.h
 include/volk/volk_32fc_deinterleave_32f_x2.h
 include/volk/volk_32fc_deinterleave_64f_x2.h
 include/volk/volk_32fc_deinterleave_imag_32f.h
 include/volk/volk_32fc_deinterleave_real_32f.h
 include/volk/volk_32fc_deinterleave_real_64f.h
 include/volk/volk_32fc_index_max_16u.h
+include/volk/volk_32fc_index_max_32u.h
 include/volk/volk_32fc_magnitude_32f.h
 include/volk/volk_32fc_magnitude_squared_32f.h
 include/volk/volk_32fc_s32f_atan2_32f.h
@@ -565,6 +573,7 @@ include/volk/volk_32fc_s32fc_multiply_32fc.h
 include/volk/volk_32fc_s32fc_rotatorpuppet_32fc.h
 include/volk/volk_32fc_s32fc_x2_rotator_32fc.h
 include/volk/volk_32fc_x2_conjugate_dot_prod_32fc.h
+include/volk/volk_32fc_x2_divide_32fc.h
 include/volk/volk_32fc_x2_dot_prod_32fc.h
 include/volk/volk_32fc_x2_multiply_32fc.h
 include/volk/volk_32fc_x2_multiply_conjugate_32fc.h
@@ -658,7 +667,7 @@ lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
 lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/libvolk.so
-lib/libvolk.so.1.2.1
+lib/libvolk.so.1.3
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
 lib/pkgconfig/gnuradio-blocks.pc
@@ -890,6 +899,21 @@ ${PYSITELIB}/gnuradio/gru/seq_with_cursor.pyo
 ${PYSITELIB}/gnuradio/gru/socket_stuff.py
 ${PYSITELIB}/gnuradio/gru/socket_stuff.pyc
 ${PYSITELIB}/gnuradio/gru/socket_stuff.pyo
+${PYSITELIB}/grc_gnuradio/__init__.py
+${PYSITELIB}/grc_gnuradio/__init__.pyc
+${PYSITELIB}/grc_gnuradio/__init__.pyo
+${PYSITELIB}/grc_gnuradio/blks2/__init__.py
+${PYSITELIB}/grc_gnuradio/blks2/__init__.pyc
+${PYSITELIB}/grc_gnuradio/blks2/__init__.pyo
+${PYSITELIB}/grc_gnuradio/blks2/error_rate.py
+${PYSITELIB}/grc_gnuradio/blks2/error_rate.pyc
+${PYSITELIB}/grc_gnuradio/blks2/error_rate.pyo
+${PYSITELIB}/grc_gnuradio/blks2/selector.py
+${PYSITELIB}/grc_gnuradio/blks2/selector.pyc
+${PYSITELIB}/grc_gnuradio/blks2/selector.pyo
+${PYSITELIB}/grc_gnuradio/blks2/tcp.py
+${PYSITELIB}/grc_gnuradio/blks2/tcp.pyc
+${PYSITELIB}/grc_gnuradio/blks2/tcp.pyo
 ${PYSITELIB}/pmt/__init__.py
 ${PYSITELIB}/pmt/__init__.pyc
 ${PYSITELIB}/pmt/__init__.pyo
@@ -935,6 +959,7 @@ share/gnuradio/examples/audio/spectrum_inversion.py
 share/gnuradio/examples/audio/test_resampler.py
 share/gnuradio/examples/blocks/matrix_multiplexer.grc
 share/gnuradio/examples/blocks/peak_detector2.grc
+share/gnuradio/examples/blocks/test_stream_mux_tags.grc
 share/gnuradio/examples/blocks/vector_source_with_tags.grc
 share/gnuradio/examples/filter/channelize.py
 share/gnuradio/examples/filter/chirp_channelize.py
@@ -955,6 +980,7 @@ share/gnuradio/examples/filter/synth_filter.py
 share/gnuradio/examples/filter/synth_to_chan.py
 share/gnuradio/examples/gnuradio-runtime.conf
 share/gnuradio/examples/gr-audio-jack.conf
+share/gnuradio/examples/gr-audio-oss.conf
 share/gnuradio/examples/gr-audio-portaudio.conf
 share/gnuradio/examples/gr-audio.conf
 share/gnuradio/examples/metadata/file_metadata_sink.grc
@@ -1016,6 +1042,11 @@ share/gnuradio/grc/blocks/analog_wfm_rcv_pll.xml
 share/gnuradio/grc/blocks/analog_wfm_tx.xml
 share/gnuradio/grc/blocks/audio_sink.xml
 share/gnuradio/grc/blocks/audio_source.xml
+share/gnuradio/grc/blocks/blks2_error_rate.xml
+share/gnuradio/grc/blocks/blks2_selector.xml
+share/gnuradio/grc/blocks/blks2_tcp_sink.xml
+share/gnuradio/grc/blocks/blks2_tcp_source.xml
+share/gnuradio/grc/blocks/blks2_valve.xml
 share/gnuradio/grc/blocks/blocks_abs_xx.xml
 share/gnuradio/grc/blocks/blocks_add_const_vxx.xml
 share/gnuradio/grc/blocks/blocks_add_xx.xml
@@ -1075,6 +1106,7 @@ share/gnuradio/grc/blocks/blocks_message_strobe.xml
 share/gnuradio/grc/blocks/blocks_message_strobe_random.xml
 share/gnuradio/grc/blocks/blocks_min_xx.xml
 share/gnuradio/grc/blocks/blocks_moving_average_xx.xml
+share/gnuradio/grc/blocks/blocks_multiply_by_tag_value_cc.xml
 share/gnuradio/grc/blocks/blocks_multiply_conjugate_cc.xml
 share/gnuradio/grc/blocks/blocks_multiply_const_vxx.xml
 share/gnuradio/grc/blocks/blocks_multiply_matrix_xx.xml
@@ -1128,6 +1160,7 @@ share/gnuradio/grc/blocks/blocks_tagged_stream_multiply_length.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_mux.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_to_pdu.xml
 share/gnuradio/grc/blocks/blocks_tags_strobe.xml
+share/gnuradio/grc/blocks/blocks_test_tag_variable_rate_ff.xml
 share/gnuradio/grc/blocks/blocks_threshold_ff.xml
 share/gnuradio/grc/blocks/blocks_throttle.xml
 share/gnuradio/grc/blocks/blocks_transcendental.xml
@@ -1184,3 +1217,5 @@ share/gnuradio/grc/blocks/variable_band_reject_filter_taps.xml
 share/gnuradio/grc/blocks/variable_high_pass_filter_taps.xml
 share/gnuradio/grc/blocks/variable_low_pass_filter_taps.xml
 share/gnuradio/grc/blocks/variable_rrc_filter_taps.xml
+share/gnuradio/grc/blocks/xmlrpc_client.xml
+share/gnuradio/grc/blocks/xmlrpc_server.xml
