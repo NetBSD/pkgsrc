@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/17 11:45:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/12 10:04:10 leot Exp $
 share/doc/python3.4/.buildinfo
 share/doc/python3.4/_images/logging_flow.png
 share/doc/python3.4/_images/pathlib-inheritance.png
@@ -345,6 +345,7 @@ share/doc/python3.4/_sources/library/stringprep.txt
 share/doc/python3.4/_sources/library/struct.txt
 share/doc/python3.4/_sources/library/subprocess.txt
 share/doc/python3.4/_sources/library/sunau.txt
+share/doc/python3.4/_sources/library/superseded.txt
 share/doc/python3.4/_sources/library/symbol.txt
 share/doc/python3.4/_sources/library/symtable.txt
 share/doc/python3.4/_sources/library/sys.txt
@@ -424,6 +425,7 @@ share/doc/python3.4/_sources/reference/introduction.txt
 share/doc/python3.4/_sources/reference/lexical_analysis.txt
 share/doc/python3.4/_sources/reference/simple_stmts.txt
 share/doc/python3.4/_sources/reference/toplevel_components.txt
+share/doc/python3.4/_sources/tutorial/appendix.txt
 share/doc/python3.4/_sources/tutorial/appetite.txt
 share/doc/python3.4/_sources/tutorial/classes.txt
 share/doc/python3.4/_sources/tutorial/controlflow.txt
@@ -857,6 +859,7 @@ share/doc/python3.4/library/stringprep.html
 share/doc/python3.4/library/struct.html
 share/doc/python3.4/library/subprocess.html
 share/doc/python3.4/library/sunau.html
+share/doc/python3.4/library/superseded.html
 share/doc/python3.4/library/symbol.html
 share/doc/python3.4/library/symtable.html
 share/doc/python3.4/library/sys.html
@@ -940,6 +943,7 @@ share/doc/python3.4/reference/simple_stmts.html
 share/doc/python3.4/reference/toplevel_components.html
 share/doc/python3.4/search.html
 share/doc/python3.4/searchindex.js
+share/doc/python3.4/tutorial/appendix.html
 share/doc/python3.4/tutorial/appetite.html
 share/doc/python3.4/tutorial/classes.html
 share/doc/python3.4/tutorial/controlflow.html
