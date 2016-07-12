@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2756 2016/07/11 22:05:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2757 2016/07/12 01:55:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3983,3 +3983,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/astyle to 2.05.1 [schmonz 2016-07-11]
 	Added mail/neomutt version 20160611 [wiz 2016-07-11]
 	Removed mail/mutt-kz successor mail/neomutt [wiz 2016-07-11]
+	Updated mail/getmail to 4.50.0 [schmonz 2016-07-12]
