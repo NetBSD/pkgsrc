@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2758 2016/07/12 09:32:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2759 2016/07/12 09:46:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed mail/mutt-kz successor mail/neomutt [wiz 2016-07-11]
 	Updated mail/getmail to 4.50.0 [schmonz 2016-07-12]
 	Updated devel/py-pylint to 1.6.1 [wiz 2016-07-12]
+	Removed lang/py33-html-docs [leot 2016-07-12]
