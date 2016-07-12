@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 13:03:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/12 09:23:50 wiz Exp $
 
 DISTNAME=	pylint-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
 
 MAINTAINER=	helgoman@users.sourceforge.net
-HOMEPAGE=	http://www.logilab.org/project/pylint
+HOMEPAGE=	https://www.pylint.org/
 COMMENT=	Python code static checker
 LICENSE=    	gnu-gpl-v2
 
