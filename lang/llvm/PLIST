@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/10 15:01:52 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/12 11:06:48 jperkin Exp $
+bin/FileCheck
 bin/bugpoint
+bin/count
 bin/llc
 bin/lli
+bin/llvm-PerfectShuffle
 bin/llvm-ar
 bin/llvm-as
 bin/llvm-bcanalyzer
@@ -32,10 +35,12 @@ bin/llvm-split
 bin/llvm-stress
 bin/llvm-symbolizer
 bin/llvm-tblgen
+bin/not
 bin/obj2yaml
 bin/opt
 bin/sancov
 bin/verify-uselistorder
+bin/yaml-bench
 bin/yaml2obj
 include/llvm-c/Analysis.h
 include/llvm-c/BitReader.h
