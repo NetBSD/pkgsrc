@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2014/07/17 11:45:40 obache Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/12 10:04:10 leot Exp $
 #
 
-VERS=		3.4.1
+VERS=		3.4.3
 DISTNAME=	python-${VERS}-docs-html
 PKGNAME=	py34-html-docs-${VERS}
 CATEGORIES=	lang python
-MASTER_SITES=	https://docs.python.org/3/archives/
+MASTER_SITES=	https://www.python.org/ftp/python/doc/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/
 COMMENT=	HTML Documentation for Python 3.4
+LICENSE=	python-software-foundation
 
 DIST_SUBDIR=	python
 
