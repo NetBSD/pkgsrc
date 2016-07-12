@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2016/07/12 10:04:10 leot Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/12 10:34:42 leot Exp $
 #
 
-VERS=		3.4.3
+VERS=		3.4.5
 DISTNAME=	python-${VERS}-docs-html
 PKGNAME=	py34-html-docs-${VERS}
 CATEGORIES=	lang python
-MASTER_SITES=	https://www.python.org/ftp/python/doc/${VERS}/
+MASTER_SITES=	https://docs.python.org/${VERS:C/\.[0-9]+$//}/archives/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
