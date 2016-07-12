@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2762 2016/07/12 10:34:54 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2763 2016/07/12 11:07:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3989,3 +3989,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/py34-html-docs to 3.4.3 [leot 2016-07-12]
 	Added lang/py35-html-docs version 3.5.2 [leot 2016-07-12]
 	Updated lang/py34-html-docs to 3.4.5 [leot 2016-07-12]
+	Updated lang/llvm to 3.8.0nb2 [jperkin 2016-07-12]
