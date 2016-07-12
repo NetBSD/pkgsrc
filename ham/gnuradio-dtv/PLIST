@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/07 13:14:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/07/12 11:36:47 mef Exp $
 include/gnuradio/dtv/api.h
 include/gnuradio/dtv/atsc_consts.h
 include/gnuradio/dtv/atsc_deinterleaver.h
@@ -16,6 +16,11 @@ include/gnuradio/dtv/atsc_rs_encoder.h
 include/gnuradio/dtv/atsc_sync.h
 include/gnuradio/dtv/atsc_trellis_encoder.h
 include/gnuradio/dtv/atsc_viterbi_decoder.h
+include/gnuradio/dtv/catv_frame_sync_enc_bb.h
+include/gnuradio/dtv/catv_randomizer_bb.h
+include/gnuradio/dtv/catv_reed_solomon_enc_bb.h
+include/gnuradio/dtv/catv_transport_framing_enc_bb.h
+include/gnuradio/dtv/catv_trellis_enc_bb.h
 include/gnuradio/dtv/dvb_bbheader_bb.h
 include/gnuradio/dtv/dvb_bbscrambler_bb.h
 include/gnuradio/dtv/dvb_bch_bb.h
@@ -71,6 +76,25 @@ ${PYSITELIB}/gnuradio/dtv/dtv_swig.py
 ${PYSITELIB}/gnuradio/dtv/dtv_swig.pyc
 ${PYSITELIB}/gnuradio/dtv/dtv_swig.pyo
 share/doc/gnuradio-${PKGVERSION}/README.dtv
+share/gnuradio/examples/dtv/README.catv
+share/gnuradio/examples/dtv/README.dvbs
+share/gnuradio/examples/dtv/README.dvbs2
+share/gnuradio/examples/dtv/README.dvbt
+share/gnuradio/examples/dtv/README.dvbt2
+share/gnuradio/examples/dtv/atsc_ctrlport_monitor.py
+share/gnuradio/examples/dtv/catv_tx_64qam.grc
+share/gnuradio/examples/dtv/dvbs2_tx.grc
+share/gnuradio/examples/dtv/dvbs_tx.grc
+share/gnuradio/examples/dtv/dvbt_rx_8k.grc
+share/gnuradio/examples/dtv/dvbt_tx_2k.grc
+share/gnuradio/examples/dtv/dvbt_tx_8k.grc
+share/gnuradio/examples/dtv/file_atsc_rx.grc
+share/gnuradio/examples/dtv/file_atsc_tx.grc
+share/gnuradio/examples/dtv/uhd_atsc_capture.grc
+share/gnuradio/examples/dtv/uhd_rx_atsc.grc
+share/gnuradio/examples/dtv/vv003-cr23.grc
+share/gnuradio/examples/dtv/vv009-4kfft.grc
+share/gnuradio/examples/dtv/vv018-miso.grc
 share/gnuradio/grc/blocks/dtv_atsc_deinterleaver.xml
 share/gnuradio/grc/blocks/dtv_atsc_depad.xml
 share/gnuradio/grc/blocks/dtv_atsc_derandomizer.xml
@@ -89,6 +113,11 @@ share/gnuradio/grc/blocks/dtv_atsc_sync.xml
 share/gnuradio/grc/blocks/dtv_atsc_trellis_encoder.xml
 share/gnuradio/grc/blocks/dtv_atsc_viterbi_decoder.xml
 share/gnuradio/grc/blocks/dtv_block_tree.xml
+share/gnuradio/grc/blocks/dtv_catv_frame_sync_enc_bb.xml
+share/gnuradio/grc/blocks/dtv_catv_randomizer_bb.xml
+share/gnuradio/grc/blocks/dtv_catv_reed_solomon_enc_bb.xml
+share/gnuradio/grc/blocks/dtv_catv_transport_framing_enc_bb.xml
+share/gnuradio/grc/blocks/dtv_catv_trellis_enc_bb.xml
 share/gnuradio/grc/blocks/dtv_dvb_bbheader_bb.xml
 share/gnuradio/grc/blocks/dtv_dvb_bbscrambler_bb.xml
 share/gnuradio/grc/blocks/dtv_dvb_bch_bb.xml

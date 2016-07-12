@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/03/07 13:14:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/07/12 11:36:47 mef Exp $
 bin/gr_constellation_plot
 bin/gr_psd_plot_b
 bin/gr_psd_plot_c
@@ -23,7 +23,6 @@ include/gnuradio/qtgui/ConstellationDisplayPlot.h
 include/gnuradio/qtgui/DisplayPlot.h
 include/gnuradio/qtgui/FrequencyDisplayPlot.h
 include/gnuradio/qtgui/HistogramDisplayPlot.h
-include/gnuradio/qtgui/SpectrumGUIClass.h
 include/gnuradio/qtgui/TimeDomainDisplayPlot.h
 include/gnuradio/qtgui/TimeRasterDisplayPlot.h
 include/gnuradio/qtgui/VectorDisplayPlot.h
@@ -33,6 +32,7 @@ include/gnuradio/qtgui/ber_sink_b.h
 include/gnuradio/qtgui/const_sink_c.h
 include/gnuradio/qtgui/constellationdisplayform.h
 include/gnuradio/qtgui/displayform.h
+include/gnuradio/qtgui/edit_box_msg.h
 include/gnuradio/qtgui/form_menus.h
 include/gnuradio/qtgui/freq_sink_c.h
 include/gnuradio/qtgui/freq_sink_f.h
@@ -48,7 +48,6 @@ include/gnuradio/qtgui/qtgui_types.h
 include/gnuradio/qtgui/sink_c.h
 include/gnuradio/qtgui/sink_f.h
 include/gnuradio/qtgui/spectrumUpdateEvents.h
-include/gnuradio/qtgui/spectrumdisplayform.h
 include/gnuradio/qtgui/timeRasterGlobalData.h
 include/gnuradio/qtgui/time_raster_sink_b.h
 include/gnuradio/qtgui/time_raster_sink_f.h
@@ -115,6 +114,7 @@ ${PYSITELIB}/gnuradio/qtgui/range.pyc
 ${PYSITELIB}/gnuradio/qtgui/range.pyo
 share/doc/gnuradio-${PKGVERSION}/README.qtgui
 share/gnuradio/examples/gr-qtgui.conf
+share/gnuradio/examples/qt-gui/display_qt
 share/gnuradio/examples/qt-gui/pyqt_const_c.py
 share/gnuradio/examples/qt-gui/pyqt_example_c.py
 share/gnuradio/examples/qt-gui/pyqt_example_f.py
@@ -130,11 +130,13 @@ share/gnuradio/examples/qt-gui/pyqt_waterfall_f.py
 share/gnuradio/examples/qt-gui/qtgui_message_inputs.grc
 share/gnuradio/examples/qt-gui/qtgui_tags_viewing.grc
 share/gnuradio/examples/qt-gui/qtgui_vector_sink_example.grc
+share/gnuradio/examples/qt-gui/test_qtgui_msg.grc
 share/gnuradio/grc/blocks/qtgui_ber_sink_b.xml
 share/gnuradio/grc/blocks/qtgui_block_tree.xml
 share/gnuradio/grc/blocks/qtgui_check_box.xml
 share/gnuradio/grc/blocks/qtgui_chooser.xml
 share/gnuradio/grc/blocks/qtgui_const_sink_x.xml
+share/gnuradio/grc/blocks/qtgui_edit_box_msg.xml
 share/gnuradio/grc/blocks/qtgui_entry.xml
 share/gnuradio/grc/blocks/qtgui_freq_sink_x.xml
 share/gnuradio/grc/blocks/qtgui_histogram_sink_x.xml
