@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2760 2016/07/12 10:04:21 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2761 2016/07/12 10:14:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3987,3 +3987,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-pylint to 1.6.1 [wiz 2016-07-12]
 	Removed lang/py33-html-docs [leot 2016-07-12]
 	Updated lang/py34-html-docs to 3.4.3 [leot 2016-07-12]
+	Added lang/py35-html-docs version 3.5.2 [leot 2016-07-12]
