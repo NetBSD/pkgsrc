@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 2016/03/23 13:37:20 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/07/12 11:36:47 mef Exp $
 bin/polar_channel_construction
+include/gnuradio/fec/alist.h
 include/gnuradio/fec/api.h
 include/gnuradio/fec/async_decoder.h
 include/gnuradio/fec/async_encoder.h
+include/gnuradio/fec/awgn_bp.h
 include/gnuradio/fec/ber_bf.h
 include/gnuradio/fec/cc_common.h
 include/gnuradio/fec/cc_decoder.h
 include/gnuradio/fec/cc_encoder.h
 include/gnuradio/fec/ccsds_encoder.h
+include/gnuradio/fec/cldpc.h
 include/gnuradio/fec/conv_bit_corr_bb.h
 include/gnuradio/fec/decode_ccsds_27_fb.h
 include/gnuradio/fec/decoder.h
@@ -19,6 +22,8 @@ include/gnuradio/fec/encoder.h
 include/gnuradio/fec/fec_mtrx.h
 include/gnuradio/fec/generic_decoder.h
 include/gnuradio/fec/generic_encoder.h
+include/gnuradio/fec/gf2mat.h
+include/gnuradio/fec/gf2vec.h
 include/gnuradio/fec/ldpc_G_matrix.h
 include/gnuradio/fec/ldpc_H_matrix.h
 include/gnuradio/fec/ldpc_bit_flip_decoder.h
@@ -148,8 +153,6 @@ share/gnuradio/fec/ldpc/n_0700_k_0282_gap_16.alist
 share/gnuradio/fec/ldpc/n_1100_k_0442_gap_24.alist
 share/gnuradio/fec/ldpc/n_1300_k_0522_gap_30.alist
 share/gnuradio/fec/ldpc/n_1800_k_0902_gap_28.alist
-share/gnuradio/fec/ldpc/n_2400_k_1198_gap_33.alist
-share/gnuradio/fec/ldpc/n_2400_k_1198_gen_matrix.alist
 share/gnuradio/fec/ldpc/simple_g_matrix.alist
 share/gnuradio/grc/blocks/fec_async_decoder.xml
 share/gnuradio/grc/blocks/fec_async_encoder.xml
