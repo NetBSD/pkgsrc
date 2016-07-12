@@ -1,12 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:34 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/07/12 11:36:47 mef Exp $
 include/gnuradio/swig/vocoder_swig.i
 include/gnuradio/swig/vocoder_swig_doc.i
 include/gnuradio/vocoder/alaw_decode_bs.h
 include/gnuradio/vocoder/alaw_encode_sb.h
 include/gnuradio/vocoder/api.h
-include/gnuradio/vocoder/codec2.h
-include/gnuradio/vocoder/codec2_decode_ps.h
-include/gnuradio/vocoder/codec2_encode_sp.h
 include/gnuradio/vocoder/cvsd_decode_bs.h
 include/gnuradio/vocoder/cvsd_encode_sb.h
 include/gnuradio/vocoder/g721_decode_bs.h

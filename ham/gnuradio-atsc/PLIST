@@ -1,28 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/28 16:59:32 mef Exp $
-include/gnuradio/atsc/CMakeLists.txt
-include/gnuradio/atsc/GrAtscBitTimingLoop.h
-include/gnuradio/atsc/GrAtscBitTimingLoop2.h
-include/gnuradio/atsc/GrAtscBitTimingLoop3.h
-include/gnuradio/atsc/GrAtscConvert2xTo20.h
-include/gnuradio/atsc/GrAtscDataSegToSoftDataSeg.h
-include/gnuradio/atsc/GrAtscDeinterleaver.h
-include/gnuradio/atsc/GrAtscDerandomizer.h
-include/gnuradio/atsc/GrAtscEqualizer.h
-include/gnuradio/atsc/GrAtscFPLL.h
-include/gnuradio/atsc/GrAtscFieldSyncChecker.h
-include/gnuradio/atsc/GrAtscFieldSyncCorrelator.h
-include/gnuradio/atsc/GrAtscFieldSyncDemux.h
-include/gnuradio/atsc/GrAtscFieldSyncMux.h
-include/gnuradio/atsc/GrAtscInterleaver.h
-include/gnuradio/atsc/GrAtscRSDecoder.h
-include/gnuradio/atsc/GrAtscRSEncoder.h
-include/gnuradio/atsc/GrAtscRandomizer.h
-include/gnuradio/atsc/GrAtscSegSymSync.h
-include/gnuradio/atsc/GrAtscSegSymSyncImpl.h
+@comment $NetBSD: PLIST,v 1.4 2016/07/12 11:36:46 mef Exp $
 include/gnuradio/atsc/GrAtscSegSymSyncImpl_export.h
-include/gnuradio/atsc/GrAtscSymbolMapper.h
-include/gnuradio/atsc/GrAtscTrellisEncoder.h
-include/gnuradio/atsc/GrAtscViterbiDecoder.h
 include/gnuradio/atsc/api.h
 include/gnuradio/atsc/basic_trellis_encoder_impl.h
 include/gnuradio/atsc/bit_timing_loop.h
@@ -42,7 +19,6 @@ include/gnuradio/atsc/equalizer_impl.h
 include/gnuradio/atsc/equalizer_lms2_impl.h
 include/gnuradio/atsc/equalizer_lms_impl.h
 include/gnuradio/atsc/equalizer_nop_impl.h
-include/gnuradio/atsc/exp2_lp_impl.h
 include/gnuradio/atsc/fake_single_viterbi_impl.h
 include/gnuradio/atsc/field_sync_demux.h
 include/gnuradio/atsc/field_sync_mux.h
@@ -59,8 +35,6 @@ include/gnuradio/atsc/pnXXX_impl.h
 include/gnuradio/atsc/randomizer.h
 include/gnuradio/atsc/randomizer_impl.h
 include/gnuradio/atsc/reed_solomon_impl.h
-include/gnuradio/atsc/root_raised_cosine_bandpass_impl.h
-include/gnuradio/atsc/root_raised_cosine_impl.h
 include/gnuradio/atsc/rs_decoder.h
 include/gnuradio/atsc/rs_encoder.h
 include/gnuradio/atsc/single_viterbi_impl.h
@@ -74,7 +48,6 @@ include/gnuradio/atsc/trellis_encoder_impl.h
 include/gnuradio/atsc/types.h
 include/gnuradio/atsc/viterbi_decoder.h
 include/gnuradio/atsc/viterbi_decoder_impl.h
-include/gnuradio/atsc/vsbtx_lp_impl.h
 include/gnuradio/swig/atsc_swig.i
 include/gnuradio/swig/atsc_swig_doc.i
 lib/libgnuradio-atsc.so
