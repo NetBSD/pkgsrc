@@ -1,35 +1,5 @@
 REPLACE_PYTHON = \
-	grc/base/Platform.py \
-	grc/base/Port.py \
-	grc/base/Constants.py \
-	grc/base/Param.py \
-	grc/base/Connection.py \
-	grc/base/Element.py \
-	grc/base/ParseXML.py \
-	grc/base/FlowGraph.py \
-	grc/base/odict.py \
-	grc/base/__init__.py \
-	grc/base/Block.py \
-	grc/python/Platform.py \
-	grc/python/Port.py \
-	grc/python/Constants.py \
-	grc/python/expr_utils.py \
-	grc/python/flow_graph.tmpl \
-	grc/python/Param.py \
-	grc/python/Connection.py \
-	grc/python/FlowGraph.py \
-	grc/python/__init__.py \
-	grc/python/Generator.py \
-	grc/python/extract_docs.py \
-	grc/python/Block.py \
-	grc/grc_gnuradio/blks2/packet.py \
-	grc/grc_gnuradio/blks2/selector.py \
-	grc/grc_gnuradio/blks2/error_rate.py \
-	grc/grc_gnuradio/blks2/__init__.py \
-	grc/grc_gnuradio/blks2/tcp.py \
-	grc/grc_gnuradio/__init__.py \
 	grc/__init__.py \
-	grc/examples/xmlrpc/xmlrpc_client_script.py \
 	grc/gui/Platform.py \
 	grc/gui/Port.py \
 	grc/gui/NotebookPage.py \
@@ -44,7 +14,6 @@ REPLACE_PYTHON = \
 	grc/gui/Actions.py \
 	grc/gui/MainWindow.py \
 	grc/gui/BlockTreeWindow.py \
-	grc/gui/Messages.py \
 	grc/gui/Connection.py \
 	grc/gui/Dialogs.py \
 	grc/gui/Preferences.py \
@@ -541,8 +510,6 @@ REPLACE_PYTHON = \
 	docs/sphinx/hieroglyph/__init__.py \
 	docs/sphinx/hieroglyph/nodes.py \
 	docs/sphinx/gnuradio_sphinx.py \
-	docs/sphinx/source/analog/get_blocks.py \
-	docs/sphinx/source/blocks/get_blocks.py \
 	docs/doxygen/swig_doc.py \
 	docs/doxygen/doxyxml/generated/indexsuper.py \
 	docs/doxygen/doxyxml/generated/index.py \
