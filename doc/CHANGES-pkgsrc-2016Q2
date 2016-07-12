@@ -1,6 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.2 2016/07/10 07:47:20 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.3 2016/07/12 20:45:19 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
 Pullup ticket #5054 - requested by wiz
 misc/calibre1: build fix
+
+Pullup ticket #5055 - requested by sevan
+textproc/xerces-c: security fix
+
