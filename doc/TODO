@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16126 2016/07/10 19:01:41 wiz Exp $
+$NetBSD: TODO,v 1.16127 2016/07/13 06:50:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -843,7 +843,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o guile-gtk-2.1
 	o gummi-0.6.6 [fixes CVE-2015-7758]
 	o gvfs-1.22.0
-	o gworkspace-0.9.3
+	o gworkspace-0.9.4
 	o gxine-0.99.9
 	o gxmessage-3.4.3
 	o gzip-1.8
@@ -1252,7 +1252,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Heap-1.04
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompt-0.997003
-	o p5-IO-Socket-SSL-2.031
+	o p5-IO-Socket-SSL-2.032
 	o p5-IP-Country-3.03
 	o p5-JSON-Any-1.39
 	o p5-LWP-Protocol-PSGI-0.09
@@ -1316,6 +1316,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Search-Indexer-0.78
 	o p5-Search-QueryParser-SQL-0.010
 	o p5-Smart-Comments-1.06
+	o p5-Socket6-0.28
 	o p5-Software-License-0.103011
 	o p5-Spreadsheet-Read-0.63
 	o p5-Struct-Dumb-0.08
