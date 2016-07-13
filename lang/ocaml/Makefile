@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2016/07/07 12:15:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2016/07/13 15:01:42 jperkin Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 #CONFIGURE_ARGS+=	-no-tk
 #CONFIGURE_ARGS+=	-cc ${CC}
