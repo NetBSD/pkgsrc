@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.15 2016/07/07 12:15:36 jperkin Exp $
+$NetBSD: patch-configure,v 1.16 2016/07/13 13:36:01 jperkin Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
 
@@ -14,16 +14,19 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -699,7 +699,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -699,7 +699,10 @@ if test $with_sharedlibs = "yes"; then
          *gcc*)
            sharedcccompopts="-fPIC"
            if sh ./solaris-ld; then
 -            mksharedlib="ld -G"
-+            mksharedlib="$bytecc -shared"
++            case "$target" in
++            x86_64*) mksharedlib="$bytecc -shared" ;;
++            *)       mksharedlib="$bytecc -G" ;;
++            esac
              byteccrpath="-R"
              mksharedlibrpath="-R"
            else
-@@ -726,7 +726,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -726,7 +729,7 @@ if test $with_sharedlibs = "yes"; then
        byteccrpath="-Wl,-rpath,"
        mksharedlibrpath="-rpath "
        shared_libraries_supported=true;;
@@ -32,7 +35,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
        mksharedlib="$bytecc -bundle -flat_namespace -undefined suppress \
                     -read_only_relocs suppress"
        bytecccompopts="$dl_defs $bytecccompopts"
-@@ -768,11 +768,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -768,11 +771,7 @@ if test $with_sharedlibs = "yes"; then
      i[3456]86-*-linux*)           natdynlink=true;;
      i[3456]86-*-gnu*)             natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
@@ -45,7 +48,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      x86_64-*-darwin*)             natdynlink=true;;
      s390x*-*-linux*)              natdynlink=true;;
      powerpc*-*-linux*)            natdynlink=true;;
-@@ -785,6 +781,9 @@ if test $with_sharedlibs = "yes"; then
+@@ -785,6 +784,9 @@ if test $with_sharedlibs = "yes"; then
      x86_64-*-openbsd*)            natdynlink=true;;
      i[3456]86-*-netbsd*)          natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -55,7 +58,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      i386-*-gnu0.3)                natdynlink=true;;
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-@@ -814,6 +813,7 @@ case "$target" in
+@@ -814,6 +816,7 @@ case "$target" in
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -63,7 +66,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -823,6 +823,7 @@ case "$target" in
+@@ -823,6 +826,7 @@ case "$target" in
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -71,7 +74,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -848,12 +849,15 @@ case "$target" in
+@@ -848,12 +852,15 @@ case "$target" in
    armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
    armv5*-*-linux-gnueabi)       arch=arm; model=armv5; system=linux_eabi;;
    arm*-*-linux-gnueabi)         arch=arm; system=linux_eabi;;
@@ -87,16 +90,16 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
-@@ -913,7 +917,7 @@ case "$arch,$system" in
+@@ -913,7 +920,7 @@ case "$arch,$system" in
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
    i386,solaris)   as="${TOOLPREF}as"
 -                  aspp="/usr/ccs/bin/${TOOLPREF}as -P";;
-+                  aspp="gcc -traditional -c";;
++                  aspp="gcc -m32 -c";;
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -960,6 +964,7 @@ case "$arch,$system" in
+@@ -960,6 +967,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -104,7 +107,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    *) profiling='noprof';;
  esac
  
-@@ -1505,6 +1510,8 @@ fi
+@@ -1505,6 +1513,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -113,7 +116,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1551,6 +1558,7 @@ if test "$x11_include" = "not found"; th
+@@ -1551,6 +1561,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -121,7 +124,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1608,6 +1616,7 @@ if test "$x11_include" = "not found"; th
+@@ -1608,6 +1619,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -129,7 +132,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1629,18 +1638,16 @@ if test "$x11_include" = "not found"; th
+@@ -1629,18 +1641,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
