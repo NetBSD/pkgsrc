@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.16 2016/07/13 13:36:01 jperkin Exp $
+$NetBSD: patch-configure,v 1.17 2016/07/13 15:01:42 jperkin Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
-
 See also: <http://caml.inria.fr/mantis/view.php?id=6900>
+
 --- configure.orig	2016-04-25 13:36:01.000000000 +0000
 +++ configure
 @@ -671,7 +671,7 @@ if test $with_sharedlibs = "yes"; then
@@ -90,7 +90,15 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
-@@ -913,7 +920,7 @@ case "$arch,$system" in
+@@ -894,7 +901,6 @@ case "$arch,$nativecc,$system,$model" in
+   *,*,nextstep,*)      nativecclinkopts="-posix";;
+   *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
+   amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
+-  amd64,gcc*,solaris,*) partialld="ld -r -m elf_x86_64";;
+   power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
+   power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
+   power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
+@@ -913,7 +919,7 @@ case "$arch,$system" in
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
    i386,solaris)   as="${TOOLPREF}as"
@@ -99,7 +107,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -960,6 +967,7 @@ case "$arch,$system" in
+@@ -960,6 +966,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -107,7 +115,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    *) profiling='noprof';;
  esac
  
-@@ -1505,6 +1513,8 @@ fi
+@@ -1505,6 +1512,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -116,7 +124,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1551,6 +1561,7 @@ if test "$x11_include" = "not found"; th
+@@ -1551,6 +1560,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -124,7 +132,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1608,6 +1619,7 @@ if test "$x11_include" = "not found"; th
+@@ -1608,6 +1618,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -132,7 +140,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1629,18 +1641,16 @@ if test "$x11_include" = "not found"; th
+@@ -1629,18 +1640,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
