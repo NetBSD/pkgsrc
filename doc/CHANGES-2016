@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2765 2016/07/12 13:31:27 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2766 2016/07/13 15:01:52 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3992,3 +3992,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/llvm to 3.8.0nb2 [jperkin 2016-07-12]
 	Updated ham/gnuradio-core to 3.7.10 [mef 2016-07-12]
 	Updated cad/klayout to 0.24.8 [mef 2016-07-12]
+	Updated lang/ocaml to 4.03.0nb2 [jperkin 2016-07-13]
