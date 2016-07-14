@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.29 2016/01/06 07:15:23 yyamano Exp $
+$NetBSD: README.MacOSX,v 1.30 2016/07/14 23:35:05 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -62,7 +62,25 @@ Note that a pkgsrc build in x86_64 mode will not run on an Intel Mac
 that is i386 only.  For a longer discussion, see:
   http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
 
-As of 2015-11, changing the default to x86_64 is imminent.
+As of 2015-11-09, the default ABI is x86_64 on machines where "uname
+-m" reports x86_64.  (It remains i386 on others, which are not capable
+of running x86_64 binaries.)
+
+*** resolving issues from a change in default ABI
+
+When the ABI changes from 32 to 64, you can recover without a
+rebootstrap by replacing bmake and pkg_install.  See
+  https://mail-index.netbsd.org/pkgsrc-users/2016/01/25/msg022870.html
+
+In /usr/pkgsrc/devel/bmake, do:
+# bmake MACHINE_ARCH=x86_64 replace
+and then rerun the failed pkg_add -U with an additional -f.
+Then, in /usr/pkgsrc/pkgtools/pkg_install, do:
+# bmake replace
+
+Then, rebuild all packages; ABI=32 and ABI=64 packages both work
+individually, but mixing them in a single program via dynamic linking
+will not work.
 
 ** sed in 10.9
 
