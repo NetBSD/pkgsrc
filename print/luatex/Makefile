@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2016/07/09 06:38:51 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2016/07/14 08:41:35 markd Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	luatex-0.95
@@ -24,7 +24,7 @@ USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--enable-luatex --disable-mf --disable-mf-nowin \
 			--with-x=no \
-			--disable-luajittex \
+			--disable-luajittex --disable-mfluajit \
 			--disable-mp --disable-pmp --disable-upmp \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \
@@ -51,7 +51,6 @@ CONFIGURE_ARGS+=	--with-system-gmp \
 			--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
 
 CONFIGURE_DIRS=		libs/lua52
-CONFIGURE_DIRS+=	libs/luajit
 CONFIGURE_DIRS+=	texk/web2c
 
 INSTALLATION_DIRS+=	bin lib
