@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2016/07/14 12:05:34 markd Exp $
+# $NetBSD: Makefile,v 1.665 2016/07/14 12:10:11 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -408,6 +408,8 @@ SUBDIR+=	tex-csquotes
 SUBDIR+=	tex-csquotes-de-doc
 SUBDIR+=	tex-csquotes-doc
 SUBDIR+=	tex-ctable
+SUBDIR+=	tex-ctablestack
+SUBDIR+=	tex-ctablestack-doc
 SUBDIR+=	tex-ctib
 SUBDIR+=	tex-ctib-doc
 SUBDIR+=	tex-cuisine
