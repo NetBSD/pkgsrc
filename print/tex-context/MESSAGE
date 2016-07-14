@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/07/14 09:18:44 markd Exp $
+
+As ConTeXt does not use the kpathsea library, some setup is required
+whenever you install new TeX files. After each such installation, each
+user must run:
+	mtxrun --generate
+
+===========================================================================
