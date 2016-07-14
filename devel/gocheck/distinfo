@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/14 20:01:06 bsiegert Exp $
+
+SHA1 (check/gocheck-20160125.tar.gz) = 9e9398831e23641805382d78869e34ef25f7ccea
+RMD160 (check/gocheck-20160125.tar.gz) = 5a51c89237c36b2bc71d3fa10535b1dab57c3d9e
+SHA512 (check/gocheck-20160125.tar.gz) = af0df648c86dab60750e181f7358166fe1e6ed6371e35b5c0c2207bd90e40da16e4a5e5c7fd96d1893ac8c430673b421bf8e2b5b193816f475bd9bc3af4c036e
+Size (check/gocheck-20160125.tar.gz) = 30327 bytes
