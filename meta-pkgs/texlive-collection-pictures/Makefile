@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/06/16 04:03:16 markd Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/14 12:14:45 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	40656
@@ -30,7 +30,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend celtic
 # depend chemfig
 # depend combinedgraphics
-# depend circuitikz
+DEPENDS+=	tex-circuitikz-[0-9]*:../../graphics/tex-circuitikz
 # depend curve
 # depend curve2e
 DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
