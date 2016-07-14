@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 08:45:49 plunky Exp $
+# $NetBSD: Makefile,v 1.1.12.1 2016/07/14 18:33:55 bsiegert Exp $
 
-DISTNAME=	libnova-0.13.0
+DISTNAME=	libnova-0.15.0
 CATEGORIES=	geography math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libnova/}
 
