@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2016/02/01 10:07:56 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.1.4.1 2016/07/14 18:31:58 bsiegert Exp $
 
 Skip installing unnecessary documentation.
 
---- Makefile.orig	2015-11-03 10:22:06.000000000 +0000
+--- Makefile.orig	2016-06-26 17:41:01.000000000 +0000
 +++ Makefile
-@@ -801,9 +801,6 @@ DOCUMENTATION = $(filter-out $(EXCLUDE_D
+@@ -812,9 +812,6 @@ DOCUMENTATION = $(filter-out $(EXCLUDE_D
  
  install-doc:
  	install -d "$(DESTDIR)$(DOCDIR)"
@@ -12,5 +12,5 @@ Skip installing unnecessary documentation.
 -		install -m 644 doc/$$x.txt "$(DESTDIR)$(DOCDIR)" ; \
 -	done
  
- install-bin: haproxy $(EXTRA)
- 	install -d "$(DESTDIR)$(SBINDIR)"
+ install-bin:
+ 	@for i in haproxy $(EXTRA); do \
