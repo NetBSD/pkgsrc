@@ -1,18 +1,18 @@
-$NetBSD: patch-src_bin_jp2_CMakeLists.txt,v 1.1 2014/05/15 14:14:54 adam Exp $
+$NetBSD: patch-src_bin_jp2_CMakeLists.txt,v 1.2 2016/07/14 15:41:44 wiz Exp $
 
 Install man pages without building other docs.
 
---- src/bin/jp2/CMakeLists.txt.orig	2014-05-15 11:05:39.000000000 +0000
+--- src/bin/jp2/CMakeLists.txt.orig	2016-07-05 14:54:17.000000000 +0000
 +++ src/bin/jp2/CMakeLists.txt
-@@ -52,7 +52,6 @@ foreach(exe opj_decompress opj_compress 
-   )
+@@ -71,7 +71,6 @@ foreach(exe opj_decompress opj_compress 
+   endif()
  endforeach()
  
 -if(BUILD_DOC)
  # Install man pages
  install(
    FILES       ${OPENJPEG_SOURCE_DIR}/doc/man/man1/opj_compress.1
-@@ -60,4 +59,3 @@ install(
+@@ -79,4 +78,3 @@ install(
                ${OPENJPEG_SOURCE_DIR}/doc/man/man1/opj_dump.1
    DESTINATION ${OPENJPEG_INSTALL_MAN_DIR}/man1)
  #
