@@ -1,0 +1,6 @@
+The package provides a set of macros for naturally typesetting
+electrical and (somewhat less naturally, perhaps) electronic
+networks. It is designed as a tool that is easy to use, with a
+lean syntax, native to LaTeX, and directly supporting PDF
+output format. So is based on the very impressive pgf/TikZ
+package.
