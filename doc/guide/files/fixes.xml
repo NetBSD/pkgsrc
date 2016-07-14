@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.142 2016/07/10 07:46:29 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.143 2016/07/14 14:39:24 leot Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1443,8 +1443,8 @@ SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
 
     <itemizedlist>
       <listitem><para><varname>PKG_DESTDIR_SUPPORT</varname> has to be
-      set to <quote>none</quote>, <quote>destdir</quote>, or
-      <quote>user-destdir</quote>. By default <varname>PKG_DESTDIR_SUPPORT</varname>
+      set to <quote>destdir</quote> or <quote>user-destdir</quote>.
+      By default <varname>PKG_DESTDIR_SUPPORT</varname>
       is set to <quote>user-destdir</quote> to help catching more
       potential packaging problems. If bsd.prefs.mk is included in the Makefile,
       <varname>PKG_DESTDIR_SUPPORT</varname> needs to be set before
