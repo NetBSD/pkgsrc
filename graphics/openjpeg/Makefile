@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/01/23 17:15:09 pho Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/14 15:41:43 wiz Exp $
 
-DISTNAME=	openjpeg-2.1.0
+DISTNAME=	openjpeg-2.1.1
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjpeg.mirror/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=uclouvain/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openjpeg.org/
