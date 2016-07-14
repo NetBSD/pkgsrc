@@ -8045,8 +8045,8 @@ SPECIAL_PERMS+=         ${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
     install as non-root user (<span class="quote">&#8220;<span class="quote">user-destdir</span>&#8221;</span>).</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p><code class="varname">PKG_DESTDIR_SUPPORT</code> has to be
-      set to <span class="quote">&#8220;<span class="quote">none</span>&#8221;</span>, <span class="quote">&#8220;<span class="quote">destdir</span>&#8221;</span>, or
-      <span class="quote">&#8220;<span class="quote">user-destdir</span>&#8221;</span>. By default <code class="varname">PKG_DESTDIR_SUPPORT</code>
+      set to <span class="quote">&#8220;<span class="quote">destdir</span>&#8221;</span> or <span class="quote">&#8220;<span class="quote">user-destdir</span>&#8221;</span>.
+      By default <code class="varname">PKG_DESTDIR_SUPPORT</code>
       is set to <span class="quote">&#8220;<span class="quote">user-destdir</span>&#8221;</span> to help catching more
       potential packaging problems. If bsd.prefs.mk is included in the Makefile,
       <code class="varname">PKG_DESTDIR_SUPPORT</code> needs to be set before
@@ -8809,7 +8809,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm87310496"></a><dl>
+<a name="idm79356336"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8854,7 +8854,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm87310112"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79355952"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8870,7 +8870,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm87297824"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79351856"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8888,7 +8888,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm87293472"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79347504"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8906,7 +8906,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm87289248"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79343280"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8919,7 +8919,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm87287072"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79341104"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8935,7 +8935,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm87284000"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79338032"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8959,7 +8959,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm87277088"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79331120"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8984,7 +8984,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm87273248"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79327280"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9032,7 +9032,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm87266720"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79320880"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
