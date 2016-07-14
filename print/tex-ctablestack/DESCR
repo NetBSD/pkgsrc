@@ -1,0 +1,6 @@
+This package provides a method for defining category code table
+stacks in LuaTeX. It builds on code provided by the 2015/10/01
+release of LaTeX2e (also available as ltluatex.sty for plain
+users). It is required by the luatexbase package (v1.0 onward)
+which uses ctablestack to provide a back-compatibility form of
+this concept.
