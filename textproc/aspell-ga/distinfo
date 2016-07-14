@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:20 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/07/14 13:35:14 mef Exp $
 
-SHA1 (aspell5-ga-4.6-0.tar.bz2) = 5e3bfa57569dad1d42dfa412f66ca8a78d7973dc
-RMD160 (aspell5-ga-4.6-0.tar.bz2) = 9cc063ad741ac47ef289b8cbcac62f77b4f6b338
-SHA512 (aspell5-ga-4.6-0.tar.bz2) = f1acb11035dd3eede33e4a0448bb0f0eb6528d9132049fb1f562e4fa2d9cc9c55a3a945acbad02b5f820324c41aef4313a1795c3a5d171eb923ea3687f3fed1e
-Size (aspell5-ga-4.6-0.tar.bz2) = 1091947 bytes
+SHA1 (aspell5-ga-4.8-0.tar.bz2) = af4a93acdc0129195874aa8866819dd02bf80d28
+RMD160 (aspell5-ga-4.8-0.tar.bz2) = f1c8093d7754fdd08c13693e9d2e06b87b57081d
+SHA512 (aspell5-ga-4.8-0.tar.bz2) = 755220e4931ccd0d7609b438647b651971af4a28604df403a24e2051a7012ac6e38c7a57e07b0b08b9eecd47f1ee655be184d960cbb6e052fa8b0d4fec70bb80
+Size (aspell5-ga-4.8-0.tar.bz2) = 1105926 bytes

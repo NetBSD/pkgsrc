@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/06/28 08:35:30 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/14 13:35:14 mef Exp $
 
-DISTNAME=	aspell5-ga-4.6-0
+DISTNAME=	aspell5-ga-4.8-0
 PKGNAME=	${DISTNAME:S/5-/-/1:S/-0/.0/1}
 CATEGORIES=	textproc
-MASTER_SITES=	http://gaelspell.googlecode.com/files/
+#MASTER_SITES=	${MASTER_SITE_GITHUB:=kscanne/}
+MASTER_SITES=	https://github.com/kscanne/gaelspell/releases/download/v4.8/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
