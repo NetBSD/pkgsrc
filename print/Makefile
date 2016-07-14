@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.663 2016/06/19 04:11:16 markd Exp $
+# $NetBSD: Makefile,v 1.664 2016/07/14 12:05:34 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -763,9 +763,15 @@ SUBDIR+=	tex-lollipop-doc
 SUBDIR+=	tex-ltabptch
 SUBDIR+=	tex-ltabptch-doc
 SUBDIR+=	tex-ltxmisc
+SUBDIR+=	tex-luacode
+SUBDIR+=	tex-luacode-doc
 SUBDIR+=	tex-lualatex-doc-de-doc
 SUBDIR+=	tex-luatex
 SUBDIR+=	tex-luatex-doc
+SUBDIR+=	tex-luatex-def
+SUBDIR+=	tex-luatex-def-doc
+SUBDIR+=	tex-luatex85
+SUBDIR+=	tex-luatex85-doc
 SUBDIR+=	tex-macros2e-doc
 SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
