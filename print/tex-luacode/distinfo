@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/14 12:02:44 markd Exp $
+
+SHA1 (tex-luacode-25193/luacode.tar.xz) = 27c18e955ba6dbc57226a1ec6b051116f8fe11d1
+RMD160 (tex-luacode-25193/luacode.tar.xz) = 16b737a6bc48295160471b9358d83a86910297ae
+SHA512 (tex-luacode-25193/luacode.tar.xz) = 1d9e7c52b6848fccb28efb30434e85cd94cf157f448f9f176111c9316a64299324590d91571c9e793f37cd7931c26e1779e0450f22cda3d99920b5c372df3e9a
+Size (tex-luacode-25193/luacode.tar.xz) = 2192 bytes
