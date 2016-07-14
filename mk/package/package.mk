@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.25 2016/04/10 15:58:02 joerg Exp $
+# $NetBSD: package.mk,v 1.26 2016/07/14 14:43:55 leot Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -7,9 +7,6 @@
 # package:
 #	Generates a binary package.
 #	It will acquire elevated privileges just-in-time.
-#
-#	XXX: From which files is the binary package generated? The
-#	installed files in LOCALBASE, or some files in WRKDIR/.destdir?
 #
 
 _PACKAGE_TARGETS+=	check-vulnerable
