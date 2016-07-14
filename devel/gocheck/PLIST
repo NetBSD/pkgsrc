@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/14 20:01:06 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/gopkg.in/check.v1.a
+gopkg/src/gopkg.in/check.v1/LICENSE
+gopkg/src/gopkg.in/check.v1/README.md
+gopkg/src/gopkg.in/check.v1/TODO
+gopkg/src/gopkg.in/check.v1/benchmark.go
+gopkg/src/gopkg.in/check.v1/benchmark_test.go
+gopkg/src/gopkg.in/check.v1/bootstrap_test.go
+gopkg/src/gopkg.in/check.v1/check.go
+gopkg/src/gopkg.in/check.v1/check_test.go
+gopkg/src/gopkg.in/check.v1/checkers.go
+gopkg/src/gopkg.in/check.v1/checkers_test.go
+gopkg/src/gopkg.in/check.v1/export_test.go
+gopkg/src/gopkg.in/check.v1/fixture_test.go
+gopkg/src/gopkg.in/check.v1/foundation_test.go
+gopkg/src/gopkg.in/check.v1/helpers.go
+gopkg/src/gopkg.in/check.v1/helpers_test.go
+gopkg/src/gopkg.in/check.v1/printer.go
+gopkg/src/gopkg.in/check.v1/printer_test.go
+gopkg/src/gopkg.in/check.v1/reporter.go
+gopkg/src/gopkg.in/check.v1/reporter_test.go
+gopkg/src/gopkg.in/check.v1/run.go
+gopkg/src/gopkg.in/check.v1/run_test.go
+@pkgdir bin
