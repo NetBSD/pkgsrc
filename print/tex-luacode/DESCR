@@ -1,0 +1,5 @@
+Executing Lua code from within TeX with directlua can sometimes
+be tricky: there is no easy way to use the percent character,
+counting backslashes may be hard, and Lua comments don't work
+the way you expect. The package provides the \luaexec command
+and the luacode(*) environments to help with these problems.
