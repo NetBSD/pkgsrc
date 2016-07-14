@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.6 2012/11/03 22:56:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/07/14 12:11:56 mef Exp $
 bin/grig
-lib/locale/fr/LC_MESSAGES/grig.mo
 man/man1/grig.1
 share/grig/AUTHORS
 share/grig/COPYING
 share/grig/ChangeLog
 share/grig/NEWS
 share/grig/README
+share/locale/de/LC_MESSAGES/grig.mo
+share/locale/fr/LC_MESSAGES/grig.mo
+share/locale/tr/LC_MESSAGES/grig.mo
 share/pixmaps/grig/digits_normal.png
 share/pixmaps/grig/digits_small.png
 share/pixmaps/grig/grig-logo.png
