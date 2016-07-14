@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.744 2016/07/14 11:58:55 markd Exp $
+# $NetBSD: Makefile,v 1.745 2016/07/14 15:47:11 youri Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -340,6 +340,8 @@ SUBDIR+=	mypaint
 SUBDIR+=	ncview
 SUBDIR+=	netpbm
 SUBDIR+=	ns-cult3d
+SUBDIR+=	numix-icon-theme
+SUBDIR+=	numix-icon-theme-circle
 SUBDIR+=	nvtv
 SUBDIR+=	ocrad
 SUBDIR+=	opencsg
