@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2768 2016/07/14 12:12:09 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2769 2016/07/14 12:20:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3995,3 +3995,13 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/ocaml to 4.03.0nb2 [jperkin 2016-07-13]
 	Updated ham/xnec2c to 3.5 [mef 2016-07-14]
 	Updated ham/grig to 0.8.1 [mef 2016-07-14]
+	Added graphics/tex-circuitikz version 0.6 [markd 2016-07-14]
+	Added graphics/tex-circuitikz-doc version 0.6 [markd 2016-07-14]
+	Added print/tex-ctablestack version 1.0 [markd 2016-07-14]
+	Added print/tex-ctablestack-doc version 1.0 [markd 2016-07-14]
+	Added print/tex-luacode version 1.2a [markd 2016-07-14]
+	Added print/tex-luacode-doc version 1.2a [markd 2016-07-14]
+	Added print/tex-luatex-def version 0.01b [markd 2016-07-14]
+	Added print/tex-luatex-def-doc version 0.01b [markd 2016-07-14]
+	Added print/tex-luatex85 version 1.0 [markd 2016-07-14]
+	Added print/tex-luatex85-doc version 1.0 [markd 2016-07-14]
