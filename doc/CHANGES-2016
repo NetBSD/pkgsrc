@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2771 2016/07/14 13:46:26 is Exp $
+$NetBSD: CHANGES-2016,v 1.2772 2016/07/14 15:26:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4007,3 +4007,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-luatex85-doc version 1.0 [markd 2016-07-14]
 	Updated textproc/aha to 0.4.9 [mef 2016-07-14]
 	Updated geography/libnova to 0.15 [is 2016-07-14]
+	Updated textproc/mdocml to 1.13.4 [wiz 2016-07-14]
