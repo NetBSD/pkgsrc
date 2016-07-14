@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2774 2016/07/14 15:41:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2775 2016/07/14 15:45:26 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4010,3 +4010,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/mdocml to 1.13.4 [wiz 2016-07-14]
 	Added graphics/numix-icon-theme-circle version 0.1 [youri 2016-07-14]
 	Updated graphics/openjpeg to 2.1.1 [wiz 2016-07-14]
+	Added graphics/numix-icon-theme version 0.1 [youri 2016-07-14]
