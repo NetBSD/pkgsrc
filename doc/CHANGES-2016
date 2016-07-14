@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2767 2016/07/14 11:59:20 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2768 2016/07/14 12:12:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3994,3 +3994,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/klayout to 0.24.8 [mef 2016-07-12]
 	Updated lang/ocaml to 4.03.0nb2 [jperkin 2016-07-13]
 	Updated ham/xnec2c to 3.5 [mef 2016-07-14]
+	Updated ham/grig to 0.8.1 [mef 2016-07-14]
