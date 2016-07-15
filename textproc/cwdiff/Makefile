@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/03/10 01:10:39 mef Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/15 11:01:18 mef Exp $
 
 DISTNAME=	cwdiff-0.2.7
 CATEGORIES=	textproc
-MASTER_SITES=	http://downloads.cj-overlay.googlecode.com/hg/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=junghans/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/cj-overlay/
