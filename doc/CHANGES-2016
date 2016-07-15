@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2789 2016/07/15 07:36:31 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2790 2016/07/15 07:37:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4025,3 +4025,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/py-brewer2mpl version 1.4.1 [wiz 2016-07-15]
 	Added math/py-patsy version 0.4.1 [wiz 2016-07-15]
 	Added math/py-statsmodels version 0.8.0rc1 [wiz 2016-07-15]
+	Added graphics/py-ggplot version 0.10.4 [wiz 2016-07-15]
