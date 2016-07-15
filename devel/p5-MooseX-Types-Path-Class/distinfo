@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:34 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/15 10:14:30 wen Exp $
 
-SHA1 (MooseX-Types-Path-Class-0.08.tar.gz) = 046e26a3f0572f3b5ea09bca3d36d12be1f4c268
-RMD160 (MooseX-Types-Path-Class-0.08.tar.gz) = 838761c9b540f4ae2fe8ea05dcf48ee3df091433
-SHA512 (MooseX-Types-Path-Class-0.08.tar.gz) = d206b32d765f7766e18cc15a045f1ab34efa160aa699823a9be437861bc2a3c8deee0bf66a46b7e2ccb5fc6ba25fa18c40391606f25c5a9e024f7744be7841c7
-Size (MooseX-Types-Path-Class-0.08.tar.gz) = 28203 bytes
+SHA1 (MooseX-Types-Path-Class-0.09.tar.gz) = 05a80770c4eacbd3702b9aa2b048253f18f844ee
+RMD160 (MooseX-Types-Path-Class-0.09.tar.gz) = 7c8005d9fe01e8e22d3a1a5b864c409850923ac9
+SHA512 (MooseX-Types-Path-Class-0.09.tar.gz) = d61f72957431852903d99257b2d9f53f88702d4d314297192345896aeb1df86ab4d80767a1d0fad76fb23b561925aae076bfda80106e3f7d0f2d8093956bdc9e
+Size (MooseX-Types-Path-Class-0.09.tar.gz) = 29220 bytes
