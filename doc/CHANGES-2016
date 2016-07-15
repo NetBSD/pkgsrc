@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2793 2016/07/15 08:13:14 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2794 2016/07/15 09:34:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-namespace-clean to 0.27 [wen 2016-07-15]
 	Updated devel/p5-multidimensional to 0.012 [wen 2016-07-15]
 	Updated misc/p5-Locale-libintl to 1.26 [wen 2016-07-15]
+	Updated devel/p5-Mo to 0.40 [wen 2016-07-15]
