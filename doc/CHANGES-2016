@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2792 2016/07/15 07:52:22 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2793 2016/07/15 08:13:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4028,3 +4028,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/py-ggplot version 0.10.4 [wiz 2016-07-15]
 	Updated devel/p5-namespace-clean to 0.27 [wen 2016-07-15]
 	Updated devel/p5-multidimensional to 0.012 [wen 2016-07-15]
+	Updated misc/p5-Locale-libintl to 1.26 [wen 2016-07-15]
