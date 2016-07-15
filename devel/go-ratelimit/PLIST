@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/15 19:35:02 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/juju/ratelimit.a
+gopkg/src/github.com/juju/ratelimit/LICENSE
+gopkg/src/github.com/juju/ratelimit/README.md
+gopkg/src/github.com/juju/ratelimit/ratelimit.go
+gopkg/src/github.com/juju/ratelimit/ratelimit_test.go
+gopkg/src/github.com/juju/ratelimit/reader.go
+@pkgdir bin
