@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/15 19:35:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/15 19:53:45 bsiegert Exp $
 
 DISTNAME=	go-ratelimit-0.0.20151125
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ GITHUB_PROJECT=	ratelimit
 GITHUB_TAG=	77ed1c8a01217656d2080ad51981f6e99adaa177
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/juku/ratelimit
+HOMEPAGE=	https://github.com/juju/ratelimit
 COMMENT=	Efficient token-bucket-based rate limiter package
 LICENSE=	gnu-lgpl-v3
 
