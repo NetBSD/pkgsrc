@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:47 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/07/15 13:44:42 mef Exp $
 
-SHA1 (Search-Indexer-0.77.tar.gz) = 254a75141052b7b9c2fab6538907a2caf1a61b7b
-RMD160 (Search-Indexer-0.77.tar.gz) = a1e175ad492a028d65889bceffec463ecd974410
-SHA512 (Search-Indexer-0.77.tar.gz) = bf2e6fcc125971b664effdf99b4b21510d9765a6e5848c14d004f705c14f7b5246d1b10553d9677d472cb097298b918df9a256e29e7db5acdd6fa4cef40a95ab
-Size (Search-Indexer-0.77.tar.gz) = 289313 bytes
+SHA1 (Search-Indexer-0.78.tar.gz) = ce9ead05b30edcbe2e6ff9e26ee9960f2eeeea64
+RMD160 (Search-Indexer-0.78.tar.gz) = 351b8658af676747cdda38a37d5b1a8a47bc0a88
+SHA512 (Search-Indexer-0.78.tar.gz) = 8f572ee3825a1d7ee5ddc680e6462f98252b6def0a84660d48b1865c7e168f9239fe4377db9cd65a70af11b57b5dffe199dc9ef85a424edd2a04e487573be3f9
+Size (Search-Indexer-0.78.tar.gz) = 290533 bytes
