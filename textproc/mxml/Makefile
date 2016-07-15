@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/03/08 13:50:46 nros Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/15 13:14:10 mef Exp $
 
-DISTNAME=	mxml-2.9
+DISTNAME=	mxml-2.10
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.msweet.org/files/project3/
 
