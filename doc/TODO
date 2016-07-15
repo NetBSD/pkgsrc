@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16132 2016/07/15 03:43:34 wen Exp $
+$NetBSD: TODO,v 1.16133 2016/07/15 11:36:59 mef Exp $
 
 Suggested new packages
 ======================
@@ -1062,7 +1062,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o licq-1.3.8
 	o lilv-0.22.0
 	o lincvs-2.1.4 [now called CrossVC]
-	o link-grammar-5.3.3
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lirc-0.9.3
