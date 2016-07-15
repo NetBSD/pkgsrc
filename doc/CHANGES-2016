@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2786 2016/07/15 07:18:56 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2787 2016/07/15 07:36:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4022,3 +4022,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Number-Tolerant to 1.708 [wen 2016-07-15]
 	Updated math/p5-Number-Range to 0.12 [wen 2016-07-15]
 	Updated math/py-numexpr to 2.6.0 [wiz 2016-07-15]
+	Added graphics/py-brewer2mpl version 1.4.1 [wiz 2016-07-15]
