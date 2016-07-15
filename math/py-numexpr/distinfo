@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2016/07/15 07:18:45 wiz Exp $
+$NetBSD: distinfo,v 1.6 2016/07/15 07:21:36 wiz Exp $
 
 SHA1 (numexpr-2.6.0.tar.gz) = 02b80e27878853e65ccc8884f1d83d9fdc017abf
 RMD160 (numexpr-2.6.0.tar.gz) = 0b02d07304e38b06ae83cc43cbacd1a99910c1c2
 SHA512 (numexpr-2.6.0.tar.gz) = 6712901e3be20a44d4f40e57fc09bcae17ab0a6af1caf5bc63dd66ca751875b74af71e0f016386b7e68d52ef34a2bab226e3a79871eea35754ddbfe143b5a68e
 Size (numexpr-2.6.0.tar.gz) = 99103 bytes
-SHA1 (patch-ab) = 8c51ca19b2817b55f6e950a0e64da293dcbdceb8
+SHA1 (patch-ab) = cb007f2e1bf6d52cd5363c2194a905c77f3e911f
