@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.745 2016/07/14 15:47:11 youri Exp $
+# $NetBSD: Makefile,v 1.746 2016/07/15 07:37:02 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -421,6 +421,7 @@ SUBDIR+=	py-actdiag
 SUBDIR+=	py-altgraph
 SUBDIR+=	py-biggles
 SUBDIR+=	py-blockdiag
+SUBDIR+=	py-brewer2mpl
 SUBDIR+=	py-cairo
 SUBDIR+=	py-cairo3
 SUBDIR+=	py-cairocffi
@@ -429,6 +430,7 @@ SUBDIR+=	py-dot
 SUBDIR+=	py-fits
 SUBDIR+=	py-gdchart
 SUBDIR+=	py-gdmodule
+SUBDIR+=	py-ggplot
 SUBDIR+=	py-gnuplot
 SUBDIR+=	py-goocanvas
 SUBDIR+=	py-graphviz
