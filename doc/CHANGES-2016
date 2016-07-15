@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2784 2016/07/15 03:17:47 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2785 2016/07/15 03:43:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime to 1.34 [wen 2016-07-15]
 	Updated mail/p5-Mail-Sender to 0.902 [wen 2016-07-15]
 	Updated math/p5-Number-Tolerant to 1.708 [wen 2016-07-15]
+	Updated math/p5-Number-Range to 0.12 [wen 2016-07-15]
