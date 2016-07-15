@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/06/08 19:25:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/07/15 01:02:57 wen Exp $
 
-DISTNAME=	URI-FromHash-0.04
+DISTNAME=	URI-FromHash-0.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	www net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=URI/}
 
