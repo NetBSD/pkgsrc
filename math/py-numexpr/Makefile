@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2014/07/19 12:46:53 bad Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/15 07:18:45 wiz Exp $
 
-DISTNAME=	numexpr-2.2.2
+DISTNAME=	numexpr-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://numexpr.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=pydata/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_PROJECT=	numexpr
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/numexpr/
+HOMEPAGE=	https://github.com/pydata/numexpr
 COMMENT=	Numerical expression evaluator for NumPy
 LICENSE=	mit
 
