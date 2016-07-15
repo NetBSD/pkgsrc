@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.30 2016/07/14 23:35:05 gdt Exp $
+$NetBSD: README.MacOSX,v 1.31 2016/07/15 14:51:16 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -46,41 +46,66 @@ pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present.
 
 ** i386 vs x86_64 ABI issue
 
-OS X 10.6 and higher supports x86-64 binaries on Intel Macs with
-x86-64 processors, which is now most of them.
+This entire section is only about Intel Macs.
 
-This has caused problems with packages which get confused because
-"MACHINE_ARCH" is in some OS versions set to "i386" (on a 64-bit
-system!).
+OS X 10.6 and higher supports x86-64 binaries on Intel Macs with
+x86-64 processors, which is now most of them.  i386 binaries are also
+supported on most (all?) Intel machines.
+
+*** issues related to ABI 32 vs 64
+
+Note that a pkgsrc package built in x86_64 mode will not run on an
+Intel Mac that is i386 only.  For a longer discussion, see:
+http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
+
+Somewhat separately from pkgsrc's ABI choice, there have been issues
+with packages which get confused because "MACHINE_ARCH" is in some OS
+versions set to "i386" (on a 64-bit system!).  As of 2016 this should
+be mostly resolved.
   version:  uname -m : uname -p
   10.6: i386 : i386
   10.9: x86_64 : i386
 
-On Intel machines, pkgsrc currently defaults to i386 mode (--abi=32)
-on OS X, and can be set to x86_64 mode (--abi=64).
-Note that a pkgsrc build in x86_64 mode will not run on an Intel Mac
-that is i386 only.  For a longer discussion, see:
-  http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
+*** default ABI
 
-As of 2015-11-09, the default ABI is x86_64 on machines where "uname
+The ABI is chosen at bootstrap time and encoded into mk.conf.  So a
+change in the default is about what a new bootstrap will do;
+already-bootstrapped systems should remain unchanged.  They should be
+able to build and run new packages using the old ABI value.
+
+pkgsrc used to set the default ABI as i386, both on systems with i386
+processors and on systems with x86_64 processors.  On 2015-11-09 the
+default was changed so that ABI=64 is chosen on machines where "uname
 -m" reports x86_64.  (It remains i386 on others, which are not capable
 of running x86_64 binaries.)
 
-*** resolving issues from a change in default ABI
+Generally, users will not need to deal with the default ABI change,
+except that packages are mostly only portable across machines with the
+same bootstrapping parameters.
 
-When the ABI changes from 32 to 64, you can recover without a
-rebootstrap by replacing bmake and pkg_install.  See
+If one unpacks a new binary bootstrap kit over an existing
+installation, one can end up with a mix. The standard advice is not to
+do this, and to rrebuild/reinstall all packages from scratch or a
+compatible binary package set.  But, one could also mark packages with
+the wrong ABI as rebuild=YES and use pkg_rolling-replace.
+
+*** change in storage of ABI information
+
+On 2016-01-24, the way ABI information was stored in pkgsrc was
+rationalized and simplified.  The new code could compute the wrong ABI
+for some previously-bootstrapped installations.  The problem can be
+resolved by building bmake with MACHINE_ARCH=x86_64 and updating that
+package, as described in mail archives:
+
   https://mail-index.netbsd.org/pkgsrc-users/2016/01/25/msg022870.html
 
-In /usr/pkgsrc/devel/bmake, do:
-# bmake MACHINE_ARCH=x86_64 replace
-and then rerun the failed pkg_add -U with an additional -f.
-Then, in /usr/pkgsrc/pkgtools/pkg_install, do:
-# bmake replace
-
-Then, rebuild all packages; ABI=32 and ABI=64 packages both work
-individually, but mixing them in a single program via dynamic linking
-will not work.
+(One would expect to be able to use make replace to do this.  One
+minor issue is that it requires pkg_tarup, although that will be
+present on systems of those who use make replace.  There also may be
+an error with architecture mismatch from pkg_install requiring a "-f"
+option.  Repeatable data about recovery is somewhat hard to obtain, as
+most are past this issue already and no longer interested in
+experimenting.)
 
 ** sed in 10.9
 
