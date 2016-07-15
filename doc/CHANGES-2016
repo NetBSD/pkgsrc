@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2818 2016/07/15 19:35:54 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.2819 2016/07/15 19:59:28 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4054,3 +4054,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Search-Indexer to 0.78 [mef 2016-07-15]
 	Updated textproc/jsoncpp to 1.7.4 [wiz 2016-07-15]
 	Added devel/go-ratelimit version 0.0.20151125 [bsiegert 2016-07-15]
+	Added net/go-dns version 0.0.20160614 [bsiegert 2016-07-15]
