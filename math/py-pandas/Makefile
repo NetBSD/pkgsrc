@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/06/08 17:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/07/15 07:24:06 wiz Exp $
 
 DISTNAME=	pandas-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://pandas.pydata.org/
 COMMENT=	Python Data Analysis Library
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-numexpr-[0-9]*:../../math/py-numexpr
 DEPENDS+=	${PYPKGPREFIX}-pytz>=1.5:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2:../../math/py-pytables
@@ -28,6 +29,5 @@ USE_LANGUAGES=	c c++
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../math/py-numexpr/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
