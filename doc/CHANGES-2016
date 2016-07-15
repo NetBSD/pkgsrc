@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2800 2016/07/15 11:42:41 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2801 2016/07/15 11:53:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4036,3 +4036,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/cwdiff to 0.4.0 [mef 2016-07-15]
 	Updated textproc/link-grammar to 5.3.7 [mef 2016-07-15]
 	Updated devel/p5-MooseX-Role-Tempdir to 0.100 [wen 2016-07-15]
+	Updated devel/p5-MooseX-Getopt to 0.71 [wen 2016-07-15]
