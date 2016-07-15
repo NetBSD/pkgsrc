@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/09/20 17:56:36 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/15 07:24:06 wiz Exp $
 
 DISTNAME=		tables-3.1.1
 PKGNAME=		${PYPKGPREFIX}-py${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=		modified-bsd
 PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPINSTALLARGS=	${PYSETUPBUILDARGS}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+DEPENDS+=		${PYPKGPREFIX}-numexpr>=2.0:../../math/py-numexpr
 
 USE_LANGUAGES=		c c++
 
@@ -34,6 +36,4 @@ do-test:
 .include "../../math/py-numpy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pycython+=	${PYPKGPREFIX}-cython>=0.13
 .include "../../devel/py-cython/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pynumexpr+=	${PYPKGPREFIX}-numexpr>=2.0
-.include "../../math/py-numexpr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
