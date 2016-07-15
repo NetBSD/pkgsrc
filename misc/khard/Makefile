@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/15 13:39:33 wiz Exp $
 
 DISTNAME=		khard-0.9.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khard/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=		https://github.com/scheibler/khard
 COMMENT=		CLI contacts application built around CardDAV
 LICENSE=		gnu-gpl-v3
 
+DEPENDS+=		${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
