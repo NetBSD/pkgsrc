@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/07/15 11:01:18 mef Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/15 11:14:55 mef Exp $
 
-DISTNAME=	cwdiff-0.2.7
+VERSION=	0.4.0
+DISTNAME=	cwdiff-${VERSION}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=junghans/}
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/cj-overlay/
@@ -19,7 +21,7 @@ AUTO_MKDIRS=	yes
 do-install:
 	(cd ${WRKSRC} ;\
 	${INSTALL_SCRIPT} cwdiff          ${DESTDIR}${PREFIX}/bin ;\
-	${INSTALL_DATA} hgrc.d/cwdiff.rc  ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS} ;\
+	${INSTALL_DATA} cwdiff.rc  ${DESTDIR}${PREFIX}/${INSTALLATION_DIRS} ;\
 	)
 
 .include "../../mk/bsd.pkg.mk"
