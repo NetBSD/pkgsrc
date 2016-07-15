@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2812 2016/07/15 13:14:29 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2813 2016/07/15 13:35:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4048,3 +4048,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Devel-Pragma to 1.1.0 [wen 2016-07-15]
 	Updated textproc/miller to 4.3.0 [mef 2016-07-15]
 	Updated textproc/mxml to 2.10 [mef 2016-07-15]
+	Updated devel/p5-Dist-Zilla to 6.006 [wen 2016-07-15]
