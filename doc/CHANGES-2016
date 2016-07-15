@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2782 2016/07/15 02:59:41 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2783 2016/07/15 03:04:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4018,3 +4018,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/moodle to 3.1.1 [wen 2016-07-15]
 	Updated www/p5-HTML-Selector-XPath to 0.20 [wen 2016-07-15]
 	Updated time/p5-DateTime to 1.34 [wen 2016-07-15]
+	Updated mail/p5-Mail-Sender to 0.902 [wen 2016-07-15]
