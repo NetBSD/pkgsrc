@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2802 2016/07/15 11:56:52 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2803 2016/07/15 12:00:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4038,3 +4038,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MooseX-Role-Tempdir to 0.100 [wen 2016-07-15]
 	Updated devel/p5-MooseX-Getopt to 0.71 [wen 2016-07-15]
 	Updated devel/p5-Module-Runtime-Conflicts to 0.003 [wen 2016-07-15]
+	Updated devel/p5-Module-CoreList to 5.20160620 [wen 2016-07-15]
