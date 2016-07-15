@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2808 2016/07/15 12:54:05 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2809 2016/07/15 13:00:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4044,3 +4044,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/mupdf to 1.9anb1 [leot 2016-07-15]
 	Updated devel/p5-local-lib to 2.000019 [wen 2016-07-15]
 	Updated devel/p5-Data-Dumper to 2.161 [wen 2016-07-15]
+	Updated devel/p5-Devel-PPPort to 3.35 [wen 2016-07-15]
