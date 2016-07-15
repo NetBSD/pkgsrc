@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2805 2016/07/15 12:29:42 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2806 2016/07/15 12:32:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4041,3 +4041,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-CoreList to 5.20160620 [wen 2016-07-15]
 	Updated devel/p5-MetaCPAN-Client to 1.02000 [wen 2016-07-15]
 	Updated devel/p5-Memoize-ExpireLRU to 0.56 [wen 2016-07-15]
+	Updated print/mupdf to 1.9anb1 [leot 2016-07-15]
