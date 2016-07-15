@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2777 2016/07/15 00:59:12 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2778 2016/07/15 01:04:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4013,3 +4013,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/numix-icon-theme version 0.1 [youri 2016-07-14]
 	Updated www/p5-WWW-Shorten to 3.093 [wen 2016-07-15]
 	Updated net/p5-Net-DHCP to 0.696 [wen 2016-07-15]
+	Updated www/p5-URI-FromHash to 0.05 [wen 2016-07-15]
