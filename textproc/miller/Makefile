@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/02/18 10:07:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/15 13:10:51 mef Exp $
 
-DISTNAME=	mlr-3.4.0
+DISTNAME=	mlr-4.3.0
 PKGNAME=	${DISTNAME:S/mlr/miller/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnkerl/}
