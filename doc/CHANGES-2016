@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2779 2016/07/15 02:07:56 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2780 2016/07/15 02:45:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4015,3 +4015,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-DHCP to 0.696 [wen 2016-07-15]
 	Updated www/p5-URI-FromHash to 0.05 [wen 2016-07-15]
 	Updated www/p5-HTML-FormFu to 2.03 [wen 2016-07-15]
+	Updated www/moodle to 3.1.1 [wen 2016-07-15]
