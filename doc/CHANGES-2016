@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2821 2016/07/15 23:32:44 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2822 2016/07/15 23:40:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/go-dns version 0.0.20160614 [bsiegert 2016-07-15]
 	Updated databases/p5-DBD-mysql to 4.035 [wen 2016-07-15]
 	Updated databases/p5-DBD-ODBC to 1.52 [wen 2016-07-15]
+	Updated databases/p5-DBD-XBase to 1.07 [wen 2016-07-15]
