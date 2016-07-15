@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2809 2016/07/15 13:00:07 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2810 2016/07/15 13:07:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4045,3 +4045,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-local-lib to 2.000019 [wen 2016-07-15]
 	Updated devel/p5-Data-Dumper to 2.161 [wen 2016-07-15]
 	Updated devel/p5-Devel-PPPort to 3.35 [wen 2016-07-15]
+	Updated devel/p5-Devel-Pragma to 1.1.0 [wen 2016-07-15]
