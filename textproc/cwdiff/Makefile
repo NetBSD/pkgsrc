@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/07/15 11:14:55 mef Exp $
+# $NetBSD: Makefile,v 1.5 2016/07/15 11:17:04 mef Exp $
 
 VERSION=	0.4.0
 DISTNAME=	cwdiff-${VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=junghans/}
 GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://code.google.com/p/cj-overlay/
+HOMEPAGE=	https://github.com/junghans/cwdiff
 COMMENT=	Color wrapper for wdiff (word diff)
 LICENSE=	gnu-gpl-v2
 
