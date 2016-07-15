@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2796 2016/07/15 10:10:06 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2797 2016/07/15 10:15:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4032,3 +4032,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Mo to 0.40 [wen 2016-07-15]
 	Updated devel/p5-MooX-Options to 4.023 [wen 2016-07-15]
 	Added devel/p5-Test-Needs version 0.002002 [wen 2016-07-15]
+	Updated devel/p5-MooseX-Types-Path-Class to 0.09 [wen 2016-07-15]
