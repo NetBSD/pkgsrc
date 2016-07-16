@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2016/01/10 19:20:07 markd Exp $
+$NetBSD: distinfo,v 1.7 2016/07/16 01:17:59 markd Exp $
 
 SHA1 (kopete-15.12.0.tar.xz) = ca45500e134b4fff6a05d7b021ab7d982d95b197
 RMD160 (kopete-15.12.0.tar.xz) = 2e1e660a921e2c5d482cf4d1136ae37c2eef2d98
 SHA512 (kopete-15.12.0.tar.xz) = 48f49df8594ea2d437a82e56159d68753581405e3230fa4070fc5e5d027bd43383ee91e55f42c0c6a0d773cb648f8d967ad9067ad3fa87bb0a1f5694edb30ef0
 Size (kopete-15.12.0.tar.xz) = 6328468 bytes
 SHA1 (patch-libkopete_avdevice_videodevice.h) = 9864dd808cf375bcc48ec9ed0c6d939da382ea67
+SHA1 (patch-plugins_history2_history2logger.h) = f198ea9005a245862cbf357022e31d9ba50ee7c7
 SHA1 (patch-protocols_jabber_libiris_src_jdns_jdns_sys.c) = 3bb68fd63bbd98ac106402a1c647f23556e6cea8
 SHA1 (patch-protocols_winpopup_winpopup-install) = 538f1f079439d3c86454583f2863dbbcb3a63b95
 SHA1 (patch-protocols_wlm_CMakeLists.txt) = 4f0c6ebdf51f15c0759a8489ddbb43fe4052281c
