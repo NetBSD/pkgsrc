@@ -1,0 +1,3 @@
+A framework to build command line applications in Go with most of the burden of
+arguments parsing and validation placed on the framework instead of the
+developer.
