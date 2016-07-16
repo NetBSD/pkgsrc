@@ -1,0 +1,21 @@
+$NetBSD: patch-plugins_tests_CMakeLists.txt,v 1.1 2016/07/16 04:05:54 markd Exp $
+
+gcc6 wont compile this test so disable
+
+--- plugins/tests/CMakeLists.txt.orig	2015-06-25 20:42:43.000000000 +0000
++++ plugins/tests/CMakeLists.txt
+@@ -22,10 +22,10 @@ endmacro()
+ add_akonadiplugin_test(mailserializertest.cpp "${KDEPIMLIBS_KMIME_LIBS}" "")
+ add_akonadiplugin_test(mailserializerplugintest.cpp "${KDEPIMLIBS_KMIME_LIBS}" "")
+ 
+-add_akonadiplugin_test(kcalcoreserializertest.cpp "${KDEPIMLIBS_KCALCORE_LIBS}" "")
++#add_akonadiplugin_test(kcalcoreserializertest.cpp "${KDEPIMLIBS_KCALCORE_LIBS}" "")
+ 
+ add_akonadiplugin_test(addresseeserializertest.cpp "${KDEPIMLIBS_KABC_LIBS};${KDEPIMLIBS_AKONADI_KABC_LIBS}" "../akonadi_serializer_addressee.cpp")
+ 
+-if (KDEPIMLIBS_KCAL_LIBS)
+-  add_akonadiplugin_test(kcalserializertest.cpp "${KDEPIMLIBS_KCAL_LIBS}" "")
+-endif ()
++#if (KDEPIMLIBS_KCAL_LIBS)
++#  add_akonadiplugin_test(kcalserializertest.cpp "${KDEPIMLIBS_KCAL_LIBS}" "")
++#endif ()
