@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2016/03/05 11:28:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2016/07/16 00:09:18 markd Exp $
 
 DISTNAME=	simgear-2.8.0
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	games devel
 MASTER_SITES=	ftp://mirrors.ibiblio.org/pub/mirrors/simgear/ftp/Source/ \
 		ftp://ftp.goflyflightgear.com/simgear/
@@ -16,10 +16,12 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_CMAKE=		yes
 
+CMAKE_ARGS+=		-DENABLE_LIBSVN:BOOL=OFF
+
 BUILDLINK_API_DEPENDS.plib+= plib>=1.8.5
 
 .include "../../audio/freealut/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
