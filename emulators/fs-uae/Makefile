@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/03/09 22:08:46 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/16 00:19:02 markd Exp $
 
 DISTNAME=	fs-uae-2.6.2
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://fs-uae.net/fs-uae/stable/${PKGVERSION_NOREV}/
 
@@ -15,7 +16,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
