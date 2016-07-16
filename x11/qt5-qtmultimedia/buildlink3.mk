@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2016/04/11 19:01:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2016/07/16 00:00:25 markd Exp $
 
 BUILDLINK_TREE+=	qt5-qtmultimedia
 
@@ -14,7 +14,7 @@ BUILDLINK_LIBDIRS.qt5-qtmultimedia+=	qt5/lib
 BUILDLINK_LIBDIRS.qt5-qtmultimedia+=	qt5/plugins
 
 .if ${OPSYS} != "Darwin"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .endif

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:23:05 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2016/07/16 00:07:13 markd Exp $
 #
 
 DISTNAME=	warzone2100-2.2.2
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=warzone2100/}
 
@@ -24,7 +24,7 @@ LDFLAGS.DragonFly=	-lX11 -lintl
 post-build:
 	cd ${WRKSRC}/po && ${SETENV} ${MAKE_ENV} ${MAKE} update-gmo
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

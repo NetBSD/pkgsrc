@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2016/04/11 19:01:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2016/07/16 00:00:25 markd Exp $
 
 DISTNAME=	qtmultimedia-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtmultimedia-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Qt5 module for multimedia
 
 BUILD_TARGET=		sub-src
@@ -29,7 +29,7 @@ PLIST.alsa=		yes
 .endif
 
 .if ${OPSYS} != "Darwin"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .endif
