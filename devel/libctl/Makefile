@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2013/01/23 21:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/07/16 20:05:57 wiz Exp $
 
-DISTNAME=	libctl-3.2.1
+DISTNAME=	libctl-3.2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
@@ -14,14 +14,16 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c fortran77
 
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+TEST_TARGET=	check
 
 INSTALLATION_DIRS=	share/doc/libctl
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/libctl/
 	cd ${WRKSRC} && ${INSTALL_DATA} \
-		AUTHORS ChangeLog COPYING COPYRIGHT INSTALL NEWS README TODO \
+		AUTHORS ChangeLog COPYING COPYRIGHT INSTALL NEWS README.md \
 		${DESTDIR}${PREFIX}/share/doc/libctl/
 
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
