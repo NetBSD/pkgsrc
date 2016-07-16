@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/11/24 05:45:58 dholland Exp $
+$NetBSD: distinfo,v 1.2 2016/07/16 04:02:13 markd Exp $
 
 SHA1 (z3-4.4.1.tar.gz) = 60094acaa53459ec694899aca9f17aa830875610
 RMD160 (z3-4.4.1.tar.gz) = 2c891e115a5d097dbbda53c1b322c65bc5b679f7
@@ -9,3 +9,5 @@ RMD160 (z3-jumbo-patch-20151123.gz) = eb74bd41125e1b07a7f873774a2c354e3c8ca378
 SHA512 (z3-jumbo-patch-20151123.gz) = c23d363bf53b40c3ccbfc10d03ef3621d6abfa9cf86375e7e853e85a0971db70992173df04df1a895e16d4a9b533e955953455a7533889963d2920a4b48d0056
 Size (z3-jumbo-patch-20151123.gz) = 4395 bytes
 SHA1 (patch-scripts_mk__util.py) = 1ab32d86649c5b3e83e9b20632d21018a1e22617
+SHA1 (patch-src_util_debug.cpp) = 607ea4e078884920a3034cf00779dce25fc8e623
+SHA1 (patch-src_util_mpz.cpp) = 69988bec1472df14209ae0dbfdc8a94c9e71cc82
