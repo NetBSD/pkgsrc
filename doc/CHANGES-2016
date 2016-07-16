@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2846 2016/07/16 20:00:24 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2847 2016/07/16 20:06:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4084,3 +4084,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/go-vultr version 1.8 [bsiegert 2016-07-16]
 	Updated security/opendnssec to 1.4.10nb1 [he 2016-07-16]
 	Updated devel/autogen to 5.18.10 [wiz 2016-07-16]
+	Updated devel/libctl to 3.2.2 [wiz 2016-07-16]
