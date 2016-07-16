@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2016/04/11 19:01:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.88 2016/07/16 03:32:32 markd Exp $
 
 DISTNAME=		rapidsvn-0.12.1
-PKGREVISION=		20
+PKGREVISION=		21
 CATEGORIES=		devel x11 scm
 MASTER_SITES=		http://www.rapidsvn.org/download/release/0.12.1/
 
@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--with-doxygen=no
 # subversion-base, following the precedent of devel/foo-subversion and
 # www/ap2-subversion.
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
