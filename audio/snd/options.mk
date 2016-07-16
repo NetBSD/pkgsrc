@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/01/25 01:18:15 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2016/07/16 21:21:17 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snd
 PKG_SUPPORTED_OPTIONS=	esound guile
@@ -26,7 +26,8 @@ CONFIGURE_ARGS+=	--without-gtk
 
 .if !empty(PKG_OPTIONS:Mguile)
 CONFIGURE_ARGS+=	--with-guile
-.include "../../lang/guile/buildlink3.mk"
+CONFIGURE_ARGS+=	GUILE_CONFIG_path=${PREFIX}/guile/2.0/bin/guile-config
+.include "../../lang/guile20/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-guile
 .endif
