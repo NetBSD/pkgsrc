@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:56:23 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/07/16 02:49:28 wen Exp $
 
-SHA1 (Rose-DBx-Garden-0.18.tar.gz) = 56a4a1bbc0ddf306777eb5e2875613d7ef7310c7
-RMD160 (Rose-DBx-Garden-0.18.tar.gz) = 8ae14c5c543ff6b2025cbc5ffea96be49c4a71cf
-SHA512 (Rose-DBx-Garden-0.18.tar.gz) = f59661b7672ac262d2a0d1de4a942770d2e579b5d87d8fa1ff0276426ae0fd96dc7c1cf70e1c8817b32c6f2f7b67c8dbdc401786020b7dc1e319ac9bcfbfc814
-Size (Rose-DBx-Garden-0.18.tar.gz) = 11253 bytes
+SHA1 (Rose-DBx-Garden-0.193.tar.gz) = 8100cfcb11057220bb57d01469cb664458a025e7
+RMD160 (Rose-DBx-Garden-0.193.tar.gz) = 1cf2045c08d08120443042296d9c2c905577c83d
+SHA512 (Rose-DBx-Garden-0.193.tar.gz) = c7c8495d422d87de37ddf5a6b26b1be95b5adccde95d36252a90917f7f5ccabb89936a1e755dd50cbc35f27971a47bee905707af705f458c4802e0ff21c9085f
+Size (Rose-DBx-Garden-0.193.tar.gz) = 12346 bytes
