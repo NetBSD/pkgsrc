@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2839 2016/07/16 08:21:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2840 2016/07/16 08:21:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4075,3 +4075,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Reporter to 1.2018 [wen 2016-07-16]
 	Updated devel/p5-CPAN to 2.14 [wen 2016-07-16]
 	Updated security/libassuan2 to 2.4.3 [wiz 2016-07-16]
+	Updated security/libgpg-error to 1.24 [wiz 2016-07-16]
