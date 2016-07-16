@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2016/03/05 11:28:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2016/07/16 00:05:26 markd Exp $
 #
 
 DISTNAME=	supertuxkart-0.8.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supertuxkart/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,7 @@ pre-build:
 		${MAKE_ENV} NDEBUG=1 make ${_MAKE_JOBS}
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
