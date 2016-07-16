@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2015/02/13 05:45:09 snj Exp $
+# $NetBSD: options.mk,v 1.6 2016/07/16 00:21:20 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yabause
 PKG_SUPPORTED_OPTIONS=	openal opengl sdl
@@ -29,7 +29,7 @@ BUILDLINK_API_DEPENDS.gtkglext+=        gtkglext>=1.2.0nb4
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 CMAKE_ARGS+=	-DYAB_WANT_OPENAL=ON
 .else
 CMAKE_ARGS+=	-DYAB_WANT_OPENAL=OFF
