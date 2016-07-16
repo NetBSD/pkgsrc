@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2848 2016/07/16 21:13:37 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2849 2016/07/16 21:21:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4086,3 +4086,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/autogen to 5.18.10 [wiz 2016-07-16]
 	Updated devel/libctl to 3.2.2 [wiz 2016-07-16]
 	Updated editors/TeXmacs to 1.99.5 [wiz 2016-07-16]
+	Updated audio/snd to 9.9nb25 [wiz 2016-07-16]
