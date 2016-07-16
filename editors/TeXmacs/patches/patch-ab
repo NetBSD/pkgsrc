@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2015/08/05 13:09:17 ryoon Exp $
+$NetBSD: patch-ab,v 1.13 2016/07/16 21:13:22 wiz Exp $
 
---- configure.orig	2014-07-18 15:12:22.000000000 +0000
+--- configure.orig	2016-07-07 18:34:10.000000000 +0000
 +++ configure
-@@ -2927,7 +2927,7 @@ case $host_os in *\ *) host_os=`echo "$h
+@@ -2898,7 +2898,7 @@ case $host_os in *\ *) host_os=`echo "$h
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking current Subversion revision number" >&5
  $as_echo_n "checking current Subversion revision number... " >&6; }
  SVNREV=`svnversion -n . 2>/dev/null`
@@ -11,21 +11,29 @@ $NetBSD: patch-ab,v 1.12 2015/08/05 13:09:17 ryoon Exp $
  if { test "$SVNREV" = "" || test "$SVNREV" = "exported" ; } ; then
    SVNREV=`cat $srcdir/SVNREV`
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $SVNREV" >&5
-@@ -6374,7 +6374,7 @@ $as_echo "yes" >&6; }
+@@ -5218,7 +5218,7 @@ $as_echo "#define OS_GNU_LINUX 1" >>conf
+     CONFIG_CXXOPTIMIZE="-O3 -fexpensive-optimizations"
+     CONFIG_OS=LINUX
+   ;;
+-  i*86-*-freebsd* | x86_64-*-freebsd*)
++  i*86-*-freebsd* | x86_64-*-freebsd* | *-*-netbsd)
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: final adjustments for an Intel or AMD GNU/BSD host" >&5
+ $as_echo "final adjustments for an Intel or AMD GNU/BSD host" >&6; }
  
- $as_echo "#define USE_ICONV 1" >>confdefs.h
- 
--      ICONV_LDFLAGS="${ICONV_LDFLAGS/-liconv} -liconv"
-+      ICONV_LDFLAGS="${ICONV_LDFLAGS} -liconv"
- 
+@@ -20141,13 +20141,13 @@ $as_echo "#define GUILE_HEADER_18 1" >>c
+         *) { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Strange guile header name lib$GUILE_LIB.h" >&5
+ $as_echo "$as_me: WARNING: Strange guile header name lib$GUILE_LIB.h" >&2;} ;;
+       esac
+-      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gh_scm2newstr in -lGuile" >&5
+-$as_echo_n "checking for gh_scm2newstr in -lGuile... " >&6; }
++      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gh_scm2newstr in -lguile" >&5
++$as_echo_n "checking for gh_scm2newstr in -lguile... " >&6; }
+ if ${ac_cv_lib_Guile_gh_scm2newstr+:} false; then :
+   $as_echo_n "(cached) " >&6
  else
- 
-@@ -7911,7 +7911,7 @@ case "$enable_qt" in
-     yes)
- 
- if test -z $TMBUILDENV; then #QT has the install dir hard coded in library so we need to fix it manually for relocatable environment
--  if test "$QT_LDFLAGS" == ""; then
-+  if test "$QT_LDFLAGS" = ""; then
- 
- 
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lGuile -lintl -liconv $LIBS"
++LIBS="-lguile -lintl -liconv $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
  
