@@ -1,0 +1,9 @@
+Go code (golang) set of packages that provide many tools for testifying that
+your code will behave as you intend.
+
+Features include:
+
+- Easy assertions
+- Mocking
+- HTTP response trapping
+- Testing suite interfaces and functions
