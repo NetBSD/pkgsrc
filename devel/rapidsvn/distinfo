@@ -1,10 +1,17 @@
-$NetBSD: distinfo,v 1.19 2016/03/31 09:00:39 markd Exp $
+$NetBSD: distinfo,v 1.20 2016/07/16 03:32:32 markd Exp $
 
 SHA1 (rapidsvn-0.12.1.tar.gz) = 65d051b5a84fe8b5b0ce906f2ba5cf134a560feb
 RMD160 (rapidsvn-0.12.1.tar.gz) = dde655f385245ba9346a5fc4a051ef01c5551501
 SHA512 (rapidsvn-0.12.1.tar.gz) = 892dab56e8ec19c5f26a0ddfab378187bc0325275f9fcf759c12beead70aab17876f7e5920bcf214fc86354faef58244ce25926ba010158f7354cd144e1c4c07
 Size (rapidsvn-0.12.1.tar.gz) = 1087511 bytes
+SHA1 (patch-configure) = caa479f6e17291a34cf4e4e1686d6685d7070f9a
 SHA1 (patch-include_svncpp_dirent.hpp) = 2c1dca7f31227caeb6cc483e9d77e9e1c6e7a074
+SHA1 (patch-src_filelist_ctrl.cpp) = b1e92220d09a5784c0800bf1a63fef061850e4a6
+SHA1 (patch-src_filelist_ctrl.hpp) = 6db277d0b08766bd42201bae3ec66c449c433c15
+SHA1 (patch-src_hist_val.cpp) = 6d9847ec414e50788751820b01d35e42d596c13e
+SHA1 (patch-src_listener.cpp) = 91926fb1654014152799771bb50b71fab03c32b3
 SHA1 (patch-src_locale_Makefile.in) = fe0fe3a74e03ef6f1f9c50cf4ae4db393aa21f9f
+SHA1 (patch-src_log_dlg.cpp) = 5730c970f0334bb596304a023c045e01692efb34
+SHA1 (patch-src_preferences_dlg.cpp) = d8a91a33218876120caddcf862d2b2d877bb3ff8
 SHA1 (patch-src_svncpp_client_ls.cpp) = 223bc7a2b306ffcb5aa759c7b609af85eab38724
 SHA1 (patch-src_svncpp_dirent.cpp) = b256d12e890efc2a7555c3ceeabb691e5c4369cf
