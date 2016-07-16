@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16139 2016/07/16 21:13:37 wiz Exp $
+$NetBSD: TODO,v 1.16140 2016/07/16 21:23:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SDL2_net-2.0.1
 	o SOGo-3.1.0
 	o SOPE-3.0.2
-	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
 	o YoSucker-81
 	o abcl-1.3.2
@@ -1065,6 +1064,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lit2epub-0.2.2
 	o lldpd-0.9.1
 	o llgal-0.13.17
+	o llvm-3.8.1
 	o lmbench-3
 	o lohit-fonts-2.4.2
 	o lottanzb-0.6
@@ -1123,6 +1123,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mit-scheme-bin-9.2
 	o mksh-52b
 	o mkvtoolnix-5.9.0
+	o mlterm-3.7.2
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
@@ -1619,7 +1620,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o smokeping-2.6.11
 	o smproxy-1.0.3
 	o snappy-1.1.3
-	o snd-10.6
+	o snd-16.6
 	o snes9x-1.53
 	o snobol-2.0
 	o snort-2.9.8.0
@@ -1797,7 +1798,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.2
 	o wpa_gui-2.5
 	o wpa_supplicant-2.5
-	o wwwoffle-2.9i
+	o wwwoffle-2.9j [pkg/51340]
 	o wxGTK-3.1.0
 	o wxRemind-101
 	o x264-devel-20160709
