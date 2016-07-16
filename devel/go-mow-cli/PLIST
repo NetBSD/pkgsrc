@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/16 13:03:42 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/jawher/mow.cli.a
+gopkg/src/github.com/jawher/mow.cli/LICENSE
+gopkg/src/github.com/jawher/mow.cli/README.md
+gopkg/src/github.com/jawher/mow.cli/args.go
+gopkg/src/github.com/jawher/mow.cli/args_test.go
+gopkg/src/github.com/jawher/mow.cli/cli.go
+gopkg/src/github.com/jawher/mow.cli/cli_test.go
+gopkg/src/github.com/jawher/mow.cli/commands.go
+gopkg/src/github.com/jawher/mow.cli/doc.go
+gopkg/src/github.com/jawher/mow.cli/examples_test.go
+gopkg/src/github.com/jawher/mow.cli/flow.go
+gopkg/src/github.com/jawher/mow.cli/flow_test.go
+gopkg/src/github.com/jawher/mow.cli/formatter_test.go
+gopkg/src/github.com/jawher/mow.cli/formatters.go
+gopkg/src/github.com/jawher/mow.cli/fsm.go
+gopkg/src/github.com/jawher/mow.cli/helper_test.go
+gopkg/src/github.com/jawher/mow.cli/matchers.go
+gopkg/src/github.com/jawher/mow.cli/matchers_test.go
+gopkg/src/github.com/jawher/mow.cli/options.go
+gopkg/src/github.com/jawher/mow.cli/options_test.go
+gopkg/src/github.com/jawher/mow.cli/reflect.go
+gopkg/src/github.com/jawher/mow.cli/reflect_test.go
+gopkg/src/github.com/jawher/mow.cli/spec_n_parse_test.go
+gopkg/src/github.com/jawher/mow.cli/spec_parser.go
+gopkg/src/github.com/jawher/mow.cli/spec_tk.go
+gopkg/src/github.com/jawher/mow.cli/spec_tk_test.go
+@pkgdir bin
