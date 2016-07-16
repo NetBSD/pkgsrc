@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.110 2016/07/09 06:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2016/07/16 21:13:22 wiz Exp $
+#
+# changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
-DISTNAME=		TeXmacs-1.99.2-src
+DISTNAME=		TeXmacs-1.99.5-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		3
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/
@@ -11,17 +12,22 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.texmacs.org/
 COMMENT=		GNU TeXmacs (free scientific text editor)
 
+DEPENDS+=		ps2pkm>=1.5:../../fonts/ps2pkm
+
 BUILD_TARGET=		TEXMACS
 
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake perl:run pkg-config bash
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_RCC=${QTDIR}/bin/rcc
 # XXX workaround for bug in configure
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=	--with-qt=${QTDIR}
-#TEX_ACCEPTED=		teTeX3
 BUILD_MAKE_FLAGS+=	QT_QTDIR=${QTDIR}
+
+# in 1.99.5 this fails with
+# ./configure: 4562: Syntax error: Bad substitution
+CONFIG_SHELL=		${BASH}
 
 REPLACE_PYTHON=		plugins/python/bin/tm_python
 REPLACE_PYTHON+=	plugins/sage/bin/tm_sage
@@ -42,38 +48,41 @@ REPLACE_SH+=		plugins/lush/bin/tm_lush
 REPLACE_SH+=		plugins/matlab/bin/tm_matlab
 REPLACE_SH+=		plugins/maxima/bin/maxima_detect
 REPLACE_SH+=		plugins/maxima/bin/tm_maxima
+REPLACE_SH+=		plugins/mupad/bin/tm_mupad
 REPLACE_SH+=		plugins/mupad/bin/tm_mupad_help
 REPLACE_SH+=		plugins/octave/bin/tm_octave
 REPLACE_SH+=		plugins/reduce/bin/tm_reduce
 REPLACE_SH+=		plugins/texgraph/bin/tm_texgraph
 REPLACE_SH+=		plugins/xypic/bin/tm_xypic
+REPLACE_SH+=		misc/admin/sign_update
+REPLACE_SH+=		misc/scripts/gs
 
 REPLACE_PERL+=		plugins/asymptote/bin/perl-tm_asy
 REPLACE_PERL+=		plugins/asymptote/bin/tm_asy2
+REPLACE_PERL+=		plugins/feynmf/bin/bbox_add.pl
 
-pre-install:
-	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
-	${FIND} ${WRKSRC}/plugins/ -name '*.orig' | ${XARGS} ${RM} -f
+SUBST_CLASSES+=		bash
+SUBST_SED.bash+=	-e "s,/bin/bash,${PREFIX}/bin/bash,"
+SUBST_FILES.bash+=	src/makefile.in src/Texmacs/Texmacs/texmacs.cpp Makefile.in
+SUBST_MESSAGE.bash=	Fixing hardcoded bash path.
+SUBST_STAGE.bash=	pre-configure
 
-# just a helper script, not worth a full perl dependency
-CHECK_INTERPRETER_SKIP=	libexec/TeXmacs/bin/bbox_add.pl
-# but be friendly and set the path to something reasonable
-REPLACE_INTERPRETER+=		optionalperl
-REPLACE.optionalperl.old=	.*perl[^[:space:]]*
-REPLACE.optionalperl.new=	${LOCALBASE}/bin/perl
-REPLACE_FILES.optionalperl=	plugins/feynmf/bin/bbox_add.pl
+pre-build:
+	find ${WRKSRC} -name ._* -exec rm {} \;
 
-DEPENDS+=	ps2pkm>=1.5:../../fonts/ps2pkm
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+# do not install backup files
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/share/TeXmacs/plugins/python/progs/init-python.scm.orig
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
+# as of 1.99.5
+# configure: error: TeXmacs is incompatible with Guile 2.
+#.include "../../lang/guile20/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-#.include "../../mk/tex.buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
