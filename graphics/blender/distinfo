@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2015/12/19 20:52:12 markd Exp $
+$NetBSD: distinfo,v 1.47 2016/07/16 03:45:19 markd Exp $
 
 SHA1 (blender-2.76b.tar.gz) = 7be96d90296cc95e15380ad0ae56cb86f1374a65
 RMD160 (blender-2.76b.tar.gz) = 393c03e9ff15631f89ddd0cdfc8548bb87a0bde5
@@ -15,3 +15,4 @@ SHA1 (patch-extern_rangetree_range__tree.hh) = 976881b9caad67a2cfb24039652e88786
 SHA1 (patch-intern_cycles_util_util__types.h) = 37944c6b0a970468e6791ec4a5beef1ec0ddf190
 SHA1 (patch-intern_ghost_SConscript) = d576ea87b5b0f386e2c78efa78351927a105f243
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = c7bc89af1c03b50ae0bd8af5aacc25cd82dfcbfc
+SHA1 (patch-source_blender_imbuf_intern_dds_DirectDrawSurface.cpp) = b38f61900aa30b02479c7397062d71d295932847
