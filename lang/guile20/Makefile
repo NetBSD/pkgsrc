@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/05/28 15:25:56 richard Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/16 09:17:53 wiz Exp $
 
-DISTNAME=	guile-2.0.11
+DISTNAME=	guile-2.0.12
 PKGNAME=	${DISTNAME:S/guile/guile20/}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
@@ -31,6 +31,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	meta/guile-2.0.pc.in
+# known broken: test-loose-ends on NetBSD/current
+# https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24003
 TEST_TARGET=		check
 
 SUBST_CLASSES+=		tools
@@ -41,6 +43,10 @@ SUBST_MESSAGE.tools=	Fixing path to pkg-config in installed file.
 
 # XXX: less tests would fail if we made libunistring use GNU iconv too
 #USE_GNU_ICONV=		yes
+
+# https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24002
+post-configure:
+	${ECHO} '#define FLEXIBLE_ARRAY_MEMBER /**/' >> ${WRKSRC}/config.h
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
