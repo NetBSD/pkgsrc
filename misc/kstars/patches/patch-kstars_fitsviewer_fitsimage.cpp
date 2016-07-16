@@ -1,4 +1,4 @@
-$NetBSD: patch-kstars_fitsviewer_fitsimage.cpp,v 1.1 2013/06/23 19:09:15 jperkin Exp $
+$NetBSD: patch-kstars_fitsviewer_fitsimage.cpp,v 1.2 2016/07/16 04:14:03 markd Exp $
 
 Avoid "ambiguous call to overloaded function" errors.
 
@@ -9,7 +9,7 @@ Avoid "ambiguous call to overloaded function" errors.
      int diff_y=s1->y - s2->y;
  
 -    dis = abs( sqrt( diff_x*diff_x + diff_y*diff_y));
-+    dis = abs( sqrt((float)diff_x*diff_x + diff_y*diff_y));
++    dis = std::abs( sqrt((float)diff_x*diff_x + diff_y*diff_y));
      dis -= s1->width/2;
      dis -= s2->width/2;
  
