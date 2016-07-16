@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2835 2016/07/16 06:48:10 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2836 2016/07/16 06:55:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4071,3 +4071,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-bareword-filehandles to 0.004 [wen 2016-07-16]
 	Updated devel/p5-Check-ISA to 0.08 [wen 2016-07-16]
 	Updated devel/p5-Config-General to 2.62 [wen 2016-07-16]
+	Updated devel/p5-CPAN-Perl-Releases to 2.80 [wen 2016-07-16]
