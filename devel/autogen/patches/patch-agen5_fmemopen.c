@@ -1,4 +1,6 @@
-$NetBSD: patch-agen5_fmemopen.c,v 1.1 2012/03/14 22:51:14 wiz Exp $
+$NetBSD: patch-agen5_fmemopen.c,v 1.2 2016/07/16 20:00:14 wiz Exp $
+
+NetBSD portability fix.
 
 --- agen5/fmemopen.c.orig	2011-06-26 14:39:38.000000000 +0000
 +++ agen5/fmemopen.c
