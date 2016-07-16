@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2016/01/11 00:00:28 markd Exp $
+$NetBSD: distinfo,v 1.17 2016/07/16 00:47:00 markd Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -17,6 +17,7 @@ RMD160 (kde-workspace-4.11.22.tar.xz) = 0e21e83765194f5ab7b06a725d70f1d791293b8f
 SHA512 (kde-workspace-4.11.22.tar.xz) = 9def2cc8d1e597259966cd6cc44e9aad7ebe2c7cde5943e362c6782d1344e7da4fff0dddd0fe0c948bca159dba128d8a36006e1ae409415cd22f74955d0a9b95
 Size (kde-workspace-4.11.22.tar.xz) = 13553668 bytes
 SHA1 (patch-kcontrol_keyboard_xkb_rules.cpp) = e4569e0671c55e990cbc0913e5abaead046a8e71
+SHA1 (patch-kcontrol_randr_randroutput.cpp) = 6f9e6f18007023941018d2088a585c2ab30a7299
 SHA1 (patch-kdm_config.def) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
 SHA1 (patch-kdm_kcm_main.cpp) = bb692c83fa189342105744cc9c3c180b970571b7
 SHA1 (patch-kdm_kfrontend_CMakeLists.txt) = 0b0c541c7305d31e01a45f0a6a7f5ddb2d2e57fe
@@ -33,9 +34,10 @@ SHA1 (patch-ksysguard_ksysguardd_NetBSD_Memory.h) = e58dc4a0a7be7350251f26de34a8
 SHA1 (patch-ksysguard_ksysguardd_NetBSD_ProcessList.c) = 0921fe9569bd54f5e381ebead738b95e431bb1d5
 SHA1 (patch-ksysguard_ksysguardd_Solaris_LoadAvg.c) = bc3c434d09485cdf03a357ab5621271adcc3627b
 SHA1 (patch-kwin_effects_mousemark_mousemark.cpp) = 4b6625f9bebf6bd2c6057d7045d9ce6af3103578
-SHA1 (patch-kwin_glxbackend.cpp) = a5e954a70e943a2d40d35f8a49b611b03d072af6
+SHA1 (patch-kwin_glxbackend.cpp) = c0e1c43cfb832cdc966156c54e5e12d78e78e7ab
 SHA1 (patch-kwin_killer_killer.cpp) = b64133ee8b96e4275ed1cbe68a64630e08f77154
 SHA1 (patch-kwin_scene_opengl.cpp) = 53de757225b74ddf85609b2ec920659964940e59
+SHA1 (patch-libs_kephal_service_xrandr12_randroutput.cpp) = 03fc906e4ec34b31d9237ea27e7c94f3cfd4213b
 SHA1 (patch-libs_ksysguard_ksgrd_SensorManager.cpp) = 5fa92fa4876514198813f900f71f3364794b8248
 SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eacb7db79de0ae5eaf80
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
