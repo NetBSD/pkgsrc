@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2841 2016/07/16 08:32:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2842 2016/07/16 08:36:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4077,3 +4077,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libassuan2 to 2.4.3 [wiz 2016-07-16]
 	Updated security/libgpg-error to 1.24 [wiz 2016-07-16]
 	Updated security/gnupg21 to 2.1.14 [wiz 2016-07-16]
+	Updated security/libgcrypt to 1.7.2 [wiz 2016-07-16]
