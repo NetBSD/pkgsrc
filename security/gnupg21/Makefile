@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2016/07/02 15:18:29 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/07/16 08:32:05 wiz Exp $
 
-DISTNAME=	gnupg-2.1.13
-PKGREVISION=	1
+DISTNAME=	gnupg-2.1.14
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/
@@ -33,9 +32,10 @@ LDFLAGS.Darwin+=	-lresolv
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.21
+.include "../../databases/sqlite3/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.24
 .include "../../security/libgpg-error/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.4.1
+BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.4.3
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/libksba/buildlink3.mk"
 BUILDLINK_API_DEPENDS.npth+=		npth>=0.91
