@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 14:22:56 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/16 00:10:33 markd Exp $
 #
 
 DISTNAME=	ioquake3-1.36
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://ioquake3.org/files/1.36/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,7 +28,7 @@ QUAKE_ARCH=	${MACHINE_ARCH}
 
 PLIST_SUBST+=	QUAKE_ARCH=${QUAKE_ARCH:Q}
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
