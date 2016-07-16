@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/01 13:24:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/16 09:17:53 wiz Exp $
 guile/2.0/bin/guild
 guile/2.0/bin/guile
 guile/2.0/bin/guile-config
@@ -113,6 +113,7 @@ guile/2.0/include/guile/2.0/libguile/tags.h
 guile/2.0/include/guile/2.0/libguile/threads.h
 guile/2.0/include/guile/2.0/libguile/throw.h
 guile/2.0/include/guile/2.0/libguile/trees.h
+guile/2.0/include/guile/2.0/libguile/unicode.h
 guile/2.0/include/guile/2.0/libguile/uniform.h
 guile/2.0/include/guile/2.0/libguile/validate.h
 guile/2.0/include/guile/2.0/libguile/values.h
@@ -193,6 +194,7 @@ guile/2.0/lib/guile/2.0/ccache/ice-9/syncase.go
 guile/2.0/lib/guile/2.0/ccache/ice-9/threads.go
 guile/2.0/lib/guile/2.0/ccache/ice-9/time.go
 guile/2.0/lib/guile/2.0/ccache/ice-9/top-repl.go
+guile/2.0/lib/guile/2.0/ccache/ice-9/unicode.go
 guile/2.0/lib/guile/2.0/ccache/ice-9/vlist.go
 guile/2.0/lib/guile/2.0/ccache/ice-9/weak-vector.go
 guile/2.0/lib/guile/2.0/ccache/language/assembly.go
@@ -315,6 +317,7 @@ guile/2.0/lib/guile/2.0/ccache/srfi/srfi-19.go
 guile/2.0/lib/guile/2.0/ccache/srfi/srfi-2.go
 guile/2.0/lib/guile/2.0/ccache/srfi/srfi-26.go
 guile/2.0/lib/guile/2.0/ccache/srfi/srfi-27.go
+guile/2.0/lib/guile/2.0/ccache/srfi/srfi-28.go
 guile/2.0/lib/guile/2.0/ccache/srfi/srfi-31.go
 guile/2.0/lib/guile/2.0/ccache/srfi/srfi-34.go
 guile/2.0/lib/guile/2.0/ccache/srfi/srfi-35.go
@@ -390,7 +393,7 @@ guile/2.0/lib/guile/2.0/ccache/web/server.go
 guile/2.0/lib/guile/2.0/ccache/web/server/http.go
 guile/2.0/lib/guile/2.0/ccache/web/uri.go
 guile/2.0/lib/libguile-2.0.la
-guile/2.0/lib/libguile-2.0.so.22.7.2-gdb.scm
+guile/2.0/lib/libguile-2.0.so.22.8.0-gdb.scm
 guile/2.0/lib/libguilereadline-v-18.la
 guile/2.0/lib/pkgconfig/guile-2.0.pc
 guile/2.0/man/man1/guile.1
@@ -465,6 +468,7 @@ guile/2.0/share/guile/2.0/ice-9/syncase.scm
 guile/2.0/share/guile/2.0/ice-9/threads.scm
 guile/2.0/share/guile/2.0/ice-9/time.scm
 guile/2.0/share/guile/2.0/ice-9/top-repl.scm
+guile/2.0/share/guile/2.0/ice-9/unicode.scm
 guile/2.0/share/guile/2.0/ice-9/vlist.scm
 guile/2.0/share/guile/2.0/ice-9/weak-vector.scm
 guile/2.0/share/guile/2.0/language/assembly.scm
@@ -587,6 +591,7 @@ guile/2.0/share/guile/2.0/srfi/srfi-19.scm
 guile/2.0/share/guile/2.0/srfi/srfi-2.scm
 guile/2.0/share/guile/2.0/srfi/srfi-26.scm
 guile/2.0/share/guile/2.0/srfi/srfi-27.scm
+guile/2.0/share/guile/2.0/srfi/srfi-28.scm
 guile/2.0/share/guile/2.0/srfi/srfi-31.scm
 guile/2.0/share/guile/2.0/srfi/srfi-34.scm
 guile/2.0/share/guile/2.0/srfi/srfi-35.scm
