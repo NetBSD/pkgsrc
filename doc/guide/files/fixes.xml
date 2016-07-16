@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.143 2016/07/14 14:39:24 leot Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.144 2016/07/16 14:28:49 jakllsch Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -469,7 +469,7 @@ CONFLICTS=      bar-[0-9]*
     (OS-version-platform) that can use glob-style
     wildcards.</para>
     <para>If a package is not appropriate for some platforms (as
-    oopposed to merely broken), a different set of variables should be
+    opposed to merely broken), a different set of variables should be
     used as this affects failure reporting and statistics.
     If the package is appropriate for most platforms, the exceptions
     should be noted with <varname>NOT_FOR_PLATFORM</varname>.  If
