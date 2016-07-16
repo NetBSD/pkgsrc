@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2016/05/05 11:30:18 wiz Exp $
+# $NetBSD: options.mk,v 1.29 2016/07/16 00:16:41 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	adplug audiofile avahi bzip2 curl faad ffmpeg flac fluidsynth id3 inet6 libao lame jack libmms libmpdclient libwildmidi mikmod modplug mpg123 musepack musicpd-soundcloud openal opus pulseaudio shout sqlite3 tremor twolame vorbis wavpack zziplib
@@ -198,7 +198,7 @@ CONFIGURE_ARGS+=	--disable-soundcloud
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenal)
-.  include "../../audio/openal/buildlink3.mk"
+.  include "../../audio/openal-soft/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-openal
 .else
 CONFIGURE_ARGS+=	--disable-openal
