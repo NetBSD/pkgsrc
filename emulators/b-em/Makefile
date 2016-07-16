@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 14:20:44 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/16 00:20:27 markd Exp $
 
 DISTNAME=	B-emv2.2Linux
 PKGNAME=	b-em-2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://b-em.bbcmicro.com/
 
@@ -49,7 +49,7 @@ do-install:
 
 BUILDLINK_API_DEPENDS.allegro+=	allegro>=4.4.2nb2
 .include "../../devel/allegro/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
