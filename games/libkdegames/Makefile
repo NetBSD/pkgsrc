@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/16 00:01:58 markd Exp $
 
 DISTNAME=	libkdegames-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 COMMENT=	library for the kdegames package
 
@@ -14,7 +14,7 @@ SUBST_SED.path+=	-e 's;KDEGAMES_INCLUDE_DIR .*;KDEGAMES_INCLUDE_DIR "${PREFIX}/i
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
