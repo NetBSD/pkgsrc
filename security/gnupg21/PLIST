@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/05/05 12:09:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/07/16 08:32:05 wiz Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -7,6 +7,7 @@ bin/gpg-connect-agent
 bin/gpg2
 bin/gpgconf
 bin/gpgparsemail
+bin/gpgscm
 bin/gpgsm
 bin/gpgtar
 bin/gpgv2
@@ -50,7 +51,6 @@ share/doc/gnupg/examples/gpgconf.conf
 share/doc/gnupg/examples/pwpattern.list
 share/doc/gnupg/examples/scd-event
 share/doc/gnupg/examples/trustlist.txt
-share/gnupg/com-certs.pem
 share/gnupg/dirmngr-conf.skel
 share/gnupg/distsigkey.gpg
 share/gnupg/gpg-conf.skel
@@ -82,7 +82,6 @@ share/gnupg/help.tr.txt
 share/gnupg/help.txt
 share/gnupg/help.zh_CN.txt
 share/gnupg/help.zh_TW.txt
-share/gnupg/qualified.txt
 share/gnupg/sks-keyservers.netCA.pem
 share/locale/ca/LC_MESSAGES/gnupg2.mo
 share/locale/cs/LC_MESSAGES/gnupg2.mo
