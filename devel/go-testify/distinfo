@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/16 13:21:41 bsiegert Exp $
+
+SHA1 (go-testify-1.1.3.tar.gz) = 2494724ccad2de8003c2c5304a9e5e7470f32290
+RMD160 (go-testify-1.1.3.tar.gz) = 59afdb4e0eb9587c0139e322a747c3be1efa8144
+SHA512 (go-testify-1.1.3.tar.gz) = bd177d7c54246e480bea21a53820cd1246096ab05eaf436aa7d4d3dc81388239be79981ea7e6b2a960fbb120a7dff0faa8aee7bcf267d8d3499eecc65a49d179
+Size (go-testify-1.1.3.tar.gz) = 81051 bytes
