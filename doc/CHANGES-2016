@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2829 2016/07/16 02:56:36 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2830 2016/07/16 03:08:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4065,3 +4065,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-Rose-DB to 0.778 [wen 2016-07-16]
 	Updated databases/p5-Rose-DBx-Garden to 0.193 [wen 2016-07-16]
 	Updated databases/p5-Search-QueryParser-SQL to 0.010 [wen 2016-07-16]
+	Updated devel/p5-App-perlbrew to 0.76 [wen 2016-07-16]
