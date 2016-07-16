@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2824 2016/07/16 01:50:32 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2825 2016/07/16 01:58:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4060,3 +4060,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBD-XBase to 1.07 [wen 2016-07-15]
 	Updated databases/p5-DBIx-Class-Candy to 0.005002 [wen 2016-07-16]
 	Updated databases/p5-DBIx-Class-EncodedColumn to 0.00015 [wen 2016-07-16]
+	Updated databases/p5-DBIx-Class-Helpers to 2.033000 [wen 2016-07-16]
