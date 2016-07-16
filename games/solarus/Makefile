@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2015/07/07 11:41:19 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/16 00:03:36 markd Exp $
 
 VERSION=	1.4.2
 DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.solarus-games.org/downloads/solarus/
 
@@ -31,7 +32,7 @@ BUILDLINK_API_DEPENDS.lua51+=	lua51>=5.1.5
 .include "../../audio/libmodplug/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
-.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/openal-soft/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL2_ttf+=	SDL2_ttf>=2.0.12
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.SDL2_image+=	SDL2_image>=2.0.0
