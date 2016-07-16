@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2832 2016/07/16 04:26:30 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2833 2016/07/16 04:30:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4067,4 +4067,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-Search-QueryParser-SQL to 0.010 [wen 2016-07-16]
 	Updated devel/p5-App-perlbrew to 0.76 [wen 2016-07-16]
 	Updated geography/py-obspy to 1.0.1 [wen 2016-07-16]
-	Updated devel/p5-B-Hooks-OP-PPAddr to 0.05 [wen 2016-07-15]
+	Updated devel/p5-B-Hooks-OP-PPAddr to 0.05 [wen 2016-07-16]
+	Updated devel/p5-bareword-filehandles to 0.004 [wen 2016-07-16]
