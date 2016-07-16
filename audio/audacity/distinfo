@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2016/06/05 01:02:38 ryoon Exp $
+$NetBSD: distinfo,v 1.33 2016/07/16 01:32:51 markd Exp $
 
 SHA1 (audacity-minsrc-2.1.2.tar.xz) = d0b8924b846f833182e674d621b28eb666cc97d6
 RMD160 (audacity-minsrc-2.1.2.tar.xz) = 47fccf8b96b6db95a677045bf122084d233bd80c
@@ -19,3 +19,5 @@ SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58
 SHA1 (patch-src_FFmpeg.h) = 664efb8a668a9dd5f76704e5a46c495a8c2c3a4d
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
 SHA1 (patch-src_effects_VST_VSTEffect.cpp) = 76a55afd7977505801dd129e139c9782bfd8dfcb
+SHA1 (patch-src_effects_vamp_LoadVamp.cpp) = 5e57289e99d8ac5323b869138d13b67b5ad8a3d6
+SHA1 (patch-src_import_ImportFLAC.cpp) = 9064b5f24cfd837d9a5d5bb74450bcfd0096b099
