@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:33 wiz Exp $
+share/texmf-dist/tex/context/third/vim/2context.vim
+share/texmf-dist/tex/context/third/vim/t-syntax-groups.tex
+share/texmf-dist/tex/context/third/vim/t-syntax-highlight.mkii
+share/texmf-dist/tex/context/third/vim/t-syntax-highlight.mkiv
+share/texmf-dist/tex/context/third/vim/t-vim.tex

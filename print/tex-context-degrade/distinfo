@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/17 21:59:30 wiz Exp $
+
+SHA1 (tex-context-degrade-23167/context-degrade.tar.xz) = 3a72b1561dc139945d2ba6cfe13f89887f259ede
+RMD160 (tex-context-degrade-23167/context-degrade.tar.xz) = 2a8d6c610f29a6226a3055469f2c770141a7e477
+SHA512 (tex-context-degrade-23167/context-degrade.tar.xz) = 05f5d5e9615788c09f58be85262fd855b90284849cac15acc4d1ed419033030c4e38d9767471e5555b3931c792b32069a69f05ad44e42794f23e8670ad8f5a22
+Size (tex-context-degrade-23167/context-degrade.tar.xz) = 2340 bytes

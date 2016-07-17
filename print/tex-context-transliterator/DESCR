@@ -1,0 +1,4 @@
+The package will read text in one alphabet, and provide a
+transliterated version in another; this is useful for readers
+who cannot read the original alphabet. The package can make
+allowance for hyphenation.

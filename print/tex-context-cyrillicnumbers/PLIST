@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:30 wiz Exp $
+share/texmf-dist/tex/context/interface/third/t-cyrillicnumbers.xml
+share/texmf-dist/tex/context/third/cyrillicnumbers/cyrillicnumbers.lua
+share/texmf-dist/tex/context/third/cyrillicnumbers/t-cyrillicnumbers.mkii
+share/texmf-dist/tex/context/third/cyrillicnumbers/t-cyrillicnumbers.mkvi

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:31 wiz Exp $
+share/texmf-dist/tex/context/third/games/games-go.lua
+share/texmf-dist/tex/context/third/games/games-go.tex
+share/texmf-dist/tex/context/third/games/games-hex.lua
+share/texmf-dist/tex/context/third/games/games-hex.tex
+share/texmf-dist/tex/context/third/games/holz280.jpg
+share/texmf-dist/tex/context/third/games/t-games.tex

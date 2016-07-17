@@ -1,0 +1,2 @@
+The (ConTeXt) module copies the functionality of the fullpage,
+and adds a styling parameter, given in the \usemodule command
