@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST.module,v 1.1 2004/11/05 21:40:25 jdolecek Exp $
-${PHP_EXTENSION_DIR}/${MODNAME}.so
+@comment $NetBSD: PLIST.module,v 1.2 2016/07/17 15:49:44 jdolecek Exp $
+share/examples/php/${MODNAME}.ini
+${PHP_EXTENSION_DIR}/${MODNAME}.${SHLIB_SUFFIX}
