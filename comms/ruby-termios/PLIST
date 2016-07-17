@@ -1,17 +1,23 @@
-@comment $NetBSD: PLIST,v 1.13 2015/03/08 15:17:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/07/17 14:25:00 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/termios.${RUBY_DLEXT}
-${GEM_LIBDIR}/ChangeLog
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/setup
 ${GEM_LIBDIR}/examples/modem_check0.rb
 ${GEM_LIBDIR}/examples/modem_check1.rb
 ${GEM_LIBDIR}/examples/modem_check2.rb
 ${GEM_LIBDIR}/examples/secret_input1.rb
 ${GEM_LIBDIR}/examples/secret_input2.rb
-${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/termios.c
 ${GEM_LIBDIR}/lib/termios.rb
 ${GEM_LIBDIR}/lib/termios.${RUBY_DLEXT}
-${GEM_LIBDIR}/termios.c
-${GEM_LIBDIR}/test/test0.rb
+${GEM_LIBDIR}/lib/termios/version.rb
+${GEM_LIBDIR}/ruby-termios.gemspec
+${GEM_LIBDIR}/termios.rd
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
