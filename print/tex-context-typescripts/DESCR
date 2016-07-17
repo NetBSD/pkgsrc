@@ -1,0 +1,3 @@
+The package provides files offering interfaces to 33 publicly
+available fonts (or collections of fonts from the same
+foundry); each is available in a .mkii and a .mkiv version.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:31 wiz Exp $
+share/texmf-dist/tex/context/third/gantt/gantt-s-mp.tex
+share/texmf-dist/tex/context/third/gantt/gantt-s-tikz.tex
+share/texmf-dist/tex/context/third/gantt/t-gantt.tex
