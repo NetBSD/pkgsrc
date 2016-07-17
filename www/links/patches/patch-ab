@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2015/07/20 23:03:24 dholland Exp $
+$NetBSD: patch-ab,v 1.8.8.1 2016/07/17 08:48:38 spz Exp $
 
---- configure.orig	2015-07-03 21:23:41.000000000 +0000
+--- configure.orig	2016-06-26 22:49:47.000000000 +0000
 +++ configure
 @@ -838,10 +838,10 @@ fi
  
@@ -15,5 +15,5 @@ $NetBSD: patch-ab,v 1.8 2015/07/20 23:03:24 dholland Exp $
 +AUTOMAKE="automake"
 +AUTOHEADER="autoheader"
  
- 
- 
+ export CC
+ export CPPFLAGS
