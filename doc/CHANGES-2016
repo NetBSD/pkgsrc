@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2849 2016/07/16 21:21:27 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2850 2016/07/17 13:58:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4087,3 +4087,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libctl to 3.2.2 [wiz 2016-07-16]
 	Updated editors/TeXmacs to 1.99.5 [wiz 2016-07-16]
 	Updated audio/snd to 9.9nb25 [wiz 2016-07-16]
+	Updated www/contao35 to 3.5.15 [taca 2016-07-17]
