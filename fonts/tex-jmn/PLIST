@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:57:18 wiz Exp $
+share/texmf-dist/fonts/afm/jmn/hans/hans-sh.afm
+share/texmf-dist/fonts/afm/jmn/hans/hans.afm
+share/texmf-dist/fonts/enc/dvips/jmn/hans.enc
+share/texmf-dist/fonts/map/dvips/jmn/hans.map
+share/texmf-dist/fonts/tfm/jmn/hans/hans-sh.tfm
+share/texmf-dist/fonts/tfm/jmn/hans/hans.tfm
+share/texmf-dist/fonts/type1/jmn/hans/hans-sh.pfb
+share/texmf-dist/fonts/type1/jmn/hans/hans-sh.pfm
+share/texmf-dist/fonts/type1/jmn/hans/hans.pfb
+share/texmf-dist/fonts/type1/jmn/hans/hans.pfm
