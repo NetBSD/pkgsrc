@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:30 wiz Exp $
+share/texmf-dist/tex/context/interface/third/t-fancybreak.xml
+share/texmf-dist/tex/context/third/fancybreak/t-fancybreak.mkii
+share/texmf-dist/tex/context/third/fancybreak/t-fancybreak.mkvi

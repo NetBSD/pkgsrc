@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:33 wiz Exp $
+share/texmf-dist/tex/context/interface/third/t-transliterator.xml
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.ctl
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.log
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.mkii
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.mkiv
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.mkiv.prep
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.pdf
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.run
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.tex
+share/texmf-dist/tex/context/third/transliterator/t-transliterator.tuc
+share/texmf-dist/tex/context/third/transliterator/trans_tables_bg.lua
+share/texmf-dist/tex/context/third/transliterator/trans_tables_glag.lua
+share/texmf-dist/tex/context/third/transliterator/trans_tables_gr.lua
+share/texmf-dist/tex/context/third/transliterator/trans_tables_iso9.lua
+share/texmf-dist/tex/context/third/transliterator/trans_tables_scntfc.lua
+share/texmf-dist/tex/context/third/transliterator/trans_tables_sr.lua
+share/texmf-dist/tex/context/third/transliterator/trans_tables_trsc.lua
+share/texmf-dist/tex/context/third/transliterator/transliterator.ctl
+share/texmf-dist/tex/context/third/transliterator/transliterator.log
+share/texmf-dist/tex/context/third/transliterator/transliterator.lua
+share/texmf-dist/tex/context/third/transliterator/transliterator.run
+share/texmf-dist/tex/context/third/transliterator/transliterator.tuc

@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:29 wiz Exp $
+share/texmf-dist/doc/context/third/cyrillicnumbers/COPYING
+share/texmf-dist/doc/context/third/cyrillicnumbers/README.rst
+share/texmf-dist/doc/context/third/cyrillicnumbers/cyrillicnumbers.pdf
+share/texmf-dist/doc/context/third/cyrillicnumbers/cyrillicnumbers.tex
