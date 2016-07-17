@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 04:03:13 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/17 22:13:04 wiz Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	36190
@@ -13,39 +13,40 @@ COMMENT=	ConTeXt and packages
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-context-[0-9]*:../../print/tex-context
-# depend jmn
-# depend context-account
-# depend context-algorithmic
-# depend context-animation
-# depend context-annotation
-# depend context-bnf
-# depend context-chromato
-# depend context-construction-plan
-# depend context-cyrillicnumbers
-# depend context-degrade
-# depend context-fancybreak
-# depend context-filter
-# depend context-fixme
-# depend context-french
-# depend context-fullpage
-# depend context-games
-# depend context-gantt
-# depend context-gnuplot
-# depend context-letter
-# depend context-lettrine
-# depend context-lilypond
-# depend context-mathsets
-# depend context-notes-zh-cn
-# depend context-rst
-# depend context-ruby
-# depend context-simplefonts
-# depend context-simpleslides
-# depend context-title
-# depend context-transliterator
-# depend context-typearea
-# depend context-typescripts
-# depend context-vim
-# depend context-visualcounter
+DEPENDS+=       tex-jmn-[0-9]*:../../fonts/tex-jmn
+DEPENDS+=       tex-context-account-[0-9]*:../../print/tex-context-account
+DEPENDS+=       tex-context-algorithmic-[0-9]*:../../print/tex-context-algorithmic
+DEPENDS+=       tex-context-animation-[0-9]*:../../print/tex-context-animation
+DEPENDS+=       tex-context-annotation-[0-9]*:../../print/tex-context-annotation
+DEPENDS+=       tex-context-bnf-[0-9]*:../../print/tex-context-bnf
+DEPENDS+=       tex-context-chromato-[0-9]*:../../print/tex-context-chromato
+DEPENDS+=       tex-context-construction-plan-[0-9]*:../../print/tex-context-construction-plan
+DEPENDS+=       tex-context-cyrillicnumbers-[0-9]*:../../print/tex-context-cyrillicnumbers
+DEPENDS+=       tex-context-degrade-[0-9]*:../../print/tex-context-degrade
+DEPENDS+=       tex-context-fancybreak-[0-9]*:../../print/tex-context-fancybreak
+DEPENDS+=       tex-context-filter-[0-9]*:../../print/tex-context-filter
+DEPENDS+=       tex-context-fixme-[0-9]*:../../print/tex-context-fixme
+DEPENDS+=       tex-context-french-[0-9]*:../../print/tex-context-french
+DEPENDS+=       tex-context-fullpage-[0-9]*:../../print/tex-context-fullpage
+DEPENDS+=       tex-context-games-[0-9]*:../../print/tex-context-games
+DEPENDS+=       tex-context-gantt-[0-9]*:../../print/tex-context-gantt
+DEPENDS+=       tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
+DEPENDS+=       tex-context-letter-[0-9]*:../../print/tex-context-letter
+DEPENDS+=       tex-context-lettrine-[0-9]*:../../print/tex-context-lettrine
+DEPENDS+=       tex-context-lilypond-[0-9]*:../../print/tex-context-lilypond
+DEPENDS+=       tex-context-mathsets-[0-9]*:../../print/tex-context-mathsets
+# only a doc package exists
+#DEPENDS+=       tex-context-notes-zh-cn-[0-9]*:../../print/tex-context-notes-zh-cn
+DEPENDS+=       tex-context-rst-[0-9]*:../../print/tex-context-rst
+DEPENDS+=       tex-context-ruby-[0-9]*:../../print/tex-context-ruby
+DEPENDS+=       tex-context-simplefonts-[0-9]*:../../print/tex-context-simplefonts
+DEPENDS+=       tex-context-simpleslides-[0-9]*:../../print/tex-context-simpleslides
+DEPENDS+=       tex-context-title-[0-9]*:../../print/tex-context-title
+DEPENDS+=       tex-context-transliterator-[0-9]*:../../print/tex-context-transliterator
+DEPENDS+=       tex-context-typearea-[0-9]*:../../print/tex-context-typearea
+DEPENDS+=       tex-context-typescripts-[0-9]*:../../print/tex-context-typescripts
+DEPENDS+=       tex-context-vim-[0-9]*:../../print/tex-context-vim
+DEPENDS+=       tex-context-visualcounter-[0-9]*:../../print/tex-context-visualcounter
 
 META_PACKAGE=	yes
 
