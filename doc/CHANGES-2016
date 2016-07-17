@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2853 2016/07/17 14:04:38 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2854 2016/07/17 14:25:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4091,3 +4091,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao42 to 4.2.1 [taca 2016-07-17]
 	Updated time/ruby-tzinfo03 to 0.3.51 [taca 2016-07-17]
 	Updated time/ruby-tzinfo-data to 1.2016.6 [taca 2016-07-17]
+	Updated comms/ruby-termios to 1.0.2 [taca 2016-07-17]
