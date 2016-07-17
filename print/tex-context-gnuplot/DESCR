@@ -1,0 +1,4 @@
+Enables simple creation and inclusion of graphs with Gnuplot.
+The package writes a script into temporary file, runs Gnuplot
+and includes the resulting graphic directly into the document.
+See the ConTeXt Garden package page for further details.

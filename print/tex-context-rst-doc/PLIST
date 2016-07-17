@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:32 wiz Exp $
+share/texmf-dist/doc/context/third/rst/OMakefile
+share/texmf-dist/doc/context/third/rst/OMakefile.omc
+share/texmf-dist/doc/context/third/rst/documentation.rst
+share/texmf-dist/doc/context/third/rst/hybridtest.tex
+share/texmf-dist/doc/context/third/rst/inc-first.rst
+share/texmf-dist/doc/context/third/rst/inc-second.rst
+share/texmf-dist/doc/context/third/rst/inc-third.rst
+share/texmf-dist/doc/context/third/rst/inc.tex
+share/texmf-dist/doc/context/third/rst/manual.bib
+share/texmf-dist/doc/context/third/rst/manual.pdf
+share/texmf-dist/doc/context/third/rst/manual.tex
+share/texmf-dist/doc/context/third/rst/moduletest.tex
