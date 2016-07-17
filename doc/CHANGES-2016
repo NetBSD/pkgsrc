@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2855 2016/07/17 14:27:07 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2856 2016/07/17 14:28:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4093,3 +4093,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/ruby-tzinfo-data to 1.2016.6 [taca 2016-07-17]
 	Updated comms/ruby-termios to 1.0.2 [taca 2016-07-17]
 	Updated databases/ruby-mysql2 to 0.4.4 [taca 2016-07-17]
+	Updated databases/ruby-sequel to 4.36.0 [taca 2016-07-17]
