@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2857 2016/07/17 17:37:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2858 2016/07/17 19:08:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4094,4 +4094,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/ruby-termios to 1.0.2 [taca 2016-07-17]
 	Updated databases/ruby-mysql2 to 0.4.4 [taca 2016-07-17]
 	Updated databases/ruby-sequel to 4.36.0 [taca 2016-07-17]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.632 [tsutsui 2016-07-17]
 	Removed security/libassuan successor security/libassuan2 [wiz 2016-07-17]
