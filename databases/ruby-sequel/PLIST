@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2016/04/09 13:42:09 wen Exp $
+@comment $NetBSD: PLIST,v 1.42 2016/07/17 14:27:46 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -122,6 +122,9 @@ ${GEM_LIBDIR}/doc/release_notes/4.30.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.31.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.32.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.33.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.34.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.35.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.36.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
@@ -237,6 +240,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
+${GEM_LIBDIR}/lib/sequel/extensions/connection_expiration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_validator.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/core_extensions.rb
@@ -244,6 +248,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/core_refinements.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/current_datetime_timestamp.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/dataset_source_alias.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/date_arithmetic.rb
+${GEM_LIBDIR}/lib/sequel/extensions/duplicate_columns_handler.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/empty_array_consider_nulls.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/empty_array_ignore_nulls.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/error_sql.rb
@@ -287,9 +292,12 @@ ${GEM_LIBDIR}/lib/sequel/extensions/schema_dumper.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/select_remove.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sequel_3_dataset_methods.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/server_block.rb
+${GEM_LIBDIR}/lib/sequel/extensions/server_logging.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/set_overrides.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/split_array_nil.rb
+${GEM_LIBDIR}/lib/sequel/extensions/sql_comments.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
+${GEM_LIBDIR}/lib/sequel/extensions/string_agg.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
@@ -384,6 +392,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/xml_serializer.rb
 ${GEM_LIBDIR}/lib/sequel/sql.rb
 ${GEM_LIBDIR}/lib/sequel/timezones.rb
 ${GEM_LIBDIR}/lib/sequel/version.rb
+${GEM_LIBDIR}/spec/adapter_spec.rb
 ${GEM_LIBDIR}/spec/adapters/db2_spec.rb
 ${GEM_LIBDIR}/spec/adapters/firebird_spec.rb
 ${GEM_LIBDIR}/spec/adapters/informix_spec.rb
@@ -408,6 +417,8 @@ ${GEM_LIBDIR}/spec/core/schema_spec.rb
 ${GEM_LIBDIR}/spec/core/spec_helper.rb
 ${GEM_LIBDIR}/spec/core/version_spec.rb
 ${GEM_LIBDIR}/spec/core_extensions_spec.rb
+${GEM_LIBDIR}/spec/core_model_spec.rb
+${GEM_LIBDIR}/spec/core_spec.rb
 ${GEM_LIBDIR}/spec/extensions/accessed_columns_spec.rb
 ${GEM_LIBDIR}/spec/extensions/active_model_spec.rb
 ${GEM_LIBDIR}/spec/extensions/after_initialize_spec.rb
@@ -427,6 +438,7 @@ ${GEM_LIBDIR}/spec/extensions/column_conflicts_spec.rb
 ${GEM_LIBDIR}/spec/extensions/column_select_spec.rb
 ${GEM_LIBDIR}/spec/extensions/columns_introspection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
+${GEM_LIBDIR}/spec/extensions/connection_expiration_spec.rb
 ${GEM_LIBDIR}/spec/extensions/connection_validator_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_plugin_spec.rb
 ${GEM_LIBDIR}/spec/extensions/constraint_validations_spec.rb
@@ -439,6 +451,7 @@ ${GEM_LIBDIR}/spec/extensions/date_arithmetic_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/delay_add_association_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
+${GEM_LIBDIR}/spec/extensions/duplicate_columns_handler_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eager_each_spec.rb
 ${GEM_LIBDIR}/spec/extensions/empty_array_consider_nulls_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_splitter_spec.rb
@@ -509,6 +522,7 @@ ${GEM_LIBDIR}/spec/extensions/sequel_3_dataset_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/serialization_modification_detection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/serialization_spec.rb
 ${GEM_LIBDIR}/spec/extensions/server_block_spec.rb
+${GEM_LIBDIR}/spec/extensions/server_logging_spec.rb
 ${GEM_LIBDIR}/spec/extensions/set_overrides_spec.rb
 ${GEM_LIBDIR}/spec/extensions/sharding_spec.rb
 ${GEM_LIBDIR}/spec/extensions/shared_caching_spec.rb
@@ -518,8 +532,10 @@ ${GEM_LIBDIR}/spec/extensions/skip_create_refresh_spec.rb
 ${GEM_LIBDIR}/spec/extensions/spec_helper.rb
 ${GEM_LIBDIR}/spec/extensions/split_array_nil_spec.rb
 ${GEM_LIBDIR}/spec/extensions/split_values_spec.rb
+${GEM_LIBDIR}/spec/extensions/sql_comments_spec.rb
 ${GEM_LIBDIR}/spec/extensions/sql_expr_spec.rb
 ${GEM_LIBDIR}/spec/extensions/static_cache_spec.rb
+${GEM_LIBDIR}/spec/extensions/string_agg_spec.rb
 ${GEM_LIBDIR}/spec/extensions/string_date_time_spec.rb
 ${GEM_LIBDIR}/spec/extensions/string_stripper_spec.rb
 ${GEM_LIBDIR}/spec/extensions/subclasses_spec.rb
@@ -581,6 +597,8 @@ ${GEM_LIBDIR}/spec/files/reversible_migrations/002_reversible.rb
 ${GEM_LIBDIR}/spec/files/reversible_migrations/003_reversible.rb
 ${GEM_LIBDIR}/spec/files/reversible_migrations/004_reversible.rb
 ${GEM_LIBDIR}/spec/files/reversible_migrations/005_reversible.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/006_reversible.rb
+${GEM_LIBDIR}/spec/files/reversible_migrations/007_reversible.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253849_create_sessions.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253851_create_nodes.rb
 ${GEM_LIBDIR}/spec/files/timestamped_migrations/1273253853_3_create_users.rb
@@ -618,6 +636,9 @@ ${GEM_LIBDIR}/spec/model/plugins_spec.rb
 ${GEM_LIBDIR}/spec/model/record_spec.rb
 ${GEM_LIBDIR}/spec/model/spec_helper.rb
 ${GEM_LIBDIR}/spec/model/validations_spec.rb
+${GEM_LIBDIR}/spec/model_no_assoc_spec.rb
+${GEM_LIBDIR}/spec/model_spec.rb
+${GEM_LIBDIR}/spec/plugin_spec.rb
 ${GEM_LIBDIR}/spec/sequel_coverage.rb
 ${GEM_LIBDIR}/spec/spec_config.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
