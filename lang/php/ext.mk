@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.39 2015/03/16 09:21:11 taca Exp $
+# $NetBSD: ext.mk,v 1.40 2016/07/17 15:49:44 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -29,6 +29,8 @@ PKGMODNAME?=		${MODNAME:S/-/_/}
 PHPSETUPSUBDIR?=	#empty
 MODULESDIR?=		${WRKSRC}/modules
 PLIST_SUBST+=		MODNAME=${PKGMODNAME}
+PLIST_SUBST+=       SHLIB_SUFFIX=${SHLIB_SUFFIX}
+PLIST_SUBST+=       PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .if !defined(PECL_VERSION)
 # bundled extension
@@ -46,6 +48,21 @@ DIST_SUBDIR?=		php-${MODNAME}
 EXTRACT_SUFX?=		.tgz
 .endif
 
+EGDIR=      ${PREFIX}/share/examples/php
+CONF_FILES= ${EGDIR}/${MODNAME}.ini ${EXT_CONF_DIR}/${MODNAME}.ini
+
+EXT_CONF_DIR=   ${PKG_SYSCONFDIR}/php.d
+MAKE_DIRS+=     ${EXT_CONF_DIR}
+MAKE_DIRS+=     ${EGDIR}
+
+SUBST_CLASSES+=     ext-ini
+SUBST_FILES.ext-ini=  ${MODNAME}.ini
+SUBST_MESSAGE.ext-ini=Creating module ini file 
+SUBST_SED.ext-ini+=    -e 's,@MODNAME@,${MODNAME},g'
+SUBST_SED.ext-ini+=    -e 's,@EXTENSION_FILE@,${EXTENSION_FILE},g'
+SUBST_SED.ext-ini+=    -e 's,@EXTENSION_DIRECTIVE@,${EXTENSION_DIRECTIVE},g'
+SUBST_STAGE.ext-ini=  post-build
+
 PHPIZE?=		${BUILDLINK_PREFIX.php}/bin/phpize
 PHP_CONFIG?=		${BUILDLINK_PREFIX.php}/bin/php-config
 
@@ -62,14 +79,18 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
 PLIST_SRC+=		${.CURDIR}/../../lang/php/PLIST.module
-MESSAGE_SRC=		${.CURDIR}/../../lang/php/MESSAGE.module
+MESSAGE_SRC+=		${.CURDIR}/../../lang/php/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
-MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
+MESSAGE_SUBST+=		EXT_CONF_DIR=${EXT_CONF_DIR}
 .if !empty(PHP_ZEND_EXTENSION:U:M[Yy][Ye][Ss])
-MESSAGE_SUBST+=		EXTENSION_DIRECTIVE=zend_extension
+EXTENSION_DIRECTIVE=    zend_extension
+EXTENSION_FILE=         ${PREFIX}/${PHP_EXTENSION_DIR}/${MODNAME}.${SHLIB_SUFFIX}
 .else
-MESSAGE_SUBST+=		EXTENSION_DIRECTIVE=extension
+EXTENSION_DIRECTIVE=    extension
+EXTENSION_FILE=         ${MODNAME}.${SHLIB_SUFFIX}
 .endif
+MESSAGE_SUBST+=		EXTENSION_DIRECTIVE=${EXTENSION_DIRECTIVE}
+MESSAGE_SUBST+=		EXTENSION_FILE=${EXTENSION_FILE}
 
 # Also include extension-specific message
 .if exists(${.CURDIR}/MESSAGE)
@@ -97,12 +118,18 @@ phpize-module:
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi
 
+pre-build:
+	${CP} ${.CURDIR}/../../lang/php/ext.ini ${WRKSRC}/${MODNAME}.ini
+
 do-install: do-module-install
 
 do-module-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${PHP_EXTENSION_DIR}
 	${INSTALL_LIB} ${MODULESDIR}/${PKGMODNAME}.${SHLIB_SUFFIX} \
 		${DESTDIR}${PREFIX}/${PHP_EXTENSION_DIR}
+
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/${MODNAME}.ini ${DESTDIR}${EGDIR}
 
 .if defined(USE_PHP_EXT_PATCHES)
 PATCHDIR=		${.CURDIR}/${PHPPKGSRCDIR}/patches
