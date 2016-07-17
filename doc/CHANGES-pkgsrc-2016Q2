@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.3 2016/07/12 20:45:19 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.4 2016/07/17 08:52:24 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -7,4 +7,14 @@ misc/calibre1: build fix
 
 Pullup ticket #5055 - requested by sevan
 textproc/xerces-c: security fix
+
+Pullup ticket #5056 - requested by bsiegert
+www/links: security update
+www/links-gui: security update
+
+Pullup ticket #5057 - requested by sevan
+net/haproxy: security fix
+
+Pullup ticket #5058 - requested by is
+geography/libnova: build fix
 
