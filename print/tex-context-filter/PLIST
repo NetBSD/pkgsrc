@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:30 wiz Exp $
+share/texmf-dist/tex/context/third/filter/t-filter.mkii
+share/texmf-dist/tex/context/third/filter/t-filter.mkiv
+share/texmf-dist/tex/context/third/filter/t-module-catcodes.tex

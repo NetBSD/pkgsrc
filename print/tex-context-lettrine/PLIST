@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:31 wiz Exp $
+share/texmf-dist/tex/context/interface/third/lettrine.xml
+share/texmf-dist/tex/context/third/lettrine/t-lettrine.tex
