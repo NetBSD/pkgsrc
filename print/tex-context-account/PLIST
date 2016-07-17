@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:28 wiz Exp $
+share/texmf-dist/tex/context/interface/third/t-account.xml
+share/texmf-dist/tex/context/third/account/t-account.mkii
+share/texmf-dist/tex/context/third/account/t-account.mkiv
+share/texmf-dist/tex/context/third/account/t-account.tex
+share/texmf-dist/tex/context/third/account/t-floatnumber.mkii
+share/texmf-dist/tex/context/third/account/t-floatnumber.mkiv
+share/texmf-dist/tex/context/third/account/t-floatnumber.tex

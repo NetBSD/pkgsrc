@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:31 wiz Exp $
+share/texmf-dist/doc/context/third/lettrine/W.pdf
+share/texmf-dist/doc/context/third/lettrine/lettrine-doc.pdf
+share/texmf-dist/doc/context/third/lettrine/lettrine-doc.tex

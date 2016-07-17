@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/17 21:59:32 wiz Exp $
+share/texmf-dist/doc/context/third/context-notes-zh-cn/README
+share/texmf-dist/doc/context/third/context-notes-zh-cn/ctxnotes.pdf
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/Makefile
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/basis.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/bibl-lyr.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/bibliography.bib
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/ctxnotes.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/doc-env.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/figures/bookmark.png
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/figures/cow.pdf
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/figures/gardeninglion.jpg
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/figures/header.png
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/fonts.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/layout.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/metafun.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/project.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/references.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/t-layout.tex
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/t-zhfonts.lua
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/t-zhfonts.mkiv
+share/texmf-dist/doc/context/third/context-notes-zh-cn/src/t-zhspuncs.lua
