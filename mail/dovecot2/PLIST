@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2016/07/02 19:32:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2016/07/18 15:03:05 fhajny Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -279,7 +279,6 @@ include/dovecot/istream.h
 include/dovecot/json-parser.h
 include/dovecot/json-tree.h
 include/dovecot/lda-settings.h
-${PLIST.ldap}include/dovecot/ldap-client.h
 include/dovecot/lib-signals.h
 include/dovecot/lib.h
 include/dovecot/llist.h
@@ -528,7 +527,6 @@ include/dovecot/var-expand.h
 include/dovecot/wildcard-match.h
 include/dovecot/write-full.h
 lib/dovecot/auth/libauthdb_imap.la
-${PLIST.ldap}lib/dovecot/dict/libdict_ldap.la
 lib/dovecot/doveadm/lib10_doveadm_acl_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_expire_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_quota_plugin.la
@@ -567,7 +565,6 @@ lib/dovecot/libdovecot-compression.la
 lib/dovecot/libdovecot-dsync.la
 lib/dovecot/libdovecot-fts.la
 lib/dovecot/libdovecot-lda.la
-${PLIST.ldap}lib/dovecot/libdovecot-ldap.la
 lib/dovecot/libdovecot-login.la
 lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-storage.la
