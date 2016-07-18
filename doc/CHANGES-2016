@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2866 2016/07/18 15:08:14 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2867 2016/07/18 20:40:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4171,3 +4171,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added mail/dovecot2-mysql version 2.2.25 [fhajny 2016-07-18]
 	Added mail/dovecot2-pgsql version 2.2.25 [fhajny 2016-07-18]
 	Added mail/dovecot2-sqlite version 2.2.25 [fhajny 2016-07-18]
+	Updated lang/go to 1.6.3 [bsiegert 2016-07-18]
