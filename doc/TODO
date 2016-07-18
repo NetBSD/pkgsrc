@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16142 2016/07/18 07:08:23 leot Exp $
+$NetBSD: TODO,v 1.16143 2016/07/18 07:14:42 leot Exp $
 
 Suggested new packages
 ======================
@@ -1516,7 +1516,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
-	o py34-html-docs-3.4.3
 	o pythontidy-1.23
 	o qbzr-0.22.4
 	o qcad-3.13.1.3
