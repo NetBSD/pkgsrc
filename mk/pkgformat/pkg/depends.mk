@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.4 2014/03/08 11:46:14 obache Exp $
+# $NetBSD: depends.mk,v 1.5 2016/07/18 09:57:10 leot Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -21,7 +21,7 @@
 #
 # "pkg" is the match for "pattern" used to fulfill the dependency.
 #
-# ${_RRDEPENDS_FILE} is like ${_RPDENDS_FILE}, but all build dependencies
+# ${_RRDEPENDS_FILE} is like ${_RDEPENDS_FILE}, but all build dependencies
 # are dropped, if they are dependencies of one of the full dependencies.
 #
 _DEPENDS_FILE=	${WRKDIR}/.depends
