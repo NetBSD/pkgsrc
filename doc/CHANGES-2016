@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2864 2016/07/18 08:10:06 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2865 2016/07/18 14:24:43 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4163,3 +4163,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/cups-filters to 1.10.0 [leot 2016-07-18]
 	Updated graphics/ImageMagick to 7.0.2.4 [leot 2016-07-18]
 	Updated graphics/p5-PerlMagick to 7.0.2.4 [leot 2016-07-18]
+	Updated geography/opencpn-plugin-draw to 1.2.0 [bouyer 2016-07-18]
+	Updated geography/opencpn-plugin-watchdog to 20160716 [bouyer 2016-07-18]
+	Updated geography/opencpn-plugin-weather_routing to 20160716 [bouyer 2016-07-18]
