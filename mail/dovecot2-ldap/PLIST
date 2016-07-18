@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/18 15:03:05 fhajny Exp $
+include/dovecot/ldap-client.h
+lib/dovecot/auth/libauthdb_ldap.la
+lib/dovecot/dict/libdict_ldap.la
+lib/dovecot/libdovecot-ldap.la
