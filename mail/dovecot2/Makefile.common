@@ -1,0 +1,48 @@
+# $NetBSD: Makefile.common,v 1.1 2016/07/18 15:03:05 fhajny Exp $
+#
+# when updating to a new release, update ABI depends in
+# the buildlink3.mk file as well, since the plugins' version
+# must match (see PR 49563).
+#
+# used by mail/dovecot2/Makefile
+# used by mail/dovecot2/Makefile.plugin
+# used by mail/dovecot2-mysql/Makefile
+# used by mail/dovecot2-pgsql/Makefile
+
+DISTNAME=	dovecot-2.2.25
+CATEGORIES=	mail
+MASTER_SITES=	http://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
+
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://www.dovecot.org/
+COMMENT=	Secure IMAP and POP3 server
+LICENSE=	mit AND gnu-lgpl-v2.1 AND modified-bsd
+
+DISTINFO_FILE=	${.CURDIR}/../../mail/dovecot2/distinfo
+PATCHDIR=	${.CURDIR}/../../mail/dovecot2/patches
+
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config rpcgen
+GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
+CONFIGURE_ARGS+=	--without-gssapi
+CONFIGURE_ARGS+=	--without-ldap
+CONFIGURE_ARGS+=	--without-sql
+
+TEST_TARGET=	check
+
+# Explicitly disable inotify on illumos, it is provided for Linux compat only.
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
+
+# Sharing sources between binary and lib triggers libtool bugs
+# mv: rename .deps/auth-stats.Tpo to .deps/auth-stats.Po: No such file or directory
+MAKE_JOBS_SAFE=	no
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
