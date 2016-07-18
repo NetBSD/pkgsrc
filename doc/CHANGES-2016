@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2865 2016/07/18 14:24:43 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.2866 2016/07/18 15:08:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4166,3 +4166,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/opencpn-plugin-draw to 1.2.0 [bouyer 2016-07-18]
 	Updated geography/opencpn-plugin-watchdog to 20160716 [bouyer 2016-07-18]
 	Updated geography/opencpn-plugin-weather_routing to 20160716 [bouyer 2016-07-18]
+	Added mail/dovecot2-gssapi version 2.2.25 [fhajny 2016-07-18]
+	Added mail/dovecot2-ldap version 2.2.25 [fhajny 2016-07-18]
+	Added mail/dovecot2-mysql version 2.2.25 [fhajny 2016-07-18]
+	Added mail/dovecot2-pgsql version 2.2.25 [fhajny 2016-07-18]
+	Added mail/dovecot2-sqlite version 2.2.25 [fhajny 2016-07-18]
