@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2861 2016/07/18 04:54:01 adam Exp $
+$NetBSD: CHANGES-2016,v 1.2862 2016/07/18 07:08:23 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4160,3 +4160,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-context-visualcounter-doc version 2015 [wiz 2016-07-17]
 	Updated meta-pkgs/texlive-collection-context to 2016 [wiz 2016-07-17]
 	Updated net/youtube-dl to 20160717 [adam 2016-07-17]
+	Updated print/cups-filters to 1.10.0 [leot 2016-07-18]
