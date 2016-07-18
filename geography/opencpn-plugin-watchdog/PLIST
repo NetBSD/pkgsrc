@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/24 10:23:38 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/18 14:21:50 bouyer Exp $
 lib/opencpn/libwatchdog_pi.so
 share/locale/ca/LC_MESSAGES/opencpn-watchdog_pi.mo
 share/locale/cs/LC_MESSAGES/opencpn-watchdog_pi.mo
