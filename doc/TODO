@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16144 2016/07/18 08:09:51 leot Exp $
+$NetBSD: TODO,v 1.16145 2016/07/19 18:55:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -670,7 +670,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
 	o filerunner-14.06.18.10
-	o filezilla-3.19.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o fish-2.2.0
