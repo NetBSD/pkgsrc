@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2868 2016/07/18 22:58:34 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2869 2016/07/19 01:05:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4173,3 +4173,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added mail/dovecot2-sqlite version 2.2.25 [fhajny 2016-07-18]
 	Updated lang/go to 1.6.3 [bsiegert 2016-07-18]
 	Added sysutils/screenfetch version 3.7.0 [kamil 2016-07-18]
+	Updated net/bind99 to 9.9.9pl2 [taca 2016-07-19]
