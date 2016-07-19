@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/08 01:53:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/19 08:44:45 jperkin Exp $
 #
 
 DISTNAME=	openal-soft-1.17.2
@@ -44,6 +44,7 @@ CMAKE_ARGS+=	-DEXTRA_LIBS=${LIBOSSAUDIO:Q}
 
 CFLAGS+= -DSYS_CONF_DIR="\"${PKG_SYSCONFDIR}\""
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 CONF_FILES+= ${PREFIX}/share/openal/alsoftrc.sample ${PKG_SYSCONFDIR}/alsoft.conf
 
