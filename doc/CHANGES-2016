@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2879 2016/07/19 14:55:39 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2880 2016/07/19 15:05:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4184,3 +4184,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/pear-Net_LDAP2 to 2.2.0 [taca 2016-07-19]
 	Updated net/pear-Net_LDAP3 to 1.0.5 [taca 2016-07-19]
 	Updated net/pear-Net_URL2 to 2.2.1 [taca 2016-07-19]
+	Updated sysutils/pear-Log to 1.13.1 [taca 2016-07-19]
