@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2878 2016/07/19 14:45:02 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2879 2016/07/19 14:55:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4183,3 +4183,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-fast_gettext to 1.1.0 [taca 2016-07-19]
 	Updated net/pear-Net_LDAP2 to 2.2.0 [taca 2016-07-19]
 	Updated net/pear-Net_LDAP3 to 1.0.5 [taca 2016-07-19]
+	Updated net/pear-Net_URL2 to 2.2.1 [taca 2016-07-19]
