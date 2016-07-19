@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2885 2016/07/19 19:40:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2886 2016/07/19 20:04:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4190,3 +4190,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libfilezilla to 0.5.3 [wiz 2016-07-19]
 	Updated net/filezilla to 3.19.0 [wiz 2016-07-19]
 	Updated www/lighttpd to 1.4.40 [wiz 2016-07-19]
+	Updated x11/modular-xorg-server to 1.18.4 [wiz 2016-07-19]
