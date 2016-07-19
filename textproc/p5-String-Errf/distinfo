@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:48 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/07/19 11:58:19 mef Exp $
 
-SHA1 (String-Errf-0.007.tar.gz) = 611bfc3feb48b41e666f0843e059e62ff16a49d8
-RMD160 (String-Errf-0.007.tar.gz) = 19e805d2c36e31f45ba97c7fdad6953e03bf625d
-SHA512 (String-Errf-0.007.tar.gz) = 33d38155faa74f16ad7c045998ddb0e38adb505d09adecff6635056ac78881d3e358770f37f1a9f4330ba0b2ff0d0c3c85b1b499ca73e906c083838ef28bfdbd
-Size (String-Errf-0.007.tar.gz) = 18047 bytes
+SHA1 (String-Errf-0.008.tar.gz) = b7731d0019ec1bde6d94b79ccf5ec2d181b2342a
+RMD160 (String-Errf-0.008.tar.gz) = d1ec2247f7149969ed455c50e5c062958492acb3
+SHA512 (String-Errf-0.008.tar.gz) = 0684613c932ace4b7ee2f44a73a1bfd90ce195203ffb3da8ec5689d7ed912854490288d8e559cd97ff7af5b8c0486abdb357353c1dee4edbdc4b17ada56b156b
+Size (String-Errf-0.008.tar.gz) = 21477 bytes
