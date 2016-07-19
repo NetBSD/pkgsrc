@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/05/24 12:55:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/07/19 12:02:08 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -4883,6 +4883,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func_wizards/locallang_csh.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Clickmenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Controller/ImportExportController.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Hook/BackendControllerHook.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Hook/ContextMenuDisableItemsHook.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/ImportExport.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/LocalPageTree.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Task/ImportExportTask.php
