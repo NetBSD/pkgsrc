@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2876 2016/07/19 13:48:17 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2877 2016/07/19 14:20:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4181,3 +4181,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-String-Errf to 0.008 [mef 2016-07-19]
 	Updated www/typo3_62 to 6.2.26 [taca 2016-07-19]
 	Updated devel/ruby-fast_gettext to 1.1.0 [taca 2016-07-19]
+	Updated net/pear-Net_LDAP2 to 2.2.0 [taca 2016-07-19]
