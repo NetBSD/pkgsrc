@@ -1,4 +1,4 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.10 2016/07/19 12:32:15 jperkin Exp $
 
 --- common/autoconf/generated-configure.sh.orig	2016-05-06 12:11:21.000000000 +0000
 +++ common/autoconf/generated-configure.sh
@@ -24,7 +24,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -16225,16 +16225,15 @@ $as_echo_n "checking flags for boot jdk 
+@@ -16225,16 +16225,15 @@ $as_echo_n "checking flags for boot jdk
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -105,7 +105,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
      # Make sure we use the Sun Studio compiler and not gcc on Solaris, which won't work
      COMPILER_VERSION_TEST=`$COMPILER -V 2>&1 | $HEAD -n 1`
      $ECHO $COMPILER_VERSION_TEST | $GREP "^.*: Sun $COMPILER_NAME" > /dev/null
-@@ -29390,6 +29389,14 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
+@@ -29390,6 +29389,15 @@ $as_echo "$ac_cv_c_bigendian" >&6; }
      if test "x$OPENJDK_TARGET_OS" = xbsd || test "x$OPENJDK_TARGET_OS" = xmacosx; then
        SET_EXECUTABLE_ORIGIN="$SET_SHARED_LIBRARY_ORIGIN"
      fi
@@ -116,11 +116,12 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
 +      SET_EXECUTABLE_ORIGIN="$SET_SHARED_LIBRARY_ORIGIN"
 +      CFLAGS_JDK="${CFLAGS_JDK} -D__solaris__"
 +      CXXFLAGS_JDK="${CXXFLAGS_JDK} -D__solaris__"
++      POST_STRIP_CMD="$STRIP -x"
 +    fi
    else
      if test "x$OPENJDK_TARGET_OS" = xsolaris; then
        # If it is not gcc, then assume it is the Oracle Solaris Studio Compiler
-@@ -29531,6 +29538,13 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -29531,6 +29539,13 @@ rm -f core conftest.err conftest.$ac_obj
                C_O_FLAG_NORM="-Os"
                C_O_FLAG_NONE=""
                ;;
@@ -134,7 +135,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
              *)
                C_O_FLAG_HI="-O3"
                C_O_FLAG_NORM="-O2"
-@@ -29732,7 +29746,7 @@ fi
+@@ -29732,7 +29747,7 @@ fi
    #
    case $COMPILER_NAME in
      gcc )
@@ -143,7 +144,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
        -pipe \
        -D_GNU_SOURCE -D_REENTRANT -D_LARGEFILE64_SOURCE"
        case $OPENJDK_TARGET_CPU_ARCH in
-@@ -30343,7 +30357,8 @@ $as_echo "alsa pulse x11" >&6; }
+@@ -30343,7 +30358,8 @@ $as_echo "alsa pulse x11" >&6; }
    if test "x$OPENJDK_TARGET_OS" = xbsd; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
@@ -153,7 +154,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -31555,7 +31570,11 @@ $as_echo "$as_me: WARNING: freetype not 
+@@ -31555,7 +31571,11 @@ $as_echo "$as_me: WARNING: freetype not
  
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
@@ -166,7 +167,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
        fi
        if test "x$with_freetype_lib" != x; then
          POTENTIAL_FREETYPE_LIB_PATH="$with_freetype_lib"
-@@ -34373,7 +34392,7 @@ $as_echo "$as_me: The path of FREETYPE_I
+@@ -34373,7 +34393,7 @@ $as_echo "$as_me: The path of FREETYPE_I
      FREETYPE_INCLUDE_PATH="`cd "$path"; $THEPWDCMD -L`"
    fi
  
@@ -175,7 +176,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH/freetype2 -I$FREETYPE_INCLUDE_PATH"
        else
          FREETYPE_CFLAGS="-I$FREETYPE_INCLUDE_PATH"
-@@ -34506,7 +34525,7 @@ $as_echo "$as_me: The path of FREETYPE_L
+@@ -34506,7 +34526,7 @@ $as_echo "$as_me: The path of FREETYPE_L
        if test "x$OPENJDK_TARGET_OS" = xwindows; then
          FREETYPE_LIBS="$FREETYPE_LIB_PATH/freetype.lib"
        else
@@ -184,7 +185,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
        fi
      fi
  
-@@ -35732,9 +35751,6 @@ fi
+@@ -35732,9 +35752,6 @@ fi
  
  
  
@@ -194,7 +195,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 
  
      llvm_components="jit mcjit engine nativecodegen native"
      unset LLVM_CFLAGS
-@@ -35777,7 +35793,7 @@ fi
+@@ -35777,7 +35794,7 @@ fi
    fi
  
    # libCrun is the c++ runtime-library with SunStudio (roughly the equivalent of gcc's libstdc++.so)
