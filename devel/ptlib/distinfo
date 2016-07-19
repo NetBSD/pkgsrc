@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2016/07/16 03:23:50 markd Exp $
+$NetBSD: distinfo,v 1.22 2016/07/19 12:46:06 jperkin Exp $
 
 SHA1 (ptlib-2.10.7.tar.xz) = 51077b76aed30ab614e31b2a18cb383848d4332c
 RMD160 (ptlib-2.10.7.tar.xz) = 0c05b57f5435f4646af05278e66718e0e433a10a
@@ -17,7 +17,7 @@ SHA1 (patch-plugins_sound_esd_sound_esd.h) = 2c36497fa2b9f62144442e74eb9fd07e53a
 SHA1 (patch-plugins_sound_oss_sound_oss.cxx) = 50817861710a82e98ebb3b029d021619a09c1132
 SHA1 (patch-plugins_sound_oss_sound_oss.h) = ff48d7385a1e21d2bd896658d1ff8e39d737208b
 SHA1 (patch-plugins_vidinput_bsd_vidinput_bsd.h) = dd965232d9645cd12a866e597828bdf8da7cb389
-SHA1 (patch-src-unix-tlibthrd.cxx) = 0617f208b98ffe85730f411fb8494407e8c6324d
+SHA1 (patch-src-unix-tlibthrd.cxx) = 35f54cb5b831bdf5b47950eff2e54f928a0ae65f
 SHA1 (patch-src_ptclib_pldap.cxx) = 791f3a6efeee35efa44d311eb7077bb0bad441f0
 SHA1 (patch-src_ptclib_pssl.cxx) = b8480a23d3ba27afbe966b059183470637a2664a
 SHA1 (patch-src_ptclib_pxmlrpc.cxx) = 11ce9ec39da38ee253b98a5c0d436e5f9704fe9f
@@ -26,7 +26,7 @@ SHA1 (patch-src_ptlib_unix_svcproc.cxx) = 0fbaa6a2bde07625b8b826b7134d6e1a946f68
 SHA1 (patch-unix-config.cxx) = 6127f91bc04d7f008087ebdb9a2fbd1dbb41fd19
 SHA1 (patch-unix-ossaix.cxx) = 3e7a902eb4b73388db01bd53e6c30546c96fe78d
 SHA1 (patch-unix-osutil.cxx) = e907fc2c068f3e20af2f0e97540a1f4e47895a18
-SHA1 (patch-unix-pmachdep.h) = 0cc2d61fa624b60461fb45e1aebfd37d486be5c9
+SHA1 (patch-unix-pmachdep.h) = b96cdc036af8a1957cd56831c49c2a1d27ca9bf5
 SHA1 (patch-unix-serchan.cxx) = f77eb9839a84db91a16b72faafdc8d1499e78b31
 SHA1 (patch-unix-socket.cxx) = 80ff4d0bc67f4bf59e5bfd3e17e3b380f7774bbb
 SHA1 (patch-unix-switch.cxx) = 2c1bc4057a79b6b34651b299042876d2452a84b7
