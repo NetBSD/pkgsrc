@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2016/05/07 07:51:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2016/07/19 07:32:42 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -1091,6 +1091,7 @@ ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/jquery/LICENSE-JQUERY.t
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt
+${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.js
 ${PYSITELIB}/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.min.js
 ${PYSITELIB}/django/contrib/admin/templates/admin/404.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/500.html
@@ -2226,9 +2227,6 @@ ${PYSITELIB}/django/contrib/gis/db/models/query.pyo
 ${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.py
 ${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.pyo
-${PYSITELIB}/django/contrib/gis/db/models/sql/aggregates.py
-${PYSITELIB}/django/contrib/gis/db/models/sql/aggregates.pyc
-${PYSITELIB}/django/contrib/gis/db/models/sql/aggregates.pyo
 ${PYSITELIB}/django/contrib/gis/db/models/sql/conversion.py
 ${PYSITELIB}/django/contrib/gis/db/models/sql/conversion.pyc
 ${PYSITELIB}/django/contrib/gis/db/models/sql/conversion.pyo
