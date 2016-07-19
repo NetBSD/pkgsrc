@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/08/30 14:57:42 taca Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/19 15:08:21 taca Exp $
 
-DISTNAME=	Console_Table-1.2.1
+DISTNAME=	Console_Table-1.3.0
 CATEGORIES+=	textproc
 LICENSE=	modified-bsd
 
