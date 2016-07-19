@@ -1,8 +1,8 @@
-$NetBSD: patch-unix-pmachdep.h,v 1.2 2012/10/13 00:49:38 darcy Exp $
+$NetBSD: patch-unix-pmachdep.h,v 1.3 2016/07/19 12:46:06 jperkin Exp $
 
 - Add DragonFly support
 
---- include/ptlib/unix/ptlib/pmachdep.h.orig	2012-08-23 02:12:57.000000000 +0000
+--- include/ptlib/unix/ptlib/pmachdep.h.orig	2016-07-19 12:34:32.470453722 +0000
 +++ include/ptlib/unix/ptlib/pmachdep.h
 @@ -78,6 +78,34 @@ typedef size_t socklen_t;
  #define HAS_IFREQ
@@ -39,3 +39,13 @@ $NetBSD: patch-unix-pmachdep.h,v 1.2 2012/10/13 00:49:38 darcy Exp $
  #elif defined(P_FREEBSD)
  
  #if defined(P_PTHREADS)
+@@ -195,7 +223,9 @@ typedef union {
+ } upad128_t;
+ #endif
+ 
++#ifndef INADDR_NONE
+ #define INADDR_NONE     -1
++#endif
+ #if P_SOLARIS < 7
+ typedef int socklen_t;
+ #endif
