@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/19 02:11:51 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/19 06:04:30 agc Exp $
 
 DISTNAME=	lepton-1.2.1
 CATEGORIES=	graphics
@@ -15,6 +15,12 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	autoconf autoreconf automake gmake makeinfo
 
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
+
 AUTO_MKDIRS=	yes
 
 pre-configure:
@@ -22,5 +28,7 @@ pre-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lepton ${DESTDIR}${PREFIX}/bin
+
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
