@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2874 2016/07/19 11:58:38 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2875 2016/07/19 12:02:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4179,3 +4179,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django to 1.9.8 [adam 2016-07-19]
 	Updated archivers/p7zip to 16.02 [mef 2016-07-19]
 	Updated textproc/p5-String-Errf to 0.008 [mef 2016-07-19]
+	Updated www/typo3_62 to 6.2.26 [taca 2016-07-19]
