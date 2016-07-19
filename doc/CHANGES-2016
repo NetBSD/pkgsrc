@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2871 2016/07/19 02:12:52 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2872 2016/07/19 07:33:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4176,3 +4176,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/bind99 to 9.9.9pl2 [taca 2016-07-19]
 	Updated net/bind910 to 9.10.4pl2 [taca 2016-07-19]
 	Added graphics/lepton version 1.2.1 [agc 2016-07-19]
+	Updated www/py-django to 1.9.8 [adam 2016-07-19]
