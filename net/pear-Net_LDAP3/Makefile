@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/08/23 15:36:20 taca Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/19 14:44:30 taca Exp $
 
-DISTNAME=	Net_LDAP3-1.0.3
+DISTNAME=	Net_LDAP3-1.0.5
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 CATEGORIES+=	net
 
