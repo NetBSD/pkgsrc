@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.746 2016/07/15 07:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.747 2016/07/19 02:11:51 agc Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -276,6 +276,7 @@ SUBDIR+=	lasem
 SUBDIR+=	lcms
 SUBDIR+=	lcms2
 SUBDIR+=	lensfun
+SUBDIR+=	lepton
 SUBDIR+=	leptonica
 SUBDIR+=	lib3ds
 SUBDIR+=	libart
