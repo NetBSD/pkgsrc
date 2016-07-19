@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 02:00:00 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/07/19 15:08:21 taca Exp $
 
-SHA1 (pear/Console_Table-1.2.1.tgz) = 45249dae3c51bd22ff0c61004b7dc0508e16bee1
-RMD160 (pear/Console_Table-1.2.1.tgz) = 0a04e5a01ecb3a8e5e98e3fb0fdff7d6fcb1b26f
-SHA512 (pear/Console_Table-1.2.1.tgz) = fc328adff3de3808ef7c88233e287f26feb46749b4ab740a9856b0c7dab730bf8e62293b89fe7a3171e062f73788083d5acc7f0c1a025a145a4163e0991a66b0
-Size (pear/Console_Table-1.2.1.tgz) = 11332 bytes
+SHA1 (pear/Console_Table-1.3.0.tgz) = b5de07d750933f708548da6ba372c246b331952d
+RMD160 (pear/Console_Table-1.3.0.tgz) = 341802e5261098666815ca6126d2907e249f0a58
+SHA512 (pear/Console_Table-1.3.0.tgz) = 83227ce8e55ae38cdf91b7097879a3406898064d1c047c5a94c6cadc46cbeeea51c43d135e6aadfbdb38fa080a1b27a1d4cea1c36ff9eb3e14dc4b04de334c11
+Size (pear/Console_Table-1.3.0.tgz) = 11391 bytes
