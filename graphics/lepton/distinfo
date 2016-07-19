@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2016/07/19 02:11:51 agc Exp $
+
+SHA1 (lepton-1.2.1-911d79a560c303a2a62e5412117d0a4ccb41836d.tar.gz) = fe7142d68f33a054a124cf8862b25af7780a1049
+RMD160 (lepton-1.2.1-911d79a560c303a2a62e5412117d0a4ccb41836d.tar.gz) = 1ef14dee2db286c9940ae72bbf2addcdc656ff92
+SHA512 (lepton-1.2.1-911d79a560c303a2a62e5412117d0a4ccb41836d.tar.gz) = c6b490c232a399c10792b278390ce916494782334d1ee06b9823889ccdbe8f528f1ecbfd3d3274dbc81494d29d065c98338a4643f829fead9c18815200a441ad
+Size (lepton-1.2.1-911d79a560c303a2a62e5412117d0a4ccb41836d.tar.gz) = 50228341 bytes
+SHA1 (patch-src--lepton--fork_serve.cc) = 8fad491ce8c106a999391d27b176c665337cd903
+SHA1 (patch-src--lepton--socket_serve.cc) = 5c0e94a8b2f5e61a556cd33784a0787c588e1c7f
+SHA1 (patch-src--vp8--model--jpeg_meta.hh) = 5f1424e5d5160c12a43b75402c33adf9894f868f
+SHA1 (patch-src--vp8--util--vpx_config.hh) = 857472457ad1b1f8b8bd6d7c66ae2c0991e4e4ef
