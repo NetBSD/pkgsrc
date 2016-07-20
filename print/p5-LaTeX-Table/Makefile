@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/06/08 19:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/07/20 10:45:17 mef Exp $
 #
 
 DISTNAME=	LaTeX-Table-v1.0.6
@@ -16,7 +16,10 @@ DEPENDS+=	p5-Moose>=0.76:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-FollowPBP>=0.03:../../devel/p5-MooseX-FollowPBP
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 
+# for make test
 BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 
 # Recommended modules
 DEPENDS+=	p5-LaTeX-Driver-[0-9]*:../../print/p5-LaTeX-Driver
