@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2015/05/06 04:10:01 mef Exp $
+$NetBSD: patch-aa,v 1.3 2016/07/20 14:53:10 mef Exp $
 
+Convert pkgname to CPAN name
 
 --- Makefile.PL.orig	2015-05-06 12:01:31.000000000 +0900
 +++ Makefile.PL	2015-05-06 12:03:03.000000000 +0900
