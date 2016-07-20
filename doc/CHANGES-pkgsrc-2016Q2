@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.4 2016/07/17 08:52:24 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.5 2016/07/20 05:01:13 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -17,4 +17,16 @@ net/haproxy: security fix
 
 Pullup ticket #5058 - requested by is
 geography/libnova: build fix
+
+Pullup ticket #5059 - requested by taca
+www/apache24: security update
+
+Pullup ticket #5064 - requested by bsiegert
+lang/go: security update
+
+Pullup ticket #5065 - requested by taca
+net/bind99: security update
+
+Pullup ticket #5066 - requested by taca
+net/bind910: security update
 
