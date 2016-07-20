@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/07/20 11:49:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/20 18:05:53 tron Exp $
 
 DISTNAME=	libwebp-0.5.1
 CATEGORIES=	graphics
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--enable-libwebpmux
 CONFIGURE_ARGS+=	--enable-libwebpdemux
 CONFIGURE_ARGS+=	--enable-libwebpdecoder
 CONFIGURE_ARGS+=	--enable-libwebpextras
+CONFIGURE_ARGS+=	--disable-gl
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
