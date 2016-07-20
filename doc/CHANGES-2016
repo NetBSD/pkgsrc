@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2894 2016/07/20 14:53:26 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2895 2016/07/20 14:59:25 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4199,3 +4199,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-RT-Client-REST to 0.50 [mef 2016-07-20]
 	Added devel/p5-MooX-ClassAttribute version 0.011 [mef 2016-07-20]
 	Updated textproc/p5-Template-Plugin-Latex to 3.09 [mef 2016-07-20]
+	Updated lang/qore to 0.8.12 [nros 2016-07-20]
