@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.5 2016/07/20 05:01:13 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.6 2016/07/20 18:53:40 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -30,3 +30,5 @@ net/bind99: security update
 Pullup ticket #5066 - requested by taca
 net/bind910: security update
 
+Pullup ticket #5060 - requested by taca
+net/samba4: security update
