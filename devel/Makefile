@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2285 2016/07/16 13:21:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2286 2016/07/20 12:54:16 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1208,6 +1208,7 @@ SUBDIR+=	p5-Module-Versions
 SUBDIR+=	p5-Module-Versions-Report
 SUBDIR+=	p5-Mojo-IOLoop-ForkCall
 SUBDIR+=	p5-Moo
+SUBDIR+=	p5-MooX-ClassAttribute
 SUBDIR+=	p5-MooX-Cmd
 SUBDIR+=	p5-MooX-ConfigFromFile
 SUBDIR+=	p5-MooX-File-ConfigDir
