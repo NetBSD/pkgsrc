@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2896 2016/07/20 15:06:28 nros Exp $
+$NetBSD: CHANGES-2016,v 1.2897 2016/07/20 23:00:36 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/qore-openldap-module to 1.1 [nros 2016-07-20]
 	Updated databases/qore-pgsql-module to 2.4 [nros 2016-07-20]
 	Updated security/qore-ssh2-module to 1.0 [nros 2016-07-20]
+	Added textproc/libcsv version 3.0.3 [cheusov 2016-07-20]
