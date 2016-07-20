@@ -1,0 +1,7 @@
+This module adds support for class attributes to Moo. Class attributes are
+attributes whose values are not associated with any particular instance of
+the class.
+
+For example, the Person class might have a class attribute "binomial_name";
+its value "Homo sapiens" is not associated with any particular individual,
+but the class as a whole.
