@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2016/07/20 23:00:13 cheusov Exp $
+
+SHA1 (libcsv-3.0.3.tar.gz) = 2f637343c3dfac80559595f519e8f78f25acc7c1
+RMD160 (libcsv-3.0.3.tar.gz) = 8cf16e810924dd0f41b0444cf2a02d5e6da2ab21
+Size (libcsv-3.0.3.tar.gz) = 331491 bytes
