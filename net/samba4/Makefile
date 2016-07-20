@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/05/07 03:09:33 taca Exp $
+# $NetBSD: Makefile,v 1.18.2.1 2016/07/20 18:52:47 spz Exp $
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -11,10 +12,12 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.3.9
+VERSION=	4.3.11
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 BUILD_DEFS+=		VARBASE
 
@@ -183,7 +186,7 @@ REPLACE_PYTHON=	buildtools/bin/waf \
 		source4/scripting/bin/* \
 		lib/tevent/tevent.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 4.3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 4.3.2
 
 .include "../../lang/python/application.mk"
 
