@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2892 2016/07/20 12:19:21 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2893 2016/07/20 12:54:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4197,3 +4197,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/libwebp to 0.5.1 [ryoon 2016-07-20]
 	Added audio/speech-dispatcher version 0.8.4 [ryoon 2016-07-20]
 	Updated net/p5-RT-Client-REST to 0.50 [mef 2016-07-20]
+	Added devel/p5-MooX-ClassAttribute version 0.011 [mef 2016-07-20]
