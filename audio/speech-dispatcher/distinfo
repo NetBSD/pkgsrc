@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2016/07/20 11:51:58 ryoon Exp $
+
+SHA1 (speech-dispatcher-0.8.4.tar.gz) = 0acef5da6a128f329d0edaaf5cec64e408e534f1
+RMD160 (speech-dispatcher-0.8.4.tar.gz) = e2dbbc41169087a5f0ec15dc4bb5f429aa209d1c
+SHA512 (speech-dispatcher-0.8.4.tar.gz) = 94a764a04385aca74bc36816575dc688b376ae9f0e2865a990ffc0b9e6d558a268edec39039e67bd84064bb8430a0ca0e84ab77e865dcf449e40867809fbacf3
+Size (speech-dispatcher-0.8.4.tar.gz) = 1341968 bytes
+SHA1 (patch-config_Makefile.in) = dd58a389bc9820d85e4fe912faff7e2cf969fa8e
+SHA1 (patch-config_clients_Makefile.in) = 4c172a7c33336343b88707ae17702c80c97c28f5
+SHA1 (patch-config_modules_Makefile.in) = 566c25934686d56c8e9a54cf520d121c9458bfae

@@ -1,0 +1,15 @@
+$NetBSD: patch-config_modules_Makefile.in,v 1.1 2016/07/20 11:51:58 ryoon Exp $
+
+* Install config files under examples directory. pkgsrc specific.
+
+--- config/modules/Makefile.in.orig	2016-04-17 22:05:55.000000000 +0000
++++ config/modules/Makefile.in
+@@ -338,7 +338,7 @@ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+ modulebindir = @modulebindir@
+-moduleconfdir = @moduleconfdir@
++moduleconfdir = @prefix@/share/examples/speech-dispatcher/modules
+ moduleconforigdir = @moduleconforigdir@
+ oldincludedir = @oldincludedir@
+ pdfdir = @pdfdir@
