@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/20 12:51:25 mef Exp $
+
+SHA1 (MooX-ClassAttribute-0.011.tar.gz) = 9b99314e819f60c2f11e7b5392f8a6d17e4b19f6
+RMD160 (MooX-ClassAttribute-0.011.tar.gz) = 0c8470e335d43b1213605a3f10b777566115dc53
+SHA512 (MooX-ClassAttribute-0.011.tar.gz) = 00c62ff1a065a21f761357969e94bd45b2320bfc79e125635b87a034b141aed756ebae789602afb01b3341f5be980a2a8348305cb6c726a8d6b6cee2e3af1ccf
+Size (MooX-ClassAttribute-0.011.tar.gz) = 24591 bytes
