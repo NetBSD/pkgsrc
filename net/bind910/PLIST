@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/05/11 11:26:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2016/07/20 02:55:36 spz Exp $
 bin/bind9-config
 bin/delv
 bin/dig
@@ -440,10 +440,12 @@ share/doc/bind9/arm/man.dnssec-verify.html
 share/doc/bind9/arm/man.genrandom.html
 share/doc/bind9/arm/man.host.html
 share/doc/bind9/arm/man.isc-hmac-fixup.html
+share/doc/bind9/arm/man.lwresd.html
 share/doc/bind9/arm/man.named-checkconf.html
 share/doc/bind9/arm/man.named-checkzone.html
 share/doc/bind9/arm/man.named-journalprint.html
 share/doc/bind9/arm/man.named-rrchecker.html
+share/doc/bind9/arm/man.named.conf.html
 share/doc/bind9/arm/man.named.html
 share/doc/bind9/arm/man.nsec3hash.html
 share/doc/bind9/arm/man.nsupdate.html
