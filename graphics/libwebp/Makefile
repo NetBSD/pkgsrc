@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2016/01/06 10:33:59 adam Exp $
+# $NetBSD: Makefile,v 1.19 2016/07/20 11:49:59 ryoon Exp $
 
-DISTNAME=	libwebp-0.5.0
+DISTNAME=	libwebp-0.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.webmproject.org/releases/webp/
 
@@ -11,6 +11,12 @@ LICENSE=	modified-bsd
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+
+CONFIGURE_ARGS+=	--enable-libwebpdemux
+CONFIGURE_ARGS+=	--enable-libwebpmux
+CONFIGURE_ARGS+=	--enable-libwebpdemux
+CONFIGURE_ARGS+=	--enable-libwebpdecoder
+CONFIGURE_ARGS+=	--enable-libwebpextras
 
 .include "../../mk/compiler.mk"
 # fix PR pkg/45934
