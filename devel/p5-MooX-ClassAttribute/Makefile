@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/20 12:51:25 mef Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/20 13:45:39 mef Exp $
 
 DISTNAME=	MooX-ClassAttribute-0.011
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	${PERL5_LICENSE}
 
 # for make test
 BUILD_DEPENDS+= p5-MooseX-ClassAttribute-[0-9]*:../../devel/p5-MooseX-ClassAttribute
+BUILD_DEPENDS+= p5-Moo-[0-9]*:../../devel/p5-Moo
+BUILD_DEPENDS+= p5-Exporter-Tiny-[0-9]*:../../devel/p5-Exporter-Tiny
 
 PERL5_PACKLIST= auto/MooX/ClassAttribute/.packlist
 
