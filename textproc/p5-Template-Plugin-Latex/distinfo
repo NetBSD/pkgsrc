@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:59:49 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/07/20 14:53:09 mef Exp $
 
-SHA1 (Template-Plugin-Latex-3.06.tar.gz) = 19eb6427e855e347b23d20cba9127954de150f49
-RMD160 (Template-Plugin-Latex-3.06.tar.gz) = 965323df21253523eb9a55fc38e5c30f5dc53c0e
-SHA512 (Template-Plugin-Latex-3.06.tar.gz) = 13baa205d2095eb25fb746bfd03dd9f75d7c48cf775cc0b2d5874e9e6a76f69971925729709136dc53276b210855dbc7bf71d79bb0aa3dd28c8383c8569a7441
-Size (Template-Plugin-Latex-3.06.tar.gz) = 20487 bytes
-SHA1 (patch-aa) = a829811c058e222952d6d86b1defc914ae6d2f2d
+SHA1 (Template-Plugin-Latex-3.09.tar.gz) = fd1a4acc155df5b01a7a051df074ef55982ccefd
+RMD160 (Template-Plugin-Latex-3.09.tar.gz) = d3507dc5e425b7b995d579aa64b310e02f83b1ac
+SHA512 (Template-Plugin-Latex-3.09.tar.gz) = 45f037feacb426fd02f654739da9c6e30f291e9bca9d628a8bb4431d829ab2851d978c62ebc9bbca254d048fd20bac26423ce2a1e0a7135f331d2e9ce29f8894
+Size (Template-Plugin-Latex-3.09.tar.gz) = 19937 bytes
+SHA1 (patch-aa) = 92cce4fe7ceff3fd049ca131a4aa802b70df1341
