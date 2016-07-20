@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/12 11:36:47 mef Exp $
+# $NetBSD: Makefile,v 1.11 2016/07/20 15:03:14 mef Exp $
 
 PKGNAME=	gnuradio-doxygen-${VERSION}
 COMMENT=	Doxygen documentation of GNU Radio
@@ -12,9 +12,7 @@ BUILD_DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 # in case those packages are already installed by other requirement..
-DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
-DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
-DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
+DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 
 CMAKE_ARGS+=	-DENABLE_DEFAULT=False
 CMAKE_ARGS+=	-DENABLE_DOXYGEN=ON
