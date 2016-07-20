@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2016/04/14 12:16:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.21.2.1 2016/07/20 04:59:21 spz Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -149,6 +149,7 @@ lib/httpd/mod_proxy_express.so
 lib/httpd/mod_proxy_fcgi.so
 lib/httpd/mod_proxy_fdpass.so
 lib/httpd/mod_proxy_ftp.so
+lib/httpd/mod_proxy_hcheck.so
 lib/httpd/mod_proxy_http.so
 lib/httpd/mod_proxy_scgi.so
 lib/httpd/mod_proxy_wstunnel.so
@@ -580,6 +581,7 @@ share/httpd/manual/expr.html.en
 share/httpd/manual/expr.html.fr
 share/httpd/manual/faq/index.html
 share/httpd/manual/faq/index.html.en
+share/httpd/manual/faq/index.html.es
 share/httpd/manual/faq/index.html.fr
 share/httpd/manual/faq/index.html.tr.utf8
 share/httpd/manual/faq/index.html.zh-cn.utf8
@@ -629,6 +631,8 @@ share/httpd/manual/howto/htaccess.html.fr
 share/httpd/manual/howto/htaccess.html.ja.utf8
 share/httpd/manual/howto/htaccess.html.ko.euc-kr
 share/httpd/manual/howto/htaccess.html.pt-br
+share/httpd/manual/howto/http2.html
+share/httpd/manual/howto/http2.html.en
 share/httpd/manual/howto/index.html
 share/httpd/manual/howto/index.html.en
 share/httpd/manual/howto/index.html.fr
@@ -1109,12 +1113,16 @@ share/httpd/manual/mod/mod_proxy_fdpass.html.fr
 share/httpd/manual/mod/mod_proxy_ftp.html
 share/httpd/manual/mod/mod_proxy_ftp.html.en
 share/httpd/manual/mod/mod_proxy_ftp.html.fr
+share/httpd/manual/mod/mod_proxy_hcheck.html
+share/httpd/manual/mod/mod_proxy_hcheck.html.en
 share/httpd/manual/mod/mod_proxy_html.html
 share/httpd/manual/mod/mod_proxy_html.html.en
 share/httpd/manual/mod/mod_proxy_html.html.fr
 share/httpd/manual/mod/mod_proxy_http.html
 share/httpd/manual/mod/mod_proxy_http.html.en
 share/httpd/manual/mod/mod_proxy_http.html.fr
+share/httpd/manual/mod/mod_proxy_http2.html
+share/httpd/manual/mod/mod_proxy_http2.html.en
 share/httpd/manual/mod/mod_proxy_scgi.html
 share/httpd/manual/mod/mod_proxy_scgi.html.en
 share/httpd/manual/mod/mod_proxy_scgi.html.fr
