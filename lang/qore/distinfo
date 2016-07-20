@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/03/09 21:32:41 nros Exp $
+$NetBSD: distinfo,v 1.5 2016/07/20 11:58:40 nros Exp $
 
-SHA1 (qore-0.8.11.tar.bz2) = 16699762ce22e333b1d5eb782a0077f7e7dc7b15
-RMD160 (qore-0.8.11.tar.bz2) = 1dcae042c51daaff81485bbb70459a104076a67a
-SHA512 (qore-0.8.11.tar.bz2) = 83dfd293f8d0ced52eeca8e0023f8a943cbf3be6426e0091032ef67769ac1103e04b4b9017c4443d94695407a5f727edf06b6ba3c3bb71a95b5c0bb0da5f8ce9
-Size (qore-0.8.11.tar.bz2) = 20074057 bytes
-SHA1 (patch-configure.ac) = 4d14a82f96828a4958279f6e3f2126482e52bad7
-SHA1 (patch-include_qore_QoreFile.h) = 878b81d936bc51f19ae3dac76e25e865bbd0d55d
-SHA1 (patch-include_qore_QoreLib.h) = a13da003160e5069817312a7587262a0cf7e51a1
-SHA1 (patch-lib_QoreLib.cpp) = 476aeb3f42f0a48fdff4a9335d64f59fec326618
-SHA1 (patch-lib_QoreTimeZoneManager.cpp) = d74e69c25ffddfa7bb1582cab7cba97abca3240e
-SHA1 (patch-lib_qc__option.qpp) = f5b3d05a7975eb77ced74839f1efa36b9cafd75b
-SHA1 (patch-lib_ql__crypto.qpp) = 4211e7df7d3c27bd22df63552b4457e9fb79099a
+SHA1 (qore-0.8.12.tar.bz2) = 9c9465559536053b7303c73f17b5243adc52ecab
+RMD160 (qore-0.8.12.tar.bz2) = 312751b59156aaa813e4fce4d0876c376b6fd1d0
+SHA512 (qore-0.8.12.tar.bz2) = 2f7bd62ed93a5e64fd4fb77b0e62162d9f1cfa0c0bf9e5b0270cf1b5a150aa13c4283fac9a805a4e6e52d95647253de27c48cb7f9251d53a2a265624f43b31af
+Size (qore-0.8.12.tar.bz2) = 21703171 bytes
