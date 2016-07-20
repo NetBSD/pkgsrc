@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/07/20 14:54:57 nros Exp $
 
-SHA1 (qore-ssh2-module-0.9.9.tar.bz2) = 39dd210f4e9281139781a674fe56b3c7dfbd8882
-RMD160 (qore-ssh2-module-0.9.9.tar.bz2) = bba602645ab9c218ee6720fe41a5b97f02ce7984
-SHA512 (qore-ssh2-module-0.9.9.tar.bz2) = 035d0df228a3e2a32d63d4cb40ff3d73b42e63f75f1bba8e147bc5e0b120c8563a81639b17fa77d4beb9bd2a540a129acd2beb3b60d1fded4032f8d3ad835950
-Size (qore-ssh2-module-0.9.9.tar.bz2) = 449265 bytes
-SHA1 (patch-configure) = 44b22a0af32fd4646e2d11f020988c2543ac1fb4
-SHA1 (patch-src_Makefile.in) = 08d51e1951453e3596e32fc793f73a524516c798
+SHA1 (qore-ssh2-module-1.0.tar.bz2) = fdec8a5d0cf292eb5818813bb6d28e8994e84fa4
+RMD160 (qore-ssh2-module-1.0.tar.bz2) = 02a2b504cb838d6854b73edc93406d03d103ba63
+SHA512 (qore-ssh2-module-1.0.tar.bz2) = b9af0453f07326fdde99feddb1b2f78fa884c46838eeb3752ee28871f7edb4901b1ab278a2f49d27f467858f71c8c2d1a519fb35c4ae69637d26e8b51923152e
+Size (qore-ssh2-module-1.0.tar.bz2) = 599221 bytes
