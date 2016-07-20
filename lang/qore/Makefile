@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2016/03/09 21:32:41 nros Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/20 11:58:40 nros Exp $
 
-DISTNAME=	qore-0.8.11
-PKGREVISION=	4
+DISTNAME=	qore-0.8.12
 CATEGORIES=	lang
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=qorelanguage/}
 EXTRACT_SUFX=   .tar.bz2
 
-MAINTAINER=	nros@users.sourceforge.net
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
+GITHUB_TYPE=	release
+
+MAINTAINER=	nros@netbsd.org
 COMMENT=	Qore programming language
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf bison flex gmake pax
+USE_TOOLS+=	bison flex gmake pax
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	native
 FLEX_REQD=	2.5.31
@@ -21,9 +23,11 @@ FLEX_REQD=	2.5.31
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 REPLACE_QORE=		doxygen/qdx
 
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	autoheader; autoconf
+CONFIGURE_ARGS+=--with-libsuffix=""
+
+#pre-configure:
+#	set -e; cd ${WRKSRC}; \
+#	autoheader; autoconf
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
