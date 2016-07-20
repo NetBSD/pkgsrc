@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/07/16 20:00:14 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2016/07/20 12:04:15 wiz Exp $
 
 DISTNAME=	autogen-5.18.10
 CATEGORIES=	devel
@@ -16,8 +16,8 @@ USE_LIBTOOL=		yes
 INFO_FILES=		yes
 
 # embedded in some installed tools
-CONFIGURE_ENV+=	POSIX_SHELL=${PREFIX}/bin/bash
-CONFIG_SHELL=	${PREFIX}/bin/bash
+CONFIG_SHELL=	${TOOLS_PATH.bash}
+CONFIGURE_ENV+=	POSIX_SHELL=${CONFIG_SHELL:Q}
 MAKE_ENV+=	PERL5=${PERL5}
 
 .include "../../lang/guile20/buildlink3.mk"
