@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 19:24:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/20 12:19:03 mef Exp $
 #
 
-DISTNAME=	RT-Client-REST-0.49
+DISTNAME=	RT-Client-REST-0.50
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RT/}
 
@@ -20,6 +19,11 @@ DEPENDS+=	p5-Error-[0-9]*:../../devel/p5-Error
 DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
+
+# for make test
+BUILD_DEPENDS+=	p5-DateTime-Format-DateParse-[0-9]*:../../time/p5-DateTime-Format-DateParse
+BUILD_DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
+BUILD_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
