@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/06/08 19:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/07/20 11:19:03 mef Exp $
 #
 
 DISTNAME=	MooseX-ClassAttribute-0.29
@@ -19,6 +19,8 @@ DEPENDS+=	p5-Moose>=2.00:../../devel/p5-Moose
 DEPENDS+=	p5-namespace-autoclean>=0.11:../../devel/p5-namespace-autoclean
 
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
+# for make test
+#BUILD_DEPENDS+=	p5-MooseX-Role-Strict-[0-9]*:../../devel/p5-MooseX-Role-Strict 
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
