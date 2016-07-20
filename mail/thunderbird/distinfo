@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.180 2016/06/19 06:34:26 ryoon Exp $
+$NetBSD: distinfo,v 1.181 2016/07/20 11:45:59 ryoon Exp $
 
-SHA1 (thunderbird-45.1.1.source.tar.xz) = d26eec3a8a12374c87d01a2f67cff9118860b5f2
-RMD160 (thunderbird-45.1.1.source.tar.xz) = de3814a9c18905ca3a99d18c2612a2d0bab36cec
-SHA512 (thunderbird-45.1.1.source.tar.xz) = 13b713b0cff8de7e0feaf80038f0959355de6c5efb7bb6c4a02dd0d8e331df51f846ffb10e4e98acd7ab261e97aeb73e9c2539f535354626cdcfc9c17b754caa
-Size (thunderbird-45.1.1.source.tar.xz) = 201012896 bytes
+SHA1 (thunderbird-45.2.0.source.tar.xz) = 45bc0a5560e6108bf877ec749f1902e03a6ae3d7
+RMD160 (thunderbird-45.2.0.source.tar.xz) = 2967390f2c5f5efef6082660cf8af29e7a81ef90
+SHA512 (thunderbird-45.2.0.source.tar.xz) = 325aba6cc62fd86267a9ee63a01b114eb75cd256e19b11bbac4576abef3fff918426670254115e619527a1336d53badb54b079df7628117d91ccdcd0cc7e2e81
+Size (thunderbird-45.2.0.source.tar.xz) = 201023884 bytes
 SHA1 (patch-calendar_lightning_Makefile.in) = 02a1528f2da82f1d4ff4931a7d7dc8227b7fa9f2
 SHA1 (patch-calendar_lightning_build_universal.mk) = 86dc2c6b4f9feb835570111078aa5d08a389d0da
 SHA1 (patch-calendar_providers_gdata_Makefile.in) = 0e90ddc9aecc817b0b150bbc37d23ddec97b093e
