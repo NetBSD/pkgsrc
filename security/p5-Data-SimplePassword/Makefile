@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/07/20 12:32:26 mef Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/20 13:50:57 mef Exp $
 #
 
 DISTNAME=		Data-SimplePassword-0.11
@@ -24,6 +24,8 @@ DEPENDS+=	p5-Math-Random-MT-[0-9]*:../../math/p5-Math-Random-MT
 # for make test
 BUILD_DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 BUILD_DEPENDS+=	p5-Moo>=1.001:../../devel/p5-Moo
+BUILD_DEPENDS+=	p5-MooX-ClassAttribute-[0-9]*:../../devel/p5-MooX-ClassAttribute
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
 REPLACE_PERL+=	script/rndpassword
 
