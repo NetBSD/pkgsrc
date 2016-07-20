@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/20 23:15:52 cheusov Exp $
+bin/csvbreak
+bin/csvcheck
+bin/csvcount
+bin/csvcut
+bin/csvfix
+bin/csvgrep
+man/man1/csvbreak.1
+man/man1/csvcheck.1
+man/man1/csvcount.1
+man/man1/csvcut.1
+man/man1/csvfix.1
+man/man1/csvgrep.1
+man/man1/csvutils.1
