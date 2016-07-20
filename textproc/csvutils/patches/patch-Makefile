@@ -1,0 +1,76 @@
+$NetBSD: patch-Makefile,v 1.1 2016/07/20 23:15:52 cheusov Exp $
+
+o Do not force various variables and do not ignore user's CFLAGS and LDFLAGS.
+o Properly use DESTDIR, PREFIX and MANDIR.
+o Convert INCLUDES to INCS, add LIBS and also honor other include.
+
+--- Makefile.orig	2008-07-26 23:09:18.000000000 +0000
++++ Makefile
+@@ -1,9 +1,13 @@
+-CC=gcc
+-CFLAGS=-Wall -ansi
+-DESTDIR=/usr/local/bin
+-MANDIR=/usr/share/man/man1
+-INCLUDES=-I include
+-CPPFLAGS=
++CC?=gcc
++
++PREFIX?=/usr/local
++MANDIR?=man
++
++INCS = -I ./include -I ${PREFIX}/include
++LIBS = -L ${PREFIX}/lib
++
++CFLAGS += -Wall -ansi ${INCS}
++LDFLAGS += ${LIBS}
+ 
+ VPATH=src
+ 
+@@ -15,35 +19,35 @@ csvcut csvgrep csvcount csvcheck csvfix 
+ csvcut csvgrep csvcount csvcheck csvfix csvbreak: helper.o
+ 
+ csvcut: csvcut.c 
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) $^ -o $@ -lcsv
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lcsv
+ 
+ csvgrep: csvgrep.c 
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) $^ -o $@ -lcsv -lpcre
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lcsv -lpcre
+ 
+ csvcount: csvcount.c 
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) $^ -o $@ -lcsv
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lcsv
+ 
+ csvcheck: csvcheck.c 
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) $^ -o $@ -lcsv
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lcsv
+ 
+ csvfix: csvfix.c 
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) $^ -o $@ -lcsv
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lcsv
+ 
+ csvbreak: csvbreak.c 
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) $^ -o $@ -lcsv
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ -o $@ -lcsv
+ 
+ version.o: version.c
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) -c $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -c $<
+ 
+ helper.o: helper.c
+-	$(CC) $(CPPFLAGS) $(CFLAGS) $(INCLUDES) -c $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -c $<
+ 
+ install_utils: csvcut csvgrep csvcount csvcheck csvfix csvbreak
+-	cp -f $^ $(DESTDIR)
++	cp -f $^ $(DESTDIR)$(PREFIX)/bin
+ 
+-install_man: csvutils.1.gz csvcut.1.gz csvgrep.1.gz csvcount.1.gz \
+-             csvcheck.1.gz csvfix.1.gz csvbreak.1.gz
+-	cp -f $^ $(MANDIR)
++install_man: csvutils.1 csvcut.1 csvgrep.1 csvcount.1 \
++             csvcheck.1 csvfix.1 csvbreak.1
++	cp -f $^ $(DESTDIR)$(PREFIX)/$(MANDIR)/man1
+ 
+ clean:
+ 	rm *.o csvcut csvgrep csvcount csvcheck csvfix csvbreak
