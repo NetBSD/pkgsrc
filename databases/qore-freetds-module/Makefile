@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:28:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/20 12:20:02 nros Exp $
 
-DISTNAME=	qore-sybase-modules-1.0.3
+DISTNAME=	qore-sybase-modules-1.0.4
 PKGNAME=	${DISTNAME:S/sybase-modules/freetds-module/}
-PKGREVISION=	6
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=qorelanguage/}
+EXTRACT_SUFX=	.tar.bz2
+GITHUB_PROJECT=	module-sybase
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	nros@users.sourceforge.net
+MAINTAINER=	nros@netbsd.org
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	Freetds DB driver for qore
 LICENSE=	gnu-lgpl-v2.1
@@ -14,14 +16,16 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pax
 PTHREAD_OPTS+=	require
 
 CONFIGURE_ARGS+=--with-sybase=no
+CONFIGURE_ARGS+=--with-libsuffix=""
 
-INSTALLATION_DIRS+=     share/doc/qore-freetds-module
+INSTALLATION_DIRS+=     share/doc/${PKGBASE}
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/sybase-module-doc.html \
-	${DESTDIR}${PREFIX}/share/doc/qore-freetds-module/freetds-module-doc.html
+	cd ${WRKSRC}/docs/sybase && ${PAX} -wr * \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "options.mk"
 
