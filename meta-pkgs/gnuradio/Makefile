@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2016/06/16 14:05:38 mef Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/20 23:59:56 gdt Exp $
 
 META_PACKAGE=	yes
 
 .include	"../../ham/gnuradio-core/Makefile.version"
 
 DISTNAME=       gnuradio-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs ham
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,8 +23,7 @@ DEPENDS+=	gnuradio-core-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core
 DEPENDS+=	gnuradio-ctrlport-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-ctrlport
 
 DEPENDS+=	gnuradio-digital-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-digital
-# dropped, for unstable with doxygen update
-#EPENDS+=	gnuradio-doxygen-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-doxygen
+DEPENDS+=	gnuradio-doxygen-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-doxygen
 DEPENDS+=	gnuradio-dtv-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-dtv
 DEPENDS+=	gnuradio-fcd-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fcd
 DEPENDS+=	gnuradio-fec-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fec
