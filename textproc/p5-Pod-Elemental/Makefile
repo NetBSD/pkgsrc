@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/06/08 19:24:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/07/20 11:25:22 mef Exp $
 
 DISTNAME=	Pod-Elemental-0.103004
 PKGNAME=	p5-${DISTNAME}
@@ -25,6 +25,8 @@ DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
+# for make test
+BUILD_DEPENDS+=p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=		auto/Pod/Elemental/.packlist
 
