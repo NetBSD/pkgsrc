@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2016/07/15 11:18:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.57 2016/07/20 23:42:12 sevan Exp $
 
 DISTNAME=	mdocml-1.13.4
 CATEGORIES=	textproc devel
@@ -33,6 +33,10 @@ post-extract:
 	${ECHO} INSTALL_MAN=\"${INSTALL_MAN:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL_DATA=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} MANM_ROFF="mandoc-roff" >> ${WRKSRC}/configure.local
+# Need -lrt for nanosleep(2) on Solaris.
+.if ${OPSYS} == "SunOS"
+	${ECHO} LDADD=\"-lrt\" >> ${WRKSRC}/configure.local
+.endif
 # Mac OS X and Solaris 10 and newer do not support static binaries.
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
 	${ECHO} STATIC= >> ${WRKSRC}/configure.local
