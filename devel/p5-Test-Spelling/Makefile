@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/20 11:26:54 mef Exp $
 
 DISTNAME=	Test-Spelling-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,10 @@ LICENSE=        ${PERL5_LICENSE}
 DEPENDS+=	p5-Module-Install-GithubMeta-[0-9]*:../../devel/p5-Module-Install-GithubMeta
 DEPENDS+=	p5-Module-Manifest-Skip-[0-9]*:../../devel/p5-Module-Manifest-Skip
 DEPENDS+=	p5-Pod-Spell-[0-9]*:../../textproc/p5-Pod-Spell
+
+# for make test:
+BUILD_DEPENDS+= p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
+BUILD_DEPENDS+= p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 
 USE_LANGUAGES=  # empty
 PERL5_PACKLIST= auto/Test/Spelling/.packlist
