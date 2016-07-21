@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.33 2016/07/09 06:39:12 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2016/07/21 13:12:25 wiz Exp $
 
-PKGREVISION= 1
 .include "../../devel/git/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/git/gitweb/}
