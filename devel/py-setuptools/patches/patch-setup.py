@@ -1,12 +1,12 @@
-$NetBSD: patch-setup.py,v 1.2 2014/01/06 14:42:34 wiz Exp $
+$NetBSD: patch-setup.py,v 1.3 2016/07/21 12:54:49 wiz Exp $
 
 Do not install easy_install without python version suffix to allow
 parallel installation of this package for multiple python versions.
 
---- setup.py.orig	2013-12-13 16:31:50.000000000 +0000
+--- setup.py.orig	2016-07-14 05:17:28.000000000 +0000
 +++ setup.py
-@@ -30,7 +30,7 @@ from setuptools.command.test import test
- scripts = []
+@@ -28,7 +28,7 @@ scripts = []
+ 
  
  def _gen_console_scripts():
 -    yield "easy_install = setuptools.command.easy_install:main"
