@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16156 2016/07/21 12:30:06 wiz Exp $
+$NetBSD: TODO,v 1.16157 2016/07/21 12:43:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1250,7 +1250,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IP-Country-3.03
 	o p5-JSON-Any-1.39
 	o p5-LWP-Protocol-PSGI-0.09
-	o p5-List-MoreUtils-0.416
 	o p5-Locale-Codes-3.38
 	o p5-Locale-Currency-Format-1.35
 	o p5-Math-BigInt-GMP-1.49
