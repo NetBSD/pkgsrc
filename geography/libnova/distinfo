@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/07/14 12:52:48 is Exp $
+$NetBSD: distinfo,v 1.4 2016/07/21 11:38:41 wiz Exp $
 
 SHA1 (libnova-0.15.0.tar.gz) = 4b8d04cfca0be8d49c1ef7c3607d405a7a8b167d
 RMD160 (libnova-0.15.0.tar.gz) = ce71fd30124296d22a1f6eb7f306d2e824597948
 SHA512 (libnova-0.15.0.tar.gz) = 77ab0ccbfe462c03a21e88656cb4d6389994ea1da0ee8da997f19a83d24ad8fd9e505e70e1580b75332e826e5b7859b5f2af4417f65eb811440493ba586f2574
 Size (libnova-0.15.0.tar.gz) = 1533794 bytes
-
