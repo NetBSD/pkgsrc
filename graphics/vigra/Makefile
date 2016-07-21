@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.27 2014/08/22 11:24:36 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2016/07/21 19:24:26 adam Exp $
 
-DISTNAME=	vigra-1.10.0-src-with-docu
-PKGNAME=	vigra-1.10.0
-PKGREVISION=	1
+DISTNAME=	vigra-1.11.0-src
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	graphics
-MASTER_SITES=	https://github.com/ukoethe/vigra/releases/download/Version-1-10-0/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ukoethe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hci.iwr.uni-heidelberg.de/vigra/
+HOMEPAGE=	https://ukoethe.github.io/vigra/
 COMMENT=	Computer vision library
 LICENSE=	mit
 
+GITHUB_PROJECT=	vigra
+GITHUB_RELEASE=	Version-1-11-0
 EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
