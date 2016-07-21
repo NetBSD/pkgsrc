@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2910 2016/07/21 12:27:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2911 2016/07/21 12:30:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4219,3 +4219,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-CGI to 4.32 [wiz 2016-07-21]
 	Updated time/p5-DateTime-TimeZone to 2.01 [wiz 2016-07-21]
 	Updated devel/p5-File-Next to 1.16 [wiz 2016-07-21]
+	Updated security/p5-IO-Socket-SSL to 2.033 [wiz 2016-07-21]
