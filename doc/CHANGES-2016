@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2902 2016/07/21 12:07:22 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2903 2016/07/21 12:13:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xpad to 4.8.0 [mef 2016-07-21]
 	Updated devel/libidn to 1.33 [wiz 2016-07-21]
 	Updated devel/afl to 2.19b [wiz 2016-07-21]
+	Updated devel/py-ipython to 3.2.1nb1 [wiz 2016-07-21]
