@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2907 2016/07/21 12:24:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2908 2016/07/21 12:26:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4216,3 +4216,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/xine-lib to 1.2.6nb7 [wiz 2016-07-21]
 	Updated audio/chromaprint to 1.3.2 [wiz 2016-07-21]
 	Updated audio/libopus to 1.1.3 [wiz 2016-07-21]
+	Updated www/p5-CGI to 4.32 [wiz 2016-07-21]
