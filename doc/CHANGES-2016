@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2913 2016/07/21 12:38:16 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2914 2016/07/21 12:43:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4222,3 +4222,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-IO-Socket-SSL to 2.033 [wiz 2016-07-21]
 	Updated security/mozilla-rootcerts to 1.0.20160610 [wiz 2016-07-21]
 	Updated security/mozilla-rootcerts-openssl to 2 [wiz 2016-07-21]
+	Updated devel/p5-List-MoreUtils to 0.416 [wiz 2016-07-21]
