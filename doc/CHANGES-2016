@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2904 2016/07/21 12:14:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2905 2016/07/21 12:21:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4213,3 +4213,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.19b [wiz 2016-07-21]
 	Updated devel/py-ipython to 3.2.1nb1 [wiz 2016-07-21]
 	Updated x11/libdrm to 2.4.69 [wiz 2016-07-21]
+	Updated multimedia/xine-lib to 1.2.6nb7 [wiz 2016-07-21]
