@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/01/25 08:33:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/07/21 11:10:02 mef Exp $
 bin/xpad
 man/man1/xpad.1
 share/applications/xpad.desktop
@@ -31,3 +31,4 @@ share/locale/tr/LC_MESSAGES/xpad.mo
 share/locale/vi/LC_MESSAGES/xpad.mo
 share/locale/zh_CN/LC_MESSAGES/xpad.mo
 share/locale/zh_TW/LC_MESSAGES/xpad.mo
+share/xpad/help/xpad-user-help.txt
