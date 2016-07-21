@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.78 2016/06/11 14:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2016/07/21 13:48:49 adam Exp $
 
 DISTNAME=	scummvm-1.8.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scummvm/}
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://scummvm.sourceforge.net/
@@ -14,22 +15,26 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bsdtar gmake
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-optimizations
+CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 UNLIMIT_RESOURCES=	datasize
-
 EXTRACT_USING=		bsdtar
 
-.include "options.mk"
-
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.1
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
+.include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
