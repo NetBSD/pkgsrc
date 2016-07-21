@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2015/04/25 14:25:25 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2016/07/21 11:10:02 mef Exp $
 #
 
-DISTNAME=	xpad-4.0
-PKGREVISION=	16
+DISTNAME=	xpad-4.8.0
 CATEGORIES=	x11
 MASTER_SITES=	http://launchpad.net/xpad/trunk/${PKGVERSION_NOREV}/+download/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
