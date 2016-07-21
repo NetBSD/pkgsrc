@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2898 2016/07/20 23:16:05 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2899 2016/07/21 09:41:00 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4207,3 +4207,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/qore-ssh2-module to 1.0 [nros 2016-07-20]
 	Added textproc/libcsv version 3.0.3 [cheusov 2016-07-20]
 	Added textproc/csvutils version 0.9.3 [cheusov 2016-07-20]
+	Updated sysutils/intel-microcode-netbsd to 20160714 [msaitoh 2016-07-21]
