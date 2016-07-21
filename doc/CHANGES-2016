@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2916 2016/07/21 12:51:22 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2917 2016/07/21 12:53:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-List-MoreUtils to 0.416 [wiz 2016-07-21]
 	Updated audio/libopenmpt to 0.2.6611 [wiz 2016-07-21]
 	Updated net/p5-Socket6 to 0.28 [wiz 2016-07-21]
+	Updated databases/py-psycopg2 to 2.6.2 [wiz 2016-07-21]
