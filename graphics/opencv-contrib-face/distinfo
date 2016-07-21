@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2016/05/05 06:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.4 2016/07/21 11:39:58 wiz Exp $
 
 SHA1 (opencv-3.1.0.zip) = 8c932b68fe2e1575e88dde759ab1ed1d53d6f41b
 RMD160 (opencv-3.1.0.zip) = d7a811c67cfb16243470822150760252d5770165
@@ -14,6 +14,7 @@ SHA1 (patch-apps_createsamples_CMakeLists.txt) = 2d60ecc0e1674cde4414e91e837c24f
 SHA1 (patch-apps_traincascade_CMakeLists.txt) = 7114cc4c2057e12dc8e47bc61334cb8e175987eb
 SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = 221b0551d0f29d7e79afe3da8a33b1b3a4f7bf20
 SHA1 (patch-cmake_OpenCVModule.cmake) = 7667f19f3e9c6ff757d92a6a49e7c3430c6c080d
+SHA1 (patch-cmake_OpenCVPCHSupport.cmake) = 237fa2d000c402c55dfdbec3e27c89cffdfde8b1
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
 SHA1 (patch-modules_core_src_parallel__pthreads.cpp) = c64ef8872c120db0ab92582496235858eec9bf92
