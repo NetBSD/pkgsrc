@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2918 2016/07/21 12:54:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2919 2016/07/21 12:57:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4227,3 +4227,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Socket6 to 0.28 [wiz 2016-07-21]
 	Updated databases/py-psycopg2 to 2.6.2 [wiz 2016-07-21]
 	Updated devel/py-setuptools to 24.0.3 [wiz 2016-07-21]
+	Updated devel/py-tortoisehg to 3.8.4 [wiz 2016-07-21]
