@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/22 13:12:17 nros Exp $
 
 DISTNAME=	qore-opengl-module-0.0.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
-MAINTAINER=	nros@users.sourceforge.net
+MAINTAINER=	nros@netbsd.org
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	OpenGL Qore bindings
 LICENSE=	gnu-lgpl-v2.1
