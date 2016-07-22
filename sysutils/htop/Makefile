@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2016/05/06 16:00:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2016/07/22 05:30:58 maya Exp $
 
-DISTNAME=	htop-2.0.1
+DISTNAME=	htop-2.0.2
 PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hisham.hm/htop/releases/${PKGVERSION_NOREV}/

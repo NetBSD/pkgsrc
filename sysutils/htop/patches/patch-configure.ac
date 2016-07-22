@@ -1,34 +1,19 @@
-$NetBSD: patch-configure.ac,v 1.4 2016/05/06 16:00:47 fhajny Exp $
+$NetBSD: patch-configure.ac,v 1.5 2016/07/22 05:30:58 maya Exp $
 
 Add minimal NetBSD support.
 
---- configure.ac.orig	2016-03-07 21:12:25.000000000 +0000
+--- configure.ac.orig	2016-07-21 19:54:31.000000000 +0000
 +++ configure.ac
-@@ -39,6 +39,12 @@ case "$target" in
- *darwin*)
-    my_htop_platform=darwin
+@@ -31,7 +31,7 @@ LT_INIT([disable-shared static])
+ # Checks for platform.
+ # ----------------------------------------------------------------------
+ case "$target_os" in
+-linux*|gnu*)
++linux*|gnu*|*solaris*|*netbsd*)
+    my_htop_platform=linux
     ;;
-+*netbsd*)
-+   my_htop_platform=linux
-+   ;;
-+*solaris*)
-+   my_htop_platform=linux
-+   ;;
- *)
-    my_htop_platform=unsupported
-    ;;
-@@ -211,6 +217,10 @@ if test "$my_htop_platform" = "openbsd";
-    AC_CHECK_LIB([kvm], [kvm_open], [], [missing_libraries="$missing_libraries libkvm"])
- fi
- 
-+if test "$my_htop_platform" = "netbsd"; then
-+   AC_CHECK_LIB([kvm], [kvm_open], [], [missing_libraries="$missing_libraries libkvm"])
-+fi
-+
- AC_ARG_ENABLE(linux_affinity, [AC_HELP_STRING([--enable-linux-affinity], [enable Linux sched_setaffinity and sched_getaffinity for affinity support, disables hwloc])], ,enable_linux_affinity="yes")
- if test "x$enable_linux_affinity" = xyes -a "x$cross_compiling" = xno; then
-    AC_MSG_CHECKING([for usable sched_setaffinity])
-@@ -256,6 +266,8 @@ AM_CONDITIONAL([HTOP_LINUX], [test "$my_
+ freebsd*|kfreebsd*)
+@@ -266,6 +266,8 @@ AM_CONDITIONAL([HTOP_LINUX], [test "$my_
  AM_CONDITIONAL([HTOP_FREEBSD], [test "$my_htop_platform" = freebsd])
  AM_CONDITIONAL([HTOP_OPENBSD], [test "$my_htop_platform" = openbsd])
  AM_CONDITIONAL([HTOP_DARWIN], [test "$my_htop_platform" = darwin])
