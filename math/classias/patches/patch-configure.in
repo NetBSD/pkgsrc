@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2016/07/22 02:45:44 cheusov Exp $
+
+# support for ld -rpath
+
+--- configure.in.orig	2015-04-19 15:01:12.000000000 +0000
++++ configure.in
+@@ -115,7 +115,7 @@ dnl Check for math library
+ AC_ARG_WITH(
+ 	liblbfgs,
+ 	[AS_HELP_STRING([--with-liblbfgs=DIR],[liblbfgs directory])],
+-	[INCLUDES="-I${withval}/include ${INCLUDES}"; LDFLAGS="-L${withval}/lib ${LDFLAGS}"]
++	[INCLUDES="-I${withval}/include ${INCLUDES}"; LDFLAGS="-L${withval}/lib -Wl,-rpath,${withval}/lib ${LDFLAGS}"]
+ )
+ dnl AC_ARG_WITH(
+ dnl 	boost,
