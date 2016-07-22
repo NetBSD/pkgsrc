@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/07/03 13:20:59 morr Exp $
+# $NetBSD: Makefile,v 1.44 2016/07/22 10:33:31 jperkin Exp $
 
 PKGNAME=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}
 COMMENT=		Data files for the vim editor (vi clone)
@@ -10,6 +10,7 @@ CONFIGURE_ARGS+=	--without-x
 
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installruntime installmacros installtutor installtools
+USE_LANGUAGES+=		c99
 USE_TOOLS+=		awk
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} TOOLS_AWK=${TOOLS_AWK} TOOLS_SETENV=${TOOLS_SETENV}
 
