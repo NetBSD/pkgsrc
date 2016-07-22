@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2930 2016/07/22 02:46:01 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2931 2016/07/22 05:31:23 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4239,3 +4239,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added cad/py-gds version 0.7.1 [mef 2016-07-22]
 	Updated cad/py-gds to 0.9 [mef 2016-07-22]
 	Added math/classias version 1.1.0.20160722 [cheusov 2016-07-22]
+	Updated sysutils/htop to 2.0.2nb1 [maya 2016-07-22]
