@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:27:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/22 13:16:39 nros Exp $
 
 DISTNAME=	qore-glut-module-0.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
-MAINTAINER=	nros@users.sourceforge.net
+MAINTAINER=	nros@netbsd.org
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	GLUT Qore bindings
 LICENSE=	gnu-lgpl-v2.1

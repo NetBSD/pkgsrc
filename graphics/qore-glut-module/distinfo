@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/07/22 13:16:39 nros Exp $
 
 SHA1 (qore-glut-module-0.0.3.tar.gz) = 59c5ba422fedff6cc53bf518c975a81cfbcd5e85
 RMD160 (qore-glut-module-0.0.3.tar.gz) = 63130c9996b4312c1d135b408848f357cdfeb686
 SHA512 (qore-glut-module-0.0.3.tar.gz) = 86cb6cdec5afc94cf27039e1f9839bc9dcc35c25f80f84424419b5edb4805ce1057e68003306f052853618aa21c22ffcfbedfe207e26bb692ccbe5b7698565d5
 Size (qore-glut-module-0.0.3.tar.gz) = 383235 bytes
 SHA1 (patch-configure) = 5258dda7b25c3a19542553baf96f9952c24db413
-SHA1 (patch-src_glut.cc) = 5025bf224159c68144d7954ce6b6a6a8a330f56c
+SHA1 (patch-src_glut.cc) = 31162925c458a01f165f101d6b8433733111a106
