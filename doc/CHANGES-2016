@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2927 2016/07/21 19:25:22 adam Exp $
+$NetBSD: CHANGES-2016,v 1.2928 2016/07/22 00:04:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4236,3 +4236,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libfilezilla to 0.5.3nb1 [wiz 2016-07-21]
 	Updated net/filezilla to 3.19.0nb1 [wiz 2016-07-21]
 	Updated graphics/vigra to 1.11.0 [adam 2016-07-21]
+	Added cad/py-gds version 0.7.1 [mef 2016-07-22]
