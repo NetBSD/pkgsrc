@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2016/03/05 11:29:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/22 12:53:33 nros Exp $
 
 DISTNAME=	qore-asn1-module-0.0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qore/}
 
-MAINTAINER=	nros@users.sourceforge.net
+MAINTAINER=	nros@netbsd.org
 HOMEPAGE=	http://www.qore.org/
 COMMENT=	ASN.1 Qore module
 LICENSE=	gnu-lgpl-v2.1
