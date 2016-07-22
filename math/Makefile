@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.322 2016/07/22 02:47:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.323 2016/07/22 02:47:47 cheusov Exp $
 
 COMMENT=	Mathematics
 
@@ -76,6 +76,7 @@ SUBDIR+=	calcoo
 SUBDIR+=	cantor
 SUBDIR+=	capc-calc
 SUBDIR+=	cgal
+SUBDIR+=	classias
 SUBDIR+=	clisp-pari
 SUBDIR+=	cln
 SUBDIR+=	cloog
