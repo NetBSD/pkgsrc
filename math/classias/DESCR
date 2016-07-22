@@ -1,0 +1,12 @@
+Classias is a collection of machine-learning algorithms for
+classification. Currently, it supports the following formalizations:
+    L1/L2-regularized logistic regression (aka. Maximum Entropy)
+    L1/L2-regularized L1-loss linear-kernel Support Vector Machine (SVM)
+    Averaged perceptron
+It implements several algorithms for training classifiers:
+    Averaged perceptron
+    Limited-memory Broyden-Fletcher-Goldfarb-Shanno (L-BFGS) [Nocedal80]
+    Orthant-Wise Limited-memory Quasi-Newton (OWL-QN) [Andrew07]
+    Primal Estimated sub-GrAdient SOlver (Pegasos) [Shalev-Shwartz07]
+    Truncated Gradient [Langford09], also known as FOrward LOoking
+    Subgradient (FOLOS) [Duchi09] specialized for L1 regularization
