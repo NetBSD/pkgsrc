@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/22 00:02:56 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/22 00:21:23 mef Exp $
 ${PYSITELIB}/gdspy/__init__.py
 ${PYSITELIB}/gdspy/__init__.pyc
 ${PYSITELIB}/gdspy/__init__.pyo
 ${PYSITELIB}/gdspy/boolext.so
+${PYSITELIB}/gdspy/clipper.so
 ${PYSITELIB}/gdspy/data/00.xbm
 ${PYSITELIB}/gdspy/data/01.xbm
 ${PYSITELIB}/gdspy/data/02.xbm
