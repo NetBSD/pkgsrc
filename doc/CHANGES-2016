@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2932 2016/07/22 05:45:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2933 2016/07/22 10:30:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/py-gds to 0.9 [mef 2016-07-22]
 	Added math/classias version 1.1.0.20160722 [cheusov 2016-07-22]
 	Updated sysutils/htop to 2.0.2 [maya 2016-07-22]
+	Updated graphics/freetype2 to 2.6.5 [adam 2016-07-22]
