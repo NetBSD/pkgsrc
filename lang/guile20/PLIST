@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/16 09:17:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/07/22 12:19:15 jperkin Exp $
 guile/2.0/bin/guild
 guile/2.0/bin/guile
 guile/2.0/bin/guile-config
@@ -396,7 +396,7 @@ guile/2.0/lib/libguile-2.0.la
 guile/2.0/lib/libguile-2.0.so.22.8.0-gdb.scm
 guile/2.0/lib/libguilereadline-v-18.la
 guile/2.0/lib/pkgconfig/guile-2.0.pc
-guile/2.0/man/man1/guile.1
+guile/2.0/${PKGMANDIR}/man1/guile.1
 guile/2.0/share/aclocal/guile.m4
 guile/2.0/share/guile/2.0/guile-procedures.txt
 guile/2.0/share/guile/2.0/ice-9/and-let-star.scm
