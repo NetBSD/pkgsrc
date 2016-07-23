@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2939 2016/07/23 15:20:17 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2940 2016/07/23 17:28:22 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4247,3 +4247,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-sqlalchemy to 1.0.14 [adam 2016-07-22]
 	Updated comms/asterisk to 11.23.0 [jnemeth 2016-07-23]
 	Updated lang/python27 to 2.7.12nb2 [kamil 2016-07-23]
+	Updated graphics/py-OpenGL to 3.0.1nb7 [kamil 2016-07-23]
