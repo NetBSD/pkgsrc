@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2016/07/23 18:28:26 kamil Exp $
+# $NetBSD: Makefile,v 1.65 2016/07/23 21:12:48 kamil Exp $
 
 .include "dist.mk"
 
@@ -186,6 +186,9 @@ SUBST_STAGE.cdlopen=	pre-configure
 SUBST_FILES.cdlopen=	setup.py
 SUBST_VARS.cdlopen=	X11BASE
 
+# Required to detect X11BASE paths in dlopen(3) calls of _ctypes.so
+USE_X11=		yes
+
 SUBST_CLASSES+=		sslbase
 SUBST_MESSAGE.sslbase=	Fixing find-file for openssl with SSLBASE.
 SUBST_STAGE.sslbase=	pre-configure
@@ -224,6 +227,4 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-# Required to detect X11BASE paths in dlopen(3) calls of _ctypes.so
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
