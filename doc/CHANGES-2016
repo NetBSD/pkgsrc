@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2943 2016/07/23 23:47:09 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2944 2016/07/23 23:57:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4251,3 +4251,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/python27 to 2.7.12nb3 [kamil 2016-07-23]
 	Updated www/p5-Mojolicious to 7.0 [wen 2016-07-23]
 	Updated www/p5-Dancer2 to 0.201000 [wen 2016-07-23]
+	Updated www/p5-ParallelUserAgent to 2.62 [wen 2016-07-23]
