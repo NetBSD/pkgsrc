@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2016/07/23 13:09:15 kamil Exp $
+# $NetBSD: Makefile,v 1.64 2016/07/23 18:28:26 kamil Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -180,6 +180,12 @@ SUBST_STAGE.pfindlib=	pre-configure
 SUBST_FILES.pfindlib=	Lib/ctypes/util.py
 SUBST_SED.pfindlib=	-e 's!\(-Wl,-t -o\)!${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \1!'
 
+SUBST_CLASSES+=		cdlopen
+SUBST_MESSAGE.cdlopen=	Handle X11BASE paths in dlopen(3) calls of _ctypes.so
+SUBST_STAGE.cdlopen=	pre-configure
+SUBST_FILES.cdlopen=	setup.py
+SUBST_VARS.cdlopen=	X11BASE
+
 SUBST_CLASSES+=		sslbase
 SUBST_MESSAGE.sslbase=	Fixing find-file for openssl with SSLBASE.
 SUBST_STAGE.sslbase=	pre-configure
@@ -218,4 +224,6 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+# Required to detect X11BASE paths in dlopen(3) calls of _ctypes.so
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
