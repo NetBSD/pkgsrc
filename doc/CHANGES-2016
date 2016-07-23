@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2941 2016/07/23 18:37:00 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2942 2016/07/23 23:32:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4249,3 +4249,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/python27 to 2.7.12nb2 [kamil 2016-07-23]
 	Updated graphics/py-OpenGL to 3.0.1nb7 [kamil 2016-07-23]
 	Updated lang/python27 to 2.7.12nb3 [kamil 2016-07-23]
+	Updated www/p5-Mojolicious to 7.0 [wen 2016-07-23]
