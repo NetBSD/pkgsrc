@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2016/07/08 11:11:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.64 2016/07/24 07:08:54 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1189,6 +1189,8 @@ lib/calibre/calibre/plugins/hunspell.so
 lib/calibre/calibre/plugins/icu.so
 lib/calibre/calibre/plugins/imageops.so
 lib/calibre/calibre/plugins/libheadless.so
+lib/calibre/calibre/plugins/libmtp.so
+lib/calibre/calibre/plugins/libusb.so
 lib/calibre/calibre/plugins/lzma_binding.so
 lib/calibre/calibre/plugins/lzx.so
 lib/calibre/calibre/plugins/matcher.so
@@ -1481,6 +1483,7 @@ share/calibre/catalog/section_list_templates.py
 share/calibre/catalog/stylesheet.css
 share/calibre/catalog/template.xhtml
 share/calibre/coffee-script.js
+share/calibre/common-user-agents.txt
 share/calibre/compiled_coffeescript.zip
 share/calibre/content-server/autoreload.js
 share/calibre/content-server/calibre.png

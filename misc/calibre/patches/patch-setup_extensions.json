@@ -1,0 +1,17 @@
+$NetBSD: patch-setup_extensions.json,v 1.1 2016/07/24 07:08:54 wiz Exp $
+
+Add X11 libraries to search path.
+XXX: should be using ${PREFIX} and ${X11BASE}
+
+--- setup/extensions.json.orig	2016-07-22 02:21:05.000000000 +0000
++++ setup/extensions.json
+@@ -141,7 +141,8 @@
+         "sources": "calibre/gui2/pictureflow/pictureflow.cpp",
+         "headers": "calibre/gui2/pictureflow/pictureflow.h",
+         "sip_files": "calibre/gui2/pictureflow/pictureflow.sip",
+-        "inc_dirs": "calibre/gui2/pictureflow"
++        "inc_dirs": "calibre/gui2/pictureflow",
++        "lib_dirs": "/usr/X11R7/lib /usr/pkg/X11R7/lib"
+     },
+     {
+         "name": "progress_indicator",
