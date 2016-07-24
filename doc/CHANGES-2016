@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2973 2016/07/24 07:11:49 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2974 2016/07/24 08:22:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4282,3 +4282,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Perl-APIReference to 0.22 [wen 2016-07-24]
 	Updated misc/calibre to 2.63.0 [wiz 2016-07-24]
 	Updated devel/p5-Perl6-Export-Attrs to 0.000005 [wen 2016-07-24]
+	Updated misc/p5-Locale-Codes to 3.39 [wen 2016-07-24]
