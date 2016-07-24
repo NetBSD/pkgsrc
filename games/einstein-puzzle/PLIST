@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/24 11:48:14 wiz Exp $
+bin/einstein
+libexec/einstein
+share/einstein/res/einstein.res
