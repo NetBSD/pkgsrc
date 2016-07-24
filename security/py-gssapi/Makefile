@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/24 18:49:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/24 18:56:21 agc Exp $
 
 DISTNAME=	gssapi-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,9 @@ HOMEPAGE=	https://pypi.python.org/pypi/gssapi
 COMMENT=	Low-level and high-level wrappers around GSSAPI C libraries
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-decorator-*:../../devel/py-decorator
-DEPENDS+=	${PYPKGPREFIX}-enum34-*:../../devel/py-enum34
-DEPENDS+=	${PYPKGPREFIX}-six-*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 AUTO_MKDIRS=	yes
 
