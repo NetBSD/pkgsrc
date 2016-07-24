@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2014/09/08 21:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/24 23:59:55 mef Exp $
 
-DISTNAME=	gocr-0.47
-PKGREVISION=	8
+DISTNAME=	gocr-0.48
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jocr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/jocr
 COMMENT=	GOCR is a set of OCR tools
+LICENSE=	gnu-gpl-v1
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
