@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/24 02:34:32 kamil Exp $
+bin/accelerator3d
+share/accelerator3d/bogon.wav
+share/accelerator3d/bullet.png
+share/accelerator3d/circuit.png
+share/accelerator3d/cluon.wav
+share/accelerator3d/crosshair.png
+share/accelerator3d/electricshock.wav
+share/accelerator3d/engine.wav
+share/accelerator3d/font.png
+share/accelerator3d/logo.png
+share/accelerator3d/menu_browse.wav
+share/accelerator3d/menu_select.wav
+share/accelerator3d/meters.png
+share/accelerator3d/neon.wav
+share/accelerator3d/phlogiston.png
+share/accelerator3d/phlogiston.wav
+share/accelerator3d/power.png
+share/accelerator3d/scrape.wav
+share/accelerator3d/shield.png
+share/accelerator3d/ship_explode.wav
+share/accelerator3d/shoot.wav
+share/accelerator3d/slam.wav
+share/accelerator3d/thud.wav
