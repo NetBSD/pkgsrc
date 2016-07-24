@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2948 2016/07/24 00:39:53 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2949 2016/07/24 00:45:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4256,3 +4256,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-LWP-ConsoleLogger to 0.000028 [wen 2016-07-24]
 	Updated www/p5-HTML-StripScripts to 1.06 [wen 2016-07-24]
 	Updated www/p5-FCGI to 0.78 [wen 2016-07-24]
+	Updated www/p5-CGI-Emulate-PSGI to 0.22 [wen 2016-07-24]
