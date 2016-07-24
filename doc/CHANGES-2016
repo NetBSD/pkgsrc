@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2963 2016/07/24 06:12:34 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2964 2016/07/24 06:18:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4272,3 +4272,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-App-Nopaste to 1.006 [wen 2016-07-24]
 	Updated time/p5-Time-HiRes to 1.9739 [wen 2016-07-24]
 	Updated time/p5-Time-Elapsed to 0.32 [wen 2016-07-24]
+	Updated textproc/p5-Regexp-Common to 2016060801 [wen 2016-07-24]
