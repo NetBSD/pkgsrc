@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.119 2016/05/30 11:42:19 jklos Exp $
+$NetBSD: distinfo,v 1.120 2016/07/24 18:38:34 wiz Exp $
 
-SHA1 (curl-7.49.1.tar.bz2) = 50db69ee612d36a465e2fec3a35028e11c2766bb
-RMD160 (curl-7.49.1.tar.bz2) = 9dd8e02043ad67ecd3e342b0cacebe9c88b21d32
-SHA512 (curl-7.49.1.tar.bz2) = 665ef178c282c14f429498547b3711ef79faf85f6db7f4ec24259e2c6247f6ee234dda158ebc207d03f08b5198c5844480e054f24f054b2de6c6a15d4f1ce6e6
-Size (curl-7.49.1.tar.bz2) = 7459866 bytes
+SHA1 (curl-7.50.0.tar.bz2) = 9faa508f8cf81d9ed38ee793dcd468921f21a3c5
+RMD160 (curl-7.50.0.tar.bz2) = 70bba7cd843b127dc7d87afd4d366f74a621dfa8
+SHA512 (curl-7.50.0.tar.bz2) = f431c9895d260ef77dcff29e868c8d5180800d12f2bd89da8942422cec454432717e6ede6484d6b6711cb2bdd85e7e8f6ae23c59fd1f5b69acd569570c8efdd8
+Size (curl-7.50.0.tar.bz2) = 7465962 bytes
 SHA1 (patch-aa) = 793701d5ecc3343170fb437906c9adb74763cd13
 SHA1 (patch-curl-config.in) = d0cc7bb6a5bf0b9257f40dcffce7093cc0098eb7
 SHA1 (patch-lib_hostcheck.c) = 8e772d3f91cdafae17281cc19004269ece0cf308
