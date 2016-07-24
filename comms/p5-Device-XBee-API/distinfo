@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:34:56 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/24 23:40:31 wen Exp $
 
-SHA1 (Device-XBee-API-0.7.tar.gz) = fb74c4ea196b5f761357e8cbafc5420b048a069f
-RMD160 (Device-XBee-API-0.7.tar.gz) = 29c130d98e3fd2016f815df3594694fe0ff5fc99
-SHA512 (Device-XBee-API-0.7.tar.gz) = 02054760765d0c414667e6c71055359460463cde6bfda341ad287834ab1f22a487459f1f77b9f19bc2fb5a90b9a26708307436fa64a3d0b0537190e002da84fe
-Size (Device-XBee-API-0.7.tar.gz) = 14479 bytes
+SHA1 (Device-XBee-API-0.8.tar.gz) = 14e78fee80bcd3ed9146a34a7a49c242f9bac126
+RMD160 (Device-XBee-API-0.8.tar.gz) = 5526cb57590f813a243556bf2554ab78fa8e4c16
+SHA512 (Device-XBee-API-0.8.tar.gz) = 983903c6c20e250ac9da69da56fe3bbed658cfe1730273f01aa45ab09e8b78401158bc042dbd7cc5a0a7108df26958fe836d39aab9d8e868eeda0f5482296831
+Size (Device-XBee-API-0.8.tar.gz) = 15926 bytes
