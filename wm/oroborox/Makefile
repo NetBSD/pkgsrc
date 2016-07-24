@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/04/25 14:24:59 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2016/07/24 20:12:34 rillig Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
@@ -65,21 +65,21 @@ BUILD_TARGET=		OroboROX
 CONFIGURE_DIRS=		src
 
 pre-configure:
-	cd ${WRKSRC:Q}/src && autoconf
+	cd ${WRKSRC}/src && autoconf
 
 post-build:
-	@${ECHO} "#!/bin/sh" >> ${WRKDIR:Q}/oroborox
-	@${ECHO} ${PREFIX:Q}"/share/rox/OroboROX/AppRun \"\$$@\"" >> ${WRKDIR:Q}/oroborox
+	@${ECHO} "#!/bin/sh" >> ${WRKDIR}/oroborox
+	@${ECHO} ${PREFIX}"/share/rox/OroboROX/AppRun \"\$$@\"" >> ${WRKDIR}/oroborox
 
 INSTALLATION_DIRS=	bin libexec/rox share/rox/OroboROX
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PLATFORM:Q}/OroboROX ${DESTDIR:Q}${PREFIX:Q}/libexec/rox
-	cd ${WRKSRC:Q} && pax -rw	\
+	${INSTALL_PROGRAM} ${WRKSRC}/${PLATFORM:Q}/OroboROX ${DESTDIR}${PREFIX}/libexec/rox
+	cd ${WRKSRC} && pax -rw	\
 		-s ',^\./${PLATFORM}$$,,' -s ',^\./${PLATFORM}/.*,,'	\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
-		. ${DESTDIR:Q}${PREFIX:Q}/share/rox/OroboROX
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/oroborox ${DESTDIR:Q}${PREFIX:Q}/bin
+		. ${DESTDIR}${PREFIX}/share/rox/OroboROX
+	${INSTALL_SCRIPT} ${WRKDIR}/oroborox ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

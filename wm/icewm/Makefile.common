@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.67 2014/01/05 12:29:33 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.68 2016/07/24 20:12:34 rillig Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
@@ -27,8 +27,8 @@ PKG_SYSCONFSUBDIR=	icewm
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-cfgdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-cfgdir=${PKG_SYSCONFDIR}
 .if ${X11_TYPE} != "native"
 .include "../../x11/libXinerama/buildlink3.mk"
 .elif !exists(${X11BASE}/include/X11/extensions/Xinerama.h)
