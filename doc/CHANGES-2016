@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2989 2016/07/24 19:25:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2990 2016/07/24 19:27:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4299,3 +4299,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/py-byterun version 20160218 [agc 2016-07-24]
 	Updated graphics/ImageMagick to 7.0.2.5 [wiz 2016-07-24]
 	Updated x11/libdrm to 2.4.70 [wiz 2016-07-24]
+	Updated devel/py-requests-toolbelt to 0.7.0 [wiz 2016-07-24]
