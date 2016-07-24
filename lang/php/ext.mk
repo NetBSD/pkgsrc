@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.40 2016/07/17 15:49:44 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.41 2016/07/24 14:01:55 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -49,16 +49,16 @@ EXTRACT_SUFX?=		.tgz
 .endif
 
 EGDIR=      ${PREFIX}/share/examples/php
-CONF_FILES= ${EGDIR}/${MODNAME}.ini ${EXT_CONF_DIR}/${MODNAME}.ini
+CONF_FILES= ${EGDIR}/${PKGMODNAME}.ini ${EXT_CONF_DIR}/${PKGMODNAME}.ini
 
 EXT_CONF_DIR=   ${PKG_SYSCONFDIR}/php.d
 MAKE_DIRS+=     ${EXT_CONF_DIR}
 MAKE_DIRS+=     ${EGDIR}
 
 SUBST_CLASSES+=     ext-ini
-SUBST_FILES.ext-ini=  ${MODNAME}.ini
+SUBST_FILES.ext-ini=  ${PKGMODNAME}.ini
 SUBST_MESSAGE.ext-ini=Creating module ini file 
-SUBST_SED.ext-ini+=    -e 's,@MODNAME@,${MODNAME},g'
+SUBST_SED.ext-ini+=    -e 's,@MODNAME@,${PKGMODNAME},g'
 SUBST_SED.ext-ini+=    -e 's,@EXTENSION_FILE@,${EXTENSION_FILE},g'
 SUBST_SED.ext-ini+=    -e 's,@EXTENSION_DIRECTIVE@,${EXTENSION_DIRECTIVE},g'
 SUBST_STAGE.ext-ini=  post-build
@@ -84,10 +84,10 @@ MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		EXT_CONF_DIR=${EXT_CONF_DIR}
 .if !empty(PHP_ZEND_EXTENSION:U:M[Yy][Ye][Ss])
 EXTENSION_DIRECTIVE=    zend_extension
-EXTENSION_FILE=         ${PREFIX}/${PHP_EXTENSION_DIR}/${MODNAME}.${SHLIB_SUFFIX}
+EXTENSION_FILE=         ${PREFIX}/${PHP_EXTENSION_DIR}/${PKGMODNAME}.${SHLIB_SUFFIX}
 .else
 EXTENSION_DIRECTIVE=    extension
-EXTENSION_FILE=         ${MODNAME}.${SHLIB_SUFFIX}
+EXTENSION_FILE=         ${PKGMODNAME}.${SHLIB_SUFFIX}
 .endif
 MESSAGE_SUBST+=		EXTENSION_DIRECTIVE=${EXTENSION_DIRECTIVE}
 MESSAGE_SUBST+=		EXTENSION_FILE=${EXTENSION_FILE}
@@ -119,7 +119,7 @@ phpize-module:
 	fi
 
 pre-build:
-	${CP} ${.CURDIR}/../../lang/php/ext.ini ${WRKSRC}/${MODNAME}.ini
+	${CP} ${.CURDIR}/../../lang/php/ext.ini ${WRKSRC}/${PKGMODNAME}.ini
 
 do-install: do-module-install
 
@@ -129,7 +129,7 @@ do-module-install:
 		${DESTDIR}${PREFIX}/${PHP_EXTENSION_DIR}
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/${MODNAME}.ini ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/${PKGMODNAME}.ini ${DESTDIR}${EGDIR}
 
 .if defined(USE_PHP_EXT_PATCHES)
 PATCHDIR=		${.CURDIR}/${PHPPKGSRCDIR}/patches
