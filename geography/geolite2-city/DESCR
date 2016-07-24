@@ -1,0 +1,12 @@
+GeoLite2 databases are free IP geolocation databases comparable to,
+but less accurate than, MaxMind's GeoIP2 databases.  GeoLite2
+databases are updated on the first Tuesday of each month.
+
+IP geolocation is inherently imprecise.  Locations are often near the
+center of the population.  Any location provided by a GeoIP database
+should not be used to identify a particular address or household.
+
+Use the Accuracy Radius as an indication of geolocation accuracy for
+the latitude and longitude coordinates we return for an IP address.
+The actual location of the IP address is likely within the area
+defined by this radius and the latitude and longitude coordinates.
