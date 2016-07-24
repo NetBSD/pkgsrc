@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/07/24 02:34:32 kamil Exp $
+
+SHA1 (accelerator-0.1.1.zip) = fa88ca364de50f4fe8df0a0c879ac1622824189a
+RMD160 (accelerator-0.1.1.zip) = e46fdbaee6803a089734e36a83ae9e0717783c83
+SHA512 (accelerator-0.1.1.zip) = 2b4f42429429f72e77a970c97343c6b54ec3dbce4cdba538e947107c98b4e6993ba7b9d71ee8fda2df766ca4cd2ab998503beb277e55aef75830db0f86aecfa6
+Size (accelerator-0.1.1.zip) = 1192989 bytes
+SHA1 (patch-accelerator.py) = 7615063f3933755461d53e1faee23994e63a94db
