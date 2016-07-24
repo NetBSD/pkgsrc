@@ -1,0 +1,15 @@
+$NetBSD: patch-test-driver,v 1.1 2016/07/24 19:00:13 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- test-driver.orig	2016-07-21 06:43:23.000000000 +0000
++++ test-driver
+@@ -59,7 +59,7 @@ enable_hard_errors=yes
+ while test $# -gt 1; do
+  arg=${1%=*}
+  val=${1#*=}
+- if [ $arg == $val ]; then
++ if [ $arg = $val ]; then
+    val=$2
+    shift
+  fi
