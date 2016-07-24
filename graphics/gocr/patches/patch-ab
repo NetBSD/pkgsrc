@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2009/07/21 20:23:55 brook Exp $
+$NetBSD: patch-ab,v 1.5 2016/07/24 23:59:55 mef Exp $
 
---- src/Makefile.in.orig	2005-02-28 14:40:39.000000000 +0000
-+++ src/Makefile.in
-@@ -37,6 +37,8 @@
+--- src/Makefile.in.orig	2009-04-09 18:06:53.000000000 +0900
++++ src/Makefile.in	2016-07-25 08:47:23.000000000 +0900
+@@ -37,6 +37,8 @@ LIBOBJS=pgm2asc.o \
  # these two lines are for cross-compiling, not tested
  #srcdir = @srcdir@
  #VPATH = @srcdir@
@@ -11,16 +11,7 @@ $NetBSD: patch-ab,v 1.4 2009/07/21 20:23:55 brook Exp $
  bindir = @bindir@
  #  lib removed for simplification
  #libdir = @libdir@
-@@ -78,7 +80,7 @@
- $(PROGRAM): $(LIBOBJS) gocr.o
- 	# make it conform to ld --as-needed
- 	#$(CC) -o $@ $(LDFLAGS) gocr.o ./lib$(PGMASCLIB).a $(LIBS)
--	$(CC) -o $@ gocr.o $(LIBOBJS) $(LIBS)
-+	$(CC) -o $@ $(LDFLAGS) gocr.o $(LIBOBJS) $(LIBS)
- 	if test -r $(PROGRAM); then cp $@ ../bin; fi
- 
- libs: lib$(PGMASCLIB).a lib$(PGMASCLIB).@PACKAGE_VERSION@.so
-@@ -97,10 +99,7 @@
+@@ -101,10 +103,7 @@ $(LIBOBJS): Makefile
  # PHONY = don't look at file clean, -rm = start rm and ignore errors
  .PHONY : clean proper install uninstall
  install: all
