@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/24 02:07:49 agc Exp $
+
+SHA1 (GeoLite2-City-CSV-20160705/GeoLite2-City-CSV.zip) = fe9c9564eeffa5169e58ae256531320c0aab8a4c
+RMD160 (GeoLite2-City-CSV-20160705/GeoLite2-City-CSV.zip) = f65888e02b7830b300e7ae6c546359058d874847
+SHA512 (GeoLite2-City-CSV-20160705/GeoLite2-City-CSV.zip) = ab971720ab01dc0e033abd785d8fea1934b712dbfa366bd132eb6f58eed5b7466238ca759b4c674cbd64fee9c56e0ddedbeb48968252c2f0c5ae490e890721a2
+Size (GeoLite2-City-CSV-20160705/GeoLite2-City-CSV.zip) = 41923245 bytes
