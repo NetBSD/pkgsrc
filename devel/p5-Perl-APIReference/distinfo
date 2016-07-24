@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:28:39 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/07/24 06:59:18 wen Exp $
 
-SHA1 (Perl-APIReference-0.21.tar.gz) = b9d6003aa6ba9d01e610f5507c53cdd1776cfe91
-RMD160 (Perl-APIReference-0.21.tar.gz) = 9ff1a1d375740f6ea6573354eeba2d8cb1e62417
-SHA512 (Perl-APIReference-0.21.tar.gz) = 25073b6af541969032668351c76c0263bfac9d9ae8acde66c558d7286854b9556fa315e6decce0efa89209aa3f5c787507230ae3be1da7f3dbb1f811eb8cfd80
-Size (Perl-APIReference-0.21.tar.gz) = 2215287 bytes
+SHA1 (Perl-APIReference-0.22.tar.gz) = 76b901b4874102d78688ae2c37075aa1b914da77
+RMD160 (Perl-APIReference-0.22.tar.gz) = 5c7c6322d6d2b28a4794a12ddfc6275bb41e6c85
+SHA512 (Perl-APIReference-0.22.tar.gz) = 48c8dfa29f52cf8bbd14083adbcd8b6b10f5dd6ee928da721dd682ac633684268438ee4c40f524990f2ed9072303c4f5be7fa51e035105a4c4beb29000a6c683
+Size (Perl-APIReference-0.22.tar.gz) = 2387111 bytes
