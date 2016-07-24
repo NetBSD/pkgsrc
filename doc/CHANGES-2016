@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2958 2016/07/24 02:20:52 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2959 2016/07/24 02:38:23 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4267,3 +4267,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php55 to 5.5.38 [taca 2016-07-24]
 	Updated lang/php56 to 5.6.24 [taca 2016-07-24]
 	Updated lang/php70 to 7.0.9 [taca 2016-07-24]
+	Added games/accelerator3d version 0.1.1 [kamil 2016-07-24]
