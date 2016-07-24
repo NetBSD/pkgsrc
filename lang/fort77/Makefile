@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/07/09 06:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/07/24 21:01:27 rillig Exp $
 #
 
 DISTNAME=		fort77-1.18
@@ -14,6 +14,7 @@ DEPENDS+=		f2c-[0-9]*:../../lang/f2c
 USE_TOOLS+=		perl:run
 NO_BUILD=		yes
 TEST_TARGET=		test
+AUTO_MKDIRS=		yes
 
 REPLACE_PERL=		fort77 tests/test.pl
 
@@ -22,11 +23,9 @@ SUBST_STAGE.perl=	pre-configure
 SUBST_FILES.perl=	fort77 tests/test.pl
 SUBST_SED.perl=		-e 's,/usr/bin/perl,${PERL5},'
 
-INSTALLATION_DIRS=	bin $(PKGMANDIR)/man1
-
 do-install:
-	$(INSTALL_SCRIPT) $(WRKSRC)/fort77 $(DESTDIR)$(PREFIX)/bin
-	$(INSTALL_DATA) $(WRKSRC)/fort77.1 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/fort77 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/fort77.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libf2c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
