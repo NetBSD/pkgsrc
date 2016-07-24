@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2015/04/17 00:41:38 wen Exp $
+# $NetBSD: Makefile,v 1.29 2016/07/24 15:25:22 kamil Exp $
 
-DISTNAME=	numpy-1.9.2
+DISTNAME=	numpy-1.11.1
+GITHUB_PROJECT=	numpy
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=numpy/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=numpy/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.numpy.org/
@@ -14,25 +16,7 @@ USE_LANGUAGES=		c fortran
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=		ATLAS=None
 
-REPLACE_PYTHON+=	*.py
-REPLACE_PYTHON+=	numpy/*.py
-REPLACE_PYTHON+=	numpy/compat/*.py
-REPLACE_PYTHON+=	numpy/core/*.py
-REPLACE_PYTHON+=	numpy/core/tests/*.py
-REPLACE_PYTHON+=	numpy/distutils/*.py
-REPLACE_PYTHON+=	numpy/distutils/tests/*.py
-REPLACE_PYTHON+=	numpy/distutils/tests/f2py_ext/*.py
-REPLACE_PYTHON+=	numpy/distutils/tests/f2py_f90_ext/*.py
-REPLACE_PYTHON+=	numpy/distutils/tests/gen_ext/*.py
-REPLACE_PYTHON+=	numpy/distutils/tests/pyrex_ext/*.py
-REPLACE_PYTHON+=	numpy/distutils/tests/swig_ext/*.py
-REPLACE_PYTHON+=	numpy/f2py/*.py
-REPLACE_PYTHON+=	numpy/f2py/docs/usersguide/*.py
-REPLACE_PYTHON+=	numpy/fft/tests/*.py
-REPLACE_PYTHON+=	numpy/ma/*.py
-REPLACE_PYTHON+=	numpy/matrixlib/*.py
-REPLACE_PYTHON+=	numpy/random/mtrand/*.py
-REPLACE_PYTHON+=	numpy/testing/*.py
+REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
 # XXX Avoid picking up other compilers when installed
 .include "../../mk/compiler.mk"
@@ -52,8 +36,8 @@ LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 .include "../../mk/bsd.prefs.mk"
 
 # needs devel/py-nose
-#do-test:
-#	${PYTHONBIN} -c "import numpy; numpy.test()"
+do-test:
+	${RUN} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,0 +1,14 @@
+$NetBSD: patch-numpy_core_include_numpy___numpyconfig.h.in,v 1.1 2016/07/24 15:25:22 kamil Exp $
+
+Handle NetBSD specific <sys/endian.h>
+
+--- numpy/core/include/numpy/_numpyconfig.h.in.orig	2016-06-25 15:38:34.000000000 +0000
++++ numpy/core/include/numpy/_numpyconfig.h.in
+@@ -43,6 +43,7 @@
+ #define NPY_API_VERSION @NPY_API_VERSION@
+ 
+ @DEFINE_NPY_HAVE_ENDIAN_H@
++@DEFINE_NPY_HAVE_SYS_ENDIAN_H@
+ 
+ /* Ugly, but we can't test this in a proper manner without requiring a C++
+  * compiler at the configuration stage of numpy ? */
