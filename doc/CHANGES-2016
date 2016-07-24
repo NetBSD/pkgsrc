@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2969 2016/07/24 06:39:35 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.2970 2016/07/24 06:48:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4278,3 +4278,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Parse-CPAN-Meta to 1.4422 [wen 2016-07-24]
 	Updated devel/p5-Parse-ErrorString-Perl to 0.22 [wen 2016-07-24]
 	Updated comms/asterisk13 to 13.10.0 [jnemeth 2016-07-24]
+	Updated devel/p5-Parse-Method-Signatures to 1.003017 [wen 2016-07-24]
