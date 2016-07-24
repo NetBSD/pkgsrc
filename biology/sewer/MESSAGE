@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/09/27 23:36:34 jschauma Exp $
+$NetBSD: MESSAGE,v 1.2 2016/07/24 21:21:13 rillig Exp $
 
 The index.html page for SeWeR is located at:
-	${PREFIX}/share/doc/html/sewer/
+	${PREFIX}/share/doc/sewer/
 
 ===========================================================================
