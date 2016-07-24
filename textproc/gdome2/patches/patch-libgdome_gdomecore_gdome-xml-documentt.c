@@ -1,4 +1,6 @@
-$NetBSD: patch-libgdome_gdomecore_gdome-xml-documentt.c,v 1.1 2012/11/19 03:01:44 joerg Exp $
+$NetBSD: patch-libgdome_gdomecore_gdome-xml-documentt.c,v 1.2 2016/07/24 21:02:45 rillig Exp $
+
+Fix build with new libxml2 API.
 
 --- libgdome/gdomecore/gdome-xml-documentt.c.orig	2012-11-19 01:08:40.000000000 +0000
 +++ libgdome/gdomecore/gdome-xml-documentt.c
