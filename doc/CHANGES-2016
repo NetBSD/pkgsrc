@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2994 2016/07/24 23:02:23 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2995 2016/07/24 23:36:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4304,3 +4304,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/libopenmpt to 0.2.6664 [wiz 2016-07-24]
 	Updated databases/py-psycopg2 to 2.6.2nb1 [wiz 2016-07-24]
 	Added games/barrage version 1.0.4 [kamil 2016-07-24]
+	Updated comms/p5-Device-Gsm to 1.61 [wen 2016-07-24]
