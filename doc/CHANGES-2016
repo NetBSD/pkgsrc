@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2961 2016/07/24 03:24:52 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2962 2016/07/24 03:33:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4270,3 +4270,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/accelerator3d version 0.1.1 [kamil 2016-07-24]
 	Updated www/p5-Catalyst-Authentication-Store-Htpasswd to 1.004 [wen 2016-07-24]
 	Updated www/p5-App-Nopaste to 1.006 [wen 2016-07-24]
+	Updated time/p5-Time-HiRes to 1.9739 [wen 2016-07-24]
