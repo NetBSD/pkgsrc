@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/24 06:35:04 wen Exp $
 
-SHA1 (Parse-ErrorString-Perl-0.21.tar.gz) = 291e0637a0f11ba3963a7e371b1298168672df70
-RMD160 (Parse-ErrorString-Perl-0.21.tar.gz) = f2695f6d4b96015493b2f258a1e64a747f667cca
-SHA512 (Parse-ErrorString-Perl-0.21.tar.gz) = 4d447501fa2c3d27a0dccf17bf11039c9f9935bf8444c94f1d38c39346de7f0f1d55b28e9b79b97a98f5d4c2fed50884b843cc924f7b9252b9cd7087fd4925ed
-Size (Parse-ErrorString-Perl-0.21.tar.gz) = 29692 bytes
+SHA1 (Parse-ErrorString-Perl-0.22.tar.gz) = 2b6f7e90dd1439f5e7607847835fd686645d62fa
+RMD160 (Parse-ErrorString-Perl-0.22.tar.gz) = 2fe3e85144bddec12d29d5cdf6dbc5a9ec83db4d
+SHA512 (Parse-ErrorString-Perl-0.22.tar.gz) = a1a99a876cd575adfcd30a3f73ed23c104380b32e24f34fc135b315794c640a37369abe10aea0daa5a73da030a38b52439b4a4716cc3c2c5a610a524a9ced507
+Size (Parse-ErrorString-Perl-0.22.tar.gz) = 29675 bytes
