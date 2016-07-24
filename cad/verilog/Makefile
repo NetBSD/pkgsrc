@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/06/01 13:30:40 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2016/07/24 23:43:12 rillig Exp $
 #
 
 DISTNAME=	verilog-0.9.7
@@ -30,20 +30,20 @@ SUBST_FILES.destdir=	tgt-vhdl/Makefile.in \
 			tgt-vvp/Makefile.in
 SUBST_MESSAGE.destdir=	Fix DESTDIR in various Makefile.in
 SUBST_STAGE.destdir=	pre-configure
-SUBST_SED.destdir=	'-e s, $$(libdir)/ivl, $$(DESTDIR)$$(libdir)/ivl,g'
+SUBST_SED.destdir=	-e 's, $$(libdir)/ivl, $$(DESTDIR)$$(libdir)/ivl,g'
 # Leading TAB
-SUBST_SED.destdir+=	'-e s,	$$(libdir)/ivl,	$$(DESTDIR)$$(libdir)/ivl,g'
+SUBST_SED.destdir+=	-e 's,	$$(libdir)/ivl,	$$(DESTDIR)$$(libdir)/ivl,g'
 # target:
-SUBST_SED.destdir+=	'-e s,^$$(libdir)/ivl,$$(DESTDIR)$$(libdir)/ivl,'
+SUBST_SED.destdir+=	-e 's,^$$(libdir)/ivl,$$(DESTDIR)$$(libdir)/ivl,'
 
 SUBST_CLASSES+=		vpi-dest
 SUBST_STAGE.vpi-dest=	pre-configure
 SUBST_FILES.vpi-dest=	vpi/Makefile.in
 SUBST_MESSAGE.vpi-dest=	Fix DESTDIR in vpi/Makefile.in (watch target:)
-SUBST_SED.vpi-dest=	'-e s, $$(vpidir)/, $$(DESTDIR)$$(vpidir)/,g'
+SUBST_SED.vpi-dest=	-e 's, $$(vpidir)/, $$(DESTDIR)$$(vpidir)/,g'
 # Leading TAB
-SUBST_SED.vpi-dest+=	'-e s,	$$(vpidir)/,	$$(DESTDIR)$$(vpidir)/,g'
-SUBST_SED.vpi-dest+=	'-e s,^$$(vpidir)/,$$(DESTDIR)$$(vpidir)/,g'
+SUBST_SED.vpi-dest+=	-e 's,	$$(vpidir)/,	$$(DESTDIR)$$(vpidir)/,g'
+SUBST_SED.vpi-dest+=	-e 's,^$$(vpidir)/,$$(DESTDIR)$$(vpidir)/,g'
 
 pre-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} dep
