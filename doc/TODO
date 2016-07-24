@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16169 2016/07/24 07:00:25 wen Exp $
+$NetBSD: TODO,v 1.16170 2016/07/24 08:31:38 wen Exp $
 
 Suggested new packages
 ======================
@@ -1297,7 +1297,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Schedule-Cron-Events-1.94
 	o p5-Smart-Comments-1.06
 	o p5-Software-License-0.103011
-	o p5-Spreadsheet-Read-0.63
 	o p5-Struct-Dumb-0.08
 	o p5-Sub-Exporter-GlobExporter-0.005
 	o p5-Switch-2.17
