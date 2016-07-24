@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/24 02:07:49 agc Exp $
+share/GeoLite2-City-CSV/COPYRIGHT.txt
+share/GeoLite2-City-CSV/GeoLite2-City-Blocks-IPv4.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Blocks-IPv6.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-de.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-en.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-es.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-fr.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-ja.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-pt-BR.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-ru.csv
+share/GeoLite2-City-CSV/GeoLite2-City-Locations-zh-CN.csv
+share/GeoLite2-City-CSV/LICENSE.txt
