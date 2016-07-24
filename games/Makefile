@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.390 2016/06/12 17:14:31 prlw1 Exp $
+# $NetBSD: Makefile,v 1.391 2016/07/24 02:36:48 kamil Exp $
 #
 
 COMMENT=	Games
@@ -11,6 +11,7 @@ SUBDIR+=	LostPixels
 SUBDIR+=	MyGoGrinder
 SUBDIR+=	REminiscence
 SUBDIR+=	abuse
+SUBDIR+=	accelerator3d
 SUBDIR+=	adom
 SUBDIR+=	alephone
 SUBDIR+=	amaze
