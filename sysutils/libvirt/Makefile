@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2016/07/09 13:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/07/24 20:56:05 agc Exp $
 
 DISTNAME=		libvirt-1.2.9
 PKGREVISION=		9
 CATEGORIES=		sysutils
 MASTER_SITES=		http://libvirt.org/sources/
 
-MAINTAINER=		agc@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://libvirt.org/
 COMMENT=		Virtualisation toolkit for host operating systems
 LICENSE=		gnu-lgpl-v2
