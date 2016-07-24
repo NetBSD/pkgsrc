@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2980 2016/07/24 15:47:38 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2981 2016/07/24 18:33:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4290,3 +4290,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/py-numpy to 1.11.1 [kamil 2016-07-24]
 	Added games/armagetronad version 0.2.8.3.3 [kamil 2016-07-24]
 	Added games/armagetronad-server version 0.2.8.3.3 [kamil 2016-07-24]
+	Updated devel/afl to 2.21b [wiz 2016-07-24]
