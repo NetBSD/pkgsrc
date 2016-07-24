@@ -1,0 +1,36 @@
+# $NetBSD: Makefile.common,v 1.1 2016/07/24 15:43:50 kamil Exp $
+#
+# used by games/armagetronad/Makefile
+# used by games/armagetronad-server/Makefile
+
+DISTNAME=	armagetronad-0.2.8.3.3.src
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=armagetronad/}
+
+HOMEPAGE=	http://www.armagetronad.org/
+LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}
+
+DISTINFO_FILE=	${.CURDIR}/../../games/armagetronad/distinfo
+
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash gmake
+REPLACE_PYTHON+=	language/update.py
+
+SUBST_CLASSES+=		bash
+SUBST_MESSAGE.bash=	Set proper BASH path.
+SUBST_STAGE.bash=	pre-configure
+SUBST_FILES.bash=	batch/Makefile.am
+SUBST_FILES.bash+=	batch/Makefile.in
+SUBST_SED.bash=		-e 's,`which bash`,${BASH},'
+
+CONFIGURE_ARGS+=	--disable-sysinstall
+CONFIGURE_ARGS+=	--disable-uninstall
+CONFIGURE_ARGS+=	--disable-useradd
+# This sanitizes paths
+CONFIGURE_ARGS+=	--disable-games
+
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
