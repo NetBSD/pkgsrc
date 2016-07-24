@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2952 2016/07/24 01:38:24 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2953 2016/07/24 01:51:27 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4260,3 +4260,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/py-OpenGL to 3.1.1a1 [kamil 2016-07-24]
 	Updated devel/ode to 0.13 [kamil 2016-07-24]
 	Updated www/p5-Catalyst-Runtime to 5.90111 [wen 2016-07-24]
+	Added devel/py-ode version 1.2.1 [kamil 2016-07-24]
