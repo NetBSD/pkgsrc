@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/24 00:34:26 wen Exp $
 
-SHA1 (HTML-StripScripts-1.05.tar.gz) = d6d91f2b9c342370f9a1d08aec11b5720474bc49
-RMD160 (HTML-StripScripts-1.05.tar.gz) = 2e2c87164c04576b72a0cd6302c0838ca9f4cdae
-SHA512 (HTML-StripScripts-1.05.tar.gz) = e9de1a05721fa74b90168ef36596c4d32d5af365258f1a8b363ac7a2e2f15181e67cbadde1c1dcae1225b6d2850589fa14e252134cf799b84bf506f55f5e050d
-Size (HTML-StripScripts-1.05.tar.gz) = 43236 bytes
-SHA1 (patch-StripScripts.pm) = 0939392fa83186ecbe84b379f921e4c22aaf0e16
+SHA1 (HTML-StripScripts-1.06.tar.gz) = 5dca2d42f3dbdb575f4c2c719ebda5eeea020cd5
+RMD160 (HTML-StripScripts-1.06.tar.gz) = 8ae86836350471ce7b3fbb98d6c3eede1b384429
+SHA512 (HTML-StripScripts-1.06.tar.gz) = 5d358997816653e32dba8916ac95967da345ec8c018ba7d21ef3bebca9bdda3131917b596dd25f51a3c63f85df7babfeab6133b46a7e15a0cd0409c055e2c589
+Size (HTML-StripScripts-1.06.tar.gz) = 44745 bytes
