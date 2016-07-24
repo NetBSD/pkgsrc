@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2978 2016/07/24 11:49:27 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2979 2016/07/24 15:27:40 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4287,3 +4287,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Tree-Simple to 1.29 [wen 2016-07-24]
 	Updated devel/p5-Test-Simple to 1.302047 [wen 2016-07-24]
 	Added games/einstein-puzzle version 2.1.1 [wiz 2016-07-24]
+	Updated math/py-numpy to 1.11.1 [kamil 2016-07-24]
