@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2016/07/24 02:36:48 kamil Exp $
+# $NetBSD: Makefile,v 1.392 2016/07/24 11:49:18 wiz Exp $
 #
 
 COMMENT=	Games
@@ -76,6 +76,7 @@ SUBDIR+=	dopewars
 SUBDIR+=	duckmaze
 SUBDIR+=	dungeon
 SUBDIR+=	eboard
+SUBDIR+=	einstein-puzzle
 SUBDIR+=	enigma
 SUBDIR+=	et
 SUBDIR+=	eus-demo
