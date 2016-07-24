@@ -1,0 +1,3 @@
+Byterun is a pure-Python implementation of a Python bytecode execution
+virtual machine.  It was started to get a better understanding of
+bytecodes to fix branch coverage bugs in coverage.py.
