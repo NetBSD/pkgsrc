@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2970 2016/07/24 06:48:12 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2971 2016/07/24 07:00:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Parse-ErrorString-Perl to 0.22 [wen 2016-07-24]
 	Updated comms/asterisk13 to 13.10.0 [jnemeth 2016-07-24]
 	Updated devel/p5-Parse-Method-Signatures to 1.003017 [wen 2016-07-24]
+	Updated devel/p5-Perl-APIReference to 0.22 [wen 2016-07-24]
