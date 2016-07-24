@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2991 2016/07/24 19:30:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2992 2016/07/24 19:37:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4301,3 +4301,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libdrm to 2.4.70 [wiz 2016-07-24]
 	Updated devel/py-requests-toolbelt to 0.7.0 [wiz 2016-07-24]
 	Updated devel/py-setuptools to 25.0.0 [wiz 2016-07-24]
+	Updated audio/libopenmpt to 0.2.6664 [wiz 2016-07-24]
