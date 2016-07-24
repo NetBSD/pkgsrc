@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2016/07/12 10:14:35 leot Exp $
+# $NetBSD: Makefile,v 1.438 2016/07/24 19:11:27 agc Exp $
 #
 
 COMMENT=	Programming languages
@@ -172,6 +172,7 @@ SUBDIR+=	picoc
 SUBDIR+=	pict
 SUBDIR+=	polyml
 SUBDIR+=	py-basicproperty
+SUBDIR+=	py-byterun
 SUBDIR+=	py-cxfreeze
 SUBDIR+=	py-hy
 SUBDIR+=	py-pyrex
