@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2967 2016/07/24 06:33:01 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2968 2016/07/24 06:37:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4276,3 +4276,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-Aligner to 0.13 [wen 2016-07-24]
 	Updated textproc/p5-XML-LibXML to 2.0127 [wiz 2016-07-24]
 	Updated devel/p5-Parse-CPAN-Meta to 1.4422 [wen 2016-07-24]
+	Updated devel/p5-Parse-ErrorString-Perl to 0.22 [wen 2016-07-24]
