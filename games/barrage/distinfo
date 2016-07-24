@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/24 22:59:11 kamil Exp $
+
+SHA1 (barrage-1.0.4.tar.gz) = 4f97656cd4170de070dec440d3b739cb7e6679b4
+RMD160 (barrage-1.0.4.tar.gz) = 09d86969662aa7835c62dc192776f44b745eadbd
+SHA512 (barrage-1.0.4.tar.gz) = c866c0b98541c0c878ff015d99a2ae62e123c8095e94f64ef5aed26d68b734432110181c11a5b429d4feb808b2b276ac94295ff2b23ddfc64a8790d04a89a966
+Size (barrage-1.0.4.tar.gz) = 484641 bytes
