@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/12 22:55:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/24 23:40:10 rillig Exp $
 libexec/burp/notify_script
 libexec/burp/ssl_extra_checks_script
 libexec/burp/summary_script
@@ -11,10 +11,10 @@ sbin/bedup
 sbin/burp
 sbin/burp_ca
 sbin/vss_strip
+share/examples/burp/CA.cnf
 share/examples/burp/autoupgrade/server/win32/script
 share/examples/burp/autoupgrade/server/win64/script
-share/examples/burp/burp.conf
 share/examples/burp/burp-server.conf
-share/examples/burp/CA.cnf
+share/examples/burp/burp.conf
 share/examples/burp/clientconfdir/incexc/example
 share/examples/burp/clientconfdir/testclient

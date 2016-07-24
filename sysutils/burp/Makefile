@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:29:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/24 23:40:10 rillig Exp $
 #
 
 DISTNAME=	burp-1.4.40
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=burp/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://burp.grke.net
+HOMEPAGE=	http://burp.grke.net/
 COMMENT=	Networked backup and restore program
 LICENSE=	gnu-agpl-v3
 
@@ -27,14 +27,14 @@ SUBST_FILES.dirs=	configs/server/burp.conf \
 			configs/CA/burp_ca \
 			manpages/*.8
 SUBST_SED.dirs=	-e 's,@LIBEXECDIR@,${PREFIX}/libexec/burp,' \
-		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},' \
+		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},' \
 		-e 's,@SBINDIR@,${PREFIX}/sbin,'
 
 REPLACE_SH+=	configs/certs/CA/burp_ca \
 		configs/server/notify_script \
 		configs/server/timer_script
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--mandir=${PREFIX}/${PKGMANDIR} \
 			--sbindir=${PREFIX}/sbin
 
