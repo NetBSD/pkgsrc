@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/07/04 16:18:41 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/24 19:57:23 rillig Exp $
 
 DISTNAME=	spectrwm-2.5.1
 CATEGORIES=	wm
@@ -19,19 +19,19 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .if ${OPSYS} == "OpenBSD"
 USE_BSD_MAKEFILE=	yes
 INSTALLATION_DIRS+=	bin lib ${PKGMANDIR}/man1
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_FLAGS+=	MANINSTALL=maninstall
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=		MANINSTALL=maninstall
 # sync with major.minor from ${WRKSRC}/lib/shlib_version.
-CFLAGS+=	-DSWM_LIB=\"${PREFIX}/lib/libswmhack.so.0.0\"
+CFLAGS+=		-DSWM_LIB=\"${PREFIX}/lib/libswmhack.so.0.0\"
 .else
-USE_TOOLS+=	gmake
-CFLAGS+=	-I${PREFIX}/include
-LDFLAGS+=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
+USE_TOOLS+=		gmake
+CFLAGS+=		-I${PREFIX}/include
+LDFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}
 .  if ${OPSYS} == "Darwin"
-BUILD_DIRS=	osx
+BUILD_DIRS=		osx
 .  else
-BUILD_DIRS=	linux
+BUILD_DIRS=		linux
 .  endif
 .endif
 
