@@ -1,0 +1,21 @@
+Python-GSSAPI provides both low-level and high level wrappers around
+the GSSAPI C libraries.  While it focuses on the Kerberos mechanism,
+it should also be useable with other GSSAPI mechanisms.
+
+Python-GSSAPI is composed of two parts:  a low-level C-style API which
+thinly wraps the underlying RFC 2744 methods, and a high-level,
+Pythonic API (which is itself a wrapper around the low-level API).
+Examples may be found in the examples directory.
+
+The low-level API lives in gssapi.raw.  The methods contained therein
+are designed to match closely with the original GSSAPI C methods.  All
+relevant methods and classes may be imported directly from gssapi.raw.
+Extension methods will only be imported if they are present.
+
+The high-level API lives directly under gssapi.  The classes contained
+in each file are designed to provide a more Pythonic, Object-Oriented
+view of GSSAPI.  The exceptions from the low-level API, plus several
+additional exceptions, live in gssapi.exceptions.  The rest of the
+classes may be imported directly from gssapi.  Only classes are
+exported by gssapi - all functions are methods of classes in the
+high-level API.
