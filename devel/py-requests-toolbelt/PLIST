@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/02/01 13:23:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/07/24 19:27:38 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/requests_toolbelt/adapters/appengine.pyo
 ${PYSITELIB}/requests_toolbelt/adapters/fingerprint.py
 ${PYSITELIB}/requests_toolbelt/adapters/fingerprint.pyc
 ${PYSITELIB}/requests_toolbelt/adapters/fingerprint.pyo
+${PYSITELIB}/requests_toolbelt/adapters/host_header_ssl.py
+${PYSITELIB}/requests_toolbelt/adapters/host_header_ssl.pyc
+${PYSITELIB}/requests_toolbelt/adapters/host_header_ssl.pyo
 ${PYSITELIB}/requests_toolbelt/adapters/socket_options.py
 ${PYSITELIB}/requests_toolbelt/adapters/socket_options.pyc
 ${PYSITELIB}/requests_toolbelt/adapters/socket_options.pyo
@@ -70,6 +73,9 @@ ${PYSITELIB}/requests_toolbelt/multipart/decoder.pyo
 ${PYSITELIB}/requests_toolbelt/multipart/encoder.py
 ${PYSITELIB}/requests_toolbelt/multipart/encoder.pyc
 ${PYSITELIB}/requests_toolbelt/multipart/encoder.pyo
+${PYSITELIB}/requests_toolbelt/sessions.py
+${PYSITELIB}/requests_toolbelt/sessions.pyc
+${PYSITELIB}/requests_toolbelt/sessions.pyo
 ${PYSITELIB}/requests_toolbelt/streaming_iterator.py
 ${PYSITELIB}/requests_toolbelt/streaming_iterator.pyc
 ${PYSITELIB}/requests_toolbelt/streaming_iterator.pyo
