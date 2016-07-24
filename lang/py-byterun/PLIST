@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/24 19:11:27 agc Exp $
+${PYSITELIB}/Byterun-1.0-py2.7.egg-info
+${PYSITELIB}/byterun/__init__.py
+${PYSITELIB}/byterun/__init__.pyc
+${PYSITELIB}/byterun/__init__.pyo
+${PYSITELIB}/byterun/__main__.py
+${PYSITELIB}/byterun/__main__.pyc
+${PYSITELIB}/byterun/__main__.pyo
+${PYSITELIB}/byterun/execfile.py
+${PYSITELIB}/byterun/execfile.pyc
+${PYSITELIB}/byterun/execfile.pyo
+${PYSITELIB}/byterun/pyobj.py
+${PYSITELIB}/byterun/pyobj.pyc
+${PYSITELIB}/byterun/pyobj.pyo
+${PYSITELIB}/byterun/pyvm2.py
+${PYSITELIB}/byterun/pyvm2.pyc
+${PYSITELIB}/byterun/pyvm2.pyo
