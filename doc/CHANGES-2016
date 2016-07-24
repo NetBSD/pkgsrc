@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2953 2016/07/24 01:51:27 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2954 2016/07/24 02:04:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4261,3 +4261,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ode to 0.13 [kamil 2016-07-24]
 	Updated www/p5-Catalyst-Runtime to 5.90111 [wen 2016-07-24]
 	Added devel/py-ode version 1.2.1 [kamil 2016-07-24]
+	Updated www/p5-Catalyst-Controller-HTML-FormFu to 2.01 [wen 2016-07-24]
