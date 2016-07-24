@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2014/02/28 09:43:10 adam Exp $
+$NetBSD: patch-aa,v 1.5 2016/07/24 15:25:22 kamil Exp $
+
+Recognize g95
 
 --- numpy/distutils/fcompiler/__init__.py.orig	2013-04-07 05:04:05.000000000 +0000
 +++ numpy/distutils/fcompiler/__init__.py
