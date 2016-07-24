@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2957 2016/07/24 02:19:07 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2958 2016/07/24 02:20:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4266,3 +4266,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added geography/geolite2-country version 20160705 [agc 2016-07-24]
 	Updated lang/php55 to 5.5.38 [taca 2016-07-24]
 	Updated lang/php56 to 5.6.24 [taca 2016-07-24]
+	Updated lang/php70 to 7.0.9 [taca 2016-07-24]
