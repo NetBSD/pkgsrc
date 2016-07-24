@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16170 2016/07/24 08:31:38 wen Exp $
+$NetBSD: TODO,v 1.16171 2016/07/24 08:53:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,9 +355,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o CSP-0.34
 	o Chinput-3.0.1
 	o DarwinStreamingServer-6.0.3
+	o FiraCode-1.200
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.2.5
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
@@ -389,6 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
+	o afl-2.21b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -545,6 +548,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.8
+	o curl-7.50.0
 	o cvm-0.97
 	o cvs-fast-export-1.38
 	o cvs2p4-2.5.5 [schmonz]
@@ -570,7 +574,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddrescue-1.21
 	o dega-1.12
 	o delegate-9.9.13
-	o denemo-2.0.8
+	o denemo-2.0.10
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
@@ -846,6 +850,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.3.0
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdevtools-0.1.3.0
@@ -1009,8 +1014,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcaca-0.99.19
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.11.0
+	o libcdr-0.1.3
 	o libconfuse-3.0
 	o libdatrie-0.2.10
+	o libdrm-2.4.70
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
@@ -1034,6 +1041,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.6664
 	o libowfat-0.29
 	o libpgm-5.2.122
 	o libprelude-1.2.5
@@ -1170,6 +1178,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o nikto-2.1.5
+	o notmuch-0.22.1
 	o nqp-2016.02
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1471,9 +1480,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-quixote-2.9
 	o py-radare2-0.10.4
 	o py-reportlab-3.0
+	o py-requests-toolbelt-0.7.0
 	o py-rope-0.9.4
 	o py-scgi-1.15
 	o py-serpent-1.12
+	o py-setuptools-25.0.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
@@ -1489,7 +1500,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-test-httpbin-0.2.3
 	o py-test-runner-2.9
 	o py-tlslite-0.4.6
-	o py-tornado-4.4
+	o py-tornado-4.4.1
 	o py-twisted-16.3.0
 	o py-uliweb-0.5b0
 	o py-uwsgi-2.0.12
@@ -1779,13 +1790,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
 	o wmx-gnome-8
-	o worker-3.8.2
+	o worker-3.8.3
 	o wpa_gui-2.5
 	o wpa_supplicant-2.5
 	o wwwoffle-2.9j [pkg/51340]
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160716
+	o x264-devel-20160723
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
