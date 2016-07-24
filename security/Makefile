@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.589 2016/07/17 17:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.590 2016/07/24 18:49:35 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -390,6 +390,7 @@ SUBDIR+=	py-denyhosts
 SUBDIR+=	py-ecdsa
 SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-gnupg
+SUBDIR+=	py-gssapi
 SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
 SUBDIR+=	py-kerberos
