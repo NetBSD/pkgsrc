@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.54 2016/06/24 15:23:00 taca Exp $
+$NetBSD: distinfo,v 1.55 2016/07/24 02:15:15 taca Exp $
 
-SHA1 (php-5.5.37.tar.bz2) = f999bf46a6b3a1adee8239c40e13e8ce06fd470a
-RMD160 (php-5.5.37.tar.bz2) = 349fbe9ea88423a2f6b0b8b47468401c3537ff8c
-SHA512 (php-5.5.37.tar.bz2) = d2da921f3efd858e1cb8004873e377ca9c5821d5269d5b8e7c9be830b183f4d18f737b14653f65a43c0957bdca994e09a476d77e3a29a11e357abc24618c4c0f
-Size (php-5.5.37.tar.bz2) = 13699851 bytes
+SHA1 (php-5.5.38.tar.bz2) = ac79d48510e4bfe8f376d009e3ecb5b734bbc3a1
+RMD160 (php-5.5.38.tar.bz2) = 2f1f0ff08c963975c6a624ecc83432cf48be3b39
+SHA512 (php-5.5.38.tar.bz2) = dd9e578013023cc8e9ab86ef129bf414682bca318c83816ff2f15be5f81863475737b48508d78542d4fe9dc7e31418bd9c0188b2d72745f069322f3ca4da9560
+Size (php-5.5.38.tar.bz2) = 13701262 bytes
 SHA1 (patch-acinclude.m4) = 9e9c433e4cb96e469f7cf14b2064a0f41fc4568a
 SHA1 (patch-aclocal.m4) = 46f192351e541453b1e32299acd1b4cfefc93cb2
 SHA1 (patch-build_libtool.m4) = 3811edd697fd21eadc4f65cba35c6297141e8ff2
