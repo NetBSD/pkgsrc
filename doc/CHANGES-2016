@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2981 2016/07/24 18:33:56 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2982 2016/07/24 18:38:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4291,3 +4291,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/armagetronad version 0.2.8.3.3 [kamil 2016-07-24]
 	Added games/armagetronad-server version 0.2.8.3.3 [kamil 2016-07-24]
 	Updated devel/afl to 2.21b [wiz 2016-07-24]
+	Updated www/curl to 7.50.0 [wiz 2016-07-24]
