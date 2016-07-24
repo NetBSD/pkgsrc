@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:59:29 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/07/24 21:02:45 rillig Exp $
 
 SHA1 (gdome2-0.8.1.tar.gz) = e9a3e4140c873d8232635ad10bb135ef7803c408
 RMD160 (gdome2-0.8.1.tar.gz) = 5cc3ff29e0ed040e3bbd02cba4d95b9b634c4072
 SHA512 (gdome2-0.8.1.tar.gz) = 40d9cb9ade2db3c7a196ac30cf8d9f5b48da4990250c14a53db53280ee76870b9247e973e2f2da523807faed3333d7c0f854f9546860ffbda251c12f6d404da7
 Size (gdome2-0.8.1.tar.gz) = 518965 bytes
 SHA1 (patch-aa) = 7e194447d1b4cf4a0799aef6c211e724e577c33c
-SHA1 (patch-ab) = 642f5e5319bdebf3fab8b346d68558e117cb5d26
-SHA1 (patch-libgdome_gdomecore_gdome-xml-documentt.c) = fb032a0f47d26d4f36cc9e3c720370fb227b14dc
+SHA1 (patch-ab) = 8879607c6ba6f03a14517df6342615ec8a55f156
+SHA1 (patch-libgdome_gdomecore_gdome-xml-documentt.c) = 80b32e734000ad035819b2fa6ebf2fa7b1b5fd62
