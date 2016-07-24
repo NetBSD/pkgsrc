@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:53 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/07/24 01:28:37 kamil Exp $
 
-SHA1 (ode-0.5.tgz) = f13756f1192d24101b6d1a3c14feb43efbf0b281
-RMD160 (ode-0.5.tgz) = 3410a842731c1bb24f306f4d23509533664321aa
-SHA512 (ode-0.5.tgz) = d96f083cf7eba2f007b02c1674ccdcf0e1594b6da51d4c97fe4b0e6c55e0c01c4f9ae331362fc991e358aea4b340abad3d851b2e99595fbde295a8efaeaeffd8
-Size (ode-0.5.tgz) = 1710720 bytes
-SHA1 (patch-aa) = 1e3efc6076b03bbdb0d9f14487d2a951267c974c
-SHA1 (patch-ab) = 87b7914946fca9362ab7334525b6c982b9981cad
-SHA1 (patch-ac) = 858cfe364bbfe5b637d63b564a54e4615fcf2f85
+SHA1 (ode-0.13.tar.bz2) = 0279d58cc390ff5cc048f2baf96cff23887f3838
+RMD160 (ode-0.13.tar.bz2) = 6397d3de8caa6a15625784a0ee8bcfab55626e13
+SHA512 (ode-0.13.tar.bz2) = d30c5228e10df5784802ceaea08353a3fd1088450b2ba69ad1da840b8aad2224484e5642145820621e105e08aa6da6f3e9957780d4c3b047647558b1abc32780
+Size (ode-0.13.tar.bz2) = 2008288 bytes
