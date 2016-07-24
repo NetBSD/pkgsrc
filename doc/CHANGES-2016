@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2985 2016/07/24 19:00:23 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2986 2016/07/24 19:12:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4295,3 +4295,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/py-gssapi version 1.2.0 [agc 2016-07-24]
 	Updated fonts/harfbuzz to 1.3.0 [wiz 2016-07-24]
 	Updated converters/libcdr to 0.1.3 [wiz 2016-07-24]
+	Updated mail/notmuch to 0.22.1 [wiz 2016-07-24]
