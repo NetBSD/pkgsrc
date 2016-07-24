@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2006/02/10 12:09:24 adam Exp $
+$NetBSD: patch-ab,v 1.2 2016/07/24 21:02:45 rillig Exp $
+
+Header files must not define variables.
 
 --- libgdome/xpath/gdome-xpath-xpnsresolv.h.orig	2006-02-10 12:52:28.000000000 +0100
 +++ libgdome/xpath/gdome-xpath-xpnsresolv.h
