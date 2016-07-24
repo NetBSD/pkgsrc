@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2987 2016/07/24 19:13:12 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2988 2016/07/24 19:22:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4297,3 +4297,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/libcdr to 0.1.3 [wiz 2016-07-24]
 	Updated mail/notmuch to 0.22.1 [wiz 2016-07-24]
 	Added lang/py-byterun version 20160218 [agc 2016-07-24]
+	Updated graphics/ImageMagick to 7.0.2.5 [wiz 2016-07-24]
