@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2955 2016/07/24 02:09:15 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2956 2016/07/24 02:16:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4264,3 +4264,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Catalyst-Controller-HTML-FormFu to 2.01 [wen 2016-07-24]
 	Added geography/geolite2-city version 20160705 [agc 2016-07-24]
 	Added geography/geolite2-country version 20160705 [agc 2016-07-24]
+	Updated lang/php55 to 5.5.38 [taca 2016-07-24]
