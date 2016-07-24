@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 17:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/24 19:27:38 wiz Exp $
 
-DISTNAME=	requests-toolbelt-0.6.2
+DISTNAME=	requests-toolbelt-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-toolbelt/}
