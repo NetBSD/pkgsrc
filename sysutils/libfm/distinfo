@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2016/05/22 22:48:37 youri Exp $
+$NetBSD: distinfo,v 1.4 2016/07/25 17:06:22 richard Exp $
 
 SHA1 (libfm-1.2.4.tar.xz) = 2f8183389c8e74edb15c6c8ab260df5dd39f3b2d
 RMD160 (libfm-1.2.4.tar.xz) = 7c8cb9da27b3f36607f00eb9069ef753bb77eab5
@@ -9,3 +9,4 @@ SHA1 (patch-data_Makefile.in) = 810c5b93190f37d58609fbcd594b26fca4490311
 SHA1 (patch-src_Makefile.in) = 64bb2b66a683feaa3949d395620f6a2bedf860ff
 SHA1 (patch-src_actions_Makefile.in) = e814f5252c231aa1c76cf2c1783f02b1a0b636ec
 SHA1 (patch-src_modules_Makefile.in) = 0429f7f7c12cd1655452166e20365f3b0b1bcb81
+SHA1 (patch-src_modules_vfs-search.c) = 29f236815ac9f5188ab624fa6ca2f3eb28e96993
