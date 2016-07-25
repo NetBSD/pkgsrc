@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/25 10:07:23 wiedi Exp $
+bin/b2sum
+man/man1/b2sum.1
