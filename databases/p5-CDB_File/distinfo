@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:56:16 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/07/25 07:33:10 wen Exp $
 
-SHA1 (CDB_File-0.97.tar.gz) = 907512d3531e2553044f883be7b67ecbe1927395
-RMD160 (CDB_File-0.97.tar.gz) = df989cd9179ddb97aef470a2cc1f9b9728eaf16f
-SHA512 (CDB_File-0.97.tar.gz) = 14717bd982b089cb24e439079dc3f057c9ee72ce70f8650bdfb9e2e733e8c133ba9d3bb145d278ae220b6b35d242a4a6b62cb9edd19248d98138ae24ccafac40
-Size (CDB_File-0.97.tar.gz) = 16516 bytes
+SHA1 (CDB_File-0.99.tar.gz) = 53d7f08c6f921e8cec5e14824302c56051358214
+RMD160 (CDB_File-0.99.tar.gz) = 67637be2fde7f7f82d4cc90667e9ed0bcb364cc4
+SHA512 (CDB_File-0.99.tar.gz) = eb0cc238af51b7768486dd096141cba527f5d36f28c5c79b7188c4d9c5f9cc3162647725a6dcb1d51f323e95d3a7e88a2c875cd8e671aba424addec5b748294c
+Size (CDB_File-0.99.tar.gz) = 60141 bytes
