@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3021 2016/07/25 23:41:30 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3022 2016/07/25 23:44:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4331,3 +4331,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Version to 2.04 [wen 2016-07-25]
 	Updated textproc/p5-Text-BibTeX to 0.76 [wen 2016-07-25]
 	Updated textproc/p5-Text-CSV_XS to 1.24 [wen 2016-07-25]
+	Updated textproc/p5-Text-FindIndent to 0.11 [wen 2016-07-25]
