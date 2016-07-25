@@ -1,0 +1,5 @@
+herisvm project is a collection of simple tools implementing
+evaluation algorithms for classification (machine learning).
+In particular heri-eval implements N-fold cross-validation
+where training and testing is run in parallel.
+This may be useful if you use multi-CPU computer.
