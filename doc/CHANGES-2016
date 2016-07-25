@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2996 2016/07/24 23:38:19 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2997 2016/07/25 00:00:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4306,3 +4306,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/barrage version 1.0.4 [kamil 2016-07-24]
 	Updated comms/p5-Device-Gsm to 1.61 [wen 2016-07-24]
 	Updated graphics/gnuplot to 5.0.4 [mef 2016-07-24]
+	Updated graphics/gocr to 0.48 [mef 2016-07-25]
