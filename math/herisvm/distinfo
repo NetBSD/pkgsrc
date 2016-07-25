@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2016/07/25 09:18:51 cheusov Exp $
+
+SHA1 (herisvm-0.7.0.tar.gz) = d006fdb0298831c2f38bb62ffea453514bb4fcdf
+RMD160 (herisvm-0.7.0.tar.gz) = e40abf3d4b7b03c8f20572f83cf26bde1fabe5ef
+Size (herisvm-0.7.0.tar.gz) = 14700 bytes
