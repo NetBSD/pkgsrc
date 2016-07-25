@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.152 2016/07/04 06:18:39 morr Exp $
+# $NetBSD: Makefile.common,v 1.153 2016/07/25 10:51:37 jperkin Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -24,6 +24,7 @@ CONFLICTS+=		vim-kde-[0-9]*
 
 WRKSRC=			${WRKDIR}/${VIM_SUBDIR}/src
 GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c99
 
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
 CHECK_INTERPRETER_SKIP=	share/vim/vim74/tools/vim132
