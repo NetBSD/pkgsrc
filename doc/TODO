@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16184 2016/07/25 07:27:55 wen Exp $
+$NetBSD: TODO,v 1.16185 2016/07/25 07:34:19 wen Exp $
 
 Suggested new packages
 ======================
@@ -1211,7 +1211,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Apache-Gallery-1.0.2
 	o p5-AuthCAS-1.6
 	o p5-Authen-TacacsPlus-0.26
-	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
 	o p5-CPANPLUS-2.102
 	o p5-Catalyst-Engine-PSGI-0.14
