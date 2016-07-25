@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3013 2016/07/25 08:53:42 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3014 2016/07/25 09:19:11 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4323,3 +4323,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.100 [wen 2016-07-25]
 	Updated filesystems/p5-Path-Tiny to 0.096 [wen 2016-07-25]
 	Added devel/p5-Tree-R version 0.072 [wen 2016-07-25]
+	Added math/herisvm version 0.7.0 [cheusov 2016-07-25]
