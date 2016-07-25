@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 19:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/25 12:45:48 wen Exp $
 
-DISTNAME=		Test-CleanNamespaces-0.18
+DISTNAME=		Test-CleanNamespaces-0.19
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -11,7 +10,6 @@ HOMEPAGE=		http://search.cpan.org/dist/Test-CleanNamespaces/
 COMMENT=		Check for uncleaned imports
 LICENSE=		${PERL5_LICENSE}
 
-DEPENDS+=	p5-File-Find-Rule-Perl>=0:../../devel/p5-File-Find-Rule-Perl
 DEPENDS+=	p5-namespace-clean>=0:../../devel/p5-namespace-clean
 DEPENDS+=	p5-Role-Tiny>=0:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-Package-Stash-XS>=0:../../devel/p5-Package-Stash-XS
@@ -22,7 +20,7 @@ BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Sub-Identify-[0-9]*:../../devel/p5-Sub-Identify
-#UILD_DEPENDS+=	p5-Class-MOP-[0-9]*:../../devel/p5-Class-MOP
+BUILD_DEPENDS+=	p5-namespace-clean>=0:../../devel/p5-namespace-clean
 
 PERL5_PACKLIST=		auto/Test/CleanNamespaces/.packlist
 
