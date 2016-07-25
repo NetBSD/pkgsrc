@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/25 07:19:05 wen Exp $
 
-DISTNAME=	CatalystX-CRUD-ModelAdapter-DBIC-0.13
+DISTNAME=	CatalystX-CRUD-ModelAdapter-DBIC-0.15
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
@@ -16,6 +15,7 @@ DEPENDS+=	p5-CatalystX-CRUD>=0.42:../../databases/p5-CatalystX-CRUD
 DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBIx-Class-RDBOHelpers>=0.04:../../databases/p5-DBIx-Class-RDBOHelpers
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
+DEPENDS+=	p5-CatalystX-CRUD-Controller-REST>=0:../../www/p5-CatalystX-CRUD-Controller-REST
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/ModelAdapter/DBIC/.packlist
