@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3002 2016/07/25 07:20:19 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3003 2016/07/25 07:27:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/p5-JSON-PP to 2.27400 [wen 2016-07-25]
 	Updated databases/p5-BerkeleyDB to 0.55 [wen 2016-07-25]
 	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.15 [wen 2016-07-25]
+	Updated databases/p5-CatalystX-CRUD to 0.57 [wen 2016-07-25]
