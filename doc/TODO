@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16186 2016/07/25 07:55:46 wen Exp $
+$NetBSD: TODO,v 1.16187 2016/07/25 23:44:44 wen Exp $
 
 Suggested new packages
 ======================
@@ -1300,7 +1300,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Term-ANSIColor-4.04
 	o p5-Term-ReadLine-1.30
 	o p5-Test-MinimumVersion-0.101082
-	o p5-Text-FindIndent-0.11
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-Cycle-1.221
 	o p5-Tie-DBI-1.06
