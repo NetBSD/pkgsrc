@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3019 2016/07/25 13:04:48 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3020 2016/07/25 23:34:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4329,3 +4329,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/b2sum version 20160619 [wiedi 2016-07-25]
 	Updated devel/p5-Test-CleanNamespaces to 0.19 [wen 2016-07-25]
 	Updated devel/p5-Test-Version to 2.04 [wen 2016-07-25]
+	Updated textproc/p5-Text-BibTeX to 0.76 [wen 2016-07-25]
