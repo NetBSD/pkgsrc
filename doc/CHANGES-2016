@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3007 2016/07/25 07:55:46 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3008 2016/07/25 08:04:08 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4317,3 +4317,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DB_File to 1.838 [wen 2016-07-25]
 	Updated databases/p5-DBD-CSV to 0.49 [wen 2016-07-25]
 	Updated databases/p5-DBD-SQLite2 to 0.37 [wen 2016-07-25]
+	Updated databases/p5-DBIx-SearchBuilder to 1.67 [wen 2016-07-25]
