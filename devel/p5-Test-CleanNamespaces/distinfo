@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/25 12:45:48 wen Exp $
 
-SHA1 (Test-CleanNamespaces-0.18.tar.gz) = b6317a1e1f15a931e10b0de4246218ae1d119fc6
-RMD160 (Test-CleanNamespaces-0.18.tar.gz) = 4148014ff4a358ba62849ec971560c08890d87aa
-SHA512 (Test-CleanNamespaces-0.18.tar.gz) = 5e6d732eedff64990a20c16ca5b54441515bde557d63c9d685080e9e1fe709c7adc63f38dcaa83f9e2d78976754b57b720d22448dd30d20cd9343191229ecd6f
-Size (Test-CleanNamespaces-0.18.tar.gz) = 31439 bytes
+SHA1 (Test-CleanNamespaces-0.19.tar.gz) = 40b3f03761c0e5e196dade5638c658c338b290dc
+RMD160 (Test-CleanNamespaces-0.19.tar.gz) = 246e1a610dbe8b5720261ea2de8bedcbcf0b69ae
+SHA512 (Test-CleanNamespaces-0.19.tar.gz) = c703569a59a761fe865e2a9a78c1c3622e25962fe860c5600dfa58fab4816b2d45e5eae96f8aa438e80d0e67c3317ab571058ec5e8d7260cc6a11548f57f989a
+Size (Test-CleanNamespaces-0.19.tar.gz) = 33771 bytes
