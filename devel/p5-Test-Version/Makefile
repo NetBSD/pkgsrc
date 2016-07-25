@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 19:23:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/25 13:03:42 wen Exp $
 #
 
-DISTNAME=		Test-Version-2.03
+DISTNAME=		Test-Version-2.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -13,7 +12,7 @@ COMMENT=		Check to see that version's in modules are sane
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-File-Find-Rule-Perl>=0:../../devel/p5-File-Find-Rule-Perl
-DEPENDS+=		p5-Module-Metadata>=0:../../devel/p5-Module-Metadata
+DEPENDS+=		p5-Module-Metadata>=1.000019:../../devel/p5-Module-Metadata
 
 BUILD_DEPENDS+=		p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 
