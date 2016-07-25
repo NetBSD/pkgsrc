@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2016/04/15 23:15:26 mef Exp $
+$NetBSD: distinfo,v 1.15 2016/07/25 08:28:33 wen Exp $
 
-SHA1 (Path-Tiny-0.088.tar.gz) = b70837699dfb1ffc12b8e8f8ccbcf7f4e0cff185
-RMD160 (Path-Tiny-0.088.tar.gz) = 4b2bd76b5ca5ab69bd0d7a313c33d0619bb560f0
-SHA512 (Path-Tiny-0.088.tar.gz) = 546e8d75f0cb21c8a386c1df6cf68fa7c9b695f79a29c7d409752c883a2c280f3bb3ad1173230c0af71615c9a4118c62ec3f36084deeae5889b752afd4ca2172
-Size (Path-Tiny-0.088.tar.gz) = 89852 bytes
+SHA1 (Path-Tiny-0.096.tar.gz) = 2659f0c3883a080116452e0cfc64897542ba3e75
+RMD160 (Path-Tiny-0.096.tar.gz) = bf912e74b6f1bca2a0d9c82cea01ca65d8ab3a9e
+SHA512 (Path-Tiny-0.096.tar.gz) = 9728b0d0f3bcd289f72a75212e376534523334f622203531bd5c2e8bdfd58728fb2ca952878f6100e4206ca4ab89d63927a7afb40c869e69965da1dc7f4e5629
+Size (Path-Tiny-0.096.tar.gz) = 90903 bytes
