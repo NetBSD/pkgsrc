@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/22 10:34:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/25 21:56:04 wiz Exp $
 
 DISTNAME=	qore-0.8.12
 CATEGORIES=	lang
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison flex gmake pax
+USE_TOOLS+=	bash bison flex gmake pax
 USE_LANGUAGES=	c c99 c++
 PTHREAD_OPTS+=	native
 FLEX_REQD=	2.5.31
