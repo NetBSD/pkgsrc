@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2287 2016/07/24 01:50:02 kamil Exp $
+# $NetBSD: Makefile,v 1.2288 2016/07/25 08:52:43 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1570,6 +1570,7 @@ SUBDIR+=	p5-Tie-RefHash-Weak
 SUBDIR+=	p5-Tie-RegexpHash
 SUBDIR+=	p5-Tie-ToObject
 SUBDIR+=	p5-Tree-DAG_Node
+SUBDIR+=	p5-Tree-R
 SUBDIR+=	p5-Tree-Simple
 SUBDIR+=	p5-Tree-Simple-VisitorFactory
 SUBDIR+=	p5-Try-Tiny
