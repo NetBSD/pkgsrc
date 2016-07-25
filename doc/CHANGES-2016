@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3017 2016/07/25 10:08:14 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.3018 2016/07/25 12:48:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4327,3 +4327,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/p5-Geo-ShapeFile to 2.61 [wen 2016-07-25]
 	Updated mail/neomutt to 20160723 [wiz 2016-07-25]
 	Added sysutils/b2sum version 20160619 [wiedi 2016-07-25]
+	Updated devel/p5-Test-CleanNamespaces to 0.19 [wen 2016-07-25]
