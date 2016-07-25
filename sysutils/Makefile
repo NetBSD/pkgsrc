@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2016/07/18 22:57:29 kamil Exp $
+# $NetBSD: Makefile,v 1.679 2016/07/25 10:07:23 wiedi Exp $
 #
 
 COMMENT=	System utilities
@@ -25,6 +25,7 @@ SUBDIR+=	asapm
 SUBDIR+=	atitvout
 SUBDIR+=	attr
 SUBDIR+=	augeas
+SUBDIR+=	b2sum
 SUBDIR+=	backuppc
 SUBDIR+=	bacula
 SUBDIR+=	bacula-clientonly
