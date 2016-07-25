@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2999 2016/07/25 04:16:49 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3000 2016/07/25 04:20:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/gocr to 0.48 [mef 2016-07-25]
 	Updated comms/p5-Device-XBee-API to 0.8 [wen 2016-07-25]
 	Updated converters/p5-JSON-Any to 1.39 [wen 2016-07-25]
+	Updated converters/p5-JSON-PP to 2.27400 [wen 2016-07-25]
