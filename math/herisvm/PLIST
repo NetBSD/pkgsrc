@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/25 09:18:51 cheusov Exp $
+bin/heri-eval
+bin/heri-split
+bin/heri-stat
+bin/heri-stat-addons
+man/man1/heri-eval.1
+man/man1/heri-split.1
+man/man1/heri-stat.1
+share/doc/herisvm/LICENSE
+share/doc/herisvm/NEWS
+share/doc/herisvm/README
+share/doc/herisvm/TODO
