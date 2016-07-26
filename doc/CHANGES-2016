@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3045 2016/07/26 12:44:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3046 2016/07/26 12:44:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4355,3 +4355,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-Create to 1.33 [wen 2016-07-26]
 	Updated lang/llvm to 3.8.1 [wiz 2016-07-26]
 	Updated lang/clang to 3.8.1 [wiz 2016-07-26]
+	Updated lang/clang-static-analyzer to 3.8.1 [wiz 2016-07-26]
