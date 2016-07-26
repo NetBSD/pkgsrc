@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3046 2016/07/26 12:44:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3047 2016/07/26 12:46:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -918,7 +918,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/ap-authnz-crowd version 2.2.2 [jperkin 2016-02-15]
 	Updated x11/libdrm to 2.4.67 [wiz 2016-02-15]
 	Updated net/php-baikal to 0.3.1 [wiz 2016-02-15]
-        Updated math/octave to 4.0.0 [dbj 2016-02-16]
+	Updated math/octave to 4.0.0 [dbj 2016-02-16]
 	Updated www/squid3 to 3.5.14 [taca 2016-02-16]
 	Updated audio/moc to 2.5.0 [leot 2016-02-16]
 	Removed audio/moc-devel successor audio/moc [leot 2016-02-16]
@@ -4347,10 +4347,10 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Math-Random-MT to 1.17 [wen 2016-07-26]
 	Updated math/p5-Math-Random-MT-Perl to 1.15 [wen 2016-07-26]
 	Updated math/p5-Math-Prime-Util to 0.58 [wen 2016-07-26]
-    Updated devel/php-xdebug to 2.4.0 [jdolecek 2016-07-26]
-    Updated www/php-apcu to 5.1.5 [jdolecek 2016-07-26]
-    Added www/php-apcu_bc version 1.0.3 [jdolecek 2016-07-26]
-    Added databases/php-redis3 version 3.0.0 [jdolecek 2016-07-26]
+	Updated devel/php-xdebug to 2.4.0 [jdolecek 2016-07-26]
+	Updated www/php-apcu to 5.1.5 [jdolecek 2016-07-26]
+	Added www/php-apcu_bc version 1.0.3 [jdolecek 2016-07-26]
+	Added databases/php-redis3 version 3.0.0 [jdolecek 2016-07-26]
 	Updated textproc/p5-podlators to 4.07 [wen 2016-07-26]
 	Updated textproc/p5-PDF-Create to 1.33 [wen 2016-07-26]
 	Updated lang/llvm to 3.8.1 [wiz 2016-07-26]
