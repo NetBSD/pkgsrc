@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3052 2016/07/26 16:00:56 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.3053 2016/07/26 16:47:25 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4363,3 +4363,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel45 to 4.5.3nb1 [bouyer 2016-01-26]
 	Updated sysutils/xenkernel42 to 4.2.5nb11 [bouyer 2016-01-26]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb19 [bouyer 2016-01-26]
+	Updated lang/python27 to 2.7.12nb4 [kamil 2016-07-26]
