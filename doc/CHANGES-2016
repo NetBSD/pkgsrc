@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3048 2016/07/26 12:47:34 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3049 2016/07/26 12:54:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4357,3 +4357,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/clang to 3.8.1 [wiz 2016-07-26]
 	Updated lang/clang-static-analyzer to 3.8.1 [wiz 2016-07-26]
 	Updated devel/include-what-you-use to 0.6 [wiz 2016-07-26]
+	Added textproc/odt2tex version 0.0.12 [wiz 2016-07-26]
