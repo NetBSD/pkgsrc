@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.13 2016/03/10 15:01:52 tnn Exp $
+# $NetBSD: Makefile.common,v 1.14 2016/07/26 12:43:51 wiz Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
-DISTNAME=	cfe-3.8.0.src
+DISTNAME=	cfe-3.8.1.src
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
