@@ -1,8 +1,8 @@
-$NetBSD: patch-src_main_character.c,v 1.2 2015/06/30 02:38:52 wen Exp $
+$NetBSD: patch-src_main_character.c,v 1.3 2016/07/26 04:53:33 wen Exp $
 
---- src/main/character.c.orig	2015-06-29 21:44:13.000000000 +0000
+--- src/main/character.c.orig	2016-06-01 22:15:06.000000000 +0000
 +++ src/main/character.c
-@@ -1360,7 +1360,7 @@ SEXP attribute_hidden do_strtrim(SEXP ca
+@@ -1564,7 +1564,7 @@ SEXP attribute_hidden do_strtrim(SEXP ca
      return s;
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-src_main_character.c,v 1.2 2015/06/30 02:38:52 wen Exp $
  {
      long int res;
      char *endp;
-@@ -1394,7 +1394,7 @@ SEXP attribute_hidden do_strtoi(SEXP cal
+@@ -1598,7 +1598,7 @@ SEXP attribute_hidden do_strtoi(SEXP cal
  
      PROTECT(ans = allocVector(INTSXP, n = LENGTH(x)));
      for(i = 0; i < n; i++)
