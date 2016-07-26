@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1182 2016/07/11 14:32:46 taca Exp $
+# $NetBSD: Makefile,v 1.1183 2016/07/26 09:27:30 jdolecek Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -545,6 +545,7 @@ SUBDIR+=	pear-HTTP
 SUBDIR+=	pear-HTTP_Request
 SUBDIR+=	pear-HTTP_Request2
 SUBDIR+=	php-apcu
+SUBDIR+=	php-apcu_bc
 SUBDIR+=	php-basercms
 SUBDIR+=	php-concrete5
 SUBDIR+=	php-curl
