@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2016/05/22 17:46:26 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2016/07/26 13:37:28 richard Exp $
 
 DISTNAME=	iso-codes-3.68
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	https://pkg-isocodes.alioth.debian.org/downloads/
 EXTRACT_SUFX=	.tar.xz
@@ -40,7 +41,6 @@ SUBST_STAGE.python3=	pre-configure
 SUBST_MESSAGE.python3=	Fixing path to python binary.
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

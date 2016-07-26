@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.38 2016/05/22 17:46:26 wiz Exp $
+$NetBSD: distinfo,v 1.39 2016/07/26 13:37:28 richard Exp $
 
 SHA1 (iso-codes-3.68.tar.xz) = 9cd62cf471b7a269c86fb8e97d63b1e53fbc166c
 RMD160 (iso-codes-3.68.tar.xz) = ba8132da679ef55c26934c377b29885b69c4be12
 SHA512 (iso-codes-3.68.tar.xz) = 77abd3437fe66635cf52dbe065def9ff229a4bce20eb1167ccc825c934db57b4acc8112f99bdca6313324d850549cd9ead7556e0540c2b4e80cad9715613cec2
 Size (iso-codes-3.68.tar.xz) = 3448584 bytes
+SHA1 (patch-bin_xml__from__json.py) = 39fc944725377362faa3b39d03e164c7d57f1497
