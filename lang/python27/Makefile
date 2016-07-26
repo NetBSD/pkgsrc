@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/07/23 21:12:48 kamil Exp $
+# $NetBSD: Makefile,v 1.66 2016/07/26 16:44:28 kamil Exp $
 
 .include "dist.mk"
 
@@ -178,16 +178,9 @@ SUBST_CLASSES+=		pfindlib
 SUBST_MESSAGE.pfindlib=	Fixing find_library() on POSIX-like (excluding Darwin) systems.
 SUBST_STAGE.pfindlib=	pre-configure
 SUBST_FILES.pfindlib=	Lib/ctypes/util.py
-SUBST_SED.pfindlib=	-e 's!\(-Wl,-t -o\)!${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \1!'
+SUBST_SED.pfindlib=	-e 's!\(-Wl,-t -o\)!${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \1!'
 
-SUBST_CLASSES+=		cdlopen
-SUBST_MESSAGE.cdlopen=	Handle X11BASE paths in dlopen(3) calls of _ctypes.so
-SUBST_STAGE.cdlopen=	pre-configure
-SUBST_FILES.cdlopen=	setup.py
-SUBST_VARS.cdlopen=	X11BASE
-
-# Required to detect X11BASE paths in dlopen(3) calls of _ctypes.so
-USE_X11=		yes
+.include "options.mk"
 
 SUBST_CLASSES+=		sslbase
 SUBST_MESSAGE.sslbase=	Fixing find-file for openssl with SSLBASE.
