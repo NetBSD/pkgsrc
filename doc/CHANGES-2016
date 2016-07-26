@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3051 2016/07/26 14:17:08 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3052 2016/07/26 16:00:56 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4360,3 +4360,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/odt2tex version 0.0.12 [wiz 2016-07-26]
 	Updated textproc/cabocha to 0.69 [mef 2016-07-26]
 	Updated textproc/p5-XML-LibXML to 2.0128 [mef 2016-07-26]
+	Updated sysutils/xenkernel45 to 4.5.3nb1 [bouyer 2016-01-26]
+	Updated sysutils/xenkernel42 to 4.2.5nb11 [bouyer 2016-01-26]
+	Updated sysutils/xenkernel41 to 4.1.6.1nb19 [bouyer 2016-01-26]
