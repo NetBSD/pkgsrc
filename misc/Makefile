@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2016/06/09 09:51:36 youri Exp $
+# $NetBSD: Makefile,v 1.471 2016/07/26 18:14:11 kamil Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -206,6 +206,7 @@ SUBDIR+=	mousetweaks
 SUBDIR+=	mtail
 SUBDIR+=	multitail
 SUBDIR+=	nxtvepg
+SUBDIR+=	nyancat
 SUBDIR+=	ocaml-cudf
 SUBDIR+=	ocaml-opam
 SUBDIR+=	open2300
