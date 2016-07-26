@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 13:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/26 12:43:51 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/cfe/clang-static-analyzer/:S/.src//}
-PKGREVISION=	1
 
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 
