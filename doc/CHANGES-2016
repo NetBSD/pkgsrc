@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3031 2016/07/26 06:08:22 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3032 2016/07/26 06:17:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4341,3 +4341,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-Format-Strptime to 1.68 [wen 2016-07-26]
 	Updated math/R to 3.3.1 [wen 2016-07-26]
 	Updated net/p5-Net-Frame to 1.16 [wen 2016-07-26]
+	Updated net/p5-Net-OpenID-Common to 1.20 [wen 2016-07-26]
