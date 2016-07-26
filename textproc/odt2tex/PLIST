@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/26 12:53:11 wiz Exp $
+bin/odt2tex
