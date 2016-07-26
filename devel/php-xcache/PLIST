@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/21 21:35:07 rodent Exp $
-share/examples/${PHP_PKG_PREFIX}-xcache/xcache.ini
+@comment $NetBSD: PLIST,v 1.3 2016/07/26 04:26:47 jnemeth Exp $
 share/${PHP_PKG_PREFIX}-xcache/cacher/cacher.css
 share/${PHP_PKG_PREFIX}-xcache/cacher/common.php
 share/${PHP_PKG_PREFIX}-xcache/cacher/config.default.php
