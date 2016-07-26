@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3028 2016/07/26 00:26:42 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3029 2016/07/26 00:30:42 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4338,3 +4338,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-Convert-NLS_DATE_FORMAT to 0.06 [wen 2016-07-26]
 	Updated time/p5-DateTime-Format-Mail to 0.403 [wen 2016-07-26]
 	Updated time/p5-DateTime-Format-Pg to 0.16012 [wen 2016-07-26]
+	Updated time/p5-DateTime-Format-Strptime to 1.68 [wen 2016-07-26]
