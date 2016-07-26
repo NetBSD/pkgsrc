@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 19:22:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/26 13:46:39 mef Exp $
 
 DISTNAME=	File-Share-0.25
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/File/Share/.packlist
+
+# for make test
+BUILD_DEPENDS+=	p5-File-ShareDir-[0-9]*:../../devel/p5-File-ShareDir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
