@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:24:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/26 00:21:05 wen Exp $
 
-DISTNAME=	DateTime-Format-Mail-0.402
+DISTNAME=	DateTime-Format-Mail-0.403
 # make sure it has 4 digits
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 
