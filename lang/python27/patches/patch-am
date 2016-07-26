@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.20 2016/07/23 18:28:26 kamil Exp $
+$NetBSD: patch-am,v 1.21 2016/07/26 16:44:28 kamil Exp $
 
 Disabled modules for normal build:
 bsddb
@@ -22,9 +22,6 @@ Build the _ssl module with pkgsrc choiced OpenSSL.
 Build the 1.85 compat module all the time against the BDB version of choice.
 
 cygwin 2.7.3-no-libm.patch
-
-Set X11BASE rpath value for _ctypes.so, it's required as it calls dlopen(3)
-and dynamic linker cannot find without it X11 libraries.
 
 --- setup.py.orig	2016-06-25 21:49:32.000000000 +0000
 +++ setup.py
@@ -377,15 +374,7 @@ and dynamic linker cannot find without it X11 libraries.
              if dbmext is not None:
                  exts.append(dbmext)
              else:
-@@ -2113,6 +1946,7 @@ class PyBuildExt(build_ext):
-                         extra_compile_args=extra_compile_args,
-                         extra_link_args=extra_link_args,
-                         libraries=[],
-+                        runtime_library_dirs=['@X11BASE@/lib'],
-                         sources=sources,
-                         depends=depends)
-         ext_test = Extension('_ctypes_test',
-@@ -2250,9 +2084,9 @@ def main():
+@@ -2250,9 +2083,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
