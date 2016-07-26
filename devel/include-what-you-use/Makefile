@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/07/05 00:19:59 maya Exp $
+# $NetBSD: Makefile,v 1.5 2016/07/26 12:47:24 wiz Exp $
 
-DISTNAME=	include-what-you-use-0.5.src
-PKGREVISION=	1
+DISTNAME=	include-what-you-use-0.6.src
 PKGNAME=	${DISTNAME:.src=}
 CATEGORIES=	devel
 MASTER_SITES=	http://include-what-you-use.org/downloads/
