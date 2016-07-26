@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3040 2016/07/26 09:28:39 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.3041 2016/07/26 09:52:32 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4350,3 +4350,4 @@ Changes to the packages collection and infrastructure in 2016:
     Updated devel/php-xdebug to 2.4.0 [jdolecek 2016-07-26]
     Updated www/php-apcu to 5.1.5 [jdolecek 2016-07-26]
     Added www/php-apcu_bc version 1.0.3 [jdolecek 2016-07-26]
+    Added databases/php-redis3 version 3.0.0 [jdolecek 2016-07-26]
