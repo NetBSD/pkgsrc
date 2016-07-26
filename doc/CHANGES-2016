@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3054 2016/07/26 17:16:32 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3055 2016/07/26 17:31:11 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4365,3 +4365,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel41 to 4.1.6.1nb19 [bouyer 2016-01-26]
 	Updated lang/python27 to 2.7.12nb4 [kamil 2016-07-26]
 	Updated www/logswan to 1.05 [kamil 2016-07-26]
+	Added textproc/jo version 1.0 [kamil 2016-07-26]
