@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3056 2016/07/26 17:43:02 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3057 2016/07/26 18:02:50 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4367,3 +4367,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/logswan to 1.05 [kamil 2016-07-26]
 	Added textproc/jo version 1.0 [kamil 2016-07-26]
 	Added graphics/ansilove version 3.0.3 [kamil 2016-07-26]
+	Added misc/nyancat version 1.5.1 [kamil 2016-07-26]
