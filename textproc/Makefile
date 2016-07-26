@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.890 2016/07/26 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.891 2016/07/26 17:30:18 kamil Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -327,6 +327,7 @@ SUBDIR+=	java-native-hyperestraier
 SUBDIR+=	java-pure-hyperestraier
 SUBDIR+=	jdom
 SUBDIR+=	jing
+SUBDIR+=	jo
 SUBDIR+=	jrep
 SUBDIR+=	json-c
 SUBDIR+=	json-glib
