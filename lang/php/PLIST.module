@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST.module,v 1.2 2016/07/17 15:49:44 jdolecek Exp $
+@comment $NetBSD: PLIST.module,v 1.3 2016/07/26 08:19:45 jdolecek Exp $
 share/examples/php/${MODNAME}.ini
-${PHP_EXTENSION_DIR}/${MODNAME}.${SHLIB_SUFFIX}
+${PHP_EXTENSION_DIR}/${PKGMODNAME}.${SHLIB_SUFFIX}
