@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3043 2016/07/26 12:38:08 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3044 2016/07/26 12:44:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4353,3 +4353,4 @@ Changes to the packages collection and infrastructure in 2016:
     Added databases/php-redis3 version 3.0.0 [jdolecek 2016-07-26]
 	Updated textproc/p5-podlators to 4.07 [wen 2016-07-26]
 	Updated textproc/p5-PDF-Create to 1.33 [wen 2016-07-26]
+	Updated lang/llvm to 3.8.1 [wiz 2016-07-26]
