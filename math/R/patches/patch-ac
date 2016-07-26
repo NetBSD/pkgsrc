@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.38 2016/04/13 21:04:04 markd Exp $
+$NetBSD: patch-ac,v 1.39 2016/07/26 04:53:33 wen Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 FreeBSD 10 is not FreeBSD 1.
 Fix texi2any version check.
 
---- configure.orig	2016-03-02 23:16:44.000000000 +0000
+--- configure.orig	2016-07-26 00:32:06.000000000 +0000
 +++ configure
-@@ -4023,7 +4023,7 @@ fi
+@@ -3896,7 +3896,7 @@ fi
  
  ## As from R 3.2.0 split up -L... and -lR
  if test "${want_R_shlib}" = yes; then
@@ -15,16 +15,7 @@ Fix texi2any version check.
    LIBR1=-lR
  else
    LIBR0=
-@@ -4088,7 +4088,7 @@ fi
- if test "x${want_lto}" != xno; then
-   LTO=-flto
- fi
--if test "x${want_lto}" == xyes; then
-+if test "x${want_lto}" = xyes; then
-   LTOALL=-flto
- fi
- 
-@@ -5297,7 +5297,7 @@ if test -z "${texi2any_version_maj}" \
+@@ -5076,7 +5076,7 @@ if test -z "${texi2any_version_maj}" \
  elif test ${texi2any_version_maj} -gt 5; then
    r_cv_prog_texi2any_v5=yes
  elif test ${texi2any_version_maj} -lt 5 \
@@ -33,7 +24,7 @@ Fix texi2any version check.
    r_cv_prog_texi2any_v5=no
  else
    r_cv_prog_texi2any_v5=yes
-@@ -20523,7 +20523,7 @@ case "${host_os}" in
+@@ -22376,7 +22376,7 @@ case "${host_os}" in
      ## Not so bad in later versions of Darwin,
      ## where DYLD_FALLBACK_LIBRARY_PATH is used (see below).
      ;;
@@ -42,19 +33,19 @@ Fix texi2any version check.
      for arg in ${LDFLAGS}; do
        case "${arg}" in
          -L*)
-@@ -23200,6 +23200,11 @@ fi
+@@ -24958,6 +24958,11 @@ fi
  	  done
  	  ;;
  	-[lLR]*)
-+	    case $ac_arg in
-+	    -R*)
-+		ac_arg="${wl}$ac_arg"
-+		;;
-+	    esac
++           case $ac_arg in
++           -R*)
++               ac_arg="${wl}$ac_arg"
++               ;;
++           esac
  	    ac_exists=false
    for ac_i in $ac_cv_f77_libs; do
      if test x"$ac_arg" = x"$ac_i"; then
-@@ -24165,6 +24170,9 @@ cat > conftest.c <<EOF
+@@ -25923,6 +25928,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -64,7 +55,7 @@ Fix texi2any version check.
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -24260,6 +24268,9 @@ typedef struct {
+@@ -26018,6 +26026,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -74,20 +65,20 @@ Fix texi2any version check.
  int main () {
      Rcomplex z[3];
  
-@@ -26468,7 +26479,7 @@ $as_echo "$as_me: WARNING: Use of flat n
-       SHLIB_LIBADD="-lcc_dynamic"
-     fi
+@@ -28175,7 +28186,7 @@ $as_echo "$as_me: WARNING: Use of flat n
+     fpicflags="${darwin_pic}"
+     shlib_cxxldflags="${shlib_ldflags}"
      ;;
 -  freebsd*)
 +  freebsd*|dragonfly*)
      ## maybe this needs to depend on the compiler:
      ## -export-dynamic used to work, but does not with clang.
      ## Seems FreeBSD has used the GNU linker since at least 3.0 (Oct 1998)
-@@ -26563,6 +26574,12 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -28271,6 +28282,12 @@ $as_echo "$as_me: WARNING: Use of flat n
      ;;
    netbsd*)
      ## See the comments about FreeBSD
-+      fpicflags="-fPIC"
++    fpicflags="-fPIC"
 +      case "${host_cpu}" in
 +        powerpc*)
 +        cpicflags="-fPIC"
@@ -96,7 +87,7 @@ Fix texi2any version check.
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-Wl,--export-dynamic"
        shlib_ldflags="-shared"
-@@ -26589,22 +26606,22 @@ $as_echo "$as_me: WARNING: Use of flat n
+@@ -28313,22 +28330,22 @@ $as_echo "$as_me: WARNING: Use of flat n
    solaris*)
  ## SPARC has only an 8k global object table, 1024 entries on 64-bit,
  ## so need PIC not pic.  They are the same on other Solaris platforms.
@@ -123,16 +114,16 @@ Fix texi2any version check.
        cpicflags="-KPIC"
        if test "`basename ${CXX}`" = "CC" ; then
          ## Forte version 7 needs -lCstd: Forte 6 does not.
-@@ -26665,7 +26682,7 @@ fi
+@@ -28389,7 +28406,7 @@ fi
  : ${CPICFLAGS="${cpicflags}"}
  if test -z "${CPICFLAGS}"; then
    case "${host_os}" in
--    aix*|cygwin*|irix*|mingw*|osf*)
-+    aix*|cygwin*|irix*|mingw*|osf*|darwin*)
+-    aix*|irix*|mingw*|osf*)
++    aix*|irix*|mingw*|osf*|darwin*)
        ;;
      *)
        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: I could not determine CPICFLAGS." >&5
-@@ -26765,10 +26782,10 @@ case "${host_os}" in
+@@ -28489,10 +28506,10 @@ case "${host_os}" in
      DYLIB_EXT=".dylib"
      dylib_ldflags="${darwin_dylib_ldflags}"
      MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[\.][1-9]$/.0/"`
@@ -146,7 +137,7 @@ Fix texi2any version check.
      ;;
    hpux*)
      ## Needs to avoid embedding a relative path ../../../bin.
-@@ -27390,6 +27407,14 @@ _ACEOF
+@@ -29106,6 +29123,14 @@ _ACEOF
  ## Cygwin had rintl but not nearbyintl
  for ac_func in expm1 hypot log1p log1pl log2 log10 nearbyint nearbyintl powl rint rintl
  do
@@ -161,7 +152,7 @@ Fix texi2any version check.
  as_ac_Symbol=`$as_echo "ac_cv_have_decl_$ac_func" | $as_tr_sh`
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether $ac_func exists and is declared" >&5
  $as_echo_n "checking whether $ac_func exists and is declared... " >&6; }
-@@ -27399,24 +27424,12 @@ else
+@@ -29115,24 +29140,12 @@ else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #include <math.h>
@@ -184,15 +175,15 @@ Fix texi2any version check.
 -
 -  ;
 -  return 0;
-+  return $ac_func($args);;
++  return $ac_func($args);;;
  }
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
-@@ -30326,6 +30339,15 @@ cat > conftest.c <<EOF
+@@ -32092,6 +32105,14 @@ cat > conftest.c <<EOF
+ # define F77_SYMBOL(x)   x
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
- 
-+#ifdef F77_DUMMY_MAIN
++ifdef F77_DUMMY_MAIN
 +
 +#  ifdef __cplusplus
 +     extern "C"
@@ -200,11 +191,10 @@ Fix texi2any version check.
 +   int F77_DUMMY_MAIN() { return 1; }
 +
 +#endif
-+
+ 
  int main () {
    int iflag;
-   F77_SYMBOL(test1)(&iflag);
-@@ -30390,6 +30412,14 @@ else
+@@ -32157,6 +32178,15 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -216,10 +206,11 @@ Fix texi2any version check.
 +   int F77_DUMMY_MAIN() { return 1; }
 +
 +#endif
++
  void F77_SYMBOL(xerbla)(char *srname, int *info)
  {}
  void blas_set () {
-@@ -39021,7 +39051,7 @@ case "${host_os}" in
+@@ -41516,7 +41546,7 @@ case "${host_os}" in
      r_ld_library_defaults="/usr/lib64:/lib64:/usr/lib:/lib"
      ;;
    solaris*)

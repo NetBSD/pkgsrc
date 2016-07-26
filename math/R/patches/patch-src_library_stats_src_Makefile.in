@@ -1,8 +1,8 @@
-$NetBSD: patch-src_library_stats_src_Makefile.in,v 1.1 2014/11/29 22:04:51 joerg Exp $
+$NetBSD: patch-src_library_stats_src_Makefile.in,v 1.2 2016/07/26 04:53:33 wen Exp $
 
 ${R_INCLUDE_DIR} is used in the default compiler flags.
 
---- src/library/stats/src/Makefile.in.orig	2014-11-29 20:35:23.000000000 +0000
+--- src/library/stats/src/Makefile.in.orig	2016-07-26 01:57:49.000000000 +0000
 +++ src/library/stats/src/Makefile.in
 @@ -10,6 +10,7 @@ top_srcdir = @top_srcdir@
  top_builddir = ../../../..
@@ -11,4 +11,4 @@ ${R_INCLUDE_DIR} is used in the default compiler flags.
 +R_INCLUDE_DIR = $(R_HOME)/include
  ## for $(R_HOME)/etc${R_ARCH}/Makeconf
  R_SHARE_DIR = $(R_HOME)/share
- 
+ R_INCLUDE_DIR = $(R_HOME)/include
