@@ -1,0 +1,4 @@
+odt2tex is a simple command line tool that converts ODT (Libre/OpenOffice
+text documents) to LaTeX .tex input files. It is released under the
+MIT license and written in plain C depending only on two further
+libraries: libzip and expat.
