@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.11 2016/04/11 12:29:53 jperkin Exp $
+# $NetBSD: plist-man.awk,v 1.12 2016/07/26 08:41:36 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,7 +77,7 @@ BEGIN {
 	PKGMANDIR = getenv("PKGMANDIR", "man")
 	CATMAN_SECTION_SUFFIX = getenv("CATMAN_SECTION_SUFFIX", "no")
 	CATPAGE_REGEX = "cat[1-9ln](am|f)?/[^/]*\\.[0-9ln](am|f)?"
-	MANPAGE_REGEX = "man[1-9ln](am|f)?/[^/]*\\.[1-9ln](am|f)?"
+	MANPAGE_REGEX = "(man|html)[1-9ln](am|f)?/[^/]*\\.([1-9ln](am|f)?|html)"
 	CATORMAN_REGEX = "(" MANPAGE_REGEX "|" CATPAGE_REGEX ")"
 }
 
