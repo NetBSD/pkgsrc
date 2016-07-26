@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3037 2016/07/26 06:51:25 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3038 2016/07/26 09:18:30 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4347,3 +4347,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Math-Random-MT to 1.17 [wen 2016-07-26]
 	Updated math/p5-Math-Random-MT-Perl to 1.15 [wen 2016-07-26]
 	Updated math/p5-Math-Prime-Util to 0.58 [wen 2016-07-26]
+    Updated devel/php-xdebug to 2.4.0 [jdolecek 2016-07-26]
