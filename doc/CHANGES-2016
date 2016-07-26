@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3033 2016/07/26 06:21:39 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3034 2016/07/26 06:27:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4343,3 +4343,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-Frame to 1.16 [wen 2016-07-26]
 	Updated net/p5-Net-OpenID-Common to 1.20 [wen 2016-07-26]
 	Updated net/p5-Net-OpenID-Consumer to 1.18 [wen 2016-07-26]
+	Updated net/p5-Net-Twitter to 4.01020 [wen 2016-07-26]
