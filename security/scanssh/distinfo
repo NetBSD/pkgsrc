@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:18:08 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/07/26 20:33:35 alnsn Exp $
 
 SHA1 (scanssh-2.1.tar.gz) = 69d35bab7fbe3ebc7e2e0dba37b3b1935b3cc194
 RMD160 (scanssh-2.1.tar.gz) = c768f6dca5abe0998f0520bc4cb9be506bf038e6
 SHA512 (scanssh-2.1.tar.gz) = 1ddff6f8e51735bab28032c8d7cbb641ff0cd19a404a27ab489589ef1e30e3721dd486854eb4fef15368cc53f10c9c2650ffaf7fa7f767dc2202fcc5540ae59c
 Size (scanssh-2.1.tar.gz) = 111481 bytes
+SHA1 (patch-Makefile.in) = f180949dd42b76d84d75ec3b1ace94cbdfb90f89
 SHA1 (patch-aa) = f5815d6bdf1c44c139f8c34f26f4518304a78d74
