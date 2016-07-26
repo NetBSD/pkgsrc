@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.166 2016/07/09 06:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2016/07/26 04:53:33 wen Exp $
 
-DISTNAME=		R-3.2.4
-PKGREVISION=		1
+DISTNAME=		R-3.3.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-3/}
 
@@ -129,8 +128,8 @@ SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
-BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
-BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.5
+BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
 CONFIGURE_ARGS+=	--enable-mbcs=no
@@ -161,6 +160,7 @@ fix-darwin-install-name:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
