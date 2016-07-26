@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/07/26 20:33:35 alnsn Exp $
+
+Fix PKGSRC_MKPIE=yes build.
+
+--- Makefile.in.orig	2016-07-26 20:26:43.287121839 +0000
++++ Makefile.in
+@@ -79,7 +79,7 @@ bin_PROGRAMS = scanssh
+ scanssh_SOURCES = scanssh.c atomicio.c exclude.c connecter.c xmalloc.c 	interface.c socks.c http.c telnet.c exclude.h interface.h 	scanssh.h socks.h xmalloc.h
+ 
+ scanssh_LDADD = @LIBOBJS@ @PCAPLIB@ @EVENTLIB@ @DNETLIB@
+-CFLAGS = -O2 -Wall -g
++CFLAGS = -fPIC -O2 -Wall -g
+ 
+ INCLUDES = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat 	@EVENTINC@ @PCAPINC@ @DNETINC@
+ 
