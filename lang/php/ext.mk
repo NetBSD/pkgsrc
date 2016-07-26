@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.41 2016/07/24 14:01:55 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.42 2016/07/26 08:19:45 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -28,7 +28,8 @@ HOMEPAGE?=		http://pecl.php.net/package/${MODNAME}
 PKGMODNAME?=		${MODNAME:S/-/_/}
 PHPSETUPSUBDIR?=	#empty
 MODULESDIR?=		${WRKSRC}/modules
-PLIST_SUBST+=		MODNAME=${PKGMODNAME}
+PLIST_SUBST+=		MODNAME=${MODNAME}
+PLIST_SUBST+=		PKGMODNAME=${PKGMODNAME}
 PLIST_SUBST+=       SHLIB_SUFFIX=${SHLIB_SUFFIX}
 PLIST_SUBST+=       PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
@@ -49,14 +50,14 @@ EXTRACT_SUFX?=		.tgz
 .endif
 
 EGDIR=      ${PREFIX}/share/examples/php
-CONF_FILES= ${EGDIR}/${PKGMODNAME}.ini ${EXT_CONF_DIR}/${PKGMODNAME}.ini
+CONF_FILES= ${EGDIR}/${MODNAME}.ini ${EXT_CONF_DIR}/${MODNAME}.ini
 
 EXT_CONF_DIR=   ${PKG_SYSCONFDIR}/php.d
 MAKE_DIRS+=     ${EXT_CONF_DIR}
 MAKE_DIRS+=     ${EGDIR}
 
 SUBST_CLASSES+=     ext-ini
-SUBST_FILES.ext-ini=  ${PKGMODNAME}.ini
+SUBST_FILES.ext-ini=  ${MODNAME}.ini
 SUBST_MESSAGE.ext-ini=Creating module ini file 
 SUBST_SED.ext-ini+=    -e 's,@MODNAME@,${PKGMODNAME},g'
 SUBST_SED.ext-ini+=    -e 's,@EXTENSION_FILE@,${EXTENSION_FILE},g'
@@ -119,7 +120,7 @@ phpize-module:
 	fi
 
 pre-build:
-	${CP} ${.CURDIR}/../../lang/php/ext.ini ${WRKSRC}/${PKGMODNAME}.ini
+	${CP} ${.CURDIR}/../../lang/php/ext.ini ${WRKSRC}/${MODNAME}.ini
 
 do-install: do-module-install
 
@@ -129,7 +130,7 @@ do-module-install:
 		${DESTDIR}${PREFIX}/${PHP_EXTENSION_DIR}
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PKGMODNAME}.ini ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/${MODNAME}.ini ${DESTDIR}${EGDIR}
 
 .if defined(USE_PHP_EXT_PATCHES)
 PATCHDIR=		${.CURDIR}/${PHPPKGSRCDIR}/patches
