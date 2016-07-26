@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3023 2016/07/25 23:58:16 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3024 2016/07/26 00:03:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4333,3 +4333,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-CSV_XS to 1.24 [wen 2016-07-25]
 	Updated textproc/p5-Text-FindIndent to 0.11 [wen 2016-07-25]
 	Updated textproc/p5-XML-Tidy to 1.16 [wen 2016-07-25]
+	Updated textproc/p5-YAML-LibYAML to 0.63 [wen 2016-07-26]
