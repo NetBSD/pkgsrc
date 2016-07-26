@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3050 2016/07/26 13:38:27 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3051 2016/07/26 14:17:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4359,3 +4359,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/include-what-you-use to 0.6 [wiz 2016-07-26]
 	Added textproc/odt2tex version 0.0.12 [wiz 2016-07-26]
 	Updated textproc/cabocha to 0.69 [mef 2016-07-26]
+	Updated textproc/p5-XML-LibXML to 2.0128 [mef 2016-07-26]
