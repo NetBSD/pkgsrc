@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2015/12/19 14:27:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/26 09:22:40 jdolecek Exp $
 
 MODNAME=	apcu
-PECL_VERSION=	4.0.7
+PECL_VERSION=	5.1.5
 CATEGORIES+=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	APCu - APC User Cache
 LICENSE=	php
-
-PHP_VERSIONS_ACCEPTED=	55 56
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
@@ -21,6 +19,7 @@ INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC} && ${MAKE} INSTALL_ROOT="${DESTDIR}" install-headers
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
