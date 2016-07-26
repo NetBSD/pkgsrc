@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3057 2016/07/26 18:02:50 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3058 2016/07/26 20:07:21 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4368,3 +4368,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/jo version 1.0 [kamil 2016-07-26]
 	Added graphics/ansilove version 3.0.3 [kamil 2016-07-26]
 	Added misc/nyancat version 1.5.1 [kamil 2016-07-26]
+	Added games/wordwarvi version 1.0.2 [kamil 2016-07-26]
