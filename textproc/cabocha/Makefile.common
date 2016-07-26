@@ -1,12 +1,15 @@
-# $NetBSD: Makefile.common,v 1.9 2015/05/10 13:27:11 mef Exp $
+# $NetBSD: Makefile.common,v 1.10 2016/07/26 13:38:02 mef Exp $
 # used by textproc/cabocha/Makefile
 # used by textproc/p5-cabocha/Makefile
 # used by textproc/py-cabocha/Makefile
 # used by textproc/ruby-cabocha/Makefile
 
-DISTNAME=	cabocha-0.68
+DISTNAME=	cabocha-0.69
 CATEGORIES=	textproc
+# 0.69 cached to ftp.netbsd.org
 MASTER_SITES=	http://cabocha.googlecode.com/files/
+#MASTER_SITES=	https://drive.google.com/open?id=0B4y35FiV1wh7SDd1Q1dUQkZQaUU
+#               https://drive.google.com/folderview?id=0B4y35FiV1wh7cGRCUUJHVTNJRnM&usp=sharing#list
 EXTRACT_SUFX=	.tar.bz2
 
 DISTINFO_FILE=	${.CURDIR}/../../textproc/cabocha/distinfo
