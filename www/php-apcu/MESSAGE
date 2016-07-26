@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/07/26 09:22:40 jdolecek Exp $
+
+php-apcu 5.x no longer defines apc-compabile wrappers apc_*(). Install
+php-apcu_bc to get these.
+===========================================================================
