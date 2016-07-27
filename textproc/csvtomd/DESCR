@@ -1,0 +1,4 @@
+I built csvtomd to convert one or more CSV files into nicely-padded
+Markdown tables. Now you can build your tables in Excel and convert
+them for use in GitHub, Bitbucket, or Mou Markdown files without
+having to construct them by hand.
