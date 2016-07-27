@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2016/03/28 13:13:54 kamil Exp $
+$NetBSD: distinfo,v 1.2 2016/07/27 09:17:41 wiz Exp $
 
-SHA1 (lldb-3.8.0.src.tar.xz) = 6d503cea94c131b6bfcf5254e62d32fcce1ebcc8
-RMD160 (lldb-3.8.0.src.tar.xz) = 6eadec551cebe38916590df0d730449aec22d26a
-SHA512 (lldb-3.8.0.src.tar.xz) = a491209ae12b0c7d938ebd94362396a50922326ed24ed11f71b1f19b61274a34a92d2bd46857b44081e7fa3e6d0a641d148bd4022f8edf71f80ff2aa7a55ebef
-Size (lldb-3.8.0.src.tar.xz) = 10929768 bytes
+SHA1 (lldb-3.8.1.src.tar.xz) = 20ecd2d20d95b25ed84fd707f3851bb567d750cb
+RMD160 (lldb-3.8.1.src.tar.xz) = e080bb734bcba419472acc0619fc7affb6209104
+SHA512 (lldb-3.8.1.src.tar.xz) = d73c55daed6ef5e5ca784c7010f2d75be26024b14fa61a2861a8a6cbe129e417fb7be2a3b532e17e9d7de98ae38ce6a689d8166049eff365fb04f4bd772758f3
+Size (lldb-3.8.1.src.tar.xz) = 10928220 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 1b8d85d5aa4ac35d4b303a1dc7754ce63cf96cb0
 SHA1 (patch-include_lldb_Utility_regcclass.h) = 9ed649e8deb5924feaf82a6e675f5c596367b3d6
 SHA1 (patch-include_lldb_Utility_regcname.h) = b67145f0437d3c09adc33a925d49267cd9ba4fd7
@@ -12,7 +12,7 @@ SHA1 (patch-include_lldb_Utility_regex2.h) = 822a47b1221368ec5442bfbdbc20fe4e370
 SHA1 (patch-include_lldb_Utility_regex__impl.h) = 4d99669a756bd662ae28abc8cefe6e1538ef84b6
 SHA1 (patch-include_lldb_Utility_regutils.h) = ea36409f8cd05dcf9b81144cbc136abc5fc3a190
 SHA1 (patch-scripts_CMakeLists.txt) = 07043853b1a923aa8fcb9124b79453eca21c01fb
-SHA1 (patch-scripts_Python_finishSwigPythonLLDB.py) = e2ad536cf12cea251b2a2117091b970e3081fad6
+SHA1 (patch-scripts_Python_finishSwigPythonLLDB.py) = fc0723771d886f0f174f25d91dac85376376af79
 SHA1 (patch-scripts_Python_modules_readline_readline.cpp) = 4a030226c47cf7d54ebc727e92e278c163e48bf5
 SHA1 (patch-source_Utility_CMakeLists.txt) = 5b10fe94d76135d8d5ba31862066841394dd45c1
 SHA1 (patch-source_Utility_regcomp.c) = bd315000773bab38b6fe6d119420afbcb5b83a59
