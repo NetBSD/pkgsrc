@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/06/19 20:44:23 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/27 12:22:13 leot Exp $
 
 DISTNAME=	confuse-3.0
 CATEGORIES=	devel
@@ -31,5 +31,4 @@ pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/fetch/github.mk"
 .include "../../mk/bsd.pkg.mk"
