@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:42 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/07/27 00:10:12 wen Exp $
 
-SHA1 (Regexp-Assemble-0.36.tgz) = 012afdafe842f15a391d04925816d0ec6cccbbe9
-RMD160 (Regexp-Assemble-0.36.tgz) = fab3e17f91ed485e59b6fd559b451e0ddad15926
-SHA512 (Regexp-Assemble-0.36.tgz) = 4680d836cceee08a761f0618afba97f4e405934c138a1e9879e25ca63a20e92ee6c8df734fcfbfbc34c086e6c614fe8ac0f0b7e90af5309827503efd8bdadac9
-Size (Regexp-Assemble-0.36.tgz) = 97961 bytes
+SHA1 (Regexp-Assemble-0.37.tgz) = 52c84752ec2a62c463e0144015837b2e8397df4c
+RMD160 (Regexp-Assemble-0.37.tgz) = df3036b7c26714a74af80ef41610885a64c61cd9
+SHA512 (Regexp-Assemble-0.37.tgz) = 2b21154c814fec9b0fc0affc3c7751e17bd93e5d0b42c13379131498ea2c4ea340316a01045d936dbc9b0e8cfdb1afa7b778936083d04cc533766942fd46c407
+Size (Regexp-Assemble-0.37.tgz) = 100414 bytes
