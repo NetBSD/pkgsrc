@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/15 14:55:50 brook Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/27 02:37:10 wen Exp $
 #
 
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Combine multi-dimensional arrays
 LICENSE=	gnu-lgpl-v2
 
 R_PKGNAME=	abind
-R_PKGVER=	1.4-0
+R_PKGVER=	1.4-5
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
