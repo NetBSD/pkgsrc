@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/27 20:37:27 kamil Exp $
+bin/agm
+bin/xagm
+man/man6/agm.6
+share/agm/words
