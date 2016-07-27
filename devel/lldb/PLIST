@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/28 13:13:54 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/27 09:17:41 wiz Exp $
 bin/lldb
-bin/lldb-3.8.0
+bin/lldb-3.8.1
 bin/lldb-argdumper
 bin/lldb-mi
-bin/lldb-mi-3.8.0
+bin/lldb-mi-3.8.1
 bin/lldb-server
-bin/lldb-server-3.8.0
+bin/lldb-server-3.8.1
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
 include/lldb/API/SBAttachInfo.h
@@ -495,7 +495,7 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.3.8.0
+lib/liblldb.so.3.8.1
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
