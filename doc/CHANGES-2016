@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3066 2016/07/27 08:53:18 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3067 2016/07/27 09:17:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4377,3 +4377,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-abind to 1.4.5 [wen 2016-07-27]
 	Added math/R-RcppEigen version 0.3.2.8.1 [wen 2016-07-27]
 	Updated devel/p5-Smart-Comments to 1.06 [wen 2016-07-27]
+	Updated devel/lldb to 3.8.1 [wiz 2016-07-27]
