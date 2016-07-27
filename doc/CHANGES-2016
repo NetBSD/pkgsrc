@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3059 2016/07/27 00:05:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3060 2016/07/27 00:11:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4370,3 +4370,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added misc/nyancat version 1.5.1 [kamil 2016-07-26]
 	Added games/wordwarvi version 1.0.2 [kamil 2016-07-26]
 	Updated devel/p5-Return-Value to 1.666005 [wen 2016-07-27]
+	Updated devel/p5-Regexp-Assemble to 0.37 [wen 2016-07-27]
