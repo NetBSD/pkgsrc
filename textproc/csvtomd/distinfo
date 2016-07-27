@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/07/27 23:15:45 cheusov Exp $
+
+SHA1 (csvtomd-v0.1.1.tar.gz) = d1fb3ad7b21d4ce0727d49a29eb8c14281ef213f
+RMD160 (csvtomd-v0.1.1.tar.gz) = 66c9777ef3f6f82ce4c7ef33a2505fcce226155b
+SHA512 (csvtomd-v0.1.1.tar.gz) = 05ab281ed75b5ceb5dc876b4a54f415d217a80652e49a5c0ee5b1dd8fb7db83abb3c8fa2fa8faa7281f956e63fb2c5e35a15aa2b0c6c0c0afaf679213fa70dca
+Size (csvtomd-v0.1.1.tar.gz) = 4438 bytes
+SHA1 (patch-setup.py) = 4a06b607d16a2a8105db93ea376d262e6b7b489a
