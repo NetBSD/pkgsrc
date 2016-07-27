@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/07/27 21:14:36 kamil Exp $
+
+SHA1 (violetland-0.5-source-with-dependencies.tar.gz) = eb42e647e6ee7473835f0a2c47abb99dd19f4ae4
+RMD160 (violetland-0.5-source-with-dependencies.tar.gz) = 25115e79a8355261ede62c78b5f9794ab2ea6d09
+SHA512 (violetland-0.5-source-with-dependencies.tar.gz) = 9b00fa600332c956c49bc5906f373c0dfff08a13320617014942ac4dbc199de8f84bef87ed218b38812ae3c53622e9148aa4463c4ea219056360bff1c73b7f88
+Size (violetland-0.5-source-with-dependencies.tar.gz) = 11495885 bytes
+SHA1 (patch-src_program.cpp) = f06e7935d2cf8cd23dd3ab9c75990f8b289476cd
+SHA1 (patch-src_system_utility_FileUtility.cpp) = d6663de57b76121dc4f84b8e7ed20e93134940b4
