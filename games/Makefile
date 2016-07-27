@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.396 2016/07/27 20:47:20 kamil Exp $
+# $NetBSD: Makefile,v 1.397 2016/07/27 21:17:52 kamil Exp $
 #
 
 COMMENT=	Games
@@ -332,6 +332,7 @@ SUBDIR+=	ufoai
 SUBDIR+=	uqm
 SUBDIR+=	urban
 SUBDIR+=	velena
+SUBDIR+=	violetland
 SUBDIR+=	vms-empire
 SUBDIR+=	wargames
 SUBDIR+=	warmux
