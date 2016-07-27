@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:42 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/27 00:04:11 wen Exp $
 
-SHA1 (Return-Value-1.666004.tar.gz) = d1dbc0daee46294ab121cb7b54198d7f08d07193
-RMD160 (Return-Value-1.666004.tar.gz) = 591d8b8a7ba6adfe93ab91ed0e2ac4d0a0bcca74
-SHA512 (Return-Value-1.666004.tar.gz) = e60bf4545ac28cdee8040a5f6b1d14817fa90a5707f6dd1843b66739f7196c7550f592f6f30dabfbb5e7763e13955781841341b87a0ca49601cf8d0e58f9fac0
-Size (Return-Value-1.666004.tar.gz) = 17113 bytes
+SHA1 (Return-Value-1.666005.tar.gz) = c193a7503f5caab106a02519df0cc9e7437c0c0e
+RMD160 (Return-Value-1.666005.tar.gz) = 11abc20c9643a286034fbe906978e67292bce1bf
+SHA512 (Return-Value-1.666005.tar.gz) = 6a2e19a6562fb354a5e5dcaab54629e9b19edfc57206ac5c46cd3428e78d50ec36781685edc7ca28bd8c41cf878334f9e7c1182fd3e82f9a94a21854a5b89797
+Size (Return-Value-1.666005.tar.gz) = 20412 bytes
