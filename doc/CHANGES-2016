@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3063 2016/07/27 00:29:30 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3064 2016/07/27 02:39:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4374,3 +4374,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Proc-Wait3 to 0.05 [wen 2016-07-27]
 	Updated devel/p5-PerlIO-eol to 0.16 [wen 2016-07-27]
 	Updated devel/R-Rcpp to 0.12.6 [wen 2016-07-27]
+	Updated math/R-abind to 1.4.5 [wen 2016-07-27]
