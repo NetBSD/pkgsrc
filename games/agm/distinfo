@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2016/07/27 20:37:27 kamil Exp $
+
+SHA1 (agm-1.3.1.tar.gz) = 9afcbd47e8bbb79e2f08d009d10e9690ae9f200d
+RMD160 (agm-1.3.1.tar.gz) = b348b99ef9ef58f474d7a0acff572c369bbaf55e
+SHA512 (agm-1.3.1.tar.gz) = 143c6c3a31e542f59bbb0fab4372a2747f78b299fff07b9f136b41c930423b27a56f1c9635efa1248caf05d0449f6e63a0c5ed86d136a1c3ffa6309d64297687
+Size (agm-1.3.1.tar.gz) = 420211 bytes
+SHA1 (patch-Makefile) = c110bb95255a95e704bdf22982e37e70e3f88ea3
+SHA1 (patch-agm.h) = f42842dd674aef9916db797e3129d4f19ed08874
+SHA1 (patch-gobble.c) = 3de1579992333e14ac4b79aa3af769ec8b90a36a
+SHA1 (patch-listfuncs.c) = 5435c91ef466ed5b4d45a07e901719d351aead0c
+SHA1 (patch-main.c) = 2c78fe21976e70c2c4c0901eb43e47e3d1a9c481
+SHA1 (patch-output.c) = d2cef6500c8e3722b2b8585e225404f8eacb4447
+SHA1 (patch-process.c) = e45c178c4222bfe22322a6b021695555dc04292f
+SHA1 (patch-progress.c) = e78a24afff320c0d01431b514a1c61d1c3426a03
+SHA1 (patch-sort.c) = 77f811b6eb166182a0cbe133546a4fc2ac222bac
+SHA1 (patch-wordfuncs.c) = 2b180cbabc3f5c7178b2c52a8deb619ed54c485a
