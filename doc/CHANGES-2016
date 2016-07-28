@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3094 2016/07/28 14:17:50 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3095 2016/07/28 14:26:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4405,3 +4405,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/wireshark1 to 1.12.13 [wiz 2016-07-28]
 	Updated time/py-icalendar to 3.10 [wiz 2016-07-28]
 	Updated devel/R-evaluate to 0.9 [wen 2016-07-28]
+	Updated textproc/R-highr to 0.6 [wen 2016-07-28]
