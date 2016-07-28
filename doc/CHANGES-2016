@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3071 2016/07/28 02:48:28 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3072 2016/07/28 02:57:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4382,3 +4382,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/violetland version 0.5 [kamil 2016-07-27]
 	Added textproc/csvtomd version 0.1.1 [cheusov 2016-07-27]
 	Updated devel/p5-Term-ANSIColor to 4.05 [wen 2016-07-28]
+	Updated devel/p5-Term-ReadLine to 1.34 [wen 2016-07-28]
