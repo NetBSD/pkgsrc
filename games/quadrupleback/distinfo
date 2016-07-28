@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 22:31:54 kamil Exp $
+
+SHA1 (quadrupleback-0.1.0.tar.gz) = c9ea0a2f3ad418b748341882df757498e7fecd3d
+RMD160 (quadrupleback-0.1.0.tar.gz) = 75c525b3c597d27b6bf58a1440055a6515d907d4
+SHA512 (quadrupleback-0.1.0.tar.gz) = 6f47830bad840381784b7210152f613853061801d23760c3a72299201f3e8b3d59f3b9c3ccf88bcda5583b699f8842758cee10a12d31372df1336a9630f505f6
+Size (quadrupleback-0.1.0.tar.gz) = 398503 bytes
