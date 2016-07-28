@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/28 22:59:43 kamil Exp $
+bin/batrachians
+man/man6/batrachians.6
+share/applications/batrachians.desktop
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/THANKS
+share/doc/${PKGNAME}/TODO
+share/pixmaps/batrachians.png
+share/sounds/batrachians/fly-eaten.wav
+share/sounds/batrachians/frog-jumps.wav
+share/sounds/batrachians/game-ends.wav
+share/sounds/batrachians/game-starts.wav
+share/sounds/batrachians/splash.wav
+share/sounds/batrachians/tongue-out.wav
