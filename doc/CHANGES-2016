@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3079 2016/07/28 06:39:02 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3080 2016/07/28 06:50:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4390,3 +4390,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-TAP-Harness-Archive to 0.18 [wen 2016-07-28]
 	Updated devel/p5-Module-CoreList to 5.20160720 [wen 2016-07-28]
 	Updated devel/p5-Module-Install-RTx to 0.38 [wen 2016-07-28]
+	Updated devel/p5-InlineX-C2XS to 0.25 [wen 2016-07-28]
