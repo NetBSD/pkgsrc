@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/07/26 12:53:11 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/28 10:26:33 wiz Exp $
 
-DISTNAME=	odt2tex-0.0.12
+DISTNAME=	odt2tex-0.0.13
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simonaw/}
 

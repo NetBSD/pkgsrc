@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/07/26 12:53:11 wiz Exp $
+$NetBSD: distinfo,v 1.2 2016/07/28 10:26:33 wiz Exp $
 
-SHA1 (odt2tex-0.0.12.tar.gz) = a258823a176435a5c630b20c11976d63f6a0c693
-RMD160 (odt2tex-0.0.12.tar.gz) = cfb612594dcc303d0737ba0b3beb955eea6eb593
-SHA512 (odt2tex-0.0.12.tar.gz) = fa51f96f02176927e2f7d6d475c9dc888b874cf0c329e4df22938626e6f01a1206bca751b6712a6adc7bc7213733bc28b60999add2692e3e2725b86251d6e2f9
-Size (odt2tex-0.0.12.tar.gz) = 1018780 bytes
-SHA1 (patch-Makefile) = ba465a5a40f65dc5b16637a172726dcc8568b3c9
+SHA1 (odt2tex-0.0.13.tar.gz) = 48dc092f2b432d897596f9dc6f9237d21fe858b0
+RMD160 (odt2tex-0.0.13.tar.gz) = 4c61da9cfe4ac24e19a090606276da05f989c58b
+SHA512 (odt2tex-0.0.13.tar.gz) = 1b48cdf65a15698433145808751490e8b9fbcb321affce60d736a951f37e328d2a43efd297ff89aacd7e52797db07ea9ac25b26e42170bf87b5f5e9a3c6e0381
+Size (odt2tex-0.0.13.tar.gz) = 1018966 bytes
