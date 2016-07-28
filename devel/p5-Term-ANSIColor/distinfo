@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:28:47 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/07/28 02:47:11 wen Exp $
 
-SHA1 (Term-ANSIColor-4.03.tar.gz) = 43f0df44b07af08c5198d7ee49e1674421d50346
-RMD160 (Term-ANSIColor-4.03.tar.gz) = 8dde13ccf6004ce3c28fd28d6cec0f984105973f
-SHA512 (Term-ANSIColor-4.03.tar.gz) = 0020fae33534e591e25e44101471e946f3049ee73efc81e77c494ba5f0e41245754776267993dc72377daa28dc28ff4d86aed251ab9b3d7196517b3bb7619802
-Size (Term-ANSIColor-4.03.tar.gz) = 53794 bytes
+SHA1 (Term-ANSIColor-4.05.tar.gz) = 286ed1afbceebff078638d877198fdbf9e03b96a
+RMD160 (Term-ANSIColor-4.05.tar.gz) = e091876bdbba501c90eb0412b10c1c6c8c39d180
+SHA512 (Term-ANSIColor-4.05.tar.gz) = a3ea5561e7abd05bb68e34e4bc9fe98e14942256d15265ed064fccd75db355b09050c56035e758401b94c072c4e5c78c87488b1f2e6b761ff3725e2f291543be
+Size (Term-ANSIColor-4.05.tar.gz) = 45418 bytes
