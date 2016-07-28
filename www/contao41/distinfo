@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.4 2016/04/23 16:18:52 taca Exp $
+$NetBSD: distinfo,v 1.4.2.1 2016/07/28 17:42:46 spz Exp $
 
 SHA1 (contao-4.1.3.tar.gz) = 23c5395a11ad20bdf70ad0822d1cc8b86d9183e6
 RMD160 (contao-4.1.3.tar.gz) = f66d3acda04773fd73e1ade7ca7b1fcd0a1e933f
 SHA512 (contao-4.1.3.tar.gz) = e8893faf80125cd4a23455b5ab2995b8d988c6e461b4a1175d2e5c077654972faa017ad4a3f91a5cf6bb7d9dd8ea6202306c084f6552a3a4e3555754a23d6ea9
 Size (contao-4.1.3.tar.gz) = 14447916 bytes
+SHA1 (contao-mediaelement.js-2.21.2.tar.gz) = b1bc66759ebb39e8b180ab77af61e8f455fdd35c
+RMD160 (contao-mediaelement.js-2.21.2.tar.gz) = 1d706d6a407cff1b9e4ebafb31743380730e1030
+SHA512 (contao-mediaelement.js-2.21.2.tar.gz) = 3b1f732a64ee28b753d460b708571b1e947bdad67706dcd00698016b06a12f1afbb336eeb9c363d836e7f183e290655ca9bc3496eb272b13bd54099dc2f861b3
+Size (contao-mediaelement.js-2.21.2.tar.gz) = 271824 bytes

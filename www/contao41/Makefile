@@ -1,12 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2016/06/17 14:04:00 taca Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2016/07/28 17:42:46 spz Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	standard-edition
 GITHUB_RELEASE=	${CT_VERSION}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		contao-mediaelement.js-2.21.2.tar.gz
+SITES.contao-mediaelement.js-2.21.2.tar.gz=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	https://contao.org/
@@ -85,6 +89,8 @@ PKG_USERS_VARS+=	APACHE_USER
 
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
+	${RM} -fr ${WRKSRC}/assets/mediaelement
+	${CP} -pr ${WRKDIR}/assets/mediaelement ${WRKSRC}/assets
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
