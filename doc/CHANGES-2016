@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3084 2016/07/28 08:13:38 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3085 2016/07/28 08:16:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4395,3 +4395,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-indirect to 0.37 [wen 2016-07-28]
 	Updated devel/p5-CPAN-Perl-Releases to 2.88 [wen 2016-07-28]
 	Updated devel/p5-experimental to 0.016 [wen 2016-07-28]
+	Updated archivers/p5-Archive-Any-Lite to 0.11 [wen 2016-07-28]
