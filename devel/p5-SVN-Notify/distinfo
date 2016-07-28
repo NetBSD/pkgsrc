@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:28:43 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/07/28 06:26:38 wen Exp $
 
-SHA1 (SVN-Notify-2.84.tar.gz) = 1d9a947aac2fbf1d8af95b151609733ff843a2dc
-RMD160 (SVN-Notify-2.84.tar.gz) = 7c6cdda694904ac6cde80e34f6c820a18460725e
-SHA512 (SVN-Notify-2.84.tar.gz) = 907a83a281a83c8f5716de879c9ddc44b2c377fc91b1b7ce4e8f0c5a10c8401dec057cdebe06b69fe43d01076e66e9efe42a26f179b8dc5d003d854334432d89
-Size (SVN-Notify-2.84.tar.gz) = 98737 bytes
+SHA1 (SVN-Notify-2.86.tar.gz) = 104d8cecaca56a99ba82398b0c7ea0413b2ec8a6
+RMD160 (SVN-Notify-2.86.tar.gz) = 01bf37b24f202abc8acdc85e3aba440cc7af53af
+SHA512 (SVN-Notify-2.86.tar.gz) = e66872dfe7fe8cb5a83429ee5018b19917c380f554259a21e80cfb02b1ebd5dff0c825df36b74e0cb2617ade412453b4ba885c39fcfa77ab1e698f4c1f1424ae
+Size (SVN-Notify-2.86.tar.gz) = 99031 bytes
