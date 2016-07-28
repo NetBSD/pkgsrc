@@ -1,4 +1,6 @@
-$NetBSD: patch-setup.py,v 1.1 2016/07/27 23:15:45 cheusov Exp $
+$NetBSD: patch-setup.py,v 1.2 2016/07/28 09:54:59 wiz Exp $
+
+https://github.com/mplewis/csvtomd/issues/10
 
 --- setup.py.orig	2014-07-14 00:13:47.000000000 +0000
 +++ setup.py

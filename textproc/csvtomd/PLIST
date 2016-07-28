@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/27 23:15:45 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/28 09:54:59 wiz Exp $
 bin/csvtomd
-${PYSITELIB}/csvtomd.pyo
-${PYSITELIB}/csvtomd.pyc
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/${PKGNAME}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/csvtomd.py
+${PYSITELIB}/csvtomd.pyc
+${PYSITELIB}/csvtomd.pyo
