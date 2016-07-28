@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:47 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/07/28 06:29:44 wen Exp $
 
-SHA1 (TAP-Harness-Archive-0.17.tar.gz) = 7de4cc03bd71ba73aedb330d486d2a65453eca50
-RMD160 (TAP-Harness-Archive-0.17.tar.gz) = a8898cddabdba5581857fe538180372058856164
-SHA512 (TAP-Harness-Archive-0.17.tar.gz) = d9c5f303ca86cdb7be3f840c688c4c0b22c95db731eaf0a8b142cca0438cb5c7b9bef21d005e9ee5518d83e148b46240f772af34b3e42aae2fa6fd2827cc89de
-Size (TAP-Harness-Archive-0.17.tar.gz) = 9069 bytes
+SHA1 (TAP-Harness-Archive-0.18.tar.gz) = 571f44e1aeb936455e1de79908afd44e702a22b1
+RMD160 (TAP-Harness-Archive-0.18.tar.gz) = a7982c04b03b86828dc374886749da579c6a2835
+SHA512 (TAP-Harness-Archive-0.18.tar.gz) = 87762e75aaaf8b166ca7fcddfff724c334fc8bca7ef505433151de0ee0dee320022070743a1bc1f3652e156e9a54d232d975f0cae95a5ae4362e8d3727713f06
+Size (TAP-Harness-Archive-0.18.tar.gz) = 9100 bytes
