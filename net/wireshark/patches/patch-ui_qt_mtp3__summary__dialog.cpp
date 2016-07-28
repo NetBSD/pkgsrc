@@ -1,4 +1,7 @@
-$NetBSD: patch-ui_qt_mtp3__summary__dialog.cpp,v 1.1 2016/03/03 13:33:14 wiz Exp $
+$NetBSD: patch-ui_qt_mtp3__summary__dialog.cpp,v 1.2 2016/07/28 14:33:20 wiz Exp $
+
+Fix build on NetBSD. sys/siginfo.h defines si_code.
+https://code.wireshark.org/review/#/c/16750/
 
 --- ui/qt/mtp3_summary_dialog.cpp.orig	2015-12-29 21:49:23.000000000 +0000
 +++ ui/qt/mtp3_summary_dialog.cpp
