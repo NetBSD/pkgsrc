@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:46 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/28 06:16:48 wen Exp $
 
-SHA1 (Sub-Exporter-GlobExporter-0.004.tar.gz) = 9cec5fbc9f400e3bc67681326f431245cb3a5f9e
-RMD160 (Sub-Exporter-GlobExporter-0.004.tar.gz) = 6cfcddd7300f3dda39b8ece7b78573de0c795836
-SHA512 (Sub-Exporter-GlobExporter-0.004.tar.gz) = 00a61e640afc2e8ac1d0a664d255950dfbbfcf61e0228e7fe36e13a9314f827b478f694519da1dd00b22b6307930c216fb5a53bbae00e46e8e717d865db3365a
-Size (Sub-Exporter-GlobExporter-0.004.tar.gz) = 13849 bytes
+SHA1 (Sub-Exporter-GlobExporter-0.005.tar.gz) = 18c7e5f819d30d9519228ba0b0d508972ccbb05d
+RMD160 (Sub-Exporter-GlobExporter-0.005.tar.gz) = 97912b1a0c72c3b29fff12886dfab5a0f3540c01
+SHA512 (Sub-Exporter-GlobExporter-0.005.tar.gz) = 4c71209d8ee73bc01bcd52612dfded4bee1d6a9728fc7d70fc3c42b1f742bf836293184cb1b50e90e872bacac2c1585fcf663c702054d796a58fe494b6321b9a
+Size (Sub-Exporter-GlobExporter-0.005.tar.gz) = 16177 bytes
