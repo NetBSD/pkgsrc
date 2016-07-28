@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3088 2016/07/28 12:17:03 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3089 2016/07/28 12:42:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/odt2tex to 0.0.13 [wiz 2016-07-28]
 	Updated archivers/p5-Archive-Tar to 2.10 [wen 2016-07-28]
 	Updated archivers/p5-Archive-Any to 0.0945 [wen 2016-07-28]
+	Updated databases/p5-App-Sqitch to 0.9995 [wen 2016-07-28]
