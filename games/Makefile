@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.400 2016/07/28 22:32:26 kamil Exp $
+# $NetBSD: Makefile,v 1.401 2016/07/28 23:00:30 kamil Exp $
 #
 
 COMMENT=	Games
@@ -31,6 +31,7 @@ SUBDIR+=	atomix
 SUBDIR+=	atque
 SUBDIR+=	barrage
 SUBDIR+=	bastet
+SUBDIR+=	batrachians
 SUBDIR+=	battalion
 SUBDIR+=	battleball
 SUBDIR+=	billardgl
