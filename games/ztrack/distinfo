@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 17:51:20 kamil Exp $
+
+SHA1 (ztrack-1.0.tar.gz) = 1cc31c82d78b87efa18623edf72eaa02859b38f0
+RMD160 (ztrack-1.0.tar.gz) = ff3deaf1a31e048350cb94f1d9fed87e84a99fde
+SHA512 (ztrack-1.0.tar.gz) = 10efc72b593f6068ebf515ebd5be8d4c0451f37e798161dca5addbfcc468b6ee1d2bfc6b92701c6024ae4cb4fd3b1053a7891c2e7a023855aa2821420e6bb62c
+Size (ztrack-1.0.tar.gz) = 10186 bytes
+SHA1 (patch-Makefile) = cb68993430fa3286ebb1c5828c3e5209adf844f9
+SHA1 (patch-ztrack.c) = f47973334a3baa59e8ac675fc43280a6f9bb6881
