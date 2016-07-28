@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3105 2016/07/28 22:38:31 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3106 2016/07/28 23:01:23 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4416,3 +4416,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/flatzebra version 0.1.6 [kamil 2016-07-28]
 	Added games/afternoonstalker version 1.1.5 [kamil 2016-07-28]
 	Added games/quadrupleback version 0.1.0 [kamil 2016-07-28]
+	Added games/batrachians version 0.1.6 [kamil 2016-07-28]
