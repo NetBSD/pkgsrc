@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2016/07/27 23:15:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/28 09:49:04 cheusov Exp $
 
 DISTNAME=	csvtomd-v0.1.1
 PKGNAME=	${DISTNAME:S/-v/-/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mplewis/}
 
-MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	${MASTER_SITE_GITHUB:=mplewis/csvtomd/}
 COMMENT=	Convert your CSV files into Markdown tables
 LICENSE=	mit
+
+GITHUB_PROJECT=	csvtomd
+GITHUB_TAG=	${DISTNAME:S/csvtomd-//}
+MAINTAINER=	cheusov@NetBSD.org
+HOMEPAGE=	https://github.com/mplewis/csvtomd/
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
