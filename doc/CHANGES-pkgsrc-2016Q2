@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.6 2016/07/20 18:53:40 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.7 2016/07/28 17:47:51 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -32,3 +32,37 @@ net/bind910: security update
 
 Pullup ticket #5060 - requested by taca
 net/samba4: security update
+
+Pullup ticket #5061 - requested by taca
+www/contao35: security update
+
+Pullup ticket #5062 - requested by taca
+www/contao42: security update
+
+Pullup ticket #5063 - requested by taca
+www/contao41: security patch
+
+Pullup ticket #5067 - requested by taca
+lang/php55: security update
+lang/php: subsequent adjustment
+
+Pullup ticket #5068 - requested by taca
+lang/php70: security update
+lang/php: subsequent adjustment
+
+Pullup ticket #5069 - requested by taca
+lang/php56: security update
+lang/php: subsequent adjustment
+
+Pullup ticket #5070 - requested by bouyer
+sysutils/xenkernel45: security patch
+
+Pullup ticket #5071 - requested by bouyer
+sysutils/xenkernel42: security patch
+
+Pullup ticket #5072 - requested by bouyer
+sysutils/xenkernel41: security patch
+
+Pullup ticket #5074 - requested by christos
+devel/cvsps: security patch
+
