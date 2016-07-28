@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 23:18:26 kamil Exp $
+
+SHA1 (burgerspace-1.9.2.tar.gz) = 0d1e62df6ab2abdfdaa2301c2fbadd0439e107c3
+RMD160 (burgerspace-1.9.2.tar.gz) = 9c5955a01fbc9fe517deb75cf41c9493e4b3bb3f
+SHA512 (burgerspace-1.9.2.tar.gz) = b2af53d6fcf1d52164870147aa8a5b08941ecb62f3d9bbce5c2872885923057481c21bc34f1e19b8aeb8a76acadd9a11c11fa7b6304438610e8a23e043b7deee
+Size (burgerspace-1.9.2.tar.gz) = 505314 bytes
