@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/07/28 22:59:43 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/28 23:42:44 kamil Exp $
 
 DISTNAME=	batrachians-0.1.6
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/afternoonstalker.html
+HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/batrachians.html
 COMMENT=	Fly-eating frog game
 LICENSE=	gnu-gpl-v2
 
