@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3083 2016/07/28 07:25:14 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3084 2016/07/28 08:13:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4394,3 +4394,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/p5-Algorithm-LUHN to 1.02 [wen 2016-07-28]
 	Updated devel/p5-indirect to 0.37 [wen 2016-07-28]
 	Updated devel/p5-CPAN-Perl-Releases to 2.88 [wen 2016-07-28]
+	Updated devel/p5-experimental to 0.016 [wen 2016-07-28]
