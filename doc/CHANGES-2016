@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3074 2016/07/28 04:38:32 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3075 2016/07/28 06:18:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4385,3 +4385,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Term-ReadLine to 1.34 [wen 2016-07-28]
 	Updated devel/p5-Term-Shell to 0.09 [wen 2016-07-28]
 	Updated devel/p5-Struct-Dumb to 0.09 [wen 2016-07-28]
+	Updated devel/p5-Sub-Exporter-GlobExporter to 0.005 [wen 2016-07-28]
