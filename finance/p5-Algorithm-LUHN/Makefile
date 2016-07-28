@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 19:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/28 06:57:07 wen Exp $
 
-DISTNAME=	Algorithm-LUHN-1.00
+DISTNAME=	Algorithm-LUHN-1.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	finance perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TA/TAYERS/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NE/NEILB/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?Algorithm::LUHN

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:12:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/07/28 06:57:07 wen Exp $
 
-SHA1 (Algorithm-LUHN-1.00.tar.gz) = 0b312ffb63bcc8f0a05d1e00fe2418a326febaeb
-RMD160 (Algorithm-LUHN-1.00.tar.gz) = 28b4b7acb7fd69b4954d9075d33599bcbd4940e9
-SHA512 (Algorithm-LUHN-1.00.tar.gz) = e044e9455a67032c782f0f488319e0408ba7c16ee2f660ec2d002220631354f6ec2d492c14c84d3013024a1c9c9ea68369762cdd69aa7b610df6f3bb2b739c22
-Size (Algorithm-LUHN-1.00.tar.gz) = 3748 bytes
+SHA1 (Algorithm-LUHN-1.02.tar.gz) = db76cafa80a754aef1329406023c4a8b0907f664
+RMD160 (Algorithm-LUHN-1.02.tar.gz) = dff1b3d25b82767e5939d30931242b5203fd6b51
+SHA512 (Algorithm-LUHN-1.02.tar.gz) = 410641e36ff21ce846c79aceaad3e9f8d8d529d4453ddc0683d860f145a1f8f90edfeb91f69b92344e56e054db885b6ada6b4908bb9fa3b43bb3d648bda492f5
+Size (Algorithm-LUHN-1.02.tar.gz) = 12046 bytes
