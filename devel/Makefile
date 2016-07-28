@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2288 2016/07/25 08:52:43 wen Exp $
+# $NetBSD: Makefile,v 1.2289 2016/07/28 20:28:29 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -234,6 +234,7 @@ SUBDIR+=	fann
 SUBDIR+=	fastdep
 SUBDIR+=	ffcall
 SUBDIR+=	fhist
+SUBDIR+=	flatzebra
 SUBDIR+=	flex
 SUBDIR+=	flexdock
 SUBDIR+=	flim
