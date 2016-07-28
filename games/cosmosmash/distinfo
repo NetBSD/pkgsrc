@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 23:35:15 kamil Exp $
+
+SHA1 (cosmosmash-1.4.7.tar.gz) = 2a4b3e723c91bbfaf2264f1c74b986eb090b6dd9
+RMD160 (cosmosmash-1.4.7.tar.gz) = e11edee51353db0209623accc26220c45544a67a
+SHA512 (cosmosmash-1.4.7.tar.gz) = 1eaf8b05550c6f96e6392f6ba4565700cd4a9cac66dd57d634569caf9b4dfaf4917b3b9973153d4e6e0ddcd65c68d5242faae7c4f516c07c2e07d1b2f3b838b9
+Size (cosmosmash-1.4.7.tar.gz) = 906213 bytes
