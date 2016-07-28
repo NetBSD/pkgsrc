@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/28 20:46:24 kamil Exp $
+bin/afternoonstalker
+man/man6/afternoonstalker.6
+share/afternoonstalker/maze0.set
+share/afternoonstalker/maze1.set
+share/afternoonstalker/maze2.set
+share/applications/afternoonstalker.desktop
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/THANKS
+share/doc/${PKGNAME}/TODO
+share/pixmaps/afternoonstalker.png
+share/sounds/afternoonstalker/bat-killed.wav
+share/sounds/afternoonstalker/gun-pickup.wav
+share/sounds/afternoonstalker/new-life.wav
+share/sounds/afternoonstalker/player-bullet.wav
+share/sounds/afternoonstalker/player-hit.wav
+share/sounds/afternoonstalker/robot-bullet.wav
+share/sounds/afternoonstalker/robot-hit.wav
+share/sounds/afternoonstalker/shooting-blanks.wav
+share/sounds/afternoonstalker/spider-killed.wav
