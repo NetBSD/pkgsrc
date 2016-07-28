@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2016/03/03 13:49:40 wiz Exp $
+$NetBSD: distinfo,v 1.3 2016/07/28 13:33:35 wiz Exp $
 
-SHA1 (wireshark-1.12.10.tar.bz2) = 070ed41b1f02f72ff209b3eae135e60d09d69c69
-RMD160 (wireshark-1.12.10.tar.bz2) = ab31c3577878fd2a062e7e8706082c00c5069563
-SHA512 (wireshark-1.12.10.tar.bz2) = c9aede7d96cdc17b494979292f8acb92672ddce8ac8cfa4eef82fe84bb4bdcaef2839003a3008793303620f1fcdfc4681c7adcee39f5d7ff296d5fa7782d44d3
-Size (wireshark-1.12.10.tar.bz2) = 29280006 bytes
+SHA1 (wireshark-1.12.13.tar.bz2) = 4a036b67ca1ca99c9061cf3d12d0604a62bc8b8c
+RMD160 (wireshark-1.12.13.tar.bz2) = 45a46794ae375475597866145aa22984b31bedd6
+SHA512 (wireshark-1.12.13.tar.bz2) = 60ce38c9850bcb2532ffcba9b372d2aa71383110c425dc1db20707f29ca81411813ba88bc12d50ce17bc67df1015b80611b67155fe669313075c10da474ad04e
+Size (wireshark-1.12.13.tar.bz2) = 29398804 bytes
 SHA1 (patch-aa) = 237c60ae1bd860bdc3ee42a17a46b4e212b97c0f
 SHA1 (patch-ac) = 470a2a32a5577f16aef4ba3e638eb6b97c483ba3
 SHA1 (patch-ba) = f2fa69d1254b94c7b6b28d5e056c211a019d1db9
