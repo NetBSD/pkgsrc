@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 20:46:24 kamil Exp $
+
+SHA1 (afternoonstalker-1.1.5.tar.gz) = d736bd81b9534054149e78ba2ff4f0be9b46723a
+RMD160 (afternoonstalker-1.1.5.tar.gz) = 7b6cc65c0d994b2f3ef5a661f110bb422ec6c951
+SHA512 (afternoonstalker-1.1.5.tar.gz) = ff08cc72385deddfaffabf98c3cc67f72f8c6db77de1feb4e19d2d3dcf6ca1018a71d6e052d2e2373dc758e119a4c068a3f4195cb6fbf1b01900bdedf193a7e0
+Size (afternoonstalker-1.1.5.tar.gz) = 202663 bytes
