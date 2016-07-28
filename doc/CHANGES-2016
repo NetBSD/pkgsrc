@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3090 2016/07/28 12:59:58 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3091 2016/07/28 13:22:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4401,3 +4401,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p5-Archive-Any to 0.0945 [wen 2016-07-28]
 	Updated databases/p5-App-Sqitch to 0.9995 [wen 2016-07-28]
 	Updated time/khal to 0.8.2 [mef 2016-07-28]
+	Updated net/wireshark to 2.0.5 [wiz 2016-07-28]
