@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.119 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.120 2016/07/28 17:44:43 prlw1 Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.2
-PKGREVISION=	1
+.include "Makefile.version"
+
+DISTNAME=	cmake-${CMAKE_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	https://cmake.org/files/v${CMAKE_API}/
-
-# When changing this, please update devel/cmake-fedora as well.
-CMAKE_API=	3.5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
