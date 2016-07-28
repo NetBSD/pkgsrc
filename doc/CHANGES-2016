@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3076 2016/07/28 06:27:24 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3077 2016/07/28 06:30:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4387,3 +4387,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Struct-Dumb to 0.09 [wen 2016-07-28]
 	Updated devel/p5-Sub-Exporter-GlobExporter to 0.005 [wen 2016-07-28]
 	Updated devel/p5-SVN-Notify to 2.86 [wen 2016-07-28]
+	Updated devel/p5-TAP-Harness-Archive to 0.18 [wen 2016-07-28]
