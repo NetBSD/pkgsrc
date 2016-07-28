@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2016/07/28 23:00:30 kamil Exp $
+# $NetBSD: Makefile,v 1.402 2016/07/28 23:19:12 kamil Exp $
 #
 
 COMMENT=	Games
@@ -45,6 +45,7 @@ SUBDIR+=	bos
 SUBDIR+=	boson
 SUBDIR+=	bovo
 SUBDIR+=	bridge-hands
+SUBDIR+=	burgerspace
 SUBDIR+=	bzflag
 SUBDIR+=	cbzone
 SUBDIR+=	ccgo
