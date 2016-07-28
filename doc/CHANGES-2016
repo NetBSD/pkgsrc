@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3095 2016/07/28 14:26:31 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3096 2016/07/28 14:38:38 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4406,3 +4406,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-icalendar to 3.10 [wiz 2016-07-28]
 	Updated devel/R-evaluate to 0.9 [wen 2016-07-28]
 	Updated textproc/R-highr to 0.6 [wen 2016-07-28]
+	Updated print/R-knitr to 1.13 [wen 2016-07-28]
