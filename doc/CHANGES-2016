@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3101 2016/07/28 19:31:59 leot Exp $
+$NetBSD: CHANGES-2016,v 1.3102 2016/07/28 20:23:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4412,3 +4412,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/ztrack version 1.0 [kamil 2016-07-28]
 	Updated devel/cmake-fedora to 2.6.0 [prlw1 2016-07-28]
 	Updated games/ztrack to 1.0nb1 [leot 2016-07-28]
+	Updated www/ikiwiki to 3.20160728 [schmonz 2016-07-28]
