@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3092 2016/07/28 13:33:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3093 2016/07/28 13:58:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4403,3 +4403,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/khal to 0.8.2 [mef 2016-07-28]
 	Updated net/wireshark to 2.0.5 [wiz 2016-07-28]
 	Updated net/wireshark1 to 1.12.13 [wiz 2016-07-28]
+	Updated time/py-icalendar to 3.10 [wiz 2016-07-28]
