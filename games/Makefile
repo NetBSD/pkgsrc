@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2016/07/28 23:19:12 kamil Exp $
+# $NetBSD: Makefile,v 1.403 2016/07/28 23:35:51 kamil Exp $
 #
 
 COMMENT=	Games
@@ -60,6 +60,7 @@ SUBDIR+=	colchess
 SUBDIR+=	colchess-book-colchess
 SUBDIR+=	colchess-book-large
 SUBDIR+=	corewars
+SUBDIR+=	cosmosmash
 SUBDIR+=	crack-attack
 SUBDIR+=	crack-attack-sounds
 SUBDIR+=	craft
