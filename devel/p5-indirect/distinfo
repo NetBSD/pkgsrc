@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:59 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/07/28 07:04:21 wen Exp $
 
-SHA1 (indirect-0.36.tar.gz) = c99e68b17a15fa449e3da1175b9eb0c473f57f65
-RMD160 (indirect-0.36.tar.gz) = d576ce7ff5b465e3e0db33349aa3fe5aa85b3bee
-SHA512 (indirect-0.36.tar.gz) = 27f86702a2b3597e2bc20390130584324bfe86cc4d9f33a488b4788d6e1513ac19dfd4e1407f29b6f862172b020b3001a248450ad8dddb5a31e07220c0783ceb
-Size (indirect-0.36.tar.gz) = 48597 bytes
+SHA1 (indirect-0.37.tar.gz) = c843ac122eed28060cade79d2920ecd3fd9a1763
+RMD160 (indirect-0.37.tar.gz) = 774c090cbcfd9576bd6b3474defac653b12d5451
+SHA512 (indirect-0.37.tar.gz) = 8d46ff62c86b23519b030474155f7d8aa4872a9a4a2bb1e3199ac506aee60343b4c572eae8fa41dc5148c115de3c80bcb7f21900ad30822dc9eb437033defe09
+Size (indirect-0.37.tar.gz) = 54892 bytes
