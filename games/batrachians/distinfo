@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 22:59:43 kamil Exp $
+
+SHA1 (batrachians-0.1.6.tar.gz) = b5c23b4bf2130fb15e40152f9af7303a06c46a44
+RMD160 (batrachians-0.1.6.tar.gz) = 9172dcb09a3ecb8c98ef339f4e421a204872ac7e
+SHA512 (batrachians-0.1.6.tar.gz) = d3022712627061f9828e1f3baa7207053884f1f4c0348768d4ac073673ff1bcf14c95cedf01031b8bd36a6b684bf239af0f381df41aa18d49218320a8bea3b68
+Size (batrachians-0.1.6.tar.gz) = 198088 bytes
