@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/07/28 23:18:26 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/28 23:42:53 kamil Exp $
 
 DISTNAME=	burgerspace-1.9.2
 CATEGORIES=	games
 MASTER_SITES=	http://perso.b2b2c.ca/~sarrazip/dev/
 
 MAINTAINER=	pkgsrc-users@NetBSD.rog
-HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/afternoonstalker.html
+HOMEPAGE=	http://perso.b2b2c.ca/~sarrazip/dev/burgerspace.html
 COMMENT=	Hamburger-smashing video game
 LICENSE=	gnu-gpl-v2
 
