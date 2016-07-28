@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2016/07/28 17:51:59 kamil Exp $
+# $NetBSD: Makefile,v 1.399 2016/07/28 20:47:29 kamil Exp $
 #
 
 COMMENT=	Games
@@ -13,6 +13,7 @@ SUBDIR+=	REminiscence
 SUBDIR+=	abuse
 SUBDIR+=	accelerator3d
 SUBDIR+=	adom
+SUBDIR+=	afternoonstalker
 SUBDIR+=	agm
 SUBDIR+=	alephone
 SUBDIR+=	amaze
