@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3103 2016/07/28 20:33:50 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3104 2016/07/28 20:49:33 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/ztrack to 1.0nb1 [leot 2016-07-28]
 	Updated www/ikiwiki to 3.20160728 [schmonz 2016-07-28]
 	Added devel/flatzebra version 0.1.6 [kamil 2016-07-28]
+	Added games/afternoonstalker version 1.1.5 [kamil 2016-07-28]
