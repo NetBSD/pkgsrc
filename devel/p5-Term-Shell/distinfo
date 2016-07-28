@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/01/10 20:23:07 bsiegert Exp $
+$NetBSD: distinfo,v 1.4 2016/07/28 04:34:35 wen Exp $
 
-SHA1 (Term-Shell-0.07.tar.gz) = 660e75ee92173fae1e2455371c0d347185a7eeea
-RMD160 (Term-Shell-0.07.tar.gz) = 50b79b33ba15ea4e8e936b689ef13068cbbde37f
-SHA512 (Term-Shell-0.07.tar.gz) = aeea9454e835596a429380f74bf7305af87edacff6e7399a85e854278039d4f4cf9e7a7012c9237d2e8db46b883dbf2bb1f34493cd60e585dfd04d19b0cbfde5
-Size (Term-Shell-0.07.tar.gz) = 34631 bytes
+SHA1 (Term-Shell-0.09.tar.gz) = c12248f938336835b648ce59a66b2e0523b1fd9f
+RMD160 (Term-Shell-0.09.tar.gz) = 9bb4d9296f48cfb8d0ce2dc3ac30b2cd00998c1b
+SHA512 (Term-Shell-0.09.tar.gz) = 6f5ca691e2610e45a4b690e12d0d0826869293acbbab9556c83779e9316df3d8f7abbf6b1ee6b116fff79fdfaf0a0f25102f1a57cd2b80660081fd98777d6980
+Size (Term-Shell-0.09.tar.gz) = 33500 bytes
