@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2014/10/09 14:06:08 wiz Exp $
+# $NetBSD: Makefile,v 1.26.14.1 2016/07/28 12:56:35 spz Exp $
 #
 
 DISTNAME=	cvsps-2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel scm
 MASTER_SITES=	${HOMEPAGE}
 
