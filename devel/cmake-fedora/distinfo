@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:19 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/07/28 17:52:08 prlw1 Exp $
 
-SHA1 (cmake-fedora-2.1.3-modules-only.tar.gz) = 99345d97ca2d609249ff85f5ab5bdaef4a83eb50
-RMD160 (cmake-fedora-2.1.3-modules-only.tar.gz) = 94f024658b53dca9fa5c564a17034891be5d9d24
-SHA512 (cmake-fedora-2.1.3-modules-only.tar.gz) = 52ba40e744fb3c3f54c6898edb44eb1bee0a20790419c95a902fd209adec85255b6f7f0b53a6af856031274d5cb7cfed82bf7d990c3292bb7995c0e6b049d5d4
-Size (cmake-fedora-2.1.3-modules-only.tar.gz) = 50151 bytes
-SHA1 (patch-Modules_DateTimeFormat.cmake) = 88775e445ceb9a9853dc542015926959a1b6409e
+SHA1 (cmake-fedora-2.6.0-modules-only.tar.gz) = 90fad24a15901df8830d4a1bc49fe4bab10e1e8d
+RMD160 (cmake-fedora-2.6.0-modules-only.tar.gz) = 820fd1f861ccaa596af317ac8cd3e24fb59b26bd
+SHA512 (cmake-fedora-2.6.0-modules-only.tar.gz) = db0f1193e653bbb860e31e698a254caf7193be51133f81acc01a001c43a850fec3939cee9bcec573fd07376a1d9fccec2db4220af7eb061f5817b2f2ae89388e
+Size (cmake-fedora-2.6.0-modules-only.tar.gz) = 59346 bytes
