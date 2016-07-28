@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3081 2016/07/28 06:59:44 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3082 2016/07/28 07:05:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4392,3 +4392,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-Install-RTx to 0.38 [wen 2016-07-28]
 	Updated devel/p5-InlineX-C2XS to 0.25 [wen 2016-07-28]
 	Updated finance/p5-Algorithm-LUHN to 1.02 [wen 2016-07-28]
+	Updated devel/p5-indirect to 0.37 [wen 2016-07-28]
