@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/07/28 17:51:20 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/28 19:31:28 leot Exp $
 
 DISTNAME=	ztrack-1.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/arcade/}
 
