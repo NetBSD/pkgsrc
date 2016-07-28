@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/07/28 12:59:41 mef Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/28 14:00:17 wiz Exp $
 
 DISTNAME=		khal-0.8.2
 CATEGORIES=		time net
@@ -11,21 +11,21 @@ LICENSE=		mit
 
 DEPENDS+=		${PYPKGPREFIX}-click>=3.2:../../devel/py-click
 DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
-DEPENDS+=		${PYPKGPREFIX}-icalendar>=2.0.1:../../time/py-icalendar
+DEPENDS+=		${PYPKGPREFIX}-icalendar>=3.9.2:../../time/py-icalendar
 DEPENDS+=		${PYPKGPREFIX}-pkginfo-[0-9]*:../../devel/py-pkginfo
 BUILD_DEPENDS+=		${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=		${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=		${PYPKGPREFIX}-tzlocal-[0-9]*:../../time/py-tzlocal
 DEPENDS+=		${PYPKGPREFIX}-urwid>=1.1.0:../../devel/py-urwid
-DEPENDS+=		${PYPKGPREFIX}-vdirsyncer-[0-9]*:../../time/py-vdirsyncer
+DEPENDS+=		${PYPKGPREFIX}-vdirsyncer>=0.5.2:../../time/py-vdirsyncer
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 # not needed, but recommended, so let's just depend on it
 DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 # test dependency, not packaged yet
 # freezegun
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # time/py-vdirsyncer
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported as of 0.8.0
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
