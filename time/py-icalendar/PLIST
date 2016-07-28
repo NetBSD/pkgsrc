@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/06/09 12:29:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/07/28 13:58:45 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,10 +29,12 @@ ${PYSITELIB}/icalendar/prop.pyo
 ${PYSITELIB}/icalendar/tests/__init__.py
 ${PYSITELIB}/icalendar/tests/__init__.pyc
 ${PYSITELIB}/icalendar/tests/__init__.pyo
+${PYSITELIB}/icalendar/tests/america_new_york.ics
 ${PYSITELIB}/icalendar/tests/encoding.ics
 ${PYSITELIB}/icalendar/tests/issue_112_missing_tzinfo_on_exdate.ics
 ${PYSITELIB}/icalendar/tests/issue_53_parsing_failure.ics
 ${PYSITELIB}/icalendar/tests/multiple.ics
+${PYSITELIB}/icalendar/tests/pacific_fiji.ics
 ${PYSITELIB}/icalendar/tests/recurrence.ics
 ${PYSITELIB}/icalendar/tests/test_encoding.py
 ${PYSITELIB}/icalendar/tests/test_encoding.pyc
@@ -75,6 +77,9 @@ ${PYSITELIB}/icalendar/tests/test_unit_tools.pyc
 ${PYSITELIB}/icalendar/tests/test_unit_tools.pyo
 ${PYSITELIB}/icalendar/tests/time.ics
 ${PYSITELIB}/icalendar/tests/timezoned.ics
+${PYSITELIB}/icalendar/timezone_cache.py
+${PYSITELIB}/icalendar/timezone_cache.pyc
+${PYSITELIB}/icalendar/timezone_cache.pyo
 ${PYSITELIB}/icalendar/tools.py
 ${PYSITELIB}/icalendar/tools.pyc
 ${PYSITELIB}/icalendar/tools.pyo
