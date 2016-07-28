@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/19 12:53:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2016/07/28 17:25:23 spz Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -1896,12 +1896,30 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/basi
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/confirm.css
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/diff.css
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts.css
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/ArchitectsDaughter.woff
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/OFL.txt
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Light.woff
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Medium.woff
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Regular.woff
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/RobotoMono-Light.woff
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Architects-Daughter-regular/Architects-Daughter-regular.eot
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Architects-Daughter-regular/Architects-Daughter-regular.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Architects-Daughter-regular/Architects-Daughter-regular.ttf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Architects-Daughter-regular/Architects-Daughter-regular.woff
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Architects-Daughter-regular/Architects-Daughter-regular.woff2
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Architects-Daughter-regular/LICENSE.txt
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-300/LICENSE.txt
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-300/Roboto-300.eot
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-300/Roboto-300.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-300/Roboto-300.ttf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-300/Roboto-300.woff
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-300/Roboto-300.woff2
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-500/LICENSE.txt
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-500/Roboto-500.eot
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-500/Roboto-500.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-500/Roboto-500.ttf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-500/Roboto-500.woff
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-500/Roboto-500.woff2
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Mono-300/LICENSE.txt
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Mono-300/Roboto-Mono-300.eot
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Mono-300/Roboto-Mono-300.svg
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Mono-300/Roboto-Mono-300.ttf
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Mono-300/Roboto-Mono-300.woff
+${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/fonts/Roboto-Mono-300/Roboto-Mono-300.woff2
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/help.css
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/hover.js
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/1cl.svg
@@ -1938,7 +1956,6 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/copychilds_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/css.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cssimport.svg
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/current.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cut.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/cut_.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/db.svg
@@ -1992,7 +2009,6 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/help.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/hints.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/important.svg
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/index.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/invisible.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/layout.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/left.svg
@@ -2033,7 +2049,6 @@ ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icon
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/preview.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/profile.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/published.svg
-${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/purge.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/redirect.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/redirect_1.svg
 ${CT_WEBDIR}/vendor/contao/core-bundle/src/Resources/contao/themes/flexible/icons/redirect_2.svg
@@ -4389,9 +4404,9 @@ ${CT_WEBDIR}/vendor/symfony/swiftmailer-bundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/symfony/symfony/.composer/config.json
 ${CT_WEBDIR}/vendor/symfony/symfony/.editorconfig
 ${CT_WEBDIR}/vendor/symfony/symfony/.github/PULL_REQUEST_TEMPLATE.md
+${CT_WEBDIR}/vendor/symfony/symfony/.github/travis.php
 ${CT_WEBDIR}/vendor/symfony/symfony/.gitignore
 ${CT_WEBDIR}/vendor/symfony/symfony/.php_cs
-${CT_WEBDIR}/vendor/symfony/symfony/.travis.php
 ${CT_WEBDIR}/vendor/symfony/symfony/.travis.yml
 ${CT_WEBDIR}/vendor/symfony/symfony/CHANGELOG-3.0.md
 ${CT_WEBDIR}/vendor/symfony/symfony/CHANGELOG-3.1.md
@@ -5507,6 +5522,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validat
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/Type/FormTypeValidatorExtension.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/Type/RepeatedTypeValidatorExtension.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/Type/SubmitTypeValidatorExtension.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/Type/UploadValidatorExtension.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/Util/ServerParams.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/ValidatorExtension.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Validator/ValidatorTypeGuesser.php
@@ -5616,6 +5632,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/ApacheR
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/BinaryFileResponse.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/CHANGELOG.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Cookie.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Exception/ConflictingHeadersException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/ExpressionRequestMatcher.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/Exception/AccessDeniedException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/File/Exception/FileException.php
@@ -5749,6 +5766,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/EventListen
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/EventListener/SurrogateListener.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/EventListener/TestSessionListener.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/EventListener/TranslatorListener.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/EventListener/ValidateRequestListener.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Exception/AccessDeniedHttpException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Exception/BadRequestHttpException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Exception/ConflictHttpException.php
