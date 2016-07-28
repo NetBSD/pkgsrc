@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/28 23:56:40 kamil Exp $
+bin/booldnf
+include/boolstuff-0.1/boolstuff/BoolExpr.cpp
+include/boolstuff-0.1/boolstuff/BoolExpr.h
+include/boolstuff-0.1/boolstuff/BoolExprParser.h
+include/boolstuff-0.1/boolstuff/c-api.h
+lib/libboolstuff-0.1.la
+lib/pkgconfig/boolstuff-0.1.pc
+man/man1/booldnf.1
+man/man3/boolstuff.3
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/NEWS
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/THANKS
