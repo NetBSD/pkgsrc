@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/27 14:52:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/07/28 12:59:41 mef Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/khal/__init__.py
 ${PYSITELIB}/khal/__init__.pyc
 ${PYSITELIB}/khal/__init__.pyo
+${PYSITELIB}/khal/__main__.py
+${PYSITELIB}/khal/__main__.pyc
+${PYSITELIB}/khal/__main__.pyo
 ${PYSITELIB}/khal/aux.py
 ${PYSITELIB}/khal/aux.pyc
 ${PYSITELIB}/khal/aux.pyo
@@ -19,9 +23,9 @@ ${PYSITELIB}/khal/calendar_display.pyo
 ${PYSITELIB}/khal/cli.py
 ${PYSITELIB}/khal/cli.pyc
 ${PYSITELIB}/khal/cli.pyo
-${PYSITELIB}/khal/compat.py
-${PYSITELIB}/khal/compat.pyc
-${PYSITELIB}/khal/compat.pyo
+${PYSITELIB}/khal/configwizard.py
+${PYSITELIB}/khal/configwizard.pyc
+${PYSITELIB}/khal/configwizard.pyo
 ${PYSITELIB}/khal/controllers.py
 ${PYSITELIB}/khal/controllers.pyc
 ${PYSITELIB}/khal/controllers.pyo
