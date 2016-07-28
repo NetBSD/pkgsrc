@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/09 14:06:59 wen Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/28 14:25:34 wen Exp $
 
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Syntax highlighting for R
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	highr
-R_PKGVER=	0.5.1
+R_PKGVER=	0.6
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
