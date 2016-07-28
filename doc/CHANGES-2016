@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3098 2016/07/28 17:45:01 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.3099 2016/07/28 17:52:27 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/R-knitr to 1.13 [wen 2016-07-28]
 	Updated x11/gtksourceview3 to 3.20.4 [prlw1 2016-07-28]
 	Updated devel/cmake to 3.6.1 [prlw1 2016-07-28]
+	Updated devel/cmake-fedora to 2.6.0 [prlw1 2016-07-28]
