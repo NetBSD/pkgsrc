@@ -1,0 +1,53 @@
+$NetBSD: patch-Makefile,v 1.1 2016/07/28 17:51:20 kamil Exp $
+
+- Accept user defined CC, CFLAGS and LDFLAGS.
+- Add DESTDIR support
+- Fix permissions of installed files
+
+--- Makefile.orig	1996-09-30 03:34:20.000000000 +0000
++++ Makefile
+@@ -2,16 +2,16 @@
+ #
+ # note that you need an ANSI C compiler;
+ # gcc is easiest if you've got it or can get it
+-CC=gcc
++CC?=gcc
+ 
+ # flags for Linux/gcc, hack as required
+ # remove '-DHAVE_RANDOM' if your libc doesn't have 'random' and 'srandom'.
+ # add '-DNO_COLOUR' if you don't want colour or the colour support
+ # causes problems.
+-CFLAGS=-O2 -Wall -DHAVE_RANDOM -I/usr/include/ncurses #-DDEBUG
++CFLAGS+= -Wall -DHAVE_RANDOM
+ 
+ # if using ncurses:
+-LIBS=-lncurses
++LIBS=-lcurses
+ 
+ # bsd-derived is usually:
+ #LIBS=-lcurses -ltermcap
+@@ -20,6 +20,7 @@ LIBS=-lncurses
+ #LIBS=-lcurses -lterminfo
+ 
+ # change these if needed - they're used by 'make install'
++DESTDIR?=
+ BINDIR=/usr/games
+ MANDIR=/usr/man/man6
+ 
+@@ -31,11 +32,13 @@ OBJS=ztrack.o
+ all: ztrack
+ 
+ ztrack: $(OBJS)
+-	$(CC) $(CFLAGS) -o ztrack $(OBJS) $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o ztrack $(OBJS) $(LIBS)
+ 
+ install: ztrack
+-	install -s -m 511 ztrack $(BINDIR)
+-	install -m 444 ztrack.6 $(MANDIR)
++	install -d $(DESTDIR)$(BINDIR)
++	install -s -m 755 ztrack $(DESTDIR)$(BINDIR)
++	install -d $(DESTDIR)$(MANDIR)
++	install -m 644 ztrack.6 $(DESTDIR)$(MANDIR)
+ 
+ clean:
+ 	$(RM) *.o *~ ztrack
