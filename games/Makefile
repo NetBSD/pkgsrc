@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.399 2016/07/28 20:47:29 kamil Exp $
+# $NetBSD: Makefile,v 1.400 2016/07/28 22:32:26 kamil Exp $
 #
 
 COMMENT=	Games
@@ -282,6 +282,7 @@ SUBDIR+=	qnetwalk
 SUBDIR+=	qonk
 SUBDIR+=	qqwing
 SUBDIR+=	qstat
+SUBDIR+=	quadrupleback
 SUBDIR+=	quake
 SUBDIR+=	quake2forge
 SUBDIR+=	quake6
