@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3096 2016/07/28 14:38:38 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3097 2016/07/28 16:54:09 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4407,3 +4407,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/R-evaluate to 0.9 [wen 2016-07-28]
 	Updated textproc/R-highr to 0.6 [wen 2016-07-28]
 	Updated print/R-knitr to 1.13 [wen 2016-07-28]
+	Updated x11/gtksourceview3 to 3.20.4 [prlw1 2016-07-28]
