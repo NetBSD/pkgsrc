@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/28 23:56:40 kamil Exp $
+
+SHA1 (boolstuff-0.1.16.tar.gz) = fa65308d43914e2064d6fc45ca3d0be17c5e63a7
+RMD160 (boolstuff-0.1.16.tar.gz) = a2b5939679d9727a06c8e1a2fe1d29213a1b61c5
+SHA512 (boolstuff-0.1.16.tar.gz) = e8b905a37ac1b2a79736b8b2c2c75054721bba1ac741e0c475abd9d250c7eeb86f0a73749f3e25f3766b0c531bb8b84b4b93f68c990ac288fe7be6188d4c1b6f
+Size (boolstuff-0.1.16.tar.gz) = 389548 bytes
