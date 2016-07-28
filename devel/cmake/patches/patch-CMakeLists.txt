@@ -1,4 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2015/09/15 13:08:38 joerg Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2016/07/28 17:44:43 prlw1 Exp $
+
+Don't insist on ncurses.
 
 --- CMakeLists.txt.orig	2015-09-14 13:22:28.000000000 +0000
 +++ CMakeLists.txt
