@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2016/07/29 11:26:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/29 22:38:42 wiz Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2016pre1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41304
@@ -878,7 +878,7 @@ DEPENDS+=	tex-selectp-[0-9]*:../../print/tex-selectp
 # depend sfmath
 DEPENDS+=	tex-shadethm-[0-9]*:../../print/tex-shadethm
 DEPENDS+=	tex-shadow-[0-9]*:../../print/tex-shadow
-# depend shadowtext
+DEPENDS+=	tex-shadowtext-[0-9]*:../../print/tex-shadowtext
 DEPENDS+=	tex-shapepar-[0-9]*:../../print/tex-shapepar
 # depend shdoc
 # depend shipunov
