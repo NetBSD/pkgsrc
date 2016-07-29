@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/29 11:25:18 wiz Exp $
+share/texmf-dist/tex/latex/ncctools/afterpackage.sty
+share/texmf-dist/tex/latex/ncctools/dcounter.sty
+share/texmf-dist/tex/latex/ncctools/desclist.sty
+share/texmf-dist/tex/latex/ncctools/extdash.sty
+share/texmf-dist/tex/latex/ncctools/manyfoot.sty
+share/texmf-dist/tex/latex/ncctools/mboxfill.sty
+share/texmf-dist/tex/latex/ncctools/nccbbb.sty
+share/texmf-dist/tex/latex/ncctools/nccboxes.sty
+share/texmf-dist/tex/latex/ncctools/ncccomma.sty
+share/texmf-dist/tex/latex/ncctools/ncccropbox.sty
+share/texmf-dist/tex/latex/ncctools/ncccropmark.sty
+share/texmf-dist/tex/latex/ncctools/nccfancyhdr.sty
+share/texmf-dist/tex/latex/ncctools/nccfloats.sty
+share/texmf-dist/tex/latex/ncctools/nccfoots.sty
+share/texmf-dist/tex/latex/ncctools/nccmath.sty
+share/texmf-dist/tex/latex/ncctools/nccparskip.sty
+share/texmf-dist/tex/latex/ncctools/nccpic.sty
+share/texmf-dist/tex/latex/ncctools/nccrules.sty
+share/texmf-dist/tex/latex/ncctools/nccsect.sty
+share/texmf-dist/tex/latex/ncctools/nccstretch.sty
+share/texmf-dist/tex/latex/ncctools/nccthm.sty
+share/texmf-dist/tex/latex/ncctools/textarea.sty
+share/texmf-dist/tex/latex/ncctools/tocenter.sty
+share/texmf-dist/tex/latex/ncctools/topsection.sty
+share/texmf-dist/tex/latex/ncctools/watermark.sty
