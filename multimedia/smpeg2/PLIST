@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/02/02 15:24:13 rodent Exp $
-bin/plaympeg
+@comment $NetBSD: PLIST,v 1.2 2016/07/29 18:25:35 kamil Exp $
+bin/plaympeg2
 bin/smpeg2-config
 include/smpeg2/MPEG.h
 include/smpeg2/MPEGaction.h
@@ -13,5 +13,5 @@ include/smpeg2/MPEGsystem.h
 include/smpeg2/MPEGvideo.h
 include/smpeg2/smpeg.h
 lib/libsmpeg2.la
-man/man1/plaympeg.1
+man/man1/plaympeg2.1
 share/aclocal/smpeg2.m4
