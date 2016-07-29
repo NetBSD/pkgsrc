@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/08/12 03:26:47 gls Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/07/29 07:30:51 nils Exp $
 bin/fab
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,9 +6,6 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/fabfile/__init__.py
-${PYSITELIB}/fabfile/__init__.pyc
-${PYSITELIB}/fabfile/__init__.pyo
 ${PYSITELIB}/fabric/__init__.py
 ${PYSITELIB}/fabric/__init__.pyc
 ${PYSITELIB}/fabric/__init__.pyo
@@ -120,3 +117,4 @@ share/doc/fabric/usage/output_controls.rst
 share/doc/fabric/usage/parallel.rst
 share/doc/fabric/usage/ssh.rst
 share/doc/fabric/usage/tasks.rst
+@pkgdir share/doc/fabric/changes
