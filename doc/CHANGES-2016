@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3112 2016/07/29 07:54:35 nils Exp $
+$NetBSD: CHANGES-2016,v 1.3113 2016/07/29 09:33:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4423,3 +4423,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/p5-Locale-Currency-Format to 1.35 [wen 2016-07-29]
 	Updated sysutils/fabric to 1.11.1 [nils 2016-07-29]
 	Updated sysutils/cuisine to 0.7.13 [nils 2016-07-29]
+	Updated print/tex-polyglossia to 1.42.4nb1 [wiz 2016-07-29]
