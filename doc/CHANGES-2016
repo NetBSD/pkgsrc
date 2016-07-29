@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3111 2016/07/29 07:34:11 nils Exp $
+$NetBSD: CHANGES-2016,v 1.3112 2016/07/29 07:54:35 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4422,3 +4422,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/boolstuff version 0.1.16 [kamil 2016-07-29]
 	Updated finance/p5-Locale-Currency-Format to 1.35 [wen 2016-07-29]
 	Updated sysutils/fabric to 1.11.1 [nils 2016-07-29]
+	Updated sysutils/cuisine to 0.7.13 [nils 2016-07-29]
