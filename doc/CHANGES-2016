@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3118 2016/07/29 11:25:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3119 2016/07/29 11:25:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/apache24 to 2.4.23nb2 [wiz 2016-07-29]
 	Updated time/p5-Schedule-Cron-Events to 1.95 [wen 2016-07-29]
 	Added print/tex-ncctools version 3.5 [wiz 2016-07-29]
+	Added print/tex-ncctools-doc version 3.5 [wiz 2016-07-29]
