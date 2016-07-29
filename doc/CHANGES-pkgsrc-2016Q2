@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.7 2016/07/28 17:47:51 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.8 2016/07/29 16:35:38 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -66,3 +66,5 @@ sysutils/xenkernel41: security patch
 Pullup ticket #5074 - requested by christos
 devel/cvsps: security patch
 
+Pullup ticket #5075 - requested by schmonz
+www/ikiwiki: security update
