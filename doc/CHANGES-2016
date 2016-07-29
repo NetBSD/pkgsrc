@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3116 2016/07/29 11:11:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3117 2016/07/29 11:23:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4427,3 +4427,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/dhcpcd to 6.11.2 [roy 2016-07-29]
 	Updated www/apache22 to 2.2.31nb4 [wiz 2016-07-29]
 	Updated www/apache24 to 2.4.23nb2 [wiz 2016-07-29]
+	Updated time/p5-Schedule-Cron-Events to 1.95 [wen 2016-07-29]
