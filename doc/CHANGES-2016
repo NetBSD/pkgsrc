@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3109 2016/07/28 23:59:10 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3110 2016/07/29 04:21:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4420,3 +4420,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/burgerspace version 1.9.2 [kamil 2016-07-28]
 	Added games/cosmosmash version 1.4.7 [kamil 2016-07-28]
 	Added math/boolstuff version 0.1.16 [kamil 2016-07-29]
+	Updated finance/p5-Locale-Currency-Format to 1.35 [wen 2016-07-29]
