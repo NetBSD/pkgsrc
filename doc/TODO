@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16210 2016/07/29 11:30:01 wen Exp $
+$NetBSD: TODO,v 1.16211 2016/07/29 11:35:06 wen Exp $
 
 Suggested new packages
 ======================
@@ -1280,7 +1280,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-Cycle-1.221
 	o p5-Tie-DBI-1.06
-	o p5-User-Identity-0.94
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
 	o p5-XML-Clean-1.010101
