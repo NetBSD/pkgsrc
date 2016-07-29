@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/29 22:36:56 wiz Exp $
+share/texmf-dist/doc/latex/shadowtext/README
+share/texmf-dist/doc/latex/shadowtext/shadowtext.pdf
+share/texmf-dist/doc/latex/shadowtext/shadowtext.tex
