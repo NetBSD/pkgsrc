@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.667 2016/07/21 07:36:22 jnemeth Exp $
+# $NetBSD: Makefile,v 1.668 2016/07/29 11:25:18 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -897,6 +897,8 @@ SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-musixtex-doc
 SUBDIR+=	tex-natbib
 SUBDIR+=	tex-natbib-doc
+SUBDIR+=	tex-ncctools
+SUBDIR+=	tex-ncctools-doc
 SUBDIR+=	tex-needspace
 SUBDIR+=	tex-needspace-doc
 SUBDIR+=	tex-newlfm
