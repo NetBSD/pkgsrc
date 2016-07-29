@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.668 2016/07/29 11:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.669 2016/07/29 22:36:56 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1069,6 +1069,8 @@ SUBDIR+=	tex-setspace
 SUBDIR+=	tex-shadethm
 SUBDIR+=	tex-shadow
 SUBDIR+=	tex-shadow-doc
+SUBDIR+=	tex-shadowtext
+SUBDIR+=	tex-shadowtext-doc
 SUBDIR+=	tex-shapepar
 SUBDIR+=	tex-shapepar-doc
 SUBDIR+=	tex-showdim
