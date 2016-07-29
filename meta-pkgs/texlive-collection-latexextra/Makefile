@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/29 11:26:20 wiz Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2016pre1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41304
@@ -686,7 +686,7 @@ DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
 # depend nameauth
 # depend namespc
 # depend ncclatex
-# depend ncctools
+DEPENDS+=	tex-ncctools-[0-9]*:../../print/tex-ncctools
 DEPENDS+=	tex-needspace-[0-9]*:../../print/tex-needspace
 # depend nestquot
 # depend newcommand
