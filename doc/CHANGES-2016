@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3121 2016/07/29 11:35:06 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3122 2016/07/29 11:41:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4432,3 +4432,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-ncctools-doc version 3.5 [wiz 2016-07-29]
 	Updated meta-pkgs/texlive-collection-latexextra to 2016pre1nb2 [wiz 2016-07-29]
 	Updated mail/p5-User-Identity to 0.94 [wen 2016-07-29]
+	Updated net/p5-POE-Component-Client-DNS to 1.054 [wen 2016-07-29]
