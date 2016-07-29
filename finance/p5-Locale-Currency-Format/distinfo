@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:12:13 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/07/29 04:19:56 wen Exp $
 
-SHA1 (Locale-Currency-Format-1.30.tar.gz) = b2671b836588da6b2db1e4101679cd2fa63e0e11
-RMD160 (Locale-Currency-Format-1.30.tar.gz) = a41e9e57b68ac900048c4399b4dca86149b91446
-SHA512 (Locale-Currency-Format-1.30.tar.gz) = 8dc9e9444d6ef3a49410f97a7a3498f2eb44e9c70f5f5e1bf1810d82ddcb699654bc3223ec7e79a4aee12266e8181017afa85b687252429ce1a9140c29c96520
-Size (Locale-Currency-Format-1.30.tar.gz) = 9112 bytes
+SHA1 (Locale-Currency-Format-1.35.tar.gz) = 31d8c5e126528b3034e350946b4fb3cb8bb73583
+RMD160 (Locale-Currency-Format-1.35.tar.gz) = 4dc0eff412ae2092371bf7efa420e52e144b97fa
+SHA512 (Locale-Currency-Format-1.35.tar.gz) = fce9a107e7efbff39f853ff7937a934300cc85ddd81a5bdb1e0c18dc49e6b21d1312652a5c939962c05f3402d25ba4ed69feaeb97588183685e755243666e8c6
+Size (Locale-Currency-Format-1.35.tar.gz) = 10405 bytes
