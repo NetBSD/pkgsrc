@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2016/07/29 21:38:36 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Code-of-Conduct.md
+${GEM_LIBDIR}/Contributing.md
+${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/Licence.md
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/data/mime-types.json
+${GEM_LIBDIR}/data/mime.content_type.column
+${GEM_LIBDIR}/data/mime.docs.column
+${GEM_LIBDIR}/data/mime.encoding.column
+${GEM_LIBDIR}/data/mime.flags.column
+${GEM_LIBDIR}/data/mime.friendly.column
+${GEM_LIBDIR}/data/mime.pext.column
+${GEM_LIBDIR}/data/mime.use_instead.column
+${GEM_LIBDIR}/data/mime.xrefs.column
+${GEM_LIBDIR}/lib/mime-types-data.rb
+${GEM_LIBDIR}/lib/mime/types/data.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
