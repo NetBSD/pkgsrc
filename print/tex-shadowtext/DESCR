@@ -1,0 +1,3 @@
+The package introduces a command \shadowtext, which adds a drop
+shadow to the text that is given as its argument. The colour
+and positioning of the shadow are customisable.
