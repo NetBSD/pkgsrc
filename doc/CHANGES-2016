@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3131 2016/07/29 22:37:24 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3132 2016/07/29 22:38:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4442,3 +4442,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added mail/ruby-mime-types-data version 3.2016.0521 [minskim 2016-07-29]
 	Added print/tex-shadowtext version 0.3 [wiz 2016-07-29]
 	Added print/tex-shadowtext-doc version 0.3 [wiz 2016-07-29]
+	Updated meta-pkgs/texlive-collection-latexextra to 2016pre1nb3 [wiz 2016-07-29]
