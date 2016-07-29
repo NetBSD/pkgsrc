@@ -1,0 +1,17 @@
+The NCCtools bundle contains many packages for general use
+under LaTeX; many are also used by NCC LaTeX. The bundle
+includes tools for: executing commands after a package is
+loaded; watermarks; counter manipulation (dynamic counters,
+changing counter numbering with another counter); improvements
+to the description environment; hyphenation of compound words;
+new levels of footnotes; space-filling patterns; "poor man's"
+Black Board Bold symbols; alignment of the content of a box;
+use comma as decimal separator; boxes with their own crop
+marks; page cropmarks; improvements to fancy headers; float
+"styles", mini floats, side floats; manually marked footnotes;
+extension of amsmath; control of paragraph skip; an envelope to
+the graphicx package; dashed and multiple rules; alternative
+techniques for declarations of sections, captions, and toc-
+entries; generalised text-stretching; generation of new theorem-
+like environments; control of the text area; centred page
+layouts; and un-numbered top-level section.
