@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/03/03 17:43:45 asau Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/29 11:43:36 abs Exp $
 
-PKGNAME=	sql-workbench-119
-DISTNAME=	Workbench-Build119
+PKGNAME=	sql-workbench-120
+DISTNAME=	Workbench-Build120
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sql-workbench.net/
 EXTRACT_SUFX=	.zip
