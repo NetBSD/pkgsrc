@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3129 2016/07/29 21:55:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3130 2016/07/29 22:37:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4440,3 +4440,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/smpeg2 to 2.0.0nb3 [kamil 2016-07-29]
 	Updated print/tex-adjustbox to 1.0nb3 [wiz 2016-07-29]
 	Added mail/ruby-mime-types-data version 3.2016.0521 [minskim 2016-07-29]
+	Added print/tex-shadowtext version 0.3 [wiz 2016-07-29]
