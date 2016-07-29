@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3119 2016/07/29 11:25:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3120 2016/07/29 11:26:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4430,3 +4430,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-Schedule-Cron-Events to 1.95 [wen 2016-07-29]
 	Added print/tex-ncctools version 3.5 [wiz 2016-07-29]
 	Added print/tex-ncctools-doc version 3.5 [wiz 2016-07-29]
+	Updated meta-pkgs/texlive-collection-latexextra to 2016pre1nb2 [wiz 2016-07-29]
