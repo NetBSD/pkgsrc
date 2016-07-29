@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:17:58 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/29 11:43:59 wen Exp $
 
-SHA1 (Digest-SHA3-0.24.tar.gz) = 0a9c83f5a9408a15a24929491d32075bd869be25
-RMD160 (Digest-SHA3-0.24.tar.gz) = abb9462011bc0905772595df3ce416c98567fc09
-SHA512 (Digest-SHA3-0.24.tar.gz) = 0429e94d6d3b69c20e8f941a885fc11c41bcc837f28e3c07c845e2b07d5a8c3faf535797d7ffcac6a92c14b79ae38f9dd24566f6ac3d415f3d9bc62e23d94126
-Size (Digest-SHA3-0.24.tar.gz) = 28122 bytes
+SHA1 (Digest-SHA3-0.25.tar.gz) = 2eeda7cfaf2bdcff0fbfc58f27d06265bc07d117
+RMD160 (Digest-SHA3-0.25.tar.gz) = 1b4e01927aa0d1d2a4d53b345cdd71a4c13403f9
+SHA512 (Digest-SHA3-0.25.tar.gz) = 335fbd265bbe3acaac3a8dc6ad9176eb3f9eedbb1164f12e86e9090b1247f080e8683250d209e0fc0cc54583e1b1ae723072e2f886f6638bbb1781ef99b1cf89
+Size (Digest-SHA3-0.25.tar.gz) = 28152 bytes
