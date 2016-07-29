@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/29 11:25:18 wiz Exp $
+
+SHA1 (tex-ncctools-15878/ncctools.tar.xz) = 7c5e9ceeb9b86b9fb67c1117f62f9c1857388a58
+RMD160 (tex-ncctools-15878/ncctools.tar.xz) = 64963eb71decbb1d4983c4f4ece169262742ed74
+SHA512 (tex-ncctools-15878/ncctools.tar.xz) = caa8b92ade63c9d806053022d2aa2a25f1cf5bf89398194a7d29ff0f1d0ac2e9cc6d733e0cbbc03d6853b5ed6102eb65e0f671e4489c27683c49de30d18bd477
+Size (tex-ncctools-15878/ncctools.tar.xz) = 24444 bytes
