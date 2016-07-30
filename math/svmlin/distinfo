@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/30 15:13:57 cheusov Exp $
+
+SHA1 (svmlin-v1.0.tar.gz) = 9032ee31d942ee85650c8b3ae43e8ab3a6486791
+RMD160 (svmlin-v1.0.tar.gz) = 730132b7c06e67436222abf88935570d9e425e7f
+SHA512 (svmlin-v1.0.tar.gz) = f2438714924dd93ad2de8be71397800838d77044624263c26903faa9bd18dbe657a2d3e600016df8b5ee1f7daee11dd0b38b06b6e921ab03511fd89f4a268b32
+Size (svmlin-v1.0.tar.gz) = 1068173 bytes

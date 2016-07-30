@@ -1,0 +1,15 @@
+SVMlin  is software package for linear SVMs.  It is well-suited to
+classification problems involving a large number of examples and features.
+It is primarily written for sparse datasets.
+
+SVMlin  can also utilize unlabeled data, in addition to labeled examples.
+It currently implements two extensions of standard SVMs to incorporate
+unlabeled examples.
+
+SVMlin  implements the following algorithms:
+  - Fully supervised [using only labeled examples]
+    * Linear  Regularized Least Squares (RLS) Classification
+    * Modified Finite Newton  Linear L2-SVMs
+  - Semi-supervised [can use unlabeled data as well]
+    * Linear Transductive L2-SVMs  with multiple switchings
+    * Deterministic Annealing (DA) for Semi-supervised Linear L2-SVMs
