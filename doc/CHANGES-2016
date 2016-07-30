@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3134 2016/07/30 02:56:58 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3135 2016/07/30 12:55:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4444,3 +4444,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-shadowtext-doc version 0.3 [wiz 2016-07-29]
 	Updated meta-pkgs/texlive-collection-latexextra to 2016pre1nb3 [wiz 2016-07-29]
 	Updated time/gnotime to 2.4.0 [mef 2016-07-30]
+	Updated textproc/ispell-de to 20160407 [mef 2016-07-30]
