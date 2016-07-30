@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3138 2016/07/30 15:14:14 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.3139 2016/07/30 17:14:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4448,3 +4448,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Lingua-EN-Inflect to 1.900 [mef 2016-07-30]
 	Added textproc/p5-Alien-Base version 0.004 [mef 2016-07-30]
 	Added math/svmlin version 1.0 [cheusov 2016-07-30]
+	Updated emulators/mame to 0.176 [wiz 2016-07-30]
