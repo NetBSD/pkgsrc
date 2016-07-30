@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3135 2016/07/30 12:55:01 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3136 2016/07/30 12:59:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4445,3 +4445,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/texlive-collection-latexextra to 2016pre1nb3 [wiz 2016-07-29]
 	Updated time/gnotime to 2.4.0 [mef 2016-07-30]
 	Updated textproc/ispell-de to 20160407 [mef 2016-07-30]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.900 [mef 2016-07-30]
