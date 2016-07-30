@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:17:57 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/07/30 23:56:01 wen Exp $
 
-SHA1 (Digest-Hashcash-0.03.tar.gz) = ef22445827bf3315f1118c31df013e2cfa6fbb97
-RMD160 (Digest-Hashcash-0.03.tar.gz) = b0a5efe3a56b975c8f6d8f20a08fa7df2f194574
-SHA512 (Digest-Hashcash-0.03.tar.gz) = 8cb6d697ae096f1aa3d1190c5a82e73c9c8865c2a63aab965e791b6cd8544d68580327ed07acc3b039585bd4b6bee5e6f00984685e9859322e876b3a72bebf64
-Size (Digest-Hashcash-0.03.tar.gz) = 14533 bytes
-SHA1 (patch-aa) = a716fca97bc106cbf02e6da04294f9a48d692a31
+SHA1 (Digest-Hashcash-1.1.tar.gz) = 7641c90bc7e89fc23c04d4abc264c04508f36f5c
+RMD160 (Digest-Hashcash-1.1.tar.gz) = 964cf323724e9dffcceebdc556f49e86773d14b6
+SHA512 (Digest-Hashcash-1.1.tar.gz) = 59fc4f116a963bff455f747c71e29893a15f2505eaec5f66ff6e662d09a0b1b5d0f4451dea081753eacd40fc5079edccd2385e31c0301b48b62bde36bdd7259f
+Size (Digest-Hashcash-1.1.tar.gz) = 18243 bytes
