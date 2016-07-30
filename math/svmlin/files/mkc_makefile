@@ -1,0 +1,4 @@
+PROG =	svmlin
+SRCS =	svmlin.cpp ssl.cpp
+
+.include <mkc.mk>
