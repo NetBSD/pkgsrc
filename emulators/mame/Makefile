@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2016/07/09 13:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2016/07/30 17:14:28 wiz Exp $
 
-DISTNAME=	mame-0.175
+DISTNAME=	mame-0.176
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -14,7 +14,7 @@ DOCDIR=			share/doc/mame
 SHAREDIR=		share/mame
 INSTALLATION_DIRS=	bin ${DOCDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man6
 INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/border_blur
-INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains ${SHAREDIR}/hash
+INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
 
 RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -117,7 +117,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/artwork/LICENSE ${DESTDIR}${PREFIX}/${SHAREDIR}/artwork
 	${INSTALL_DATA} ${WRKSRC}/artwork/*.* ${DESTDIR}${PREFIX}/${SHAREDIR}/artwork
 	${INSTALL_DATA} ${WRKSRC}/artwork/bgfx/border_blur/* ${DESTDIR}${PREFIX}/${SHAREDIR}/artwork/bgfx/border_blur
-	${INSTALL_DATA} ${WRKSRC}/artwork/bgfx/chains/* ${DESTDIR}${PREFIX}/${SHAREDIR}/artwork/bgfx/chains
+	${INSTALL_DATA} ${WRKSRC}/artwork/bgfx/chains/*.* ${DESTDIR}${PREFIX}/${SHAREDIR}/artwork/bgfx/chains
+	${INSTALL_DATA} ${WRKSRC}/artwork/bgfx/chains/crt-geom/* ${DESTDIR}${PREFIX}/${SHAREDIR}/artwork/bgfx/chains/crt-geom/
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/hash/* ${DESTDIR}${PREFIX}/${SHAREDIR}/hash
 
