@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2016/07/28 23:58:02 kamil Exp $
+# $NetBSD: Makefile,v 1.326 2016/07/30 15:15:22 cheusov Exp $
 
 COMMENT=	Mathematics
 
@@ -280,6 +280,7 @@ SUBDIR+=	snns
 SUBDIR+=	speedcrunch
 SUBDIR+=	statist
 SUBDIR+=	superlu
+SUBDIR+=	svmlin
 SUBDIR+=	tasp-vsipl
 SUBDIR+=	teapot
 SUBDIR+=	tex-apnum
