@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3132 2016/07/29 22:38:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3133 2016/07/30 02:49:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4435,7 +4435,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-POE-Component-Client-DNS to 1.054 [wen 2016-07-29]
 	Updated databases/sql-workbench to 120 [abs 2016-07-29]
 	Updated security/p5-Digest-SHA3 to 0.25 [wen 2016-07-29]
-	Updated devel/p5-Perl6-Export to 0.009 [wen 2016-09-29]
+	Updated devel/p5-Perl6-Export to 0.009 [wen 2016-07-29]
 	Updated lang/p5-Switch to 2.17 [wen 2016-07-29]
 	Updated multimedia/smpeg2 to 2.0.0nb3 [kamil 2016-07-29]
 	Updated print/tex-adjustbox to 1.0nb3 [wiz 2016-07-29]
