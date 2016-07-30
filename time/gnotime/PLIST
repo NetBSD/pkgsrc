@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/07/30 02:56:34 mef Exp $
 bin/gnotime
 bin/gnotime-remote
 man/man1/gnotime-remote.1
@@ -104,3 +104,4 @@ share/locale/wa/LC_MESSAGES/gnotime-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnotime-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
 share/omf/gnotime/gnotime-C.omf
+@pkgdir etc/gconf/schemas
