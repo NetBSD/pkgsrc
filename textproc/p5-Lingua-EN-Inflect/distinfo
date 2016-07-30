@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:59:44 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/07/30 12:59:07 mef Exp $
 
-SHA1 (Lingua-EN-Inflect-1.899.tar.gz) = 8687472082ef6b5a50d9ef57c0a740b733185d98
-RMD160 (Lingua-EN-Inflect-1.899.tar.gz) = b8d637dfaaa1bf875726bb183daeb4c609d27988
-SHA512 (Lingua-EN-Inflect-1.899.tar.gz) = 5ac836f20992c68ff3edcab5c1431bd967c39295b7b950ed147157c724985b941f4c3229daf1f729219982dfe3eb3b065ca6fa0b54ecd2922ce60d887babd19c
-Size (Lingua-EN-Inflect-1.899.tar.gz) = 59555 bytes
+SHA1 (Lingua-EN-Inflect-1.900.tar.gz) = 00524d70169e3c0df66e9c573c0ad40122f863af
+RMD160 (Lingua-EN-Inflect-1.900.tar.gz) = f771f358da301a695d7ecb9add58cf91141679fa
+SHA512 (Lingua-EN-Inflect-1.900.tar.gz) = 40bc328f69fb2cab01b63d79b7c54417fbba4de4fa7b2cf6543b7e641a4b8de602dc9eadcee3866c337ec2fcf912a740bb71d138a86e68b76f12186809151e74
+Size (Lingua-EN-Inflect-1.900.tar.gz) = 59637 bytes
