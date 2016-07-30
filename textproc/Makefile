@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.892 2016/07/27 23:21:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.893 2016/07/30 13:18:31 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -404,6 +404,7 @@ SUBDIR+=	oniguruma
 SUBDIR+=	openjade
 SUBDIR+=	opensp
 SUBDIR+=	ots
+SUBDIR+=	p5-Alien-Base
 SUBDIR+=	p5-Biblio-EndnoteStyle
 SUBDIR+=	p5-CAM-PDF
 SUBDIR+=	p5-Convert-ASCII-Armour
