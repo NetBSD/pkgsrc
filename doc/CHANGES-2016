@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3137 2016/07/30 13:18:31 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3138 2016/07/30 15:14:14 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4447,3 +4447,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/ispell-de to 20160407 [mef 2016-07-30]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.900 [mef 2016-07-30]
 	Added textproc/p5-Alien-Base version 0.004 [mef 2016-07-30]
+	Added math/svmlin version 1.0 [cheusov 2016-07-30]
