@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/06/30 18:05:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/07/30 17:14:28 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -42,6 +42,19 @@ share/mame/artwork/LICENSE
 share/mame/artwork/README.md
 share/mame/artwork/aperture-grille.png
 share/mame/artwork/bgfx/border_blur/default.lay
+share/mame/artwork/bgfx/chains/crt-geom/aperture_1_2_bgr.png
+share/mame/artwork/bgfx/chains/crt-geom/aperture_1_4_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/aperture_2_4_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/aperture_2_5_bgr.png
+share/mame/artwork/bgfx/chains/crt-geom/aperture_3_6_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/delta_1_2x1_bgr.png
+share/mame/artwork/bgfx/chains/crt-geom/delta_1_4x1_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/delta_2_4x1_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/delta_2_4x2_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/none.png
+share/mame/artwork/bgfx/chains/crt-geom/slot_2_4x4_rgb.png
+share/mame/artwork/bgfx/chains/crt-geom/slot_2_5x4_bgr.png
+share/mame/artwork/bgfx/chains/crt-geom/slot_3_7x6_rgb.png
 share/mame/artwork/bgfx/chains/hq2x.png
 share/mame/artwork/bgfx/chains/hq3x.png
 share/mame/artwork/bgfx/chains/hq4x.png
@@ -195,6 +208,7 @@ share/mame/hash/gameking.xml
 share/mame/hash/gameking3.xml
 share/mame/hash/gamepock.xml
 share/mame/hash/gba.xml
+share/mame/hash/gba_ereader.xml
 share/mame/hash/gbcolor.xml
 share/mame/hash/genius.xml
 share/mame/hash/gimix.xml
@@ -354,6 +368,7 @@ share/mame/hash/pmd85_cass.xml
 share/mame/hash/pockchalv2.xml
 share/mame/hash/pockchalw.xml
 share/mame/hash/pofo.xml
+share/mame/hash/poisk1_flop.xml
 share/mame/hash/pokemini.xml
 share/mame/hash/pro128_cart.xml
 share/mame/hash/pro128_cass.xml
