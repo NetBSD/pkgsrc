@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3140 2016/07/30 23:41:39 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3141 2016/07/30 23:57:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4450,3 +4450,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/svmlin version 1.0 [cheusov 2016-07-30]
 	Updated emulators/mame to 0.176 [wiz 2016-07-30]
 	Updated textproc/p5-Text-Table to 1.131 [wen 2016-07-30]
+	Updated security/p5-Digest-Hashcash to 1.1 [wen 2016-07-30]
