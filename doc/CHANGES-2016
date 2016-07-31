@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3142 2016/07/31 01:32:05 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3143 2016/07/31 01:36:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4452,3 +4452,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-Table to 1.131 [wen 2016-07-30]
 	Updated security/p5-Digest-Hashcash to 1.1 [wen 2016-07-30]
 	Updated www/p5-Catalyst-Runtime to 5.90112 [wen 2016-07-31]
+	Updated www/p5-HTML-Restrict to 2.2.3 [wen 2016-07-31]
