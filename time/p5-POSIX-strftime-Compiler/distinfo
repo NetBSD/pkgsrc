@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/21 10:54:49 wen Exp $
+$NetBSD: distinfo,v 1.2 2016/07/31 12:14:01 wen Exp $
 
-SHA1 (POSIX-strftime-Compiler-0.41.tar.gz) = 7d8814f39e60e1c190c15dd64cbaba70dd2740f9
-RMD160 (POSIX-strftime-Compiler-0.41.tar.gz) = e3c9cea46c50271ff131e202378dd27b1a64a1ac
-SHA512 (POSIX-strftime-Compiler-0.41.tar.gz) = b613de3fb332313318cca8a6c8912b64e9dac702d5681d252dc8eb919c7b102354ad25f60b537cdfa66203e01826b34a5a349a2fac856a6affb40d5f160725fe
-Size (POSIX-strftime-Compiler-0.41.tar.gz) = 17187 bytes
+SHA1 (POSIX-strftime-Compiler-0.42.tar.gz) = 4989ff50449c500a4211853b3211d1cc489ec1c6
+RMD160 (POSIX-strftime-Compiler-0.42.tar.gz) = 094789055f621778c5605417313f43ef104d0f0d
+SHA512 (POSIX-strftime-Compiler-0.42.tar.gz) = 0c07f1b8589b067533c65a023dd634a29640cb8992aae8047aa1063affe6b30b95930479829982a30a13b87bc7c9ebf82ca4837726bd29658d85d718164e3c76
+Size (POSIX-strftime-Compiler-0.42.tar.gz) = 17294 bytes
