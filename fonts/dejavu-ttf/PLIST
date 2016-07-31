@@ -1,4 +1,16 @@
-@comment $NetBSD: PLIST,v 1.10 2014/06/01 16:35:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/07/31 12:09:59 mef Exp $
+share/doc/dejavu-ttf/AUTHORS
+share/doc/dejavu-ttf/BUGS
+share/doc/dejavu-ttf/LICENSE
+share/doc/dejavu-ttf/NEWS
+share/doc/dejavu-ttf/README.md
+share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-sans-mono.conf
+share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-sans.conf
+share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-serif.conf
+share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-sans-mono.conf
+share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-sans.conf
+share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-serif.conf
+share/fonts/X11/TTF/DejaVuMathTeXGyre.ttf
 share/fonts/X11/TTF/DejaVuSans-Bold.ttf
 share/fonts/X11/TTF/DejaVuSans-BoldOblique.ttf
 share/fonts/X11/TTF/DejaVuSans-ExtraLight.ttf
@@ -20,14 +32,3 @@ share/fonts/X11/TTF/DejaVuSerifCondensed-Bold.ttf
 share/fonts/X11/TTF/DejaVuSerifCondensed-BoldItalic.ttf
 share/fonts/X11/TTF/DejaVuSerifCondensed-Italic.ttf
 share/fonts/X11/TTF/DejaVuSerifCondensed.ttf
-share/doc/dejavu-ttf/AUTHORS
-share/doc/dejavu-ttf/BUGS
-share/doc/dejavu-ttf/LICENSE
-share/doc/dejavu-ttf/NEWS
-share/doc/dejavu-ttf/README
-share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-sans-mono.conf
-share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-sans.conf
-share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-serif.conf
-share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-sans-mono.conf
-share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-sans.conf
-share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-serif.conf
