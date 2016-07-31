@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16217 2016/07/30 23:57:17 wen Exp $
+$NetBSD: TODO,v 1.16218 2016/07/31 08:31:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1239,6 +1239,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DNS-SEC-1.02
 	o p5-Net-ManageSieve-0.13
+	o p5-Net-SSLeay-1.75
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
 	o p5-PAR-1.029
@@ -1276,6 +1277,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
 	o p5-XML-Clean-1.010101
+	o p5-XML-LibXSLT-1.95
 	o p5-autobox-20090629
 	o p5-collectd-5.5.1
 	o p5-eBay-API-0.29
@@ -1310,6 +1312,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pgocaml-2.3
 	o phoronix-test-suite-6.2.1
 	o php-apcu-4.0.10
+	o php-baikal-0.4.5
 	o php-excel-1.8.1
 	o php-geoip-1.1.0
 	o php-jpgraph-3.5.0b1
@@ -1735,7 +1738,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-1.8.3
-	o wine-devel-1.9.14
+	o wine-devel-1.9.15
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
