@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16218 2016/07/31 08:31:26 wiz Exp $
+$NetBSD: TODO,v 1.16219 2016/07/31 09:03:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -359,6 +359,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.2.6
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
@@ -390,6 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
+	o afl-2.22b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -1099,6 +1101,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.38.2
 	o megatools-1.9.97
+	o meld-3.16.2
 	o mergeant-0.67
 	o merkaator-0.18.2
 	o mesure-0.7.2
@@ -1123,6 +1126,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
+	o moneyguru-2.10.1
 	o monit-5.17
 	o mono-4.4.0.122
 	o mono-tools-4.2
@@ -1341,6 +1345,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
+	o pkgconf-1
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.7
@@ -1352,6 +1357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o policyd-weight-0.1.15.2
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.46.0
 	o posh-0.12.6
 	o postal-0.72
 	o postfix-3.0.5
@@ -1382,6 +1388,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.19
 	o py-acora-1.9
 	o py-apache-libcloud-0.20.1
+	o py-atomicwrites-1.1.0
 	o py-bleach-1.4.2
 	o py-bsddb3-6.1.1
 	o py-buildbot-0.9.0b5
@@ -1412,6 +1419,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-keybinder-0.3.1
 	o py-lasso-2.5.1
 	o py-lupa-1.2
+	o py-lxml-3.6.1
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-mccabe-0.4.0
@@ -1438,6 +1446,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-rope-0.9.4
 	o py-scgi-1.15
 	o py-serpent-1.12
+	o py-setuptools-25.1.1
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
@@ -1457,6 +1466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-twisted-16.3.0
 	o py-uliweb-0.5b0
 	o py-uwsgi-2.0.12
+	o py-vdirsyncer-0.11.3
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1636,6 +1646,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
+	o talloc-2.1.8
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
@@ -1749,7 +1760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9j [pkg/51340]
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160723
+	o x264-devel-20160730
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
