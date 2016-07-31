@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16220 2016/07/31 12:34:37 wen Exp $
+$NetBSD: TODO,v 1.16221 2016/07/31 12:37:25 wen Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
 	o p5-XML-Clean-1.010101
-	o p5-autobox-20090629
 	o p5-collectd-5.5.1
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
