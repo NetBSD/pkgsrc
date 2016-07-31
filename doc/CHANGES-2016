@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3144 2016/07/31 12:10:17 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3145 2016/07/31 12:15:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4454,3 +4454,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Catalyst-Runtime to 5.90112 [wen 2016-07-31]
 	Updated www/p5-HTML-Restrict to 2.2.3 [wen 2016-07-31]
 	Updated fonts/dejavu-ttf to 2.37 [mef 2016-07-31]
+	Updated time/p5-POSIX-strftime-Compiler to 0.42 [wen 2016-07-31]
