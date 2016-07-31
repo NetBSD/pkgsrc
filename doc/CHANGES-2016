@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3147 2016/07/31 12:25:35 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3148 2016/07/31 12:34:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4457,3 +4457,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-POSIX-strftime-Compiler to 0.42 [wen 2016-07-31]
 	Updated time/p5-DateTime-Set to 0.3800 [wen 2016-07-31]
 	Updated time/p5-DateTime-Format-Natural to 1.04 [wen 2016-07-31]
+	Updated textproc/p5-XML-LibXSLT to 1.95 [wen 2016-07-31]
