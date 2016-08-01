@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/06 09:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/01 10:55:52 wiz Exp $
 
-DISTNAME=	click-threading-0.1.2
+DISTNAME=	click-threading-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/click-threading/}
