@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/01 12:47:49 mef Exp $
 #
 
-DISTNAME=		Net-FTPSSL-0.26
+DISTNAME=		Net-FTPSSL-0.33
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 CATEGORIES=		net perl5 security
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
