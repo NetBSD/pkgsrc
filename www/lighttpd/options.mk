@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.10 2015/07/26 18:24:15 alnsn Exp $
+# $NetBSD: options.mk,v 1.11 2016/08/01 09:25:20 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=	bzip fam gdbm inet6 ldap lua mysql ssl memcache
+PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Allow using bzip as a compression method in the "compress" module.
+### Allow using bzip2 as a compression method in the "compress" module.
 ###
-.if !empty(PKG_OPTIONS:Mbzip)
+.if !empty(PKG_OPTIONS:Mbzip2)
 .  include "../../archivers/bzip2/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-bzip2
 .else
