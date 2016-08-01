@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3157 2016/08/01 10:25:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3158 2016/08/01 10:28:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4467,3 +4467,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 25.1.1 [wiz 2016-08-01]
 	Updated devel/meld to 3.16.2 [wiz 2016-08-01]
 	Updated devel/afl to 2.23b [wiz 2016-08-01]
+	Updated security/p5-Net-SSLeay to 1.75 [wiz 2016-08-01]
