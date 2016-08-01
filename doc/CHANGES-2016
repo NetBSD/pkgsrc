@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3164 2016/08/01 11:14:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3165 2016/08/01 12:06:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4474,3 +4474,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-vdirsyncer to 0.11.3 [wiz 2016-08-01]
 	Updated devel/talloc to 2.1.8 [wiz 2016-08-01]
 	Updated devel/pkgconf to 1 [wiz 2016-08-01]
+	Updated net/p5-Net to 3.09 [mef 2016-08-01]
