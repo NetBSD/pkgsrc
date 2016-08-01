@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3151 2016/08/01 04:04:10 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3152 2016/08/01 09:25:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4461,3 +4461,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/geany to 1.28 [schmonz 2016-07-31]
 	Updated cad/gtkwave to 3.3.74 [mef 2016-08-01]
 	Updated graphics/extrema to 4.4.5 [mef 2016-08-01]
+	Updated www/lighttpd to 1.4.41 [wiz 2016-08-01]
