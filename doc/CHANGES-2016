@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3167 2016/08/01 12:41:36 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3168 2016/08/01 12:48:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4478,3 +4478,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-Pcap to 0.18 [mef 2016-08-01]
 	Updated net/p5-Net-DBus to 1.1.0 [mef 2016-08-01]
 	Updated net/p5-Net-SNMP-Mixin to 0.14 [mef 2016-08-01]
+	Updated net/p5-Net-FTPSSL to 0.33 [mef 2016-08-01]
