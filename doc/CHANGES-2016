@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3171 2016/08/01 14:11:24 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3172 2016/08/01 16:47:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Geo-IP to 1.50 [mef 2016-08-01]
 	Updated print/podofo to 0.9.4 [adam 2016-08-01]
 	Updated print/poppler to 0.46.0 [wiz 2016-08-01]
+	Added devel/ruby-contracts version 0.14.0 [minskim 2016-08-01]
