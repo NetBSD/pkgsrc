@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2016/05/22 18:17:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2016/08/01 14:11:12 wiz Exp $
 include/poppler/glib/poppler-action.h
 include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
@@ -34,6 +34,7 @@ share/gtk-doc/html/poppler/api-index-0-20.html
 share/gtk-doc/html/poppler/api-index-0-22.html
 share/gtk-doc/html/poppler/api-index-0-26.html
 share/gtk-doc/html/poppler/api-index-0-33.html
+share/gtk-doc/html/poppler/api-index-0-46.html
 share/gtk-doc/html/poppler/api-index-deprecated.html
 share/gtk-doc/html/poppler/api-index-full.html
 share/gtk-doc/html/poppler/ch01.html
