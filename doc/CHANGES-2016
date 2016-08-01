@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3153 2016/08/01 09:43:09 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3154 2016/08/01 09:48:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/extrema to 4.4.5 [mef 2016-08-01]
 	Updated www/lighttpd to 1.4.41 [wiz 2016-08-01]
 	Updated graphics/ImageMagick to 7.0.2.6 [wiz 2016-08-01]
+	Removed net/wireshark1 successor net/wireshark [wiz 2016-08-01]
