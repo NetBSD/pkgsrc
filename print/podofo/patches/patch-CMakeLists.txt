@@ -1,12 +1,12 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2016/04/01 11:04:43 jperkin Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2016/08/01 13:39:34 adam Exp $
 
 Make LUA optional (PR/43054). Make sure man pages are installed
 at the right place.
 Dont look for CppUnit as we dont want to build tests.
 
---- CMakeLists.txt.orig	2014-06-15 16:53:10.000000000 +0000
+--- CMakeLists.txt.orig	2016-06-08 20:55:08.000000000 +0000
 +++ CMakeLists.txt
-@@ -372,7 +372,7 @@ ENDIF(PNG_FOUND)
+@@ -377,7 +377,7 @@ ENDIF(PNG_FOUND)
  
  IF(NOT PODOFO_BUILD_LIB_ONLY)
  
@@ -15,8 +15,8 @@ Dont look for CppUnit as we dont want to build tests.
  
  IF(CppUnit_FOUND)
    MESSAGE("Found cppunit. Unit tests will be built.")
-@@ -443,7 +443,9 @@ ELSE(DEFINED JPEG_RUNTIME_COMPATIBLE)
- ENDIF(DEFINED JPEG_RUNTIME_COMPATIBLE)
+@@ -426,7 +426,9 @@ ELSE(WANT_FONTCONFIG)
+ ENDIF(WANT_FONTCONFIG)
  
  IF(NOT PODOFO_BUILD_LIB_ONLY)
 -FIND_PACKAGE(LUA)
@@ -26,7 +26,7 @@ Dont look for CppUnit as we dont want to build tests.
  IF(LUA_FOUND)
  	# If we have lua, we can build podofoimpose.
  	MESSAGE("Lua found - PoDoFoImpose and PoDoFoColor will be built with Lua support")
-@@ -516,15 +518,16 @@ IF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
+@@ -502,15 +504,16 @@ IF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
    INCLUDE_DIRECTORIES(${FONTCONFIG_INCLUDE_DIR})
  ENDIF(FONTCONFIG_FOUND AND WANT_FONTCONFIG)
  
