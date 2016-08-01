@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3149 2016/07/31 18:30:28 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.3150 2016/08/01 03:12:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4459,3 +4459,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-Format-Natural to 1.04 [wen 2016-07-31]
 	Updated textproc/p5-XML-LibXSLT to 1.95 [wen 2016-07-31]
 	Updated devel/geany to 1.28 [schmonz 2016-07-31]
+	Updated cad/gtkwave to 3.3.74 [mef 2016-08-01]
