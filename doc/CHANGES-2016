@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3155 2016/08/01 10:15:16 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3156 2016/08/01 10:24:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4465,3 +4465,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.2.6 [wiz 2016-08-01]
 	Removed net/wireshark1 successor net/wireshark [wiz 2016-08-01]
 	Updated devel/py-setuptools to 25.1.1 [wiz 2016-08-01]
+	Updated devel/meld to 3.16.2 [wiz 2016-08-01]
