@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16226 2016/08/01 10:25:52 wiz Exp $
+$NetBSD: TODO,v 1.16227 2016/08/01 10:28:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1240,7 +1240,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DNS-SEC-1.02
 	o p5-Net-ManageSieve-0.13
-	o p5-Net-SSLeay-1.75
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
 	o p5-PAR-1.029
