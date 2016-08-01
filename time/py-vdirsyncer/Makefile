@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2016/06/19 20:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/08/01 10:58:10 wiz Exp $
 
-DISTNAME=	vdirsyncer-0.11.2
+DISTNAME=	vdirsyncer-0.11.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_s
 DEPENDS+=	${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=	${PYPKGPREFIX}-click>=5.0:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-click-log>=0.1.3:../../devel/py-click-log
-DEPENDS+=	${PYPKGPREFIX}-click-threading-[0-9]*:../../devel/py-click-threading
+DEPENDS+=	${PYPKGPREFIX}-click-threading>=0.2.0:../../devel/py-click-threading
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.9.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbelt
