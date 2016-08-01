@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3161 2016/08/01 10:56:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3162 2016/08/01 10:58:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4471,3 +4471,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-atomicwrites to 1.1.0 [wiz 2016-08-01]
 	Updated textproc/py-lxml to 3.6.1 [wiz 2016-08-01]
 	Updated devel/py-click-threading to 0.4.0 [wiz 2016-08-01]
+	Updated time/py-vdirsyncer to 0.11.3 [wiz 2016-08-01]
