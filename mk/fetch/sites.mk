@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.144 2016/06/16 18:23:01 mspo Exp $
+# $NetBSD: sites.mk,v 1.145 2016/08/01 09:35:56 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -68,12 +68,9 @@ MASTER_SITE_TEX_CTAN+= \
 	http://www.dnsbalance.ring.gr.jp/archives/text/CTAN/
 
 MASTER_SITE_SUNSITE+=   \
-	ftp://sunsite.unc.edu/pub/Linux/ \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/ \
 	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
-	ftp://ftp.lip6.fr/pub/linux/sunsite/ \
-	ftp://ftp.cs.tu-berlin.de/pub/linux/Mirrors/sunsite.unc.edu/ \
-	http://ftp.tuwien.ac.at/pub/linux/ibiblio/
+	ftp://ftp.lip6.fr/pub/linux/sunsite/
 
 MASTER_SITE_GNOME+=     \
 	http://ftp.gnome.org/pub/GNOME/ \
