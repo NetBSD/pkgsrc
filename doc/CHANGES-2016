@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3165 2016/08/01 12:06:37 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3166 2016/08/01 12:37:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4475,3 +4475,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/talloc to 2.1.8 [wiz 2016-08-01]
 	Updated devel/pkgconf to 1 [wiz 2016-08-01]
 	Updated net/p5-Net to 3.09 [mef 2016-08-01]
+	Updated net/p5-Net-Pcap to 0.18 [mef 2016-08-01]
+	Updated net/p5-Net-DBus to 1.1.0 [mef 2016-08-01]
