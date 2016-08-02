@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3174 2016/08/02 09:11:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3175 2016/08/02 13:57:59 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ruby-contracts version 0.14.0 [minskim 2016-08-01]
 	Updated devel/boost-headers to 1.61.0nb1 [wiz 2016-08-02]
 	Added misc/py-ansi version 0.1.3 [wiz 2016-08-02]
+	Updated audio/cmus to 2.7.1 [jperkin 2016-08-02]
