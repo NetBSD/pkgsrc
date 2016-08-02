@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/08/02 22:39:21 wiz Exp $
 
-DISTNAME=	llvm-3.8.0.src
-PKGREVISION=	2
+DISTNAME=	llvm-3.8.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
