@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2290 2016/08/01 16:46:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2291 2016/08/02 23:14:08 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1758,6 +1758,7 @@ SUBDIR+=	py-filechunkio
 SUBDIR+=	py-flake8
 SUBDIR+=	py-flakes
 SUBDIR+=	py-flexmock
+SUBDIR+=	py-freezegun
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
 SUBDIR+=	py-future
