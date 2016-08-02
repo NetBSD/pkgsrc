@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/08/25 22:39:23 dholland Exp $
+# $NetBSD: options.mk,v 1.3 2016/08/02 16:56:32 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeDiameter
 PKG_SUPPORTED_OPTIONS=	freediameter-all-extensions
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=	freediameter-all-extensions
 
 PLIST_VARS+=	ext
 
-.if !empty(PKG_OPTIONS:Mall-extensions)
+.if !empty(PKG_OPTIONS:Mfreediameter-all-extensions)
 # enable all except debugging and test
 #CMAKE_ARGS+=	-DALL_EXTENSIONS:BOOL=ON
 CMAKE_ARGS+=	-DBUILD_APP_ACCT:BOOL=ON
