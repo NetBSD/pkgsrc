@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/05/26 09:22:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/08/02 22:44:02 wiz Exp $
 share/baikal/CHANGELOG.md
 share/baikal/Core/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Core/PDOBasicAuth.php
@@ -863,6 +863,7 @@ share/baikal/vendor/sabre/vobject/lib/ITip/Message.php
 share/baikal/vendor/sabre/vobject/lib/ITip/SameOrganizerForAllComponentsException.php
 share/baikal/vendor/sabre/vobject/lib/InvalidDataException.php
 share/baikal/vendor/sabre/vobject/lib/Node.php
+share/baikal/vendor/sabre/vobject/lib/PHPUnitAssertions.php
 share/baikal/vendor/sabre/vobject/lib/Parameter.php
 share/baikal/vendor/sabre/vobject/lib/ParseException.php
 share/baikal/vendor/sabre/vobject/lib/Parser/Json.php
@@ -945,6 +946,7 @@ share/baikal/vendor/sabre/vobject/tests/VObject/ITip/BrokerNewEventTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/ITip/BrokerProcessMessageTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/ITip/BrokerProcessReplyTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/ITip/BrokerTester.php
+share/baikal/vendor/sabre/vobject/tests/VObject/ITip/BrokerTimezoneInParseEventInfoWithoutMasterTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/ITip/BrokerUpdateEventTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/ITip/EvolutionTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/ITip/MessageTest.php
@@ -999,7 +1001,6 @@ share/baikal/vendor/sabre/vobject/tests/VObject/SlashRTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/Splitter/ICalendarTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/Splitter/VCardTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/StringUtilTest.php
-share/baikal/vendor/sabre/vobject/tests/VObject/TestCase.php
 share/baikal/vendor/sabre/vobject/tests/VObject/TimeZoneUtilTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/UUIDUtilTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/VCard21Test.php
@@ -1009,7 +1010,6 @@ share/baikal/vendor/sabre/vobject/tests/VObject/WriterTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/issue153.vcf
 share/baikal/vendor/sabre/vobject/tests/VObject/issue64.vcf
 share/baikal/vendor/sabre/vobject/tests/bootstrap.php
-share/baikal/vendor/sabre/vobject/tests/phpcs/ruleset.xml
 share/baikal/vendor/sabre/vobject/tests/phpunit.xml
 share/baikal/vendor/sabre/xml/.gitignore
 share/baikal/vendor/sabre/xml/.travis.yml
