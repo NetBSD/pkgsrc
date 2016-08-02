@@ -1,10 +1,12 @@
-$NetBSD: patch-configure,v 1.2 2014/01/05 22:29:47 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2016/08/02 07:20:21 wiz Exp $
 
 Disable c/c++ version check; it fails e.g. with clang emulating gcc.
 Allow more metapost versions than upstream until pkgsrc contains
 a new enough metapost.
 
---- configure.orig	2013-11-24 12:24:16.000000000 +0000
+Ignore result of broken pkg-config version test.
+
+--- configure.orig	2014-03-17 15:29:16.000000000 +0000
 +++ configure
 @@ -5297,7 +5297,7 @@ $as_echo_n "checking $r version... " >&6
  `
@@ -39,3 +41,11 @@ a new enough metapost.
      fi
  
      { $as_echo "$as_me:$LINENO: checking for working metafont mode" >&5
+@@ -10949,7 +10949,6 @@ $as_echo_n "checking $r version... " >&6
+ $as_echo "$ver" >&6; }
+     if test "$num" -lt "$req"; then
+ 
+-    eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 0.9.0 (installed: $ver)"\"`\"
+ 
+     fi
+     vervar="`echo PKG_CONFIG | tr 'a-z' 'A-Z'`_VERSION"
