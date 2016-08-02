@@ -1,8 +1,8 @@
-$NetBSD: patch-tortoisehg_util_paths.py,v 1.1 2014/07/05 15:33:03 wiz Exp $
+$NetBSD: patch-tortoisehg_util_paths.py,v 1.2 2016/08/02 23:33:57 wiz Exp $
 
 * include doc_path in paths
 
---- tortoisehg/util/paths.py.orig	2014-03-05 15:40:47.000000000 +0000
+--- tortoisehg/util/paths.py.orig	2016-08-02 17:08:10.000000000 +0000
 +++ tortoisehg/util/paths.py
 @@ -7,9 +7,9 @@
  
@@ -14,5 +14,5 @@ $NetBSD: patch-tortoisehg_util_paths.py,v 1.1 2014/07/05 15:33:03 wiz Exp $
 -    icon_path, bin_path, license_path, locale_path = None, None, None, None
 +    icon_path, bin_path, license_path, locale_path , doc_path = None, None, None, None, None
  
- import os, sys
+ import os, sys, shlex
  import mercurial
