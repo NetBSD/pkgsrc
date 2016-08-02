@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3177 2016/08/02 18:41:17 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3178 2016/08/02 18:59:01 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4488,3 +4488,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/cmus to 2.7.1 [jperkin 2016-08-02]
 	Updated www/h2o to 2.0.2 [schmonz 2016-08-02]
 	Updated graphics/gd to 2.2.3 [adam 2016-08-02]
+	Updated print/hplip to 3.16.7 [schnoebe 2016-08-02]
