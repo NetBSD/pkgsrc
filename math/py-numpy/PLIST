@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2016/07/24 15:25:22 kamil Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/08/02 10:14:46 jperkin Exp $
 bin/f2py${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/numpy/__config__.py
 ${PYSITELIB}/numpy/__config__.pyc
 ${PYSITELIB}/numpy/__config__.pyo
