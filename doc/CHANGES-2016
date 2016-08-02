@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3183 2016/08/02 23:30:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3184 2016/08/02 23:34:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/php-baikal to 0.4.5 [wiz 2016-08-02]
 	Added devel/py-freezegun version 0.3.7 [wiz 2016-08-02]
 	Updated devel/py-mercurial to 3.9 [wiz 2016-08-02]
+	Updated devel/py-tortoisehg to 3.9 [wiz 2016-08-02]
