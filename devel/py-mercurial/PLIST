@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/05/22 17:17:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/08/02 23:30:29 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -115,9 +115,6 @@ ${PYSITELIB}/hgext/gpg.pyo
 ${PYSITELIB}/hgext/graphlog.py
 ${PYSITELIB}/hgext/graphlog.pyc
 ${PYSITELIB}/hgext/graphlog.pyo
-${PYSITELIB}/hgext/hgcia.py
-${PYSITELIB}/hgext/hgcia.pyc
-${PYSITELIB}/hgext/hgcia.pyo
 ${PYSITELIB}/hgext/hgk.py
 ${PYSITELIB}/hgext/hgk.pyc
 ${PYSITELIB}/hgext/hgk.pyo
@@ -130,6 +127,9 @@ ${PYSITELIB}/hgext/highlight/highlight.pyo
 ${PYSITELIB}/hgext/histedit.py
 ${PYSITELIB}/hgext/histedit.pyc
 ${PYSITELIB}/hgext/histedit.pyo
+${PYSITELIB}/hgext/journal.py
+${PYSITELIB}/hgext/journal.pyc
+${PYSITELIB}/hgext/journal.pyo
 ${PYSITELIB}/hgext/keyword.py
 ${PYSITELIB}/hgext/keyword.pyc
 ${PYSITELIB}/hgext/keyword.pyo
@@ -160,6 +160,9 @@ ${PYSITELIB}/hgext/largefiles/remotestore.pyo
 ${PYSITELIB}/hgext/largefiles/reposetup.py
 ${PYSITELIB}/hgext/largefiles/reposetup.pyc
 ${PYSITELIB}/hgext/largefiles/reposetup.pyo
+${PYSITELIB}/hgext/largefiles/storefactory.py
+${PYSITELIB}/hgext/largefiles/storefactory.pyc
+${PYSITELIB}/hgext/largefiles/storefactory.pyo
 ${PYSITELIB}/hgext/largefiles/uisetup.py
 ${PYSITELIB}/hgext/largefiles/uisetup.pyc
 ${PYSITELIB}/hgext/largefiles/uisetup.pyo
@@ -413,9 +416,6 @@ ${PYSITELIB}/mercurial/httpclient/__init__.pyo
 ${PYSITELIB}/mercurial/httpclient/_readers.py
 ${PYSITELIB}/mercurial/httpclient/_readers.pyc
 ${PYSITELIB}/mercurial/httpclient/_readers.pyo
-${PYSITELIB}/mercurial/httpclient/socketutil.py
-${PYSITELIB}/mercurial/httpclient/socketutil.pyc
-${PYSITELIB}/mercurial/httpclient/socketutil.pyo
 ${PYSITELIB}/mercurial/httpconnection.py
 ${PYSITELIB}/mercurial/httpconnection.pyc
 ${PYSITELIB}/mercurial/httpconnection.pyo
@@ -497,6 +497,9 @@ ${PYSITELIB}/mercurial/peer.pyo
 ${PYSITELIB}/mercurial/phases.py
 ${PYSITELIB}/mercurial/phases.pyc
 ${PYSITELIB}/mercurial/phases.pyo
+${PYSITELIB}/mercurial/policy.py
+${PYSITELIB}/mercurial/policy.pyc
+${PYSITELIB}/mercurial/policy.pyo
 ${PYSITELIB}/mercurial/posix.py
 ${PYSITELIB}/mercurial/posix.pyc
 ${PYSITELIB}/mercurial/posix.pyo
