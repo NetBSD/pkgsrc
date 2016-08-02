@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/03/08 15:17:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/08/02 23:33:57 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -85,6 +85,9 @@ ${PYSITELIB}/tortoisehg/hgqt/graft.pyo
 ${PYSITELIB}/tortoisehg/hgqt/graph.py
 ${PYSITELIB}/tortoisehg/hgqt/graph.pyc
 ${PYSITELIB}/tortoisehg/hgqt/graph.pyo
+${PYSITELIB}/tortoisehg/hgqt/graphopt.py
+${PYSITELIB}/tortoisehg/hgqt/graphopt.pyc
+${PYSITELIB}/tortoisehg/hgqt/graphopt.pyo
 ${PYSITELIB}/tortoisehg/hgqt/grep.py
 ${PYSITELIB}/tortoisehg/hgqt/grep.pyc
 ${PYSITELIB}/tortoisehg/hgqt/grep.pyo
