@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/08/01 10:51:30 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/08/02 23:24:39 wiz Exp $
 
 DISTNAME=	lxml-3.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,3 +23,5 @@ BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.7.8
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.26
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+# needed for "make test" with python-3.x -- fixes first two errors noted above
+#MAKE_ENV+=     LC_ALL=en_US.UTF-8
