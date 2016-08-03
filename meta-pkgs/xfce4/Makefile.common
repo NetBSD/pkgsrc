@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.60 2016/06/09 09:50:27 youri Exp $
+# $NetBSD: Makefile.common,v 1.61 2016/08/03 10:59:00 adam Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
-# used by audio/xfce4-pulseaudio-plugin/Makefile
 # used by audio/xfce4-xmms-plugin/Makefile
 # used by devel/xfce4-conf/Makefile
 # used by devel/xfce4-dev-tools/Makefile
@@ -26,7 +25,6 @@
 # used by sysutils/xfce4-gvfs-mount-plugin/Makefile
 # used by sysutils/xfce4-mount-plugin/Makefile
 # used by sysutils/xfce4-netload-plugin/Makefile
-# used by sysutils/xfce4-power-manager/Makefile
 # used by sysutils/xfce4-quicklauncher-plugin/Makefile
 # used by sysutils/xfce4-systemload-plugin/Makefile
 # used by sysutils/xfce4-taskmanager/Makefile
@@ -38,7 +36,6 @@
 # used by textproc/xfce4-dict/Makefile
 # used by time/xfce4-datetime-plugin/Makefile
 # used by time/xfce4-orage/Makefile
-# used by time/xfce4-stopwatch-plugin/Makefile
 # used by time/xfce4-timer-plugin/Makefile
 # used by wm/xfce4-wm-themes/Makefile
 # used by wm/xfce4-wm/Makefile
