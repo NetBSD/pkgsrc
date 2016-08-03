@@ -1,9 +1,8 @@
-$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.9 2015/11/17 12:12:11 wiz Exp $
+$NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.10 2016/08/03 15:53:38 prlw1 Exp $
 
 * Add more conditional handling for NetBSD, same as others.
 * Treat FreeBSD and DragonFly the same way as NetBSD and OpenBSD.
 * Treat Solaris same as Linux.
-* Use correct cmake define.
 
 --- Source/kwsys/SystemInformation.cxx.orig	2015-11-12 15:39:51.000000000 +0000
 +++ Source/kwsys/SystemInformation.cxx
@@ -49,12 +48,3 @@ $NetBSD: patch-Source_kwsys_SystemInformation.cxx,v 1.9 2015/11/17 12:12:11 wiz 
  # include <fenv.h>
  # include <sys/socket.h>
  # include <netdb.h>
-@@ -4741,7 +4745,7 @@ bool SystemInformationImplementation::Qu
-   // a 32 bit process on a 64 bit host the returned memory will be
-   // limited to 4GiB. So if this is a 32 bit process or if the sysconf
-   // method fails use the kstat interface.
--#if SIZEOF_VOID_P == 8
-+#if CMAKE_SIZEOF_VOID_P == 8
-   if (this->QueryMemoryBySysconf())
-     {
-     return true;
