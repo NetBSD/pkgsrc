@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/05/21 18:56:08 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/03 10:22:54 adam Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-themes-3.20.5

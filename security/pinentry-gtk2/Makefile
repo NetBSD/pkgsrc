@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2015/09/30 19:56:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/08/03 10:23:21 adam Exp $
 
 PKGNAME=		${DISTNAME:S/pinentry-/pinentry-gtk2-/}
+PKGREVISION=		1
 COMMENT=		Applications for entering PINs or Passphrases, gtk2 enabled
 
 .include		"../../security/pinentry/Makefile.common"

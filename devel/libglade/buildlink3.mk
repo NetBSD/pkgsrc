@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2015/04/25 14:20:36 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2016/08/03 10:22:10 adam Exp $
 
 BUILDLINK_TREE+=	libglade
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libglade
 LIBGLADE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.3.6
-BUILDLINK_ABI_DEPENDS.libglade+=	libglade>=2.6.4nb22
+BUILDLINK_ABI_DEPENDS.libglade+=	libglade>=2.6.4nb23
 BUILDLINK_PKGSRCDIR.libglade?=	../../devel/libglade
 
 .include "../../textproc/libxml2/buildlink3.mk"
