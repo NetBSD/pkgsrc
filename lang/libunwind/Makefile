@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/03/28 12:56:03 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/03 09:06:44 wiz Exp $
 
-DISTNAME=	libunwind-3.8.0.src
+DISTNAME=	libunwind-3.8.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
