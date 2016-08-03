@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.55 2016/08/03 10:22:55 adam Exp $
+# $NetBSD: Makefile,v 1.56 2016/08/03 23:41:48 kamil Exp $
 
 
-VERSION=		1.3.1
+VERSION=		1.5.2
 DISTNAME=		matplotlib-${VERSION}
 PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-${VERSION}
-PKGREVISION=		3
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
 GITHUB_PROJECT=		matplotlib
-# with Githubify, size changes little bit, so the following line, please delete for another update.
-DIST_SUBDIR=		matplotlib-1.3.1
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matplotlib.sourceforge.net/
@@ -36,6 +34,17 @@ post-patch:
 
 post-install:
 	${RM} -r ${DESTDIR}/${PREFIX}/${PYSITELIB}/${EGG_INFODIR}
+
+# It needs:
+# devel/py-cycler
+# devel/py-nose
+# devel/py-mock
+do-test:
+	${ECHO} "backend      : GTKAgg" > ${WRKSRC}/matplotlibrc
+	${RUN} cd ${WRKSRC} && MPLCONFIGDIR=$PWD \
+	MATPLOTLIBDATA=${WRKSRC}/lib/matplotlib/mpl-data \
+	PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
+	${PYTHONBIN} -c "import matplotlib; matplotlib.test()"
 
 .include "../../lang/python/egg.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
