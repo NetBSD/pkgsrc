@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/08/25 13:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/03 10:22:14 adam Exp $
 
 DISTNAME=	gegl-0.2.0
-PKGREVISION=	19
+PKGREVISION=	20
 CATEGORIES=	graphics
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2
