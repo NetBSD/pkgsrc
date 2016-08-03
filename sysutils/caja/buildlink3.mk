@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/05/22 13:01:45 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/08/03 10:22:18 adam Exp $
 #
 
 BUILDLINK_TREE+=	caja
@@ -7,6 +7,7 @@ BUILDLINK_TREE+=	caja
 CAJA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.caja+=	caja>=1.8.2
+BUILDLINK_ABI_DEPENDS.caja?=	caja>=1.14.1nb1
 BUILDLINK_PKGSRCDIR.caja?=	../../sysutils/caja
 
 .include "../../x11/mate-desktop/buildlink3.mk"
