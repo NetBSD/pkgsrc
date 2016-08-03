@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3193 2016/08/03 15:03:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3194 2016/08/03 15:34:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4504,3 +4504,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/groff to 1.22.3nb4 [leot 2016-08-03]
 	Updated sysutils/logrotate to 3.10.0 [nils 2016-08-03]
 	Updated lang/guile to 1.8.8nb8 [wiz 2016-08-03]
+	Removed www/php-zendopcache [taca 2016-08-03]
