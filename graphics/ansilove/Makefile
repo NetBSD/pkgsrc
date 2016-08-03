@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/07/26 17:40:39 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/03 10:22:49 adam Exp $
 
 DISTNAME=	ansilove-3.0.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
 

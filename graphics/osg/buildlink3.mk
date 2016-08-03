@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2016/03/05 11:27:49 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2016/08/03 10:22:15 adam Exp $
 
 BUILDLINK_TREE+=	osg
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	osg
 OSG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.osg+=	osg>=2.8.3
-BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.0.1nb40
+BUILDLINK_ABI_DEPENDS.osg+=	osg>=3.0.1nb42
 BUILDLINK_PKGSRCDIR.osg?=	../../graphics/osg
 
 .include "../../graphics/cairo/buildlink3.mk"
