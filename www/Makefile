@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1183 2016/07/26 09:27:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.1184 2016/08/03 15:32:00 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -564,7 +564,6 @@ SUBDIR+=	php-tiki6
 SUBDIR+=	php-tt-rss
 SUBDIR+=	php-tt-rss-fever-plugin
 SUBDIR+=	php-uploadprogress
-SUBDIR+=	php-zendopcache
 SUBDIR+=	phraseanet
 SUBDIR+=	phraseanet-indexer
 SUBDIR+=	pound
