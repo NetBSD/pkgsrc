@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3187 2016/08/03 08:58:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3188 2016/08/03 09:02:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4498,3 +4498,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/dmidecode to 3.0 [msaitoh 2016-08-03]
 	Updated print/mupdf to 1.9anb3 [leot 2016-08-03]
 	Updated www/curl to 7.50.1 [wiz 2016-08-03]
+	Updated archivers/p5-Archive-Zip to 1.58 [wiz 2016-08-03]
