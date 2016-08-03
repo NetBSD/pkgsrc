@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3185 2016/08/03 04:20:44 msaitoh Exp $
+$NetBSD: CHANGES-2016,v 1.3186 2016/08/03 08:50:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4496,3 +4496,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mercurial to 3.9 [wiz 2016-08-02]
 	Updated devel/py-tortoisehg to 3.9 [wiz 2016-08-02]
 	Updated sysutils/dmidecode to 3.0 [msaitoh 2016-08-03]
+	Updated print/mupdf to 1.9anb3 [leot 2016-08-03]
