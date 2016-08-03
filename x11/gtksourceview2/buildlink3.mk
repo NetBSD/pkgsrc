@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2015/04/25 14:25:07 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2016/08/03 10:22:22 adam Exp $
 
 BUILDLINK_TREE+=	gtksourceview2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtksourceview2
 GTKSOURCEVIEW2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtksourceview2+=	gtksourceview2>=2.0.2<3
-BUILDLINK_ABI_DEPENDS.gtksourceview2+=	gtksourceview2>=2.10.5nb23
+BUILDLINK_ABI_DEPENDS.gtksourceview2+=	gtksourceview2>=2.10.5nb26
 BUILDLINK_PKGSRCDIR.gtksourceview2?=	../../x11/gtksourceview2
 
 .include "../../devel/gettext-lib/buildlink3.mk"

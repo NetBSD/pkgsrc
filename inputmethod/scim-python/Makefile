@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2016/07/09 13:03:53 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/08/03 10:23:02 adam Exp $
 
 DISTNAME=	scim-python-0.1.13rc1
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	inputmethod python
 MASTER_SITES=	http://scim-python.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
