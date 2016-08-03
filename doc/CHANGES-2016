@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3190 2016/08/03 09:06:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3191 2016/08/03 10:31:45 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4501,3 +4501,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p5-Archive-Zip to 1.58 [wiz 2016-08-03]
 	Updated security/p5-Net-SSLeay to 1.77 [wiz 2016-08-03]
 	Updated lang/libunwind to 3.8.1 [wiz 2016-08-03]
+	Updated textproc/groff to 1.22.3nb4 [leot 2016-08-03]
