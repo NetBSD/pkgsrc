@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3194 2016/08/03 15:34:01 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3195 2016/08/03 23:25:25 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4505,3 +4505,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/logrotate to 3.10.0 [nils 2016-08-03]
 	Updated lang/guile to 1.8.8nb8 [wiz 2016-08-03]
 	Removed www/php-zendopcache [taca 2016-08-03]
+	Updated graphics/py-matplotlib-tk to 1.5.2 [kamil 2016-08-03]
