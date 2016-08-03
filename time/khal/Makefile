@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/28 14:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/08/03 20:13:19 wiz Exp $
 
 DISTNAME=		khal-0.8.2
 CATEGORIES=		time net
@@ -22,8 +22,9 @@ DEPENDS+=		${PYPKGPREFIX}-vdirsyncer>=0.5.2:../../time/py-vdirsyncer
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 # not needed, but recommended, so let's just depend on it
 DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
-# test dependency, not packaged yet
-# freezegun
+# TEST_DEPENDS
+BUILD_DEPENDS+=		${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
+BUILD_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported as of 0.8.0
 
@@ -35,6 +36,9 @@ REPLACE_PYTHON+=	khal/*.py
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal
+
+do-test:
+	cd ${WRKSRC} && py.test-${PYVERSSUFFIX} tests
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
