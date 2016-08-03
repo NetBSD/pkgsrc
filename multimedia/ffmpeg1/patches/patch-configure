@@ -1,8 +1,17 @@
-$NetBSD: patch-configure,v 1.1 2014/08/11 23:01:50 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2016/08/03 12:07:17 maya Exp $
 
---- configure.orig	2013-07-27 23:49:20.000000000 +0000
+--- configure.orig	2015-02-12 14:38:15.000000000 +0000
 +++ configure
-@@ -3225,6 +3225,11 @@ case $target_os in
+@@ -2922,7 +2922,7 @@ case "$arch" in
+     sh4|sh)
+         arch="sh4"
+     ;;
+-    sun4u|sparc*)
++    sun4*|sparc*)
+         arch="sparc"
+     ;;
+     tilegx|tile-gx)
+@@ -3247,6 +3247,11 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -14,7 +23,7 @@ $NetBSD: patch-configure,v 1.1 2014/08/11 23:01:50 wiz Exp $
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -3555,10 +3560,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -3577,10 +3582,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -31,7 +40,7 @@ $NetBSD: patch-configure,v 1.1 2014/08/11 23:01:50 wiz Exp $
  
  if enabled alpha; then
  
-@@ -4092,6 +4100,7 @@ enabled xmm_clobber_test &&
+@@ -4115,6 +4123,7 @@ enabled xmm_clobber_test &&
                    -Wl,--wrap,sws_scale ||
      disable xmm_clobber_test
  
@@ -39,7 +48,7 @@ $NetBSD: patch-configure,v 1.1 2014/08/11 23:01:50 wiz Exp $
  echo "X{};" > $TMPV
  if test_ldflags -Wl,--version-script,$TMPV; then
      append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
-@@ -4104,6 +4113,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+@@ -4127,6 +4136,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
  void ff_foo(void) {}
  EOF
  fi
@@ -47,7 +56,7 @@ $NetBSD: patch-configure,v 1.1 2014/08/11 23:01:50 wiz Exp $
  
  if [ -z "$optflags" ]; then
      if enabled small; then
-@@ -4560,7 +4570,7 @@ Version: $version
+@@ -4583,7 +4593,7 @@ Version: $version
  Requires: $(enabled shared || echo $requires)
  Requires.private: $(enabled shared && echo $requires)
  Conflicts:
