@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/08/03 10:23:37 adam Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"

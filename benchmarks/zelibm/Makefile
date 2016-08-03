@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2015/11/18 14:19:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/03 10:22:32 adam Exp $
 #
 
 DISTNAME=		zelibm
 PKGNAME=		zelibm-0
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://people.redhat.com/drepper/libm/
 

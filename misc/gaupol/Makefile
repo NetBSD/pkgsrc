@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2016/02/07 17:51:35 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/08/03 10:23:08 adam Exp $
 
 DISTNAME=	gaupol-0.28.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.gna.org/gaupol/0.28/
 EXTRACT_SUFX=	.tar.xz

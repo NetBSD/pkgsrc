@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2015/12/06 15:34:15 mef Exp $
+# $NetBSD: Makefile,v 1.58 2016/08/03 10:22:58 adam Exp $
 
 PKGNAME=	gnuradio-wxgui-${VERSION}
+PKGREVISION=	1
 COMMENT=	WxGTK Toolkit module of GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"

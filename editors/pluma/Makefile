@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/05/21 19:21:10 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/03 10:22:42 adam Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	pluma-${MATE_VERSION}

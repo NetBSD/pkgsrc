@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/06/11 23:01:59 youri Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/03 10:23:36 adam Exp $
 
 DISTNAME=	lxlauncher-0.2.5
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.xz

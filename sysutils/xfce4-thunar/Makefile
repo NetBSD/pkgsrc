@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2016/03/13 03:45:53 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2016/08/03 10:22:19 adam Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 VERSION=	1.6.10
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	Thunar-${VERSION}
 PKGNAME=	xfce4-thunar-${VERSION}
 CATEGORIES=	sysutils

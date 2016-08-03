@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/06/05 00:46:25 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/08/03 10:22:08 adam Exp $
 
 BUILDLINK_TREE+=	suil
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	suil
 SUIL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.suil+=	suil>=0.8.2
+BUILDLINK_ABI_DEPENDS.suil?=	suil>=0.8.2nb1
 BUILDLINK_PKGSRCDIR.suil?=	../../audio/suil
 
 .include "../../audio/lv2/buildlink3.mk"

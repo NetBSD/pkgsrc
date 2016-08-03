@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2015/05/27 14:49:33 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2016/08/03 10:22:20 adam Exp $
 
 BUILDLINK_TREE+=	openbox
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openbox
 OPENBOX_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openbox+=	openbox>=3.5
-BUILDLINK_ABI_DEPENDS.openbox?=	openbox>=3.5.2nb3
+BUILDLINK_ABI_DEPENDS.openbox?=	openbox>=3.6.1nb1
 BUILDLINK_PKGSRCDIR.openbox?=	../../wm/openbox
 
 pkgbase := openbox

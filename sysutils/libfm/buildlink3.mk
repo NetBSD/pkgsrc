@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/05/22 22:10:03 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/08/03 10:22:18 adam Exp $
 
 BUILDLINK_TREE+=	libfm
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libfm
 LIBFM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfm+=	libfm>=1.2.3
+BUILDLINK_ABI_DEPENDS.libfm?=	libfm>=1.2.4nb1
 BUILDLINK_PKGSRCDIR.libfm?=	../../sysutils/libfm
 
 .include "../../x11/gtk2/buildlink3.mk"
