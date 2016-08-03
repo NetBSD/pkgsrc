@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 05:47:58 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/03 15:30:35 taca Exp $
 
 MODNAME=	zendopcache
 PKGMODNAME=	opcache
@@ -6,7 +6,7 @@ CATEGORIES+=	www
 PECL_VERSION=	7.0.5
 PECL_LEGACY_VERSION_SCHEME=	yes
 
-HOMEPAGE=	https://github.com/zend-dev/ZendOptimizerPlus
+HOMEPAGE=	https://github.com/zendtech/ZendOptimizerPlus
 MAINTAINER=	imil@NetBSD.org
 COMMENT=	Zend opcode cache and optimizer for PHP
 LICENSE=	php
