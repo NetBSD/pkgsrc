@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2016/07/09 06:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2016/08/03 10:22:17 adam Exp $
 
 DISTNAME=		gnome-media-2.28.5
-PKGREVISION=		36
+PKGREVISION=		37
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.28/}
 EXTRACT_SUFX=		.tar.bz2
