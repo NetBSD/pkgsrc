@@ -1,7 +1,16 @@
-$NetBSD: patch-configure,v 1.9 2016/01/16 17:04:33 leot Exp $
+$NetBSD: patch-configure,v 1.10 2016/08/03 12:06:47 maya Exp $
 
---- configure.orig	2016-01-15 16:59:29.000000000 +0000
+--- configure.orig	2016-04-29 12:08:16.000000000 +0000
 +++ configure
+@@ -3867,7 +3867,7 @@ case "$arch" in
+     sh4|sh)
+         arch="sh4"
+     ;;
+-    sun4u|sparc*)
++    sun4*|sparc*)
+         arch="sparc"
+     ;;
+     tilegx|tile-gx)
 @@ -4300,6 +4300,11 @@ case $target_os in
          ;;
      netbsd)
