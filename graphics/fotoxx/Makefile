@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2016/02/24 17:39:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2016/08/03 10:22:51 adam Exp $
 #
 
 DISTNAME=	fotoxx-16.02.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.kornelix.com/downloads/tarballs/
 
