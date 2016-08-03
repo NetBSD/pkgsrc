@@ -1,4 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/07/26 12:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/03 09:07:39 wiz Exp $
+#
+# when updating this, please also update:
+# devel/libunwind
+# devel/lldb
+# lang/clang
+# lang/libLLVM
 
 DISTNAME=	llvm-3.8.1.src
 PKGNAME=	${DISTNAME:S/.src//}
