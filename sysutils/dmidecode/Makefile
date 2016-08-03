@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2016/04/18 15:29:38 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/03 04:18:33 msaitoh Exp $
 #
 
-DISTNAME=	dmidecode-2.12
+DISTNAME=	dmidecode-3.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://savannah.gnu.org/download/dmidecode/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/dmidecode/
 
-MAINTAINER=	shattered@NetBSD.org
+MAINTAINER=	msaitoh@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/dmidecode/
 COMMENT=	Print out DMI (SMBIOS) table in human-readable format
 LICENSE=	gnu-gpl-v2
