@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2013/10/18 15:53:27 roy Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2016/08/03 15:03:03 wiz Exp $
 
 BUILDLINK_TREE+=	guile
 
@@ -8,6 +8,13 @@ GUILE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.guile+=	guile>=1.8.1
 BUILDLINK_ABI_DEPENDS.guile+=	guile>=1.8.7nb2
 BUILDLINK_PKGSRCDIR.guile?=	../../lang/guile
+
+BUILDLINK_PASSTHRU_DIRS=		${LOCALBASE}/guile/1.8
+BUILDLINK_FILES.guile+=			guile/1.8/bin/*
+BUILDLINK_FNAME_TRANSFORM.guile+=	-e s,guile/1.8/bin,bin,
+BUILDLINK_FNAME_TRANSFORM.guile+=	-e s,guile/1.8/lib/pkgconfig,lib/pkgconfig,
+
+GUILE_SUBDIR=				guile/1.8
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
