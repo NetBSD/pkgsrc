@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.42 2016/03/05 11:28:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2016/08/03 10:22:42 adam Exp $
 #
 
 DISTNAME=	notecase-1.8.8_src
 PKGNAME=	notecase-1.8.8
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=notecase/}
 

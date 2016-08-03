@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/06/18 21:49:05 youri Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/03 10:22:23 adam Exp $
 
 PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-panel-1.14.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 COMMENT=	MATE panel application

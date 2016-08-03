@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/04/25 14:20:20 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/03 10:22:29 adam Exp $
 
 DISTNAME=	gmpc-tagedit-11.8.16
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://download.sarine.nl/Programs/gmpc/11.8/
 

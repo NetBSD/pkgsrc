@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/03 10:22:55 adam Exp $
 
 DISTNAME=	v0.58
 PKGNAME=	${PYPKGPREFIX}-gdmodule-${DISTNAME:S/v//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	https://github.com/Solomoriah/gdmodule/archive/
 
