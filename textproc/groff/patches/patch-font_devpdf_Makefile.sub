@@ -1,0 +1,19 @@
+$NetBSD: patch-font_devpdf_Makefile.sub,v 1.1 2016/08/03 10:31:28 leot Exp $
+
+Solaris find(1) doesn't have -maxdepth. Adapt new logic from upstream that
+avoid to use find for that (this will not needed for future groff version).
+pkg/51332
+
+--- font/devpdf/Makefile.sub.orig	2014-11-04 08:38:35.427521472 +0000
++++ font/devpdf/Makefile.sub
+@@ -21,9 +21,7 @@
+ # along with this program. If not, see <http://www.gnu.org/licenses/>.
+ 
+ DEV=pdf
+-GROFF_FONT_FILES=`cd $(top_builddir)/font/devpdf \
+-                  && find * -maxdepth 0 -type f ! -name 'Makefile.sub*' \
+-                            -exec grep -l internalname {} \;`
++GROFF_FONT_FILES=`cd $(top_builddir)/font/devpdf && grep -l internalname * | grep -v Makefile.sub`
+ ENC_FILES=`cd $(top_builddir)/font/devpdf; ls enc/*`
+ MAP_FILES=`cd $(top_builddir)/font/devpdf; ls map/*`
+ 
