@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3199 2016/08/04 10:24:41 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3200 2016/08/04 13:17:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4514,3 +4514,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql55-server to 5.5.51 [adam 2016-08-04]
 	Updated databases/mysql56-client to 5.6.32 [adam 2016-08-04]
 	Updated databases/mysql56-server to 5.6.32 [adam 2016-08-04]
+	Updated security/opensc to 0.16.0 [mef 2016-08-04]
