@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/04 13:43:22 abs Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/04 19:28:03 gdt Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -13,7 +13,7 @@
 # Note that the android versioning is disconnected from syncthing versioning;
 # see https://github.com/syncthing/syncthing-android/issues/652 for
 # a fuller explanation.
-DISTNAME=	syncthing-0.13.10
+DISTNAME=	syncthing-0.14.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 
@@ -36,8 +36,31 @@ NO_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin
 
-MAKE_ENV+=		GOPATH=${WRKDIR}/gopath
-INSTALL_UNSTRIPPED=	yes	# XXX for Mac OS?
+# Go has very strong notions of how building is supposed to work, and
+# paths.  Until 0.14, syncthing had symlink workarounds to have
+# sources be found via a gopath directory.  Then, building failed
+# because the sources are not a subdirectory of a component of GOPATH..
+# See the following discussion for some hints.
+# http://stackoverflow.com/questions/18149601/go-install-always-fails-no-install-directory-outside-gopath#18164310
+
+# Upstream's build instructions say to place tarball contents under a
+# particular named subdirectory of gopath:
+# https://docs.syncthing.net/dev/building.html
+# We attempt to follow their instructions as closely as possible.
+
+# We set up a gopath directory, and a directory where we will place
+# the tarball contents.  We use the non-standard variable name
+# WRKPLACE so that we can let WRKSRC refer to where pkgsrc naturally
+# unpacked the tarball.
+GOPATH=			${WRKDIR}/gopath
+WRKPLACEP=		${GOPATH}/src/github.com/syncthing
+WRKPLACE=		${WRKPLACEP}/syncthing
+
+MAKE_ENV+=		GOPATH=${GOPATH}
+
+# This used to be set; there seems to be no reason any longer.  To be
+# pruned on 2016-11-04.
+# INSTALL_UNSTRIPPED= yes
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-build
@@ -46,19 +69,20 @@ SUBST_FILES.version=	build.go
 SUBST_SED.version=	-e 's|runError("git", "describe", "--always", "--dirty")|runError("echo","v${PKGVERSION_NOREV}")|'
 SUBST_SED.version+=	-e 's|runError("git", "show", "-s", "--format=%ct")|runError("false")|'
 
-# The following is more complicated than the build documenation says,
-# but appears necessary to link in both syncthing sources and the
-# included sources.
+# Create WRKPLACE's parent, but not WRKPLACE.  Move the contents of
+# the distribution tarball to the directory name desired by upstream's
+# build instructions.  Make a symlink so that the rest of the pkgsrc
+# machinery that expects ${WRKSRC} to contain the tarball contents
+# works.
 post-extract:
-	${MKDIR} ${WRKDIR}/gopath/src/github.com/syncthing
-	${MKDIR} ${WRKDIR}/gopath/src/golang.org
-	${LN} -s ${WRKSRC} ${WRKDIR}/gopath/src/github.com/syncthing/syncthing
-	${LN} -s ${WRKSRC}/vendor/github.com/* ${WRKDIR}/gopath/src/github.com
-	${LN} -s ${WRKSRC}/vendor/golang.org/* ${WRKDIR}/gopath/src/golang.org
+	${MKDIR} ${GOPATH}/src/github.com/syncthing/
+	${MV} ${WRKSRC} ${WRKPLACE}
+	${LN} -s ${WRKPLACE} ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go
 
+# Binaries other than syncthing proper should perhaps be installed.
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/syncthing ${DESTDIR}/${PREFIX}/bin
 
