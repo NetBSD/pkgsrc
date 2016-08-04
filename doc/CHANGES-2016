@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3204 2016/08/04 16:05:31 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.3205 2016/08/04 16:46:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4518,3 +4518,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/php71 version 7.1.0beta1 [jdolecek 2016-08-04]
 	Added math/php-stats version 2.0.3 [jdolecek 2016-08-04]
 	Added databases/php-mongodb version 1.1.8 [jdolecek 2016-08-04]
+	Updated audio/pulseaudio to 9.0 [ryoon 2016-08-04]
