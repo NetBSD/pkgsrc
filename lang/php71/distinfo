@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+
+SHA1 (php-7.1.0beta1.tar.bz2) = 134df472aa88f7f5089645485277f3a55f3320b8
+RMD160 (php-7.1.0beta1.tar.bz2) = a699275c1ff60182c36462f67c94091af285c9f1
+SHA512 (php-7.1.0beta1.tar.bz2) = 459e0ae6db88968f67168b8d6ebae1a4bc4cc03ee7ff7872bbdc065c10e8aeb139d56da3099f7918a18fee6c64231c3e8797f4bfd7b7e575e7372fc8fa540cd5
+Size (php-7.1.0beta1.tar.bz2) = 15129827 bytes
+SHA1 (patch-acinclude.m4) = b682280fd89950c082c2226bdb7364b0dc475bad
+SHA1 (patch-configure) = a129e19ef87338f6e53ccc967c40ddcde7c7357c
+SHA1 (patch-ext_gd_config.m4) = a7ec1bd0d876657d4b5e597b9aa1e97c2d2801e3
+SHA1 (patch-ext_imap_config.m4) = f4e10ab81697b72019313f63bc630627a08efd92
+SHA1 (patch-ext_pcre_pcrelib_config.h) = 0cb05c3b3bfafd8119cf43162c0f4db7f5b37ba8
+SHA1 (patch-ext_pdo__mysql_config.m4) = b1ef91be5a729040197e9af50da0f5fd1f6c90a8
+SHA1 (patch-ext_pdo_config.m4) = 522281775cc0e70a135b1f813158988ef1f3e244
+SHA1 (patch-ext_phar_Makefile.frag) = 558869b60f8ed6674a3ba1d595a65f010df4c426
+SHA1 (patch-ext_phar_phar_phar.php) = f630e3946b21b76d4fe857a43e00e25c9445f2c8
+SHA1 (patch-ext_recode_recode.c) = a97a1815d6a41410f68c289debbb9396128a2159
+SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = 8a529a1b3f7c97731f2e719d006f67c3a7259bb5
+SHA1 (patch-ext_standard_basic__functions.c) = f97a2748c7b15fbd9a2d3c21e56079088cc05d56
+SHA1 (patch-ext_standard_php__dns.h) = 3687ceac4dff4605263b53acb761b071f7446ccb
+SHA1 (patch-makedist) = 2ac0e0391c031c4fcf4993e2269cde4c6bfddfd5
+SHA1 (patch-php.ini-development) = dd65962000ec06439fae3c9bf252fa46be4e33fd
+SHA1 (patch-php.ini-production) = ae61dffedf574b688fe576b0b2af748b7a28cd89
+SHA1 (patch-run-tests.php) = 86c4d3f03eb8e31b5a35820f426533c9478571fb
+SHA1 (patch-sapi_cgi_Makefile.frag) = 18769900f588ff81cc34474542afa1d65c070e65
+SHA1 (patch-sapi_cli_Makefile.frag) = 1cd29d09042863acbf5330e406410fdcf75d06b3
+SHA1 (patch-sapi_fpm_fpm_events_port.c) = 0f10fdb32fb7cab58e2abda49fb1fc658c410150
+SHA1 (patch-sapi_fpm_php-fpm.conf.in) = b3c4fd499cbfd2dffd9176abb54e298ea542a5d7
