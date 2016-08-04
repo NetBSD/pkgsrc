@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/06/15 11:30:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/08/04 10:09:08 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1303,6 +1303,7 @@ share/mysql/test/r/mysql.result
 share/mysql/test/r/mysql_binary_mode.result
 share/mysql/test/r/mysql_client_test.result
 share/mysql/test/r/mysql_client_test_embedded.result
+share/mysql/test/r/mysql_client_test_qcache.result
 share/mysql/test/r/mysql_comments.result
 share/mysql/test/r/mysql_config_editor.result
 share/mysql/test/r/mysql_cp932.result
@@ -1730,6 +1731,7 @@ share/mysql/test/std_data/bug17532932.frm
 share/mysql/test/std_data/bug19371.MYD
 share/mysql/test/std_data/bug19371.MYI
 share/mysql/test/std_data/bug19371.frm
+share/mysql/test/std_data/bug20683959loaddata.txt
 share/mysql/test/std_data/bug30435_10k_items.txt
 share/mysql/test/std_data/bug30435_5k.txt
 share/mysql/test/std_data/bug33029-slave-relay-bin.000001
@@ -1931,6 +1933,7 @@ share/mysql/test/suite/binlog/r/binlog_checksum.result
 share/mysql/test/suite/binlog/r/binlog_crash_safe_master_checksum.result
 share/mysql/test/suite/binlog/r/binlog_database.result
 share/mysql/test/suite/binlog/r/binlog_delete_and_flush_index.result
+share/mysql/test/suite/binlog/r/binlog_dmls_on_tmp_tables_readonly.result
 share/mysql/test/suite/binlog/r/binlog_drop_if_exists.result
 share/mysql/test/suite/binlog/r/binlog_enforce_gtid_consistency.result
 share/mysql/test/suite/binlog/r/binlog_error_action.result
@@ -2044,6 +2047,7 @@ share/mysql/test/suite/binlog/t/binlog_crash_safe_master_checksum-master.opt
 share/mysql/test/suite/binlog/t/binlog_crash_safe_master_checksum.test
 share/mysql/test/suite/binlog/t/binlog_database.test
 share/mysql/test/suite/binlog/t/binlog_delete_and_flush_index.test
+share/mysql/test/suite/binlog/t/binlog_dmls_on_tmp_tables_readonly.test
 share/mysql/test/suite/binlog/t/binlog_drop_if_exists.test
 share/mysql/test/suite/binlog/t/binlog_enforce_gtid_consistency.test
 share/mysql/test/suite/binlog/t/binlog_error_action-master.opt
@@ -6276,6 +6280,7 @@ share/mysql/test/suite/rpl/r/rpl_auto_increment_bug33029.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_bug45679.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_update_failure.result
 share/mysql/test/suite/rpl/r/rpl_autogen_query_multi_byte_char.result
+share/mysql/test/suite/rpl/r/rpl_autoinc_lock_style.result
 share/mysql/test/suite/rpl/r/rpl_avoid_temporal_upgrade.result
 share/mysql/test/suite/rpl/r/rpl_begin_commit_rollback.result
 share/mysql/test/suite/rpl/r/rpl_binlog_corruption.result
@@ -6388,7 +6393,6 @@ share/mysql/test/suite/rpl/r/rpl_gtid_server_sighup.result
 share/mysql/test/suite/rpl/r/rpl_gtid_sql_until_before_after.result
 share/mysql/test/suite/rpl/r/rpl_gtid_stm_insert_delayed.result
 share/mysql/test/suite/rpl/r/rpl_gtid_stm_mix_show_relaylog_events.result
-share/mysql/test/suite/rpl/r/rpl_gtid_stress_failover.result
 share/mysql/test/suite/rpl/r/rpl_gtid_temp_table.result
 share/mysql/test/suite/rpl/r/rpl_gtid_transaction_split_across_relay_logs.result
 share/mysql/test/suite/rpl/r/rpl_gtid_validate_slave_gtids.result
@@ -6590,6 +6594,7 @@ share/mysql/test/suite/rpl/r/rpl_row_record_find_myisam.result
 share/mysql/test/suite/rpl/r/rpl_row_reset_slave.result
 share/mysql/test/suite/rpl/r/rpl_row_rollback_to_savepoint.result
 share/mysql/test/suite/rpl/r/rpl_row_show_relaylog_events.result
+share/mysql/test/suite/rpl/r/rpl_row_slave_skip_error_all.result
 share/mysql/test/suite/rpl/r/rpl_row_sp001.result
 share/mysql/test/suite/rpl/r/rpl_row_sp002_innodb.result
 share/mysql/test/suite/rpl/r/rpl_row_sp003.result
@@ -6728,6 +6733,7 @@ share/mysql/test/suite/rpl/r/rpl_variables.result
 share/mysql/test/suite/rpl/r/rpl_variables_stm.result
 share/mysql/test/suite/rpl/r/rpl_view.result
 share/mysql/test/suite/rpl/r/rpl_view_multi.result
+share/mysql/test/suite/rpl/r/rpl_zombie_dump_threads.result
 share/mysql/test/suite/rpl/rpl_1slave_base.cnf
 share/mysql/test/suite/rpl/t/disabled.def
 share/mysql/test/suite/rpl/t/rpl_000010-slave.opt
@@ -6752,6 +6758,7 @@ share/mysql/test/suite/rpl/t/rpl_auto_increment_bug33029.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_bug45679.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_update_failure.test
 share/mysql/test/suite/rpl/t/rpl_autogen_query_multi_byte_char.test
+share/mysql/test/suite/rpl/t/rpl_autoinc_lock_style.test
 share/mysql/test/suite/rpl/t/rpl_avoid_temporal_upgrade.test
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback-master.opt
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback-slave.opt
@@ -6925,8 +6932,6 @@ share/mysql/test/suite/rpl/t/rpl_gtid_server_sighup.test
 share/mysql/test/suite/rpl/t/rpl_gtid_sql_until_before_after.test
 share/mysql/test/suite/rpl/t/rpl_gtid_stm_insert_delayed.test
 share/mysql/test/suite/rpl/t/rpl_gtid_stm_mix_show_relaylog_events.test
-share/mysql/test/suite/rpl/t/rpl_gtid_stress_failover.cnf
-share/mysql/test/suite/rpl/t/rpl_gtid_stress_failover.test
 share/mysql/test/suite/rpl/t/rpl_gtid_temp_table.test
 share/mysql/test/suite/rpl/t/rpl_gtid_transaction_split_across_relay_logs.cnf
 share/mysql/test/suite/rpl/t/rpl_gtid_transaction_split_across_relay_logs.test
@@ -7246,6 +7251,8 @@ share/mysql/test/suite/rpl/t/rpl_row_record_find_myisam.test
 share/mysql/test/suite/rpl/t/rpl_row_reset_slave.test
 share/mysql/test/suite/rpl/t/rpl_row_rollback_to_savepoint.test
 share/mysql/test/suite/rpl/t/rpl_row_show_relaylog_events.test
+share/mysql/test/suite/rpl/t/rpl_row_slave_skip_error_all-slave.opt
+share/mysql/test/suite/rpl/t/rpl_row_slave_skip_error_all.test
 share/mysql/test/suite/rpl/t/rpl_row_sp001.test
 share/mysql/test/suite/rpl/t/rpl_row_sp002_innodb.test
 share/mysql/test/suite/rpl/t/rpl_row_sp003.test
@@ -7453,6 +7460,7 @@ share/mysql/test/suite/rpl/t/rpl_variables.test
 share/mysql/test/suite/rpl/t/rpl_variables_stm.test
 share/mysql/test/suite/rpl/t/rpl_view.test
 share/mysql/test/suite/rpl/t/rpl_view_multi.test
+share/mysql/test/suite/rpl/t/rpl_zombie_dump_threads.test
 share/mysql/test/suite/rpl_ndb/my.cnf
 share/mysql/test/suite/rpl_ndb/r/rpl_ndb_UUID.result
 share/mysql/test/suite/rpl_ndb/r/rpl_ndb_blob2.result
@@ -9325,6 +9333,8 @@ share/mysql/test/t/mysql_client_test-master.opt
 share/mysql/test/t/mysql_client_test.test
 share/mysql/test/t/mysql_client_test_embedded.cnf
 share/mysql/test/t/mysql_client_test_embedded.test
+share/mysql/test/t/mysql_client_test_qcache-master.opt
+share/mysql/test/t/mysql_client_test_qcache.test
 share/mysql/test/t/mysql_comments.sql
 share/mysql/test/t/mysql_comments.test
 share/mysql/test/t/mysql_config_editor.test
