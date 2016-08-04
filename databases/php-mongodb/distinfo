@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/08/04 16:03:53 jdolecek Exp $
+
+SHA1 (php-mongodb/mongodb-1.1.8.tgz) = eb81fe05cf6c83d92b2416adb6f5a000baaa33d6
+RMD160 (php-mongodb/mongodb-1.1.8.tgz) = 9ef3740c43f951f78deb8f85075ffda896bb5407
+SHA512 (php-mongodb/mongodb-1.1.8.tgz) = 1026b4081cd1c35f1f6fee6332c21dbe739320236377c0ed21b8d64447a9ba26464a919ceb9c16b332a64f12b834700472d6cbfb336d09d841c97ca0b402bf17
+Size (php-mongodb/mongodb-1.1.8.tgz) = 806900 bytes
+SHA1 (patch-config.m4) = cbf500e990d2b9e8eea895cb6e1e9f9a0b62022a
