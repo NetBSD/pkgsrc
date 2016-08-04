@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16241 2016/08/04 14:05:36 jdolecek Exp $
+$NetBSD: TODO,v 1.16242 2016/08/04 15:26:49 jdolecek Exp $
 
 Suggested new packages
 ======================
@@ -1313,7 +1313,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-jpgraph-3.5.0b1
 	o php-memcache-3.0.8
 	o php-ming-0.4.7
-	o php-mongo-1.6.12
 	o php-mongodb-1.1.2
 	o php-mrbs-1.5.0
 	o php-orangehrm-3.3.1
