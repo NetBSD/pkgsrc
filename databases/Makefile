@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.515 2016/07/26 09:51:44 jdolecek Exp $
+# $NetBSD: Makefile,v 1.516 2016/08/04 16:05:01 jdolecek Exp $
 
 COMMENT=	Databases
 
@@ -247,6 +247,7 @@ SUBDIR+=	php-dba
 SUBDIR+=	php-dbx
 SUBDIR+=	php-ldap
 SUBDIR+=	php-mongo
+SUBDIR+=	php-mongodb
 SUBDIR+=	php-mssql
 SUBDIR+=	php-mysql
 SUBDIR+=	php-mysqli
