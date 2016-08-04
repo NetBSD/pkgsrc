@@ -1,1 +1,4 @@
 Interface for communicating with the Mongo database in PHP.
+
+This package has been superseded by mongodb PECL extension, but is
+still maintained for bugs and security fixes.
