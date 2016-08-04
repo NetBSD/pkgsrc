@@ -1,13 +1,10 @@
-$NetBSD: patch-ab,v 1.8 2016/05/29 12:35:00 mef Exp $
+$NetBSD: patch-setup.py,v 1.1 2016/08/04 00:04:19 kamil Exp $
 
-avoid a hidden dependency on py-gtk2 which makes that an additional
-file gets installed
-
---- setup.py.orig	2013-10-10 12:42:48.000000000 +0000
+--- setup.py.orig	2016-07-03 15:37:10.000000000 +0000
 +++ setup.py
-@@ -88,12 +88,12 @@ mpl_packages = [
-     # work will be selected as the default backend.
+@@ -97,12 +97,12 @@ mpl_packages = [
      setupext.BackendMacOSX(),
+     setupext.BackendQt5(),
      setupext.BackendQt4(),
 -    setupext.BackendGtk3Agg(),
 -    setupext.BackendGtk3Cairo(),
