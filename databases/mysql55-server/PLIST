@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2016/06/14 16:49:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2016/08/04 10:09:46 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1324,6 +1324,7 @@ share/mysql/test/std_data/bug16266.000001
 share/mysql/test/std_data/bug19371.MYD
 share/mysql/test/std_data/bug19371.MYI
 share/mysql/test/std_data/bug19371.frm
+share/mysql/test/std_data/bug20683959loaddata.txt
 share/mysql/test/std_data/bug30435_10k_items.txt
 share/mysql/test/std_data/bug30435_5k.txt
 share/mysql/test/std_data/bug33029-slave-relay-bin.000001
@@ -1476,6 +1477,7 @@ share/mysql/test/suite/binlog/r/binlog_bug23533.result
 share/mysql/test/suite/binlog/r/binlog_bug36391.result
 share/mysql/test/suite/binlog/r/binlog_database.result
 share/mysql/test/suite/binlog/r/binlog_delete_and_flush_index.result
+share/mysql/test/suite/binlog/r/binlog_dmls_on_tmp_tables_readonly.result
 share/mysql/test/suite/binlog/r/binlog_drop_if_exists.result
 share/mysql/test/suite/binlog/r/binlog_format_switch_in_tmp_table.result
 share/mysql/test/suite/binlog/r/binlog_grant.result
@@ -1554,6 +1556,7 @@ share/mysql/test/suite/binlog/t/binlog_bug36391-master.opt
 share/mysql/test/suite/binlog/t/binlog_bug36391.test
 share/mysql/test/suite/binlog/t/binlog_database.test
 share/mysql/test/suite/binlog/t/binlog_delete_and_flush_index.test
+share/mysql/test/suite/binlog/t/binlog_dmls_on_tmp_tables_readonly.test
 share/mysql/test/suite/binlog/t/binlog_drop_if_exists.test
 share/mysql/test/suite/binlog/t/binlog_format_switch_in_tmp_table.test
 share/mysql/test/suite/binlog/t/binlog_grant.test
