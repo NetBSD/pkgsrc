@@ -1,0 +1,13 @@
+$NetBSD: patch-makedist,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+
+--- makedist.orig	2015-06-23 17:33:33.000000000 +0000
++++ makedist
+@@ -35,7 +35,7 @@ if test "${1}" = "1" -a "${2}" -lt "28";
+ fi
+ IFS="$old_IFS"
+ 
+-if test "x$PHPROOT" == "x"; then
++if test "x$PHPROOT" = "x"; then
+     PHPROOT=git@git.php.net:php-src.git;
+ fi
+ 
