@@ -1,11 +1,11 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2014/08/10 15:11:57 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2016/08/04 10:09:08 adam Exp $
 
 Split configuration between mysql-client and mysql-server.
 Build with newer DTrace.
 
---- CMakeLists.txt.orig	2014-07-18 15:48:39.000000000 +0000
+--- CMakeLists.txt.orig	2016-07-11 09:19:51.000000000 +0000
 +++ CMakeLists.txt
-@@ -215,6 +215,7 @@ IF(DISABLE_SHARED)
+@@ -202,6 +202,7 @@ IF(DISABLE_SHARED)
    SET(WITHOUT_DYNAMIC_PLUGINS 1)
  ENDIF()
  OPTION(ENABLED_PROFILING "Enable profiling" ON)
@@ -13,15 +13,15 @@ Build with newer DTrace.
  OPTION(CYBOZU "" OFF)
  OPTION(BACKUP_TEST "" OFF)
  OPTION(WITHOUT_SERVER OFF)
-@@ -472,7 +473,6 @@ ADD_SUBDIRECTORY(vio)
+@@ -462,7 +463,6 @@ ADD_SUBDIRECTORY(vio)
  ADD_SUBDIRECTORY(regex)
  ADD_SUBDIRECTORY(mysys)
  ADD_SUBDIRECTORY(mysys_ssl)
 -ADD_SUBDIRECTORY(libmysql)
  
  IF(WITH_UNIT_TESTS)
-   ADD_SUBDIRECTORY(unittest)
-@@ -491,16 +491,16 @@ IF(WITH_UNIT_TESTS)
+   # Visual Studio 11 needs this extra flag in order to compile gmock.
+@@ -480,16 +480,16 @@ IF(WITH_UNIT_TESTS)
  ENDIF()
  
  ADD_SUBDIRECTORY(extra)
@@ -43,7 +43,7 @@ Build with newer DTrace.
    ADD_SUBDIRECTORY(sql)
    OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
    IF(WITH_EMBEDDED_SERVER) 
-@@ -511,7 +511,6 @@ ENDIF()
+@@ -500,7 +500,6 @@ ENDIF()
  
  # scripts/mysql_config depends on client and server targets loaded above.
  # It is referenced by some of the directories below, so we insert it here.
