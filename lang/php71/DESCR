@@ -1,0 +1,19 @@
+PHP is a widely-used open source general-purpose scripting language
+that is especially suited for web development and can be embedded
+into HTML. It is modular, and object-oriented. Much of its syntax
+is borrowed from C, Java and Perl with a couple of unique PHP-specific
+features thrown in.  The language is designed to allow web developers
+to write dynamically generated pages quickly.
+
+This package provides PHP version 7.1.x.
+
+PHP 7.1.x builds upon 7.0.x, adding new features:
+
+* Iterable type.
+* HTTP/2 Server Push Support in ext/curl & other ext/curl improvements
+* Fix inconsistent behavior in $this variable
+* Square bracket syntax for array destructuring assignment
+* Create closure from callable
+* More precise float values
+* Asynchronous Signal Handling (without ticks) in ext/pcntl.
+* Additional Context in pcntl_signal Handler
