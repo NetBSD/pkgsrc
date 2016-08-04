@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.145 2016/07/31 15:39:27 jdolecek Exp $
+# $NetBSD: phpversion.mk,v 1.146 2016/08/04 13:00:19 jdolecek Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -11,7 +11,7 @@
 #	the package.
 #
 #	Possible: 55 56 70
-#	Default: 55
+#	Default: 56
 #
 # === Infrastructure variables ===
 #
