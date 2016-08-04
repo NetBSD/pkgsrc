@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/07/18 04:52:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/08/04 18:15:49 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -134,6 +134,9 @@ ${PYSITELIB}/youtube_dl/extractor/archiveorg.pyo
 ${PYSITELIB}/youtube_dl/extractor/ard.py
 ${PYSITELIB}/youtube_dl/extractor/ard.pyc
 ${PYSITELIB}/youtube_dl/extractor/ard.pyo
+${PYSITELIB}/youtube_dl/extractor/arkena.py
+${PYSITELIB}/youtube_dl/extractor/arkena.pyc
+${PYSITELIB}/youtube_dl/extractor/arkena.pyo
 ${PYSITELIB}/youtube_dl/extractor/arte.py
 ${PYSITELIB}/youtube_dl/extractor/arte.pyc
 ${PYSITELIB}/youtube_dl/extractor/arte.pyo
@@ -845,6 +848,9 @@ ${PYSITELIB}/youtube_dl/extractor/la7.pyo
 ${PYSITELIB}/youtube_dl/extractor/laola1tv.py
 ${PYSITELIB}/youtube_dl/extractor/laola1tv.pyc
 ${PYSITELIB}/youtube_dl/extractor/laola1tv.pyo
+${PYSITELIB}/youtube_dl/extractor/lcp.py
+${PYSITELIB}/youtube_dl/extractor/lcp.pyc
+${PYSITELIB}/youtube_dl/extractor/lcp.pyo
 ${PYSITELIB}/youtube_dl/extractor/learnr.py
 ${PYSITELIB}/youtube_dl/extractor/learnr.pyc
 ${PYSITELIB}/youtube_dl/extractor/learnr.pyo
@@ -1055,9 +1061,6 @@ ${PYSITELIB}/youtube_dl/extractor/newstube.pyo
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.py
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyc
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyo
-${PYSITELIB}/youtube_dl/extractor/nextmovie.py
-${PYSITELIB}/youtube_dl/extractor/nextmovie.pyc
-${PYSITELIB}/youtube_dl/extractor/nextmovie.pyo
 ${PYSITELIB}/youtube_dl/extractor/nfb.py
 ${PYSITELIB}/youtube_dl/extractor/nfb.pyc
 ${PYSITELIB}/youtube_dl/extractor/nfb.pyo
@@ -1133,6 +1136,9 @@ ${PYSITELIB}/youtube_dl/extractor/nuvid.pyo
 ${PYSITELIB}/youtube_dl/extractor/nytimes.py
 ${PYSITELIB}/youtube_dl/extractor/nytimes.pyc
 ${PYSITELIB}/youtube_dl/extractor/nytimes.pyo
+${PYSITELIB}/youtube_dl/extractor/odatv.py
+${PYSITELIB}/youtube_dl/extractor/odatv.pyc
+${PYSITELIB}/youtube_dl/extractor/odatv.pyo
 ${PYSITELIB}/youtube_dl/extractor/odnoklassniki.py
 ${PYSITELIB}/youtube_dl/extractor/odnoklassniki.pyc
 ${PYSITELIB}/youtube_dl/extractor/odnoklassniki.pyo
