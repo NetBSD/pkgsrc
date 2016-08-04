@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/07/26 09:37:23 jdolecek Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/04 14:01:52 jdolecek Exp $
 #
 
 MODNAME=	redis3
@@ -16,7 +16,7 @@ HOMEPAGE=	https://github.com/nicolasff/phpredis
 COMMENT=	PHP extension for Redis
 LICENSE=	php
 
-PHP_VERSIONS_ACCEPTED=	70
+PHP_VERSIONS_ACCEPTED=	70 71
 
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PECL_VERSION}
 
