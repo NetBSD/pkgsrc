@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/04 15:33:20 jdolecek Exp $
+
+SHA1 (php-stats/stats-2.0.3.tgz) = c21ed411c527264e366a5bb470bedf2d53881eb6
+RMD160 (php-stats/stats-2.0.3.tgz) = f6d383f37775bba1fc2acb1cda29da12db0047c4
+SHA512 (php-stats/stats-2.0.3.tgz) = 68a21296f8892c399d961bc1bba31cb6ebf6e0533fd396fc8527a33aa0b7cc189e718bd22dddbaaaeda183488971f02e87b2d9514085cc2a3d0fc558921a584c
+Size (php-stats/stats-2.0.3.tgz) = 112280 bytes
