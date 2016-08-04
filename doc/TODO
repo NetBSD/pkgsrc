@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16239 2016/08/03 09:05:58 wiz Exp $
+$NetBSD: TODO,v 1.16240 2016/08/04 06:22:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -669,6 +669,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
+	o firefox-48.0
 	o fish-2.2.0
 	o flashplayer-0.4.13
 	o flashrom-0.9.8
