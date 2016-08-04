@@ -1,0 +1,33 @@
+$NetBSD: patch-php.ini-production,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+
+--- php.ini-production.orig	2015-06-23 17:33:33.000000000 +0000
++++ php.ini-production
+@@ -697,7 +697,7 @@ default_charset = "UTF-8"
+ ;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ ; UNIX: "/path1:/path2"
+-;include_path = ".:/php/includes"
++include_path = ".:@PREFIX@/lib/php"
+ ;
+ ; Windows: "\path1;\path2"
+ ;include_path = ".;c:\php\includes"
+@@ -718,8 +718,8 @@ doc_root =
+ ; http://php.net/user-dir
+ user_dir =
+ 
+-; Directory in which the loadable extensions (modules) reside.
+-; http://php.net/extension-dir
++; Directory in which the loadable extensions (modules) reside. If not
++; defined, then use the extension directory specified at compile-time.
+ ; extension_dir = "./"
+ ; On windows:
+ ; extension_dir = "ext"
+@@ -792,7 +792,7 @@ file_uploads = On
+ ; Temporary directory for HTTP uploaded files (will use system default if not
+ ; specified).
+ ; http://php.net/upload-tmp-dir
+-;upload_tmp_dir =
++upload_tmp_dir = /tmp
+ 
+ ; Maximum allowed size for uploaded files.
+ ; http://php.net/upload-max-filesize
