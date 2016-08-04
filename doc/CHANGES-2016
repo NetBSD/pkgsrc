@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3201 2016/08/04 14:10:33 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.3202 2016/08/04 14:11:31 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4515,4 +4515,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql56-client to 5.6.32 [adam 2016-08-04]
 	Updated databases/mysql56-server to 5.6.32 [adam 2016-08-04]
 	Updated security/opensc to 0.16.0 [mef 2016-08-04]
-	Added lang/php71 version 7.1.0beta1 [jaromir.dolecek 2016-08-04]
+	Added lang/php71 version 7.1.0beta1 [jdolecek 2016-08-04]
