@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2015/09/07 19:59:42 gdt Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/08/04 13:08:25 mef Exp $
 bin/cardos-tool
 bin/cryptoflex-tool
 bin/dnie-tool
 bin/eidenv
+bin/gids-tool
 bin/iasecc-tool
 bin/netkey-tool
 bin/openpgp-tool
@@ -27,6 +28,7 @@ man/man1/cardos-tool.1
 man/man1/cryptoflex-tool.1
 man/man1/dnie-tool.1
 man/man1/eidenv.1
+man/man1/gids-tool.1
 man/man1/iasecc-tool.1
 man/man1/netkey-tool.1
 man/man1/openpgp-tool.1
@@ -49,6 +51,7 @@ share/opensc/cyberflex.profile
 share/opensc/entersafe.profile
 share/opensc/epass2003.profile
 share/opensc/flex.profile
+share/opensc/gids.profile
 share/opensc/gpk.profile
 share/opensc/ias_adele_admin1.profile
 share/opensc/ias_adele_admin2.profile

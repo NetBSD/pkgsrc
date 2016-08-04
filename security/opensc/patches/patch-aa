@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2015/09/07 19:59:42 gdt Exp $
+$NetBSD: patch-aa,v 1.6 2016/08/04 13:08:25 mef Exp $
 
 Disable installation of config file, because pkgsrc installs config
 files as examples.
 
---- etc/Makefile.am.orig	2015-05-16 20:30:24.000000000 +0000
-+++ etc/Makefile.am
-@@ -23,13 +23,5 @@ opensc.conf: opensc.conf.in force
- 		-e 's|@DEBUG_FILE[@]|$(DEBUG_FILE)|g' \
+--- etc/Makefile.am.orig	2016-05-31 16:36:09.000000000 +0900
++++ etc/Makefile.am	2016-08-04 21:48:05.000000000 +0900
+@@ -28,13 +28,5 @@ opensc.conf: opensc.conf.in force
+ 		-e 's|@PROFILE_DIR_DEFAULT[@]|$(PROFILE_DIR_DEFAULT)|g' \
  		< $< > $@
  
 -install-exec-hook: opensc.conf
