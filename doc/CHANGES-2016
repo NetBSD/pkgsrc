@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3207 2016/08/04 19:28:23 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3208 2016/08/05 15:59:32 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4521,3 +4521,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/pulseaudio to 9.0 [ryoon 2016-08-04]
 	Updated net/youtube-dl to 20160801 [leot 2016-08-04]
 	Updated net/syncthing to 0.14.3 [gdt 2016-08-04]
+	Updated devel/ruby-delayer-deferred to 1.0.4 [tsutsui 2016-08-05]
