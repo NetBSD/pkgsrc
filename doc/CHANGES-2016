@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3212 2016/08/05 22:50:14 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3213 2016/08/05 22:56:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.20 [mef 2016-08-05]
 	Updated devel/p5-NEXT to 0.67 [mef 2016-08-05]
 	Updated devel/p5-Sub-Uplevel to 0.2600 [mef 2016-08-05]
+	Updated devel/p5-Config-General to 2.63 [mef 2016-08-05]
