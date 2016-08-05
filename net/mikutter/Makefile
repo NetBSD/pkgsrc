@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.124 2016/06/21 17:06:29 tsutsui Exp $
+# $NetBSD: Makefile,v 1.125 2016/08/05 16:19:46 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.4.1
+DISTNAME=	mikutter.3.4.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
-DIST_SUBDIR=	${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -23,7 +22,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-memoist-[0-9]*:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-typed-array>=0.1:../../misc/ruby-typed-array
 DEPENDS+=	${RUBY_PKGPREFIX}-delayer-[0-9]*:../../devel/ruby-delayer
-DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred-[0-9]*:../../devel/ruby-delayer-deferred
+DEPENDS+=	${RUBY_PKGPREFIX}-delayer-deferred>=1.0.4:../../devel/ruby-delayer-deferred
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri-[0-9]*:../../textproc/ruby-nokogiri
 DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../www/ruby-httpclient
 DEPENDS+=	${RUBY_PKGPREFIX}-moneta>=0.7:../../databases/ruby-moneta
