@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3210 2016/08/05 22:38:37 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3211 2016/08/05 22:45:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4524,3 +4524,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-delayer-deferred to 1.0.4 [tsutsui 2016-08-05]
 	Updated net/mikutter to 3.4.2 [tsutsui 2016-08-05]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.20 [mef 2016-08-05]
+	Updated devel/p5-NEXT to 0.67 [mef 2016-08-05]
