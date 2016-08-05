@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3208 2016/08/05 15:59:32 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.3209 2016/08/05 16:20:28 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4522,3 +4522,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20160801 [leot 2016-08-04]
 	Updated net/syncthing to 0.14.3 [gdt 2016-08-04]
 	Updated devel/ruby-delayer-deferred to 1.0.4 [tsutsui 2016-08-05]
+	Updated net/mikutter to 3.4.2 [tsutsui 2016-08-05]
