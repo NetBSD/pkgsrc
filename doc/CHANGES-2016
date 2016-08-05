@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3209 2016/08/05 16:20:28 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.3210 2016/08/05 22:38:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.14.3 [gdt 2016-08-04]
 	Updated devel/ruby-delayer-deferred to 1.0.4 [tsutsui 2016-08-05]
 	Updated net/mikutter to 3.4.2 [tsutsui 2016-08-05]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.20 [mef 2016-08-05]
