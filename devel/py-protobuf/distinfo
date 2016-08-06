@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.3 2016/08/06 11:45:24 kamil Exp $
+
+SHA1 (protobuf-python-3.0.0.tar.gz) = f8f6508e9bc7965f7d63afe70641622fbbe1d933
+RMD160 (protobuf-python-3.0.0.tar.gz) = d3844f15146c5c4788f0026c6ec088a74fa17e6f
+SHA512 (protobuf-python-3.0.0.tar.gz) = 3d58d5e8b2ce36f6e49f3e3ec8f0a5648957a65a00dbef21e398e44735094c0024a1d94e53d90815b39ddf5db8c7af951adec126f376e3c160d8a222568c43a5
+Size (protobuf-python-3.0.0.tar.gz) = 4339278 bytes
+SHA1 (patch-gmock_configure) = 1703fe1d7bedcf0bf810d1e39ce5105275ae8239
+SHA1 (patch-gmock_configure.ac) = cfd7b7c87eff4b06ce6ecb34dec046561bbdc113
+SHA1 (patch-src_google_protobuf_stubs_atomicops.h) = 6a13cf5597a09f862450916b00d8eae42877b5da
+SHA1 (patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h) = 93cf8135660e945044e5a560a3010e32e660ae6f
