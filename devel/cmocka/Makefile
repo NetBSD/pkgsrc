@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/03/31 22:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/06 15:03:30 mef Exp $
 
-DISTNAME=	cmocka-1.0.0
+DISTNAME=	cmocka-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	https://cmocka.org/files/1.0/
 EXTRACT_SUFX=	.tar.xz
