@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16246 2016/08/06 08:47:51 ryoon Exp $
+$NetBSD: TODO,v 1.16247 2016/08/06 11:58:07 wen Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Authen-TacacsPlus-0.26
 	o p5-CDDB-2.00
 	o p5-Catalyst-Engine-PSGI-0.14
-	o p5-Catalyst-View-Email-0.36
 	o p5-Chart-3.2
 	o p5-Crypt-GeneratePassword-0.05
 	o p5-DBD-DB2-1.85
