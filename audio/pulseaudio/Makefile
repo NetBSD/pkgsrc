@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2016/08/04 16:45:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.111 2016/08/06 15:56:50 richard Exp $
 
 DISTNAME=	pulseaudio-9.0
 CATEGORIES=	audio
@@ -88,6 +88,7 @@ CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 
 .if ${OPSYS} == "SunOS"
+USE_LANGUAGES+=		c99
 PLIST.sun=		yes
 .  if ${OS_VERSION} == "5.11"
 PLIST.oss=		yes
