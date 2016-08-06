@@ -1,13 +1,13 @@
-$NetBSD: patch-media_libvorbis_moz.build,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-media_libvorbis_moz.build,v 1.3 2016/08/06 08:46:59 ryoon Exp $
 
 * Support system library
 
---- media/libvorbis/moz.build.orig	2014-11-21 03:37:42.000000000 +0000
+--- media/libvorbis/moz.build.orig	2016-05-12 17:13:17.000000000 +0000
 +++ media/libvorbis/moz.build
-@@ -55,3 +55,6 @@ FINAL_LIBRARY = 'gkmedias'
+@@ -56,3 +56,6 @@ FINAL_LIBRARY = 'gkmedias'
  # Suppress warnings in third-party code.
  if CONFIG['GNU_CC']:
      CFLAGS += ['-Wno-uninitialized']
 +
-+if CONFIG['MOZ_NATIVE_OGG']:
++if CONFIG['MOZ_SYSTEM_OGG']:
 +    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']

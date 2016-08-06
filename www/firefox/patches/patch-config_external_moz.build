@@ -1,28 +1,28 @@
-$NetBSD: patch-config_external_moz.build,v 1.12 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.13 2016/08/06 08:46:59 ryoon Exp $
 
 * Support system libraries
 
---- config/external/moz.build.orig	2016-05-12 17:04:58.000000000 +0000
+--- config/external/moz.build.orig	2016-07-25 20:22:04.000000000 +0000
 +++ config/external/moz.build
 @@ -21,10 +21,19 @@ if CONFIG['MOZ_UPDATER']:
  external_dirs += ['modules/brotli']
  external_dirs += ['modules/woff2']
  
 -if CONFIG['MOZ_VORBIS']:
-+if not CONFIG['MOZ_NATIVE_OGG']:
++if not CONFIG['MOZ_SYSTEM_OGG']:
 +    external_dirs += ['media/libogg']
 +
-+if not CONFIG['MOZ_NATIVE_CELT'] or not CONFIG['MOZ_NATIVE_OPUS']:
++if not CONFIG['MOZ_SYSTEM_CELT'] or not CONFIG['MOZ_SYSTEM_OPUS']:
 +    external_dirs += ['media/libopus']
 +
-+if not CONFIG['MOZ_NATIVE_THEORA']:
++if not CONFIG['MOZ_SYSTEM_THEORA']:
 +    external_dirs += ['media/libtheora']
 +
-+if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_NATIVE_VORBIS']:
++if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_SYSTEM_VORBIS']:
      external_dirs += ['media/libvorbis']
  
 -if CONFIG['MOZ_TREMOR']:
-+if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
++if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_SYSTEM_TREMOR']:
      external_dirs += ['media/libtremor']
  
  if CONFIG['MOZ_WEBM_ENCODER']:

@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.6 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.7 2016/08/06 08:46:59 ryoon Exp $
 
 * Support system libraries
 
---- toolkit/library/moz.build.orig	2016-06-01 04:11:43.000000000 +0000
+--- toolkit/library/moz.build.orig	2016-07-25 20:22:07.000000000 +0000
 +++ toolkit/library/moz.build
 @@ -211,6 +211,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
      ]
@@ -12,35 +12,35 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.6 2016/06/16 12:08:21 ryoon Exp $
  OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
  OS_LIBS += CONFIG['MOZ_SERVO_LIBS']
  
-@@ -223,6 +224,30 @@ if CONFIG['MOZ_NATIVE_PNG']:
- if CONFIG['MOZ_NATIVE_HUNSPELL']:
+@@ -223,6 +224,30 @@ if CONFIG['MOZ_SYSTEM_PNG']:
+ if CONFIG['MOZ_SYSTEM_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
-+if CONFIG['MOZ_NATIVE_OGG']:
++if CONFIG['MOZ_SYSTEM_OGG']:
 +    OS_LIBS += CONFIG['MOZ_OGG_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_THEORA']:
++if CONFIG['MOZ_SYSTEM_THEORA']:
 +    OS_LIBS += CONFIG['MOZ_THEORA_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_VORBIS']:
++if CONFIG['MOZ_SYSTEM_VORBIS']:
 +    OS_LIBS += CONFIG['MOZ_VORBIS_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_TREMOR']:
++if CONFIG['MOZ_SYSTEM_TREMOR']:
 +    OS_LIBS += CONFIG['MOZ_TREMOR_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_CELT']:
++if CONFIG['MOZ_SYSTEM_CELT']:
 +    OS_LIBS += CONFIG['MOZ_CELT_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_OPUS']:
++if CONFIG['MOZ_SYSTEM_OPUS']:
 +    OS_LIBS += CONFIG['MOZ_OPUS_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_SPEEX']:
++if CONFIG['MOZ_SYSTEM_SPEEX']:
 +    OS_LIBS += CONFIG['MOZ_SPEEX_LIBS']
 +
-+if CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
++if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
 +    OS_LIBS += CONFIG['MOZ_SOUNDTOUCH_LIBS']
 +
- if CONFIG['MOZ_NATIVE_LIBEVENT']:
+ if CONFIG['MOZ_SYSTEM_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
 @@ -235,6 +260,9 @@ if not CONFIG['MOZ_TREE_PIXMAN']:
