@@ -1,8 +1,10 @@
-$NetBSD: patch-src_google_protobuf_stubs_atomicops.h,v 1.2 2015/06/10 01:31:51 wiedi Exp $
+$NetBSD: patch-src_google_protobuf_stubs_atomicops.h,v 1.3 2016/08/06 11:40:14 kamil Exp $
 
---- src/google/protobuf/stubs/atomicops.h.orig	2014-10-21 00:01:40.000000000 +0000
+Add ARM support.
+
+--- src/google/protobuf/stubs/atomicops.h.orig	2016-04-28 21:34:30.000000000 +0000
 +++ src/google/protobuf/stubs/atomicops.h
-@@ -78,7 +78,11 @@ typedef intptr_t Atomic64;
+@@ -89,7 +89,11 @@ typedef intptr_t Atomic64;
  
  // Use AtomicWord for a machine-sized pointer.  It will use the Atomic32 or
  // Atomic64 routines below, depending on your architecture.
