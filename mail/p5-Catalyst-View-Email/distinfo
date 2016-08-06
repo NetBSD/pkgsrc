@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 23:27:11 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/08/06 11:55:35 wen Exp $
 
-SHA1 (Catalyst-View-Email-0.34.tar.gz) = 040415bf26de7438b30942b46f126b233263af1b
-RMD160 (Catalyst-View-Email-0.34.tar.gz) = c371e8994f417ad2b363d6f9392860e9aa5b3ab7
-SHA512 (Catalyst-View-Email-0.34.tar.gz) = a02e6136b151ff2aaedd162982f10e4e5e207be199f435ab4be9af0ca623bbbccbd69c05c769b9af81dfcfff92f85b8b5b7a9aa2df1a054e228d4406d0f59663
-Size (Catalyst-View-Email-0.34.tar.gz) = 125270 bytes
+SHA1 (Catalyst-View-Email-0.36.tar.gz) = d87c3b77a2d07c1dd9f738ac7ba27cb23d21b85b
+RMD160 (Catalyst-View-Email-0.36.tar.gz) = db34faacb970ddb188fdca90b944bb53b6917dba
+SHA512 (Catalyst-View-Email-0.36.tar.gz) = acfc9474ab563fd74cd5bcbcb2337c68510b7533ee5bdfdf2bcc37ed4634a1f7fd68d0a8d182729c18cb236841c3a7f4f8cd88192a6f642da0f8870f936ff677
+Size (Catalyst-View-Email-0.36.tar.gz) = 40840 bytes
