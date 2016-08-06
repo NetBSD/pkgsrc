@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.138 2016/08/04 17:03:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.139 2016/08/06 13:03:35 prlw1 Exp $
 
-DISTNAME=	octave-4.0.0
-PKGREVISION=	4
+DISTNAME=	octave-4.0.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GNU:=octave/}
 EXTRACT_SUFX=	.tar.xz
@@ -71,7 +70,7 @@ SUBST_CLASSES+=			fix-make
 SUBST_STAGE.fix-make=		pre-configure
 SUBST_MESSAGE.fix-make=		Fixing path to gmake.
 SUBST_FILES.fix-make=		scripts/pkg/private/configure_make.m
-SUBST_SED.fix-make=		-e 's:@GMAKE@:$(GMAKE):g'
+SUBST_SED.fix-make=		-e 's:@GMAKE@:${GMAKE}:g'
 
 SUBST_CLASSES+=			qt5-pkg-config
 SUBST_STAGE.qt5-pkg-config=	pre-configure
@@ -106,6 +105,7 @@ post-install:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/arpack/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
