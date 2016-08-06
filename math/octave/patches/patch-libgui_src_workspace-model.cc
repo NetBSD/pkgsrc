@@ -1,8 +1,6 @@
-$NetBSD: patch-libgui_src_workspace-model.cc,v 1.1 2016/02/16 04:21:40 dbj Exp $
+$NetBSD: patch-libgui_src_workspace-model.cc,v 1.2 2016/08/06 13:03:35 prlw1 Exp $
 
 Changes for compiling with Qt5 instead of Qt4
-
-$NetBSD: patch-libgui_src_workspace-model.cc,v 1.1 2016/02/16 04:21:40 dbj Exp $
 
 --- libgui/src/workspace-model.cc.orig	2015-05-23 14:21:53.000000000 +0000
 +++ libgui/src/workspace-model.cc
