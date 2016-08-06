@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2016/02/16 04:21:40 dbj Exp $
+@comment $NetBSD: PLIST,v 1.27 2016/08/06 13:03:35 prlw1 Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -786,13 +786,13 @@ include/${PKGNAME}/octave/xpow.h
 include/${PKGNAME}/octave/zfstream.h
 info/liboctave.info
 info/octave.info
+lib/charset.alias
 lib/octave/${PKGVERSION}/__delaunayn__.a
 lib/octave/${PKGVERSION}/__eigs__.a
 lib/octave/${PKGVERSION}/__fltk_uigetfile__.a
 lib/octave/${PKGVERSION}/__glpk__.a
 lib/octave/${PKGVERSION}/__init_fltk__.a
 lib/octave/${PKGVERSION}/__init_gnuplot__.a
-lib/octave/${PKGVERSION}/__magick_read__.a
 lib/octave/${PKGVERSION}/__osmesa_print__.a
 lib/octave/${PKGVERSION}/__voronoi__.a
 lib/octave/${PKGVERSION}/amd.a
@@ -814,7 +814,6 @@ lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__fltk_uigetfile__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__glpk__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_fltk__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__init_gnuplot__.oct
-lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__magick_read__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__osmesa_print__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/__voronoi__.oct
 lib/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/amd.oct
@@ -941,6 +940,9 @@ share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Pork/get.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Pork/gurk.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Pork/private/myStash.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Pork/set.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@SizeTester/SizeTester.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@SizeTester/numel.m
+share/octave/${PKGVERSION}/etc/tests/fixed/classes/@SizeTester/size.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Sneetch/Sneetch.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Sneetch/display.m
 share/octave/${PKGVERSION}/etc/tests/fixed/classes/@Snork/Snork.m
@@ -1043,6 +1045,7 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__dsearchn__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__ichol__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__ilu__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__lin_interpn__.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__magick_read__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__pchip_deriv__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/__qp__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/besselj.cc-tst
@@ -1060,6 +1063,7 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/dlmread.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/dot.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/eig.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/ellipj.cc-tst
+share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/error.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/fft.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/fft2.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/file-io.cc-tst
@@ -1116,7 +1120,6 @@ share/octave/${PKGVERSION}/etc/tests/libinterp/corefcn/variables.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__delaunayn__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__fltk_uigetfile__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__glpk__.cc-tst
-share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__magick_read__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__osmesa_print__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/__voronoi__.cc-tst
 share/octave/${PKGVERSION}/etc/tests/libinterp/dldfcn/amd.cc-tst
@@ -2205,3 +2208,11 @@ share/octave/${PKGVERSION}/m/time/is_leap_year.m
 share/octave/${PKGVERSION}/m/time/now.m
 share/octave/${PKGVERSION}/m/time/weekday.m
 share/octave/site/m/startup/octaverc
+@pkgdir share/octave/site/api-v50+/m
+@pkgdir share/octave/${PKGVERSION}/site/m
+@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v50+/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/site/oct/api-v50+/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
