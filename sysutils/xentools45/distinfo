@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2016/05/21 20:11:21 bad Exp $
+$NetBSD: distinfo,v 1.25 2016/08/06 12:41:36 spz Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -20,7 +20,9 @@ SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736
 SHA1 (patch-.._docs_misc_xl-disk-configuration.txt) = 5b59cfc2569d1a4c10d6c0fcb98ed35278723b79
 SHA1 (patch-Makefile) = eb5d3211b26c5f10a24fcca658c83d5f60990d9f
 SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
+SHA1 (patch-XSA-178) = 5cb68dd7d82f537e9a9d0417cc79e8cafeb05ac2
 SHA1 (patch-XSA-179) = b73d44757651efe4b8df27cedd7f9827f3d6a6ca
+SHA1 (patch-XSA-180) = 58a93dec38792a36bca74123444eb72fafe158a3
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
 SHA1 (patch-configure) = 97fa4274e425984d593cd93aea36edc681462b88
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
@@ -65,4 +67,5 @@ SHA1 (patch-qemu-xen_audio_audio.c) = 8452d63fe90e38a64111d0cf425bacd565fe6d82
 SHA1 (patch-qemu-xen_qemu-doc.texi) = 721e80d15ac30ac71df3d6c4c485b0bf70897cf9
 SHA1 (patch-qemu-xen_util_hbitmap.c) = 5a495ae2b47d1ff6dd342633b8d655582f21dffe
 SHA1 (patch-qemu-xen_xen-hvm.c) = 11d4deb5de577e8beb2d1c6c3ca886e3d7563f8a
+SHA1 (patch-xenpaging_xenpaging.c) = 3faaa93ae6e1a0debdadf2e520f0f2781ee2ae10
 SHA1 (patch-xenstore_xc.c) = 51b39e9929062e72d0ff85f0ee6d13a6ac04ac65
