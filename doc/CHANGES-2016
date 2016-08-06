@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3222 2016/08/06 11:49:06 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3223 2016/08/06 11:58:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4537,3 +4537,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php71 to 7.1.0beta2 [jdolecek 2016-08-06]
 	Updated devel/protobuf to 3.0.0 [kamil 2016-08-06]
 	Updated devel/py-protobuf to 3.0.0 [kamil 2016-08-06]
+	Updated mail/p5-Catalyst-View-Email to 0.36 [wen 2016-08-06]
