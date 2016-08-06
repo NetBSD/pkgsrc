@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3223 2016/08/06 11:58:07 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3224 2016/08/06 13:03:55 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4538,3 +4538,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/protobuf to 3.0.0 [kamil 2016-08-06]
 	Updated devel/py-protobuf to 3.0.0 [kamil 2016-08-06]
 	Updated mail/p5-Catalyst-View-Email to 0.36 [wen 2016-08-06]
+	Updated math/octave to 4.0.3 [prlw1 2016-08-06]
