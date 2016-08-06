@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3216 2016/08/05 23:34:34 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3217 2016/08/06 01:40:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4530,3 +4530,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Proc-PID-File to 1.28 [mef 2016-08-05]
 	Updated security/p5-Digest-SHA to 5.96 [mef 2016-08-05]
 	Updated security/p5-Net-DNS-SEC to 1.02 [mef 2016-08-05]
+	Updated security/p5-Net-OpenSSH to 0.73 [mef 2016-08-06]
