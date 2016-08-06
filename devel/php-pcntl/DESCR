@@ -6,3 +6,6 @@ creation, program execution, signal handling and process termination.
 Process Control should not be enabled within a webserver environment
 and unexpected results may happen if any Process Control functions
 are used within a webserver environment.
+
+On PHP 7.1.x, this module supports Asynchronous Signal Handling (without TICKs):
+https://wiki.php.net/rfc/async_signals
