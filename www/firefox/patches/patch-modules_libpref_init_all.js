@@ -1,19 +1,10 @@
-$NetBSD: patch-modules_libpref_init_all.js,v 1.4 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-modules_libpref_init_all.js,v 1.5 2016/08/06 08:46:59 ryoon Exp $
 
 * Improve stability under NetBSD.
 
---- modules/libpref/init/all.js.orig	2016-06-01 04:11:44.000000000 +0000
+--- modules/libpref/init/all.js.orig	2016-07-25 20:22:05.000000000 +0000
 +++ modules/libpref/init/all.js
-@@ -4417,7 +4417,7 @@ pref("layers.max-active", -1);
- pref("layers.tiles.adjust", true);
- 
- // Set the default values, and then override per-platform as needed
--pref("layers.offmainthreadcomposition.enabled", true);
-+pref("layers.offmainthreadcomposition.enabled", false);
- // Compositor target frame rate. NOTE: If vsync is enabled the compositor
- // frame rate will still be capped.
- // -1 -> default (match layout.frame_rate or 60 FPS)
-@@ -4504,7 +4504,7 @@ pref("device.sensors.enabled", true);
+@@ -4540,7 +4540,7 @@ pref("device.sensors.enabled", true);
  pref("device.storage.enabled", false);
  
  // Toggle which thread the HTML5 parser uses for stream parsing

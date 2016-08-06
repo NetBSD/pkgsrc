@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.30 2016/06/16 12:08:21 ryoon Exp $
+# $NetBSD: options.mk,v 1.31 2016/08/06 08:46:59 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
-PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc gnome webrtc
+PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio
 PLIST_VARS+=		gnome jemalloc debug
 
@@ -29,18 +29,6 @@ CONFIGURE_ARGS+=	--with-oss
 .include "../../mk/oss.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-oss
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../devel/libgnomeui/buildlink3.mk"
-#.include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-dbus --enable-gnomeui
-CONFIGURE_ARGS+=	--enable-libnotify
-PLIST.gnome=		yes
-.else
-CONFIGURE_ARGS+=	--disable-dbus --disable-gnomeui
-CONFIGURE_ARGS+=	--disable-libnotify
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)

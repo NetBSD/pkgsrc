@@ -1,11 +1,11 @@
-$NetBSD: patch-as,v 1.19 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-as,v 1.20 2016/08/06 08:46:59 ryoon Exp $
 
 * Treat DragonFly like FreeBSD.
 * Add system ICU support
 
---- js/src/old-configure.in.orig	2016-01-23 23:23:39.000000000 +0000
+--- js/src/old-configure.in.orig	2016-07-25 20:22:08.000000000 +0000
 +++ js/src/old-configure.in
-@@ -2123,8 +2123,7 @@ AC_LANG_CPLUSPLUS
+@@ -1263,8 +1263,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11
  
@@ -15,27 +15,18 @@ $NetBSD: patch-as,v 1.19 2016/06/16 12:08:21 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -2960,7 +2959,7 @@ if test "$MOZ_MEMORY"; then
-   *-darwin*)
-     AC_DEFINE(MOZ_MEMORY_DARWIN)
-     ;;
--  *-*freebsd*)
-+  *-*freebsd*|*-*dragonfly*)
-     AC_DEFINE(MOZ_MEMORY_BSD)
-     ;;
-   *-android*|*-linuxandroid*)
-@@ -3808,6 +3807,16 @@ MOZ_SUBCONFIGURE_ICU()
+@@ -2613,6 +2612,16 @@ MOZ_CONFIG_ICU()
  dnl ========================================================
  dnl JavaScript shell
  dnl ========================================================
 +ICU_LIB_NAMES=
-+MOZ_NATIVE_ICU=
++MOZ_SYSTEM_ICU=
 +MOZ_ARG_WITH_BOOL(system-icu,
 +[  --with-system-icu
 +                          Use system icu (located with pkgconfig)],
-+    MOZ_NATIVE_ICU=1)
++    MOZ_SYSTEM_ICU=1)
 +
-+if test -n "$MOZ_NATIVE_ICU"; then
++if test -n "$MOZ_SYSTEM_ICU"; then
 +    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
 +fi
  
