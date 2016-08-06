@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2015/06/10 01:31:51 wiedi Exp $
+# $NetBSD: Makefile,v 1.10 2016/08/06 11:40:14 kamil Exp $
 #
 
 .include "Makefile.common"
 
-CATEGORIES=	devel
+DISTNAME=	protobuf-cpp-${PROTOBUFVER}
+PKGNAME=	${DISTNAME:S/-cpp//}
 
 MAINTAINER=	aran@100acres.us
-HOMEPAGE=	http://code.google.com/p/protobuf/
 COMMENT=	Google protocol buffers
-LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c++ c
+USE_TOOLS+=	autoreconf automake autoconf
 
 SET_LIBDIR=	yes
 
@@ -21,6 +21,11 @@ PKGCONFIG_OVERRIDE+=	protobuf.pc.in
 
 TEST_TARGET=	check
 
+pre-configure:
+	${RUN} cd ${WRKSRC} && ./autogen.sh
+
+
+.include "../../devel/gmock/buildlink3.mk"
 BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0.4
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

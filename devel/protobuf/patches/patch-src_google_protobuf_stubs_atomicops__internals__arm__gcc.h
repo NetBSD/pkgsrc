@@ -1,6 +1,8 @@
-$NetBSD: patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h,v 1.1 2015/02/19 14:12:33 joerg Exp $
+$NetBSD: patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h,v 1.2 2016/08/06 11:40:14 kamil Exp $
 
---- src/google/protobuf/stubs/atomicops_internals_arm_gcc.h.orig	2015-02-09 22:54:25.000000000 +0000
+Add ARM support.
+
+--- src/google/protobuf/stubs/atomicops_internals_arm_gcc.h.orig	2016-04-28 21:34:30.000000000 +0000
 +++ src/google/protobuf/stubs/atomicops_internals_arm_gcc.h
 @@ -39,44 +39,19 @@ namespace google {
  namespace protobuf {
