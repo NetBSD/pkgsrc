@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3221 2016/08/06 11:43:08 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.3222 2016/08/06 11:49:06 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4535,3 +4535,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 7.01 [wen 2016-08-06]
 	Updated time/p5-DateTime to 1.35 [wen 2016-08-06]
 	Updated lang/php71 to 7.1.0beta2 [jdolecek 2016-08-06]
+	Updated devel/protobuf to 3.0.0 [kamil 2016-08-06]
+	Updated devel/py-protobuf to 3.0.0 [kamil 2016-08-06]
