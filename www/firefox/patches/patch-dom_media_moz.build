@@ -1,32 +1,32 @@
-$NetBSD: patch-dom_media_moz.build,v 1.4 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.5 2016/08/06 08:46:59 ryoon Exp $
 
 * Support system libraries
 
---- dom/media/moz.build.orig	2016-04-15 16:57:42.000000000 +0000
+--- dom/media/moz.build.orig	2016-07-25 20:22:03.000000000 +0000
 +++ dom/media/moz.build
-@@ -314,6 +314,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
+@@ -327,6 +327,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
  if CONFIG['MOZ_GONK_MEDIACODEC']:
      DEFINES['MOZ_GONK_MEDIACODEC'] = True
  
-+if CONFIG['MOZ_NATIVE_OGG']:
++if CONFIG['MOZ_SYSTEM_OGG']:
 +    CXXFLAGS += CONFIG['MOZ_OGG_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_THEORA']:
++if CONFIG['MOZ_SYSTEM_THEORA']:
 +    CXXFLAGS += CONFIG['MOZ_THEORA_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_VORBIS']:
++if CONFIG['MOZ_SYSTEM_VORBIS']:
 +    CXXFLAGS += CONFIG['MOZ_VORBIS_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_TREMOR']:
++if CONFIG['MOZ_SYSTEM_TREMOR']:
 +    CXXFLAGS += CONFIG['MOZ_TREMOR_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_OPUS']:
++if CONFIG['MOZ_SYSTEM_OPUS']:
 +    CXXFLAGS += CONFIG['MOZ_OPUS_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_SPEEX']:
++if CONFIG['MOZ_SYSTEM_SPEEX']:
 +    CXXFLAGS += CONFIG['MOZ_SPEEX_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
++if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
 +    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
 +
  include('/ipc/chromium/chromium-config.mozbuild')
