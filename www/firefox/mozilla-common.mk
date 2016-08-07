@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.80 2016/08/06 08:46:59 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.81 2016/08/07 01:25:41 szptvlfn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -44,14 +44,8 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests
 
 CONFIGURE_ARGS+=	--enable-pie
 CONFIGURE_ARGS+=	--disable-tests
-#CONFIGURE_ARGS+=	--disable-pedantic
-#CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--with-pthreads
-#CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-#CONFIGURE_ARGS+=	--enable-svg
-#CONFIGURE_ARGS+=	--enable-mathml
-#CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
@@ -70,16 +64,11 @@ CONFIGURE_ARGS+=	--enable-chrome-format=flat
 CONFIGURE_ARGS+=	--disable-libjpeg-turbo
 
 CONFIGURE_ARGS+=	--disable-elf-hack
-#CONFIGURE_ARGS+=	--disable-elf-dynstr-gc
 CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--enable-gio
 CONFIGURE_ARGS+=	--enable-extensions=gio
-#CONFIGURE_ARGS+=	--disable-mochitest
-#CONFIGURE_ARGS+=	--enable-canvas
 #CONFIGURE_ARGS+=	--enable-readline
-#CONFIGURE_ARGS+=	--disable-installer
 CONFIGURE_ARGS+=	--enable-url-classifier
-#CONFIGURE_ARGS+=	--with-system-ply
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
