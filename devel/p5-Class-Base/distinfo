@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:01 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/08/07 06:21:49 wen Exp $
 
-SHA1 (Class-Base-0.06.tar.gz) = 151f85c49fe1eee65a9af49138b40c489ab25a70
-RMD160 (Class-Base-0.06.tar.gz) = f3c9feeb50336d3f087c7384471d48190009ea97
-SHA512 (Class-Base-0.06.tar.gz) = 095ed524914bac64bf5b2c2fddc6df94dd13c7a469da91857083ee0041bfbe993e6fa7c1245f1b987e6ebfa4f7393ea61c05d6396aacfe7ffabad417d529d2be
-Size (Class-Base-0.06.tar.gz) = 13171 bytes
+SHA1 (Class-Base-0.08.tar.gz) = 204717214389fd6118b4ce789418753c330636ea
+RMD160 (Class-Base-0.08.tar.gz) = 49451e6b5cfe062a9fb0b16e3cbf8a8ffe4290ba
+SHA512 (Class-Base-0.08.tar.gz) = 8076afd05fc9e863c0ec5183dd89a310eec21b717362137e619b9181d1a66f042729b0b4898561f8ba1b77e2d1c8caef2131b9000b9f4eca5d3c38aee7cc43a1
+Size (Class-Base-0.08.tar.gz) = 15890 bytes
