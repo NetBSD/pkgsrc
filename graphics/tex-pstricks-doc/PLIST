@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:00:47 markd Exp $
-share/texmf-dist/doc/generic/pstricks/Changes
-share/texmf-dist/doc/generic/pstricks/Changes.dvips
-share/texmf-dist/doc/generic/pstricks/Changes.generic
-share/texmf-dist/doc/generic/pstricks/Changes.latex
+@comment $NetBSD: PLIST,v 1.7 2016/08/07 09:01:08 markd Exp $
 share/texmf-dist/doc/generic/pstricks/PSTricks.bib
 share/texmf-dist/doc/generic/pstricks/README
 share/texmf-dist/doc/generic/pstricks/ctandir.sty
