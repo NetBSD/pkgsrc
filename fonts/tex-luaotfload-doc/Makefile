@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:29 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/07 07:17:37 markd Exp $
 
 DISTNAME=	luaotfload.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.7.2
-TEXLIVE_REV=	40902
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.7.3
+TEXLIVE_REV=	41515
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/luaotfload
 COMMENT=	Documentation for tex-luaotfload
 LICENSE=	gnu-gpl-v2
 
