@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2016/07/29 22:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/08/07 11:19:59 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2016pre1
-PKGREVISION=	3
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41304
+TEXLIVE_REV=	41662
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -443,6 +442,7 @@ DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 # depend fundus-calligra
 # depend fundus-cyr
 # depend fundus-sueterlin
+# depend fvextra
 DEPENDS+=	tex-fwlw-[0-9]*:../../print/tex-fwlw
 DEPENDS+=	tex-g-brief-[0-9]*:../../print/tex-g-brief
 # depend gauss
@@ -453,6 +453,7 @@ DEPENDS+=	tex-g-brief-[0-9]*:../../print/tex-g-brief
 # depend getfiledate
 # depend getitems
 # depend ginpenc
+# depend gitfile-info
 # depend gitinfo
 # depend gitinfo2
 # depend gitlog
@@ -619,6 +620,7 @@ DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 # depend manuscript
 # depend marginfix
 DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
+# depend markdown
 # depend mathalfa
 # depend mathastext
 # depend mathexam
@@ -729,6 +731,7 @@ DEPENDS+=	tex-octavo-[0-9]*:../../print/tex-octavo
 # depend oldstyle
 DEPENDS+=	tex-onlyamsmath-[0-9]*:../../print/tex-onlyamsmath
 # depend opcit
+# depend optidef
 DEPENDS+=	tex-optional-[0-9]*:../../print/tex-optional
 # depend options
 # depend outline
@@ -853,6 +856,7 @@ DEPENDS+=	tex-rotfloat-[0-9]*:../../print/tex-rotfloat
 # depend rtkinenc
 # depend rulercompass
 # depend rvwrite
+# depend sanitize-umlaut
 DEPENDS+=	tex-sauerj-[0-9]*:../../print/tex-sauerj
 # depend savefnmark
 # depend savesym
@@ -1070,10 +1074,12 @@ DEPENDS+=	tex-was-[0-9]*:../../print/tex-was
 # depend widetable
 # depend williams
 # depend withargs
+# depend wordcount
 # depend wordlike
 DEPENDS+=	tex-wrapfig-[0-9]*:../../print/tex-wrapfig
 DEPENDS+=	tex-xargs-[0-9]*:../../print/tex-xargs
 # depend xassoccnt
+# depend xcntperchap
 # depend xcolor-solarized
 DEPENDS+=	tex-xcomment-[0-9]*:../../print/tex-xcomment
 # depend xdoc
