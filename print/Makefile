@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.669 2016/07/29 22:36:56 wiz Exp $
+# $NetBSD: Makefile,v 1.670 2016/08/07 10:10:30 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -641,6 +641,8 @@ SUBDIR+=	tex-go-doc
 SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-cfg
 SUBDIR+=	tex-graphics-cfg-doc
+SUBDIR+=	tex-graphics-def
+SUBDIR+=	tex-graphics-def-doc
 SUBDIR+=	tex-graphics-doc
 SUBDIR+=	tex-guide-to-latex
 SUBDIR+=	tex-gustlib
