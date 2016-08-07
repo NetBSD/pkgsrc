@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2016/08/07 10:10:30 markd Exp $
+# $NetBSD: Makefile,v 1.671 2016/08/07 11:58:28 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -509,12 +509,9 @@ SUBDIR+=	tex-draftwatermark
 SUBDIR+=	tex-draftwatermark-doc
 SUBDIR+=	tex-dtxtut-doc
 SUBDIR+=	tex-dvipdfmx
-SUBDIR+=	tex-dvipdfmx-def
 SUBDIR+=	tex-dvipdfmx-doc
 SUBDIR+=	tex-dvips
 SUBDIR+=	tex-dvips-doc
-SUBDIR+=	tex-dvisvgm-def
-SUBDIR+=	tex-dvisvgm-def-doc
 SUBDIR+=	tex-easy-todo
 SUBDIR+=	tex-easy-todo-doc
 SUBDIR+=	tex-edmac
@@ -832,8 +829,6 @@ SUBDIR+=	tex-luacode
 SUBDIR+=	tex-luacode-doc
 SUBDIR+=	tex-lualatex-doc-de-doc
 SUBDIR+=	tex-luatex
-SUBDIR+=	tex-luatex-def
-SUBDIR+=	tex-luatex-def-doc
 SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-luatex85
 SUBDIR+=	tex-luatex85-doc
@@ -958,7 +953,6 @@ SUBDIR+=	tex-pdfcomment-doc
 SUBDIR+=	tex-pdfpages
 SUBDIR+=	tex-pdfpages-doc
 SUBDIR+=	tex-pdftex
-SUBDIR+=	tex-pdftex-def
 SUBDIR+=	tex-pdftex-doc
 SUBDIR+=	tex-pdftools
 SUBDIR+=	tex-pdftools-doc
@@ -1284,7 +1278,6 @@ SUBDIR+=	tex-xcomment
 SUBDIR+=	tex-xcomment-doc
 SUBDIR+=	tex-xdvi
 SUBDIR+=	tex-xetex
-SUBDIR+=	tex-xetex-def
 SUBDIR+=	tex-xetex-doc
 SUBDIR+=	tex-xetexconfig
 SUBDIR+=	tex-xetexref-doc
