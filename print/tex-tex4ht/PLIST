@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/07 09:09:41 markd Exp $
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
 share/texmf-dist/tex/generic/tex4ht/8859-6.4ht
 share/texmf-dist/tex/generic/tex4ht/CJK.4ht
@@ -142,6 +142,7 @@ share/texmf-dist/tex/generic/tex4ht/frenchb.4ht
 share/texmf-dist/tex/generic/tex4ht/g-brief.4ht
 share/texmf-dist/tex/generic/tex4ht/galician.4ht
 share/texmf-dist/tex/generic/tex4ht/gauss.4ht
+share/texmf-dist/tex/generic/tex4ht/geometry.4ht
 share/texmf-dist/tex/generic/tex4ht/german.4ht
 share/texmf-dist/tex/generic/tex4ht/germanb.4ht
 share/texmf-dist/tex/generic/tex4ht/gloss.4ht
