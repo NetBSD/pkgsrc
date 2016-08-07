@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3231 2016/08/07 06:56:57 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3232 2016/08/07 09:13:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4546,3 +4546,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Config-IniFiles to 2.93 [wen 2016-08-07]
 	Updated devel/p5-CPAN-Meta-Check to 0.013 [wen 2016-08-07]
 	Updated devel/p5-IO-Prompt to 0.997003 [wen 2016-08-07]
+	Added devel/p5-Ref-Util version 0.020 [wen 2016-08-07]
