@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/20 14:54:57 nros Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/07 11:44:43 nros Exp $
 
 DISTNAME=	qore-ssh2-module-1.0
 CATEGORIES=	security
@@ -7,7 +7,7 @@ EXTRACT_SUFX=   .tar.bz2
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	module-ssh2
 
-MAINTAINER=	nros@netbsd.org
+MAINTAINER=	nros@NetBSD.org
 COMMENT=	SSH2 module for Qore
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
