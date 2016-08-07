@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2291 2016/08/02 23:14:08 wiz Exp $
+# $NetBSD: Makefile,v 1.2292 2016/08/07 09:07:20 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1373,6 +1373,7 @@ SUBDIR+=	p5-Python-Serialise-Marshal
 SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
+SUBDIR+=	p5-Ref-Util
 SUBDIR+=	p5-Regexp-Assemble
 SUBDIR+=	p5-Regexp-MatchContext
 SUBDIR+=	p5-Regexp-Parser
