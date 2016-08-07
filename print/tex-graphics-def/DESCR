@@ -1,0 +1,6 @@
+This bundle is a combined distribution consisting of dvips.def,
+pdftex.def, luatex.def, xetex.def, dvipdfmx.def, and
+dvisvgm.def driver option files for the LaTeX graphics and
+color packages. It is hoped that by combining their source
+repositories at https://github.com/latex3/graphics-def it will
+be easier to coordinate updates.
