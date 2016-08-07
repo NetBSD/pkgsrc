@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/08/07 10:32:06 markd Exp $
 share/texmf-dist/doc/latex/graphics/README.txt
+share/texmf-dist/doc/latex/graphics/cat.eps
 share/texmf-dist/doc/latex/graphics/changes.txt
 share/texmf-dist/doc/latex/graphics/color.pdf
 share/texmf-dist/doc/latex/graphics/drivers.pdf
@@ -10,4 +11,7 @@ share/texmf-dist/doc/latex/graphics/grfguide.pdf
 share/texmf-dist/doc/latex/graphics/grfguide.tex
 share/texmf-dist/doc/latex/graphics/keyval.pdf
 share/texmf-dist/doc/latex/graphics/lscape.pdf
+share/texmf-dist/doc/latex/graphics/rotating.pdf
+share/texmf-dist/doc/latex/graphics/rotex.pdf
+share/texmf-dist/doc/latex/graphics/rotex.tex
 share/texmf-dist/doc/latex/graphics/trig.pdf
