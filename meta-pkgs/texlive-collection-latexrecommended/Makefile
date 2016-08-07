@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 04:03:15 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/07 11:22:03 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2016
+PKGNAME=	texlive-${DISTNAME}-2016.41452
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	35765
+TEXLIVE_REV=	41452
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -51,7 +51,6 @@ DEPENDS+=	tex-pdfpages-[0-9]*:../../print/tex-pdfpages
 DEPENDS+=	tex-powerdot-[0-9]*:../../print/tex-powerdot
 DEPENDS+=	tex-psfrag-[0-9]*:../../print/tex-psfrag
 DEPENDS+=	tex-rcs-[0-9]*:../../print/tex-rcs
-DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
 DEPENDS+=	tex-sansmath-[0-9]*:../../print/tex-sansmath
 DEPENDS+=	tex-section-[0-9]*:../../print/tex-section
 DEPENDS+=	tex-seminar-[0-9]*:../../print/tex-seminar
