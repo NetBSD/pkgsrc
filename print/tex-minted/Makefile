@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2016/06/16 04:06:12 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/07 09:09:39 markd Exp $
 
 DISTNAME=	minted
-PKGNAME=	tex-${DISTNAME}-2.1
-TEXLIVE_REV=	38339
+PKGNAME=	tex-${DISTNAME}-2.4
+TEXLIVE_REV=	41745
 
 MAINTAINER=	markd@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/minted
 COMMENT=	Highlighted source code for LaTeX
 LICENSE=	lppl-1.3c
 

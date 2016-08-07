@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/06/16 04:06:17 markd Exp $
+# $NetBSD: Makefile,v 1.9 2016/08/07 09:09:41 markd Exp $
 
 DISTNAME=	tools
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	40934
+PKGNAME=	tex-${DISTNAME}-2016.41688
+TEXLIVE_REV=	41688
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/latex-tools
 COMMENT=	The LaTeX standard tools bundle
 LICENSE=	lppl-1.3c
 
