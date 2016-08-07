@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:03:15 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/07 11:26:52 markd Exp $
 
 DISTNAME=	collection-mathextra
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	40076
+TEXLIVE_REV=	41676
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -15,6 +15,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 
 # depend 12many
 DEPENDS+=	tex-amstex-[0-9]*:../../print/tex-amstex
+# depend autobreak
 # depend backnaur
 # depend begriff
 # depend binomexp
@@ -29,6 +30,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend conteq
 # depend delim
 # depend delimseasy
+# depend diffcoeff
 # depend drawmatrix
 # depend ebproof
 # depend econometrics
@@ -46,6 +48,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 # depend mathpartir
 # depend mattens
+# depend mgltex
 # depend mhequ
 # depend multiobjective
 # depend natded
