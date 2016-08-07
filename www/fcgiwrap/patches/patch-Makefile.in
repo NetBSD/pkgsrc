@@ -1,0 +1,31 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/08/07 18:01:29 nils Exp $
+
+Fix double-prefixing as @mandir@ already contains @prefix@
+Comment out systemd stuff (not used with pkgsrc, and would just require gmake).
+
+--- Makefile.in.orig	2013-05-07 07:57:54.000000000 -0400
++++ Makefile.in	2013-09-07 13:17:06.000000000 -0400
+@@ -1,5 +1,5 @@
+ targetdir = $(DESTDIR)@prefix@@sbindir@
+-man8dir = $(DESTDIR)@prefix@@mandir@/man8
++man8dir = $(DESTDIR)@mandir@/man8
+ datarootdir =
+ 
+ .PHONY:	clean distclean
+@@ -10,11 +10,11 @@
+ 	install -m 755 fcgiwrap $(targetdir)
+ 	install -d -m 755 $(man8dir)
+ 	install -m 644 fcgiwrap.8 $(man8dir)
+-ifneq ("@systemdsystemunitdir@", "")
+-	install -d -m 755 $(DESTDIR)@systemdsystemunitdir@
+-	install -m 644 systemd/fcgiwrap.socket $(DESTDIR)@systemdsystemunitdir@
+-	install -m 644 systemd/fcgiwrap.service $(DESTDIR)@systemdsystemunitdir@
+-endif
++#ifneq ("@systemdsystemunitdir@", "")
++#	install -d -m 755 $(DESTDIR)@systemdsystemunitdir@
++#	install -m 644 systemd/fcgiwrap.socket $(DESTDIR)@systemdsystemunitdir@
++#	install -m 644 systemd/fcgiwrap.service $(DESTDIR)@systemdsystemunitdir@
++#endif
+ 
+ LDLIBS = -lfcgi @systemd_LIBS@
+ CFLAGS = @AM_CFLAGS@

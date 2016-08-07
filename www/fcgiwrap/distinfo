@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/07 18:01:29 nils Exp $
+
+SHA1 (fcgiwrap-1.1.0.tar.gz) = 8e7b9140b3d96f4635352bb967715477b35caf84
+RMD160 (fcgiwrap-1.1.0.tar.gz) = 7969f77430d1c51e58aa90619803caf723a50168
+Size (fcgiwrap-1.1.0.tar.gz) = 9924 bytes
+SHA1 (patch-Makefile.in) = 30615f4beb33f9ac47fdcd7cebb93bd42fa55e94
