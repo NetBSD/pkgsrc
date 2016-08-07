@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:03:14 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/07 11:11:45 markd Exp $
 
 DISTNAME=	collection-langgerman
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	40098
+TEXLIVE_REV=	41610
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -40,8 +40,8 @@ DEPENDS+=	tex-hyphen-german-[0-9]*:../../print/tex-hyphen-german
 # lshort-german is documentation only
 # lualatex-doc-de is documentation only
 # microtype-de is documentation only
+# depend milog
 # presentations is documentation only
-# pstricks-examples is documentation only
 DEPENDS+=	tex-r_und_s-[0-9]*:../../print/tex-r_und_s
 # templates-fenn is documentation only
 # templates-sommer is documentation only
