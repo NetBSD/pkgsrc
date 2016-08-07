@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2016/06/19 04:17:57 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/07 11:15:46 markd Exp $
 
 DISTNAME=	collection-latex
-PKGNAME=	texlive-${DISTNAME}-2016
+PKGNAME=	texlive-${DISTNAME}-2016.41614
 CATEGORIES=	meta-pkgs
-TEXLIVE_REV=	41011
+TEXLIVE_REV=	41614
 MASTER_SITES=	# empty
 
 MAINTAINER=	minskim@NetBSD.org
@@ -20,7 +20,6 @@ DEPENDS+=	tex-babel-english>=3.3p:../../print/tex-babel-english
 DEPENDS+=	tex-babelbib>=1.29:../../print/tex-babelbib
 DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
 DEPENDS+=	tex-colortbl>=0.1nb1:../../print/tex-colortbl
-DEPENDS+=	tex-dvisvgm-def>=1.0a:../../print/tex-dvisvgm-def
 DEPENDS+=	tex-fancyhdr>=3.1nb1:../../print/tex-fancyhdr
 DEPENDS+=	tex-fix2col>=2016:../../print/tex-fix2col
 DEPENDS+=	tex-geometry>=5.6:../../print/tex-geometry
@@ -36,7 +35,6 @@ DEPENDS+=	tex-mfnfss>=2009:../../print/tex-mfnfss
 DEPENDS+=	tex-mptopdf>=2010:../../graphics/tex-mptopdf
 DEPENDS+=	tex-natbib>=8.31b:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek>=2009nb2:../../print/tex-oberdiek
-DEPENDS+=	tex-pdftex-def>=0.04m:../../print/tex-pdftex-def
 DEPENDS+=	tex-pslatex>=2009:../../print/tex-pslatex
 DEPENDS+=	tex-psnfss>=9.2anb1:../../fonts/tex-psnfss
 DEPENDS+=	tex-pspicture>=2009:../../print/tex-pspicture
