@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3234 2016/08/07 10:38:40 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3235 2016/08/07 10:44:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4549,3 +4549,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-Ref-Util version 0.020 [wen 2016-08-07]
 	Updated devel/p5-MetaCPAN-Client to 1.022003 [wen 2016-08-07]
 	Updated geography/py-obspy to 1.0.2 [wen 2016-08-07]
+	Updated devel/p5-MouseX-Getopt to 0.37 [wen 2016-08-07]
