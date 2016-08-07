@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/06/16 04:06:04 markd Exp $
+$NetBSD: distinfo,v 1.10 2016/08/07 10:32:06 markd Exp $
 
-SHA1 (tex-graphics-41015/graphics.doc.tar.xz) = d63496f0939f1afbb5fe1a16c7a70900ed377ea6
-RMD160 (tex-graphics-41015/graphics.doc.tar.xz) = 4e2c3eedeb81cef267668cc7ab649a4dba4b3b9d
-SHA512 (tex-graphics-41015/graphics.doc.tar.xz) = e692f5616793ad421cc3856e1fa40ac5e4655db4f29ba210a19595c28cc3729b0bf6ad6a22a5c77845d57a3d68e735845a305526431ab9a40e09de7d5f184b11
-Size (tex-graphics-41015/graphics.doc.tar.xz) = 1641028 bytes
+SHA1 (tex-graphics-41688/graphics.doc.tar.xz) = a20bf6fd80ed5debeed300dea11e1ca1dfdf7c78
+RMD160 (tex-graphics-41688/graphics.doc.tar.xz) = 7155dd3d677e555a8e89c733f1f7f7a805c0c833
+SHA512 (tex-graphics-41688/graphics.doc.tar.xz) = cd466cbaf714842ee879172cd81c314c710edcde255baaf34b0de3014b9ea3b069f115f942a7565f8636c65a41c64beb59c67dbd7121a32423a813c73109bcc1
+Size (tex-graphics-41688/graphics.doc.tar.xz) = 1983820 bytes
