@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3236 2016/08/07 12:19:46 markd Exp $
+$NetBSD: CHANGES-2016,v 1.3237 2016/08/07 12:33:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4656,3 +4656,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed print/tex-luatex-def-doc [markd 2016-08-07]
 	Removed print/tex-pdftex-def [markd 2016-08-07]
 	Removed print/tex-xetex-def [markd 2016-08-07]
+	Updated ham/fldigi to 3.23.13 [mef 2016-08-07]
