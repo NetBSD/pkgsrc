@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3229 2016/08/07 06:26:52 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3230 2016/08/07 06:30:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4544,3 +4544,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime to 1.36 [wen 2016-08-07]
 	Updated devel/p5-Class-Base to 0.08 [wen 2016-08-07]
 	Updated devel/p5-Config-IniFiles to 2.93 [wen 2016-08-07]
+	Updated devel/p5-CPAN-Meta-Check to 0.013 [wen 2016-08-07]
