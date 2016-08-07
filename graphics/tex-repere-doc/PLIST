@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 13:47:42 wiz Exp $
-share/texmf-dist/doc/metapost/repere/README
+@comment $NetBSD: PLIST,v 1.2 2016/08/07 09:01:08 markd Exp $
+share/texmf-dist/doc/metapost/repere/README.md
 share/texmf-dist/doc/metapost/repere/repere-doc.pdf
 share/texmf-dist/doc/metapost/repere/repere-doc.tex

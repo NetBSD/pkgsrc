@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:00:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/08/07 09:01:08 markd Exp $
 share/texmf-dist/dvips/pstricks/pst-algparser.pro
 share/texmf-dist/dvips/pstricks/pst-dots.pro
 share/texmf-dist/dvips/pstricks/pst-dots97.pro
 share/texmf-dist/dvips/pstricks/pst-show.pro
 share/texmf-dist/dvips/pstricks/pstricks.pro
 share/texmf-dist/dvips/pstricks/pstricks97.pro
-share/texmf-dist/tex/generic/pstricks/config/Changes
 share/texmf-dist/tex/generic/pstricks/config/README.cfg
 share/texmf-dist/tex/generic/pstricks/config/distiller.cfg
 share/texmf-dist/tex/generic/pstricks/config/dvips.cfg
