@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/16 04:11:55 wen Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/07 10:36:43 wen Exp $
 bin/obspy-dataless2resp
 bin/obspy-dataless2xseed
 bin/obspy-flinn-engdahl
@@ -18,7 +18,6 @@ ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
 ${PYSITELIB}/${EGG_FILE}/entry_points.txt
 ${PYSITELIB}/${EGG_FILE}/namespace_packages.txt
 ${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/pbr.json
 ${PYSITELIB}/${EGG_FILE}/requires.txt
 ${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/obspy/CONTRIBUTORS.txt
@@ -350,10 +349,12 @@ ${PYSITELIB}/obspy/core/tests/data/Modified_IRIS_response_level_station.xml
 ${PYSITELIB}/obspy/core/tests/data/TM.SKLT..BHZ_faulty_response.xml
 ${PYSITELIB}/obspy/core/tests/data/XM.05.seed
 ${PYSITELIB}/obspy/core/tests/data/XM.05.xml
+${PYSITELIB}/obspy/core/tests/data/events_longitude_wrap.zmap
 ${PYSITELIB}/obspy/core/tests/data/iris_events.xml
 ${PYSITELIB}/obspy/core/tests/data/neries_events.xml
 ${PYSITELIB}/obspy/core/tests/data/stationxml_BK.CMB.__.LKS.xml
 ${PYSITELIB}/obspy/core/tests/data/stationxml_IU.ANTO.30.LDO.xml
+${PYSITELIB}/obspy/core/tests/data/tarfile_impostor.mseed
 ${PYSITELIB}/obspy/core/tests/data/test.tar
 ${PYSITELIB}/obspy/core/tests/data/test.tar.bz2
 ${PYSITELIB}/obspy/core/tests/data/test.tar.gz
@@ -363,9 +364,11 @@ ${PYSITELIB}/obspy/core/tests/images/basemap_combined_stations-events.png
 ${PYSITELIB}/obspy/core/tests/images/catalog-basemap1.png
 ${PYSITELIB}/obspy/core/tests/images/catalog-basemap2.png
 ${PYSITELIB}/obspy/core/tests/images/catalog-basemap3.png
+${PYSITELIB}/obspy/core/tests/images/catalog-basemap_long-wrap.png
 ${PYSITELIB}/obspy/core/tests/images/catalog-cartopy1.png
 ${PYSITELIB}/obspy/core/tests/images/catalog-cartopy2.png
 ${PYSITELIB}/obspy/core/tests/images/catalog-cartopy3.png
+${PYSITELIB}/obspy/core/tests/images/catalog-cartopy_long-wrap.png
 ${PYSITELIB}/obspy/core/tests/images/channel_response.png
 ${PYSITELIB}/obspy/core/tests/images/event.png
 ${PYSITELIB}/obspy/core/tests/images/image.png
@@ -618,6 +621,7 @@ ${PYSITELIB}/obspy/imaging/tests/images/plot.png
 ${PYSITELIB}/obspy/imaging/tests/images/plot_nomerge.png
 ${PYSITELIB}/obspy/imaging/tests/images/ppsd.png
 ${PYSITELIB}/obspy/imaging/tests/images/ppsd_cumulative.png
+${PYSITELIB}/obspy/imaging/tests/images/ppsd_freq.png
 ${PYSITELIB}/obspy/imaging/tests/images/scan.png
 ${PYSITELIB}/obspy/imaging/tests/images/scan_mult_sampl.png
 ${PYSITELIB}/obspy/imaging/tests/images/scan_times.png
@@ -747,6 +751,7 @@ ${PYSITELIB}/obspy/io/cmtsolution/tests/__init__.pyc
 ${PYSITELIB}/obspy/io/cmtsolution/tests/__init__.pyo
 ${PYSITELIB}/obspy/io/cmtsolution/tests/data/CMTSOLUTION
 ${PYSITELIB}/obspy/io/cmtsolution/tests/data/CMTSOLUTION_EXPLOSION
+${PYSITELIB}/obspy/io/cmtsolution/tests/data/CMTSOLUTION_NEW
 ${PYSITELIB}/obspy/io/cmtsolution/tests/data/MULTIPLE_EVENTS
 ${PYSITELIB}/obspy/io/cmtsolution/tests/test_core.py
 ${PYSITELIB}/obspy/io/cmtsolution/tests/test_core.pyc
@@ -843,6 +848,7 @@ ${PYSITELIB}/obspy/io/gse2/tests/data/GRF_031102_0225.GSE.wrong_chksum
 ${PYSITELIB}/obspy/io/gse2/tests/data/STA2.testlines
 ${PYSITELIB}/obspy/io/gse2/tests/data/STA2.testlines_out
 ${PYSITELIB}/obspy/io/gse2/tests/data/acc.gse
+${PYSITELIB}/obspy/io/gse2/tests/data/boa___00_07a.gse
 ${PYSITELIB}/obspy/io/gse2/tests/data/broken_head.gse2
 ${PYSITELIB}/obspy/io/gse2/tests/data/loc_RJOB20050831023349.z
 ${PYSITELIB}/obspy/io/gse2/tests/data/loc_RJOB20050831023349.z.wrong_chksum
@@ -1066,8 +1072,11 @@ ${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc.hyp
 ${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc.obs
 ${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc.qml
 ${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc.scat
+${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc_custom.hyp
+${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc_custom.qml
 ${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc_scat.npy
 ${PYSITELIB}/obspy/io/nlloc/tests/data/nlloc_scat_converted.npy
+${PYSITELIB}/obspy/io/nlloc/tests/data/vanua.sum.grid0.loc.hyp
 ${PYSITELIB}/obspy/io/nlloc/tests/test_core.py
 ${PYSITELIB}/obspy/io/nlloc/tests/test_core.pyc
 ${PYSITELIB}/obspy/io/nlloc/tests/test_core.pyo
@@ -1167,6 +1176,7 @@ ${PYSITELIB}/obspy/io/sac/tests/data/dis.G.SCZ.__.BHE_short
 ${PYSITELIB}/obspy/io/sac/tests/data/interpolation_test_interpolated_delta_0.003.sac
 ${PYSITELIB}/obspy/io/sac/tests/data/interpolation_test_interpolated_delta_0.077.sac
 ${PYSITELIB}/obspy/io/sac/tests/data/interpolation_test_random_waveform_delta_0.01_npts_50.sac
+${PYSITELIB}/obspy/io/sac/tests/data/non_ascii.sac
 ${PYSITELIB}/obspy/io/sac/tests/data/null_terminated.sac
 ${PYSITELIB}/obspy/io/sac/tests/data/seism-longer.sac
 ${PYSITELIB}/obspy/io/sac/tests/data/seism-shorter.sac
