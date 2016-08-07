@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/09 02:14:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/07 09:01:08 markd Exp $
 share/texmf-dist/tex/latex/animate/animate.sty
-share/texmf-dist/tex/latex/animate/animfp.sty
