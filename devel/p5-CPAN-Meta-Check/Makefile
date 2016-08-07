@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/07 06:29:18 wen Exp $
 
-DISTNAME=	CPAN-Meta-Check-0.012
+DISTNAME=	CPAN-Meta-Check-0.013
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
@@ -14,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 #DEPENDS+=	{perl>=5.16.0,p5-CPAN-Meta>=2.132830}:../../devel/p5-CPAN-Meta
 #DEPENDS+=	{perl>=5.18.0,p5-CPAN-Meta-Requirements>=2.122}:../../devel/p5-CPAN-Meta-Requirements
 
-# use BUILD_DEPENDS+= as 'make test' dependency 
+# use BUILD_DEPENDS+= as 'make test' dependency
 # perl 5.20.0 has 1.000019, but test wants following version
 BUILD_DEPENDS+=	p5-Module-Metadata>=1.00023:../../devel/p5-Module-Metadata
 
