@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2016/04/23 12:52:04 adam Exp $
+$NetBSD: distinfo,v 1.7 2016/08/07 13:36:09 mef Exp $
 
-SHA1 (libuv-1.9.0.tar.gz) = 0835eb5d9589e29b52b4032cce2c36fd1f98e546
-RMD160 (libuv-1.9.0.tar.gz) = ed73b9814154693d736c3ee1257d2bfce71e6280
-SHA512 (libuv-1.9.0.tar.gz) = f062b8386c68734c394287a272f2b101b1fd854d75ca53c2ccff860f201a5539ae0eae21a6474f6a5683d00653c397c7fe7badeb3ba05e83d9a43d12a2f8b181
-Size (libuv-1.9.0.tar.gz) = 1056331 bytes
+SHA1 (libuv-1.9.1.tar.gz) = fa1da5385706a477fd660aa6ee36a63b71f185ab
+RMD160 (libuv-1.9.1.tar.gz) = 7bb68e5e105ecb2ed7a4af85f76a3772349e0e36
+SHA512 (libuv-1.9.1.tar.gz) = ad5f274f75c4c19bedbdeed8204ef8561b8c6a2697650402bf21cbf40ace35c104e089b42adc737d27b4a105283d9463ac02b6dadaec29aa6469f10b69ab3d0a
+Size (libuv-1.9.1.tar.gz) = 1060134 bytes
 SHA1 (patch-autogen.sh) = a5f48189bfb17624c545a80626ea311b7755d232
