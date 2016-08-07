@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/25 04:41:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/07 09:09:40 markd Exp $
 share/texmf-dist/tex/latex/sttools/cuted.sty
 share/texmf-dist/tex/latex/sttools/floatpag.sty
 share/texmf-dist/tex/latex/sttools/flushend.sty
-share/texmf-dist/tex/latex/sttools/marginal.sty
 share/texmf-dist/tex/latex/sttools/midfloat.sty
 share/texmf-dist/tex/latex/sttools/stabular.sty
 share/texmf-dist/tex/latex/sttools/stfloats.sty
