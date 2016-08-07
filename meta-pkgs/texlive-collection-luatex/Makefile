@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/07/14 12:18:10 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/07 11:24:24 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	39902
+TEXLIVE_REV=	41654
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -33,13 +33,13 @@ DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
 # depend luamplib
 DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
 # depend luasseq
-DEPENDS+=	tex-luatex-def-[0-9]*:../../print/tex-luatex-def
 DEPENDS+=	tex-luatex85-[0-9]*:../../print/tex-luatex85
 DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
 # depend luatexko
 # depend luatextra
 # depend luatodonotes
 # depend luaxml
+# depend nodetree
 # depend odsfile
 # depend placeat
 # depend selnolig
