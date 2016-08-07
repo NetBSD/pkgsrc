@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/07 10:54:52 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2016pre1
-PKGREVISION=	1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41149
+TEXLIVE_REV=	41634
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -41,6 +40,7 @@ DEPENDS+=	tex-biblatex-[0-9]*:../../print/tex-biblatex
 # depend biblatex-gost
 # depend biblatex-historian
 # depend biblatex-ieee
+# depend biblatex-ijsra
 # depend biblatex-iso690
 # depend biblatex-juradiss
 # depend biblatex-luh-ipw
@@ -51,6 +51,7 @@ DEPENDS+=	tex-biblatex-[0-9]*:../../print/tex-biblatex
 # depend biblatex-musuos
 # depend biblatex-nature
 # depend biblatex-nejm
+# depend biblatex-nottsclassic
 # depend biblatex-opcit-booktitle
 # depend biblatex-philosophy
 # depend biblatex-phys
@@ -94,6 +95,7 @@ DEPENDS+=	tex-footbib-[0-9]*:../../print/tex-footbib
 DEPENDS+=	tex-harvard-[0-9]*:../../print/tex-harvard
 # depend harvmac
 # depend historische-zeitschrift
+# depend ietfbibs
 # depend ijqc
 # depend inlinebib
 # depend iopart-num
