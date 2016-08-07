@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/07 07:17:37 markd Exp $
 share/texmf-dist/doc/fonts/oldstandard/FONTLOG.txt
 share/texmf-dist/doc/fonts/oldstandard/OFL-FAQ.txt
 share/texmf-dist/doc/fonts/oldstandard/OFL.txt
@@ -6,12 +6,12 @@ share/texmf-dist/doc/fonts/oldstandard/README
 share/texmf-dist/doc/fonts/oldstandard/didot-de.png
 share/texmf-dist/doc/fonts/oldstandard/didot-fr.png
 share/texmf-dist/doc/fonts/oldstandard/gendocs.sh
-share/texmf-dist/doc/fonts/oldstandard/genfonts.sh
 share/texmf-dist/doc/fonts/oldstandard/greek-contextual.png
 share/texmf-dist/doc/fonts/oldstandard/oldstand-manual.pdf
 share/texmf-dist/doc/fonts/oldstandard/oldstand-manual.tex
+share/texmf-dist/doc/fonts/oldstandard/oldstandard-samples.pdf
+share/texmf-dist/doc/fonts/oldstandard/oldstandard-samples.tex
 share/texmf-dist/doc/fonts/oldstandard/opentype.png
-share/texmf-dist/doc/fonts/oldstandard/ost-generate.py
 share/texmf-dist/doc/fonts/oldstandard/serbian.png
 share/texmf-dist/doc/fonts/oldstandard/spadmin-add.png
 share/texmf-dist/doc/fonts/oldstandard/spadmin.png

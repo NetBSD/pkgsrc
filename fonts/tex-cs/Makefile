@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:27 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/07 07:17:36 markd Exp $
 
 DISTNAME=	cs
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	40785
+PKGNAME=	tex-${DISTNAME}-2016.41553
+TEXLIVE_REV=	41553
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/csfonts

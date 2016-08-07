@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 03:57:27 markd Exp $
+$NetBSD: distinfo,v 1.4 2016/08/07 07:17:36 markd Exp $
 
-SHA1 (tex-cs-40785/cs.tar.xz) = f88ce14c377db824ae9558ca202de083c19c2c45
-RMD160 (tex-cs-40785/cs.tar.xz) = 7912d3d36802adafeec66546c1ee8ce1014f06bf
-SHA512 (tex-cs-40785/cs.tar.xz) = 01099dff4a864db84f88ffe42515932d42325c3a4d848cdc1b46a8c6ff64d7ba036812e202712c5901cbe7c02677bc20fee5e345f05431afa7e51802df91b588
-Size (tex-cs-40785/cs.tar.xz) = 1798416 bytes
+SHA1 (tex-cs-41553/cs.tar.xz) = 3a1f989e804d4520cf1650315016cc79a413a64e
+RMD160 (tex-cs-41553/cs.tar.xz) = 511fd8eacf896b2323235a2f44b270ff9ac3e3ab
+SHA512 (tex-cs-41553/cs.tar.xz) = 62afa172f42518fadd2a26d1328503f237a3e6b048c47c8e07cd408903b20ff909457c7592baa1ff6591fd5a84667005ffb1247d3038d0317b48d19714c89770
+Size (tex-cs-41553/cs.tar.xz) = 1798752 bytes
