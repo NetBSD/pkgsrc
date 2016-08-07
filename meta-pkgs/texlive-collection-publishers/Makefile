@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:03:16 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/07 11:31:58 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41010
+TEXLIVE_REV=	41769
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -34,6 +34,7 @@ DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend articleingud
 # depend asaetr
 # depend ascelike
+# depend aucklandthesis
 # depend bangorcsthesis
 # depend beamer-FUBerlin
 # depend beamer-verona
@@ -46,6 +47,7 @@ DEPENDS+=	tex-arsclassica-[0-9]*:../../print/tex-arsclassica
 # depend cleanthesis
 # depend cmpj
 # depend confproc
+# depend cquthesis
 # depend dccpaper
 # depend dithesis
 # depend ebook
@@ -70,9 +72,11 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend h2020proposal
 # depend har2nat
 # depend hobete
+# depend hustthesis
 # depend icsv
 # depend ieeepes
 # depend ijmart
+# depend ijsra
 # depend imac
 # depend imtekda
 # depend jacow
@@ -94,6 +98,7 @@ DEPENDS+=	tex-elsarticle-[0-9]*:../../print/tex-elsarticle
 # depend muthesis
 # depend mynsfc
 # depend nature
+# depend navydocs
 # depend nddiss
 # depend ndsu-thesis
 # depend nwejm
@@ -153,6 +158,7 @@ DEPENDS+=	tex-toptesi-[0-9]*:../../print/tex-toptesi
 # depend uiucredborder
 # depend uiucthesis
 # depend ulthese
+# depend umbclegislation
 # depend umthesis
 # depend umich-thesis
 # depend unamth-template
