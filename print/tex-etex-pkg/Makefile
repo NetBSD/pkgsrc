@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/06/16 04:06:03 markd Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/07 09:09:38 markd Exp $
 
 DISTNAME=	etex-pkg
-PKGNAME=	tex-${DISTNAME}-2.6
-TEXLIVE_REV=	39355
+PKGNAME=	tex-${DISTNAME}-2.7
+TEXLIVE_REV=	41784
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/etex-pkg

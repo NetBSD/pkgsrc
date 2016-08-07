@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/06/16 04:06:17 markd Exp $
+$NetBSD: distinfo,v 1.10 2016/08/07 09:09:41 markd Exp $
 
-SHA1 (tex-tools-40934/tools.doc.tar.xz) = 55949d02ebdb5d77a7fcf3baff57aca6ea41e821
-RMD160 (tex-tools-40934/tools.doc.tar.xz) = 7b6b65d14ceb1ef43ec70cc1c453d21c38936803
-SHA512 (tex-tools-40934/tools.doc.tar.xz) = 5d0bfd211dd5ef463632b4836541d2e5abaf3c7c49ddfdc7f5d1caf3a3429b4000c3b37a913ae04f6ba07989ba619825b2bb25496e87d3d3e53ff76b5b0765ef
-Size (tex-tools-40934/tools.doc.tar.xz) = 5145960 bytes
+SHA1 (tex-tools-41688/tools.doc.tar.xz) = 240d3c47518e7d0bd4c9ebd88d1a219337353675
+RMD160 (tex-tools-41688/tools.doc.tar.xz) = 139f0938edc79d4b57780f458de1d1b5d86b367e
+SHA512 (tex-tools-41688/tools.doc.tar.xz) = 4c98ec7e7da12b4e7af70925341df73188b89aac244378c04b3c95d064a881297226aae80a6fc008217aed3ee34a470387d1cce57d9dbc9848b8eeb6566eee8f
+Size (tex-tools-41688/tools.doc.tar.xz) = 5151636 bytes

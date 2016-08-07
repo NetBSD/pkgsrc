@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/07 09:09:37 markd Exp $
 bin/csplain
 bin/pdfcsplain
 share/texmf-dist/tex/csplain/base/csenc-k.tex
@@ -58,6 +58,7 @@ share/texmf-dist/tex/csplain/fonts/dcfonts.tex
 share/texmf-dist/tex/csplain/fonts/ecfonts.tex
 share/texmf-dist/tex/csplain/fonts/exchars.tex
 share/texmf-dist/tex/csplain/fonts/ff-mac.tex
+share/texmf-dist/tex/csplain/fonts/glyphtounicode-cs.tex
 share/texmf-dist/tex/csplain/fonts/ki-math.tex
 share/texmf-dist/tex/csplain/fonts/kp-fonts.tex
 share/texmf-dist/tex/csplain/fonts/kp-math.tex
