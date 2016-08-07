@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 03:57:27 markd Exp $
+$NetBSD: distinfo,v 1.4 2016/08/07 07:17:36 markd Exp $
 
-SHA1 (tex-erewhon-39604/erewhon.tar.xz) = b1f59973e095dcc5284bc5489416231450c59780
-RMD160 (tex-erewhon-39604/erewhon.tar.xz) = 9c1b606592db65fd0fd65598f98c8cce8c769665
-SHA512 (tex-erewhon-39604/erewhon.tar.xz) = c547c326e6165a02fe40689d176fb9b7cb3757bd6d60f3f5748a712430eb37cd07c0912d2f7f137afd5d67958926f08c40eab6ccd6468106a96534f7dbfb77ec
-Size (tex-erewhon-39604/erewhon.tar.xz) = 2341620 bytes
+SHA1 (tex-erewhon-41392/erewhon.tar.xz) = c032412511edc6c1921c1064b82f95b623636bbd
+RMD160 (tex-erewhon-41392/erewhon.tar.xz) = 4f4ecc436a9ed1e2964d82656499daf99701c980
+SHA512 (tex-erewhon-41392/erewhon.tar.xz) = effe0796c8e3a0ed40630a28d5d704b2b490da7b3995bf09e1a7a5f037747b21c6c4882f6b518bbb3581bff3e73e679b9d158c59c45821dde56b66363fb5c209
+Size (tex-erewhon-41392/erewhon.tar.xz) = 2341016 bytes
