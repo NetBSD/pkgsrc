@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 04:03:14 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/07 11:13:18 markd Exp $
 
 DISTNAME=	collection-langindic
 PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	35737
+TEXLIVE_REV=	41661
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -15,7 +15,6 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend bangtex
 # depend bengali
 # depend burmese
-# depend devnag
 # depend ebong
 DEPENDS+=	tex-hyphen-indic-[0-9]*:../../print/tex-hyphen-indic
 DEPENDS+=	tex-hyphen-sanskrit-[0-9]*:../../print/tex-hyphen-sanskrit
