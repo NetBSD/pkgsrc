@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/08/09 06:14:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/07 07:17:37 markd Exp $
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-Bold.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-BoldItalic.afm
 share/texmf-dist/fonts/afm/public/xcharter/XCharter-Italic.afm
@@ -179,9 +179,9 @@ share/texmf-dist/fonts/tfm/public/xcharter/XCharter-Roman-tosf-t1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter-Roman-tosf-ts1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter-Roman-tosf-ts1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter-osf.tfm
-share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-to.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-ly1.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-ot1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-sc-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-sc-ly1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-sc-ot1--base.tfm
@@ -192,9 +192,9 @@ share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-t1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-t1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-ts1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Bold-tosf-ts1.tfm
-share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-to.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-ly1.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-ot1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-sc-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-sc-ly1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-sc-ot1--base.tfm
@@ -205,9 +205,9 @@ share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-t1--base.tf
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-t1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-ts1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-BoldItalic-tosf-ts1.tfm
-share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-to.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-ly1.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-ot1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-sc-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-sc-ly1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-sc-ot1--base.tfm
@@ -218,9 +218,9 @@ share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-t1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-t1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-ts1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Italic-tosf-ts1.tfm
-share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-to.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-tosf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-tosf-ly1.tfm
+share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-tosf-ot1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-tosf-sc-ly1--base.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-tosf-sc-ly1.tfm
 share/texmf-dist/fonts/tfm/public/xcharter/XCharter1-Roman-tosf-sc-ot1--base.tfm
@@ -297,29 +297,29 @@ share/texmf-dist/fonts/vf/public/xcharter/XCharter-Roman-tosf-sc-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter-Roman-tosf-sc-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter-Roman-tosf-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter-Roman-tosf-ts1.vf
-share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-to.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-ly1.vf
+share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-sc-ly1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-sc-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-sc-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Bold-tosf-ts1.vf
-share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-to.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-ly1.vf
+share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-sc-ly1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-sc-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-sc-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-BoldItalic-tosf-ts1.vf
-share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-to.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-ly1.vf
+share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-sc-ly1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-sc-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-sc-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-t1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Italic-tosf-ts1.vf
-share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-to.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-tosf-ly1.vf
+share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-tosf-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-tosf-sc-ly1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-tosf-sc-ot1.vf
 share/texmf-dist/fonts/vf/public/xcharter/XCharter1-Roman-tosf-sc-t1.vf
