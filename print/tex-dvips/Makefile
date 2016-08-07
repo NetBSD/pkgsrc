@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2016/06/16 04:06:03 markd Exp $
+# $NetBSD: Makefile,v 1.20 2016/08/07 09:09:38 markd Exp $
 
 DISTNAME=	dvips
-PKGNAME=	tex-${DISTNAME}-2016
-TEXLIVE_REV=	41149
+PKGNAME=	tex-${DISTNAME}-2016.41704
+TEXLIVE_REV=	41704
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/dvips
