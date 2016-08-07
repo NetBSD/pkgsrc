@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/06/16 04:06:04 markd Exp $
+$NetBSD: distinfo,v 1.11 2016/08/07 09:09:38 markd Exp $
 
-SHA1 (tex-hyperref-40988/hyperref.doc.tar.xz) = b05465e53b047c3eeb18602072ec20f8c4f0986b
-RMD160 (tex-hyperref-40988/hyperref.doc.tar.xz) = a366e612416743d8b55d4aa990cf827f8731532b
-SHA512 (tex-hyperref-40988/hyperref.doc.tar.xz) = 6c80a195b9c7b50e83db5232d3352ed0595fc659b6546efa6c3a80c329ba71933b0ae2ec55c0686c74f18453aea0f8118facf17e51578eb97738b5006f90564e
-Size (tex-hyperref-40988/hyperref.doc.tar.xz) = 2178076 bytes
+SHA1 (tex-hyperref-41539/hyperref.doc.tar.xz) = 24de6ee9c3b5320f3f2734de0c274ad715ea72e4
+RMD160 (tex-hyperref-41539/hyperref.doc.tar.xz) = 21f1a8f54a27635a0c0402ea26160516ce82cb87
+SHA512 (tex-hyperref-41539/hyperref.doc.tar.xz) = f7ede2dc4ee7a062b82ff2efcb760a47a4cfe6b52f696103cb19ac59d7137275660df8249c17c0878feb4c25a2d9caa4a3777e895827170bf88d27ad33baac2d
+Size (tex-hyperref-41539/hyperref.doc.tar.xz) = 3368436 bytes
