@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2016/07/14 12:14:45 markd Exp $
+# $NetBSD: Makefile,v 1.10 2016/08/07 11:28:50 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	40656
+TEXLIVE_REV=	41694
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -18,6 +18,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend asypictureb
 # depend autoarea
 # depend bardiag
+# depend binarytree
 # depend blochsphere
 # depend bloques
 # depend blox
@@ -42,6 +43,7 @@ DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
 # depend dratex
 # depend drs
 # depend duotenzor
+# depend ecgdraw
 DEPENDS+=	tex-eepic-[0-9]*:../../graphics/tex-eepic
 # depend ellipse
 # depend epspdf
