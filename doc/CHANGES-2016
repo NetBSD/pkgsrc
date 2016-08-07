@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3226 2016/08/06 15:03:51 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3227 2016/08/07 04:44:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4541,3 +4541,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/octave to 4.0.3 [prlw1 2016-08-06]
 	Updated security/p5-Module-Signature to 0.80 [mef 2016-08-06]
 	Updated devel/cmocka to 1.0.1 [mef 2016-08-06]
+	Updated time/p5-DateTime to 1.36 [wen 2016-08-07]
