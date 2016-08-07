@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/22 12:22:43 nros Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/07 11:44:43 nros Exp $
 
 DISTNAME=	qore-xml-module-1.3
 CATEGORIES=	textproc
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	module-xml
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 
-MAINTAINER=	nros@netbsd.org
+MAINTAINER=	nros@NetBSD.org
 COMMENT=	XML module for Qore
 HOMEPAGE=	http://www.qore.org/
 LICENSE=	gnu-lgpl-v2.1 OR mit
