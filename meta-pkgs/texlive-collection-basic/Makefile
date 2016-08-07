@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:03:13 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/07 10:51:20 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	texlive-${DISTNAME}-2016
+PKGNAME=	texlive-${DISTNAME}-2016.41616
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41149
+TEXLIVE_REV=	41616
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -15,12 +15,12 @@ DEPENDS+=	tex-amsfonts>=3.04:../../fonts/tex-amsfonts
 DEPENDS+=	tex-bibtex>=0.99dnb1:../../print/tex-bibtex
 DEPENDS+=	tex-cm>=2013:../../fonts/tex-cm
 DEPENDS+=	tex-dvipdfmx>=2013:../../print/tex-dvipdfmx
-DEPENDS+=	tex-dvipdfmx-def>=3.3:../../print/tex-dvipdfmx-def
 DEPENDS+=	tex-dvips>=2013:../../print/tex-dvips
 DEPENDS+=	tex-enctex>=2013:../../print/tex-enctex
 DEPENDS+=	tex-etex>=2.1.31600:../../print/tex-etex
 DEPENDS+=	tex-etex-pkg>=2.0:../../print/tex-etex-pkg
 DEPENDS+=	tex-glyphlist>=2.95:../../fonts/tex-glyphlist
+DEPENDS+=	tex-graphics-def>=2016:../../print/tex-graphics-def
 DEPENDS+=	gsftopkk>=1.19.2nb4:../../fonts/gsftopkk
 DEPENDS+=	tex-hyph-utf8>=2013:../../print/tex-hyph-utf8
 DEPENDS+=	tex-hyphen-base>=2013:../../print/tex-hyphen-base
