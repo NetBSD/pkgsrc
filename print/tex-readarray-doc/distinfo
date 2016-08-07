@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:41 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/08/07 09:09:40 markd Exp $
 
-SHA1 (tex-readarray-30489/readarray.doc.tar.xz) = 428916ba68ad34e222c86248ae2a4882dd450d9f
-RMD160 (tex-readarray-30489/readarray.doc.tar.xz) = 30bf5048e05534774ddbb3e7fc0ee40b364c01c3
-SHA512 (tex-readarray-30489/readarray.doc.tar.xz) = 59b00e326b06553216d4041b131d5fe453b4c651c65324b3e2bc58c6df90be43e3c07d3d26a31ac8e960cc46f8fbc21279aa485ecac550c32205eb50e345f3f9
-Size (tex-readarray-30489/readarray.doc.tar.xz) = 221512 bytes
+SHA1 (tex-readarray-41652/readarray.doc.tar.xz) = b4820e792ae85f764ed48f47cc34a9ab0d53bf16
+RMD160 (tex-readarray-41652/readarray.doc.tar.xz) = c9e883870614807d020b9cd735b8d12ef7d929cc
+SHA512 (tex-readarray-41652/readarray.doc.tar.xz) = 4f874a9034270292dcb3cc594e532ad94219ca706bb39ff73a74c10a813f6c907e74fe03bf64e93b1e22f24989bf1106e8fd05faede6e1e827798b7606b26b7d
+Size (tex-readarray-41652/readarray.doc.tar.xz) = 222484 bytes

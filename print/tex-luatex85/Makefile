@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/07/14 12:02:44 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/07 09:09:39 markd Exp $
 
 DISTNAME=	luatex85
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	39902
+PKGNAME=	tex-${DISTNAME}-1.4
+TEXLIVE_REV=	41456
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/luatex85
