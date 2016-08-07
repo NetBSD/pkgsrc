@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:02 markd Exp $
+$NetBSD: distinfo,v 1.6 2016/08/07 09:09:37 markd Exp $
 
-SHA1 (tex-csquotes-39538/csquotes.doc.tar.xz) = 655bdcd8ea927437b14da8b177edabe3f70f3f83
-RMD160 (tex-csquotes-39538/csquotes.doc.tar.xz) = 9b4d0d51db132cbfa247eb3bcebe4d4aaa9f6c29
-SHA512 (tex-csquotes-39538/csquotes.doc.tar.xz) = fda66809965411a6fe865109e228b5f95154316bd0a717f443d1c1449328c2b749ecc514f28d5f00c2a1ccc1c5a5f8b0544f40e4fde2008bab7a8bf0aec04607
-Size (tex-csquotes-39538/csquotes.doc.tar.xz) = 308428 bytes
+SHA1 (tex-csquotes-41696/csquotes.doc.tar.xz) = b476151280b1cfa0be1391145db5eff985fdba14
+RMD160 (tex-csquotes-41696/csquotes.doc.tar.xz) = 9c4faac0fa6351ff73735b133bfd3c1e23134957
+SHA512 (tex-csquotes-41696/csquotes.doc.tar.xz) = bc2fa8363ed0d19f57be86e82bb4223899949999b4c07a2f99dc16c32e1ba1f13bbc3b28ff063815817afb74cdda7c75a26bb67e7d58929c32b6c2d5ee8788bb
+Size (tex-csquotes-41696/csquotes.doc.tar.xz) = 313388 bytes

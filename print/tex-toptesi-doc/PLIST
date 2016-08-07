@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/07 09:09:41 markd Exp $
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.tex
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.pdf
@@ -27,15 +27,11 @@ share/texmf-dist/doc/latex/toptesi/topfront-example.pdf
 share/texmf-dist/doc/latex/toptesi/topfront-example.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-example-con-frontespizio.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-example-con-frontespizio.tex
-share/texmf-dist/doc/latex/toptesi/toptesi-example-xetex.pdf
-share/texmf-dist/doc/latex/toptesi/toptesi-example-xetex.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-example-luatex.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-example-luatex.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-example.cfg
 share/texmf-dist/doc/latex/toptesi/toptesi-example.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-example.tex
-share/texmf-dist/doc/latex/toptesi/toptesi-example.xmpdata
-share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex-def.ps
-share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.cfg
-share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.pdf
-share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.tex
-share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.xmpdata
+share/texmf-dist/doc/latex/toptesi/toptesi-it.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-it.tex
 share/texmf-dist/doc/latex/toptesi/toptesi.pdf

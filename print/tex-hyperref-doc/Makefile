@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2016/06/16 04:06:04 markd Exp $
+# $NetBSD: Makefile,v 1.10 2016/08/07 09:09:38 markd Exp $
 
 DISTNAME=	hyperref.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-6.83n
-TEXLIVE_REV=	40988
+PKGNAME=	tex-${DISTNAME:S/./-/}-6.83q
+TEXLIVE_REV=	41539
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/hyperref
 COMMENT=	Documentation for tex-hyperref
 LICENSE=	lppl-1.3c
 

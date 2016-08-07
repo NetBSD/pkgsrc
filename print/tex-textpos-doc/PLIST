@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/07 09:09:41 markd Exp $
 share/texmf-dist/doc/latex/textpos/LICENCE
 share/texmf-dist/doc/latex/textpos/README
-share/texmf-dist/doc/latex/textpos/VERSION-1.7j
-share/texmf-dist/doc/latex/textpos/examples/README-examples
+share/texmf-dist/doc/latex/textpos/VERSION-1.8
+share/texmf-dist/doc/latex/textpos/examples/README.examples
 share/texmf-dist/doc/latex/textpos/examples/t1.tex
+share/texmf-dist/doc/latex/textpos/examples/t10.tex
 share/texmf-dist/doc/latex/textpos/examples/t2.tex
 share/texmf-dist/doc/latex/textpos/examples/t3.tex
 share/texmf-dist/doc/latex/textpos/examples/t4.tex
@@ -11,6 +12,7 @@ share/texmf-dist/doc/latex/textpos/examples/t5.tex
 share/texmf-dist/doc/latex/textpos/examples/t6.tex
 share/texmf-dist/doc/latex/textpos/examples/t7.tex
 share/texmf-dist/doc/latex/textpos/examples/t8.tex
+share/texmf-dist/doc/latex/textpos/examples/t9.tex
 share/texmf-dist/doc/latex/textpos/niepraschk-eso-pic.pdf
 share/texmf-dist/doc/latex/textpos/niepraschk-eso-pic.tex
 share/texmf-dist/doc/latex/textpos/textpos-example.tex
