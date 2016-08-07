@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 13:47:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/07 09:01:08 markd Exp $
 
 DISTNAME=	repere.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-13.12
-TEXLIVE_REV=	32455
+PKGNAME=	tex-${DISTNAME:S/./-/}-16.06
+TEXLIVE_REV=	41513
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/repere
