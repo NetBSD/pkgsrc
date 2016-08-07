@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2016/07/17 21:59:59 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2016/08/07 07:19:04 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -486,6 +486,7 @@ SUBDIR+=	tex-fontname-doc
 SUBDIR+=	tex-fontools
 SUBDIR+=	tex-fontools-doc
 SUBDIR+=	tex-fonts-tlwg
+SUBDIR+=	tex-fonts-tlwg-doc
 SUBDIR+=	tex-fontspec
 SUBDIR+=	tex-fontspec-doc
 SUBDIR+=	tex-fourier
