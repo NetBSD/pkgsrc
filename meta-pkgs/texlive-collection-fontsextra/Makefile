@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:03:13 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/07 11:02:11 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41166
+TEXLIVE_REV=	41736
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -26,8 +26,8 @@ DEPENDS+=	tex-antiqua-[0-9]*:../../fonts/tex-antiqua
 DEPENDS+=	tex-antt-[0-9]*:../../fonts/tex-antt
 DEPENDS+=	tex-archaic-[0-9]*:../../fonts/tex-archaic
 DEPENDS+=	tex-arev-[0-9]*:../../fonts/tex-arev
-DEPENDS+=	tex-ascii-font-[0-9]*:../../fonts/tex-ascii-font
 # depend asapsym
+DEPENDS+=	tex-ascii-font-[0-9]*:../../fonts/tex-ascii-font
 DEPENDS+=	tex-aspectratio-[0-9]*:../../fonts/tex-aspectratio
 DEPENDS+=	tex-astro-[0-9]*:../../fonts/tex-astro
 DEPENDS+=	tex-augie-[0-9]*:../../fonts/tex-augie
@@ -124,7 +124,6 @@ DEPENDS+=	tex-fonetika-[0-9]*:../../fonts/tex-fonetika
 DEPENDS+=	tex-fontawesome-[0-9]*:../../fonts/tex-fontawesome
 DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 # depend fonts-churchslavonic
-# depend old-arrows
 DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
 DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
 DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
@@ -197,6 +196,7 @@ DEPENDS+=	tex-ocr-b-[0-9]*:../../fonts/tex-ocr-b
 DEPENDS+=	tex-ocr-b-outline-[0-9]*:../../fonts/tex-ocr-b-outline
 DEPENDS+=	tex-ogham-[0-9]*:../../fonts/tex-ogham
 DEPENDS+=	tex-oinuit-[0-9]*:../../print/tex-oinuit
+# depend old-arrows
 DEPENDS+=	tex-oldlatin-[0-9]*:../../fonts/tex-oldlatin
 DEPENDS+=	tex-oldstandard-[0-9]*:../../fonts/tex-oldstandard
 DEPENDS+=	tex-opensans-[0-9]*:../../fonts/tex-opensans
