@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:30 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/08/07 10:38:00 markd Exp $
 
-SHA1 (tex-pst-pdf-15878/pst-pdf.doc.tar.xz) = a56c19218d59fb1e8127bf249983a03d9cea26ab
-RMD160 (tex-pst-pdf-15878/pst-pdf.doc.tar.xz) = 1ca4fb291e1d51fe7985764496c0c0eec156d520
-SHA512 (tex-pst-pdf-15878/pst-pdf.doc.tar.xz) = 4a287d4456d0f6cb0ec08d8887a8ab8273e3ed07c5027d23a2cdcc66a24ee585d7af03bcd998601918715e13c91b9aea9688347afd72f2c7753e11bc04e2b84f
-Size (tex-pst-pdf-15878/pst-pdf.doc.tar.xz) = 1008856 bytes
+SHA1 (tex-pst-pdf-41710/pst-pdf.doc.tar.xz) = 9c47cb7015e94302a4adf4f40fa93c9c6a409e7f
+RMD160 (tex-pst-pdf-41710/pst-pdf.doc.tar.xz) = ab3fe066856541d26d411b63080a076863590e79
+SHA512 (tex-pst-pdf-41710/pst-pdf.doc.tar.xz) = 933292ec0c355cc5998676584a68450a51c0925c46abce67547339608a2267785ba551c549439cc51e7a5a486baff44e532ae4edb74ae8ad3b15c5120fb6c3c9
+Size (tex-pst-pdf-41710/pst-pdf.doc.tar.xz) = 1063236 bytes
