@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3238 2016/08/07 13:20:42 nils Exp $
+$NetBSD: CHANGES-2016,v 1.3239 2016/08/07 13:36:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4658,3 +4658,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed print/tex-xetex-def [markd 2016-08-07]
 	Updated ham/fldigi to 3.23.13 [mef 2016-08-07]
 	Updated net/sslh to 1.18 [nils 2016-08-07]
+	Updated devel/libuv to 1.9.1 [mef 2016-08-07]
