@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3243 2016/08/08 05:35:24 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3244 2016/08/08 05:43:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4663,7 +4663,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/fcgiwrap version 1.1.0 [nils 2016-08-07]
 	Updated devel/acr to 0.10.4 [mef 2016-08-07]
 	Updated devel/p5-B-Hooks-Parser to 0.17 [mef 2016-08-08]
-	Updated devel/p5-CPAN-Meta-Check to 0.013 [mef 2016-08-08]
 	Updated devel/p5-Capture-Tiny to 0.44 [mef 2016-08-08]
 	Updated devel/p5-File-Slurper to 0.009 [mef 2016-08-08]
 	Updated devel/p5-Graph-ReadWrite to 2.09 [mef 2016-08-08]
