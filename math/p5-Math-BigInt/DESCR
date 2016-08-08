@@ -1,0 +1,2 @@
+Math::BigInt provides support for arbitrary precision integers.
+Overloading is also provided for Perl operators.
