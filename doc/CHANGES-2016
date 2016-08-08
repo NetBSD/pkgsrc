@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3244 2016/08/08 05:43:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3245 2016/08/08 22:33:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4667,3 +4667,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-File-Slurper to 0.009 [mef 2016-08-08]
 	Updated devel/p5-Graph-ReadWrite to 2.09 [mef 2016-08-08]
 	Updated devel/p5-IPC-Cmd to 0.96 [mef 2016-08-08]
+	Updated devel/p5-Class-C3-XS to 0.14 [mef 2016-08-08]
+	Updated devel/p5-Class-Virtual to 0.08 [mef 2016-08-08]
+	Updated security/p5-IO-Socket-SSL to 2.034 [mef 2016-08-08]
