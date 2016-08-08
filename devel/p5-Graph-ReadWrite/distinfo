@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/04/10 08:00:55 mef Exp $
+$NetBSD: distinfo,v 1.4 2016/08/08 05:28:42 mef Exp $
 
-SHA1 (Graph-ReadWrite-2.08.tar.gz) = b45fbd28e56cbee9890bcac22ea3ef18225c2f1a
-RMD160 (Graph-ReadWrite-2.08.tar.gz) = 4908703565ee8031273284591af999ade1f1c753
-SHA512 (Graph-ReadWrite-2.08.tar.gz) = a97f0fddf0827a19fba7696319d1f03421740ba78c6fabf07300cdfc9a2aad602ed514e752e782164dd6cc46431691eb8fb73e52d1f90b18489e02c50e63c71a
-Size (Graph-ReadWrite-2.08.tar.gz) = 29166 bytes
+SHA1 (Graph-ReadWrite-2.09.tar.gz) = daf2fccd444352d7c2426237378c2d7af341dd2c
+RMD160 (Graph-ReadWrite-2.09.tar.gz) = 20af37d80ef4cea85a7b2d557984d8500af5131c
+SHA512 (Graph-ReadWrite-2.09.tar.gz) = 9f044cdf9c549f232261771b5c3b804070ebb86e7c2a05748d1d91515601740f54e6add9e77f80a342298eee87680285fb8b8d45d6f41bf36b7ee0f6eb5ba240
+Size (Graph-ReadWrite-2.09.tar.gz) = 30355 bytes
