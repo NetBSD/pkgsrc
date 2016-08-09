@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3271 2016/08/09 13:53:58 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3272 2016/08/09 14:41:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4696,3 +4696,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Lingua-EN-Sentence to 0.30 [mef 2016-08-09]
 	Updated textproc/p5-Encode to 2.85 [mef 2016-08-09]
 	Updated www/contao42 to 4.2.2 [taca 2016-08-09]
+	Updated www/py-beautifulsoup4 to 4.5.1 [leot 2016-08-09]
