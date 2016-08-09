@@ -1,13 +1,15 @@
-$NetBSD: patch-e2fsck_jfs__user.h,v 1.1 2012/11/19 03:02:14 joerg Exp $
+$NetBSD: patch-e2fsck_jfs__user.h,v 1.2 2016/08/09 21:46:07 jdolecek Exp $
 
---- e2fsck/jfs_user.h.orig	2012-11-19 02:21:35.000000000 +0000
-+++ e2fsck/jfs_user.h
-@@ -83,7 +83,7 @@ extern size_t journal_tag_bytes(journal_
- #define _INLINE_ extern
- #else
+Force GNU inline semantic.
+
+--- e2fsck/jfs_user.h.orig	2014-07-06 13:13:18.000000000 +0900
++++ e2fsck/jfs_user.h	2014-12-10 21:09:03.000000000 +0900
+@@ -93,7 +93,7 @@ extern size_t journal_tag_bytes(journal_
+ #define _INLINE_ inline
+ #else /* not C99 */
  #ifdef __GNUC__
 -#define _INLINE_ extern __inline__
 +#define _INLINE_ extern __attribute__((__gnu_inline__)) __inline__
  #else				/* For Watcom C */
  #define _INLINE_ extern inline
- #endif
+ #endif /* __GNUC__ */
