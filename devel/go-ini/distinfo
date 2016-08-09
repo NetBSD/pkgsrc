@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/09 20:53:51 bsiegert Exp $
+
+SHA1 (go-ini-1.19.1.tar.gz) = 9c0e9ec49723f66df39e0ea7e0b3135c297df35b
+RMD160 (go-ini-1.19.1.tar.gz) = 20dfec33b43781dc346493435a522007a8d7dce4
+SHA512 (go-ini-1.19.1.tar.gz) = b772f368e019bc8030ac952ad4b5d1f7f588eb0481374750e85a59622940886e8c9c4d87e9c4ddc3ccc8538970022739e9f51c3f3b986e6286756cac6f20555c
+Size (go-ini-1.19.1.tar.gz) = 32715 bytes
