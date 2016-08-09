@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3259 2016/08/09 11:52:38 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3260 2016/08/09 11:56:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4684,3 +4684,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/sphinxsearch to 2.2.11 [fhajny 2016-08-09]
 	Updated textproc/libfastjson to 0.99.4 [fhajny 2016-08-09]
 	Updated sysutils/liblognorm to 2.0.1 [fhajny 2016-08-09]
+	Updated sysutils/rsyslog to 8.20.0 [fhajny 2016-08-09]
