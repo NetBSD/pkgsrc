@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/03/09 20:45:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/09 11:52:28 fhajny Exp $
 
-DISTNAME=	liblognorm-1.1.3
+DISTNAME=	liblognorm-2.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.liblognorm.com/files/download/
 
