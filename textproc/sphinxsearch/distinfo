@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/10/18 20:30:02 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2016/08/09 09:40:40 fhajny Exp $
 
-SHA1 (sphinx-2.2.10-release.tar.gz) = 0f2372dd41df2848ea06c6076a86af6f0f66a071
-RMD160 (sphinx-2.2.10-release.tar.gz) = 2712e8ce85609e78c53bd2d9fba877f1e630d5f2
-SHA512 (sphinx-2.2.10-release.tar.gz) = 07683f64df730368563e11a7d2939b521837c9a04944ab7d6d09732ab06e451b674169eca4f85db2aae41d883bd16fb4d17b9265912fea9691d07d407d7212d8
-Size (sphinx-2.2.10-release.tar.gz) = 3109250 bytes
+SHA1 (sphinx-2.2.11-release.tar.gz) = 34e83f43de0e69e258bf749ea00348c60a51632a
+RMD160 (sphinx-2.2.11-release.tar.gz) = 5804b4cce64bc03fa20bac26c7391cd661cecc77
+SHA512 (sphinx-2.2.11-release.tar.gz) = cf1a262a5b0fbf0bd2827ec6ec629edeaf709ce855a6e7b509b65342baaeb26c02717ca63f1578d32c83d21e2fd6d1e92dceb34660e6351b93cd96fd4e623689
+Size (sphinx-2.2.11-release.tar.gz) = 3061998 bytes
 SHA1 (patch-configure) = bf9d86e90a22399ffbfe617e0af75b3158cddd01
 SHA1 (patch-src_searchd.cpp) = 3296b155503e4bbbac1ba2174824fdb36cd2578c
 SHA1 (patch-src_sphinxstd.h) = 1838881a57cdcea330e8f07914e574b29de18c89
