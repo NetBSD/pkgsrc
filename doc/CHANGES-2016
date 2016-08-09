@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3252 2016/08/09 08:51:03 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3253 2016/08/09 09:01:29 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Roman to 1.24 [wen 2016-08-09]
 	Updated security/p5-Crypt-GeneratePassword to 0.05 [wen 2016-08-09]
 	Updated lang/nodejs to 6.3.1 [fhajny 2016-08-09]
+	Updated databases/py-cassandra-driver to 3.6.0 [fhajny 2016-08-09]
