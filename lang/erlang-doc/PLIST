@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.21 2016/04/21 11:24:23 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/08/09 15:03:15 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
 lib/erlang/doc/design_principles/clientserver.gif
+lib/erlang/doc/design_principles/code_lock.png
+lib/erlang/doc/design_principles/code_lock_2.png
 lib/erlang/doc/design_principles/des_princ.html
 lib/erlang/doc/design_principles/dist1.gif
 lib/erlang/doc/design_principles/dist2.gif
@@ -19,6 +21,7 @@ lib/erlang/doc/design_principles/note.gif
 lib/erlang/doc/design_principles/release_handling.html
 lib/erlang/doc/design_principles/release_structure.html
 lib/erlang/doc/design_principles/spec_proc.html
+lib/erlang/doc/design_principles/statem.html
 lib/erlang/doc/design_principles/sup4.gif
 lib/erlang/doc/design_principles/sup5.gif
 lib/erlang/doc/design_principles/sup6.gif
@@ -153,6 +156,7 @@ lib/erlang/erts-${VERSION.erts}/doc/html/erl_ext_dist.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erl_ext_fig.gif
 lib/erlang/erts-${VERSION.erts}/doc/html/erl_nif.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erl_prim_loader.html
+lib/erlang/erts-${VERSION.erts}/doc/html/erl_tracer.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erlang.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erlc.html
 lib/erlang/erts-${VERSION.erts}/doc/html/erlsrv.html
@@ -1020,18 +1024,6 @@ lib/erlang/lib/os_mon-${VERSION.os_mon}/doc/html/release_notes.html
 lib/erlang/lib/os_mon-${VERSION.os_mon}/doc/html/warning.gif
 lib/erlang/lib/os_mon-${VERSION.os_mon}/doc/pdf/os_mon-${VERSION.os_mon}.pdf
 lib/erlang/lib/os_mon-${VERSION.os_mon}/info
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/index.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/notes.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/ose.eix
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/ose.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/ose_app.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/ose_erl_driver.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/ose_intro.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/ose_signals_chapter.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/release_notes.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/html/users_guide.html
-lib/erlang/lib/ose-${VERSION.ose}/doc/pdf/ose-${VERSION.ose}.pdf
-lib/erlang/lib/ose-${VERSION.ose}/info
 lib/erlang/lib/otp_mibs-${VERSION.otp_mibs}/doc/html/index.html
 lib/erlang/lib/otp_mibs-${VERSION.otp_mibs}/doc/html/introduction.html
 lib/erlang/lib/otp_mibs-${VERSION.otp_mibs}/doc/html/mibs.html
@@ -1081,6 +1073,7 @@ lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/note.gif
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/notes.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/public_key.eix
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/public_key.html
+lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/public_key_app.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/public_key_records.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/release_notes.html
 lib/erlang/lib/public_key-${VERSION.public_key}/doc/html/users_guide.html
@@ -1099,11 +1092,13 @@ lib/erlang/lib/reltool-${VERSION.reltool}/doc/html/users_guide.html
 lib/erlang/lib/reltool-${VERSION.reltool}/doc/pdf/reltool-${VERSION.reltool}.pdf
 lib/erlang/lib/reltool-${VERSION.reltool}/info
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/DTRACE.html
+lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/LTTng.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/SYSTEMTAP.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/dbg.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/dyntrace.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/erts_alloc_config.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/index.html
+lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/msacc.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/notes.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/release_notes.html
 lib/erlang/lib/runtime_tools-${VERSION.runtime_tools}/doc/html/runtime_tools.eix
@@ -1118,7 +1113,6 @@ lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/error_logging.html
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/index.html
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/note.gif
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/notes.html
-lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/overload.html
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/rb.html
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/rel.html
 lib/erlang/lib/sasl-${VERSION.sasl}/doc/html/release_handler.html
@@ -1248,7 +1242,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/doc/pdf/ssl-${VERSION.ssl}.pdf
 lib/erlang/lib/ssl-${VERSION.ssl}/info
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/STDLIB_app.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/array.html
-lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/assert.hrl.html
+lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/assert.hrl.xml.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/base64.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/beam_lib.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/binary.html
@@ -1278,7 +1272,9 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/gb_trees.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/gen_event.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/gen_fsm.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/gen_server.html
+lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/gen_statem.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/index.html
+lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/introduction.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/io.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/io_lib.html
 lib/erlang/lib/stdlib-${VERSION.stdlib}/doc/html/io_protocol.html
@@ -1337,22 +1333,6 @@ lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/syntax_tools.eix
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/html/users_guide.html
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/doc/pdf/syntax_tools-${VERSION.syntax_tools}.pdf
 lib/erlang/lib/syntax_tools-${VERSION.syntax_tools}/info
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/basics_chapter.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/example_chapter.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/index.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/notes.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/release_notes.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/run_test_chapter.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/test_server.eix
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/test_server.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/test_server_app.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/test_server_ctrl.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/test_spec_chapter.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/users_guide.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/write_framework_chapter.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/html/write_test_chapter.html
-lib/erlang/lib/test_server-${VERSION.test_server}/doc/pdf/test_server-${VERSION.test_server}.pdf
-lib/erlang/lib/test_server-${VERSION.test_server}/info
 lib/erlang/lib/tools-${VERSION.tools}/doc/html/cover.html
 lib/erlang/lib/tools-${VERSION.tools}/doc/html/cover_chapter.html
 lib/erlang/lib/tools-${VERSION.tools}/doc/html/cprof.html
@@ -1385,16 +1365,6 @@ lib/erlang/lib/typer-${VERSION.typer}/doc/html/release_notes.html
 lib/erlang/lib/typer-${VERSION.typer}/doc/html/typer.eix
 lib/erlang/lib/typer-${VERSION.typer}/doc/pdf/typer-${VERSION.typer}.pdf
 lib/erlang/lib/typer-${VERSION.typer}/info
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/index.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/notes.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/release_notes.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/start_webtool.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/users_guide.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/webtool.eix
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/webtool.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/html/webtool_chapter.html
-lib/erlang/lib/webtool-${VERSION.webtool}/doc/pdf/webtool-${VERSION.webtool}.pdf
-lib/erlang/lib/webtool-${VERSION.webtool}/info
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/chapter.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/gl.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/glu.html
