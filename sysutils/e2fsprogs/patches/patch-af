@@ -1,4 +1,8 @@
-$NetBSD: patch-af,v 1.7 2010/12/23 06:34:50 ryoon Exp $
+$NetBSD: patch-af,v 1.8 2016/08/09 21:46:07 jdolecek Exp $
+
+Add a patch to use struct statvfs on NetBSD 2.0F and newer.  Fixes PR 25891
+by Andreas Wiese.
+Upate __NetBSD_Version__ statvfs check from 200060000 to 299000900
 
 --- lib/ext2fs/ismounted.c.orig	2010-05-18 03:04:39.000000000 +0000
 +++ lib/ext2fs/ismounted.c
