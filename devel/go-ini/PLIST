@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/09 20:53:51 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/gopkg.in/ini.v1.a
+gopkg/src/gopkg.in/ini.v1/LICENSE
+gopkg/src/gopkg.in/ini.v1/Makefile
+gopkg/src/gopkg.in/ini.v1/README.md
+gopkg/src/gopkg.in/ini.v1/README_ZH.md
+gopkg/src/gopkg.in/ini.v1/ini.go
+gopkg/src/gopkg.in/ini.v1/ini_test.go
+gopkg/src/gopkg.in/ini.v1/key.go
+gopkg/src/gopkg.in/ini.v1/key_test.go
+gopkg/src/gopkg.in/ini.v1/parser.go
+gopkg/src/gopkg.in/ini.v1/section.go
+gopkg/src/gopkg.in/ini.v1/section_test.go
+gopkg/src/gopkg.in/ini.v1/struct.go
+gopkg/src/gopkg.in/ini.v1/struct_test.go
+gopkg/src/gopkg.in/ini.v1/testdata/conf.ini
+@pkgdir bin
