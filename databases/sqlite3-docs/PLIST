@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2016/05/21 11:19:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.57 2016/08/09 14:54:25 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -12,9 +12,9 @@ share/doc/sqlite3/atomiccommit.html
 share/doc/sqlite3/autoinc.html
 share/doc/sqlite3/backup.html
 share/doc/sqlite3/books.html
-share/doc/sqlite3/btreemodule.html
 share/doc/sqlite3/c3ref/aggregate_context.html
 share/doc/sqlite3/c3ref/aggregate_count.html
+share/doc/sqlite3/c3ref/api_routines.html
 share/doc/sqlite3/c3ref/auto_extension.html
 share/doc/sqlite3/c3ref/backup.html
 share/doc/sqlite3/c3ref/backup_finish.html
@@ -61,6 +61,7 @@ share/doc/sqlite3/c3ref/c_status_malloc_count.html
 share/doc/sqlite3/c3ref/c_stmtstatus_counter.html
 share/doc/sqlite3/c3ref/c_sync_dataonly.html
 share/doc/sqlite3/c3ref/c_testctrl_always.html
+share/doc/sqlite3/c3ref/c_trace.html
 share/doc/sqlite3/c3ref/c_vtab_constraint_support.html
 share/doc/sqlite3/c3ref/cancel_auto_extension.html
 share/doc/sqlite3/c3ref/changes.html
@@ -97,6 +98,7 @@ share/doc/sqlite3/c3ref/enable_load_extension.html
 share/doc/sqlite3/c3ref/enable_shared_cache.html
 share/doc/sqlite3/c3ref/errcode.html
 share/doc/sqlite3/c3ref/exec.html
+share/doc/sqlite3/c3ref/expanded_sql.html
 share/doc/sqlite3/c3ref/experimental.html
 share/doc/sqlite3/c3ref/extended_result_codes.html
 share/doc/sqlite3/c3ref/file.html
@@ -152,7 +154,6 @@ share/doc/sqlite3/c3ref/snapshot_get.html
 share/doc/sqlite3/c3ref/snapshot_open.html
 share/doc/sqlite3/c3ref/soft_heap_limit.html
 share/doc/sqlite3/c3ref/soft_heap_limit64.html
-share/doc/sqlite3/c3ref/sql.html
 share/doc/sqlite3/c3ref/sqlite3.html
 share/doc/sqlite3/c3ref/status.html
 share/doc/sqlite3/c3ref/step.html
@@ -171,6 +172,7 @@ share/doc/sqlite3/c3ref/temp_directory.html
 share/doc/sqlite3/c3ref/test_control.html
 share/doc/sqlite3/c3ref/threadsafe.html
 share/doc/sqlite3/c3ref/total_changes.html
+share/doc/sqlite3/c3ref/trace_v2.html
 share/doc/sqlite3/c3ref/unlock_notify.html
 share/doc/sqlite3/c3ref/update_hook.html
 share/doc/sqlite3/c3ref/uri_boolean.html
@@ -192,6 +194,7 @@ share/doc/sqlite3/c3ref/wal_hook.html
 share/doc/sqlite3/c_interface.html
 share/doc/sqlite3/capi3.html
 share/doc/sqlite3/capi3ref.html
+share/doc/sqlite3/carray.html
 share/doc/sqlite3/changes.html
 share/doc/sqlite3/chronology.html
 share/doc/sqlite3/cintro.html
@@ -204,10 +207,12 @@ share/doc/sqlite3/copyright-release.html
 share/doc/sqlite3/copyright-release.pdf
 share/doc/sqlite3/copyright.html
 share/doc/sqlite3/crew.html
+share/doc/sqlite3/csv.html
 share/doc/sqlite3/custombuild.html
 share/doc/sqlite3/cvstrac.css
 share/doc/sqlite3/datatype3.html
 share/doc/sqlite3/datatypes.html
+share/doc/sqlite3/dbhash.html
 share/doc/sqlite3/dbstat.html
 share/doc/sqlite3/dev.html
 share/doc/sqlite3/different.html
@@ -269,6 +274,7 @@ share/doc/sqlite3/images/arch.gif
 share/doc/sqlite3/images/arch.png
 share/doc/sqlite3/images/arch2.gif
 share/doc/sqlite3/images/books/aditya.jpg
+share/doc/sqlite3/images/books/darocha2016.jpg
 share/doc/sqlite3/images/books/das.jpg
 share/doc/sqlite3/images/books/droessler.jpg
 share/doc/sqlite3/images/books/haldar.gif
@@ -403,6 +409,7 @@ share/doc/sqlite3/images/shane1.jpg
 share/doc/sqlite3/images/shared.gif
 share/doc/sqlite3/images/sqlite370.jpg
 share/doc/sqlite3/images/sqlite370_banner.gif
+share/doc/sqlite3/images/sqlitepie.jpg
 share/doc/sqlite3/images/src_logo.gif
 share/doc/sqlite3/images/sw.gif
 share/doc/sqlite3/images/sw.png
@@ -550,6 +557,7 @@ share/doc/sqlite3/releaselog/3_12_0.html
 share/doc/sqlite3/releaselog/3_12_1.html
 share/doc/sqlite3/releaselog/3_12_2.html
 share/doc/sqlite3/releaselog/3_13_0.html
+share/doc/sqlite3/releaselog/3_14.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
