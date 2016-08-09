@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3264 2016/08/09 13:02:12 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3265 2016/08/09 13:14:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4689,3 +4689,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.22 [mef 2016-08-09]
 	Updated devel/boehm-gc to 7.6.0 [mef 2016-08-09]
 	Updated devel/catch to 1.5.0 [mef 2016-08-09]
+	Updated devel/ccache to 3.2.7 [mef 2016-08-09]
