@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3246 2016/08/08 23:53:54 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3247 2016/08/09 00:02:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4671,3 +4671,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Class-Virtual to 0.08 [mef 2016-08-08]
 	Updated security/p5-IO-Socket-SSL to 2.034 [mef 2016-08-08]
 	Added math/p5-Math-BigInt version 1.999726 [wen 2016-08-08]
+	Updated math/p5-Math-BigInt-GMP to 1.51 [wen 2016-08-09]
