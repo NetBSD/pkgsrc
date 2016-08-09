@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.2 2010/12/23 06:34:50 ryoon Exp $
+$NetBSD: patch-ao,v 1.3 2016/08/09 21:46:07 jdolecek Exp $
+
+Where to find the config file
 
 --- lib/blkid/blkidP.h.orig	2009-08-13 01:39:57.000000000 +0000
 +++ lib/blkid/blkidP.h
