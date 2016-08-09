@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16251 2016/08/08 07:29:01 wiz Exp $
+$NetBSD: TODO,v 1.16252 2016/08/09 00:02:39 wen Exp $
 
 Suggested new packages
 ======================
@@ -1238,7 +1238,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Prompt-0.997003
 	o p5-IP-Country-3.03
 	o p5-Locale-Codes-3.38
-	o p5-Math-BigInt-GMP-1.49
 	o p5-Math-BigInt-Pari-1.25
 	o p5-Memoize-Memcached-0.11
 	o p5-MooX-Log-Any-0.004004
