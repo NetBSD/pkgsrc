@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3267 2016/08/09 13:38:44 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3268 2016/08/09 13:43:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ccache to 3.2.7 [mef 2016-08-09]
 	Updated devel/diffutils to 3.4 [mef 2016-08-09]
 	Updated devel/p5-Module-Metadata to 1.000033 [mef 2016-08-09]
+	Updated devel/p5-Dist-Zilla to 6.007 [mef 2016-08-09]
