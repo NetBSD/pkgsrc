@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3272 2016/08/09 14:41:07 leot Exp $
+$NetBSD: CHANGES-2016,v 1.3273 2016/08/09 15:04:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4697,3 +4697,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Encode to 2.85 [mef 2016-08-09]
 	Updated www/contao42 to 4.2.2 [taca 2016-08-09]
 	Updated www/py-beautifulsoup4 to 4.5.1 [leot 2016-08-09]
+	Updated lang/erlang to 19.0 [fhajny 2016-08-09]
+	Updated lang/erlang-doc to 19.0 [fhajny 2016-08-09]
+	Updated lang/erlang-man to 19.0 [fhajny 2016-08-09]
