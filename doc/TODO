@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16256 2016/08/09 18:24:09 bsiegert Exp $
+$NetBSD: TODO,v 1.16257 2016/08/09 21:46:42 jdolecek Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drupal-8.0.3
 	o dvdisaster-0.79.5
 	o dvdstyler-2.9.6
-	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o ebook-tools-0.2.2
