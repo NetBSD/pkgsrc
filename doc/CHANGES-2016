@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3262 2016/08/09 12:17:45 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3263 2016/08/09 12:50:55 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4687,3 +4687,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/rsyslog to 8.20.0 [fhajny 2016-08-09]
 	Updated databases/py-peewee to 2.8.2 [fhajny 2016-08-09]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.22 [mef 2016-08-09]
+	Updated devel/boehm-gc to 7.6.0 [mef 2016-08-09]
