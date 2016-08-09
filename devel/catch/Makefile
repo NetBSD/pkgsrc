@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/09 13:01:56 mef Exp $
 
-DISTNAME=	Catch-1.3.4
+DISTNAME=	Catch-1.5.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=philsquared/}
