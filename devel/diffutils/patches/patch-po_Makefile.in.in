@@ -1,14 +1,14 @@
-$NetBSD: patch-po_Makefile.in.in,v 1.1 2013/08/21 14:08:08 richard Exp $
+$NetBSD: patch-po_Makefile.in.in,v 1.2 2016/08/09 13:35:28 mef Exp $
 
 some misc fixes in order to get over the automake deprecated
 `@mkdir_p@` as well as adverse effects of SHELL in this file.
 
---- po/Makefile.in.in.orig	2013-03-23 14:51:10.000000000 +0000
-+++ po/Makefile.in.in
-@@ -15,7 +15,6 @@ PACKAGE = @PACKAGE@
- VERSION = @VERSION@
+--- po/Makefile.in.in.orig	2016-08-05 08:38:01.000000000 +0900
++++ po/Makefile.in.in	2016-08-09 22:19:28.000000000 +0900
+@@ -16,7 +16,6 @@ VERSION = @VERSION@
  PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
  
+ SED = @SED@
 -SHELL = /bin/sh
  @SET_MAKE@
  
