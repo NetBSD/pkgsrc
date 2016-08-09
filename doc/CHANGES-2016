@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3248 2016/08/09 00:09:34 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3249 2016/08/09 00:15:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/p5-Math-BigInt version 1.999726 [wen 2016-08-08]
 	Updated math/p5-Math-BigInt-GMP to 1.51 [wen 2016-08-09]
 	Updated math/p5-Math-BigInt-Pari to 1.27 [wen 2016-08-09]
+	Updated math/p5-Math-Prime-Util to 0.59 [wen 2016-08-09]
