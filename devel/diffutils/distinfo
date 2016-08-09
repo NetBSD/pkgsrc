@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:27:23 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/08/09 13:35:28 mef Exp $
 
-SHA1 (diffutils-3.3.tar.xz) = 6463cce7d3eb73489996baefd0e4425928ecd61e
-RMD160 (diffutils-3.3.tar.xz) = 5785f14f89923ad115957b88c0bb4766cd4ededc
-SHA512 (diffutils-3.3.tar.xz) = b04b998717e45e8fd1ba675957dad1909beeed68ffc41c0d9bbaddaf78965f9e63af5a8d8811bb94f33a3cddcad2fe1ad794e52e545def9ce96c092999a74a83
-Size (diffutils-3.3.tar.xz) = 1197832 bytes
-SHA1 (patch-aa) = 20e262ca71fe9ca36933e96f790f553130efcd88
-SHA1 (patch-ab) = f875decfb827c10aee02da58012a735a40f3d682
-SHA1 (patch-po_Makefile.in.in) = 311daf695a5f84ff703e1659bfc9468ed0c42236
+SHA1 (diffutils-3.4.tar.xz) = a31084c387d6e5fc8e39fdddc6764720cf4b7479
+RMD160 (diffutils-3.4.tar.xz) = d88508102f7c2e4bdf802e066f8db14665ca8d3e
+SHA512 (diffutils-3.4.tar.xz) = 0fc273007e35e67e217116e776956c6a24421f298d3e6fe60aa1d4250938a65bb8e685cd815517317b5637f5c412c1550d7c1994a9e0283ebbcae9bde24a260d
+Size (diffutils-3.4.tar.xz) = 1358392 bytes
+SHA1 (patch-aa) = 8eb95b462bc59130fca771d9273c6ae0c784520e
+SHA1 (patch-ab) = 9a332a371114d79587286fec9d42d96ecea699b1
+SHA1 (patch-po_Makefile.in.in) = 64ffbae9c85a026e89ad18320ba766db9c4e2bbd
