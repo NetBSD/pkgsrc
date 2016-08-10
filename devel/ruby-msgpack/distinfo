@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2016/01/11 16:04:36 taca Exp $
+$NetBSD: distinfo,v 1.13 2016/08/10 20:36:12 bsiegert Exp $
 
-SHA1 (msgpack-0.7.4.gem) = e8af6fa18265ce89bff22df81e77ba05c548122f
-RMD160 (msgpack-0.7.4.gem) = bb2d18f71d765d3064c1e9f529b0fe37a465160a
-SHA512 (msgpack-0.7.4.gem) = 4e78df4abe0f9c91a67f66108ee4e8420651d8d23a6ec7de9241138fd1065ce723ad68648c0bd4572801f800363e7f1f34362312d8f861857ffcdfc7accd950a
-Size (msgpack-0.7.4.gem) = 74752 bytes
+SHA1 (msgpack-1.0.0.gem) = 56e728d77483847e10dc2dc9fa0f7338fc5f499e
+RMD160 (msgpack-1.0.0.gem) = 5eefbd39aec266903321d0d2c131293ae5266751
+SHA512 (msgpack-1.0.0.gem) = e87c267a67cc8d89dcc499570bf3316a84643acfbd045ec7a66990b3388e9305c068b7d5c759d35e52c9acb1172794399d2df4a3db4b7685978f3488ff1c3eca
+Size (msgpack-1.0.0.gem) = 76800 bytes
