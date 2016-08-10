@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3283 2016/08/10 23:44:28 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3284 2016/08/10 23:49:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4712,3 +4712,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-msgpack to 1.0.0 [bsiegert 2016-08-10]
 	Updated textproc/p5-Encode to 2.86 [wen 2016-08-10]
 	Updated devel/concurrencykit to 0.5.1 [mef 2016-08-10]
+	Updated devel/p5-Log-Handler to 0.88 [wen 2016-08-10]
