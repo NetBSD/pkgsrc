@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2016/05/30 14:25:12 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.58.2.1 2016/08/10 17:06:46 bsiegert Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -29,6 +29,7 @@ man/man3/CURLINFO_FTP_ENTRY_PATH.3
 man/man3/CURLINFO_HEADER_SIZE.3
 man/man3/CURLINFO_HTTPAUTH_AVAIL.3
 man/man3/CURLINFO_HTTP_CONNECTCODE.3
+man/man3/CURLINFO_HTTP_VERSION.3
 man/man3/CURLINFO_LASTSOCKET.3
 man/man3/CURLINFO_LOCAL_IP.3
 man/man3/CURLINFO_LOCAL_PORT.3
