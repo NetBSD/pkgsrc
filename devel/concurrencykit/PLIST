@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/07/02 14:40:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/08/10 23:44:10 mef Exp $
 include/ck_array.h
 include/ck_backoff.h
 include/ck_barrier.h
@@ -28,7 +28,13 @@ include/ck_rwlock.h
 include/ck_sequence.h
 include/ck_spinlock.h
 include/ck_stack.h
+include/ck_stdbool.h
+include/ck_stddef.h
 include/ck_stdint.h
+include/ck_stdlib.h
+include/ck_string.h
+include/ck_swlock.h
+include/ck_tflock.h
 include/gcc/arm/ck_f_pr.h
 include/gcc/arm/ck_pr.h
 include/gcc/ck_cc.h
@@ -67,6 +73,7 @@ man/man3/CK_COHORT_TRYLOCK.3
 man/man3/CK_COHORT_TRYLOCK_PROTOTYPE.3
 man/man3/CK_COHORT_UNLOCK.3
 man/man3/CK_HS_HASH.3
+man/man3/CK_RHS_HASH.3
 man/man3/CK_RWCOHORT_INIT.3
 man/man3/CK_RWCOHORT_INSTANCE.3
 man/man3/CK_RWCOHORT_PROTOTYPE.3
@@ -85,16 +92,17 @@ man/man3/ck_array_put_unique.3
 man/man3/ck_array_remove.3
 man/man3/ck_bitmap_base.3
 man/man3/ck_bitmap_bits.3
+man/man3/ck_bitmap_bts.3
 man/man3/ck_bitmap_buffer.3
 man/man3/ck_bitmap_clear.3
 man/man3/ck_bitmap_init.3
 man/man3/ck_bitmap_iterator_init.3
 man/man3/ck_bitmap_next.3
-man/man3/ck_bitmap_reset.3.gz
-man/man3/ck_bitmap_set.3.gz
+man/man3/ck_bitmap_reset.3
+man/man3/ck_bitmap_set.3
 man/man3/ck_bitmap_size.3
 man/man3/ck_bitmap_test.3
-man/man3/ck_bitmap_union.3.gz
+man/man3/ck_bitmap_union.3
 man/man3/ck_brlock.3
 man/man3/ck_cohort.3
 man/man3/ck_elide.3
@@ -109,6 +117,7 @@ man/man3/ck_epoch_recycle.3
 man/man3/ck_epoch_register.3
 man/man3/ck_epoch_synchronize.3
 man/man3/ck_epoch_unregister.3
+man/man3/ck_hs_apply.3
 man/man3/ck_hs_count.3
 man/man3/ck_hs_destroy.3
 man/man3/ck_hs_fas.3
@@ -120,6 +129,7 @@ man/man3/ck_hs_iterator_init.3
 man/man3/ck_hs_move.3
 man/man3/ck_hs_next.3
 man/man3/ck_hs_put.3
+man/man3/ck_hs_put_unique.3
 man/man3/ck_hs_rebuild.3
 man/man3/ck_hs_remove.3
 man/man3/ck_hs_reset.3
@@ -152,6 +162,7 @@ man/man3/ck_ht_reset_size_spmc.3
 man/man3/ck_ht_reset_spmc.3
 man/man3/ck_ht_set_spmc.3
 man/man3/ck_ht_stat.3
+man/man3/ck_pflock.3
 man/man3/ck_pr.3
 man/man3/ck_pr_add.3
 man/man3/ck_pr_and.3
@@ -163,7 +174,7 @@ man/man3/ck_pr_cas.3
 man/man3/ck_pr_dec.3
 man/man3/ck_pr_faa.3
 man/man3/ck_pr_fas.3
-man/man3/ck_pr_fence_acquire.3.gz
+man/man3/ck_pr_fence_acquire.3
 man/man3/ck_pr_fence_atomic.3
 man/man3/ck_pr_fence_atomic_load.3
 man/man3/ck_pr_fence_atomic_store.3
@@ -172,7 +183,7 @@ man/man3/ck_pr_fence_load_atomic.3
 man/man3/ck_pr_fence_load_depends.3
 man/man3/ck_pr_fence_load_store.3
 man/man3/ck_pr_fence_memory.3
-man/man3/ck_pr_fence_release.3.gz
+man/man3/ck_pr_fence_release.3
 man/man3/ck_pr_fence_store.3
 man/man3/ck_pr_fence_store_atomic.3
 man/man3/ck_pr_fence_store_load.3
@@ -187,6 +198,25 @@ man/man3/ck_pr_store.3
 man/man3/ck_pr_sub.3
 man/man3/ck_pr_xor.3
 man/man3/ck_queue.3
+man/man3/ck_rhs_apply.3
+man/man3/ck_rhs_count.3
+man/man3/ck_rhs_destroy.3
+man/man3/ck_rhs_fas.3
+man/man3/ck_rhs_gc.3
+man/man3/ck_rhs_get.3
+man/man3/ck_rhs_grow.3
+man/man3/ck_rhs_init.3
+man/man3/ck_rhs_iterator_init.3
+man/man3/ck_rhs_move.3
+man/man3/ck_rhs_next.3
+man/man3/ck_rhs_put.3
+man/man3/ck_rhs_put_unique.3
+man/man3/ck_rhs_rebuild.3
+man/man3/ck_rhs_remove.3
+man/man3/ck_rhs_reset.3
+man/man3/ck_rhs_reset_size.3
+man/man3/ck_rhs_set.3
+man/man3/ck_rhs_stat.3
 man/man3/ck_ring_capacity.3
 man/man3/ck_ring_dequeue_spmc.3
 man/man3/ck_ring_dequeue_spsc.3
@@ -201,3 +231,5 @@ man/man3/ck_rwcohort.3
 man/man3/ck_rwlock.3
 man/man3/ck_sequence.3
 man/man3/ck_spinlock.3
+man/man3/ck_swlock.3
+man/man3/ck_tflock.3
