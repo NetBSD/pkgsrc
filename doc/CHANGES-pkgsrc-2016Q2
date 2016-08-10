@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.9 2016/08/09 18:40:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.10 2016/08/10 18:13:28 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -71,4 +71,13 @@ www/ikiwiki: security update
 
 Pullup ticket #5077 - requested by nils
 databases/phpmyadmin: bugfix
+
+Pullup ticket #5078 - requested by sevan
+databases/redis: security fix
+
+Pullup ticket #5079 - requested by sevan
+www/curl: security fix
+
+Pullup ticket #5080 - requested by sevan
+graphics/gd: security fix
 
