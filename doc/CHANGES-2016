@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3281 2016/08/10 20:37:05 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.3282 2016/08/10 23:42:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/gnome-calculator to 3.20.2 [prlw1 2016-08-10]
 	Updated games/gnome-sudoku to 3.20.4 [prlw1 2016-08-10]
 	Updated devel/ruby-msgpack to 1.0.0 [bsiegert 2016-08-10]
+	Updated textproc/p5-Encode to 2.86 [wen 2016-08-10]
