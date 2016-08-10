@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3279 2016/08/10 09:20:29 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.3280 2016/08/10 09:26:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4708,3 +4708,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/e2fsprogs to 1.43.1 [jdolecek 2016-08-09]
 	Updated x11/gtk3 to 3.20.8 [prlw1 2016-08-10]
 	Updated math/gnome-calculator to 3.20.2 [prlw1 2016-08-10]
+	Updated games/gnome-sudoku to 3.20.4 [prlw1 2016-08-10]
