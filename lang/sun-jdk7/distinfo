@@ -1,14 +1,6 @@
-$NetBSD: distinfo,v 1.20 2016/05/17 12:42:19 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2016/08/10 22:26:46 abs Exp $
 
 SHA1 (jdk-7u80-linux-x64.tar.gz) = 21e5e18c3511def01590994e926a4350c0509f01
 RMD160 (jdk-7u80-linux-x64.tar.gz) = c519e687374915166441995d4e3951b52bb2f82b
 SHA512 (jdk-7u80-linux-x64.tar.gz) = a772878f740e87835bafc82841e8f4c1dfbe8bc79e072d3f6c5c74d3a206eb9001a53b474d91a22819c7c0d6407ed88993635c39738779c2b08c22c7a1c2e9e9
 Size (jdk-7u80-linux-x64.tar.gz) = 153530841 bytes
-SHA1 (jdk-7u80-solaris-i586.tar.gz) = ff6939c7623cebd277b0ec7041225fd36cc396cf
-RMD160 (jdk-7u80-solaris-i586.tar.gz) = 7723b082c30ffdfba8a66d0632632732e104342a
-SHA512 (jdk-7u80-solaris-i586.tar.gz) = 16219609a356339a8575880f44b9eefe4459681202ff0925740f921a7239ebf5fe718c2607cbbebe790d8afc0ace25583c9b3ad67257d0a48cb32032072b2b3f
-Size (jdk-7u80-solaris-i586.tar.gz) = 101088226 bytes
-SHA1 (jdk-7u80-solaris-x64.tar.gz) = 46fa2e8303f952e7af03186de9a1e954252dc3e0
-RMD160 (jdk-7u80-solaris-x64.tar.gz) = a04a41465ef612d9f1b35b09b344716223e6865e
-SHA512 (jdk-7u80-solaris-x64.tar.gz) = 83ce229c3a38e454d9acafa189b3b6f247a4723ddb3c3fa08993323590949295b0f3740ab235c7c539f90a684b8cefad7839f82f566b7a141019b94af6cbad89
-Size (jdk-7u80-solaris-x64.tar.gz) = 17176587 bytes

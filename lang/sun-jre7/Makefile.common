@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2016/05/08 17:23:29 christos Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/08/10 22:26:46 abs Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -22,6 +22,8 @@ USE_TOOLS+=	pax
 
 # JDK7 Update number
 UPDATE_NUMBER=	80
+# See following URL for why this is 80 while Oracle download page suggests 79
+# http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
 
 .include "../../mk/bsd.prefs.mk"
 
