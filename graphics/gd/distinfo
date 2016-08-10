@@ -1,13 +1,6 @@
-$NetBSD: distinfo,v 1.40 2016/06/30 09:00:18 taca Exp $
+$NetBSD: distinfo,v 1.40.2.1 2016/08/10 18:12:37 bsiegert Exp $
 
-SHA1 (libgd-2.1.1.tar.xz) = 9038ed488b577d16aa8c32b6c10b4a70b10f7fa1
-RMD160 (libgd-2.1.1.tar.xz) = 8d564caf9a953d344fb9a5e169d241510a2c71f1
-SHA512 (libgd-2.1.1.tar.xz) = 48f444402a4b89e412870f9091b92eb26136c5c0d795722262ad973c7d4103476204a2de36133a2634b8f410d6bccdcf60afb829a74ac2fddfb96aff2cd2567b
-Size (libgd-2.1.1.tar.xz) = 2039132 bytes
-SHA1 (patch-aa) = 00198349dd9cff60f1f5738524096a251057eb16
-SHA1 (patch-ab) = 300ffacf47d7421fc9efb7b3fd9e93f011de1b4b
-SHA1 (patch-configure) = 53769c3daffa38c88d82093f59cb97b4bd38008f
-SHA1 (patch-configure.ac) = 72092d5a0ee7944249286edc0d3505176f15303f
-SHA1 (patch-src_gd__bmp.c) = 4db300a26cebae6fb6f14564c5648608d7ed6cc5
-SHA1 (patch-src_gd__crop.c) = 34c9716fe40e8f80cc126893dbafa0151bbf3b5a
-SHA1 (patch-src_webpimg.c) = 2717cbcfdbbddfc8cd96de2d4f6a07a0485ba086
+SHA1 (libgd-2.2.3.tar.xz) = 2f8cebec5afd6c83a3d5cb92f40ea4926b4daa98
+RMD160 (libgd-2.2.3.tar.xz) = e6c29133c2ea33c8ba16571892d2798ef0f5afea
+SHA512 (libgd-2.2.3.tar.xz) = bdc6d086bc054beda6574ec46baa4cd94048a5f2f357f875ba05983e92d247f1b731434b9e438c6aef09d46fa96f1a7e1f330a25a77ffd2dd78aa8a32d652557
+Size (libgd-2.2.3.tar.xz) = 2164152 bytes
