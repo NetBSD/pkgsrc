@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2016/06/08 19:23:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/08/10 23:58:43 wen Exp $
 #
 
-DISTNAME=	Software-License-0.103010
+DISTNAME=	Software-License-0.103012
 # put a period in the center of 6 digit, for example, 0.103004 -> 0.103.004
 PKGNAME=	p5-${DISTNAME:C/\.([0-9][0-9][0-9])([0-9][0-9][0-9])/.\1.\2/}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RJ/RJBS/}
 
