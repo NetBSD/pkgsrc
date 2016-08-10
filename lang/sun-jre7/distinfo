@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.25 2016/05/17 11:57:19 jperkin Exp $
+$NetBSD: distinfo,v 1.26 2016/08/10 22:26:46 abs Exp $
 
+SHA1 (UnlimitedJCEPolicyJDK7.zip) = 7d3c9ee89536b82cd21c680088b1bced16017253
+RMD160 (UnlimitedJCEPolicyJDK7.zip) = a4a6a284579f43d2df3532d279e143d2f03c2c3f
+SHA512 (UnlimitedJCEPolicyJDK7.zip) = 02eca7da8f3fffea388431d5352290535a63d53a1f5c795d6511ccba62445787a0ee6ad4bc1852e5262860b6d607ba2a8c6a3dbb0c3e1d7c3a67ac7bbc783204
+Size (UnlimitedJCEPolicyJDK7.zip) = 7426 bytes
 SHA1 (jre-7u80-linux-x64.tar.gz) = 5f5eb4a4e76cfe1d9eb02ed71ae01a809bde8440
 RMD160 (jre-7u80-linux-x64.tar.gz) = 942f0da61dde6b760c24fd144fee2555d05497a3
 SHA512 (jre-7u80-linux-x64.tar.gz) = e61e78ab1be0313690e8ab8d6cbae7366dd78aa4716f47c8908178196b658b94ee318dd04043965a72c34d8ef5c1cb4902afaa2188e76eb944256f090339107d
