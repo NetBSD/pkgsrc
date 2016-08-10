@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/29 14:22:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/08/10 20:36:12 bsiegert Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/msgpack/msgpack.${RUBY_DLEXT}
@@ -14,8 +14,10 @@ ${GEM_LIBDIR}/appveyor.yml
 ${GEM_LIBDIR}/bench/pack.rb
 ${GEM_LIBDIR}/bench/pack_log.rb
 ${GEM_LIBDIR}/bench/pack_log_long.rb
+${GEM_LIBDIR}/bench/pack_symbols.rb
 ${GEM_LIBDIR}/bench/run.sh
 ${GEM_LIBDIR}/bench/run_long.sh
+${GEM_LIBDIR}/bench/run_symbols.sh
 ${GEM_LIBDIR}/bench/unpack.rb
 ${GEM_LIBDIR}/bench/unpack_log.rb
 ${GEM_LIBDIR}/bench/unpack_log_long.rb
@@ -71,6 +73,7 @@ ${GEM_LIBDIR}/lib/msgpack.rb
 ${GEM_LIBDIR}/lib/msgpack/factory.rb
 ${GEM_LIBDIR}/lib/msgpack/msgpack.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/msgpack/packer.rb
+${GEM_LIBDIR}/lib/msgpack/symbol.rb
 ${GEM_LIBDIR}/lib/msgpack/unpacker.rb
 ${GEM_LIBDIR}/lib/msgpack/version.rb
 ${GEM_LIBDIR}/msgpack.gemspec
@@ -99,3 +102,4 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/unpack_spec.rb
 ${GEM_LIBDIR}/spec/unpacker_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@pkgdir lib/ruby/gems/2.2.0/build_info
