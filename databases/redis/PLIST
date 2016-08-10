@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/06/21 07:53:50 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10.2.1 2016/08/10 16:53:32 bsiegert Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-rdb
@@ -53,6 +53,7 @@ share/examples/redis/tests/sentinel/tests/03-runtime-reconf.tcl
 share/examples/redis/tests/sentinel/tests/04-slave-selection.tcl
 share/examples/redis/tests/sentinel/tests/05-manual.tcl
 share/examples/redis/tests/sentinel/tests/06-ckquorum.tcl
+share/examples/redis/tests/sentinel/tests/07-down-conditions.tcl
 share/examples/redis/tests/sentinel/tests/includes/init-tests.tcl
 share/examples/redis/tests/sentinel/tmp/.gitignore
 share/examples/redis/tests/support/cluster.tcl
@@ -100,6 +101,7 @@ share/examples/redis/tests/unit/type/string.tcl
 share/examples/redis/tests/unit/type/zset.tcl
 share/examples/redis/utils/build-static-symbols.tcl
 share/examples/redis/utils/cluster_fail_time.tcl
+share/examples/redis/utils/corrupt_rdb.c
 share/examples/redis/utils/create-cluster/.gitignore
 share/examples/redis/utils/create-cluster/README
 share/examples/redis/utils/create-cluster/create-cluster
