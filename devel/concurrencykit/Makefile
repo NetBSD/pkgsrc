@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2014/02/28 14:42:15 mspo Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/10 23:44:10 mef Exp $
 
-DISTNAME=	ck-0.4.1
+DISTNAME=	ck-0.5.1
 CATEGORIES=	devel
 MASTER_SITES=	http://concurrencykit.org/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://concurrencykit.org/
-COMMENT=	Concurrency primitives, safe memory reclamation mechanisms and non-blocking data structures
+COMMENT=	Concurrency primitives, safe memory reclamation & non-blocking data structures
 LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=	yes
