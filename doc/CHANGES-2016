@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3288 2016/08/11 00:26:29 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3289 2016/08/11 00:35:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4717,3 +4717,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-POE-Server-TCP to 1.20 [wen 2016-08-10]
 	Updated devel/p5-Test-Requires-Git to 1.006 [wen 2016-08-11]
 	Updated devel/diffuse to 0.4.8 [mef 2016-08-11]
+	Updated devel/exempi to 2.3.0 [mef 2016-08-11]
