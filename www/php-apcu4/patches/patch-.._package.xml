@@ -1,15 +1,15 @@
-$NetBSD: patch-.._package.xml,v 1.1 2016/08/11 23:09:40 jdolecek Exp $
+$NetBSD: patch-.._package.xml,v 1.2 2016/08/11 23:11:25 jdolecek Exp $
 
 Update md5 sum.
 
---- ../package.xml.orig	2014-10-12 02:02:21.000000000 +0900
-+++ ../package.xml	2015-02-01 16:50:25.000000000 +0900
-@@ -105,7 +105,7 @@
+--- ../package.xml.orig	2016-04-20 11:38:56.000000000 +0000
++++ ../package.xml
+@@ -114,7 +114,7 @@
     <file md5sum="2a8437130a0d8b546a4ad0a4c46f6e6b" name="pgsql_s_lock.h" role="src" />
     <file md5sum="f779685bd4d96e1d925ea93b73131d9c" name="pgsql_s_lock.c" role="src" />
     <file md5sum="54bfc8892372c1cf55cfa069aaf81eb2" name="apc_serializer.h" role="src" />
--   <file md5sum="5be4ac2cf190c97d2933e008b57d1055" name="config.m4" role="src" />
-+   <file md5sum="5a19fef359933bfc9b208a4598f3ce53" name="config.m4" role="src" />
+-   <file md5sum="35cb519993ec2dd9272122a19629e57b" name="config.m4" role="src" />
++   <file md5sum="0a0a5035ed14cc4bbd8147212f93c363" name="config.m4" role="src" />
     <file md5sum="8c723e3d9a87c81326117fc32e56edff" name="config.w32" role="src" />
-    <file md5sum="d6c836c279b1fbabf69ada700dd5cdfc" name="INSTALL" role="doc" />
+    <file md5sum="0354d67fcd874d677b462d6a5e8c601d" name="INSTALL" role="doc" />
     <file md5sum="de1caba45c42bd445f33d52eb1e82339" name="LICENSE" role="doc" />
