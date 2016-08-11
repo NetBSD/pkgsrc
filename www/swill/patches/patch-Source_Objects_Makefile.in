@@ -1,0 +1,15 @@
+$NetBSD: patch-Source_Objects_Makefile.in,v 1.1 2016/08/11 12:51:15 schmonz Exp $
+
+Libtoolize.
+
+--- Source/Objects/Makefile.in.orig	2016-01-16 13:37:22.000000000 +0000
++++ Source/Objects/Makefile.in
+@@ -37,7 +37,7 @@ SHELL  = /bin/sh
+ # Rules for creation of a .o file from .c
+ .SUFFIXES: .c
+ .c.o:
+-	$(CC) $(CCSHARED) $(DOHOPT) $(INCLUDE) $(CFLAGS) -c -o $*.o $<
++	libtool --mode=compile --tag=CC $(CC) $(DOHOPT) $(INCLUDE) $(CFLAGS) -c $<
+ 
+ all: $(LIBOBJS)
+ 
