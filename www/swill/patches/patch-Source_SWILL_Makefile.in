@@ -1,0 +1,49 @@
+$NetBSD: patch-Source_SWILL_Makefile.in,v 1.1 2016/08/11 12:51:15 schmonz Exp $
+
+Libtoolize.
+
+--- Source/SWILL/Makefile.in.orig	2016-01-16 13:37:22.000000000 +0000
++++ Source/SWILL/Makefile.in
+@@ -20,12 +20,12 @@ NETLIBS = @NETLIBS@
+ # Normally, you shouldn't have to change anything below this point     #
+ ########################################################################
+ 
+-LIBOBJS = log.o io.o encoding.o handlers.o mime.o parse.o web.o security.o
++LIBOBJS = log.lo io.lo encoding.lo handlers.lo mime.lo parse.lo web.lo security.lo
+ LIBSRCS = log.c io.c encoding.c handlers.c mime.c parse.c web.c security.c
+ 
+-DOHOBJS = ../Objects/*.o
++DOHOBJS = ../Objects/*.lo
+ LIBHEADERS = $(srcdir)/../Include/swill.h
+-LIB        = libswill@MPISUFFIX@$(SO)
++LIB        = libswill@MPISUFFIX@.la
+ SLIB       = libswill@MPISUFFIX@.a
+ INCLUDE    = -I$(srcdir)/../../Include -I$(srcdir)/../Objects @MPIINCLUDE@
+ CFLAGS     = @USEMPI@
+@@ -33,20 +33,20 @@ SHELL      = /bin/sh
+ 
+ #
+ # Rules for creation of a .o file from .cxx
+-.SUFFIXES: .c
+-.c.o:
+-	$(CC) $(CCSHARED) $(INCLUDE) $(CFLAGS) -c -o $*.o $<
++.SUFFIXES: .c .lo
++.c.lo:
++	libtool --mode=compile --tag=CC $(CC) $(INCLUDE) $(CFLAGS) -c $<
+ 
+-all: static shared
++all: shared
+ 
+ $(SLIB): $(LIBOBJS)
+ 	@echo "Building static library"
+ 	$(AR) cr $(SLIB) $(LIBOBJS) $(DOHOBJS)
+ 	cp -f $(SLIB) ../..
+ 
+-($LIB): $(LIBOBJS)
++$(LIB): $(LIBOBJS)
+ 	@echo "Building shared library"
+-	$(LDSHARED) $(LIBOBJS) $(DOHOBJS) -o $(LIB) $(NETLIBS)
++	libtool --mode=link --tag=CC ${CC} $(LIBOBJS) $(DOHOBJS) -o $(LIB) $(NETLIBS) -version-info 1:0:0 -rpath $(prefix)/lib
+ 	cp -f $(LIB) ../..
+ 
+ static: $(SLIB)
