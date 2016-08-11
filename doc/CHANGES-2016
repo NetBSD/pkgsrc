@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3291 2016/08/11 03:43:48 manu Exp $
+$NetBSD: CHANGES-2016,v 1.3292 2016/08/11 04:29:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4720,3 +4720,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/exempi to 2.3.0 [mef 2016-08-11]
 	Updated devel/flex to 2.6.1 [mef 2016-08-11]
 	Updated filesystems/glusterfs to 3.8.2 [manu 2016-08-11]
+	Updated www/firefox-l10n to 48.0 [ryoon 2016-08-11]
+	Updated www/firefox45 to 45.3.0 [ryoon 2016-08-11]
+	Updated www/firefox45-l10n to 45.3.0 [ryoon 2016-08-11]
+	Updated devel/xulrunner45 to 45.3.0 [ryoon 2016-08-11]
