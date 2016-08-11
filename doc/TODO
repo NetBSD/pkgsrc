@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16257 2016/08/09 21:46:42 jdolecek Exp $
+$NetBSD: TODO,v 1.16258 2016/08/11 03:24:04 mef Exp $
 
 Suggested new packages
 ======================
@@ -674,7 +674,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fish-2.2.0
 	o flashplayer-0.4.13
 	o flashrom-0.9.8
-	o flex-2.6.1
 	o flightgear-2.12
 	o flightgear-data-3.4.0
 	o flow-tools-0.411
