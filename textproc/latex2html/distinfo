@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2015/11/04 01:59:38 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/08/11 00:15:53 mef Exp $
 
-SHA1 (latex2html-2008.tar.gz) = 5e0aa47572e0c13a4c5da51e963d5496be3f86e7
-RMD160 (latex2html-2008.tar.gz) = a95f06253d6fc8808ffedcad7edf8235194d7756
-SHA512 (latex2html-2008.tar.gz) = e5a9d1700fcc45e6fcb7bae79e25acd52b7a84b70a75b3c7f1e746f65adbd48219a828420f6a7c437613d5c74dfb0405c91df01ac9c1535e9850f3a3e5c47f60
-Size (latex2html-2008.tar.gz) = 1133054 bytes
-SHA1 (patch-aa) = 5533e0365d010e37a1572be194bf932ceaeb6fb5
-SHA1 (patch-ab) = 784228fd8fafec43439fb7ff429eb0ba1e103d43
+SHA1 (latex2html-2016.tar.gz) = 667308a050a071106acc573f4b88f919bb0809c9
+RMD160 (latex2html-2016.tar.gz) = 1e400a65753ee8520acf1d3c4f9356d1e58fa033
+SHA512 (latex2html-2016.tar.gz) = 2a7d12bda145101c4099cd0efba7ccfd18eaa858c9ffe5223d0bc25eb57d298b94961289a6a79443000116a358ea8513d8054933f902aad21a67a2c0c2e41445
+Size (latex2html-2016.tar.gz) = 1149971 bytes
+SHA1 (patch-ab) = 33cc684907be6dc0744c751cfd104cbdfe7b0308

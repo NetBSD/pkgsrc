@@ -1,4 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2011/07/09 14:19:30 bsiegert Exp $
+$NetBSD: patch-ab,v 1.3 2016/08/11 00:15:53 mef Exp $
+
+(the first half)
+date: 2006-04-07 11:23:19 +0900;  author: minskim;  state: Exp;
+Use teTeX/module.mk to run mktexlsr for texmf-local only.
+
+(second half)
+date: 2011-07-09 23:19:30 +0900;  author: bsiegert;  state: Exp;  lines: +18 -3;
+Add user-destdir support. Almost trivial except for one bug inthe install
+script.
 
 --- config/install.pl.orig	2002-11-29 11:49:01.000000000 +0000
 +++ config/install.pl
