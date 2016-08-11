@@ -17,5 +17,4 @@ upgrade path for the future. When O+ takes over, many will be tempted to use
 this would be a grave error. The tried and tested APC codebase provides far
 superior support for local storage of PHP variables.
 
-This package supports PHP 7.x and later. Install php-apcu4 if you are using
-PHP 5.x.
+This package supports PHP 5.x. Use php-apcu if you are using PHP 7.x
