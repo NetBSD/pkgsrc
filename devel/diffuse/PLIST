@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2013/05/14 19:44:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/08/11 00:26:12 mef Exp $
 bin/diffuse
 man/cs/man1/diffuse.1
 man/it/man1/diffuse.1
@@ -42,6 +42,12 @@ share/gnome/help/diffuse/C/diffuse.xml
 share/gnome/help/diffuse/cs/diffuse.xml
 share/gnome/help/diffuse/it/diffuse.xml
 share/gnome/help/diffuse/ru/diffuse.xml
+share/icons/hicolor/16x16/apps/diffuse.png
+share/icons/hicolor/22x22/apps/diffuse.png
+share/icons/hicolor/24x24/apps/diffuse.png
+share/icons/hicolor/256x256/apps/diffuse.png
+share/icons/hicolor/32x32/apps/diffuse.png
+share/icons/hicolor/48x48/apps/diffuse.png
 share/locale/cs/LC_MESSAGES/diffuse.mo
 share/locale/de/LC_MESSAGES/diffuse.mo
 share/locale/es/LC_MESSAGES/diffuse.mo
@@ -51,7 +57,8 @@ share/locale/ko/LC_MESSAGES/diffuse.mo
 share/locale/pl/LC_MESSAGES/diffuse.mo
 share/locale/ru/LC_MESSAGES/diffuse.mo
 share/locale/zh_CN/LC_MESSAGES/diffuse.mo
+share/locale/zh_TW/LC_MESSAGES/diffuse.mo
 share/omf/diffuse/diffuse-C.omf
+share/omf/diffuse/diffuse-cs.omf
 share/omf/diffuse/diffuse-it.omf
 share/omf/diffuse/diffuse-ru.omf
-share/pixmaps/diffuse.png
