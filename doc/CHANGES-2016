@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3293 2016/08/11 12:51:20 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.3294 2016/08/11 14:49:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox45-l10n to 45.3.0 [ryoon 2016-08-11]
 	Updated devel/xulrunner45 to 45.3.0 [ryoon 2016-08-11]
 	Updated www/swill to 0.3nb2 [schmonz 2016-08-11]
+	Updated devel/transifex-client to 0.12.1 [taca 2016-08-11]
