@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.209 2016/07/09 06:38:22 wiz Exp $
+# $NetBSD: Makefile,v 1.210 2016/08/11 22:48:00 is Exp $
+
+TEST_TARGETS=	test
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
 MASTER_SITES=	#
-PKGREVISION=	4
+PKGREVISION=	5
+
 # manually created from svn checkout of
 # svn checkout http://svn.code.sf.net/p/netpbm/code/advanced netpbm
 # tar --exclude netpbm/.svn/\* -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
