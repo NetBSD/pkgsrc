@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3290 2016/08/11 03:24:03 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3291 2016/08/11 03:43:48 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/diffuse to 0.4.8 [mef 2016-08-11]
 	Updated devel/exempi to 2.3.0 [mef 2016-08-11]
 	Updated devel/flex to 2.6.1 [mef 2016-08-11]
+	Updated filesystems/glusterfs to 3.8.2 [manu 2016-08-11]
