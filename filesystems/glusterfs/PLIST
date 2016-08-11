@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2016/06/16 04:01:02 manu Exp $
+@comment $NetBSD: PLIST,v 1.36 2016/08/11 03:43:48 manu Exp $
 ${PYSITELIB}/gluster/__init__.py
 ${PYSITELIB}/gluster/__init__.pyc
 ${PYSITELIB}/gluster/__init__.pyo
@@ -26,7 +26,6 @@ include/glusterfs/common-utils.h
 include/glusterfs/compat-errno.h
 include/glusterfs/compat-uuid.h
 include/glusterfs/compat.h
-include/glusterfs/ctr-messages.h
 include/glusterfs/daemon.h
 include/glusterfs/default-args.h
 include/glusterfs/defaults.h
