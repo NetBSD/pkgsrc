@@ -1,19 +1,19 @@
-$NetBSD: patch-config.m4,v 1.1 2016/08/11 23:09:40 jdolecek Exp $
+$NetBSD: patch-config.m4,v 1.2 2016/08/11 23:11:25 jdolecek Exp $
 
 Fix bashism.
 
---- config.m4.orig	2014-10-11 17:02:21.000000000 +0000
+--- config.m4.orig	2016-04-20 11:38:56.000000000 +0000
 +++ config.m4
-@@ -140,7 +140,7 @@ if test "$PHP_APCU" != "no"; then
-     LIBS="$orig_LIBS"
-   fi
+@@ -157,7 +157,7 @@ if test "$PHP_APCU" != "no"; then
+ 		fi
+ 	fi
    
 -  if test "$PHP_APCU_RWLOCKS" == "no"; then
 +  if test "$PHP_APCU_RWLOCKS" = "no"; then
      orig_LIBS="$LIBS"
  	  LIBS="$LIBS -lpthread"
  	  AC_TRY_RUN(
-@@ -193,8 +193,8 @@ if test "$PHP_APCU" != "no"; then
+@@ -210,8 +210,8 @@ if test "$PHP_APCU" != "no"; then
  	  LIBS="$orig_LIBS"
    fi
    
