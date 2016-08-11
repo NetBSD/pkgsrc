@@ -1,25 +1,15 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2016/01/07 12:05:31 wiz Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2016/08/11 03:23:44 mef Exp $
 
-libfl* do not need to be linked against libintl, only the binaries do.
-https://sourceforge.net/p/flex/bugs/198/
+parse.h should be created before main.c is compiled
 
---- src/Makefile.am.orig	2015-11-13 19:32:53.000000000 +0000
-+++ src/Makefile.am
-@@ -1,7 +1,7 @@
- AM_YFLAGS = -d
- localedir = $(datadir)/locale
- AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I$(top_srcdir)/intl
--LIBS = @LIBINTL@ @LIBS@
-+LIBS = @LIBS@
- 
- m4 = @M4@
- 
-@@ -33,7 +33,7 @@ flex_SOURCES = \
- 	filter.c \
- 	regex.c
- 
--LDADD = ../lib/libcompat.la
-+LDADD = ../lib/libcompat.la @LIBINTL@
- 
- libfl_la_SOURCES = \
- 	libmain.c \
+--- src/Makefile.am.orig	2016-03-02 09:24:24.000000000 +0900
++++ src/Makefile.am	2016-08-11 11:29:09.000000000 +0900
+@@ -103,7 +103,7 @@ gen.o: gen.c flexdef.h flexint.h tables.
+ libmain.o: libmain.c
+ libyywrap.o: libyywrap.c
+ main.o: main.c flexdef.h flexint.h version.h options.h scanopt.h \
+- tables.h tables_shared.h
++ tables.h tables_shared.h parse.h
+ misc.o: misc.c flexdef.h flexint.h tables.h tables_shared.h
+ nfa.o: nfa.c flexdef.h flexint.h
+ options.o: options.c options.h scanopt.h flexdef.h flexint.h
