@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3292 2016/08/11 04:29:38 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3293 2016/08/11 12:51:20 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox45 to 45.3.0 [ryoon 2016-08-11]
 	Updated www/firefox45-l10n to 45.3.0 [ryoon 2016-08-11]
 	Updated devel/xulrunner45 to 45.3.0 [ryoon 2016-08-11]
+	Updated www/swill to 0.3nb2 [schmonz 2016-08-11]
