@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2016/07/09 13:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/08/11 00:26:12 mef Exp $
 
-DISTNAME=	diffuse-0.4.7
+DISTNAME=	diffuse-0.4.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +29,7 @@ do-install:
 		--prefix=${PREFIX} --sysconfdir=${PKG_SYSCONFDIR} \
 		--pythonbin=${PYTHONBIN} --files-only
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

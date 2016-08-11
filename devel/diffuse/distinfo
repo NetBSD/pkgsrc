@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 03:27:23 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/08/11 00:26:12 mef Exp $
 
-SHA1 (diffuse-0.4.7.tar.bz2) = 9e3b906b579495027b76dc723b5df28e400d3f26
-RMD160 (diffuse-0.4.7.tar.bz2) = 8a7d2a4c8b5af59ab5e0a7c5db619a5017022976
-SHA512 (diffuse-0.4.7.tar.bz2) = 3db665ec2f05d8fd8b30f391a53e75ae0ef271d3f35f0c89f20226bda296ca46e88491a741cd3bcaa1159b9d5d2581931362ca600176b6d599351f4a34f56e2f
-Size (diffuse-0.4.7.tar.bz2) = 189257 bytes
+SHA1 (diffuse-0.4.8.tar.bz2) = 473f7e82f57cc3a5ce0378eea8aede19a3f2a9df
+RMD160 (diffuse-0.4.8.tar.bz2) = c424ba8e48a86d0eeab2b51b15bb6f81dd23e95d
+SHA512 (diffuse-0.4.8.tar.bz2) = 0c62976526804a328f1cc1775f842e9575fab50309cc964171af5ee89d8f303d4cbdf66a078ed64bb8826f5a57c2cc7fc59afc1ee87646ece340212d34f2514e
+Size (diffuse-0.4.8.tar.bz2) = 557966 bytes
