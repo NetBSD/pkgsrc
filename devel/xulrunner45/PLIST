@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/04 10:01:06 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/11 04:28:52 ryoon Exp $
 bin/xulrunner45
 include/xulrunner45/ADTSDecoder.h
 include/xulrunner45/ADTSDemuxer.h
@@ -561,6 +561,7 @@ include/xulrunner45/mozIGeckoMediaPluginService.h
 include/xulrunner45/mozIJSSubScriptLoader.h
 include/xulrunner45/mozIPersonalDictionary.h
 include/xulrunner45/mozIPlacesAutoComplete.h
+include/xulrunner45/mozIPlacesPendingOperation.h
 include/xulrunner45/mozISpellCheckingEngine.h
 include/xulrunner45/mozISpellI18NManager.h
 include/xulrunner45/mozISpellI18NUtil.h
@@ -6383,6 +6384,7 @@ share/idl/xulrunner45/mozIGeckoMediaPluginService.idl
 share/idl/xulrunner45/mozIJSSubScriptLoader.idl
 share/idl/xulrunner45/mozIPersonalDictionary.idl
 share/idl/xulrunner45/mozIPlacesAutoComplete.idl
+share/idl/xulrunner45/mozIPlacesPendingOperation.idl
 share/idl/xulrunner45/mozISpellCheckingEngine.idl
 share/idl/xulrunner45/mozISpellI18NManager.idl
 share/idl/xulrunner45/mozISpellI18NUtil.idl
