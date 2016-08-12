@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/03/10 12:58:25 leot Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/12 09:16:57 leot Exp $
 
-DISTNAME=	st-0.6
+DISTNAME=	st-0.7
 PKGNAME=	${DISTNAME:S/-/-term-/}
 CATEGORIES=	x11
 MASTER_SITES=	http://dl.suckless.org/st/
@@ -36,6 +36,5 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
