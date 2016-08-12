@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/06/08 19:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/08/12 11:57:55 wen Exp $
 
-DISTNAME=	Text-Sass-v1.0.3
+DISTNAME=	Text-Sass-v1.0.4
 PKGNAME=	p5-${DISTNAME:S/v//}
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
