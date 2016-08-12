@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3299 2016/08/12 10:15:17 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3300 2016/08/12 10:28:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4729,3 +4729,13 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/stalonetray to 0.8.3 [mef 2016-08-11]
 	Updated www/php-apcu4 to 4.0.11 [jdolecek 2016-08-11]
 	Updated x11/st-term to 0.7 [leot 2016-08-12]
+	Updated misc/erlang-p1_utils to 1.0.5 [fhajny 2016-08-12]
+	Updated devel/erlang-cache_tab to 1.0.4 [fhajny 2016-08-12]
+	Updated security/erlang-fast_tls to 1.0.7 [fhajny 2016-08-12]
+	Updated sysutils/erlang-lager to 3.2.1 [fhajny 2016-08-12]
+	Updated textproc/erlang-fast_xml to 1.1.15 [fhajny 2016-08-12]
+	Updated textproc/erlang-fast_yaml to 1.0.6 [fhajny 2016-08-12]
+	Updated textproc/erlang-stringprep to 1.0.6 [fhajny 2016-08-12]
+	Updated converters/erlang-iconv to 1.0.2 [fhajny 2016-08-12]
+	Updated net/erlang-stun to 1.0.7 [fhajny 2016-08-12]
+	Updated net/erlang-esip to 1.0.8 [fhajny 2016-08-12]
