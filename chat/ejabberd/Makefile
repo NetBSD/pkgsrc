@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2016/05/17 10:32:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.67 2016/08/12 10:27:27 fhajny Exp $
 
-DISTNAME=	ejabberd-16.04
-PKGREVISION=	1
+DISTNAME=	ejabberd-16.08
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -11,24 +10,24 @@ HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	erlang-cache_tab>=1.0.2:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-esip>=1.0.4:../../net/erlang-esip
+DEPENDS+=	erlang-cache_tab>=1.0.3:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-esip>=1.0.7:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.1:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.3:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.3:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.3:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-iconv>=1.0.0:../../converters/erlang-iconv
+DEPENDS+=	erlang-fast_tls>=1.0.6:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.14:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.5:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-iconv>=1.0.1:../../converters/erlang-iconv
 DEPENDS+=	erlang-jiffy>=0.14.7:../../textproc/erlang-jiffy
-DEPENDS+=	erlang-lager>=3.0.2:../../sysutils/erlang-lager
+DEPENDS+=	erlang-lager>=3.2.1:../../sysutils/erlang-lager
 DEPENDS+=	erlang-luerl>=0.2:../../lang/erlang-luerl
 DEPENDS+=	erlang-p1_mysql>=1.0.1:../../databases/erlang-p1_mysql
 DEPENDS+=	erlang-p1_oauth2>=0.6.1:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pam>=1.0.0:../../security/erlang-p1_pam
 DEPENDS+=	erlang-p1_pgsql>=1.1.0:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.4:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.5:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-p1_xmlrpc>=1.15.1:../../textproc/erlang-p1_xmlrpc
-DEPENDS+=	erlang-stringprep>=1.0.3:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.3:../../net/erlang-stun
+DEPENDS+=	erlang-stringprep>=1.0.5:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.0.6:../../net/erlang-stun
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes
@@ -37,7 +36,6 @@ USE_TOOLS+=		bash:run gmake patch
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-iconv
-CONFIGURE_ARGS+=	--enable-lager
 CONFIGURE_ARGS+=	--enable-mysql
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pam
