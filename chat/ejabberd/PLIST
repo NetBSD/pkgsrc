@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2016/04/29 19:05:22 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.41 2016/08/12 10:27:27 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -40,9 +40,12 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_local.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_logger.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_node_groups.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_mnesia.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_piefxis.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_rdbms.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_receiver.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_redis.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_regexp.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_riak_sup.beam
@@ -224,6 +227,7 @@ lib/erlang/lib/${PKGNAME}/include/ejabberd_commands.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_ctl.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_http.hrl
+lib/erlang/lib/${PKGNAME}/include/ejabberd_oauth.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sm.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sql_pt.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_web_admin.hrl
