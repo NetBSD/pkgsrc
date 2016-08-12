@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3297 2016/08/11 23:11:47 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.3298 2016/08/12 09:17:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4729,3 +4729,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/php-apcu4 version 4.0.7 [jdolecek 2016-08-11]
 	Updated x11/stalonetray to 0.8.3 [mef 2016-08-11]
 	Updated www/php-apcu4 to 4.0.11 [jdolecek 2016-08-11]
+	Updated x11/st-term to 0.7 [leot 2016-08-12]
