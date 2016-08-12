@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3304 2016/08/12 13:39:56 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3305 2016/08/12 20:41:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4743,3 +4743,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-Sys-Syslog to 0.34 [wen 2016-08-12]
 	Updated textproc/p5-Text-Sass to 1.0.4 [wen 2016-08-12]
 	Updated math/py-networkx to 1.11 [wen 2016-08-12]
+	Updated multimedia/ffmpeg3 to 3.1.2 [adam 2016-08-12]
+	Updated multimedia/ffplay3 to 3.1.2 [adam 2016-08-12]
