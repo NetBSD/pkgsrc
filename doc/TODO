@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16258 2016/08/11 03:24:04 mef Exp $
+$NetBSD: TODO,v 1.16259 2016/08/12 10:13:02 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -623,7 +623,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o epiphany-extensions-3.2.0
 	o epubcheck-3.0.1
 	o eric5-5.4.6
-	o erlang-19.0
 	o es-0.83
 	o esh-0.8.5
 	o espeak-1.46.02 [wip]
