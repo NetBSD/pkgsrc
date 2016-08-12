@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3303 2016/08/12 11:58:38 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3304 2016/08/12 13:39:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4742,3 +4742,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated chat/ejabberd to 16.08 [fhajny 2016-08-12]
 	Updated sysutils/p5-Sys-Syslog to 0.34 [wen 2016-08-12]
 	Updated textproc/p5-Text-Sass to 1.0.4 [wen 2016-08-12]
+	Updated math/py-networkx to 1.11 [wen 2016-08-12]
