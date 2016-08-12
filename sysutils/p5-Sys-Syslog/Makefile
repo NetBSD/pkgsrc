@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 19:24:26 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/08/12 11:50:36 wen Exp $
 #
 
-DISTNAME=	Sys-Syslog-0.33
+DISTNAME=	Sys-Syslog-0.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 
