@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:37:37 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/12 09:31:02 fhajny Exp $
 lib/erlang/lib/lager-${PKGVERSION}/ebin/error_logger_lager_h.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager.app
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager.beam
@@ -13,6 +13,7 @@ lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_file_backend.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_format.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_handler_watcher.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_handler_watcher_sup.beam
+lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_manager_killer.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_msg.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_stdlib.beam
 lib/erlang/lib/lager-${PKGVERSION}/ebin/lager_sup.beam
