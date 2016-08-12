@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 13:03:55 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/08/12 13:38:22 wen Exp $
 
-DISTNAME=	networkx-1.10
+DISTNAME=	networkx-1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/} \
-		http://networkx.lanl.gov/download/networkx/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://networkx.lanl.gov/
+HOMEPAGE=	http://networkx.github.io/
 COMMENT=	Python package for creating and manipulating graphs and networks
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-decorator>=3.4.0:../../devel/py-decorator
+DEPENDS+=	${PYPKGPREFIX}-decorator>=4.0.10:../../devel/py-decorator
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 
 USE_LANGUAGES=	# none
@@ -41,6 +40,5 @@ SUBST_FILES.python+=	networkx/algorithms/traversal/tests/*.py
 SUBST_MESSAGE.python=	Fixing path to Python interpreter.
 SUBST_SED.python=	-e "s,/usr/bin/env python,${PYTHONBIN},g"
 
-.include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
