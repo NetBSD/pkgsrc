@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2015/11/01 09:58:28 wiz Exp $
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+@comment $NetBSD: PLIST,v 1.12 2016/08/12 13:38:22 wen Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/networkx/__init__.py
 ${PYSITELIB}/networkx/__init__.pyc
 ${PYSITELIB}/networkx/__init__.pyo
@@ -1187,3 +1187,4 @@ share/doc/networkx-${PKGVERSION}/examples/pygraphviz/pygraphviz_attributes.py
 share/doc/networkx-${PKGVERSION}/examples/pygraphviz/pygraphviz_draw.py
 share/doc/networkx-${PKGVERSION}/examples/pygraphviz/pygraphviz_simple.py
 share/doc/networkx-${PKGVERSION}/examples/pygraphviz/write_dotfile.py
+@pkgdir share/doc/networkx-${PKGVERSION}/examples/readwrite
