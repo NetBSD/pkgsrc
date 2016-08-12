@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3301 2016/08/12 10:29:02 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3302 2016/08/12 11:52:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4740,3 +4740,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/erlang-stun to 1.0.7 [fhajny 2016-08-12]
 	Updated net/erlang-esip to 1.0.8 [fhajny 2016-08-12]
 	Updated chat/ejabberd to 16.08 [fhajny 2016-08-12]
+	Updated sysutils/p5-Sys-Syslog to 0.34 [wen 2016-08-12]
