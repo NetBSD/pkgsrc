@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3309 2016/08/13 00:51:18 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3310 2016/08/13 02:30:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4749,3 +4749,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/p5-Locale-Maketext to 1.28 [wen 2016-08-13]
 	Updated graphics/p5-GDGraph to 1.53 [wen 2016-08-13]
 	Updated graphics/p5-GraphViz to 2.22 [wen 2016-08-13]
+	Updated graphics/p5-RRDTool-OO to 0.36 [wen 2016-08-13]
