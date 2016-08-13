@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/08 05:46:23 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/13 14:04:22 mef Exp $
 include/re2/filtered_re2.h
 include/re2/re2.h
 include/re2/set.h
 include/re2/stringpiece.h
-include/re2/variadic_function.h
 lib/libre2.a
 lib/libre2.so
 lib/libre2.so.0
