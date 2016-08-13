@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/13 20:21:08 bsiegert Exp $
+
+SHA1 (go-runewidth-0.0.1.tar.gz) = f76784415e3c47c2239e5fd174c26a79d53f38e1
+RMD160 (go-runewidth-0.0.1.tar.gz) = a0cba59dfc2d9761b58d2abb70062d839ef34d9a
+SHA512 (go-runewidth-0.0.1.tar.gz) = 7f23b93c55826fdd6f45cf9a25584386c3c9b3bc3f3de007ed62f5d2cd2275128b2f47c0e39d0f15d92e5eae4d3352dca96a2fcea1c8406a3c2780550e3318ea
+Size (go-runewidth-0.0.1.tar.gz) = 5880 bytes
