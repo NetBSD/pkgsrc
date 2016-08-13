@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:49:45 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/08/13 00:20:42 wen Exp $
 
-SHA1 (Locale-Maketext-1.26.tar.gz) = 57d93357f89c33b43bab7b1f27cee92065188314
-RMD160 (Locale-Maketext-1.26.tar.gz) = cf2a1549ede17951614200298169ea7d393b50ae
-SHA512 (Locale-Maketext-1.26.tar.gz) = 6d2bb568ddaf13465befb7a1b345cb089a5e7907856ba0b5244a147b472c6dee922fb60929370ec74d937897dfd59b82bf6c860556846436bf8341cfdebc71b6
-Size (Locale-Maketext-1.26.tar.gz) = 52175 bytes
+SHA1 (Locale-Maketext-1.28.tar.gz) = fa87e5a7fde014304fd079ea454011c9ed6974d7
+RMD160 (Locale-Maketext-1.28.tar.gz) = ca2fbba6dcd39665ddaacdd578cd9947b5157446
+SHA512 (Locale-Maketext-1.28.tar.gz) = 1f4f3f3c3d4ede54007344031d7bf6094886d216f084e3ad0a58f7785cd6185ccc992ca5f399bd9afa63546b1dabcd2976e98a7e760bae9d9cbe8e3a8ec95d10
+Size (Locale-Maketext-1.28.tar.gz) = 54312 bytes
 SHA1 (patch-Makefile.PL) = e1225482aff2b1ca71786f18cb554f1c340048c8
