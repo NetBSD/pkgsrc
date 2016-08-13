@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3319 2016/08/13 14:17:01 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3320 2016/08/13 17:31:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4759,3 +4759,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p5-Archive-Extract to 0.78 [wen 2016-08-13]
 	Updated devel/re2 to 20160801 [mef 2016-08-13]
 	Updated www/py-uliweb to 0.5 [wen 2016-08-13]
+	Updated devel/php-xdebug to 2.4.1 [taca 2016-08-13]
