@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16261 2016/08/13 00:45:05 wen Exp $
+$NetBSD: TODO,v 1.16262 2016/08/13 00:51:18 wen Exp $
 
 Suggested new packages
 ======================
@@ -1221,7 +1221,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GStreamer-0.20
 	o p5-Geo-IPfree-1.151940
 	o p5-Git-Wrapper-0.045
-	o p5-GraphViz-2.20
 	o p5-GraphViz2-2.37
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
