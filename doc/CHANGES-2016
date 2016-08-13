@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3317 2016/08/13 13:39:18 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3318 2016/08/13 14:04:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4757,3 +4757,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/py-Pillow to 3.3.0 [wen 2016-08-13]
 	Updated archivers/unrar to 5.4.4 [bsiegert 2016-08-13]
 	Updated archivers/p5-Archive-Extract to 0.78 [wen 2016-08-13]
+	Updated devel/re2 to 20160801 [mef 2016-08-13]
