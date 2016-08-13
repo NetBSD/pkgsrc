@@ -1,0 +1,2 @@
+go-runewidth provides the RuneWidth and StringWidth functions to get
+the fixed width of a Unicode rune or string.
