@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3305 2016/08/12 20:41:00 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3306 2016/08/13 00:09:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4745,3 +4745,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/py-networkx to 1.11 [wen 2016-08-12]
 	Updated multimedia/ffmpeg3 to 3.1.2 [adam 2016-08-12]
 	Updated multimedia/ffplay3 to 3.1.2 [adam 2016-08-12]
+	Updated devel/py-mccabe to 0.5.2 [wen 2016-08-13]
