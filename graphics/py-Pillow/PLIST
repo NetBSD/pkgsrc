@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/04/21 08:13:50 leot Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/08/13 08:07:22 wen Exp $
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -263,6 +263,10 @@ ${PYSITELIB}/PIL/_imagingcms.so
 ${PYSITELIB}/PIL/_imagingft.so
 ${PYSITELIB}/PIL/_imagingmath.so
 ${PYSITELIB}/PIL/_imagingmorph.so
+${PYSITELIB}/PIL/_imagingtk.so
+${PYSITELIB}/PIL/_tkinter_finder.py
+${PYSITELIB}/PIL/_tkinter_finder.pyc
+${PYSITELIB}/PIL/_tkinter_finder.pyo
 ${PYSITELIB}/PIL/_util.py
 ${PYSITELIB}/PIL/_util.pyc
 ${PYSITELIB}/PIL/_util.pyo
