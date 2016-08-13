@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/03/03 13:23:22 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2016/08/13 23:18:56 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -11,6 +11,8 @@ PKG_SUGGESTED_OPTIONS=	doc gmp
 PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=		tex-amsfonts>=3.0:../../fonts/tex-amsfonts
+BUILD_DEPENDS+=		tex-hyphen-german-*:../../print/tex-hyphen-german
+BUILD_DEPENDS+=		tex-hyphen-russian-*:../../print/tex-hyphen-russian
 BUILD_DEPENDS+=		tex-pdftex>=1.40.11:../../print/tex-pdftex
 PLIST.doc=		yes
 BUILD_TARGET+=		doc
