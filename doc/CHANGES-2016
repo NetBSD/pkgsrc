@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3320 2016/08/13 17:31:42 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3321 2016/08/13 17:33:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4760,3 +4760,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/re2 to 20160801 [mef 2016-08-13]
 	Updated www/py-uliweb to 0.5 [wen 2016-08-13]
 	Updated devel/php-xdebug to 2.4.1 [taca 2016-08-13]
+	Updated net/php-yaz to 1.2.1 [taca 2016-08-13]
