@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3322 2016/08/13 17:36:22 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3323 2016/08/13 20:22:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4762,3 +4762,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/php-xdebug to 2.4.1 [taca 2016-08-13]
 	Updated net/php-yaz to 1.2.1 [taca 2016-08-13]
 	Updated graphics/php-gd to 5.6.24nb1 [taca 2016-08-13]
+	Added textproc/go-runewidth version 0.0.1 [bsiegert 2016-08-13]
