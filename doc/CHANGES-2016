@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3315 2016/08/13 08:08:31 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3316 2016/08/13 08:17:10 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-SNMP-Info to 3.33 [wen 2016-08-13]
 	Updated graphics/py-qrcode to 5.3 [wen 2016-08-13]
 	Updated graphics/py-Pillow to 3.3.0 [wen 2016-08-13]
+	Updated archivers/unrar to 5.4.4 [bsiegert 2016-08-13]
