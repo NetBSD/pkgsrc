@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/12/12 10:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/08/13 06:14:48 mef Exp $
 #
 
 DISTNAME=	acme091src
@@ -10,7 +10,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 SITES.${LIBDIST}=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme
+HOMEPAGE=	https://sourceforge.net/projects/acme-crossass/
 COMMENT=	Cross assembler for 6502, 65c02, and 65816
 LICENSE=	gnu-gpl-v2
 
