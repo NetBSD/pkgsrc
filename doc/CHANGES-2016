@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3307 2016/08/13 00:21:38 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3308 2016/08/13 00:45:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4747,3 +4747,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffplay3 to 3.1.2 [adam 2016-08-12]
 	Updated devel/py-mccabe to 0.5.2 [wen 2016-08-13]
 	Updated misc/p5-Locale-Maketext to 1.28 [wen 2016-08-13]
+	Updated graphics/p5-GDGraph to 1.53 [wen 2016-08-13]
