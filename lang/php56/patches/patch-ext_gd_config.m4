@@ -1,6 +1,6 @@
-$NetBSD: patch-ext_gd_config.m4,v 1.1 2014/11/24 15:37:08 taca Exp $
+$NetBSD: patch-ext_gd_config.m4,v 1.2 2016/08/13 17:34:41 taca Exp $
 
---- ext/gd/config.m4.orig	2014-11-12 13:52:21.000000000 +0000
+--- ext/gd/config.m4.orig	2016-07-21 00:23:03.000000000 +0000
 +++ ext/gd/config.m4
 @@ -49,18 +49,7 @@ dnl Checks for the configure options
  dnl
@@ -47,3 +47,14 @@ $NetBSD: patch-ext_gd_config.m4,v 1.1 2014/11/24 15:37:08 taca Exp $
      ],[
        -L$PHP_ZLIB_DIR/$PHP_LIBDIR -lz -L$GD_PNG_DIR/$PHP_LIBDIR
      ])
+@@ -249,7 +237,9 @@ AC_DEFUN([PHP_GD_CHECK_VERSION],[
+   PHP_CHECK_LIBRARY(gd, gdImageCreateFromPng,   [AC_DEFINE(HAVE_GD_PNG,              1, [ ])], [], [ $GD_SHARED_LIBADD ])
+   PHP_CHECK_LIBRARY(gd, gdImageCreateFromWebp,  [AC_DEFINE(HAVE_GD_WEBP,             1, [ ])], [], [ $GD_SHARED_LIBADD ])
+   PHP_CHECK_LIBRARY(gd, gdImageCreateFromJpeg,  [AC_DEFINE(HAVE_GD_JPG,              1, [ ])], [], [ $GD_SHARED_LIBADD ])
+-  PHP_CHECK_LIBRARY(gd, gdImageCreateFromXpm,   [AC_DEFINE(HAVE_GD_XPM,              1, [ ])], [], [ $GD_SHARED_LIBADD ])
++  if test "$PHP_XPM_DIR" != "no"; then
++     PHP_CHECK_LIBRARY(gd, gdImageCreateFromXpm,   [AC_DEFINE(HAVE_GD_XPM,              1, [ ])], [], [ $GD_SHARED_LIBADD ])
++  fi
+   PHP_CHECK_LIBRARY(gd, gdImageStringFT,        [AC_DEFINE(HAVE_GD_FREETYPE,         1, [ ])], [], [ $GD_SHARED_LIBADD ])
+   PHP_CHECK_LIBRARY(gd, gdVersionString,        [AC_DEFINE(HAVE_GD_LIBVERSION,       1, [ ])], [], [ $GD_SHARED_LIBADD ])
+ ])
