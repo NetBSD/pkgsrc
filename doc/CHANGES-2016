@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3318 2016/08/13 14:04:37 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3319 2016/08/13 14:17:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4758,3 +4758,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/unrar to 5.4.4 [bsiegert 2016-08-13]
 	Updated archivers/p5-Archive-Extract to 0.78 [wen 2016-08-13]
 	Updated devel/re2 to 20160801 [mef 2016-08-13]
+	Updated www/py-uliweb to 0.5 [wen 2016-08-13]
