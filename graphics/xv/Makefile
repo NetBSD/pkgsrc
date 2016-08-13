@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2016/02/25 13:37:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2016/08/13 23:40:38 dholland Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 DISTFILES=	${DEFAULT_DISTFILES} ${JUMBO_PATCHES}
@@ -21,6 +21,7 @@ COMMENT=	X11 program that displays images of various formats
 LICENSE=	xv-license
 
 USE_IMAKE=	YES
+USE_TOOLS+=	gs:run
 
 # See the end of README in work/xv-3.10a for details.
 RESTRICTED=	Distribution of modified copies and commercial distribution is not permitted.
