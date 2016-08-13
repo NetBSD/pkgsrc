@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3312 2016/08/13 04:14:58 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3313 2016/08/13 06:45:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4752,3 +4752,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/p5-RRDTool-OO to 0.36 [wen 2016-08-13]
 	Updated misc/p5-Business-CreditCard to 0.36 [wen 2016-08-13]
 	Updated devel/p5-Curses to 1.35 [wen 2016-08-13]
+	Updated net/p5-SNMP-Info to 3.33 [wen 2016-08-13]
