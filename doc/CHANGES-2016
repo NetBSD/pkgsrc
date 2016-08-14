@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3324 2016/08/13 23:41:30 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.3325 2016/08/14 02:14:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4764,3 +4764,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/php-gd to 5.6.24nb1 [taca 2016-08-13]
 	Added textproc/go-runewidth version 0.0.1 [bsiegert 2016-08-13]
 	Updated graphics/xv to 3.10anb23 [dholland 2016-08-13]
+	Updated net/sysmon to 0.93 [mef 2016-08-14]
