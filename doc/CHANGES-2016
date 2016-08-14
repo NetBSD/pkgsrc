@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3329 2016/08/14 11:20:46 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3330 2016/08/14 13:39:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4772,3 +4772,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-docs to 3.14.1 [adam 2016-08-14]
 	Updated databases/sqlite3-tcl to 3.14.1 [adam 2016-08-14]
 	Updated net/youtube-dl to 20160813 [adam 2016-08-14]
+	Updated lang/intercal to 0.30 [mef 2016-08-14]
