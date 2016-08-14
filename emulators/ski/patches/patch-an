@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $
+$NetBSD: patch-an,v 1.2 2016/08/14 18:27:05 scole Exp $
 
 --- src/netbsd/ssc-netbsd.c.orig	2010-11-04 05:01:51.000000000 +0000
-+++ src/netbsd/ssc-netbsd.c
-@@ -0,0 +1,463 @@
++++ src/netbsd/ssc-netbsd.c	2016-05-06 14:44:42.000000000 -0400
+@@ -0,0 +1,464 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
 + *
@@ -103,6 +103,7 @@ $NetBSD: patch-an,v 1.1.1.1 2011/07/27 10:23:50 cherry Exp $
 +	tcgetattr(fin, &tios);
 +	saved_tios = tios;
 +	tios.c_lflag &= ~(ICANON|ECHO);
++	tios.c_iflag &= ~(ICRNL);	/* do not map CR to NL on input */
 +	tcsetattr(fin, TCSANOW, &tios);
 +	atexit(restore_tios);
 +	fdin = fin;
