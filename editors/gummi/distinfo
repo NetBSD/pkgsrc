@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:32:16 agc Exp $
+$NetBSD: distinfo,v 1.4.6.1 2016/08/14 12:15:41 spz Exp $
 
-SHA1 (gummi-0.6.5.tar.gz) = dc7cc00518f925629574990d13982ae050515e0b
-RMD160 (gummi-0.6.5.tar.gz) = d07077e7c3c2eff9732cb3fa41c94131681357ea
-SHA512 (gummi-0.6.5.tar.gz) = 9a35533273ff5f2606ba1d79c01dcdf14f2a47628eb5d19613330650ed2a2bd542461492d031e51b773e13c6ac406b564e6703919f16e5f8d7e6bb3c4428b40e
-Size (gummi-0.6.5.tar.gz) = 520902 bytes
-SHA1 (patch-src_update.c) = 389544fbacf4206337128f41d36ec8c057982b36
+SHA1 (gummi-0.6.6.tar.gz) = 89f1ddf50760083838effe8a281ab9d0e6524fca
+RMD160 (gummi-0.6.6.tar.gz) = 2d2d9a7ba4ff27bb3769ad8c31705b64948be5d7
+SHA512 (gummi-0.6.6.tar.gz) = 3be94927c9aafa4914ed2b6f6f5022dce5bcca315a1f947fafb8a4c8bbc5a2bc57f07f8ceaaacdd0b92a5a30483ea8b00e570faf62479280d2ad874716e4c47d
+Size (gummi-0.6.6.tar.gz) = 792642 bytes
+SHA1 (patch-configure.ac) = 3034e1f140b4817f8754d2dba64148422f0ad52d
+SHA1 (patch-src_Makefile.am) = 518dc5de88db7b64efcb0cfddc993faaf01f2efe
