@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3325 2016/08/14 02:14:04 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3326 2016/08/14 10:25:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4765,3 +4765,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/go-runewidth version 0.0.1 [bsiegert 2016-08-13]
 	Updated graphics/xv to 3.10anb23 [dholland 2016-08-13]
 	Updated net/sysmon to 0.93 [mef 2016-08-14]
+	Updated net/tcpdump to 4.8.0 [mef 2016-08-14]
