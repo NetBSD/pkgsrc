@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.49 2016/08/03 12:06:47 maya Exp $
+$NetBSD: distinfo,v 1.50 2016/08/14 16:27:33 maya Exp $
 
 SHA1 (ffmpeg-2.8.7.tar.xz) = 8c0fb21703cf77442338a26f2f645eda68bde6b2
 RMD160 (ffmpeg-2.8.7.tar.xz) = ed757d4ed2763af3260ad13937f072831058d52d
@@ -9,6 +9,5 @@ SHA1 (patch-configure) = 330e73d68491b7b27b88df9055a7bdbb913b37e3
 SHA1 (patch-doc_Makefile) = 48d3b3ccd800303a73fcda79e78533228f79d750
 SHA1 (patch-libavcodec_x86_ac3dsp_init.c) = f997271f4f4604987591d7f17c571aaaa8a6188a
 SHA1 (patch-libavutil_common.h) = de36efed3a8a2069e170e5afe77eb122a46d14b2
-SHA1 (patch-libavutil_opencl.c) = 00ea04f9febe60b9428ac8c3b7e14ae01a955685
 SHA1 (patch-libavutil_x86_asm.h) = 85c5403e97449639253d3c97391dfbb4cadb2548
 SHA1 (patch-libavutil_x86_cpu.c) = 499b0fc3081971a2bba2724bd051aab14c531239
