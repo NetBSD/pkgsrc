@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3326 2016/08/14 10:25:01 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3327 2016/08/14 10:56:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4766,3 +4766,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/xv to 3.10anb23 [dholland 2016-08-13]
 	Updated net/sysmon to 0.93 [mef 2016-08-14]
 	Updated net/tcpdump to 4.8.0 [mef 2016-08-14]
+	Updated textproc/iso-codes to 3.69 [mef 2016-08-14]
