@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16267 2016/08/13 14:17:01 wen Exp $
+$NetBSD: TODO,v 1.16268 2016/08/14 02:14:04 mef Exp $
 
 Suggested new packages
 ======================
@@ -1612,7 +1612,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swt-4.5
 	o sympa-6.2.14
 	o sysinfo-4.2.2
-	o sysmon-0.93
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
 	o t-prot-3.4
