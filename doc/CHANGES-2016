@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3332 2016/08/14 21:11:28 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3333 2016/08/14 21:16:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4775,3 +4775,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/intercal to 0.30 [mef 2016-08-14]
 	Updated emulators/ski to 1.3.2nb3 [scole 2016-08-14]
 	Updated chat/irssi to 0.8.19 [maya 2016-08-14]
+	Updated chat/irssi-icb to 0.15nb1 [leot 2016-08-14]
