@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.33 2016/05/22 18:20:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2016/08/14 12:15:41 spz Exp $
 #
 
-DISTNAME=		gummi-0.6.5
-PKGREVISION=		24
+DISTNAME=		gummi-0.6.6
 CATEGORIES=		editors
-MASTER_SITES=		http://dev.midnightcoding.org/attachments/download/301/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=alexandervdm/}
+GITHUB_PROJECT=		gummi
+GITHUB_TAG=		0.6.6
 
 MAINTAINER=		int21h@pirosfeketefa.hu
-HOMEPAGE=		http://dev.midnightcoding.org/projects/gummi
-COMMENT=		Gummi is a LaTeX editor, written in C/GTK+
+HOMEPAGE=		https://github.com/alexandervdm/gummi
+COMMENT=		LaTeX editor, written in C/GTK+
 LICENSE=		mit
 
-USE_TOOLS+= 		pkg-config intltool msgfmt gmake
+USE_TOOLS+= 		pkg-config intltool msgfmt gmake automake autoreconf
+BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 # we need some latex, but not all
 #DEPENDS+= teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
@@ -20,6 +22,9 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	yes
 
 AUTO_MKDIRS=		yes
+
+pre-configure:
+	cd ${WRKSRC:Q} && ${TOOLS_PATH.autoreconf} -vi
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
