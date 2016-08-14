@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/03/10 23:37:48 pettai Exp $
+$NetBSD: patch-aa,v 1.2 2016/08/14 02:13:49 mef Exp $
+
+destdir support
 
 --- autoconf/Makefile.in.orig	2009-12-13 14:50:15.000000000 +0100
 +++ autoconf/Makefile.in	2009-12-13 14:52:57.000000000 +0100
