@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2012/12/12 10:44:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/08/14 13:39:29 mef Exp $
 #
 
-DISTNAME=	intercal-0.29
+DISTNAME=	intercal-0.30
 CATEGORIES=	lang
 MASTER_SITES=	http://www.catb.org/~esr/intercal/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/intercal/
 COMMENT=	The ultimate language for obfuscation and job security
+LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=	flex yacc
