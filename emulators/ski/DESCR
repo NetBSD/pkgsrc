@@ -9,4 +9,6 @@ mount /dev/pts:
 
 Run the ski binary from within an xterm window.
 
-BUGS: the xserver version xski doesn't currently work.
+BUGS: manual pages out of date, rpm build target broken, ctrl-c breaks
+      curses ski program not emulator, doesn't decode source code yet,
+      "cstack" and "pm" commands not implemented, probably others.
