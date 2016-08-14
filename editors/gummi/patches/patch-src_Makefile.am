@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.am,v 1.1.2.2 2016/08/14 12:15:41 spz Exp $
+
+--- src/Makefile.am.orig	2016-01-27 19:27:48.000000000 +0000
++++ src/Makefile.am
+@@ -2,7 +2,7 @@ AUTOMAKE_OPTIONS = subdir-objects
+ 
+ bin_PROGRAMS = gummi
+ AM_CFLAGS = $(GUI_CFLAGS) \
+-	    -export-dynamic -Wall -O2 \
++	    -Wl,-export-dynamic -Wall -O2 \
+ 	    -DGUMMI_LIBS=\"$(libdir)/$(PACKAGE)\" \
+ 	    -DGUMMI_DATA=\"$(datadir)/$(PACKAGE)\" \
+ 	    -DGUMMI_LOCALES=\"$(datadir)/locale\"
