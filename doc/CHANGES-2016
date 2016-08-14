@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3328 2016/08/14 11:17:58 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3329 2016/08/14 11:20:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4768,3 +4768,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/tcpdump to 4.8.0 [mef 2016-08-14]
 	Updated textproc/iso-codes to 3.69 [mef 2016-08-14]
 	Updated net/rabbitmq to 3.6.5 [fhajny 2016-08-14]
+	Updated databases/sqlite3 to 3.14.1 [adam 2016-08-14]
+	Updated databases/sqlite3-docs to 3.14.1 [adam 2016-08-14]
+	Updated databases/sqlite3-tcl to 3.14.1 [adam 2016-08-14]
+	Updated net/youtube-dl to 20160813 [adam 2016-08-14]
