@@ -1,0 +1,483 @@
+$NetBSD: patch-XSki.netbsd,v 1.1 2016/08/14 18:27:05 scole Exp $
+
+Include X resource file for NetBSD which is a copy of the FreeBSD one.
+
+--- XSki.netbsd.orig	2016-04-19 12:56:13.000000000 -0400
++++ XSki.netbsd	2016-04-19 12:56:25.000000000 -0400
+@@ -0,0 +1,476 @@
++!
++! Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
++!
++! This program is free software; you can redistribute it and/or modify
++! it under the terms of the GNU General Public License as published by
++! the Free Software Foundation; either version 2 of the License, or 
++! (at your option) any later version.
++!
++! This program is distributed in the hope that it will be useful, 
++! but WITHOUT ANY WARRANTY; without even the implied warranty of 
++! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
++! GNU General Public License for more details.
++!
++! You should have received a copy of the GNU General Public License along
++! with this program; if not, write to the Free Software Foundation, Inc.,
++! 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
++!
++
++! *XmText.fontList:	<font>
++
++*background:		rgb:C0/C0/C0
++main.geometry:		+0+0
++
++*showUrs:		True
++*showGrs:		True
++*showFrs:		True
++*showSrs:		True
++*showIArs:		True
++
++*regwUrs.rows:		7
++*regwGrs.rows:		7
++*regwFrs.rows:		4
++*regwSrs.rows:		2
++*regwIArs.rows:		4
++
++*viewProgram:		True
++*viewData:		True
++*viewvga:		False
++*viewRegisters:		True
++
++*help.sensitive:	False
++*bb4.sensitive:		False
++*bb5.sensitive:		False
++*prgwRC.goto.sensitive:	False
++*datwRC.goto.sensitive:	False
++
++*File.mnemonic:		F
++*View.mnemonic:		V
++*Configure.mnemonic:	C
++*Help.mnemonic:		H
++
++*load.labelString:	Open...
++*load.mnemonic:		O
++*save.labelString:	Save...
++*save.mnemonic:		S
++*trace.labelString:	Trace...
++*trace.mnemonic:	T
++*traceOn.labelString:	Enable Trace
++*traceOff.labelString:	Disable Trace
++*read.labelString:	Read...
++*read.mnemonic:		R
++*quit.labelString:	Quit
++*quit.mnemonic:		Q
++
++*LoadFSD.fileTypeMask:	FILE_REGULAR
++*LoadFSD.textColumns:	50
++*load_syms.labelString:	Load all symbols
++*load_syms.alignment:	ALIGNMENT_BEGINNING
++
++*program.labelString:	Program
++*program.mnemonic:	P
++*data.labelString:	Data
++*data.mnemonic:		D
++*registers.labelString:	Registers
++*registers.mnemonic:	R
++*cache.labelString:	Cache
++*cache.mnemonic:	C
++*tlb.labelString:	TLB
++*tlb.mnemonic:		T
++*callstack.labelString:	Call Stack
++*breakpoints.labelString:	Breakpoints
++*breakpoints.mnemonic:	B
++*symbols.labelString:	Symbols
++*symbols.mnemonic:	S
++
++*context.labelString:	Context-Sensitive Help
++*context.mnemonic:	C
++*overview.labelString:	Overview
++*overview.mnemonic:	O
++*commands.labelString:	Commands
++*product.labelString:	Product Information
++*product.mnemonic:	P
++
++*loadFSD_popup.title:	Open File
++*prodInfo_popup.title:	Help -- Product Information
++
++! Processor Selection
++*p0.labelString:		0
++*p1.labelString:		1
++*p2.labelString:		2
++*procOption.labelString:	Processor
++
++! Button Box
++*bbox.orientation:	HORIZONTAL
++*bbox.packing:		PACK_TIGHT
++*bb0.labelString:	Step
++*bb0.translations:	Shift<Btn1Down>: SimCmd("step 10")\n\
++			<Btn1Down>: SimCmd("step 1")
++*bb1.labelString:	Run
++*bb1.translations:	<Btn1Down>: SimCmd("run")
++*bb2.labelString:	Prog
++*bb2.translations:	<Btn1Down>: SimCmd("pj")
++*bb3.labelString:	Data
++*bb3.translations:	<Btn1Down>: SimCmd("dj")
++*bb4.labelString:	Regs
++*bb5.labelString:	Cache
++*bb6.labelString:	TLB
++*bb6.translations:	<Btn1Down>: SimCmd("sdt")
++*bb7.labelString:	Quit
++*bb7.translations:	<Btn1Down>: SimCmd("quit")
++
++*cmd.promptString:		Command:
++*cmd.historyVisibleItemCount:	5
++*cmd.textColumns:		45
++
++*msgs.editMode:			MULTI_LINE_EDIT
++*msgs.editable:			False
++*msgs.cursorPositionVisible:	False
++*msgs.rows:			10
++
++! Generic Pushbutton resources
++*ok.labelString:	OK
++*apply.labelString:	Apply
++*cancel.labelString:	Cancel
++*close.labelString:	Close
++*config.labelString:	Configure
++*goto.labelString:	Goto
++*help.labelString:	Help
++
++*real.labelString:	Real
++*virtual.labelString:	Virtual
++
++! Program Window
++! These 3 are not currently used
++*prgw.cancelLabelString:	Cancel
++*prgw.helpLabelString:		Help
++*prgw.okLabelString:		OK
++
++*prgw_popup.title:		Program Window
++*prgw_popup.geometry:		550-0+0
++*prgw.defaultPosition:		False
++
++*prgwH.alignment:		ALIGNMENT_BEGINNING
++*prgwH.leftAttachment:		ATTACH_FORM
++*prgwH.rightAttachment:		ATTACH_FORM
++*prgwH.topAttachment:		ATTACH_FORM
++
++*prgwT.rows:			21
++*prgwT.editMode:		MULTI_LINE_EDIT
++*prgwT.editable:		False
++*prgwT.autoShowCursorPosition:	False
++*prgwT.cursorPositionVisible:	False
++*prgwT.resizeHeight:		False
++*prgwT.resizeWidth:		False
++! *prgwT.resizeWidth:		True
++*prgwT.leftAttachment:		ATTACH_FORM
++*prgwT.rightAttachment:		ATTACH_FORM
++*prgwT.topAttachment:		ATTACH_WIDGET
++*prgwT.topWidget:		prgwH
++*prgwT.bottomAttachment:	ATTACH_WIDGET
++*prgwT.bottomWidget:		prgwS
++*prgwT.translations:		#override\n\
++				<ConfigureNotify>:	pwResize()\n\
++				<Key>osfPageDown:	SimCmd(pf)\n\
++				<Key>osfPageUp:		SimCmd(pb)\n\
++				<Key>osfDown:		SimCmd("pf 1")\n\
++				<Key>osfUp:		SimCmd("pb 1")
++
++*prgwS.leftAttachment:		ATTACH_FORM
++*prgwS.rightAttachment:		ATTACH_FORM
++*prgwS.bottomAttachment:	ATTACH_WIDGET
++*prgwS.bottomWidget:		prgwRC
++
++*prgwRC.adjustLast:		False
++*prgwRC.orientation:		HORIZONTAL
++*prgwRC.spacing:		10
++*prgwRC.leftAttachment:		ATTACH_FORM
++*prgwRC.rightAttachment:	ATTACH_FORM
++*prgwRC.bottomAttachment:	ATTACH_FORM
++
++! Program Window Configure Dialog
++*pwConf_popup.title:		Program Window Configuration
++
++*pwConfRC.adjustLast:		False
++*pwConfRC.orientation:		HORIZONTAL
++*pwConfRC.spacing:		10
++*pwConfRC.leftAttachment:	ATTACH_FORM
++*pwConfRC.rightAttachment:	ATTACH_FORM
++*pwConfRC.bottomAttachment:	ATTACH_FORM
++
++*pwConfS.leftAttachment:	ATTACH_FORM
++*pwConfS.rightAttachment:	ATTACH_FORM
++*pwConfS.bottomAttachment:	ATTACH_WIDGET
++*pwConfS.bottomWidget:		pwConfRC
++
++*iofs.labelString:	Instruction Offset Format:
++*iofs.rightAttachment:	ATTACH_WIDGET
++*iofs.rightWidget:	iofsrb
++*iofs.topAttachment:	ATTACH_OPPOSITE_WIDGET
++*iofs.topWidget:	iofsrb
++*iofs.bottomAttachment:	ATTACH_OPPOSITE_WIDGET
++*iofs.bottomWidget:	iofsrb
++
++*iofsrb.orientation:		HORIZONTAL
++*iofsrb.bottomAttachment:	ATTACH_WIDGET
++*iofsrb.bottomWidget:		instrb
++*iofsrb.bottomOffset:		2
++*iofsrb.rightAttachment:	ATTACH_FORM
++
++*iofshex.labelString:	Hexadecimal
++
++*iofssym.labelString:	Symbolic
++
++*iofsboth.labelString:	Both
++
++*inst.labelString:	Instruction Format:
++*inst.rightAttachment:	ATTACH_WIDGET
++*inst.rightWidget:	instrb
++*inst.topAttachment:	ATTACH_OPPOSITE_WIDGET
++*inst.topWidget:	instrb
++*inst.bottomAttachment:	ATTACH_OPPOSITE_WIDGET
++*inst.bottomWidget:	instrb
++
++*instrb.orientation:		HORIZONTAL
++*instrb.bottomAttachment:	ATTACH_WIDGET
++*instrb.bottomWidget:		pwConfS
++*instrb.bottomOffset:		2
++*instrb.rightAttachment:	ATTACH_FORM
++
++*insthex.labelString:	Hexadecimal
++
++*instsym.labelString:	Disassembled
++
++*instboth.labelString:	Both
++
++! Program Window Goto Dialog
++*pwGoto_popup.title:		Program Window Goto
++
++*pwGotoRC.adjustLast:		False
++*pwGotoRC.orientation:		HORIZONTAL
++*pwGotoRC.spacing:		10
++*pwGotoRC.leftAttachment:	ATTACH_FORM
++*pwGotoRC.rightAttachment:	ATTACH_FORM
++*pwGotoRC.bottomAttachment:	ATTACH_FORM
++
++*pwGotoS.leftAttachment:	ATTACH_FORM
++*pwGotoS.rightAttachment:	ATTACH_FORM
++*pwGotoS.bottomAttachment:	ATTACH_WIDGET
++*pwGotoS.bottomWidget:		pwGotoRC
++
++*pwOffset.rightAttachment:	ATTACH_FORM
++*pwOffset.bottomAttachment:	ATTACH_WIDGET
++*pwOffset.bottomWidget:		pwGotoS
++
++*pwOffsetL.labelString:		Offset:
++*pwOffsetL.rightAttachment:	ATTACH_WIDGET
++*pwOffsetL.rightWidget:		pwOffset
++*pwOffsetL.topAttachment:	ATTACH_OPPOSITE_WIDGET
++*pwOffsetL.topWidget:		pwOffset
++*pwOffsetL.bottomAttachment:	ATTACH_OPPOSITE_WIDGET
++*pwOffsetL.bottomWidget:	pwOffset
++
++*pwSpace.rightAttachment:	ATTACH_FORM
++*pwSpace.bottomAttachment:	ATTACH_WIDGET
++*pwSpace.bottomWidget:		pwOffset
++
++*pwSpaceL.labelString:		Space:
++*pwSpaceL.rightAttachment:	ATTACH_WIDGET
++*pwSpaceL.rightWidget:		pwSpace
++*pwSpaceL.topAttachment:	ATTACH_OPPOSITE_WIDGET
++*pwSpaceL.topWidget:		pwSpace
++*pwSpaceL.bottomAttachment:	ATTACH_OPPOSITE_WIDGET
++*pwSpaceL.bottomWidget:		pwSpace
++
++*pwAddr.orientation:		HORIZONTAL
++*pwAddr.leftAttachment:		ATTACH_FORM
++*pwAddr.topAttachment:		ATTACH_FORM
++*pwAddr.bottomAttachment:	ATTACH_WIDGET
++*pwAddr.bottomWidget:		pwSpace
++
++! Data Window
++*datw_popup.title:		Data Window
++*datw_popup.geometry:		x225+0-0
++*datw.defaultPosition:		False
++
++*datwH.alignment:		ALIGNMENT_BEGINNING
++*datwH.leftAttachment:		ATTACH_FORM
++*datwH.rightAttachment:		ATTACH_FORM
++*datwH.topAttachment:		ATTACH_FORM
++
++*datwT.rows:			12
++*datwT.editMode:		MULTI_LINE_EDIT
++*datwT.editable:		False
++*datwT.autoShowCursorPosition:	False
++*datwT.cursorPositionVisible:	False
++*datwT.resizeWidth:		True
++*datwT.leftAttachment:		ATTACH_FORM
++*datwT.rightAttachment:		ATTACH_FORM
++*datwT.topAttachment:		ATTACH_WIDGET
++*datwT.topWidget:		datwH
++*datwT.bottomAttachment:	ATTACH_WIDGET
++*datwT.bottomWidget:		datwS
++*datwT.translations:		#override \n\
++				<ConfigureNotify>:	dwResize()\n\
++				<Key>osfPageDown:	SimCmd(df)\n\
++				<Key>osfPageUp:		SimCmd(db)\n\
++				<Key>osfDown:		SimCmd("df 1")\n\
++				<Key>osfUp:		SimCmd("db 1")
++
++*datwS.leftAttachment:		ATTACH_FORM
++*datwS.rightAttachment:		ATTACH_FORM
++*datwS.bottomAttachment:	ATTACH_WIDGET
++*datwS.bottomWidget:		datwRC
++
++*datwRC.adjustLast:		False
++*datwRC.orientation:		HORIZONTAL
++*datwRC.spacing:		10
++*datwRC.leftAttachment:		ATTACH_FORM
++*datwRC.rightAttachment:	ATTACH_FORM
++*datwRC.bottomAttachment:	ATTACH_FORM
++
++! VGA Window
++*vga_popup.title:		VGA Window
++*vga_popup.geometry:		640x480+0-0
++*vga.defaultPosition:		False
++
++*vgaH.alignment:		ALIGNMENT_BEGINNING
++*vgaH.leftAttachment:		ATTACH_FORM
++*vgaH.rightAttachment:		ATTACH_FORM
++*vgaH.topAttachment:		ATTACH_FORM
++
++*vgaT.rows:			24
++*vgaT.editMode:			MULTI_LINE_EDIT
++*vgaT.editable:			False
++*vgaT.autoShowCursorPosition:	False
++*vgaT.cursorPositionVisible:	False
++*vgaT.resizeWidth:		True
++*vgaT.leftAttachment:		ATTACH_FORM
++*vgaT.rightAttachment:		ATTACH_FORM
++*vgaT.topAttachment:		ATTACH_WIDGET
++*vgaT.topWidget:		vgaH
++*vgaT.bottomAttachment:		ATTACH_WIDGET
++*vgaT.bottomWidget:		vgaS
++*vgaT.translations:		#override\n\
++				<ConfigureNotify>:	dwResize()\n\
++				<Key>osfPageDown:	SimCmd(vf)\n\
++				<Key>osfPageUp:		SimCmd(vb)\n\
++				<Key>osfDown:		SimCmd("vf 1")\n\
++				<Key>osfUp:		SimCmd("vb 1")
++
++*vgaS.leftAttachment:		ATTACH_FORM
++*vgaS.rightAttachment:		ATTACH_FORM
++*vgaS.bottomAttachment:		ATTACH_WIDGET
++*vgaS.bottomWidget:		vgaRC
++
++*vgaRC.adjustLast:		False
++*vgaRC.orientation:		HORIZONTAL
++*vgaRC.spacing:			10
++*vgaRC.leftAttachment:		ATTACH_FORM
++*vgaRC.rightAttachment:		ATTACH_FORM
++*vgaRC.bottomAttachment:	ATTACH_FORM
++*vgaRC.goto.sensitive:		False
++
++! Registers Window
++*regw_popup.title:		Registers Window
++*regw.noResize:			False
++*regw_popup.geometry:		520x475-0-0
++*regw.defaultPosition:		False
++
++!*regwP.marginHeight:		5
++!*regwP.marginWidth:		10
++!*regwP.refigureMode:		False
++!*regwP.sashHeight:		20
++!*regwP.sashWidth:		15
++!*regwP.sashIdent:		-20
++!*regwP.separatorOn:		False
++!*regwP.spacing:			2
++!*regwP.shadowThickness:		5
++
++*regwP.leftAttachment:		ATTACH_FORM
++*regwP.rightAttachment:		ATTACH_FORM
++*regwP.topAttachment:		ATTACH_FORM
++*regwP.bottomAttachment:	ATTACH_WIDGET
++*regwP.bottomWidget:		regwS
++
++*regwS.leftAttachment:		ATTACH_FORM
++*regwS.rightAttachment:		ATTACH_FORM
++*regwS.bottomAttachment:	ATTACH_WIDGET
++*regwS.bottomWidget:		regwRC
++
++*regwRC.adjustLast:		False
++*regwRC.orientation:		HORIZONTAL
++*regwRC.spacing:		10
++*regwRC.leftAttachment:		ATTACH_FORM
++*regwRC.rightAttachment:	ATTACH_FORM
++*regwRC.bottomAttachment:	ATTACH_FORM
++
++! Registers Window Configure Dialog
++*rwConf_popup.title:		Registers Window Configuration
++
++*rwConfRC.adjustLast:		False
++*rwConfRC.orientation:		HORIZONTAL
++*rwConfRC.spacing:		10
++*rwConfRC.leftAttachment:	ATTACH_FORM
++*rwConfRC.rightAttachment:	ATTACH_FORM
++*rwConfRC.bottomAttachment:	ATTACH_FORM
++
++*rwConfS.leftAttachment:	ATTACH_FORM
++*rwConfS.rightAttachment:	ATTACH_FORM
++*rwConfS.bottomAttachment:	ATTACH_WIDGET
++*rwConfS.bottomWidget:		rwConfRC
++
++*rwConfT.orientation:		HORIZONTAL
++*rwConfT.numColumns:		2
++*rwConfT.packing:		PACK_COLUMN
++*rwConfT.leftAttachment:	ATTACH_FORM
++*rwConfT.rightAttachment:	ATTACH_FORM
++*rwConfT.bottomAttachment:	ATTACH_WIDGET
++*rwConfT.bottomWidget:		rwConfS
++
++*rwConfT.urs.labelString:	URs
++*rwConfT.grs.labelString:	GRs
++*rwConfT.frs.labelString:	FRs
++*rwConfT.srs.labelString:	SRs
++
++! Symlist Window
++*symlist_popup.title:		Symbols
++*symlist_popup.geometry:	+300+100
++
++! Cmdhelp Window
++*cmdhelp_popup.title:		Commands
++*cmdhelp_popup.geometry:	+400+150
++
++! Callstack Window
++*callstack_popup.title:		Call Stack
++*callstack_popup.geometry:	+500+200
++
++! Breakpoint Window
++*breakpoints_popup.title:	Breakpoints
++*breakpoints_popup.geometry:	+600+250
++
++! Register Dump Window
++*regdump_popup.title:		Register Dump
++*regdump_popup.geometry:	+700+300
++
++! Program Dump Window
++*progdump_popup.title:		Program Dump
++*progdump_popup.geometry:	+800+350
++
++! Data Dump Window
++*datadump_popup.title:		Data Dump
++*datadump_popup.geometry:	+900+400
++
++! Instruction TLB Dump Window
++*itlblist_popup.title:		Instruction TLB
++
++! Data TLB Dump Window
++*dtlblist_popup.title:		Data TLB
++
++! See man-page for VirtualBindings(3) (included in OpenMotif):
++*defaultVirtualBindings: \
++	osfBackSpace:		<Key>BackSpace\n\
++	osfPageDown:		<Key>Next\n\
++	osfPageUp:		<Key>Prior\n\
++	osfDown:		<Key>Down\n\
++	osfUp:			<Key>Up\n

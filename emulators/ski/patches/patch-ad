@@ -1,17 +1,21 @@
-$NetBSD: patch-ad,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
+$NetBSD: patch-ad,v 1.2 2016/08/14 18:27:05 scole Exp $
 
---- src/Makefile.am.orig	2008-02-05 04:11:38.000000000 +0000
-+++ src/Makefile.am
-@@ -130,7 +130,7 @@ if LINUX
+--- src/Makefile.am.orig	2008-02-04 23:11:38.000000000 -0500
++++ src/Makefile.am	2016-08-11 11:25:48.000000000 -0400
+@@ -130,7 +130,11 @@
  ski_LDFLAGS = 
  endif
  
 -ski_LDADD= libski.la -ldl
++if NETBSD
++ski_LDFLAGS=
++endif
++
 +ski_LDADD= libski.la
  
  skiincludedir= $(includedir)/ski-$(SKI_MAJOR_VERSION).$(SKI_MINOR_VERSION)
  skiinclude_HEADERS= \
-@@ -226,6 +226,23 @@ else
+@@ -226,6 +230,23 @@
  freebsd_FILES =
  endif
  
@@ -35,7 +39,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
  libski_la_SOURCES= \
  	$(COMBFNS_DERIVED) \
  	$(PREDECODE_DERIVED) \
-@@ -252,6 +269,7 @@ libski_la_SOURCES= \
+@@ -252,6 +273,7 @@
  	$(linux_FILES) \
  	$(hpux_FILES) \
  	$(freebsd_FILES) \
@@ -43,7 +47,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2011/07/27 10:23:48 cherry Exp $
  	libsym.c \
  	$(ASM_HASH_DERIVED) \
  	$(IADAS_DECODER_DERIVED) \
-@@ -288,6 +306,7 @@ EXTRA_libski_la_SOURCES = \
+@@ -288,6 +310,7 @@
  	$(EXTRA_linux_FILES) \
  	$(EXTRA_hpux_FILES) \
  	$(EXTRA_freebsd_FILES) \
