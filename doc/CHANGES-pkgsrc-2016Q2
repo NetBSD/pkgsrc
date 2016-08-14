@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.10 2016/08/10 18:13:28 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.11 2016/08/14 12:16:48 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -81,3 +81,5 @@ www/curl: security fix
 Pullup ticket #5080 - requested by sevan
 graphics/gd: security fix
 
+Pullup ticket #5081 - requested by bsiegert
+editors/gummi: security update
