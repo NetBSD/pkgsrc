@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3337 2016/08/15 12:46:51 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3338 2016/08/15 15:48:41 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4780,3 +4780,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/p5-Netpgp-Verify version 20160814 [agc 2016-08-14]
 	Updated mail/distribute to 2.1.26nb6 [maya 2016-08-15]
 	Updated devel/ftnchek to 3.3.1 [mef 2016-08-15]
+	Updated net/mldonkey to 3.1.5nb5 [jaapb 2016-08-15]
