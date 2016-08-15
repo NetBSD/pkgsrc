@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/12/29 20:46:50 wiz Exp $
+$NetBSD: distinfo,v 1.7 2016/08/15 18:52:10 ryoon Exp $
 
-SHA1 (libodfgen-0.1.5.tar.xz) = 84fb7512bf1ce9bae9dab078a5a6021504aaedd2
-RMD160 (libodfgen-0.1.5.tar.xz) = 3a23644fdb4962f96a12a30289a003fdc40d2c45
-SHA512 (libodfgen-0.1.5.tar.xz) = d9f270fb7410c25ce113ecfb60d17bcf8e57220a6f772a3c2e7f794521495b9a164fe2ddf67a291d26f3052d406ee09ca35096ed3bc46bb268f318b837530ca0
-Size (libodfgen-0.1.5.tar.xz) = 357360 bytes
+SHA1 (libodfgen-0.1.6.tar.xz) = 49da7cc0dc4adfe0452e951d2dea3c225358fd63
+RMD160 (libodfgen-0.1.6.tar.xz) = 9c3fcb5aecb0ad54bab246fbf16bf5d3ac562bb6
+SHA512 (libodfgen-0.1.6.tar.xz) = bc5e6908ee14c576adececdf8a94ae01f2ed487e6f2490e41aab787e1e8f72a3fb2a786f51ceeefa327710af215741ce13bcf4bb3d99d2aaf403f568c5db75a5
+Size (libodfgen-0.1.6.tar.xz) = 359988 bytes
