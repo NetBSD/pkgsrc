@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3338 2016/08/15 15:48:41 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.3339 2016/08/15 17:30:49 scole Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4781,3 +4781,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/distribute to 2.1.26nb6 [maya 2016-08-15]
 	Updated devel/ftnchek to 3.3.1 [mef 2016-08-15]
 	Updated net/mldonkey to 3.1.5nb5 [jaapb 2016-08-15]
+	Updated emulators/ski to 1.3.2nb4 [scole 2016-08-15]
