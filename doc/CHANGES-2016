@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3341 2016/08/15 18:52:35 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3342 2016/08/15 18:58:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4784,3 +4784,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/ski to 1.3.2nb4 [scole 2016-08-15]
 	Updated net/libcmis to 0.5.1 [ryoon 2016-08-15]
 	Updated textproc/libodfgen to 0.1.6 [ryoon 2016-08-15]
+	Updated converters/libmwaw to 0.3.7 [ryoon 2016-08-15]
