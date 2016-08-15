@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/04/09 06:50:46 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/08/15 12:06:46 richard Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -78,6 +78,7 @@ ${PLIST.mono}lib/pkgconfig/avahi-ui-sharp.pc
 ${PLIST.gtk2}lib/pkgconfig/avahi-ui.pc
 man/man1/avahi-browse-domains.1
 man/man1/avahi-browse.1
+man/man1/avahi-discover.1
 man/man1/avahi-publish-address.1
 man/man1/avahi-publish-service.1
 man/man1/avahi-publish.1

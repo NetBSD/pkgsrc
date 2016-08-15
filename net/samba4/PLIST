@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/07/11 12:28:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/08/15 12:05:24 richard Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -638,6 +638,7 @@ share/doc/samba/WinXP_PlainPassword.reg
 share/doc/samba/WindowsTerminalServer.reg
 share/examples/samba/adduser.sh
 share/examples/samba/deluser.sh
+${PLIST.pam}share/examples/samba/pam_smbpass/README
 ${PLIST.pam}share/examples/samba/pam_smbpass/kdc-pdc
 ${PLIST.pam}share/examples/samba/pam_smbpass/password-mature
 ${PLIST.pam}share/examples/samba/pam_smbpass/password-migration
