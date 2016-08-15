@@ -1,4 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2016/08/15 11:30:31 maya Exp $
+$NetBSD: patch-ac,v 1.6 2016/08/15 12:02:37 maya Exp $
+
+write_index() uses bodysum, call it only after calculating it.
+otherwise the initial value of 0 is used.
+
+PR pkg/18422.
 
 --- distribute.c.orig	2016-08-15 10:57:27.530046718 +0000
 +++ distribute.c
