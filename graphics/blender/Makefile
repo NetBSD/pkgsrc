@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.121 2016/07/09 13:03:50 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2016/08/15 19:26:18 ryoon Exp $
 
-DISTNAME=	blender-2.76b
-PKGREVISION=	2
+DISTNAME=	blender-2.77a
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -11,56 +10,24 @@ COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake sed
+USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+CMAKE_OPTS+=		-DWITH_OPENAL:BOOL=OFF
+CMAKE_OPTS+=		-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
+CMAKE_OPTS+=		-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}/share/blender
+CMAKE_OPTS+=		-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
+CMAKE_OPTS+=		-DCMAKE_SKIP_RPATH:BOOL=TRUE
+CMAKE_OPTS+=		-DCMAKE_INSTALL_LIBDIR:PATH=lib
+CMAKE_OPTS+=		-DCMAKE_INSTALL_MANDIR:PATH=man
 
-PYTHON_VERSIONS_ACCEPTED=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 GCC_REQD+=	4.7
 
-BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
+REPLACE_PYTHON=		release/bin/blender-thumbnailer.py
 
 .include "options.mk"
 
 INSTALLATION_DIRS=	bin share/blender
-
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-PYLDFLAGS+=		'-lexecinfo',
-.endif
-PYLDFLAGS+=		'${COMPILER_RPATH_FLAG}${PREFIX}/lib', \
-			'${COMPILER_RPATH_FLAG}${X11BASE}/lib'
-
-# To pass LDFLAGS to compiler/linker
-SUBST_CLASSES+=		ldflags
-SUBST_STAGE.ldflags=	pre-configure
-SUBST_MESSAGE.ldflags=	Setting LDFLAGS
-SUBST_FILES.ldflags+=	build_files/scons/config/*-config.py
-SUBST_VARS.ldflags+=	PYLDFLAGS
-
-SCONS_ARGS+=	WITH_BF_JACK=False
-SCONS_ARGS+=	WITH_BF_OPENAL=False
-SCONS_ARGS+=	WITH_BF_SNDFILE=False
-SCONS_ARGS+=	WITH_BF_FFMPEG=False
-SCONS_ARGS+=	WITH_BF_3DMOUSE=False
-
-SCONS_ARGS+=	BF_PYTHON=${PREFIX}
-#SCONS_ARGS+=	BF_PYTHON_INC=${PREFIX}/include/python${PYVERSSUFFIX}
-SCONS_ARGS+=	BF_PYTHON_ABI_FLAGS=''
-SCONS_ARGS+=	BF_PYTHON_VERSION=${PYVERSSUFFIX}
-SCONS_ARGS+=	BF_SDL=${BUILDLINK_PREFIX.SDL}
-SCONS_ARGS+=	BF_OPENEXR=${BUILDLINK_PREFIX.openexr}
-SCONS_ARGS+=	BF_JPEG=${BUILDLINK_PREFIX.jpeg}
-SCONS_ARGS+=	BF_PNG=${BUILDLINK_PREFIX.png}
-SCONS_ARGS+=	BF_TIFF=${BUILDLINK_PREFIX.tiff}
-SCONS_ARGS+=	BF_GETTEXT=${BUILDLINK_PREFIX.gettext-tools}
-SCONS_ARGS+=	BF_FREETYPE=${BUILDLINK_PREFIX.freetype2}
-SCONS_ARGS+=	BF_OPENJPEG=${BUILDLINK_PREFIX.openjpeg15}
-SCONS_ARGS+=	BF_OPENJPEG_INC=${BUILDLINK_PREFIX.openjpeg15}/include/openjpeg-1.5
-SCONS_ARGS+=	BF_OPENGL=${BUILDLINK_PREFIX.Mesa}
-SCONS_ARGS+=	BF_PCRE=${BUILDLINK_PREFIX.pcre}
-#SCONS_ARGS+=	BF_FFMPEG=${BUILDLINK_PREFIX.ffmpeg010}
-#SCONS_ARGS+=	BF_FFMPEG_INC=${BUILDLINK_PREFIX.ffmpeg010}/include/ffmpeg010
-#SCONS_ARGS+=	BF_FFMPEG_LIBPATH='${BUILDLINK_PREFIX.ffmpeg010}/lib/ffmpeg010'
-SCONS_ARGS+=	BF_FFTW3=${BUILDLINK_PREFIX.fftw}
-SCONS_ARGS+=	BF_INSTALLDIR=${DESTDIR}${PREFIX}/share/blender
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	BLENDERVER=${PKGVERSION_NOREV:C/[a-z]//}
@@ -73,22 +40,18 @@ PLIST_SUBST+=	NETBSDVER=netbsd6
 
 PLIST_VARS+=	py34 py35
 
-post-patch:
-	cd ${WRKSRC}/build_files/scons/config/; ln netbsd6-config.py netbsd7-config.py
+OBJDIR=		../build
+CONFIGURE_DIRS=	${OBJDIR}
+CMAKE_ARG_PATH=	../${DISTNAME}
 
-# I cannot separate build and install...
-do-build:
+pre-configure:
+	${MKDIR} ${WRKSRC}/${OBJDIR}
 
-# build is done in install phase.
-do-install:
-	cd ${WRKSRC:Q} && ${PKGSRC_SETENV} ${MAKE_ENV}			\
-		${LOCALBASE}/bin/scons ${SCONS_ARGS} ${_MAKE_JOBS}
-
-CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py \
-			share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/python/lib/python3.3/venv/scripts/posix/pydoc
-
-REPLACE_PYTHON+=	release/bin/blender-thumbnailer.py
-REPLACE_PYTHON+=	intern/cycles/kernel/SConscript
+# Install to custom CMAKE_INSTALL_PREFIX.
+do-configure:
+	cd ${WRKSRC}/${OBJDIR} && \
+		env ${CONFIGURE_ENV} \
+		${PREFIX}/bin/cmake ${CMAKE_OPTS} ${CMAKE_ARG_PATH}
 
 post-install:
 	${LN} -sf ${PREFIX}/share/blender/blender \
