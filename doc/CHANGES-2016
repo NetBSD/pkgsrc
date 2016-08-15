@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3335 2016/08/15 06:20:20 agc Exp $
+$NetBSD: CHANGES-2016,v 1.3336 2016/08/15 11:30:47 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4778,3 +4778,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated chat/irssi-icb to 0.15nb1 [leot 2016-08-14]
 	Updated chat/irssi-xmpp to 0.53 [leot 2016-08-14]
 	Added security/p5-Netpgp-Verify version 20160814 [agc 2016-08-14]
+	Updated mail/distribute to 2.1.26nb6 [maya 2016-08-15]
