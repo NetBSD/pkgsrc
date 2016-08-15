@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3345 2016/08/15 19:20:45 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3346 2016/08/15 19:26:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/openjdk8 to 1.8.102 [ryoon 2016-08-15]
 	Updated misc/libreoffice to 5.1.5.2 [ryoon 2016-08-15]
 	Updated graphics/py-blockdiag to 1.5.3 [ryoon 2016-08-15]
+	Updated graphics/blender to 2.77a [ryoon 2016-08-15]
