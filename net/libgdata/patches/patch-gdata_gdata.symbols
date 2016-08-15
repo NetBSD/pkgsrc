@@ -1,0 +1,25 @@
+$NetBSD: patch-gdata_gdata.symbols,v 1.1 2016/08/15 10:52:09 richard Exp $
+
+Adapted from https://bugzilla.gnome.org/show_bug.cgi?id=754821
+
+--- gdata/gdata.symbols.orig	2014-11-09 22:43:07.000000000 +0000
++++ gdata/gdata.symbols
+@@ -966,9 +966,6 @@ gdata_documents_entry_get_quota_used
+ gdata_documents_service_copy_document
+ gdata_documents_service_copy_document_async
+ gdata_documents_service_copy_document_finish
+-gdata_goa_authorizer_get_type
+-gdata_goa_authorizer_new
+-gdata_goa_authorizer_get_goa_object
+ gdata_documents_document_get_thumbnail_uri
+ gdata_tasks_task_get_type
+ gdata_tasks_task_new
+@@ -1089,8 +1086,6 @@ gdata_freebase_topic_value_is_image
+ gdata_freebase_topic_result_get_type
+ gdata_freebase_topic_result_new
+ gdata_freebase_topic_result_dup_object
+-gdata_freebase_result_error_get_type
+-gdata_freebase_result_error_quark
+ gdata_freebase_result_get_type
+ gdata_freebase_result_new
+ gdata_freebase_result_dup_variant
