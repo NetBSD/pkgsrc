@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/06/23 20:12:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/08/15 19:15:25 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -294,6 +294,7 @@ ${PKGNAME}/lib/libreoffice/program/msgbox.py
 ${PKGNAME}/lib/libreoffice/program/officehelper.py
 ${PKGNAME}/lib/libreoffice/program/oosplash
 ${PKGNAME}/lib/libreoffice/program/open-url
+${PKGNAME}/lib/libreoffice/program/opencl/cl-test.ods
 ${PKGNAME}/lib/libreoffice/program/opengl/areaHashCRC64TFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/areaScaleFastFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/areaScaleFragmentShader.glsl
