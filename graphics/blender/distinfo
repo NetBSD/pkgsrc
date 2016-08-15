@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.47 2016/07/16 03:45:19 markd Exp $
+$NetBSD: distinfo,v 1.48 2016/08/15 19:26:18 ryoon Exp $
 
-SHA1 (blender-2.76b.tar.gz) = 7be96d90296cc95e15380ad0ae56cb86f1374a65
-RMD160 (blender-2.76b.tar.gz) = 393c03e9ff15631f89ddd0cdfc8548bb87a0bde5
-SHA512 (blender-2.76b.tar.gz) = 6226f9709d680344fe5cd8106fafc94c33c131658971681d56df6865ae86c834fc248830c9d2c2ac0c5342bf903ada4d5b61afcdfb1ab79a06976287eeed28b9
-Size (blender-2.76b.tar.gz) = 41728871 bytes
-SHA1 (patch-build__files_scons_config_linux-config.py) = 595dbb0c8d8ceaa06e5b862ceb318b5aa4011d16
-SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 105360e9959ac98620e178cf4139d68a277bead2
-SHA1 (patch-build__files_scons_tools_btools.py) = 53e9b0766e040f24cfe4a3e8a8ced8d799e2dbe4
+SHA1 (blender-2.77a.tar.gz) = 935793b3e9fd4d02c71f275aac3aca27cd58bdfb
+RMD160 (blender-2.77a.tar.gz) = 7d99f064b5a6055aaf549ddb30c49e73f081f002
+SHA512 (blender-2.77a.tar.gz) = 4f8223a3786b80fa613ace27bea9349309b5857bcc1fafdb7d769f6192d5cb455ce4faf60920d7a1c2cb82ef8c40a10b25a760748b305c16c550657cf1e4df93
+Size (blender-2.77a.tar.gz) = 41927082 bytes
 SHA1 (patch-doc_python_api_sphinx_doc_gen.sh) = 734a372369ca7bb89ef62f0e0aae22d7046f49f8
-SHA1 (patch-extern_libmv_third__party_glog_src_config.h) = d889d56d47167222ab54fad1c8f87c7ddb02852a
-SHA1 (patch-extern_libmv_third__party_glog_src_config__netbsd.h) = 72dad7d3ec74560d46217b7e943eeeef097c23fe
-SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef0529fe56b3e857685fbc5d1f
+SHA1 (patch-extern_glog_src_base_mutex.h) = 34a20264581a093a1686f1d13a6fccbd5cd9e674
+SHA1 (patch-extern_glog_src_config.h) = 9666c5d925cfeebeef2f178418c9fc2403831da1
+SHA1 (patch-extern_glog_src_config__netbsd.h) = be4727135b8fe1ddbcb5ad52f8230aec51a1a909
+SHA1 (patch-extern_glog_src_utilities.h) = c78ef191ab6ec7e65837b88468a7e1b8eaf325d3
 SHA1 (patch-extern_rangetree_range__tree.hh) = 976881b9caad67a2cfb24039652e887867fa6cc0
 SHA1 (patch-intern_cycles_util_util__types.h) = 37944c6b0a970468e6791ec4a5beef1ec0ddf190
-SHA1 (patch-intern_ghost_SConscript) = d576ea87b5b0f386e2c78efa78351927a105f243
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = c7bc89af1c03b50ae0bd8af5aacc25cd82dfcbfc
 SHA1 (patch-source_blender_imbuf_intern_dds_DirectDrawSurface.cpp) = b38f61900aa30b02479c7397062d71d295932847
