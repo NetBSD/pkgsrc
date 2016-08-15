@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2016/08/06 15:56:50 richard Exp $
+# $NetBSD: Makefile,v 1.112 2016/08/15 09:26:20 jperkin Exp $
 
 DISTNAME=	pulseaudio-9.0
 CATEGORIES=	audio
@@ -20,10 +20,13 @@ USE_LANGUAGES=	c c++
 REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
 
 .include "../../mk/bsd.prefs.mk"
+
 # Some tests are incompatible for NetBSD at least
 CONFIGURE_ARGS.NetBSD+=	--disable-default-build-tests
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)
+
 # broken test for TLS
+.if ((${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)) || \
+     (${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "clang"))
 CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
 
