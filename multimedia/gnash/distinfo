@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.27 2015/09/23 12:00:53 joerg Exp $
+$NetBSD: distinfo,v 1.28 2016/08/15 12:26:54 richard Exp $
 
 SHA1 (gnash-0.8.10.tar.bz2) = be3b12a5edcd3b05f2ae73d02f0991aa786e7300
 RMD160 (gnash-0.8.10.tar.bz2) = 0093174ec0a912309772c033b5f1c1ad46ab41dc
 Size (gnash-0.8.10.tar.bz2) = 4238106 bytes
-SHA1 (patch-aa) = 5e3cfa0c21f6bd9ad01ce4c9f68f245316d063a3
+SHA1 (patch-aa) = 243e32949c0c032f678d40c6bbf26b33bb6ccfaf
 SHA1 (patch-ae) = ca44e2559a1ce0a24baf6d5479636f967e011202
 SHA1 (patch-libbase_GnashImageGif.cpp) = cbe8fa60ba51f2f98c801135cbeec18a7424baf4
 SHA1 (patch-libbase_GnashSleep.h) = f713b29feb0153efa24c10df20e0ac8342b88265
@@ -15,6 +15,7 @@ SHA1 (patch-libcore_DragState.h) = d6029d623a7a45e85a8deaca3b4740bd74785aed
 SHA1 (patch-libcore_Makefile.in) = 6b92917f0be3779b7f6e1993ac29960cef50c736
 SHA1 (patch-libcore_movie__root.cpp) = 5ee7321011961427effd7951860cbf5f3c0b0a6f
 SHA1 (patch-libcore_swf_DefineButtonTag.h) = 42e01cca7a5017349a3a0a31f1eb6b2aeb1f33fd
+SHA1 (patch-libdevice_GnashDevice.h) = e1df642675bb1e876f02d7611d2cdc81924d17c6
 SHA1 (patch-libmedia_FLVParser.cpp) = e990c82edceb3c5d481d7de86e720139b4dc60ea
 SHA1 (patch-libmedia_Makefile.in) = 10fde4560a20dcb28599d8c51a4fc7af93109474
 SHA1 (patch-librender_Makefile.in) = 25e38d82e3ecc156ff1f2b855a05437da015f3ce

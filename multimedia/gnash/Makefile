@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2016/08/03 10:23:11 adam Exp $
+# $NetBSD: Makefile,v 1.98 2016/08/15 12:26:54 richard Exp $
 
 DISTNAME=		gnash-0.8.10
 PKGREVISION=		45
@@ -33,6 +33,8 @@ CONF_FILES+=		${EGDIR}/gnashpluginrc ${PKG_SYSCONFDIR}/gnashpluginrc
 CONF_FILES+=		${EGDIR}/gnashrc ${PKG_SYSCONFDIR}/gnashrc
 
 .include "options.mk"
+
+CPPFLAGS.SunOS+=	-DBSD_COMP
 
 #ld: .libs/libgnashplugin_la-plugin.o(.text+0x5564): unresolvable relocation
 # against symbol `_ZNKSs5c_strEv'
