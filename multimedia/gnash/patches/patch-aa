@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.16 2013/02/26 11:04:25 joerg Exp $
+$NetBSD: patch-aa,v 1.17 2016/08/15 12:26:54 richard Exp $
+
+add quotes when testing with 'which' as, on at least SunOS, it doesn't
+return an empty string when the object isn't found.
 
 --- configure.orig	2012-01-19 19:19:29.000000000 +0000
 +++ configure
@@ -61,3 +64,21 @@ $NetBSD: patch-aa,v 1.16 2013/02/26 11:04:25 joerg Exp $
  
        cygnal_boost_libs="serialization date_time"
  
+@@ -50203,7 +50206,7 @@ yast_war="`cat $yast_war`"
+ yast_rec="`cat $yast_rec`"
+ 
+ # Pipe stderr to /dev/null since Fedora complains when target isn't there.
+-if test x`which apt-get 2>/dev/null` != x; then
++if test x"`which apt-get 2>/dev/null`" != x; then
+   if test x"$deb_err" != x -o x"$deb_war" != x -o x"$deb_rec" != x; then
+     echo "#!/bin/sh" > deb-attempt-install-dependencies.sh
+     echo "packages=\"$deb_err $deb_war $deb_rec\"" >> deb-attempt-install-dependencies.sh
+@@ -50216,7 +50219,7 @@ if test x`which apt-get 2>/dev/null` !=
+   fi
+ fi
+ 
+-if test x`which yum 2>/dev/null` != x; then
++if test x"`which yum 2>/dev/null`" != x; then
+   if test x"$rpm_err" != x -o x"$rpm_war" != x -o x"$deb_rec" != x; then
+     echo "#!/bin/sh" > rpm-attempt-install-dependencies.sh
+     echo "packages=\"$rpm_err $rpm_war  $rpm_rec\"" >> rpm-attempt-install-dependencies.sh
