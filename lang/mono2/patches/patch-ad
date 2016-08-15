@@ -1,7 +1,34 @@
-$NetBSD: patch-ad,v 1.1 2013/06/17 12:43:28 wiz Exp $
---- mono/utils/mono-sigcontext.h.orig	2011-09-14 06:32:19.000000000 +0300
-+++ mono/utils/mono-sigcontext.h	2011-10-28 17:28:46.000000000 +0300
-@@ -211,7 +211,7 @@
+$NetBSD: patch-ad,v 1.2 2016/08/15 10:24:31 richard Exp $
+--- mono/utils/mono-sigcontext.h.orig	2012-01-30 18:01:23.000000000 +0000
++++ mono/utils/mono-sigcontext.h
+@@ -6,11 +6,12 @@
+ #include <asm/sigcontext.h>
+ #endif
+ 
+-#if defined(__i386__)
+-
+-#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
++#ifdef HAVE_UCONTEXT_H
+ #include <ucontext.h>
+ #endif
++
++#if defined(__i386__)
++
+ #if defined(__APPLE__)
+ #include <AvailabilityMacros.h>
+ #endif
+@@ -172,10 +173,6 @@
+ 
+ #elif defined(__mono_ppc__)
+ 
+-#if HAVE_UCONTEXT_H
+-#include <ucontext.h>
+-#endif
+-
+ #if defined(__linux__)
+ 	typedef struct ucontext os_ucontext;
+ 
+@@ -211,7 +208,7 @@
  	#define UCONTEXT_REG_FPRn(ctx, n) (((os_ucontext*)(ctx))->uc_mcontext.__fpregs.__fpu_regs [(n)])
  	#define UCONTEXT_REG_NIP(ctx)     _UC_MACHINE_PC(ctx)
  	#define UCONTEXT_REG_LNK(ctx)     (((os_ucontext*)(ctx))->uc_mcontext.__gregs [_REG_LR])
@@ -10,3 +37,14 @@ $NetBSD: patch-ad,v 1.1 2013/06/17 12:43:28 wiz Exp $
  	typedef ucontext_t os_ucontext;
  
  	#define UCONTEXT_REG_Rn(ctx, n)   ((ctx)->uc_mcontext.mc_gpr [(n)])
+@@ -275,10 +272,6 @@
+ #endif
+ #elif defined(__s390x__)
+ 
+-# if HAVE_UCONTEXT_H
+-#  include <ucontext.h>
+-# endif
+-
+ # define UCONTEXT_GREGS(ctx)	(((ucontext_t *)(ctx))->uc_mcontext.gregs)
+ #endif
+ 
