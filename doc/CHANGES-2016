@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3340 2016/08/15 18:46:12 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3341 2016/08/15 18:52:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4783,3 +4783,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mldonkey to 3.1.5nb5 [jaapb 2016-08-15]
 	Updated emulators/ski to 1.3.2nb4 [scole 2016-08-15]
 	Updated net/libcmis to 0.5.1 [ryoon 2016-08-15]
+	Updated textproc/libodfgen to 0.1.6 [ryoon 2016-08-15]
