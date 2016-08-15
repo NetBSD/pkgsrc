@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/01/20 10:36:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/08/15 19:20:25 ryoon Exp $
 bin/blockdiag
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -335,9 +335,6 @@ ${PYSITELIB}/blockdiag/tests/test_imagedraw_utils.pyo
 ${PYSITELIB}/blockdiag/tests/test_parser.py
 ${PYSITELIB}/blockdiag/tests/test_parser.pyc
 ${PYSITELIB}/blockdiag/tests/test_parser.pyo
-${PYSITELIB}/blockdiag/tests/test_pep8.py
-${PYSITELIB}/blockdiag/tests/test_pep8.pyc
-${PYSITELIB}/blockdiag/tests/test_pep8.pyo
 ${PYSITELIB}/blockdiag/tests/test_utils.py
 ${PYSITELIB}/blockdiag/tests/test_utils.pyc
 ${PYSITELIB}/blockdiag/tests/test_utils.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2016/06/08 17:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/08/15 19:20:25 ryoon Exp $
 
-DISTNAME=	blockdiag-1.5.0
+DISTNAME=	blockdiag-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/blockdiag/}
