@@ -1,0 +1,4 @@
+These are the perl5 bindings for libnetpgpverify.
+
+These bindings allow OpenPGP (RFC 4880), including PGP and GPG, and
+SSH signatures on files and data to be verified.

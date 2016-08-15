@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2016/07/24 18:49:35 agc Exp $
+# $NetBSD: Makefile,v 1.591 2016/08/15 06:18:34 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -309,6 +309,7 @@ SUBDIR+=	p5-Net-DNS-SEC-Maint-Key
 SUBDIR+=	p5-Net-OpenSSH
 SUBDIR+=	p5-Net-SSH
 SUBDIR+=	p5-Net-SSLeay
+SUBDIR+=	p5-Netpgp-Verify
 SUBDIR+=	p5-OpenSSL
 SUBDIR+=	p5-SHA
 SUBDIR+=	p5-String-Random
