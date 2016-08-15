@@ -1,9 +1,7 @@
-$NetBSD: patch-extern_libmv_third__party_glog_src_utilities.h,v 1.1 2012/12/03 13:15:51 ryoon Exp $
+$NetBSD: patch-extern_glog_src_utilities.h,v 1.1 2016/08/15 19:26:18 ryoon Exp $
 
-* NetBSD has no unwind
-
---- extern/libmv/third_party/glog/src/utilities.h.orig	2012-10-09 18:43:15.000000000 +0000
-+++ extern/libmv/third_party/glog/src/utilities.h
+--- extern/glog/src/utilities.h.orig	2016-03-23 08:49:49.000000000 +0000
++++ extern/glog/src/utilities.h
 @@ -101,7 +101,7 @@
  // correctly when GetStackTrace() is called with max_depth == 0.
  // Some code may do that.
