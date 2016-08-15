@@ -1,9 +1,7 @@
-$NetBSD: patch-extern_libmv_third__party_glog_src_config__netbsd.h,v 1.3 2014/07/09 20:01:08 ryoon Exp $
+$NetBSD: patch-extern_glog_src_config__netbsd.h,v 1.1 2016/08/15 19:26:18 ryoon Exp $
 
-* config file for NetBSD
-
---- extern/libmv/third_party/glog/src/config_netbsd.h.orig	2014-07-09 12:42:15.000000000 +0000
-+++ extern/libmv/third_party/glog/src/config_netbsd.h
+--- extern/glog/src/config_netbsd.h.orig	2016-07-28 08:46:50.262373648 +0000
++++ extern/glog/src/config_netbsd.h
 @@ -0,0 +1,177 @@
 +/* src/config.h.  Generated from config.h.in by configure.  */
 +/* src/config.h.in.  Generated from configure.ac by autoheader.  */

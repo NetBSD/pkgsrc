@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/12/19 20:52:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/08/15 19:26:18 ryoon Exp $
 bin/blender
 share/blender/${BLENDERVER}/datafiles/fonts/bmonofont-i18n.ttf.gz
 share/blender/${BLENDERVER}/datafiles/fonts/droidsans.ttf.gz
@@ -9,6 +9,7 @@ share/blender/${BLENDERVER}/datafiles/locale/de/LC_MESSAGES/blender.mo
 share/blender/${BLENDERVER}/datafiles/locale/eo/LC_MESSAGES/blender.mo
 share/blender/${BLENDERVER}/datafiles/locale/es/LC_MESSAGES/blender.mo
 share/blender/${BLENDERVER}/datafiles/locale/es_ES/LC_MESSAGES/blender.mo
+share/blender/${BLENDERVER}/datafiles/locale/eu/LC_MESSAGES/blender.mo
 share/blender/${BLENDERVER}/datafiles/locale/fa/LC_MESSAGES/blender.mo
 share/blender/${BLENDERVER}/datafiles/locale/fr/LC_MESSAGES/blender.mo
 share/blender/${BLENDERVER}/datafiles/locale/he/LC_MESSAGES/blender.mo
@@ -41,11 +42,11 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/__phello__.foo.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_bootlocale.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_collections_abc.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_compat_pickle.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_compression.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_compression.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_dummy_thread.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_markupbase.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_osx_support.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_pydecimal.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_pydecimal.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_pyio.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sitebuiltins.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_strptime.py
@@ -61,7 +62,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asynchat.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/base_events.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/base_subprocess.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/compat.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/compat.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/constants.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/coroutines.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/events.py
@@ -252,9 +253,9 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/iso8859_8
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/iso8859_9.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/johab.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/koi8_r.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/koi8_t.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/koi8_t.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/koi8_u.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/kz1048.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/kz1048.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/latin_1.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/mac_arabic.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/mac_centeuro.py
@@ -294,10 +295,8 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/uu_codec.
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/zlib_codec.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/__main__.py
-${PLIST.py34}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/pip-6.0.8-py2.py3-none-any.whl
-${PLIST.py34}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/setuptools-12.0.5-py2.py3-none-any.whl
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/pip-7.1.2-py2.py3-none-any.whl
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/setuptools-18.2-py2.py3-none-any.whl
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/pip-8.1.1-py2.py3-none-any.whl
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/setuptools-20.10.1-py2.py3-none-any.whl
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_uninstall.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/enum.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/filecmp.py
@@ -329,7 +328,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/imghdr.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/imp.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/_bootstrap.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/_bootstrap_external.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/_bootstrap_external.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/abc.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/machinery.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/importlib/util.py
@@ -378,7 +377,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_struct
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_testbuffer.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_testcapi.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_testimportmultiple.so
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_testmultiphase.so
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_testmultiphase.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/array.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/audioop.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/binascii.so
@@ -389,11 +388,11 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/math.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/mmap.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/nis.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/parser.so
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/pyexpat.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/resource.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/select.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/syslog.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/termios.so
-${PLIST.py34}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/time.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/unicodedata.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/zlib.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/linecache.py
@@ -471,7 +470,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/selectors.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/shelve.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/shlex.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/shutil.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/signal.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/signal.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/site.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/smtpd.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/smtplib.py
@@ -510,7 +509,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/traceback.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/tracemalloc.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/tty.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/types.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/typing.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/typing.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/unittest/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/unittest/__main__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/unittest/case.py
@@ -571,7 +570,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/xml/sax/xmlreader.p
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/xmlrpc/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/xmlrpc/client.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/xmlrpc/server.py
-${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/zipapp.py
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/zipapp.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/zipfile.py
 share/blender/${BLENDERVER}/scripts/addons/add_curve_extra_objects/__init__.py
 share/blender/${BLENDERVER}/scripts/addons/add_curve_extra_objects/add_curve_aceous_galore.py
@@ -651,7 +650,6 @@ share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/geom/geom_qbvh_volume_a
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/geom/geom_triangle.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/geom/geom_triangle_intersect.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/geom/geom_volume.h
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_accumulate.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_bake.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_camera.h
@@ -678,19 +676,12 @@ share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_projection.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_queues.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_random.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_shader.h
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_shaderdata_vars.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_shadow.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_subsurface.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_textures.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_types.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_volume.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernel_work_stealing.h
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cpu/kernel.cpp
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cpu/kernel_avx.cpp
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cpu/kernel_avx2.cpp
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cpu/kernel_sse2.cpp
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cpu/kernel_sse3.cpp
-share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cpu/kernel_sse41.cpp
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/cuda/kernel.cu
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/opencl/kernel.cl
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/kernels/opencl/kernel_background_buffer_update.cl
@@ -764,7 +755,6 @@ share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/util_math_fast.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/util_transform.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/kernel/util_types.h
 share/blender/${BLENDERVER}/scripts/addons/cycles/license/Apache_2.0.txt
-share/blender/${BLENDERVER}/scripts/addons/cycles/license/Boost.txt
 share/blender/${BLENDERVER}/scripts/addons/cycles/license/ILM.txt
 share/blender/${BLENDERVER}/scripts/addons/cycles/license/NVidia.txt
 share/blender/${BLENDERVER}/scripts/addons/cycles/license/OSL.txt
@@ -789,6 +779,13 @@ share/blender/${BLENDERVER}/scripts/addons/io_anim_camera.py
 share/blender/${BLENDERVER}/scripts/addons/io_anim_nuke_chan/__init__.py
 share/blender/${BLENDERVER}/scripts/addons/io_anim_nuke_chan/export_nuke_chan.py
 share/blender/${BLENDERVER}/scripts/addons/io_anim_nuke_chan/import_nuke_chan.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/__init__.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/bl_utils/pipe_non_blocking.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/bl_utils/subprocess_helper.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/blend/blendfile.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/blend/blendfile_path_walker.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/blendfile_pack.py
+share/blender/${BLENDERVER}/scripts/addons/io_blend_utils/utils/system.py
 share/blender/${BLENDERVER}/scripts/addons/io_coat3D/__init__.py
 share/blender/${BLENDERVER}/scripts/addons/io_coat3D/coat.py
 share/blender/${BLENDERVER}/scripts/addons/io_coat3D/tex.py
@@ -1000,6 +997,16 @@ share/blender/${BLENDERVER}/scripts/addons/object_print3d_utils/report.py
 share/blender/${BLENDERVER}/scripts/addons/object_print3d_utils/todo.rst
 share/blender/${BLENDERVER}/scripts/addons/object_print3d_utils/ui.py
 share/blender/${BLENDERVER}/scripts/addons/paint_palette.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/13x8_wicker_globe.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/7x6.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/9x9_color.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/braided_coil.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/flower_mesh_(2d).py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/slinky_knot.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/snowflake_(2d).py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/sun_cross_(2d).py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/tripple_dna.py
+share/blender/${BLENDERVER}/scripts/addons/presets/operator/curve.torus_knot_plus/wicker_basket.py
 share/blender/${BLENDERVER}/scripts/addons/presets/operator/mesh.bolt_add/default.py
 share/blender/${BLENDERVER}/scripts/addons/presets/operator/mesh.bolt_add/m10.py
 share/blender/${BLENDERVER}/scripts/addons/presets/operator/mesh.bolt_add/m12.py
@@ -1048,7 +1055,9 @@ share/blender/${BLENDERVER}/scripts/addons/render_copy_settings/translations.py
 share/blender/${BLENDERVER}/scripts/addons/render_freestyle_svg.py
 share/blender/${BLENDERVER}/scripts/addons/render_povray/__init__.py
 share/blender/${BLENDERVER}/scripts/addons/render_povray/df3.py
+share/blender/${BLENDERVER}/scripts/addons/render_povray/primitives.py
 share/blender/${BLENDERVER}/scripts/addons/render_povray/render.py
+share/blender/${BLENDERVER}/scripts/addons/render_povray/shading.py
 share/blender/${BLENDERVER}/scripts/addons/render_povray/ui.py
 share/blender/${BLENDERVER}/scripts/addons/render_povray/update_files.py
 share/blender/${BLENDERVER}/scripts/addons/rigify/CREDITS
@@ -1369,6 +1378,7 @@ share/blender/${BLENDERVER}/scripts/presets/tracking_track_color/object.py
 share/blender/${BLENDERVER}/scripts/startup/bl_operators/__init__.py
 share/blender/${BLENDERVER}/scripts/startup/bl_operators/add_mesh_torus.py
 share/blender/${BLENDERVER}/scripts/startup/bl_operators/anim.py
+share/blender/${BLENDERVER}/scripts/startup/bl_operators/bmesh/find_adjacent.py
 share/blender/${BLENDERVER}/scripts/startup/bl_operators/clip.py
 share/blender/${BLENDERVER}/scripts/startup/bl_operators/console.py
 share/blender/${BLENDERVER}/scripts/startup/bl_operators/file.py
@@ -1492,7 +1502,9 @@ share/blender/LICENSE-bmonofont-i18n.ttf.txt
 share/blender/LICENSE-droidsans.ttf.txt
 share/blender/Python-license.txt
 share/blender/blender
+share/blender/blender-thumbnailer.py
+share/blender/blender.desktop
+share/blender/blender.svg
 share/blender/copyright.txt
 share/blender/jemalloc-license.txt
 share/blender/readme.html
-@pkgdir share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/site-packages
