@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2016/08/11 12:51:15 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2016/08/15 19:53:52 wiz Exp $
 
-SHA1 (swill/fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = 1628126f9629b1cf78a1e8d8b7bb0296b9085e9c
-RMD160 (swill/fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = d422a9999ea1168f116d95ec5be60ab24966988b
-SHA512 (swill/fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = dd8867b497dd7e3ac661c06b4301e056a10efb81b23e6573677fd7b3d0015600d28f0cf15428b84f0f4490efb8fb37cf9e4457cc3d68feac9175147186130672
-Size (swill/fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = 119204 bytes
+SHA1 (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = 1628126f9629b1cf78a1e8d8b7bb0296b9085e9c
+RMD160 (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = d422a9999ea1168f116d95ec5be60ab24966988b
+SHA512 (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = dd8867b497dd7e3ac661c06b4301e056a10efb81b23e6573677fd7b3d0015600d28f0cf15428b84f0f4490efb8fb37cf9e4457cc3d68feac9175147186130672
+Size (swill-0.3-fafde7646c39bfc3b30521dbcda9efaa94396b0e.tar.gz) = 119204 bytes
 SHA1 (patch-Makefile.in) = eedb76e89aee76b29a9d25cd47c4c0c3929cedf0
 SHA1 (patch-Source_Objects_Makefile.in) = 963125eb9edc293a34923f818ec1472f44d5beb2
 SHA1 (patch-Source_Objects_base_c) = ac8d6bee14f6db5bdbe38c33b6e0d46fc457a12b
