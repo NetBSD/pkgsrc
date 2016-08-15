@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/15 06:18:34 agc Exp $
+
+SHA1 (p5-Netpgp-Verify-20160814.tar.gz) = a8a2e8eef6a2c2fe555d1a7db6021829112848b0
+RMD160 (p5-Netpgp-Verify-20160814.tar.gz) = 439bea7834aaa42f69c52510b562b67dd977e455
+SHA512 (p5-Netpgp-Verify-20160814.tar.gz) = cc335f0ac0b3f5a9b160c18039adea6222bdddde73be9b28b6de1a818eb387e3ff2ad411079545aae382166e65e204bc4dea10079186915e2819d9649949ee94
+Size (p5-Netpgp-Verify-20160814.tar.gz) = 53136 bytes
