@@ -1,8 +1,8 @@
-$NetBSD: patch-test_sixtap__predict__test.cc,v 1.2 2015/06/30 09:53:17 ryoon Exp $
+$NetBSD: patch-test_sixtap__predict__test.cc,v 1.3 2016/08/16 23:53:25 ryoon Exp $
 
---- test/sixtap_predict_test.cc.orig	2015-04-03 18:49:19.000000000 +0000
+--- test/sixtap_predict_test.cc.orig	2016-07-21 01:15:41.000000000 +0000
 +++ test/sixtap_predict_test.cc
-@@ -30,7 +30,11 @@ typedef void (*SixtapPredictFunc)(uint8_
+@@ -32,7 +32,11 @@ typedef void (*SixtapPredictFunc)(uint8_
                                    uint8_t *dst_ptr,
                                    int dst_pitch);
  
@@ -14,7 +14,7 @@ $NetBSD: patch-test_sixtap__predict__test.cc,v 1.2 2015/06/30 09:53:17 ryoon Exp
  
  class SixtapPredictTest
      : public ::testing::TestWithParam<SixtapPredictParam> {
-@@ -182,7 +186,11 @@ TEST_P(SixtapPredictTest, TestWithRandom
+@@ -184,7 +188,11 @@ TEST_P(SixtapPredictTest, TestWithRandom
    }
  }
  
@@ -24,5 +24,5 @@ $NetBSD: patch-test_sixtap__predict__test.cc,v 1.2 2015/06/30 09:53:17 ryoon Exp
  using std::tr1::make_tuple;
 +#endif
  
- const SixtapPredictFunc sixtap_16x16_c = vp8_sixtap_predict16x16_c;
- const SixtapPredictFunc sixtap_8x8_c = vp8_sixtap_predict8x8_c;
+ INSTANTIATE_TEST_CASE_P(
+     C, SixtapPredictTest, ::testing::Values(
