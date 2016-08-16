@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3359 2016/08/16 01:55:41 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3360 2016/08/16 02:43:06 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4802,3 +4802,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-URI-Query to 0.16 [wen 2016-08-16]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.015 [wen 2016-08-16]
 	Updated www/p5-WWW-Mechanize to 1.78 [wen 2016-08-16]
+	Updated math/py-pytables to 3.2.3 [maya 2016-08-16]
