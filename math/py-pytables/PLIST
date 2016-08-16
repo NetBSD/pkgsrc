@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.11 2014/01/21 16:32:42 wiz Exp $
-bin/pt2to3${PYVERSSUFFIX}
-bin/ptdump${PYVERSSUFFIX}
-bin/ptrepack${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.12 2016/08/16 02:42:48 maya Exp $
+bin/pt2to32.7
+bin/ptdump2.7
+bin/ptrepack2.7
+bin/pttree
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/tables/__init__.py
 ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
@@ -132,6 +139,9 @@ ${PYSITELIB}/tables/scripts/ptdump.pyo
 ${PYSITELIB}/tables/scripts/ptrepack.py
 ${PYSITELIB}/tables/scripts/ptrepack.pyc
 ${PYSITELIB}/tables/scripts/ptrepack.pyo
+${PYSITELIB}/tables/scripts/pttree.py
+${PYSITELIB}/tables/scripts/pttree.pyc
+${PYSITELIB}/tables/scripts/pttree.pyo
 ${PYSITELIB}/tables/table.py
 ${PYSITELIB}/tables/table.pyc
 ${PYSITELIB}/tables/table.pyo
@@ -150,6 +160,7 @@ ${PYSITELIB}/tables/tests/__init__.pyo
 ${PYSITELIB}/tables/tests/array_mdatom.h5
 ${PYSITELIB}/tables/tests/attr-u16.h5
 ${PYSITELIB}/tables/tests/blosc_bigendian.h5
+${PYSITELIB}/tables/tests/bug-idx.h5
 ${PYSITELIB}/tables/tests/check_leaks.py
 ${PYSITELIB}/tables/tests/check_leaks.pyc
 ${PYSITELIB}/tables/tests/check_leaks.pyo
@@ -167,6 +178,8 @@ ${PYSITELIB}/tables/tests/float.h5
 ${PYSITELIB}/tables/tests/idx-std-1.x.h5
 ${PYSITELIB}/tables/tests/indexes_2_0.h5
 ${PYSITELIB}/tables/tests/indexes_2_1.h5
+${PYSITELIB}/tables/tests/issue_368.h5
+${PYSITELIB}/tables/tests/issue_560.h5
 ${PYSITELIB}/tables/tests/matlab_file.mat
 ${PYSITELIB}/tables/tests/nested-type-with-gaps.h5
 ${PYSITELIB}/tables/tests/non-chunked-table.h5
@@ -194,6 +207,9 @@ ${PYSITELIB}/tables/tests/test_array.pyo
 ${PYSITELIB}/tables/tests/test_attributes.py
 ${PYSITELIB}/tables/tests/test_attributes.pyc
 ${PYSITELIB}/tables/tests/test_attributes.pyo
+${PYSITELIB}/tables/tests/test_aux.py
+${PYSITELIB}/tables/tests/test_aux.pyc
+${PYSITELIB}/tables/tests/test_aux.pyo
 ${PYSITELIB}/tables/tests/test_backcompat.py
 ${PYSITELIB}/tables/tests/test_backcompat.pyc
 ${PYSITELIB}/tables/tests/test_backcompat.pyo
