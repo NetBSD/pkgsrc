@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3358 2016/08/16 01:47:57 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3359 2016/08/16 01:55:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4801,3 +4801,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-URI-Find to 20160806 [wen 2016-08-16]
 	Updated www/p5-URI-Query to 0.16 [wen 2016-08-16]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.015 [wen 2016-08-16]
+	Updated www/p5-WWW-Mechanize to 1.78 [wen 2016-08-16]
