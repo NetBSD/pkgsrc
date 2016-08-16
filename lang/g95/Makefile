@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/07/09 06:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/08/16 00:53:41 dholland Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
@@ -28,7 +28,7 @@ GCC_CONFIGURE_SCRIPT=	../configure
 GCC_CONFIGURE_ARGS=	${CONFIGURE_ARGS}
 GCC_CONFIGURE_ARGS+=	--enable-languages=c
 GCC_CONFIGURE_ARGS+=	--disable-multilib
-GCC_CONFIGURE_ARGS+=	--disable-libssp # to build on NetBSD 6.88.43
+GCC_CONFIGURE_ARGS+=	--disable-libssp # to build on NetBSD 6.99.43
 
 # Avoid "ld: illegal text-relocation to half in .libs/x87.o"
 LDFLAGS.Darwin+=	-Wl,-read_only_relocs,suppress
