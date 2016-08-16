@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.15 2015/11/01 09:54:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/08/16 04:08:31 maya Exp $
 
-DISTNAME=	sympy-0.7.6.1
+DISTNAME=	sympy-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sympy/}
-GITHUB_PROJECT=	sympy
 GITHUB_RELEASE=	${DISTNAME}
+GITHUB_PROJECT=	sympy
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sympy.org/
 COMMENT=	Python library for symbolic mathematics
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+DEPENDS+=	${PYPKGPREFIX}-mpmath>=0.19:../../math/py-mpmath
 
-REPLACE_PYTHON+=	sympy/mpmath/tests/runtests.py
+USE_LANGUAGES=	# none
+
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
 
 SUBST_CLASSES+=		manpath
