@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.1 2015/05/30 09:51:11 ryoon Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.2 2016/08/16 09:06:33 abs Exp $
 bin/oracle8-appletviewer
 bin/oracle8-apt
 bin/oracle8-extcheck
@@ -9,6 +9,7 @@ bin/oracle8-javac
 bin/oracle8-javadoc
 bin/oracle8-javah
 bin/oracle8-javap
+bin/oracle8-jcmd
 bin/oracle8-jdb
 bin/oracle8-jps
 bin/oracle8-rmic
