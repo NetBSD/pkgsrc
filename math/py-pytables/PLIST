@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2016/08/16 02:42:48 maya Exp $
-bin/pt2to32.7
-bin/ptdump2.7
-bin/ptrepack2.7
+@comment $NetBSD: PLIST,v 1.13 2016/08/16 14:12:35 maya Exp $
+bin/pt2to3${PYVERSSUFFIX}
+bin/ptdump${PYVERSSUFFIX}
+bin/ptrepack${PYVERSSUFFIX}
 bin/pttree
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
