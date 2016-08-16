@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3353 2016/08/16 00:35:07 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3354 2016/08/16 00:39:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4796,3 +4796,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-File-Remove to 1.57 [wen 2016-08-16]
 	Updated sysutils/p5-Sys-SigAction to 0.22 [wen 2016-08-16]
 	Updated www/p5-Dancer2 to 0.202000 [wen 2016-08-16]
+	Updated devel/p5-Curses to 0.36 [wen 2016-08-16]
