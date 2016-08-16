@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3355 2016/08/16 00:42:05 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3356 2016/08/16 00:47:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4798,3 +4798,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Dancer2 to 0.202000 [wen 2016-08-16]
 	Updated devel/p5-Curses to 0.36 [wen 2016-08-16]
 	Updated devel/p5-Log-Dispatch to 2.57 [wen 2016-08-16]
+	Updated www/p5-URI-Find to 20160806 [wen 2016-08-16]
