@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3366 2016/08/16 13:35:14 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3367 2016/08/16 13:45:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4812,3 +4812,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-IO-Interface to 1.09 [mef 2016-08-16]
 	Updated net/syncthing to 0.14.4 [abs 2016-08-16]
 	Updated net/adns to 1.5.1 [mef 2016-08-16]
+	Updated net/arping to 2.17 [mef 2016-08-16]
