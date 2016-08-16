@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2016/06/08 19:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/08/16 00:11:48 wen Exp $
 #
 
-DISTNAME=	Test-Most-0.34
+DISTNAME=	Test-Most-0.35
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -13,12 +12,12 @@ COMMENT=	Most commonly needed test functions and features
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Exception-Class>=1.14:../../devel/p5-Exception-Class
-DEPENDS+=	p5-Test-Deep>=0.106:../../devel/p5-Test-Deep
-DEPENDS+=	p5-Test-Differences>=0.6100:../../devel/p5-Test-Differences
-DEPENDS+=	p5-Test-Exception>=0.31:../../devel/p5-Test-Exception
-#DEPENDS+=	{perl>=5.14.2,p5-Test-Harness>=3.21}:../../devel/p5-Test-Harness
-#DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-DEPENDS+=	p5-Test-Warn>=0.23:../../devel/p5-Test-Warn
+DEPENDS+=	p5-Test-Deep>=0.119:../../devel/p5-Test-Deep
+DEPENDS+=	p5-Test-Differences>=0.6400:../../devel/p5-Test-Differences
+DEPENDS+=	p5-Test-Exception>=0.43:../../devel/p5-Test-Exception
+DEPENDS+=	{perl>=5.21.8,p5-Test-Harness>=3.35}:../../devel/p5-Test-Harness
+DEPENDS+=	p5-Test-Simple>=0.1.302047:../../devel/p5-Test-Simple
+DEPENDS+=	p5-Test-Warn>=0.30:../../devel/p5-Test-Warn
 
 # recommended
 DEPENDS+=	p5-Data-Dumper-Names>=0.03:../../devel/p5-Data-Dumper-Names
