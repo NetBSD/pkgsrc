@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2016/06/08 19:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/08/16 12:56:22 mef Exp $
 #
 
-DISTNAME=	Net-Gnats-0.07
+DISTNAME=	Net-Gnats-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnatsperl/}
 
@@ -15,6 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-ExtUtils-MakeMaker-Coverage-[0-9]*:../../devel/p5-ExtUtils-MakeMaker-Coverage
 DEPENDS+=	p5-Object-Accessor-[0-9]*:../../devel/p5-Object-Accessor
+# for make test
+BUILD_DEPENDS+=	p5-Readonly-[0-9]*:../../devel/p5-Readonly
 
 PERL5_PACKLIST=		auto/Net/Gnats/.packlist
 
