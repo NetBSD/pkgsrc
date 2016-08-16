@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 11:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2016/08/16 18:36:01 tnn Exp $
 
-DISTNAME=		synergy-1.7.4
-PKGREVISION=		1
+DISTNAME=		synergy-1.8.2
 CATEGORIES=		net x11
-MASTER_SITES=		${MASTER_SITE_GITHUB:=synergy/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
