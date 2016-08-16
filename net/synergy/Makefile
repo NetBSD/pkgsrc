@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/08/16 18:36:01 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2016/08/16 18:47:02 tnn Exp $
 
 DISTNAME=		synergy-1.8.2
 CATEGORIES=		net x11
@@ -10,10 +10,9 @@ HOMEPAGE=		http://synergy-project.org/
 COMMENT=		Let a user share a mouse and keyboard among computers
 LICENSE=		gnu-gpl-v2
 
-EXTRACT_USING=		bsdtar
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		unzip
-# Main configuration is cmake, but subdirectories are gnu configure.
+# Main configuration is CMake, but subdirectories are GNU configure.
 # We need to set GNU_CONFIGURE=yes for config.{guess,sub} overrides to kick in.
 # Fortunately for us, cmake seems to take precedence in infrastructure.
 USE_CMAKE=		yes
