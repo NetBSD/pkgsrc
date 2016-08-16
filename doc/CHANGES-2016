@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3363 2016/08/16 08:31:30 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.3364 2016/08/16 13:11:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4806,3 +4806,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/py-pandas to 0.18.1 [maya 2016-08-16]
 	Updated math/py-sympy to 1.0 [maya 2016-08-16]
 	Updated chat/hexchat to 2.12.1 [tnn 2016-08-16]
+	Updated net/p5-Geo-IPfree to 1.151940 [mef 2016-08-16]
+	Updated net/p5-Net to 3.10 [mef 2016-08-16]
+	Updated net/p5-Net-Gnats to 0.08 [mef 2016-08-16]
+	Updated net/p5-IO-Interface to 1.09 [mef 2016-08-16]
