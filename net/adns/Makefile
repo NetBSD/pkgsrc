@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/01/29 09:47:03 mef Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/16 13:34:52 mef Exp $
 #
 
-DISTNAME=	adns-1.5.0
+DISTNAME=	adns-1.5.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~ian/adns/ftp/
 
