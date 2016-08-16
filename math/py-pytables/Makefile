@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.32 2016/07/15 07:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/08/16 02:42:48 maya Exp $
 
-DISTNAME=		tables-3.1.1
+DISTNAME=		tables-3.2.3
 PKGNAME=		${PYPKGPREFIX}-py${DISTNAME}
 CATEGORIES=		math python
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=PyTables/}
+GITHUB_PROJECT=		PyTables
+GITHUB_TAG=		v.${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pytables.org/
 COMMENT=		Database package for large amounts of data
 LICENSE=		modified-bsd
+
+WRKSRC=			${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 PYSETUPBUILDARGS+=	--hdf5=${BUILDLINK_PREFIX.hdf5}
 PYSETUPINSTALLARGS=	${PYSETUPBUILDARGS}
@@ -34,6 +38,6 @@ do-test:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pycython+=	${PYPKGPREFIX}-cython>=0.13
+BUILDLINK_API_DEPENDS.pycython+=	${PYPKGPREFIX}-cython>=0.21
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
