@@ -1,9 +1,9 @@
-$NetBSD: patch-plugins_sysinfo_pci.h,v 1.1 2015/02/15 17:41:24 khorben Exp $
+$NetBSD: patch-plugins_sysinfo_unix_pci.h,v 1.1 2016/08/16 08:30:14 tnn Exp $
 
 Fix header location for pkgsrc.
 
---- plugins/sysinfo/pci.h.orig	2014-06-01 16:11:26.000000000 +0000
-+++ plugins/sysinfo/pci.h
+--- plugins/sysinfo/unix/pci.h.orig	2016-03-20 01:05:19.000000000 +0000
++++ plugins/sysinfo/unix/pci.h
 @@ -21,7 +21,7 @@
  #ifndef _PCI_H_
  #define _PCI_H_
