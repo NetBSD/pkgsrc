@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/15 17:41:24 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/16 08:30:14 tnn Exp $
 ${PLIST.gtk2}bin/hexchat
 bin/hexchat-text
 include/hexchat-plugin.h
 lib/hexchat/plugins/checksum.la
 lib/hexchat/plugins/doat.la
 lib/hexchat/plugins/fishlim.la
+${PLIST.lua}lib/hexchat/plugins/lua.la
 ${PLIST.perl}lib/hexchat/plugins/perl.la
 ${PLIST.python}lib/hexchat/plugins/python.la
 ${PLIST.libpci}lib/hexchat/plugins/sysinfo.la
