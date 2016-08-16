@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3368 2016/08/16 16:16:03 roy Exp $
+$NetBSD: CHANGES-2016,v 1.3369 2016/08/16 18:36:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4814,3 +4814,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/adns to 1.5.1 [mef 2016-08-16]
 	Updated net/arping to 2.17 [mef 2016-08-16]
 	Updated net/dhcpcd to 6.11.3 [roy 2016-08-16]
+	Updated net/synergy to 1.8.2 [tnn 2016-08-16]
