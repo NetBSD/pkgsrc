@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3361 2016/08/16 03:22:27 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3362 2016/08/16 04:08:52 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4804,3 +4804,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-WWW-Mechanize to 1.78 [wen 2016-08-16]
 	Updated math/py-pytables to 3.2.3 [maya 2016-08-16]
 	Updated math/py-pandas to 0.18.1 [maya 2016-08-16]
+	Updated math/py-sympy to 1.0 [maya 2016-08-16]
