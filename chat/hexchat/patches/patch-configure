@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/08/16 08:30:14 tnn Exp $
+
+Fix bashism.
+
+--- configure.orig	2016-05-01 18:35:31.000000000 +0000
++++ configure
+@@ -19164,7 +19164,7 @@ else
+   WITH_TM_FALSE=
+ fi
+ 
+- if test "x$platform_osx" == "xyes"; then
++ if test "x$platform_osx" = "xyes"; then
+   PLATFORM_OSX_TRUE=
+   PLATFORM_OSX_FALSE='#'
+ else
