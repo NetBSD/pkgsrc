@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 02:46:55 agc Exp $
+$NetBSD: distinfo,v 1.16 2016/08/16 00:11:35 maya Exp $
 
 SHA1 (htmllint-20051019/htmllint.zip) = 9906763f2b59830d3199cacd9992c67ea74a11ab
 RMD160 (htmllint-20051019/htmllint.zip) = c0ab6f063435d4f0f420bad66ae48df90aef2943
@@ -12,3 +12,4 @@ SHA1 (patch-ah) = 26ba26f155a05d8bd0e7bfa1d494a246e1bf2ab8
 SHA1 (patch-ai) = 27068dafb150f20e30898ec546d07af54e487fce
 SHA1 (patch-aj) = cb95bd5bbce00979ea29574f55e001c8df32436f
 SHA1 (patch-ak) = af542b90c1992e9fbf57d1b09a0fc1c0fafbcc25
+SHA1 (patch-htmllint.pm) = 13edfb6deb7a5e2f6b09c4205489bc37676d61b1
