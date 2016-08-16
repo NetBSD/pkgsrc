@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins_sysinfo_Makefile.in,v 1.1 2016/08/16 08:30:14 tnn Exp $
+
+Specify libtool tag.
+
+--- plugins/sysinfo/Makefile.in.orig	2016-05-01 18:35:33.000000000 +0000
++++ plugins/sysinfo/Makefile.in
+@@ -162,7 +162,7 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-sysinfo_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
++sysinfo_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(OBJCLD) $(AM_OBJCFLAGS) \
+ 	$(OBJCFLAGS) $(sysinfo_la_LDFLAGS) $(LDFLAGS) -o $@
+ AM_V_P = $(am__v_P_@AM_V@)
