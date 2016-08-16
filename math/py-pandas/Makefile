@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/07/15 07:24:06 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/08/16 03:22:12 maya Exp $
 
-DISTNAME=	pandas-0.17.1
+DISTNAME=	pandas-0.18.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pandas/}
@@ -26,7 +26,7 @@ USE_LANGUAGES=	c c++
 .include "../../mk/compiler.mk"
 
 # XXX want py-bottleneck
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../lang/python/versioned_dependencies.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
