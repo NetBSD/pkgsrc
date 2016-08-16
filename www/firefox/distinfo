@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.250 2016/08/06 08:46:59 ryoon Exp $
+$NetBSD: distinfo,v 1.251 2016/08/16 09:34:12 tnn Exp $
 
 SHA1 (firefox-48.0.source.tar.xz) = 2b73cfc996861fe895ad7564d485bf9e35190767
 RMD160 (firefox-48.0.source.tar.xz) = 7f1754fd11849c4894b4cb234fe1c3fc4be47ba6
@@ -86,10 +86,12 @@ SHA1 (patch-rc) = 9628b038f036f3fc0e37bdf84fa0abf99dbc8d2a
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 5ffb0782bbbff2fd17ad71e98b349b4ec3dc6c8c
 SHA1 (patch-toolkit_components_protobuf_src_google_protobuf_stubs_platform__macros.h) = bd4388323851fcb7b10392d6a27f9bc56633a52e
 SHA1 (patch-toolkit_components_terminator_nsTerminator.cpp) = 5b6d2e5c9f685d32894898d3ef3aec09a1a1e5ce
+SHA1 (patch-toolkit_library_libxul.mk) = 98d79e7ae52d4b54111512a98a03810e2bbe454d
 SHA1 (patch-toolkit_library_moz.build) = be0b3ae0c8048fd61c67b2ae78b2a0813cbefd85
 SHA1 (patch-toolkit_xre_glxtest.cpp) = cf048491778610454b914400e53072afedd96e7b
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 4db0dfc98ffeb09f524a471e6a727f2c3b045afe
 SHA1 (patch-xpcom_base_nscore.h) = d7c96eda884d7f370442749c43caba50da61bbe4
+SHA1 (patch-xpcom_components_Module.h) = 892f8d6a9cb868e5cdc3c6f6be233055dd1ca529
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_Makefile.in) = 950874fbc255c93a828bddd84ffe8478094214cc
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 82026e72559334810be2f8a510d22f0553a353c2
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 493d1433ae72bbd0c65ab3f51de43fb864a6f58d
