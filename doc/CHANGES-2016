@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3350 2016/08/16 00:14:13 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3351 2016/08/16 00:19:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4793,3 +4793,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/htmllint to 20051019nb7 [maya 2016-08-16]
 	Updated devel/p5-Test-Simple to 1.302052 [wen 2016-08-16]
 	Updated devel/p5-Test-Most to 0.35 [wen 2016-08-16]
+	Updated sysutils/p5-File-Remove to 1.57 [wen 2016-08-16]
