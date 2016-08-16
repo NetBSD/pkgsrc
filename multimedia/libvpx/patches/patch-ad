@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.19 2015/11/18 14:09:25 ryoon Exp $
+$NetBSD: patch-ad,v 1.20 2016/08/16 23:53:25 ryoon Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
 All sparc cpus can not do unaligned access.
 Detect NetBSD ARMv7 hardfloat toolchain.
 
---- build/make/configure.sh.orig	2015-11-09 22:12:38.000000000 +0000
+--- build/make/configure.sh.orig	2016-07-21 01:15:41.000000000 +0000
 +++ build/make/configure.sh
 @@ -1,4 +1,4 @@
 -#!/bin/sh
@@ -13,16 +13,16 @@ Detect NetBSD ARMv7 hardfloat toolchain.
  ##
  ##  configure.sh
  ##
-@@ -647,7 +647,7 @@ process_common_toolchain() {
+@@ -683,7 +683,7 @@ process_common_toolchain() {
        armv6*)
          tgt_isa=armv6
          ;;
--      armv7*-hardfloat*)
-+      armv7*-hardfloat*|armv7*-netbsd*-*hf)
+-      armv7*-hardfloat* | armv7*-gnueabihf | arm-*-gnueabihf)
++      armv7*-hardfloat* | armv7*-gnueabihf | arm-*-gnueabihf | armv7*-netbsd*-*hf)
          tgt_isa=armv7
          float_abi=hard
          ;;
-@@ -695,7 +695,7 @@ process_common_toolchain() {
+@@ -735,7 +735,7 @@ process_common_toolchain() {
          [ -z "$tgt_isa" ] && tgt_isa=x86
          tgt_os=win32
          ;;
@@ -31,7 +31,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
          tgt_os=linux
          ;;
        *solaris2.10)
-@@ -738,6 +738,9 @@ process_common_toolchain() {
+@@ -778,6 +778,9 @@ process_common_toolchain() {
      mips*)
        enable_feature mips
        ;;
@@ -41,16 +41,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
    esac
  
    # PIC is probably what we want when building shared libs
-@@ -869,7 +872,7 @@ process_common_toolchain() {
- 
-       case ${tgt_cc} in
-         gcc)
--          CROSS=${CROSS:-arm-none-linux-gnueabi-}
-+#          CROSS=${CROSS:-arm-none-linux-gnueabi-}
-           link_with_cc=gcc
-           setup_gnu_toolchain
-           arch_int=${tgt_isa##armv}
-@@ -1338,7 +1341,7 @@ EOF
+@@ -1415,7 +1418,7 @@ EOF
    check_cc <<EOF
  unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
@@ -59,7 +50,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1354,11 +1357,33 @@ EOF
+@@ -1431,11 +1434,33 @@ EOF
        *-android-gcc)
          ;;
        *)
