@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:21 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/08/16 12:56:22 mef Exp $
 
-SHA1 (Net-Gnats-0.07.tar.gz) = 90b329028f320a3aa45033e29c73e7da05e0670d
-RMD160 (Net-Gnats-0.07.tar.gz) = 01aaf861ccc721376cdce36333e7be1538a5fb72
-SHA512 (Net-Gnats-0.07.tar.gz) = 3a3028772664b2e9e6e18542fa9d776fd6519839e9538eb32b513df9aba69c69103c07bcd33ecd87a88903b583adb0d3c4c40f890cb609fa5e26293b555d177d
-Size (Net-Gnats-0.07.tar.gz) = 20710 bytes
+SHA1 (Net-Gnats-0.08.tar.gz) = 24e6efa64166e9b1b58a0a9a57b9042ffb46fb7d
+RMD160 (Net-Gnats-0.08.tar.gz) = 4b874f11a4c0d99b2253e435f7a282c7d4414eb6
+SHA512 (Net-Gnats-0.08.tar.gz) = 685c1d98ac63c9c3b3edb6d96c070ef3e9e2a1a04da71e475bce53f1cf69b179381403b29adb46bd300ee332fbcef7501ba349069b2f940c39e551f7cb1750ff
+Size (Net-Gnats-0.08.tar.gz) = 20264 bytes
