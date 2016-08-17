@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/12/13 09:28:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/08/17 15:39:02 richard Exp $
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
@@ -14,9 +14,18 @@ ${PYSITELIB}/dateutil/relativedelta.pyo
 ${PYSITELIB}/dateutil/rrule.py
 ${PYSITELIB}/dateutil/rrule.pyc
 ${PYSITELIB}/dateutil/rrule.pyo
-${PYSITELIB}/dateutil/tz.py
-${PYSITELIB}/dateutil/tz.pyc
-${PYSITELIB}/dateutil/tz.pyo
+${PYSITELIB}/dateutil/tz/__init__.py
+${PYSITELIB}/dateutil/tz/__init__.pyc
+${PYSITELIB}/dateutil/tz/__init__.pyo
+${PYSITELIB}/dateutil/tz/_common.py
+${PYSITELIB}/dateutil/tz/_common.pyc
+${PYSITELIB}/dateutil/tz/_common.pyo
+${PYSITELIB}/dateutil/tz/tz.py
+${PYSITELIB}/dateutil/tz/tz.pyc
+${PYSITELIB}/dateutil/tz/tz.pyo
+${PYSITELIB}/dateutil/tz/win.py
+${PYSITELIB}/dateutil/tz/win.pyc
+${PYSITELIB}/dateutil/tz/win.pyo
 ${PYSITELIB}/dateutil/tzwin.py
 ${PYSITELIB}/dateutil/tzwin.pyc
 ${PYSITELIB}/dateutil/tzwin.pyo
@@ -24,9 +33,12 @@ ${PYSITELIB}/dateutil/zoneinfo/__init__.py
 ${PYSITELIB}/dateutil/zoneinfo/__init__.pyc
 ${PYSITELIB}/dateutil/zoneinfo/__init__.pyo
 ${PYSITELIB}/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/dateutil/zoneinfo/rebuild.py
+${PYSITELIB}/dateutil/zoneinfo/rebuild.pyc
+${PYSITELIB}/dateutil/zoneinfo/rebuild.pyo
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
