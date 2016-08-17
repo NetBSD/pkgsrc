@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3372 2016/08/17 04:58:14 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3373 2016/08/17 09:47:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4818,3 +4818,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/libvpx to 1.6.0 [ryoon 2016-08-16]
 	Added www/py-feedgen version 0.3.2 [minskim 2016-08-17]
 	Updated net/wpa_supplicant to 2.5 [maya 2016-08-17]
+	Updated www/p5-HTTP-Tiny to 0.064 [wen 2016-08-17]
