@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2016/08/17 15:55:53 jaapb Exp $
+
+Fix Makefile dependency problems.
+--- Makefile.orig	2016-03-03 15:24:37.000000000 +0000
++++ Makefile
+@@ -5,7 +5,7 @@ result.ml: which_result.ml
+ 	cp `ocaml which_result.ml` result.ml
+ 
+ .PHONY: byte
+-byte: result.ml
++byte result.cma: result.ml
+ 	ocamlc -c result.ml
+ 	ocamlc -a -o result.cma result.cmo
+ 
