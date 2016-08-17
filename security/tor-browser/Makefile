@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2016/08/04 17:03:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2016/08/17 00:06:45 ryoon Exp $
 
 TORBVER=	5.5.4
 
 DISTNAME=	tor-browser-38.7.1esr-5.5-1
 PKGNAME=	tor-browser-${TORBVER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
