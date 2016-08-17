@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3371 2016/08/17 01:03:15 minskim Exp $
+$NetBSD: CHANGES-2016,v 1.3372 2016/08/17 04:58:14 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4817,3 +4817,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/synergy to 1.8.2 [tnn 2016-08-16]
 	Updated multimedia/libvpx to 1.6.0 [ryoon 2016-08-16]
 	Added www/py-feedgen version 0.3.2 [minskim 2016-08-17]
+	Updated net/wpa_supplicant to 2.5 [maya 2016-08-17]
