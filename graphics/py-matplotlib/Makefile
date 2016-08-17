@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2016/08/04 00:04:18 kamil Exp $
+# $NetBSD: Makefile,v 1.45 2016/08/17 13:45:25 richard Exp $
 
 DISTNAME=		matplotlib-1.5.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
 GITHUB_PROJECT=		matplotlib
@@ -14,6 +15,7 @@ COMMENT=		Matlab-style plotting package for Python
 
 DEPENDS+=		${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-pyparsing>=1.5.6:../../devel/py-pyparsing
+DEPENDS+=		${PYPKGPREFIX}-cycler-[0-9]*:../../graphics/py-cycler
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
@@ -38,7 +40,6 @@ post-patch:
 	${ECHO} "wxagg = False" ) > ${WRKSRC}/setup.cfg
 
 # It needs:
-# devel/py-cycler
 # devel/py-nose
 # devel/py-mock
 do-test:
