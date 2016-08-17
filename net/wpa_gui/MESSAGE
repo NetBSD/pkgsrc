@@ -1,11 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2016/08/17 21:48:06 maya Exp $
+$NetBSD: MESSAGE,v 1.2 2016/08/17 22:00:48 maya Exp $
 
 You should have /etc/wpa_supplicant.conf containing:
 
   ctrl_interface=/var/run/wpa_supplicant
-  ctrl_interface_group=wheel
+  # to allow non-root (wheel group) to change connection:
+  #ctrl_interface_group=wheel
   update_config=1
 
-and dhcpcd and wpa_supplicant running.
+and dhcpcd and wpa_supplicant running, for example by running:
+
+ # wpa_supplicant -i your-wifi-device-here0 -c /etc/wpa_supplicant.conf
+ # dhcpcd your-wifi-device-here0
 ===========================================================================
