@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/17 15:55:53 jaapb Exp $
+${OCAML_SITELIB}/result/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/result/result.a
+${OCAML_SITELIB}/result/result.cma
+${OCAML_SITELIB}/result/result.cmi
+${OCAML_SITELIB}/result/result.cmo
+${PLIST.ocaml-opt}${OCAML_SITELIB}/result/result.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/result/result.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/result/result.cmxs
+${OCAML_SITELIB}/result/result.install
+${OCAML_SITELIB}/result/result.ml
+${OCAML_SITELIB}/result/result.o
