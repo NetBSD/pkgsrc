@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3386 2016/08/17 16:00:24 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.3387 2016/08/17 18:58:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4832,3 +4832,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-hgnested to 0.8 [richard 2016-08-17]
 	Added devel/ocaml-result version 1.2 [jaapb 2016-08-17]
 	Updated devel/ocaml-ppx_deriving to 4.0 [jaapb 2016-08-17]
+	Updated misc/byobu to 5.111 [maya 2016-08-17]
