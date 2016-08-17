@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3385 2016/08/17 15:56:38 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.3386 2016/08/17 16:00:24 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4831,3 +4831,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-dateutil to 2.5.3 [richard 2016-08-17]
 	Updated devel/py-hgnested to 0.8 [richard 2016-08-17]
 	Added devel/ocaml-result version 1.2 [jaapb 2016-08-17]
+	Updated devel/ocaml-ppx_deriving to 4.0 [jaapb 2016-08-17]
