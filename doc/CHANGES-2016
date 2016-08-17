@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3373 2016/08/17 09:47:47 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3374 2016/08/17 12:34:39 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4819,3 +4819,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/py-feedgen version 0.3.2 [minskim 2016-08-17]
 	Updated net/wpa_supplicant to 2.5 [maya 2016-08-17]
 	Updated www/p5-HTTP-Tiny to 0.064 [wen 2016-08-17]
+	Updated devel/py-pyparsing to 2.1.8 [richard 2016-08-17]
