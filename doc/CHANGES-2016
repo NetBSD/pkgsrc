@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3383 2016/08/17 15:40:58 richard Exp $
+$NetBSD: CHANGES-2016,v 1.3384 2016/08/17 15:51:25 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4829,3 +4829,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-relatorio to 0.6.3 [richard 2016-08-17]
 	Updated databases/ocaml-sqlite3 to 4.0.5 [jaapb 2016-08-17]
 	Updated time/py-dateutil to 2.5.3 [richard 2016-08-17]
+	Updated devel/py-hgnested to 0.8 [richard 2016-08-17]
