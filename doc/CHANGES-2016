@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3388 2016/08/17 21:47:00 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3389 2016/08/17 23:06:51 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4834,3 +4834,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_deriving to 4.0 [jaapb 2016-08-17]
 	Updated misc/byobu to 5.111 [maya 2016-08-17]
 	Updated net/wpa_gui to 2.5 [maya 2016-08-17]
+	Updated security/gnupg to 1.4.21 [maya 2016-08-17]
