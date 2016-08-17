@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3376 2016/08/17 13:39:30 richard Exp $
+$NetBSD: CHANGES-2016,v 1.3377 2016/08/17 13:51:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4822,3 +4822,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-pyparsing to 2.1.8 [richard 2016-08-17]
 	Updated graphics/py-dot to 1.2.2 [richard 2016-08-17]
 	Updated graphics/py-cycler to 0.10.0 [richard 2016-08-17]
+	Updated misc/p5-Business-ISBN to 3.002 [wen 2016-08-17]
