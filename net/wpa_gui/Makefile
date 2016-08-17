@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2016/08/17 21:46:45 maya Exp $
+# $NetBSD: Makefile,v 1.25 2016/08/17 21:48:06 maya Exp $
 
 DISTNAME=	wpa_supplicant-2.5
 PKGNAME=	${DISTNAME:S/supplicant/gui/}
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	maya@NetBSD.org
 HOMEPAGE=	http://hostap.epitest.fi/wpa_supplicant/
 COMMENT=	QT GUI for wpa_supplicant(8)
 LICENSE=	gnu-gpl-v2
