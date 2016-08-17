@@ -1,0 +1,19 @@
+$NetBSD: patch-wpa__supplicant_Makefile,v 1.1 2016/08/17 21:48:33 maya Exp $
+
+Don't hardcode QMAKE or LRELEASE.
+
+--- wpa_supplicant/Makefile.orig	2015-09-27 19:02:05.000000000 +0000
++++ wpa_supplicant/Makefile
+@@ -1787,10 +1787,10 @@ wpa_gui:
+ 	@echo "wpa_gui has been removed - see wpa_gui-qt4 for replacement"
+ 
+ wpa_gui-qt4/Makefile:
+-	qmake -o wpa_gui-qt4/Makefile wpa_gui-qt4/wpa_gui.pro
++	$(QMAKE) -o wpa_gui-qt4/Makefile wpa_gui-qt4/wpa_gui.pro
+ 
+ wpa_gui-qt4/lang/wpa_gui_de.qm: wpa_gui-qt4/lang/wpa_gui_de.ts
+-	lrelease wpa_gui-qt4/wpa_gui.pro
++	$(LRELEASE) wpa_gui-qt4/wpa_gui.pro
+ 
+ wpa_gui-qt4: wpa_gui-qt4/Makefile wpa_gui-qt4/lang/wpa_gui_de.qm
+ 	$(MAKE) -C wpa_gui-qt4
