@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16277 2016/08/17 18:58:36 maya Exp $
+$NetBSD: TODO,v 1.16278 2016/08/17 21:47:00 maya Exp $
 
 Suggested new packages
 ======================
@@ -1717,7 +1717,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wmx-8
 	o wmx-gnome-8
 	o worker-3.8.3
-	o wpa_gui-2.5
 	o wwwoffle-2.9j [pkg/51340]
 	o wxGTK-3.1.0
 	o wxRemind-101
