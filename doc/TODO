@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16276 2016/08/17 04:58:14 maya Exp $
+$NetBSD: TODO,v 1.16277 2016/08/17 18:58:36 maya Exp $
 
 Suggested new packages
 ======================
@@ -478,7 +478,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o brasero-3.4.0
 	o bugzilla-5.0.2
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
-	o byobu-5.104
 	o bzr-2.7.0
 	o bzr-explorer-1.3.0
 	o bzr-gtk-0.103.0
