@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.35 2016/08/03 10:22:19 adam Exp $
+# $NetBSD: Makefile,v 1.36 2016/08/18 12:41:42 mef Exp $
 #
 
-DISTNAME=	Gnome2-VFS-1.081
+DISTNAME=	Gnome2-VFS-1.082
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	33
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings for the Gnome virtual file system
-#LICENSE=	gnu-lgpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig
