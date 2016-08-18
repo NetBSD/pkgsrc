@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3406 2016/08/18 14:49:30 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.3407 2016/08/18 14:54:05 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4852,3 +4852,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/nsd to 4.1.11 [ryoon 2016-08-18]
 	Updated devel/p5-File-ShareDir-Install to 0.11 [mef 2016-08-18]
 	Updated devel/js_of_ocaml to 2.8.1 [jaapb 2016-08-18]
+	Updated devel/py-mako to 1.0.4 [richard 2016-08-18]
