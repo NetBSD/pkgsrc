@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/08/17 13:38:28 richard Exp $
+$NetBSD: distinfo,v 1.2 2016/08/18 11:51:45 richard Exp $
 
-SHA1 (cycler-0.10.0.tar.gz) = c7591a281ddd0a30c542d04ea8ff671f1dc5503f
-RMD160 (cycler-0.10.0.tar.gz) = 0bac2a6eb44639f667ace99aeef391c7352afe19
-SHA512 (cycler-0.10.0.tar.gz) = 685231d455dfdde70eb71415dfe561e07c34579d7b31ef7197f4c1441301635b387fec903d610b35406b619264f4c0cc616562de8f02b8192414c29274b63c01
-Size (cycler-0.10.0.tar.gz) = 21672 bytes
+SHA1 (cycler/cycler-0.10.0.tar.gz) = c7591a281ddd0a30c542d04ea8ff671f1dc5503f
+RMD160 (cycler/cycler-0.10.0.tar.gz) = 0bac2a6eb44639f667ace99aeef391c7352afe19
+SHA512 (cycler/cycler-0.10.0.tar.gz) = 685231d455dfdde70eb71415dfe561e07c34579d7b31ef7197f4c1441301635b387fec903d610b35406b619264f4c0cc616562de8f02b8192414c29274b63c01
+Size (cycler/cycler-0.10.0.tar.gz) = 21672 bytes
