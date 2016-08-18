@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3410 2016/08/18 15:58:04 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3411 2016/08/18 17:01:21 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4856,3 +4856,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/pgocaml to 2.3 [jaapb 2016-08-18]
 	Added math/vowpal_wabbit version 8.2.0 [cheusov 2016-08-18]
 	Updated geography/gama to 1.18 [gdt 2016-08-18]
+	Updated misc/py-stdnum to 1.4 [richard 2016-08-18]
