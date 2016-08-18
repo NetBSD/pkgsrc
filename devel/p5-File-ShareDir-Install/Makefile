@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/06/08 19:22:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/08/18 13:40:58 mef Exp $
 
-DISTNAME=	File-ShareDir-Install-0.10
+DISTNAME=	File-ShareDir-Install-0.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
