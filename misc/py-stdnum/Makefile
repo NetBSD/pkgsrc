@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/18 17:00:38 richard Exp $
 
-DISTNAME=	python-stdnum-0.9
+DISTNAME=	python-stdnum-1.4
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-stdnum/}
@@ -12,9 +12,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-suds
-
-DEPENDS+=   ${PYPKGPREFIX}-suds>=0.4:../../net/py-suds
+DEPENDS+=	${PYPKGPREFIX}-simplesoap-[0-9]*:../../net/py-simplesoap
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
