@@ -1,0 +1,14 @@
+$NetBSD: patch-_oasis,v 1.1 2016/08/18 10:48:06 jaapb Exp $
+
+Properly detect and generate META files
+--- _oasis.orig	2016-07-12 16:08:10.000000000 +0000
++++ _oasis
+@@ -17,7 +17,7 @@ BuildTools:            ocamlbuild
+ BetaFeatures:          section_object
+ AlphaFeatures:         ocamlbuild_more_args
+ XOCamlbuildPluginTags: package(js-build-tools.ocamlbuild_goodies)
+-FilesAB:               META.ab
++FilesAB:               src/META.ab
+ Description:
+   Part of the Jane Street's PPX rewriters collection.
+ 
