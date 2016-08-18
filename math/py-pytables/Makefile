@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2016/08/16 02:42:48 maya Exp $
+# $NetBSD: Makefile,v 1.34 2016/08/18 20:30:02 wiz Exp $
 
 DISTNAME=		tables-3.2.3
 PKGNAME=		${PYPKGPREFIX}-py${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		math python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=PyTables/}
 GITHUB_PROJECT=		PyTables
@@ -28,7 +29,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		mv pt2to3 pt2to3${PYVERSSUFFIX} && \
 		mv ptdump ptdump${PYVERSSUFFIX} && \
-		mv ptrepack ptrepack${PYVERSSUFFIX}
+		mv ptrepack ptrepack${PYVERSSUFFIX} && \
+		mv pttree pttree${PYVERSSUFFIX}
 
 do-test:
 	(cd ${WRKSRC}/tables/tests && ${PYTHONBIN} test_all.py)
