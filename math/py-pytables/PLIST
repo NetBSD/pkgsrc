@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.13 2016/08/16 14:12:35 maya Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/08/18 20:30:02 wiz Exp $
 bin/pt2to3${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
-bin/pttree
+bin/pttree${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
