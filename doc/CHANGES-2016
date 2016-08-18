@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3404 2016/08/18 13:03:30 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3405 2016/08/18 13:41:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4850,3 +4850,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-Gnome2-VFS to 1.082 [mef 2016-08-18]
 	Updated textproc/po4a to 0.48 [ryoon 2016-08-18]
 	Updated net/nsd to 4.1.11 [ryoon 2016-08-18]
+	Updated devel/p5-File-ShareDir-Install to 0.11 [mef 2016-08-18]
