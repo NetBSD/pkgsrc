@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2016/06/25 14:16:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2016/08/18 14:49:07 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
-DISTNAME=	${GITHUB_PROJECT}-2.8
-PKGREVISION=	1
+DISTNAME=	${GITHUB_PROJECT}-2.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -31,6 +30,7 @@ OCAML_USE_FINDLIB=	yes
 .include "../../devel/ocaml-optcomp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ocaml-optcomp+=   ocaml-optcomp>=1.6
 .include "../../devel/ocaml-ppx_deriving/buildlink3.mk"
+.include "../../devel/ocaml-ppx_driver/buildlink3.mk"
 .include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
