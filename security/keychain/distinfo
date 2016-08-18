@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.19 2015/11/04 01:17:47 agc Exp $
+$NetBSD: distinfo,v 1.20 2016/08/18 06:09:01 nonaka Exp $
 
-SHA1 (keychain-2.7.1.tar.bz2) = e7ad7da374ba81e57792bb2695eb6c352f769de7
-RMD160 (keychain-2.7.1.tar.bz2) = bbeaf7f8c1c6dc0b3847aa9b7fc272ebb0743482
-SHA512 (keychain-2.7.1.tar.bz2) = 03cbf86d39964266c0ad53cec6ac48ecb478b49b3b9a1de7c29ec13179af8dc0f4679a5ed6e52ed1fbe087d4d3a5d31174f7f793aa23c3c04fce8a3f51d13168
-Size (keychain-2.7.1.tar.bz2) = 51379 bytes
-SHA1 (patch-keychain) = 0e1b2ecabbbbef53dacbd8d141ea3ea7f3e8d08b
+SHA1 (keychain-2.8.2.tar.bz2) = 6cc9d2e2980ba5fc9c948c04a94e452e47435501
+RMD160 (keychain-2.8.2.tar.bz2) = 76f27996fa8a9f905844d69b9cfef8c4d03f0488
+SHA512 (keychain-2.8.2.tar.bz2) = 39170d6f43a5303539e6c8feb98a5eabc2782ef58d75f385fbd14c36a158e505385eeed7380b848f802551d74a4e4b5ccfb04c402ef329ec0f818b10119f80e1
+Size (keychain-2.8.2.tar.bz2) = 34187 bytes

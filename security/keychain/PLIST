@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/05/18 06:29:32 pettai Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/08/18 06:09:01 nonaka Exp $
 bin/keychain
 man/man1/keychain.1
-share/doc/keychain/README.rst
+share/doc/keychain/README.md
