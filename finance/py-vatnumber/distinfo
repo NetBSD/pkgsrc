@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:12:15 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/08/18 20:48:43 richard Exp $
 
-SHA1 (vatnumber-1.1.tar.gz) = b077757ba2174daf30dbbdccffb566a4d5be8430
-RMD160 (vatnumber-1.1.tar.gz) = 66dc6fb0e574d3827915042ef71535b093696dda
-SHA512 (vatnumber-1.1.tar.gz) = 286be890f37dc3ea97beea22f6e34402a9e40738b33a94f98e16a09801656f64fde9f290ed857c5df1fd44896a9e0fbcbfcc8f1dbe2f1314015e473dadc0ebbe
-Size (vatnumber-1.1.tar.gz) = 22032 bytes
+SHA1 (vatnumber-1.2.tar.gz) = 7b19fc1d50c55ce44bebdb987c8d06177de4b833
+RMD160 (vatnumber-1.2.tar.gz) = a6128ccffe3516736d955b1e020455d5a81c1ffd
+SHA512 (vatnumber-1.2.tar.gz) = 708b73f8d059638c165663f8b36dd8602c0aa857be456e50690dd61c09b9a8a2e560bf2a3ed89a790670c93f5b84c5a391cef748bebf0fa978a6fe5e319a541f
+Size (vatnumber-1.2.tar.gz) = 19074 bytes
