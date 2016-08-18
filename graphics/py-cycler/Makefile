@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2016/08/17 13:38:28 richard Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/18 11:51:45 richard Exp $
 
 DISTNAME=		cycler-0.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
 GITHUB_PROJECT=		cycler
 GITHUB_TAG=		v${PKGVERSION_NOREV}
+DIST_SUBDIR=		cycler
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matplotlib.org/cycler
