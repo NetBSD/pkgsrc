@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2016/04/30 01:17:44 gdt Exp $
+$NetBSD: distinfo,v 1.7 2016/08/18 15:57:41 gdt Exp $
 
-SHA1 (gama-1.17.tar.gz) = b0d79b4133ec5052a2e70e50cf82a32eb1978785
-RMD160 (gama-1.17.tar.gz) = a5d90d171935115bc69b85b5086ffda182437700
-SHA512 (gama-1.17.tar.gz) = 56994ff7f9385c758c32e1794fb4263ecf8c838979029e0fceed70650314e40d3507b3b10224d1acfc4e5f63884b5f193407f2d49dbde32244fcaa38ff3aaf04
-Size (gama-1.17.tar.gz) = 1114918 bytes
+SHA1 (gama-1.18.tar.gz) = 503d938d2f969a97352ebe13f696d3c7736b7973
+RMD160 (gama-1.18.tar.gz) = 12cd52d0136a3f5147d392d57c3ce73a013ce206
+SHA512 (gama-1.18.tar.gz) = a72588e962977961e334dc3f353c52b1ba3063cb199110fa80d33299bff89304e001f36e6e7e095bd4c95cfa75143e6b11515cc92665f96b1cc4976dbb44a432
+Size (gama-1.18.tar.gz) = 1114583 bytes
 SHA1 (patch-tests_gama-local_scripts_gama-local-parameters.in) = e9e96391ac6ad32ed63533d3177a96ba245a8a8d
 SHA1 (patch-tests_gama-local_scripts_gama-local-updated-xml.in) = 5f72be1b1a854fd9825bc9dda73c4a5ce24689dc
