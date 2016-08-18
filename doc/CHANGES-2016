@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3399 2016/08/18 11:29:21 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3400 2016/08/18 12:00:31 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4845,3 +4845,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_driver to 113.45.68 [jaapb 2016-08-18]
 	Updated devel/ocaml-ppx_type_conv to 114.01+04 [jaapb 2016-08-18]
 	Updated sysutils/duplicity to 0.7.09 [mef 2016-08-18]
+	Removed devel/py-cycler [richard 2016-08-18]
