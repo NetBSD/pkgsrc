@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/06 15:05:14 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/18 15:31:46 jaapb Exp $
 ${OCAML_SITELIB}/pgocaml/META
 ${OCAML_SITELIB}/pgocaml/PGOCaml.annot
 ${OCAML_SITELIB}/pgocaml/PGOCaml.cmi
@@ -23,11 +23,11 @@ ${OCAML_SITELIB}/pgocaml/PGOCaml_generic.cmt
 ${OCAML_SITELIB}/pgocaml/PGOCaml_generic.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/pgocaml/PGOCaml_generic.cmx
 ${OCAML_SITELIB}/pgocaml/PGOCaml_generic.mli
-${OCAML_SITELIB}/pgocaml/pa_pgsql.annot
-${OCAML_SITELIB}/pgocaml/pa_pgsql.cma
-${OCAML_SITELIB}/pgocaml/pa_pgsql.cmi
-${OCAML_SITELIB}/pgocaml/pa_pgsql.cmt
-${OCAML_SITELIB}/pgocaml/pa_pgsql.ml
+@comment ${OCAML_SITELIB}/pgocaml/pa_pgsql.annot
+@comment ${OCAML_SITELIB}/pgocaml/pa_pgsql.cma
+@comment ${OCAML_SITELIB}/pgocaml/pa_pgsql.cmi
+@comment ${OCAML_SITELIB}/pgocaml/pa_pgsql.cmt
+@comment ${OCAML_SITELIB}/pgocaml/pa_pgsql.ml
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/pgocaml/pgocaml.a
 ${OCAML_SITELIB}/pgocaml/pgocaml.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/pgocaml/pgocaml.cmxa
