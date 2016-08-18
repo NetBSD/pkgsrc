@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16278 2016/08/17 21:47:00 maya Exp $
+$NetBSD: TODO,v 1.16279 2016/08/18 11:07:40 mef Exp $
 
 Suggested new packages
 ======================
@@ -1728,7 +1728,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xbindkeys-tk-1.8.0
 	o xcircuit-3.9.44
 	o xcoral-3.14
-	o xdaliclock-2.43
 	o xemacs-current-21.5.31
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
