@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3408 2016/08/18 15:32:09 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.3409 2016/08/18 15:42:16 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4854,3 +4854,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/js_of_ocaml to 2.8.1 [jaapb 2016-08-18]
 	Updated devel/py-mako to 1.0.4 [richard 2016-08-18]
 	Updated databases/pgocaml to 2.3 [jaapb 2016-08-18]
+	Added math/vowpal_wabbit version 8.2.0 [cheusov 2016-08-18]
