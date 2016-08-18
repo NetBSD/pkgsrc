@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/18 20:41:02 richard Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/18 21:05:35 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -34,7 +34,7 @@ ${PYSITELIB}/pysimplesoap/wsse.pyo
 ${PYSITELIB}/pysimplesoap/xmlsec.py
 ${PYSITELIB}/pysimplesoap/xmlsec.pyc
 ${PYSITELIB}/pysimplesoap/xmlsec.pyo
-${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/soap2py-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/soap2py-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/soap2py-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/soap2py-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
