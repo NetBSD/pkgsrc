@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3403 2016/08/18 12:53:50 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3404 2016/08/18 13:03:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4849,3 +4849,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-zanata-python-client to 1.5.0 [ryoon 2016-08-18]
 	Updated sysutils/p5-Gnome2-VFS to 1.082 [mef 2016-08-18]
 	Updated textproc/po4a to 0.48 [ryoon 2016-08-18]
+	Updated net/nsd to 4.1.11 [ryoon 2016-08-18]
