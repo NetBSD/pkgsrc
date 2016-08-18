@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3392 2016/08/18 06:10:54 nonaka Exp $
+$NetBSD: CHANGES-2016,v 1.3393 2016/08/18 08:54:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4838,3 +4838,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libgcrypt to 1.7.3 [maya 2016-08-17]
 	Updated devel/acr to 0.10.5 [mef 2016-08-18]
 	Updated security/keychain to 2.8.2 [nonaka 2016-08-18]
+	Updated www/p5-Mojolicious to 7.03 [wen 2016-08-18]
