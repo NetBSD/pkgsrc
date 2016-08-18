@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3400 2016/08/18 12:00:31 richard Exp $
+$NetBSD: CHANGES-2016,v 1.3401 2016/08/18 12:47:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_type_conv to 114.01+04 [jaapb 2016-08-18]
 	Updated sysutils/duplicity to 0.7.09 [mef 2016-08-18]
 	Removed devel/py-cycler [richard 2016-08-18]
+	Updated devel/py-zanata-python-client to 1.5.0 [ryoon 2016-08-18]
