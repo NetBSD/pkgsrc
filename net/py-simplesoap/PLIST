@@ -1,17 +1,24 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/22 00:07:52 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/18 20:41:02 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pysimplesoap/__init__.py
+${PYSITELIB}/pysimplesoap/__init__.pyc
+${PYSITELIB}/pysimplesoap/__init__.pyo
+${PYSITELIB}/pysimplesoap/c14n.py
+${PYSITELIB}/pysimplesoap/c14n.pyc
+${PYSITELIB}/pysimplesoap/c14n.pyo
 ${PYSITELIB}/pysimplesoap/client.py
 ${PYSITELIB}/pysimplesoap/client.pyc
 ${PYSITELIB}/pysimplesoap/client.pyo
 ${PYSITELIB}/pysimplesoap/helpers.py
 ${PYSITELIB}/pysimplesoap/helpers.pyc
 ${PYSITELIB}/pysimplesoap/helpers.pyo
-${PYSITELIB}/pysimplesoap/__init__.py
-${PYSITELIB}/pysimplesoap/__init__.pyc
-${PYSITELIB}/pysimplesoap/__init__.pyo
+${PYSITELIB}/pysimplesoap/plugins.py
+${PYSITELIB}/pysimplesoap/plugins.pyc
+${PYSITELIB}/pysimplesoap/plugins.pyo
 ${PYSITELIB}/pysimplesoap/server.py
 ${PYSITELIB}/pysimplesoap/server.pyc
 ${PYSITELIB}/pysimplesoap/server.pyo
@@ -21,3 +28,13 @@ ${PYSITELIB}/pysimplesoap/simplexml.pyo
 ${PYSITELIB}/pysimplesoap/transport.py
 ${PYSITELIB}/pysimplesoap/transport.pyc
 ${PYSITELIB}/pysimplesoap/transport.pyo
+${PYSITELIB}/pysimplesoap/wsse.py
+${PYSITELIB}/pysimplesoap/wsse.pyc
+${PYSITELIB}/pysimplesoap/wsse.pyo
+${PYSITELIB}/pysimplesoap/xmlsec.py
+${PYSITELIB}/pysimplesoap/xmlsec.pyc
+${PYSITELIB}/pysimplesoap/xmlsec.pyo
+${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/soap2py-${PKGVERSION}-py2.7.egg-info/top_level.txt
