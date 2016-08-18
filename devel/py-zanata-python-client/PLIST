@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/05 04:47:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/18 12:46:32 ryoon Exp $
 bin/flies
 bin/zanata
 ${PYSITELIB}/test/__init__.py
@@ -7,6 +7,9 @@ ${PYSITELIB}/test/__init__.pyo
 ${PYSITELIB}/test/test_all.py
 ${PYSITELIB}/test/test_all.pyc
 ${PYSITELIB}/test/test_all.pyo
+${PYSITELIB}/test/test_client.py
+${PYSITELIB}/test/test_client.pyc
+${PYSITELIB}/test/test_client.pyo
 ${PYSITELIB}/test/test_context.py
 ${PYSITELIB}/test/test_context.pyc
 ${PYSITELIB}/test/test_context.pyo
@@ -22,11 +25,11 @@ ${PYSITELIB}/test/test_service.pyo
 ${PYSITELIB}/test/test_zanatacmd.py
 ${PYSITELIB}/test/test_zanatacmd.pyc
 ${PYSITELIB}/test/test_zanatacmd.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zanata_python_client-0.0.0-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/zanata_python_client-0.0.0-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/zanata_python_client-0.0.0-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/zanata_python_client-0.0.0-py2.7.egg-info/requires.txt
+${PYSITELIB}/zanata_python_client-0.0.0-py2.7.egg-info/top_level.txt
 ${PYSITELIB}/zanataclient/VERSION-FILE
 ${PYSITELIB}/zanataclient/__init__.py
 ${PYSITELIB}/zanataclient/__init__.pyc
