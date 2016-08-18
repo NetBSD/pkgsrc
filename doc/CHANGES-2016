@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3402 2016/08/18 12:51:11 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3403 2016/08/18 12:53:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4848,3 +4848,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed devel/py-cycler [richard 2016-08-18]
 	Updated devel/py-zanata-python-client to 1.5.0 [ryoon 2016-08-18]
 	Updated sysutils/p5-Gnome2-VFS to 1.082 [mef 2016-08-18]
+	Updated textproc/po4a to 0.48 [ryoon 2016-08-18]
