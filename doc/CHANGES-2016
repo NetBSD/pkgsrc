@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3411 2016/08/18 17:01:21 richard Exp $
+$NetBSD: CHANGES-2016,v 1.3412 2016/08/18 20:30:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4857,3 +4857,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/vowpal_wabbit version 8.2.0 [cheusov 2016-08-18]
 	Updated geography/gama to 1.18 [gdt 2016-08-18]
 	Updated misc/py-stdnum to 1.4 [richard 2016-08-18]
+	Updated math/py-pytables to 3.2.3nb1 [wiz 2016-08-18]
