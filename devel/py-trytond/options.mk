@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2016/07/09 13:03:44 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2016/08/18 19:25:31 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
@@ -21,7 +21,6 @@ DEPENDS+=		${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 .endif
 
 .if !empty(PKG_OPTIONS:Mpydot)
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-dot
 DEPENDS+=		${PYPKGPREFIX}-dot-[0-9]*:../../graphics/py-dot
 .endif
 
