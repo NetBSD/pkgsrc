@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.328 2016/08/08 23:52:45 wen Exp $
+# $NetBSD: Makefile,v 1.329 2016/08/18 15:33:17 cheusov Exp $
 
 COMMENT=	Mathematics
 
@@ -296,6 +296,7 @@ SUBDIR+=	tochnog
 SUBDIR+=	udunits
 SUBDIR+=	units
 SUBDIR+=	vista
+SUBDIR+=	vowpal_wabbit
 SUBDIR+=	wxmaxima
 SUBDIR+=	xeukleides10
 SUBDIR+=	xfractint
