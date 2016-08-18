@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3395 2016/08/18 10:48:27 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.3396 2016/08/18 11:07:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4841,3 +4841,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 7.03 [wen 2016-08-18]
 	Updated devel/ocaml-batteries to 2.5.2 [jaapb 2016-08-18]
 	Updated devel/ocaml-ppx_core to 114.01+04 [jaapb 2016-08-18]
+	Updated time/xdaliclock to 2.43 [mef 2016-08-18]
