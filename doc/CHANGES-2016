@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3436 2016/08/19 13:08:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3437 2016/08/19 13:15:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4883,3 +4883,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/fftwf to 3.3.5 [wiz 2016-08-19]
 	Updated fonts/fontconfig to 2.12.1 [wiz 2016-08-19]
 	Updated devel/p5-Devel-PatchPerl to 1.44 [mef 2016-08-19]
+	Updated lang/nodejs4 to 4.5.0 [fhajny 2016-08-19]
