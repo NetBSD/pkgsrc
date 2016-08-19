@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3424 2016/08/19 07:57:37 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3425 2016/08/19 08:04:28 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4871,3 +4871,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-CleanNamespaces to 0.22 [wen 2016-08-19]
 	Updated net/php-geoip to 1.1.1 [wen 2016-08-19]
 	Updated math/py-pandas to 0.18.1nb1 [wiz 2016-08-19]
+	Updated x11/gtk3 to 3.20.9 [prlw1 2016-08-19]
