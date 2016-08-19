@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3432 2016/08/19 11:56:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3433 2016/08/19 12:40:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4879,3 +4879,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.31b [wiz 2016-08-19]
 	Updated www/py-betamax to 0.7.2 [wiz 2016-08-19]
 	Updated graphics/ImageMagick to 7.0.2.9 [wiz 2016-08-19]
+	Updated math/fftw to 3.3.5 [wiz 2016-08-19]
