@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.329 2016/08/18 15:33:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.330 2016/08/19 20:26:11 cheusov Exp $
 
 COMMENT=	Mathematics
 
@@ -271,6 +271,7 @@ SUBDIR+=	qalculate-units
 SUBDIR+=	qhull
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
+SUBDIR+=	ranger
 SUBDIR+=	ruby-gsl
 SUBDIR+=	ruby-narray
 SUBDIR+=	ruby-roo
