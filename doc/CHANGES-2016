@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3417 2016/08/19 03:14:48 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3418 2016/08/19 03:19:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4863,3 +4863,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Aggregate to 0.374 [wen 2016-08-19]
 	Updated devel/p5-Sub-Name to 0.19 [wen 2016-08-19]
 	Updated net/p5-Test-TCP to 2.17 [wen 2016-08-19]
+	Updated textproc/p5-Text-PDF to 0.30 [wen 2016-08-19]
