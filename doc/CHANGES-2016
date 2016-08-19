@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3416 2016/08/19 03:09:09 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3417 2016/08/19 03:14:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4862,3 +4862,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/py-vatnumber to 1.2 [richard 2016-08-18]
 	Updated devel/p5-Test-Aggregate to 0.374 [wen 2016-08-19]
 	Updated devel/p5-Sub-Name to 0.19 [wen 2016-08-19]
+	Updated net/p5-Test-TCP to 2.17 [wen 2016-08-19]
