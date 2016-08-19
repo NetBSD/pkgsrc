@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/19 20:24:36 cheusov Exp $
+
+SHA1 (ranger-0.4.2.tar.gz) = e79ebd740b6810747ab740f944d344f10ec3b230
+RMD160 (ranger-0.4.2.tar.gz) = 7e1b8a1dd4090b18bc47eb4240dad9865e518d87
+SHA512 (ranger-0.4.2.tar.gz) = 1fe97f6986ea7d805efc7c0524aeef5fd86a191c00664a762e3c032e849c26c5ea6e7e3d0688a0b55a01d7349c789440843d4d244fa18b877d655bdbae49f736
+Size (ranger-0.4.2.tar.gz) = 13998218 bytes
