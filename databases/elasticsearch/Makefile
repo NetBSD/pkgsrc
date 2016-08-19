@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/05/24 01:44:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/19 10:09:11 fhajny Exp $
 
-DISTNAME=	elasticsearch-2.3.3
+DISTNAME=	elasticsearch-2.3.5
 CATEGORIES=	textproc
 MASTER_SITES=	https://download.elasticsearch.org/elasticsearch/elasticsearch/
 
