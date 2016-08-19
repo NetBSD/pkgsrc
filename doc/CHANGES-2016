@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3446 2016/08/19 15:27:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3447 2016/08/19 15:29:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4893,3 +4893,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p5-Archive-Zip to 1.59 [wiz 2016-08-19]
 	Updated security/p5-IO-Socket-SSL to 2.036 [wiz 2016-08-19]
 	Updated devel/p5-List-SomeUtils to 0.53 [wiz 2016-08-19]
+	Updated security/p5-Net-SSLeay to 1.78 [wiz 2016-08-19]
