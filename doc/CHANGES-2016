@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3448 2016/08/19 15:31:03 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3449 2016/08/19 15:33:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4895,3 +4895,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-List-SomeUtils to 0.53 [wiz 2016-08-19]
 	Updated security/p5-Net-SSLeay to 1.78 [wiz 2016-08-19]
 	Updated devel/p5-Path-Class to 0.37 [wiz 2016-08-19]
+	Updated devel/py-setuptools to 25.2.0 [wiz 2016-08-19]
