@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3430 2016/08/19 11:39:20 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3431 2016/08/19 11:40:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-elasticsearch to 2.4.0 [fhajny 2016-08-19]
 	Updated math/py-scipy to 0.18.0 [wiz 2016-08-19]
 	Updated devel/afl to 2.31b [wiz 2016-08-19]
+	Updated www/py-betamax to 0.7.2 [wiz 2016-08-19]
