@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3434 2016/08/19 12:40:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3435 2016/08/19 12:52:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.2.9 [wiz 2016-08-19]
 	Updated math/fftw to 3.3.5 [wiz 2016-08-19]
 	Updated math/fftwf to 3.3.5 [wiz 2016-08-19]
+	Updated fonts/fontconfig to 2.12.1 [wiz 2016-08-19]
