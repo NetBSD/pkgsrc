@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/07/18 20:37:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.44 2016/08/19 09:38:06 bsiegert Exp $
 
 .include "version.mk"
 
@@ -31,6 +31,7 @@ REPLACE_BASH+=	lib/time/update.bash
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/benchcmp
 REPLACE_BASH+=	misc/cgo/errors/test.bash
+REPLACE_BASH+=	misc/cgo/fortran/test.bash
 REPLACE_BASH+=	misc/cgo/testcarchive/test.bash
 REPLACE_BASH+=	misc/cgo/testcshared/test.bash
 REPLACE_BASH+=	misc/cgo/testgodefs/test.bash
