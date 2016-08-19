@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3442 2016/08/19 15:11:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3443 2016/08/19 15:22:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4889,3 +4889,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mtr to 0.87 [wiz 2016-08-19]
 	Updated audio/musicpd to 0.19.18 [wiz 2016-08-19]
 	Updated devel/p5-Try-Tiny to 0.27 [wiz 2016-08-19]
+	Updated audio/libopenmpt to 0.2.6774 [wiz 2016-08-19]
