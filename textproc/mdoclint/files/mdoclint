@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.48 2016/01/24 20:10:48 schwarze Exp $
-# $NetBSD: mdoclint,v 1.58 2016/05/18 16:35:19 wiz Exp $
+# $NetBSD: mdoclint,v 1.59 2016/08/19 21:58:47 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -197,7 +197,7 @@ my $valid_date_re;
 	my @arches;
 	if (OPENBSD) {
 		@arches =
-		    (qw(alpha amd64 armish armv7 hppa i386
+		    (qw(alpha amd64 armv7 hppa i386
 		    landisk loongson luna88k macppc mips64 octeon sgi
 		    socppc sparc sparc64 zaurus));
 	}
