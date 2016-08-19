@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3453 2016/08/19 16:22:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3454 2016/08/19 20:28:17 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4900,3 +4900,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libuuid to 2.28.1 [wiz 2016-08-19]
 	Updated devel/git to 2.9.3 [wiz 2016-08-19]
 	Updated misc/calibre to 2.64.0 [wiz 2016-08-19]
+	Added math/ranger version 0.4.2 [cheusov 2016-08-19]
