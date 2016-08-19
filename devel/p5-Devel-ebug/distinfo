@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/08/19 13:18:59 mef Exp $
 
-SHA1 (Devel-ebug-0.56.tar.gz) = 83f4ef317e1b3b536047e533980d86b5200b53be
-RMD160 (Devel-ebug-0.56.tar.gz) = 42c5af6fc1b66034f11db797fe6373e11f6e809b
-SHA512 (Devel-ebug-0.56.tar.gz) = 4c55468f5dc7ecb9eecb865fdffef06e6155626beade4a24e4940fd8582264f51aadb49cfed5e5acd3df40d0f3caa5b87a78267e15c47953e6c6f8d8aa8e62f6
-Size (Devel-ebug-0.56.tar.gz) = 36001 bytes
+SHA1 (Devel-ebug-0.57.tar.gz) = 585a536137eec39324ee573888c1ae47498f8379
+RMD160 (Devel-ebug-0.57.tar.gz) = e775f9305f1248b01d81e5ac7f18795cd0f7855d
+SHA512 (Devel-ebug-0.57.tar.gz) = 2ced971413d7521739f5a8ec269702499d6cccc33f67e011b46d9cd9a76aa37e36ee5b53da4970b9ff819711be4ed77ba290a53d65c843daf36088418925bed3
+Size (Devel-ebug-0.57.tar.gz) = 33517 bytes
