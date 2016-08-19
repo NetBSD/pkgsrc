@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2016/04/23 22:51:57 markd Exp $
+# $NetBSD: Makefile,v 1.21 2016/08/19 10:54:12 wiz Exp $
 
-DISTNAME=	scipy-0.17.0
+DISTNAME=	scipy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=scipy/}
-GITHUB_PROJECT=	scipy
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.scipy.org/
 COMMENT=	Scientific Algorithms Library for Python
 LICENSE=	modified-bsd
 
-PLIST_SUBST+=   PYPKGPREFIX=${PYPKGPREFIX}
 USE_LANGUAGES+=	c c++ fortran
 MAKE_ENV+=	ATLAS=None
 
@@ -103,9 +100,20 @@ fix-darwin-install-name:
 	done
 .endif
 
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
+# support files for tests missing in 0.18.0 on pypi
+# https://github.com/scipy/scipy/issues/6498
+# self test failures reported at
+# https://github.com/scipy/scipy/issues/6499
+do-test:
+	cd ${WRKSRC} && ${PYTHONBIN} runtests.py -v
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.7.1
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
