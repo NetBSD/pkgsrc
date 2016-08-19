@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3455 2016/08/19 21:58:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3456 2016/08/19 22:34:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4902,3 +4902,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/calibre to 2.64.0 [wiz 2016-08-19]
 	Added math/ranger version 0.4.2 [cheusov 2016-08-19]
 	Updated textproc/mdoclint to 1.40 [wiz 2016-08-19]
+	Updated sysutils/py-borgbackup to 1.0.7 [wiz 2016-08-19]
