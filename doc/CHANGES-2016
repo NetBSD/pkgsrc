@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3439 2016/08/19 13:35:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3440 2016/08/19 13:43:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4886,3 +4886,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs4 to 4.5.0 [fhajny 2016-08-19]
 	Updated lang/nodejs to 6.4.0 [fhajny 2016-08-19]
 	Updated net/tor to 0.2.8.6 [wiz 2016-08-19]
+	Updated net/mtr to 0.87 [wiz 2016-08-19]
