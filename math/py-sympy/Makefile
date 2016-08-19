@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/08/16 04:08:31 maya Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/19 08:14:49 wiz Exp $
 
 DISTNAME=	sympy-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
 
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
 SUBST_CLASSES+=		manpath
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 SUBST_FILES.manpath+=	setup.py
@@ -35,5 +37,5 @@ post-install:
 			${PKGMANDIR}/man1/isympy${PYVERSSUFFIX}.1
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
