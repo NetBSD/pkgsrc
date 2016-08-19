@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2016/08/16 04:30:05 maya Exp $
-bin/isympy2.7
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+@comment $NetBSD: PLIST,v 1.13 2016/08/19 08:14:49 wiz Exp $
+bin/isympy${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sympy/__init__.py
 ${PYSITELIB}/sympy/__init__.pyc
 ${PYSITELIB}/sympy/__init__.pyo
