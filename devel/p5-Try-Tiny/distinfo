@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/12/13 08:14:30 wiz Exp $
+$NetBSD: distinfo,v 1.12 2016/08/19 15:11:49 wiz Exp $
 
-SHA1 (Try-Tiny-0.24.tar.gz) = 3c3eef7f9c03380d21e145787103ed14fd56e153
-RMD160 (Try-Tiny-0.24.tar.gz) = 364f889fb51d205684a53d29b1dfc2721d3bd2b4
-SHA512 (Try-Tiny-0.24.tar.gz) = 403ce12b7cda7356b1a86d7661ed406ce4e526f416033fa5eb04b83bbeb7f198b4660342383232affe2ef9a8e0dbd237a6e6c0f290c277c8abc319c949d3c959
-Size (Try-Tiny-0.24.tar.gz) = 30666 bytes
+SHA1 (Try-Tiny-0.27.tar.gz) = 76c3ff6fdb4429272ee0f93886edd7ca0351eaac
+RMD160 (Try-Tiny-0.27.tar.gz) = 4606acec28660f8da5f7d11a0dbe2ba71b4381a9
+SHA512 (Try-Tiny-0.27.tar.gz) = 2ce87f7165c62f780136fc977b347791dd4f859a684c4489e3778440f8e55c504c30a5d5b899ed59cef92bcbe7777315c25b234166aaf9ecb8d3382053b02b09
+Size (Try-Tiny-0.27.tar.gz) = 32270 bytes
