@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3420 2016/08/19 04:42:03 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3421 2016/08/19 06:18:23 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4867,3 +4867,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.25 [taca 2016-08-19]
 	Updated lang/php70 to 7.0.10 [taca 2016-08-19]
 	Updated devel/p5-Test-CleanNamespaces to 0.21 [wen 2016-08-19]
+	Updated converters/py-simplejson to 3.8.2 [richard 2016-08-19]
