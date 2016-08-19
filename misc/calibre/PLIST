@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2016/07/24 07:08:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.65 2016/08/19 16:21:59 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -900,9 +900,7 @@ lib/calibre/calibre/gui2/preferences/coloring.py
 lib/calibre/calibre/gui2/preferences/columns.py
 lib/calibre/calibre/gui2/preferences/columns_ui.py
 lib/calibre/calibre/gui2/preferences/conversion.py
-lib/calibre/calibre/gui2/preferences/conversion_ui.py
 lib/calibre/calibre/gui2/preferences/create_custom_column.py
-lib/calibre/calibre/gui2/preferences/create_custom_column_ui.py
 lib/calibre/calibre/gui2/preferences/device_debug.py
 lib/calibre/calibre/gui2/preferences/device_user_defined.py
 lib/calibre/calibre/gui2/preferences/email_ui.py
@@ -937,7 +935,6 @@ lib/calibre/calibre/gui2/preferences/texture_chooser.py
 lib/calibre/calibre/gui2/preferences/toolbar.py
 lib/calibre/calibre/gui2/preferences/toolbar_ui.py
 lib/calibre/calibre/gui2/preferences/tweaks.py
-lib/calibre/calibre/gui2/preferences/tweaks_ui.py
 lib/calibre/calibre/gui2/proceed.py
 lib/calibre/calibre/gui2/progress_indicator/__init__.py
 lib/calibre/calibre/gui2/save.py
@@ -1189,8 +1186,6 @@ lib/calibre/calibre/plugins/hunspell.so
 lib/calibre/calibre/plugins/icu.so
 lib/calibre/calibre/plugins/imageops.so
 lib/calibre/calibre/plugins/libheadless.so
-lib/calibre/calibre/plugins/libmtp.so
-lib/calibre/calibre/plugins/libusb.so
 lib/calibre/calibre/plugins/lzma_binding.so
 lib/calibre/calibre/plugins/lzx.so
 lib/calibre/calibre/plugins/matcher.so
@@ -2103,6 +2098,7 @@ share/calibre/recipes/dani.recipe
 share/calibre/recipes/dark_horizons.recipe
 share/calibre/recipes/dark_reading.recipe
 share/calibre/recipes/darknet.recipe
+share/calibre/recipes/data_news.recipe
 share/calibre/recipes/datasport.recipe
 share/calibre/recipes/daum_net.recipe
 share/calibre/recipes/dawn.recipe
