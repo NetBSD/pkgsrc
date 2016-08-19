@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 19:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/19 15:27:48 wiz Exp $
 
-DISTNAME=	List-SomeUtils-0.52
+DISTNAME=	List-SomeUtils-0.53
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=List/}
 
@@ -12,7 +11,6 @@ COMMENT=	Provide the stuff missing in List::Util
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-List-SomeUtils-XS>=0.50:../../devel/p5-List-SomeUtils-XS
-DEPENDS+=	p5-Exporter-Tiny-[0-9]*:../../devel/p5-Exporter-Tiny
 DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
 BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
