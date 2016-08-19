@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.79 2016/08/08 22:33:25 mef Exp $
+$NetBSD: distinfo,v 1.80 2016/08/19 15:26:23 wiz Exp $
 
-SHA1 (IO-Socket-SSL-2.034.tar.gz) = 38cfe298f1911aba1329656a422f8b7f6100debb
-RMD160 (IO-Socket-SSL-2.034.tar.gz) = 7681791296efa4fbfc5c5b117c0c4212c24ae4cd
-SHA512 (IO-Socket-SSL-2.034.tar.gz) = cbbd8698d65915e16f5cb136bfbebed23ac3de46fa9ca412102679d1bf2dfa0dbc0cbf4823d453c8fd3fae0044ebbdddad2c7f7f094b377fb1f48a363e22e485
-Size (IO-Socket-SSL-2.034.tar.gz) = 213082 bytes
+SHA1 (IO-Socket-SSL-2.036.tar.gz) = 160d38f50f2297be451728929ade6663025b5977
+RMD160 (IO-Socket-SSL-2.036.tar.gz) = 39ac4339e585833bd43f7b9f2c9cd2cf9a3b2254
+SHA512 (IO-Socket-SSL-2.036.tar.gz) = 726ae5a202b39e8f94ad44d11c07a42fcf85d92c55c30de2a259a63b93a6ae96d1d311f1eb5d42df331e8344114f9b473de71bb18b4272d03ffda97f5527160f
+Size (IO-Socket-SSL-2.036.tar.gz) = 213420 bytes
