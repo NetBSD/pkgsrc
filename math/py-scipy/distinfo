@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/04/23 22:51:57 markd Exp $
+$NetBSD: distinfo,v 1.9 2016/08/19 10:54:12 wiz Exp $
 
-SHA1 (scipy-0.17.0.tar.gz) = 5f23bd9b1e89a9f8329183cee78e27f80b795c2d
-RMD160 (scipy-0.17.0.tar.gz) = e57f81fe6d4eb6a8262cf186db1163c72fea86d3
-SHA512 (scipy-0.17.0.tar.gz) = c508746edc8a4699fb783849d5db4a43eea4e98e22592c1d05454859437b6eaebadc5980d72dd6b868c8132b94a32e3bdd73286cf994cf2fb1aec6fefdd7dabe
-Size (scipy-0.17.0.tar.gz) = 11474364 bytes
+SHA1 (scipy-0.18.0.tar.gz) = 800c21e3593366c96b2c768c2c2d8b93bd95a7b9
+RMD160 (scipy-0.18.0.tar.gz) = 613f7bccf21386ae3f1d6c8911aa243cbb894354
+SHA512 (scipy-0.18.0.tar.gz) = f73b2cbdce9d6de48af53b65b7e49cbe4513160f1f3b1d6a872a75c071b20e95d28cdbecfd24cb123a39121f0b3f751944666b6e0cb587aada40dac383e8d1e7
+Size (scipy-0.18.0.tar.gz) = 13158573 bytes
