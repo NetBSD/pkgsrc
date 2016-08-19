@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/05/30 13:25:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/08/19 06:17:43 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -70,6 +70,9 @@ ${PYSITELIB}/simplejson/tests/test_indent.pyo
 ${PYSITELIB}/simplejson/tests/test_item_sort_key.py
 ${PYSITELIB}/simplejson/tests/test_item_sort_key.pyc
 ${PYSITELIB}/simplejson/tests/test_item_sort_key.pyo
+${PYSITELIB}/simplejson/tests/test_iterable.py
+${PYSITELIB}/simplejson/tests/test_iterable.pyc
+${PYSITELIB}/simplejson/tests/test_iterable.pyo
 ${PYSITELIB}/simplejson/tests/test_namedtuple.py
 ${PYSITELIB}/simplejson/tests/test_namedtuple.pyc
 ${PYSITELIB}/simplejson/tests/test_namedtuple.pyo
@@ -94,6 +97,9 @@ ${PYSITELIB}/simplejson/tests/test_separators.pyo
 ${PYSITELIB}/simplejson/tests/test_speedups.py
 ${PYSITELIB}/simplejson/tests/test_speedups.pyc
 ${PYSITELIB}/simplejson/tests/test_speedups.pyo
+${PYSITELIB}/simplejson/tests/test_subclass.py
+${PYSITELIB}/simplejson/tests/test_subclass.pyc
+${PYSITELIB}/simplejson/tests/test_subclass.pyo
 ${PYSITELIB}/simplejson/tests/test_tool.py
 ${PYSITELIB}/simplejson/tests/test_tool.pyc
 ${PYSITELIB}/simplejson/tests/test_tool.pyo
