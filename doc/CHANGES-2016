@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3451 2016/08/19 15:56:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3452 2016/08/19 16:12:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4898,3 +4898,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 25.2.0 [wiz 2016-08-19]
 	Updated devel/py-virtualenv to 15.0.3 [wiz 2016-08-19]
 	Updated devel/libuuid to 2.28.1 [wiz 2016-08-19]
+	Updated devel/git to 2.9.3 [wiz 2016-08-19]
