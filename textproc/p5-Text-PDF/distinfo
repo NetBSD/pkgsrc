@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/08/19 03:18:28 wen Exp $
 
-SHA1 (Text-PDF-0.29a.tar.gz) = 93b4d619ccfbb437a3dc0599b0b360a8ade8d6aa
-RMD160 (Text-PDF-0.29a.tar.gz) = 036b9bb4dbdf72d3fb57718e73b6dbebcc16eef4
-SHA512 (Text-PDF-0.29a.tar.gz) = b7aa72decfc086a10d8c3e768610375e2ba160653b1e5a32c613a0a12cc8b46c5e12558ca4d436614f6f24158d2d7305999f006423009a8d9a19567c6afa535c
-Size (Text-PDF-0.29a.tar.gz) = 51466 bytes
+SHA1 (Text-PDF-0.30.tar.gz) = 1b9c02380b425dfcf785b18614b040d7240c7d73
+RMD160 (Text-PDF-0.30.tar.gz) = 4f9e9b0bab0a271e8642eaa540e6232fac7a7e9c
+SHA512 (Text-PDF-0.30.tar.gz) = 4132993143b1a97710d37bd2f28c5d2d4a61e8f0698e29224442f7d736286eac7d60b9d6be29c238f3dc4911a59aaf08b884100687db31e3fcd419ea8366f802
+Size (Text-PDF-0.30.tar.gz) = 56169 bytes
