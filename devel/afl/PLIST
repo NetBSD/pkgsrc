@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/02/21 10:35:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/08/19 11:39:10 wiz Exp $
 bin/afl-analyze
 bin/afl-clang
 bin/afl-clang++
@@ -13,17 +13,18 @@ bin/afl-tmin
 bin/afl-whatsup
 lib/afl/afl-as
 lib/afl/as
+share/afl/dictionaries/README.dictionaries
+share/afl/dictionaries/gif.dict
+share/afl/dictionaries/html_tags.dict
+share/afl/dictionaries/jpeg.dict
+share/afl/dictionaries/js.dict
+share/afl/dictionaries/pdf.dict
+share/afl/dictionaries/png.dict
+share/afl/dictionaries/sql.dict
+share/afl/dictionaries/tiff.dict
+share/afl/dictionaries/webp.dict
+share/afl/dictionaries/xml.dict
 share/afl/testcases/README.testcases
-share/afl/testcases/_extras/gif.dict
-share/afl/testcases/_extras/html_tags.dict
-share/afl/testcases/_extras/jpeg.dict
-share/afl/testcases/_extras/js.dict
-share/afl/testcases/_extras/pdf.dict
-share/afl/testcases/_extras/png.dict
-share/afl/testcases/_extras/sql.dict
-share/afl/testcases/_extras/tiff.dict
-share/afl/testcases/_extras/webp.dict
-share/afl/testcases/_extras/xml.dict
 share/afl/testcases/archives/common/ar/small_archive.a
 share/afl/testcases/archives/common/bzip2/small_archive.bz2
 share/afl/testcases/archives/common/cab/small_archive.cab
@@ -68,6 +69,7 @@ share/doc/afl/QuickStartGuide.txt
 share/doc/afl/README
 share/doc/afl/env_variables.txt
 share/doc/afl/historical_notes.txt
+share/doc/afl/life_pro_tips.txt
 share/doc/afl/notes_for_asan.txt
 share/doc/afl/parallel_fuzzing.txt
 share/doc/afl/perf_tips.txt
