@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.108 2016/08/06 08:46:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.109 2016/08/20 11:17:32 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -2435,6 +2435,8 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/vendor/sdk-c
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/vendor/sdk.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/menuPanel.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/menuPanel@2x.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/panelarrow-vertical-warning.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/panelarrow-vertical-warning@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/platform.css
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/toolbar-inverted.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/linux/toolbar-inverted@2x.png
@@ -2444,6 +2446,8 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/menuPanel-yosemite
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/menuPanel-yosemite@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/menuPanel.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/menuPanel@2x.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/panelarrow-vertical-warning.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/panelarrow-vertical-warning@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/platform.css
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/toolbar-inverted.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/osx/toolbar-inverted@2x.png
@@ -2456,6 +2460,8 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/menuPanel-aero
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/menuPanel-aero@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/menuPanel.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/menuPanel@2x.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/panelarrow-vertical-warning.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/panelarrow-vertical-warning@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/platform.css
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-XP.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-XP@2x.png
