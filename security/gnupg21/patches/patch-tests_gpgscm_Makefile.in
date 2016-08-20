@@ -1,6 +1,7 @@
-$NetBSD: patch-tests_gpgscm_Makefile.in,v 1.1 2016/08/20 13:40:30 bsiegert Exp $
+$NetBSD: patch-tests_gpgscm_Makefile.in,v 1.2 2016/08/20 16:18:03 wiz Exp $
 
 gpgscm needs libintl, at least on Darwin.
+https://bugs.gnupg.org/gnupg/issue2445
 
 --- tests/gpgscm/Makefile.in.orig	2016-08-20 13:25:51.000000000 +0000
 +++ tests/gpgscm/Makefile.in
