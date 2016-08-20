@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2295 2016/08/18 11:59:57 richard Exp $
+# $NetBSD: Makefile,v 1.2296 2016/08/20 09:30:41 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -300,6 +300,7 @@ SUBDIR+=	go-mow-cli
 SUBDIR+=	go-nbreader
 SUBDIR+=	go-ratelimit
 SUBDIR+=	go-review
+SUBDIR+=	go-termbox
 SUBDIR+=	go-testify
 SUBDIR+=	go-tools
 SUBDIR+=	gob2

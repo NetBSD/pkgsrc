@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/20 09:30:41 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/nsf/termbox-go.a
+gopkg/src/github.com/nsf/termbox-go/AUTHORS
+gopkg/src/github.com/nsf/termbox-go/LICENSE
+gopkg/src/github.com/nsf/termbox-go/README.md
+gopkg/src/github.com/nsf/termbox-go/_demos/editbox.go
+gopkg/src/github.com/nsf/termbox-go/_demos/interrupt.go
+gopkg/src/github.com/nsf/termbox-go/_demos/keyboard.go
+gopkg/src/github.com/nsf/termbox-go/_demos/output.go
+gopkg/src/github.com/nsf/termbox-go/_demos/paint.go
+gopkg/src/github.com/nsf/termbox-go/_demos/random_output.go
+gopkg/src/github.com/nsf/termbox-go/_demos/raw_input.go
+gopkg/src/github.com/nsf/termbox-go/api.go
+gopkg/src/github.com/nsf/termbox-go/api_common.go
+gopkg/src/github.com/nsf/termbox-go/api_windows.go
+gopkg/src/github.com/nsf/termbox-go/collect_terminfo.py
+gopkg/src/github.com/nsf/termbox-go/syscalls.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_darwin.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_darwin_amd64.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_freebsd.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_linux.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_netbsd.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_openbsd.go
+gopkg/src/github.com/nsf/termbox-go/syscalls_windows.go
+gopkg/src/github.com/nsf/termbox-go/termbox.go
+gopkg/src/github.com/nsf/termbox-go/termbox_common.go
+gopkg/src/github.com/nsf/termbox-go/termbox_windows.go
+gopkg/src/github.com/nsf/termbox-go/terminfo.go
+gopkg/src/github.com/nsf/termbox-go/terminfo_builtin.go
+@pkgdir bin
