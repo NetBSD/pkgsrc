@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.679 2016/07/25 10:07:23 wiedi Exp $
+# $NetBSD: Makefile,v 1.680 2016/08/20 09:33:53 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -299,6 +299,7 @@ SUBDIR+=	kuser
 SUBDIR+=	lambd
 SUBDIR+=	lastfss
 SUBDIR+=	lavaps
+SUBDIR+=	lf
 SUBDIR+=	libbaloo4
 SUBDIR+=	libburn
 SUBDIR+=	libcap
