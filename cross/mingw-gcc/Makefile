@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/19 16:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/20 09:23:42 wiz Exp $
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
 PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-${GCC_VERSION}/}
@@ -42,6 +42,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-gcc ${MINGW_TARGET}/bin/gcc
 	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-c++ ${MINGW_TARGET}/bin/c++
 	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-g++ ${MINGW_TARGET}/bin/g++
+	# Remove any potentially built C++ precompiled header files (depends on toolchain used)
+	${RM} -f ${DESTDIR}${PREFIX}/cross/include/c++/${GCC_VERSION}/${MINGW_TARGET}/bits/stdc++.h.gch/*.gch
 
 .include "../../cross/mingw/Makefile.common"
 .include "../../cross/mingw-binutils/buildlink3.mk"
