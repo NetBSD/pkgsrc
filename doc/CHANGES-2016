@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3462 2016/08/20 09:34:35 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.3463 2016/08/20 10:17:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4910,3 +4910,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/neomutt to 20160820 [wiz 2016-08-20]
 	Added devel/go-termbox version 20160808 [bsiegert 2016-08-20]
 	Added sysutils/lf version 20160819 [bsiegert 2016-08-20]
+	Updated audio/musicpd to 0.19.18nb1 [wiz 2016-08-20]
