@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3461 2016/08/20 09:13:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3462 2016/08/20 09:34:35 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4908,3 +4908,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/py-loremipsum version 1.0.5 [wiz 2016-08-20]
 	Updated time/py-pytz to 2016.6.1 [richard 2016-08-20]
 	Updated mail/neomutt to 20160820 [wiz 2016-08-20]
+	Added devel/go-termbox version 20160808 [bsiegert 2016-08-20]
+	Added sysutils/lf version 20160819 [bsiegert 2016-08-20]
