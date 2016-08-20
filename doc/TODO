@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16304 2016/08/19 16:22:10 wiz Exp $
+$NetBSD: TODO,v 1.16305 2016/08/20 12:27:41 mef Exp $
 
 Suggested new packages
 ======================
@@ -437,7 +437,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aterm-1.0.1
 	o atf-0.21
 	o aubio-0.4.2
-	o auctex-11.89
 	o audacious-3.7.1
 	o audacious-plugins-3.7.1
 	o augeas-1.4.0
