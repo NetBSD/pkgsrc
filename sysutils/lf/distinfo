@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/20 09:33:53 bsiegert Exp $
+
+SHA1 (lf-20160819-a6d92f4.tar.gz) = 891e9fb762d6cb852b75b9ff0a36bd0473b718fd
+RMD160 (lf-20160819-a6d92f4.tar.gz) = f7df3c623a05ad063a5a1e299ec10e111e6d327f
+SHA512 (lf-20160819-a6d92f4.tar.gz) = 7c1d9cddd0e6431f32e6b4fcf7386c6c39129aba42be3f23db34dfc69882fd404149da08dea6f4f44a5067e28f4e7b0ebd4d16370cbc3d8951ec560d9a15c3ce
+Size (lf-20160819-a6d92f4.tar.gz) = 19903 bytes
