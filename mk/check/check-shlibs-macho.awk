@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-macho.awk,v 1.2 2016/02/19 15:10:23 jperkin Exp $
+# $NetBSD: check-shlibs-macho.awk,v 1.3 2016/08/20 18:52:42 adam Exp $
 
 #
 # Read a list of potential Mach-O binaries from stdin.
@@ -119,4 +119,4 @@ BEGIN {
 	depends_file = ENVIRON["DEPENDS_FILE"]
 }
 
-{ checkshlib($0); }
+/\t/ { checkshlib($0); }
