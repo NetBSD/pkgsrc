@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/20 09:30:41 bsiegert Exp $
+
+SHA1 (go-termbox-20160808-e8f6d27.tar.gz) = 00da82a736bfd0d7209229f9571ce28c86db8548
+RMD160 (go-termbox-20160808-e8f6d27.tar.gz) = a876b220016af784e8fa6f88dbf448cfb48f5b21
+SHA512 (go-termbox-20160808-e8f6d27.tar.gz) = a94a7e61e53847f2b4eeb355bc17ad6c7f1ec6a1a73883da49234ff450969fb83d61e20ae7e1f4d62879095b56f94c1eceec1e677e4567c760dbf5fee9990b36
+Size (go-termbox-20160808-e8f6d27.tar.gz) = 30189 bytes
