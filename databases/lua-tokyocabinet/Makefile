@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/03/15 19:57:40 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.25 2016/08/20 18:49:33 sevan Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
@@ -24,6 +24,15 @@ REPLACE_LUA=		*.lua
 INSTALLATION_DIRS+=	${LUA_DOCDIR} ${LUA_EXAMPLESDIR}
 
 MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+SOEXT= 		dylib
+.else
+SOEXT= 		so
+.endif
+PLIST_SUBST+= 	SOEXT=${SOEXT}
 
 post-extract:
 	${CHMOD} -R go-w ${WRKSRC}

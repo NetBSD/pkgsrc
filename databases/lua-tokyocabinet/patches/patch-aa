@@ -1,6 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/24 03:04:54 obache Exp $
+$NetBSD: patch-aa,v 1.2 2016/08/20 18:49:33 sevan Exp $
 
---- Makefile.in.orig	2008-10-12 04:17:48.000000000 +0000
+- Add place holder for flags which can be passed in from pkgsrc.
+- Add flag for Darwin linker to resolve symbols from external libraries at
+runtime. 
+
+--- Makefile.in.orig	2009-07-19 04:35:10.000000000 +0000
 +++ Makefile.in
 @@ -32,9 +32,9 @@ DESTDIR =
  
@@ -15,3 +19,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/24 03:04:54 obache Exp $
  LIBS = @LIBS@
  LDENV = LD_RUN_PATH=/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@:.
  RUNENV = @MYLDLIBPATHENV@=.:/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@
+@@ -181,7 +181,7 @@ tokyocabinet.so : $(LIBOBJFILES)
+ 
+ 
+ tokyocabinet.dylib : $(LIBOBJFILES)
+-	$(CC) $(CFLAGS) -dynamiclib -o $@ $(LIBOBJFILES) $(LDFLAGS) $(LIBS)
++	$(CC) $(CFLAGS) -dynamiclib -undefined dynamic_lookup -o $@ $(LIBOBJFILES) $(LDFLAGS) $(LIBS)
+ 
+ 
+ 
