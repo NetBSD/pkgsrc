@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/20 07:15:06 wiz Exp $
+
+SHA1 (noise-1.2.2.tar.gz) = f94dc5401c82a57292f287aaefa527e9623dbb2c
+RMD160 (noise-1.2.2.tar.gz) = 9f91428b7ead51c0bbaa9b845883af28409c0306
+SHA512 (noise-1.2.2.tar.gz) = 015a2366f3c8b579691c35848fb4c13c1cd2ec632df6713012531ece46509b34803ba3ef40fdc4eb05151dca35d78dfc4911d9f2da97864aa049762a3251ea98
+Size (noise-1.2.2.tar.gz) = 125615 bytes
