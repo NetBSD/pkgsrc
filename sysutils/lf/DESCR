@@ -1,0 +1,19 @@
+lf (as in "list files") is a terminal file manager written in Go. It is heavily
+inspired by ranger with some missing and extra features. Some of the missing
+features are deliberately ommited since it is better if they are handled by
+external tools.
+
+Features
+
+- no external runtime dependencies (except for terminfo database)
+- fast startup and low memory footprint (due to native code and static
+  binaries)
+- server/client architecture to share selection between multiple instances
+- custom commands as shell scripts (hence any other language as well)
+- sync (waiting and skipping) and async commands
+- fully customizable keybindings
+
+Non-Features
+
+- tabs or windows (handled by the window manager or the terminal multiplexer)
+- built-in pager (handled by your pager of choice)
