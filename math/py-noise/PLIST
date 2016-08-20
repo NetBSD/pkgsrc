@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/20 07:15:06 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/noise/__init__.py
+${PYSITELIB}/noise/__init__.pyc
+${PYSITELIB}/noise/__init__.pyo
+${PYSITELIB}/noise/_perlin.so
+${PYSITELIB}/noise/_simplex.so
+${PYSITELIB}/noise/perlin.py
+${PYSITELIB}/noise/perlin.pyc
+${PYSITELIB}/noise/perlin.pyo
+${PYSITELIB}/noise/shader.py
+${PYSITELIB}/noise/shader.pyc
+${PYSITELIB}/noise/shader.pyo
+${PYSITELIB}/noise/shader_noise.py
+${PYSITELIB}/noise/shader_noise.pyc
+${PYSITELIB}/noise/shader_noise.pyo
+${PYSITELIB}/noise/test.py
+${PYSITELIB}/noise/test.pyc
+${PYSITELIB}/noise/test.pyo

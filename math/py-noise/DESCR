@@ -1,0 +1,9 @@
+Perlin noise is ubiquitous in modern CGI. Used for procedural
+texturing, animation, and enhancing realism, Perlin noise has been
+called the "salt" of procedural content. Perlin noise is a type of
+gradient noise, smoothly interpolating across a pseudo-random matrix
+of values.
+
+The noise library includes native-code implementations of Perlin
+"improved" noise and Perlin simplex noise. It also includes a fast
+implementation of Perlin noise in GLSL, for use in OpenGL shaders.
