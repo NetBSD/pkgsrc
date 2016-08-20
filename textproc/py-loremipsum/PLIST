@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/20 07:19:51 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/loremipsum/__init__.py
+${PYSITELIB}/loremipsum/__init__.pyc
+${PYSITELIB}/loremipsum/__init__.pyo
+${PYSITELIB}/loremipsum/default/dictionary.txt
+${PYSITELIB}/loremipsum/default/sample.txt
+${PYSITELIB}/loremipsum/generator.py
+${PYSITELIB}/loremipsum/generator.pyc
+${PYSITELIB}/loremipsum/generator.pyo
