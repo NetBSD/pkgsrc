@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/08/04 17:03:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/20 19:00:31 kamil Exp $
 
-DISTNAME=	otter-browser-0.9.09
-PKGREVISION=	4
+DISTNAME=	otter-browser-0.9.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OtterBrowser/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -16,6 +15,7 @@ USE_LANGUAGES=	c c++
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
