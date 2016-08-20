@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.31 2016/08/06 08:46:59 ryoon Exp $
+# $NetBSD: options.mk,v 1.32 2016/08/20 11:17:32 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
-PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio
+PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio dbus
 PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc
+PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc dbus
 .else
-PKG_SUGGESTED_OPTIONS+= pulseaudio
+PKG_SUGGESTED_OPTIONS+= pulseaudio dbus
 .endif
 
 # On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
@@ -74,7 +74,13 @@ CONFIGURE_ARGS+=	--enable-pulseaudio
 .else
 CONFIGURE_ARGS+=	--disable-pulseaudio
 .endif
-# XXX end
+
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-dbus
+.else
+CONFIGURE_ARGS+=	--disable-dbus
+.endif
 
 PLIST_VARS+=		branding nobranding
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
