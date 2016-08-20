@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/02/23 20:18:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/20 09:21:44 bsiegert Exp $
 #
 
 DISTNAME=		go-check-1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=go-check/}
 GITHUB_PROJECT=		check
