@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/02/26 11:27:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2016/08/20 14:48:18 kamil Exp $
 
 DISTNAME=	xf86-input-vmmouse-13.1.0
 PKGREVISION=	1
@@ -16,6 +16,9 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
+
+# Currently libudev is unsupported in pkgsrc
+CONFIGURE_ARGS+=	--without-libudev
 
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
