@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2015/12/29 04:54:36 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2016/08/20 05:31:09 mef Exp $
 
-DISTNAME=		ncmpc-0.24
-PKGREVISION=		2
+DISTNAME=		ncmpc-0.25
 CATEGORIES=		audio
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 MASTER_SITES=		http://www.musicpd.org/download/ncmpc/0/
