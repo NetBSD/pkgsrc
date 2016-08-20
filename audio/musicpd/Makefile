@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2016/08/20 10:17:09 wiz Exp $
+# $NetBSD: Makefile,v 1.128 2016/08/20 10:20:03 wiz Exp $
 
 DISTNAME=		mpd-0.19.18
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
@@ -36,7 +36,7 @@ RCD_SCRIPTS=		mpd
 
 FILES_SUBST+=		DEVOSSAUDIO=${DEVOSSAUDIO:Q}
 
-SUBST_CLASSES+=		config paths
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	mpd.conf
 SUBST_SED.paths=	-e 's,@DEVOSSAUDIO@,${DEVOSSAUDIO},'
