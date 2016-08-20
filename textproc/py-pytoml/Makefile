@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/07/07 16:11:06 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/20 07:17:31 wiz Exp $
 
 VERSION=        0.1.10
 DISTNAME=       pytoml-${VERSION}
 PKGNAME=        ${PYPKGPREFIX}-pytoml-${VERSION}
-CATEGORIES=	devel
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytoml/}
 EXTRACT_SUFX=	.zip
 
