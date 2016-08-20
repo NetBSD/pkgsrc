@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2016/07/16 08:32:05 wiz Exp $
+$NetBSD: distinfo,v 1.10 2016/08/20 13:40:30 bsiegert Exp $
 
 SHA1 (gnupg-2.1.14.tar.bz2) = bc7609a3a0daf0ed0efb22f77b43e82f28e20e34
 RMD160 (gnupg-2.1.14.tar.bz2) = 22d1f1791133f48ab71e900617ad7fd13c8a4e0f
@@ -7,3 +7,4 @@ Size (gnupg-2.1.14.tar.bz2) = 5706058 bytes
 SHA1 (patch-dirmngr_Makefile.in) = fa74bcf4ea214945c64d383dff039ab938ae1446
 SHA1 (patch-dirmngr_ks-engine-ldap.c) = 3a7d96d877cd52bed66c481af83da99c517d3380
 SHA1 (patch-kbx_Makefile.in) = 58f7c3711744a42d40f580944fb768f7aaaf1b68
+SHA1 (patch-tests_gpgscm_Makefile.in) = 9251e0b4a124812ff8d6c859519cb5c7faa6b712
