@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2016/08/19 20:26:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.331 2016/08/20 07:15:18 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -250,6 +250,7 @@ SUBDIR+=	py-intervals
 SUBDIR+=	py-mpmath
 SUBDIR+=	py-munkres
 SUBDIR+=	py-networkx
+SUBDIR+=	py-noise
 SUBDIR+=	py-numarray
 SUBDIR+=	py-numexpr
 SUBDIR+=	py-numpy
