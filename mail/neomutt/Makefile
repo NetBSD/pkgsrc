@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/07/25 09:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/20 09:13:11 wiz Exp $
 
-DISTNAME=		neomutt-20160723
+DISTNAME=		neomutt-20160820
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${DISTNAME}
