@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/07/16 13:31:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/20 09:21:46 bsiegert Exp $
 
 DISTNAME=	go-vultr-1.8
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=JamesClonk/}
 GITHUB_PROJECT=	vultr
