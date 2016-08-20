@@ -1,0 +1,5 @@
+The purpose of this package is to generate random (plausible) text
+sentences and paargraphs based on a dictionary and a sample text.
+By default this package will generate Lorem Ipsum style text, but
+you can customize the generator to effectively load any dictionary
+and any sample text you like.
