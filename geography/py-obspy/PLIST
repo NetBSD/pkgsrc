@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/08/07 10:36:43 wen Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/08/20 18:56:55 richard Exp $
 bin/obspy-dataless2resp
 bin/obspy-dataless2xseed
 bin/obspy-flinn-engdahl
@@ -12,14 +12,14 @@ bin/obspy-runtests
 bin/obspy-scan
 bin/obspy-sds-report
 bin/obspy-xseed2dataless
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/namespace_packages.txt
-${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/obspy/CONTRIBUTORS.txt
 ${PYSITELIB}/obspy/LICENSE.txt
 ${PYSITELIB}/obspy/RELEASE-VERSION
@@ -1610,12 +1610,12 @@ ${PYSITELIB}/obspy/io/zmap/tests/test_zmap.pyo
 ${PYSITELIB}/obspy/lib/__init__.py
 ${PYSITELIB}/obspy/lib/__init__.pyc
 ${PYSITELIB}/obspy/lib/__init__.pyo
-${PYSITELIB}/obspy/lib/libevresp_NetBSD_64bit_py27.so
-${PYSITELIB}/obspy/lib/libgse2_NetBSD_64bit_py27.so
-${PYSITELIB}/obspy/lib/libmseed_NetBSD_64bit_py27.so
-${PYSITELIB}/obspy/lib/libsegy_NetBSD_64bit_py27.so
-${PYSITELIB}/obspy/lib/libsignal_NetBSD_64bit_py27.so
-${PYSITELIB}/obspy/lib/libtau_NetBSD_64bit_py27.so
+${PYSITELIB}/obspy/lib/libevresp_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libgse2_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libmseed_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libsegy_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libsignal_${PYPLATFORM}_${PYPKGPREFIX}.so
+${PYSITELIB}/obspy/lib/libtau_${PYPLATFORM}_${PYPKGPREFIX}.so
 ${PYSITELIB}/obspy/realtime/README.txt
 ${PYSITELIB}/obspy/realtime/__init__.py
 ${PYSITELIB}/obspy/realtime/__init__.pyc
