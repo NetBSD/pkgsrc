@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.251 2016/08/16 09:34:12 tnn Exp $
+$NetBSD: distinfo,v 1.252 2016/08/20 11:17:32 ryoon Exp $
 
-SHA1 (firefox-48.0.source.tar.xz) = 2b73cfc996861fe895ad7564d485bf9e35190767
-RMD160 (firefox-48.0.source.tar.xz) = 7f1754fd11849c4894b4cb234fe1c3fc4be47ba6
-SHA512 (firefox-48.0.source.tar.xz) = 51bbb1954920b4d0e49e2834939748e596ed27c09a45adeea2be2cfbd32898dae41f13db17318e9699fa96c41fb50fba9966df1f88deeadc0ae3bdd679bd79c5
-Size (firefox-48.0.source.tar.xz) = 188339876 bytes
+SHA1 (firefox-48.0.1.source.tar.xz) = 95714df71633aac57219c88a0f799652da53901d
+RMD160 (firefox-48.0.1.source.tar.xz) = 3671f0317c0b2ef09eca7e709e6d33c0b3eb89ef
+SHA512 (firefox-48.0.1.source.tar.xz) = 819f726a7e630f62e3d4019d8289341019941df2288e67b1d88d5b16c3ce8636a852ae098905be4f8f2f2049070ffcd008e49cf148f7a6fea7332d223f14a890
+Size (firefox-48.0.1.source.tar.xz) = 189465944 bytes
 SHA1 (patch-aa) = 7d2f0f38668daaaa808f68bea0c0b47dee2c8913
 SHA1 (patch-ao) = 1564bc503670dc07ec8b9b43927f0c5879f3a44d
 SHA1 (patch-as) = bebba8483c1881198066f4022a0da8f95398f38f
@@ -26,6 +26,7 @@ SHA1 (patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 0c1151708420b
 SHA1 (patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 6e91ca436b73affe42ed4e683b3400beb28c4bc6
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2cc997cab71a84c1f50a791693519a0626564426
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 9b357196b795f7698f0763cb6cfcd39b4aea6420
+SHA1 (patch-gfx_skia_skia_src_core_SkScaleToSides.h) = 9776f351f86ee1e60c93938b9077693a3542bd3b
 SHA1 (patch-gfx_skia_skia_src_core_SkUtilsArm.cpp) = 94a5a88f1177e09ef7b8dbdb6439153933004356
 SHA1 (patch-gfx_ycbcr_moz.build) = 705c36b972ef1533330e4a180002cef1c22755bf
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f3bf72cb9b52b0c64d8ea5d3a25a797409da9d5a
