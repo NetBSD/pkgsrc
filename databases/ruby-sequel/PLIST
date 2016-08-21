@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2016/07/17 14:27:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.43 2016/08/21 08:30:24 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -125,6 +125,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.33.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.34.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.35.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.36.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.37.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
@@ -187,7 +188,6 @@ ${GEM_LIBDIR}/lib/sequel/adapters/shared/firebird.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/informix.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/mssql.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/mysql.rb
-${GEM_LIBDIR}/lib/sequel/adapters/shared/mysql_prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/oracle.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/postgres.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/shared/progress.rb
@@ -202,6 +202,8 @@ ${GEM_LIBDIR}/lib/sequel/adapters/swift/sqlite.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/tinytds.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/emulate_offset_with_reverse_and_count.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/emulate_offset_with_row_number.rb
+${GEM_LIBDIR}/lib/sequel/adapters/utils/mysql_mysql2.rb
+${GEM_LIBDIR}/lib/sequel/adapters/utils/mysql_prepared_statements.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/pg_types.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/replace.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/utils/split_alter_table.rb
