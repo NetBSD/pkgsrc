@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3485 2016/08/21 11:18:10 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3486 2016/08/21 11:18:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4938,3 +4938,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/go-gls version 4.2.0 [bsiegert 2016-08-21]
 	Updated www/wwwoffle to 2.9j [bsiegert 2016-08-21]
 	Updated graphics/libsixel to 1.7.0 [ryoon 2016-08-21]
+	Updated wm/jwm to 2.3.6 [ryoon 2016-08-21]
