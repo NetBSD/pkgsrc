@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16306 2016/08/21 07:14:55 wiz Exp $
+$NetBSD: TODO,v 1.16307 2016/08/21 07:18:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,6 +422,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apollo-1.7
 	o apr0-2.4.1
 	o arandr-0.1.9
+	o ardour-5.0
 	o argon2-20151206
 	o argtable-2.9
 	o argus-20121202
@@ -462,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bibtool-2.63
 	o bin86-0.16.21
 	o binkd-104
+	o binutils-2.27
 	o bird-1.5.0
 	o bird6-1.5.0
 	o blas-3.6.0
@@ -570,7 +572,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
 	o di-4.42
-	o digikam-5.0
+	o digikam-5.1
 	o dinotrace-9.4d
 	o discount-2.2.0
 	o dmidecode-3.0
@@ -708,6 +710,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcc-5.4
 	o gcc-6.1
 	o gcc48-4.8.5
+	o gcc49-4.9.4
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-15.02
@@ -727,6 +730,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ghc-8.0.1
 	o ghc7-7.10.1
 	o gifsicle-1.88
+	o gimp-2.8.18
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -1028,6 +1032,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-1.2.5
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librecad-2.0.9
+	o libreoffice-5.2
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
@@ -1310,6 +1315,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
+	o pitivi-0.97
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.7
@@ -1634,7 +1640,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-6.0.2
+	o tor-browser-6.0.4
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1699,7 +1705,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-1.8.3
-	o wine-devel-1.9.15
+	o wine-devel-1.9.17
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
