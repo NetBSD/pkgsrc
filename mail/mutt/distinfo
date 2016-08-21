@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.45 2016/07/07 07:23:57 tron Exp $
+$NetBSD: distinfo,v 1.46 2016/08/21 11:39:31 wiz Exp $
 
-SHA1 (mutt-1.6.2.tar.gz) = 67910ea4025a7f5ac8808e34bd55519200e08bcf
-RMD160 (mutt-1.6.2.tar.gz) = a5ff12a3bd3658302b799699ceac0d071eb452a3
-SHA512 (mutt-1.6.2.tar.gz) = c4348ba55459a2f9d5bedda1ec63b7520c0bdcd285bf791972dbd11a947be47e7c88b02c7d244e65c7c0f1be252c43240b570457a5812bf8160611bba7b01916
-Size (mutt-1.6.2.tar.gz) = 3956745 bytes
-SHA1 (patch-1.6.0.rr.compressed.gz) = 9a672673dd0bd4a2c1624627a8be3c558af2a5d8
-RMD160 (patch-1.6.0.rr.compressed.gz) = f648b17a84b48c3e8529f45df48ff8bce908dc08
-SHA512 (patch-1.6.0.rr.compressed.gz) = 2b37b84cb930bcc3809910c400298e798d293d7c351b58b59b44d76f48263af1c068a282c6a3baa7de8f42a23c0a86a4dabb11919be892356eff5bf303b199d9
-Size (patch-1.6.0.rr.compressed.gz) = 9977 bytes
+SHA1 (mutt-1.7.0.tar.gz) = 0d9c0ae7d4725e2216ea0c1271ae19ab8bcf653b
+RMD160 (mutt-1.7.0.tar.gz) = f508f0332d2dfcaa398c3b68889ac619781b1651
+SHA512 (mutt-1.7.0.tar.gz) = 60ff00f268285c12b48e39ca0b5a8bd7e09323255874a6211edc94218ed191ad24ad437dd9c180c45ea6d5a9f163d04bb5515ddf3488c92f4e9411588c550612
+Size (mutt-1.7.0.tar.gz) = 4019567 bytes
 SHA1 (patch-aa) = 59d89dce24110be2927c8a1ea1fa5b780d644372
 SHA1 (patch-ab) = 7c307068e129eb71ba251d175186dc9c5b171681
 SHA1 (patch-ac) = 40d119b7efed1a4622c42badc9ee97349b504044
@@ -15,10 +11,10 @@ SHA1 (patch-ad) = 6db5792162a0752ee533f5cd4cb3896e0ca92344
 SHA1 (patch-ae) = 6534848a4c27d4a3830edd8d4e19d1181fe396d6
 SHA1 (patch-af) = e924223be1a5f894d41d430bc5741cae1e4cfe61
 SHA1 (patch-ag) = b7902d2412538f15bc25b123ca742c03a3dd3a12
-SHA1 (patch-ah) = dfe747c30a44bb309cccaca1bd5174fccc3c2bed
-SHA1 (patch-al) = 49542905cde263b8d4c79f71cce3759024c804a3
+SHA1 (patch-ah) = 047f167939367b2e0d29189348deb1c83d4b013a
+SHA1 (patch-al) = fb7e089c9703d13821165659f88fe78204d38a47
 SHA1 (patch-am) = f7f20860bccb63ed5464e3a1225719ffc3fa504f
 SHA1 (patch-an) = b9cc3e957bb1650c8e22c0edf0ce112f769664a1
-SHA1 (patch-ao) = a5dddb01d30f28337ca825c6461139c2d9f288d5
+SHA1 (patch-ao) = 7c8f18ccb3dc6a6f40daf55b53e52b4722f60efd
 SHA1 (patch-ap) = c6f79d5c4e19efdc15e9d5a59934da52b16b7a62
 SHA1 (patch-aq) = e363d8929ced9731a31af1137b111d3476a3d05d
