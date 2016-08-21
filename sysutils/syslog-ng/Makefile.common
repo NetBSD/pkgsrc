@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2016/08/21 20:18:30 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.4 2016/08/21 21:31:24 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
@@ -47,7 +47,6 @@ CONFIGURE_ARGS+=	--with-librabbitmq-client=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 
 CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
-CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 SUBST_CLASSES+=		unamepath
 SUBST_STAGE.unamepath=	post-configure
