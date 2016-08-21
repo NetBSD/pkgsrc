@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/08/21 09:53:55 bsiegert Exp $
 bin/wwwoffle
 bin/wwwoffle-fsck
 bin/wwwoffle-gunzip
@@ -37,14 +37,12 @@ share/doc/wwwoffle/README.namazu
 share/doc/wwwoffle/README.win32
 share/doc/wwwoffle/de/CHANGES.CONF
 share/doc/wwwoffle/de/INSTALL
-share/doc/wwwoffle/de/LSM
 share/doc/wwwoffle/de/NEWS
 share/doc/wwwoffle/de/README.1st
 share/doc/wwwoffle/de/README.CONF
 share/doc/wwwoffle/de/README.CONF.html
 share/doc/wwwoffle/de/README.html
 share/doc/wwwoffle/es/INSTALL
-share/doc/wwwoffle/es/LSM
 share/doc/wwwoffle/es/README
 share/doc/wwwoffle/es/README.1st
 share/doc/wwwoffle/es/README.CONF
@@ -57,7 +55,6 @@ share/doc/wwwoffle/es/wwwoffle.conf
 share/doc/wwwoffle/fr/README.CONF
 share/doc/wwwoffle/fr/wwwoffle.conf.man
 share/doc/wwwoffle/pl/INSTALL
-share/doc/wwwoffle/pl/LSM
 share/doc/wwwoffle/pl/README.1st
 share/doc/wwwoffle/pl/README.lang
 share/examples/wwwoffle/wwwoffle.conf
