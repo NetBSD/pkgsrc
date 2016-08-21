@@ -1,24 +1,112 @@
-$NetBSD: patch-configure,v 1.1 2015/10/29 16:34:13 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2016/08/21 20:18:30 fhajny Exp $
 
 Portability.
 
---- configure.orig	2015-08-17 08:56:19.000000000 +0000
+--- configure.orig	2016-08-19 11:18:46.000000000 +0000
 +++ configure
-@@ -16011,7 +16011,7 @@ $as_echo "$as_me: Too old java version r
-       fi
-     fi
+@@ -15496,12 +15496,12 @@ if test -n "$LIBMONGO_CFLAGS"; then
+     pkg_cv_LIBMONGO_CFLAGS="$LIBMONGO_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc >= \$LMC_MIN_VERSION\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "libmongoc >= $LMC_MIN_VERSION") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc-1.0 >= \$LMC_MIN_VERSION\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "libmongoc-1.0 >= $LMC_MIN_VERSION") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBMONGO_CFLAGS=`$PKG_CONFIG --cflags "libmongoc >= $LMC_MIN_VERSION" 2>/dev/null`
++  pkg_cv_LIBMONGO_CFLAGS=`$PKG_CONFIG --cflags "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -15513,12 +15513,12 @@ if test -n "$LIBMONGO_LIBS"; then
+     pkg_cv_LIBMONGO_LIBS="$LIBMONGO_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc >= \$LMC_MIN_VERSION\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "libmongoc >= $LMC_MIN_VERSION") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc-1.0 >= \$LMC_MIN_VERSION\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "libmongoc-1.0 >= $LMC_MIN_VERSION") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBMONGO_LIBS=`$PKG_CONFIG --libs "libmongoc >= $LMC_MIN_VERSION" 2>/dev/null`
++  pkg_cv_LIBMONGO_LIBS=`$PKG_CONFIG --libs "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -15539,9 +15539,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libmongoc >= $LMC_MIN_VERSION" 2>&1`
++	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>&1`
+         else
+-	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libmongoc >= $LMC_MIN_VERSION" 2>&1`
++	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBMONGO_PKG_ERRORS" >&5
+@@ -15568,12 +15568,12 @@ if test -n "$LIBMONGO_CFLAGS"; then
+     pkg_cv_LIBMONGO_CFLAGS="$LIBMONGO_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc >= \$LMC_MIN_VERSION\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "libmongoc >= $LMC_MIN_VERSION") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc-1.0 >= \$LMC_MIN_VERSION\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "libmongoc-1.0 >= $LMC_MIN_VERSION") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBMONGO_CFLAGS=`$PKG_CONFIG --cflags "libmongoc >= $LMC_MIN_VERSION" 2>/dev/null`
++  pkg_cv_LIBMONGO_CFLAGS=`$PKG_CONFIG --cflags "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -15585,12 +15585,12 @@ if test -n "$LIBMONGO_LIBS"; then
+     pkg_cv_LIBMONGO_LIBS="$LIBMONGO_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc >= \$LMC_MIN_VERSION\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "libmongoc >= $LMC_MIN_VERSION") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libmongoc-1.0 >= \$LMC_MIN_VERSION\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "libmongoc-1.0 >= $LMC_MIN_VERSION") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBMONGO_LIBS=`$PKG_CONFIG --libs "libmongoc >= $LMC_MIN_VERSION" 2>/dev/null`
++  pkg_cv_LIBMONGO_LIBS=`$PKG_CONFIG --libs "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -15611,9 +15611,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libmongoc >= $LMC_MIN_VERSION" 2>&1`
++	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>&1`
+         else
+-	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libmongoc >= $LMC_MIN_VERSION" 2>&1`
++	        LIBMONGO_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "libmongoc-1.0 >= $LMC_MIN_VERSION" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBMONGO_PKG_ERRORS" >&5
+@@ -16367,7 +16367,7 @@ $as_echo_n "checking for JAVA_VERSION...
+   JAVA_HOME_CHECKER="/usr/libexec/java_home"
  
--    if test "$VERSION_OK" == "1";
-+    if test "$VERSION_OK" = "1";
-     then
-       JNI_HOME=`echo $JAVAC_BIN | sed "s/\(.*\)[/]bin[/]java.*/\1/"`
-       JNI_LIBDIR=`find $JNI_HOME -name "libjvm.so" | sed "s/\(.*\)libjvm.so/\1/" | head -n 1`
-@@ -16112,7 +16112,7 @@ $as_echo "$as_me: Too old java version r
-       fi
-     fi
+   if test "x$JAVAC_BIN" != "x"; then
+-    if test "x$DONT_RESOLVE_JAVA_BIN_LINKS" == "x"; then
++    if test "x$DONT_RESOLVE_JAVA_BIN_LINKS" = "x"; then
+       JAVAC_BIN=`
+   READLINK_TARGET=$JAVAC_BIN
+   cd $(dirname "$READLINK_TARGET")
+@@ -16474,7 +16474,7 @@ $as_echo_n "checking for JAVA_VERSION...
+   JAVA_HOME_CHECKER="/usr/libexec/java_home"
  
--    if test "$VERSION_OK" == "1";
-+    if test "$VERSION_OK" = "1";
-     then
-       JNI_HOME=`echo $JAVAC_BIN | sed "s/\(.*\)[/]bin[/]java.*/\1/"`
-       JNI_LIBDIR=`find $JNI_HOME -name "libjvm.so" | sed "s/\(.*\)libjvm.so/\1/" | head -n 1`
+   if test "x$JAVAC_BIN" != "x"; then
+-    if test "x$DONT_RESOLVE_JAVA_BIN_LINKS" == "x"; then
++    if test "x$DONT_RESOLVE_JAVA_BIN_LINKS" = "x"; then
+       JAVAC_BIN=`
+   READLINK_TARGET=$JAVAC_BIN
+   cd $(dirname "$READLINK_TARGET")
