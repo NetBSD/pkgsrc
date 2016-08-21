@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.591 2016/08/15 06:18:34 agc Exp $
+# $NetBSD: Makefile,v 1.592 2016/08/21 08:27:03 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -338,6 +338,7 @@ SUBDIR+=	paperkey
 SUBDIR+=	password-store
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
+SUBDIR+=	pear-Crypt_GPG
 SUBDIR+=	pev
 SUBDIR+=	pgp2
 SUBDIR+=	pgp5
