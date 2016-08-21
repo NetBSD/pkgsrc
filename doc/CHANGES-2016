@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3475 2016/08/21 07:52:53 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.3476 2016/08/21 07:56:12 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4929,5 +4929,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Meta to 2.150010 [wiz 2016-08-21]
 	Updated devel/p5-Module-Build to 0.42200 [wiz 2016-08-21]
 	Updated graphics/gimp to 2.8.18 [wiz 2016-08-21]
-	Updated math/gnome-calculator to 3.21.90 [prlw1 2016-08-21]
 	Updated math/gnome-calculator to 3.21.90 [prlw1 2016-08-21]
