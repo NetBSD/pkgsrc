@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/21 19:14:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/21 21:29:08 fhajny Exp $
 #
 
 DISTNAME=	libdbi-0.9.0
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 CONFIGURE_ARGS+=	--disable-docs
+
+PKGCONFIG_OVERRIDE=	dbi.pc.in
 
 AUTO_MKDIRS=		yes
 
