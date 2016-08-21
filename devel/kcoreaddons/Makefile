@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/08/04 17:03:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/21 21:17:57 markd Exp $
 
 DISTNAME=	kcoreaddons-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -9,6 +8,8 @@ COMMENT=	Addons to QtCore
 LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND modified-bsd
 
 .include "../../meta-pkgs/kf5/Makefile.common"
+
+#CMAKE_ARGS+=	-DENABLE_INOTIFY=OFF
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"

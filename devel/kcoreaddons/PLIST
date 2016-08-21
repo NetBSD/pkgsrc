@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:17:57 markd Exp $
 bin/desktoptojson
 include/KF5/KCoreAddons/KAboutData
 include/KF5/KCoreAddons/KAutoSaveFile
@@ -71,6 +71,14 @@ lib/libKF5CoreAddons.so
 lib/libKF5CoreAddons.so.5
 lib/libKF5CoreAddons.so.${PKGVERSION}
 qt5/mkspecs/modules/qt_KCoreAddons.pri
+share/kf5/licenses/ARTISTIC
+share/kf5/licenses/BSD
+share/kf5/licenses/GPL_V2
+share/kf5/licenses/GPL_V3
+share/kf5/licenses/LGPL_V2
+share/kf5/licenses/LGPL_V21
+share/kf5/licenses/LGPL_V3
+share/kf5/licenses/QPL_V1.0
 share/locale/af/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/ar/LC_MESSAGES/kcoreaddons5_qt.qm
 share/locale/as/LC_MESSAGES/kcoreaddons5_qt.qm
