@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3478 2016/08/21 08:27:34 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3479 2016/08/21 08:30:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4932,3 +4932,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/gnome-calculator to 3.21.90 [prlw1 2016-08-21]
 	Added devel/pear-Console_CommandLine version 1.2.2 [taca 2016-08-21]
 	Added security/pear-Crypt_GPG version 1.4.2 [taca 2016-08-21]
+	Updated databases/ruby-sequel to 4.37.0 [taca 2016-08-21]
