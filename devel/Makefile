@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2298 2016/08/21 08:23:50 taca Exp $
+# $NetBSD: Makefile,v 1.2299 2016/08/21 09:14:25 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -295,6 +295,7 @@ SUBDIR+=	gnustep-objc
 SUBDIR+=	gnustep-objc-lf2
 SUBDIR+=	go-check
 SUBDIR+=	go-flags-svent
+SUBDIR+=	go-gls
 SUBDIR+=	go-ini
 SUBDIR+=	go-mow-cli
 SUBDIR+=	go-nbreader
