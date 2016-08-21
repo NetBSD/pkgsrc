@@ -1,0 +1,13 @@
+$NetBSD: patch-.._package.xml,v 1.1 2016/08/21 08:26:40 taca Exp $
+
+--- ../package.xml.orig	2016-06-19 07:54:44.000000000 +0000
++++ ../package.xml
+@@ -73,7 +73,7 @@ Feature #21079: Added Crypt_GPG::exportP
+    <file baseinstalldir="/" md5sum="548b27fa4f1b2aedf9bde59105e5e54c" name="data/pinentry-cli.xml" role="data">
+     <tasks:replace from="@package-version@" to="version" type="package-info" />
+    </file>
+-   <file baseinstalldir="/" md5sum="4fb41cc616854bc332aec7a5e6dddab0" name="scripts/crypt-gpg-pinentry" role="script">
++   <file baseinstalldir="/" name="scripts/crypt-gpg-pinentry" role="script">
+     <tasks:replace from="@php-dir@" to="php_dir" type="pear-config" />
+    </file>
+    <file baseinstalldir="/" md5sum="48a01863f1c45e3343ee6cc0cdac6bf1" name="tests/data-files/testDecryptFile.asc" role="test" />
