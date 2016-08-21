@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/02/29 12:29:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/21 21:09:27 markd Exp $
 
 ATTR_VERS=	2.4.47
 PKGNAME=	attr-${ATTR_VERS}
 DISTNAME=	attr-${ATTR_VERS}.src
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.savannah.gnu.org/releases/attr/
 
@@ -11,7 +12,7 @@ HOMEPAGE=	http://savannah.nongnu.org/projects/attr
 COMMENT=	Commands for Manipulating Filesystem Extended Attributes
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake msgfmt
 USE_LIBTOOL=	yes
@@ -30,7 +31,10 @@ SUBST_SED.rmldarg=	-e '/version-script/d'
 pre-install:
 	cd ${WRKSRC}/libattr && env ${MAKE_ENV} \
             ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
-                -f ${MAKE_FILE} install-lib
+                -f ${MAKE_FILE} install-lib install-dev
+	cd ${WRKSRC}/include && env ${MAKE_ENV} \
+            ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+                -f ${MAKE_FILE} install-dev
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
