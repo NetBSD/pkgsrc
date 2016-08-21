@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.module,v 1.1 2015/10/29 16:34:13 fhajny Exp $
+# $NetBSD: Makefile.module,v 1.2 2016/08/21 20:18:30 fhajny Exp $
 # used by sysutils/py-syslog-ng/Makefile
+# used by sysutils/syslog-ng-amqp/Makefile
+# used by sysutils/syslog-ng-curl/Makefile
 # used by sysutils/syslog-ng-geoip/Makefile
 # used by sysutils/syslog-ng-json/Makefile
 # used by sysutils/syslog-ng-mongodb/Makefile
