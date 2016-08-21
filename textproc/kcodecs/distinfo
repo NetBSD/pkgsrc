@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/26 09:26:56 markd Exp $
+$NetBSD: distinfo,v 1.2 2016/08/21 21:26:01 markd Exp $
 
-SHA1 (kcodecs-5.21.0.tar.xz) = bf825ab54cbbd015894e7e2794beb330f32f9544
-RMD160 (kcodecs-5.21.0.tar.xz) = 2a812a4c4b923a859767a2197d0ce298490080e6
-SHA512 (kcodecs-5.21.0.tar.xz) = ca244632191eeeb571f7830e941ed067f6c794602746c1cfacba63658cc7500b379df864549058eda4071cc2e7e0fa543faf430ded5c4baa4d645414b3693a15
-Size (kcodecs-5.21.0.tar.xz) = 217368 bytes
+SHA1 (kcodecs-5.25.0.tar.xz) = 7b127b15ce9d8445333e141b81e641ad3475122f
+RMD160 (kcodecs-5.25.0.tar.xz) = 22a4889dfdd3b4bd29da966f96bc19b8ad7bfb93
+SHA512 (kcodecs-5.25.0.tar.xz) = 0073387f6bbf40883403f7bd2b8c7dae67eac0445383d26783056c2fa8eb857eb6458494af2085665a66b6cf33ba90a217cf0c6c7a5c26753425fdd900a7e77f
+Size (kcodecs-5.25.0.tar.xz) = 217068 bytes
