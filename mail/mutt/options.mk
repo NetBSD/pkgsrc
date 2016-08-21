@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2016/06/01 21:56:12 tonio Exp $
+# $NetBSD: options.mk,v 1.22 2016/08/21 16:46:17 tnn Exp $
 
 # Global and legacy options
 
@@ -11,9 +11,6 @@ PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
 PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
-# un-comment out the following lines whenever updating distinfo
-# and patches are up-to-date
-#PKG_SUGGESTED_OPTIONS+=	mutt-sidebar
 
 .include "../../mk/bsd.options.mk"
 
@@ -120,7 +117,8 @@ CONFIGURE_ARGS+=	--disable-hcache
 ### Compressed mail boxes
 ###
 PLIST_VARS+=		compressed_mbox
-.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
+.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)	\
+	|| make(distinfo) || make(mps) || make(makepatchsum)
 PLIST.compressed_mbox=	yes
 #PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
 #PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
@@ -153,7 +151,8 @@ CONFIGURE_ARGS+=	--disable-smtp
 ###
 ### Sidebar support
 ###
-.if !empty(PKG_OPTIONS:Mmutt-sidebar)
+.if !empty(PKG_OPTIONS:Mmutt-sidebar)	\
+	|| make(distinfo) || make(mps) || make(makepatchsum)
 # http://www.lunar-linux.org/mutt-sidebar/
 PATCH_SITES+=		http://lunar-linux.org/~tchan/mutt/
 PATCHFILES+=		patch-1.5.23.sidebar.20140412.txt
