@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/26 09:49:49 markd Exp $
+$NetBSD: distinfo,v 1.2 2016/08/21 21:29:46 markd Exp $
 
-SHA1 (kwindowsystem-5.21.0.tar.xz) = a72fcb501d8f4c539d88ba6b13e3ae178e958281
-RMD160 (kwindowsystem-5.21.0.tar.xz) = e1907282afb1d0453de925b5c5fa8dd1c5c22b17
-SHA512 (kwindowsystem-5.21.0.tar.xz) = 84301a634f7221f1c127af86005319418643693b989c9c3894798998d2562b901a266e06e5d7554ae3767d024df2d1bf3ab81b255339b73e43e0adbac987e800
-Size (kwindowsystem-5.21.0.tar.xz) = 163836 bytes
+SHA1 (kwindowsystem-5.25.0.tar.xz) = daa07474df69fd66bff1a20805331ebf58214835
+RMD160 (kwindowsystem-5.25.0.tar.xz) = 1ad06a791ac2609c5bb3e051a678dde0ba8ebb7b
+SHA512 (kwindowsystem-5.25.0.tar.xz) = 700c9cbde6329363d39fe6583c808d438c8f559a648dca641dfc719511c407dc0b6911a37d9e81f8a81e0a39e12be4bdc373083935073751164615711878b6b0
+Size (kwindowsystem-5.25.0.tar.xz) = 166456 bytes
