@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/08/10 09:20:08 prlw1 Exp $
+$NetBSD: distinfo,v 1.8 2016/08/21 07:42:18 prlw1 Exp $
 
-SHA1 (gnome-calculator-3.20.2.tar.xz) = 32f1a625dcfbd1b0426a1a2684b14fa05f0e3370
-RMD160 (gnome-calculator-3.20.2.tar.xz) = 527385d97242ebfe5f73f75f5ffba34474b07cd2
-SHA512 (gnome-calculator-3.20.2.tar.xz) = c850d252a5d5505e6e32ec4db2299479a1ea35144ddd1fafb10b0acdfb840fd9d25b073eb6f9bfe0a29c9c8483a76a40c53c5bce1db4ed3c80ed963d2f35093b
-Size (gnome-calculator-3.20.2.tar.xz) = 1347584 bytes
+SHA1 (gnome-calculator-3.21.90.tar.xz) = dfe97a9e3e0de47e38f97de01333f5ddb2f0bc8b
+RMD160 (gnome-calculator-3.21.90.tar.xz) = c451a1b18f93183a051ecbadd8aa0d3f52d6fdbd
+SHA512 (gnome-calculator-3.21.90.tar.xz) = a1bc0d2e95099a1a40ba6ddd3000c85e0f2f6374ea4e32e40b0f7c09328e50acfc2877daddc0e3a3cc36c8ec507deba8a3e699eab27ad2c65df19a75c6213e12
+Size (gnome-calculator-3.21.90.tar.xz) = 1352456 bytes
