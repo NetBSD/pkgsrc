@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/20 09:13:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/21 11:35:39 wiz Exp $
 bin/mutt
 bin/mutt_dotlock
 bin/pgpewrap
@@ -76,10 +76,10 @@ share/doc/neomutt/smime-notes.txt
 share/doc/neomutt/tuning.html
 share/doc/neomutt/vim-keybindings/README.md
 share/doc/neomutt/vim-keybindings/vim-keybindings.rc
-share/examples/mutt/Muttrc
-share/examples/mutt/Muttrc.dist
-share/examples/mutt/mime.types
-share/examples/mutt/mime.types.dist
+share/examples/neomutt/Muttrc
+share/examples/neomutt/Muttrc.dist
+share/examples/neomutt/mime.types
+share/examples/neomutt/mime.types.dist
 share/locale/bg/LC_MESSAGES/neomutt.mo
 share/locale/ca/LC_MESSAGES/neomutt.mo
 share/locale/cs/LC_MESSAGES/neomutt.mo
