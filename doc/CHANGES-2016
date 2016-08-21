@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3471 2016/08/21 06:02:07 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3472 2016/08/21 07:08:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/ruby-actionmailer32 to 3.2.22.4 [taca 2016-08-21]
 	Updated devel/ruby-railties32 to 3.2.22.4 [taca 2016-08-21]
 	Updated www/ruby-rails32 to 3.2.22.4 [taca 2016-08-21]
+	Updated devel/p5-CPAN-Meta to 2.150010 [wiz 2016-08-21]
