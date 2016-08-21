@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 09:17:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:24:50 markd Exp $
 include/KF5/KFileMetaData/KFileMetaData/ExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/Extractor
 include/KF5/KFileMetaData/KFileMetaData/ExtractorCollection
@@ -9,6 +9,10 @@ include/KF5/KFileMetaData/KFileMetaData/SimpleExtractionResult
 include/KF5/KFileMetaData/KFileMetaData/TypeInfo
 include/KF5/KFileMetaData/KFileMetaData/Types
 include/KF5/KFileMetaData/KFileMetaData/UserMetaData
+include/KF5/KFileMetaData/KFileMetaData/WriteData
+include/KF5/KFileMetaData/KFileMetaData/Writer
+include/KF5/KFileMetaData/KFileMetaData/WriterCollection
+include/KF5/KFileMetaData/KFileMetaData/WriterPlugin
 include/KF5/KFileMetaData/kfilemetadata/extractionresult.h
 include/KF5/KFileMetaData/kfilemetadata/extractor.h
 include/KF5/KFileMetaData/kfilemetadata/extractorcollection.h
@@ -20,6 +24,10 @@ include/KF5/KFileMetaData/kfilemetadata/simpleextractionresult.h
 include/KF5/KFileMetaData/kfilemetadata/typeinfo.h
 include/KF5/KFileMetaData/kfilemetadata/types.h
 include/KF5/KFileMetaData/kfilemetadata/usermetadata.h
+include/KF5/KFileMetaData/kfilemetadata/writedata.h
+include/KF5/KFileMetaData/kfilemetadata/writer.h
+include/KF5/KFileMetaData/kfilemetadata/writercollection.h
+include/KF5/KFileMetaData/kfilemetadata/writerplugin.h
 lib/cmake/KF5FileMetaData/KF5FileMetaDataConfig.cmake
 lib/cmake/KF5FileMetaData/KF5FileMetaDataConfigVersion.cmake
 lib/cmake/KF5FileMetaData/KF5FileMetaDataTargets-noconfig.cmake
@@ -37,6 +45,7 @@ qt5/plugins/kf5/kfilemetadata/kfilemetadata_plaintextextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_poextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_popplerextractor.so
 qt5/plugins/kf5/kfilemetadata/kfilemetadata_taglibextractor.so
+qt5/plugins/kf5/kfilemetadata/writers/kfilemetadata_taglibwriter.so
 share/locale/ar/LC_MESSAGES/kfilemetadata.mo
 share/locale/ast/LC_MESSAGES/kfilemetadata.mo
 share/locale/bg/LC_MESSAGES/kfilemetadata.mo
