@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.797 2016/06/12 20:32:59 kamil Exp $
+# $NetBSD: Makefile,v 1.798 2016/08/21 22:21:41 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -269,6 +269,7 @@ SUBDIR+=	kded
 SUBDIR+=	kdelibdocs3
 SUBDIR+=	kdelibs3
 SUBDIR+=	kdelibs4
+SUBDIR+=	kdelibs4support
 SUBDIR+=	kdesignerplugin
 SUBDIR+=	keybinder
 SUBDIR+=	keylaunch
