@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/10 23:55:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/21 19:14:07 fhajny Exp $
 include/dbi/dbd.h
 include/dbi/dbi-dev.h
 include/dbi/dbi.h
 lib/libdbi.la
+lib/pkgconfig/dbi.pc
