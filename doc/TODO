@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16315 2016/08/21 12:08:01 wiz Exp $
+$NetBSD: TODO,v 1.16316 2016/08/21 12:25:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -390,6 +390,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
+	o afl-2.32b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -565,6 +566,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dateutils-0.4.0
 	o davical-1.1.4
+	o dbus-1.10.10
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
@@ -823,6 +825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gss-1.0.3
 	o gst-rtsp-server-1.6.2
 	o gst123-0.3.4
+	o gstreamer1-1.8.3
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -1134,6 +1137,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mousetweaks-3.12.0 [wip]
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
+	o mpc-0.28
 	o mpdas-0.4.1
 	o mpeg4ip-1.6.1
 	o mpv-0.19.0 [leot]
@@ -1181,6 +1185,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
 	o ocaml-graphics-4.02.3
+	o ocaml-lablgtk-2.18.5
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
 	o olvwm-4.5
@@ -1359,6 +1364,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.19
 	o py-acora-1.9
 	o py-apache-libcloud-0.20.1
+	o py-atomicwrites-1.1.5
+	o py-betamax-0.8.0
 	o py-bleach-1.4.2
 	o py-bsddb3-6.1.1
 	o py-buildbot-0.9.0b5
@@ -1390,6 +1397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-keybinder-0.3.1
 	o py-lasso-2.5.1
 	o py-lupa-1.2
+	o py-lxml-3.6.4
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-mccabe-0.4.0
@@ -1408,11 +1416,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-pycountry-1.20
 	o py-quixote-2.9
-	o py-radare2-0.10.4
+	o py-radare2-0.10.5
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-scgi-1.15
 	o py-serpent-1.12
+	o py-setuptools-26.0.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
@@ -1422,19 +1431,22 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-static-1.1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-test-3.0.0
 	o py-test-cov-2.3.1
 	o py-test-httpbin-0.2.3
 	o py-test-runner-2.9
 	o py-tlslite-0.4.6
 	o py-tornado-4.4.1
-	o py-twisted-16.3.0
+	o py-twisted-16.3.2
 	o py-uwsgi-2.0.12
+	o py-vdirsyncer-0.12.1
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
 	o pythontidy-1.23
 	o qbzr-0.22.4
 	o qcad-3.15.4.1
+	o qemu-2.6.1
 	o qgis-2.14.0
 	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4
@@ -1442,7 +1454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt5-5.7.0
 	o qt5-qtbase-5.7.0
 	o quodlibet2-3.5.3
-	o radare2-0.10.4
+	o radare2-0.10.5
 	o radiance-4R1
 	o ragel-7.0.0.6
 	o rails-4.1.5
@@ -1718,7 +1730,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160813
+	o x264-devel-20160820
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
