@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3495 2016/08/21 19:18:32 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3496 2016/08/21 19:59:24 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4951,3 +4951,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/libdbi-driver-pgsql to 0.9.0 [fhajny 2016-08-21]
 	Updated databases/libdbi-driver-sqlite to 0.9.0 [fhajny 2016-08-21]
 	Updated databases/libdbi-driver-sqlite3 to 0.9.0 [fhajny 2016-08-21]
+	Added net/aws-sdk-go version 1.4.3 [bsiegert 2016-08-21]
