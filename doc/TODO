@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16310 2016/08/21 09:57:44 bsiegert Exp $
+$NetBSD: TODO,v 1.16311 2016/08/21 10:55:15 leot Exp $
 
 Suggested new packages
 ======================
@@ -426,6 +426,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o argon2-20151206
 	o argtable-2.9
 	o argus-20121202
+	o aria2-1.26.0
 	o aribas-1.64
 	o arirang-1.70
 	o arnold-20040104
@@ -535,6 +536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o covered-0.7.10
 	o covered-current-20091126
 	o cpmtools-2.20
+	o cppcheck-1.75
 	o crack-attack-1.1.15
 	o crafty-25.0.1
 	o crimsonfields-0.5.3
@@ -584,6 +586,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.5
 	o dropbear-2016.72
 	o drupal-8.0.3
+	o dtach-0.9
 	o dvdisaster-0.79.5
 	o dvdstyler-2.9.6
 	o easymenu-0.7.2p1
@@ -953,6 +956,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jools-1.0
 	o jove-4.16.0.73
 	o jpilot-syncmal-0.81
+	o jwm-2.3.6
 	o kadu-0.11.1
 	o kaffe-1.1.9
 	o kapooka-0.3
@@ -1134,6 +1138,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
 	o mpeg4ip-1.6.1
+	o mpv-0.19.0 [leot]
 	o mserv-devel-0.41
 	o msgpack-1.4.1 [pkg/51083]
 	o multitail-6.4.2
@@ -1629,7 +1634,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thaixfonts-1.2.7
 	o thttpd-2.27
 	o tidy-5.1.25 [wip]
-	o tig-2.1.1
+	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.2
