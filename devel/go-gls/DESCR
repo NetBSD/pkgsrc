@@ -1,0 +1,11 @@
+Every so often, a thread shows up on the golang-nuts asking for some form of
+goroutine-local-storage, or some kind of goroutine id, or some kind of context.
+There are a few valid use cases for goroutine-local-storage, one of the most
+prominent being log line context. One poster was interested in being able to
+log an HTTP request context id in every log line in the same goroutine as the
+incoming HTTP request, without having to change every library and function call
+he was interested in logging.
+
+It is my duty to point you to https://blog.golang.org/context, which is how
+Google solves all of the problems you'd perhaps consider using this package for
+at scale.
