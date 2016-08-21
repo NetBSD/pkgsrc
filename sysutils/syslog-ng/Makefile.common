@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.2 2016/02/26 10:24:13 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.3 2016/08/21 20:18:30 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
-DISTNAME=	syslog-ng-3.7.2
+DISTNAME=	syslog-ng-3.8.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
 
@@ -25,6 +25,7 @@ CHECK_PORTABILITY_SKIP+=	debian/syslog-ng.init
 
 CONFIGURE_ARGS+=	--disable-amqp
 CONFIGURE_ARGS+=	--disable-geoip
+CONFIGURE_ARGS+=	--disable-http
 CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-json
@@ -41,7 +42,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/db/syslog-ng
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ivykis=${BUILDLINK_PREFIX.ivykis}
 CONFIGURE_ARGS+=	--with-jsonc=no
-CONFIGURE_ARGS+=	--with-libmongo-client=no
+CONFIGURE_ARGS+=	--with-mongoc=no
 CONFIGURE_ARGS+=	--with-librabbitmq-client=no
 CONFIGURE_ARGS+=	--with-pidfile-dir=${VARBASE}/run
 
