@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/08/17 00:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/21 21:24:50 markd Exp $
 
 DISTNAME=	kfilemetadata-${KF5VER}
 PKGNAME=	${DISTNAME:S/-/5-/}
-PKGREVISION=	2
 CATEGORIES=	sysutils
 
 HOMEPAGE=	https://community.kde.org/Frameworks
@@ -13,6 +12,8 @@ LICENSE=	gnu-lgpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
 
 USE_TOOLS+=	msgmerge pkg-config
 
+DEPENDS+=	catdoc-[0-9]*:../../textproc/catdoc
+
 .include "../../lang/python/tool.mk"
 .include "../../archivers/karchive/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
@@ -20,6 +21,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../print/poppler-qt5/buildlink3.mk"
+.include "../../sysutils/attr/buildlink3.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
