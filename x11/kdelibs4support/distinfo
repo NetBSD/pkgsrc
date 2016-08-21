@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/08/21 22:20:43 markd Exp $
+
+SHA1 (kdelibs4support-5.25.0.tar.xz) = c96b4791e7ecf6623757c7696c56b1c30b28e7b5
+RMD160 (kdelibs4support-5.25.0.tar.xz) = 0a1319c8e1b8ffaaa9c72909ec1a943586a42676
+SHA512 (kdelibs4support-5.25.0.tar.xz) = 985f8dd073dc14683bbd892f3e55cab9d6e2a20a650b2431efcf3cdd9659f1671663283614f6e01e923d3babea95414e2d97b629e35ea3796955e4e876dd8541
+Size (kdelibs4support-5.25.0.tar.xz) = 3303312 bytes
+SHA1 (patch-src_CMakeLists.txt) = bf7e4f0c63317cafa4c6c04c1b08989406fcdd1a
+SHA1 (patch-src_kssl_kssl_CMakeLists.txt) = 06036c0e26012df88a420145fbf0213e573e1c81
