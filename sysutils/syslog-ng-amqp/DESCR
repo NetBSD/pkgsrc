@@ -1,0 +1,6 @@
+Syslog-ng tries to fill the gaps original syslogd's were lacking:
+	* powerful configurability
+	* filtering based on message content
+	* message integrity, message encryption
+	* portability
+	* better network forwarding
