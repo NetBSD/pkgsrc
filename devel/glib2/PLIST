@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2016/05/27 08:19:27 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.88 2016/08/21 21:47:29 prlw1 Exp $
 bin/gapplication
 bin/gdbus
 bin/gio-querymodules
@@ -290,8 +290,8 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.4800.1-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.4800.1-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.4800.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.4800.2-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib.py
