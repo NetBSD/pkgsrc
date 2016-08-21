@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2015/10/04 11:03:41 taca Exp $
+# $NetBSD: Makefile,v 1.37 2016/08/21 08:33:58 taca Exp $
 
-DISTNAME=	hoe-3.14.2
+DISTNAME=	hoe-3.15.1
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
