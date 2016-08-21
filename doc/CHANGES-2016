@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3481 2016/08/21 08:34:28 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3482 2016/08/21 09:15:09 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4935,3 +4935,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/ruby-sequel to 4.37.0 [taca 2016-08-21]
 	Updated devel/ZenTest to 4.11.1 [taca 2016-08-21]
 	Updated devel/hoe to 3.15.1 [taca 2016-08-21]
+	Added devel/go-gls version 4.2.0 [bsiegert 2016-08-21]
