@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/21 09:14:25 bsiegert Exp $
+
+SHA1 (gls-4.2.0.tar.gz) = 6fa513402b6571eaa564cee4f27b5261de49cae1
+RMD160 (gls-4.2.0.tar.gz) = 5079484ad141a888941ab1648d772f8b94302cd5
+SHA512 (gls-4.2.0.tar.gz) = 1bf9e8c7ab69c8754173129f16b1ac81e2635c75cbdfd9be34ca019b47a64ce489f29bdef3c35c2ef2e9ea60ba441b6b5f1417eec393733bc6dc62f9e017adc3
+Size (gls-4.2.0.tar.gz) = 6464 bytes
