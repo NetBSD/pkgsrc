@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/29 16:34:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/21 20:18:30 fhajny Exp $
 
 SYSLOG_MOD=		mongodb
 SYSLOG_MOD_DIR=		afmongodb
@@ -6,7 +6,7 @@ COMMENT=		Syslog-ng MongoDB module
 
 .include "../../sysutils/syslog-ng/Makefile.module"
 
-CONFIGURE_ARGS+=	--with-libmongo-client=system
+CONFIGURE_ARGS+=	--with-mongoc=system
 
-.include "../../databases/libmongo-client/buildlink3.mk"
+.include "../../databases/mongo-c-driver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
