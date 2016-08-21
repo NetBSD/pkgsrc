@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/21 16:40:10 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2016/08/21 21:34:57 alnsn Exp $
 #
 
 DISTNAME=	LuaJIT-2.0.4
@@ -13,6 +13,8 @@ COMMENT=	Just-In-Time Compiler for the Lua programming language
 LICENSE=	mit
 
 USE_TOOLS+=	gmake
+
+NOT_PAX_MPROTECT_SAFE+=	bin/luajit
 
 # Address pkg/47587 lua not linked to pthread causes issues with modules
 PTHREAD_OPTS+=		native
