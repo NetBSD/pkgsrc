@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1127 2016/08/01 09:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.1128 2016/08/21 19:54:07 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -33,6 +33,7 @@ SUBDIR+=	arpwatch
 SUBDIR+=	autonet
 SUBDIR+=	avahi
 SUBDIR+=	awhois
+SUBDIR+=	aws-sdk-go
 SUBDIR+=	balance
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
