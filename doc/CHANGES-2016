@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3491 2016/08/21 11:48:44 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3492 2016/08/21 12:08:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4944,3 +4944,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/neomutt to 20160820nb1 [wiz 2016-08-21]
 	Updated mail/mutt to 1.7.0 [wiz 2016-08-21]
 	Updated multimedia/x265 to 2.0 [adam 2016-08-21]
+	Updated finance/moneyguru to 2.10.1 [wiz 2016-08-21]
