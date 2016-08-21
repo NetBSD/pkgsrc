@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.8 2011/03/23 15:53:34 taca Exp $
-bin/autotest
-bin/multigem
-bin/multiruby
-bin/multiruby_setup
-bin/unit_diff
-bin/zentest
+@comment $NetBSD: PLIST,v 1.9 2016/08/21 08:31:41 taca Exp $
+bin/autotest${RUBY_SUFFIX}
+bin/multigem${RUBY_SUFFIX}
+bin/multiruby${RUBY_SUFFIX}
+bin/multiruby_setup${RUBY_SUFFIX}
+bin/unit_diff${RUBY_SUFFIX}
+bin/zentest${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
