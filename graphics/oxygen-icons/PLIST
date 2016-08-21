@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.23 2016/04/26 09:27:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/08/21 21:19:53 markd Exp $
 share/icons/oxygen/base/128x128/actions/address-book-new.png
 share/icons/oxygen/base/128x128/actions/application-exit.png
+share/icons/oxygen/base/128x128/actions/application-menu.png
 share/icons/oxygen/base/128x128/actions/appointment-new.png
 share/icons/oxygen/base/128x128/actions/bookmark-new.png
 share/icons/oxygen/base/128x128/actions/call-start.png
@@ -793,11 +794,13 @@ share/icons/oxygen/base/128x128/status/weather-clouds-night.png
 share/icons/oxygen/base/128x128/status/weather-clouds.png
 share/icons/oxygen/base/128x128/status/weather-few-clouds-night.png
 share/icons/oxygen/base/128x128/status/weather-few-clouds.png
+share/icons/oxygen/base/128x128/status/weather-fog.png
 share/icons/oxygen/base/128x128/status/weather-freezing-rain.png
 share/icons/oxygen/base/128x128/status/weather-hail.png
 share/icons/oxygen/base/128x128/status/weather-many-clouds.png
 share/icons/oxygen/base/128x128/status/weather-mist.png
 share/icons/oxygen/base/128x128/status/weather-none-available.png
+share/icons/oxygen/base/128x128/status/weather-overcast.png
 share/icons/oxygen/base/128x128/status/weather-showers-day.png
 share/icons/oxygen/base/128x128/status/weather-showers-night.png
 share/icons/oxygen/base/128x128/status/weather-showers-scattered-day.png
@@ -846,6 +849,7 @@ share/icons/oxygen/base/16x16/actions/amarok_playlist_refresh.png
 share/icons/oxygen/base/16x16/actions/answer-correct.png
 share/icons/oxygen/base/16x16/actions/answer.png
 share/icons/oxygen/base/16x16/actions/application-exit.png
+share/icons/oxygen/base/16x16/actions/application-menu.png
 share/icons/oxygen/base/16x16/actions/applications-internet.png
 share/icons/oxygen/base/16x16/actions/appointment-new.png
 share/icons/oxygen/base/16x16/actions/archive-extract.png
@@ -1522,7 +1526,6 @@ share/icons/oxygen/base/16x16/actions/text-field.png
 share/icons/oxygen/base/16x16/actions/text-frame-link.png
 share/icons/oxygen/base/16x16/actions/text-frame-unlink.png
 share/icons/oxygen/base/16x16/actions/text-speak.png
-share/icons/oxygen/base/16x16/actions/text.png
 share/icons/oxygen/base/16x16/actions/text_subscript.png
 share/icons/oxygen/base/16x16/actions/text_superscript.png
 share/icons/oxygen/base/16x16/actions/tool-animator.png
@@ -2493,10 +2496,12 @@ share/icons/oxygen/base/16x16/status/weather-clouds-night.png
 share/icons/oxygen/base/16x16/status/weather-clouds.png
 share/icons/oxygen/base/16x16/status/weather-few-clouds-night.png
 share/icons/oxygen/base/16x16/status/weather-few-clouds.png
+share/icons/oxygen/base/16x16/status/weather-fog.png
 share/icons/oxygen/base/16x16/status/weather-freezing-rain.png
 share/icons/oxygen/base/16x16/status/weather-hail.png
 share/icons/oxygen/base/16x16/status/weather-many-clouds.png
 share/icons/oxygen/base/16x16/status/weather-mist.png
+share/icons/oxygen/base/16x16/status/weather-overcast.png
 share/icons/oxygen/base/16x16/status/weather-showers-day.png
 share/icons/oxygen/base/16x16/status/weather-showers-night.png
 share/icons/oxygen/base/16x16/status/weather-showers-scattered-day.png
@@ -2508,6 +2513,7 @@ share/icons/oxygen/base/16x16/status/weather-snow-scattered-day.png
 share/icons/oxygen/base/16x16/status/weather-snow-scattered-night.png
 share/icons/oxygen/base/16x16/status/weather-snow-scattered.png
 share/icons/oxygen/base/16x16/status/weather-snow.png
+share/icons/oxygen/base/16x16/status/weather-storm-night.png
 share/icons/oxygen/base/16x16/status/weather-storm.png
 share/icons/oxygen/base/16x16/status/window-suppressed.png
 share/icons/oxygen/base/22x22/actions/CVnamespace.png
@@ -2543,6 +2549,7 @@ share/icons/oxygen/base/22x22/actions/amarok_playlist_refresh.png
 share/icons/oxygen/base/22x22/actions/answer-correct.png
 share/icons/oxygen/base/22x22/actions/answer.png
 share/icons/oxygen/base/22x22/actions/application-exit.png
+share/icons/oxygen/base/22x22/actions/application-menu.png
 share/icons/oxygen/base/22x22/actions/applications-internet.png
 share/icons/oxygen/base/22x22/actions/appointment-new.png
 share/icons/oxygen/base/22x22/actions/archive-extract.png
@@ -3223,7 +3230,6 @@ share/icons/oxygen/base/22x22/actions/text-field.png
 share/icons/oxygen/base/22x22/actions/text-frame-link.png
 share/icons/oxygen/base/22x22/actions/text-frame-unlink.png
 share/icons/oxygen/base/22x22/actions/text-speak.png
-share/icons/oxygen/base/22x22/actions/text.png
 share/icons/oxygen/base/22x22/actions/tool-animator.png
 share/icons/oxygen/base/22x22/actions/tool-node-editor.png
 share/icons/oxygen/base/22x22/actions/tool_brush.png
@@ -4225,6 +4231,10 @@ share/icons/oxygen/base/22x22/status/task-ongoing.png
 share/icons/oxygen/base/22x22/status/task-recurring.png
 share/icons/oxygen/base/22x22/status/task-reject.png
 share/icons/oxygen/base/22x22/status/task-reminder.png
+share/icons/oxygen/base/22x22/status/update-high.png
+share/icons/oxygen/base/22x22/status/update-low.png
+share/icons/oxygen/base/22x22/status/update-medium.png
+share/icons/oxygen/base/22x22/status/update-none.png
 share/icons/oxygen/base/22x22/status/user-away-extended.png
 share/icons/oxygen/base/22x22/status/user-away.png
 share/icons/oxygen/base/22x22/status/user-busy.png
@@ -4240,10 +4250,12 @@ share/icons/oxygen/base/22x22/status/weather-clouds-night.png
 share/icons/oxygen/base/22x22/status/weather-clouds.png
 share/icons/oxygen/base/22x22/status/weather-few-clouds-night.png
 share/icons/oxygen/base/22x22/status/weather-few-clouds.png
+share/icons/oxygen/base/22x22/status/weather-fog.png
 share/icons/oxygen/base/22x22/status/weather-freezing-rain.png
 share/icons/oxygen/base/22x22/status/weather-hail.png
 share/icons/oxygen/base/22x22/status/weather-many-clouds.png
 share/icons/oxygen/base/22x22/status/weather-mist.png
+share/icons/oxygen/base/22x22/status/weather-overcast.png
 share/icons/oxygen/base/22x22/status/weather-showers-day.png
 share/icons/oxygen/base/22x22/status/weather-showers-night.png
 share/icons/oxygen/base/22x22/status/weather-showers-scattered-day.png
@@ -4255,6 +4267,7 @@ share/icons/oxygen/base/22x22/status/weather-snow-scattered-day.png
 share/icons/oxygen/base/22x22/status/weather-snow-scattered-night.png
 share/icons/oxygen/base/22x22/status/weather-snow-scattered.png
 share/icons/oxygen/base/22x22/status/weather-snow.png
+share/icons/oxygen/base/22x22/status/weather-storm-night.png
 share/icons/oxygen/base/22x22/status/weather-storm.png
 share/icons/oxygen/base/22x22/status/window-suppressed.png
 share/icons/oxygen/base/256x256/actions/archive-insert-directory.png
@@ -4824,6 +4837,7 @@ share/icons/oxygen/base/32x32/actions/align-vertical-bottom.png
 share/icons/oxygen/base/32x32/actions/align-vertical-center.png
 share/icons/oxygen/base/32x32/actions/align-vertical-top.png
 share/icons/oxygen/base/32x32/actions/application-exit.png
+share/icons/oxygen/base/32x32/actions/application-menu.png
 share/icons/oxygen/base/32x32/actions/appointment-new.png
 share/icons/oxygen/base/32x32/actions/archive-extract.png
 share/icons/oxygen/base/32x32/actions/archive-insert-directory.png
@@ -6225,11 +6239,13 @@ share/icons/oxygen/base/32x32/status/weather-clouds-night.png
 share/icons/oxygen/base/32x32/status/weather-clouds.png
 share/icons/oxygen/base/32x32/status/weather-few-clouds-night.png
 share/icons/oxygen/base/32x32/status/weather-few-clouds.png
+share/icons/oxygen/base/32x32/status/weather-fog.png
 share/icons/oxygen/base/32x32/status/weather-freezing-rain.png
 share/icons/oxygen/base/32x32/status/weather-hail.png
 share/icons/oxygen/base/32x32/status/weather-many-clouds.png
 share/icons/oxygen/base/32x32/status/weather-mist.png
 share/icons/oxygen/base/32x32/status/weather-none-available.png
+share/icons/oxygen/base/32x32/status/weather-overcast.png
 share/icons/oxygen/base/32x32/status/weather-showers-day.png
 share/icons/oxygen/base/32x32/status/weather-showers-night.png
 share/icons/oxygen/base/32x32/status/weather-showers-scattered-day.png
@@ -6241,6 +6257,7 @@ share/icons/oxygen/base/32x32/status/weather-snow-scattered-day.png
 share/icons/oxygen/base/32x32/status/weather-snow-scattered-night.png
 share/icons/oxygen/base/32x32/status/weather-snow-scattered.png
 share/icons/oxygen/base/32x32/status/weather-snow.png
+share/icons/oxygen/base/32x32/status/weather-storm-night.png
 share/icons/oxygen/base/32x32/status/weather-storm.png
 share/icons/oxygen/base/32x32/status/window-suppressed.png
 share/icons/oxygen/base/48x48/actions/address-book-new.png
@@ -6255,6 +6272,7 @@ share/icons/oxygen/base/48x48/actions/align-vertical-bottom.png
 share/icons/oxygen/base/48x48/actions/align-vertical-center.png
 share/icons/oxygen/base/48x48/actions/align-vertical-top.png
 share/icons/oxygen/base/48x48/actions/application-exit.png
+share/icons/oxygen/base/48x48/actions/application-menu.png
 share/icons/oxygen/base/48x48/actions/appointment-new.png
 share/icons/oxygen/base/48x48/actions/archive-extract.png
 share/icons/oxygen/base/48x48/actions/archive-insert-directory.png
@@ -7595,10 +7613,12 @@ share/icons/oxygen/base/48x48/status/weather-clouds-night.png
 share/icons/oxygen/base/48x48/status/weather-clouds.png
 share/icons/oxygen/base/48x48/status/weather-few-clouds-night.png
 share/icons/oxygen/base/48x48/status/weather-few-clouds.png
+share/icons/oxygen/base/48x48/status/weather-fog.png
 share/icons/oxygen/base/48x48/status/weather-freezing-rain.png
 share/icons/oxygen/base/48x48/status/weather-hail.png
 share/icons/oxygen/base/48x48/status/weather-many-clouds.png
 share/icons/oxygen/base/48x48/status/weather-mist.png
+share/icons/oxygen/base/48x48/status/weather-overcast.png
 share/icons/oxygen/base/48x48/status/weather-showers-day.png
 share/icons/oxygen/base/48x48/status/weather-showers-night.png
 share/icons/oxygen/base/48x48/status/weather-showers-scattered-day.png
@@ -7615,6 +7635,7 @@ share/icons/oxygen/base/48x48/status/weather-storm-night.png
 share/icons/oxygen/base/48x48/status/weather-storm.png
 share/icons/oxygen/base/64x64/actions/address-book-new.png
 share/icons/oxygen/base/64x64/actions/application-exit.png
+share/icons/oxygen/base/64x64/actions/application-menu.png
 share/icons/oxygen/base/64x64/actions/appointment-new.png
 share/icons/oxygen/base/64x64/actions/bookmark-new.png
 share/icons/oxygen/base/64x64/actions/call-start.png
@@ -8403,10 +8424,12 @@ share/icons/oxygen/base/64x64/status/weather-clouds-night.png
 share/icons/oxygen/base/64x64/status/weather-clouds.png
 share/icons/oxygen/base/64x64/status/weather-few-clouds-night.png
 share/icons/oxygen/base/64x64/status/weather-few-clouds.png
+share/icons/oxygen/base/64x64/status/weather-fog.png
 share/icons/oxygen/base/64x64/status/weather-freezing-rain.png
 share/icons/oxygen/base/64x64/status/weather-hail.png
 share/icons/oxygen/base/64x64/status/weather-many-clouds.png
 share/icons/oxygen/base/64x64/status/weather-mist.png
+share/icons/oxygen/base/64x64/status/weather-overcast.png
 share/icons/oxygen/base/64x64/status/weather-showers-day.png
 share/icons/oxygen/base/64x64/status/weather-showers-night.png
 share/icons/oxygen/base/64x64/status/weather-showers-scattered-day.png
