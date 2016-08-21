@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 09:49:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:29:45 markd Exp $
+bin/kactivities-cli
 include/KF5/KActivities/KActivities/ActivitiesModel
 include/KF5/KActivities/KActivities/Consumer
 include/KF5/KActivities/KActivities/Controller
