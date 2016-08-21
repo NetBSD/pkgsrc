@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.9 2015/09/03 14:49:02 wiz Exp $
+$NetBSD: patch-al,v 1.10 2016/08/21 11:39:31 wiz Exp $
 
---- configure.orig	2010-08-25 16:31:47.000000000 +0000
+--- configure.orig	2016-08-18 01:56:27.000000000 +0000
 +++ configure
-@@ -7836,7 +7836,7 @@ fi
+@@ -8355,7 +8355,7 @@ fi
  
          old_LIBS="$LIBS"
          LIBS="$LIBS $MUTTLIBS"
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.9 2015/09/03 14:49:02 wiz Exp $
  do
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_func declaration" >&5
-@@ -8856,7 +8856,7 @@ fi
+@@ -9412,7 +9412,7 @@ fi
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
