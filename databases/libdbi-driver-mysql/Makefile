@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/09/13 12:19:50 obache Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/21 19:16:57 fhajny Exp $
 #
 
 .include "../../databases/libdbi-driver-sqlite3/Makefile_drivers"
 
-PKGREVISION=		4
-LICENSE=		gnu-lgpl-v2
+LICENSE=		gnu-lgpl-v2.1
 
 DRIVER=			mysql
 

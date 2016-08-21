@@ -1,7 +1,7 @@
-# $NetBSD: Makefile_drivers,v 1.3 2012/10/02 21:25:20 asau Exp $
+# $NetBSD: Makefile_drivers,v 1.4 2016/08/21 19:16:58 fhajny Exp $
 #
 
-DISTNAME=	libdbi-drivers-0.8.3-1
+DISTNAME=	libdbi-drivers-0.9.0
 PKGNAME=	${DISTNAME:S/libdbi-drivers/libdbi-driver-${DRIVER}/:S/-1/.1/:S/-2/.2/}
 CATEGORIES=	databases devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdbi-drivers/}

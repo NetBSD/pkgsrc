@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:56:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/08/21 19:16:58 fhajny Exp $
 
-SHA1 (libdbi-drivers-0.8.3-1.tar.gz) = 599fbab115419e8fc88b3b31a38031584ee213b5
-RMD160 (libdbi-drivers-0.8.3-1.tar.gz) = e0aa9e67f6560fb44018b1d35d90d4ac21b48597
-SHA512 (libdbi-drivers-0.8.3-1.tar.gz) = c2cb76234b9137cc4a05af42a69ea7d5b08586287378406cbd4d114598598057f29cccb368bfbe0f86e19846ceab88ed636cccff6555ef9f7eebbb98bbcd3824
-Size (libdbi-drivers-0.8.3-1.tar.gz) = 1534420 bytes
-SHA1 (patch-configure) = 62230ebabedeb8eea10c915d8fc98b00e49c6b9a
+SHA1 (libdbi-drivers-0.9.0.tar.gz) = 8472875d30c216540d48d591b442e40ba4f7df5d
+RMD160 (libdbi-drivers-0.9.0.tar.gz) = 9252bf6885fc365f41f7d7321be0fd3ed90030d1
+SHA512 (libdbi-drivers-0.9.0.tar.gz) = f4d3aaa71014697c53012a10bf9f0af398bcf5ee5872af165f8f43a682d2fb3045a9172ffea0e068dcbfcad52494878c037d8d90fadfaf176936e42f7f1e85c1
+Size (libdbi-drivers-0.9.0.tar.gz) = 1829864 bytes
+SHA1 (patch-configure) = 8dc1180722e758e5835094d1e9522f082cbb582a
