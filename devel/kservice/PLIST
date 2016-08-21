@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/26 08:29:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:17:58 markd Exp $
 bin/kbuildsycoca5
 include/KF5/KService/KAutostart
 include/KF5/KService/KDBusServiceStarter
@@ -44,6 +44,7 @@ man/ca/man8/desktoptojson.8
 man/ca/man8/kbuildsycoca5.8
 man/de/man8/desktoptojson.8
 man/de/man8/kbuildsycoca5.8
+man/it/man8/desktoptojson.8
 man/it/man8/kbuildsycoca5.8
 man/man8/desktoptojson.8
 man/man8/kbuildsycoca5.8

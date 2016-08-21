@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/08/04 17:03:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/21 21:17:58 markd Exp $
 
 DISTNAME=	kitemmodels-${KF5VER}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 HOMEPAGE=	https://community.kde.org/Frameworks

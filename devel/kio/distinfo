@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2016/05/26 08:29:05 markd Exp $
+$NetBSD: distinfo,v 1.2 2016/08/21 21:17:58 markd Exp $
 
-SHA1 (kio-5.21.0.tar.xz) = ee3edfcc0d803fd3ff740519d8e79fb3357982bc
-RMD160 (kio-5.21.0.tar.xz) = 83001a461712bd2ae01104f1f4767c427351b373
-SHA512 (kio-5.21.0.tar.xz) = eda2733dcb024ac29aae5b3cbe05354ee5d4e726d82b82edf43616fa37bb7a4f7ce8315b9a60d31f64f9ce4d7c65c44ad4a4399820fd84455f4ba18ecefab7b6
-Size (kio-5.21.0.tar.xz) = 2895592 bytes
+SHA1 (kio-5.25.0.tar.xz) = 51c66b0a97fef34eafa1096c96f49763a1cc7aa7
+RMD160 (kio-5.25.0.tar.xz) = 32f028fe5f57ca87482cab4d2cae79462270b6be
+SHA512 (kio-5.25.0.tar.xz) = 21021aa702fe491b35e61b5f2f01f5eeb1ae8e03ac0fe9305fc0a251c41833b8304d313f71079cc24afb6ac809486ea7a594d343cecc51eca2519d2dd4dc3f22
+Size (kio-5.25.0.tar.xz) = 2951304 bytes
 SHA1 (patch-src_core_CMakeLists.txt) = 22b5462f69814c7a16f0645fb92d1ff9c2dfda0a
 SHA1 (patch-src_core_config-kmountpoint.h.cmake) = 7da0ea584a8c10b7b5476dd91f56a284869f056c
 SHA1 (patch-src_urifilters_shorturi_CMakeLists.txt) = f78ee0fbf172acdeb22e13759250714d0feb3f4f
