@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/07/24 00:48:16 kamil Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/08/21 01:32:45 kamil Exp $
 ${PYSITELIB}/OpenGL/AGL/__init__.py
 ${PYSITELIB}/OpenGL/AGL/__init__.pyc
 ${PYSITELIB}/OpenGL/AGL/__init__.pyo
@@ -7058,4 +7058,7 @@ ${PYSITELIB}/OpenGL/version.pyo
 ${PYSITELIB}/OpenGL/wrapper.py
 ${PYSITELIB}/OpenGL/wrapper.pyc
 ${PYSITELIB}/OpenGL/wrapper.pyo
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
