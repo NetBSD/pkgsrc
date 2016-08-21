@@ -566,6 +566,8 @@ oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
 otr			Enable Off-the-record encrypted messaging.
 p0f			Enable support for passive OS fingerprinting.
+p5-module-build-dist-authoring		Enable building distfiles.
+p5-module-build-license-creation	Enable license creation.
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
