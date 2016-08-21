@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3497 2016/08/21 20:26:36 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3498 2016/08/21 21:48:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4961,3 +4961,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/syslog-ng-sql to 3.8.1 [fhajny 2016-08-21]
 	Added sysutils/syslog-ng-amqp version 3.8.1 [fhajny 2016-08-21]
 	Added sysutils/syslog-ng-curl version 3.8.1 [fhajny 2016-08-21]
+	Updated devel/glib2 to 2.48.2 [prlw1 2016-08-21]
