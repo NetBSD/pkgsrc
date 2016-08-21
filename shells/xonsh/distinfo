@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2016/08/21 11:34:57 kamil Exp $
+
+SHA1 (xonsh-0.4.5.tar.gz) = bae4eb57f2e8be1e4c39e9b9afc99b9e1e6fabe6
+RMD160 (xonsh-0.4.5.tar.gz) = e1a1e80623a94198ce601065a956b932e2a20c7b
+SHA512 (xonsh-0.4.5.tar.gz) = a1ae8ba47cd9793c14309d81fbfcd24cd12f55cb42e1bee9f1c9657f33e30b8ead3d455781aaac8030dadaf2196fc061f6d5407d8baebeb8202ca6e3bf51a130
+Size (xonsh-0.4.5.tar.gz) = 1554875 bytes
+SHA1 (patch-news_netbsd.rst) = 34fb889ee241dd35c9b4e243711474b935616ac3
+SHA1 (patch-xonsh_aliases.py) = 584190affc8b591e31d2a0e313bd26b7080783f1
+SHA1 (patch-xonsh_platform.py) = 9ff701549ef5d4f17693b3d3d6df326911a7ea82
