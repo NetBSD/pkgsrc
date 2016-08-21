@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2015/12/05 21:31:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2016/08/21 07:41:25 wiz Exp $
 bin/gimp
 bin/gimp-2.8
 bin/gimp-console
@@ -1121,7 +1121,6 @@ share/gtk-doc/html/libgimp/GimpSelectButton.html
 share/gtk-doc/html/libgimp/GimpZoomPreview.html
 share/gtk-doc/html/libgimp/home.png
 share/gtk-doc/html/libgimp/index.html
-share/gtk-doc/html/libgimp/index.sgml
 share/gtk-doc/html/libgimp/left-insensitive.png
 share/gtk-doc/html/libgimp/left.png
 share/gtk-doc/html/libgimp/libgimp-Gimp.html
@@ -1210,7 +1209,6 @@ share/gtk-doc/html/libgimp/up-insensitive.png
 share/gtk-doc/html/libgimp/up.png
 share/gtk-doc/html/libgimpbase/home.png
 share/gtk-doc/html/libgimpbase/index.html
-share/gtk-doc/html/libgimpbase/index.sgml
 share/gtk-doc/html/libgimpbase/left-insensitive.png
 share/gtk-doc/html/libgimpbase/left.png
 share/gtk-doc/html/libgimpbase/libgimpbase-gimpbaseenums.html
@@ -1244,7 +1242,6 @@ share/gtk-doc/html/libgimpbase/up-insensitive.png
 share/gtk-doc/html/libgimpbase/up.png
 share/gtk-doc/html/libgimpcolor/home.png
 share/gtk-doc/html/libgimpcolor/index.html
-share/gtk-doc/html/libgimpcolor/index.sgml
 share/gtk-doc/html/libgimpcolor/left-insensitive.png
 share/gtk-doc/html/libgimpcolor/left.png
 share/gtk-doc/html/libgimpcolor/libgimpcolor-GimpAdaptiveSupersample.html
@@ -1271,7 +1268,6 @@ share/gtk-doc/html/libgimpcolor/up.png
 share/gtk-doc/html/libgimpconfig/GimpColorConfig.html
 share/gtk-doc/html/libgimpconfig/home.png
 share/gtk-doc/html/libgimpconfig/index.html
-share/gtk-doc/html/libgimpconfig/index.sgml
 share/gtk-doc/html/libgimpconfig/left-insensitive.png
 share/gtk-doc/html/libgimpconfig/left.png
 share/gtk-doc/html/libgimpconfig/libgimpconfig-GimpConfig-deserialize.html
@@ -1298,7 +1294,6 @@ share/gtk-doc/html/libgimpconfig/up-insensitive.png
 share/gtk-doc/html/libgimpconfig/up.png
 share/gtk-doc/html/libgimpmath/home.png
 share/gtk-doc/html/libgimpmath/index.html
-share/gtk-doc/html/libgimpmath/index.sgml
 share/gtk-doc/html/libgimpmath/left-insensitive.png
 share/gtk-doc/html/libgimpmath/left.png
 share/gtk-doc/html/libgimpmath/libgimpmath-GimpMD5.html
@@ -1321,7 +1316,6 @@ share/gtk-doc/html/libgimpmodule/GimpModule.html
 share/gtk-doc/html/libgimpmodule/GimpModuleDB.html
 share/gtk-doc/html/libgimpmodule/home.png
 share/gtk-doc/html/libgimpmodule/index.html
-share/gtk-doc/html/libgimpmodule/index.sgml
 share/gtk-doc/html/libgimpmodule/left-insensitive.png
 share/gtk-doc/html/libgimpmodule/left.png
 share/gtk-doc/html/libgimpmodule/libgimpmodule-index-deprecated.html
@@ -1340,7 +1334,6 @@ share/gtk-doc/html/libgimpmodule/up.png
 share/gtk-doc/html/libgimpthumb/GimpThumbnail.html
 share/gtk-doc/html/libgimpthumb/home.png
 share/gtk-doc/html/libgimpthumb/index.html
-share/gtk-doc/html/libgimpthumb/index.sgml
 share/gtk-doc/html/libgimpthumb/left-insensitive.png
 share/gtk-doc/html/libgimpthumb/left.png
 share/gtk-doc/html/libgimpthumb/libgimpthumb-GimpThumb-enums.html
@@ -1429,7 +1422,6 @@ share/gtk-doc/html/libgimpwidgets/gimp-string-combo-box.png
 share/gtk-doc/html/libgimpwidgets/gimp-unit-menu.png
 share/gtk-doc/html/libgimpwidgets/home.png
 share/gtk-doc/html/libgimpwidgets/index.html
-share/gtk-doc/html/libgimpwidgets/index.sgml
 share/gtk-doc/html/libgimpwidgets/left-insensitive.png
 share/gtk-doc/html/libgimpwidgets/left.png
 share/gtk-doc/html/libgimpwidgets/libgimpwidgets-GimpCairoUtils.html
