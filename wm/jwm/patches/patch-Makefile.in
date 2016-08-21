@@ -1,21 +1,21 @@
-$NetBSD: patch-Makefile.in,v 1.1 2015/12/13 15:02:36 tsutsui Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2016/08/21 11:18:37 ryoon Exp $
 
 - put config files into the example dir
 - use pkgsrc INSTALL_MACROS
 
---- Makefile.in.orig	2015-11-22 20:29:54.000000000 +0000
+--- Makefile.in.orig	2016-08-12 01:27:56.000000000 +0000
 +++ Makefile.in
 @@ -1,5 +1,5 @@
  PACKAGE = jwm
 -SYSCONF = $(DESTDIR)@SYSCONF@
 +SYSCONF = $(DESTDIR)@@EGDIR@@
  MANDIR = $(DESTDIR)@MANDIR@
+ ICONDIR = $(DESTDIR)@ICONDIR@
  VERSION ?= @VERSION@
- USE_NLS = @USE_NLS@
-@@ -11,10 +11,10 @@ all:
- install: all
+@@ -13,10 +13,10 @@ install: all
  	$(MAKE) -C src install
  	$(MAKE) -C po install
+ 	$(MAKE) -C contrib install
 -	install -d -m 0755 $(SYSCONF)
 -	install -m 644 example.jwmrc $(SYSCONF)/system.jwmrc
 -	install -d -m 0755 $(MANDIR)/man1
