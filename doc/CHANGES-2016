@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3493 2016/08/21 13:02:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3494 2016/08/21 19:14:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4946,3 +4946,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/x265 to 2.0 [adam 2016-08-21]
 	Updated finance/moneyguru to 2.10.1 [wiz 2016-08-21]
 	Updated mail/neomutt to 20160821 [wiz 2016-08-21]
+	Updated databases/libdbi to 0.9.0 [fhajny 2016-08-21]
