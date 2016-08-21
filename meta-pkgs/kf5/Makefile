@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/26 10:04:45 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/21 21:11:57 markd Exp $
 
 DISTNAME=	kf5-${KF5VER}
 CATEGORIES=	meta-pkgs x11 kde
@@ -9,7 +9,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE Frameworks 5
 
-KF5VER=		5.21.0
+KF5VER=		5.25.0
 
 DEPENDS+=	attica-qt5-${KF5VER}{,nb[0-9]*}:../../misc/attica-qt5
 DEPENDS+=	baloo5-${KF5VER}{,nb[0-9]*}:../../sysutils/baloo5
@@ -58,6 +58,7 @@ DEPENDS+=	kparts-${KF5VER}{,nb[0-9]*}:../../devel/kparts
 DEPENDS+=	kpeople-${KF5VER}{,nb[0-9]*}:../../devel/kpeople
 DEPENDS+=	kplotting-${KF5VER}{,nb[0-9]*}:../../graphics/kplotting
 DEPENDS+=	kpty-${KF5VER}{,nb[0-9]*}:../../devel/kpty
+DEPENDS+=	krunner-${KF5VER}{,nb[0-9]*}:../../devel/krunner
 DEPENDS+=	kservice-${KF5VER}{,nb[0-9]*}:../../devel/kservice
 DEPENDS+=	ktexteditor-${KF5VER}{,nb[0-9]*}:../../devel/ktexteditor
 DEPENDS+=	ktextwidgets-${KF5VER}{,nb[0-9]*}:../../x11/ktextwidgets
