@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2297 2016/08/21 01:09:42 kamil Exp $
+# $NetBSD: Makefile,v 1.2298 2016/08/21 08:23:50 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -1651,6 +1651,7 @@ SUBDIR+=	pcre++
 SUBDIR+=	pcre-ocaml
 SUBDIR+=	pcre2
 SUBDIR+=	pdcurses
+SUBDIR+=	pear-Console_CommandLine
 SUBDIR+=	pedisassem
 SUBDIR+=	phabricator
 SUBDIR+=	php-gettext
