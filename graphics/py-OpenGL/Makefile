@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/07/24 00:48:16 kamil Exp $
+# $NetBSD: Makefile,v 1.25 2016/08/21 01:32:45 kamil Exp $
 
 DISTNAME=	PyOpenGL-3.1.1a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyOpenGL/}
 
@@ -12,8 +13,6 @@ COMMENT=	Python bindings for OpenGL
 LICENSE=	modified-bsd AND mit
 
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py
 
@@ -35,6 +34,6 @@ do-test:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
