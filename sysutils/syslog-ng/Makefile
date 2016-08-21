@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.27 2016/08/21 20:18:30 fhajny Exp $
-PKGREVISION= 1
+# $NetBSD: Makefile,v 1.28 2016/08/21 20:22:30 fhajny Exp $
+
 .include "../../sysutils/syslog-ng/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-ssl
