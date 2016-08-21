@@ -1,0 +1,23 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2016/08/21 22:20:43 markd Exp $
+
+Install via examples dir
+
+--- src/CMakeLists.txt.orig	2016-04-03 20:49:26.000000000 +0000
++++ src/CMakeLists.txt
+@@ -523,14 +523,14 @@ install(FILES
+ configure_file(kssl/ksslconfig.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/kssl/ksslconfig.h )
+ set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES ${CMAKE_CURRENT_BINARY_DIR}/kssl/ksslconfig.h )
+ 
+-install( FILES kdebug.areas kdebugrc DESTINATION ${KDE_INSTALL_CONFDIR} )
++install( FILES kdebug.areas kdebugrc DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kdelibs4support )
+ 
+ configure_file(kdecore/all_languages.desktop ${CMAKE_CURRENT_BINARY_DIR}/all_languages @ONLY)
+ install( FILES ${CMAKE_CURRENT_BINARY_DIR}/all_languages DESTINATION ${KDE_INSTALL_LOCALEDIR} RENAME kf5_all_languages )
+ 
+ 
+ install( FILES kdeui/40.colors kdeui/Oxygen.colors kdeui/Web.colors kdeui/Royal.colors kdeui/Rainbow.colors
+-         DESTINATION ${KDE_INSTALL_CONFDIR}/colors)
++         DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/kdelibs4support/colors)
+ 
+ if (NOT X11_FOUND)
+     # install our copy of the rgb.txt named colors list on systems without X11
