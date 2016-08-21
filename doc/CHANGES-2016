@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3496 2016/08/21 19:59:24 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.3497 2016/08/21 20:26:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4952,3 +4952,12 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/libdbi-driver-sqlite to 0.9.0 [fhajny 2016-08-21]
 	Updated databases/libdbi-driver-sqlite3 to 0.9.0 [fhajny 2016-08-21]
 	Added net/aws-sdk-go version 1.4.3 [bsiegert 2016-08-21]
+	Updated sysutils/syslog-ng to 3.8.1 [fhajny 2016-08-21]
+	Updated sysutils/syslog-ng-geoip to 3.8.1 [fhajny 2016-08-21]
+	Updated sysutils/syslog-ng-json to 3.8.1 [fhajny 2016-08-21]
+	Updated sysutils/syslog-ng-mongodb to 3.8.1 [fhajny 2016-08-21]
+	Updated sysutils/syslog-ng-redis to 3.8.1 [fhajny 2016-08-21]
+	Updated sysutils/syslog-ng-smtp to 3.8.1 [fhajny 2016-08-21]
+	Updated sysutils/syslog-ng-sql to 3.8.1 [fhajny 2016-08-21]
+	Added sysutils/syslog-ng-amqp version 3.8.1 [fhajny 2016-08-21]
+	Added sysutils/syslog-ng-curl version 3.8.1 [fhajny 2016-08-21]
