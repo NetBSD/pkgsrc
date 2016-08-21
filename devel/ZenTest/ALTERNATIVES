@@ -1,0 +1,6 @@
+bin/autotest @PREFIX@/bin/autotest@RUBY_SUFFIX@
+bin/multigem @PREFIX@/bin/multigem@RUBY_SUFFIX@
+bin/multiruby @PREFIX@/bin/multiruby@RUBY_SUFFIX@
+bin/multiruby_setup @PREFIX@/bin/multiruby_setup@RUBY_SUFFIX@
+bin/unit_diff @PREFIX@/bin/unit_diff@RUBY_SUFFIX@
+bin/zentest @PREFIX@/bin/zentest@RUBY_SUFFIX@
