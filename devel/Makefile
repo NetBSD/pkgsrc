@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2296 2016/08/20 09:30:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2297 2016/08/21 01:09:42 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1832,6 +1832,7 @@ SUBDIR+=	py-ply
 SUBDIR+=	py-polib
 SUBDIR+=	py-pqueue
 SUBDIR+=	py-pretend
+SUBDIR+=	py-prompt_toolkit
 SUBDIR+=	py-proteus
 SUBDIR+=	py-protobuf
 SUBDIR+=	py-py
@@ -1924,6 +1925,7 @@ SUBDIR+=	py-unittest2py3k
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-virtualenv
+SUBDIR+=	py-wcwidth
 SUBDIR+=	py-wheel
 SUBDIR+=	py-whichcraft
 SUBDIR+=	py-windbg
