@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1 2006/09/26 13:48:56 abs Exp $
+$NetBSD: patch-af,v 1.2 2016/08/21 09:53:55 bsiegert Exp $
 
 --- cache/search/hyperestraier/scripts/wwwoffle-estcmd-full.orig	2005-09-06 05:45:59.000000000 +1200
 +++ cache/search/hyperestraier/scripts/wwwoffle-estcmd-full
@@ -9,4 +9,3 @@ $NetBSD: patch-af,v 1.1 2006/09/26 13:48:56 abs Exp $
 -estwolefind . | estcmd gather -cl -fm -px @uri -sd -cm search/hyperestraier/db - \
 +estwolefind . | estcmd gather -cl -fm -px @uri -sd -cm search/hyperestraier/db/index - \
      >> search/hyperestraier/wwwoffle-estcmd.log 2>&1
-

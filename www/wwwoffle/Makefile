@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.81 2016/07/09 06:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2016/08/21 09:53:55 bsiegert Exp $
 
-DISTNAME=	wwwoffle-2.9a
-PKGREVISION=	7
+DISTNAME=	wwwoffle-2.9j
 CATEGORIES=	www
-MASTER_SITES=	http://www.gedanken.demon.co.uk/download-wwwoffle/
+MASTER_SITES=   http://www.gedanken.org.uk/software/wwwoffle/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
+MAINTAINER=     ginger@email.su
+HOMEPAGE=	http://www.gedanken.org.uk/software/wwwoffle
+LICENSE=	gnu-gpl-v2
 COMMENT=	WWW proxy with support for offline browsing
 
 USE_TOOLS+=	gmake gzip perl tar lex
 GNU_CONFIGURE=	yes
+BUILD_DEFS+=	VARBASE
 
 CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+= --with-spooldir=${VARBASE}/wwwoffle
