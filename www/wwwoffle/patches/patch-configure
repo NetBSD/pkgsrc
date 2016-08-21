@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2016/08/21 09:53:55 bsiegert Exp $
+
+--- configure.orig	2016-04-23 12:25:12.000000000 +0000
++++ configure
+@@ -3206,7 +3206,7 @@ fi
+ rm -f conftest.l $LEX_OUTPUT_ROOT.c
+ 
+ fi
+-if test "x$LEX" == "x:"; then
++if test "x$LEX" = "x:"; then
+     as_fn_error $? "No lex/flex program could be found" "$LINENO" 5
+ fi
+ 
