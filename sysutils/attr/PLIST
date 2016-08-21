@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/22 08:00:36 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/21 21:09:27 markd Exp $
 bin/attr
 bin/getfattr
 bin/setfattr
-lib/libattr.so.1
-lib/libattr.so.1.1.0
+include/attr/attributes.h
+include/attr/error_context.h
+include/attr/libattr.h
+include/attr/xattr.h
+lib/libattr.la
 man/man1/attr.1
 man/man1/getfattr.1
 man/man1/setfattr.1
