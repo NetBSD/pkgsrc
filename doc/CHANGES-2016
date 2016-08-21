@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3472 2016/08/21 07:08:22 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3473 2016/08/21 07:14:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4927,3 +4927,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-railties32 to 3.2.22.4 [taca 2016-08-21]
 	Updated www/ruby-rails32 to 3.2.22.4 [taca 2016-08-21]
 	Updated devel/p5-CPAN-Meta to 2.150010 [wiz 2016-08-21]
+	Updated devel/p5-Module-Build to 0.42200 [wiz 2016-08-21]
