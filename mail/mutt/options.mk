@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2016/08/21 16:46:17 tnn Exp $
+# $NetBSD: options.mk,v 1.23 2016/08/21 16:59:21 tnn Exp $
 
 # Global and legacy options
 
@@ -8,9 +8,9 @@ PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
-PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
-PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
+# patch does not apply
+#PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
 
 .include "../../mk/bsd.options.mk"
 
@@ -146,18 +146,6 @@ BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 CONFIGURE_ARGS+=	--enable-smtp
 .else
 CONFIGURE_ARGS+=	--disable-smtp
-.endif
-
-###
-### Sidebar support
-###
-.if !empty(PKG_OPTIONS:Mmutt-sidebar)	\
-	|| make(distinfo) || make(mps) || make(makepatchsum)
-# http://www.lunar-linux.org/mutt-sidebar/
-PATCH_SITES+=		http://lunar-linux.org/~tchan/mutt/
-PATCHFILES+=		patch-1.5.23.sidebar.20140412.txt
-PATCH_DIST_STRIP=	-p1
-PATCH_FUZZ_FACTOR=	-F1
 .endif
 
 ###
