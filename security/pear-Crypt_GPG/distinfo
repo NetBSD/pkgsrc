@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/08/21 08:26:39 taca Exp $
+
+SHA1 (pear/Crypt_GPG-1.4.2.tgz) = 85e829d5e2fb5c1614182ffafaee95407df17584
+RMD160 (pear/Crypt_GPG-1.4.2.tgz) = cc9378127a4162298e67fce5ee4eb4bf3eec9fdb
+SHA512 (pear/Crypt_GPG-1.4.2.tgz) = c0384f0b4a35f8e7d7189b0b08c277c2629e7fa84e13f2c8c92aaafbeace7a60b6e18f2347571e7bcdf4bc504fd9463f080d9c2938063fdfcabc8f44dd7f4950
+Size (pear/Crypt_GPG-1.4.2.tgz) = 345962 bytes
+SHA1 (patch-.._package.xml) = edb34e042e3271f3d8a3b9be9723097dae03eef5
