@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/07/09 13:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/21 12:07:51 wiz Exp $
 
-DISTNAME=	moneyguru-2.10.0
+DISTNAME=	moneyguru-2.10.1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hsoft/}
 
