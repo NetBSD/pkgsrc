@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3470 2016/08/21 01:34:43 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3471 2016/08/21 06:02:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4918,3 +4918,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-wcwidth version 0.1.7 [kamil 2016-08-21]
 	Added devel/py-prompt-toolkit version 1.0.6 [kamil 2016-08-21]
 	Updated graphics/py-OpenGL to 3.1.1a1nb1 [kamil 2016-08-21]
+	Updated devel/ruby-activesupport32 to 3.2.22.4 [taca 2016-08-21]
+	Updated devel/ruby-activemodel32 to 3.2.22.4 [taca 2016-08-21]
+	Updated databases/ruby-activerecord32 to 3.2.22.4 [taca 2016-08-21]
+	Updated www/ruby-activeresource32 to 3.2.22.4 [taca 2016-08-21]
+	Updated www/ruby-actionpack32 to 3.2.22.4 [taca 2016-08-21]
+	Updated mail/ruby-actionmailer32 to 3.2.22.4 [taca 2016-08-21]
+	Updated devel/ruby-railties32 to 3.2.22.4 [taca 2016-08-21]
+	Updated www/ruby-rails32 to 3.2.22.4 [taca 2016-08-21]
