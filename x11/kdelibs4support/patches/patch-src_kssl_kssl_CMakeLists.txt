@@ -1,0 +1,11 @@
+$NetBSD: patch-src_kssl_kssl_CMakeLists.txt,v 1.1 2016/08/21 22:20:43 markd Exp $
+
+Install via examples dir
+
+--- src/kssl/kssl/CMakeLists.txt.orig	2016-04-03 20:49:26.000000000 +0000
++++ src/kssl/kssl/CMakeLists.txt
+@@ -1,3 +1,3 @@
+ add_subdirectory( caroot )
+ 
+-install( FILES ksslcalist  DESTINATION  ${KDE_INSTALL_CONFDIR} )
++install( FILES ksslcalist  DESTINATION  ${KDE_INSTALL_DATAROOTDIR}/examples/kdelibs4support )
