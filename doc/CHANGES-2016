@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3505 2016/08/22 13:03:06 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3506 2016/08/22 13:03:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4990,7 +4990,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/kplotting to 5.25.0 [markd 2016-08-21]
 	Updated misc/attica-qt5 to 5.25.0 [markd 2016-08-21]
 	Updated misc/kemoticons to 5.25.0 [markd 2016-08-21]
-	Updated misc/kunitconto 5.25.0 [markd 2016-08-21]
+	Updated misc/kunitconto to 5.25.0 [markd 2016-08-21]
 	Updated net/kdnssd to 5.25.0 [markd 2016-08-21]
 	Updated net/knewstuff to 5.25.0 [markd 2016-08-21]
 	Updated net/kxmlrpcclient to 5.25.0 [markd 2016-08-21]
@@ -5033,3 +5033,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libksba to 1.3.5 [wiz 2016-08-22]
 	Updated devel/waf to 1.9.2 [wiz 2016-08-22]
 	Updated audio/sound-theme-freedesktop to 0.8 [mef 2016-08-22]
+	Updated devel/py-test-runner to 2.9 [wiz 2016-08-22]
