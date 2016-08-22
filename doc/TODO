@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16319 2016/08/22 13:03:06 mef Exp $
+$NetBSD: TODO,v 1.16320 2016/08/22 13:03:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1433,7 +1433,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-test-3.0.0
 	o py-test-cov-2.3.1
 	o py-test-httpbin-0.2.3
-	o py-test-runner-2.9
 	o py-tlslite-0.4.6
 	o py-tornado-4.4.1
 	o py-twisted-16.3.2
