@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3520 2016/08/22 14:40:01 leot Exp $
+$NetBSD: CHANGES-2016,v 1.3521 2016/08/22 18:13:10 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-atomicwrites to 1.1.5 [wiz 2016-08-22]
 	Updated audio/mpc to 0.28 [wiz 2016-08-22]
 	Updated net/php-baikal to 0.4.6 [wiz 2016-08-22]
+	Updated www/wordpress to 4.6nb1 [morr 2016-08-21]
