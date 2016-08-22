@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3515 2016/08/22 14:12:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3516 2016/08/22 14:15:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5043,3 +5043,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-lxml to 3.6.4 [wiz 2016-08-22]
 	Updated filesystems/glusterfs to 3.8.3 [manu 2016-08-22]
 	Updated devel/py-setuptools to 26.0.0 [wiz 2016-08-22]
+	Updated time/py-vdirsyncer to 0.12.1 [wiz 2016-08-22]
