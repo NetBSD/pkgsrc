@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/04/13 18:39:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/08/22 13:26:28 wiz Exp $
 bin/py.test-${PYVERSSUFFIX}
+bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,9 +32,6 @@ ${PYSITELIB}/_pytest/_pluggy.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
-${PYSITELIB}/_pytest/assertion/reinterpret.py
-${PYSITELIB}/_pytest/assertion/reinterpret.pyc
-${PYSITELIB}/_pytest/assertion/reinterpret.pyo
 ${PYSITELIB}/_pytest/assertion/rewrite.py
 ${PYSITELIB}/_pytest/assertion/rewrite.pyc
 ${PYSITELIB}/_pytest/assertion/rewrite.pyo
@@ -46,15 +44,27 @@ ${PYSITELIB}/_pytest/cacheprovider.pyo
 ${PYSITELIB}/_pytest/capture.py
 ${PYSITELIB}/_pytest/capture.pyc
 ${PYSITELIB}/_pytest/capture.pyo
+${PYSITELIB}/_pytest/compat.py
+${PYSITELIB}/_pytest/compat.pyc
+${PYSITELIB}/_pytest/compat.pyo
 ${PYSITELIB}/_pytest/config.py
 ${PYSITELIB}/_pytest/config.pyc
 ${PYSITELIB}/_pytest/config.pyo
+${PYSITELIB}/_pytest/debugging.py
+${PYSITELIB}/_pytest/debugging.pyc
+${PYSITELIB}/_pytest/debugging.pyo
+${PYSITELIB}/_pytest/deprecated.py
+${PYSITELIB}/_pytest/deprecated.pyc
+${PYSITELIB}/_pytest/deprecated.pyo
 ${PYSITELIB}/_pytest/doctest.py
 ${PYSITELIB}/_pytest/doctest.pyc
 ${PYSITELIB}/_pytest/doctest.pyo
-${PYSITELIB}/_pytest/genscript.py
-${PYSITELIB}/_pytest/genscript.pyc
-${PYSITELIB}/_pytest/genscript.pyo
+${PYSITELIB}/_pytest/fixtures.py
+${PYSITELIB}/_pytest/fixtures.pyc
+${PYSITELIB}/_pytest/fixtures.pyo
+${PYSITELIB}/_pytest/freeze_support.py
+${PYSITELIB}/_pytest/freeze_support.pyc
+${PYSITELIB}/_pytest/freeze_support.pyo
 ${PYSITELIB}/_pytest/helpconfig.py
 ${PYSITELIB}/_pytest/helpconfig.pyc
 ${PYSITELIB}/_pytest/helpconfig.pyo
@@ -79,9 +89,6 @@ ${PYSITELIB}/_pytest/nose.pyo
 ${PYSITELIB}/_pytest/pastebin.py
 ${PYSITELIB}/_pytest/pastebin.pyc
 ${PYSITELIB}/_pytest/pastebin.pyo
-${PYSITELIB}/_pytest/pdb.py
-${PYSITELIB}/_pytest/pdb.pyc
-${PYSITELIB}/_pytest/pdb.pyo
 ${PYSITELIB}/_pytest/pytester.py
 ${PYSITELIB}/_pytest/pytester.pyc
 ${PYSITELIB}/_pytest/pytester.pyo
@@ -97,12 +104,15 @@ ${PYSITELIB}/_pytest/resultlog.pyo
 ${PYSITELIB}/_pytest/runner.py
 ${PYSITELIB}/_pytest/runner.pyc
 ${PYSITELIB}/_pytest/runner.pyo
+${PYSITELIB}/_pytest/setuponly.py
+${PYSITELIB}/_pytest/setuponly.pyc
+${PYSITELIB}/_pytest/setuponly.pyo
+${PYSITELIB}/_pytest/setupplan.py
+${PYSITELIB}/_pytest/setupplan.pyc
+${PYSITELIB}/_pytest/setupplan.pyo
 ${PYSITELIB}/_pytest/skipping.py
 ${PYSITELIB}/_pytest/skipping.pyc
 ${PYSITELIB}/_pytest/skipping.pyo
-${PYSITELIB}/_pytest/standalonetemplate.py
-${PYSITELIB}/_pytest/standalonetemplate.pyc
-${PYSITELIB}/_pytest/standalonetemplate.pyo
 ${PYSITELIB}/_pytest/terminal.py
 ${PYSITELIB}/_pytest/terminal.pyc
 ${PYSITELIB}/_pytest/terminal.pyo

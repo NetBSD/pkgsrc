@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/06/06 12:12:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/08/22 13:26:28 wiz Exp $
 
-DISTNAME=	pytest-2.9.2
+DISTNAME=	pytest-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest/}
@@ -12,17 +12,22 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-py>=1.4.29:../../devel/py-py
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-# actually, test dependencies
+# TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 USE_TOOLS+=	bash:build
-
-CONFLICTS=	${PYPKGPREFIX}-pytest-[0-9]*
 
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	_pytest/standalonetemplate.py
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		${MV} py.test py.test-${PYVERSSUFFIX} && \
+		${MV} pytest pytest-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
