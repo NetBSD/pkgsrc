@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2016/08/21 20:04:57 jklos Exp $
+# $NetBSD: Makefile,v 1.58 2016/08/22 18:11:04 morr Exp $
 
 DISTNAME=		wordpress-${VERSION}
 VERSION=		4.6
@@ -37,20 +37,36 @@ OWN_DIRS_PERMS+=	${WPHOME}/wp-content/uploads \
 
 INSTALLATION_DIRS+=	${DOCDIR} ${WPHOME} ${EGDIR}
 
-DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=5.6.0:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.6.0:../../graphics/php-gd
+DEPENDS+=		${PHP_PKG_PREFIX}-curl>=5.6.0:../../www/php-curl
+DEPENDS+=		${PHP_PKG_PREFIX}-zip>=5.6.0:../../archivers/php-zip
+DEPENDS+=		${PHP_PKG_PREFIX}-zlib>=5.6.0:../../archivers/php-zlib
+PHP_VERSIONS_ACCEPTED=	56
 
-PHP_VERSIONS_ACCEPTED=	55 56
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.conf=	Fixing pathnames in configuration file.
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	../wordpress.conf
+SUBST_SED.conf=		-e "s,@WPHOME@,${WPHOME},g"
+.if !empty(PKG_OPTIONS:Map-php) && ${PKG_APACHE} == "apache24"
+SUBST_SED.conf+=	-e "/Order allow,deny/d"
+SUBST_SED.conf+=	-e "s,Allow from all,Require all granted,g"
+.endif
+
+post-extract:
+	${CP} ${FILESDIR}/wordpress.conf ${WRKDIR}/wordpress.conf
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/readme.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/license.txt ${DESTDIR}${DOCDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/wp-config-sample.php ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/wordpress.conf ${DESTDIR}${EGDIR}
+#	${INSTALL_DATA} ${WRKSRC}/wp-config-sample.php ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/wordpress.conf ${DESTDIR}${EGDIR}
 
 	${RM} ${WRKSRC}/readme.html
 	${RM} ${WRKSRC}/license.txt
-	${RM} ${WRKSRC}/wp-config-sample.php
+#	${RM} ${WRKSRC}/wp-config-sample.php
 
 	cd ${WRKSRC} && pax -rw -pmp . ${DESTDIR}${WPHOME}
 	${TOUCH} ${DESTDIR}${WPHOME}/wp-content/plugins/index.html
