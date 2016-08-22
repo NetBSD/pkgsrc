@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/08/02 22:44:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/08/22 14:22:30 wiz Exp $
 share/baikal/CHANGELOG.md
 share/baikal/Core/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Core/PDOBasicAuth.php
@@ -994,6 +994,7 @@ share/baikal/vendor/sabre/vobject/tests/VObject/Recur/EventIterator/MaxInstances
 share/baikal/vendor/sabre/vobject/tests/VObject/Recur/EventIterator/MissingOverriddenTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/Recur/EventIterator/NoInstancesTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/Recur/EventIterator/OverrideFirstEventTest.php
+share/baikal/vendor/sabre/vobject/tests/VObject/Recur/EventIterator/SameDateForRecurringEventsTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/Recur/RDateIteratorTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/Recur/RRuleIteratorTest.php
 share/baikal/vendor/sabre/vobject/tests/VObject/RecurrenceIterator/UntilRespectsTimezoneTest.ics
