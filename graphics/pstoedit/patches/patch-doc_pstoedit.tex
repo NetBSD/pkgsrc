@@ -1,0 +1,15 @@
+$NetBSD: patch-doc_pstoedit.tex,v 1.1 2016/08/22 11:20:56 markd Exp $
+
+Upstream patch for not finding plugins. 
+
+--- doc/pstoedit.tex.orig	2015-01-01 19:55:12.000000000 +0000
++++ doc/pstoedit.tex
+@@ -352,7 +352,7 @@ If  the \Opt{-fontmap} option is not spe
+   \item MS Windows: The same directory where the \Prog{pstoedit} executable is located
+ 
+   \item Unix:\\
+-  $<$\emph{The directory where the pstoedit executable is located}$>$\verb+/../lib/+
++  The default installation directory. If it fails, then $<$\emph{The directory where the pstoedit executable is located}$>$\verb+/../lib/+
+ 
+ \end{itemize}
+ 
