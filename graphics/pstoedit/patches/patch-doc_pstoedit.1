@@ -1,0 +1,31 @@
+$NetBSD: patch-doc_pstoedit.1,v 1.1 2016/08/22 11:20:56 markd Exp $
+
+Upstream patch for not finding plugins. 
+
+--- doc/pstoedit.1.orig	2015-01-01 19:55:13.000000000 +0000
++++ doc/pstoedit.1
+@@ -1,5 +1,5 @@
+ '\" t
+-.\" Manual page created with latex2man on Thu Jan  1 20:55:12 CET 2015
++.\" Manual page created with latex2man on Fri Mar 13 20:58:53 CET 2015
+ .\" NOTE: This file is generated, DO NOT EDIT.
+ .de Vb
+ .ft CW
+@@ -10,7 +10,7 @@
+ 
+ .fi
+ ..
+-.TH "PSTOEDIT" "1" "01 January 2015" "Conversion Tools " "Conversion Tools "
++.TH "PSTOEDIT" "1" "13 March 2015" "Conversion Tools " "Conversion Tools "
+ .SH NAME
+ 
+ pstoedit
+@@ -367,7 +367,7 @@ MS Windows: The same directory where the
+ .B *
+ Unix:
+ .br 
+-<\fIThe directory where the pstoedit executable is located\fP>
++The default installation directory. If it fails, then <\fIThe directory where the pstoedit executable is located\fP>
+ /../lib/ 
+ .RS
+ .PP
