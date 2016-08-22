@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3518 2016/08/22 14:17:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3519 2016/08/22 14:22:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5046,3 +5046,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-vdirsyncer to 0.12.1 [wiz 2016-08-22]
 	Updated devel/py-atomicwrites to 1.1.5 [wiz 2016-08-22]
 	Updated audio/mpc to 0.28 [wiz 2016-08-22]
+	Updated net/php-baikal to 0.4.6 [wiz 2016-08-22]
