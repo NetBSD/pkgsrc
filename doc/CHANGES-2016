@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3504 2016/08/22 13:02:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3505 2016/08/22 13:03:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5032,3 +5032,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/percona-toolkit to 2.2.19 [fhajny 2016-08-22]
 	Updated security/libksba to 1.3.5 [wiz 2016-08-22]
 	Updated devel/waf to 1.9.2 [wiz 2016-08-22]
+	Updated audio/sound-theme-freedesktop to 0.8 [mef 2016-08-22]
