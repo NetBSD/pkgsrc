@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3511 2016/08/22 13:31:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3512 2016/08/22 13:35:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5039,3 +5039,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-test-cov to 2.3.1 [wiz 2016-08-22]
 	Updated www/py-test-httpbin to 0.2.3 [wiz 2016-08-22]
 	Updated devel/afl to 2.32b [wiz 2016-08-22]
+	Updated sysutils/dbus to 1.10.10 [wiz 2016-08-22]
