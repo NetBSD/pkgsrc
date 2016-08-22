@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3513 2016/08/22 14:01:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3514 2016/08/22 14:07:31 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5041,3 +5041,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.32b [wiz 2016-08-22]
 	Updated sysutils/dbus to 1.10.10 [wiz 2016-08-22]
 	Updated textproc/py-lxml to 3.6.4 [wiz 2016-08-22]
+	Updated filesystems/glusterfs to 3.8.3 [manu 2016-08-22]
