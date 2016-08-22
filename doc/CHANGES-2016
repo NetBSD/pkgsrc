@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3499 2016/08/21 22:43:59 markd Exp $
+$NetBSD: CHANGES-2016,v 1.3500 2016/08/22 03:21:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5027,3 +5027,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/khtml version 5.25.0 [markd 2016-08-21]
 	Added www/kjs version 5.25.0 [markd 2016-08-21]
 	Added www/kjsembed version 5.25.0 [markd 2016-08-21]
+	Updated lang/php71 to 7.1.0beta3 [taca 2016-08-22]
