@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/08/09 09:24:04 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2016/08/22 09:54:26 fhajny Exp $
 
-SHA1 (percona-toolkit-2.2.18.tar.gz) = 585dd33a75295e3bf3ccd8295c01bb351de38ad2
-RMD160 (percona-toolkit-2.2.18.tar.gz) = 6c28ac78d3f93b55164d890f29688a5716ee0fd8
-SHA512 (percona-toolkit-2.2.18.tar.gz) = 45f4453cf0c711866d58565b7138b7e345d0b56e4711e0561673a875a323a9744df83bce51fdc066db026ecb2386cba82817d4a112b2c53e36921062170f01af
-Size (percona-toolkit-2.2.18.tar.gz) = 1425492 bytes
+SHA1 (percona-toolkit-2.2.19.tar.gz) = 4f901335d208b1f97bc5db7a5908f7ecafab29f6
+RMD160 (percona-toolkit-2.2.19.tar.gz) = dfbc3a28c4cc523e4d4eb132f6818fb2814bd11a
+SHA512 (percona-toolkit-2.2.19.tar.gz) = 8da35e2ee4d81465131623e5b423c2c49c0bf0faf01862952dd5ca72c2ffea64fabcaf88dda883e633e23de8ae4a6c75a095a751708bac6a8136fc8daaae2383
+Size (percona-toolkit-2.2.19.tar.gz) = 1425623 bytes
