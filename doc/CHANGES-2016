@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3502 2016/08/22 09:54:36 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3503 2016/08/22 12:32:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5030,3 +5030,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php71 to 7.1.0beta3 [taca 2016-08-22]
 	Updated security/hitch to 1.3.1 [fhajny 2016-08-22]
 	Updated databases/percona-toolkit to 2.2.19 [fhajny 2016-08-22]
+	Updated security/libksba to 1.3.5 [wiz 2016-08-22]
