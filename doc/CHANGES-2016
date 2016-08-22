@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3508 2016/08/22 13:26:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3509 2016/08/22 13:27:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5036,3 +5036,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-test-runner to 2.9 [wiz 2016-08-22]
 	Updated devel/py-hypothesis to 3.1.0nb1 [wiz 2016-08-22]
 	Updated devel/py-test to 3.0.0 [wiz 2016-08-22]
+	Updated devel/py-test-cov to 2.3.1 [wiz 2016-08-22]
