@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16324 2016/08/22 13:31:40 wiz Exp $
+$NetBSD: TODO,v 1.16325 2016/08/22 13:35:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dateutils-0.4.0
 	o davical-1.1.4
-	o dbus-1.10.10
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
