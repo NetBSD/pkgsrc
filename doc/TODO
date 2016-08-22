@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16321 2016/08/22 13:26:39 wiz Exp $
+$NetBSD: TODO,v 1.16322 2016/08/22 13:27:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1430,7 +1430,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-static-1.1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
-	o py-test-cov-2.3.1
 	o py-test-httpbin-0.2.3
 	o py-tlslite-0.4.6
 	o py-tornado-4.4.1
