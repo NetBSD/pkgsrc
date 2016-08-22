@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3519 2016/08/22 14:22:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3520 2016/08/22 14:40:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4990,7 +4990,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/kplotting to 5.25.0 [markd 2016-08-21]
 	Updated misc/attica-qt5 to 5.25.0 [markd 2016-08-21]
 	Updated misc/kemoticons to 5.25.0 [markd 2016-08-21]
-	Updated misc/kunitconto to 5.25.0 [markd 2016-08-21]
+	Updated misc/kunitconversion to 5.25.0 [markd 2016-08-21]
 	Updated net/kdnssd to 5.25.0 [markd 2016-08-21]
 	Updated net/knewstuff to 5.25.0 [markd 2016-08-21]
 	Updated net/kxmlrpcclient to 5.25.0 [markd 2016-08-21]
