@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2015/06/07 08:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/22 14:16:59 wiz Exp $
 
-DISTNAME=		mpc-0.27
+DISTNAME=		mpc-0.28
 CATEGORIES=		audio
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 MASTER_SITES=		http://www.musicpd.org/download/mpc/0/
@@ -19,6 +19,7 @@ REPLACE_SH=		doc/*.sh
 
 LIBS+=			${BUILDLINK_LDADD.iconv}
 
+BUILDLINK_API_DEPENDS.libmpdclient+=	libmpdclient>=2.9
 .include "../../audio/libmpdclient/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
