@@ -1,9 +1,9 @@
-$NetBSD: patch-hitch.conf.ex,v 1.1 2016/05/25 20:15:35 fhajny Exp $
+$NetBSD: patch-hitch.conf.example,v 1.1 2016/08/22 09:34:40 fhajny Exp $
 
 Sane default options.
 
---- hitch.conf.ex.orig	2016-03-18 17:55:17.000000000 +0000
-+++ hitch.conf.ex
+--- hitch.conf.example.orig	2016-08-15 13:51:51.000000000 +0000
++++ hitch.conf.example
 @@ -43,7 +43,7 @@ backend = "[127.0.0.1]:6081"
  # only available for a specific listen endpoint.
  #
@@ -11,9 +11,9 @@ Sane default options.
 -pem-file = ""
 +pem-file = "@HITCH_CERTS@"
  
- # SSL protocol.
+ # OCSP settings
  #
-@@ -94,12 +94,12 @@ chroot = ""
+@@ -120,12 +120,12 @@ chroot = ""
  # Set uid after binding a socket
  #
  # type: string
@@ -28,7 +28,7 @@ Sane default options.
  
  # Quiet execution, report only error messages
  #
-@@ -109,7 +109,7 @@ quiet = off
+@@ -135,7 +135,7 @@ quiet = off
  # Use syslog for logging
  #
  # type: boolean
@@ -37,7 +37,7 @@ Sane default options.
  
  # Syslog facility to use
  #
-@@ -119,7 +119,7 @@ syslog-facility = "daemon"
+@@ -145,7 +145,7 @@ syslog-facility = "daemon"
  # Run as daemon
  #
  # type: boolean
