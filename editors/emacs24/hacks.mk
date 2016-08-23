@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2016/06/09 12:28:54 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.5 2016/08/23 20:27:40 maya Exp $
 
 .if !defined(EMACS_HACKS_MK)
 EMACS_HACKS_MK=	defined
@@ -19,7 +19,7 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O0
 ### emacs-24.5/src/Makefile.in does not support NetBSD paxctl(8) syntax.
 ### http://debbugs.gnu.org/cgi/bugreport.cgi?bug=23371
 ###
-.  if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*)
 .    if exists(/usr/sbin/paxctl)
 SUBST_CLASSES+=			paxctl
 SUBST_STAGE.paxctl=		pre-configure
