@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3522 2016/08/23 06:31:50 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3523 2016/08/23 13:39:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5054,3 +5054,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql92 to 9.2.18 [adam 2016-08-23]
 	Updated databases/postgresql93 to 9.3.14 [adam 2016-08-23]
 	Updated databases/postgresql95 to 9.5.4 [adam 2016-08-23]
+	Updated devel/ruby-fast_gettext to 1.2.0 [taca 2016-08-23]
