@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/08/02 10:14:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/08/23 22:45:05 wiz Exp $
 
 DISTNAME=	numpy-1.11.1
 GITHUB_PROJECT=	numpy
@@ -35,7 +35,9 @@ LDFLAGS+=		${_COMPILER_ABI_FLAG.${ABI}}
 
 .include "../../mk/bsd.prefs.mk"
 
-# needs devel/py-nose
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+
 do-test:
 	${RUN} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} -c "import numpy; numpy.test()"
 
