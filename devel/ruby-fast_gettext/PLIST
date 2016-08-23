@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/02/01 14:03:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/08/23 13:39:02 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/Readme.md
@@ -15,6 +15,7 @@ ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/db.rb
 ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/db_models/translation_key.rb
 ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/db_models/translation_text.rb
 ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/logger.rb
+${GEM_LIBDIR}/lib/fast_gettext/translation_repository/merge.rb
 ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/mo.rb
 ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/po.rb
 ${GEM_LIBDIR}/lib/fast_gettext/translation_repository/yaml.rb
