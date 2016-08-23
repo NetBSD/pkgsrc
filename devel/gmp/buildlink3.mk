@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.11 2010/03/24 21:54:15 asau Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2016/08/23 05:10:48 adam Exp $
 
 BUILDLINK_TREE+=	gmp
 
 .if !defined(GMP_BUILDLINK3_MK)
 GMP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gmp+=		gmp>=4.2.1
+BUILDLINK_API_DEPENDS.gmp+=	gmp>=4.2.1
 BUILDLINK_ABI_DEPENDS.gmp+=	gmp>=5.0.1
 BUILDLINK_PKGSRCDIR.gmp?=	../../devel/gmp
 .endif # GMP_BUILDLINK3_MK
