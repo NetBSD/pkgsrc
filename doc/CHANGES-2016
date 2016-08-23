@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3521 2016/08/22 18:13:10 morr Exp $
+$NetBSD: CHANGES-2016,v 1.3522 2016/08/23 06:31:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -4777,6 +4777,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated chat/irssi to 0.8.19 [maya 2016-08-14]
 	Updated chat/irssi-icb to 0.15nb1 [leot 2016-08-14]
 	Updated chat/irssi-xmpp to 0.53 [leot 2016-08-14]
+	Updated databases/postgresql94 to 9.4.9 [is 2016-08-14]
 	Added security/p5-Netpgp-Verify version 20160814 [agc 2016-08-14]
 	Updated mail/distribute to 2.1.26nb6 [maya 2016-08-15]
 	Updated devel/ftnchek to 3.3.1 [mef 2016-08-15]
@@ -5048,3 +5049,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/mpc to 0.28 [wiz 2016-08-22]
 	Updated net/php-baikal to 0.4.6 [wiz 2016-08-22]
 	Updated www/wordpress to 4.6nb1 [morr 2016-08-21]
+	Updated devel/gmp to 6.1.1 [adam 2016-08-23]
+	Updated databases/postgresql91 to 9.1.23 [adam 2016-08-23]
+	Updated databases/postgresql92 to 9.2.18 [adam 2016-08-23]
+	Updated databases/postgresql93 to 9.3.14 [adam 2016-08-23]
+	Updated databases/postgresql95 to 9.5.4 [adam 2016-08-23]
