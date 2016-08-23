@@ -1,26 +1,9 @@
-$NetBSD: distinfo,v 1.50 2015/11/13 11:36:44 wiz Exp $
+$NetBSD: distinfo,v 1.51 2016/08/23 05:10:48 adam Exp $
 
-SHA1 (gmp-6.1.0.tar.bz2) = db38c7b67f8eea9f2e5b8a48d219165b2fdab11f
-RMD160 (gmp-6.1.0.tar.bz2) = 3bf2ad8471944f899bffcb86aed0e2072416a464
-SHA512 (gmp-6.1.0.tar.bz2) = 3c82aeab9c1596d4da8afac2eec38e429e84f3211e1a572cf8fd2b546493c44c039b922a1133eaaa48bd7f3e11dbe795a384e21ed95cbe3ecc58d7ac02246117
-Size (gmp-6.1.0.tar.bz2) = 2383840 bytes
+SHA1 (gmp-6.1.1.tar.bz2) = 757d672e66d8e0afe60ca04735ab11c00d9346e4
+RMD160 (gmp-6.1.1.tar.bz2) = 833b1dea9d3ce993e63cb3c629ab792e1e7197bb
+SHA512 (gmp-6.1.1.tar.bz2) = 0a2a2407c1efcb50a0c05f0bfcee06507ac96c889489c20402fb78ed2dc408577e555bac39ec84af5ac4ecdb92bb245f1bbf438165330e0c21d8a50c3a5fec8c
+Size (gmp-6.1.1.tar.bz2) = 2384919 bytes
 SHA1 (patch-aa) = dec275cbd5886a70f7cf0def1dedf01e7e4a49e9
 SHA1 (patch-ab) = 829812822a72a4926ea4cf6e8ffafdcd13a0f76c
 SHA1 (patch-ac) = 6f7de0a285bec2c2645479d3090dc0276580f3d8
-SHA1 (patch-mpn_arm_aorslsh1__n.asm) = 2c12b798eba26a3c4429792e1a88f91638261255
-SHA1 (patch-mpn_arm_bdiv__dbm1c.asm) = 8fcc50684c6baae02abeadb56feeb2340fc39731
-SHA1 (patch-mpn_arm_cnd__aors__n.asm) = 3d15898f923524122c09f63773bd9a35820a6016
-SHA1 (patch-mpn_arm_com.asm) = fb6dde3cecb4d082a63b8f7cc5e2c2aa877da27c
-SHA1 (patch-mpn_arm_copyd.asm) = 93f4e677b8cf4b85ff2dd21db7fca475930d623f
-SHA1 (patch-mpn_arm_copyi.asm) = 6d385726860fcb88d516dca3faa95edeb82fb79d
-SHA1 (patch-mpn_arm_dive__1.asm) = 64796557cb67e83b1a9dc8edd97d46ea32b5371f
-SHA1 (patch-mpn_arm_invert__limb.asm) = 1314230d1883679ec6fed3362065e0604a105b55
-SHA1 (patch-mpn_arm_logops__n.asm) = fbd73182a6f53b452cf385494080579e3ab17d81
-SHA1 (patch-mpn_arm_lshift.asm) = d076210156c4dbcbe3b46803c0aaf966954a3058
-SHA1 (patch-mpn_arm_lshiftc.asm) = 95692c226ff057294d2aa9cf409559b605f444e4
-SHA1 (patch-mpn_arm_mod__34lsub1.asm) = 30a31a9d999097568cc8bc83a9565ee2f30657e0
-SHA1 (patch-mpn_arm_mode1o.asm) = 9fb7a224489ea56b433ab5e869c9402138210a30
-SHA1 (patch-mpn_arm_rsh1aors__n.asm) = 2c20729fdccd16f8418e0cf4e9b583848dd00b18
-SHA1 (patch-mpn_arm_rshift.asm) = fdc9b43d50a7c621b201098a01c440277c1ae43a
-SHA1 (patch-mpn_arm_sec__tabselect.asm) = 9f317285b87262d98e557bb7c4c9df21d51fa655
-SHA1 (patch-mpn_arm_udiv.asm) = 4f0cc8d7f578c41c11a73c7abb91ab955ec30019
