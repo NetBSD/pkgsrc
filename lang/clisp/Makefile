@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2016/02/23 15:19:23 joerg Exp $
+# $NetBSD: Makefile,v 1.107 2016/08/23 20:03:48 asau Exp $
 #
 
 DISTNAME=		clisp-2.49
@@ -47,6 +47,10 @@ TEST_TARGET=		check mod-check
 
 .if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-mmap
+.endif
+
+.if $(MACHINE_ARCH:Mi386)
+CFLAGS+=		-falign-functions=4	# force the assumption
 .endif
 
 .if ${OPSYS} == "SunOS"
