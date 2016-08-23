@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.19 2016/05/23 14:27:34 adam Exp $
+$NetBSD: distinfo,v 1.20 2016/08/23 06:28:15 adam Exp $
 
-SHA1 (postgresql-9.2.17.tar.bz2) = f6e7318e8d39ee963318561e46bb24b4cc1088cb
-RMD160 (postgresql-9.2.17.tar.bz2) = 3b916cd6ecb36f3494de895be963d593158d1709
-SHA512 (postgresql-9.2.17.tar.bz2) = a771c98c0de4e6c5790b9ee698ee8d259533d372b82ff3c9900c00cf79706ef29af6204de4292ff8ca4a3f3a13fec1991c4441c352c309bbf9cdd397579677b4
-Size (postgresql-9.2.17.tar.bz2) = 16497200 bytes
+SHA1 (postgresql-9.2.18.tar.bz2) = 703f237f2d70df3809733852a9c2421e5b4fdba9
+RMD160 (postgresql-9.2.18.tar.bz2) = 939d42d613dd25ac06e8e5eed82627e11663de7e
+SHA512 (postgresql-9.2.18.tar.bz2) = c311f621ac38e2dfaf5fd57a4500430333dcbb2d7f1719bc7d99fef54e06a22f93aea595391c3607d44c89c372d0e89daf18f8f295b33e3b21e5285fbbb87d5b
+Size (postgresql-9.2.18.tar.bz2) = 16448429 bytes
 SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
 SHA1 (patch-config_perl.m4) = c7e5aaff1c47d2e33df7692a412ef984c77ffcc0
 SHA1 (patch-configure) = 21b27add570cff1a24c440201eb1ed49f8223747
@@ -16,7 +16,3 @@ SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = 20578ab950465db07dab757
 SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
 SHA1 (patch-src_pl_plperl_GNUmakefile) = 2b7448d6dd8550e2ea61f40728a2780068b93d07
 SHA1 (patch-src_pl_plperl_plperl.h) = bd663fa80a47f7b82ce689060750fa6e631fbc61
-SHA1 (patch-src_timezone_localtime.c) = 622f57bc1d10f07ab73f86765cbf587eece57085
-SHA1 (patch-src_timezone_private.h) = 85dac95e40efc16270885087f868aeb76e1b9214
-SHA1 (patch-src_timezone_strftime.c) = 25102dce1b9b22385353af23500636fb18e3bf64
-SHA1 (patch-src_timezone_zic.c) = 0d6f536f7593e362ec216eafa73c718ad6bed8fc
