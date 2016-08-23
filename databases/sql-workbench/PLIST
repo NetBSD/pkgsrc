@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/03 17:43:45 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/08/23 14:49:23 abs Exp $
 bin/sqlworkbench
 share/sql-workbench/LICENSE
 share/sql-workbench/SQLWorkbench-Manual.pdf
@@ -48,6 +48,7 @@ share/sql-workbench/manual/macros.html
 share/sql-workbench/manual/options.html
 share/sql-workbench/manual/plain-profile-file.html
 share/sql-workbench/manual/profiles.html
+share/sql-workbench/manual/script-generation.html
 share/sql-workbench/manual/settings.html
 share/sql-workbench/manual/shortcuts.html
 share/sql-workbench/manual/troubleshooting.html
@@ -57,6 +58,10 @@ share/sql-workbench/manual/using-scripting.html
 share/sql-workbench/manual/using-variables.html
 share/sql-workbench/manual/using.html
 share/sql-workbench/manual/wb-commands.html
+share/sql-workbench/manual/wb-grep-commands.html
+share/sql-workbench/manual/wb-info-commands.html
+share/sql-workbench/manual/wb-macro-commands.html
+share/sql-workbench/manual/wb-var-commands.html
 share/sql-workbench/manual/workbench-manual-single.html
 share/sql-workbench/manual/workbench-manual.html
 share/sql-workbench/manual/workspace-usage.html
