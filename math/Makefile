@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2016/08/20 07:15:18 wiz Exp $
+# $NetBSD: Makefile,v 1.332 2016/08/24 23:52:43 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -239,6 +239,7 @@ SUBDIR+=	py-Numeric
 SUBDIR+=	py-Scientific
 SUBDIR+=	py-Scientific-doc
 SUBDIR+=	py-almost
+SUBDIR+=	py-autograd
 SUBDIR+=	py-cdecimal
 SUBDIR+=	py-ephem
 SUBDIR+=	py-ephem3
