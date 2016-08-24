@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3535 2016/08/24 10:20:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3536 2016/08/24 10:23:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5067,3 +5067,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/musicpd to 0.19.19 [wiz 2016-08-24]
 	Updated audio/libwildmidi to 0.4.0 [wiz 2016-08-24]
 	Updated devel/py-hypothesis to 3.4.2 [wiz 2016-08-24]
+	Updated devel/waf to 1.9.3 [wiz 2016-08-24]
