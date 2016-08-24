@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2016/04/20 12:10:26 nros Exp $
+# $NetBSD: Makefile,v 1.12 2016/08/24 09:59:31 wiz Exp $
 
-DISTNAME=	id3_0.15.orig
-PKGNAME=	id3-0.15
+DISTNAME=	id3-1.0.0
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/id3/}
+MASTER_SITES=	https://devel.ringlet.net/files/audio/id3/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://packages.qa.debian.org/i/id3.html
+HOMEPAGE=	https://devel.ringlet.net/audio/id3/
 COMMENT=	ID3 v1.1 tag editor
 LICENSE=	gnu-gpl-v2
-
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"
