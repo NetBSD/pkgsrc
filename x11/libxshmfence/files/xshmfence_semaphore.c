@@ -33,7 +33,7 @@
 
 #include "xshmfenceint.h"
 
-static sem_t *mksemtemp(char *, const char *);
+static sem_t *mksemtemp(char *, size_t, const char *);
 
 #define LOCK() do {} while (sem_wait(f->lock) != 0)
 #define UNLOCK() do { sem_post(f->lock); } while (0)
@@ -159,12 +159,12 @@ xshmfence_init(int fd)
 	__sync_fetch_and_and(&f.triggered, 0);
 	__sync_fetch_and_and(&f.waiting, 0);
 	
-	lock = mksemtemp(f.lockname, "/xshmfl-%i");
+	lock = mksemtemp(f.lockname, sizeof(f.lockname) - 1, "/xshmfl-%i");
 	if (lock == SEM_FAILED) {
 		err(EXIT_FAILURE, "xshmfence_init: sem_open");
 	}
 
-	cond = mksemtemp(f.condname, "/xshmfc-%i");
+	cond = mksemtemp(f.condname, sizeof(f.condname) - 1, "/xshmfc-%i");
 	if (cond == SEM_FAILED) {
 		err(EXIT_FAILURE, "xshmfence_init: sem_open");
 	}
@@ -223,13 +223,13 @@ xshmfence_close_semaphore(struct xshmfence *f)
 }
 
 static sem_t *
-mksemtemp(char *name, const char *template)
+mksemtemp(char *name, size_t namelen, const char *template)
 {
 	sem_t *ret;
 	pid_t p;
 	p = getpid();
 	for(;;) {
-		sprintf(name, template, p);
+		snprintf(name, namelen, template, p);
 		ret = sem_open(name, O_CREAT|O_EXCL, 0600, 1);
 		if (ret == SEM_FAILED) {
 			if (errno == EEXIST) {
