@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3547 2016/08/24 13:28:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3548 2016/08/24 23:44:34 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5079,3 +5079,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/ocaml-lablgtk to 2.18.5 [wiz 2016-08-24]
 	Updated net/youtube-dl to 20160824.1 [fly 2016-08-24]
 	Added devel/undebt version 0.2.2 [wiz 2016-08-24]
+	Added www/p5-HTTP-Thin version 0.006 [markd 2016-08-24]
+	Added www/p5-Role-REST-Client version 0.18 [markd 2016-08-24]
+	Added devel/p5-Log-Any-Adapter-Screen version 0.12 [markd 2016-08-24]
+	Added devel/p5-Log-Any-Adapter-TAP version 0.003003 [markd 2016-08-24]
+	Added devel/p5-GitLab-API-v3 version 1.00 [markd 2016-08-24]
