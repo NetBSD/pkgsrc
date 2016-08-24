@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.50 2016/06/08 17:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2016/08/24 06:36:13 wen Exp $
 
-DISTNAME=	bsddb3-6.0.1
+DISTNAME=	bsddb3-6.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/bsddb3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/bsddb3/
-COMMENT=	Python extension module for Berkeley DB 4 and 5
+COMMENT=	Python bindings for Oracle Berkeley DB
 LICENSE=	modified-bsd
 
 BDB_ACCEPTED=		db4 db5
