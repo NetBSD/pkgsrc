@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3526 2016/08/24 00:34:24 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3527 2016/08/24 03:10:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5058,3 +5058,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/phpmyadmin to 4.6.4 [taca 2016-08-23]
 	Updated www/mediawiki to 1.27.1 [wen 2016-08-24]
 	Updated databases/p5-DBD-mysql to 4.036 [wen 2016-08-24]
+	Updated databases/p5-DBIx-Class-Helpers to 2.033001 [wen 2016-08-24]
