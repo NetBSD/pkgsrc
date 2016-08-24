@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3524 2016/08/23 15:54:31 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3525 2016/08/24 00:16:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5056,3 +5056,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql95 to 9.5.4 [adam 2016-08-23]
 	Updated devel/ruby-fast_gettext to 1.2.0 [taca 2016-08-23]
 	Updated databases/phpmyadmin to 4.6.4 [taca 2016-08-23]
+	Updated www/mediawiki to 1.27.1 [wen 2016-08-24]
