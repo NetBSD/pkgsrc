@@ -1,0 +1,5 @@
+This Log::Any adapter prints log messages to screen
+(STDERR/STDOUT). The messages are colored according to level (unless
+coloring is turned off). It has a few other features: allow passing
+formatter, allow setting level from some environment variables, add
+prefix/timestamps.
