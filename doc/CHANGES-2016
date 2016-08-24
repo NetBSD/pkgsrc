@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3546 2016/08/24 11:01:30 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3547 2016/08/24 13:28:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5078,3 +5078,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-betamax to 0.8.0 [wiz 2016-08-24]
 	Updated x11/ocaml-lablgtk to 2.18.5 [wiz 2016-08-24]
 	Updated net/youtube-dl to 20160824.1 [fly 2016-08-24]
+	Added devel/undebt version 0.2.2 [wiz 2016-08-24]
