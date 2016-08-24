@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3528 2016/08/24 05:58:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3529 2016/08/24 05:59:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5060,3 +5060,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBD-mysql to 4.036 [wen 2016-08-24]
 	Updated databases/p5-DBIx-Class-Helpers to 2.033001 [wen 2016-08-24]
 	Updated security/p5-IO-Socket-SSL to 2.037 [wiz 2016-08-24]
+	Updated devel/p5-Sub-Exporter-Progressive to 0.001012 [wiz 2016-08-24]
