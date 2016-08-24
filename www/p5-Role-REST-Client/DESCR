@@ -1,0 +1,4 @@
+This REST Client role makes REST connectivety easy.
+
+Role::REST::Client will handle encoding and decoding when using the HTTP
+verbs.
