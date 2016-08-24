@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16341 2016/08/24 10:52:03 wiz Exp $
+$NetBSD: TODO,v 1.16342 2016/08/24 11:05:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -467,7 +467,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o binutils-2.27
 	o bird-1.5.0
 	o bird6-1.5.0
-	o blas-3.6.0
+	o blas-3.6.1
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o bmkdep-20140112
@@ -991,7 +991,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kstart-4.2
 	o ktorrent3-3.3.4
 	o labelnation-1.218
-	o lapack-3.6.0
+	o lapack-3.6.1
 	o latex2html-2015
 	o latexmk-444
 	o lbdb-0.40
@@ -1195,7 +1195,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openslp-2.0.0
 	o openssh-7.3p1
 	o opera-26
-	o orcus-0.11.2
+	o orcus-0.12.0
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
