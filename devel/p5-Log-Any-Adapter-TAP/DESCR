@@ -1,0 +1,4 @@
+When running testcases, you probably want to see some of your logging
+output. One sensible approach is to have all warn and more serious
+messages emitted as diag output on STDERR, and less serious messages
+emitted as note comments on STDOUT.
