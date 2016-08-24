@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3544 2016/08/24 10:48:56 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3545 2016/08/24 10:52:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5076,3 +5076,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/caff to 2.4 [wiz 2016-08-24]
 	Updated sysutils/spice-protocol to 0.12.12 [wiz 2016-08-24]
 	Updated www/py-betamax to 0.8.0 [wiz 2016-08-24]
+	Updated x11/ocaml-lablgtk to 2.18.5 [wiz 2016-08-24]
