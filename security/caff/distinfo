@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.28 2016/05/05 20:07:36 tron Exp $
+$NetBSD: distinfo,v 1.29 2016/08/24 10:45:38 wiz Exp $
 
-SHA1 (signing-party_2.3.orig.tar.gz) = eb65e32668e0b3fccd8c5e4d73b2aa66761a7e86
-RMD160 (signing-party_2.3.orig.tar.gz) = b87a56883d8e93632e4973e73ae1d40a476a80b7
-SHA512 (signing-party_2.3.orig.tar.gz) = 5c901a491a4349fd0ab92aa7358c78da141f4616572140f5a4d22f6ba7152e877d5d9734fa0b26477e7c9a49bd972b1fc3047a115f4fd868969387df572fd231
-Size (signing-party_2.3.orig.tar.gz) = 196864 bytes
+SHA1 (signing-party_2.4.orig.tar.gz) = 2a3b7b79afd9508e87293a0fb216b2a454058118
+RMD160 (signing-party_2.4.orig.tar.gz) = 68c939e68a4db9f1c99931d04ff3a3e30eb52b59
+SHA512 (signing-party_2.4.orig.tar.gz) = 0ab18af70314839193d25053c6b3de31afba173ae70a39b84e19aad8ec4864bbd95f9b685b3bc807674310c35af2dc75145eb6eb9d03d6a0ce84ce45ac7f29c0
+Size (signing-party_2.4.orig.tar.gz) = 197731 bytes
 SHA1 (patch-Makefile) = 728bb40fa8be2f0ac63254f2e86b37ee9fa1199f
