@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3540 2016/08/24 10:39:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3541 2016/08/24 10:42:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5072,3 +5072,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/urw-fonts to 2.0 [wiz 2016-08-24]
 	Updated net/mosh to 1.2.6 [wiz 2016-08-24]
 	Updated net/py-twisted to 16.3.2 [wiz 2016-08-24]
+	Updated print/cups-filters to 1.11.1 [wiz 2016-08-24]
