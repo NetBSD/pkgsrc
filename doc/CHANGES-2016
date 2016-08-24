@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3537 2016/08/24 10:26:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3538 2016/08/24 10:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5069,3 +5069,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-hypothesis to 3.4.2 [wiz 2016-08-24]
 	Updated devel/waf to 1.9.3 [wiz 2016-08-24]
 	Updated fonts/FiraCode to 1.200 [wiz 2016-08-24]
+	Updated fonts/urw-fonts to 2.0 [wiz 2016-08-24]
