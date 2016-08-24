@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/20 11:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/24 10:26:12 wiz Exp $
 
-DISTNAME=	FiraCode_1.102
+DISTNAME=	FiraCode_1.200
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tonsky/}
@@ -14,10 +14,12 @@ LICENSE=	ofl-v1.1
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/OTF
-INSTALLATION_DIRS=	share/fonts/X11/OTF
+FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/OTF ${PREFIX}/share/fonts/X11/TTF
+INSTALLATION_DIRS=	share/fonts/X11/OTF share/fonts/X11/TTF
+WRKSRC=		${WRKDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.otf  ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/otf/*.otf  ${DESTDIR}${PREFIX}/share/fonts/X11/OTF
+	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf  ${DESTDIR}${PREFIX}/share/fonts/X11/TTF
 
 .include "../../mk/bsd.pkg.mk"
