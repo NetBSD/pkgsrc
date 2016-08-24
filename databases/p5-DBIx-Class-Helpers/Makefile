@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/07/16 01:57:15 wen Exp $
+# $NetBSD: Makefile,v 1.21 2016/08/24 03:09:28 wen Exp $
 
-DISTNAME=	DBIx-Class-Helpers-2.033000
+DISTNAME=	DBIx-Class-Helpers-2.033001
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
