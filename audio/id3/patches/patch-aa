@@ -1,20 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2008/11/24 12:04:15 obache Exp $
+$NetBSD: patch-aa,v 1.4 2016/08/24 09:59:31 wiz Exp $
 
---- Makefile.orig	2000-09-23 03:08:39.000000000 +0000
+--- Makefile.orig	2016-08-13 22:39:26.000000000 +0000
 +++ Makefile
-@@ -3,17 +3,17 @@ VERSION = 0.13
- 
- SHELL = /bin/sh
- 
--CC = gcc
--CFLAGS = -g -O2
--LDFLAGS = 
-+#CC = gcc
-+#CFLAGS = -g -O2
-+#LDFLAGS = 
- LIBS = 
- DEFS =  
- INSTALL = /usr/bin/install -c
+@@ -27,9 +27,9 @@ INSTALL ?= /usr/bin/install -c
+ STRIP ?= -s
  
  # Installation directories
 -prefix = ${DESTDIR}/usr
@@ -25,12 +14,12 @@ $NetBSD: patch-aa,v 1.3 2008/11/24 12:04:15 obache Exp $
  bindir = ${exec_prefix}/bin
  
  INCL = 
-@@ -34,7 +34,7 @@ clean:
+@@ -50,7 +50,7 @@ clean:
  	rm -f *~ *.o core $(PRODUCT)
  
  install: $(PRODUCT)
 -	$(INSTALL) -d -m 755 $(bindir)
--	$(INSTALL) -s -m 755 -o 0 $(PRODUCT) $(bindir)
+-	$(INSTALL) $(STRIP) -m 755 -o 0 $(PRODUCT) $(bindir)
 -	$(INSTALL) -d -m 755 $(mandir)
 -	$(INSTALL) -m 644 -o 0 $(PRODUCT).1 $(mandir)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
