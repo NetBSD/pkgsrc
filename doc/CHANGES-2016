@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3532 2016/08/24 09:59:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3533 2016/08/24 10:05:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5064,3 +5064,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-bsddb3 to 6.2.1 [wen 2016-08-24]
 	Updated multimedia/mpv to 0.19.0 [maya 2016-08-24]
 	Updated audio/id3 to 1.0.0 [wiz 2016-08-24]
+	Updated audio/musicpd to 0.19.19 [wiz 2016-08-24]
