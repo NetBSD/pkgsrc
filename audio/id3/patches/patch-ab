@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2003/12/23 18:11:19 sketch Exp $
+$NetBSD: patch-ab,v 1.2 2016/08/24 09:59:31 wiz Exp $
 
---- id3.c.orig	2003-12-23 12:32:28.874414092 +0000
-+++ id3.c	2003-12-23 12:32:49.648359969 +0000
-@@ -34,7 +34,6 @@
- 
- #include <stdio.h>
- #include <stdlib.h>
--#include <getopt.h>
+--- id3.c.orig	2016-08-13 22:39:26.000000000 +0000
++++ id3.c
+@@ -18,7 +18,6 @@
+ #include <ctype.h>
+ #include <err.h>
  #include <errno.h>
- #include <unistd.h>
- #include <string.h>
+-#include <getopt.h>
+ #include <limits.h>
+ #include <stdbool.h>
+ #include <stdio.h>
