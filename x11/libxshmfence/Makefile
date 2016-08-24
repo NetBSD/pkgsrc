@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/08/24 07:16:22 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/24 07:18:54 tnn Exp $
 
 DISTNAME=	libxshmfence-1.2
 PKGREVISION=	5
@@ -12,6 +12,7 @@ COMMENT=	Shared memory 'SyncFence' synchronization primitive
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config autoconf automake autoreconf
 
