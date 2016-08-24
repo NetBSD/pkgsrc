@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2016/05/26 14:31:12 khorben Exp $
+# $NetBSD: Makefile.common,v 1.48 2016/08/24 10:52:46 wiz Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
@@ -8,7 +8,7 @@ MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.03/
 #EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	http://caml.inria.fr/ocaml/
+HOMEPAGE=	https://ocaml.org/
 COMMENT=	The latest implementation of the Caml dialect of ML
 LICENSE=	gnu-gpl-v2
 
