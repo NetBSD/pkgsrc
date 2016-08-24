@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/05/04 02:54:46 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/24 07:16:22 tnn Exp $
 
 DISTNAME=	libxshmfence-1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/lib/
 EXTRACT_SUFX=	.tar.bz2
