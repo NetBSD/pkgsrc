@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2301 2016/08/24 13:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2302 2016/08/24 23:43:27 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -1064,6 +1064,7 @@ SUBDIR+=	p5-Git-Repository
 SUBDIR+=	p5-Git-Repository-Plugin-AUTOLOAD
 SUBDIR+=	p5-Git-Version-Compare
 SUBDIR+=	p5-Git-Wrapper
+SUBDIR+=	p5-GitLab-API-v3
 SUBDIR+=	p5-Glib-Object-Introspection
 SUBDIR+=	p5-Gnome2
 SUBDIR+=	p5-Gnome2-GConf
@@ -1145,6 +1146,8 @@ SUBDIR+=	p5-Log-Agent
 SUBDIR+=	p5-Log-Any
 SUBDIR+=	p5-Log-Any-Adapter-Dispatch
 SUBDIR+=	p5-Log-Any-Adapter-Log4perl
+SUBDIR+=	p5-Log-Any-Adapter-Screen
+SUBDIR+=	p5-Log-Any-Adapter-TAP
 SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Log-Dispatch-Array
 SUBDIR+=	p5-Log-Dispatch-Config
