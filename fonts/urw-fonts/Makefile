@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2014/08/19 10:42:55 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/24 10:29:50 wiz Exp $
 
-DISTNAME=	urw-fonts-1.0.7pre44
+DISTNAME=	urw-fonts-2.0
 CATEGORIES=	fonts
-MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/urw-fonts/urw-fonts-1.0.7pre44.tar.bz2/51c6c2690593cd9bd92f197a6f2ff8bd/
+MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/urw-fonts/urw-fonts-2.0.tar.bz2/c5cc8237e4289fc6ebeaa296174fa504/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,14 +10,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Standard postscript fonts (cyrillicized)
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/fonts
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 FONTS_DIR=	${PREFIX}/share/fonts/urw
 INSTALLATION_DIRS= share/fonts/urw
 
 do-install:
-	for ext in afm pfb pfm; \
+	for ext in afm pfb; \
 	do \
 		for f in ${WRKSRC}/*.$${ext}; \
 		do \
