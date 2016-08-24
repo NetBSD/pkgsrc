@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/08/19 11:40:20 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/24 10:48:47 wiz Exp $
 
-DISTNAME=	betamax-0.7.2
+DISTNAME=	betamax-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/betamax/}
