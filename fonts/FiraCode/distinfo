@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/20 11:38:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2016/08/24 10:26:12 wiz Exp $
 
-SHA1 (FiraCode_1.102.zip) = 8b9f2ed088f66c46c574069553e6c87814328f80
-RMD160 (FiraCode_1.102.zip) = b9637c050325065335c9c301158156c64cdf9c57
-SHA512 (FiraCode_1.102.zip) = 3f8a00bd3fac24d1b0c8466d5b30380cc81ada4ee386211a1c1c04edeab9245a480c326357cbbfe85890eacb9bdd8f9ea09ecad6306ef182acd3d75f140a9ec6
-Size (FiraCode_1.102.zip) = 484946 bytes
+SHA1 (FiraCode_1.200.zip) = 5926a7193ab8777245d664adc6d3b1000adad0d0
+RMD160 (FiraCode_1.200.zip) = 2cfee479b0555dd537fc27c9174776eaab0766a1
+SHA512 (FiraCode_1.200.zip) = 068b0de36dd6abc07970a2f80da1280d238dd6a636e521f949a0cb8f9f297602def3f6e7a0b1ebc71ac91e0055b12706676d0696a673b0d7d004a1eae8cf2571
+Size (FiraCode_1.200.zip) = 2146528 bytes
