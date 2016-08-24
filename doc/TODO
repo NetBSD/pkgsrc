@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16339 2016/08/24 10:47:17 wiz Exp $
+$NetBSD: TODO,v 1.16340 2016/08/24 10:48:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1356,7 +1356,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.19
 	o py-acora-1.9
 	o py-apache-libcloud-0.20.1
-	o py-betamax-0.8.0
 	o py-bleach-1.4.2
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
