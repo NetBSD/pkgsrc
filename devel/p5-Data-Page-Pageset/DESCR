@@ -1,0 +1,12 @@
+Pages number can be very high, and it is not comfortable to show user from
+the first page to the last page list. Sometimes we need split the page list
+into some sets to shorten the page list, the form is like:
+
+ 1-6 7-12 13 14 15 16 17 18 19-24 25-30 31-36 37-41
+
+the first two part indicats the two pagesets, and in current pageset, we
+provide the normal page list from the first one to the last one, and provide
+the rest pagesets to indicate the pages scope.
+
+In this module, you can specify the pages_per_set or max_pagesets for fine
+showing.
