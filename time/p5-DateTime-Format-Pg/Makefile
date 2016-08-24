@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/07/26 00:25:32 wen Exp $
+# $NetBSD: Makefile,v 1.20 2016/08/24 00:23:31 wen Exp $
 
 DISTNAME=	DateTime-Format-Pg-0.16012
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-DateTime-TimeZone>=0.05:../../time/p5-DateTime-TimeZone
 
 PERL5_PACKLIST=		auto/DateTime/Format/Pg/.packlist
 
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

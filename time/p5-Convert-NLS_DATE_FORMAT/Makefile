@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/26 00:16:51 wen Exp $
+# $NetBSD: Makefile,v 1.11 2016/08/24 00:26:51 wen Exp $
 
 DISTNAME=	Convert-NLS_DATE_FORMAT-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	#empty
 PERL5_PACKLIST= auto/Convert/NLS_DATE_FORMAT/.packlist
 
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 #post-extract:
 #	${FIND} ${WRKSRC} -name "*.pm" -type f -exec ${CHMOD} -x {} \;
