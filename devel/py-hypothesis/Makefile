@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/08/22 13:16:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/24 10:20:35 wiz Exp $
 
-DISTNAME=	hypothesis-3.1.0
+DISTNAME=	hypothesis-3.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
 
@@ -14,6 +13,9 @@ LICENSE=	mpl-2.0
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 USE_LANGUAGES=	# none
+
+# actual tests only in github distfile, but that needs py-test and
+# py-test depends on py-hypothesis...
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

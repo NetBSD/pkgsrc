@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/24 09:44:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/24 10:20:35 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -162,9 +162,6 @@ ${PYSITELIB}/hypothesis/utils/conventions.pyo
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.py
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.pyc
 ${PYSITELIB}/hypothesis/utils/dynamicvariables.pyo
-${PYSITELIB}/hypothesis/utils/size.py
-${PYSITELIB}/hypothesis/utils/size.pyc
-${PYSITELIB}/hypothesis/utils/size.pyo
 ${PYSITELIB}/hypothesis/vendor/__init__.py
 ${PYSITELIB}/hypothesis/vendor/__init__.pyc
 ${PYSITELIB}/hypothesis/vendor/__init__.pyo
