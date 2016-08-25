@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.71 2016/03/11 23:54:09 khorben Exp $
+# $NetBSD: SunOS.mk,v 1.72 2016/08/25 12:08:29 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -24,6 +24,7 @@ ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `${SETENV} LC_MESSAGES=C ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `${SETENV} LC_MESSAGES=C ulimit -H -s`
+ULIMIT_CMD_cputime?=	ulimit -t `${SETENV} LC_MESSAGES=C ulimit -H -t`
 ULIMIT_CMD_memorysize?=	ulimit -v `${SETENV} LC_MESSAGES=C ulimit -H -v`
 USERADD?=		/usr/sbin/useradd
 
