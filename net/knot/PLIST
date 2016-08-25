@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/06/16 17:12:27 pettai Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/08/25 14:11:49 pettai Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
@@ -24,6 +24,9 @@ include/libknot/binary.h
 include/libknot/codes.h
 include/libknot/consts.h
 include/libknot/control/control.h
+include/libknot/cookies/alg-fnv64.h
+include/libknot/cookies/client.h
+include/libknot/cookies/server.h
 include/libknot/db/db.h
 include/libknot/db/db_lmdb.h
 include/libknot/db/db_trie.h
@@ -38,9 +41,6 @@ include/libknot/packet/compr.h
 include/libknot/packet/pkt.h
 include/libknot/packet/rrset-wire.h
 include/libknot/packet/wire.h
-include/libknot/processing/layer.h
-include/libknot/processing/overlay.h
-include/libknot/processing/requestor.h
 include/libknot/rdata.h
 include/libknot/rdataset.h
 include/libknot/rrset-dump.h
@@ -52,6 +52,7 @@ include/libknot/rrtype/naptr.h
 include/libknot/rrtype/nsec.h
 include/libknot/rrtype/nsec3.h
 include/libknot/rrtype/nsec3param.h
+include/libknot/rrtype/opt-cookie.h
 include/libknot/rrtype/opt.h
 include/libknot/rrtype/rdname.h
 include/libknot/rrtype/rrsig.h
@@ -76,6 +77,7 @@ man/man1/khost.1
 man/man1/knot1to2.1
 man/man1/knsec3hash.1
 man/man1/knsupdate.1
+man/man1/kzonecheck.1
 man/man5/knot.conf.5
 man/man8/keymgr.8
 man/man8/knotc.8
@@ -83,6 +85,7 @@ man/man8/knotd.8
 sbin/keymgr
 sbin/knotc
 sbin/knotd
+sbin/kzonecheck
 share/examples/knot/example.com.zone
 share/examples/knot/knot.sample.conf
 @pkgdir etc/knot
