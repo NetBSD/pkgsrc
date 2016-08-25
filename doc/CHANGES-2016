@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3550 2016/08/25 07:57:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3551 2016/08/25 14:15:29 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5090,3 +5090,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/p5-JavaScript-Minifier-XS version 0.11 [markd 2016-08-25]
 	Added www/p5-CSS-Minifier-XS version 0.09 [markd 2016-08-25]
 	Updated net/tor to 0.2.8.7 [wiz 2016-08-25]
+	Updated net/knot to 2.3.0 [pettai 2016-08-25]
