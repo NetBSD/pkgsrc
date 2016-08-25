@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/08/25 06:19:29 richard Exp $
 
 SHA1 (db-6.1.26.tar.gz) = 5ae05c6c4a1766270fd5cfb28539e2b7a19c33b2
 RMD160 (db-6.1.26.tar.gz) = 6d242b65cd316060c5ed4634bb11e621f3cc6d93
@@ -6,7 +6,7 @@ SHA512 (db-6.1.26.tar.gz) = 2590ee3d9e30e6eaeb350edbc2fa7400582c0b520177fe0a3a57
 Size (db-6.1.26.tar.gz) = 37495772 bytes
 SHA1 (patch-dist_Makefile.in) = dbc5f8fd26e715f6dff8ff261a08b2856ea3c46e
 SHA1 (patch-dist_aclocal_libtool.m4) = 37367e10d9d856cf233b7a0efd3680f35728039e
-SHA1 (patch-dist_configure) = 2fb4c6cdd29ac5a9ad520af411517660b24e8768
+SHA1 (patch-dist_configure) = f38f66f7662a126c92df658158a7a2280c174edb
 SHA1 (patch-src_dbinc_atomic.h) = 240a4a6ec094e868d9a5e95ec4ab72d5b9ddfc23
 SHA1 (patch-src_hmac_sha1.c) = 0e98e6383c214adbb939839bb345e55efe8d89da
 SHA1 (patch-src_mp_mp__fget.c) = 059ecdb74bef29c17b445c305b6d4934b5a3c59b
