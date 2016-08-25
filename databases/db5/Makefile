@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 14:06:05 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/25 06:18:57 richard Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (5.n -> 5.(n+1))
@@ -8,6 +8,7 @@
 
 DISTNAME=	db-5.3.28
 PKGNAME=	${DISTNAME:S/db/db5/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 		http://download-uk.oracle.com/berkeley-db/
@@ -25,6 +26,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		build_unix
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--enable-compat185
+CONFIGURE_ARGS+=	--enable-dbm
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db5
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db5_,
