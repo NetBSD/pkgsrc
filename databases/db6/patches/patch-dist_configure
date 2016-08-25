@@ -1,4 +1,4 @@
-$NetBSD: patch-dist_configure,v 1.1 2015/01/01 18:52:52 ryoon Exp $
+$NetBSD: patch-dist_configure,v 1.2 2016/08/25 06:19:29 richard Exp $
 
 --- dist/configure.orig	2014-06-10 15:32:54.000000000 +0000
 +++ dist/configure
@@ -97,7 +97,7 @@ $NetBSD: patch-dist_configure,v 1.1 2015/01/01 18:52:52 ryoon Exp $
  		;;
  	    *)
 -		if test "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
-+		if test "$ac_cv_lib_pthread_main" = yes -a "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
++		if test "$ac_cv_lib_pthread_main" = yes -o "$db_cv_mutex" = no -o "$db_cv_mutex" = posix_only; then
  			LIBS="$LIBS -lpthread"
  
  if test "$cross_compiling" = yes; then :
