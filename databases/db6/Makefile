@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/09/14 10:52:57 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/25 06:19:29 richard Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (6.n -> 6.(n+1))
@@ -8,6 +8,7 @@
 
 DISTNAME=	db-6.1.26
 PKGNAME=	${DISTNAME:S/db/db6/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
@@ -23,6 +24,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		build_unix
 CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--enable-compat185
+CONFIGURE_ARGS+=	--enable-dbm
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db6
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db6_,
