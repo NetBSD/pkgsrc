@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3548 2016/08/24 23:44:34 markd Exp $
+$NetBSD: CHANGES-2016,v 1.3549 2016/08/25 00:19:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5084,3 +5084,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-Log-Any-Adapter-Screen version 0.12 [markd 2016-08-24]
 	Added devel/p5-Log-Any-Adapter-TAP version 0.003003 [markd 2016-08-24]
 	Added devel/p5-GitLab-API-v3 version 1.00 [markd 2016-08-24]
+	Added math/py-autograd version 1.1.5 [markd 2016-08-24]
+	Added devel/p5-Data-Page-Pageset version 1.02 [markd 2016-08-24]
+	Added time/p5-Business-Hours version 0.12 [markd 2016-08-25]
+	Added www/p5-JavaScript-Minifier-XS version 0.11 [markd 2016-08-25]
+	Added www/p5-CSS-Minifier-XS version 0.09 [markd 2016-08-25]
