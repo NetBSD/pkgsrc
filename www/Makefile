@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1189 2016/08/24 23:30:27 markd Exp $
+# $NetBSD: Makefile,v 1.1190 2016/08/25 00:17:04 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -265,6 +265,7 @@ SUBDIR+=	p5-CGI-Session-Serialize-yaml
 SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CGI-Struct
 SUBDIR+=	p5-CSS
+SUBDIR+=	p5-CSS-Minifier-XS
 SUBDIR+=	p5-CSS-Squish
 SUBDIR+=	p5-CSS-Tiny
 SUBDIR+=	p5-Captcha-reCAPTCHA
@@ -409,6 +410,7 @@ SUBDIR+=	p5-Handel
 SUBDIR+=	p5-Hijk
 SUBDIR+=	p5-I18N-AcceptLanguage
 SUBDIR+=	p5-JSON-RPC
+SUBDIR+=	p5-JavaScript-Minifier-XS
 SUBDIR+=	p5-JavaScript-Value-Escape
 SUBDIR+=	p5-Jemplate
 SUBDIR+=	p5-Kwiki
