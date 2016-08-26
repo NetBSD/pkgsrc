@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2016/03/15 12:45:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.26 2016/08/26 09:26:05 fhajny Exp $
 
 DISTNAME=		puppet-3.8.6
+PKGREVISION=		1
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -47,6 +48,12 @@ SUBST_FILES.prefix+=	spec/unit/util/selinux_spec.rb
 SUBST_FILES.prefix+=	spec/unit/indirector/catalog/static_compiler_spec.rb
 SUBST_SED.prefix=	-e "s|/etc/puppet|${PKG_SYSCONFDIR}|g"
 SUBST_SED.prefix+=	-e "s|/opt/csw/lib|${PREFIX}/lib|g"
+
+SUBST_CLASSES+=		sufx
+SUBST_STAGE.sufx=	pre-configure
+SUBST_MESSAGE.sufx=	Fixing command suffix
+SUBST_FILES.sufx=	lib/puppet/util/command_line.rb
+SUBST_VARS.sufx=	RUBY_SUFFIX
 
 EGDIR=			share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/puppet.conf ${PKG_SYSCONFDIR}/puppet.conf
