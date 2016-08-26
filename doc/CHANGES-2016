@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3556 2016/08/26 08:04:25 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3557 2016/08/26 10:42:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5096,3 +5096,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Dancer2 to 0.203000 [wen 2016-08-26]
 	Updated www/p5-Test-WWW-Mechanize to 1.46 [wen 2016-08-26]
 	Updated www/p5-HTTP-Async to 0.31 [wen 2016-08-26]
+	Updated devel/kyua to 0.13 [jmmv 2016-08-26]
