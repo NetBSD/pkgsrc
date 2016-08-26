@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3559 2016/08/26 14:07:14 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3560 2016/08/26 14:37:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5099,3 +5099,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/kyua to 0.13 [jmmv 2016-08-26]
 	Updated net/yaz to 5.16.0 [mef 2016-08-26]
 	Updated databases/idzebra to 2.0.62 [mef 2016-08-26]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.24 [mef 2016-08-26]
