@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3557 2016/08/26 10:42:24 jmmv Exp $
+$NetBSD: CHANGES-2016,v 1.3558 2016/08/26 13:59:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5097,3 +5097,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Test-WWW-Mechanize to 1.46 [wen 2016-08-26]
 	Updated www/p5-HTTP-Async to 0.31 [wen 2016-08-26]
 	Updated devel/kyua to 0.13 [jmmv 2016-08-26]
+	Updated net/yaz to 5.16.0 [mef 2016-08-26]
