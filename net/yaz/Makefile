@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2016/04/11 19:01:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.64 2016/08/26 13:59:34 mef Exp $
 #
 
 DISTNAME=	yaz-4.1.6
-PKGREVISION=	18
+DISTNAME=	yaz-5.16.0
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
@@ -22,6 +22,8 @@ USE_TOOLS+=	pkg-config tclsh
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-xml2=${BUILDLINK_PREFIX.libxml2}
+# backtrace and backtrace_symbols
+LDFLAGS+=	-lexecinfo
 
 PTHREAD_OPTS+=	native optional
 
