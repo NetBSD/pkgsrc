@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16344 2016/08/26 14:07:14 mef Exp $
+$NetBSD: TODO,v 1.16345 2016/08/26 23:21:02 mef Exp $
 
 Suggested new packages
 ======================
@@ -1222,7 +1222,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IP-Country-3.03
 	o p5-Locale-Codes-3.38
 	o p5-Memoize-Memcached-0.11
-	o p5-Moose-Policy-0.05
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
