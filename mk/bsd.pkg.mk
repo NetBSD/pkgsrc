@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2020 2016/06/11 12:41:30 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2021 2016/08/26 16:51:56 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -180,6 +180,7 @@ ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
 ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
 ALL_ENV+=	MAKELEVEL=0
+ALL_ENV+=	CONFIG_SITE=
 
 # This variable can be added to MAKE_ENV to ease installation of packages
 # that use BSD-style Makefiles.
