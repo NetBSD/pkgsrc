@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16343 2016/08/26 13:59:52 mef Exp $
+$NetBSD: TODO,v 1.16344 2016/08/26 14:07:14 mef Exp $
 
 Suggested new packages
 ======================
@@ -911,7 +911,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.4.1
-	o idzebra-2.0.62
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.6.5
 	o imapsync-1.678
