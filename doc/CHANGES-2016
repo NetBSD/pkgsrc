@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3553 2016/08/25 18:44:25 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3554 2016/08/26 07:38:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5093,3 +5093,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/knot to 2.3.0 [pettai 2016-08-25]
 	Updated www/http-parser to 2.7.0nb1 [jperkin 2016-08-25]
 	Updated net/syncthing to 0.14.5 [gdt 2016-08-25]
+	Updated www/p5-Dancer2 to 0.203000 [wen 2016-08-26]
