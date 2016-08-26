@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3554 2016/08/26 07:38:30 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3555 2016/08/26 07:55:03 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5094,3 +5094,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/http-parser to 2.7.0nb1 [jperkin 2016-08-25]
 	Updated net/syncthing to 0.14.5 [gdt 2016-08-25]
 	Updated www/p5-Dancer2 to 0.203000 [wen 2016-08-26]
+	Updated www/p5-Test-WWW-Mechanize to 1.46 [wen 2016-08-26]
