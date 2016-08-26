@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:27:25 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/08/26 17:25:08 joerg Exp $
 
 SHA1 (ffcall-1.10.tar.gz) = 6b4fdc7bd38b434bbf3d65508a3d117fc8b349f3
 RMD160 (ffcall-1.10.tar.gz) = 910af54fae0b992ceb5620f155e301827d2e03c5
@@ -13,5 +13,7 @@ SHA1 (patch-ag) = b21d51fc1d78d81a4f7a99183ca1033675ff04ac
 SHA1 (patch-ah) = 07781ee5caef0ca98e9f15c504fee0b43a111245
 SHA1 (patch-ai) = 03a5a572e94ddbcb78dd11201e0afd91998d1e3a
 SHA1 (patch-aj) = 8db7daeb150db176dfb2f59ad9b4854cb1f895fd
+SHA1 (patch-avcall_avcall-x86__64.s) = a41ec9d5f2f6b64e8dca77d29cf82fa025ab954f
 SHA1 (patch-callback_vacall__r_vacall-x86_64.c) = 2e7e6cc3bd32461e905cb48a3bd470517c90bfb8
+SHA1 (patch-callback_vacall__r_vacall-x86__64.s) = eee81d24f58a57c1ef8164b9c8c70b0e086bda29
 SHA1 (patch-vacall_vacall-x86_64.c) = 299a34fe8530c6bf926b97d0d018a8b850b35a97
