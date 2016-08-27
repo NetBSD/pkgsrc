@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/08/27 16:02:45 wiz Exp $
 
 DISTNAME=	caldav-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-vobject
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 0.2.1
 
 REPLACE_PYTHON+=	caldav/__init__.py caldav/davclient.py
 REPLACE_PYTHON+=	caldav/elements/__init__.py caldav/elements/base.py
