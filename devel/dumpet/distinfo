@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2016/08/27 11:53:39 nonaka Exp $
+
+SHA1 (dumpet-2.1.tar.bz2) = 56fc8a52a8df12083912496d6d7de993f2063ec1
+RMD160 (dumpet-2.1.tar.bz2) = cf1a0923c658ef285176fca59c97a3e04636b4ef
+SHA512 (dumpet-2.1.tar.bz2) = ca12d0852594acabda6a97b91e072872a6d83cd29b9c549a2f03120a8e92b19d1254ac229e27b562c5b0439b92daeec54e95df0282af4cd346e66b876d4a33b3
+Size (dumpet-2.1.tar.bz2) = 14681 bytes
+SHA1 (patch-Makefile) = 23c20aa9c1c9a278344270a8930506387b8de908
+SHA1 (patch-dumpet.c) = c46e6a20888d02f4877f836e155879b0c74b946b
+SHA1 (patch-dumpet.h) = b0fee038370552bbaab8c1c12f2db13ddd57edfd
+SHA1 (patch-endian.h) = a229f3410287fe277fea52baea69e73f5089bbec
