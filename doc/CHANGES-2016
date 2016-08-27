@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3571 2016/08/27 03:16:56 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3572 2016/08/27 07:40:44 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5110,3 +5110,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/arandr to 0.1.9 [maya 2016-08-27]
 	Updated devel/py-rope to 0.10.2 [maya 2016-08-27]
 	Updated emulators/qemu to 2.6.1 [maya 2016-08-27]
+	Updated databases/rrdtool to 1.6.0nb2 [dholland 2016-08-27]
