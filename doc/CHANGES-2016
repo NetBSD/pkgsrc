@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3567 2016/08/26 23:38:09 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3568 2016/08/27 01:01:08 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5107,3 +5107,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1805 [mef 2016-08-26]
 	Updated devel/p5-Moose-Policy to 0.05 [mef 2016-08-26]
 	Updated devel/p5-MooseX-Role-Parameterized to 1.09 [mef 2016-08-26]
+	Updated x11/arandr to 0.1.9 [fly 2016-08-27]
