@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2016/06/20 08:17:42 kamil Exp $
+$NetBSD: distinfo,v 1.2 2016/08/27 18:09:16 joerg Exp $
 
 SHA1 (ardour-4.7.tar.gz) = 95047ccb3fc599ce11c473a0fd7f1eb012c3e440
 RMD160 (ardour-4.7.tar.gz) = 366f7057fab9878ac425dd70a751899984abc030
@@ -14,5 +14,6 @@ SHA1 (patch-libs_fst_wscript) = b94e18a903fe3fc0bc71edefa1fd690adc17ee6d
 SHA1 (patch-libs_pbd_fpu.cc) = ebdb6d345bf2e3db0402165412978cb1c9043950
 SHA1 (patch-libs_pbd_mountpoint.cc) = 001b8112c08086d32989c82ab699335ecb92ede6
 SHA1 (patch-libs_pbd_wscript) = 0caa774358b511d9790e146e92454a0c34a8d5ef
+SHA1 (patch-libs_ptformat_ptfformat.cc) = 8ad676c452e2504e02bc72df7a7f705dc98c542a
 SHA1 (patch-libs_vfork_wscript) = 1d357b3bed8a2006cdc50fcdfa387ebca8c699c7
 SHA1 (patch-wscript) = e3f64b19c9bf92784139feb0640c3cee39233af8
