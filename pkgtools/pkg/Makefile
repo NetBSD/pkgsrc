@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/08/27 21:10:59 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/27 21:57:05 khorben Exp $
 
-VERSION=	1.5.6
+VERSION=	1.8.7
 DISTNAME=	${VERSION}
 PKGNAME=	pkg-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	${MASTER_SITE_GITHUB:=freebsd/pkg/archive/}
 
