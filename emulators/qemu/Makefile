@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2016/07/09 13:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.153 2016/08/27 03:16:40 maya Exp $
 
-DISTNAME=	qemu-2.6.0
-PKGREVISION=	2
+DISTNAME=	qemu-2.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -39,7 +38,34 @@ CONFIGURE_ARGS+=	--enable-curses
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-arm
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-cris
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-i386
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-lm32
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-m68k
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblaze
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-microblazeel
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mips64el
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-mipsel
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-moxie
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-or32
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppc64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-ppcemb
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-s390x
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sh4
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sh4eb
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sparc
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-sparc64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-tricore
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-unicore32
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-x86_64
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-xtensa
+NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-xtensaeb
 
 PKG_SYSCONFSUBDIR=	qemu
 
