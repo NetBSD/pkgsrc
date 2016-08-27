@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3582 2016/08/27 21:11:51 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.3583 2016/08/27 21:57:18 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5121,3 +5121,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-vobject to 0.9.3 [wiz 2016-08-27]
 	Updated misc/khard to 0.11.1 [wiz 2016-08-27]
 	Updated pkgtools/pkg to 1.5.6nb1 [khorben 2016-08-27]
+	Updated pkgtools/pkg to 1.8.7 [khorben 2016-08-27]
