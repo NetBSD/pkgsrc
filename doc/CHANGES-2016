@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3568 2016/08/27 01:01:08 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3569 2016/08/27 01:26:51 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3776,10 +3776,10 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libtasn1 to 4.8 [wiz 2016-06-22]
 	Updated time/remind to 3.1.15 [wiz 2016-06-22]
 	Updated textproc/expat to 2.2.0 [drochner 2016-06-22]
-	Updated multimedia/ffmpeg2 to 2.8.7nb2 [fly 2016-06-23]
-	Updated multimedia/ffmpeg3 to 3.0.2nb2 [fly 2016-06-23]
-	Updated multimedia/ffmpeg1 to 1.2.12nb3 [fly 2016-06-23]
-	Updated multimedia/ffmpeg010 to 20150312.0.10.16nb3 [fly 2016-06-23]
+	Updated multimedia/ffmpeg2 to 2.8.7nb2 [maya 2016-06-23]
+	Updated multimedia/ffmpeg3 to 3.0.2nb2 [maya 2016-06-23]
+	Updated multimedia/ffmpeg1 to 1.2.12nb3 [maya 2016-06-23]
+	Updated multimedia/ffmpeg010 to 20150312.0.10.16nb3 [maya 2016-06-23]
 	Updated security/netpgpverify to 20160622 [agc 2016-06-23]
 	Updated security/libnetpgpverify to 20160622 [agc 2016-06-23]
 	Updated x11/wmweather to 2.4.5nb2 [dholland 2016-06-23]
@@ -5077,7 +5077,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/spice-protocol to 0.12.12 [wiz 2016-08-24]
 	Updated www/py-betamax to 0.8.0 [wiz 2016-08-24]
 	Updated x11/ocaml-lablgtk to 2.18.5 [wiz 2016-08-24]
-	Updated net/youtube-dl to 20160824.1 [fly 2016-08-24]
+	Updated net/youtube-dl to 20160824.1 [maya 2016-08-24]
 	Added devel/undebt version 0.2.2 [wiz 2016-08-24]
 	Added www/p5-HTTP-Thin version 0.006 [markd 2016-08-24]
 	Added www/p5-Role-REST-Client version 0.18 [markd 2016-08-24]
@@ -5107,4 +5107,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1805 [mef 2016-08-26]
 	Updated devel/p5-Moose-Policy to 0.05 [mef 2016-08-26]
 	Updated devel/p5-MooseX-Role-Parameterized to 1.09 [mef 2016-08-26]
-	Updated x11/arandr to 0.1.9 [fly 2016-08-27]
+	Updated x11/arandr to 0.1.9 [maya 2016-08-27]
