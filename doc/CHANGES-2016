@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3577 2016/08/27 12:41:02 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3578 2016/08/27 14:53:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5116,3 +5116,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-pip to 8.1.2 [richard 2016-08-27]
 	Added devel/dumpet version 2.1 [nonaka 2016-08-27]
 	Updated devel/p5-Parallel-ForkManager to 1.19 [mef 2016-08-27]
+	Updated editors/sasm to 3.5.1 [mef 2016-08-27]
