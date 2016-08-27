@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/08/27 06:42:43 dholland Exp $
+# $NetBSD: options.mk,v 1.2 2016/08/27 06:55:49 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rrdtool
 PKG_SUPPORTED_OPTIONS=	lua python tcl
@@ -18,7 +18,7 @@ PLIST_VARS+=		python tcl lua
 # way that we can't override it. Instead we need to cutpaste the
 # definition of EGG_INFODIR and its plist bits. Sigh. Probably the
 # right thing to do is make this a separate package.
-# 
+#
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--enable-python
 
