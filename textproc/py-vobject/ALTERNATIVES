@@ -1,0 +1,2 @@
+bin/change_tz @PREFIX@/bin/change_tz-@PYVERSSUFFIX@
+bin/ics_diff @PREFIX@/bin/ics_diff-@PYVERSSUFFIX@
