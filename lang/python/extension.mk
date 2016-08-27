@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.48 2016/07/09 10:00:26 rillig Exp $
+# $NetBSD: extension.mk,v 1.49 2016/08/27 20:42:47 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -57,7 +57,11 @@ INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
 
 .if defined(PY_PATCHPLIST)
 PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 .endif
+
+# mostly for ALTERNATIVES files
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # prepare Python>=3.2 bytecode file location change
 # http://www.python.org/dev/peps/pep-3147/
