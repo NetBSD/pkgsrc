@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/04/23 06:23:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/08/27 06:42:43 dholland Exp $
 bin/rrdcached
 bin/rrdcgi
 bin/rrdcreate
@@ -10,7 +10,16 @@ include/rrd_client.h
 include/rrd_config.h
 include/rrd_format.h
 lib/librrd.la
+${PLIST.lua}${LUA_CDIR}/rrd.la
+${PLIST.python}${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PLIST.python}${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PLIST.python}${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PLIST.python}${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PLIST.python}${PYSITELIB}/rrdtool.so
 lib/pkgconfig/librrd.pc
+${PLIST.tcl}lib/rrdtool/ifOctets.tcl
+${PLIST.tcl}lib/rrdtool/pkgIndex.tcl
+${PLIST.tcl}lib/tclrrd1.6.0.so
 man/man1/bin_dec_hex.1
 man/man1/cdeftutorial.1
 man/man1/rpntutorial.1
@@ -31,6 +40,7 @@ man/man1/rrdgraph_rpn.1
 man/man1/rrdinfo.1
 man/man1/rrdlast.1
 man/man1/rrdlastupdate.1
+${PLIST.lua}man/man1/rrdlua.1
 man/man1/rrdresize.1
 man/man1/rrdrestore.1
 man/man1/rrdthreads.1
@@ -64,6 +74,7 @@ share/doc/rrdtool-${PKGVERSION}/html/rrdgraph_rpn.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdinfo.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdlast.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdlastupdate.html
+${PLIST.lua}share/doc/rrdtool-${PKGVERSION}/html/rrdlua.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdresize.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdrestore.html
 share/doc/rrdtool-${PKGVERSION}/html/rrdthreads.html
@@ -113,6 +124,8 @@ share/doc/rrdtool-${PKGVERSION}/txt/rrdlast.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdlast.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdlastupdate.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdlastupdate.txt
+${PLIST.lua}share/doc/rrdtool-${PKGVERSION}/txt/rrdlua.pod
+${PLIST.lua}share/doc/rrdtool-${PKGVERSION}/txt/rrdlua.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdresize.pod
 share/doc/rrdtool-${PKGVERSION}/txt/rrdresize.txt
 share/doc/rrdtool-${PKGVERSION}/txt/rrdrestore.pod
