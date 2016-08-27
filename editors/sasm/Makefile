@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/06/15 22:03:14 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/27 14:53:03 mef Exp $
 
-DISTNAME=	SASM-3.5.0
+DISTNAME=	SASM-3.5.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	editors x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Dman95/}
