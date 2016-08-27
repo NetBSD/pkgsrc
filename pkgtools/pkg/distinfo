@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2016/04/01 13:11:14 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2016/08/27 21:10:59 khorben Exp $
 
-SHA1 (1.5.4.tar.gz) = 2e58510fa9b9eb97b6d9e0d62e527228601af1c1
-RMD160 (1.5.4.tar.gz) = b38582e325752a329eb353212783850db6b138ea
-SHA512 (1.5.4.tar.gz) = bc89f97e4853e6fa6ea8abe80b26b4bce91a3a43272115e66884d9918b86ea7ebcfd4e4280bfc583a3142b94df2d5ddb6ad59ff20f8d6bae24ca0d0b684c7afb
-Size (1.5.4.tar.gz) = 2937244 bytes
+SHA1 (1.5.6.tar.gz) = be86175a2dc22bc4ba0d203772e6c8f355d5e62f
+RMD160 (1.5.6.tar.gz) = 341daa2fa8c72a6451337d4da5ea021c2843aa26
+SHA512 (1.5.6.tar.gz) = 48781aed83b123560b46bf27aff8ee73b66b6dfbe6868d01f95126e529327a80aa49a0534785898e8d410d1880b26bf25fd7d38502050d77af5ea8b76e6cab19
+Size (1.5.6.tar.gz) = 2943628 bytes
 SHA1 (patch-docs_Makefile.am) = aa6d5c9310c644d13d55c3176cd186c37cccc7c2
