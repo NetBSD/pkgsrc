@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/27 21:10:59 khorben Exp $
 
-VERSION=	1.5.4
+VERSION=	1.5.6
 DISTNAME=	${VERSION}
 PKGNAME=	pkg-${VERSION}
 PKGREVISION=	1
