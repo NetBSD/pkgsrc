@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16346 2016/08/26 23:39:44 mef Exp $
+$NetBSD: TODO,v 1.16347 2016/08/27 01:01:08 maya Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apache-ivy-2.4.0
 	o apollo-1.7
 	o apr0-2.4.1
-	o arandr-0.1.9
 	o ardour-5.0
 	o argon2-20151206
 	o argtable-2.9
