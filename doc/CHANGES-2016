@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3573 2016/08/27 08:04:59 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3574 2016/08/27 08:38:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5112,3 +5112,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/qemu to 2.6.1 [maya 2016-08-27]
 	Updated databases/rrdtool to 1.6.0nb2 [dholland 2016-08-27]
 	Updated wm/awesome to 3.5.9 [maya 2016-08-27]
+	Updated editors/emacs24 to 24.5nb13 [maya 2016-08-27]
