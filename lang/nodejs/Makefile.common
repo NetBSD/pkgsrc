@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2016/07/09 13:03:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2016/08/27 18:12:01 joerg Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 
@@ -47,6 +47,15 @@ BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 
 TEST_TARGET=		check
 
+.if defined(TOOLS_PLATFORM.paxctl)
+post-configure:
+	${SED} 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|' \
+	    < ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk \
+	    > ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk.tmp
+	${MV} ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk.tmp \
+	      ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk
+.endif
+
 pre-install:
 	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
 	${CHMOD} -R g-w ${WRKSRC}
@@ -54,6 +63,9 @@ pre-install:
 post-install:
 	cd ${DESTDIR}${PREFIX} && ${SETENV} ${BASH} \
 		./lib/node_modules/npm/scripts/relocate.sh ${PREFIX}/bin/node
+.if defined(TOOLS_PLATFORM.paxctl)
+	${TOOLS_PLATFORM.paxctl} +m ${DESTDIR}${PREFIX}/bin/node
+.endif
 
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
