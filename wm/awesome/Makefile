@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.56 2016/08/03 10:23:29 adam Exp $
+# $NetBSD: Makefile,v 1.57 2016/08/27 08:04:42 maya Exp $
 #
 
-DISTNAME=	awesome-3.5.5
-PKGREVISION=	5
+DISTNAME=	awesome-3.5.9
 CATEGORIES=	x11 wm
-MASTER_SITES=	http://awesome.naquadah.org/download/
+MASTER_SITES=	https://awesomewm.org/download/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pallegra@gmail.com
-HOMEPAGE=	http://awesome.naquadah.org/
+HOMEPAGE=	https://awesomewm.org/
 COMMENT=	Tiling window manager based on dwm
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	awesome<3.0
-LUA_VERSIONS_INCOMPATIBLE=52
 
 USE_TOOLS+=	bash gmake pkg-config
 USE_CMAKE=	yes
@@ -46,7 +44,7 @@ BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
-DEPENDS+=		lua51-gi>=0.7.0:../../devel/lua-gi
+DEPENDS+=		lua${_LUA_VERSION}-gi>=0.7.0:../../devel/lua-gi
 DEPENDS+=		pango>=1.29.4nb2:../../devel/pango
 
 LDFLAGS.Darwin+=	-liconv
@@ -59,7 +57,7 @@ LDFLAGS.SunOS+=		-liconv
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../lang/lua51/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
