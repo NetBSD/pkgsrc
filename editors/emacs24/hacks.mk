@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2016/08/23 20:27:40 maya Exp $
+# $NetBSD: hacks.mk,v 1.6 2016/08/27 08:38:31 maya Exp $
 
 .if !defined(EMACS_HACKS_MK)
 EMACS_HACKS_MK=	defined
@@ -8,10 +8,10 @@ EMACS_HACKS_MK=	defined
 ### On NetBSD/amd64 7.99.26, gcc optimisation, at least for version 5.x,
 ### produces, a "temacs" binary which segfaults.
 ###
-.  if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-*)
 .    if !empty(CC_VERSION:Mgcc-5.*)
 PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=	opt:-O2:-O0
+CFLAGS+=		-fno-optimize-strlen
 .    endif
 .  endif
 
