@@ -166,7 +166,7 @@ typedef struct pgpv_sigpkt_t {
 	pgpv_signature_t	 sig;
 	uint16_t		 subslen;
 	uint16_t		 unhashlen;
-	PGPV_ARRAY(uint64_t,	 subpackets);
+	ARRAY(uint64_t,	 	 subpackets);
 } pgpv_sigpkt_t;
 
 /* a one-pass signature packet */
@@ -194,7 +194,7 @@ typedef struct pgpv_litdata_t {
 /* user attributes - images */
 typedef struct pgpv_userattr_t {
 	size_t 			 len;
-	PGPV_ARRAY(pgpv_string_t, subattrs);
+	ARRAY(pgpv_string_t, 	 subattrs);
 } pgpv_userattr_t;
 
 /* a general PGP packet */
@@ -231,45 +231,45 @@ typedef struct pgpv_mem_t {
 
 typedef struct pgpv_signed_userid_t {
 	pgpv_string_t	 	 userid;
-	PGPV_ARRAY(uint64_t, 	 signatures);
+	ARRAY(uint64_t, 	 signatures);
 	uint8_t			 primary_userid;
 	uint8_t			 revoked;
 } pgpv_signed_userid_t;
 
 typedef struct pgpv_signed_userattr_t {
 	pgpv_userattr_t	 	 userattr;
-	PGPV_ARRAY(uint64_t, 	 signatures);
+	ARRAY(uint64_t, 	 signatures);
 	uint8_t			 revoked;
 } pgpv_signed_userattr_t;
 
 typedef struct pgpv_signed_subkey_t {
 	pgpv_pubkey_t	 	 subkey;
 	pgpv_signature_t 	 revoc_self_sig;
-	PGPV_ARRAY(uint64_t, 	 signatures);
+	ARRAY(uint64_t, 	 signatures);
 } pgpv_signed_subkey_t;
 
 typedef struct pgpv_primarykey_t {
 	pgpv_pubkey_t 		 primary;
 	pgpv_signature_t 	 revoc_self_sig;
-	PGPV_ARRAY(uint64_t, 	 signatures);
-	PGPV_ARRAY(uint64_t, 	 signed_userids);
-	PGPV_ARRAY(uint64_t, 	 signed_userattrs);
-	PGPV_ARRAY(uint64_t, 	 signed_subkeys);
+	ARRAY(uint64_t, 	 signatures);
+	ARRAY(uint64_t, 	 signed_userids);
+	ARRAY(uint64_t, 	 signed_userattrs);
+	ARRAY(uint64_t, 	 signed_subkeys);
 	size_t			 fmtsize;
 	uint8_t			 primary_userid;
 } pgpv_primarykey_t;
 
 /* everything stems from this structure */
 struct pgpv_t {
-	PGPV_ARRAY(pgpv_pkt_t, 	 pkts);		/* packet array */
-	PGPV_ARRAY(pgpv_primarykey_t, primaries);	/* array of primary keys */
-	PGPV_ARRAY(pgpv_mem_t,	 areas);	/* areas we read packets from */
-	PGPV_ARRAY(size_t,	 datastarts);	/* starts of data packets */
-	PGPV_ARRAY(pgpv_signature_t, signatures);	/* all signatures */
-	PGPV_ARRAY(pgpv_signed_userid_t, signed_userids); /* all signed userids */
-	PGPV_ARRAY(pgpv_signed_userattr_t, signed_userattrs); /* all signed user attrs */
-	PGPV_ARRAY(pgpv_signed_subkey_t, signed_subkeys); /* all signed subkeys */
-	PGPV_ARRAY(pgpv_sigsubpkt_t, subpkts);	/* all sub packets */
+	ARRAY(pgpv_pkt_t, 	 pkts);		/* packet array */
+	ARRAY(pgpv_primarykey_t, primaries);	/* array of primary keys */
+	ARRAY(pgpv_mem_t,	 areas);	/* areas we read packets from */
+	ARRAY(size_t,	 	 datastarts);	/* starts of data packets */
+	ARRAY(pgpv_signature_t,	 signatures);	/* all signatures */
+	ARRAY(pgpv_signed_userid_t, signed_userids); /* all signed userids */
+	ARRAY(pgpv_signed_userattr_t, signed_userattrs); /* all signed user attrs */
+	ARRAY(pgpv_signed_subkey_t, signed_subkeys); /* all signed subkeys */
+	ARRAY(pgpv_sigsubpkt_t,	 subpkts);	/* all sub packets */
 	size_t		 	 pkt;		/* when parsing, current pkt number */
 	const char		*op;		/* the operation we're doing */
 	unsigned		 ssh;		/* using ssh keys */
@@ -284,8 +284,8 @@ struct pgpv_cursor_t {
 	char			*op;			/* operation we're doing */
 	char			*value;			/* value we're searching for */
 	void			*ptr;			/* for regexps etc */
-	PGPV_ARRAY(uint32_t,	 found);		/* array of matched pimary key subscripts */
-	PGPV_ARRAY(size_t,	 datacookies);		/* cookies to retrieve matched data */
+	ARRAY(uint32_t,	 	 found);		/* array of matched pimary key subscripts */
+	ARRAY(size_t,	 	 datacookies);		/* cookies to retrieve matched data */
 	int64_t			 sigtime;		/* time of signature */
 	char			 why[PGPV_REASON_LEN];	/* reason for bad signature */
 };
@@ -334,7 +334,7 @@ struct pgpv_cursor_t {
 #define PUBKEY_RSA_SIGN			3
 #define PUBKEY_ELGAMAL_ENCRYPT		16
 #define PUBKEY_DSA			17
-#define PUBKEY_ELLIPTIC_CURVE		18
+#define PUBKEY_ECDH			18
 #define PUBKEY_ECDSA			19
 #define PUBKEY_ELGAMAL_ENCRYPT_OR_SIGN	20
 
@@ -499,7 +499,7 @@ static uint8_t *
 get_ref(pgpv_ref_t *ref)
 {
 	pgpv_mem_t	*mem;
-	pgpv_t		*pgp = (pgpv_t *)ref->vp;;
+	pgpv_t		*pgp = (pgpv_t *)ref->vp;
 
 	mem = &ARRAY_ELEMENT(pgp->areas, ref->mem);
 	return &mem->mem[ref->offset];
@@ -2284,7 +2284,7 @@ read_ascii_armor(pgpv_cursor_t *cursor, pgpv_mem_t *mem, const char *filename)
 	litdata.u.litdata.offset = (size_t)(p - mem->mem);
 	litdata.u.litdata.filename.data = pgpv_strdup(filename);
 	litdata.u.litdata.filename.allocated = 1;
-	if ((p = find_bin_string(datastart = p, mem->size - litdata.offset, SIGSTART, strlen(SIGSTART))) == NULL) {
+	if ((p = find_bin_string(datastart = p, mem->size - litdata.offset, SIGSTART, sizeof(SIGSTART) - 1)) == NULL) {
 		snprintf(cursor->why, sizeof(cursor->why),
 			"malformed armor - no sig - at %zu", (size_t)(p - mem->mem));
 		return 0;
@@ -2298,7 +2298,13 @@ read_ascii_armor(pgpv_cursor_t *cursor, pgpv_mem_t *mem, const char *filename)
 		return 0;
 	}
 	p += 2;
-	sigend = find_bin_string(p, mem->size, SIGEND, strlen(SIGEND));
+	sigend = find_bin_string(p, mem->size, SIGEND, sizeof(SIGEND) - 1);
+	if (sigend == NULL) {
+		snprintf(cursor->why, sizeof(cursor->why),
+			"malformed armor - no end sig - at %zu",
+			(size_t)(p - mem->mem));
+		return 0;
+	}
 	binsigsize = b64decode((char *)p, (size_t)(sigend - p), binsig, sizeof(binsig));
 
 	read_binary_memory(cursor->pgp, "signature", cons_onepass, 15);
