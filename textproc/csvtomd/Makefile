@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/28 09:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:34 wiz Exp $
 
 DISTNAME=	csvtomd-0.1.1
 CATEGORIES=	textproc
@@ -13,7 +13,6 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	csvtomd
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 

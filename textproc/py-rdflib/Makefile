@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:35 wiz Exp $
 
 DISTNAME=	rdflib-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,8 +22,6 @@ REPLACE_PYTHON+=	rdflib/plugins/parsers/ntriples.py
 REPLACE_PYTHON+=	rdflib/plugins/parsers/pyRdfa/extras/httpheader.py
 REPLACE_PYTHON+=	rdflib/plugins/parsers/structureddata.py
 REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
-
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/csv2rdf \
