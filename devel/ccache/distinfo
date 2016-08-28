@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2016/08/09 13:14:17 mef Exp $
+$NetBSD: distinfo,v 1.24 2016/08/28 13:44:18 mef Exp $
 
-SHA1 (ccache-3.2.7.tar.gz) = 4c0769c94ca7b5ecef4d69c827e1087c7178d545
-RMD160 (ccache-3.2.7.tar.gz) = 4ccf695f8492a4c1f64e80be2dc478d555acb0ae
-SHA512 (ccache-3.2.7.tar.gz) = 86cb39bcc73d386b821dc663d8ac365d0dbff53bc9d43a0f088e240da5386feed51758044d231294cc280558405f7240885bdba21b2c04d2e0416ac9a1eb75b9
-Size (ccache-3.2.7.tar.gz) = 446395 bytes
+SHA1 (ccache-3.3.tar.gz) = 9a1f5d820f54605f09a92191e9988aced7341b35
+RMD160 (ccache-3.3.tar.gz) = 4791446db1ed5322cff947a1ea0d5553ae4b8968
+SHA512 (ccache-3.3.tar.gz) = fec4d74c0310c1e4774917f1e3154541902c2a180e7dfa1b32632920cda2943490aeb10e8ea67c9458b2148a8363095d1e43f68cda4e9e46b36f83597b752d82
+Size (ccache-3.3.tar.gz) = 444667 bytes
