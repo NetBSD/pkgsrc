@@ -135,7 +135,7 @@ config.status: configure
 
 # two steps to prevent the creation of a bogus siglist.out
 siglist.out: config.h sh.h siglist.in siglist.sh
-	$(srcdir)/siglist.sh "$(CPP) $(CPPFLAGS) $(DEFS) -I. -I$(srcdir)" < $(srcdir)/siglist.in > tmpsiglist.out
+	$(srcdir)/siglist.sh "$(CPP) -P $(CPPFLAGS) $(DEFS) -I. -I$(srcdir)" < $(srcdir)/siglist.in > tmpsiglist.out
 	mv tmpsiglist.out siglist.out
 
 # two steps to prevent the creation of a bogus emacs.out
