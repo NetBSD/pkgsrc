@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/15 17:14:27 marino Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 17:59:36 marino Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -18,7 +18,6 @@ USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
 APPLY_DIFFS=	core ada cxx
 
 .include "Makefile.version"
-.include "Makefile.testsuite"
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
@@ -40,7 +39,7 @@ FULL_GNATGCC=		NOT SET
 FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
 
 .if ${OPSYS} == DragonFly
-BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.36A.tar.bz2
+BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.41.tar.bz2
 .endif
 
 .if ${OPSYS} == FreeBSD
@@ -53,9 +52,7 @@ BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.freebsd.100B.tar.bz2
 .endif
 
 .if ${OPSYS} == NetBSD
-.  if !empty(OS_VERSION:M6.99.*)
-NSUFF=	7.0_DEV
-.  elif !empty(OS_VERSION:M7.99.*)
+.  if !empty(OS_VERSION:M7.99.*)
 NSUFF=	8.0_DEV
 .  else
 NSUFF=	${OS_VERSION}
@@ -162,11 +159,10 @@ MASTER_SITES= http://downloads.dragonlace.net/src/ \
    ${MASTER_SITE_GNU:=gcc/${IDENTIFICATION}/}
 DISTFILES= \
    ${DISTNAME}.tar.bz2 \
-   ada-bootstrap.i386.dragonfly.36A.tar.bz2 \
    ada-bootstrap.i386.freebsd.84.tar.bz2 \
    ada-bootstrap.i386.freebsd.100B.tar.bz2 \
    ada-bootstrap.i386.netbsd.614.tar.bz2 \
-   ada-bootstrap.x86_64.dragonfly.36A.tar.bz2 \
+   ada-bootstrap.x86_64.dragonfly.41.tar.bz2 \
    ada-bootstrap.x86_64.freebsd.84.tar.bz2 \
    ada-bootstrap.x86_64.freebsd.100B.tar.bz2 \
    ada-bootstrap.x86_64.netbsd.614.tar.bz2 \
@@ -214,14 +210,6 @@ post-extract:
 	@${ECHO} "Applying composite patch diff-${suffix}"
 	${PATCH} -d ${WRKSRC} -s -E < ${FILESDIR}/diff-${suffix}
 .endfor
-	(cd ${WRKSRC}/libstdc++-v3/testsuite/22_locale && ${PERL5} -i \
-	  -pe 's|ISO-8859|ISO8859|g;' \
-	  -pe 's|ja_JP.eucjp|ja_JP.eucJP|g;' \
-	  -pe 's|en_HK|zh_HK|g;' \
-	  -pe 's|en_PH|en_NZ|g;' \
-	  -pe 's|se_NO|no_NO|g;' \
-	  -pe 's|es_MX|es_ES|g;' \
-	  -pe 's|ru_RU.UTF8|ru_RU.UTF-8|g' ${LOCALE22FIX})
 .if ${OPSYS} == NetBSD
 .  for sysfile in ${CORRECTIONS}
 .    for pair in ${${CRXN}_${sysfile}}
