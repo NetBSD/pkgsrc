@@ -1,4 +1,4 @@
-# $NetBSD: distutils.mk,v 1.7 2014/12/31 13:57:28 wiz Exp $
+# $NetBSD: distutils.mk,v 1.8 2016/08/28 09:40:35 richard Exp $
 #
 # Common logic for python distributions that use distutils.
 #
@@ -28,5 +28,7 @@ PY_NO_EGG?=	no
 PLIST_SUBST+=	EGG_FILE=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PRINT_PLIST_AWK+=	{ gsub("${EGG_NAME}-py${PYVERSSUFFIX}.egg-info", \
 				"$${EGG_FILE}") }
+PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX}/, \
+				"$${PYVERSSUFFIX}") }
 
 .include "../../lang/python/extension.mk"
