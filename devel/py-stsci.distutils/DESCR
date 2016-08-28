@@ -1,0 +1,3 @@
+This package contains utilities used to package some of STScI's
+Python projects; specifically those projects that comprise stsci_python
+and Astrolib.
