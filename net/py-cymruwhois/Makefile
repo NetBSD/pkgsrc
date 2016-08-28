@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/30 17:47:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/28 15:48:33 wiz Exp $
 
 DISTNAME=	python-cymruwhois-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -15,8 +15,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	# none
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 EGG_NAME=	${DISTNAME:S/python-//}
 
 post-install:

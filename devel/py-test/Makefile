@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/08/24 21:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/08/28 15:48:31 wiz Exp $
 
 DISTNAME=	pytest-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -19,9 +19,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 USE_TOOLS+=	bash:build
 
 USE_LANGUAGES=	# none
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	_pytest/standalonetemplate.py
 

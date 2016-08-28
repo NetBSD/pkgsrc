@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/12 09:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/08/28 15:48:30 wiz Exp $
 
 DISTNAME=	pylint-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,6 @@ USE_LANGUAGES=	# none
 
 DOCDIR=			${PREFIX}/share/doc/pylint
 INSTALLATION_DIRS=	${DOCDIR} ${PKGMANDIR}/man1
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	pylint/__main__.py pylint/test/data/ascript pylint/test/input/noext
 

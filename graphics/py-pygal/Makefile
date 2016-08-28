@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:32 wiz Exp $
 
 DISTNAME=	pygal-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 13:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/08/28 15:48:32 wiz Exp $
 
 DISTNAME=		TTFQuery-1.0.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,8 +12,6 @@ LICENSE=		modified-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-fonttools>=2.0b1:../../fonts/py-fonttools
 
-PYDISTUTILSPKG=		yes
-PLIST_SUBST=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-fonttools
 
 post-install:
@@ -21,5 +19,5 @@ post-install:
 		${MV} $${f} $${f}${PYVERSSUFFIX}; \
 	done
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

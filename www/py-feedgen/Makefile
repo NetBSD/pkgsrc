@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/08/17 01:01:22 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/28 15:48:36 wiz Exp $
 
 DISTNAME=	v0.3.2
 PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT:S/python-//}-${DISTNAME:S/v//}
@@ -15,8 +15,6 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

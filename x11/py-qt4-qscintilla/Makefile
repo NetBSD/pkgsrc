@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/03/05 11:27:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2016/08/28 15:48:37 wiz Exp $
 
 PKGREVISION= 1
 .include "../../x11/qt4-qscintilla/Makefile.common"
@@ -9,7 +9,6 @@ COMMENT=	QScintilla -- Python bindings
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 MAKE_FLAGS+=		TARGET=Qsci.la TARGETD=Qsci.la TARGETL=Qsci.la
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}

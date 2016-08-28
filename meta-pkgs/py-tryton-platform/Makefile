@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/08/24 15:50:08 richard Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:33 wiz Exp $
 #
 DISTNAME=	# empty
 PKGNAME=	${PYPKGPREFIX}-tryton-platform-${TRYTON_BASEVER}
@@ -58,5 +58,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-stock-lot-[0-9]*:../../misc/py-trytond-stock-lo
 DEPENDS+=	${PYPKGPREFIX}-trytond-stock-product-location-[0-9]*:../../misc/py-trytond-stock-product-location
 DEPENDS+=	${PYPKGPREFIX}-trytond-calendar-[0-9]*:../../time/py-trytond-calendar
 DEPENDS+=	${PYPKGPREFIX}-trytond-company-work-time-[0-9]*:../../time/py-trytond-company-work-time
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-simplesoap via py-stdnum and py-trytond-bank
 
 .include "../../mk/bsd.pkg.mk"

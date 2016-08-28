@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/03/05 11:29:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2016/08/28 15:48:37 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-kde4-${_KDE_VERSION}
 PKGREVISION=	3
@@ -15,7 +15,6 @@ CMAKE_ARGS+=	-DWITH_Soprano:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_Nepomuk:BOOL=OFF
 
 PY_PATCHPLIST=			yes
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 REPLACE_PYTHON+= \
 	tools/pykdeuic4/*.py \
