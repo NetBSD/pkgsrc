@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2015/12/28 11:37:03 adam Exp $
+$NetBSD: patch-ab,v 1.24 2016/08/28 06:42:27 richard Exp $
 
---- Makefile.orig	2015-10-24 20:45:04.000000000 +0000
+add rule for .lo:.S needed by aarch64
+
+--- Makefile.orig	2016-03-07 21:45:04.000000000 +0000
 +++ Makefile
 @@ -34,7 +34,7 @@ OBJS =
  OBJSO =
@@ -76,7 +78,7 @@ $NetBSD: patch-ab,v 1.23 2015/12/28 11:37:03 adam Exp $
  
  $(SONAME): $(GENERATED) .depend $(OBJS) $(OBJASM) $(OBJSO)
  	$(LD)$@ $(OBJS) $(OBJASM) $(OBJSO) $(SOFLAGS) $(LDFLAGS)
-@@ -198,20 +201,19 @@ checkasm: checkasm$(EXE)
+@@ -198,24 +201,22 @@ checkasm: checkasm$(EXE)
  example: example$(EXE)
  endif
  
@@ -98,12 +100,19 @@ $NetBSD: patch-ab,v 1.23 2015/12/28 11:37:03 adam Exp $
 -%.o: %.asm common/x86/x86inc.asm common/x86/x86util.asm
 -	$(AS) $(ASFLAGS) -o $@ $<
 -	-@ $(if $(STRIP), $(STRIP) -x $@) # delete local/anonymous symbols, so they don't show up in oprofile
+-
+-%.o: %.S
+-	$(AS) $(ASFLAGS) -o $@ $<
+-	-@ $(if $(STRIP), $(STRIP) -x $@) # delete local/anonymous symbols, so they don't show up in oprofile
 +%.lo: %.asm common/x86/x86inc.asm common/x86/x86util.asm
 +	${LIBTOOL} --mode=compile --tag=CC ./strip_fopt.sh $(AS) $(ASFLAGS) -o $@ $<
++
++%.lo: %.S
++	${LIBTOOL} --mode=compile --tag=CC $(AS) $(ASFLAGS) -o $@ $<
  
- %.o: %.S
- 	$(AS) $(ASFLAGS) -o $@ $<
-@@ -281,8 +283,7 @@ distclean: clean
+ %.dll.o: %.rc x264.h
+ 	$(RC) $(RCFLAGS)$@ -DDLL $<
+@@ -281,8 +282,7 @@ distclean: clean
  	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def conftest*
  
  install-cli: cli
@@ -113,7 +122,7 @@ $NetBSD: patch-ab,v 1.23 2015/12/28 11:37:03 adam Exp $
  
  install-lib-dev:
  	$(INSTALL) -d $(DESTDIR)$(includedir)
-@@ -293,8 +294,7 @@ install-lib-dev:
+@@ -293,8 +293,7 @@ install-lib-dev:
  	$(INSTALL) -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
