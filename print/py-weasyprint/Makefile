@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/02/18 17:30:18 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:34 wiz Exp $
 
 DISTNAME=	WeasyPrint-0.26
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -11,8 +11,6 @@ COMMENT=	Converts HTML/CSS documents to PDF
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# empty
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 DEPENDS+=	${PYPKGPREFIX}-cairosvg>=0.4.1:../../converters/py-cairosvg
 DEPENDS+=	${PYPKGPREFIX}-cairocffi>=0.5:../../graphics/py-cairocffi

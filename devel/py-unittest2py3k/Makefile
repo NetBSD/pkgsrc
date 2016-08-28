@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:23 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:31 wiz Exp $
 
 DISTNAME=		unittest2py3k-0.5.1
 # to match python-2.x name
@@ -17,7 +17,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
 PLIST_SUBST+=		DOCDIR=${DOCDIR}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}

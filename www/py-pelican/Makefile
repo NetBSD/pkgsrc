@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/11/27 22:14:57 nils Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:36 wiz Exp $
 
 DISTNAME=		pelican-3.6.3
 GITHUB_PROJECT=		pelican
@@ -25,7 +25,6 @@ DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 USE_TOOLS+=		bash:run make:build
 
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=	pelican/tools/pelican_import.py
 REPLACE_PYTHON+=	pelican/tools/pelican_quickstart.py
 REPLACE_PYTHON+=	pelican/tools/pelican_themes.py
