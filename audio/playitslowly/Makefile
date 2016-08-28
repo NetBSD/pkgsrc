@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/05/29 21:12:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:28 wiz Exp $
 
 DISTNAME=	playitslowly-1.5.1
 CATEGORIES=	audio
@@ -22,7 +22,6 @@ SUBST_STAGE.exec=	post-build
 SUBST_MESSAGE.exec=	Fixing path to python interpreter.
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

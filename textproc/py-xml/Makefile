@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/07/09 13:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/08/28 15:48:36 wiz Exp $
 
 DISTNAME=	PyXML-0.8.4
 PKGNAME=	${PYPKGPREFIX}-xml-0.8.4
@@ -32,7 +32,6 @@ post-extract:
 .endfor
 
 REPLACE_PYTHON=	${PYXML_SCRIPTS:S/$/${PYVERSSUFFIX}/g}
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
