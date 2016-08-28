@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2016/07/03 11:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2016/08/28 15:48:35 wiz Exp $
 
 DISTNAME=		html2text-2016.5.29
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=		Convert HTML into easy-to-read plain ASCII text
 LICENSE=		gnu-gpl-v2
 
 REPLACE_PYTHON=	html2text/__init__.py
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/html2text ${DESTDIR}${PREFIX}/bin/html2text-${PYVERSSUFFIX}
