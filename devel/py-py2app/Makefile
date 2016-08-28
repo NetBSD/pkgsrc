@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/28 15:45:36 wiz Exp $
 
 DISTNAME=	py2app-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-modulegraph>=0.10.1:../../devel/py-modulegraph
 DEPENDS+=	${PYPKGPREFIX}-macholib>=1.5:../../devel/py-macholib
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/py2applet \
