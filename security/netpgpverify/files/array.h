@@ -25,10 +25,10 @@
 #ifndef ARRAY_H_
 #define ARRAY_H_	20120921
 
-#ifndef PGPV_ARRAY
+#ifndef ARRAY
 /* creates 2 unsigned vars called "name"c and "name"size in current scope */
 /* also creates an array called "name"s in current scope */
-#define PGPV_ARRAY(type, name)						\
+#define ARRAY(type, name)						\
 	unsigned name##c; unsigned name##vsize; type *name##s
 #endif
 
