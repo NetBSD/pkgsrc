@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/15 00:17:35 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:32 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_bank
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -16,6 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	tests/test_bank.py
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-simplesoap via py-stdnum
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

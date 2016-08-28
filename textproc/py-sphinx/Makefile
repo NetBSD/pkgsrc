@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/06/08 17:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/08/28 15:48:35 wiz Exp $
 
 DISTNAME=	Sphinx-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -24,8 +24,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	#none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 
