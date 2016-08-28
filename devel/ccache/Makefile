@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2016/08/09 13:14:17 mef Exp $
+# $NetBSD: Makefile,v 1.34 2016/08/28 13:44:18 mef Exp $
 
-DISTNAME=	ccache-3.2.7
+DISTNAME=	ccache-3.3
 CATEGORIES=	devel
 MASTER_SITES=	http://samba.org/ftp/ccache/
 # do not use xz distfile here, xz needs gettext-lib which leads to circular
