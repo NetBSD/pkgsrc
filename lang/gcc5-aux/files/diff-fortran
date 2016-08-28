@@ -11,7 +11,7 @@
        ;;
 --- libgfortran/configure.orig
 +++ libgfortran/configure
-@@ -26447,7 +26447,7 @@
+@@ -26456,7 +26456,7 @@
  
    fi
    case "$host" in
@@ -22,7 +22,7 @@
  
 --- gcc/fortran/f95-lang.c.orig
 +++ gcc/fortran/f95-lang.c
-@@ -776,10 +776,17 @@
+@@ -777,10 +777,17 @@
  
    gfc_define_builtin ("__builtin_cabsl", func_clongdouble_longdouble, 
  		      BUILT_IN_CABSL, "cabsl", ATTR_CONST_NOTHROW_LEAF_LIST);

@@ -1045,23 +1045,36 @@
     Gcc_Path : String_Access := null;
  
     Non_Empty_Node : constant Project_Node_Id := 1;
---- gcc/ada/s-osinte-android.ads.orig
-+++ gcc/ada/s-osinte-android.ads
-@@ -597,11 +597,11 @@
+--- gcc/ada/s-oscons-tmplt.c.orig
++++ gcc/ada/s-oscons-tmplt.c
+@@ -402,7 +402,7 @@
  
-    type pid_t is new int;
+ /* ioctl(2) requests are "int" in UNIX, but "unsigned long" on FreeBSD */
  
--   type time_t is new long;
-+   type time_t is new Long_Long_Integer;
+-#ifdef __FreeBSD__
++#if defined (__FreeBSD__) || defined (__DragonFly__)
+ # define CNI CNU
+ # define IOCTL_Req_T "unsigned"
+ #else
+@@ -1014,7 +1014,7 @@
  
-    type timespec is record
--      tv_sec  : time_t;
--      tv_nsec : long;
-+      ts_sec  : time_t;
-+      ts_nsec : long;
-    end record;
-    pragma Convention (C, timespec);
+ */
  
+-#if defined (__FreeBSD__) || defined (linux)
++#if defined (__FreeBSD__) || defined (linux) || defined (__DragonFly__)
+ # define PTY_Library "-lutil"
+ #else
+ # define PTY_Library ""
+@@ -1435,7 +1435,8 @@
+ #endif
+ CND(CLOCK_THREAD_CPUTIME_ID, "Thread CPU clock")
+ 
+-#if defined(__FreeBSD__) || (defined(_AIX) && defined(_AIXVERSION_530))
++#if defined(__FreeBSD__) || (defined(_AIX) && defined(_AIXVERSION_530)) \
++ || defined(__DragonFly__)
+ /** On these platforms use system provided monotonic clock instead of
+  ** the default CLOCK_REALTIME. We then need to set up cond var attributes
+  ** appropriately (see thread.c).
 --- /dev/null
 +++ gcc/ada/s-osinte-dragonfly.adb
 @@ -0,0 +1,116 @@
@@ -3620,7 +3633,7 @@
    THREADSLIB = -lposix4 -lthread
    MISCLIB = -lposix4 -lnsl -lsocket
    SO_OPTS = -Wl,-h,
-@@ -1420,8 +1424,11 @@
+@@ -1416,8 +1420,11 @@
  ifeq ($(strip $(filter-out %86 freebsd%,$(target_cpu) $(target_os))),)
    LIBGNAT_TARGET_PAIRS = \
    a-intnam.ads<a-intnam-freebsd.ads \
@@ -3632,7 +3645,7 @@
    s-osinte.adb<s-osinte-freebsd.adb \
    s-osinte.ads<s-osinte-freebsd.ads \
    s-osprim.adb<s-osprim-posix.adb \
-@@ -1436,6 +1443,8 @@
+@@ -1432,6 +1439,8 @@
    mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb
    GNATLIB_SHARED = gnatlib-shared-dual
  
@@ -3641,7 +3654,7 @@
    EXTRA_GNATRTL_NONTASKING_OBJS=g-sse.o g-ssvety.o
  
    EH_MECHANISM=-gcc
-@@ -1449,8 +1458,11 @@
+@@ -1445,8 +1454,11 @@
  ifeq ($(strip $(filter-out %86_64 freebsd%,$(target_cpu) $(target_os))),)
    LIBGNAT_TARGET_PAIRS = \
    a-intnam.ads<a-intnam-freebsd.ads \
@@ -3653,7 +3666,7 @@
    s-osinte.adb<s-osinte-freebsd.adb \
    s-osinte.ads<s-osinte-freebsd.ads \
    s-osprim.adb<s-osprim-posix.adb \
-@@ -1465,6 +1477,110 @@
+@@ -1461,6 +1473,110 @@
    mlib-tgt-specific.adb<mlib-tgt-specific-linux.adb
    GNATLIB_SHARED = gnatlib-shared-dual
  
