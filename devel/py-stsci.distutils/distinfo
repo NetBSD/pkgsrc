@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/28 15:33:09 wiz Exp $
+
+SHA1 (stsci.distutils-0.3.7.tar.gz) = bb0839ef9ed5167ba320db486665ea6de5964afa
+RMD160 (stsci.distutils-0.3.7.tar.gz) = 6a97d92102f8ae99b1d053a73a66dc2bc769983e
+SHA512 (stsci.distutils-0.3.7.tar.gz) = 8ef81afe43dc080d28ce7e640c1e03cd0e0a857151ad307af742ef434e3a1abb489213a63a95618bac39a743624510a0d59a2817b6cadb929a2bcf64406ac85e
+Size (stsci.distutils-0.3.7.tar.gz) = 48831 bytes
