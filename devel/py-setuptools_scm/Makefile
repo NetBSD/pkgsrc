@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/06 05:30:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:31 wiz Exp $
 
 DISTNAME=		setuptools_scm-1.10.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -12,9 +12,6 @@ COMMENT=		Manage your versions by scm tags
 LICENSE=		mit
 
 #DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-#PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
-#PLIST_SUBST+=		EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

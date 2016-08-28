@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:28 wiz Exp $
 
 DISTNAME=	yuicompressor-2.4.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 USE_JAVA=	run
 
 post-install:

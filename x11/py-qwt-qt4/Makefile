@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:04:18 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/28 15:48:37 wiz Exp $
 
 DISTNAME=	PyQwt-5.2.0
 PKGNAME=	${PYPKGPREFIX}-qwt-qt4-${DISTNAME:S/PyQwt-//}
@@ -20,7 +20,6 @@ BUILD_DIRS=	configure
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-# Following line rescues from 'Unresolved dependency with pbulk'
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-Numeric
 
 REPLACE_PYTHON+=qt4lib/PyQt4/Qwt5/grace.py

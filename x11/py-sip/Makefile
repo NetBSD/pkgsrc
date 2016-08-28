@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2016/02/26 11:27:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.47 2016/08/28 15:48:37 wiz Exp $
 
 DISTNAME=	sip-4.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	LIBDIR=${PREFIX}/lib
 CONFIGURE_ARGS.DragonFly+=	-p freebsd-g++
 
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../mk/compiler.mk"
 
