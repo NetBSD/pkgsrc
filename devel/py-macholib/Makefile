@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:30 wiz Exp $
 
 DISTNAME=	macholib-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	macholib/macho_dump.py macholib/macho_find.py
 REPLACE_PYTHON+=	macholib/macho_standalone.py
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/macho_dump \

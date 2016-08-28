@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/08/28 15:48:29 wiz Exp $
 
 DISTNAME=	coverage-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 
 USE_LANGUAGES=	c
-PLIST_SUBST=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${CHMOD} +r ${WRKSRC}/coverage.egg-info/*

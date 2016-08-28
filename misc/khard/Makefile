@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/08/27 15:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/08/28 15:48:33 wiz Exp $
 
 DISTNAME=		khard-0.11.1
 CATEGORIES=		misc net
@@ -19,7 +19,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # does not support python-2.x any longer
 
 INSTALLATION_DIRS=	share/examples/khard
 REPLACE_PYTHON+=	*/*.py
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/misc/khard/khard.conf.example ${DESTDIR}${PREFIX}/share/examples/khard

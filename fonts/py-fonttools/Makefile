@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/06/30 17:56:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/08/28 15:48:32 wiz Exp $
 
 DISTNAME=	fonttools-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,9 +20,6 @@ SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
 SUBST_FILES.man+=	setup.py
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man page installation path.
-
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:34 wiz Exp $
 
 DISTNAME=	Attic-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && mv attic attic${PYVERSSUFFIX}

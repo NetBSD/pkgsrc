@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/08/04 17:03:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2016/08/28 15:48:37 wiz Exp $
 
 DISTNAME=	PyQt-gpl-${PYQT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-qt5-${PYQT_VERSION}
@@ -26,7 +26,6 @@ CONFIGURE_ARGS+=	--verbose
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 SUBST_CLASSES+=		install x11lib
 SUBST_STAGE.install=	post-configure

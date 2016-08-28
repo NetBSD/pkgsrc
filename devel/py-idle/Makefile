@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/02/17 08:08:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2016/08/28 15:48:30 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-idle-${PY_DISTVERSION}
 CATEGORIES=	devel python
@@ -10,7 +10,6 @@ COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:

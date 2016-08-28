@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/08/28 15:48:31 wiz Exp $
 
 DISTNAME=		unittest2-1.1.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,6 @@ DEPENDS+=		${PYPKGPREFIX}-linecache2-[0-9]*:../../devel/py-linecache2
 DOCDIR=			share/doc/${PKGBASE}
 INSTALLATION_DIRS+=	${DOCDIR}
 PLIST_SUBST+=		DOCDIR=${DOCDIR}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		multi
 SUBST_STAGE.multi=	pre-configure

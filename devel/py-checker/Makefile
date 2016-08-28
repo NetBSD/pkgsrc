@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/07/09 13:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/08/28 15:48:29 wiz Exp $
 
 DISTNAME=	pychecker-0.8.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,6 @@ COMMENT=	Python code checker
 LICENSE=	modified-bsd
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.8.19
 

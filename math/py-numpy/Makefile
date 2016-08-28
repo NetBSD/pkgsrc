@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/08/23 22:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/08/28 15:48:33 wiz Exp $
 
 DISTNAME=	numpy-1.11.1
 GITHUB_PROJECT=	numpy
@@ -13,7 +13,6 @@ COMMENT=	Array processing for numbers, strings, records, and objects
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c fortran
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 MAKE_ENV+=		ATLAS=None
 
 REPLACE_PYTHON+=	*.py */*.py */*/*.py */*/*/*.py */*/*/*/*.py

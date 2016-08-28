@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 13:03:35 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2016/08/28 15:48:29 wiz Exp $
 
 DISTNAME=	CouchDB-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -27,7 +26,6 @@ REPLACE_PYTHON+=	couchdb/tools/replication_helper.py
 REPLACE_PYTHON+=	couchdb/tools/replication_helper_test.py
 REPLACE_PYTHON+=	couchdb/view.py
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.rst \

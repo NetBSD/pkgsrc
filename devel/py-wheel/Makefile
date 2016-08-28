@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/16 07:53:02 nils Exp $
+# $NetBSD: Makefile,v 1.2 2016/08/28 15:48:31 wiz Exp $
 
 DISTNAME=	wheel-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,6 @@ COMMENT=	Built-package format for Python
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/wheel \

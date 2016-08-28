@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/03/17 13:55:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2016/08/28 15:48:32 wiz Exp $
 
 DISTNAME=	libv4l-0.4.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://people.atrpms.net/~hdegoede/
 

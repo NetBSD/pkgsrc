@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/02/24 11:03:05 markd Exp $
+# $NetBSD: Makefile,v 1.44 2016/08/28 15:48:35 wiz Exp $
 
 DISTNAME=	docutils-0.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,8 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-roman>=1.4:../../math/py-roman
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 USE_LANGUAGES=	#none
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	docutils/utils/code_analyzer.py
 REPLACE_PYTHON+=	docutils/utils/error_reporting.py

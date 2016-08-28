@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:32 wiz Exp $
 
 DISTNAME=	hy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-astor>=0.3:../../devel/py-astor
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/hy \

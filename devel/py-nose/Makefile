@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/07/24 11:56:15 kamil Exp $
+# $NetBSD: Makefile,v 1.15 2016/08/28 15:48:30 wiz Exp $
 
 DISTNAME=	nose-1.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,6 @@ LICENSE=	gnu-lgpl-v2.1
 #DEPENDS+=	${PYPKGPREFIX}-coverage>=3.0:../../devel/py-coverage
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-build

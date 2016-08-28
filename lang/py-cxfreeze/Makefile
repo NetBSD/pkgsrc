@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/25 10:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:32 wiz Exp $
 
 VERS=			4.2.3
 DISTNAME=		cx_Freeze-${VERS}
@@ -12,8 +12,6 @@ COMMENT=		Freezing python scripts into executables
 LICENSE=		python-software-foundation
 
 USE_LANGUAGES=      	c c++
-
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
 	${MV} ${WRKSRC}/cxfreeze ${WRKSRC}/cxfreeze${PYVERSSUFFIX}

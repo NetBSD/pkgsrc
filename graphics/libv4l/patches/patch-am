@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.4 2013/06/24 15:57:21 jperkin Exp $
+$NetBSD: patch-am,v 1.5 2016/08/28 15:48:32 wiz Exp $
 
 * XXXX
 * `mode_t' is promoted to `int' when passed through `...'.
@@ -51,7 +51,18 @@ $NetBSD: patch-am,v 1.4 2013/06/24 15:57:21 jperkin Exp $
  
  LIBV4L_PUBLIC int close(int fd) {
    return v4l1_close(fd);
-@@ -114,11 +120,13 @@ LIBV4L_PUBLIC void *mmap(void *start, si
+@@ -103,22 +109,19 @@ LIBV4L_PUBLIC int ioctl (int fd, unsigne
+   return v4l1_ioctl (fd, request, arg);
+ }
+ 
+-LIBV4L_PUBLIC ssize_t read(int fd, void* buffer, size_t n)
+-{
+-  return v4l1_read (fd, buffer, n);
+-}
+-
+ LIBV4L_PUBLIC void *mmap(void *start, size_t length, int prot, int flags, int fd,
+   __off_t offset)
+ {
    return v4l1_mmap(start, length, prot, flags, fd, offset);
  }
  

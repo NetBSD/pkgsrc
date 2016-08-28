@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/07/21 12:13:12 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/08/28 15:48:30 wiz Exp $
 
 DISTNAME=	ipython-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,9 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-zmq>=14.0.1:../../net/py-zmq
 
 USE_LANGUAGES=	# none
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON=	*/*/*.py */*/*/*.py
 

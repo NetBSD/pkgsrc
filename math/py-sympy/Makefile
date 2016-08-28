@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/08/19 08:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/08/28 15:48:33 wiz Exp $
 
 DISTNAME=	sympy-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-mpmath>=0.19:../../math/py-mpmath
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	sympy/utilities/tests/diagnose_imports.py
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		manpath
 SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'

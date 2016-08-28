@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:30 wiz Exp $
 
 DISTNAME=	modulegraph-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-altgraph>=0.11:../../graphics/py-altgraph
 
 USE_LANGUAGES=	# none
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/modulegraph \
