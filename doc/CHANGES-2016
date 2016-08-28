@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3584 2016/08/28 13:44:35 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3585 2016/08/28 15:35:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5123,3 +5123,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkg to 1.5.6nb1 [khorben 2016-08-27]
 	Updated pkgtools/pkg to 1.8.7 [khorben 2016-08-27]
 	Updated devel/ccache to 3.3 [mef 2016-08-28]
+	Added devel/py-stsci.distutils version 0.3.7 [wiz 2016-08-28]
