@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 11:29:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2016/08/28 15:48:37 wiz Exp $
 
 DISTNAME=	uwsgi-2.0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 # with linking exception
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX} PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 EGG_NAME=	${DISTNAME:S/uwsgi/uWSGI/}
 
 .include "options.mk"

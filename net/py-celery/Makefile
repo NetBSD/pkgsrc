@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:33 wiz Exp $
 
 DISTNAME=	celery-3.1.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-kombu>=3.0.22:../../net/py-kombu
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 USE_LANGUAGES=	c
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/celery \

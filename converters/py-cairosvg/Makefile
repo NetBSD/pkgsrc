@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/28 15:48:28 wiz Exp $
 
 DISTNAME=	CairoSVG-1.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-cairocffi-[0-9]*:../../graphics/py-cairocffi
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/cairosvg \

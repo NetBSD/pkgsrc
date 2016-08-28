@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:36 wiz Exp $
 
 DISTNAME=	static-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	Serve static or templated content via WSGI or stand-alone
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/static ${DESTDIR}${PREFIX}/bin/static-${PYVERSSUFFIX}

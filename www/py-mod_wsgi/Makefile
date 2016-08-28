@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/28 15:48:36 wiz Exp $
 
 DISTNAME=	mod_wsgi-4.4.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,8 +18,6 @@ APACHE_MODULE=		yes
 MESSAGE_SUBST+=		PYSITELIB=${PYSITELIB}
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
-FILES_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # __init__.py is the same as in mod_wsgi-metrics; remove it to avoid conflict
 post-extract:

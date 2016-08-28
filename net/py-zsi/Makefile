@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/07/09 13:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/08/28 15:48:34 wiz Exp $
 
 DISTNAME=	ZSI-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-xml
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-extract:
 	${MV} ${WRKSRC}/scripts/wsdl2py \

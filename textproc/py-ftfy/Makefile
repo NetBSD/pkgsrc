@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:35 wiz Exp $
 
 DISTNAME=	ftfy-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,8 +11,6 @@ COMMENT=	Fixes some problems with Unicode text after the fact
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-
-PLIST_SUBST=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/ftfy \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/08/21 12:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/08/28 15:48:31 wiz Exp $
 
 DISTNAME=	moneyguru-2.10.1
 CATEGORIES=	finance
@@ -24,7 +24,6 @@ USE_TOOLS=	pax
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=	cocoa/waf
 REPLACE_PYTHON+=	cocoa/wscript
 REPLACE_PYTHON+=	psmtabbarcontrol/waf

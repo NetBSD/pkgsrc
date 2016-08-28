@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:29 wiz Exp $
 
 DISTNAME=			binaryornot-0.4.0
 GITHUB_PROJECT=			binaryornot
@@ -13,7 +13,6 @@ COMMENT=			Guess whether a file is binary or text
 LICENSE=			modified-bsd
 
 USE_LANGUAGES=			#none
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 DEPENDS+=			${PYPKGPREFIX}-chardet>=2.0.0:../../converters/py-chardet
 

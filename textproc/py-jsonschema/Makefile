@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:35 wiz Exp $
 
 DISTNAME=	jsonschema-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	https://github.com/Julian/jsonschema
 COMMENT=	Implementation of JSON Schema for Python
 LICENSE=	modified-bsd
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/egg.mk"
 
