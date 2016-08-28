@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2015/08/20 10:53:13 ryoon Exp $
+$NetBSD: patch-ac,v 1.11 2016/08/28 07:00:50 richard Exp $
 
---- nspr/configure.in.orig	2015-08-19 15:32:22.000000000 +0000
+add runpath to Linux caught during check-shlibs-elf
+
+--- nspr/configure.in.orig	2016-02-12 13:51:25.000000000 +0000
 +++ nspr/configure.in
 @@ -38,7 +38,7 @@ OBJDIR_NAME=.
  OBJDIR_SUFFIX=OBJ
@@ -45,7 +47,17 @@ $NetBSD: patch-ac,v 1.10 2015/08/20 10:53:13 ryoon Exp $
      ;;
  
  *-hpux*)
-@@ -2132,7 +2159,7 @@ tools are selected during the Xcode/Deve
+@@ -1805,6 +1832,9 @@ tools are selected during the Xcode/Deve
+     MKSHLIB='$(CC) $(DSO_LDOPTS) -o $@'
+     DSO_CFLAGS=-fPIC
+     DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
++    if test "$LIBRUNPATH"; then
++        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
++    fi
+     _OPTIMIZE_FLAGS=-O2
+     _DEBUG_FLAGS="-g -fno-inline"  # most people on linux use gcc/gdb, and that
+                                    # combo is not yet good at debugging inlined
+@@ -2128,7 +2158,7 @@ tools are selected during the Xcode/Deve
      AC_DEFINE(HAVE_SOCKLEN_T)
      CFLAGS="$CFLAGS -ansi -Wall"
      CXXFLAGS="$CXXFLAGS -ansi -Wall"
@@ -54,7 +66,7 @@ $NetBSD: patch-ac,v 1.10 2015/08/20 10:53:13 ryoon Exp $
      DSO_CFLAGS=-fPIC
      MDCPUCFG_H=_openbsd.cfg
      PR_MD_CSRCS=openbsd.c
-@@ -2718,7 +2745,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2715,7 +2745,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -63,7 +75,7 @@ $NetBSD: patch-ac,v 1.10 2015/08/20 10:53:13 ryoon Exp $
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2756,7 +2783,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2753,7 +2783,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -72,7 +84,7 @@ $NetBSD: patch-ac,v 1.10 2015/08/20 10:53:13 ryoon Exp $
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2837,7 +2864,7 @@ case "$target" in
+@@ -2834,7 +2864,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
