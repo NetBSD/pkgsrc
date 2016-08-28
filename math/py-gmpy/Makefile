@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/28 15:48:33 wiz Exp $
 
 DISTNAME=	gmpy-1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,9 +14,8 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c
 BUILD_TARGET= gmpy.so
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/test
+
 do-test:
 	${ECHO} "Testing py-gmpy:"
 	${RUN} cd ${WRKSRC}/test; \

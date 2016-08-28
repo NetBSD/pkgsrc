@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/03/13 11:08:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/28 15:48:35 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-expat-${PY_DISTVERSION}
 CATEGORIES=	textproc python
@@ -16,7 +16,6 @@ PY_PATCHPLIST=	yes
 PY_SETUP_SUBST+= EXPATPREFIX=${BUILDLINK_DIR}
 PY_SETUP_SUBST+= EXPATRTPREFIX=${BUILDLINK_PREFIX.expat}
 
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)

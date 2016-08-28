@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/08/03 10:22:39 adam Exp $
+# $NetBSD: Makefile,v 1.21 2016/08/28 15:48:31 wiz Exp $
 TRYTON_MODULE_NAME=	tryton
 PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
@@ -13,7 +13,6 @@ USE_LANGUAGES=		# none
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 PY_PATCHPLIST=			yes
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "options.mk"
 

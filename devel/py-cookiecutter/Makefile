@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:29 wiz Exp $
 
 DISTNAME=			cookiecutter-1.3.0
 GITHUB_PROJECT=			cookiecutter
@@ -34,7 +34,6 @@ DEPENDS+=			${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 DEPENDS+=			${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 .endif
 
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON+=		setup.py
 REPLACE_PYTHON+=		cookiecutter/*.py
 

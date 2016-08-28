@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/08/13 07:08:17 wen Exp $
+# $NetBSD: Makefile,v 1.9 2016/08/28 15:48:32 wiz Exp $
 
 DISTNAME=	qrcode-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=		qrcode/console_scripts.py
 SUBST_CLASSES+=			pkgmandir
