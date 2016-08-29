@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/29 15:44:25 darcy Exp $
 
 DISTNAME=	astroid-1.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,8 +13,6 @@ LICENSE=	gnu-lgpl-v3
 DEPENDS+=	${PYPKGPREFIX}-logilab-common-[0-9]*:../../devel/py-logilab-common
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mxDateTime via py-logilab-common
 
 do-test:
 	${RUN} cd ${WRKSRC}/astroid/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} -m unittest discover -p "unittest*.py"
