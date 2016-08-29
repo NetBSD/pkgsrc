@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/08/29 15:44:26 darcy Exp $
+# $NetBSD: Makefile,v 1.15 2016/08/29 15:50:06 wiz Exp $
 
 DISTNAME=	logilab-common-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 .if ${OPSYS} == "Cygwin" || ${OPSYS} == "Interix"
 DEPENDS+=	${PYPKGPREFIX}-colorama-[0-9]*:../../comms/py-colorama
 .endif
-
-PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
