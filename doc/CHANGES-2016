@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3586 2016/08/28 23:24:59 agc Exp $
+$NetBSD: CHANGES-2016,v 1.3587 2016/08/29 07:56:58 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5126,3 +5126,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-stsci.distutils version 0.3.7 [wiz 2016-08-28]
 	Updated security/netpgpverify to 20160828 [agc 2016-08-28]
 	Updated security/libnetpgpverify to 20160828 [agc 2016-08-28]
+	Updated net/rancid to 3.5.0 [pettai 2016-08-29]
