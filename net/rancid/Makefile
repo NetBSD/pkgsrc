@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 06:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/08/29 07:56:39 pettai Exp $
 #
 
-DISTNAME=		rancid-3.4.1
-PKGREVISION=		2
+DISTNAME=		rancid-3.5.0
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
@@ -14,6 +13,7 @@ LICENSE=		original-bsd
 DEPENDS+=		tcl-expect>=5.4:../../lang/tcl-expect
 
 BUILD_DEFS+=		VARBASE
+WRKSRC=			${WRKDIR}/rancid-3.5
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run

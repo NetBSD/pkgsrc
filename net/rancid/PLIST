@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2016/03/19 06:45:28 pettai Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/08/29 07:56:39 pettai Exp $
 bin/a10login
 bin/agmrancid
 bin/alogin
 bin/anlogin
 bin/arancid
-bin/arrancid
 bin/avologin
 bin/avorancid
 bin/blogin
 bin/brancid
+bin/brlogin
 bin/cat5rancid
 bin/clogin
 bin/complogin
@@ -54,16 +54,22 @@ bin/rtftpcopy
 bin/srancid
 bin/tlogin
 bin/trancid
+bin/ulogin
 bin/wlogin
 bin/xilogin
 bin/xirancid
-bin/xrancid
+bin/xlogin
 bin/zrancid
 lib/rancid/acos.pm
+lib/rancid/aeos.pm
 lib/rancid/arbor.pm
+lib/rancid/bigip.pm
 lib/rancid/ciscowlc.pm
 lib/rancid/dell.pm
+lib/rancid/edgemax.pm
+lib/rancid/edgerouter.pm
 lib/rancid/eos.pm
+lib/rancid/exos.pm
 lib/rancid/foundry.pm
 lib/rancid/ios.pm
 lib/rancid/iosxr.pm
@@ -127,10 +133,11 @@ man/man1/rrancid.1
 man/man1/srancid.1
 man/man1/tlogin.1
 man/man1/trancid.1
+man/man1/ulogin.1
 man/man1/wlogin.1
 man/man1/xilogin.1
 man/man1/xirancid.1
-man/man1/xrancid.1
+man/man1/xlogin.1
 man/man1/zrancid.1
 man/man3/rancid.3
 man/man5/cloginrc.5
@@ -160,3 +167,4 @@ share/doc/rancid/rtrfilter
 share/examples/rancid/lg.conf.sample
 share/examples/rancid/rancid.conf.sample
 share/examples/rancid/rancid.types.base
+@pkgdir etc/rancid
