@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:49 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/08/29 03:59:49 mef Exp $
 
 DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib7-${MESA_PKGVERSION}
@@ -15,7 +15,7 @@ GNU_CONFIGURE_PREFIX=	${LOCALBASE}/MesaLib7
 
 DISTFILES+=		MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
 MESA_DISTNAME= 		MesaLib-${MESA_VERSION}
-MESA_SITES=		ftp://freedesktop.org/pub/mesa/${MESA_VERSION}/
+MESA_SITES=		ftp://freedesktop.org/pub/mesa/older-versions/7.x/${MESA_VERSION}/
 MESA_VERSION=		7.11.2
 MESA_PKGVERSION=	${MESA_VERSION}
 
