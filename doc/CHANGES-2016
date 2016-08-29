@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3589 2016/08/29 13:08:25 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3590 2016/08/29 15:46:23 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5129,3 +5129,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/rancid to 3.5.0 [pettai 2016-08-29]
 	Updated www/firefox to 48.0.2 [ryoon 2016-08-29]
 	Updated www/firefox-l10n to 48.0.2 [ryoon 2016-08-29]
+	Updated devel/py-logilab-common to 1.2.0 [darcy 2016-08-29]
