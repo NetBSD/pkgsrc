@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3587 2016/08/29 07:56:58 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.3588 2016/08/29 12:57:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5127,3 +5127,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/netpgpverify to 20160828 [agc 2016-08-28]
 	Updated security/libnetpgpverify to 20160828 [agc 2016-08-28]
 	Updated net/rancid to 3.5.0 [pettai 2016-08-29]
+	Updated www/firefox to 48.0.2 [ryoon 2016-08-29]
