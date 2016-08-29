@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.103 2016/07/09 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2016/08/29 19:21:24 jym Exp $
 
-DISTNAME=		stunnel-5.32
-PKGREVISION=		1
+DISTNAME=		stunnel-5.35
 CATEGORIES=		security
 MASTER_SITES=		http://www.stunnel.org/downloads/
 
@@ -41,19 +40,11 @@ RCD_SCRIPTS=		stunnel
 REPLACE_PERL+=		src/stunnel3.in
 USE_TOOLS+=		perl:run
 
-SUBST_CLASSES+=		chroot
-SUBST_MESSAGE.chroot=	Fix chroot path
-SUBST_STAGE.chroot=	pre-configure
-SUBST_FILES.chroot=	tools/stunnel.conf-sample.in
-SUBST_SED.chroot+=	-e 's|@prefix@/var/lib|@localstatedir@/chroot|'
-
 SUBST_CLASSES+=		stunnel
-SUBST_MESSAGE.stunnel=	Fix user, group and pid
-SUBST_STAGE.stunnel=	post-configure
-SUBST_FILES.stunnel=	tools/stunnel.conf-sample
-SUBST_SED.stunnel=	-e 's|setuid = nobody|setuid = ${STUNNEL_USER}|'
-SUBST_SED.stunnel+=	-e 's|setgid = nogroup|setgid = ${STUNNEL_GROUP}|'
-SUBST_SED.stunnel+=	-e 's|pid = /stunnel.pid|pid = /pid/stunnel.pid|'
+SUBST_MESSAGE.stunnel=	Fix user and group
+SUBST_STAGE.stunnel=	pre-configure
+SUBST_FILES.stunnel=	tools/stunnel.conf-sample.in
+SUBST_VARS.stunnel=	STUNNEL_USER STUNNEL_GROUP
 
 .include "options.mk"
 
