@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3590 2016/08/29 15:46:23 darcy Exp $
+$NetBSD: CHANGES-2016,v 1.3591 2016/08/29 19:25:54 jym Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5130,3 +5130,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 48.0.2 [ryoon 2016-08-29]
 	Updated www/firefox-l10n to 48.0.2 [ryoon 2016-08-29]
 	Updated devel/py-logilab-common to 1.2.0 [darcy 2016-08-29]
+	Updated security/stunnel to 5.35 [jym 2016-08-29]
