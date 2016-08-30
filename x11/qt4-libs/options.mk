@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/06/18 09:26:12 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2016/08/30 07:58:27 richard Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qt4
 PKG_SUPPORTED_OPTIONS=	cups debug gtk2
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	cups debug gtk2
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
-.  include "../../print/cups15/buildlink3.mk"
+.  include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	-cups
 .else
 CONFIGURE_ARGS+=	-no-cups
