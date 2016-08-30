@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/08/30 12:47:49 manu Exp $
+
+SHA1 (mod_mkdir-0.3.tgz) = 8ab4db99709f6dce3b70e9646be1315eff981742
+RMD160 (mod_mkdir-0.3.tgz) = 0ba2acaf5340bc952d46bc93a34fbfe551d9cc2b
+SHA512 (mod_mkdir-0.3.tgz) = 22f0618cd6287ae2fa7b2be94ce270207baeb6aef0d73bc2813d8308c12a867ad3b8a42a66a318f5dc8bafe59f27dedd4f4fa2f0e301b18598a167fe348bbda3
+Size (mod_mkdir-0.3.tgz) = 2730 bytes
