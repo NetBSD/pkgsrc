@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3600 2016/08/30 13:58:23 he Exp $
+$NetBSD: CHANGES-2016,v 1.3601 2016/08/30 14:36:17 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5140,7 +5140,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed cad/qcad-manual-hu [plunky 2016-08-30]
 	Updated cad/qcad to 3.15.5.4 [plunky 2016-08-30]
 	Updated cad/qcad-partlibrary to 20160819 [plunky 2016-08-30]
-	Added www/ap2-encoding 20021209 [manu 2016-08-30]
+	Added www/ap2-encoding version 20021209 [manu 2016-08-30]
 	Updated devel/mantis to 1.3.1 [ryoon 2016-08-30]
-	Added www/ap2-mkdir 0.3 [manu 2016-08-30]
+	Added www/ap2-mkdir version 0.3 [manu 2016-08-30]
 	Updated devel/libnet10 to 1.0.2anb3 [he 2016-08-30]
