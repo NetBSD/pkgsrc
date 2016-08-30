@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:20:19 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/08/30 15:20:47 schnoebe Exp $
 
-SHA1 (gloox-1.0.13.tar.bz2) = 735c0507f4ac45e6990528fab6afc45f9cabcc3a
-RMD160 (gloox-1.0.13.tar.bz2) = d10cebe8962211c4bd070eb847076fc7dc56ccc7
-SHA512 (gloox-1.0.13.tar.bz2) = 9f9773a5c3d2ae8a4eec6e8365c8578c089004d0f5101c2e8a8bf96ac8e8b6a08cf4e92f93afb8d07af0e8cc2c238c12f4f8df75a81c2a06dfb039c1d4ae850a
-Size (gloox-1.0.13.tar.bz2) = 675842 bytes
+SHA1 (gloox-1.0.17.tar.bz2) = 1bee3ef9e8f1a098032227a7ce13014444014d9e
+RMD160 (gloox-1.0.17.tar.bz2) = 1051a978ad1c5462c43b56302cf323ad333c0d34
+SHA512 (gloox-1.0.17.tar.bz2) = 8595586da391fa23f54eff7c8eb514e7000d3569eac3846edc28da02ec2da409f46013de93dd6d4b5185965675fc22ff2c96f031afa581e2d9243469b1b419f2
+Size (gloox-1.0.17.tar.bz2) = 698239 bytes
 SHA1 (patch-configure) = b14cc132665cbcb722589007c36767c0ddfab25f
-SHA1 (patch-src_connectiontcpbase.cpp) = de9f367b91de7b4efd9ac7a3da463d3d32e5bdf0
-SHA1 (patch-src_connectiontcpserver.cpp) = 720129dfcdff5a7ebb70bbf378c9ca3e5dfaabae
+SHA1 (patch-src_connectiontcpserver.cpp) = 17ad7a3b1a9ba47153b72e8b924052e3faf3d09f
 SHA1 (patch-src_dns.cpp) = dfc538e9a059b06b6222c3dffe879105701d504c
 SHA1 (patch-src_examples_e2ee__client.cpp) = 3a28030733fca789769c9361fe21b586aebe1370
 SHA1 (patch-src_examples_e2ee__server.cpp) = eb8c22427def85387b9bf88b665feb1315df878f
