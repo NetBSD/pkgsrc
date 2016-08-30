@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3592 2016/08/30 03:26:20 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3593 2016/08/30 04:16:22 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5132,3 +5132,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-logilab-common to 1.2.0 [darcy 2016-08-29]
 	Updated security/stunnel to 5.35 [jym 2016-08-29]
 	Updated net/py-metar to 0.21 [maya 2016-08-30]
+	Updated finance/gnucash to 2.6.13nb3 [jnemeth 2016-08-30]
