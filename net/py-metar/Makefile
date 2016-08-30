@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/08/30 03:25:40 maya Exp $
 
-DISTNAME=	pymetar-0.19
+DISTNAME=	pymetar-0.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net python
 MASTER_SITES=	http://www.schwarzvogel.de/pkgs/
