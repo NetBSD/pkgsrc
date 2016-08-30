@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16353 2016/08/29 14:11:18 taca Exp $
+$NetBSD: TODO,v 1.16354 2016/08/30 03:26:20 maya Exp $
 
 Suggested new packages
 ======================
@@ -1382,7 +1382,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-mccabe-0.4.0
-	o py-metar-0.20
 	o py-mezzanine-4.1.0
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
