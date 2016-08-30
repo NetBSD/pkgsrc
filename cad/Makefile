@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2016/07/22 00:04:41 mef Exp $
+# $NetBSD: Makefile,v 1.86 2016/08/30 10:39:33 plunky Exp $
 #
 
 COMMENT=	CAD tools
@@ -55,10 +55,6 @@ SUBDIR+=	py-MyHDL
 SUBDIR+=	py-gds
 SUBDIR+=	py-simpy
 SUBDIR+=	qcad
-SUBDIR+=	qcad-manual-cs
-SUBDIR+=	qcad-manual-de
-SUBDIR+=	qcad-manual-en
-SUBDIR+=	qcad-manual-hu
 SUBDIR+=	qcad-partlibrary
 SUBDIR+=	sci-wcalc
 SUBDIR+=	spice
