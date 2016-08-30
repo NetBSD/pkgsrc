@@ -1,69 +1,77 @@
-# $NetBSD: Makefile,v 1.61 2015/04/25 14:20:27 tnn Exp $
+# $NetBSD: Makefile,v 1.62 2016/08/30 10:56:04 plunky Exp $
 #
 
-DISTNAME=		qcad-2.0.5.0-1-community.src
-# what to do about this numbering? RibbonSoft really seems to use four digits
-# (there's a 2.0.4.7 for some platforms), though I don't know about the
-# thing after the hyphen, which always seems to be 1. Can I use four digits?
-PKGNAME=		qcad-2.0.5.0
-PKGREVISION=		12
+DISTNAME=		qcad-3.15.5.3
+CATEGORIES=		cad
+MASTER_SITES=		${MASTER_SITE_GITHUB:=qcad/}
+EXTRACT_SUFX=		.zip
 
-.include "./Makefile.common"
-
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.qcad.org/
 COMMENT=		2D CAD system
+LICENSE=		gnu-gpl-v3
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf gmake pax
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+
+DEPENDS+=		bash-[0-9]*:../../shells/bash
+DEPENDS+=		qt4-tiff-[0-9]*:../../x11/qt4-tiff
+DEPENDS+=		qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
+
+MAKE_JOBS_SAFE=		no
+
+USE_TOOLS+=		chmod find make pax
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 
-CONFIGURE_DIRS=		fparser dxflib
-
-BUILD_DIRS=		${CONFIGURE_DIRS}
-BUILD_DIRS+=		qcadlib qcadcmd qcadactions qcadguiqt qcad
-
-MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/default
-PREPEND_PATH+=		${QTDIR}/bin
-
-# I really want this to be post-*patch* where it makes sense, but QTDIR isn't
-# available until after the wrapper phase because it depends on
-# BUILDLINK_PREFIX.qt3-libs, which buildlink3 sets.  Nothing is easy.  :) The
-# patches have replaced old hardcoded paths with fixed cookies @PREFIX@ and
-# @QTDIR@.  The SUBST framework will replace the cookies with the proper
-# values.
 SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
+SUBST_STAGE.paths=	post-patch
 SUBST_MESSAGE.paths=	Attending to hard-coded paths.
-SUBST_FILES.paths+=	qcadlib/src/engine/rs_system.cpp
-SUBST_FILES.paths+=	qcad/src/qc_applicationwindow.cpp
+SUBST_FILES.paths+=	shared.pri src/core/RS.cpp src/core/RSettings.cpp
+SUBST_FILES.paths+=	scripts/Help/ShowReadme/ShowReadme.js
+SUBST_FILES.paths+=	scripts/Widgets/LibraryBrowser/LibraryBrowser.js
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@QTDIR@,${QTDIR},g'
 
-post-patch:
-	cd ${WRKSRC}/fparser && autoconf
-	cd ${WRKSRC}/dxflib && autoconf
+AUTO_MKDIRS=	yes
 
-# Just setting BUILD_DIRS would be adequate if qcad could be built with
-# "prepare all" in each module, one by one.  But qcad needs all modules to
-# be prepare'd before any can be all'd, so prepare them here in a separate
-# loop duplicated from do-build.  The unmodified do-build then takes care
-# of the "all".  I didn't see an easier way.
-pre-build:
-	${RUN} ${_ULIMIT_CMD}						\
-	for d in ${BUILD_DIRS}; do					\
-		cd ${WRKSRC}; cd "$$d";					\
-		${BUILD_MAKE_CMD} prepare;				\
-	done
+#
+# Fix permissions from zip file
+#
+post-extract:
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} u=rw,go=r "{}" "+"
 
-INSTALLATION_DIRS=	bin share/qcad
+#
+# The QCad build system normally links direct to a release dir but this
+# causes a lot of problems with libtool dependencies. We patch it so that
+# the libs are linked from the source dirs and add an install target to
+# allow pkgsrc to use DESTDIR
+#
+# The Qt script bindings are built in Qt version specific subdirectory
+# which we can't patch directly, so we create a fake qtscript.pro file
+# and use it to overwrite Makefiles. Makefile.qtscript is ignored
+#
+do-configure:
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake -r -after DESTDIR=
+	cd ${WRKSRC}/src/3rdparty && ${QTDIR}/bin/qmake -r -after DESTDIR= \
+	    INSTALLS+=target target.path=${PREFIX}/lib/${PKGBASE}/plugins/script \
+	    qtscript.pro -o Makefile.qtscript
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qcad/qcad ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC}/qcad && umask 022 && \
-	pax -rwpm data fonts patterns qm ${DESTDIR}${PREFIX}/share/qcad
+	cd ${WRKSRC} && make INSTALL_ROOT=${DESTDIR} install
+	${INSTALL_DATA} ${WRKSRC}/qcad.desktop \
+	    ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${FIND} ${WRKSRC}/scripts -name \*.orig -rm
+	cd ${WRKSRC} && ${PAX} -rwpm fonts linetypes patterns \
+	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
+	cd ${WRKSRC} && ${PAX} -rwpm readme.txt examples libraries \
+	    ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt3-libs+=	qt3-libs>=3.3.4
-.include "../../x11/qt3-tools/buildlink3.mk"
-BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.4
-BUILDLINK_DEPMETHOD.qt3-tools=	full # uses assistant for help
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.7
+.include "../../x11/qt4-tools/buildlink3.mk"
+BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.7
+BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../mk/bsd.pkg.mk"
