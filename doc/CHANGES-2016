@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3594 2016/08/30 10:26:41 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.3595 2016/08/30 10:39:34 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5134,3 +5134,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-metar to 0.21 [maya 2016-08-30]
 	Updated finance/gnucash to 2.6.13nb3 [jnemeth 2016-08-30]
 	Updated devel/libgit2 to 0.24.1 [jperkin 2016-08-30]
+	Removed cad/qcad-manual-cs [plunky 2016-08-30]
+	Removed cad/qcad-manual-de [plunky 2016-08-30]
+	Removed cad/qcad-manual-en [plunky 2016-08-30]
+	Removed cad/qcad-manual-hu [plunky 2016-08-30]
