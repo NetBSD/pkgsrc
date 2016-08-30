@@ -1,0 +1,127 @@
+$NetBSD: patch-configure,v 1.7 2016/08/30 04:13:14 jnemeth Exp $
+
+Don't bother testing for libdbd-*.  Leave the choice of which to
+install and when up to the package user.
+
+--- configure.orig	2016-06-28 04:44:47.000000000 +0000
++++ configure
+@@ -21697,119 +21697,6 @@ else
+ 
+ fi
+ 
+-    case $host_os in
+-       win32*|mingw*)
+-	 LDINC="#include <windows.h>"
+-	 LDFUNCARGS=""
+-	 LDEXT=dll
+-	 ;;
+-       *)
+-	 LDINC="#include <dlfcn.h>"
+-	 LDFUNCARGS=", RTLD_NOW"
+-	 LDEXT=so
+-	 export LIBS="$lt_cv_dlopen_libs $LIBS"
+-	 ;;
+-      esac
+-    old_ld_library_path="$LD_LIBRARY_PATH"
+-    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$EXTRA_SEARCH_LIBS"
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: Search Path $LD_LIBRARY_PATH" >&5
+-$as_echo "$as_me: Search Path $LD_LIBRARY_PATH" >&6;}
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking Looking for at least one supported DBD module" >&5
+-$as_echo_n "checking Looking for at least one supported DBD module... " >&6; }
+-    if test "$cross_compiling" = yes; then :
+-  { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error $? "cannot run test program while cross compiling
+-See \`config.log' for more details" "$LINENO" 5; }
+-else
+-  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-$LDINC
+-int
+-main ()
+-{
+-if (!$lt_cv_dlopen("libdbdsqlite3.$LDEXT"$LDFUNCARGS)) return -1;
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: SQLite3" >&5
+-$as_echo "SQLite3" >&6; }
+-else
+-  if test "$cross_compiling" = yes; then :
+-  { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error $? "cannot run test program while cross compiling
+-See \`config.log' for more details" "$LINENO" 5; }
+-else
+-  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-$LDINC
+-int
+-main ()
+-{
+-if (!$lt_cv_dlopen("libdbdmysql.$LDEXT"$LDFUNCARGS)) return -1;
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: MySql" >&5
+-$as_echo "MySql" >&6; }
+-else
+-  if test "$cross_compiling" = yes; then :
+-  { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error $? "cannot run test program while cross compiling
+-See \`config.log' for more details" "$LINENO" 5; }
+-else
+-  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-$LDINC
+-int
+-main ()
+-{
+-if (!$lt_cv_dlopen("libdbdpgsql.$LDEXT"$LDFUNCARGS)) return -1;
+-
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_run "$LINENO"; then :
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: Postgresql" >&5
+-$as_echo "Postgresql" >&6; }
+-else
+-  as_fn_error $? "
+-Unable to find any of the supported dbd modules
+-(libdbdsqlite3, libdbdmysql, or libdbdpgsql) needed to actually use the SQL
+-backend.
+-
+-If you do have them installed the problem is either that dlopen cannot
+-find them or that dlopen itself is not getting linked. Check config.log
+-to find out which.  You can add the option --with-dbi-dbd-dir pointing to
+-the directory in which they are located.
+-
+-If you do not actually want to build with libdi add --disable-dbi
+-to the configure argument list and run it again.
+-       " "$LINENO" 5
+-fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
+-fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
+-fi
+-rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+-  conftest.$ac_objext conftest.beam conftest.$ac_ext
+-fi
+-
+ 
+     LIBDBI_LIBS=-ldbi
+     _COMPONENTS="$_COMPONENTS dbi"
