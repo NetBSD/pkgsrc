@@ -1,13 +1,16 @@
-$NetBSD: patch-src_connectiontcpserver.cpp,v 1.2 2011/11/25 21:31:13 joerg Exp $
+$NetBSD: patch-src_connectiontcpserver.cpp,v 1.3 2016/08/30 15:20:47 schnoebe Exp $
 
---- src/connectiontcpserver.cpp.orig	2009-10-12 16:40:41.000000000 +0000
+Make sure string.h is included for memset and friends.
+Assume it's needed for all non-_WIN32_CE operating systems.
+(hmm, this should probably be determined by configure, and handled in config.h)
+
+--- src/connectiontcpserver.cpp.orig	2016-08-23 13:55:51.000000000 +0000
 +++ src/connectiontcpserver.cpp
-@@ -23,6 +23,8 @@
- #include "mutexguard.h"
- #include "util.h"
+@@ -55,6 +55,7 @@
  
-+#include <string.h>
-+
- #ifdef __MINGW32__
- # include <winsock.h>
+ #ifndef _WIN32_WCE
+ # include <sys/types.h>
++# include <string.h>
  #endif
+ 
+ // remove for 1.1
