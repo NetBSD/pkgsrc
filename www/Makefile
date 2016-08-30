@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1190 2016/08/25 00:17:04 markd Exp $
+# $NetBSD: Makefile,v 1.1191 2016/08/30 12:34:39 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -31,6 +31,7 @@ SUBDIR+=	ap2-auth-xradius
 SUBDIR+=	ap2-authn-otp
 SUBDIR+=	ap2-bw
 SUBDIR+=	ap2-cband
+SUBDIR+=	ap2-encoding
 SUBDIR+=	ap2-fcgid
 SUBDIR+=	ap2-jk
 SUBDIR+=	ap2-limitipconn
