@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/30 12:34:39 manu Exp $
+lib/httpd/mod_encoding.so
+${DOC_DIR}/README
+${DOC_DIR}/README.JP
