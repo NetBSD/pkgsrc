@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: distinfo,v 1.22 2016/08/30 11:01:12 plunky Exp $
 
 SHA1 (qcad-3.15.5.3.zip) = 76d88b865cc446ccb4b8cf045b93a8873c571139
 RMD160 (qcad-3.15.5.3.zip) = 40ffbf8aa7232e476520d4acc5657b391f818d20
@@ -20,7 +20,7 @@ SHA1 (patch-src_3rdparty_spatialindexnavel_spatialindexnavel.pro) = 64bf1fb27be3
 SHA1 (patch-src_3rdparty_stemmer_stemmer.pro) = aae5dbeba3f0d3abf2f9bb536817138ce9089f58
 SHA1 (patch-src_core_RS.cpp) = 6cb504d409737058c9eb7ab8058ce0ec889a71c4
 SHA1 (patch-src_core_RSPlatform.cpp) = e61695b3f364b0c5d28d070a075f9d7cd0081757
-SHA1 (patch-src_core_RSettings.cpp) = 3b4137892ae3a1c16b6ac6d15f9d7fa33b040404
+SHA1 (patch-src_core_RSettings.cpp) = 1f5073db53feba80bf8312ce41436627e80f500b
 SHA1 (patch-src_core_core.pro) = 3bcef6ba1a499808271c45c58693f2380d8a00c0
 SHA1 (patch-src_customwidgets_customwidgets.pro) = 2fc0b1f4b0110e8031f2d0b06ad22c823b2e26a6
 SHA1 (patch-src_entity_entity.pro) = a7fe3dbe450a3e8ad8549bf32d2eabe21b221177
