@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2015/12/06 12:13:12 taca Exp $
+# $NetBSD: Makefile,v 1.45 2016/08/30 12:37:43 ryoon Exp $
 
-DISTNAME=	mantisbt-1.2.17
+DISTNAME=	mantisbt-1.3.1
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mantisbt.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 LICENSE=	gnu-gpl-v2
-
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.6:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.6:../../databases/php-mysql
 
 PHP_VERSIONS_ACCEPTED=	55 56
 
@@ -28,7 +25,8 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 MANTIS_HOME=		${PREFIX}/share/mantis
 EGDIR=			${PREFIX}/share/examples/mantis
 CONF_FILES+=		${EGDIR}/mantis.conf ${PKG_SYSCONFDIR}/mantis.conf
-CONF_FILES_PERMS+=	${EGDIR}/config_inc.php ${MANTIS_HOME}/config_inc.php \
+CONF_FILES_PERMS+=	${EGDIR}/config_inc.php \
+			${MANTIS_HOME}/config/config_inc.php \
 			${APACHE_USER} ${SHAREGRP} 0400
 MANTIS_EG=		config_inc.php mantis.conf mantis_offline.php.sample
 
@@ -53,9 +51,11 @@ post-extract:
 	${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/CUSTOMIZATION ${DESTDIR}${PREFIX}/share/doc/mantis
-	${INSTALL_DATA} ${WRKSRC}/doc/INSTALL ${DESTDIR}${PREFIX}/share/doc/mantis
-	${MV} ${WRKSRC}/config_inc.php.sample ${WRKSRC}/config_inc.php
+	cd ${WRKSRC}/doc && \
+		pax -rwpppm en-US ${DESTDIR}${PREFIX}/share/doc/mantis
+
+	${MV} ${WRKSRC}/config/config_inc.php.sample \
+		${WRKSRC}/config_inc.php
 
 .for f in ${MANTIS_EG}
 		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EGDIR}
@@ -69,5 +69,4 @@ do-install:
 		${FIND} . -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
