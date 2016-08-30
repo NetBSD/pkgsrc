@@ -1,6 +1,5 @@
-A library of about 4500 drawings of mechanical, electrical, and other parts
-usable with the library browser in the QCad 2D CAD system.
-
-The current downloadable version of the QCad online manual does not document
-how to use the part library once it is installed.  I herewith reveal the secret:
-From the View menu, choose Views, and enable the library browser.
+The QCAD package only contains a small set of symbols and CAD parts to
+demonstrate the functionality of the part library. This package contains
+several thousand additional parts in the categories of Architecture,
+Chemistry, Electronics, GIS, Hydraulics, LRM Circuits, Mechanics, Misc,
+MSR, Processing and Icons from The Noun Project.
