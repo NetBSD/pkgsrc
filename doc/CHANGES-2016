@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3595 2016/08/30 10:39:34 plunky Exp $
+$NetBSD: CHANGES-2016,v 1.3596 2016/08/30 10:59:06 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5138,3 +5138,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed cad/qcad-manual-de [plunky 2016-08-30]
 	Removed cad/qcad-manual-en [plunky 2016-08-30]
 	Removed cad/qcad-manual-hu [plunky 2016-08-30]
+	Updated cad/qcad to 3.15.5.4 [plunky 2016-08-30]
+	Updated cad/qcad-partlibrary to 20160819 [plunky 2016-08-30]
