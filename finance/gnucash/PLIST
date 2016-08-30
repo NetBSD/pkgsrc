@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2016/06/30 17:43:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2016/08/30 04:13:13 jnemeth Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -223,6 +223,7 @@ include/gnucash/window-main-summarybar.h
 include/gnucash/window-report.h
 lib/gnucash/libgncmod-app-utils-python.la
 lib/gnucash/libgncmod-app-utils.la
+${PLIST.dbi}lib/gnucash/libgncmod-backend-dbi.la
 lib/gnucash/libgncmod-backend-xml.la
 lib/gnucash/libgncmod-bi_import.la
 lib/gnucash/libgncmod-business-gnome.la
