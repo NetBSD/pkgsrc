@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2016/08/30 12:47:49 manu Exp $
+lib/httpd/mod_mkdir.so
+${DOC_DIR}/README
