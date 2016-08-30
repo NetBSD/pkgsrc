@@ -1,7 +1,200 @@
-$NetBSD: patch-ae,v 1.1 2009/07/26 20:14:44 schmonz Exp $
+$NetBSD: patch-ae,v 1.2 2016/08/30 13:57:31 he Exp $
+
+Treat Apple as Linux.
+Use explicitly sized types to fix this on LP64 platforms.
 
 --- include/libnet/libnet-headers.h.orig	2000-12-13 15:38:40.000000000 -0500
 +++ include/libnet/libnet-headers.h
+@@ -87,9 +87,9 @@ struct libnet_ip_hdr
+             ip_hl:4;        /* header length */
+ #endif
+     u_char ip_tos;          /* type of service */
+-    u_short ip_len;         /* total length */
+-    u_short ip_id;          /* identification */
+-    u_short ip_off;
++    uint16_t ip_len;        /* total length */
++    uint16_t ip_id;         /* identification */
++    uint16_t ip_off;
+ #ifndef IP_RF
+ #define IP_RF 0x8000        /* reserved fragment flag */
+ #endif
+@@ -104,7 +104,7 @@ struct libnet_ip_hdr
+ #endif
+     u_char ip_ttl;          /* time to live */
+     u_char ip_p;            /* protocol */
+-    u_short ip_sum;         /* checksum */
++    uint16_t ip_sum;        /* checksum */
+     struct in_addr ip_src, ip_dst; /* source and dest address */
+ };
+ 
+@@ -113,10 +113,10 @@ struct libnet_ip_hdr
+  */
+ struct libnet_tcp_hdr
+ {
+-    u_short th_sport;       /* source port */
+-    u_short th_dport;       /* destination port */
+-    u_long th_seq;          /* sequence number */
+-    u_long th_ack;          /* acknowledgement number */
++    uint16_t th_sport;       /* source port */
++    uint16_t th_dport;       /* destination port */
++    uint32_t th_seq;        /* sequence number */
++    uint32_t th_ack;        /* acknowledgement number */
+ #if (LIBNET_LIL_ENDIAN)
+     u_char th_x2:4,         /* (unused) */
+            th_off:4;        /* data offset */
+@@ -144,9 +144,9 @@ struct libnet_tcp_hdr
+ #ifndef TH_URG
+ #define TH_URG    0x20
+ #endif
+-    u_short th_win;         /* window */
+-    u_short th_sum;         /* checksum */
+-    u_short th_urp;         /* urgent pointer */
++    uint16_t th_win;        /* window */
++    uint16_t th_sum;        /* checksum */
++    uint16_t th_urp;        /* urgent pointer */
+ };
+ 
+ 
+@@ -155,10 +155,10 @@ struct libnet_tcp_hdr
+  */
+ struct libnet_udp_hdr
+ {
+-    u_short uh_sport;   /* soure port */
+-    u_short uh_dport;   /* destination port */
+-    u_short uh_ulen;    /* length */
+-    u_short uh_sum;     /* checksum */
++    uint16_t uh_sport;  /* soure port */
++    uint16_t uh_dport;  /* destination port */
++    uint16_t uh_ulen;   /* length */
++    uint16_t uh_sum;    /* checksum */
+ };
+ 
+ 
+@@ -290,14 +290,14 @@ struct libnet_icmp_hdr
+ #define     ICMP_PARAMPROB_OPTABSENT        1
+ #endif
+ 
+-    u_short icmp_sum;
++    uint16_t icmp_sum;
+ 
+     union
+     {
+         struct
+         {
+-            u_short id;
+-            u_short seq;
++            uint16_t id;
++            uint16_t seq;
+         }echo;
+ 
+ #undef icmp_id
+@@ -305,11 +305,11 @@ struct libnet_icmp_hdr
+ #define icmp_id     hun.echo.id
+ #define icmp_seq    hun.echo.seq
+  
+-        u_long gateway;
++        uint32_t gateway;
+         struct
+         {
+-            u_short pad;
+-            u_short mtu;
++            uint16_t pad;
++            uint16_t mtu;
+         }frag;
+     }hun;
+     union
+@@ -325,7 +325,7 @@ struct libnet_icmp_hdr
+             struct ip idi_ip;
+             /* options and then 64 bits of data */
+         }ip;
+-        u_long mask;
++        uint32_t mask;
+         char data[1];
+ 
+ #undef icmp_mask
+@@ -362,7 +362,7 @@ struct libnet_igmp_hdr
+ #define IGMP_LEAVE_GROUP                0x17    /* Leave-group message */
+ #endif
+     u_char igmp_code;
+-    u_short igmp_sum;
++    uint16_t igmp_sum;
+     struct in_addr igmp_group;
+ };
+ 
+@@ -378,7 +378,7 @@ struct libnet_ethernet_hdr
+ #endif
+     u_char  ether_dhost[ETHER_ADDR_LEN];    /* destination ethernet address */
+     u_char  ether_shost[ETHER_ADDR_LEN];    /* source ethernet address */
+-    u_short ether_type;                     /* packet type ID */
++    uint16_t ether_type;                     /* packet type ID */
+ };
+ 
+ #define ETHERTYPE_PUP           0x0200  /* PUP protocol */
+@@ -401,12 +401,12 @@ struct ether_addr
+  */
+ struct libnet_arp_hdr
+ {
+-    u_short ar_hrd;                         /* format of hardware address */
++    uint16_t ar_hrd;                         /* format of hardware address */
+ #define ARPHRD_ETHER     1                  /* ethernet hardware format */
+-    u_short ar_pro;                         /* format of protocol address */
++    uint16_t ar_pro;                         /* format of protocol address */
+     u_char  ar_hln;                         /* length of hardware address */
+     u_char  ar_pln;                         /* length of protocol addres */
+-    u_short ar_op;                          /* operation type */
++    uint16_t ar_op;                          /* operation type */
+ #define ARPOP_REQUEST    1                  /* req to resolve address */
+ #define ARPOP_REPLY      2                  /* resp to previous request */
+ #define ARPOP_REVREQUEST 3                  /* req protocol address given hardware */
+@@ -429,12 +429,12 @@ struct libnet_arp_hdr
+  */
+ struct libnet_dns_hdr
+ {
+-    u_short id;             /* DNS packet ID */
+-    u_short flags;          /* DNS flags */
+-    u_short num_q;          /* Number of questions */
+-    u_short num_answ_rr;    /* Number of answer resource records */
+-    u_short num_auth_rr;    /* Number of authority resource records */
+-    u_short num_addi_rr;    /* Number of additional resource records */
++    uint16_t id;             /* DNS packet ID */
++    uint16_t flags;          /* DNS flags */
++    uint16_t num_q;          /* Number of questions */
++    uint16_t num_answ_rr;    /* Number of answer resource records */
++    uint16_t num_auth_rr;    /* Number of authority resource records */
++    uint16_t num_addi_rr;    /* Number of additional resource records */
+ };
+ 
+ 
+@@ -455,13 +455,13 @@ struct libnet_rip_hdr
+ #define RIPVER_0            0
+ #define RIPVER_1            1
+ #define RIPVER_2            2
+-    u_short rd;             /* Zero (v1) or Routing Domain (v2) */
+-    u_short af;             /* Address family */
+-    u_short rt;             /* Zero (v1) or Route Tag (v2) */
+-    u_long addr;            /* IP address */
+-    u_long mask;            /* Zero (v1) or Subnet Mask (v2) */
+-    u_long next_hop;        /* Zero (v1) or Next hop IP address (v2) */
+-    u_long metric;          /* Metric */
++    uint16_t rd;             /* Zero (v1) or Routing Domain (v2) */
++    uint16_t af;             /* Address family */
++    uint16_t rt;             /* Zero (v1) or Route Tag (v2) */
++    uint32_t addr;            /* IP address */
++    uint32_t mask;            /* Zero (v1) or Subnet Mask (v2) */
++    uint32_t next_hop;        /* Zero (v1) or Next hop IP address (v2) */
++    uint32_t metric;          /* Metric */
+ };
+ 
+ /*
+@@ -489,7 +489,7 @@ struct libnet_vrrp_hdr
+ #define LIBNET_VRRP_AUTH_PASSWD 0x2
+ #define LIBNET_VRRP_AUTH_IPAH   0x3
+     u_char vrrp_advert_int; /* advertisement interval */
+-    u_short vrrp_sum;      /* checksum */
++    uint16_t vrrp_sum;      /* checksum */
+ };
+ 
+ #if 0
 @@ -509,7 +509,7 @@ struct tcpoption
  };
  
