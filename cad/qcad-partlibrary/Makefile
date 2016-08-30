@@ -1,29 +1,42 @@
-# $NetBSD: Makefile,v 1.6 2016/03/03 19:42:29 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2016/08/30 10:57:35 plunky Exp $
 #
 
-DISTNAME=		partlibrary-2.0.1.2-1
-PKGNAME=		qcad-partlibrary-2.0.1.2
-PKGREVISION=		1
-CATEGORIES=		cad
-MASTER_SITES=		http://www.ribbonsoft.com/archives/partlibrary/
-EXTRACT_SUFX=		.zip
+# The package version is the latest date of the distfiles.
+#
+PKGNAME=	qcad-partlibrary-20160819
+CATEGORIES=	cad
+MASTER_SITES=	http://www.qcad.org/archives/partlibrary/
+DIST_SUBDIR=	qcad-partlibrary
+DISTFILES=	Architecture-2012-07-09.zip \
+		Chemistry-2016-08-19.zip \
+		Electronics-2012-07-09.zip \
+		GIS-2012-07-09.zip \
+		Hydraulics-2012-07-09.zip \
+		LRMCircuits-2014-02-05.zip \
+		Mechanics-2012-07-09.zip \
+		Misc-2016-08-08.zip \
+		MSR-2016-08-19.zip \
+		Processing-2016-08-19.zip \
+		thenounproject.com-2012-07-09.zip
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ribbonsoft.com/qcad/
-COMMENT=	About 4500 mech, elec, etc. parts for the QCad 2D CAD system
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.qcad.org/en/qcad-add-ons
+COMMENT=	Parts libraries for the QCad 2D CAD system
+LICENSE=	gnu-gpl-v3
+
+DEPENDS+=	qcad>=3.15.4.1:../../cad/qcad
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_TOOLS+=	pax
+USE_TOOLS+=	chmod find pax
+AUTO_MKDIRS=	yes
 
-DEPENDS+=	qcad>=2.0.0.0:../../cad/qcad
+EXTRACT_DIR=	${WRKSRC}
 
 post-extract:
-	chmod -R go-w ${WRKSRC}
-	cd ${WRKSRC}/electrical/denzuq && chmod a-x */*/*.dxf
+	${FIND} ${WRKSRC} -type f -exec ${CHMOD} u=rw,go=r "{}" "+"
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/qcad/library
-	cd ${WRKSRC} && pax -rwpm . ${DESTDIR}${PREFIX}/share/qcad/library
+	cd ${WRKSRC} && ${PAX} -rwpm . ${DESTDIR}${PREFIX}/share/qcad/libraries
 
 .include "../../mk/bsd.pkg.mk"
