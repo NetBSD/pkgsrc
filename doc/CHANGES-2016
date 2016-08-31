@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3615 2016/08/31 09:24:09 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3616 2016/08/31 13:57:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5158,3 +5158,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-twisted-docs to 16.4.0 [wiz 2016-08-31]
 	Updated fonts/unifont to 9.0.02 [wiz 2016-08-31]
 	Updated multimedia/vlc to 2.2.4 [wiz 2016-08-31]
+	Updated multimedia/mpv to 0.20.0 [leot 2016-08-31]
