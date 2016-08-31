@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16363 2016/08/31 09:10:25 wiz Exp $
+$NetBSD: TODO,v 1.16364 2016/08/31 09:14:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1643,7 +1643,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o unicode-screensaver-0.5
-	o unifont-9.0.02
 	o units-2.12
 	o uriparser-0.8.2
 	o urlgrabber-3.10.1
