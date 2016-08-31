@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/08/19 09:38:06 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.26 2016/08/31 14:15:33 jperkin Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -1038,7 +1038,7 @@ go/pkg/${GO_PLATFORM}/unicode/utf16.a
 go/pkg/${GO_PLATFORM}/unicode/utf8.a
 go/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/http2/hpack.a
 go/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/lex/httplex.a
-go/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/route.a
+${PLIST.route}go/pkg/${GO_PLATFORM}/vendor/golang_org/x/net/route.a
 go/pkg/tool/${GO_PLATFORM}/addr2line
 go/pkg/tool/${GO_PLATFORM}/api
 go/pkg/tool/${GO_PLATFORM}/asm

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/08/20 06:22:38 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/08/31 14:15:33 jperkin Exp $
 
 .include "version.mk"
 
@@ -71,6 +71,14 @@ CHECK_INTERPRETER_SKIP+=	go/src/run.rc
 
 BUILD_DEPENDS+=		go14-1.4*:../../lang/go14
 GOROOT_BOOTSTRAP=	${PREFIX}/go14
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	route
+
+.if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
+PLIST.route=	yes
+.endif
 
 pre-build:
 	cd ${WRKSRC}/src/syscall && \
