@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/07/09 06:38:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/08/31 09:14:49 wiz Exp $
 
-DISTNAME=	unifont-9.0.01
-PKGREVISION=	1
+DISTNAME=	unifont-9.0.02
 CATEGORIES=	fonts
 MASTER_SITES=	http://unifoundry.com/pub/${DISTNAME}/
 
@@ -11,7 +10,6 @@ COMMENT=	GNU Unifont - glyphs for all printable code points in Unicode 8.0 BMP
 LICENSE=	gnu-gpl-v2 # or later
 
 USE_TOOLS+=	gmake perl:run
-WRKSRC=		${WRKDIR}/unifont-9.0
 
 MAKE_FLAGS+=	USRDIR=${PREFIX}
 MAKE_FLAGS+=	CONSOLEDEST=${DESTDIR}${PREFIX}/share/fonts/consolefonts
