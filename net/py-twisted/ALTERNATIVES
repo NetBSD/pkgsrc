@@ -1,0 +1,9 @@
+bin/cftp @PREFIX@/bin/cftp-@PYVERSSUFFIX@
+bin/ckeygen @PREFIX@/bin/ckeygen-@PYVERSSUFFIX@
+bin/conch @PREFIX@/bin/conch-@PYVERSSUFFIX@
+bin/mailmail @PREFIX@/bin/mailmail-@PYVERSSUFFIX@
+bin/pyhtmlizer @PREFIX@/bin/pyhtmlizer-@PYVERSSUFFIX@
+bin/tkconch @PREFIX@/bin/tkconch-@PYVERSSUFFIX@
+bin/trial @PREFIX@/bin/trial-@PYVERSSUFFIX@
+bin/twist @PREFIX@/bin/twist-@PYVERSSUFFIX@
+bin/twistd @PREFIX@/bin/twistd-@PYVERSSUFFIX@
