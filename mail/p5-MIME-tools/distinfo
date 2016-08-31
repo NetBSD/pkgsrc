@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2015/11/03 23:27:13 agc Exp $
+$NetBSD: distinfo,v 1.22 2016/08/31 06:07:14 wiz Exp $
 
-SHA1 (MIME-tools-5.507.tar.gz) = fb445cb9f2c4d10b2b337d48c84586730a048b6a
-RMD160 (MIME-tools-5.507.tar.gz) = ddec84e031c6c32baa5591570bcf13f6f3d4df81
-SHA512 (MIME-tools-5.507.tar.gz) = b617d417784d01d8f81acda6f595b46d35d8c8382a9e436ccc3a2fec6ed6c2a3daf20785fabae1663ba278616172a5ea365ba83b390aed9e6defab67fdbfbaa7
-Size (MIME-tools-5.507.tar.gz) = 406373 bytes
+SHA1 (MIME-tools-5.508.tar.gz) = 377553755993abaf7abfd7d60c93c12eb663b3be
+RMD160 (MIME-tools-5.508.tar.gz) = e06e58521a568354dd78e38c09f0558fee47220d
+SHA512 (MIME-tools-5.508.tar.gz) = b51a9941c9d8efece2f8fcf8e08b4e987973ff1750ebe268b2f2ad4ada9f306d21a3aa3ea536c0a693b032141e13f46b6e2a9696a93778f1b20d0f5ffece2c04
+Size (MIME-tools-5.508.tar.gz) = 406808 bytes
