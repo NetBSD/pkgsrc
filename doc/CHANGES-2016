@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3606 2016/08/31 06:11:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3607 2016/08/31 06:39:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5149,3 +5149,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-ECB to 2.20 [wiz 2016-08-31]
 	Updated mail/p5-MIME-tools to 5.508 [wiz 2016-08-31]
 	Updated devel/pkgconf to 1.0.1 [wiz 2016-08-31]
+	Updated devel/afl to 2.33b [wiz 2016-08-31]
