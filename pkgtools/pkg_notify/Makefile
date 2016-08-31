@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 06:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/08/31 21:15:36 wiz Exp $
 
-PKGNAME=	pkg_notify-0.4.4
-PKGREVISION=	3
+PKGNAME=	pkg_notify-0.4.5
 CATEGORIES=	pkgtools
 
 MAINTAINER=	imil@gcu.info

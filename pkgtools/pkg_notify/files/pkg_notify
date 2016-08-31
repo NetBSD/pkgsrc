@@ -16,7 +16,7 @@
 #
 # $ pkg_notify category/package
 #
-# $Id: pkg_notify,v 1.3 2016/08/31 21:15:01 wiz Exp $
+# $Id: pkg_notify,v 1.4 2016/08/31 21:15:36 wiz Exp $
 
 use Net::FTP;
 use LWP::UserAgent;
@@ -71,7 +71,7 @@ sub beta_strip {
     if ($out =~ /(.*[0-9])([\-\_\.]?)(pre|alpha|beta|gamma|rc)([0-9]*.*)/i) {
 	my $pre = $1;
 	my $dev = lc $3;
-	# remember real versionning
+	# remember real versioning
 	$subvers = "$2$3";
 	my $post = $4;
 	# replace pre|alpha|beta... with equiv nums
@@ -574,6 +574,15 @@ foreach (@packages) {
 	my $hash = substr($sfpkgdir, 0, 1)."/".substr($sfpkgdir, 0, 2);
 	$master_site =~ s/(.+sourceforge)\/.*/$1/;
 	$master_site = $master_site."/".$hash."/$sfpkgdir";
+    }
+
+    # github - look at releases page
+    if ($master_site =~ /github.com/) {
+	my $project = `cd $pkgpath && $make show-var VARNAME=GITHUB_PROJECT`;
+	chomp($project);
+	$master_site =~ s/(.*github.com\/[^\/]+)\/?/$1\/$project\/releases\//;
+	$distname = "v$version";
+	$dist = "v";
     }
 
     if (($distname eq "") || ($master_site eq "")) {
