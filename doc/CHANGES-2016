@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3616 2016/08/31 13:57:59 leot Exp $
+$NetBSD: CHANGES-2016,v 1.3617 2016/08/31 20:28:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5159,3 +5159,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/unifont to 9.0.02 [wiz 2016-08-31]
 	Updated multimedia/vlc to 2.2.4 [wiz 2016-08-31]
 	Updated multimedia/mpv to 0.20.0 [leot 2016-08-31]
+	Updated x11/libXfont to 1.5.2 [wiz 2016-08-31]
