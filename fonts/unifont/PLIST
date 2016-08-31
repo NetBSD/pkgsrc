@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/12 18:22:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/08/31 09:14:49 wiz Exp $
 bin/bdfimplode
 bin/hex2bdf
 bin/hex2sfd
@@ -56,7 +56,6 @@ share/fonts/truetype/unifont/unifont.ttf
 share/fonts/truetype/unifont/unifont_csur.ttf
 share/fonts/truetype/unifont/unifont_sample.ttf
 share/fonts/truetype/unifont/unifont_upper.ttf
-share/fonts/truetype/unifont/unifont_upper_csur.ttf
 share/unifont/ChangeLog.gz
 share/unifont/INSTALL.gz
 share/unifont/NEWS.gz
