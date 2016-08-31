@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/04/14 11:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/08/31 09:10:02 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
@@ -23,6 +23,13 @@ CFLAGS.SunOS+=	-D_XOPEN_SOURCE=1 -D_XOPEN_SOURCE_EXTENDED=1 -Du_int=uint32_t
 # post-patch so that mkpatches(1) will still work.
 pre-install:
 	rm -f ${WRKSRC}/twisted/runner/portmap.c.orig
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+		for i in cftp ckeygen conch mailmail pyhtmlizer tkconch trial twist twistd; \
+		do \
+			${MV} $$i $$i-${PYVERSSUFFIX}; \
+		done
 
 # Do not "make package" after running "make test"; this will result in files
 # being installed that should not be.
