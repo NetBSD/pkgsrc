@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/08/04 14:30:08 nonaka Exp $
+# $NetBSD: Makefile,v 1.9 2016/08/31 06:11:25 wiz Exp $
 
-DISTNAME=	pkgconf-1
-PKGREVISION=	1
+DISTNAME=	pkgconf-1.0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/
 #EXTRACT_SUFX=	.tar.bz2
