@@ -1,14 +1,14 @@
-$NetBSD: patch-openscad.pro,v 1.1.1.1 2012/02/27 14:44:29 reinoud Exp $
+$NetBSD: patch-openscad.pro,v 1.2 2016/09/01 19:53:36 plunky Exp $
 
---- openscad.pro.orig	2011-12-29 17:10:30.000000000 +0000
+install manpage to correct location
+
+--- openscad.pro.orig	2015-11-16 05:13:56.000000000 +0000
 +++ openscad.pro
-@@ -275,6 +275,9 @@ macx {
+@@ -585,6 +585,6 @@ icons.path = $$PREFIX/share/pixmaps
+ icons.extra = test -f icons/$${FULLNAME}.png && cp -f icons/$${FULLNAME}.png \"\$(INSTALL_ROOT)$${icons.path}/\" || cp -f icons/openscad.png \"\$(INSTALL_ROOT)$${icons.path}/$${FULLNAME}.png\"
+ INSTALLS += icons
  
- isEmpty(PREFIX):PREFIX = /usr/local
- 
-+# fix pkgsrc prefix since it doesn't seem to get it from the environment
-+PREFIX = @DESTDIR@@PREFIX@
-+
- target.path = $$PREFIX/bin/
- INSTALLS += target
- 
+-man.path = $$PREFIX/share/man/man1
++man.path = $$PREFIX/man/man1
+ man.extra = cp -f doc/openscad.1 \"\$(INSTALL_ROOT)$${man.path}/$${FULLNAME}.1\"
+ INSTALLS += man
