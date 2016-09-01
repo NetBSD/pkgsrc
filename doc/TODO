@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16377 2016/09/01 16:29:07 wiz Exp $
+$NetBSD: TODO,v 1.16378 2016/09/01 16:33:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1264,7 +1264,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-passwdqc-1.3.0
 	o pam-saml-1.5
 	o pam-yubico-2.21
-	o par2-0.6.14
 	o paragui-1.1.8
 	o parallel-20160222
 	o parrot-7.11.0
