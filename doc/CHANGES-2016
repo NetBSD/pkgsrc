@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3637 2016/09/01 16:33:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3638 2016/09/01 16:37:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5180,3 +5180,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/miller to 4.5.0 [wiz 2016-09-01]
 	Updated devel/ocaml-cppo to 1.4.0 [wiz 2016-09-01]
 	Updated archivers/par2 to 0.6.14 [wiz 2016-09-01]
+	Updated devel/py-ZopeInterface to 4.3.1 [wiz 2016-09-01]
