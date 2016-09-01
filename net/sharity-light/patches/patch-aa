@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2016/09/01 12:58:46 mef Exp $
 
---- Makefile.orig	Tue Nov 24 09:52:13 1998
-+++ Makefile	Thu Mar  8 11:27:22 2001
-@@ -5,18 +5,18 @@
+--- Makefile.orig	2003-12-29 20:11:57.000000000 +0900
++++ Makefile	2016-09-01 21:44:20.000000000 +0900
+@@ -5,7 +5,7 @@
  NAME	=	shlight
  
  INCLUDES =	-Iinclude -I.
 -THE_CC	=	gcc
-+THE_CC	=	${CC}
++THE_CC =	${CC}
  
  ##############################################################################
  ############################ System specific part ############################
- ##############################################################################
+@@ -15,11 +15,11 @@ THE_CC	=	gcc
+ # translation.
  
  # For NEXTSTEP/OPENSTEP:
 -CFLAGS = -Wall -O2 -traditional-cpp -g
@@ -26,7 +27,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
  
  # For Linux: (use static linking because of libc5/libc6 troubles)
  #CFLAGS = -Wall -O2 -g
-@@ -29,9 +29,9 @@
+@@ -37,9 +37,9 @@ RPC_WARNFLAGS = -Wno-unused -Wno-switch 
  #RPC_WARNFLAGS = -Wno-unused -Wno-switch -Wno-uninitialized
  
  # For NetBsd
@@ -38,7 +39,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
  
  # For BSDI
  #CFLAGS= -Wall -O2
-@@ -59,22 +59,21 @@
+@@ -67,22 +67,21 @@ RPC_WARNFLAGS = -Wno-unused -Wno-switch 
  ######################## End of system specific part #########################
  ##############################################################################
  
@@ -48,7 +49,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
 +LD	=	${LD}
 +STRIP	=	${STRIP}
  
- OFILES = proc.o sock.o rumba.o psinode.o kernel.o smb_abstraction.o fo_nfs.o
+ OFILES = proc.o recode.o sock.o rumba.o psinode.o kernel.o smb_abstraction.o fo_nfs.o
  
  .c.o:
 -	$(CC) $(CFLAGS) $(ARCH) -c -o $*.o $<
@@ -58,7 +59,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/09 16:09:36 wiz Exp $
  
  nfs_dir:
 -	(cd nfs; $(MAKE) "CFLAGS=$(CFLAGS)" "CC=$(THE_CC)" "ARCH=$(ARCH)" "RPC_WARNFLAGS=$(RPC_WARNFLAGS)")
-+	(cd nfs; $(MAKE) "CFLAGS=$(CFLAGS)" "CC=$(CC)" "ARCH=$(ARCH)" "RPC_WARNFLAGS=$(RPC_WARNFLAGS)")
++	(cd nfs; $(MAKE) "CFLAGS=$(CFLAGS)"     "CC=$(CC)" "ARCH=$(ARCH)" "RPC_WARNFLAGS=$(RPC_WARNFLAGS)")
  
  $(NAME): $(OFILES) nfs_dir
 -	$(CC) $(LDFLAGS) $(ARCH) -o $(NAME) $(OFILES) nfs/nfs.o $(LIBS)
