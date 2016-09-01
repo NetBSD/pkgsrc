@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3639 2016/09/01 16:40:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3640 2016/09/01 16:52:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5182,3 +5182,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/par2 to 0.6.14 [wiz 2016-09-01]
 	Updated devel/py-ZopeInterface to 4.3.1 [wiz 2016-09-01]
 	Updated devel/py-ZopeEvent to 4.2.0 [wiz 2016-09-01]
+	Updated net/py-bitmessage to 0.6.1 [wiz 2016-09-01]
