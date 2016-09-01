@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16373 2016/09/01 16:09:42 wiz Exp $
+$NetBSD: TODO,v 1.16374 2016/09/01 16:17:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1032,7 +1032,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o librecad-2.0.9
 	o libreoffice-5.2
-	o librsync-2.0.0
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
