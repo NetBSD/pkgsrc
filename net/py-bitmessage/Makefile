@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/07/09 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/01 16:52:10 wiz Exp $
 
-GITHUB_PROJECT=	PyBitmessage
-DISTNAME=	${PYPKGPREFIX}-bitmessage-0.4.4
-PKGREVISION=	1
+DISTNAME=	PyBitmessage-0.6.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//:tl}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Bitmessage/}
+GITHUB_PROJECT=	PyBitmessage
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,17 +18,13 @@ HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON+=	src/bitmessagemain.py
+REPLACE_PYTHON+=	src/depends.py
 REPLACE_PYTHON+=	src/pyelliptic/cipher.py
 REPLACE_PYTHON+=	src/pyelliptic/ecc.py
 REPLACE_PYTHON+=	src/pyelliptic/hash.py
 REPLACE_PYTHON+=	src/pyelliptic/openssl.py
 REPLACE_PYTHON+=	src/qidenticon.py
 REPLACE_PYTHON+=	src/singleton.py
-
-# Hack
-post-install:
-	${RUN} rm -f ${DESTDIR}${PREFIX}/share/pybitmessage/helper_startup.py.orig
-	${RUN} rm -f ${DESTDIR}${PREFIX}/share/pybitmessage/shared.py.orig
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
