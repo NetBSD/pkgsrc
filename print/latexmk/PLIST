@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/21 01:33:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/01 16:09:32 wiz Exp $
 bin/latexmk
 man/man1/latexmk.1
+share/doc/latexmk/latexmk.pdf
