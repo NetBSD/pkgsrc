@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3641 2016/09/01 16:54:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3642 2016/09/01 16:56:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-ZopeEvent to 4.2.0 [wiz 2016-09-01]
 	Updated net/py-bitmessage to 0.6.1 [wiz 2016-09-01]
 	Updated net/py-foolscap to 0.12.2 [wiz 2016-09-01]
+	Updated www/py-google-api-python-client to 1.5.3 [wiz 2016-09-01]
