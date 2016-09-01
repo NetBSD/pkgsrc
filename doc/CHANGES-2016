@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3633 2016/09/01 16:19:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3634 2016/09/01 16:22:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5176,3 +5176,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/latexmk to 445 [wiz 2016-09-01]
 	Updated net/librsync to 2.0.0 [wiz 2016-09-01]
 	Updated textproc/mdoclint to 1.41 [wiz 2016-09-01]
+	Updated textproc/libyaml to 0.1.7 [wiz 2016-09-01]
