@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3620 2016/09/01 10:27:44 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3621 2016/09/01 12:59:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5163,3 +5163,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkg_notify to 0.4.5 [wiz 2016-08-31]
 	Updated graphics/png to 1.6.25 [wiz 2016-09-01]
 	Updated sysutils/puppet to 3.8.7 [fhajny 2016-09-01]
+	Updated net/sharity-light to 1.3 [mef 2016-09-01]
