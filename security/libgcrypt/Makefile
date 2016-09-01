@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2016/08/20 19:22:37 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2016/09/01 10:19:30 fhajny Exp $
 
 DISTNAME=	libgcrypt-1.7.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
@@ -53,6 +54,12 @@ CONFIGURE_ARGS+=	--disable-avx-support
 CONFIGURE_ENV+=		gcry_cv_gcc_inline_asm_avx=no
 .  endif
 .endif
+
+SUBST_CLASSES+=		rpath
+SUBST_FILES.rpath=	src/libgcrypt-config.in
+SUBST_STAGE.rpath=	pre-configure
+SUBST_MESSAGE.rpath=	Fixing rpath flags
+SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
 
 .include "options.mk"
 
