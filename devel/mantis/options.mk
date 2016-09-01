@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2016/09/01 13:20:55 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2016/09/01 13:22:45 ryoon Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.mantis
+PKG_OPTIONS_VAR=		PKG_OPTIONS.mantis
 PKG_OPTIONS_REQUIRED_GROUPS=	db
 PKG_OPTIONS_GROUP.db=		mysql pgsql
-PKG_SUPPORTED_OPTIONS=	charts ldap
-PKG_SUGGESTED_OPTIONS+=	mysql
+PKG_SUPPORTED_OPTIONS=		charts ldap
+PKG_SUGGESTED_OPTIONS+=		mysql
 
 .include "../../mk/bsd.options.mk"
 
@@ -21,4 +21,3 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysqli-[0-9]*:../../databases/php-mysqli
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql-[0-9]*:../../databases/php-pgsql
 .endif
-
