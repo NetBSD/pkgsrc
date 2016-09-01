@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/04/13 18:19:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/09/01 16:54:32 wiz Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -47,9 +47,21 @@ ${PYSITELIB}/foolscap/call.pyo
 ${PYSITELIB}/foolscap/connection.py
 ${PYSITELIB}/foolscap/connection.pyc
 ${PYSITELIB}/foolscap/connection.pyo
-${PYSITELIB}/foolscap/connection_plugins.py
-${PYSITELIB}/foolscap/connection_plugins.pyc
-${PYSITELIB}/foolscap/connection_plugins.pyo
+${PYSITELIB}/foolscap/connections/__init__.py
+${PYSITELIB}/foolscap/connections/__init__.pyc
+${PYSITELIB}/foolscap/connections/__init__.pyo
+${PYSITELIB}/foolscap/connections/i2p.py
+${PYSITELIB}/foolscap/connections/i2p.pyc
+${PYSITELIB}/foolscap/connections/i2p.pyo
+${PYSITELIB}/foolscap/connections/socks.py
+${PYSITELIB}/foolscap/connections/socks.pyc
+${PYSITELIB}/foolscap/connections/socks.pyo
+${PYSITELIB}/foolscap/connections/tcp.py
+${PYSITELIB}/foolscap/connections/tcp.pyc
+${PYSITELIB}/foolscap/connections/tcp.pyo
+${PYSITELIB}/foolscap/connections/tor.py
+${PYSITELIB}/foolscap/connections/tor.pyc
+${PYSITELIB}/foolscap/connections/tor.pyo
 ${PYSITELIB}/foolscap/constraint.py
 ${PYSITELIB}/foolscap/constraint.pyc
 ${PYSITELIB}/foolscap/constraint.pyo
@@ -188,9 +200,18 @@ ${PYSITELIB}/foolscap/test/apphelper.pyo
 ${PYSITELIB}/foolscap/test/bench_banana.py
 ${PYSITELIB}/foolscap/test/bench_banana.pyc
 ${PYSITELIB}/foolscap/test/bench_banana.pyo
+${PYSITELIB}/foolscap/test/check-connections-client.py
+${PYSITELIB}/foolscap/test/check-connections-client.pyc
+${PYSITELIB}/foolscap/test/check-connections-client.pyo
+${PYSITELIB}/foolscap/test/check-connections-server.py
+${PYSITELIB}/foolscap/test/check-connections-server.pyc
+${PYSITELIB}/foolscap/test/check-connections-server.pyo
 ${PYSITELIB}/foolscap/test/common.py
 ${PYSITELIB}/foolscap/test/common.pyc
 ${PYSITELIB}/foolscap/test/common.pyo
+${PYSITELIB}/foolscap/test/run_trial.py
+${PYSITELIB}/foolscap/test/run_trial.pyc
+${PYSITELIB}/foolscap/test/run_trial.pyo
 ${PYSITELIB}/foolscap/test/test__versions.py
 ${PYSITELIB}/foolscap/test/test__versions.pyc
 ${PYSITELIB}/foolscap/test/test__versions.pyo
@@ -224,6 +245,9 @@ ${PYSITELIB}/foolscap/test/test_interfaces.pyo
 ${PYSITELIB}/foolscap/test/test_keepalive.py
 ${PYSITELIB}/foolscap/test/test_keepalive.pyc
 ${PYSITELIB}/foolscap/test/test_keepalive.pyo
+${PYSITELIB}/foolscap/test/test_listener.py
+${PYSITELIB}/foolscap/test/test_listener.pyc
+${PYSITELIB}/foolscap/test/test_listener.pyo
 ${PYSITELIB}/foolscap/test/test_logging.py
 ${PYSITELIB}/foolscap/test/test_logging.pyc
 ${PYSITELIB}/foolscap/test/test_logging.pyo
