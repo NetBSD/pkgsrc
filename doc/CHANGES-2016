@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3619 2016/09/01 04:14:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3620 2016/09/01 10:27:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5162,3 +5162,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libXfont to 1.5.2 [wiz 2016-08-31]
 	Updated pkgtools/pkg_notify to 0.4.5 [wiz 2016-08-31]
 	Updated graphics/png to 1.6.25 [wiz 2016-09-01]
+	Updated sysutils/puppet to 3.8.7 [fhajny 2016-09-01]
