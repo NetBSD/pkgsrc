@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3631 2016/09/01 16:09:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3632 2016/09/01 16:17:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5174,3 +5174,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/gsl to 2.2 [wiz 2016-09-01]
 	Updated textproc/iso-codes to 3.70 [wiz 2016-09-01]
 	Updated print/latexmk to 445 [wiz 2016-09-01]
+	Updated net/librsync to 2.0.0 [wiz 2016-09-01]
