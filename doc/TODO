@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16383 2016/09/01 16:59:31 wiz Exp $
+$NetBSD: TODO,v 1.16384 2016/09/01 17:01:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1414,7 +1414,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tornado-4.4.1
 	o py-uwsgi-2.0.12
 	o py-wxWidgets-3.0.0
-	o py-yaml-3.12
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
 	o pythontidy-1.23
