@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3625 2016/09/01 14:48:41 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3626 2016/09/01 15:53:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5168,3 +5168,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/gtkwave to 3.3.76 [mef 2016-09-01]
 	Updated www/p5-Mojolicious to 7.05 [wen 2015-09-01]
 	Updated devel/p5-autobox to 2.84 [wen 2016-09-01]
+	Updated graphics/ImageMagick to 7.0.2.10 [wiz 2016-09-01]
