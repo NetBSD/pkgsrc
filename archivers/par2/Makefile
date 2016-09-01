@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2015/05/04 10:10:23 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/09/01 16:33:43 wiz Exp $
 
-DISTNAME=	par2-0.6.12
+DISTNAME=	par2-0.6.14
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=BlackIkeEagle/}
 GITHUB_PROJECT=	par2cmdline
