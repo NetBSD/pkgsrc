@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 17:19:08 asau Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/01 12:58:46 mef Exp $
 #
 
-DISTNAME=	Sharity-Light.1.2
-PKGNAME=	sharity-light-1.2
-PKGREVISION=	1
+DISTNAME=	Sharity-Light.1.3
+PKGNAME=	sharity-light-1.3
 CATEGORIES=	net
 MASTER_SITES=	http://www.obdev.at/ftp/pub/Products/Sharity-Light/
 

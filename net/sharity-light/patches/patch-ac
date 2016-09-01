@@ -1,19 +1,19 @@
-$NetBSD: patch-ac,v 1.1 2001/03/12 16:06:00 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2016/09/01 12:58:46 mef Exp $
 
---- proc.c.orig	Mon Nov 16 18:12:26 1998
-+++ proc.c
-@@ -867,12 +867,13 @@
+--- proc.c.orig	2003-12-29 20:11:57.000000000 +0900
++++ proc.c	2016-09-01 21:49:38.000000000 +0900
+@@ -823,12 +823,13 @@ smb_proc_mv(struct smb_server *server, 
          char *p;
          char *buf = server->packet;
          int result;
-+        const word o_attr = aSYSTEM | aHIDDEN;
++	const word o_attr = aSYSTEM | aHIDDEN;
  
          smb_lock_server(server);
  
   retry:
-         p = smb_setup_header(server, SMBunlink, 1, 2 + len);
+         p = smb_setup_header(server, SMBmv, 1, olen + nlen + 4);
 -        WSET(buf, smb_vwv0, 0);
 +        WSET(buf, smb_vwv0, o_attr);
-         smb_encode_ascii(p, path, len);
+         p = smb_encode_ascii(p, opath, olen);
+         smb_encode_ascii(p, npath, olen);
  
-         if ((result = smb_request_ok(server, SMBunlink, 0, 0)) < 0) {
