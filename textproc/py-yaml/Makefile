@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2016/07/02 09:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/09/01 17:01:46 wiz Exp $
 
-DISTNAME=	PyYAML-3.11
+DISTNAME=	PyYAML-3.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PyYAML/yaml/}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pyyaml.org/download/pyyaml/
