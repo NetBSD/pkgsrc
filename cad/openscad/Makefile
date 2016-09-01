@@ -1,56 +1,53 @@
-# $NetBSD: Makefile,v 1.35 2016/03/05 11:28:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2016/09/01 19:53:36 plunky Exp $
 #
 
-PKGNAME=	openscad-2011.12
-DISTNAME=	openscad-2011.12.src
-PKGREVISION=	24
+DISTNAME=	openscad-2015.03-2.src
+PKGNAME=	openscad-2015.03p2
 CATEGORIES=	cad
-MASTER_SITES=	https://cloud.github.com/downloads/openscad/openscad/
+MASTER_SITES=	http://files.openscad.org/
 
 MAINTAINER=	reinoud@NetBSD.org
 HOMEPAGE=	http://www.openscad.org/
 COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/openscad-2011.12
 USE_LANGUAGES=	c c++
-
-USE_TOOLS+=	cmake bison pkg-config
+USE_TOOLS+=	bison pkg-config
 USE_LIBTOOL=	yes
 
-SUBST_CLASSES+=prefix
-SUBST_SED.prefix=-e 's,@PREFIX@,${PREFIX},g'
-SUBST_FILES.prefix=${WRKSRC}/eigen2.pri ${WRKSRC}/openscad.pro
-SUBST_STAGE.prefix=post-patch
+WRKSRC=		${WRKDIR}/${DISTNAME:R}
 
-SUBST_CLASSES+=destdir
-SUBST_SED.destdir=-e 's,@DESTDIR@,${DESTDIR},g'
-SUBST_FILES.destdir=${WRKSRC}/openscad.pro
-SUBST_STAGE.destdir=post-patch
+MAKE_JOBS_SAFE=	no
 
-UNLIMIT_RESOURCES=	stacksize
 CHECK_PORTABILITY_SKIP+=tests/compare-bitmaps.sh
-CHECK_INTERPRETER_SKIP+=share/openscad/libraries/MCAD/get_submodules.py
 
-pre-build:
-	(cd ${WRKSRC} && ${QTDIR}/bin/qmake)
+REPLACE_PYTHON=	libraries/MCAD/get_submodules.py
+.include "../../lang/python/application.mk"
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-c++11-narrowing
-CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-c++11-narrowing
-.endif
+QMAKE_ENV=	EIGENDIR=${PREFIX}/include/eigen3
 
+MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
+
+do-configure:
+	cd ${WRKSRC} && ${SETENV} ${QMAKE_ENV} ${QTDIR}/bin/qmake \
+	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 # DragonFly requires FlexLexer.h from pkgsrc - base doesn't cut it.
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/opencsg/buildlink3.mk"
+.include "../../math/cgal/buildlink3.mk"
+.include "../../math/eigen3/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../math/cgal/buildlink3.mk"
-.include "../../graphics/opencsg/buildlink3.mk"
-.include "../../graphics/glew/buildlink3.mk"
-.include "../../math/eigen2/buildlink3.mk"
-.include "../../math/mpfr/buildlink3.mk"
+.include "../../x11/qt4-qscintilla/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
