@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/08/30 12:37:43 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2016/09/01 13:20:55 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mantis
 PKG_OPTIONS_REQUIRED_GROUPS=	db
@@ -7,6 +7,10 @@ PKG_SUPPORTED_OPTIONS=	charts ldap
 PKG_SUGGESTED_OPTIONS+=	mysql
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mldap)
+DEPENDS+=	${PHP_PKG_PREFIX}-ldap-[0-9]*:../../databases/php-ldap
+.endif
 
 .if !empty(PKG_OPTIONS:Mcharts)
 DEPENDS+=	${PHP_PKG_PREFIX}-jpgraph-[0-9]*:../../graphics/php-jpgraph
