@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2015/12/01 07:49:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/01 16:40:14 wiz Exp $
 
-DISTNAME=	zope.event-4.1.0
+DISTNAME=	zope.event-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/zope.e/ZopeE/}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=z/zope.event/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://docs.zope.org/zopetoolkit/
+HOMEPAGE=	https://zopeevent.readthedocs.io/en/latest/
 COMMENT=	Very basic event publishing system
 LICENSE=	zpl-2.1
 
