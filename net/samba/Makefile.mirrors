@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.mirrors,v 1.11 2014/03/18 12:42:04 tron Exp $
+# $NetBSD: Makefile.mirrors,v 1.12 2016/09/01 13:31:05 mef Exp $
 #
 # This Makefile fragment contains the mirror sites for fetching Samba.
 
@@ -7,8 +7,6 @@
 ###	http://www.samba.org/samba/download/ftp_mirrors.html
 ###
 SAMBA_MIRRORS=	\
-	ftp://ftp.easynet.be/samba/ \
-	http://mirrors.uol.com.br/pub/samba/ \
 	ftp://ca.samba.org/ \
 	ftp://mirrors.dotsrc.org/samba/ \
 	ftp://de3.samba.org/pub/samba/ \
