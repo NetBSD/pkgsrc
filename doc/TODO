@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16378 2016/09/01 16:33:54 wiz Exp $
+$NetBSD: TODO,v 1.16379 2016/09/01 16:37:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1348,7 +1348,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.19
-	o py-ZopeInterface-4.3.1
 	o py-acora-1.9
 	o py-apache-libcloud-0.20.1
 	o py-bitmessage-0.6.1
