@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/09/01 19:53:36 plunky Exp $
+# $NetBSD: Makefile,v 1.37 2016/09/02 09:51:06 plunky Exp $
 #
 
 DISTNAME=	openscad-2015.03-2.src
@@ -24,12 +24,10 @@ CHECK_PORTABILITY_SKIP+=tests/compare-bitmaps.sh
 REPLACE_PYTHON=	libraries/MCAD/get_submodules.py
 .include "../../lang/python/application.mk"
 
-QMAKE_ENV=	EIGENDIR=${PREFIX}/include/eigen3
-
 MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} ${QMAKE_ENV} ${QTDIR}/bin/qmake \
+	cd ${WRKSRC} && ${QTDIR}/bin/qmake \
 	    PREFIX=${PREFIX} -after QMAKE_YACC=bison QMAKE_LEX=flex
 
 .include "../../devel/boost-headers/buildlink3.mk"
