@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/02 16:46:04 wiz Exp $
+bin/arx
+bin/arx-install-data
+bin/arxsavetool
+bin/arxunpak
+man/man1/arxsavetool.1
+man/man1/arxunpak.1
+man/man6/arx.6
+${PLIST.NotDarwin}share/applications/arx-libertatis.desktop
+${PLIST.NotDarwin}share/pixmaps/arx-libertatis.png
