@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.403 2016/07/28 23:35:51 kamil Exp $
+# $NetBSD: Makefile,v 1.404 2016/09/02 16:46:22 wiz Exp $
 #
 
 COMMENT=	Games
@@ -25,6 +25,7 @@ SUBDIR+=	anise
 SUBDIR+=	aop
 SUBDIR+=	armagetronad
 SUBDIR+=	armagetronad-server
+SUBDIR+=	arx-libertatis
 SUBDIR+=	asc
 SUBDIR+=	asciiquarium
 SUBDIR+=	atomix
