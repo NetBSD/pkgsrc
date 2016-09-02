@@ -1,6 +1,9 @@
-$NetBSD: patch-configure,v 1.2 2016/09/02 14:07:43 maya Exp $
+$NetBSD: patch-configure,v 1.3 2016/09/02 14:30:06 maya Exp $
 
 initscr is a curses function, not termcap.
+
+test if we can compile SSE at configure, don't just
+assume that we can because we have xmmintrin.h
 
 --- configure.orig	2012-02-28 18:54:37.000000000 +0000
 +++ configure
