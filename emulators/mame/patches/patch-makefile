@@ -1,4 +1,6 @@
-$NetBSD: patch-makefile,v 1.16 2016/06/30 18:05:55 wiz Exp $
+$NetBSD: patch-makefile,v 1.17 2016/09/02 12:22:46 wiz Exp $
+
+Treat all BSDs the same.
 
 --- makefile.orig	2016-06-29 06:34:30.000000000 +0000
 +++ makefile
