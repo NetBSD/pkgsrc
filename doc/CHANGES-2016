@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3654 2016/09/02 16:27:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3655 2016/09/02 16:43:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5195,3 +5195,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/py-PDF2 to 1.26.0 [mef 2016-09-02]
 	Updated devel/py-mercurial to 3.9.1 [wiz 2016-09-02]
 	Added textproc/py-jsonrpclib version 0.1.7 [wiz 2016-09-02]
+	Added security/py-pbkdf2 version 1.3 [wiz 2016-09-02]
