@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2016/09/02 14:07:43 maya Exp $
 
 DISTNAME=	lame-3.99.5
 PKGREVISION=	3
@@ -32,10 +32,6 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin" && ${OPSYS} != "Interix"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 CONFIGURE_ARGS+=	--enable-nasm
-.endif
-
-.if !empty(PKGSRC_COMPILER:Msunpro)
-CONFIGURE_ENV+=		ac_cv_header_xmmintrin_h=no
 .endif
 
 .include "../../mk/curses.buildlink3.mk"
