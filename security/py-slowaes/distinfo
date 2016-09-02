@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2016/09/02 16:29:10 wiz Exp $
+
+SHA1 (slowaes-0.1a1.tar.gz) = 79488ef78f618f8c02ecf15cc79f8aadbae5031f
+RMD160 (slowaes-0.1a1.tar.gz) = 7ff6e05eea73ddbbf716489b024013d6faeab5d5
+Size (slowaes-0.1a1.tar.gz) = 7017 bytes
