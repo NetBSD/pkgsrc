@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2016/09/02 16:46:04 wiz Exp $
+
+SHA1 (arx-libertatis-1.1.2.tar.xz) = 3b14a55553c564fd33caafb3a5bdb2d328e1fde8
+RMD160 (arx-libertatis-1.1.2.tar.xz) = 94145d36664d8d747c0abc3ced9c9055fd642690
+SHA512 (arx-libertatis-1.1.2.tar.xz) = d4cb8187e7f63934408e38a51a44b7da03c8628820d43139507ff97ebd463b9cd7baf6cc4e85a3d4191d6e5f56850d77d07cfffc33d8f5a51378dfb41f719fb8
+Size (arx-libertatis-1.1.2.tar.xz) = 970608 bytes
+SHA1 (patch-CMakeLists.txt) = 37a9c12a831ed6127a9c0a2e28bec2c3d7b6075d
+SHA1 (patch-cmake_CompileCheck.cmake) = b954b0115666741ffbd5686e997d24bae72a3196
+SHA1 (patch-cmake_VersionString.cmake) = afff2ae36425f3ffe0e1679d28e48ff4b6fc3d6f
+SHA1 (patch-src_graphics_opengl_OpenGLRenderer.cpp) = 410769fea6b911dcb283b1da85bebd2861de8d94
+SHA1 (patch-src_io_fs_FilesystemPOSIX.cpp) = 96f1938038c667997350f51a2bb201de0c9843e3
+SHA1 (patch-src_platform_Thread.cpp) = 38e31c77c9e6e795cb37842da82b5ed6681f6aea
+SHA1 (patch-src_script_Script.cpp) = 29a923b5254077e2dc2cd73f69afb89025ef7012
