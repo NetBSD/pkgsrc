@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.45 2016/07/09 06:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/09/02 14:16:35 mef Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
 PKGREVISION=	7
 CATEGORIES=	print
-MASTER_SITES=	http://gd.tuwien.ac.at/publishing/tex/tex-utils/psutils/
+MASTER_SITES=	ftp://ftp.knackered.org/pub/psutils/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.go.dlr.de/wt/dv/ig/pdinfo_dv/psutils.html
+HOMEPAGE=	http://knackered.org/angus/psutils/
 COMMENT=	Utilities for manipulating PostScript documents
 
 WRKSRC=		${WRKDIR}/psutils
