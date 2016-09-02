@@ -1,0 +1,75 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/09/02 16:46:04 wiz Exp $
+
+Fix use of CMAKE_MODULE_PATH (see also patch-cmake_VersionString.cmake)
+
+Resolve "Attempt at a recursive or nested TRY_COMPILE in directory"
+(see also patch-cmake_CompileCheck.cmake)
+
+and
+
+commit 60e43c3cbf3fb0aa10cc3092b2512ccebb60b80d
+Author: Daniel Scharrer <daniel@constexpr.org>
+Date:   Tue Feb 23 07:04:11 2016 +0100
+
+    CMake: Bump policy version to 3.4
+    
+    Amongst other things, this makes the build system more rubust against
+    stray variables coming from included CMake scripts provided by the
+    system by disabling variable expansion for quoted strings in if().
+    
+    Fixes build with CMake 3.5 (tested with 3.5.0-rc3).
+
+
+--- CMakeLists.txt.orig	2013-10-17 17:25:04.000000000 +0000
++++ CMakeLists.txt
+@@ -13,6 +13,11 @@ else()
+ 	cmake_minimum_required(VERSION 2.8)
+ endif()
+ 
++if(CMAKE_VERSION VERSION_GREATER 3.4)
++	cmake_policy(VERSION 3.4)
++else()
++	cmake_policy(VERSION ${CMAKE_VERSION})
++endif()
+ 
+ # Define configuration options
+ 
+@@ -174,10 +179,12 @@ mark_as_advanced(
+ # Helper scrips
+ 
+ include(CheckCXXSourceCompiles)
++include(CheckIncludeFiles)
+ include(CheckSymbolExists)
+ include(CheckTypeSize)
+ 
+-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake") # For custom cmake modules
++set(CMAKE_CUSTOM_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake") # For custom cmake modules
++list(APPEND CMAKE_MODULE_PATH ${CMAKE_CUSTOM_MODULE_PATH}) # For custom cmake modules
+ include(BuildSystem)
+ include(BuildType)
+ include(CompileCheck)
+@@ -406,15 +413,15 @@ if(NOT MSVC)
+ 	endif()
+ 	
+ 	# Not a symbol, so we can't use check_symbol_exists
+-	check_compile(ARX_HAVE_BUILTIN_TRAP
+-		"${CMAKE_MODULE_PATH}/check_compiler_builtin_trap.cpp"
+-		"__builtin_trap" "compiler feature"
+-	)
+-	
+-	check_compile(ARX_HAVE_ATTRIBUTE_FORMAT_PRINTF
+-		"${CMAKE_MODULE_PATH}/check_compiler_attribute_format_printf.cpp"
+-		"__attribute__((format(printf, i, j)))" "compiler feature"
+-	)
++	#check_compile(ARX_HAVE_BUILTIN_TRAP
++	#	"${CMAKE_MODULE_PATH}/check_compiler_builtin_trap.cpp"
++	#	"__builtin_trap" "compiler feature"
++	#)
++	
++	#check_compile(ARX_HAVE_ATTRIBUTE_FORMAT_PRINTF
++	#	"${CMAKE_MODULE_PATH}/check_compiler_attribute_format_printf.cpp"
++	#	"__attribute__((format(printf, i, j)))" "compiler feature"
++	#)
+ 	
+ 	check_symbol_exists(nanosleep "time.h" ARX_HAVE_NANOSLEEP)
+ 	
