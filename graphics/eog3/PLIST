@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/04/12 23:58:48 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6.2.1 2016/09/02 06:35:04 bsiegert Exp $
 bin/eog
 include/eog-3.0/eog/eog-application-activatable.h
 include/eog-3.0/eog/eog-application.h
@@ -89,7 +89,6 @@ share/gtk-doc/html/eog/eog-zoom.html
 share/gtk-doc/html/eog/eog.devhelp2
 share/gtk-doc/html/eog/home.png
 share/gtk-doc/html/eog/index.html
-share/gtk-doc/html/eog/index.sgml
 share/gtk-doc/html/eog/left-insensitive.png
 share/gtk-doc/html/eog/left.png
 share/gtk-doc/html/eog/pt01.html
