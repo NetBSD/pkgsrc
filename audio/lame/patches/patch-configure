@@ -1,10 +1,49 @@
-$NetBSD: patch-configure,v 1.1 2013/10/10 10:49:30 roy Exp $
+$NetBSD: patch-configure,v 1.2 2016/09/02 14:07:43 maya Exp $
 
 initscr is a curses function, not termcap.
 
---- configure.orig	2013-10-10 10:45:38.000000000 +0000
+--- configure.orig	2012-02-28 18:54:37.000000000 +0000
 +++ configure
-@@ -13602,9 +13602,9 @@ fi
+@@ -11922,7 +11922,6 @@ for ac_header in \
+ 		 sys/soundcard.h \
+ 		 sys/time.h \
+ 		 unistd.h \
+-		 xmmintrin.h \
+ 		 linux/soundcard.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+@@ -11936,6 +11935,30 @@ fi
+ 
+ done
+ 
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking working SSE intrinsics" >&5
++$as_echo_n "checking working SSE intrinsics... " >&6; }
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++#include <xmmintrin.h>
++int
++main ()
++{
++_mm_sfence();
++  ;
++  return 0;
++}
++_ACEOF
++if ac_fn_c_try_compile "$LINENO"; then :
++
++$as_echo "#define HAVE_XMMINTRIN_H 1" >>confdefs.h
++
++     ac_cv_header_xmmintrin_h=yes
++else
++  ac_cv_header_xmmintrin_h=no
++fi
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: ${ac_cv_header_xmmintrin_h}" >&5
++$as_echo "${ac_cv_header_xmmintrin_h}" >&6; }
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for an ANSI C-conforming const" >&5
+ $as_echo_n "checking for an ANSI C-conforming const... " >&6; }
+@@ -13602,9 +13625,9 @@ fi
  
  done
  
@@ -17,7 +56,7 @@ initscr is a curses function, not termcap.
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -13618,33 +13618,33 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -13618,33 +13641,33 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -61,7 +100,7 @@ initscr is a curses function, not termcap.
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -13658,33 +13658,33 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -13658,33 +13681,33 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -105,7 +144,7 @@ initscr is a curses function, not termcap.
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -13698,27 +13698,27 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+@@ -13698,27 +13721,27 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  #ifdef __cplusplus
  extern "C"
  #endif
