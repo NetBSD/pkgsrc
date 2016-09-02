@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/07/30 17:14:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/09/02 12:22:46 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -27,17 +27,8 @@ man/man1/ldverify.1
 man/man1/romcmp.1
 man/man6/mame.6
 man/man6/mess.6
-share/doc/mame/SDL.txt
-share/doc/mame/config.txt
-share/doc/mame/emscripten.txt
-share/doc/mame/floppy.txt
-share/doc/mame/hlsl.txt
-share/doc/mame/imgtool.txt
-share/doc/mame/m6502.txt
-share/doc/mame/mame.txt
-share/doc/mame/newvideo.txt
-share/doc/mame/nscsi.txt
-share/doc/mame/windows.txt
+share/doc/mame/CONTRIBUTING.md
+share/doc/mame/README.md
 share/mame/artwork/LICENSE
 share/mame/artwork/README.md
 share/mame/artwork/aperture-grille.png
