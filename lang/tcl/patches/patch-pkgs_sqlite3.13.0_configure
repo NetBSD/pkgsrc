@@ -1,48 +1,48 @@
-$NetBSD: patch-pkgs_thread2.7.3_configure,v 1.1 2016/03/06 11:47:49 adam Exp $
+$NetBSD: patch-pkgs_sqlite3.13.0_configure,v 1.1 2016/09/03 11:58:01 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/thread2.7.3/configure.orig	2016-01-28 17:45:52.000000000 +0000
-+++ pkgs/thread2.7.3/configure
-@@ -9315,7 +9315,7 @@ fi
- 
+--- pkgs/sqlite3.13.0/configure.orig	2016-05-31 15:48:11.000000000 +0000
++++ pkgs/sqlite3.13.0/configure
+@@ -7290,7 +7290,7 @@ fi
+ fi
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
- 		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so${SHLIB_VERSION}'
+ 		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so.${SHLIB_VERSION}'
 -		LDFLAGS="-Wl,-export-dynamic"
 +		LDFLAGS="-Wl,--export-dynamic"
  		;;
  	    esac
  	    case "$arch" in
-@@ -9336,8 +9336,6 @@ fi
- fi
+@@ -7310,8 +7310,6 @@ fi
  
+ fi
  	    # OpenBSD doesn't do version numbers with dots.
 -	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
 -	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -9361,7 +9359,7 @@ fi
- fi
+@@ -7333,7 +7331,7 @@ fi
  
+ fi
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -9385,10 +9383,6 @@ fi
+@@ -7356,10 +7354,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
--		TCL_TRIM_DOTS=`echo ${PACKAGE_VERSION} | tr -d .`
+-		TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
 -		UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
--		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
+-		SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
 -		TCL_LIB_VERSIONS_OK=nodots
  		;;
  	    esac
  	    ;;
-@@ -10239,7 +10233,7 @@ fi
+@@ -7970,7 +7964,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
