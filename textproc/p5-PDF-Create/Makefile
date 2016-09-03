@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2016/07/26 12:37:07 wen Exp $
+# $NetBSD: Makefile,v 1.42 2016/09/03 07:55:05 wen Exp $
 #
 
-DISTNAME=	PDF-Create-1.33
+DISTNAME=	PDF-Create-1.34
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDF/}
