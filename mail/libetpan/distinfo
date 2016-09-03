@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 23:27:08 agc Exp $
+$NetBSD: distinfo,v 1.19 2016/09/03 17:56:37 nros Exp $
 
-SHA1 (libetpan-1.6.tar.gz) = a5514139a8c5ee94d0337a89db8141cb3c557fa9
-RMD160 (libetpan-1.6.tar.gz) = f625263df1fcab97d010d25743803e5d4164745b
-SHA512 (libetpan-1.6.tar.gz) = e3f19cfe231e8cadbb6cba3a765611e3aaeb260fa78e05cea1153a59015abe547c0f3a8b84c6b41cbbd17d04a4c7ab7b14d1b1b44a1a4b24ac124cb200a191a5
-Size (libetpan-1.6.tar.gz) = 6144117 bytes
+SHA1 (libetpan-1.7.2.tar.gz) = 599a0219872d50ef8e45a365ab56c886b007de13
+RMD160 (libetpan-1.7.2.tar.gz) = abaea1740a4c29f133bcb35f2df7a6ef5a4922ef
+SHA512 (libetpan-1.7.2.tar.gz) = b7b7c201d65bc2ad595b93d310d2569ca3bf61e599010e0f46a7e776da6ebc6a897df6e073a4878cb134d6d4bec6ea65b2a3e02d44b60f9045b5aa58b689cdca
+Size (libetpan-1.7.2.tar.gz) = 6186628 bytes
 SHA1 (patch-aa) = e783adf544c9a63df584815ee4b033249cecf0ff
-SHA1 (patch-configure.ac) = 16636e8656018179d62b59ea75fe4a1a753768a2
-SHA1 (patch-src_low-level_smtp_mailsmtp.c) = c6658435ae8e2124a4878ec3ef2ce0a2aa7be7fe
+SHA1 (patch-configure.ac) = 45ec1bd4384e3bdd31c1dd7ebef1d855b5c962c6
