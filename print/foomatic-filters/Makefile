@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2016/07/09 06:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/09/03 14:21:25 mef Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}
 PKGREVISION=	13
-MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
+MASTER_SITES=	http://www.openprinting.org/download/foomatic/oldstuff/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spooler-independent PostScript printing filter
