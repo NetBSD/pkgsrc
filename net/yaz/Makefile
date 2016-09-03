@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2016/08/26 13:59:34 mef Exp $
+# $NetBSD: Makefile,v 1.65 2016/09/03 07:13:46 mef Exp $
 #
 
 DISTNAME=	yaz-4.1.6
@@ -22,8 +22,13 @@ USE_TOOLS+=	pkg-config tclsh
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.libiconv}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-xml2=${BUILDLINK_PREFIX.libxml2}
+
 # backtrace and backtrace_symbols
+.include "../../mk/bsd.prefs.mk"
+# DragonFly too ?
+.if !empty(OPSYS:MNetBSD) || !empty(OPSYS:MFreeBSD)
 LDFLAGS+=	-lexecinfo
+.endif
 
 PTHREAD_OPTS+=	native optional
 
