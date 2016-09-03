@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3661 2016/09/03 18:00:23 nros Exp $
+$NetBSD: CHANGES-2016,v 1.3662 2016/09/03 18:17:09 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5202,3 +5202,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-Create to 1.34 [wen 2016-09-03]
 	Updated textproc/p5-Text-CSV_XS to 1.25 [wen 2016-09-03]
 	Updated mail/libetpan to 1.7.2 [nros 2016-09-03]
+	Updated mail/claws-mail to 3.14.0 [nros 2016-09-03]
