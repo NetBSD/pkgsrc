@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/03/06 11:47:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2016/09/03 11:58:01 adam Exp $
 bin/sqlite3_analyzer
 bin/tclsh
 bin/tclsh${BASEVER}
@@ -36,6 +36,7 @@ include/tcl/generic/tclParse.h
 include/tcl/generic/tclPlatDecls.h
 include/tcl/generic/tclPort.h
 include/tcl/generic/tclRegexp.h
+include/tcl/generic/tclStringRep.h
 include/tcl/generic/tclStringTrim.h
 include/tcl/generic/tclTomMath.h
 include/tcl/generic/tclTomMathDecls.h
@@ -51,20 +52,20 @@ include/tclThread.h
 include/tdbc.h
 include/tdbcDecls.h
 include/tdbcInt.h
-lib/itcl4.0.4/itcl.tcl
-lib/itcl4.0.4/itclConfig.sh
-lib/itcl4.0.4/itclHullCmds.tcl
-lib/itcl4.0.4/itclWidget.tcl
-lib/itcl4.0.4/libitcl4.0.4.so
-lib/itcl4.0.4/libitclstub4.0.4.a
-lib/itcl4.0.4/pkgIndex.tcl
+lib/itcl4.0.5/itcl.tcl
+lib/itcl4.0.5/itclConfig.sh
+lib/itcl4.0.5/itclHullCmds.tcl
+lib/itcl4.0.5/itclWidget.tcl
+lib/itcl4.0.5/libitcl4.0.5.so
+lib/itcl4.0.5/libitclstub4.0.5.a
+lib/itcl4.0.5/pkgIndex.tcl
 lib/libtcl${SONUM}.a
 lib/libtcl${SONUM}.so
 lib/libtcl${SONUM}.so.1.0
 lib/libtclstub${SONUM}.a
 lib/pkgconfig/tcl.pc
-lib/sqlite3.11.0/libsqlite3.11.0.so
-lib/sqlite3.11.0/pkgIndex.tcl
+lib/sqlite3.11.0/libsqlite3.13.0.so
+lib/sqlite3.13.0/pkgIndex.tcl
 lib/tcl${BASEVER}/auto.tcl
 lib/tcl${BASEVER}/clock.tcl
 lib/tcl${BASEVER}/encoding/ascii.enc
@@ -291,16 +292,14 @@ lib/tcl${BASEVER}/shell1.1/pkgIndex.tcl
 lib/tcl${BASEVER}/shell1.1/shell.tcl
 lib/tcl${BASEVER}/tclAppInit.c
 lib/tcl${BASEVER}/tclIndex
-lib/tcl${BASEVER}/tcltest2.3/tcltest.tcl
-lib/tcl${BASEVER}/tcltest2.3/pkgIndex.tcl
+lib/tcl${BASEVER}/tcltest2.4/tcltest.tcl
+lib/tcl${BASEVER}/tcltest2.4/pkgIndex.tcl
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
-lib/tcl8.6/msgcat1.6/msgcat.tcl
-lib/tcl8.6/msgcat1.6/pkgIndex.tcl
 lib/tcl8/8.4/platform-1.0.14.tm
 lib/tcl8/8.4/platform/shell-1.1.4.tm
 lib/tcl8/8.5/msgcat-1.6.0.tm
-lib/tcl8/8.5/tcltest-2.3.8.tm
+lib/tcl8/8.5/tcltest-2.4.0.tm
 lib/tcl8/8.6/http-2.8.9.tm
 lib/tcl8/8.6/tdbc/sqlite3-1.0.4.tm
 lib/tclConfig.sh
@@ -319,9 +318,9 @@ lib/tdbcodbc1.0.4/tdbcodbc.tcl
 lib/tdbcpostgres1.0.4/libtdbcpostgres1.0.4.so
 lib/tdbcpostgres1.0.4/pkgIndex.tcl
 lib/tdbcpostgres1.0.4/tdbcpostgres.tcl
-lib/thread2.7.3/libthread2.7.3.so
-lib/thread2.7.3/pkgIndex.tcl
-lib/thread2.7.3/ttrace.tcl
+lib/thread2.8.0/libthread2.8.0.so
+lib/thread2.8.0/pkgIndex.tcl
+lib/thread2.8.0/ttrace.tcl
 man/man1/tclsh.1
 man/man3/TCL_MEM_DEBUG.3
 man/man3/Tcl_Access.3
