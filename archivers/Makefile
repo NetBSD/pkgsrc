@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2016/07/09 21:13:18 wiz Exp $
+# $NetBSD: Makefile,v 1.147 2016/09/04 12:39:40 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -118,6 +118,7 @@ SUBDIR+=	xz
 SUBDIR+=	zip
 SUBDIR+=	zoo
 SUBDIR+=	zopfli
+SUBDIR+=	zstd
 SUBDIR+=	zutils
 SUBDIR+=	zziplib
 
