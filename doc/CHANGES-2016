@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3664 2016/09/04 08:48:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3665 2016/09/04 08:52:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/claws-mail to 3.14.0 [nros 2016-09-03]
 	Updated textproc/mdoclint to 1.42 [wiz 2016-09-03]
 	Updated devel/p5-Date-Manip to 6.55 [wiz 2016-09-04]
+	Updated audio/libopenmpt to 0.2.7025 [wiz 2016-09-04]
