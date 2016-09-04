@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2016/09/04 12:36:59 wiz Exp $
+
+SHA1 (zstd-1.0.0.tar.gz) = 4865e52b308fccbf8cabf704f63cadbeccb1b6d9
+RMD160 (zstd-1.0.0.tar.gz) = 37abd266b75dc62eea83e75f6868bfd7dc53a648
+SHA512 (zstd-1.0.0.tar.gz) = ba7b1c993656fa220dd8d4c8cd6b7999b0d7b59b4290d7767063f6c4bfbb81e04b9d9890dea4d223d48082ab253159209d6187dc7b42cafc28ebc738bfa17ace
+Size (zstd-1.0.0.tar.gz) = 593430 bytes
+SHA1 (patch-Makefile) = 6cb92b591d2daa236218714c50a85ad2d13516c4
+SHA1 (patch-lib_Makefile) = 1b4136bc1580547a129cc0ba2965fda9ebf90e3c
+SHA1 (patch-programs_Makefile) = 74d1c393e2918d4da27f18e915d9424965a68e5d
+SHA1 (patch-tests_zbufftest.c) = 68a796958aea6256ecd5ac18fc4c96d753ebbec2
+SHA1 (patch-tests_zstreamtest.c) = 31c0d6c661cc21119871d1ad3650d9842cbd59c1
