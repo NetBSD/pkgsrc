@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.116 2016/08/27 03:16:40 maya Exp $
+$NetBSD: distinfo,v 1.117 2016/09/04 09:21:04 ryoon Exp $
 
-SHA1 (qemu-2.6.1.tar.bz2) = 8551c8424d14917f6d2af78fe20565fbcaffb768
-RMD160 (qemu-2.6.1.tar.bz2) = ba651541ebd7ab3920843c6fb94928c5ca574549
-SHA512 (qemu-2.6.1.tar.bz2) = adb55d0774618c9cd02d376222814f2047977bfbca73248841275084ae537db583db4ac6cfa5cc65c3182941d5f4b40f2f7f4661b2cd93cbb3796e2f325bc919
-Size (qemu-2.6.1.tar.bz2) = 25762855 bytes
-SHA1 (patch-Makefile.objs) = 81274d0dde593a8379428df1f974d6c50a65dd92
-SHA1 (patch-configure) = a24c31f005ee12ab56f19e3e8594b0a3bad955fc
+SHA1 (qemu-2.7.0.tar.bz2) = 96737d31a2fb74553dacbd0ddaa93014858dc986
+RMD160 (qemu-2.7.0.tar.bz2) = cc962261a4f7b05ace8c16027bda770a89322cd3
+SHA512 (qemu-2.7.0.tar.bz2) = 654acaa7b3724a288e5d7e2a26ab780d9c9ed9f647fba00a906cbaffbe9d58fd666f2d962514aa2c5b391b4c53811ac3170d2eb51727f090bd19dfe45ca9a9db
+Size (qemu-2.7.0.tar.bz2) = 26867760 bytes
+SHA1 (patch-Makefile.objs) = f40deeed5482a24369e898411bb611be418dc3ca
+SHA1 (patch-configure) = 9eb469dc5be1d7c6b4ee69e8ee61e6ab8d542112
 SHA1 (patch-default-configs_pci.mak) = 2162550a68de514c8fe9e255df88f8a0a07ee6c7
-SHA1 (patch-ef) = 6e57de87f91067e8a9a1388c91133a31b3582b3a
+SHA1 (patch-ef) = 98a1de2fd48638886b5d16f6a61dc72910e98b41
 SHA1 (patch-et) = e9b850ac5985cbe934b541acbfdb330cce421d50
 SHA1 (patch-hw_display_omap__dss.c) = 6b13242f28e32346bc70548c216c578d98fd3420
 SHA1 (patch-hw_misc_ivshmem.c) = c1fdc8111286f2c760512189db4a854bfc6129d0
@@ -16,5 +16,6 @@ SHA1 (patch-hw_net_xilinx__axienet.c) = ebcd2676d64ce6f31e4a8c976d4fdf530ad5e8b7
 SHA1 (patch-hw_ppc_mac__newworld.c) = 5131bb6edf8b0acf6e7ed3b6bc7be962dc71eca6
 SHA1 (patch-hw_ppc_mac__oldworld.c) = b71667ab281dc23c9d971dc8754eeefc879bd1d7
 SHA1 (patch-memory.c) = 9f94de7799ef80931fb1de572e5603894f3fb328
+SHA1 (patch-scripts_qemu-binfmt-conf.sh) = a59c227e5891efe201eb2b8af15fb0832a1b20d0
 SHA1 (patch-slirp_tcp__subr.c) = f011c9dc58282e61b26017547a9884f30a6e6154
-SHA1 (patch-tests_Makefile) = bd8997ea00eea05489335020ccae0e33dbcb84f9
+SHA1 (patch-tests_Makefile.include) = 42345d697cb2e324dccf1d68bd8d61e8001c6162
