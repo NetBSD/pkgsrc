@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/09/03 07:13:46 mef Exp $
+# $NetBSD: Makefile,v 1.66 2016/09/04 10:41:05 mef Exp $
 #
 
 DISTNAME=	yaz-4.1.6
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-xml2=${BUILDLINK_PREFIX.libxml2}
 # backtrace and backtrace_symbols
 .include "../../mk/bsd.prefs.mk"
 # DragonFly too ?
-.if !empty(OPSYS:MNetBSD) || !empty(OPSYS:MFreeBSD)
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
 LDFLAGS+=	-lexecinfo
 .endif
 
