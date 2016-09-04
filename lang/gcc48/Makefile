@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2016/07/09 06:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/09/04 18:29:39 maya Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
-PKGREVISION=	2
+PKGREVISION=	3
 
 DISTNAME=	gcc-${GCC48_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC48_DIST_VERSION}
@@ -75,7 +75,12 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-libssp
+
+# [2016-09 maya] including <stdio.h> and building with -D_FORTIFY_SOURCE
+# failsbecause ssp/stdio.h tries tp includes ssp.h, instead of ssp/ssp.h
+# + other failures, if this is corrected.
+CONFIGURE_ARGS+=	--disable-libssp
+
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 
