@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.32 2016/09/01 16:05:22 wiz Exp $
+$NetBSD: distinfo,v 1.33 2016/09/04 09:27:18 wiz Exp $
 
-SHA1 (gsl-2.2.tar.gz) = b770a2761839689aaab858bb48c6dbc7f58f0269
-RMD160 (gsl-2.2.tar.gz) = 88d32ac6b2fdaa0e9647330aa3a09f2a29591b67
-SHA512 (gsl-2.2.tar.gz) = 588abc1ef07737f29449d081421fe59f5d57cf84b22ce5d25379f258b7ff7f74145d62cbc5ce273b6f3f80bdd5621766056928b87f58b0b806b0e36180e582ed
-Size (gsl-2.2.tar.gz) = 4473105 bytes
+SHA1 (gsl-2.2.1.tar.gz) = 2612a898aada49e90aa3069c712f172530f8d38f
+RMD160 (gsl-2.2.1.tar.gz) = ea1d0564aa8b738d29a305bcbd57d2aaa8abccd4
+SHA512 (gsl-2.2.1.tar.gz) = 834210d91db6bc4be1df0c0be8e66af16bdf607bfc9d9d33bc240c428e3452e60bdab92240b88dcb15f24171be541e1fafa18368c7a257a44241e568c1c11942
+Size (gsl-2.2.1.tar.gz) = 4473802 bytes
 SHA1 (patch-aa) = 3065e1282ded8b4a1b571f62603c3f49fbde8a09
 SHA1 (patch-ae) = df7c4f8863a1b8c0dc598d6fccd6243406b7ba0d
 SHA1 (patch-af) = 570f98483a5f05862da606c06e59e582048c6fcb
