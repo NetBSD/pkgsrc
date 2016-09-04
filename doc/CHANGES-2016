@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3675 2016/09/04 20:53:16 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3676 2016/09/04 21:34:27 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5216,3 +5216,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc48 to 4.8.4nb3 [maya 2016-09-04]
 	Updated devel/imake to 1.0.7nb1 [dholland 2016-09-04]
 	Updated mail/neomutt to 20160827 [wiz 2016-09-04]
+	Updated devel/tradcpp to 0.5.2 [dholland 2016-09-04]
+	Updated devel/imake to 1.0.7nb2 [dholland 2016-09-04]
