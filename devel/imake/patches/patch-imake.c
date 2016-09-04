@@ -1,4 +1,4 @@
-$NetBSD: patch-imake.c,v 1.6 2016/09/04 18:44:06 dholland Exp $
+$NetBSD: patch-imake.c,v 1.7 2016/09/04 21:33:53 dholland Exp $
 
 Beat some sense in.
 
@@ -6,20 +6,22 @@ Beat some sense in.
      (hunks 1-2)
 
    - Do not delete any of the temporary files, to allow analysis after
-     build failure. (hunks 3-4, first part of 8)
+     build failure. (hunks 3-4, first part of 9)
 
-   - Log the command lines executed. (hunk 5)
+   - Log the command lines executed. (hunk 6)
 
    - Warn if scrubbing the Imakefile to alert the user to check if that
-     broke it (second part of hunk 8)
+     broke it (second part of hunk 9)
 
 Also,
 
+   - Use tradcpp's -debuglog feature to trace what happens in the
+     templates (hunk 5)
+
+   - Force ELF for freebsd versions >= 6 (hunk 7)
+
    - Force use of just "gcc" for pkgsrc, so as to not bypass the
-     wrappers (hunk 7)
-
-   - Force ELF for freebsd versions >= 6 (hunk 6)
-
+     wrappers (hunk 8)
 
 --- imake.c.orig	2013-08-17 10:11:50.000000000 +0000
 +++ imake.c
@@ -69,7 +71,18 @@ Also,
  }
  
  #ifdef SIGNALRETURNSINT
-@@ -773,6 +776,13 @@ doit(FILE *outfd, const char *cmd, const
+@@ -488,6 +491,10 @@ init(void)
+ 	while (cpp_argv[ cpp_argindex ] != NULL)
+ 		cpp_argindex++;
+ 
++	/* pkgsrc: generate a debug trace of reading the templates */
++	AddCppArg("-debuglog");
++	AddCppArg(".imake.cpplog");
++
+ #if defined CROSSCOMPILE
+ 	if (sys == netBSD)
+ 	  if (CrossCompiling) {
+@@ -773,6 +780,13 @@ doit(FILE *outfd, const char *cmd, const
  {
  	int		pid;
  	waitType	status;
@@ -83,7 +96,7 @@ Also,
  
  	/*
  	 * Fork and exec the command.
-@@ -1158,7 +1168,9 @@ get_binary_format(FILE *inFile)
+@@ -1158,7 +1172,9 @@ get_binary_format(FILE *inFile)
    } else
        strcpy (cmd, "objformat");
  
@@ -94,7 +107,7 @@ Also,
        (objprog = popen(cmd, "r")) != NULL &&
        fgets(buf, sizeof(buf), objprog) != NULL &&
        strncmp(buf, "elf", 3) == 0)
-@@ -1337,54 +1349,8 @@ get_gcc_version(FILE *inFile, char *name
+@@ -1337,54 +1353,8 @@ get_gcc_version(FILE *inFile, char *name
  static boolean
  get_gcc(char *cmd)
  {
@@ -151,7 +164,7 @@ Also,
  }
  
  #ifdef CROSSCOMPILE
-@@ -1795,12 +1761,15 @@ CleanCppInput(const char *imakefile)
+@@ -1795,12 +1765,15 @@ CleanCppInput(const char *imakefile)
  			    outFile = fdopen(fd, "w");
  			if (outFile == NULL) {
  			    if (fd != -1) {

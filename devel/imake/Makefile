@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2016/09/04 18:44:06 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2016/09/04 21:33:53 dholland Exp $
 
 DISTNAME=		imake-1.0.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=		Imake and other utilities from modular X.org
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config makedepend:run
 
-DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
+DEPENDS+=		tradcpp>=0.5.2:../../devel/tradcpp
 DEPENDS+=		xorg-cf-files>=1.0.3:../../x11/xorg-cf-files
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
