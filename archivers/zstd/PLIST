@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/04 12:36:59 wiz Exp $
+bin/unzstd
+bin/zstd
+bin/zstdcat
+include/zbuff.h
+include/zdict.h
+include/zstd.h
+lib/libzstd.a
+lib/libzstd.so
+lib/libzstd.so.1
+lib/libzstd.so.${PKGVERSION}
+lib/pkgconfig/libzstd.pc
+man/man1/unzstd.1
+man/man1/zstd.1
+man/man1/zstdcat.1
