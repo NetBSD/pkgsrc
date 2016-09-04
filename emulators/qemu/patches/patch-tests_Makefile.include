@@ -1,0 +1,17 @@
+$NetBSD: patch-tests_Makefile.include,v 1.1 2016/09/04 09:21:04 ryoon Exp $
+
+* Don't link -lutil on SunOS
+
+--- tests/Makefile.include.orig	2016-09-02 15:34:24.000000000 +0000
++++ tests/Makefile.include
+@@ -645,8 +645,10 @@ tests/migration/initrd-stress.img: tests
+ 	rmdir $(INITRD_WORK_DIR)
+ 
+ ifeq ($(CONFIG_POSIX),y)
++ifneq ($(CONFIG_SOLARIS),y)
+ LIBS += -lutil
+ endif
++endif
+ 
+ # QTest rules
+ 
