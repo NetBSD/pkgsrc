@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/05/05 11:43:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/09/04 09:33:28 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -121,6 +121,9 @@ ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/client_credentials.pyo
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/implicit.py
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/implicit.pyc
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/implicit.pyo
+${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/openid_connect.py
+${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/openid_connect.pyc
+${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/openid_connect.pyo
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/refresh_token.py
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/refresh_token.pyc
 ${PYSITELIB}/oauthlib/oauth2/rfc6749/grant_types/refresh_token.pyo
