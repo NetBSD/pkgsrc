@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3669 2016/09/04 09:33:38 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3670 2016/09/04 09:39:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5210,3 +5210,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/gsl to 2.2.1 [wiz 2016-09-04]
 	Updated net/py-foolscap to 0.12.3 [wiz 2016-09-04]
 	Updated security/py-oauthlib to 2.0.0 [wiz 2016-09-04]
+	Updated devel/py-test to 3.0.2 [wiz 2016-09-04]
