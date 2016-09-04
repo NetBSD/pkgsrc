@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/08/27 06:55:49 dholland Exp $
+# $NetBSD: options.mk,v 1.3 2016/09/04 16:54:13 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rrdtool
 PKG_SUPPORTED_OPTIONS=	lua python tcl
@@ -30,6 +30,7 @@ EGG_NAME=		py_rrdtool-0.2.2
 EGG_INFODIR?=		${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 PLIST_SUBST+=		EGG_INFODIR=${EGG_INFODIR}
+DEPENDS+=       ${PYPKGPREFIX}-setuptools>=0.8:../../devel/py-setuptools
 #.include "../../lang/python/egg.mk"
 
 .else # python
