@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.65 2016/08/19 16:21:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.66 2016/09/04 09:45:54 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -900,6 +900,7 @@ lib/calibre/calibre/gui2/preferences/coloring.py
 lib/calibre/calibre/gui2/preferences/columns.py
 lib/calibre/calibre/gui2/preferences/columns_ui.py
 lib/calibre/calibre/gui2/preferences/conversion.py
+lib/calibre/calibre/gui2/preferences/conversion_ui.py
 lib/calibre/calibre/gui2/preferences/create_custom_column.py
 lib/calibre/calibre/gui2/preferences/device_debug.py
 lib/calibre/calibre/gui2/preferences/device_user_defined.py
@@ -935,6 +936,7 @@ lib/calibre/calibre/gui2/preferences/texture_chooser.py
 lib/calibre/calibre/gui2/preferences/toolbar.py
 lib/calibre/calibre/gui2/preferences/toolbar_ui.py
 lib/calibre/calibre/gui2/preferences/tweaks.py
+lib/calibre/calibre/gui2/preferences/tweaks_ui.py
 lib/calibre/calibre/gui2/proceed.py
 lib/calibre/calibre/gui2/progress_indicator/__init__.py
 lib/calibre/calibre/gui2/save.py
@@ -942,6 +944,7 @@ lib/calibre/calibre/gui2/search_box.py
 lib/calibre/calibre/gui2/search_restriction_mixin.py
 lib/calibre/calibre/gui2/shortcuts.py
 lib/calibre/calibre/gui2/shortcuts_ui.py
+lib/calibre/calibre/gui2/splash_screen.py
 lib/calibre/calibre/gui2/store/__init__.py
 lib/calibre/calibre/gui2/store/basic_config.py
 lib/calibre/calibre/gui2/store/basic_config_widget_ui.py
@@ -1600,13 +1603,13 @@ share/calibre/images/cover_texture.png
 share/calibre/images/debug.png
 share/calibre/images/default_cover.png
 share/calibre/images/devices/bambook.png
-share/calibre/images/devices/boox.jpg
+share/calibre/images/devices/boox.png
 share/calibre/images/devices/folder.png
 share/calibre/images/devices/ipad.png
 share/calibre/images/devices/italica.png
 share/calibre/images/devices/itunes.png
-share/calibre/images/devices/kindle.jpg
-share/calibre/images/devices/nook.jpg
+share/calibre/images/devices/kindle.png
+share/calibre/images/devices/nook.png
 share/calibre/images/devices/tablet.png
 share/calibre/images/dialog_error.png
 share/calibre/images/dialog_information.png
@@ -1720,7 +1723,6 @@ share/calibre/images/modified.png
 share/calibre/images/network-server.png
 share/calibre/images/news.png
 share/calibre/images/next.png
-share/calibre/images/notify.png
 share/calibre/images/ok.png
 share/calibre/images/page.png
 share/calibre/images/plugboard.png
@@ -1785,7 +1787,6 @@ share/calibre/images/view-image.png
 share/calibre/images/view-refresh.png
 share/calibre/images/view.png
 share/calibre/images/viewer.png
-share/calibre/images/welcome_wizard.png
 share/calibre/images/window-close.png
 share/calibre/images/wizard.png
 share/calibre/jacket/stylesheet.css
@@ -2057,6 +2058,7 @@ share/calibre/recipes/conowego_pl.recipe
 share/calibre/recipes/consortium_news.recipe
 share/calibre/recipes/consumerist.recipe
 share/calibre/recipes/contemporary_argentine_writers.recipe
+share/calibre/recipes/contropiano.recipe
 share/calibre/recipes/corren2.recipe
 share/calibre/recipes/corriere_della_sera_en.recipe
 share/calibre/recipes/corriere_della_sera_it.recipe
@@ -3629,3 +3631,4 @@ share/doc/calibre/Changelog.yaml
 share/doc/calibre/INSTALL
 share/doc/calibre/LICENSE.rtf
 share/doc/calibre/README.md
+@pkgdir lib/calibre/calibre/plugins/.libs
