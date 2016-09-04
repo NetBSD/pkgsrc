@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3672 2016/09/04 12:39:49 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3673 2016/09/04 18:35:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-test to 3.0.2 [wiz 2016-09-04]
 	Updated misc/calibre to 2.66.0 [wiz 2016-09-04]
 	Added archivers/zstd version 1.0.0 [wiz 2016-09-04]
+	Updated lang/gcc48 to 4.8.4nb3 [maya 2016-09-04]
