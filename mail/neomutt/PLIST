@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/08/21 11:35:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/09/04 20:53:05 wiz Exp $
 bin/mutt
 bin/mutt_dotlock
 bin/pgpewrap
@@ -12,7 +12,19 @@ man/man1/smime_keys.1
 man/man5/mbox.5
 man/man5/mmdf.5
 man/man5/muttrc.5
+share/doc/neomutt/COPYRIGHT
+share/doc/neomutt/ChangeLog
+share/doc/neomutt/ChangeLog.neomutt
+share/doc/neomutt/GPL
+share/doc/neomutt/INSTALL
+share/doc/neomutt/NEWS
 share/doc/neomutt/PGP-Notes.txt
+share/doc/neomutt/README
+share/doc/neomutt/README.SECURITY
+share/doc/neomutt/README.SSL
+share/doc/neomutt/README.neomutt
+share/doc/neomutt/README.notmuch
+share/doc/neomutt/TODO
 share/doc/neomutt/advancedusage.html
 share/doc/neomutt/applying-patches.txt
 share/doc/neomutt/configuration.html
@@ -24,9 +36,11 @@ share/doc/neomutt/keybase/KeybaseAndMutt.md
 share/doc/neomutt/keybase/LICENSE
 share/doc/neomutt/keybase/README.md
 share/doc/neomutt/keybase/decrypt.sh
+share/doc/neomutt/keybase/images/attachmentView.png
+share/doc/neomutt/keybase/images/pagerMode.png
 share/doc/neomutt/keybase/install.sh
 share/doc/neomutt/keybase/keybase.py
-share/doc/neomutt/keybase/pagerMode.png
+share/doc/neomutt/keybase/muttrc
 share/doc/neomutt/keybase/pgpdecrypt.sh
 share/doc/neomutt/keybase/pgpverify.sh
 share/doc/neomutt/keybase/verify.sh
