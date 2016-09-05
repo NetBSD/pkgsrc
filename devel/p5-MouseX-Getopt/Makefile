@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/08/07 10:43:39 wen Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/05 02:53:01 wen Exp $
 
 DISTNAME=	MouseX-Getopt-0.37
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Getopt-Long-Descriptive>=0.091:../../devel/p5-Getopt-Long-Descripti
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
