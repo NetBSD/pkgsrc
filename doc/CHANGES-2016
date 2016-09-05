@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3681 2016/09/05 16:03:47 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.3682 2016/09/05 20:17:21 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5223,3 +5223,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc48 to 4.8.4nb4 [maya 2016-09-05]
 	Updated net/corebird to 1.3 [ryoon 2016-09-05]
 	Updated lang/erlang to 19.0nb1 [jperkin 2016-09-05]
+	Updated lang/gcc49 to 4.9.3nb3 [maya 2016-09-05]
