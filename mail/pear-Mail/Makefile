@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.13 2016/09/05 03:04:40 wen Exp $
 
-DISTNAME=	Mail-1.2.0
+DISTNAME=	Mail-1.3.0
 CATEGORIES=	mail
 
 CONFLICTS=	php-pear-Mail-[0-9]*
 
-DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP-[0-9]*:../../net/pear-Net_SMTP
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.4.1:../../net/pear-Net_SMTP
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://pear.php.net/package/Mail
