@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/12/13 17:20:21 taca Exp $
+# $NetBSD: Makefile,v 1.11 2016/09/05 20:14:28 joerg Exp $
 #
 
 PECL_DISTNAME=	${MODNAME}-${PECL_VERSION}
@@ -14,13 +14,12 @@ HOMEPAGE=	https://github.com/rsky/php-mecab
 COMMENT=	PHP extension for MeCab Morphological Analyzer
 LICENSE=	mit
 
-EGDIR=		share/examples/php/mecab
 INSTALLATION_DIRS+=	${EGDIR}
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 
 post-install:
 	cd ${WRKSRC}/examples && \
-	${INSTALL_DATA} *.php ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} *.php ${DESTDIR}${EGDIR}
 
 .include "../../textproc/mecab-base/buildlink3.mk"
 .include "../../lang/php/ext.mk"
