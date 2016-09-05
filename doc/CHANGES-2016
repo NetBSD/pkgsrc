@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3677 2016/09/05 03:05:31 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3678 2016/09/05 08:06:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/tradcpp to 0.5.2 [dholland 2016-09-04]
 	Updated devel/imake to 1.0.7nb2 [dholland 2016-09-04]
 	Updated mail/pear-Mail to 1.3.0 [wen 2016-09-05]
+	Updated www/webkit-gtk to 2.12.4 [leot 2016-09-05]
