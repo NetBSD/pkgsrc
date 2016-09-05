@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/05 20:17:01 maya Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"version.mk"
@@ -9,7 +9,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC49_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc49-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC49_DIST_VERSION}/}
@@ -70,11 +70,16 @@ CHECK_SHLIBS_SKIP+=	${GCC_PKGNAME}/lib*/libgcj_bc.so*
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)                                                                                                                                                                     # use the native SSP code in netbsd libc, gcc libssp conflicts with it.
+CONFIGURE_ARGS+=        --disable-libssp
+.else
+CONFIGURE_ARGS+=        --enable-libssp
+.endif
+
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 
