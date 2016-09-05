@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3684 2016/09/05 20:34:36 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3685 2016/09/05 21:14:18 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5226,3 +5226,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc49 to 4.9.3nb3 [maya 2016-09-05]
 	Updated lang/gcc49-libs to 4.9.3nb4 [maya 2016-09-05]
 	Updated lang/gcc48-libs to 4.8.4nb5 [maya 2016-09-05]
+	Updated cad/librecad to 2.1.1 [plunky 2016-09-05]
