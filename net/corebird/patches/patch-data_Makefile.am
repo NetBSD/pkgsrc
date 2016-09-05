@@ -1,0 +1,28 @@
+$NetBSD: patch-data_Makefile.am,v 1.1 2016/09/05 15:12:56 ryoon Exp $
+
+* Workarounf for a lack of 'msgfmt --xml' and 'msgfmt --desktop'
+
+--- data/Makefile.am.orig	2016-07-31 06:42:48.000000000 +0000
++++ data/Makefile.am
+@@ -9,13 +9,17 @@ appdatadir = $(datarootdir)/appdata
+ appdata_in_files = org.baedert.corebird.appdata.xml.in
+ appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+ 
++#%.desktop: %.desktop.in
++#	msgfmt --desktop -d $(top_srcdir)/po \
++#	--template $< -o $@
+ %.desktop: %.desktop.in
+-	msgfmt --desktop -d $(top_srcdir)/po \
+-	--template $< -o $@
++	cp $^ $@
+ 
++#%.appdata.xml: %.appdata.xml.in
++#	msgfmt --xml -d $(top_srcdir)/po \
++#	--template $< -o $@
+ %.appdata.xml: %.appdata.xml.in
+-	msgfmt --xml -d $(top_srcdir)/po \
+-	--template $< -o $@
++	cp $^ $@
+ 
+ # Actually, just ignore gschema translations...
+ org.baedert.corebird.gschema.xml: org.baedert.corebird.gschema.xml.in
