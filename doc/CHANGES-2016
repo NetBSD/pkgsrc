@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3687 2016/09/06 05:09:22 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3688 2016/09/06 07:02:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5229,3 +5229,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/librecad to 2.1.1 [plunky 2016-09-05]
 	Updated lang/gcc5 to 5.4.0nb2 [maya 2016-09-06]
 	Updated lang/gcc5-libs to 5.4.0nb3 [maya 2016-09-06]
+	Added multimedia/sickbeard version 507nb3 [wiz 2016-09-06]
