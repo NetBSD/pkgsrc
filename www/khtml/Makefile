@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/08/21 22:33:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/06 20:55:01 joerg Exp $
 
 DISTNAME=	khtml-${KF5VER}
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 .include "../../meta-pkgs/kf5/Makefile.common"
 MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.25/portingAids/}
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl msgfmt
 
 # generation of kded.moc fails when ${PREFIX}/include in the moc include path
 SUBST_CLASSES+=	fix-moc
