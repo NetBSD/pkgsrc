@@ -386,3 +386,30 @@ func (s *Suite) Test_MkLines_DetermineUsedVariables__nested(c *check.C) {
 	c.Check(mklines.varuse["outer."], equals, mkline)
 	c.Check(mklines.varuse["outer.*"], equals, mkline)
 }
+
+func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
+	G.globalData.InitVartypes()
+	s.UseCommandLine(c, "-Wall")
+	mklines := s.NewMkLines("fname",
+		mkrcsid,
+		"",
+		"\tmd5sum filename")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, "WARN: fname:3: Unknown shell command \"md5sum\".\n")
+}
+
+func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
+	G.globalData.InitVartypes()
+	s.UseCommandLine(c, "-Wall")
+	mklines := s.NewMkLines("fname",
+		mkrcsid,
+		"TOOLS_CREATE+=\tmd5sum",
+		"",
+		"\tmd5sum filename")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, "")
+}
