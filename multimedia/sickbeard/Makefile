@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/06 07:01:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/06 15:25:10 wiz Exp $
 
 DISTNAME=	sickbeard-507
 PKGREVISION=	3
@@ -11,7 +11,7 @@ MAINTAINER=	js@heap.zone
 HOMEPAGE=	http://sickbeard.com/
 COMMENT=	PVR application to search and manage TV shows
 # Licenses of all the installed files
-LICENSE=	dynamic-drive AND gnu-agpl-v3 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND mit AND modified-bsd AND python-software-foundation AND unlicense
+LICENSE=	dynamic-drive-license AND gnu-agpl-v3 AND gnu-gpl-v3 AND gnu-lgpl-v2.1 AND mit AND modified-bsd AND python-software-foundation AND unlicense
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
