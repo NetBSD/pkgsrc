@@ -17,6 +17,35 @@ import (
 // Last synced with mk/defaults/mk.conf revision 1.118
 
 func (gd *GlobalData) InitVartypes() {
+
+	// A package-defined variable may be set in all Makefiles except buildlink3.mk and builtin.mk.
+	pkg := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, "Makefile: set, use; buildlink3.mk, builtin.mk:; Makefile.*, *.mk: default, set, use")
+	}
+
+	// A package-defined list may be appended to in all Makefiles except buildlink3.mk and builtin.mk.
+	// Simple assignment (instead of appending) is only allowed in Makefile and Makefile.common.
+	pkglist := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, "Makefile, Makefile.common, options.mk: append, default, set, use; buildlink3.mk, builtin.mk:; *.mk: append, default, use")
+	}
+
+	// A user-defined or system-defined variable must not be set by any
+	// package file. It also must not be used in buildlink3.mk and
+	// builtin.mk files or at load-time, since the system/user preferences
+	// may not have been loaded when these files are included.
+	sys := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, "buildlink3.mk:; *: use")
+	}
+	usr := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, "buildlink3.mk:; *: use-loadtime, use")
+	}
+	bl3list := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: append")
+	}
+	cmdline := func(varname string, kindOfList KindOfList, checker *BasicType) {
+		acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk:; *: use-loadtime, use")
+	}
+
 	usr("ALLOW_VULNERABLE_PACKAGES", lkNone, BtYes)
 	usr("MANINSTALL", lkShell, enum("maninstall catinstall"))
 	usr("MANZ", lkNone, BtYes)
@@ -688,7 +717,7 @@ func (gd *GlobalData) InitVartypes() {
 	sys("TOOLS_ALIASES", lkShell, BtFilename)
 	sys("TOOLS_BROKEN", lkShell, BtTool)
 	sys("TOOLS_CMD.*", lkNone, BtPathname)
-	sys("TOOLS_CREATE", lkShell, BtTool)
+	acl("TOOLS_CREATE", lkShell, BtTool, "Makefile, Makefile.common, options.mk: append")
 	acl("TOOLS_DEPENDS.*", lkSpace, BtDependencyWithPath, "buildlink3.mk:; Makefile, Makefile.*: set, default; *: use")
 	sys("TOOLS_GNU_MISSING", lkShell, BtTool)
 	sys("TOOLS_NOOP", lkShell, BtTool)
@@ -840,32 +869,4 @@ func parseAclEntries(varname string, aclentries string) []AclEntry {
 		}
 	}
 	return result
-}
-
-// A package-defined variable may be set in all Makefiles except buildlink3.mk and builtin.mk.
-func pkg(varname string, kindOfList KindOfList, checker *BasicType) {
-	acl(varname, kindOfList, checker, "Makefile: set, use; buildlink3.mk, builtin.mk:; Makefile.*, *.mk: default, set, use")
-}
-
-// A package-defined list may be appended to in all Makefiles except buildlink3.mk and builtin.mk.
-// Simple assignment (instead of appending) is only allowed in Makefile and Makefile.common.
-func pkglist(varname string, kindOfList KindOfList, checker *BasicType) {
-	acl(varname, kindOfList, checker, "Makefile, Makefile.common, options.mk: append, default, set, use; buildlink3.mk, builtin.mk:; *.mk: append, default, use")
-}
-
-// A user-defined or system-defined variable must not be set by any
-// package file. It also must not be used in buildlink3.mk and
-// builtin.mk files or at load-time, since the system/user preferences
-// may not have been loaded when these files are included.
-func sys(varname string, kindOfList KindOfList, checker *BasicType) {
-	acl(varname, kindOfList, checker, "buildlink3.mk:; *: use")
-}
-func usr(varname string, kindOfList KindOfList, checker *BasicType) {
-	acl(varname, kindOfList, checker, "buildlink3.mk:; *: use-loadtime, use")
-}
-func bl3list(varname string, kindOfList KindOfList, checker *BasicType) {
-	acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk: append")
-}
-func cmdline(varname string, kindOfList KindOfList, checker *BasicType) {
-	acl(varname, kindOfList, checker, "buildlink3.mk, builtin.mk:; *: use-loadtime, use")
 }
