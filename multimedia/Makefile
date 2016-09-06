@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2016/06/18 22:13:43 kamil Exp $
+# $NetBSD: Makefile,v 1.250 2016/09/06 07:02:19 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -186,6 +186,7 @@ SUBDIR+=	ruby-gnome2-clutter-gstreamer
 SUBDIR+=	ruby-gnome2-gstreamer
 SUBDIR+=	ruby-ming
 SUBDIR+=	schroedinger
+SUBDIR+=	sickbeard
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg2
 SUBDIR+=	ssr
