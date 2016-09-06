@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/09/06 12:00:33 maya Exp $
+# $NetBSD: Makefile,v 1.39 2016/09/06 15:04:57 maya Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -86,7 +86,6 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 
