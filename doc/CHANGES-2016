@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3690 2016/09/06 12:06:01 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3691 2016/09/06 12:06:29 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5232,3 +5232,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added multimedia/sickbeard version 507nb3 [wiz 2016-09-06]
 	Added lang/rust version 1.11.0 [jperkin 2016-09-06]
 	Updated lang/gcc47 to 4.7.4nb3 [maya 2016-09-06]
+	Updated lang/gcc47-libs to 4.7.4nb4 [maya 2016-09-06]
