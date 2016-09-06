@@ -1,0 +1,14 @@
+$NetBSD: patch-src_llvm_Makefile.rules,v 1.1 2016/09/06 10:36:49 jperkin Exp $
+
+"-z discard-unused" is only supported by Oracle Solaris ld.
+
+--- src/llvm/Makefile.rules.orig	2016-07-04 18:05:12.000000000 +0000
++++ src/llvm/Makefile.rules
+@@ -644,7 +644,6 @@ ifndef NO_DEAD_STRIP
+     LD.Flags += -Wl,-dead_strip
+   else
+     ifeq ($(HOST_OS),SunOS)
+-      LD.Flags += -Wl,-z -Wl,discard-unused=sections
+     else
+       ifneq ($(HOST_OS), $(filter $(HOST_OS), Cygwin MingW))
+         LD.Flags += -Wl,--gc-sections
