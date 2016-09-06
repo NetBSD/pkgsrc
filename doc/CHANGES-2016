@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3695 2016/09/06 14:01:36 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3696 2016/09/06 14:01:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc49 to 4.9.4 [jperkin 2016-09-06]
 	Updated lang/gcc49-libs to 4.9.4nb1 [jperkin 2016-09-06]
 	Updated lang/gcc46-libs to 4.6.4nb6 [maya 2016-09-06]
+	Updated lang/gcc46 to 4.6.4nb5 [maya 2016-09-06]
