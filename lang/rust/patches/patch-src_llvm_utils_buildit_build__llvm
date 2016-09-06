@@ -1,0 +1,15 @@
+$NetBSD: patch-src_llvm_utils_buildit_build__llvm,v 1.1 2016/09/06 10:36:49 jperkin Exp $
+
+Shell portability fix.
+
+--- src/llvm/utils/buildit/build_llvm.orig	2016-03-03 01:04:56.000000000 +0000
++++ src/llvm/utils/buildit/build_llvm
+@@ -227,7 +227,7 @@ cd $DIR/obj-llvm || exit 1
+ 
+ # Install the tree into the destination directory.
+ make $JOBS_FLAG $COMMON_MAKEFLAGS UNIVERSAL_ARCH="$HOSTS" install
+-if ! test $? == 0 ; then
++if ! test $? = 0 ; then
+     echo "error: LLVM 'make install' failed!"
+     exit 1
+ fi 
