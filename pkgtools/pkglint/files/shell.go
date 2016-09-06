@@ -474,12 +474,15 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 	}
 
 	shellword := scc.strcmd.Name
-	tool := G.globalData.Tools.byName[shellword]
+	tool, localTool := G.globalData.Tools.byName[shellword], false
+	if tool == nil && G.Mk != nil {
+		tool, localTool = G.Mk.toolRegistry.byName[shellword], true
+	}
 	if tool == nil {
 		return false
 	}
 
-	if !G.Mk.tools[shellword] && !G.Mk.tools["g"+shellword] {
+	if !localTool && !G.Mk.tools[shellword] && !G.Mk.tools["g"+shellword] {
 		scc.shline.line.Warn1("The %q tool is used but not added to USE_TOOLS.", shellword)
 	}
 

@@ -138,23 +138,7 @@ func (gd *GlobalData) loadTools() {
 		fname := G.globalData.Pkgsrcdir + "/mk/tools/" + basename
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			if m, varname, _, _, _, value, _ := MatchVarassign(line.Text); m {
-				if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
-					reg.Register(value)
-
-				} else if m, toolname := match1(varname, `^_TOOLS_VARNAME\.([-\w.]+|\[)$`); m {
-					reg.RegisterVarname(toolname, value)
-
-				} else if m, toolname := match1(varname, `^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$`); m {
-					reg.Register(toolname)
-
-				} else if m, toolname := match1(varname, `_TOOLS\.(.*)`); m {
-					reg.Register(toolname)
-					for _, tool := range splitOnSpace(value) {
-						reg.Register(tool)
-					}
-				}
-			}
+			reg.ParseToolLine(line)
 		}
 	}
 
@@ -578,5 +562,25 @@ func (tr *ToolRegistry) Trace() {
 
 	for _, toolname := range keys {
 		traceStep("tool %+v", tr.byName[toolname])
+	}
+}
+
+func (tr *ToolRegistry) ParseToolLine(line *Line) {
+	if m, varname, _, _, _, value, _ := MatchVarassign(line.Text); m {
+		if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
+			tr.Register(value)
+
+		} else if m, toolname := match1(varname, `^_TOOLS_VARNAME\.([-\w.]+|\[)$`); m {
+			tr.RegisterVarname(toolname, value)
+
+		} else if m, toolname := match1(varname, `^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$`); m {
+			tr.Register(toolname)
+
+		} else if m, toolname := match1(varname, `_TOOLS\.(.*)`); m {
+			tr.Register(toolname)
+			for _, tool := range splitOnSpace(value) {
+				tr.Register(tool)
+			}
+		}
 	}
 }
