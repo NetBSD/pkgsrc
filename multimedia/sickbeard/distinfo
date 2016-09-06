@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/06 07:01:56 wiz Exp $
+
+SHA1 (sickbeard-507.tar.gz) = c7939a58f38d55e1db6a732047c37eb31588cc7d
+RMD160 (sickbeard-507.tar.gz) = 578ffcd8860f8da5afc1c437c6ff3440df7e3a6a
+SHA512 (sickbeard-507.tar.gz) = 7b48d216a37cfbdcc48b09104d0a74bebebf2f2b11ddb2a35496646764d65fd36c5ca304f82061a070bb07424bf1d0c67c2e1b854f64c37556752a4852df1bb4
+Size (sickbeard-507.tar.gz) = 2481696 bytes
