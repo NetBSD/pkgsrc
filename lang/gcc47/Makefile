@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/09/06 15:04:57 maya Exp $
+# $NetBSD: Makefile,v 1.40 2016/09/06 16:28:48 maya Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -68,10 +68,8 @@ CHECK_SHLIBS_SKIP+=	${GCC_PKGNAME}/lib*/libgcj_bc.so*
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
 
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-5.*)
-# hangs "checking for compiler with PCH support"
-# similar to GCC bug 54719/54645.
+# "checking for compiler with PCH support" hangs with ASLR enabled
+.if !empty(MACHINE_PLATFORM:MNetBSD-*)
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 .endif
 
