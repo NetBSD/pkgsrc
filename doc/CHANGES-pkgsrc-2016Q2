@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.12 2016/09/04 07:33:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.13 2016/09/06 19:13:20 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -89,4 +89,13 @@ graphics/eog3: security fix
 
 Pullup ticket #5089 - requested by jym
 security/stunnel: security fix
+
+Pullup ticket #5090 - requested by sevan
+lang/python27: security fix
+
+Pullup ticket #5091 - requested by sevan
+lang/python34: security fix
+
+Pullup ticket #5092 - requested by sevan
+lang/python35: security fix
 
