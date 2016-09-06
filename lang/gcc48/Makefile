@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/09/05 10:02:45 maya Exp $
+# $NetBSD: Makefile,v 1.28 2016/09/06 16:29:19 maya Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -77,10 +77,7 @@ CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
-# [2016-09 maya] use the native SSP code in netbsd libc
-# including <stdio.h> and building with -D_FORTIFY_SOURCE fails because
-# ssp/stdio.h tries tp includes ssp.h, instead of ssp/ssp.h + other
-# failures, even if this is corrected.
+# use the native SSP code in netbsd libc
 CONFIGURE_ARGS+=	--disable-libssp
 .else
 CONFIGURE_ARGS+=	--enable-libssp
