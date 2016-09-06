@@ -696,7 +696,7 @@ func (gd *GlobalData) InitVartypes() {
 	sys("TOOLS_PLATFORM.*", lkNone, BtShellCommand)
 	sys("TOUCH_FLAGS", lkShell, BtShellWord)
 	pkglist("UAC_REQD_EXECS", lkShell, BtPrefixPathname)
-	acl("UNLIMIT_RESOURCES", lkShell, enum("datasize stacksize memorysize"), "Makefile: set, append; Makefile.common: append")
+	acl("UNLIMIT_RESOURCES", lkShell, enum("cputime datasize memorysize stacksize"), "Makefile: set, append; Makefile.common: append")
 	usr("UNPRIVILEGED_USER", lkNone, BtUserGroupName)
 	usr("UNPRIVILEGED_GROUP", lkNone, BtUserGroupName)
 	pkglist("UNWRAP_FILES", lkShell, BtPathmask)
