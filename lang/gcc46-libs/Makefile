@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/25 12:51:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/06 14:01:20 maya Exp $
 
 GCC_PKGNAME=	gcc46
 GCC46_DIST_VERSION:=	4.6.4
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-libs-${GCC46_DIST_VERSION}
 ## The PKGREVISION of this package needs to be at least 1 more than the
 ## PKGREVISION of the lang/gcc46 package so that with the dependence pattern
 ## '{gcc46,gcc46-libs}>=4.6.*' pkg_all will choose gcc46-libs over gcc46.
-PKGREVISION=	4
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	# empty
 DISTFILES=	# empty
