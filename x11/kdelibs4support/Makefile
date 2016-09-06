@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/08/21 22:20:43 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/06 20:54:31 joerg Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
 CATEGORIES=	devel
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	kded>=${KF5VER}:../../x11/kded
 DEPENDS+=	kdesignerplugin>=${KF5VER}:../../x11/kdesignerplugin
 
-USE_TOOLS+=	perl:run pkg-config
+USE_TOOLS+=	perl:run pkg-config msgfmt
 
 REPLACE_PERL+= src/kio/fileshareset
 
