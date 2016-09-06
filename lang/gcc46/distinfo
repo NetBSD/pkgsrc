@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 22:50:35 agc Exp $
+$NetBSD: distinfo,v 1.21 2016/09/06 13:57:02 maya Exp $
 
 SHA1 (gcc-4.6.4.tar.bz2) = 63933a8a5cf725626585dbba993c8b0f6db1335d
 RMD160 (gcc-4.6.4.tar.bz2) = 6a58b053812cf75622bc4579e020cd9471f46916
@@ -35,6 +35,7 @@ SHA1 (patch-gcc_config_i386_i386.c) = 49ba75bb347a9c96606a7bef7e0f972488d881b3
 SHA1 (patch-gcc_config_i386_openbsd.h) = 0adb1e531eb9d773cbd6944f279e949e59035bd3
 SHA1 (patch-gcc_config_i386_openbsd64.h) = c4fdb98de196702afad36a75886967babf49a55a
 SHA1 (patch-gcc_config_i386_openbsdelf.h) = cd7afa938514dc80fb53c683fb089468c935d2ae
+SHA1 (patch-gcc_config_netbsd.h) = 086b593cf9f05e654df9e1a527485ca727ec44cc
 SHA1 (patch-gcc_config_openbsd-libpthread.h) = 826aaae4b2dda5a49ec71510f0752aba3c1b0b91
 SHA1 (patch-gcc_config_openbsd.h) = a396d14b2df78a4c45d3e51ef7fe960bbc8d5754
 SHA1 (patch-gcc_config_t-openbsd) = 662fe8d0c4b58145fb3268bc7ac432a1616c1106
@@ -48,7 +49,14 @@ SHA1 (patch-gcc_lto_lto.c) = 3c7df0691d300d2915388e7ef019b9717a9673d7
 SHA1 (patch-gcc_opts.c) = e02ebec8a9de24492a3aba80ee8c742446f2c549
 SHA1 (patch-gcc_unwind-dw2-fde-glibc.c) = 704ccc2b1058344586e0ccb8bcd291f41d93ed0a
 SHA1 (patch-gcc_unwind-dw2-fde-openbsd.c) = 74b7df494848d8d52e4574bac3fa3742cd3ff0d7
+SHA1 (patch-include_libiberty.h) = 101c12fad8092c7eb7ba41a75ca84f9a8017589b
 SHA1 (patch-libgcc_config_t-slibgcc-darwin) = 2ddda2dd979f27c623e47db70c5abb3befdb68c9
+SHA1 (patch-libiberty___doprnt.c) = 20f839e98ca235d5a34adcad6b7ea4a77f06a9e8
+SHA1 (patch-libiberty_asprintf.c) = 39d8ca4c95aa035c4d8e9faba2e5919c13f4444c
+SHA1 (patch-libiberty_concat.c) = 07fe2982d57151579736361ca15f3edd8b0bce69
+SHA1 (patch-libiberty_snprintf.c) = 25e131f8ea4e6f8b567088f653f6a02153aec202
+SHA1 (patch-libiberty_vasprintf.c) = a8c0ec0c3e9dbfcd675a0bb02a89e8c51a885605
+SHA1 (patch-libiberty_vsnprintf.c) = 362ea0ce3f86df6548388878006db4f951aa1f09
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = eac78601d0f531c8a49c88eacc59691312f1cf25
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 830038744cbbb713ecc3f960a9509bef16176db9
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__noninline.h) = ce481809b051cb281772a0ad4d561241731f7556
