@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3698 2016/09/06 19:20:51 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.3699 2016/09/06 19:26:59 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5240,3 +5240,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc46 to 4.6.4nb5 [maya 2016-09-06]
 	Updated devel/alex to 3.1.7 [fhajny 2016-09-06]
 	Updated net/rancid to 3.5.1 [pettai 2016-09-06]
+	Updated pkgtools/pkglint to 5.4.8 [rillig 2016-09-06]
