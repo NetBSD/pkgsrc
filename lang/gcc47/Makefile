@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/07/09 06:38:24 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/09/06 12:00:33 maya Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -8,7 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC47_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc47-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC47_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -67,6 +67,20 @@ CHECK_SHLIBS_SKIP+=	${GCC_PKGNAME}/lib*/libgcj_bc.so*
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
+
+.include "../../mk/compiler.mk"
+.if !empty(CC_VERSION:Mgcc-5.*)
+# hangs "checking for compiler with PCH support"
+# similar to GCC bug 54719/54645.
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+# on NetBSD, use the native SSP code in libc
+CONFIGURE_ARGS+=        --disable-libssp
+.else
+CONFIGURE_ARGS+=        --enable-libssp
+.endif
 
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
