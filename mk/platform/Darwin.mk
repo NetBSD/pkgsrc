@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.82 2016/07/08 21:23:57 sevan Exp $
+# $NetBSD: Darwin.mk,v 1.83 2016/09/06 09:50:20 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -67,8 +67,9 @@ ROOT_GROUP?=		wheel
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
-ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
+ULIMIT_CMD_cputime?=	ulimit -t `ulimit -H -t`
 
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
 USERADD?=		${LOCALBASE}/sbin/useradd
