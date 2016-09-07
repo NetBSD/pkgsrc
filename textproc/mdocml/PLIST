@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2016/07/14 15:26:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/09/07 18:50:05 wiz Exp $
 bin/apropos
 bin/demandoc
 bin/man
 bin/mandoc
-bin/soelim
+bin/msoelim
 bin/whatis
 include/mandoc/man.h
 include/mandoc/mandoc.h
@@ -15,7 +15,7 @@ man/man1/apropos.1
 man/man1/demandoc.1
 man/man1/man.1
 man/man1/mandoc.1
-man/man1/soelim.1
+man/man1/msoelim.1
 man/man1/whatis.1
 man/man3/mandoc.3
 man/man3/mandoc_escape.3
