@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2016/01/27 18:56:31 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/09/07 21:13:44 szptvlfn Exp $
 bin/sylpheed
+include/sylpheed/plugin-types.h
 include/sylpheed/plugin.h
 include/sylpheed/sylph/account.h
 include/sylpheed/sylph/base64.h
