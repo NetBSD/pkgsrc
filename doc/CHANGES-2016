@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3708 2016/09/07 13:47:11 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3709 2016/09/07 13:58:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5256,3 +5256,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django-classy-tags to 0.8.0 [adam 2016-09-07]
 	Updated databases/py-sqlalchemy to 1.0.15 [adam 2016-09-07]
 	Updated www/py-django-treebeard to 4.0.1 [adam 2016-09-07]
+	Updated www/py-django-sekizai to 0.10.0 [adam 2016-09-07]
