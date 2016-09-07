@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/11/04 01:01:33 agc Exp $
+$NetBSD: distinfo,v 1.17 2016/09/07 00:20:33 gdt Exp $
 
-SHA1 (gutenprint-5.2.10.tar.bz2) = 9690f9bf0a4c4c6c5a35b43d889ca8a3216c766c
-RMD160 (gutenprint-5.2.10.tar.bz2) = 46d214b3371eaa8aa0fc746eba362068668211ab
-SHA512 (gutenprint-5.2.10.tar.bz2) = bb71fd5c127748730dde01471b09907d500b72c35401abaf92c631d04156bacafd4b1a9baef61f48db6c4a622fd612a1e2834ed30207b5b178767ea9d9d5e1ac
-Size (gutenprint-5.2.10.tar.bz2) = 6241585 bytes
+SHA1 (gutenprint-5.2.11.tar.bz2) = 2a00c84ebb382c701d95e18b7decf1268bb2b9d2
+RMD160 (gutenprint-5.2.11.tar.bz2) = 30d9eb246ad1aacd34e9c8fec26fe721de79c044
+SHA512 (gutenprint-5.2.11.tar.bz2) = f4010e489dd6763b19113abf1d55e84cea8d36b920d03dbe204dba30ab0d3fb3e3391e739cd1a56e2f63581c8ce4a856a7f747deb6e7b18d7e1f7a3d87901c60
+Size (gutenprint-5.2.11.tar.bz2) = 6570118 bytes
 SHA1 (patch-aa) = 711c925b330a4c4f960439a1722251a4f022ac9f
-SHA1 (patch-src_cups_test-ppds) = 6c547013b0c9b11744f3730e78d2aacc88af9813
 SHA1 (patch-src_main_print-olympus.c) = 48b421344f35216fdd663da075e40ce4fac0382b
