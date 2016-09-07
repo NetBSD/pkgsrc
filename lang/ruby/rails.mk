@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.54 2016/03/05 05:23:26 taca Exp $
+# $NetBSD: rails.mk,v 1.54.4.1 2016/09/07 19:03:34 bsiegert Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -38,7 +38,7 @@ _RUBY_RAILS_MK=	# defined
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS32_VERSION?=	3.2.22.2
+RUBY_RAILS32_VERSION?=	3.2.22.4
 
 RUBY_RAILS_SUPPORTED?=	# defined
 RUBY_RAILS_DEFAULT?=	32
