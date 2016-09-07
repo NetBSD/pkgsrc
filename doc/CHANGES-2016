@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3701 2016/09/07 04:18:36 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3702 2016/09/07 06:21:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5243,3 +5243,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.4.8 [rillig 2016-09-06]
 	Updated print/gutenprint-lib to 5.2.11 [gdt 2016-09-07]
 	Updated editors/texstudio to 2.11.0 [mef 2016-09-07]
+	Updated devel/p5-Variable-Magic to 0.60 [wiz 2016-09-07]
