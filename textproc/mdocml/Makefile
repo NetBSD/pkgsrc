@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2016/07/20 23:42:12 sevan Exp $
+# $NetBSD: Makefile,v 1.58 2016/09/07 18:50:05 wiz Exp $
 
 DISTNAME=	mdocml-1.13.4
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
@@ -33,6 +34,7 @@ post-extract:
 	${ECHO} INSTALL_MAN=\"${INSTALL_MAN:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} INSTALL_DATA=\"${INSTALL_DATA:Q}\" >> ${WRKSRC}/configure.local
 	${ECHO} MANM_ROFF="mandoc-roff" >> ${WRKSRC}/configure.local
+	${ECHO} BINM_SOELIM="msoelim" >> ${WRKSRC}/configure.local
 # Need -lrt for nanosleep(2) on Solaris.
 .if ${OPSYS} == "SunOS"
 	${ECHO} LDADD=\"-lrt\" >> ${WRKSRC}/configure.local
