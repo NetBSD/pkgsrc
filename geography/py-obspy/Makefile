@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/09/05 16:09:11 richard Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/07 13:36:35 richard Exp $
 
 DISTNAME=	obspy-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,7 +30,7 @@ pre-configure:
 .include "../../lang/python/pyversion.mk"
 
 .if exists(${PYTHONBIN:Q})
-PYPLATFORM!=	${PYTHONBIN} -c 'import platform; print platform.system() + "_" + platform.architecture()[0]'
+PYPLATFORM!=	${PYTHONBIN} -c 'import platform; print (platform.system() + "_" + platform.architecture()[0])'
 
 PLIST_SUBST+=		PYPLATFORM=${PYPLATFORM} PYPKGPREFIX=${PYPKGPREFIX}
 PRINT_PLIST_AWK+=       /^${PYPLATFORM:S|/|\\/|g}/ \
