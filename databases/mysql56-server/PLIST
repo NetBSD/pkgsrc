@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/08/04 10:09:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.26 2016/09/07 12:58:25 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -640,7 +640,6 @@ share/mysql/test/include/ps_modify1.inc
 share/mysql/test/include/ps_query.inc
 share/mysql/test/include/ps_renew.inc
 share/mysql/test/include/purge_first_log.inc
-share/mysql/test/include/python_with_json.inc
 share/mysql/test/include/query_cache.inc
 share/mysql/test/include/query_cache_sql_prepare.inc
 share/mysql/test/include/rand.inc
@@ -1686,6 +1685,7 @@ share/mysql/test/r/validate_password_plugin.result
 share/mysql/test/r/varbinary.result
 share/mysql/test/r/variables-big.result
 share/mysql/test/r/variables-notembedded.result
+share/mysql/test/r/variables-win.result
 share/mysql/test/r/variables.result
 share/mysql/test/r/variables_community.result
 share/mysql/test/r/variables_debug.result
@@ -3500,6 +3500,7 @@ share/mysql/test/suite/innodb/r/innodb-double-write.result
 share/mysql/test/suite/innodb/r/innodb-index-debug.result
 share/mysql/test/suite/innodb/r/innodb-index-online-delete.result
 share/mysql/test/suite/innodb/r/innodb-index-online-fk.result
+share/mysql/test/suite/innodb/r/innodb-index-online-norebuild.result
 share/mysql/test/suite/innodb/r/innodb-index-online-purge.result
 share/mysql/test/suite/innodb/r/innodb-index-online.result
 share/mysql/test/suite/innodb/r/innodb-index.result
@@ -3704,6 +3705,7 @@ share/mysql/test/suite/innodb/t/innodb-index-debug.test
 share/mysql/test/suite/innodb/t/innodb-index-online-delete.test
 share/mysql/test/suite/innodb/t/innodb-index-online-fk.test
 share/mysql/test/suite/innodb/t/innodb-index-online-master.opt
+share/mysql/test/suite/innodb/t/innodb-index-online-norebuild.test
 share/mysql/test/suite/innodb/t/innodb-index-online-purge.test
 share/mysql/test/suite/innodb/t/innodb-index-online.test
 share/mysql/test/suite/innodb/t/innodb-index.test
@@ -5012,7 +5014,7 @@ share/mysql/test/suite/opt_trace/t/security_ps_prot.test
 share/mysql/test/suite/opt_trace/t/subquery_no_prot.test
 share/mysql/test/suite/opt_trace/t/subquery_ps_prot.test
 share/mysql/test/suite/opt_trace/t/temp_table.test
-share/mysql/test/suite/opt_trace/validate_json.py
+share/mysql/test/suite/opt_trace/validate_json.pl
 share/mysql/test/suite/parts/inc/methods1.inc
 share/mysql/test/suite/parts/inc/part_blocked_sql_funcs_main.inc
 share/mysql/test/suite/parts/inc/part_exch_drop_tabs.inc
@@ -5482,7 +5484,6 @@ share/mysql/test/suite/perfschema/include/table_io_setup_helper.inc
 share/mysql/test/suite/perfschema/include/upgrade_check.inc
 share/mysql/test/suite/perfschema/include/wait_for_pfs_thread_count.inc
 share/mysql/test/suite/perfschema/include/wait_till_sleep.inc
-share/mysql/test/suite/perfschema/r/aggregate.result
 share/mysql/test/suite/perfschema/r/all_tests.result
 share/mysql/test/suite/perfschema/r/bad_option_1.result
 share/mysql/test/suite/perfschema/r/bad_option_2.result
@@ -5800,7 +5801,6 @@ share/mysql/test/suite/perfschema/r/threads_mysql.result
 share/mysql/test/suite/perfschema/r/trigger_table_io.result
 share/mysql/test/suite/perfschema/r/unary_digest.result
 share/mysql/test/suite/perfschema/r/view_table_io.result
-share/mysql/test/suite/perfschema/t/aggregate.test
 share/mysql/test/suite/perfschema/t/all_tests.test
 share/mysql/test/suite/perfschema/t/bad_option_1.test
 share/mysql/test/suite/perfschema/t/bad_option_2.test
@@ -9796,6 +9796,7 @@ share/mysql/test/t/variables-big.test
 share/mysql/test/t/variables-master.opt
 share/mysql/test/t/variables-notembedded-master.opt
 share/mysql/test/t/variables-notembedded.test
+share/mysql/test/t/variables-win.test
 share/mysql/test/t/variables.test
 share/mysql/test/t/variables_community.test
 share/mysql/test/t/variables_debug.test
