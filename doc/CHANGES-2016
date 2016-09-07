@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3700 2016/09/07 00:20:47 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3701 2016/09/07 04:18:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5242,3 +5242,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/rancid to 3.5.1 [pettai 2016-09-06]
 	Updated pkgtools/pkglint to 5.4.8 [rillig 2016-09-06]
 	Updated print/gutenprint-lib to 5.2.11 [gdt 2016-09-07]
+	Updated editors/texstudio to 2.11.0 [mef 2016-09-07]
