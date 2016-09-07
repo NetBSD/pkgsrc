@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/09/03 15:58:22 sevan Exp $
+# $NetBSD: Makefile,v 1.27 2016/09/07 21:03:21 joerg Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
@@ -30,6 +30,7 @@ MAINTAINER=		agc@NetBSD.org
 
 # FIXME: Packages shall only install into ${LOCALBASE} or a subdirectory.
 PREFIX=			/
+NOT_FOR_BULK_PLATFORM=	*-*-*
 
 NLSDIR=			usr/share/nls
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
