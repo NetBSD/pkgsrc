@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3710 2016/09/07 18:50:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3711 2016/09/07 21:14:13 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5258,3 +5258,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django-treebeard to 4.0.1 [adam 2016-09-07]
 	Updated www/py-django-sekizai to 0.10.0 [adam 2016-09-07]
 	Updated textproc/mdocml to 1.13.4nb1 [wiz 2016-09-07]
+	Updated mail/sylpheed to 3.5.1 [szptvlfn 2016-09-07]
