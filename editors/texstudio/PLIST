@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/07 22:29:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/07 04:18:27 mef Exp $
 bin/texstudio
 share/applications/texstudio.desktop
 share/icons/hicolor/scalable/apps/texstudio.svg
@@ -126,6 +126,7 @@ share/texstudio/texstudio_fr.qm
 share/texstudio/texstudio_hu.qm
 share/texstudio/texstudio_it.qm
 share/texstudio/texstudio_ja.qm
+share/texstudio/texstudio_nl.qm
 share/texstudio/texstudio_pl.qm
 share/texstudio/texstudio_pt_BR.qm
 share/texstudio/texstudio_ru_RU.qm
