@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/07/09 06:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/09/07 23:31:40 markd Exp $
 
 DISTNAME=	kdenlive-0.9.10
 PKGREVISION=	1
@@ -22,7 +22,7 @@ USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt perl pkg-config
 
-CMAKE_ARGS+=	-DWITH_V4L=OFF
+CMAKE_ARGS+=	-DWITH_LibV4L2=OFF
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/share/icons/oxygen/*/mimetypes/application-x-kdenlivetitle.png
