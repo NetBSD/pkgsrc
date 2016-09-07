@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2016/01/27 18:56:31 szptvlfn Exp $
+$NetBSD: patch-configure,v 1.2 2016/09/07 21:13:44 szptvlfn Exp $
 
 replace == with =
 
---- configure.orig	2016-01-15 17:17:25.000000000 +0900
-+++ configure	2016-01-28 03:06:54.940828857 +0900
-@@ -12567,7 +12567,7 @@
+--- configure.orig	2016-07-29 03:00:06.000000000 +0000
++++ configure
+@@ -13708,7 +13708,7 @@ fi
  
  
  
@@ -12,4 +12,4 @@ replace == with =
 +if test "$os_osx" = yes; then
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gtkosx_application_ready in -lgtkmacintegration" >&5
  $as_echo_n "checking for gtkosx_application_ready in -lgtkmacintegration... " >&6; }
- if test "${ac_cv_lib_gtkmacintegration_gtkosx_application_ready+set}" = set; then :
+ if ${ac_cv_lib_gtkmacintegration_gtkosx_application_ready+:} false; then :
