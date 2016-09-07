@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/04/20 20:19:38 adam Exp $
+$NetBSD: distinfo,v 1.4 2016/09/07 13:45:29 adam Exp $
 
-SHA1 (django-treebeard-4.0.tar.gz) = 0a9c591012952dbcae060da425b89ed011318f10
-RMD160 (django-treebeard-4.0.tar.gz) = 3575047eff00930607e4ad8fc02ef3a30caa15ae
-SHA512 (django-treebeard-4.0.tar.gz) = 0308e5998ce6b729ef1fca8841e44bbdc31f8bb013f63e285c386ec2a038c85c5b252617b85a2c22e24aa685f3790557052facb6f00e45b7ed630ec9f1c93dfe
-Size (django-treebeard-4.0.tar.gz) = 92991 bytes
+SHA1 (django-treebeard-4.0.1.tar.gz) = f0986349b6b8eb9ba4794fc8d7203d71804e2a83
+RMD160 (django-treebeard-4.0.1.tar.gz) = 5299f0aefb5d1b44d0dfcff1da38c84f60983476
+SHA512 (django-treebeard-4.0.1.tar.gz) = 8bc3bd0bb711a3b2173842c6a42e9cf05054658db6026b173e08fbc188e8e7d773423ab1e5040d4e80f970df0f8341db56c8e83582020bed9f9f66abe20e55ed
+Size (django-treebeard-4.0.1.tar.gz) = 93356 bytes
