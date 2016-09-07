@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.13 2016/09/06 19:13:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.14 2016/09/07 19:18:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -98,4 +98,16 @@ lang/python34: security fix
 
 Pullup ticket #5092 - requested by sevan
 lang/python35: security fix
+
+Pullup ticket #5093 - requested by taca
+www/apache24: security fix
+
+Pullup ticket #5094 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5095 - requested by taca
+www/ruby-actionpack32: security fix
+
+Pullup ticket #5096 - requested by taca
+lang/php70: security fix
 
