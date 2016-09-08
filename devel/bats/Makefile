@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/05/02 02:29:14 seb Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/08 14:34:02 jperkin Exp $
 
 DISTNAME=		bats-0.4.0
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=sstephenson/}
 
-MAINTAINER=		pkgsrc@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/sstephenson/bats
 COMMENT=		Testing framework for Bash
 LICENSE=		mit
