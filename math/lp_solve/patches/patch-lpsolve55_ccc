@@ -1,7 +1,20 @@
-$NetBSD: patch-lpsolve55_ccc,v 1.1 2015/12/08 17:15:01 joerg Exp $
+$NetBSD: patch-lpsolve55_ccc,v 1.2 2016/09/08 05:12:39 richard Exp $
+
+recent versions of gcc are noisy unless main() is declared returning 'int'
+and isnan() needs a floating argument else NOISNAN is defined causing
+problems.
 
 --- lpsolve55/ccc.orig	2009-03-25 00:27:18.000000000 +0000
 +++ lpsolve55/ccc
+@@ -18,7 +18,7 @@ mkdir bin bin/$PLATFORM >/dev/null 2>&1
+ echo '#include <stdio.h>'>>/tmp/isnan.c
+ echo '#include <stdlib.h>'>>/tmp/isnan.c
+ echo '#include <math.h>'>>/tmp/isnan.c
+-echo 'main(){isnan(0);}'>>/tmp/isnan.c
++echo 'int main(){isnan(0.0);}'>>/tmp/isnan.c
+ $c /tmp/isnan.c -o /tmp/isnan $math >/dev/null 2>&1
+ if [ $? = 0 ]
+ then NOISNAN=
 @@ -44,7 +44,7 @@ ranlib bin/$PLATFORM/liblpsolve55.a
  if [ "$so" != "" ]
  then
