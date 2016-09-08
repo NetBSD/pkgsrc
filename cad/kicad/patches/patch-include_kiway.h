@@ -1,4 +1,4 @@
-$NetBSD: patch-include_kiway.h,v 1.1 2016/02/03 19:34:34 bouyer Exp $
+$NetBSD: patch-include_kiway.h,v 1.2 2016/09/08 09:32:28 bouyer Exp $
 
 --- include/kiway.h.orig	2015-12-14 21:13:18.000000000 +0100
 +++ include/kiway.h	2015-12-14 21:13:39.000000000 +0100
