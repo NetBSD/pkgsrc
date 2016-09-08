@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/12/08 17:15:01 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2016/09/08 05:12:39 richard Exp $
 #
 
-DISTNAME=	lp_solve_5.5.2.0_source
+DISTNAME=	lp_solve_5.5.2.3_source
 PKGNAME=	${DISTNAME:S/_source//:S/_5/-5/}
-PKGREVISION=	1
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lpsolve/}
 
@@ -28,7 +27,7 @@ SUBST_FILES.dl+=	demo/ccc
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64" || \
-	${MACHINE_ARCH} == "x86_64"
+	${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "aarch64"
 LPSOLVE_ARCH=	ux64
 .else
 LPSOLVE_ARCH=	ux32
