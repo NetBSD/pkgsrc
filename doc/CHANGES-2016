@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3718 2016/09/08 14:14:33 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3719 2016/09/08 14:28:26 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5271,3 +5271,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/kicad-footprints to 4.0.4 [bouyer 2016-09-08]
 	Updated cad/kicad-i18n to 4.0.4 [bouyer 2016-09-08]
 	Updated graphics/py-gdmodule to 0.59 [adam 2016-09-08]
+	Updated pkgtools/bootstrap-mk-files to 20160908 [joerg 2016-09-08]
