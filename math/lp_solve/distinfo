@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.4 2015/12/08 17:15:01 joerg Exp $
+$NetBSD: distinfo,v 1.5 2016/09/08 05:12:39 richard Exp $
 
-SHA1 (lp_solve_5.5.2.0_source.tar.gz) = e2830053cf079839b9ce21662cbc886ac6d31c80
-RMD160 (lp_solve_5.5.2.0_source.tar.gz) = 23a69c71062747ddf4cbc57120cd7db5f9378ac2
-Size (lp_solve_5.5.2.0_source.tar.gz) = 799623 bytes
+SHA1 (lp_solve_5.5.2.3_source.tar.gz) = 867a606fcc77612b71a0a6baa5f07a273f3023a7
+RMD160 (lp_solve_5.5.2.3_source.tar.gz) = 5657c47cf996979072fb2a1135d071e48da52ea1
+SHA512 (lp_solve_5.5.2.3_source.tar.gz) = ed4c9e993e6836fdc8bae76d4ff2f48594d6f9ababbedaf83253d0e31815faa8608b110866b03a0336a7334c531efb9987ec231f8e7a62eff7efea683a1868cf
+Size (lp_solve_5.5.2.3_source.tar.gz) = 812420 bytes
 SHA1 (patch-aa) = a77ec29e056252b3b82c1a1acdd463b5ff7f6f6b
 SHA1 (patch-demo_ccc) = 6262975fdcc61e94390060425a79e8bbc5f4554b
-SHA1 (patch-lp__solve_ccc) = b70bbaedc56c04e3d2dad14050c0278142f382bd
+SHA1 (patch-lp__solve_ccc) = 122d6ba0cb00acc6abbf4826f71e29ae1beb808d
 SHA1 (patch-lp__utils.c) = b0774bd7b323f12c97c7bc78c26f64a75c841f34
-SHA1 (patch-lpsolve55_ccc) = ce334b85675ca0018cd19bcc828bb8e2cad38829
+SHA1 (patch-lpsolve55_ccc) = 0ac4adf032b89a76ccc3f834c750c0f3885a1aa5
