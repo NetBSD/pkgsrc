@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/25 10:07:23 wiedi Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/08 14:31:22 jperkin Exp $
 
 DISTNAME=	b2sum-20160619
 CATEGORIES=	sysutils
@@ -13,6 +13,7 @@ LICENSE=	cc0-1.0-universal
 
 USE_LANGUAGES=	c99
 MAKE_FILE=	makefile
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=	NO_OPENMP=1
 
 WRKSRC=		${WRKDIR}/BLAKE2-${PKGVERSION_NOREV}/b2sum
