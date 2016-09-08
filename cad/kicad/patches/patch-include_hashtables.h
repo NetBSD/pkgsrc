@@ -1,4 +1,4 @@
-$NetBSD: patch-include_hashtables.h,v 1.2 2016/02/03 19:34:33 bouyer Exp $
+$NetBSD: patch-include_hashtables.h,v 1.3 2016/09/08 09:32:28 bouyer Exp $
 
 --- include/hashtables.h.orig	2015-12-11 17:59:12.000000000 +0100
 +++ include/hashtables.h	2015-12-11 17:59:18.000000000 +0100
