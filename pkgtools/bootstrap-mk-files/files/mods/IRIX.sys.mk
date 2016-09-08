@@ -1,4 +1,4 @@
-#	$NetBSD: IRIX.sys.mk,v 1.4 2011/08/29 10:43:35 cheusov Exp $
+#	$NetBSD: IRIX.sys.mk,v 1.5 2016/09/08 14:28:12 joerg Exp $
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
 unix?=		We run Unix
@@ -22,7 +22,7 @@ LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 CC?=		cc
 NOGCCERROR?=	# defined
-DBG?=	-O2
+DBG?=		-O2
 CFLAGS?=	${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}

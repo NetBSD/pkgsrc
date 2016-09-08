@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.sys.mk,v 1.7 2015/08/31 09:03:19 jperkin Exp $
+#	$NetBSD: SunOS.sys.mk,v 1.8 2016/09/08 14:28:12 joerg Exp $
 #	NetBSD: sys.mk,v 1.58 2000/08/22 17:38:49 bjh21 Exp 
 #	@(#)sys.mk	8.2 (Berkeley) 3/21/94
 
@@ -26,20 +26,7 @@ LINK.S?=	${CC} ${AFLAGS} ${CPPFLAGS} ${LDFLAGS}
 
 # Unless told otherwise, assume GNU CC
 CC?=		gcc
-.if ${MACHINE_ARCH} == "alpha" || \
-    ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm26" || \
-		${MACHINE_ARCH} == "arm32" || \
-    ${MACHINE_ARCH} == "i386" || \
-    ${MACHINE_ARCH} == "m68k" || \
-    ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
-    ${MACHINE_ARCH} == "sparc" || \
-    ${MACHINE_ARCH} == "vax"
-DBG?=	-O2
-.elif ${MACHINE_ARCH} == "x86_64"
-DBG?=
-.else
-DBG?=	-O
-.endif
+DBG?=		-O2
 CFLAGS?=	${DBG}
 COMPILE.c?=	${CC} ${CFLAGS} ${CPPFLAGS} -c
 LINK.c?=	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS}
