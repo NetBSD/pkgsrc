@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.151 2016/08/22 03:21:17 taca Exp $
+# $NetBSD: phpversion.mk,v 1.152 2016/09/08 09:40:11 joerg Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -29,6 +29,12 @@
 #
 #	Possible: 55 56 70 71
 #	Default: 55 56
+#
+# PHP_VERSIONS_INCOMPATIBLE
+#	The PHP versions that are not supported by the package.
+#
+#	Possible: 55 56 70 71
+#	Default: (empty)
 #
 # PHP_CHECK_INSTALLED
 #	Check installed version of PHP.  Should be used by lang/php55,
@@ -102,9 +108,14 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 
 PHP_VERSION_DEFAULT?=		56
 PHP_VERSIONS_ACCEPTED?=		55 56 70 71
+.for pv in ${PHP_VERSIONS_ACCEPTED}
+.  if empty(PHP_VERSIONS_INCOMPATIBLE:M${pv})
+_PHP_VERSIONS_ACCEPTED+=	${pv}
+.  endif
+.endfor
 
 # transform the list into individual variables
-.for pv in ${PHP_VERSIONS_ACCEPTED}
+.for pv in ${_PHP_VERSIONS_ACCEPTED}
 _PHP_VERSION_${pv}_OK=	yes
 .endfor
 
@@ -137,7 +148,7 @@ _PHP_VERSION=	${PHP_VERSION_DEFAULT}
 .endif
 # prefer an already installed version, in order of "accepted"
 .if !defined(_PHP_VERSION)
-.for pv in ${PHP_VERSIONS_ACCEPTED}
+.for pv in ${_PHP_VERSIONS_ACCEPTED}
 .if defined(_PHP_VERSION_${pv}_INSTALLED)
 _PHP_VERSION?=	${pv}
 .else
