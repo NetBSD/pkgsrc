@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/02/03 19:41:36 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2016/09/08 09:32:29 bouyer Exp $
 
-SHA1 (kicad-i18n-4.0.1.zip) = a05a6e5d0a7dacffc51c823f8ece051c97ff94bf
-RMD160 (kicad-i18n-4.0.1.zip) = 7a9e6a067143cfeb37ffa69fc3fecc2c20c773aa
-SHA512 (kicad-i18n-4.0.1.zip) = edf642536cc8254d5f547f3e6d99d426fbcedc355a00e95835a404cc3c680f59958a029988c6f0abb184ba50afedad912ca5ad5a82ee3b78ac779d642f6c1360
-Size (kicad-i18n-4.0.1.zip) = 2283355 bytes
+SHA1 (kicad-i18n-4.0.4.zip) = 9830065f9c47c01b8bf02154e5770464a9dabd80
+RMD160 (kicad-i18n-4.0.4.zip) = 3eb008c2507c9e52910fd72710035e35d06eb552
+SHA512 (kicad-i18n-4.0.4.zip) = 1f719519a580460178ddd77d4b5392ea3dcaa9a50da14fdb695161b6ce616ecd2dc6a195ff2d9313fe01808d43243a2a20f2f55e6c67e6cc254469432d2aca11
+Size (kicad-i18n-4.0.4.zip) = 2419394 bytes
 SHA1 (patch-CMakeLists.txt) = a24893bbca87d03fe3103095766fcb6f746252f7

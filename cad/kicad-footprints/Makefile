@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/02/03 19:39:47 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/08 09:32:28 bouyer Exp $
 #
 
-V=		4.0.1
+V=		4.0.4
 DISTNAME=	kicad-footprints-${V}
 CATEGORIES=	cad
 MASTER_SITES=	http://downloads.kicad-pcb.org/libraries/
@@ -17,6 +17,7 @@ do-build:
 do-install:
 	${INSTALL_DATA_DIR} ${MODDIR}
 	cd ${WRKSRC}; \
+	find . -name PaxHeader -print | xargs rm -rf; \
 	for d in *; do \
 		${INSTALL_DATA_DIR} ${MODDIR}/$$d; \
 	done;

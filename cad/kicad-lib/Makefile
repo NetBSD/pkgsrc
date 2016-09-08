@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/02/03 19:36:49 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/08 09:32:29 bouyer Exp $
 #
 
-V=		4.0.1
+V=		4.0.4
 DISTNAME=	kicad-library-${V}
 PKGNAME=	kicad-lib-${V}
 CATEGORIES=	cad

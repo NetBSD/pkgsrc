@@ -1,4 +1,4 @@
-$NetBSD: patch-include-kicad_string.h,v 1.2 2016/02/03 19:34:33 bouyer Exp $
+$NetBSD: patch-include-kicad_string.h,v 1.3 2016/09/08 09:32:28 bouyer Exp $
 
 Standard string library should be included as well.
 
