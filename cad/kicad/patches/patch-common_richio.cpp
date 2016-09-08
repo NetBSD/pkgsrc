@@ -1,4 +1,4 @@
-$NetBSD: patch-common_richio.cpp,v 1.2 2016/02/03 19:34:33 bouyer Exp $
+$NetBSD: patch-common_richio.cpp,v 1.3 2016/09/08 09:32:28 bouyer Exp $
 
 Fix non-portable use of setvbuf()
 Reported upstream as bug id 1280897
