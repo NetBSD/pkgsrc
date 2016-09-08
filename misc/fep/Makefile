@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/12/20 21:46:16 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2016/09/08 14:44:44 jperkin Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -16,7 +16,7 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 MANCOMPRESSED=	yes
-INSTALLATION_DIRS+= bin man/man1
+INSTALLATION_DIRS+= bin ${PKGMANDIR}/man1
 
 .include "../../mk/compiler.mk"
 
