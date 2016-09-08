@@ -1,7 +1,20 @@
-$NetBSD: patch-lp__solve_ccc,v 1.1 2015/12/07 17:40:27 joerg Exp $
+$NetBSD: patch-lp__solve_ccc,v 1.2 2016/09/08 05:12:39 richard Exp $
 
---- lp_solve/ccc.orig	2015-12-07 17:17:20.529655116 +0000
+recent versions of gcc are noisy unless main() is declared returning 'int'
+and isnan() needs a floating argument else NOISNAN is defined causing
+problems.
+
+--- lp_solve/ccc.orig	2009-01-25 18:39:03.000000000 +0000
 +++ lp_solve/ccc
+@@ -20,7 +20,7 @@ math=-lm
+ echo '#include <stdio.h>'>>/tmp/isnan.c
+ echo '#include <stdlib.h>'>>/tmp/isnan.c
+ echo '#include <math.h>'>>/tmp/isnan.c
+-echo 'main(){isnan(0);}'>>/tmp/isnan.c
++echo 'int main(){isnan(0.0);}'>>/tmp/isnan.c
+ $c /tmp/isnan.c -o /tmp/isnan $math >/dev/null 2>&1
+ if [ $? = 0 ]
+ then NOISNAN=
 @@ -38,4 +38,4 @@ then opts='-O0'
  else dl=-ldl
  fi
