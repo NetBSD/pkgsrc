@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/09/01 10:27:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.28 2016/09/08 15:19:18 joerg Exp $
 
 DISTNAME=		puppet-3.8.7
 CATEGORIES=		sysutils
@@ -12,7 +12,7 @@ LICENSE=		apache-2.0
 DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<3:../../sysutils/ruby-facter
 DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<3:../../databases/ruby-hiera
 
-RUBY_VERSION_SUPPORTED=	21
+RUBY_VERSIONS_ACCEPTED=	21
 
 RUBY_JSON_REQD=		0
 OVERRIDE_GEMSPEC=	json_pure:json>0

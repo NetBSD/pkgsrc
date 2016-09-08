@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/04/14 15:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/08 15:19:19 joerg Exp $
 
 DISTNAME=	xhtmldiff-1.2.2
 PKGREVISION=	2
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-diff-lcs>=1.1.1:../../textproc/ruby-diff-lcs
 
 CONFLICTS+=	ruby[1-9][0-9]-xhtmldiff-[0-9]* xhtmldiff-[0-9]*
 
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 
 post-extract:
 	cp ${WRKSRC}/packaging/xhtmldiff.gemspec ${GEM_SPECFILE}
