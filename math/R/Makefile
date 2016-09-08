@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2016/07/26 04:53:33 wen Exp $
+# $NetBSD: Makefile,v 1.168 2016/09/08 20:41:25 joerg Exp $
 
 DISTNAME=		R-3.3.1
 CATEGORIES=		math
@@ -69,6 +69,8 @@ CONFIGURE_ENV+=		r_cv_complete_blas=yes
 
 # Broken test for bzlib >= 1.0.5 in R 2.7.0
 CONFIGURE_ENV+=		r_cv_have_bzlib=yes
+# Override zlib 1.2.5 requirement
+CONFIGURE_ENV+=		r_cv_header_zlib_h=yes
 
 CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD}
 CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
@@ -128,7 +130,6 @@ SUBST_STAGE.fixwrap=	post-build
 SUBST_FILES.fixwrap=	libtool
 SUBST_SED.fixwrap=	-e "s,${WRAPPER_BINDIR}/libtool,${PKG_LIBTOOL},g"
 
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.5
 BUILDLINK_API_DEPENDS.bzip2+=	bzip2>=1.0.5
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
