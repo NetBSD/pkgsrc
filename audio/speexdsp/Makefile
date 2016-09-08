@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/01/17 00:16:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/08 15:25:05 richard Exp $
 
 DISTNAME=	speexdsp-1.2rc3
 CATEGORIES=	audio
@@ -13,6 +13,10 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	speexdsp.pc.in
 USE_TOOLS+=		pkg-config
+
+.if ${MACHINE_ARCH} == "aarch64"
+CONFIGURE_ARGS+=	--disable-neon
+.endif
 
 BUILDLINK_API_DEPENDS.speex+=	speex>=1.2rc2
 .include "../../audio/speex/buildlink3.mk"
