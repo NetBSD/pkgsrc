@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/08/14 13:39:29 mef Exp $
+# $NetBSD: Makefile,v 1.15 2016/09/08 01:48:39 dholland Exp $
 #
 
 DISTNAME=	intercal-0.30
@@ -15,6 +15,9 @@ USE_TOOLS+=	flex yacc
 GNU_CONFIGURE=	yes
 INSTALLATION_DIRS+=	bin lib
 INFO_FILES=	yes
+
+# 0.30 still mostly calls itself 0.29
+PLIST_SUBST+=	PLISTVERSION=0.29
 
 CONFIGURE_ENV+=		LEX="flex -l"
 
