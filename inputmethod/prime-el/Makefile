@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/29 11:06:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2016/09/08 15:19:17 joerg Exp $
 #
 
 DISTNAME=	prime-el-1.5.1.3
@@ -13,7 +13,7 @@ COMMENT=	PRIME client for emacsen
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}suikyo-elisp-[0-9]*:../../textproc/suikyo-elisp
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
