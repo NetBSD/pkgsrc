@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/03/08 16:01:26 taca Exp $
+# $NetBSD: Makefile,v 1.13 2016/09/08 15:19:17 joerg Exp $
 
 DISTNAME=	rcov-1.0.0
 PKGREVISION=	1
@@ -9,7 +9,7 @@ HOMEPAGE=	http://github.com/relevance/rcov
 COMMENT=	Code coverage analysis for Ruby
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-RUBY_VERSION_SUPPORTED=	18
+RUBY_VERSIONS_ACCEPTED=	18
 
 USE_GCC_RUNTIME=	yes
 RUBYGEM_OPTIONS+=	--format-executable
