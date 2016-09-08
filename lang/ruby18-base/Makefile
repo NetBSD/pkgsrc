@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2016/03/05 11:28:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.87 2016/09/08 15:19:18 joerg Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby 1.8 based release minimum package
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-RUBY_VERSION_SUPPORTED=	18
+RUBY_VERSIONS_ACCEPTED=	18
 
 CONFLICTS=	${RUBY_PKGPREFIX}-dbm-[0-9]* \
 		${RUBY_PKGPREFIX}-digest-[0-9]* \
