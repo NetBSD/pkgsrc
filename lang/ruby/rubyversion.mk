@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.164 2016/07/09 10:11:08 rillig Exp $
+# $NetBSD: rubyversion.mk,v 1.165 2016/09/08 15:19:17 joerg Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -33,12 +33,12 @@
 #	Ruby version to use. This variable should not be set in
 #	packages.  Normally it is used by bulk build tools.
 #
-#		Possible values: ${RUBY_VERSION_SUPPORTED}
+#		Possible values: ${RUBY_VERSIONS_ACCEPTED}
 #		Default:         ${RUBY_VERSION_DEFAULT}
 #
 # === Package-settable variables ===
 #
-# RUBY_VERSION_SUPPORTED
+# RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
 #		Possible values: 18 21 22 23
@@ -248,16 +248,23 @@ RUBY_RDOC_PKGSRC_VERS=	4.2.2
 #
 RUBY_VERSION_DEFAULT?=	22
 
-RUBY_VERSION_SUPPORTED?= 22 23 21
+RUBY_VERSIONS_ACCEPTED?= 22 23 21
+RUBY_VERSIONS_INCOMPATIBLE?=
+
+.for rv in ${RUBY_VERSIONS_ACCEPTED}
+.  if empty(RUBY_VERSIONS_INCOMPATIBLE:M${rv})
+_RUBY_VERSIONS_ACCEPTED+=	${rv}
+.  endif
+.endfor
 
 .if defined(RUBY_VERSION_REQD)
-. for rv in ${RUBY_VERSION_SUPPORTED}
+. for rv in ${_RUBY_VERSIONS_ACCEPTED}
 .  if "${rv}" == ${RUBY_VERSION_REQD}
 RUBY_VER=	${rv}
 .  endif
 . endfor
 .elif !defined(RUBY_VER)
-. for rv in ${RUBY_VERSION_SUPPORTED}
+. for rv in ${_RUBY_VERSIONS_ACCEPTED}
 .  if "${rv}" == ${RUBY_VERSION_DEFAULT}
 RUBY_VER=	${rv}
 .  endif
@@ -265,7 +272,7 @@ RUBY_VER=	${rv}
 .endif
 
 .if !defined(RUBY_VER)
-. for rv in ${RUBY_VERSION_SUPPORTED}
+. for rv in ${_RUBY_VERSIONS_ACCEPTED}
 .  if !defined(RUBY_VER)
 RUBY_VER=	${rv}
 .  endif

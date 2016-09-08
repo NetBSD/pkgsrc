@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/07/09 06:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2016/09/08 15:19:19 joerg Exp $
 
 DISTNAME=	kdebindings-${_KDE_VERSION}
 PKGNAME=	kdebindings-ruby-${_KDE_VERSION}
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-pythondir
 CONFIGURE_ENV+=		DO_NOT_COMPILE="dcopperl python kjsembed qtsharp"
 
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 REPLACE_RUBY+= \
 	qtruby/bin/rbqtapi \
 	qtruby/bin/rbqtsh
