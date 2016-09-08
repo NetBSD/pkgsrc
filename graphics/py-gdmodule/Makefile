@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/09/08 14:13:07 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/09/08 14:42:20 darcy Exp $
 
 DISTNAME=	gdmodule-0.59
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,5 +24,6 @@ SUBST_SED.pkgpath+=	-e 's,"png","png16",g'
 BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.23
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
+.include "../../x11/Xaw-Xpm/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
