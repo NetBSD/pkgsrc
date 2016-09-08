@@ -1,4 +1,4 @@
-$NetBSD: patch-pcbnew_kicad_plugin.cpp,v 1.2 2016/02/03 19:34:34 bouyer Exp $
+$NetBSD: patch-pcbnew_kicad_plugin.cpp,v 1.3 2016/09/08 09:32:28 bouyer Exp $
 64bit time_t fix
 Reported upstream as bug id 1280901
 
