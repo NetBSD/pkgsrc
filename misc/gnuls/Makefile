@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2014/02/04 14:33:54 richard Exp $
+# $NetBSD: Makefile,v 1.27 2016/09/08 14:28:40 jperkin Exp $
 #
 
 .include "../../sysutils/coreutils/Makefile.common"
@@ -20,8 +20,8 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/g${f}
 	${INSTALL_DATA} ${WRKSRC}/man/${f}.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/g${f}.1
-	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}
-	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1
+	${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/${PKGGNUDIR}bin/${f}
+	${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/${PKGGNUDIR}${PKGMANDIR}/man1/${f}.1
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
