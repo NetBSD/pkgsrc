@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 19:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/08 01:11:28 wen Exp $
 #
 
-DISTNAME=	Geo-Ellipsoid-1.12
+DISTNAME=	Geo-Ellipsoid-1.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~jgibson/Geo-Ellipsoid-1.12/lib/Geo/Ellipsoid.pm
-COMMENT=	Geo::Ellipsoid - Longitude and latitude calculations using an ellipsoid model.
+HOMEPAGE=	http://search.cpan.org/~pjacklam/Geo-Ellipsoid-1.13/lib/Geo/Ellipsoid.pm
+COMMENT=	Longitude and latitude calculations using an ellipsoid model
 LICENSE=	${PERL5_LICENSE}
 
+DEPENDS+=	p5-Test-Number-Delta>=0.16:../../math/p5-Test-Number-Delta
+
 PERL5_PACKLIST=	auto/Geo/Ellipsoid/.packlist
-#PERL5_MODULE_TYPE=	Module::Install::Bundled
+
 MAKE_PARAMS+=	--skipdeps
 
 .include "../../lang/perl5/module.mk"
