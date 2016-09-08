@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/08/28 15:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/08 15:43:12 richard Exp $
 
 DISTNAME=	libv4l-0.4.3
 PKGREVISION=	3
@@ -8,6 +8,7 @@ MASTER_SITES=	http://people.atrpms.net/~hdegoede/
 MAINTAINER=	tech-multimedia@NetBSD.org
 HOMEPAGE=	http://people.atrpms.net/~hdegoede/
 COMMENT=	Video4Linux userspace library
+LICENSE=	gnu-gpl-v2
 
 USE_GCC_RUNTIME=	yes
 
@@ -29,8 +30,8 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/videoio.h ${DESTDIR}${PREFIX}/include/sys
 .elif !exists(/usr/include/linux/videodev.h)
 pre-configure:
-	${MKDIR} ${BUILDLINK_DIR}/include
-	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include/videodev.h
+	${MKDIR} ${BUILDLINK_DIR}/include/linux
+	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include/linux
 .endif
 
 PLIST_VARS=	needs_videoio

@@ -1,7 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2012/04/18 17:47:22 hans Exp $
+$NetBSD: patch-ak,v 1.5 2016/09/08 15:43:12 richard Exp $
 
 * XXX
 * 'mode_t' is promoted to `int' when passwd through `...'.
+* if SYS_open doesn't exist, use SYS_openat
 
 --- libv4l1/libv4l1.c.orig	2008-08-06 08:46:06.000000000 +0000
 +++ libv4l1/libv4l1.c
@@ -45,16 +46,31 @@ $NetBSD: patch-ak,v 1.4 2012/04/18 17:47:22 hans Exp $
  #define V4L1_SUPPORTS_ENUMINPUT 0x01
  #define V4L1_SUPPORTS_ENUMSTD   0x02
  #define V4L1_PIX_FMT_TOUCHED    0x04
-@@ -267,7 +278,7 @@ int v4l1_open (const char *file, int ofl
+@@ -267,13 +282,20 @@ int v4l1_open (const char *file, int ofl
      mode_t mode;
  
      va_start (ap, oflag);
 -    mode = va_arg (ap, mode_t);
 +    mode = (sizeof (mode_t) < sizeof (int) ? (mode_t)va_arg (ap, int) : va_arg (ap, mode_t));
  
++#ifdef SYS_open
      fd = syscall(SYS_open, file, oflag, mode);
+-
++#else
++    fd = syscall(SYS_openat, AT_FDCWD, file, oflag, mode);
++#endif
+     va_end(ap);
+   } else
+-    fd = syscall(SYS_open, file, oflag);
++#ifdef SYS_open
++     fd = syscall(SYS_open, file, oflag);
++#else
++     fd = syscall(SYS_openat, AT_FDCWD, file, oflag);
++#endif
+   /* end of original open code */
  
-@@ -434,7 +449,11 @@ int v4l1_dup(int fd)
+   if (fd == -1)
+@@ -434,7 +456,11 @@ int v4l1_dup(int fd)
    int index;
  
    if ((index = v4l1_get_index(fd)) == -1)
