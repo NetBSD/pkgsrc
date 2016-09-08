@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2016/09/06 12:21:46 joerg Exp $
+# $NetBSD: Makefile,v 1.102 2016/09/08 20:39:37 joerg Exp $
 
-DISTNAME=	make-4.2.1
+DISTNAME=	make-4.1
 PKGNAME=	g${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	devel
@@ -27,10 +27,6 @@ CONFIGURE_ARGS+=	--program-prefix=g
 
 # workaround for broken strndup
 CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
-
-# At least on NetBSD 7, this often results in zombie children
-# hanging the build.
-CONFIGURE_ARGS.NetBSD+=	ac_cv_func_pselect=no
 
 AUTO_MKDIRS=		yes
 
