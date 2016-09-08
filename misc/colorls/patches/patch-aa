@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2015/07/09 11:44:09 jperkin Exp $
+$NetBSD: patch-aa,v 1.9 2016/09/08 14:41:36 jperkin Exp $
 
 Use pkgsrc layout.
 
@@ -10,6 +10,6 @@ Use pkgsrc layout.
 +PROG=	colorls
  SRCS=	cmp.c stat_flags.c ls.c print.c util.c
 +BINDIR=	${PREFIX}/bin
-+MANDIR= ${PREFIX}/man
++MANDIR= ${PREFIX}/${PKGMANDIR}
 +MANINSTALL= catinstall maninstall
  
