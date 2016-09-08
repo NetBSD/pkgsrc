@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3716 2016/09/08 05:13:21 richard Exp $
+$NetBSD: CHANGES-2016,v 1.3717 2016/09/08 09:34:29 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5265,3 +5265,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao42 to 4.2.3 [taca 2016-09-08]
 	Updated print/bibtool to 2.65 [markd 2016-09-08]
 	Updated math/lp_solve to 5.5.2.3 [richard 2016-09-08]
+	Updated cad/kicad to 4.0.4 [bouyer 2016-09-08]
+	Updated cad/kicad-doc to 4.0.4 [bouyer 2016-09-08]
+	Updated cad/kicad-lib to 4.0.4 [bouyer 2016-09-08]
+	Updated cad/kicad-footprints to version 4.0.4 [bouyer 2016-09-08]
+	Updated cad/kicad-i18n to version 4.0.4 [bouyer 2016-09-08]
