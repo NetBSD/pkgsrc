@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/07/09 11:44:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/09/08 14:41:36 jperkin Exp $
 
 DISTNAME=	ls
 PKGNAME=	colorls-2.2
@@ -12,7 +12,8 @@ COMMENT=	Uses color with ls(1) to display file attributes
 USE_FEATURES+=		fts_open
 USE_TOOLS=		nroff
 
-NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+RESTRICTED=		Already in MASTER_SITE_LOCAL
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 MANCOMPRESSED_IF_MANZ=	yes
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} \
