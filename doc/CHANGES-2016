@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3720 2016/09/08 15:09:37 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3721 2016/09/08 15:23:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5273,3 +5273,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/py-gdmodule to 0.59 [adam 2016-09-08]
 	Updated pkgtools/bootstrap-mk-files to 20160908 [joerg 2016-09-08]
 	Updated devel/p5-CPAN-Uploader to 0.103013 [mef 2016-09-08]
+	lang/ruby/rubyversion.mk: RUBY_VERSION_SUPPORT renamed to RUBY_VERSIONS_ACCEPTED [joerg 2016-09-08]
