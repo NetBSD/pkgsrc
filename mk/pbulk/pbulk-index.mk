@@ -1,4 +1,4 @@
-#	$NetBSD: pbulk-index.mk,v 1.20 2014/06/10 15:22:14 joerg Exp $
+#	$NetBSD: pbulk-index.mk,v 1.21 2016/09/08 09:40:11 joerg Exp $
 
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to the parallel bulk build
@@ -30,7 +30,7 @@ _PBULK_MULTI_LIST.mysql=	MYSQL_VERSIONS_ACCEPTED
 _PBULK_MULTI_VAR.mysql=		MYSQL_VERSION_REQD
 _PBULK_MULTI_DEFAULT.mysql=	MYSQL_VERSION_DEFAULT
 
-_PBULK_MULTI_LIST.php=		PHP_VERSIONS_ACCEPTED
+_PBULK_MULTI_LIST.php=		_PHP_VERSIONS_ACCEPTED
 _PBULK_MULTI_VAR.php=		PHP_VERSION_REQD
 _PBULK_MULTI_DEFAULT.php=	PHP_VERSION_DEFAULT
 
