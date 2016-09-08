@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.122 2016/05/03 14:51:16 jperkin Exp $
+$NetBSD: distinfo,v 1.123 2016/09/08 15:43:13 jperkin Exp $
 
 SHA1 (openssl-1.0.2h.tar.gz) = 577585f5f5d299c44dd3c993d3c0ac7a219e4949
 RMD160 (openssl-1.0.2h.tar.gz) = b7ab97d34582b7467929bbcd2bb8fbc4d19ac05e
@@ -11,5 +11,6 @@ SHA1 (patch-apps_Makefile) = 60113291f2a25f5f1c1dba35e8173087bcd4cc30
 SHA1 (patch-config) = 345cadece3bdf0ef0a273a6c9ba6d0cbb1026a31
 SHA1 (patch-crypto_bn_bn__prime.pl) = a516f3709a862d85e659d466e895419b1e0a94c8
 SHA1 (patch-crypto_des_Makefile) = 7a23f9883ff6c93ec0e5d08e1332cc95de8cdba2
+SHA1 (patch-crypto_rand_randfile.c) = 48b703df088cbb703109c73b051010bc9907bb58
 SHA1 (patch-engines_ccgost_Makefile) = 5ff1e2705f6cb46075d5e005af9e804bb81d65e5
 SHA1 (patch-tools_Makefile) = 67f0b9b501969382fd89b678c277d32bf5d294bc
