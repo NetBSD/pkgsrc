@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3719 2016/09/08 14:28:26 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.3720 2016/09/08 15:09:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5272,3 +5272,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/kicad-i18n to 4.0.4 [bouyer 2016-09-08]
 	Updated graphics/py-gdmodule to 0.59 [adam 2016-09-08]
 	Updated pkgtools/bootstrap-mk-files to 20160908 [joerg 2016-09-08]
+	Updated devel/p5-CPAN-Uploader to 0.103013 [mef 2016-09-08]
