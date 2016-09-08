@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/09 13:53:27 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/08 03:27:23 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -24,7 +24,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERSION=	4.2.2
+CT_VERSION=	4.2.3
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
