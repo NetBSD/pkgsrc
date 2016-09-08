@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/10 18:42:50 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2016/09/08 15:19:18 joerg Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby ${RUBY_VERSION} release minimum base package
 
-RUBY_VERSION_SUPPORTED=	21
+RUBY_VERSIONS_ACCEPTED=	21
 
 USE_LANGUAGES=		c c99
 USE_TOOLS+=		pax yacc pkg-config
