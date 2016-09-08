@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2009/12/10 23:49:03 abs Exp $
+$NetBSD: patch-aa,v 1.10 2016/09/08 14:44:44 jperkin Exp $
 
 --- Makefile.orig	1993-06-10 02:51:22.000000000 +0000
 +++ Makefile
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.9 2009/12/10 23:49:03 abs Exp $
 -	install -s $(TARGET) $(INSTDIR)
 -	install -c fep.1 /usr/man/manl/fep.l
 +	install -s $(TARGET) $(DESTDIR)$(INSTDIR)
-+	gzip -9n -c fep.1 > $(DESTDIR)${PREFIX}/man/man1/fep.1.gz
++	gzip -9n -c fep.1 > $(DESTDIR)${PREFIX}/${PKGMANDIR}/man1/fep.1.gz
  
  fep.1: fep.jman
  	sed -e '/^\.EG/d' -e '/^\.JP/,/^\.EJ/d' -e '/^\.\\"KS/,/^\.\\"KE/d' \
