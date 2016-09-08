@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/08 01:01:15 wen Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/08 06:53:48 wiz Exp $
 
 DISTNAME=	mccabe-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 .include "../../lang/python/pyversion.mk"
 .if ${_PYTHON_VERSION} > 30
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner>=0:../../devel/py-test-runner
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 .endif
 
 .include "../../lang/python/egg.mk"
