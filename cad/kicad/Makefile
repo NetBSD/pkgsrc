@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/08/03 10:22:33 adam Exp $
+# $NetBSD: Makefile,v 1.11 2016/09/08 09:32:28 bouyer Exp $
 #
 
-V=		4.0.1
+V=		4.0.4
 DISTNAME=	kicad-${V}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	https://launchpad.net/kicad/4.0/${V}/+download/
 EXTRACT_SUFX=	.tar.xz
@@ -53,6 +53,7 @@ SUBST_SED.netbsd5=	-e 's/fabsl/fabs/g'
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-Wno-error=non-pod-varargs
 .endif
+CXXFLAGS+=	-std=c++11
 
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
