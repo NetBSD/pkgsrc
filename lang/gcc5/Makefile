@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/09/06 05:08:48 maya Exp $
+# $NetBSD: Makefile,v 1.14 2016/09/08 09:55:32 jperkin Exp $
 
 GCC_PKGNAME=		gcc5
 PKGREVISION=		2
@@ -138,6 +138,13 @@ BUILDLINK_DEPMETHOD.binutils=	full
 .    include "../../devel/binutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=${PREFIX}/bin/gas
 .  endif
+.endif
+
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		ccs
+SUBST_STAGE.ccs=	pre-configure
+SUBST_FILES.ccs=	contrib/make_sunver.pl
+SUBST_SED.ccs=		-e 's,/usr/ccs/bin,/usr/bin,g'
 .endif
 
 pre-configure:
