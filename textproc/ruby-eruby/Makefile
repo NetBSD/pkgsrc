@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/06/11 15:37:21 taca Exp $
+# $NetBSD: Makefile,v 1.31 2016/09/08 15:19:19 joerg Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGREVISION=	8
@@ -16,7 +16,7 @@ CONFLICTS+=	ruby[1-9][0-9]-eruby-*
 USE_GCC_RUNTIME=	yes
 
 # Need to update encoding processing.
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 
 ERUBY_VERSION=		1.0.5
 HAS_CONFIGURE=		yes
