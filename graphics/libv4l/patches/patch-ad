@@ -1,7 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2012/04/18 17:47:22 hans Exp $
+$NetBSD: patch-ad,v 1.6 2016/09/08 15:43:12 richard Exp $
 
 * XXX
 * `mode_t' is promoted to `int' when passwd through `...'.
+* if SYS_open doesn't exist, use SYS_openat
 
 --- libv4l2/libv4l2.c.orig	2008-09-03 10:23:46.000000000 +0000
 +++ libv4l2/libv4l2.c
@@ -41,16 +42,32 @@ $NetBSD: patch-ad,v 1.5 2012/04/18 17:47:22 hans Exp $
        (size_t)buf.length, PROT_READ|PROT_WRITE, MAP_SHARED, devices[index].fd,
        (__off_t)(buf.m.offset >> MMAP2_PAGE_SHIFT));
      if (devices[index].frame_pointers[i] == MAP_FAILED) {
-@@ -408,7 +420,7 @@ int v4l2_open (const char *file, int ofl
+@@ -408,14 +420,22 @@ int v4l2_open (const char *file, int ofl
      mode_t mode;
  
      va_start (ap, oflag);
 -    mode = va_arg (ap, mode_t);
 +    mode = (mode_t)va_arg (ap, int);
  
++#ifdef SYS_open
      fd = syscall(SYS_open, file, oflag, mode);
+-
++#else
++    fd = syscall(SYS_openat, AT_FDCWD, file, oflag, mode);
++#endif
++ 
+     va_end(ap);
+   }
+   else
++#ifdef SYS_open
+     fd = syscall(SYS_open, file, oflag);
++#else
++    fd = syscall(SYS_openat, AT_FDCWD, file, oflag);
++#endif
+   /* end of original open code */
  
-@@ -584,7 +596,11 @@ int v4l2_dup(int fd)
+   if (fd == -1)
+@@ -584,7 +604,11 @@ int v4l2_dup(int fd)
    int index;
  
    if ((index = v4l2_get_index(fd)) == -1)
@@ -62,7 +79,7 @@ $NetBSD: patch-ad,v 1.5 2012/04/18 17:47:22 hans Exp $
  
    devices[index].open_count++;
  
-@@ -871,7 +887,7 @@ int v4l2_ioctl (int fd, unsigned long in
+@@ -871,7 +895,7 @@ int v4l2_ioctl (int fd, unsigned long in
  	   but we need the buffer _now_ to write our converted data
  	   to it! */
  	if (devices[index].convert_mmap_buf == MAP_FAILED) {
@@ -71,7 +88,7 @@ $NetBSD: patch-ad,v 1.5 2012/04/18 17:47:22 hans Exp $
  						   (size_t)(
  						     devices[index].no_frames *
  						     V4L2_FRAME_BUF_SIZE),
-@@ -995,7 +1011,7 @@ void *v4l2_mmap(void *start, size_t leng
+@@ -995,7 +1019,7 @@ void *v4l2_mmap(void *start, size_t leng
        return MAP_FAILED;
      }
  
@@ -80,7 +97,7 @@ $NetBSD: patch-ad,v 1.5 2012/04/18 17:47:22 hans Exp $
  			   (__off_t)(offset >> MMAP2_PAGE_SHIFT));
    }
  
-@@ -1012,7 +1028,7 @@ void *v4l2_mmap(void *start, size_t leng
+@@ -1012,7 +1036,7 @@ void *v4l2_mmap(void *start, size_t leng
    }
  
    if (devices[index].convert_mmap_buf == MAP_FAILED) {
