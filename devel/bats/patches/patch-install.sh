@@ -1,4 +1,4 @@
-$NetBSD: patch-install.sh,v 1.1 2016/05/02 02:29:14 seb Exp $
+$NetBSD: patch-install.sh,v 1.2 2016/09/08 14:34:02 jperkin Exp $
 
 Change manpages installation directory.
 
@@ -9,12 +9,12 @@ Change manpages installation directory.
  
  BATS_ROOT="$(abs_dirname "$0")"
 -mkdir -p "$PREFIX"/{bin,libexec,share/man/man{1,7}}
-+mkdir -p "$PREFIX"/{bin,libexec,man/man{1,7}}
++mkdir -p "$PREFIX"/{bin,libexec,$PKGMANDIR/man{1,7}}
  cp -R "$BATS_ROOT"/bin/* "$PREFIX"/bin
  cp -R "$BATS_ROOT"/libexec/* "$PREFIX"/libexec
 -cp "$BATS_ROOT"/man/bats.1 "$PREFIX"/share/man/man1
 -cp "$BATS_ROOT"/man/bats.7 "$PREFIX"/share/man/man7
-+cp "$BATS_ROOT"/man/bats.1 "$PREFIX"/man/man1
-+cp "$BATS_ROOT"/man/bats.7 "$PREFIX"/man/man7
++cp "$BATS_ROOT"/man/bats.1 "$PREFIX"/$PKGMANDIR/man1
++cp "$BATS_ROOT"/man/bats.7 "$PREFIX"/$PKGMANDIR/man7
  
  echo "Installed Bats to $PREFIX/bin/bats"
