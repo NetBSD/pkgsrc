@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2015/06/29 11:06:49 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2016/09/08 15:19:19 joerg Exp $
 #
 # used by textproc/ruby-suikyo/Makefile
 # used by textproc/suikyo-docs/Makefile
@@ -21,4 +21,4 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none
 
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18

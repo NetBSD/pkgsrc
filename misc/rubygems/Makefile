@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2016/04/10 16:39:28 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2016/09/08 15:19:18 joerg Exp $
 
 DISTNAME=	rubygems-${RUBY_GEMS_PKGSRC_VERS}
 CATEGORIES=	misc ruby
@@ -15,7 +15,7 @@ CONFLICTS+=	rubygems-[0-9]*
 .include "../../mk/bsd.prefs.mk"
 
 # Modern ruby bundles rubygems.
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

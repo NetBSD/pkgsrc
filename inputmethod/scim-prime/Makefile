@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/08/03 10:23:01 adam Exp $
+# $NetBSD: Makefile,v 1.28 2016/09/08 15:19:17 joerg Exp $
 #
 
 DISTNAME=		scim-prime-1.0.1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://osdn.jp/projects/scim-imengine/
 COMMENT=		SCIM IMEngine module for PRIME
 LICENSE=		gnu-gpl-v2
 
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

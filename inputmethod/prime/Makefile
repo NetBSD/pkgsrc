@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/29 11:06:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/08 15:19:17 joerg Exp $
 #
 
 DISTNAME=	prime-1.0.0.1
@@ -22,7 +22,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sary-[0-9]*:../../textproc/ruby-sary
 #
 # Currently, it seems some encoding problem.
 #
-RUBY_VERSION_SUPPORTED= 18
+RUBY_VERSIONS_ACCEPTED= 18
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

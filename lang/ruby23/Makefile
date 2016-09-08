@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/30 15:06:39 taca Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/08 15:19:18 joerg Exp $
 #
 
 DISTNAME=	# empty
@@ -20,7 +20,7 @@ DEPENDS+= ${RUBY_NAME}-fiddle>=${RUBY_VERSION_FULL}:../../devel/ruby-fiddle
 DEPENDS+= ${RUBY_NAME}-readline>=${RUBY_VERSION_FULL}:../../devel/ruby-readline
 DEPENDS+= ${RUBY_NAME}-tk>=${RUBY_VERSION_FULL}:../../x11/ruby-tk
 
-RUBY_VERSION_SUPPORTED=	23
+RUBY_VERSIONS_ACCEPTED=	23
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/Makefile.common"
