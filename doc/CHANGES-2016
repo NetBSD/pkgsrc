@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3728 2016/09/09 13:26:15 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3729 2016/09/09 15:41:55 scole Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5284,3 +5284,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/neomutt to 20160827nb1 [wiz 2016-09-09]
 	Updated misc/calibre to 2.67.0 [wiz 2016-09-09]
 	Updated security/vault to 0.6.1 [fhajny 2016-09-09]
+	Added filesystems/squashfs version 4.3 [scole 2016-09-09]
