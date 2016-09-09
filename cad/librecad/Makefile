@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/09/09 18:48:59 plunky Exp $
+# $NetBSD: Makefile,v 1.33 2016/09/09 20:07:23 plunky Exp $
 #
 
 DISTNAME=	LibreCAD-2.1.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_USING=	bsdtar
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax pkg-config
 USE_LIBTOOL=	yes
 
 SUBST_CLASSES+=		qtdir
