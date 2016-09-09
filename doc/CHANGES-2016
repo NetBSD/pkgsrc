@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3726 2016/09/09 06:32:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3727 2016/09/09 09:04:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/gmake to 4.1nb2 [joerg 2016-09-08]
 	Updated devel/py-hg-git to 0.8.5 [wiz 2016-09-09]
 	Updated mail/neomutt to 20160827nb1 [wiz 2016-09-09]
+	Updated misc/calibre to 2.67.0 [wiz 2016-09-09]
