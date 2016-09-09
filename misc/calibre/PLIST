@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2016/09/04 09:45:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.67 2016/09/09 09:04:41 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1763,6 +1763,7 @@ share/calibre/images/search_delete_saved.png
 share/calibre/images/series.png
 share/calibre/images/smarten-punctuation.png
 share/calibre/images/snippets.png
+share/calibre/images/sort.png
 share/calibre/images/spell-check.png
 share/calibre/images/store.png
 share/calibre/images/subset-fonts.png
