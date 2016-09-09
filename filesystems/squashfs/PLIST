@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/09 15:40:17 scole Exp $
+bin/mksquashfs
+bin/unsquashfs
+share/doc/${PKGNAME}/ACKNOWLEDGEMENTS
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/DONATIONS
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/PERFORMANCE.README
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/README-4.3
+share/doc/${PKGNAME}/OLD-READMEs/README-2.0
+share/doc/${PKGNAME}/OLD-READMEs/README-2.1
+share/doc/${PKGNAME}/OLD-READMEs/README-3.0
+share/doc/${PKGNAME}/OLD-READMEs/README-3.1
+share/doc/${PKGNAME}/OLD-READMEs/README-3.2
+share/doc/${PKGNAME}/OLD-READMEs/README-3.3
+share/doc/${PKGNAME}/OLD-READMEs/README-4.0
+share/doc/${PKGNAME}/OLD-READMEs/README-4.1
+share/doc/${PKGNAME}/OLD-READMEs/README-4.2
+share/doc/${PKGNAME}/OLD-READMEs/README-AMD64
+share/examples/${PKGNAME}/pseudo-file.example
