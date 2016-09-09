@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/09/05 21:13:21 plunky Exp $
+# $NetBSD: Makefile,v 1.31 2016/09/09 18:46:52 plunky Exp $
 #
 
 DISTNAME=	LibreCAD-2.1.1
@@ -62,6 +62,7 @@ do-install:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../math/muparser/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 BUILDLINK_DEPMETHOD.qt4-tools=	full
