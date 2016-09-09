@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3724 2016/09/08 20:40:04 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.3725 2016/09/09 06:24:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel46 to 4.6.3nb1 [bouyer 2016-9-08]
 	Updated multimedia/mkvtoolnix to 9.4.0 [joerg 2016-09-08]
 	Updated devel/gmake to 4.1nb2 [joerg 2016-09-08]
+	Updated devel/py-hg-git to 0.8.5 [wiz 2016-09-09]
