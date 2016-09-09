@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2014/05/03 11:54:15 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2016/09/09 03:12:03 dholland Exp $
 
 .include "../../devel/py-mercurial/Makefile.version"
 
@@ -8,7 +8,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://mercurial.selenic.com/
+HOMEPAGE=	https://www.mercurial-scm.org/
 COMMENT=	Fast, lightweight source control management system (meta package)
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
