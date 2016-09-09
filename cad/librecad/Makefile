@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/09/09 18:46:52 plunky Exp $
+# $NetBSD: Makefile,v 1.32 2016/09/09 18:48:59 plunky Exp $
 #
 
 DISTNAME=	LibreCAD-2.1.1
@@ -31,6 +31,10 @@ SUBST_VARS.prefix+=	PREFIX
 
 AUTO_MKDIRS=	yes
 
+#
+# We disable long double math functions, because otherwise one of
+# the boost headers brings in a log1pl() function which was not
+# present (in NetBSD 7) causing compilation failure
 #
 # We configure the plugins directory separately so that we can use
 # make install below, which handles the libtooling of the shared
