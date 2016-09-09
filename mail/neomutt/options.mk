@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/07/11 22:05:02 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2016/09/09 06:31:29 wiz Exp $
 
 # Global and legacy options
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
-PKG_SUGGESTED_OPTIONS=	curses gpgme idn mutt-hcache mutt-smtp sasl smime ssl
+PKG_SUGGESTED_OPTIONS=	ncursesw gpgme idn mutt-hcache mutt-smtp sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUGGESTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
