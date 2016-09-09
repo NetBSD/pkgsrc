@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.7 2016/09/08 15:43:12 richard Exp $
+$NetBSD: patch-af,v 1.8 2016/09/09 21:07:23 richard Exp $
 
 * XXXX
 * `mode_t' is promoted to `int' when passed through `...'.
@@ -54,7 +54,7 @@ $NetBSD: patch-af,v 1.7 2016/09/08 15:43:12 richard Exp $
 -    mode = va_arg (ap, mode_t);
 +    mode = (sizeof (mode_t) < sizeof (int) ? (mode_t)va_arg (ap, int) : va_arg (ap, mode_t));
  
-+#ifdef SYS_OPEN
++#ifdef SYS_open
      fd = syscall(SYS_open, file, oflag, mode);
 -
 +#else
@@ -62,7 +62,7 @@ $NetBSD: patch-af,v 1.7 2016/09/08 15:43:12 richard Exp $
 +#endif
      va_end(ap);
    } else
-+#ifdef SYS_OPEN
++#ifdef SYS_open
      fd = syscall(SYS_open, file, oflag);
 +#else
 +    fd = syscall(SYS_openat, AT_FDCWD, file, oflag);
