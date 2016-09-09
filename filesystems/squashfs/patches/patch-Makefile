@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2016/09/09 15:40:17 scole Exp $
+Add fnm_extmatch.h dependency
+
+--- Makefile.orig	2014-05-11 18:56:00.000000000 +0000
++++ Makefile
+@@ -15,7 +15,7 @@
+ # Obviously, you must select at least one of the available gzip, lzma, lzo
+ # compression types.
+ #
+-GZIP_SUPPORT = 1
++#GZIP_SUPPORT = 1
+ 
+ ########### Building XZ support #############
+ #
+@@ -229,7 +229,8 @@ mksquashfs: $(MKSQUASHFS_OBJS)
+ 
+ mksquashfs.o: Makefile mksquashfs.c squashfs_fs.h squashfs_swap.h mksquashfs.h \
+ 	sort.h pseudo.h compressor.h xattr.h action.h error.h progressbar.h \
+-	info.h caches-queues-lists.h read_fs.h restore.h process_fragments.h 
++	info.h caches-queues-lists.h read_fs.h restore.h process_fragments.h \
++	fnm_extmatch.h
+ 
+ read_fs.o: read_fs.c squashfs_fs.h squashfs_swap.h compressor.h xattr.h \
+ 	error.h mksquashfs.h
+@@ -247,7 +248,7 @@ xattr.o: xattr.c squashfs_fs.h squashfs_
+ 
+ read_xattrs.o: read_xattrs.c squashfs_fs.h squashfs_swap.h xattr.h error.h
+ 
+-action.o: action.c squashfs_fs.h mksquashfs.h action.h error.h
++action.o: action.c squashfs_fs.h mksquashfs.h action.h error.h fnm_extmatch.h
+ 
+ progressbar.o: progressbar.c error.h
+ 
+@@ -279,7 +280,7 @@ unsquashfs: $(UNSQUASHFS_OBJS)
+ 	$(CC) $(LDFLAGS) $(EXTRA_LDFLAGS) $(UNSQUASHFS_OBJS) $(LIBS) -o $@
+ 
+ unsquashfs.o: unsquashfs.h unsquashfs.c squashfs_fs.h squashfs_swap.h \
+-	squashfs_compat.h xattr.h read_fs.h compressor.h
++	squashfs_compat.h xattr.h read_fs.h compressor.h fnm_extmatch.h
+ 
+ unsquash-1.o: unsquashfs.h unsquash-1.c squashfs_fs.h squashfs_compat.h
+ 
