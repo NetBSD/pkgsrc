@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/06/29 13:51:33 taca Exp $
+# $NetBSD: Makefile,v 1.15 2016/09/09 11:28:54 joerg Exp $
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
@@ -12,6 +12,8 @@ COMMENT=		Blogging tool written in php (Localized for Japanese)
 LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		pax
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -41,8 +43,6 @@ OWN_DIRS_PERMS+=	${WPHOME}/wp-content/uploads \
 INSTALLATION_DIRS+=	${DOCDIR} ${WPHOME} ${EGDIR}
 
 DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
-
-PHP_VERSIONS_ACCEPTED=	55 56
 
 do-configure:
 	${SED} -e "s:@WPHOME@:${WPHOME}:g" <${FILESDIR}/wordpress.conf >${WRKDIR}/ja-wordpress.conf
