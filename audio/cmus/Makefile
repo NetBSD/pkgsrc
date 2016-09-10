@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2016/08/24 09:34:32 maya Exp $
+# $NetBSD: Makefile,v 1.64 2016/09/10 23:23:20 szptvlfn Exp $
 
 DISTNAME=		cmus-2.7.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		-https://github.com/cmus/cmus/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
 
@@ -35,6 +35,8 @@ PLIST.sunaudio=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_SUN=n
 .endif
+
+NOT_PAX_MPROTECT_SAFE+=	bin/cmus
 
 .include "options.mk"
 
