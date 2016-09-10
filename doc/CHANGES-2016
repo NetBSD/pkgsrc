@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3731 2016/09/10 09:10:24 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.3732 2016/09/10 20:32:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added filesystems/squashfs version 4.3 [scole 2016-09-09]
 	Updated databases/ruby-sequel to 4.38.0 [taca 2016-09-10]
 	Updated lang/go to 1.7.1 [bsiegert 2016-09-10]
+	Updated mail/neomutt to 20160910 [wiz 2016-09-10]
