@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/07/06 15:03:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/10 20:54:47 fhajny Exp $
 
-DISTNAME=	rebar-2.6.2
+DISTNAME=	rebar-2.6.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rebar/}
 
