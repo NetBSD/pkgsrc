@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/07/06 15:03:25 fhajny Exp $
+$NetBSD: distinfo,v 1.6 2016/09/10 20:54:47 fhajny Exp $
 
-SHA1 (rebar-2.6.2.tar.gz) = 9ba70533ce9d5537b3a19f24391456e7bb1fd3ea
-RMD160 (rebar-2.6.2.tar.gz) = 3b1ff050fcbbe33983f371e620b2f4d53f7cd67a
-SHA512 (rebar-2.6.2.tar.gz) = 410129defbf98af00f5040f9d3956299a70a0a1a21d28c42db32350b922e207f8af5830d8c322e9d3cfed8697ddcb228d5a98b983995414ed32662659a5c4c96
-Size (rebar-2.6.2.tar.gz) = 210775 bytes
+SHA1 (rebar-2.6.3.tar.gz) = 78c728db5ad3d3b5ce58d2038bb3ba0185951d9f
+RMD160 (rebar-2.6.3.tar.gz) = 7a41559a8ec8e5a7fa30befccfd86227a425bc9f
+SHA512 (rebar-2.6.3.tar.gz) = 451f18cec02f9b23ab1e522d4e9bc2a43cf5ace5fea6a7543874a76615cdb55e3d705ad2be94e7c28e6e1acfbc519eb3452588880f0846b928f8a28369623dde
+Size (rebar-2.6.3.tar.gz) = 213146 bytes
