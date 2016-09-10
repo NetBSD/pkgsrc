@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16405 2016/09/10 09:57:32 wiz Exp $
+$NetBSD: TODO,v 1.16406 2016/09/10 15:27:38 scole Exp $
 
 Suggested new packages
 ======================
@@ -14,9 +14,6 @@ Suggested new packages
 
 	Any interesting packages in OpenBSD's ports.
 	http://openports.se/
-
-	squashfs
-	Full package provided in pkg/51058
 
 	bacula-rescue
 	Scripts used to help create rescue boot CDs for bare metal
