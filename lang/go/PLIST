@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2016/08/31 14:15:33 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.27 2016/09/10 09:09:23 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -96,6 +96,7 @@ go/doc/gopher/bumper320x180.png
 go/doc/gopher/bumper480x270.png
 go/doc/gopher/bumper640x360.png
 go/doc/gopher/doc.png
+go/doc/gopher/favicon.svg
 go/doc/gopher/fiveyears.jpg
 go/doc/gopher/frontpage.png
 go/doc/gopher/gopherbw.png
