@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/08/28 11:47:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/10 19:47:19 bsiegert Exp $
 
 GITHUB_TAG=	v4.2.0
 DISTNAME=	gls-${GITHUB_TAG:S/v//}
 PKGNAME=	go-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jtolds/}
 GITHUB_PROJECT=	gls

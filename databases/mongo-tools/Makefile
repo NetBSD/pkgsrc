@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/08/20 09:21:44 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/10 19:47:19 bsiegert Exp $
 
 DISTNAME=	mongo-tools-3.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
