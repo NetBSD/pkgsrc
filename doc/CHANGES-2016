@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3733 2016/09/10 20:55:02 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3734 2016/09/10 20:58:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/go to 1.7.1 [bsiegert 2016-09-10]
 	Updated mail/neomutt to 20160910 [wiz 2016-09-10]
 	Updated devel/rebar to 2.6.3 [fhajny 2016-09-10]
+	Updated databases/py-peewee to 2.8.3 [fhajny 2016-09-10]
