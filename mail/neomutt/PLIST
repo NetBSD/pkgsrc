@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/09/04 20:53:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/09/10 20:32:01 wiz Exp $
 bin/mutt
 bin/mutt_dotlock
 bin/pgpewrap
@@ -32,15 +32,14 @@ share/doc/neomutt/devel-notes.txt
 share/doc/neomutt/gettingstarted.html
 share/doc/neomutt/index.html
 share/doc/neomutt/intro.html
-share/doc/neomutt/keybase/KeybaseAndMutt.md
 share/doc/neomutt/keybase/LICENSE
 share/doc/neomutt/keybase/README.md
+share/doc/neomutt/keybase/attachmentView.png
 share/doc/neomutt/keybase/decrypt.sh
-share/doc/neomutt/keybase/images/attachmentView.png
-share/doc/neomutt/keybase/images/pagerMode.png
 share/doc/neomutt/keybase/install.sh
 share/doc/neomutt/keybase/keybase.py
 share/doc/neomutt/keybase/muttrc
+share/doc/neomutt/keybase/pagerMode.png
 share/doc/neomutt/keybase/pgpdecrypt.sh
 share/doc/neomutt/keybase/pgpverify.sh
 share/doc/neomutt/keybase/verify.sh
@@ -80,9 +79,12 @@ share/doc/neomutt/samples/mutt_xtitle
 share/doc/neomutt/samples/pgp2.rc
 share/doc/neomutt/samples/pgp5.rc
 share/doc/neomutt/samples/pgp6.rc
+share/doc/neomutt/samples/sample.colors.attach_headers
 share/doc/neomutt/samples/sample.mailcap
 share/doc/neomutt/samples/sample.muttrc
+share/doc/neomutt/samples/sample.muttrc-sidebar
 share/doc/neomutt/samples/sample.muttrc-tlr
+share/doc/neomutt/samples/sample.vimrc-sidebar
 share/doc/neomutt/samples/smime.rc
 share/doc/neomutt/samples/smime_keys_test.pl
 share/doc/neomutt/security.html
