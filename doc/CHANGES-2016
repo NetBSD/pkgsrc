@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3744 2016/09/11 17:00:55 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3745 2016/09/11 17:12:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5300,3 +5300,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed print/py-pisa successor print/py-weasyprint [wiz 2016-09-11]
 	Removed meta-pkgs/php55-extensions [taca 2016-09-11]
 	Removed lang/php55 [taca 2016-09-11]
+	Updated meta-pkgs/bulk-medium to 20160911 [taca 2016-09-11]
