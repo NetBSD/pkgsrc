@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/09/11 15:53:51 richard Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/09/11 16:41:00 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -290,7 +290,7 @@ ${PYSITELIB}/reportlab/lib/pagesizes.pyo
 ${PYSITELIB}/reportlab/lib/pdfencrypt.py
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyc
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyo
-${PYSITELIB}/reportlab/lib/pyHnj.so
+${PLIST.py2x}${PYSITELIB}/reportlab/lib/pyHnj.so
 ${PYSITELIB}/reportlab/lib/pygments2xpre.py
 ${PYSITELIB}/reportlab/lib/pygments2xpre.pyc
 ${PYSITELIB}/reportlab/lib/pygments2xpre.pyo
