@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3738 2016/09/11 15:49:02 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3739 2016/09/11 15:54:42 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5294,3 +5294,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/6tunnel to 0.11 [mef 2016-09-11]
 	Updated devel/pcre2 to 10.22 [mef 2016-09-11]
 	Updated graphics/ansilove to 3.0.4 [kamil 2016-09-11]
+	Updated print/py-reportlab to 3.3.0 [richard 2016-09-11]
