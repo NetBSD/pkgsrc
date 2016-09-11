@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/09/10 19:47:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/11 08:25:40 bsiegert Exp $
 #
 
-DISTNAME=		go-net-20151229
-PKGREVISION=		4
+DISTNAME=		go-net-20160910
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		net
-GITHUB_TAG=		0cb26f788d
+GITHUB_TAG=		cfe3c2a752
 
 MAINTAINER=		bsiegert@NetBSD.org
 HOMEPAGE=		http://golang.org/
