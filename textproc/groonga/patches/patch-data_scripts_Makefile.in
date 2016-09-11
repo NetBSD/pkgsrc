@@ -1,0 +1,16 @@
+$NetBSD: patch-data_scripts_Makefile.in,v 1.1 2016/09/11 16:07:55 taca Exp $
+
+Build and install groonga-httpd-restart when groonga-httpd PKG_OPTION is
+enabled.
+
+--- data/scripts/Makefile.in.orig	2016-08-28 17:54:32.000000000 +0000
++++ data/scripts/Makefile.in
+@@ -410,7 +410,7 @@ tokenizer_pluginsdir = @tokenizer_plugin
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-dist_sbin_SCRIPTS = groonga-httpd-restart
++@WITH_GROONGA_HTTPD_TRUE@dist_sbin_SCRIPTS = groonga-httpd-restart
+ all: all-am
+ 
+ .SUFFIXES:
