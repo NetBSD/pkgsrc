@@ -1,0 +1,3 @@
+The Go implementation of gRPC: A high performance, open source, general RPC
+framework that puts mobile and HTTP/2 first. For more information see the gRPC
+Quick Start guide at http://grpc.io/docs/.
