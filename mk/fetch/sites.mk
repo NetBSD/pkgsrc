@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.145 2016/08/01 09:35:56 wiz Exp $
+# $NetBSD: sites.mk,v 1.146 2016/09/11 13:04:28 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -62,7 +62,6 @@ MASTER_SITE_R_CRAN+=    \
 
 MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
-	ftp://ftp.tex.ac.uk/tex-archive/ \
 	ftp://ftp.dante.de/tex-archive/ \
 	ftp://www.dnsbalance.ring.gr.jp/pub/text/CTAN/ \
 	http://www.dnsbalance.ring.gr.jp/archives/text/CTAN/
