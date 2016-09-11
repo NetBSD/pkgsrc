@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/03/13 03:31:40 obache Exp $
+# $NetBSD: options.mk,v 1.2 2016/09/11 06:11:15 richard Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-sasl
@@ -28,7 +28,7 @@ FILES_SUBST+=		DBEXT=.db
 .elif !empty(PKG_OPTIONS:Mbdb)
 SASL_DBTYPE=		berkeley
 FILES_SUBST+=		DBEXT=
-BDB_ACCEPTED=		db3 db4 db5
+BDB_ACCEPTED=		db3 db4 db5 db6
 .  include "../../mk/bdb.buildlink3.mk"
 CONFIGURE_ENV+=		with_bdb=${BDB_TYPE}
 .elif !empty(PKG_OPTIONS:Mgdbm)
