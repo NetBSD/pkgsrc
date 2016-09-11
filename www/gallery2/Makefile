@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/06 12:13:13 taca Exp $
+# $NetBSD: Makefile,v 1.14 2016/09/11 17:03:28 taca Exp $
 #
 
 DISTNAME=		gallery-2.3.2-full
@@ -16,7 +16,7 @@ DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.0.4:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-gettext>=5.0.4:../../devel/php-gettext
 DEPENDS+=		${PHP_PKG_PREFIX}-{mysql,pgsql}-[0-9]*:../../databases/php-mysql
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 USE_TOOLS=		pax
 USE_LANGUAGES=		# none
