@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/11 08:15:43 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/golang/glog.a
+gopkg/src/github.com/golang/glog/LICENSE
+gopkg/src/github.com/golang/glog/README
+gopkg/src/github.com/golang/glog/glog.go
+gopkg/src/github.com/golang/glog/glog_file.go
+gopkg/src/github.com/golang/glog/glog_test.go
+@pkgdir bin

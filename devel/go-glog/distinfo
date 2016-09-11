@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/11 08:15:43 bsiegert Exp $
+
+SHA1 (go-glog-20160125-23def4e.tar.gz) = f3d7dfc5ea4a87434aef3645e8d73a1a21a81453
+RMD160 (go-glog-20160125-23def4e.tar.gz) = fd08038c1dcab78c9470aaeaee873982bcdc69a5
+SHA512 (go-glog-20160125-23def4e.tar.gz) = e9e70cf2a2d74ca813d0cadc23d213a1112ca4d1167abb63d8e0929585fca90c3a5bab1f49db20095c48bf1fe03b4424353c33728d09a201334eb65770888dc5
+Size (go-glog-20160125-23def4e.tar.gz) = 19688 bytes
