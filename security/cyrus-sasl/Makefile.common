@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.24 2016/09/11 06:11:15 richard Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -55,6 +55,10 @@ CONFIGURE_ARGS+=	--with-plugindir=${PLUGINDIR:Q}
 CONFIGURE_ARGS+=	--disable-java
 
 CONFIGURE_ARGS.Darwin+=	--disable-macos-framework
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-ipctype=doors
+.endif
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--disable-anon		# ANONYMOUS
