@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:26 taca Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	imp>=4.2:../../mail/imp
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 USE_TOOLS+=	pax
 

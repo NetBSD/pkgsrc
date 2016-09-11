@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/09/09 11:28:54 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2016/09/11 17:03:29 taca Exp $
 
 DISTNAME=		wordpress-${VERSION}-ja
 PKGNAME=		${PHP_PKG_PREFIX}-ja-wordpress-${VERSION}
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		pax
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"

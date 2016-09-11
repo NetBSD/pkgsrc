@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/07/04 20:47:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:25 taca Exp $
 
 MODNAME=		mongo
 PECL_VERSION=		1.6.14
@@ -9,7 +9,7 @@ HOMEPAGE=		http://pecl.php.net/package/mongo
 COMMENT=		MongoDB database driver
 LICENSE=		apache-2.0
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 .include "options.mk"
 
