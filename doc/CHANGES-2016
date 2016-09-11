@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3743 2016/09/11 16:57:36 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3744 2016/09/11 17:00:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5299,3 +5299,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/groonga to 6.0.8 [taca 2016-09-11]
 	Removed print/py-pisa successor print/py-weasyprint [wiz 2016-09-11]
 	Removed meta-pkgs/php55-extensions [taca 2016-09-11]
+	Removed lang/php55 [taca 2016-09-11]
