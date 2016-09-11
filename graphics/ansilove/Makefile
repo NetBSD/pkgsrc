@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2016/08/03 10:22:49 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/11 15:47:20 kamil Exp $
 
-DISTNAME=	ansilove-3.0.3
-PKGREVISION=	1
+DISTNAME=	ansilove-3.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ansilove/}
 
-MAINTAINER=	fred@statdns.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ansilove.org/
 COMMENT=	ANSI and ASCII art to PNG converter
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 USE_CMAKE=	yes
 
