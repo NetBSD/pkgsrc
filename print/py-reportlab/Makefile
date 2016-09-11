@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2016/07/09 13:04:03 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2016/09/11 15:53:51 richard Exp $
 
-DISTNAME=	reportlab-2.7
+DISTNAME=	reportlab-3.3.0
 DISTFILES=	${DEFAULT_DISTFILES} pfbfer.zip
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
-MASTER_SITES=	http://www.reportlab.com/ftp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/reportlab/}
 SITES.pfbfer.zip=	http://www.reportlab.com/ftp/fonts/
 
 MAINTAINER=	joerg@NetBSD.org
@@ -13,12 +13,10 @@ COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	{${PYPKGPREFIX}-imaging-[0-9]*,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
+DEPENDS+=	{${PYPKGPREFIX}-Pillow-[0-9]*,${PYPKGPREFIX}-imaging-[0-9]*}:../../graphics/py-Pillow
 
 EXTRACT_DIR.pfbfer.zip=	${WRKSRC}/src/reportlab/fonts
 EXTRACT_OPTS_ZIP+=	-L
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.7; py-imaging
 
 REPLACE_PYTHON+=	demos/tests/testdemos.py
 REPLACE_PYTHON+=	docs/genAll.py
@@ -36,21 +34,17 @@ REPLACE_PYTHON+=	src/reportlab/lib/logger.py
 REPLACE_PYTHON+=	src/reportlab/lib/normalDate.py
 REPLACE_PYTHON+=	src/reportlab/lib/pagesizes.py
 REPLACE_PYTHON+=	src/reportlab/lib/randomtext.py
-REPLACE_PYTHON+=	src/reportlab/lib/set_ops.py
 REPLACE_PYTHON+=	src/reportlab/lib/units.py
-REPLACE_PYTHON+=	src/reportlab/pdfgen/pycanvas.py
-REPLACE_PYTHON+=	src/rl_addons/renderPM/setup.py
 REPLACE_PYTHON+=	tests/runAll.py
 REPLACE_PYTHON+=	tests/test_docstrings.py
-REPLACE_PYTHON+=	tests/test_encrypt.py
 REPLACE_PYTHON+=	tests/test_geomutils.py
 REPLACE_PYTHON+=	tests/test_hello.py
 REPLACE_PYTHON+=	tests/test_images.py
 REPLACE_PYTHON+=	tests/test_invariant.py
+REPLACE_PYTHON+=	tests/test_lib_pdfencrypt.py
 REPLACE_PYTHON+=	tests/test_pdfbase_postscript.py
 REPLACE_PYTHON+=	tests/test_pdfgen_callback.py
 REPLACE_PYTHON+=	tests/test_pdfgen_general.py
-REPLACE_PYTHON+=	tests/test_pdfgen_pycanvas.py
 REPLACE_PYTHON+=	tests/test_platypus_paraparser.py
 REPLACE_PYTHON+=	tests/test_platypus_tables.py
 REPLACE_PYTHON+=	tests/test_renderSVG.py
@@ -61,11 +55,15 @@ REPLACE_PYTHON+=	tools/docco/graphdocpy.py
 REPLACE_PYTHON+=	tools/docco/rl_doc_utils.py
 REPLACE_PYTHON+=	tools/pythonpoint/pythonpoint.py
 
+#fixup group/world writeable fonts from pfbfer.zip
+post-install:
+	${CHMOD} ${SHAREMODE} \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/reportlab/fonts/*.pfb
 do-test:
 	${RUN}cd ${WRKSRC};${PYTHONBIN} setup.py tests
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
