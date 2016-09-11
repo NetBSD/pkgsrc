@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/07/09 06:38:53 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/09/11 17:03:27 taca Exp $
 #
 
 DISTNAME=	base-1.4.3.1
@@ -28,7 +28,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.4:../../www/ap-php
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 NO_BUILD=	YES
 #WRKSRC=		${WRKDIR}/base-php4

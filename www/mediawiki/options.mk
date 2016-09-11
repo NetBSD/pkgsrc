@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2015/12/06 12:13:13 taca Exp $
+# $NetBSD: options.mk,v 1.5 2016/09/11 17:03:28 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mediawiki
 
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS=	apache mysql
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5:../../databases/php-pgsql
 .endif

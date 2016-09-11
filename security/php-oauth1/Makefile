@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/03/12 09:39:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/11 17:03:27 taca Exp $
 
 MODNAME=		oauth
 PKGREVISION=		2
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		PHP oauth consumer extension
 LICENSE=		modified-bsd
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 USE_LANGUAGES=		c c++
 

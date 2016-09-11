@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/12/06 12:13:12 taca Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/11 17:03:26 taca Exp $
 #
 
 DISTNAME=	orangehrm-2.7
@@ -15,7 +15,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.2.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.0:../../databases/php-pdo_mysql
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 EXTRACT_USING=		bsdtar
 USE_TOOLS+=		pax
