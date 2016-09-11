@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/08/13 17:31:09 taca Exp $
+# $NetBSD: Makefile,v 1.13 2016/09/11 17:03:26 taca Exp $
 #
 
 MODNAME=		xdebug
@@ -12,7 +12,7 @@ HOMEPAGE=		http://xdebug.org/
 COMMENT=		PHP extension for debugging
 LICENSE=		php
 
-PHP_VERSIONS_ACCEPTED=	55 56 70
+PHP_VERSIONS_ACCEPTED=	56 70
 
 PHP_ZEND_EXTENSION=	yes
 

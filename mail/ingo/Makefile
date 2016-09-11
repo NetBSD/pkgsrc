@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2016/09/11 17:03:26 taca Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -14,7 +14,7 @@ LICENSE=	apache-1.1
 
 DEPENDS+=	horde>=3.2:../../www/horde
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/12/08 00:30:47 taca Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/11 17:03:29 taca Exp $
 #
 
 PWVER=		2.7.4
@@ -17,7 +17,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=5.2.0:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 WRKSRC=		${WRKDIR}/piwigo
 USE_LANGUAGES=	# none
