@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/11 08:02:30 bsiegert Exp $
+
+SHA1 (go-protobuf-20160829-1f49d83.tar.gz) = 5a408b2784f9ea5144e1fda9b624a4459099521b
+RMD160 (go-protobuf-20160829-1f49d83.tar.gz) = fc382af2a7f13792140005bbffab7ded0a935655
+SHA512 (go-protobuf-20160829-1f49d83.tar.gz) = 6281846f0395df8411bf8548f83ebdf3c571acc888ef9a06fefd66e96345502f698728b7f9c03969c23af4ebca9374d3d285fa6bf2c0bc970efd8bbef5969e1e
+Size (go-protobuf-20160829-1f49d83.tar.gz) = 240139 bytes
