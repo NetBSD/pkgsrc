@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/27 21:14:36 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/11 14:44:29 kamil Exp $
 
 DISTNAME=	violetland-0.5-source-with-dependencies
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	xgettext
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
