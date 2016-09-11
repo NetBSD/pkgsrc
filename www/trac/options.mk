@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/09/11 15:48:27 gdt Exp $
+# $NetBSD: options.mk,v 1.3 2016/09/11 23:31:22 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
 PKG_OPTIONS_REQUIRED_GROUPS=	db
@@ -15,5 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
 .if !empty(PKG_OPTIONS:Mpsycopg2)
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2:../../databases/py-psycopg2
 .endif
-# Upstream has MySQL support but it is not really recommended:
+# Upstream has MySQL support but there are significant caveats:
 # https://trac.edgewall.org/wiki/MySqlDb
+# Anyone is welcome to add a (tested!) mysql option.
