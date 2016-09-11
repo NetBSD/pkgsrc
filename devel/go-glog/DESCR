@@ -1,0 +1,15 @@
+Package glog implements logging analogous to the Google-internal
+C++ INFO/ERROR/V setup.  It provides functions Info, Warning,
+Error, Fatal, plus formatting variants such as Infof. It
+also provides V-style logging controlled by the -v and
+-vmodule=file=2 flags.
+
+This is an efficient pure Go implementation of leveled logs in the
+manner of the open source C++ package
+	https://github.com/google/glog
+	(pkgsrc/devel/google-glog)
+
+By binding methods to booleans it is possible to use the log package
+without paying the expense of evaluating the arguments to the log.
+Through the -vmodule flag, the package also provides fine-grained
+control over logging at the file level.
