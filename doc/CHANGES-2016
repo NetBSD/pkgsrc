@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3741 2016/09/11 16:08:31 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3742 2016/09/11 16:45:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5297,3 +5297,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/py-reportlab to 3.3.0 [richard 2016-09-11]
 	Updated www/trac to 1.0.13 [gdt 2016-09-11]
 	Updated textproc/groonga to 6.0.8 [taca 2016-09-11]
+	Removed print/py-pisa successor print/py-weasyprint [wiz 2016-09-11]
