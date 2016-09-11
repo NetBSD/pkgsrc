@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/12/06 12:13:13 taca Exp $
+# $NetBSD: options.mk,v 1.4 2016/09/11 17:03:28 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.horde
 PKG_SUPPORTED_OPTIONS=	ldap pgsql mysql
@@ -25,5 +25,5 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.3:../../databases/php-pgsql
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 .endif

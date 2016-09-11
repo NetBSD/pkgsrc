@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/01/27 14:15:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2016/09/11 17:03:28 taca Exp $
 #
 
 DISTNAME=	fengoffice_3.2.2.1
@@ -21,7 +21,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.1.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.1.0:../../mail/php-imap
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 WRKSRC=		${WRKDIR}/fengoffice
 USE_TOOLS=	pax

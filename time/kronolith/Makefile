@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/05/17 10:32:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.25 2016/09/11 17:03:28 taca Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -16,7 +16,7 @@ DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Date-[0-9]*:../../time/pear-Date
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 USE_TOOLS+=	pax
 

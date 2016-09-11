@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/12/19 14:27:14 taca Exp $
+# $NetBSD: Makefile,v 1.28 2016/09/11 17:03:27 taca Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 PECL_VERSION=		${MING_VERSION}
@@ -15,7 +15,7 @@ LICENSE=		php
 
 CONFLICTS=	php-ming-[0-9]*
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=${BUILDLINK_PREFIX.ming}
 PHPSETUPSUBDIR=		php_ext
