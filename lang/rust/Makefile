@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/06 10:36:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/11 18:19:54 jperkin Exp $
 
 DISTNAME=	rustc-1.11.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -93,10 +93,12 @@ SITES.${RUST_STAGE2}=	https://us-east.manta.joyent.com/pkgsrc/public/tmp/
 NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 .endif
 
+.if defined(RUST_ARCH)
 RUST_STAGE2_VER=	1.10.0
 RUST_STAGE2?=		rust-${RUST_STAGE2_VER}-${RUST_ARCH}.tar.gz
 SITES.${RUST_STAGE2}?=	https://static.rust-lang.org/dist/
 DISTFILES=		${DEFAULT_DISTFILES} ${RUST_STAGE2}
+.endif
 
 PLIST_SRC=		PLIST
 .if ${OPSYS} == "Darwin"
