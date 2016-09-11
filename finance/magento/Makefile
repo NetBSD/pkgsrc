@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/12/06 12:16:54 taca Exp $
+# $NetBSD: Makefile,v 1.8 2016/09/11 17:03:26 taca Exp $
 
 DISTNAME=	magento-1.9.2.2
 CATEGORIES=	www finance
@@ -27,7 +27,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-soap-[0-9]*:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 WRKSRC=		${WRKDIR}/magento
 
