@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3736 2016/09/11 12:46:57 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3737 2016/09/11 14:39:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-peewee to 2.8.3 [fhajny 2016-09-10]
 	Updated net/syncthing to 0.14.6 [abs 2016-09-10]
 	Updated net/6tunnel to 0.11 [mef 2016-09-11]
+	Updated devel/pcre2 to 10.22 [mef 2016-09-11]
