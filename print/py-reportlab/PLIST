@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2014/01/19 09:59:47 wiz Exp $
-${PYSITELIB}/_renderPM.so
-${PYSITELIB}/_rl_accel.so
-${PYSITELIB}/pyHnj.so
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.15 2016/09/11 15:53:51 richard Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/reportlab/__init__.py
 ${PYSITELIB}/reportlab/__init__.pyc
 ${PYSITELIB}/reportlab/__init__.pyo
@@ -37,6 +38,7 @@ ${PYSITELIB}/reportlab/fonts/zy______.pfb
 ${PYSITELIB}/reportlab/graphics/__init__.py
 ${PYSITELIB}/reportlab/graphics/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/__init__.pyo
+${PYSITELIB}/reportlab/graphics/_renderPM.so
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.py
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/__init__.pyo
@@ -55,6 +57,9 @@ ${PYSITELIB}/reportlab/graphics/barcode/common.pyo
 ${PYSITELIB}/reportlab/graphics/barcode/eanbc.py
 ${PYSITELIB}/reportlab/graphics/barcode/eanbc.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/eanbc.pyo
+${PYSITELIB}/reportlab/graphics/barcode/ecc200datamatrix.py
+${PYSITELIB}/reportlab/graphics/barcode/ecc200datamatrix.pyc
+${PYSITELIB}/reportlab/graphics/barcode/ecc200datamatrix.pyo
 ${PYSITELIB}/reportlab/graphics/barcode/fourstate.py
 ${PYSITELIB}/reportlab/graphics/barcode/fourstate.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/fourstate.pyo
@@ -64,6 +69,9 @@ ${PYSITELIB}/reportlab/graphics/barcode/lto.pyo
 ${PYSITELIB}/reportlab/graphics/barcode/qr.py
 ${PYSITELIB}/reportlab/graphics/barcode/qr.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/qr.pyo
+${PYSITELIB}/reportlab/graphics/barcode/qrencoder.py
+${PYSITELIB}/reportlab/graphics/barcode/qrencoder.pyc
+${PYSITELIB}/reportlab/graphics/barcode/qrencoder.pyo
 ${PYSITELIB}/reportlab/graphics/barcode/test.py
 ${PYSITELIB}/reportlab/graphics/barcode/test.pyc
 ${PYSITELIB}/reportlab/graphics/barcode/test.pyo
@@ -229,6 +237,7 @@ ${PYSITELIB}/reportlab/lib/PyFontify.pyo
 ${PYSITELIB}/reportlab/lib/__init__.py
 ${PYSITELIB}/reportlab/lib/__init__.pyc
 ${PYSITELIB}/reportlab/lib/__init__.pyo
+${PYSITELIB}/reportlab/lib/_rl_accel.so
 ${PYSITELIB}/reportlab/lib/abag.py
 ${PYSITELIB}/reportlab/lib/abag.pyc
 ${PYSITELIB}/reportlab/lib/abag.pyo
@@ -281,12 +290,16 @@ ${PYSITELIB}/reportlab/lib/pagesizes.pyo
 ${PYSITELIB}/reportlab/lib/pdfencrypt.py
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyc
 ${PYSITELIB}/reportlab/lib/pdfencrypt.pyo
+${PYSITELIB}/reportlab/lib/pyHnj.so
 ${PYSITELIB}/reportlab/lib/pygments2xpre.py
 ${PYSITELIB}/reportlab/lib/pygments2xpre.pyc
 ${PYSITELIB}/reportlab/lib/pygments2xpre.pyo
 ${PYSITELIB}/reportlab/lib/randomtext.py
 ${PYSITELIB}/reportlab/lib/randomtext.pyc
 ${PYSITELIB}/reportlab/lib/randomtext.pyo
+${PYSITELIB}/reportlab/lib/rl_accel.py
+${PYSITELIB}/reportlab/lib/rl_accel.pyc
+${PYSITELIB}/reportlab/lib/rl_accel.pyo
 ${PYSITELIB}/reportlab/lib/rltempfile.py
 ${PYSITELIB}/reportlab/lib/rltempfile.pyc
 ${PYSITELIB}/reportlab/lib/rltempfile.pyo
@@ -296,9 +309,6 @@ ${PYSITELIB}/reportlab/lib/rparsexml.pyo
 ${PYSITELIB}/reportlab/lib/sequencer.py
 ${PYSITELIB}/reportlab/lib/sequencer.pyc
 ${PYSITELIB}/reportlab/lib/sequencer.pyo
-${PYSITELIB}/reportlab/lib/set_ops.py
-${PYSITELIB}/reportlab/lib/set_ops.pyc
-${PYSITELIB}/reportlab/lib/set_ops.pyo
 ${PYSITELIB}/reportlab/lib/styles.py
 ${PYSITELIB}/reportlab/lib/styles.pyc
 ${PYSITELIB}/reportlab/lib/styles.pyo
@@ -317,9 +327,6 @@ ${PYSITELIB}/reportlab/lib/utils.pyo
 ${PYSITELIB}/reportlab/lib/validators.py
 ${PYSITELIB}/reportlab/lib/validators.pyc
 ${PYSITELIB}/reportlab/lib/validators.pyo
-${PYSITELIB}/reportlab/lib/xmllib.py
-${PYSITELIB}/reportlab/lib/xmllib.pyc
-${PYSITELIB}/reportlab/lib/xmllib.pyo
 ${PYSITELIB}/reportlab/lib/yaml.py
 ${PYSITELIB}/reportlab/lib/yaml.pyc
 ${PYSITELIB}/reportlab/lib/yaml.pyo
@@ -437,9 +444,6 @@ ${PYSITELIB}/reportlab/pdfgen/pdfgeom.pyo
 ${PYSITELIB}/reportlab/pdfgen/pdfimages.py
 ${PYSITELIB}/reportlab/pdfgen/pdfimages.pyc
 ${PYSITELIB}/reportlab/pdfgen/pdfimages.pyo
-${PYSITELIB}/reportlab/pdfgen/pycanvas.py
-${PYSITELIB}/reportlab/pdfgen/pycanvas.pyc
-${PYSITELIB}/reportlab/pdfgen/pycanvas.pyo
 ${PYSITELIB}/reportlab/pdfgen/textobject.py
 ${PYSITELIB}/reportlab/pdfgen/textobject.pyc
 ${PYSITELIB}/reportlab/pdfgen/textobject.pyo
@@ -479,4 +483,6 @@ ${PYSITELIB}/reportlab/platypus/xpreformatted.pyo
 ${PYSITELIB}/reportlab/rl_config.py
 ${PYSITELIB}/reportlab/rl_config.pyc
 ${PYSITELIB}/reportlab/rl_config.pyo
-${PYSITELIB}/sgmlop.so
+${PYSITELIB}/reportlab/rl_settings.py
+${PYSITELIB}/reportlab/rl_settings.pyc
+${PYSITELIB}/reportlab/rl_settings.pyo
