@@ -1,0 +1,5 @@
+Protocol Buffers are Google's data interchange format.
+
+This software implements Go bindings for protocol buffers. For information
+about protocol buffers themselves, see
+https://developers.google.com/protocol-buffers/
