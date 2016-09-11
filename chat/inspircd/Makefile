@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/07/10 09:52:21 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2016/09/11 03:47:49 dholland Exp $
 #
 
 DISTNAME=	InspIRCd-1.1.23
@@ -141,7 +141,7 @@ post-build:
 INSTALLATION_DIRS+=	bin ${EGDIR}/aliases ${EGDIR}/sql
 
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/log/inspircd.log \
-			${INSPIRCD_USER}:${INSPIRCD_GROUP} 0640
+			${INSPIRCD_USER} ${INSPIRCD_GROUP} 0640
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/inspircd.* ${DESTDIR}${EGDIR}
