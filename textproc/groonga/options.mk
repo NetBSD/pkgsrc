@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2014/12/12 01:13:40 obache Exp $
+# $NetBSD: options.mk,v 1.17 2016/09/11 16:06:53 taca Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -82,6 +82,8 @@ CONF_FILES+=	share/examples/${PKGBASE}/httpd/koi-win \
 		${PKG_SYSCONFDIR}/httpd/koi-win
 CONF_FILES+=	share/examples/${PKGBASE}/httpd/mime.types \
 		${PKG_SYSCONFDIR}/httpd/mime.types
+CONF_FILES+=	share/examples/${PKGBASE}/httpd/nginx.conf \
+		${PKG_SYSCONFDIR}/httpd/nginx.conf
 CONF_FILES+=	share/examples/${PKGBASE}/httpd/scgi_params \
 		${PKG_SYSCONFDIR}/httpd/scgi_params
 CONF_FILES+=	share/examples/${PKGBASE}/httpd/uwsgi_params \
@@ -90,9 +92,10 @@ CONF_FILES+=	share/examples/${PKGBASE}/httpd/win-utf \
 		${PKG_SYSCONFDIR}/httpd/win-utf
 
 SUBST_CLASSES+=		confpath
-SUBST_STAGE.confpath=	post-configure
-SUBST_FILES.confpath=	vendor/nginx-1.7.7/objs/Makefile
+SUBST_STAGE.confpath=	pre-build
+SUBST_FILES.confpath=	vendor/nginx-1.11.3/objs/Makefile
 SUBST_SED.confpath=	-e 's,\$$(DESTDIR)${PKG_SYSCONFDIR}/httpd,\$$(DESTDIR)${PREFIX}/share/examples/${PKGBASE}/httpd,g'
+
 .else
 CONFIGURE_ARGS+=	--disable-groonga-httpd
 .endif
