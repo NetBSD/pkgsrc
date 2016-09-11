@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3745 2016/09/11 17:12:38 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3746 2016/09/11 17:41:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5301,3 +5301,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed meta-pkgs/php55-extensions [taca 2016-09-11]
 	Removed lang/php55 [taca 2016-09-11]
 	Updated meta-pkgs/bulk-medium to 20160911 [taca 2016-09-11]
+	Updated www/squid3 to 3.5.21 [taca 2016-09-11]
