@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2016/09/11 15:29:31 gdt Exp $
+# $NetBSD: Makefile,v 1.79 2016/09/11 15:43:01 gdt Exp $
 
 DISTNAME=	Trac-1.0.13
 PKGNAME=	${DISTNAME:tl}
@@ -31,25 +31,6 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.0
 
 .include "../../lang/python/application.mk"
 
-# TODO: move to options.mk
-PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
-PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=	sqlite psycopg2
-PKG_SUGGESTED_OPTIONS=	sqlite
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-.endif
-# trac 0.12 dropped support for py-PgSQL.  Switching to py-psycopg2 with
-# an existing database that used to be accessed by py-PgSQL worked.
-.if !empty(PKG_OPTIONS:Mpsycopg2)
-DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2:../../databases/py-psycopg2
-.endif
-# MySQL is sort of supported but not recommended by upstream and hence
-# omitted.
-
 EGDIR=		${PREFIX}/share/examples/trac
 CGIBINDIR=	${PREFIX}/libexec/trac
 
@@ -59,6 +40,8 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/cgi-bin/trac.* ${DESTDIR}${CGIBINDIR}
 	cd ${WRKSRC}/contrib && pax -rwppm -s ',./rpm/.*$$,,' -s ',./rpm$$,,' \
 		. ${DESTDIR}${EGDIR}
+
+.include "options.mk"
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
