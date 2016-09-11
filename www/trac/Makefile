@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2016/09/11 15:43:01 gdt Exp $
+# $NetBSD: Makefile,v 1.80 2016/09/11 15:52:36 gdt Exp $
 
 DISTNAME=	Trac-1.0.13
 PKGNAME=	${DISTNAME:tl}
@@ -23,12 +23,11 @@ DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
 
 USE_TOOLS+=	pax
 
-PYDISTUTILSPKG=	YES
-PY_PATCHPLIST=	YES
+# The Trac 1.0 series does not support python 3.
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+
 REPLACE_PYTHON=	contrib/cgi-bin/trac.* contrib/*.py contrib/*-hook
 REPLACE_PYTHON+=	trac/tests/functional/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.0
-
 .include "../../lang/python/application.mk"
 
 EGDIR=		${PREFIX}/share/examples/trac
