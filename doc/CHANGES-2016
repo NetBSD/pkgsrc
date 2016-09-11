@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3740 2016/09/11 15:58:53 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3741 2016/09/11 16:08:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5296,3 +5296,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ansilove to 3.0.4 [kamil 2016-09-11]
 	Updated print/py-reportlab to 3.3.0 [richard 2016-09-11]
 	Updated www/trac to 1.0.13 [gdt 2016-09-11]
+	Updated textproc/groonga to 6.0.8 [taca 2016-09-11]
