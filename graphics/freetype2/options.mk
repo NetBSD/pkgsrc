@@ -1,14 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2016/07/09 12:23:16 adam Exp $
+# $NetBSD: options.mk,v 1.4 2016/09/12 18:06:44 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
-PKG_SUPPORTED_OPTIONS=	png subpixel
+PKG_SUPPORTED_OPTIONS=	png
 
 .include "../../mk/bsd.options.mk"
-
-# subpixel (lcd) rendering, patent issues
-.if !empty(PKG_OPTIONS:Msubpixel)
-CFLAGS+=	-DFT_CONFIG_OPTION_SUBPIXEL_RENDERING
-.endif
 
 .if !empty(PKG_OPTIONS:Mpng)
 CONFIGURE_ARGS+=	--with-png=yes
