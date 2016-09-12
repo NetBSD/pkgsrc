@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.1 2016/09/06 10:36:49 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2016/09/12 13:27:33 ryoon Exp $
 
 SHA1 (rust-1.10.0-i686-unknown-linux-gnu.tar.gz) = aded64d8ddc5d286ffc81de21c6a8c47951ac329
 RMD160 (rust-1.10.0-i686-unknown-linux-gnu.tar.gz) = 9248526a5f9656e083a221f0931f9cec6b1a0726
 SHA512 (rust-1.10.0-i686-unknown-linux-gnu.tar.gz) = ef1e874aadc24a64e7df0a09dfea0e5ed6a0bf7acbaf8485976c602f549141289c07b2e27cd7d0a0029f9884042d6ff00c8b917543a9284bae7f7c684ddc6904
 Size (rust-1.10.0-i686-unknown-linux-gnu.tar.gz) = 119011780 bytes
+SHA1 (rust-1.10.0-x86_64-unknown-netbsd.tar.gz) = eb84816dd0fb113fbddd75fd8c451ae67a8ab454
+RMD160 (rust-1.10.0-x86_64-unknown-netbsd.tar.gz) = e13b58f2da1b6cbdeceeb3f1cccdc5c5b9a01c78
+SHA512 (rust-1.10.0-x86_64-unknown-netbsd.tar.gz) = ffa251dcc5afc6d40920c333c74ecfe3e3eb3fae3c984b7715c260fdb11a4580e61097ba32bd02147c42b3b78e7f2be6a3902bb89fa55befb59d1c71c66d1cf3
+Size (rust-1.10.0-x86_64-unknown-netbsd.tar.gz) = 123531094 bytes
 SHA1 (rust-1.10.0-x86_64-apple-darwin.tar.gz) = 9d88b5a1203f91ac12a2f3d33944d6dbeabf3347
 RMD160 (rust-1.10.0-x86_64-apple-darwin.tar.gz) = 046553af4b914421d2ddcde64b6025f18f610bf5
 SHA512 (rust-1.10.0-x86_64-apple-darwin.tar.gz) = 428c53bd402094254e16b5b29303ce5565abf11275546aaa7fecf4f6ea2b13ec46a7d455b1e9c2a6f50a0fcd5573c10adcef09afd29dc390202fa152c31400ac
@@ -21,9 +25,10 @@ RMD160 (rustc-1.11.0-src.tar.gz) = ada0761c38febb423677c1b8bb2fd5c8fee05d53
 SHA512 (rustc-1.11.0-src.tar.gz) = 6ad050a02e3a3b48f205f5d5ed9393fd2a1a2237e5c78b3e51af8162f410b93a831ebe5980ce78c4d38c5a692395c7fec8442956497a5d21e9f7157404c6b5aa
 Size (rustc-1.11.0-src.tar.gz) = 26126471 bytes
 SHA1 (patch-mk_cfg_x86__64-apple-darwin.mk) = 37b50b64ea5607588d541852e07f02a4611d38c8
-SHA1 (patch-mk_rt.mk) = 888bd6646305c357044f37db9cb23f9d2fe77d90
+SHA1 (patch-mk_rt.mk) = 51238ae320b47296546537aeb050773511049d11
 SHA1 (patch-mk_rustllvm.mk) = 500ce129d9ea83fc97317679b45a79f12c8ca9e8
-SHA1 (patch-src_etc_local__stage0.sh) = fbfacff23a9236b2c32a49abb2b520be264ece59
+SHA1 (patch-src_compiler-rt_lib_builtins_CMakeLists.txt) = 288870c40b5e4ce29cbfb19cc9f56d35152c47fa
+SHA1 (patch-src_etc_local__stage0.sh) = 28de26517296557d611afd0db0d43aa046b1676f
 SHA1 (patch-src_liblibc_src_unix_solaris_mod.rs) = 7279fb49054d203b045327a5b9c52b2fbdc2c8d6
 SHA1 (patch-src_librustc__trans_back_linker.rs) = 279850f534bed6380bbc3ffd47e49938fa6423df
 SHA1 (patch-src_libstd_rtdeps.rs) = ed271c5b83a8d623469abd39a2d072bfffbcc890
