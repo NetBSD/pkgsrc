@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2016/09/06 16:29:19 maya Exp $
+# $NetBSD: Makefile,v 1.29 2016/09/12 18:42:04 maya Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
-PKGREVISION=	4
 
 DISTNAME=	gcc-${GCC48_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC48_DIST_VERSION}
