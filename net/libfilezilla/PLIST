@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/29 11:54:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/12 15:40:13 wiz Exp $
 include/libfilezilla/apply.hpp
 include/libfilezilla/event.hpp
 include/libfilezilla/event_handler.hpp
 include/libfilezilla/event_loop.hpp
 include/libfilezilla/file.hpp
+include/libfilezilla/format.hpp
 include/libfilezilla/glue/wx.hpp
 include/libfilezilla/iputils.hpp
 include/libfilezilla/libfilezilla.hpp
