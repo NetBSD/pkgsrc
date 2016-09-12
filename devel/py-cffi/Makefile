@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/06/12 21:47:28 riastradh Exp $
+# $NetBSD: Makefile,v 1.20 2016/09/12 07:57:41 wiz Exp $
 
-DISTNAME=	cffi-1.6.0
+DISTNAME=	cffi-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cffi/}
 
@@ -14,6 +13,11 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+
+NOT_PAX_MPROTECT_SAFE=	${PYSITELIB}/_cffi_backend.so
+
+# tests don't run on MPROTECT enabled systems, and I haven't found
+# the magic to fix that
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/egg.mk"
