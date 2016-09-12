@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3761 2016/09/12 12:28:55 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3762 2016/09/12 13:23:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5274,10 +5274,10 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/bootstrap-mk-files to 20160908 [joerg 2016-09-08]
 	Updated devel/p5-CPAN-Uploader to 0.103013 [mef 2016-09-08]
 	lang/ruby/rubyversion.mk: RUBY_VERSION_SUPPORT renamed to RUBY_VERSIONS_ACCEPTED [joerg 2016-09-08]
-	Updated sysutils/xenkernel41 to 4.1.6.1nb20 [bouyer 2016-9-08]
-	Updated sysutils/xenkernel42 to 4.2.5nb12 [bouyer 2016-9-08]
-	Updated sysutils/xenkernel45 to 4.5.3nb3 [bouyer 2016-9-08]
-	Updated sysutils/xenkernel46 to 4.6.3nb1 [bouyer 2016-9-08]
+	Updated sysutils/xenkernel41 to 4.1.6.1nb20 [bouyer 2016-09-08]
+	Updated sysutils/xenkernel42 to 4.2.5nb12 [bouyer 2016-09-08]
+	Updated sysutils/xenkernel45 to 4.5.3nb3 [bouyer 2016-09-08]
+	Updated sysutils/xenkernel46 to 4.6.3nb1 [bouyer 2016-09-08]
 	Updated multimedia/mkvtoolnix to 9.4.0 [joerg 2016-09-08]
 	Updated devel/gmake to 4.1nb2 [joerg 2016-09-08]
 	Updated devel/py-hg-git to 0.8.5 [wiz 2016-09-09]
@@ -5317,3 +5317,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/wireshark to 2.2.0 [wiz 2016-09-12]
 	Updated www/moodle to 3.1.2 [wen 2016-09-12]
 	Updated devel/p5-Test-Deep to 1.123 [wen 2016-09-12]
+	Updated www/py-djangocms-admin-style to 1.2.3 [adam 2016-09-12]
+	Updated www/py-django-cms to 3.3.2 [adam 2016-03-06]
