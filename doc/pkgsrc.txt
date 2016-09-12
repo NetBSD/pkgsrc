@@ -1521,6 +1521,21 @@ GCC_REQD:
     the system GCC doesn't satisfy this requirement, then pkgsrc will build and
     install one of the GCC packages to use instead.
 
+PYTHON_DEFAULT_VERSION:
+
+    Specifies which version of python to use when several options are
+    available.
+
+PKGSRC_FORTRAN:
+
+    Specifies the fortran compiler to use. The default is g95, and gfortran is
+    an alternative.
+
+GFORTRAN_VERSION:
+
+    If PKGSRC_FORTRAN= gfortran is used, this option specifies which version to
+    use.
+
 5.4.2. Additional flags to the compiler (CFLAGS)
 
 If you wish to set the CFLAGS variable, please make sure to use the += operator
@@ -5961,7 +5976,7 @@ runs on a small handful of platforms, set BROKEN_EXCEPT_ON_PLATFORM instead.
 Both BROKEN_ON_PLATFORM and BROKEN_EXCEPT_ON_PLATFORM are OS triples
 (OS-version-platform) that can use glob-style wildcards.
 
-If a package is not appropriate for some platforms (as oopposed to merely
+If a package is not appropriate for some platforms (as opposed to merely
 broken), a different set of variables should be used as this affects failure
 reporting and statistics. If the package is appropriate for most platforms, the
 exceptions should be noted with NOT_FOR_PLATFORM. If the package is appropriate
