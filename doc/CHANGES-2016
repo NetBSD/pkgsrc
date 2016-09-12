@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3747 2016/09/12 07:31:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3748 2016/09/12 07:34:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5303,3 +5303,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/bulk-medium to 20160911 [taca 2016-09-11]
 	Updated www/squid3 to 3.5.21 [taca 2016-09-11]
 	Updated graphics/ImageMagick to 7.0.3.0 [wiz 2016-09-12]
+	Updated sysutils/dbus-glib to 0.108 [wiz 2016-09-12]
