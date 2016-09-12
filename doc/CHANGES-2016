@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3768 2016/09/12 15:43:37 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3769 2016/09/12 15:46:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5325,3 +5325,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php71 to 7.1.0rc1 [taca 2016-09-12]
 	Updated net/libfilezilla to 0.6.1 [wiz 2016-09-12]
 	Updated lang/pear to 1.10.1nb1 [taca 2016-09-12]
+	Updated mail/fml4 to 4.0.3.20040215nb11 [taca 2016-09-12]
