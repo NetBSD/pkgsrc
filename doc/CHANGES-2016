@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3760 2016/09/12 12:25:42 wen Exp $
+$NetBSD: CHANGES-2016,v 1.3761 2016/09/12 12:28:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5316,3 +5316,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Date-Manip to 6.56 [wiz 2016-09-12]
 	Updated net/wireshark to 2.2.0 [wiz 2016-09-12]
 	Updated www/moodle to 3.1.2 [wen 2016-09-12]
+	Updated devel/p5-Test-Deep to 1.123 [wen 2016-09-12]
