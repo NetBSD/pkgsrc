@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3765 2016/09/12 14:53:46 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3766 2016/09/12 15:38:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5322,3 +5322,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/gnuchess-book to 1.02 [mef 2016-09-12]
 	Updated devel/SOPE to 2.3.14 [taca 2016-09-12]
 	Updated www/SOGo to 2.3.14 [taca 2016-09-12]
+	Updated lang/php71 to 7.1.0rc1 [taca 2016-09-12]
