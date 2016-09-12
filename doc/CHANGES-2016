@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3758 2016/09/12 10:15:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3759 2016/09/12 11:00:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5314,3 +5314,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gstreamer1 to 1.8.3 [wiz 2016-09-12]
 	Updated devel/orc to 0.4.26 [wiz 2016-09-12]
 	Updated devel/p5-Date-Manip to 6.56 [wiz 2016-09-12]
+	Updated net/wireshark to 2.2.0 [wiz 2016-09-12]
