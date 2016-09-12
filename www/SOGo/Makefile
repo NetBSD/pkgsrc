@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2016/06/15 13:29:10 taca Exp $
+# $NetBSD: Makefile,v 1.30 2016/09/12 14:53:12 taca Exp $
 #
 
-DISTNAME=	SOGo-2.3.12
+DISTNAME=	SOGo-2.3.14
 CATEGORIES=	www
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
@@ -11,8 +11,9 @@ COMMENT=	Groupware server supporting CalDAV, CardDAV and GroupDAV
 LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes
-USE_TOOLS+=     gmake zip:run
+USE_TOOLS+=     bash gmake zip:run
 
+CONFIG_SHELL=	bash
 CONFIGURE_ARGS= --enable-debug --disable-strip
 MAKE_JOBS_SAFE=		no
 
@@ -46,8 +47,23 @@ FILES_SUBST+=	SOGOETCDIR=${SOGOETCDIR}
 FILES_SUBST+=	SOGOUSER=${SOGOUSER}
 RCD_SCRIPTS=	sogod
 
-pre-install:
-	${CHMOD} -x ${WRKSRC}/UI/WebServerResources/*.png
+FIX_PERMS= \
+	SoObjects/Mailer/SOGoMailLithuanianForward.wo/SOGoMailLithuanianForward.html \
+	SoObjects/Mailer/SOGoMailLithuanianForward.wo/SOGoMailLithuanianForward.wod \
+	SoObjects/Mailer/SOGoMailLithuanianReply.wo/SOGoMailLithuanianReply.html \
+	SoObjects/Mailer/SOGoMailLithuanianReply.wo/SOGoMailLithuanianReply.wod \
+	UI/Templates/SOGoACLLithuanianAdditionAdvisory.wox \
+	UI/Templates/SOGoACLLithuanianModificationAdvisory.wox \
+	UI/Templates/SOGoACLLithuanianRemovalAdvisory.wox \
+	UI/Templates/SOGoFolderLithuanianAdditionAdvisory.wox \
+	UI/Templates/SOGoFolderLithuanianRemovalAdvisory.wox
+
+pre-configure:
+.for f in ${FIX_PERMS}
+	${CHMOD} ${NONBINMODE} ${WRKSRC}/${f}
+.endfor
+
+post-install:
 	${SED} -e "s|@SOGOUSER@|${SOGOUSER}|" ${FILESDIR}/sogo-conf.sh > \
 	  ${DESTDIR}${PREFIX}/share/examples/SOGo/sogo-conf.sh
 	${SED} -e "s|/usr/GNUstep/System/Library|${PREFIX}/lib/GNUstep|" \
