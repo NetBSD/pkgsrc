@@ -1,6 +1,7 @@
-$NetBSD: patch-extcap.c,v 1.1 2016/09/12 10:59:55 wiz Exp $
+$NetBSD: patch-extcap.c,v 1.2 2016/09/12 11:04:54 wiz Exp $
 
 Fix linking on NetBSD.
+https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12883
 
 --- extcap.c.orig	2016-09-07 16:59:05.000000000 +0000
 +++ extcap.c
