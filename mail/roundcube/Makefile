@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2016/05/29 15:46:59 taca Exp $
+# $NetBSD: Makefile,v 1.84 2016/09/12 10:02:47 jperkin Exp $
 
 DISTNAME=	roundcubemail-1.1.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/}
@@ -28,7 +28,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.8.1:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_mimeDecode>=1.5.5:../../mail/pear-Mail_mimeDecode
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.3:../../mail/pear-Auth_SASL
 
-PHP_VERSIONS_ACCEPTED=	55 56
+PHP_VERSIONS_ACCEPTED=	56
 
 USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
