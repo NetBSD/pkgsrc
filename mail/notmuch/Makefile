@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2016/07/24 19:12:13 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/09/12 07:42:41 wiz Exp $
 
-DISTNAME=	notmuch-0.22.1
+DISTNAME=	notmuch-0.22.2
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
@@ -15,6 +15,7 @@ HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
+#TEST_TARGET=	check
 
 .include "options.mk"
 
