@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2015/03/11 22:30:42 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2016/09/12 09:11:48 wiz Exp $
 
-DISTNAME=	orc-0.4.18
+DISTNAME=	orc-0.4.26
 CATEGORIES=	devel
-MASTER_SITES=	http://code.entropywave.com/download/orc/
+MASTER_SITES=	https://gstreamer.freedesktop.org/src/orc/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.entropywave.com/projects/orc/
+HOMEPAGE=	https://gstreamer.freedesktop.org/modules/orc.html
 COMMENT=	Compiler for vector operations
 LICENSE=	modified-bsd
 
