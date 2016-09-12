@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16410 2016/09/11 16:09:04 taca Exp $
+$NetBSD: TODO,v 1.16411 2016/09/12 01:54:40 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -1142,7 +1142,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mutagen-tools-1.31
 	o myodbc-5.3.4
 	o mysql-5.7.9
-	o mysql-cluster-7.5.0
 	o mysql-workbench-6.3
 	o nagios-base-4.1.1
 	o nagios-plugin-ldap-2.1.1
