@@ -1,0 +1,29 @@
+$NetBSD: patch-lib_External_isl_configure,v 1.1 2016/09/12 22:49:24 kamil Exp $
+
+Fix shell portability issue.
+
+--- lib/External/isl/configure.orig	2015-12-02 09:35:04.000000000 +0000
++++ lib/External/isl/configure
+@@ -17487,7 +17487,7 @@ else
+ fi
+ 
+ 
+- if test "x$with_int" == "ximath-32"; then
++ if test "x$with_int" = "ximath-32"; then
+   SMALL_INT_OPT_TRUE=
+   SMALL_INT_OPT_FALSE='#'
+ else
+@@ -17495,7 +17495,7 @@ else
+   SMALL_INT_OPT_FALSE=
+ fi
+ 
+-if test "x$with_int" == "ximath-32"; then :
++if test "x$with_int" = "ximath-32"; then :
+ 
+ 
+ $as_echo "#define USE_SMALL_INT_OPT /**/" >>confdefs.h
+@@ -21881,4 +21881,3 @@ if test -n "$ac_unrecognized_opts" && te
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-
