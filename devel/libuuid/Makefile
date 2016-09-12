@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/08/19 15:56:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/09/12 07:36:55 wiz Exp $
 
-DISTNAME=	util-linux-2.28.1
+DISTNAME=	util-linux-2.28.2
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/linux/utils/util-linux/v2.28/
