@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2016/09/12 10:59:55 wiz Exp $
+# $NetBSD: Makefile,v 1.154 2016/09/12 15:58:44 wiz Exp $
 
 DISTNAME=	wireshark-2.2.0
 CATEGORIES=	net
@@ -18,6 +18,8 @@ USE_TOOLS+=		gmake perl pkg-config yacc lex
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty
 CHECK_PORTABILITY_SKIP+=packaging/macosx/*/*
+
+PKGCONFIG_OVERRIDE+=	wireshark.pc.in
 
 # https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12831
 KRB5_ACCEPTED=		mit-krb5
