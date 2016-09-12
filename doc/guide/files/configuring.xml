@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.50 2016/07/10 07:43:23 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.51 2016/09/12 12:18:43 maya Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -286,6 +286,33 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 	  install one of the GCC packages to use instead.</para>
 	</listitem>
       </varlistentry>
+
+      <varlistentry>
+	<term><varname>PYTHON_DEFAULT_VERSION</varname>:</term>
+	<listitem>
+	  <para>Specifies which version of python to use when several
+	  options are available.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><varname>PKGSRC_FORTRAN</varname>:</term>
+	<listitem>
+	  <para>Specifies the fortran compiler to use.
+	  The default is <varname>g95</varname>, and
+	  <varname>gfortran</varname> is an alternative.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><varname>GFORTRAN_VERSION</varname>:</term>
+	<listitem>
+	  <para>If <varname>PKGSRC_FORTRAN</varname><literal>=</literal>
+	  <varname>gfortran</varname> is used, this option specifies which
+	  version to use.</para>
+	</listitem>
+      </varlistentry>
+
     </variablelist>
   </sect2>
 
