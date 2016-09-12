@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/08/26 12:23:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/09/12 14:06:08 mef Exp $
 bin/link-parser
 include/link-grammar/dict-api.h
 include/link-grammar/dict-structures.h
@@ -6,9 +6,7 @@ include/link-grammar/link-features.h
 include/link-grammar/link-includes.h
 lib/liblink-grammar.la
 lib/libminisat.la
-lib/libsat-solver.la
 lib/pkgconfig/link-grammar.pc
-man/man1/link-parser.1
 share/link-grammar/amy/4.0.affix
 share/link-grammar/amy/4.0.constituent-knowledge
 share/link-grammar/amy/4.0.dict
@@ -46,26 +44,14 @@ share/link-grammar/ar/words/words.PV_C
 share/link-grammar/ar/words/words.PV_V
 share/link-grammar/ar/words/words.PV_intr
 share/link-grammar/ar/words/words.adj
-share/link-grammar/ar/words/words.adj.compound
 share/link-grammar/ar/words/words.adv
 share/link-grammar/ar/words/words.n
-share/link-grammar/ar/words/words.n.compound
 share/link-grammar/ar/words/words.noun
 share/link-grammar/ar/words/words.noun_prop
 share/link-grammar/ar/words/words.numbers
-share/link-grammar/ar/words/words.pp
-share/link-grammar/ar/words/words.pp.compound
 share/link-grammar/ar/words/words.prep
-share/link-grammar/ar/words/words.proper
-share/link-grammar/ar/words/words.v
-share/link-grammar/ar/words/words.v.compound
-share/link-grammar/ar/words/words.v.compound.sub
-share/link-grammar/ar/words/words.v.intransitive
-share/link-grammar/ar/words/words.v.m.infinitive
-share/link-grammar/ar/words/words.v.sub
 share/link-grammar/ar/words/words.years
 share/link-grammar/de/4.0.affix
-share/link-grammar/de/4.0.batch
 share/link-grammar/de/4.0.constituent-knowledge
 share/link-grammar/de/4.0.dict
 share/link-grammar/de/4.0.knowledge
@@ -73,6 +59,7 @@ share/link-grammar/de/4.0.regex
 share/link-grammar/en/4.0.affix
 share/link-grammar/en/4.0.constituent-knowledge
 share/link-grammar/en/4.0.dict
+share/link-grammar/en/4.0.dict.m4
 share/link-grammar/en/4.0.knowledge
 share/link-grammar/en/4.0.regex
 share/link-grammar/en/words/currency
@@ -80,6 +67,8 @@ share/link-grammar/en/words/currency.p
 share/link-grammar/en/words/entities.given-bisex.sing
 share/link-grammar/en/words/entities.given-female.sing
 share/link-grammar/en/words/entities.given-male.sing
+share/link-grammar/en/words/entities.goddesses
+share/link-grammar/en/words/entities.gods
 share/link-grammar/en/words/entities.locations.sing
 share/link-grammar/en/words/entities.national.sing
 share/link-grammar/en/words/entities.organizations.sing
@@ -155,6 +144,21 @@ share/link-grammar/fa/4.0.constituent-knowledge
 share/link-grammar/fa/4.0.dict
 share/link-grammar/fa/4.0.knowledge
 share/link-grammar/fa/4.0.regex
+share/link-grammar/fa/words/words.adj
+share/link-grammar/fa/words/words.adj.compound
+share/link-grammar/fa/words/words.adv
+share/link-grammar/fa/words/words.n
+share/link-grammar/fa/words/words.n.compound
+share/link-grammar/fa/words/words.numbers
+share/link-grammar/fa/words/words.pp
+share/link-grammar/fa/words/words.pp.compound
+share/link-grammar/fa/words/words.proper
+share/link-grammar/fa/words/words.v
+share/link-grammar/fa/words/words.v.compound
+share/link-grammar/fa/words/words.v.compound.sub
+share/link-grammar/fa/words/words.v.intransitive
+share/link-grammar/fa/words/words.v.m.infinitive
+share/link-grammar/fa/words/words.v.sub
 share/link-grammar/he/4.0.affix
 share/link-grammar/he/4.0.constituent-knowledge
 share/link-grammar/he/4.0.dict
@@ -165,6 +169,11 @@ share/link-grammar/id/4.0.constituent-knowledge
 share/link-grammar/id/4.0.dict
 share/link-grammar/id/4.0.knowledge
 share/link-grammar/id/4.0.regex
+share/link-grammar/kz/4.0.affix
+share/link-grammar/kz/4.0.constituent-knowledge
+share/link-grammar/kz/4.0.dict
+share/link-grammar/kz/4.0.knowledge
+share/link-grammar/kz/4.0.regex
 share/link-grammar/lt/4.0.affix
 share/link-grammar/lt/4.0.constituent-knowledge
 share/link-grammar/lt/4.0.dict
@@ -433,4 +442,8 @@ share/link-grammar/tr/4.0.constituent-knowledge
 share/link-grammar/tr/4.0.dict
 share/link-grammar/tr/4.0.knowledge
 share/link-grammar/tr/4.0.regex
-share/link-grammar/tr/suff-list
+share/link-grammar/vn/4.0.affix
+share/link-grammar/vn/4.0.constituent-knowledge
+share/link-grammar/vn/4.0.dict
+share/link-grammar/vn/4.0.knowledge
+share/link-grammar/vn/4.0.regex
