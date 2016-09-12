@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3779 2016/09/12 22:14:36 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3780 2016/09/12 22:52:58 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5338,3 +5338,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc48 to 4.8.5 [maya 2016-09-12]
 	Updated lang/gcc6 to 6.2.0 [maya 2016-09-12]
 	Updated lang/gcc6-libs to 6.2.0nb1 [maya 2016-09-12]
+	Added devel/polly version 3.8.1 [kamil 2016-09-12]
