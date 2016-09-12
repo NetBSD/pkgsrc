@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3766 2016/09/12 15:38:31 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3767 2016/09/12 15:40:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5323,3 +5323,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SOPE to 2.3.14 [taca 2016-09-12]
 	Updated www/SOGo to 2.3.14 [taca 2016-09-12]
 	Updated lang/php71 to 7.1.0rc1 [taca 2016-09-12]
+	Updated net/libfilezilla to 0.6.1 [wiz 2016-09-12]
