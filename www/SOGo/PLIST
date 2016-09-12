@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/06/15 13:29:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/09/12 14:53:12 taca Exp $
 include/GDLContentStore/EOAdaptorChannel+GCS.h
 include/GDLContentStore/GCSAlarmsFolder.h
 include/GDLContentStore/GCSChannelManager.h
@@ -52,6 +52,7 @@ include/SOGoUI/UIxComponent.h
 include/SOGoUI/UIxJSClose.h
 lib/GNUstep/Frameworks/SOGo.framework/Headers
 lib/GNUstep/Frameworks/SOGo.framework/Resources
+lib/GNUstep/Frameworks/SOGo.framework/SOGo.framework
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Headers/BSONCodec.h
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Headers/DOMNode+SOGo.h
 lib/GNUstep/Frameworks/SOGo.framework/Versions/2/Headers/EOBitmaskQualifier.h
