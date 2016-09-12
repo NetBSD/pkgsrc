@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.8 2015/11/25 13:05:47 jperkin Exp $
+# $NetBSD: gfortran.mk,v 1.9 2016/09/12 12:18:13 maya Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,7 +40,9 @@ COMPILER_GFORTRAN_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGPATH:Mlang/gcc48) || !empty(PKGPATH:Mdevel/patch) || \
+GFORTRAN_VERSION?=	48
+
+.if !empty(PKGPATH:Mlang/gcc${GFORTRAN_VERSION}) || !empty(PKGPATH:Mdevel/patch) || \
     !empty(PKGPATH:Mdevel/libtool-base)
 IGNORE_GFORTRAN=	yes
 MAKEFLAGS+=		IGNORE_GFORTRAN=yes
@@ -68,7 +70,7 @@ _USE_GFORTRAN=	YES
 .endif
 
 .if !empty(_USE_GFORTRAN:M[yY][eE][sS])
-_GFORTRANBASE=	${LOCALBASE}/gcc48
+_GFORTRANBASE=	${LOCALBASE}/gcc${GFORTRAN_VERSION}
 FC=		gfortran
 
 _GFORTRAN_DIR=	${WRKDIR}/.gfortran
@@ -89,8 +91,8 @@ PREPEND_PATH+=	${_GFORTRAN_DIR}/bin
 .  endif
 
 # Add the dependency on gfortran.
-BUILDLINK_DEPMETHOD.gcc48=	full
-.  include "../../lang/gcc48/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gcc${GFORTRAN_VERSION}=	full
+.  include "../../lang/gcc${GFORTRAN_VERSION}/buildlink3.mk"
 
 .  if defined(GFORTRAN_DIR) && !empty(GFORTRAN_DIR)
 PKGSRC_MAKE_ENV+=	GFORTRAN_DIR=${GFORTRAN_DIR:Q}
