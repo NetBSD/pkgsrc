@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2016/04/24 10:02:13 wiz Exp $
-bin/androiddump
+@comment $NetBSD: PLIST,v 1.31 2016/09/12 10:59:55 wiz Exp $
 bin/capinfos
 bin/captype
 bin/dftest
@@ -16,7 +15,11 @@ ${PLIST.gtk3}bin/wireshark-gtk
 ${PLIST.qt5}bin/wireshark
 lib/libwireshark.la
 lib/libwiretap.la
+lib/libwscodecs.la
 lib/libwsutil.la
+lib/pkgconfig/wireshark.pc
+lib/wireshark/extcap/androiddump
+lib/wireshark/extcap/randpktdump
 lib/wireshark/plugins/${PKGVERSION}/docsis.la
 lib/wireshark/plugins/${PKGVERSION}/ethercat.la
 lib/wireshark/plugins/${PKGVERSION}/gryphon.la
@@ -37,11 +40,13 @@ man/man1/dumpcap.1
 man/man1/editcap.1
 man/man1/mergecap.1
 man/man1/randpkt.1
+man/man1/randpktdump.1
 man/man1/rawshark.1
 man/man1/reordercap.1
 man/man1/text2pcap.1
 man/man1/tshark.1
 ${PLIST.mans}man/man1/wireshark.1
+man/man4/extcap.4
 man/man4/wireshark-filter.4
 ${PLIST.icons}share/appdata/wireshark.appdata.xml
 ${PLIST.icons}share/applications/wireshark-gtk.desktop
@@ -77,12 +82,14 @@ share/wireshark/COPYING
 share/wireshark/androiddump.html
 share/wireshark/capinfos.html
 share/wireshark/cfilters
+share/wireshark/ciscodump.html
 share/wireshark/colorfilters
 ${PLIST.lua}share/wireshark/console.lua
 share/wireshark/dfilters
 share/wireshark/dftest.html
 share/wireshark/diameter/AlcatelLucent.xml
 share/wireshark/diameter/Cisco.xml
+share/wireshark/diameter/CiscoSystems.xml
 share/wireshark/diameter/Custom.xml
 share/wireshark/diameter/Ericsson.xml
 share/wireshark/diameter/HP.xml
@@ -118,6 +125,7 @@ share/wireshark/dtds/xcap-caps.dtd
 share/wireshark/dtds/xcap-error.dtd
 share/wireshark/dumpcap.html
 share/wireshark/editcap.html
+share/wireshark/extcap.html
 share/wireshark/help/capture_filters.txt
 share/wireshark/help/capturing.txt
 share/wireshark/help/display_filters.txt
@@ -292,6 +300,7 @@ share/wireshark/radius/dictionary.riverstone
 share/wireshark/radius/dictionary.roaringpenguin
 share/wireshark/radius/dictionary.ruckus
 share/wireshark/radius/dictionary.ruggedcom
+share/wireshark/radius/dictionary.sangoma
 share/wireshark/radius/dictionary.sg
 share/wireshark/radius/dictionary.shasta
 share/wireshark/radius/dictionary.shiva
@@ -332,10 +341,12 @@ share/wireshark/radius/dictionary.zeus
 share/wireshark/radius/dictionary.zte
 share/wireshark/radius/dictionary.zyxel
 share/wireshark/randpkt.html
+share/wireshark/randpktdump.html
 share/wireshark/rawshark.html
 share/wireshark/reordercap.html
 share/wireshark/services
 share/wireshark/smi_modules
+share/wireshark/sshdump.html
 share/wireshark/text2pcap.html
 share/wireshark/tpncp/tpncp.dat
 share/wireshark/tshark.html
