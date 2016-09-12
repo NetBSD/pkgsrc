@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3762 2016/09/12 13:23:10 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3763 2016/09/12 14:38:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5319,3 +5319,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Deep to 1.123 [wen 2016-09-12]
 	Updated www/py-djangocms-admin-style to 1.2.3 [adam 2016-09-12]
 	Updated www/py-django-cms to 3.3.2 [adam 2016-03-06]
+	Updated games/gnuchess-book to 1.02 [mef 2016-09-12]
