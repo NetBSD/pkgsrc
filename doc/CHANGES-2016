@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3752 2016/09/12 07:42:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3753 2016/09/12 07:57:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5308,3 +5308,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libuuid to 2.28.2 [wiz 2016-09-12]
 	Updated devel/mdds1.2 to 1.2.2 [wiz 2016-09-12]
 	Updated mail/notmuch to 0.22.2 [wiz 2016-09-12]
+	Updated devel/py-cffi to 1.8.2 [wiz 2016-09-12]
