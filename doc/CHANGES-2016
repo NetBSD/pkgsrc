@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3773 2016/09/12 17:24:07 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3774 2016/09/12 17:44:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5331,3 +5331,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/sudo to 1.8.17p1 [taca 2016-09-12]
 	Updated www/nghttp2 to 1.14.1 [adam 2016-09-12]
 	Updated devel/cmake to 3.6.2 [adam 2016-09-12]
+	Updated devel/py-setuptools_scm to 1.11.1 [adam 2016-09-12]
+	Updated www/py-cherrypy to 8.1.0 [adam 2016-09-12]
