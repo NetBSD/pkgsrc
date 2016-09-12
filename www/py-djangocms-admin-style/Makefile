@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/09/12 13:00:56 adam Exp $
+# $NetBSD: Makefile,v 1.11 2016/09/12 13:01:26 adam Exp $
 
 DISTNAME=	djangocms-admin-style-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,11 +16,6 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 USE_LANGUAGES=		# empty
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-# remove OS X Finder leftovers
-#post-extract:
-#	${RM} ${WRKSRC}/djangocms_admin_style/.DS_Store
-#	${RM} ${WRKSRC}/djangocms_admin_style/static/.DS_Store
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
