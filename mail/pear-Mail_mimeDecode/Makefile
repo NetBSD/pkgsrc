@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/10/08 12:19:26 asau Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/12 16:00:08 taca Exp $
 
-DISTNAME=	Mail_mimeDecode-1.5.5
+DISTNAME=	Mail_mimeDecode-1.5.6
 CATEGORIES+=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
