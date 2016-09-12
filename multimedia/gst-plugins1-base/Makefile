@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/09/12 09:00:10 wiz Exp $
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 #CONFIGURE_ARGS+= --disable-silent-rules
