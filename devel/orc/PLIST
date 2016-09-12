@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/09/02 16:10:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/09/12 09:11:48 wiz Exp $
 bin/orc-bugreport
 bin/orcc
 include/orc-0.4/orc-test/orcarray.h
@@ -48,7 +48,7 @@ share/gtk-doc/html/orc/ch04.html
 share/gtk-doc/html/orc/ch05.html
 share/gtk-doc/html/orc/home.png
 share/gtk-doc/html/orc/index.html
-share/gtk-doc/html/orc/index.sgml
+share/gtk-doc/html/orc/left-insensitive.png
 share/gtk-doc/html/orc/left.png
 share/gtk-doc/html/orc/orc-ARM.html
 share/gtk-doc/html/orc/orc-MMX.html
@@ -71,6 +71,8 @@ share/gtk-doc/html/orc/orc-runninging.html
 share/gtk-doc/html/orc/orc-tutorial.html
 share/gtk-doc/html/orc/orc-x86.html
 share/gtk-doc/html/orc/orc.devhelp2
+share/gtk-doc/html/orc/right-insensitive.png
 share/gtk-doc/html/orc/right.png
 share/gtk-doc/html/orc/style.css
+share/gtk-doc/html/orc/up-insensitive.png
 share/gtk-doc/html/orc/up.png
