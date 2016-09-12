@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/11 18:28:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/09/12 14:01:19 mef Exp $
 bin/extrema
 lib/libextrema.la
 share/extrema/Help/BasicTasks/BasicTasks.htm
@@ -294,14 +294,11 @@ share/extrema/Help/Commands/ContourS02.htm
 share/extrema/Help/Commands/ContourS03.htm
 share/extrema/Help/Commands/ContourS04.htm
 share/extrema/Help/Commands/ContourS05.htm
-share/extrema/Help/Commands/ContourS06.htm
-share/extrema/Help/Commands/ContourS07.htm
-share/extrema/Help/Commands/ContourS08.htm
-share/extrema/Help/Commands/ContourS09.htm
-share/extrema/Help/Commands/ContourS09I01.gif
-share/extrema/Help/Commands/ContourS10.htm
-share/extrema/Help/Commands/ContourS10I01.gif
-share/extrema/Help/Commands/ContourS10M01.pcm
+share/extrema/Help/Commands/ContourS05I01.png
+share/extrema/Help/Commands/ContourS05I02.png
+share/extrema/Help/Commands/ContourS05I03.png
+share/extrema/Help/Commands/ContourS05I04.png
+share/extrema/Help/Commands/ContourS05I05.png
 share/extrema/Help/Commands/Dealias.htm
 share/extrema/Help/Commands/Defaults.htm
 share/extrema/Help/Commands/Define.htm
