@@ -1,10 +1,16 @@
-$NetBSD: patch-src_etc_local__stage0.sh,v 1.1 2016/09/06 10:36:49 jperkin Exp $
-
-Copy additional libarena required on Darwin.
-Copy GCC support libraries required on SunOS.
+$NetBSD: patch-src_etc_local__stage0.sh,v 1.2 2016/09/12 13:27:33 ryoon Exp $
 
 --- src/etc/local_stage0.sh.orig	2016-08-16 01:54:35.000000000 +0000
 +++ src/etc/local_stage0.sh
+@@ -18,7 +18,7 @@ LIB_PREFIX=lib
+ 
+ OS=`uname -s`
+ case $OS in
+-    ("Linux"|"FreeBSD"|"DragonFly"|"Bitrig"|"OpenBSD"|"SunOS")
++    ("Linux"|"FreeBSD"|"DragonFly"|"Bitrig"|"OpenBSD"|"SunOS"|"NetBSD")
+     BIN_SUF=
+     LIB_SUF=.so
+     ;;
 @@ -51,6 +51,7 @@ fi
  
  cp ${PREFIX}/bin/rustc${BIN_SUF} ${TARG_DIR}/stage0/bin/

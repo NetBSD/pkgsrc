@@ -1,0 +1,20 @@
+$NetBSD: patch-src_compiler-rt_lib_builtins_CMakeLists.txt,v 1.1 2016/09/12 13:27:33 ryoon Exp $
+
+* On NetBSD, do not misdetect unwind.h
+  We do not support ARM build currently, so remove this unconditionally.
+
+--- src/compiler-rt/lib/builtins/CMakeLists.txt.orig	2016-08-16 01:54:40.000000000 +0000
++++ src/compiler-rt/lib/builtins/CMakeLists.txt
+@@ -159,12 +159,6 @@ if(NOT WIN32 OR MINGW)
+       emutls.c)
+ endif()
+ 
+-if (HAVE_UNWIND_H)
+-  set(GENERIC_SOURCES
+-      ${GENERIC_SOURCES}
+-      gcc_personality_v0.c)
+-endif ()
+-
+ if (NOT MSVC)
+   set(x86_64_SOURCES
+       x86_64/chkstk.S
