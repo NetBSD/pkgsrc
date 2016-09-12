@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3775 2016/09/12 18:06:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3776 2016/09/12 18:34:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5334,3 +5334,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools_scm to 1.11.1 [adam 2016-09-12]
 	Updated www/py-cherrypy to 8.1.0 [adam 2016-09-12]
 	Updated graphics/freetype2 to 2.7 [wiz 2016-09-12]
+	Updated security/py-cryptography to 1.5nb1 [wiz 2016-09-12]
