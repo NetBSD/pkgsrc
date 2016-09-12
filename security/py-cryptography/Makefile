@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2016/08/31 06:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2016/09/12 18:34:31 wiz Exp $
 
 DISTNAME=	cryptography-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
 
@@ -11,7 +12,7 @@ COMMENT=	Cryptographic recipes and primitives for Python
 LICENSE=	apache-2.0 OR modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
-DEPENDS+=	${PYPKGPREFIX}-cffi>=0.8:../../devel/py-cffi
+DEPENDS+=	${PYPKGPREFIX}-cffi>=1.8.2:../../devel/py-cffi
 DEPENDS+=	${PYPKGPREFIX}-cparser>=2.10:../../devel/py-cparser
 DEPENDS+=	${PYPKGPREFIX}-idna-[0-9]*:../../www/py-idna
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
