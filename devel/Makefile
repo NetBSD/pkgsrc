@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2307 2016/09/11 08:15:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2308 2016/09/12 22:50:42 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1694,6 +1694,7 @@ SUBDIR+=	pkgconf
 SUBDIR+=	ply
 SUBDIR+=	pmccabe
 SUBDIR+=	poco
+SUBDIR+=	polly
 SUBDIR+=	popt
 SUBDIR+=	poxml
 SUBDIR+=	prcs
