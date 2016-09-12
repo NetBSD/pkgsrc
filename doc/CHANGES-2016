@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3771 2016/09/12 16:05:35 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3772 2016/09/12 17:12:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5328,3 +5328,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/fml4 to 4.0.3.20040215nb11 [taca 2016-09-12]
 	Updated mail/pear-Mail_mimeDecode to 1.5.6 [taca 2016-09-12]
 	Updated lang/algol68g to 2.8.3 [maya 2016-09-12]
+	Updated security/sudo to 1.8.17p1 [taca 2016-09-12]
