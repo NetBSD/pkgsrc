@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3756 2016/09/12 09:08:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3757 2016/09/12 09:11:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5312,3 +5312,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 27.1.2 [wiz 2016-09-12]
 	Updated databases/shared-mime-info to 1.7 [wiz 2016-09-12]
 	Updated multimedia/gstreamer1 to 1.8.3 [wiz 2016-09-12]
+	Updated devel/orc to 0.4.26 [wiz 2016-09-12]
