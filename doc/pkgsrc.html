@@ -1815,6 +1815,17 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 	  when building packages.  If the system GCC doesn't
 	  satisfy this requirement, then pkgsrc will build and
 	  install one of the GCC packages to use instead.</p></dd>
+<dt><span class="term"><code class="varname">PYTHON_DEFAULT_VERSION</code>:</span></dt>
+<dd><p>Specifies which version of python to use when several
+	  options are available.</p></dd>
+<dt><span class="term"><code class="varname">PKGSRC_FORTRAN</code>:</span></dt>
+<dd><p>Specifies the fortran compiler to use.
+	  The default is <code class="varname">g95</code>, and
+	  <code class="varname">gfortran</code> is an alternative.</p></dd>
+<dt><span class="term"><code class="varname">GFORTRAN_VERSION</code>:</span></dt>
+<dd><p>If <code class="varname">PKGSRC_FORTRAN</code><code class="literal">=</code>
+	  <code class="varname">gfortran</code> is used, this option specifies which
+	  version to use.</p></dd>
 </dl></div>
 </div>
 <div class="sect2">
@@ -7161,7 +7172,7 @@ CONFLICTS=      bar-[0-9]*
     (OS-version-platform) that can use glob-style
     wildcards.</p>
 <p>If a package is not appropriate for some platforms (as
-    oopposed to merely broken), a different set of variables should be
+    opposed to merely broken), a different set of variables should be
     used as this affects failure reporting and statistics.
     If the package is appropriate for most platforms, the exceptions
     should be noted with <code class="varname">NOT_FOR_PLATFORM</code>.  If
@@ -8809,7 +8820,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79356336"></a><dl>
+<a name="idm80465328"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8854,7 +8865,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79355952"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm80464944"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8870,7 +8881,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79351856"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm80460976"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8888,7 +8899,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79347504"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm80456496"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8906,7 +8917,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79343280"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm80452400"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8919,7 +8930,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79341104"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm80450096"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8935,7 +8946,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79338032"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm80447024"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8959,7 +8970,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79331120"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm80440112"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8984,7 +8995,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79327280"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm80436400"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9032,7 +9043,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79320880"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm80429872"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
