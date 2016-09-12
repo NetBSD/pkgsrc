@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3777 2016/09/12 18:42:30 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3778 2016/09/12 22:14:14 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5336,3 +5336,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/freetype2 to 2.7 [wiz 2016-09-12]
 	Updated security/py-cryptography to 1.5nb1 [wiz 2016-09-12]
 	Updated lang/gcc48 to 4.8.5 [maya 2016-09-12]
+	Updated lang/gcc6 to 6.2.0 [maya 2016-09-12]
