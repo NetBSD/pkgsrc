@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/12 13:27:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/13 12:37:08 ryoon Exp $
 
 DISTNAME=	rustc-1.11.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -57,9 +57,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 #
 # Under NetBSD, do not use DT_RUNPATH
 #
-.if ${OPSYS} == "NetBSD"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
-.endif
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 
 #
 # Can't use pkgsrc llvm on SunOS at the moment due to a relocation error.
