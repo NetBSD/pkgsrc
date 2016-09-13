@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3781 2016/09/13 09:41:50 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3782 2016/09/13 10:04:09 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5340,3 +5340,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc6-libs to 6.2.0nb1 [maya 2016-09-12]
 	Added devel/polly version 3.8.1 [kamil 2016-09-12]
 	Updated parallel/parallel to 20160822 [fhajny 2016-09-13]
+	Updated net/py-junos-eznc to 2.0.0 [he 2016-09-13]
