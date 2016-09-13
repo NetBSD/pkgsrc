@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.473 2016/08/02 20:07:32 wiz Exp $
+# $NetBSD: Makefile,v 1.474 2016/09/13 20:42:12 bsiegert Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -83,6 +83,7 @@ SUBDIR+=	gnome-devel-docs
 SUBDIR+=	gnome-user-docs
 SUBDIR+=	gnome-utils
 SUBDIR+=	gnuls
+SUBDIR+=	go-genproto
 SUBDIR+=	goffice0.10
 SUBDIR+=	goffice0.6
 SUBDIR+=	goffice0.8
