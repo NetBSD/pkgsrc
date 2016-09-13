@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.33 2016/06/15 11:30:39 adam Exp $
+# $NetBSD: Makefile.common,v 1.33.2.1 2016/09/13 19:23:04 bsiegert Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
 
-DISTNAME=	mysql-5.6.31
+DISTNAME=	mysql-5.6.33
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.6/}
 
