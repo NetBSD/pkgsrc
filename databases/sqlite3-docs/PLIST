@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2016/08/14 11:19:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.59 2016/09/13 10:48:24 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -347,14 +347,13 @@ share/doc/sqlite3/images/foreignlogos/oracle.gif
 share/doc/sqlite3/images/foreignlogos/philips.gif
 share/doc/sqlite3/images/foreignlogos/php.gif
 share/doc/sqlite3/images/foreignlogos/python.gif
-share/doc/sqlite3/images/foreignlogos/realbasic.gif
 share/doc/sqlite3/images/foreignlogos/rpm_logo.png
 share/doc/sqlite3/images/foreignlogos/skype.gif
 share/doc/sqlite3/images/foreignlogos/sony.gif
 share/doc/sqlite3/images/foreignlogos/sunmicro.gif
 share/doc/sqlite3/images/foreignlogos/symbian.gif
 share/doc/sqlite3/images/foreignlogos/tcl.gif
-share/doc/sqlite3/images/foreignlogos/toshiba.gif
+share/doc/sqlite3/images/foreignlogos/xojo.png
 share/doc/sqlite3/images/fts3_doclist.png
 share/doc/sqlite3/images/fts3_doclist.svg
 share/doc/sqlite3/images/fts3_doclist2.png
@@ -534,6 +533,7 @@ share/doc/sqlite3/pgszchng2016.html
 share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
 share/doc/sqlite3/privatebranch.html
+share/doc/sqlite3/prosupport.html
 share/doc/sqlite3/psow.html
 share/doc/sqlite3/queryplanner-ng.html
 share/doc/sqlite3/queryplanner.html
@@ -559,6 +559,7 @@ share/doc/sqlite3/releaselog/3_12_2.html
 share/doc/sqlite3/releaselog/3_13_0.html
 share/doc/sqlite3/releaselog/3_14.html
 share/doc/sqlite3/releaselog/3_14_1.html
+share/doc/sqlite3/releaselog/3_14_2.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
@@ -746,6 +747,7 @@ share/doc/sqlite3/speed.html
 share/doc/sqlite3/spellfix1.html
 share/doc/sqlite3/sqlanalyze.html
 share/doc/sqlite3/sqldiff.html
+share/doc/sqlite3/sqlite.css
 share/doc/sqlite3/sqlite.html
 share/doc/sqlite3/support.html
 share/doc/sqlite3/syntax.html
