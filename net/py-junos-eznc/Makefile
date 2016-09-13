@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/09/13 10:03:32 he Exp $
+# $NetBSD: Makefile,v 1.8 2016/09/13 23:09:23 wiz Exp $
 
 DISTNAME=	junos-eznc-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.4:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ncclient
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
