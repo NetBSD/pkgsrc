@@ -1,17 +1,9 @@
-# $NetBSD: Makefile,v 1.84 2016/09/12 10:02:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.85 2016/09/13 15:56:01 taca Exp $
 
-DISTNAME=	roundcubemail-1.1.5
+DISTNAME=	roundcubemail-${RC_VERS}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/}
-PKGREVISION=	2
-CATEGORIES=	mail
-MASTER_SITES=   ${MASTER_SITE_GITHUB:=roundcube/}
-GITHUB_PROJECT= roundcubemail
-GITHUB_RELEASE= 1.1.5
-GITHUB_TYPE=    release
-DIST_SUBDIR=	roundcubemail-1.1.5
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 LICENSE=	gnu-gpl-v3
 
@@ -28,37 +20,16 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.8.1:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_mimeDecode>=1.5.5:../../mail/pear-Mail_mimeDecode
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL>=1.0.3:../../mail/pear-Auth_SASL
 
-PHP_VERSIONS_ACCEPTED=	56
+RC_SUBDIRS=	SQL bin installer plugins program skins
+CONF_PLUGINS=	acl additional_message_headers database_attachments \
+		emoticons help http_authentication jqueryui \
+		krb_authentication managesieve new_user_identity \
+		newmail_notifier redundant_attachments squirrelmail_usercopy
 
-USE_LANGUAGES=		# none
-USE_TOOLS+=		pax
-NO_BUILD=		yes
-
-INSTALLATION_DIRS=	${RCDIR}/plugins ${RCDIR}/program ${RCDIR}/skins
-INSTALLATION_DIRS+=	${RCDIR}/bin ${RCDIR}/SQL ${DOCDIR} ${EGDIR}
-
-.include "../../lang/php/phpversion.mk"
-
-PKG_SYSCONFSUBDIR?=	roundcube
-
-PKG_GROUPS_VARS+=	WWW_GROUP
-PKG_USERS_VARS=		WWW_USER
-BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
-
-RCDIR=			${PREFIX}/share/roundcube
-EGDIR=			${PREFIX}/share/examples/roundcube
-DOCDIR=			${PREFIX}/share/doc/roundcube
-PAX_DIRS=		plugins program skins installer
-SQL_DIRS=		mssql mysql oracle postgres sqlite
-
-CONF_PLUGINS=		acl additional_message_headers help \
-			http_authentication jqueryui managesieve \
-			newmail_notifier password redundant_attachments \
-			squirrelmail_usercopy zipdownload
-
-MESSAGE_SUBST+=		DOCDIR=${DOCDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-MESSAGE_SUBST+=		VARBASE=${VARBASE} RCDIR=${RCDIR}
-FILES_SUBST+=		RCDIR=${RCDIR}
+.for d in ${RC_SUBDIRS}
+INSTALLATION_DIRS+=	${RCDIR}/${d}
+.endfor
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}
 OWN_DIRS_PERMS+=	${VARBASE}/log/roundcube \
@@ -68,22 +39,16 @@ OWN_DIRS_PERMS+=	${VARBASE}/spool/roundcube \
 OWN_DIRS_PERMS+=	${VARBASE}/tmp/roundcube \
 			${WWW_USER} ${WWW_GROUP} 0750
 
-CONF_FILES=		${EGDIR}/roundcube.conf \
+CONF_FILES=		${PREFIX}/${EGDIR}/roundcube.conf \
 			${PKG_SYSCONFDIR}/roundcube.conf
-CONF_FILES+=		${EGDIR}/mimetypes.php \
+CONF_FILES+=		${PREFIX}/${EGDIR}/mimetypes.php \
 			${PKG_SYSCONFDIR}/mimetypes.php
-CONF_FILES_PERMS+=	${EGDIR}/config.inc.php \
+CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/config.inc.php \
 			${PKG_SYSCONFDIR}/config.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
-CONF_FILES_PERMS+=	${EGDIR}/defaults.inc.php \
+CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/defaults.inc.php \
 			${PKG_SYSCONFDIR}/defaults.inc.php \
 			${WWW_USER} ${WWW_GROUP} 0640
-
-.for f in ${CONF_PLUGINS}
-CONF_FILES_PERMS+=	${EGDIR}/plugins/${f}/config.inc.php \
-			${RCDIR}/plugins/${f}/config.inc.php \
-			${WWW_USER} ${WWW_GROUP} 0640
-.endfor
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
@@ -104,56 +69,38 @@ REPLACE.php.old=	/usr/bin/env php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	bin/*.sh
 
-REPLACE_PYTHON=		plugins/password/helpers/chpass-wrapper.py
-
 post-extract:
 	${CP} ${FILESDIR}/${WWW_CONF_FILE} ${WRKSRC}/roundcube.conf
 
+pre-install:
+	cd ${WRKSRC}/plugins && ${RM} -fr enigma password zipdownload
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
-
-	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DESTDIR}${RCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${RCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${RCDIR}/
-
-	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${DESTDIR}${RCDIR}/SQL/
-.for i in ${SQL_DIRS}
-	${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/SQL/${i}
-	${INSTALL_DATA} ${WRKSRC}/SQL/${i}/*.sql ${DESTDIR}${RCDIR}/SQL/${i}
-.endfor
-
-	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
-		${DESTDIR}${EGDIR}/roundcube.conf
-	${INSTALL_DATA} ${WRKSRC}/config/mimetypes.php \
-		${DESTDIR}${EGDIR}/mimetypes.php
-	${INSTALL_DATA} ${WRKSRC}/config/config.inc.php.sample \
-		${DESTDIR}${EGDIR}/config.inc.php
-	${INSTALL_DATA} ${WRKSRC}/config/defaults.inc.php \
-		${DESTDIR}${EGDIR}/defaults.inc.php
-
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sh ${DESTDIR}${RCDIR}/bin/
-
-.for i in ${PAX_DIRS}
-	${INSTALL_DATA_DIR} ${DESTDIR}${RCDIR}/${i}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DESTDIR}${PREFIX}/${RCDIR}
+	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${PREFIX}/${RCDIR}
+	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${PREFIX}/${RCDIR}
+.for i in ${RC_SUBDIRS}
 	cd ${WRKSRC}/${i} && ${FIND} . -type f \! -name "*.orig" -print | \
-		${PAX} -rw ${DESTDIR}${RCDIR}/${i}
-	${FIND} ${DESTDIR}${RCDIR}/${i} -type f | \
+		pax -rw ${DESTDIR}${PREFIX}/${RCDIR}/${i}
+	${FIND} ${DESTDIR}${PREFIX}/${RCDIR}/${i} -type f | \
 		${XARGS} ${CHMOD} ${SHAREMODE}
-	${FIND} ${DESTDIR}${RCDIR}/${i} -type d | \
+	${FIND} ${DESTDIR}${PREFIX}/${RCDIR}/${i} -type d | \
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${RCDIR}/${i}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/${RCDIR}/${i}
 .endfor
+	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
+		${DESTDIR}${PREFIX}/${EGDIR}/roundcube.conf
+	${INSTALL_DATA} ${WRKSRC}/config/mimetypes.php \
+		${DESTDIR}${PREFIX}/${EGDIR}/mimetypes.php
+	${INSTALL_DATA} ${WRKSRC}/config/config.inc.php.sample \
+		${DESTDIR}${PREFIX}/${EGDIR}/config.inc.php
+	${INSTALL_DATA} ${WRKSRC}/config/defaults.inc.php \
+		${DESTDIR}${PREFIX}/${EGDIR}/defaults.inc.php
 
-.for f in ${CONF_PLUGINS}
-	${MKDIR} ${DESTDIR}${EGDIR}/plugins/${f}
-	${TEST} -f ${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php || \
-		${MV} ${DESTDIR}${RCDIR}/plugins/${f}/config.inc.php.dist \
-			${DESTDIR}${EGDIR}/plugins/${f}/config.inc.php
-.endfor
-
-.include "options.mk"
-.include "../../lang/python/application.mk"
+.include "Makefile.common"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
