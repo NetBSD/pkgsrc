@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3786 2016/09/13 11:10:22 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3787 2016/09/13 11:28:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5347,3 +5347,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-docs to 3.14.2 [adam 2016-09-13]
 	Updated databases/sqlite3-tcl to 3.14.2 [adam 2016-09-13]
 	Updated graphics/lcms2 to 2.8 [adam 2016-09-13]
+	Updated cad/py-gds to 1.0 [mef 2016-09-13]
