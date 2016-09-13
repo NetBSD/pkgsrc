@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/02 23:46:13 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/09/13 09:41:29 fhajny Exp $
 
-SHA1 (parallel-20130122.tar.bz2) = 0f7eac7c8a574e173e322f359f4f3804c9d05203
-RMD160 (parallel-20130122.tar.bz2) = 642064b2b06083a39d9156a5ee2733ae614c2d5f
-SHA512 (parallel-20130122.tar.bz2) = 7975c5058db03f586a2db88c27e86118efa61d0cc23ad2bd058c17335d80435ffc506d8a4f83ec9d5879f082665257ad435f4f59886eab1c65b5ccbe5a5858cb
-Size (parallel-20130122.tar.bz2) = 238646 bytes
-SHA1 (patch-src_parallel.pod) = 7c0ce9636c308ccc736ac2bbc34c961f4857ad2f
+SHA1 (parallel-20160822.tar.bz2) = eacae06b0e145559d9f9d2f027be5cfac28f76bf
+RMD160 (parallel-20160822.tar.bz2) = 6f56b1bca8f6f29fd712f2657cff9c44796bcb90
+SHA512 (parallel-20160822.tar.bz2) = 303715075f50f0a0e18b1b9e65d860ae5ba9901efc6de096406ee69b8d91d4d3a648a966b388156024d0177f7d7b510b7df437c212ba587c4636d415278188ab
+Size (parallel-20160822.tar.bz2) = 1370647 bytes
