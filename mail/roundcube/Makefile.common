@@ -1,0 +1,46 @@
+# $NetBSD: Makefile.common,v 1.1 2016/09/13 15:56:01 taca Exp $
+#
+# used by mail/roundcube/Makefile
+# used by mail/roundcube/plugins.mk
+
+DISTNAME=	roundcubemail-${RC_VERS}
+CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_GITHUB:=roundcube/}
+GITHUB_PROJECT=	roundcubemail
+HOMEPAGE=	http://roundcube.net/
+
+RC_VERS=	1.2.1
+
+USE_LANGUAGES=		# none
+USE_TOOLS+=		pax
+NO_BUILD=		yes
+
+PKG_SYSCONFSUBDIR?=	roundcube
+
+PKG_GROUPS_VARS+=	WWW_GROUP
+PKG_USERS_VARS=		WWW_USER
+BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
+
+RCDIR=			share/roundcube
+EGDIR=			share/examples/roundcube
+DOCDIR=			share/doc/roundcube
+
+MESSAGE_SUBST+=		DOCDIR="${PREFIX}/${DOCDIR}" \
+			 PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=		VARBASE=${VARBASE} RCDIR="${PREFIX}/${RCDIR}"
+FILES_SUBST+=		RCDIR="${PREFIX}/${RCDIR}"
+
+.for d in ${CONF_PLUGINS}
+INSTALLATION_DIRS+=	${EGDIR}/plugins/${d}
+.endfor
+
+.include "../../mail/roundcube/options.mk"
+.include "../../lang/php/phpversion.mk"
+
+post-install:
+.for f in ${CONF_PLUGINS}
+	cd ${DESTDIR}${PREFIX} && \
+	${TEST} -f ${EGDIR}/plugins/${f}/config.inc.php || \
+		${MV} ${RCDIR}/plugins/${f}/config.inc.php.dist \
+			${EGDIR}/plugins/${f}/config.inc.php
+.endfor
