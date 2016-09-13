@@ -1,6 +1,6 @@
-$NetBSD: patch-deps_v8_src_base_atomicops__internals__arm__gcc.h,v 1.1 2015/10/21 23:46:28 jmcneill Exp $
+$NetBSD: patch-deps_v8_src_base_atomicops__internals__arm__gcc.h,v 1.2 2016/09/13 10:10:42 fhajny Exp $
 
---- deps/v8/src/base/atomicops_internals_arm_gcc.h.orig	2015-10-13 17:20:07.000000000 +0000
+--- deps/v8/src/base/atomicops_internals_arm_gcc.h.orig	2016-08-26 15:27:18.000000000 +0000
 +++ deps/v8/src/base/atomicops_internals_arm_gcc.h
 @@ -13,6 +13,11 @@
  #include <sys/cpuinline.h>
@@ -21,5 +21,5 @@ $NetBSD: patch-deps_v8_src_base_atomicops__internals__arm__gcc.h,v 1.1 2015/10/2
 +#elif defined(__NetBSD__)
 +  sysarch(ARM_DRAIN_WRITEBUF, (void *)0);
  #else
- #error MemoryBarrier() is not implemented on this platform.
- #endif
+   // Fallback to GCC built-in function
+   __sync_synchronize();
