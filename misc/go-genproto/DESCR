@@ -1,0 +1,13 @@
+This repository contains the generated Go packages for common protocol buffer
+types, and the generated gRPC code necessary for interacting with Google's gRPC
+APIs.
+
+There are two sources for the proto files used in this repository:
+
+1. google/protobuf: the code in the protobuf and ptypes subdirectories is
+   derived from this repo. The messages in protobuf are used to describe
+   protocol buffer messages themselves. The messages under ptypes define the
+   common well-known types.
+2. googleapis/googleapis: the code in the googleapis is derived from this repo.
+   The packages here contain types specifically for interacting with Google
+   APIs.
