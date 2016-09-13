@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2015/10/29 15:54:20 prlw1 Exp $
+# $NetBSD: options.mk,v 1.15 2016/09/13 15:56:01 taca Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
@@ -6,8 +6,10 @@ PKG_OPTIONS_REQUIRED_GROUPS=	db webserver
 PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite
 PKG_OPTIONS_GROUP.webserver=	apache nginx
 
-PKG_SUPPORTED_OPTIONS=		ldap iconv sockets gd
-PKG_SUGGESTED_OPTIONS=		mysql iconv sockets gd apache
+PKG_SUPPORTED_OPTIONS=		ldap iconv php-sockets gd
+PKG_SUGGESTED_OPTIONS=		mysql iconv php-sockets gd apache
+
+PKG_OPTIONS_LEGACY_OPTS+=	sockets:php-sockets
 
 .include "../../mk/bsd.options.mk"
 
