@@ -1,0 +1,4 @@
+Password Plugin for Roundcube
+
+Plugin that adds a possibility to change user password using many
+methods (drivers) via Settings/Password tab.
