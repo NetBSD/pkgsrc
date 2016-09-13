@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2014/08/21 19:41:38 wiz Exp $
+$NetBSD: patch-aa,v 1.8.16.1 2016/09/13 18:23:35 bsiegert Exp $
 
 Add rpath to configure script.
 
@@ -9,7 +9,7 @@ Add rpath to configure script.
      # Set up `libdirs'.
      if test "x$libdir" != "x/usr/lib" -a "x$libdir" != "x/lib"; then
 -	libdirs="-L$libdir"
-+	libdirs="-L$libdir -Wl,-R@libdir@"
++	libdirs="-L$libdir @COMPILER_RPATH_FLAG@@libdir@"
      fi
  
      # Set up `libs_final'.
