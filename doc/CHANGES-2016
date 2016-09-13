@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3788 2016/09/13 13:46:10 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3789 2016/09/13 13:46:21 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5349,3 +5349,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/lcms2 to 2.8 [adam 2016-09-13]
 	Updated cad/py-gds to 1.0 [mef 2016-09-13]
 	Updated databases/py-ldap to 2.4.27 [adam 2016-09-13]
+	Updated x11/gtk2 to 2.24.31 [prlw1 2016-09-13]
