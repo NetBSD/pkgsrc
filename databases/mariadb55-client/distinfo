@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:14 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/09/13 19:15:13 maya Exp $
 
-SHA1 (mariadb-5.5.43.tar.gz) = 80223c91ecda64ec30a5056af225eee39a3782fd
-RMD160 (mariadb-5.5.43.tar.gz) = 93296e8d9e14949d47d4d0195f566891ba83bc76
-SHA512 (mariadb-5.5.43.tar.gz) = fa9b463843ebf70e3a462ee5fdfa34aedd35194f3593f7ec1fc5f17663e798610ade46925b31f9f96e06503508ae840bfed54ae7b6661affa4d5b630d475f1db
-Size (mariadb-5.5.43.tar.gz) = 45651398 bytes
+SHA1 (mariadb-5.5.52.tar.gz) = bbedcc0eba7580d1ef16f2dfe4868cf9f31a636d
+RMD160 (mariadb-5.5.52.tar.gz) = fcad9e40ecd29b341a8cdc42afc18aa83b85e60c
+SHA512 (mariadb-5.5.52.tar.gz) = 76d1c1209aa8b56d6562907cb224d0be4f6bccd46e30d16dfb57f19fee1c60dcba21d8388c70674cac0a09e11361e1c5296d1e79d2ba9edc16bc4f9c7a7733eb
+Size (mariadb-5.5.52.tar.gz) = 45745859 bytes
 SHA1 (sphinx-2.2.7-release.tar.gz) = dedae28c0deafda90109745230dacbe0dc441e1a
 RMD160 (sphinx-2.2.7-release.tar.gz) = d9f0150f6779b43457e30c77be50aa9bc658b03a
+SHA512 (sphinx-2.2.7-release.tar.gz) = 8920fac5730aedd0656fff51acf57a71b9b68d09cf9536959a99623518a126f40f5d8ddf1233a58fccf7801ab2402cebbbd17af4394ebc9fb4eca9b710cc9318
 Size (sphinx-2.2.7-release.tar.gz) = 2969037 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = 02b414235a2cdfc1d5c95946010e0cdbada76c5d
 SHA1 (patch-CMakeLists.txt) = 9c56523626837ab83ecef26f1c0609e084976fa7
@@ -20,7 +21,7 @@ SHA1 (patch-cmake_plugin.cmake) = b7566d25c80c2492a96c5617b96f9b6212b0fe93
 SHA1 (patch-cmake_readline.cmake) = eeadad96a6c8f042c82134b5488956f8094ba4ac
 SHA1 (patch-config.h.cmake) = 75d4c09eb34353057c6a8e36523f55d1bfdace59
 SHA1 (patch-include_CMakeLists.txt) = 9ce9db088fda6ed76039b818c27b74d584bae151
-SHA1 (patch-include_my__context.h) = 2f74d458d10c24261fdd532d197b84c44719c552
+SHA1 (patch-include_my__context.h) = 16e9f69c35243967e5b95022b0350b36c02725da
 SHA1 (patch-include_my_compare.h) = 9d04f444d56d705f3a57add7ad5f8fc5c7ce8341
 SHA1 (patch-include_my_net.h) = b6361a0871afdf66feabc82c5ad3559ff5b34c37
 SHA1 (patch-include_my_pthread.h) = 6d4ec91f90e717b0a075133fea535ee62d64d3ef
@@ -55,4 +56,3 @@ SHA1 (patch-strings_decimal.c) = 4b22180d1766352673a648f76302780b1c06bca5
 SHA1 (patch-strtoll.c) = 53a3c0172487ee68f621328b16aa1742af4ae737
 SHA1 (patch-strtoull.c) = 7126be697036a588d29e21a6e1a472863d285f4a
 SHA1 (patch-vio_viosocket.c) = bf6d57ee04db57b7ac508b18653b0955ef8a6a2b
-SHA1 (patch-vio_viosslfactories.c) = a2e38d211d6dfdbf83d729f195bf81b8c7620103
