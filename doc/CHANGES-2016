@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3790 2016/09/13 14:49:30 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.3791 2016/09/13 14:58:12 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5351,3 +5351,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-ldap to 2.4.27 [adam 2016-09-13]
 	Updated x11/gtk2 to 2.24.31 [prlw1 2016-09-13]
 	Updated archivers/unzip to 6.0nb7 [jperkin 2016-09-13]
+	Updated math/eigen3 to 3.2.9 [prlw1 2016-09-13]
