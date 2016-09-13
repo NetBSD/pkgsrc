@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2016/06/14 16:49:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.42.2.1 2016/09/13 19:23:04 bsiegert Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -3670,7 +3670,6 @@ share/mysql/test/suite/perfschema/include/privilege.inc
 share/mysql/test/suite/perfschema/include/setup_helper.inc
 share/mysql/test/suite/perfschema/include/start_server_common.inc
 share/mysql/test/suite/perfschema/include/upgrade_check.inc
-share/mysql/test/suite/perfschema/r/aggregate.result
 share/mysql/test/suite/perfschema/r/bad_option_1.result
 share/mysql/test/suite/perfschema/r/bad_option_2.result
 share/mysql/test/suite/perfschema/r/bad_option_3.result
@@ -3751,7 +3750,6 @@ share/mysql/test/suite/perfschema/r/start_server_off.result
 share/mysql/test/suite/perfschema/r/start_server_on.result
 share/mysql/test/suite/perfschema/r/tampered_perfschema_table1.result
 share/mysql/test/suite/perfschema/r/thread_cache.result
-share/mysql/test/suite/perfschema/t/aggregate.test
 share/mysql/test/suite/perfschema/t/bad_option_1.test
 share/mysql/test/suite/perfschema/t/bad_option_2.test
 share/mysql/test/suite/perfschema/t/bad_option_3.test
