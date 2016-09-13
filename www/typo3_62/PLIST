@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/07/19 12:02:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/09/13 15:10:21 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -2576,6 +2576,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/Private/Templates/PageRende
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/AccessibleObjectInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/BaseTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Exception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/Cache/Backend/Typo3DatabaseBackendTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/Category/Collection/CategoryCollectionTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/AbstractDataHandlerActionTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FAL/AbstractActionTestCase.php
