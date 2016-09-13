@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3784 2016/09/13 10:26:13 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3785 2016/09/13 10:52:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5343,3 +5343,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-junos-eznc to 2.0.0 [he 2016-09-13]
 	Updated lang/nodejs to 6.5.0 [fhajny 2016-09-13]
 	Updated converters/help2man to 1.47.4 [adam 2016-09-13]
+	Updated databases/sqlite3 to 3.14.2 [adam 2016-09-13]
+	Updated databases/sqlite3-docs to 3.14.2 [adam 2016-09-13]
+	Updated databases/sqlite3-tcl to 3.14.2 [adam 2016-09-13]
