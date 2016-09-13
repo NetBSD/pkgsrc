@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.93 2015/11/13 22:13:43 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2016/09/13 14:49:16 jperkin Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz
@@ -38,7 +38,7 @@ CPPFLAGS+=	-DBSD
 CPPFLAGS+=	-DNO_LCHMOD
 .endif
 CPPFLAGS+=	-DUNIX -Dunix -DUSE_UNSHRINK -I.
-.if (${OPSYS} != "SunOS")
+.if empty(MACHINE_PLATFORM:MSunOS-*-sparc)
 CPPFLAGS+=	-DLARGE_FILE_SUPPORT
 .endif
 
