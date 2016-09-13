@@ -1,0 +1,21 @@
+Enigma Plugin for Roundcube
+
+This plugin adds support for viewing and sending of signed and encrypted
+messages in PGP (RFC 2440) and PGP/MIME (RFC 3156) format.
+
+The plugin uses gpg binary on the server and stores all keys
+(including private keys of the users) on the server.
+Encryption/decryption is done server-side. So, this plugin
+is for users that trust the server.
+
+
+Implemented features:
+---------------------
++ PGP: signatures verification
++ PGP: messages decryption
++ PGP: Sending of encrypted/signed messages
++ PGP: keys management UI (key import, export, delete)
++ PGP: key generation (client- or server-side)
++ Handling of PGP keys attached to incoming messages
++ User preferences to disable plugin features
++ Attaching public keys to email
