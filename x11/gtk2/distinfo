@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.160 2016/03/13 03:32:59 tnn Exp $
+$NetBSD: distinfo,v 1.161 2016/09/13 13:45:52 prlw1 Exp $
 
-SHA1 (gtk+-2.24.30.tar.xz) = aa5bc6dca583cf2bff137606dc2014f6ea559da7
-RMD160 (gtk+-2.24.30.tar.xz) = 2b93f5dd100059d4047c3368a6b771963ed306e0
-SHA512 (gtk+-2.24.30.tar.xz) = 13373e4809b48acefdbf09f18f0f18b562f05b3ce2e3169c5aa80722a262405b3b4a220ecee54c59ef03ef89be9850dc659f6da9251abaf7c577599b7a4319b1
-Size (gtk+-2.24.30.tar.xz) = 12800276 bytes
+SHA1 (gtk+-2.24.31.tar.xz) = c3d828135994a52cc9428a60175bd2b294656611
+RMD160 (gtk+-2.24.31.tar.xz) = 71feedd14b1a52eaa070a6cbf26d00e64d41de42
+SHA512 (gtk+-2.24.31.tar.xz) = 75b846661308d94b5236e7e1c367deabf57753792ca87e92f9769822dd5ec90e00cd8d5574adcc12162e3702e1ae6dc152278a1d218f9bd9e4d1c8dc1dd520c1
+Size (gtk+-2.24.31.tar.xz) = 12805344 bytes
 SHA1 (patch-ab) = 9c82cc60f3825d377a197c876fcc6faa379cbde3
 SHA1 (patch-af) = d59414e24a7da7f8694dbefbd2f0c2c2b60ec5ad
 SHA1 (patch-aj) = 9887573ac7ade9e8f8ee2ead68e279f67836a1a3
-SHA1 (patch-gdk_gdkcairo.c) = f4bd03706fcb94155f360ae0faf14be141cf9409
 SHA1 (patch-gdk_x11_gdkwindow-x11.c) = 08c05b31da38e16727a2941cdec4c855f2fc7d77
 SHA1 (patch-gtk_gtktooltips.c) = 593e43bb0aacc0b07c24959f2ac6d84dfd04a780
