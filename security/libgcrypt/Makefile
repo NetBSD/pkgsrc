@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2016/06/17 11:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.79.2.1 2016/09/13 18:23:35 bsiegert Exp $
 
-DISTNAME=	libgcrypt-1.7.1
+DISTNAME=	libgcrypt-1.7.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
@@ -54,9 +55,15 @@ CONFIGURE_ENV+=		gcry_cv_gcc_inline_asm_avx=no
 .  endif
 .endif
 
+SUBST_CLASSES+=		rpath
+SUBST_FILES.rpath=	src/libgcrypt-config.in
+SUBST_STAGE.rpath=	pre-configure
+SUBST_MESSAGE.rpath=	Fixing rpath flags
+SUBST_VARS.rpath=	COMPILER_RPATH_FLAG
+
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.11
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.13
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
