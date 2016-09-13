@@ -1,4 +1,7 @@
-$NetBSD: patch-src_etc_local__stage0.sh,v 1.2 2016/09/12 13:27:33 ryoon Exp $
+$NetBSD: patch-src_etc_local__stage0.sh,v 1.3 2016/09/13 12:37:08 ryoon Exp $
+
+-Copy additional libarena required on Darwin.
+-Copy GCC support libraries required on SunOS.
 
 --- src/etc/local_stage0.sh.orig	2016-08-16 01:54:35.000000000 +0000
 +++ src/etc/local_stage0.sh
