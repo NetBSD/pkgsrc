@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3795 2016/09/13 19:16:13 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3796 2016/09/13 20:51:18 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5291,6 +5291,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/rebar to 2.6.3 [fhajny 2016-09-10]
 	Updated databases/py-peewee to 2.8.3 [fhajny 2016-09-10]
 	Updated net/syncthing to 0.14.6 [abs 2016-09-10]
+	Added devel/go-protobuf version 20160829 [bsiegert 2016-09-11]
+	Added devel/go-glog version 20160125 [bsiegert 2016-09-11]
+	Updated net/go-grpc to 1.0.1 [bsiegert 2016-09-11]
 	Updated net/6tunnel to 0.11 [mef 2016-09-11]
 	Updated devel/pcre2 to 10.22 [mef 2016-09-11]
 	Updated graphics/ansilove to 3.0.4 [kamil 2016-09-11]
@@ -5359,3 +5362,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added mail/roundcube-plugin-zipdownload version 1.2.1 [taca 2016-09-13]
 	Updated databases/mariadb55-server to 5.5.52 [maya 2016-09-13]
 	Updated databases/mariadb55-client to 5.5.52 [maya 2016-09-13]
+	Added misc/go-genproto version 20160816 [bsiegert 2016-09-13]
+	Updated devel/google-api-go-client to 20160909 [bsiegert 2016-09-13]
