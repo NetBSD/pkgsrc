@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3793 2016/09/13 16:06:17 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3794 2016/09/13 19:15:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5357,3 +5357,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added mail/roundcube-plugin-enigma version 1.2.1 [taca 2016-09-13]
 	Added mail/roundcube-plugin-password version 1.2.1 [taca 2016-09-13]
 	Added mail/roundcube-plugin-zipdownload version 1.2.1 [taca 2016-09-13]
+	Updated databases/mariadb55-server to 5.5.52 [maya 2016-09-13]
