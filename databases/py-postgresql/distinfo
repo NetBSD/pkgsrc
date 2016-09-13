@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2016/03/23 21:51:25 wiz Exp $
+$NetBSD: distinfo,v 1.26 2016/09/13 23:59:37 wiz Exp $
 
-SHA1 (py-postgresql-5.0-20160323/PyGreSQL-5.0.tar.gz) = ffcd791b22b3adcbc9f03a2b3eac7de269b72d2d
-RMD160 (py-postgresql-5.0-20160323/PyGreSQL-5.0.tar.gz) = bf64ffbd5055d792d3515ea07ffb631f60fe5ffb
-SHA512 (py-postgresql-5.0-20160323/PyGreSQL-5.0.tar.gz) = cdf1ed78f9bc604c202ddd72286160856954e27ce5fba60379fbd1e82597785f65b53e8b3310199cdaa925ad75bd01f7b54778153d1fa8ed8049fd4e401ebb88
-Size (py-postgresql-5.0-20160323/PyGreSQL-5.0.tar.gz) = 633868 bytes
+SHA1 (PyGreSQL-5.0.2.tar.gz) = c6c62fd355a8709f04c1b568964c8dc9f66228ae
+RMD160 (PyGreSQL-5.0.2.tar.gz) = ba19c7cac3a17c1070f5910a5ecf67ba040194cb
+SHA512 (PyGreSQL-5.0.2.tar.gz) = 5332f23754df47e121d7301de056f5ab4defd91cba9762ef9196d0c04279ee4d1fcc7c24d23fa5f3a025fad1914666207f90ec858efd09207806cd9af3d920eb
+Size (PyGreSQL-5.0.2.tar.gz) = 637713 bytes
