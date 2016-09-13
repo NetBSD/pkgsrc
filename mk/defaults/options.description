@@ -284,6 +284,7 @@ http2			Add support for HTTP/2.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
 ibus			Enable Intelligent Input Bus support.
+iconv			Use iconv as chracter encoding conversion.
 icu			Enable icu support.
 id3			Enable id3 tagging support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
@@ -535,6 +536,7 @@ nfdump-nfprofile	Build the netflow profiler.
 nfdump-sflow		Build sflow collector sfcpad.
 nghttp2-asio		Build the nghttp2 ASIO C++ library.
 nghttp2-tools		Build the supplied nghttp2 apps and tools.
+nginx			Enable support for Nginx web server.
 ninja-build		Enable build by ninja-build.
 nls			Use native language support.
 nntp			Enable Network News Transport Protocol (NNTP) support.
@@ -577,6 +579,7 @@ pdf			Enable PDF support.
 perl			Enable Perl support.
 pgadmin-db-designer	Enable pgAdmin database-designer functionality.
 pgsql			Enable PostgreSQL support.
+php-sockets		Enable php-sockets support.
 pim			Enable pim (personal information management) support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
