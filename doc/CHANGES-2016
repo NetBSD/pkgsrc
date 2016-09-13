@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3783 2016/09/13 10:10:53 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3784 2016/09/13 10:26:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5342,3 +5342,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated parallel/parallel to 20160822 [fhajny 2016-09-13]
 	Updated net/py-junos-eznc to 2.0.0 [he 2016-09-13]
 	Updated lang/nodejs to 6.5.0 [fhajny 2016-09-13]
+	Updated converters/help2man to 1.47.4 [adam 2016-09-13]
