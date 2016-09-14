@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/09/13 20:42:12 bsiegert Exp $
-#
+# $NetBSD: Makefile,v 1.2 2016/09/14 21:55:49 wiz Exp $
 
 DISTNAME=		go-genproto-20160816
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=		go-genproto
@@ -13,6 +13,11 @@ LICENSE=		apache-2.0
 
 GO_SRCPATH=		google.golang.org/genproto
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
+
+REPLACE_SH+=		regen.sh
+
+EXTRACT_USING=		bsdtar
+USE_TOOLS+=		bsdtar
 
 .include "../../devel/go-protobuf/buildlink3.mk"
 .include "../../net/go-grpc/buildlink3.mk"
