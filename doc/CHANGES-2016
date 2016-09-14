@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3805 2016/09/14 18:04:17 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.3806 2016/09/14 18:11:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5375,3 +5375,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/h2o to 2.0.3 [mef 2016-09-14]
 	Updated games/supertux to 0.4.0 [maya 2016-09-14]
 	Updated www/ikiwiki to 3.20160905 [schmonz 2016-09-14]
+	Updated devel/p5-Gravatar-URL to 1.07 [schmonz 2016-09-14]
