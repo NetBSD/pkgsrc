@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/09/11 09:52:41 bsiegert Exp $
-#
+# $NetBSD: Makefile,v 1.2 2016/09/14 21:53:17 wiz Exp $
 
 DISTNAME=		go-grpc-1.0.1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_PROJECT=		grpc-go
@@ -24,8 +24,15 @@ GO_BUILD_PATTERN+=	${GO_SRCPATH}/peer/...
 GO_BUILD_PATTERN+=	${GO_SRCPATH}/reflection/...
 GO_BUILD_PATTERN+=	${GO_SRCPATH}/transport/...
 
+REPLACE_SH+=		codegen.sh
+REPLACE_SH+=		coverage.sh
+
 #pre-patch:
 #	${RM} -rf ${WRKSRC}/test
+
+# due to patch
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/gopkg/src/google.golang.org/grpc/coverage.sh.orig
 
 .include "../../devel/go-glog/buildlink3.mk"
 .include "../../devel/go-protobuf/buildlink3.mk"
