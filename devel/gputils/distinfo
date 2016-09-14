@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.11 2016/03/15 20:39:52 bouyer Exp $
+$NetBSD: distinfo,v 1.12 2016/09/14 14:10:50 dholland Exp $
 
 SHA1 (gputils-1.4.2-1.tar.gz) = f71ce8419b497ff8fc72aa11344919095726f40e
 RMD160 (gputils-1.4.2-1.tar.gz) = 0084c8160f4c2c6fd75db7cbda37aba116e98220
 SHA512 (gputils-1.4.2-1.tar.gz) = dfa469157008b9cac486f353ac9089326d093d7daa7e4b909d018e703963ed09481e76a3afb275ed2d9ca0bf41c53de635bb55ff3dbe0509f48e801986982341
 Size (gputils-1.4.2-1.tar.gz) = 12505612 bytes
+SHA1 (patch-libgputils_gparchive.c) = cf6ddbc27ae797ef38ef075280fa004b06583d0b
+SHA1 (patch-libgputils_gpreadobj.c) = eb67daa2d27310ac842c0902df136d281b5d3a1b
+SHA1 (patch-libgputils_gpsystem.c) = 539dc4947a31ed634f320689d528dd1efa79da3a

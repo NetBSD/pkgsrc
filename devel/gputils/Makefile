@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2016/03/15 20:39:52 bouyer Exp $
+# $NetBSD: Makefile,v 1.22 2016/09/14 14:10:50 dholland Exp $
 
 DISTNAME=	gputils-1.4.2-1
 PKGNAME=	gputils-1.4.2.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gputils/}
 WRKSRC=		${WRKDIR}/gputils-1.4.2
