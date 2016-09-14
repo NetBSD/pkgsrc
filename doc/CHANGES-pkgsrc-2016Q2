@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.14 2016/09/07 19:18:38 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.15 2016/09/14 19:36:14 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -110,4 +110,12 @@ www/ruby-actionpack32: security fix
 
 Pullup ticket #5096 - requested by taca
 lang/php70: security fix
+
+Pullup ticket #5100 - requested by maya
+security/gnupg: security fix
+security/libgcrypt: security fix, build fix
+
+Pullup ticket #5101 - requested by maya
+databases/mysql55-client: security fix
+databases/mysql56-client: security fix
 
