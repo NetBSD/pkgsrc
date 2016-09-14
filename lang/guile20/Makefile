@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/07/16 09:17:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/14 23:59:04 gdt Exp $
 
 DISTNAME=	guile-2.0.12
 PKGNAME=	${DISTNAME:S/guile/guile20/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
@@ -10,7 +11,9 @@ HOMEPAGE=	ftp://ftp.gnu.org/gnu/guile/
 COMMENT=	Official extension language for the GNU operating system
 LICENSE=	gnu-lgpl-v3
 
-GUILE_PREFIX=	${PREFIX}/guile/2.0
+# Currently, 2.0 is primary.
+#GUILE_PREFIX=	${PREFIX}/guile/2.0
+GUILE_PREFIX=	${PREFIX}
 
 # guile does not like the --build and --host triplets on NetBSD
 HAS_CONFIGURE=	yes
@@ -23,8 +26,9 @@ CONFIGURE_ARGS+=	--infodir=${GUILE_PREFIX}/${PKGINFODIR}
 
 CONFIGURE_ARGS+=	SHELL=${CONFIG_SHELL}
 
-BUILDLINK_PASSTHRU_DIRS+=	${GUILE_PREFIX}
-LDFLAGS+=			${COMPILER_RPATH_FLAG}${GUILE_PREFIX}/lib
+# When GUILE_PREFIX is non-default, these must be enabled.
+#BUILDLINK_PASSTHRU_DIRS+=	${GUILE_PREFIX}
+#LDFLAGS+=			${COMPILER_RPATH_FLAG}${GUILE_PREFIX}/lib
 
 INFO_FILES=	yes
 USE_LIBTOOL=	yes
