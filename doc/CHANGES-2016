@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3801 2016/09/14 13:40:21 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.3802 2016/09/14 14:23:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/curl to 7.50.3 [wiz 2016-09-14]
 	Updated net/nsd to 4.1.12 [ryoon 2016-09-14]
 	Added devel/swig3 version 3.0.10 [prlw1 2016-09-14]
+	Updated www/h2o to 2.0.3 [mef 2016-09-14]
