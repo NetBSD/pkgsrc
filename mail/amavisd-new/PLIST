@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/03/11 14:05:02 jperkin Exp $
-${PLIST.milter}sbin/amavis
-${PLIST.milter}sbin/amavis-milter
+@comment $NetBSD: PLIST,v 1.6 2016/09/14 18:20:30 spz Exp $
 sbin/amavisd
 sbin/amavisd-agent
 sbin/amavisd-nanny
