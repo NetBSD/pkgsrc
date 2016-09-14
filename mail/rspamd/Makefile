@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/08/27 15:07:42 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/09/14 21:31:34 wiedi Exp $
 
 DISTNAME=	rspamd-1.3.4
 CATEGORIES=	mail
@@ -80,4 +80,5 @@ post-extract:
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../databases/hiredis/buildlink3.mk"
+.include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
