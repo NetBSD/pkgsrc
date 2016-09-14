@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/09/14 16:24:26 maya Exp $
+
+SHA1 (supertux-0.4.0.tar.bz2) = a2c5ac6ac505e833e5c9ee6ffd4b19b71e570879
+RMD160 (supertux-0.4.0.tar.bz2) = 4949f027a7cc04445b4627c85fc04adb350a59c8
+SHA512 (supertux-0.4.0.tar.bz2) = 66ca63c982b6076847662c187069eb965211439e5dfc628300f2a9bd0d2b4c0f7b53f6e7c2aed263c098cc9b77fedf132e73b1f3b3eacaf5535cae8300262fb5
+Size (supertux-0.4.0.tar.bz2) = 79713147 bytes
+SHA1 (patch-external_tinygettext_include_tinygettext_iconv.hpp) = 4e9cf8c227af45ca2ae149fb18f29a9ad2a31b98
