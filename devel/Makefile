@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2308 2016/09/12 22:50:42 kamil Exp $
+# $NetBSD: Makefile,v 1.2309 2016/09/14 13:39:40 prlw1 Exp $
 #
 
 COMMENT=	Development utilities
@@ -2178,6 +2178,7 @@ SUBDIR+=	sunifdef
 SUBDIR+=	svk
 SUBDIR+=	swig
 SUBDIR+=	swig2
+SUBDIR+=	swig3
 SUBDIR+=	swt
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
