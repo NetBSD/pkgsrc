@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2016/09/02 16:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.405 2016/09/14 16:24:26 maya Exp $
 #
 
 COMMENT=	Games
@@ -320,6 +320,7 @@ SUBDIR+=	spider
 SUBDIR+=	stegavorto
 SUBDIR+=	stratagus
 SUBDIR+=	sudoku-cli
+SUBDIR+=	supertux
 SUBDIR+=	supertuxkart
 SUBDIR+=	svb
 SUBDIR+=	tads
