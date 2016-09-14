@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/09/13 19:15:14 maya Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/09/14 07:29:10 maya Exp $
 bin/aria_chk
 bin/aria_dump_log
 bin/aria_ftdump
@@ -10,11 +10,11 @@ bin/myisam_ftdump
 bin/myisamchk
 bin/myisamlog
 bin/myisampack
-bin/mysql_client_test_embedded
-bin/mysql_embedded
+${PLIST.embedded}bin/mysql_client_test_embedded
+${PLIST.embedded}bin/mysql_embedded
 bin/mysql_tzinfo_to_sql
 bin/mysql_waitpid
-bin/mysqltest_embedded
+${PLIST.embedded}bin/mysqltest_embedded
 bin/perror
 bin/replace
 bin/resolve_stack_dump
@@ -29,7 +29,7 @@ include/mysql/private/debug_sync.h
 include/mysql/private/derror.h
 include/mysql/private/des_key_file.h
 include/mysql/private/discover.h
-include/mysql/private/embedded_priv.h
+${PLIST.embedded}include/mysql/private/embedded_priv.h
 include/mysql/private/event_data_objects.h
 include/mysql/private/event_db_repository.h
 include/mysql/private/event_parse_data.h
@@ -187,9 +187,9 @@ include/mysql/private/tzfile.h
 include/mysql/private/tztime.h
 include/mysql/private/unireg.h
 include/mysql/private/winservice.h
-lib/libmysqld.a
-lib/libmysqld.so
-lib/libmysqld.so.18
+${PLIST.embedded}lib/libmysqld.a
+${PLIST.embedded}lib/libmysqld.so
+${PLIST.embedded}lib/libmysqld.so.18
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth_0x0100.so
