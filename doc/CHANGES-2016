@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3804 2016/09/14 16:32:45 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3805 2016/09/14 18:04:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5374,3 +5374,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/sdcc3 to 3.6.0nb2 [dholland 2016-09-14]
 	Updated www/h2o to 2.0.3 [mef 2016-09-14]
 	Updated games/supertux to 0.4.0 [maya 2016-09-14]
+	Updated www/ikiwiki to 3.20160905 [schmonz 2016-09-14]
