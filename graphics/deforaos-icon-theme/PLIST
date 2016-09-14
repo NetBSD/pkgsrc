@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/02/20 03:31:31 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/09/14 00:44:35 khorben Exp $
 share/icons/DeforaOS/16x16/actions/add.png
 share/icons/DeforaOS/16x16/actions/application-exit.png
 share/icons/DeforaOS/16x16/actions/appointment-new.png
