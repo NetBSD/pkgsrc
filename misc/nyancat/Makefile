@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/09/11 15:59:29 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/14 20:53:56 wiedi Exp $
 
 DISTNAME=	nyancat-1.5.1
 CATEGORIES=	misc
@@ -12,5 +12,7 @@ LICENSE=	modified-bsd
 INSTALL_MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
 MANCOMPRESSED=	yes
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "../../mk/bsd.pkg.mk"
