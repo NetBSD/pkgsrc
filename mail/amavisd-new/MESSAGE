@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2010/12/24 07:19:35 kefren Exp $
+$NetBSD: MESSAGE,v 1.4 2016/09/14 18:20:30 spz Exp $
 
 To use amavisd-new, you should install at least one content checker.
 Examples of content checkers include the freely-available Clam Anti-Virus
@@ -18,4 +18,6 @@ scan the respective archive types:
 	xbin		archivers/xbin
 	zoo		archivers/zoo
 
+The old amavisd-milter is no longer available, use the new amavisd-milter
+package instead.
 ===========================================================================
