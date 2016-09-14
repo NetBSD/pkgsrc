@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/11/26 11:25:11 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/14 20:29:56 alnsn Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
@@ -23,7 +23,7 @@ do-install:
 	  H5DataSpace.h H5DataType.h H5DcreatProp.h H5DxferProp.h H5EnumType.h \
 	  H5Exception.h H5FaccProp.h H5FcreatProp.h H5File.h H5FloatType.h \
 	  H5Group.h H5IdComponent.h H5Include.h H5IntType.h H5Library.h \
-	  H5Location.h \
+	  H5Location.h H5OcreatProp.h \
 	  H5Object.h H5PredType.h H5PropList.h H5StrType.h H5VarLenType.h
 	${INSTALL_DATA} ${WRKSRC}/c++/src/${f} ${DESTDIR}/${PREFIX}/include/
 .endfor
