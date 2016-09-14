@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24.2.1 2016/09/13 19:23:04 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.24.2.2 2016/09/14 19:35:28 bsiegert Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -6388,7 +6388,6 @@ share/mysql/test/suite/rpl/r/rpl_gtid_server_sighup.result
 share/mysql/test/suite/rpl/r/rpl_gtid_sql_until_before_after.result
 share/mysql/test/suite/rpl/r/rpl_gtid_stm_insert_delayed.result
 share/mysql/test/suite/rpl/r/rpl_gtid_stm_mix_show_relaylog_events.result
-share/mysql/test/suite/rpl/r/rpl_gtid_stress_failover.result
 share/mysql/test/suite/rpl/r/rpl_gtid_temp_table.result
 share/mysql/test/suite/rpl/r/rpl_gtid_transaction_split_across_relay_logs.result
 share/mysql/test/suite/rpl/r/rpl_gtid_validate_slave_gtids.result
@@ -6925,8 +6924,6 @@ share/mysql/test/suite/rpl/t/rpl_gtid_server_sighup.test
 share/mysql/test/suite/rpl/t/rpl_gtid_sql_until_before_after.test
 share/mysql/test/suite/rpl/t/rpl_gtid_stm_insert_delayed.test
 share/mysql/test/suite/rpl/t/rpl_gtid_stm_mix_show_relaylog_events.test
-share/mysql/test/suite/rpl/t/rpl_gtid_stress_failover.cnf
-share/mysql/test/suite/rpl/t/rpl_gtid_stress_failover.test
 share/mysql/test/suite/rpl/t/rpl_gtid_temp_table.test
 share/mysql/test/suite/rpl/t/rpl_gtid_transaction_split_across_relay_logs.cnf
 share/mysql/test/suite/rpl/t/rpl_gtid_transaction_split_across_relay_logs.test
