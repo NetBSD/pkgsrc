@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3802 2016/09/14 14:23:35 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3803 2016/09/14 14:57:52 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5291,6 +5291,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/rebar to 2.6.3 [fhajny 2016-09-10]
 	Updated databases/py-peewee to 2.8.3 [fhajny 2016-09-10]
 	Updated net/syncthing to 0.14.6 [abs 2016-09-10]
+	Updated devel/coccinelle to 1.0.0rc17nb8 [dholland 2016-09-11]
 	Added devel/go-protobuf version 20160829 [bsiegert 2016-09-11]
 	Added devel/go-glog version 20160125 [bsiegert 2016-09-11]
 	Updated net/go-grpc to 1.0.1 [bsiegert 2016-09-11]
@@ -5369,4 +5370,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/curl to 7.50.3 [wiz 2016-09-14]
 	Updated net/nsd to 4.1.12 [ryoon 2016-09-14]
 	Added devel/swig3 version 3.0.10 [prlw1 2016-09-14]
+	Updated devel/gputils to 1.4.2.1nb1 [dholland 2016-09-14]
+	Updated devel/sdcc3 to 3.6.0nb2 [dholland 2016-09-14]
 	Updated www/h2o to 2.0.3 [mef 2016-09-14]
