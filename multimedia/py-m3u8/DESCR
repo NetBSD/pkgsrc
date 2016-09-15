@@ -1,0 +1,2 @@
+This module provides a parser for M3U8 playlists as used by Apple's HTTP
+Live Streaming (HLS) and Dynamic Adaptive Streaming over HTTP (DASH).
