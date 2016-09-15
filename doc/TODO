@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16438 2016/09/15 15:58:59 wiz Exp $
+$NetBSD: TODO,v 1.16439 2016/09/15 15:59:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1691,7 +1691,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
-	o xbindkeys-tk-1.8.0
 	o xcircuit-3.9.44
 	o xcoral-3.14
 	o xemacs-current-21.5.31
