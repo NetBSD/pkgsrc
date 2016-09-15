@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/29 05:06:58 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2016/09/15 15:59:13 wiz Exp $
 
 .include "../../x11/xbindkeys/Makefile.common"
 
