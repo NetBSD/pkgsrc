@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2014/10/09 00:57:11 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/09/15 15:38:20 gdt Exp $
 info/guile-www.info
-share/guile/site/www/binary-ports
 share/guile/site/www/cgi
 share/guile/site/www/crlf
 share/guile/site/www/data/http-status
