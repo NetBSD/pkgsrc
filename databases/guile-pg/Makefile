@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2015/06/07 11:24:16 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2016/09/15 00:48:57 gdt Exp $
 #
 
 DISTNAME=	guile-pg-0.47
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/guile-pg/
 EXTRACT_SUFX=	.tar.xz
@@ -19,7 +20,9 @@ INFO_FILES=	YES
 CONFIGURE_ARGS+=	--with-libpq=${PREFIX}
 
 TEST_TARGET=	check
+# To run tests without compiling
+#TEST_ENV+=	GUILE_AUTO_COMPILE=0
 
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
