@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.161 2016/07/09 06:38:54 wiz Exp $
+# $NetBSD: Makefile,v 1.162 2016/09/15 15:44:27 gdt Exp $
 
 DISTNAME=	gnutls-3.3.18
 PKGREVISION=	2
@@ -59,5 +59,5 @@ BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 .include "../../security/libtasn1/buildlink3.mk"
 .include "../../security/nettle/buildlink3.mk"
 # guile is useful for selftests, but bindings should be separate pkgs
-#.include "../../lang/guile/buildlink3.mk"
+#.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
