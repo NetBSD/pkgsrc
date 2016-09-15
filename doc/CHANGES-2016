@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3818 2016/09/15 13:39:18 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3819 2016/09/15 14:02:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5393,3 +5393,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-Helpers to 0.026 [mef 2016-09-15]
 	Updated x11/xf86-video-amdgpu to 1.1.1 [wiz 2016-09-15]
 	Updated x11/xf86-video-ati to 7.7.1 [wiz 2016-09-15]
+	Updated devel/slib to 3.2.5nb1 [wiz 2016-09-15]
