@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3825 2016/09/15 15:59:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3826 2016/09/15 16:24:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5400,3 +5400,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-ncclient to 0.5.2 [he 2016-09-15]
 	Updated x11/xbindkeys to 1.8.6 [wiz 2016-09-15]
 	Updated x11/xbindkeys-tk to 1.8.6 [wiz 2016-09-15]
+	Removed devel/guile-gtk [wiz 2016-09-15]
