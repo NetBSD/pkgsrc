@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.26 2016/01/11 22:53:48 joerg Exp $
+$NetBSD: distinfo,v 1.27 2016/09/15 09:25:53 maya Exp $
 
-SHA1 (wine-1.7.36.tar.bz2) = 69c8bf7116572a4c1e5b1113612f461d88489663
-RMD160 (wine-1.7.36.tar.bz2) = 2cde7505154c656eb58145b4ad7df55251362931
-SHA512 (wine-1.7.36.tar.bz2) = c2d9687e1ab0a53ebff6973fdd83e4b54c397e2b51c172b7c58297776228a8bbb3d5321de27aac4b61f756575b60c6534d5e0a9bb4b830d429496b3e8b95b39f
-Size (wine-1.7.36.tar.bz2) = 22010371 bytes
-SHA1 (patch-configure) = 77b5259dfe3644ca17bb9af8aa1be045b5f88c7f
-SHA1 (patch-dlls_ntdll_signal__x86__64.c) = 92ad434b5d8de9d4dcca5004d2fadede58cfeea8
-SHA1 (patch-dlls_ntdll_string.c) = 5da7614b1ad59ac29d8582ef3104dc79a1a045e6
+SHA1 (wine-1.9.18.tar.bz2) = 738ef272b3faf898c47dfb64b93b80fcde7a0c24
+RMD160 (wine-1.9.18.tar.bz2) = c555406acaa0debd5c91276f734534717e0fbf36
+SHA512 (wine-1.9.18.tar.bz2) = fc8ccf844c5913bb9e351f244cf6ec610caabc9513761b140b129e70a56265133a0cbc7b585bf83b028421f29c5ddc0885abfc98cd9a2dc2b0863d6dbb9b59ee
+Size (wine-1.9.18.tar.bz2) = 23473716 bytes
+SHA1 (patch-configure.ac) = 304ab35b7a99c9da4782a5d527ce6c1a5813fc3e
 SHA1 (patch-dlls_wineoss.drv_mmdevdrv.c) = 89f9d1c08dbfbed3eac971ee534944f7403246a4
-SHA1 (patch-dlls_ws2__32_socket.c) = 98ebaa7b0831e558f49a484ffb3a1b28adb9bcf2
+SHA1 (patch-dlls_winepulse.drv_mmdevdrv.c) = c9aad42d1fbfcc309dcc6ddc3dd9aefb9a556075
+SHA1 (patch-dlls_wininet_http.c) = 0021568efb075711f20b23e40515dc76868959c6
+SHA1 (patch-include_config.h.in) = 20d14d65ebaaca2dc9ba3f9dfbd644c5819de713
 SHA1 (patch-include_wine_test.h) = af33ec675c67e2fc56cf52e9c6634cab3e6fdfd2
