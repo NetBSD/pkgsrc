@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 03:28:57 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/09/15 15:58:49 wiz Exp $
 
-SHA1 (xbindkeys-1.7.3.tar.gz) = ccbc30d27d9a65cf2531c41e5d2db106e9029e7a
-RMD160 (xbindkeys-1.7.3.tar.gz) = 134207d4370c98f74d39aeb0cf79d94cbbaeae38
-SHA512 (xbindkeys-1.7.3.tar.gz) = 44ddf14e3a572ba71582895fb16a385c6176dfa921336df1ec050a3d658438bb5756eca63c6efeadcc6870f1a585b34652067d1d1aceb1fed1483afe898ea73f
-Size (xbindkeys-1.7.3.tar.gz) = 110561 bytes
+SHA1 (xbindkeys-1.8.6.tar.gz) = 913d772613fe0b05307d02417f6e6d8badbc296a
+RMD160 (xbindkeys-1.8.6.tar.gz) = 5c3fe8a1c343729033b287e47c2689724ae8ebba
+SHA512 (xbindkeys-1.8.6.tar.gz) = 3c77541eae9f87d2020c2272984c221094276dae2a8690c5cec9fe1b23c0139229b8f56876170da70684aeaa128642349b6835c375d473186cbf8123517173ba
+Size (xbindkeys-1.8.6.tar.gz) = 151941 bytes

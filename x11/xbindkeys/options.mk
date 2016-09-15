@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/10/29 12:32:44 sborrill Exp $
+# $NetBSD: options.mk,v 1.2 2016/09/15 15:58:49 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xbindkeys
 PKG_SUPPORTED_OPTIONS=	guile
@@ -8,7 +8,8 @@ PKG_SUGGESTED_OPTIONS+=	guile
 
 .if !empty(PKG_OPTIONS:Mguile)
 CONFIGURE_ARGS+=	--enable-guile
-.include "../../lang/guile/buildlink3.mk"
+USE_TOOLS+=		pkg-config
+.include "../../lang/guile20/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-guile
 .endif
