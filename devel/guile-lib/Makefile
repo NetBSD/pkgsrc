@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/09/15 00:00:15 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2016/09/15 17:05:16 wiz Exp $
 
 DISTNAME=	guile-lib-0.2.2
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Library functions for Guile, implemented in Scheme
 
 GNU_CONFIGURE=	yes
 
-USE_TOOLS+=	gmake makeinfo
+USE_TOOLS+=	gmake makeinfo pkg-config
 TEXINFO_REQD=	4.2
 INFO_FILES=	yes
 TEST_TARGET=	check
