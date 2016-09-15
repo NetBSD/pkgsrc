@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2014/12/04 01:05:25 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2016/09/15 00:00:15 gdt Exp $
 
 DISTNAME=	guile-lib-0.2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.savannah.gnu.org/releases/guile-lib/
 # http://download.gna.org/guile-lib/
@@ -38,5 +39,5 @@ INSTALLATION_DIRS+=	share/guile/site/term
 INSTALLATION_DIRS+=	share/guile/site/texinfo
 INSTALLATION_DIRS+=	share/guile/site/text
 
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
