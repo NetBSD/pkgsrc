@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2016/08/03 10:22:32 adam Exp $
+# $NetBSD: Makefile,v 1.108 2016/09/15 14:32:40 wiz Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	cad
 MASTER_SITES=	http://ftp.geda-project.org/geda-gaf/stable/v1.8/1.8.2/
 
