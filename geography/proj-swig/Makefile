@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.25 2016/09/15 15:50:22 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2016/09/15 19:55:41 wiz Exp $
 
 DISTNAME=		proj-swig-0.02
 PKGREVISION=		8
 CATEGORIES=		geography
-MASTER_SITES=		http://acert.ir.bbn.com/downloads/acert-geospatial/
+MASTER_SITES=		# http://acert.ir.bbn.com/downloads/acert-geospatial/
 
 MAINTAINER=		gdt@NetBSD.org
-HOMEPAGE=		http://acert.ir.bbn.com/downloads/acert-geospatial/
+#HOMEPAGE=		http://acert.ir.bbn.com/downloads/acert-geospatial/
 COMMENT=		Guile and python wrappers for proj
 
 MAKE_JOBS_SAFE=		no
