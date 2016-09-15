@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2016/09/15 14:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2016/09/15 14:42:48 gdt Exp $
 
-DISTNAME=	guile-gnome-platform-2.16.2
-PKGREVISION=	3
+DISTNAME=	guile-gnome-platform-2.16.4
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.gnu.org/gnu/guile-gnome/guile-gnome-platform/
 
@@ -22,6 +21,8 @@ INFO_FILES=		YES
 # warnings on alpha (perhaps other 64-bit too?)
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+TEST_TARGET=		check
+
 post-install:
 	rm -f ${DESTDIR}${PREFIX}/share/guile-gnome-2/gnome/overrides/gtk.defs.orig
 
@@ -39,7 +40,7 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/guile-cairo/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
