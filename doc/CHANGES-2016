@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3822 2016/09/15 14:48:48 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3823 2016/09/15 14:57:27 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5397,3 +5397,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/guile-slib to 3.2.5 [wiz 2016-09-15]
 	Added multimedia/py-m3u8 version 0.2.10 [joerg 2016-09-15]
 	Updated devel/guile-gnome to 2.16.4 [gdt 2016-09-15]
+	Updated net/py-ncclient to 0.5.2 [he 2016-09-15]
