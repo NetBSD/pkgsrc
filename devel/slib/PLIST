@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2013/05/19 17:50:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/09/15 00:08:12 gdt Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
@@ -121,6 +121,7 @@ share/slib/recobj.scm
 share/slib/record.scm
 share/slib/repl.scm
 share/slib/require.scm
+share/slib/rmdsff.scm
 share/slib/root.scm
 share/slib/s7.init
 share/slib/sc2.scm
