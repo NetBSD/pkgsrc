@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/20 08:09:40 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/15 13:56:58 wiedi Exp $
 #
 
 DISTNAME=	liblo-0.28
@@ -27,6 +27,7 @@ SUBST_SED.conf=		-e 's,-lpthread,$${PTHREAD_LDFLAGS} $${PTHREAD_LIBS},'
 SUBST_STAGE.conf=	post-patch
 SUBST_VARS.conf=	PTHREAD_CFLAGS PTHREAD_LDFLAGS PTHREAD_LIBS
 
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/resolv.buildlink3.mk"
