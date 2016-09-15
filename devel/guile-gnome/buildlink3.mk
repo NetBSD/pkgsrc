@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2016/09/15 14:32:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/09/15 21:13:03 wiz Exp $
 
 BUILDLINK_TREE+=        guile-gnome-platform
 
@@ -13,4 +13,4 @@ BUILDLINK_PKGSRCDIR.guile-gnome-platform?=      ../../devel/guile-gnome
 .include "../../graphics/guile-cairo/buildlink3.mk"
 .endif  # GUILE_GNOME_PLATFORM_BUILDLINK3_MK
 
-BUILDLINK_TREE+=        -guile-gnome-platform
+BUILDLINK_TREE+=	-guile-gnome-platform
