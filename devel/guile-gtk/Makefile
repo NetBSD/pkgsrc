@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/09/15 14:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2016/09/15 15:42:39 gdt Exp $
 #
 
 DISTNAME=		guile-gtk-0.60
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 INFO_FILES=		yes
 
+# Does not build with guile20 due to gh.h
 .include "../../lang/guile/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
