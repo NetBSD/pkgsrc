@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/01/10 13:30:10 wen Exp $
+$NetBSD: distinfo,v 1.11 2016/09/15 12:58:30 mef Exp $
 
-SHA1 (Data-Dump-Streamer-2.39.tar.gz) = ba117052c3aa1e0478df2c90c165a6d583729ac1
-RMD160 (Data-Dump-Streamer-2.39.tar.gz) = d751f52fa8ac7a7a5d6eedfc1eff51e95012d2c4
-SHA512 (Data-Dump-Streamer-2.39.tar.gz) = 40774e1ac4f352bc79c2d32e286e79489271050fa06560ac8d4bbe096041072124f5d446235aedc4e1a3d0cf0b7866eec9493f7edd09b0bc446c6b79913f82d9
-Size (Data-Dump-Streamer-2.39.tar.gz) = 150029 bytes
+SHA1 (Data-Dump-Streamer-2.40.tar.gz) = 7239ed18ce7b477964c8152c5d4b8c21d3427953
+RMD160 (Data-Dump-Streamer-2.40.tar.gz) = 3466f688dd78767ab6f8260e8e39a28b4def8ea0
+SHA512 (Data-Dump-Streamer-2.40.tar.gz) = db21f42ba477cc644cf1e0c572ad5cace072b35d4760e85edccd4a7ae313d1eee19158dbbdd82f42de47ab26ca5f7528882a2a983df3cc44ea3b57f8bc832f64
+Size (Data-Dump-Streamer-2.40.tar.gz) = 145760 bytes
