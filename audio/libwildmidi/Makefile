@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/24 10:09:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/15 20:21:37 wiedi Exp $
 
 DISTNAME=	wildmidi-0.4.0
 PKGNAME=	lib${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Midi processing library and a midi player using the GUS patch set
 LICENSE=	gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/wildmidi-${DISTNAME}
+USE_LANGUAGES=	c99
 USE_TOOLS+=	gmake
 USE_CMAKE=	yes
 
