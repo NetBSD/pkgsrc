@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/09/15 14:42:48 gdt Exp $
+# $NetBSD: Makefile,v 1.54 2016/09/15 21:13:21 wiz Exp $
 
 DISTNAME=	guile-gnome-platform-2.16.4
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.gnu.org/software/guile-gnome/
 COMMENT=	Library to access gobject/glib/gtk and gnome from guile
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	guile-slib>=2.4.2:../../devel/guile-slib
+DEPENDS+=	guile-slib>=3.2.5:../../devel/guile-slib
 
 MAKE_JOBS_SAFE=		NO
 
@@ -38,6 +38,7 @@ post-install:
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.guile-cairo+=	guile-cairo>=1.4.1nb1
 .include "../../graphics/guile-cairo/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../lang/guile20/buildlink3.mk"
