@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2015/07/04 16:18:35 joerg Exp $
+# $NetBSD: options.mk,v 1.21 2016/09/15 15:11:33 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk guile lua ocaml pangocairo rsvg tcl x11 perl
@@ -144,7 +144,7 @@ CONFIGURE_ARGS+=	--disable-tcl
 
 .if !empty(PKG_OPTIONS:Mguile)
 USING_SWIG=	yes
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-guile
 PLIST.guile=		yes
 .else
