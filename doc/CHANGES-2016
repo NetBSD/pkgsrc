@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3820 2016/09/15 14:02:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3821 2016/09/15 14:26:41 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5395,3 +5395,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xf86-video-ati to 7.7.1 [wiz 2016-09-15]
 	Updated devel/slib to 3.2.5nb1 [wiz 2016-09-15]
 	Updated devel/guile-slib to 3.2.5 [wiz 2016-09-15]
+	Added multimedia/py-m3u8 version 0.2.10 [joerg 2016-09-15]
