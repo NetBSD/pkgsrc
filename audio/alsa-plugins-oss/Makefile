@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/04/20 12:10:24 nros Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/15 20:33:02 wiedi Exp $
 
 DISTNAME=	alsa-plugins-1.1.1
 PKGNAME=	${DISTNAME:S/plugins/plugins-oss/}
@@ -20,6 +20,7 @@ USE_LIBTOOL=	yes
 CFLAGS.SunOS+=	-DSOUND_MIXER_PHONEIN=SOUND_MIXER_PHONE
 CFLAGS.SunOS+=	-DSOUND_MIXER_PHONEOUT=SOUND_MIXER_MONO
 CFLAGS.SunOS+=	-DSOUND_MIXER_MONITOR=SOUND_MIXER_DEPTH
+CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t -Du_int64_t=uint64_t
 CFLAGS+=	-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
 LIBS+=		${LIBOSSAUDIO}
 
