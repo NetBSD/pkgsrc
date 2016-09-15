@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 19:22:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/15 21:32:05 mef Exp $
 
 DISTNAME=	Archive-Peek-0.35
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,10 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Types-Path-Class-[0-9]*:../../devel/p5-MooseX-Types-Path-Class
+
+# for make test
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 PERL5_PACKLIST=		auto/Archive/Peek/.packlist
 
