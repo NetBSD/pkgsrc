@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3811 2016/09/15 00:01:55 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3812 2016/09/15 00:08:25 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5381,3 +5381,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/go-grpc to 1.0.1nb1 [wiz 2016-09-14]
 	Updated misc/go-genproto to 20160816nb1 [wiz 2016-09-14]
 	Updated devel/g-wrap to 1.9.15 [gdt 2016-09-15]
+	Updated devel/slib to 3.2.5 [gdt 2016-09-15]
