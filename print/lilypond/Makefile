@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2016/09/15 14:32:41 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2016/09/15 17:14:19 gdt Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	7
@@ -64,6 +64,7 @@ BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.0
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+# lilypond's configure rejects guile2
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
