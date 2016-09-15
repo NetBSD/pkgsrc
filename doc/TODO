@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16432 2016/09/14 14:23:35 mef Exp $
+$NetBSD: TODO,v 1.16433 2016/09/15 00:01:55 gdt Exp $
 
 Suggested new packages
 ======================
@@ -699,7 +699,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
-	o g-wrap-1.9.15
 	o gallery3-3.0.2
 	o ganglia-3.7.1
 	o gap-4r4p9
