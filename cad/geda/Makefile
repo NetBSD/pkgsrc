@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2016/09/15 14:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2016/09/15 15:29:51 gdt Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
@@ -79,7 +79,7 @@ INFO_FILES=	yes
 .include "../../devel/libstroke/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
