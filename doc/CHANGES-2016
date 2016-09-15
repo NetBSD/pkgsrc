@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3813 2016/09/15 06:08:41 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.3814 2016/09/15 09:28:48 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5383,3 +5383,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/g-wrap to 1.9.15 [gdt 2016-09-15]
 	Updated devel/slib to 3.2.5 [gdt 2016-09-15]
 	Updated databases/mysql-cluster to 7.4.12 [jnemeth 2016-09-15]
+	Updated emulators/wine-devel to 1.9.18 [maya 2016-09-15]
