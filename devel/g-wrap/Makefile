@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.67 2015/09/06 13:48:38 gdt Exp $
+# $NetBSD: Makefile,v 1.68 2016/09/15 00:01:43 gdt Exp $
 
-DISTNAME=	g-wrap-1.9.14
-PKGREVISION=	3
-# update to 1.9.15 on hold because it requires guile 2.0
+DISTNAME=	g-wrap-1.9.15
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/g-wrap/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/g-wrap/
 COMMENT=	Tool for generating guile wrappers for C code
+
+LICENSE=	gnu-lgpl-v2.1
 
 # standard.c ends up malformed with MAKE_JOBS=4
 MAKE_JOBS_SAFE=	no
@@ -32,5 +32,5 @@ CONFIGURE_ARGS+=	--disable-Werror
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
