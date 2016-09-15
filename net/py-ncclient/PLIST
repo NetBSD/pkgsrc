@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2016/02/17 12:20:57 he Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/09/15 14:56:45 he Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ncclient/__init__.py
@@ -34,6 +35,12 @@ ${PYSITELIB}/ncclient/devices/hpcomware.pyo
 ${PYSITELIB}/ncclient/devices/huawei.py
 ${PYSITELIB}/ncclient/devices/huawei.pyc
 ${PYSITELIB}/ncclient/devices/huawei.pyo
+${PYSITELIB}/ncclient/devices/iosxe.py
+${PYSITELIB}/ncclient/devices/iosxe.pyc
+${PYSITELIB}/ncclient/devices/iosxe.pyo
+${PYSITELIB}/ncclient/devices/iosxr.py
+${PYSITELIB}/ncclient/devices/iosxr.pyc
+${PYSITELIB}/ncclient/devices/iosxr.pyo
 ${PYSITELIB}/ncclient/devices/junos.py
 ${PYSITELIB}/ncclient/devices/junos.pyc
 ${PYSITELIB}/ncclient/devices/junos.pyo
@@ -91,6 +98,12 @@ ${PYSITELIB}/ncclient/operations/third_party/huawei/__init__.pyo
 ${PYSITELIB}/ncclient/operations/third_party/huawei/rpc.py
 ${PYSITELIB}/ncclient/operations/third_party/huawei/rpc.pyc
 ${PYSITELIB}/ncclient/operations/third_party/huawei/rpc.pyo
+${PYSITELIB}/ncclient/operations/third_party/iosxe/__init__.py
+${PYSITELIB}/ncclient/operations/third_party/iosxe/__init__.pyc
+${PYSITELIB}/ncclient/operations/third_party/iosxe/__init__.pyo
+${PYSITELIB}/ncclient/operations/third_party/iosxe/rpc.py
+${PYSITELIB}/ncclient/operations/third_party/iosxe/rpc.pyc
+${PYSITELIB}/ncclient/operations/third_party/iosxe/rpc.pyo
 ${PYSITELIB}/ncclient/operations/third_party/juniper/__init__.py
 ${PYSITELIB}/ncclient/operations/third_party/juniper/__init__.pyc
 ${PYSITELIB}/ncclient/operations/third_party/juniper/__init__.pyo

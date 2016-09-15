@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/15 14:56:45 he Exp $
 
-DISTNAME=	ncclient-0.4.6
+DISTNAME=	ncclient-0.5.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=n/ncclient/}
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/ncclient
 COMMENT=	NETCONF Python client
 LICENSE=	apache-2.0
-
-PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-paramiko>=1.7.7.1:../../security/py-paramiko
 DEPENDS+=	${PYPKGPREFIX}-setuptools>0.6:../../devel/py-setuptools
