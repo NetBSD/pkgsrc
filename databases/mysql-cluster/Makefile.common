@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2016/03/09 21:51:45 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.11 2016/09/15 06:05:08 jnemeth Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
-DISTNAME=	mysql-cluster-gpl-7.4.10
+DISTNAME=	mysql-cluster-gpl-7.4.12
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Cluster-7.4/}
 
@@ -126,10 +126,7 @@ SOEXT="dylib"
 SOEXT="so"
 .endif
 
-CMAKE_ARGS+=	-DWITH_EDITLINE=system
-CMAKE_ARGS+=	-DEDITLINE_LIBRARY=${BUILDLINK_PREFIX.editline}/lib/libedit.${SOEXT}
-CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editline}/include/readline
+CMAKE_ARGS+=	-DWITH_EDITLINE=bundled
 
-.include "../../devel/editline/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
