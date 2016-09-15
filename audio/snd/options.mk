@@ -1,34 +1,19 @@
-# $NetBSD: options.mk,v 1.6 2016/09/15 16:52:36 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2016/09/15 17:02:24 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snd
-PKG_SUPPORTED_OPTIONS=	esound guile
-# fftw2 fftw3 ladspa gamin/fam mpg123 timidity
+PKG_SUPPORTED_OPTIONS=
+# ruby, forth, alsa, oss, jack, pulseaudio, gmp, ladspa
 PKG_OPTIONS_REQUIRED_GROUPS=	frontend
 PKG_OPTIONS_GROUP.frontend=	gtk motif
-PKG_SUGGESTED_OPTIONS=	gtk guile
+PKG_SUGGESTED_OPTIONS=	gtk
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mesound)
-CONFIGURE_ARGS+=	--with-esd
-.include "../../audio/esound/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-esd
-.endif
 
 .if !empty(PKG_OPTIONS:Mgtk)
 CONFIGURE_ARGS+=	--with-gtk
 .include "../../x11/gtk2/buildlink3.mk"
-LDFLAGS.DragonFly=	-lX11
 .else
 CONFIGURE_ARGS+=	--without-gtk
-.endif
-
-.if !empty(PKG_OPTIONS:Mguile)
-CONFIGURE_ARGS+=	--with-guile
-.include "../../lang/guile/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-guile
 .endif
 
 .if !empty(PKG_OPTIONS:Mmotif)
