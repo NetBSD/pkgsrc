@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2309 2016/09/14 13:39:40 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2310 2016/09/15 16:24:19 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -326,7 +326,6 @@ SUBDIR+=	gst-plugins1-pango
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtl
 SUBDIR+=	guile-gnome
-SUBDIR+=	guile-gtk
 SUBDIR+=	guile-lib
 SUBDIR+=	guile-slib
 SUBDIR+=	guile-www
