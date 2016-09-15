@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/09/15 00:48:57 gdt Exp $
-#
+# $NetBSD: Makefile,v 1.50 2016/09/15 16:31:37 wiz Exp $
 
 DISTNAME=	guile-pg-0.47
 PKGREVISION=	1
@@ -13,7 +12,7 @@ COMMENT=	PostgreSQL interface for Guile
 LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	YES
 INFO_FILES=	YES
 
