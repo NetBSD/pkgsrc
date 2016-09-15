@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2016/09/15 14:32:41 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.21 2016/09/15 16:39:17 wiz Exp $
 
-DISTNAME=		libmatheval-1.1.8
-PKGREVISION=		3
+DISTNAME=		libmatheval-1.1.11
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GNU:=libmatheval/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/libmatheval/
 COMMENT=		Library for evaluating mathematical expressions
+LICENSE=		gnu-gpl-v3
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

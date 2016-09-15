@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2014/04/28 12:43:34 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2016/09/15 16:39:17 wiz Exp $
 
---- lib/scanner.l.orig	2011-07-03 09:37:11.000000000 +0000
+Fixes linking (missing yywrap symbol).
+
+--- lib/scanner.l.orig	2013-08-14 20:22:08.000000000 +0000
 +++ lib/scanner.l
 @@ -18,7 +18,7 @@
   * along with GNU libmatheval.  If not, see
@@ -10,4 +12,4 @@ $NetBSD: patch-aa,v 1.3 2014/04/28 12:43:34 joerg Exp $
 +%option noyywrap
  %{
  /*
-  * Copyright (C) 1999, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2011
+  * Copyright (C) 1999, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2011,
