@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2016/09/15 15:29:51 gdt Exp $
+# $NetBSD: Makefile,v 1.110 2016/09/15 17:13:09 wiz Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
@@ -30,8 +30,6 @@ DEPENDS+=		gettext-tools>=0.14.6:../../devel/gettext-tools
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		bash gmake msgfmt pkg-config
-CONFIGURE_ARGS+=	--disable-update-mime-database
-CONFIGURE_ARGS+=	--disable-update-desktop-database
 
 # let (f)lex rebuild this file.  The distributed one doesn't
 # always work.
@@ -49,9 +47,6 @@ REPLACE_PERL+=		utils/scripts/pads_backannotate \
 
 # needs GNU m4 for the PCBboard and gsch2pcb netlisters
 USE_TOOLS+=		gmake gm4:run pkg-config
-
-CONFIGURE_ARGS+=	--with-pcbm4dir=${LOCALBASE}/share/pcb/m4
-CONFIGURE_ARGS+=	--with-pcbconfdir=${PKG_SYSCONFDIR}/pcb
 
 SUBST_CLASSES+=			python
 SUBST_STAGE.python=		pre-configure
