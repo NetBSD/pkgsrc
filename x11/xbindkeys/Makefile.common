@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.12 2014/10/05 16:41:09 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2016/09/15 15:58:49 wiz Exp $
 #
 # used by x11/xbindkeys-tk/Makefile
 
-DISTNAME=	xbindkeys-1.7.3
+DISTNAME=	xbindkeys-1.8.6
 CATEGORIES=	x11
-MASTER_SITES=	http://hocwp.free.fr/xbindkeys/
+MASTER_SITES=	http://www.nongnu.org/xbindkeys/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hocwp.free.fr/xbindkeys/xbindkeys.html
+HOMEPAGE=	http://www.nongnu.org/xbindkeys/xbindkeys.html
 COMMENT=	Launches shell commands with your keyboard or your mouse
 
 DISTINFO_FILE=	${.CURDIR}/../../x11/xbindkeys/distinfo
-PATCHDIR=	${.CURDIR}/../../x11/xbindkeys/patches
+#PATCHDIR=	${.CURDIR}/../../x11/xbindkeys/patches
 
 GNU_CONFIGURE=	yes
 
