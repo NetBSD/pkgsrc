@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/04/13 18:47:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/15 13:36:56 wiz Exp $
 
-DISTNAME=	xf86-video-amdgpu-1.1.0
+DISTNAME=	xf86-video-amdgpu-1.1.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
