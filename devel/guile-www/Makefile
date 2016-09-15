@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/09/15 14:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/09/15 15:38:20 gdt Exp $
 
 DISTNAME=	guile-www-2.39
 PKGREVISION=	1
@@ -18,5 +18,5 @@ INFO_FILES=	YES
 
 TEST_TARGET=	check
 
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
