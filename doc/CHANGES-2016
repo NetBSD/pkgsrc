@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3835 2016/09/16 10:35:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3836 2016/09/16 15:21:22 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5411,3 +5411,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/mysql57-server version 5.7.15 [adam 2016-09-16]
 	Removed cad/gwave [wiz 2016-09-16]
 	Updated x11/xf86-video-amdgpu to 1.1.2 [wiz 2016-09-16]
+	Updated math/py-lmfit to 0.9.5 [prlw1 2016-09-16]
