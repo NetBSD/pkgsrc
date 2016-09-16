@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3840 2016/09/16 19:16:39 leot Exp $
+$NetBSD: CHANGES-2016,v 1.3841 2016/09/16 21:48:19 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5416,3 +5416,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php70 to 7.0.11 [taca 2016-09-16]
 	Updated mail/getmail to 4.51.0 [schmonz 2016-09-16]
 	Updated net/youtube-dl to 20160915 [leot 2016-09-16]
+	Updated x11/gtkmm to 2.24.5 [prlw1 2016-09-16]
