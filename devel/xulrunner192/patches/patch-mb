@@ -1,7 +1,7 @@
-$NetBSD: patch-mb,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
+$NetBSD: patch-mb,v 1.2 2016/09/16 11:42:24 jperkin Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2010-03-16 05:57:24.000000000 -0400
-+++ xpcom/reflect/xptcall/src/md/unix/Makefile.in	2010-03-31 05:09:52.000000000 -0400
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2012-03-06 14:45:48.000000000 +0000
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -76,7 +76,7 @@ endif
  endif
  endif
@@ -39,7 +39,19 @@ $NetBSD: patch-mb,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
  # BeOS/Intel (uses the same unixish_x86 code)
  #
  ifeq ($(OS_ARCH)$(OS_TEST),BeOSBePC)
-@@ -200,7 +188,7 @@ endif
+@@ -145,7 +133,11 @@ endif
+ #
+ ifeq ($(OS_ARCH),SunOS)
+ ifeq (86,$(findstring 86,$(OS_TEST)))
++ifeq (x86_64,$(OS_TEST))
++CPPSRCS		:= xptcinvoke_x86_64_unix.cpp xptcstubs_x86_64_linux.cpp
++else
+ CPPSRCS		:= xptcinvoke_x86_solaris.cpp xptcstubs_x86_solaris.cpp
++endif
+ # 28817: if Solaris Intel OS, and native compiler, always build optimised.
+ ifndef GNU_CC
+ ASFILES		:= xptcinvoke_asm_x86_solaris_SUNW.s xptcstubs_asm_x86_solaris_SUNW.s
+@@ -200,7 +192,7 @@ endif
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -48,7 +60,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -255,7 +243,7 @@ endif
+@@ -255,7 +247,7 @@ endif
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -57,7 +69,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -295,6 +283,14 @@ ASFLAGS		+= -I$(DIST)/include -x assembl
+@@ -295,6 +287,14 @@ ASFLAGS		+= -I$(DIST)/include -x assembl
  endif
  endif
  
@@ -72,7 +84,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
  ######################################################################
  # PowerPC
  ######################################################################
-@@ -340,9 +336,10 @@ endif
+@@ -340,9 +340,10 @@ endif
  #
  # NetBSD/PPC
  #
@@ -84,7 +96,7 @@ $NetBSD: patch-mb,v 1.1.1.1 2011/04/19 11:16:08 tnn Exp $
  endif
  
  #
-@@ -414,6 +411,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
+@@ -414,6 +415,13 @@ CPPSRCS		:= xptcinvoke_sparc64_openbsd.c
  ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
  endif
  #
