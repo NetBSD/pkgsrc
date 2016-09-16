@@ -1,0 +1,39 @@
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+
+Split configuration between mysql-client and mysql-server.
+
+--- scripts/CMakeLists.txt.orig	2016-03-28 18:06:12.000000000 +0000
++++ scripts/CMakeLists.txt
+@@ -430,19 +430,21 @@ ELSE()
+   # On Unix, most of the files end up in the bin directory
+   SET(mysql_config_COMPONENT COMPONENT Development)
+ 
++  IF(WITHOUT_SERVER)
++    SET(BIN_SCRIPTS mysql_config)
++  ELSE()
+   IF(WITH_SYSTEMD)
+     SET(BIN_SCRIPTS
+-      mysql_config
+       mysqldumpslow
+       )
+   ELSE()
+     SET(BIN_SCRIPTS
+-      mysql_config
+       mysqldumpslow
+       mysqld_multi
+       mysqld_safe
+       )
+   ENDIF()
++  ENDIF()
+ 
+   SET(PKGCONFIG_FILE ${LIBMYSQL_OS_OUTPUT_NAME}.pc)
+   STRING(REGEX REPLACE "/mysql$" "" PKGCONFIG_DIR "${INSTALL_LIBDIR}")
+@@ -458,7 +460,7 @@ ELSE()
+     ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
+     ESCAPE_QUOTES @ONLY)
+ 
+-  IF(INSTALL_PKGCONFIGDIR)
++  IF(INSTALL_PKGCONFIGDIR AND WITHOUT_SERVER)
+     MESSAGE(STATUS "INSTALL ${PKGCONFIG_FILE} ${INSTALL_PKGCONFIGDIR}")
+     INSTALL(FILES
+       ${CMAKE_CURRENT_BINARY_DIR}/${PKGCONFIG_FILE}
