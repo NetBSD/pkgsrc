@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2016/08/16 13:09:16 mef Exp $
+$NetBSD: distinfo,v 1.9 2016/09/16 08:47:48 jperkin Exp $
 
 SHA1 (IO-Interface-1.09.tar.gz) = 5cd764267ccd8b4a2495217a982d11c2d54cb666
 RMD160 (IO-Interface-1.09.tar.gz) = 9437908763a989cbd72493fb3239a207f602df36
 SHA512 (IO-Interface-1.09.tar.gz) = a23a4793e23ba0fbb0583c6692d7138e4a9b0a6959c9fa81489954090fa51ca6edfe79841a8f69ab7f7a52aec31a477cb01705f6d66d5c7e8b69f76301360cd5
 Size (IO-Interface-1.09.tar.gz) = 16414 bytes
-SHA1 (patch-aa) = 9a2da80746f38679e231df7c5abf8d0d5ec2fd45
+SHA1 (patch-aa) = ef565ac31332a52c4afc8fad0e9aafcadf7b6919
