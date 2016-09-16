@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/06 18:49:57 agc Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/16 20:54:32 wiedi Exp $
 
 DISTNAME=	picopb-20150628
 CATEGORIES=	devel
@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	yacc
 
 TEST_TARGET=	check
 
