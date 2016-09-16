@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/04/25 14:22:54 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2016/09/16 22:36:21 wiedi Exp $
 
 DISTNAME=	exult-1.4.9rc1
 PKGREVISION=	1
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	yacc
 
 CFLAGS+=	-fpermissive
 LDFLAGS+=	-lz
