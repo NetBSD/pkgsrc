@@ -1,0 +1,39 @@
+$NetBSD: patch-libmysql_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+
+Do not install libmysqlclient with the server.
+Generate versioned lib symlinks on FreeBSD to supress PLIST divergence.
+
+--- libmysql/CMakeLists.txt.orig	2016-06-30 06:22:11.000000000 +0000
++++ libmysql/CMakeLists.txt
+@@ -231,7 +231,11 @@ IF(WIN32)
+ ENDIF()
+ 
+ # Merge several convenience libraries into one big mysqlclient
++IF(WITHOUT_SERVER)
+ MERGE_LIBRARIES(mysqlclient STATIC ${LIBS} COMPONENT Development)
++ELSE()
++MERGE_LIBRARIES(mysqlclient STATIC NOINSTALL ${LIBS} COMPONENT Development)
++ENDIF()
+ 
+ # Visual Studio users need debug  static library for debug projects
+ IF(MSVC)
+@@ -271,12 +275,18 @@ ENDIF()
+ IF(NOT DISABLE_SHARED)
+   # Merge several convenience libraries into one big mysqlclient
+   # and link them together into shared library.
++  IF(WITHOUT_SERVER)
+   MERGE_LIBRARIES(libmysql SHARED ${LIBS}
+     EXPORTS ${CLIENT_API_FUNCTIONS} ${CLIENT_API_FUNCTIONS_UNDOCUMENTED}
+     COMPONENT SharedLibraries)
++  ELSE()
++  MERGE_LIBRARIES(libmysql SHARED NOINSTALL ${LIBS}
++    EXPORTS ${CLIENT_API_FUNCTIONS} ${CLIENT_API_FUNCTIONS_UNDOCUMENTED}
++    COMPONENT SharedLibraries)
++  ENDIF()
+   IF(UNIX)
+     # libtool compatability
+-    IF(CMAKE_SYSTEM_NAME MATCHES "FreeBSD" OR APPLE)
++    IF(CMAKE_SYSTEM_NAME MATCHES APPLE)
+       SET(OS_SHARED_LIB_VERSION "${SHARED_LIB_MAJOR_VERSION}")
+     ELSE()
+       SET(OS_SHARED_LIB_VERSION
