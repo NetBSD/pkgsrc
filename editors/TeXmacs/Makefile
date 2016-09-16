@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2016/09/15 14:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2016/09/16 09:42:25 wiz Exp $
 #
 # changelog at http://www.texmacs.org/tmweb/about/changes.en.html
 
@@ -61,6 +61,12 @@ REPLACE_SH+=		misc/scripts/gs
 REPLACE_PERL+=		plugins/asymptote/bin/perl-tm_asy
 REPLACE_PERL+=		plugins/asymptote/bin/tm_asy2
 REPLACE_PERL+=		plugins/feynmf/bin/bbox_add.pl
+
+SUBST_CLASSES+=		linkpath
+SUBST_SED.linkpath+=	-e "s,-lguile,-L${PREFIX}/guile/1.8/lib -lguile,g"
+SUBST_FILES.linkpath+=	configure
+SUBST_MESSAGE.linkpath=	Search for guile library in proper directory.
+SUBST_STAGE.linkpath=	pre-configure
 
 SUBST_CLASSES+=		bash
 SUBST_SED.bash+=	-e "s,/bin/bash,${PREFIX}/bin/bash,"

@@ -1,0 +1,13 @@
+$NetBSD: patch-src_makefile.in,v 1.1 2016/09/16 09:42:25 wiz Exp $
+
+--- src/makefile.in.orig	2016-09-16 09:21:53.122589456 +0000
++++ src/makefile.in
+@@ -32,7 +32,7 @@ CPPFLAGS := @CPPFLAGS@
+ CFLAGS := @CFLAGS@
+ CXXFLAGS := @CXXDEBUG@ @CXXFLAGS@
+ LDFLAGS := @LDFLAGS@
+-LIBS := @LIBS@
++LIBS := -L${PREFIX}/guile/1.8/lib @LIBS@
+ 
+ AR = ar
+ ARFLAGS = -r
