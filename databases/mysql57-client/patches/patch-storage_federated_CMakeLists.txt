@@ -1,0 +1,12 @@
+$NetBSD: patch-storage_federated_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+
+Build with newer DTrace.
+
+--- storage/federated/CMakeLists.txt.orig	2016-03-28 18:06:12.000000000 +0000
++++ storage/federated/CMakeLists.txt
+@@ -22,4 +22,4 @@ IF(NOT WITH_FEDERATED AND NOT WITH_FEDER
+  SET(FEDERATED_SOURCES ${FEDERATED_SOURCES} ${CMAKE_SOURCE_DIR}/mysys/string.c)
+ ENDIF()
+ MYSQL_ADD_PLUGIN(federated ${FEDERATED_SOURCES} STORAGE_ENGINE
+-RECOMPILE_FOR_EMBEDDED)
++RECOMPILE_FOR_EMBEDDED DTRACE_INSTRUMENTED)
