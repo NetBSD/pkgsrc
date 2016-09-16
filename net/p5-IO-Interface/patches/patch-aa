@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2016/08/16 13:09:17 mef Exp $
+$NetBSD: patch-aa,v 1.3 2016/09/16 08:47:48 jperkin Exp $
 
---- lib/IO/Interface.xs~	2014-12-10 01:41:30.000000000 +0900
-+++ lib/IO/Interface.xs	2016-08-16 22:00:11.000000000 +0900
+Suport NetBSD and SunOS.
+
+--- lib/IO/Interface.xs.orig	2014-12-09 16:41:30.000000000 +0000
++++ lib/IO/Interface.xs
 @@ -442,6 +442,9 @@ if_addr(sock, name, ...)
  	 operation = SIOCGIFADDR;
         }
@@ -12,3 +14,21 @@ $NetBSD: patch-aa,v 1.2 2016/08/16 13:09:17 mef Exp $
         if (ifr.ifr_addr.sa_family != AF_INET) croak ("Address is not in the AF_INET family.\n");
         RETVAL = inet_ntoa(((struct sockaddr_in*) &ifr.ifr_addr)->sin_addr);
       }
+@@ -587,7 +590,7 @@ if_hwaddr(sock, name, ...)
+      char           *newaddr,hwaddr[128];
+      CODE:
+    {
+-#if !((defined(HAS_IOCTL) && defined(SIOCGIFHWADDR)) || defined(USE_GETIFADDRS))
++#if !((defined(HAS_IOCTL) && defined(SIOCGIFHWADDR)) || defined(USE_GETIFADDRS)) || defined(__sun)
+      XSRETURN_UNDEF;
+ #endif
+ #if (defined(USE_GETIFADDRS) && defined(HAVE_SOCKADDR_DL_STRUCT))
+@@ -620,7 +623,7 @@ if_hwaddr(sock, name, ...)
+      freeifaddrs(ifap);
+ 
+      RETVAL = hwaddr;
+-#elif (defined(HAS_IOCTL) && defined(SIOCGIFHWADDR))
++#elif (defined(HAS_IOCTL) && defined(SIOCGIFHWADDR)) && !defined(__sun)
+      bzero((void*)&ifr,sizeof(struct ifreq));
+      strncpy(ifr.ifr_name,name,IFNAMSIZ-1);
+      ifr.ifr_hwaddr.sa_family = AF_UNSPEC;
