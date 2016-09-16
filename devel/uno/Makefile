@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/01/04 02:40:22 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2016/09/16 21:36:43 wiedi Exp $
 #
 
 DISTNAME=		uno_v213
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/uno/src
 MAKE_FILE=		makefile
 
 MAKE_JOBS_SAFE=		no
-
+USE_LANGUAGES=		c99
 USE_TOOLS+=		bison gmake flex
 
 .include "../../mk/bsd.prefs.mk"
