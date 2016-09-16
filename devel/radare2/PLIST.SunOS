@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2016/09/16 14:46:25 jperkin Exp $
+lib/radare2/${PKGVERSION}/asm_RISCV.so
+lib/radare2/${PKGVERSION}/asm_cris.so
+lib/radare2/${PKGVERSION}/asm_mips.so
+lib/radare2/${PKGVERSION}/asm_ppc.so
+lib/radare2/${PKGVERSION}/asm_x86.so
+lib/radare2/${PKGVERSION}/asm_z80-cr.so
+lib/radare2/${PKGVERSION}/lib.so
