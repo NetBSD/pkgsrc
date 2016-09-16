@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3832 2016/09/16 06:28:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3833 2016/09/16 06:50:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5407,3 +5407,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/cwrappers to 20160908 [joerg 2016-09-15]
 	Updated lang/guile20 to 2.0.12nb2 [wiz 2016-09-16]
 	Updated textproc/wdiff to 1.2.2nb1 [wiz 2016-09-16]
+	Added databases/mysql57-client version 5.7.15 [adam 2016-09-16]
+	Added databases/mysql57-server version 5.7.15 [adam 2016-09-16]
