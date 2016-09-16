@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/09/14 23:59:04 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/09/16 06:26:13 wiz Exp $
 bin/guild
 bin/guile
 bin/guile-config
@@ -128,7 +128,6 @@ include/guile/2.0/libguile/weaks.h
 include/guile/2.0/readline.h
 info/guile.info
 info/r5rs.info
-lib/charset.alias
 lib/guile/2.0/ccache/ice-9/and-let-star.go
 lib/guile/2.0/ccache/ice-9/binary-ports.go
 lib/guile/2.0/ccache/ice-9/boot-9.go
