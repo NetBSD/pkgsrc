@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16442 2016/09/16 06:50:52 adam Exp $
+$NetBSD: TODO,v 1.16443 2016/09/16 21:15:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -446,6 +446,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avrdude-6.3
 	o baci-20040415
 	o base-1.4.5
+	o bash-4.4
 	o bastet-0.43
 	o bbcim-1.0
 	o bbkeys-0.9.0
@@ -564,7 +565,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ddrescue-1.21
 	o dega-1.12
 	o delegate-9.9.13
-	o denemo-2.0.10
+	o denemo-2.0.12
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
@@ -1426,6 +1427,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rc-1.7.4
 	o rdp-1.6
+	o readline-7.0
 	o regionset-0.2
 	o relay-ctrl-3.2
 	o rep-gtk-0.90.8.1
