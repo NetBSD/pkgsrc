@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/08/16 00:41:20 wen Exp $
+# $NetBSD: Makefile,v 1.54 2016/09/16 15:28:17 mef Exp $
 
 DISTNAME=	Log-Dispatch-2.57
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,7 @@ DEPENDS+=	p5-Params-Validate>=1.03:../../devel/p5-Params-Validate
 
 # for make test
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
 
 PERL5_PACKLIST=		auto/Log/Dispatch/.packlist
 
