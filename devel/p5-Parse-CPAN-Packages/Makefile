@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 19:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/16 15:24:34 mef Exp $
 #
 
 DISTNAME=	Parse-CPAN-Packages-2.40
@@ -23,6 +23,10 @@ DEPENDS+=	p5-PPI-[0-9]*:../../devel/p5-PPI
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 
 BUILD_DEPENDS+=	p5-Test-InDistDir-[0-9]*:../../devel/p5-Test-InDistDir
+# for make test
+BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
