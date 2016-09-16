@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2016/08/30 10:56:04 plunky Exp $
+# $NetBSD: Makefile,v 1.63 2016/09/16 18:04:22 plunky Exp $
 #
 
 DISTNAME=		qcad-3.15.5.3
@@ -61,7 +61,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_MAN} ${WRKSRC}/qcad.1 \
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${FIND} ${WRKSRC}/scripts -name \*.orig -rm
+	${FIND} ${WRKSRC}/scripts -name \*.orig -delete
 	cd ${WRKSRC} && ${PAX} -rwpm fonts linetypes patterns \
 	    plugins scripts themes ts ${DESTDIR}${PREFIX}/lib/${PKGBASE}
 	cd ${WRKSRC} && ${PAX} -rwpm readme.txt examples libraries \
