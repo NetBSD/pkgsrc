@@ -1,0 +1,31 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+
+Split configuration between mysql-client and mysql-server.
+
+--- CMakeLists.txt.orig	2016-06-30 06:22:11.000000000 +0000
++++ CMakeLists.txt
+@@ -584,7 +584,6 @@ ADD_SUBDIRECTORY(vio)
+ ADD_SUBDIRECTORY(regex)
+ ADD_SUBDIRECTORY(mysys)
+ ADD_SUBDIRECTORY(mysys_ssl)
+-ADD_SUBDIRECTORY(libmysql)
+ ADD_SUBDIRECTORY(libbinlogevents)
+ ADD_SUBDIRECTORY(libbinlogstandalone)
+ 
+@@ -613,12 +612,12 @@ ADD_SUBDIRECTORY(client)
+ ADD_SUBDIRECTORY(sql/share)
+ ADD_SUBDIRECTORY(libservices)
+ 
+-IF(UNIX)
++IF(WITHOUT_SERVER)
++  ADD_SUBDIRECTORY(libmysql)
+   ADD_SUBDIRECTORY(man)
+-ENDIF()
+-
+-IF(NOT WITHOUT_SERVER)
+   ADD_SUBDIRECTORY(testclients)
++ELSE()
++  ADD_SUBDIRECTORY(libmysql)
+   ADD_SUBDIRECTORY(sql)
+   OPTION (WITH_EMBEDDED_SERVER "Compile MySQL with embedded server" OFF)
+   IF(WITH_EMBEDDED_SERVER) 
