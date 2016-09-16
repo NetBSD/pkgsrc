@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2016/07/16 21:13:22 wiz Exp $
+$NetBSD: patch-ab,v 1.14 2016/09/16 09:42:25 wiz Exp $
 
 --- configure.orig	2016-07-07 18:34:10.000000000 +0000
 +++ configure
@@ -20,7 +20,16 @@ $NetBSD: patch-ab,v 1.13 2016/07/16 21:13:22 wiz Exp $
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: final adjustments for an Intel or AMD GNU/BSD host" >&5
  $as_echo "final adjustments for an Intel or AMD GNU/BSD host" >&6; }
  
-@@ -20141,13 +20141,13 @@ $as_echo "#define GUILE_HEADER_18 1" >>c
+@@ -18545,8 +18545,6 @@ fi
+ 
+   fi
+ ;;
+-      -Wl,*) { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Flag $LC_SCATTER_FLAGS_flag dropped for lib GUILE_TMP" >&5
+-$as_echo "$as_me: WARNING: Flag $LC_SCATTER_FLAGS_flag dropped for lib GUILE_TMP" >&2;};;
+       -*)
+         as_CACHEVAR=`$as_echo "ax_cv_check_cxxflags__$LC_SCATTER_FLAGS_flag" | $as_tr_sh`
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler accepts $LC_SCATTER_FLAGS_flag" >&5
+@@ -20141,13 +20139,13 @@ $as_echo "#define GUILE_HEADER_18 1" >>c
          *) { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Strange guile header name lib$GUILE_LIB.h" >&5
  $as_echo "$as_me: WARNING: Strange guile header name lib$GUILE_LIB.h" >&2;} ;;
        esac
