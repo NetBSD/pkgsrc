@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2016/08/24 23:52:43 markd Exp $
+# $NetBSD: Makefile,v 1.333 2016/09/16 15:20:31 prlw1 Exp $
 
 COMMENT=	Mathematics
 
@@ -248,6 +248,7 @@ SUBDIR+=	py-fpconst
 SUBDIR+=	py-gmpy
 SUBDIR+=	py-infinity
 SUBDIR+=	py-intervals
+SUBDIR+=	py-lmfit
 SUBDIR+=	py-mpmath
 SUBDIR+=	py-munkres
 SUBDIR+=	py-networkx
