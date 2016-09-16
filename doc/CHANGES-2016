@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3833 2016/09/16 06:50:52 adam Exp $
+$NetBSD: CHANGES-2016,v 1.3834 2016/09/16 10:31:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5409,3 +5409,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/wdiff to 1.2.2nb1 [wiz 2016-09-16]
 	Added databases/mysql57-client version 5.7.15 [adam 2016-09-16]
 	Added databases/mysql57-server version 5.7.15 [adam 2016-09-16]
+	Removed cad/gwave [wiz 2016-09-16]
