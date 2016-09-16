@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3830 2016/09/15 17:08:27 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.3831 2016/09/16 06:26:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5405,3 +5405,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/libmatheval to 1.1.11 [wiz 2016-09-15]
 	Updated audio/snd to 16.8 [wiz 2016-09-15]
 	Updated pkgtools/cwrappers to 20160908 [joerg 2016-09-15]
+	Updated lang/guile20 to 2.0.12nb2 [wiz 2016-09-16]
