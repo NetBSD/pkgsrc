@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/07 23:59:50 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/09/16 21:59:08 prlw1 Exp $
 include/libwnck-3.0/libwnck/application.h
 include/libwnck-3.0/libwnck/class-group.h
 include/libwnck-3.0/libwnck/libwnck.h
@@ -29,7 +29,6 @@ share/gtk-doc/html/libwnck-3.0/core.html
 share/gtk-doc/html/libwnck-3.0/getting-started.html
 share/gtk-doc/html/libwnck-3.0/home.png
 share/gtk-doc/html/libwnck-3.0/index.html
-share/gtk-doc/html/libwnck-3.0/index.sgml
 share/gtk-doc/html/libwnck-3.0/indexes.html
 share/gtk-doc/html/libwnck-3.0/ix01.html
 share/gtk-doc/html/libwnck-3.0/ix02.html
