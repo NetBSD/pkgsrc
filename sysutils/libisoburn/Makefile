@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/11/25 12:53:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/16 14:58:26 jperkin Exp $
 
 DISTNAME=	libisoburn-1.3.8
 #PKGNAME=	${DISTNAME:S/.pl/pl/}
@@ -28,6 +28,7 @@ SUBST_MESSAGE.fix-wish=	Fixing tcl wish
 SUBST_FILES.fix-wish+=	frontend/xorriso-tcltk
 SUBST_SED.fix-wish+=	-e 's,/usr/bin/wish,${LOCALBASE}/bin/wish,'
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../sysutils/libisofs/buildlink3.mk"
 .include "../../sysutils/libburn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
