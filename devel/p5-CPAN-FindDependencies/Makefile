@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/09/15 13:03:11 mef Exp $
+# $NetBSD: Makefile,v 1.16 2016/09/16 15:20:42 mef Exp $
 
 DISTNAME=	CPAN-FindDependencies-2.45
 PKGNAME=	p5-${DISTNAME}
@@ -22,6 +22,7 @@ BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 # for Types::Standard
 BUILD_DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
 BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CPAN/FindDependencies/.packlist
