@@ -1,0 +1,21 @@
+$NetBSD: patch-include_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+
+Only mysql-client installs includes.
+
+--- include/CMakeLists.txt.orig	2016-03-28 18:06:12.000000000 +0000
++++ include/CMakeLists.txt
+@@ -69,6 +69,7 @@ SET(HEADERS
+   ${HEADERS_GEN_CONFIGURE}
+ )
+ 
++IF(WITHOUT_SERVER)
+ INSTALL(FILES
+   ../libbinlogevents/export/binary_log_types.h
+   DESTINATION ${INSTALL_INCLUDEDIR}
+@@ -78,5 +79,5 @@ INSTALL(DIRECTORY mysql/ DESTINATION ${I
+  PATTERN "*.h"
+  PATTERN "psi_abi*" EXCLUDE
+ )
+-
++ENDIF()
+ 
