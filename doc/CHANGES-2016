@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3837 2016/09/16 15:22:56 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.3838 2016/09/16 16:11:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5412,3 +5412,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed cad/gwave [wiz 2016-09-16]
 	Updated x11/xf86-video-amdgpu to 1.1.2 [wiz 2016-09-16]
 	Added math/py-lmfit version 0.9.5 [prlw1 2016-09-16]
+	Updated lang/php56 to 5.6.26 [taca 2016-09-16]
+	Updated lang/php70 to 7.0.11 [taca 2016-09-16]
