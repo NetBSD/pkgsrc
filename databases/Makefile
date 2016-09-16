@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.516 2016/08/04 16:05:01 jdolecek Exp $
+# $NetBSD: Makefile,v 1.517 2016/09/16 06:49:49 adam Exp $
 
 COMMENT=	Databases
 
@@ -99,6 +99,8 @@ SUBDIR+=	mysql55-client
 SUBDIR+=	mysql55-server
 SUBDIR+=	mysql56-client
 SUBDIR+=	mysql56-server
+SUBDIR+=	mysql57-client
+SUBDIR+=	mysql57-server
 SUBDIR+=	mysqlcc
 SUBDIR+=	mysqltuner
 SUBDIR+=	mytop
