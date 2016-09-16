@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/09/14 23:59:04 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/16 06:26:13 wiz Exp $
 
 DISTNAME=	guile-2.0.12
 PKGNAME=	${DISTNAME:S/guile/guile20/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
