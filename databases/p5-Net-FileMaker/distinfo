@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/17 02:34:01 mef Exp $
+
+SHA1 (Net-FileMaker-0.064.tar.gz) = 00ab7ec216cacdba4943e058581f33961d82626b
+RMD160 (Net-FileMaker-0.064.tar.gz) = f38ef88faf52c37a2fbc5e0308bf0df76e46d107
+SHA512 (Net-FileMaker-0.064.tar.gz) = 531b13033d45c64d0910e5c1f790a9da2b711cd8c0b9b16501aa05380a0450f04b1879dd916f6833736cd8db477bed28fa97cc3f37e1da61519b81ec7f4d13f5
+Size (Net-FileMaker-0.064.tar.gz) = 41847 bytes
