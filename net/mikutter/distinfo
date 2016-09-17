@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.111 2016/08/05 16:19:46 tsutsui Exp $
+$NetBSD: distinfo,v 1.112 2016/09/17 19:31:41 tsutsui Exp $
 
-SHA1 (mikutter.3.4.2.tar.gz) = ec85d50a4fbc0c56729b1b36fb0a02b8c8dc0758
-RMD160 (mikutter.3.4.2.tar.gz) = 261cb0d38f0dcdc201f12f158d62ef5ee6612a07
-SHA512 (mikutter.3.4.2.tar.gz) = bbdde61324825e9c7d4ffa6b6dc004f74c512391c1b1a538d7c72672f6aa68c3b68c579d1a2a3db13d25b909dc497195fcd7f0d66c88c8d1b2856508e965418d
-Size (mikutter.3.4.2.tar.gz) = 3684733 bytes
+SHA1 (mikutter.3.4.3.tar.gz) = 61c0d2eb0205733c3dab5852e9f0bcfe1a229c08
+RMD160 (mikutter.3.4.3.tar.gz) = cf7db1af98da8a328a2081e80a311e876553b00f
+SHA512 (mikutter.3.4.3.tar.gz) = 6f31b8209dff42f864ea2664a5ff2e1250d0763772f6e09c0c14bd84e582493b79e85d50d07b779d9777471a810acca38bca156c4fb3b4007f7617a027667b2b
+Size (mikutter.3.4.3.tar.gz) = 3685416 bytes
 SHA1 (patch-core_plugin_libnotify_rnotify.rb) = 0bb5630f4411d11ad188c722fb1d14e2d6748d17
 SHA1 (patch-core_plugin_photo__support_Gemfile) = 754b96024904e2e2f55c83e88fd3c763eecf723c
 SHA1 (patch-core_plugin_photo__support_photo__support.rb) = d119209d4de835e6d47d85c8ca5209d1f199bd9e
