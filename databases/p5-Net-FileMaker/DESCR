@@ -1,0 +1,3 @@
+Net::FileMaker provides an interface to FileMaker's various HTTP-based
+interfaces, at present only the XML API is supported, but further support
+to include XSLT and other means is planned.
