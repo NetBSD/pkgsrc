@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:23:03 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/09/17 04:05:31 mef Exp $
 #
 
-DISTNAME=	IO-Interactive-0.0.6
-DISTNAME=	IO-Interactive-1.021
+DISTNAME=	IO-Interactive-1.022
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
