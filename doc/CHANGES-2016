@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3845 2016/09/17 02:42:08 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3846 2016/09/17 03:05:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5423,3 +5423,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/p5-Net-FileMaker version 0.064 [mef 2016-09-17]
 	Added time/p5-DateTime-Incomplete version 0.08 [mef 2016-09-17]
 	Added time/p5-DateTime-Format-CLDR version 1.17 [mef 2016-09-17]
+	Updated www/p5-CGI to 4.33 [mef 2016-09-17]
+	Updated www/p5-App-Nopaste to 1.007 [mef 2016-09-17]
