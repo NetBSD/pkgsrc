@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3861 2016/09/17 14:14:07 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3862 2016/09/17 19:09:49 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5442,3 +5442,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ply to 3.9 [mef 2016-09-17]
 	Updated devel/p5-Git-Wrapper to 0.046 [mef 2016-09-17]
 	Updated devel/p5-MetaCPAN-Client to 1.025000 [mef 2016-09-17]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.635 [tsutsui 2016-09-17]
