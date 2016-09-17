@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3860 2016/09/17 13:55:56 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3861 2016/09/17 14:14:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5441,3 +5441,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-AnyEvent to 7.13 [mef 2016-09-17]
 	Updated devel/ply to 3.9 [mef 2016-09-17]
 	Updated devel/p5-Git-Wrapper to 0.046 [mef 2016-09-17]
+	Updated devel/p5-MetaCPAN-Client to 1.025000 [mef 2016-09-17]
