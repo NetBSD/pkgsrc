@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3856 2016/09/17 11:45:26 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3857 2016/09/17 11:51:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5437,3 +5437,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-Format to 0.60 [mef 2016-09-17]
 	Updated textproc/p5-Text-PDF to 0.31 [mef 2016-09-17]
 	Updated textproc/cmark to 0.26.1 [mef 2016-09-17]
+	Updated textproc/dblatex to 0.3.8 [mef 2016-09-17]
