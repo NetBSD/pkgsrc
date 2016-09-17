@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2014/05/17 16:10:43 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/09/17 13:51:19 mef Exp $
 
-DISTNAME=	ply-3.4
-PKGREVISION=	1
+DISTNAME=	ply-3.9
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.dabeaz.com/ply/
 
@@ -23,7 +22,7 @@ do-test:
 .endfor
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/ply.html ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/example && pax -rwppm * ${DESTDIR}${EGDIR}
 
