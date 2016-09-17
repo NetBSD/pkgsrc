@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3842 2016/09/16 21:59:30 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.3843 2016/09/17 01:58:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5418,3 +5418,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20160915 [leot 2016-09-16]
 	Updated x11/gtkmm to 2.24.5 [prlw1 2016-09-16]
 	Updated devel/libwnck3 to 3.20.1 [prlw1 2016-09-16]
+	Updated devel/p5-Log-Any to 1.04.2 [mef 2016-09-17]
