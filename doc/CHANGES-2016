@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3847 2016/09/17 03:14:22 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3848 2016/09/17 04:02:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5426,3 +5426,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-CGI to 4.33 [mef 2016-09-17]
 	Updated www/p5-App-Nopaste to 1.007 [mef 2016-09-17]
 	Updated devel/afl to 2.34b [mef 2016-09-17]
+	Updated devel/p5-Class-C3 to 0.32 [mef 2016-09-17]
+	Updated devel/p5-Check-ISA to 0.09 [mef 2016-09-17]
+	Updated devel/p5-File-Find-Object to 0.3.0 [mef 2016-09-17]
