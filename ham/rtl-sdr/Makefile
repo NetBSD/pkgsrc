@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/04/07 12:10:55 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/17 22:13:26 wiedi Exp $
 
 DISTNAME=		rtl-sdr-0.5.3
 PKGREVISION=		2
@@ -21,6 +21,8 @@ BUILD_DIRS=${CONFIGURE_DIRS}
 CMAKE_ARG_PATH=..
 
 PKGCONFIG_OVERRIDE+=     librtlsdr.pc.in
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/build
