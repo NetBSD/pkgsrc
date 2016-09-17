@@ -1,0 +1,7 @@
+The program contains a collection of tools for analyzing Perl
+code. Analyzing a static program runs headlong into the halting problem --
+no automatic process can find all infinite loops, or fully model dynamic
+data generated within an arbitrary program. If you need to solve that kind
+of problem, a runtime debugger, human insight, and good programming
+practices go a long way. On the other hand, if you're reading a new Perl
+code for the first time, you've come to the right place.
