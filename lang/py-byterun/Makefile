@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/24 19:11:27 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/17 23:46:37 wiz Exp $
 
 DISTNAME=	byterun
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-20160218
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}-${GITHUB_TAG}
 
 DEPENDS+=       ${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-.include "../../lang/python/distutils.mk"
+EGG_NAME=	Byterun-1.0
 
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
