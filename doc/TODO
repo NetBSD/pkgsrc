@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16445 2016/09/17 11:10:32 mef Exp $
+$NetBSD: TODO,v 1.16446 2016/09/17 13:51:32 mef Exp $
 
 Suggested new packages
 ======================
@@ -1300,7 +1300,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o plan-1.10.1
 	o plasma-5.7
 	o ploticus-examples-230
-	o ply-3.8
 	o pngcrush-1.8.0
 	o poco-1.7.5
 	o podcastdl-0.3.3

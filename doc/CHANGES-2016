@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3858 2016/09/17 13:39:50 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3859 2016/09/17 13:51:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5439,3 +5439,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/cmark to 0.26.1 [mef 2016-09-17]
 	Updated textproc/dblatex to 0.3.8 [mef 2016-09-17]
 	Updated devel/p5-AnyEvent to 7.13 [mef 2016-09-17]
+	Updated devel/ply to 3.9 [mef 2016-09-17]
