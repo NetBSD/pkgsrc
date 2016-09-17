@@ -1,4 +1,4 @@
-$NetBSD: patch-imakemdep.h,v 1.5 2013/07/23 06:48:21 wiz Exp $
+$NetBSD: patch-imakemdep.h,v 1.6 2016/09/17 17:49:36 richard Exp $
 
  - Configure for pkgsrc: never set FIXUP_CPP_WHITESPACE as pkgsrc now
 always uses a whitespace-preserving cpp and fixing it twice causes
@@ -12,7 +12,9 @@ via RAWCPP defined on the command line.
  - Do not pass -m32 to cpp; it is not portable, valid, or even a
 reasonable thing to do.
 
---- imakemdep.h.orig	2013-07-23 04:53:04.000000000 +0000
+ - Add support for __aarch64__
+
+--- imakemdep.h.orig	2013-08-17 10:11:06.000000000 +0000
 +++ imakemdep.h
 @@ -229,7 +229,7 @@ in this Software without prior written a
   *     all colons).  One way to tell if you need this is to see whether or not
@@ -123,3 +125,13 @@ reasonable thing to do.
  #    endif
  #    ifdef __i486__
  	"-D__i486__",
+@@ -399,6 +324,9 @@ const char *cpp_argv[ARGUMENTS] = {
+ #    ifdef __arm__
+ 	"-D__arm__",
+ #    endif
++#    ifdef __aarch64__
++	"-D__aarch64__",
++#    endif
+ #    ifdef __s390x__
+        "-D__s390x__",
+ #    endif
