@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/24 19:11:27 agc Exp $
-${PYSITELIB}/Byterun-1.0-py2.7.egg-info
+@comment $NetBSD: PLIST,v 1.2 2016/09/17 22:34:27 wiedi Exp $
+${PYSITELIB}/Byterun-1.0-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/byterun/__init__.py
 ${PYSITELIB}/byterun/__init__.pyc
 ${PYSITELIB}/byterun/__init__.pyo
