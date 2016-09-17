@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/08/07 09:34:11 wen Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/17 14:13:57 mef Exp $
 
-DISTNAME=	MetaCPAN-Client-1.022003
+DISTNAME=	MetaCPAN-Client-1.025000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MI/MICKEY/
@@ -25,6 +25,7 @@ BUILD_DEPENDS+=	p5-LWP-Protocol-https>=0:../../www/p5-LWP-Protocol-https
 
 # for make test
 BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+BUILD_DEPENDS+=	p5-Ref-Util-[0-9]*:../../devel/p5-Ref-Util
 
 PERL5_PACKLIST=		auto/MetaCPAN/Client/.packlist
 USE_LANGUAGES=		# none
