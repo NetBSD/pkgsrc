@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3846 2016/09/17 03:05:54 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3847 2016/09/17 03:14:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5425,3 +5425,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added time/p5-DateTime-Format-CLDR version 1.17 [mef 2016-09-17]
 	Updated www/p5-CGI to 4.33 [mef 2016-09-17]
 	Updated www/p5-App-Nopaste to 1.007 [mef 2016-09-17]
+	Updated devel/afl to 2.34b [mef 2016-09-17]
