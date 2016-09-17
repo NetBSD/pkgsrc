@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3848 2016/09/17 04:02:24 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3849 2016/09/17 04:06:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5429,3 +5429,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Class-C3 to 0.32 [mef 2016-09-17]
 	Updated devel/p5-Check-ISA to 0.09 [mef 2016-09-17]
 	Updated devel/p5-File-Find-Object to 0.3.0 [mef 2016-09-17]
+	Updated devel/p5-IO-Interactive to 1.022 [mef 2016-09-17]
