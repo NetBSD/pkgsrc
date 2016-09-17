@@ -1,8 +1,10 @@
-$NetBSD: patch-nc,v 1.1 2008/11/27 03:32:19 jmcneill Exp $
+$NetBSD: patch-nc,v 1.2 2016/09/17 15:33:59 richard Exp $
 
---- tools/Makefile.am.orig	2008-11-26 21:01:00.000000000 -0500
-+++ tools/Makefile.am	2008-11-26 21:01:24.000000000 -0500
-@@ -8,8 +8,11 @@
+key event codes have migrated from linux/input.h to linux/input-event-codes .h
+so update to support generating gperf hash from either.
+--- tools/Makefile.am.orig	2009-11-09 15:33:53.000000000 +0000
++++ tools/Makefile.am
+@@ -8,8 +8,11 @@ endif
  if HALD_COMPILE_FREEBSD
  SUBDIRS += freebsd
  endif
@@ -15,3 +17,16 @@ $NetBSD: patch-nc,v 1.1 2008/11/27 03:32:19 jmcneill Exp $
  
  AM_CPPFLAGS = \
  	-DPACKAGE_LIBEXEC_DIR=\""$(libexecdir)"\" \
+@@ -80,7 +83,11 @@ if BUILD_KEYMAPS
+ 
+ if HAVE_GPERF
+ hal-setup-keymap-keys.txt: @LINUX_INPUT_H@
+-	awk '/^#define.*KEY_/ { if ($$2 != "KEY_MAX") { print substr($$2, 5) } }' < $< > $@
++	if test -f /usr/include/linux/input-event-codes.h; then \
++		awk '/^#define.*KEY_/ { if ($$2 != "KEY_MAX") { print substr($$2, 5) } }' < /usr/include/linux/input-event-codes.h > $@; \
++	else \
++		awk '/^#define.*KEY_/ { if ($$2 != "KEY_MAX") { print substr($$2, 5) } }' < $< > $@; \
++	fi
+ 
+ hal-setup-keymap-hash-name.gperf: hal-setup-keymap-keys.txt
+ 	awk 'BEGIN{ print "struct key { const char* name; unsigned short id; };"; print "%null-strings"; print "%%";} { print $$1 ", KEY_" $$1 }' < $< > $@
