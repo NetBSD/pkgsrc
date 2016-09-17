@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2310 2016/09/15 16:24:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2311 2016/09/17 06:15:40 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -106,6 +106,7 @@ SUBDIR+=	bzr-gtk
 SUBDIR+=	bzr-svn
 SUBDIR+=	bzrtools
 SUBDIR+=	c-cpp-reference
+SUBDIR+=	calltree-perl
 SUBDIR+=	capstone
 SUBDIR+=	catch
 SUBDIR+=	cbrowser
