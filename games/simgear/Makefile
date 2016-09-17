@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/08/17 00:06:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2016/09/17 23:22:59 wiedi Exp $
 
 DISTNAME=	simgear-2.8.0
 PKGREVISION=	29
@@ -17,6 +17,8 @@ USE_PKGLOCALEDIR=	yes
 USE_CMAKE=		yes
 
 CMAKE_ARGS+=		-DENABLE_LIBSVN:BOOL=OFF
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 BUILDLINK_API_DEPENDS.plib+= plib>=1.8.5
 
