@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2016/08/25 00:05:56 markd Exp $
+# $NetBSD: Makefile,v 1.157 2016/09/17 02:42:08 mef Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -66,6 +66,7 @@ SUBDIR+=	p5-DateTime-Event-ICal
 SUBDIR+=	p5-DateTime-Event-Random
 SUBDIR+=	p5-DateTime-Event-Recurrence
 SUBDIR+=	p5-DateTime-Format-Builder
+SUBDIR+=	p5-DateTime-Format-CLDR
 SUBDIR+=	p5-DateTime-Format-DateManip
 SUBDIR+=	p5-DateTime-Format-DateParse
 SUBDIR+=	p5-DateTime-Format-Epoch
@@ -81,6 +82,7 @@ SUBDIR+=	p5-DateTime-Format-Pg
 SUBDIR+=	p5-DateTime-Format-SQLite
 SUBDIR+=	p5-DateTime-Format-Strptime
 SUBDIR+=	p5-DateTime-Format-W3CDTF
+SUBDIR+=	p5-DateTime-Incomplete
 SUBDIR+=	p5-DateTime-Locale
 SUBDIR+=	p5-DateTime-Precise
 SUBDIR+=	p5-DateTime-Set
