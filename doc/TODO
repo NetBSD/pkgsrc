@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16444 2016/09/17 07:44:10 taca Exp $
+$NetBSD: TODO,v 1.16445 2016/09/17 11:10:32 mef Exp $
 
 Suggested new packages
 ======================
@@ -831,7 +831,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gxmessage-3.4.3
 	o gzip-1.8
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
-	o h2o-2.0.4 [security fix]
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
