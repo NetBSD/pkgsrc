@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:15 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/09/17 04:01:00 mef Exp $
 
-SHA1 (File-Find-Object-v0.2.13.tar.gz) = cf7d843d7f46a6f3291281cedecd32787638584a
-RMD160 (File-Find-Object-v0.2.13.tar.gz) = 3e5a8ac2b3d5c39c9c8b799aca7e1e18fd7e5d8b
-SHA512 (File-Find-Object-v0.2.13.tar.gz) = 4d3dd12d0e80ac0873182667efabeafd411204332374f81a339bf1b7dd82258567745aaddf026207da449cc99248679d8ff4e80951a2096327afdc9a760b6cfd
-Size (File-Find-Object-v0.2.13.tar.gz) = 29197 bytes
+SHA1 (File-Find-Object-0.3.0.tar.gz) = 700455f0a7be9f96357cac6c9705ada507ffcf08
+RMD160 (File-Find-Object-0.3.0.tar.gz) = 1cb39391e710243f64ab0521000cd6db595879fc
+SHA512 (File-Find-Object-0.3.0.tar.gz) = 1687681ddaca5e1c0c2a25a5558cacd120b1320ad87eec630e2ebcfa9a867039af6e68bf7e01f5ff83357f98bb78cda8f544a7e0a80f40792f4244f5dbd8d081
+Size (File-Find-Object-0.3.0.tar.gz) = 26850 bytes
