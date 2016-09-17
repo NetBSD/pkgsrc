@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3850 2016/09/17 06:15:40 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3851 2016/09/17 08:00:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5431,3 +5431,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-File-Find-Object to 0.3.0 [mef 2016-09-17]
 	Updated devel/p5-IO-Interactive to 1.022 [mef 2016-09-17]
 	Added devel/calltree-perl version 0.1 [mef 2016-09-17]
+	Updated lang/php71 to 7.1.0rc2 [taca 2016-09-17]
