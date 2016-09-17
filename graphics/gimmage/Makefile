@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/08/03 10:22:51 adam Exp $
+# $NetBSD: Makefile,v 1.32 2016/09/17 21:43:51 wiedi Exp $
 #
 
 DISTNAME=	gimmage-0.2.3
@@ -23,6 +23,7 @@ post-install:
 
 .include "../../graphics/cairomm/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/file/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 
