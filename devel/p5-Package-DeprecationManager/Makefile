@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/06/09 12:57:17 mef Exp $
+# $NetBSD: Makefile,v 1.20 2016/09/17 02:06:07 mef Exp $
 
-DISTNAME=	Package-DeprecationManager-0.16
+DISTNAME=	Package-DeprecationManager-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Package/}
 
