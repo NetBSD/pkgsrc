@@ -1,0 +1,6 @@
+This module provides a parser (and also a formater) for datetime strings
+using patterns as defined by the Unicode CLDR Project (Common Locale Data
+Repository). http://unicode.org/cldr/.
+
+CLDR format is supported by DateTime and DateTime::Locale starting with
+version 0.40.
