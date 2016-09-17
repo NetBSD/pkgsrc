@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/25 21:12:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/17 21:52:30 wiedi Exp $
 
 DISTNAME=	OpenEXR-1.2.0
 PKGNAME=	${PYPKGPREFIX}-openexr-1.2.0
@@ -21,6 +21,7 @@ SUBST_SED.fix-path+=    -e 's,/usr/local/lib,${BUILDLINK_PREFIX.openexr}/lib,'
 
 PYTHON_VERSIONS_ACCEPTED=		27
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
