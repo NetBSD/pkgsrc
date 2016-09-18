@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2016/07/09 06:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2016/09/18 17:02:12 wiedi Exp $
 
 DISTNAME=	rpm-4.12.0.1
 PKGREVISION=	4
@@ -79,6 +79,7 @@ SUBST_SED.mkd+=		-e 's,${TOOLS_CMD.mkdir},${TOOLS_PATH.mkdir},'
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/file/buildlink3.mk" # for libmagic.
 
 .include "../../mk/bsd.pkg.mk"
