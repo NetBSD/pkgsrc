@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/09/18 16:11:13 maya Exp $
+
+In NetBSD >= 8.0, it's not possible to map the NULL page for security
+reasons. Many Windows programs will crash from this limitation. You
+can disable it with:
+
+  # sysctl -w vm.user_va0_disable=0
+
+===========================================================================
