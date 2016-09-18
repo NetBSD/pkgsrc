@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/27 09:17:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/09/18 23:02:48 gdt Exp $
 bin/bup
 lib/bup/bup/__init__.py
 lib/bup/bup/_helpers.so
-lib/bup/bup/_version.py
+lib/bup/bup/_release.py
 lib/bup/bup/bloom.py
 lib/bup/bup/client.py
 lib/bup/bup/csetup.py
@@ -19,6 +19,7 @@ lib/bup/bup/options.py
 lib/bup/bup/path.py
 lib/bup/bup/shquote.py
 lib/bup/bup/ssh.py
+lib/bup/bup/version.py
 lib/bup/bup/vfs.py
 lib/bup/bup/vint.py
 lib/bup/bup/xstat.py
@@ -30,6 +31,7 @@ lib/bup/cmd/bup-drecurse
 lib/bup/cmd/bup-fsck
 lib/bup/cmd/bup-ftp
 lib/bup/cmd/bup-fuse
+lib/bup/cmd/bup-gc
 lib/bup/cmd/bup-help
 lib/bup/cmd/bup-import-duplicity
 lib/bup/cmd/bup-import-rdiff-backup
@@ -49,6 +51,7 @@ lib/bup/cmd/bup-on
 lib/bup/cmd/bup-on--server
 lib/bup/cmd/bup-random
 lib/bup/cmd/bup-restore
+lib/bup/cmd/bup-rm
 lib/bup/cmd/bup-save
 lib/bup/cmd/bup-server
 lib/bup/cmd/bup-split
@@ -67,6 +70,7 @@ man/man1/bup-drecurse.1
 man/man1/bup-fsck.1
 man/man1/bup-ftp.1
 man/man1/bup-fuse.1
+man/man1/bup-gc.1
 man/man1/bup-help.1
 man/man1/bup-import-duplicity.1
 man/man1/bup-import-rdiff-backup.1
@@ -84,6 +88,7 @@ man/man1/bup-newliner.1
 man/man1/bup-on.1
 man/man1/bup-random.1
 man/man1/bup-restore.1
+man/man1/bup-rm.1
 man/man1/bup-save.1
 man/man1/bup-server.1
 man/man1/bup-split.1
