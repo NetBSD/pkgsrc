@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3865 2016/09/17 20:30:03 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3866 2016/09/18 00:00:48 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5445,3 +5445,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.635 [tsutsui 2016-09-17]
 	Updated net/mikutter to 3.4.3 [tsutsui 2016-09-17]
 	Updated emulators/wine-devel to 1.9.18nb1 [maya 2016-09-17]
+	Updated pkgtools/pkglint to 5.4.9 [rillig 2016-09-18]
