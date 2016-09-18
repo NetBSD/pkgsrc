@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2016/08/03 10:22:49 adam Exp $
+# $NetBSD: Makefile,v 1.88 2016/09/18 05:48:59 dholland Exp $
 
 VERSION=		4.0.1
 PKGNAME=		camlimages-${VERSION}
@@ -25,7 +25,7 @@ SUBST_STAGE.omf=	post-patch
 SUBST_FILES.omf=	OMakefile
 SUBST_SED.omf=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.omf+=		-e 's,@X11BASE@,${X11BASE},g'
-SUBST_SED.omf+=		-e 's%@LDFLAGS@%${LDFLAGS}%g'
+SUBST_SED.omf+=		-e s%@LDFLAGS@%${LDFLAGS:Q}%g
 SUBST_SED.omf+=		-e 's,@OCAMLFIND_DESTDIR@,${DESTDIR}${PREFIX}/lib/ocaml/site-lib,g'
 SUBST_SED.omf+=		-e 's,@OCAMLFIND_LDCONF@,/dev/null,g'
 SUBST_MESSAGE.omf=	Fixing vars in OMakefile
