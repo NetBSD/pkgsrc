@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3898 2016/09/18 22:10:53 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3899 2016/09/18 22:15:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-IO-Socket-SSL to 2.038 [wiz 2016-09-18]
 	Updated devel/py-cffi to 1.8.3 [wiz 2016-09-18]
 	Updated devel/py-setuptools to 27.2.0 [wiz 2016-09-18]
+	Updated devel/py-tortoisehg to 3.9.1 [wiz 2016-09-18]
