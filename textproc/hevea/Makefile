@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/05/06 20:45:43 tonio Exp $
+# $NetBSD: Makefile,v 1.22 2016/09/18 07:15:08 dholland Exp $
 
 DISTNAME=	hevea-2.23
 CATEGORIES=	textproc
@@ -11,14 +11,12 @@ LICENSE=	qpl-v1.0
 
 MAKE_ENV+=	DESTDIR=${DESTDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
-BUILD_DEPENDS+=	ocaml>=3.12:../../lang/ocaml
+.include "../../mk/ocaml.mk"
+.if !empty(OCAML_USE_OPT_COMPILER:M[Yy][Ee][Ss])
 MAKE_ENV+=	TARGET=opt
 .else
-DEPENDS+=	ocaml>=3.12:../../lang/ocaml
 MAKE_ENV+=	TARGET=byte
 .endif
 
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
