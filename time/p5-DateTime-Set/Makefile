@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/07/31 12:19:30 wen Exp $
+# $NetBSD: Makefile,v 1.23 2016/09/18 14:33:33 mef Exp $
 
 DISTNAME=	DateTime-Set-0.3800
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DateTime>=0.12:../../time/p5-DateTime
 DEPENDS+=	p5-Set-Infinite>=0.59:../../math/p5-Set-Infinite
+
+# for make test
+BUILD_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 
 PERL5_PACKLIST=	auto/DateTime/Set/.packlist
 
