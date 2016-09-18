@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.15 2016/09/14 19:36:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.16 2016/09/18 16:19:05 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -118,4 +118,10 @@ security/libgcrypt: security fix, build fix
 Pullup ticket #5101 - requested by maya
 databases/mysql55-client: security fix
 databases/mysql56-client: security fix
+
+Pullup ticket #5084 - requested by bsiegert
+fonts/fontconfig: security update
+
+Pullup ticket #5102 - requested by bsiegert
+devel/pcre2: security update
 
