@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3896 2016/09/18 22:03:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3897 2016/09/18 22:06:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5485,3 +5485,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/calibre to 2.68.0 [wiz 2016-09-18]
 	Updated print/cups-filters to 1.11.3 [wiz 2016-09-18]
 	Updated security/p5-IO-Socket-SSL to 2.038 [wiz 2016-09-18]
+	Updated devel/py-cffi to 1.8.3 [wiz 2016-09-18]
