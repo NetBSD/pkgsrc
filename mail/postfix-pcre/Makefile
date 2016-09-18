@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/10/05 00:14:13 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/18 17:10:28 taca Exp $
 #
 
-PKGREVISION=		1
 COMMENT=		Postfix SMTP server PCRE map module
 
 POSTFIX_LIB=		pcre
