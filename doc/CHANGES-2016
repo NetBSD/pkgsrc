@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3907 2016/09/18 23:42:13 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3908 2016/09/18 23:47:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5498,3 +5498,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 2.03 [mef 2016-09-18]
 	Updated time/p5-DateTime-Locale to 1.07 [mef 2016-09-18]
 	Updated time/p5-DateTime to 1.3900 [mef 2016-09-18]
+	Updated time/ruby-hitimes to 1.2.4 [mef 2016-09-18]
