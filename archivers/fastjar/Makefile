@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2016/03/05 15:08:30 bsiegert Exp $
-#
+# $NetBSD: Makefile,v 1.21 2016/09/18 11:17:41 wiz Exp $
 
 DISTNAME=	fastjar-0.98
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/fastjar/
 
