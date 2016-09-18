@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/18 14:10:50 kamil Exp $
+
+SHA1 (tinycthread-1.1.tar.gz) = 36ac0bd0e70edf3bd101996bec3f97e3317a3291
+RMD160 (tinycthread-1.1.tar.gz) = f9e16333975d2492df09a207f238bbe4fa202232
+SHA512 (tinycthread-1.1.tar.gz) = 0cb29c66484acd8a38ce766c89411a79ec67cfc1c48384570ac29fb735aef82fa0c63aa219cc82e129200d36a3cd6955e5b6f7b2c4dad6493c1a3e14abf418ee
+Size (tinycthread-1.1.tar.gz) = 29380 bytes
