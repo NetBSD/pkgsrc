@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.19 2013/10/09 09:52:30 jperkin Exp $
+# $NetBSD: modules.mk,v 1.20 2016/09/18 13:48:34 ryoon Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -228,7 +228,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 
 _EMACS_VERSIONS_ALL= \
 	emacs20 emacs21 emacs21nox emacs22 emacs22nox emacs23 emacs23nox \
-	emacs24 emacs24nox emacs25 \
+	emacs24 emacs24nox emacs25 emacs25nox \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -241,7 +241,8 @@ _EMACS_PKGDIR_MAP= \
 	emacs23nox@../../editors/emacs23-nox11 \
 	emacs24@../../editors/emacs24 \
 	emacs24nox@../../editors/emacs24-nox11 \
-	emacs25@../../editors/emacs-snapshot \
+	emacs25@../../editors/emacs25 \
+	emacs25nox@../../editors/emacs25-nox11 \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
@@ -352,7 +353,7 @@ PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
 
 .if defined(EMACS_BUILDLINK)
 _EMACS_DIR=	${BUILDLINK_DIR}/share/emacs
-.  if empty(EMACS_TYPE:Memacs25)
+.  if empty(EMACS_TYPE:Memacs26)
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}/lisp:${_EMACS_DIR}/site-lisp
 .  else
 ALL_ENV+=	EMACSLOADPATH=${_EMACS_DIR}/${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}/lisp:${_EMACS_DIR}/site-lisp
