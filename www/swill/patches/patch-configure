@@ -1,0 +1,37 @@
+$NetBSD: patch-configure,v 1.1 2016/09/18 07:46:09 dholland Exp $
+
+Handle --without-mpi instead of using the resulting "no" as a path and
+also in that case make it not probe for mpi headers.
+
+--- configure.orig	2016-01-16 13:37:22.000000000 +0000
++++ configure
+@@ -1322,6 +1322,10 @@ else
+   MPIINCLUDE=
+ fi
+ 
++if [ "x$MPIPACKAGE" = xno ]; then
++  unset MPIPACKAGE
++fi
++
+ #AC_ARG_WITH(mpilib,[  --with-mpilib=PATH      Set location of MPI library directory],[MPILIB="-L$withval"], [MPILIB=])
+ 
+ echo $ac_n "checking for MPI configuration""... $ac_c" 1>&6
+@@ -1365,6 +1369,9 @@ fi
+ #  fi
+ 
+ echo $ac_n "checking for MPI header files""... $ac_c" 1>&6
++if [ "x${with_mpi}" = xno ]; then
++  echo "disabled" 1>&6
++else
+ echo "configure:1369: checking for MPI header files" >&5
+ if test -z "$MPIINCLUDE"; then
+ cat > conftest.$ac_ext <<EOF
+@@ -1404,7 +1411,7 @@ fi
+ 
+ #AC_SUBST(MPILIB)
+ 
+-
++fi # "x${with_mpi}" != xno
+ 
+ 
+ ########################################################################
