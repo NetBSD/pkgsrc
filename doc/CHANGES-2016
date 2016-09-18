@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3883 2016/09/18 14:22:29 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3884 2016/09/18 15:03:09 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5464,3 +5464,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/rebar to 2.6.4 [fhajny 2016-09-18]
 	Added editors/emacs25-nox11 version 25.1 [ryoon 2016-09-18]
 	Added devel/tinycthread version 1.1 [kamil 2016-09-18]
+	Updated emulators/wine-devel to 1.9.18nb2 [maya 2016-09-18]
