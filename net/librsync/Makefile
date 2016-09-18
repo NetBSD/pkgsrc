@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/01 16:16:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/18 22:28:34 wiedi Exp $
 
 DISTNAME=	librsync-2.0.0
 CATEGORIES=	net
@@ -14,5 +14,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	perl
 USE_LANGUAGES=	c c++
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
