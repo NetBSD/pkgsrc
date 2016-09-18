@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/05/05 11:45:42 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2016/09/18 07:16:19 dholland Exp $
 #
 
 GITHUB_PROJECT=	eliom
@@ -34,6 +34,7 @@ BUILD_TARGET=	byte
 do-install:
 	cd ${WRKSRC} && opam-installer --install --prefix ${DESTDIR}${PREFIX} --libdir ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR} --docdir ${DESTDIR}${PREFIX}/share/doc eliom.install
 
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../devel/ocaml-reactiveData/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ocaml-reactiveData+=   ocaml-reactiveData>=0.2
 .include "../../devel/ocaml-optcomp/buildlink3.mk"
