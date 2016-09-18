@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/08/03 10:22:52 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/18 06:57:24 dholland Exp $
 
 DISTNAME=	gmic_1.5.9.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gmic/}
 
@@ -16,11 +16,19 @@ BUILD_DIRS=	src
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake gunzip pkg-config
 CFLAGS+=	-I${BUILDLINK_PREFIX.openexr}/include/OpenEXR
+MAKE_ENV+=	BUILDLINK_PREFIX.fftw3=${BUILDLINK_PREFIX.fftw3}
 
 post-install:
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/fr/man1 && gunzip gmic.1.gz
 	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && gunzip gmic.1.gz
 
+.include "../../devel/atk/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
@@ -28,5 +36,6 @@ post-install:
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
