@@ -1,10 +1,11 @@
-# $NetBSD: oss.builtin.mk,v 1.4 2013/11/23 09:10:14 obache Exp $
+# $NetBSD: oss.builtin.mk,v 1.5 2016/09/18 05:25:18 richard Exp $
 
 BUILTIN_PKG:=	oss
 
 BUILTIN_FIND_LIBS:=		ossaudio
 BUILTIN_FIND_HEADERS_VAR:=	H_SOUNDCARD
 BUILTIN_FIND_HEADERS.H_SOUNDCARD=	soundcard.h		\
+					linux/soundcard.h	\
 					sys/soundcard.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
