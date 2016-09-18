@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/08/03 10:23:07 adam Exp $
+# $NetBSD: Makefile,v 1.38 2016/09/18 16:47:44 wiedi Exp $
 #
 
 DISTNAME=		blccc-1.99
@@ -18,6 +18,8 @@ SHLIBTOOL_OVERRIDE=	# empty
 EGDIR=			${PREFIX}/share/examples/blccc
 
 INSTALLATION_DIRS=	${EGDIR}/movies ${EGDIR}/on-demand
+
+CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
 .include "../../devel/blib/buildlink3.mk"
 
