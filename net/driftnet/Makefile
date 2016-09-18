@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/05/31 15:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/09/18 21:57:33 wiedi Exp $
 
 DISTNAME=	driftnet-0.1.6
 PKGREVISION=	12
@@ -27,5 +27,6 @@ do-install:
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
