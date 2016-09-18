@@ -1,6 +1,6 @@
 Hitimes is a fast, high resolution timer library for recording
 performance metrics.  It uses the appropriate low method calls for each
-system to get the highest granularity time increments possible.  
+system to get the highest granularity time increments possible.
 
 It currently supports any of the following systems:
 
@@ -11,4 +11,4 @@ It currently supports any of the following systems:
 
 Using Hitimes can be faster than using a series of `Time.new` calls, and
 it will have a much higher granularity. It is definitely faster than
-using `Process.times`. 
+using `Process.times`.
