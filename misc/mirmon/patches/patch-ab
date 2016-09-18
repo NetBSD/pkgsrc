@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.3 2014/12/10 05:40:12 mef Exp $
+$NetBSD: patch-ab,v 1.4 2016/09/18 04:32:08 mef Exp $
 
 Add country code
 
---- countries.list.orig	2013-06-10 21:28:01.000000000 +0000
-+++ countries.list
+--- countries.list.orig	2016-07-23 19:45:38.000000000 +0900
++++ countries.list	2016-09-18 13:23:40.000000000 +0900
 @@ -1,3 +1,4 @@
- # based on : http://www.iso.org/iso/list-en1-semic-3.txt
 +ac - ascension island
  ad - Andorra
  ae - United Arab Emirates
+ af - Afghanistan
 @@ -40,7 +41,7 @@ ca - Canada
  cc - Cocos (Keeling) Islands
- cd - Congo
+ cd - Congo, the Democratic Republic of the
  cf - Central African Republic
 -cg - Congo
 +cg - Congo, Republic of
