@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3905 2016/09/18 23:03:09 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3906 2016/09/18 23:38:24 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5494,3 +5494,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/waf to 1.9.4 [wiz 2016-09-18]
 	Updated time/p5-DateTime to 1.3800 [wiz 2016-09-18]
 	Updated sysutils/bup to 0.28.1 [gdt 2016-09-18]
+	Added graphics/adaptagrams version 0.20160901 [kamil 2016-09-18]
