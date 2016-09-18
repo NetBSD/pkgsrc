@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/13 12:31:41 nros Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2016/09/18 16:17:55 spz Exp $
 bin/pcre2-config
 bin/pcre2grep
 bin/pcre2test
@@ -17,6 +17,7 @@ man/man1/pcre2grep.1
 man/man1/pcre2test.1
 man/man3/pcre2.3
 man/man3/pcre2_callout_enumerate.3
+man/man3/pcre2_code_copy.3
 man/man3/pcre2_code_free.3
 man/man3/pcre2_compile.3
 man/man3/pcre2_compile_context_copy.3
@@ -102,6 +103,7 @@ share/doc/pcre2/html/index.html
 share/doc/pcre2/html/pcre2-config.html
 share/doc/pcre2/html/pcre2.html
 share/doc/pcre2/html/pcre2_callout_enumerate.html
+share/doc/pcre2/html/pcre2_code_copy.html
 share/doc/pcre2/html/pcre2_code_free.html
 share/doc/pcre2/html/pcre2_compile.html
 share/doc/pcre2/html/pcre2_compile_context_copy.html
