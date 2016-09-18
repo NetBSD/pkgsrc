@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3901 2016/09/18 22:21:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3902 2016/09/18 22:21:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5490,3 +5490,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-tortoisehg to 3.9.1 [wiz 2016-09-18]
 	mk/bsd.pkg.mk: default PKGSRC_KEEP_BIN_PKGS to "yes" [agc 2016-09-18]
 	Updated net/py-twisted to 16.4.1 [wiz 2016-09-18]
+	Updated net/py-twisted-docs to 16.4.1 [wiz 2016-09-18]
