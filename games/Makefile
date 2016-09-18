@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.405 2016/09/14 16:24:26 maya Exp $
+# $NetBSD: Makefile,v 1.406 2016/09/18 16:58:26 kamil Exp $
 #
 
 COMMENT=	Games
 
 SUBDIR+=	0verkill
+SUBDIR+=	2048-cli
 SUBDIR+=	4stAttack
 SUBDIR+=	InterLOGIC
 SUBDIR+=	KoboDeluxe
