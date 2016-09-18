@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3871 2016/09/18 07:29:53 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3872 2016/09/18 10:37:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5451,3 +5451,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/p5-Locale-Codes to 3.40 [mef 2016-09-18]
 	Added devel/p5-Params-ValidationCompiler version 0.13 [mef 2016-09-18]
 	Added devel/p5-Specio version 0.25 [mef 2016-09-18]
+	Updated finance/gnucash to 2.6.14 [wiz 2016-09-18]
