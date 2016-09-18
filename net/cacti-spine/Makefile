@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/02 16:00:02 hauke Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/18 21:48:46 wiedi Exp $
 #
 
 DISTNAME=	cacti-spine-0.8.8h
@@ -32,6 +32,8 @@ SUBST_FILES.paths=	${WRKSRC}/spine.h
 SUBST_SED.paths=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR:Q}|g'
 
 INSTALL_MAKE_FLAGS+=	configdir=${EGDIR}
+
+LDFLAGS.SunOS+=		-lm
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/${DOCDIR}
