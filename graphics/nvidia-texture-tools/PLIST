@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/18 17:08:20 kamil Exp $
+bin/nvassemble
+bin/nvcompress
+bin/nvddsinfo
+bin/nvdecompress
+bin/nvimgdiff
+bin/nvzoom
+include/nvtt/nvtt.h
+lib/libnvcore.so
+lib/libnvimage.so
+lib/libnvmath.so
+lib/libnvtt.so
