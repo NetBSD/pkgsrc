@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2016/06/30 17:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2016/09/18 14:59:25 mef Exp $
 
-DISTNAME=	DateTime-Locale-1.05
+DISTNAME=	DateTime-Locale-1.06
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
@@ -11,8 +11,13 @@ COMMENT=	Localization data for p5-DateTime
 LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Dist-CheckConflicts-[0-9]*:../../devel/p5-Dist-CheckConflicts
-DEPENDS+=	p5-Params-Validate>=0.91:../../devel/p5-Params-Validate
+DEPENDS+=	p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
 DEPENDS+=	p5-Scalar-List-Utils>=1.45:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+
+# for make test
+BUILD_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
