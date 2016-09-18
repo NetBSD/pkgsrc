@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3886 2016/09/18 16:50:18 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3887 2016/09/18 16:59:41 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5468,3 +5468,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 2.02 [mef 2016-09-18]
 	Updated time/p5-DateTime-Locale to 1.06 [mef 2016-09-18]
 	Added devel/linenoise version 1.0 [kamil 2016-09-18]
+	Added games/2048-cli version 0.9.1 [kamil 2016-09-18]
