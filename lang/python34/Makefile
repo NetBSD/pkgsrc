@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2016/05/13 16:35:03 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/09/18 12:36:41 kamil Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python34-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -121,6 +122,26 @@ SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
 SUBST_STAGE.findlib=	pre-configure
 SUBST_FILES.findlib=	Lib/distutils/unixccompiler.py
 SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
+
+# XXX: It might be needed to add manually more paths like ${PREFIX}/qt5/lib
+# Testing:
+# >>> from ctypes.util import find_library
+# >>> find_library("m")
+# 'libm.so.0'
+# >>> find_library("crypto")
+# 'libcrypto.so.11'
+# >>> find_library("GL")
+# 'libGL.so.2'
+# >>> find_library("curl")
+# 'libcurl.so.4'
+
+SUBST_CLASSES+=		pfindlib
+SUBST_MESSAGE.pfindlib=	Fixing find_library() on POSIX-like (excluding Darwin) systems.
+SUBST_STAGE.pfindlib=	pre-configure
+SUBST_FILES.pfindlib=	Lib/ctypes/util.py
+SUBST_SED.pfindlib=	-e 's!\(-Wl,-t -o\)!${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib \1!'
+
+.include "options.mk"
 
 SUBST_CLASSES+=		sslbase
 SUBST_MESSAGE.sslbase=	Fixing OpenSSL base directory to find header file.
