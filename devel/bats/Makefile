@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/09/08 14:34:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/18 05:31:38 dholland Exp $
 
 DISTNAME=		bats-0.4.0
 CATEGORIES=		devel
@@ -19,7 +19,7 @@ USE_TOOLS+=		bash:run
 CHECK_INTERPRETER_SKIP=	bin/bats libexec/bats*
 
 do-install:
-	cd ${WRKSRC} && ./install.sh ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && ${SETENV} PKGMANDIR=${PKGMANDIR} ./install.sh ${DESTDIR}${PREFIX}
 
 do-test:
 	cd ${WRKSRC} && ./bin/bats ./test
