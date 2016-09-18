@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16461 2016/09/18 22:21:41 wiz Exp $
+$NetBSD: TODO,v 1.16462 2016/09/18 22:23:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1658,7 +1658,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
-	o waf-1.9.4
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o warzone2100-2.3.8
