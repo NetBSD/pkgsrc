@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/09/10 20:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/09/18 21:47:27 wiz Exp $
 
-DISTNAME=		neomutt-20160910
+DISTNAME=		neomutt-20160916
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${DISTNAME}
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ARGS+=	--enable-notmuch
 CONFIGURE_ARGS+=	--enable-pop
 
-EGDIR=			${PREFIX}/share/examples/neomutt
+EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 INSTALLATION_DIRS+=     ${DOCDIR} ${EGDIR}
