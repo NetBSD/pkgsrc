@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.749 2016/08/17 13:40:14 richard Exp $
+# $NetBSD: Makefile,v 1.750 2016/09/18 17:08:50 kamil Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -344,6 +344,7 @@ SUBDIR+=	netpbm
 SUBDIR+=	ns-cult3d
 SUBDIR+=	numix-icon-theme
 SUBDIR+=	numix-icon-theme-circle
+SUBDIR+=	nvidia-texture-tools
 SUBDIR+=	nvtv
 SUBDIR+=	ocrad
 SUBDIR+=	opencsg
