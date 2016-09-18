@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2016/08/03 10:23:14 adam Exp $
+# $NetBSD: Makefile,v 1.84 2016/09/18 18:37:53 wiedi Exp $
 
 DISTNAME=	dc_gui2-0.80
 PKGREVISION=	34
@@ -24,6 +24,8 @@ UNLIMIT_RESOURCES+=	datasize
 CPPFLAGS+=		-I${BDBBASE}/include/${BDB_TYPE}
 CPPFLAGS+=		-DNO_PRINTF_LOCALE
 BUILDLINK_TRANSFORM+=	l:db4:${BDB_TYPE}
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 post-configure:
 	${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
