@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3884 2016/09/18 15:03:09 maya Exp $
+$NetBSD: CHANGES-2016,v 1.3885 2016/09/18 15:05:53 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5465,3 +5465,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added editors/emacs25-nox11 version 25.1 [ryoon 2016-09-18]
 	Added devel/tinycthread version 1.1 [kamil 2016-09-18]
 	Updated emulators/wine-devel to 1.9.18nb2 [maya 2016-09-18]
+	Updated time/p5-DateTime-TimeZone to 2.02 [mef 2016-09-18]
+	Updated time/p5-DateTime-Locale to 1.06 [mef 2016-09-18]
