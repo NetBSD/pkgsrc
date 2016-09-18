@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/03/06 13:29:34 nros Exp $
+# $NetBSD: Makefile,v 1.17 2016/09/18 18:08:49 wiedi Exp $
 #
 
 DISTNAME=	bftpd-4.4
@@ -32,4 +32,5 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 share/examples/bftpd
 
 BUILD_DEFS+=		VARBASE
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
