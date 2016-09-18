@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3892 2016/09/18 21:49:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3893 2016/09/18 21:50:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5481,3 +5481,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/openssh to 7.3.1 [taca 2016-09-18]
 	Updated mail/neomutt to 20160916 [wiz 2016-09-18]
 	Updated fonts/FiraCode to 1.203 [wiz 2016-09-18]
+	Updated devel/autoconf-archive to 2016.09.16 [wiz 2016-09-18]
