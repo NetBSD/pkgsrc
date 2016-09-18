@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3906 2016/09/18 23:38:24 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.3907 2016/09/18 23:42:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5495,3 +5495,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime to 1.3800 [wiz 2016-09-18]
 	Updated sysutils/bup to 0.28.1 [gdt 2016-09-18]
 	Added graphics/adaptagrams version 0.20160901 [kamil 2016-09-18]
+	Updated time/p5-DateTime-TimeZone to 2.03 [mef 2016-09-18]
+	Updated time/p5-DateTime-Locale to 1.07 [mef 2016-09-18]
+	Updated time/p5-DateTime to 1.3900 [mef 2016-09-18]
