@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3875 2016/09/18 11:21:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3876 2016/09/18 12:35:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5455,3 +5455,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/gnucash-docs to 2.6.14 [wiz 2016-09-18]
 	Updated archivers/gcpio to 2.12nb1 [wiz 2016-09-18]
 	Updated archivers/fastjar to 0.98nb1 [wiz 2016-09-18]
+	Updated mail/thunderbird to 45.3.0 [ryoon 2016-09-18]
