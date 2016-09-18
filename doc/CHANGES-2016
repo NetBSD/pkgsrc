@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3894 2016/09/18 21:56:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3895 2016/09/18 22:00:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5483,3 +5483,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/FiraCode to 1.203 [wiz 2016-09-18]
 	Updated devel/autoconf-archive to 2016.09.16 [wiz 2016-09-18]
 	Updated misc/calibre to 2.68.0 [wiz 2016-09-18]
+	Updated print/cups-filters to 1.11.3 [wiz 2016-09-18]
