@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/08/31 09:10:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/09/18 22:21:26 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 COMMENT=	Framework for writing networked applications
@@ -6,9 +6,6 @@ COMMENT=	Framework for writing networked applications
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.0.1:../../devel/py-ZopeInterface
-
-# bin/cftp
-CONFLICTS+=		cftp-[0-9]*
 
 REPLACE_PYTHON+=	twisted/mail/test/pop3testserver.py
 REPLACE_PYTHON+=	twisted/trial/test/scripttest.py
