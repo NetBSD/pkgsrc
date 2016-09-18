@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2015/09/07 09:47:01 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.30 2016/09/18 17:10:28 taca Exp $
 bin/mailq
 bin/newaliases
 lib/postfix/libpostfix-dns.so
@@ -27,6 +27,7 @@ libexec/postfix/pipe
 libexec/postfix/post-install
 libexec/postfix/postfix-files
 libexec/postfix/postfix-script
+libexec/postfix/postfix-tls-script
 libexec/postfix/postfix-wrapper
 libexec/postfix/postmulti-script
 libexec/postfix/postscreen
@@ -49,6 +50,7 @@ man/man1/postalias.1
 man/man1/postcat.1
 man/man1/postconf.1
 man/man1/postdrop.1
+man/man1/postfix-tls.1
 man/man1/postfix.1
 man/man1/postkick.1
 man/man1/postlock.1
@@ -135,6 +137,7 @@ share/doc/postfix/BACKSCATTER_README
 share/doc/postfix/BASIC_CONFIGURATION_README
 share/doc/postfix/BUILTIN_FILTER_README
 share/doc/postfix/CDB_README
+share/doc/postfix/COMPATIBILITY_README
 share/doc/postfix/CONNECTION_CACHE_README
 share/doc/postfix/CONTENT_INSPECTION_README
 share/doc/postfix/DATABASE_README
