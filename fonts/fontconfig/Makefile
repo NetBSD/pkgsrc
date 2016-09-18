@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2016/06/19 20:48:55 wiz Exp $
+# $NetBSD: Makefile,v 1.95.2.1 2016/09/18 15:11:22 spz Exp $
 
-DISTNAME=	fontconfig-2.12.0
+DISTNAME=	fontconfig-2.12.1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -84,6 +84,10 @@ TEST_TARGET=	check
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
+.endif
+
+.if ${X11_TYPE} != "modular" && exists(${X11BASE}/lib/libfontconfig.so)
+LDFLAGS+=	-L../src/.libs
 .endif
 
 post-install:
