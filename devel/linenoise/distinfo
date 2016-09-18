@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/18 16:47:55 kamil Exp $
+
+SHA1 (linenoise-1.0.tar.gz) = 850cf34d1f7f1b14ae696dd4e9bd968e736e2759
+RMD160 (linenoise-1.0.tar.gz) = 6178d0eda2e803300a4e538b47635abe3bf8f2dc
+SHA512 (linenoise-1.0.tar.gz) = 9e68fade8d64d7ba8d5d681e74d0ca6c4ebd9576249bb0e885b1aa708a9af77a43ea6264307ae46fb74e52219387a2c831b570f9601e331837f35294af9883e3
+Size (linenoise-1.0.tar.gz) = 14222 bytes
