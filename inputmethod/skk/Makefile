@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2014/11/24 02:08:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2016/09/18 13:59:24 ryoon Exp $
 #
 
 DISTNAME=	ddskk-15.2
@@ -17,7 +17,8 @@ CONFLICTS=	ddskk-[0-9]*
 EMACS_MODULES+=	base leim
 EMACS_BUILDLINK=YES
 
-EMACS_VERSIONS_ACCEPTED=	emacs24 emacs24nox emacs23 emacs23nox emacs22 emacs22nox
+EMACS_VERSIONS_ACCEPTED=	emacs25 emacs25nox emacs24 emacs24nox
+EMACS_VERSIONS_ACCEPTED+=	emacs23 emacs23nox emacs22 emacs22nox
 
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV=	prefix=${DESTDIR:Q}${PREFIX:Q} \
