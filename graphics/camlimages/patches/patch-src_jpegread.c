@@ -1,6 +1,7 @@
-$NetBSD: patch-src_jpegread.c,v 1.1 2012/12/26 10:24:17 jaapb Exp $
+$NetBSD: patch-src_jpegread.c,v 1.2 2016/09/18 05:48:59 dholland Exp $
 
 Make clang happy with proper return value
+
 --- src/jpegread.c.orig	2011-06-22 18:04:32.000000000 +0000
 +++ src/jpegread.c
 @@ -417,7 +417,7 @@ value read_jpeg_scanlines( value jpegh, 
