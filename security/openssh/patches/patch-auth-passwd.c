@@ -1,11 +1,11 @@
-$NetBSD: patch-auth-passwd.c,v 1.3 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-auth-passwd.c,v 1.4 2016/09/18 17:30:11 taca Exp $
 
 Replace uid 0 with ROOTUID macro
 
---- auth-passwd.c.orig	2015-08-21 04:49:03.000000000 +0000
+--- auth-passwd.c.orig	2016-07-27 22:54:27.000000000 +0000
 +++ auth-passwd.c
-@@ -88,7 +88,7 @@ auth_password(Authctxt *authctxt, const 
- #endif
+@@ -93,7 +93,7 @@ auth_password(Authctxt *authctxt, const 
+ 		return 0;
  
  #ifndef HAVE_CYGWIN
 -	if (pw->pw_uid == 0 && options.permit_root_login != PERMIT_YES)
@@ -13,7 +13,7 @@ Replace uid 0 with ROOTUID macro
  		ok = 0;
  #endif
  	if (*password == '\0' && options.permit_empty_passwd == 0)
-@@ -123,7 +123,12 @@ auth_password(Authctxt *authctxt, const 
+@@ -128,7 +128,12 @@ auth_password(Authctxt *authctxt, const 
  			authctxt->force_pwchange = 1;
  	}
  #endif
