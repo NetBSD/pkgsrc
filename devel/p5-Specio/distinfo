@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/18 07:15:35 mef Exp $
+
+SHA1 (Specio-0.25.tar.gz) = 782389a6b73329ca90ec8065aec59dd5fceec51f
+RMD160 (Specio-0.25.tar.gz) = c62a54748875dff6789785fded594201f7afe514
+SHA512 (Specio-0.25.tar.gz) = 94c88290da38aa08199094eab6beff4caf9a5a1750c95d694d59e12b28001a02b823007a915e3b096eb28b0fb907b6cfab405e63e5047224661a0a9570244cee
+Size (Specio-0.25.tar.gz) = 78432 bytes
