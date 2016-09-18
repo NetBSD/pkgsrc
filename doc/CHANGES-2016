@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3868 2016/09/18 04:32:17 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3869 2016/09/18 05:41:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5448,3 +5448,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.4.9 [rillig 2016-09-18]
 	Added lang/nim version 0.14.2 [kamil 2016-09-18]
 	Updated misc/mirmon to 2.11 [mef 2016-09-18]
+	Updated misc/p5-Locale-Codes to 3.40 [mef 2016-09-18]
