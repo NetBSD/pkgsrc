@@ -1,11 +1,10 @@
-$NetBSD: patch-session.c,v 1.6 2016/06/06 08:55:35 taca Exp $
+$NetBSD: patch-session.c,v 1.7 2016/09/18 17:30:11 taca Exp $
 
 * Interix support.
-* Fix for CVE-2015-8325
 
---- session.c.orig	2016-03-09 18:04:48.000000000 +0000
+--- session.c.orig	2016-07-27 22:54:27.000000000 +0000
 +++ session.c
-@@ -1117,7 +1117,7 @@ read_etc_default_login(char ***env, u_in
+@@ -1120,7 +1120,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)
  		return;
  
@@ -14,7 +13,7 @@ $NetBSD: patch-session.c,v 1.6 2016/06/06 08:55:35 taca Exp $
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1226,7 +1226,7 @@ do_setup_env(Session *s, const char *she
+@@ -1230,7 +1230,7 @@ do_setup_env(Session *s, const char *she
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
  		if (path == NULL || *path == '\0') {
  			child_set_env(&env, &envsize, "PATH",
@@ -23,16 +22,7 @@ $NetBSD: patch-session.c,v 1.6 2016/06/06 08:55:35 taca Exp $
  				SUPERUSER_PATH : _PATH_STDPATH);
  		}
  # endif /* HAVE_CYGWIN */
-@@ -1317,7 +1317,7 @@ do_setup_env(Session *s, const char *she
- 	 * Pull in any environment variables that may have
- 	 * been set by PAM.
- 	 */
--	if (options.use_pam) {
-+	if (options.use_pam && !options.use_login) {
- 		char **p;
- 
- 		p = fetch_pam_child_environment();
-@@ -1340,6 +1340,18 @@ do_setup_env(Session *s, const char *she
+@@ -1346,6 +1346,18 @@ do_setup_env(Session *s, const char *she
  		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
  		read_environment_file(&env, &envsize, buf);
  	}
@@ -51,7 +41,7 @@ $NetBSD: patch-session.c,v 1.6 2016/06/06 08:55:35 taca Exp $
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1531,11 +1543,13 @@ do_setusercontext(struct passwd *pw)
+@@ -1537,11 +1549,13 @@ do_setusercontext(struct passwd *pw)
  			perror("setgid");
  			exit(1);
  		}
@@ -65,7 +55,7 @@ $NetBSD: patch-session.c,v 1.6 2016/06/06 08:55:35 taca Exp $
  		endgrent();
  #endif
  
-@@ -2381,7 +2395,7 @@ session_pty_cleanup2(Session *s)
+@@ -2388,7 +2402,7 @@ session_pty_cleanup2(Session *s)
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
