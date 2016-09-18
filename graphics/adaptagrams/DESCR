@@ -1,0 +1,18 @@
+Adaptagrams is a library of tools and reusable code for adaptive diagramming
+applications, for example: drawing tools, automated document and diagram
+layout, smart presentation software, graph drawing, chart layout, etc.
+
+Currently, the Adaptagrams repository includes four cross-platform C++
+libraries, These libraries are collectively known as cola (Constraint Layout):
+
+ * libvpsc - a solver for the Variable Placement with Separation Constraints
+              problem.
+
+ * libcola - a library for constraint graph layout.
+
+ * libavoid - a library providing high-quality object-avoiding polyline and
+              orthogonalconnector routing for use in interactive diagram
+              editors.
+
+ * libtopology - a library containing extensions to libcola to support topology
+                 preserving constraint-based layout.
