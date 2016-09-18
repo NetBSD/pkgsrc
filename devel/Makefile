@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2312 2016/09/18 06:35:34 mef Exp $
+# $NetBSD: Makefile,v 1.2313 2016/09/18 07:29:53 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1426,6 +1426,7 @@ SUBDIR+=	p5-Software-License
 SUBDIR+=	p5-Sort-Maker
 SUBDIR+=	p5-Sort-Naturally
 SUBDIR+=	p5-Sort-Versions
+SUBDIR+=	p5-Specio
 SUBDIR+=	p5-Spiffy
 SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
