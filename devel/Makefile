@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2313 2016/09/18 07:29:53 mef Exp $
+# $NetBSD: Makefile,v 1.2314 2016/09/18 14:14:50 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -2213,6 +2213,7 @@ SUBDIR+=	tex-xifthen
 SUBDIR+=	tex-xifthen-doc
 SUBDIR+=	threadweaver
 SUBDIR+=	tig
+SUBDIR+=	tinycthread
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tla
