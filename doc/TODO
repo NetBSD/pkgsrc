@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16448 2016/09/18 05:41:23 mef Exp $
+$NetBSD: TODO,v 1.16449 2016/09/18 14:09:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -352,7 +352,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o CSP-0.34
 	o Chinput-3.0.1
 	o DarwinStreamingServer-6.0.3
-	o FiraCode-1.201
+	o FiraCode-1.203
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
@@ -437,6 +437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-3.7.1
 	o audacious-plugins-3.7.1
 	o augeas-1.4.0
+	o autoconf-archive-2016.09.16
 	o autoconvert-0.3.16
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.12
@@ -484,6 +485,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
+	o calibre-2.68.0
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -540,6 +542,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.8
+	o cups-filters-1.11.3
 	o cvm-0.97
 	o cvs-fast-export-1.38
 	o cvs2p4-2.5.5 [schmonz]
@@ -1195,6 +1198,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
 	o p5-DBD-Oracle-1.74
+	o p5-DateTime-1.3800
+	o p5-DateTime-Locale-1.06
+	o p5-DateTime-TimeZone-2.02
 	o p5-Font-FreeType-0.07
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
@@ -1203,6 +1209,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
+	o p5-IO-Socket-SSL-2.038
 	o p5-IP-Country-3.03
 	o p5-Memoize-Memcached-0.11
 	o p5-Net-ManageSieve-0.13
@@ -1339,6 +1346,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
 	o py-cassa-1.11.0
+	o py-cffi-1.8.3
 	o py-collectd-5.5.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
@@ -1385,6 +1393,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-radare2-0.10.5
 	o py-scgi-1.15
 	o py-serpent-1.12
+	o py-setuptools-27.2.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
@@ -1396,6 +1405,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
 	o py-tornado-4.4.1
+	o py-tortoisehg-3.9.1
+	o py-twisted-16.4.1
 	o py-uwsgi-2.0.12
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
@@ -1661,6 +1672,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.9.4
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o warzone2100-2.3.8
@@ -1683,7 +1695,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160910
+	o x264-devel-20160917
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
