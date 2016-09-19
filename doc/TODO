@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16469 2016/09/19 10:33:49 mef Exp $
+$NetBSD: TODO,v 1.16470 2016/09/19 11:06:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o covered-0.7.10
 	o covered-current-20091126
 	o cpmtools-2.20
-	o cppcheck-1.75
 	o crack-attack-1.1.15
 	o crafty-25.0.1
 	o crimsonfields-0.5.3
