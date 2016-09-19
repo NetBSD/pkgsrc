@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3938 2016/09/19 11:56:26 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3939 2016/09/19 12:27:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-PAR to 1.011 [mef 2016-09-19]
 	Updated devel/p5-glib2 to 1.322 [mef 2016-09-19]
 	Updated databases/py-cassandra-driver to 3.7.0 [fhajny 2016-09-19]
+	mk/pkgformat/pkg/replace.mk: omit pkg_tarup for destdir-mode replace [gdt 2016-09-19]
