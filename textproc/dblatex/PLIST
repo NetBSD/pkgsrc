@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/03/05 09:55:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/09/19 04:59:47 mef Exp $
 bin/dblatex
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/dbtexmf/__init__.pyo
 ${PYSITELIB}/dbtexmf/core/__init__.py
 ${PYSITELIB}/dbtexmf/core/__init__.pyc
 ${PYSITELIB}/dbtexmf/core/__init__.pyo
+${PYSITELIB}/dbtexmf/core/commander.py
+${PYSITELIB}/dbtexmf/core/commander.pyc
+${PYSITELIB}/dbtexmf/core/commander.pyo
 ${PYSITELIB}/dbtexmf/core/confparser.py
 ${PYSITELIB}/dbtexmf/core/confparser.pyc
 ${PYSITELIB}/dbtexmf/core/confparser.pyo
@@ -29,6 +32,12 @@ ${PYSITELIB}/dbtexmf/core/sgmlent.txt
 ${PYSITELIB}/dbtexmf/core/sgmlxml.py
 ${PYSITELIB}/dbtexmf/core/sgmlxml.pyc
 ${PYSITELIB}/dbtexmf/core/sgmlxml.pyo
+${PYSITELIB}/dbtexmf/core/txtparser.py
+${PYSITELIB}/dbtexmf/core/txtparser.pyc
+${PYSITELIB}/dbtexmf/core/txtparser.pyo
+${PYSITELIB}/dbtexmf/core/xmlparser.py
+${PYSITELIB}/dbtexmf/core/xmlparser.pyc
+${PYSITELIB}/dbtexmf/core/xmlparser.pyo
 ${PYSITELIB}/dbtexmf/dblatex/__init__.py
 ${PYSITELIB}/dbtexmf/dblatex/__init__.pyc
 ${PYSITELIB}/dbtexmf/dblatex/__init__.pyo
@@ -178,8 +187,11 @@ share/dblatex/latex/misc/ragged2e.sty
 share/dblatex/latex/misc/xelatex/xecyr.sty
 share/dblatex/latex/scripts/doc.ist
 share/dblatex/latex/specs/db2latex.specs
+share/dblatex/latex/specs/db2latex.xml
 share/dblatex/latex/specs/native.specs
+share/dblatex/latex/specs/native.xml
 share/dblatex/latex/specs/simple.specs
+share/dblatex/latex/specs/simple.xml
 share/dblatex/latex/style/dbk_admonition.sty
 share/dblatex/latex/style/dbk_annot.sty
 share/dblatex/latex/style/dbk_biblio.sty
@@ -198,6 +210,9 @@ share/dblatex/latex/style/dbk_table.sty
 share/dblatex/latex/style/dbk_title.sty
 share/dblatex/latex/style/dbk_verbatim.sty
 share/dblatex/latex/style/docbook.sty
+share/dblatex/schema/dblatex-config.dtd
+share/dblatex/schema/dblatex-config.rnc
+share/dblatex/schema/dblatex-config.rng
 share/dblatex/xsl/abstract.xsl
 share/dblatex/xsl/admon.xsl
 share/dblatex/xsl/annotation.xsl
@@ -373,6 +388,9 @@ share/doc/dblatex/xhtml/manual/apas16.html
 share/doc/dblatex/xhtml/manual/apas17.html
 share/doc/dblatex/xhtml/manual/apas19.html
 share/doc/dblatex/xhtml/manual/apas20.html
+share/doc/dblatex/xhtml/manual/apbs02.html
+share/doc/dblatex/xhtml/manual/apbs03.html
+share/doc/dblatex/xhtml/manual/apbs04.html
 share/doc/dblatex/xhtml/manual/beginpage.as.pagebreak.html
 share/doc/dblatex/xhtml/manual/bi01.html
 share/doc/dblatex/xhtml/manual/biblioentry.item.separator.html
@@ -390,11 +408,11 @@ share/doc/dblatex/xhtml/manual/ch01s05.html
 share/doc/dblatex/xhtml/manual/ch02s03.html
 share/doc/dblatex/xhtml/manual/ch03.html
 share/doc/dblatex/xhtml/manual/ch03s08.html
-share/doc/dblatex/xhtml/manual/ch03s11.html
 share/doc/dblatex/xhtml/manual/ch03s12.html
 share/doc/dblatex/xhtml/manual/ch03s13.html
-share/doc/dblatex/xhtml/manual/ch04s03.html
-share/doc/dblatex/xhtml/manual/ch04s07.html
+share/doc/dblatex/xhtml/manual/ch03s14.html
+share/doc/dblatex/xhtml/manual/ch04s04.html
+share/doc/dblatex/xhtml/manual/ch04s08.html
 share/doc/dblatex/xhtml/manual/ch05.html
 share/doc/dblatex/xhtml/manual/ch06s02.html
 share/doc/dblatex/xhtml/manual/ch06s03.html
@@ -423,6 +441,10 @@ share/doc/dblatex/xhtml/manual/doc.section.depth.html
 share/doc/dblatex/xhtml/manual/doc.toc.show.html
 share/doc/dblatex/xhtml/manual/draft.mode.html
 share/doc/dblatex/xhtml/manual/draft.watermark.html
+share/doc/dblatex/xhtml/manual/endnotes.heading.command.html
+share/doc/dblatex/xhtml/manual/endnotes.heading.groups.html
+share/doc/dblatex/xhtml/manual/endnotes.heading.style.html
+share/doc/dblatex/xhtml/manual/endnotes.properties.html
 share/doc/dblatex/xhtml/manual/equation.default.position.html
 share/doc/dblatex/xhtml/manual/example.default.position.html
 share/doc/dblatex/xhtml/manual/example.float.type.html
@@ -437,6 +459,7 @@ share/doc/dblatex/xhtml/manual/figure.warning.html
 share/doc/dblatex/xhtml/manual/figures/eq1.png
 share/doc/dblatex/xhtml/manual/figures/eq4.png
 share/doc/dblatex/xhtml/manual/filename.as.url.html
+share/doc/dblatex/xhtml/manual/footnote.as.endnote.html
 share/doc/dblatex/xhtml/manual/froglogic-logo.png
 share/doc/dblatex/xhtml/manual/funcsynopsis.decoration.html
 share/doc/dblatex/xhtml/manual/funcsynopsis.style.html
@@ -617,6 +640,16 @@ share/doc/dblatex/xhtml/manual/page.width.html
 share/doc/dblatex/xhtml/manual/pagesetup2.png
 share/doc/dblatex/xhtml/manual/paper.type.html
 share/doc/dblatex/xhtml/manual/pdf.annot.options.html
+share/doc/dblatex/xhtml/manual/pi-bibtex.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_angle.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_autowidth.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_bgcolor.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_citestyle.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_colwidth.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_list-presentation.html
+share/doc/dblatex/xhtml/manual/pi-dblatex_table-width.html
+share/doc/dblatex/xhtml/manual/pi-latex.html
+share/doc/dblatex/xhtml/manual/pi-texmath_delimiters.html
 share/doc/dblatex/xhtml/manual/preface.tocdepth.html
 share/doc/dblatex/xhtml/manual/processus.png
 share/doc/dblatex/xhtml/manual/qanda.defaultlabel.html
@@ -631,13 +664,18 @@ share/doc/dblatex/xhtml/manual/sec-changelog.html
 share/doc/dblatex/xhtml/manual/sec-custom-latex.html
 share/doc/dblatex/xhtml/manual/sec-custom.html
 share/doc/dblatex/xhtml/manual/sec-figinclude.html
+share/doc/dblatex/xhtml/manual/sec-footnote.html
 share/doc/dblatex/xhtml/manual/sec-index.html
 share/doc/dblatex/xhtml/manual/sec-install-unix.html
 share/doc/dblatex/xhtml/manual/sec-install.html
+share/doc/dblatex/xhtml/manual/sec-music.html
 share/doc/dblatex/xhtml/manual/sec-pagesetup.html
 share/doc/dblatex/xhtml/manual/sec-pagination-params.html
 share/doc/dblatex/xhtml/manual/sec-param-value.html
 share/doc/dblatex/xhtml/manual/sec-params.html
+share/doc/dblatex/xhtml/manual/sec-pi-lists.html
+share/doc/dblatex/xhtml/manual/sec-pi-usage.html
+share/doc/dblatex/xhtml/manual/sec-pis.html
 share/doc/dblatex/xhtml/manual/sec-prepress-params.html
 share/doc/dblatex/xhtml/manual/sec-pub-output.html
 share/doc/dblatex/xhtml/manual/sec-section-num.html
@@ -649,8 +687,10 @@ share/doc/dblatex/xhtml/manual/sec-thanks.html
 share/doc/dblatex/xhtml/manual/sec-verbatim.html
 share/doc/dblatex/xhtml/manual/sec-xref.html
 share/doc/dblatex/xhtml/manual/seg.item.separator.html
+share/doc/dblatex/xhtml/manual/segmentedlist.as.table.html
 share/doc/dblatex/xhtml/manual/set.book.num.html
 share/doc/dblatex/xhtml/manual/show.comments.html
+share/doc/dblatex/xhtml/manual/table.continue.caption.html
 share/doc/dblatex/xhtml/manual/table.default.position.html
 share/doc/dblatex/xhtml/manual/table.default.tabstyle.html
 share/doc/dblatex/xhtml/manual/table.in.float.html
@@ -700,3 +740,4 @@ share/doc/dblatex/xhtml/release-notes/sec-changes-034.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-035.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-036.html
 share/doc/dblatex/xhtml/release-notes/sec-changes-037.html
+share/doc/dblatex/xhtml/release-notes/sec-changes-038.html
