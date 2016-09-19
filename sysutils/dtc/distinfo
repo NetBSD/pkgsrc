@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/09/19 18:11:16 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2016/09/19 18:21:52 jakllsch Exp $
 
-SHA1 (dtc-1.4.1.tar.gz) = 2f73f79d732dfc2690e146248d4ff8070414b50a
-RMD160 (dtc-1.4.1.tar.gz) = dbfc1ea87c6966e65bdccc2518c086d0c41e9bb0
-SHA512 (dtc-1.4.1.tar.gz) = 31085991824eeee1790ed151b9470c14b1840f1cda1760d6081938521f907aa2ccf777cdecec0d648b09d1614868bc43f98ae77fb7641677aa841b68a7cb90e8
-Size (dtc-1.4.1.tar.gz) = 135809 bytes
+SHA1 (dtc-1.4.2.tar.gz) = cd59f17fb88f537571eb1555da6ad0d670ea2eeb
+RMD160 (dtc-1.4.2.tar.gz) = e4dd9d40892f1b6e2c8d7baffe5da4d9861f753f
+SHA512 (dtc-1.4.2.tar.gz) = fff1d0d939be54c8a73294f4075d93d38b09112fa66ffcd4f395cbe74ffeb4ece1829a47e017fb984a100ded5fb4e54f91bfaa4bcdcc1283f794e13d8181e087
+Size (dtc-1.4.2.tar.gz) = 141943 bytes
