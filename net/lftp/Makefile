@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.117 2016/07/09 06:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2016/09/19 13:04:25 wiz Exp $
 
 DISTNAME=	lftp-4.7.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://lftp.yar.ru/ftp/ \
 		ftp://ftp.tuwien.ac.at/infosys/browsers/ftp/lftp/ \
