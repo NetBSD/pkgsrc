@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.48 2016/08/07 12:32:47 mef Exp $
+$NetBSD: distinfo,v 1.49 2016/09/19 09:16:18 mef Exp $
 
-SHA1 (fldigi-3.23.13.tar.gz) = 3484295d4fc540280a4f690232e138a8fc83c05d
-RMD160 (fldigi-3.23.13.tar.gz) = 0ac304dfd7cd3b46627a5fa1013ca6d713076037
-SHA512 (fldigi-3.23.13.tar.gz) = a6deefcb0f11bd5e866cd363eff619e7aeace6a781a110aa36fb249612c5665353ecd21225b9ff15c8e7f9fdd4483a43b4f88dbcf7ff56325324eac70d164ad0
-Size (fldigi-3.23.13.tar.gz) = 3090599 bytes
+SHA1 (fldigi-3.23.14.tar.gz) = 611dabeb7f072e5a54cb833f9caaaf640ef4541f
+RMD160 (fldigi-3.23.14.tar.gz) = 396e310dccfacfae4efc69e8a3d0040ecc454f3e
+SHA512 (fldigi-3.23.14.tar.gz) = 9adfef9e5b9048bbcc43842260bdd1fde16370c0621215d416afc88c3f0c7c28f981a53859711225d0b4452a33a742e3a6add10a65b3c3dbecdba33e8ed3bea0
+Size (fldigi-3.23.14.tar.gz) = 3115714 bytes
 SHA1 (patch-src_include_qrunner.h) = c395684f676bcd06e0d0f8a95a9c22dc92667879
 SHA1 (patch-src_misc_configuration.cxx) = 4ebf0c46913f73047ad5b858f6d4ae9def82ec60
 SHA1 (patch-src_misc_newinstall.cxx) = 2c215e9423d27dd4f4657221b17cf4ed3f12355c
