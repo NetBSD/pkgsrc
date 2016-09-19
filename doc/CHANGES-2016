@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3934 2016/09/19 10:33:49 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3935 2016/09/19 10:48:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5528,3 +5528,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Simple to 1.302056 [mef 2016-09-19]
 	Updated devel/p5-Tree-Simple-VisitorFactory to 0.15 [mef 2016-09-19]
 	Updated devel/p5-Tie-Cycle to 1.221 [mef 2016-09-19]
+	Updated devel/p5-XSLoader to 0.24 [mef 2016-09-19]
