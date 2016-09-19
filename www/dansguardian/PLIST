@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/28 14:13:25 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/09/19 13:20:43 sborrill Exp $
 man/man8/dansguardian.8
 sbin/dansguardian
 share/dansguardian/blockedflash.swf
@@ -100,6 +100,8 @@ share/examples/dansguardian/authplugins/ident.conf
 share/examples/dansguardian/authplugins/ip.conf
 share/examples/dansguardian/authplugins/proxy-basic.conf
 share/examples/dansguardian/authplugins/proxy-digest.conf
+${PLIST.cli}share/examples/dansguardian/contentscanners/commandlinescan.conf
+${PLIST.clamd}share/examples/dansguardian/contentscanners/clamdscan.conf
 share/examples/dansguardian/dansguardian.conf
 share/examples/dansguardian/dansguardianf1.conf
 share/examples/dansguardian/downloadmanagers/default.conf
@@ -117,6 +119,10 @@ share/examples/dansguardian/lists/bannedurllist
 share/examples/dansguardian/lists/blacklists/ads/domains
 share/examples/dansguardian/lists/blacklists/ads/urls
 share/examples/dansguardian/lists/contentregexplist
+${PLIST.avscan}share/examples/dansguardian/lists/contentscanners/exceptionvirusextensionlist
+${PLIST.avscan}share/examples/dansguardian/lists/contentscanners/exceptionvirusmimetypelist
+${PLIST.avscan}share/examples/dansguardian/lists/contentscanners/exceptionvirussitelist
+${PLIST.avscan}share/examples/dansguardian/lists/contentscanners/exceptionvirusurllist
 share/examples/dansguardian/lists/downloadmanagers/managedextensionlist
 share/examples/dansguardian/lists/downloadmanagers/managedmimetypelist
 share/examples/dansguardian/lists/exceptionextensionlist
