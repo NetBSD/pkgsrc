@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2015/08/23 14:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/09/19 13:04:18 wiz Exp $
 #
 
 DISTNAME=		LibVNCServer-0.9.9
 PKGNAME=		libVNCServer-0.9.9
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 
