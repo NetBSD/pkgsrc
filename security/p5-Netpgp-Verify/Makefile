@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2016/08/15 06:18:34 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/19 18:17:57 agc Exp $
 
 DISTNAME=	p5-Netpgp-Verify-20160814
 CATEGORIES=	security perl5
-MASTER_SITES=	http://www.netpgp.com/src/
+MASTER_SITES=	https://agc.ac/src/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.netpgp.com/
+HOMEPAGE=	https://agc.ac/
 COMMENT=	Perl5 bindings for libnetpgpverify
 LICENSE=	modified-bsd
 
