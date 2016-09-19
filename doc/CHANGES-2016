@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3930 2016/09/19 09:40:54 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3931 2016/09/19 09:44:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5522,3 +5522,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/hitch to 1.4.0 [fhajny 2016-09-19]
 	Updated net/tigervnc to 1.7.0nb1 [wiz 2016-09-19]
 	Updated devel/p5-File-Find-Rule-Permissions to 2.01 [mef 2016-09-19]
+	Updated devel/p5-Module-ScanDeps to 1.22 [mef 2016-09-19]
