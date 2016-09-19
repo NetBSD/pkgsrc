@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3913 2016/09/19 01:07:03 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3914 2016/09/19 05:33:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5504,3 +5504,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 7.06 [mef 2016-09-19]
 	Updated www/p5-AnyEvent-HTTP to 2.23 [mef 2016-09-19]
 	Updated www/p5-CGI-FormBuilder to 3.1000 [mef 2016-09-19]
+	Updated time/dateutils to 0.4.0 [mef 2016-09-19]
