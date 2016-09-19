@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2015/05/08 19:35:33 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/09/19 11:05:53 wiz Exp $
+bin/cert.py
 bin/cppcheck
-${PLIST.qt}bin/cppcheck-gui
+${PLIST.qt5}bin/cppcheck-gui
 bin/cppcheck-htmlreport
+bin/cppcheckdata.py
+bin/findcasts.py
+bin/naming.py
+bin/threadsafety.py
+bin/y2038.py
 man/man1/cppcheck.1
 share/cppcheck/cfg/avr.cfg
 share/cppcheck/cfg/cppcheck-cfg.rng
