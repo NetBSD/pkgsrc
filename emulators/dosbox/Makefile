@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2015/04/25 14:20:44 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2016/09/19 09:13:10 jperkin Exp $
 
 DISTNAME=	dosbox-0.74
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS.Darwin+=	--disable-dynrec
 CPPFLAGS.SunOS+=	-DDISABLE_JOYSTICK
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mclang*)
