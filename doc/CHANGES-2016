@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3943 2016/09/19 13:14:53 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3944 2016/09/19 13:34:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5538,3 +5538,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/gnutls to 3.5.4 [wiz 2016-09-19]
 	Updated devel/p5-Git-Wrapper to 0.047 [mef 2016-09-19]
 	Updated lang/nodejs to 6.6.0 [fhajny 2016-09-19]
+	Updated sysutils/salt to 2016.3.4 [jperkin 2016-09-19]
