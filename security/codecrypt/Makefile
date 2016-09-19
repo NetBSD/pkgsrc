@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/04/30 19:27:43 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/19 13:12:39 wiedi Exp $
 
 DISTNAME=	codecrypt-1.7.5
 CATEGORIES=	security
@@ -14,6 +14,8 @@ USE_TOOLS+=	autoconf automake autoreconf gmake pkg-config
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 CRYPTOPPFLAGS=	CRYPTOPP_CFLAGS=-I${PREFIX}/include
 CRYPTOPPFLAGS+=	CRYPTOPP_LIBS='-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lcryptopp'
