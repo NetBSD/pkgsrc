@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2016/07/09 06:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/19 09:24:52 fhajny Exp $
 #
 
-DISTNAME=	pdsh-2.29
-PKGREVISION=	3
+DISTNAME=	pdsh-2.31
 CATEGORIES=	parallel
-MASTER_SITES=	http://pdsh.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=grondo/}
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	https://pdsh.googlecode.com/
+HOMEPAGE=	https://github.com/grondo/pdsh/
 COMMENT=	High-performance, parallel remote shell utility
 LICENSE=	gnu-gpl-v2
+
+GITHUB_TAG=	${DISTNAME}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
