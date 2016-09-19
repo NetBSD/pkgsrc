@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 01:20:22 agc Exp $
+$NetBSD: distinfo,v 1.19 2016/09/19 17:13:18 jperkin Exp $
 
-SHA1 (loudmouth-1.4.3.tar.bz2) = 55dd0475760f98ff0ba1f5c712c52ab776b432be
-RMD160 (loudmouth-1.4.3.tar.bz2) = 59852d085f73d68b3c061b7192a484527843e67d
-SHA512 (loudmouth-1.4.3.tar.bz2) = 02d1de14a4d626a4c9100bd24c06d4b4203eabb0f95bab40ee18ea5e68ed81d47aa977625140157b2d9f7974ac748af857c2ee3a916f0db700e2a2d0934940ec
-Size (loudmouth-1.4.3.tar.bz2) = 366818 bytes
-SHA1 (patch-aa) = d23b8671b8d15a0be257f9fd3d5fb55df33edf14
-SHA1 (patch-loudmouth_lm-debug.c) = 59c73bfeb1cbd66ff8c7325353f4772cfdc0c891
-SHA1 (patch-loudmouth_lm-error_c) = 479f2b469b6430d7743b270a9d70fde5829c6c56
-SHA1 (patch-loudmouth_lm-sock.c) = 7271b8045c0ce303504d3ddb59d1a08489a721ce
+SHA1 (loudmouth-1.5.3.tar.bz2) = a69ef9a57e0ae993340921e73ada27979850db04
+RMD160 (loudmouth-1.5.3.tar.bz2) = aba3fc803a87e334b09987e27a5f841a46761dd8
+SHA512 (loudmouth-1.5.3.tar.bz2) = ab6b16b4e644b69cdb7d8df1753d1bb5b43c2f1e76944e639339169b332e1b5c6a4246053c5b8a579ee9b53c845cef610b0040dfdffeb857180b6bab71adfcce
+Size (loudmouth-1.5.3.tar.bz2) = 375974 bytes
