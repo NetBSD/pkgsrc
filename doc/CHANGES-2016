@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3936 2016/09/19 11:06:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3937 2016/09/19 11:41:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5530,3 +5530,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Tie-Cycle to 1.221 [mef 2016-09-19]
 	Updated devel/p5-XSLoader to 0.24 [mef 2016-09-19]
 	Updated devel/cppcheck to 1.75 [wiz 2016-09-19]
+	Updated devel/p5-PAR to 1.011 [mef 2016-09-19]
+	Updated devel/p5-glib2 to 1.322 [mef 2016-09-19]
