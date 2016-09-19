@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/09/19 14:10:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/19 14:20:33 wiz Exp $
 
 DISTNAME=	liborcus-0.12.0
-PKGNAME=	${DISTNAME:S/lib//}
+PKGNAME=	${DISTNAME:S/liborcus/liborcus0.12/}
 CATEGORIES=	converters
 MASTER_SITES=	http://kohei.us/files/orcus/src/
 EXTRACT_SUFX=	.tar.xz
