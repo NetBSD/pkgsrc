@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/19 18:11:16 jakllsch Exp $
+
+SHA1 (dtc-1.4.1.tar.gz) = 2f73f79d732dfc2690e146248d4ff8070414b50a
+RMD160 (dtc-1.4.1.tar.gz) = dbfc1ea87c6966e65bdccc2518c086d0c41e9bb0
+SHA512 (dtc-1.4.1.tar.gz) = 31085991824eeee1790ed151b9470c14b1840f1cda1760d6081938521f907aa2ccf777cdecec0d648b09d1614868bc43f98ae77fb7641677aa841b68a7cb90e8
+Size (dtc-1.4.1.tar.gz) = 135809 bytes
