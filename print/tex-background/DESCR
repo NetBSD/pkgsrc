@@ -1,0 +1,6 @@
+The package offers the placement of background material on the
+pages of a document. The user can control many aspects
+(contents, position, color, opacity) of the background material
+that will be displayed; all placement and attribute settings
+are controlled by setting key values. The package makes use of
+the everypage package, and uses pgf/tikz for attribute control.
