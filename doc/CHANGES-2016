@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3950 2016/09/19 18:22:37 jakllsch Exp $
+$NetBSD: CHANGES-2016,v 1.3951 2016/09/19 23:33:34 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5549,3 +5549,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated chat/loudmouth to 1.5.3 [jperkin 2016-09-19]
 	Added sysutils/dtc version 1.4.1 [jakllsch 2016-09-19]
 	Updated sysutils/dtc to 1.4.2 [jakllsch 2016-09-19]
+	Updated graphics/nvidia-texture-tools to 2.1.0 [kamil 2016-09-19]
