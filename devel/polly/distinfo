@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2016/09/12 22:49:23 kamil Exp $
+$NetBSD: distinfo,v 1.2 2016/09/19 22:32:41 kamil Exp $
 
 SHA1 (polly-3.8.1.src.tar.xz) = 918f3c74369a3605f3d624ea3f20c97bc3c921ad
 RMD160 (polly-3.8.1.src.tar.xz) = 766873d4b88e0e9c5670aeb45313d47cca7bd79a
 SHA512 (polly-3.8.1.src.tar.xz) = e5d0d1625be47579cd337fce6d6a1c5b64c8991a6b073778c8d8f237fccbd29f3a8ab815f191bd75c550ac4404c9581c948400cd5c71f56d3ea8fb07fec05536
 Size (polly-3.8.1.src.tar.xz) = 7799188 bytes
-SHA1 (patch-CMakeLists.txt) = 6ee16a91e3d23eeb033bc2e9729ceabb3dfff6db
+SHA1 (patch-CMakeLists.txt) = 82b05a2ef4b83533a47474f5289110fe69a06fff
 SHA1 (patch-lib_External_isl_configure) = dad55f0d959b64f0cb910dad412bfe5bb3702ec9
