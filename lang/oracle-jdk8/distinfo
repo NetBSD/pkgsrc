@@ -1,10 +1,14 @@
-$NetBSD: distinfo,v 1.7 2016/05/20 22:26:21 dsainty Exp $
+$NetBSD: distinfo,v 1.8 2016/09/19 06:57:49 ryoon Exp $
 
-SHA1 (jdk-8u92-linux-i586.tar.gz) = 190a7a6681d64597640db6712166202bc8ae1dfd
-RMD160 (jdk-8u92-linux-i586.tar.gz) = b61cb38641ec2b310e6277994aa382cad33380ba
-SHA512 (jdk-8u92-linux-i586.tar.gz) = fcb2db52e8cb392de91ca914dae13bc7786954334e7df346619686837bceab9ca49699153d308d869499d2948c5eb67ae39583e28db3c63a537afd33f6b1226d
-Size (jdk-8u92-linux-i586.tar.gz) = 183433226 bytes
-SHA1 (jdk-8u92-linux-x64.tar.gz) = efb9e9fed2f146ef2e97040415522bad22015e36
-RMD160 (jdk-8u92-linux-x64.tar.gz) = dc18efbe35d452eccd3013ac505ef5c932fabc00
-SHA512 (jdk-8u92-linux-x64.tar.gz) = 008c2f6ce4521b8554c888fbad8ec88c27ff62a03762b9d55784a9838baf2cd73c3dcd234ad76f11fdbf9817992d74311dbd296d839dbdeb00dcac8ce3cabc96
-Size (jdk-8u92-linux-x64.tar.gz) = 181389058 bytes
+SHA1 (jdk-8u102-linux-i586.tar.gz) = 143929559c2fcc6bb3ef8c66a06132be6f4900c2
+RMD160 (jdk-8u102-linux-i586.tar.gz) = 3bfa290a59dd8eecf20c741e6600245b8f875e2a
+SHA512 (jdk-8u102-linux-i586.tar.gz) = 23a4c75161d3d0a6097640d1a4ef6b268e9555bc5dd425e3772374a5ed002a14932011972a05f966aaff48b7371fa150af3ddce5ab810b5b1b0fcd4993e1e53d
+Size (jdk-8u102-linux-i586.tar.gz) = 183529522 bytes
+SHA1 (jdk-8u102-linux-x64.tar.gz) = 01e57a2f73bd908ecc99cd9a32740062e4cf0ec3
+RMD160 (jdk-8u102-linux-x64.tar.gz) = 6ac1a372e3c3c47db446de59ccdc5f1c6e714d8f
+SHA512 (jdk-8u102-linux-x64.tar.gz) = a8420f6aa4658545b6276b477156326d5ab66458f4fc78616bdc3e1794a17a6c1964170c709a139cf6ee9a86e7c2386a776c40e3236292a4521a3d5d1a08e206
+Size (jdk-8u102-linux-x64.tar.gz) = 181435897 bytes
+SHA1 (jdk-8u102-solaris-x64.tar.gz) = 5c7b5f88a3547330310fa551da2061135ed7d908
+RMD160 (jdk-8u102-solaris-x64.tar.gz) = 1e27a8309c0c47f3c7a3d358c0faa698c42df70f
+SHA512 (jdk-8u102-solaris-x64.tar.gz) = bf43f4bb4c706b0175182eb68063dee55cd4cd9e584f2df7b71c57368e6809be3f40b1138e6866f7f9a1dd0ac2c13a13ef4de8a38dfb94aea3194456a82ebb56
+Size (jdk-8u102-solaris-x64.tar.gz) = 100915566 bytes

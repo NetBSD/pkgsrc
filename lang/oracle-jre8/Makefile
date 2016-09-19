@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/10 11:35:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/19 06:57:49 ryoon Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.oracle-jre8+=oracle-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -58,7 +58,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-8.zip
 .if !empty(PKG_OPTIONS:Moracle-jre-jce)
 PLIST.jce=	yes
 FETCH_MESSAGE+=	""
-FETCH_MESSAGE+=	"As oracle-jre-jce is enabled jce_policy-8.zip is also needed"
+FETCH_MESSAGE+=	"As oracle-jre-jce is enabled jce_policy-8.zip from http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html is also needed"
 .endif
 
 # Simplify distinfo generation
