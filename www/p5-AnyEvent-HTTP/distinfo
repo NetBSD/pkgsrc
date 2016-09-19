@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 02:46:59 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/09/19 00:56:35 mef Exp $
 
-SHA1 (AnyEvent-HTTP-2.22.tar.gz) = c8f7d7ae0d2034d611dd2400612b5b846935b162
-RMD160 (AnyEvent-HTTP-2.22.tar.gz) = efc951818500166ea5df0c47fd87c5b404966cc8
-SHA512 (AnyEvent-HTTP-2.22.tar.gz) = 3408b5339cc85e8d37dc6c4f40a0f1ad9436fb9b261e6a14b5a7913f8ee6c2ba7e80aec376af48190c76219fbcadf9c68c2d67c4ab60c77044093f6ec70f4aac
-Size (AnyEvent-HTTP-2.22.tar.gz) = 27965 bytes
+SHA1 (AnyEvent-HTTP-2.23.tar.gz) = 707575fca8e163ed0eacc34d7af7e9b09e141edb
+RMD160 (AnyEvent-HTTP-2.23.tar.gz) = 4e0225a2da7da25eee5ed62e4b604f1ecb4a94b2
+SHA512 (AnyEvent-HTTP-2.23.tar.gz) = ba28bb01c042c6fbf51c7055ddf38dbea1b6a7e84a8a8c8ec845bf63f16f9919a388e092c59f07a9588972da45b87de3627dc66dd2b2b958b731c6b699197d90
+Size (AnyEvent-HTTP-2.23.tar.gz) = 27351 bytes
