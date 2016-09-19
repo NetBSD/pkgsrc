@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/09/19 17:13:18 jperkin Exp $
 include/loudmouth-1.0/loudmouth/lm-connection.h
 include/loudmouth-1.0/loudmouth/lm-error.h
 include/loudmouth-1.0/loudmouth/lm-message-handler.h
@@ -14,17 +14,19 @@ share/gtk-doc/html/loudmouth/ch01.html
 share/gtk-doc/html/loudmouth/home.png
 share/gtk-doc/html/loudmouth/index.html
 share/gtk-doc/html/loudmouth/index.sgml
+share/gtk-doc/html/loudmouth/left-insensitive.png
 share/gtk-doc/html/loudmouth/left.png
-share/gtk-doc/html/loudmouth/loudmouth-lm-connection.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-error.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-message-handler.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-message-node.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-message.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-proxy.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-ssl.html
-share/gtk-doc/html/loudmouth/loudmouth-lm-utils.html
-share/gtk-doc/html/loudmouth/loudmouth.devhelp
+share/gtk-doc/html/loudmouth/loudmouth-LmConnection.html
+share/gtk-doc/html/loudmouth/loudmouth-LmError.html
+share/gtk-doc/html/loudmouth/loudmouth-LmMessage.html
+share/gtk-doc/html/loudmouth/loudmouth-LmMessageHandler.html
+share/gtk-doc/html/loudmouth/loudmouth-LmMessageNode.html
+share/gtk-doc/html/loudmouth/loudmouth-LmProxy.html
+share/gtk-doc/html/loudmouth/loudmouth-LmSSL.html
+share/gtk-doc/html/loudmouth/loudmouth-Miscellaneous-Utility-Functions.html
 share/gtk-doc/html/loudmouth/loudmouth.devhelp2
+share/gtk-doc/html/loudmouth/right-insensitive.png
 share/gtk-doc/html/loudmouth/right.png
 share/gtk-doc/html/loudmouth/style.css
+share/gtk-doc/html/loudmouth/up-insensitive.png
 share/gtk-doc/html/loudmouth/up.png
