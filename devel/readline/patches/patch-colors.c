@@ -1,9 +1,9 @@
-$NetBSD: patch-colors.c,v 1.1 2014/07/18 13:02:06 ryoon Exp $
+$NetBSD: patch-colors.c,v 1.2 2016/09/19 09:04:29 wiz Exp $
 
---- colors.c.orig	2013-03-20 15:19:08.000000000 +0000
+--- colors.c.orig	2016-01-25 15:38:00.000000000 +0000
 +++ colors.c
-@@ -187,8 +187,10 @@ _rl_print_color_indicator (char *f)
-                 ? C_ORPHAN : C_LINK);
+@@ -215,8 +215,10 @@ _rl_print_color_indicator (const char *f
+         colored_filetype = C_LINK;
        else if (S_ISFIFO (mode))
          colored_filetype = C_FIFO;
 +#if defined(S_ISSOCK)
