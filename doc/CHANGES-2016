@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3932 2016/09/19 09:52:31 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3933 2016/09/19 10:23:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5524,3 +5524,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-File-Find-Rule-Permissions to 2.01 [mef 2016-09-19]
 	Updated devel/p5-Module-ScanDeps to 1.22 [mef 2016-09-19]
 	Updated textproc/yaml-cpp to 0.5.3 [fhajny 2016-09-19]
+	Updated devel/p5-Test-Version to 2.05 [mef 2016-09-19]
+	Updated devel/p5-Test-Simple to 1.302056 [mef 2016-09-19]
