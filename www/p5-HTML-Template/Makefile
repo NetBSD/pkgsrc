@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/06/08 19:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2016/09/19 01:04:02 mef Exp $
 
 DISTNAME=		HTML-Template-2.95
 PKGNAME=		p5-${DISTNAME}
@@ -11,6 +11,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://html-template.sourceforge.net/
 COMMENT=		Perl5 module to create HTML templates with simple tags
 LICENSE=		${PERL5_LICENSE}
+
+# for make test
+BUILD_DEPENDS+=		p5-CGI-[0-9]*:../../www/p5-CGI
 
 PERL5_PACKLIST=		auto/HTML/Template/.packlist
 
