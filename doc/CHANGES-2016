@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3940 2016/09/19 12:29:05 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3941 2016/09/19 12:33:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5535,3 +5535,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-cassandra-driver to 3.7.0 [fhajny 2016-09-19]
 	mk/pkgformat/pkg/replace.mk: omit pkg_tarup for destdir-mode replace [gdt 2016-09-19]
 	Updated databases/elasticsearch to 2.4.0 [fhajny 2016-09-19]
+	Updated security/gnutls to 3.5.4 [wiz 2016-09-19]
