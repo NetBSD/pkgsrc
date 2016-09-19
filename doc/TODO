@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16465 2016/09/19 09:04:39 wiz Exp $
+$NetBSD: TODO,v 1.16466 2016/09/19 09:06:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avrdude-6.3
 	o baci-20040415
 	o base-1.4.5
-	o bash-4.4
 	o bastet-0.43
 	o bbcim-1.0
 	o bbkeys-0.9.0
