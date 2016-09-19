@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:57 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/09/19 10:48:14 mef Exp $
 
-SHA1 (XSLoader-0.16.tar.gz) = 3616866a0fd34e4f968ed27677d74955eeecc67b
-RMD160 (XSLoader-0.16.tar.gz) = 6d6daf5d1dcfa0f722c15c9b5ff3e3f66b3c2e37
-SHA512 (XSLoader-0.16.tar.gz) = cf633c5542c5c3fdc16e01a1f3b122f06be5b2b49251124fc2528c32577b9ea1105d571fd265d429780d63f4b4d1eba39c6f44553aed021be629e5d6d2626bc0
-Size (XSLoader-0.16.tar.gz) = 11266 bytes
+SHA1 (XSLoader-0.24.tar.gz) = 177b018f11088dbe10d87cf19ef7a39b960c79c6
+RMD160 (XSLoader-0.24.tar.gz) = 147f1f6177fab3b7581a557d98a9b06399f0b5ee
+SHA512 (XSLoader-0.24.tar.gz) = 25adeeac76a60ffb159211e8f0568430c270e8ba37626969ee10613bc44a0f5cc3bb62cb9bd44552997416480f7bae255c9c14ee239f18d3323db257f61c07dc
+Size (XSLoader-0.24.tar.gz) = 13307 bytes
