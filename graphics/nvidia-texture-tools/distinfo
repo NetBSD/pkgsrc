@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/09/18 17:08:20 kamil Exp $
+$NetBSD: distinfo,v 1.2 2016/09/19 23:28:01 kamil Exp $
 
-SHA1 (nvidia-texture-tools-2.0.8.tar.gz) = 5e032be01a17feef3f78fd0aa35aaf1eec81b620
-RMD160 (nvidia-texture-tools-2.0.8.tar.gz) = 86fc38c77cf0529bd0b1746322a7923cc3deecaf
-SHA512 (nvidia-texture-tools-2.0.8.tar.gz) = 342b9e14a1bdeeee8fae4a3b0446b25b01e13915cc5bd29396e6ca01bb1262c64e759008a7d7debf8a811c7cf16c54d44c22f31557e626cd0bafea07724bab01
-Size (nvidia-texture-tools-2.0.8.tar.gz) = 939218 bytes
-SHA1 (patch-src_nvcore_Debug.cpp) = 17499d48fca6d19a0adc4118e4e64a22913ca64f
-SHA1 (patch-src_nvcore_DefsGnucNetBSD.h) = b5497bad0aac0cfbc8c10da70b0918621935a919
-SHA1 (patch-src_nvcore_nvcore.h) = c769e4d3a4bfe02054df7c7529554e21c3108e3c
-SHA1 (patch-src_nvcore_poshlib_posh.h) = 0641af0a61d0f5cc158623b204136c0e383586a3
-SHA1 (patch-src_nvimage_ImageIO.cpp) = 0863e3d4f6dfcd2d1b94c0e9e7592a17c85caafd
-SHA1 (patch-src_nvmath_nvmath.h) = c6a06d8043f5f80dc936b26f1cae41e7b2f4d804
+SHA1 (nvidia-texture-tools-2.1.0.tar.gz) = e4af0b4a7503c79ffa2c442c0eb1d6565fce7912
+RMD160 (nvidia-texture-tools-2.1.0.tar.gz) = e17be1052efbfb45956759a0479a4bf00e3988c3
+SHA512 (nvidia-texture-tools-2.1.0.tar.gz) = 6c5c9588af57023fc384de080cbe5c5ccd8707d04a9533384c606efd09730d780cb21bcf2d3576102a3facd2f281cacb2625958d74575e71550fd98da92e38b6
+Size (nvidia-texture-tools-2.1.0.tar.gz) = 43385028 bytes
