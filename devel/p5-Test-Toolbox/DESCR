@@ -1,0 +1,19 @@
+Test::Toolbox provides (as you might guess) tools for automated
+testing. Test::Toolbox is much like some other testing modules, such as
+Test::More and Test::Simple. Test::Toolbox provides a different flavor of
+tests which may or may not actually be to your preference.
+
+The tools in Test::Toolbox have a standard format. Commands start with (the
+command (of course), followed by the test name. Then there is usually the
+value being tested, or values being compared, then other options. So, for
+example, this command checks compares two values:
+
+   rtcomp 'test name', $val, $other_val;
+
+In some cases it's preferable to flip the logic of the test, so that, for
+example, two values should not be the same. In that case, you can add the
+should option:
+
+   rtcomp 'test name', $val, $other_val, should=>0;
+
+All test commands require a test name as the first param.
