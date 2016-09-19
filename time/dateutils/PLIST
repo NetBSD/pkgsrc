@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/16 01:51:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/09/19 05:33:15 mef Exp $
 bin/dadd
+bin/dateadd
+bin/dateconv
+bin/datediff
+bin/dategrep
+bin/dateround
+bin/dateseq
+bin/datesort
+bin/datetest
+bin/datezone
 bin/dconv
 bin/ddiff
 bin/dgrep
@@ -31,7 +40,16 @@ include/dateutils/version.h
 info/dateutils.info
 lib/libdut.a
 man/man1/dadd.1
+man/man1/dateadd.1
+man/man1/dateconv.1
+man/man1/datediff.1
+man/man1/dategrep.1
+man/man1/dateround.1
+man/man1/dateseq.1
+man/man1/datesort.1
+man/man1/datetest.1
 man/man1/dateutils.1
+man/man1/datezone.1
 man/man1/dconv.1
 man/man1/ddiff.1
 man/man1/dgrep.1
@@ -43,5 +61,7 @@ man/man1/dzone.1
 man/man1/strptime.1
 share/dateutils/iata.tzmcc
 share/dateutils/icao.tzmcc
+share/dateutils/locale
 share/dateutils/mic.tzmcc
+share/doc/dateutils/LICENSE
 share/doc/dateutils/README.md
