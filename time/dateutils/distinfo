@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2016/09/19 04:47:16 mef Exp $
+$NetBSD: distinfo,v 1.8 2016/09/19 05:33:15 mef Exp $
 
-SHA1 (dateutils-0.3.1.tar.xz) = 07884be555998aa649733401e65f073ada89ac08
-RMD160 (dateutils-0.3.1.tar.xz) = a45ed9fb1c5d5107883fb3cfdf3f43d238e0497c
-SHA512 (dateutils-0.3.1.tar.xz) = cbf691b0ef8c815159d262796bb5e7292547794610efb99772a51c8bd20e8f23e36be28c6c8a0ffa04445bf7b13bc8fe58bc44a1ba356e1b224b631d561422d9
-Size (dateutils-0.3.1.tar.xz) = 586848 bytes
+SHA1 (dateutils-0.4.0.tar.xz) = 7f3ec03b68464f37ea2eb661b569b3352ed66740
+RMD160 (dateutils-0.4.0.tar.xz) = b1efb3742d47ae4d3f2cddb0df88480a40e0d82b
+SHA512 (dateutils-0.4.0.tar.xz) = 06aeed8cc2e8bd22584d74fccd6a9739fbed191a01d5dfb5bab48d5b059dce01d48f8b5f4b6e927e26c1ac2143d7aeed1f20f0415d1275d172f2584ef9d776a9
+Size (dateutils-0.4.0.tar.xz) = 608364 bytes
 SHA1 (patch-Makefile.am) = 936ad7f986ff5cb8bec5f85c96a17657fca2774f
 SHA1 (patch-Makefile.in) = ff5aaffb2046f17189b9074090c68295df5fb57a
+SHA1 (patch-configure) = abb72e6c1ff9e9aca1bd20ee57b779667c8ecc29
+SHA1 (patch-m4_sxe-compiler.m4) = 8df17f891ba18ff54555e302388f0fe184fa33bc
