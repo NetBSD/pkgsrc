@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/04/29 07:35:37 mef Exp $
+$NetBSD: distinfo,v 1.5 2016/09/19 10:29:45 mef Exp $
 
-SHA1 (Tree-Simple-VisitorFactory-0.14.tgz) = 1ab6a7a44d82fca02421c63c4cb46d552f79380e
-RMD160 (Tree-Simple-VisitorFactory-0.14.tgz) = 5621cbaef052acb2ebde804ebe559db9ec9838ce
-SHA512 (Tree-Simple-VisitorFactory-0.14.tgz) = 91a445c3987ea1cf44f0d86b0a5a9e1f5dc1389a66f71d2357fb573913671f941f09fab548c0a46d969ac82d674d291aae36739bedbeac5f94372534601d64f0
-Size (Tree-Simple-VisitorFactory-0.14.tgz) = 41582 bytes
+SHA1 (Tree-Simple-VisitorFactory-0.15.tgz) = eaa43361b260e6ca1377b79594f105bf2bdda3f5
+RMD160 (Tree-Simple-VisitorFactory-0.15.tgz) = 81d249a46afa135e636bc56e8dd755cf6a40e52c
+SHA512 (Tree-Simple-VisitorFactory-0.15.tgz) = 1d5a39465ff7358df344c85959da5297ede203fced8ec7718ca33d171500876603f0f5d786eb0e369bd71ba67dc8e349d8f6000f9be94fdb3cdf0dad965e64fd
+Size (Tree-Simple-VisitorFactory-0.15.tgz) = 41658 bytes
