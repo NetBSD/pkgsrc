@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3918 2016/09/19 09:02:14 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3919 2016/09/19 09:04:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5510,3 +5510,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/oracle-jdk8 to 8.0.102 [ryoon 2016-09-19]
 	Added archivers/lz4json version 0.0.20160401 [wiz 2016-09-19]
 	Added devel/p5-Test-Toolbox version 0.4 [mef 2016-09-19]
+	Updated devel/readline to 7.0 [wiz 2016-09-19]
