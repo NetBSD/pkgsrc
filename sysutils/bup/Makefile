@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/09/18 23:02:48 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2016/09/19 08:52:24 wiz Exp $
 
 DISTNAME=	bup-0.28.1
 CATEGORIES=	sysutils
@@ -22,6 +22,9 @@ DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
+# TEST_DEPENDS
+BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
+
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-fuse-bindings
 
 DOCDIR=		${WRKDIR}/bup-man
@@ -32,55 +35,8 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
-USE_TOOLS+=		bash gmake perl
-REPLACE_PERL=		format-subst.pl wvtestrun
-
-# In 0.28.1, there is "bup-python" which calls the python found by
-# configure.  Arguably many of these are no longer necessary.
-REPLACE_PYTHON+=	cmd/bloom-cmd.py
-REPLACE_PYTHON+=	cmd/cat-file-cmd.py
-REPLACE_PYTHON+=	cmd/daemon-cmd.py
-REPLACE_PYTHON+=	cmd/damage-cmd.py
-REPLACE_PYTHON+=	cmd/drecurse-cmd.py
-REPLACE_PYTHON+=	cmd/fsck-cmd.py
-REPLACE_PYTHON+=	cmd/ftp-cmd.py
-REPLACE_PYTHON+=	cmd/fuse-cmd.py
-REPLACE_PYTHON+=	cmd/help-cmd.py
-REPLACE_PYTHON+=	cmd/import-duplicity-cmd.py
-REPLACE_PYTHON+=	cmd/index-cmd.py
-REPLACE_PYTHON+=	cmd/init-cmd.py
-REPLACE_PYTHON+=	cmd/join-cmd.py
-REPLACE_PYTHON+=	cmd/list-idx-cmd.py
-REPLACE_PYTHON+=	cmd/ls-cmd.py
-REPLACE_PYTHON+=	cmd/margin-cmd.py
-REPLACE_PYTHON+=	cmd/memtest-cmd.py
-REPLACE_PYTHON+=	cmd/meta-cmd.py
-REPLACE_PYTHON+=	cmd/midx-cmd.py
-REPLACE_PYTHON+=	cmd/mux-cmd.py
-REPLACE_PYTHON+=	cmd/newliner-cmd.py
-REPLACE_PYTHON+=	cmd/on--server-cmd.py
-REPLACE_PYTHON+=	cmd/on-cmd.py
-REPLACE_PYTHON+=	cmd/random-cmd.py
-REPLACE_PYTHON+=	cmd/restore-cmd.py
-REPLACE_PYTHON+=	cmd/save-cmd.py
-REPLACE_PYTHON+=	cmd/server-cmd.py
-REPLACE_PYTHON+=	cmd/split-cmd.py
-REPLACE_PYTHON+=	cmd/tag-cmd.py
-REPLACE_PYTHON+=	cmd/tick-cmd.py
-REPLACE_PYTHON+=	cmd/version-cmd.py
-REPLACE_PYTHON+=	cmd/web-cmd.py
-REPLACE_PYTHON+=	cmd/xstat-cmd.py
-REPLACE_PYTHON+=	main.py
-REPLACE_PYTHON+=	wvtest.py
-
-REPLACE_PYTHON+=	t/cleanup-mounts-under
-REPLACE_PYTHON+=	t/hardlink-sets
-REPLACE_PYTHON+=	t/id-other-than
-REPLACE_PYTHON+=	t/mksock
-REPLACE_PYTHON+=	t/ns-timestamp-resolutions
-REPLACE_PYTHON+=	t/root-status
-REPLACE_PYTHON+=	t/test-ls.sh
-REPLACE_PYTHON+=	t/unknown-owner
+USE_TOOLS+=		bash gmake perl:run
+REPLACE_PERL+=		wvtest
 
 REPLACE_BASH+=		cmd/import-rdiff-backup-cmd.sh
 REPLACE_BASH+=		t/compare-trees
