@@ -1,0 +1,7 @@
+Device Tree Compiler (dtc) toolchain for working with device tree source and 
+binary files and libfdt, a utility library for reading and manipulating the
+binary format.
+
+Both DTC and LIBFDT are made available under the terms of the GNU GPLv2.
+LIBFDT also available under the terms of the BSD license. For more information
+see README.license in the source tree.
