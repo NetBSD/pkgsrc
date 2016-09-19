@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/08/14 21:16:04 leot Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/19 17:17:27 jperkin Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.53
@@ -34,6 +34,11 @@ SUBST_MESSAGE.configmk=	Fixing CFLAGS and LDFLAGS to be user-settable.
 SUBST_FILES.configmk=	config.mk
 SUBST_SED.configmk+=	-e 's/^CFLAGS =/CFLAGS +=/'
 SUBST_SED.configmk+=	-e 's/^LDFLAGS =/LDFLAGS +=/'
+
+SUBST_CLASSES+=		osxmk
+SUBST_STAGE.osxmk=	pre-build
+SUBST_FILES.osxmk=	config.mk
+SUBST_SED.osxmk=	-e 's,-shared,-dynamiclib -undefined dynamic_lookup,'
 
 CFLAGS.SunOS+=	-D__BEGIN_DECLS= -D__END_DECLS=
 
