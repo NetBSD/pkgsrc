@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3911 2016/09/19 00:46:51 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3912 2016/09/19 00:56:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5502,3 +5502,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-enum version 0.4.6 [kamil 2016-09-19]
 	Updated archivers/zutils to 1.5 [mef 2016-09-19]
 	Updated www/p5-Mojolicious to 7.06 [mef 2016-09-19]
+	Updated www/p5-AnyEvent-HTTP to 2.23 [mef 2016-09-19]
