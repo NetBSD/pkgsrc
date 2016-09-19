@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/07/09 06:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/09/19 13:40:33 wiedi Exp $
 #
 
 DISTNAME=	boxbackup-0.11.1
@@ -19,7 +19,7 @@ MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run gmake
 
 REPLACE_PERL+=	bin/bbstored/bbstored-certs bin/bbstored/bbstored-config
 REPLACE_PERL+=	lib/raidfile/raidfile-config
