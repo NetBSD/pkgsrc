@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/12/31 01:25:22 mef Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/19 00:36:59 mef Exp $
 #
 
-DISTNAME=	zutils-1.3
+DISTNAME=	zutils-1.5
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/zutils/
 EXTRACT_SUFX=	.tar.lz
@@ -30,6 +30,8 @@ SUBST_STAGE.sysconfdir=	post-patch
 SUBST_FILES.sysconfdir= zutilsrc
 SUBST_MESSAGE.sysconfdir= path of sysconfdir in example (zutilsrc)
 SUBST_SED.sysconfdir=	-e '/sysconfdir/s,$${sysconfdir},${PREFIX}/etc,'
+
+TEST_TARGET=	check
 
 post-install:
 	${MV}	${DESTDIR}${PREFIX}/etc/zutilsrc ${DESTDIR}${EGDIR}
