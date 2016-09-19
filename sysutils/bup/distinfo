@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2016/09/18 23:02:48 gdt Exp $
+$NetBSD: distinfo,v 1.11 2016/09/19 08:52:24 wiz Exp $
 
 SHA1 (bup-0.28.1.tar.gz) = c280255eeb7e7a4fa9b6fbdbf4526ca7c8a40443
 RMD160 (bup-0.28.1.tar.gz) = 0a1c7c605632f9146f34ba4ed12718043e2e3c09
@@ -8,4 +8,3 @@ SHA1 (bup-man-0.28.1.tar.gz) = a85ea1976862f8a0478db283a2c25898b0ec5a08
 RMD160 (bup-man-0.28.1.tar.gz) = cd165ec0c71bdafc6f536db5a40a67893fc53dcc
 SHA512 (bup-man-0.28.1.tar.gz) = ba1eb2e8392ddc685c9fbec33c2342cd21105479834bc056f485fae422a1c5eaae662dbe684e4d3ff72c0f6a2c3ab73723c895cba00b22c4156dceca39502c3c
 Size (bup-man-0.28.1.tar.gz) = 29545 bytes
-SHA1 (patch-Makefile) = ed60fc2bfcd6aeb885895eeee7ae48bf779ca13a
