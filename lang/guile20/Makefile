@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/16 06:26:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/19 11:21:11 wiz Exp $
 
 DISTNAME=	guile-2.0.12
 PKGNAME=	${DISTNAME:S/guile/guile20/}
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
 MAINTAINER=	root@zta.lk
-HOMEPAGE=	ftp://ftp.gnu.org/gnu/guile/
+HOMEPAGE=	https://www.gnu.org/software/guile/
 COMMENT=	Official extension language for the GNU operating system
 LICENSE=	gnu-lgpl-v3
 
