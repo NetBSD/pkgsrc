@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3920 2016/09/19 09:06:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3921 2016/09/19 09:07:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5512,3 +5512,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-Test-Toolbox version 0.4 [mef 2016-09-19]
 	Updated devel/readline to 7.0 [wiz 2016-09-19]
 	Updated shells/bash to 4.4 [wiz 2016-09-19]
+	Updated devel/p5-String-Util to 1.26 [mef 2016-09-19]
