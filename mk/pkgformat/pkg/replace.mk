@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.3 2016/04/10 15:58:03 joerg Exp $
+# $NetBSD: replace.mk,v 1.4 2016/09/19 12:26:08 gdt Exp $
 #
 
 # _pkgformat-destdir-replace:
@@ -22,9 +22,9 @@ _pkgformat-replace: \
 	replace-fixup-installed-info \
 	.PHONY
 
+# tarup is omitted for DESTDIR, because the benefits are very small
 _pkgformat-destdir-replace: \
 	replace-names \
-	replace-tarup \
 	replace-destdir \
 	.PHONY
 
