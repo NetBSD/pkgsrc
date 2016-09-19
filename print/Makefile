@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.672 2016/09/11 16:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.673 2016/09/19 14:36:00 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -284,6 +284,8 @@ SUBDIR+=	tex-babel-vietnamese
 SUBDIR+=	tex-babel-welsh
 SUBDIR+=	tex-babelbib
 SUBDIR+=	tex-babelbib-doc
+SUBDIR+=	tex-background
+SUBDIR+=	tex-background-doc
 SUBDIR+=	tex-bagpipe
 SUBDIR+=	tex-bagpipe-doc
 SUBDIR+=	tex-bbm-macros
@@ -727,6 +729,8 @@ SUBDIR+=	tex-ifmtarg
 SUBDIR+=	tex-ifmtarg-doc
 SUBDIR+=	tex-ifnextok
 SUBDIR+=	tex-ifnextok-doc
+SUBDIR+=	tex-ifoddpage
+SUBDIR+=	tex-ifoddpage-doc
 SUBDIR+=	tex-ifplatform
 SUBDIR+=	tex-ifplatform-doc
 SUBDIR+=	tex-iftex
