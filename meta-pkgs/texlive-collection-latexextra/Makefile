@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/08/07 11:19:59 markd Exp $
+# $NetBSD: Makefile,v 1.20 2016/09/19 14:36:55 wiz Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41662
@@ -60,7 +60,7 @@ DEPENDS+=	tex-appendix-[0-9]*:../../print/tex-appendix
 # depend autonum
 # depend autopdf
 # depend avremu
-# depend background
+DEPENDS+=	tex-background-[0-9]*:../../print/tex-background
 # depend bankstatement
 # depend bashful
 # depend basicarith
@@ -512,7 +512,7 @@ DEPENDS+=	tex-hyphenat-[0-9]*:../../print/tex-hyphenat
 # depend ifmslide
 DEPENDS+=	tex-ifmtarg-[0-9]*:../../print/tex-ifmtarg
 DEPENDS+=	tex-ifnextok-[0-9]*:../../print/tex-ifnextok
-# depend ifoddpage
+DEPENDS+=	tex-ifoddpage-[0-9]*:../../print/tex-ifoddpage
 DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 # depend ifthenx
 # depend iitem
