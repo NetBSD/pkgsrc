@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/07/21 17:05:39 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/09/19 13:34:37 jperkin Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -983,6 +983,9 @@ ${PYSITELIB}/salt/modules/inspectlib/dbhandle.pyo
 ${PYSITELIB}/salt/modules/inspectlib/exceptions.py
 ${PYSITELIB}/salt/modules/inspectlib/exceptions.pyc
 ${PYSITELIB}/salt/modules/inspectlib/exceptions.pyo
+${PYSITELIB}/salt/modules/inspectlib/kiwiproc.py
+${PYSITELIB}/salt/modules/inspectlib/kiwiproc.pyc
+${PYSITELIB}/salt/modules/inspectlib/kiwiproc.pyo
 ${PYSITELIB}/salt/modules/inspectlib/query.py
 ${PYSITELIB}/salt/modules/inspectlib/query.pyc
 ${PYSITELIB}/salt/modules/inspectlib/query.pyo

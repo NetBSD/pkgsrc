@@ -1,8 +1,8 @@
-$NetBSD: patch-salt_utils_network.py,v 1.2 2016/07/21 17:05:39 jperkin Exp $
+$NetBSD: patch-salt_utils_network.py,v 1.3 2016/09/19 13:34:37 jperkin Exp $
 
 Use sockstat(1) on NetBSD
 
---- salt/utils/network.py.orig	2016-06-13 22:17:50.000000000 +0000
+--- salt/utils/network.py.orig	2016-08-26 18:55:37.000000000 +0000
 +++ salt/utils/network.py
 @@ -1086,6 +1086,8 @@ def _remotes_on(port, which_end):
              return _sunos_remotes_on(port, which_end)
@@ -13,17 +13,10 @@ Use sockstat(1) on NetBSD
          if salt.utils.is_openbsd():
              return _openbsd_remotes_on(port, which_end)
          if salt.utils.is_windows():
-@@ -1201,6 +1203,65 @@ def _freebsd_remotes_on(port, which_end)
-         if which_end == 'local' and int(lport) != port:  # ignore if local port not port
-             continue
-         if which_end == 'remote' and int(rport) != port:  # ignore if remote port not port
-+            continue
-+
-+        remotes.add(rhost)
-+
-+    return remotes
-+
-+
+@@ -1208,6 +1210,65 @@ def _freebsd_remotes_on(port, which_end)
+     return remotes
+ 
+ 
 +def _netbsd_remotes_on(port, which_end):
 +    '''
 +    Returns set of ipv4 host addresses of remote established connections
@@ -76,6 +69,13 @@ Use sockstat(1) on NetBSD
 +        if which_end == 'local' and int(lport) != port:  # ignore if local port not port
 +            continue
 +        if which_end == 'remote' and int(rport) != port:  # ignore if remote port not port
-             continue
- 
-         remotes.add(rhost)
++            continue
++
++        remotes.add(rhost)
++
++    return remotes
++
++
+ def _openbsd_remotes_on(port, which_end):
+     '''
+     OpenBSD specific helper function.
