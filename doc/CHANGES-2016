@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3914 2016/09/19 05:33:25 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3915 2016/09/19 06:02:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5505,3 +5505,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-AnyEvent-HTTP to 2.23 [mef 2016-09-19]
 	Updated www/p5-CGI-FormBuilder to 3.1000 [mef 2016-09-19]
 	Updated time/dateutils to 0.4.0 [mef 2016-09-19]
+	Updated time/khal to 0.8.3 [mef 2016-09-19]
