@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3947 2016/09/19 14:38:13 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3948 2016/09/19 17:13:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-ifoddpage version 1.1 [wiz 2016-09-19]
 	Added print/tex-ifoddpage-doc version 1.1 [wiz 2016-09-19]
 	Updated meta-pkgs/texlive-collection-latexextra to 2016pre3 [wiz 2016-09-19]
+	Updated chat/loudmouth to 1.5.3 [jperkin 2016-09-19]
