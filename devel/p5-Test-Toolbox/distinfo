@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/19 09:00:50 mef Exp $
+
+SHA1 (Test-Toolbox-0.4.tar.gz) = ae63b1d7cfce105ea6e98f9a9eb601dee7ffd270
+RMD160 (Test-Toolbox-0.4.tar.gz) = 79baa1a10c0e85a0f1224b26069adec60dc6b7e1
+SHA512 (Test-Toolbox-0.4.tar.gz) = 99d711a7cce4ac3a4fd37f4b7fc91cf75c5d4978ff83cd084599ed6c1818d22b30a3210a14b03da4646b53cc939b224937da3bea1c49bb13324c5583ee44bf81
+Size (Test-Toolbox-0.4.tar.gz) = 17713 bytes
