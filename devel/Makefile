@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2315 2016/09/18 16:48:23 kamil Exp $
+# $NetBSD: Makefile,v 1.2316 2016/09/19 00:29:36 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1765,6 +1765,7 @@ SUBDIR+=	py-distribute
 SUBDIR+=	py-docopt
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dulwich
+SUBDIR+=	py-enum
 SUBDIR+=	py-enum34
 SUBDIR+=	py-expect
 SUBDIR+=	py-extras
