@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2015/03/15 20:03:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/19 09:52:21 fhajny Exp $
 #
 
-DISTNAME=	yaml-cpp-0.5.1
+DISTNAME=	yaml-cpp-0.5.3
 CATEGORIES=	textproc
-MASTER_SITES=	http://yaml-cpp.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jbeder/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/yaml-cpp/
+HOMEPAGE=	https://github.com/jbeder/yaml-cpp/
 COMMENT=	YAML parser and emitter for C++
 LICENSE=	mit
+
+GITHUB_TAG=	${DISTNAME}
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
