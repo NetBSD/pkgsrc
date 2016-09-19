@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2016/08/25 21:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.682 2016/09/19 18:11:42 jakllsch Exp $
 #
 
 COMMENT=	System utilities
@@ -123,6 +123,7 @@ SUBDIR+=	dmidecode
 SUBDIR+=	dmsdos
 SUBDIR+=	dog
 SUBDIR+=	dptutil
+SUBDIR+=	dtc
 SUBDIR+=	dtpstree
 SUBDIR+=	duplicity
 SUBDIR+=	dvd+rw-tools
