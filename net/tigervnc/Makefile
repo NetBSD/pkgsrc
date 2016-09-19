@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2016/09/19 09:19:28 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/19 09:37:06 wiz Exp $
 
 DISTNAME=	tigervnc-1.7.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-XORG_SERVER_FILE=	xorg-server-1.17.2
+XORG_SERVER_FILE=	xorg-server-1.18.4
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
@@ -44,7 +45,7 @@ post-extract:
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
 
 post-patch:
-	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver117.patch
+	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver118.patch
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
