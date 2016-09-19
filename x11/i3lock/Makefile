@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/12 19:48:02 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/19 17:23:10 wiedi Exp $
 #
 
 DISTNAME=	i3lock-2.8
@@ -19,6 +19,8 @@ MAKE_FLAGS+=	EGDIR=${EGDIR}
 MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 
 EGDIR=	${PREFIX}/share/examples/${PKGBASE}
+
+CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t
 
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
