@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/19 13:49:02 wiedi Exp $
 
 DISTNAME=	Attic-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
@@ -19,4 +19,5 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/bin && mv attic attic${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
