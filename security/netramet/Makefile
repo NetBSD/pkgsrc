@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/12/10 14:07:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/19 13:22:21 wiedi Exp $
 #
 
 DISTNAME=	NeTraMet44
@@ -29,4 +29,5 @@ post-patch:
 	${MV} $$i.done $$i;						\
 	done
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
