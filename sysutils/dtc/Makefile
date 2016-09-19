@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/09/19 18:11:16 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/19 18:21:52 jakllsch Exp $
 
-DISTNAME=	dtc-1.4.1
+DISTNAME=	dtc-1.4.2
 CATEGORIES=	sysutils devel
 MASTER_SITES=	ftp://ftp.kernel.org/pub/software/utils/dtc/
 
