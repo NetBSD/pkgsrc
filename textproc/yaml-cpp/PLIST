@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 11:27:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/19 09:52:21 fhajny Exp $
 include/yaml-cpp/anchor.h
 include/yaml-cpp/binary.h
 include/yaml-cpp/contrib/anchordict.h
@@ -8,6 +8,7 @@ include/yaml-cpp/emitfromevents.h
 include/yaml-cpp/emitter.h
 include/yaml-cpp/emitterdef.h
 include/yaml-cpp/emittermanip.h
+include/yaml-cpp/emitterstyle.h
 include/yaml-cpp/eventhandler.h
 include/yaml-cpp/exceptions.h
 include/yaml-cpp/mark.h
