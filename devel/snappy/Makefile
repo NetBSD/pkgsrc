@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2013/11/16 19:31:30 mspo Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/19 09:30:36 fhajny Exp $
 
-DISTNAME=	snappy-1.1.1
+DISTNAME=	snappy-1.1.3
 CATEGORIES=	devel
-MASTER_SITES=	http://snappy.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/snappy/
+HOMEPAGE=	http://google.github.io/snappy/
 COMMENT=	General purpose data compression library
 LICENSE=	apache-2.0
+
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
