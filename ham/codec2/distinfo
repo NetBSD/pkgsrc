@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/01/19 04:02:07 dbj Exp $
+$NetBSD: distinfo,v 1.4 2016/09/19 09:27:57 mef Exp $
 
-SHA1 (codec2-0.5.tar.xz) = 9865802c9e7496f228eacc97549f9684ff8e77ca
-RMD160 (codec2-0.5.tar.xz) = dd948d185412c1dcb4157415ea8b7056f3895837
-SHA512 (codec2-0.5.tar.xz) = 7543142b48a41ad077ba3fa6d4cdd301f9d24e82147f87d048dad9eb471631cd2d97310d2446ffa6efe64c165a17c5b5e7bb1e242e67ec094a6f01c50771b5da
-Size (codec2-0.5.tar.xz) = 7845164 bytes
+SHA1 (codec2-0.5.1.tar.xz) = dcac0544048787a07a891e71c77fbf9ae3d78aca
+RMD160 (codec2-0.5.1.tar.xz) = ed6c2474231e64c905d320751d5b4432cd6bf0a4
+SHA512 (codec2-0.5.1.tar.xz) = 2ddfe2ef3dc89bd440a9861ed0d7b43a0be126712b18c29e40a6044da1b6a2cec508e0f40cb1d90fb8d4710646fa13606820f016a040cd147c84c44600b22cd9
+Size (codec2-0.5.1.tar.xz) = 7862968 bytes
