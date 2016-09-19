@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3925 2016/09/19 09:25:12 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.3926 2016/09/19 09:28:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5517,3 +5517,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/fldigi to 3.23.14 [mef 2016-09-19]
 	Updated net/tigervnc to 1.7.0 [wiz 2016-09-19]
 	Updated parallel/pdsh to 2.31 [fhajny 2016-09-19]
+	Updated ham/codec2 to 0.5.1 [mef 2016-09-19]
