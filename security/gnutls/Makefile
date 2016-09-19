@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.162 2016/09/15 15:44:27 gdt Exp $
+# $NetBSD: Makefile,v 1.163 2016/09/19 12:33:10 wiz Exp $
 
-DISTNAME=	gnutls-3.3.18
-PKGREVISION=	2
+DISTNAME=	gnutls-3.5.4
 CATEGORIES=	security devel
-MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.3/
+MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,8 +23,19 @@ CONFIGURE_ARGS+=	--disable-libdane
 CONFIGURE_ARGS+=	--without-tpm
 CONFIGURE_ARGS+=	AUTOGEN=/bin/true
 
+# as of 3.5.4, 1 test failure
+# FAIL: mini-server-name
+# server:262: server: did not received expected name
 TEST_TARGET=		check
+# without the USE_TOOLS line below, two more shell script based tests fail
+# but when this line is added, the tool path for bash is embedded
+# in to the binaries, so only enable this for testing and
+# disable before commit
+#USE_TOOLS+=		bash
 INFO_FILES=		yes
+
+REPLACE_BASH+=	tests/fastopen.sh
+REPLACE_BASH+=	tests/starttls.sh
 
 REPLACE_PERL+=	doc/scripts/gdoc doc/scripts/sort2.pl
 
@@ -57,6 +67,7 @@ CHECK_BUILTIN.zlib:=yes
 .include "../../devel/gmp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 .include "../../security/libtasn1/buildlink3.mk"
+BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
 # guile is useful for selftests, but bindings should be separate pkgs
 #.include "../../lang/guile20/buildlink3.mk"
