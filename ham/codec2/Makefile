@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/01/19 04:02:07 dbj Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/19 09:27:57 mef Exp $
 #
 
-DISTNAME=	codec2-0.5
+DISTNAME=	codec2-0.5.1
 CATEGORIES=	ham
 MASTER_SITES=	http://files.freedv.org/codec2/
 EXTRACT_SUFX=	.tar.xz
