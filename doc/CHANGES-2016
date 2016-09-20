@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3956 2016/09/20 08:40:24 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3957 2016/09/20 10:34:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5555,3 +5555,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/tigervnc to 1.7.0nb3 [wiz 2016-09-20]
 	Updated net/librsync to 2.0.0nb1 [wiz 2016-09-20]
 	Updated security/gnutls to 3.5.4nb1 [wiz 2016-09-20]
+	Added math/libixion version 0.12.1 [wiz 2016-09-20]
