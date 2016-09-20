@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/20 12:47:52 markd Exp $
+
+SHA1 (tex-localloc-21934/localloc.tar.xz) = 43c342213332869748c9d23850da3265fc165890
+RMD160 (tex-localloc-21934/localloc.tar.xz) = a2e87ad417028e0988bfb4ef5219886cc8e8b72c
+SHA512 (tex-localloc-21934/localloc.tar.xz) = 56e6794866a22b8e64352e1c00c49c490220389eb7a8a1e23771cc49d01b489fa53616692f2d408ba8d2ab631824f2598d14fac084027c25c057e2546df3311b
+Size (tex-localloc-21934/localloc.tar.xz) = 2468 bytes
