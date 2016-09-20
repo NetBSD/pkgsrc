@@ -1,0 +1,4 @@
+Tools to typeset documents in Polish using LaTeX2e with Polish
+fonts (the so-called PL fonts), EC fonts or CM fonts. (This
+package was previously known as platex, but has been renamed to
+resolve a name clash.)
