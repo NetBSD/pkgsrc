@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 13:08:17 markd Exp $
+share/texmf-dist/doc/mex/base/00readme
+share/texmf-dist/doc/mex/base/mex.html
+share/texmf-dist/doc/mex/base/mexinfo.eng
+share/texmf-dist/doc/mex/base/mexinfo.pol
+share/texmf-dist/doc/mex/base/qq.eps
+share/texmf-dist/doc/mex/base/tstmex.tex
