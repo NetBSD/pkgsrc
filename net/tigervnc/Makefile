@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2016/09/19 13:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/09/20 08:12:14 wiz Exp $
 
 DISTNAME=	tigervnc-1.7.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-XORG_SERVER_FILE=	xorg-server-1.18.4
+XORG_SERVER_FILE=	xorg-server-1.17.2
 SITES.${XORG_SERVER_FILE}.tar.bz2=	${MASTER_SITE_XORG:=xserver/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${XORG_SERVER_FILE}.tar.bz2
 
@@ -17,6 +17,8 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
 BUILD_DEPENDS+=	font-util-[0-9]*:../../fonts/font-util
 BUILD_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
+
+DEPENDS+=	mcookie-[0-9]*:../../x11/mcookie
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
@@ -45,7 +47,7 @@ post-extract:
 	cp -r ${WRKDIR}/${XORG_SERVER_FILE}/* ${WRKSRC}/unix/xserver
 
 post-patch:
-	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver118.patch
+	cd ${WRKSRC}/unix/xserver && ${PATCH} --batch -p1 <../xserver117.patch
 
 XORG_CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 XORG_CONFIGURE_ARGS+=	--disable-xwayland --disable-kdrive --disable-xephyr
