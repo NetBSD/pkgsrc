@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 13:05:41 markd Exp $
+share/texmf-dist/tex/mex/utf8mex/utf8-pl.tex
+share/texmf-dist/tex/mex/utf8mex/utf8mex.ini
+share/texmf-dist/tex/mex/utf8mex/utf8plsq.tex
