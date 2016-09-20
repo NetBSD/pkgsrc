@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2016/08/07 07:19:04 markd Exp $
+# $NetBSD: Makefile,v 1.299 2016/09/20 12:34:10 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -315,6 +315,8 @@ SUBDIR+=	tex-cbfonts
 SUBDIR+=	tex-cbfonts-doc
 SUBDIR+=	tex-cbfonts-fd
 SUBDIR+=	tex-cbfonts-fd-doc
+SUBDIR+=	tex-cc-pl
+SUBDIR+=	tex-cc-pl-doc
 SUBDIR+=	tex-ccfonts
 SUBDIR+=	tex-ccfonts-doc
 SUBDIR+=	tex-ccicons
@@ -699,6 +701,8 @@ SUBDIR+=	tex-pxfonts
 SUBDIR+=	tex-pxfonts-doc
 SUBDIR+=	tex-pxtxalfa
 SUBDIR+=	tex-pxtxalfa-doc
+SUBDIR+=	tex-qpxqtx
+SUBDIR+=	tex-qpxqtx-doc
 SUBDIR+=	tex-quattrocento
 SUBDIR+=	tex-quattrocento-doc
 SUBDIR+=	tex-raleway
