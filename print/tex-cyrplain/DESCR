@@ -1,0 +1,4 @@
+This directory contains files which can be used to make rusified
+Plain TeX and other Plain TeX based formats, such as AMS-TeX, Texinfo
+or BLUe TeX, using cyrillic fonts in LCY encoding (which is an 8-bit
+extension of OT1 similar to cp866) or T2A encoding.

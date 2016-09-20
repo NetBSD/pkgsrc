@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 12:41:50 markd Exp $
+share/texmf-dist/tex/plain/cyrplain/README
+share/texmf-dist/tex/plain/cyrplain/cyramstx.ini
+share/texmf-dist/tex/plain/cyrplain/cyrblue.ini
+share/texmf-dist/tex/plain/cyrplain/cyrcmfnt.tex
+share/texmf-dist/tex/plain/cyrplain/cyrecfnt.tex
+share/texmf-dist/tex/plain/cyrplain/cyrtex.cfg
+share/texmf-dist/tex/plain/cyrplain/cyrtex.ini
+share/texmf-dist/tex/plain/cyrplain/cyrtex.tex
+share/texmf-dist/tex/plain/cyrplain/cyrtxinf.ini
+share/texmf-dist/tex/plain/cyrplain/makefmts.bat
+share/texmf-dist/tex/plain/cyrplain/makefmts.sh
+share/texmf-dist/tex/plain/cyrplain/plainenc.tex
+share/texmf-dist/tex/plain/cyrplain/txxdefs.tex
+share/texmf-dist/tex/plain/cyrplain/txxextra.tex
