@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16475 2016/09/20 11:44:42 mef Exp $
+$NetBSD: TODO,v 1.16476 2016/09/20 12:05:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -537,6 +537,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.8
+	o cups-2.2
 	o cvm-0.97
 	o cvs-fast-export-1.38
 	o cvs2p4-2.5.5 [schmonz]
@@ -1013,7 +1014,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libowfat-0.29
 	o libpgm-5.2.122
-	o libprelude-1.2.5
+	o libprelude-3.1.0
+	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libreoffice-5.2
 	o libstree-0.4.2
@@ -1308,6 +1310,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pppd-2.4.7
 	o prayer-1.3.5
 	o prboom-plus-2.5.1.4
+	o prelude-correlator-3.1.0
+	o prelude-lml-3.1.0
+	o prelude-manager-3.1.0
 	o prime-1.5.1.3
 	o privoxy-3.0.24
 	o profit-2.5.3
@@ -1595,7 +1600,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-6.0.4
+	o tor-browser-6.0.5
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1633,6 +1638,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.24
 	o vile-9.8q
+	o vim-8.0
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1659,7 +1665,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-devel-1.9.18
+	o wine-devel-1.9.19
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
