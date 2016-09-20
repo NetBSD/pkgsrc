@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.31 2016/07/15 14:51:16 gdt Exp $
+$NetBSD: README.MacOSX,v 1.32 2016/09/20 00:46:49 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -132,6 +132,13 @@ recommend to install command-line tools.
 
 Command Line Tools for Xcode can be obtained from
 https://developer.apple.com/downloads/
+
+Since Xcode 7 (installed from the Apple Store) the development
+environment can upgrade itself without interaction from the user, but
+will not automatically update the Command Line Tools.  This will
+cause system header files like stdlib.h not to be found by pkgsrc.
+The command `xcode-select --install' will install the Command Line
+Tools for Xcode.
 
 ** cvs
 
