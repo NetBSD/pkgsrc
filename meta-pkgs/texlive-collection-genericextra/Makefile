@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/08/07 11:05:43 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/09/20 13:40:12 markd Exp $
 
 DISTNAME=	collection-genericextra
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41695
@@ -25,7 +25,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend dirtree
 # depend docbytex
 # depend dowith
-# depend eijkhout
+DEPENDS+=	tex-eijkhout-[0-9]*:../../print/tex-eijkhout
 # depend encxvlna
 # depend epigram
 # depend fenixpar
