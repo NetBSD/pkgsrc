@@ -1,0 +1,5 @@
+The package offers a simple notation for pretty complex tables
+(to Michael J. Ferguson's credit). With PostScript, the package
+allows shaded/coloured tables, diagonal rules, etc. The package
+is supposed to work with both Plain and LaTeX. An AWK converter
+from ASCII semigraphic tables to TAP notation is included.
