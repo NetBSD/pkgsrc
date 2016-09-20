@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2016/03/05 11:27:53 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2016/09/20 11:07:35 wiz Exp $
 
 BUILDLINK_TREE+=	cups
 
@@ -23,7 +23,7 @@ pkgbase := cups
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .endif # CUPS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-cups
