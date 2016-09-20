@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/19 19:21:15 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2016/09/20 12:59:25 wiz Exp $
 
 DISTNAME=	geomyidae-0.26.3
 CATEGORIES=	net
@@ -28,5 +27,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/index.gph ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rc.d/* ${DESTDIR}${EGDIR}/rc.d
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

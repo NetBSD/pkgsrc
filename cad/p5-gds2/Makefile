@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 19:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/09/20 12:59:24 wiz Exp $
 
 DISTNAME=	GDS2-3.33
 PKGREVISION=	1
@@ -10,7 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/GDS2/lib/GDS2.pm
 COMMENT=	Modules to read, write, and manipulate GDS2 (GDSII) stream files
 LICENSE=	artistic
 
-# url2pkg-marker (please do not remove this line.)
 PERL5_PACKLIST= auto/GDS2/.packlist
 
 .include "../../lang/perl5/module.mk"
