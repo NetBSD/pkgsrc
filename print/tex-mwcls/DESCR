@@ -1,0 +1,11 @@
+mwcls is a set of document classes for LaTeX 2e designed with
+Polish typographical tradition in mind. Classes include:
+'mwart' (which is a replacement for 'article'), 'mwrep'
+(replacing 'report'), and 'mwbk' (replacing 'book'). Most
+features present in standard classes work with mwcls classes.
+Some extensions/exceptions include: sectioning commands allow
+for second optional argument (it is possible to state different
+texts for running head and for TOC), new environments
+'itemize*' and 'enumerate*' for lists with long items, page
+styles have variants for normal, opening, closing, and blank
+pages.
