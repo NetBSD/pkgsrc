@@ -1,0 +1,3 @@
+This package approaches the problem of the shortage of
+registers, by providing a mechanism for local allocation. The
+package works with Plain TeX, LaTeX and LaTeX 2.09.
