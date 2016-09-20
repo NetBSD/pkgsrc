@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:30 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/09/20 00:37:37 gdt Exp $
 
-SHA1 (guile-lib-0.2.2.tar.gz) = 2ad374f61a9e974dc828605dd8a41b4c3f6c145e
-RMD160 (guile-lib-0.2.2.tar.gz) = b18e1e9599b4a9b4fa3386962784574e302ee717
-SHA512 (guile-lib-0.2.2.tar.gz) = 0eb0a9d80c9237bdab0b83625169883daaab1fea4a4f669ce32f7efc51f635e0eeb9697fd0f1777f1e63d6b5829b5f942fb90a0d93a69125849be4582d3c094e
-Size (guile-lib-0.2.2.tar.gz) = 476723 bytes
+SHA1 (guile-lib-0.2.3.tar.gz) = 546ca15e963d8137e1cd3e8da4693983b3a30aa8
+RMD160 (guile-lib-0.2.3.tar.gz) = 17ac21126fc9a808775cdce352a3fe9eff3fed1b
+SHA512 (guile-lib-0.2.3.tar.gz) = 88a69ebaf6bb705babfc849389fa6413e5542188fd1b208b1ca21946a5faa9ae656fb24bf65759fa0171f890f5361f7554f7a07d3b1abe4c8284395755125f41
+Size (guile-lib-0.2.3.tar.gz) = 560281 bytes
