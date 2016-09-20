@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/09/20 21:02:40 maya Exp $
+
+If you are experiencing crashes while plotting, you can try:
+>> graphics_toolkit gnuplot
+
+===========================================================================
