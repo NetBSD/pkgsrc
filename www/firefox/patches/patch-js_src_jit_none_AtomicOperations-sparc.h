@@ -1,10 +1,13 @@
-$NetBSD: patch-js_src_jit_none_AtomicOperations-sparc.h,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-js_src_jit_none_AtomicOperations-sparc.h,v 1.3 2016/09/20 20:01:41 ryoon Exp $
 
 Part of https://bugzilla.mozilla.org/show_bug.cgi?id=1232150
 
---- /dev/null	2016-05-02 17:53:05.061148459 +0200
-+++ js/src/jit/none/AtomicOperations-sparc.h	2016-05-02 18:11:03.394211888 +0200
-@@ -0,0 +1,251 @@
+--- js/src/jit/none/AtomicOperations-sparc.h.orig	2016-08-01 16:14:38.000000000 +0000
++++ js/src/jit/none/AtomicOperations-sparc.h
+@@ -249,3 +249,254 @@ js::jit::RegionLock::release(void* addr)
+ #endif
+ 
+ #endif // jit_sparc_AtomicOperations_sparc_h
 +/* -*- Mode: C++; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*-
 + * vim: set ts=8 sts=4 et sw=4 tw=99:
 + * This Source Code Form is subject to the terms of the Mozilla Public

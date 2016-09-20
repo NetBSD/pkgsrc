@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.82 2016/08/20 11:17:32 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.83 2016/09/20 20:01:41 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -9,6 +9,9 @@
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
+
+# Enable Google widevine CDM. This requires external libwidevinecdm.so.
+CONFIGURE_ARGS+=	--enable-eme=widevine
 .endif
 
 HAS_CONFIGURE=		yes
