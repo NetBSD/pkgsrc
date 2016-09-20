@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/20 12:59:24 wiz Exp $
 
 DISTNAME=	Log-Message-Simple-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Log-Message-[0-9]*:../../devel/p5-Log-Message
 
-# url2pkg-marker (please do not remove this line.)
 PERL5_PACKLIST=	auto/Log/Message/Simple/.packlist
 
 .include "../../lang/perl5/module.mk"
