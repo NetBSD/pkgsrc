@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:03:15 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/20 13:32:19 markd Exp $
 
 DISTNAME=	collection-langpolish
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30372
@@ -14,21 +14,21 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 
 DEPENDS+=	tex-babel-polish-[0-9]*:../../print/tex-babel-polish
-# depend cc-pl
+DEPENDS+=	tex-cc-pl-[0-9]*:../../fonts/tex-cc-pl
 DEPENDS+=	tex-gustlib-[0-9]*:../../print/tex-gustlib
 # gustprog is documentation only
 DEPENDS+=	tex-hyphen-polish-[0-9]*:../../print/tex-hyphen-polish
 # lshort-polish is documentation only
-# depend mex
-# depend mwcls
+DEPENDS+=	tex-mex-[0-9]*:../../print/tex-mex
+DEPENDS+=	tex-mwcls-[0-9]*:../../print/tex-mwcls
 DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
-# depend polski
+DEPENDS+=	tex-polski-[0-9]*:../../print/tex-polski
 # depend przechlewski-book
-# depend qpxqtx
-# depend tap
+DEPENDS+=	tex-qpxqtx-[0-9]*:../../fonts/tex-qpxqtx
+DEPENDS+=	tex-tap-[0-9]*:../../print/tex-tap
 # tex-virtual-academy-pl is documentation only
 # texlive-pl is documentation only
-# depend utf8mex
+DEPENDS+=	tex-utf8mex-[0-9]*:../../print/tex-utf8mex
 
 META_PACKAGE=	yes
 
