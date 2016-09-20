@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 12:57:36 markd Exp $
+share/texmf-dist/doc/latex/greek-inputenc/README
+share/texmf-dist/doc/latex/greek-inputenc/README.html
+share/texmf-dist/doc/latex/greek-inputenc/greek-utf8.pdf
+share/texmf-dist/doc/latex/greek-inputenc/greek-utf8.tex
+share/texmf-dist/doc/latex/greek-inputenc/lgrenc.dfu.html
+share/texmf-dist/doc/latex/greek-inputenc/test-iso-8859-7.pdf
+share/texmf-dist/doc/latex/greek-inputenc/test-iso-8859-7.tex
+share/texmf-dist/doc/latex/greek-inputenc/unicode-licr.txt
