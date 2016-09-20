@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2016/08/15 19:09:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.41 2016/09/20 11:12:23 wiz Exp $
 
 DISTNAME=	openjdk-1.8.102-20160811
 PKGNAME=	openjdk8-1.8.102
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
