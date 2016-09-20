@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/20 12:37:51 mef Exp $
 
 DISTNAME=	Signal-Mask-0.008
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,9 @@ HOMEPAGE=	https://cpan.metacpan.org/authors/id/L/LE/LEONT/
 HOMEPAGE=	https://metacpan.org/pod/Signal::Mask
 COMMENT=	Signal::Mask - Signal masks made easy
 LICENSE=	${PERL5_LICENSE}
+
+# for make test
+BUILD_DEPENDS+=	p5-IPC-Signal-[0-9]*:../../devel/p5-IPC-Signal
 
 PERL5_PACKLIST=	auto/Signal/Mask/.packlist
 
