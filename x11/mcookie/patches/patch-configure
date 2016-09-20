@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2016/09/20 08:00:51 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2016-04-12 10:34:01.000000000 +0000
++++ configure
+@@ -20780,7 +20780,7 @@ else
+ fi
+ 
+ 
+-if test "x$enable_libmount_force_mountinfo" == xyes; then :
++if test "x$enable_libmount_force_mountinfo" = xyes; then :
+ 
+ 
+ $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
+@@ -28664,7 +28664,7 @@ else
+ fi
+ 
+ 
+-if test "x$enable_usrdir_path" == xyes; then :
++if test "x$enable_usrdir_path" = xyes; then :
+ 
+ 
+ $as_echo "#define USE_USRDIR_PATHS_ONLY 1" >>confdefs.h
