@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/19 14:10:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/20 10:52:53 wiz Exp $
 bin/orcus-css-dump
+bin/orcus-csv
 bin/orcus-detect
+bin/orcus-gnumeric
 bin/orcus-json
 bin/orcus-mso-encryption
+bin/orcus-ods
+bin/orcus-xls-xml
+bin/orcus-xlsx
+bin/orcus-xml
 bin/orcus-xml-dump
 bin/orcus-yaml
 bin/orcus-zip-dump
@@ -48,8 +54,17 @@ include/liborcus-0.12/orcus/sax_parser.hpp
 include/liborcus-0.12/orcus/sax_parser_base.hpp
 include/liborcus-0.12/orcus/sax_token_parser.hpp
 include/liborcus-0.12/orcus/sax_token_parser_thread.hpp
+include/liborcus-0.12/orcus/spreadsheet/auto_filter.hpp
+include/liborcus-0.12/orcus/spreadsheet/document.hpp
 include/liborcus-0.12/orcus/spreadsheet/export_interface.hpp
+include/liborcus-0.12/orcus/spreadsheet/factory.hpp
+include/liborcus-0.12/orcus/spreadsheet/global_settings.hpp
 include/liborcus-0.12/orcus/spreadsheet/import_interface.hpp
+include/liborcus-0.12/orcus/spreadsheet/shared_strings.hpp
+include/liborcus-0.12/orcus/spreadsheet/sheet.hpp
+include/liborcus-0.12/orcus/spreadsheet/sheet_properties.hpp
+include/liborcus-0.12/orcus/spreadsheet/sheet_range.hpp
+include/liborcus-0.12/orcus/spreadsheet/styles.hpp
 include/liborcus-0.12/orcus/spreadsheet/types.hpp
 include/liborcus-0.12/orcus/stream.hpp
 include/liborcus-0.12/orcus/string_pool.hpp
@@ -67,4 +82,6 @@ include/liborcus-0.12/orcus/zip_archive_stream.hpp
 lib/liborcus-0.12.la
 lib/liborcus-mso-0.12.la
 lib/liborcus-parser-0.12.la
+lib/liborcus-spreadsheet-model-0.12.la
 lib/pkgconfig/liborcus-0.12.pc
+lib/pkgconfig/liborcus-spreadsheet-model-0.12.pc
