@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3952 2016/09/20 00:37:49 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.3953 2016/09/20 08:01:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5551,3 +5551,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/dtc to 1.4.2 [jakllsch 2016-09-19]
 	Updated graphics/nvidia-texture-tools to 2.1.0 [kamil 2016-09-19]
 	Updated devel/guile-lib to 0.2.3 [gdt 2016-09-20]
+	Added x11/mcookie version 2.28 [wiz 2016-09-20]
