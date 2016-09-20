@@ -1,0 +1,2 @@
+mcookie generates a 128-bit random hexadecimal number for use with
+the X authority system.
