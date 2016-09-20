@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.166 2016/09/19 15:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.167 2016/09/20 08:40:15 wiz Exp $
 
 DISTNAME=	gnutls-3.5.4
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5/
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-openssl-compatibility
 CONFIGURE_ARGS+=	--disable-guile
 CONFIGURE_ARGS+=	--disable-libdane
 CONFIGURE_ARGS+=	--without-tpm
-CONFIGURE_ARGS+=	AUTOGEN=/bin/true
+CONFIGURE_ARGS+=	--disable-valgrind-tests
 
 # as of 3.5.4, 0 test failures
 TEST_TARGET=		check
@@ -63,6 +64,7 @@ post-install:
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/autogen/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libcfg+/buildlink3.mk"
