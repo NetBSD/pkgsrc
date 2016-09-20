@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3961 2016/09/20 11:49:39 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3962 2016/09/20 12:04:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5561,3 +5561,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/p5-Font-FreeType to 0.07 [mef 2016-09-20]
 	Updated fonts/p5-Font-TTF to 1.06 [mef 2016-09-20]
 	Updated fonts/fntsample to 4.1 [mef 2016-09-20]
+	Updated fonts/kanjistrokeorders-ttf to 4.000 [mef 2016-09-20]
