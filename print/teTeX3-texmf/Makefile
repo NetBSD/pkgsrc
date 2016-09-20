@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2015/05/31 07:09:08 markd Exp $
+# $NetBSD: Makefile,v 1.81 2016/09/20 13:21:23 markd Exp $
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	56
+PKGREVISION=	57
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
 
@@ -50,6 +50,7 @@ DEPENDS+=	tex-caption-[0-9]*:../../print/tex-caption
 DEPENDS+=	tex-cases-[0-9]*:../../print/tex-cases
 DEPENDS+=	tex-cbfonts-[0-9]*:../../fonts/tex-cbfonts
 DEPENDS+=	tex-cbfonts-fd-[0-9]*:../../fonts/tex-cbfonts-fd
+DEPENDS+=	tex-cc-pl-[0-9]*:../../fonts/tex-cc-pl
 DEPENDS+=	tex-ccaption-[0-9]*:../../print/tex-ccaption
 DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
 DEPENDS+=	tex-changebar-[0-9]*:../../print/tex-changebar
@@ -72,10 +73,12 @@ DEPENDS+=	tex-crop-[0-9]*:../../print/tex-crop
 DEPENDS+=	tex-cs-[0-9]*:../../fonts/tex-cs
 DEPENDS+=	tex-cslatex-[0-9]*:../../print/tex-cslatex
 DEPENDS+=	tex-csplain-[0-9]*:../../print/tex-csplain
+DEPENDS+=	tex-currvita-[0-9]*:../../print/tex-currvita
 DEPENDS+=	tex-curves-[0-9]*:../../print/tex-curves
 DEPENDS+=	tex-custom-bib-[0-9]*:../../print/tex-custom-bib
 DEPENDS+=	tex-cweb-[0-9]*:../../print/tex-cweb
 DEPENDS+=	tex-cyrillic>=2009:../../print/tex-cyrillic
+DEPENDS+=	tex-cyrplain-[0-9]*:../../print/tex-cyrplain
 DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
 DEPENDS+=	tex-dinbrief-[0-9]*:../../print/tex-dinbrief
 DEPENDS+=	tex-dk-bib-[0-9]*:../../print/tex-dk-bib
@@ -85,6 +88,7 @@ DEPENDS+=	tex-ec>=1.0:../../fonts/tex-ec
 DEPENDS+=	tex-ecc>=1.0:../../fonts/tex-ecc
 DEPENDS+=	tex-eepic>=1.1e:../../graphics/tex-eepic
 DEPENDS+=	tex-endfloat-[0-9]*:../../print/tex-endfloat
+DEPENDS+=	tex-eijkhout-[0-9]*:../../print/tex-eijkhout
 DEPENDS+=	tex-endnotes-[0-9]*:../../print/tex-endnotes
 DEPENDS+=	tex-enumitem-[0-9]*:../../print/tex-enumitem
 DEPENDS+=	tex-eplain-[0-9]*:../../print/tex-eplain
@@ -112,9 +116,11 @@ DEPENDS+=	tex-framed-[0-9]*:../../print/tex-framed
 DEPENDS+=	tex-ftcap-[0-9]*:../../print/tex-ftcap
 DEPENDS+=	tex-fwlw-[0-9]*:../../print/tex-fwlw
 DEPENDS+=	tex-g-brief-[0-9]*:../../print/tex-g-brief
+DEPENDS+=	tex-genmisc-[0-9]*:../../print/tex-genmisc
 DEPENDS+=	tex-germbib-[0-9]*:../../print/tex-germbib
 DEPENDS+=	tex-gothic-[0-9]*:../../fonts/tex-gothic
 DEPENDS+=	tex-graphics-pln-[0-9]*:../../graphics/tex-graphics-pln
+DEPENDS+=	tex-greek-inputenc-[0-9]*:../../print/tex-greek-inputenc
 DEPENDS+=	tex-gustlib-[0-9]*:../../print/tex-gustlib
 DEPENDS+=	tex-hypernat-[0-9]*:../../print/tex-hypernat
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
@@ -167,15 +173,18 @@ DEPENDS+=	tex-lh>=3.5g:../../fonts/tex-lh
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-listing-[0-9]*:../../print/tex-listing
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
+DEPENDS+=	tex-localloc-[0-9]*:../../print/tex-localloc
 DEPENDS+=	tex-ltabptch-[0-9]*:../../print/tex-ltabptch
 DEPENDS+=	tex-ly1-[0-9]*:../../fonts/tex-ly1
 DEPENDS+=	tex-magaz-[0-9]*:../../print/tex-magaz
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
+DEPENDS+=	tex-mathpazo-[0-9]*:../../fonts/tex-mathpazo
 DEPENDS+=	tex-mathtools-[0-9]*:../../print/tex-mathtools
 DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
 DEPENDS+=	tex-metapost-[0-9]*:../../graphics/tex-metapost
+DEPENDS+=	tex-mex-[0-9]*:../../print/tex-mex
 DEPENDS+=	tex-mfpic-[0-9]*:../../graphics/tex-mfpic
 DEPENDS+=	tex-microtype-[0-9]*:../../print/tex-microtype
 DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
@@ -186,6 +195,7 @@ DEPENDS+=	tex-mparhack-[0-9]*:../../print/tex-mparhack
 DEPENDS+=	tex-ms-[0-9]*:../../print/tex-ms
 DEPENDS+=	tex-multibib-[0-9]*:../../print/tex-multibib
 DEPENDS+=	tex-multirow-[0-9]*:../../print/tex-multirow
+DEPENDS+=	tex-mwcls-[0-9]*:../../print/tex-mwcls
 DEPENDS+=	tex-needspace-[0-9]*:../../print/tex-needspace
 DEPENDS+=	tex-nextpage-[0-9]*:../../print/tex-nextpage
 DEPENDS+=	tex-nomencl-[0-9]*:../../print/tex-nomencl
@@ -207,6 +217,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-placeins-plain-[0-9]*:../../print/tex-placeins-plain
+DEPENDS+=	tex-polski-[0-9]*:../../print/tex-polski
 DEPENDS+=	tex-poltawski-[0-9]*:../../print/tex-poltawski
 DEPENDS+=	tex-preprint-[0-9]*:../../print/tex-preprint
 DEPENDS+=	tex-preview-[0-9]*:../../print/tex-preview
@@ -238,6 +249,7 @@ DEPENDS+=	tex-pst-uml-[0-9]*:../../devel/tex-pst-uml
 DEPENDS+=	tex-pst-vue3d-[0-9]*:../../graphics/tex-pst-vue3d
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks
 DEPENDS+=	tex-pstricks-add-[0-9]*:../../graphics/tex-pstricks-add
+DEPENDS+=	tex-qpxqtx-[0-9]*:../../fonts/tex-qpxqtx
 DEPENDS+=	tex-relsize-[0-9]*:../../print/tex-relsize
 DEPENDS+=	tex-revtex4-[0-9]*:../../print/tex-revtex4
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
@@ -261,8 +273,10 @@ DEPENDS+=	tex-subfigure-[0-9]*:../../print/tex-subfigure
 DEPENDS+=	tex-supertabular-[0-9]*:../../print/tex-supertabular
 DEPENDS+=	tex-t2-[0-9]*:../../print/tex-t2
 DEPENDS+=	tex-tabls-[0-9]*:../../print/tex-tabls
+DEPENDS+=	tex-tap-[0-9]*:../../print/tex-tap
 DEPENDS+=	tex-tex-gyre-[0-9]*:../../fonts/tex-tex-gyre
 DEPENDS+=	tex-tex-gyre-math-[0-9]*:../../fonts/tex-tex-gyre-math
+DEPENDS+=	tex-texdraw-[0-9]*:../../graphics/tex-texdraw
 DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 DEPENDS+=	tex-textfit-[0-9]*:../../print/tex-textfit
 DEPENDS+=	tex-textmerg-[0-9]*:../../print/tex-textmerg
@@ -279,6 +293,7 @@ DEPENDS+=	tex-umlaute-[0-9]*:../../print/tex-umlaute
 DEPENDS+=	tex-units-[0-9]*:../../print/tex-units
 DEPENDS+=	tex-upquote-[0-9]*:../../print/tex-upquote
 DEPENDS+=	tex-url-[0-9]*:../../print/tex-url
+DEPENDS+=	tex-utf8mex-[0-9]*:../../print/tex-utf8mex
 DEPENDS+=	tex-verbdef-[0-9]*:../../print/tex-verbdef
 DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
 DEPENDS+=	tex-vertbars-[0-9]*:../../print/tex-vertbars
@@ -310,8 +325,6 @@ USE_TOOLS+=	sh:run pax
 INSTALLATION_DIRS+=	share/texmf-dist
 
 TEX_MAP_FILES+=		mathpple.map
-TEX_MAP_FILES+=		urwvn.map
-TEX_MIXEDMAP_FILES+=	ccpl.map
 
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/tex-tetex/map.mk"
@@ -325,12 +338,10 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/afm/[a-x]*
 	rm -rf ${WRKSRC}/fonts/[clop]*
 	rm -rf ${WRKSRC}/fonts/enc/dvipdfm
-	rm -rf ${WRKSRC}/fonts/enc/dvips/[abd-oq-z]*
-	rm -rf ${WRKSRC}/fonts/enc/dvips/context
+	rm -rf ${WRKSRC}/fonts/enc/dvips/[abcd-oq-z]*
 	rm -rf ${WRKSRC}/fonts/enc/dvips/pl
 	rm -rf ${WRKSRC}/fonts/map/dvipdfm
-	rm -rf ${WRKSRC}/fonts/map/dvips/[abd-knoq-sv-z]*
-	rm -rf ${WRKSRC}/fonts/map/dvips/context
+	rm -rf ${WRKSRC}/fonts/map/dvips/[abcd-knoq-sv-z]*
 	rm -rf ${WRKSRC}/fonts/map/dvips/lm
 	rm -rf ${WRKSRC}/fonts/map/dvips/misc/cmcyr.map
 	rm -rf ${WRKSRC}/fonts/map/dvips/misc/[d-o]*
@@ -338,6 +349,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/map/dvips/psnfss
 	rm -rf ${WRKSRC}/fonts/map/dvips/tetex/[abd-km-z]*.map
 	-rmdir ${WRKSRC}/fonts/map/dvips/updmap
+	rm -rf ${WRKSRC}/fonts/map/dvips/urwvn
 	rm -rf ${WRKSRC}/fonts/map/fontname
 	-rmdir ${WRKSRC}/fonts/map/pdftex/updmap
 	-rmdir ${WRKSRC}/fonts/misc
@@ -347,6 +359,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/source/lh
 	rm -rf ${WRKSRC}/fonts/source/public/[abd-ln-uw-z]*
 	rm -rf ${WRKSRC}/fonts/source/public/cbgreek
+	rm -rf ${WRKSRC}/fonts/source/public/cc-pl
 	rm -rf ${WRKSRC}/fonts/source/public/cm
 	rm -rf ${WRKSRC}/fonts/source/public/cmbright
 	rm -rf ${WRKSRC}/fonts/source/public/cmextra
@@ -355,6 +368,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/source/public/cs
 	rm -rf ${WRKSRC}/fonts/source/public/mflogo
 	rm -f ${WRKSRC}/fonts/source/public/misc/[0-9a-wyz]*.mf
+	rm -rf ${WRKSRC}/fonts/source/public/vnr
 	rm -rf ${WRKSRC}/fonts/tfm/adobe/[a-ln-z]*
 	rm -rf ${WRKSRC}/fonts/tfm/ams
 	rm -rf ${WRKSRC}/fonts/tfm/bitstrea
@@ -364,6 +378,7 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/cg/times
 	rm -rf ${WRKSRC}/fonts/tfm/[d-o]*
 	rm -rf ${WRKSRC}/fonts/tfm/public/[abd-ln-pr-tw-z]*
+	rm -rf ${WRKSRC}/fonts/tfm/public/cc-pl
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm
 	rm -rf ${WRKSRC}/fonts/tfm/public/cmbright
 	rm -rf ${WRKSRC}/fonts/tfm/public/cm[c-z]*
@@ -373,22 +388,23 @@ post-extract:
 	rm -rf ${WRKSRC}/fonts/tfm/public/marvosym
 	rm -rf ${WRKSRC}/fonts/tfm/public/mflogo
 	rm -f ${WRKSRC}/fonts/tfm/public/misc/[b-q]*.tfm
-	rm -rf ${WRKSRC}/fonts/tfm/public/qfonts
+	rm -rf ${WRKSRC}/fonts/tfm/public/q*
+	rm -rf ${WRKSRC}/fonts/tfm/public/urwvn
+	rm -rf ${WRKSRC}/fonts/tfm/public/vnr
 	rm -rf ${WRKSRC}/fonts/tfm/yandy/times
 	-rmdir ${WRKSRC}/fonts/truetype
 	rm -rf ${WRKSRC}/fonts/type1/[a-oq-z]*
 	rm -rf ${WRKSRC}/fonts/type1/public/[abd-tw-z]*
+	rm -rf ${WRKSRC}/fonts/type1/public/cc-pl
 	rm -rf ${WRKSRC}/fonts/type1/public/cmcyr
 	rm -rf ${WRKSRC}/fonts/type1/public/cs
+	rm -rf ${WRKSRC}/fonts/type1/public/urwvn
+	rm -rf ${WRKSRC}/fonts/type1/public/vnr
 	-rmdir ${WRKSRC}/fonts/type3
 	-rmdir ${WRKSRC}/fonts/type42
 	rm -rf ${WRKSRC}/fonts/vf/adobe/[a-ln-z]*
 	rm -rf ${WRKSRC}/fonts/vf/bitstrea
-	rm -rf ${WRKSRC}/fonts/vf/public/ae*
-	rm -rf ${WRKSRC}/fonts/vf/public/cmcyr
-	rm -rf ${WRKSRC}/fonts/vf/public/eulervm
-	rm -rf ${WRKSRC}/fonts/vf/public/pxfonts
-	rm -rf ${WRKSRC}/fonts/vf/public/t*
+	rm -rf ${WRKSRC}/fonts/vf/public
 	rm -rf ${WRKSRC}/fonts/vf/cg/cou*
 	rm -rf ${WRKSRC}/fonts/vf/cg/[h-k]*
 	rm -rf ${WRKSRC}/fonts/vf/cg/times
@@ -397,16 +413,23 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/context
 	rm -rf ${WRKSRC}/tex/cslatex
 	rm -rf ${WRKSRC}/tex/csplain
+	rm -rf ${WRKSRC}/tex/cyrplain
 	rm -rf ${WRKSRC}/tex/eplain
 	rm -rf ${WRKSRC}/tex/fontinst
 	rm -rf ${WRKSRC}/tex/generic/[abdf-km-pu-z]*
 	rm -rf ${WRKSRC}/tex/generic/con*
 	rm -rf ${WRKSRC}/tex/generic/csplain
+	rm -rf ${WRKSRC}/tex/generic/eijkhout
 	rm -rf ${WRKSRC}/tex/generic/enctex
 	rm -rf ${WRKSRC}/tex/generic/encodings
 	rm -rf ${WRKSRC}/tex/generic/epsf
+	rm -rf ${WRKSRC}/tex/generic/localloc
+	rm -rf ${WRKSRC}/tex/generic/q*
+	rm -rf ${WRKSRC}/tex/generic/random
 	rm -rf ${WRKSRC}/tex/generic/ruhyphen
+	rm -rf ${WRKSRC}/tex/generic/tap
 	rm -rf ${WRKSRC}/tex/generic/tex-ps
+	rm -rf ${WRKSRC}/tex/generic/texdraw
 	rm -rf ${WRKSRC}/tex/generic/texnames
 	rm -rf ${WRKSRC}/tex/generic/thumbpdf
 	rm -rf ${WRKSRC}/tex/lambda
@@ -418,6 +441,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/cite
 	rm -rf ${WRKSRC}/tex/latex/c[m-r]*
 	rm -rf ${WRKSRC}/tex/latex/cslatex
+	rm -rf ${WRKSRC}/tex/latex/currvita
 	rm -rf ${WRKSRC}/tex/latex/curves
 	rm -rf ${WRKSRC}/tex/latex/custom-bib
 	rm -rf ${WRKSRC}/tex/latex/c[v-z]*
@@ -431,6 +455,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/germbib
 	rm -rf ${WRKSRC}/tex/latex/geo*
 	rm -rf ${WRKSRC}/tex/latex/graphics
+	rm -rf ${WRKSRC}/tex/latex/greek
 	rm -rf ${WRKSRC}/tex/latex/h*
 	rm -rf ${WRKSRC}/tex/latex/i*
 	rm -rf ${WRKSRC}/tex/latex/j*
@@ -443,6 +468,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/multibib
 	rm -rf ${WRKSRC}/tex/latex/multind
 	rm -rf ${WRKSRC}/tex/latex/multirow
+	rm -rf ${WRKSRC}/tex/latex/mwcls
 	rm -rf ${WRKSRC}/tex/latex/n[a-s]*
 	rm -rf ${WRKSRC}/tex/latex/ntgclass
 	rm -rf ${WRKSRC}/tex/latex/ntheorem
@@ -452,6 +478,7 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/picinpar
 	rm -rf ${WRKSRC}/tex/latex/pict2e
 	rm -rf ${WRKSRC}/tex/latex/placeins
+	rm -rf ${WRKSRC}/tex/latex/platex
 	rm -rf ${WRKSRC}/tex/latex/portland
 	rm -rf ${WRKSRC}/tex/latex/pr*
 	rm -rf ${WRKSRC}/tex/latex/ps[b-z]*
@@ -467,11 +494,14 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/latex/t[s-z]*
 	rm -rf ${WRKSRC}/tex/latex/u[l-p]*
 	rm -rf ${WRKSRC}/tex/latex/url
+	rm -rf ${WRKSRC}/tex/latex/urwvn
 	rm -rf ${WRKSRC}/tex/latex/version
+	rm -rf ${WRKSRC}/tex/latex/vietnam
 	rm -rf ${WRKSRC}/tex/latex/vmargin
 	rm -rf ${WRKSRC}/tex/latex/w*
 	rm -rf ${WRKSRC}/tex/latex/x*
 	rm -rf ${WRKSRC}/tex/latex/y*
+	rm -rf ${WRKSRC}/tex/mex
 	rm -rf ${WRKSRC}/tex/plain/amsfonts
 	rm -rf ${WRKSRC}/tex/plain/antt
 	rm -f ${WRKSRC}/tex/plain/base/[c-gmp-z]*
@@ -479,6 +509,8 @@ post-extract:
 	rm -rf ${WRKSRC}/tex/plain/[c-ln-or-uw-z]*
 	rm -rf ${WRKSRC}/tex/plain/mproof
 	rm -rf ${WRKSRC}/tex/plain/pdfcolor
+	rm -rf ${WRKSRC}/tex/plain/verbatim
+	rm -rf ${WRKSRC}/tex/plain/vietnam
 	rm -rf ${WRKSRC}/tex/platex
 	rm -rf ${WRKSRC}/tex/texinfo
 
