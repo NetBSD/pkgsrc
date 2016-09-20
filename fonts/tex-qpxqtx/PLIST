@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 12:31:37 markd Exp $
+share/texmf-dist/fonts/tfm/public/qpxqtx/qpxbmi.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qpxbmia.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qpxmi.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qpxmia.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qtxbmi.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qtxbmia.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qtxmi.tfm
+share/texmf-dist/fonts/tfm/public/qpxqtx/qtxmia.tfm
+share/texmf-dist/fonts/vf/public/qpxqtx/qpxbmi.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qpxbmia.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qpxmi.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qpxmia.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qtxbmi.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qtxbmia.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qtxmi.vf
+share/texmf-dist/fonts/vf/public/qpxqtx/qtxmia.vf
+share/texmf-dist/tex/generic/qpxqtx/amspbold.tex
+share/texmf-dist/tex/generic/qpxqtx/amsqpx.def
+share/texmf-dist/tex/generic/qpxqtx/amsqpx.tex
+share/texmf-dist/tex/generic/qpxqtx/amsqtx.def
+share/texmf-dist/tex/generic/qpxqtx/amsqtx.tex
+share/texmf-dist/tex/generic/qpxqtx/amstbold.tex
+share/texmf-dist/tex/generic/qpxqtx/qpxmath.sty
+share/texmf-dist/tex/generic/qpxqtx/qpxmath.tex
+share/texmf-dist/tex/generic/qpxqtx/qtxmath.sty
+share/texmf-dist/tex/generic/qpxqtx/qtxmath.tex
