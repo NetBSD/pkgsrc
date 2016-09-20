@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2013/10/15 16:21:46 asau Exp $
+# $NetBSD: options.mk,v 1.12 2016/09/20 14:10:25 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	--with-dynamic-ffi
 
 .if !empty(PKG_OPTIONS:Mreadline)
 CONFIGURE_ARGS+=	--with-readline
+BUILDLINK_API_DEPENDS.readline+=	readline>=7.0
 .include "../../devel/readline/buildlink3.mk"
 .endif
 
