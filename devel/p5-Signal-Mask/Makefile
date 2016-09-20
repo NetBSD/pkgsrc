@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/09/20 12:37:51 mef Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/20 12:59:24 wiz Exp $
 
 DISTNAME=	Signal-Mask-0.008
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,5 @@ BUILD_DEPENDS+=	p5-IPC-Signal-[0-9]*:../../devel/p5-IPC-Signal
 
 PERL5_PACKLIST=	auto/Signal/Mask/.packlist
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

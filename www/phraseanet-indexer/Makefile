@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/02 20:33:34 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.7 2016/09/20 12:59:25 wiz Exp $
 
 .include "../../www/phraseanet/Makefile.common"
 PKGNAME=        phraseanet-indexer-${VERS}
@@ -21,6 +20,4 @@ pre-configure:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

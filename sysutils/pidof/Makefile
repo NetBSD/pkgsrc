@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/07/22 08:09:16 manu Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/20 12:59:25 wiz Exp $
 
 DISTNAME=	sysvinit-2.88dsf
 PKGNAME=	${DISTNAME:S/sysvinit/pidof/}
@@ -22,5 +22,4 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/pidof.8		\
 	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

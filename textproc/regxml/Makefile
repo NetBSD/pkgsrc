@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/15 19:08:23 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.5 2016/09/20 12:59:25 wiz Exp $
 
 DISTNAME=	regxml-${SNAPSHOT_DATE}-${SNAPSHOT_HASH:C/(......).*/\1/}
 PKGNAME=	regxml-0.0.${SNAPSHOT_DATE}
@@ -63,6 +62,4 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man7/
 
 .include "../../textproc/expat/buildlink3.mk"
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

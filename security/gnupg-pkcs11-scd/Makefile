@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/09/19 13:04:26 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.12 2016/09/20 12:59:25 wiz Exp $
 
 VERSION=	0.7.0
 DISTNAME=	gnupg-pkcs11-scd-${VERSION}
@@ -27,6 +26,4 @@ CONFIGURE_ARGS+=	--with-libgcrypt-prefix=${PREFIX}
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
