@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 12:57:36 markd Exp $
+share/texmf-dist/tex/latex/greek-inputenc/iso-8859-7.def
+share/texmf-dist/tex/latex/greek-inputenc/lgrenc.dfu
+share/texmf-dist/tex/latex/greek-inputenc/macgreek.def
