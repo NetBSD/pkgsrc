@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/06/16 04:03:14 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/09/20 13:34:59 markd Exp $
 
 DISTNAME=	collection-langcyrillic
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41167
@@ -23,7 +23,7 @@ DEPENDS+=	tex-babel-serbianc-[0-9]*:../../print/tex-babel-serbianc
 DEPENDS+=	tex-cmcyr-[0-9]*:../../fonts/tex-cmcyr
 DEPENDS+=	tex-cyrillic-[0-9]*:../../print/tex-cyrillic
 DEPENDS+=	tex-cyrillic-bin-[0-9]*:../../print/tex-cyrillic-bin
-# depend cyrplain
+DEPENDS+=	tex-cyrplain-[0-9]*:../../print/tex-cyrplain
 # depend disser
 # depend eskd
 # depend eskdx
