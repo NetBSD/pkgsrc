@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2016/09/20 08:00:51 wiz Exp $
+
+SHA1 (util-linux-2.28.tar.xz) = 9720d4ea99f8aff018ea6732dcc5c1fc853f39b3
+RMD160 (util-linux-2.28.tar.xz) = aee0dcd454aac1418dbbcda9651dc64da08bf13a
+SHA512 (util-linux-2.28.tar.xz) = a1f911bdfda5985de87105d39501e501a5f9ec0fe6a433e3f2fed9a80e104342bb4a7e0e6dc9b7d677d5429249f05b343cb5370b0ea0e068dc889699d4ec1f8a
+Size (util-linux-2.28.tar.xz) = 4119560 bytes
+SHA1 (patch-configure) = 35fda45cc85efa49ac422fbca9e5b7b6329fda33
+SHA1 (patch-include_setproctitle.h) = deb06015ca459886f82e22eaf6596ff79799b02a
+SHA1 (patch-include_ttyutils.h) = 304b7e09b601685c35c6033a95622e50979586ea
+SHA1 (patch-lib_ismounted.c) = f880372aca259fdba0b30ecf38e5d9bb79e6c5d8
+SHA1 (patch-lib_setproctitle.c) = 2b6415d9fa484ba1969aa36610b695ba04d0a603
