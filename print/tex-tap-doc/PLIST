@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 12:50:00 markd Exp $
+share/texmf-dist/doc/generic/tap/0README.TAP
+share/texmf-dist/doc/generic/tap/0tapdoc.inf
+share/texmf-dist/doc/generic/tap/circ.eps
+share/texmf-dist/doc/generic/tap/circmag.eps
+share/texmf-dist/doc/generic/tap/epsfx.tex
+share/texmf-dist/doc/generic/tap/tapanch.100
+share/texmf-dist/doc/generic/tap/tapanch.mp
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/0sampdos.inf
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/post1.tex
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/post2.tex
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/prea1.tex
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/prea2.tex
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/prea3.tex
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv0.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv1.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv2.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv3.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv4.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv5.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tapcv6.raw
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tcv.bat
+share/texmf-dist/doc/generic/tap/tapcv/sampdos/tcv_.bat
+share/texmf-dist/doc/generic/tap/tapcv/tapcv.awk
+share/texmf-dist/doc/generic/tap/tapdoc.tex
+share/texmf-dist/doc/generic/tap/tapxamp1.tex
+share/texmf-dist/doc/generic/tap/tapxamp2.tex
