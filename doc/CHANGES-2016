@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3964 2016/09/20 12:22:45 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3965 2016/09/20 12:36:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5564,3 +5564,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/kanjistrokeorders-ttf to 4.000 [mef 2016-09-20]
 	Updated devel/pango to 1.40.3 [mef 2016-09-20]
 	Updated devel/p5-pango to 1.227 [mef 2016-09-20]
+	Updated security/keychain to 2.8.3 [mef 2016-09-20]
