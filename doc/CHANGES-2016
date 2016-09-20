@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3971 2016/09/20 16:37:32 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.3972 2016/09/20 20:02:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5594,3 +5594,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-mex-doc version 1.05 [markd 2016-09-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q3 branch [jperkin 2016-09-20]
 	Updated x11/xorg-cf-files to 1.0.6nb1 [jperkin 2016-09-20]
+	Updated www/firefox to 49.0 [ryoon 2016-09-20]
