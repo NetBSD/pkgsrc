@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/09/20 12:52:59 jaapb Exp $
+
+SHA1 (ocamldap-2.2.tar.gz) = 897d1b49f16fd321b4bc6654be80e84dfc95ce7b
+RMD160 (ocamldap-2.2.tar.gz) = 8d38657b2aca54fff4ee087036b3003253fca8e0
+SHA512 (ocamldap-2.2.tar.gz) = e24e78497b7c9ed89b0ae73c5773cc9ec28c7c7d317b4b8b39f6b20536ff8f44e15c2657d6aba4bb4689afb5bb155fc7391bea6edab50d0855b22bc457982a2d
+Size (ocamldap-2.2.tar.gz) = 174204 bytes
+SHA1 (patch-src_ldap_ooclient.ml) = 2165beac31f9189d519e171b5fb2fad2f9fc8b18
