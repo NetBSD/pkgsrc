@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3958 2016/09/20 10:53:05 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3959 2016/09/20 11:07:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5557,3 +5557,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/gnutls to 3.5.4nb1 [wiz 2016-09-20]
 	Added math/libixion version 0.12.1 [wiz 2016-09-20]
 	Updated converters/orcus0.12 to 0.12.0nb1 [wiz 2016-09-20]
+	Updated print/cups to 2.1.4nb2 [wiz 2016-09-20]
