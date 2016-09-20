@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2016/08/18 06:09:01 nonaka Exp $
+# $NetBSD: Makefile,v 1.35 2016/09/20 12:36:09 mef Exp $
 
-DISTNAME=	keychain-2.8.2
+DISTNAME=	keychain-2.8.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.funtoo.org/archive/keychain/
 EXTRACT_SUFX=	.tar.bz2
