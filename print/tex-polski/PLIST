@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 13:03:11 markd Exp $
+share/texmf-dist/tex/latex/polski/amigapl.def
+share/texmf-dist/tex/latex/polski/mazovia.def
+share/texmf-dist/tex/latex/polski/omlplcm.fd
+share/texmf-dist/tex/latex/polski/omlplm.fd
+share/texmf-dist/tex/latex/polski/omsplsy.fd
+share/texmf-dist/tex/latex/polski/omxplex.fd
+share/texmf-dist/tex/latex/polski/ot1patch.sty
+share/texmf-dist/tex/latex/polski/ot4ccr.fd
+share/texmf-dist/tex/latex/polski/ot4cmdh.fd
+share/texmf-dist/tex/latex/polski/ot4cmfib.fd
+share/texmf-dist/tex/latex/polski/ot4cmfr.fd
+share/texmf-dist/tex/latex/polski/ot4cmr.fd
+share/texmf-dist/tex/latex/polski/ot4cmss.fd
+share/texmf-dist/tex/latex/polski/ot4cmtt.fd
+share/texmf-dist/tex/latex/polski/plprefix.sty
+share/texmf-dist/tex/latex/polski/polski.sty
+share/texmf-dist/tex/latex/polski/qxenc.def
