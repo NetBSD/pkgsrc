@@ -1,0 +1,8 @@
+Ocamldap is an implementation of the Light Weight Directory Access Protocol,
+and a set of useful tools built around it. It includes high level libraries for
+creating ldap clients and ldap servers.
+
+It also includes many of the auxiliary tools needed for building intelligent
+solutions, and interoperating with other directories. These include, an rfc2252
+schema parser, and an schema checker, an ldif parser and printer, a search
+filter parser (but no printer yet), and a rudimentary ldap url parser.
