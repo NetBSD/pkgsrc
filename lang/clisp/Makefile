@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2016/08/23 20:03:48 asau Exp $
-#
+# $NetBSD: Makefile,v 1.108 2016/09/20 14:10:25 wiz Exp $
 
 DISTNAME=		clisp-2.49
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2
@@ -68,5 +67,4 @@ post-extract:
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
