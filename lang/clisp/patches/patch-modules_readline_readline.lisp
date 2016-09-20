@@ -1,6 +1,7 @@
-$NetBSD: patch-modules_readline_readline.lisp,v 1.1 2016/09/20 14:10:25 wiz Exp $
+$NetBSD: patch-modules_readline_readline.lisp,v 1.2 2016/09/20 14:14:08 wiz Exp $
 
 rl_readline_state changed from int to unsigned long in readline-7.0.
+https://sourceforge.net/p/clisp/bugs/688/
 
 --- modules/readline/readline.lisp.orig	2010-01-06 22:18:03.000000000 +0000
 +++ modules/readline/readline.lisp
