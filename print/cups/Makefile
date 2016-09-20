@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.231 2016/07/09 06:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.232 2016/09/20 11:07:35 wiz Exp $
 
 DISTNAME=	cups-2.1.4-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
 GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
@@ -42,7 +42,6 @@ CONFIGURE_ARGS+=	--without-php
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--disable-gssapi
-CONFIGURE_ARGS+=	--disable-gnutls
 
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
@@ -177,5 +176,5 @@ post-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
