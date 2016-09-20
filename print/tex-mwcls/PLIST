@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2016/09/20 13:00:17 markd Exp $
+share/texmf-dist/tex/latex/mwcls/mw10.clo
+share/texmf-dist/tex/latex/mwcls/mw11.clo
+share/texmf-dist/tex/latex/mwcls/mw12.clo
+share/texmf-dist/tex/latex/mwcls/mwart.cls
+share/texmf-dist/tex/latex/mwcls/mwbk.cls
+share/texmf-dist/tex/latex/mwcls/mwbk10.clo
+share/texmf-dist/tex/latex/mwcls/mwbk11.clo
+share/texmf-dist/tex/latex/mwcls/mwbk12.clo
+share/texmf-dist/tex/latex/mwcls/mwrep.cls
