@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.266 2016/08/29 12:56:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.267 2016/09/20 20:01:41 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	48.0
-MOZ_BRANCH_MINOR=	.2
+MOZ_BRANCH=	49.0
+MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
@@ -48,6 +48,8 @@ CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/header.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/xpt.py
+
+CHECK_WRKREF_SKIP+=lib/firefox/chrome/toolkit/content/global/buildconfig.html
 
 MOZILLA=firefox
 MOZILLA_ICON=	${WRKSRC}/${OBJDIR}/dist/firefox/browser/chrome/icons/default/default48.png
