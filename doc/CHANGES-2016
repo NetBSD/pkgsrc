@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3960 2016/09/20 11:44:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3961 2016/09/20 11:49:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5560,3 +5560,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/cups to 2.1.4nb2 [wiz 2016-09-20]
 	Updated fonts/p5-Font-FreeType to 0.07 [mef 2016-09-20]
 	Updated fonts/p5-Font-TTF to 1.06 [mef 2016-09-20]
+	Updated fonts/fntsample to 4.1 [mef 2016-09-20]
