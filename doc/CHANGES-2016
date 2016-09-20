@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3959 2016/09/20 11:07:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3960 2016/09/20 11:44:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5558,3 +5558,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/libixion version 0.12.1 [wiz 2016-09-20]
 	Updated converters/orcus0.12 to 0.12.0nb1 [wiz 2016-09-20]
 	Updated print/cups to 2.1.4nb2 [wiz 2016-09-20]
+	Updated fonts/p5-Font-FreeType to 0.07 [mef 2016-09-20]
+	Updated fonts/p5-Font-TTF to 1.06 [mef 2016-09-20]
