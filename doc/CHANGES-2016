@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3967 2016/09/20 12:41:47 mef Exp $
+$NetBSD: CHANGES-2016,v 1.3968 2016/09/20 12:54:04 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5567,3 +5567,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/keychain to 2.8.3 [mef 2016-09-20]
 	Updated devel/ccache to 3.3.1 [adam 2016-09-20]
 	Updated devel/p5-Parallel-Prefork to 0.18 [mef 2016-09-20]
+	Added databases/ocaml-ldap version 2.2 [jaapb 2016-09-20]
