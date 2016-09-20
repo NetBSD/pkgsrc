@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2013/02/01 22:21:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2016/09/20 12:03:57 wiz Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
@@ -12,7 +12,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.prelude-ids.org/download/releases/
+HOMEPAGE=		https://www.prelude-siem.org/
 
 PATCHDIR=		${.CURDIR}/../../security/libprelude/patches
 DISTINFO_FILE=		${.CURDIR}/../../security/libprelude/distinfo
