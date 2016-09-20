@@ -1,0 +1,3 @@
+Three unrelated packages: DB_process, to parse and process
+database output; CD_labeler, to typeset user text to fit on a
+CD label; and repeat, a nestable, generic loop macro.
