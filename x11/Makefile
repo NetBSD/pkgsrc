@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.798 2016/08/21 22:21:41 markd Exp $
+# $NetBSD: Makefile,v 1.799 2016/09/20 08:01:07 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -373,6 +373,7 @@ SUBDIR+=	mate-screensaver
 SUBDIR+=	mate-session-manager
 SUBDIR+=	mate-settings-daemon
 SUBDIR+=	mate-terminal
+SUBDIR+=	mcookie
 SUBDIR+=	mkcomposecache
 SUBDIR+=	mlterm
 SUBDIR+=	modeline
