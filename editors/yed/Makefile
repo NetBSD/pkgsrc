@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/03/24 17:05:04 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/20 12:59:25 wiz Exp $
 
 DISTNAME=	yEd-3.15.0.2
 PKGNAME=	${DISTNAME:C:E:e:}
@@ -37,5 +37,4 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/license.html ${DESTDIR}${PREFIX}/share/doc/java/yed
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

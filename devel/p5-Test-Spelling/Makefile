@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/07/20 11:26:54 mef Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/20 12:59:25 wiz Exp $
 
 DISTNAME=	Test-Spelling-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -22,6 +22,5 @@ BUILD_DEPENDS+= p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 USE_LANGUAGES=  # empty
 PERL5_PACKLIST= auto/Test/Spelling/.packlist
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
