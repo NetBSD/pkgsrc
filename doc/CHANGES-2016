@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3954 2016/09/20 08:12:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3955 2016/09/20 08:27:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5553,3 +5553,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/guile-lib to 0.2.3 [gdt 2016-09-20]
 	Added x11/mcookie version 2.28 [wiz 2016-09-20]
 	Updated net/tigervnc to 1.7.0nb3 [wiz 2016-09-20]
+	Updated net/librsync to 2.0.0nb1 [wiz 2016-09-20]
