@@ -1,0 +1,9 @@
+TeXdraw is a set of macro definitions for TeX, which allow the
+user to produce PostScript drawings from within TeX and LaTeX.
+TeXdraw has been designed to be extensible. Drawing 'segments'
+are relocatable, self-contained units. Using a combination of
+the TeX's grouping mechanism and the gsave/grestore mechanism
+in PostScript, drawing segments allow for local changes to the
+scaling and line parameters. Using TeX's macro definition
+capability, new drawing commands can be constructed from
+drawing segments.
