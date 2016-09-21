@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.26 2016/09/11 11:38:10 spz Exp $
+$NetBSD: distinfo,v 1.27 2016/09/21 17:03:38 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
 SHA512 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = c5cb1cdff40d2d71fd3e692a9d0efadf2aa17290daf5195391a1c81ddd9dfc913a8e44d5be2b12be85b2a5565ea31631c99c7053564f2fb2225c80ea0bb0e4a4
 Size (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 2867999 bytes
-SHA1 (xen-4.5.3.tar.gz) = 95d56c42642adcffe55dcf82a021d49115373108
-RMD160 (xen-4.5.3.tar.gz) = 7ba586b20404e95308007663e87868c0ccc0e6f4
-SHA512 (xen-4.5.3.tar.gz) = 086b9b75e97d836498fd4f34b645c9b2f941db44efe8c7d23e53aa6455d40e1672962aaa7bac0db1db82255dba490c4fe996f356c184e71ea7fa5b483d9e9c0f
-Size (xen-4.5.3.tar.gz) = 18416997 bytes
+SHA1 (xen-4.5.5.tar.gz) = 4073d411c72d3298baacfc15577b92b9ae577073
+RMD160 (xen-4.5.5.tar.gz) = 34132ab04752dc594fbdc1404c95f402b7bbbe39
+SHA512 (xen-4.5.5.tar.gz) = 7e8d7e0248daa91389db0250c5f214dc1ab46c058d556a4326c801933ead05cc450cb9510108586418de029b81a80fd9f272ec1749d288a8250e69599aa2d769
+Size (xen-4.5.5.tar.gz) = 18426889 bytes
 SHA1 (patch-.._.._ipxe_src_core_settings.c) = 9e053e5e9936f49c46af0d59382a67d5f28cb39d
 SHA1 (patch-.._.._ipxe_src_interface_efi_efi_snp.c) = 7cd8a2d2dbeff55624b5d3461d22cd8331221762
 SHA1 (patch-.._.._ipxe_src_net_fcels.c) = 7c13c87af5e38233f8b867503789f536394e7005
@@ -20,10 +20,7 @@ SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736
 SHA1 (patch-.._docs_misc_xl-disk-configuration.txt) = 5b59cfc2569d1a4c10d6c0fcb98ed35278723b79
 SHA1 (patch-Makefile) = eb5d3211b26c5f10a24fcca658c83d5f60990d9f
 SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
-SHA1 (patch-XSA-178) = 5cb68dd7d82f537e9a9d0417cc79e8cafeb05ac2
-SHA1 (patch-XSA-179) = b73d44757651efe4b8df27cedd7f9827f3d6a6ca
-SHA1 (patch-XSA-180) = 58a93dec38792a36bca74123444eb72fafe158a3
-SHA1 (patch-XSA-184) = 08103cae34512c1a3b9eb3e5cfdf8a15a302e419
+SHA1 (patch-XSA-184) = b9089f29b67d1756e2c4919df30041282cebdfed
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
 SHA1 (patch-configure) = 97fa4274e425984d593cd93aea36edc681462b88
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
