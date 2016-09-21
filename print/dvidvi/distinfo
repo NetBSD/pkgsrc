@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:51:42 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/09/21 08:10:30 wiz Exp $
 
-SHA1 (dvidvi-1.0.tar.gz) = a72ac3f57f0435ab25fd1cb3e07943f34c672c6a
-RMD160 (dvidvi-1.0.tar.gz) = e6c9ebed8e6371aa3b987fab501d82accc4afed7
-Size (dvidvi-1.0.tar.gz) = 22790 bytes
+SHA1 (texlive-20160523-source.tar.xz) = 8cdcc00492fc642db59a9a07f9ea080ff6765460
+RMD160 (texlive-20160523-source.tar.xz) = 4ffc4d92f8c6408c23a34815e2d4b0f4877d9c3f
+SHA512 (texlive-20160523-source.tar.xz) = 9fdd69d237238385240e918456f54791a38e57b573edf5df839c57e56a0009012b68b7b92298c3e137181325e2be84d7a84e9c7cf41ae9739bb3329d84194564
+Size (texlive-20160523-source.tar.xz) = 258176464 bytes
