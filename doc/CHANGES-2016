@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3974 2016/09/21 08:10:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.3975 2016/09/21 11:51:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5597,3 +5597,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 49.0 [ryoon 2016-09-20]
 	Updated www/firefox-l10n to 49.0 [ryoon 2016-09-20]
 	Updated print/dvidvi to 1.1 [wiz 2016-09-21]
+	Updated www/firefox45 to 45.4.0 [ryoon 2016-09-21]
