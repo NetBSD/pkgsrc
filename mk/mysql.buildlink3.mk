@@ -1,4 +1,4 @@
-# $NetBSD: mysql.buildlink3.mk,v 1.20 2015/04/16 20:24:15 ryoon Exp $
+# $NetBSD: mysql.buildlink3.mk,v 1.21 2016/09/21 14:27:51 adam Exp $
 #
 # This file is included by packages that require some version of the
 # MySQL database client.
@@ -8,7 +8,7 @@
 # MYSQL_VERSION_DEFAULT
 #	The preferred MySQL version.
 #
-#	Possible: 56 55 51 MARIADB55
+#	Possible: 57 56 55 51 MARIADB55
 #	Default: 55
 #
 # === Package-settable variables ===
@@ -31,7 +31,7 @@ _SYS_VARS.mysql=	MYSQL_PKGSRCDIR
 .include "../../mk/bsd.prefs.mk"
 
 MYSQL_VERSION_DEFAULT?=		55
-MYSQL_VERSIONS_ACCEPTED?=	56 55 51 MARIADB55
+MYSQL_VERSIONS_ACCEPTED?=	57 56 55 51 MARIADB55
 
 # transform the list into individual variables
 .for mv in ${MYSQL_VERSIONS_ACCEPTED}
@@ -40,6 +40,10 @@ _MYSQL_VERSION_${mv}_OK=	yes
 
 # check what is installed
 .if ${OPSYS} == "Darwin"
+.  if exists(${LOCALBASE}/lib/libmysqlclient.20.dylib)
+_MYSQL_VERSION_57_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	57
+.  endif
 .  if exists(${LOCALBASE}/lib/libmysqlclient.18.dylib)
 .    if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
 _MYSQL_VERSION_56_INSTALLED=	yes
@@ -54,6 +58,10 @@ _MYSQL_VERSION_51_INSTALLED=	yes
 _MYSQL_VERSION_INSTALLED=	51
 .  endif
 .else
+.  if exists(${LOCALBASE}/lib/libmysqlclient.so.20)
+_MYSQL_VERSION_57_INSTALLED=	yes
+_MYSQL_VERSION_INSTALLED=	57
+.  endif
 .  if exists(${LOCALBASE}/lib/libmysqlclient.so.18)
 .    if exists(${LOCALBASE}/include/mysql/mysql/client_authentication.h)
 _MYSQL_VERSION_56_INSTALLED=	yes
@@ -110,7 +118,9 @@ _MYSQL_VERSION=	${_MYSQL_VERSION_FIRSTACCEPTED}
 #
 # set variables for the version we decided to use:
 #
-.if ${_MYSQL_VERSION} == "56"
+.if ${_MYSQL_VERSION} == "57"
+MYSQL_PKGSRCDIR=	../../databases/mysql57-client
+.elif ${_MYSQL_VERSION} == "56"
 MYSQL_PKGSRCDIR=	../../databases/mysql56-client
 .elif ${_MYSQL_VERSION} == "MARIADB55"
 MYSQL_PKGSRCDIR=	../../databases/mariadb55-client
