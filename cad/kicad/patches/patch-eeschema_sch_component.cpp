@@ -1,4 +1,4 @@
-$NetBSD: patch-eeschema_sch_component.cpp,v 1.3 2016/09/08 09:32:28 bouyer Exp $
+$NetBSD: patch-eeschema_sch_component.cpp,v 1.4 2016/09/21 13:16:07 bouyer Exp $
 64bit time_t fix
 Reported upstream as bug id 1280901
 
@@ -11,7 +11,7 @@ Reported upstream as bug id 1280901
 -            sscanf( line + 1, "%d %d %lX", &m_unit, &m_convert, &m_TimeStamp );
 +	    u_long tmstp;
 +            sscanf( line + 1, "%d %d %lX", &m_unit, &m_convert, &tmstp );
-+	    tmstp = m_TimeStamp;
++	    m_TimeStamp = tmstp;
          }
          else if( line[0] == 'P' )
          {
