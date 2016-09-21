@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/09/18 13:38:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/21 12:21:51 ryoon Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs25/:S/-/-nox11-/}
 
-CONFLICTS+=	emacs24-[0-9]*
+CONFLICTS+=	emacs25-[0-9]*
 
 FILESDIR=	${.CURDIR}/../../editors/emacs25/files
 PATCHDIR=	${.CURDIR}/../../editors/emacs25/patches
