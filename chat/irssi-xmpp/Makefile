@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/09/19 17:18:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2016/09/21 20:53:57 maya Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.53
@@ -36,10 +36,10 @@ SUBST_FILES.configmk=	config.mk
 SUBST_SED.configmk+=	-e 's/^CFLAGS =/CFLAGS +=/'
 SUBST_SED.configmk+=	-e 's/^LDFLAGS =/LDFLAGS +=/'
 
-SUBST_CLASSES+=		osxmk
-SUBST_STAGE.osxmk=	pre-build
-SUBST_FILES.osxmk=	config.mk
-SUBST_SED.osxmk=	-e 's,-shared,-dynamiclib -undefined dynamic_lookup,'
+#SUBST_CLASSES+=		osxmk
+#SUBST_STAGE.osxmk=	pre-build
+#SUBST_FILES.osxmk=	config.mk
+#SUBST_SED.osxmk=	-e 's,-shared,-dynamiclib -undefined dynamic_lookup,'
 
 CFLAGS.SunOS+=	-D__BEGIN_DECLS= -D__END_DECLS=
 

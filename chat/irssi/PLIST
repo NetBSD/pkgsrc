@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/08/14 21:10:35 maya Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/09/21 20:53:57 maya Exp $
 bin/irssi
 include/irssi/irssi-config.h
 include/irssi/irssi-version.h
@@ -209,8 +209,10 @@ share/irssi/help/sconnect
 share/irssi/help/script
 share/irssi/help/scrollback
 share/irssi/help/server
+share/irssi/help/servlist
 share/irssi/help/set
 share/irssi/help/silence
+share/irssi/help/squery
 share/irssi/help/squit
 share/irssi/help/stats
 share/irssi/help/statusbar
