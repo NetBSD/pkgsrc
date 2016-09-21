@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/18 13:36:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/21 09:22:08 wiz Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -67,11 +67,11 @@ info/viper.info.gz
 info/widget.info.gz
 info/wisent.info.gz
 info/woman.info.gz
-libexec/emacs/${PKGVERSION}/x86_64--netbsd/hexl
-libexec/emacs/${PKGVERSION}/x86_64--netbsd/movemail
-libexec/emacs/${PKGVERSION}/x86_64--netbsd/profile
-libexec/emacs/${PKGVERSION}/x86_64--netbsd/rcs2log
-libexec/emacs/${PKGVERSION}/x86_64--netbsd/update-game-score
+libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
+libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
+libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
+libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
+libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/update-game-score
 man/man1/ctags.1
 man/man1/ebrowse.1
 man/man1/emacs.1
