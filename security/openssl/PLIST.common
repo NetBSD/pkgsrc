@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.29 2016/05/03 14:51:16 jperkin Exp $
+@comment $NetBSD: PLIST.common,v 1.30 2016/09/22 12:28:55 jperkin Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -1572,6 +1572,7 @@ man/man3/bn_sqr_words.3
 man/man3/bn_sub_words.3
 man/man3/bn_wexpand.3
 man/man3/d2i_ASN1_OBJECT.3
+man/man3/d2i_AutoPrivateKey.3
 man/man3/d2i_CMS_ContentInfo.3
 man/man3/d2i_DHparams.3
 man/man3/d2i_DSAPrivateKey.3
@@ -1589,6 +1590,8 @@ man/man3/d2i_Netscape_RSA.3
 man/man3/d2i_PKCS8PrivateKey.3
 man/man3/d2i_PKCS8PrivateKey_bio.3
 man/man3/d2i_PKCS8PrivateKey_fp.3
+man/man3/d2i_PrivateKey.3
+man/man3/d2i_Private_key.3
 man/man3/d2i_RSAPrivateKey.3
 man/man3/d2i_RSAPublicKey.3
 man/man3/d2i_RSA_PUBKEY.3
@@ -1629,6 +1632,7 @@ man/man3/i2d_PKCS8PrivateKey_bio.3
 man/man3/i2d_PKCS8PrivateKey_fp.3
 man/man3/i2d_PKCS8PrivateKey_nid_bio.3
 man/man3/i2d_PKCS8PrivateKey_nid_fp.3
+man/man3/i2d_PrivateKey.3
 man/man3/i2d_RSAPrivateKey.3
 man/man3/i2d_RSAPublicKey.3
 man/man3/i2d_RSA_PUBKEY.3
