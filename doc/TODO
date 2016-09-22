@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16481 2016/09/21 08:30:18 wiz Exp $
+$NetBSD: TODO,v 1.16482 2016/09/22 12:59:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -737,7 +737,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gmock-1.7.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.20.1
+	o gnome-3.22
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chemistry-utils-0.14.11
@@ -774,6 +774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
+	o gnuchess-6.2.3
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -1000,6 +1001,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libisofs-1.4.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
+	o libjpeg-turbo-1.5.1
 	o libkface-4.14.0
 	o libkgeomap-4.14.0
 	o libkvkontakte-4.14.0
@@ -1182,6 +1184,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Apache-Gallery-1.0.2
 	o p5-AuthCAS-1.6
 	o p5-Authen-TacacsPlus-0.26
+	o p5-Business-ISBN-3.003
 	o p5-CDDB-2.00
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
@@ -1197,6 +1200,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
 	o p5-Memoize-Memcached-0.11
+	o p5-Net-Domain-TLD-1.75
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
@@ -1223,6 +1227,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
 	o p5-Sys-Utmp-1.7
+	o p5-Text-Glob-0.10
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
 	o p5-Wx-0.9928
