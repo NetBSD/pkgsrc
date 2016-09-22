@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.14 2016/03/24 13:36:52 richard Exp $
+$NetBSD: distinfo,v 1.15 2016/09/22 11:31:37 richard Exp $
 
 SHA1 (vino-2.32.2.tar.bz2) = e457d1c5705607c3cd18b7e6fbb8776b7483c733
 RMD160 (vino-2.32.2.tar.bz2) = 1de0923ef33a73dd6a9c4e761291728c552708e8
 SHA512 (vino-2.32.2.tar.bz2) = 1205341c83f296f93d948d3b0408a54e9a036abc15ad4e980e9abde8d24ab4a1639ea0d0898d768cf0a01e1ef9e916d907c58d4617534b0dc6860900e1a62a58
 Size (vino-2.32.2.tar.bz2) = 856440 bytes
-SHA1 (patch-aa) = d240f809769fee144ce0a6057327107ade82ef6c
+SHA1 (patch-aa) = b75e056367be66ce2c8ed7cc1ca898737380ed50
 SHA1 (patch-ab) = 0c09812fc98bced9938a0460305c7dbcbed40ad3
 SHA1 (patch-ad) = 0e1b226e8c5ac5f9e3d3c7270b9a19a2314ef737
+SHA1 (patch-server_libvncserver_auth.c) = 43284ea485bc028fdad7a96e72ff7832f53dd908
 SHA1 (patch-server_miniupnp_miniwget.c) = 6612c1a16d955c0e60546209d0e2f47546a976ff
