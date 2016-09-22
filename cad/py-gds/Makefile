@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/09/19 06:13:35 mef Exp $
+# $NetBSD: Makefile,v 1.5 2016/09/22 04:47:37 mef Exp $
 
 VERSION=	1.0
 DISTNAME=	gdspy-${VERSION}
@@ -17,10 +17,6 @@ USE_LANGUAGES+=	c c++
 
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 
-PYDISTUTILSPKG= yes
-
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 
 .include "../../mk/bsd.pkg.mk"
