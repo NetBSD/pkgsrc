@@ -1,7 +1,53 @@
-$NetBSD: patch-aa,v 1.3 2013/08/12 09:36:41 obache Exp $
+$NetBSD: patch-aa,v 1.4 2016/09/22 11:31:37 richard Exp $
+
+Do not use deprecated GnuTLS functions
+http://bugzilla.gnome.org/show_bug.cgi?id=648606
+require minimally gnutls 2.2.0 for use of currently used functions
 
 --- configure.orig	2011-05-02 16:35:08.000000000 +0000
 +++ configure
+@@ -15322,12 +15322,12 @@ if test -n "$LIBGNUTLS_CFLAGS"; then
+     pkg_cv_LIBGNUTLS_CFLAGS="$LIBGNUTLS_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 1.0.0\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gnutls >= 1.0.0") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 2.2.0\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "gnutls >= 2.2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBGNUTLS_CFLAGS=`$PKG_CONFIG --cflags "gnutls >= 1.0.0" 2>/dev/null`
++  pkg_cv_LIBGNUTLS_CFLAGS=`$PKG_CONFIG --cflags "gnutls >= 2.2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -15339,11 +15339,11 @@ if test -n "$LIBGNUTLS_LIBS"; then
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 1.0.0\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gnutls >= 1.0.0") 2>&5
++  ($PKG_CONFIG --exists --print-errors "gnutls >= 2.2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBGNUTLS_LIBS=`$PKG_CONFIG --libs "gnutls >= 1.0.0" 2>/dev/null`
++  pkg_cv_LIBGNUTLS_LIBS=`$PKG_CONFIG --libs "gnutls >= 2.2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -15363,9 +15363,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "gnutls >= 1.0.0" 2>&1`
++	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "gnutls >= 2.2.0" 2>&1`
+         else
+-	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --print-errors "gnutls >= 1.0.0" 2>&1`
++	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --print-errors "gnutls >= 2.2.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBGNUTLS_PKG_ERRORS" >&5
 @@ -16129,6 +16129,8 @@ if test "x$ac_cv_header_ifaddrs_h" = "xy
          cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
