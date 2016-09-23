@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:43:48 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/09/23 11:35:18 markd Exp $
 
-SHA1 (dvi2tty.tar.gz) = 7b62aef389325d87683630869261e14a6e98258e
-RMD160 (dvi2tty.tar.gz) = 331f9ca12c1d905ce3ec2963cb970dfbff80848d
-SHA512 (dvi2tty.tar.gz) = 1faf30a6aabdac9f2f0fe925f438bcd76694872e8967215381de1e312e7263e8e61444781f5b4c0abb79072bd0ec943171494b817f92c478e32cf569452749d7
-Size (dvi2tty.tar.gz) = 30720 bytes
-SHA1 (patch-aa) = c6452a3ea322b507b3f7a3c5dc654c0a2b4bfea6
-SHA1 (patch-ab) = 7776499817462f9a1f9dff1c50f876e3dc7de2b1
+SHA1 (texlive-20160523-source.tar.xz) = 8cdcc00492fc642db59a9a07f9ea080ff6765460
+RMD160 (texlive-20160523-source.tar.xz) = 4ffc4d92f8c6408c23a34815e2d4b0f4877d9c3f
+SHA512 (texlive-20160523-source.tar.xz) = 9fdd69d237238385240e918456f54791a38e57b573edf5df839c57e56a0009012b68b7b92298c3e137181325e2be84d7a84e9c7cf41ae9739bb3329d84194564
+Size (texlive-20160523-source.tar.xz) = 258176464 bytes

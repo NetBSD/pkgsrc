@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:50:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/09/23 11:35:18 markd Exp $
 bin/disdvi
 bin/dvi2tty
+man/man1/disdvi.1
 man/man1/dvi2tty.1
