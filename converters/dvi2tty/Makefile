@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 00:20:10 asau Exp $
+# $NetBSD: Makefile,v 1.17 2016/09/23 11:35:18 markd Exp $
 #
 
-DISTNAME=	dvi2tty
-PKGNAME=	dvi2tty-1.0
+DISTNAME=	texlive-20160523-source
+PKGNAME=	dvi2tty-6.0.0
 CATEGORIES=	converters
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-#MASTER_SITES=	ftp://tug.ctan.org/pub/tex-archive/dviware/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for previewing DVI files
-LICENSE=	no-commercial-use
+LICENSE=	gnu-gpl-v2
 
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:M*:Q}
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
+			${DISTNAME}/texk/dvi2tty
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+WRKSRC=		${WRKDIR}/${DISTNAME}/texk/dvi2tty
 
-pre-patch:
-	cd ${WRKSRC};						\
-	    for p in dvi2tty.patch dvi2tty-latin1.patch;	\
-	    do							\
-		${PATCH} < $$p;					\
-	    done
+CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
+CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
 
-do-install:
-	${INSTALL_PROGRAM} \
-		${WRKSRC}/disdvi ${WRKSRC}/dvi2tty ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/dvi2tty.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+CONFIGURE_ARGS+=	--with-system-kpathsea
+CONFIGURE_ARGS+=	--with-system-ptexenc
 
+.include "../../print/kpathsea/buildlink3.mk"
+.include "../../print/ptexenc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
