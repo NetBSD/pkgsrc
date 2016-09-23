@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/19 09:52:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2016/09/23 08:39:53 roy Exp $
 #
 
 DISTNAME=	yaml-cpp-0.5.3
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 GITHUB_TAG=	${DISTNAME}
 
+EXTRACT_USING=		bsdtar
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 
