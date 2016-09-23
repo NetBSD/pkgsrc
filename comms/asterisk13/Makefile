@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2016/08/03 10:22:35 adam Exp $
+# $NetBSD: Makefile,v 1.12 2016/09/23 17:50:19 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-13.10.0
-PKGREVISION=	1
+DISTNAME=	asterisk-13.11.2
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
@@ -160,6 +159,13 @@ SUBST_CLASSES.NetBSD+=	pktinfo
 SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
+
+# XXX gross hack, gethostbyname_r on NETBSD is for internal use only
+SUBST_CLASSES.NetBSD+=		gethostbyname_r
+SUBST_STAGE.gethostbyname_r=	post-configure
+SUBST_FILES.gethostbyname_r=	include/asterisk/autoconfig.h
+SUBST_SED.gethostbyname_r=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_5 1|\#undef HAVE_GETHOSTBYNAME_R_5|"
+SUBST_SED.gethostbyname_r+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
 
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
