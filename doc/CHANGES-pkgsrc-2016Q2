@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.17 2016/09/24 09:49:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.18 2016/09/24 18:35:15 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -132,4 +132,13 @@ Pullup ticket #5104 - requested by sevan
 chat/irssi: security fix, bugfixes
 chat/irssi-icb: security fix, bugfixes
 chat/irssi-xmpp: security fix, bugfixes
+
+Pullup ticket #5105 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5106 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5107 - requested by taca
+www/typo3_62: security fix
 
