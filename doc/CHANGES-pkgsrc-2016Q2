@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.16 2016/09/18 16:19:05 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q2,v 1.1.2.17 2016/09/24 09:49:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q2 branch:
 
@@ -124,4 +124,12 @@ fonts/fontconfig: security update
 
 Pullup ticket #5102 - requested by bsiegert
 devel/pcre2: security update
+
+Pullup ticket #5103 - requested by maya
+databases/mariadb55-server: security fix
+
+Pullup ticket #5104 - requested by sevan
+chat/irssi: security fix, bugfixes
+chat/irssi-icb: security fix, bugfixes
+chat/irssi-xmpp: security fix, bugfixes
 
