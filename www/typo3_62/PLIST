@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/05/24 12:55:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.12.2.1 2016/09/24 17:37:36 bsiegert Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -2576,6 +2576,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/Private/Templates/PageRende
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/AccessibleObjectInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/BaseTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Exception.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/Cache/Backend/Typo3DatabaseBackendTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/Category/Collection/CategoryCollectionTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/AbstractDataHandlerActionTestCase.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FAL/AbstractActionTestCase.php
@@ -4883,6 +4884,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/func_wizards/locallang_csh.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Clickmenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Controller/ImportExportController.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Hook/BackendControllerHook.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Hook/ContextMenuDisableItemsHook.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/ImportExport.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/LocalPageTree.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/impexp/Classes/Task/ImportExportTask.php
