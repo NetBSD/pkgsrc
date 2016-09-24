@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.10 2011/03/06 04:12:09 dholland Exp $
+# $NetBSD: options.mk,v 1.10.44.1 2016/09/24 09:48:32 bsiegert Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.irssi
-PKG_SUPPORTED_OPTIONS=	inet6 perl ssl
-PKG_SUGGESTED_OPTIONS=	inet6
+PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
+PKG_SUPPORTED_OPTIONS=		inet6 perl ssl
+PKG_SUGGESTED_OPTIONS=		inet6 ssl
 PKG_OPTIONS_LEGACY_OPTS+=	irssi-perl:perl
 
 .include "../../mk/bsd.options.mk"

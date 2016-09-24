@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/01/06 12:40:06 mef Exp $
+@comment $NetBSD: PLIST,v 1.12.12.1 2016/09/24 09:48:32 bsiegert Exp $
 bin/irssi
 include/irssi/irssi-config.h
 include/irssi/irssi-version.h
@@ -72,6 +72,7 @@ include/irssi/src/fe-common/core/windows-layout.h
 include/irssi/src/fe-common/irc/dcc/fe-dcc.h
 include/irssi/src/fe-common/irc/dcc/module-formats.h
 include/irssi/src/fe-common/irc/dcc/module.h
+include/irssi/src/fe-common/irc/fe-irc-channels.h
 include/irssi/src/fe-common/irc/fe-irc-server.h
 include/irssi/src/fe-common/irc/module-formats.h
 include/irssi/src/fe-common/irc/module.h
@@ -81,6 +82,7 @@ include/irssi/src/fe-text/statusbar-item.h
 include/irssi/src/irc/core/bans.h
 include/irssi/src/irc/core/channel-rejoin.h
 include/irssi/src/irc/core/ctcp.h
+include/irssi/src/irc/core/irc-cap.h
 include/irssi/src/irc/core/irc-channels.h
 include/irssi/src/irc/core/irc-chatnets.h
 include/irssi/src/irc/core/irc-commands.h
@@ -94,6 +96,7 @@ include/irssi/src/irc/core/mode-lists.h
 include/irssi/src/irc/core/modes.h
 include/irssi/src/irc/core/module.h
 include/irssi/src/irc/core/netsplit.h
+include/irssi/src/irc/core/sasl.h
 include/irssi/src/irc/core/servers-idle.h
 include/irssi/src/irc/core/servers-redirect.h
 include/irssi/src/irc/dcc/dcc-chat.h
@@ -157,6 +160,7 @@ share/irssi/help/hilight
 share/irssi/help/ignore
 share/irssi/help/info
 share/irssi/help/invite
+share/irssi/help/irssiproxy
 share/irssi/help/ison
 share/irssi/help/join
 share/irssi/help/kick
@@ -205,8 +209,10 @@ share/irssi/help/sconnect
 share/irssi/help/script
 share/irssi/help/scrollback
 share/irssi/help/server
+share/irssi/help/servlist
 share/irssi/help/set
 share/irssi/help/silence
+share/irssi/help/squery
 share/irssi/help/squit
 share/irssi/help/stats
 share/irssi/help/statusbar
@@ -247,9 +253,7 @@ share/irssi/scripts/mlock.pl
 share/irssi/scripts/msg-event.pl
 share/irssi/scripts/quitmsg.pl
 share/irssi/scripts/redirect.pl
-share/irssi/scripts/sb_search.pl
 share/irssi/scripts/scriptassist.pl
-share/irssi/scripts/splitlong.pl
 share/irssi/scripts/usercount.pl
 share/irssi/themes/colorless.theme
 share/irssi/themes/default.theme

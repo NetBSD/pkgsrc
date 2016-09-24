@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:20:20 agc Exp $
+$NetBSD: distinfo,v 1.4.6.1 2016/09/24 09:48:32 bsiegert Exp $
 
-SHA1 (irssi-0.8.17.tar.bz2) = 3bdee9a1c1f3e99673143c275d2c40275136664a
-RMD160 (irssi-0.8.17.tar.bz2) = 0ee6f41a4725c8498030d2c524e202df78a2aff6
-SHA512 (irssi-0.8.17.tar.bz2) = e3d9b130c46e6977400f5a75374cf3e32d5a6e6907b2fd4c920463b5413575708b094c9fa38151997a120ce581de26092424296510ca93b3eee7b0844be45953
-Size (irssi-0.8.17.tar.bz2) = 1102196 bytes
-SHA1 (irssi-xmpp-0.52.tar.gz) = 330d80e6deb115b875d2a4e1ad0841888285e378
-RMD160 (irssi-xmpp-0.52.tar.gz) = b007e0462fee3a24dc06296713e4fc912b8c2528
-SHA512 (irssi-xmpp-0.52.tar.gz) = 27f7b877d02e0812b59e9f23ee12e58b842e3923ab5f0aa8cdf874dc9b30d9d22dbae9ef848ee5ffe2dcb667a0344f960125a3ffc072ce065e1fdf714eb98b27
-Size (irssi-xmpp-0.52.tar.gz) = 68105 bytes
+SHA1 (irssi-0.8.20.tar.gz) = 080be963f79be5921a0a5c359e163bb8c8fd9fbc
+RMD160 (irssi-0.8.20.tar.gz) = 4425bfc55f07b8113cd0d31055d5ad1d8e51e1e3
+SHA512 (irssi-0.8.20.tar.gz) = 9d70453b6ee7d66a2ddc8ca494935aaba1a5cf56c9e70cceb9ab19aa1d0ca4bc19302113471fb271236339eb53f8546b1324eebd8a9113ad1f0021d41364b995
+Size (irssi-0.8.20.tar.gz) = 1565952 bytes
+SHA1 (irssi-xmpp-0.53.tar.gz) = 57d993bbebc30c72b500e2c4b4c4e79c15d8b6f9
+RMD160 (irssi-xmpp-0.53.tar.gz) = ed65af7220834f7fb6701612e81c6a523f730b06
+SHA512 (irssi-xmpp-0.53.tar.gz) = 09969db01b77e95248a080599d480b8271dcbe6d42bc90e5e2bb304a2d1b9695b70090ef0a6b7342bf6e17326e0f7a50c11c85e02e6ed742ec55820ffad655be
+Size (irssi-xmpp-0.53.tar.gz) = 65649 bytes
