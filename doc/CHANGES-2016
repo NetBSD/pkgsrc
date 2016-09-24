@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3986 2016/09/24 13:25:04 taca Exp $
+$NetBSD: CHANGES-2016,v 1.3987 2016/09/24 17:18:10 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5611,3 +5611,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk to 11.23.1 [jnemeth 2016-09-23]
 	Updated www/contao35 to 3.5.17 [taca 2016-09-24]
 	Updated www/contao42 to 4.2.4 [taca 2016-09-24]
+	Updated cross/dfu-programmer to 0.7.2 [jakllsch 2016-09-24]
