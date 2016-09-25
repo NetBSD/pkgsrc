@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2016/08/03 10:22:27 adam Exp $
+# $NetBSD: Makefile,v 1.80 2016/09/25 20:23:15 kamil Exp $
 
 DISTNAME=	bmpx-0.40.14
 PKGREVISION=	53
@@ -22,10 +22,8 @@ CHECK_WRKREF_SKIP=	bin/beep-media-player-2
 CHECK_WRKREF_SKIP+=	bin/bmp2
 CHECK_WRKREF_SKIP+=	libexec/beep-media-player-2-bin
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
+GCC_REQD+=	4.8
 CXXFLAGS+=	-std=c++11
-.endif
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "Linux"
