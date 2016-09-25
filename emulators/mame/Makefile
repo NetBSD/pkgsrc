@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/09/02 12:22:46 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2016/09/25 20:21:25 wiz Exp $
 
 DISTNAME=	mame-0.177
 CATEGORIES=	emulators
@@ -15,10 +15,6 @@ SHAREDIR=		share/mame
 INSTALLATION_DIRS=	bin ${DOCDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man6
 INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/border_blur
 INSTALLATION_DIRS+=	${SHAREDIR}/artwork/bgfx/chains/crt-geom ${SHAREDIR}/hash
-
-RESTRICTED=		selling is not allowed
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
