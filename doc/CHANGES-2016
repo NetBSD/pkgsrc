@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3990 2016/09/25 13:20:20 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.3991 2016/09/25 23:19:12 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5612,6 +5612,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao35 to 3.5.17 [taca 2016-09-24]
 	Updated www/contao42 to 4.2.4 [taca 2016-09-24]
 	Updated cross/dfu-programmer to 0.7.2 [jakllsch 2016-09-24]
-	Updated devel/py-buildbot to 0.8.8nb1 [jakllsch 2016-09-25]
+	Updated devel/py-buildbot to 0.8.8nb1 [kamil 2016-09-25]
 	Updated www/php-owncloud to 9.1.1 [ryoon 2016-09-25]
 	Updated net/owncloudclient to 2.2.3 [ryoon 2016-09-25]
+	Updated benchmarks/benchfft to 2.0nb5 [kamil 2016-09-25]
