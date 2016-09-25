@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2016/07/09 06:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2016/09/25 13:06:31 ryoon Exp $
 #
 
-DISTNAME=	owncloud-9.0.0
+DISTNAME=	owncloud-9.1.1
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://download.owncloud.org/community/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,17 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://owncloud.org/
 COMMENT=	Web services under your control
 LICENSE=	gnu-agpl-v3
-
-OC_APPS_SITE=	https://apps.owncloud.com/CONTENT/content-files/
-OC_CALENDAR_APP=	168707-calendar.zip
-OC_CONTACT_APP=		168708-contacts.zip
-
-DISTFILES=	${DEFAULT_DISTFILES} \
-		${OC_CALENDAR_APP} \
-		${OC_CONTACT_APP}
-
-SITES.${OC_CALENDAR_APP}=	${OC_APPS_SITE}
-SITES.${OC_CONTACT_APP}=	${OC_APPS_SITE}
 
 DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
@@ -46,16 +34,6 @@ USE_TOOLS+=	bash:run pax perl:run
 
 OC_DIR=		share/owncloud
 INSTALLATION_DIRS=	${OC_DIR}
-
-REPLACE_BASH+=	3rdparty/*/*/*/*
-REPLACE_BASH+=	apps/*/*/*
-REPLACE_BASH+=	apps/*/*/*/*
-REPLACE_BASH+=	core/img/image-optimization.sh
-
-REPLACE_PERL+=	apps/*/*/*
-REPLACE_PERL+=	l10n/l10n.pl
-
-REPLACE_PYTHON+=	3rdparty/*/*/*/*
 
 # for php interpreter
 CHECK_INTERPRETER_SKIP+=	${OC_DIR}/3rdparty/doctrine/dbal/bin/doctrine-dbal
@@ -82,10 +60,6 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 do-install:
 	cd ${WRKDIR} && ${FIND} owncloud -type f \! -name '*.orig' -print | \
 		pax -rw -pmp ${DESTDIR}${PREFIX}/share
-	cd ${WRKDIR} && ${FIND} calendar -type f \! -name '*.orig' -print | \
-		pax -rw -pmp ${DESTDIR}${PREFIX}/share/owncloud/apps
-	cd ${WRKDIR} && ${FIND} contacts -type f \! -name '*.orig' -print | \
-		pax -rw -pmp ${DESTDIR}${PREFIX}/share/owncloud/apps
 
 .include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
