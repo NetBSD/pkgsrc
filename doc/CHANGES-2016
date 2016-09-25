@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3987 2016/09/24 17:18:10 jakllsch Exp $
+$NetBSD: CHANGES-2016,v 1.3988 2016/09/25 12:06:36 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5612,3 +5612,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao35 to 3.5.17 [taca 2016-09-24]
 	Updated www/contao42 to 4.2.4 [taca 2016-09-24]
 	Updated cross/dfu-programmer to 0.7.2 [jakllsch 2016-09-24]
+	Updated devel/py-buildbot to 0.8.8nb1 [jakllsch 2016-09-25]
