@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/09/09 20:07:23 plunky Exp $
+# $NetBSD: Makefile,v 1.34 2016/09/25 10:44:45 plunky Exp $
 #
 
 DISTNAME=	LibreCAD-2.1.1
@@ -16,6 +16,9 @@ EXTRACT_USING=	bsdtar
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pax pkg-config
 USE_LIBTOOL=	yes
+
+# package uses -std=c++11 flag
+GCC_REQD+=	4.7
 
 SUBST_CLASSES+=		qtdir
 SUBST_STAGE.qtdir=	pre-configure
