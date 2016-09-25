@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/09/02 09:51:06 plunky Exp $
+# $NetBSD: Makefile,v 1.38 2016/09/25 10:20:22 plunky Exp $
 #
 
 DISTNAME=	openscad-2015.03-2.src
@@ -12,7 +12,7 @@ COMMENT=	OpenSCAD - The Programmers Solid 3D CAD Modeller
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bison pkg-config
+USE_TOOLS+=	bison gettext pkg-config
 USE_LIBTOOL=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME:R}
