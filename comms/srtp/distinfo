@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:34:57 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/09/26 13:20:41 maya Exp $
 
 SHA1 (srtp-1.4.4.tgz) = 299c6cfe0c9d6f1804bc5921cfbdb6a6bc76a521
 RMD160 (srtp-1.4.4.tgz) = 64e58a3fc2cc30a8d7cba6b6ce59f807649d9dee
@@ -8,6 +8,8 @@ SHA1 (patch-Makefile.in) = 8e0e6d7bed257263e4609d305dfa6a27efc1906d
 SHA1 (patch-configure) = d70d01b5f846b2f163ba2246511cf1314005fa35
 SHA1 (patch-configure.in) = 217c066920fedaaba02d86e3c2017a368ea8fee7
 SHA1 (patch-crypto_cipher_aes__icm.c) = 7e402b790678bd6c27daf8f56bf0a1123b087d07
+SHA1 (patch-crypto_hash_hmac.c) = fe7dfb0b775169a649bf1f7c5c25d17e5e258cc8
+SHA1 (patch-crypto_kernel_crypto__kernel.c) = f529544b3355a05fdb70962bf44d8f8fa8a5a167
 SHA1 (patch-crypto_math_datatypes.c) = f5358856026b91ae40db4a7c38bae6138656d94e
 SHA1 (patch-crypto_math_gf2__8.c) = 4e878e3debc2c287dcbce6ab1127ba8cd22352c3
 SHA1 (patch-crypto_math_math.c) = 06961bd3184b0e47475f76a55d9669ce6d3a7149
