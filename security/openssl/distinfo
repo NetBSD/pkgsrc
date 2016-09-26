@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.124 2016/09/22 12:28:55 jperkin Exp $
+$NetBSD: distinfo,v 1.125 2016/09/26 12:27:55 jperkin Exp $
 
-SHA1 (openssl-1.0.2i.tar.gz) = 25a92574ebad029dcf2fa26c02e10400a0882111
-RMD160 (openssl-1.0.2i.tar.gz) = d33628eea2838e392390a348b516425569308c3b
-SHA512 (openssl-1.0.2i.tar.gz) = 41764debd5d64e4e770945f30d682e2c887d9cefb39b358c5c7f9d2cdce34393ed28d49b24e95c4639db2df01c278cbcde71bed2b03f9aafafc76766b03850e3
-Size (openssl-1.0.2i.tar.gz) = 5308232 bytes
+SHA1 (openssl-1.0.2j.tar.gz) = bdfbdb416942f666865fa48fe13c2d0e588df54f
+RMD160 (openssl-1.0.2j.tar.gz) = d5be416caf523f3496323dbd05547144348e7854
+SHA512 (openssl-1.0.2j.tar.gz) = 7d6ccae4aa3ccec3a5d128da29c68401cdb1210cba6d212d55235fc3bc63d7085e2f119e2bbee7ddff6b7b5eef07c6196156791724cd2caf313a4c2fef724edd
+Size (openssl-1.0.2j.tar.gz) = 5307912 bytes
 SHA1 (patch-Configure) = bebb9c435914b89ab9d5afabceb7d95903d4b56a
 SHA1 (patch-Makefile.org) = d2a9295003a8b88718a328b01ff6bcbbc102ec0b
 SHA1 (patch-Makefile.shared) = d317004d6ade167fc3b6e533bb8a1e93657188b2
