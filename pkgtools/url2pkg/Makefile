@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2016/07/10 13:31:54 rillig Exp $
+# $NetBSD: Makefile,v 1.86 2016/09/27 17:10:09 wiz Exp $
 
-PKGNAME=	url2pkg-2.27
-PKGREVISION=	1
+PKGNAME=	url2pkg-2.28
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
