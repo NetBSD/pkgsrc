@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2016/08/16 18:47:02 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2016/09/27 13:21:30 tnn Exp $
 
-DISTNAME=		synergy-1.8.2
+DISTNAME=		synergy-1.8.3
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
