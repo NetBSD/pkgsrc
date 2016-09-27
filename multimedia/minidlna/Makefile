@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/08/17 00:06:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2016/09/27 12:48:51 wiz Exp $
 
 DISTNAME=	minidlna-1.1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=minidlna/}
 
@@ -18,10 +18,12 @@ CONF_FILES=	${EGDIR}/minidlna.conf \
 		${PKG_SYSCONFDIR}/minidlna.conf
 RCD_SCRIPTS=	minidlna
 
-INSTALLATION_DIRS=	share/examples/minidlna
+INSTALLATION_DIRS=	share/examples/minidlna ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/minidlna.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/minidlna.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/minidlnad.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
