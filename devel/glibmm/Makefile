@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2016/07/09 06:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2016/09/27 02:37:32 maya Exp $
 
 DISTNAME=	glibmm-2.48.1
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gtkmm.org/
 COMMENT=	C++ bindings for glib
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
+GCC_REQD+=		4.8
 USE_LANGUAGES=		c c++
 CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
