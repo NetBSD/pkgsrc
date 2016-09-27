@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3998 2016/09/27 13:22:45 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.3999 2016/09/27 17:10:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5623,3 +5623,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/redis to 3.2.4 [fhajny 2016-09-26]
 	Updated multimedia/minidlna to 1.1.5nb2 [wiz 2016-09-27]
 	Updated net/synergy to 1.8.3 [tnn 2016-09-27]
+	Updated pkgtools/url2pkg to 2.28 [wiz 2016-09-27]
