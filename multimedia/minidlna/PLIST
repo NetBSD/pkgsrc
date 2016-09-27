@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2016/07/07 08:31:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/09/27 12:48:51 wiz Exp $
+man/man5/minidlna.conf.5
+man/man8/minidlnad.8
 sbin/minidlnad
 share/examples/minidlna/minidlna.conf
 share/locale/da/LC_MESSAGES/minidlna.mo
