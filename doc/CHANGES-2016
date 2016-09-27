@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.3999 2016/09/27 17:10:18 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4000 2016/09/27 17:14:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5624,3 +5624,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/minidlna to 1.1.5nb2 [wiz 2016-09-27]
 	Updated net/synergy to 1.8.3 [tnn 2016-09-27]
 	Updated pkgtools/url2pkg to 2.28 [wiz 2016-09-27]
+	Updated net/bind910 to 9.10.4pl3 [taca 2016-09-27]
+	Updated net/bind99 to 9.9.9pl3 [taca 2016-09-27]
