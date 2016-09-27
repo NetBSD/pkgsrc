@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.70 2016/04/18 15:29:50 jperkin Exp $
+$NetBSD: distinfo,v 1.71 2016/09/27 12:00:50 wiz Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
@@ -7,6 +7,7 @@ Size (abiword-3.0.1.tar.gz) = 11144990 bytes
 SHA1 (patch-configure.ac) = 239c0635c2c616c7e0a986a5fd92428393af38b7
 SHA1 (patch-plugin-configure.m4) = a8b8db3bdbd69339e32eefec1de7b1b59467db40
 SHA1 (patch-plugins_aiksaurus_Makefile.am) = 1529d5098b7fb798c428fe02cc50879374cb3e9d
+SHA1 (patch-plugins_collab_backends_service_xp_tls__tunnel.cpp) = f8eed4520951653822c6de8da371c8cb42dcbc89
 SHA1 (patch-plugins_command_Makefile.am) = e003a6bf9a6e0566abc85f09868fdf1aa93234d7
 SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = 15692cf15fd4099e7ad4ad854b6b57b103717269
 SHA1 (patch-plugins_goffice_Makefile.am) = 1959eea3b4e19f085aeb56870f682ce44561d445
