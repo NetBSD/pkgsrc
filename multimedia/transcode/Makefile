@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2016/08/17 00:06:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2016/09/28 14:05:44 wiz Exp $
 
 DISTNAME=	transcode-1.1.7
 PKGREVISION=	21
@@ -7,7 +7,8 @@ MASTER_SITES=	http://bitbucket.org/france/transcode-tcforge/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tcforge.berlios.de/
+HOMEPAGE=	https://bitbucket.org/achurch_/transcode/wiki/Home
+# or https://bitbucket.org/france/transcode-tcforge/wiki/Home
 COMMENT=	Command line video-stream processing tool
 LICENSE=	gnu-gpl-v2
 
