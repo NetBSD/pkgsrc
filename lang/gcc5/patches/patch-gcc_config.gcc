@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_config.gcc,v 1.1 2015/07/16 12:03:36 ryoon Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.2 2016/09/28 14:39:00 maya Exp $
 
 --- gcc/config.gcc.orig	2014-11-21 16:04:20.000000000 +0000
 +++ gcc/config.gcc
@@ -14,8 +14,8 @@ $NetBSD: patch-gcc_config.gcc,v 1.1 2015/07/16 12:03:36 ryoon Exp $
  
 +  # cabs/cabsf are renamed to __c99_cabs/cabsf
 +  tm_p_file="${tm_p_file} netbsd-protos.h"
-+  target_gtfiles="\$(srcdir)/config/netbsd.c"
-+  extra_objs="netbsd.o"
++  target_gtfiles="${target_gtfiles} \$(srcdir)/config/netbsd.c"
++  extra_objs="${extra_objs} netbsd.o"
 +
    # NetBSD 2.0 and later get POSIX threads enabled by default.
    # Allow them to be explicitly enabled on any other version.
