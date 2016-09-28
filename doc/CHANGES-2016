@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4001 2016/09/27 21:26:20 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4002 2016/09/28 08:15:40 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5627,3 +5627,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/bind910 to 9.10.4pl3 [taca 2016-09-27]
 	Updated net/bind99 to 9.9.9pl3 [taca 2016-09-27]
 	Updated security/libressl to 2.3.8 [maya 2016-09-27]
+	Updated devel/boehm-gc to 7.6.0nb1 [jperkin 2016-09-28]
