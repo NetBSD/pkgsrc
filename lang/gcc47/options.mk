@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2016/02/25 14:42:56 jperkin Exp $
+# $NetBSD: options.mk,v 1.13 2016/09/28 12:07:27 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -7,7 +7,7 @@ PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++
 
 PKG_SUGGESTED_OPTIONS.DragonFly+=	nls
 PKG_SUGGESTED_OPTIONS.Linux+=		nls gcc-java
-PKG_SUGGESTED_OPTIONS.NetBSD+=		nls gcc-java
+PKG_SUGGESTED_OPTIONS.NetBSD+=		nls
 PKG_SUGGESTED_OPTIONS.SunOS+=		gcc-go gcc-inplace-math
 PKG_SUGGESTED_OPTIONS.*+= 		gcc-java
 
