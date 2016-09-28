@@ -1,0 +1,39 @@
+$NetBSD: patch-tool_INSTALLBIN,v 1.1 2016/09/28 10:00:27 kamil Exp $
+
+Fix shell portability.
+
+--- tool/INSTALLBIN.orig	2006-06-17 08:10:02.000000000 +0000
++++ tool/INSTALLBIN
+@@ -69,12 +69,12 @@ fi
+ echo "Where do the files go to?  Summary:"
+ echo "Installing binary files to:              $BINDIR"
+ echo "           Cint system files to:         $LIBDIR"
+-if ! test "${MANDIR}x" == "x"; then
++if ! test "${MANDIR}x" = "x"; then
+   echo "           manual pages to:              $MANDIR"
+ else
+   echo "           manual pages are not installed"
+ fi
+-if ! test "${DOCDIR}x" == "x"; then
++if ! test "${DOCDIR}x" = "x"; then
+   echo "           additional documentation to:  $DOCDIR"
+ else
+   echo "           additional documentation is not installed"
+@@ -127,7 +127,7 @@ echo -e "\n  ... successfully installed 
+ #####################################################################
+ # Optionally copy man files
+ #####################################################################
+-if ! test "${MANDIR}x" == "x"; then
++if ! test "${MANDIR}x" = "x"; then
+   mkdir -p $MANDIR/man1
+   
+   # Copy manpages in section 1
+@@ -143,7 +143,7 @@ fi
+ #####################################################################
+ # Optionally copy additional text documentation
+ #####################################################################
+-if ! test "${DOCDIR}x" == "x"; then
++if ! test "${DOCDIR}x" = "x"; then
+   mkdir -p $DOCDIR
+   
+   # Copy text files in doc/
