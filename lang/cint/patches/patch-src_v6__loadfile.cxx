@@ -1,15 +1,15 @@
-$NetBSD: patch-al,v 1.2 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: patch-src_v6__loadfile.cxx,v 1.1 2016/09/28 10:00:27 kamil Exp $
 
-Handle BSDs like Linux.
+Handle BSDs.
 
---- src/loadfile.c~	2005-05-06 11:32:18.000000000 -0400
-+++ src/loadfile.c	2008-09-05 00:26:18.000000000 -0400
-@@ -2440,7 +2440,7 @@ char *name;
-   if(strlen(name)<G__MAXFILENAME-6) strcat(name,appendix);
+--- src/v6_loadfile.cxx.orig	2007-03-15 17:59:30.000000000 +0000
++++ src/v6_loadfile.cxx
+@@ -2494,7 +2494,7 @@ char* G__tmpnam(char *name)
+   G__tmpfiles.Add(name);
    return(name);
  
 -#elif /*defined(G__NEVER) && */ ((__GNUC__>=3)||((__GNUC__>=2)&&(__GNUC_MINOR__>=96)))&&(defined(__linux)||defined(__linux__))
 +#elif /*defined(G__NEVER) && */ ((__GNUC__>=3)||((__GNUC__>=2)&&(__GNUC_MINOR__>=96)))&&(defined(__linux)||defined(__linux__)||defined(__NetBSD__)||defined(__FreeBSD__)||defined(__OpenBSD__)||defined(__DragonFly__))
    /* After all, mkstemp creates more problem than a solution. */
+   static char tempname[G__MAXFILENAME];
    const char *appendix="_cint";
-   strcpy(name,"/tmp/XXXXXX");
