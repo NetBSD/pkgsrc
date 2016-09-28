@@ -1,115 +1,89 @@
-# $NetBSD: Makefile,v 1.31 2015/12/11 23:32:53 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2016/09/28 10:00:27 kamil Exp $
 
-DISTNAME=		cint5.15
-PKGNAME=		cint-5.15.174
-PKGREVISION=		2
+DISTNAME=		cint-5.16.19-source
+PKGNAME=		${DISTNAME:S/-source//}
 CATEGORIES=		lang
-MASTER_SITES=		ftp://root.cern.ch/root/
-#MASTER_SITES=		${MASTER_SITE_BACKUP}
+MASTER_SITES=		https://root.cern.ch/download/
 
 MAINTAINER=		drochner@NetBSD.org
-HOMEPAGE=		http://root.cern.ch/root/Cint.html
+HOMEPAGE=		http://www.hanno.jp/gotom/Cint.html
 COMMENT=		C/C++ interpreter
+LICENSE=		mit
 
-CONFLICTS=		man-pages-[0-9]*
+USE_TOOLS+=		bash gmake pax
+USE_LANGUAGES=		c c++
+
+CONFIG_SHELL=		${BASH}
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+CONFIGURE_ARGS+=	--arch=netbsd
+CONFIGURE_ARGS+=	--readline=${PREFIX}/lib/libreadline.so
 
 USE_LANGUAGES=		c c++
 
-#same distribution file name for minor versions
-DIST_SUBDIR=		${PKGNAME_NOREV}
-WRKSRC=			${WRKDIR}
-GCC_REQD+=		3.0
-PTHREAD_OPTS+=		native
-PLIST_VARS+=		threads
-.include "../../mk/pthread.buildlink3.mk"
-.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
-PLIST.threads=		yes
-.endif
+HAS_CONFIGURE=			yes
+CFLAGS+=			-Wno-write-strings
+CXXFLAGS+=			-Wno-write-strings
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
+LDFLAGS+=			${COMPILER_RPATH_FLAG}${PREFIX}/cint/lib
+CONFIGURE_ENV+=			CFLAGS_ADD=${CFLAGS:Q}
+CONFIGURE_ENV+=			CXXFLAGS_ADD=${CXXFLAGS:Q}
+CONFIGURE_ENV+=			LDFLAGS_ADD=${LDFLAGS:Q}
+CONFIGURE_ENV+=			SOFLAGS_ADD=${LDFLAGS:Q}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man2
-INSTALLATION_DIRS+=	${PKGMANDIR}/man3
-USE_LANGUAGES=		c c++
-CHECK_PORTABILITY_SKIP+=	INSTALLBIN
+BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/cint/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/cint/lib
+
+BUILD_TARGET=			# empty string required (override "all")
+
+INSTALLATION_DIRS+=	bin cint cint/lib share/doc/cint
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man2 ${PKGMANDIR}/man3
 
 post-extract:
 	${FIND} ${WRKSRC} -depth -type d -name CVS -exec ${RM} -rf {} \;
 	${FIND} ${WRKSRC} -type f -name .cvsignore -exec ${RM} -f {} \;
+	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh \
+		>${WRKSRC}/cint.sh
 
-do-build:
-	cd ${WRKDIR};						\
-	case ${OPSYS} in					\
-	FreeBSD|DragonFly)					\
-		${PKGSRC_SETENV} ${MAKE_ENV} ${SH} ./setup platform/freebsd_C \
-		;;						\
-	NetBSD|OpenBSD|Bitrig)					\
-		${PKGSRC_SETENV} ${MAKE_ENV} ${SH} ./setup platform/netbsd \
-		;;						\
-	SunOS)							\
-		${PKGSRC_SETENV} ${MAKE_ENV} ${SH} ./setup platform/solaris_gcc \
-		;;						\
-	*)							\
-		${ECHO} 'not yet ported to ${OPSYS}'; exit 1 ;;	\
-	esac
+
+# We do not want these files to be installed
+pre-install:
+	${RM} -f ${WRKSRC}/include/Makeit
+	${RM} -f ${WRKSRC}/include/make*
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/cint
-	${INSTALL_PROGRAM} ${WRKDIR}/cint ${DESTDIR}${PREFIX}/cint
-	${INSTALL_PROGRAM} ${WRKDIR}/makecint ${DESTDIR}${PREFIX}/cint
-	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh >${DESTDIR}${PREFIX}/bin/cint
+.for f in cint makecint
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/cint
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/inc/G__ci.h ${DESTDIR}${PREFIX}/cint
+	${INSTALL_PROGRAM} ${WRKSRC}/libcint.so ${DESTDIR}${PREFIX}/cint/lib
+	${INSTALL_SCRIPT} ${WRKSRC}/cint.sh ${DESTDIR}${PREFIX}/bin/cint
+	${RUN} cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf cint makecint
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/cint
-	rm -f ${DESTDIR}${PREFIX}/bin/makecint
-	cd ${DESTDIR}${PREFIX}/bin && ${LN} cint makecint
-	${INSTALL_DATA} ${WRKDIR}/MAKEINFO ${DESTDIR}${PREFIX}/cint
-	${CP} -r ${WRKDIR}/include ${WRKDIR}/stl ${DESTDIR}${PREFIX}/cint
-	${RM} ${DESTDIR}${PREFIX}/cint/include/Makeit \
-		${DESTDIR}${PREFIX}/cint/include/make*
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/cint/lib
-	${CP} -r ${WRKDIR}/lib/prec_stl ${DESTDIR}${PREFIX}/cint/lib
-	${INSTALL_DATA} ${WRKDIR}/G__ci.h ${DESTDIR}${PREFIX}/cint
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/bytecode.txt \
+	${RUN} cd ${WRKSRC} && ${PAX} -rw include stl ${DESTDIR}${PREFIX}/cint
+# Install demos
+	${RUN} cd ${WRKSRC} && ${PAX} -rw demo ${DESTDIR}${PREFIX}/cint
+	${RUN} cd ${WRKSRC}/lib \
+		&& ${PAX} -rw prec_stl ${DESTDIR}${PREFIX}/cint/lib
+.for f in \
+	bytecode.txt cint.txt cintapi.txt extlib.txt ifdef.txt limitati.txt \
+	limitnum.txt makecint.txt message.txt ref.txt
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} \
 		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/cint.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/cintapi.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/extlib.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/ifdef.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/limitati.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/limitnum.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/makecint.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/message.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_DATA} ${WRKSRC}/doc/ref.txt \
-		${DESTDIR}${PREFIX}/share/doc/cint
-	${INSTALL_MAN} ${WRKSRC}/doc/man1/cint.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man1/makecint.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/man2/garbage.2 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man2
-	${INSTALL_MAN} ${WRKSRC}/doc/man2/security.2 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man2
-	${INSTALL_MAN} ${WRKSRC}/doc/man2/unique.2 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man2
-	${INSTALL_MAN} ${WRKSRC}/doc/man3/array.h.3 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_MAN} ${WRKSRC}/doc/man3/fft.h.3 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_MAN} ${WRKSRC}/doc/man3/statistics.h.3 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+.endfor
+.for f in \
+	cint.1 makecint.1 garbage.2 unique.2 array.h.3 fft.h.3 statistics.h.3
+	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}/${f}
+.endfor
+# Resolve conflict with devel/man-pages
+.for f in \
+	security.2
+	${INSTALL_MAN} ${WRKSRC}/doc/man${f:E}/${f} \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man${f:E}/cint_${f}
+.endfor
 
-# The library seems to want these but the pertinent parts still don't
-# build, so I'm reluctant to bother.
-#
-#.include "../../graphics/glu/buildlink3.mk"
-#.include "../../graphics/MesaLib/buildlink3.mk"
-#.include "../../x11/xproto/buildlink3.mk"
-#.include "../../x11/libX11/buildlink3.mk"
 
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
