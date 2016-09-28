@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/09/16 06:26:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/09/28 09:04:41 jperkin Exp $
 bin/guild
 bin/guile
 bin/guile-config
@@ -391,8 +391,8 @@ lib/guile/2.0/ccache/web/response.go
 lib/guile/2.0/ccache/web/server.go
 lib/guile/2.0/ccache/web/server/http.go
 lib/guile/2.0/ccache/web/uri.go
+lib/libguile-2.0.${GUILE_LIBNAME}-gdb.scm
 lib/libguile-2.0.la
-lib/libguile-2.0.so.22.8.0-gdb.scm
 lib/libguilereadline-v-18.la
 lib/pkgconfig/guile-2.0.pc
 ${PKGMANDIR}/man1/guile.1
