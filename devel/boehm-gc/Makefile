@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.83 2016/08/09 12:50:39 mef Exp $
+# $NetBSD: Makefile,v 1.84 2016/09/28 08:15:30 jperkin Exp $
 
 DISTNAME=	gc-7.6.0
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hboehm.info/gc/gc_source/
 
@@ -22,7 +23,7 @@ TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin" && empty(OS_VERSION:M[1-9].*)
+.if !empty(MACHINE_PLATFORM:MDarwin-10.6*)
 CFLAGS+=		-D_XOPEN_SOURCE
 .endif
 
