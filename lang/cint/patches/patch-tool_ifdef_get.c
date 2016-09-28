@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.2 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: patch-tool_ifdef_get.c,v 1.1 2016/09/28 10:00:27 kamil Exp $
 
 LP64 fixes.
 
---- tool/ifdef/get.c~	2005-05-06 04:49:09.000000000 -0400
-+++ tool/ifdef/get.c	2008-09-05 00:43:19.000000000 -0400
-@@ -2575,7 +2575,7 @@ struct G__param *libp;
+--- tool/ifdef/get.c.orig	2006-07-26 13:00:37.000000000 +0000
++++ tool/ifdef/get.c
+@@ -2582,7 +2582,7 @@ struct G__param *libp;
  {
  	char temp[ONELINE],temp1[ONELINE];
  	FILE *fopen();
@@ -13,7 +13,7 @@ LP64 fixes.
  
  	if(strcmp(funcname,"printf")==0) {
  		/* para[0]:description, para[1~paran-1]: */
-@@ -2596,18 +2596,18 @@ struct G__param *libp;
+@@ -2603,18 +2603,18 @@ struct G__param *libp;
  
  	if(strcmp(funcname,"fclose")==0) {
  		/* para[0]:filepointer */
@@ -35,7 +35,7 @@ LP64 fixes.
  		G__letvariable(libp->parameter[1],temp,&G__global,G__local);
  		return(1);
  	}
-@@ -2615,7 +2615,7 @@ struct G__param *libp;
+@@ -2622,7 +2622,7 @@ struct G__param *libp;
  	if(strcmp(funcname,"fprintf")==0) {
  		/* parameter[0]:pointer ,parameter[1]:description, para[2~paran-1]: */
  		G__charformatter(result7,1,libp);
@@ -44,3 +44,9 @@ LP64 fixes.
  		strcpy(result7,"");
  		return(1);
  	}
+@@ -3553,5 +3553,3 @@ FILE *fp;
+ 
+ 	return( c ) ;
+ }
+-
+-

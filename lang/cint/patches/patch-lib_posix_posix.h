@@ -1,11 +1,11 @@
-$NetBSD: patch-ai,v 1.2 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: patch-lib_posix_posix.h,v 1.1 2016/09/28 10:00:27 kamil Exp $
 
-Add NetBSD to list of cases.
+Add support for NetBSD
 
---- lib/posix/posix.h~	2005-05-06 04:48:49.000000000 -0400
-+++ lib/posix/posix.h	2008-09-05 00:02:39.000000000 -0400
-@@ -272,7 +272,7 @@ extern char *getwd(char *buf);
- extern int setpgrp(pid_t _pid,pid_t _pgrp);
+--- lib/posix/posix.h.orig	2006-11-28 15:08:01.000000000 +0000
++++ lib/posix/posix.h
+@@ -283,7 +283,7 @@ extern int setpgrp(pid_t _pid,pid_t _pgr
+ #endif
  #elif defined(G__SUN) || defined(__sun)
  extern long setpgrp(void);
 -#elif defined(G__FBSD)||defined(__FreeBSD__)||defined(G__OBSD)||defined(__OpenBSD__)||((defined(G__alpha)||defined(__alpha))&&defined(G__GNUC))||((defined(G__alpha)||defined(__alpha))&&defined(G__GNUC))
