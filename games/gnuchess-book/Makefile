@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 11:54:41 asau Exp $
+# $NetBSD: Makefile,v 1.8.30.1 2016/09/28 12:59:25 mef Exp $
 #
 
 DISTNAME=		book_1.01.pgn
@@ -25,7 +25,7 @@ PLIST_SUBST+=		BOOK_FILE=${BOOK_FILE:Q}
 
 BOOKDIR=		${PREFIX}/lib/${CHESS_ENGINE}
 PGN_FILE=		${DISTNAME}
-BOOK_FILE=		book.dat
+BOOK_FILE=		book.bin
 
 do-build:
 	@${ECHO} "book add ${WRKSRC}/${PGN_FILE}" > ${WRKSRC}/makebook.gnuchess
