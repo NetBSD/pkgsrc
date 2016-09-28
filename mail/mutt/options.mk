@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2016/08/21 16:59:21 tnn Exp $
+# $NetBSD: options.mk,v 1.24 2016/09/28 08:04:05 wiz Exp $
 
 # Global and legacy options
 
@@ -18,8 +18,8 @@ PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
 ### Slang
 ###
 .if !empty(PKG_OPTIONS:Mslang)
-.  include "../../devel/libslang/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
+.  include "../../devel/libslang2/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang2}
 .endif
 
 ###
