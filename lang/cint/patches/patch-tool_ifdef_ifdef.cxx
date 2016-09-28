@@ -1,11 +1,10 @@
-$NetBSD: patch-am,v 1.3 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: patch-tool_ifdef_ifdef.cxx,v 1.1 2016/09/28 10:00:27 kamil Exp $
 
-Use standard headers.
-Don't redeclare getopt on a bunch more systems.
+Reuse getopt(3) prototype on BSDs from standard header.
 
---- tool/ifdef/ifdef.cxx.orig	2005-05-06 08:49:09.000000000 +0000
+--- tool/ifdef/ifdef.cxx.orig	2006-07-26 13:00:37.000000000 +0000
 +++ tool/ifdef/ifdef.cxx
-@@ -13,6 +13,7 @@
+@@ -20,6 +20,7 @@
  #include <stdlib.h>
  #include <string.h>
  #include <ctype.h>
@@ -13,7 +12,7 @@ Don't redeclare getopt on a bunch more systems.
  #include <string>
  #include <map>
  #ifndef __hpux
-@@ -62,7 +63,7 @@ extern "C" {
+@@ -69,7 +70,7 @@ extern "C" {
  char *G__calc(char*);
  char *G__getexpr(char*);
  char *G__getandor(char*);
@@ -22,3 +21,8 @@ Don't redeclare getopt on a bunch more systems.
  char getopt(int argc,char **argv,char *optlist);
  #endif
  extern int optind;
+@@ -946,4 +947,3 @@ int G__splitawk(char* string,int* argc,c
+   }
+   return(n_eof);
+ }
+-

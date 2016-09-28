@@ -1,0 +1,107 @@
+$NetBSD: patch-configure,v 1.1 2016/09/28 10:00:27 kamil Exp $
+
+Don't check for running bash on SunOS.
+Add NetBSD support.
+Fix readlinelib parameter handling.
+
+--- configure.orig	2006-11-24 08:30:23.000000000 +0000
++++ configure
+@@ -6,21 +6,9 @@
+ #
+ ##############################################################
+ #
+-# This is a bash script, which works with any reasonable sh.
+-# Solaris sh is not, so we have to start bash, and call ourselves again.
+-
+-[ "x$1" != "x__have_the_proper_shell@" ] && ( \
+-uname -a | grep -i sunos > /dev/null \
+-  && (bash $0 __have_the_proper_shell@ "$*") \
+-  || (sh $0 __have_the_proper_shell@ "$*") \
+-)
+-
+-[ "x$1" != "x__have_the_proper_shell@" ] && exit
+-shift
+-
+ # configure settings to build CINT
+ 
+-ARCHS=(linux linuxicc macgcc djgpp cygwin mingw mwerks hpux aix msvc7 msvc8 solaris solarisgcc)
++ARCHS=(linux linuxicc macgcc djgpp cygwin mingw mwerks netbsd hpux aix msvc7 msvc8 solaris solarisgcc)
+ 
+ #############################################################
+ ###
+@@ -102,6 +90,27 @@ function config_linux {
+     config_GCC_defaults
+ }
+ 
++function config_netbsdx8664gcc {
++    config_GCC_defaults
++
++    EXTRA_LIB_DIR=/usr/lib64
++    CPP="gcc -E -C -m64"
++    CXXFLAGS="-m64  -fPIC ${CXXFLAGS}"
++    CFLAGS="-m64  -fPIC ${CFLAGS}"
++    LDFLAGS="-m64 ${LDFLAGS}"
++    DEFAULTLIBS="-lm -lterminfo"
++}
++
++function config_netbsd {
++    config_GCC_defaults
++
++    CPP="gcc -E -C"
++    CXXFLAGS="-fPIC ${CXXFLAGS}"
++    CFLAGS="-fPIC ${CFLAGS}"
++    LDFLAGS="${LDFLAGS}"
++    DEFAULTLIBS="-lm -lterminfo"
++}
++
+ function config_linuxx8664gcc {
+     config_GCC_defaults
+ 
+@@ -327,6 +336,7 @@ function guess_arch {
+ #        freebsd*:*:5*)         arch=freebsd5        ;;
+ #        freebsd*:*:4*)         arch=freebsd4        ;;
+ #        freebsd*:*:*)          arch=freebsd         ;;
++         netbsd:x86_64:*)       arch=netbsdx8664gcc  ;;
+ #        hp-ux:ia64:*)          arch=hpuxia64acc     ;;
+ #        hp-ux:*:*)             arch=hpuxacc         ;;
+ #        hurd*:*:*)             arch=hurddeb         ;;
+@@ -412,7 +422,7 @@ function processflag_cintex_libdir {
+     CINTEXLIBDIR=$1
+ }
+ 
+-function processflag_readlinelib {
++function processflag_readline {
+     READLINELIB=$1
+     BUILDREADLINE=
+ }
+@@ -461,17 +471,22 @@ if [ "$ARCH" = "" ]; then
+ fi
+ 
+ if [ "$DEBUG" = "1" ]; then
+-    LDFLAGS="$LDDBGFLAGS $LDFLAGS"
+-    SOFLAGS="$SODBGFLAGS $SOFLAGS"
+-    CFLAGS="$CDBGFLAGS $CFLAGS"
+-    CXXFLAGS="$CXXDBGFLAGS $CXXFLAGS"
++    LDFLAGS="$LDDBGFLAGS $LDFLAGS $LDFLAGS_ADD"
++    SOFLAGS="$SODBGFLAGS $SOFLAGS $SOFLAGS_ADD"
++    CFLAGS="$CDBGFLAGS $CFLAGS $CFLAGS_ADD"
++    CXXFLAGS="$CXXDBGFLAGS $CXXFLAGS $CXXFLAGS_ADD"
+ else
+-    LDFLAGS="$LDOPTFLAGS $LDFLAGS"
+-    SOFLAGS="$SOOPTFLAGS $SOFLAGS"
+-    CFLAGS="$COPTFLAGS $CFLAGS"
+-    CXXFLAGS="$CXXOPTFLAGS $CXXFLAGS"
++    LDFLAGS="$LDOPTFLAGS $LDFLAGS $LDFLAGS_ADD"
++    SOFLAGS="$SOOPTFLAGS $SOFLAGS $SOFLAGS_ADD"
++    CFLAGS="$COPTFLAGS $CFLAGS $CFLAGS_ADD"
++    CXXFLAGS="$CXXOPTFLAGS $CXXFLAGS $CXXFLAGS_ADD"
+ fi
+ 
++echo LDFLAGS=$LDFLAGS
++echo SOFLAGS=$SOFLAGS
++echo CFLAGS=$CFLAGS
++echo CXXFLAGS=$CXXFLAGS
++
+ CMACROS="$CMACROS -DG__HAVE_CONFIG -DG__NOMAKEINFO"
+ CXXMACROS="$CXXMACROS -DG__HAVE_CONFIG -DG__NOMAKEINFO"
+ 

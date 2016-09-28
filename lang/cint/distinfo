@@ -1,20 +1,23 @@
-$NetBSD: distinfo,v 1.9 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: distinfo,v 1.10 2016/09/28 10:00:27 kamil Exp $
 
-SHA1 (cint-5.15.174/cint5.15.tar.gz) = 7061acb210dafb86413536dc91e0aa24e9ef3ee9
-RMD160 (cint-5.15.174/cint5.15.tar.gz) = 4d403e150fc290feba38785b385f282a28d15dcd
-SHA512 (cint-5.15.174/cint5.15.tar.gz) = a73e7c5ba41573ad9bc04a9c7aa85c234b5f2ab4b255cc52e2ac6792cc8d1c0592748ba963829892676ab8b432c9ca09ebabfa0986e25fddb58fbb57638e67b1
-Size (cint-5.15.174/cint5.15.tar.gz) = 1983029 bytes
-SHA1 (patch-aa) = 09387ab7fe839e7215ae932c4a84a6636f752de6
-SHA1 (patch-ab) = 920776d9800dd4ae7193c8f57965dfc29ee1eb8a
-SHA1 (patch-ac) = 89ed3ebac70375887870e84e6643c70514acd784
-SHA1 (patch-ad) = 4d585ca0e018dd6f6a4699ae917d25be18d41b0c
-SHA1 (patch-ae) = 1933b54adbef64be0ba18c3d50e76007d66a26e4
-SHA1 (patch-af) = 64d9c3632d1cc594e168909b99f65844d61442d8
-SHA1 (patch-ag) = 27bd14035b54e5fd503b03ec4a02e1c013ab8c52
-SHA1 (patch-ah) = 8a1d07741ce53b7dcf22c0812df046174ad60e97
-SHA1 (patch-ai) = 704074e9f8e030d8dc901f5292030bd50f8caf97
-SHA1 (patch-aj) = 0d6909557ee54d38ee89868c3c622cc61236aea6
-SHA1 (patch-ak) = 46511e389291847e0629284f71dd9e8b5816e187
-SHA1 (patch-al) = 8740f759d06fe7cd5e7cb4ab59a81a9a119c30f9
-SHA1 (patch-am) = e5da0ceedd9019f5acdc99233b153392003b8be2
-SHA1 (patch-an) = 8b0fed4a9f5b16ec00ced4644cb375c200b03c88
+SHA1 (cint-5.16.19-source.tar.gz) = 22307e50b4414f4e6e70d791d3ccfe2cc2163f59
+RMD160 (cint-5.16.19-source.tar.gz) = ff7deb0cdf5534fb8849eaf5febf9e57117066ff
+SHA512 (cint-5.16.19-source.tar.gz) = ae96247dc62f7ab27d514b302cd836a9bed07ed24adc664224c063a70e1305a335e01031e0dd18646d3d7215593590a8d5100c4236aba08064bbcf0ece531c02
+Size (cint-5.16.19-source.tar.gz) = 1975329 bytes
+SHA1 (patch-Makefile) = 2bbed612d93d5a86a0e331d40d8be029d50e93a0
+SHA1 (patch-configure) = 281dd6f18d1d9528e0c993175ef32571c49e6ea8
+SHA1 (patch-lib_posix_posix.h) = 9163821e7df73848cc05f5a3a5c172d20d46504c
+SHA1 (patch-src_Method.cxx) = ee84d79c15f6951c07527e8c000c0d8eb60fdc71
+SHA1 (patch-src_Type.cxx) = ca273e0e7b7f983abfea2f68d9ec3434921eaaa3
+SHA1 (patch-src_bc__reader.h) = f768471d096a7e9401f7322f960119dd0f92769b
+SHA1 (patch-src_gcc3strm.cxx) = d0003a4fbfbe85080eb1770376c2bcaec562fdb8
+SHA1 (patch-src_v6__loadfile.cxx) = 08557776074c7bea3b82bf1a6ead5a4c1863e042
+SHA1 (patch-src_v6__macro.cxx) = 932f3177a6f6704aeca95d511a2730b30f3d1293
+SHA1 (patch-src_v6__newlink.cxx) = c481f18f470246424944fad6ead167c7e8c00bef
+SHA1 (patch-src_v6__parse.cxx) = c2e3f9fd599d607ea538c0fb8fe12eccf96fb936
+SHA1 (patch-src_v6__pcode.cxx) = 430706306baa0e9bb3f3631bdae81733f65d7815
+SHA1 (patch-tool_INSTALLBIN) = 76c5778cbf2f10c48a9e859837f045d2a7ac807d
+SHA1 (patch-tool_ifdef_Makefile.base) = dfc90a0ea0a7fb87a49ad057b928d39c67aec410
+SHA1 (patch-tool_ifdef_get.c) = 6719537bd515260095a7d15a2e870df3ccd244eb
+SHA1 (patch-tool_ifdef_ifdef.cxx) = 62770d0fb6556ac2efc16f692c15c6acc38174ab
+SHA1 (patch-tool_makecint.cxx) = b81d05e92dd089ad7a4d85160266fa3d19a1dab4
