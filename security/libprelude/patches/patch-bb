@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.1 2012/07/05 15:42:56 drochner Exp $
+$NetBSD: patch-bb,v 1.2 2016/09/29 12:14:38 joerg Exp $
 
 make this build with gnutls-3
 
@@ -12,3 +12,97 @@ make this build with gnutls-3
  
  #include "prelude-client.h"
  #include "prelude-error.h"
+@@ -97,26 +96,71 @@ static int anon_check_passwd(prelude_io_
+ }
+ 
+ 
++static inline gnutls_transport_ptr_t fd_to_ptr(int fd)
++{
++        union {
++                gnutls_transport_ptr_t ptr;
++                int fd;
++        } data;
++
++        data.fd = fd;
++
++        return data.ptr;
++}
++
++
++static inline int ptr_to_fd(gnutls_transport_ptr_t ptr)
++{
++        union {
++                gnutls_transport_ptr_t ptr;
++                int fd;
++        } data;
++
++        data.ptr = ptr;
++        return data.fd;
++}
++
++
++
++static ssize_t tls_pull(gnutls_transport_ptr_t fd, void *buf, size_t count)
++{
++        return read(ptr_to_fd(fd), buf, count);
++}
++
++static ssize_t tls_push(gnutls_transport_ptr_t fd, const void *buf, size_t count)
++{
++        return write(ptr_to_fd(fd), buf, count);
++}
++
++
+ 
+ static gnutls_session new_tls_session(int sock)
+ {
+         int ret;
+         gnutls_session session;
+-        const int kx_priority[] = {
+-                GNUTLS_KX_ANON_DH,
++        const char *err;
++
++#if defined LIBGNUTLS_VERSION_MAJOR && LIBGNUTLS_VERSION_MAJOR >= 3
++# define TLS_DH_STR "+ANON-ECDH:+ANON-DH"
++#else
++# define TLS_DH_STR "+ANON-DH"
++#endif
++
+ #ifdef GNUTLS_SRP_ENABLED
+-                GNUTLS_KX_SRP, GNUTLS_KX_SRP_DSS, GNUTLS_KX_SRP_RSA,
++        const char *pstring = "NORMAL:+SRP:+SRP-DSS:+SRP-RSA:" TLS_DH_STR;
++#else
++        const char *pstring = "NORMAL:" TLS_DH_STR;
+ #endif
+-                0 };
+-        union {
+-                int fd;
+-                void *ptr;
+-        } data;
+ 
+         gnutls_init(&session, GNUTLS_SERVER);
+-
+         gnutls_set_default_priority(session);
+-        gnutls_kx_set_priority(session, kx_priority);
++
++        ret = gnutls_priority_set_direct(session, pstring, &err);
++        if (ret < 0) {
++                fprintf(stderr, "TLS priority syntax error at: %s\n", err);
++                return NULL;
++        }
++
+ 
+ #ifdef GNUTLS_SRP_ENABLED
+         gnutls_credentials_set(session, GNUTLS_CRD_SRP, srpcred);
+@@ -124,8 +168,9 @@ static gnutls_session new_tls_session(in
+ #endif
+         gnutls_credentials_set(session, GNUTLS_CRD_ANON, anoncred);
+ 
+-        data.fd = sock;
+-        gnutls_transport_set_ptr(session, data.ptr);
++        gnutls_transport_set_ptr(session, fd_to_ptr(sock));
++        gnutls_transport_set_pull_function(session, tls_pull);
++        gnutls_transport_set_push_function(session, tls_push);
+ 
+         ret = gnutls_handshake(session);
+         if ( ret < 0 ) {
