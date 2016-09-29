@@ -1,0 +1,19 @@
+$NetBSD: patch-infrastructure_BoxPlatform.pm.in,v 1.1 2016/09/29 12:19:48 joerg Exp $
+
+Force use of GNU make everywhere, the BSD make rules just don't work.
+
+--- infrastructure/BoxPlatform.pm.in.orig	2016-09-29 09:25:56.000000000 +0000
++++ infrastructure/BoxPlatform.pm.in
+@@ -25,10 +25,9 @@ BEGIN
+ 	# Box Backup tried on Win2000,XP only :)
+ 	$build_os = 'CYGWIN' if $build_os =~ m/CYGWIN/;
+ 
+-	$make_command = ($build_os eq 'Darwin') ? 'bsdmake' : ($build_os eq 'SunOS') ? 'gmake' : 'make';
++	$make_command = 'gmake';
+ 
+-	$bsd_make = ($build_os ne 'Linux' && $build_os ne 'CYGWIN' &&
+-		$build_os ne "SunOS" && $build_os ne 'GNU/kFreeBSD');
++	$bsd_make = 0;
+ 
+ 	# blank extra flags by default
+ 	$platform_compile_line_extra = '';
