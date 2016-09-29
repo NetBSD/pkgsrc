@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/09/29 14:19:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/09/29 14:24:33 wiz Exp $
 
 DISTNAME=	c-ares-1.12.0
 PKGNAME=	${DISTNAME:S/c-/libc/1}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-MAKE_JOBS_SAFE=	no
+USE_TOOLS+=	gmake
 
 PKGCONFIG_OVERRIDE+=	libcares.pc.in
 
