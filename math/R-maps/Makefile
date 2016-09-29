@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/01/17 15:16:30 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2016/09/29 12:10:50 joerg Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -12,6 +12,7 @@ R_PKGNAME=	maps
 R_PKGVER=	2.3-9
 
 USE_TOOLS+=	gmake
+MAKE_ENV+=	AWK=${AWK:Q}
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
