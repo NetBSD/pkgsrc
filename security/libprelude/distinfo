@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.37 2015/11/04 01:17:49 agc Exp $
+$NetBSD: distinfo,v 1.38 2016/09/29 12:14:37 joerg Exp $
 
 SHA1 (libprelude-0.9.24.1.tar.gz) = b8c0c43efb33f3da741feac59b7a5482adf56282
 RMD160 (libprelude-0.9.24.1.tar.gz) = 0a2688cf5c44e834c07eaba36d333155b2ca226d
 SHA512 (libprelude-0.9.24.1.tar.gz) = f7f86f1f92e84e66f198e04e1d9a6b82c28d8239835919b76bfdb3034270956d915eea0a6c8d9a9eeb519ad02396ab50f14cf820b95c7288d2188ac85923b05c
 Size (libprelude-0.9.24.1.tar.gz) = 2582719 bytes
 SHA1 (patch-aa) = 4781d5d5f726b74e3e2179217ff2db9672c12158
-SHA1 (patch-ab) = 96418b2ce697bdfef83780e0dbc47d95568d3a16
+SHA1 (patch-ab) = 126b42abda48d8200040519210a962474fc7c3d0
 SHA1 (patch-ac) = 7474b2cf8cbb7fca81d85fe7c575f8ca99f90a43
 SHA1 (patch-ad) = 195228e1e04918275a3ab1cccb838de081a9ec98
 SHA1 (patch-ae) = d8b22cea826727a41108d65f84b594d0879397b2
@@ -17,6 +17,6 @@ SHA1 (patch-ak) = d5ba7700db11bee688d56e1b92f3663e6637237d
 SHA1 (patch-al) = a3c150d76c91e33703d9ee05cd32e5d6f7b1264a
 SHA1 (patch-am) = 5581c999105a5d3b616e090afc105781e66eb888
 SHA1 (patch-an) = 1f92ed4028087d9a357fcf3788978495d63a13e3
-SHA1 (patch-ba) = adb9d29439df7f6f75396914e2f7f9732983eecf
-SHA1 (patch-bb) = 42ddad73912f8a5dd0deab11a710c5dcf32af322
+SHA1 (patch-ba) = 333d6e3f842d80888be0cec3921417fe51a027bc
+SHA1 (patch-bb) = ca80e503226a2e1adcc0976597a225a51a74b8f9
 SHA1 (patch-src_include_prelude-plugin.h) = 4731b98059971577819906d84fe7f160c24c04f5
