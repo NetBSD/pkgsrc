@@ -1,21 +1,27 @@
-$NetBSD: patch-setup_build.py,v 1.1 2016/07/24 07:08:54 wiz Exp $
+$NetBSD: patch-setup_build.py,v 1.2 2016/09/29 12:13:43 joerg Exp $
 
-Add rpath to linker command.
-Look in libtool directory for file.
+Find libtool output correctly.
+Fix linking against native X.
 
---- setup/build.py.orig	2016-07-22 02:21:05.000000000 +0000
+--- setup/build.py.orig	2016-09-29 10:28:31.000000000 +0000
 +++ setup/build.py
-@@ -251,8 +251,7 @@ class Build(Command):
-         return ['-I'+x for x in dirs]
- 
-     def lib_dirs_to_ldflags(self, dirs):
--        pref = '/LIBPATH:' if iswindows else '-L'
--        return [pref+x for x in dirs]
-+        return ['-L'+x+' -Wl,-R'+x for x in dirs]
- 
-     def libraries_to_ldflags(self, dirs):
-         pref = '' if iswindows else '-l'
-@@ -452,7 +451,7 @@ class Build(Command):
+@@ -368,6 +368,7 @@ class Build(Command):
+             INCLUDEPATH += {freetype}
+             DESTDIR = {destdir}
+             CONFIG -= create_cmake  # Prevent qmake from generating a cmake build file which it puts in the calibre src directory
++            QMAKE_LFLAGS += $(COMPILER_RPATH_FLAG)$(X11BASE)/lib
+             QMAKE_LIBS_PRIVATE += {glib} {fontconfig}
+             ''').format(
+                 headers=' '.join(headers), sources=' '.join(sources), others=' '.join(others), destdir=self.d(
+@@ -426,6 +427,7 @@ class Build(Command):
+         SOURCES = {sources}
+         INCLUDEPATH += {sipinc} {pyinc}
+         VERSION = {ver}
++        QMAKE_LFLAGS += $(COMPILER_RPATH_FLAG)$(X11BASE)/lib
+         win32 {{
+             LIBS += {py_lib}
+             TARGET_EXT = .dll
+@@ -456,7 +458,7 @@ class Build(Command):
          if iswindows:
              qmc += ['-spec', qmakespec]
          fext = 'dll' if iswindows else 'dylib' if isosx else 'so'
