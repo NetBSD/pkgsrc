@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.155 2016/09/19 13:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2016/09/29 20:11:08 markd Exp $
 
 DISTNAME=	wireshark-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,9 +21,6 @@ SHLIBTOOL_OVERRIDE=	# empty
 CHECK_PORTABILITY_SKIP+=packaging/macosx/*/*
 
 PKGCONFIG_OVERRIDE+=	wireshark.pc.in
-
-# https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=12831
-KRB5_ACCEPTED=		mit-krb5
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static=no
@@ -85,7 +82,6 @@ BUILDLINK_TRANSFORM+=	rm:-DGDK_PIXBUF_DISABLE_DEPRECATED
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../lang/python/application.mk"
-.include "../../security/mit-krb5/buildlink3.mk"
-#.include "../../mk/krb5.buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
