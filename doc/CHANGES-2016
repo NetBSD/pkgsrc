@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4007 2016/09/29 14:20:09 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4008 2016/09/29 19:29:21 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5633,3 +5633,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 6.7.0 [fhajny 2016-09-28]
 	Updated devel/autogen to 5.18.10nb2 [tron 2016-09-28]
 	Updated net/libcares to 1.12.0 [wiz 2016-09-29]
+	Updated www/wordpress to 4.6.1 [morr 2016-09-29]
