@@ -1,22 +1,12 @@
-$NetBSD: patch-ab,v 1.3 2008/07/21 12:10:49 shannonjr Exp $
+$NetBSD: patch-ab,v 1.4 2016/09/29 12:14:38 joerg Exp $
 
---- src/tls-auth.c.orig	2008-07-18 08:32:52.000000000 -0600
+--- src/tls-auth.c.orig	2009-05-12 07:49:43.000000000 +0000
 +++ src/tls-auth.c
-@@ -269,6 +269,7 @@ int tls_auth_connection(prelude_client_p
-         void *cred;
-         int ret, fd;
-         gnutls_session session;
-+	int cipher_list[2];
- 
-         if ( ! priority_set ) {
-                 ret = tls_auth_init_priority(NULL);
-@@ -285,6 +286,9 @@ int tls_auth_connection(prelude_client_p
+@@ -259,6 +260,7 @@ int tls_auth_connection(prelude_client_p
                  return prelude_error_verbose(PRELUDE_ERROR_PROFILE, "TLS initialization error: %s", gnutls_strerror(ret));
  
          set_default_priority(session);
-+	cipher_list[0] = GNUTLS_CIPHER_AES_128_CBC;
-+	cipher_list[1] = 0;
-+	gnutls_cipher_set_priority (session, cipher_list);
++	gnutls_priority_set_direct (session, "NORMAL", NULL);
          gnutls_credentials_set(session, GNUTLS_CRD_CERTIFICATE, cred);
  
          fd = prelude_io_get_fd(io);
