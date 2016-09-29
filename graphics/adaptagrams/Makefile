@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/18 23:36:00 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/29 12:10:21 joerg Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adaptagrams.org/
 COMMENT=	Tools for adaptive diagrams
 LICENSE=	gnu-lgpl-v2.1
+
+EXTRACT_USING+=	bsdtar
 
 WRKSRC=		${WRKDIR}/adaptagrams-${GITHUB_TAG}/cola
 
