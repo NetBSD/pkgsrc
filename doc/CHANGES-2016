@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4017 2016/09/30 11:00:20 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4018 2016/09/30 11:02:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5643,3 +5643,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/tor to 0.2.8.8 [wiz 2016-09-30]
 	Updated misc/p5-Business-ISBN to 3.003 [wiz 2016-09-30]
 	Updated devel/p5-Canary-Stability to 2012 [wiz 2016-09-30]
+	Updated security/p5-Crypt-ECB to 2.21 [wiz 2016-09-30]
