@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4031 2016/09/30 11:54:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4032 2016/09/30 11:55:50 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5657,3 +5657,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/liblangtag to 0.6.1 [wiz 2016-09-30]
 	Updated print/chktex to 1.7.6 [wiz 2016-09-30]
 	Updated graphics/asymptote to 2.38 [wiz 2016-09-30]
+	Updated devel/nspr to 4.13 [ryoon 2016-09-30]
