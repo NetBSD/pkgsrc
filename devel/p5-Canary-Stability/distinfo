@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/04/08 14:45:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2016/09/30 11:00:11 wiz Exp $
 
-SHA1 (Canary-Stability-2011.tar.gz) = f082fde18cf79e0601b1701a02a928f129f5546c
-RMD160 (Canary-Stability-2011.tar.gz) = caf514c803a03df249d8db71f36aec5f2d7ee115
-SHA512 (Canary-Stability-2011.tar.gz) = 1505750855b969ff733985098a50040e3346aec848c3f5d2cb9c74c9123379b5e918f23603a02f0d440f57f944caf4e39ff06a088697b5f1c4c4e90bc0c272de
-Size (Canary-Stability-2011.tar.gz) = 4265 bytes
+SHA1 (Canary-Stability-2012.tar.gz) = 9d3c5476081da9200ef59cacafea55bd011b6d8a
+RMD160 (Canary-Stability-2012.tar.gz) = bf81aa1ba086590fdbe3e6f3e604d674198c4b05
+SHA512 (Canary-Stability-2012.tar.gz) = 7780731e4142d536182e1820c041c43ae67c5b47c044f15d8dcc060646bbab10a974bddcb703fdb27f427db3cd4dbdff54e131dc708c0260d7275be869eb27b1
+Size (Canary-Stability-2012.tar.gz) = 4334 bytes
