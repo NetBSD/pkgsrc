@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4046 2016/09/30 15:37:29 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4047 2016/09/30 16:02:06 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5672,3 +5672,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/the_silver_searcher to 0.33.0 [wiz 2016-09-30]
 	Updated devel/jenkins to 2.7.4 [fhajny 2016-09-30]
 	Updated www/ruby-http-cookie to 1.0.3 [taca 2016-09-30]
+	Updated devel/monotone-viz to 1.0.2nb7 [dholland 2016-09-30]
