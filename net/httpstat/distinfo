@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/09/30 16:49:07 agc Exp $
+
+SHA1 (httpstat-1.2.0.tar.gz) = 719435fc048c255f92500b22cb5cbe588016abde
+RMD160 (httpstat-1.2.0.tar.gz) = 84383745805c081890bb5f64dc0b9005649ff805
+SHA512 (httpstat-1.2.0.tar.gz) = 7440828cccdba5323583229430234360a00aeb3de1d6f36c1eca22fb62a6be935cb2c1f9d211a91fc3d1d4de472e1cd820b28ebe74a1e8e6087deab930a1a763
+Size (httpstat-1.2.0.tar.gz) = 95701 bytes
