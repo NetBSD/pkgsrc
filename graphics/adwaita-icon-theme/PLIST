@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/04/10 19:17:25 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/09/30 13:09:10 wiz Exp $
 share/icons/Adwaita/16x16/actions/action-unavailable-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/address-book-new-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/address-book-new.png
@@ -216,7 +216,6 @@ share/icons/Adwaita/16x16/actions/selection-end-symbolic-rtl.symbolic.png
 share/icons/Adwaita/16x16/actions/selection-end-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/selection-start-symbolic-rtl.symbolic.png
 share/icons/Adwaita/16x16/actions/selection-start-symbolic.symbolic.png
-share/icons/Adwaita/16x16/actions/send-to-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/star-new-symbolic.symbolic.png
 share/icons/Adwaita/16x16/actions/system-lock-screen.png
 share/icons/Adwaita/16x16/actions/system-log-out.png
@@ -1417,7 +1416,6 @@ share/icons/Adwaita/24x24/actions/selection-end-symbolic-rtl.symbolic.png
 share/icons/Adwaita/24x24/actions/selection-end-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/selection-start-symbolic-rtl.symbolic.png
 share/icons/Adwaita/24x24/actions/selection-start-symbolic.symbolic.png
-share/icons/Adwaita/24x24/actions/send-to-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/star-new-symbolic.symbolic.png
 share/icons/Adwaita/24x24/actions/system-lock-screen.png
 share/icons/Adwaita/24x24/actions/system-log-out.png
@@ -2469,7 +2467,6 @@ share/icons/Adwaita/32x32/actions/selection-end-symbolic-rtl.symbolic.png
 share/icons/Adwaita/32x32/actions/selection-end-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/selection-start-symbolic-rtl.symbolic.png
 share/icons/Adwaita/32x32/actions/selection-start-symbolic.symbolic.png
-share/icons/Adwaita/32x32/actions/send-to-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/star-new-symbolic.symbolic.png
 share/icons/Adwaita/32x32/actions/system-lock-screen.png
 share/icons/Adwaita/32x32/actions/system-log-out.png
@@ -3295,7 +3292,6 @@ share/icons/Adwaita/48x48/actions/selection-end-symbolic-rtl.symbolic.png
 share/icons/Adwaita/48x48/actions/selection-end-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/selection-start-symbolic-rtl.symbolic.png
 share/icons/Adwaita/48x48/actions/selection-start-symbolic.symbolic.png
-share/icons/Adwaita/48x48/actions/send-to-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/star-new-symbolic.symbolic.png
 share/icons/Adwaita/48x48/actions/system-lock-screen.png
 share/icons/Adwaita/48x48/actions/system-log-out.png
@@ -3905,6 +3901,7 @@ share/icons/Adwaita/48x48/status/weather-snow-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/weather-snow.png
 share/icons/Adwaita/48x48/status/weather-storm-symbolic.symbolic.png
 share/icons/Adwaita/48x48/status/weather-storm.png
+share/icons/Adwaita/512x512/apps/accessories-calculator.png
 share/icons/Adwaita/64x64/actions/action-unavailable-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/address-book-new-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/application-exit-symbolic.symbolic.png
@@ -4020,7 +4017,6 @@ share/icons/Adwaita/64x64/actions/selection-end-symbolic-rtl.symbolic.png
 share/icons/Adwaita/64x64/actions/selection-end-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/selection-start-symbolic-rtl.symbolic.png
 share/icons/Adwaita/64x64/actions/selection-start-symbolic.symbolic.png
-share/icons/Adwaita/64x64/actions/send-to-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/star-new-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/system-run-symbolic.symbolic.png
 share/icons/Adwaita/64x64/actions/system-search-symbolic.symbolic.png
@@ -4479,7 +4475,6 @@ share/icons/Adwaita/96x96/actions/selection-end-symbolic-rtl.symbolic.png
 share/icons/Adwaita/96x96/actions/selection-end-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/selection-start-symbolic-rtl.symbolic.png
 share/icons/Adwaita/96x96/actions/selection-start-symbolic.symbolic.png
-share/icons/Adwaita/96x96/actions/send-to-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/star-new-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/system-run-symbolic.symbolic.png
 share/icons/Adwaita/96x96/actions/system-search-symbolic.symbolic.png
@@ -4846,6 +4841,7 @@ share/icons/Adwaita/cursors/c7088f0f3e6c8088236ef8e1e3e70000
 share/icons/Adwaita/cursors/cell
 share/icons/Adwaita/cursors/circle
 share/icons/Adwaita/cursors/col-resize
+share/icons/Adwaita/cursors/context-menu
 share/icons/Adwaita/cursors/copy
 share/icons/Adwaita/cursors/cross
 share/icons/Adwaita/cursors/cross_reverse
@@ -4858,6 +4854,7 @@ share/icons/Adwaita/cursors/dnd-ask
 share/icons/Adwaita/cursors/dnd-copy
 share/icons/Adwaita/cursors/dnd-link
 share/icons/Adwaita/cursors/dnd-move
+share/icons/Adwaita/cursors/dnd-no-drop
 share/icons/Adwaita/cursors/dnd-none
 share/icons/Adwaita/cursors/dot_box_mask
 share/icons/Adwaita/cursors/dotbox
