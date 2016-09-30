@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4028 2016/09/30 11:22:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4029 2016/09/30 11:24:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5654,3 +5654,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-Glob to 0.10 [wiz 2016-09-30]
 	Updated security/py-cryptography to 1.5.1 [wiz 2016-09-30]
 	Updated devel/global to 6.5.5 [wiz 2016-09-30]
+	Updated devel/liblangtag to 0.6.1 [wiz 2016-09-30]
