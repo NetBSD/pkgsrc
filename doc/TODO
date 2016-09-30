@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16516 2016/09/30 14:54:42 wiz Exp $
+$NetBSD: TODO,v 1.16517 2016/09/30 15:13:33 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -949,7 +949,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jdbc-mysql5-5.1.36
 	o jdom-2.0.6
 	o jed-0.99-18
-	o jenkins-2.0
 	o jetty7-7.6.17
 	o jetty9-9.3.7
 	o jools-1.0
