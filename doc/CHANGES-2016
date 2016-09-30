@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4042 2016/09/30 14:48:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4043 2016/09/30 14:52:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5668,3 +5668,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/cups to 2.2.0 [wiz 2016-09-30]
 	Updated fonts/fira to 4.202 [wiz 2016-09-30]
 	Updated net/gssdp to 1.0.0 [wiz 2016-09-30]
+	Updated net/gupnp to 1.0.0 [wiz 2016-09-30]
