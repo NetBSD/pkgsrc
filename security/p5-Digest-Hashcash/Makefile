@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/30 23:56:01 wen Exp $
+# $NetBSD: Makefile,v 1.24 2016/09/30 14:03:05 wiz Exp $
 
 DISTNAME=	Digest-Hashcash-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Digest-Hashcash/
 COMMENT=	Perl5 extension module for hashcash hashes
 LICENSE=	gnu-gpl-v2
 
-#DEPENDS+=	{perl>=5.7.3,p5-Time-HiRes>=1.2}:../../time/p5-Time-HiRes
+DEPENDS+=	p5-Canary-Stability-[0-9]*:../../devel/p5-Canary-Stability
 
 PERL5_PACKLIST=		auto/Digest/Hashcash/.packlist
 
