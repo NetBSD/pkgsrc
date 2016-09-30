@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2016/06/08 19:23:23 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2016/09/30 11:08:59 wiz Exp $
 
-DISTNAME=	Params-Validate-1.24
+DISTNAME=	Params-Validate-1.25
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Params/}
 
@@ -19,8 +18,8 @@ BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=		c
-PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=		auto/Params/Validate/.packlist
+PERL5_PACKLIST=		auto/Params/Validate/XS/.packlist
+MAKE_JOBS_SAFE=		no
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
