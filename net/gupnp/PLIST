@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/06/06 20:33:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/09/30 14:52:05 wiz Exp $
 bin/gupnp-binding-tool
 include/gupnp-1.0/libgupnp/gupnp-acl.h
 include/gupnp-1.0/libgupnp/gupnp-context-manager.h
@@ -15,6 +15,7 @@ include/gupnp-1.0/libgupnp/gupnp-service-introspection.h
 include/gupnp-1.0/libgupnp/gupnp-service-proxy.h
 include/gupnp-1.0/libgupnp/gupnp-service.h
 include/gupnp-1.0/libgupnp/gupnp-types.h
+include/gupnp-1.0/libgupnp/gupnp-uuid.h
 include/gupnp-1.0/libgupnp/gupnp-white-list.h
 include/gupnp-1.0/libgupnp/gupnp-xml-doc.h
 include/gupnp-1.0/libgupnp/gupnp.h
@@ -48,12 +49,12 @@ share/gtk-doc/html/gupnp/client-tutorial.html
 share/gtk-doc/html/gupnp/glossary.html
 share/gtk-doc/html/gupnp/gupnp-Error-codes.html
 share/gtk-doc/html/gupnp/gupnp-Special-UPnP-types.html
+share/gtk-doc/html/gupnp/gupnp-Utility-functions.html
 share/gtk-doc/html/gupnp/gupnp-binding-tool.html
 share/gtk-doc/html/gupnp/gupnp-gupnp-service-introspection.html
 share/gtk-doc/html/gupnp/gupnp.devhelp2
 share/gtk-doc/html/gupnp/home.png
 share/gtk-doc/html/gupnp/index.html
-share/gtk-doc/html/gupnp/index.sgml
 share/gtk-doc/html/gupnp/ix01.html
 share/gtk-doc/html/gupnp/left-insensitive.png
 share/gtk-doc/html/gupnp/left.png
