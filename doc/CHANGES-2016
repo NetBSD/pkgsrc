@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4020 2016/09/30 11:04:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4021 2016/09/30 11:04:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5646,3 +5646,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-ECB to 2.21 [wiz 2016-09-30]
 	Updated time/p5-DateTime-Locale to 1.08 [wiz 2016-09-30]
 	Updated time/p5-DateTime-TimeZone to 2.04 [wiz 2016-09-30]
+	Updated mail/p5-Email-Valid to 1.202 [wiz 2016-09-30]
