@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2016/09/20 11:07:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.56 2016/09/30 14:10:55 wiz Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -18,17 +18,13 @@ bin/ppdpo
 include/cups/adminutil.h
 include/cups/array.h
 include/cups/backend.h
-include/cups/cgi.h
 include/cups/cups.h
 include/cups/dir.h
 include/cups/file.h
-include/cups/help-index.h
 include/cups/http.h
 include/cups/ipp.h
 include/cups/language.h
-include/cups/mime.h
 include/cups/ppd.h
-include/cups/ppdc.h
 include/cups/pwg.h
 include/cups/raster.h
 include/cups/sidechannel.h
@@ -480,6 +476,8 @@ share/cups/templates/pt_BR/error-op.tmpl
 share/cups/templates/pt_BR/error.tmpl
 share/cups/templates/pt_BR/header.tmpl
 share/cups/templates/pt_BR/help-header.tmpl
+share/cups/templates/pt_BR/help-printable.tmpl
+share/cups/templates/pt_BR/help-trailer.tmpl
 share/cups/templates/pt_BR/job-cancel.tmpl
 share/cups/templates/pt_BR/job-hold.tmpl
 share/cups/templates/pt_BR/job-move.tmpl
@@ -501,6 +499,7 @@ share/cups/templates/pt_BR/option-trailer.tmpl
 share/cups/templates/pt_BR/pager.tmpl
 share/cups/templates/pt_BR/printer-accept.tmpl
 share/cups/templates/pt_BR/printer-added.tmpl
+share/cups/templates/pt_BR/printer-cancel-jobs.tmpl
 share/cups/templates/pt_BR/printer-configured.tmpl
 share/cups/templates/pt_BR/printer-confirm.tmpl
 share/cups/templates/pt_BR/printer-default.tmpl
@@ -614,17 +613,14 @@ share/doc/cups/cups.css
 share/doc/cups/de/index.html
 share/doc/cups/es/index.html
 share/doc/cups/help/accounting.html
+share/doc/cups/help/api-admin.html
 share/doc/cups/help/api-array.html
-share/doc/cups/help/api-cgi.html
 share/doc/cups/help/api-cups.html
-share/doc/cups/help/api-driver.html
 share/doc/cups/help/api-filedir.html
 share/doc/cups/help/api-filter.html
 share/doc/cups/help/api-httpipp.html
-share/doc/cups/help/api-mime.html
 share/doc/cups/help/api-overview.html
 share/doc/cups/help/api-ppd.html
-share/doc/cups/help/api-ppdc.html
 share/doc/cups/help/api-raster.html
 share/doc/cups/help/cgi.html
 share/doc/cups/help/glossary.html
@@ -682,7 +678,6 @@ share/doc/cups/help/ref-ppdcfile.html
 share/doc/cups/help/security.html
 share/doc/cups/help/sharing.html
 share/doc/cups/help/spec-banner.html
-share/doc/cups/help/spec-cmp.html
 share/doc/cups/help/spec-command.html
 share/doc/cups/help/spec-design.html
 share/doc/cups/help/spec-ipp.html
