@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4044 2016/09/30 14:54:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4045 2016/09/30 15:13:33 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5670,3 +5670,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/gssdp to 1.0.0 [wiz 2016-09-30]
 	Updated net/gupnp to 1.0.0 [wiz 2016-09-30]
 	Updated textproc/the_silver_searcher to 0.33.0 [wiz 2016-09-30]
+	Updated devel/jenkins to 2.7.4 [fhajny 2016-09-30]
