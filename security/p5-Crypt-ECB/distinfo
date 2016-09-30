@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/08/31 06:05:00 wiz Exp $
+$NetBSD: distinfo,v 1.8 2016/09/30 11:01:51 wiz Exp $
 
-SHA1 (Crypt-ECB-2.20.tar.gz) = 68a8a3f2fb1af6b043dad97f991a39ed97919b97
-RMD160 (Crypt-ECB-2.20.tar.gz) = b27cfa10d9cc96254755dbaee1276f4e0c94159b
-SHA512 (Crypt-ECB-2.20.tar.gz) = c24609326ddf797c90128391d42693bd6bcb9708e25f7ba124cf774daff0ac8eb8693f962c0c3e6c50cca60960c09603c6729bef1394dc8ecce54b53f94a8852
-Size (Crypt-ECB-2.20.tar.gz) = 22553 bytes
+SHA1 (Crypt-ECB-2.21.tar.gz) = 6109b35cfd165a1566019a9dd363689f98676dad
+RMD160 (Crypt-ECB-2.21.tar.gz) = ecc09f9a75433edb93262d8ad2de8d1f1ed812e9
+SHA512 (Crypt-ECB-2.21.tar.gz) = 3d02e4f4937c925fe98aca702928ac3b9119ca133fec631c51f640585577ea0e50f3ee93d31f3915c5282cbe4ea1803e7f047b12dfbb0f32250a73719b41cbbf
+Size (Crypt-ECB-2.21.tar.gz) = 22689 bytes
