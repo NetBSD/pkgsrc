@@ -1,0 +1,15 @@
+$NetBSD: patch-src_nnxx_wscript,v 1.1 2016/09/30 15:01:11 wiz Exp $
+
+Python-3.x fix. Already merged upstream.
+
+--- src/nnxx/wscript.orig	2016-05-16 02:33:55.000000000 +0000
++++ src/nnxx/wscript
+@@ -9,7 +9,7 @@ class strip(Task):
+ 
+     def run(self):
+         cmd = 'strip -x src/nnxx/' + self.env.libnanomsgxx_name
+-        print cmd
++        print(cmd)
+         return self.exec_command(cmd)
+ 
+ def configure(waf):
