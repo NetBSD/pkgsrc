@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/15 17:03:01 taca Exp $
+# $NetBSD: Makefile,v 1.2 2016/09/30 15:36:59 taca Exp $
 
-DISTNAME=	http-cookie-1.0.2
+DISTNAME=	http-cookie-1.0.3
 CATEGORIES=	www ruby
 
 MAINTAINER=	taca@NetBSD.org
