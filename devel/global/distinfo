@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2016/04/08 15:01:08 wiz Exp $
+$NetBSD: distinfo,v 1.30 2016/09/30 11:22:15 wiz Exp $
 
-SHA1 (global-6.5.4.tar.gz) = f214c9c6cdd2c72ddba44a9bafc22af30b4259c3
-RMD160 (global-6.5.4.tar.gz) = 6f4bba9136019ec186f6d3dd30482155b6006668
-SHA512 (global-6.5.4.tar.gz) = fe574b4b5fc0a289e500baffc90f57845653e874ba0d3271c1a17a92c91ccbfd5526517eab08d7a79a147687190ce4ed0a3524acb2bdd88eedaeeaa3221c8c0f
-Size (global-6.5.4.tar.gz) = 2933151 bytes
+SHA1 (global-6.5.5.tar.gz) = 3f1ef9ef0118d6b8c2b577cfc2a9bf5a02431479
+RMD160 (global-6.5.5.tar.gz) = 528a17f87478b107754d32e16ec99de21736173e
+SHA512 (global-6.5.5.tar.gz) = 5f8d09710f534f0ebfcdabb85e3a094402a6ef56b800d94eb5ba546b3aa5cbdeb664fa37edcd46530b34a734fc05a1271e4abc8bb13e24db2c5cb2dbb46a4481
+Size (global-6.5.5.tar.gz) = 2934542 bytes
