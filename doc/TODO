@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16515 2016/09/30 14:52:14 wiz Exp $
+$NetBSD: TODO,v 1.16516 2016/09/30 14:54:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1596,7 +1596,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texworks-0.4.6
 	o tfmxplay-1.1.6
 	o thaixfonts-1.2.7
-	o the_silver_searcher-0.33.0
 	o thttpd-2.27
 	o thunderbird-enigmail-1.9.5
 	o tidy-5.1.25 [wip]
