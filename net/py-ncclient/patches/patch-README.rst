@@ -1,6 +1,7 @@
-$NetBSD: patch-README.rst,v 1.1 2016/09/30 13:59:10 wiz Exp $
+$NetBSD: patch-README.rst,v 1.2 2016/09/30 14:01:44 wiz Exp $
 
 Work around setup.py reading this file in a C locale.
+https://github.com/ncclient/ncclient/issues/160
 
 --- README.rst.orig	2016-07-05 12:22:23.000000000 +0000
 +++ README.rst
