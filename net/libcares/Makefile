@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/09/29 14:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/09/30 09:00:10 wiz Exp $
 
 DISTNAME=	c-ares-1.12.0
 PKGNAME=	${DISTNAME:S/c-/libc/1}
@@ -12,8 +12,11 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	automake
 
 PKGCONFIG_OVERRIDE+=	libcares.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && automake
 
 .include "../../mk/bsd.pkg.mk"
