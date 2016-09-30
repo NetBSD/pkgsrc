@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/01 16:35:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/09/30 14:29:00 wiz Exp $
 share/fonts/X11/OTF/FiraMono-Bold.otf
+share/fonts/X11/OTF/FiraMono-Medium.otf
 share/fonts/X11/OTF/FiraMono-Regular.otf
 share/fonts/X11/OTF/FiraSans-Bold.otf
 share/fonts/X11/OTF/FiraSans-BoldItalic.otf
@@ -33,3 +34,35 @@ share/fonts/X11/OTF/FiraSans-Ultra.otf
 share/fonts/X11/OTF/FiraSans-UltraItalic.otf
 share/fonts/X11/OTF/FiraSans-UltraLight.otf
 share/fonts/X11/OTF/FiraSans-UltraLightItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Bold.otf
+share/fonts/X11/OTF/FiraSansCondensed-BoldItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Book.otf
+share/fonts/X11/OTF/FiraSansCondensed-BookItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Eight.otf
+share/fonts/X11/OTF/FiraSansCondensed-EightItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-ExtraBold.otf
+share/fonts/X11/OTF/FiraSansCondensed-ExtraLight.otf
+share/fonts/X11/OTF/FiraSansCondensed-ExtraLightItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-ExtraboldItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Four.otf
+share/fonts/X11/OTF/FiraSansCondensed-FourItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Hair.otf
+share/fonts/X11/OTF/FiraSansCondensed-HairItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Heavy.otf
+share/fonts/X11/OTF/FiraSansCondensed-HeavyItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Italic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Light.otf
+share/fonts/X11/OTF/FiraSansCondensed-LightItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Medium.otf
+share/fonts/X11/OTF/FiraSansCondensed-MediumItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Regular.otf
+share/fonts/X11/OTF/FiraSansCondensed-SemiBold.otf
+share/fonts/X11/OTF/FiraSansCondensed-SemiboldItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Thin.otf
+share/fonts/X11/OTF/FiraSansCondensed-ThinItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Two.otf
+share/fonts/X11/OTF/FiraSansCondensed-TwoItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-Ultra.otf
+share/fonts/X11/OTF/FiraSansCondensed-UltraItalic.otf
+share/fonts/X11/OTF/FiraSansCondensed-UltraLight.otf
+share/fonts/X11/OTF/FiraSansCondensed-UltraLightItalic.otf
