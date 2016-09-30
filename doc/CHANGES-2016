@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4036 2016/09/30 12:49:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4037 2016/09/30 13:09:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5662,3 +5662,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/ghostscript-agpl to 9.20 [wiz 2016-09-30]
 	Updated devel/afl to 2.35b [wiz 2016-09-30]
 	Updated print/abcm2ps to 8.12.4 [wiz 2016-09-30]
+	Updated graphics/adwaita-icon-theme to 3.22.0 [wiz 2016-09-30]
