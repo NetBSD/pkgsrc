@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/11/04 00:35:03 agc Exp $
+$NetBSD: distinfo,v 1.24 2016/09/30 14:52:05 wiz Exp $
 
-SHA1 (gupnp-0.20.13.tar.xz) = eaec209a94e40dc98ba3af96277d79eeba59ddad
-RMD160 (gupnp-0.20.13.tar.xz) = bb1c41f910de4b14e7babda0fef0420415400a4b
-SHA512 (gupnp-0.20.13.tar.xz) = dfc73a50f93dba84042652556a3fad870137fda3659fac4fe735c3d2cecf94d6908382d88cf85122840dd61017b9348f97edb6ded6d876d5e35058d70f9b8dc1
-Size (gupnp-0.20.13.tar.xz) = 395356 bytes
-SHA1 (patch-ab) = ca3f0a39fa6df960f24b7660f2340ca63a34999a
-SHA1 (patch-ad) = b07b54ba59b0018df9f8d950e3a12ceb5ee174e8
+SHA1 (gupnp-1.0.0.tar.xz) = c73214798c0665adfbf52eed1428ff86c160afce
+RMD160 (gupnp-1.0.0.tar.xz) = ff0ee4e6319b16757386e4668a091c9d28b34a6a
+SHA512 (gupnp-1.0.0.tar.xz) = fff1294de3755b0ec961488b5a82618b41a10edde6c0b8b20b03c72621742495d49e59926ad79d1b4ccf4c561a244153c5cdac5e5ce9d54008f230ee9ff77778
+Size (gupnp-1.0.0.tar.xz) = 410008 bytes
