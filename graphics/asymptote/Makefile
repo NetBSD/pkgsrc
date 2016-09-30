@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2016/07/09 06:38:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.23 2016/09/30 11:54:00 wiz Exp $
 
-DISTNAME=	asymptote-2.15
-PKGREVISION=	11
+DISTNAME=	asymptote-2.38
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz
@@ -23,7 +21,7 @@ BUILD_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
 BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
-USE_TOOLS+=	gs
+DEPENDS+=	ghostscript-agpl>=9.16:../../print/ghostscript-agpl
 
 UNLIMIT_RESOURCES=	datasize
 
