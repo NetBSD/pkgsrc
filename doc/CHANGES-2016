@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4048 2016/09/30 16:50:43 agc Exp $
+$NetBSD: CHANGES-2016,v 1.4049 2016/09/30 18:36:59 reed Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5674,3 +5674,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-http-cookie to 1.0.3 [taca 2016-09-30]
 	Updated devel/monotone-viz to 1.0.2nb7 [dholland 2016-09-30]
 	Added net/httpstat version 1.2.0 [agc 2016-09-30]
+	Updated pkgtools/pkglint to 5.4.9.1 [reed 2016-09-30]
