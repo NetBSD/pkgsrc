@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/10 21:14:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/09/30 11:54:00 wiz Exp $
 bin/asy
 bin/xasy
 info/asy-faq.info
@@ -28,6 +28,7 @@ share/asymptote/asy-kate.sh
 share/asymptote/asy-keywords.el
 share/asymptote/asy-mode.el
 share/asymptote/asy.vim
+share/asymptote/asy_filetype.vim
 share/asymptote/asymptote.py
 share/asymptote/babel.asy
 share/asymptote/bezulate.asy
@@ -87,6 +88,7 @@ share/asymptote/size10.asy
 share/asymptote/size11.asy
 share/asymptote/slide.asy
 share/asymptote/slopefield.asy
+share/asymptote/smoothcontour3.asy
 share/asymptote/solids.asy
 share/asymptote/stats.asy
 share/asymptote/syzygy.asy
@@ -123,6 +125,7 @@ share/doc/asymptote/examples/100d.views
 share/doc/asymptote/examples/1overx.asy
 share/doc/asymptote/examples/BezierPatch.asy
 share/doc/asymptote/examples/BezierSurface.asy
+share/doc/asymptote/examples/BezierTriangle.asy
 share/doc/asymptote/examples/Bode.asy
 share/doc/asymptote/examples/CAD1.asy
 share/doc/asymptote/examples/CDlabel.asy
@@ -139,6 +142,7 @@ share/doc/asymptote/examples/NURBSsphere.asy
 share/doc/asymptote/examples/NURBSsurface.asy
 share/doc/asymptote/examples/Pythagoras.asy
 share/doc/asymptote/examples/PythagoreanTree.asy
+share/doc/asymptote/examples/RiemannSphere.asy
 share/doc/asymptote/examples/RiemannSurface.asy
 share/doc/asymptote/examples/RiemannSurfaceRoot.asy
 share/doc/asymptote/examples/Sierpinski.asy
@@ -180,6 +184,7 @@ share/doc/asymptote/examples/cards.asy
 share/doc/asymptote/examples/centroidfg.asy
 share/doc/asymptote/examples/cheese.asy
 share/doc/asymptote/examples/circles.asy
+share/doc/asymptote/examples/circumcircle.asy
 share/doc/asymptote/examples/clockarray.asy
 share/doc/asymptote/examples/coag.asy
 share/doc/asymptote/examples/colons.asy
@@ -241,6 +246,8 @@ share/doc/asymptote/examples/gamma.asy
 share/doc/asymptote/examples/gamma3.asy
 share/doc/asymptote/examples/generalaxis.asy
 share/doc/asymptote/examples/generalaxis3.asy
+share/doc/asymptote/examples/genusthree.asy
+share/doc/asymptote/examples/genustwo.asy
 share/doc/asymptote/examples/graphmarkers.asy
 share/doc/asymptote/examples/grid.asy
 share/doc/asymptote/examples/grid3xyz.asy
@@ -342,6 +349,7 @@ share/doc/asymptote/examples/quartercircle.asy
 share/doc/asymptote/examples/quilt.asy
 share/doc/asymptote/examples/rainbow.asy
 share/doc/asymptote/examples/randompath3.asy
+share/doc/asymptote/examples/refs.bib
 share/doc/asymptote/examples/ring.asy
 share/doc/asymptote/examples/roll.asy
 share/doc/asymptote/examples/roundpath.asy
@@ -391,6 +399,7 @@ share/doc/asymptote/examples/superpath.asy
 share/doc/asymptote/examples/tanh.asy
 share/doc/asymptote/examples/teapot.asy
 share/doc/asymptote/examples/tensor.asy
+share/doc/asymptote/examples/tetra.asy
 share/doc/asymptote/examples/textpath.asy
 share/doc/asymptote/examples/thermodynamics.asy
 share/doc/asymptote/examples/threeviews.asy
@@ -401,6 +410,7 @@ share/doc/asymptote/examples/treetest.asy
 share/doc/asymptote/examples/trefoilknot.asy
 share/doc/asymptote/examples/triads.asy
 share/doc/asymptote/examples/triangle.asy
+share/doc/asymptote/examples/triangles.asy
 share/doc/asymptote/examples/triangulate.asy
 share/doc/asymptote/examples/triceratops.asy
 share/doc/asymptote/examples/trumpet.asy
