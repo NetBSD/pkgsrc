@@ -1,2 +1,4 @@
 pep8 is a tool to check your Python code against some of
-the style conventions in PEP 8
+the style conventions in PEP 8.
+
+This package is obsolete: use py-codestyle instead.
