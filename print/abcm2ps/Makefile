@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:24:45 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/09/30 12:48:57 wiz Exp $
 
-DISTNAME=	abcm2ps-7.8.12
-PKGREVISION=	1
+DISTNAME=	abcm2ps-8.12.4
 CATEGORIES=	print
 MASTER_SITES=	http://moinejf.free.fr/
 
@@ -11,12 +10,12 @@ COMMENT=	Converts ABC to music sheet in PostScript format
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-BUILD_TARGET=	${PKGBASE}
+BUILD_TARGET=	abcm2ps
 
 USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX} \
-			--docdir=${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/abcm2ps
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
