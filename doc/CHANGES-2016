@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4047 2016/09/30 16:02:06 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.4048 2016/09/30 16:50:43 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5673,3 +5673,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/jenkins to 2.7.4 [fhajny 2016-09-30]
 	Updated www/ruby-http-cookie to 1.0.3 [taca 2016-09-30]
 	Updated devel/monotone-viz to 1.0.2nb7 [dholland 2016-09-30]
+	Added net/httpstat version 1.2.0 [agc 2016-09-30]
