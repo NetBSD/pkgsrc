@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.28 2016/07/09 06:38:49 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.29 2016/09/30 11:33:06 wiz Exp $
 
-DISTNAME=	chktex-1.6.4
-PKGREVISION=	2
+DISTNAME=	chktex-1.7.6
 CATEGORIES=	print
-MASTER_SITES=	http://baruch.ev-en.org/proj/chktex/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/chktex/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://baruch.ev-en.org/proj/chktex/
+HOMEPAGE=	http://www.nongnu.org/chktex/
 COMMENT=	LaTeX semantic checker
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 BUILD_DEPENDS+=	tex-ntgclass-[0-9]*:../../print/tex-ntgclass
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+BUILD_DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	lynx-[0-9]*:../../www/lynx
 
 EGDIR=		${PREFIX}/share/examples/chktex

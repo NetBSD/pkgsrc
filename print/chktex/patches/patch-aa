@@ -1,21 +1,24 @@
-$NetBSD: patch-aa,v 1.2 2005/10/22 13:44:17 tonio Exp $
+$NetBSD: patch-aa,v 1.3 2016/09/30 11:33:06 wiz Exp $
 
---- Makefile.in.orig	2005-01-01 21:51:11.000000000 +0100
+Use proper installation tools.
+
+--- Makefile.in.orig	2016-09-10 04:14:58.000000000 +0000
 +++ Makefile.in
-@@ -141,11 +141,13 @@ chktex: $(OBJS)
- 
+@@ -162,13 +162,13 @@ chktex: $(OBJS)
  install: chktex ChkTeX.dvi
- 	$(INSTALL) -d $(DESTDIR)$(bindir)
--	for program in chktex $(SCRIPTS); do \
--		$(INSTALL_PROGRAM) $$program  $(DESTDIR)$(bindir); \
-+	$(INSTALL_PROGRAM) chktex  $(DESTDIR)$(bindir);
-+	for program in $(SCRIPTS); do \
-+		$(INSTALL_SCRIPT) $$program  $(DESTDIR)$(bindir); \
+ 	$(MKDIR_P) $(DESTDIR)$(bindir)
+ 	for program in chktex $(BUILT_SCRIPTS); do \
+-		$(INSTALL_PROGRAM) $$program $(DESTDIR)$(bindir); \
++		$(INSTALL_SCRIPT) $$program $(DESTDIR)$(bindir); \
  	done
- 	$(INSTALL) -d $(DESTDIR)$(sysconfdir)
+ 	for program in $(SCRIPTS); do \
+-		$(INSTALL_PROGRAM) $(srcdir)/$$program $(DESTDIR)$(bindir); \
++		$(INSTALL_SCRIPT) $(srcdir)/$$program $(DESTDIR)$(bindir); \
+ 	done
+-	$(MKDIR_P) $(DESTDIR)$(sysconfdir)
 -	$(INSTALL_DATA) $(srcdir)/chktexrc $(DESTDIR)$(sysconfdir)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(EGDIR)
 +	$(INSTALL_DATA) $(srcdir)/chktexrc $(DESTDIR)$(EGDIR)
- 	if (eval echo "$(SCRIPTS)") | egrep deweb >/dev/null 2>&1; then \
- 		$(INSTALL) -d $(DESTDIR)$(mandir); \
- 		$(INSTALL) -d $(DESTDIR)$(mandir)/man1; \
+ 	if (eval echo "$(BUILT_SCRIPTS)") | egrep deweb >/dev/null 2>&1; then \
+ 		$(MKDIR_P) $(DESTDIR)$(mandir)/man1; \
+                 cp $(srcdir)/deweb.1 $(DESTDIR)$(mandir)/man1; \
