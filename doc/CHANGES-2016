@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4022 2016/09/30 11:05:46 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4023 2016/09/30 11:09:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5648,3 +5648,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 2.04 [wiz 2016-09-30]
 	Updated mail/p5-Email-Valid to 1.202 [wiz 2016-09-30]
 	Updated net/p5-Net-Domain-TLD to 1.75 [wiz 2016-09-30]
+	Updated devel/p5-Params-Validate to 1.25 [wiz 2016-09-30]
