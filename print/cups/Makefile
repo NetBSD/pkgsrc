@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.232 2016/09/20 11:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.233 2016/09/30 14:10:55 wiz Exp $
 
-DISTNAME=	cups-2.1.4-source
+DISTNAME=	cups-2.2.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
-GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sbd@NetBSD.org
 HOMEPAGE=	http://www.cups.org/

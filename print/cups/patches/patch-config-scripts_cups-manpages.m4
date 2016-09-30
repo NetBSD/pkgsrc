@@ -1,10 +1,10 @@
-$NetBSD: patch-config-scripts_cups-manpages.m4,v 1.2 2015/12/02 21:14:16 leot Exp $
+$NetBSD: patch-config-scripts_cups-manpages.m4,v 1.3 2016/09/30 14:10:55 wiz Exp $
 
 Add '--with-manext' configure option.
 
---- config-scripts/cups-manpages.m4.orig	2013-10-18 20:36:01.000000000 +0000
+--- config-scripts/cups-manpages.m4.orig	2016-09-13 23:39:47.000000000 +0000
 +++ config-scripts/cups-manpages.m4
-@@ -13,6 +13,8 @@ dnl which should have been included with
+@@ -11,6 +11,8 @@ dnl which should have been included with
  dnl file is missing or damaged, see the license at "http://www.cups.org/".
  dnl
  
@@ -13,7 +13,7 @@ Add '--with-manext' configure option.
  dnl Fix "mandir" variable...
  if test "$mandir" = "\${datarootdir}/man" -a "$prefix" = "/"; then
  	# New GNU "standards" break previous ones, so make sure we use
-@@ -44,7 +46,27 @@ AC_SUBST(AMANDIR)
+@@ -42,7 +44,27 @@ AC_SUBST(AMANDIR)
  AC_SUBST(PMANDIR)
  
  dnl Setup manpage extensions...
@@ -42,16 +42,16 @@ Add '--with-manext' configure option.
  	SunOS*)
  		# Solaris
  		MAN1EXT=1
-@@ -53,7 +75,7 @@ case "$uname" in
+@@ -51,7 +73,7 @@ case "$uname" in
  		MAN8EXT=1m
  		MAN8DIR=1m
  		;;
 -	Linux* | GNU* | Darwin*)
 +	linux)
- 		# Linux, GNU Hurd, and OS X
+ 		# Linux, GNU Hurd, and macOS
  		MAN1EXT=1.gz
  		MAN5EXT=5.gz
-@@ -61,7 +83,7 @@ case "$uname" in
+@@ -59,7 +81,7 @@ case "$uname" in
  		MAN8EXT=8.gz
  		MAN8DIR=8
  		;;
