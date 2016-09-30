@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2016/04/19 12:44:40 jperkin Exp $
+# $NetBSD: options.mk,v 1.11 2016/09/30 13:16:59 sevan Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -6,10 +6,11 @@ PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++ gcc-graphite
 
 PKG_SUGGESTED_OPTIONS.DragonFly+=	nls
-PKG_SUGGESTED_OPTIONS.Linux+=		nls gcc-java
+PKG_SUGGESTED_OPTIONS.Linux+=		nls
 PKG_SUGGESTED_OPTIONS.NetBSD+=		nls
 PKG_SUGGESTED_OPTIONS.SunOS+=		gcc-inplace-math
-PKG_SUGGESTED_OPTIONS.*+=		gcc-java
+# gcc-java was dropped from PKG_SUGGESTED_OPTIONS to spare legacy systems attempting bulkbuilds
+# For example on Darwin/PowerPC this option adds another 24 hours to build time on a G4.
 
 ###
 ### Determine if multilib is avalible.
