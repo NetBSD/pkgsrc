@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4009 2016/09/30 09:59:41 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.4010 2016/09/30 10:34:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5635,3 +5635,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libcares to 1.12.0 [wiz 2016-09-29]
 	Updated www/wordpress to 4.6.1 [morr 2016-09-29]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q3 branch [jperkin 2016-09-30]
+	Updated x11/xproto to 7.0.31 [wiz 2016-09-30]
