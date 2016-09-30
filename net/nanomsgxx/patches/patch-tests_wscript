@@ -1,0 +1,15 @@
+$NetBSD: patch-tests_wscript,v 1.1 2016/09/30 22:44:38 wiz Exp $
+
+Fix build with waf-1.9.x.
+https://github.com/achille-roussel/nanomsgxx/issues/10
+
+--- tests/wscript.orig	2016-05-16 02:33:55.000000000 +0000
++++ tests/wscript
+@@ -12,6 +12,7 @@ def build(waf):
+     features  = ['cxx', 'cxxprogram', 'test']
+     lib       = ['nanomsg', 'nanomsgext', 'nnxx']
+     for f in waf.path.ant_glob('*.cpp'):
++        f = f.path_from(waf.path)
+         source = str(f)
+         target = str(f)[:-4]
+         conf   = copy(waf.env.CXX_CONF_KWARGS)
