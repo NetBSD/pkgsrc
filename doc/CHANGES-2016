@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4040 2016/09/30 14:11:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4041 2016/09/30 14:29:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5666,3 +5666,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.3.1 [wiz 2016-09-30]
 	Updated www/nghttp2 to 1.15.0 [adam 2016-09-30]
 	Updated print/cups to 2.2.0 [wiz 2016-09-30]
+	Updated fonts/fira to 4.202 [wiz 2016-09-30]
