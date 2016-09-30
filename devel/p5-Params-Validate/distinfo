@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2016/05/18 12:26:13 wiz Exp $
+$NetBSD: distinfo,v 1.36 2016/09/30 11:08:59 wiz Exp $
 
-SHA1 (Params-Validate-1.24.tar.gz) = 39281e6a969393753c5429483f733fe257a0cc4b
-RMD160 (Params-Validate-1.24.tar.gz) = 461084249674ab1748ff6cbc3651ec4f611245e9
-SHA512 (Params-Validate-1.24.tar.gz) = cc80d7e5b516f86166e142f4a388a6afe50f11f1d1e362a86c0dcdaca6b57ef389a9b3a8e9a5316f550d7dbc7a3c147c5f668948678463968e032ac035449733
-Size (Params-Validate-1.24.tar.gz) = 130994 bytes
+SHA1 (Params-Validate-1.25.tar.gz) = 0c4726a86196f66440ea5d4b8b23ea7cbd843499
+RMD160 (Params-Validate-1.25.tar.gz) = 70e1795c7ad2e467c91367a0a6f88b379cc93de3
+SHA512 (Params-Validate-1.25.tar.gz) = 8e19460427e2e56945cc704818a5deaaa47ba8a9b7ca3a8be94c69d33a3b0ac11aec6a6f1d02a5798a160b2c13b7751d6949f0d732f39ebe59154e8a07b6cd39
+Size (Params-Validate-1.25.tar.gz) = 136398 bytes
