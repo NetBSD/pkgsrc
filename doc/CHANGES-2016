@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4038 2016/09/30 13:20:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4039 2016/09/30 13:56:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5664,3 +5664,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/abcm2ps to 8.12.4 [wiz 2016-09-30]
 	Updated graphics/adwaita-icon-theme to 3.22.0 [wiz 2016-09-30]
 	Updated graphics/ImageMagick to 7.0.3.1 [wiz 2016-09-30]
+	Updated www/nghttp2 to 1.15.0 [adam 2016-09-30]
