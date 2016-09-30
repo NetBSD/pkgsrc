@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2012/07/03 18:07:03 joerg Exp $
+$NetBSD: patch-configure,v 1.3 2016/09/30 11:54:00 wiz Exp $
 
 Handle TEXMFLOCAL having multiple elements.
 
@@ -22,21 +22,3 @@ Handle TEXMFLOCAL having multiple elements.
  else
    contextdir=$prefix/share/texmf/tex/context/third
  fi
-@@ -5395,8 +5395,6 @@ if test "$GXX" = yes ; then
-    ac_gcc_version=`echo __GNUC__ | $CC -E - | grep -v ^\#`
-    if test "$ac_gcc_version" -lt 4; then
-        CFLAGS=$CFLAGS" -finline-limit=400"
--   else
--       CFLAGS=$CFLAGS" --no-var-tracking"
-    fi
- fi
- 
-@@ -6709,7 +6707,7 @@ $as_echo "$as_me: *** Could not find lib
- fi
- 
- esac
--   if test "x$enable_offscreen" == "xyes"; then
-+   if test "x$enable_offscreen" = "xyes"; then
-            { $as_echo "$as_me:${as_lineno-$LINENO}: checking for OSMesaCreateContext in -lOSMesa" >&5
- $as_echo_n "checking for OSMesaCreateContext in -lOSMesa... " >&6; }
- if test "${ac_cv_lib_OSMesa_OSMesaCreateContext+set}" = set; then :
