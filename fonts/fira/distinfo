@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:30 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/09/30 14:29:00 wiz Exp $
 
-SHA1 (FiraMono3105.zip) = 421de6032fc78bfc8d539cc003d781a917aea11a
-RMD160 (FiraMono3105.zip) = 707ff6f0218a65116418c6974df81e9e80453dac
-SHA512 (FiraMono3105.zip) = 3ff57f63f2a1da5091caffbf413a1dfcd93eb1bb5c6a43b57558a685e8f634733b835aef661a9f655a62753d005d18d0dbb73615b56568b8f051ba94d2287738
-Size (FiraMono3105.zip) = 248960 bytes
-SHA1 (FiraSans3105.zip) = 8bb1685c59a8b9ad8b77482ddb00622ef4914510
-RMD160 (FiraSans3105.zip) = ca3200fa65c7f35e5ee6eb4e1159492ee53dc6f2
-SHA512 (FiraSans3105.zip) = 2babd01613a5680441ada52ed40353c5b38ede858b51fa90c80311a481f46c4ab0e622b8b3cdccdee7bcd1a40a5e7204c65b7995aa210bea7a77bec37a7aca7f
-Size (FiraSans3105.zip) = 3494079 bytes
+SHA1 (fira-4.202.tar.gz) = f2dda180b58f669c7b2f6c5df207871c40bcb278
+RMD160 (fira-4.202.tar.gz) = b9e0eba012bf29e450fe01ee60f255ab00eb01c3
+SHA512 (fira-4.202.tar.gz) = fec770fa038f2aa0654f9382f95aa1266a2655970f4c7755b237af9d1c09f47ce719f8daf3afc39812fc69448b9481ee0e2a1414f1d007ad70b4254c92950ebb
+Size (fira-4.202.tar.gz) = 94581261 bytes
