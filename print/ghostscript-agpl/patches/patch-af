@@ -1,43 +1,20 @@
-$NetBSD: patch-af,v 1.6 2016/04/07 08:52:06 adam Exp $
+$NetBSD: patch-af,v 1.7 2016/09/30 12:37:31 wiz Exp $
 
-ghostscript has hand-rolled shared lib handling in src/unix-dll.mak
-that does not do the right thing on Darwin (where shared libs are
-created with different linking flags and use dylib rather than so
-as an extension).
+Add some rpaths.
 
-You need to manually reconfigure unix-dll.mak to make it work, so
-do it in hacks.mk.
-
---- base/unix-dll.mak.orig	2016-03-23 08:22:48.000000000 +0000
+--- base/unix-dll.mak.orig	2016-09-26 10:41:28.000000000 +0000
 +++ base/unix-dll.mak
-@@ -66,11 +66,11 @@ GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE)$
- 
- 
- # MacOS X
--#GS_SOEXT=dylib
--#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
--#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
--#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
--#LDFLAGS_SO=-dynamiclib -flat_namespace
-+#Darwin#GS_SOEXT=dylib
-+#Darwin#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
-+#Darwin#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
-+#Darwin#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
-+#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
- #LDFLAGS_SO_MAC=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
- #LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
- 
-@@ -96,11 +96,11 @@ so-links-subtarget:	$(GS_SO) $(UNIX_DLL_
+@@ -171,11 +171,11 @@ gpdl-so-links-subtarget: $(GPDL_SO) $(UN
  # Build the small Ghostscript loaders, with Gtk+ and without
- $(GSSOC_XE): so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
+ $(GSSOC_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
  	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
 -	-L$(BINDIR) -l$(GS_SO_BASE)
 +	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE)
  
- $(GSSOX_XE): so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
+ $(GSSOX_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
  	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
 -	-L$(BINDIR) -l$(GS_SO_BASE) $(SOC_LIBS)
 +	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE) $(SOC_LIBS)
  
- # ------------------------- Recursive make targets ------------------------- #
- 
+ $(PCLSOC_XE): gpcl6-so-links-subtarget $(PLSRC)$(REALMAIN_SRC).c $(UNIX_DLL_MAK) $(MAKEDIRS)
+ 	$(GLCC) -g -o $(PCLSOC_XE) $(PLSRC)$(REALMAIN_SRC).c -L$(BINDIR) -l$(PCL_SO_BASE)
