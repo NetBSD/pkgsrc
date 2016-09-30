@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2016/02/25 14:42:55 jperkin Exp $
+# $NetBSD: options.mk,v 1.7 2016/09/30 13:16:59 sevan Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
-PKG_SUGGESTED_OPTIONS=	gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc
+PKG_SUGGESTED_OPTIONS=	gcc-inplace-math gcc-c++ gcc-fortran gcc-objc
+# gcc-java was dropped from PKG_SUGGESTED_OPTIONS to spare legacy systems attempting bulkbuilds
+# For example on Darwin/PowerPC this option adds another 24 hours to build time on a G4.
 
 PKG_SUGGESTED_OPTIONS.NetBSD+=	nls
 PKG_SUGGESTED_OPTIONS.SunOS+=	gcc-inplace-math
