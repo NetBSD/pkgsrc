@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4034 2016/09/30 12:37:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4035 2016/09/30 12:39:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5660,3 +5660,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/nspr to 4.13 [ryoon 2016-09-30]
 	Updated devel/nss to 3.27 [ryoon 2016-09-30]
 	Updated print/ghostscript-agpl to 9.20 [wiz 2016-09-30]
+	Updated devel/afl to 2.35b [wiz 2016-09-30]
