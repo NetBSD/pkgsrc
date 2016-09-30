@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4025 2016/09/30 11:12:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4026 2016/09/30 11:15:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5651,3 +5651,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Params-Validate to 1.25 [wiz 2016-09-30]
 	Updated devel/p5-Specio to 0.26 [wiz 2016-09-30]
 	Updated textproc/p5-Text-BibTeX to 0.77 [wiz 2016-09-30]
+	Updated textproc/p5-Text-Glob to 0.10 [wiz 2016-09-30]
