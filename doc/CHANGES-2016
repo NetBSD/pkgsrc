@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4057 2016/10/01 13:05:02 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4058 2016/10/01 13:25:23 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5684,3 +5684,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/p5-HTTP-MultiPartParser version 0.01 [wen 2016-10-01]
 	Updated devel/p5-Params-ValidationCompiler to 0.13nb1 [wiz 2016-10-01]
 	Added www/p5-HTTP-Entity-Parser version 0.17 [wen 2016-10-01]
+	Updated emulators/qemu0 to qemu-0.15.1nb18 [kamil 2016-10-01]
