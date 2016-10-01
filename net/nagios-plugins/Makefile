@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2016/07/09 06:38:43 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2016/10/01 18:23:18 bouyer Exp $
 #
 
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -58,6 +58,23 @@ DEPENDS+=	{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/openssh
 .if (!exists(/usr/bin/dig) && !exists(/usr/sbin/dig)) || \
     (!exists(/usr/bin/nslookup) && !exists(/usr/sbin/nslookup))
 DEPENDS+=	bind-[0-9]*:../../net/bind910
+.endif
+
+.if ${OPSYS} == "NetBSD"
+PING_CMD=	/sbin/ping -n -w %d -c %d %s
+# The configure logic can't deal with IPv4 ping accepting a timeout (-w option) but IPv6 ping lacking it.
+# So stuff the timeout into the -p (pad) option of ping6.
+PING6_CMD=	/sbin/ping6 -n -p %d -c %d %s
+.else
+PING_CMD=	# empty
+PING6_CMD=	# empty
+.endif
+
+.if !empty(PING_CMD)
+CONFIGURE_ARGS+=	--with-ping-command="${PING_CMD}"
+.endif
+.if !empty(PING6_CMD)
+CONFIGURE_ARGS+=	--with-ping6-command="${PING6_CMD}"
 .endif
 
 post-install:
