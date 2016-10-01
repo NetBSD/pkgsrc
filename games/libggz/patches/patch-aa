@@ -1,15 +1,43 @@
-$NetBSD: patch-aa,v 1.1 2012/07/05 10:33:06 drochner Exp $
+$NetBSD: patch-aa,v 1.1.34.1 2016/10/01 15:18:56 bsiegert Exp $
 
 fix build with gnutls-3
 
 --- src/security/ggz_tls_gnutls.c.orig	2008-01-05 19:03:41.000000000 +0000
 +++ src/security/ggz_tls_gnutls.c
-@@ -56,7 +56,7 @@ const int cipher_priority[] = {GNUTLS_CI
- const int mac_priority[] = {GNUTLS_MAC_NULL, GNUTLS_MAC_MD5, GNUTLS_MAC_SHA, 0};
- const int kx_priority[] = {GNUTLS_KX_ANON_DH, GNUTLS_KX_DHE_DSS, GNUTLS_KX_DHE_RSA, 0};
- const int protocol_priority[] = {GNUTLS_TLS1, GNUTLS_SSL3, 0};
--const int compression_priority[] = {GNUTLS_COMP_NULL, GNUTLS_COMP_ZLIB, GNUTLS_COMP_LZO, 0};
-+const int compression_priority[] = {GNUTLS_COMP_NULL, GNUTLS_COMP_ZLIB, 0};
+@@ -52,12 +52,6 @@ static gnutls_anon_server_credentials s_
+ static gnutls_anon_client_credentials c_cred;
+ static gnutls_dh_params params;
  
+-const int cipher_priority[] = {GNUTLS_CIPHER_3DES_CBC, GNUTLS_CIPHER_NULL, GNUTLS_CIPHER_ARCFOUR_40, GNUTLS_CIPHER_ARCFOUR_128, 0};
+-const int mac_priority[] = {GNUTLS_MAC_NULL, GNUTLS_MAC_MD5, GNUTLS_MAC_SHA, 0};
+-const int kx_priority[] = {GNUTLS_KX_ANON_DH, GNUTLS_KX_DHE_DSS, GNUTLS_KX_DHE_RSA, 0};
+-const int protocol_priority[] = {GNUTLS_TLS1, GNUTLS_SSL3, 0};
+-const int compression_priority[] = {GNUTLS_COMP_NULL, GNUTLS_COMP_ZLIB, GNUTLS_COMP_LZO, 0};
+-
  void ggz_tls_init(const char *certfile, const char *keyfile, const char *password)
  {
+ 	/* no cert support yet */
+@@ -109,22 +103,7 @@ int ggz_tls_enable_fd(int fdes, GGZTLSTy
+ 	else
+ 		gnutls_init(&session, GNUTLS_SERVER);
+ 
+-	if(whoami == GGZ_TLS_CLIENT) {
+-		/*gnutls_set_default_priority(session);*/
+-		gnutls_mac_set_priority(session, mac_priority);
+-		gnutls_kx_set_priority(session, kx_priority);
+-		gnutls_protocol_set_priority(session, protocol_priority);
+-		gnutls_compression_set_priority(session, compression_priority);
+-		gnutls_cipher_set_priority(session, cipher_priority);
+-	}
+-	else {
+-		/*gnutls_set_default_priority(session);*/
+-		gnutls_protocol_set_priority(session, protocol_priority);
+-		gnutls_compression_set_priority(session, compression_priority);
+-		gnutls_cipher_set_priority(session, cipher_priority);
+-		gnutls_mac_set_priority(session, mac_priority);
+-		gnutls_kx_set_priority(session, kx_priority);
+-	}
++	gnutls_set_default_priority(session);
+ 
+ 	/*gnutls_dh_set_prime_bits(session, 512);*/
+ 	if(whoami == GGZ_TLS_CLIENT) sleep(1);
