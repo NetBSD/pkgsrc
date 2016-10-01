@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4051 2016/10/01 10:21:13 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4052 2016/10/01 11:35:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5677,3 +5677,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.4.9.1 [reed 2016-09-30]
 	Updated graphics/freeglut to 3.0.0 [wiz 2016-10-01]
 	Updated devel/pcre2 to 10.22nb1 [wiz 2016-10-01]
+	Updated databases/py-mysql-connector to 2.2.1 [adam 2016-10-01]
+	Updated net/miniupnpd to 2.0 [adam 2016-10-01]
