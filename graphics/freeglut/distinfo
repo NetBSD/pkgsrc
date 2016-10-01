@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 21:33:57 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/10/01 07:47:04 wiz Exp $
 
-SHA1 (freeglut-2.8.1.tar.gz) = 7330b622481e2226c0c9f6d2e72febe96b03f9c4
-RMD160 (freeglut-2.8.1.tar.gz) = 22a8de93e68657bb34200fba0124c99704b34f93
-SHA512 (freeglut-2.8.1.tar.gz) = 935fddfa197c5f0ec74c5f2005fe5a0ebfd39f4a402cc79363da7cfe2e8576263130e44bd7e4f6c07ea53d3137bd7ca8ee8db85c0a09f25508fcf1b9ed07052e
-Size (freeglut-2.8.1.tar.gz) = 1005343 bytes
-SHA1 (patch-src_freeglut__joystick.c) = b2baf2f79113c3daa30cc77e483d1a4248f79ac8
+SHA1 (freeglut-3.0.0.tar.gz) = fca52242f9344627a30f11487ee42002e6b0dacd
+RMD160 (freeglut-3.0.0.tar.gz) = ce4129a22199516ecf24491f0ed026f40c3f5dae
+SHA512 (freeglut-3.0.0.tar.gz) = 9c45d5b203b26a7ff92331b3e080a48e806c92fbbe7c65d9262dd18c39cd6efdad8a795a80f499a2d23df84b4909dbd7c1bab20d7dd3555d3d88782ce9dd15b0
+Size (freeglut-3.0.0.tar.gz) = 419095 bytes
+SHA1 (patch-src_freeglut__joystick.c) = a3f52010378afd1218ba12328a2b4626b758d483
+SHA1 (patch-src_x11_fg__joystick__x11.c) = ccd79599939d936e4364c6e8d91a8ce0e058db78
