@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4050 2016/10/01 07:47:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4051 2016/10/01 10:21:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5676,3 +5676,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/httpstat version 1.2.0 [agc 2016-09-30]
 	Updated pkgtools/pkglint to 5.4.9.1 [reed 2016-09-30]
 	Updated graphics/freeglut to 3.0.0 [wiz 2016-10-01]
+	Updated devel/pcre2 to 10.22nb1 [wiz 2016-10-01]
