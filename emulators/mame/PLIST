@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/09/02 12:22:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/10/01 16:45:46 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -155,6 +155,7 @@ share/mame/hash/cdtv.xml
 share/mame/hash/cgenie_cart.xml
 share/mame/hash/cgenie_cass.xml
 share/mame/hash/channelf.xml
+share/mame/hash/chessmstdm.xml
 share/mame/hash/coco_cart.xml
 share/mame/hash/coco_flop.xml
 share/mame/hash/coleco.xml
@@ -176,6 +177,7 @@ share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/electron_cart.xml
 share/mame/hash/electron_cass.xml
+share/mame/hash/electron_flop.xml
 share/mame/hash/ep64_cart.xml
 share/mame/hash/ep64_cass.xml
 share/mame/hash/ep64_flop.xml
@@ -241,6 +243,7 @@ share/mame/hash/kayproii.xml
 share/mame/hash/kc_cart.xml
 share/mame/hash/kc_cass.xml
 share/mame/hash/kc_flop.xml
+share/mame/hash/kim1_cass.xml
 share/mame/hash/korvet_flop.xml
 share/mame/hash/lantutor.xml
 share/mame/hash/leapster.xml
@@ -328,8 +331,10 @@ share/mame/hash/partner_flop.xml
 share/mame/hash/pasogo.xml
 share/mame/hash/pb2000c.xml
 share/mame/hash/pc1000.xml
-share/mame/hash/pc1512.xml
-share/mame/hash/pc1640.xml
+share/mame/hash/pc1512_flop.xml
+share/mame/hash/pc1512_hdd.xml
+share/mame/hash/pc1640_flop.xml
+share/mame/hash/pc1640_hdd.xml
 share/mame/hash/pc8201.xml
 share/mame/hash/pc8801_cass.xml
 share/mame/hash/pc8801_flop.xml
@@ -469,6 +474,7 @@ share/mame/hash/v1050_hdd.xml
 share/mame/hash/vboy.xml
 share/mame/hash/vc4000.xml
 share/mame/hash/vector06_cart.xml
+share/mame/hash/vector06_flop.xml
 share/mame/hash/vectrex.xml
 share/mame/hash/vg5k.xml
 share/mame/hash/vic10.xml
