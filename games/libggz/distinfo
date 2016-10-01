@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:56:58 agc Exp $
+$NetBSD: distinfo,v 1.3.8.1 2016/10/01 15:18:56 bsiegert Exp $
 
 SHA1 (libggz-0.0.14.1.tar.gz) = 8a602e60606c89fd13ad93bb84a8be466fd457ef
 RMD160 (libggz-0.0.14.1.tar.gz) = 5136aba62a4e988d97451b00193c10189f7265f2
 SHA512 (libggz-0.0.14.1.tar.gz) = ca034d8196c151a59d3afec6d37270a974b2f9d9c380f46ef01238077b7c3c1b5686cb5252754523d985963e14c88e27b39da3c362e7accfbe550bdd5837634d
 Size (libggz-0.0.14.1.tar.gz) = 477382 bytes
-SHA1 (patch-aa) = 58afba0306d2609d7426c18e581caf25accf49a3
+SHA1 (patch-aa) = e35fcef50d38f103e7d41694704dc1ce2d73ca00
