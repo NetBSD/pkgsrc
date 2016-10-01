@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.68 2016/07/24 20:12:34 rillig Exp $
+# $NetBSD: Makefile.common,v 1.69 2016/10/01 20:40:06 mrg Exp $
 #
 # used by wm/icewm/Makefile
 # used by wm/icewm-imlib/Makefile
 
 DISTNAME=		icewm-1.2.38pre2
+PKGREVISION=		1
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
