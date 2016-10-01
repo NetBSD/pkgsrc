@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/10/01 14:15:04 wen Exp $
 
-DISTNAME=	gunicorn-19.3.0
-PKGREVISION=	1
+DISTNAME=	gunicorn-19.6.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +9,10 @@ MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	http://gunicorn.org/
 COMMENT=	Python WSGI HTTP server
 LICENSE=	mit
+
+# These depends is used for test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov>=0:../../devel/py-test-cov
 
 USE_TOOLS+=	pax
 
