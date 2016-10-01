@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/10/01 07:47:04 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/01 07:49:09 wiz Exp $
 
 DISTNAME=	freeglut-3.0.0
 CATEGORIES=	graphics
@@ -17,6 +17,7 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE=	freeglut.pc.in
 
+# https://sourceforge.net/p/freeglut/bugs/232/
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/GL/glut.h
 
