@@ -1,0 +1,9 @@
+$NetBSD: patch-requirements__test.txt,v 1.1 2016/10/01 14:15:04 wen Exp $
+Use pytest and pytest-con in pkgsrc to avoid download.
+--- requirements_test.txt.orig	2016-10-01 14:02:06.000000000 +0000
++++ requirements_test.txt
+@@ -1,2 +1,2 @@
+-pytest==2.8.3
+-pytest-cov==1.7.0
++pytest>=2.8.3
++pytest-cov>=1.7.0
