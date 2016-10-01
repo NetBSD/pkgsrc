@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2015/04/03 17:50:27 rodent Exp $
+$NetBSD: patch-ad,v 1.6 2016/10/01 18:23:18 bouyer Exp $
+Exclude plugins that would require extra dependancies.
+Some can be found in specific nagios plugin packages.
 
 --- plugins-scripts/Makefile.in.orig	2014-06-26 16:17:33.000000000 +0000
 +++ plugins-scripts/Makefile.in
