@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/09/11 14:39:27 mef Exp $
+# $NetBSD: Makefile,v 1.6 2016/10/01 10:21:03 wiz Exp $
 
 DISTNAME=	pcre2-10.22
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
 		${MASTER_SITE_SOURCEFORGE:=pcre/}
@@ -14,6 +15,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-jit
 
 PKGCONFIG_OVERRIDE+=	libpcre2-16.pc.in
 PKGCONFIG_OVERRIDE+=	libpcre2-posix.pc.in
@@ -26,6 +28,8 @@ CONFIGURE_ARGS+=	--enable-pcre2grep-libz
 CONFIGURE_ARGS+=	--enable-pcre2grep-libbz2
 
 TEST_TARGET=		check
+
+NOT_PAX_MPROTECT_SAFE=	bin/pcre2grep bin/pcre2test
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
