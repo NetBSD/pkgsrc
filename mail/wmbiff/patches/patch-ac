@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2013/01/17 15:55:31 joerg Exp $
+$NetBSD: patch-ac,v 1.9 2016/10/01 13:03:10 joerg Exp $
 
 --- wmbiff/tlsComm.c.orig	2004-10-11 00:29:47.000000000 +0000
 +++ wmbiff/tlsComm.c
@@ -35,3 +35,33 @@ $NetBSD: patch-ac,v 1.8 2013/01/17 15:55:31 joerg Exp $
  	}
  
  	if (gnutls_x509_crt_init(&cert) < 0) {
+@@ -495,27 +497,9 @@ struct connection_state *initialize_gnut
+ 	}
+ 
+ 	assert(gnutls_init(&scs->tls_state, GNUTLS_CLIENT) == 0);
++	assert(gnutls_set_default_priority(&scs->tls_state) == 0);
++
+ 	{
+-		const int protocols[] = { GNUTLS_TLS1, GNUTLS_SSL3, 0 };
+-		const int ciphers[] =
+-			{ GNUTLS_CIPHER_RIJNDAEL_128_CBC, GNUTLS_CIPHER_3DES_CBC,
+-			GNUTLS_CIPHER_RIJNDAEL_256_CBC,
+-			GNUTLS_CIPHER_ARCFOUR, 0
+-		};
+-		const int compress[] = { GNUTLS_COMP_ZLIB, GNUTLS_COMP_NULL, 0 };
+-		const int key_exch[] = { GNUTLS_KX_RSA, GNUTLS_KX_DHE_DSS,
+-			GNUTLS_KX_DHE_RSA, 0
+-		};
+-		/* mutt with gnutls doesn't use kx_srp or kx_anon_dh */
+-		const int mac[] = { GNUTLS_MAC_SHA, GNUTLS_MAC_MD5, 0 };
+-		assert(gnutls_protocol_set_priority(scs->tls_state, protocols) ==
+-			   0);
+-		assert(gnutls_cipher_set_priority(scs->tls_state, ciphers) == 0);
+-		assert(gnutls_compression_set_priority(scs->tls_state, compress) ==
+-			   0);
+-		assert(gnutls_kx_set_priority(scs->tls_state, key_exch) == 0);
+-		assert(gnutls_mac_set_priority(scs->tls_state, mac) == 0);
+-		/* no client private key */
+ 		if (gnutls_certificate_allocate_credentials(&scs->xcred) < 0) {
+ 			DMA(DEBUG_ERROR, "gnutls memory error\n");
+ 			exit(1);
