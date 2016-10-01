@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/01 18:37:15 kamil Exp $
+bin/plist-add
+bin/plist-del
+bin/plist-sort
+man/man1/plist-add.1
+man/man1/plist-del.1
+man/man1/plist-sort.1

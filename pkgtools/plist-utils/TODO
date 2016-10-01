@@ -1,0 +1,8 @@
+1. Recognize ${KEY} and replace in keys with VALUE
+Spawn a command like:
+make show-var VARNAME=KEY
+And get the KEY value
+
+2. Port to !NetBSD platforms with libnbcompat
+
+3. Use popular precomputed ${KEYS} used in PLISTs like ${PKGBASE}
