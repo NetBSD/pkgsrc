@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/08/29 15:44:26 darcy Exp $
+# $NetBSD: Makefile,v 1.14 2016/10/01 13:00:10 joerg Exp $
 
 DISTNAME=	logilab-astng-0.24.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-logilab-common>=0.53.0:../../devel/py-logilab-common
 
 USE_LANGUAGES=	# none
+
+ALL_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 do-test:
 	cd ${WRKSRC} && ${SH} test/fulltest.sh ${PYVERSSUFFIX}
