@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4053 2016/10/01 11:54:13 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4054 2016/10/01 12:33:15 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5680,3 +5680,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-mysql-connector to 2.2.1 [adam 2016-10-01]
 	Updated net/miniupnpd to 2.0 [adam 2016-10-01]
 	Updated devel/p5-Moose to 2.1806 [wen 2016-10-01]
+	Added www/p5-WWW-Form-UrlEncoded version 0.23 [wen 2016-10-01]
