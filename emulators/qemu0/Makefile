@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 13:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/01 13:20:52 kamil Exp $
 
 DISTNAME=		qemu-0.15.1
-PKGREVISION=		17
+PKGREVISION=		18
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 
@@ -108,6 +108,8 @@ PLIST_VARS+=		${UE_ARCHS} nbd
 .for _var_ in ${USER_EMUL}
 PLIST.${_var_}=		YES
 .endfor
+
+LDFLAGS.Linux+=		-lrt # timer_settime
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
