@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/10/01 06:02:10 mef Exp $
+# $NetBSD: Makefile,v 1.8 2016/10/01 12:35:33 mef Exp $
 #
 
 DISTNAME=	Font-FreeType-0.07
@@ -11,6 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Font-FreeType/
 COMMENT=	Read font files and render glyphs from Perl using FreeType2
 LICENSE=	${PERL5_LICENSE}
 
+USE_TOOLS+=	pkg-config
+
 DEPENDS+=	p5-Devel-CheckLib-[0-9]*:../../devel/p5-Devel-CheckLib
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 
@@ -21,8 +23,5 @@ PERL5_PACKLIST=		auto/Font/FreeType/.packlist
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-.if ( !empty($X11_TYPE:Mnative) )
-# to find freetype-config
-.include "../../mk/x11.buildlink3.mk"
-.endif
+
 .include "../../mk/bsd.pkg.mk"
