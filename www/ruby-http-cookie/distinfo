@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:34 agc Exp $
+$NetBSD: distinfo,v 1.2.8.1 2016/10/01 13:46:36 bsiegert Exp $
 
-SHA1 (http-cookie-1.0.2.gem) = 3fac9c6e96cb4c22c04bdb6e1edf0620255a6ff7
-RMD160 (http-cookie-1.0.2.gem) = 6c129c5cae8fa034dcba544432c08db6eef72d41
-SHA512 (http-cookie-1.0.2.gem) = 447b7fcfd67f64edbd8420672add7ff04f28358ecd8ef59c3bf861b48378729d02bc1e4396259104651794e011ef0de72c892f28fd658474a1fc315b9b750178
-Size (http-cookie-1.0.2.gem) = 37888 bytes
+SHA1 (http-cookie-1.0.3.gem) = 34c03e5f450d33591f47d9934dd9315577a3da57
+RMD160 (http-cookie-1.0.3.gem) = 2a9f8615630a5ceafde2facce672d0b6b3eaae2c
+SHA512 (http-cookie-1.0.3.gem) = 43ac1218e98dd47ee22e33e72e20bc5b55f65e60aadd417641f8a4221eba88995d418c7738a4c35dfba132e05c0c4b0df2b2bedd56c22e82c062d1f03de0052f
+Size (http-cookie-1.0.3.gem) = 38400 bytes
