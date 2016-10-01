@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.68 2016/09/18 21:56:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.69 2016/10/01 19:44:36 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1832,7 +1832,13 @@ share/calibre/recipes/7seri.recipe
 share/calibre/recipes/Ansa.recipe
 share/calibre/recipes/DrawAndCook.recipe
 share/calibre/recipes/ZIVE.sk.recipe
+share/calibre/recipes/aabenraalokalavisen_dk.recipe
 share/calibre/recipes/aachener_nachrichten.recipe
+share/calibre/recipes/aarhuslokalavisen_dk.recipe
+share/calibre/recipes/aarhusmidtlokalavisen_dk.recipe
+share/calibre/recipes/aarhusnordlokalavisen_dk.recipe
+share/calibre/recipes/aarhussydlokalavisen_dk.recipe
+share/calibre/recipes/aarhusvestlokalavisen_dk.recipe
 share/calibre/recipes/abc.recipe
 share/calibre/recipes/abc_au.recipe
 share/calibre/recipes/abc_es.recipe
@@ -1861,11 +1867,15 @@ share/calibre/recipes/al_jazeera.recipe
 share/calibre/recipes/al_masry_alyoum_arabic.recipe
 share/calibre/recipes/al_monitor.recipe
 share/calibre/recipes/albert_mohler.recipe
+share/calibre/recipes/albertslundlokalavisen_dk.recipe
 share/calibre/recipes/alejakomiksu_com.recipe
+share/calibre/recipes/alleroedlokalavisen_dk.recipe
 share/calibre/recipes/alo_novine.recipe
 share/calibre/recipes/alt_om_herning.recipe
 share/calibre/recipes/alternet.recipe
+share/calibre/recipes/altomdata_dk.recipe
 share/calibre/recipes/am730.recipe
+share/calibre/recipes/amagerbladet_dk.recipe
 share/calibre/recipes/ambito.recipe
 share/calibre/recipes/ambito_financiero.recipe
 share/calibre/recipes/american_thinker.recipe
@@ -1912,6 +1922,7 @@ share/calibre/recipes/automatiseringgids.recipe
 share/calibre/recipes/autosport.recipe
 share/calibre/recipes/avantaje.recipe
 share/calibre/recipes/aventurilapescuit.recipe
+share/calibre/recipes/avisen_dk.recipe
 share/calibre/recipes/avto-magazin.recipe
 share/calibre/recipes/axxon_magazine.recipe
 share/calibre/recipes/axxon_news.recipe
@@ -2036,6 +2047,7 @@ share/calibre/recipes/cinebel_be.recipe
 share/calibre/recipes/cio.recipe
 share/calibre/recipes/cio_magazine.recipe
 share/calibre/recipes/ciperchile.recipe
+share/calibre/recipes/cityavisen_dk.recipe
 share/calibre/recipes/cjr.recipe
 share/calibre/recipes/clarin.recipe
 share/calibre/recipes/clarion_ledger.recipe
@@ -2054,6 +2066,7 @@ share/calibre/recipes/colta.recipe
 share/calibre/recipes/columbusdispatch.recipe
 share/calibre/recipes/common_dreams.recipe
 share/calibre/recipes/computer_active.recipe
+share/calibre/recipes/computerworld_dk.recipe
 share/calibre/recipes/computerworld_pl.recipe
 share/calibre/recipes/conowego_pl.recipe
 share/calibre/recipes/consortium_news.recipe
@@ -2160,6 +2173,7 @@ share/calibre/recipes/discover_magazine.recipe
 share/calibre/recipes/discover_magazine_monthly.recipe
 share/calibre/recipes/disinformatico.recipe
 share/calibre/recipes/divahair.recipe
+share/calibre/recipes/djurslandsposten_dk.recipe
 share/calibre/recipes/dn_se.recipe
 share/calibre/recipes/dna.recipe
 share/calibre/recipes/dnevni_avaz.recipe
@@ -2192,6 +2206,7 @@ share/calibre/recipes/dziennik_wschodni.recipe
 share/calibre/recipes/dziennik_zachodni.recipe
 share/calibre/recipes/dziennikzwiazkowy.recipe
 share/calibre/recipes/e_novine.recipe
+share/calibre/recipes/ebeltoftlokalavisen_dk.recipe
 share/calibre/recipes/ebetrsberger_zeitung.recipe
 share/calibre/recipes/echo_dnia.recipe
 share/calibre/recipes/echo_moskvy.recipe
@@ -2211,6 +2226,7 @@ share/calibre/recipes/edge_conversations.recipe
 share/calibre/recipes/editor_and_publisher.recipe
 share/calibre/recipes/editoriali.recipe
 share/calibre/recipes/edmonton_journal.recipe
+share/calibre/recipes/egedallokalavisen_dk.recipe
 share/calibre/recipes/egirl.recipe
 share/calibre/recipes/eioba.recipe
 share/calibre/recipes/ekantipur.recipe
@@ -2268,6 +2284,8 @@ share/calibre/recipes/epl_talk.recipe
 share/calibre/recipes/epw.recipe
 share/calibre/recipes/equipped.recipe
 share/calibre/recipes/erdinger_anzeiger.recipe
+share/calibre/recipes/erhvervs_avisen_dk.recipe
+share/calibre/recipes/esbjerglokalavisen_dk.recipe
 share/calibre/recipes/escrevinhador.recipe
 share/calibre/recipes/esenja.recipe
 share/calibre/recipes/esensja_(rss).recipe
@@ -2292,6 +2310,8 @@ share/calibre/recipes/factcheck.recipe
 share/calibre/recipes/fairbanks_daily.recipe
 share/calibre/recipes/fan_graphs.recipe
 share/calibre/recipes/fastcompany.recipe
+share/calibre/recipes/favrskovavisen_dk.recipe
+share/calibre/recipes/favrskovlokalavisen_dk.recipe
 share/calibre/recipes/faznet.recipe
 share/calibre/recipes/fc_knudde.recipe
 share/calibre/recipes/fdb_pl.recipe
@@ -2318,6 +2338,9 @@ share/calibre/recipes/fokkeensukke.recipe
 share/calibre/recipes/folha.recipe
 share/calibre/recipes/folhadesaopaulo.recipe
 share/calibre/recipes/folhadesaopaulo_sub.recipe
+share/calibre/recipes/folkebladet_dk.recipe
+share/calibre/recipes/folkebladetdjursland_dk.recipe
+share/calibre/recipes/folketidende_dk.recipe
 share/calibre/recipes/forbes.recipe
 share/calibre/recipes/forbes_india.recipe
 share/calibre/recipes/forbes_pl.recipe
@@ -2333,6 +2356,10 @@ share/calibre/recipes/frandroid.recipe
 share/calibre/recipes/frankfurter_rundschau.recipe
 share/calibre/recipes/frazpc.recipe
 share/calibre/recipes/freakonomics.recipe
+share/calibre/recipes/fredensborglokalavisen_dk.recipe
+share/calibre/recipes/fredericialokalavisen_dk.recipe
+share/calibre/recipes/frederiksbergbladet_dk.recipe
+share/calibre/recipes/frederikssundlokalavisen_dk.recipe
 share/calibre/recipes/freenature.recipe
 share/calibre/recipes/freeway.recipe
 share/calibre/recipes/freisinger_tagblatt.recipe
@@ -2340,6 +2367,7 @@ share/calibre/recipes/fria.recipe
 share/calibre/recipes/frontlineonnet.recipe
 share/calibre/recipes/fstream.recipe
 share/calibre/recipes/fudzilla.recipe
+share/calibre/recipes/furesoelokalavisen_dk.recipe
 share/calibre/recipes/furstenfeldbrucker_tagblatt.recipe
 share/calibre/recipes/futurismic.recipe
 share/calibre/recipes/galaxys_edge.recipe
@@ -2365,6 +2393,7 @@ share/calibre/recipes/gazeta_wspolczesna.recipe
 share/calibre/recipes/gazeta_wyborcza.recipe
 share/calibre/recipes/gcn.recipe
 share/calibre/recipes/geek_poke.recipe
+share/calibre/recipes/gentoftelokalavisen_dk.recipe
 share/calibre/recipes/geopolityka.recipe
 share/calibre/recipes/geretsrieder_merkur.recipe
 share/calibre/recipes/german_gov.recipe
@@ -2397,6 +2426,8 @@ share/calibre/recipes/grandes_corresponsales_es.recipe
 share/calibre/recipes/granma.recipe
 share/calibre/recipes/grantland.recipe
 share/calibre/recipes/greensboro_news_and_record.recipe
+share/calibre/recipes/grenaalokalavisen_dk.recipe
+share/calibre/recipes/gribskovlokalavisen_dk.recipe
 share/calibre/recipes/grid_to.recipe
 share/calibre/recipes/grrm.recipe
 share/calibre/recipes/gry_online_pl.recipe
@@ -2414,8 +2445,10 @@ share/calibre/recipes/h7_tumspor.recipe
 share/calibre/recipes/haaretz_en.recipe
 share/calibre/recipes/haber7.recipe
 share/calibre/recipes/hackernews.recipe
+share/calibre/recipes/haderslevlokalavisen_dk.recipe
 share/calibre/recipes/haksoz.recipe
 share/calibre/recipes/hallo_assen.recipe
+share/calibre/recipes/halsnaeslokalavisen_dk.recipe
 share/calibre/recipes/hamilton_spectator.recipe
 share/calibre/recipes/handelsblatt.recipe
 share/calibre/recipes/hankyoreh.recipe
@@ -2435,6 +2468,7 @@ share/calibre/recipes/helsingin_sanomat.recipe
 share/calibre/recipes/heraldo.recipe
 share/calibre/recipes/heritage_foundation.recipe
 share/calibre/recipes/high_country_news.recipe
+share/calibre/recipes/hillerod_posten_dk.recipe
 share/calibre/recipes/hindu.recipe
 share/calibre/recipes/hindu_business_line.recipe
 share/calibre/recipes/hira.recipe
@@ -2450,10 +2484,12 @@ share/calibre/recipes/hln.recipe
 share/calibre/recipes/hln_be.recipe
 share/calibre/recipes/hna.recipe
 share/calibre/recipes/hnonline.recipe
+share/calibre/recipes/hoersholmlokalavisen_dk.recipe
 share/calibre/recipes/hola.recipe
 share/calibre/recipes/hollywood_reporter.recipe
 share/calibre/recipes/holzkirchener_merkur.recipe
 share/calibre/recipes/homopedia_pl.recipe
+share/calibre/recipes/hornsherredlokalavisen_dk.recipe
 share/calibre/recipes/hotair.recipe
 share/calibre/recipes/hotcity.recipe
 share/calibre/recipes/hotnews.recipe
@@ -2467,6 +2503,8 @@ share/calibre/recipes/huffingtonpost_uk.recipe
 share/calibre/recipes/hurriyet.recipe
 share/calibre/recipes/hurriyet_daily_news.recipe
 share/calibre/recipes/hvg.recipe
+share/calibre/recipes/hvidovreavis_dk.recipe
+share/calibre/recipes/hvidovrelokalavisen_dk.recipe
 share/calibre/recipes/ibm_smarter_planet.recipe
 share/calibre/recipes/ideal_almeria.recipe
 share/calibre/recipes/ideal_granada.recipe
@@ -2505,6 +2543,7 @@ share/calibre/recipes/infomotori.recipe
 share/calibre/recipes/information_dk.recipe
 share/calibre/recipes/infoworld.recipe
 share/calibre/recipes/infra_pl.recipe
+share/calibre/recipes/ing_dk.recipe
 share/calibre/recipes/inopressa.recipe
 share/calibre/recipes/inquirer_net.recipe
 share/calibre/recipes/insan_okur.recipe
@@ -2555,7 +2594,9 @@ share/calibre/recipes/jutarnji.recipe
 share/calibre/recipes/juve_la_stampa.recipe
 share/calibre/recipes/juventudrebelde.recipe
 share/calibre/recipes/juventudrebelde_english.recipe
+share/calibre/recipes/jv_dk.recipe
 share/calibre/recipes/kahokushinpo.recipe
+share/calibre/recipes/kaloeviglokalavisen_dk.recipe
 share/calibre/recipes/kamerabild.recipe
 share/calibre/recipes/kamikaze.recipe
 share/calibre/recipes/karlsruhe.recipe
@@ -2565,6 +2606,7 @@ share/calibre/recipes/kathemerini.recipe
 share/calibre/recipes/kellog_faculty.recipe
 share/calibre/recipes/kellog_insight.recipe
 share/calibre/recipes/kerrang.recipe
+share/calibre/recipes/kgsenghavebladet_dk.recipe
 share/calibre/recipes/kidney.recipe
 share/calibre/recipes/kitekinto.recipe
 share/calibre/recipes/kitsapun.recipe
@@ -2572,6 +2614,8 @@ share/calibre/recipes/kleinezeitung.recipe
 share/calibre/recipes/klip_me.recipe
 share/calibre/recipes/klubknjige.recipe
 share/calibre/recipes/km_blog.recipe
+share/calibre/recipes/koegelokalavisen_dk.recipe
+share/calibre/recipes/koldinglokalavisen_dk.recipe
 share/calibre/recipes/komchadluek.recipe
 share/calibre/recipes/kommersant.recipe
 share/calibre/recipes/kompas.recipe
@@ -2585,6 +2629,7 @@ share/calibre/recipes/kotaku.recipe
 share/calibre/recipes/kp.recipe
 share/calibre/recipes/krebs_on_security.recipe
 share/calibre/recipes/kresy_pl.recipe
+share/calibre/recipes/kristeligt_dagblad_dk.recipe
 share/calibre/recipes/krstarica.recipe
 share/calibre/recipes/krstarica_en.recipe
 share/calibre/recipes/ksiazka_pl.recipe
@@ -2688,6 +2733,7 @@ share/calibre/recipes/lupa.recipe
 share/calibre/recipes/lvivs_ks_ghazieta.recipe
 share/calibre/recipes/lwn.recipe
 share/calibre/recipes/lwn_weekly.recipe
+share/calibre/recipes/lyngby-taarbaeklokalavisen_dk.recipe
 share/calibre/recipes/mac_video.recipe
 share/calibre/recipes/mac_world.recipe
 share/calibre/recipes/mac_world_uk.recipe
@@ -2830,8 +2876,11 @@ share/calibre/recipes/njp.recipe
 share/calibre/recipes/njuz_net.recipe
 share/calibre/recipes/nme.recipe
 share/calibre/recipes/noaa.recipe
+share/calibre/recipes/noerrebronordvestbladet_dk.recipe
 share/calibre/recipes/nol.recipe
 share/calibre/recipes/non_leggerlo.recipe
+share/calibre/recipes/norddjurslokalavisen_dk.recipe
+share/calibre/recipes/nordjyske_dk.recipe
 share/calibre/recipes/nortecastilla.recipe
 share/calibre/recipes/noticias_r7.recipe
 share/calibre/recipes/noticias_unb.recipe
@@ -2883,7 +2932,9 @@ share/calibre/recipes/observatorul_cultural.recipe
 share/calibre/recipes/observer.recipe
 share/calibre/recipes/observer_gb.recipe
 share/calibre/recipes/oc_register.recipe
+share/calibre/recipes/odenselokalavisen_dk.recipe
 share/calibre/recipes/odkrywcy_pl.recipe
+share/calibre/recipes/oesterbroavis_dk.recipe
 share/calibre/recipes/office_space.recipe
 share/calibre/recipes/oilprice.recipe
 share/calibre/recipes/oldnewthing.recipe
@@ -3013,6 +3064,7 @@ share/calibre/recipes/racjonalista_pl.recipe
 share/calibre/recipes/radikal_tr.recipe
 share/calibre/recipes/radio_prague.recipe
 share/calibre/recipes/radio_praha.recipe
+share/calibre/recipes/randerslokalavisen_dk.recipe
 share/calibre/recipes/rbc_ru.recipe
 share/calibre/recipes/rds.recipe
 share/calibre/recipes/readers_digest.recipe
@@ -3054,11 +3106,13 @@ share/calibre/recipes/roger_ebert_blog.recipe
 share/calibre/recipes/rollingstone.recipe
 share/calibre/recipes/romanialibera.recipe
 share/calibre/recipes/root.recipe
+share/calibre/recipes/roskildelokalavisen_dk.recipe
 share/calibre/recipes/rossijkaja_gazeta.recipe
 share/calibre/recipes/rstones.recipe
 share/calibre/recipes/rte.recipe
 share/calibre/recipes/rtnews.recipe
 share/calibre/recipes/rts.recipe
+share/calibre/recipes/rudersdallokalavisen_dk.recipe
 share/calibre/recipes/rue89.recipe
 share/calibre/recipes/rushisaband.recipe
 share/calibre/recipes/rusiahoy.recipe
@@ -3118,6 +3172,7 @@ share/calibre/recipes/siol.recipe
 share/calibre/recipes/sisainlive.recipe
 share/calibre/recipes/sizinti_derigisi.recipe
 share/calibre/recipes/skai.recipe
+share/calibre/recipes/skanderborglokalavisen_dk.recipe
 share/calibre/recipes/skeptic.recipe
 share/calibre/recipes/skeptical_enquirer.recipe
 share/calibre/recipes/skylife.recipe
@@ -3130,8 +3185,10 @@ share/calibre/recipes/sme.recipe
 share/calibre/recipes/smh.recipe
 share/calibre/recipes/smilezilla.recipe
 share/calibre/recipes/smith.recipe
+share/calibre/recipes/sn_dk.recipe
 share/calibre/recipes/snopes.recipe
 share/calibre/recipes/socialdiva.recipe
+share/calibre/recipes/soenderborglokalavisen_dk.recipe
 share/calibre/recipes/sol_haber.recipe
 share/calibre/recipes/soldiers.recipe
 share/calibre/recipes/something_awful.recipe
@@ -3173,6 +3230,7 @@ share/calibre/recipes/superesportes.recipe
 share/calibre/recipes/svd_se.recipe
 share/calibre/recipes/swiat_obrazu.recipe
 share/calibre/recipes/swiatkindle.recipe
+share/calibre/recipes/syddjurslokalavisen_dk.recipe
 share/calibre/recipes/tablety_pl.recipe
 share/calibre/recipes/tabu.recipe
 share/calibre/recipes/tagesan.recipe
@@ -3306,14 +3364,19 @@ share/calibre/recipes/usatoday.recipe
 share/calibre/recipes/usnews.recipe
 share/calibre/recipes/utne.recipe
 share/calibre/recipes/utrinski.recipe
+share/calibre/recipes/valbybladet_dk.recipe
 share/calibre/recipes/vancouver_province.recipe
 share/calibre/recipes/vancouver_sun.recipe
 share/calibre/recipes/vanityfair.recipe
+share/calibre/recipes/vanloesebladet_dk.recipe
+share/calibre/recipes/vardelokalavisen_dk.recipe
 share/calibre/recipes/variety.recipe
 share/calibre/recipes/vecernji_list.recipe
 share/calibre/recipes/vedomosti.recipe
 share/calibre/recipes/veintitres.recipe
+share/calibre/recipes/vejlelokalavisen_dk.recipe
 share/calibre/recipes/version2.recipe
+share/calibre/recipes/vesterbrobladet_dk.recipe
 share/calibre/recipes/vfr_magazine.recipe
 share/calibre/recipes/vic_times.recipe
 share/calibre/recipes/vice.recipe
