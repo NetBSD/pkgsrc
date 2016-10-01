@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/09 15:40:17 scole Exp $
+# $NetBSD: Makefile,v 1.1.2.1 2016/10/01 14:39:06 bsiegert Exp $
 
 DISTNAME=       squashfs${VERSION}
 PKGNAME=        squashfs-${VERSION}
@@ -28,7 +28,7 @@ WRKSRC=		${SQUASH_DIR}/squashfs-tools
 SQUASH_PKG_DOC=	${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
 
 do-build:
-	cd ${WRKSRC} && env EXTRA_LDFLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
+	cd ${WRKSRC} && env EXTRA_LDFLAGS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
 		${GMAKE} ${BUILD_MAKE_FLAGS}
 
 do-install:
