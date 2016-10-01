@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1194 2016/10/01 12:48:21 wen Exp $
+# $NetBSD: Makefile,v 1.1195 2016/10/01 13:02:59 wen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -384,6 +384,7 @@ SUBDIR+=	p5-HTTP-Cookies
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-Daemon
 SUBDIR+=	p5-HTTP-Date
+SUBDIR+=	p5-HTTP-Entity-Parser
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-HeaderParser-XS
 SUBDIR+=	p5-HTTP-Headers-Fast
