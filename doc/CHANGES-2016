@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4058 2016/10/01 13:25:23 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4059 2016/10/01 14:17:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5685,3 +5685,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Params-ValidationCompiler to 0.13nb1 [wiz 2016-10-01]
 	Added www/p5-HTTP-Entity-Parser version 0.17 [wen 2016-10-01]
 	Updated emulators/qemu0 to qemu-0.15.1nb18 [kamil 2016-10-01]
+	Updated www/py-gunicorn to 19.6.0 [wen 2016-10-01]
