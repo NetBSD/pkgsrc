@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4061 2016/10/01 18:46:02 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4062 2016/10/01 19:44:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5688,3 +5688,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-gunicorn to 19.6.0 [wen 2016-10-01]
 	Updated emulators/mame to 0.178 [wiz 2016-10-01]
 	Added pkgtools/plist-utils version 20160731 [kamil 2016-10-01]
+	Updated misc/calibre to 2.69.0 [wiz 2016-10-01]
