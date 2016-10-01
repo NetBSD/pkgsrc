@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2016/09/30 11:54:00 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/10/01 08:02:06 wiz Exp $
 
 DISTNAME=	asymptote-2.38
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=asymptote/}
 EXTRACT_SUFX=	.tgz
@@ -20,10 +21,11 @@ BUILD_DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 BUILD_DEPENDS+=	tex-parskip-[0-9]*:../../print/tex-parskip
 BUILD_DEPENDS+=	tex-texinfo-[0-9]*:../../print/tex-texinfo
 BUILD_DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+BUILD_DEPENDS+=	ghostscript-agpl>=9.16:../../print/ghostscript-agpl
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
-DEPENDS+=	ghostscript-agpl>=9.16:../../print/ghostscript-agpl
 
 UNLIMIT_RESOURCES=	datasize
+MAKE_JOBS_SAFE=		no # random failure during build as of 2.38
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
@@ -57,7 +59,8 @@ post-install:
 # next two could be split off into options
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
-# freeglut too old, not recognized
+# wants library called 'glut', but pkgsrc only provides 'freeglut'
+#BUILDLINK_API_DEPENDS.freeglut+=	freeglut>=3.0
 #.include "../../graphics/freeglut/buildlink3.mk"
 # recognized, but makes asy dump core during creation of documentation
 #.include "../../graphics/glut/buildlink3.mk"
