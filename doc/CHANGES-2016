@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4055 2016/10/01 12:49:39 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4056 2016/10/01 12:54:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5682,3 +5682,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1806 [wen 2016-10-01]
 	Added www/p5-WWW-Form-UrlEncoded version 0.23 [wen 2016-10-01]
 	Added www/p5-HTTP-MultiPartParser version 0.01 [wen 2016-10-01]
+	Updated devel/p5-Params-ValidationCompiler to 0.13nb1 [wiz 2016-10-01]
