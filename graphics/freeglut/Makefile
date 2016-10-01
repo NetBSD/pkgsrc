@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/10/01 07:49:09 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/01 07:52:57 wiz Exp $
 
 DISTNAME=	freeglut-3.0.0
 CATEGORIES=	graphics
@@ -27,6 +27,7 @@ post-install:
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
