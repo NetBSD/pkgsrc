@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/09/29 12:10:21 joerg Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2016/10/01 15:56:53 bsiegert Exp $
 
 GITHUB_PROJECT=	adaptagrams
 GITHUB_TAG=	0503f7524f5b2aa96b356dfdd817f9f9869d2b20
@@ -17,6 +17,7 @@ EXTRACT_USING+=	bsdtar
 WRKSRC=		${WRKDIR}/adaptagrams-${GITHUB_TAG}/cola
 
 USE_TOOLS+=	aclocal autoconf autoheader automake autoreconf
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
