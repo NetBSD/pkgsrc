@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/09/09 15:40:17 scole Exp $
+# $NetBSD: Makefile,v 1.42 2016/10/02 16:36:13 bouyer Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -13,6 +13,7 @@ SUBDIR+=	fuse-cddfs
 SUBDIR+=	fuse-chironfs
 SUBDIR+=	fuse-cryptofs
 SUBDIR+=	fuse-curlftpfs
+SUBDIR+=	fuse-darling-dmg
 SUBDIR+=	fuse-djmount
 SUBDIR+=	fuse-encfs
 SUBDIR+=	fuse-ext2
@@ -27,6 +28,7 @@ SUBDIR+=	fuse-ntfs-3g
 SUBDIR+=	fuse-obexfs
 SUBDIR+=	fuse-pcachefs
 SUBDIR+=	fuse-pod
+SUBDIR+=	fuse-sparsebundlefs
 SUBDIR+=	fuse-sshfs
 SUBDIR+=	fuse-svnfs
 SUBDIR+=	fuse-unionfs
