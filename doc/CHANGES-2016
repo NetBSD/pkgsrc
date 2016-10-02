@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4066 2016/10/02 09:13:00 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4067 2016/10/02 09:19:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5693,3 +5693,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/gnuchess to 6.2.3 [mef 2016-10-02]
 	Updated archivers/pigz to 2.3.4 [fhajny 2016-10-02]
 	Updated misc/tmux to 2.3 [fhajny 2016-10-02]
+	Updated security/hitch to 1.4.1 [fhajny 2016-10-02]
