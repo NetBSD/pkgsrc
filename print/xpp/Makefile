@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2016/03/05 11:29:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.54 2016/10/02 13:34:50 bouyer Exp $
 
 DISTNAME=	xpp-1.5
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cups/}
 
@@ -13,6 +13,8 @@ USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
+CFLAGS+=	-D_IPP_PRIVATE_STRUCTURES
+
 DOCDIR=		${PREFIX}/share/doc/xpp
 
 INSTALLATION_DIRS+=	${DOCDIR}
@@ -20,6 +22,6 @@ INSTALLATION_DIRS+=	${DOCDIR}
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} LICENSE README ${DESTDIR}${DOCDIR}
 
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
