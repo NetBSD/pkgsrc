@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/02/21 09:51:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/10/02 12:18:40 ryoon Exp $
 info/skk.info
 ${EMACS_LISPPREFIX}/skk/ccc.el
 ${EMACS_LISPPREFIX}/skk/ccc.elc
@@ -7,8 +7,6 @@ ${EMACS_LISPPREFIX}/skk/cdb.elc
 ${EMACS_LISPPREFIX}/skk/context-skk.el
 ${EMACS_LISPPREFIX}/skk/context-skk.elc
 ${EMACS_LISPPREFIX}/skk/leim-list.el
-${EMACS_LISPPREFIX}/skk/queue-m.el
-${EMACS_LISPPREFIX}/skk/queue-m.elc
 ${EMACS_LISPPREFIX}/skk/skk-abbrev.el
 ${EMACS_LISPPREFIX}/skk/skk-abbrev.elc
 ${EMACS_LISPPREFIX}/skk/skk-act.el
