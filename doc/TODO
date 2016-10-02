@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16520 2016/10/02 02:34:40 mef Exp $
+$NetBSD: TODO,v 1.16521 2016/10/02 02:51:11 mef Exp $
 
 Suggested new packages
 ======================
@@ -727,6 +727,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdm-3.0.3
 	o gedit-plugins-2.32.0 [GNOME 2.32]
 	o genius-1.0.21
+	o gens-2.15.5
 	o gentoo-0.20.4
 	o geoclue-2.1.10
 	o gerbv-2.6.1
