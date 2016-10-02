@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16519 2016/10/02 02:20:00 mef Exp $
+$NetBSD: TODO,v 1.16520 2016/10/02 02:34:40 mef Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bibparse-1.11
 	o bibtool-2.63
 	o bin86-0.16.21
-	o binkd-104
+	o binkd-1.04
 	o binutils-2.27
 	o bird-1.5.0
 	o bird6-1.5.0
@@ -1111,7 +1111,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
-	o moneyguru-2.10.2
 	o monit-5.17
 	o mono-4.4.0.122
 	o mono-tools-4.2
@@ -1151,7 +1150,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netatalk-3.1.0 [wip]
 	o netbt-hcidump-5.37
 	o nethack-3.6
-	o netio-132
+	o netio-1.32
 	o netramet-50
 	o newmail-1.0.2
 	o nikto-2.1.5
@@ -1526,13 +1525,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o spcaview-20060501
 	o spectrwm-2.7.2
 	o spidermonkey-1.8.5
-	o spin-645
+	o spin-6.45
 	o spl-1.0pre6
-	o sqlrelay-freetds-0.64
-	o sqlrelay-mysql-0.64
-	o sqlrelay-odbc-0.64
-	o sqlrelay-pgsql-0.64
-	o sqlrelay-sqlite-0.64
 	o squeak-5.0
 	o squeak-vm-4.10.2.2765
 	o squidview-0.81
