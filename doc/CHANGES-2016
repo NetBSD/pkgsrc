@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4064 2016/10/02 02:20:00 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4065 2016/10/02 09:06:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5691,3 +5691,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/calibre to 2.69.0 [wiz 2016-10-01]
 	Updated wm/icewm to 1.2.38pre2nb1 [mrg 2016-10-01]
 	Updated games/gnuchess to 6.2.3 [mef 2016-10-02]
+	Updated archivers/pigz to 2.3.4 [fhajny 2016-10-02]
