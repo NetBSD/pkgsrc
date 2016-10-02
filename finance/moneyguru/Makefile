@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2016/08/28 15:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/02 18:43:20 wiz Exp $
 
-DISTNAME=	moneyguru-2.10.1
+DISTNAME=	moneyguru-src-2.10.2
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	finance
-MASTER_SITES=	${MASTER_SITE_GITHUB:=hsoft/}
+MASTER_SITES=	https://download.hardcoded.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hardcoded.net/moneyguru/
@@ -15,10 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
-GITHUB_TAG=	${PKGVERSION_NOREV}
 EXTRACT_USING=	bsdtar
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c
 USE_TOOLS=	pax
 
