@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2016/08/12 10:27:27 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.42 2016/10/02 12:17:40 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -107,6 +107,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_client_state.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure2.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_delegation.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_disco.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_echo.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_fail2ban.beam
@@ -152,6 +153,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_private.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_private_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_private_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_private_sql.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_privilege.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_lib.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_proxy65_service.beam
@@ -195,6 +197,7 @@ lib/erlang/lib/${PKGNAME}/ebin/node_flat_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_hometree.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_hometree_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_mb.beam
+lib/erlang/lib/${PKGNAME}/ebin/node_mb_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_mix.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_mix_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_online.beam
@@ -228,6 +231,7 @@ lib/erlang/lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_ctl.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_http.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_oauth.hrl
+lib/erlang/lib/${PKGNAME}/include/ejabberd_service.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sm.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sql_pt.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_web_admin.hrl
