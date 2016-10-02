@@ -1,9 +1,11 @@
-$NetBSD: patch-libf95.a-0.93_runtime_mutex.c,v 1.1 2016/09/28 15:34:54 maya Exp $
+$NetBSD: patch-libf95.a-0.93_runtime_mutex.c,v 1.2 2016/10/02 23:26:40 maya Exp $
 
-gcc on netbsd/mips rejects ll/sc as it targets mips1 which lacks
-these instructions. tell it it's mips3 code. it will crash
-at runtime for mips1 (unlikely to compile this package), but
-makes it possible to build for newer mips.
+This package builds a gcc on netbsd/mips which defaults to o32 mips1
+output, and then uses it to compile g95 - which then uses assembly that
+is rejected for the chosen -mips1 by the linker.
+
+set mips3 for this segment, it'll stop being rejected by the linker, but
+will crash if anyone runs this code on actual mips1 (rare).
 
 --- libf95.a-0.93/runtime/mutex.c.orig	2008-09-17 03:45:13.000000000 +0000
 +++ libf95.a-0.93/runtime/mutex.c
