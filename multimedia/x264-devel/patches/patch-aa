@@ -1,9 +1,12 @@
-$NetBSD: patch-aa,v 1.22 2016/01/24 14:34:11 ryoon Exp $
+$NetBSD: patch-aa,v 1.23 2016/10/02 20:34:48 maya Exp $
 
 Add support for DragonFly.
 Use 'amd64' as a synonym for 'x86_64'.
 Avoid endian test failure for -flto.
 Do not force compiler optimisations.
+
+If we fail an assembly test, continue as if --disable-asm
+was passed.
 
 --- configure.orig	2016-01-23 21:45:04.000000000 +0000
 +++ configure
@@ -44,6 +47,39 @@ Do not force compiler optimisations.
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
+@@ -844,8 +849,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
+         ASFLAGS="$ASFLAGS -c"
+     else
+         echo "You specified a pre-ARMv6 or Thumb-1 CPU in your CFLAGS."
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -854,8 +859,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ; 
+         ASFLAGS="$ASFLAGS -c"
+     else
+         echo "no NEON support, try adding -mfpu=neon to CFLAGS"
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
+@@ -873,8 +878,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
+         define HAVE_MSA
+     else
+         echo "You specified a pre-MSA CPU in your CFLAGS."
+-        echo "If you really want to run on such a CPU, configure with --disable-asm."
+-        exit 1
++	echo "Disabling asm"
++	asm="no"
+     fi
+ fi
+ 
 @@ -891,7 +896,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
  CPU_ENDIAN="little-endian"
  if [ $compiler = GNU ]; then
