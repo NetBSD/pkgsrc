@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4068 2016/10/02 09:31:18 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4069 2016/10/02 09:31:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5695,3 +5695,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/tmux to 2.3 [fhajny 2016-10-02]
 	Updated security/hitch to 1.4.1 [fhajny 2016-10-02]
 	Updated devel/libbson to 1.4.2 [fhajny 2016-10-02]
+	Updated databases/mongo-c-driver to 1.4.2 [fhajny 2016-10-02]
