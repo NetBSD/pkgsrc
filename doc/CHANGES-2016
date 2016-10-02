@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4069 2016/10/02 09:31:58 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4070 2016/10/02 10:17:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5696,3 +5696,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/hitch to 1.4.1 [fhajny 2016-10-02]
 	Updated devel/libbson to 1.4.2 [fhajny 2016-10-02]
 	Updated databases/mongo-c-driver to 1.4.2 [fhajny 2016-10-02]
+	Updated lang/erlang to 19.1 [fhajny 2016-10-02]
+	Updated lang/erlang-doc to 19.1 [fhajny 2016-10-02]
+	Updated lang/erlang-man to 19.1 [fhajny 2016-10-02]
