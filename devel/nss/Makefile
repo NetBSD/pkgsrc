@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2016/09/30 11:59:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.119 2016/10/02 22:53:23 maya Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.27.0
@@ -53,6 +53,14 @@ PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 MAKE_ENV+=	NS_USE_GCC=YES
 .endif
 
+SUBST_CLASSES+=		64bit
+SUBST_STAGE.64bit=	post-patch
+SUBST_FILES.64bit=	nss/lib/freebl/*
+SUBST_SED.64bit=	-e 's,NSS_USE_64,_LP64,g'
+SUBST_MESSAGE.conf=	Use a generic 64bit check
+
+# Just to be safe, do this as well as the _LP64 replacement
+# NSS has a lot more logic for USE_64
 .for platform in ${LP64PLATFORMS}
 .  if ${MACHINE_PLATFORM:M${platform}}
 MAKE_ENV+=	USE_64=1
