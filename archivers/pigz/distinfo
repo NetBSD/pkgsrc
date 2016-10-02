@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2016/09/19 09:17:57 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2016/10/02 09:06:11 fhajny Exp $
 
-SHA1 (pigz-2.3.3.tar.gz) = 11252d38fe2a7b8d7a712dff22bbb7630287d00b
-RMD160 (pigz-2.3.3.tar.gz) = 053a9f2309982ba21a7041288ace4408ffbcbe5e
-SHA512 (pigz-2.3.3.tar.gz) = 6fa5ee1c03b4a8dc4b191acaa337b6f30132503ff413300214e1e6b27dd70590b53334be3fa880916f6ea4498beb8cf7c411a5954fdf188475882c44618c663c
-Size (pigz-2.3.3.tar.gz) = 92787 bytes
-SHA1 (patch-Makefile) = bb2a30acfa656852cd36361a0ac80a3322c920c0
+SHA1 (pigz-2.3.4.tar.gz) = 98c30f710514c54ce8a31784347412eeec0f08eb
+RMD160 (pigz-2.3.4.tar.gz) = 19e78ba998e6b18adc2fe806e91e3b07fe3b1fc6
+SHA512 (pigz-2.3.4.tar.gz) = c0d5da6c5b2da50841aaf3958d5694edca0356d4bef211175e9f2f17e0c815e80b2e62bb39c7761c8f83fdaa84ca7373e130cdb0fa2c96f91c397556cbf7ba2a
+Size (pigz-2.3.4.tar.gz) = 105412 bytes
+SHA1 (patch-Makefile) = 6039f90084ab563ea9ee22a07af9a9ae348792e6
