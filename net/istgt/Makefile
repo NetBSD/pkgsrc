@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/03/05 11:29:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2016/10/02 14:03:09 mef Exp $
 #
 
 DISTNAME=		istgt-20141125
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://www.peach.ne.jp/archives/istgt/
 
 MAINTAINER=		sborrill@NetBSD.org
-HOMEPAGE=		http://shell.peach.ne.jp/aoyama/
+HOMEPAGE=		https://github.com/elastocloud/istgt
 COMMENT=		Configurable iSCSI target
 LICENSE=		modified-bsd
 
