@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/31 14:31:05 nros Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/02 22:04:37 prlw1 Exp $
 include/asio.hpp
 include/asio/async_result.hpp
 include/asio/basic_datagram_socket.hpp
@@ -237,7 +237,7 @@ include/asio/detail/win_object_handle_service.hpp
 include/asio/detail/win_static_mutex.hpp
 include/asio/detail/win_thread.hpp
 include/asio/detail/win_tss_ptr.hpp
-include/asio/detail/wince_thread.hpp
+include/asio/detail/winapi_thread.hpp
 include/asio/detail/winrt_async_manager.hpp
 include/asio/detail/winrt_async_op.hpp
 include/asio/detail/winrt_resolve_op.hpp
