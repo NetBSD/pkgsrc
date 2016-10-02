@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/02/08 16:04:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/02 09:06:11 fhajny Exp $
 
-DISTNAME=	pigz-2.3.3
+DISTNAME=	pigz-2.3.4
 CATEGORIES=	archivers
 MASTER_SITES=	http://zlib.net/pigz/
 
