@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/10/02 22:04:37 prlw1 Exp $
 
-SHA1 (asio-1.10.6.tar.bz2) = b69a6c3dcd20d2c14ee3a5e0bdd85821e6658ae9
-RMD160 (asio-1.10.6.tar.bz2) = 9c8a8300f9387f8796326799370c040cd889cadf
-SHA512 (asio-1.10.6.tar.bz2) = 7146e75a378de57daab88e7ba509ae01367ffa0d7c4c90481e221977a6b9f4fd80e9caac5c6b4c27bc7652e44cd210e2c6cabf5681d7c62747df14bbc25e8c23
-Size (asio-1.10.6.tar.bz2) = 1266180 bytes
+SHA1 (asio-1.10.8.tar.bz2) = 07dde049a1bb975decccf499b08c2bf03e966895
+RMD160 (asio-1.10.8.tar.bz2) = 938970e6c001393e4822d5aa89db36d24929dc9a
+SHA512 (asio-1.10.8.tar.bz2) = d870686d2b19bec9925c311f2f0fd370e9797bbad252176a80a998f9c322ecd502b5081826105712e7caf87c03c3e6b70a0e219019e5bff46077d6e8c3c6db09
+Size (asio-1.10.8.tar.bz2) = 1270332 bytes
