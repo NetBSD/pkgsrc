@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4073 2016/10/02 13:36:15 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.4074 2016/10/02 16:38:12 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5702,3 +5702,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated chat/ejabberd to 16.09 [fhajny 2016-10-02]
 	Updated inputmethod/skk to 16.1 [ryoon 2016-10-02]
 	Updated print/xpp to 1.5nb15 [bouyer 2016-10-02]
+	Added filesystems/fuse-sparsebundlefs version 20160928 [bouyer 2016-10-02]
+	Added filesystems/fuse-darling-dmg version 20160310 [bouyer 2016-10-02]
