@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16532 2016/10/03 12:30:44 wiz Exp $
+$NetBSD: TODO,v 1.16533 2016/10/03 12:34:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1092,7 +1092,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.39.1
 	o megatools-1.9.97
-	o meld-3.16.3
 	o mergeant-0.67
 	o merkaator-0.18.2
 	o mesure-0.7.2
