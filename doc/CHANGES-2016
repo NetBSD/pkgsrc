@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4089 2016/10/03 12:36:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4090 2016/10/03 12:37:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5719,3 +5719,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/meld to 3.16.3 [wiz 2016-10-03]
 	Updated math/mpfr to 3.1.5 [wiz 2016-10-03]
 	Updated devel/liblangtag to 0.6.2 [wiz 2016-10-03]
+	Updated multimedia/x265 to 2.1 [adam 2016-10-03]
+	Updated multimedia/ffmpeg2 to 2.8.8 [adam 2016-10-03]
+	Updated multimedia/ffmpeg3 to 3.1.4 [adam 2016-10-03]
