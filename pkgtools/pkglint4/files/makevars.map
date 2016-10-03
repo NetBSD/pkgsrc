@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.2 2016/06/19 18:03:05 wiz Exp $
+# $NetBSD: makevars.map,v 1.3 2016/10/03 12:25:37 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -658,7 +658,7 @@ PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
 PTHREAD_TYPE		Identifier [$system]
 # ^^ or "native" or "none".
 PY_PATCHPLIST		Yes [$package]
-PYPKGPREFIX		{ py27 py33 py34 } [*:pu, pyversion.mk:s, *:]
+PYPKGPREFIX		{ py27 py34 py35 } [*:pu, pyversion.mk:s, *:]
 PYTHON_FOR_BUILD_ONLY	Yes [$package]
 REPLACE_PYTHON	List of Pathmask [$package_list]
 PYTHON_VERSIONS_ACCEPTED List of Version [$package]
