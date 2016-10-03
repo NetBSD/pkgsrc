@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16529 2016/10/03 12:21:25 wiz Exp $
+$NetBSD: TODO,v 1.16530 2016/10/03 12:26:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nas-auscope-1.9.4
 	o nautilus-actions-2.30.3 [GNOME 2.30]
 	o ncview-2.1.6
-	o neon-0.30.2
 	o nessus-4.4.1
 	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
 	o netatalk-3.1.0 [wip]
