@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/04/29 12:07:55 mef Exp $
+# $NetBSD: Makefile,v 1.5 2016/10/03 20:37:53 kamil Exp $
 #
 
 DISTNAME=	man-pages-4.05
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/linux/docs/man-pages/
 EXTRACT_SUFX=	.tar.xz
@@ -25,8 +26,6 @@ CONFLICTS+=	libgetopt-[0-9]*
 # sem_destroy.3, sem_getvalue.3, sem_init.3, sem_post.3, sem_trywait.3,
 # sem_wait.3
 CONFLICTS+=	pthread-sem-[0-9]*
-# security.2
-CONFLICTS+=	cint-[0-9]*
 # getaddrinfo.3, gethostbyname.3, getipnodebyname.3, getnameinfo.3,
 # getnetent.3, resolver.3, resolver.5, hostname.7
 CONFLICTS+=	libbind-[0-9]*
