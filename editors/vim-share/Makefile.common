@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.153 2016/07/25 10:51:37 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.154 2016/10/03 20:04:46 morr Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -11,8 +11,9 @@
 
 DISTNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 CATEGORIES=		editors
-MASTER_SITES=		${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=		.tar.bz2
+GITHUB_PROJECT=		vim
+GITHUB_TAG=		v${VIM_VERSION}.${VIM_PATCHLEVEL}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=vim/}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,7 +23,7 @@ LICENSE=		vim-license
 
 CONFLICTS+=		vim-kde-[0-9]*
 
-WRKSRC=			${WRKDIR}/${VIM_SUBDIR}/src
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c99
 
@@ -39,9 +40,9 @@ CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 CONFIGURE_ARGS+=	--enable-multibyte
 CONFIGURE_ARGS+=	--enable-cscope
 
-PATCH_ARGS=		-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
+PATCH_ARGS=		-d ${WRKDIR}/${DISTNAME} --forward --quiet \
 				-E ${PATCH_STRIP:Q}
-PATCH_DIST_ARGS=	-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
+PATCH_DIST_ARGS=	-d ${WRKDIR}/${DISTNAME} --forward --quiet \
 				-E ${PATCH_DIST_STRIP:Q}
 PATCHDIR=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
