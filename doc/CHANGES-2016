@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4090 2016/10/03 12:37:32 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4091 2016/10/03 12:38:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5722,3 +5722,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/x265 to 2.1 [adam 2016-10-03]
 	Updated multimedia/ffmpeg2 to 2.8.8 [adam 2016-10-03]
 	Updated multimedia/ffmpeg3 to 3.1.4 [adam 2016-10-03]
+	Updated time/p5-DateTime-TimeZone to 2.05 [wiz 2016-10-03]
