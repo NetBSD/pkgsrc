@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2014/05/17 16:10:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/10/03 08:44:22 wiz Exp $
 
 DISTNAME=	bg5pdf-1.0.0
 PKGREVISION=	16
@@ -11,7 +11,7 @@ COMMENT=	Wrap big5 encoding text file into PDF file by using PDFlib
 
 # The package is a confusing mix of GPL and pdflib license.
 # Err on the side of caution until this is understood.
-LICENSE=		bg5pdf-license
+LICENSE=		aladdin-license AND gnu-gpl-v2
 RESTRICTED=		"No clear permission to redistribute".
 NO_SOURCE_ON_FTP=	${RESTRICTED}
 NO_SOURCE_ON_CDROM=	${RESTRICTED}
