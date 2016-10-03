@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4080 2016/10/03 12:07:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4081 2016/10/03 12:11:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5710,3 +5710,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mercurial to 3.9.2 [wiz 2016-10-02]
 	Updated security/openssl to 1.0.2jnb1 [wiz 2016-10-03]
 	Updated x11/xterm to 326 [wiz 2016-10-03]
+	Updated time/py-vdirsyncer to 0.13.1 [wiz 2016-10-03]
