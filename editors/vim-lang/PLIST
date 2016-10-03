@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/09/24 14:01:23 maya Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/10/03 20:05:23 morr Exp $
 man/fr.ISO8859-1/man1/evim.1
 man/fr.ISO8859-1/man1/ex.1
 man/fr.ISO8859-1/man1/rview.1
@@ -99,6 +99,8 @@ share/vim/${VIM_SUBDIR}/keymap/README.txt
 share/vim/${VIM_SUBDIR}/keymap/accents.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic.vim
 share/vim/${VIM_SUBDIR}/keymap/arabic_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/armenian-eastern_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/armenian-western_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/belarusian-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/bulgarian-bds.vim
 share/vim/${VIM_SUBDIR}/keymap/bulgarian-phonetic.vim
@@ -139,6 +141,7 @@ share/vim/${VIM_SUBDIR}/keymap/polish-slash_iso-8859-2.vim
 share/vim/${VIM_SUBDIR}/keymap/polish-slash_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcuken.vim
+share/vim/${VIM_SUBDIR}/keymap/russian-jcukenmac.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcukenwin.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-jcukenwintype.vim
 share/vim/${VIM_SUBDIR}/keymap/russian-yawerty.vim
@@ -162,8 +165,8 @@ share/vim/${VIM_SUBDIR}/keymap/thaana.vim
 share/vim/${VIM_SUBDIR}/keymap/ukrainian-dvorak.vim
 share/vim/${VIM_SUBDIR}/keymap/ukrainian-jcuken.vim
 share/vim/${VIM_SUBDIR}/keymap/vietnamese-telex_utf-8.vim
-share/vim/${VIM_SUBDIR}/keymap/vietnamese-vni_utf-8.vim
 share/vim/${VIM_SUBDIR}/keymap/vietnamese-viqr_utf-8.vim
+share/vim/${VIM_SUBDIR}/keymap/vietnamese-vni_utf-8.vim
 share/vim/${VIM_SUBDIR}/lang/README.txt
 share/vim/${VIM_SUBDIR}/lang/af/LC_MESSAGES/vim.mo
 share/vim/${VIM_SUBDIR}/lang/ca/LC_MESSAGES/vim.mo

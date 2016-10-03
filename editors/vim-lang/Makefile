@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2013/06/13 21:41:02 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/03 20:05:23 morr Exp $
 
 PKGNAME=	vim-lang-${VIM_VERSION}.${VIM_PATCHLEVEL}
-PKGREVISION=	1
 
 .include "../../editors/vim-share/Makefile.common"
 
