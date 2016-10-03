@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4078 2016/10/02 22:17:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4079 2016/10/03 11:55:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5708,3 +5708,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/moneyguru to 2.10.2 [wiz 2016-10-02]
 	Updated devel/asio to 1.10.8 [prlw1 2016-10-02]
 	Updated devel/py-mercurial to 3.9.2 [wiz 2016-10-02]
+	Updated security/openssl to 1.0.2jnb1 [wiz 2016-10-03]
