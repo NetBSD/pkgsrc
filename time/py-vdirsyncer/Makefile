@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2016/08/22 14:15:12 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/10/03 12:11:36 wiz Exp $
 
-DISTNAME=	vdirsyncer-0.12.1
+DISTNAME=	vdirsyncer-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/vdirsyncer/}
@@ -29,8 +29,7 @@ USE_LANGUAGES=	# none
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 # still supported but gives runtime warning
-# see https://github.com/pimutils/vdirsyncer/issues/219
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported any longer
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
