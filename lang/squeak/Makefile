@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2014/12/15 02:11:06 asau Exp $
-#
+# $NetBSD: Makefile,v 1.49 2016/10/03 07:57:24 wiz Exp $
 
 SQUEAK_VERSION=	4.5
 IMAGE_VERSION=  13680
@@ -15,7 +14,7 @@ DISTFILES=	${DEFAULT_DISTFILES} $(SQUEAK_SOURCES).gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://squeak.org/
 COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
-LICENCE=	mit AND apache-2.0
+LICENSE=	mit AND apache-2.0
 
 DEPENDS=	squeak-vm-[0-9]*:../../lang/squeak-vm
 
