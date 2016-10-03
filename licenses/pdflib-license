@@ -1,0 +1,117 @@
+PDFlib License Agreement
+PDFlib GmbH (licensor), Tal 40, 80331 München, Germany
+phone +49 · 89 · 29 16 46 87, fax +49 · 89 · 29 16 46 86
+sales@pdflib.com, support@pdflib.com, www.pdflib.com
+
+1 Definitions
+
+The effective date of this agreement is the date shown on the invoice. This agreement defines the licensing terms for the software products known as PDFlib and PDI. PDFlib and PDI 4.0.3, as well as all
+maintenance updates which are designated as such by PDFlib GmbH will be collectively referred to as
+»the program« in this agreement. The program is delivered with an English-language manual which
+describes PDFlib’s programming features and their usage (»the documentation«).
+
+2 License Types
+
+As indicated on the invoice, licensee chooses one of the license types (a) or (b) below (but not both under a single license). Under any license type licensee may use the program on an unlimited number of
+development machines, provided these machines are not used for production purposes at the same
+time (for example, they cannot be accessed over any network except by the developers).
+2.1 Server License
+Licensee is granted the non-transferable, non-exclusive, and perpetual right to use the program on a
+number of production servers. A production server is a single computer run by licensee (e.g., a Web
+server) which can be accessed by one or more users simultaneously. For the server license the total
+number of CPUs (processors) is taken into account, while the number of users accessing the server is
+irrelevant. The total number of machines is also irrelevant (e.g., two dual-processor machines plus a
+single-processor machine result in a total CPU count of five).
+A purchased server license may be transferred to another server if no two servers are driven concurrently under the same license agreement.
+2.2 Redistributable License for client-side Products
+Licensee is granted the non-transferable, non-exclusive, and perpetual right to use the program in
+products developed, marketed, and distributed by licensee, and distribute the program to third parties
+as an integral part of such products. Such product must not be a server product, i.e. the redistributable
+license does not cover products which are accessible by more than one user at the same time or run in
+unattended mode.
+For the runtime license the total number of redistributed copies of the program is taken into account.
+(For example, if licensee sells 50 copies of one product and 100 copies of another product which are
+both based on the program, a total of 150 runtime licenses is required.) If licensee distributes non-free
+updates of such products, all distributed copies of the updates contribute to the total count of runtime
+licenses.
+Licensee agrees that he will distribute the program to third parties only integrated or in conjunction
+with hardware or software products that make use of the program (»authorized products«). Such authorized products must add substantial functionality to the program. Products which in essence mimic the program’s programming interface (or a subset thereof) are not permitted under any license.
+The redistributable license includes the right to sublicense to third parties the right to use authorized
+products to the extent such authorized products use the program. The redistributable license does not
+include any server license as discussed under section 2 (a) of this agreement.
+
+
+Restrictions
+
+3.1 Intellectual Property
+Licensee acknowledges that the program is copyrighted intellectual property of PDFlib GmbH, and
+that PDFlib GmbH retains exclusive ownership of the program and related documentation, subject
+however to all terms and conditions of this agreement.
+It is expressly agreed that this license does not include ownership of the program’s source code, but
+only the right-to-use as defined by this agreement. If source code is delivered, this is only a means for
+simplifying technical procedures.
+3.2 Sublicensing
+Licensee may not resell, transfer, rent or lease the program. Licensee is not allowed to transfer the
+rights obtained under this license to any third party, except as permitted under a redistributable license as indicated in section 2.2
+This license applies to one incorporated unit, and does not extend to subsidiaries.
+3.3 Reverse Engineering and Confidentiality
+If the program was acquired in binary (pre-compiled) format, licensee agrees to not translate, disassemble, or reverse-engineer the program.
+Licensee agrees to not redistribute or make publicly available any registration key received from PDFlib
+GmbH, except as part of his own product when required for a redistributable license as indicated in
+section 2.2.
+
+4 Delivery
+
+The program and documentation are delivered in digital format only. Licensee agrees to retrieve the
+program and documentation, as well as any relevant maintenance updates from licensor’s Web site at
+www.pdflib.com. Neither digital storage media nor printed documentation will be delivered to licensee by PDFlib GmbH.
+
+5 Warranty and Support
+
+5.1 Performance of the Program
+PDFlib GmbH warrants that the program will perform substantially in accordance with the documentation when used as directed in the documentation. This warranty does not cover use of the program
+in ways which are not covered in the documentation (e.g., by calling undocumented internal functions, or by not obeying documented restrictions), or using modified copies of the program.
+PDFlib GmbH warrants that licensor is owner of the program with authority to license the program to
+licensee, and that the program does not infringe third party intellectual property rights. Licensor
+agrees to indemnify, defend and hold harmless licensee from any claims either that licensor does not
+own the program, or that the program infringes a third party’s intellectual property rights.
+In the event the unmodified program fails to satisfy this limited warranty during a warranty period of
+30 days after the effective date of this agreement, PDFlib GmbH shall promptly, at its expense and in
+its discretion, (i) provide a correction or workaround for any reproducible errors which are reported by
+licensee, and deliver an updated version of the program, or (ii) return a refund of any license fees paid
+pursuant to this agreement. In this event licensee will immediately terminate any use and distribution
+of the program.
+Technical support as described above is available by e-mail only. Maintenance upgrades of the program as indicated in section 4 do not extend the initial warranty period.
+5.2 Warranty against Disablement
+PDFlib GmbH expressly represents and warrants that, other than a disabling mechanism on the functional evaluation copy of the program which disabling mechanism is removed upon receipt by licensee
+of the registration key for the full version of the program, the program will not intentionally cause or
+permit any portion of the program provided or developed by PDFlib GmbH hereunder to contain any
+protection feature designed to prevent its use. These protection features include, without limitation,
+any computer virus, worm, software lock, drop dead device, Trojan-horse routine, trap door, time
+bomb, or any other codes or instructions that may be used to access, modify, delete, damage or disable
+the program or any other component of licensee’s computer systems. If PDFlib GmbH becomes aware
+of any such feature, PDFlib GmbH will promptly notify licensee thereof. PDFlib GmbH further represents and warrants that it will not impair the operation of the program in any way other than pursuant to an order of a court of law.
+5.3 Limitations and Disclaimer
+Except for breach of PDFlib GmbH’s warranties of ownership of the program and non-infringement of
+third party intellectual property, the foregoing states the sole and exclusive remedies for PDFlib
+GmbH’s breach of warranty. The foregoing warranties are in lieu of all other warranties or conditions,
+express or implied, and any implied warranty or condition of fitness for a particular purpose, merchantability, or merchantable quality. No person is authorized to make any other warranty or representation concerning the performance of the program other than according to this paragraph.
+Licensee shall make no other warranty, express or implied, on behalf of PDFlib GmbH.
+
+6 Consequential Damages Waiver
+
+Neither party will be liable for any loss of use, interruption of business, or any indirect, special, incidental, or consequential damages of any kind (including lost profits), regardless of the form of action
+whether in contract, tort (including negligence), strict product liability or otherwise.
+
+7 Applicable Law
+
+This license is governed by the laws of Germany, excluding choice of law rules. If any part of this license is found to be in conflict with the law, that part shall be interpreted in its broadest meaning consistent with the law, and no other parts of the license shall be affected.
+
+8 Final Agreement
+
+This agreement constitutes the complete, final and exclusive expression of the parties’ agreement,
+and supersedes all proposals and other communications made between the parties concerning the
+subject matter hereof. This agreement cannot be modified except by written agreement signed by all
+the parties hereto.
+
+PDFlib 4.0.3 License Agreement (created June 14, 2002)
