@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4084 2016/10/03 12:26:31 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4085 2016/10/03 12:28:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5714,3 +5714,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 28.1.0 [wiz 2016-10-03]
 	Updated security/py-cryptography to 1.5.2 [wiz 2016-10-03]
 	Updated www/neon to 0.30.2 [wiz 2016-10-03]
+	Updated security/nettle to 3.3 [wiz 2016-10-03]
