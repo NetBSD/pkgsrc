@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4082 2016/10/03 12:19:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4083 2016/10/03 12:21:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5712,3 +5712,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xterm to 326 [wiz 2016-10-03]
 	Updated time/py-vdirsyncer to 0.13.1 [wiz 2016-10-03]
 	Updated devel/py-setuptools to 28.1.0 [wiz 2016-10-03]
+	Updated security/py-cryptography to 1.5.2 [wiz 2016-10-03]
