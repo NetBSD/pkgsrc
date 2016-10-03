@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.5 2016/07/03 13:20:59 morr Exp $
+$NetBSD: patch-Makefile,v 1.6 2016/10/03 20:04:46 morr Exp $
 
 Handle Xaw support appropiately.
 
 Fix GNUmakeism by not depending on $< in non-suffix rules.
 
---- src/Makefile.orig	2016-07-03 10:35:32.000000000 +0000
+--- src/Makefile.orig	2016-07-02 20:33:46.000000000 +0000
 +++ src/Makefile
 @@ -1253,22 +1253,27 @@ MOTIF_BUNDLE	=
  ### Athena GUI
