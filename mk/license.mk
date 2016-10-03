@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.77 2016/10/03 08:30:20 wiz Exp $
+# $NetBSD: license.mk,v 1.78 2016/10/03 11:49:31 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -141,6 +141,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	qpl-v1.0 \
 	sgi-free-software-b-v2.0 \
 	sleepycat-public \
+	sissl-1.1 \
 	unlicense \
 	w3c \
 	x11 \
