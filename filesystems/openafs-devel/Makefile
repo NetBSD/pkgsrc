@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/03 08:30:13 wiz Exp $
 
 DISTNAME=	openafs-1.7.11-src
 PKGNAME=	${DISTNAME:C/-src//}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	gendalia@NetBSD.org
 HOMEPAGE=	http://www.openafs.org/
 COMMENT=	File system for sharing, scalability and transparent data migration
-LICENSE=	ibm-public-license-1.0
+LICENSE=	ipl-1.0 AND mit AND modified-bsd # AND sun-rpc?
 
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	heimdal-[0-9]*
