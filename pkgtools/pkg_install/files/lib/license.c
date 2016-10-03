@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.47 2016/10/03 08:30:20 wiz Exp $	*/
+/*	$NetBSD: license.c,v 1.48 2016/10/03 11:49:31 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -84,6 +84,7 @@ const char *default_acceptable_licenses =
     "python-software-foundation "
     "qpl-v1.0 "
     "sgi-free-software-b-v2.0 "
+    "sissl-1.1 "
     "sleepycat-public "
     "unlicense "
     "vera-ttf-license "
