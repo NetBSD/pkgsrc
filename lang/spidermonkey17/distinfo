@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2016/09/05 11:43:23 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2016/10/03 02:46:47 maya Exp $
 
 SHA1 (mozjs17.0.0.tar.gz) = 7805174898c34e5d3c3b256117af9944ba825c89
 RMD160 (mozjs17.0.0.tar.gz) = 2fa3a891da2a7a09019f67c1555c03bcdc51e6c5
@@ -8,6 +8,8 @@ SHA1 (patch-ak) = 7cebf3e58ad14598fbe98c3d730c8a548c0bda1e
 SHA1 (patch-as) = c8e3aa309ae5115a8f4c17d477674f93afead538
 SHA1 (patch-bd) = c8ed2110c8b699d6880723dccf62e6976edfa65e
 SHA1 (patch-bf) = 7d18ec3cad441174a71770e7fa22b1cd2029d55b
+SHA1 (patch-js_src_assembler_assembler_MIPSAssembler.h) = 7912848726ec0e7f6181ec70a20c04bcf3ce4ee2
+SHA1 (patch-js_src_assembler_wtf_Platform.h) = 113b746d572f5660cf371f66b69657f6069bab24
 SHA1 (patch-js_src_config_milestone.pl) = 84dbc588e82ba1a6bcc901abe9b77ba316acac15
 SHA1 (patch-js_src_config_system-headers) = a9c5bc2d2c822eb3bd5e8f4ba43407f89b57c009
 SHA1 (patch-js_src_jscpucfg.h) = a65222bcf99e91cd00d6ad40d6fcedd0c3d67ec9
