@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/08/22 13:02:46 mef Exp $
+# $NetBSD: Makefile,v 1.12 2016/10/03 07:19:32 spz Exp $
 #
 
 DISTNAME=	sound-theme-freedesktop-0.8
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Specifications/sound-theme-spec
 COMMENT=	Set of audio files for FreeDesktop
-LICENSE=	# See -> grep License CREDITS
+#LICENSE=	# See -> grep License CREDITS
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool msgfmt autoconf automake
