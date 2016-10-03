@@ -1,0 +1,199 @@
+PGP International Freeware, Version 5.0 (Source Code Version)
+Copyright (c) 1990-1997 Pretty Good Privacy, Inc.  All Rights Reserved.
+
+For Non-Commercial Distribution and Use Only
+Terms and Conditions
+
+	
+This special freeware version of the source code ("Source Code Package") of 
+PGP 5.0 ("Software Product"), including the software, its source code, and 
+its related user and development documentation, is owned by Pretty Good 
+Privacy, Inc. (or "PGP") and is protected by copyright laws and international 
+copyright treaties, as well as other intellectual property laws and treaties.
+
+The makers of PGP, however, are committed to making freely available to 
+individuals around the world a trusted means to secure their personal 
+information and communications from unwanted invasions of privacy. In keeping 
+with the traditions of PGP, the source code of PGP 5.0 has been published for 
+the purpose of facilitating peer review. Pretty Good Privacy, Inc. published 
+the source code in a set of printed books; a printed book or other printed 
+material setting forth encryption source code is not itself subject to the 
+U.S. export regulations (see U.S. EAR Sec. 734.3(b)(2)). The scanning in and 
+review of the source code by independent cryptographers, unrelated to PGP, 
+assures that the cryptography employed in the PGP software may be trusted -- 
+i.e., it is truly strong and that the software contains no hidden back doors 
+allowing third party access to encrypted messages. In addition, it is 
+important that the Software Product be available in as many languages, 
+operate on as many operating system and hardware platforms, and be as solid 
+and secure as possible. 
+
+To facilitate these important goals, the makers of PGP have agreed, subject 
+to all of the terms and conditions which follow, that it will not assert any 
+copyright claims against certain uses of the Source Code Package by users who 
+wish to freely contribute to the efforts of PGP, as specifically described 
+below. The rights granted in this license apply only to source code that was 
+obtained directly from a printed book or other printed materials published by 
+Pretty Good Privacy, Inc.
+
+1.  Non-Commercial Licenses
+
+  a.  Non-Commercial Use.  You may use this Source Code Package solely for the 
+non-commercial purposes permitted below. The term "non-commercial" means that 
+the package (a) has been distributed or otherwise made available at no charge 
+(direct or indirect) and (b) is not used for any commercial purpose, which 
+includes, but is not limited to, any activity engaged for the purpose of 
+generating revenues (directly or indirectly).  For example, a commercial 
+purpose includes the use of the package within a commercial business or 
+facility or the use of the package to provide a service, or in support of 
+service, for which you charge. Commercial purpose also includes use by any 
+government agency or organization. Examples of non-commercial purposes 
+include use at home for personal correspondence, use by students for academic 
+activities, or use by human rights organizations. The software is in "use" 
+when it is loaded into the temporary memory (i.e., RAM) or installed into the 
+permanent memory (e.g., hard disk, CD ROM, or other storage device) of a 
+computer for the purpose of being accessible in client-mode by an end user.
+
+  b.  Non-Commercial Distribution.  You may make exact, unmodified copies of 
+this Source Code Package and distribute such copies solely by electronic 
+means (for example, posting on Internet sites for others to download), 
+subject to the following (a) that such distribution is solely for non-
+commercial purposes (see above definition), (b) that the Source Code Package 
+is distributed unmodified and in its entirety (with its complete user 
+documentation, its readme files, its copyright, trademark, other intellectual 
+property notices, including these terms and conditions, and all of its other 
+components), and (c) that such distribution may occur anywhere in the world, 
+except that Pretty Good Privacy, Inc. expressly forbids the export of this 
+Source Code Package to any countries embargoed by the U.S. government 
+(currently including, Cuba, Iran, Iraq, Libya, North Korea, Syria and Sudan) 
+or to the United States to the extent the practice in the U.S. of any of the 
+inventions covered by U.S. patent no. 4,405,829 (the "RSA" patent) would 
+require payment to the patent rights holder.
+
+  c.  User Involvement. Subject to all of the conditions set forth in this 
+section, you may use this Source Code Package solely for the following non-
+commercial purposes: (a) to review and compile the source code contained in 
+the Source Code Package for the purpose of determining the strength and 
+trustworthiness of the Software Product, reporting any problems you discover 
+to PGP (or its designee) (b) to write bug fixes ("Corrections"), (c) to 
+otherwise modify or enhance the source code ("Enhancements"), (d) to port the 
+Software Product or its source code to operate on other operating system or 
+hardware platforms ("Port"), (e) to write translations or localizations of 
+the Software Product or its source code ("Translations"), and (f) to use 
+internally and solely for non-commercial purposes (as defined above) a 
+compiled version of the source code, including any Corrections, Enhancements, 
+Ports, or Translations (collectively, "Derivative Works") you create, 
+provided that you do NOT reproduce, electronically post, transmit, or 
+otherwise distribute to anyone else any such Derivative Works (see reasons at 
+the end of this paragraph). However, you may submit to PGP (or its designee) 
+any Derivative Works that you create, but in doing so (a) you represent that, 
+if you are not a citizen or permanent resident of the United States or Canada 
+or if you are not located in the United States or Canada, you did not receive 
+any technical assistance from any employee or representative of PGP in 
+connection with the creation of the Derivative Works, (b) you agree that any 
+such submission of Derivative Works is a free contribution to PGP and that 
+PGP is free to use, reproduce, modify, distribute, transmit, display, 
+perform, prepare derivative works thereof, or otherwise make use of or 
+exploit such Derivative Works, in any way and by any means now known or 
+hereafter devised for as long as PGP wishes, (c) you agree not to assert any 
+droit morale you may have with respect to such Derivative Works, and (d) you 
+agree that you will remain solely responsible for complying with any local 
+laws regarding your use of PGP and the creation of such Derivative Works. 
+Because such Derivative Works could have an impact upon the cryptographic 
+integrity and strict quality control of PGP, affect compliance with PGP's 
+cryptographic algorithms and protocols, or could create interoperability 
+issues, compatibility problems and user confusion, PGP will be under no 
+obligation to use, distribute or otherwise exploit any such Derivative Works. 
+For these same reasons, permission to allow you or others to reproduce and 
+distribute any such Derivative Works or any compiled version of the source 
+code of this Source Code Package (i.e., anything except the unmodified 
+version of the Source Code Package), will generally NOT be given. Most 
+important, PGP expressly forbids the creation of any Derivative Works that 
+may compromise the privacy or security of the users of the Software Product 
+or the Source Code Package.
+
+2.  Other Uses. All right, title and interest in this Source Code Package and 
+the Software Product, including its accompanying documentation, and all 
+copyrights therein and related trademarks, trade names and other intellectual 
+property rights, are owned by Pretty Good Privacy, Inc. or its suppliers. All 
+license rights not granted herein are reserved by PGP. Should you wish to use 
+or distribute the Source Code Package or Software Product for commercial 
+purposes or any other purpose not permitted under these terms and conditions, 
+please refer to the International pages of the PGP web site located at 
+http://www.pgp.com for further information.
+
+3.  Technical Support. This Source Code Package is user-supported, meaning 
+that assistance in its installation and use may be limited to help available 
+from friends, family, and other users on the Internet. Though PGP does not 
+offer technical support for this Source Code Package, we welcome your 
+feedback. Technical support is available from PGP or its resellers for those 
+who have purchased copies of the commercial version of the Software Product. 
+For further information, please refer to http://www.pgp.com.
+
+4.  No Warranty. THIS SOURCE CODE PACKAGE IS PROVIDED FOR NON-COMMERCIAL USE 
+AND DISTRIBUTION ONLY, COMES WITH NO WARRANTY, AND IS PROVIDED ON AN "AS IS" 
+BASIS.  YOU ASSUME THE ENTIRE COST OF ANY DAMAGE RESULTING FROM THE 
+INFORMATION CONTAINED IN OR PRODUCED BY THIS SOURCE CODE PACKAGE. YOU ASSUME 
+ALL RESPONSIBILITIES FOR SELECTION OF THIS SOURCE CODE PACKAGE TO ACHIEVE 
+YOUR INTENDED RESULTS, AND FOR THE INSTALLATION OF, USE OF, AND RESULTS 
+OBTAINED FROM IT. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PGP, ITS 
+SUPPLIERS AND OTHERS WHO MAY DISTRIBUTE THIS SOURCE CODE PACKAGE DISCLAIM ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED 
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, CONFORMANCE 
+WITH DESCRIPTION, AND NON-INFRINGEMENT, WITH RESPECT TO THIS SOURCE CODE 
+PACKAGE. 
+
+5.  Limitation of Liability. THE CUMULATIVE LIABILITY OF PGP, ITS SUPPLIERS OR 
+OTHERS WHO MAY DISTRIBUTE THIS SOURCE CODE PACKAGE, TO YOU OR ANY OTHER PARTY 
+FOR ANY LOSS OR DAMAGES RESULTING FROM ANY CLAIMS, DEMANDS OR ACTIONS ARISING 
+OUT OF OR RELATING TO THESE TERMS AND CONDITIONS SHALL NOT EXCEED ONE U.S. 
+DOLLAR.  IN NO EVENT SHALL PGP, ITS SUPPLIERS OR OTHERS WHO MAY DISTRIBUTE 
+THIS SOURCE CODE PACKAGE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, 
+CONSEQUENTIAL, SPECIAL OR EXEMPLARY DAMAGES OR LOST PROFITS WHATSOEVER 
+(INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, 
+BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) 
+ARISING OUT OF THE USE OR INABILITY TO USE THIS SOURCE CODE PACKAGE, EVEN IF 
+PGP, ITS SUPPLIERS OR OTHERS WHO MAY DISTRIBUTE THIS SOURCE CODE PACKAGE HAVE 
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  
+
+BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE LIMITATIONS ON IMPLIED WARRANTIES 
+OR THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL 
+DAMAGES, THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.
+
+6.  General.  These terms and conditions may not be modified, amended, 
+canceled or in any way altered, nor may they be modified by custom and usage 
+of trade or course of dealing, except by an instrument in writing and signed 
+by a duly authorized officer of PGP. These terms and conditions shall be 
+construed and enforced in accordance with the laws of the State of 
+California, United States of America. Any action or proceeding brought by 
+anyone arising out of or related to these terms and conditions shall be 
+brought only in a state or federal court of competent jurisdiction located in 
+the county of San Francisco, California, and the parties hereby consent to 
+the jurisdiction and venue of said courts.  Should any term of these terms 
+and conditions be declared void or unenforceable by any court of competent 
+jurisdiction, such declaration shall have no effect on the remaining terms 
+hereof. These terms and conditions are in the English language, and only the 
+English language version hereof, regardless of the existence of other 
+language translations of these terms and conditions, shall be controlling in 
+all respects. The failure of either party to enforce any rights granted 
+hereunder or to take action against the other party in the event of any 
+breach hereunder shall not be deemed a waiver by that party as to subsequent 
+enforcement of rights or subsequent actions in the event of future breaches. 
+PGP reserves the right at any time without liability or prior notice to 
+change the features or characteristics of this Software Product, or its 
+documentation and related materials, or future versions thereof. These terms 
+and conditions constitute the complete and exclusive statement of the 
+agreement between us which supersedes any proposal or prior agreement, oral 
+or written, and any other communication between us relating to the subject 
+matter of these terms and conditions.  
+
+Should you have any questions concerning these terms and conditions, or if 
+you desire to contact Pretty Good Privacy, Inc. for any reason, please write: 
+Pretty Good Privacy, Inc. Customer Service, 2121 S. El Camino Real, Suite 
+902, San Mateo, CA 94403. http://www.pgp.com.  Telephone +1 (415) 572-0430.
+
+Copyright © 1990-1997 Pretty Good Privacy, Inc. All rights reserved. Pretty 
+Good Privacy, Pretty Good, and PGP are registered trademarks of Pretty Good 
+Privacy, Inc.  Note: Some countries have laws and regulations regarding the 
+use and export of cryptography products; please consult your local government 
+authority for details.
+
