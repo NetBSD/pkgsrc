@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2016/06/08 17:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2016/10/03 12:25:36 wiz Exp $
 
 DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
@@ -24,7 +24,7 @@ REPLACE_PYTHON=			rpy/tests.py
 .include "../../lang/python/pyversion.mk"
 
 PLIST_VARS=	sd
-.if ${PYPKGPREFIX} == "py27" || ${PYPKGPREFIX} == "py33"
+.if ${PYPKGPREFIX} == "py27"
 PLIST.sd=	yes
 DEPENDS+=	${PYPKGPREFIX}-singledispatch-[0-9]*:../../devel/py-singledispatch
 .endif
