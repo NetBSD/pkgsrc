@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2016/03/08 15:03:42 wiz Exp $
+$NetBSD: distinfo,v 1.23 2016/10/03 12:35:18 wiz Exp $
 
-SHA1 (mpfr-3.1.4.tar.bz2) = e3b0af77f18505184410d621fe0aae179e229dba
-RMD160 (mpfr-3.1.4.tar.bz2) = 917939100e262f9d620bf08b1b6a5d0ee9be5c4d
-SHA512 (mpfr-3.1.4.tar.bz2) = 51066066ff2c12ed2198605ecf68846b0c96b548adafa5b80e0c786d0df488411a5e8973358fce7192dc977ad4e68414cf14500e3c39746de62465eb145bb819
-Size (mpfr-3.1.4.tar.bz2) = 1279284 bytes
+SHA1 (mpfr-3.1.5.tar.bz2) = 874e84bb5959fd5a19c032cfb5d673dded4b5cff
+RMD160 (mpfr-3.1.5.tar.bz2) = 18a12b1735c8d0a66115cd4c5e3c804dbe465eea
+SHA512 (mpfr-3.1.5.tar.bz2) = ebf94f49e1f850db6304eec8bf3cbf592b9fb06b743e0a99a660edae3c086aa47cdd089ea958fd4631ff02a444ec034b5e45d7e9701704d74c2e2d49021e49a7
+Size (mpfr-3.1.5.tar.bz2) = 1279489 bytes
