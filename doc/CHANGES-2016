@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4092 2016/10/03 12:38:53 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4093 2016/10/03 18:04:26 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5724,3 +5724,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg3 to 3.1.4 [adam 2016-10-03]
 	Updated time/p5-DateTime-TimeZone to 2.05 [wiz 2016-10-03]
 	Updated devel/p5-Scalar-List-Utils to 1.46 [wiz 2016-10-03]
+	Updated net/syncthing to 0.14.7 [abs 2016-10-03]
