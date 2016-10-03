@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4093 2016/10/03 18:04:26 abs Exp $
+$NetBSD: CHANGES-2016,v 1.4094 2016/10/03 20:07:55 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5725,3 +5725,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 2.05 [wiz 2016-10-03]
 	Updated devel/p5-Scalar-List-Utils to 1.46 [wiz 2016-10-03]
 	Updated net/syncthing to 0.14.7 [abs 2016-10-03]
+	Updated editors/vim-share to 8.0.0021 [morr 2016-10-03]
+	Updated editors/vim-lang to 8.0.0021 [morr 2016-10-03]
