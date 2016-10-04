@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2016/02/21 14:32:24 bsiegert Exp $
+$NetBSD: distinfo,v 1.7 2016/10/04 18:45:22 bsiegert Exp $
 
 SHA1 (go1.4.3.src.tar.gz) = 486db10dc571a55c8d795365070f66d343458c48
 RMD160 (go1.4.3.src.tar.gz) = b1fbb2805a777c8107e7c946f36a881303ac5e35
@@ -33,5 +33,9 @@ SHA1 (patch-src_runtime_cgo_setenv.c) = f3b56885fa54cabf78944fad75c21f04bea5cd88
 SHA1 (patch-src_runtime_netpoll__solaris.c) = ae399518bb02d6b898734a52dfa7fe18f041e1ec
 SHA1 (patch-src_runtime_os__solaris.c) = eec5b293fe4a72f58e4cd51cd23ea6e6fce714b6
 SHA1 (patch-src_runtime_os__solaris.h) = c0a39aa6ab57eca7056178c87ebb00bb21236499
+SHA1 (patch-src_runtime_sys__darwin__386.s) = e352e039bba8435a48b88c76290b245731c299ed
+SHA1 (patch-src_runtime_sys__darwin__amd64.s) = 3eccddc8228657db1480393f8476ddd68ac942ff
 SHA1 (patch-src_runtime_sys__solaris__amd64.s) = 88f2e3fc43b0d6e4f17ef06d3f4f27cfed3103c6
 SHA1 (patch-src_runtime_thunk__solaris__amd64.s) = 2835cdc171ae3209c61ef804fbfbf22cdf68bf43
+SHA1 (patch-src_syscall_syscall__darwin__386.go) = 2f0986bdb199feaa73e933a1a75df87e5c7a8bff
+SHA1 (patch-src_syscall_syscall__darwin__amd64.go) = 1bfba4b0f1e2fe6dee55b24f7f8d7cd89d05dea0
