@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4107 2016/10/04 15:03:49 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4108 2016/10/04 17:58:31 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5740,3 +5740,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/zstd to 1.1.0 [wiz 2016-10-04]
 	Updated misc/py-anita to 1.40nb1 [kamil 2016-10-04]
 	Removed emulators/qemu0 [kamil 2016-10-04]
+	Added editors/vim-gtk3 version 8.0.0021 [morr 2016-10-04]
