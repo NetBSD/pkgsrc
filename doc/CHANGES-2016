@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4104 2016/10/04 13:05:29 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4105 2016/10/04 14:37:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5737,3 +5737,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Plack to 1.0042 [wen 2016-10-04]
 	Updated www/p5-Mojolicious to 7.08 [wen 2016-10-04]
 	Updated devel/py-usb to 1.0.0 [mef 2016-10-04]
+	Updated archivers/zstd to 1.1.0 [wiz 2016-10-04]
