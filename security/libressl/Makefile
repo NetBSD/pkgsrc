@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/09/27 21:26:05 maya Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/04 11:39:23 wiz Exp $
 
-DISTNAME=	libressl-2.3.8
+DISTNAME=	libressl-2.5.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_OPENBSD:=LibreSSL/}
 
@@ -42,6 +42,7 @@ PLIST_VARS+=	man
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Darwin"
+# bn_print(3) and BN_print(3) conflict on case-insensitive file system
 PLIST.man=	yes
 .endif
 
