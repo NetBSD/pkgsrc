@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16541 2016/10/04 11:39:34 wiz Exp $
+$NetBSD: TODO,v 1.16542 2016/10/04 21:45:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1058,6 +1058,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lsh-2.1
 	o lua-keybinder-0.3.1
 	o lua53-5.3.3
+	o luatex-1.0.0
 	o lv2-5.4
 	o lwm-1.2.4
 	o lyx-2.2.1
@@ -1154,6 +1155,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o nikto-2.1.5
+	o nim-0.15.0
 	o nmap-7.30
 	o nqp-2016.02
 	o ns-3.14.1
@@ -1268,6 +1270,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o perlsh-1.8.1
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pflogsumm-1.1.5
+	o pgadmin4-1.0
 	o pgbuildfarm-4.17
 	o phoronix-test-suite-6.2.1
 	o php-excel-1.8.1
