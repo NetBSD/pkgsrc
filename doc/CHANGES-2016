@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4099 2016/10/04 11:05:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4100 2016/10/04 11:39:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5732,3 +5732,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/ltm to 1.0 [wiz 2016-10-04]
 	Updated www/nginx-devel to 1.11.4 [fhajny 2016-10-04]
 	Updated mail/neomutt to 20161003 [wiz 2016-10-04]
+	Updated security/libressl to 2.5.0 [wiz 2016-10-04]
