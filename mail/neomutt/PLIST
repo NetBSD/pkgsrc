@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/09/18 21:47:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/10/04 11:05:06 wiz Exp $
 bin/mutt
 bin/mutt_dotlock
 bin/pgpewrap
@@ -15,8 +15,8 @@ man/man5/muttrc.5
 share/doc/mutt/COPYRIGHT
 share/doc/mutt/ChangeLog
 share/doc/mutt/ChangeLog.neomutt
-share/doc/mutt/GPL
 share/doc/mutt/INSTALL
+share/doc/mutt/LICENSE.md
 share/doc/mutt/NEWS
 share/doc/mutt/PGP-Notes.txt
 share/doc/mutt/README
