@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4095 2016/10/03 20:39:43 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4096 2016/10/04 05:36:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5728,3 +5728,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/vim-share to 8.0.0021 [morr 2016-10-03]
 	Updated editors/vim-lang to 8.0.0021 [morr 2016-10-03]
 	Updated devel/man-pages to 4.05nb1 [kamil 2016-10-03]
+	Updated x11/libdrm to 2.4.71 [wiz 2016-10-04]
