@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/10/04 09:29:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/04 09:34:01 wiz Exp $
 
 DISTNAME=		ltm-1.0
 CATEGORIES=		math
@@ -18,7 +18,7 @@ MAKE_FILE=		makefile.shared
 BUILD_TARGET=		default
 USE_TOOLS+=		gmake
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	include lib share/doc/ltm
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/tommath.h ${DESTDIR}${PREFIX}/include
