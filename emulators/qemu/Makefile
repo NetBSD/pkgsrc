@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2016/09/04 09:21:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.155 2016/10/04 15:00:08 kamil Exp $
 
 DISTNAME=	qemu-2.7.0
 CATEGORIES=	emulators
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 CONFLICTS+=		qemu-bin-[0-9]*
 NOT_FOR_PLATFORM+=	NetBSD-1.[0-6]*-*
 # qemu 1 does not work on NetBSD-5; see http://gnats.netbsd.org/46565.
-# As a workaround, use emulators/qemu0.
 NOT_FOR_PLATFORM+=	NetBSD-5*-*
 
 USE_TOOLS+=		bison gmake makeinfo perl:build pkg-config
