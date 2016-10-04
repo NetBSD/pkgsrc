@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2016/10/02 09:12:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.37 2016/10/04 10:42:47 fhajny Exp $
 
 DISTNAME=	tmux-2.3
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tmux/}
 
@@ -30,5 +31,5 @@ CPPFLAGS+=	-D__DARWIN_VERS_1050=0
 
 .include "../../devel/libevent/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
-.include "../../mk/terminfo.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
