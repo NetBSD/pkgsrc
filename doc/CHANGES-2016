@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4113 2016/10/04 22:01:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4114 2016/10/04 22:01:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5747,3 +5747,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libXfixes to 5.0.3 [wiz 2016-10-04]
 	Updated x11/libXi to 1.7.7 [wiz 2016-10-04]
 	Updated x11/libXrandr to 1.5.1 [wiz 2016-10-04]
+	Updated x11/libXrender to 0.9.10 [wiz 2016-10-04]
