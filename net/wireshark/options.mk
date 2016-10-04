@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2016/03/03 13:33:14 wiz Exp $
+# $NetBSD: options.mk,v 1.13 2016/10/04 06:41:18 alnsn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	gtk3 lua qt5
@@ -94,6 +94,7 @@ CONFIGURE_ARGS+=	--disable-wireshark
 .if empty(PKG_OPTIONS:Mlua)
 CONFIGURE_ARGS+=	--with-lua=no
 .else
+LUA_VERSIONS_INCOMPATIBLE=	53
 .include "../../lang/lua/buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-lua=yes
