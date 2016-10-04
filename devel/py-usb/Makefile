@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2016/10/04 12:52:14 mef Exp $
+# $NetBSD: Makefile,v 1.12 2016/10/04 13:05:19 mef Exp $
 
-VERSION=	0.4.2
+VERSION=	1.0.0
 DISTNAME=	pyusb-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-usb-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyusb/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=walac/}
+GITHUB_PROJECT=	pyusb
 
 MAINTAINER=	wiml@hhhh.org
 HOMEPAGE=	http://walac.github.io/pyusb/
 COMMENT=	Python interface to USB via libusb
+LICENSE=	modified-bsd
 
 CFLAGS.SunOS+=	-Du_int8_t=uint8_t -Du_int16_t=uint16_t -Du_int32_t=uint32_t
 
