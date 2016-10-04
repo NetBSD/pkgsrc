@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2016/02/26 11:27:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2016/10/04 22:01:41 wiz Exp $
 
-DISTNAME=		libXrender-0.9.9
+DISTNAME=		libXrender-0.9.10
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
