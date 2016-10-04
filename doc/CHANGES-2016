@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4108 2016/10/04 17:58:31 morr Exp $
+$NetBSD: CHANGES-2016,v 1.4109 2016/10/04 19:33:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5741,3 +5741,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/py-anita to 1.40nb1 [kamil 2016-10-04]
 	Removed emulators/qemu0 [kamil 2016-10-04]
 	Added editors/vim-gtk3 version 8.0.0021 [morr 2016-10-04]
+	Updated graphics/openjpeg to 2.1.2 [adam 2016-10-04]
+	Updated graphics/py-Pillow to 3.4.1 [adam 2016-10-04]
