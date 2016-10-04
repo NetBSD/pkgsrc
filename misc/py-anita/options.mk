@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2014/07/22 18:18:43 gson Exp $
+# $NetBSD: options.mk,v 1.7 2016/10/04 14:47:32 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-anita
 PKG_SUPPORTED_OPTIONS=		xen
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=		xen
 # allowing anita to choose them dynamically.  For now, they conflict,
 # so don't permit both.
 PKG_OPTIONS_OPTIONAL_GROUPS=	qemu
-PKG_OPTIONS_GROUP.qemu=		qemu-0 qemu 
+PKG_OPTIONS_GROUP.qemu=		qemu
 PKG_SUGGESTED_OPTIONS=
 
 # To run (but not to build), anita needs some way to run a virtual
@@ -20,10 +20,6 @@ PKG_SUGGESTED_OPTIONS=
 # also serve to document ways to fulfill the hypervisor requirement.
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mqemu-0)
-DEPENDS+=	qemu>=0.12.3nb2:../../emulators/qemu0
-.endif
 
 .if !empty(PKG_OPTIONS:Mqemu)
 # Some versions of qemu1/2 do not work reliably, see the anita(1)
