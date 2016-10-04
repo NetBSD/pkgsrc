@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/10/02 10:12:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/10/04 08:16:13 he Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -3185,18 +3185,14 @@ lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/OTP-OS-MON-MIB.funcs
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/OTP-OS-MON-MIB.mib
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/v1/OTP-OS-MON-MIB.mib.v1
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
-lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/memsup
-lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/mibs/OTP-OS-MON-MIB.bin
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.c
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/disksup.erl
-lib/erlang/lib/os_mon-${VERSION.os_mon}/src/ferrule.c
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.c
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.hrl
-lib/erlang/lib/os_mon-${VERSION.os_mon}/src/mod_syslog.c
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/nteventlog.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/os_mon.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/os_mon_mib.erl
