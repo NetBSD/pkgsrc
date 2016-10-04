@@ -1,10 +1,10 @@
-$NetBSD: patch-linux-user_signal.c,v 1.1 2016/10/01 13:22:34 kamil Exp $
+$NetBSD: patch-linux-user_signal.c,v 1.2 2016/10/04 13:31:09 kamil Exp $
 
 struct siginfo is unrecognized on CentOS Linux 7. Backport solution from
 recent qemu releases: "struct siginfo" -> "siginfo_t".
 
---- /home/kamil/pkgsrc/emulators/qemu0/work/qemu-0.15.1/linux-user/signal.c.orig	2011-10-12 16:41:43.000000000 +0000
-+++ /home/kamil/pkgsrc/emulators/qemu0/work/qemu-0.15.1/linux-user/signal.c
+--- linux-user/signal.c.orig	2011-10-12 16:41:43.000000000 +0000
++++ linux-user/signal.c
 @@ -3243,7 +3243,7 @@ struct target_signal_frame {
  };
  
