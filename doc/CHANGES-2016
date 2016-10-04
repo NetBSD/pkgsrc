@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4097 2016/10/04 09:29:56 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4098 2016/10/04 10:12:55 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5730,3 +5730,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/man-pages to 4.05nb1 [kamil 2016-10-03]
 	Updated x11/libdrm to 2.4.71 [wiz 2016-10-04]
 	Updated math/ltm to 1.0 [wiz 2016-10-04]
+	Updated www/nginx-devel to 1.11.4 [fhajny 2016-10-04]
