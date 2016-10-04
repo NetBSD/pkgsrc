@@ -1,10 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2016/10/04 14:47:32 kamil Exp $
+# $NetBSD: options.mk,v 1.8 2016/10/04 14:50:07 kamil Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-anita
 PKG_SUPPORTED_OPTIONS=		xen
-# In the future, qemu0 and qemu might install with different names,
-# allowing anita to choose them dynamically.  For now, they conflict,
-# so don't permit both.
 PKG_OPTIONS_OPTIONAL_GROUPS=	qemu
 PKG_OPTIONS_GROUP.qemu=		qemu
 PKG_SUGGESTED_OPTIONS=
