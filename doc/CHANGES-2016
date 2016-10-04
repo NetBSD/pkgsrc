@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4109 2016/10/04 19:33:49 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4110 2016/10/04 21:58:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5743,3 +5743,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added editors/vim-gtk3 version 8.0.0021 [morr 2016-10-04]
 	Updated graphics/openjpeg to 2.1.2 [adam 2016-10-04]
 	Updated graphics/py-Pillow to 3.4.1 [adam 2016-10-04]
+	Updated x11/libX11 to 1.6.4 [wiz 2016-10-04]
