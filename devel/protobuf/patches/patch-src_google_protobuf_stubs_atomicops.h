@@ -1,6 +1,7 @@
-$NetBSD: patch-src_google_protobuf_stubs_atomicops.h,v 1.3 2016/08/06 11:40:14 kamil Exp $
+$NetBSD: patch-src_google_protobuf_stubs_atomicops.h,v 1.4 2016/10/04 11:48:16 maya Exp $
 
-Add ARM support.
+NetBSD arm and mips uses long for intptr_t, which fails -fpermissive checks.
+So explicitly use int32 here instead.
 
 --- src/google/protobuf/stubs/atomicops.h.orig	2016-04-28 21:34:30.000000000 +0000
 +++ src/google/protobuf/stubs/atomicops.h
@@ -8,7 +9,7 @@ Add ARM support.
  
  // Use AtomicWord for a machine-sized pointer.  It will use the Atomic32 or
  // Atomic64 routines below, depending on your architecture.
-+#ifdef __arm__
++#ifndef _LP64
 +typedef Atomic32 AtomicWord;
 +#else
  typedef intptr_t AtomicWord;
