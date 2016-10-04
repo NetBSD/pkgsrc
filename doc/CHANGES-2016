@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4102 2016/10/04 11:50:23 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4103 2016/10/04 12:07:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5735,3 +5735,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libressl to 2.5.0 [wiz 2016-10-04]
 	Updated www/p5-Cookie-Baker to 0.07 [wen 2016-10-04]
 	Updated www/p5-Plack to 1.0042 [wen 2016-10-04]
+	Updated www/p5-Mojolicious to 7.08 [wen 2016-10-04]
