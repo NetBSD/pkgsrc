@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2016/06/15 14:53:48 fhajny Exp $
+$NetBSD: distinfo,v 1.22 2016/10/04 10:12:42 fhajny Exp $
 
 SHA1 (array-var-nginx-module-0.04.tar.gz) = 1fd3bdd05c2d1d7667ed6f7baa612ddf7f630df3
 RMD160 (array-var-nginx-module-0.04.tar.gz) = a751a2ce87dcfb88d072779097b4df9f42a415e4
@@ -28,10 +28,10 @@ SHA1 (naxsi-0.54.tar.gz) = d5db25db19a564358af7763d4935e978d05bf6f5
 RMD160 (naxsi-0.54.tar.gz) = 094b09c198cf690ec24b3e9d3763647e06ebee64
 SHA512 (naxsi-0.54.tar.gz) = 91934bfd41495715269cc6e549d17f6da66f2bdd0c9a6821fa9096b694dd3927109c4aad2f8b327620ae7c34f76a0839ac16669cd8c65081bc01fa7f829c1d43
 Size (naxsi-0.54.tar.gz) = 163809 bytes
-SHA1 (nginx-1.11.1.tar.gz) = 6b6172b26628b95c4ad0d6cb5b11eb4aa59c2a83
-RMD160 (nginx-1.11.1.tar.gz) = 486770048b580ae864e36ce4596aabb36e06a593
-SHA512 (nginx-1.11.1.tar.gz) = 01330a5200b9b5ac5788cd95b2857d2ff87bf0a073a93e3e441b89d19f12137b496e6de67145c04cc74ba88d599a7be96d622f29785e30df23fc8a657adf8b2a
-Size (nginx-1.11.1.tar.gz) = 913417 bytes
+SHA1 (nginx-1.11.4.tar.gz) = c7744e5dadaae090adfabca27e18aca67ce7be9a
+RMD160 (nginx-1.11.4.tar.gz) = b3ccb71fc957ac1a53b37d98ed649a2d2018d63f
+SHA512 (nginx-1.11.4.tar.gz) = c6a03c440a274576434aa74932b3fa7cd49174d9e2d8c6e480838637f33f158e31b6f25cac97e158f386bb92f62ff9636c2d3ac1a552e27a860eb9448e2f3f94
+Size (nginx-1.11.4.tar.gz) = 949793 bytes
 SHA1 (nginx_http_push_module-0.731.tar.gz) = 353f3ef3d013edfcc78ddba0237a9ce7dca633b4
 RMD160 (nginx_http_push_module-0.731.tar.gz) = d35d7138d3b4dd20076b1026c420f03c68177f99
 SHA512 (nginx_http_push_module-0.731.tar.gz) = b95e6e88236d920e18c927a5bdf7d84210ba34b234e7c20ba09d114337a4494535c94c7e84926e5479b23d4eba4e2f1db0a3e7d8b017c9907a4a824cd25098d8
