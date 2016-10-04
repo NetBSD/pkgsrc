@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4105 2016/10/04 14:37:13 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4106 2016/10/04 15:02:45 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5738,3 +5738,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 7.08 [wen 2016-10-04]
 	Updated devel/py-usb to 1.0.0 [mef 2016-10-04]
 	Updated archivers/zstd to 1.1.0 [wiz 2016-10-04]
+	Updated misc/py-anita to 1.40nb1 [kamil 2016-10-04]
+	Removed emulators/qemu0 [kamil 2016-09-16]
