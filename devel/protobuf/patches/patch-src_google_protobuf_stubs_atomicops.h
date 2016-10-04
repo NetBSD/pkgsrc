@@ -1,4 +1,4 @@
-$NetBSD: patch-src_google_protobuf_stubs_atomicops.h,v 1.4 2016/10/04 11:48:16 maya Exp $
+$NetBSD: patch-src_google_protobuf_stubs_atomicops.h,v 1.5 2016/10/04 23:16:44 maya Exp $
 
 NetBSD arm and mips uses long for intptr_t, which fails -fpermissive checks.
 So explicitly use int32 here instead.
@@ -9,10 +9,10 @@ So explicitly use int32 here instead.
  
  // Use AtomicWord for a machine-sized pointer.  It will use the Atomic32 or
  // Atomic64 routines below, depending on your architecture.
-+#ifndef _LP64
-+typedef Atomic32 AtomicWord;
-+#else
++#ifdef _LP64
  typedef intptr_t AtomicWord;
++#else
++typedef Atomic32 AtomicWord;
 +#endif
  
  // Atomically execute:
