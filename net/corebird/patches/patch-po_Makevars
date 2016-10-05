@@ -1,0 +1,13 @@
+$NetBSD: patch-po_Makevars,v 1.1.2.2 2016/10/05 18:42:28 bsiegert Exp $
+
+--- po/Makevars.orig	2016-09-30 11:50:33.000000000 +0000
++++ po/Makevars
+@@ -51,7 +51,7 @@ EXTRA_LOCALE_CATEGORIES =
+ # context.  Possible values are "yes" and "no".  Set this to yes if the
+ # package uses functions taking also a message context, like pgettext(), or
+ # if in $(XGETTEXT_OPTIONS) you define keywords with a context argument.
+-USE_MSGCTXT = yes
++USE_MSGCTXT = no
+ 
+ # These options get passed to msgmerge.
+ # Useful options are in particular:
