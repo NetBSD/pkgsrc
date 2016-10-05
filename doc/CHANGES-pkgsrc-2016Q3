@@ -1,4 +1,25 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.1 2016/09/30 09:56:29 jperkin Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.2 2016/10/05 17:22:47 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
+
+Pullup ticket #5112 - requested by taca
+www/ruby-http-cookie: security fix
+
+Pullup ticket #5113 - requested by joerg
+devel/py-logilab-astng: build fix
+
+Pullup ticket #5114 - requested by joerg
+filesystems/squashfs: build fix
+
+Pullup ticket #5115 - requested by joerg
+games/libggz: build fix
+
+Pullup ticket #5116 - requested by joerg
+graphics/adaptagrams: build fix
+
+Pullup ticket #5116 - requested by joerg
+graphics/adaptagrams: build fix
+
+Pullup ticket #5117 - requested by joerg
+graphics/blender: build fix
 
