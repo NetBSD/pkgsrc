@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.22 2016/08/02 18:57:36 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.23 2016/10/05 23:35:01 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -628,6 +628,8 @@ share/hplip/ppd/HP/hp-deskjet_3630_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3630_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3650-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3650.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_3700_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_3700_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3740-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3740.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3810-hpijs.ppd.gz
@@ -1540,6 +1542,7 @@ share/hplip/ppd/HP/hp-officejet_100_mobile_l411.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511.ppd.gz
 share/hplip/ppd/HP/hp-officejet_200_mobile_series.ppd.gz
+share/hplip/ppd/HP/hp-officejet_250_mobile_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_2620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_2620_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_3830_series-hpijs.ppd.gz
@@ -1618,6 +1621,8 @@ share/hplip/ppd/HP/hp-officejet_6700-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6700.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6800-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6800.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6960-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6960.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a_series-hpijs.ppd.gz
@@ -1640,6 +1645,7 @@ share/hplip/ppd/HP/hp-officejet_7610_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7610_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_8040_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_8040_series.ppd.gz
+share/hplip/ppd/HP/hp-officejet_8700.ppd.gz
 share/hplip/ppd/HP/hp-officejet_9100_series-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-officejet_9100_series-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-officejet_color_mfp_x585.ppd.gz
@@ -1703,6 +1709,10 @@ share/hplip/ppd/HP/hp-officejet_pro_6230-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_6230.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_6830-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_6830.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_6960-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_6960.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_6970-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_6970.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8000_a809-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8000_a809.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8000_enterprise_a811a-ps.ppd.gz
@@ -1732,6 +1742,7 @@ share/hplip/ppd/HP/hp-officejet_pro_8660.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8710.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8720.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8730-ps.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8732-ps.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8740-ps.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5300-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5300.ppd.gz
@@ -1809,9 +1820,13 @@ share/hplip/ppd/HP/hp-officejet_v40xi-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_v40xi.ppd.gz
 share/hplip/ppd/HP/hp-officejet_v45-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_v45.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_352_printer-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_377_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_color_556-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_color_e55650-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_color_flow_mfp_586-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_color_mfp_586-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_color_mfp_e58650-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_mfp_p57750-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_p55250-ps.ppd.gz
 share/hplip/ppd/HP/hp-pagewide_pro_452_printer-ps.ppd.gz
