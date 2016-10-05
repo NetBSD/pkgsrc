@@ -1,40 +1,40 @@
-$NetBSD: patch-aa,v 1.7 2013/07/07 10:37:56 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2016/10/05 13:09:38 wiz Exp $
 
 Rename "net" to "netgame" so there's less chances of conflicts
 with other packages.
 
---- Makefile.gtk.orig	2013-05-26 00:35:23.000000000 +0000
+--- Makefile.gtk.orig	2016-04-29 00:37:35.000000000 +0000
 +++ Makefile.gtk
-@@ -38,7 +38,7 @@ all: $(BINPREFIX)blackbox $(BINPREFIX)br
+@@ -39,7 +39,7 @@ all: $(BINPREFIX)blackbox $(BINPREFIX)br
  		$(BINPREFIX)loopysolver $(BINPREFIX)magnets \
  		$(BINPREFIX)magnetssolver $(BINPREFIX)map \
  		$(BINPREFIX)mapsolver $(BINPREFIX)mineobfusc \
 -		$(BINPREFIX)mines $(BINPREFIX)net $(BINPREFIX)netslide \
 +		$(BINPREFIX)mines $(BINPREFIX)netgame $(BINPREFIX)netslide \
- 		$(BINPREFIX)nullgame $(BINPREFIX)obfusc $(BINPREFIX)pattern \
+ 		$(BINPREFIX)nullgame $(BINPREFIX)obfusc $(BINPREFIX)palisade \
+ 		$(BINPREFIX)pattern $(BINPREFIX)patternpicture \
  		$(BINPREFIX)patternsolver $(BINPREFIX)pearl \
- 		$(BINPREFIX)pearlbench $(BINPREFIX)pegs $(BINPREFIX)range \
-@@ -199,7 +199,7 @@ $(BINPREFIX)mines: drawing.o gtk.o mallo
+@@ -212,7 +212,7 @@ $(BINPREFIX)mines: drawing.o gtk.o mallo
  		misc.o printing.o ps.o random.o tree234.o version.o  \
  		$(XLFLAGS) $(XLIBS)
  
--$(BINPREFIX)net: drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o \
-+$(BINPREFIX)netgame: drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o \
- 		net-icon.o printing.o ps.o random.o tree234.o version.o
- 	$(CC) -o $@ drawing.o dsf.o gtk.o malloc.o midend.o misc.o net.o \
- 		net-icon.o printing.o ps.o random.o tree234.o version.o  \
-@@ -708,7 +708,7 @@ GAMES += loopy
+-$(BINPREFIX)net: drawing.o dsf.o findloop.o gtk.o malloc.o midend.o misc.o \
++$(BINPREFIX)netgame: drawing.o dsf.o findloop.o gtk.o malloc.o midend.o misc.o \
+ 		net.o net-icon.o printing.o ps.o random.o tree234.o \
+ 		version.o
+ 	$(CC) -o $@ drawing.o dsf.o findloop.o gtk.o malloc.o midend.o \
+@@ -769,7 +769,7 @@ GAMES += loopy
  GAMES += magnets
  GAMES += map
  GAMES += mines
 -GAMES += net
 +GAMES += netgame
  GAMES += netslide
+ GAMES += palisade
  GAMES += pattern
- GAMES += pearl
-@@ -763,4 +763,4 @@ benchmark.txt: $(GAMES)
- 	done > $@
+@@ -806,4 +806,4 @@ benchmark.txt: benchmark.sh $(GAMES)
+ 
  
  clean:
--	rm -f *.o $(BINPREFIX)blackbox $(BINPREFIX)bridges $(BINPREFIX)cube $(BINPREFIX)dominosa $(BINPREFIX)fifteen $(BINPREFIX)filling $(BINPREFIX)fillingsolver $(BINPREFIX)flip $(BINPREFIX)galaxies $(BINPREFIX)galaxiespicture $(BINPREFIX)galaxiessolver $(BINPREFIX)guess $(BINPREFIX)inertia $(BINPREFIX)keen $(BINPREFIX)keensolver $(BINPREFIX)latincheck $(BINPREFIX)lightup $(BINPREFIX)lightupsolver $(BINPREFIX)loopy $(BINPREFIX)loopysolver $(BINPREFIX)magnets $(BINPREFIX)magnetssolver $(BINPREFIX)map $(BINPREFIX)mapsolver $(BINPREFIX)mineobfusc $(BINPREFIX)mines $(BINPREFIX)net $(BINPREFIX)netslide $(BINPREFIX)nullgame $(BINPREFIX)obfusc $(BINPREFIX)pattern $(BINPREFIX)patternsolver $(BINPREFIX)pearl $(BINPREFIX)pearlbench $(BINPREFIX)pegs $(BINPREFIX)range $(BINPREFIX)rect $(BINPREFIX)samegame $(BINPREFIX)signpost $(BINPREFIX)signpostsolver $(BINPREFIX)singles $(BINPREFIX)singlessolver $(BINPREFIX)sixteen $(BINPREFIX)slant $(BINPREFIX)slantsolver $(BINPREFIX)solo $(BINPREFIX)solosolver $(BINPREFIX)tents $(BINPREFIX)tentssolver $(BINPREFIX)towers $(BINPREFIX)towerssolver $(BINPREFIX)twiddle $(BINPREFIX)undead $(BINPREFIX)unequal $(BINPREFIX)unequalsolver $(BINPREFIX)unruly $(BINPREFIX)unrulysolver $(BINPREFIX)untangle
+-	rm -f *.o $(BINPREFIX)blackbox $(BINPREFIX)bridges $(BINPREFIX)cube $(BINPREFIX)dominosa $(BINPREFIX)fifteen $(BINPREFIX)fifteensolver $(BINPREFIX)filling $(BINPREFIX)fillingsolver $(BINPREFIX)flip $(BINPREFIX)flood $(BINPREFIX)galaxies $(BINPREFIX)galaxiespicture $(BINPREFIX)galaxiessolver $(BINPREFIX)guess $(BINPREFIX)inertia $(BINPREFIX)keen $(BINPREFIX)keensolver $(BINPREFIX)latincheck $(BINPREFIX)lightup $(BINPREFIX)lightupsolver $(BINPREFIX)loopy $(BINPREFIX)loopysolver $(BINPREFIX)magnets $(BINPREFIX)magnetssolver $(BINPREFIX)map $(BINPREFIX)mapsolver $(BINPREFIX)mineobfusc $(BINPREFIX)mines $(BINPREFIX)net $(BINPREFIX)netslide $(BINPREFIX)nullgame $(BINPREFIX)obfusc $(BINPREFIX)palisade $(BINPREFIX)pattern $(BINPREFIX)patternpicture $(BINPREFIX)patternsolver $(BINPREFIX)pearl $(BINPREFIX)pearlbench $(BINPREFIX)pegs $(BINPREFIX)range $(BINPREFIX)rect $(BINPREFIX)samegame $(BINPREFIX)signpost $(BINPREFIX)signpostsolver $(BINPREFIX)singles $(BINPREFIX)singlessolver $(BINPREFIX)sixteen $(BINPREFIX)slant $(BINPREFIX)slantsolver $(BINPREFIX)solo $(BINPREFIX)solosolver $(BINPREFIX)tents $(BINPREFIX)tentssolver $(BINPREFIX)towers $(BINPREFIX)towerssolver $(BINPREFIX)tracks $(BINPREFIX)twiddle $(BINPREFIX)undead $(BINPREFIX)unequal $(BINPREFIX)unequalsolver $(BINPREFIX)unruly $(BINPREFIX)unrulysolver $(BINPREFIX)untangle
 +	rm -f *.o $(BINPREFIX)blackbox $(BINPREFIX)bridges $(BINPREFIX)cube $(BINPREFIX)dominosa $(BINPREFIX)fifteen $(BINPREFIX)filling $(BINPREFIX)fillingsolver $(BINPREFIX)flip $(BINPREFIX)galaxies $(BINPREFIX)galaxiespicture $(BINPREFIX)galaxiessolver $(BINPREFIX)guess $(BINPREFIX)inertia $(BINPREFIX)keen $(BINPREFIX)keensolver $(BINPREFIX)latincheck $(BINPREFIX)lightup $(BINPREFIX)lightupsolver $(BINPREFIX)loopy $(BINPREFIX)loopysolver $(BINPREFIX)magnets $(BINPREFIX)magnetssolver $(BINPREFIX)map $(BINPREFIX)mapsolver $(BINPREFIX)mineobfusc $(BINPREFIX)mines $(BINPREFIX)netgame $(BINPREFIX)netslide $(BINPREFIX)nullgame $(BINPREFIX)obfusc $(BINPREFIX)pattern $(BINPREFIX)patternsolver $(BINPREFIX)pearl $(BINPREFIX)pearlbench $(BINPREFIX)pegs $(BINPREFIX)range $(BINPREFIX)rect $(BINPREFIX)samegame $(BINPREFIX)signpost $(BINPREFIX)signpostsolver $(BINPREFIX)singles $(BINPREFIX)singlessolver $(BINPREFIX)sixteen $(BINPREFIX)slant $(BINPREFIX)slantsolver $(BINPREFIX)solo $(BINPREFIX)solosolver $(BINPREFIX)tents $(BINPREFIX)tentssolver $(BINPREFIX)towers $(BINPREFIX)towerssolver $(BINPREFIX)twiddle $(BINPREFIX)undead $(BINPREFIX)unequal $(BINPREFIX)unequalsolver $(BINPREFIX)unruly $(BINPREFIX)unrulysolver $(BINPREFIX)untangle
