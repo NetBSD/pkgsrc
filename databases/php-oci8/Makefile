@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 21:25:39 asau Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/05 22:09:39 jdolecek Exp $
 
 MODNAME=		oci8
 CATEGORIES+=		databases
@@ -16,6 +16,8 @@ PKG_FAIL_REASON+=	"The location of ORACLE_HOME does not exist"
 
 BUILDLINK_PASSTHRU_DIRS+=       ${ORACLE_HOME}
 CONFIGURE_ARGS+=		--with-${MODNAME}=shared,${ORACLE_HOME}
+
+ONLY_FOR_PLATFORM=      Linux-*-* SunOS-*-*
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
