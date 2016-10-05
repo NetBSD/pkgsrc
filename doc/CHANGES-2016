@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4118 2016/10/05 02:31:55 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4119 2016/10/05 03:11:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5752,3 +5752,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libXv to 1.0.11 [wiz 2016-10-04]
 	Updated x11/libXvMC to 1.0.10 [wiz 2016-10-04]
 	Added devel/py-uuid version 1.30 [kamil 2016-10-05]
+	Updated graphics/gd to 2.2.3nb1 [taca 2016-10-05]
