@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4123 2016/10/05 06:42:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4124 2016/10/05 09:18:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5757,3 +5757,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Module-Signature to 0.81 [wiz 2016-10-05]
 	Updated devel/p5-Specio to 0.28 [wiz 2016-10-05]
 	Updated devel/p5-Sub-Name to 0.21 [wiz 2016-10-05]
+	Updated textproc/py-html2text to 2016.9.19 [wiz 2016-10-05]
