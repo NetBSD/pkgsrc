@@ -6,5 +6,5 @@ If you are building the package from source you may want to enable some
 features such as a perl or python interpreter which are not enabled by
 default.
 
-This version also contains a X11 GTK+ GUI. If you don't have X11,
+This version also contains a X11 GTK3 GUI. If you don't have X11,
 look at the `vim' package instead.
