@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4126 2016/10/05 19:49:07 shattered Exp $
+$NetBSD: CHANGES-2016,v 1.4127 2016/10/05 20:28:20 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5760,3 +5760,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-html2text to 2016.9.19 [wiz 2016-10-05]
 	Updated games/puzzles to 20160429 [wiz 2016-10-05]
 	Updated databases/p5-DBD-Oracle to 1.74 [shattered 2016-10-05]
+	Updated net/unbound to 1.5.10 [pettai 2016-10-05]
