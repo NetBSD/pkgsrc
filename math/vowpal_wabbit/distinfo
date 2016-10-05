@@ -1,8 +1,12 @@
-$NetBSD: distinfo,v 1.2 2016/09/18 07:08:19 dholland Exp $
+$NetBSD: distinfo,v 1.2.2.1 2016/10/05 18:20:57 bsiegert Exp $
 
 SHA1 (vowpal_wabbit-8.2.0.tar.gz) = 7fd516e1ff16ac03fd389b59abaf462f6fca61cb
 RMD160 (vowpal_wabbit-8.2.0.tar.gz) = a2e91b3f6d0f2b50f8cef382ce1995016ff074e0
 SHA512 (vowpal_wabbit-8.2.0.tar.gz) = 7f352c7d899e1068969ecf10931ce59efaedb5ffb91277958e96b1c705cb9f9da7397dcded42e101ba98412124e2662ca5cf71b368ab7d80ce7afe650cdd59c6
 Size (vowpal_wabbit-8.2.0.tar.gz) = 13391191 bytes
+SHA1 (patch-vowpalwabbit_accumulate.cc) = 605cb7e6d1bf1efe0051c4a35a609b277b4f7f4d
+SHA1 (patch-vowpalwabbit_allreduce__sockets.cc) = d412ecea83a70af56d08752fb5f99675dd6fd0e4
+SHA1 (patch-vowpalwabbit_bfgs.cc) = 4e1532fd3fd7b3ccf37480a2b443309e0c7ff797
+SHA1 (patch-vowpalwabbit_main.cc) = 46bdcaca26ea4635ab0b5c361227fe907e3fbfd9
 SHA1 (patch-vowpalwabbit_parser.cc) = 1ea77e94b53ec7a24b5fabbd9e05cb9b47ac6707
 SHA1 (patch-vowpalwabbit_sender.cc) = 796daf462f50d9d2b7a90d6a032cbf69f7a3a374
