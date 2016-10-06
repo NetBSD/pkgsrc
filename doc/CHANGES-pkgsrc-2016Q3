@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.4 2016/10/06 18:32:37 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.5 2016/10/06 18:42:24 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -37,4 +37,8 @@ net/py-ncclient: build fix
 
 Pullup ticket #5124 - requested by taca
 graphics/gc: security fix
+
+Pullup ticket #5121 - requested by joerg
+sysutils/xentools41: build fix
+sysutils/xentools42: build fix
 
