@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4128 2016/10/05 23:36:22 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.4129 2016/10/06 10:45:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5762,3 +5762,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBD-Oracle to 1.74 [shattered 2016-10-05]
 	Updated net/unbound to 1.5.10 [pettai 2016-10-05]
 	Updated print/hplip to 3.16.9 [schnoebe 2016-10-05]
+	Updated devel/git to 2.10.1 [adam 2016-10-06]
