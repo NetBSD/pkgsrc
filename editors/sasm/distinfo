@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/08/27 14:53:03 mef Exp $
+$NetBSD: distinfo,v 1.3 2016/10/06 21:08:38 mef Exp $
 
-SHA1 (SASM-3.5.1.tar.gz) = fbf4888b60a0b13cfb98b8cd09d3b4ce5fb5f233
-RMD160 (SASM-3.5.1.tar.gz) = 2215d86b305dd91bc7c724532b33aa4482b1dfbb
-SHA512 (SASM-3.5.1.tar.gz) = 4e8ad86732abe29f983cbec6ff2c3994af65340f6f00ceb2febb3afa936a9c53662571f51edf1c89cbe0332ad9c70180292412ed3cae198c868a0b0eb50ca402
-Size (SASM-3.5.1.tar.gz) = 21282859 bytes
+SHA1 (SASM-3.6.0.tar.gz) = 3b368daa71667b1b78e24872236dba56d8b0eb8a
+RMD160 (SASM-3.6.0.tar.gz) = 86cb15133cc4a28bab16730383b6efdfe2bbf4be
+SHA512 (SASM-3.6.0.tar.gz) = ddbcfed1de198e42905b5c77c0cef4f98d99d3a87e0de06b3024de7f718daef6223036c92bdf9350c3d4ac9d06fa7269536b4beaf04e9aab1ec3755f928d03c0
+Size (SASM-3.6.0.tar.gz) = 21313411 bytes
