@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/06/06 21:31:52 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/06 20:28:54 alnsn Exp $
 
-DISTNAME=	luarocks-2.3.0
+DISTNAME=	luarocks-2.4.1
 PKGNAME=	${DISTNAME:S/luarocks/${LUA_PKGPREFIX}-rocks/}
 CATEGORIES=	devel
 MASTER_SITES=	http://luarocks.org/releases/
@@ -17,8 +17,6 @@ USE_TOOLS+=	openssl:run # md5-checker (openssl or md5sum)
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
-
-REPLACE_LUA+=		src/bin/luarocks src/bin/luarocks-admin
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--rocks-tree=${PREFIX}/luarocks
