@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile.install.inc,v 1.1.1.1 2016/06/06 21:31:52 alnsn Exp $
+$NetBSD: patch-Makefile.install.inc,v 1.2 2016/10/06 20:28:54 alnsn Exp $
 
 Be pkg_alternatives(8) friendly.
 
---- Makefile.install.inc.orig	2015-12-29 15:50:56.000000000 +0000
+--- Makefile.install.inc.orig	2016-10-06 19:01:55.000000000 +0000
 +++ Makefile.install.inc
-@@ -8,7 +8,6 @@ install_bins:
- 	for f in $(BIN_FILES); \
+@@ -9,7 +9,6 @@ install_bins:
  	do \
  	   cp "$$f" "$(DESTDIR)$(BINDIR)/$$f-$$luaver"; \
+ 	   chmod +rx "$(DESTDIR)$(BINDIR)/$$f-$$luaver"; \
 -	   ln -nfs "$$f-$$luaver" "$(DESTDIR)$(BINDIR)/$$f"; \
  	done
  
