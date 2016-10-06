@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.41 2016/08/02 18:29:21 adam Exp $
+$NetBSD: distinfo,v 1.41.2.1 2016/10/06 18:25:40 bsiegert Exp $
 
 SHA1 (libgd-2.2.3.tar.xz) = 2f8cebec5afd6c83a3d5cb92f40ea4926b4daa98
 RMD160 (libgd-2.2.3.tar.xz) = e6c29133c2ea33c8ba16571892d2798ef0f5afea
 SHA512 (libgd-2.2.3.tar.xz) = bdc6d086bc054beda6574ec46baa4cd94048a5f2f357f875ba05983e92d247f1b731434b9e438c6aef09d46fa96f1a7e1f330a25a77ffd2dd78aa8a32d652557
 Size (libgd-2.2.3.tar.xz) = 2164152 bytes
+SHA1 (patch-src_gd__webp.c) = 55c5929007ffe0d9ab23b7fed9abf373bc188de8
