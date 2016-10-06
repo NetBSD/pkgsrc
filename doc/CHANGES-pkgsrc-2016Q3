@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.2 2016/10/05 17:22:47 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.3 2016/10/06 18:03:30 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -22,4 +22,10 @@ graphics/adaptagrams: build fix
 
 Pullup ticket #5117 - requested by joerg
 graphics/blender: build fix
+
+Pullup ticket #5119 - requested by joerg
+math/vowpal_wabbit: build fix
+
+Pullup ticket #5120 - requested by joerg
+net/corebird: build fix
 
