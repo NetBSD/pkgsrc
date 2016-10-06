@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4131 2016/10/06 20:29:58 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.4132 2016/10/06 21:08:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5765,3 +5765,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git to 2.10.1 [adam 2016-10-06]
 	Updated mail/neomutt to 20161003nb1 [wiz 2016-10-06]
 	Updated devel/lua-rocks to 2.4.1 [alnsn 2016-10-06]
+	Updated editors/sasm to 3.6.0 [mef 2016-10-06]
