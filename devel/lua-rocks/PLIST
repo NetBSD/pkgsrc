@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2016/06/06 21:31:52 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/06 20:28:54 alnsn Exp $
 bin/luarocks-${LUADOTVER}
 bin/luarocks-admin-${LUADOTVER}
 ${LUA_EXAMPLESDIR}/config-${LUADOTVER}.lua
@@ -23,6 +23,7 @@ ${LUA_LDIR}/luarocks/fetch/git.lua
 ${LUA_LDIR}/luarocks/fetch/git_file.lua
 ${LUA_LDIR}/luarocks/fetch/git_http.lua
 ${LUA_LDIR}/luarocks/fetch/git_https.lua
+${LUA_LDIR}/luarocks/fetch/git_ssh.lua
 ${LUA_LDIR}/luarocks/fetch/hg.lua
 ${LUA_LDIR}/luarocks/fetch/hg_http.lua
 ${LUA_LDIR}/luarocks/fetch/hg_https.lua
@@ -31,6 +32,7 @@ ${LUA_LDIR}/luarocks/fetch/sscm.lua
 ${LUA_LDIR}/luarocks/fetch/svn.lua
 ${LUA_LDIR}/luarocks/fs.lua
 ${LUA_LDIR}/luarocks/fs/lua.lua
+${LUA_LDIR}/luarocks/fs/tools.lua
 ${LUA_LDIR}/luarocks/fs/unix.lua
 ${LUA_LDIR}/luarocks/fs/unix/tools.lua
 ${LUA_LDIR}/luarocks/fs/win32.lua
