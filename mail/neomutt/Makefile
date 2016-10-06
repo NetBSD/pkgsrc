@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/10/04 21:53:08 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/10/06 16:27:15 wiz Exp $
 
 DISTNAME=		neomutt-20161003
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${DISTNAME}
@@ -19,6 +20,7 @@ CONFIGURE_ARGS+=	--enable-external-dotlock
 CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ARGS+=	--enable-notmuch
 CONFIGURE_ARGS+=	--enable-pop
+CONFIGURE_ARGS+=	CFLAGS="-g -O0"
 
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
