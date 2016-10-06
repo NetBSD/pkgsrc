@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4132 2016/10/06 21:08:48 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4133 2016/10/06 22:04:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5766,3 +5766,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/neomutt to 20161003nb1 [wiz 2016-10-06]
 	Updated devel/lua-rocks to 2.4.1 [alnsn 2016-10-06]
 	Updated editors/sasm to 3.6.0 [mef 2016-10-06]
+	Updated math/isl to 0.17.1 [wiz 2016-10-06]
