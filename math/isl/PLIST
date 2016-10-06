@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/23 01:18:53 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/10/06 22:03:56 wiz Exp $
 include/isl/aff.h
 include/isl/aff_type.h
 include/isl/arg.h
@@ -21,12 +21,13 @@ include/isl/deprecated/set_int.h
 include/isl/deprecated/union_map_int.h
 include/isl/deprecated/val_int.h
 include/isl/deprecated/vec_int.h
-include/isl/dim.h
 include/isl/flow.h
 include/isl/hash.h
 include/isl/hmap.h
+include/isl/hmap_templ.c
 include/isl/id.h
 include/isl/id_to_ast_expr.h
+include/isl/id_to_id.h
 include/isl/id_to_pw_aff.h
 include/isl/ilp.h
 include/isl/list.h
@@ -36,6 +37,12 @@ include/isl/map.h
 include/isl/map_to_basic_set.h
 include/isl/map_type.h
 include/isl/mat.h
+include/isl/maybe.h
+include/isl/maybe_ast_expr.h
+include/isl/maybe_basic_set.h
+include/isl/maybe_id.h
+include/isl/maybe_pw_aff.h
+include/isl/maybe_templ.h
 include/isl/multi.h
 include/isl/obj.h
 include/isl/options.h
@@ -43,7 +50,10 @@ include/isl/point.h
 include/isl/polynomial.h
 include/isl/polynomial_type.h
 include/isl/printer.h
+include/isl/printer_type.h
 include/isl/schedule.h
+include/isl/schedule_node.h
+include/isl/schedule_type.h
 include/isl/set.h
 include/isl/set_type.h
 include/isl/space.h
