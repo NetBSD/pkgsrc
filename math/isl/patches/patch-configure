@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2016/10/06 22:03:56 wiz Exp $
+
+Fix == in configure script.
+
+--- configure.orig	2016-10-06 09:14:39.058506899 +0000
++++ configure
+@@ -17487,7 +17487,7 @@ else
+ fi
+ 
+ 
+- if test "x$with_int" == "ximath-32"; then
++ if test "x$with_int" = "ximath-32"; then
+   SMALL_INT_OPT_TRUE=
+   SMALL_INT_OPT_FALSE='#'
+ else
+@@ -17495,7 +17495,7 @@ else
+   SMALL_INT_OPT_FALSE=
+ fi
+ 
+-if test "x$with_int" == "ximath-32"; then :
++if test "x$with_int" = "ximath-32"; then :
+ 
+ 
+ $as_echo "#define USE_SMALL_INT_OPT /**/" >>confdefs.h
