@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/10/06 16:27:15 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/10/06 16:30:18 wiz Exp $
 
 DISTNAME=		neomutt-20161003
 PKGREVISION=		1
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-external-dotlock
 CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ARGS+=	--enable-notmuch
 CONFIGURE_ARGS+=	--enable-pop
-CONFIGURE_ARGS+=	CFLAGS="-g -O0"
+#CONFIGURE_ARGS+=	CFLAGS="-g -O0"
 
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
