@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2016/01/07 17:55:55 bouyer Exp $
+$NetBSD: distinfo,v 1.41.6.1 2016/10/06 18:39:27 bsiegert Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -62,6 +62,7 @@ SHA1 (patch-libxl_libxl_internal.h) = e126e5e998117903f0c66cc370d350c504ed33d9
 SHA1 (patch-libxl_xl__cmdimpl.c) = 0e038b9702e131ec527d49cb2c21e4acf581cbfe
 SHA1 (patch-ocaml_Makefile.rules) = 104f9d40186e5e4ca6a2e6359bbb369c3c91d1dc
 SHA1 (patch-ocaml_common.make) = c59d32301198d65691ab23529dd791de5ac40199
+SHA1 (patch-ocaml_libs_xb_xs__ring__stubs.c) = 944ce96d18cefdc70babe83d3337ff94604b0f04
 SHA1 (patch-ocaml_xenstored_define.ml) = f44841625554ceba6e83dbb41f688993c2a8d9a2
 SHA1 (patch-ocaml_xenstored_utils.ml) = cc792a696743fa348b274b1c23783ea1a0d7da47
 SHA1 (patch-qemu-phy-devices) = fef90e50ef0a58db2f2b49b6c23218f371791de5
