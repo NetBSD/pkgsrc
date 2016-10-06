@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4130 2016/10/06 16:27:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4131 2016/10/06 20:29:58 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5764,3 +5764,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/hplip to 3.16.9 [schnoebe 2016-10-05]
 	Updated devel/git to 2.10.1 [adam 2016-10-06]
 	Updated mail/neomutt to 20161003nb1 [wiz 2016-10-06]
+	Updated devel/lua-rocks to 2.4.1 [alnsn 2016-10-06]
