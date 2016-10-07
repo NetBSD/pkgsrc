@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/07 18:25:48 adam Exp $
 
 DISTNAME=	kiriki-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 COMMENT=	an addictive and fun dice game for KDE
 

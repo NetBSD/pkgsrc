@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2016/03/05 11:27:51 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2016/10/07 18:25:33 adam Exp $
 
 BUILDLINK_TREE+=	libkvkontakte
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkvkontakte
 LIBKVKONTAKTE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkvkontakte+=	libkvkontakte>=2.5.0
-BUILDLINK_ABI_DEPENDS.libkvkontakte?=	libkvkontakte>=4.13.0nb1
+BUILDLINK_ABI_DEPENDS.libkvkontakte?=	libkvkontakte>=4.13.0nb2
 BUILDLINK_PKGSRCDIR.libkvkontakte?=	../../misc/libkvkontakte
 
 .include "../../devel/qjson/buildlink3.mk"
