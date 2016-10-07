@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2319 2016/10/05 02:30:12 kamil Exp $
+# $NetBSD: Makefile,v 1.2320 2016/10/07 06:29:44 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1936,13 +1936,13 @@ SUBDIR+=	py-tox
 SUBDIR+=	py-traceback2
 SUBDIR+=	py-tryton
 SUBDIR+=	py-trytond
-SUBDIR+=	py-uuid
 SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-unittest2
 SUBDIR+=	py-unittest2py3k
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
+SUBDIR+=	py-uuid
 SUBDIR+=	py-virtualenv
 SUBDIR+=	py-wcwidth
 SUBDIR+=	py-wheel
