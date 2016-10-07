@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2016/03/05 11:27:57 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/10/07 18:25:35 adam Exp $
 
 BUILDLINK_TREE+=	libgcal
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgcal
 LIBGCAL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgcal+=	libgcal>=0.9.6
-BUILDLINK_ABI_DEPENDS.libgcal?=	libgcal>=0.9.6nb2
+BUILDLINK_ABI_DEPENDS.libgcal?=	libgcal>=0.9.6nb3
 BUILDLINK_PKGSRCDIR.libgcal?=	../../time/libgcal
 
 .include "../../devel/check/buildlink3.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2016/09/07 23:31:40 markd Exp $
+# $NetBSD: Makefile,v 1.41 2016/10/07 18:26:04 adam Exp $
 
 DISTNAME=	kdenlive-0.9.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=kdenlive/0.9.10/src/}
 EXTRACT_SUFX=	.tar.bz2

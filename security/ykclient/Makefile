@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2016/03/05 11:27:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2016/10/07 18:25:34 adam Exp $
 
 DISTNAME=	ykclient-2.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://yubico.github.io/yubico-c-client/releases/
 

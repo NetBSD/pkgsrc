@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/07 18:25:49 adam Exp $
 
 DISTNAME=	ksudoku-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 COMMENT=	a logic-based symbol placement puzzle
 
