@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/07 18:26:09 adam Exp $
 
 DISTNAME=	gtime-1.0-12
 PKGNAME=	guardtime-1.0.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://download.guardtime.com/
 
