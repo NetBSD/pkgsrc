@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2016/09/25 10:20:22 plunky Exp $
+# $NetBSD: Makefile,v 1.39 2016/10/07 18:25:38 adam Exp $
 #
 
 DISTNAME=	openscad-2015.03-2.src
 PKGNAME=	openscad-2015.03p2
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	http://files.openscad.org/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 10:34:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/07 18:25:59 adam Exp $
 
 DISTNAME=	libixion-0.12.1
+PKGREVISION=	1
 CATEGORIES=	math devel
 MASTER_SITES=	http://kohei.us/files/ixion/src/
 EXTRACT_SUFX=	.tar.xz
