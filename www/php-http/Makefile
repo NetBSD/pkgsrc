@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/09/11 17:03:29 taca Exp $
+# $NetBSD: Makefile,v 1.10 2016/10/07 18:26:13 adam Exp $
 
 MODNAME=		http
 PECL_VERSION=		2.5.6
@@ -9,6 +9,7 @@ PECL_DISTNAME=		pecl_http-${PECL_VERSION}
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://pecl.php.net/package/pecl_http
 COMMENT=		PHP extension for extended HTTP support
+PKGREVISION=		1
 LICENSE=		2-clause-bsd AND isc
 
 CONFLICTS=		php-http-[0-9]*
