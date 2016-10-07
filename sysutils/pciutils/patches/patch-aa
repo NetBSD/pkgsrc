@@ -1,5 +1,5 @@
---- Makefile.orig	2016-05-22 16:57:08.000000000 +0900
-+++ Makefile	2016-05-23 14:20:02.224489165 +0900
+--- Makefile.orig	2016-10-04 04:58:31.000000000 +0900
++++ Makefile	2016-10-07 14:59:10.000000000 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
  # (c) 1998--2016 Martin Mares <mj@ucw.cz>
@@ -8,8 +8,8 @@
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.5.1
- DATE=2016-05-22
+ VERSION=3.5.2
+ DATE=2016-10-03
 @@ -13,7 +12,7 @@
  CROSS_COMPILE=
  
