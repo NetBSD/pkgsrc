@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 19:24:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/10/07 18:26:11 adam Exp $
 
 DISTNAME=	Syntax-SourceHighlight-1.1.2
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MU/MURPHY/
 
