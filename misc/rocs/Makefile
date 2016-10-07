@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2016/05/07 10:06:40 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2016/10/07 18:26:03 adam Exp $
 
 DISTNAME=	rocs-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 COMMENT=	KDE graph theory IDE
 
