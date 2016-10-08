@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2016/10/08 14:18:22 kamil Exp $
+# $NetBSD: Makefile,v 1.89 2016/10/08 14:31:27 kamil Exp $
 #
 
 COMMENT=	CAD tools
@@ -11,7 +11,6 @@ SUBDIR+=	boolean
 SUBDIR+=	cascade
 SUBDIR+=	cgi-wcalc
 SUBDIR+=	covered
-SUBDIR+=	covered-current
 SUBDIR+=	dinotrace
 SUBDIR+=	dinotrace-mode
 SUBDIR+=	diylc
