@@ -1,0 +1,28 @@
+# $NetBSD: Makefile.common,v 1.1 2016/10/08 12:53:54 kamil Exp $
+#
+# used by databases/lua-sql-postgres/Makefile
+# used by databases/lua-sql-sqlite/Makefile
+# used by databases/lua-sql-sqlite3/Makefile
+
+# TODO: firebird, oci8, odbc
+
+GITHUB_PROJECT=	luasql
+DISTNAME=	luasql-2.3.2
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_GITHUB:=keplerproject/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+LICENSE=	mit
+HOMEPAGE=	http://www.keplerproject.org/luasql/
+
+USE_TOOLS+=		gmake
+
+MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
+MAKE_FLAGS+=	LUA_LIBDIR=${DESTDIR}${PREFIX}/${LUA_CDIR}
+MAKE_FLAGS+=	LUA_DIR=${DESTDIR}${PREFIX}/${LUA_LDIR}
+MAKE_FLAGS+=	LUA_INC=${DESTDIR}${PREFIX}/${LUA_INCDIR}
+
+DISTINFO_FILE=	${.CURDIR}/../../databases/lua-sql-mysql/distinfo
+PATCHDIR=	${.CURDIR}/../../databases/lua-sql-mysql/patches
+
+.include "../../lang/lua/module.mk"
