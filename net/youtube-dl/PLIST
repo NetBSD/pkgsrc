@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2016/09/16 19:16:19 leot Exp $
+@comment $NetBSD: PLIST,v 1.29 2016/10/08 09:29:17 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -89,9 +89,6 @@ ${PYSITELIB}/youtube_dl/extractor/aenetworks.pyo
 ${PYSITELIB}/youtube_dl/extractor/afreecatv.py
 ${PYSITELIB}/youtube_dl/extractor/afreecatv.pyc
 ${PYSITELIB}/youtube_dl/extractor/afreecatv.pyo
-${PYSITELIB}/youtube_dl/extractor/aftonbladet.py
-${PYSITELIB}/youtube_dl/extractor/aftonbladet.pyc
-${PYSITELIB}/youtube_dl/extractor/aftonbladet.pyo
 ${PYSITELIB}/youtube_dl/extractor/airmozilla.py
 ${PYSITELIB}/youtube_dl/extractor/airmozilla.pyc
 ${PYSITELIB}/youtube_dl/extractor/airmozilla.pyo
@@ -890,6 +887,9 @@ ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyo
 ${PYSITELIB}/youtube_dl/extractor/leeco.py
 ${PYSITELIB}/youtube_dl/extractor/leeco.pyc
 ${PYSITELIB}/youtube_dl/extractor/leeco.pyo
+${PYSITELIB}/youtube_dl/extractor/lego.py
+${PYSITELIB}/youtube_dl/extractor/lego.pyc
+${PYSITELIB}/youtube_dl/extractor/lego.pyo
 ${PYSITELIB}/youtube_dl/extractor/lemonde.py
 ${PYSITELIB}/youtube_dl/extractor/lemonde.pyc
 ${PYSITELIB}/youtube_dl/extractor/lemonde.pyo
@@ -944,6 +944,9 @@ ${PYSITELIB}/youtube_dl/extractor/makerschannel.pyo
 ${PYSITELIB}/youtube_dl/extractor/makertv.py
 ${PYSITELIB}/youtube_dl/extractor/makertv.pyc
 ${PYSITELIB}/youtube_dl/extractor/makertv.pyo
+${PYSITELIB}/youtube_dl/extractor/mangomolo.py
+${PYSITELIB}/youtube_dl/extractor/mangomolo.pyc
+${PYSITELIB}/youtube_dl/extractor/mangomolo.pyo
 ${PYSITELIB}/youtube_dl/extractor/matchtv.py
 ${PYSITELIB}/youtube_dl/extractor/matchtv.pyc
 ${PYSITELIB}/youtube_dl/extractor/matchtv.pyo
@@ -1175,6 +1178,9 @@ ${PYSITELIB}/youtube_dl/extractor/nuvid.pyo
 ${PYSITELIB}/youtube_dl/extractor/nytimes.py
 ${PYSITELIB}/youtube_dl/extractor/nytimes.pyc
 ${PYSITELIB}/youtube_dl/extractor/nytimes.pyo
+${PYSITELIB}/youtube_dl/extractor/nzz.py
+${PYSITELIB}/youtube_dl/extractor/nzz.pyc
+${PYSITELIB}/youtube_dl/extractor/nzz.pyo
 ${PYSITELIB}/youtube_dl/extractor/odatv.py
 ${PYSITELIB}/youtube_dl/extractor/odatv.pyc
 ${PYSITELIB}/youtube_dl/extractor/odatv.pyo
@@ -1658,12 +1664,18 @@ ${PYSITELIB}/youtube_dl/extractor/thesixtyone.pyo
 ${PYSITELIB}/youtube_dl/extractor/thestar.py
 ${PYSITELIB}/youtube_dl/extractor/thestar.pyc
 ${PYSITELIB}/youtube_dl/extractor/thestar.pyo
+${PYSITELIB}/youtube_dl/extractor/theweatherchannel.py
+${PYSITELIB}/youtube_dl/extractor/theweatherchannel.pyc
+${PYSITELIB}/youtube_dl/extractor/theweatherchannel.pyo
 ${PYSITELIB}/youtube_dl/extractor/thisamericanlife.py
 ${PYSITELIB}/youtube_dl/extractor/thisamericanlife.pyc
 ${PYSITELIB}/youtube_dl/extractor/thisamericanlife.pyo
 ${PYSITELIB}/youtube_dl/extractor/thisav.py
 ${PYSITELIB}/youtube_dl/extractor/thisav.pyc
 ${PYSITELIB}/youtube_dl/extractor/thisav.pyo
+${PYSITELIB}/youtube_dl/extractor/thisoldhouse.py
+${PYSITELIB}/youtube_dl/extractor/thisoldhouse.pyc
+${PYSITELIB}/youtube_dl/extractor/thisoldhouse.pyo
 ${PYSITELIB}/youtube_dl/extractor/threeqsdn.py
 ${PYSITELIB}/youtube_dl/extractor/threeqsdn.pyc
 ${PYSITELIB}/youtube_dl/extractor/threeqsdn.pyo
@@ -1682,6 +1694,9 @@ ${PYSITELIB}/youtube_dl/extractor/tnaflix.pyo
 ${PYSITELIB}/youtube_dl/extractor/toggle.py
 ${PYSITELIB}/youtube_dl/extractor/toggle.pyc
 ${PYSITELIB}/youtube_dl/extractor/toggle.pyo
+${PYSITELIB}/youtube_dl/extractor/tonline.py
+${PYSITELIB}/youtube_dl/extractor/tonline.pyc
+${PYSITELIB}/youtube_dl/extractor/tonline.pyo
 ${PYSITELIB}/youtube_dl/extractor/toutv.py
 ${PYSITELIB}/youtube_dl/extractor/toutv.pyc
 ${PYSITELIB}/youtube_dl/extractor/toutv.pyo
@@ -1919,6 +1934,9 @@ ${PYSITELIB}/youtube_dl/extractor/vube.pyo
 ${PYSITELIB}/youtube_dl/extractor/vuclip.py
 ${PYSITELIB}/youtube_dl/extractor/vuclip.pyc
 ${PYSITELIB}/youtube_dl/extractor/vuclip.pyo
+${PYSITELIB}/youtube_dl/extractor/vyborymos.py
+${PYSITELIB}/youtube_dl/extractor/vyborymos.pyc
+${PYSITELIB}/youtube_dl/extractor/vyborymos.pyo
 ${PYSITELIB}/youtube_dl/extractor/walla.py
 ${PYSITELIB}/youtube_dl/extractor/walla.pyc
 ${PYSITELIB}/youtube_dl/extractor/walla.pyo
