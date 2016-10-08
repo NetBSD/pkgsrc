@@ -1,26 +1,27 @@
-$NetBSD: patch-aa,v 1.12 2012/06/11 07:06:21 adam Exp $
+$NetBSD: patch-aa,v 1.13 2016/10/08 06:16:24 adam Exp $
 
 Don't override CC, LD, CFLAGS and LDFLAGS.
 
---- Makefile.orig	2011-01-21 23:04:44.000000000 +0000
+--- Makefile.orig	2016-10-03 05:16:21.000000000 +0000
 +++ Makefile
-@@ -17,14 +17,10 @@ PNGLIB = ${HOME}/lib
- ZINC = ${HOME}/include
- ZLIB = ${HOME}/lib
+@@ -17,15 +17,11 @@ PNGLIB = /usr/local/lib
+ ZINC = /usr/local/include
+ ZLIB = /usr/local/lib
  
 -CC = gcc
 -LD = gcc
  RM = rm -f
- #CFLAGS = -I. -O -Wall
- #CFLAGS = -I. -O3 -fomit-frame-pointer -Wall
--CFLAGS = -I${ZINC} -I. -g -O3 -fomit-frame-pointer -Wall
+ 
+ CPPFLAGS = -I $(PNGINC)
+ 
+-CFLAGS = -g -O3 -fomit-frame-pointer -Wall
  # [note that -Wall is a gcc-specific compilation flag ("all warnings on")]
 -LDFLAGS =
  O = .o
  E =
  
-@@ -68,7 +64,7 @@ pngcrush$(O): pngcrush.c cexcept.h
- # 	$(CC) -c $(CFLAGS) $<
+@@ -54,7 +50,7 @@ pngcrush$(O): pngcrush.c cexcept.h
+ 	mv png.h_embedded png.h
  
  $(PNGCRUSH)$(E): $(OBJS)
 -	$(LD) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
