@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/10/08 12:53:54 kamil Exp $
+
+SHA1 (luasql-2.3.2.tar.gz) = 089b797d22589277b9b2f926f4da008fe7026ccb
+RMD160 (luasql-2.3.2.tar.gz) = 478d699360fa9d0605a1801962b0bade6a8e6098
+SHA512 (luasql-2.3.2.tar.gz) = 6bfd25c494fa214c2f449d95448966b4872fa46a8df87969a9bd654c4f8c341f2a3a56b2bd6ca6cf09971caf5ab05a0c912fffe97dc782921572039308f7f8fa
+Size (luasql-2.3.2.tar.gz) = 100985 bytes
