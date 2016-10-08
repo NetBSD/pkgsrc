@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4144 2016/10/08 14:41:22 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4145 2016/10/08 14:44:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5787,3 +5787,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed cad/verilog-current [kamil 2016-10-08]
 	Removed cad/covered-current [kamil 2016-10-08]
 	Updated cad/covered to 0.4.7nb6 [kamil 2016-10-08]
+	Updated mail/roundcube to 1.2.2 [taca 2016-10-08]
+	Updated mail/roundcube-plugin-enigma to 1.2.2 [taca 2016-10-08]
+	Updated mail/roundcube-plugin-password to 1.2.2 [taca 2016-10-08]
+	Updated mail/roundcube-plugin-zipdownload to 1.2.2 [taca 2016-10-08]
