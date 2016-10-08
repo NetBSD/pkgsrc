@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4145 2016/10/08 14:44:31 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4146 2016/10/08 21:21:27 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5791,3 +5791,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/roundcube-plugin-enigma to 1.2.2 [taca 2016-10-08]
 	Updated mail/roundcube-plugin-password to 1.2.2 [taca 2016-10-08]
 	Updated mail/roundcube-plugin-zipdownload to 1.2.2 [taca 2016-10-08]
+	Updated cad/covered to 0.7.10 [kamil 2016-10-08]
