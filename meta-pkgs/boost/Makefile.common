@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.60 2016/10/08 06:05:36 adam Exp $
+# $NetBSD: Makefile.common,v 1.61 2016/10/08 23:27:50 joerg Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -12,8 +12,9 @@ BOOST_COMMENT?=		undefined
 BOOST_VERSION=		1.62.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
-# IMPORTANT: remove on the next update
-DIST_SUBDIR=		boost
+# IMPORTANT: remove on the next update and uncomment MASTER_SITES below
+DIST_SUBDIR=		boost-1.62.0
+MASTER_SITES=	-http://downloads.sourceforge.net/project/boost/boost/1.62.0/boost_1_62_0.tar.bz2?r=&ts=1475968113
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
 CATEGORIES=		devel
@@ -23,7 +24,7 @@ PKGNAME=	boost-${BOOST_VERSION}
 .else # ${BOOST_PACKAGE} != "meta-pkg"
 PKGNAME=	boost-${BOOST_PACKAGE}-${BOOST_VERSION}
 
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boost/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
