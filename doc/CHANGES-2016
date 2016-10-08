@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4143 2016/10/08 14:33:52 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4144 2016/10/08 14:41:22 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5786,3 +5786,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/lua-sql-sqlite3 version 2.3.2 [kamil 2016-10-08]
 	Removed cad/verilog-current [kamil 2016-10-08]
 	Removed cad/covered-current [kamil 2016-10-08]
+	Updated cad/covered to 0.4.7nb6 [kamil 2016-10-08]
