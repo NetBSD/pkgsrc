@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 00:21:16 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/10/08 21:18:30 kamil Exp $
 
-SHA1 (covered-0.4.7.tar.gz) = 9dd9da4d739db15e5e2ea36f2767136a825a4728
-RMD160 (covered-0.4.7.tar.gz) = 63720610a24e6e71b9622586d561e3eb92a606f5
-SHA512 (covered-0.4.7.tar.gz) = 2fb44e9a7ef9e34a5180c767ea9fa86cf821f3df31351fa9086e5b2ce4ee690d55896082473655469c544ee8471e9012caf124fcb0450da767aa845cf4ef36dc
-Size (covered-0.4.7.tar.gz) = 1077912 bytes
-SHA1 (patch-src_lxt2__read.c) = 0c388647fd7fe2027b59cdd35761c91bbe490e64
-SHA1 (patch-src_lxt2__read.h) = 18be70aa6e0dfef5dcf72809e62260642ada7898
+SHA1 (covered-0.7.10.tar.gz) = 3f7f27ccb9d9263a27f5c8ae97e5569bf434c2f2
+RMD160 (covered-0.7.10.tar.gz) = 9e9146753aa542663fc43924d64601e8f16be316
+SHA512 (covered-0.7.10.tar.gz) = da1c844e2b138966ca572d0d06739c22a6a422f12ccff6b3201741019eb17d794cc8257b5fcf405f580614a0b22d370672d37c12f84ce556b49db1e8724e4b44
+Size (covered-0.7.10.tar.gz) = 3108263 bytes
+SHA1 (patch-src_lxt2__read.h) = 5540942aa8222db889ed1168244462e5b45cd977
