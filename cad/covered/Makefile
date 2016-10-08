@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/10/08 21:18:30 kamil Exp $
+# $NetBSD: Makefile,v 1.26 2016/10/08 23:12:23 kamil Exp $
 #
 
 DISTNAME=	covered-0.7.10
@@ -16,7 +16,7 @@ USE_TOOLS+=	bison gmake lex
 # This is required for TCL/TK dependency
 CPPFLAGS+=	-DUSE_INTERP_RESULT
 
-.include "../../cad/verilog/buildlink3.mk"
+.include "../../cad/iverilog/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
