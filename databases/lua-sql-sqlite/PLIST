@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/08 12:57:07 kamil Exp $
+${LUA_CDIR}/luasql/sqlite.so
