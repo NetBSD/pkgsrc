@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2016/09/20 12:55:04 jaapb Exp $
+# $NetBSD: Makefile,v 1.520 2016/10/08 13:02:37 kamil Exp $
 
 COMMENT=	Databases
 
@@ -78,6 +78,10 @@ SUBDIR+=	libpqxx
 SUBDIR+=	libpqxx-doc
 SUBDIR+=	libzdb
 SUBDIR+=	lmdb
+SUBDIR+=	lua-sql-mysql
+SUBDIR+=	lua-sql-postgres
+SUBDIR+=	lua-sql-sqlite
+SUBDIR+=	lua-sql-sqlite3
 SUBDIR+=	lua-sqlite
 SUBDIR+=	lua-sqlite3
 SUBDIR+=	lua-tokyocabinet
