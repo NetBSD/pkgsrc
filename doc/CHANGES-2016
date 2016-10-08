@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4147 2016/10/08 22:32:54 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4148 2016/10/08 23:20:33 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5793,3 +5793,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/roundcube-plugin-zipdownload to 1.2.2 [taca 2016-10-08]
 	Updated cad/covered to 0.7.10 [kamil 2016-10-08]
 	Updated cad/verilog to 10.1.1 [kamil 2016-10-08]
+	Renamed cad/verilog to cad/iverilog [kamil 2016-10-08]
+	Updated cad/MyHDL-iverilog to 0.8.1 [kamil 2016-10-08]
