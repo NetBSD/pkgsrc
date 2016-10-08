@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2016/10/08 23:01:45 kamil Exp $
+
+gcc44 fixes
+
+--- elab_net.cc.orig	2010-09-27 17:42:32.000000000 +0000
++++ elab_net.cc
+@@ -26,6 +26,7 @@
+ 
+ # include  <cstdlib>
+ # include  <cstring>
++# include  <memory>
+ # include  <iostream>
+ # include  "ivl_assert.h"
+ 
