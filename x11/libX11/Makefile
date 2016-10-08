@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2016/10/04 21:58:10 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2016/10/08 23:26:56 joerg Exp $
 
 DISTNAME=		libX11-1.6.4
 CATEGORIES=		x11 devel
@@ -29,7 +29,7 @@ CPPFLAGS.MirBSD+=	${PTHREAD_CFLAGS}
 LDFLAGS.MirBSD+=	${PTHREAD_LDFLAGS}
 LDFLAGS.OpenBSD+=	${PTHREAD_LDFLAGS}
 
-BUILDLINK_API_DEPENDS.libxcb+=libxcb>=1.8.1
+BUILDLINK_API_DEPENDS.libxcb+=libxcb>=1.11.1
 BUILDLINK_API_DEPENDS.xproto+=xproto>=7.0.17
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
