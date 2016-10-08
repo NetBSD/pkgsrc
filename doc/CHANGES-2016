@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4141 2016/10/08 13:05:38 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4142 2016/10/08 14:23:47 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5784,3 +5784,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/lua-sql-postgres version 2.3.2 [kamil 2016-10-08]
 	Added databases/lua-sql-sqlite version 2.3.2 [kamil 2016-10-08]
 	Added databases/lua-sql-sqlite3 version 2.3.2 [kamil 2016-10-08]
+	Removed cad/verilog-current [kamil 2016-10-08]
