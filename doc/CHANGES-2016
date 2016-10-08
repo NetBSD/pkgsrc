@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4140 2016/10/08 10:27:25 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4141 2016/10/08 13:05:38 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5780,3 +5780,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php71 to 7.1.0rc3 [jdolecek 2016-10-08]
 	Updated net/youtube-dl to 20161007 [leot 2016-10-08]
 	Updated devel/nss to 3.27.1 [ryoon 2016-10-08]
+	Added databases/lua-sql-mysql version 2.3.2 [kamil 2016-10-08]
+	Added databases/lua-sql-postgres version 2.3.2 [kamil 2016-10-08]
+	Added databases/lua-sql-sqlite version 2.3.2 [kamil 2016-10-08]
+	Added databases/lua-sql-sqlite3 version 2.3.2 [kamil 2016-10-08]
