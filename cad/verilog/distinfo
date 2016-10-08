@@ -1,11 +1,9 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 00:21:19 agc Exp $
+$NetBSD: distinfo,v 1.21 2016/10/08 22:30:43 kamil Exp $
 
-SHA1 (verilog-0.9.7.tar.gz) = 714c2a605779957490cca24e3dc01d096dbc1474
-RMD160 (verilog-0.9.7.tar.gz) = 3bac03ca703465a43c5a0a8175a3d27ee00f49a7
-SHA512 (verilog-0.9.7.tar.gz) = 1a81f132c667f5cd33a11156364a366806ef9b6ef59b86f69df852af79cc92db17df8db0bace4e3c14929b0110df0aa7d83f35f664057e715842acf7bd21c1f5
-Size (verilog-0.9.7.tar.gz) = 1238088 bytes
+SHA1 (verilog-10.1.1.tar.gz) = 7f4cead8cabb90cc4525951357c43866ca710749
+RMD160 (verilog-10.1.1.tar.gz) = 77c933b712ab027b13a81e3eead7ee4f565741b7
+SHA512 (verilog-10.1.1.tar.gz) = a57fdce3d870be8ce39eb3050dabd5a2d4d491c657b85ccbf775bef7fa9a6889a18bf4d2508341ef2cc17d872b5d6c802d4fd8585e4ec7952526699ebb24bfac
+Size (verilog-10.1.1.tar.gz) = 1684925 bytes
 SHA1 (patch-aa) = cf075110416f6db0892129796cd83b8ae8de55fa
 SHA1 (patch-ad) = bf7d227ed3b321021d8aff54cd008f4b2a1557b9
 SHA1 (patch-cadpli_Makefile) = ed21a5f529ac449c26b831cbd5fde052d9ed5466
-SHA1 (patch-lexor_keyword.cc) = 375aa534e91b0ee05615732b4bdcacdd9034ed3d
-SHA1 (patch-vpi_Makefile) = 9a2d49d3d0f8005d7ab508f726374842ad322207
