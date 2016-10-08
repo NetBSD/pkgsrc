@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4146 2016/10/08 21:21:27 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4147 2016/10/08 22:32:54 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5792,3 +5792,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/roundcube-plugin-password to 1.2.2 [taca 2016-10-08]
 	Updated mail/roundcube-plugin-zipdownload to 1.2.2 [taca 2016-10-08]
 	Updated cad/covered to 0.7.10 [kamil 2016-10-08]
+	Updated cad/verilog to 10.1.1 [kamil 2016-10-08]
