@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/09/16 10:35:38 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/08 10:34:18 ryoon Exp $
 
 DISTNAME=	xf86-video-amdgpu-1.1.2
 CATEGORIES=	x11
@@ -15,5 +15,6 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
