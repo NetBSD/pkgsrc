@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2014/01/20 19:20:08 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2016/10/09 21:41:57 wiz Exp $
 #
 
 DISTNAME=	pgtcl1.5
 PKGNAME=	pgtcl-1.5
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	databases tcl
 CATEGORIES=	databases
 MASTER_SITES=	ftp://gborg.postgresql.org/pub/pgtcl/stable/

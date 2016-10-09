@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2016/07/09 06:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2016/10/09 21:42:03 wiz Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
 DAVICAL_VERSION=1.1.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=r${DAVICAL_VERSION}
 

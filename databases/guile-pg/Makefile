@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2016/09/15 16:31:37 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2016/10/09 21:41:56 wiz Exp $
 
 DISTNAME=	guile-pg-0.47
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/guile-pg/
 EXTRACT_SUFX=	.tar.xz

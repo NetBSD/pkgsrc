@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2016/09/11 17:03:27 taca Exp $
+# $NetBSD: Makefile,v 1.40 2016/10/09 21:42:02 wiz Exp $
 #
 
 DISTNAME=	base-1.4.3.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 

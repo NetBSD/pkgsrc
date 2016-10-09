@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2015/06/29 11:06:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2016/10/09 21:42:03 wiz Exp $
 #
 
 DISTNAME=	aipo-${VERSION}-linux-x86
 VERSION=	8.0.1
 PKGNAME=	aipo-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_OSDN:=aipo/63319/}
 EXTRACT_SUFX=	.gz
