@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/10 17:05:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/09 03:15:57 kamil Exp $
 lib/ivl/myhdl.vpi
