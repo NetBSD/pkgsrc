@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4157 2016/10/09 08:36:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4158 2016/10/09 08:37:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5806,3 +5806,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/cups to 2.2.1 [leot 2016-10-09]
 	Updated print/cups-filters to 1.11.4 [leot 2016-10-09]
 	Updated devel/p5-Params-Validate to 1.26 [wiz 2016-10-09]
+	Updated graphics/p5-Image-Info to 1.39 [wiz 2016-10-09]
