@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2016/09/18 22:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2016/10/09 08:34:00 leot Exp $
 
-DISTNAME=	cups-filters-1.11.3
+DISTNAME=	cups-filters-1.11.4
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	libfontembed.pc.in
 
 CONFLICTS+=	cups<1.6
 
-REPLACE_BASH+=	filter/textonly
 REPLACE_BASH+=	filter/braille/drivers/generic/brftoembosser.in
 REPLACE_BASH+=	filter/braille/drivers/index/imageubrltoindexv3.in
 REPLACE_BASH+=	filter/braille/drivers/index/imageubrltoindexv4.in
