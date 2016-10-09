@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/09 03:11:25 ryoon Exp $
+include/mspack.h
+lib/libmspack.la
+lib/pkgconfig/libmspack.pc
