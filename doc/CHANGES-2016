@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4160 2016/10/09 12:29:35 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4161 2016/10/09 12:31:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5816,3 +5816,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/postfix-pcre to 3.1.3 [taca 2016-10-09]
 	Updated mail/postfix-pgsql to 3.1.3 [taca 2016-10-09]
 	Updated mail/postfix-sqlite to 3.1.3 [taca 2016-10-09]
+	Updated security/pear-Crypt_GPG to 1.4.3 [taca 2016-10-09]
