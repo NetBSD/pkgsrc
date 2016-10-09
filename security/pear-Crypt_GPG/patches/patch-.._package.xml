@@ -1,9 +1,9 @@
-$NetBSD: patch-.._package.xml,v 1.1 2016/08/21 08:26:40 taca Exp $
+$NetBSD: patch-.._package.xml,v 1.2 2016/10/09 12:30:30 taca Exp $
 
---- ../package.xml.orig	2016-06-19 07:54:44.000000000 +0000
+--- ../package.xml.orig	2016-10-07 13:50:33.000000000 +0000
 +++ ../package.xml
-@@ -73,7 +73,7 @@ Feature #21079: Added Crypt_GPG::exportP
-    <file baseinstalldir="/" md5sum="548b27fa4f1b2aedf9bde59105e5e54c" name="data/pinentry-cli.xml" role="data">
+@@ -71,7 +71,7 @@ Added POSIX method to isRunning() consis
+    <file baseinstalldir="/" md5sum="edfcefbb570bc3a5a4df32b1ad7b0699" name="data/pinentry-cli.xml" role="data">
      <tasks:replace from="@package-version@" to="version" type="package-info" />
     </file>
 -   <file baseinstalldir="/" md5sum="4fb41cc616854bc332aec7a5e6dddab0" name="scripts/crypt-gpg-pinentry" role="script">
