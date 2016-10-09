@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4151 2016/10/09 03:21:09 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4152 2016/10/09 03:42:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5800,3 +5800,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/MyHDL-gplcver to 0.9.0 [kamil 2016-10-09]
 	Updated cad/MyHDL-iverilog to 0.9.0 [kamil 2016-10-09]
 	Updated cad/py-MyHDL to 0.9.0 [kamil 2016-10-09]
+	Updated sysutils/open-vm-tools to 10.0.7 [ryoon 2016-10-09]
