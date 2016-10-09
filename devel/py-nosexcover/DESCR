@@ -1,0 +1,5 @@
+Extends nose.plugins.cover to add Cobertura-style XML reports.
+
+Includes nose-xmlcover, a companion to the built-in nose.plugins.cover,
+this plugin will write out an XML coverage report to a file named
+coverage.xml.
