@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/02/27 14:30:58 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2016/10/09 17:15:18 tsutsui Exp $
 
-SHA1 (sayaka-3.2.0.tar.gz) = 010cf54c52390da25ffcfbd6dbbd90d01232d878
-RMD160 (sayaka-3.2.0.tar.gz) = 44989c936ab9a7371472c3d5376eb07e0e04f0ad
-SHA512 (sayaka-3.2.0.tar.gz) = 064164b4149ac02d716b24253427c086383f772c1d6c4d3b189878146f2f70868874ad4eecb6290d24b0f1e091bdcab2f7f10f87f89a88f2d37c206a023dd4f6
-Size (sayaka-3.2.0.tar.gz) = 91518 bytes
-SHA1 (patch-vala_sayaka.vala) = 32e40ade29ed326e739eae7d25cb78723ee750b9
+SHA1 (sayaka-3.2.2.tar.gz) = 897bd4f4bdb20d859c31ca34519b9686cd2b1f3b
+RMD160 (sayaka-3.2.2.tar.gz) = f78fb30306e6c7c01391edc9fbfc873561abe8ba
+SHA512 (sayaka-3.2.2.tar.gz) = 6418e2a54562163c691a0c71d9f5221295fbdf9af139a42cc3bbf1dc3ac480a870e5fc7efe8a59a7db58c43b7102d31603d1b4bf9b622abf159fb5eb66ce6454
+Size (sayaka-3.2.2.tar.gz) = 104693 bytes
+SHA1 (patch-vala_sayaka.vala) = ad1010da1f9c75f2cad669cf419beba5ea46f59f
