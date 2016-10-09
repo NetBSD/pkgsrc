@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4177 2016/10/09 14:37:42 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4178 2016/10/09 14:44:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5833,3 +5833,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-pathname2 to 1.8.0 [taca 2016-10-09]
 	Added devel/ruby-dep version 1.4.0 [taca 2016-10-09]
 	Added devel/ruby-pathutil version 0.14.0 [taca 2016-10-09]
+	Updated devel/ruby-power_assert to 0.3.1 [taca 2016-10-09]
