@@ -1,37 +1,13 @@
-$NetBSD: patch-au,v 1.2 2008/08/31 06:36:48 scottr Exp $
+$NetBSD: patch-au,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/include/su.h.orig	2008-08-08 02:01:52.000000000 -0500
+--- lib/include/su.h.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/include/su.h
-@@ -51,7 +51,7 @@ Bool Id_AuthSet(void const *buf, size_t 
- Bool Id_AuthCheck(char const *right,
-                   char const *localizedDescription);
+@@ -50,7 +50,7 @@ Bool Id_AuthCheck(char const *right,
+                   char const *localizedDescription,
+                   Bool showDialogIfNeeded);
  
--#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__)) && !defined(N_PLAT_NLM)
-+#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__)) && !defined(N_PLAT_NLM)
+-#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__))
++#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__))
  
  #include <sys/types.h>
  #include <unistd.h>
-@@ -87,7 +87,11 @@ int Id_SetRESGid(gid_t rgid, gid_t egid,
- static INLINE int
- Id_SetEUid(uid_t euid)
- {
-+#if defined(__NetBSD__)
-+   return seteuid(euid);
-+#else
-    return Id_SetRESUid((uid_t)-1, euid, (uid_t)-1);
-+#endif
- }
- 
- 
-@@ -111,7 +115,11 @@ Id_SetEUid(uid_t euid)
- static INLINE int
- Id_SetEGid(gid_t egid)
- {
-+#if defined(__NetBSD__)
-+   return setegid(egid);
-+#else
-    return Id_SetRESGid((gid_t)-1, egid, (gid_t)-1);
-+#endif
- }
- 
- #define IsSuperUser()	(0 == geteuid())

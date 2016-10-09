@@ -1,49 +1,22 @@
-$NetBSD: patch-ah,v 1.2 2008/08/31 06:36:47 scottr Exp $
+$NetBSD: patch-ah,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/file/fileIO.c.orig	2008-08-08 02:01:53.000000000 -0500
+--- lib/file/fileIO.c.orig	2016-02-16 20:06:45.000000000 +0000
 +++ lib/file/fileIO.c
-@@ -254,7 +254,7 @@ FileIO_Lock(FileIODescriptor *file, // I
- 
-    ASSERT(file);
+@@ -325,7 +325,7 @@ FileIO_Lock(FileIODescriptor *file,  // 
+    FileIOResolveLockBits(&access);
+    ASSERT((access & FILEIO_OPEN_LOCKED) == 0);
  
 -#if !defined(__FreeBSD__) && !defined(sun)
 +#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
-    if (access & FILEIO_OPEN_LOCKED) {
-       int err;
- 
-@@ -286,7 +286,7 @@ FileIO_Lock(FileIODescriptor *file, // I
-    }
- #else
-    ASSERT(file->lockToken == NULL);
--#endif // !__FreeBSD__ && !sun
-+#endif // !__FreeBSD__ && !sun && !defined(__NetBSD__)
- 
-    return ret;
- }
-@@ -316,7 +316,7 @@ FileIO_Unlock(FileIODescriptor *file)   
+    if ((access & FILEIO_OPEN_LOCK_MANDATORY) != 0) {
+       /* Mandatory file locks are available only when opening a file */
+       ret = FILEIO_LOCK_FAILED;
+@@ -394,7 +394,7 @@ FileIO_Unlock(FileIODescriptor *file)  /
  
     ASSERT(file);
  
 -#if !defined(__FreeBSD__) && !defined(sun)
 +#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
     if (file->lockToken != NULL) {
-       int err;
+       int err = 0;
  
-@@ -333,7 +333,7 @@ FileIO_Unlock(FileIODescriptor *file)   
-    }
- #else
-    ASSERT(file->lockToken == NULL);
--#endif // !__FreeBSD__ && !sun
-+#endif // !__FreeBSD__ && !sun && !defined(__NetBSD__)
- 
-    return ret;
- }
-@@ -449,7 +449,7 @@ FileIO_StatsExit(const FileIODescriptor 
- /*
-  * Pwrite & Pread are not available in the FreeBSD tools build VM
-  */
--#if !defined(VMX86_TOOLS) || !defined(__FreeBSD__)
-+#if !defined(VMX86_TOOLS) || !defined(__FreeBSD__) && !defined(__NetBSD__)
- #if defined(_WIN32) || defined(GLIBC_VERSION_21) || defined(__APPLE__)
- /*
-  *----------------------------------------------------------------------

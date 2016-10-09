@@ -1,23 +1,38 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/04/01 12:25:17 joerg Exp $
+$NetBSD: patch-configure.ac,v 1.2 2016/10/09 03:41:56 ryoon Exp $
 
---- configure.ac.orig	2008-08-08 07:01:58.000000000 +0000
+--- configure.ac.orig	2016-02-16 20:06:45.000000000 +0000
 +++ configure.ac
-@@ -111,6 +111,9 @@ case "$host_os" in
-    [linux*])
-       os="linux"
+@@ -136,6 +136,9 @@ case "$host_os" in
+    [solaris*])
+       os="solaris"
        ;;
 +   [netbsd*])
 +      os="netbsd"
 +      ;;
-    [freebsd*])
-       os="freebsd"
+    [*])
+       AC_MSG_WARN([This is an untested and unsupported Operating System. Proceed at your own peril.])
        ;;
-@@ -573,7 +576,7 @@ if test "$with_dnet" = "yes"; then
+@@ -1064,6 +1067,15 @@ if test "$os" = "linux"; then
+    buildHgfsmounter=yes
+ fi
  
- 		GUESTD_LDADD="$GUESTD_LDADD $DNET_LIBS"
- 		VMWARE_USER_LDADD="$VMWARE_USER_LDADD $DNET_LIBS"
--		if test "$DNET_CONFIG" == dumbnet-config; then
-+		if test "$DNET_CONFIG" = dumbnet-config; then
- 		AC_DEFINE([DNET_IS_DUMBNET], 1, [Define to 1 if substituting Debian's libdumbnet for libdnet.])
- 		fi
- 	else
++if test "$os" = "netbsd"; then
++   LIBVMTOOLS_LIBADD="$LIBVMTOOLS_LIBADD -lkvm"
++   #MODULES_DIR="/boot/modules"
++
++   #MODULES="$MODULES vmmemctl"
++   #MODULES="$MODULES vmxnet"
++   #MODULES="$MODULES vmblock"
++fi
++
+ if test "$os" = "freebsd" || test "$os" = "kfreebsd-gnu"; then
+    LIBVMTOOLS_LIBADD="$LIBVMTOOLS_LIBADD -lkvm"
+    MODULES_DIR="/boot/modules"
+@@ -1132,6 +1144,7 @@ fi
+ AM_CONDITIONAL(BUILD_HGFSMOUNTER, test "$buildHgfsmounter" = "yes")
+ AM_CONDITIONAL(LINUX, test "$os" = "linux")
+ AM_CONDITIONAL(SOLARIS, test "$os" = "solaris")
++AM_CONDITIONAL(NETBSD, test "$os" = "netbsd")
+ AM_CONDITIONAL(FREEBSD, test "$os" = "freebsd" -o "$os" = "kfreebsd-gnu")
+ AM_CONDITIONAL(FREEBSD_CUSTOM_SYSDIR,
+                test \( "$os" = "freebsd" -o "$os" = "kfreebsd-gnu" \) -a -n "$SYSDIR")

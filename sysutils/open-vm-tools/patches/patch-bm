@@ -1,6 +1,6 @@
-$NetBSD: patch-bm,v 1.1 2008/08/31 06:36:49 scottr Exp $
+$NetBSD: patch-bm,v 1.2 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/wiper/wiperPosix.c.orig	2008-08-08 02:01:55.000000000 -0500
+--- lib/wiper/wiperPosix.c.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/wiper/wiperPosix.c
 @@ -23,7 +23,7 @@
   *
@@ -11,49 +11,42 @@ $NetBSD: patch-bm,v 1.1 2008/08/31 06:36:49 scottr Exp $
  #error This file should not be compiled on this platform.
  #endif
  
-@@ -31,12 +31,12 @@
- #include <sys/stat.h>
- #if defined(__linux__) || defined(sun)
- # include <sys/vfs.h>
--#elif defined(__FreeBSD__) || defined(__APPLE__)
-+#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
- # include <sys/param.h>
- # include <sys/ucred.h>
- # include <sys/mount.h>
- # include <fstab.h>
--# if __FreeBSD_version >= 500000
-+# if defined(__FreeBSD__) && __FreeBSD_version >= 500000
- #  include <libgen.h>
- # endif /* __FreeBSD_version < 500000 */
- #endif
-@@ -66,7 +66,7 @@
+@@ -70,7 +70,7 @@
+ /* Number of device numbers to store for device-mapper */
+ #define WIPER_MAX_DM_NUMBERS 8
  
- #if defined(sun) || defined(__linux__)
+-#if defined(sun) || defined(__linux__)
++#if defined(sun) || defined(__linux__) || defined(__NetBSD__)
  # define PROCFS "proc"
--#elif defined(__FreeBSD__) || defined(__APPLE__)
-+#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+ #elif defined(__FreeBSD__) || defined(__APPLE__)
  # define PROCFS "procfs"
- #endif
+@@ -158,6 +158,16 @@ static unsigned char *WiperGetSpace(Wipe
+ static void WiperClean(WiperState *state);
  
-@@ -196,7 +196,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
-    return TRUE;
+ 
++#if defined(__NetBSD__)
++#define MAX_DISK_MAJORS       256   /* should be enough for now */
++#define NUM_PRESEEDED_MAJORS  10    /* must match the below */
++static unsigned int knownDiskMajor[MAX_DISK_MAJORS] = {
++16, 20, 18, 14, 4,
++0, 2, 19, 142, 168
++};
++static int numDiskMajors = NUM_PRESEEDED_MAJORS;
++#endif
++
+ #if defined(__linux__)
+ 
+ #define MAX_DISK_MAJORS       256   /* should be enough for now */
+@@ -310,7 +320,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
+    return FALSE;
  }
  
--#elif defined(__FreeBSD__) || defined(__APPLE__) /* } FreeBSD { */
-+#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__) /* } FreeBSD { */
+-#elif defined(__linux__) /* } linux { */
++#elif defined(__linux__) || defined(__NetBSD__) /* } linux { */
  
- static INLINE Bool
+ static Bool
  WiperIsDiskDevice(MNTINFO *mnt,         // IN: file system being considered
-@@ -210,7 +210,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
-     * function, as a whole, does not even apply to OS X, so this caveat is
-     * only minor.
-     */
--#if __FreeBSD_version < 500000
-+#if defined(__NetBSD__) || __FreeBSD_version < 500000
-    /*
-     * Before FreeBSD 5, device nodes had static major/minor numbers.
-     * (FreeBSD 5 included devfs which got rid of this concept.)  So
-@@ -511,14 +511,14 @@ WiperSinglePartition_GetSpace(const Wipe
+@@ -571,7 +581,7 @@ WiperSinglePartition_GetSpace(const Wipe
                                uint64 *free,       // OUT
                                uint64 *total)      // OUT
  {
@@ -62,7 +55,8 @@ $NetBSD: patch-bm,v 1.1 2008/08/31 06:36:49 scottr Exp $
     struct statvfs statfsbuf;
  #else
     struct statfs statfsbuf;
- #endif
+@@ -580,7 +590,7 @@ WiperSinglePartition_GetSpace(const Wipe
+ 
     ASSERT(p);
  
 -#ifdef sun
@@ -70,3 +64,12 @@ $NetBSD: patch-bm,v 1.1 2008/08/31 06:36:49 scottr Exp $
     if (statvfs(p->mountPoint, &statfsbuf) < 0) {
  #else
     if (Posix_Statfs(p->mountPoint, &statfsbuf) < 0) {
+@@ -588,7 +598,7 @@ WiperSinglePartition_GetSpace(const Wipe
+       return "Unable to statfs() the mount point";
+    }
+ 
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+    blockSize = statfsbuf.f_frsize;
+ #else
+    blockSize = statfsbuf.f_bsize;

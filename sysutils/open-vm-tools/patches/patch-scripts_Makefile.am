@@ -1,15 +1,18 @@
-$NetBSD: patch-scripts_Makefile.am,v 1.1 2013/04/01 12:25:17 joerg Exp $
+$NetBSD: patch-scripts_Makefile.am,v 1.2 2016/10/09 03:41:56 ryoon Exp $
 
---- scripts/Makefile.am.orig	2008-08-08 07:01:58.000000000 +0000
+--- scripts/Makefile.am.orig	2016-02-16 20:06:47.000000000 +0000
 +++ scripts/Makefile.am
-@@ -1,7 +1,7 @@
+@@ -3,10 +3,10 @@ defaultscripts += poweroff-vm-default
+ defaultscripts += suspend-vm-default
+ defaultscripts += resume-vm-default
+ 
 -confdir = /etc/vmware-tools
 +EGDIR = @datarootdir@/examples
 +confdir = ${EGDIR}/vmware-tools
  
 -conf_SCRIPTS = ./common/vm-support
--conf_SCRIPTS += $(MODULES_OS)/poweron-vm-default
-+conf_SCRIPTS = $(MODULES_OS)/poweron-vm-default
- conf_SCRIPTS += $(MODULES_OS)/poweroff-vm-default
- conf_SCRIPTS += $(MODULES_OS)/suspend-vm-default
- conf_SCRIPTS += $(MODULES_OS)/resume-vm-default
+-conf_SCRIPTS += ./common/statechange.subr
++conf_SCRIPTS = ./common/statechange.subr
+ if ENABLE_GRABBITMQPROXY
+    conf_SCRIPTS += ./common/guestproxy-ssl.conf
+ endif
