@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4202 2016/10/09 21:31:45 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.4203 2016/10/09 22:08:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5886,3 +5886,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools_scm to 1.13.0 [wiz 2016-10-09]
 	Updated devel/py-tortoisehg to 3.9.2 [wiz 2016-10-09]
 	Updated textproc/py-jsonschema to 2.5.1 [bsiegert 2016-10-09]
+	Added print/LaTeXML version 0.8.2 [wiz 2016-10-09]
