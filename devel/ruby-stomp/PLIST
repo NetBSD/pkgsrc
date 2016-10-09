@@ -1,11 +1,20 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/08 14:51:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/10/09 15:10:43 taca Exp $
 bin/catstomp${RUBY_SUFFIX}
 bin/stompcat${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/adhoc/.gitignore
+${GEM_LIBDIR}/adhoc/README.md
+${GEM_LIBDIR}/adhoc/issue121_01.rb
+${GEM_LIBDIR}/adhoc/issue121_01_conn.rb
+${GEM_LIBDIR}/adhoc/issue121_02.rb
+${GEM_LIBDIR}/adhoc/issue121_03.rb
+${GEM_LIBDIR}/adhoc/payload_generator.rb
+${GEM_LIBDIR}/adhoc/payload_generator_adhoctest.rb
+${GEM_LIBDIR}/adhoc/stomp_adhoc_common.rb
 ${GEM_LIBDIR}/bin/catstomp
 ${GEM_LIBDIR}/bin/stompcat
 ${GEM_LIBDIR}/examples/amqdurasub.rb
@@ -14,15 +23,22 @@ ${GEM_LIBDIR}/examples/client11_putget1.rb
 ${GEM_LIBDIR}/examples/conn11_ex1.rb
 ${GEM_LIBDIR}/examples/conn11_ex2.rb
 ${GEM_LIBDIR}/examples/conn11_hb1.rb
+${GEM_LIBDIR}/examples/consume_file.rb
 ${GEM_LIBDIR}/examples/consumer.rb
+${GEM_LIBDIR}/examples/contrib.sh
+${GEM_LIBDIR}/examples/contributors.rb
 ${GEM_LIBDIR}/examples/examplogger.rb
 ${GEM_LIBDIR}/examples/get11conn_ex1.rb
 ${GEM_LIBDIR}/examples/get11conn_ex2.rb
+${GEM_LIBDIR}/examples/lflogger.rb
 ${GEM_LIBDIR}/examples/logexamp.rb
 ${GEM_LIBDIR}/examples/logexamp_ssl.rb
+${GEM_LIBDIR}/examples/publish_file.rb
+${GEM_LIBDIR}/examples/publish_file_conn.rb
 ${GEM_LIBDIR}/examples/publisher.rb
 ${GEM_LIBDIR}/examples/put11conn_ex1.rb
 ${GEM_LIBDIR}/examples/putget11_rh1.rb
+${GEM_LIBDIR}/examples/ssl_common.rb
 ${GEM_LIBDIR}/examples/ssl_ctxoptions.rb
 ${GEM_LIBDIR}/examples/ssl_newparm.rb
 ${GEM_LIBDIR}/examples/ssl_uc1.rb
@@ -61,6 +77,8 @@ ${GEM_LIBDIR}/spec/connection_spec.rb
 ${GEM_LIBDIR}/spec/message_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/stomp.gemspec
+${GEM_LIBDIR}/test/.gitignore
+${GEM_LIBDIR}/test/funcs.sh
 ${GEM_LIBDIR}/test/test_anonymous.rb
 ${GEM_LIBDIR}/test/test_client.rb
 ${GEM_LIBDIR}/test/test_codec.rb
@@ -71,4 +89,5 @@ ${GEM_LIBDIR}/test/test_message.rb
 ${GEM_LIBDIR}/test/test_ssl.rb
 ${GEM_LIBDIR}/test/test_urlogin.rb
 ${GEM_LIBDIR}/test/tlogger.rb
+${GEM_LIBDIR}/test/unitst.sh
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
