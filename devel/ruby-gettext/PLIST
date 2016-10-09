@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/10/04 12:14:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/10/09 14:10:04 taca Exp $
 bin/rmsgcat${RUBY_SUFFIX}
 bin/rmsgfmt${RUBY_SUFFIX}
 bin/rmsginit${RUBY_SUFFIX}
@@ -1364,7 +1364,6 @@ ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.edit.po
 ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po
 ${GEM_LIBDIR}/samples/po/zh_TW/hello_tk.po.time_stamp
 ${GEM_LIBDIR}/src/po_parser.ry
-${GEM_LIBDIR}/test/fixtures/N_.rb
 ${GEM_LIBDIR}/test/fixtures/_.rb
 ${GEM_LIBDIR}/test/fixtures/_/double_quote_in_double_quote.rb
 ${GEM_LIBDIR}/test/fixtures/_/double_quote_in_single_quote.rb
@@ -1381,8 +1380,8 @@ ${GEM_LIBDIR}/test/fixtures/erb/ascii.rxml
 ${GEM_LIBDIR}/test/fixtures/erb/non_ascii.rhtml
 ${GEM_LIBDIR}/test/fixtures/gladeparser.glade
 ${GEM_LIBDIR}/test/fixtures/hello.rb
+${GEM_LIBDIR}/test/fixtures/lower_n_.rb
 ${GEM_LIBDIR}/test/fixtures/multi_text_domain.rb
-${GEM_LIBDIR}/test/fixtures/n_.rb
 ${GEM_LIBDIR}/test/fixtures/non_ascii.rb
 ${GEM_LIBDIR}/test/fixtures/np_.rb
 ${GEM_LIBDIR}/test/fixtures/ns_.rb
@@ -1392,6 +1391,7 @@ ${GEM_LIBDIR}/test/fixtures/s_.rb
 ${GEM_LIBDIR}/test/fixtures/s_/custom.rb
 ${GEM_LIBDIR}/test/fixtures/simple.rb
 ${GEM_LIBDIR}/test/fixtures/untranslated.rb
+${GEM_LIBDIR}/test/fixtures/upper_n_.rb
 ${GEM_LIBDIR}/test/gettext-test-utils.rb
 ${GEM_LIBDIR}/test/locale/cr/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/da/LC_MESSAGES/plural.mo
@@ -1403,6 +1403,7 @@ ${GEM_LIBDIR}/test/locale/fr/LC_MESSAGES/test2.mo
 ${GEM_LIBDIR}/test/locale/ir/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/_.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/backslash.mo
+${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/hello.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/non_ascii.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/np_.mo
 ${GEM_LIBDIR}/test/locale/ja/LC_MESSAGES/ns_.mo
@@ -1421,6 +1422,7 @@ ${GEM_LIBDIR}/test/locale/li/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/li/LC_MESSAGES/plural_error.mo
 ${GEM_LIBDIR}/test/locale/po/LC_MESSAGES/plural.mo
 ${GEM_LIBDIR}/test/locale/sl/LC_MESSAGES/plural.mo
+${GEM_LIBDIR}/test/locale/zh_Hant/LC_MESSAGES/test1.mo
 ${GEM_LIBDIR}/test/po/_.pot
 ${GEM_LIBDIR}/test/po/backslash.pot
 ${GEM_LIBDIR}/test/po/cr/plural.po
@@ -1430,6 +1432,7 @@ ${GEM_LIBDIR}/test/po/fr/plural.po
 ${GEM_LIBDIR}/test/po/fr/plural_error.po
 ${GEM_LIBDIR}/test/po/fr/test1.po
 ${GEM_LIBDIR}/test/po/fr/test2.po
+${GEM_LIBDIR}/test/po/hello.pot
 ${GEM_LIBDIR}/test/po/ir/plural.po
 ${GEM_LIBDIR}/test/po/ja/_.edit.po
 ${GEM_LIBDIR}/test/po/ja/_.po
@@ -1437,7 +1440,9 @@ ${GEM_LIBDIR}/test/po/ja/_.po.time_stamp
 ${GEM_LIBDIR}/test/po/ja/backslash.edit.po
 ${GEM_LIBDIR}/test/po/ja/backslash.po
 ${GEM_LIBDIR}/test/po/ja/backslash.po.time_stamp
+${GEM_LIBDIR}/test/po/ja/hello.edit.po
 ${GEM_LIBDIR}/test/po/ja/hello.po
+${GEM_LIBDIR}/test/po/ja/hello.po.time_stamp
 ${GEM_LIBDIR}/test/po/ja/non_ascii.edit.po
 ${GEM_LIBDIR}/test/po/ja/non_ascii.po
 ${GEM_LIBDIR}/test/po/ja/non_ascii.po.time_stamp
@@ -1474,6 +1479,7 @@ ${GEM_LIBDIR}/test/po/po/plural.po
 ${GEM_LIBDIR}/test/po/s_.pot
 ${GEM_LIBDIR}/test/po/sl/plural.po
 ${GEM_LIBDIR}/test/po/untranslated.pot
+${GEM_LIBDIR}/test/po/zh_Hant/test1.po
 ${GEM_LIBDIR}/test/run-test.rb
 ${GEM_LIBDIR}/test/test_class_info.rb
 ${GEM_LIBDIR}/test/test_gettext.rb
