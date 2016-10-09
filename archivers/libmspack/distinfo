@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2016/10/09 03:11:25 ryoon Exp $
+
+SHA1 (libmspack-0.5alpha.tar.gz) = 226f19b1fc58e820671a1749983b06896e108cc4
+RMD160 (libmspack-0.5alpha.tar.gz) = b1aae1671cfa5fa7b830bed6255d52da513337e4
+Size (libmspack-0.5alpha.tar.gz) = 654193 bytes
