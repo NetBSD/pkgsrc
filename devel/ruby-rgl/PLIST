@@ -1,14 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2015/09/13 11:50:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/10/09 15:00:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/canvas.rb
 ${GEM_LIBDIR}/examples/examples.rb
-${GEM_LIBDIR}/examples/images/example.jpg
-${GEM_LIBDIR}/examples/images/module_graph.jpg
-${GEM_LIBDIR}/examples/images/rgl_modules.png
 ${GEM_LIBDIR}/examples/insel_der_tausend_gefahren.rb
 ${GEM_LIBDIR}/examples/north.rb
 ${GEM_LIBDIR}/examples/north/Graph.log
@@ -111,6 +108,7 @@ ${GEM_LIBDIR}/test/bellman_ford_test.rb
 ${GEM_LIBDIR}/test/bipartite_test.rb
 ${GEM_LIBDIR}/test/components_test.rb
 ${GEM_LIBDIR}/test/cycles_test.rb
+${GEM_LIBDIR}/test/dijkstra_issue24_test.rb
 ${GEM_LIBDIR}/test/dijkstra_test.rb
 ${GEM_LIBDIR}/test/directed_graph_test.rb
 ${GEM_LIBDIR}/test/dot_test.rb
