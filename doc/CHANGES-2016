@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4167 2016/10/09 13:59:26 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4168 2016/10/09 14:00:08 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5823,3 +5823,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added cad/veriwell version 2.8.7 [kamil 2016-10-09]
 	Updated devel/ruby-ffi to 1.9.14 [taca 2016-10-09]
 	Updated devel/ruby-ffi-yajl to 2.3.0 [taca 2016-10-09]
+	Updated net/mikutter to 3.4.4 [tsutsui 2016-10-09]
