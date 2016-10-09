@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2015/09/13 15:55:39 taca Exp $
+# $NetBSD: Makefile,v 1.55 2016/10/09 16:02:19 taca Exp $
 #
 
-DISTNAME=	rabbit-2.1.8
+DISTNAME=	rabbit-2.1.9
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rabbit-shocker.org/download/
 
