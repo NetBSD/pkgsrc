@@ -1,0 +1,5 @@
+VeriWell is a full Verilog simulator. It supports nearly all of the
+IEEE1364-1995 standard, as well as PLI 1.0.
+
+Yes, VeriWell *is* the same simulator that was sold by Wellspring Solutions in
+the mid-1990 and was included with the Thomas and Moorby book.
