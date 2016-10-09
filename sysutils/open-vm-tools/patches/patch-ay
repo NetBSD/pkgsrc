@@ -1,13 +1,13 @@
-$NetBSD: patch-ay,v 1.2 2008/08/31 06:36:48 scottr Exp $
+$NetBSD: patch-ay,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/include/vm_product.h.orig	2008-08-08 02:01:52.000000000 -0500
+--- lib/include/vm_product.h.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/include/vm_product.h
-@@ -498,6 +498,8 @@
- #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for Windows"
- #elif defined(__FreeBSD__)
- #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for FreeBSD"
+@@ -514,6 +514,8 @@
+ #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for Mac OS X"
+ #elif defined __ANDROID__
+ #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for Android"
 +#elif defined(__NetBSD__)
 +#  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for NetBSD"
- #elif defined(sun)
- #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for Solaris"
- #elif defined(__APPLE__)
+ #else
+ #  ifdef VMX86_TOOLS
+ #    error "Define a product string for this platform."

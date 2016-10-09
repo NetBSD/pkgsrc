@@ -1,22 +1,22 @@
-$NetBSD: patch-at,v 1.2 2008/08/31 06:36:48 scottr Exp $
+$NetBSD: patch-at,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/include/posix.h.orig	2008-08-08 02:01:52.000000000 -0500
+--- lib/include/posix.h.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/include/posix.h
-@@ -151,7 +151,7 @@ int Posix_Getgrnam_r(ConstUnicode name, 
-                  char *buf, size_t size, struct group **pgr);
- 
- #if !defined(sun)
--#if !defined(__APPLE__) && !defined(__FreeBSD__)
-+#if !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
- int Posix_Mount(ConstUnicode source, ConstUnicode target,
-                 const char *filesystemtype, unsigned long mountflags,
- 		const void *data);
-@@ -161,7 +161,7 @@ struct mntent *Posix_Getmntent(FILE *fp)
- struct mntent *Posix_Getmntent_r(FILE *fp, struct mntent *m,
-                                  char *buf, int size);
- 
--#endif // !defined(__APPLE__) && !defined(__FreeBSD__)
-+#endif // !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
- #else  // !defined(sun)
+@@ -104,7 +104,7 @@ char *Posix_MkTemp(const char *pathName)
+  * Make them NULL wrappers for all other platforms.
+  */
+ #define Posix_GetHostName gethostname
+-#if defined(__APPLE__)
++#if defined(__APPLE__) || defined(__NetBSD__)
+ #define Posix_GetHostByName gethostbyname
+ #endif
+ #define Posix_GetAddrInfo getaddrinfo
+@@ -178,7 +178,7 @@ struct mntent *Posix_Getmntent_r(FILE *f
  int Posix_Getmntent(FILE *fp, struct mnttab *mp);
  
+ #endif // !defined(sun)
+-#if !defined(__APPLE__)
++#if !defined(__APPLE__) && !defined(__NetBSD__)
+ 
+ 
+ /*

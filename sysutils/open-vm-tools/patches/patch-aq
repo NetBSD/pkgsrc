@@ -1,21 +1,14 @@
-$NetBSD: patch-aq,v 1.2 2008/08/31 06:36:48 scottr Exp $
+$NetBSD: patch-aq,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/include/hgfsUtil.h.orig	2008-08-08 02:01:52.000000000 -0500
+--- lib/include/hgfsUtil.h.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/include/hgfsUtil.h
-@@ -44,6 +44,7 @@
-        !defined(__timespec_defined) && \
-        !defined(sun) && \
-        !defined(__FreeBSD__) && \
-+       !defined(__NetBSD__) && \
+@@ -59,7 +59,8 @@
+        !defined sun && \
+        !defined __FreeBSD__ && \
         !__APPLE__ && \
-        !defined(_WIN32)
+-       !defined _WIN32
++       !defined _WIN32 && \
++       !defined __NetBSD__
  struct timespec {
-@@ -96,7 +97,7 @@ struct timespec {
- /*
-  * FreeBSD (pre-6.0) does not define EPROTO, so we'll define our own error code.
-  */
--#if defined(__FreeBSD__) && !defined(EPROTO)
-+#if (defined(__FreeBSD__) || defined(__NetBSD__)) && !defined(EPROTO)
- #define EPROTO (ELAST + 1)
- #endif
- 
+    time_t tv_sec;
+    long   tv_nsec;
