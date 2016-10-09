@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/03/24 16:12:33 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/09 21:41:56 wiz Exp $
 
 DISTNAME=	libnss-pgsql-1.5.0-beta
 PKGNAME=	nss-pgsql-1.5.0b
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://pgfoundry.org/frs/download.php/1878/
 EXTRACT_SUFX=	.tgz
