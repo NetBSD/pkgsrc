@@ -1,27 +1,22 @@
-# $NetBSD: Makefile,v 1.8 2015/01/04 02:51:44 mef Exp $
-#
+# $NetBSD: Makefile,v 1.9 2016/10/09 03:15:57 kamil Exp $
 
-DISTNAME=	myhdl-0.8.1
+.include "../../cad/py-MyHDL/Makefile.common"
+
 PKGNAME=	${DISTNAME:S/myhdl/MyHDL-gplcver/}
-CATEGORIES=	cad python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	GPL Cver cosimulation support for py-MyHDL
-LICENSE=	gnu-gpl-v2
 
 BUILD_DIRS+=	cosimulation/cver
-MAKE_FILE=	makefile.lnx
-AUTO_MKDIRS=	yes
+MAKE_FILE=	Makefile.lnx
+MAKE_FLAGS+=	INCS=-I${BUILDLINK_PREFIX.gplcver}/lib/gplcver/pli_incs/
+MAKE_FLAGS+=	CC=${CC:Q}
+
+INSTALLATION_DIRS+=	lib/gplcver
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/cosimulation/cver/myhdl_vpi.so \
 		${DESTDIR}${PREFIX}/lib/gplcver
-
-# XXX would require Python dependency
-#do-test:
-#	(cd ${WRKSRC}/cosimulation/cver/test && ${PYTHONBIN} test_all.py)
 
 .include "../../cad/gplcver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
