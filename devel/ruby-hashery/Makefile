@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/09/15 10:02:36 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/09 14:24:02 taca Exp $
 
-DISTNAME=	hashery-2.1.1
+DISTNAME=	hashery-2.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
