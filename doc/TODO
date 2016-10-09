@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16552 2016/10/09 03:17:50 ryoon Exp $
+$NetBSD: TODO,v 1.16553 2016/10/09 08:34:17 leot Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.8
-	o cups-filters-1.11.4
 	o cvm-0.97
 	o cvs-fast-export-1.38
 	o cvs2p4-2.5.5 [schmonz]
