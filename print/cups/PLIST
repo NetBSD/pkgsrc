@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2016/09/30 14:10:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2016/10/09 08:33:16 leot Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -623,6 +623,7 @@ share/doc/cups/help/api-overview.html
 share/doc/cups/help/api-ppd.html
 share/doc/cups/help/api-raster.html
 share/doc/cups/help/cgi.html
+share/doc/cups/help/encryption.html
 share/doc/cups/help/glossary.html
 share/doc/cups/help/kerberos.html
 share/doc/cups/help/license.html
