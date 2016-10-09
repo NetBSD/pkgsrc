@@ -1,0 +1,15 @@
+$NetBSD: patch-services_plugins_timeSync_Makefile.am,v 1.1 2016/10/09 03:41:56 ryoon Exp $
+
+--- services/plugins/timeSync/Makefile.am.orig	2016-02-16 20:06:48.000000000 +0000
++++ services/plugins/timeSync/Makefile.am
+@@ -39,6 +39,10 @@ if FREEBSD
+ libtimeSync_la_SOURCES += slewAdjtime.c
+ libtimeSync_la_SOURCES += pllNone.c
+ endif
++if NETBSD
++libtimeSync_la_SOURCES += slewAdjtime.c
++libtimeSync_la_SOURCES += pllNone.c
++endif
+ if LINUX
+ libtimeSync_la_SOURCES += slewLinux.c
+ libtimeSync_la_SOURCES += pllLinux.c

@@ -1,13 +1,13 @@
-$NetBSD: patch-ar,v 1.2 2008/08/31 06:36:48 scottr Exp $
+$NetBSD: patch-ar,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/include/iovector.h.orig	2008-08-08 02:01:52.000000000 -0500
+--- lib/include/iovector.h.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/include/iovector.h
 @@ -32,7 +32,7 @@
  /*
   * Ugly definition of struct iovec.
   */
--#if __linux__ || sun || __APPLE__
-+#if __linux__ || sun || __APPLE__ || __NetBSD__
+-#if defined(__linux__) || defined(sun) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(sun) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
  #include <sys/uio.h>    // for struct iovec
- #else // if __linux__ || sun || __APPLE__
+ #else
  

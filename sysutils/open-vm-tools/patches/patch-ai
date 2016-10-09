@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.2 2008/08/31 06:36:47 scottr Exp $
+$NetBSD: patch-ai,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/file/fileIOPosix.c.orig	2008-08-08 02:01:53.000000000 -0500
+--- lib/file/fileIOPosix.c.orig	2016-02-16 20:06:45.000000000 +0000
 +++ lib/file/fileIOPosix.c
-@@ -62,7 +62,7 @@
+@@ -66,7 +66,7 @@
  #include <dlfcn.h>
  #include <sys/xattr.h>
  #else
@@ -11,21 +11,3 @@ $NetBSD: patch-ai,v 1.2 2008/08/31 06:36:47 scottr Exp $
  #include <sys/param.h>
  #include <sys/mount.h>
  #else
-@@ -720,7 +720,7 @@ FileIO_Create(FileIODescriptor *file,   
-    ASSERT(file->lockToken == NULL);
-    ASSERT_ON_COMPILE(FILEIO_ERROR_LAST < 16); /* See comment in fileIO.h */
- 
--#if !defined(__FreeBSD__) && !defined(sun) && !defined(N_PLAT_NLM)
-+#if !defined(__FreeBSD__) && !defined(sun) && !defined(N_PLAT_NLM) && !defined(__NetBSD__)
-    /*
-     * If FILEIO_OPEN_EXCLUSIVE_LOCK or FILEIO_OPEN_MULTIWRITER_LOCK or
-     * (FILEIO_OPEN_ACCESS_READ | FILEIO_OPEN_LOCKED) are passed, and we are
-@@ -1248,7 +1248,7 @@ FileIO_Sync(const FileIODescriptor *file
- /*
-  * readv & writev are not available in the FreeBSD or Solaris Tools builds
-  */
--#if !defined(VMX86_TOOLS) || (!defined(__FreeBSD__) && !defined(sun))
-+#if !defined(VMX86_TOOLS) || (!defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__))
- 
- 
- /*
