@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2016/07/09 13:03:34 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/10/09 21:41:56 wiz Exp $
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 4.0.1
 
+PKGREVISION= 1
 .include "../../databases/libpqxx/Makefile.common"
 
 COMMENT=		C++ interface to postgresql-lib

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2016/09/13 23:59:37 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2016/10/09 21:41:57 wiz Exp $
 
 DISTNAME=		PyGreSQL-5.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/PyGreSQL/postgresql/}
+PKGREVISION=		1
 CATEGORIES=		databases python
 MASTER_SITES=		http://pygresql.org/files/
 

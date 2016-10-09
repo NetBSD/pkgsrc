@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/09/19 13:04:27 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/10/09 21:42:03 wiz Exp $
 #
 
 PKGNAME=		libpreludedb-pgsql-${VERSION}
-PKGREVISION=		13
+PKGREVISION=		14
 COMMENT=		PostgreSQL plugin for LibPreludeDB
 
 .include "../../security/libpreludedb/Makefile.common"
