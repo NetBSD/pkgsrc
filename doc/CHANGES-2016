@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4190 2016/10/09 17:36:20 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4191 2016/10/09 17:51:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5872,3 +5872,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/rabbit to 2.1.9 [taca 2016-10-09]
 	Updated net/mikutter to 3.4.5 [tsutsui 2016-10-09]
 	Updated net/sayaka to 3.2.2 [tsutsui 2016-10-09]
+	Updated graphics/gdk-pixbuf2 to 2.36.0 [ryoon 2016-10-09]
+	Updated graphics/gdk-pixbuf2-jasper to 2.36.0 [ryoon 2016-10-09]
+	Updated graphics/gdk-pixbuf2-xlib to 2.36.0 [ryoon 2016-10-09]
