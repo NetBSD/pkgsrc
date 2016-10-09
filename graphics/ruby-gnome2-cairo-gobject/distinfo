@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/04/16 17:41:04 tsutsui Exp $
+$NetBSD: distinfo,v 1.3 2016/10/09 15:43:30 tsutsui Exp $
 
-SHA1 (cairo-gobject-3.0.8.gem) = 2b5c0a4ea499f08042cac1ab62272eae9e32d33e
-RMD160 (cairo-gobject-3.0.8.gem) = 6042840268fbaeb4c433bdd21a3ea93ffeecc974
-SHA512 (cairo-gobject-3.0.8.gem) = 129d8f91fdb2bae1e332aab2481fabc3324b67707364fcfbd9245e8b9698bdda60453f9053ed588fc2700150c37b471b9c12c40fe726b5174407a3860d9df79a
-Size (cairo-gobject-3.0.8.gem) = 10240 bytes
+SHA1 (cairo-gobject-3.0.9.gem) = a744491e5b0fd4717fa4e7696ef8f8427ae3e9fd
+RMD160 (cairo-gobject-3.0.9.gem) = b2368360059aefccde1adc10d03bd78fc9674930
+SHA512 (cairo-gobject-3.0.9.gem) = 78257df99a7de79db3c0b124fc72a472003bea39484457f4f6d8a0121410460e12e002afda52ca0794927cfba6000945fa49588d69c4e0490c0c1c5dcfa24922
+Size (cairo-gobject-3.0.9.gem) = 10240 bytes
