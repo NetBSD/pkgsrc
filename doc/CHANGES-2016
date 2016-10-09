@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4186 2016/10/09 15:49:52 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.4187 2016/10/09 16:02:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5868,3 +5868,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.0.9 [tsutsui 2016-10-09]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.0.9 [tsutsui 2016-10-09]
 	Updated x11/ruby-gnome2-vte to 3.0.9 [tsutsui 2016-10-09]
+	Updated graphics/rabbit to 2.1.9 [taca 2016-10-09]
