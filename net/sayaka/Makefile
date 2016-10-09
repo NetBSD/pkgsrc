@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/08/03 10:23:17 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/10/09 17:15:18 tsutsui Exp $
 
-DISTNAME=	sayaka-3.2.0
-PKGREVISION=	2
+DISTNAME=	sayaka-3.2.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=isaki68k/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
@@ -11,8 +10,6 @@ MAINTAINER=	tsutsui@NetBSD.org
 HOMEPAGE=	https://github.com/isaki68k/sayaka
 COMMENT=	Terminal specific Twitter client
 LICENSE=	modified-bsd
-
-DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 
 USE_TOOLS+=	pax pkg-config
 
@@ -39,4 +36,5 @@ BUILDLINK_API_DEPENDS.vala+=    vala>=0.28.0
 .include "../../lang/vala/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
