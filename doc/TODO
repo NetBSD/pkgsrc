@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16554 2016/10/09 08:40:56 wiz Exp $
+$NetBSD: TODO,v 1.16555 2016/10/09 19:47:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -527,7 +527,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o classpath-gui-0.99
 	o clawsker-0.7.13
 	o clojure-1.8.0
-	o cloog-0.18.3
 	o clusterssh-4.05
 	o clutter-1.24
 	o clutter-gst-3.0.2
