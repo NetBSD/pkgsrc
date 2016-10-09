@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/10/02 21:25:39 asau Exp $
+# $NetBSD: Makefile,v 1.18 2016/10/09 21:41:57 wiz Exp $
 
 MODNAME=		pdo_pgsql
 CATEGORIES+=		databases
 COMMENT=		PHP extension for PHP Data Objects (PostgreSQL)
+PKGREVISION=		1
 
 USE_PHP_EXT_PATCHES=	yes
 

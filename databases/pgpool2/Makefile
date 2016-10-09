@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/03/11 21:30:55 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/09 21:41:57 wiz Exp $
 #
 
 DISTNAME=	pgpool-II-3.5.0
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME:S/pgpool-II/pgpool2/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.pgpool.net/mediawiki/images/
 
