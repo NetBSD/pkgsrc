@@ -1,22 +1,14 @@
-$NetBSD: patch-av,v 1.2 2008/08/31 06:36:48 scottr Exp $
+$NetBSD: patch-av,v 1.3 2016/10/09 03:41:56 ryoon Exp $
 
---- lib/include/util.h.orig	2008-08-08 02:01:52.000000000 -0500
+--- lib/include/util.h.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/include/util.h
-@@ -55,7 +55,7 @@
- /*
-  * Define the Util_ThreadID type.
-  */
--#if defined(__APPLE__) || defined(__FreeBSD__)
-+#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
- #include <pthread.h>
- typedef pthread_t Util_ThreadID;
- #elif defined(_WIN32)
-@@ -119,7 +119,7 @@ EXTERN char *Util_GetSafeTmpDir(Bool use
- EXTERN int Util_MakeSafeTemp(ConstUnicode tag,
-                              Unicode *presult);
- 
--#if defined(__linux__) || defined(__FreeBSD__) || defined(sun)
-+#if defined(__linux__) || defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
- EXTERN Bool Util_GetProcessName(pid_t pid, char *bufOut, size_t bufOutSize);
+@@ -67,6 +67,9 @@
+ #elif defined(__FreeBSD__)
+ #  include <pthread.h>
+    typedef pthread_t Util_ThreadID;
++#elif defined(__NetBSD__)
++#  include <pthread.h>
++   typedef pthread_t Util_ThreadID;
+ #else
+ #  error "Need typedef for Util_ThreadID"
  #endif
- 
