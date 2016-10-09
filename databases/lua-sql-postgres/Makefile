@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/10/08 12:55:54 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/09 21:41:56 wiz Exp $
 
+PKGREVISION= 1
 .include "../../databases/lua-sql-mysql/Makefile.common"
 
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/luasql/sql-postgres/}

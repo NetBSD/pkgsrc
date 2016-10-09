@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/06/10 14:21:37 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/09 21:42:03 wiz Exp $
 
 DISTNAME=	pam-pgsql-0.7.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pam-pgsql/}
 
