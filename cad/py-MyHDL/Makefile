@@ -1,19 +1,27 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 13:03:32 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/10/09 03:15:57 kamil Exp $
 
-DISTNAME=	myhdl-0.8.1
+.include "Makefile.common"
+
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
-CATEGORIES=	cad python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	Hardware description in Python
-LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.7
+# TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
+.include "../../lang/python/pyversion.mk"
+
+# Python 2.x only -- subprocess is part of Python 3.x
+.if ${_PYTHON_VERSION} < 32
+BUILD_DEPENDS+=	${PYPKGPREFIX}-subprocess32-[0-9]*:../../devel/py-subprocess32
+.endif
 
 do-test:
-	cd ${WRKSRC}/myhdl/test/core && ${PYTHONBIN} test_all.py
+	${RUN} cd ${WRKSRC}/myhdl/test/core && \
+		${SETENV} ${TEST_ENV} \
+		PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
+			py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
