@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4194 2016/10/09 21:04:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4195 2016/10/09 21:05:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5878,3 +5878,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/hdf5 to 1.8.17 [alnsn 2015-10-09]
 	Updated math/cloog to 0.18.4 [wiz 2016-10-09]
 	Updated graphics/ImageMagick to 7.0.3.3 [wiz 2016-10-09]
+	Updated x11/xterm to 327 [wiz 2016-10-09]
