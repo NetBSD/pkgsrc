@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4165 2016/10/09 13:16:37 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4166 2016/10/09 13:54:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5821,3 +5821,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/ruby-sequel to 4.39.0 [taca 2016-10-09]
 	Updated databases/ruby-sqlite3 to 1.3.12 [taca 2016-10-09]
 	Added cad/veriwell version 2.8.7 [kamil 2016-10-09]
+	Updated devel/ruby-ffi to 1.9.14 [taca 2016-10-09]
