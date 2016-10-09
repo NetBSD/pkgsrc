@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4192 2016/10/09 18:49:23 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.4193 2016/10/09 19:47:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5876,3 +5876,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/gdk-pixbuf2-jasper to 2.36.0 [ryoon 2016-10-09]
 	Updated graphics/gdk-pixbuf2-xlib to 2.36.0 [ryoon 2016-10-09]
 	Updated devel/hdf5 to 1.8.17 [alnsn 2015-10-09]
+	Updated math/cloog to 0.18.4 [wiz 2016-10-09]
