@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4179 2016/10/09 15:00:35 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4180 2016/10/09 15:07:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5835,3 +5835,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ruby-pathutil version 0.14.0 [taca 2016-10-09]
 	Updated devel/ruby-power_assert to 0.3.1 [taca 2016-10-09]
 	Updated devel/ruby-rgl to 0.5.2 [taca 2016-10-09]
+	Updated devel/ruby-rspec-support to 3.5.0 [taca 2016-10-09]
+	Updated devel/ruby-rspec-core to 3.5.4 [taca 2016-10-09]
+	Updated devel/ruby-rspec-expectations to 3.5.0 [taca 2016-10-09]
+	Updated devel/ruby-rspec-mocks to 3.5.0 [taca 2016-10-09]
+	Updated devel/ruby-rspec to 3.5.0 [taca 2016-10-09]
+	Updated devel/ruby-rspec-rails to 3.5.2 [taca 2016-10-09]
