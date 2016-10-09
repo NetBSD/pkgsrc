@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1 2016/10/09 03:15:57 kamil Exp $
+#
+# used by cad/MyHDL-gplcver/Makefile
+# used by cad/MyHDL-iverilog/Makefile
+
+GITHUB_PROJECT=	myhdl
+DISTNAME=	myhdl-0.9.0
+CATEGORIES=	cad python
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jandecaluwe/}
+
+HOMEPAGE=	http://myhdl.org/
+LICENSE=	gnu-lgpl-v2.1
+
+DISTINFO_FILE=	${.CURDIR}/../../cad/py-MyHDL/distinfo
+PATCHDIR=	${.CURDIR}/../../cad/py-MyHDL/patches
