@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/03/15 16:04:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/10/09 13:54:20 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ffi_c.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -429,6 +429,9 @@ ${GEM_LIBDIR}/spec/ffi/fixtures/GNUmakefile
 ${GEM_LIBDIR}/spec/ffi/fixtures/GlobalVariable.c
 ${GEM_LIBDIR}/spec/ffi/fixtures/LastErrorTest.c
 ${GEM_LIBDIR}/spec/ffi/fixtures/NumberTest.c
+${GEM_LIBDIR}/spec/ffi/fixtures/PipeHelper.h
+${GEM_LIBDIR}/spec/ffi/fixtures/PipeHelperPosix.c
+${GEM_LIBDIR}/spec/ffi/fixtures/PipeHelperWindows.c
 ${GEM_LIBDIR}/spec/ffi/fixtures/PointerTest.c
 ${GEM_LIBDIR}/spec/ffi/fixtures/ReferenceTest.c
 ${GEM_LIBDIR}/spec/ffi/fixtures/StringTest.c
