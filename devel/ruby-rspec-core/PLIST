@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/11/29 14:49:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/10/09 15:03:12 taca Exp $
 bin/rspec${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -43,6 +43,7 @@ ${GEM_LIBDIR}/lib/rspec/core/formatters/progress_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/protocol.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/snippet_extractor.rb
 ${GEM_LIBDIR}/lib/rspec/core/hooks.rb
+${GEM_LIBDIR}/lib/rspec/core/invocations.rb
 ${GEM_LIBDIR}/lib/rspec/core/memoized_helpers.rb
 ${GEM_LIBDIR}/lib/rspec/core/metadata.rb
 ${GEM_LIBDIR}/lib/rspec/core/metadata_filter.rb
