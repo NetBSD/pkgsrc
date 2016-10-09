@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4198 2016/10/09 21:20:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4199 2016/10/09 21:24:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5882,3 +5882,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/caff to 2.5 [wiz 2016-10-09]
 	Updated net/wireshark to 2.2.1 [wiz 2016-10-09]
 	Updated mail/notmuch to 0.23 [wiz 2016-10-09]
+	Updated devel/py-setuptools to 28.3.0 [wiz 2016-10-09]
