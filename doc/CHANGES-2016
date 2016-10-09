@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4189 2016/10/09 17:16:07 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.4190 2016/10/09 17:36:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5795,6 +5795,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/verilog to 10.1.1 [kamil 2016-10-08]
 	Renamed cad/verilog to cad/iverilog [kamil 2016-10-08]
 	Updated cad/MyHDL-iverilog to 0.8.1nb1 [kamil 2016-10-08]
+	Updated graphics/pngcrush to 1.8.8 [adam 2016-10-08]
 	Added archivers/libmspack version 0.5alpha [ryoon 2016-10-09]
 	Updated security/xml-security-c to 1.7.3 [ryoon 2016-10-09]
 	Updated cad/MyHDL-gplcver to 0.9.0 [kamil 2016-10-09]
