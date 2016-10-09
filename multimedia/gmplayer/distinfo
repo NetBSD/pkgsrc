@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.96 2016/03/06 03:04:05 ryoon Exp $
+$NetBSD: distinfo,v 1.97 2016/10/09 14:39:27 bsiegert Exp $
 
 SHA1 (mplayer/Abyss-1.7.tar.bz2) = 46d122cb60496eecbc96f26a0cfe0bda883fd725
 RMD160 (mplayer/Abyss-1.7.tar.bz2) = ca1e1c77177dc23300d011c1e00711c6bb81756a
@@ -12,10 +12,10 @@ SHA1 (mplayer/Blue-1.11.tar.bz2) = 7e112978e5cf16a023fbbfdb73d06f9709164aff
 RMD160 (mplayer/Blue-1.11.tar.bz2) = 41bd7b78ba4538b99cac31a5d777eeaba45c40bd
 SHA512 (mplayer/Blue-1.11.tar.bz2) = 88fbe7af71acaff50a6fab61c6d52095e155ab9842543bda3505c8c14ac95985748f67c2753e249e4aea35eb6deda568cf8b831a75bcfd1394dd029ff32a9267
 Size (mplayer/Blue-1.11.tar.bz2) = 222529 bytes
-SHA1 (mplayer/Blue-small-1.8.tar.bz2) = 44f432ab17ba33f4e60460fb21f1a6fdd147017a
-RMD160 (mplayer/Blue-small-1.8.tar.bz2) = a963f4cbed6fd5bd5f293a9e7299fb5eec0b695c
-SHA512 (mplayer/Blue-small-1.8.tar.bz2) = 4a3f4fdbce45d21be95c1776f4089bb5588984634a0ac14e2b730208634e5b592fd31d6a9e845601a1e9cfbfb098ffeb00f149808bb45770b496c599000d8e1c
-Size (mplayer/Blue-small-1.8.tar.bz2) = 157095 bytes
+SHA1 (mplayer/Blue-small-1.9.tar.bz2) = e6916389167ca326725010321483990fb15be559
+RMD160 (mplayer/Blue-small-1.9.tar.bz2) = c5a92c4fb2fc46b48ca9d7a2e12a20a7f211d478
+SHA512 (mplayer/Blue-small-1.9.tar.bz2) = aff5ea724053be314854435973a118433f7a3f60fbfdcc9df01869cc83e9a291b8eff1b4daae19b8208b17206abeb6cbbce65224de0e43aae71d721f6910b0c3
+Size (mplayer/Blue-small-1.9.tar.bz2) = 157062 bytes
 SHA1 (mplayer/BlueHeart-1.5.tar.bz2) = 157aca7420e8003ced2f4f1cb38a33c1bfd0db13
 RMD160 (mplayer/BlueHeart-1.5.tar.bz2) = 39e139b5428a695e5eb56e72e0e626cb3a5a2eea
 SHA512 (mplayer/BlueHeart-1.5.tar.bz2) = d59bc55cb7d03e2c798969ceae8ad46c93f63f50c648ef51eef08a5989cc8d9dbd870cbfbdc0c567733564bdf076495839b79e14b37d959562a5aab26a263a86
