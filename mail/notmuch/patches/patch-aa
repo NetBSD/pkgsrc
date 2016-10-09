@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.5 2015/11/22 23:55:33 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2016/10/09 21:20:45 wiz Exp $
 
 Install completion files into example directory.
 Accept zlib 1.2.3.
 
---- configure.orig	2015-10-30 10:14:41.000000000 +0000
+--- configure.orig	2016-10-04 01:47:21.000000000 +0000
 +++ configure
-@@ -411,9 +411,9 @@ if ! pkg-config --exists zlib; then
+@@ -490,9 +490,9 @@ if ! pkg-config --exists zlib; then
    rm -f compat/gen_zlib_pc
  fi
  
@@ -17,8 +17,8 @@ Accept zlib 1.2.3.
      printf "Yes.\n"
      have_zlib=1
      zlib_cflags=$(pkg-config --cflags zlib)
-@@ -614,7 +614,7 @@ EOF
- 	echo "	http://xapian.org/"
+@@ -688,7 +688,7 @@ EOF
+ 	echo "	https://xapian.org/"
      fi
      if [ $have_zlib -eq 0 ]; then
 -	echo "	zlib library (>= version 1.2.5.2, including development files such as headers)"
@@ -26,7 +26,7 @@ Accept zlib 1.2.3.
  	echo "	http://zlib.net/"
  	echo
      fi
-@@ -952,10 +952,10 @@ HAVE_DOXYGEN=${have_doxygen}
+@@ -1026,10 +1026,10 @@ HAVE_DOXYGEN=${have_doxygen}
  desktop_dir = \$(prefix)/share/applications
  
  # The directory to which bash completions files should be installed
