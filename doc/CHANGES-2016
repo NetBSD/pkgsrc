@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4155 2016/10/09 08:33:32 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4156 2016/10/09 08:34:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5804,3 +5804,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-nosexcover version 1.0.10 [wiz 2016-10-09]
 	Updated devel/p5-Term-ReadKey to 2.37 [wiz 2016-10-09]
 	Updated print/cups to 2.2.1 [leot 2016-10-09]
+	Updated print/cups-filters to 1.11.4 [leot 2016-10-09]
