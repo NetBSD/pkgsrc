@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/03/15 14:24:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/10/09 15:28:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/lib/tins/to.rb
 ${GEM_LIBDIR}/lib/tins/to_proc.rb
 ${GEM_LIBDIR}/lib/tins/token.rb
 ${GEM_LIBDIR}/lib/tins/uniq_by.rb
+${GEM_LIBDIR}/lib/tins/unit.rb
 ${GEM_LIBDIR}/lib/tins/version.rb
 ${GEM_LIBDIR}/lib/tins/write.rb
 ${GEM_LIBDIR}/lib/tins/xt.rb
@@ -196,5 +197,6 @@ ${GEM_LIBDIR}/tests/time_freezer_test.rb
 ${GEM_LIBDIR}/tests/to_test.rb
 ${GEM_LIBDIR}/tests/token_test.rb
 ${GEM_LIBDIR}/tests/uniq_by_test.rb
+${GEM_LIBDIR}/tests/unit_test.rb
 ${GEM_LIBDIR}/tins.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
