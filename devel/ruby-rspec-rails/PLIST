@@ -1,16 +1,17 @@
-@comment $NetBSD: PLIST,v 1.16 2015/11/29 14:59:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/10/09 15:06:30 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Capybara.md
 ${GEM_LIBDIR}/Changelog.md
-${GEM_LIBDIR}/License.md
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/generators/rspec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/controller_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/templates/controller_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/templates/view_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/feature_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/feature/templates/feature_singular_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/feature/templates/feature_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/helper_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/helper/templates/helper_spec.rb
@@ -58,6 +59,7 @@ ${GEM_LIBDIR}/lib/rspec/rails/example/view_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/rails/extensions.rb
 ${GEM_LIBDIR}/lib/rspec/rails/extensions/active_record/proxy.rb
 ${GEM_LIBDIR}/lib/rspec/rails/feature_check.rb
+${GEM_LIBDIR}/lib/rspec/rails/file_fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/active_job.rb
@@ -73,5 +75,7 @@ ${GEM_LIBDIR}/lib/rspec/rails/tasks/rspec.rake
 ${GEM_LIBDIR}/lib/rspec/rails/vendor/capybara.rb
 ${GEM_LIBDIR}/lib/rspec/rails/version.rb
 ${GEM_LIBDIR}/lib/rspec/rails/view_assigns.rb
+${GEM_LIBDIR}/lib/rspec/rails/view_path_builder.rb
 ${GEM_LIBDIR}/lib/rspec/rails/view_rendering.rb
+${GEM_LIBDIR}/lib/rspec/rails/view_spec_methods.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
