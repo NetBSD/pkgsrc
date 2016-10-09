@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2321 2016/10/09 08:11:17 wiz Exp $
+# $NetBSD: Makefile,v 1.2322 2016/10/09 14:34:04 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2012,6 +2012,7 @@ SUBDIR+=	ruby-curses-gem
 SUBDIR+=	ruby-daemon_controller
 SUBDIR+=	ruby-delayer
 SUBDIR+=	ruby-delayer-deferred
+SUBDIR+=	ruby-dep
 SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-docile
