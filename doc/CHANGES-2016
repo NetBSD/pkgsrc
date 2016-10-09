@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4172 2016/10/09 14:24:30 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4173 2016/10/09 14:26:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5828,3 +5828,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-gettext to 3.2.2 [taca 2016-10-09]
 	Updated devel/ruby-gettext_i18n_rails to 1.8.0 [taca 2016-10-09]
 	Updated devel/ruby-hashery to 2.1.2 [taca 2016-10-09]
+	Updated devel/ruby-minitest to 5.9.1 [taca 2016-10-09]
