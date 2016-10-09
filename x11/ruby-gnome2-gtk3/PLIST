@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/04/16 17:41:05 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/09 15:43:31 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -72,6 +72,7 @@ ${GEM_LIBDIR}/lib/gtk3/target-list.rb
 ${GEM_LIBDIR}/lib/gtk3/text-buffer.rb
 ${GEM_LIBDIR}/lib/gtk3/text-iter.rb
 ${GEM_LIBDIR}/lib/gtk3/text-tag-table.rb
+${GEM_LIBDIR}/lib/gtk3/text-view.rb
 ${GEM_LIBDIR}/lib/gtk3/toggle-action.rb
 ${GEM_LIBDIR}/lib/gtk3/toggle-button.rb
 ${GEM_LIBDIR}/lib/gtk3/tool-button.rb
@@ -94,6 +95,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/all_scroll_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/alphatest.png
 ${GEM_LIBDIR}/sample/gtk-demo/apple-red.png
 ${GEM_LIBDIR}/sample/gtk-demo/application.ui
+${GEM_LIBDIR}/sample/gtk-demo/appmenu.ui
 ${GEM_LIBDIR}/sample/gtk-demo/assistant.rb
 ${GEM_LIBDIR}/sample/gtk-demo/background.jpg
 ${GEM_LIBDIR}/sample/gtk-demo/brick.png
@@ -143,6 +145,22 @@ ${GEM_LIBDIR}/sample/gtk-demo/css_shadows.css
 ${GEM_LIBDIR}/sample/gtk-demo/css_shadows.rb
 ${GEM_LIBDIR}/sample/gtk-demo/cssview.css
 ${GEM_LIBDIR}/sample/gtk-demo/cursors.rb
+${GEM_LIBDIR}/sample/gtk-demo/data/16x16/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/16x16/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/22x22/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/22x22/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/24x24/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/24x24/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/256x256/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/256x256/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/32x32/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/32x32/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/48x48/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/48x48/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/512x512/gtk3-demo-symbolic.symbolic.png
+${GEM_LIBDIR}/sample/gtk-demo/data/512x512/gtk3-demo.png
+${GEM_LIBDIR}/sample/gtk-demo/data/source.svg
+${GEM_LIBDIR}/sample/gtk-demo/data/symbolic-source.svg
 ${GEM_LIBDIR}/sample/gtk-demo/decor1.png
 ${GEM_LIBDIR}/sample/gtk-demo/decor2.png
 ${GEM_LIBDIR}/sample/gtk-demo/default_cursor.png
@@ -228,6 +246,11 @@ ${GEM_LIBDIR}/sample/gtk-demo/scale.rb
 ${GEM_LIBDIR}/sample/gtk-demo/scale.ui
 ${GEM_LIBDIR}/sample/gtk-demo/se_resize_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/search_entry2.rb
+${GEM_LIBDIR}/sample/gtk-demo/shortcuts-boxes.ui
+${GEM_LIBDIR}/sample/gtk-demo/shortcuts-builder.ui
+${GEM_LIBDIR}/sample/gtk-demo/shortcuts-clocks.ui
+${GEM_LIBDIR}/sample/gtk-demo/shortcuts-gedit.ui
+${GEM_LIBDIR}/sample/gtk-demo/shortcuts.ui
 ${GEM_LIBDIR}/sample/gtk-demo/sidebar.rb
 ${GEM_LIBDIR}/sample/gtk-demo/sizegroup.rb
 ${GEM_LIBDIR}/sample/gtk-demo/spinbutton.ui
@@ -239,9 +262,11 @@ ${GEM_LIBDIR}/sample/gtk-demo/sw_resize_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/test_mod.rb
 ${GEM_LIBDIR}/sample/gtk-demo/text_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/textmask.rb
+${GEM_LIBDIR}/sample/gtk-demo/textscroll.rb
 ${GEM_LIBDIR}/sample/gtk-demo/textview.rb
 ${GEM_LIBDIR}/sample/gtk-demo/theming.ui
 ${GEM_LIBDIR}/sample/gtk-demo/theming_style_classes.rb
+${GEM_LIBDIR}/sample/gtk-demo/transparent.rb
 ${GEM_LIBDIR}/sample/gtk-demo/tree_store.rb
 ${GEM_LIBDIR}/sample/gtk-demo/vertical_text_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/w_resize_cursor.png
@@ -472,6 +497,7 @@ ${GEM_LIBDIR}/test/test-gtk-switch.rb
 ${GEM_LIBDIR}/test/test-gtk-target-entry.rb
 ${GEM_LIBDIR}/test/test-gtk-text-buffer.rb
 ${GEM_LIBDIR}/test/test-gtk-text-tag-table.rb
+${GEM_LIBDIR}/test/test-gtk-text-view.rb
 ${GEM_LIBDIR}/test/test-gtk-toggle-action.rb
 ${GEM_LIBDIR}/test/test-gtk-toggle-button.rb
 ${GEM_LIBDIR}/test/test-gtk-tool-button.rb
@@ -487,4 +513,5 @@ ${GEM_LIBDIR}/test/test-gtk-version.rb
 ${GEM_LIBDIR}/test/test-gtk-widget.rb
 ${GEM_LIBDIR}/test/test-gtk-window.rb
 ${GEM_LIBDIR}/test/test-gtk.rb
+${GEM_LIBDIR}/test/test-pango-context.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
