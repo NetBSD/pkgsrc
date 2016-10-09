@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 16:06:32 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/09 21:41:57 wiz Exp $
 
 PKGNAME=	${DISTNAME:C/-/${PGSQL_VERSION}-pgbench-/}
+PKGREVISION=	1
 COMMENT=	PostgreSQL benchmarking tools
 
 BUILD_DIRS+=		contrib/pgbench

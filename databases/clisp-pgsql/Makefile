@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/08/05 10:02:09 obache Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/09 21:41:55 wiz Exp $
 #
 
 CLISP_MODULE=	postgresql
 
 PKGNAME=	clisp-pgsql-$(CLISP_VERSION)
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 

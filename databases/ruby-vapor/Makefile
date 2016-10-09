@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2015/09/25 05:49:15 taca Exp $
+# $NetBSD: Makefile,v 1.28 2016/10/09 21:41:58 wiz Exp $
 
 DISTNAME=	vapor-0.81
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	databases ruby
 MASTER_SITES=	# http://rubyforge.org/frs/download.php/215/
 

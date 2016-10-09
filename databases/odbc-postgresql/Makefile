@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2016/03/05 11:28:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2016/10/09 21:41:56 wiz Exp $
 
 DISTNAME=	psqlodbc-09.00.0200
 PKGNAME=	odbc-postgresql-9.0.200
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=odbc/versions/src/}
 
