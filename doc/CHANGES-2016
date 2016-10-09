@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4182 2016/10/09 15:11:13 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4183 2016/10/09 15:24:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5843,3 +5843,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-rspec-rails to 3.5.2 [taca 2016-10-09]
 	Updated devel/ruby-simplecov to 0.12.0 [taca 2016-10-09]
 	Updated devel/ruby-stomp to 1.4.3 [taca 2016-10-09]
+	Updated devel/ruby-term-ansicolor to 1.4.0 [taca 2016-10-09]
