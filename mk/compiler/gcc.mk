@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.169 2016/09/13 07:59:15 maya Exp $
+# $NetBSD: gcc.mk,v 1.170 2016/10/10 08:26:08 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -737,17 +737,6 @@ _LINKER_RPATH_FLAG=	-R
 # GCC passes rpath directives to the linker using "-Wl,-R".
 _COMPILER_RPATH_FLAG=	-Wl,${_LINKER_RPATH_FLAG}
 
-.if !empty(MACHINE_ARCH:Mmips*)
-_COMPILER_ABI_FLAG.32=	-mabi=n32	# ABI == "32" == "n32"
-_COMPILER_ABI_FLAG.n32=	-mabi=n32
-_COMPILER_ABI_FLAG.o32=	-mabi=32
-_COMPILER_ABI_FLAG.64=	-mabi=64
-
-.  if defined(ABI) && !empty(ABI)
-MABIFLAG=	${_COMPILER_ABI_FLAG.${ABI}}
-.  endif
-.endif
-
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 #
 # Ensure that the correct rpath is passed to the linker if we need to
@@ -776,16 +765,10 @@ _GCC_SUBPREFIX!=	\
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
 _GCC_ARCHDIR!=		\
 	if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
-		${DIRNAME} `${_GCC_PREFIX}bin/gcc ${MABIFLAG} -print-libgcc-file-name 2>/dev/null`; \
+		${DIRNAME} `${_GCC_PREFIX}bin/gcc -print-libgcc-file-name 2>/dev/null`; \
 	else								\
 		${ECHO} "_GCC_ARCHDIR_not_found";			\
 	fi
-.  if empty(_GCC_ARCHDIR:M*not_found*)
-.    if defined(MABIFLAG) && !empty(MABIFLAG)
-_GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H:H}/
-_GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:H:T}/
-.    endif
-.  endif
 _GCC_LIBDIRS=	${_GCC_ARCHDIR}
 .  if empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 _GCC_LIBDIRS+=	${_GCC_PREFIX}lib${LIBABISUFFIX}
@@ -913,6 +896,11 @@ _COMPILER_ABI_FLAG.64=	-maix64
 .elif ${OPSYS} == "HPUX"
 _COMPILER_ABI_FLAG.32=	# empty
 _COMPILER_ABI_FLAG.64=	# empty
+.elif !empty(MACHINE_ARCH:Mmips*)
+_COMPILER_ABI_FLAG.32=	-mabi=n32	# ABI == "32" == "n32"
+_COMPILER_ABI_FLAG.n32=	-mabi=n32
+_COMPILER_ABI_FLAG.o32=	-mabi=32
+_COMPILER_ABI_FLAG.64=	-mabi=64
 .else
 _COMPILER_ABI_FLAG.32=	-m32
 _COMPILER_ABI_FLAG.64=	-m64
