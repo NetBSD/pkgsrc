@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4215 2016/10/10 15:06:54 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4216 2016/10/10 19:26:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5903,3 +5903,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ruby-RMagick to 2.16.0 [taca 2016-10-10]
 	Updated graphics/ruby-cairo to 1.15.2 [taca 2016-10-10]
 	Updated graphics/ruby-chunky_png to 1.3.7 [taca 2016-10-10]
+	Updated mail/neomutt to 20161003nb2 [wiz 2016-10-10]
