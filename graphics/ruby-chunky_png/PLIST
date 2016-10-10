@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/12/02 14:23:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/10/10 15:06:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -8,7 +8,7 @@ ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/CONTRIBUTING.rdoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/benchmarks/decoding_benchmark.rb
 ${GEM_LIBDIR}/benchmarks/encoding_benchmark.rb
@@ -319,6 +319,7 @@ ${GEM_LIBDIR}/spec/resources/polygon_unfilled.png
 ${GEM_LIBDIR}/spec/resources/rect.png
 ${GEM_LIBDIR}/spec/resources/replaced.png
 ${GEM_LIBDIR}/spec/resources/text_chunk.png
+${GEM_LIBDIR}/spec/resources/trailing_bytes_after_iend_chunk.png
 ${GEM_LIBDIR}/spec/resources/ztxt_chunk.png
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/benchmarks.rake
