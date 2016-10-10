@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/10/10 02:12:57 mef Exp $
+# $NetBSD: Makefile,v 1.11 2016/10/10 02:14:15 mef Exp $
 
 DISTNAME=	PDCurses-3.4
 PKGNAME=	${DISTNAME:tl}
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pdcurses.sourceforge.net/
 COMMENT=	Public domain implementation of the X/Open curses standard
 #LICENSE=	See README, Legal Stuff part, starting with:
-#  The core package is in the public domain, but small portions of PDCurses 
+#  The core package is in the public domain, but small portions of PDCurses
 #  are subject to copyright under various licenses
 
 GNU_CONFIGURE=		yes
