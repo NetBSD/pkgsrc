@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.10 2016/10/06 16:27:15 wiz Exp $
+$NetBSD: distinfo,v 1.11 2016/10/10 19:26:31 wiz Exp $
 
 SHA1 (neomutt-20161003.tar.gz) = d0849c7efaa7e099b17137d8f5f90b9a201142f1
 RMD160 (neomutt-20161003.tar.gz) = c69fe3dba35c3341987b6eb21b4bc0a1eb546762
 SHA512 (neomutt-20161003.tar.gz) = f3b42e0bf12038bfdce20db30d2ac4ee60a4ce317894ff035a4180a53d0899936aef6f809c52ef8786eab6b247e98ae244578d00a5dafb44e04f4b3ccc84b592
 Size (neomutt-20161003.tar.gz) = 2656280 bytes
+SHA1 (patch-doc_manual.xml.head) = c569f4d51781ecb5e980e83e6f8cde9cdb97a189
+SHA1 (patch-doc_muttrc.forgotten-attachment) = 185086380ac27b02e8f39e611d8de5461c1af8b0
 SHA1 (patch-hash.c) = 63df8e500d91f0dffb24801b84dc7155539d34a5
 SHA1 (patch-hash.h) = ddc94cfaeead9800f5f902de9f4255803122463d
 SHA1 (patch-headers.c) = 8d985b9dfc717c5c30e9fb314c33b35d61dcaf56
+SHA1 (patch-init.c) = 607da46758dcf4ee85644926f5d33f821b2f6713
+SHA1 (patch-init.h) = f2cfba5e802527d546623dbf01d5f2a8b1552cf3
+SHA1 (patch-send.c) = 16ed40585b04e136d96eb20e12caa2855c856b23
