@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/05/07 14:07:02 mef Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/10 23:16:32 tnn Exp $
 
-DISTNAME=	libebur128-1.0.1
-PKGREVISION=	1
+DISTNAME=	libebur128-1.1.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jiixyj/}
 GITHUB_PROJECT=	libebur128
