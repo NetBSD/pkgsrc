@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.39 2016/10/09 15:43:30 tsutsui Exp $
+# $NetBSD: Makefile,v 1.40 2016/10/10 14:58:45 tsutsui Exp $
 #
 
 DISTNAME=		gdk_pixbuf2-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gdkpixbuf-${VERSION}
+PKGREVISION=		1
 COMMENT=		Ruby binding of GdkPixbuf-2.x
 CATEGORIES=		graphics devel
 
 CONFLICTS+=		ruby-gnome2-gdkpixbuf-[0-9]*
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gdkpixbuf-[0-9]*
 
-DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}:../../devel/ruby-gnome2-glib
+DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gio>=${VERSION}:../../devel/ruby-gnome2-gio
 
-.include "../../devel/ruby-gnome2-glib/buildlink3.mk"
+.include "../../devel/ruby-gnome2-gio/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
 .include "../../lang/ruby/gem.mk"
