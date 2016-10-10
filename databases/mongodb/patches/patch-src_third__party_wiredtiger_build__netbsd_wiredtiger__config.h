@@ -1,4 +1,4 @@
-$NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 1.2 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 1.3 2016/10/10 13:15:40 ryoon Exp $
 
 * Copy from OpenBSD case.
 
@@ -39,7 +39,7 @@ $NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 
 +#define HAVE_FCNTL 1
 +
 +/* Define to 1 if you have the `fdatasync' function. */
-+#define HAVE_FDATASYNC 1
++/* #undef HAVE_FDATASYNC */
 +
 +/* Define to 1 if you have the `fread_unlocked' function. */
 +/* #undef HAVE_FREAD_UNLOCKED */
