@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/10/10 23:14:28 taca Exp $
+
+SHA1 (forwardable-extended-2.6.0.gem) = c9f7a83212091d60d345ddddf1dbe900fbea6854
+RMD160 (forwardable-extended-2.6.0.gem) = 2ae98ac2faeaad70ce7c92eff3acb3f2130b3878
+SHA512 (forwardable-extended-2.6.0.gem) = e78eed0d6e06c0db4c692718425aa92bb0d87060fb3cc3207c24d9105437caa2d3c421867077567e87cd462e8d6c2f255b82e14e2249b224e5eca2c2240355b7
+Size (forwardable-extended-2.6.0.gem) = 6656 bytes
