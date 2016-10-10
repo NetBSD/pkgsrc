@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/07/06 09:39:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/10/10 09:01:39 adam Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -6,37 +6,37 @@ ${PLIST.ba_LDAP}libexec/basic_ldap_auth
 ${PLIST.ba_NCSA}libexec/basic_ncsa_auth
 ${PLIST.ba_PAM}libexec/basic_pam_auth
 libexec/cachemgr.cgi
+${PLIST.ssl}libexec/cert_valid.pl
 ${PLIST.da_file}libexec/digest_file_auth
 ${PLIST.da_LDAP}libexec/digest_ldap_auth
 ${PLIST.diskd}libexec/diskd
 ${PLIST.eacl_file_userip}libexec/ext_file_userip_acl
 ${PLIST.eacl_LDAP_group}libexec/ext_ldap_group_acl
 ${PLIST.eacl_unix_group}libexec/ext_unix_group_acl
-${PLIST.ssl}libexec/cert_valid.pl
 libexec/helper-mux.pl
 libexec/log_db_daemon
 libexec/log_file_daemon
 ${PLIST.ta_kerberos}libexec/negotiate_kerberos_auth
 ${PLIST.ta_kerberos}libexec/negotiate_kerberos_auth_test
-${PLIST.unlinkd}libexec/unlinkd
 libexec/ntlm_fake_auth
 libexec/ntlm_smb_lm_auth
 libexec/pinger
 libexec/storeid_file_rewrite
+${PLIST.unlinkd}libexec/unlinkd
 libexec/url_fake_rewrite
 libexec/url_fake_rewrite.sh
 man/man1/squidclient.1
-man/man8/cachemgr.cgi.8
 ${PLIST.ba_getpwnam}man/man8/basic_getpwnam_auth.8
 ${PLIST.ba_LDAP}man/man8/basic_ldap_auth.8
 ${PLIST.ba_NCSA}man/man8/basic_ncsa_auth.8
 ${PLIST.ba_PAM}man/man8/basic_pam_auth.8
+man/man8/cachemgr.cgi.8
 ${PLIST.da_file}man/man8/digest_file_auth.8
 ${PLIST.eacl_file_userip}man/man8/ext_file_userip_acl.8
 ${PLIST.eacl_LDAP_group}man/man8/ext_ldap_group_acl.8
 ${PLIST.eacl_unix_group}man/man8/ext_unix_group_acl.8
-${PLIST.ta_kerberos}man/man8/negotiate_kerberos_auth.8
 man/man8/log_db_daemon.8
+${PLIST.ta_kerberos}man/man8/negotiate_kerberos_auth.8
 man/man8/squid.8
 man/man8/storeid_file_rewrite.8
 sbin/squid
