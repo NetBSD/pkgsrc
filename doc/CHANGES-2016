@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4216 2016/10/10 19:26:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4217 2016/10/10 23:17:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5904,3 +5904,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ruby-cairo to 1.15.2 [taca 2016-10-10]
 	Updated graphics/ruby-chunky_png to 1.3.7 [taca 2016-10-10]
 	Updated mail/neomutt to 20161003nb2 [wiz 2016-10-10]
+	Added devel/ruby-forwardable-extended version 2.6.0 [taca 2016-10-10]
+	Added devel/ruby-lazy_priority_queue version 0.1.1 [taca 2016-10-10]
