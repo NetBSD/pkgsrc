@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4213 2016/10/10 14:57:03 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4214 2016/10/10 14:59:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5901,3 +5901,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mongodb to 3.2.10 [ryoon 2016-10-10]
 	Updated sysutils/dbus to 1.10.12 [wiz 2016-10-10]
 	Updated graphics/ruby-RMagick to 2.16.0 [taca 2016-10-10]
+	Updated graphics/ruby-cairo to 1.15.2 [taca 2016-10-10]
