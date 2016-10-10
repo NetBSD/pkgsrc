@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2016/08/21 11:18:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2016/10/10 13:22:22 tsutsui Exp $
 #
 
 DISTNAME=		jwm-2.3.6
+PKGREVISION=		1
 CATEGORIES=		wm x11
 MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/
 EXTRACT_SUFX=		.tar.xz
@@ -9,7 +10,7 @@ EXTRACT_SUFX=		.tar.xz
 MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://www.joewing.net/programs/jwm/
 COMMENT=		Lightweight window manager with virtual desktops
-LICENSE=		gnu-gpl-v2
+LICENSE=		mit
 
 USE_TOOLS+=		pkg-config
 
@@ -30,9 +31,10 @@ SUBST_FILES.egdir=	Makefile.in
 SUBST_SED.egdir=	-e 's,@@EGDIR@@,${EGDIR},g'
 
 SUBST_CLASSES+=		icondir
-SUBST_STAGE.icondir=	post-patch
+SUBST_STAGE.icondir=	pre-configure
 SUBST_FILES.icondir=	example.jwmrc
 SUBST_SED.icondir=	-e 's|/usr/share/icons|${PREFIX}/share/icons|g'
+SUBST_SED.icondir+=	-e 's|/usr/local/share|${PREFIX}/share|g'
 
 PKG_SYSCONFSUBDIR=	jwm
 EGDIR=			${PREFIX}/share/examples/jwm
