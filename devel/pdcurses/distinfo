@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:29:02 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/10/10 02:12:57 mef Exp $
 
-SHA1 (PDCurses-3.3.tar.gz) = fde5908ecc417bdbaeac494cd37a8b73011257cc
-RMD160 (PDCurses-3.3.tar.gz) = 8787fa0c3f1ea0e8d85748b1a891ef6bd155cb0a
-SHA512 (PDCurses-3.3.tar.gz) = 8da3b79d7c16294bfeb7b299a0e02d1939646de184346b04b00ec66e54e72611d680fd0856ef762ad7ac33694fb9e7a6d59c9ffe2bc275a029c5a05d5739966a
-Size (PDCurses-3.3.tar.gz) = 329511 bytes
-SHA1 (patch-aa) = 18b54bdbc4564e0dd675c23a72e9388556e0c09c
-SHA1 (patch-ab) = 9381721ca10ae80a7fe012634d52ef1b018e3c6c
-SHA1 (patch-ac) = 77caf60fe803d7111de2f7b75a1950284fd9e139
+SHA1 (PDCurses-3.4.tar.gz) = e36684442a6171cc3a5165c8c49c70f67db7288c
+RMD160 (PDCurses-3.4.tar.gz) = 94d697d9879212ce619dafe045eef771a13ffa46
+SHA512 (PDCurses-3.4.tar.gz) = cf2144359935ea553954e60e74318168d4c6fcee48648dfec74325742a61786b285c59ad0a014cc1f4039a332c3dbf2031c64865025a0cd25ef8faacc5827d05
+Size (PDCurses-3.4.tar.gz) = 331253 bytes
+SHA1 (patch-aa) = 2e2e97b8bee839784d1108a6bec2f13467fd44b9
+SHA1 (patch-ab) = 1cba8632e03f64b82dc1322cb7ec31271e1e8e14
+SHA1 (patch-ac) = 0e3e08fd52efe15345aa1e6fdfe9c0eefa92857d

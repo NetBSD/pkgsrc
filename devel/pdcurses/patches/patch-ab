@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/02/24 04:57:07 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2016/10/10 02:12:57 mef Exp $
 
---- x11/Makefile.in.orig	2007-07-08 22:24:24.000000000 -0400
-+++ x11/Makefile.in
+--- x11/Makefile.in.orig	2008-07-13 17:08:22.000000000 +0900
++++ x11/Makefile.in	2016-10-10 10:39:28.000000000 +0900
 @@ -5,6 +5,10 @@ THIS		= Makefile
  
  @SET_MAKE@
@@ -36,16 +36,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/02/24 04:57:07 jlam Exp $
  
  LIB_DEPS        = -L$(PDCURSES_SRCDIR)/x11 -lXCurses
  
-@@ -49,7 +55,7 @@ tuidemo.o worm.o xmas.o
+@@ -48,7 +54,7 @@ tuidemo.o worm.o xmas.o
+ 
  SHLFILE		= XCurses
  
- #########################################################################
 -all:	$(PDCLIBS) $(DEMOS)
-+all:	$(LIBCURSES) $(DEMOS)
++all:   $(LIBCURSES) $(DEMOS)
  
  install:
  	echo Does nothing at the moment
-@@ -84,8 +90,8 @@ PDCSHOBJS = $(PDCOBJS:.o=.sho)
+@@ -81,8 +87,8 @@ PDCSHOBJS = $(PDCOBJS:.o=.sho)
  SHOFILES = $(LIBSHOBJS) $(PDCSHOBJS)
  
  $(LIBCURSES) : $(LIBOBJS) $(PDCOBJS)
@@ -56,8 +56,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/02/24 04:57:07 jlam Exp $
  
  $(SHLPRE)$(SHLFILE)$(SHLPST) : $(SHOFILES)
  	$(LD_RXLIB1) -o $@ $(SHOFILES) $(LD_RXLIB2)
-@@ -499,31 +505,31 @@ xmas: xmas.o
- 
+@@ -489,31 +495,31 @@ xmas: xmas.o
+ 	$(LINK) xmas.o -o $@ $(LDFLAGS)
  
  firework.o: $(demodir)/firework.c
 -	$(BUILD) $(demodir)/firework.c
@@ -95,9 +95,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/02/24 04:57:07 jlam Exp $
 -	$(BUILD) $(demodir)/xmas.c
 +	$(O_BUILD) $(demodir)/xmas.c
  
- #
  # This section provides for compiling and linking the
-@@ -562,22 +568,22 @@ ncurses: ncurses.o $(LIBCURSES)
+ # ncurses test programs.
+@@ -551,22 +557,22 @@ ncurses: ncurses.o $(LIBCURSES)
  	$(LINK) ncurses.o -o $@ $(LDFLAGS)
  
  bs.o: $(ncurses_testdir)/bs.c $(PDCURSES_CURSES_H)
