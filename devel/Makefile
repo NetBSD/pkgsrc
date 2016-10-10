@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2323 2016/10/09 14:37:15 taca Exp $
+# $NetBSD: Makefile,v 1.2324 2016/10/10 23:16:29 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2026,6 +2026,7 @@ SUBDIR+=	ruby-ffi
 SUBDIR+=	ruby-ffi-yajl
 SUBDIR+=	ruby-fiddle
 SUBDIR+=	ruby-flexmock
+SUBDIR+=	ruby-forwardable-extended
 SUBDIR+=	ruby-gemcutter
 SUBDIR+=	ruby-getopt
 SUBDIR+=	ruby-gettext
@@ -2046,6 +2047,7 @@ SUBDIR+=	ruby-inline
 SUBDIR+=	ruby-instance_storage
 SUBDIR+=	ruby-io-like
 SUBDIR+=	ruby-kgio
+SUBDIR+=	ruby-lazy_priority_queue
 SUBDIR+=	ruby-libyajl2
 SUBDIR+=	ruby-little-plugger
 SUBDIR+=	ruby-locale
