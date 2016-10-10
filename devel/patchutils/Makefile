@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/07/09 06:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/10 01:08:12 mef Exp $
 
-DISTNAME=		patchutils-0.3.3
-PKGREVISION=		2
+DISTNAME=		patchutils-0.3.4
 CATEGORIES=		devel
 MASTER_SITES=		http://cyberelk.net/tim/data/patchutils/stable/
 EXTRACT_SUFX=		.tar.xz
@@ -19,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-patch=${PREFIX}/bin/gpatch
 
 CHECK_PORTABILITY_SKIP+=tests/rediff2/run-test
-REPLACE_BASH+=		editdiff.in espdiff.in
+REPLACE_BASH+=		scripts/editdiff.in scripts/espdiff.in
 USE_TOOLS+=		bash:run
 
 .include "../../mk/bsd.pkg.mk"
