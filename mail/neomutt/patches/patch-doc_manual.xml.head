@@ -1,0 +1,24 @@
+$NetBSD: patch-doc_manual.xml.head,v 1.1 2016/10/10 19:26:31 wiz Exp $
+
+forgotten-attachment: fix empty regex expression
+
+The original regex was of the form "abc(|def)" to check for both "abc"
+and "abcdef".  Unfortunately, the regex libraries on BSDs/MacOS don't
+like this use of an empty sub-expression.
+
+Expanding the regex to: "(abc|abcdef)" fixes the problem.
+
+https://github.com/neomutt/neomutt/commit/3bc69ca25077b171f1ae9beee484629c5b5c6482
+
+
+--- doc/manual.xml.head.orig	2016-10-03 11:27:32.000000000 +0000
++++ doc/manual.xml.head
+@@ -10142,7 +10142,7 @@ set pgp_encrypt_self = &quot;no&quot;
+           <row>
+             <entry><literal>attach_keyword</literal></entry>
+             <entry>regular expression</entry>
+-            <entry><literal>\\&lt;attach(|ed|ments?)\\&gt;</literal></entry>
++            <entry><literal>\\&lt;(attach|attached|attachments?)\\&gt;</literal></entry>
+           </row>
+           <row>
+             <entry><literal>abort_noattach</literal></entry>
