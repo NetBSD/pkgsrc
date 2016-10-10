@@ -16,7 +16,7 @@
 #
 # $ pkg_notify category/package
 #
-# $Id: pkg_notify,v 1.4 2016/08/31 21:15:36 wiz Exp $
+# $Id: pkg_notify,v 1.5 2016/10/10 07:42:53 wiz Exp $
 
 use Net::FTP;
 use LWP::UserAgent;
@@ -581,6 +581,15 @@ foreach (@packages) {
 	my $project = `cd $pkgpath && $make show-var VARNAME=GITHUB_PROJECT`;
 	chomp($project);
 	$master_site =~ s/(.*github.com\/[^\/]+)\/?/$1\/$project\/releases\//;
+	$distname = "v$version";
+	$dist = "v";
+    }
+
+    # github - homepage only - look at releases page
+    if ($homepage =~ /github.com/) {
+	my $project = `cd $pkgpath && $make show-var VARNAME=GITHUB_PROJECT`;
+	chomp($project);
+	$master_site = $homepage . "/releases/";
 	$distname = "v$version";
 	$dist = "v";
     }
