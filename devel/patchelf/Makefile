@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2014/07/22 07:52:49 manu Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/10 00:05:31 mef Exp $
 
-DISTNAME=	patchelf-0.8
+DISTNAME=	patchelf-0.9
 CATEGORIES=	devel
-MASTER_SITES=	http://releases.nixos.org/patchelf/patchelf-0.8/
+MASTER_SITES=	http://releases.nixos.org/patchelf/${PKGNAME_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ohloh.net/p/patchelf
