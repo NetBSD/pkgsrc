@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/08 23:29:22 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/10 06:37:37 wiz Exp $
 
 DISTNAME=	toilet-0.3
 CATEGORIES=	misc
@@ -10,7 +10,6 @@ COMMENT=	Free replacement for the FIGlet utility
 # LICENSE=	wtfpl
 
 USE_TOOLS+=	pkg-config
-DEPENDS+=	libcaca>=0.99.18:../../graphics/libcaca
 
 GNU_CONFIGURE=	yes
 
