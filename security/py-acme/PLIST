@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/25 18:18:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/11 09:23:35 fhajny Exp $
 bin/jws
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,12 @@ ${PYSITELIB}/acme/crypto_util.pyo
 ${PYSITELIB}/acme/crypto_util_test.py
 ${PYSITELIB}/acme/crypto_util_test.pyc
 ${PYSITELIB}/acme/crypto_util_test.pyo
+${PYSITELIB}/acme/dns_resolver.py
+${PYSITELIB}/acme/dns_resolver.pyc
+${PYSITELIB}/acme/dns_resolver.pyo
+${PYSITELIB}/acme/dns_resolver_test.py
+${PYSITELIB}/acme/dns_resolver_test.pyc
+${PYSITELIB}/acme/dns_resolver_test.pyo
 ${PYSITELIB}/acme/errors.py
 ${PYSITELIB}/acme/errors.pyc
 ${PYSITELIB}/acme/errors.pyo
