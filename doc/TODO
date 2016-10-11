@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16568 2016/10/10 21:10:02 wiz Exp $
+$NetBSD: TODO,v 1.16569 2016/10/11 12:10:15 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o admesh-0.98.2
 	o adms-2.3.5
 	o adocman-0.13
-	o adodb-5.20
+	o adodb-5.20.7 [security]
 	o adplug-2.2.1
 	o advancecomp-1.20
 	o aegis-4.25
@@ -1110,6 +1110,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
+	o mongodb-3.4.0 [security]
 	o monit-5.17
 	o mono-4.4.0.122
 	o mono-tools-4.2
