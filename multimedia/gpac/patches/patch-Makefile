@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2016/10/11 00:31:28 tnn Exp $
+
+Remove non-standard cp(1) option
+
+--- Makefile.orig	2016-03-04 16:03:40.000000000 +0000
++++ Makefile
+@@ -125,9 +125,9 @@ ifeq ($(CONFIG_DARWIN),yes)
+ 	cp -R $(SRC_PATH)/gui/extensions/* "$(DESTDIR)$(prefix)/share/gpac/gui/extensions/" 
+ 	cp $(SRC_PATH)/shaders/* "$(DESTDIR)$(prefix)/share/gpac/shaders/" 
+ else
+-	cp --no-preserve=mode,ownership,timestamp $(SRC_PATH)/gui/icons/* "$(DESTDIR)$(prefix)/share/gpac/gui/icons/" 
+-	cp -R --no-preserve=mode,ownership,timestamp $(SRC_PATH)/gui/extensions/* "$(DESTDIR)$(prefix)/share/gpac/gui/extensions/" 
+-	cp --no-preserve=mode,ownership,timestamp $(SRC_PATH)/shaders/* "$(DESTDIR)$(prefix)/share/gpac/shaders/" 
++	cp $(SRC_PATH)/gui/icons/* "$(DESTDIR)$(prefix)/share/gpac/gui/icons/" 
++	cp -R $(SRC_PATH)/gui/extensions/* "$(DESTDIR)$(prefix)/share/gpac/gui/extensions/" 
++	cp $(SRC_PATH)/shaders/* "$(DESTDIR)$(prefix)/share/gpac/shaders/" 
+ endif
+ 
+ lninstall:
