@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/05 22:02:08 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/11 00:31:28 tnn Exp $
+bin/DashCast
 bin/MP42TS
 bin/MP4Box
 bin/MP4Client
@@ -34,8 +35,8 @@ lib/gpac/gm_widgetman.so
 lib/gpac/gm_x11_out.so
 lib/gpac/gm_xvid_dec.so
 lib/libgpac.so
-lib/libgpac.so.4
-lib/libgpac.so.4.2.0
+lib/libgpac.so.6
+lib/libgpac.so.6.0.0
 man/man1/gpac.1
 man/man1/mp4box.1
 man/man1/mp4client.1
@@ -43,12 +44,20 @@ share/gpac/gpac.mp4
 share/gpac/gui/extensions/H2B2VS/H2B2VS.png
 share/gpac/gui/extensions/H2B2VS/h2b2vs.js
 share/gpac/gui/extensions/H2B2VS/init.js
+share/gpac/gui/extensions/H2B2VS/logo_hd.png
+share/gpac/gui/extensions/H2B2VS/logo_uhd.png
+share/gpac/gui/extensions/bifs_tests/applications-other.svg
+share/gpac/gui/extensions/bifs_tests/bifs_tests.js
+share/gpac/gui/extensions/bifs_tests/init.js
 share/gpac/gui/extensions/player/applications-multimedia.svg
 share/gpac/gui/extensions/player/fileopen.js
 share/gpac/gui/extensions/player/init.js
 share/gpac/gui/extensions/player/player.js
 share/gpac/gui/extensions/player/playlist.js
 share/gpac/gui/extensions/player/stats.js
+share/gpac/gui/extensions/showroom/init.js
+share/gpac/gui/extensions/showroom/osmo.bt
+share/gpac/gui/extensions/showroom/showroom.js
 share/gpac/gui/extensions/widget_manager/applications-system.svg
 share/gpac/gui/extensions/widget_manager/init.js
 share/gpac/gui/gui.bt
@@ -112,3 +121,5 @@ share/gpac/gui/icons/tv.svg
 share/gpac/gui/icons/up.svg
 share/gpac/gui/icons/world.svg
 share/gpac/gui/mpegu-core.js
+share/gpac/shaders/fragment.glsl
+share/gpac/shaders/vertex.glsl
