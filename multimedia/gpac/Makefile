@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2016/08/17 00:06:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2016/10/11 00:31:28 tnn Exp $
 
-DISTNAME=	gpac-0.5.2
-PKGREVISION=	4
+DISTNAME=	gpac-0.6.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gpac/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -35,7 +34,7 @@ CFLAGS+=		-I${BUILDLINK_PREFIX.faad2}/${BUILDLINK_INCDIRS.faad2}
 .include "../../graphics/png/buildlink3.mk"
 # doesn't work yet
 #.include "../../lang/spidermonkey/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
