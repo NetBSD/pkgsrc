@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/25 18:18:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/11 09:23:35 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
@@ -23,9 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-dialog>=3.2.2rc1:../../devel/py-dialog2
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.0:../../time/py-parsedatetime
-DEPENDS+=	${PYPKGPREFIX}-psutil>=2.1.0:../../sysutils/py-psutil
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
-DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
