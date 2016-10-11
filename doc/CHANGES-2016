@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4223 2016/10/11 14:39:13 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4224 2016/10/11 15:43:07 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5913,3 +5913,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-vcversioner version 2.16.0.0 [bsiegert 2016-10-11]
 	Updated devel/p5-CPAN-FindDependencies to 2.46 [mef 2016-10-11]
 	Updated devel/p5-CPAN-ParseDistribution to 1.54 [mef 2016-10-11]
+	Updated net/freeradius2 to 2.2.9 [sevan 2016-10-11]
