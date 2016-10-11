@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4222 2016/10/11 12:25:20 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.4223 2016/10/11 14:39:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5911,3 +5911,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-acme to 0.9.1 [fhajny 2016-10-11]
 	Updated security/py-certbot to 0.9.1 [fhajny 2016-10-11]
 	Added devel/py-vcversioner version 2.16.0.0 [bsiegert 2016-10-11]
+	Updated devel/p5-CPAN-FindDependencies to 2.46 [mef 2016-10-11]
+	Updated devel/p5-CPAN-ParseDistribution to 1.54 [mef 2016-10-11]
