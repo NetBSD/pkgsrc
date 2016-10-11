@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4218 2016/10/10 23:18:08 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.4219 2016/10/11 00:33:05 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5907,3 +5907,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ruby-forwardable-extended version 2.6.0 [taca 2016-10-10]
 	Added devel/ruby-lazy_priority_queue version 0.1.1 [taca 2016-10-10]
 	Updated audio/libebur128 to 1.1.0 [tnn 2016-10-10]
+	Updated multimedia/gpac to 0.6.1 [tnn 2016-10-11]
