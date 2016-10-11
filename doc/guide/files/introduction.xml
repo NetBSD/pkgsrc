@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.38 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.39 2016/10/11 15:41:09 sevan Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -388,7 +388,8 @@ minutes!</para>
     <para>When giving examples for commands, shell prompts are used to
       show if the command should/can be issued as root, or if
       <quote>normal</quote> user privileges are sufficient. We use a
-      &rprompt; for root's shell prompt, and a &cprompt; for users'
-      shell prompt, assuming they use the C-shell or tcsh.</para>
+      &rprompt; for root's shell prompt, a &cprompt; for users'
+      shell prompt, assuming they use the C-shell or tcsh and a &uprompt for
+      bourne shell and derivatives.</para>
   </sect1>
 </chapter>
