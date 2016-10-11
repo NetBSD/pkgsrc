@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4220 2016/10/11 09:24:10 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4221 2016/10/11 09:24:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5909,3 +5909,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/libebur128 to 1.1.0 [tnn 2016-10-10]
 	Updated multimedia/gpac to 0.6.1 [tnn 2016-10-11]
 	Updated security/py-acme to 0.9.1 [fhajny 2016-10-11]
+	Updated security/py-certbot to 0.9.1 [fhajny 2016-10-11]
