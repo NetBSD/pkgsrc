@@ -1,0 +1,9 @@
+You can write a setup.py with no version information specified, and vcversioner
+will find a recent, properly-formatted VCS tag and extract a version from it.
+
+It's much more convenient to be able to use your version control system's
+tagging mechanism to derive a version number than to have to duplicate that
+information all over the place. I eventually ended up copy-pasting the same
+code into a couple different setup.py files just to avoid duplicating version
+information. But, copy-pasting is dumb and unit testing setup.py files is hard.
+This code got factored out into vcversioner.
