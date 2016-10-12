@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2016/05/06 20:33:59 asau Exp $
+$NetBSD: patch-ab,v 1.7 2016/10/12 11:35:48 asau Exp $
 
 Honor PREFIX.
 
