@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4228 2016/10/12 13:40:11 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4229 2016/10/12 13:58:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5926,3 +5926,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Report to 1.17 [mef 2016-10-12]
 	Updated devel/p5-Modern-Perl to 1.20161005 [mef 2016-10-12]
 	Updated devel/p5-Module-CoreList to 5.20160920 [mef 2016-10-12]
+	Updated sysutils/open-vm-tools to 10.0.7nb1 [ryoon 2016-10-12]
