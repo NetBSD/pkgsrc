@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/10/05 06:40:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/10/12 12:41:48 mef Exp $
 
-DISTNAME=	Specio-0.28
+DISTNAME=	Specio-0.29
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
