@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4224 2016/10/11 15:43:07 sevan Exp $
+$NetBSD: CHANGES-2016,v 1.4225 2016/10/12 00:30:32 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5914,3 +5914,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-FindDependencies to 2.46 [mef 2016-10-11]
 	Updated devel/p5-CPAN-ParseDistribution to 1.54 [mef 2016-10-11]
 	Updated net/freeradius2 to 2.2.9 [sevan 2016-10-11]
+	Added math/py-abcpmc version 0.1.2 [kamil 2016-10-12]
