@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:28:17 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/10/12 12:50:20 mef Exp $
 
-SHA1 (File-pushd-1.009.tar.gz) = eec3fe5eb100e1996a4b5861c3de25604c44763e
-RMD160 (File-pushd-1.009.tar.gz) = be8c2fb28421ec32c88cac4510beb70be6c9b95c
-SHA512 (File-pushd-1.009.tar.gz) = d0644ec0d7921137844a91bbd4e566408756c1603bca3d9b19102b1d3d3b57da3da635d2364bdab0e54a8f7f0d9769b6eac52f3492dd504f978d5b7b7d824080
-Size (File-pushd-1.009.tar.gz) = 18933 bytes
+SHA1 (File-pushd-1.014.tar.gz) = 851da86e47000b97119b4e2b3e019ff56a4703e8
+RMD160 (File-pushd-1.014.tar.gz) = 200a8dd5aa0e29ab307937f7a3f5424bef72da6a
+SHA512 (File-pushd-1.014.tar.gz) = f81b852b6c64d330291b382df83b6cd15c807bbefb00fc51ccbf709ee7c6deca57f996cbe86322b81adf0b14e608d4f63f969330561b7c25a4a7b32f0e3df6bb
+Size (File-pushd-1.014.tar.gz) = 20674 bytes
