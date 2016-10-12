@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2016/06/08 19:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/10/12 13:15:15 mef Exp $
 #
 
-DISTNAME=	Log-Report-1.16
+DISTNAME=	Log-Report-1.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
@@ -15,6 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-Log-Report-Optional>=1.02:../../devel/p5-Log-Report-Optional
 BUILD_DEPENDS+=	p5-Devel-GlobalDestruction>=0.09:../../devel/p5-Devel-GlobalDestruction
+# for make test ( and optional)
+BUILD_DEPENDS+=	p5-Mojolicious-[0-9]*:../../www/p5-Mojolicious
 
 PERL5_PACKLIST=		auto/Log/Report/.packlist
 
