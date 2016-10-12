@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.51 2016/08/26 14:57:27 mef Exp $
+$NetBSD: distinfo,v 1.52 2016/10/12 13:19:16 mef Exp $
 
-SHA1 (Module-CoreList-5.20160820.tar.gz) = 3ad29c31c1c80597fcb02c7450023960d1fc4c0c
-RMD160 (Module-CoreList-5.20160820.tar.gz) = fbdf1f0fb2cbb8ad0c58102654de66e65dc83a28
-SHA512 (Module-CoreList-5.20160820.tar.gz) = 2c4c1840b623a7f003ad90e1bcd129e9a8a74bf3be019d447384baad54dcefaf212fec6b68a7857c2afff13954c15a14260be005396c1d77a3996faedd0f5ef9
-Size (Module-CoreList-5.20160820.tar.gz) = 92505 bytes
+SHA1 (Module-CoreList-5.20160920.tar.gz) = 9553d9bfd4e915f133e5c11d4516ec94020e2ce3
+RMD160 (Module-CoreList-5.20160920.tar.gz) = 8a805b0cd9ba2446db06a85695e186d9bf4fc9c6
+SHA512 (Module-CoreList-5.20160920.tar.gz) = 006aaa321accb9e85e7b369ea9ae14f72bf95b36104328e883668e357781490b8c3733fa42e5a727d8a325fed0a10bd3271db4883e4be40e7044865e1c321d72
+Size (Module-CoreList-5.20160920.tar.gz) = 92928 bytes
