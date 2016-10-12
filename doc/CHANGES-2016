@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4227 2016/10/12 12:55:48 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4228 2016/10/12 13:40:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5922,3 +5922,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Future to 0.34 [mef 2016-10-12]
 	Updated devel/p5-File-pushd to 1.014 [mef 2016-10-12]
 	Updated devel/p5-File-Find-Rule-Permissions to 2.03 [mef 2016-10-12]
+	Updated devel/p5-CPAN-Perl-Releases to 2.94 [mef 2016-10-12]
+	Updated devel/p5-Log-Report to 1.17 [mef 2016-10-12]
+	Updated devel/p5-Modern-Perl to 1.20161005 [mef 2016-10-12]
+	Updated devel/p5-Module-CoreList to 5.20160920 [mef 2016-10-12]
