@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4226 2016/10/12 10:11:34 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4227 2016/10/12 12:55:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5916,3 +5916,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/freeradius2 to 2.2.9 [sevan 2016-10-11]
 	Added math/py-abcpmc version 0.1.2 [kamil 2016-10-12]
 	Updated misc/tmux to 2.3nb2 [leot 2016-10-12]
+	Updated devel/p5-Specio to 0.29 [mef 2016-10-12]
+	Updated devel/p5-Log-Dispatch-FileRotate to 1.22 [mef 2016-10-12]
+	Updated devel/p5-Log-Any-Adapter-Screen to 0.13 [mef 2016-10-12]
+	Updated devel/p5-Future to 0.34 [mef 2016-10-12]
+	Updated devel/p5-File-pushd to 1.014 [mef 2016-10-12]
+	Updated devel/p5-File-Find-Rule-Permissions to 2.03 [mef 2016-10-12]
