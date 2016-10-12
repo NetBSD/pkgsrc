@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/09/19 09:40:42 mef Exp $
+$NetBSD: distinfo,v 1.4 2016/10/12 12:53:37 mef Exp $
 
-SHA1 (File-Find-Rule-Permissions-2.01.tar.gz) = 7c4485762d518c6c834649e48b20a7082d7f93d4
-RMD160 (File-Find-Rule-Permissions-2.01.tar.gz) = 7799d894ed7b5de393824a2ac91e7222fe62b467
-SHA512 (File-Find-Rule-Permissions-2.01.tar.gz) = a2d63bd5063c87ba9fa1257a2e8e8f516cb089e53bd8e7f9b7c798435df84a8acc364a70957d6e4c560397e99b85a1380cdfa3350becfccb7addc89db6438705
-Size (File-Find-Rule-Permissions-2.01.tar.gz) = 16452 bytes
+SHA1 (File-Find-Rule-Permissions-2.03.tar.gz) = 1d501756b867b490dbe1c8faedb1bd8fff67e944
+RMD160 (File-Find-Rule-Permissions-2.03.tar.gz) = 0f6b2fbb80c1e6455fc5dac7f07a82daacd9bf06
+SHA512 (File-Find-Rule-Permissions-2.03.tar.gz) = 6ac9616f18b7d21f867ed780e5a8c3fd67034204cb5469d13c37e8cb6538a490663b83ad883da752ef9d37bd47e71ed2e0e4c0c8df21b5cf5eea1800883a4769
+Size (File-Find-Rule-Permissions-2.03.tar.gz) = 16619 bytes
