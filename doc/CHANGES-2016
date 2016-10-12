@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4230 2016/10/12 14:48:59 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4231 2016/10/12 16:59:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5928,3 +5928,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-CoreList to 5.20160920 [mef 2016-10-12]
 	Updated sysutils/open-vm-tools to 10.0.7nb1 [ryoon 2016-10-12]
 	Updated devel/p5-Dist-Zilla to 6.008 [mef 2016-10-12]
+	Updated databases/mysql55-client to 5.5.53 [adam 2016-10-12]
+	Updated databases/mysql55-server to 5.5.53 [adam 2016-10-12]
+	Updated databases/mysql56-client to 5.6.34 [adam 2016-10-12]
+	Updated databases/mysql56-server to 5.6.34 [adam 2016-10-12]
