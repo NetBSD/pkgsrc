@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/13 15:17:29 fhajny Exp $
 
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 COLLECTD_PACKAGE=	perl
 
 COMMENT=		Statistics collection daemon - perl plugin
