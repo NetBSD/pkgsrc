@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4241 2016/10/13 17:53:52 tron Exp $
+$NetBSD: CHANGES-2016,v 1.4242 2016/10/13 19:09:52 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5956,3 +5956,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-collectd to 5.6.1 [fhajny 2016-10-13]
 	Updated sysutils/py-collectd to 5.6.1 [fhajny 2016-10-13]
 	Updated mail/mutt to 1.7.1 [tron 2016-10-13]
+	Updated net/haproxy to 1.6.9 [morr 2016-10-13]
