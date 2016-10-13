@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2016/10/09 13:15:03 kamil Exp $
+# $NetBSD: Makefile,v 1.92 2016/10/13 04:10:16 jnemeth Exp $
 #
 
 COMMENT=	CAD tools
@@ -62,7 +62,6 @@ SUBDIR+=	stdio-wcalc
 SUBDIR+=	tkgate
 SUBDIR+=	tnt-mmtl
 SUBDIR+=	transcalc
-SUBDIR+=	verilog
 SUBDIR+=	verilog-mode
 SUBDIR+=	veriwell
 SUBDIR+=	vipec
