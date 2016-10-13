@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4234 2016/10/13 09:38:37 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4235 2016/10/13 11:03:25 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5935,3 +5935,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gauche to 0.9.5 [enami 2016-10-13]
 	Updated devel/jenkins to 2.25 [fhajny 2016-10-13]
 	Added devel/jenkins-lts version 2.19.1 [fhajny 2016-10-13]
+	Added sysutils/riemann-client version 1.9.1 [fhajny 2016-10-13]
