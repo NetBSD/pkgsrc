@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2016/10/12 13:57:13 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2016/10/13 21:48:26 ryoon Exp $
 
 SHA1 (open-vm-tools-10.0.7-3227872.tar.gz) = cd22a3d79d68de46647e8add78bcaf829bb0598d
 RMD160 (open-vm-tools-10.0.7-3227872.tar.gz) = df8cfa62ffd0fbba0432cb0deac0f202b2278625
@@ -22,7 +22,7 @@ SHA1 (patch-bb) = e22d082689016d81add208e1d3b31d9d897d36e8
 SHA1 (patch-bc) = c2f316cd9035648676fd9d0d7e40fc7f6bf5c8d4
 SHA1 (patch-bd) = eacc267fad7021a96ee435e8fc41c82fb49d9c5f
 SHA1 (patch-be) = 4e4f88df81daf40769b38d1ddd49fbf5e8d8d1eb
-SHA1 (patch-bf) = b3fd95f533f3191a6c2ee6a6540218d25d15623d
+SHA1 (patch-bf) = e902ad24ed7e9616aa57d07cd3485ba3870ba51b
 SHA1 (patch-bh) = 86793b6411a64d3189f47d5236f2a6f4c9fff05c
 SHA1 (patch-bm) = 219f196fc07e3746e9e6eb340be5e647544a255a
 SHA1 (patch-bt) = 34c85d8d994c33fb4e18f76bb8b6baa41098f23e
