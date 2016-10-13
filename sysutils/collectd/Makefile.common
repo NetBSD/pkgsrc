@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/10/28 11:46:07 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/10/13 15:17:28 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -16,9 +16,10 @@
 # used by sysutils/p5-collectd/Makefile
 # used by sysutils/py-collectd/Makefile
 
-DISTNAME=	collectd-5.5.0
+DISTNAME=	collectd-5.6.1
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://collectd.org/
@@ -26,7 +27,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		autoconf automake pkg-config
 USE_LANGUAGES=		c c99 c++
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/collectd/distinfo
@@ -69,6 +70,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_getfsstat=no
+
 CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
 
 .include "../../mk/compiler.mk"
@@ -77,6 +80,15 @@ CPPFLAGS.SunOS+=	-DSOLARIS2=${OS_VERSION:C/5.//}
 CFLAGS+=	-Wno-error=tautological-pointer-compare \
 		-Wno-error=pointer-bool-conversion
 .endif
+
+SUBST_CLASSES+=		ver
+SUBST_MESSAGE.ver=	Fixing canonical version number
+SUBST_STAGE.ver=	pre-configure
+SUBST_FILES.ver=	configure.ac
+SUBST_SED.ver=		-e 's,m4_esyscmd(./version-gen.sh),${PKGVERSION_NOREV},'
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
