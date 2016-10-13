@@ -1,28 +1,12 @@
-$NetBSD: patch-aa,v 1.14 2015/10/18 00:51:55 dholland Exp $
+$NetBSD: patch-aa,v 1.15 2016/10/13 00:30:13 enami Exp $
 
-* Allow threads on OpenBSD now that OpenBSD has threads.
 * Use correct CFLAGS on SunOS.
 * XXX something about arm
 * XXX something about rint()
 
---- configure.orig	2014-07-20 06:15:05.000000000 +0000
+--- configure.orig	2016-10-08 10:31:17.000000000 +0000
 +++ configure
-@@ -2893,6 +2893,14 @@ $as_echo "#define GC_NETBSD_THREADS 1" >
-       THREADDLLIBS="-lpthread -lrt"
-       GAUCHE_THREAD_TYPE=pthreads
-       ;;
-+    *-*-openbsd*)
-+      $as_echo "#define GC_OPENBSD_THREADS 1" >>confdefs.h
-+      $as_echo "#define _REENTRANT 1" >>confdefs.h
-+      $as_echo "#define _PTHREADS 1" >>confdefs.h
-+      THREADLIBS="-lpthread"
-+      THREADDLLIBS="-lpthread"
-+      GAUCHE_THREAD_TYPE=pthreads
-+      ;;
-     *-*-solaris*)
- 
- $as_echo "#define GC_SOLARIS_THREADS 1" >>confdefs.h
-@@ -3038,8 +3046,8 @@ GAUCHE_CONFIGURE_ARGS="`echo ""$ac_confi
+@@ -3374,8 +3376,8 @@ GAUCHE_CONFIGURE_ARGS=`echo "$ac_configu
  
  
  case $host in
@@ -33,17 +17,17 @@ $NetBSD: patch-aa,v 1.14 2015/10/18 00:51:55 dholland Exp $
  esac
  
  ac_ext=c
-@@ -5170,6 +5178,9 @@ $as_echo "#define SCM_TARGET_X86_64 1" >
-  ;;
-   alpha*)
-     CFLAGS="$CFLAGS -mieee" ;;
+@@ -5510,6 +5512,9 @@ $as_echo "#define SCM_TARGET_X86_64 1" >
+   alpha*) :
+ 
+     CFLAGS="$CFLAGS -mieee" ;; #(
 +  arm*-*-netbsd*)
 +    # Don't define DOUBLE_ARMENDIAN on netbsd.
 +    ;;
-   arm*)
-     # ARM processor may use a special mixed endian for doubles.  It can
-     # be switched by processor configuration.  So we check it at runtime.
-@@ -6377,7 +6388,7 @@ _ACEOF
+   arm*) :
+ 
+ 
+@@ -6719,7 +6724,7 @@ _ACEOF
  
  fi
  
