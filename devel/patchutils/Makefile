@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/10/10 01:08:12 mef Exp $
+# $NetBSD: Makefile,v 1.21 2016/10/13 12:22:56 mef Exp $
 
 DISTNAME=		patchutils-0.3.4
 CATEGORIES=		devel
@@ -11,6 +11,8 @@ COMMENT=		Some programs for manipulating patch files
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		patch-[0-9]*:../../devel/patch
+#  WARNING: xmlto not available so not building doc
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		perl:run
