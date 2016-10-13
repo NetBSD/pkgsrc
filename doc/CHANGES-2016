@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4239 2016/10/13 14:31:58 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4240 2016/10/13 15:30:33 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5940,3 +5940,18 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-HTTP-Tiny to 0.070 [wen 2016-10-13]
 	Updated lang/nodejs to 6.8.0 [fhajny 2016-10-13]
 	Updated devel/p5-MooseX-App to 1.36 [mef 2016-10-13]
+	Updated sysutils/collectd to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-amqp to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-curl to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-dbi to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-dns to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-memcached to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-mysql to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-network to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-notify-email to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-postgresql to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-riemann to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-rrdtool to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/collectd-snmp to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/p5-collectd to 5.6.1 [fhajny 2016-10-13]
+	Updated sysutils/py-collectd to 5.6.1 [fhajny 2016-10-13]
