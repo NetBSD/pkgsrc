@@ -1,11 +1,11 @@
-$NetBSD: patch-src_swap.c,v 1.2 2015/08/11 14:15:00 he Exp $
+$NetBSD: patch-src_swap.c,v 1.3 2016/10/13 15:17:28 fhajny Exp $
 
 Extend support for NetBSD, and add per-swap-device
 reporting for HAVE_SWAPCTL_THREE_ARGS.
 
---- src/swap.c.orig	2015-05-20 12:04:47.000000000 +0000
+--- src/swap.c.orig	2016-09-11 08:10:25.271038709 +0000
 +++ src/swap.c
-@@ -76,9 +76,12 @@ static _Bool report_bytes = 0;
+@@ -77,9 +77,12 @@ static _Bool report_bytes = 0;
  static _Bool report_by_device = 0;
  /* #endif KERNEL_LINUX */
  
@@ -19,7 +19,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  static _Bool report_by_device = 0;
  /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
  
-@@ -114,7 +117,7 @@ static int swap_config (oconfig_item_t *
+@@ -117,7 +120,7 @@ static int swap_config (oconfig_item_t *
  	{
  		oconfig_item_t *child = ci->children + i;
  		if (strcasecmp ("ReportBytes", child->key) == 0)
@@ -28,7 +28,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  			cf_util_get_boolean (child, &report_bytes);
  #else
  			WARNING ("swap plugin: The \"ReportBytes\" option "
-@@ -147,7 +150,7 @@ static int swap_init (void) /* {{{ */
+@@ -150,7 +153,7 @@ static int swap_init (void) /* {{{ */
  	pagesize = (derive_t) sysconf (_SC_PAGESIZE);
  /* #endif KERNEL_LINUX */
  
@@ -37,7 +37,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  	/* getpagesize(3C) tells me this does not fail.. */
  	pagesize = (derive_t) getpagesize ();
  /* #endif HAVE_SWAPCTL */
-@@ -213,7 +216,7 @@ static void swap_submit_usage (char cons
+@@ -216,7 +219,7 @@ static void swap_submit_usage (char cons
  				other_name, other_value, NULL);
  } /* }}} void swap_submit_usage */
  
@@ -46,7 +46,7 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  __attribute__((nonnull(1)))
  static void swap_submit_derive (char const *type_instance, /* {{{ */
  		derive_t value)
-@@ -614,6 +617,43 @@ static int swap_read (void) /* {{{ */
+@@ -618,6 +621,43 @@ static int swap_read (void) /* {{{ */
  /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
  
  #elif HAVE_SWAPCTL && HAVE_SWAPCTL_THREE_ARGS
@@ -90,14 +90,14 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  static int swap_read (void) /* {{{ */
  {
  	struct swapent *swap_entries;
-@@ -660,23 +700,53 @@ static int swap_read (void) /* {{{ */
+@@ -663,12 +703,33 @@ static int swap_read (void) /* {{{ */
  	 * swap_entries[i].se_path */
- 	for (i = 0; i < swap_num; i++)
+ 	for (int i = 0; i < swap_num; i++)
  	{
 +		char path[PATH_MAX];
 +		gauge_t this_used;
 +		gauge_t this_total;
-+		
++
  		if ((swap_entries[i].se_flags & SWF_ENABLE) == 0)
  			continue;
  
@@ -108,8 +108,8 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
 +			* C_SWAP_BLOCK_SIZE;
 +		this_total = ((gauge_t) swap_entries[i].se_nblks)
 +			* C_SWAP_BLOCK_SIZE;
-+		
-+		
++
++
 +		/* Shortcut for the "combined" setting (default) */
 +		if (!report_by_device)
 +		{
@@ -122,26 +122,21 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
 +		escape_slashes (path, sizeof (path));
 +
 +		swap_submit_usage (path, this_used, this_total - this_used,
-+				   NULL, NAN);
++				  NULL, NAN);
 +	} /* for (swap_num) */
-+
  
  	if (total < used)
  	{
- 		ERROR ("swap plugin: Total swap space (%g) is less than used swap space (%g).",
- 				total, used);
-+		sfree (swap_entries);
- 		return (-1);
+@@ -679,8 +740,15 @@ static int swap_read (void) /* {{{ */
  	}
  
--	swap_submit_usage (NULL, used, total - used, NULL, NAN);
+ 	swap_submit_usage (NULL, used, total - used, NULL, NAN);
 +	/* If the "separate" option was specified (report_by_device == 1), all
 +	 * values have already been dispatched from within the loop. */
 +	if (!report_by_device)
 +		swap_submit_usage (NULL, used, total - used, NULL, NAN);
  
  	sfree (swap_entries);
-+
 +#if KERNEL_NETBSD
 +	swap_read_io ();
 +#endif

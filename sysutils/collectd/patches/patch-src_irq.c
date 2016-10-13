@@ -1,11 +1,11 @@
-$NetBSD: patch-src_irq.c,v 1.2 2016/02/03 15:10:43 he Exp $
+$NetBSD: patch-src_irq.c,v 1.3 2016/10/13 15:17:28 fhajny Exp $
 
 Provide a port to NetBSD.
 
---- src/irq.c.orig	2014-09-05 08:57:01.000000000 +0000
+--- src/irq.c.orig	2016-09-11 08:10:25.263038721 +0000
 +++ src/irq.c
-@@ -27,10 +27,22 @@
- #include "configfile.h"
+@@ -27,10 +27,20 @@
+ #include "plugin.h"
  #include "utils_ignorelist.h"
  
 -#if !KERNEL_LINUX
@@ -23,12 +23,10 @@ Provide a port to NetBSD.
 +
 +#endif /* KERNEL_NETBSD */
 +
-+
-+
  /*
   * (Module-)Global variables
   */
-@@ -90,6 +102,7 @@ static void irq_submit (const char *irq_
+@@ -90,6 +100,7 @@ static void irq_submit (const char *irq_
  	plugin_dispatch_values (&vl);
  } /* void irq_submit */
  
@@ -36,7 +34,7 @@ Provide a port to NetBSD.
  static int irq_read (void)
  {
  	FILE *fh;
-@@ -183,6 +196,64 @@ static int irq_read (void)
+@@ -188,6 +199,64 @@ static int irq_read (void)
  
  	return (0);
  } /* int irq_read */
