@@ -1,11 +1,11 @@
-$NetBSD: patch-src_memory.c,v 1.2 2015/08/16 08:01:58 he Exp $
+$NetBSD: patch-src_memory.c,v 1.3 2016/10/13 15:17:28 fhajny Exp $
 
 Add a port for NetBSD using VM_UVMEXP2, and preferring
 sysctl over sysctlbyname.
 
---- src/memory.c.orig	2015-03-10 14:14:45.000000000 +0000
+--- src/memory.c.orig	2016-09-11 08:10:25.267038716 +0000
 +++ src/memory.c
-@@ -65,6 +65,10 @@ static mach_port_t port_host;
+@@ -66,6 +66,10 @@ static mach_port_t port_host;
  static vm_size_t pagesize;
  /* #endif HAVE_HOST_STATISTICS */
  
@@ -16,8 +16,8 @@ sysctl over sysctlbyname.
  #elif HAVE_SYSCTLBYNAME
  /* no global variables */
  /* #endif HAVE_SYSCTLBYNAME */
-@@ -78,10 +82,6 @@ static int pagesize;
- static kstat_t *ksp;
+@@ -80,10 +84,6 @@ static kstat_t *ksp;
+ static kstat_t *ksz;
  /* #endif HAVE_LIBKSTAT */
  
 -#elif HAVE_SYSCTL
@@ -27,7 +27,7 @@ sysctl over sysctlbyname.
  #elif HAVE_LIBSTATGRAB
  /* no global variables */
  /* endif HAVE_LIBSTATGRAB */
-@@ -92,6 +92,10 @@ static int pagesize;
+@@ -94,6 +94,10 @@ static int pagesize;
  # error "No applicable input method."
  #endif
  
@@ -54,8 +54,8 @@ sysctl over sysctlbyname.
  #elif HAVE_SYSCTLBYNAME
  /* no init stuff */
  /* #endif HAVE_SYSCTLBYNAME */
-@@ -139,15 +152,6 @@ static int memory_init (void)
- 	}
+@@ -145,15 +158,6 @@ static int memory_init (void)
+ 
  /* #endif HAVE_LIBKSTAT */
  
 -#elif HAVE_SYSCTL
@@ -70,7 +70,7 @@ sysctl over sysctlbyname.
  #elif HAVE_LIBSTATGRAB
  /* no init stuff */
  /* #endif HAVE_LIBSTATGRAB */
-@@ -221,6 +225,46 @@ static int memory_read_internal (value_l
+@@ -227,6 +231,46 @@ static int memory_read_internal (value_l
  /* #endif HAVE_HOST_STATISTICS */
  
  #elif HAVE_SYSCTLBYNAME
@@ -117,7 +117,7 @@ sysctl over sysctlbyname.
  	/*
  	 * vm.stats.vm.v_page_size: 4096
  	 * vm.stats.vm.v_page_count: 246178
-@@ -272,6 +316,8 @@ static int memory_read_internal (value_l
+@@ -276,6 +320,8 @@ static int memory_read_internal (value_l
  	               "active",   (gauge_t) sysctl_vals[4],
  	               "inactive", (gauge_t) sysctl_vals[5],
  	               "cache",    (gauge_t) sysctl_vals[6]);
