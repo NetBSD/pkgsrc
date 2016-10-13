@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4237 2016/10/13 12:45:29 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4238 2016/10/13 14:10:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5938,3 +5938,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/riemann-client version 1.9.1 [fhajny 2016-10-13]
 	Updated www/p5-Dancer2 to 0.204000 [wen 2016-10-13]
 	Updated www/p5-HTTP-Tiny to 0.070 [wen 2016-10-13]
+	Updated lang/nodejs to 6.8.0 [fhajny 2016-10-13]
