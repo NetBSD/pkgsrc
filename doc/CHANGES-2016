@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4238 2016/10/13 14:10:00 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4239 2016/10/13 14:31:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5939,3 +5939,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Dancer2 to 0.204000 [wen 2016-10-13]
 	Updated www/p5-HTTP-Tiny to 0.070 [wen 2016-10-13]
 	Updated lang/nodejs to 6.8.0 [fhajny 2016-10-13]
+	Updated devel/p5-MooseX-App to 1.36 [mef 2016-10-13]
