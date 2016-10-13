@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/09/12 19:04:56 he Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/10/13 15:17:28 fhajny Exp $
 bin/collectd-nagios
 bin/collectd-tg
 bin/collectdctl
@@ -13,10 +13,10 @@ ${PLIST.battery}lib/collectd/battery.la
 ${PLIST.contextswitch}lib/collectd/contextswitch.la
 ${PLIST.cpu}lib/collectd/cpu.la
 lib/collectd/csv.la
-${PLIST.entropy}lib/collectd/entropy.la
 ${PLIST.df}lib/collectd/df.la
 ${PLIST.disk}lib/collectd/disk.la
 lib/collectd/email.la
+${PLIST.entropy}lib/collectd/entropy.la
 lib/collectd/exec.la
 lib/collectd/filecount.la
 lib/collectd/hddtemp.la
@@ -50,8 +50,8 @@ lib/collectd/target_replace.la
 lib/collectd/target_scale.la
 lib/collectd/target_set.la
 lib/collectd/target_v5upgrade.la
-lib/collectd/teamspeak2.la
 ${PLIST.tcpconns}lib/collectd/tcpconns.la
+lib/collectd/teamspeak2.la
 lib/collectd/threshold.la
 lib/collectd/unixsock.la
 ${PLIST.uptime}lib/collectd/uptime.la
@@ -59,6 +59,7 @@ ${PLIST.users}lib/collectd/users.la
 lib/collectd/uuid.la
 lib/collectd/write_graphite.la
 ${PLIST.zfs-arc}lib/collectd/zfs_arc.la
+${PLIST.zone}lib/collectd/zone.la
 lib/libcollectdclient.la
 lib/pkgconfig/libcollectdclient.pc
 man/man1/collectd-nagios.1
@@ -69,6 +70,7 @@ man/man1/collectdmon.1
 man/man5/collectd-email.5
 man/man5/collectd-exec.5
 man/man5/collectd-java.5
+man/man5/collectd-lua.5
 man/man5/collectd-perl.5
 man/man5/collectd-python.5
 man/man5/collectd-snmp.5
