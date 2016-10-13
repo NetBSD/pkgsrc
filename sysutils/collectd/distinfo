@@ -1,28 +1,23 @@
-$NetBSD: distinfo,v 1.27 2016/02/03 15:10:43 he Exp $
+$NetBSD: distinfo,v 1.28 2016/10/13 15:17:28 fhajny Exp $
 
-SHA1 (collectd-5.5.0.tar.gz) = d24e284c1eae20c5e75b846c8b2612ab65bd5565
-RMD160 (collectd-5.5.0.tar.gz) = 2197758942a5fe56e4eabda3786f09d4138e943a
-SHA512 (collectd-5.5.0.tar.gz) = b7ab9db91bf8c0eadbf9893421c019239acf85d2d84a5adb834582ed218a7dd03f750b7279dc4b1bb0030a8b9d3302bea9ae9f201c913128e1896cbd1349b5a9
-Size (collectd-5.5.0.tar.gz) = 2244454 bytes
+SHA1 (collectd-5.6.1.tar.bz2) = 20b773928743b346e0962fc1dc37167390a16d80
+RMD160 (collectd-5.6.1.tar.bz2) = 5247f6b4a0936ac9715189e16afe6f65bee94788
+SHA512 (collectd-5.6.1.tar.bz2) = da25f1a9cbaf47533f5a4d2f5f78b966317d4f21865c5a714954ad9d7d02b4798a3e0471ce52199dc80e01dc2808376cb10a7e19c402aafc984bf595f09951a6
+Size (collectd-5.6.1.tar.bz2) = 1903962 bytes
 SHA1 (patch-Makefile.am) = ed45b75293a4ea2dd577d04eeb3b9017b8f47319
-SHA1 (patch-Makefile.in) = a7cf69ca29c526be643af0ef85544e3a2dc80a77
-SHA1 (patch-configure) = f4bf389b98f03152347f0d1c6fba34e948e81625
-SHA1 (patch-configure.ac) = 8313b139c3b23f10e26a42a976e97b09ad72e656
-SHA1 (patch-src_Makefile.am) = 45930ca400c6c67927020c9a264d3d5adc30ca46
-SHA1 (patch-src_Makefile.in) = 46bea4aa9a045e56478ff96730245134ddb0b362
-SHA1 (patch-src_collectd-tg.c) = f9f41dfb0b1b55a62202128a165d5c9943faf5bc
+SHA1 (patch-configure.ac) = f450d6b00e5c7c37214b4d90ca057c515ed08fa1
+SHA1 (patch-src_Makefile.am) = 1d5cc2f58ce776df04feab2afc937f12ee7b0765
 SHA1 (patch-src_collectd.conf.in) = f0b35085cf0ddfd766e140b145177ab1f1326f5f
-SHA1 (patch-src_config.h.in) = be17db23b6ee7a90ba57e73f073ed5be11c369c5
-SHA1 (patch-src_cpu.c) = 55b5cfc69bf0df279d1a12003eb6a8e681155e18
+SHA1 (patch-src_cpu.c) = 32af60d7e49edf9d16481b705bc1ea429c90c82b
+SHA1 (patch-src_daemon_Makefile.am) = e38d465faf8bdd750fd9cb7f0bd9f041fcc8f83c
 SHA1 (patch-src_df.c) = 7e75dfbc72ecad48eb0eb7427a19329daf6b9a60
 SHA1 (patch-src_disk.c) = 159862e8ca1e841e3c4013c03ba03f059fdbbab5
 SHA1 (patch-src_entropy.c) = 4fa683654936f57fb7366faebb93d572af08db9c
-SHA1 (patch-src_irq.c) = 8d5c516fea31bf2ab9736c32540be3223dea15d9
-SHA1 (patch-src_libcollectclient_network__buffer.c) = e07d403d299613fa0885a0e7285849eb85510253
-SHA1 (patch-src_memory.c) = f48d50245176426e26af7fa1b1f4ff6fbf0b1d95
+SHA1 (patch-src_irq.c) = 6e414b6fd664e784edd5aa9f907c8cfa80a0cd48
+SHA1 (patch-src_libcollectclient_network__buffer.c) = 76c94284b4078259985b70168342ac306b4505b7
+SHA1 (patch-src_memory.c) = b15225915ff23beed0b75c45be2eb3940d3717fd
 SHA1 (patch-src_netstat__udp.c) = 30cb12d25f56c60959658dbd181783212e00cc61
 SHA1 (patch-src_processes.c) = e00d2edf6b4e6bfe3663e34fffb05f40652affe5
-SHA1 (patch-src_swap.c) = e7602eb83eed6b90752b8293b9666b94bdd42493
+SHA1 (patch-src_swap.c) = 304a25324099495fb875127221ed5fc95173a164
 SHA1 (patch-src_tcpconns.c) = 712af1b821d62217283df884dd283d5b1218ab7c
 SHA1 (patch-src_utils__dns.c) = c3782dc9127f42da30e3142b853aa2cb2259af94
-SHA1 (patch-version-gen.sh) = 07d830019e22ac651514b75acf299b1f50c4632d
