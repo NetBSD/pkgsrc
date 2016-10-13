@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 19:23:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/13 14:31:48 mef Exp $
 #
 
-DISTNAME=	MooseX-App-1.35
+DISTNAME=	MooseX-App-1.36
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -24,6 +23,7 @@ BUILD_DEPENDS+= p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
 BUILD_DEPENDS+= p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 BUILD_DEPENDS+= p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 BUILD_DEPENDS+= p5-Text-WagnerFischer-[0-9]*:../../textproc/p5-Text-WagnerFischer
+BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=	auto/MooseX/App/.packlist
 USE_LANGUAGES=	# none
