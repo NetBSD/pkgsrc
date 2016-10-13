@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4232 2016/10/13 00:31:47 enami Exp $
+$NetBSD: CHANGES-2016,v 1.4233 2016/10/13 09:35:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5933,3 +5933,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql56-client to 5.6.34 [adam 2016-10-12]
 	Updated databases/mysql56-server to 5.6.34 [adam 2016-10-12]
 	Updated lang/gauche to 0.9.5 [enami 2016-10-13]
+	Updated devel/jenkins to 2.25 [fhajny 2016-10-13]
