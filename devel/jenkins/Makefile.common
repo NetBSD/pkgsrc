@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2016/10/13 09:35:11 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2016/10/13 09:37:50 fhajny Exp $
 #
+# used by devel/jenkins-lts/Makefile
 # used by devel/jenkins/Makefile
 
 DISTNAME=	jenkins
