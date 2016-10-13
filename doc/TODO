@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16570 2016/10/12 20:04:29 wiz Exp $
+$NetBSD: TODO,v 1.16571 2016/10/13 15:30:33 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -528,7 +528,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clusterssh-4.05
 	o clutter-1.24
 	o clutter-gst-3.0.2
-	o collectd-5.5.1
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -1246,7 +1245,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Time-HiRes-1.9740
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
-	o p5-collectd-5.5.1
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
 	o p5-pcsc-1.4.14
@@ -1349,7 +1347,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
 	o py-cassa-1.11.0
-	o py-collectd-5.5.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
 	o py-cups-1.9.73
