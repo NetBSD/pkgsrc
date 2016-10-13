@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4236 2016/10/13 12:37:52 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4237 2016/10/13 12:45:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5937,3 +5937,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/jenkins-lts version 2.19.1 [fhajny 2016-10-13]
 	Added sysutils/riemann-client version 1.9.1 [fhajny 2016-10-13]
 	Updated www/p5-Dancer2 to 0.204000 [wen 2016-10-13]
+	Updated www/p5-HTTP-Tiny to 0.070 [wen 2016-10-13]
