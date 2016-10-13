@@ -16,5 +16,3 @@ For example, with cron, all you receive is regular e-mails that
 capture the output, and it is up to you to look at them diligently
 and notice when it broke. Jenkins keeps those outputs and makes it
 easy for you to notice when something is wrong.
-
-This is Long-Term Support Release.

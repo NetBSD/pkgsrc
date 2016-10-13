@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.common,v 1.1 2016/10/13 09:35:11 fhajny Exp $
+#
+# used by devel/jenkins/Makefile
+
+DISTNAME=	jenkins
+PKGNAME=	jenkins-${J_VERSION}
+CATEGORIES=	devel
+EXTRACT_SUFX=	.war
+
+HOMEPAGE=	http://jenkins-ci.org/
+LICENSE=	mit
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
+
+WRKSRC=		${WRKDIR}
+USE_LANGUAGES=	# none
+
+USE_JAVA=	run
+USE_JAVA2=	7
+
+USE_TOOLS+=	unzip
+
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
+
+INSTALLATION_DIRS=	share/jenkins
+
+MESSAGE_SRC=	${.CURDIR}/../../devel/jenkins/MESSAGE
+
+do-install:
+	${UNZIP_CMD} -d ${DESTDIR}${PREFIX}/share/jenkins ${WRKSRC}/jenkins.war
+	${INSTALL_DATA} ${WRKSRC}/jenkins.war ${DESTDIR}${PREFIX}/share/jenkins
+
+.include "../../mk/java-vm.mk"
