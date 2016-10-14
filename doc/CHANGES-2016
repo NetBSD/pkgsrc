@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4244 2016/10/14 10:31:40 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4245 2016/10/14 12:51:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5959,3 +5959,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/haproxy to 1.6.9 [morr 2016-10-13]
 	Updated sysutils/open-vm-tools to 10.0.7nb2 [ryoon 2016-10-13]
 	Updated sysutils/acpica-utils to 20160930 [fly 2016-10-14]
+	Updated pkgtools/mksandbox to 1.7 [jperkin 2016-10-14]
