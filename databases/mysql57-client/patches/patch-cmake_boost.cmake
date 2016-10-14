@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_boost.cmake,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD: patch-cmake_boost.cmake,v 1.2 2016/10/14 19:28:28 adam Exp $
 
 Fix to use a newer version of Boost.
 
@@ -9,7 +9,7 @@ Fix to use a newer version of Boost.
  # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  
 -# We want boost 1.59.0 in order to build our boost/geometry code.
-+# We want boost 1.61.0 in order to build our boost/geometry code.
++# We want boost 1.62.0 in order to build our boost/geometry code.
  # The boost tarball is fairly big, and takes several minutes
  # to download. So we recommend downloading/unpacking it
  # only once, in a place visible from any bzr sandbox.
@@ -18,11 +18,11 @@ Fix to use a newer version of Boost.
  # is installed on the compile host in the standard location.
  
 -SET(BOOST_PACKAGE_NAME "boost_1_59_0")
-+SET(BOOST_PACKAGE_NAME "boost_1_61_0")
++SET(BOOST_PACKAGE_NAME "boost_1_62_0")
  SET(BOOST_TARBALL "${BOOST_PACKAGE_NAME}.tar.gz")
  SET(BOOST_DOWNLOAD_URL
 -  "http://sourceforge.net/projects/boost/files/boost/1.59.0/${BOOST_TARBALL}"
-+  "http://sourceforge.net/projects/boost/files/boost/1.61.0/${BOOST_TARBALL}"
++  "http://sourceforge.net/projects/boost/files/boost/1.62.0/${BOOST_TARBALL}"
    )
  
  SET(OLD_PACKAGE_NAMES "boost_1_55_0 boost_1_56_0 boost_1_57_0 boost_1_58_0")
@@ -31,7 +31,7 @@ Fix to use a newer version of Boost.
  # //  BOOST_VERSION / 100 % 1000 is the minor version
  # //  BOOST_VERSION / 100000 is the major version
 -# #define BOOST_VERSION 105900
-+# #define BOOST_VERSION 106100
++# #define BOOST_VERSION 106200
  FILE(STRINGS "${BOOST_INCLUDE_DIR}/boost/version.hpp"
    BOOST_VERSION_NUMBER
    REGEX "^#define[\t ]+BOOST_VERSION[\t ][0-9]+.*"
@@ -40,10 +40,10 @@ Fix to use a newer version of Boost.
  ENDIF()
  
 -IF(NOT BOOST_MINOR_VERSION EQUAL 59)
-+IF(NOT BOOST_MINOR_VERSION EQUAL 61)
++IF(NOT BOOST_MINOR_VERSION EQUAL 62)
    MESSAGE(WARNING "Boost minor version found is ${BOOST_MINOR_VERSION} "
 -    "we need 59"
-+    "we need 61"
++    "we need 62"
      )
    COULD_NOT_FIND_BOOST()
  ENDIF()
@@ -52,11 +52,11 @@ Fix to use a newer version of Boost.
  
  # We have a limited set of patches/bugfixes here:
 -SET(BOOST_PATCHES_DIR "${CMAKE_SOURCE_DIR}/include/boost_1_59_0/patches")
-+SET(BOOST_PATCHES_DIR "${CMAKE_SOURCE_DIR}/include/boost_1_61_0/patches")
++SET(BOOST_PATCHES_DIR "${CMAKE_SOURCE_DIR}/include/boost_1_62_0/patches")
  
  # We have a limited set of source files here:
 -SET(BOOST_SOURCES_DIR "${CMAKE_SOURCE_DIR}/include/boost_1_59_0")
-+SET(BOOST_SOURCES_DIR "${CMAKE_SOURCE_DIR}/include/boost_1_61_0")
++SET(BOOST_SOURCES_DIR "${CMAKE_SOURCE_DIR}/include/boost_1_62_0")
  
  # Bug in sqrt(NaN) on 32bit platforms
  IF(SIZEOF_VOIDP EQUAL 4)

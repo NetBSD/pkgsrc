@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/16 06:49:12 adam Exp $
-bin/lz4_decompress
+@comment $NetBSD: PLIST,v 1.2 2016/10/14 19:28:28 adam Exp $
 bin/innochecksum
+bin/lz4_decompress
 bin/my_print_defaults
 bin/myisam_ftdump
 bin/myisamchk
@@ -25,8 +25,8 @@ bin/resolve_stack_dump
 bin/resolveip
 bin/zlib_decompress
 include/mysql/mysqlx_error.h
-${PLIST.embedded}lib/libmysqld.a
 include/mysql/mysqlx_version.h
+${PLIST.embedded}lib/libmysqld.a
 lib/libmysqlservices.a
 lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth.so
