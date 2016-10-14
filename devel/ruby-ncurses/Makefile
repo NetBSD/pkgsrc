@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/08/18 07:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/10/14 22:44:57 mef Exp $
 
 DISTNAME=	ncurses-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-ncurses-${VER}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-lgpl-v2.1 OR gnu-lgpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://ncurses-ruby.berlios.de/
+HOMEPAGE=	https://github.com/eclubb/ncurses-ruby
 COMMENT=	Ruby interface to ncurses
 
 VER=			1.2.4
