@@ -1,11 +1,11 @@
 $NetBSD$
 
---- ext/pcre/pcrelib/config.h.orig	2016-02-02 16:32:32.000000000 +0000
+--- ext/pcre/pcrelib/config.h.orig	2016-09-29 02:15:39.000000000 +0000
 +++ ext/pcre/pcrelib/config.h
-@@ -397,7 +397,20 @@ them both to 0; an emulation function wi
- #undef SUPPORT_GCOV
+@@ -400,8 +400,21 @@ them both to 0; an emulation function wi
  
  /* Define to any value to enable support for Just-In-Time compiling. */
+ #if HAVE_PCRE_JIT_SUPPORT
 -#define SUPPORT_JIT
 +#if defined(__i386__) || defined(__i386) \
 +|| defined(__x86_64__) \
@@ -19,8 +19,9 @@ $NetBSD$
 +|| defined(__mips64) \
 +|| defined(__sparc__) || defined(__sparc) \
 +|| defined(__tilegx__)
-+ #define SUPPORT_JIT
-+#endif
++  #define SUPPORT_JIT
+ #endif
++#endif /* HAVE_PCRE_JIT_SUPPORT */
  
  /* Define to any value to allow pcregrep to be linked with libbz2, so that it
     is able to handle .bz2 files. */
