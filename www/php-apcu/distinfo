@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.5 2016/09/01 04:17:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2016/10/14 14:48:10 jdolecek Exp $
 
-SHA1 (php-apcu/apcu-5.1.5.tgz) = 1fe5f87808fd51f45b1fa2a7f67ae45b0c8336fb
-RMD160 (php-apcu/apcu-5.1.5.tgz) = b4b9c4ffe34ae5d1f27ae5033fb3ad06444cbf97
-SHA512 (php-apcu/apcu-5.1.5.tgz) = ffa3e666f354c8fd2ab163db9c8352066d27a1cd6aebe4d8f374052f14a90dbe752efc27c6e927cbf75fc48b6f673e639b07ceeffc2a68402a778cc6a8b18fbc
-Size (php-apcu/apcu-5.1.5.tgz) = 109196 bytes
+SHA1 (php-apcu/apcu-5.1.6.tgz) = 2797411091df774caea8f4f463480bf881c3b40a
+RMD160 (php-apcu/apcu-5.1.6.tgz) = c8a433f37c01ed120ee5093435c1684ce229cdf9
+SHA512 (php-apcu/apcu-5.1.6.tgz) = 15156de7c3452d4e623553b9a33b78481a1e220d32c19895e6dbad3368e92f4502adac59594954ffebe8a6a2ae65bc7d26e8989ddcdcf25157f1ec94fb7ebbda
+Size (php-apcu/apcu-5.1.6.tgz) = 110792 bytes
 SHA1 (patch-.._package.xml) = 2012bc96eaa53679b457b7230fb10634aca2bb6a
-SHA1 (patch-apc_cache.c) = a90257926f3b4f3c45dd63cf53e3d3c6c3b70800
 SHA1 (patch-config.m4) = 8bbec8aff40c4d19fa46166dae1507316bf6e3bb
