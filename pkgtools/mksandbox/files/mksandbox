@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.9 2016/03/03 04:41:15 agc Exp $
+# $NetBSD: mksandbox,v 1.10 2016/10/14 12:50:07 jperkin Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -121,7 +121,7 @@ Linux)
 	fi
 	paxprog=""
 	sedprog=/bin/sed
-	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos /run"
+	sandboxMountDirs="$sandboxMountDirs /lib64 /usr/lib64 /usr/kerberos"
 	sandboxWriteDirs="$sandboxWriteDirs /proc"
 	;;
 NetBSD)
@@ -471,6 +471,12 @@ chmod +x $sandbox_script
 case $opsys in
 Darwin)
 	$cpprog /var/run/resolv.conf $sandbox/var/run/resolv.conf
+	;;
+Linux)
+	if [ -f /run/resolvconf/resolv.conf ]; then
+		$mkdirprog $sandbox/run/resolvconf
+		$cpprog /run/resolvconf/resolv.conf $sandbox/run/resolvconf/resolv.conf
+	fi
 	;;
 SunOS)
 	$cpprog /etc/mnttab $sandbox/etc/mnttab
