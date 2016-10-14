@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4248 2016/10/14 15:06:46 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.4249 2016/10/14 15:11:42 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5962,3 +5962,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/mksandbox to 1.7 [jperkin 2016-10-14]
 	Updated www/php-apcu to 5.1.6 [jdolecek 2016-10-14]
 	Updated lang/php70 to 7.0.12 [jdolecek 2016-10-14]
+	Updated net/nmap to 7.30 [maya 2016-10-14]
