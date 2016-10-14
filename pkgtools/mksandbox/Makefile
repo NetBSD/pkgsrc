@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/03/03 04:41:15 agc Exp $
+# $NetBSD: Makefile,v 1.12 2016/10/14 12:50:07 jperkin Exp $
 
-PKGNAME=	mksandbox-1.6
+PKGNAME=	mksandbox-1.7
 CATEGORIES=	pkgtools
 
 MAINTAINER=	agc@NetBSD.org
