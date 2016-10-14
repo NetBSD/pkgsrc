@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4243 2016/10/13 21:49:06 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4244 2016/10/14 10:31:40 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5958,3 +5958,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/mutt to 1.7.1 [tron 2016-10-13]
 	Updated net/haproxy to 1.6.9 [morr 2016-10-13]
 	Updated sysutils/open-vm-tools to 10.0.7nb2 [ryoon 2016-10-13]
+	Updated sysutils/acpica-utils to 20160930 [fly 2016-10-14]
