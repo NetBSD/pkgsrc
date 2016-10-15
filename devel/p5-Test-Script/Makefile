@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/06/08 19:23:40 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/15 00:51:29 mef Exp $
 
-DISTNAME=	Test-Script-1.12
+DISTNAME=	Test-Script-1.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	perl5 devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
