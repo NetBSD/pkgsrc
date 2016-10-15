@@ -1,21 +1,21 @@
-$NetBSD: patch-configure,v 1.2 2016/01/07 16:01:10 jperkin Exp $
+$NetBSD: patch-configure,v 1.3 2016/10/15 13:40:40 wen Exp $
 
 * Improve POSIX shell compatibility.
 * Detect pkgsrc berkeley db library.
 * Don't remove -g.
 
---- configure.orig	2014-08-21 18:24:14.000000000 +0000
+--- configure.orig	2016-08-14 12:21:45.000000000 +0000
 +++ configure
-@@ -13672,7 +13672,7 @@ $as_echo_n "checking matching GMP versio
- COB_GMP_LIB_MAJOR=$(echo $COB_GMP_LIB | cut -d. -f1)
- COB_GMP_LIB_MINOR=$(echo $COB_GMP_LIB | cut -d. -f2)
+@@ -14128,7 +14128,7 @@ $as_echo_n "checking matching GMP versio
+ COB_GMP_LIB_MAJOR=$(echo "$COB_GMP_LIB" | cut -d. -f1)
+ COB_GMP_LIB_MINOR=$(echo "$COB_GMP_LIB" | cut -d. -f2)
  
--if test "$COB_GMP_HEADER" == "$COB_GMP_LIB_MAJOR.$COB_GMP_LIB_MINOR"
-+if test "$COB_GMP_HEADER" = "$COB_GMP_LIB_MAJOR.$COB_GMP_LIB_MINOR"
- then
+-if test "$COB_GMP_HEADER" == "$COB_GMP_LIB_MAJOR.$COB_GMP_LIB_MINOR"; then
++if test "$COB_GMP_HEADER" = "$COB_GMP_LIB_MAJOR.$COB_GMP_LIB_MINOR"; then
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes ($COB_GMP_HEADER)" >&5
  $as_echo "yes ($COB_GMP_HEADER)" >&6; }
-@@ -16271,7 +16271,7 @@ $as_echo "no ($COB_BDB_HEADER)" >&6; }
+ else
+@@ -16933,7 +16933,7 @@ $as_echo "no ($COB_BDB_HEADER)" >&6; }
  	cob_got_db=no
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Berkeley DB library with version $COB_BDB_HEADER" >&5
  $as_echo_n "checking for Berkeley DB library with version $COB_BDB_HEADER... " >&6; }
@@ -24,20 +24,12 @@ $NetBSD: patch-configure,v 1.2 2016/01/07 16:01:10 jperkin Exp $
  	do
  		LIBS="$MYOLDLIBS -l$cobdb"
  		if test "$cross_compiling" = yes; then :
-@@ -16902,7 +16902,7 @@ COB_EXEEXT="$EXEEXT"
+@@ -17658,7 +17658,7 @@ fi
+ unset enable_cflags_setting
  
- if test "$enable_debug" != "yes" -a "x$CFLAGS" != "x"
- then
--	CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/^ //' -e 's/ $//'`
-+	: CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/^ //' -e 's/ $//'`
+ if test "$enable_debug" != "yes" -a "x$CFLAGS" != "x"; then
+-	CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/-g3//' -e 's/^ //' -e 's/ $//'`
++	: CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/-g3//' -e 's/^ //' -e 's/ $//'`
  fi
  
  # Include CFLAGS in COB_CFLAGS without optimization/debug options
-@@ -16910,7 +16910,6 @@ fi
- cob_temp_flags=""
- if test "x$CFLAGS" != "x"
- then
--	cob_temp_flags=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/ $//' -e 's/^ //'`
- 	cob_temp_flags=`echo "$cob_temp_flags" | sed -e 's/[+-]O[0-9s]//' -e 's/ $//' -e 's/^ //'`
- 	cob_temp_flags=`echo "$cob_temp_flags" | sed -e 's/-O//' -e 's/ $//' -e 's/^ //'`
- 	cob_temp_flags=`echo "$cob_temp_flags" | sed -e 's/-fmessage-length=0//'`
