@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4257 2016/10/15 13:42:24 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4258 2016/10/15 13:48:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5973,3 +5973,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-DOM to 1.46 [wen 2016-10-15]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.637 [tsutsui 2016-10-15]
 	Updated lang/gnucobol to 2.0rc1 [wen 2016-10-15]
+	Updated graphics/ruby-mini-magick to 4.5.1 [taca 2016-10-15]
