@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:22 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/10/15 13:54:36 wen Exp $
 
-SHA1 (Net-Interface-1.012.tar.gz) = 2567ccd68128b851e4fe7b186a5a4308f47646a5
-RMD160 (Net-Interface-1.012.tar.gz) = 39171b79699db38db2ad75f3740c0150022bc679
-SHA512 (Net-Interface-1.012.tar.gz) = b6c481f6d490b902d09a3147d84888d8f5f30642ea56400145a2f1269bf5bd775dba0ad24887d4214bd2dbf4dafb84012c36908348b6f29a06ddb661949ce0be
-Size (Net-Interface-1.012.tar.gz) = 173350 bytes
+SHA1 (Net-Interface-1.016.tar.gz) = 82b2662fd0e69999568d5eff3c4baf9089d84ac0
+RMD160 (Net-Interface-1.016.tar.gz) = 253fe9e1b21446a4a72144d74548f5f4ef4e1b2b
+SHA512 (Net-Interface-1.016.tar.gz) = 0ecc29f8dae20a3ddd513c88287cddb3d2681bc48f99cac37f131582dbbc82b57db8460117d9ff7638f24ded46d194ac011c6de171a7582e4fd2bd461d74337a
+Size (Net-Interface-1.016.tar.gz) = 174784 bytes
