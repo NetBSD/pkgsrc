@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4250 2016/10/14 19:29:38 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4251 2016/10/15 00:45:58 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5965,3 +5965,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/nmap to 7.30 [maya 2016-10-14]
 	Updated databases/mysql57-client to 5.7.16 [adam 2016-10-14]
 	Updated databases/mysql57-server to 5.7.16 [adam 2016-10-14]
+	Updated games/bastet to 0.43.1 [kamil 2016-10-15]
