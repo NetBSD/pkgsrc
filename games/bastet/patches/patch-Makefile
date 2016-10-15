@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2016/10/15 00:45:15 kamil Exp $
+
+Link with standard curses library. Works on NetBSD.
+
+--- Makefile.orig	2014-05-29 18:47:50.000000000 +0000
++++ Makefile
+@@ -3,7 +3,7 @@ MAIN=main.cpp
+ TESTS=Test.cpp
+ PROGNAME=bastet
+ BOOST_PO?=-lboost_program_options
+-LDFLAGS+=-lncurses $(BOOST_PO)
++LDFLAGS+=-lcurses $(BOOST_PO)
+ #CXXFLAGS+=-ggdb -Wall
+ CXXFLAGS+=-DNDEBUG -Wall
+ #CXXFLAGS+=-pg
