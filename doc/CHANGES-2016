@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4252 2016/10/15 00:54:14 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4253 2016/10/15 07:22:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5968,3 +5968,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/bastet to 0.43.1 [kamil 2016-10-15]
 	Updated devel/p5-Test-Kwalitee to 1.23 [mef 2016-10-15]
 	Updated devel/p5-Test-Script to 1.14 [mef 2016-10-15]
+	Updated textproc/p5-Pod-Weaver to 4.015 [wen 2016-10-15]
