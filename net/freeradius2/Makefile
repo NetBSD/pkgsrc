@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2016/06/08 19:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.42.4.1 2016/10/15 19:06:02 bsiegert Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
-PKGREVISION=	14
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=		radiusd-cistron-[0-9]*
 CONFLICTS+=		freeradius<2.0
 USE_TOOLS+=		gmake perl:run
+USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_OLD_DES_API=	yes
 MAKE_JOBS_SAFE=		no
@@ -25,6 +25,7 @@ BUILD_DEFS+=		VARBASE
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
 FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP}
 PLIST_SUBST+=		RADVER=${RADVER}
+PLIST_SUBST+=		RADVERALT=${RADVERALT}
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE
 MESSAGE_SUBST+=		CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} VARBASE=${VARBASE}
 MESSAGE_SUBST+=		RADIUS_USER=${RADIUS_USER} XARGS=${XARGS:Q}
@@ -45,7 +46,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.2.0
+RADVER=			2.2.9
+RADVERALT=		020209
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -157,6 +159,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/modules/rlm_perl/example.pl ${DESTDIR}${EGDIR}
 
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

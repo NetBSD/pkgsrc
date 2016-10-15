@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+$NetBSD: patch-ab,v 1.1.1.1.72.1 2016/10/15 19:06:02 bsiegert Exp $
 
---- src/modules/rlm_perl/Makefile.in.orig	2006-02-10 19:47:17.000000000 +0000
+--- src/modules/rlm_perl/Makefile.in.orig	2015-09-30 20:37:13.000000000 +0000
 +++ src/modules/rlm_perl/Makefile.in
 @@ -15,4 +15,3 @@ include ../rules.mak
  $(LT_OBJS): $(HEADERS)
