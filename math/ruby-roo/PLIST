@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/12 09:39:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/15 14:45:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+${GEM_LIBDIR}/.github/ISSUE_TEMPLATE
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.simplecov
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Gemfile_ruby2
 ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -44,6 +45,7 @@ ${GEM_LIBDIR}/lib/roo/libre_office.rb
 ${GEM_LIBDIR}/lib/roo/link.rb
 ${GEM_LIBDIR}/lib/roo/open_office.rb
 ${GEM_LIBDIR}/lib/roo/spreadsheet.rb
+${GEM_LIBDIR}/lib/roo/tempdir.rb
 ${GEM_LIBDIR}/lib/roo/utils.rb
 ${GEM_LIBDIR}/lib/roo/version.rb
 ${GEM_LIBDIR}/roo.gemspec
@@ -71,3 +73,4 @@ ${GEM_LIBDIR}/test/excelx/cell/test_string.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_time.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/test_roo.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
