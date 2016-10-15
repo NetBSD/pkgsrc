@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
+$NetBSD: patch-al,v 1.3.50.1 2016/10/15 19:06:02 bsiegert Exp $
 
---- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2010-05-24 05:40:58.000000000 +0000
+--- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2015-09-30 20:37:13.000000000 +0000
 +++ src/modules/rlm_preprocess/rlm_preprocess.c
-@@ -130,7 +130,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
+@@ -128,7 +128,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
  		/*
  		 *  No weird packing.  Ignore it.
  		 */
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
  		if (!ptr) continue;
  
  		/*
-@@ -148,7 +148,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
+@@ -146,7 +146,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
  			const char *p;
  			DICT_ATTR	*dattr;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
  			gettoken(&p, newattr, sizeof(newattr));
  
  			if ((dattr = dict_attrbyname(newattr)) != NULL) {
-@@ -232,10 +232,10 @@ static void rad_mangle(rlm_preprocess_t 
+@@ -231,10 +231,10 @@ static void rad_mangle(rlm_preprocess_t 
  		 *
  		 *	FIXME: should we handle this as a REALM ?
  		 */
@@ -33,7 +33,7 @@ $NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
  			namepair->length = strlen(newname);
  		}
  	}
-@@ -403,9 +403,9 @@ static int huntgroup_access(REQUEST *req
+@@ -415,9 +415,9 @@ static int huntgroup_access(REQUEST *req
  						       &request->packet->vps,
  						       PW_HUNTGROUP_NAME,
  						       PW_TYPE_STRING);
@@ -45,7 +45,7 @@ $NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
  			}
  			r = RLM_MODULE_OK;
  		}
-@@ -580,7 +580,7 @@ static int preprocess_authorize(void *in
+@@ -597,7 +597,7 @@ static int preprocess_authorize(void *in
  				  data->huntgroups)) != RLM_MODULE_OK) {
  		char buf[1024];
  		radlog_request(L_AUTH, 0, request, "No huntgroup access: [%s] (%s)",
@@ -54,7 +54,7 @@ $NetBSD: patch-al,v 1.3 2010/07/20 08:41:21 adam Exp $
  		       auth_name(buf, sizeof(buf), request, 1));
  		return r;
  	}
-@@ -631,7 +631,7 @@ static int preprocess_preaccounting(void
+@@ -648,7 +648,7 @@ static int preprocess_preaccounting(void
  				  data->huntgroups)) != RLM_MODULE_OK) {
  		char buf[1024];
  		radlog_request(L_INFO, 0, request, "No huntgroup access: [%s] (%s)",
