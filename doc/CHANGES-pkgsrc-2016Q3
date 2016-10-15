@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.6 2016/10/15 18:56:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.7 2016/10/15 19:14:43 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -53,4 +53,7 @@ databases/geneweb: build fix
 
 Pullup ticket #5132 - requested by fhajny
 mail/dovecot2: enable functionality
+
+Pullup ticket #5135 - requested by sevan
+net/freeradius2: security fix
 
