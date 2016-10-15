@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/07/18 15:03:05 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.1.2.1 2016/10/15 18:55:40 bsiegert Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -32,7 +32,9 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-ldap
-CONFIGURE_ARGS+=	--without-sql
+
+# Enable generic SQL backend support
+CONFIGURE_ARGS+=	--with-sql
 
 TEST_TARGET=	check
 
