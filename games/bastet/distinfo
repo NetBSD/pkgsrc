@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:56:44 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/10/15 00:45:15 kamil Exp $
 
-SHA1 (bastet-0.41.tgz) = 644a0f76adedef84946159520c1639ff0c6c47ec
-RMD160 (bastet-0.41.tgz) = 00801881e8ee5d42f91fe5f231d3151606032851
-SHA512 (bastet-0.41.tgz) = 49831cc6ff0dfae195e55f7dd17328faed730df1395c81c55eb38a5dbab5370b375da5f7f4b619544b37cdf29882b345f0453b5eff3a9468a0f562b83efb3eba
-Size (bastet-0.41.tgz) = 24195 bytes
-SHA1 (patch-aa) = 987f3ea4697eeebc0b955ee293586621c9f93d4d
-SHA1 (patch-ab) = ce2a671e0582fc227bac442186c9f8c1621db278
-SHA1 (patch-ac) = 01c31c8506180300bec74fbf3627784e25e0809c
+SHA1 (bastet-0.43.1.tar.gz) = 003e342df526211a9a811c2235a02b2d8288e020
+RMD160 (bastet-0.43.1.tar.gz) = dde16fd74747bbd9dcc3a9762c0e681b7c9318ce
+SHA512 (bastet-0.43.1.tar.gz) = b2b67cd5bcc015629bd679b2bce696bd9e944cd233c78a9d49f91d340cd57f36f17181ffee5637c5883d5d28d4a1e3378697c5015dfd1cdac55e4a893c025e6f
+Size (bastet-0.43.1.tar.gz) = 82802 bytes
+SHA1 (patch-Makefile) = e372e9c19166dbfb4b432e720a0c56990792297e
