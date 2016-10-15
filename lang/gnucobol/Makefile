@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/15 13:40:40 wen Exp $
 #
 
-DISTNAME=	gnu-cobol-2.0_nightly_r411
-PKGNAME=	opencobol-2.0alpha1
-PKGREVISION=	2
+DISTNAME=	gnu-cobol-2.0_rc-1
+PKGNAME=	opencobol-2.0rc1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-cobol/}
 
 MAINTAINER=	rodo@bloerp.de
 HOMEPAGE=	https://sourceforge.net/projects/open-cobol/
 COMMENT=	Open-source COBOL compiler
+LICENSE=	gnu-gpl-v3
 
 CONFLICTS=		opensource-cobol-[0-9]* open-cobol-ce-[0-9]*
 
