@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/09/13 14:43:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/10/15 15:10:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -42,5 +42,7 @@ ${GEM_LIBDIR}/lib/daemons/monitor.rb
 ${GEM_LIBDIR}/lib/daemons/pid.rb
 ${GEM_LIBDIR}/lib/daemons/pidfile.rb
 ${GEM_LIBDIR}/lib/daemons/pidmem.rb
+${GEM_LIBDIR}/lib/daemons/reporter.rb
+${GEM_LIBDIR}/lib/daemons/syslogio.rb
 ${GEM_LIBDIR}/lib/daemons/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
