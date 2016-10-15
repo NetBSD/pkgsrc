@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4254 2016/10/15 07:36:28 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4255 2016/10/15 07:44:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5970,3 +5970,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Script to 1.14 [mef 2016-10-15]
 	Updated textproc/p5-Pod-Weaver to 4.015 [wen 2016-10-15]
 	Updated textproc/p5-PDF-API2 to 2.030 [wen 2016-10-15]
+	Updated textproc/p5-XML-DOM to 1.46 [wen 2016-10-15]
