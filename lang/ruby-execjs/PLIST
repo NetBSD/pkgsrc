@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/07 13:58:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/10/15 13:57:53 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/execjs.rb
 ${GEM_LIBDIR}/lib/execjs/disabled_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/duktape_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/encoding.rb
 ${GEM_LIBDIR}/lib/execjs/external_runtime.rb
+${GEM_LIBDIR}/lib/execjs/mini_racer_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/module.rb
 ${GEM_LIBDIR}/lib/execjs/ruby_racer_runtime.rb
 ${GEM_LIBDIR}/lib/execjs/ruby_rhino_runtime.rb
@@ -17,5 +18,6 @@ ${GEM_LIBDIR}/lib/execjs/support/jscript_runner.js
 ${GEM_LIBDIR}/lib/execjs/support/json2.js
 ${GEM_LIBDIR}/lib/execjs/support/node_runner.js
 ${GEM_LIBDIR}/lib/execjs/support/spidermonkey_runner.js
+${GEM_LIBDIR}/lib/execjs/support/v8_runner.js
 ${GEM_LIBDIR}/lib/execjs/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
