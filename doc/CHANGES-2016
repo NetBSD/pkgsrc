@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4266 2016/10/15 14:47:27 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4267 2016/10/15 15:07:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5982,3 +5982,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/ruby-gsl to 2.1.0.1 [taca 2016-10-15]
 	Updated math/ruby-roo to 2.5.1 [taca 2016-10-15]
 	Updated math/ruby-spreadsheet to 1.1.3 [taca 2016-10-15]
+	Updated misc/ruby-colorator to 1.1.0 [taca 2016-10-15]
