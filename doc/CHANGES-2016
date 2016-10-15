@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4259 2016/10/15 13:55:46 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4260 2016/10/15 13:57:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5975,3 +5975,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gnucobol to 2.0rc1 [wen 2016-10-15]
 	Updated graphics/ruby-mini-magick to 4.5.1 [taca 2016-10-15]
 	Updated graphics/ruby-oily_png to 1.2.1 [taca 2016-10-15]
+	Updated net/p5-Net-Interface to 1.016 [wen 2016-10-15]
