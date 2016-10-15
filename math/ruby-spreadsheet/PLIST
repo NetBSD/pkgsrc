@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2014/08/30 01:31:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/10/15 14:46:54 taca Exp $
 bin/xlsopcodes${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/Excel97-2007BinaryFileFormatSpecification.pdf
