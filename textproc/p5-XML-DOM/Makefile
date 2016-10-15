@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2016/06/08 19:24:42 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/10/15 07:43:27 wen Exp $
 
-DISTNAME=	XML-DOM-1.45
+DISTNAME=	XML-DOM-1.46
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -16,7 +15,7 @@ DEPENDS+=	p5-XML-RegExp-[0-9]*:../../textproc/p5-XML-RegExp
 
 CONFLICTS+=	p5-libxml-enno-[0-9]*
 
-PERL5_PACKLIST=		auto/XML-DOM/.packlist
+PERL5_PACKLIST=		auto/XML/DOM/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
