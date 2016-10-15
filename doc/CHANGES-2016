@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4255 2016/10/15 07:44:55 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4256 2016/10/15 12:52:11 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5971,3 +5971,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Pod-Weaver to 4.015 [wen 2016-10-15]
 	Updated textproc/p5-PDF-API2 to 2.030 [wen 2016-10-15]
 	Updated textproc/p5-XML-DOM to 1.46 [wen 2016-10-15]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.637 [tsutsui 2016-10-15]
