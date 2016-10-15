@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4263 2016/10/15 14:01:04 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4264 2016/10/15 14:42:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5979,3 +5979,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/ruby-execjs to 2.7.0 [taca 2016-10-15]
 	Updated mail/ruby-mail to 2.6.4 [taca 2016-10-15]
 	Updated mail/ruby-mime-types to 3.1 [taca 2016-10-15]
+	Updated math/ruby-gsl to 2.1.0.1 [taca 2016-10-15]
