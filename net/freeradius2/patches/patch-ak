@@ -1,15 +1,13 @@
-$NetBSD: patch-ak,v 1.3 2008/10/12 13:57:27 adrianp Exp $
+$NetBSD: patch-ak,v 1.3.64.1 2016/10/15 19:06:02 bsiegert Exp $
 
---- raddb/radiusd.conf.in.orig	2008-09-25 10:41:26.000000000 +0200
+--- raddb/radiusd.conf.in.orig	2015-09-30 20:37:13.000000000 +0000
 +++ raddb/radiusd.conf.in
-@@ -164,8 +164,8 @@ pidfile = ${run_dir}/${name}.pid
- #  It will join all groups where "user" is a member.  This can allow
- #  for some finer-grained access controls.
+@@ -166,6 +166,8 @@ pidfile = ${run_dir}/${name}.pid
  #
--#user = radius
--#group = radius
-+user = @@RADIUS_USER@@
-+group = @@RADIUS_GROUP@@
+ #user = radius
+ #group = radius
++user = radius
++group = radius
  
- #  max_request_time: The maximum time (in seconds) to handle a request.
+ #  panic_action: Command to execute if the server dies unexpectedly.
  #

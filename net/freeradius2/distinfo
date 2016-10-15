@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.17 2015/11/04 00:35:00 agc Exp $
+$NetBSD: distinfo,v 1.17.8.1 2016/10/15 19:06:02 bsiegert Exp $
 
-SHA1 (freeradius-server-2.2.0.tar.bz2) = 8710b21972072241219f006d26f609cb58875cda
-RMD160 (freeradius-server-2.2.0.tar.bz2) = 243569a7ad93b292439e6938be8102dba12b843d
-SHA512 (freeradius-server-2.2.0.tar.bz2) = 9afdb37293cbf20f85b9cce3c69fe5ccb987f44e84d58cd4150cd99cfe14f8e67359351c4de35f371bc71cac2eae7cd3e086632e011b035cae6a0054205ab961
-Size (freeradius-server-2.2.0.tar.bz2) = 2703349 bytes
-SHA1 (patch-aa) = 90c0c676ea668e36851eeffc0f1703624d703339
-SHA1 (patch-ab) = 7a23eb75a9818b073263fd36cbf17b692fa19a9f
-SHA1 (patch-ac) = e0d7f8b671d4c3646ab51dab2833a3593bf95c6a
-SHA1 (patch-ae) = aa43b83ba991f510cee40cb65c3621e9d559d6dd
-SHA1 (patch-ai) = d3baec3e140981bd0d793a10fb1162e201e565e0
-SHA1 (patch-aj) = 865882e6e6e935276529b98616c9059c555272b9
-SHA1 (patch-ak) = 751aba6a3f9716279f3a87871cf7008b7a921f9a
-SHA1 (patch-al) = 6d68e3e2d7dd50675f142be974b277da0f664c8b
-SHA1 (patch-man_man5_dictionary.5) = cc662beeb2351501c9761e4ce6fc8402c7907b30
-SHA1 (patch-src_modules_rlm__pap_rlm__pap.c) = 595c5dafb22d71fbcb00974e4fc56a1fd1e7c7c3
+SHA1 (freeradius-server-2.2.9.tar.bz2) = 730a5b681b375800a85c935cc2f34c5ba3aa951b
+RMD160 (freeradius-server-2.2.9.tar.bz2) = 4d3097e5d193a2268e81e3bde7cb6b75aed739c5
+Size (freeradius-server-2.2.9.tar.bz2) = 2793005 bytes
+SHA1 (patch-aa) = 07f28084b9d159a52014e31b5314827baaf07716
+SHA1 (patch-ab) = 306ee49b886d38341c2a94159ae033d2cff9c577
+SHA1 (patch-ac) = 689de3193b34f6ff169287a2512bda9691de6899
+SHA1 (patch-ae) = 98be5272791935ed6823165ff53893b352fd6974
+SHA1 (patch-ai) = c224f984167747894506e806a5a9775318b47d96
+SHA1 (patch-aj) = 99f62341e36932270ea0bce38bca8778a2125624
+SHA1 (patch-ak) = 898cc417449e9e5d5513a5d53b538ed320b923a2
+SHA1 (patch-al) = e553795702f48c26c41fa00a7fd59c48413c1423
+SHA1 (patch-configure.in) = e0fc20374d8600694d7a34e1ecef8e1f03b5816d
+SHA1 (patch-man_man5_dictionary.5) = 01242a57f7a2bd6b84313ec578b4650c525b72b8
