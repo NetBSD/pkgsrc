@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/03/12 13:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/10/15 14:42:10 taca Exp $
 
-DISTNAME=	gsl-2.1.0
+DISTNAME=	gsl-2.1.0.1
 CATEGORIES=	math
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
