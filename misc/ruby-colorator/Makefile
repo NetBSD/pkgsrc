@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/09/15 17:13:59 taca Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/15 15:07:23 taca Exp $
 
-DISTNAME=	colorator-0.1
+DISTNAME=	colorator-1.1.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

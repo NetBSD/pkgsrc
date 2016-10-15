@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/10/15 15:07:23 taca Exp $
 
-SHA1 (colorator-0.1.gem) = 990e8354185850a44929c5980a170baddf0a4ec4
-RMD160 (colorator-0.1.gem) = 7851ea3f5a740ff96c786a564aa6dbc7e75f24cd
-SHA512 (colorator-0.1.gem) = 572a15f4d3011579302ae5448c9752511baec962d65265e923f561b002a3a80384610ab877233f15c1c6953a765fbf32b2d2838a658d207900cf53b6525caee2
-Size (colorator-0.1.gem) = 7680 bytes
+SHA1 (colorator-1.1.0.gem) = aaa7f8031f10ea4d0d1631a345f9c75c95809860
+RMD160 (colorator-1.1.0.gem) = 237a3bc0638cff19318930050a0f8b5674cfea26
+SHA512 (colorator-1.1.0.gem) = 196e99382062014bdc9ff39cb8bc099c7c3ffdfe1c0faef39cf4eeaee20e1fa1b2ae51a0f6746e71944892a6db314da141ad879afb40ad1f343d9cb8d7757cc4
+Size (colorator-1.1.0.gem) = 7168 bytes
