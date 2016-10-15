@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/10/15 00:45:15 kamil Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/15 01:20:07 kamil Exp $
 
 DISTNAME=		bastet-0.43.1
 CATEGORIES=		games
@@ -23,6 +23,8 @@ SUBST_STAGE.vardir=	pre-configure
 SUBST_FILES.vardir=	Config.cpp
 SUBST_MESSAGE.vardir=	Fixing VARBASE.
 SUBST_SED.vardir=	-e "s|/var/games|${VARBASE}/games|1"
+
+REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/bastet.scores2 ${GAMEDATA_PERMS}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bastet ${DESTDIR}${PREFIX}/bin/
