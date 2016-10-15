@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/12 14:47:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/15 15:17:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -9,8 +9,10 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/UPGRADING.md
 ${GEM_LIBDIR}/hashie.gemspec
 ${GEM_LIBDIR}/lib/hashie.rb
+${GEM_LIBDIR}/lib/hashie/array.rb
 ${GEM_LIBDIR}/lib/hashie/clash.rb
 ${GEM_LIBDIR}/lib/hashie/dash.rb
+${GEM_LIBDIR}/lib/hashie/extensions/array/pretty_inspect.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/coercion.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/dash/coercion.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/dash/indifferent_access.rb
@@ -27,6 +29,7 @@ ${GEM_LIBDIR}/lib/hashie/extensions/merge_initializer.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/method_access.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/parsers/yaml_erb_parser.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/pretty_inspect.rb
+${GEM_LIBDIR}/lib/hashie/extensions/ruby_version_check.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/strict_key_access.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/stringify_keys.rb
 ${GEM_LIBDIR}/lib/hashie/extensions/symbolize_keys.rb
@@ -35,6 +38,7 @@ ${GEM_LIBDIR}/lib/hashie/mash.rb
 ${GEM_LIBDIR}/lib/hashie/rash.rb
 ${GEM_LIBDIR}/lib/hashie/trash.rb
 ${GEM_LIBDIR}/lib/hashie/version.rb
+${GEM_LIBDIR}/spec/hashie/array_spec.rb
 ${GEM_LIBDIR}/spec/hashie/clash_spec.rb
 ${GEM_LIBDIR}/spec/hashie/dash_spec.rb
 ${GEM_LIBDIR}/spec/hashie/extensions/autoload_spec.rb
@@ -63,4 +67,5 @@ ${GEM_LIBDIR}/spec/hashie/trash_spec.rb
 ${GEM_LIBDIR}/spec/hashie/version_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/support/module_context.rb
+${GEM_LIBDIR}/spec/support/ruby_version_check.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
