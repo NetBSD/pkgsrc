@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4251 2016/10/15 00:45:58 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4252 2016/10/15 00:54:14 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5966,3 +5966,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql57-client to 5.7.16 [adam 2016-10-14]
 	Updated databases/mysql57-server to 5.7.16 [adam 2016-10-14]
 	Updated games/bastet to 0.43.1 [kamil 2016-10-15]
+	Updated devel/p5-Test-Kwalitee to 1.23 [mef 2016-10-15]
+	Updated devel/p5-Test-Script to 1.14 [mef 2016-10-15]
