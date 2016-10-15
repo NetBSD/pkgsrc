@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.5 2016/10/06 18:42:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.6 2016/10/15 18:56:39 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -41,4 +41,16 @@ graphics/gc: security fix
 Pullup ticket #5121 - requested by joerg
 sysutils/xentools41: build fix
 sysutils/xentools42: build fix
+
+Pullup ticket #5129 - requested by dholland
+cad/qcad: build fix
+
+Pullup ticket #5130 - requested by dholland
+x11/xephem: build fix
+
+Pullup ticket #5131 - requested by dholland
+databases/geneweb: build fix
+
+Pullup ticket #5132 - requested by fhajny
+mail/dovecot2: enable functionality
 
