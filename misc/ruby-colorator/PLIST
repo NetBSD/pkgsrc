@@ -1,13 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/15 17:13:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/15 15:07:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/History.markdown
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/colorator.gemspec
 ${GEM_LIBDIR}/lib/colorator.rb
 ${GEM_LIBDIR}/lib/colorator/core_ext.rb
-${GEM_LIBDIR}/spec/colorator/core_ext_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 @pkgdir lib/ruby/gems/2.0.0/build_info
