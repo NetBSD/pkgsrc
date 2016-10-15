@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2016/09/17 19:02:52 tsutsui Exp $
+$NetBSD: distinfo,v 1.15 2016/10/15 15:18:01 tsutsui Exp $
 
 SHA1 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = cc093d1c6d6729434ec90e216afeae1601e0b3b4
 RMD160 (nspluginwrapper-1.4.4-suse121-generic.i386.tar.gz) = a9d79dcd31efc4b1a9b71e29694eff9c8555b10d
@@ -16,4 +16,5 @@ SHA1 (patch-aa) = b39ff156d0a769e44140a713b8ffc2b50a8022d4
 SHA1 (patch-ab) = 20dc1b6ff4036a0946dd469860eb9b6c129fdb7a
 SHA1 (patch-ac) = 87cb838f6b203947d9efc4350313e410d06d486e
 SHA1 (patch-src_npw-config-template.h) = 01af56f639ce88f7896fb733107bb4436cd299a5
+SHA1 (patch-src_npw-player.c) = c054f19e7067aafee347e0398673345fe56ae12e
 SHA1 (patch-src_npw-viewer.c) = eb8855ae6d1015eb7627ada5c39af5e0d80f0e75
