@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2016/03/15 17:12:18 taca Exp $
+# $NetBSD: Makefile,v 1.15 2016/10/15 15:27:01 taca Exp $
 
-DISTNAME=	ohai-8.12.1
+DISTNAME=	ohai-8.20.0
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,12 +21,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0:../../devel/ruby-wmi-lite
 DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<13:../../sysutils/ruby-chef-config
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} == "200"
-DEPENDS+=	${RUBY_PKGPREFIX}-rake>=10.1:../../devel/ruby-rake
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
