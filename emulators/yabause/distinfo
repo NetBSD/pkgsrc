@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 20:31:10 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/10/16 10:10:02 bsiegert Exp $
 
 SHA1 (yabause-0.9.14.tar.gz) = abd7936234f47f9568809b6bf955940c7a3ad447
 RMD160 (yabause-0.9.14.tar.gz) = 545eea2280b881ae4ddcea2b8b189301bea4176d
 SHA512 (yabause-0.9.14.tar.gz) = 8b14d9146cf12d104fcf43369cd949f1f47e7891a54241914f6141facf871bcc158f4e80a8c5b61fdeefe6f1b8d425ff301ba653df134a030c323c9e3ccf3a58
 Size (yabause-0.9.14.tar.gz) = 1662762 bytes
+SHA1 (patch-CMakeLists.txt) = c500a586921a537b021cf83e024865c78c8ef2f8
+SHA1 (patch-l10n_CMakeLists.txt) = ef32472ba02a57f08568ac9d31d6dd6f965db448
 SHA1 (patch-src_CMakeLists.txt) = 382d8004222ff9f5235ddce35fa41e6196469ba0
+SHA1 (patch-src_persdljoy.c) = d64977e79fc41935feeec8bc6dafba3fdd362ffb
+SHA1 (patch-src_qt_CMakeLists.txt) = 0fc3eaf95bcde28158b661303671a10ae56c94d7
 SHA1 (patch-src_qt_YabauseThread.cpp) = 1dc06681cd04b6d5eb26b818120724ccdb89fd25
+SHA1 (patch-src_sndsdl.c) = fe8b4432804ebcf62d3df713cd4fe371deb5c579
+SHA1 (patch-src_yabause.c) = 2780aae8d7f70f12e8691fb3a656beb7eb17ce8f

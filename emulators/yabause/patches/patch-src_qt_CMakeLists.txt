@@ -1,0 +1,21 @@
+$NetBSD: patch-src_qt_CMakeLists.txt,v 1.1 2016/10/16 10:10:02 bsiegert Exp $
+
+--- src/qt/CMakeLists.txt.orig	2014-11-12 17:48:47.000000000 +0000
++++ src/qt/CMakeLists.txt
+@@ -214,16 +214,6 @@ include_directories(
+ 	${QT_QTOPENGL_INCLUDE_DIR} )
+ endif()
+ 
+-# APPLE // not necessary mac os x, but i don't care ;)
+-if (APPLE)
+-	set_target_properties( yabause-qt PROPERTIES MACOSX_BUNDLE true )
+-	set_target_properties( yabause-qt PROPERTIES MACOSX_BUNDLE_ICON_FILE yabause.icns )
+-	set_target_properties( yabause-qt PROPERTIES MACOSX_BUNDLE_LONG_VERSION_STRING "${YAB_VERSION}" )
+-	set_target_properties( yabause-qt PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME Yabause )
+-	set_target_properties( yabause-qt PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${YAB_VERSION}" )
+-	set_target_properties( yabause-qt PROPERTIES MACOSX_BUNDLE_COPYRIGHT "(c) Yabause Team" )
+-endif (APPLE)
+-
+ target_link_libraries( yabause-qt yabause )
+ target_link_libraries( yabause-qt ${YABAUSE_LIBRARIES} )
+ target_link_libraries( yabause-qt ${PORT_LIBRARIES} )
