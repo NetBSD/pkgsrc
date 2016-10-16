@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.7 2016/10/15 19:14:43 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.8 2016/10/16 14:46:10 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -56,4 +56,14 @@ mail/dovecot2: enable functionality
 
 Pullup ticket #5135 - requested by sevan
 net/freeradius2: security fix
+
+Pullup ticket #5128 - requested by bsiegert
+mail/squirrelmail: build fix
+
+Pullup ticket #5133 - requested by bsiegert
+graphics/openjpeg: security update
+
+Pullup ticket #5134 - requested by bsiegert
+graphics/gdk-pixbuf2-xlib: security update
+graphics/gdk-pixbuf2: security update
 
