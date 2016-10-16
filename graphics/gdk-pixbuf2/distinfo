@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.30 2016/04/26 07:14:00 prlw1 Exp $
+$NetBSD: distinfo,v 1.30.4.1 2016/10/16 14:44:20 spz Exp $
 
-SHA1 (gdk-pixbuf-2.34.0.tar.xz) = 240018b35da047500e43caac7e32a4482edd3852
-RMD160 (gdk-pixbuf-2.34.0.tar.xz) = 7e20f674b07387a052500564a1a9749e91eabaf2
-SHA512 (gdk-pixbuf-2.34.0.tar.xz) = 874aed9af0352592674f2bebd4d9b0a945932a410c9f0b776f45766c2f18d442a39c684cca69b1aca6d14f67f18e690489f388ff58699dbd0efbd13244a1a8b5
-Size (gdk-pixbuf-2.34.0.tar.xz) = 2709320 bytes
+SHA1 (gdk-pixbuf-2.36.0.tar.xz) = 39328ecec0ec61edf8530c76a1495ca0fa95f4cf
+RMD160 (gdk-pixbuf-2.36.0.tar.xz) = 0a6079ba5a018ff62aaeb0af699a1355c7500f5c
+SHA512 (gdk-pixbuf-2.36.0.tar.xz) = f9f5cc9aabf08bc246c7a328c9775a89eb1a6bf21699928c0e1fd17ac86e624162097d65ee9b51e550ee64dd201bea48465bff9636c94844d91a9cf3f73da919
+Size (gdk-pixbuf-2.36.0.tar.xz) = 2718648 bytes
 SHA1 (patch-ab) = a64a1c9a4dd4c51d918e3409d40d76fd63146150
 SHA1 (patch-ac) = c55b59e380cf58ae7e94c760dc0dbb32b6b5fb69
 SHA1 (patch-gdk-pixbuf_gdk-pixbuf-scaled-anim.c) = 486db8d3f352b0d72b7074ba48f14ccbfa09deda
