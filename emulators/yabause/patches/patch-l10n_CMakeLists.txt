@@ -1,0 +1,13 @@
+$NetBSD: patch-l10n_CMakeLists.txt,v 1.1 2016/10/16 10:10:02 bsiegert Exp $
+
+--- l10n/CMakeLists.txt.orig	2014-08-18 14:56:49.000000000 +0000
++++ l10n/CMakeLists.txt
+@@ -2,7 +2,7 @@ project(yabause-l10n)
+ 
+ set(LANGS ar de es fr it lt nl pt pt_BR ru sv zh_CN zh_TW)
+ 
+-if (UNIX AND NOT APPLE)
++if (UNIX)
+     foreach(LANG ${LANGS})
+ 	    install(FILES "yabause_${LANG}.yts" DESTINATION "share/yabause/yts" RENAME "${LANG}.yts")
+     endforeach()
