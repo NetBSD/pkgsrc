@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.12 2016/04/26 07:14:00 prlw1 Exp $
+# $NetBSD: Makefile.version,v 1.12.4.1 2016/10/16 14:44:20 spz Exp $
 
-PIXBUF2_VERSION=	2.34.0
+PIXBUF2_VERSION=	2.36.0
 MSITE_VERSION=		${PIXBUF2_VERSION:R}
