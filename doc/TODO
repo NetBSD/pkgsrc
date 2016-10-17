@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16575 2016/10/15 00:45:58 kamil Exp $
+$NetBSD: TODO,v 1.16576 2016/10/17 09:41:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -960,6 +960,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o keybinder-0.3.1
+	o khard-0.11.3
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2013.03R1b
@@ -1036,6 +1037,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
+	o lighttpd-1.4.42
 	o lilv-0.22.0
 	o lincvs-2.1.4 [now called CrossVC]
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
@@ -1194,6 +1196,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-AuthCAS-1.6
 	o p5-Authen-TacacsPlus-0.26
 	o p5-CDDB-2.00
+	o p5-CGI-4.35
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
@@ -1234,7 +1237,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
-	o p5-Specio-0.29
+	o p5-Specio-0.30
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
@@ -1389,6 +1392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-radare2-0.10.6
 	o py-scgi-1.15
 	o py-serpent-1.12
+	o py-setuptools-28.5.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
