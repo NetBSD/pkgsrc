@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/01/19 20:37:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/17 14:39:45 taca Exp $
 
-DISTNAME=	net-dhcp-1.3.2
+DISTNAME=	net-dhcp-1.3.3
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
