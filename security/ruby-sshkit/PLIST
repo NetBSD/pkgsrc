@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/13 17:18:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/17 15:45:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -22,8 +22,11 @@ ${GEM_LIBDIR}/lib/sshkit.rb
 ${GEM_LIBDIR}/lib/sshkit/all.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/abstract.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/connection_pool.rb
+${GEM_LIBDIR}/lib/sshkit/backends/connection_pool/cache.rb
+${GEM_LIBDIR}/lib/sshkit/backends/connection_pool/nil_cache.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/local.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/netssh.rb
+${GEM_LIBDIR}/lib/sshkit/backends/netssh/known_hosts.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/printer.rb
 ${GEM_LIBDIR}/lib/sshkit/backends/skipper.rb
 ${GEM_LIBDIR}/lib/sshkit/color.rb
@@ -55,13 +58,15 @@ ${GEM_LIBDIR}/test/functional/backends/test_local.rb
 ${GEM_LIBDIR}/test/functional/backends/test_netssh.rb
 ${GEM_LIBDIR}/test/functional/test_ssh_server_comes_up_for_functional_tests.rb
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/known_hosts/github
+${GEM_LIBDIR}/test/known_hosts/github_hash
+${GEM_LIBDIR}/test/known_hosts/github_ip
 ${GEM_LIBDIR}/test/support/vagrant_wrapper.rb
 ${GEM_LIBDIR}/test/unit/backends/test_abstract.rb
 ${GEM_LIBDIR}/test/unit/backends/test_connection_pool.rb
 ${GEM_LIBDIR}/test/unit/backends/test_local.rb
 ${GEM_LIBDIR}/test/unit/backends/test_netssh.rb
 ${GEM_LIBDIR}/test/unit/backends/test_printer.rb
-${GEM_LIBDIR}/test/unit/core_ext/test_string.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_custom.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_dot.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_pretty.rb
@@ -72,6 +77,7 @@ ${GEM_LIBDIR}/test/unit/test_command_map.rb
 ${GEM_LIBDIR}/test/unit/test_configuration.rb
 ${GEM_LIBDIR}/test/unit/test_coordinator.rb
 ${GEM_LIBDIR}/test/unit/test_deprecation_logger.rb
+${GEM_LIBDIR}/test/unit/test_dsl.rb
 ${GEM_LIBDIR}/test/unit/test_host.rb
 ${GEM_LIBDIR}/test/unit/test_logger.rb
 ${GEM_LIBDIR}/test/unit/test_mapping_interaction_handler.rb
