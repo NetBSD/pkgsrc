@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/10/17 15:47:46 taca Exp $
+
+SHA1 (capistrano-harrow-0.5.3.gem) = e793e3edaba0218920ba74840ea08aab05198805
+RMD160 (capistrano-harrow-0.5.3.gem) = 3350d914782b4f010d00cf2bb2ed45d40e74961a
+SHA512 (capistrano-harrow-0.5.3.gem) = 0ba485bf9792c9f258e2ae470b05f95c4482e2b3085643a954f0dc0e3f5892e29ad4db309c0720a01eb0a4093a99108346a3eb9ddf4321edea8088ca238122d2
+Size (capistrano-harrow-0.5.3.gem) = 31232 bytes
