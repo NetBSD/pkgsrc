@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4274 2016/10/16 11:59:15 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4275 2016/10/17 01:12:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5877,11 +5877,13 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/gdk-pixbuf2-xlib to 2.36.0 [ryoon 2016-10-09]
 	Updated devel/hdf5 to 1.8.17 [alnsn 2015-10-09]
 	Updated math/cloog to 0.18.4 [wiz 2016-10-09]
+	Updated mail/imapsync to 1.607nb3 [dholland 2016-10-09]
 	Updated graphics/ImageMagick to 7.0.3.3 [wiz 2016-10-09]
 	Updated x11/xterm to 327 [wiz 2016-10-09]
 	Updated security/caff to 2.5 [wiz 2016-10-09]
 	Updated net/wireshark to 2.2.1 [wiz 2016-10-09]
 	Updated mail/notmuch to 0.23 [wiz 2016-10-09]
+	Updated databases/geneweb to 5.01nb10 [dholland 2016-10-09]
 	Updated devel/py-setuptools to 28.3.0 [wiz 2016-10-09]
 	Updated devel/py-setuptools_scm to 1.13.0 [wiz 2016-10-09]
 	Updated devel/py-tortoisehg to 3.9.2 [wiz 2016-10-09]
@@ -5990,3 +5992,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/hoe to 3.15.2 [taca 2016-10-15]
 	Updated net/mikutter to 3.4.6 [tsutsui 2016-10-16]
 	Updated lang/php56 to 5.6.27 [taca 2016-10-16]
+	Updated pkgtools/rc.subr to 20161016 [dholland 2016-10-17]
