@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2016/09/13 10:48:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.60 2016/10/17 12:17:50 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -214,6 +214,8 @@ share/doc/sqlite3/datatype3.html
 share/doc/sqlite3/datatypes.html
 share/doc/sqlite3/dbhash.html
 share/doc/sqlite3/dbstat.html
+share/doc/sqlite3/debugging.html
+share/doc/sqlite3/deterministic.html
 share/doc/sqlite3/dev.html
 share/doc/sqlite3/different.html
 share/doc/sqlite3/doc_backlink_crossref.html
@@ -238,7 +240,9 @@ share/doc/sqlite3/foreignkeys.html
 share/doc/sqlite3/formatchng.html
 share/doc/sqlite3/fts3.html
 share/doc/sqlite3/fts5.html
+share/doc/sqlite3/fullsql.html
 share/doc/sqlite3/getthecode.html
+share/doc/sqlite3/hirely.html
 share/doc/sqlite3/howtocompile.html
 share/doc/sqlite3/howtocorrupt.html
 share/doc/sqlite3/hp1.html
@@ -418,6 +422,7 @@ share/doc/sqlite3/images/syntax/attach-stmt.gif
 share/doc/sqlite3/images/syntax/begin-stmt.gif
 share/doc/sqlite3/images/syntax/column-constraint.gif
 share/doc/sqlite3/images/syntax/column-def.gif
+share/doc/sqlite3/images/syntax/column-name-list.gif
 share/doc/sqlite3/images/syntax/comment-syntax.gif
 share/doc/sqlite3/images/syntax/commit-stmt.gif
 share/doc/sqlite3/images/syntax/common-table-expression.gif
@@ -516,12 +521,14 @@ share/doc/sqlite3/lang_with.html
 share/doc/sqlite3/limits.html
 share/doc/sqlite3/loadext.html
 share/doc/sqlite3/lockingv3.html
+share/doc/sqlite3/lts.html
 share/doc/sqlite3/malloc.html
 share/doc/sqlite3/mingw.html
 share/doc/sqlite3/mmap.html
 share/doc/sqlite3/mostdeployed.html
 share/doc/sqlite3/news.html
 share/doc/sqlite3/not-found.html
+share/doc/sqlite3/np1queryprob.html
 share/doc/sqlite3/nulls.html
 share/doc/sqlite3/oldnews.html
 share/doc/sqlite3/omitted.html
@@ -560,6 +567,7 @@ share/doc/sqlite3/releaselog/3_13_0.html
 share/doc/sqlite3/releaselog/3_14.html
 share/doc/sqlite3/releaselog/3_14_1.html
 share/doc/sqlite3/releaselog/3_14_2.html
+share/doc/sqlite3/releaselog/3_15_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
@@ -703,20 +711,26 @@ share/doc/sqlite3/requirements.html
 share/doc/sqlite3/rescode.html
 share/doc/sqlite3/robots.txt
 share/doc/sqlite3/rowidtable.html
+share/doc/sqlite3/rowvalue.html
 share/doc/sqlite3/rtree.html
 share/doc/sqlite3/selfcontained.html
+share/doc/sqlite3/series.html
 share/doc/sqlite3/serverless.html
 share/doc/sqlite3/session.html
 share/doc/sqlite3/session/c_changeset_abort.html
 share/doc/sqlite3/session/c_changeset_conflict.html
+share/doc/sqlite3/session/changegroup.html
 share/doc/sqlite3/session/changeset_iter.html
 share/doc/sqlite3/session/constlist.html
 share/doc/sqlite3/session/funclist.html
 share/doc/sqlite3/session/intro.html
 share/doc/sqlite3/session/objlist.html
 share/doc/sqlite3/session/session.html
+share/doc/sqlite3/session/sqlite3changegroup_add.html
 share/doc/sqlite3/session/sqlite3changegroup_add_strm.html
+share/doc/sqlite3/session/sqlite3changegroup_delete.html
 share/doc/sqlite3/session/sqlite3changegroup_new.html
+share/doc/sqlite3/session/sqlite3changegroup_output.html
 share/doc/sqlite3/session/sqlite3changeset_apply.html
 share/doc/sqlite3/session/sqlite3changeset_concat.html
 share/doc/sqlite3/session/sqlite3changeset_conflict.html
@@ -757,6 +771,7 @@ share/doc/sqlite3/syntax/attach-stmt.html
 share/doc/sqlite3/syntax/begin-stmt.html
 share/doc/sqlite3/syntax/column-constraint.html
 share/doc/sqlite3/syntax/column-def.html
+share/doc/sqlite3/syntax/column-name-list.html
 share/doc/sqlite3/syntax/comment-syntax.html
 share/doc/sqlite3/syntax/commit-stmt.html
 share/doc/sqlite3/syntax/common-table-expression.html
