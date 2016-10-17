@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16576 2016/10/17 09:41:10 wiz Exp $
+$NetBSD: TODO,v 1.16577 2016/10/17 19:59:25 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1272,6 +1272,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pgadmin4-1.0
 	o pgbuildfarm-4.17
 	o phoronix-test-suite-6.2.1
+	o php-basercms-4.0.0
 	o php-excel-1.8.1
 	o php-jpgraph-3.5.0b1
 	o php-memcache-3.0.8
