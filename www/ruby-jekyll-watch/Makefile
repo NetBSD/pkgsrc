@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/03/15 16:12:13 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/17 14:23:22 taca Exp $
 
-DISTNAME=	jekyll-watch-1.3.1
+DISTNAME=	jekyll-watch-1.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
