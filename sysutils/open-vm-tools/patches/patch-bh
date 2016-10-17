@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.2 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-bh,v 1.3 2016/10/17 20:55:49 ryoon Exp $
 
 --- lib/system/systemLinux.c.orig	2016-02-16 20:06:46.000000000 +0000
 +++ lib/system/systemLinux.c
@@ -11,3 +11,12 @@ $NetBSD: patch-bh,v 1.2 2016/10/09 03:41:56 ryoon Exp $
  #   error This file should not be compiled
  #endif
  
+@@ -366,7 +366,7 @@ System_Shutdown(Bool reboot)  // IN: "re
+       cmd = "/sbin/shutdown -r now";
+ #endif
+    } else {
+-#if __FreeBSD__
++#if __FreeBSD__ || __NetBSD__
+       cmd = "/sbin/shutdown -p now";
+ #elif defined(sun)
+       cmd = "/usr/sbin/shutdown -g 0 -i 5 -y";
