@@ -1,4 +1,6 @@
-$NetBSD: patch-src_cre2.cpp,v 1.1 2016/03/29 22:03:52 joerg Exp $
+$NetBSD: patch-src_cre2.cpp,v 1.2 2016/10/17 14:06:39 mef Exp $
+
+Don't depend on GCC's VLA of non-POD types extensions.
 
 --- src/cre2.cpp.orig	2016-03-28 17:32:57.445282715 +0000
 +++ src/cre2.cpp
