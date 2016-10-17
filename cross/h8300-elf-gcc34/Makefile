@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/05/06 07:11:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/17 13:44:38 ryoon Exp $
 
 DISTNAME=		gcc-core-3.4.6
 PKGNAME=		cross-h8300-elf-${DISTNAME:S/-core//}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.4.6/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
@@ -32,6 +33,7 @@ CONFIGURE_ARGS+=	--target=h8300-elf
 CONFIGURE_ARGS+=	--enable-languages=c,c++
 CONFIGURE_ARGS+=	--disable-multilib
 CONFIGURE_ARGS+=	--with-newlib
+CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 INFO_FILES=		yes
 
