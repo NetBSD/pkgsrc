@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4293 2016/10/17 15:43:52 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4294 2016/10/17 15:45:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6013,3 +6013,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ruby-net-ping to 2.0.1 [taca 2016-10-17]
 	Updated misc/ruby-sprockets to 3.7.0 [taca 2016-10-17]
 	Added security/ruby-airbrussh version 1.1.1 [taca 2016-10-17]
+	Updated security/ruby-sshkit to 1.11.3 [taca 2016-10-17]
