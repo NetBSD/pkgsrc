@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4291 2016/10/17 14:48:13 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4292 2016/10/17 15:11:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6011,3 +6011,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ruby-net-dhcp to 1.3.3 [taca 2016-10-17]
 	Updated net/ruby-net-ldap to 0.15.0 [taca 2016-10-17]
 	Updated net/ruby-net-ping to 2.0.1 [taca 2016-10-17]
+	Updated misc/ruby-sprockets to 3.7.0 [taca 2016-10-17]
