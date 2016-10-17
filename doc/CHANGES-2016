@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4275 2016/10/17 01:12:25 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.4276 2016/10/17 10:42:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5993,3 +5993,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.4.6 [tsutsui 2016-10-16]
 	Updated lang/php56 to 5.6.27 [taca 2016-10-16]
 	Updated pkgtools/rc.subr to 20161016 [dholland 2016-10-17]
+	Updated mail/neomutt to 20161014 [wiz 2016-10-17]
