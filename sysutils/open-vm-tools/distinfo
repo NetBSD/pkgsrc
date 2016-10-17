@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2016/10/13 21:48:26 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2016/10/17 20:55:49 ryoon Exp $
 
 SHA1 (open-vm-tools-10.0.7-3227872.tar.gz) = cd22a3d79d68de46647e8add78bcaf829bb0598d
 RMD160 (open-vm-tools-10.0.7-3227872.tar.gz) = df8cfa62ffd0fbba0432cb0deac0f202b2278625
@@ -23,7 +23,7 @@ SHA1 (patch-bc) = c2f316cd9035648676fd9d0d7e40fc7f6bf5c8d4
 SHA1 (patch-bd) = eacc267fad7021a96ee435e8fc41c82fb49d9c5f
 SHA1 (patch-be) = 4e4f88df81daf40769b38d1ddd49fbf5e8d8d1eb
 SHA1 (patch-bf) = e902ad24ed7e9616aa57d07cd3485ba3870ba51b
-SHA1 (patch-bh) = 86793b6411a64d3189f47d5236f2a6f4c9fff05c
+SHA1 (patch-bh) = 813a390478247b12c0ec0dd9e84302f1700b99ad
 SHA1 (patch-bm) = 219f196fc07e3746e9e6eb340be5e647544a255a
 SHA1 (patch-bt) = 34c85d8d994c33fb4e18f76bb8b6baa41098f23e
 SHA1 (patch-bu) = 33da24db6d7e3dd75ee6f4f1249772de506ab64d
@@ -32,11 +32,14 @@ SHA1 (patch-libDeployPkg_linuxDeployment.c) = f50c7ff2fa07ab15716128654cc814a81c
 SHA1 (patch-libDeployPkg_processPosix.c) = 9f62110eb903eec85e51d8e579abc3d36e54fe7e
 SHA1 (patch-lib_dynxdr_xdrutil.c) = 2a644aeb47bcef7f4db953250b116ec700940531
 SHA1 (patch-lib_file_file.c) = e9ee13e3f5dcdabdf3013095e2af31a65d5afaab
+SHA1 (patch-lib_guestApp_guestApp.c) = 2348c1b4b8c103fa29ac5962deaa0a3dcfe199a2
 SHA1 (patch-lib_hgfsHelper_hgfsHelperPosix.c) = 9299f0a781d11689b04223a1dfd1c4725912f863
 SHA1 (patch-lib_hgfsUri_hgfsUriPosix.c) = f98eab5cb5885a9c2e258bf072b24d8806b20fd4
+SHA1 (patch-lib_hgfs_hgfsUtil.c) = 473bc65ceccad16d3d2ce726dd5544d581cb30a8
 SHA1 (patch-lib_include_sigPosixRegs.h) = 634e12414f004671c1b2855764970e5d16ef4ef8
 SHA1 (patch-lib_include_vmblock__user.h) = 05ed8a0cdd481b759643ea47e27ef6e223a835d8
 SHA1 (patch-lib_include_vmci__sockets.h) = fba82038daf87a08f04ddd541281122f0047e968
+SHA1 (patch-lib_lock_ulSema.c) = 6908d4b453cbdb74100c9419da95a07db532c624
 SHA1 (patch-lib_misc_hostinfoPosix.c) = 4daea6167cee2be57cc3acc0caa710ca940d1eb7
 SHA1 (patch-lib_nicInfo_nicInfoInt.h) = 81d5e8625496218a679c0a87f30a08cc2e3af7a7
 SHA1 (patch-lib_nicInfo_nicInfoPosix.c) = 0f44134e1e256a46b5ce35fff91d0568649c1bad
