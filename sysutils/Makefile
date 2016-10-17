@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.683 2016/10/13 11:04:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.684 2016/10/17 15:48:12 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -481,6 +481,7 @@ SUBDIR+=	rsyslog-rabbitmq
 SUBDIR+=	rsyslog-snmp
 SUBDIR+=	rtty
 SUBDIR+=	ruby-activesambaldap
+SUBDIR+=	ruby-capistrano-harrow
 SUBDIR+=	ruby-capistrano-stats
 SUBDIR+=	ruby-chef
 SUBDIR+=	ruby-chef-config
