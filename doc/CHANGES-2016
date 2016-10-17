@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4287 2016/10/17 14:37:54 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4288 2016/10/17 14:39:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6007,3 +6007,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ruby-pry to 0.10.4 [taca 2016-10-17]
 	Updated net/ruby-amqp to 1.6.0 [taca 2016-10-17]
 	Updated net/ruby-dnsruby to 1.59.3 [taca 2016-10-17]
+	Updated net/ruby-domain_name to 0.5.20160826 [taca 2016-10-17]
