@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4280 2016/10/17 13:48:12 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4281 2016/10/17 14:17:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6000,3 +6000,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/gtkwave to 3.3.77 [mef 2016-10-17]
 	Updated cross/h8300-elf-gcc34 to 3.4.6nb1 [ryoon 2016-10-17]
 	Updated ham/fldigi to 3.23.15 [mef 2016-10-17]
+	Updated www/ruby-jekyll to 3.3.0 [taca 2016-10-17]
