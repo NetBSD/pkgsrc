@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4295 2016/10/17 15:48:33 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4296 2016/10/17 15:51:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6015,3 +6015,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/ruby-airbrussh version 1.1.1 [taca 2016-10-17]
 	Updated security/ruby-sshkit to 1.11.3 [taca 2016-10-17]
 	Added sysutils/ruby-capistrano-harrow version 0.5.3 [taca 2016-10-17]
+	Updated sysutils/capistrano to 3.6.1 [taca 2016-10-17]
