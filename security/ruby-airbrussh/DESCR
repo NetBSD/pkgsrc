@@ -1,0 +1,3 @@
+A replacement log formatter for SSHKit that makes Capistrano output much
+easier on the eyes. Just add Airbrussh to your Capfile and enjoy concise,
+useful log output that is easy to read.
