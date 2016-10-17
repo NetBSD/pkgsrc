@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4296 2016/10/17 15:51:58 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4297 2016/10/17 19:56:33 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6016,3 +6016,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/ruby-sshkit to 1.11.3 [taca 2016-10-17]
 	Added sysutils/ruby-capistrano-harrow version 0.5.3 [taca 2016-10-17]
 	Updated sysutils/capistrano to 3.6.1 [taca 2016-10-17]
+	Updated www/php-basercms to 3.0.9 [bsiegert 2016-10-17]
