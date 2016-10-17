@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4276 2016/10/17 10:42:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4277 2016/10/17 12:20:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5994,3 +5994,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.27 [taca 2016-10-16]
 	Updated pkgtools/rc.subr to 20161016 [dholland 2016-10-17]
 	Updated mail/neomutt to 20161014 [wiz 2016-10-17]
+	Updated databases/sqlite3 to 3.15.0 [adam 2016-10-17]
+	Updated databases/sqlite3-docs to 3.15.0 [adam 2016-10-17]
+	Updated databases/sqlite3-tcl to 3.15.0 [adam 2016-10-17]
