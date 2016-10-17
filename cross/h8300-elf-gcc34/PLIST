@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/30 13:26:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/17 13:44:38 ryoon Exp $
 bin/h8300-elf-c++
 bin/h8300-elf-cpp
 bin/h8300-elf-g++
@@ -296,8 +296,6 @@ cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/gthr-single.h
 cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/gthr.h
 cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/messages_members.h
 cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/os_defines.h
-cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/stdc++.h.gch/O0g
-cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/stdc++.h.gch/O2g
 cross-h8300-elf/include/c++/${PKGVERSION}/h8300-elf/bits/time_members.h
 cross-h8300-elf/include/c++/${PKGVERSION}/iomanip
 cross-h8300-elf/include/c++/${PKGVERSION}/ios
