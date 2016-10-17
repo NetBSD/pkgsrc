@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/10/17 15:42:35 taca Exp $
+
+SHA1 (airbrussh-1.1.1.gem) = 161c0bfe96bf25340b6d600526355c8eb92ffb5b
+RMD160 (airbrussh-1.1.1.gem) = 3cfd00dc86b5f5cff52ce6e9888fee0e0d7c1c7a
+SHA512 (airbrussh-1.1.1.gem) = 69464cf9c180ff7d4e4215710d9fdb726985fe9ad0c61afb79589758b2fffd0bccbf5209f15515cea6f88738b8968456d90b8b799580a1b95619ff9a61b22f4a
+Size (airbrussh-1.1.1.gem) = 1448448 bytes
