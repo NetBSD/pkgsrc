@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2016/03/15 16:15:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/10/17 14:17:27 taca Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
-${GEM_LIBDIR}/bin/jekyll
+${GEM_LIBDIR}/exe/jekyll
 ${GEM_LIBDIR}/lib/jekyll.rb
 ${GEM_LIBDIR}/lib/jekyll/cleaner.rb
 ${GEM_LIBDIR}/lib/jekyll/collection.rb
@@ -14,6 +14,7 @@ ${GEM_LIBDIR}/lib/jekyll/commands/clean.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/doctor.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/help.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/new.rb
+${GEM_LIBDIR}/lib/jekyll/commands/new_theme.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve/servlet.rb
 ${GEM_LIBDIR}/lib/jekyll/configuration.rb
@@ -30,6 +31,7 @@ ${GEM_LIBDIR}/lib/jekyll/document.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/collection_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/document_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/excerpt_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/jekyll_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/site_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/unified_payload_drop.rb
@@ -39,6 +41,7 @@ ${GEM_LIBDIR}/lib/jekyll/errors.rb
 ${GEM_LIBDIR}/lib/jekyll/excerpt.rb
 ${GEM_LIBDIR}/lib/jekyll/external.rb
 ${GEM_LIBDIR}/lib/jekyll/filters.rb
+${GEM_LIBDIR}/lib/jekyll/filters/url_filters.rb
 ${GEM_LIBDIR}/lib/jekyll/frontmatter_defaults.rb
 ${GEM_LIBDIR}/lib/jekyll/generator.rb
 ${GEM_LIBDIR}/lib/jekyll/hooks.rb
@@ -60,6 +63,7 @@ ${GEM_LIBDIR}/lib/jekyll/readers/layout_reader.rb
 ${GEM_LIBDIR}/lib/jekyll/readers/page_reader.rb
 ${GEM_LIBDIR}/lib/jekyll/readers/post_reader.rb
 ${GEM_LIBDIR}/lib/jekyll/readers/static_file_reader.rb
+${GEM_LIBDIR}/lib/jekyll/readers/theme_assets_reader.rb
 ${GEM_LIBDIR}/lib/jekyll/regenerator.rb
 ${GEM_LIBDIR}/lib/jekyll/related_posts.rb
 ${GEM_LIBDIR}/lib/jekyll/renderer.rb
@@ -68,7 +72,10 @@ ${GEM_LIBDIR}/lib/jekyll/static_file.rb
 ${GEM_LIBDIR}/lib/jekyll/stevenson.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/highlight.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/include.rb
+${GEM_LIBDIR}/lib/jekyll/tags/link.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/post_url.rb
+${GEM_LIBDIR}/lib/jekyll/theme.rb
+${GEM_LIBDIR}/lib/jekyll/theme_builder.rb
 ${GEM_LIBDIR}/lib/jekyll/url.rb
 ${GEM_LIBDIR}/lib/jekyll/utils.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/ansi.rb
@@ -76,22 +83,20 @@ ${GEM_LIBDIR}/lib/jekyll/utils/platforms.rb
 ${GEM_LIBDIR}/lib/jekyll/version.rb
 ${GEM_LIBDIR}/lib/site_template/.gitignore
 ${GEM_LIBDIR}/lib/site_template/_config.yml
-${GEM_LIBDIR}/lib/site_template/_includes/footer.html
-${GEM_LIBDIR}/lib/site_template/_includes/head.html
-${GEM_LIBDIR}/lib/site_template/_includes/header.html
-${GEM_LIBDIR}/lib/site_template/_includes/icon-github.html
-${GEM_LIBDIR}/lib/site_template/_includes/icon-github.svg
-${GEM_LIBDIR}/lib/site_template/_includes/icon-twitter.html
-${GEM_LIBDIR}/lib/site_template/_includes/icon-twitter.svg
-${GEM_LIBDIR}/lib/site_template/_layouts/default.html
-${GEM_LIBDIR}/lib/site_template/_layouts/page.html
-${GEM_LIBDIR}/lib/site_template/_layouts/post.html
 ${GEM_LIBDIR}/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb
-${GEM_LIBDIR}/lib/site_template/_sass/_base.scss
-${GEM_LIBDIR}/lib/site_template/_sass/_layout.scss
-${GEM_LIBDIR}/lib/site_template/_sass/_syntax-highlighting.scss
 ${GEM_LIBDIR}/lib/site_template/about.md
-${GEM_LIBDIR}/lib/site_template/css/main.scss
-${GEM_LIBDIR}/lib/site_template/feed.xml
-${GEM_LIBDIR}/lib/site_template/index.html
+${GEM_LIBDIR}/lib/site_template/index.md
+${GEM_LIBDIR}/lib/theme_template/CODE_OF_CONDUCT.md.erb
+${GEM_LIBDIR}/lib/theme_template/Gemfile
+${GEM_LIBDIR}/lib/theme_template/LICENSE.txt.erb
+${GEM_LIBDIR}/lib/theme_template/README.md.erb
+${GEM_LIBDIR}/lib/theme_template/_layouts/default.html
+${GEM_LIBDIR}/lib/theme_template/_layouts/page.html
+${GEM_LIBDIR}/lib/theme_template/_layouts/post.html
+${GEM_LIBDIR}/lib/theme_template/example/_config.yml.erb
+${GEM_LIBDIR}/lib/theme_template/example/_post.md
+${GEM_LIBDIR}/lib/theme_template/example/index.html
+${GEM_LIBDIR}/lib/theme_template/example/style.scss
+${GEM_LIBDIR}/lib/theme_template/gitignore.erb
+${GEM_LIBDIR}/lib/theme_template/theme.gemspec.erb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
