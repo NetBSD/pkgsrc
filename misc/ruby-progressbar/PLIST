@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/20 22:57:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/17 14:27:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/ruby-progressbar.rb
@@ -29,6 +29,7 @@ ${GEM_LIBDIR}/lib/ruby-progressbar/timer.rb
 ${GEM_LIBDIR}/lib/ruby-progressbar/version.rb
 ${GEM_LIBDIR}/spec/fixtures/benchmark.rb
 ${GEM_LIBDIR}/spec/ruby-progressbar/base_spec.rb
+${GEM_LIBDIR}/spec/ruby-progressbar/calculators/length_calculator_spec.rb
 ${GEM_LIBDIR}/spec/ruby-progressbar/calculators/running_average_spec.rb
 ${GEM_LIBDIR}/spec/ruby-progressbar/components/bar_spec.rb
 ${GEM_LIBDIR}/spec/ruby-progressbar/components/percentage_spec.rb
