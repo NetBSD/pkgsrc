@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2016/08/01 09:25:20 wiz Exp $
+# $NetBSD: options.mk,v 1.12 2016/10/17 22:00:22 nros Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache
+PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache geoip
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -83,4 +83,12 @@ CONFIGURE_ARGS+=	--with-mysql=${MYSQL_CONFIG:Q}
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
+.endif
+
+###
+### GeoIP support
+###
+.if !empty(PKG_OPTIONS:Mgeoip)
+.  include "../../net/GeoIP/buildlink3.mk"
+CONFIGURE_ARGS+=        --with-geoip
 .endif

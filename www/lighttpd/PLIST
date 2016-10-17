@@ -1,11 +1,16 @@
-@comment $NetBSD: PLIST,v 1.11 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/10/17 22:00:22 nros Exp $
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
 lib/lighttpd/mod_alias.la
 lib/lighttpd/mod_auth.la
+lib/lighttpd/mod_authn_file.la
+lib/lighttpd/mod_authn_gssapi.la
+lib/lighttpd/mod_authn_ldap.la
+lib/lighttpd/mod_authn_mysql.la
 lib/lighttpd/mod_cgi.la
 lib/lighttpd/mod_cml.la
 lib/lighttpd/mod_compress.la
+lib/lighttpd/mod_deflate.la
 lib/lighttpd/mod_dirlisting.la
 lib/lighttpd/mod_evasive.la
 lib/lighttpd/mod_evhost.la
@@ -13,6 +18,7 @@ lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_extforward.la
 lib/lighttpd/mod_fastcgi.la
 lib/lighttpd/mod_flv_streaming.la
+lib/lighttpd/mod_geoip.la
 lib/lighttpd/mod_indexfile.la
 lib/lighttpd/mod_magnet.la
 lib/lighttpd/mod_mysql_vhost.la
@@ -28,6 +34,7 @@ lib/lighttpd/mod_ssi.la
 lib/lighttpd/mod_staticfile.la
 lib/lighttpd/mod_status.la
 lib/lighttpd/mod_trigger_b4_dl.la
+lib/lighttpd/mod_uploadprogress.la
 lib/lighttpd/mod_userdir.la
 lib/lighttpd/mod_usertrack.la
 lib/lighttpd/mod_webdav.la
