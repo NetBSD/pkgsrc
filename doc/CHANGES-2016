@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4282 2016/10/17 14:20:16 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4283 2016/10/17 14:23:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6002,3 +6002,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/fldigi to 3.23.15 [mef 2016-10-17]
 	Updated www/ruby-jekyll to 3.3.0 [taca 2016-10-17]
 	Updated sysutils/ruby-listen to 3.0.8 [taca 2016-10-17]
+	Updated www/ruby-jekyll-watch to 1.5.0 [taca 2016-10-17]
