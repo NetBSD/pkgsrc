@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/12/13 17:23:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/10/17 15:10:54 taca Exp $
 bin/sprockets${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -31,6 +31,7 @@ ${GEM_LIBDIR}/lib/sprockets/compressing.rb
 ${GEM_LIBDIR}/lib/sprockets/configuration.rb
 ${GEM_LIBDIR}/lib/sprockets/context.rb
 ${GEM_LIBDIR}/lib/sprockets/dependencies.rb
+${GEM_LIBDIR}/lib/sprockets/deprecation.rb
 ${GEM_LIBDIR}/lib/sprockets/digest_utils.rb
 ${GEM_LIBDIR}/lib/sprockets/directive_processor.rb
 ${GEM_LIBDIR}/lib/sprockets/eco_processor.rb
