@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/03/29 22:03:52 joerg Exp $
+$NetBSD: distinfo,v 1.3 2016/10/17 14:06:39 mef Exp $
 
 SHA1 (cre2.tar.gz) = f5e9286a1829a5387984fbe3d01fe3bfe86bc6ac
 RMD160 (cre2.tar.gz) = e3fab4f0b994adbcf4b7cecc45640b2023fbbfec
 SHA512 (cre2.tar.gz) = 3180b99bdb68079b33e78dfbe9f943737510021ad2ea2144acb1014200d0e253317e6b52d268c3dae45ddd282c90bb49053fc43de607f8ff0c7f9a9ac9aeb2b7
 Size (cre2.tar.gz) = 38090 bytes
-SHA1 (patch-src_cre2.cpp) = 431df2f49cc49919712e163cd97b9b41cd803f2b
+SHA1 (patch-src_cre2.cpp) = 17ecaa1a3c44acd241f3d9e9ad906425bc9f8ea7
