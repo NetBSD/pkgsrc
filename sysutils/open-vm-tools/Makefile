@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2016/10/13 21:48:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2016/10/17 20:55:49 ryoon Exp $
 
 DISTNAME=	open-vm-tools-10.0.7-3227872
 PKGNAME=	open-vm-tools-10.0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/vmware/open-vm-tools/files/133266/
 
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
+GCC_REQD+=	4.8
 CXXFLAGS+=	-std=gnu++11
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Werror
 
@@ -39,6 +40,12 @@ CONF_FILES_PERMS+=		${EGDIR}/statechange.subr ${PKG_SYSCONFDIR}/statechange.subr
 CONF_FILES_PERMS+=		${EGDIR}/suspend-vm-default ${PKG_SYSCONFDIR}/suspend-vm-default ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 RCD_SCRIPTS=			vmtools
 
+SUBST_CLASSES+=			fix-etc-path
+SUBST_STAGE.fix-etc-path=	pre-configure
+SUBST_MESSAGE.fix-etc-path=	Fixing /etc to ${PREFIX}/etc
+SUBST_FILES.fix-etc-path+=	lib/guestApp/guestApp.c
+SUBST_VARS.fix-etc-path+=	PREFIX
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f
 
@@ -57,6 +64,7 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/xml-security-c/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 
 .include "options.mk"
 
