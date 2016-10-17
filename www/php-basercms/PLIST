@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/13 18:23:52 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/10/17 19:55:50 bsiegert Exp $
 share/basercms/.htaccess
 share/basercms/.travis.yml
 share/basercms/CONTRIBUTING.md
@@ -420,6 +420,9 @@ share/basercms/lib/Baser/Config/update/3.0.2/updater.php
 share/basercms/lib/Baser/Config/update/3.0.6/config.php
 share/basercms/lib/Baser/Config/update/3.0.6/updater.php
 share/basercms/lib/Baser/Config/update/3.0.8/updater.php
+share/basercms/lib/Baser/Config/update/3.0.9/alter_mail_contents.php
+share/basercms/lib/Baser/Config/update/3.0.9/config.php
+share/basercms/lib/Baser/Config/update/3.0.9/updater.php
 share/basercms/lib/Baser/Configure/BcThemeConfigReader.php
 share/basercms/lib/Baser/Console/Command/BaserTestShell.php
 share/basercms/lib/Baser/Console/Command/BcAppShell.php
@@ -524,13 +527,6 @@ share/basercms/lib/Baser/Model/User.php
 share/basercms/lib/Baser/Model/UserGroup.php
 share/basercms/lib/Baser/Model/WidgetArea.php
 share/basercms/lib/Baser/Network/CakeRequest.php
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_categories.csv
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_comments.csv
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_configs.csv
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_contents.csv
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_posts.csv
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_posts_blog_tags.csv
-share/basercms/lib/Baser/Plugin/Blog/Config/Data/Default/blog_tags.csv
 share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_categories.php
 share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_comments.php
 share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_configs.php
@@ -538,6 +534,13 @@ share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_contents.php
 share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_posts.php
 share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_posts_blog_tags.php
 share/basercms/lib/Baser/Plugin/Blog/Config/Schema/blog_tags.php
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_categories.csv
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_comments.csv
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_configs.csv
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_contents.csv
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_posts.csv
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_posts_blog_tags.csv
+share/basercms/lib/Baser/Plugin/Blog/Config/data/default/blog_tags.csv
 share/basercms/lib/Baser/Plugin/Blog/Config/init.php
 share/basercms/lib/Baser/Plugin/Blog/Config/setting.php
 share/basercms/lib/Baser/Plugin/Blog/Config/update/empty
@@ -652,10 +655,10 @@ share/basercms/lib/Baser/Plugin/Blog/View/Helper/BlogHelper.php
 share/basercms/lib/Baser/Plugin/Blog/config.php
 share/basercms/lib/Baser/Plugin/Blog/webroot/css/admin/style.css
 share/basercms/lib/Baser/Plugin/Blog/webroot/css/style.css
-share/basercms/lib/Baser/Plugin/Feed/Config/Data/Default/feed_configs.csv
-share/basercms/lib/Baser/Plugin/Feed/Config/Data/Default/feed_details.csv
 share/basercms/lib/Baser/Plugin/Feed/Config/Schema/feed_configs.php
 share/basercms/lib/Baser/Plugin/Feed/Config/Schema/feed_details.php
+share/basercms/lib/Baser/Plugin/Feed/Config/data/default/feed_configs.csv
+share/basercms/lib/Baser/Plugin/Feed/Config/data/default/feed_details.csv
 share/basercms/lib/Baser/Plugin/Feed/Config/init.php
 share/basercms/lib/Baser/Plugin/Feed/Config/routes.php
 share/basercms/lib/Baser/Plugin/Feed/Config/setting.php
@@ -734,18 +737,17 @@ share/basercms/lib/Baser/Plugin/Feed/View/FeedDetails/admin/form.php
 share/basercms/lib/Baser/Plugin/Feed/View/Helper/FeedBaserHelper.php
 share/basercms/lib/Baser/Plugin/Feed/View/Helper/FeedHelper.php
 share/basercms/lib/Baser/Plugin/Feed/config.php
-share/basercms/lib/Baser/Plugin/Mail/Config/Data/Default/contact_messages.csv
-share/basercms/lib/Baser/Plugin/Mail/Config/Data/Default/mail_configs.csv
-share/basercms/lib/Baser/Plugin/Mail/Config/Data/Default/mail_contents.csv
-share/basercms/lib/Baser/Plugin/Mail/Config/Data/Default/mail_fields.csv
-share/basercms/lib/Baser/Plugin/Mail/Config/Data/Default/messages.csv
-share/basercms/lib/Baser/Plugin/Mail/Config/Schema/contact_messages.php
 share/basercms/lib/Baser/Plugin/Mail/Config/Schema/mail_configs.php
 share/basercms/lib/Baser/Plugin/Mail/Config/Schema/mail_contents.php
 share/basercms/lib/Baser/Plugin/Mail/Config/Schema/mail_fields.php
 share/basercms/lib/Baser/Plugin/Mail/Config/Schema/messages.php
+share/basercms/lib/Baser/Plugin/Mail/Config/data/default/mail_configs.csv
+share/basercms/lib/Baser/Plugin/Mail/Config/data/default/mail_contents.csv
+share/basercms/lib/Baser/Plugin/Mail/Config/data/default/mail_fields.csv
+share/basercms/lib/Baser/Plugin/Mail/Config/data/default/messages.csv
 share/basercms/lib/Baser/Plugin/Mail/Config/init.php
 share/basercms/lib/Baser/Plugin/Mail/Config/setting.php
+share/basercms/lib/Baser/Plugin/Mail/Config/update/${PKGVERSION}/alter_mail_contents.php
 share/basercms/lib/Baser/Plugin/Mail/Config/update/empty
 share/basercms/lib/Baser/Plugin/Mail/Controller/MailAppController.php
 share/basercms/lib/Baser/Plugin/Mail/Controller/MailConfigsController.php
@@ -1160,7 +1162,6 @@ share/basercms/lib/Baser/webroot/img/admin/bg_borders.png
 share/basercms/lib/Baser/webroot/img/admin/bg_box_1.png
 share/basercms/lib/Baser/webroot/img/admin/bg_box_2.png
 share/basercms/lib/Baser/webroot/img/admin/bg_footer.png
-share/basercms/lib/Baser/webroot/img/admin/bg_form.png
 share/basercms/lib/Baser/webroot/img/admin/bg_install.png
 share/basercms/lib/Baser/webroot/img/admin/bg_list.png
 share/basercms/lib/Baser/webroot/img/admin/bg_main.png
