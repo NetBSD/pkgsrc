@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.12 2015/05/10 19:20:09 bsiegert Exp $
+# $NetBSD: rc.subr,v 1.13 2016/10/17 01:11:30 dholland Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -106,6 +106,27 @@ case $_osname in
 		_RCCMD_echo="bsd_echo"
 		_RCCMD_rcs="/usr/contrib/bin/rcs"
 		_RCARG_psformat="-wwo pid,comm"
+		;;
+	IRIX*)
+		_RCCMD_chown="/sbin/chown"
+		_RCCMD_ci="/usr/sbin/ci"
+		_RCCMD_co="/usr/sbin/co"
+		_RCCMD_cp="/sbin/cp"
+		_RCCMD_kill="kill"			# use sh builtin
+#		_RCCMD_logger="/usr/bin/logger"		# not in IRIX
+		_RCCMD_mv="/sbin/mv"
+		_RCCMD_nice="/sbin/nice"
+		_RCCMD_ps="/sbin/ps"
+		_RCCMD_rcs="/usr/sbin/rcs"
+		_RCCMD_rm="/sbin/rm"
+		_RCCMD_sh="/sbin/sh"
+		_RCCMD_su="/sbin/su"
+#		_RCCMD_systrace="/bin/systrace"		# not in IRIX
+		_RCCMD_whoami="/bin/whoami"
+		_RCARG_psformat="-o pid,comm=12345678901234567890"
+			# widen column to try to get full command-name
+		_RCARG_ps="-ef"
+		_RCARG_su=""
 		;;
 	Linux)
 		_RCCMD_chown="/bin/chown"
