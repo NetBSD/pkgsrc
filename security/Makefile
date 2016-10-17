@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2016/09/02 16:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.594 2016/10/17 15:43:24 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -443,6 +443,7 @@ SUBDIR+=	rats
 SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
+SUBDIR+=	ruby-airbrussh
 SUBDIR+=	ruby-bcrypt
 SUBDIR+=	ruby-ezcrypto
 SUBDIR+=	ruby-hmac
