@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4297 2016/10/17 19:56:33 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.4298 2016/10/17 20:56:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6017,3 +6017,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/ruby-capistrano-harrow version 0.5.3 [taca 2016-10-17]
 	Updated sysutils/capistrano to 3.6.1 [taca 2016-10-17]
 	Updated www/php-basercms to 3.0.9 [bsiegert 2016-10-17]
+	Updated sysutils/open-vm-tools to 10.0.7nb3 [ryoon 2016-10-17]
