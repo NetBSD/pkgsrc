@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4285 2016/10/17 14:31:14 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4286 2016/10/17 14:36:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6005,3 +6005,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-jekyll-watch to 1.5.0 [taca 2016-10-17]
 	Updated misc/ruby-progressbar to 1.8.1 [taca 2016-10-17]
 	Updated misc/ruby-pry to 0.10.4 [taca 2016-10-17]
+	Updated net/ruby-amqp to 1.6.0 [taca 2016-10-17]
