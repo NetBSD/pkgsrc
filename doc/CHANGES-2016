@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4324 2016/10/18 15:49:28 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4325 2016/10/18 15:51:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6044,3 +6044,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-httpclient to 2.8.2.4 [taca 2016-10-18]
 	Updated www/ruby-capybara to 2.10.1 [taca 2016-10-18]
 	Updated www/ruby-jquery-rails to 3.1.4 [taca 2016-10-18]
+	Updated www/ruby-mechanize to 2.7.5 [taca 2016-10-18]
