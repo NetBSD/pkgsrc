@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:37 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/10/18 16:08:35 taca Exp $
 
-SHA1 (rest-client-1.8.0.gem) = 271b57e37e69afbc1a02b455391d171379bdda8a
-RMD160 (rest-client-1.8.0.gem) = be9fab9a89955c9db281adbe9b1692d9f17a8b15
-SHA512 (rest-client-1.8.0.gem) = d4c03b2d2807ae963b116e8c977411305b55836e4129b18ce2e88ea5795838c448bece151f6b57aa03920ea21d9120835159a7e9c4bc5c9998beb3705d1f2bfd
-Size (rest-client-1.8.0.gem) = 124928 bytes
+SHA1 (rest-client-2.0.0.gem) = 00ac660748bfec3a4ddac935680553c928691eae
+RMD160 (rest-client-2.0.0.gem) = 6ae4cb0a99e346fa0e6c3e214ad8a14cf0fbc8bc
+SHA512 (rest-client-2.0.0.gem) = 711b749d83a155d52a24427adadb300169182de1125dc44d3729cdd0f2e7e82e03cb152ab0c414960c966f35006b57defb3adca385377f0d8ee18cdcb5232832
+Size (rest-client-2.0.0.gem) = 148480 bytes
