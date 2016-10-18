@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.146 2016/09/11 13:04:28 wiz Exp $
+# $NetBSD: sites.mk,v 1.147 2016/10/18 14:03:16 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -272,7 +272,6 @@ MASTER_SITE_FREEBSD_LOCAL+= \
 MASTER_SITE_NETLIB+= \
 	http://netlib.org/ \
 	http://netlib.sandia.gov/ \
-	http://www.netlib.no/netlib/ \
 	http://www.mirrorservice.org/sites/netlib.bell-labs.com/netlib/
 
 MASTER_SITE_OPENBSD+= \
