@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/15 16:02:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/10/18 15:42:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.yard/templates_custom/default/class/html/selectors.erb
+${GEM_LIBDIR}/.yard/templates_custom/default/class/html/setup.rb
+${GEM_LIBDIR}/.yard/yard_extensions.rb
+${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/History.md
 ${GEM_LIBDIR}/License.txt
 ${GEM_LIBDIR}/README.md
@@ -19,6 +23,8 @@ ${GEM_LIBDIR}/lib/capybara/node/matchers.rb
 ${GEM_LIBDIR}/lib/capybara/node/simple.rb
 ${GEM_LIBDIR}/lib/capybara/queries/base_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/current_path_query.rb
+${GEM_LIBDIR}/lib/capybara/queries/match_query.rb
+${GEM_LIBDIR}/lib/capybara/queries/selector_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/text_query.rb
 ${GEM_LIBDIR}/lib/capybara/queries/title_query.rb
 ${GEM_LIBDIR}/lib/capybara/query.rb
@@ -33,6 +39,10 @@ ${GEM_LIBDIR}/lib/capybara/rspec.rb
 ${GEM_LIBDIR}/lib/capybara/rspec/features.rb
 ${GEM_LIBDIR}/lib/capybara/rspec/matchers.rb
 ${GEM_LIBDIR}/lib/capybara/selector.rb
+${GEM_LIBDIR}/lib/capybara/selector/css.rb
+${GEM_LIBDIR}/lib/capybara/selector/filter.rb
+${GEM_LIBDIR}/lib/capybara/selector/filter_set.rb
+${GEM_LIBDIR}/lib/capybara/selector/selector.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/driver.rb
 ${GEM_LIBDIR}/lib/capybara/selenium/node.rb
 ${GEM_LIBDIR}/lib/capybara/server.rb
@@ -63,6 +73,10 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/current_scope_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/current_url_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/dismiss_confirm_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/dismiss_prompt_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/element/assert_match_selector.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/element/match_css_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/element/match_xpath_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/element/matches_selector_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/evaluate_script_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/execute_script_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/fill_in_spec.rb
@@ -96,6 +110,7 @@ ${GEM_LIBDIR}/lib/capybara/spec/session/save_page_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/save_screenshot_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/screenshot_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/select_spec.rb
+${GEM_LIBDIR}/lib/capybara/spec/session/selectors_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/source_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/text_spec.rb
 ${GEM_LIBDIR}/lib/capybara/spec/session/title_spec.rb
@@ -136,7 +151,9 @@ ${GEM_LIBDIR}/lib/capybara/spec/views/with_html_entities.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_js.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_scope.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_simple_html.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/with_slow_unload.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_title.erb
+${GEM_LIBDIR}/lib/capybara/spec/views/with_unload_alert.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/with_windows.erb
 ${GEM_LIBDIR}/lib/capybara/spec/views/within_frames.erb
 ${GEM_LIBDIR}/lib/capybara/version.rb
@@ -144,6 +161,7 @@ ${GEM_LIBDIR}/lib/capybara/window.rb
 ${GEM_LIBDIR}/spec/basic_node_spec.rb
 ${GEM_LIBDIR}/spec/capybara_spec.rb
 ${GEM_LIBDIR}/spec/dsl_spec.rb
+${GEM_LIBDIR}/spec/fixtures/capybara.csv
 ${GEM_LIBDIR}/spec/fixtures/selenium_driver_rspec_failure.rb
 ${GEM_LIBDIR}/spec/fixtures/selenium_driver_rspec_success.rb
 ${GEM_LIBDIR}/spec/rack_test_spec.rb
@@ -154,9 +172,10 @@ ${GEM_LIBDIR}/spec/rspec/scenarios_spec.rb
 ${GEM_LIBDIR}/spec/rspec/views_spec.rb
 ${GEM_LIBDIR}/spec/rspec_spec.rb
 ${GEM_LIBDIR}/spec/selector_spec.rb
-${GEM_LIBDIR}/spec/selenium_spec.rb
+${GEM_LIBDIR}/spec/selenium_firefox_spec.rb
 ${GEM_LIBDIR}/spec/selenium_spec_chrome.rb
 ${GEM_LIBDIR}/spec/server_spec.rb
+${GEM_LIBDIR}/spec/shared_selenium_session.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 
