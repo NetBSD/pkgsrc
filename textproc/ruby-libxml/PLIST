@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/03/08 15:17:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/10/18 14:36:38 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/libxml/extconf.h
 ${GEM_LIBDIR}/ext/libxml/extconf.rb
 ${GEM_LIBDIR}/ext/libxml/libxml.c
 ${GEM_LIBDIR}/ext/libxml/libxml_ruby.def
@@ -152,13 +153,6 @@ ${GEM_LIBDIR}/test/c14n/result/without-comments/example-4
 ${GEM_LIBDIR}/test/c14n/result/without-comments/example-5
 ${GEM_LIBDIR}/test/c14n/result/without-comments/example-6
 ${GEM_LIBDIR}/test/c14n/result/without-comments/example-7
-${GEM_LIBDIR}/test/etc_doc_to_s.rb
-${GEM_LIBDIR}/test/ets_doc_file.rb
-${GEM_LIBDIR}/test/ets_doc_to_s.rb
-${GEM_LIBDIR}/test/ets_gpx.rb
-${GEM_LIBDIR}/test/ets_node_gc.rb
-${GEM_LIBDIR}/test/ets_test.xml
-${GEM_LIBDIR}/test/ets_tsr.rb
 ${GEM_LIBDIR}/test/model/atom.xml
 ${GEM_LIBDIR}/test/model/bands.iso-8859-1.xml
 ${GEM_LIBDIR}/test/model/bands.utf-8.xml
