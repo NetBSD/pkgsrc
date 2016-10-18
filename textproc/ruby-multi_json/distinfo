@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 02:00:09 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/10/18 14:39:16 taca Exp $
 
-SHA1 (multi_json-1.11.2.gem) = 8ee0cf574bf61fc102a2634b5a428c3ab56ffb34
-RMD160 (multi_json-1.11.2.gem) = d51a0b9a826d7b4fda5b745f4f3e5fd6f8137f37
-SHA512 (multi_json-1.11.2.gem) = 47afbafdcf48900fb388670664a241eed0ea2ad76a6c6cbff9f56a70b856c8a99c1e7ece701cad7d2b1d0ed7256774ee34ca03878fb7023993decaadf71fa498
-Size (multi_json-1.11.2.gem) = 25088 bytes
+SHA1 (multi_json-1.12.1.gem) = b418d7b93e99a6f7d1acb70453470aace4599d1a
+RMD160 (multi_json-1.12.1.gem) = 11464925a993ecfd52482aed38705f29c9ae4315
+SHA512 (multi_json-1.12.1.gem) = 43ac44a212a63ef7f920f08fde9e13bc1fc71be9aa237428c096747b8d209a67254355815e1ccee2e7659754dd021d42c85d25389a4bb5fa230edcbdb907b408
+Size (multi_json-1.12.1.gem) = 26112 bytes
