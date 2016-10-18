@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4338 2016/10/18 20:44:48 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4339 2016/10/18 21:23:14 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6058,3 +6058,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added multimedia/streamlink version 0.0.2 [maya 2016-10-18]
 	Updated lang/nodejs4 to 4.6.1 [fhajny 2016-10-18]
 	Updated lang/nodejs to 6.9.0 [fhajny 2016-10-18]
+	Updated databases/rrdtool to 1.6.0nb3 [he 2016-10-18]
