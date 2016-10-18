@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2016/09/12 08:07:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2016/10/18 08:33:28 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -103,6 +103,9 @@ ${PYSITELIB}/setuptools/command/install_lib.pyo
 ${PYSITELIB}/setuptools/command/install_scripts.py
 ${PYSITELIB}/setuptools/command/install_scripts.pyc
 ${PYSITELIB}/setuptools/command/install_scripts.pyo
+${PYSITELIB}/setuptools/command/py36compat.py
+${PYSITELIB}/setuptools/command/py36compat.pyc
+${PYSITELIB}/setuptools/command/py36compat.pyo
 ${PYSITELIB}/setuptools/command/register.py
 ${PYSITELIB}/setuptools/command/register.pyc
 ${PYSITELIB}/setuptools/command/register.pyo
@@ -139,6 +142,9 @@ ${PYSITELIB}/setuptools/extension.pyo
 ${PYSITELIB}/setuptools/extern/__init__.py
 ${PYSITELIB}/setuptools/extern/__init__.pyc
 ${PYSITELIB}/setuptools/extern/__init__.pyo
+${PYSITELIB}/setuptools/glob.py
+${PYSITELIB}/setuptools/glob.pyc
+${PYSITELIB}/setuptools/glob.pyo
 ${PYSITELIB}/setuptools/launch.py
 ${PYSITELIB}/setuptools/launch.pyc
 ${PYSITELIB}/setuptools/launch.pyo
@@ -177,9 +183,6 @@ ${PYSITELIB}/setuptools/ssl_support.pyo
 ${PYSITELIB}/setuptools/unicode_utils.py
 ${PYSITELIB}/setuptools/unicode_utils.pyc
 ${PYSITELIB}/setuptools/unicode_utils.pyo
-${PYSITELIB}/setuptools/utils.py
-${PYSITELIB}/setuptools/utils.pyc
-${PYSITELIB}/setuptools/utils.pyo
 ${PYSITELIB}/setuptools/version.py
 ${PYSITELIB}/setuptools/version.pyc
 ${PYSITELIB}/setuptools/version.pyo
