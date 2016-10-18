@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4306 2016/10/18 08:33:38 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4307 2016/10/18 12:40:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6026,3 +6026,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Specio to 0.30 [wiz 2016-10-18]
 	Updated time/p5-Time-HiRes to 1.9740 [wiz 2016-10-18]
 	Updated devel/py-setuptools to 28.5.0 [wiz 2016-10-18]
+	Updated fonts/noto-ttf to 20160531 [wiz 2016-10-18]
