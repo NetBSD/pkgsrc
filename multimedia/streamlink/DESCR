@@ -1,0 +1,6 @@
+Streamlink is a command-line utility that pipes video streams from various
+services into a video player, such as VLC. The main purpose of Streamlink
+is to allow the user to avoid buggy and CPU heavy flash plugins but still
+be able to enjoy various streamed content.
+
+Streamlink is a fork of Livestreamer
