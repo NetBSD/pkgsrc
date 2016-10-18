@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2014/08/19 13:37:14 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2016/10/18 14:08:48 wiz Exp $
 
 .include "../../math/lapack/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lapack/blas/}
-PKGREVISION=	1
 
 COMMENT=	Basic Linear Algebra Subprograms (Fortran)
 
