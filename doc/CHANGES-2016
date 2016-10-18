@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4320 2016/10/18 15:16:38 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4321 2016/10/18 15:27:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6040,3 +6040,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/ruby-yard to 0.9.5 [taca 2016-10-18]
 	Updated www/ruby-css-parser to 1.4.5 [taca 2016-10-18]
 	Updated www/ruby-em-http-request to 1.1.5 [taca 2016-10-18]
+	Updated www/ruby-http to 2.0.3 [taca 2016-10-18]
