@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/10/18 02:47:16 kamil Exp $
+
+SHA1 (ptex-2.1.28.tar.gz) = 67ba20b98247a12f075631b6e65271953e519eda
+RMD160 (ptex-2.1.28.tar.gz) = eecce0d629551a827a866c63e2ca17651deef5fd
+SHA512 (ptex-2.1.28.tar.gz) = ddce3c79f14d196e550c1e8a5b371482f88190cd667a2e2aa84601de1639f7cabb8571c1b3a49b48df46ce550d27088a00a67b1403c3bfec2ed73437c3dca3e8
+Size (ptex-2.1.28.tar.gz) = 305327 bytes
+SHA1 (patch-src_ptex_PtexPlatform.h) = f3c859f62b3f4ef0b0274939c522c735681fb70e
