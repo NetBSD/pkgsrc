@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/01/03 07:56:35 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/18 15:16:13 taca Exp $
 
-DISTNAME=	em-http-request-1.1.3
+DISTNAME=	em-http-request-1.1.5
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
