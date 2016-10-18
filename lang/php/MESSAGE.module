@@ -1,12 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE.module,v 1.4 2016/07/17 15:49:44 jdolecek Exp $
+$NetBSD: MESSAGE.module,v 1.5 2016/10/18 19:09:10 jdolecek Exp $
 
-Module configuration file was created and module should be autoloaded:
-${EXT_CONF_DIR}/${MODNAME}.ini
+By default, example module configuration file was copied to following
+location, and module should be auto-loaded:
+${PHP_EXT_CONF_DIR}/${MODNAME}.ini
 
-Make sure to update your ${PKG_SYSCONFDIR}/php.ini to not load this
-extension explicitely, remove:
+If you use custom ${PKG_SYSCONFDIR}/php.ini, or nonstandard module
+configuration file location, you might need to add explicit load directive:
 ${EXTENSION_DIRECTIVE}=${EXTENSION_FILE}
-
-Restart your ${PKG_PHP}-enabled HTTP server to load this module.
 ===========================================================================
