@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/02/05 15:23:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/10/18 14:50:54 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -78,6 +78,7 @@ ${GEM_LIBDIR}/lib/yard/code_objects/extra_file_object.rb
 ${GEM_LIBDIR}/lib/yard/code_objects/macro_object.rb
 ${GEM_LIBDIR}/lib/yard/code_objects/method_object.rb
 ${GEM_LIBDIR}/lib/yard/code_objects/module_object.rb
+${GEM_LIBDIR}/lib/yard/code_objects/namespace_mapper.rb
 ${GEM_LIBDIR}/lib/yard/code_objects/namespace_object.rb
 ${GEM_LIBDIR}/lib/yard/code_objects/proxy.rb
 ${GEM_LIBDIR}/lib/yard/code_objects/root_object.rb
@@ -116,6 +117,7 @@ ${GEM_LIBDIR}/lib/yard/handlers/ruby/class_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/class_variable_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/comment_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/constant_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/ruby/decorator_handler_methods.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/dsl_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/dsl_handler_methods.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/exception_handler.rb
@@ -146,6 +148,7 @@ ${GEM_LIBDIR}/lib/yard/handlers/ruby/module_function_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/module_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/private_class_method_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/private_constant_handler.rb
+${GEM_LIBDIR}/lib/yard/handlers/ruby/public_class_method_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/struct_handler_methods.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/visibility_handler.rb
 ${GEM_LIBDIR}/lib/yard/handlers/ruby/yield_handler.rb
@@ -171,6 +174,7 @@ ${GEM_LIBDIR}/lib/yard/parser/ruby/ruby_parser.rb
 ${GEM_LIBDIR}/lib/yard/parser/source_parser.rb
 ${GEM_LIBDIR}/lib/yard/rake/yardoc_task.rb
 ${GEM_LIBDIR}/lib/yard/registry.rb
+${GEM_LIBDIR}/lib/yard/registry_resolver.rb
 ${GEM_LIBDIR}/lib/yard/registry_store.rb
 ${GEM_LIBDIR}/lib/yard/rubygems/backports.rb
 ${GEM_LIBDIR}/lib/yard/rubygems/backports/LICENSE.txt
@@ -178,6 +182,7 @@ ${GEM_LIBDIR}/lib/yard/rubygems/backports/MIT.txt
 ${GEM_LIBDIR}/lib/yard/rubygems/backports/gem.rb
 ${GEM_LIBDIR}/lib/yard/rubygems/backports/source_index.rb
 ${GEM_LIBDIR}/lib/yard/rubygems/doc_manager.rb
+${GEM_LIBDIR}/lib/yard/rubygems/hook.rb
 ${GEM_LIBDIR}/lib/yard/rubygems/specification.rb
 ${GEM_LIBDIR}/lib/yard/serializers/base.rb
 ${GEM_LIBDIR}/lib/yard/serializers/file_system_serializer.rb
@@ -193,8 +198,10 @@ ${GEM_LIBDIR}/lib/yard/server/commands/frames_command.rb
 ${GEM_LIBDIR}/lib/yard/server/commands/library_command.rb
 ${GEM_LIBDIR}/lib/yard/server/commands/library_index_command.rb
 ${GEM_LIBDIR}/lib/yard/server/commands/list_command.rb
+${GEM_LIBDIR}/lib/yard/server/commands/root_request_command.rb
 ${GEM_LIBDIR}/lib/yard/server/commands/search_command.rb
 ${GEM_LIBDIR}/lib/yard/server/commands/static_file_command.rb
+${GEM_LIBDIR}/lib/yard/server/commands/static_file_helpers.rb
 ${GEM_LIBDIR}/lib/yard/server/doc_server_helper.rb
 ${GEM_LIBDIR}/lib/yard/server/doc_server_serializer.rb
 ${GEM_LIBDIR}/lib/yard/server/library_version.rb
@@ -209,9 +216,9 @@ ${GEM_LIBDIR}/lib/yard/server/templates/default/layout/html/script_setup.erb
 ${GEM_LIBDIR}/lib/yard/server/templates/default/layout/html/setup.rb
 ${GEM_LIBDIR}/lib/yard/server/templates/default/method_details/html/permalink.erb
 ${GEM_LIBDIR}/lib/yard/server/templates/default/method_details/html/setup.rb
-${GEM_LIBDIR}/lib/yard/server/templates/doc_server/library_list/html/contents.erb
 ${GEM_LIBDIR}/lib/yard/server/templates/doc_server/library_list/html/headers.erb
 ${GEM_LIBDIR}/lib/yard/server/templates/doc_server/library_list/html/library_list.erb
+${GEM_LIBDIR}/lib/yard/server/templates/doc_server/library_list/html/listing.erb
 ${GEM_LIBDIR}/lib/yard/server/templates/doc_server/library_list/html/setup.rb
 ${GEM_LIBDIR}/lib/yard/server/templates/doc_server/library_list/html/title.erb
 ${GEM_LIBDIR}/lib/yard/server/templates/doc_server/processing/html/processing.erb
@@ -300,8 +307,10 @@ ${GEM_LIBDIR}/spec/handlers/c/spec_helper.rb
 ${GEM_LIBDIR}/spec/handlers/c/struct_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/class_condition_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/class_handler_spec.rb
+${GEM_LIBDIR}/spec/handlers/class_method_handler_shared_examples.rb
 ${GEM_LIBDIR}/spec/handlers/class_variable_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/constant_handler_spec.rb
+${GEM_LIBDIR}/spec/handlers/decorator_handler_methods_spec.rb
 ${GEM_LIBDIR}/spec/handlers/dsl_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/examples/alias_handler_001.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/attribute_handler_001.rb.txt
@@ -316,9 +325,6 @@ ${GEM_LIBDIR}/spec/handlers/examples/method_condition_handler_001.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/method_handler_001.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/mixin_handler_001.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/module_handler_001.rb.txt
-${GEM_LIBDIR}/spec/handlers/examples/private_class_method_handler_001.rb.txt
-${GEM_LIBDIR}/spec/handlers/examples/private_class_method_handler_002.rb.txt
-${GEM_LIBDIR}/spec/handlers/examples/private_class_method_handler_003.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/private_constant_handler_001.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/process_handler_001.rb.txt
 ${GEM_LIBDIR}/spec/handlers/examples/visibility_handler_001.rb.txt
@@ -334,6 +340,7 @@ ${GEM_LIBDIR}/spec/handlers/module_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/private_class_method_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/private_constant_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/processor_spec.rb
+${GEM_LIBDIR}/spec/handlers/public_class_method_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/ruby/base_spec.rb
 ${GEM_LIBDIR}/spec/handlers/ruby/legacy/base_spec.rb
 ${GEM_LIBDIR}/spec/handlers/spec_helper.rb
@@ -378,7 +385,6 @@ ${GEM_LIBDIR}/spec/serializers/yardoc_serializer_spec.rb
 ${GEM_LIBDIR}/spec/server/adapter_spec.rb
 ${GEM_LIBDIR}/spec/server/commands/base_spec.rb
 ${GEM_LIBDIR}/spec/server/commands/library_command_spec.rb
-${GEM_LIBDIR}/spec/server/commands/static_file_command_spec.rb
 ${GEM_LIBDIR}/spec/server/doc_server_helper_spec.rb
 ${GEM_LIBDIR}/spec/server/doc_server_serializer_spec.rb
 ${GEM_LIBDIR}/spec/server/rack_adapter_spec.rb
@@ -426,6 +432,7 @@ ${GEM_LIBDIR}/spec/templates/helpers/html_syntax_highlight_helper_spec.rb
 ${GEM_LIBDIR}/spec/templates/helpers/markup/rdoc_markup_spec.rb
 ${GEM_LIBDIR}/spec/templates/helpers/markup_helper_spec.rb
 ${GEM_LIBDIR}/spec/templates/helpers/method_helper_spec.rb
+${GEM_LIBDIR}/spec/templates/helpers/module_helper_spec.rb
 ${GEM_LIBDIR}/spec/templates/helpers/shared_signature_examples.rb
 ${GEM_LIBDIR}/spec/templates/helpers/text_helper_spec.rb
 ${GEM_LIBDIR}/spec/templates/method_spec.rb
@@ -565,4 +572,4 @@ ${GEM_LIBDIR}/templates/guide/onefile/html/toc.erb
 ${GEM_LIBDIR}/templates/guide/tags/html/setup.rb
 ${GEM_LIBDIR}/yard.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
+
