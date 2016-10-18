@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4337 2016/10/18 20:38:08 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4338 2016/10/18 20:44:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6057,3 +6057,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-net-http-persistent to 3.0.0 [taca 2016-10-18]
 	Added multimedia/streamlink version 0.0.2 [maya 2016-10-18]
 	Updated lang/nodejs4 to 4.6.1 [fhajny 2016-10-18]
+	Updated lang/nodejs to 6.9.0 [fhajny 2016-10-18]
