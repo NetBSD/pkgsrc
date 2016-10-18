@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/10/18 16:39:43 maya Exp $
+
+SHA1 (streamlink-0.0.2.tar.gz) = 9c81a9cd03916ec1d4078466e51eb39233973b69
+RMD160 (streamlink-0.0.2.tar.gz) = 4ff562845ae0f72216aa4ae264fb3fbeec9c7a09
+SHA512 (streamlink-0.0.2.tar.gz) = 83da863aeedf7afcd5ba6bac9502200e4feaa39401ba894e1c8f9473f77da436363c576572bf714e2448972fbb92b890c2a144af0a52b4ab74cba8b74df50139
+Size (streamlink-0.0.2.tar.gz) = 880242 bytes
