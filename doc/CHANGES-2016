@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4301 2016/10/18 08:21:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4302 2016/10/18 08:27:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6021,3 +6021,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/lighttpd to 1.4.42 [nros 2016-10-17]
 	Added graphics/ptex version 2.1.28 [kamil 2016-10-18]
 	Updated www/p5-CGI to 4.35 [wiz 2016-10-18]
+	Updated time/p5-DateTime-Locale to 1.09 [wiz 2016-10-18]
