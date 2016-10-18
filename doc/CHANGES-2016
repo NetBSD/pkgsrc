@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4331 2016/10/18 16:19:08 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4332 2016/10/18 16:27:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6051,3 +6051,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-rest-client to 2.0.0 [taca 2016-10-18]
 	Updated www/ruby-rouge to 1.11.1 [taca 2016-10-18]
 	Updated www/ruby-sass to 3.4.22 [taca 2016-10-18]
+	Updated www/ruby-sinatra-contrib to 1.4.7 [taca 2016-10-18]
