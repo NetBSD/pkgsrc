@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/03/15 15:45:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.20 2016/10/18 14:41:15 taca Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,8 +8,8 @@ ${GEM_LIBDIR}/.cross_rubies
 ${GEM_LIBDIR}/.editorconfig
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/CHANGELOG.ja.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/C_CODING_STYLE.rdoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
@@ -156,41 +156,6 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
-${GEM_LIBDIR}/patches/libxml2/0001-Revert-Missing-initialization-for-the-catalog-module.patch
-${GEM_LIBDIR}/patches/libxml2/0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch
-${GEM_LIBDIR}/patches/libxml2/0003-Stop-parsing-on-entities-boundaries-errors.patch
-${GEM_LIBDIR}/patches/libxml2/0004-Cleanup-conditional-section-error-handling.patch
-${GEM_LIBDIR}/patches/libxml2/0005-CVE-2015-1819-Enforce-the-reader-to-run-in-constant-.patch
-${GEM_LIBDIR}/patches/libxml2/0006-Another-variation-of-overflow-in-Conditional-section.patch
-${GEM_LIBDIR}/patches/libxml2/0007-Fix-an-error-in-previous-Conditional-section-patch.patch
-${GEM_LIBDIR}/patches/libxml2/0008-CVE-2015-8035-Fix-XZ-compression-support-loop.patch
-${GEM_LIBDIR}/patches/libxml2/0009-Updated-config.guess.patch
-${GEM_LIBDIR}/patches/libxml2/0010-Fix-parsering-short-unclosed-comment-uninitialized-access.patch
-${GEM_LIBDIR}/patches/libxml2/0011-Avoid-extra-processing-of-MarkupDecl-when-EOF.patch
-${GEM_LIBDIR}/patches/libxml2/0012-Avoid-processing-entities-after-encoding-conversion-.patch
-${GEM_LIBDIR}/patches/libxml2/0013-CVE-2015-7497-Avoid-an-heap-buffer-overflow-in-xmlDi.patch
-${GEM_LIBDIR}/patches/libxml2/0014-CVE-2015-5312-Another-entity-expansion-issue.patch
-${GEM_LIBDIR}/patches/libxml2/0015-Add-xmlHaltParser-to-stop-the-parser.patch
-${GEM_LIBDIR}/patches/libxml2/0016-Detect-incoherency-on-GROW.patch
-${GEM_LIBDIR}/patches/libxml2/0017-CVE-2015-7500-Fix-memory-access-error-due-to-incorre.patch
-${GEM_LIBDIR}/patches/libxml2/0018-CVE-2015-8242-Buffer-overead-with-HTML-parser-in-pus.patch
-${GEM_LIBDIR}/patches/libxml2/0019-Do-not-print-error-context-when-there-is-none.patch
-${GEM_LIBDIR}/patches/libxml2/0020-xmlStopParser-reset-errNo.patch
-${GEM_LIBDIR}/patches/libxml2/0021-Reuse-xmlHaltParser-where-it-makes-sense.patch
-${GEM_LIBDIR}/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch
-${GEM_LIBDIR}/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
-${GEM_LIBDIR}/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch
-${GEM_LIBDIR}/patches/libxslt/0004-EXSLT-function-str-replace-is-broken-as-is.patch
-${GEM_LIBDIR}/patches/libxslt/0006-Fix-str-padding-to-work-with-UTF-8-strings.patch
-${GEM_LIBDIR}/patches/libxslt/0007-Separate-function-for-predicate-matching-in-patterns.patch
-${GEM_LIBDIR}/patches/libxslt/0008-Fix-direct-pattern-matching.patch
-${GEM_LIBDIR}/patches/libxslt/0009-Fix-certain-patterns-with-predicates.patch
-${GEM_LIBDIR}/patches/libxslt/0010-Fix-handling-of-UTF-8-strings-in-EXSLT-crypto-module.patch
-${GEM_LIBDIR}/patches/libxslt/0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch
-${GEM_LIBDIR}/patches/libxslt/0014-Fix-for-bug-436589.patch
-${GEM_LIBDIR}/patches/libxslt/0015-Fix-mkdir-for-mingw.patch
-${GEM_LIBDIR}/patches/libxslt/0016-Fix-for-type-confusion-in-preprocessing-attributes.patch
-${GEM_LIBDIR}/patches/libxslt/0017-Updated-config.guess.patch
 ${GEM_LIBDIR}/patches/sort-patches-by-date
 ${GEM_LIBDIR}/suppressions/README.txt
 ${GEM_LIBDIR}/suppressions/nokogiri_ree-1.8.7.358.supp
@@ -204,6 +169,7 @@ ${GEM_LIBDIR}/test/css/test_tokenizer.rb
 ${GEM_LIBDIR}/test/css/test_xpath_visitor.rb
 ${GEM_LIBDIR}/test/decorators/test_slop.rb
 ${GEM_LIBDIR}/test/files/2ch.html
+${GEM_LIBDIR}/test/files/GH_1042.html
 ${GEM_LIBDIR}/test/files/address_book.rlx
 ${GEM_LIBDIR}/test/files/address_book.xml
 ${GEM_LIBDIR}/test/files/atom.xml
@@ -216,6 +182,7 @@ ${GEM_LIBDIR}/test/files/exslt.xml
 ${GEM_LIBDIR}/test/files/exslt.xslt
 ${GEM_LIBDIR}/test/files/foo/foo.xsd
 ${GEM_LIBDIR}/test/files/metacharset.html
+${GEM_LIBDIR}/test/files/namespace_pressure_test.xml
 ${GEM_LIBDIR}/test/files/noencoding.html
 ${GEM_LIBDIR}/test/files/po.xml
 ${GEM_LIBDIR}/test/files/po.xsd
@@ -262,7 +229,6 @@ ${GEM_LIBDIR}/test/test_css_cache.rb
 ${GEM_LIBDIR}/test/test_encoding_handler.rb
 ${GEM_LIBDIR}/test/test_memory_leak.rb
 ${GEM_LIBDIR}/test/test_nokogiri.rb
-${GEM_LIBDIR}/test/test_reader.rb
 ${GEM_LIBDIR}/test/test_soap4r_sax.rb
 ${GEM_LIBDIR}/test/test_xslt_transforms.rb
 ${GEM_LIBDIR}/test/xml/node/test_save_options.rb
@@ -294,6 +260,7 @@ ${GEM_LIBDIR}/test/xml/test_node_reparenting.rb
 ${GEM_LIBDIR}/test/xml/test_node_set.rb
 ${GEM_LIBDIR}/test/xml/test_parse_options.rb
 ${GEM_LIBDIR}/test/xml/test_processing_instruction.rb
+${GEM_LIBDIR}/test/xml/test_reader.rb
 ${GEM_LIBDIR}/test/xml/test_reader_encoding.rb
 ${GEM_LIBDIR}/test/xml/test_relax_ng.rb
 ${GEM_LIBDIR}/test/xml/test_schema.rb
