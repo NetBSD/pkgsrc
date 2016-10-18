@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.752 2016/09/20 12:38:54 markd Exp $
+# $NetBSD: Makefile,v 1.753 2016/10/18 02:52:11 kamil Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -418,6 +418,7 @@ SUBDIR+=	povray
 SUBDIR+=	prag
 SUBDIR+=	ps2eps
 SUBDIR+=	pstoedit
+SUBDIR+=	ptex
 SUBDIR+=	py-OpenGL
 SUBDIR+=	py-Pillow
 SUBDIR+=	py-aafigure
