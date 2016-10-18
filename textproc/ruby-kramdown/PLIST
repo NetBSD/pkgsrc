@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/03/15 15:43:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/10/18 14:34:01 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -186,6 +186,9 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/normal.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/disabled.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/disabled.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/disabled.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/multiple.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/multiple.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/multiple.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/simple.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/simple.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/rouge/simple.text
@@ -312,6 +315,8 @@ ${GEM_LIBDIR}/test/testcases/block/09_html/simple.options
 ${GEM_LIBDIR}/test/testcases/block/09_html/simple.text
 ${GEM_LIBDIR}/test/testcases/block/09_html/textarea.html
 ${GEM_LIBDIR}/test/testcases/block/09_html/textarea.text
+${GEM_LIBDIR}/test/testcases/block/09_html/xml.html
+${GEM_LIBDIR}/test/testcases/block/09_html/xml.text
 ${GEM_LIBDIR}/test/testcases/block/10_ald/simple.html
 ${GEM_LIBDIR}/test/testcases/block/10_ald/simple.text
 ${GEM_LIBDIR}/test/testcases/block/11_ial/auto_id_and_ial.html
@@ -335,6 +340,8 @@ ${GEM_LIBDIR}/test/testcases/block/12_extension/options2.html
 ${GEM_LIBDIR}/test/testcases/block/12_extension/options2.text
 ${GEM_LIBDIR}/test/testcases/block/12_extension/options3.html
 ${GEM_LIBDIR}/test/testcases/block/12_extension/options3.text
+${GEM_LIBDIR}/test/testcases/block/13_definition_list/auto_ids.html
+${GEM_LIBDIR}/test/testcases/block/13_definition_list/auto_ids.text
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/definition_at_beginning.html
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/definition_at_beginning.text
 ${GEM_LIBDIR}/test/testcases/block/13_definition_list/deflist_ial.html
@@ -393,6 +400,9 @@ ${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_notexhints.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_semantics.html.19
 ${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_semantics.options
 ${GEM_LIBDIR}/test/testcases/block/15_math/mathjaxnode_semantics.text
+${GEM_LIBDIR}/test/testcases/block/15_math/no_engine.html
+${GEM_LIBDIR}/test/testcases/block/15_math/no_engine.options
+${GEM_LIBDIR}/test/testcases/block/15_math/no_engine.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.html
 ${GEM_LIBDIR}/test/testcases/block/15_math/normal.text
 ${GEM_LIBDIR}/test/testcases/block/15_math/ritex.html
@@ -439,6 +449,7 @@ ${GEM_LIBDIR}/test/testcases/span/02_emphasis/errors.text
 ${GEM_LIBDIR}/test/testcases/span/02_emphasis/nesting.html
 ${GEM_LIBDIR}/test/testcases/span/02_emphasis/nesting.text
 ${GEM_LIBDIR}/test/testcases/span/02_emphasis/normal.html
+${GEM_LIBDIR}/test/testcases/span/02_emphasis/normal.options
 ${GEM_LIBDIR}/test/testcases/span/02_emphasis/normal.text
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/empty.html
 ${GEM_LIBDIR}/test/testcases/span/03_codespan/empty.text
@@ -495,6 +506,8 @@ ${GEM_LIBDIR}/test/testcases/span/05_html/normal.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/normal.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/raw_span_elements.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/raw_span_elements.text
+${GEM_LIBDIR}/test/testcases/span/05_html/xml.html
+${GEM_LIBDIR}/test/testcases/span/05_html/xml.text
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev.html
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev.text
 ${GEM_LIBDIR}/test/testcases/span/abbreviations/abbrev_defs.html
@@ -522,6 +535,9 @@ ${GEM_LIBDIR}/test/testcases/span/math/itex2mml.text
 ${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.html.19
 ${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.options
 ${GEM_LIBDIR}/test/testcases/span/math/mathjaxnode.text
+${GEM_LIBDIR}/test/testcases/span/math/no_engine.html
+${GEM_LIBDIR}/test/testcases/span/math/no_engine.options
+${GEM_LIBDIR}/test/testcases/span/math/no_engine.text
 ${GEM_LIBDIR}/test/testcases/span/math/normal.html
 ${GEM_LIBDIR}/test/testcases/span/math/normal.text
 ${GEM_LIBDIR}/test/testcases/span/math/ritex.html
@@ -562,6 +578,11 @@ ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks.text
 ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks_off.html
 ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks_off.options
 ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks_off.text
+${GEM_LIBDIR}/test/testcases_gfm/paragraph_end-disabled.html
+${GEM_LIBDIR}/test/testcases_gfm/paragraph_end-disabled.options
+${GEM_LIBDIR}/test/testcases_gfm/paragraph_end-disabled.text
+${GEM_LIBDIR}/test/testcases_gfm/paragraph_end.html
+${GEM_LIBDIR}/test/testcases_gfm/paragraph_end.text
 ${GEM_LIBDIR}/test/testcases_gfm/strikethrough.html
 ${GEM_LIBDIR}/test/testcases_gfm/strikethrough.html.19
 ${GEM_LIBDIR}/test/testcases_gfm/strikethrough.text
