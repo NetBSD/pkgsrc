@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2016/09/15 14:26:53 joerg Exp $
+# $NetBSD: Makefile,v 1.252 2016/10/18 17:13:43 maya Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -191,6 +191,7 @@ SUBDIR+=	sickbeard
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg2
 SUBDIR+=	ssr
+SUBDIR+=	streamlink
 SUBDIR+=	subtitleeditor
 SUBDIR+=	swfdec
 SUBDIR+=	swfdec-gnome
