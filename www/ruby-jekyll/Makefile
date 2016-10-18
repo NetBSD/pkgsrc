@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/10/17 14:17:27 taca Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/18 10:34:29 wiz Exp $
 
 DISTNAME=	jekyll-3.3.0
 CATEGORIES=	www
@@ -17,7 +17,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rouge>=1.7<2:../../www/ruby-rouge
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-sass-converter>=1.0<2:../../www/ruby-jekyll-sass-converter
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=1.1<2:../../www/ruby-jekyll-watch
 DEPENDS+=	${RUBY_PKGPREFIX}-pathutil>=0.9<1:../../devel/ruby-pathutil
-DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.4<3:../../devel/ruby-pathutil
+DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.4<3:../../net/ruby-addressable
 
 RUBYGEM_OPTIONS+=	--format-executable
 
