@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2015/03/08 15:17:21 taca Exp $
-bin/redcloth
+@comment $NetBSD: PLIST,v 1.16 2016/10/18 14:43:14 taca Exp $
+bin/redcloth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/redcloth_scan.${RUBY_DLEXT}
@@ -26,7 +26,6 @@ ${GEM_LIBDIR}/lib/redcloth/formatters/latex.rb
 ${GEM_LIBDIR}/lib/redcloth/formatters/latex_entities.yml
 ${GEM_LIBDIR}/lib/redcloth/textile_doc.rb
 ${GEM_LIBDIR}/lib/redcloth/version.rb
-${GEM_LIBDIR}/lib/redcloth_scan.jar
 ${GEM_LIBDIR}/lib/redcloth_scan.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/tasks/pureruby.rake
 ${GEM_LIBDIR}/redcloth.gemspec
@@ -61,9 +60,9 @@ ${GEM_LIBDIR}/spec/formatters/no_span_caps_html_spec.rb
 ${GEM_LIBDIR}/spec/formatters/sanitized_html_spec.rb
 ${GEM_LIBDIR}/spec/formatters/style_filtered_html_spec.rb
 ${GEM_LIBDIR}/spec/parser_spec.rb
+${GEM_LIBDIR}/spec/security/CVE-2012-6684_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/tasks/compile.rake
-${GEM_LIBDIR}/tasks/gems.rake
 ${GEM_LIBDIR}/tasks/ragel_extension_task.rb
 ${GEM_LIBDIR}/tasks/release.rake
 ${GEM_LIBDIR}/tasks/rspec.rake
