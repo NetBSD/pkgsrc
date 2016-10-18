@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/03/14 18:31:53 taca Exp $
+# $NetBSD: Makefile,v 1.5 2016/10/18 14:49:25 taca Exp $
 
-DISTNAME=	syntax-1.2.0
+DISTNAME=	syntax-1.2.1
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
