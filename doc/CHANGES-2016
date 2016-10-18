@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4318 2016/10/18 14:51:20 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4319 2016/10/18 15:01:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6038,3 +6038,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/ruby-rison to 2.1.0 [taca 2016-10-18]
 	Updated textproc/ruby-syntax to 1.2.1 [taca 2016-10-18]
 	Updated textproc/ruby-yard to 0.9.5 [taca 2016-10-18]
+	Updated www/ruby-css-parser to 1.4.5 [taca 2016-10-18]
