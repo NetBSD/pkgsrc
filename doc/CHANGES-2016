@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4322 2016/10/18 15:37:07 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4323 2016/10/18 15:42:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6042,3 +6042,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-em-http-request to 1.1.5 [taca 2016-10-18]
 	Updated www/ruby-http to 2.0.3 [taca 2016-10-18]
 	Updated www/ruby-httpclient to 2.8.2.4 [taca 2016-10-18]
+	Updated www/ruby-capybara to 2.10.1 [taca 2016-10-18]
