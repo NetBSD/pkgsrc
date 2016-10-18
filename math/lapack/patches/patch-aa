@@ -1,11 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2014/08/19 13:37:15 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2016/10/18 14:08:14 wiz Exp $
 
-Fix portability issues.
-Use LIBTOOL.
-
---- SRC/Makefile.orig	2013-07-09 04:06:39.000000000 +0000
+--- SRC/Makefile.orig	2016-06-18 22:15:11.000000000 +0000
 +++ SRC/Makefile
-@@ -159,7 +159,7 @@ SLASRC = \
+@@ -163,7 +163,7 @@ SLASRC = \
  
  DSLASRC = spotrs.o sgetrs.o spotrf.o sgetrf.o 
  
@@ -14,7 +11,7 @@ Use LIBTOOL.
  SXLASRC = sgesvxx.o sgerfsx.o sla_gerfsx_extended.o sla_geamv.o		\
     sla_gercond.o sla_gerpvgrw.o ssysvxx.o ssyrfsx.o			\
     sla_syrfsx_extended.o sla_syamv.o sla_syrcond.o sla_syrpvgrw.o	\
-@@ -167,7 +167,7 @@ SXLASRC = sgesvxx.o sgerfsx.o sla_gerfsx
+@@ -171,7 +171,7 @@ SXLASRC = sgesvxx.o sgerfsx.o sla_gerfsx
     sla_porpvgrw.o sgbsvxx.o sgbrfsx.o sla_gbrfsx_extended.o		\
     sla_gbamv.o sla_gbrcond.o sla_gbrpvgrw.o sla_lin_berr.o slarscl2.o	\
     slascl2.o sla_wwaddw.o
@@ -22,8 +19,8 @@ Use LIBTOOL.
 +.endif
  
  CLASRC = \
-    cbdsqr.o cgbbrd.o cgbcon.o cgbequ.o cgbrfs.o cgbsv.o  cgbsvx.o \
-@@ -238,7 +238,7 @@ CLASRC = \
+    cpotrf2.o cgetrf2.o \
+@@ -245,7 +245,7 @@ CLASRC = \
     cgeqrt.o cgeqrt2.o cgeqrt3.o cgemqrt.o \
     ctpqrt.o ctpqrt2.o ctpmqrt.o ctprfb.o
  
@@ -32,7 +29,7 @@ Use LIBTOOL.
  CXLASRC = cgesvxx.o cgerfsx.o cla_gerfsx_extended.o cla_geamv.o \
     cla_gercond_c.o cla_gercond_x.o cla_gerpvgrw.o \
     csysvxx.o csyrfsx.o cla_syrfsx_extended.o cla_syamv.o \
-@@ -250,7 +250,7 @@ CXLASRC = cgesvxx.o cgerfsx.o cla_gerfsx
+@@ -257,7 +257,7 @@ CXLASRC = cgesvxx.o cgerfsx.o cla_gerfsx
     chesvxx.o cherfsx.o cla_herfsx_extended.o cla_heamv.o \
     cla_hercond_c.o cla_hercond_x.o cla_herpvgrw.o \
     cla_lin_berr.o clarscl2.o clascl2.o cla_wwaddw.o
@@ -41,7 +38,7 @@ Use LIBTOOL.
  
  ZCLASRC = cpotrs.o cgetrs.o cpotrf.o cgetrf.o 
  
-@@ -318,7 +318,7 @@ DLASRC = \
+@@ -328,7 +328,7 @@ DLASRC = \
     dgeqrt.o dgeqrt2.o dgeqrt3.o dgemqrt.o \
     dtpqrt.o dtpqrt2.o dtpmqrt.o dtprfb.o
  
@@ -50,7 +47,7 @@ Use LIBTOOL.
  DXLASRC = dgesvxx.o dgerfsx.o dla_gerfsx_extended.o dla_geamv.o		\
     dla_gercond.o dla_gerpvgrw.o dsysvxx.o dsyrfsx.o			\
     dla_syrfsx_extended.o dla_syamv.o dla_syrcond.o dla_syrpvgrw.o	\
-@@ -326,7 +326,7 @@ DXLASRC = dgesvxx.o dgerfsx.o dla_gerfsx
+@@ -336,7 +336,7 @@ DXLASRC = dgesvxx.o dgerfsx.o dla_gerfsx
     dla_porpvgrw.o dgbsvxx.o dgbrfsx.o dla_gbrfsx_extended.o		\
     dla_gbamv.o dla_gbrcond.o dla_gbrpvgrw.o dla_lin_berr.o dlarscl2.o	\
     dlascl2.o dla_wwaddw.o
@@ -58,8 +55,8 @@ Use LIBTOOL.
 +.endif
  
  ZLASRC = \
-    zbdsqr.o zgbbrd.o zgbcon.o zgbequ.o zgbrfs.o zgbsv.o  zgbsvx.o \
-@@ -402,7 +402,7 @@ ZLASRC = \
+    zpotrf2.o zgetrf2.o \
+@@ -416,7 +416,7 @@ ZLASRC = \
     zgeqrt.o zgeqrt2.o zgeqrt3.o zgemqrt.o \
     ztpqrt.o ztpqrt2.o ztpmqrt.o ztprfb.o
  
@@ -68,13 +65,16 @@ Use LIBTOOL.
  ZXLASRC = zgesvxx.o zgerfsx.o zla_gerfsx_extended.o zla_geamv.o		\
     zla_gercond_c.o zla_gercond_x.o zla_gerpvgrw.o zsysvxx.o zsyrfsx.o	\
     zla_syrfsx_extended.o zla_syamv.o zla_syrcond_c.o zla_syrcond_x.o	\
-@@ -412,20 +412,20 @@ ZXLASRC = zgesvxx.o zgerfsx.o zla_gerfsx
+@@ -426,7 +426,7 @@ ZXLASRC = zgesvxx.o zgerfsx.o zla_gerfsx
     zla_gbrpvgrw.o zhesvxx.o zherfsx.o zla_herfsx_extended.o		\
     zla_heamv.o zla_hercond_c.o zla_hercond_x.o zla_herpvgrw.o		\
     zla_lin_berr.o zlarscl2.o zlascl2.o zla_wwaddw.o
 -endif
 +.endif
  
+ DEPRECSRC = DEPRECATED/cgegs.o DEPRECATED/cgegv.o DEPRECATED/cgelsx.o	\
+     DEPRECATED/cgeqpf.o DEPRECATED/cggsvd.o DEPRECATED/cggsvp.o				\
+@@ -444,19 +444,19 @@ DEPRECSRC = DEPRECATED/cgegs.o DEPRECATE
  ALLOBJ = $(SLASRC) $(DLASRC) $(DSLASRC) $(CLASRC) $(ZLASRC) $(ZCLASRC) \
     $(SCLAUX) $(DZLAUX) $(ALLAUX)
  
@@ -84,17 +84,23 @@ Use LIBTOOL.
 -endif
 +.endif
  
+-ifdef BUILD_DEPRECATED
++.ifdef BUILD_DEPRECATED
+ DEPRECATED = $(DEPRECSRC)
+-endif
++.endif
+ 
  all: ../$(LAPACKLIB)
  
- ../$(LAPACKLIB): $(ALLOBJ) $(ALLXOBJ)
--	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ) $(ALLXOBJ)
+ ../$(LAPACKLIB): $(ALLOBJ) $(ALLXOBJ) $(DEPRECATED)
+-	$(ARCH) $(ARCHFLAGS) $@ $(ALLOBJ) $(ALLXOBJ) $(DEPRECATED)
 -	$(RANLIB) $@
 +	${LIBTOOL} --mode=link --tag=FC ${FC} ${LDFLAGS} -o ../$(LAPACKLIB) \
 +	$(ALLOBJ:.o=.lo) -rpath ${PREFIX}/lib -version-info 4:0
  
  single: $(SLASRC) $(DSLASRC) $(SXLASRC) $(SCLAUX) $(ALLAUX)
  	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(SLASRC) $(DSLASRC) \
-@@ -456,12 +456,12 @@ $(DLASRC): $(FRC)
+@@ -487,12 +487,12 @@ $(DLASRC): $(FRC)
  $(ZLASRC): $(FRC)
  $(ZCLASRC): $(FRC)
  $(DSLASRC): $(FRC)
@@ -109,25 +115,23 @@ Use LIBTOOL.
  
  FRC:
  	@FRC=$(FRC)
-@@ -470,12 +470,14 @@ clean:
- 	rm -f *.o
+@@ -501,12 +501,11 @@ clean:
+ 	rm -f *.o DEPRECATED/*.o
  
  .f.o: 
 -	$(FORTRAN) $(OPTS) -c $< -o $@
-+	${LIBTOOL} --mode=compile --tag=FC ${FC} ${FFLAGS} -c $<
-+
-+
-+slaruv.o: slaruv.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
-+dlaruv.o: dlaruv.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
-+sla_wwaddw.o: sla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
-+dla_wwaddw.o: dla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
-+cla_wwaddw.o: cla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
-+zla_wwaddw.o: zla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
- 
+-
 -slaruv.o: slaruv.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -dlaruv.o: dlaruv.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -sla_wwaddw.o: sla_wwaddw.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -dla_wwaddw.o: dla_wwaddw.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -cla_wwaddw.o: cla_wwaddw.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
 -zla_wwaddw.o: zla_wwaddw.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
++	${LIBTOOL} --mode=compile --tag=FC ${FC} ${FFLAGS} -c $<
  
++slaruv.o: slaruv.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++dlaruv.o: dlaruv.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++sla_wwaddw.o: sla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++dla_wwaddw.o: dla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++cla_wwaddw.o: cla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++zla_wwaddw.o: zla_wwaddw.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
