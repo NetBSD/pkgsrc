@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/09/13 15:45:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/10/18 16:18:36 taca Exp $
 bin/sass${RUBY_SUFFIX}
 bin/sass-convert${RUBY_SUFFIX}
 bin/scss${RUBY_SUFFIX}
@@ -57,6 +57,7 @@ ${GEM_LIBDIR}/lib/sass/root.rb
 ${GEM_LIBDIR}/lib/sass/script.rb
 ${GEM_LIBDIR}/lib/sass/script/css_lexer.rb
 ${GEM_LIBDIR}/lib/sass/script/css_parser.rb
+${GEM_LIBDIR}/lib/sass/script/css_variable_warning.rb
 ${GEM_LIBDIR}/lib/sass/script/functions.rb
 ${GEM_LIBDIR}/lib/sass/script/lexer.rb
 ${GEM_LIBDIR}/lib/sass/script/parser.rb
@@ -87,8 +88,6 @@ ${GEM_LIBDIR}/lib/sass/scss.rb
 ${GEM_LIBDIR}/lib/sass/scss/css_parser.rb
 ${GEM_LIBDIR}/lib/sass/scss/parser.rb
 ${GEM_LIBDIR}/lib/sass/scss/rx.rb
-${GEM_LIBDIR}/lib/sass/scss/script_lexer.rb
-${GEM_LIBDIR}/lib/sass/scss/script_parser.rb
 ${GEM_LIBDIR}/lib/sass/scss/static_parser.rb
 ${GEM_LIBDIR}/lib/sass/selector.rb
 ${GEM_LIBDIR}/lib/sass/selector/abstract_sequence.rb
@@ -149,11 +148,13 @@ ${GEM_LIBDIR}/lib/sass/util/subset_map.rb
 ${GEM_LIBDIR}/lib/sass/util/test.rb
 ${GEM_LIBDIR}/lib/sass/version.rb
 ${GEM_LIBDIR}/rails/init.rb
+${GEM_LIBDIR}/test/sass-spec.yml
 ${GEM_LIBDIR}/test/sass/cache_test.rb
 ${GEM_LIBDIR}/test/sass/callbacks_test.rb
 ${GEM_LIBDIR}/test/sass/compiler_test.rb
 ${GEM_LIBDIR}/test/sass/conversion_test.rb
 ${GEM_LIBDIR}/test/sass/css2sass_test.rb
+${GEM_LIBDIR}/test/sass/css_variable_test.rb
 ${GEM_LIBDIR}/test/sass/data/hsl-rgb.txt
 ${GEM_LIBDIR}/test/sass/encoding_test.rb
 ${GEM_LIBDIR}/test/sass/engine_test.rb
