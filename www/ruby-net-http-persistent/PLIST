@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/16 13:29:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/10/18 16:34:44 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/lib/net/http/faster.rb
 ${GEM_LIBDIR}/lib/net/http/persistent.rb
-${GEM_LIBDIR}/lib/net/http/persistent/ssl_reuse.rb
+${GEM_LIBDIR}/lib/net/http/persistent/connection.rb
+${GEM_LIBDIR}/lib/net/http/persistent/pool.rb
+${GEM_LIBDIR}/lib/net/http/persistent/timed_stack_multi.rb
 ${GEM_LIBDIR}/test/test_net_http_persistent.rb
-${GEM_LIBDIR}/test/test_net_http_persistent_ssl_reuse.rb
+${GEM_LIBDIR}/test/test_net_http_persistent_timed_stack_multi.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
