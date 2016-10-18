@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4329 2016/10/18 16:09:03 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4330 2016/10/18 16:15:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6049,3 +6049,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-patron to 0.8.0 [taca 2016-10-18]
 	Updated www/ruby-raindrops to 0.17.0 [taca 2016-10-18]
 	Updated www/ruby-rest-client to 2.0.0 [taca 2016-10-18]
+	Updated www/ruby-rouge to 1.11.1 [taca 2016-10-18]
