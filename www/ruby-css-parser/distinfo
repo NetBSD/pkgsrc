@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/11/04 02:47:33 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/10/18 15:00:49 taca Exp $
 
-SHA1 (css_parser-1.3.7.gem) = 522e30f7ceac8c78b006f2b46ec8346fdc0c2ff1
-RMD160 (css_parser-1.3.7.gem) = 4e0ae97cac6a3c408ef1acdcdc0eff8e36e61293
-SHA512 (css_parser-1.3.7.gem) = 5c03067a7e5b9e4519ca1c6ab12e8e207b70c6c192f575e9568cd1b4e598ede4af6c93f1ce0d92dd88f8ab0a660ce459dbdcd92f0b508420876e486ef15550c4
-Size (css_parser-1.3.7.gem) = 16384 bytes
+SHA1 (css_parser-1.4.5.gem) = 440c4431b6f6e27453aef1729c3f4793708e79ec
+RMD160 (css_parser-1.4.5.gem) = 7dbfedcb9e5bcc470a542ab1c8723c028136f53f
+SHA512 (css_parser-1.4.5.gem) = 2e2957bd9089532d6013fdb21f7e5b7b9eae80aa37803148959eb8bf03e7e954abf570e0c9d4d43fc371aa8b937e3f743ada6a582e55143989c4fa7cc6ed8626
+Size (css_parser-1.4.5.gem) = 17408 bytes
