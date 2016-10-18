@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.42 2016/07/26 08:19:45 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.43 2016/10/18 19:09:10 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -50,11 +50,11 @@ EXTRACT_SUFX?=		.tgz
 .endif
 
 EGDIR=      ${PREFIX}/share/examples/php
-CONF_FILES= ${EGDIR}/${MODNAME}.ini ${EXT_CONF_DIR}/${MODNAME}.ini
+CONF_FILES= ${EGDIR}/${MODNAME}.ini ${PHP_EXT_CONF_DIR}/${MODNAME}.ini
 
-EXT_CONF_DIR=   ${PKG_SYSCONFDIR}/php.d
-MAKE_DIRS+=     ${EXT_CONF_DIR}
-MAKE_DIRS+=     ${EGDIR}
+PHP_EXT_CONF_DIR?=	${PKG_SYSCONFDIR}/php.d
+MAKE_DIRS+=		${PHP_EXT_CONF_DIR}
+MAKE_DIRS+=		${EGDIR}
 
 SUBST_CLASSES+=     ext-ini
 SUBST_FILES.ext-ini=  ${MODNAME}.ini
@@ -82,7 +82,7 @@ MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 PLIST_SRC+=		${.CURDIR}/../../lang/php/PLIST.module
 MESSAGE_SRC+=		${.CURDIR}/../../lang/php/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
-MESSAGE_SUBST+=		EXT_CONF_DIR=${EXT_CONF_DIR}
+MESSAGE_SUBST+=		PHP_EXT_CONF_DIR=${PHP_EXT_CONF_DIR}
 .if !empty(PHP_ZEND_EXTENSION:U:M[Yy][Ye][Ss])
 EXTENSION_DIRECTIVE=    zend_extension
 EXTENSION_FILE=         ${PREFIX}/${PHP_EXTENSION_DIR}/${PKGMODNAME}.${SHLIB_SUFFIX}
