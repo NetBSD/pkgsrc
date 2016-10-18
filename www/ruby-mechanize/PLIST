@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/01/03 08:45:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/10/18 15:50:43 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gitignore
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/EXAMPLES.rdoc
 ${GEM_LIBDIR}/GUIDE.rdoc
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.rdoc
-${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/flickr_upload.rb
@@ -97,6 +96,7 @@ ${GEM_LIBDIR}/lib/mechanize/test_case/referer_servlet.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case/refresh_with_empty_url.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case/refresh_without_url.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case/response_code_servlet.rb
+${GEM_LIBDIR}/lib/mechanize/test_case/robots_txt_servlet.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case/send_cookies_servlet.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case/server.rb
 ${GEM_LIBDIR}/lib/mechanize/test_case/servlets.rb
@@ -139,7 +139,6 @@ ${GEM_LIBDIR}/test/htdocs/noindex.html
 ${GEM_LIBDIR}/test/htdocs/rails_3_encoding_hack_form_test.html
 ${GEM_LIBDIR}/test/htdocs/relative/tc_relative_links.html
 ${GEM_LIBDIR}/test/htdocs/robots.html
-${GEM_LIBDIR}/test/htdocs/robots.txt
 ${GEM_LIBDIR}/test/htdocs/tc_bad_charset.html
 ${GEM_LIBDIR}/test/htdocs/tc_bad_links.html
 ${GEM_LIBDIR}/test/htdocs/tc_base_link.html
