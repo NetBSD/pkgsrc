@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2015/03/13 16:54:35 taca Exp $
+# $NetBSD: Makefile,v 1.10 2016/10/18 15:48:55 taca Exp $
 
-DISTNAME=	jquery-rails-3.1.2
+DISTNAME=	jquery-rails-3.1.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubygems.org/gems/jquery-rails/
+HOMEPAGE=	https://github.com/rails/jquery-rails
 COMMENT=	Rails jQuery support
 LICENSE=	mit
 
