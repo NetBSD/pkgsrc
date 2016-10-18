@@ -1,0 +1,67 @@
+From 78fe67641918016a6108e325be351156999109c9 Mon Sep 17 00:00:00 2001
+From: Emmanuel Dreyfus <manu@netbsd.org>
+Date: Tue, 18 Oct 2016 01:42:53 +0200
+Subject: [PATCH] Do not redirect unauthenticated AJAX request to the IdP
+
+When MellonEnable is "auth" and we get an unauthenticated AJAX
+request (identified by the X-Request-With: XMLHttpRequest HTTP
+header), fail with HTTP code 403 Forbidden instead of redirecting
+to the IdP. This saves resources, as the client has no opportunity
+to interract with the user to complete authentification.
+---
+ README                |  6 ++++++
+ auth_mellon_handler.c | 14 ++++++++++++++
+ 2 files changed, 20 insertions(+)
+
+diff --git README README
+index ec323ab..5960cc8 100644
+--- README
++++ README
+@@ -166,6 +166,12 @@ MellonPostCount 100
+         #           return a 403 Forbidden error. If he isn't authenticated
+         #           then we will redirect him to the login page of the IdP.
+         #
++        #           There is a special handling of AJAX requests, that are
++        #           identified by the "X-Request-With: XMLHttpRequest" HTTP
++        #           header. Since no user interaction can happen there,
++        #           we always fail unauthenticated (not logged in) requests
++        #           with a 403 Forbidden error without redirecting to the IdP.
++        #
+         # Default: MellonEnable "off"
+         MellonEnable "auth"
+ 
+diff --git auth_mellon_handler.c auth_mellon_handler.c
+index 0457189..a55828a 100644
+--- auth_mellon_handler.c
++++ auth_mellon_handler.c
+@@ -3491,6 +3491,7 @@ int am_auth_mellon_user(request_rec *r)
+     am_dir_cfg_rec *dir = am_get_dir_cfg(r);
+     int return_code = HTTP_UNAUTHORIZED;
+     am_cache_entry_t *session;
++    const char *ajax_header;
+ 
+     if (r->main) {
+         /* We are a subrequest. Trust the main request to have
+@@ -3534,6 +3535,19 @@ int am_auth_mellon_user(request_rec *r)
+                 am_release_request_session(r, session);
+             }
+ 
++            /*
++             * If this is an AJAX request, we cannot proceed to the IdP,
++             * Just fail early to save our resources
++             */
++            ajax_header = apr_table_get(r->headers_in, "X-Request-With");
++            if (ajax_header != NULL &&
++                strcmp(ajax_header, "XMLHttpRequest") == 0) {
++                    ap_log_rerror(APLOG_MARK, APLOG_INFO, 0, r,
++                      "Deny unauthenticated X-Request-With XMLHttpRequest "
++                      "(AJAX) request");
++                    return HTTP_FORBIDDEN;
++            }
++
+ #ifdef HAVE_ECP
+             /*
+              * If PAOS set a flag on the request indicating we're
+-- 
+2.3.2
+
