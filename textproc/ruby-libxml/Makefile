@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2015/09/26 23:41:32 taca Exp $
+# $NetBSD: Makefile,v 1.24 2016/10/18 14:36:38 taca Exp $
 
-DISTNAME=	libxml-ruby-2.8.0
+DISTNAME=	libxml-ruby-2.9.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/ruby-//}
 CATEGORIES=	textproc
 
