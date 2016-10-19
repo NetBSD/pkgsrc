@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/08/24 10:20:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/10/19 12:42:56 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -81,6 +81,12 @@ ${PYSITELIB}/hypothesis/internal/conjecture/utils.pyo
 ${PYSITELIB}/hypothesis/internal/debug.py
 ${PYSITELIB}/hypothesis/internal/debug.pyc
 ${PYSITELIB}/hypothesis/internal/debug.pyo
+${PYSITELIB}/hypothesis/internal/deferredformat.py
+${PYSITELIB}/hypothesis/internal/deferredformat.pyc
+${PYSITELIB}/hypothesis/internal/deferredformat.pyo
+${PYSITELIB}/hypothesis/internal/detection.py
+${PYSITELIB}/hypothesis/internal/detection.pyc
+${PYSITELIB}/hypothesis/internal/detection.pyo
 ${PYSITELIB}/hypothesis/internal/floats.py
 ${PYSITELIB}/hypothesis/internal/floats.pyc
 ${PYSITELIB}/hypothesis/internal/floats.pyo
@@ -138,6 +144,9 @@ ${PYSITELIB}/hypothesis/searchstrategy/wrappers.pyo
 ${PYSITELIB}/hypothesis/stateful.py
 ${PYSITELIB}/hypothesis/stateful.pyc
 ${PYSITELIB}/hypothesis/stateful.pyo
+${PYSITELIB}/hypothesis/statistics.py
+${PYSITELIB}/hypothesis/statistics.pyc
+${PYSITELIB}/hypothesis/statistics.pyo
 ${PYSITELIB}/hypothesis/strategies.py
 ${PYSITELIB}/hypothesis/strategies.pyc
 ${PYSITELIB}/hypothesis/strategies.pyo
