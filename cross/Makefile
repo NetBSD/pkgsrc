@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2016/06/19 16:20:27 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2016/10/19 12:41:43 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -32,7 +32,7 @@ SUBDIR+=	freemint-mintlib
 SUBDIR+=	freemint-pml
 SUBDIR+=	gcc-mips-current
 SUBDIR+=	h8300-elf-binutils
-SUBDIR+=	h8300-elf-gcc34
+SUBDIR+=	h8300-elf-gcc
 SUBDIR+=	h8300-hms-binutils
 SUBDIR+=	h8300-hms-gcc
 SUBDIR+=	icdprog
