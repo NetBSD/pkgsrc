@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/08/06 11:45:24 kamil Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/10/19 12:16:34 wiz Exp $
 ${PYSITELIB}/google/protobuf/__init__.py
 ${PYSITELIB}/google/protobuf/__init__.pyc
 ${PYSITELIB}/google/protobuf/__init__.pyo
@@ -149,6 +149,9 @@ ${PYSITELIB}/google/protobuf/internal/test_bad_identifiers_pb2.pyo
 ${PYSITELIB}/google/protobuf/internal/test_util.py
 ${PYSITELIB}/google/protobuf/internal/test_util.pyc
 ${PYSITELIB}/google/protobuf/internal/test_util.pyo
+${PYSITELIB}/google/protobuf/internal/testing_refleaks.py
+${PYSITELIB}/google/protobuf/internal/testing_refleaks.pyc
+${PYSITELIB}/google/protobuf/internal/testing_refleaks.pyo
 ${PYSITELIB}/google/protobuf/internal/text_encoding_test.py
 ${PYSITELIB}/google/protobuf/internal/text_encoding_test.pyc
 ${PYSITELIB}/google/protobuf/internal/text_encoding_test.pyo
