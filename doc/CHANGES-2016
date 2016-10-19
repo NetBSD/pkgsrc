@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4354 2016/10/19 12:45:50 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4355 2016/10/19 12:46:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6073,3 +6073,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed cross/h8300-elf-gcc34 [ryoon 2016-10-19]
 	Updated devel/py-hypothesis to 3.5.3 [wiz 2016-10-19]
 	Updated cross/arm-none-eabi-binutils to 2.27 [ryoon 2016-10-19]
+	Updated net/py-ipaddress to 1.0.17 [wiz 2016-10-19]
