@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/10/19 13:31:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2016/10/19 14:28:45 fhajny Exp $
 
 DISTNAME=	geoip-api-python-1.3.2
 PKGNAME=	${PYPKGPREFIX}-GeoIP-${DISTNAME:S/geoip-api-python-//}
@@ -12,8 +12,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 GITHUB_PROJECT=	geoip-api-python
 GITHUB_TAG=	v${PKGVERSION_NOREV}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.2.7
 
 EGG_NAME=	GeoIP-${PKGVERSION_NOREV}
 
