@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4372 2016/10/19 14:09:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4373 2016/10/19 14:47:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6091,3 +6091,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools_scm to 1.14.0 [wiz 2016-10-19]
 	Updated devel/py-ZopeInterface to 4.3.2 [wiz 2016-10-19]
 	Updated databases/py-sqlparse to 0.2.1 [wiz 2016-10-19]
+	Updated www/ruby-padrino to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-admin to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-cache to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-core to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-gen to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-helpers to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-mailer to 0.13.3.2 [taca 2016-10-19]
+	Updated www/ruby-padrino-support to 0.13.3.2 [taca 2016-10-19]
