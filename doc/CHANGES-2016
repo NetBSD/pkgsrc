@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4370 2016/10/19 13:56:03 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4371 2016/10/19 13:57:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6089,3 +6089,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-certbot to 0.9.3 [wiz 2016-10-19]
 	Updated security/py-acme to 0.9.3 [wiz 2016-10-19]
 	Updated devel/py-setuptools_scm to 1.14.0 [wiz 2016-10-19]
+	Updated devel/py-ZopeInterface to 4.3.2 [wiz 2016-10-19]
