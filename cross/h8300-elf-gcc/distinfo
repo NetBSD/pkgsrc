@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2016/10/19 12:38:41 ryoon Exp $
+
+SHA1 (gcc-6.2.0.tar.bz2) = 583e29c7fe69d9a1031a89752c2551ab5aeacb91
+RMD160 (gcc-6.2.0.tar.bz2) = d9154ca51f40ae3ce42950a0476f701a9f86fc95
+SHA512 (gcc-6.2.0.tar.bz2) = 1e8b826a3d44b9d5899309894e20c03abeb352bf3d273b8ad63af814c0ee2911f1a83ce1cd4cdd2d1cb0b3e3c34e9b7ae1b2ab83dfc649ee817ab05247c76198
+Size (gcc-6.2.0.tar.bz2) = 99778648 bytes
+SHA1 (newlib-2.4.0.tar.gz) = f2142827d7b593676b91a530e2547e31262e14e7
+RMD160 (newlib-2.4.0.tar.gz) = e7a98a00aca89aad0ee2e2b98993fd8e643d98ce
+SHA512 (newlib-2.4.0.tar.gz) = c60665e793dce2368a5baf23560beb50f641e1831854d702d1d7629fb6e9200cf814527f29796792a3d2dff81afee4255723df99ceb0732f99dd9580a17d2ac0
+Size (newlib-2.4.0.tar.gz) = 17574364 bytes
+SHA1 (patch-libstdc++-v3_src_c++11_cow-stdexcept.cc) = 709efa4e8d287dbae16430f1f9917c2815494eb4
