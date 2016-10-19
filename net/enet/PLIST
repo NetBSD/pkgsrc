@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/19 19:15:22 kamil Exp $
+include/enet/callbacks.h
+include/enet/enet.h
+include/enet/list.h
+include/enet/protocol.h
+include/enet/time.h
+include/enet/types.h
+include/enet/unix.h
+include/enet/utility.h
+include/enet/win32.h
+lib/libenet.la
+lib/pkgconfig/libenet.pc
