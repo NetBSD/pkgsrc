@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16595 2016/10/19 12:24:24 wiz Exp $
+$NetBSD: TODO,v 1.16596 2016/10/19 12:33:05 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -539,7 +539,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crack-attack-1.1.15
 	o crafty-25.0.1
 	o crimsonfields-0.5.3
-	o cross-h8300-elf-binutils-2.23.2 [wip]
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-1.71.0
 	o crossfire-client-gtk2-1.60.0
