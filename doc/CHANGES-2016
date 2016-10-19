@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4341 2016/10/19 11:20:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4342 2016/10/19 11:59:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6061,3 +6061,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/rrdtool to 1.6.0nb3 [he 2016-10-18]
 	Updated net/tor to 0.2.8.9 [wiz 2016-10-19]
 	Updated devel/waf to 1.9.5 [wiz 2016-10-19]
+	Updated net/GeoIP to 1.6.9 [fhajny 2016-10-19]
