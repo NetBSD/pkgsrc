@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/03/15 16:41:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/10/19 14:45:25 taca Exp $
 bin/padrino${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -19,6 +19,7 @@ ${GEM_LIBDIR}/lib/padrino-core/application/show_exceptions.rb
 ${GEM_LIBDIR}/lib/padrino-core/caller.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/adapter.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/base.rb
+${GEM_LIBDIR}/lib/padrino-core/cli/binstub.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/console.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/launcher.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/rake.rb
@@ -53,6 +54,8 @@ ${GEM_LIBDIR}/test/fixtures/app_gem/app_gem.gemspec
 ${GEM_LIBDIR}/test/fixtures/app_gem/lib/app_gem.rb
 ${GEM_LIBDIR}/test/fixtures/app_gem/lib/app_gem/version.rb
 ${GEM_LIBDIR}/test/fixtures/apps/complex.rb
+${GEM_LIBDIR}/test/fixtures/apps/concerned/app.rb
+${GEM_LIBDIR}/test/fixtures/apps/concerned/models/mixins/badmodule.rb
 ${GEM_LIBDIR}/test/fixtures/apps/custom_dependencies/custom_dependencies.rb
 ${GEM_LIBDIR}/test/fixtures/apps/custom_dependencies/my_dependencies/my_dependency.rb
 ${GEM_LIBDIR}/test/fixtures/apps/demo_app.rb
@@ -64,7 +67,6 @@ ${GEM_LIBDIR}/test/fixtures/apps/external_apps/fake_lib.rb
 ${GEM_LIBDIR}/test/fixtures/apps/external_apps/fake_root.rb
 ${GEM_LIBDIR}/test/fixtures/apps/helpers/class_methods_helpers.rb
 ${GEM_LIBDIR}/test/fixtures/apps/helpers/instance_methods_helpers.rb
-${GEM_LIBDIR}/test/fixtures/apps/helpers/support.rb
 ${GEM_LIBDIR}/test/fixtures/apps/helpers/system_helpers.rb
 ${GEM_LIBDIR}/test/fixtures/apps/kiq.rb
 ${GEM_LIBDIR}/test/fixtures/apps/lib/myklass.rb
@@ -106,6 +108,7 @@ ${GEM_LIBDIR}/test/test_params_protection.rb
 ${GEM_LIBDIR}/test/test_reloader_complex.rb
 ${GEM_LIBDIR}/test/test_reloader_external.rb
 ${GEM_LIBDIR}/test/test_reloader_simple.rb
+${GEM_LIBDIR}/test/test_reloader_storage.rb
 ${GEM_LIBDIR}/test/test_reloader_system.rb
 ${GEM_LIBDIR}/test/test_restful_routing.rb
 ${GEM_LIBDIR}/test/test_router.rb
