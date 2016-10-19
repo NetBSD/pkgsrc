@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/10/19 11:59:25 fhajny Exp $
 bin/geoiplookup
 bin/geoiplookup6
-bin/geoipupdate
 include/GeoIP.h
 include/GeoIPCity.h
-include/GeoIPUpdate.h
 lib/libGeoIP.la
-lib/libGeoIPUpdate.la
+lib/pkgconfig/geoip.pc
 man/man1/geoiplookup.1
 man/man1/geoiplookup6.1
-man/man1/geoipupdate.1
-share/GeoIP/GeoIP.dat
-share/examples/GeoIP/GeoIP.conf.default
