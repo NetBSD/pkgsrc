@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4347 2016/10/19 12:17:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4348 2016/10/19 12:24:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6067,3 +6067,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libcerf to 1.5 [wiz 2016-10-19]
 	Updated devel/py-protobuf to 3.1.0 [wiz 2016-10-19]
 	Updated graphics/jpegoptim to 1.4.4 [wiz 2016-10-19]
+	Updated devel/py-cparser to 2.15 [wiz 2016-10-19]
