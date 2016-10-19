@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.30 2014/10/09 14:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/10/19 11:59:25 fhajny Exp $
 
-DISTNAME=	GeoIP-1.4.8
+DISTNAME=	GeoIP-1.6.9
 CATEGORIES=	net
-MASTER_SITES=	http://geolite.maxmind.com/download/geoip/api/c/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.maxmind.com/app/c
-COMMENT=	Find the country from any IP address
-LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2 #  md5.c and types.h, from GNUPG
+COMMENT=	GeoIP Legacy C API
+LICENSE=	gnu-lgpl-v2.1
 
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+GITHUB_PROJECT=	geoip-api-c
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-EGDIR=		${PREFIX}/share/examples/GeoIP
-CONF_FILES=	${EGDIR}/GeoIP.conf.default ${PKG_SYSCONFDIR}/GeoIP.conf
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 
 TEST_TARGET=	check
 
