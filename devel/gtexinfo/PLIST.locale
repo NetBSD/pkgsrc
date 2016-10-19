@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST.locale,v 1.8 2016/02/13 07:02:07 ryoon Exp $
+@comment $NetBSD: PLIST.locale,v 1.9 2016/10/19 12:49:39 wiz Exp $
 share/locale/ca.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/ca/LC_MESSAGES/texinfo.mo
+share/locale/ca/LC_MESSAGES/texinfo_document.mo
 share/locale/cs/LC_MESSAGES/texinfo.mo
 share/locale/da/LC_MESSAGES/texinfo.mo
 share/locale/de.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/de/LC_MESSAGES/texinfo.mo
+share/locale/de/LC_MESSAGES/texinfo_document.mo
 share/locale/de_AT/LC_MESSAGES/texinfo.mo
+share/locale/el/LC_MESSAGES/texinfo.mo
+share/locale/el/LC_MESSAGES/texinfo_document.mo
 share/locale/eo/LC_MESSAGES/texinfo.mo
 share/locale/eo/LC_MESSAGES/texinfo_document.mo
 share/locale/es/LC_MESSAGES/texinfo.mo
@@ -14,6 +18,7 @@ share/locale/fr/LC_MESSAGES/texinfo.mo
 share/locale/fr/LC_MESSAGES/texinfo_document.mo
 share/locale/he/LC_MESSAGES/texinfo.mo
 share/locale/hr/LC_MESSAGES/texinfo.mo
+share/locale/hr/LC_MESSAGES/texinfo_document.mo
 share/locale/hu/LC_MESSAGES/texinfo.mo
 share/locale/hu/LC_MESSAGES/texinfo_document.mo
 share/locale/id/LC_MESSAGES/texinfo.mo
@@ -27,8 +32,10 @@ share/locale/no.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/pl/LC_MESSAGES/texinfo.mo
 share/locale/pl/LC_MESSAGES/texinfo_document.mo
 share/locale/pt.us-ascii/LC_MESSAGES/texinfo_document.mo
+share/locale/pt/LC_MESSAGES/texinfo_document.mo
 share/locale/pt_BR.us-ascii/LC_MESSAGES/texinfo_document.mo
 share/locale/pt_BR/LC_MESSAGES/texinfo.mo
+share/locale/pt_BR/LC_MESSAGES/texinfo_document.mo
 share/locale/ro/LC_MESSAGES/texinfo.mo
 share/locale/ru/LC_MESSAGES/texinfo.mo
 share/locale/rw/LC_MESSAGES/texinfo.mo
