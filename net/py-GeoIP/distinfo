@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:29 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/10/19 13:31:17 fhajny Exp $
 
-SHA1 (GeoIP-Python-1.2.7.tar.gz) = 0af5f5d06bc81b5427019d28ba029e8c31dec9eb
-RMD160 (GeoIP-Python-1.2.7.tar.gz) = 4abb50a70ce15e8305e786593ddd2de15efed129
-SHA512 (GeoIP-Python-1.2.7.tar.gz) = 9f6b37f781f1f1676394b472051790143cbff2a12770f2dfe1652238805cc1109259a2e3e80e376ec1165244b73f875f5dbd03db9c4f40869200e307fbd0a20c
-Size (GeoIP-Python-1.2.7.tar.gz) = 15938 bytes
+SHA1 (geoip-api-python-1.3.2.tar.gz) = caf93ed2dcd6ae43cc49691ea51d33ad2bcf7c0d
+RMD160 (geoip-api-python-1.3.2.tar.gz) = 622df285ec8d7270a5fe2f57774f5a387e944818
+SHA512 (geoip-api-python-1.3.2.tar.gz) = 284209a6894d55ef95844c5c4c7aafff99ebcb13996e5ff64a0c31b38677e13c11d51fd8b0250d0fa097f15805c27b572d5aa12c2b217a839afe3cdd0851c414
+Size (geoip-api-python-1.3.2.tar.gz) = 35674 bytes
