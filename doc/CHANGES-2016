@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4358 2016/10/19 12:51:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4359 2016/10/19 12:52:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6077,3 +6077,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added cross/arm-none-eabi-gcc version 6.2.0 [ryoon 2016-10-19]
 	Updated devel/gtexinfo to 6.3 [wiz 2016-10-19]
 	Updated www/http-parser to 2.7.1 [wiz 2016-10-19]
+	Updated devel/py-test-cov to 2.4.0 [wiz 2016-10-19]
