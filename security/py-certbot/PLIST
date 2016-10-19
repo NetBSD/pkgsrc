@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/06/15 20:03:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/10/19 13:45:54 wiz Exp $
 bin/certbot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -210,10 +210,6 @@ ${PYSITELIB}/certbot/tests/storage_test.pyo
 ${PYSITELIB}/certbot/tests/test_util.py
 ${PYSITELIB}/certbot/tests/test_util.pyc
 ${PYSITELIB}/certbot/tests/test_util.pyo
-${PYSITELIB}/certbot/tests/testdata/archive/sample-renewal/cert1.pem
-${PYSITELIB}/certbot/tests/testdata/archive/sample-renewal/chain1.pem
-${PYSITELIB}/certbot/tests/testdata/archive/sample-renewal/fullchain1.pem
-${PYSITELIB}/certbot/tests/testdata/archive/sample-renewal/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/cert-5sans.pem
 ${PYSITELIB}/certbot/tests/testdata/cert-san.pem
 ${PYSITELIB}/certbot/tests/testdata/cert.b64jose
@@ -229,15 +225,15 @@ ${PYSITELIB}/certbot/tests/testdata/csr.der
 ${PYSITELIB}/certbot/tests/testdata/csr.pem
 ${PYSITELIB}/certbot/tests/testdata/dsa512_key.pem
 ${PYSITELIB}/certbot/tests/testdata/dsa_cert.pem
-${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/cert.pem
-${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/chain.pem
-${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/fullchain.pem
-${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/privkey.pem
 ${PYSITELIB}/certbot/tests/testdata/matching_cert.pem
 ${PYSITELIB}/certbot/tests/testdata/os-release
 ${PYSITELIB}/certbot/tests/testdata/rsa256_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key_2.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive/cert1.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive/chain1.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive/fullchain1.pem
+${PYSITELIB}/certbot/tests/testdata/sample-archive/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ancient.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal.conf
 ${PYSITELIB}/certbot/tests/testdata/webrootconftest.ini
