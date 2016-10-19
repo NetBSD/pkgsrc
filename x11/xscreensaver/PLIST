@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2016/06/06 12:41:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2016/10/19 20:10:20 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -83,7 +83,9 @@ libexec/xscreensaver/config/crackberg.xml
 libexec/xscreensaver/config/crystal.xml
 libexec/xscreensaver/config/cube21.xml
 libexec/xscreensaver/config/cubenetic.xml
+libexec/xscreensaver/config/cubestack.xml
 libexec/xscreensaver/config/cubestorm.xml
+libexec/xscreensaver/config/cubetwist.xml
 libexec/xscreensaver/config/cubicgrid.xml
 libexec/xscreensaver/config/cwaves.xml
 libexec/xscreensaver/config/cynosure.xml
@@ -92,6 +94,7 @@ libexec/xscreensaver/config/decayscreen.xml
 libexec/xscreensaver/config/deco.xml
 libexec/xscreensaver/config/deluxe.xml
 libexec/xscreensaver/config/demon.xml
+libexec/xscreensaver/config/discoball.xml
 libexec/xscreensaver/config/discrete.xml
 libexec/xscreensaver/config/distort.xml
 libexec/xscreensaver/config/drift.xml
@@ -139,6 +142,7 @@ libexec/xscreensaver/config/halftone.xml
 libexec/xscreensaver/config/halo.xml
 libexec/xscreensaver/config/helix.xml
 libexec/xscreensaver/config/hexadrop.xml
+libexec/xscreensaver/config/hexstrut.xml
 libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hopalong.xml
 libexec/xscreensaver/config/hydrostat.xml
@@ -221,6 +225,7 @@ libexec/xscreensaver/config/sonar.xml
 libexec/xscreensaver/config/speedmine.xml
 libexec/xscreensaver/config/spheremonics.xml
 libexec/xscreensaver/config/splitflap.xml
+libexec/xscreensaver/config/splodesic.xml
 libexec/xscreensaver/config/spotlight.xml
 libexec/xscreensaver/config/sproingies.xml
 libexec/xscreensaver/config/squiral.xml
@@ -264,7 +269,9 @@ libexec/xscreensaver/crackberg
 libexec/xscreensaver/crystal
 libexec/xscreensaver/cube21
 libexec/xscreensaver/cubenetic
+libexec/xscreensaver/cubestack
 libexec/xscreensaver/cubestorm
+libexec/xscreensaver/cubetwist
 libexec/xscreensaver/cubicgrid
 libexec/xscreensaver/cwaves
 libexec/xscreensaver/cynosure
@@ -273,6 +280,7 @@ libexec/xscreensaver/decayscreen
 libexec/xscreensaver/deco
 libexec/xscreensaver/deluxe
 libexec/xscreensaver/demon
+libexec/xscreensaver/discoball
 libexec/xscreensaver/discrete
 libexec/xscreensaver/distort
 libexec/xscreensaver/drift
@@ -320,6 +328,7 @@ libexec/xscreensaver/halftone
 libexec/xscreensaver/halo
 libexec/xscreensaver/helix
 libexec/xscreensaver/hexadrop
+libexec/xscreensaver/hexstrut
 libexec/xscreensaver/hilbert
 libexec/xscreensaver/hopalong
 libexec/xscreensaver/hydrostat
@@ -403,6 +412,7 @@ libexec/xscreensaver/sonar
 libexec/xscreensaver/speedmine
 libexec/xscreensaver/spheremonics
 libexec/xscreensaver/splitflap
+libexec/xscreensaver/splodesic
 libexec/xscreensaver/spotlight
 libexec/xscreensaver/sproingies
 libexec/xscreensaver/squiral
@@ -487,7 +497,9 @@ man/man6/crackberg.6
 man/man6/crystal.6
 man/man6/cube21.6
 man/man6/cubenetic.6
+man/man6/cubestack.6
 man/man6/cubestorm.6
+man/man6/cubetwist.6
 man/man6/cubicgrid.6
 man/man6/cwaves.6
 man/man6/cynosure.6
@@ -496,6 +508,7 @@ man/man6/decayscreen.6
 man/man6/deco.6
 man/man6/deluxe.6
 man/man6/demon.6
+man/man6/discoball.6
 man/man6/discrete.6
 man/man6/distort.6
 man/man6/drift.6
@@ -543,6 +556,7 @@ man/man6/halftone.6
 man/man6/halo.6
 man/man6/helix.6
 man/man6/hexadrop.6
+man/man6/hexstrut.6
 man/man6/hilbert.6
 man/man6/hopalong.6
 man/man6/hydrostat.6
@@ -624,6 +638,7 @@ man/man6/sonar.6
 man/man6/speedmine.6
 man/man6/spheremonics.6
 man/man6/splitflap.6
+man/man6/splodesic.6
 man/man6/spotlight.6
 man/man6/sproingies.6
 man/man6/squiral.6
