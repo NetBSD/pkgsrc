@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/09/06 13:57:02 maya Exp $
+# $NetBSD: Makefile,v 1.33 2016/10/19 21:09:40 sevan Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -95,6 +95,14 @@ CONFIGURE_ARGS.Linux+=	--disable-libquadmath --disable-libquadmath-support
 # let strip(1) be a no-op regardless of ${INSTALL_UNSTRIPPED} or the
 # build fails for missing files.
 CONFIGURE_ARGS.Darwin+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+CONFIGURE_ARGS+=        --with-dwarf2
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
+CONFIGURE_ARGS+=        --disable-multilib
+.endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
