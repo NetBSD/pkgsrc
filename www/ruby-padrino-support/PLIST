@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/15 16:41:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/10/19 14:45:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -8,8 +8,9 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/padrino-support.rb
 ${GEM_LIBDIR}/lib/padrino-support/core_ext/object_space.rb
 ${GEM_LIBDIR}/lib/padrino-support/core_ext/string/colorize.rb
-${GEM_LIBDIR}/lib/padrino-support/core_ext/string/inflections.rb
+${GEM_LIBDIR}/lib/padrino-support/default_inflections.rb
 ${GEM_LIBDIR}/lib/padrino-support/file_set.rb
+${GEM_LIBDIR}/lib/padrino-support/inflections.rb
 ${GEM_LIBDIR}/lib/padrino-support/locale/cs.yml
 ${GEM_LIBDIR}/lib/padrino-support/locale/da.yml
 ${GEM_LIBDIR}/lib/padrino-support/locale/de.yml
@@ -35,6 +36,5 @@ ${GEM_LIBDIR}/lib/padrino-support/utils.rb
 ${GEM_LIBDIR}/padrino-support.gemspec
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_colorize.rb
-${GEM_LIBDIR}/test/test_support_lite.rb
 ${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

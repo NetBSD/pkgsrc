@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/13 15:52:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/10/19 14:45:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -18,6 +18,8 @@ ${GEM_LIBDIR}/test/fixtures/padrino_app/app.rb
 ${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/demo/sample_mail.erb
 ${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/sample/anniversary.erb
 ${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/sample/birthday.erb
+${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/sample/default_mailer_email_name.erb
+${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/sample/default_mailer_name.erb
 ${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/sample/foo_message.erb
 ${GEM_LIBDIR}/test/fixtures/padrino_app/views/mailers/sample/helper_message.erb
 ${GEM_LIBDIR}/test/fixtures/sinatra_app/app.rb
