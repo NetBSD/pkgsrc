@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16588 2016/10/18 21:38:15 wiz Exp $
+$NetBSD: TODO,v 1.16589 2016/10/19 10:58:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1627,7 +1627,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-0.2.8.9
 	o tor-browser-6.0.5
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
