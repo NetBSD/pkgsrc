@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2016/10/19 12:48:25 ryoon Exp $
+
+SHA1 (gcc-6.2.0.tar.gz) = 59cdef2be1b8b76d9e4f23858fe4179b1e9147c7
+RMD160 (gcc-6.2.0.tar.gz) = a303fd437e6c63f8b9d9328e748640b4e29f60aa
+SHA512 (gcc-6.2.0.tar.gz) = 7638bd1edbfa6b546fb186953c700ec2bdcbd0045ee1fcb4c7eb61e0b6408aff9f25b3263bbbd96851d1c26e0b981def50e01ade9c4a281c4f78180f5cf2692f
+Size (gcc-6.2.0.tar.gz) = 128569126 bytes
+SHA1 (newlib-2.4.0.tar.gz) = f2142827d7b593676b91a530e2547e31262e14e7
+RMD160 (newlib-2.4.0.tar.gz) = e7a98a00aca89aad0ee2e2b98993fd8e643d98ce
+SHA512 (newlib-2.4.0.tar.gz) = c60665e793dce2368a5baf23560beb50f641e1831854d702d1d7629fb6e9200cf814527f29796792a3d2dff81afee4255723df99ceb0732f99dd9580a17d2ac0
+Size (newlib-2.4.0.tar.gz) = 17574364 bytes
+SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
+SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
+SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-libiberty_Makefile.in) = 7ea2578b5b77cb4adcd4afe3d63739efc68a1540
