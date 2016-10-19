@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4380 2016/10/19 20:11:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4381 2016/10/19 22:51:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6106,3 +6106,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/libmicrohttpd to 0.9.52 [wiz 2016-10-19]
 	Updated x11/xscreensaver to 5.36 [wiz 2016-10-19]
 	Updated x11/xscreensaver-demo to 5.36 [wiz 2016-10-19]
+	Updated www/p5-WWW-Curl to 4.17nb4 [wiz 2016-10-19]
