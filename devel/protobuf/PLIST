@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/06 11:40:14 kamil Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/19 12:13:00 wiz Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -20,6 +20,7 @@ include/google/protobuf/compiler/js/js_generator.h
 include/google/protobuf/compiler/objectivec/objectivec_generator.h
 include/google/protobuf/compiler/objectivec/objectivec_helpers.h
 include/google/protobuf/compiler/parser.h
+include/google/protobuf/compiler/php/php_generator.h
 include/google/protobuf/compiler/plugin.h
 include/google/protobuf/compiler/plugin.pb.h
 include/google/protobuf/compiler/plugin.proto
@@ -41,6 +42,7 @@ include/google/protobuf/generated_enum_reflection.h
 include/google/protobuf/generated_enum_util.h
 include/google/protobuf/generated_message_reflection.h
 include/google/protobuf/generated_message_util.h
+include/google/protobuf/has_bits.h
 include/google/protobuf/io/coded_stream.h
 include/google/protobuf/io/gzip_stream.h
 include/google/protobuf/io/printer.h

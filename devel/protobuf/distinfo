@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2016/10/04 23:16:44 maya Exp $
+$NetBSD: distinfo,v 1.11 2016/10/19 12:13:00 wiz Exp $
 
-SHA1 (protobuf-cpp-3.0.0.tar.gz) = 00140d255922bf33ef3842168954e3269fbba3af
-RMD160 (protobuf-cpp-3.0.0.tar.gz) = 01a00093e0f7297b3fb7933ef5700d2753109c95
-SHA512 (protobuf-cpp-3.0.0.tar.gz) = 72491ab54244b82f69f39bc485336d986d7238cdf62b48c6e02e53412f348f5cc0756a7249f45c32e7ddb37aaa1e1864244543d1414d6ce7dc03be00ef5f27ab
-Size (protobuf-cpp-3.0.0.tar.gz) = 4075839 bytes
+SHA1 (protobuf-cpp-3.1.0.tar.gz) = b7b7275405ac18784965b02bea7d62f836873564
+RMD160 (protobuf-cpp-3.1.0.tar.gz) = a7be4888dd97e899364c3264875a988bac349acf
+SHA512 (protobuf-cpp-3.1.0.tar.gz) = 9f85a98e55cbc9f245a3079d5a597f778454bc945f0942cb10fbdfbde5fe12b17d6dda93d6a8d5281459ad30a3840be7e0712feb33a824226884e7e4da54a061
+Size (protobuf-cpp-3.1.0.tar.gz) = 4109863 bytes
 SHA1 (patch-gmock_configure) = 49a4c9301ad4c1973ee7058213df50a7833161f0
 SHA1 (patch-gmock_configure.ac) = cfd7b7c87eff4b06ce6ecb34dec046561bbdc113
 SHA1 (patch-src_google_protobuf_stubs_atomicops.h) = 9ec851134da674980a49302e9582a432a47f7974
