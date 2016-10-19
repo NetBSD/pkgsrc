@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 08:00:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/19 19:28:36 wiz Exp $
 
-DISTNAME=	util-linux-2.28
+DISTNAME=	util-linux-2.28.2
 PKGNAME=	${DISTNAME:S/util-linux/mcookie/}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV}/

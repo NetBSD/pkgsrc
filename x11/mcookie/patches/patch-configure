@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2016/09/20 08:00:51 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2016/10/19 19:28:36 wiz Exp $
 
 Fix unportable test(1) operator.
 
---- configure.orig	2016-04-12 10:34:01.000000000 +0000
+--- configure.orig	2016-09-07 11:36:20.036305071 +0000
 +++ configure
-@@ -20780,7 +20780,7 @@ else
+@@ -21297,7 +21297,7 @@ else
  fi
  
  
@@ -13,7 +13,16 @@ Fix unportable test(1) operator.
  
  
  $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
-@@ -28664,7 +28664,7 @@ else
+@@ -22193,7 +22193,7 @@ $as_echo "$as_me: WARNING: sys/signalfd.
+     esac
+   fi
+ 
+-if test "x$build_uuidd" = xyes || test "x$enable_libuuid_force_uuidd" == xyes ; then :
++if test "x$build_uuidd" = xyes || test "x$enable_libuuid_force_uuidd" = xyes ; then :
+ 
+ 
+ $as_echo "#define HAVE_UUIDD 1" >>confdefs.h
+@@ -29181,7 +29181,7 @@ else
  fi
  
  
