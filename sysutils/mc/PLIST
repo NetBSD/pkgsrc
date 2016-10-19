@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/04/13 18:34:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/10/19 13:33:25 wiz Exp $
 bin/mc
 bin/mcdiff
 bin/mcedit
@@ -152,6 +152,7 @@ share/mc/help/mc.hlp.pl
 share/mc/help/mc.hlp.ru
 share/mc/help/mc.hlp.sr
 share/mc/hints/mc.hint
+share/mc/hints/mc.hint.af
 share/mc/hints/mc.hint.ar
 share/mc/hints/mc.hint.az
 share/mc/hints/mc.hint.be
@@ -198,6 +199,7 @@ share/mc/hints/mc.hint.szl
 share/mc/hints/mc.hint.te
 share/mc/hints/mc.hint.tr
 share/mc/hints/mc.hint.uk
+share/mc/hints/mc.hint.uz
 share/mc/hints/mc.hint.zh
 share/mc/hints/mc.hint.zh_CN
 share/mc/mc.charsets
@@ -235,6 +237,7 @@ share/mc/syntax/changelog.syntax
 share/mc/syntax/cmake.syntax
 share/mc/syntax/cs.syntax
 share/mc/syntax/css.syntax
+share/mc/syntax/cuda.syntax
 share/mc/syntax/cxx.syntax
 share/mc/syntax/cython.syntax
 share/mc/syntax/d.syntax
@@ -251,6 +254,7 @@ share/mc/syntax/erlang.syntax
 share/mc/syntax/f90.syntax
 share/mc/syntax/filehighlight.syntax
 share/mc/syntax/fortran.syntax
+share/mc/syntax/glsl.syntax
 share/mc/syntax/go.syntax
 share/mc/syntax/haskell.syntax
 share/mc/syntax/html.syntax
