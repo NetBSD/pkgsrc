@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 06:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/19 12:14:08 wiz Exp $
 
-DISTNAME=	libcerf-1.4
-PKGREVISION=	1
+DISTNAME=	libcerf-1.5
 CATEGORIES=	math
 MASTER_SITES=	http://apps.jcns.fz-juelich.de/src/libcerf/
 EXTRACT_SUFX=	.tgz
