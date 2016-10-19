@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/12/13 15:52:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/10/19 14:45:26 taca Exp $
 bin/padrino-gen${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -10,6 +10,7 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/padrino-gen
 ${GEM_LIBDIR}/lib/padrino-gen.rb
 ${GEM_LIBDIR}/lib/padrino-gen/command.rb
+${GEM_LIBDIR}/lib/padrino-gen/core_ext/string.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/actions.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/app.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/app/app.rb.tt
@@ -38,7 +39,6 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/scripts/extcore.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/scripts/jquery.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/scripts/mootools.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/scripts/prototype.rb
-${GEM_LIBDIR}/lib/padrino-gen/generators/components/scripts/rightjs.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/stylesheets/compass.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/stylesheets/compass/application.scss
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/stylesheets/compass/partials/_base.scss
@@ -48,10 +48,8 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/stylesheets/scss.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/bacon.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/cucumber.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/minitest.rb
-${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/riot.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/rspec.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/shoulda.rb
-${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/steak.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/testunit.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/controller.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/helper.rb
