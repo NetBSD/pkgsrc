@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.17 2016/07/09 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/10/19 13:31:17 fhajny Exp $
 
-DISTNAME=	GeoIP-Python-1.2.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Python-//}
+DISTNAME=	geoip-api-python-1.3.2
+PKGNAME=	${PYPKGPREFIX}-GeoIP-${DISTNAME:S/geoip-api-python-//}
 CATEGORIES=	net python geography
-MASTER_SITES=	http://geolite.maxmind.com/download/geoip/api/python/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=maxmind/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://www.maxmind.com/app/python
-COMMENT=	GeoIP support for Python
+HOMEPAGE=	https://github.com/maxmind/geoip-api-python/
+COMMENT=	GeoIP Legacy Python API
 LICENSE=	gnu-lgpl-v2.1
+
+GITHUB_PROJECT=	geoip-api-python
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.2.7
 
-.include "../../lang/python/distutils.mk"
+EGG_NAME=	GeoIP-${PKGVERSION_NOREV}
+
+.include "../../lang/python/egg.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
