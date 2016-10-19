@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/10/19 11:59:25 fhajny Exp $
+
+To use this library, you may download the free GeoLite Legacy
+Country or City databases. These are updated at the beginning
+of every month. The latest versions are available at:
+
+http://dev.maxmind.com/geoip/legacy/geolite
+
+===========================================================================
