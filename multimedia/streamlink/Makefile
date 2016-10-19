@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/10/18 16:39:43 maya Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/19 09:07:25 maya Exp $
 
 DISTNAME=	streamlink-0.0.2
 CATEGORIES=	multimedia
@@ -6,7 +6,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=streamlink/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	maya@NetBSD.org
-HOMEPAGE=	http://streamlink.tanuki.se/
+HOMEPAGE=	https://streamlink.github.io/
 COMMENT=	Tool that pipes video streams into a video player
 LICENSE=	2-clause-bsd
 
