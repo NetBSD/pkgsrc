@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/08/25 18:30:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/10/19 12:51:17 wiz Exp $
 
-DISTNAME=	http-parser-2.7.0
-PKGREVISION=	1
+DISTNAME=	http-parser-2.7.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nodejs/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
