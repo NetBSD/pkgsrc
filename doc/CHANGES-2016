@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4344 2016/10/19 12:13:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4345 2016/10/19 12:14:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6064,3 +6064,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/GeoIP to 1.6.9 [fhajny 2016-10-19]
 	Updated misc/calibre to 2.70.0 [wiz 2016-10-19]
 	Updated devel/protobuf to 3.1.0 [wiz 2016-10-19]
+	Updated devel/libcerf to 1.5 [wiz 2016-10-19]
