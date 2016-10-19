@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/08/06 11:45:24 kamil Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/19 12:16:34 wiz Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
@@ -11,7 +11,7 @@ COMMENT=	Python bindings for protobuf
 
 PYSETUPSUBDIR=	python
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gflags
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gflags-[0-9]*:../../devel/py-gflags
 BUILD_DEPENDS+=	${PYPKGPREFIX}-google-apputils-[0-9]*:../../devel/py-google-apputils
