@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/10/15 15:27:01 taca Exp $
+$NetBSD: distinfo,v 1.12 2016/10/20 15:01:41 taca Exp $
 
-SHA1 (ohai-8.20.0.gem) = f161cb5d1b92c9afd436bc1d4f18e16cac002ecb
-RMD160 (ohai-8.20.0.gem) = 5c90764495a898c18dbbb87de1c510de50bf4d78
-SHA512 (ohai-8.20.0.gem) = 9d6a6cf46cdc7894887ad5002db6df7412e56650fcbecaa5204f1792a048de94c732c044463485abe1614995f97b24fc2a0fe5200bcffc08c8a171c2a5de6699
-Size (ohai-8.20.0.gem) = 509952 bytes
+SHA1 (ohai-8.21.0.gem) = 2d8154efaccac9ffc9edb4dc0a28796463ccc67b
+RMD160 (ohai-8.21.0.gem) = 8c1f87f00637bbe73ed3ca2f3d4eeb0b9a69cd86
+SHA512 (ohai-8.21.0.gem) = 84b8da5648570101921f93480bc67a12d0b781ecd07a00a711933e6049d644d5dc5f2333af0dd60e9135594f21ebfe8c1903a4aac0503c30bec19479713b89cc
+Size (ohai-8.21.0.gem) = 512512 bytes
