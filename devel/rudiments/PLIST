@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.18 2016/07/01 16:02:12 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/10/20 14:39:51 fhajny Exp $
 bin/rudiments-config
 include/rudiments/bytebuffer.h
 include/rudiments/bytestring.h
 include/rudiments/character.h
 include/rudiments/charstring.h
-include/rudiments/chat.h
 include/rudiments/client.h
 include/rudiments/codetree.h
 include/rudiments/commandline.h
@@ -41,8 +40,6 @@ include/rudiments/private/bytestringincludes.h
 include/rudiments/private/characterincludes.h
 include/rudiments/private/charstring.h
 include/rudiments/private/charstringincludes.h
-include/rudiments/private/chat.h
-include/rudiments/private/chatincludes.h
 include/rudiments/private/client.h
 include/rudiments/private/clientincludes.h
 include/rudiments/private/codetree.h
@@ -118,6 +115,8 @@ include/rudiments/private/permissions.h
 include/rudiments/private/permissionsincludes.h
 include/rudiments/private/process.h
 include/rudiments/private/processincludes.h
+include/rudiments/private/prompt.h
+include/rudiments/private/promptincludes.h
 include/rudiments/private/protocolentry.h
 include/rudiments/private/protocolentryincludes.h
 include/rudiments/private/randomnumber.h
@@ -131,6 +130,8 @@ include/rudiments/private/server.h
 include/rudiments/private/serverincludes.h
 include/rudiments/private/serviceentry.h
 include/rudiments/private/serviceentryincludes.h
+include/rudiments/private/sha1.h
+include/rudiments/private/sha1includes.h
 include/rudiments/private/sharedmemory.h
 include/rudiments/private/sharedmemoryincludes.h
 include/rudiments/private/signalclassesincludes.h
@@ -183,6 +184,7 @@ include/rudiments/private/xmldomnodeincludes.h
 include/rudiments/private/xmlsax.h
 include/rudiments/private/xmlsaxincludes.h
 include/rudiments/process.h
+include/rudiments/prompt.h
 include/rudiments/protocolentry.h
 include/rudiments/randomnumber.h
 include/rudiments/regularexpression.h
@@ -191,6 +193,7 @@ include/rudiments/security.h
 include/rudiments/semaphoreset.h
 include/rudiments/server.h
 include/rudiments/serviceentry.h
+include/rudiments/sha1.h
 include/rudiments/sharedmemory.h
 include/rudiments/signalclasses.h
 include/rudiments/singlylinkedlist.h
@@ -335,6 +338,8 @@ share/doc/rudiments/classes/html/classpermissions-members.html
 share/doc/rudiments/classes/html/classpermissions.html
 share/doc/rudiments/classes/html/classprocess-members.html
 share/doc/rudiments/classes/html/classprocess.html
+share/doc/rudiments/classes/html/classprompt-members.html
+share/doc/rudiments/classes/html/classprompt.html
 share/doc/rudiments/classes/html/classprotocolentry-members.html
 share/doc/rudiments/classes/html/classprotocolentry.html
 share/doc/rudiments/classes/html/classrandomnumber-members.html
@@ -353,6 +358,8 @@ share/doc/rudiments/classes/html/classserver-members.html
 share/doc/rudiments/classes/html/classserver.html
 share/doc/rudiments/classes/html/classserviceentry-members.html
 share/doc/rudiments/classes/html/classserviceentry.html
+share/doc/rudiments/classes/html/classsha1-members.html
+share/doc/rudiments/classes/html/classsha1.html
 share/doc/rudiments/classes/html/classsharedmemory-members.html
 share/doc/rudiments/classes/html/classsharedmemory.html
 share/doc/rudiments/classes/html/classsignalhandler-members.html
@@ -428,6 +435,7 @@ share/doc/rudiments/classes/html/config__openvms721_8h_source.html
 share/doc/rudiments/classes/html/config__vs2005_8h_source.html
 share/doc/rudiments/classes/html/config__vs2010_8h_source.html
 share/doc/rudiments/classes/html/config__vs2013_8h_source.html
+share/doc/rudiments/classes/html/config__vs2015_8h_source.html
 share/doc/rudiments/classes/html/config__vs5_8h_source.html
 share/doc/rudiments/classes/html/config__vs6_8h_source.html
 share/doc/rudiments/classes/html/crypt_8h_source.html
@@ -470,12 +478,14 @@ share/doc/rudiments/classes/html/filesystemincludes_8h_source.html
 share/doc/rudiments/classes/html/folderclosed.png
 share/doc/rudiments/classes/html/folderopen.png
 share/doc/rudiments/classes/html/functions.html
+share/doc/rudiments/classes/html/functions_0x7e.html
 share/doc/rudiments/classes/html/functions_b.html
 share/doc/rudiments/classes/html/functions_c.html
 share/doc/rudiments/classes/html/functions_d.html
 share/doc/rudiments/classes/html/functions_e.html
 share/doc/rudiments/classes/html/functions_f.html
 share/doc/rudiments/classes/html/functions_func.html
+share/doc/rudiments/classes/html/functions_func_0x7e.html
 share/doc/rudiments/classes/html/functions_func_b.html
 share/doc/rudiments/classes/html/functions_func_c.html
 share/doc/rudiments/classes/html/functions_func_d.html
@@ -500,7 +510,6 @@ share/doc/rudiments/classes/html/functions_func_v.html
 share/doc/rudiments/classes/html/functions_func_w.html
 share/doc/rudiments/classes/html/functions_func_x.html
 share/doc/rudiments/classes/html/functions_func_z.html
-share/doc/rudiments/classes/html/functions_func_~.html
 share/doc/rudiments/classes/html/functions_g.html
 share/doc/rudiments/classes/html/functions_h.html
 share/doc/rudiments/classes/html/functions_i.html
@@ -521,7 +530,6 @@ share/doc/rudiments/classes/html/functions_vars.html
 share/doc/rudiments/classes/html/functions_w.html
 share/doc/rudiments/classes/html/functions_x.html
 share/doc/rudiments/classes/html/functions_z.html
-share/doc/rudiments/classes/html/functions_~.html
 share/doc/rudiments/classes/html/groupentry_8h_source.html
 share/doc/rudiments/classes/html/groupentryincludes_8h_source.html
 share/doc/rudiments/classes/html/gss_8h_source.html
@@ -607,6 +615,7 @@ share/doc/rudiments/classes/html/private_2modemserver_8h_source.html
 share/doc/rudiments/classes/html/private_2parameterstring_8h_source.html
 share/doc/rudiments/classes/html/private_2permissions_8h_source.html
 share/doc/rudiments/classes/html/private_2process_8h_source.html
+share/doc/rudiments/classes/html/private_2prompt_8h_source.html
 share/doc/rudiments/classes/html/private_2protocolentry_8h_source.html
 share/doc/rudiments/classes/html/private_2randomnumber_8h_source.html
 share/doc/rudiments/classes/html/private_2regularexpression_8h_source.html
@@ -615,6 +624,7 @@ share/doc/rudiments/classes/html/private_2serialport_8h_source.html
 share/doc/rudiments/classes/html/private_2serialportprofile_8h_source.html
 share/doc/rudiments/classes/html/private_2server_8h_source.html
 share/doc/rudiments/classes/html/private_2serviceentry_8h_source.html
+share/doc/rudiments/classes/html/private_2sha1_8h_source.html
 share/doc/rudiments/classes/html/private_2sharedmemory_8h_source.html
 share/doc/rudiments/classes/html/private_2singlylinkedlist_8h_source.html
 share/doc/rudiments/classes/html/private_2snooze_8h_source.html
@@ -637,6 +647,8 @@ share/doc/rudiments/classes/html/private_2xmldomnode_8h_source.html
 share/doc/rudiments/classes/html/private_2xmlsax_8h_source.html
 share/doc/rudiments/classes/html/process_8h_source.html
 share/doc/rudiments/classes/html/processincludes_8h_source.html
+share/doc/rudiments/classes/html/prompt_8h_source.html
+share/doc/rudiments/classes/html/promptincludes_8h_source.html
 share/doc/rudiments/classes/html/protocolentry_8h_source.html
 share/doc/rudiments/classes/html/protocolentryincludes_8h_source.html
 share/doc/rudiments/classes/html/randomnumber_8h_source.html
@@ -656,6 +668,8 @@ share/doc/rudiments/classes/html/server_8h_source.html
 share/doc/rudiments/classes/html/serverincludes_8h_source.html
 share/doc/rudiments/classes/html/serviceentry_8h_source.html
 share/doc/rudiments/classes/html/serviceentryincludes_8h_source.html
+share/doc/rudiments/classes/html/sha1_8h_source.html
+share/doc/rudiments/classes/html/sha1includes_8h_source.html
 share/doc/rudiments/classes/html/sharedmemory_8h_source.html
 share/doc/rudiments/classes/html/sharedmemoryincludes_8h_source.html
 share/doc/rudiments/classes/html/signalclasses_8h_source.html
@@ -764,6 +778,7 @@ share/doc/rudiments/programming/modemserver.html
 share/doc/rudiments/programming/parameterstring.html
 share/doc/rudiments/programming/permissions.html
 share/doc/rudiments/programming/process.html
+share/doc/rudiments/programming/prompt.html
 share/doc/rudiments/programming/protocolentry.html
 share/doc/rudiments/programming/randomnumber.html
 share/doc/rudiments/programming/regularexpression.html
@@ -786,5 +801,6 @@ share/doc/rudiments/programming/unixsocketserver.html
 share/doc/rudiments/programming/url.html
 share/doc/rudiments/programming/userentry.html
 share/doc/rudiments/programming/xmldom.html
+share/doc/rudiments/programming/xmldomevents.html
 share/doc/rudiments/programming/xmlsax.html
 share/licenses/rudiments/COPYING
