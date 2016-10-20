@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.29 2014/01/08 20:25:34 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.30 2016/10/20 21:22:18 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2010 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -41,7 +41,11 @@
 #include <sys/socket.h>
 #include <sys/time.h>
 #include <sys/uio.h>
-
+#if HAVE_POLL_H
+#include <poll.h>
+#elif HAVE_SYS_POLL_H
+#include <sys/poll.h>
+#endif
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
@@ -492,6 +496,16 @@ fetch_ssl(conn_t *conn, const struct url *URL, int verbose)
 #endif
 }
 
+static int
+compute_timeout(const struct timeval *tv)
+{
+	struct timeval cur;
+	int timeout;
+
+	gettimeofday(&cur, NULL);
+	timeout = (tv->tv_sec - cur.tv_sec) * 1000 + (tv->tv_usec - cur.tv_usec) / 1000;
+	return timeout;
+}
 
 /*
  * Read a character from a connection w/ timeout
@@ -499,8 +513,9 @@ fetch_ssl(conn_t *conn, const struct url *URL, int verbose)
 ssize_t
 fetch_read(conn_t *conn, char *buf, size_t len)
 {
-	struct timeval now, timeout, waittv;
-	fd_set readfds;
+	struct timeval timeout_end;
+	struct pollfd pfd;
+	int timeout_cur;
 	ssize_t rlen;
 	int r;
 
@@ -517,34 +532,30 @@ fetch_read(conn_t *conn, char *buf, size_t len)
 	}
 
 	if (fetchTimeout) {
-		FD_ZERO(&readfds);
-		gettimeofday(&timeout, NULL);
-		timeout.tv_sec += fetchTimeout;
+		gettimeofday(&timeout_end, NULL);
+		timeout_end.tv_sec += fetchTimeout;
 	}
 
+	pfd.fd = conn->sd;
+	pfd.events = POLLIN;
 	for (;;) {
-		while (fetchTimeout && !FD_ISSET(conn->sd, &readfds)) {
-			FD_SET(conn->sd, &readfds);
-			gettimeofday(&now, NULL);
-			waittv.tv_sec = timeout.tv_sec - now.tv_sec;
-			waittv.tv_usec = timeout.tv_usec - now.tv_usec;
-			if (waittv.tv_usec < 0) {
-				waittv.tv_usec += 1000000;
-				waittv.tv_sec--;
-			}
-			if (waittv.tv_sec < 0) {
-				errno = ETIMEDOUT;
-				fetch_syserr();
-				return (-1);
-			}
-			errno = 0;
-			r = select(conn->sd + 1, &readfds, NULL, NULL, &waittv);
-			if (r == -1) {
-				if (errno == EINTR && fetchRestartCalls)
-					continue;
-				fetch_syserr();
-				return (-1);
-			}
+		if (fetchTimeout) {
+			do {
+				timeout_cur = compute_timeout(&timeout_end);
+				if (timeout_cur < 0) {
+					errno = ETIMEDOUT;
+					fetch_syserr();
+					return (-1);
+				}
+				errno = 0;
+				r = poll(&pfd, 1, timeout_cur);
+				if (r == -1) {
+					if (errno == EINTR && fetchRestartCalls)
+						continue;
+					fetch_syserr();
+					return (-1);
+				}
+			} while (pfd.revents == 0);
 		}
 #ifdef WITH_SSL
 		if (conn->ssl != NULL)
