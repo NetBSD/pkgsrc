@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.38 2016/02/08 13:27:42 jperkin Exp $	*/
+/*	$NetBSD: http.c,v 1.39 2016/10/20 21:21:25 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -719,7 +719,7 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 	int val;
 #endif
 
-	*cached = 1;
+	*cached = 0;
 
 #ifdef INET6
 	af = AF_UNSPEC;
