@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/10/04 12:02:27 taca Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/20 14:32:30 taca Exp $
 
-DISTNAME=	celluloid-supervision-0.20.5
+DISTNAME=	celluloid-supervision-0.20.6
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
