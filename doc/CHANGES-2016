@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4393 2016/10/20 14:43:56 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4394 2016/10/20 14:56:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6128,3 +6128,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-mocha to 1.2.1 [taca 2016-10-20]
 	Updated devel/ruby-msgpack to 1.0.2 [taca 2016-10-20]
 	Updated devel/ruby-parser to 3.8.3 [taca 2016-10-20]
+	Updated sysutils/ruby-listen to 3.1.5 [taca 2016-10-20]
