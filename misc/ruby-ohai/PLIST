@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/15 15:27:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/10/20 15:01:41 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -129,6 +129,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/root_group.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ruby.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/rust.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/scala.rb
+${GEM_LIBDIR}/lib/ohai/plugins/shard.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/shells.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/sigar/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/sigar/filesystem.rb
@@ -199,6 +200,7 @@ ${GEM_LIBDIR}/spec/functional/application_spec.rb
 ${GEM_LIBDIR}/spec/functional/loader_spec.rb
 ${GEM_LIBDIR}/spec/functional/plugins/powershell_spec.rb
 ${GEM_LIBDIR}/spec/functional/plugins/root_group_spec.rb
+${GEM_LIBDIR}/spec/functional/plugins/windows/uptime_spec.rb
 ${GEM_LIBDIR}/spec/ohai_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/spec.opts
@@ -310,6 +312,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/root_group_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/ruby_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/rust_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/scala_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/shard_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/shells_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/sigar/network_route_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/softlayer_spec.rb
@@ -330,6 +333,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/vmware_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/cpu_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/fips_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/memory_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/windows/uptime_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/windows/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/provides_map_spec.rb
 ${GEM_LIBDIR}/spec/unit/runner_spec.rb
