@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4395 2016/10/20 15:02:07 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4396 2016/10/20 15:05:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6130,3 +6130,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-parser to 3.8.3 [taca 2016-10-20]
 	Updated sysutils/ruby-listen to 3.1.5 [taca 2016-10-20]
 	Updated misc/ruby-ohai to 8.21.0 [taca 2016-10-20]
+	Updated net/ruby-twitter-text to 1.14.0 [taca 2016-10-20]
