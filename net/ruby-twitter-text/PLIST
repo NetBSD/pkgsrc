@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/09 18:55:29 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/20 15:05:22 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
@@ -6,7 +6,7 @@ ${GEM_LIBDIR}/.gitmodules
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/assets/tld_lib.yml
 ${GEM_LIBDIR}/lib/twitter-text.rb
