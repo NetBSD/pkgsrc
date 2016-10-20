@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4382 2016/10/20 06:45:13 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4383 2016/10/20 08:27:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6108,3 +6108,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xscreensaver-demo to 5.36 [wiz 2016-10-19]
 	Updated www/p5-WWW-Curl to 4.17nb4 [wiz 2016-10-19]
 	Updated lang/nodejs to 6.9.1 [fhajny 2016-10-20]
+	Updated multimedia/mpv to 0.21.0 [leot 2016-10-20]
