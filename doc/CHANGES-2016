@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4397 2016/10/20 15:12:47 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4398 2016/10/20 15:26:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6132,3 +6132,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ruby-ohai to 8.21.0 [taca 2016-10-20]
 	Updated net/ruby-twitter-text to 1.14.0 [taca 2016-10-20]
 	Updated textproc/ruby-will-paginate to 3.1.5 [taca 2016-10-20]
+	Updated www/ruby-unicorn to 5.1.0 [taca 2016-10-20]
