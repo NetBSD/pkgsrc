@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4387 2016/10/20 14:33:00 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4388 2016/10/20 14:35:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6122,3 +6122,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/png to 1.6.26 [wiz 2016-10-20]
 	Updated devel/ruby-dep to 1.5.0 [taca 2016-10-20]
 	Updated devel/ruby-celluloid-supervision to 0.20.6 [taca 2016-10-20]
+	Updated devel/ruby2ruby to 2.3.1 [taca 2016-10-20]
