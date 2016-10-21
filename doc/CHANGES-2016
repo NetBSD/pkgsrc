@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4400 2016/10/21 00:57:29 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4401 2016/10/21 01:46:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6135,3 +6135,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-unicorn to 5.1.0 [taca 2016-10-20]
 	Updated www/p5-Dancer2 to 0.204001 [wen 2016-10-21]
 	Updated www/p5-HTML-Entities-Interpolate to 1.10 [wen 2016-10-21]
+	Updated www/p5-HTML-FormFu to 2.05 [wen 2016-10-21]
