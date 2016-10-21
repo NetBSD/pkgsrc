@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/15 21:27:46 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/10/21 10:35:28 asau Exp $
 bin/hwloc-annotate
 bin/hwloc-assembler
 bin/hwloc-assembler-remote
@@ -55,6 +55,7 @@ man/man3/HWLOC_CPUBIND_STRICT.3
 man/man3/HWLOC_CPUBIND_THREAD.3
 man/man3/HWLOC_DISTRIB_FLAG_REVERSE.3
 man/man3/HWLOC_MEMBIND_BIND.3
+man/man3/HWLOC_MEMBIND_BYNODESET.3
 man/man3/HWLOC_MEMBIND_DEFAULT.3
 man/man3/HWLOC_MEMBIND_FIRSTTOUCH.3
 man/man3/HWLOC_MEMBIND_INTERLEAVE.3
@@ -89,7 +90,6 @@ man/man3/HWLOC_OBJ_PACKAGE.3
 man/man3/HWLOC_OBJ_PCI_DEVICE.3
 man/man3/HWLOC_OBJ_PU.3
 man/man3/HWLOC_OBJ_SYSTEM.3
-man/man3/HWLOC_OBJ_TYPE_MAX.3
 man/man3/HWLOC_RESTRICT_FLAG_ADAPT_DISTANCES.3
 man/man3/HWLOC_RESTRICT_FLAG_ADAPT_IO.3
 man/man3/HWLOC_RESTRICT_FLAG_ADAPT_MISC.3
@@ -205,6 +205,7 @@ man/man3/hwloc_get_ancestor_obj_by_type.3
 man/man3/hwloc_get_api_version.3
 man/man3/hwloc_get_area_membind.3
 man/man3/hwloc_get_area_membind_nodeset.3
+man/man3/hwloc_get_area_memlocation.3
 man/man3/hwloc_get_cache_covering_cpuset.3
 man/man3/hwloc_get_cache_type_depth.3
 man/man3/hwloc_get_child_covering_cpuset.3
