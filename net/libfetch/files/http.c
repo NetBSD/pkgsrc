@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.39 2016/10/20 21:21:25 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.40 2016/10/21 11:51:18 jperkin Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -713,7 +713,10 @@ http_authorize(conn_t *conn, const char *hdr, const char *p)
 static conn_t *
 http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 {
+	struct url *curl;
 	conn_t *conn;
+	hdr_t h;
+	const char *p;
 	int af, verbose;
 #if defined(TCP_NOPUSH) && !defined(__APPLE__)
 	int val;
@@ -735,25 +738,46 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 		af = AF_INET6;
 #endif
 
-	if (purl && strcasecmp(URL->scheme, SCHEME_HTTPS) != 0) {
-		URL = purl;
-	} else if (strcasecmp(URL->scheme, SCHEME_FTP) == 0) {
-		/* can't talk http to an ftp server */
-		/* XXX should set an error code */
-		return (NULL);
-	}
+	curl = (purl != NULL) ? purl : URL;
 
 	if ((conn = fetch_cache_get(URL, af)) != NULL) {
 		*cached = 1;
 		return (conn);
 	}
 
-	if ((conn = fetch_connect(URL, af, verbose)) == NULL)
+	if ((conn = fetch_connect(curl, af, verbose)) == NULL)
 		/* fetch_connect() has already set an error code */
 		return (NULL);
+	if (strcasecmp(URL->scheme, SCHEME_HTTPS) == 0 && purl) {
+		http_cmd(conn, "CONNECT %s:%d HTTP/1.1\r\n",
+				URL->host, URL->port);
+		http_cmd(conn, "Host: %s:%d\r\n",
+				URL->host, URL->port);
+		http_cmd(conn, "\r\n");
+		if (http_get_reply(conn) != HTTP_OK) {
+			http_seterr(conn->err);
+			goto ouch;
+		}
+		/* Read and discard the rest of the proxy response */
+		if (fetch_getln(conn) < 0) {
+			fetch_syserr();
+			goto ouch;
+		}
+		do {
+			switch ((h = http_next_header(conn, &p))) {
+			case hdr_syserror:
+				fetch_syserr();
+				goto ouch;
+			case hdr_error:
+				http_seterr(HTTP_PROTOCOL_ERROR);
+				goto ouch;
+			default:
+				/* ignore */ ;
+			}
+		} while (h < hdr_end);
+	}
 	if (strcasecmp(URL->scheme, SCHEME_HTTPS) == 0 &&
 	    fetch_ssl(conn, URL, verbose) == -1) {
-		fetch_close(conn);
 		/* grrr */
 #ifdef EAUTH
 		errno = EAUTH;
@@ -761,7 +785,7 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 		errno = EPERM;
 #endif
 		fetch_syserr();
-		return (NULL);
+		goto ouch;
 	}
 
 #if defined(TCP_NOPUSH) && !defined(__APPLE__)
@@ -770,6 +794,9 @@ http_connect(struct url *URL, struct url *purl, const char *flags, int *cached)
 #endif
 
 	return (conn);
+ouch:
+	fetch_close(conn);
+	return (NULL);
 }
 
 static struct url *
@@ -901,7 +928,7 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		if (verbose)
 			fetch_info("requesting %s://%s%s",
 			    url->scheme, host, url->doc);
-		if (purl) {
+		if (purl && strcasecmp(URL->scheme, SCHEME_HTTPS) != 0) {
 			http_cmd(conn, "%s %s://%s%s HTTP/1.1\r\n",
 			    op, url->scheme, host, url->doc);
 		} else {
