@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4399 2016/10/21 00:45:51 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4400 2016/10/21 00:57:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6134,3 +6134,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/ruby-will-paginate to 3.1.5 [taca 2016-10-20]
 	Updated www/ruby-unicorn to 5.1.0 [taca 2016-10-20]
 	Updated www/p5-Dancer2 to 0.204001 [wen 2016-10-21]
+	Updated www/p5-HTML-Entities-Interpolate to 1.10 [wen 2016-10-21]
