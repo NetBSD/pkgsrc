@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4410 2016/10/21 14:18:56 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4411 2016/10/21 14:33:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6155,3 +6155,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlrelay-odbc to 0.66.0 [fhajny 2016-10-21]
 	Updated databases/sqlrelay-pgsql to 0.66.0 [fhajny 2016-10-21]
 	Updated databases/sqlrelay-sqlite to 0.66.0 [fhajny 2016-10-21]
+	Updated www/drupal7 to 7.51 [wen 2016-10-21]
