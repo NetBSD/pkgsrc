@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2014/02/22 07:53:47 obache Exp $
+# $NetBSD: Makefile,v 1.27 2016/10/21 01:47:01 kamil Exp $
 #
 
 DISTNAME=	tkdesk-2.0
 PKGNAME=	${DISTNAME}p2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tkdesk.sourceforge.net/dist/
 
@@ -19,9 +20,9 @@ USE_TOOLS+=	pax
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
 		--with-tk=${BUILDLINK_PREFIX.tk}/lib	\
-		--with-itcl=${BUILDLINK_PREFIX.tcl}/lib/itcl4.0.0	\
+		--with-itcl=${BUILDLINK_PREFIX.tcl}/lib/itcl${ITCL_VERSION}	\
 		--with-blt=${BUILDLINK_PREFIX.blt}/lib
-MAKE_ENV+=	LIB_RUNTIME_DIR=${BUILDLINK_PREFIX.tcl}/lib/itcl4.0.0
+MAKE_ENV+=	LIB_RUNTIME_DIR=${BUILDLINK_PREFIX.tcl}/lib/itcl${ITCL_VERSION}
 
 CFLAGS+=	-DUSE_INTERP_RESULT
 
