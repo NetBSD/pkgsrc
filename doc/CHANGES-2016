@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4408 2016/10/21 13:05:10 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4409 2016/10/21 13:57:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6143,3 +6143,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated parallel/hwloc to 1.11.4 [asau 2016-10-21]
 	Updated net/libfetch to 2.38 [jperkin 2016-10-21]
 	Updated databases/p5-DBD-mysql to 4.038 [wen 2016-10-21]
+	Updated devel/atk to 2.22.0 [mef 2016-10-21]
