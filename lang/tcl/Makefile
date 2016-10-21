@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2016/09/05 13:24:38 adam Exp $
+# $NetBSD: Makefile,v 1.93 2016/10/21 11:45:44 kamil Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -45,6 +45,8 @@ SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
 
 PLIST_SUBST+=		SONUM=${TCL_SONUM}
 PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
+PLIST_SUBST+=		ITCL_VERSION=${ITCL_VERSION}
+PLIST_SUBST+=		TDBC_VERSION=${TDBC_VERSION}
 
 CONFIGURE_ARGS+=	--with-system-sqlite
 SUBST_CLASSES+=		sqllink
@@ -54,12 +56,12 @@ SUBST_SED.sqllink=	-e "/LIBS=/s|-lsqlite3|-L${BUILDLINK_PREFIX.sqlite3}/lib ${CO
 
 .if ${OPSYS} == "Darwin"
 post-build:
-.  for lib in itcl4.0.5/libitcl4.0.5.dylib \
+.  for lib in itcl${ITCL_VERSION}/libitcl${ITCL_VERSION}.dylib \
 	      sqlite3.13.0/libsqlite3.13.0.dylib \
-	      tdbc1.0.4/libtdbc1.0.4.dylib \
-	      tdbcmysql1.0.4/libtdbcmysql1.0.4.dylib \
-	      tdbcodbc1.0.4/libtdbcodbc1.0.4.dylib \
-	      tdbcpostgres1.0.4/libtdbcpostgres1.0.4.dylib \
+	      tdbc${TDBC_VERSION}/libtdbc${TDBC_VERSION}.dylib \
+	      tdbcmysql${TDBC_VERSION}/libtdbcmysql${TDBC_VERSION}.dylib \
+	      tdbcodbc${TDBC_VERSION}/libtdbcodbc${TDBC_VERSION}.dylib \
+	      tdbcpostgres${TDBC_VERSION}/libtdbcpostgres${TDBC_VERSION}.dylib \
 	      thread2.8.0/libthread2.8.0.dylib
 	install_name_tool -id ${PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
 .  endfor
