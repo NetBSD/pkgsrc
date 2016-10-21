@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/01/18 11:42:36 mef Exp $
+$NetBSD: distinfo,v 1.5 2016/10/21 00:56:34 wen Exp $
 
-SHA1 (HTML-Entities-Interpolate-1.09.tgz) = 7aefcb475fdb5acf9cf8cce7ac9d071d3f7c2864
-RMD160 (HTML-Entities-Interpolate-1.09.tgz) = 5b2ff89377699cb2e6042f3481f5fa8774c0e411
-SHA512 (HTML-Entities-Interpolate-1.09.tgz) = 332266e7755d375b3d70b09a68eb464afa97d4ab893e67f5f55dafe771feaf8867322577144ff445a5e5d46688978b0ce6f0513fe01539835b67097971a59165
-Size (HTML-Entities-Interpolate-1.09.tgz) = 8513 bytes
+SHA1 (HTML-Entities-Interpolate-1.10.tgz) = 54b12d26ccadd2d5d4f979dab5d7b541c792d2d7
+RMD160 (HTML-Entities-Interpolate-1.10.tgz) = 84bc4f212bf74190d3025e6ba28e8a8cec2dcfa6
+SHA512 (HTML-Entities-Interpolate-1.10.tgz) = 7b1d968fa7acd007e08db1b22ba7bb0529a672eac1731bbf0bf1ed8ea9d8196ed5c748e4eae5dfeb06c4caaf68727b4eb499312b415aecd75804b204e31fac51
+Size (HTML-Entities-Interpolate-1.10.tgz) = 13344 bytes
