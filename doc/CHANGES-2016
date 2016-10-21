@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4409 2016/10/21 13:57:10 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4410 2016/10/21 14:18:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6144,3 +6144,14 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libfetch to 2.38 [jperkin 2016-10-21]
 	Updated databases/p5-DBD-mysql to 4.038 [wen 2016-10-21]
 	Updated devel/atk to 2.22.0 [mef 2016-10-21]
+	Updated databases/sqlrelay to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/p5-sqlrelay to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/php-sqlrelay to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/py-sqlrelay to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/ruby-sqlrelay to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/sqlrelay-freetds to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/sqlrelay-mysql to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/sqlrelay-nodejs to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/sqlrelay-odbc to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/sqlrelay-pgsql to 0.66.0 [fhajny 2016-10-21]
+	Updated databases/sqlrelay-sqlite to 0.66.0 [fhajny 2016-10-21]
