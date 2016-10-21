@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/07/01 17:02:39 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/10/21 14:16:34 fhajny Exp $
 bin/sqlr-cachemanager
 bin/sqlr-connection
 bin/sqlr-export
@@ -54,10 +54,8 @@ lib/libsqlrutil.la
 lib/pkgconfig/sqlrelay-c++.pc
 lib/pkgconfig/sqlrelay-c.pc
 libexec/sqlrelay/sqlrauth_database.${SOEXT}
-libexec/sqlrelay/sqlrauth_krb_userlist.${SOEXT}
 libexec/sqlrelay/sqlrauth_proxied.${SOEXT}
 libexec/sqlrelay/sqlrauth_sqlrelay.${SOEXT}
-libexec/sqlrelay/sqlrauth_tls_userlist.${SOEXT}
 libexec/sqlrelay/sqlrauth_userlist.${SOEXT}
 libexec/sqlrelay/sqlrconfig_xmldom.${SOEXT}
 libexec/sqlrelay/sqlrconnection_router.${SOEXT}
@@ -68,6 +66,7 @@ libexec/sqlrelay/sqlrlogger_custom_nw.${SOEXT}
 libexec/sqlrelay/sqlrlogger_custom_sc.${SOEXT}
 libexec/sqlrelay/sqlrlogger_debug.${SOEXT}
 libexec/sqlrelay/sqlrlogger_slowqueries.${SOEXT}
+libexec/sqlrelay/sqlrnotification_events.${SOEXT}
 libexec/sqlrelay/sqlrparser_default.${SOEXT}
 libexec/sqlrelay/sqlrprotocol_sqlrclient.${SOEXT}
 libexec/sqlrelay/sqlrpwdenc_crypt.${SOEXT}
@@ -76,6 +75,10 @@ libexec/sqlrelay/sqlrpwdenc_rot.${SOEXT}
 libexec/sqlrelay/sqlrquery_sqlrcmdcstat.${SOEXT}
 libexec/sqlrelay/sqlrquery_sqlrcmdgstat.${SOEXT}
 libexec/sqlrelay/sqlrresultsettranslation_reformatdatetime.${SOEXT}
+libexec/sqlrelay/sqlrrouter_clientiplist.${SOEXT}
+libexec/sqlrelay/sqlrrouter_regex.${SOEXT}
+libexec/sqlrelay/sqlrrouter_userlist.${SOEXT}
+libexec/sqlrelay/sqlrschedule_cron_userlist.${SOEXT}
 libexec/sqlrelay/sqlrtranslation_normalize.${SOEXT}
 man/man1/sqlr-export.1
 man/man1/sqlr-import.1
@@ -602,6 +605,7 @@ share/doc/sqlrelay/features/proxying.html
 share/doc/sqlrelay/features/queryfiltering.html
 share/doc/sqlrelay/features/queryrouting.html
 share/doc/sqlrelay/features/resultsetcaching.html
+share/doc/sqlrelay/features/schedules.html
 share/doc/sqlrelay/features/substitutionandbindvars.html
 share/doc/sqlrelay/features/suspendedtx.html
 share/doc/sqlrelay/features/throttling.html
@@ -614,6 +618,7 @@ share/doc/sqlrelay/images/arm-linux-uclibc-thumb.png
 share/doc/sqlrelay/images/arm-linux-uclibc.png
 share/doc/sqlrelay/images/blackray.png
 share/doc/sqlrelay/images/cluster.png
+share/doc/sqlrelay/images/dayshift.png
 share/doc/sqlrelay/images/fetch-many.png
 share/doc/sqlrelay/images/fetch-one.png
 share/doc/sqlrelay/images/firebird.png
@@ -642,6 +647,7 @@ share/doc/sqlrelay/images/netbsd-sparc-thumb.png
 share/doc/sqlrelay/images/netbsd-sparc.png
 share/doc/sqlrelay/images/netbsd-vax-thumb.png
 share/doc/sqlrelay/images/netbsd-vax.png
+share/doc/sqlrelay/images/nightshift.png
 share/doc/sqlrelay/images/openbsd-i386-thumb.png
 share/doc/sqlrelay/images/openbsd-i386.png
 share/doc/sqlrelay/images/openbsd-sparc-thumb.png
@@ -678,8 +684,11 @@ share/doc/sqlrelay/js/rotate.js
 share/doc/sqlrelay/modules/auths.html
 share/doc/sqlrelay/modules/filters.html
 share/doc/sqlrelay/modules/loggers.html
+share/doc/sqlrelay/modules/notifications.html
 share/doc/sqlrelay/modules/pwdencs.html
 share/doc/sqlrelay/modules/resultsettranslations.html
+share/doc/sqlrelay/modules/routers.html
+share/doc/sqlrelay/modules/schedules.html
 share/doc/sqlrelay/modules/sqlr-connection-oracletest-querylog.2899.html
 share/doc/sqlrelay/modules/sqlr-connection.1871.html
 share/doc/sqlrelay/modules/sqlr-listener.1869.html
