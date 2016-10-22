@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.35 2016/09/07 12:58:25 adam Exp $
+# $NetBSD: Makefile.common,v 1.35.2.1 2016/10/22 16:18:27 bsiegert Exp $
 #
 # used by databases/mysql56-client/Makefile
 # used by databases/mysql56-server/Makefile
 
-DISTNAME=	mysql-5.6.33
+DISTNAME=	mysql-5.6.34
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-5.6/}
 
@@ -124,8 +124,10 @@ USE_BUILTIN.editline=	no
 .endif
 
 .include "../../mk/readline.buildlink3.mk"
-
-CMAKE_ARGS+=	-DWITH_EDITLINE=system
-CMAKE_ARGS+=	-DEDITLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
+.if ${READLINE_TYPE} == "readline"
+CMAKE_ARGS+=		-DWITH_READLINE="system"
+.else
+CMAKE_ARGS+=		-DWITH_EDITLINE="system"
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
