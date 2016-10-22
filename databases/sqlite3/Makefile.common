@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2016/10/21 23:32:40 kamil Exp $
+# $NetBSD: Makefile.common,v 1.50 2016/10/22 00:18:39 kamil Exp $
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 
@@ -6,5 +6,3 @@ HOMEPAGE=	http://www.sqlite.org/
 LICENSE=	public-domain
 
 .include "../../databases/sqlite3/Makefile.version"
-
-PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
