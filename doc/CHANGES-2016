@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4416 2016/10/22 07:45:35 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4417 2016/10/22 08:02:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6161,3 +6161,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-cparser to 2.16 [wiz 2016-10-22]
 	Updated devel/p5-Log-Report to 1.18 [wen 2016-10-22]
 	Updated www/drupal7 to 7.51nb1 [wen 2016-10-22]
+	Added fonts/lato-ttf version 2.015 [wiz 2016-10-22]
