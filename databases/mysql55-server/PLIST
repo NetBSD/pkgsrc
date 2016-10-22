@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2016/09/07 13:13:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.44.2.1 2016/10/22 16:02:57 bsiegert Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1470,7 +1470,19 @@ share/mysql/test/std_data/warnings_loaddata.dat
 share/mysql/test/std_data/words.dat
 share/mysql/test/std_data/words2.dat
 share/mysql/test/suite/auth_sec/r/cert_verify.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_error.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_null.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_warnings.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_warnings_not_win.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_warnings_win.result
 share/mysql/test/suite/auth_sec/t/cert_verify.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_error.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_null-master.opt
+share/mysql/test/suite/auth_sec/t/secure_file_priv_null.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings-master.opt
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings_not_win.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings_win.test
 share/mysql/test/suite/binlog/combinations
 share/mysql/test/suite/binlog/r/binlog_base64_flag.result
 share/mysql/test/suite/binlog/r/binlog_bug23533.result
