@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/10/18 10:34:29 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/22 12:19:32 taca Exp $
 
 DISTNAME=	jekyll-3.3.0
 CATEGORIES=	www
@@ -20,6 +20,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-pathutil>=0.9<1:../../devel/ruby-pathutil
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.4<3:../../net/ruby-addressable
 
 RUBYGEM_OPTIONS+=	--format-executable
+
+# restricted by ruby-jekyll-watch through ruby-dep and ruby-listen
+RUBY_VERSIONS_ACCEPTED= 22 23
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
