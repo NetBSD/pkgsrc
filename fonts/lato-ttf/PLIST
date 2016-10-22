@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/22 08:01:43 wiz Exp $
+share/fonts/X11/TTF/Lato-Black.ttf
+share/fonts/X11/TTF/Lato-BlackItalic.ttf
+share/fonts/X11/TTF/Lato-Bold.ttf
+share/fonts/X11/TTF/Lato-BoldItalic.ttf
+share/fonts/X11/TTF/Lato-Hairline.ttf
+share/fonts/X11/TTF/Lato-HairlineItalic.ttf
+share/fonts/X11/TTF/Lato-Heavy.ttf
+share/fonts/X11/TTF/Lato-HeavyItalic.ttf
+share/fonts/X11/TTF/Lato-Italic.ttf
+share/fonts/X11/TTF/Lato-Light.ttf
+share/fonts/X11/TTF/Lato-LightItalic.ttf
+share/fonts/X11/TTF/Lato-Medium.ttf
+share/fonts/X11/TTF/Lato-MediumItalic.ttf
+share/fonts/X11/TTF/Lato-Regular.ttf
+share/fonts/X11/TTF/Lato-Semibold.ttf
+share/fonts/X11/TTF/Lato-SemiboldItalic.ttf
+share/fonts/X11/TTF/Lato-Thin.ttf
+share/fonts/X11/TTF/Lato-ThinItalic.ttf
