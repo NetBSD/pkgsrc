@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2016/10/21 23:32:40 kamil Exp $
+# $NetBSD: Makefile,v 1.110 2016/10/22 00:18:39 kamil Exp $
 #
 # used by databases/sqlite3-tcl/Makefile
 
@@ -16,6 +16,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-static-shell
+
+PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
