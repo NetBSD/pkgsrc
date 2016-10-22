@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2016/09/07 12:58:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.26.2.1 2016/10/22 16:18:27 bsiegert Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1898,6 +1898,11 @@ share/mysql/test/suite/auth_sec/r/not_openssl.require
 share/mysql/test/suite/auth_sec/r/not_ssl.require
 share/mysql/test/suite/auth_sec/r/openssl.require
 share/mysql/test/suite/auth_sec/r/password_expired.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_error.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_null.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_warnings.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_warnings_not_win.result
+share/mysql/test/suite/auth_sec/r/secure_file_priv_warnings_win.result
 share/mysql/test/suite/auth_sec/r/server_withoutssl_client_withoutssl.result
 share/mysql/test/suite/auth_sec/r/server_withoutssl_client_withssl.result
 share/mysql/test/suite/auth_sec/r/server_withssl_client_withoutssl.result
@@ -1919,6 +1924,11 @@ share/mysql/test/suite/auth_sec/t/mysql_sha256_plugin-master.opt
 share/mysql/test/suite/auth_sec/t/mysql_sha256_plugin.test
 share/mysql/test/suite/auth_sec/t/password_expired-master.opt
 share/mysql/test/suite/auth_sec/t/password_expired.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_error.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_null.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings_not_win.test
+share/mysql/test/suite/auth_sec/t/secure_file_priv_warnings_win.test
 share/mysql/test/suite/auth_sec/t/server_withoutssl_client_withoutssl.test
 share/mysql/test/suite/auth_sec/t/server_withoutssl_client_withssl.test
 share/mysql/test/suite/auth_sec/t/server_withssl_client_withoutssl-master.opt
