@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4414 2016/10/22 00:37:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4415 2016/10/22 07:21:31 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6159,3 +6159,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/filezilla to 3.21.0nb1 [wiz 2016-10-21]
 	Updated devel/lemon to 1.0.3.15.0 [kamil 2016-10-22]
 	Updated devel/py-cparser to 2.16 [wiz 2016-10-22]
+	Updated devel/p5-Log-Report to 1.18 [wen 2016-10-22]
