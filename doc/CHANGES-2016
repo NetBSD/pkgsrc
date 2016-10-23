@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4420 2016/10/23 14:54:03 asau Exp $
+$NetBSD: CHANGES-2016,v 1.4421 2016/10/23 15:45:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6165,3 +6165,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed security/ap-modsecurity successor security/ap-modsecurity2 [sevan 2016-10-23]
 	Updated net/youtube-dl to 20161021.1 [leot 2016-10-23]
 	Updated parallel/openmpi to 1.10.4 [asau 2016-10-23]
+	Updated mail/getmail to 4.52.0 [schmonz 2016-10-23]
