@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/12/23 12:43:25 joerg Exp $
+$NetBSD: distinfo,v 1.11 2016/10/23 19:56:38 christos Exp $
 
 SHA1 (15.2-Isengard.tar.gz) = 4acb4a60eadc7289f873cff5add31693b9520cba
 RMD160 (15.2-Isengard.tar.gz) = d81d3f15783b2b69920ea85d7e04f01872f2d85f
@@ -45,7 +45,7 @@ SHA1 (patch-xbmc_linux_XFileUtils.cpp) = 8840ef540c023bc988c918ec7067cc2383b83a8
 SHA1 (patch-xbmc_linux_XMemUtils.cpp) = 2c8fb8f80feb4d5f50518d9bd6fcc69519674658
 SHA1 (patch-xbmc_main_main.cpp) = f19ee0a085ac4924b31beb210d625dc3819f080d
 SHA1 (patch-xbmc_music_MusicDatabase.cpp) = 0bcb1d3654b3975decc3802cf36b885af10b5313
-SHA1 (patch-xbmc_network_linux_NetworkLinux.cpp) = febc3a9791d0c087261ccbbecdcffcaa4793e333
+SHA1 (patch-xbmc_network_linux_NetworkLinux.cpp) = cfdd3c76ba4f562e8f11141fe9e825912630faf6
 SHA1 (patch-xbmc_peripherals_bus_PeripheralBusUSB.h) = e3682d8fbfad9bca11a706c2ca3a77f0a7751e3a
 SHA1 (patch-xbmc_peripherals_bus_linux_PeripheralBusUSBLibUSB.cpp) = 040678e8379f6797e8276d9787d60fcdb24e17c9
 SHA1 (patch-xbmc_pvr_PVRActionListener.cpp) = f51e7877e09a42dc6e7c14eb35a15145915c98a7
