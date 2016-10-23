@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2016/10/08 09:29:17 leot Exp $
+@comment $NetBSD: PLIST,v 1.30 2016/10/23 07:22:31 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -176,9 +176,9 @@ ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyo
 ${PYSITELIB}/youtube_dl/extractor/bbc.py
 ${PYSITELIB}/youtube_dl/extractor/bbc.pyc
 ${PYSITELIB}/youtube_dl/extractor/bbc.pyo
-${PYSITELIB}/youtube_dl/extractor/beatportpro.py
-${PYSITELIB}/youtube_dl/extractor/beatportpro.pyc
-${PYSITELIB}/youtube_dl/extractor/beatportpro.pyo
+${PYSITELIB}/youtube_dl/extractor/beatport.py
+${PYSITELIB}/youtube_dl/extractor/beatport.pyc
+${PYSITELIB}/youtube_dl/extractor/beatport.pyo
 ${PYSITELIB}/youtube_dl/extractor/beeg.py
 ${PYSITELIB}/youtube_dl/extractor/beeg.pyc
 ${PYSITELIB}/youtube_dl/extractor/beeg.pyo
@@ -749,6 +749,9 @@ ${PYSITELIB}/youtube_dl/extractor/howstuffworks.pyo
 ${PYSITELIB}/youtube_dl/extractor/hrti.py
 ${PYSITELIB}/youtube_dl/extractor/hrti.pyc
 ${PYSITELIB}/youtube_dl/extractor/hrti.pyo
+${PYSITELIB}/youtube_dl/extractor/huajiao.py
+${PYSITELIB}/youtube_dl/extractor/huajiao.pyc
+${PYSITELIB}/youtube_dl/extractor/huajiao.pyo
 ${PYSITELIB}/youtube_dl/extractor/huffpost.py
 ${PYSITELIB}/youtube_dl/extractor/huffpost.pyc
 ${PYSITELIB}/youtube_dl/extractor/huffpost.pyo
