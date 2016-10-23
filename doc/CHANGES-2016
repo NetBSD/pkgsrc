@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4417 2016/10/22 08:02:03 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4418 2016/10/23 07:22:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6162,3 +6162,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Report to 1.18 [wen 2016-10-22]
 	Updated www/drupal7 to 7.51nb1 [wen 2016-10-22]
 	Added fonts/lato-ttf version 2.015 [wiz 2016-10-22]
+	Updated net/youtube-dl to 20161021.1 [leot 2016-10-23]
