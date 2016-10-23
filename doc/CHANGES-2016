@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4419 2016/10/23 13:31:26 sevan Exp $
+$NetBSD: CHANGES-2016,v 1.4420 2016/10/23 14:54:03 asau Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6164,3 +6164,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added fonts/lato-ttf version 2.015 [wiz 2016-10-22]
 	Removed security/ap-modsecurity successor security/ap-modsecurity2 [sevan 2016-10-23]
 	Updated net/youtube-dl to 20161021.1 [leot 2016-10-23]
+	Updated parallel/openmpi to 1.10.4 [asau 2016-10-23]
