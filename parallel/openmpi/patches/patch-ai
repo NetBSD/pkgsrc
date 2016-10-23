@@ -1,16 +1,16 @@
-$NetBSD: patch-ai,v 1.5 2015/12/12 22:41:19 asau Exp $
+$NetBSD: patch-ai,v 1.6 2016/10/23 14:02:28 asau Exp $
 
---- orte/etc/Makefile.in.orig	2015-06-17 19:57:45.000000000 +0000
+--- orte/etc/Makefile.in.orig	2016-09-02 01:30:19.000000000 +0000
 +++ orte/etc/Makefile.in
-@@ -1451,6 +1451,7 @@ spml_ikrit_LDFLAGS = @spml_ikrit_LDFLAGS
- spml_ikrit_LIBS = @spml_ikrit_LIBS@
+@@ -1515,6 +1515,7 @@ spml_ucx_LDFLAGS = @spml_ucx_LDFLAGS@
+ spml_ucx_LIBS = @spml_ucx_LIBS@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
 +sysconfexampledir = $(pkgdatadir)/examples
  target = @target@
  target_alias = @target_alias@
  target_cpu = @target_cpu@
-@@ -1667,19 +1668,19 @@ uninstall-am: uninstall-local
+@@ -1731,19 +1732,19 @@ uninstall-am: uninstall-local
  # details why the mkdir is in install-data-local.
  
  install-data-local:
@@ -35,7 +35,7 @@ $NetBSD: patch-ai,v 1.5 2015/12/12 22:41:19 asau Exp $
  	  fi; \
  	done
  
-@@ -1690,11 +1691,11 @@ install-data-local:
+@@ -1754,11 +1755,11 @@ install-data-local:
  uninstall-local:
  	@ p="$(orte_config_files)"; \
  	for file in $$p; do \
