@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16617 2016/10/23 14:54:03 asau Exp $
+$NetBSD: TODO,v 1.16618 2016/10/23 19:48:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,9 +377,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-mapproj-3
 	o R-maps-3.1.0
 	o R-ncdf-1.6.8
+	o SDL2-2.0.5
 	o SDL2_net-2.0.1
 	o SOGo-3.1.0
 	o SOPE-3.0.2
+	o Sigil-0.9.6
 	o TiffIO-140a
 	o YoSucker-81
 	o abcl-1.3.2
@@ -664,6 +666,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
+	o ffmpeg3-3.1.5
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -904,6 +907,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.4.1
+	o icu-58.1 [do not update - https://mail-index.netbsd.org/tech-pkg/2016/10/23/msg017447.html]
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.6.5
 	o imapsync-1.678
@@ -1014,6 +1018,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.7299beta20.2
 	o libowfat-0.29
 	o libpgm-5.2.122
 	o libprelude-3.1.0
@@ -1195,6 +1200,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
+	o p5-DateTime-Locale-1.10
+	o p5-DateTime-TimeZone-2.06
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
@@ -1203,6 +1210,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
+	o p5-List-AllUtils-0.12
 	o p5-Memoize-Memcached-0.11
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
@@ -1229,9 +1237,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
+	o p5-Sub-Exporter-Progressive-0.001013
 	o p5-Sys-Utmp-1.7
+	o p5-Test-Simple-1.302062
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
+	o p5-Unicode-Collate-1.15
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
 	o p5-eBay-API-0.29
@@ -1378,10 +1389,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-radare2-0.10.6
 	o py-scgi-1.15
 	o py-serpent-1.12
+	o py-setuptools-28.6.1
+	o py-setuptools_scm-1.15.0
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
 	o py-spf-2.0.12t
+	o py-sqlparse-0.2.2
 	o py-sqlrelay-0.64
 	o py-static-1.1.1
 	o py-suds-0.4.1
@@ -1616,6 +1630,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o unicode-screensaver-0.5
+	o unifont-9.0.03
 	o units-2.12
 	o unrealircd-4.0.6
 	o uriparser-0.8.2
@@ -1632,8 +1647,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.25
 	o vile-9.8q
-	o vim-8.0.0044
-	o vim-share-8.0.0044
+	o vim-8.0.0046
+	o vim-share-8.0.0046
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1669,7 +1684,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20161017
+	o x264-devel-20161022
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xapian-1.4.0
