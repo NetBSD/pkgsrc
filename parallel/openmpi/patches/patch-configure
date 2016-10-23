@@ -1,16 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2016/02/28 19:47:41 joerg Exp $
+$NetBSD: patch-configure,v 1.2 2016/10/23 14:02:28 asau Exp $
 
---- configure.orig	2016-02-24 13:44:02.424420285 +0000
+--- configure.orig	2016-09-02 01:30:27.000000000 +0000
 +++ configure
-@@ -307902,6 +307902,7 @@ fi
- 
- 
-     # Unwind the index
-+    
-     ompi_scope_index=`expr $ompi_scope_index - 1`
-     ompi_scope_test=`expr $ompi_scope_index \> 0`
-     if test "$ompi_scope_test" = "0"; then
-@@ -307922,112 +307923,6 @@ $as_echo "$as_me: WARNING: This usually 
+@@ -314733,166 +314734,6 @@ $as_echo "$as_me: WARNING: This usually 
      done
  
  
@@ -28,7 +20,7 @@ $NetBSD: patch-configure,v 1.1 2016/02/28 19:47:41 joerg Exp $
 -    # This is a simple sanity check to ensure we're not already
 -    # overwriting pre-existing variables (that have a non-empty
 -    # value).  It's not a perfect check, but at least it's something.
--    for ompi_var in LDFLAGS_save; do
+-    for ompi_var in LDFLAGS_save rpath_script rpath_outfile wl_fc; do
 -        ompi_str="ompi_str=\"\$$ompi_var\""
 -        eval $ompi_str
 -
@@ -47,7 +39,7 @@ $NetBSD: patch-configure,v 1.1 2016/02/28 19:47:41 joerg Exp $
 -
 -    # Ok, we passed the simple sanity check.  Save all these names so
 -    # that we can unset them at the end of the scope.
--    ompi_str="ompi_scope_$ompi_scope_index=\"LDFLAGS_save\""
+-    ompi_str="ompi_scope_$ompi_scope_index=\"LDFLAGS_save rpath_script rpath_outfile wl_fc\""
 -    eval $ompi_str
 -    unset ompi_str
 -
@@ -86,6 +78,60 @@ $NetBSD: patch-configure,v 1.1 2016/02/28 19:47:41 joerg Exp $
 -else
 -  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 -$as_echo "no" >&6; }
+-fi
+-rm -f core conftest.err conftest.$ac_objext \
+-    conftest$ac_exeext conftest.$ac_ext
+-    ac_ext=c
+-ac_cpp='$CPP $CPPFLAGS'
+-ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+-ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+-ac_compiler_gnu=$ac_cv_c_compiler_gnu
+-
+-    # Output goes into globally-visible $rpath_args.  Run this in a
+-    # sub-process so that we don't pollute the current process
+-    # environment.
+-    rpath_script=conftest.$$.sh
+-    rpath_outfile=conftest.$$.out
+-    rm -f $rpath_script $rpath_outfile
+-    cat > $rpath_script <<EOF
+-#!/bin/sh
+-
+-# Slurp in the libtool config into my environment
+-
+-# Apparently, "libtoool --config" calls "exit", so we can't source it
+-# (because if script A sources script B, and B calls "exit", then both
+-# B and A will exit).  Instead, we have to send the output to a file
+-# and then source that.
+-$OMPI_TOP_BUILDDIR/libtool --tag=FC --config > $rpath_outfile
+-
+-chmod +x $rpath_outfile
+-. ./$rpath_outfile
+-rm -f $rpath_outfile
+-
+-wl="\`eval echo \$wl\`"
+-echo \$wl
+-
+-# Done
+-exit 0
+-EOF
+-    chmod +x $rpath_script
+-    wl_fc=`./$rpath_script`
+-    rm -f $rpath_script
+-
+-    LDFLAGS="$LDFLAGS_save ${wl_fc}--enable-new-dtags"
+-    ac_ext=${ac_fc_srcext-f}
+-ac_compile='$FC -c $FCFLAGS $ac_fcflags_srcext conftest.$ac_ext >&5'
+-ac_link='$FC -o conftest$ac_exeext $FCFLAGS $LDFLAGS $ac_fcflags_srcext conftest.$ac_ext $LIBS >&5'
+-ac_compiler_gnu=$ac_cv_fc_compiler_gnu
+-
+-    cat > conftest.$ac_ext <<_ACEOF
+-program test
+-end program
+-_ACEOF
+-if ac_fn_fc_try_link "$LINENO"; then :
+-  runpath_fc_args="${wl_fc}--enable-new-dtags"
+-else
+-  runpath_fc_args=""
 -fi
 -rm -f core conftest.err conftest.$ac_objext \
 -    conftest$ac_exeext conftest.$ac_ext
