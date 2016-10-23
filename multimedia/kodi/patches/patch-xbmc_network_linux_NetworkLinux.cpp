@@ -1,7 +1,9 @@
-$NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmcneill Exp $
+$NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.3 2016/10/23 19:56:18 christos Exp $
 
---- xbmc/network/linux/NetworkLinux.cpp.orig	2015-10-19 06:31:15.000000000 +0000
-+++ xbmc/network/linux/NetworkLinux.cpp
+We don't have RTF_LLINFO anymore, use getifaddrs()
+
+--- xbmc/network/linux/NetworkLinux.cpp.orig	2015-10-19 02:31:15.000000000 -0400
++++ xbmc/network/linux/NetworkLinux.cpp	2016-10-23 15:49:24.032410793 -0400
 @@ -48,7 +48,7 @@
    #include "network/osx/ioshacks.h"
  #endif
@@ -11,7 +13,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
    #include <sys/sockio.h>
    #include <sys/wait.h>
    #include <net/if.h>
-@@ -94,7 +94,7 @@ std::string& CNetworkInterfaceLinux::Get
+@@ -94,7 +94,7 @@
  
  bool CNetworkInterfaceLinux::IsWireless()
  {
@@ -20,7 +22,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
    return false;
  #else
    struct iwreq wrq;
-@@ -218,7 +218,7 @@ std::string CNetworkInterfaceLinux::GetC
+@@ -218,7 +218,7 @@
    }
    if (result.empty())
      CLog::Log(LOGWARNING, "Unable to determine gateway");
@@ -29,7 +31,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
     size_t needed;
     int mib[6];
     char *buf, *next, *lim;
-@@ -248,7 +248,9 @@ std::string CNetworkInterfaceLinux::GetC
+@@ -248,7 +248,9 @@
     for (next = buf; next < lim; next += rtm->rtm_msglen) {
        rtm = (struct rt_msghdr *)next;
        sa = (struct sockaddr *)(rtm + 1);
@@ -39,7 +41,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
        sockin = (struct sockaddr_in *)sa;
        if (inet_ntop(AF_INET, &sockin->sin_addr.s_addr,
           line, sizeof(line)) == NULL) {
-@@ -359,7 +361,7 @@ CNetworkInterface* CNetworkLinux::GetFir
+@@ -359,7 +361,7 @@
  void CNetworkLinux::GetMacAddress(const std::string& interfaceName, char rawMac[6])
  {
    memset(rawMac, 0, 6);
@@ -48,7 +50,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
  
  #if !defined(IFT_ETHER)
  #define IFT_ETHER 0x6/* Ethernet CSMACD */
-@@ -411,7 +413,7 @@ void CNetworkLinux::queryInterfaceList()
+@@ -411,7 +413,7 @@
    char macAddrRaw[6];
    m_interfaces.clear();
  
@@ -57,7 +59,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
  
     // Query the list of interfaces.
     struct ifaddrs *list;
-@@ -507,6 +509,16 @@ std::vector<std::string> CNetworkLinux::
+@@ -507,6 +509,16 @@
  
    if (!result.size())
         CLog::Log(LOGWARNING, "Unable to determine nameserver");
@@ -74,7 +76,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
  #else
     res_init();
  
-@@ -547,7 +559,7 @@ bool CNetworkLinux::PingHost(unsigned lo
+@@ -547,7 +559,7 @@
  
  #if defined (TARGET_DARWIN_IOS) // no timeout option available
    sprintf(cmd_line, "ping -c 1 %s", inet_ntoa(host_ip));
@@ -83,12 +85,42 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmc
    sprintf(cmd_line, "ping -c 1 -t %d %s", timeout_ms / 1000 + (timeout_ms % 1000) != 0, inet_ntoa(host_ip));
  #else
    sprintf(cmd_line, "ping -c 1 -w %d %s", timeout_ms / 1000 + (timeout_ms % 1000) != 0, inet_ntoa(host_ip));
-@@ -568,7 +580,7 @@ bool CNetworkLinux::PingHost(unsigned lo
-   return result == 0;
+@@ -618,6 +630,38 @@
+   }
+   return ret;
  }
- 
--#if defined(TARGET_DARWIN) || defined(TARGET_FREEBSD)
-+#if defined(TARGET_DARWIN) || defined(TARGET_FREEBSD) || defined(TARGET_NETBSD)
++#elif defined(TARGET_NETBSD)
++#include <netdb.h>
++#include <ifaddrs.h>
++#include <cstring>
++
++bool CNetworkInterfaceLinux::GetHostMacAddress(unsigned long host_ip, std::string& mac)
++{
++	const char *iface = m_interfaceName.c_str();
++	struct ifaddrs *ifas, *ifa;
++	int r;
++	char buf[1024];
++
++	if (getifaddrs(&ifas) == -1) {
++		mac = strerror(errno);
++		return false;
++	}
++	for (ifa = ifas; ifa; ifa = ifa->ifa_next) {
++		if (ifa->ifa_addr->sa_family != AF_LINK)
++			continue;
++		if (strcmp(iface, ifa->ifa_name) != 0)
++			continue;
++		if ((r = getnameinfo(ifa->ifa_addr, ifa->ifa_addr->sa_len, buf,
++			sizeof(buf), NULL, 0, NI_NUMERICHOST)) != 0) {
++			mac = gai_strerror(r);
++			return false;
++		}
++		mac = buf;
++		break;
++	}
++	freeifaddrs(ifas);
++	return true;
++}
+ #else
  bool CNetworkInterfaceLinux::GetHostMacAddress(unsigned long host_ip, std::string& mac)
  {
-   bool ret = false;
