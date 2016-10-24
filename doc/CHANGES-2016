@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4421 2016/10/23 15:45:51 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.4422 2016/10/24 10:19:13 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6166,3 +6166,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20161021.1 [leot 2016-10-23]
 	Updated parallel/openmpi to 1.10.4 [asau 2016-10-23]
 	Updated mail/getmail to 4.52.0 [schmonz 2016-10-23]
+	Updated multimedia/ffmpeg3 to 3.1.5 [maya 2016-10-23]
