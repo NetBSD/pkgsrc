@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.4 2016/06/17 11:51:08 fhajny Exp $
+$NetBSD: patch-SConstruct,v 1.5 2016/10/24 19:25:47 ryoon Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
 --- SConstruct.orig	2016-06-02 14:46:27.000000000 +0000
@@ -57,8 +57,8 @@ Add support for NetBSD/Dragonfly, fix locations.
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
 +elif os.sys.platform.startswith( "dragonfly" ):
-+    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
-+    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
++    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( LIBS=[ "kvm" ] )
 +    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
@@ -68,8 +68,8 @@ Add support for NetBSD/Dragonfly, fix locations.
      env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
-+    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
-+    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( CPPPATH=[ "@PREFIX@/include" ] )
++    env.Append( LIBPATH=[ "@PREFIX@/lib" ] )
 +    env.Append( LIBS=[ "m" ] )
 +    env.Append( LIBS=[ "kvm" ] )
 +    env.Append( CPPDEFINES=[ "__netbsd__" ] )
