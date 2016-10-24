@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16620 2016/10/24 10:37:16 maya Exp $
+$NetBSD: TODO,v 1.16621 2016/10/24 10:56:14 maya Exp $
 
 Suggested new packages
 ======================
@@ -1629,7 +1629,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o uhttpmock-0.5.0
 	o unicap-0.9.8
 	o unicode-screensaver-0.5
-	o unifont-9.0.03
 	o units-2.12
 	o unrealircd-4.0.6
 	o uriparser-0.8.2
