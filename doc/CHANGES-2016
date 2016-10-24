@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4432 2016/10/24 18:00:50 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.4433 2016/10/24 22:35:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6177,3 +6177,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-jekyll-archives to 2.1.1 [taca 2016-10-24]
 	Updated www/ruby-jekyll-archives to 2.1.1nb1 [taca 2016-10-24]
 	Added geography/opencpn-plugin-debugger version 20160224 [bouyer 2016-10-24]
+	Updated cross/h8300-elf-gcc to 6.2.0nb1 [ryoon 2016-10-24]
