@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16619 2016/10/24 10:19:13 maya Exp $
+$NetBSD: TODO,v 1.16620 2016/10/24 10:37:16 maya Exp $
 
 Suggested new packages
 ======================
@@ -1683,7 +1683,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20161022
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xapian-1.4.0
