@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/10/19 12:38:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/24 22:34:19 ryoon Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-h8300-elf-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,6 +16,13 @@ HOMEPAGE=		#empty
 COMMENT=		GCC compiler for h8300-elf
 
 DEPENDS+=	cross-h8300-elf-binutils-[0-9]*:../../cross/h8300-elf-binutils
+
+.include "../../mk/bsd.prefs.mk"
+# To avoid an internal compiler error of a library for h8300h
+#  on NetBSD/amd64 7.99.39 (GCC 5.4)
+.if ${OPSYS} == "NetBSD"
+GCC_REQD+=		6.2
+.endif
 
 USE_LANGUAGES=		c c++
 
@@ -30,8 +38,7 @@ GNU_CONFIGURE_PREFIX=	${H8300_PREFIX}
 
 CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--target=h8300-elf
-CONFIGURE_ARGS+=	--enable-languages=c,c++
-CONFIGURE_ARGS+=	--disable-multilib
+CONFIGURE_ARGS+=	--enable-languages=c
 CONFIGURE_ARGS+=	--with-newlib
 CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 CONFIGURE_ARGS+=        --with-gmp=${BUILDLINK_PREFIX.gmp}
