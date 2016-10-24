@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/24 17:58:29 bouyer Exp $
+lib/opencpn/libocpndebugger_pi.so
+share/locale/ca/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/cs/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/da/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/de/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/el/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/es/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/et/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/fi/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/fr/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/gl/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/hu/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/it/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/ja/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/nb/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/nl/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/pl/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/pt/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/ru/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/sv/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/tr/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/vi/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/locale/zh/LC_MESSAGES/opencpn-ocpndebugger_pi.mo
+share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi.svg
+share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi_rollover.svg
+share/opencpn/plugins/ocpndebugger_pi/data/ocpndebugger_pi_toggled.svg
