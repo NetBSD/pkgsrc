@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/03/08 14:07:50 taca Exp $
+$NetBSD: distinfo,v 1.3 2016/10/24 14:13:08 taca Exp $
 
-SHA1 (octokit-4.3.0.gem) = 37b4b86550461946e759ec3a5dee547dcbddee1d
-RMD160 (octokit-4.3.0.gem) = 428bf1b990e7f5a67a615138b7af7bb9c9a5282d
-SHA512 (octokit-4.3.0.gem) = a1fd607bdcfd03e74c8c69135248c64dec42f45a0c031244d2374db964ed2039cb8a4690b6dda6aa56e6179cfb12dc7873b0d64423fd5eaea137e9b984932e54
-Size (octokit-4.3.0.gem) = 66560 bytes
+SHA1 (octokit-4.4.0.gem) = 1e19c36070de7f1f93056809a23a71d671692119
+RMD160 (octokit-4.4.0.gem) = 93e8ae7f9f58f466fc347b4064a0e07372c8c50b
+SHA512 (octokit-4.4.0.gem) = 441c7a6b1d593501dc78ec9d0cd405a8ac8b07e657e155cf032a8f9c5155bf0cf26e5d203fefc2189e34466c2a2d069f9406d9f2981944448d1dee0c7b994fbd
+Size (octokit-4.4.0.gem) = 69632 bytes
