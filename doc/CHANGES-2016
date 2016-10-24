@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4430 2016/10/24 14:23:40 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4431 2016/10/24 14:42:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6175,3 +6175,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/ruby-tzinfo-data to 1.2016.8 [taca 2016-10-24]
 	Updated www/ruby-css-parser to 1.4.6 [taca 2016-10-24]
 	Updated www/ruby-jekyll-archives to 2.1.1 [taca 2016-10-24]
+	Updated www/ruby-jekyll-archives to 2.1.1nb1 [taca 2016-10-24]
