@@ -1,16 +1,15 @@
-$NetBSD: patch-aa,v 1.23 2016/10/02 20:34:48 maya Exp $
+$NetBSD: patch-configure,v 1.1 2016/10/24 10:36:12 maya Exp $
 
 Add support for DragonFly.
 Use 'amd64' as a synonym for 'x86_64'.
 Avoid endian test failure for -flto.
 Do not force compiler optimisations.
-
 If we fail an assembly test, continue as if --disable-asm
 was passed.
 
---- configure.orig	2016-01-23 21:45:04.000000000 +0000
+--- configure.orig	2016-10-23 20:45:03.000000000 +0000
 +++ configure
-@@ -578,6 +578,10 @@ case $host_os in
+@@ -597,6 +597,10 @@ case $host_os in
          SYS="FREEBSD"
          libm="-lm"
          ;;
@@ -21,7 +20,7 @@ was passed.
      kfreebsd*-gnu)
          SYS="FREEBSD"
          define HAVE_MALLOC_H
-@@ -678,7 +682,7 @@ case $host_cpu in
+@@ -697,7 +701,7 @@ case $host_cpu in
              ASFLAGS="$ASFLAGS -f elf32"
          fi
          ;;
@@ -30,7 +29,7 @@ was passed.
          ARCH="X86_64"
          AS="${AS-yasm}"
          AS_EXT=".asm"
-@@ -702,14 +706,15 @@ case $host_cpu in
+@@ -726,14 +730,15 @@ case $host_cpu in
          fi
          ;;
      powerpc*)
@@ -47,7 +46,7 @@ was passed.
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
-@@ -844,8 +849,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
+@@ -883,8 +888,8 @@ if [ $asm = auto -a $ARCH = ARM ] ; then
          ASFLAGS="$ASFLAGS -c"
      else
          echo "You specified a pre-ARMv6 or Thumb-1 CPU in your CFLAGS."
@@ -58,7 +57,7 @@ was passed.
      fi
  fi
  
-@@ -854,8 +859,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ; 
+@@ -893,8 +898,8 @@ if [ $asm = auto -a $ARCH = AARCH64 ] ; 
          ASFLAGS="$ASFLAGS -c"
      else
          echo "no NEON support, try adding -mfpu=neon to CFLAGS"
@@ -69,7 +68,7 @@ was passed.
      fi
  fi
  
-@@ -873,8 +878,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
+@@ -912,8 +917,8 @@ if [ $asm = auto -a $ARCH = MIPS ] ; the
          define HAVE_MSA
      else
          echo "You specified a pre-MSA CPU in your CFLAGS."
@@ -80,7 +79,7 @@ was passed.
      fi
  fi
  
-@@ -891,7 +896,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
+@@ -930,7 +935,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
  CPU_ENDIAN="little-endian"
  if [ $compiler = GNU ]; then
      echo "int i[2] = {0x42494745,0}; double f[2] = {0x1.0656e6469616ep+102,0};" > conftest.c
@@ -89,7 +88,7 @@ was passed.
      if (${cross_prefix}strings -a conftest.o | grep -q BIGE) && (${cross_prefix}strings -a conftest.o | grep -q FPendian) ; then
          define WORDS_BIGENDIAN
          CPU_ENDIAN="big-endian"
-@@ -913,7 +918,7 @@ fi
+@@ -952,7 +957,7 @@ fi
  
  # autodetect options that weren't forced nor disabled
  
@@ -98,7 +97,7 @@ was passed.
  if [ "$SYS" = "WINDOWS" -a "$thread" = "posix" ] ; then
      if [ "$gpl" = "no" ] ; then
          echo "Warning: pthread-win32 is LGPL and is therefore not supported with --disable-gpl"
-@@ -1124,10 +1129,10 @@ fi
+@@ -1173,10 +1178,10 @@ fi
  cc_check "stdint.h" "" "uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3};" && define HAVE_VECTOREXT
  
  if [ "$pic" = "yes" ] ; then
@@ -111,16 +110,15 @@ was passed.
      [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
  fi
  
-@@ -1141,8 +1146,6 @@ fi
- 
- if [ "$debug" = "yes" ]; then
+@@ -1192,7 +1197,6 @@ if [ "$debug" = "yes" ]; then
      CFLAGS="-O1 -g $CFLAGS"
--else
+     RCFLAGS="$RCFLAGS -DDEBUG"
+ else
 -    CFLAGS="-O3 -ffast-math $CFLAGS"
- fi
- 
- if cc_check '' -fno-tree-vectorize ; then
-@@ -1271,7 +1274,7 @@ else # gcc/icc
+     if [ "$lto" = "auto" ] && [ $compiler = GNU ] && cc_check "" "-flto" ; then
+         lto="yes"
+         CFLAGS="$CFLAGS -flto"
+@@ -1327,7 +1331,7 @@ else # gcc/icc
      DEPMM="$DEPMM -g0"
      AR="$AR rc "
      LD="$CC -o "
