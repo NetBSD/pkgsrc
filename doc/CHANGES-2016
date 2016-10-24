@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4424 2016/10/24 10:56:14 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4425 2016/10/24 13:55:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6169,3 +6169,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg3 to 3.1.5 [maya 2016-10-23]
 	Updated multimedia/x264-devel to 20161023 [maya 2016-10-23]
 	Updated fonts/unifont to 9.0.03 [maya 2016-10-23]
+	Updated databases/ruby-mysql2 to 0.4.5 [taca 2016-10-24]
