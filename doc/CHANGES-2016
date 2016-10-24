@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4426 2016/10/24 13:59:29 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4427 2016/10/24 14:13:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6171,3 +6171,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/unifont to 9.0.03 [maya 2016-10-23]
 	Updated databases/ruby-mysql2 to 0.4.5 [taca 2016-10-24]
 	Updated devel/ruby-fast_gettext to 1.3.0 [taca 2016-10-24]
+	Updated devel/ruby-octokit to 4.4.0 [taca 2016-10-24]
