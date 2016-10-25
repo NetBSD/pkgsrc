@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4450 2016/10/25 19:50:57 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4451 2016/10/25 19:54:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6195,3 +6195,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/fossil to 1.36 [kamil 2016-10-25]
 	Updated lang/jimtcl to 0.77 [kamil 2016-10-25]
 	Updated lang/nodejs to 7.0.0 [fhajny 2016-10-25]
+	Added lang/nodejs6 version 6.9.1 [fhajny 2016-10-25]
