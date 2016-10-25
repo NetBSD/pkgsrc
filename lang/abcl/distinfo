@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/12/09 20:48:43 asau Exp $
+$NetBSD: distinfo,v 1.8 2016/10/25 17:41:16 asau Exp $
 
-SHA1 (abcl-src-1.3.3.tar.gz) = 5789e67c86d0a9855e32e22f1b694de3f121f240
-RMD160 (abcl-src-1.3.3.tar.gz) = fa8aa5ddb69e27f77ca50dcd6c2a857d3b74ead3
-Size (abcl-src-1.3.3.tar.gz) = 1096351 bytes
+SHA1 (abcl-src-1.4.0.tar.gz) = 8294e586e96bff03966caef0d666115f2ac2322c
+RMD160 (abcl-src-1.4.0.tar.gz) = fc4e3bbb3e965a0ac3155fc18e886b6698768c52
+SHA512 (abcl-src-1.4.0.tar.gz) = 670e8c6c1477ddfce50984ef81ac6a9dfafa2648cfdaa59977bf400182078c6391ac2074271ecd0bcc855d3f969ab0148178ded53bff469a5b5a393f1d18dc93
+Size (abcl-src-1.4.0.tar.gz) = 1090214 bytes
