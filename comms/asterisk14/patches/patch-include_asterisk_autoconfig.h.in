@@ -1,0 +1,27 @@
+$NetBSD: patch-include_asterisk_autoconfig.h.in,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
+
+--- include/asterisk/autoconfig.h.in.orig	2015-10-09 21:48:48.000000000 +0000
++++ include/asterisk/autoconfig.h.in
+@@ -900,6 +900,12 @@
+ /* Define to 1 if you have the `strstr' function. */
+ #undef HAVE_STRSTR
+ 
++/* Define to 1 if you have the `strftime_l' function. */
++#undef HAVE_STRFTIME_L
++
++/* Define to 1 if you have the `strptime_l' function. */
++#undef HAVE_STRPTIME_L
++
+ /* Define to 1 if you have the `strtod' function. */
+ #undef HAVE_STRTOD
+ 
+@@ -984,6 +990,9 @@
+ /* Define to 1 if you have the <syslog.h> header file. */
+ #undef HAVE_SYSLOG_H
+ 
++/* Define to 1 if sys/atomic.h atomic operations are supported. */
++#undef HAVE_SYS_ATOMIC_H
++
+ /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
+    */
+ #undef HAVE_SYS_DIR_H
