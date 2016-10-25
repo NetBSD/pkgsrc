@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/09/19 11:05:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/10/25 01:24:02 kamil Exp $
 bin/cert.py
 bin/cppcheck
 ${PLIST.qt5}bin/cppcheck-gui
@@ -19,3 +19,4 @@ share/cppcheck/cfg/qt.cfg
 share/cppcheck/cfg/sdl.cfg
 share/cppcheck/cfg/std.cfg
 share/cppcheck/cfg/windows.cfg
+share/cppcheck/cfg/wxwidgets.cfg
