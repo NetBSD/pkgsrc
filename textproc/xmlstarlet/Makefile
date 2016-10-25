@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2014/01/01 11:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/10/25 02:11:32 kamil Exp $
 #
 
-DISTNAME=		xmlstarlet-1.3.1
-PKGREVISION=		2
+DISTNAME=		xmlstarlet-1.6.1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmlstar/}
 
@@ -21,13 +20,6 @@ BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.12
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.9
 
 TEST_TARGET=	check
-
-INSTALLATION_DIRS+=	share/doc/xmlstarlet
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet-ug.pdf ${DESTDIR}${PREFIX}/share/doc/xmlstarlet
-	${INSTALL_DATA} ${WRKSRC}/doc/xmlstarlet.txt ${DESTDIR}${PREFIX}/share/doc/xmlstarlet
-
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
