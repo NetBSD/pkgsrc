@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 06:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/10/25 17:41:02 alnsn Exp $
 #
 
-DISTNAME=		valgrind-3.11.0
-PKGREVISION=		1
+DISTNAME=		valgrind-3.12.0
 CATEGORIES=		devel
 MASTER_SITES=		http://valgrind.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
