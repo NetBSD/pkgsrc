@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4440 2016/10/25 12:30:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4441 2016/10/25 12:58:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6185,3 +6185,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added geography/mapcode version 2.3.0 [fhajny 2016-10-25]
 	Updated devel/ccache to 3.3.2 [adam 2016-10-25]
 	Updated x11/libXi to 1.7.8 [wiz 2016-10-25]
+	Updated devel/p5-Ouch to 0.0410 [schmonz 2016-10-25]
