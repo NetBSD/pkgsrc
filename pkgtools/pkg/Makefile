@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/10/25 11:51:40 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2016/10/25 12:54:37 khorben Exp $
 
 DISTNAME=	pkg-1.8.7
 PKGREVISION=	1
@@ -12,10 +12,6 @@ COMMENT=	Package management tool for FreeBSD
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf
-USE_TOOLS+=	automake
-USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 CPPFLAGS+=	-D_LOCALBASE="\"${PREFIX}\""
