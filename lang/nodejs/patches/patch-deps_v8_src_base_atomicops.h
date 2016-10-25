@@ -1,10 +1,10 @@
-$NetBSD: patch-deps_v8_src_base_atomicops.h,v 1.1 2015/10/21 23:46:28 jmcneill Exp $
+$NetBSD: patch-deps_v8_src_base_atomicops.h,v 1.2 2016/10/25 19:50:40 fhajny Exp $
 
---- deps/v8/src/base/atomicops.h.orig	2015-10-13 17:20:07.000000000 +0000
+--- deps/v8/src/base/atomicops.h.orig	2016-10-25 13:26:03.000000000 +0000
 +++ deps/v8/src/base/atomicops.h
-@@ -54,9 +54,13 @@ typedef intptr_t Atomic64;
+@@ -52,9 +52,13 @@ typedef intptr_t Atomic64;
+ #endif  // defined(__ILP32__)
  #endif  // defined(V8_HOST_ARCH_64_BIT)
- #endif  // defined(__native_client__)
  
 +#if defined(__NetBSD__) && defined(__arm__)
 +typedef int32_t AtomicWord;
