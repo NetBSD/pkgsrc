@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4442 2016/10/25 16:24:25 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4443 2016/10/25 16:27:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6187,3 +6187,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libXi to 1.7.8 [wiz 2016-10-25]
 	Updated devel/p5-Ouch to 0.0410 [schmonz 2016-10-25]
 	Updated devel/ruby-octokit to 4.4.1 [taca 2016-10-25]
+	Updated www/contao35 to 3.5.18 [taca 2016-10-25]
