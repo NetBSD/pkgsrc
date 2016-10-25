@@ -1,0 +1,19 @@
+Asterisk is a complete PBX in software.  It provides all of the
+features you would expect from a PBX and more. Asterisk does voice
+over IP in three protocols, and can interoperate with almost all
+standards-based telephony equipment using relatively inexpensive
+hardware.
+
+Asterisk provides Voicemail services with Directory, Call Conferencing,
+Interactive Voice Response, Call Queuing. It has support for
+three-way calling, caller ID services, ADSI, SIP and H.323 (as both
+client and gateway).
+
+This is a standard version.  It is scheduled to go to security
+fixes only on October 24th, 2017, and EOL on October 24th, 2018.
+See here for more information about Asterisk versions:
+https://wiki.asterisk.org/wiki/display/AST/Asterisk+Versions
+
+NOTE:  This version does not work with the zaptel drivers.  It
+requires the newer DAHDI drivers which are still being ported.
+So, there is no hardware support available at this moment.

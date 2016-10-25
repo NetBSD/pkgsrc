@@ -1,0 +1,25 @@
+$NetBSD: patch-sounds_Makefile,v 1.1.1.1 2016/10/25 08:17:05 jnemeth Exp $
+
+--- sounds/Makefile.orig	2015-10-09 21:48:48.000000000 +0000
++++ sounds/Makefile
+@@ -123,20 +123,6 @@ endef # sound_format_lang_rule
+ all: $(CORE_SOUNDS) $(EXTRA_SOUNDS) $(MOH)
+ 
+ have_download:
+-	@if test "$(DOWNLOAD)" = ":" ; then \
+-		echo "**************************************************"; \
+-		echo "***                                            ***"; \
+-		echo "*** You must have either wget or fetch to be   ***"; \
+-		echo "*** able to automatically download and install ***"; \
+-		echo "*** the requested sound packages.              ***"; \
+-		echo "***                                            ***"; \
+-		echo "*** Please install one of these, or remove any ***"; \
+-		echo "*** extra sound package selections in          ***"; \
+-		echo "*** menuselect before installing Asterisk.     ***"; \
+-		echo "***                                            ***"; \
+-		echo "**************************************************"; \
+-		exit 1; \
+-	fi
+ 
+ $(eval $(call sound_format_lang_rule,$(SOUNDS_DIR),core-sounds,en,$(CORE_SOUNDS_VERSION)))
+ 
