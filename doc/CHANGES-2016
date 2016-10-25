@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4443 2016/10/25 16:27:28 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4444 2016/10/25 17:42:04 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6188,3 +6188,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Ouch to 0.0410 [schmonz 2016-10-25]
 	Updated devel/ruby-octokit to 4.4.1 [taca 2016-10-25]
 	Updated www/contao35 to 3.5.18 [taca 2016-10-25]
+	Updated devel/valgrind to 3.12.0 [alnsn 2016-10-25]
