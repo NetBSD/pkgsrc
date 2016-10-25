@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4449 2016/10/25 19:03:15 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4450 2016/10/25 19:50:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6194,3 +6194,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/racket-textual to 6.6 [asau 2016-10-25]
 	Updated devel/fossil to 1.36 [kamil 2016-10-25]
 	Updated lang/jimtcl to 0.77 [kamil 2016-10-25]
+	Updated lang/nodejs to 7.0.0 [fhajny 2016-10-25]
