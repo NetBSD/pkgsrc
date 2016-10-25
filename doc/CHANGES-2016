@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4451 2016/10/25 19:54:14 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4452 2016/10/25 23:31:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6196,3 +6196,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/jimtcl to 0.77 [kamil 2016-10-25]
 	Updated lang/nodejs to 7.0.0 [fhajny 2016-10-25]
 	Added lang/nodejs6 version 6.9.1 [fhajny 2016-10-25]
+	Updated geography/geos to 3.5.1 [gdt 2016-10-25]
