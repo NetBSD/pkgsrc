@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/11/24 00:48:42 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2016/10/25 15:59:05 maya Exp $
 #
 
 DISTNAME=	hiawatha
@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		sitedrivenby.gif
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pault.com/pault/downloads/
+HOMEPAGE=	https://www.hiawatha-webserver.org/
 COMMENT=	Barebones HTTP server with XML and XSLT support (and more)
 
 DEPENDS+=	saxon-[0-9]*:../../textproc/saxon
