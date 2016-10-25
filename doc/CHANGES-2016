@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4436 2016/10/25 02:11:45 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4437 2016/10/25 08:21:09 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6181,3 +6181,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cppcheck to 1.76.1 [kamil 2016-10-25]
 	Updated audio/hydrogen to 0.9.6.1nb3 [mrg 2016-10-25]
 	Updated textproc/xmlstarlet to 1.6.1 [kamil 2016-10-25]
+	Added comms/asterisk14 version 14.0.2 [jnemeth 2016-10-25]
