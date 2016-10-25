@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2016/08/27 21:57:05 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2016/10/25 11:51:40 khorben Exp $
 
-VERSION=	1.8.7
-DISTNAME=	${VERSION}
-PKGNAME=	pkg-${VERSION}
+DISTNAME=	pkg-1.8.7
+PKGREVISION=	1
 CATEGORIES=	pkgtools
-MASTER_SITES=	${MASTER_SITE_GITHUB:=freebsd/pkg/archive/}
+MASTER_SITES=	http://files.etoilebsd.net/pkg/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://wiki.freebsd.org/pkgng
 COMMENT=	Package management tool for FreeBSD
 LICENSE=	2-clause-bsd
-
-WRKSRC=		${WRKDIR}/pkg-${VERSION}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -57,8 +55,9 @@ SUBST_FILES.pkgconf-prefix=	src/pkg.conf.sample
 SUBST_SED.pkgconf-prefix+=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.pkgconf-prefix=	Correct the installation prefix in pkg.conf(5).
 
-pre-configure:
-	cd ${WRKSRC} && ./autogen.sh
+post-patch:
+	${CP} ${FILESDIR}/readpassphrase_compat.h \
+		${WRKSRC}/src/
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/bash_completion.d/_pkg.bash \
