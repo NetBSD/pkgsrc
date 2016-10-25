@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/12/09 20:48:43 asau Exp $
+# $NetBSD: Makefile,v 1.8 2016/10/25 17:41:16 asau Exp $
 
-DISTNAME=	abcl-src-1.3.3
+DISTNAME=	abcl-src-1.4.0
 PKGNAME=	$(DISTNAME:C/-src//)
 CATEGORIES=	lang
 MASTER_SITES=	http://abcl.org/releases/$(PKGVERSION_NOREV)/
