@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4447 2016/10/25 17:45:05 asau Exp $
+$NetBSD: CHANGES-2016,v 1.4448 2016/10/25 17:58:18 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6192,3 +6192,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/abcl to 1.4.0 [asau 2016-10-25]
 	Updated lang/racket to 6.6 [asau 2016-10-25]
 	Updated lang/racket-textual to 6.6 [asau 2016-10-25]
+	Updated devel/fossil to 1.36 [kamil 2016-10-25]
