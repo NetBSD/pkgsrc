@@ -1,0 +1,53 @@
+$NetBSD: patch-configure.ac,v 1.1.1.1 2016/10/25 08:17:07 jnemeth Exp $
+
+--- configure.ac.orig	2015-10-09 21:48:48.000000000 +0000
++++ configure.ac
+@@ -572,7 +572,7 @@ AC_SUBST(UUID_LIB)
+ # Find required JSON support.
+ AST_EXT_LIB_CHECK([JANSSON], [jansson], [json_dumps], [jansson.h])
+ 
+-if test "x$JANSSON_LIB" == "x"; then
++if test "x$JANSSON_LIB" = "x"; then
+   AC_MSG_ERROR([*** JSON support not found (this typically means the libjansson development package is missing)])
+ fi
+ 
+@@ -610,7 +610,7 @@ AC_CHECK_HEADERS([xlocale.h])
+ 
+ AC_CHECK_HEADERS([winsock.h winsock2.h])
+ 
+-AC_CHECK_HEADER([sys/poll.h],
++AC_CHECK_HEADER([poll.h],
+ 	 [],
+      AC_DEFINE([AST_POLL_COMPAT], 1, [Define to 1 if internal poll should be used.]))
+ 
+@@ -664,7 +664,7 @@ AC_FUNC_STRNLEN
+ AC_FUNC_STRTOD
+ AC_FUNC_UTIME_NULL
+ AC_FUNC_VPRINTF
+-AC_CHECK_FUNCS([asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strlcat strlcpy strncasecmp strndup strnlen strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl])
++AC_CHECK_FUNCS([asprintf atexit closefrom dup2 eaccess endpwent euidaccess ffsll ftruncate getcwd gethostbyname gethostname getloadavg gettimeofday glob ioperm inet_ntoa isascii memchr memmove memset mkdir mkdtemp munmap newlocale ppoll putenv re_comp regcomp select setenv socket strcasecmp strcasestr strchr strcspn strdup strerror strftime_l strlcat strlcpy strncasecmp strndup strnlen strptime_l strrchr strsep strspn strstr strtod strtol strtold strtoq unsetenv utime vasprintf getpeereid sysctl swapctl])
+ 
+ AC_MSG_CHECKING(for htonll)
+ AC_LINK_IFELSE(
+@@ -733,9 +733,9 @@ AC_SUBST(PBX_DYNAMIC_LIST)
+ LDFLAGS=${old_LDFLAGS}
+ rm -f conftest.dynamics
+ 
+-AC_CHECK_HEADER([sys/poll.h],
++AC_CHECK_HEADER([poll.h],
+    [HAS_POLL=1]
+-   AC_DEFINE([HAVE_SYS_POLL_H], 1, [Define to 1 if your system has working sys/poll.h]),
++   AC_DEFINE([HAVE_SYS_POLL_H], 1, [Define to 1 if your system has working poll.h]),
+    )
+ 
+ AC_ARG_ENABLE([internal-poll],
+@@ -1236,6 +1236,9 @@ AST_C_DEFINE_CHECK([IP_MTU_DISCOVER], [I
+ AC_CHECK_HEADER([libkern/OSAtomic.h],
+                 [AC_DEFINE_UNQUOTED([HAVE_OSX_ATOMICS], 1, [Define to 1 if OSX atomic operations are supported.])])
+ 
++AC_CHECK_HEADER([sys/atomic.h],
++                [AC_DEFINE_UNQUOTED([HAVE_SYS_ATOMIC_H], 1, [Define to 1 if sys/atomic.h atomic operations are supported.])])
++
+ AC_CHECK_SIZEOF([int])
+ AC_CHECK_SIZEOF([long])
+ AC_CHECK_SIZEOF([long long])
