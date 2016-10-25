@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4434 2016/10/25 01:24:18 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4435 2016/10/25 01:40:03 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6179,3 +6179,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added geography/opencpn-plugin-debugger version 20160224 [bouyer 2016-10-24]
 	Updated cross/h8300-elf-gcc to 6.2.0nb1 [ryoon 2016-10-24]
 	Updated devel/cppcheck to 1.76.1 [kamil 2016-10-25]
+	Updated audio/hydrogen to 0.9.6.1nb3 [mrg 2016-10-25]
