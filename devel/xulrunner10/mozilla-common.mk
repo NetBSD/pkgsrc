@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.9 2016/07/09 13:03:45 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.10 2016/10/25 20:54:24 marino Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -9,7 +9,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
-DRAGONFLY_CCVER=	gcc44
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
