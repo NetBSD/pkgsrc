@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4437 2016/10/25 08:21:09 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4438 2016/10/25 08:24:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6182,3 +6182,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/hydrogen to 0.9.6.1nb3 [mrg 2016-10-25]
 	Updated textproc/xmlstarlet to 1.6.1 [kamil 2016-10-25]
 	Added comms/asterisk14 version 14.0.2 [jnemeth 2016-10-25]
+	Added geography/mapcode version 2.3.0 [fhajny 2016-10-25]
+	Added geography/mapcode version 2.3.0 [fhajny 2016-10-25]
