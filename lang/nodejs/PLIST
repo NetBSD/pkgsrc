@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2016/10/13 14:09:11 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.40 2016/10/25 19:50:40 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -9,6 +9,7 @@ include/node/ares_version.h
 include/node/common.gypi
 include/node/config.gypi
 include/node/libplatform/libplatform.h
+include/node/libplatform/v8-tracing.h
 include/node/nameser.h
 include/node/node.h
 include/node/node_buffer.h
