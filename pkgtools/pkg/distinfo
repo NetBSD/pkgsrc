@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.5 2016/08/27 21:57:05 khorben Exp $
+$NetBSD: distinfo,v 1.6 2016/10/25 11:51:40 khorben Exp $
 
-SHA1 (1.8.7.tar.gz) = 93ce7126a7e036bb21153bfabc923cd74b701a6b
-RMD160 (1.8.7.tar.gz) = 80d421c73a1406ac64c62a0b460928ec9ad75ce5
-SHA512 (1.8.7.tar.gz) = 462775ea9cef6f5741c895d2d4b872abbe269bbaab78d4d601a1b77655d267bb339f1ef69595a9f9342cedf773462177755550b024df4e0ef57c427e229487b1
-Size (1.8.7.tar.gz) = 2972264 bytes
+SHA1 (pkg-1.8.7.tar.xz) = 4727c25b0e4c34df1bf7a00df0e9c6370e855416
+RMD160 (pkg-1.8.7.tar.xz) = f0087c0e88ef890300a46a28d0644926fa7a7acb
+SHA512 (pkg-1.8.7.tar.xz) = 61b1553cb444ba30bcf1c9a5da204ff29b08ad87641c3f49fb7e7efd9f5396742e6812bf96a0228d3e76916648511faa086d197cc41c2ced9979615e23a3bc43
+Size (pkg-1.8.7.tar.xz) = 1950148 bytes
 SHA1 (patch-docs_Makefile.am) = aa6d5c9310c644d13d55c3176cd186c37cccc7c2
+SHA1 (patch-libpkg_pkg.h.in) = e74a96513c1e74ddea8a5b05b080cef57976d68b
+SHA1 (patch-libpkg_pkg__elf.c) = 07174f421e162fc74f1c2b306f60da1273b8b6ec
