@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/05/06 09:45:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/10/26 14:28:16 fhajny Exp $
 bin/pwiz.py
 ${PYSITELIB}/peewee.py
 ${PYSITELIB}/peewee.pyc
@@ -75,6 +75,9 @@ ${PYSITELIB}/playhouse/sqlite_ext.pyo
 ${PYSITELIB}/playhouse/sqlite_udf.py
 ${PYSITELIB}/playhouse/sqlite_udf.pyc
 ${PYSITELIB}/playhouse/sqlite_udf.pyo
+${PYSITELIB}/playhouse/sqliteq.py
+${PYSITELIB}/playhouse/sqliteq.pyc
+${PYSITELIB}/playhouse/sqliteq.pyo
 ${PYSITELIB}/playhouse/test_utils.py
 ${PYSITELIB}/playhouse/test_utils.pyc
 ${PYSITELIB}/playhouse/test_utils.pyo
