@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/10/25 08:22:27 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2016/10/26 10:50:33 fhajny Exp $
 
-SHA1 (mapcode-cpp-2.3.0.tar.gz) = 6c0a8520bb42ac635849b52e94bcd90cb29348ef
-RMD160 (mapcode-cpp-2.3.0.tar.gz) = ffc35adac1255c77df6c9f4b7b347341c177300c
-SHA512 (mapcode-cpp-2.3.0.tar.gz) = 7ed70930ae6444d3d5ef7b82c1e719dc179ec18e204c892d0c140e30dddd68021f684d9ab4cae8be7998a290f999b740af4c42fee6b147718cdfc6b2aa743975
-Size (mapcode-cpp-2.3.0.tar.gz) = 919736 bytes
+SHA1 (mapcode-cpp-2.4.0.tar.gz) = 393cdb4cb935847d122bc09f351c9f639b6fa96e
+RMD160 (mapcode-cpp-2.4.0.tar.gz) = 2ffff7a096bbab58571f7ac8223ad86f602a67e4
+SHA512 (mapcode-cpp-2.4.0.tar.gz) = 657543dcc31433d48a33cf3e499f33581d7f2b01c6fe5f203a811d31d82df13e869a914098ed9d1ade349b929012d2b91175f55074b34a9fcb7af49fa556fc7a
+Size (mapcode-cpp-2.4.0.tar.gz) = 990523 bytes
