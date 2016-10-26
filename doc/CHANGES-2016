@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4461 2016/10/26 14:28:25 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4462 2016/10/26 14:42:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6206,3 +6206,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/elasticsearch to 2.4.1 [fhajny 2016-10-26]
 	Updated devel/nspr to 4.13.1 [ryoon 2016-10-26]
 	Updated databases/py-peewee to 2.8.5 [fhajny 2016-10-26]
+	Updated time/py-vdirsyncer to 0.14.0 [wiz 2016-10-26]
