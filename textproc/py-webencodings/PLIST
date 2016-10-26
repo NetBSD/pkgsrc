@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2016/10/26 07:50:24 kleink Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/webencodings/__init__.py
+${PYSITELIB}/webencodings/__init__.pyo
+${PYSITELIB}/webencodings/__init__.pyc
+${PYSITELIB}/webencodings/labels.py
+${PYSITELIB}/webencodings/labels.pyo
+${PYSITELIB}/webencodings/labels.pyc
+${PYSITELIB}/webencodings/mklabels.py
+${PYSITELIB}/webencodings/mklabels.pyo
+${PYSITELIB}/webencodings/mklabels.pyc
+${PYSITELIB}/webencodings/tests.py
+${PYSITELIB}/webencodings/tests.pyo
+${PYSITELIB}/webencodings/tests.pyc
+${PYSITELIB}/webencodings/x_user_defined.py
+${PYSITELIB}/webencodings/x_user_defined.pyo
+${PYSITELIB}/webencodings/x_user_defined.pyc
