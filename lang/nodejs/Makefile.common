@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2016/10/25 19:54:39 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/10/26 13:00:20 pho Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 # used by lang/nodejs6/Makefile
@@ -49,12 +49,11 @@ BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 TEST_TARGET=		check
 
 .if defined(TOOLS_PLATFORM.paxctl)
-post-configure:
-	${SED} 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|' \
-	    < ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk \
-	    > ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk.tmp
-	${MV} ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk.tmp \
-	      ${WRKSRC}/out/deps/v8/tools/gyp/mksnapshot.target.mk
+SUBST_CLASSES+=			mksnapshot
+SUBST_STAGE.mksnapshot=		post-configure
+SUBST_FILES.mksnapshot=		out/deps/v8/tools/gyp/mksnapshot.target.mk
+SUBST_FILES.mksnapshot+=	out/deps/v8/src/mksnapshot.target.mk
+SUBST_SED.mksnapshot+=		-e 's|call do_cmd,link)|call do_cmd,link)\${.newline}	${TOOLS_PLATFORM.paxctl} +m $$@|'
 .endif
 
 pre-install:
