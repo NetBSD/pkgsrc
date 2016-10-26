@@ -1,0 +1,19 @@
+This module (authres) is designed to provide support for RFC 5451/7001,
+originally http://tools.ietf.org/html/rfc5451 and currently
+http://tools.ietf.org/html/rfc7001 processing in Python.
+
+It also supports Authentication Results extensions:
+
+RFC 5617 DKIM/ADSP
+RFC 6008 DKIM signature identification (header.b)
+RFC 6212 Vouch By Reference (VBR)
+RFC 6577 Sender Policy Framework (SPF)
+draft-kucherawy-dmarc-base DMARC
+RFC 7281 Authentication-Results Registration for S/MIME
+RFC 7293, The Require-Recipient-Valid-Since Header Field
+and SMTP Service Extension, header field types
+
+SPF authentication results can relate to either the HELO identity or the Mail
+From. When creating header fields with SPF results, only set the identity
+used to evaluate the SPF result that's reported. You can use multiple objects
+to report both in a single header field. See the example in the tests file.
