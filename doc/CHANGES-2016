@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4456 2016/10/26 10:57:10 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.4457 2016/10/26 11:49:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6201,3 +6201,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/py-webencodings version 0.5 [kleink 2016-10-26]
 	Updated geography/mapcode to 2.4.0 [fhajny 2016-10-26]
 	Added mail/py-authres version 0.800 [jperkin 2016-10-26]
+	Updated security/vault to 0.6.2 [fhajny 2016-10-26]
