@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4453 2016/10/26 05:57:00 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4454 2016/10/26 07:51:56 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6198,3 +6198,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/nodejs6 version 6.9.1 [fhajny 2016-10-25]
 	Updated geography/geos to 3.5.1 [gdt 2016-10-25]
 	Updated comms/asterisk to 11.24.0 [jnemeth 2016-10-26]
+	Added textproc/py-webencodings version 0.5 [kleink 2016-10-26]
