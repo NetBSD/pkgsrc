@@ -1,0 +1,19 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2016/10/26 20:34:00 ryoon Exp $
+
+--- data/Makefile.in.orig	2016-10-03 18:30:50.000000000 +0000
++++ data/Makefile.in
+@@ -828,12 +828,10 @@ uninstall-man: uninstall-man1
+ 
+ 
+ %.desktop: %.desktop.in
+-	msgfmt --desktop -d $(top_srcdir)/po \
+-	--template $< -o $@
++	cp $^ $@
+ 
+ %.appdata.xml: %.appdata.xml.in
+-	msgfmt --xml -d $(top_srcdir)/po \
+-	--template $< -o $@
++	cp $^ $@
+ 
+ # Actually, just ignore gschema translations...
+ org.baedert.corebird.gschema.xml: org.baedert.corebird.gschema.xml.in
