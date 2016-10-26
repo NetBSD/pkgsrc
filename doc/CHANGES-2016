@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4454 2016/10/26 07:51:56 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.4455 2016/10/26 10:50:42 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6199,3 +6199,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/geos to 3.5.1 [gdt 2016-10-25]
 	Updated comms/asterisk to 11.24.0 [jnemeth 2016-10-26]
 	Added textproc/py-webencodings version 0.5 [kleink 2016-10-26]
+	Updated geography/mapcode to 2.4.0 [fhajny 2016-10-26]
