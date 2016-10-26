@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4457 2016/10/26 11:49:24 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4458 2016/10/26 13:49:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6202,3 +6202,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/mapcode to 2.4.0 [fhajny 2016-10-26]
 	Added mail/py-authres version 0.800 [jperkin 2016-10-26]
 	Updated security/vault to 0.6.2 [fhajny 2016-10-26]
+	Updated sysutils/consul to 0.7.0 [fhajny 2016-10-26]
