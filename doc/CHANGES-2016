@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4464 2016/10/26 20:34:39 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4465 2016/10/26 20:47:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6209,3 +6209,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-vdirsyncer to 0.14.0 [wiz 2016-10-26]
 	Updated www/firefox to 49.0.2 [ryoon 2016-10-26]
 	Updated net/corebird to 1.3.3 [ryoon 2016-10-26]
+	Updated www/firefox-l10n to 49.0.2 [ryoon 2016-10-26]
