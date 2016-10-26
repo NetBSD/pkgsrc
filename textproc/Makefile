@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.896 2016/09/02 16:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.897 2016/10/26 07:50:54 kleink Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -758,6 +758,7 @@ SUBDIR+=	py-tinycss
 SUBDIR+=	py-uritemplate
 SUBDIR+=	py-validators
 SUBDIR+=	py-vobject
+SUBDIR+=	py-webencodings
 SUBDIR+=	py-xlrd
 SUBDIR+=	py-xlsxwriter
 SUBDIR+=	py-xlwt
