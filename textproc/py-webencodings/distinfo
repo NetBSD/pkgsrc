@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/10/26 07:50:24 kleink Exp $
+
+SHA1 (webencodings-0.5.tar.gz) = ddfaad0b2ee2ba84dde81a6793c60934a4172f4d
+RMD160 (webencodings-0.5.tar.gz) = 2d8beeb2b2506e9aa6a97410b5540a8070bf7a5b
+SHA512 (webencodings-0.5.tar.gz) = 3f0c1995d23a8ccf8f0b02301edec5834336c27b7daf2335ded888073a1f13058acd93477cd020bb2b12d51b393d9b3166acf4995564cb9751ace8df35a891c2
+Size (webencodings-0.5.tar.gz) = 9479 bytes
