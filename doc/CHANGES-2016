@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4459 2016/10/26 13:56:43 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4460 2016/10/26 14:15:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6204,3 +6204,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/vault to 0.6.2 [fhajny 2016-10-26]
 	Updated sysutils/consul to 0.7.0 [fhajny 2016-10-26]
 	Updated databases/elasticsearch to 2.4.1 [fhajny 2016-10-26]
+	Updated devel/nspr to 4.13.1 [ryoon 2016-10-26]
