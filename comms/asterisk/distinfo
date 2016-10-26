@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.80 2016/09/23 19:16:29 jnemeth Exp $
+$NetBSD: distinfo,v 1.81 2016/10/26 05:53:37 jnemeth Exp $
 
-SHA1 (asterisk-11.23.1/asterisk-11.23.1.tar.gz) = cae7aa5a7e1515928a255f5bd3715f67c13285d3
-RMD160 (asterisk-11.23.1/asterisk-11.23.1.tar.gz) = e789fc326db6771e3a865516241dbc47ecb73fd7
-SHA512 (asterisk-11.23.1/asterisk-11.23.1.tar.gz) = 6d067ea86a7c050b19e29d6ea25aefd23c3f32bb7d334f4e3c74bcaedaf21e4faeeab71b4fd260fc39f3e12f645c3bf89737f4c2d16f988cc66f93d4e47f80a7
-Size (asterisk-11.23.1/asterisk-11.23.1.tar.gz) = 35098451 bytes
-SHA1 (asterisk-11.23.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 831ae6442e23cbef1e7d1c84798778ad0b0524d1
-RMD160 (asterisk-11.23.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = d52df795201c53fc4cd7d99ed41516e312f6f0f3
-SHA512 (asterisk-11.23.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = c7d3c3fd2c854e6776801312d34bf69bbed78a443c16121637f508c5275f18b1d415cbb6e4f6f8c5aa3769cbbfa1a11485b9972053777f3ac39256c2c81729f1
-Size (asterisk-11.23.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 4256538 bytes
+SHA1 (asterisk-11.24.0/asterisk-11.24.0.tar.gz) = 30baba5d03a3a31c1861771b1ccb1275e7778655
+RMD160 (asterisk-11.24.0/asterisk-11.24.0.tar.gz) = 5c478d86fb080c483aabd94f48d9593f9eeef9cc
+SHA512 (asterisk-11.24.0/asterisk-11.24.0.tar.gz) = 0ae77070432da3d07c8431b174b32f6c261d8a4397bf72c26e22ed15dbc10a1c5814b1a9856e98997b935cc0c4e70cdb4415ac6472b2e5135fd8817deed8058f
+Size (asterisk-11.24.0/asterisk-11.24.0.tar.gz) = 35139944 bytes
+SHA1 (asterisk-11.24.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 831ae6442e23cbef1e7d1c84798778ad0b0524d1
+RMD160 (asterisk-11.24.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = d52df795201c53fc4cd7d99ed41516e312f6f0f3
+SHA512 (asterisk-11.24.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = c7d3c3fd2c854e6776801312d34bf69bbed78a443c16121637f508c5275f18b1d415cbb6e4f6f8c5aa3769cbbfa1a11485b9972053777f3ac39256c2c81729f1
+Size (asterisk-11.24.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 4256538 bytes
 SHA1 (patch-Makefile) = 5fd774779d3c8d85936beca8a3407dd3011af2dc
 SHA1 (patch-addons_chan__ooh323.c) = 57f61a2edf0f9f022e03837230ee572ec9cf47b4
 SHA1 (patch-apps_app__confbridge.c) = c815905994355a19c32e8e3e2eb5dc9f1679eb29
@@ -76,6 +76,7 @@ SHA1 (patch-res_res__calendar.c) = a4c491d8c77f88d0834d0eb52622f7c6e4f3428b
 SHA1 (patch-res_res__calendar__caldav.c) = 673e8a256fc748338f35c7deddbf283809d19904
 SHA1 (patch-res_res__calendar__icalendar.c) = 3258522abbdc5c0cfe76868f73f16931118983e5
 SHA1 (patch-res_res__config__pgsql.c) = 719fa8939ca0e6cae256dd1b19a11405f475a620
+SHA1 (patch-res_res__fax.c) = 5555bfe6f911f4bdbd5d54dca5260138c296744d
 SHA1 (patch-res_res__timing__kqueue.c) = 36dba3fb1081bccc872145a4d9601e179ac2981a
 SHA1 (patch-res_res__xmpp.c) = 25ce66a0536a290598b4c11f14c7ab94f6577af5
 SHA1 (patch-sounds_Makefile) = 792c2e25e1c8334fe8c9038b8b630376a5894c31
