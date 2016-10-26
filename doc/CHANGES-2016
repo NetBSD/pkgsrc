@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4467 2016/10/26 22:51:46 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4468 2016/10/26 23:41:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6212,3 +6212,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox-l10n to 49.0.2 [ryoon 2016-10-26]
 	Updated mail/thunderbird to 45.4.0 [ryoon 2016-10-26]
 	Updated mail/thunderbird-l10n to 45.4.0 [ryoon 2016-10-26]
+	Updated net/nsd to 4.1.13 [ryoon 2016-10-26]
