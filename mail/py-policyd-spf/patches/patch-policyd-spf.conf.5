@@ -1,0 +1,24 @@
+$NetBSD: patch-policyd-spf.conf.5,v 1.1 2016/10/27 12:30:23 jperkin Exp $
+
+Use pkgsrc layout.
+
+--- policyd-spf.conf.5.orig	2014-06-04 06:01:49.000000000 +0000
++++ policyd-spf.conf.5
+@@ -138,7 +138,7 @@ python-policyd-spf \- pure-Python Postfi
+ .SH "USAGE"
+ .IX Header "USAGE"
+ Usage:
+-  policyd-spf [/etc/policyd-spf/policyd-spf.conf]
++  policyd-spf [@PKG_SYSCONFDIR@/policyd-spf.conf]
+ 
+ .SH "OTHER DOCUMENTATION"
+ .IX Header "OTHER DOCUMENTATION"
+@@ -166,7 +166,7 @@ file.
+ 
+ Configuration options are described here and in the configuration file 
+ provided with the package.  The provided setup.py installs this configuration 
+-file in /etc/policyd-spf/.
++file in @PKG_SYSCONFDIR@/.
+ 
+ Additionally, whitelisting certain IP addresses from SPF checks is supported.
+ This man page and the sample configuration file show the format to use.
