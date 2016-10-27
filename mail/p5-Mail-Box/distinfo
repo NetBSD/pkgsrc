@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 17:41:20 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/10/27 14:19:52 wen Exp $
 
-SHA1 (Mail-Box-2.118.tar.gz) = bfbf60d60ba923489affd0a024228093b22bf041
-RMD160 (Mail-Box-2.118.tar.gz) = a66c35005f629d38161725b4d5acf579546a92f3
-SHA512 (Mail-Box-2.118.tar.gz) = 50b7d0e5f973e86c3e892fb684ff72bfd8191da1d02cb8d30c17e908586f5324a3c2987c4ea0ca8e913340916d44c5322b696d658895a1ee0a037c42f681fd82
-Size (Mail-Box-2.118.tar.gz) = 631156 bytes
+SHA1 (Mail-Box-2.120.tar.gz) = 5ea2e3af29a62b3497f7e79b4ba5e3071d3ae737
+RMD160 (Mail-Box-2.120.tar.gz) = 05b40fc205ac4e1dd04790d0a04afc243f26810c
+SHA512 (Mail-Box-2.120.tar.gz) = 636ba0e7931367574e740fa1d94769f1b82b365ce9cd6c7e2d74b4b8c39d3a06794282093cd8f3f6a0aceaf639fd45ce024cef3a7f57ac321d95bd837c7510d5
+Size (Mail-Box-2.120.tar.gz) = 628615 bytes
 SHA1 (patch-aa) = 91a9f9f42bf25df5dcaf27ffb0ce0ba5b0caefc4
