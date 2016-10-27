@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:18:10 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/10/27 19:49:44 kamil Exp $
 
-SHA1 (srm-1.2.8.tar.gz) = 8b7aafc95b3ef67e2c737030567222bf50082188
-RMD160 (srm-1.2.8.tar.gz) = d1ce5fe2ec13e45c5620e6a71c1f2dfcb49ab1bc
-SHA512 (srm-1.2.8.tar.gz) = 2e67c3d69e6573ae1248c57d9e815a5d6c64c9e4c2ecc2189823d4a343de795057a4e6efa1d9195a1daa150a92624211b4ce7a091d48f430632030e7a0678ec7
-Size (srm-1.2.8.tar.gz) = 88067 bytes
-SHA1 (patch-aa) = a94522473ee72315d3ab38bfa70f336290431b9b
+SHA1 (srm-1.2.15.tar.gz) = 137bb9b94819de48b8061e4185552b6170bbf9c6
+RMD160 (srm-1.2.15.tar.gz) = 61b674b21acf48ec837fcaf59836abdda62bc496
+SHA512 (srm-1.2.15.tar.gz) = a8ec78473c55b70557fca88f525998ed51df3be58618b9da220e1bb73df013163f4e1563cbe2062b9cf1512152afeb9004b5be0be69cc1278c0d28597310dfd2
+Size (srm-1.2.15.tar.gz) = 132031 bytes
+SHA1 (patch-aa) = e73c6bc1fb3fcbd019accf417aec530694386a97
+SHA1 (patch-src_sunlink.c) = 3c6437534b62191a05a96761e54c1252bd43d0ed
+SHA1 (patch-test.sh) = 8383932967730cb55c9b530d73c374122adea197
