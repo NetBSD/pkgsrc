@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4473 2016/10/27 11:50:24 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.4474 2016/10/27 12:25:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6218,3 +6218,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.14.9 [abs 2016-10-27]
 	Added net/py-gandi.cli version 0.19 [joerg 2016-10-27]
 	Added net/pydns version 2.3.6 [jperkin 2016-10-27]
+	Updated mail/py-spf to 2.0.12 [jperkin 2016-10-27]
