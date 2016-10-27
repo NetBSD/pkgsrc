@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1132 2016/10/27 10:15:49 joerg Exp $
+# $NetBSD: Makefile,v 1.1133 2016/10/27 11:50:09 jperkin Exp $
 #
 
 COMMENT=	Networking tools
@@ -653,6 +653,7 @@ SUBDIR+=	py-twython
 SUBDIR+=	py-txamqp
 SUBDIR+=	py-zmq
 SUBDIR+=	py-zsi
+SUBDIR+=	pydns
 SUBDIR+=	pygopherd
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
