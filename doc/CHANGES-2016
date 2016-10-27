@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4471 2016/10/27 07:43:34 abs Exp $
+$NetBSD: CHANGES-2016,v 1.4472 2016/10/27 10:16:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6216,3 +6216,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk13 to 13.12.0 [jnemeth 2016-10-27]
 	Updated comms/asterisk14 to 14.1.0 [jnemeth 2016-10-27]
 	Updated net/syncthing to 0.14.9 [abs 2016-10-27]
+	Added net/py-gandi.cli version 0.19 [joerg 2016-10-27]
