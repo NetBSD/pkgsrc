@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/09/23 17:50:19 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/10/27 01:08:17 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -415,6 +415,7 @@ lib/asterisk/modules/res_curl.so
 lib/asterisk/modules/res_fax.so
 ${PLIST.spandsp}lib/asterisk/modules/res_fax_spandsp.so
 lib/asterisk/modules/res_format_attr_celt.so
+lib/asterisk/modules/res_format_attr_g729.so
 lib/asterisk/modules/res_format_attr_h263.so
 lib/asterisk/modules/res_format_attr_h264.so
 lib/asterisk/modules/res_format_attr_opus.so
