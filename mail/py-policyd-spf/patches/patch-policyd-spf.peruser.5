@@ -1,0 +1,24 @@
+$NetBSD: patch-policyd-spf.peruser.5,v 1.1 2016/10/27 12:30:23 jperkin Exp $
+
+Use pkgsrc layout.
+
+--- policyd-spf.peruser.5.orig	2014-06-04 06:01:49.000000000 +0000
++++ policyd-spf.peruser.5
+@@ -138,7 +138,7 @@ python-policyd-spf \- pure-Python Postfi
+ .SH "USAGE"
+ .IX Header "USAGE"
+ Usage:
+-  policyd-spf [/etc/policyd-spf/policyd-spf.conf]
++  policyd-spf [@PKG_SYSCONFDIR@/policyd-spf.conf]
+ 
+ .SH "OTHER DOCUMENTATION"
+ .IX Header "OTHER DOCUMENTATION"
+@@ -199,7 +199,7 @@ The text file option is useful for testi
+ users require per-user configurations.  It is specified in the main
+ configuration file:
+ 
+-"Per_User = text,/etc/pypolicyd-spf/userconf"
++"Per_User = text,@PKG_SYSCONFDIR@/userconf"
+ 
+ Lines beginning with "#" are treated as comments and ignored.  The location of
+ the file is determined by the system administrator. No default file is

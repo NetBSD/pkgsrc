@@ -1,0 +1,3 @@
+This is python-policyd-spf, an external policy checker for the postfix mail
+server.  It will use pyspf to check SPF records to determine if email should
+be rejected by your server.
