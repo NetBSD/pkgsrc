@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2016/10/27 11:49:15 jperkin Exp $
+$NetBSD: distinfo,v 1.1 2016/10/27 12:03:51 jperkin Exp $
 
 SHA1 (pydns-2.3.6.tar.gz) = 1e0c11248071d3fac0a2d7516b1d2894388edbac
 RMD160 (pydns-2.3.6.tar.gz) = 6b9e79b8b4bed84f9e121d764a65ba1a1c6f4c4b
