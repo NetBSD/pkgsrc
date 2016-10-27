@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4481 2016/10/27 18:58:36 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.4482 2016/10/27 19:49:54 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6227,3 +6227,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Mail-Box to 2.120 [wen 2016-10-27]
 	Updated www/contao42 to 4.2.5 [taca 2016-10-27]
 	Updated lang/go to 1.7.3 [bsiegert 2016-10-27]
+	Updated security/srm to 1.2.15 [kamil 2016-10-27]
