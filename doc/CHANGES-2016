@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4474 2016/10/27 12:25:15 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.4475 2016/10/27 12:30:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6219,3 +6219,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/py-gandi.cli version 0.19 [joerg 2016-10-27]
 	Added net/pydns version 2.3.6 [jperkin 2016-10-27]
 	Updated mail/py-spf to 2.0.12 [jperkin 2016-10-27]
+	mk/bsd.pkg.mk: Enable cwrappers by default on Darwin, Linux, and SunOS [jperkin 2016-10-27]
+	mk/bsd.pkg.mk: Enable cwrappers by default on NetBSD [wiz 2016-10-27]
