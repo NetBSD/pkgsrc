@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2016/10/21 11:51:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2016/10/27 10:05:38 joerg Exp $
 #
 
 DISTNAME=	libfetch-2.38
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 USE_FEATURES=		nbcompat
 
 USE_BSD_MAKEFILE=	yes
-
-MAKE_JOBS_SAFE=		NO
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(FETCH_USING:Mfetch)
