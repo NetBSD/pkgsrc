@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:25 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/10/27 11:02:41 wiz Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	lcdftypetools-2.105
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/lcdf-typetools
-COMMENT=	A bundle of outline font manipulation tools
+COMMENT=	Outline font manipulation tools
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tex-glyphlist-[0-9]*:../../fonts/tex-glyphlist
@@ -21,6 +21,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/lcdf-typetools
+
+CXXFLAGS+=	-std=c++11
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
