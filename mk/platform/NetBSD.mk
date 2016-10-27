@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.48 2016/03/11 23:54:09 khorben Exp $
+# $NetBSD: NetBSD.mk,v 1.49 2016/10/27 12:29:17 wiz Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -145,6 +145,8 @@ _OPSYS_SUPPORTS_RELRO=	yes
     (${MACHINE_ARCH} != "mips")
 _OPSYS_SUPPORTS_SSP=	yes
 .endif
+
+_OPSYS_SUPPORTS_CWRAPPERS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
