@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/10/27 11:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/10/27 11:32:16 wiz Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
@@ -12,6 +12,8 @@ COMMENT=	Postscript interpreter
 LICENSE=	gnu-agpl-v3
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
+
+.include "Makefile.common"
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:run lex pkg-config
