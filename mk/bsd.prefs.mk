@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.387 2016/06/13 13:26:42 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.388 2016/10/27 10:31:05 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -712,8 +712,13 @@ _PKGSRC_USE_SSP=	no
 _PKGSRC_USE_SSP=	yes
 .endif
 
-# Enable cwrappers if requested unless we're building the wrappers themselves.
-.if ${USE_CWRAPPERS:tl} != "no" && empty(PKGPATH:Mpkgtools/cwrappers)
+# Enable cwrappers if not building the wrappers themselves, and if the user has
+# explicitly requested them, or if they haven't but the compiler/platform is
+# known to support them.
+.if empty(PKGPATH:Mpkgtools/cwrappers) && \
+    (${USE_CWRAPPERS:tl} == "yes" || \
+    (${USE_CWRAPPERS:tl} == "auto" && \
+     ${_OPSYS_SUPPORTS_CWRAPPERS:Uno} == "yes"))
 _USE_CWRAPPERS=		yes
 .else
 _USE_CWRAPPERS=		no

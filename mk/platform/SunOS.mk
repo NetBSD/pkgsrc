@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.72 2016/08/25 12:08:29 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.73 2016/10/27 10:31:06 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -111,6 +111,11 @@ LIBABISUFFIX=		/amd64
 _OPSYS_SYSTEM_RPATH?=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 _OPSYS_INCLUDE_DIRS?=	/usr/include
+
+# Sun Studio support is untested at this time, but would be strongly desired.
+.if ${PKGSRC_COMPILER} != "sunpro"
+_OPSYS_SUPPORTS_CWRAPPERS=	yes
+.endif
 
 # support FORTIFY (with GCC)
 _OPSYS_SUPPORTS_FORTIFY=yes
