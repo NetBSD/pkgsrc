@@ -1,3 +1,5 @@
+$NetBSD: patch-0274,v 1.2 2016/10/27 12:53:13 manu Exp $
+
 From fe0eb56e29f89513b2dcf3c222fa3a2e8a09383f Mon Sep 17 00:00:00 2001
 From: Olav Morken <olav.morken@uninett.no>
 Date: Mon, 14 Mar 2016 09:47:48 +0100
