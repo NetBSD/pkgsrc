@@ -1,14 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2005/11/01 18:59:34 tv Exp $
+$NetBSD: patch-aa,v 1.2 2016/10/27 19:49:44 kamil Exp $
 
---- src/rename_unlink.c.orig	2003-04-08 12:16:56.000000000 -0400
+Disable sync() on INTERIX.
+
+--- src/rename_unlink.c.orig	2015-02-26 16:12:02.000000000 +0000
 +++ src/rename_unlink.c
-@@ -45,7 +45,9 @@ int rename_unlink(const char *path) {
-   if (rename(path, new_name) == -1)
+@@ -105,7 +105,9 @@ int rename_unlink(const char *path) {
+   if (rename(path, new_name) < 0)
      return -1;
  
 +#ifndef __INTERIX
    sync();
 +#endif
-
-   if (lstat(new_name, &statbuf) == -1) {
-     /* Bad mojo, we just renamed to new_name and now the path is invalid.
+ 
+   /* check the new name */
+   if (lstat(new_name, &statbuf) < 0) {
