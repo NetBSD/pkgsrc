@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1131 2016/10/19 19:19:01 kamil Exp $
+# $NetBSD: Makefile,v 1.1132 2016/10/27 10:15:49 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -614,6 +614,7 @@ SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
 SUBDIR+=	py-eventlib
 SUBDIR+=	py-foolscap
+SUBDIR+=	py-gandi.cli
 SUBDIR+=	py-gevent
 SUBDIR+=	py-google
 SUBDIR+=	py-google-cloud-sdk
