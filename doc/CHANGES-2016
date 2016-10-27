@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4480 2016/10/27 15:14:45 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4481 2016/10/27 18:58:36 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6226,3 +6226,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/openjdk8 to 1.8.112 [ryoon 2016-10-27]
 	Updated mail/p5-Mail-Box to 2.120 [wen 2016-10-27]
 	Updated www/contao42 to 4.2.5 [taca 2016-10-27]
+	Updated lang/go to 1.7.3 [bsiegert 2016-10-27]
