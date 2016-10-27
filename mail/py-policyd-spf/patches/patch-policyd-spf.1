@@ -1,0 +1,21 @@
+$NetBSD: patch-policyd-spf.1,v 1.1 2016/10/27 12:30:23 jperkin Exp $
+
+Use pkgsrc layout.
+
+--- policyd-spf.1.orig	2014-06-04 06:01:49.000000000 +0000
++++ policyd-spf.1
+@@ -145,12 +145,12 @@ $ policyd-spf (Start using installed con
+ 
+ $ policyd-spf \-h (Display usage message)
+ 
+-$ policyd-spf /etc/policyd-spf/policyd-spf.conf (Config file name to use)
++$ policyd-spf @PKG_SYSCONFDIR@/policyd-spf.conf (Config file name to use)
+ 
+ Configuration options are described in the sample configuration file provided
+ with the package (policyd-spf.conf.commented) and in policyd-spf.conf(5).  The
+ provided setup.py installs an uncommented configuration file in 
+-/etc/policyd-spf/.
++@PKG_SYSCONFDIR@/.
+ 
+ Additionally, whitelisting certain IP addresses or IP addresses used by listed
+ domains from SPF checks is supported.  Skipping SPF checks for local submission
