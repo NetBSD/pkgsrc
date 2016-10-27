@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/10/25 12:54:37 khorben Exp $
+# $NetBSD: Makefile,v 1.7 2016/10/27 00:06:54 khorben Exp $
 
 DISTNAME=	pkg-1.8.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
@@ -12,10 +12,10 @@ COMMENT=	Package management tool for FreeBSD
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c
 
 CPPFLAGS+=	-D_LOCALBASE="\"${PREFIX}\""
-CPPFLAGS+=	-DPORTSDIR="\"/usr/pkgsrc\""
+CPPFLAGS+=	-DPORTSDIR="\"${PKGSRCDIR}\""
 
 AUTO_MKDIRS=	yes
 
@@ -56,6 +56,7 @@ post-patch:
 		${WRKSRC}/src/
 
 post-install:
+	${RM} ${DESTDIR}${PREFIX}/sbin/pkg2ng
 	${MV} ${DESTDIR}${PREFIX}/etc/bash_completion.d/_pkg.bash \
 		${DESTDIR}${EGDIR}/bash_completion.d/_pkg.bash
 	${RMDIR} ${DESTDIR}${PREFIX}/etc/bash_completion.d
