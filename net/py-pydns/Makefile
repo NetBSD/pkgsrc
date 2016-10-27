@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/10/27 11:49:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.1 2016/10/27 12:03:51 jperkin Exp $
 
 PYDNS_VER=	2.3.6
 DISTNAME=	pydns-${PYDNS_VER}
