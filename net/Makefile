@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1133 2016/10/27 11:50:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.1134 2016/10/27 12:03:51 jperkin Exp $
 #
 
 COMMENT=	Networking tools
@@ -636,6 +636,7 @@ SUBDIR+=	py-netsnmp
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
 SUBDIR+=	py-ptt
+SUBDIR+=	py-pydns
 SUBDIR+=	py-s3cmd
 SUBDIR+=	py-simplesoap
 SUBDIR+=	py-smb
@@ -653,7 +654,6 @@ SUBDIR+=	py-twython
 SUBDIR+=	py-txamqp
 SUBDIR+=	py-zmq
 SUBDIR+=	py-zsi
-SUBDIR+=	pydns
 SUBDIR+=	pygopherd
 SUBDIR+=	qadsl
 SUBDIR+=	quagga
