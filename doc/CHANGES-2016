@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4483 2016/10/27 21:02:28 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.4484 2016/10/27 22:14:32 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6228,3 +6228,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao42 to 4.2.5 [taca 2016-10-27]
 	Updated lang/go to 1.7.3 [bsiegert 2016-10-27]
 	Updated security/srm to 1.2.15 [kamil 2016-10-27]
+	Updated geography/proj to 4.9.3 [gdt 2016-10-27]
