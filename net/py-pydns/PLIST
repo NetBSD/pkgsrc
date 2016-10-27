@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/27 11:49:15 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.1 2016/10/27 12:03:51 jperkin Exp $
 ${PYSITELIB}/DNS/Base.py
 ${PYSITELIB}/DNS/Base.pyc
 ${PYSITELIB}/DNS/Base.pyo
