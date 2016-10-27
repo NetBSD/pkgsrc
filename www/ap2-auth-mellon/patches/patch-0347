@@ -1,3 +1,5 @@
+$NetBSD: patch-0347,v 1.2 2016/10/27 12:53:13 manu Exp $
+
 From 78fe67641918016a6108e325be351156999109c9 Mon Sep 17 00:00:00 2001
 From: Emmanuel Dreyfus <manu@netbsd.org>
 Date: Tue, 18 Oct 2016 01:42:53 +0200
