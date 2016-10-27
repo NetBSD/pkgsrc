@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.68 2016/09/17 05:41:37 richard Exp $
+# $NetBSD: Linux.mk,v 1.69 2016/10/27 10:31:06 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -103,6 +103,8 @@ _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
+
+_OPSYS_SUPPORTS_CWRAPPERS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
