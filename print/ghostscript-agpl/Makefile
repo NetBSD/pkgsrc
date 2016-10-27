@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2016/09/30 12:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/10/27 11:06:01 wiz Exp $
 
-DISTNAME=	ghostscript-9.20
+DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-agpl/}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ArtifexSoftware/ghostpdl-downloads/releases/download/gs920/}
