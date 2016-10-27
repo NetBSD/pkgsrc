@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/10/27 00:24:58 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2016/10/27 13:22:44 marino Exp $
 
 DISTNAME=	pkg-1.8.7
 PKGREVISION=	3
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 
 CPPFLAGS+=	-D_LOCALBASE="\"${PREFIX}\""
-CPPFLAGS+=	-DPORTSDIR="\"${PKGSRCDIR}\""
+CPPFLAGS+=	-DPORTSDIR="\"${PKG.portsdir}\""
 
 AUTO_MKDIRS=	yes
 
@@ -61,15 +61,15 @@ SUBST_FILES.portsdir=		libpkg/pkg_config.c \
 				docs/pkg.conf.5 \
 				docs/pkg-version.8 \
 				docs/pkg.8
-SUBST_SED.portsdir=		-e "s|/usr/ports|${PORTSDIR}|g" \
+SUBST_SED.portsdir=		-e "s|/usr/ports|${PKG.portsdir}|g" \
 				-e "s|/var/db/pkg|/var/db/pkgng|g" \
 				-e "s|/var/cache/pkg|/var/cache/pkgng|g"
 SUBST_MESSAGE.portsdir=		Correct reference to FreeBSD portsdir.
 
 .if defined(PACKAGE_BUILDING) # set by Synth which has custom location, so use default path
-PORTSDIR=	/usr/pkgsrc
+PKG.portsdir?=	/usr/pkgsrc
 .else
-PORTSDIR=	${PKGSRCDIR}
+PKG.portsdir?=	${PKGSRCDIR}
 .endif
 
 # DragonFly SSL libraries are private.  pkg(8) is the one exception of a userland
