@@ -1,6 +1,8 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.10 2016/07/19 12:32:15 jperkin Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.11 2016/10/27 13:06:42 ryoon Exp $
 
---- common/autoconf/generated-configure.sh.orig	2016-05-06 12:11:21.000000000 +0000
+BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386)
+
+--- common/autoconf/generated-configure.sh.orig	2016-10-26 22:56:42.000000000 +0000
 +++ common/autoconf/generated-configure.sh
 @@ -8454,9 +8454,9 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
@@ -15,6 +17,15 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.10 2016/07/19 12:32:15
  
    MAKE_CANDIDATE=""$MAKE""
    DESCRIPTION="user supplied MAKE=$MAKE"
+@@ -11755,7 +11755,7 @@ $as_echo "$as_me: Potential Boot JDK fou
+             BOOT_JDK_FOUND=no
+           else
+             # Oh, this is looking good! We probably have found a proper JDK. Is it the correct version?
+-            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | head -n 1`
++            BOOT_JDK_VERSION=`"$BOOT_JDK/bin/java" -version 2>&1 | grep version`
+ 
+             # Extra M4 quote needed to protect [] in grep expression.
+             FOUND_VERSION_78=`echo $BOOT_JDK_VERSION | grep  '\"1\.[78]\.'`
 @@ -12539,7 +12539,7 @@ fi
        # Resolve file symlinks
        while test $COUNTER -lt 20; do
@@ -24,7 +35,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.10 2016/07/19 12:32:15
            # This is not a symbolic link! We are done!
            break
          fi
-@@ -16225,16 +16225,15 @@ $as_echo_n "checking flags for boot jdk
+@@ -16225,16 +16225,15 @@ $as_echo_n "checking flags for boot jdk 
    # Maximum amount of heap memory.
    # Maximum stack size.
    if test "x$BOOT_JDK_BITS" = x32; then
@@ -154,7 +165,7 @@ $NetBSD: patch-common_autoconf_generated-configure.sh,v 1.10 2016/07/19 12:32:15
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
        { $as_echo "$as_me:${as_lineno-$LINENO}: result: alsa pulse" >&5
-@@ -31555,7 +31571,11 @@ $as_echo "$as_me: WARNING: freetype not
+@@ -31555,7 +31571,11 @@ $as_echo "$as_me: WARNING: freetype not 
  
        # Allow --with-freetype-lib and --with-freetype-include to override
        if test "x$with_freetype_include" != x; then
