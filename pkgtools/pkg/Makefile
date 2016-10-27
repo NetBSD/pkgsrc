@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/10/27 00:06:54 khorben Exp $
+# $NetBSD: Makefile,v 1.8 2016/10/27 00:24:58 khorben Exp $
 
 DISTNAME=	pkg-1.8.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
@@ -51,9 +51,51 @@ SUBST_FILES.pkgconf-prefix=	src/pkg.conf.sample
 SUBST_SED.pkgconf-prefix+=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.pkgconf-prefix=	Correct the installation prefix in pkg.conf(5).
 
+SUBST_CLASSES+=	portsdir
+SUBST_STAGE.portsdir=		pre-install
+SUBST_FILES.portsdir=		libpkg/pkg_config.c \
+				src/pkg.conf.sample \
+				docs/pkg-create.8 \
+				docs/pkg-set.8 \
+				docs/pkg-repo.8 \
+				docs/pkg.conf.5 \
+				docs/pkg-version.8 \
+				docs/pkg.8
+SUBST_SED.portsdir=		-e "s|/usr/ports|${PORTSDIR}|g" \
+				-e "s|/var/db/pkg|/var/db/pkgng|g" \
+				-e "s|/var/cache/pkg|/var/cache/pkgng|g"
+SUBST_MESSAGE.portsdir=		Correct reference to FreeBSD portsdir.
+
+.if defined(PACKAGE_BUILDING) # set by Synth which has custom location, so use default path
+PORTSDIR=	/usr/pkgsrc
+.else
+PORTSDIR=	${PKGSRCDIR}
+.endif
+
+# DragonFly SSL libraries are private.  pkg(8) is the one exception of a userland
+# program that is allowed to link to them due to bootstrap reasons
+.if exists(/usr/lib/priv/libprivate_ssl.so)
+BUILDLINK_PASSTHRU_RPATHDIRS=	/lib/priv
+.endif
+
 post-patch:
 	${CP} ${FILESDIR}/readpassphrase_compat.h \
 		${WRKSRC}/src/
+
+# DragonFly SSL libraries are private.
+.if exists(/usr/lib/priv/libprivate_ssl.so)
+	${SED} -i.bak \
+		-e 's|lssl|lprivate_ssl|' \
+		-e 's|lcrypto|lprivate_crypto|' \
+		-e 's|la_rpath = |la_rpath = -R/lib/priv |' \
+		${WRKSRC}/libpkg/Makefile.in \
+		${WRKSRC}/src/Makefile.in \
+		${WRKSRC}/tests/Makefile.in
+	${SED} -i.bak \
+		-e '/OS_CFLAGS=/ s|SOURCE|SOURCE -I/usr/include/priv|' \
+		-e '/OS_LDFLAGS=/ s|=|="-L/usr/lib/priv -R/lib/priv"|' \
+		${WRKSRC}/configure
+.endif
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/sbin/pkg2ng
@@ -76,5 +118,8 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/pkg.conf.sample \
 		${DESTDIR}${EGDIR}/pkg.conf.sample
 
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly" && ${OPSYS} != "NetBSD"
 .include "../../archivers/libarchive/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
