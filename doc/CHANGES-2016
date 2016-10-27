@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4475 2016/10/27 12:30:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4476 2016/10/27 12:33:46 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6221,3 +6221,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/py-spf to 2.0.12 [jperkin 2016-10-27]
 	mk/bsd.pkg.mk: Enable cwrappers by default on Darwin, Linux, and SunOS [jperkin 2016-10-27]
 	mk/bsd.pkg.mk: Enable cwrappers by default on NetBSD [wiz 2016-10-27]
+	Added mail/py-policyd-spf version 1.3.2 [jperkin 2016-10-27]
