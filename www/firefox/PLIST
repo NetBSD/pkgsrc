@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.110 2016/09/20 20:01:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.111 2016/10/28 17:47:21 riastradh Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -1116,6 +1116,7 @@ lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/theme-switchi
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/theme.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/undo.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/immutable.js
+${PLIST.debug}lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-proxy.js
 lib/firefox/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-redux.js
