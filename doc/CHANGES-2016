@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4489 2016/10/28 09:48:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4490 2016/10/28 09:48:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6234,3 +6234,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-Locale to 1.10 [wiz 2016-10-28]
 	Updated devel/p5-List-AllUtils to 0.12 [wiz 2016-10-28]
 	Updated devel/p5-Sub-Exporter-Progressive to 0.001013 [wiz 2016-10-28]
+	Updated devel/p5-Test-Simple to 1.302062 [wiz 2016-10-28]
