@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4498 2016/10/28 21:31:51 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.4499 2016/10/28 23:27:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6245,3 +6245,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffplay3 to 3.2 [adam 2016-10-28]
 	Updated security/mit-krb5 to 1.14.4 [tez 2016-10-28]
 	Updated net/synergy to 1.8.4 [tnn 2016-10-28]
+	Updated devel/py-setuptools to 28.7.0 [wiz 2016-10-28]
