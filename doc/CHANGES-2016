@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4495 2016/10/28 17:27:46 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.4496 2016/10/28 19:16:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6240,3 +6240,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/vpnc-script to 20160828 [wiz 2016-10-28]
 	Updated net/openconnect to 7.07 [wiz 2016-10-28]
 	Updated print/hplip to 3.16.10 [schnoebe 2016-10-28]
+	Updated devel/SDL2 to 2.0.5 [adam 2016-10-28]
+	Updated multimedia/ffmpeg3 to 3.2 [adam 2016-10-28]
+	Updated multimedia/ffplay3 to 3.2 [adam 2016-10-28]
