@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4008.2.1 2016/10/28 11:11:12 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.4008.2.2 2016/10/28 12:55:18 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -5634,4 +5634,3 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/autogen to 5.18.10nb2 [tron 2016-09-28]
 	Updated net/libcares to 1.12.0 [wiz 2016-09-29]
 	Updated www/wordpress to 4.6.1 [morr 2016-09-29]
-	Updated net/knot to 2.3.1 [pettai 2016-10-28]
