@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4496 2016/10/28 19:16:39 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4497 2016/10/28 20:56:55 tez Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6243,3 +6243,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SDL2 to 2.0.5 [adam 2016-10-28]
 	Updated multimedia/ffmpeg3 to 3.2 [adam 2016-10-28]
 	Updated multimedia/ffplay3 to 3.2 [adam 2016-10-28]
+	Updated security/mit-krb5 to 1.14.4 [tez 2016-10-28]
