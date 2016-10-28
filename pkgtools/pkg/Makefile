@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/10/28 15:35:08 marino Exp $
+# $NetBSD: Makefile,v 1.11 2016/10/28 19:35:30 marino Exp $
 
 DISTNAME=	pkg-1.8.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
@@ -99,24 +99,13 @@ post-patch:
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/sbin/pkg2ng
-	${MV} ${DESTDIR}${PREFIX}/etc/bash_completion.d/_pkg.bash \
-		${DESTDIR}${EGDIR}/bash_completion.d/_pkg.bash
-	${RMDIR} ${DESTDIR}${PREFIX}/etc/bash_completion.d
-	${MV} ${DESTDIR}${PREFIX}/etc/periodic/daily/411.pkg-backup \
-		${DESTDIR}${EGDIR}/periodic/daily/411.pkg-backup
-	${MV} ${DESTDIR}${PREFIX}/etc/periodic/daily/490.status-pkg-changes \
-		${DESTDIR}${EGDIR}/periodic/daily/490.status-pkg-changes
-	${RMDIR} ${DESTDIR}${PREFIX}/etc/periodic/daily
-	${MV} ${DESTDIR}${PREFIX}/etc/periodic/security/410.pkg-audit \
-		${DESTDIR}${EGDIR}/periodic/security/410.pkg-audit
-	${MV} ${DESTDIR}${PREFIX}/etc/periodic/security/460.pkg-checksum \
-		${DESTDIR}${EGDIR}/periodic/security/460.pkg-checksum
-	${RMDIR} ${DESTDIR}${PREFIX}/etc/periodic/security
-	${MV} ${DESTDIR}${PREFIX}/etc/periodic/weekly/400.status-pkg \
-		${DESTDIR}${EGDIR}/periodic/weekly/400.status-pkg
-	${RMDIR} ${DESTDIR}${PREFIX}/etc/periodic/weekly
+	${RM} -rf ${DESTDIR}${EGDIR}/periodic
+	${MV} ${DESTDIR}${PREFIX}/etc/bash_completion.d \
+		${DESTDIR}${EGDIR}/
+	${MV} ${DESTDIR}${PREFIX}/etc/periodic \
+		${DESTDIR}${EGDIR}/
 	${MV} ${DESTDIR}${PREFIX}/etc/pkg.conf.sample \
-		${DESTDIR}${EGDIR}/pkg.conf.sample
+		${DESTDIR}${EGDIR}/
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly" && ${OPSYS} != "NetBSD"
