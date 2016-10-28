@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.2 2016/10/27 06:43:39 jnemeth Exp $
+$NetBSD: distinfo,v 1.3 2016/10/28 08:25:20 jnemeth Exp $
 
-SHA1 (asterisk-14.1.0/asterisk-14.1.0.tar.gz) = 23f5e9f3e9bdee1366241a19a2b77ae697f614b5
-RMD160 (asterisk-14.1.0/asterisk-14.1.0.tar.gz) = 513fa601b6f2c53850a8004f94bfe023ed02ef6d
-SHA512 (asterisk-14.1.0/asterisk-14.1.0.tar.gz) = 31ec4e6528b33c2c7cc87b3f54a638d62598f7df16994332c93ffb005575faf8fa6d319d487971222d080ffa00d5265ceb5e412d43f71a28a73415b4bed5da0e
-Size (asterisk-14.1.0/asterisk-14.1.0.tar.gz) = 40576394 bytes
-SHA1 (asterisk-14.1.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 831ae6442e23cbef1e7d1c84798778ad0b0524d1
-RMD160 (asterisk-14.1.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = d52df795201c53fc4cd7d99ed41516e312f6f0f3
-SHA512 (asterisk-14.1.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = c7d3c3fd2c854e6776801312d34bf69bbed78a443c16121637f508c5275f18b1d415cbb6e4f6f8c5aa3769cbbfa1a11485b9972053777f3ac39256c2c81729f1
-Size (asterisk-14.1.0/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 4256538 bytes
+SHA1 (asterisk-14.1.1/asterisk-14.1.1.tar.gz) = ae92ea85e72dfa532f88c3dae182f1d577f8b769
+RMD160 (asterisk-14.1.1/asterisk-14.1.1.tar.gz) = 286a5aadff7aeee35b7f670052ddb6c85cc45068
+SHA512 (asterisk-14.1.1/asterisk-14.1.1.tar.gz) = 8d812be25a81f740aace4f4cb5434d373a756b8f9f0876139e32b4ba94f0a4bcf1222dda16fad829bc35fd2ca406a9334d7c8777d530053185056c7de373d5b3
+Size (asterisk-14.1.1/asterisk-14.1.1.tar.gz) = 40538338 bytes
+SHA1 (asterisk-14.1.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 831ae6442e23cbef1e7d1c84798778ad0b0524d1
+RMD160 (asterisk-14.1.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = d52df795201c53fc4cd7d99ed41516e312f6f0f3
+SHA512 (asterisk-14.1.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = c7d3c3fd2c854e6776801312d34bf69bbed78a443c16121637f508c5275f18b1d415cbb6e4f6f8c5aa3769cbbfa1a11485b9972053777f3ac39256c2c81729f1
+Size (asterisk-14.1.1/asterisk-extra-sounds-en-gsm-1.5.tar.gz) = 4256538 bytes
 SHA1 (patch-Makefile) = 48f9452deea9572b96261208441b10967433e5c1
 SHA1 (patch-addons_chan__ooh323.c) = 9cba619ced6a4449604faebeac33d91a23519c48
 SHA1 (patch-apps_app__dumpchan.c) = 127ac02bdc180ad2334cd095aa6e646feb6fba10
