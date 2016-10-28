@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.23 2016/10/05 23:35:01 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.24 2016/10/28 17:27:21 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -1621,6 +1621,8 @@ share/hplip/ppd/HP/hp-officejet_6700-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6700.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6800-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6800.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6950-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6950.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6960-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6960.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a-hpijs.ppd.gz
@@ -1713,6 +1715,7 @@ share/hplip/ppd/HP/hp-officejet_pro_6960-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_6960.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_6970-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_6970.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_7740_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8000_a809-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8000_a809.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8000_enterprise_a811a-ps.ppd.gz
