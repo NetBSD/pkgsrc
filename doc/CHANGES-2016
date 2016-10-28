@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4492 2016/10/28 09:59:18 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4493 2016/10/28 10:02:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6237,3 +6237,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Simple to 1.302062 [wiz 2016-10-28]
 	Updated converters/p5-Unicode-Collate to 1.15 [wiz 2016-10-28]
 	Updated audio/libopenmpt to 0.2.7299 [wiz 2016-10-28]
+	Updated net/vpnc-script to 20160828 [wiz 2016-10-28]
