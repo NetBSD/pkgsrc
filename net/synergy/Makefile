@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2016/10/07 18:26:08 adam Exp $
+# $NetBSD: Makefile,v 1.37 2016/10/28 21:31:30 tnn Exp $
 
-DISTNAME=		synergy-1.8.3
-PKGREVISION=		1
+DISTNAME=		synergy-1.8.4
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=symless/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}-stable
@@ -57,9 +56,11 @@ do-install:
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-switch -Wno-unused	\
-			-Wno-deprecated-register -Wno-tautological-compare
+			-Wno-deprecated-register -Wno-tautological-compare \
+			-Wno-logical-op-parentheses
 CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-switch -Wno-unused	\
-			-Wno-deprecated-register -Wno-tautological-compare
+			-Wno-deprecated-register -Wno-tautological-compare \
+			-Wno-logical-op-parentheses
 .endif
 
 .include "../../mk/endian.mk"
@@ -74,6 +75,7 @@ CFLAGS+=	-DUSYNERGY_LITTLE_ENDIAN
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .if !exists(/System/Library/Frameworks/Carbon.framework)
 .include "../../x11/libXext/buildlink3.mk"
