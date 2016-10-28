@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.40 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: OpenBSD.mk,v 1.41 2016/10/28 09:21:08 jperkin Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -88,6 +88,8 @@ SERIAL_DEVICES?=	/dev/null
 .if exists(/usr/include/sys/event.h)
 PKG_HAVE_KQUEUE=	# defined
 .endif
+
+_OPSYS_SUPPORTS_CWRAPPERS=	yes
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
