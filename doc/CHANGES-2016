@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4494 2016/10/28 10:02:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4495 2016/10/28 17:27:46 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6239,3 +6239,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/libopenmpt to 0.2.7299 [wiz 2016-10-28]
 	Updated net/vpnc-script to 20160828 [wiz 2016-10-28]
 	Updated net/openconnect to 7.07 [wiz 2016-10-28]
+	Updated print/hplip to 3.16.10 [schnoebe 2016-10-28]
