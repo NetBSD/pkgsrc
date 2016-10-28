@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/05/17 10:32:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/28 10:01:51 wiz Exp $
 
-DISTNAME=	vpnc-script-20140805
-PKGREVISION=	1
+DISTNAME=	vpnc-script-20160828
 CATEGORIES=	net security
 MASTER_SITES=	http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/HEAD:/
 DIST_SUBDIR=	${PKGNAME_NOREV}
