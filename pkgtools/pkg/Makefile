@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2016/10/28 19:35:30 marino Exp $
+# $NetBSD: Makefile,v 1.12 2016/10/28 23:37:53 marino Exp $
 
 DISTNAME=	pkg-1.8.7
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
@@ -35,6 +35,11 @@ CONF_FILES+=	${EGDIR}/periodic/weekly/400.status-pkg \
 		${PKG_SYSCONFDIR}/periodic/weekly/400.status-pkg
 CONF_FILES+=	${EGDIR}/pkg.conf.sample \
 		${PKG_SYSCONFDIR}/pkg.conf
+
+OWN_DIRS=	${PKG_SYSCONFDIR}/bash_completion.d \
+		${PKG_SYSCONFDIR}/periodic/daily \
+		${PKG_SYSCONFDIR}/periodic/security \
+		${PKG_SYSCONFDIR}/periodic/weekly
 
 SUBST_CLASSES+=	manpages-prefix
 SUBST_STAGE.manpages-prefix=	pre-install
