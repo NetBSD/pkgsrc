@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/10/09 12:28:19 taca Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/10/28 16:10:51 jperkin Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
@@ -21,6 +21,10 @@ PATCHDIR=	${PKGDIR}/../../mail/postfix/patches
 CHECK_HEADERS_SKIP+=	src/global/mail_params.h
 
 .include "../../mk/bsd.prefs.mk"
+
+POSTFIX_USER?=		postfix
+POSTFIX_GROUP?=		postfix
+MAILDROP_GROUP?=	maildrop
 
 # POSTFIX_QUEUE_DIR is the default queue directory for Postfix.  This is
 # merely a default, and may be changed by setting "queue_directory" in
@@ -84,7 +88,9 @@ SUBST_SED.postfix+=	\
 SUBST_SED.postfix+=	\
 	-e 's|^\(mailq_path\) =.*|\1 = ${PREFIX}/bin/mailq|'
 SUBST_SED.postfix+=	\
-	-e 's|^\(setgid_group\) =.*|\1 = maildrop|'
+	-e 's|^\(mail_owner\) =.*|\1 = ${POSTFIX_USER}|'
+SUBST_SED.postfix+=	\
+	-e 's|^\(setgid_group\) =.*|\1 = ${MAILDROP_GROUP}|'
 SUBST_SED.postfix+=	\
 	-e 's|^\(manpage_directory\) =.*|\1 = ${PREFIX}/${PKGMANDIR}|'
 SUBST_SED.postfix+=	\
@@ -92,7 +98,9 @@ SUBST_SED.postfix+=	\
 SUBST_SED.postfix+=	\
 	-e 's|^\(readme_directory\) =.*|\1 = ${DOCDIR}|'
 SUBST_SED.postfix+=	\
-	-e '/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,maildrop,g'
+	-e '/^\#define DEF_MAIL_OWNER[ 	]/s,postfix,${POSTFIX_USER},g'
+SUBST_SED.postfix+=	\
+	-e '/^\#define DEF_SGID_GROUP[ 	]/s,postdrop,${MAILDROP_GROUP},g'
 
 PKG_SYSCONFSUBDIR=	postfix
 LIBEXECDIR=		${PREFIX}/libexec/postfix
