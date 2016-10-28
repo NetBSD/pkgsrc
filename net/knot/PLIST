@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10.2.1 2016/10/28 11:10:54 pettai Exp $
+@comment $NetBSD: PLIST,v 1.10.2.2 2016/10/28 12:54:22 pettai Exp $
 bin/kdig
 bin/khost
 bin/knsec3hash
 bin/knsupdate
-bin/kzonecheck
 include/dnssec/binary.h
 include/dnssec/crypto.h
 include/dnssec/dnssec.h
@@ -86,6 +85,7 @@ man/man8/knotd.8
 sbin/keymgr
 sbin/knotc
 sbin/knotd
+sbin/kzonecheck
 share/examples/knot/example.com.zone
 share/examples/knot/knot.sample.conf
 @pkgdir etc/knot
