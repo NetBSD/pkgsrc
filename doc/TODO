@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16631 2016/10/28 09:59:19 wiz Exp $
+$NetBSD: TODO,v 1.16632 2016/10/28 19:16:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-mapproj-3
 	o R-maps-3.1.0
 	o R-ncdf-1.6.8
-	o SDL2-2.0.5
 	o SDL2_net-2.0.1
 	o SOGo-3.1.0
 	o SOPE-3.0.2
