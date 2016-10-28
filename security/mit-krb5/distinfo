@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.59 2016/06/21 14:58:17 fhajny Exp $
+$NetBSD: distinfo,v 1.60 2016/10/28 20:56:14 tez Exp $
 
-SHA1 (krb5-1.14.1.tar.gz) = f12dc3b8630fd1fefb7058cd782754489377308b
-RMD160 (krb5-1.14.1.tar.gz) = 3e32a0cd365474deeeb563831b7e408f9158b36a
-SHA512 (krb5-1.14.1.tar.gz) = 5d64bb30ecb9e267e2494cea4995d8cc314916d8f6a9318fb80067ae6389ad7468656400d996698b6dc0bdb4c1355c13701b570521a7c40008cf1f83df24847d
-Size (krb5-1.14.1.tar.gz) = 12259025 bytes
+SHA1 (krb5-1.14.4.tar.gz) = b5b4a940934a5b708fbf30a1a1121439df6d5853
+RMD160 (krb5-1.14.4.tar.gz) = 12d788cca175bcf20e8497d30698a3244a7a6983
+SHA512 (krb5-1.14.4.tar.gz) = 5eb16b909d69143bfa8b2a7ba4c0deb74408462a5ec1241e97f37e30d29e259767be91a4533119e2c5e92d1fcbcab97038b2e45ad3361b5a61c3dc562c6d0d67
+Size (krb5-1.14.4.tar.gz) = 12283989 bytes
 SHA1 (patch-Makefile.in) = 11ead9de708f4da99233b66df2cf906b156faa87
 SHA1 (patch-aa) = 941848a1773dfbe51dff3134d4b8504a850a958d
 SHA1 (patch-ae) = c7395b9de5baf6612b8787fad55dbc051a680bfd
@@ -18,9 +18,11 @@ SHA1 (patch-config_pre.in) = 9b02fd3db8785ff570885eeca7ad377a315b6317
 SHA1 (patch-config_shlib.conf) = c47a647307e7d883e7c22528b7b0f5ad038cbcb3
 SHA1 (patch-configure.in) = 6675fa171d6e21ad71a58ce410d3b1ecb45add4d
 SHA1 (patch-include_osconf.hin) = d31a8164f417bc31a787c8e16d1bd24f27b7140d
+SHA1 (patch-kadmin_cli_ss_wrapper.c) = e32e6180f8d508cb2eb18489ce2fef0a1ad0f51d
 SHA1 (patch-lib_apputils_Makefile.in) = e001c7d0e9020c0e9feb5743805ef68e64012247
 SHA1 (patch-lib_apputils_net-server.c) = a10630940fc56062c1074fdc0c43a0527fa76105
 SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = 74d7d172ec4c8d7f68a093befc6b40c99b119e37
+SHA1 (patch-lib_krb5_ccache_Makefile.in) = 9a12f64c15bbca3dd55edeec16ef956e8cde9043
 SHA1 (patch-plugins_kdb_db2_Makefile.in) = f374fc5915b735075fbb751ef736f4ce54abc289
 SHA1 (patch-plugins_kdb_db2_libdb2_Makefile.in) = b4b7e8e4192b5e5318f1e42c49315789619f3ae9
 SHA1 (patch-plugins_preauth_otp_Makefile.in) = 8c779e3b37cab4138f300f4a09325387092c79f8
