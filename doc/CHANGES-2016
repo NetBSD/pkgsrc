@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4485 2016/10/28 07:30:21 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4486 2016/10/28 08:30:37 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6230,3 +6230,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/srm to 1.2.15 [kamil 2016-10-27]
 	Updated geography/proj to 4.9.3 [gdt 2016-10-27]
 	Updated comms/asterisk to 11.24.1 [jnemeth 2016-10-28]
+	Updated comms/asterisk14 to 14.1.1 [jnemeth 2016-10-28]
