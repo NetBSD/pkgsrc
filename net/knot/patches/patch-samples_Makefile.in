@@ -1,4 +1,6 @@
-$NetBSD: patch-samples_Makefile.in,v 1.4 2015/10/26 19:23:08 pettai Exp $
+$NetBSD: patch-samples_Makefile.in,v 1.5 2016/10/29 09:55:13 pettai Exp $
+
+Install sample config where pkgsrc typically install examples
 
 --- samples/Makefile.in.orig	2015-10-26 16:12:16.000000000 +0000
 +++ samples/Makefile.in
