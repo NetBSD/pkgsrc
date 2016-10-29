@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/05/23 14:27:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/10/29 19:41:53 adam Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -394,6 +394,7 @@ share/postgresql/timezone/Asia/Ust-Nera
 share/postgresql/timezone/Asia/Vientiane
 share/postgresql/timezone/Asia/Vladivostok
 share/postgresql/timezone/Asia/Yakutsk
+share/postgresql/timezone/Asia/Yangon
 share/postgresql/timezone/Asia/Yekaterinburg
 share/postgresql/timezone/Asia/Yerevan
 share/postgresql/timezone/Atlantic/Azores
