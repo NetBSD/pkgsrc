@@ -1,31 +1,27 @@
-# $NetBSD: Makefile,v 1.7 2015/04/26 09:39:06 mef Exp $
+# $NetBSD: Makefile,v 1.8 2016/10/29 20:14:42 fhajny Exp $
 
-DISTNAME=	watchman-${VERSION}
-VERSION=	3.1
-MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
-GITHUB_PROJECT=	watchman
-GITHUB_TAG=	v3.1
+DISTNAME=	watchman-3.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=facebook/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/facebook/watchman/
 COMMENT=	Watches files and takes action when they change
 LICENSE=	apache-2.0
 
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
+
 # https://github.com/facebook/watchman/issues/50
 CONFIGURE_ARGS+=	--enable-lenient
 CONFIGURE_ARGS+=	--enable-conffile=${PKG_SYSCONFDIR}/watchman.json
+CONFIGURE_ARGS+=	--enable-statedir=${VARBASE}/run/watchman
 CONFIGURE_ARGS+=	--with-pcre
 
 BUILD_DEFS+=		VARBASE
-
-SUBST_CLASSES+=		varbase
-SUBST_MESSAGE.varbase=	set WATCHMAN_STATE_DIR to ${VARBASE}/run/watchman
-SUBST_STAGE.varbase=	pre-configure
-SUBST_FILES.varbase=	configure.ac
-SUBST_SED.varbase=	-e '/^WATCHMAN_STATE_DIR/s,\\$$(prefix)/var/,${DESTDIR}${VARBASE}/,'
 
 PLIST_SUBST+=		API_VERSION=${PKGNAME_NOREV}.0
 
