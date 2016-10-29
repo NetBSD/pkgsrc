@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4500 2016/10/28 23:28:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4501 2016/10/29 02:13:51 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6247,3 +6247,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/synergy to 1.8.4 [tnn 2016-10-28]
 	Updated devel/py-setuptools to 28.7.0 [wiz 2016-10-28]
 	Updated devel/py-setuptools_scm to 1.15.0 [wiz 2016-10-28]
+	Updated comms/asterisk13 to 13.12.1 [jnemeth 2016-10-29]
