@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/09/10 19:47:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/29 08:59:48 bsiegert Exp $
 #
 
 DISTNAME=		aws-sdk-go-${GITHUB_TAG:S/v//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=aws/}
 GITHUB_TAG=		v1.4.3

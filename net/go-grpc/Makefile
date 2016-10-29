@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/09/14 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/29 08:59:48 bsiegert Exp $
 
 DISTNAME=		go-grpc-1.0.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GITHUB:=grpc/}
 GITHUB_PROJECT=		grpc-go

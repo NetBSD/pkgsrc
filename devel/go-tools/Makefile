@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2016/09/10 19:47:20 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2016/10/29 08:59:47 bsiegert Exp $
 #
 
 DISTNAME=		tools
 PKGNAME=		go-tools-1.5
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		${DISTNAME}
