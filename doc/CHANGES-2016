@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4501 2016/10/29 02:13:51 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4502 2016/10/29 09:43:10 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6248,3 +6248,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 28.7.0 [wiz 2016-10-28]
 	Updated devel/py-setuptools_scm to 1.15.0 [wiz 2016-10-28]
 	Updated comms/asterisk13 to 13.12.1 [jnemeth 2016-10-29]
+	Updated net/knot to 2.3.1 [pettai 2016-10-29]
