@@ -1,4 +1,4 @@
-$NetBSD: patch-netwerk_srtp_src_crypto_hash_hmac.c,v 1.1 2016/10/30 01:06:26 kamil Exp $
+$NetBSD: patch-netwerk_srtp_src_crypto_hash_hmac.c,v 1.2 2016/10/30 01:10:10 kamil Exp $
 
 Fix conflicting hmac symbol name with <stdlib.h> on NetBSD.
 
@@ -9,7 +9,7 @@ Fix conflicting hmac symbol name with <stdlib.h> on NetBSD.
  err_status_t
  hmac_alloc(auth_t **a, int key_len, int out_len) {
 -  extern auth_type_t hmac;
-+  extern auth_type_t my_hmac;
++  extern auth_type_t ffhmac;
    uint8_t *pointer;
  
    debug_print(mod_hmac, "allocating auth func with key length %d", key_len);
@@ -18,7 +18,7 @@ Fix conflicting hmac symbol name with <stdlib.h> on NetBSD.
    /* set pointers */
    *a = (auth_t *)pointer;
 -  (*a)->type = &hmac;
-+  (*a)->type = &my_hmac;
++  (*a)->type = &ffhmac;
    (*a)->state = pointer + sizeof(auth_t);  
    (*a)->out_len = out_len;
    (*a)->key_len = key_len;
@@ -26,7 +26,7 @@ Fix conflicting hmac symbol name with <stdlib.h> on NetBSD.
  
    /* increment global count of all hmac uses */
 -  hmac.ref_count++;
-+  my_hmac.ref_count++;
++  ffhmac.ref_count++;
  
    return err_status_ok;
  }
@@ -34,7 +34,7 @@ Fix conflicting hmac symbol name with <stdlib.h> on NetBSD.
  err_status_t
  hmac_dealloc(auth_t *a) {
 -  extern auth_type_t hmac;
-+  extern auth_type_t my_hmac;
++  extern auth_type_t ffhmac;
    
    /* zeroize entire state*/
    octet_string_set_to_zero((uint8_t *)a, 
@@ -43,7 +43,7 @@ Fix conflicting hmac symbol name with <stdlib.h> on NetBSD.
    
    /* decrement global count of all hmac uses */
 -  hmac.ref_count--;
-+  my_hmac.ref_count--;
++  ffhmac.ref_count--;
  
    return err_status_ok;
  }
