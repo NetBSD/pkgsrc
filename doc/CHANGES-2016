@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4508 2016/10/30 05:22:50 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4509 2016/10/30 09:08:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6260,3 +6260,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-Install to 1.17 [mef 2016-10-30]
 	Updated devel/p5-Devel-CheckOS to 1.77 [mef 2016-10-30]
 	Updated devel/p5-Log-Dispatchouli to 2.015 [mef 2016-10-30]
+	Updated sysutils/ansible2 to 2.1.2.0 [wen 2016-10-30]
