@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4504 2016/10/29 19:47:19 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4505 2016/10/30 05:10:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6256,3 +6256,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql93 to 9.3.15 [adam 2016-10-29]
 	Updated databases/postgresql92 to 9.2.19 [adam 2016-10-29]
 	Updated databases/postgresql91 to 9.1.24 [adam 2016-10-29]
+	Updated devel/p5-Term-ANSIColor to 4.06 [mef 2016-10-30]
