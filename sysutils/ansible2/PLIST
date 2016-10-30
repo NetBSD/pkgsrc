@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/08 14:16:25 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/10/30 09:07:23 wen Exp $
 bin/ansible
 bin/ansible-console
 bin/ansible-doc
@@ -2285,6 +2285,9 @@ ${PYSITELIB}/ansible/playbook/conditional.pyo
 ${PYSITELIB}/ansible/playbook/handler.py
 ${PYSITELIB}/ansible/playbook/handler.pyc
 ${PYSITELIB}/ansible/playbook/handler.pyo
+${PYSITELIB}/ansible/playbook/handler_task_include.py
+${PYSITELIB}/ansible/playbook/handler_task_include.pyc
+${PYSITELIB}/ansible/playbook/handler_task_include.pyo
 ${PYSITELIB}/ansible/playbook/helpers.py
 ${PYSITELIB}/ansible/playbook/helpers.pyc
 ${PYSITELIB}/ansible/playbook/helpers.pyo
@@ -2842,3 +2845,4 @@ man/man1/ansible-vault.1
 man/man1/ansible.1
 share/examples/ansible/ansible.cfg
 share/examples/ansible/hosts
+@pkgdir etc/ansible
