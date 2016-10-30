@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.256 2016/10/30 01:06:26 kamil Exp $
+$NetBSD: distinfo,v 1.257 2016/10/30 01:10:10 kamil Exp $
 
 SHA1 (firefox-49.0.2.source.tar.xz) = 52d527f06c522c95e2fcf4008dce1a9913379aaf
 RMD160 (firefox-49.0.2.source.tar.xz) = b0c7bda2f551ea025bb75b0f9a58722f7322ea2d
@@ -80,7 +80,7 @@ SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 133b1658839d9b0f932a601670862c1f4
 SHA1 (patch-modules_libpref_init_all.js) = 3bc5962fdabb5aecb72ffc7e73bb56392d1ea717
 SHA1 (patch-mozglue_build_arm.cpp) = f41ace63b3f1d2a8ccaffc98c3c64d1e22af5249
 SHA1 (patch-mozglue_build_arm.h) = 5e272f4e19b9681d43a63c45d78b0e44a392c7dc
-SHA1 (patch-netwerk_srtp_src_crypto_hash_hmac.c) = 7f097a1096c91d66fe365c0875e1bb726379d886
+SHA1 (patch-netwerk_srtp_src_crypto_hash_hmac.c) = 852abd95ca0a553bbe1b65da2fa4006fd205d588
 SHA1 (patch-netwerk_srtp_src_crypto_kernel_crypto__kernel.c) = a589bff3b76e79b54f5e617020b137ff3d7f816b
 SHA1 (patch-python_mozbuild_mozbuild_configure_options.py) = f862ee425ae016df6fe12b55050a8dc075ecce89
 SHA1 (patch-rc) = 9628b038f036f3fc0e37bdf84fa0abf99dbc8d2a
