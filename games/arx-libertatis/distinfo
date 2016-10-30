@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2016/09/02 16:46:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2016/10/30 10:25:30 maya Exp $
 
 SHA1 (arx-libertatis-1.1.2.tar.xz) = 3b14a55553c564fd33caafb3a5bdb2d328e1fde8
 RMD160 (arx-libertatis-1.1.2.tar.xz) = 94145d36664d8d747c0abc3ced9c9055fd642690
@@ -10,4 +10,5 @@ SHA1 (patch-cmake_VersionString.cmake) = afff2ae36425f3ffe0e1679d28e48ff4b6fc3d6
 SHA1 (patch-src_graphics_opengl_OpenGLRenderer.cpp) = 410769fea6b911dcb283b1da85bebd2861de8d94
 SHA1 (patch-src_io_fs_FilesystemPOSIX.cpp) = 96f1938038c667997350f51a2bb201de0c9843e3
 SHA1 (patch-src_platform_Thread.cpp) = 38e31c77c9e6e795cb37842da82b5ed6681f6aea
+SHA1 (patch-src_platform_Time.cpp) = c67f1bd2a3bdaec7426970b8f72020667abeb8ed
 SHA1 (patch-src_script_Script.cpp) = 29a923b5254077e2dc2cd73f69afb89025ef7012
