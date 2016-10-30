@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/06/08 14:16:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2016/10/30 09:07:23 wen Exp $
 
-DISTNAME=	ansible-2.1.0.0
+DISTNAME=	ansible-2.1.2.0
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
 
