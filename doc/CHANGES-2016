@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4510 2016/10/30 09:46:36 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4511 2016/10/30 11:21:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6262,3 +6262,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Dispatchouli to 2.015 [mef 2016-10-30]
 	Updated sysutils/ansible2 to 2.1.2.0 [wen 2016-10-30]
 	Updated multimedia/liboggz to 1.1.1nb1 [maya 2016-10-30]
+	Updated converters/p5-Unicode-Collate to 1.17 [wiz 2016-10-30]
