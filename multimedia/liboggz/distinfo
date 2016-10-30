@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/01/03 20:54:50 markd Exp $
+$NetBSD: distinfo,v 1.5 2016/10/30 09:41:58 maya Exp $
 
 SHA1 (liboggz-1.1.1.tar.gz) = 3540190c8c9a31d834aa7794ef991bbab699f4de
 RMD160 (liboggz-1.1.1.tar.gz) = e85073131bc8ec021b1529487ef21802d01b0260
 SHA512 (liboggz-1.1.1.tar.gz) = 8f5fc8ca49cb6f7a1160a9c1932876b771d55985d59ddc1f48497dfc08641414a58244d7a7e52bfcecdb69f52913d0123efd8f92513f8b9064e4abe1442f2cba
 Size (liboggz-1.1.1.tar.gz) = 702261 bytes
-SHA1 (patch-src_tools_oggz-chop_httpdate.c) = e99506865b72aacc98fdc26f0ab838f95f438066
-SHA1 (patch-src_tools_oggz-chop_httpdate__test.c) = c2d7c3ce0bdb6d3f14b71b9846d6e3f3ebd22f99
