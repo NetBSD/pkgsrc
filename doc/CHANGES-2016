@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4506 2016/10/30 05:16:31 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4507 2016/10/30 05:19:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6258,3 +6258,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql91 to 9.1.24 [adam 2016-10-29]
 	Updated devel/p5-Term-ANSIColor to 4.06 [mef 2016-10-30]
 	Updated devel/p5-Module-Install to 1.17 [mef 2016-10-30]
+	Updated devel/p5-Devel-CheckOS to 1.77 [mef 2016-10-30]
