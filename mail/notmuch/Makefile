@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/10/09 21:20:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/10/31 16:17:00 wiz Exp $
 
-DISTNAME=	notmuch-0.23
+DISTNAME=	notmuch-0.23.1
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
@@ -38,6 +38,7 @@ LDFLAGS.SunOS+=	-lnsl
 
 .include "../../lang/python/application.mk"
 .include "../../mail/gmime/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xapian+=	xapian>=1.2.6
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
