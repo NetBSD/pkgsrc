@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4528 2016/10/31 16:30:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4529 2016/10/31 16:31:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6282,3 +6282,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-vobject to 0.9.2 [wiz 2016-10-31]
 	Updated misc/khard to 0.11.3 [wiz 2016-10-31]
 	Updated devel/py-setuptools to 28.7.1 [wiz 2016-10-31]
+	Updated databases/py-sqlparse to 0.2.2 [wiz 2016-10-31]
