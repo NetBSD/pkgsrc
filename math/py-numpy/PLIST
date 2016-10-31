@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/08/02 10:14:46 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/10/31 16:26:57 wiz Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/numpy/__config__.pyo
 ${PYSITELIB}/numpy/__init__.py
 ${PYSITELIB}/numpy/__init__.pyc
 ${PYSITELIB}/numpy/__init__.pyo
+${PYSITELIB}/numpy/_globals.py
+${PYSITELIB}/numpy/_globals.pyc
+${PYSITELIB}/numpy/_globals.pyo
 ${PYSITELIB}/numpy/_import_tools.py
 ${PYSITELIB}/numpy/_import_tools.pyc
 ${PYSITELIB}/numpy/_import_tools.pyo
@@ -745,6 +748,7 @@ ${PYSITELIB}/numpy/testing/utils.pyo
 ${PYSITELIB}/numpy/tests/test_ctypeslib.py
 ${PYSITELIB}/numpy/tests/test_matlib.py
 ${PYSITELIB}/numpy/tests/test_numpy_version.py
+${PYSITELIB}/numpy/tests/test_reloading.py
 ${PYSITELIB}/numpy/tests/test_scripts.py
 ${PYSITELIB}/numpy/version.py
 ${PYSITELIB}/numpy/version.pyc
