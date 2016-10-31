@@ -1,41 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 13:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/10/31 16:43:17 wiz Exp $
 
-DISTNAME=	gtest-1.6.0
-PKGNAME=	${DISTNAME:S/gtest/googletest/}
-PKGREVISION=	1
+DISTNAME=	googletest-1.8.0
 CATEGORIES=	devel
-MASTER_SITES=	http://googletest.googlecode.com/files/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
+GITHUB_TAG=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	reed@reedmedia.net
-HOMEPAGE=	http://code.google.com/p/googletest/
+HOMEPAGE=	https://github.com/google/googletest
 COMMENT=	Google's C++ testing framework
 LICENSE=	modified-bsd
 
 INSTALLATION_DIRS=	bin
 
-GNU_CONFIGURE=	yes
+USE_CMAKE=	yes
 USE_LANGUAGES=	c++ c
-USE_LIBTOOL=	yes
-
-SUBST_CLASSES+=		rpathfix
-SUBST_FILES.rpathfix=	scripts/gtest-config.in
-SUBST_MESSAGE.rpathfix=	Adding rpath to gtest-config
-SUBST_SED.rpathfix=	-e 's/-L$${libdir}/${COMPILER_RPATH_FLAG}$${libdir} -L$${libdir}/g'
-SUBST_STAGE.rpathfix=	pre-configure
-
-REPLACE_PYTHON+=	scripts/*py
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.6.0
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11
-.endif
 
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/gtest-config ${DESTDIR}${PREFIX}/bin
-
-.include "../../lang/python/extension.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
