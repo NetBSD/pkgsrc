@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2016/09/06 16:28:48 maya Exp $
+# $NetBSD: Makefile,v 1.41 2016/10/31 04:10:38 dholland Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -23,7 +23,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_TOOLS+=		gmake makeinfo sed:run
+USE_TOOLS+=		gmake makeinfo sed:run perl
 GCC_REQD+=		4.4
 
 GNU_CONFIGURE=		yes
@@ -47,7 +47,7 @@ SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 
-LANGS=			c
+LANGS=			c c++
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
@@ -100,6 +100,15 @@ CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
 # build fails for missing files.
 CONFIGURE_ARGS.Darwin+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
 
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
+CONFIGURE_ARGS+=	--with-dwarf2
+CONFIGURE_ARGS+=	--disable-libitm
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-powerpc)
+CONFIGURE_ARGS+=	--disable-multilib
+.endif
+
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
@@ -114,6 +123,10 @@ SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .endif
 
 .include "options.mk"
+
+.if !empty(PKG_OPTIONS:Mgcc-go) && !empty(MACHINE_PLATFORM:MDarwin-*-*)
+BROKEN+=	Doesn't work on Darwin, GCC bugzilla ID 46986
+.endif
 
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
