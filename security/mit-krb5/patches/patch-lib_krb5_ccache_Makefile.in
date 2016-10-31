@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_krb5_ccache_Makefile.in,v 1.1 2016/10/28 20:56:14 tez Exp $
+$NetBSD: patch-lib_krb5_ccache_Makefile.in,v 1.2 2016/10/31 17:15:36 tez Exp $
 
 Fix build on OS X (missing kcmrpc.h)
 
@@ -9,7 +9,7 @@ Fix build on OS X (missing kcmrpc.h)
  
  all-windows:: subdirs $(OBJFILE) 
  
-+generate-files-mac: kcmrpc.h
++generate-files-mac: $(KCMRPC_DEPS)
 +
  ##DOS##subdirs:: ccapi\$(OUTPRE)file.lst
  
