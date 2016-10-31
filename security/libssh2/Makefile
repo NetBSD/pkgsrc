@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2016/03/05 11:27:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2016/10/31 16:18:02 wiz Exp $
 
-DISTNAME=	libssh2-1.7.0
-PKGREVISION=	1
+DISTNAME=	libssh2-1.8.0
 CATEGORIES=	security
 MASTER_SITES=	https://www.libssh2.org/download/
 
