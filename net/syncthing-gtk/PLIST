@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/09/01 17:30:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/10/31 16:35:24 wiz Exp $
 bin/syncthing-gtk
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/syncthing_gtk/__init__.py
@@ -233,6 +233,7 @@ share/locale/en/LC_MESSAGES/syncthing-gtk.mo
 share/locale/es/LC_MESSAGES/syncthing-gtk.mo
 share/locale/fr/LC_MESSAGES/syncthing-gtk.mo
 share/locale/lt/LC_MESSAGES/syncthing-gtk.mo
+share/locale/pt/LC_MESSAGES/syncthing-gtk.mo
 share/locale/ru/LC_MESSAGES/syncthing-gtk.mo
 share/locale/sk/LC_MESSAGES/syncthing-gtk.mo
 share/locale/vi/LC_MESSAGES/syncthing-gtk.mo
