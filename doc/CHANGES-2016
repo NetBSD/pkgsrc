@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4530 2016/10/31 16:33:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4531 2016/10/31 16:35:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6284,3 +6284,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 28.7.1 [wiz 2016-10-31]
 	Updated databases/py-sqlparse to 0.2.2 [wiz 2016-10-31]
 	Updated audio/taglib to 1.11.1 [wiz 2016-10-31]
+	Updated net/syncthing-gtk to 0.9.2.3 [wiz 2016-10-31]
