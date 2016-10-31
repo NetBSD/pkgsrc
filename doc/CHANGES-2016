@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4515 2016/10/30 18:10:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4516 2016/10/31 01:18:03 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6269,3 +6269,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/pulseaudio to 9.0nb1 [wiz 2016-10-30]
 	Updated graphics/freetype2 to 2.7nb1 [wiz 2016-10-30]
 	Updated devel/SDL2 to 2.0.5nb1 [wiz 2016-10-30]
+	Updated lang/jimtcl to 0.77nb1 [kamil 2016-10-31]
