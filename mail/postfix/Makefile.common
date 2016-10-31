@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.5 2016/10/28 16:10:51 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/10/31 04:19:07 maya Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
 DISTNAME=	postfix-3.1.3
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
