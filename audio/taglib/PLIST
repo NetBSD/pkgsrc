@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/05/05 12:01:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/10/31 16:32:56 wiz Exp $
 bin/taglib-config
 include/taglib/aifffile.h
 include/taglib/aiffproperties.h
@@ -107,7 +107,7 @@ include/taglib/xmfile.h
 include/taglib/xmproperties.h
 lib/libtag.so
 lib/libtag.so.1
-lib/libtag.so.1.16.0
+lib/libtag.so.1.17.0
 lib/libtag_c.so
 lib/libtag_c.so.0
 lib/libtag_c.so.0.0.0
