@@ -1,0 +1,24 @@
+$NetBSD: patch-auto.def,v 1.1 2016/10/31 01:15:12 kamil Exp $
+
+Backport upstream patch:
+
+From b7efe69818d2d12c0f004a5aaca70cd2ed2f388a Mon Sep 17 00:00:00 2001
+From: Steve Bennett <steveb@workware.net.au>
+Date: Wed, 26 Oct 2016 19:50:35 +1000
+Subject: [PATCH] build: On NetBSD backtrace is in -lexecinfo
+
+Signed-off-by: Steve Bennett <steveb@workware.net.au>
+
+--- auto.def.orig	2016-10-31 01:07:00.830631530 +0000
++++ auto.def
+@@ -106,6 +106,10 @@ cc-check-functions regcomp waitpid sigac
+ cc-check-functions syslog opendir readlink sleep usleep pipe getaddrinfo utimes
+ cc-check-functions shutdown socketpair isinf isnan link symlink fsync dup
+ 
++if {[cc-check-function-in-lib backtrace execinfo]} {
++    define-append LDLIBS [get-define lib_backtrace]
++}
++
+ if {[cc-check-functions sysinfo]} {
+     cc-with {-includes sys/sysinfo.h} {
+         cc-check-members "struct sysinfo.uptime"
