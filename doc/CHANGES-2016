@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4517 2016/10/31 04:19:25 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4518 2016/10/31 09:31:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6271,3 +6271,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SDL2 to 2.0.5nb1 [wiz 2016-10-30]
 	Updated lang/jimtcl to 0.77nb1 [kamil 2016-10-31]
 	Updated mail/postfix to 3.1.3nb1 [maya 2016-10-31]
+	Updated print/cups-filters to 1.11.5 [leot 2016-10-31]
