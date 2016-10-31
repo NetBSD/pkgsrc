@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/09/01 17:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/10/31 16:35:24 wiz Exp $
 
-DISTNAME=	syncthing-gtk-0.9.2.1
+DISTNAME=	syncthing-gtk-0.9.2.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
