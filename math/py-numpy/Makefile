@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2016/08/28 15:48:33 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/10/31 16:26:57 wiz Exp $
 
-DISTNAME=	numpy-1.11.1
+DISTNAME=	numpy-1.11.2
 GITHUB_PROJECT=	numpy
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
