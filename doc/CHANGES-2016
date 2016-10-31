@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4524 2016/10/31 16:19:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4525 2016/10/31 16:27:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6278,3 +6278,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libssh2 to 1.8.0 [wiz 2016-10-31]
 	Updated print/latexmk to 448 [wiz 2016-10-31]
 	Updated devel/py-cparser to 2.17 [wiz 2016-10-31]
+	Updated math/py-numpy to 1.11.2 [wiz 2016-10-31]
