@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4518 2016/10/31 09:31:35 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4519 2016/10/31 10:55:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6272,3 +6272,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/jimtcl to 0.77nb1 [kamil 2016-10-31]
 	Updated mail/postfix to 3.1.3nb1 [maya 2016-10-31]
 	Updated print/cups-filters to 1.11.5 [leot 2016-10-31]
+	Updated devel/ccache to 3.3.3 [adam 2016-10-31]
