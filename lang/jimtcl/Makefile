@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/10/25 19:03:05 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/10/31 01:15:12 kamil Exp $
 
 DISTNAME=	jimtcl-0.77
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=msteveb/}
 
