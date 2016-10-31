@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/08/28 15:48:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/10/31 16:29:50 wiz Exp $
 
-DISTNAME=		khard-0.11.1
+DISTNAME=		khard-0.11.3
 CATEGORIES=		misc net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khard/}
 
@@ -11,7 +11,7 @@ LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		${PYPKGPREFIX}-atomicwrites-[0-9]*:../../devel/py-atomicwrites
 DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
-DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
+DEPENDS+=		${PYPKGPREFIX}-vobject>=0.9<0.9.3:../../textproc/py-vobject
 DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
