@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2016/06/15 18:29:59 rumko Exp $
+# $NetBSD: Makefile,v 1.45 2016/11/01 12:32:01 jperkin Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -10,7 +10,7 @@ BOOST_INSTALL_LIBS=	yes
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		context log long_double_math
+PLIST_VARS+=		context fiber log long_double_math
 
 .if ${OPSYS} == "NetBSD" && ((${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "sparc64") || (!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))
 BJAM_ARGS+=		pch=off
@@ -27,6 +27,13 @@ PLIST.context=		yes
 BJAM_ARGS+=		--without-log
 .else
 PLIST.log=		yes
+.endif
+
+# fiber requires thread_local support, unavailable in older Darwin clang
+.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14
+BJAM_ARGS+=		--without-fiber
+.else
+PLIST.fiber=		yes
 .endif
 
 # Long double math functions are not available on Darwin. See
