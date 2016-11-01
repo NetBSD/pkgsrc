@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.232 2016/06/22 11:40:16 joerg Exp $
+# $NetBSD: bootstrap,v 1.233 2016/11/01 20:44:22 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1287,10 +1287,24 @@ echo ".endif			# end pkgsrc settings" >> ${TARGET_MKCONF}
 echo ".endif			# end pkgsrc settings" >> ${BOOTSTRAP_MKCONF}
 
 # build and register packages
-# usage: build_package <packagedirectory> [additional arguments]
+# usage: build_package <packagedirectory>
 build_package() {
 	run_cmd "(cd $pkgsrcdir/$1 && $bmake $make_quiet_flags MAKE_JOBS=${make_jobs} PKG_COMPRESSION=none -DPKG_PRESERVE MAKECONF=${BOOTSTRAP_MKCONF} install)"
 }
+build_package_nopreserve() {
+	run_cmd "(cd $pkgsrcdir/$1 && $bmake $make_quiet_flags MAKE_JOBS=${make_jobs} PKG_COMPRESSION=none MAKECONF=${BOOTSTRAP_MKCONF} install)"
+}
+
+#
+# cwrappers is special, we don't want to set it as a BOOTSTRAP_PKG but must
+# build it (if required) without -DPKG_PRESERVE set so that it can be deleted.
+#
+use_cwrappers=`(cd $pkgsrcdir/devel/bmake && $bmake show-var VARNAME=_USE_CWRAPPERS)`
+case "$use_cwrappers" in
+yes)
+	build_package_nopreserve "pkgtools/cwrappers"
+	;;
+esac
 
 #
 # Please make sure that the following packages and
