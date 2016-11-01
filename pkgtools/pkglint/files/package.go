@@ -22,24 +22,28 @@ type Package struct {
 	EffectivePkgnameLine *MkLine // The origin of the three effective_* values
 	SeenBsdPrefsMk       bool    // Has bsd.prefs.mk already been included?
 
-	vardef             map[string]*MkLine // (varname, varcanon) => line
-	varuse             map[string]*MkLine // (varname, varcanon) => line
-	bl3                map[string]*Line   // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
-	plistSubstCond     map[string]bool    // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
-	included           map[string]*Line   // fname => line
-	seenMakefileCommon bool               // Does the package have any .includes?
-	loadTimeTools      map[string]bool    // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
+	vardef                map[string]*MkLine // (varname, varcanon) => line
+	varuse                map[string]*MkLine // (varname, varcanon) => line
+	bl3                   map[string]*Line   // buildlink3.mk name => line; contains only buildlink3.mk files that are directly included.
+	plistSubstCond        map[string]bool    // varname => true; list of all variables that are used as conditionals (@comment or nothing) in PLISTs.
+	included              map[string]*Line   // fname => line
+	seenMakefileCommon    bool               // Does the package have any .includes?
+	loadTimeTools         map[string]bool    // true=ok, false=not ok, absent=not mentioned in USE_TOOLS.
+	conditionalIncludes   map[string]*MkLine
+	unconditionalIncludes map[string]*MkLine
 }
 
 func NewPackage(pkgpath string) *Package {
 	pkg := &Package{
-		Pkgpath:        pkgpath,
-		vardef:         make(map[string]*MkLine),
-		varuse:         make(map[string]*MkLine),
-		bl3:            make(map[string]*Line),
-		plistSubstCond: make(map[string]bool),
-		included:       make(map[string]*Line),
-		loadTimeTools:  make(map[string]bool),
+		Pkgpath:               pkgpath,
+		vardef:                make(map[string]*MkLine),
+		varuse:                make(map[string]*MkLine),
+		bl3:                   make(map[string]*Line),
+		plistSubstCond:        make(map[string]bool),
+		included:              make(map[string]*Line),
+		loadTimeTools:         make(map[string]bool),
+		conditionalIncludes:   make(map[string]*MkLine),
+		unconditionalIncludes: make(map[string]*MkLine),
 	}
 	for varname, line := range G.globalData.UserDefinedVars {
 		pkg.vardef[varname] = line
@@ -831,6 +835,33 @@ func (pkg *Package) checkLocallyModified(fname string) {
 			Explain2(
 				"See the pkgsrc guide, section \"Package components\",",
 				"keyword \"maintainer\", for more information.")
+		}
+	}
+}
+
+func (pkg *Package) CheckInclude(mkline *MkLine, indentation *Indentation) {
+	if includeLine := mkline.data.(mkLineInclude); includeLine.conditionVars == "" {
+		includeLine.conditionVars = indentation.Varnames()
+		mkline.data = includeLine
+	}
+
+	if path.Dir(abspath(mkline.Line.Fname)) == abspath(G.CurrentDir) {
+		includefile := mkline.Includefile()
+
+		if indentation.IsConditional() {
+			pkg.conditionalIncludes[includefile] = mkline
+			if other := pkg.unconditionalIncludes[includefile]; other != nil {
+				dependingOn := mkline.data.(mkLineInclude).conditionVars
+				mkline.Line.Warnf("%q is included conditionally here (depending on %s) and unconditionally in %s.",
+					cleanpath(includefile), dependingOn, other.Line.ReferenceFrom(mkline.Line))
+			}
+		} else {
+			pkg.unconditionalIncludes[includefile] = mkline
+			if other := pkg.conditionalIncludes[includefile]; other != nil {
+				dependingOn := other.data.(mkLineInclude).conditionVars
+				mkline.Line.Warnf("%q is included unconditionally here and conditionally in %s (depending on %s).",
+					cleanpath(includefile), other.Line.ReferenceFrom(mkline.Line), dependingOn)
+			}
 		}
 	}
 }
