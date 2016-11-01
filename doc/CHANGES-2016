@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4548 2016/11/01 17:00:54 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4549 2016/11/01 17:07:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6303,3 +6303,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-flexmock to 2.3.1 [taca 2016-11-01]
 	Updated devel/ruby-memoist to 0.15.0 [taca 2016-11-01]
 	Updated misc/ruby-parallel to 1.9.0 [taca 2016-11-01]
+	Updated www/ruby-unicorn to 5.2.0 [taca 2016-11-01]
