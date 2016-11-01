@@ -34,9 +34,10 @@ type mkLineConditional struct {
 	args      string
 }
 type mkLineInclude struct {
-	mustexist   bool
-	indent      string
-	includeFile string
+	mustexist     bool
+	indent        string
+	includeFile   string
+	conditionVars string // (filled in later)
 }
 type mkLineDependency struct {
 	targets string
@@ -119,13 +120,13 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 
 	if m, indent, directive, includefile := match3(text, reMkInclude); m {
 		mkline.xtype = 6
-		mkline.data = mkLineInclude{directive == "include", indent, includefile}
+		mkline.data = mkLineInclude{directive == "include", indent, includefile, ""}
 		return
 	}
 
 	if m, indent, directive, includefile := match3(text, `^\.(\s*)(s?include)\s+<([^>]+)>\s*(?:#.*)?$`); m {
 		mkline.xtype = 7
-		mkline.data = mkLineInclude{directive == "include", indent, includefile}
+		mkline.data = mkLineInclude{directive == "include", indent, includefile, ""}
 		return
 	}
 
@@ -208,7 +209,7 @@ func (mkline *MkLine) checkInclude() {
 	}
 
 	if mkline.Indent() != "" {
-		mkline.checkDirectiveIndentation()
+		mkline.checkDirectiveIndentation(G.Mk.indentation.Depth())
 	}
 
 	includefile := mkline.Includefile()
@@ -260,7 +261,7 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 	indentation := &G.Mk.indentation
 
 	switch directive {
-	case "endif", "endfor", "elif", "else":
+	case "endif", "endfor":
 		if indentation.Len() > 1 {
 			indentation.Pop()
 		} else {
@@ -268,12 +269,15 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 		}
 	}
 
-	mkline.checkDirectiveIndentation()
+	expectedDepth := indentation.Depth()
+	if directive == "elif" || directive == "else" {
+		expectedDepth = indentation.depth[len(indentation.depth)-2]
+	}
+	mkline.checkDirectiveIndentation(expectedDepth)
 
 	if directive == "if" && matches(args, `^!defined\([\w]+_MK\)$`) {
 		indentation.Push(indentation.Depth())
-
-	} else if matches(directive, `^(?:if|ifdef|ifndef|for|elif|else)$`) {
+	} else if matches(directive, `^(?:if|ifdef|ifndef|for)$`) {
 		indentation.Push(indentation.Depth() + 2)
 	}
 
@@ -340,15 +344,14 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 	}
 }
 
-func (mkline *MkLine) checkDirectiveIndentation() {
+func (mkline *MkLine) checkDirectiveIndentation(expectedDepth int) {
 	if G.Mk == nil {
 		return
 	}
 	indent := mkline.Indent()
-	indentation := G.Mk.indentation
-	if expected := strings.Repeat(" ", indentation.Depth()); indent != expected {
+	if expected := strings.Repeat(" ", expectedDepth); indent != expected {
 		if G.opts.WarnSpace && !mkline.Line.AutofixReplace("."+indent, "."+expected) {
-			mkline.Line.Notef("This directive should be indented by %d spaces.", indentation.Depth())
+			mkline.Line.Notef("This directive should be indented by %d spaces.", expectedDepth)
 		}
 	}
 }
@@ -1671,8 +1674,8 @@ func (vuc *VarUseContext) String() string {
 }
 
 type Indentation struct {
-	depth         []int             // Number of space characters; always a multiple of 2
-	conditionVars []map[string]bool // Variables on which the current path depends
+	depth         []int      // Number of space characters; always a multiple of 2
+	conditionVars [][]string // Variables on which the current path depends
 }
 
 func (ind *Indentation) Len() int {
@@ -1696,17 +1699,46 @@ func (ind *Indentation) Push(indent int) {
 
 func (ind *Indentation) AddVar(varname string) {
 	level := ind.Len() - 1
-	if ind.conditionVars[level] == nil {
-		ind.conditionVars[level] = make(map[string]bool)
+	if hasSuffix(varname, "_MK") {
+		return
 	}
-	ind.conditionVars[level][varname] = true
+	for _, existingVarname := range ind.conditionVars[level] {
+		if varname == existingVarname {
+			return
+		}
+	}
+
+	ind.conditionVars[level] = append(ind.conditionVars[level], varname)
 }
 
 func (ind *Indentation) DependsOn(varname string) bool {
+	for _, levelVarnames := range ind.conditionVars {
+		for _, levelVarname := range levelVarnames {
+			if varname == levelVarname {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+func (ind *Indentation) IsConditional() bool {
 	for _, vars := range ind.conditionVars {
-		if vars[varname] {
+		if len(vars) > 0 {
 			return true
 		}
 	}
 	return false
+}
+
+func (ind *Indentation) Varnames() string {
+	sep := ""
+	varnames := ""
+	for _, levelVarnames := range ind.conditionVars {
+		for _, levelVarname := range levelVarnames {
+			varnames += sep + levelVarname
+			sep = ", "
+		}
+	}
+	return varnames
 }
