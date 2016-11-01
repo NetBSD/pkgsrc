@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4539 2016/11/01 15:26:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4540 2016/11/01 15:32:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6294,3 +6294,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/fping to 3.13 [adam 2016-11-01]
 	Updated devel/google-glog to 0.3.4 [wiz 2016-11-01]
 	Updated devel/protobuf to 3.1.0nb1 [wiz 2016-11-01]
+	Updated textproc/FlightCrew to 0.7.2nb29 [wiz 2016-11-01]
