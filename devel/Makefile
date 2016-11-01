@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2327 2016/10/21 02:32:58 kamil Exp $
+# $NetBSD: Makefile,v 1.2328 2016/11/01 15:32:59 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -285,7 +285,6 @@ SUBDIR+=	glib2
 SUBDIR+=	glibmm
 SUBDIR+=	global
 SUBDIR+=	gmake
-SUBDIR+=	gmock
 SUBDIR+=	gmp
 SUBDIR+=	gmtk
 SUBDIR+=	gnatpython
