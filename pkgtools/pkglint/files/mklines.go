@@ -123,6 +123,9 @@ func (mklines *MkLines) Check() {
 			case "bsd.prefs.mk", "bsd.fast.prefs.mk", "bsd.builtin.mk":
 				mklines.setSeenBsdPrefsMk()
 			}
+			if G.Pkg != nil {
+				G.Pkg.CheckInclude(mkline, indentation)
+			}
 
 		case mkline.IsCond():
 			mkline.checkCond(mklines.forVars)

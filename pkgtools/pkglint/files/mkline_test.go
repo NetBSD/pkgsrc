@@ -858,3 +858,43 @@ func (s *Suite) Test_MkLine_CheckVartype_CFLAGS(c *check.C) {
 		"WARN: Makefile:2: Unknown compiler flag \"-bs\".\n"+
 		"WARN: Makefile:2: Compiler flag \"%s\\\\\\\"\" should start with a hyphen.\n")
 }
+
+func (s *Suite) Test_Indentation(c *check.C) {
+	ind := &Indentation{}
+
+	ind.Push(0)
+
+	c.Check(ind.Depth(), equals, 0)
+	c.Check(ind.DependsOn("VARNAME"), equals, false)
+
+	ind.Push(2)
+
+	c.Check(ind.Depth(), equals, 2)
+
+	ind.AddVar("LEVEL1.VAR1")
+
+	c.Check(ind.Varnames(), equals, "LEVEL1.VAR1")
+
+	ind.AddVar("LEVEL1.VAR2")
+
+	c.Check(ind.Varnames(), equals, "LEVEL1.VAR1, LEVEL1.VAR2")
+	c.Check(ind.DependsOn("LEVEL1.VAR1"), equals, true)
+	c.Check(ind.DependsOn("OTHER_VAR"), equals, false)
+
+	ind.Push(2)
+
+	ind.AddVar("LEVEL2.VAR")
+
+	c.Check(ind.Varnames(), equals, "LEVEL1.VAR1, LEVEL1.VAR2, LEVEL2.VAR")
+
+	ind.Pop()
+
+	c.Check(ind.Varnames(), equals, "LEVEL1.VAR1, LEVEL1.VAR2")
+	c.Check(ind.IsConditional(), equals, true)
+
+	ind.Pop()
+
+	c.Check(ind.Varnames(), equals, "")
+	c.Check(ind.IsConditional(), equals, false)
+
+}

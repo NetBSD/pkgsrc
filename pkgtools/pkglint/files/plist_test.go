@@ -168,6 +168,16 @@ func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
 	c.Check(s.Output(), equals, "NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.\n")
 }
 
+func (s *Suite) TestPlistChecker_checkpath__PKGMANDIR(c *check.C) {
+	lines := s.NewLines("PLIST",
+		"@comment $"+"NetBSD$",
+		"${PKGMANDIR}/man1/sh.1")
+
+	ChecklinesPlist(lines)
+
+	c.Check(s.Output(), equals, "NOTE: PLIST:2: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".\n")
+}
+
 func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 
@@ -177,6 +187,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la",
 		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la",
 		"lib/libvirt/lock-driver/lockd.la",
+		"${PKGMANDIR}/man1/sh.1",
 		"share/augeas/lenses/virtlockd.aug",
 		"share/doc/${PKGNAME}/html/32favicon.png",
 		"share/doc/${PKGNAME}/html/404.html",
@@ -196,7 +207,8 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: ~/PLIST:3: \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_storage.la\".\n"+
-		"WARN: ~/PLIST:4: \"lib/libvirt/connection-driver/libvirt_driver_libxl.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\".\n")
+		"WARN: ~/PLIST:4: \"lib/libvirt/connection-driver/libvirt_driver_libxl.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\".\n"+
+		"NOTE: ~/PLIST:6: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".\n")
 
 	s.UseCommandLine(c, "-Wall", "--autofix")
 	ChecklinesPlist(lines)
@@ -204,7 +216,29 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 	fixedLines := LoadExistingLines(fname, false)
 
 	c.Check(s.Output(), equals, ""+
+		"AUTOFIX: ~/PLIST:6: Replacing \"${PKGMANDIR}/\" with \"man/\".\n"+
 		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
 	c.Check(len(lines), equals, len(fixedLines))
+	c.Check(s.LoadTmpFile(c, "PLIST"), equals, ""+
+		"@comment $NetBSD: plist_test.go,v 1.9 2016/11/01 21:40:25 rillig Exp $\n"+
+		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la\n"+
+		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la\n"+
+		"lib/libvirt/connection-driver/libvirt_driver_storage.la\n"+
+		"lib/libvirt/lock-driver/lockd.la\n"+
+		"man/man1/sh.1\n"+
+		"share/augeas/lenses/virtlockd.aug\n"+
+		"share/doc/${PKGNAME}/html/32favicon.png\n"+
+		"share/doc/${PKGNAME}/html/404.html\n"+
+		"share/doc/${PKGNAME}/html/acl.html\n"+
+		"share/doc/${PKGNAME}/html/aclpolkit.html\n"+
+		"share/doc/${PKGNAME}/html/windows.html\n"+
+		"share/examples/libvirt/libvirt.conf\n"+
+		"share/locale/zh_CN/LC_MESSAGES/libvirt.mo\n"+
+		"share/locale/zh_TW/LC_MESSAGES/libvirt.mo\n"+
+		"share/locale/zu/LC_MESSAGES/libvirt.mo\n"+
+		"@pkgdir share/examples/libvirt/nwfilter\n"+
+		"@pkgdir        etc/libvirt/qemu/networks/autostart\n"+
+		"@pkgdir        etc/logrotate.d\n"+
+		"@pkgdir        etc/sasl2\n")
 }
