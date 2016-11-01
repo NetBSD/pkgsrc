@@ -138,6 +138,14 @@ func (ck *PlistChecker) checkpath(pline *PlistLine) {
 	if contains(basename, "${IMAKE_MANNEWSUFFIX}") {
 		pline.warnImakeMannewsuffix()
 	}
+	if hasPrefix(text, "${PKGMANDIR}/") {
+		if !line.AutofixReplace("${PKGMANDIR}/", "man/") {
+			line.Note0("PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".")
+			Explain2(
+				"The pkgsrc infrastructure takes care of replacing the correct value",
+				"when generating the actual PLIST for the package.")
+		}
+	}
 
 	topdir := ""
 	if firstSlash := strings.IndexByte(text, '/'); firstSlash != -1 {
