@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:49:48 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/11/01 16:45:27 skrll Exp $
 
-SHA1 (raspberrypi-userland-20150118.tar.gz) = 288f9ce03ec8e1ba95ff662d2110c6ef27c65b16
-RMD160 (raspberrypi-userland-20150118.tar.gz) = 2628fa62f7459a34dd16500245d8e167ad2e786f
-SHA512 (raspberrypi-userland-20150118.tar.gz) = 6f19df44721d36635ff0560c0cb6c6f2fb15a45b8a06c5dc3f9c57ce784b2b1d6a8ef234758ecef80b82b6e04f44fc239b90529ff7506e5fbea06469809a1527
-Size (raspberrypi-userland-20150118.tar.gz) = 34246284 bytes
-SHA1 (patch-interface_vchiq__arm_vchiq__test.c) = 78ba7f26aa4db7c84fe53591018489c01191a94a
+SHA1 (userland-20161101-f23cb469c938c6035ebd9a285257743f9a2f9de1.tar.gz) = e0158b3b092dd26ccc0367abf1afb34a5b09a0be
+RMD160 (userland-20161101-f23cb469c938c6035ebd9a285257743f9a2f9de1.tar.gz) = da8aa921c71939936c1fcd592d34c792ff898347
+SHA512 (userland-20161101-f23cb469c938c6035ebd9a285257743f9a2f9de1.tar.gz) = fc056c69cb4168cd6492c207a53ac5f234ea6dbb530d80546d00594ea9feafa36fdf326809f7e43ffffbdabbc25c8e44cc62fa4c5d36cb05ba7f8bf49404426d
+Size (userland-20161101-f23cb469c938c6035ebd9a285257743f9a2f9de1.tar.gz) = 32911758 bytes
+SHA1 (patch-host__applications_linux_apps_dtmerge_dtmerge.c) = 732dc54db48d43b97d558cd938617418bc0c3655
+SHA1 (patch-host__applications_linux_apps_dtoverlay_dtoverlay__main.c) = 203f016d379724cf66b114e8bfee7eb8e43c1e23
+SHA1 (patch-host__applications_linux_apps_tvservice_tvservice.c) = 2cc304252c102d46603f6649eb959984e9d44b1f
+SHA1 (patch-interface_vchiq__arm_vchiq__lib.c) = a9535aa96ba3374f2a559899c6baff9ddc935f3f
 SHA1 (patch-interface_vcos_CMakeLists.txt) = f96c052af9c1d10f3f386efc1b5d0006559e4e67
 SHA1 (patch-interface_vmcs__host_linux_vcfiled_CMakeLists.txt) = 29694762b02a75749300ebfb4fe78464f2ac20ff
