@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16652 2016/10/31 16:48:58 wiz Exp $
+$NetBSD: TODO,v 1.16653 2016/11/01 14:58:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -653,7 +653,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
 	o exaile-3.4.4
-	o exiftool-10.08
 	o exmh-2.8.0
 	o ezmlm-idx-7.2.0 [schmonz]
 	o faces-1.7.7
@@ -683,7 +682,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fop-2.1
 	o fortunes-calvin-0.3
 	o fox-1.7.54
-	o fping-3.13
 	o frama-c-20140301
 	o freenet-0.7
 	o freeradius-3.0.9
