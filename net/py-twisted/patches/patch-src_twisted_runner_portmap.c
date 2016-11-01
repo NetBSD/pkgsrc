@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1 2005/03/16 12:02:20 rillig Exp $
+$NetBSD: patch-src_twisted_runner_portmap.c,v 1.1 2016/11/01 15:55:46 wiz Exp $
 
 Let's be polite and let the system first include its headers before
 Python redefines everything.
 
---- twisted/runner/portmap.c.orig	Thu Dec  5 08:59:31 2002
-+++ twisted/runner/portmap.c	Wed Mar 16 03:41:57 2005
-@@ -19,9 +19,9 @@
+--- src/twisted/runner/portmap.c.orig	2016-10-26 02:57:22.000000000 +0000
++++ src/twisted/runner/portmap.c
+@@ -7,9 +7,9 @@
  
  /* portmap.c: A simple Python wrapper for pmap_set(3) and pmap_unset(3) */
  
