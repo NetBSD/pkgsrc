@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/10/19 12:13:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/11/01 15:26:33 wiz Exp $
 #
 # used by devel/protobuf/Makefile
 # used by devel/py-protobuf/Makefile
@@ -10,8 +10,7 @@ GITHUB_PROJECT=	protobuf
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 CATEGORIES=	devel
-HOMEPAGE=       http://code.google.com/p/protobuf/
-
+HOMEPAGE=       https://github.com/google/protobuf
 LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/protobuf-${PKGVERSION_NOREV}
