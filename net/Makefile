@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1134 2016/10/27 12:03:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.1135 2016/11/01 14:55:16 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -140,7 +140,6 @@ SUBDIR+=	flow-tools
 SUBDIR+=	fmirror
 SUBDIR+=	fpdns
 SUBDIR+=	fping
-SUBDIR+=	fping6
 SUBDIR+=	freeDiameter
 SUBDIR+=	freenet-tools
 SUBDIR+=	freeradius
