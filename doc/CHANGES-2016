@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4541 2016/11/01 15:32:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4542 2016/11/01 15:35:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6296,3 +6296,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/protobuf to 3.1.0nb1 [wiz 2016-11-01]
 	Updated textproc/FlightCrew to 0.7.2nb29 [wiz 2016-11-01]
 	Removed devel/gmock successor devel/googletest [wiz 2016-11-01]
+	Updated www/ap2-perl to 2.0.10 [adam 2016-11-01]
