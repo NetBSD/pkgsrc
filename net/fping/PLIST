@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:23 zuntum Exp $
-sbin/fping
+@comment $NetBSD: PLIST,v 1.2 2016/11/01 14:53:29 adam Exp $
 man/man8/fping.8
+${PLIST.ipv6}man/man8/fping6.8
+sbin/fping
+${PLIST.ipv6}sbin/fping6
