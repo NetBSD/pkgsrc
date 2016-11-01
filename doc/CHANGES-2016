@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4554 2016/11/01 20:22:01 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4555 2016/11/01 21:40:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6308,3 +6308,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/raspberrypi-userland to 20161101 [skrll 2016-11-01]
 	Updated emulators/wine-devel to 1.9.18nb4 [maya 2016-11-01]
 	Updated multimedia/libass to 0.13.4 [maya 2016-11-01]
+	Updated pkgtools/pkglint to 5.4.10 [rillig 2016-11-01]
