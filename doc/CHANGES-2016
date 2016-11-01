@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4552 2016/11/01 20:05:54 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4553 2016/11/01 20:15:49 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6307,3 +6307,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/ruby-tzinfo03 to 0.3.52 [taca 2016-11-01]
 	Updated misc/raspberrypi-userland to 20161101 [nick 2016-11-01]
 	Updated emulators/wine-devel to 1.9.18nb4 [maya 2016-11-01]
+	Updated multimedia/libass to 0.13.4 [maya 2016-11-01]
