@@ -1,0 +1,6 @@
+Squib is a Ruby DSL for prototyping card and board games. Write a
+little bit of Ruby, define your deck's stats, then compile your
+game into a series of images ready for print-and-play or even
+print-on-demand. Squib is very data-driven and built on the principle
+of Don't Repeat Yourself. Think of it like nanDeck done "the Ruby
+way".

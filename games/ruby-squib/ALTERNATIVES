@@ -1,0 +1,1 @@
+bin/squib @PREFIX@/bin/squib@RUBY_SUFFIX@
