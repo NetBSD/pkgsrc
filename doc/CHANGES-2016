@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4549 2016/11/01 17:07:35 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4550 2016/11/01 17:10:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6304,3 +6304,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-memoist to 0.15.0 [taca 2016-11-01]
 	Updated misc/ruby-parallel to 1.9.0 [taca 2016-11-01]
 	Updated www/ruby-unicorn to 5.2.0 [taca 2016-11-01]
+	Updated time/ruby-tzinfo03 to 0.3.52 [taca 2016-11-01]
