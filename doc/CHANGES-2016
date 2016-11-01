@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4535 2016/11/01 14:02:12 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4536 2016/11/01 14:54:12 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6289,3 +6289,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/unifont to 9.0.04 [wiz 2016-10-31]
 	Updated print/cups-filters to 1.11.5nb1 [leot 2016-11-01]
 	Updated archivers/unrar to 5.4.5 [adam 2016-11-01]
+	Updated sysutils/watchman to 4.7.0 [fhajny 2016-11-01]
