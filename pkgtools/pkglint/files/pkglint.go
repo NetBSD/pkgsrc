@@ -316,18 +316,17 @@ func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueA
 	varnameStart := i
 	for ; i < n; i++ {
 		b := text[i]
-		mask := uint(0)
-		switch b & 0xE0 {
-		case 0x20:
-			mask = 0x03ff6c10
-		case 0x40:
-			mask = 0x8ffffffe
-		case 0x60:
-			mask = 0x2ffffffe
+		switch {
+		case 'A' <= b && b <= 'Z',
+			'a' <= b && b <= 'z',
+			b == '_',
+			'0' <= b && b <= '9',
+			'$' <= b && b <= '.' && (b == '$' || b == '*' || b == '+' || b == '-' || b == '.'),
+			b == '[',
+			b == '{', b == '}':
+			continue
 		}
-		if (mask>>(b&0x1F))&1 == 0 {
-			break
-		}
+		break
 	}
 	varnameEnd := i
 

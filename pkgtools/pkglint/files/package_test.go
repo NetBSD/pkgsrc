@@ -203,3 +203,47 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 
 	c.Check(s.Output(), equals, "")
 }
+
+func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
+	G.globalData.InitVartypes()
+	s.CreateTmpFileLines(c, "category/package/Makefile",
+		mkrcsid,
+		"",
+		"COMMENT\t=Description",
+		"LICENSE\t= gnu-gpl-v2",
+		".include \"../../devel/zlib/buildlink3.mk\"",
+		".if ${OPSYS} == \"Linux\"",
+		".include \"../../sysutils/coreutils/buildlink3.mk\"",
+		".endif",
+		".include \"../../mk/bsd.pkg.mk\"")
+	s.CreateTmpFileLines(c, "category/package/options.mk",
+		mkrcsid,
+		"",
+		".if !empty(PKG_OPTIONS:Mzlib)",
+		".  include \"../../devel/zlib/buildlink3.mk\"",
+		".endif",
+		".include \"../../sysutils/coreutils/buildlink3.mk\"")
+	s.CreateTmpFileLines(c, "category/package/PLIST",
+		"@comment $"+"NetBSD$",
+		"bin/program")
+	s.CreateTmpFileLines(c, "category/package/distinfo",
+		"$"+"NetBSD$")
+
+	s.CreateTmpFileLines(c, "devel/zlib/buildlink3.mk", "")
+	s.CreateTmpFileLines(c, "licenses/gnu-gpl-v2", "")
+	s.CreateTmpFileLines(c, "mk/bsd.pkg.mk", "")
+	s.CreateTmpFileLines(c, "sysutils/coreutils/buildlink3.mk", "")
+
+	pkg := NewPackage("category/package")
+	G.globalData.Pkgsrcdir = s.tmpdir
+	G.CurrentDir = s.tmpdir + "/category/package"
+	G.CurPkgsrcdir = "../.."
+	G.Pkg = pkg
+
+	checkdirPackage("category/package")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: ~/category/package/options.mk:3: Unknown option \"zlib\".\n"+
+		"WARN: ~/category/package/options.mk:4: \"../../devel/zlib/buildlink3.mk\" is included conditionally here (depending on PKG_OPTIONS) and unconditionally in Makefile:5.\n"+
+		"WARN: ~/category/package/options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is included unconditionally here and conditionally in Makefile:7 (depending on OPSYS).\n")
+}

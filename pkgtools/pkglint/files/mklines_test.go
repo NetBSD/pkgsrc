@@ -413,3 +413,44 @@ func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
 
 	c.Check(s.Output(), equals, "")
 }
+
+func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+	mklines := s.NewMkLines("options.mk",
+		mkrcsid,
+		". if !defined(GUARD_MK)",
+		". if ${OPSYS} == ${OPSYS}",
+		".   for i in ${FILES}",
+		".     if !defined(GUARD2_MK)",
+		".     else",
+		".     endif",
+		".   endfor",
+		".   if ${COND1}",
+		".   elif ${COND2}",
+		".   else ${COND3}",
+		".   endif",
+		". endif",
+		". endif",
+		". endif")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, ""+
+		"NOTE: options.mk:2: This directive should be indented by 0 spaces.\n"+
+		"NOTE: options.mk:3: This directive should be indented by 0 spaces.\n"+
+		"NOTE: options.mk:4: This directive should be indented by 2 spaces.\n"+
+		"NOTE: options.mk:5: This directive should be indented by 4 spaces.\n"+
+		"NOTE: options.mk:6: This directive should be indented by 4 spaces.\n"+
+		"NOTE: options.mk:7: This directive should be indented by 4 spaces.\n"+
+		"NOTE: options.mk:8: This directive should be indented by 2 spaces.\n"+
+		"NOTE: options.mk:9: This directive should be indented by 2 spaces.\n"+
+		"NOTE: options.mk:10: This directive should be indented by 2 spaces.\n"+
+		"NOTE: options.mk:11: This directive should be indented by 2 spaces.\n"+
+		"ERROR: options.mk:11: \".else\" does not take arguments.\n"+
+		"NOTE: options.mk:11: If you meant \"else if\", use \".elif\".\n"+
+		"NOTE: options.mk:12: This directive should be indented by 2 spaces.\n"+
+		"NOTE: options.mk:13: This directive should be indented by 0 spaces.\n"+
+		"NOTE: options.mk:14: This directive should be indented by 0 spaces.\n"+
+		"ERROR: options.mk:15: Unmatched .endif.\n"+
+		"NOTE: options.mk:15: This directive should be indented by 0 spaces.\n")
+}
