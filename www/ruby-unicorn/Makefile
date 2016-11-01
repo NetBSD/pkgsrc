@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2016/10/20 15:25:53 taca Exp $
+# $NetBSD: Makefile,v 1.11 2016/11/01 17:06:59 taca Exp $
 
-DISTNAME=	unicorn-5.1.0
+DISTNAME=	unicorn-5.2.0
 CATEGORIES=	www
 
-MAINTAINER=	pkgsrc@NetBSD.org
-HOMEPAGE=	http://unicorn.bogomips.org/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://bogomips.org/unicorn/
 COMMENT=	Rack HTTP server for fast clients and Unix
 LICENSE=	ruby-license OR gnu-gpl-v2 OR gnu-gpl-v3
 
