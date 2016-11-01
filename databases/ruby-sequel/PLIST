@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2016/10/09 12:48:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.46 2016/11/01 16:44:15 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -129,6 +129,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.37.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.38.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.39.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.40.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
@@ -291,6 +292,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/query.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/query_literals.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/round_timestamps.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/ruby18_symbol_extensions.rb
+${GEM_LIBDIR}/lib/sequel/extensions/s.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/schema_caching.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/schema_dumper.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/select_remove.rb
@@ -303,6 +305,10 @@ ${GEM_LIBDIR}/lib/sequel/extensions/sql_comments.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/sql_expr.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_agg.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/string_date_time.rb
+${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref.rb
+${GEM_LIBDIR}/lib/sequel/extensions/symbol_aref_refinement.rb
+${GEM_LIBDIR}/lib/sequel/extensions/symbol_as.rb
+${GEM_LIBDIR}/lib/sequel/extensions/symbol_as_refinement.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
 ${GEM_LIBDIR}/lib/sequel/model.rb
@@ -517,6 +523,7 @@ ${GEM_LIBDIR}/spec/extensions/query_literals_spec.rb
 ${GEM_LIBDIR}/spec/extensions/query_spec.rb
 ${GEM_LIBDIR}/spec/extensions/rcte_tree_spec.rb
 ${GEM_LIBDIR}/spec/extensions/round_timestamps_spec.rb
+${GEM_LIBDIR}/spec/extensions/s_spec.rb
 ${GEM_LIBDIR}/spec/extensions/schema_caching_spec.rb
 ${GEM_LIBDIR}/spec/extensions/schema_dumper_spec.rb
 ${GEM_LIBDIR}/spec/extensions/schema_spec.rb
@@ -544,6 +551,8 @@ ${GEM_LIBDIR}/spec/extensions/string_date_time_spec.rb
 ${GEM_LIBDIR}/spec/extensions/string_stripper_spec.rb
 ${GEM_LIBDIR}/spec/extensions/subclasses_spec.rb
 ${GEM_LIBDIR}/spec/extensions/subset_conditions_spec.rb
+${GEM_LIBDIR}/spec/extensions/symbol_aref_refinement_spec.rb
+${GEM_LIBDIR}/spec/extensions/symbol_as_refinement_spec.rb
 ${GEM_LIBDIR}/spec/extensions/table_select_spec.rb
 ${GEM_LIBDIR}/spec/extensions/tactical_eager_loading_spec.rb
 ${GEM_LIBDIR}/spec/extensions/thread_local_timezones_spec.rb
