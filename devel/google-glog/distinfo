@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:30 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/11/01 15:22:26 wiz Exp $
 
-SHA1 (glog-0.3.3.tar.gz) = ed40c26ecffc5ad47c618684415799ebaaa30d65
-RMD160 (glog-0.3.3.tar.gz) = 27fb1bd4156f6715b84d59293d96d1cadc79ea7a
-SHA512 (glog-0.3.3.tar.gz) = 95418ff0857415a0fbc15caeb22a13f3b6736618adcc3c30e054626f1397bc58399c45f68784c70b1f5dc594ebc6ea66e386896beab5c20be72dd53b25f5a4ac
-Size (glog-0.3.3.tar.gz) = 509676 bytes
-SHA1 (patch-src_demangle.cc) = a5c0ed2b5069894a52735cc691fd12997c77a8cd
-SHA1 (patch-src_glog_stl__logging.h.in) = c86472e0f87ca99e91a5ecdb8c33affdb6679c26
+SHA1 (glog-0.3.4.tar.gz) = 69f91cd5a1de35ead0bc4103ea87294b0206a456
+RMD160 (glog-0.3.4.tar.gz) = cb336c17cf8a73307e130c4e2fc06a53426453a3
+SHA512 (glog-0.3.4.tar.gz) = 139525b546a9eccacc9bebf7cc3053ba52229e9488485ad45344c3d3134ca819d3b571250c0e3a6d84097009c8be89b0f4fa16ef5ec838ffcc237ae11c3a034c
+Size (glog-0.3.4.tar.gz) = 522508 bytes
