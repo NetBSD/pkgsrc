@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4536 2016/11/01 14:54:12 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4537 2016/11/01 14:58:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6290,3 +6290,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/cups-filters to 1.11.5nb1 [leot 2016-11-01]
 	Updated archivers/unrar to 5.4.5 [adam 2016-11-01]
 	Updated sysutils/watchman to 4.7.0 [fhajny 2016-11-01]
+	Removed net/fping6 successor net/fping [adam 2016-11-01]
+	Updated net/fping to 3.13 [adam 2016-11-01]
