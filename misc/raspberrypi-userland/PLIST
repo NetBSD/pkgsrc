@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/01/24 12:54:15 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/11/01 16:45:27 skrll Exp $
 bin/containers_check_frame_int
 bin/containers_datagram_receiver
 bin/containers_datagram_sender
@@ -10,13 +10,20 @@ bin/containers_test
 bin/containers_test_bits
 bin/containers_test_uri
 bin/containers_uri_pipe
+bin/dtmerge
+bin/dtoverlay
+bin/dtoverlay-post
+bin/dtoverlay-pre
+bin/dtparam
 bin/mmal_vc_diag
 bin/raspistill
 bin/raspivid
+bin/raspividyuv
 bin/raspiyuv
 bin/tvservice
 bin/vcgencmd
 bin/vchiq_test
+bin/vcmailbox
 bin/vcsmem
 include/EGL/egl.h
 include/EGL/eglext.h
@@ -53,6 +60,7 @@ include/interface/mmal/core/mmal_buffer_private.h
 include/interface/mmal/core/mmal_clock_private.h
 include/interface/mmal/core/mmal_component_private.h
 include/interface/mmal/core/mmal_core_private.h
+include/interface/mmal/core/mmal_events_private.h
 include/interface/mmal/core/mmal_port_private.h
 include/interface/mmal/mmal.h
 include/interface/mmal/mmal_buffer.h
@@ -187,7 +195,6 @@ include/interface/vmcs_host/vc_fileservice_defs.h
 include/interface/vmcs_host/vc_gencmd_defs.h
 include/interface/vmcs_host/vc_hdmi.h
 include/interface/vmcs_host/vc_hdmi_property.h
-include/interface/vmcs_host/vc_hostreq_defs.h
 include/interface/vmcs_host/vc_ilcs_defs.h
 include/interface/vmcs_host/vc_imageconv_defs.h
 include/interface/vmcs_host/vc_sdtv.h
@@ -205,7 +212,7 @@ include/interface/vmcs_host/vcfilesys.h
 include/interface/vmcs_host/vcfilesys_defs.h
 include/interface/vmcs_host/vcgencmd.h
 include/interface/vmcs_host/vchost.h
-include/interface/vmcs_host/vchostreq.h
+include/interface/vmcs_host/vchost_platform_config.h
 include/interface/vmcs_host/vcilcs.h
 include/interface/vmcs_host/vcilcs_common.h
 include/vcinclude/common.h
@@ -218,9 +225,14 @@ lib/libGLESv2_static.a
 lib/libOpenVG.so
 lib/libWFC.so
 lib/libbcm_host.so
+lib/libbrcmEGL.so
+lib/libbrcmGLESv2.so
+lib/libbrcmOpenVG.so
+lib/libbrcmWFC.so
 lib/libcontainers.so
 lib/libdebug_sym.so
 lib/libdebug_sym_static.a
+lib/libdtovl.so
 lib/libkhrn_client.a
 lib/libkhrn_static.a
 lib/libmmal.so
@@ -235,6 +247,13 @@ lib/libvchostif.a
 lib/libvcilcs.a
 lib/libvcos.so
 lib/libvcsm.so
+lib/pkgconfig/bcm_host.pc
+lib/pkgconfig/brcmegl.pc
+lib/pkgconfig/brcmglesv2.pc
+lib/pkgconfig/brcmvg.pc
+lib/pkgconfig/egl.pc
+lib/pkgconfig/glesv2.pc
+lib/pkgconfig/vg.pc
 lib/plugins/reader_asf.so
 lib/plugins/reader_avi.so
 lib/plugins/reader_binary.so
@@ -295,6 +314,7 @@ src/hello_pi/hello_fft/hex/shader_256.hex
 src/hello_pi/hello_fft/hex/shader_256k.hex
 src/hello_pi/hello_fft/hex/shader_2k.hex
 src/hello_pi/hello_fft/hex/shader_32k.hex
+src/hello_pi/hello_fft/hex/shader_4096k.hex
 src/hello_pi/hello_fft/hex/shader_4k.hex
 src/hello_pi/hello_fft/hex/shader_512.hex
 src/hello_pi/hello_fft/hex/shader_512k.hex
@@ -315,6 +335,7 @@ src/hello_pi/hello_fft/qasm/gpu_fft_256.qasm
 src/hello_pi/hello_fft/qasm/gpu_fft_256k.qasm
 src/hello_pi/hello_fft/qasm/gpu_fft_2k.qasm
 src/hello_pi/hello_fft/qasm/gpu_fft_32k.qasm
+src/hello_pi/hello_fft/qasm/gpu_fft_4096k.qasm
 src/hello_pi/hello_fft/qasm/gpu_fft_4k.qasm
 src/hello_pi/hello_fft/qasm/gpu_fft_512.qasm
 src/hello_pi/hello_fft/qasm/gpu_fft_512k.qasm
@@ -330,6 +351,8 @@ src/hello_pi/hello_jpeg/CMakeLists.txt
 src/hello_pi/hello_jpeg/Makefile
 src/hello_pi/hello_jpeg/jpeg.c
 src/hello_pi/hello_jpeg/jpeg.h
+src/hello_pi/hello_mmal_encode/Makefile
+src/hello_pi/hello_mmal_encode/mmal_encode.c
 src/hello_pi/hello_teapot/CMakeLists.txt
 src/hello_pi/hello_teapot/Makefile
 src/hello_pi/hello_teapot/README.md
