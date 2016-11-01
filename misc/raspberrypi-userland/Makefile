@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2015/01/24 12:54:15 skrll Exp $
+# $NetBSD: Makefile,v 1.9 2016/11/01 16:45:27 skrll Exp $
 #
 
-DISTNAME=	raspberrypi-userland-20150118
-PKGREVISION=	1
+DISTNAME=	userland-20161101
+PKGNAME=	raspberrypi-${DISTNAME}
 CATEGORIES=	misc
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/skrll/rpi/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jaredmcneill/}
+GITHUB_PROJECT=	userland
+GITHUB_TAG=	f23cb469c938c6035ebd9a285257743f9a2f9de1
 
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://github.com/jaredmcneill/userland
 COMMENT=	Various libraries for the Raspberry Pi
 LICENSE=	modified-bsd
+
+EXTRACT_USING=                bsdtar
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*arm*
 
