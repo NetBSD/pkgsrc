@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4544 2016/11/01 16:43:37 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4545 2016/11/01 16:44:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6299,3 +6299,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ap2-perl to 2.0.10 [adam 2016-11-01]
 	Updated net/py-twisted to 16.5.0 [wiz 2016-11-01]
 	Updated audio/ruby-mp3info to 0.8.10 [taca 2016-11-01]
+	Updated databases/ruby-sequel to 4.40.0 [taca 2016-11-01]
