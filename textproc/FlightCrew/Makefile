@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2016/10/07 18:26:11 adam Exp $
-#
+# $NetBSD: Makefile,v 1.38 2016/11/01 15:31:56 wiz Exp $
 
 DISTNAME=	FlightCrew-0.7.2-Code
 PKGNAME=	${DISTNAME:S/-Code//}
-PKGREVISION=	28
+PKGREVISION=	29
 CATEGORIES=	textproc
 MASTER_SITES=	http://flightcrew.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -51,7 +50,6 @@ post-extract:
 	${RM} -rf ${WRKDIR}/src/BoostParts ${WRKDIR}/src/Xerces ${WRKDIR}/src/zlib ${WRKDIR}/src/googlemock
 
 .include "../../devel/googletest/buildlink3.mk"
-.include "../../devel/gmock/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
