@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4543 2016/11/01 15:55:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4544 2016/11/01 16:43:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6298,3 +6298,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed devel/gmock successor devel/googletest [wiz 2016-11-01]
 	Updated www/ap2-perl to 2.0.10 [adam 2016-11-01]
 	Updated net/py-twisted to 16.5.0 [wiz 2016-11-01]
+	Updated audio/ruby-mp3info to 0.8.10 [taca 2016-11-01]
