@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.406 2016/09/18 16:58:26 kamil Exp $
+# $NetBSD: Makefile,v 1.407 2016/11/01 21:59:23 wiz Exp $
 #
 
 COMMENT=	Games
@@ -301,6 +301,7 @@ SUBDIR+=	rocksndiamonds
 SUBDIR+=	rocksndiamonds-levels
 SUBDIR+=	rollemup
 SUBDIR+=	rtcw
+SUBDIR+=	ruby-squib
 SUBDIR+=	sarien
 SUBDIR+=	scid
 SUBDIR+=	scummvm
