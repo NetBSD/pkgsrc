@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.8 2016/10/16 14:46:10 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.9 2016/11/01 12:12:52 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -66,4 +66,7 @@ graphics/openjpeg: security update
 Pullup ticket #5134 - requested by bsiegert
 graphics/gdk-pixbuf2-xlib: security update
 graphics/gdk-pixbuf2: security update
+
+Pullup ticket #5137 - requested by bsiegert
+multimedia/adobe-flash-plugin11: security update
 
