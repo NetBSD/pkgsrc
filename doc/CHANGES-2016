@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4545 2016/11/01 16:44:44 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4546 2016/11/01 16:49:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6300,3 +6300,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-twisted to 16.5.0 [wiz 2016-11-01]
 	Updated audio/ruby-mp3info to 0.8.10 [taca 2016-11-01]
 	Updated databases/ruby-sequel to 4.40.0 [taca 2016-11-01]
+	Updated devel/ruby-flexmock to 2.3.1 [taca 2016-11-01]
