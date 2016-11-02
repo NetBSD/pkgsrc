@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.9 2016/11/01 12:12:52 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.10 2016/11/02 17:00:15 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -66,6 +66,23 @@ graphics/openjpeg: security update
 Pullup ticket #5134 - requested by bsiegert
 graphics/gdk-pixbuf2-xlib: security update
 graphics/gdk-pixbuf2: security update
+
+Pullup ticket #5138 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5139 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5140 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5141 - requested by taca
+databases/mysql55-client: security fix
+databases/mysql55-server: security fix
+
+Pullup ticket #5142 - requested by taca
+databases/mysql56-client: security fix
+databases/mysql56-server: security fix
 
 Pullup ticket #5137 - requested by bsiegert
 multimedia/adobe-flash-plugin11: security update
