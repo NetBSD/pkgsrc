@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4557 2016/11/02 00:06:54 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4558 2016/11/02 00:15:56 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6312,3 +6312,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added games/ruby-squib version 0.11.0 [wiz 2016-11-01]
 	Updated net/bind910 to 9.10.4pl4 [taca 2016-11-02]
 	Updated net/bind99 to 9.9.9pl4 [taca 2016-11-02]
+	Added devel/creduce version 2.5.0 [joerg 2016-11-02]
