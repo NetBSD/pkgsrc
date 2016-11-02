@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.2 2016/09/27 21:14:52 maya Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.3 2016/11/02 03:48:00 maya Exp $
 lib/ConsoleKit/scripts/ck-get-x11-display-device
-lib/ConsoleKit/scripts/ck-get-x11-x11-server-pid
+lib/ConsoleKit/scripts/ck-get-x11-server-pid
