@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4558 2016/11/02 00:15:56 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.4559 2016/11/02 07:09:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6313,3 +6313,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/bind910 to 9.10.4pl4 [taca 2016-11-02]
 	Updated net/bind99 to 9.9.9pl4 [taca 2016-11-02]
 	Added devel/creduce version 2.5.0 [joerg 2016-11-02]
+	Updated www/curl to 7.51.0 [maya 2016-11-02]
