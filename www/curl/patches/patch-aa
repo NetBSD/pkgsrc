@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.34 2015/08/17 15:43:27 wiz Exp $
+$NetBSD: patch-aa,v 1.35 2016/11/02 07:09:39 maya Exp $
 
 builtin krb5-config in platforms such as solaris do not support
 the gssapi option, and need an explicit -lgss
 
---- configure.orig	2015-08-10 12:54:00.000000000 +0000
+--- configure.orig	2016-10-31 09:41:43.000000000 +0000
 +++ configure
-@@ -3737,6 +3737,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
+@@ -3817,6 +3817,7 @@ $as_echo "$as_me: $xc_bad_var_msg librar
          ;;
      esac
    done
@@ -13,7 +13,7 @@ the gssapi option, and need an explicit -lgss
    if test $xc_bad_var_cflags = yes; then
      { $as_echo "$as_me:${as_lineno-$LINENO}: using CFLAGS: $CFLAGS" >&5
  $as_echo "$as_me: using CFLAGS: $CFLAGS" >&6;}
-@@ -16723,7 +16724,7 @@ squeeze() {
+@@ -17278,7 +17279,7 @@ squeeze() {
  
  
        #
@@ -22,16 +22,7 @@ the gssapi option, and need an explicit -lgss
      #
      if test "$compiler_id" = "GNU_C" ||
        test "$compiler_id" = "CLANG"; then
-@@ -19971,7 +19972,7 @@ done
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for monotonic clock_gettime" >&5
- $as_echo_n "checking for monotonic clock_gettime... " >&6; }
-   #
--  if test "x$dontwant_rt" == "xno" ; then
-+  if test "x$dontwant_rt" = "xno" ; then
-     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
-@@ -21174,7 +21175,11 @@ $as_echo "yes" >&6; }
+@@ -21820,7 +21821,11 @@ $as_echo "yes" >&6; }
       if test -n "$host_alias" -a -f "$GSSAPI_ROOT/bin/$host_alias-krb5-config"; then
          GSSAPI_INCS=`$GSSAPI_ROOT/bin/$host_alias-krb5-config --cflags gssapi`
       elif test -f "$KRB5CONFIG"; then
@@ -44,7 +35,7 @@ the gssapi option, and need an explicit -lgss
       elif test "$GSSAPI_ROOT" != "yes"; then
          GSSAPI_INCS="-I$GSSAPI_ROOT/include"
       fi
-@@ -21347,7 +21352,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
+@@ -21993,7 +21998,7 @@ $as_echo "#define HAVE_GSSAPI 1" >>confd
          LIBS="-lgss $LIBS"
          ;;
       *)
