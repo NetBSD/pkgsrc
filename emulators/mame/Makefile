@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2016/10/02 08:20:24 maya Exp $
+# $NetBSD: Makefile,v 1.67 2016/11/03 11:14:15 wiz Exp $
 
 DISTNAME=	mame-0.178
 CATEGORIES=	emulators
@@ -30,11 +30,10 @@ MAKE_ENV=		NOWERROR=1
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-# also needs kvm and I didn't find the right place to add it in the build system
-MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lpthread -lkvm"
+# needs kvm and I didn't find the right place to add it in the build system
+MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lkvm"
 .else
-# mongoose needs libpthread but somehow doesn't link against it
-MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lpthread"
+MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib"
 .endif
 
 # use pkgsrc packages for expat, zlib, jpeg, flac, lua, sqlite3
