@@ -1,0 +1,26 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/11/03 15:06:41 fhajny Exp $
+
+Fix cmake build, ensure sane lib name.
+
+--- CMakeLists.txt.orig	2016-11-02 12:47:12.000000000 +0000
++++ CMakeLists.txt
+@@ -43,6 +43,9 @@ set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${MAPC
+ set(CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO "${MAPCODE_SANITIZER_LINKER_OPTIONS}")
+ set(CMAKE_EXE_LINKER_FLAGS_RELEASE "")
+ 
++set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/build" )
++set(LIBRARY_OUTPUT_PATH "${CMAKE_BINARY_DIR}/build" )
++
+ set(SOURCE_FILES_MAPCODELIB
+         mapcodelib/internal_data.h
+         mapcodelib/internal_alphabet_recognizer.h
+@@ -65,7 +68,8 @@ set(SOURCE_FILES_UNITTEST
+ set(SOURCE_FILES_UTILITY
+         utility/mapcode.cpp)
+ 
+-add_library(mapcodelib ${SOURCE_FILES_MAPCODELIB})
++add_library(mapcodelib SHARED ${SOURCE_FILES_MAPCODELIB})
++set_target_properties(mapcodelib PROPERTIES OUTPUT_NAME mapcode)
+ target_include_directories(mapcodelib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+ add_executable(unittest ${SOURCE_FILES_UNITTEST})
