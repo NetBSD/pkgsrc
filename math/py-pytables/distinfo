@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.15 2016/08/18 20:30:02 wiz Exp $
+$NetBSD: distinfo,v 1.16 2016/11/03 00:07:52 maya Exp $
 
 SHA1 (tables-3.2.3.tar.gz) = d7a2965821f436aabcf97e2851fe857c40e71cca
 RMD160 (tables-3.2.3.tar.gz) = b0eaa61390a65d4e23f0499ca64409c20fd23bae
 SHA512 (tables-3.2.3.tar.gz) = 565ae648a81daa6e9eb7d8dfbecef4f0b195122dd2c60a99f89f903f7366515997c302e649441f68b20c13b0f7ccff1e97971cc16b4bd56b579a069d92247e9a
 Size (tables-3.2.3.tar.gz) = 3821258 bytes
-SHA1 (patch-c-blosc_blosc_blosc.c) = 53751c1242e9d2e3057bb1eef0f075f2fdd97c3f
 SHA1 (patch-setup.py) = 51e92744674fbc8b64e3dc150fcf9927efebc821
