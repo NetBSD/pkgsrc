@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.257 2016/10/30 01:10:10 kamil Exp $
+$NetBSD: distinfo,v 1.258 2016/11/03 22:46:43 joerg Exp $
 
 SHA1 (firefox-49.0.2.source.tar.xz) = 52d527f06c522c95e2fcf4008dce1a9913379aaf
 RMD160 (firefox-49.0.2.source.tar.xz) = b0c7bda2f551ea025bb75b0f9a58722f7322ea2d
@@ -28,7 +28,7 @@ SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2cc997cab71a84c1f50a791693519a062
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 9b357196b795f7698f0763cb6cfcd39b4aea6420
 SHA1 (patch-gfx_skia_skia_src_core_SkUtilsArm.cpp) = 94a5a88f1177e09ef7b8dbdb6439153933004356
 SHA1 (patch-gfx_ycbcr_moz.build) = 705c36b972ef1533330e4a180002cef1c22755bf
-SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f3bf72cb9b52b0c64d8ea5d3a25a797409da9d5a
+SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = 79587891c2a1716a27d4dca0e5b5880069a430eb
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = fb650d1ae95321a6fc7565ffe3375944d06f95a9
 SHA1 (patch-intl_hyphenation_glue_hnjalloc.h) = abe01bea5872a57f3d00bbbf89f958621f08a655
 SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 24b63a6e51d9ab27f2788ee02f2ffa7e1c36f29a
