@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4564 2016/11/03 14:13:30 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4565 2016/11/03 14:41:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6319,3 +6319,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mercurial to 4.0 [wiz 2016-11-03]
 	Updated devel/libffi to 3.2.1nb2 [maya 2016-11-03]
 	Updated databases/redis to 3.2.5 [fhajny 2016-11-03]
+	Updated multimedia/mpv to 0.21.0nb1 [leot 2016-11-03]
