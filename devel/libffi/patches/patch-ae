@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2016/01/25 17:56:39 jperkin Exp $
+$NetBSD: patch-ae,v 1.8 2016/11/03 11:40:28 maya Exp $
 
 Make a minimal adjustment to support the various NetBSD mips ports.
 
@@ -25,16 +25,3 @@ Make a minimal adjustment to support the various NetBSD mips ports.
  #endif
  
  #  ifndef _ABIN32
-@@ -55,6 +57,12 @@
- #    define _ABIO32 _MIPS_SIM_ABI32
- #  endif
- 
-+#ifdef __NetBSD__
-+/* Let's cheat a bit... */   
-+#  define _ABIO32 1     
-+#  define _MIPS_SIM _ABIO32
-+#endif
-+
- #if !defined(_MIPS_SIM)
- # error -- something is very wrong --
- #else

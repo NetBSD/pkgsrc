@@ -1,29 +1,9 @@
-$NetBSD: patch-af,v 1.4 2016/01/25 17:56:39 jperkin Exp $
+$NetBSD: patch-af,v 1.5 2016/11/03 11:40:28 maya Exp $
 
 Fixes to support the various NetBSD mips ports.
 
 --- src/mips/ffi.c.orig	2014-11-08 12:47:24.000000000 +0000
 +++ src/mips/ffi.c
-@@ -33,12 +33,17 @@
- 
- #ifdef __GNUC__
- #  if (__GNUC__ > 4) || ((__GNUC__ == 4) && (__GNUC_MINOR__ >= 3))
--#    define USE__BUILTIN___CLEAR_CACHE 1
-+#    if !defined(__NetBSD__)
-+#      define USE__BUILTIN___CLEAR_CACHE 1
-+#    endif
- #  endif
- #endif
- 
- #ifndef USE__BUILTIN___CLEAR_CACHE
--#  if defined(__OpenBSD__)
-+#  if defined(__NetBSD__)
-+#    include <mips/cachectl.h>
-+#    define cacheflush _cacheflush
-+#  elif defined(__OpenBSD__)
- #    include <mips64/sysarch.h>
- #  else
- #    include <sys/cachectl.h>
 @@ -472,6 +477,7 @@ ffi_status ffi_prep_cif_machdep(ffi_cif 
                ((cif->arg_types)[index]->type << (arg_reg * FFI_FLAG_BITS));
  	    arg_reg++;
