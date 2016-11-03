@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4567 2016/11/03 14:55:19 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4568 2016/11/03 15:06:53 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6322,3 +6322,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mpv to 0.21.0nb1 [leot 2016-11-03]
 	Updated devel/p5-Role-Tiny to 2.000005 [wen 2016-11-03]
 	Updated devel/p5-Moo to 2.002005 [wen 2016-11-03]
+	Updated geography/mapcode to 2.5.1 [fhajny 2016-11-03]
