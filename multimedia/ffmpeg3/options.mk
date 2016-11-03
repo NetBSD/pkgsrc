@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.3 2016/10/10 23:37:35 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2016/11/03 21:25:55 wiz Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
-PKG_SUPPORTED_OPTIONS=	ass doc ebur128 faac fdk-aac fontconfig freetype \
+PKG_SUPPORTED_OPTIONS=	ass doc ebur128 fdk-aac fontconfig freetype \
 			gnutls lame libvpx opencore-amr openssl theora vorbis \
 			x264 x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
@@ -69,16 +69,6 @@ USE_TOOLS+=		texi2html
 CONFIGURE_ARGS+=	--enable-htmlpages
 .else
 CONFIGURE_ARGS+=	--disable-htmlpages
-.endif
-
-# faac option
-.if !empty(PKG_OPTIONS:Mfaac)
-RESTRICTED=		This software may require the payment of patent royalties
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-CONFIGURE_ARGS+=	--enable-libfaac
-CONFIGURE_ARGS+=	--enable-nonfree
-.include "../../audio/faac/buildlink3.mk"
 .endif
 
 # Fraunhofer FDK AAC codec support
