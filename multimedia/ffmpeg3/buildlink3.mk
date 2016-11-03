@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2016/08/17 00:06:40 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/11/03 21:25:55 wiz Exp $
 
 BUILDLINK_TREE+=	ffmpeg3
 
@@ -32,10 +32,6 @@ pkgbase := ffmpeg3
 
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg3:Mx264)
 .  include "../../multimedia/x264-devel/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg3:Mfaac)
-.  include "../../audio/faac/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg3:Mlibvpx)
