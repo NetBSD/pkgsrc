@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4563 2016/11/03 11:40:45 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4564 2016/11/03 14:13:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6318,3 +6318,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/dbus to 1.10.12nb1 [jperkin 2016-11-02]
 	Updated devel/py-mercurial to 4.0 [wiz 2016-11-03]
 	Updated devel/libffi to 3.2.1nb2 [maya 2016-11-03]
+	Updated databases/redis to 3.2.5 [fhajny 2016-11-03]
