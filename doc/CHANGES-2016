@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4561 2016/11/02 19:57:15 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.4562 2016/11/03 11:13:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6316,3 +6316,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/curl to 7.51.0 [maya 2016-11-02]
 	Updated www/py-django to 1.9.11 [wen 2016-11-02]
 	Updated sysutils/dbus to 1.10.12nb1 [jperkin 2016-11-02]
+	Updated devel/py-mercurial to 4.0 [wiz 2016-11-03]
