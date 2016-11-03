@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/08/02 23:30:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/11/03 11:13:36 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -364,6 +364,7 @@ ${PYSITELIB}/mercurial/help/internals/bundles.txt
 ${PYSITELIB}/mercurial/help/internals/changegroups.txt
 ${PYSITELIB}/mercurial/help/internals/requirements.txt
 ${PYSITELIB}/mercurial/help/internals/revlogs.txt
+${PYSITELIB}/mercurial/help/internals/wireprotocol.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
 ${PYSITELIB}/mercurial/help/multirevs.txt
 ${PYSITELIB}/mercurial/help/patterns.txt
@@ -503,6 +504,9 @@ ${PYSITELIB}/mercurial/policy.pyo
 ${PYSITELIB}/mercurial/posix.py
 ${PYSITELIB}/mercurial/posix.pyc
 ${PYSITELIB}/mercurial/posix.pyo
+${PYSITELIB}/mercurial/profiling.py
+${PYSITELIB}/mercurial/profiling.pyc
+${PYSITELIB}/mercurial/profiling.pyo
 ${PYSITELIB}/mercurial/progress.py
 ${PYSITELIB}/mercurial/progress.pyc
 ${PYSITELIB}/mercurial/progress.pyo
