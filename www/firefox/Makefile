@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2016/10/26 20:23:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.269 2016/11/03 22:46:43 joerg Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	49.0
@@ -64,6 +64,9 @@ SUBST_STAGE.sys-dic=	pre-configure
 SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
+
+post-extract:
+	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
 
 pre-configure:
 	cd ${WRKSRC} && autoconf

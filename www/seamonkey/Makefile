@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2016/08/17 00:06:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.148 2016/11/03 22:46:43 joerg Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -55,6 +55,9 @@ SUBST_STAGE.sys-dic=	pre-configure
 SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
+
+post-extract:
+	mv ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.S
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
