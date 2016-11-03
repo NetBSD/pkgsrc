@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4565 2016/11/03 14:41:46 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4566 2016/11/03 14:47:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6320,3 +6320,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libffi to 3.2.1nb2 [maya 2016-11-03]
 	Updated databases/redis to 3.2.5 [fhajny 2016-11-03]
 	Updated multimedia/mpv to 0.21.0nb1 [leot 2016-11-03]
+	Updated devel/p5-Role-Tiny to 2.000005 [wen 2016-11-03]
