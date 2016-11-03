@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.10 2016/11/02 17:00:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.11 2016/11/03 20:03:12 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -86,4 +86,19 @@ databases/mysql56-server: security fix
 
 Pullup ticket #5137 - requested by bsiegert
 multimedia/adobe-flash-plugin11: security update
+
+Pullup ticket #5145 - requested by wiz
+net/tor: security fix
+
+Pullup ticket #5147 - requested by spz
+security/libcrack: security fix
+
+Pullup ticket #5148 - requested by spz
+net/wget: security fix
+
+Pullup ticket #5149 - requested by taca
+net/bind910: security fix
+
+Pullup ticket #5150 - requested by taca
+net/bind99: security fix
 
