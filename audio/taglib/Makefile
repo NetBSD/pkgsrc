@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/10/31 16:32:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/11/04 14:03:14 maya Exp $
 
 DISTNAME=	taglib-1.11.1
 CATEGORIES=	audio
@@ -11,6 +11,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
 USE_LANGUAGES=	c c++
 CXXFLAGS+=	-std=c++11
+GCC_REQD+=	4.7
 
 USE_CMAKE=		YES
 CMAKE_ARGS=		-DWITH_MP4=ON -DWITH_ASF=ON
