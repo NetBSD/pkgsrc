@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.18 2016/07/15 12:44:21 jperkin Exp $
+$NetBSD: patch-configure,v 1.19 2016/11/04 20:11:40 marino Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
 See also: <http://caml.inria.fr/mantis/view.php?id=6900>
@@ -109,7 +109,24 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -960,6 +966,7 @@ case "$arch,$system" in
+@@ -930,6 +936,8 @@ case "$arch,$system" in
+                   esac;;
+   arm,freebsd)    as="${TOOLPREF}cc -c"
+                   aspp="${TOOLPREF}cc -c";;
++  *,dragonfly)      as="${TOOLPREF}as"
++                  aspp="${TOOLPREF}cc -c";;
+   *,freebsd)      as="${TOOLPREF}as"
+                   aspp="${TOOLPREF}cc -c";;
+   amd64,*|arm,*|arm64,*|i386,*|power,bsd*|sparc,*)
+@@ -953,6 +961,7 @@ case "$arch,$system" in
+     case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
+   amd64,linux) profiling='prof';;
+   amd64,openbsd) profiling='prof';;
++  amd64,dragonfly) profiling='prof';;
+   amd64,freebsd) profiling='prof';;
+   amd64,netbsd) profiling='prof';;
+   arm,netbsd) profiling='prof';;
+@@ -960,6 +969,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -117,7 +134,25 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    *) profiling='noprof';;
  esac
  
-@@ -1505,6 +1512,8 @@ fi
+@@ -1445,6 +1455,8 @@ if test "$pthread_wanted" = "yes"; then
+   case "$target" in
+     *-*-solaris*)  pthread_link="-lpthread -lposix4"
+                    pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
++    *-*-dragon*)   pthread_link="-pthread"
++                   pthread_caml_link="-cclib -pthread";;
+     *-*-freebsd*)  pthread_link="-pthread"
+                    pthread_caml_link="-cclib -pthread";;
+     *-*-openbsd*)  pthread_link="-pthread"
+@@ -1461,7 +1473,7 @@ if test "$pthread_wanted" = "yes"; then
+     bytecccompopts="$bytecccompopts -D_REENTRANT"
+     nativecccompopts="$nativecccompopts -D_REENTRANT"
+     case "$target" in
+-      *-*-freebsd*)
++      *-*-freebsd*|*-*-dragonfly*)
+           bytecccompopts="$bytecccompopts -D_THREAD_SAFE"
+           nativecccompopts="$nativecccompopts -D_THREAD_SAFE";;
+       *-*-openbsd*)
+@@ -1505,6 +1517,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -126,7 +161,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1551,6 +1560,7 @@ if test "$x11_include" = "not found"; th
+@@ -1551,6 +1565,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -134,7 +169,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1608,6 +1618,7 @@ if test "$x11_include" = "not found"; th
+@@ -1608,6 +1623,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -142,7 +177,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1629,18 +1640,16 @@ if test "$x11_include" = "not found"; th
+@@ -1629,18 +1645,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
