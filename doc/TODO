@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16658 2016/11/02 08:20:47 wiz Exp $
+$NetBSD: TODO,v 1.16659 2016/11/04 21:39:39 maya Exp $
 
 Suggested new packages
 ======================
@@ -1387,7 +1387,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
 	o py-tornado-4.4.1
-	o py-uwsgi-2.0.12
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
