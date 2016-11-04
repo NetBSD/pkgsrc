@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/11/01 12:32:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2016/11/04 13:45:31 maya Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -29,8 +29,11 @@ BJAM_ARGS+=		--without-log
 PLIST.log=		yes
 .endif
 
-# fiber requires thread_local support, unavailable in older Darwin clang
-.if ${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14
+# fiber requires thread_local support, unavailable in older compilers
+# (old darwin, netbsd <6). if fiber becomes necessary, set GCC_REQD
+# on other boost-* packages, too.
+.if ((${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-[0-6]*-*))
 BJAM_ARGS+=		--without-fiber
 .else
 PLIST.fiber=		yes
