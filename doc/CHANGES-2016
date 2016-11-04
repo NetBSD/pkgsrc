@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4570 2016/11/04 10:47:45 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4571 2016/11/04 10:55:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6325,3 +6325,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/mapcode to 2.5.1 [fhajny 2016-11-03]
 	Updated x11/modular-xorg-server to 1.18.4nb1 [maya 2016-11-04]
 	Updated devel/ivykis to 0.40 [fhajny 2016-11-04]
+	Updated devel/py-argcomplete to 1.6.0 [fhajny 2016-11-04]
