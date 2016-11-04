@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2016/10/08 23:27:50 joerg Exp $
+# $NetBSD: Makefile.common,v 1.62 2016/11/04 18:41:09 maya Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -41,6 +41,8 @@ PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
+
+# IMPORTANT: sync this with devel/boost-libs/buildlink3.mk
 # GCC 4.5 or later is required to build, and GCC 4.5 is not provided for OpenBSD
 .  if ${OPSYS} == "OpenBSD"
 .    if ${MACHINE_ARCH} != "sparc64"
