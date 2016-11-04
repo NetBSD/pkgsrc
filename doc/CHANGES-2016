@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4568 2016/11/03 15:06:53 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4569 2016/11/04 01:13:10 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6323,3 +6323,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Role-Tiny to 2.000005 [wen 2016-11-03]
 	Updated devel/p5-Moo to 2.002005 [wen 2016-11-03]
 	Updated geography/mapcode to 2.5.1 [fhajny 2016-11-03]
+	Updated x11/modular-xorg-server to 1.18.4nb1 [maya 2016-11-04]
