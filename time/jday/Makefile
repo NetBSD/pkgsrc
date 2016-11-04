@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 13:04:19 asau Exp $
+# $NetBSD: Makefile,v 1.8 2016/11/04 12:57:00 mef Exp $
 #
 
-DISTNAME=		jday-1.3
+DISTNAME=		jday-2.4
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jday/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jday.sourceforge.net/
 COMMENT=		Julian date calculator
+LICENSE=		2-clause-bsd
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 do-test:
-	@(cd ${WRKSRC} && ./RunTest)
-	@(cd ${WRKSRC} && ./Testdbd)
+	(cd ${WRKSRC} && ./RunTest)
+	(cd ${WRKSRC} && ./Testdbd)
 
 INSTALLATION_DIRS=	share/jday
 
