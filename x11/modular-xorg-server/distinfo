@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.76 2016/07/19 20:04:04 wiz Exp $
+$NetBSD: distinfo,v 1.77 2016/11/04 01:12:51 maya Exp $
 
 SHA1 (xorg-server-1.18.4.tar.bz2) = ff088ee29dee46a2d68925c8df3f0515ef15ec52
 RMD160 (xorg-server-1.18.4.tar.bz2) = 6f58d84d3bbc59a773e6a2e1eafc208827a5923f
 SHA512 (xorg-server-1.18.4.tar.bz2) = 2055948caa1437547ea823a70d8b24584b65338bb9f1bbf75e3ad7fd60ec9684378facaffa05b7ce496d904213cd192085a43ba889a1476d5fbc813b7e41b56b
 Size (xorg-server-1.18.4.tar.bz2) = 6009508 bytes
 SHA1 (patch-configure) = b3c5ae8cd7aca96dbb5a237dda061e8c2569b2f2
+SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 896825ba12646431cba603938d118acbdde305dd
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
 SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
 SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 9c03b24f44eafc5fabe27e9d6cc6c54b607e47c3
