@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2016/02/21 15:36:33 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.21 2016/11/04 21:24:22 wiedi Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -79,6 +79,7 @@ share/nano/postgresql.nanorc
 share/nano/pov.nanorc
 share/nano/python.nanorc
 share/nano/ruby.nanorc
+share/nano/rust.nanorc
 share/nano/sh.nanorc
 share/nano/spec.nanorc
 share/nano/tcl.nanorc
