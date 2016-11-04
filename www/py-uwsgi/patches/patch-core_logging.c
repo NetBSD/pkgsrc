@@ -1,15 +1,15 @@
-$NetBSD: patch-core_logging.c,v 1.1 2015/04/06 02:35:54 rodent Exp $
+$NetBSD: patch-core_logging.c,v 1.2 2016/11/04 21:39:00 maya Exp $
 
-Fix build for OpenBSD and Bitrig.
+Fix build for Bitrig.
 
---- core/logging.c.orig	2015-03-17 07:34:34.000000000 +0000
+--- core/logging.c.orig	2016-10-03 08:16:59.000000000 +0000
 +++ core/logging.c
-@@ -13,7 +13,7 @@
- #define _FILE_OFFSET_BITS 64
+@@ -1,7 +1,7 @@
+ #ifndef __DragonFly__
+ #include <uwsgi.h>
  #endif
- 
--#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
-+#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__Bitrig__)
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__) || defined(__Bitrig__)
+ #include <sys/user.h>
  #include <sys/sysctl.h>
- #endif
- 
+ #include <kvm.h>
