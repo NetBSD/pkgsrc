@@ -1,13 +1,40 @@
-$NetBSD: patch-ai,v 1.36 2016/10/31 04:19:07 maya Exp $
+$NetBSD: patch-ai,v 1.37 2016/11/04 17:10:10 sevan Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
 
 2) Make this pkgsrc friendly.
 
+3) Add support for FreeBSD 11 & 12.
+
 --- makedefs.orig	2016-08-20 00:08:42.000000000 +0000
 +++ makedefs
-@@ -309,6 +309,12 @@ case "$SYSTEM.$RELEASE" in
+@@ -272,6 +272,24 @@ case "$SYSTEM.$RELEASE" in
+ 		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
+ 		: ${PLUGIN_LD="${CC} -shared"}
+ 		;;
++  FreeBSD.11*)	SYSTYPE=FREEBSD11
++		: ${CC=cc}
++		: ${SHLIB_SUFFIX=.so}
++		: ${SHLIB_CFLAGS=-fPIC}
++		: ${SHLIB_LD="${CC} -shared"' -Wl,-soname,${LIB}'}
++		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
++		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
++		: ${PLUGIN_LD="${CC} -shared"}
++		;;
++  FreeBSD.12*)	SYSTYPE=FREEBSD12
++		: ${CC=cc}
++		: ${SHLIB_SUFFIX=.so}
++		: ${SHLIB_CFLAGS=-fPIC}
++		: ${SHLIB_LD="${CC} -shared"' -Wl,-soname,${LIB}'}
++		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
++		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
++		: ${PLUGIN_LD="${CC} -shared"}
++		;;
+  DragonFly.*)	SYSTYPE=DRAGONFLY
+ 		;;
+   OpenBSD.2*)	SYSTYPE=OPENBSD2
+@@ -309,6 +327,12 @@ case "$SYSTEM.$RELEASE" in
     NetBSD.4*)	SYSTYPE=NETBSD4
  		;;
     NetBSD.5*)	SYSTYPE=NETBSD5
@@ -20,7 +47,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
     NetBSD.6*)	SYSTYPE=NETBSD6
  		: ${SHLIB_SUFFIX=.so}
-@@ -389,13 +395,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -389,13 +413,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -34,7 +61,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -437,33 +436,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -437,33 +454,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -68,7 +95,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -524,25 +498,6 @@ EOF
+@@ -524,25 +516,6 @@ EOF
  		: ${PLUGIN_LD="${CC-gcc} -shared"}
  		;;
    Linux.[34].*)	SYSTYPE=LINUX$RELEASE_MAJOR
@@ -94,7 +121,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /usr/lib/* /lib /lib/*
-@@ -563,24 +518,6 @@ EOF
+@@ -563,24 +536,6 @@ EOF
  		;;
       GNU.0*|GNU/kFreeBSD.[567]*)
  		SYSTYPE=GNU0
@@ -119,7 +146,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -611,25 +548,13 @@ EOF
+@@ -611,25 +566,13 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
@@ -145,7 +172,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
  ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
  		RANLIB=echo
-@@ -757,8 +682,8 @@ esac
+@@ -757,8 +700,8 @@ esac
  #
  case "$CCARGS" in
  *-DNO_EAI*) ;;
