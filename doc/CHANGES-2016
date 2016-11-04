@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4572 2016/11/04 11:01:01 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4573 2016/11/04 12:44:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6327,3 +6327,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ivykis to 0.40 [fhajny 2016-11-04]
 	Updated devel/py-argcomplete to 1.6.0 [fhajny 2016-11-04]
 	Updated databases/py-cassandra-driver to 3.7.1 [fhajny 2016-11-04]
+	Updated time/p5-DateTime-TimeZone to 2.07 [mef 2016-11-04]
+	Updated time/p5-DateTime-Set to 0.3900 [mef 2016-11-04]
