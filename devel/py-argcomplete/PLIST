@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2015/06/09 14:55:57 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/11/04 10:55:44 fhajny Exp $
 bin/activate-global-python-argcomplete
 bin/python-argcomplete-check-easy-install-script
+bin/python-argcomplete-tcsh
 bin/register-python-argcomplete
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
