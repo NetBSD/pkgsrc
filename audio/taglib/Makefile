@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/05/14 15:01:05 abs Exp $
+# $NetBSD: Makefile,v 1.36.4.1 2016/11/05 10:16:17 bsiegert Exp $
 
 DISTNAME=	taglib-1.11
 PKGREVISION=	1
@@ -12,6 +12,7 @@ LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1
 
 USE_LANGUAGES=	c c++
 CXXFLAGS+=	-std=c++11
+GCC_REQD+=	4.7
 
 USE_CMAKE=		YES
 CMAKE_ARGS=		-DWITH_MP4=ON -DWITH_ASF=ON
