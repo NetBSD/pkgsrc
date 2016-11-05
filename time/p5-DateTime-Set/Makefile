@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/11/04 12:41:56 mef Exp $
+# $NetBSD: Makefile,v 1.25 2016/11/05 14:38:30 mef Exp $
 
 DISTNAME=	DateTime-Set-0.3900
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-DateTime>=0.12:../../time/p5-DateTime
 DEPENDS+=	p5-Set-Infinite>=0.59:../../math/p5-Set-Infinite
+# ChangeLog for 0.3900 mentions this dependency
+DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
 
 # for make test
 BUILD_DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
