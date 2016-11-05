@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/10/01 16:45:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/11/05 10:05:26 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -316,6 +316,7 @@ share/mame/hash/next.xml
 share/mame/hash/ngp.xml
 share/mame/hash/ngpc.xml
 share/mame/hash/nimbus.xml
+share/mame/hash/octopus.xml
 share/mame/hash/odyssey2.xml
 share/mame/hash/ondra.xml
 share/mame/hash/orao.xml
