@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.11 2016/11/03 20:03:12 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.12 2016/11/05 10:25:09 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -101,4 +101,10 @@ net/bind910: security fix
 
 Pullup ticket #5150 - requested by taca
 net/bind99: security fix
+
+Pullup ticket #5151 - requested by maya
+audio/taglib: build fix
+
+Pullup ticket #5153 - requested by wen
+www/py-django: security fix
 
