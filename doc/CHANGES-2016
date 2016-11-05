@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4580 2016/11/05 12:42:25 nonaka Exp $
+$NetBSD: CHANGES-2016,v 1.4581 2016/11/05 14:05:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6339,3 +6339,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/mame to 0.179 [wiz 2016-11-05]
 	Updated mail/rspamd to 1.3.5 [wiz 2016-11-05]
 	Updated fonts/koruri-ttf to 20161105 [nonaka 2016-11-05]
+	Updated textproc/p5-XML-XPath to 1.38 [wen 2016-11-05]
