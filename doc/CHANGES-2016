@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4577 2016/11/04 21:39:39 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4578 2016/11/05 10:05:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6336,3 +6336,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cmake to 3.6.3 [adam 2016-11-04]
 	Updated editors/nano to 2.7.1 [wiedi 2016-11-04]
 	Updated www/py-uwsgi to 2.0.14 [maya 2016-11-04]
+	Updated emulators/mame to 0.179 [wiz 2016-11-05]
