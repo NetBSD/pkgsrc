@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4582 2016/11/05 14:26:11 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4583 2016/11/05 14:32:07 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6341,3 +6341,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/koruri-ttf to 20161105 [nonaka 2016-11-05]
 	Updated textproc/p5-XML-XPath to 1.38 [wen 2016-11-05]
 	Updated textproc/p5-PDF-Reuse to 0.39 [wen 2016-11-05]
+	Updated lang/php71 to 7.1.0rc5 [jdolecek 2016-11-05]
