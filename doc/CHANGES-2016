@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4588 2016/11/06 02:45:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4589 2016/11/06 02:55:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6347,3 +6347,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R to 3.3.2 [wen 2016-11-06]
 	Updated databases/p5-DBICx-Sugar to 0.0100 [wen 2016-11-06]
 	Updated math/R-zoo to 1.7.13 [wen 2016-11-06]
+	Updated math/R-statmod to 1.4.26 [wen 2016-11-06]
