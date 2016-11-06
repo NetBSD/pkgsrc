@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2016/11/06 21:31:38 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2016/11/06 21:33:44 wiz Exp $
 
 Fix unportable test(1) operator.
+https://github.com/westes/flex/pull/120
 
 --- configure.orig	2016-11-06 21:14:32.894863747 +0000
 +++ configure
