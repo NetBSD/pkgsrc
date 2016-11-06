@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/11/23 19:40:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/11/06 15:39:28 adam Exp $
 bin/atari-convert-dir
 bin/atari-hd-image
 bin/gst2ascii
@@ -23,6 +23,7 @@ share/doc/hatari/compatibility.html
 share/doc/hatari/emutos.txt
 share/doc/hatari/images/callgraph.png
 share/doc/hatari/images/callgraph.svg
+share/doc/hatari/images/cpu.png
 share/doc/hatari/images/devices.png
 share/doc/hatari/images/fileselector.png
 share/doc/hatari/images/floppydisks.png
