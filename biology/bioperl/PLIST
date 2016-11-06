@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/02/20 14:44:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/11/06 08:05:24 wen Exp $
 share/examples/bioperl/Bio-DB-GFF/load_ucsc.pl
 share/examples/bioperl/align/FastAlign.pl
 share/examples/bioperl/align/align_on_codons.pl
@@ -30,8 +30,6 @@ share/examples/bioperl/root/exceptions1.pl
 share/examples/bioperl/root/exceptions2.pl
 share/examples/bioperl/root/exceptions3.pl
 share/examples/bioperl/root/exceptions4.pl
-share/examples/bioperl/root/lib/TestInterface.pm
-share/examples/bioperl/root/lib/TestObject.pm
 share/examples/bioperl/searchio/blast_example.pl
 share/examples/bioperl/searchio/custom_writer.pl
 share/examples/bioperl/searchio/hitwriter.pl
