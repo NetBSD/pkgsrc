@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4584 2016/11/05 14:37:37 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.4585 2016/11/06 00:34:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6343,3 +6343,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-Reuse to 0.39 [wen 2016-11-05]
 	Updated lang/php71 to 7.1.0rc5 [jdolecek 2016-11-05]
 	Updated www/php-apcu to 5.1.7 [jdolecek 2016-11-05]
+	Updated devel/py-pip to 9.0.0 [wen 2016-11-06]
