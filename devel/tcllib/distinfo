@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:29:35 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/11/06 19:55:15 wiz Exp $
 
-SHA1 (tcllib-1.15.tar.bz2) = 7130ee20c0fe7fc720288886b9ecb449899e0d6d
-RMD160 (tcllib-1.15.tar.bz2) = dcc5b8d180da1fc3ebc9d620a18c5cd063f33d32
-SHA512 (tcllib-1.15.tar.bz2) = 544b1193266e860eb59a4c313645376bba8488711b2afc629d99d0e719252db79caae73022ae1dc21dc123f949fa8930f81112c3f80328fc83952b64f93ca3c4
-Size (tcllib-1.15.tar.bz2) = 5030648 bytes
-SHA1 (patch-modules_html_html.tcl) = dcd6b9c809990e429bb65084aee3a500af05e40d
+SHA1 (tcllib-1.18.tar.bz2) = 68a6e7c5db9c90ad5ea9c58b368dd88283ff9d09
+RMD160 (tcllib-1.18.tar.bz2) = fe14916d006142a764ec7af50408acd8fb85ccd8
+SHA512 (tcllib-1.18.tar.bz2) = 12411c0a837435181abe3a2066bab4b16da87ae0f340ee26a288694e4e6c25cb26a001b270964d558187283979e89a6a2d98449e67db919444a0c0d76a9c51f3
+Size (tcllib-1.18.tar.bz2) = 7641997 bytes
