@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/04/07 19:23:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/11/06 16:08:00 adam Exp $
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
@@ -90,7 +90,7 @@ share/hugin/xrc/batch_toolbar.xrc
 share/hugin/xrc/cp_editor_panel.xrc
 share/hugin/xrc/cp_list_frame.xrc
 share/hugin/xrc/cpdetector_dialog.xrc
-share/hugin/xrc/data/COPYING
+share/hugin/xrc/data/COPYING.txt
 share/hugin/xrc/data/about.htm
 share/hugin/xrc/data/add_project.png
 share/hugin/xrc/data/add_projects.png

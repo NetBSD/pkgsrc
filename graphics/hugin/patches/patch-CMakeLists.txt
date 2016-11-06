@@ -1,13 +1,13 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2016/04/07 19:23:26 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2016/11/06 16:08:00 adam Exp $
 
 Correct 'man' path.
 Do not make an application bundle on OS X.
 
---- CMakeLists.txt.orig	2016-01-23 08:37:46.000000000 +0000
+--- CMakeLists.txt.orig	2016-07-09 07:25:44.000000000 +0000
 +++ CMakeLists.txt
-@@ -2,10 +2,6 @@
- # require at least cmake 2.8
- cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR )
+@@ -2,18 +2,12 @@
+ # require at least cmake 3.1
+ cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR )
  
 -# prevent in-tree building
 -if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
@@ -16,7 +16,15 @@ Do not make an application bundle on OS X.
  
  if(COMMAND cmake_policy)
    cmake_policy(SET CMP0003 NEW)
-@@ -518,7 +514,7 @@ IF (NOT MANDIR AND NOT $ENV{MANDIR} STRE
+ endif(COMMAND cmake_policy)
+ 
+ if(APPLE)
+-  set(CMAKE_OSX_SYSROOT macosx10.11)
+-  set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9")
+   if (MAC_SELF_CONTAINED_BUNDLE)
+       set(CMAKE_LIBRARY_PATH ${CMAKE_SOURCE_DIR}/mac/ExternalPrograms/repository/lib)
+       set(CMAKE_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/mac/ExternalPrograms/repository/include ${CMAKE_SOURCE_DIR}/mac/ExternalPrograms/repository/bin)
+@@ -538,7 +532,7 @@ IF (NOT MANDIR AND NOT $ENV{MANDIR} STRE
  ELSEIF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD" OR CMAKE_SYSTEM_NAME STREQUAL "NetBSD")
      SET (MANDIR "man")
  ELSE(NOT MANDIR AND NOT $ENV{MANDIR} STREQUAL "")
@@ -25,7 +33,7 @@ Do not make an application bundle on OS X.
  ENDIF(NOT MANDIR AND NOT $ENV{MANDIR} STREQUAL "")
  
  SET(LOCALEDIR share/locale) 
-@@ -543,16 +539,6 @@ IF (APPLE)
+@@ -563,16 +557,6 @@ IF (APPLE)
    ENDIF (NOT MAC_SELF_CONTAINED_BUNDLE)
  ENDIF (APPLE)
  

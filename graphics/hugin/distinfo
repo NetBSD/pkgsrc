@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.16 2016/04/07 19:23:26 adam Exp $
+$NetBSD: distinfo,v 1.17 2016/11/06 16:08:00 adam Exp $
 
-SHA1 (hugin-2016.0.0.tar.bz2) = 6811e19f1c10da163e1c4228779beb4c12448db9
-RMD160 (hugin-2016.0.0.tar.bz2) = 9d73e78accbfae2194b347d3d7f7c3932adc018a
-SHA512 (hugin-2016.0.0.tar.bz2) = 029b30c39bb29de5cfb3c8d7d713d58662abf14311279e984f62cf7287edb9c9efdafdcb6990ba320d6098c4dd1de09dd9ceec9925eb52dafd234261a9615fd1
-Size (hugin-2016.0.0.tar.bz2) = 10508576 bytes
-SHA1 (patch-CMakeLists.txt) = 54f11138438c2650673a4056f85fa7e6bf869d00
+SHA1 (hugin-2016.2.0.tar.bz2) = 9d28609d973fa72b95b1e2506cf1de7d24578e67
+RMD160 (hugin-2016.2.0.tar.bz2) = 9eaf5f5c3f68a5bbc1a86272488c2821a63db83e
+SHA512 (hugin-2016.2.0.tar.bz2) = 9c652e685d0135afef6418bdf5fce39cec8ef1ec0dbe3a325151957c91495db0a2a3171ee04a28955a638493913c1bc800a90c37347ad17612584646c8a65510
+Size (hugin-2016.2.0.tar.bz2) = 10386216 bytes
+SHA1 (patch-CMakeLists.txt) = e30ad71ef5abe0efcf113278ae85f5d33a0a4ccd
 SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6defc
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
 SHA1 (patch-src_hugin1_base__wx_StitchingExecutor.cpp) = c30a62b1da413fce9524d7d558ec5bb1f21eb65e
@@ -12,8 +12,7 @@ SHA1 (patch-src_hugin1_base__wx_platform.cpp) = f0f544438a4818e9bbad9fd0f7fb0af0
 SHA1 (patch-src_hugin1_base__wx_wxPanoCommand.cpp) = d5bf8f747ae86338e728c472d3dc04bf4c84f182
 SHA1 (patch-src_hugin1_calibrate__lens_LensCalFrame.cpp) = 9b815a681317cb19880e7bb6ef170bc14d01b28b
 SHA1 (patch-src_hugin1_hugin_CPEditorPanel.cpp) = d373c00d4783b3edc1bad5a67339163a0c23d8c5
-SHA1 (patch-src_hugin1_hugin_GLPreviewFrame.cpp) = 47bae7f5c57f8c7028dee4451840dcb2a2bb1f39
-SHA1 (patch-src_hugin1_icpfind_AutoCtrlPointCreator.cpp) = 2016aec03f6ef24fc7e70b289702a87df48b382a
+SHA1 (patch-src_hugin1_hugin_GLPreviewFrame.cpp) = fda8db4abf3ab10332d4309c90f0ef4f845c76a6
 SHA1 (patch-src_hugin1_ptbatcher_BatchFrame.cpp) = 51ce24f1eb99cc5c0151758299eb1ecc34128171
 SHA1 (patch-src_tools_align_image_stack.cpp) = fc2759f0722365d4c5339c5c8bc1eda1a6bf7a71
 SHA1 (patch-src_tools_tca__correct.cpp) = 73a86d3086336f168de5fb1cc02378a3ecc43104
