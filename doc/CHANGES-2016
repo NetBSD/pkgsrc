@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4586 2016/11/06 02:09:21 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4587 2016/11/06 02:39:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6345,3 +6345,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/php-apcu to 5.1.7 [jdolecek 2016-11-05]
 	Updated devel/py-pip to 9.0.0 [wen 2016-11-06]
 	Updated math/R to 3.3.2 [wen 2016-11-06]
+	Updated databases/p5-DBICx-Sugar to 0.0100 [wen 2016-11-06]
