@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2016/10/02 16:36:13 bouyer Exp $
+# $NetBSD: Makefile,v 1.43 2016/11/06 16:12:30 wiz Exp $
 #
 
 COMMENT=	File systems, and file system related packages
 
 SUBDIR+=	cloudfuse
 SUBDIR+=	fs-utils
+SUBDIR+=	fsx
 SUBDIR+=	fuse
 SUBDIR+=	fuse-afpfs-ng
 SUBDIR+=	fuse-archivemount
