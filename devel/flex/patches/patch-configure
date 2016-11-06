@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/11/06 21:31:38 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2016-11-06 21:14:32.894863747 +0000
++++ configure
+@@ -18200,7 +18200,7 @@ done
+ 
+ # Check whether --enable-warnings was given.
+ if test "${enable_warnings+set}" = set; then :
+-  enableval=$enable_warnings; if test "x$GCC" == xyes; then :
++  enableval=$enable_warnings; if test "x$GCC" = xyes; then :
+    : ${WARNINGFLAGS="-Wall -Wextra -Wmissing-prototypes -Wstrict-prototypes -Wnested-externs -Wold-style-definition -Wredundant-decls -Wconversion -Wno-unused-but-set-variable"}
+ fi
+ fi
