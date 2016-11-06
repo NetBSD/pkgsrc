@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4599 2016/11/06 19:26:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4600 2016/11/06 19:27:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6364,3 +6364,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/hugin to 2016.2.0 [adam 2016-11-06]
 	Added filesystems/fsx version 2009 [wiz 2016-11-06]
 	Updated www/w3m to 0.5.3.0.20161031 [wiz 2016-11-06]
+	Updated www/w3m-img to 0.5.3.0.20161031 [wiz 2016-11-06]
