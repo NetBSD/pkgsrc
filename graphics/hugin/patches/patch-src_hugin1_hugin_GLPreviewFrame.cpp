@@ -1,8 +1,8 @@
-$NetBSD: patch-src_hugin1_hugin_GLPreviewFrame.cpp,v 1.1 2016/04/07 19:23:26 adam Exp $
+$NetBSD: patch-src_hugin1_hugin_GLPreviewFrame.cpp,v 1.2 2016/11/06 16:08:00 adam Exp $
 
 Re-order includes to fix building.
 
---- src/hugin1/hugin/GLPreviewFrame.cpp.orig	2016-02-19 22:31:49.000000000 +0000
+--- src/hugin1/hugin/GLPreviewFrame.cpp.orig	2016-02-28 08:18:00.000000000 +0000
 +++ src/hugin1/hugin/GLPreviewFrame.cpp
 @@ -41,6 +41,8 @@
  #include "panoinc_WX.h"
