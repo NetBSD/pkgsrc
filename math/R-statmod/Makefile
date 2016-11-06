@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/04/09 08:36:34 wen Exp $
+# $NetBSD: Makefile,v 1.13 2016/11/06 02:54:08 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Miscellaneous biostatistical modeling functions
 LICENSE=	gnu-lgpl-v2 OR gnu-lgpl-v3
 
 R_PKGNAME=	statmod
-R_PKGVER=	1.4.24
+R_PKGVER=	1.4.26
 
 USE_LANGUAGES+=	c fortran
 
