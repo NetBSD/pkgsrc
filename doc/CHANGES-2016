@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4593 2016/11/06 08:06:55 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4594 2016/11/06 09:10:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6354,3 +6354,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Devel-GlobalDestruction to 0.14 [mef 2016-11-06]
 	Updated mail/p5-Email-Sender to 1.300030 [wen 2016-11-06]
 	Updated biology/bioperl to 1.007001 [wen 2016-11-06]
+	Updated www/py-django to 1.10.3 [wen 2016-11-06]
