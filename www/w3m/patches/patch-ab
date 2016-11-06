@@ -1,21 +1,10 @@
-$NetBSD: patch-ab,v 1.12 2012/05/30 06:42:34 wiz Exp $
+$NetBSD: patch-ab,v 1.13 2016/11/06 19:26:35 wiz Exp $
 
-First chunk: adapt for gc-7.2 API change.
-Second chunk: suspend the job w3m belongs to, not w3m only.
+Suspend the job w3m belongs to, not w3m only.
 
---- main.c.orig	2011-01-04 09:42:19.000000000 +0000
+--- main.c.orig	2016-10-31 11:28:45.000000000 +0000
 +++ main.c
-@@ -833,7 +833,8 @@ main(int argc, char **argv, char **envp)
-     mySignal(SIGPIPE, SigPipe);
- #endif
- 
--    orig_GC_warn_proc = GC_set_warn_proc(wrap_GC_warn_proc);
-+    orig_GC_warn_proc = GC_get_warn_proc();
-+    GC_set_warn_proc(wrap_GC_warn_proc);
-     err_msg = Strnew();
-     if (load_argc == 0) {
- 	/* no URL specified */
-@@ -2517,7 +2518,17 @@ DEFUN(susp, INTERRUPT SUSPEND, "Stop loa
+@@ -2619,7 +2620,17 @@ DEFUN(susp, INTERRUPT SUSPEND, "Suspend 
  	shell = "/bin/sh";
      system(shell);
  #else				/* SIGSTOP */
