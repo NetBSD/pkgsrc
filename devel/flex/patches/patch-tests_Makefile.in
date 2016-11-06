@@ -1,22 +1,125 @@
-$NetBSD: patch-tests_Makefile.in,v 1.3 2016/08/12 10:12:23 mef Exp $
+$NetBSD: patch-tests_Makefile.in,v 1.4 2016/11/06 21:31:38 wiz Exp $
 
 Disable bison tests since we don't want to build with bison
 to avoid a dependency cycle, since bison depends on flex.
+https://github.com/westes/flex/issues/49
 
---- tests/Makefile.in.orig	2015-11-17 16:19:46.000000000 +0000
+--- tests/Makefile.in.orig	2016-10-24 22:33:38.000000000 +0000
 +++ tests/Makefile.in
-@@ -131,8 +131,8 @@ CONFIG_HEADER = $(top_builddir)/src/conf
+@@ -131,8 +131,7 @@ CONFIG_HEADER = $(top_builddir)/src/conf
  CONFIG_CLEAN_FILES =
  CONFIG_CLEAN_VPATH_FILES =
  am__EXEEXT_1 = alloc_extra$(EXEEXT) array_nr$(EXEEXT) array_r$(EXEEXT) \
 -	basic_nr$(EXEEXT) basic_r$(EXEEXT) bison_nr$(EXEEXT) \
 -	bison_yylloc$(EXEEXT) bison_yylval$(EXEEXT) c_cxx_nr$(EXEEXT) \
-+	basic_nr$(EXEEXT) basic_r$(EXEEXT) \
-+	c_cxx_nr$(EXEEXT) \
++	basic_nr$(EXEEXT) basic_r$(EXEEXT) c_cxx_nr$(EXEEXT) \
  	c_cxx_r$(EXEEXT) ccl$(EXEEXT) cxx_basic$(EXEEXT) \
- 	cxx_multiple_scanners$(EXEEXT) debug_nr$(EXEEXT) \
- 	debug_r$(EXEEXT) extended$(EXEEXT) header_nr$(EXEEXT) \
-@@ -1440,12 +1440,6 @@ string_r_SOURCES = string_r.l
+ 	cxx_multiple_scanners$(EXEEXT) cxx_restart$(EXEEXT) \
+ 	debug_nr$(EXEEXT) debug_r$(EXEEXT) extended$(EXEEXT) \
+@@ -237,18 +236,6 @@ basic_nr_LDADD = $(LDADD)
+ am_basic_r_OBJECTS = basic_r.$(OBJEXT)
+ basic_r_OBJECTS = $(am_basic_r_OBJECTS)
+ basic_r_LDADD = $(LDADD)
+-am_bison_nr_OBJECTS = bison_nr_scanner.$(OBJEXT) \
+-	bison_nr_parser.$(OBJEXT) bison_nr_main.$(OBJEXT)
+-bison_nr_OBJECTS = $(am_bison_nr_OBJECTS)
+-bison_nr_LDADD = $(LDADD)
+-am_bison_yylloc_OBJECTS = bison_yylloc_scanner.$(OBJEXT) \
+-	bison_yylloc_parser.$(OBJEXT) bison_yylloc_main.$(OBJEXT)
+-bison_yylloc_OBJECTS = $(am_bison_yylloc_OBJECTS)
+-bison_yylloc_LDADD = $(LDADD)
+-am_bison_yylval_OBJECTS = bison_yylval_scanner.$(OBJEXT) \
+-	bison_yylval_parser.$(OBJEXT) bison_yylval_main.$(OBJEXT)
+-bison_yylval_OBJECTS = $(am_bison_yylval_OBJECTS)
+-bison_yylval_LDADD = $(LDADD)
+ am_c_cxx_nr_OBJECTS = c_cxx_nr.$(OBJEXT)
+ c_cxx_nr_OBJECTS = $(am_c_cxx_nr_OBJECTS)
+ c_cxx_nr_LDADD = $(LDADD)
+@@ -686,24 +673,14 @@ am__v_LEX_ = $(am__v_LEX_@AM_DEFAULT_V@)
+ am__v_LEX_0 = @echo "  LEX     " $@;
+ am__v_LEX_1 = 
+ YLWRAP = $(top_srcdir)/build-aux/ylwrap
+-am__yacc_c2h = sed -e s/cc$$/hh/ -e s/cpp$$/hpp/ -e s/cxx$$/hxx/ \
+-		   -e s/c++$$/h++/ -e s/c$$/h/
+-YACCCOMPILE = $(YACC) $(AM_YFLAGS) $(YFLAGS)
+-LTYACCCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
+-	$(LIBTOOLFLAGS) --mode=compile $(YACC) $(AM_YFLAGS) $(YFLAGS)
+-AM_V_YACC = $(am__v_YACC_@AM_V@)
+-am__v_YACC_ = $(am__v_YACC_@AM_DEFAULT_V@)
+-am__v_YACC_0 = @echo "  YACC    " $@;
+-am__v_YACC_1 = 
+ SOURCES = $(alloc_extra_SOURCES) $(array_nr_SOURCES) \
+ 	$(array_r_SOURCES) $(basic_nr_SOURCES) $(basic_r_SOURCES) \
+-	$(bison_nr_SOURCES) $(bison_yylloc_SOURCES) \
+-	$(bison_yylval_SOURCES) $(c_cxx_nr_SOURCES) $(c_cxx_r_SOURCES) \
+-	$(ccl_SOURCES) $(cxx_basic_SOURCES) \
+-	$(cxx_multiple_scanners_SOURCES) $(cxx_restart_SOURCES) \
+-	$(cxx_yywrap_i3_SOURCES) $(debug_nr_SOURCES) \
+-	$(debug_r_SOURCES) $(extended_SOURCES) $(header_nr_SOURCES) \
+-	$(header_r_SOURCES) $(include_by_buffer_direct_SOURCES) \
++	$(c_cxx_nr_SOURCES) $(c_cxx_r_SOURCES) $(ccl_SOURCES) \
++	$(cxx_basic_SOURCES) $(cxx_multiple_scanners_SOURCES) \
++	$(cxx_restart_SOURCES) $(cxx_yywrap_i3_SOURCES) \
++	$(debug_nr_SOURCES) $(debug_r_SOURCES) $(extended_SOURCES) \
++	$(header_nr_SOURCES) $(header_r_SOURCES) \
++	$(include_by_buffer_direct_SOURCES) \
+ 	$(include_by_push_direct_SOURCES) \
+ 	$(include_by_reentrant_direct_SOURCES) \
+ 	$(lineno_nr_one_SOURCES) $(lineno_r_one_SOURCES) \
+@@ -785,13 +762,12 @@ SOURCES = $(alloc_extra_SOURCES) $(array
+ 	$(yyextra_SOURCES)
+ DIST_SOURCES = $(alloc_extra_SOURCES) $(array_nr_SOURCES) \
+ 	$(array_r_SOURCES) $(basic_nr_SOURCES) $(basic_r_SOURCES) \
+-	$(bison_nr_SOURCES) $(bison_yylloc_SOURCES) \
+-	$(bison_yylval_SOURCES) $(c_cxx_nr_SOURCES) $(c_cxx_r_SOURCES) \
+-	$(ccl_SOURCES) $(cxx_basic_SOURCES) \
+-	$(cxx_multiple_scanners_SOURCES) $(cxx_restart_SOURCES) \
+-	$(cxx_yywrap_i3_SOURCES) $(debug_nr_SOURCES) \
+-	$(debug_r_SOURCES) $(extended_SOURCES) $(header_nr_SOURCES) \
+-	$(header_r_SOURCES) $(include_by_buffer_direct_SOURCES) \
++	$(c_cxx_nr_SOURCES) $(c_cxx_r_SOURCES) $(ccl_SOURCES) \
++	$(cxx_basic_SOURCES) $(cxx_multiple_scanners_SOURCES) \
++	$(cxx_restart_SOURCES) $(cxx_yywrap_i3_SOURCES) \
++	$(debug_nr_SOURCES) $(debug_r_SOURCES) $(extended_SOURCES) \
++	$(header_nr_SOURCES) $(header_r_SOURCES) \
++	$(include_by_buffer_direct_SOURCES) \
+ 	$(include_by_push_direct_SOURCES) \
+ 	$(include_by_reentrant_direct_SOURCES) \
+ 	$(lineno_nr_one_SOURCES) $(lineno_r_one_SOURCES) \
+@@ -1136,11 +1112,7 @@ am__DIST_COMMON = $(srcdir)/Makefile.in 
+ 	$(top_srcdir)/build-aux/depcomp \
+ 	$(top_srcdir)/build-aux/test-driver \
+ 	$(top_srcdir)/build-aux/ylwrap README alloc_extra.c array_nr.c \
+-	array_r.c basic_nr.c basic_r.c bison_nr_parser.c \
+-	bison_nr_parser.h bison_nr_scanner.c bison_yylloc_parser.c \
+-	bison_yylloc_parser.h bison_yylloc_scanner.c \
+-	bison_yylval_parser.c bison_yylval_parser.h \
+-	bison_yylval_scanner.c ccl.c cxx_basic.cc \
++	array_r.c basic_nr.c basic_r.c ccl.c cxx_basic.cc \
+ 	cxx_multiple_scanners_1.cc cxx_multiple_scanners_2.cc \
+ 	cxx_restart.cc cxx_yywrap.cc debug_nr.c debug_r.c extended.c \
+ 	header_nr_scanner.c header_r_scanner.c \
+@@ -1336,9 +1306,6 @@ simple_tests = \
+ 	array_r \
+ 	basic_nr \
+ 	basic_r \
+-	bison_nr \
+-	bison_yylloc \
+-	bison_yylval \
+ 	c_cxx_nr \
+ 	c_cxx_r \
+ 	ccl \
+@@ -1395,9 +1362,6 @@ array_nr_SOURCES = array_nr.l
+ array_r_SOURCES = array_r.l
+ basic_nr_SOURCES = basic_nr.l
+ basic_r_SOURCES = basic_r.l
+-bison_nr_SOURCES = bison_nr_scanner.l bison_nr_parser.y bison_nr_main.c
+-bison_yylloc_SOURCES = bison_yylloc_scanner.l bison_yylloc_parser.y bison_yylloc_main.c
+-bison_yylval_SOURCES = bison_yylval_scanner.l bison_yylval_parser.y bison_yylval_main.c
+ c_cxx_nr_SOURCES = c_cxx_nr.lll
+ c_cxx_r_SOURCES = c_cxx_r.lll
+ ccl_SOURCES = ccl.l
+@@ -1437,12 +1401,6 @@ string_r_SOURCES = string_r.l
  top_SOURCES = top.l top_main.c
  yyextra_SOURCES = yyextra.l
  BUILT_SOURCES = \
@@ -29,3 +132,155 @@ to avoid a dependency cycle, since bison depends on flex.
  	header_nr_scanner.h \
  	header_r_scanner.h \
  	multiple_scanners_nr_1.h \
+@@ -1465,18 +1423,6 @@ CLEANFILES = \
+ 	array_r.c \
+ 	basic_nr.c \
+ 	basic_r.c \
+-	bison_nr_parser.c \
+-	bison_nr_parser.h \
+-	bison_nr_scanner.c \
+-	bison_nr_scanner.h \
+-	bison_yylloc_parser.c \
+-	bison_yylloc_parser.h \
+-	bison_yylloc_scanner.c \
+-	bison_yylloc_scanner.h \
+-	bison_yylval_parser.c \
+-	bison_yylval_parser.h \
+-	bison_yylval_scanner.c \
+-	bison_yylval_scanner.h \
+ 	c_cxx_nr.cc \
+ 	c_cxx_r.cc \
+ 	ccl.c \
+@@ -1538,9 +1484,6 @@ EXTRA_DIST = \
+ 	array_r.txt \
+ 	basic_nr.txt \
+ 	basic_r.txt \
+-	bison_nr.txt \
+-	bison_yylloc.txt \
+-	bison_yylval.txt \
+ 	c_cxx_nr.txt \
+ 	c_cxx_r.txt \
+ 	ccl.txt \
+@@ -1738,7 +1681,7 @@ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
+ 
+ .SUFFIXES:
+-.SUFFIXES: .c .cc .cn .cn$(EXEEXT) .direct .direct$(EXEEXT) .i3 .i3$(EXEEXT) .l .ll .lll .lo .log .o .obj .one .one$(EXEEXT) .opt .opt$(EXEEXT) .pthread .pthread$(EXEEXT) .reject .reject$(EXEEXT) .ser .ser$(EXEEXT) .table .table$(EXEEXT) .trs .ver .ver$(EXEEXT) .y
++.SUFFIXES: .c .cc .cn .cn$(EXEEXT) .direct .direct$(EXEEXT) .i3 .i3$(EXEEXT) .l .ll .lll .lo .log .o .obj .one .one$(EXEEXT) .opt .opt$(EXEEXT) .pthread .pthread$(EXEEXT) .reject .reject$(EXEEXT) .ser .ser$(EXEEXT) .table .table$(EXEEXT) .trs .ver .ver$(EXEEXT)
+ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am $(srcdir)/tableopts.am $(am__configure_deps)
+ 	@for dep in $?; do \
+ 	  case '$(am__configure_deps)' in \
+@@ -1798,27 +1741,6 @@ basic_nr$(EXEEXT): $(basic_nr_OBJECTS) $
+ basic_r$(EXEEXT): $(basic_r_OBJECTS) $(basic_r_DEPENDENCIES) $(EXTRA_basic_r_DEPENDENCIES) 
+ 	@rm -f basic_r$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(basic_r_OBJECTS) $(basic_r_LDADD) $(LIBS)
+-bison_nr_parser.h: bison_nr_parser.c
+-	@if test ! -f $@; then rm -f bison_nr_parser.c; else :; fi
+-	@if test ! -f $@; then $(MAKE) $(AM_MAKEFLAGS) bison_nr_parser.c; else :; fi
+-
+-bison_nr$(EXEEXT): $(bison_nr_OBJECTS) $(bison_nr_DEPENDENCIES) $(EXTRA_bison_nr_DEPENDENCIES) 
+-	@rm -f bison_nr$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(bison_nr_OBJECTS) $(bison_nr_LDADD) $(LIBS)
+-bison_yylloc_parser.h: bison_yylloc_parser.c
+-	@if test ! -f $@; then rm -f bison_yylloc_parser.c; else :; fi
+-	@if test ! -f $@; then $(MAKE) $(AM_MAKEFLAGS) bison_yylloc_parser.c; else :; fi
+-
+-bison_yylloc$(EXEEXT): $(bison_yylloc_OBJECTS) $(bison_yylloc_DEPENDENCIES) $(EXTRA_bison_yylloc_DEPENDENCIES) 
+-	@rm -f bison_yylloc$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(bison_yylloc_OBJECTS) $(bison_yylloc_LDADD) $(LIBS)
+-bison_yylval_parser.h: bison_yylval_parser.c
+-	@if test ! -f $@; then rm -f bison_yylval_parser.c; else :; fi
+-	@if test ! -f $@; then $(MAKE) $(AM_MAKEFLAGS) bison_yylval_parser.c; else :; fi
+-
+-bison_yylval$(EXEEXT): $(bison_yylval_OBJECTS) $(bison_yylval_DEPENDENCIES) $(EXTRA_bison_yylval_DEPENDENCIES) 
+-	@rm -f bison_yylval$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(bison_yylval_OBJECTS) $(bison_yylval_LDADD) $(LIBS)
+ 
+ c_cxx_nr$(EXEEXT): $(c_cxx_nr_OBJECTS) $(c_cxx_nr_DEPENDENCIES) $(EXTRA_c_cxx_nr_DEPENDENCIES) 
+ 	@rm -f c_cxx_nr$(EXEEXT)
+@@ -1967,15 +1889,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/array_r.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/basic_nr.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/basic_r.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_nr_main.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_nr_parser.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_nr_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_yylloc_main.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_yylloc_parser.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_yylloc_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_yylval_main.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_yylval_parser.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bison_yylval_scanner.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/c_cxx_nr.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/c_cxx_r.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ccl.Po@am__quote@
+@@ -2062,9 +1975,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+ @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LTCXXCOMPILE) -c -o $@ $<
+ 
+-.y.c:
+-	$(AM_V_YACC)$(am__skipyacc) $(SHELL) $(YLWRAP) $< y.tab.c $@ y.tab.h `echo $@ | $(am__yacc_c2h)` y.output $*.output -- $(YACCCOMPILE)
+-
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+ 
+@@ -2299,27 +2209,6 @@ basic_r.log: basic_r$(EXEEXT)
+ 	--log-file $$b.log --trs-file $$b.trs \
+ 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+ 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+-bison_nr.log: bison_nr$(EXEEXT)
+-	@p='bison_nr$(EXEEXT)'; \
+-	b='bison_nr'; \
+-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+-	--log-file $$b.log --trs-file $$b.trs \
+-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+-	"$$tst" $(AM_TESTS_FD_REDIRECT)
+-bison_yylloc.log: bison_yylloc$(EXEEXT)
+-	@p='bison_yylloc$(EXEEXT)'; \
+-	b='bison_yylloc'; \
+-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+-	--log-file $$b.log --trs-file $$b.trs \
+-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+-	"$$tst" $(AM_TESTS_FD_REDIRECT)
+-bison_yylval.log: bison_yylval$(EXEEXT)
+-	@p='bison_yylval$(EXEEXT)'; \
+-	b='bison_yylval'; \
+-	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+-	--log-file $$b.log --trs-file $$b.trs \
+-	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+-	"$$tst" $(AM_TESTS_FD_REDIRECT)
+ c_cxx_nr.log: c_cxx_nr$(EXEEXT)
+ 	@p='c_cxx_nr$(EXEEXT)'; \
+ 	b='c_cxx_nr'; \
+@@ -2710,15 +2599,6 @@ maintainer-clean-generic:
+ 	-rm -f array_r.c
+ 	-rm -f basic_nr.c
+ 	-rm -f basic_r.c
+-	-rm -f bison_nr_parser.c
+-	-rm -f bison_nr_parser.h
+-	-rm -f bison_nr_scanner.c
+-	-rm -f bison_yylloc_parser.c
+-	-rm -f bison_yylloc_parser.h
+-	-rm -f bison_yylloc_scanner.c
+-	-rm -f bison_yylval_parser.c
+-	-rm -f bison_yylval_parser.h
+-	-rm -f bison_yylval_scanner.c
+ 	-rm -f ccl.c
+ 	-rm -f cxx_basic.cc
+ 	-rm -f cxx_multiple_scanners_1.cc
+@@ -2856,15 +2736,6 @@ dist-hook:
+ .ll.cc: $(FLEX)
+ 	$(FLEX) -+ -o $@ $<
+ 
+-bison_nr_main.($OBJEXT): bison_nr_parser.h bison_nr_scanner.h
+-bison_nr_scanner.h: bison_nr_scanner.c
+-
+-bison_yylloc_main.$(OBJEXT): bison_yylloc_parser.h bison_yylloc_scanner.h
+-bison_yylloc_scanner.h: bison_yylloc_scanner.c
+-
+-bison_yylval_main.$(OBJEXT): bison_yylval_parser.h bison_yylval_scanner.h
+-bison_yylval_scanner.h: bison_yylval_scanner.c
+-
+ # automake does not support compiling flex scanners output in C as C++
+ # so we explicitly sayhow, using the .lll suffix for the lex input file
+ 

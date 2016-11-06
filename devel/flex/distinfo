@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.24 2016/08/12 10:12:23 mef Exp $
+$NetBSD: distinfo,v 1.25 2016/11/06 21:31:38 wiz Exp $
 
-SHA1 (flex-2.6.0.tar.xz) = 684c927c9f1b170e9627338de12e99cf2c224b91
-RMD160 (flex-2.6.0.tar.xz) = 07c8ffa268fc4a9a117e9c12736f8b58a583dde8
-SHA512 (flex-2.6.0.tar.xz) = 9cd48aa79ce70814902745d6e67f677bcc67f23dcc46ebb5f2963efac0d8f6f6c10ee87369d2d7557d29e390a3502dd99246db0fd2e096b9e7bb6e16d51d3abe
-Size (flex-2.6.0.tar.xz) = 1369552 bytes
-SHA1 (patch-src_Makefile.am) = b50c07da46385500c1a220967c84bea1027b4081
-SHA1 (patch-src_Makefile.in) = 8d36fbd12918986715c53c772df549a5057325b7
-SHA1 (patch-src_filter.c) = 377be93afefeca93efa1f8eae0407374bd006ab3
-SHA1 (patch-tests_Makefile.in) = cff98017e0cc0046b57d3b50c9d07ca43d7ce4f7
+SHA1 (flex-2.6.2.tar.gz) = 9eab5eddb6efb34d420b3162fd619a01940b9438
+RMD160 (flex-2.6.2.tar.gz) = f58dca039f2b77b9477e45ac92a57804a6458f13
+SHA512 (flex-2.6.2.tar.gz) = 481fe3f1c370fe04d5a605a826c53dd0afa5b6ea655f0d14fa9bb9cb498c016f68cef8fea806458f07baa7ae5bc1ac729be427cb4e0cc39ce744a809ef6442b3
+Size (flex-2.6.2.tar.gz) = 1402237 bytes
+SHA1 (patch-configure) = 8eeb54c913794d9489b6e2a6d9ae9ce2d32fb7f1
+SHA1 (patch-tests_Makefile.am) = f30524f9b8c22a37cb04b4406ec142ea1ecb8e59
+SHA1 (patch-tests_Makefile.in) = 709d5f117418bbcbcc54926f582bc808daf12f3b

@@ -1,0 +1,86 @@
+$NetBSD: patch-tests_Makefile.am,v 1.3 2016/11/06 21:31:38 wiz Exp $
+
+Disable bison tests since we don't want to build with bison
+to avoid a dependency cycle, since bison depends on flex.
+https://github.com/westes/flex/issues/49
+
+--- tests/Makefile.am.orig	Sun Nov  6 20:09:47 2016
++++ tests/Makefile.am	Sun Nov  6 20:10:43 2016
+@@ -66,9 +66,6 @@
+ 	array_r \
+ 	basic_nr \
+ 	basic_r \
+-	bison_nr \
+-	bison_yylloc \
+-	bison_yylval \
+ 	c_cxx_nr \
+ 	c_cxx_r \
+ 	ccl \
+@@ -127,9 +124,6 @@
+ array_r_SOURCES = array_r.l
+ basic_nr_SOURCES = basic_nr.l
+ basic_r_SOURCES = basic_r.l
+-bison_nr_SOURCES = bison_nr_scanner.l bison_nr_parser.y bison_nr_main.c
+-bison_yylloc_SOURCES = bison_yylloc_scanner.l bison_yylloc_parser.y bison_yylloc_main.c
+-bison_yylval_SOURCES = bison_yylval_scanner.l bison_yylval_parser.y bison_yylval_main.c
+ c_cxx_nr_SOURCES = c_cxx_nr.lll
+ c_cxx_r_SOURCES = c_cxx_r.lll
+ ccl_SOURCES = ccl.l
+@@ -170,12 +164,6 @@
+ yyextra_SOURCES = yyextra.l
+ 
+ BUILT_SOURCES = \
+-	bison_nr_parser.h \
+-	bison_nr_scanner.h \
+-	bison_yylloc_parser.h \
+-	bison_yylloc_scanner.h \
+-	bison_yylval_parser.h \
+-	bison_yylval_scanner.h \
+ 	header_nr_scanner.h \
+ 	header_r_scanner.h \
+ 	multiple_scanners_nr_1.h \
+@@ -198,18 +186,6 @@
+ 	array_r.c \
+ 	basic_nr.c \
+ 	basic_r.c \
+-	bison_nr_parser.c \
+-	bison_nr_parser.h \
+-	bison_nr_scanner.c \
+-	bison_nr_scanner.h \
+-	bison_yylloc_parser.c \
+-	bison_yylloc_parser.h \
+-	bison_yylloc_scanner.c \
+-	bison_yylloc_scanner.h \
+-	bison_yylval_parser.c \
+-	bison_yylval_parser.h \
+-	bison_yylval_scanner.c \
+-	bison_yylval_scanner.h \
+ 	c_cxx_nr.cc \
+ 	c_cxx_r.cc \
+ 	ccl.c \
+@@ -276,9 +252,6 @@
+ 	array_r.txt \
+ 	basic_nr.txt \
+ 	basic_r.txt \
+-	bison_nr.txt \
+-	bison_yylloc.txt \
+-	bison_yylval.txt \
+ 	c_cxx_nr.txt \
+ 	c_cxx_r.txt \
+ 	ccl.txt \
+@@ -340,15 +313,6 @@
+ .ll.cc: $(FLEX)
+ 	$(FLEX) -+ -o $@ $<
+ 
+-bison_nr_main.($OBJEXT): bison_nr_parser.h bison_nr_scanner.h
+-bison_nr_scanner.h: bison_nr_scanner.c
+-
+-bison_yylloc_main.$(OBJEXT): bison_yylloc_parser.h bison_yylloc_scanner.h
+-bison_yylloc_scanner.h: bison_yylloc_scanner.c
+-
+-bison_yylval_main.$(OBJEXT): bison_yylval_parser.h bison_yylval_scanner.h
+-bison_yylval_scanner.h: bison_yylval_scanner.c
+-
+ # automake does not support compiling flex scanners output in C as C++
+ # so we explicitly sayhow, using the .lll suffix for the lex input file
+ 
