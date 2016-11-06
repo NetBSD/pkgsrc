@@ -1,6 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2016/11/06 19:26:35 wiz Exp $
+$NetBSD: patch-ab,v 1.14 2016/11/06 19:30:42 wiz Exp $
 
 Suspend the job w3m belongs to, not w3m only.
+https://github.com/tats/w3m/pull/34
 
 --- main.c.orig	2016-10-31 11:28:45.000000000 +0000
 +++ main.c

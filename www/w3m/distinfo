@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.27 2016/11/06 19:26:35 wiz Exp $
+$NetBSD: distinfo,v 1.28 2016/11/06 19:30:42 wiz Exp $
 
 SHA1 (w3m-0.5.3+git20161031.tar.gz) = 99f0ac7f9172d4b6e0ba6808521158b5a2e662ff
 RMD160 (w3m-0.5.3+git20161031.tar.gz) = ec7c26dbc62b962317656e571eaa4ba4451b4f11
 SHA512 (w3m-0.5.3+git20161031.tar.gz) = 7291b5c0266f9928ecca5eb2ff92e40a5b10ef8e0718c0df513857206f89289f5c6d7a2b29b84013b0f5b215acb9c3c1cdaa04db391a9a771fb1549068ebc928
 Size (w3m-0.5.3+git20161031.tar.gz) = 2176157 bytes
-SHA1 (patch-ab) = f5b89ea9b204847a141c5248db8a0488ea457f51
+SHA1 (patch-ab) = 50499ba882c24c8f46d82162ea06ce2d880bf91e
