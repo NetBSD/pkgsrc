@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2016/08/27 11:41:23 richard Exp $
+$NetBSD: distinfo,v 1.13 2016/11/06 00:32:12 wen Exp $
 
-SHA1 (pip-8.1.2.tar.gz) = 1c13c247967ec5bee6de5fd104c5d78ba30951c7
-RMD160 (pip-8.1.2.tar.gz) = de676d8f554d96e7ecf03e919380e7a6fd968634
-SHA512 (pip-8.1.2.tar.gz) = f35e70344bc7baa0739d7a8a38e51f401774b23672e915c32d54fab3e9cc465bfc47361823fa75d2a64fc8748f2020170bd7a4cfde10070d7febf56d1f9124f0
-Size (pip-8.1.2.tar.gz) = 1140573 bytes
+SHA1 (pip-9.0.0.tar.gz) = 2177b8425560357b922b9e9bdde4698c4bf89991
+RMD160 (pip-9.0.0.tar.gz) = 12d773ae9e697d404b640102acb35952df469a9f
+SHA512 (pip-9.0.0.tar.gz) = b66875988e3af6a3281a0b4dd3941d7a94cc35c4a6104d12e24c0d18386b7aa93d46431e6e385df3cd196abe3d4e7dedbe4e77e6e89455652bad2bd0353fcc4e
+Size (pip-9.0.0.tar.gz) = 1197043 bytes
