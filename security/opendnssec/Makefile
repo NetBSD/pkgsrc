@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2016/07/16 19:49:07 he Exp $
+# $NetBSD: Makefile,v 1.59 2016/11/06 12:54:35 he Exp $
 #
 
-DISTNAME=	opendnssec-1.4.10
-PKGREVISION=	1
+DISTNAME=	opendnssec-1.4.12
 CATEGORIES=	security net
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	ldns>=1.6.13:../../net/ldns
+DEPENDS+=	ldns>=1.6.17:../../net/ldns
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 BUILD_DEFS+=	VARBASE
