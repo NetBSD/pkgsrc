@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4591 2016/11/06 05:02:26 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4592 2016/11/06 06:33:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6352,3 +6352,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Perl-Releases to 2.98 [mef 2016-11-06]
 	Updated devel/p5-Devel-CheckOS to 1.79 [mef 2016-11-06]
 	Updated devel/p5-Devel-GlobalDestruction to 0.14 [mef 2016-11-06]
+	Updated mail/p5-Email-Sender to 1.300030 [wen 2016-11-06]
