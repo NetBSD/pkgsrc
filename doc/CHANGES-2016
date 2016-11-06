@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4590 2016/11/06 03:04:27 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4591 2016/11/06 05:02:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6349,3 +6349,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-zoo to 1.7.13 [wen 2016-11-06]
 	Updated math/R-statmod to 1.4.26 [wen 2016-11-06]
 	Updated math/R-splancs to 2.01.39 [wen 2016-11-06]
+	Updated devel/p5-CPAN-Perl-Releases to 2.98 [mef 2016-11-06]
+	Updated devel/p5-Devel-CheckOS to 1.79 [mef 2016-11-06]
+	Updated devel/p5-Devel-GlobalDestruction to 0.14 [mef 2016-11-06]
