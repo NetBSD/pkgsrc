@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4595 2016/11/06 11:25:35 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4596 2016/11/06 12:55:20 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6356,3 +6356,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated biology/bioperl to 1.007001 [wen 2016-11-06]
 	Updated www/py-django to 1.10.3 [wen 2016-11-06]
 	Updated print/cups-filters to 1.11.6 [leot 2016-11-06]
+	Updated security/opendnssec to 1.4.12 [he 2016-11-06]
