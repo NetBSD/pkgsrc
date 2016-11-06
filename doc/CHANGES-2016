@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4601 2016/11/06 19:55:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4602 2016/11/06 21:31:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6366,3 +6366,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/w3m to 0.5.3.0.20161031 [wiz 2016-11-06]
 	Updated www/w3m-img to 0.5.3.0.20161031 [wiz 2016-11-06]
 	Updated devel/tcllib to 1.18 [wiz 2016-11-06]
+	Updated devel/flex to 2.6.2 [wiz 2016-11-06]
