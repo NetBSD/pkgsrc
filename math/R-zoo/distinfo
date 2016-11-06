@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 23:33:30 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/11/06 02:43:56 wen Exp $
 
-SHA1 (R/zoo_1.7-12.tar.gz) = 73a7dc5152b21d4cd215c07a22f020b537c352c9
-RMD160 (R/zoo_1.7-12.tar.gz) = 82e1cb85247ec8b69c1af324fd4f2a5524a7a9c8
-SHA512 (R/zoo_1.7-12.tar.gz) = f2f742dbdca651c4b2285740afefabab8ebde5a355f2d8c86031437328a75e3005283d4e48506c06072be4a82a6904cfe90b43a1bbdc26327b6f5a2c381a0a4b
-Size (R/zoo_1.7-12.tar.gz) = 839181 bytes
+SHA1 (R/zoo_1.7-13.tar.gz) = 772452c0dbd607da2ba208225254de115301d166
+RMD160 (R/zoo_1.7-13.tar.gz) = ef09bded994d9a0846d661f782d46a213e317ea1
+SHA512 (R/zoo_1.7-13.tar.gz) = 77e74c30ff30f7a3d505806d2c0584cba075e1fa27a9fecff551d6eb96a8f1e41ee21d9ebadff7a9c21350051d491523e8ec9d5e9fbf7be8e47d7d825182c2e1
+Size (R/zoo_1.7-13.tar.gz) = 842068 bytes
