@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2016/07/09 13:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2016/11/06 15:39:28 adam Exp $
 
-DISTNAME=	hatari-1.9.0
+DISTNAME=	hatari-2.0.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.tuxfamily.org/hatari/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +15,7 @@ USE_LANGUAGES=		c
 CMAKE_ARGS+=		-DENABLE_OSX_BUNDLE:BOOL=0
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.7.0
+
 REPLACE_PYTHON+=	python-ui/config.py
 REPLACE_PYTHON+=	python-ui/debugui.py
 REPLACE_PYTHON+=	python-ui/dialogs.py
@@ -34,7 +35,7 @@ REPLACE_PYTHON+=	tools/hconsole/hconsole.py
 INSTALLATION_DIRS+=	share/doc/hatari
 
 .include "../../audio/portaudio-devel/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
