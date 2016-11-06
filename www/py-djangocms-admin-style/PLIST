@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/09/12 13:00:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/11/06 14:48:35 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -28,6 +28,7 @@ ${PYSITELIB}/djangocms_admin_style/models.pyc
 ${PYSITELIB}/djangocms_admin_style/models.pyo
 ${PYSITELIB}/djangocms_admin_style/sass/components/_base.scss
 ${PYSITELIB}/djangocms_admin_style/sass/components/_changelist.scss
+${PYSITELIB}/djangocms_admin_style/sass/components/_cms-update.scss
 ${PYSITELIB}/djangocms_admin_style/sass/components/_cmsplaceholders.scss
 ${PYSITELIB}/djangocms_admin_style/sass/components/_content.scss
 ${PYSITELIB}/djangocms_admin_style/sass/components/_dashboard.scss
@@ -47,7 +48,6 @@ ${PYSITELIB}/djangocms_admin_style/sass/components/_shortcuts.scss
 ${PYSITELIB}/djangocms_admin_style/sass/components/_sideframe.scss
 ${PYSITELIB}/djangocms_admin_style/sass/components/_tables.scss
 ${PYSITELIB}/djangocms_admin_style/sass/djangocms-admin.scss
-${PYSITELIB}/djangocms_admin_style/sass/ie.scss
 ${PYSITELIB}/djangocms_admin_style/sass/libs/_html5-boilerplate.scss
 ${PYSITELIB}/djangocms_admin_style/sass/libs/_iconfont.scss
 ${PYSITELIB}/djangocms_admin_style/sass/libs/_normalize.scss
@@ -75,11 +75,8 @@ ${PYSITELIB}/djangocms_admin_style/static/admin/img/icon_searchbox.png
 ${PYSITELIB}/djangocms_admin_style/static/admin/img/search.svg
 ${PYSITELIB}/djangocms_admin_style/static/admin/img/selector-icons.gif
 ${PYSITELIB}/djangocms_admin_style/static/admin/img/selector-search.gif
-${PYSITELIB}/djangocms_admin_style/static/cms/PIE.htc
 ${PYSITELIB}/djangocms_admin_style/static/cms/images/sitemap-li-bg.jpg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/css/djangocms-admin.css
-${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/css/ie.css
-${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/css/pie.css
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/django-admin-iconfont.eot
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/django-admin-iconfont.svg
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/fonts/django-admin-iconfont.ttf
@@ -190,9 +187,16 @@ ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/select2.png
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/sorting-icons.gif
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/sorting-icons.png
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/base-admin.js
-${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/datetimefields.js
-${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/drag-touch-support.js
-${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/jquery.ui.touch-punch.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/dist/bundle.adminstyle.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/jquery.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/libs/js.cookie-2.1.2.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/datetimefields.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/drag-touch-support.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/jquery.ui.touch-punch.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/related-widget-wrapper.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/toolbar-dropdown.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/ui-fixes.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/modules/update-notification.js
 ${PYSITELIB}/djangocms_admin_style/static/preview_images/admin-style-1.png
 ${PYSITELIB}/djangocms_admin_style/static/preview_images/admin-style-2.png
 ${PYSITELIB}/djangocms_admin_style/static/preview_images/admin-style-3.png
@@ -203,10 +207,17 @@ ${PYSITELIB}/djangocms_admin_style/templates/admin/base_site.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/delete_confirmation.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/delete_selected_confirmation.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/inc/branding.html
+${PYSITELIB}/djangocms_admin_style/templates/admin/inc/cms_upgrade_notification.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/inc/extrahead.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/inc/extrastyle.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/inc/title.html
 ${PYSITELIB}/djangocms_admin_style/templates/admin/inc/userlinks.html
+${PYSITELIB}/djangocms_admin_style/templatetags/__init__.py
+${PYSITELIB}/djangocms_admin_style/templatetags/__init__.pyc
+${PYSITELIB}/djangocms_admin_style/templatetags/__init__.pyo
+${PYSITELIB}/djangocms_admin_style/templatetags/admin_style_tags.py
+${PYSITELIB}/djangocms_admin_style/templatetags/admin_style_tags.pyc
+${PYSITELIB}/djangocms_admin_style/templatetags/admin_style_tags.pyo
 ${PYSITELIB}/djangocms_admin_style/test_utils/project/templates/integration/base.html
 ${PYSITELIB}/djangocms_admin_style/test_utils/project/templates/integration/fullwidth.html
 ${PYSITELIB}/djangocms_admin_style/test_utils/project/templates/integration/page.html
@@ -214,6 +225,7 @@ ${PYSITELIB}/djangocms_admin_style/test_utils/project/templates/integration/simp
 ${PYSITELIB}/djangocms_admin_style/tests/.eslintrc.js
 ${PYSITELIB}/djangocms_admin_style/tests/casperjs.conf.js
 ${PYSITELIB}/djangocms_admin_style/tests/integration/addNewUser.js
+${PYSITELIB}/djangocms_admin_style/tests/integration/adminsortable2.js
 ${PYSITELIB}/djangocms_admin_style/tests/integration/dashboard.js
 ${PYSITELIB}/djangocms_admin_style/tests/integration/handlers/externalMissing.js
 ${PYSITELIB}/djangocms_admin_style/tests/integration/handlers/loadFailures.js
