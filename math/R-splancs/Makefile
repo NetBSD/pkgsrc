@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/05/30 11:09:12 wen Exp $
+# $NetBSD: Makefile,v 1.5 2016/11/06 03:03:16 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Spatial and space-time point pattern analysis
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	splancs
-R_PKGVER=	2.01-37
+R_PKGVER=	2.01-39
 
 USE_LANGUAGES+=	c fortran
 
