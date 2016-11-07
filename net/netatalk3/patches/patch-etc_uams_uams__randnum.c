@@ -1,4 +1,6 @@
-$NetBSD: patch-etc_uams_uams__randnum.c,v 1.1 2016/11/07 00:41:58 christos Exp $
+$NetBSD: patch-etc_uams_uams__randnum.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Use the OpenSSL des routines for portability
 
 --- etc/uams/uams_randnum.c.orig	2014-01-04 16:42:35.000000000 +0100
 +++ etc/uams/uams_randnum.c	2015-08-10 16:38:08.000000000 +0200

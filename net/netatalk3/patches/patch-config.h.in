@@ -1,4 +1,6 @@
-$NetBSD: patch-config.h.in,v 1.1 2016/11/07 00:41:57 christos Exp $
+$NetBSD: patch-config.h.in,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Regen'ed?
 
 --- config.h.in.orig	2014-08-29 06:32:48.000000000 -0400
 +++ config.h.in	2016-11-06 09:19:31.553880005 -0500

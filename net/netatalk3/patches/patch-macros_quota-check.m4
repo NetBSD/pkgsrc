@@ -1,4 +1,6 @@
-$NetBSD: patch-macros_quota-check.m4,v 1.1 2016/11/07 00:41:58 christos Exp $
+$NetBSD: patch-macros_quota-check.m4,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+NetBSD flavor of quota
 
 --- macros/quota-check.m4.orig	2013-06-24 16:47:02.000000000 +0000
 +++ macros/quota-check.m4
