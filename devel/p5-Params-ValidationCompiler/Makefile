@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/10/01 12:54:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/11/07 10:45:25 wiz Exp $
 
-DISTNAME=	Params-ValidationCompiler-0.13
+DISTNAME=	Params-ValidationCompiler-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 
@@ -15,10 +14,9 @@ DEPENDS+=	p5-Eval-Closure-[0-9]*:../../devel/p5-Eval-Closure
 DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Specio>=0.14:../../devel/p5-Specio
-#BUILD_DEPENDS+=	p5-Test2-Bundle-Extended-[0-9]*:../../devel/p5-Test2-Bundle-Extended
-#BUILD_DEPENDS+=	p5-Test2-Plugin-NoWarnings-[0-9]*:../../devel/p5-Test2-Plugin-NoWarnings
-#BUILD_DEPENDS+=	p5-Test2-Require-Module-[0-9]*:../../devel/p5-Test2-Require-Module
-#BUILD_DEPENDS+=	p5-Test-More>=1.302015:../../devel/p5-Test-More
+BUILD_DEPENDS+=	p5-Test2-Suite-[0-9]*:../../devel/p5-Test2-Suite
+BUILD_DEPENDS+=	p5-Test2-Plugin-NoWarnings-[0-9]*:../../devel/p5-Test2-Plugin-NoWarnings
+BUILD_DEPENDS+=	p5-Test-Without-Module-[0-9]*:../../devel/p5-Test-Without-Module
 
 PERL5_PACKLIST=		auto/Params/ValidationCompiler/.packlist
 
