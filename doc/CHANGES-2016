@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4625 2016/11/07 13:12:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4626 2016/11/07 14:18:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6390,3 +6390,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/xapian-omega to 1.4.1 [schmonz 2016-11-07]
 	Updated textproc/p5-Search-Xapian to 1.2.24.0 [schmonz 2016-11-07]
 	Updated editors/Sigil to 0.9.7 [wiz 2016-11-07]
+	Updated devel/p5-Specio to 0.31 [mef 2016-11-07]
+	Updated devel/p5-Term-ReadLine to 1.35 [mef 2016-11-07]
+	Updated devel/p5-Test-Deep to 1.124 [mef 2016-11-07]
