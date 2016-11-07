@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16666 2016/11/07 10:45:34 wiz Exp $
+$NetBSD: TODO,v 1.16667 2016/11/07 10:47:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1229,14 +1229,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Publican-4.3.2
 	o p5-RADIUS-2.30
 	o p5-RT-Authen-ExternalAuth-0.25
-	o p5-Role-Tiny-2.000005
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
-	o p5-Unicode-Collate-1.18
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
 	o p5-eBay-API-0.29
