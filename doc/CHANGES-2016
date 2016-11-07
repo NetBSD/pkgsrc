@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4605 2016/11/07 10:37:05 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4606 2016/11/07 10:39:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6370,3 +6370,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.3.5 [wiz 2016-11-07]
 	Updated graphics/p5-PerlMagick to 7.0.3.5 [wiz 2016-11-07]
 	Added devel/p5-Importer version 0.024 [wiz 2016-11-07]
+	Added devel/p5-Test2-Suite version 0.000060 [wiz 2016-11-07]
