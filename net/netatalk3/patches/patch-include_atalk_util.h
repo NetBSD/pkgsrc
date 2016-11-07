@@ -1,4 +1,6 @@
-$NetBSD: patch-include_atalk_util.h,v 1.1 2016/11/07 00:41:58 christos Exp $
+$NetBSD: patch-include_atalk_util.h,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Make symbols loaded from dso's available to others.
 
 --- include/atalk/util.h.orig	2014-08-07 07:11:55.000000000 -0400
 +++ include/atalk/util.h	2016-11-06 09:33:20.246331563 -0500
