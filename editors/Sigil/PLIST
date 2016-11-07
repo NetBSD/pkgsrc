@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/03/21 11:40:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/11/07 13:12:37 wiz Exp $
 bin/sigil
 lib/sigil/libhunspell.${RUBY_DLEXT}
 lib/sigil/libsigilgumbo.${RUBY_DLEXT}
@@ -69,14 +69,19 @@ share/sigil/plugin_launchers/python/validationcontainer.py
 share/sigil/plugin_launchers/python/validationresult.py
 share/sigil/plugin_launchers/python/wrapper.py
 share/sigil/polyfills/MathJax.js
+share/sigil/python3lib/gencheck.py
 share/sigil/python3lib/metadata_utils.py
 share/sigil/python3lib/metaproc2.py
 share/sigil/python3lib/metaproc3.py
+share/sigil/python3lib/ncxdata.py
 share/sigil/python3lib/ncxgenerator.py
+share/sigil/python3lib/opf2data.py
+share/sigil/python3lib/opf3data.py
 share/sigil/python3lib/opf_newparser.py
 share/sigil/python3lib/sanitycheck.py
 share/sigil/python3lib/updatechecker.py
 share/sigil/python3lib/xmlprocessor.py
+share/sigil/python3lib/xmlsanitycheck.py
 share/sigil/translations/sigil_ca.qm
 share/sigil/translations/sigil_cs.qm
 share/sigil/translations/sigil_da_DK.qm
@@ -94,6 +99,7 @@ share/sigil/translations/sigil_ja.qm
 share/sigil/translations/sigil_ko.qm
 share/sigil/translations/sigil_nl.qm
 share/sigil/translations/sigil_pl.qm
+share/sigil/translations/sigil_pt.qm
 share/sigil/translations/sigil_pt_BR.qm
 share/sigil/translations/sigil_ru.qm
 share/sigil/translations/sigil_sk.qm
