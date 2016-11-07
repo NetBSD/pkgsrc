@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4622 2016/11/07 13:02:29 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.4623 2016/11/07 13:02:54 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6387,3 +6387,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.14.10 [wiz 2016-11-07]
 	Updated print/abcm2ps to 8.12.9 [wiz 2016-11-07]
 	Updated textproc/xapian to 1.4.1 [schmonz 2016-11-07]
+	Updated textproc/xapian-omega to 1.4.1 [schmonz 2016-11-07]
