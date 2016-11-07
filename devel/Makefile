@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2330 2016/11/07 10:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2331 2016/11/07 10:39:01 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1575,6 +1575,7 @@ SUBDIR+=	p5-Test-YAML-Meta
 SUBDIR+=	p5-Test-YAML-Valid
 SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Test-utf8
+SUBDIR+=	p5-Test2-Suite
 SUBDIR+=	p5-Throwable
 SUBDIR+=	p5-Tie-Array-AsHash
 SUBDIR+=	p5-Tie-Array-Sorted
