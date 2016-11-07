@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/05/19 20:15:56 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/11/07 03:52:24 riastradh Exp $
 bin/firefox45
 lib/firefox45/application.ini
 lib/firefox45/browser/blocklist.xml
@@ -969,6 +969,7 @@ lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/telemetry.j
 lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/theme-switching.js
 lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/theme.js
 lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/undo.js
+${PLIST.debug}lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dev.js
 lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-dom.js
 lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/vendor/react-redux.js
 lib/firefox45/browser/chrome/devtools/modules/devtools/client/shared/vendor/react.js
