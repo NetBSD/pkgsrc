@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2015/05/12 14:33:29 mef Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/07 10:53:52 wiz Exp $
 
-DISTNAME=	uri-template-py-0.6
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-template-py/template/}
+DISTNAME=	uritemplate-3.0.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc www python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=uri-templates/}
-GITHUB_PROJECT=	uritemplate-py
-GITHUB_TAG=	${DISTNAME}
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/uritemplate/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/uri-templates/uritemplate-py/
+HOMEPAGE=	https://pypi.python.org/pypi/uritemplate/
 COMMENT=	Python implementation of RFC6570, URI Template
-LICENSE=	apache-2.0
+LICENSE=	apache-2.0 OR modified-bsd
 
-EGG_NAME=	uritemplate-${PKGVERSION_NOREV}
-
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
