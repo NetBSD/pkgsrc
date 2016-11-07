@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16678 2016/11/07 13:02:29 schmonz Exp $
+$NetBSD: TODO,v 1.16679 2016/11/07 13:12:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SDL2_net-2.0.1
 	o SOGo-3.1.0
 	o SOPE-3.0.2
-	o Sigil-0.9.6
 	o TiffIO-140a
 	o YoSucker-81
 	o abcmidi-20160505
