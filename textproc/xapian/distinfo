@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2016/04/30 14:14:07 schmonz Exp $
+$NetBSD: distinfo,v 1.23 2016/11/07 13:02:17 schmonz Exp $
 
-SHA1 (xapian-core-1.2.23.tar.xz) = ccb6884ea90d80b0859aba876e01b38950f03a43
-RMD160 (xapian-core-1.2.23.tar.xz) = 167296dd8a5019e84cab66d2d74e1534ea6871da
-SHA512 (xapian-core-1.2.23.tar.xz) = df3fa71150575faf982d6b90f2364962d61012dd45ed7ef4945a0623ed7056c32ea3cbc423f2016415a80779251ecb5080b6a34c5b66b823cf8d92fe6b5b3d30
-Size (xapian-core-1.2.23.tar.xz) = 3206452 bytes
-SHA1 (patch-common_socket_utils.cc) = 8d58ed55f6badcbc2c6f6093e0f109682ef99c08
+SHA1 (xapian-core-1.4.1.tar.xz) = 23eeb1f2883882c7c25e6d36221e3f33a40b4205
+RMD160 (xapian-core-1.4.1.tar.xz) = 6dd5dd3db4b4cc33385f7cbcb6d2f89151e27f8e
+SHA512 (xapian-core-1.4.1.tar.xz) = b1bb28e78609565a2690ef147231237dcfdd3b7f6108964962260a2678ab6483a4e1f2a795d2a3595e9d0a1567d6223b0cbe6ed9d95a455437f7f5c40e49389d
+Size (xapian-core-1.4.1.tar.xz) = 2793644 bytes
+SHA1 (patch-common_safesyssocket.h) = 032d441853914d510bc285bb682a98c4ee264d52
