@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1 2016/11/07 00:45:30 christos Exp $
+
+SHA1 (netatalk-3.1.7.tar.bz2) = d4077a9496beae766ab1e4f28afa22e5c96514f0
+RMD160 (netatalk-3.1.7.tar.bz2) = 0fddc514a0654ffa546424d33b0b02f2f147f7be
+SHA512 (netatalk-3.1.7.tar.bz2) = e8b22a156235cb93830ed5045e28346613e354fd830e742b2f7c1fc9302f9bdfce7fb2cc329ce8dfd1442857f96e9e54119a4ac177b6855af9143e64fb2208e7
+Size (netatalk-3.1.7.tar.bz2) = 1780078 bytes
+SHA1 (patch-bin_ad_ad__cp.c) = ef65d56186d38c0c2d7082c379bbab8c8ebd0cdb
+SHA1 (patch-bin_afppasswd_afppasswd.c) = e029893d8f109c59a44ab1fb68aec7069278b7e6
+SHA1 (patch-config.h.in) = 23abcb4d0f94aef460326602486949f8ce781d1b
+SHA1 (patch-config_Makefile.in) = 9284ff5e523f3cf365bad1267e9f06f68aed983a
+SHA1 (patch-config_pam_Makefile.in) = b76b6408ca7ad93d195acd70e1029b3b6aa000fc
+SHA1 (patch-distrib_initscripts_Makefile.in) = fbdd481b2076cc8f416c216641890c3e5620bdcc
+SHA1 (patch-distrib_initscripts_netatalk.xml.tmpl) = dd7591e12eca3c1e7d7bc768cd1e060979dc383e
+SHA1 (patch-etc_afpd_quota.c) = 90025824fd513788c167108e4c388b453ab75ee6
+SHA1 (patch-etc_cnid__dbd_cnid__metad.c) = 907ded1c894a6872dfd082c061369f3f2ebf2929
+SHA1 (patch-etc_uams_uams__randnum.c) = 51e8b4a0c77f732423be9406c9f47d004403080a
+SHA1 (patch-include_atalk_acl.h) = 138ce03f55d19d5c1131727d35f3c4dffd5c5e04
+SHA1 (patch-include_atalk_util.h) = ed4a85b01e28613c6561f76ca34d641cce2cf859
+SHA1 (patch-libatalk_util_getiface.c) = fe4aba6080f6308866bedb3d96ccc2b034836d3e
+SHA1 (patch-macros_quota-check.m4) = aa8a053b83bc4579ca0a8f66f43226ead8e79696
