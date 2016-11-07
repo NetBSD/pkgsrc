@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/11/07 13:03:12 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2016/11/07 13:46:46 wiz Exp $
 
 DISTNAME=		Search-Xapian-1.2.24.0
 PKGNAME=		${DISTNAME:S/^/p5-/}
