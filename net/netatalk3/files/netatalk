@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# $NetBSD: netatalk,v 1.1 2016/11/07 00:42:32 christos Exp $
+#
+
+# PROVIDE: netatalk
+# REQUIRE: NETWORKING mountcritremote syslogd
+
+$_rc_subr_loaded . /etc/rc.subr
+
+name="netatalk"
+rcvar=$name
+command="/usr/pkg/libexec/netatalk/${name}"
+pidfile="/var/run/${name}.pid"
+required_files="/etc/${name}/afp.conf /etc/${name}/extmap.conf"
+
+load_rc_config $name
+run_rc_command "$1"
