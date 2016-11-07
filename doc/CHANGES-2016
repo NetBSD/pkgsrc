@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4612 2016/11/07 11:03:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4613 2016/11/07 11:08:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6377,3 +6377,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-cryptography to 1.5.3 [wiz 2016-11-07]
 	Updated textproc/py-uritemplate to 3.0.0 [wiz 2016-11-07]
 	Updated www/py-google-api-python-client to 1.5.5 [wiz 2016-11-07]
+	Removed www/py-google-api-python-client-py3 successor www/py-google-api-python-client [wiz 2016-11-07]
