@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/08/02 23:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/11/07 11:45:47 wiz Exp $
 
-DISTNAME=	todoman-1.6.3
+DISTNAME=	todoman-1.7.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
 
