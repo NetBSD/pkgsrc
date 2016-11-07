@@ -1,4 +1,6 @@
-$NetBSD: patch-bin_afppasswd_afppasswd.c,v 1.1 2016/11/07 00:41:57 christos Exp $
+$NetBSD: patch-bin_afppasswd_afppasswd.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Use the OpenSSL des.h which is more portable.
 
 --- bin/afppasswd/afppasswd.c.orig	2013-04-09 12:56:17.000000000 +0000
 +++ bin/afppasswd/afppasswd.c
