@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2329 2016/11/02 13:06:00 joerg Exp $
+# $NetBSD: Makefile,v 1.2330 2016/11/07 10:36:34 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1130,6 +1130,7 @@ SUBDIR+=	p5-IPC-Signal
 SUBDIR+=	p5-IPC-SysV
 SUBDIR+=	p5-IPC-System-Simple
 SUBDIR+=	p5-Import-Into
+SUBDIR+=	p5-Importer
 SUBDIR+=	p5-Inline
 SUBDIR+=	p5-Inline-C
 SUBDIR+=	p5-InlineX-C2XS
