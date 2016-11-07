@@ -1,4 +1,6 @@
-$NetBSD: patch-bin_ad_ad__cp.c,v 1.1 2016/11/07 00:41:57 christos Exp $
+$NetBSD: patch-bin_ad_ad__cp.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Treat NetBSD as FreeBSD for timeval to timespec conversion
 
 --- bin/ad/ad_cp.c.orig	2014-01-27 07:37:46.000000000 +0000
 +++ bin/ad/ad_cp.c
