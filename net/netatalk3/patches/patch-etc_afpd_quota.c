@@ -1,4 +1,6 @@
-$NetBSD: patch-etc_afpd_quota.c,v 1.1 2016/11/07 00:41:57 christos Exp $
+$NetBSD: patch-etc_afpd_quota.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+NetBSD uses a different quota API.
 
 --- etc/afpd/quota.c.orig	2013-04-09 12:56:18.000000000 +0000
 +++ etc/afpd/quota.c
