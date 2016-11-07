@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.3 2013/06/04 21:28:26 schmonz Exp $
+$NetBSD: patch-ab,v 1.4 2016/11/07 13:02:45 schmonz Exp $
 
 Respect ${VARBASE} and follow hier(7).
 
---- omega.conf.orig	2013-04-17 00:01:38.000000000 +0000
+--- omega.conf.orig	2016-10-21 04:54:32.000000000 +0000
 +++ omega.conf
-@@ -1,11 +1,11 @@
+@@ -1,8 +1,8 @@
  # Directory containing Xapian databases:
 -database_dir /var/lib/omega/data
 +database_dir @VARBASE@/xapian-omega/data
@@ -12,6 +12,11 @@ Respect ${VARBASE} and follow hier(7).
  # Directory containing OmegaScript templates:
 -template_dir /var/lib/omega/templates
 +template_dir @VARBASE@/xapian-omega/templates
+ 
+ # Default template name if the CGI parameter "FMT" is not specified.
+ # (If not specified here, the default template name is "query"):
+@@ -13,7 +13,7 @@ template_dir /var/lib/omega/templates
+ #default_db default
  
  # Directory to write Omega logs to:
 -log_dir /var/log/omega
