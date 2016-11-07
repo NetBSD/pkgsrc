@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4617 2016/11/07 11:24:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4618 2016/11/07 11:27:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6382,3 +6382,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-nosexcover to 1.0.11 [wiz 2016-11-07]
 	Updated devel/py-pkginfo to 1.4.0 [wiz 2016-11-07]
 	Updated devel/py-setuptools to 28.8.0 [wiz 2016-11-07]
+	Updated devel/py-tortoisehg to 4.0 [wiz 2016-11-07]
