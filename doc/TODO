@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16677 2016/11/07 11:51:57 wiz Exp $
+$NetBSD: TODO,v 1.16678 2016/11/07 13:02:29 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1667,7 +1667,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o x264-devel-20161105
 	o x2vnc-1.31
 	o xa65-2.3.7
-	o xapian-1.4.0
 	o xaric-0.13.7
 	o xcircuit-3.9.44
 	o xcoral-3.14
