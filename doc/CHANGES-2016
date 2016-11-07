@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4603 2016/11/07 10:27:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4604 2016/11/07 10:27:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6368,3 +6368,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/tcllib to 1.18 [wiz 2016-11-06]
 	Updated devel/flex to 2.6.2 [wiz 2016-11-06]
 	Updated graphics/ImageMagick to 7.0.3.5 [wiz 2016-11-07]
+	Updated graphics/p5-PerlMagick to 7.0.3.5 [wiz 2016-11-07]
