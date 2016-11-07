@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4626 2016/11/07 14:18:07 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4627 2016/11/07 15:12:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6393,3 +6393,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Specio to 0.31 [mef 2016-11-07]
 	Updated devel/p5-Term-ReadLine to 1.35 [mef 2016-11-07]
 	Updated devel/p5-Test-Deep to 1.124 [mef 2016-11-07]
+	Updated audio/glyr to 1.0.9nb2 [leot 2016-11-07]
