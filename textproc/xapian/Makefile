@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/11/07 13:02:17 schmonz Exp $
-#
+# $NetBSD: Makefile,v 1.26 2016/11/07 13:46:45 wiz Exp $
 
 DISTNAME=		xapian-core-${VERSION}
 VERSION=		1.4.1
