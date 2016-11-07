@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.12 2016/11/05 10:25:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.13 2016/11/07 19:16:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -107,4 +107,7 @@ audio/taglib: build fix
 
 Pullup ticket #5153 - requested by wen
 www/py-django: security fix
+
+Pullup ticket #5146 - requested by spz
+emulators/qemu: security fix
 
