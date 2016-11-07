@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4615 2016/11/07 11:12:37 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4616 2016/11/07 11:16:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6380,3 +6380,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed www/py-google-api-python-client-py3 successor www/py-google-api-python-client [wiz 2016-11-07]
 	Updated devel/py-hypothesis to 3.6.0 [wiz 2016-11-07]
 	Updated devel/py-nosexcover to 1.0.11 [wiz 2016-11-07]
+	Updated devel/py-pkginfo to 1.4.0 [wiz 2016-11-07]
