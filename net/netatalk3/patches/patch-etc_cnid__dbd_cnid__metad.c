@@ -1,4 +1,6 @@
-$NetBSD: patch-etc_cnid__dbd_cnid__metad.c,v 1.1 2016/11/07 00:41:58 christos Exp $
+$NetBSD: patch-etc_cnid__dbd_cnid__metad.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Since we don't block, always wait...
 
 --- etc/cnid_dbd/cnid_metad.c.orig	2014-05-22 01:33:45.000000000 -0400
 +++ etc/cnid_dbd/cnid_metad.c	2016-11-06 09:31:53.239252178 -0500

@@ -1,4 +1,6 @@
-$NetBSD: patch-libatalk_util_getiface.c,v 1.1 2016/11/07 00:41:58 christos Exp $
+$NetBSD: patch-libatalk_util_getiface.c,v 1.2 2016/11/07 12:46:52 christos Exp $
+
+Provide support for getifaddrs
 
 --- libatalk/util/getiface.c.orig	2013-04-09 12:56:18.000000000 +0000
 +++ libatalk/util/getiface.c
