@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4637 2016/11/08 12:04:55 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4638 2016/11/08 12:08:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6404,3 +6404,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/py-pisa version 3.0.33 [wiz 2016-11-08]
 	Updated net/dnsmasq to 2.76 [mef 2016-11-08]
 	Added devel/p5-Log-Any-Adapter-Callback version 0.09 [fhajny 2016-11-08]
+	Updated devel/p5-Search-Elasticsearch to 5.01 [fhajny 2016-11-08]
