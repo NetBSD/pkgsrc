@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.4 2016/11/08 11:42:01 wiz Exp $
+
+--- sx/w3c/css.py.orig	2009-03-18 13:02:36.000000000 +0000
++++ sx/w3c/css.py
+@@ -37,7 +37,10 @@ Dependencies:
+ #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+ import copy
+-import sets
++try:
++    set
++except NameError:
++    from sets import Set as set
+ import cssParser
+ import cssSpecial
+ 
+@@ -526,7 +529,7 @@ class CSSInlineRuleset(CSSRuleset, CSSDe
+ class CSSBuilder(cssParser.CSSBuilderAbstract):
+     RulesetFactory = CSSRuleset
+     SelectorFactory = CSSMutableSelector
+-    MediumSetFactory = sets.Set
++    MediumSetFactory = set
+     DeclarationsFactory = CSSDeclarations
+     TermFunctionFactory = CSSTerminalFunction
+     TermOperatorFactory = CSSTerminalOperator
