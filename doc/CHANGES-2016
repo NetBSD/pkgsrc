@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4628 2016/11/07 22:56:05 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4629 2016/11/08 08:19:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6395,3 +6395,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Deep to 1.124 [mef 2016-11-07]
 	Updated audio/glyr to 1.0.9nb2 [leot 2016-11-07]
 	Updated devel/p5-MetaCPAN-Client to 1.028003 [mef 2016-11-07]
+	Updated devel/py-tortoisehg to 4.0nb1 [wiz 2016-11-08]
