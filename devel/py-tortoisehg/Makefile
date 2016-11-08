@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2016/11/07 11:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/11/08 08:19:37 wiz Exp $
 
 DISTNAME=		tortoisehg-4.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
@@ -29,6 +30,9 @@ SUBST_SED.df=		-e 's:thg_logo:${PREFIX}${thg_icon}:1'
 pre-build:
 	${RUN} cd ${WRKSRC}/doc && ${MAKE_PROGRAM} SPHINXBUILD=sphinx-build${PYVERSSUFFIX} html
 	${RUN} rm ${WRKSRC}/doc/build/html/.buildinfo
+	# conflicts with mercurial
+	# https://bitbucket.org/tortoisehg/thg/issues/4629/tortoisehg-file-name-conflict-with
+	${RM} ${WRKSRC}/hgext3rd/__init__.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
