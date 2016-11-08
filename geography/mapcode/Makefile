@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/11/03 15:06:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/08 08:08:52 fhajny Exp $
 
 DISTNAME=	mapcode-cpp-2.5.1
 PKGNAME=	${DISTNAME:S/-cpp//}
@@ -20,7 +20,7 @@ USE_CMAKE=	yes
 
 CMAKE_ARGS+=		-DCMAKE_BINARY_DIR=${WRKSRC}/build
 
-LDFLAGS.SunOS+=		-lm
+LDFLAGS+=		-lm
 
 PTHREAD_AUTO_VARS=	yes
 
