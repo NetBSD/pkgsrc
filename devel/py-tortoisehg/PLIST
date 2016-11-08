@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2016/11/07 11:27:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/11/08 08:19:37 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/hgext3rd/__init__.py
-${PYSITELIB}/hgext3rd/__init__.pyc
-${PYSITELIB}/hgext3rd/__init__.pyo
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
 ${PYSITELIB}/hgext3rd/thg.pyo
