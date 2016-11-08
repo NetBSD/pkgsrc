@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/10/31 16:35:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/11/08 10:26:44 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.2.3
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -29,6 +30,8 @@ SUBST_FILES.paths+=	syncthing_gtk/uisettingsdialog.py
 SUBST_FILES.paths+=	syncthing_gtk/wizard.py
 SUBST_SED.paths=	-e 's|/usr/share/syncthing-gtk|${PREFIX}/share/syncthing-gtk|'
 
+BUILDLINK_ABI_DEPENDS.libnotify+=	libnotify>=0.7.6nb4
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.40.9nb2	# for introspection
 .include "../../graphics/librsvg/buildlink3.mk"
