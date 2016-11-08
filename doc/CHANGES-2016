@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4630 2016/11/08 09:05:36 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4631 2016/11/08 09:18:11 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6397,3 +6397,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MetaCPAN-Client to 1.028003 [mef 2016-11-07]
 	Updated devel/py-tortoisehg to 4.0nb1 [wiz 2016-11-08]
 	Updated databases/py-elasticsearch to 5.0.1 [fhajny 2016-11-08]
+	Updated databases/elasticsearch to 5.0.0 [fhajny 2016-11-08]
