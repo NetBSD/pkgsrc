@@ -1,23 +1,22 @@
-$NetBSD: patch-config_elasticsearch.yml,v 1.4 2015/11/12 15:37:08 fhajny Exp $
+$NetBSD: patch-config_elasticsearch.yml,v 1.5 2016/11/08 09:18:01 fhajny Exp $
 
 Define various paths
 
---- config/elasticsearch.yml.orig	2015-10-21 08:41:12.000000000 +0000
+--- config/elasticsearch.yml.orig	2016-10-26 04:35:54.000000000 +0000
 +++ config/elasticsearch.yml
-@@ -31,10 +31,16 @@
+@@ -31,10 +31,15 @@
  # Path to directory where to store the data (separate multiple locations by comma):
  #
- # path.data: /path/to/data
+ #path.data: /path/to/data
 +path.data: @ES_DBDIR@
  #
  # Path to log files:
  #
- # path.logs: /path/to/logs
+ #path.logs: /path/to/logs
 +path.logs: @ES_LOGDIR@
-+
++#
++# Path to config files
 +path.conf: @PKG_SYSCONFDIR@
-+path.plugins: @ES_LIBDIR@/plugins
-+path.work: @ES_TMPDIR@
  #
  # ----------------------------------- Memory -----------------------------------
  #

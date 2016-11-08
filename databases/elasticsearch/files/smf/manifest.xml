@@ -13,21 +13,21 @@
     <dependent name='elasticsearch' restart_on='none' grouping='optional_all'>
       <service_fmri value='svc:/milestone/multi-user' />
     </dependent>
-    <method_context working_directory='@ES_TMPDIR@'>
+    <method_context working_directory='@ES_DBDIR@'>
       <method_credential user='@ES_USER@' group='@ES_GROUP@' />
       <method_environment>
         <envvar name='PATH' value='@PREFIX@/bin:@PREFIX@/sbin:/usr/bin:/usr/sbin' />
         <envvar name='JAVA_HOME' value='@PKG_JAVA_HOME@' />
       </method_environment>
     </method_context>
-    <exec_method name='start' type='method' exec='@PKG_JAVA_HOME@/bin/java -Delasticsearch -Des.path.home=@PREFIX@ -Des.path.conf=@PKG_SYSCONFDIR@ -Des.pidfile=@ES_PIDDIR@/elasticsearch.pid -Des.index.store.type=%{store_type} %{java_opts} -Xms%{min_heap} -Xmx%{max_heap} -cp %{class_path} org.elasticsearch.bootstrap.Elasticsearch start' timeout_seconds='3600' />
+    <exec_method name='start' type='method' exec='@PKG_JAVA_HOME@/bin/java -Delasticsearch -Des.path.home=@ES_BASEDIR@ -Des.path.conf=@PKG_SYSCONFDIR@ -Des.pidfile=@ES_PIDDIR@/elasticsearch.pid -Des.index.store.type=%{store_type} %{java_opts} -Xms%{min_heap} -Xmx%{max_heap} -cp %{class_path} org.elasticsearch.bootstrap.Elasticsearch' timeout_seconds='3600' />
     <exec_method type='method' name='stop' exec=':kill' timeout_seconds='60' />
     <exec_method type='method' name='refresh' exec=':kill -HUP' timeout_seconds='60' />
     <property_group name='application' type='application'>
       <propval name='min_heap' type='astring' value='256m' />
       <propval name='max_heap' type='astring' value='1g' />
       <propval name='store_type' type='astring' value='niofs' />
-      <propval name='class_path' type='astring' value='@ES_LIBDIR@/@DISTNAME@.jar:@ES_LIBDIR@/*' />
+      <propval name='class_path' type='astring' value='@ES_BASEDIR@/lib/@DISTNAME@.jar:@ES_BASEDIR@/lib/*' />
       <property name='java_opts' type='astring'>
         <astring_list>
           <value_node value='-Dfile.encoding=UTF-8'/>
