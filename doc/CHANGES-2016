@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4632 2016/11/08 10:24:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4633 2016/11/08 10:28:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6399,3 +6399,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-elasticsearch to 5.0.1 [fhajny 2016-11-08]
 	Updated databases/elasticsearch to 5.0.0 [fhajny 2016-11-08]
 	Updated sysutils/libnotify to 0.7.6nb4 [wiz 2016-11-08]
+	Updated net/syncthing-gtk to 0.9.2.3nb1 [wiz 2016-11-08]
