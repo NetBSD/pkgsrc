@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4636 2016/11/08 12:00:51 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4637 2016/11/08 12:04:55 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6403,3 +6403,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/poppler to 0.48.0 [wiz 2016-11-08]
 	Added print/py-pisa version 3.0.33 [wiz 2016-11-08]
 	Updated net/dnsmasq to 2.76 [mef 2016-11-08]
+	Added devel/p5-Log-Any-Adapter-Callback version 0.09 [fhajny 2016-11-08]
