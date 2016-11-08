@@ -1,0 +1,3 @@
+This adapter lets you specify callback subroutine to be called by
+Log::Any's logging methods (like $log->debug(), $log->error(), etc) and
+detection methods (like $log->is_warning(), $log->is_fatal(), etc.).
