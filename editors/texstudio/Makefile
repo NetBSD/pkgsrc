@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/09/07 04:18:27 mef Exp $
+# $NetBSD: Makefile,v 1.8 2016/11/08 10:51:27 wiz Exp $
 
 DISTNAME=	texstudio-2.11.0
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=texstudio/}
 
