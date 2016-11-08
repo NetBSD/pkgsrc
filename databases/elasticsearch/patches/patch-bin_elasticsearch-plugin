@@ -1,0 +1,30 @@
+$NetBSD: patch-bin_elasticsearch-plugin,v 1.1 2016/11/08 09:18:01 fhajny Exp $
+
+Default paths.
+
+--- bin/elasticsearch-plugin.orig	2016-10-26 04:35:54.000000000 +0000
++++ bin/elasticsearch-plugin
+@@ -15,8 +15,13 @@ while [ -h "$SCRIPT" ] ; do
+   fi
+ done
+ 
++#set default JAVA_HOME
++if [ -z "$JAVA_HOME" ]; then
++  JAVA_HOME="@PKG_JAVA_HOME@"
++fi
++
+ # determine elasticsearch home
+-ES_HOME=`dirname "$SCRIPT"`/..
++ES_HOME="@ES_BASEDIR@"
+ 
+ # make ELASTICSEARCH_HOME absolute
+ ES_HOME=`cd "$ES_HOME"; pwd`
+@@ -23,7 +29,7 @@ ES_HOME=`cd "$ES_HOME"; pwd`
+ 
+ # Sets the default values for elasticsearch variables used in this script
+ if [ -z "$CONF_DIR" ]; then
+-  CONF_DIR="$ES_HOME/config"
++  CONF_DIR="@PKG_SYSCONFDIR@"
+ fi
+ 
+ # The default env file is defined at building/packaging time.
