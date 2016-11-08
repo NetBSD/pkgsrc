@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4635 2016/11/08 11:42:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4636 2016/11/08 12:00:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6402,3 +6402,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing-gtk to 0.9.2.3nb1 [wiz 2016-11-08]
 	Updated print/poppler to 0.48.0 [wiz 2016-11-08]
 	Added print/py-pisa version 3.0.33 [wiz 2016-11-08]
+	Updated net/dnsmasq to 2.76 [mef 2016-11-08]
