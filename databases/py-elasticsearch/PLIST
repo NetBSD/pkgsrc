@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/08/19 10:13:41 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/11/08 09:05:26 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/elasticsearch/client/cluster.pyo
 ${PYSITELIB}/elasticsearch/client/indices.py
 ${PYSITELIB}/elasticsearch/client/indices.pyc
 ${PYSITELIB}/elasticsearch/client/indices.pyo
+${PYSITELIB}/elasticsearch/client/ingest.py
+${PYSITELIB}/elasticsearch/client/ingest.pyc
+${PYSITELIB}/elasticsearch/client/ingest.pyo
 ${PYSITELIB}/elasticsearch/client/nodes.py
 ${PYSITELIB}/elasticsearch/client/nodes.pyc
 ${PYSITELIB}/elasticsearch/client/nodes.pyo
