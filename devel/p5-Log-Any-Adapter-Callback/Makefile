@@ -1,0 +1,16 @@
+# $NetBSD: Makefile,v 1.1 2016/11/08 12:04:43 fhajny Exp $
+
+DISTNAME=	Log-Any-Adapter-Callback-0.09
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	devel perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://metacpan.org/release/Log-Any-Adapter-Callback/
+COMMENT=	Perl5 module to send Log::Any logs to a subroutine
+LICENSE=	${PERL5_LICENSE}
+
+PERL5_PACKLIST=		auto/Log/Any/Adapter/Callback/.packlist
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
