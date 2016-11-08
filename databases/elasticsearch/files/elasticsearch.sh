@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: elasticsearch.sh,v 1.3 2015/11/12 15:37:07 fhajny Exp $
+# $NetBSD: elasticsearch.sh,v 1.4 2016/11/08 09:18:01 fhajny Exp $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: DAEMON
@@ -22,12 +22,12 @@ start_precmd="elasticsearch_precmd"
 : ${elasticsearch_props:=""}
 : ${elasticsearch_fdlimit:="768"}
 
-ES_CLASSPATH="@ES_LIBDIR@/@DISTNAME@.jar:@ES_LIBDIR@/*"
+ES_CLASSPATH="@ES_BASEDIR@/lib/@DISTNAME@.jar:@ES_BASEDIR@/lib/*"
 
 command="@PKG_JAVA_HOME@/bin/java"
 # flags taken from bin/elasticsearch and bin/elasticsearch.in.sh
 command_args="	-Delasticsearch					\
-		-Des.path.home=@PREFIX@				\
+		-Des.path.home=@ES_BASEDIR@			\
 		-Des.path.conf=@PKG_SYSCONFDIR@			\
 		-Des.pidfile=${pidfile}				\
 		-Dfile.encoding=UTF-8				\
@@ -45,7 +45,7 @@ command_args="	-Delasticsearch					\
 		-cp ${ES_CLASSPATH}				\
 		${elasticsearch_props}				\
 		org.elasticsearch.bootstrap.Elasticsearch	\
-		start >/dev/null &"
+		>/dev/null &"
 
 # ElasticSearch is fd hungry, default limit leads to write locks
 SOFT_FDLIMIT=`ulimit -S -n`
