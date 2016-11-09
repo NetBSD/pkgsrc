@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4638 2016/11/08 12:08:59 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4639 2016/11/09 09:44:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6405,3 +6405,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/dnsmasq to 2.76 [mef 2016-11-08]
 	Added devel/p5-Log-Any-Adapter-Callback version 0.09 [fhajny 2016-11-08]
 	Updated devel/p5-Search-Elasticsearch to 5.01 [fhajny 2016-11-08]
+	Updated textproc/jsoncpp to 1.7.7 [wiz 2016-11-09]
