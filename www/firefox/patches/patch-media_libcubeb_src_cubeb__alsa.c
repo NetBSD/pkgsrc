@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.15 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya Exp $
 
 * Support alsa audio under NetBSD
 
@@ -534,7 +534,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.15 2016/06/16 12:08:21 ryoon
    }
  
 -  r = snd_pcm_get_params(stm->pcm, &stm->buffer_size, &period_size);
-+  r = WRAP(snd_pcm_get_params)(stm->pcm, &stm->buffer_size, &stm->period_size);
++  r = WRAP(snd_pcm_get_params)(stm->pcm, &stm->buffer_size, &period_size);
    assert(r == 0);
  
 -  stm->nfds = snd_pcm_poll_descriptors_count(stm->pcm);
