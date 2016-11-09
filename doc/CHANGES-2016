@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4640 2016/11/09 13:26:55 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4641 2016/11/09 13:47:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6407,3 +6407,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Search-Elasticsearch to 5.01 [fhajny 2016-11-08]
 	Updated textproc/jsoncpp to 1.7.7 [wiz 2016-11-09]
 	Updated lang/nodejs4 to 4.6.2 [fhajny 2016-11-09]
+	Updated lang/nodejs to 7.1.0 [fhajny 2016-11-09]
