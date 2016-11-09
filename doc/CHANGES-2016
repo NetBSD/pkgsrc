@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4642 2016/11/09 14:50:41 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4643 2016/11/09 17:41:34 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6410,3 +6410,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 7.1.0 [fhajny 2016-11-09]
 	Updated net/p5-Net-FTPSSL to 0.35 [mef 2016-11-09]
 	Updated net/p5-Net-Frame-Simple to 1.07 [mef 2016-11-09]
+	Updated www/firefox to 49.0.2nb1 [maya 2016-11-09]
