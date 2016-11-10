@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.58 2016/05/26 16:03:04 khorben Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.59 2016/11/10 20:58:46 joerg Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -17,6 +17,12 @@ TOOLS_PLATFORM.chown?=		/usr/sbin/chown
 TOOLS_PLATFORM.cmp?=		/usr/bin/cmp
 TOOLS_PLATFORM.cp?=		/bin/cp
 TOOLS_PLATFORM.csh?=		/bin/csh
+.if exists(/usr/bin/ctfconvert)
+TOOLS_PLATFORM.ctfconvert?=	/usr/bin/ctfconvert
+.endif
+.if exists(/usr/bin/ctfmerge)
+TOOLS_PLATFORM.ctfmerge?=	/usr/bin/ctfmerge
+.endif
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
