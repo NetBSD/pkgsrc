@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2016/11/06 08:05:24 wen Exp $
+# $NetBSD: Makefile,v 1.34 2016/11/10 14:00:17 fhajny Exp $
 
 DISTNAME=	BioPerl-1.007001
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	biology perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Bio/}
 
-MAINTAINER=	filip@joyent.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bioperl.org/
 COMMENT=	Perl tools for computational molecular biology
 LICENSE=	${PERL5_LICENSE}
