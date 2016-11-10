@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1135 2016/11/01 14:55:16 adam Exp $
+# $NetBSD: Makefile,v 1.1136 2016/11/10 06:15:48 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -381,6 +381,7 @@ SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
 SUBDIR+=	net6
 SUBDIR+=	netatalk22
+SUBDIR+=	netatalk3
 SUBDIR+=	netatalk30
 SUBDIR+=	netbsd-iscsi-initiator
 SUBDIR+=	netbsd-iscsi-target
