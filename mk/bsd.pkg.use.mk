@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.62 2016/06/19 20:03:09 wiz Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.63 2016/11/10 20:58:46 joerg Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -21,6 +21,9 @@
 
 .if defined(USE_BSD_MAKEFILE)
 MAKE_ENV+=		${BSD_MAKE_ENV} INSTALL=${TOOLS_INSTALL:Q}
+.  if !defined(TOOLS_PLATFORM.ctfconvert) && !defined(TOOLS_PLATFORM.ctfmerge)
+MAKE_ENV+=		NOCTF=yes
+.  endif
 .  if defined(HAVE_LLVM)
 MAKE_ENV+=		HAVE_LLVM=${HAVE_LLVM:Q}
 .  endif
