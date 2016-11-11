@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4654 2016/11/11 10:16:12 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4655 2016/11/11 10:54:59 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6422,3 +6422,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-ZopeComponent to 4.3.0 [fhajny 2016-11-11]
 	Updated devel/py-dialog2 to 3.4.0 [fhajny 2016-11-11]
 	Updated time/py-pytz to 2016.7 [fhajny 2016-11-11]
+	Updated editors/emacs21 to 21.4anb36 [maya 2016-11-11]
