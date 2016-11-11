@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4659 2016/11/11 19:42:19 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.4660 2016/11/11 19:47:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6427,3 +6427,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk13 to 13.12.2 [jnemeth 2016-11-11]
 	Updated comms/asterisk14 to 14.1.2 [jnemeth 2016-11-11]
 	Updated security/botan-devel to 1.11.33 [joerg 2016-11-11]
+	Updated security/botan to 1.10.13 [joerg 2016-11-11]
