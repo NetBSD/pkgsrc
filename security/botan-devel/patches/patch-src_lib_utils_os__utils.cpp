@@ -1,4 +1,4 @@
-$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.2 2016/11/11 19:41:44 joerg Exp $
+$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.3 2016/11/11 19:44:51 joerg Exp $
 
 --- src/lib/utils/os_utils.cpp.orig	2016-10-26 13:39:08.000000000 +0000
 +++ src/lib/utils/os_utils.cpp
@@ -13,11 +13,12 @@ $NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.2 2016/11/11 19:41:44 joerg Exp $
  #if defined(BOTAN_TARGET_OS_IS_WINDOWS) || defined(BOTAN_TARGET_OS_IS_MINGW)
    #include <windows.h>
  #endif
-@@ -216,6 +220,19 @@ size_t get_memory_locking_limit()
-          return BOTAN_MLOCK_ALLOCATOR_MAX_LOCKED_KB * 1024ULL;
-          }
-       }
-+#elif defined(__sun)
+@@ -146,7 +150,20 @@ uint64_t get_system_timestamp_ns()
+ 
+ size_t get_memory_locking_limit()
+    {
+-#if defined(BOTAN_TARGET_OS_HAS_POSIX_MLOCK)
++#if defined(__sun)
 +   priv_set_t *priv_set = priv_allocset();
 +   if (priv_set == nullptr)
 +     return 0;
@@ -30,6 +31,7 @@ $NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.2 2016/11/11 19:41:44 joerg Exp $
 +
 +   /* XXX how to obtain the real limit? */
 +   return can_mlock ? std::min<size_t>(512 * 1024, max_req) : 0;
- #endif
- 
-    return 0;
++#elif defined(BOTAN_TARGET_OS_HAS_POSIX_MLOCK)
+    /*
+    * Linux defaults to only 64 KiB of mlockable memory per process
+    * (too small) but BSDs offer a small fraction of total RAM (more
