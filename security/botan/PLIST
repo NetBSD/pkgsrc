@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/06/09 08:20:43 he Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/11/11 19:46:48 joerg Exp $
 bin/botan-config-1.10
 include/botan-1.10/botan/adler32.h
 include/botan-1.10/botan/aes.h
@@ -233,7 +233,7 @@ include/botan-1.10/botan/xts.h
 lib/libbotan-1.10.a
 lib/libbotan-1.10.so
 lib/libbotan-1.10.so.1
-lib/libbotan-1.10.so.1.12
+lib/libbotan-1.10.so.1.13
 lib/pkgconfig/botan-1.10.pc
 share/doc/${PKGNAME}/manual/algos.txt
 share/doc/${PKGNAME}/manual/bigint.txt
