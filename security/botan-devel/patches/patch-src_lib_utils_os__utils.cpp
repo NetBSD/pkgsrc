@@ -1,6 +1,6 @@
-$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.1 2016/05/19 21:58:43 joerg Exp $
+$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.2 2016/11/11 19:41:44 joerg Exp $
 
---- src/lib/utils/os_utils.cpp.orig	2016-03-21 01:26:12.000000000 +0000
+--- src/lib/utils/os_utils.cpp.orig	2016-10-26 13:39:08.000000000 +0000
 +++ src/lib/utils/os_utils.cpp
 @@ -19,6 +19,10 @@
    #include <unistd.h>
@@ -10,10 +10,10 @@ $NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.1 2016/05/19 21:58:43 joerg Exp $
 +#include <priv.h>
 +#endif
 +
- #if defined(BOTAN_TARGET_OS_TYPE_IS_WINDOWS)
+ #if defined(BOTAN_TARGET_OS_IS_WINDOWS) || defined(BOTAN_TARGET_OS_IS_MINGW)
    #include <windows.h>
  #endif
-@@ -171,6 +175,19 @@ size_t get_memory_locking_limit()
+@@ -216,6 +220,19 @@ size_t get_memory_locking_limit()
           return BOTAN_MLOCK_ALLOCATOR_MAX_LOCKED_KB * 1024ULL;
           }
        }
