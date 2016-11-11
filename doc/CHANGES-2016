@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4653 2016/11/11 10:11:16 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4654 2016/11/11 10:16:12 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6421,3 +6421,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-dns to 1.15.0 [fhajny 2016-11-11]
 	Updated devel/py-ZopeComponent to 4.3.0 [fhajny 2016-11-11]
 	Updated devel/py-dialog2 to 3.4.0 [fhajny 2016-11-11]
+	Updated time/py-pytz to 2016.7 [fhajny 2016-11-11]
