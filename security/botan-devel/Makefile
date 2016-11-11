@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/11/11 19:41:44 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2016/11/11 19:46:05 joerg Exp $
 
 DISTNAME=	Botan-1.11.33
 PKGNAME=	${DISTNAME:tl}
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://botan.randombit.net/releases/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://botan.randombit.net/
 COMMENT=	Portable, easy to use, and efficient C++ crypto library
 LICENSE=	2-clause-bsd
