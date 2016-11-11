@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4645 2016/11/10 13:58:07 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4646 2016/11/11 08:15:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6413,3 +6413,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 49.0.2nb1 [maya 2016-11-09]
 	Updated graphics/ImageMagick to 7.0.3.6 [ryoon 2016-11-10]
 	Updated ham/xnec2c to 3.5.1 [mef 2016-11-10]
+	Updated devel/flex to 2.6.2nb1 [wiz 2016-11-11]
