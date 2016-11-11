@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/01 08:43:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/11 09:09:02 fhajny Exp $
 bin/ndg_httpclient
+${PYSITELIB}/ndg/httpsclient/LICENSE
 ${PYSITELIB}/ndg/httpsclient/__init__.py
 ${PYSITELIB}/ndg/httpsclient/__init__.pyc
 ${PYSITELIB}/ndg/httpsclient/__init__.pyo

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/12/01 08:43:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/11/11 09:09:02 fhajny Exp $
 
-DISTNAME=	ndg_httpsclient-0.4.0
+DISTNAME=	ndg_httpsclient-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cedadev/}
@@ -11,7 +11,7 @@ COMMENT=	HTTPS client implementation for httplib and urllib2 based on PyOpenSSL
 LICENSE=	modified-bsd
 
 GITHUB_PROJECT=	ndg_httpsclient
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-asn1>=0.1.4:../../security/py-asn1
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
