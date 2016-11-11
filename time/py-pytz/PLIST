@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/08/20 11:05:22 richard Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/11/11 10:16:02 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -347,6 +347,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Ust-Nera
 ${PYSITELIB}/pytz/zoneinfo/Asia/Vientiane
 ${PYSITELIB}/pytz/zoneinfo/Asia/Vladivostok
 ${PYSITELIB}/pytz/zoneinfo/Asia/Yakutsk
+${PYSITELIB}/pytz/zoneinfo/Asia/Yangon
 ${PYSITELIB}/pytz/zoneinfo/Asia/Yekaterinburg
 ${PYSITELIB}/pytz/zoneinfo/Asia/Yerevan
 ${PYSITELIB}/pytz/zoneinfo/Atlantic/Azores
