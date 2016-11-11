@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/07/09 13:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/11/11 10:11:07 fhajny Exp $
 
-VERSION=	3.3.0
+VERSION=	3.4.0
 DISTNAME=	python2-pythondialog-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-dialog-${VERSION}
 CATEGORIES=	devel python
