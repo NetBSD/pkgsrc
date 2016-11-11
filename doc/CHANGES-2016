@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4647 2016/11/11 09:09:12 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4648 2016/11/11 09:11:12 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6415,3 +6415,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/xnec2c to 3.5.1 [mef 2016-11-10]
 	Updated devel/flex to 2.6.2nb1 [wiz 2016-11-11]
 	Updated security/py-ndg_httpsclient to 0.4.2 [fhajny 2016-11-11]
+	Updated editors/emacs20 to 20.7nb20 [maya 2016-11-11]
