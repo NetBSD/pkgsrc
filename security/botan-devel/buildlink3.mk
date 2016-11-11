@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2016/10/07 18:25:33 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2016/11/11 19:49:06 joerg Exp $
 
 BUILDLINK_TREE+=	botan
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	botan
 BOTAN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.botan+=	botan>=1.11.8
-BUILDLINK_ABI_DEPENDS.botan?=	botan>=1.11.29nb1
+BUILDLINK_ABI_DEPENDS.botan?=	botan>=1.11.33
 BUILDLINK_PKGSRCDIR.botan?=	../../security/botan-devel
 
 .include "../../devel/zlib/buildlink3.mk"
