@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/06/30 17:45:04 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.13 2016/11/11 09:39:05 fhajny Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -78,6 +74,9 @@ ${PYSITELIB}/dns/rdatatype.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/AFSDB.py
 ${PYSITELIB}/dns/rdtypes/ANY/AFSDB.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/AFSDB.pyo
+${PYSITELIB}/dns/rdtypes/ANY/AVC.py
+${PYSITELIB}/dns/rdtypes/ANY/AVC.pyc
+${PYSITELIB}/dns/rdtypes/ANY/AVC.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/CAA.py
 ${PYSITELIB}/dns/rdtypes/ANY/CAA.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/CAA.pyo
@@ -279,3 +278,7 @@ ${PYSITELIB}/dns/wiredata.pyo
 ${PYSITELIB}/dns/zone.py
 ${PYSITELIB}/dns/zone.pyc
 ${PYSITELIB}/dns/zone.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
