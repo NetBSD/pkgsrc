@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2016/02/25 12:22:40 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.17 2016/11/11 10:54:41 maya Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -39,19 +39,10 @@ INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-# This matches NetBSD <1.7 releases and 1.6A-1.6P, where ld is <2.13.2.1.
-.if (${OPSYS} == "NetBSD" && \
-    (empty(OS_VERSION:M1.[0-5]*) && \
-     empty(OS_VERSION:M1.6_*) && \
-     empty(OS_VERSION:M1.6) && \
-     empty(OS_VERSION:M1.6.[0-9]*) && \
-     empty(OS_VERSION:M1.6[A-P]*))) || \
-    ${OPSYS} == "DragonFly"
 # If using GNU ld 2.13.2.1 or later, avoid creating combined reloc
 # sections and .data reloc sections, both of which Emacs can't handle
 # properly.  Analyzed by Stephen Ma.
 LDFLAGS+=	-Wl,-z,nocombreloc
-.endif
 
 # Use terminfo on NetBSD-6.
 # We cannot use terminfo.*.mk as emacs WILL force a link to termcap,
