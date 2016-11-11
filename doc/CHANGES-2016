@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4656 2016/11/11 12:48:11 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.4657 2016/11/11 16:22:25 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6424,3 +6424,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-pytz to 2016.7 [fhajny 2016-11-11]
 	Updated editors/emacs21 to 21.4anb36 [maya 2016-11-11]
 	Updated print/py-pisa to 3.0.33nb1 [joerg 2016-11-11]
+	Updated comms/asterisk13 to 13.12.2 [jnemeth 2016-11-11]
