@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/11/07 15:12:33 leot Exp $
+$NetBSD: distinfo,v 1.9 2016/11/12 17:12:22 leot Exp $
 
-SHA1 (glyr-1.0.9.tar.gz) = 28c6f5ffaaa568149762400cf0c8ebaf134cb3c0
-RMD160 (glyr-1.0.9.tar.gz) = b244631677a44d3fdb444bffac3c32d475413347
-SHA512 (glyr-1.0.9.tar.gz) = 77144202c99c6e429c8800a7d89d27de5376627194945116b7166d920375a59048d3e3102cf63646b1b57d795999f057977d7b13490e4ca3af44b8ddb3207652
-Size (glyr-1.0.9.tar.gz) = 425175 bytes
-SHA1 (patch-lib_intern_lyrics_lyricswiki.c) = b4eb47fbb9ef10e84561d87e0d230f4ef81e5bc0
+SHA1 (glyr-1.0.10.tar.gz) = 8ab1dcd03a120e56bda716cc36db6a4d73886321
+RMD160 (glyr-1.0.10.tar.gz) = aed1d05f7fb74e65829d66b3e6c392086ccc1eab
+SHA512 (glyr-1.0.10.tar.gz) = dc5a579c84c321de7c28861e42196d42ef73bbdbe86b5d662d7ace1d79efe8d6d8d0a8086092ed9c32af9651db8cb11bf1678c5582b17192b23e20a66812bb21
+Size (glyr-1.0.10.tar.gz) = 416414 bytes
