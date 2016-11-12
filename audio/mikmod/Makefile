@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2016/11/12 07:34:34 adam Exp $
 
-DISTNAME=	mikmod-3.2.6
-PKGREVISION=	2
+DISTNAME=	mikmod-3.2.7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mikmod/}
 
