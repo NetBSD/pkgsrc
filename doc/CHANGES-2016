@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4662 2016/11/12 11:28:23 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4663 2016/11/12 15:47:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6434,3 +6434,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cmake to 3.7.0 [adam 2016-11-12]
 	Updated mail/dovecot2 to 2.2.26.0 [adam 2016-11-12]
 	Updated mail/dovecot2-pigeonhole to 0.4.16 [taca 2016-11-12]
+	Updated lang/php56 to 5.6.28 [taca 2016-11-12]
+	Updated lang/php70 to 7.0.13 [taca 2016-11-12]
+	Updated lang/php71 to 7.1.0rc6 [taca 2016-11-12]
