@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/09/13 15:10:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/11/12 16:17:36 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -2167,6 +2167,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/context_help/locallang_csh_ttcontent.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Configuration/FunctionalTestsConfiguration.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/FunctionalTests.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/FunctionalTestsBootstrap.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Scripts/splitFunctionalTests.sh
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Scripts/update-static-composer.sh
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Scripts/xlfcheck.sh
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/UnitTests.xml
