@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4664 2016/11/12 16:19:15 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4665 2016/11/12 17:12:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6438,3 +6438,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php70 to 7.0.13 [taca 2016-11-12]
 	Updated lang/php71 to 7.1.0rc6 [taca 2016-11-12]
 	Updated www/typo3_62 to 6.2.28 [taca 2016-11-12]
+	Updated audio/glyr to 1.0.10 [leot 2016-11-12]
