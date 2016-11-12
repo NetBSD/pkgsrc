@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.13 2016/11/07 15:12:33 leot Exp $
+# $NetBSD: Makefile,v 1.14 2016/11/12 17:12:22 leot Exp $
 #
 
-DISTNAME=	glyr-1.0.9
-PKGREVISION=	2
+DISTNAME=	glyr-1.0.10
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sahib/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/sahib/glyr/
 COMMENT=	Music related metadata search engine with CLI and C API
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3
 
 USE_TOOLS+=	pkg-config
 USE_CMAKE=	yes
