@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2016/11/04 20:41:09 adam Exp $
+# $NetBSD: Makefile,v 1.125 2016/11/12 07:49:18 adam Exp $
 
 .include "Makefile.version"
 
@@ -31,7 +31,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MAKE_JOBS)
-CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS:Q}
+CONFIGURE_ARGS+=	--parallel=${MAKE_JOBS}
 .endif
 
 PLIST_SUBST+=		CMAKE_API=${CMAKE_API}
@@ -68,7 +68,8 @@ INCOMPAT_CURSES=	NetBSD-[0-7].*-*
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/libuv/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
