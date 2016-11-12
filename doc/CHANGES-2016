@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4661 2016/11/12 07:51:44 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4662 2016/11/12 11:28:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6432,3 +6432,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/mikmod to 3.3.7 [adam 2016-11-12]
 	Updated devel/libuv to 1.10.0 [adam 2016-11-12]
 	Updated devel/cmake to 3.7.0 [adam 2016-11-12]
+	Updated mail/dovecot2 to 2.2.26.0 [adam 2016-11-12]
+	Updated mail/dovecot2-pigeonhole to 0.4.16 [taca 2016-11-12]
