@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4660 2016/11/11 19:47:09 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.4661 2016/11/12 07:51:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6428,3 +6428,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk14 to 14.1.2 [jnemeth 2016-11-11]
 	Updated security/botan-devel to 1.11.33 [joerg 2016-11-11]
 	Updated security/botan to 1.10.13 [joerg 2016-11-11]
+	Updated audio/libmikmod to 3.3.10 [adam 2016-11-12]
+	Updated audio/mikmod to 3.3.7 [adam 2016-11-12]
+	Updated devel/libuv to 1.10.0 [adam 2016-11-12]
+	Updated devel/cmake to 3.7.0 [adam 2016-11-12]
