@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2016/11/12 11:21:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2016/11/12 16:12:08 taca Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -565,7 +565,6 @@ lib/dovecot/lib90_stats_plugin.la
 lib/dovecot/lib95_imap_stats_plugin.la
 lib/dovecot/lib99_welcome_plugin.la
 lib/dovecot/libdcrypt_openssl.la
-lib/dovecot/libdcrypt_openssl.so
 lib/dovecot/libdovecot-compression.la
 lib/dovecot/libdovecot-dsync.la
 lib/dovecot/libdovecot-fts.la
