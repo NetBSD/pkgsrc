@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/09/08 15:19:18 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2016/11/13 15:14:20 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -19,61 +19,8 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-shared
 WRKSRC=			${RUBY_WRKSRC}
 
-MAKE_DIRS=		${RUBY_SITEARCHLIB} ${RUBY_VENDORARCHLIB}
-
-#
-# Don't reference pkgsrc's INSTALL macro since Ruby expect it could
-# execute by unprivileged user.
-#
-CONFIGURE_ENV+=		INSTALL="${INSTALL} ${COPY}" \
-			INSTALL_DATA= INSTALL_PROGRAM= INSTALL_SCRIPT=
-
-CONFIGURE_ENV+= 	ac_cv_prog_PKG_CONFIG=""
-
-.include "../../mk/compiler.mk"
-
-# /usr/bin/dtrace is not DTrace.
-.if ${OPSYS} == "Linux" && exists(/usr/bin/dtrace)
-CONFIGURE_ARGS+=	--disable-dtrace
-.endif
-
-.if !empty(PKGSRC_COMPILER:Msunpro)
-LIBS.SunOS+=	-B static -lsunmath -B dynamic -lm
-LDFLAGS.SunOS+=	-L${SUNWSPROBASE}/lib -Wl,-R${SUNWSPROBASE}/lib
-CONFIGURE_ENV+=	LDSHARED="${CC} -G"
-.else
-LIBS.SunOS+=	-lm
-.endif
-
-CONFIGURE_ENV.SunOS+=	OBJCOPY=:
-
-# if present, an unsupported sysconf call is used
-CONFIGURE_ENV.MirBSD+=	ac_cv_func_getgrnam_r=no
-
-# bmake doesn't like the codesign/POSTLINK constructs for Darwin.
-.if ${OPSYS} == "Cygwin" || ${OPSYS} == "Darwin"
-USE_TOOLS+=	gmake
-MAKE_FILE=	GNUmakefile
-.endif
-
-# Ruby build process depends on config.status's content
-CONFIG_STATUS_OVERRIDE=	# empty
-
-MAKE_DIRS+=	${RUBY_SITERIDIR}
-FILES_SUBST+=	DATE=${DATE:Q}
-
-REQD_DIRS+=	${GEM_HOME}/cache
-REQD_DIRS+=	${GEM_HOME}/doc
-
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	pre-install
-SUBST_FILES.conf=	lib/rubygems/config_file.rb
-SUBST_SED.conf=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.conf=	Fixing configuration files.
-
 .include "options.mk"
-
-.include "../../lang/ruby/rubyversion.mk"
+.include "../../lang/ruby/platform.mk"
 
 .if !empty(RUBY_SUFFIX)
 CONFIGURE_ARGS+= --program-suffix=${RUBY_SUFFIX}
@@ -81,41 +28,6 @@ CONFIGURE_ARGS+= --with-soname=${RUBY_NAME}
 CONFIGURE_ARGS+= --with-ruby-version=${RUBY_VER_DIR}
 CONFIGURE_ARGS+= --with-ruby-pc="ruby-${RUBY_VERSION}.pc"
 .endif
-
-#
-# Ruby 2.0 don't like Apple's builtin OpenSSL.
-#
-.if ${OPSYS} == "Darwin"
-USE_BUILTIN.openssl=	no
-.endif
-
-#
-# Win32 support (for Cygwin)
-#
-PLIST_VARS+=	win32
-.if ${OPSYS} == "Cygwin"
-PLIST.win32=	yes
-.endif
-
-#
-# IRIX work around which should be fixed.
-#
-PLIST_VARS+=	io
-.if ${OPSYS} != "IRIX"
-PLIST.io=	yes
-.endif
-
-#
-# Work around for getucontext(3)
-#
-.if ${OPSYS} == "DragonFly" && ${OS_VERSION} == "1.8.0"
-CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
-.endif
-
-#
-# prevent unwanted mkdir recorded in rbconfig.rb
-#
-CONFIGURE_ENV+=	MKDIR_P=${MKDIR:Q}
 
 DOCS=		COPYING COPYING.ja ChangeLog NEWS README \
 		README.EXT README.EXT.ja README.ja \
