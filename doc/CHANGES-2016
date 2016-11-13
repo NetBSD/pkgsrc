@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4670 2016/11/13 03:41:43 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4671 2016/11/13 06:07:38 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6444,3 +6444,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Any to 1.045 [wen 2016-11-13]
 	Updated databases/p5-DBIx-Class-Helpers to 2.033002 [wen 2016-11-13]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07046 [wen 2016-11-13]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.644 [tsutsui 2016-11-13]
