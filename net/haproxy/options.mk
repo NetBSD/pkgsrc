@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2016/01/03 17:13:40 morr Exp $
+# $NetBSD: options.mk,v 1.5 2016/11/13 19:37:18 morr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.haproxy
-PKG_SUPPORTED_OPTIONS=	pcre ssl deviceatlas
+PKG_SUPPORTED_OPTIONS=	pcre ssl deviceatlas lua
 PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 .include "../../mk/bsd.options.mk"
@@ -12,6 +12,17 @@ PKG_SUGGESTED_OPTIONS=	pcre ssl
 .if !empty(PKG_OPTIONS:Mpcre)
 .  include "../../devel/pcre/buildlink3.mk"
 BUILD_MAKE_FLAGS+=	USE_PCRE=1
+.endif
+
+###
+### Use LUA
+###
+.if !empty(PKG_OPTIONS:Mlua)
+.  include "../../lang/lua/luaversion.mk"
+BUILD_MAKE_FLAGS+=	USE_LUA=1
+BUILD_MAKE_FLAGS+=	LUA_VERSION_ACCEPTED=53
+BUILD_MAKE_FLAGS+=	LUA_INC=${PREFIX}/${LUA_INCDIR}
+.  include "../../lang/lua/buildlink3.mk"
 .endif
 
 ###
