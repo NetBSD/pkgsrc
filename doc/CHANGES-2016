@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4673 2016/11/13 19:38:03 morr Exp $
+$NetBSD: CHANGES-2016,v 1.4674 2016/11/13 22:06:11 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6447,3 +6447,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.644 [tsutsui 2016-11-13]
 	Updated devel/py-dialog to 3.4.0 [mef 2016-11-13]
 	Updated net/haproxy to 1.6.9nb1 [morr 2016-11-13]
+	Added wm/wmutils-opt version 0.20161004 [kamil 2016-11-13]
