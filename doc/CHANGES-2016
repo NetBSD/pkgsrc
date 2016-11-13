@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4669 2016/11/13 03:35:58 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4670 2016/11/13 03:41:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6443,3 +6443,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-Simple to 2.211 [wen 2016-11-13]
 	Updated devel/p5-Log-Any to 1.045 [wen 2016-11-13]
 	Updated databases/p5-DBIx-Class-Helpers to 2.033002 [wen 2016-11-13]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07046 [wen 2016-11-13]
