@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4666 2016/11/13 01:44:35 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4667 2016/11/13 01:48:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6440,3 +6440,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/typo3_62 to 6.2.28 [taca 2016-11-12]
 	Updated audio/glyr to 1.0.10 [leot 2016-11-12]
 	Updated time/p5-DateTime to 1.40 [wen 2016-11-13]
+	Updated mail/p5-Email-Simple to 2.211 [wen 2016-11-13]
