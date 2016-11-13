@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2016/10/13 19:08:34 morr Exp $
+# $NetBSD: Makefile,v 1.30 2016/11/13 19:37:18 morr Exp $
 
 DISTNAME=	haproxy-1.6.9
+PKGREVISION=	1
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/1.6/src/
 
@@ -10,7 +11,10 @@ COMMENT=	Reliable, high performance TCP/HTTP load balancer
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
-BUILD_MAKE_FLAGS+=	TARGET=${TARGET} ADDLIB=${COMPILER_RPATH_FLAG}${PREFIX}/lib USE_ZLIB=1
+BUILD_MAKE_FLAGS+=	TARGET=${TARGET} ADDLIB=${COMPILER_RPATH_FLAG}${PREFIX}/lib \
+			USE_ZLIB=1 \
+			USE_REGPARM=1
+
 INSTALL_MAKE_FLAGS+=	TARGET=${TARGET}
 INSTALL_MAKE_FLAGS+=	PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/${PKGBASE}
