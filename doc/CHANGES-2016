@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4671 2016/11/13 06:07:38 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.4672 2016/11/13 10:55:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6445,3 +6445,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBIx-Class-Helpers to 2.033002 [wen 2016-11-13]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07046 [wen 2016-11-13]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.644 [tsutsui 2016-11-13]
+	Updated devel/py-dialog to 3.4.0 [mef 2016-11-13]
