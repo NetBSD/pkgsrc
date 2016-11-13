@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/11/12 07:47:34 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/11/13 23:45:42 wiz Exp $
 
 DISTNAME=	libuv-1.10.0
 CATEGORIES=	devel
@@ -16,7 +16,7 @@ USE_TOOLS+=	autoconf automake pkg-config
 GNU_CONFIGURE=	yes
 
 HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h	\
-		uv-unix.h uv-win.h
+		uv-unix.h uv-win.h pthread-barrier.h
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} ./autogen.sh
