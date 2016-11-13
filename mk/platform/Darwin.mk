@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.84 2016/10/27 10:31:06 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.85 2016/11/13 11:06:40 jdolecek Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -172,7 +172,7 @@ _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysctl -n kern.argmax
 # configure packages that break because of this by pretending that
 # there is no poll().
 .if defined(GNU_CONFIGURE)
-.  if !exists(/usr/include/poll.h) && !exists(/usr/include/sys/poll.h)
+.  if !exists(${_OPSYS_INCLUDE_DIRS}/poll.h) && !exists(${_OPSYS_INCLUDE_DIRS}/sys/poll.h)
 CONFIGURE_ENV+=		ac_cv_func_poll=no
 .  endif
 .endif
