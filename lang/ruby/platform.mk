@@ -1,4 +1,4 @@
-# $NetBSD: platform.mk,v 1.1 2016/11/13 15:14:19 taca Exp $
+# $NetBSD: platform.mk,v 1.2 2016/11/13 16:03:31 taca Exp $
 #
 
 #
@@ -72,6 +72,16 @@ CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
 # /usr/bin/dtrace is not DTrace.
 #
 .if ${OPSYS} == "Linux" && exists(/usr/bin/dtrace)
+CONFIGURE_ARGS+=	--disable-dtrace
+.endif
+
+#
+# NetBSD
+#
+# dtrace support has problem on i386.  (No official NetBSD release is
+# built with dtrace enabled yet, so this problem is on 7.99.* only.)
+#
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--disable-dtrace
 .endif
 
