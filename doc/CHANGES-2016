@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4687 2016/11/14 14:48:56 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4688 2016/11/14 15:00:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6461,3 +6461,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ninja-build to 1.7.2 [wiz 2016-11-14]
 	Updated multimedia/mediainfo to 0.7.90 [wiz 2016-11-14]
 	Updated x11/mcookie to 2.29 [wiz 2016-11-14]
+	Updated sysutils/consul to 0.7.1 [fhajny 2016-11-14]
