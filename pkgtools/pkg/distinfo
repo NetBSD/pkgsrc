@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2016/10/25 11:51:40 khorben Exp $
+$NetBSD: distinfo,v 1.7 2016/11/14 18:59:12 marino Exp $
 
 SHA1 (pkg-1.8.7.tar.xz) = 4727c25b0e4c34df1bf7a00df0e9c6370e855416
 RMD160 (pkg-1.8.7.tar.xz) = f0087c0e88ef890300a46a28d0644926fa7a7acb
 SHA512 (pkg-1.8.7.tar.xz) = 61b1553cb444ba30bcf1c9a5da204ff29b08ad87641c3f49fb7e7efd9f5396742e6812bf96a0228d3e76916648511faa086d197cc41c2ced9979615e23a3bc43
 Size (pkg-1.8.7.tar.xz) = 1950148 bytes
 SHA1 (patch-docs_Makefile.am) = aa6d5c9310c644d13d55c3176cd186c37cccc7c2
+SHA1 (patch-external_libfetch_http.c) = 9e618f80d6d72af7011351a8903b83f73130cdba
 SHA1 (patch-libpkg_pkg.h.in) = e74a96513c1e74ddea8a5b05b080cef57976d68b
 SHA1 (patch-libpkg_pkg__elf.c) = 07174f421e162fc74f1c2b306f60da1273b8b6ec
