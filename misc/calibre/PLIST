@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.70 2016/10/19 12:08:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.71 2016/11/14 13:57:04 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1626,6 +1626,7 @@ share/calibre/images/edit-paste.png
 share/calibre/images/edit-redo.png
 share/calibre/images/edit-select-all.png
 share/calibre/images/edit-undo.png
+share/calibre/images/edit_book.png
 share/calibre/images/edit_input.png
 share/calibre/images/eject.png
 share/calibre/images/embed-fonts.png
@@ -1740,6 +1741,7 @@ share/calibre/images/publisher.png
 share/calibre/images/random.png
 share/calibre/images/rating.png
 share/calibre/images/reader.png
+share/calibre/images/remove_books.png
 share/calibre/images/reports.png
 share/calibre/images/resize.png
 share/calibre/images/rotate-right.png
@@ -1834,7 +1836,6 @@ share/calibre/recipes/abc.recipe
 share/calibre/recipes/abc_au.recipe
 share/calibre/recipes/abc_es.recipe
 share/calibre/recipes/abc_py.recipe
-share/calibre/recipes/accountancyage.recipe
 share/calibre/recipes/acim_bilim_dergisi.recipe
 share/calibre/recipes/acrimed.recipe
 share/calibre/recipes/ad.recipe
@@ -1889,7 +1890,6 @@ share/calibre/recipes/arabian_business.recipe
 share/calibre/recipes/arbetaren.recipe
 share/calibre/recipes/arcadia.recipe
 share/calibre/recipes/arcamax.recipe
-share/calibre/recipes/archeowiesci.recipe
 share/calibre/recipes/arizona_republic.recipe
 share/calibre/recipes/army_times.recipe
 share/calibre/recipes/arret_sur_images.recipe
@@ -1961,7 +1961,6 @@ share/calibre/recipes/biz_portal.recipe
 share/calibre/recipes/blesk.recipe
 share/calibre/recipes/blic.recipe
 share/calibre/recipes/blog_da_cidadania.recipe
-share/calibre/recipes/blues.recipe
 share/calibre/recipes/boortz.recipe
 share/calibre/recipes/borse_online.recipe
 share/calibre/recipes/borsen_dk.recipe
@@ -2052,7 +2051,6 @@ share/calibre/recipes/coding_horror.recipe
 share/calibre/recipes/colta.recipe
 share/calibre/recipes/columbusdispatch.recipe
 share/calibre/recipes/common_dreams.recipe
-share/calibre/recipes/computer_active.recipe
 share/calibre/recipes/computerworld_dk.recipe
 share/calibre/recipes/computerworld_pl.recipe
 share/calibre/recipes/conowego_pl.recipe
@@ -2262,7 +2260,6 @@ share/calibre/recipes/empire_magazine.recipe
 share/calibre/recipes/endgadget.recipe
 share/calibre/recipes/endgadget_ja.recipe
 share/calibre/recipes/entrepeneur.recipe
-share/calibre/recipes/epicurious.recipe
 share/calibre/recipes/epl_talk.recipe
 share/calibre/recipes/epw.recipe
 share/calibre/recipes/equipped.recipe
@@ -2577,7 +2574,6 @@ share/calibre/recipes/jurnalulnational.recipe
 share/calibre/recipes/jutarnji.recipe
 share/calibre/recipes/juve_la_stampa.recipe
 share/calibre/recipes/juventudrebelde.recipe
-share/calibre/recipes/juventudrebelde_english.recipe
 share/calibre/recipes/jv_dk.recipe
 share/calibre/recipes/kahokushinpo.recipe
 share/calibre/recipes/kaloeviglokalavisen_dk.recipe
@@ -2698,7 +2694,6 @@ share/calibre/recipes/lightspeed_magazine.recipe
 share/calibre/recipes/limes.recipe
 share/calibre/recipes/linux_journal.recipe
 share/calibre/recipes/linux_magazine.recipe
-share/calibre/recipes/linuxdevices.recipe
 share/calibre/recipes/linuxportal_pl.recipe
 share/calibre/recipes/list_apart.recipe
 share/calibre/recipes/livemint.recipe
@@ -2717,7 +2712,6 @@ share/calibre/recipes/lvivs_ks_ghazieta.recipe
 share/calibre/recipes/lwn.recipe
 share/calibre/recipes/lwn_weekly.recipe
 share/calibre/recipes/lyngby-taarbaeklokalavisen_dk.recipe
-share/calibre/recipes/mac_video.recipe
 share/calibre/recipes/mac_world.recipe
 share/calibre/recipes/mac_world_uk.recipe
 share/calibre/recipes/macity.recipe
@@ -2779,7 +2773,6 @@ share/calibre/recipes/mondedurable.recipe
 share/calibre/recipes/monden.recipe
 share/calibre/recipes/money_pl.recipe
 share/calibre/recipes/moneycontrol.recipe
-share/calibre/recipes/moneynews.recipe
 share/calibre/recipes/moneyro.recipe
 share/calibre/recipes/monitor.recipe
 share/calibre/recipes/montevideo_com.recipe
@@ -2925,7 +2918,6 @@ share/calibre/recipes/omgubuntu.recipe
 share/calibre/recipes/onda_rock.recipe
 share/calibre/recipes/onemagazine.recipe
 share/calibre/recipes/onionavclub.recipe
-share/calibre/recipes/open_left.recipe
 share/calibre/recipes/opinion_bo.recipe
 share/calibre/recipes/optyczne_pl.recipe
 share/calibre/recipes/oregonian.recipe
@@ -3079,7 +3071,6 @@ share/calibre/recipes/rheinische_post.recipe
 share/calibre/recipes/ria_ru.recipe
 share/calibre/recipes/rian_eng.recipe
 share/calibre/recipes/rian_spa.recipe
-share/calibre/recipes/richmond_times_dispatch.recipe
 share/calibre/recipes/rmf24_ESKN.recipe
 share/calibre/recipes/rmf24_fakty.recipe
 share/calibre/recipes/rmf24_opinie.recipe
@@ -3145,7 +3136,6 @@ share/calibre/recipes/sigma_live.recipe
 share/calibre/recipes/sign_of_the_times.recipe
 share/calibre/recipes/sign_on_sd.recipe
 share/calibre/recipes/silicon_republic.recipe
-share/calibre/recipes/sinfest.recipe
 share/calibre/recipes/singtao_daily.recipe
 share/calibre/recipes/singtaohk.recipe
 share/calibre/recipes/siol.recipe
@@ -3194,7 +3184,6 @@ share/calibre/recipes/staradvertiser.recipe
 share/calibre/recipes/starnberger_merkur.recipe
 share/calibre/recipes/stars_and_stripes.recipe
 share/calibre/recipes/starwars.recipe
-share/calibre/recipes/statesman.recipe
 share/calibre/recipes/stiintasitehnica.recipe
 share/calibre/recipes/stnn.recipe
 share/calibre/recipes/stopklatka.recipe
@@ -3349,7 +3338,6 @@ share/calibre/recipes/unperiodico.recipe
 share/calibre/recipes/upi.recipe
 share/calibre/recipes/usatoday.recipe
 share/calibre/recipes/usnews.recipe
-share/calibre/recipes/utne.recipe
 share/calibre/recipes/utrinski.recipe
 share/calibre/recipes/valbybladet_dk.recipe
 share/calibre/recipes/vancouver_province.recipe
@@ -3403,7 +3391,6 @@ share/calibre/recipes/windsor_star.recipe
 share/calibre/recipes/winnipeg_free_press.recipe
 share/calibre/recipes/winnipeg_sun.recipe
 share/calibre/recipes/winsupersite.recipe
-share/calibre/recipes/winter_olympics.recipe
 share/calibre/recipes/wired.recipe
 share/calibre/recipes/wired_daily.recipe
 share/calibre/recipes/wired_it.recipe
