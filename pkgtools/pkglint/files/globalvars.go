@@ -11,12 +11,15 @@ type GlobalVars struct {
 	Pkg        *Package   // The package that is currently checked.
 	Mk         *MkLines   // The Makefile (or fragment) that is currently checked.
 
-	Todo           []string // The files or directories that still need to be checked.
-	CurrentDir     string   // The currently checked directory, relative to the cwd
-	CurPkgsrcdir   string   // The pkgsrc directory, relative to currentDir
-	Wip            bool     // Is the currently checked directory from pkgsrc-wip?
-	Infrastructure bool     // Is the currently checked item from the pkgsrc infrastructure?
-	Testing        bool     // Is pkglint in self-testing mode (only during development)?
+	Todo            []string // The files or directories that still need to be checked.
+	CurrentDir      string   // The currently checked directory, relative to the cwd
+	CurPkgsrcdir    string   // The pkgsrc directory, relative to currentDir
+	Wip             bool     // Is the currently checked directory from pkgsrc-wip?
+	Infrastructure  bool     // Is the currently checked item from the pkgsrc infrastructure?
+	Testing         bool     // Is pkglint in self-testing mode (only during development)?
+	CurrentUsername string   // For checking against OWNER and MAINTAINER
+	CvsEntriesDir   string   // Cached to avoid I/O
+	CvsEntriesLines []*Line
 
 	Hash         map[string]*Hash // Maps "alg:fname" => hash (inter-package check).
 	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
@@ -32,10 +35,10 @@ type GlobalVars struct {
 	logErr                io.Writer
 	debugOut              io.Writer
 
-	res       map[string]*regexp.Regexp
+	res       map[string]*regexp.Regexp // Compiled regular expressions
 	rematch   *Histogram
 	renomatch *Histogram
-	retime    *Histogram
+	retime    *Histogram // Total time taken by matching a regular expression
 	loghisto  *Histogram
 }
 
