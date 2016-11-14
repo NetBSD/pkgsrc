@@ -221,7 +221,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
 	c.Check(len(lines), equals, len(fixedLines))
 	c.Check(s.LoadTmpFile(c, "PLIST"), equals, ""+
-		"@comment $NetBSD: plist_test.go,v 1.9 2016/11/01 21:40:25 rillig Exp $\n"+
+		"@comment $"+"NetBSD$\n"+
 		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la\n"+
 		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la\n"+
 		"lib/libvirt/connection-driver/libvirt_driver_storage.la\n"+

@@ -71,13 +71,10 @@ func getSubdirs(fname string) []string {
 
 // Checks whether a file is already committed to the CVS repository.
 func isCommitted(fname string) bool {
-	basename := path.Base(fname)
-	lines, err := readLines(path.Dir(fname)+"/CVS/Entries", false)
-	if err != nil {
-		return false
-	}
+	lines := loadCvsEntries(fname)
+	needle := "/" + path.Base(fname) + "/"
 	for _, line := range lines {
-		if hasPrefix(line.Text, "/"+basename+"/") {
+		if hasPrefix(line.Text, needle) {
 			return true
 		}
 	}
@@ -85,13 +82,10 @@ func isCommitted(fname string) bool {
 }
 
 func isLocallyModified(fname string) bool {
-	basename := path.Base(fname)
-	lines, err := readLines(path.Dir(fname)+"/CVS/Entries", false)
-	if err != nil {
-		return false
-	}
+	lines := loadCvsEntries(fname)
+	needle := "/" + path.Base(fname) + "/"
 	for _, line := range lines {
-		if hasPrefix(line.Text, "/"+basename+"/") {
+		if hasPrefix(line.Text, needle) {
 			cvsModTime, err := time.Parse(time.ANSIC, strings.Split(line.Text, "/")[3])
 			if err != nil {
 				return false
@@ -110,6 +104,21 @@ func isLocallyModified(fname string) bool {
 		}
 	}
 	return false
+}
+
+func loadCvsEntries(fname string) []*Line {
+	dir := path.Dir(fname)
+	if dir == G.CvsEntriesDir {
+		return G.CvsEntriesLines
+	}
+
+	lines, err := readLines(dir+"/CVS/Entries", false)
+	if err != nil {
+		return nil
+	}
+	G.CvsEntriesDir = dir
+	G.CvsEntriesLines = lines
+	return lines
 }
 
 // Returns the number of columns that a string occupies when printed with
