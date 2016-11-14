@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/12 22:49:23 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/14 20:49:15 ryoon Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -16,6 +16,7 @@ include/polly/LinkAllPasses.h
 include/polly/Options.h
 include/polly/RegisterPasses.h
 include/polly/ScheduleOptimizer.h
+include/polly/ScopBuilder.h
 include/polly/ScopDetection.h
 include/polly/ScopDetectionDiagnostic.h
 include/polly/ScopInfo.h
@@ -28,3 +29,4 @@ include/polly/Support/ScopLocation.h
 lib/LLVMPolly.so
 lib/libPolly.a
 lib/libPollyISL.a
+lib/libPollyPPCG.a
