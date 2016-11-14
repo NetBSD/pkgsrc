@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/10/28 23:37:53 marino Exp $
+# $NetBSD: Makefile,v 1.13 2016/11/14 18:59:12 marino Exp $
 
 DISTNAME=	pkg-1.8.7
 PKGREVISION=	6
@@ -11,11 +11,19 @@ HOMEPAGE=	https://wiki.freebsd.org/pkgng
 COMMENT=	Package management tool for FreeBSD
 LICENSE=	2-clause-bsd
 
+BOOTSTRAP_PKG=	yes
 GNU_CONFIGURE=	yes
+USE_CWRAPPERS=	no
 USE_LANGUAGES=	c
 
 CPPFLAGS+=	-D_LOCALBASE="\"${PREFIX}\""
 CPPFLAGS+=	-DPORTSDIR="\"${PKG.portsdir}\""
+CPPFLAGS+=	-DDEFAULT_VULNXML_URL="\"http://muscles.dragonflybsd.org/pkgsrc-vuxml/vuln.xml.bz2\""
+
+.if defined(DEBUG_PKGNG)
+CFLAGS:=	${CFLAGS:N-O2} -ggdb -O0
+_STRIPFLAG_INSTALL=	# don't strip
+.endif
 
 AUTO_MKDIRS=	yes
 
@@ -56,20 +64,40 @@ SUBST_FILES.pkgconf-prefix=	src/pkg.conf.sample
 SUBST_SED.pkgconf-prefix+=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.pkgconf-prefix=	Correct the installation prefix in pkg.conf(5).
 
-SUBST_CLASSES+=	portsdir
-SUBST_STAGE.portsdir=		pre-install
-SUBST_FILES.portsdir=		libpkg/pkg_config.c \
-				src/pkg.conf.sample \
-				docs/pkg-create.8 \
-				docs/pkg-set.8 \
-				docs/pkg-repo.8 \
-				docs/pkg.conf.5 \
-				docs/pkg-version.8 \
-				docs/pkg.8
-SUBST_SED.portsdir=		-e "s|/usr/ports|${PKG.portsdir}|g" \
-				-e "s|/var/db/pkg|${PKG_DBDIR}|g" \
-				-e "s|/var/cache/pkg|${VARBASE}/cache/pkgng|g"
-SUBST_MESSAGE.portsdir=		Correct reference to FreeBSD portsdir.
+SUBST_CLASSES+=		portsdir
+SUBST_STAGE.portsdir=	pre-install
+SUBST_FILES.portsdir=	src/pkg.conf.sample \
+			docs/pkg-create.8 \
+			docs/pkg-set.8 \
+			docs/pkg-repo.8 \
+			docs/pkg.conf.5 \
+			docs/pkg-version.8 \
+			docs/pkg.8
+SUBST_SED.portsdir=	-e "s|/usr/ports|${PKG.portsdir}|g" \
+			-e "s|/var/db/pkg|${PKGNG_DBDIR}|g" \
+			-e "s|/var/cache/pkg|${VARBASE}/cache/pkgng|g"
+SUBST_MESSAGE.portsdir=	Correct reference to FreeBSD portsdir.
+
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	post-patch
+SUBST_FILES.config=	libpkg/pkg_config.c
+SUBST_SED.config=	-e "s|/usr/ports|${PKG.portsdir}|g" \
+			-e "s|/var/db/pkg|${PKGNG_DBDIR}|g" \
+			-e "s|/var/cache/pkg|${VARBASE}/cache/pkgng|g"
+SUBST_MESSAGE.config=	Update pkg(8) defaults.
+
+SUBST_CLASSES+=		vuxml
+SUBST_STAGE.vuxml=	post-patch
+SUBST_FILES.vuxml=	libpkg/pkg_audit.c
+SUBST_SED.vuxml=	-e "s|https://vuxml.FreeBSD.org/freebsd|http://muscles.dragonflybsd.org/pkgsrc-vuxml/reports|"
+SUBST_MESSAGE.vuxml=	Direct audit reports to Pkgsrc vuxml
+
+SUBST_CLASSES+=		ldhints
+SUBST_STAGE.ldhints=	post-patch
+SUBST_FILES.ldhints=	libpkg/private/ldconfig.h libpkg/elfhints.c
+SUBST_SED.ldhints=	-e "s|/var/run/ld-elf.so.hints|/var/run/ld.so.hints|" \
+			-e 's,ifndef __linux__,if defined __FreeBSD__ || defined __DragonFly__,'
+SUBST_MESSAGE.ldhints=	Disable ldconfig hints for NetBSD
 
 .if defined(PACKAGE_BUILDING) # set by Synth which has custom location, so use default path
 PKG.portsdir?=	/usr/pkgsrc
@@ -113,6 +141,13 @@ post-install:
 		${DESTDIR}${EGDIR}/
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined (PKG_DBDIR)
+PKGNG_DBDIR?=	${PKG_DBDIR}
+.else
+PKGNG_DBDIR?=	/var/db/pkgng
+.endif
+
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly" && ${OPSYS} != "NetBSD"
 .include "../../archivers/libarchive/buildlink3.mk"
 .endif
