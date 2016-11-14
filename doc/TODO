@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16691 2016/11/14 14:40:57 wiz Exp $
+$NetBSD: TODO,v 1.16692 2016/11/14 14:45:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1081,7 +1081,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcookie-2.29
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
-	o mediainfo-0.7.90
 	o mednafen-0.9.39.1
 	o megatools-1.9.97
 	o memached-1.4.33
