@@ -760,7 +760,21 @@ func (s *Suite) Test_MkLine_CheckCond_comparison_with_shell_command(c *check.C) 
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, "") // Don’t warn about unknown shell command "cc".
+	// Don’t warn about unknown shell command "cc".
+	c.Check(s.Output(), equals, "WARN: security/openssl/Makefile:2: Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.\n")
+}
+
+func (s *Suite) Test_MkLine_CheckCond_comparing_PKGSRC_COMPILER_with_eqeq(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+	G.globalData.InitVartypes()
+	G.Mk = s.NewMkLines("audio/pulseaudio/Makefile",
+		mkrcsid,
+		".if ${OPSYS} == \"Darwin\" && ${PKGSRC_COMPILER} == \"clang\"",
+		".endif")
+
+	G.Mk.Check()
+
+	c.Check(s.Output(), equals, "WARN: audio/pulseaudio/Makefile:2: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.\n")
 }
 
 func (s *Suite) Test_MkLine_Pkgmandir(c *check.C) {
