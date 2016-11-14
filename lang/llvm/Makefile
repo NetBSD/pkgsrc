@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2016/11/14 20:15:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2016/11/14 20:31:28 ryoon Exp $
 #
 # when updating this, please also update:
 # devel/lldb
+# devel/polly
 # lang/clang
+# lang/clang-static-analyzer
 # lang/libLLVM
 # lang/libunwind
 
