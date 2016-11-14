@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4688 2016/11/14 15:00:35 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4689 2016/11/14 20:17:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6462,3 +6462,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mediainfo to 0.7.90 [wiz 2016-11-14]
 	Updated x11/mcookie to 2.29 [wiz 2016-11-14]
 	Updated sysutils/consul to 0.7.1 [fhajny 2016-11-14]
+	Updated lang/llvm to 3.9.0 [ryoon 2016-11-14]
+	Updated lang/clang to 3.9.0 [ryoon 2016-11-14]
+	Updated lang/libLLVM to 3.9.0 [ryoon 2016-11-14]
+	Updated lang/libunwind to 3.9.0 [ryoon 2016-11-14]
+	Updated devel/lldb to 3.9.0 [ryoon 2016-11-14]
