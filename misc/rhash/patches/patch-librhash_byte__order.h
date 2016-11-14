@@ -1,9 +1,9 @@
-$NetBSD: patch-librhash_byte__order.h,v 1.2 2015/04/28 01:17:11 mef Exp $
+$NetBSD: patch-librhash_byte__order.h,v 1.3 2016/11/14 14:10:04 wiz Exp $
 
 Use bswap builtins for clang. Prefer builtin over inline assembler.
 Recognize BSDish endian macros.
 
---- librhash/byte_order.h.orig	2015-02-22 21:07:44.000000000 +0000
+--- librhash/byte_order.h.orig	2016-11-06 20:12:16.000000000 +0000
 +++ librhash/byte_order.h
 @@ -10,6 +10,8 @@
  
@@ -23,7 +23,7 @@ Recognize BSDish endian macros.
 +		_BYTE_ORDER == _LITTLE_ENDIAN) || \
  	defined(CPU_IA32) || defined(CPU_X64) || \
  	defined(__ia64) || defined(__ia64__) || defined(__alpha__) || defined(_M_ALPHA) || \
- 	defined(vax) || defined(MIPSEL) || defined(_ARM_)
+ 	defined(vax) || defined(MIPSEL) || defined(_ARM_) || defined(__arm__)
 @@ -45,7 +48,8 @@ extern "C" {
  # define IS_BIG_ENDIAN 0
  # define IS_LITTLE_ENDIAN 1
