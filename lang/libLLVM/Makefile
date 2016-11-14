@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2016/08/02 22:39:21 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/11/14 20:15:33 ryoon Exp $
 
-DISTNAME=	llvm-3.8.1.src
+DISTNAME=	llvm-3.9.0.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -23,6 +23,7 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
+CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 
 .for tool in 	bugpoint bugpoint_passes dsymutil llc lli llvm_ar	\
 	llvm_as llvm_bcanalyzer llvm_c_test llvm_cov llvm_cxxdump	\
@@ -30,7 +31,7 @@ CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
 	llvm_jitlistener llvm_link llvm_lto llvm_mc llvm_mcmarkup	\
 	llvm_nm llvm_objdump llvm_pdbdump llvm_profdata llvm_readobj	\
 	llvm_rtdyld llvm_size llvm_split llvm_stress llvm_symbolizer	\
-	lto obj2yaml opt sancov verify_uselistorder yaml2obj
+	lto obj2yaml opt sancov verify_uselistorder yaml2obj sanstats
 CMAKE_ARGS+=	-DLLVM_TOOL_${tool:tu}_BUILD=OFF
 .endfor
 
@@ -110,7 +111,7 @@ PLIST_SUBST+=	LLVM_LIBNAME=${LLVM_LIBNAME}
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 .for f in config.guess config.sub
-	cp ../../mk/gnu-config/${f} ${WRKSRC}/autoconf/${f}
+	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
 post-install:
