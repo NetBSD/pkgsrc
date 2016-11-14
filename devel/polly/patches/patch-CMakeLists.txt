@@ -1,10 +1,10 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2016/09/12 22:49:23 kamil Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2016/11/14 20:49:15 ryoon Exp $
 
 Bump minimal required CMake version to 3.4.3 like modern LLVM
 Add support for standalone builds
 Disable tests - they require missing files from standard LLVM build (lit tool)
 
---- CMakeLists.txt.orig	2015-10-15 12:18:37.000000000 +0000
+--- CMakeLists.txt.orig	2016-07-15 07:50:36.000000000 +0000
 +++ CMakeLists.txt
 @@ -1,90 +1,107 @@
  # Check if this is a in tree build.
@@ -148,7 +148,7 @@ Disable tests - they require missing files from standard LLVM build (lit tool)
 +  find_program(LLVM_TABLEGEN_EXE "llvm-tblgen" ${LLVM_TOOLS_BINARY_DIR}
 +    NO_DEFAULT_PATH)
 +  
-+  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/share/llvm/cmake")
++  set(LLVM_CMAKE_PATH "${LLVM_BINARY_DIR}/lib/cmake/llvm")
 +  set(LLVMCONFIG_FILE "${LLVM_CMAKE_PATH}/LLVMConfig.cmake")
 +  if(EXISTS ${LLVMCONFIG_FILE})
 +    list(APPEND CMAKE_MODULE_PATH "${LLVM_CMAKE_PATH}")                                                                                                                                     
@@ -174,7 +174,7 @@ Disable tests - they require missing files from standard LLVM build (lit tool)
 +  include(TableGen)
 +
 +  # Import CMake library targets from LLVM and Clang.
-+  include("${LLVM_OBJ_ROOT}/share/llvm/cmake/LLVMConfig.cmake")
++  include("${LLVM_OBJ_ROOT}/lib/cmake/llvm/LLVMConfig.cmake")
 +  set(PACKAGE_VERSION "${LLVM_PACKAGE_VERSION}")
 +  set(LLVM_BINARY_DIR ${CMAKE_BINARY_DIR})
 +
@@ -195,9 +195,18 @@ Disable tests - they require missing files from standard LLVM build (lit tool)
  endif(NOT DEFINED LLVM_MAIN_SRC_DIR)
  
  set(POLLY_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
-@@ -155,7 +172,7 @@ install(DIRECTORY ${POLLY_BINARY_DIR}/in
- add_definitions( -D_GNU_SOURCE )
+@@ -111,7 +128,7 @@ else ()
+ endif ()
  
+ # Add path for custom modules
+-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${POLLY_SOURCE_DIR}/cmake")
++set (CMAKE_MODULE_PATH "/usr/tmp/pkgsrc/devel/polly/work/.buildlink/cmake-Modules" ${CMAKE_MODULE_PATH} "${POLLY_SOURCE_DIR}/cmake")
+ 
+ SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+ 
+@@ -163,7 +180,7 @@ add_definitions( -D_GNU_SOURCE )
+ 
+ add_subdirectory(docs)
  add_subdirectory(lib)
 -add_subdirectory(test)
 +#add_subdirectory(test)
