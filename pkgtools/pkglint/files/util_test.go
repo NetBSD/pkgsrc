@@ -2,6 +2,7 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
+	"testing"
 )
 
 func (s *Suite) Test_MkopSubst__middle(c *check.C) {
@@ -85,4 +86,61 @@ func (s *Suite) Test_PrefixReplacer_Since(c *check.C) {
 	mark := repl.Mark()
 	repl.AdvanceRegexp(`^\w+`)
 	c.Check(repl.Since(mark), equals, "hello")
+}
+
+const reMkIncludeBenchmark = `^\.(\s*)(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`
+const reMkIncludeBenchmarkPositive = `^\.(\s*)(s?include)\s+\"(.+)\"\s*(?:#.*)?$`
+
+func Benchmark_match3_buildlink3(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"../../category/package/buildlink3.mk\"", reMkIncludeBenchmark)
+	}
+}
+
+func Benchmark_match3_bsd_pkg_mk(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"../../mk/bsd.pkg.mk\"", reMkIncludeBenchmark)
+	}
+}
+
+func Benchmark_match3_samedir(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"options.mk\"", reMkIncludeBenchmark)
+	}
+}
+
+func Benchmark_match3_bsd_pkg_mk_comment(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"../../mk/bsd.pkg.mk\"          # infrastructure     ", reMkIncludeBenchmark)
+	}
+}
+
+func Benchmark_match3_buildlink3_positive(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"../../category/package/buildlink3.mk\"", reMkIncludeBenchmarkPositive)
+	}
+}
+
+func Benchmark_match3_bsd_pkg_mk_positive(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"../../mk/bsd.pkg.mk\"", reMkIncludeBenchmarkPositive)
+	}
+}
+
+func Benchmark_match3_samedir_positive(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"options.mk\"", reMkIncludeBenchmarkPositive)
+	}
+}
+
+func Benchmark_match3_bsd_pkg_mk_comment_positive(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		match3(".include \"../../mk/bsd.pkg.mk\"          # infrastructure     ", reMkIncludeBenchmarkPositive)
+	}
+}
+
+func Benchmark_match3_explicit(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		MatchMkInclude(".include \"../../mk/bsd.pkg.mk\"          # infrastructure     ")
+	}
 }

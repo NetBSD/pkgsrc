@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"os/user"
 	"path/filepath"
 	"runtime/pprof"
 )
@@ -60,6 +61,12 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 	}
 
 	G.globalData.Initialize()
+
+	currentUser, err := user.Current()
+	if err == nil {
+		// On Windows, this is `Computername\Username`.
+		G.CurrentUsername = regcomp(`^.*\\`).ReplaceAllString(currentUser.Username, "")
+	}
 
 	for len(G.Todo) != 0 {
 		item := G.Todo[0]

@@ -504,6 +504,8 @@ func (gd *GlobalData) InitVartypes() {
 	pkglist("NOT_FOR_BULK_PLATFORM", lkSpace, BtMachinePlatformPattern)
 	pkglist("NOT_FOR_PLATFORM", lkSpace, BtMachinePlatformPattern)
 	pkg("NOT_FOR_UNPRIVILEGED", lkNone, BtYesNo)
+	pkglist("NOT_PAX_ASLR_SAFE", lkShell, BtPathmask)
+	pkglist("NOT_PAX_MPROTECT_SAFE", lkShell, BtPathmask)
 	acl("NO_BIN_ON_CDROM", lkNone, BtRestricted, "Makefile, Makefile.common: set")
 	acl("NO_BIN_ON_FTP", lkNone, BtRestricted, "Makefile, Makefile.common: set")
 	acl("NO_BUILD", lkNone, BtYes, "Makefile, Makefile.common: set; Makefile.*: default, set")
