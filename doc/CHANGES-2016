@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4683 2016/11/14 14:28:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4684 2016/11/14 14:31:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6457,3 +6457,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-pkginfo to 1.4.1 [wiz 2016-11-14]
 	Updated mail/neomutt to 20161104 [wiz 2016-11-14]
 	Updated devel/py-freezegun to 0.3.8 [wiz 2016-11-14]
+	Updated devel/py-cffi to 1.9.1 [wiz 2016-11-14]
