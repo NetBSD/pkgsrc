@@ -1,19 +1,19 @@
-$NetBSD: patch-configure,v 1.2 2016/10/19 19:28:36 wiz Exp $
+$NetBSD: patch-configure,v 1.3 2016/11/14 14:48:46 wiz Exp $
 
 Fix unportable test(1) operator.
 
---- configure.orig	2016-09-07 11:36:20.036305071 +0000
+--- configure.orig	2016-11-08 10:37:19.061772080 +0000
 +++ configure
-@@ -21297,7 +21297,7 @@ else
+@@ -21196,7 +21196,7 @@ else
  fi
  
  
--if test "x$enable_libmount_force_mountinfo" == xyes; then :
-+if test "x$enable_libmount_force_mountinfo" = xyes; then :
+-if test "x$enable_libmount_support_mtab" == xyes; then :
++if test "x$enable_libmount_support_mtab" = xyes; then :
  
  
- $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
-@@ -22193,7 +22193,7 @@ $as_echo "$as_me: WARNING: sys/signalfd.
+ $as_echo "#define USE_LIBMOUNT_SUPPORT_MTAB 1" >>confdefs.h
+@@ -22096,7 +22096,7 @@ $as_echo "$as_me: WARNING: sys/signalfd.
      esac
    fi
  
@@ -22,7 +22,7 @@ Fix unportable test(1) operator.
  
  
  $as_echo "#define HAVE_UUIDD 1" >>confdefs.h
-@@ -29181,7 +29181,7 @@ else
+@@ -29261,7 +29261,7 @@ else
  fi
  
  
