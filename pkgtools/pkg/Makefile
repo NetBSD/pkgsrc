@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2016/11/14 18:59:12 marino Exp $
+# $NetBSD: Makefile,v 1.14 2016/11/14 19:38:11 marino Exp $
 
 DISTNAME=	pkg-1.8.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
