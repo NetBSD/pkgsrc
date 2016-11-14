@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4677 2016/11/14 13:57:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4678 2016/11/14 14:08:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6451,3 +6451,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.4.11 [rillig 2016-11-14]
 	Updated net/youtube-dl to 20161114.1 [leot 2016-11-14]
 	Updated misc/calibre to 2.71.0 [wiz 2016-11-14]
+	Updated x11/libxkbcommon to 0.7.0 [wiz 2016-11-14]
