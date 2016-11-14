@@ -105,7 +105,7 @@ func Explain(explanation ...string) {
 				print(fmt.Sprintf("Long explanation line (%d): %s\n", l, s))
 			}
 			if m, before := match1(s, `(.+)\. [^ ]`); m {
-				if !matches(before, `\d$`) {
+				if !matches(before, `\d$|e\.g`) {
 					print(fmt.Sprintf("Short space after period: %s\n", s))
 				}
 			}
