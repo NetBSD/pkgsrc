@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os/user"
 	"path"
 	"regexp"
 	"strconv"
@@ -329,11 +328,13 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 				// current file and in the current working directory.
 				// Pkglint doesn’t have an include dir list, like make(1) does.
 				if !fileExists(dirname + "/" + includeFile) {
-					dirname = G.CurrentDir
-				}
-				if !fileExists(dirname + "/" + includeFile) {
-					line.Error1("Cannot read %q.", dirname+"/"+includeFile)
-					return false
+					if dirname != G.CurrentDir { // Prevent unnecessary syscalls
+						dirname = G.CurrentDir
+						if !fileExists(dirname + "/" + includeFile) {
+							line.Error1("Cannot read %q.", dirname+"/"+includeFile)
+							return false
+						}
+					}
 				}
 
 				if G.opts.Debug {
@@ -808,13 +809,7 @@ func (pkg *Package) checkLocallyModified(fname string) {
 		return
 	}
 
-	user, err := user.Current()
-	if err != nil || user.Username == "" {
-		return
-	}
-	// On Windows, this is `Computername\Username`.
-	username := regcomp(`^.*\\`).ReplaceAllString(user.Username, "")
-
+	username := G.CurrentUsername
 	if G.opts.Debug {
 		traceStep("user=%q owner=%q maintainer=%q", username, owner, maintainer)
 	}

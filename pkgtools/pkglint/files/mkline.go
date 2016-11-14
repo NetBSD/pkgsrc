@@ -118,7 +118,7 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 		return
 	}
 
-	if m, indent, directive, includefile := match3(text, reMkInclude); m {
+	if m, indent, directive, includefile := MatchMkInclude(text); m {
 		mkline.xtype = 6
 		mkline.data = mkLineInclude{directive == "include", indent, includefile, ""}
 		return
@@ -1196,6 +1196,14 @@ func (mkline *MkLine) CheckCond() {
 		value := node.args[2].(string)
 		if len(varmods) == 0 {
 			mkline.CheckVartype(varname, opUse, value, "")
+			if varname == "PKGSRC_COMPILER" {
+				op := node.args[1].(string)
+				mkline.Line.Warnf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", ifelseStr(op == "==", "M", "N"), value, op)
+				Explain(
+					"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache",
+					"distcc clang\".  Therefore, comparing it using == or != leads to",
+					"wrong results in these cases.")
+			}
 		} else if len(varmods) == 1 && matches(varmods[0], `^[MN]`) && value != "" {
 			mkline.CheckVartype(varname, opUseMatch, value, "")
 		}
