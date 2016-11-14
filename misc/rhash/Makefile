@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:28:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/14 14:10:04 wiz Exp $
 
-DISTNAME=	rhash-1.3.3
-PKGREVISION=	1
+DISTNAME=	rhash-1.3.4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rhash/}
 GITHUB_PROJECT=	RHash
-GITHUB_TAG=     v1.3.3
+GITHUB_TAG=     v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/rhash/RHash
