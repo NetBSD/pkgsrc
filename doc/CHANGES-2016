@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4686 2016/11/14 14:45:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4687 2016/11/14 14:48:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6460,3 +6460,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-cffi to 1.9.1 [wiz 2016-11-14]
 	Updated devel/ninja-build to 1.7.2 [wiz 2016-11-14]
 	Updated multimedia/mediainfo to 0.7.90 [wiz 2016-11-14]
+	Updated x11/mcookie to 2.29 [wiz 2016-11-14]
