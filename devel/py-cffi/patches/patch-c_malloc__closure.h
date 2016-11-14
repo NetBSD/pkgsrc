@@ -1,4 +1,4 @@
-$ NetBSD$
+$NetBSD: patch-c_malloc__closure.h,v 1.2 2016/11/14 14:31:18 wiz Exp $
 
 Handle PaX/MPROTECT
 
