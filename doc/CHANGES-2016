@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4675 2016/11/14 01:08:33 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.4676 2016/11/14 10:45:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6449,3 +6449,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/haproxy to 1.6.9nb1 [morr 2016-11-13]
 	Added wm/wmutils-opt version 0.20161004 [kamil 2016-11-13]
 	Updated pkgtools/pkglint to 5.4.11 [rillig 2016-11-14]
+	Updated net/youtube-dl to 20161114.1 [leot 2016-11-14]
