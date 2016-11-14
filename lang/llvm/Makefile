@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/11/14 19:56:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2016/11/14 20:15:32 ryoon Exp $
 #
 # when updating this, please also update:
 # devel/lldb
@@ -6,7 +6,7 @@
 # lang/libLLVM
 # lang/libunwind
 
-DISTNAME=	llvm-3.8.1.src
+DISTNAME=	llvm-3.9.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -102,7 +102,7 @@ fix-darwin-install-name:
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 .for f in config.guess config.sub
-	cp ../../mk/gnu-config/${f} ${WRKSRC}/autoconf/${f}
+	cp ../../mk/gnu-config/${f} ${WRKSRC}/cmake/${f}
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
