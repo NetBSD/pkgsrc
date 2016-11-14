@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2016/03/10 15:01:52 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2016/11/14 20:15:32 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
-LLVM_TARGETS=	AArch64 AMDGPU ARM BPF CppBackend Hexagon MSP430 Mips NVPTX PowerPC Sparc SystemZ X86 XCore
+LLVM_TARGETS=	AArch64 AMDGPU ARM BPF Hexagon MSP430 Mips NVPTX PowerPC Sparc SystemZ X86 XCore
 
 .for tgt in ${LLVM_TARGETS}
 PLIST_VARS+=			${tgt}
