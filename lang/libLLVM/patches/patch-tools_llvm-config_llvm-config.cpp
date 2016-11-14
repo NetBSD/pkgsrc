@@ -1,13 +1,13 @@
-$NetBSD: patch-tools_llvm-config_llvm-config.cpp,v 1.1 2016/03/17 02:53:59 tnn Exp $
+$NetBSD: patch-tools_llvm-config_llvm-config.cpp,v 1.2 2016/11/14 20:15:33 ryoon Exp $
 
 avoid conflict with lang/clang.
 Use -lLLVM-3.8 instead of -lLLVM-3.8.0 so we don't break unnecessarily
 on patch updates.
 
---- tools/llvm-config/llvm-config.cpp.orig	2016-01-12 07:23:58.000000000 +0000
+--- tools/llvm-config/llvm-config.cpp.orig	2016-03-14 21:39:58.000000000 +0000
 +++ tools/llvm-config/llvm-config.cpp
-@@ -309,9 +309,9 @@ int main(int argc, char **argv) {
-                            "-I" + ActiveObjRoot + "/include");
+@@ -327,9 +327,9 @@ int main(int argc, char **argv) {
+         ("-I" + ActiveIncludeDir + " " + "-I" + ActiveObjRoot + "/include");
    } else {
      ActivePrefix = CurrentExecPrefix;
 -    ActiveIncludeDir = ActivePrefix + "/include";
@@ -18,11 +18,11 @@ on patch updates.
      ActiveIncludeOption = "-I" + ActiveIncludeDir;
    }
  
-@@ -334,14 +334,14 @@ int main(int argc, char **argv) {
-     StaticPrefix = SharedPrefix = "lib";
+@@ -363,14 +363,14 @@ int main(int argc, char **argv) {
+     StaticDir = ActiveLibDir;
    } else if (HostTriple.isOSDarwin()) {
      SharedExt = "dylib";
--    SharedVersionedExt = PACKAGE_VERSION ".dylib";
+-    SharedVersionedExt = LLVM_DYLIB_VERSION ".dylib";
 +    SharedVersionedExt = ".dylib";
      StaticExt = "a";
      StaticDir = SharedDir = ActiveLibDir;
@@ -30,26 +30,26 @@ on patch updates.
    } else {
      // default to the unix values:
      SharedExt = "so";
--    SharedVersionedExt = PACKAGE_VERSION ".so";
+-    SharedVersionedExt = LLVM_DYLIB_VERSION ".so";
 +    SharedVersionedExt = "-@LLVM_MAJOR_MINOR@.so";
      StaticExt = "a";
      StaticDir = SharedDir = ActiveLibDir;
      StaticPrefix = SharedPrefix = "lib";
-@@ -362,7 +362,7 @@ int main(int argc, char **argv) {
+@@ -383,7 +383,7 @@ int main(int argc, char **argv) {
  
    bool DyLibExists = false;
    const std::string DyLibName =
--    (SharedPrefix + "LLVM-" + SharedVersionedExt).str();
-+    (SharedPrefix + "LLVM" + SharedVersionedExt).str();
+-      (SharedPrefix + "LLVM-" + SharedVersionedExt).str();
++      (SharedPrefix + "LLVM" + SharedVersionedExt).str();
  
-   if (BuiltDyLib) {
-     DyLibExists = sys::fs::exists(SharedDir + "/" + DyLibName);
-@@ -440,7 +440,7 @@ int main(int argc, char **argv) {
-       } else if (Arg == "--cxxflags") {
+   // If LLVM_LINK_DYLIB is ON, the single shared library will be returned
+   // for "--libs", etc, if they exist. This behaviour can be overridden with
+@@ -474,7 +474,7 @@ int main(int argc, char **argv) {
          OS << ActiveIncludeOption << ' ' << LLVM_CXXFLAGS << '\n';
        } else if (Arg == "--ldflags") {
--        OS << "-L" << ActiveLibDir << ' ' << LLVM_LDFLAGS << '\n';
-+        OS << "-L" << ActiveLibDir << " @COMPILER_RPATH_FLAG@" << ActiveLibDir << ' ' << LLVM_LDFLAGS << '\n';
+         OS << ((HostTriple.isWindowsMSVCEnvironment()) ? "-LIBPATH:" : "-L")
+-           << ActiveLibDir << ' ' << LLVM_LDFLAGS << '\n';
++           << ActiveLibDir << " @COMPILER_RPATH_FLAG@" << ActiveLibDir << ' ' << LLVM_LDFLAGS << '\n';
        } else if (Arg == "--system-libs") {
          PrintSystemLibs = true;
        } else if (Arg == "--libs") {

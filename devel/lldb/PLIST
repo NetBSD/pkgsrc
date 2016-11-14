@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2016/07/27 09:17:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/11/14 20:15:33 ryoon Exp $
 bin/lldb
-bin/lldb-3.8.1
+bin/${PKGNAME}
 bin/lldb-argdumper
 bin/lldb-mi
-bin/lldb-mi-3.8.1
+bin/lldb-mi-${PKGVERSION}
 bin/lldb-server
-bin/lldb-server-3.8.1
+bin/lldb-server-${PKGVERSION}
 include/lldb/API/LLDB.h
 include/lldb/API/SBAddress.h
 include/lldb/API/SBAttachInfo.h
@@ -36,6 +36,8 @@ include/lldb/API/SBLanguageRuntime.h
 include/lldb/API/SBLaunchInfo.h
 include/lldb/API/SBLineEntry.h
 include/lldb/API/SBListener.h
+include/lldb/API/SBMemoryRegionInfo.h
+include/lldb/API/SBMemoryRegionInfoList.h
 include/lldb/API/SBModule.h
 include/lldb/API/SBModuleSpec.h
 include/lldb/API/SBPlatform.h
@@ -156,6 +158,7 @@ include/lldb/Core/StructuredData.h
 include/lldb/Core/ThreadSafeDenseMap.h
 include/lldb/Core/ThreadSafeDenseSet.h
 include/lldb/Core/ThreadSafeSTLMap.h
+include/lldb/Core/ThreadSafeSTLVector.h
 include/lldb/Core/ThreadSafeValue.h
 include/lldb/Core/Timer.h
 include/lldb/Core/UUID.h
@@ -198,6 +201,7 @@ include/lldb/DataFormatters/ValueObjectPrinter.h
 include/lldb/DataFormatters/VectorIterator.h
 include/lldb/DataFormatters/VectorType.h
 include/lldb/Expression/DWARFExpression.h
+include/lldb/Expression/DiagnosticManager.h
 include/lldb/Expression/Expression.h
 include/lldb/Expression/ExpressionParser.h
 include/lldb/Expression/ExpressionSourceCode.h
@@ -281,7 +285,6 @@ include/lldb/Host/linux/HostInfoLinux.h
 include/lldb/Host/linux/HostThreadLinux.h
 include/lldb/Host/linux/Personality.h
 include/lldb/Host/linux/Ptrace.h
-include/lldb/Host/linux/Signalfd.h
 include/lldb/Host/linux/Uio.h
 include/lldb/Host/macosx/Config.h
 include/lldb/Host/macosx/HostInfoMacOSX.h
@@ -316,6 +319,7 @@ include/lldb/Initialization/SystemInitializer.h
 include/lldb/Initialization/SystemInitializerCommon.h
 include/lldb/Initialization/SystemLifetimeManager.h
 include/lldb/Interpreter/Args.h
+include/lldb/Interpreter/CommandAlias.h
 include/lldb/Interpreter/CommandCompletions.h
 include/lldb/Interpreter/CommandHistory.h
 include/lldb/Interpreter/CommandInterpreter.h
@@ -366,6 +370,7 @@ include/lldb/Symbol/ClangASTContext.h
 include/lldb/Symbol/ClangASTImporter.h
 include/lldb/Symbol/ClangExternalASTSourceCallbacks.h
 include/lldb/Symbol/ClangExternalASTSourceCommon.h
+include/lldb/Symbol/ClangUtil.h
 include/lldb/Symbol/CompactUnwindInfo.h
 include/lldb/Symbol/CompileUnit.h
 include/lldb/Symbol/CompilerDecl.h
@@ -378,6 +383,7 @@ include/lldb/Symbol/Declaration.h
 include/lldb/Symbol/FuncUnwinders.h
 include/lldb/Symbol/Function.h
 include/lldb/Symbol/GoASTContext.h
+include/lldb/Symbol/JavaASTContext.h
 include/lldb/Symbol/LineEntry.h
 include/lldb/Symbol/LineTable.h
 include/lldb/Symbol/ObjectContainer.h
@@ -486,6 +492,7 @@ include/lldb/Utility/regutils.h
 include/lldb/lldb-defines.h
 include/lldb/lldb-enumerations.h
 include/lldb/lldb-forward.h
+include/lldb/lldb-private-defines.h
 include/lldb/lldb-private-enumerations.h
 include/lldb/lldb-private-forward.h
 include/lldb/lldb-private-interfaces.h
@@ -495,7 +502,7 @@ include/lldb/lldb-public.h
 include/lldb/lldb-types.h
 include/lldb/lldb-versioning.h
 lib/liblldb.so
-lib/liblldb.so.3.8.1
+lib/liblldb.so.${PKGVERSION}
 lib/liblldbBase.a
 lib/liblldbBreakpoint.a
 lib/liblldbCommands.a
@@ -516,6 +523,7 @@ lib/liblldbPluginABISysV_mips.a
 lib/liblldbPluginABISysV_mips64.a
 lib/liblldbPluginABISysV_ppc.a
 lib/liblldbPluginABISysV_ppc64.a
+lib/liblldbPluginABISysV_s390x.a
 lib/liblldbPluginABISysV_x86_64.a
 lib/liblldbPluginAppleObjCRuntime.a
 lib/liblldbPluginCPlusPlusLanguage.a
@@ -534,8 +542,11 @@ lib/liblldbPluginInstructionARM64.a
 lib/liblldbPluginInstructionMIPS.a
 lib/liblldbPluginInstructionMIPS64.a
 lib/liblldbPluginInstrumentationRuntimeAddressSanitizer.a
+lib/liblldbPluginInstrumentationRuntimeThreadSanitizer.a
 lib/liblldbPluginJITLoaderGDB.a
+lib/liblldbPluginJavaLanguage.a
 lib/liblldbPluginLanguageRuntimeGo.a
+lib/liblldbPluginLanguageRuntimeJava.a
 lib/liblldbPluginMemoryHistoryASan.a
 lib/liblldbPluginOSGo.a
 lib/liblldbPluginOSPython.a
@@ -565,6 +576,7 @@ lib/liblldbPluginRenderScriptRuntime.a
 lib/liblldbPluginScriptInterpreterNone.a
 lib/liblldbPluginScriptInterpreterPython.a
 lib/liblldbPluginSymbolFileDWARF.a
+lib/liblldbPluginSymbolFilePDB.a
 lib/liblldbPluginSymbolFileSymtab.a
 lib/liblldbPluginSymbolVendorELF.a
 lib/liblldbPluginSystemRuntimeMacOSX.a

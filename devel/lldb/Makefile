@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/07/27 09:17:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/14 20:15:33 ryoon Exp $
 
-DISTNAME=	lldb-3.8.1.src
+DISTNAME=	lldb-3.9.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -28,6 +28,7 @@ CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+CMAKE_ARGS+=	-DHAVE_CXX_ATOMICS64_WITHOUT_LIB=ON
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
@@ -138,4 +139,5 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/swig/buildlink3.mk"
+.include "../../devel/libatomic_ops/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
