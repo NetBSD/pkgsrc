@@ -1,4 +1,4 @@
-$NetBSD: README.MirBSD,v 1.2 2016/07/03 14:47:05 sevan Exp $
+$NetBSD: README.MirBSD,v 1.3 2016/11/15 11:19:09 jperkin Exp $
 
 Please read the general README file as well.
 
@@ -11,16 +11,12 @@ be used to gain root privileges.
 MirPorts and pkgsrc can be installed in parallel. The MirPorts framework
 uses /usr/mpkg as its default prefix and /usr/mpkg/db/pkg as its package
 database directory. Thus, its paths do not clash with the default
-choices of pkgsrc, which are /usr/pkg and /var/db/pkg respectively. We
-suggest however that you place the package database for pkgsrc below its
-prefix, for example by specifying the
+choices of pkgsrc, which are /usr/pkg and /usr/pkg/pkgdb respectively.
 
-	--pkgdbdir /usr/pkg/db
-
-option to bootstrap. Please note that the package tools from MirPorts
-and pkgsrc have the same names (e.g. pkg_add) but are incompatible. This
-leads to strage behavior when building or installing packages if both
-frameworks are in your PATH.
+Please note that the package tools from MirPorts and pkgsrc have the
+same names (e.g. pkg_add) but are incompatible. This leads to strage
+behavior when building or installing packages if both frameworks are in
+your PATH.
 
 Thus, before you start the bootstrap, you must make sure that
 /usr/mpkg/bin and /usr/mpkg/sbin are NOT in your PATH if MirPorts is
