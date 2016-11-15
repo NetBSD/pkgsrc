@@ -1,4 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/30 16:16:13 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/15 16:35:40 wiz Exp $
 bin/fix_includes.py
 bin/include-what-you-use
 bin/iwyu_tool.py
+share/include-what-you-use/boost-all-private.imp
+share/include-what-you-use/boost-all.imp
+share/include-what-you-use/gcc.libc.imp
+share/include-what-you-use/gcc.stl.headers.imp
+share/include-what-you-use/gcc.symbols.imp
+share/include-what-you-use/iwyu.gcc.imp
+share/include-what-you-use/libcxx.imp
+share/include-what-you-use/qt4.imp
+share/include-what-you-use/qt5_4.imp
+share/include-what-you-use/stl.c.headers.imp
+share/include-what-you-use/third_party.imp
