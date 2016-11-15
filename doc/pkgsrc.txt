@@ -4421,10 +4421,10 @@ group
 The numeric GID of the group may be set by defining PKG_GID.group.
 
 If a package needs to create the users and groups at an earlier stage, then it
-can set USERGROUP_PHASE to either configure or build to indicate the phase
-before which the users and groups are created. In this case, the numeric UIDs
-and GIDs of the created users and groups are automatically hardcoded into the
-final installation scripts.
+can set USERGROUP_PHASE to either configure,build, or pre-install to indicate
+the phase before which the users and groups are created. In this case, the
+numeric UIDs and GIDs of the created users and groups are automatically
+hardcoded into the final installation scripts.
 
 15.5. System shells
 
