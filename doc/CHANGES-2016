@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4694 2016/11/15 16:06:13 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4695 2016/11/15 16:35:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6472,3 +6472,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/msmtp to 1.6.6 [leot 2016-11-15]
 	Updated x11/libdrm to 2.4.73 [wiz 2016-11-15]
 	Added fonts/Merriweather-ttf version 1.584 [wiz 2016-11-15]
+	Updated devel/include-what-you-use to 0.7 [wiz 2016-11-15]
