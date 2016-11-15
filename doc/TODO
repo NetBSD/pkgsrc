@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16696 2016/11/14 20:17:12 ryoon Exp $
+$NetBSD: TODO,v 1.16697 2016/11/15 16:35:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -907,7 +907,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o imapfilter-2.6.5
 	o imapsync-1.678
 	o imp-6.2.12
-	o include-what-you-use-0.7
 	o inform-6.32.1
 	o ingo-3.2.8
 	o inn-2.6.0
