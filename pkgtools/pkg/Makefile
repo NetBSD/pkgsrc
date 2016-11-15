@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/11/14 19:38:11 marino Exp $
+# $NetBSD: Makefile,v 1.15 2016/11/15 15:42:21 marino Exp $
 
 DISTNAME=	pkg-1.8.7
 PKGREVISION=	7
@@ -145,7 +145,7 @@ post-install:
 .if defined (PKG_DBDIR)
 PKGNG_DBDIR?=	${PKG_DBDIR}
 .else
-PKGNG_DBDIR?=	/var/db/pkgng
+PKGNG_DBDIR?=	${PREFIX}/pkgng-db
 .endif
 
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly" && ${OPSYS} != "NetBSD"
