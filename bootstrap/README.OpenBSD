@@ -1,15 +1,11 @@
-$NetBSD: README.OpenBSD,v 1.4 2015/04/05 00:40:07 rodent Exp $
+$NetBSD: README.OpenBSD,v 1.5 2016/11/15 11:19:09 jperkin Exp $
 
 Please read the general README file as well.
 
 Care should be taken so that the tools that this kit installs do not conflict
 with the OpenBSD userland tools. There are several steps:
 
-1. OpenBSD stores its ports pkg database in /var/db/pkg. It is therefore
-recommended that you choose a different location (e.g. /usr/pkgdb) by
-using the --pkgdbdir option to the bootstrap script.
-
-2. If you do not intend to use the OpenBSD ports tools, it's probably a
+1. If you do not intend to use the OpenBSD ports tools, it's probably a
 good idea to move them out of the way to avoid confusion, e.g.:
 	cd /usr/sbin
 	mv pkg_add pkg_add.orig
@@ -17,7 +13,7 @@ good idea to move them out of the way to avoid confusion, e.g.:
 	mv pkg_delete pkg_delete.orig
 	mv pkg_info pkg_info.orig
 
-3. The bootstrap script will create an example mk.conf file located in
+2. The bootstrap script will create an example mk.conf file located in
 pkgsrc/bootstrap/work/mk.conf.example. It contains the settings you provided to 
 bootstrap. Copy it to your $sysconfdir directory. If $sysconfdir/mk.conf doesn't
 exist, the example is copied into place.

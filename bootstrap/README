@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.12 2012/01/11 01:15:17 riz Exp $
+$NetBSD: README,v 1.13 2016/11/15 11:19:09 jperkin Exp $
 
 To try to get pkgsrc working on your system, please try the following
 as root:
@@ -17,12 +17,10 @@ as root:
 The defaults for the arguments are as follows:
 
 	--prefix	/usr/pkg
-	--pkgdbdir	/var/db/pkg
+	--pkgdbdir	/usr/pkg/pkgdb
 	--sysconfdir	/usr/pkg/etc
 	--varbase	/var
 	--workdir	work
-
-It is perfectly acceptable to place 'pkgdbdir' under 'prefix'.
 
 The working directory will be created if it doesn't exist and has to be
 writable by the user executing ./bootstrap.
