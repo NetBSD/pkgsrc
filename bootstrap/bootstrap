@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.233 2016/11/01 20:44:22 jperkin Exp $
+# $NetBSD: bootstrap,v 1.234 2016/11/15 11:19:09 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -487,7 +487,7 @@ elif [ -z "$prefix" -o "$prefix" = "/usr/pkg" ]; then
 fi
 
 [ -z "$varbase" ] && varbase=${prefix}/var
-[ -z "$pkgdbdir" ] && pkgdbdir=${varbase}/db/pkg
+[ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/pkgdb
 
 if [ "$prefix" = "/usr" ]; then
 	[ -z "$pkginfodir" ] && pkginfodir=share/info
