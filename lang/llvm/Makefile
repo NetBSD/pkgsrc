@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/11/14 20:31:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2016/11/15 16:41:36 wiz Exp $
 #
 # when updating this, please also update:
+# devel/include-what-you-use
 # devel/lldb
 # devel/polly
 # lang/clang
