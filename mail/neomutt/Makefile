@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/11/14 14:25:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/11/15 10:13:45 wiz Exp $
 
 DISTNAME=		neomutt-20161104
 CATEGORIES=		mail
@@ -25,7 +25,7 @@ EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 INSTALLATION_DIRS+=     ${DOCDIR} ${EGDIR}
-INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS=     ${MAKE_FLAGS} DOTLOCK_GROUP= sysconfdir=${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
