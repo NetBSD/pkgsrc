@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.20 2016/06/10 21:20:51 rillig Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.21 2016/11/15 13:48:52 wiz Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -480,11 +480,12 @@ group
 <varname>PKG_GID.<replaceable>group</replaceable></varname>.</para>
 
 <para>If a package needs to create the users and groups at an earlier
-stage, then it can set <varname>USERGROUP_PHASE</varname> to
-either <literal>configure</literal> or <literal>build</literal> to
-indicate the phase before which the users and groups are created.  In
-this case, the numeric UIDs and GIDs of the created users and groups
-are automatically hardcoded into the final installation scripts.</para>
+stage, then it can set <varname>USERGROUP_PHASE</varname> to either
+<literal>configure</literal>,<literal>build</literal>, or
+<literal>pre-install</literal> to indicate the phase before which the
+users and groups are created. In this case, the numeric UIDs and GIDs
+of the created users and groups are automatically hardcoded into the
+final installation scripts.</para>
 
 </sect1>
 
