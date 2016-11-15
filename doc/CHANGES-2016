@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4692 2016/11/15 08:54:51 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4693 2016/11/15 10:06:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6470,3 +6470,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/clang-static-analyzer to 3.9.0 [ryoon 2016-11-14]
 	Updated devel/polly to 3.9.0 [ryoon 2016-11-14]
 	Updated mail/msmtp to 1.6.6 [leot 2016-11-15]
+	Updated x11/libdrm to 2.4.73 [wiz 2016-11-15]
