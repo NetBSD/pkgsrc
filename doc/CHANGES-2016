@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4702 2016/11/16 10:24:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4703 2016/11/16 10:38:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6480,3 +6480,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 2.08 [wiz 2016-11-16]
 	Updated devel/p5-Log-Log4perl to 1.48 [wiz 2016-11-16]
 	Updated devel/p5-Params-ValidationCompiler to 0.18 [wiz 2016-11-16]
+	Updated editors/vim to 8.0.0086 [wiz 2016-11-16]
