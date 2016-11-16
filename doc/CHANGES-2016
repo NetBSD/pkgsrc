@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4707 2016/11/16 12:16:59 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4708 2016/11/16 13:14:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6485,3 +6485,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/thunderbird-enigmail to 1.9.6 [wiz 2016-11-16]
 	Updated multimedia/gstreamer1 to 1.10.0 [wiz 2016-11-16]
 	Updated sysutils/entr to 3.6 [leot 2016-11-16]
+	Added lang/spidermonkey185 version 1.8.5 [fhajny 2016-11-16]
