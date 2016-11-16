@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/06/05 13:50:21 mef Exp $
+$NetBSD: distinfo,v 1.5 2016/11/16 12:16:49 leot Exp $
 
-SHA1 (entr-3.5.tar.gz) = 090bdba2fb28e43ee6d675227f472850d2cf4b32
-RMD160 (entr-3.5.tar.gz) = 8a77db01bca0a586f580d73e58825158f58013ed
-SHA512 (entr-3.5.tar.gz) = dea5a201dd945fb25daf80030f8fae424dce2f51e6ce294bd1e609ff152547ea4bf4a555ad1b15f3b4fbca2e17ff34b2276b226790834f14a6f567bfb0cb4508
-Size (entr-3.5.tar.gz) = 22222 bytes
+SHA1 (entr-3.6.tar.gz) = 66020388c4169b218c00fd47f697f548c3ae3de1
+RMD160 (entr-3.6.tar.gz) = 7bc74e6d0177a049990ed2eb4994949df5d55bfd
+SHA512 (entr-3.6.tar.gz) = a4f607d69e2222ffaeb50c57532fafa88db550d4ab4c633e57e895a8291bb38f6bdd09e92dba2e6fc70e035b2db050ab4c75fb39cd24d00fbde07ef0c03fff8f
+Size (entr-3.6.tar.gz) = 22548 bytes
