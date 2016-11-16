@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4713 2016/11/16 15:59:39 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4714 2016/11/16 16:30:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6491,3 +6491,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xclip to 0.13 [leot 2016-11-16]
 	Updated net/wpa_gui to 2.6 [maya 2016-11-16]
 	Updated databases/couchdb to 2.0.0 [fhajny 2016-11-16]
+	Updated www/contao35 to 3.5.19 [taca 2016-11-16]
