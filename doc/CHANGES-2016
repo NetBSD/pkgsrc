@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4710 2016/11/16 15:13:39 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4711 2016/11/16 15:29:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6488,3 +6488,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/spidermonkey185 version 1.8.5 [fhajny 2016-11-16]
 	Updated sysutils/py-borgbackup to 1.0.8 [wiz 2016-11-16]
 	Updated net/wpa_supplicant to 2.6 [maya 2016-11-16]
+	Updated x11/xclip to 0.13 [leot 2016-11-16]
