@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/04/15 14:20:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/11/16 12:08:25 wiz Exp $
 bin/gst-device-monitor-1.0
 bin/gst-discoverer-1.0
 bin/gst-play-1.0
@@ -15,6 +15,7 @@ include/gstreamer-1.0/gst/audio/audio-enumtypes.h
 include/gstreamer-1.0/gst/audio/audio-format.h
 include/gstreamer-1.0/gst/audio/audio-info.h
 include/gstreamer-1.0/gst/audio/audio-quantize.h
+include/gstreamer-1.0/gst/audio/audio-resampler.h
 include/gstreamer-1.0/gst/audio/audio.h
 include/gstreamer-1.0/gst/audio/gstaudiobasesink.h
 include/gstreamer-1.0/gst/audio/gstaudiobasesrc.h
@@ -87,6 +88,7 @@ include/gstreamer-1.0/gst/video/gstvideofilter.h
 include/gstreamer-1.0/gst/video/gstvideometa.h
 include/gstreamer-1.0/gst/video/gstvideopool.h
 include/gstreamer-1.0/gst/video/gstvideosink.h
+include/gstreamer-1.0/gst/video/gstvideotimecode.h
 include/gstreamer-1.0/gst/video/gstvideoutils.h
 include/gstreamer-1.0/gst/video/navigation.h
 include/gstreamer-1.0/gst/video/video-blend.h
@@ -105,6 +107,7 @@ include/gstreamer-1.0/gst/video/video-resampler.h
 include/gstreamer-1.0/gst/video/video-scaler.h
 include/gstreamer-1.0/gst/video/video-tile.h
 include/gstreamer-1.0/gst/video/video.h
+include/gstreamer-1.0/gst/video/videodirection.h
 include/gstreamer-1.0/gst/video/videoorientation.h
 include/gstreamer-1.0/gst/video/videooverlay.h
 lib/girepository-1.0/GstAllocators-1.0.typelib
@@ -237,6 +240,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstta
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gsttagxmpwriter.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideo.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideoaffinetransformationmeta.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideodirection.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideofilter.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideometa.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideoorientation.html
@@ -283,6 +287,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-cdparanoiasrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-clockoverlay.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-decodebin.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-decodebin3.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-encodebin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-giosink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-giosrc.html
@@ -299,7 +304,9 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-ogmvideoparse.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-opusdec.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-opusenc.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-parsebin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-playbin.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-playbin3.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-playsink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-adder.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-alsa.html
@@ -345,6 +352,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-theoraparse.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-timeoverlay.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-uridecodebin.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-urisourcebin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-videoconvert.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-videorate.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-videoscale.html
