@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2016/10/03 20:04:46 morr Exp $
+@comment $NetBSD: PLIST,v 1.28 2016/11/16 10:38:35 wiz Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -10,6 +10,8 @@ share/vim/${VIM_SUBDIR}/autoload/ada.vim
 share/vim/${VIM_SUBDIR}/autoload/adacomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/ccomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/clojurecomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/context.vim
+share/vim/${VIM_SUBDIR}/autoload/contextcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/csscomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/decada.vim
 share/vim/${VIM_SUBDIR}/autoload/getscript.vim
@@ -72,6 +74,7 @@ share/vim/${VIM_SUBDIR}/compiler/ant.vim
 share/vim/${VIM_SUBDIR}/compiler/bcc.vim
 share/vim/${VIM_SUBDIR}/compiler/bdf.vim
 share/vim/${VIM_SUBDIR}/compiler/checkstyle.vim
+share/vim/${VIM_SUBDIR}/compiler/context.vim
 share/vim/${VIM_SUBDIR}/compiler/cs.vim
 share/vim/${VIM_SUBDIR}/compiler/cucumber.vim
 share/vim/${VIM_SUBDIR}/compiler/decada.vim
@@ -494,6 +497,7 @@ share/vim/${VIM_SUBDIR}/indent/clojure.vim
 share/vim/${VIM_SUBDIR}/indent/cmake.vim
 share/vim/${VIM_SUBDIR}/indent/cobol.vim
 share/vim/${VIM_SUBDIR}/indent/config.vim
+share/vim/${VIM_SUBDIR}/indent/context.vim
 share/vim/${VIM_SUBDIR}/indent/cpp.vim
 share/vim/${VIM_SUBDIR}/indent/cs.vim
 share/vim/${VIM_SUBDIR}/indent/css.vim
