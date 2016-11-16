@@ -1,4 +1,4 @@
-$NetBSD: patch-src_glint__driver.c,v 1.1 2015/04/02 22:16:46 tnn Exp $
+$NetBSD: patch-src_glint__driver.c,v 1.2 2016/11/16 22:12:12 wiz Exp $
 
 From 073d5b0b392781bf4a6aa7f9e2dbe2ae51caed2c Mon Sep 17 00:00:00 2001
 From: Adam Jackson <ajax@redhat.com>
@@ -9,7 +9,7 @@ Signed-off-by: Adam Jackson <ajax@redhat.com>
 
 diff --git a/src/glint_driver.c b/src/glint_driver.c
 index b6d20a9..aa78516 100644
---- src/glint_driver.c
+--- src/glint_driver.c.orig	2012-07-16 02:50:47.000000000 +0000
 +++ src/glint_driver.c
 @@ -52,8 +52,6 @@
  #include "compiler.h"
@@ -27,3 +27,4 @@ index b6d20a9..aa78516 100644
 -    miInitializeBackingStore(pScreen);
      xf86SetBackingStore(pScreen);
      xf86SetSilkenMouse(pScreen);
+ 
