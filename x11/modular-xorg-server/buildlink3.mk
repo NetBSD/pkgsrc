@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2016/03/14 02:13:33 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2016/11/16 10:14:36 wiz Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -27,14 +27,15 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../x11/fontsproto/buildlink3.mk"
 .if !empty(USE_OLD_MODULAR_XORG_SERVER:M[yY][eE][sS])
 .include "../../graphics/MesaLib7/buildlink3.mk" # XXX should not be needed for non-dri build
+.include "../../x11/libXfont/buildlink3.mk"
 .else
+.include "../../x11/libXfont2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk" # XXX should not be needed for non-dri build
 .include "../../x11/resourceproto/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
 .include "../../x11/presentproto/buildlink3.mk"
 .endif
 .include "../../x11/inputproto/buildlink3.mk"
-.include "../../x11/libXfont/buildlink3.mk"
 BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5.0
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.11 2016/07/19 20:04:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/11/16 10:14:36 wiz Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	1.18.4
+XORG_VERSION=	1.19.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -153,7 +153,7 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
-.include "../../x11/libXfont/buildlink3.mk"
+.include "../../x11/libXfont2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
