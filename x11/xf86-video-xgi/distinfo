@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:29:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/11/16 21:43:58 wiz Exp $
 
 SHA1 (xf86-video-xgi-1.6.1.tar.bz2) = 678a897b926c4dcd20f3ff33829f2341ab54f074
 RMD160 (xf86-video-xgi-1.6.1.tar.bz2) = 6be1a22dadb6a7dbc4a96788bc84fe1ada077cfb
 SHA512 (xf86-video-xgi-1.6.1.tar.bz2) = 0f57efe6e1f197b68cae7f68914e13c00001780224c1292e11826706a5f3ec59036ac5a42cd42aa832de0dd207369964beb44236dbc123b131cb00c695917afe
 Size (xf86-video-xgi-1.6.1.tar.bz2) = 558482 bytes
+SHA1 (patch-src_compat-api.h) = 8048054b208725dbccad2d64fce49b5e6d7e8444
