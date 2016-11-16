@@ -1,3 +1,4 @@
 bin/gst-inspect @PREFIX@/bin/gst-inspect-1.0
 bin/gst-launch @PREFIX@/bin/gst-launch-1.0
+bin/gst-stats @PREFIX@/bin/gst-stats-1.0
 bin/gst-typefind @PREFIX@/bin/gst-typefind-1.0
