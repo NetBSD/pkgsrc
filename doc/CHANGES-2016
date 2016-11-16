@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4697 2016/11/16 10:14:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4698 2016/11/16 10:16:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6475,3 +6475,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/include-what-you-use to 0.7 [wiz 2016-11-15]
 	Updated net/syncthing to 0.14.11 [wiz 2016-11-16]
 	Updated x11/modular-xorg-server to 1.19.0 [wiz 2016-11-16]
+	Updated databases/p5-DBD-SQLite to 1.52 [wiz 2016-11-16]
