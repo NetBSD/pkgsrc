@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/11/01 15:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/11/16 09:40:24 wiz Exp $
 
 DISTNAME=	glog-0.3.4
 PKGNAME=	google-${DISTNAME}
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	libglog.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=		-lexecinfo
 .endif
 
