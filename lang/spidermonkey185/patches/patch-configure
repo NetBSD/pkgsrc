@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.1 2016/11/16 13:13:44 fhajny Exp $
+
+* Improve compatibility
+
+--- configure.orig	2011-03-31 19:08:36.000000000 +0000
++++ configure
+@@ -3234,7 +3234,7 @@ fi
+ 
+ echo "$ac_t""$ac_cv_have_std__Throw" 1>&6
+ 
+-        if test "$ac_cv_have_std__Throw" == "yes"; then
++        if test "$ac_cv_have_std__Throw" = "yes"; then
+             echo $ac_n "checking for |class __declspec(dllimport) exception| bug""... $ac_c" 1>&6
+ echo "configure:3240: checking for |class __declspec(dllimport) exception| bug" >&5
+ if eval "test \"`echo '$''{'ac_cv_have_dllimport_exception_bug'+set}'`\" = set"; then
+@@ -8093,6 +8093,12 @@ EOF
+ EOF
+ 
+     ;;
++*-netbsd*)
++    cat >> confdefs.h <<\EOF
++#define AVMPLUS_UNIX 1
++EOF
++
++    ;;
+ *-gnu*)
+     cat >> confdefs.h <<\EOF
+ #define AVMPLUS_UNIX 1
