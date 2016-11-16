@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.77 2016/11/04 01:12:51 maya Exp $
+$NetBSD: distinfo,v 1.78 2016/11/16 10:14:36 wiz Exp $
 
-SHA1 (xorg-server-1.18.4.tar.bz2) = ff088ee29dee46a2d68925c8df3f0515ef15ec52
-RMD160 (xorg-server-1.18.4.tar.bz2) = 6f58d84d3bbc59a773e6a2e1eafc208827a5923f
-SHA512 (xorg-server-1.18.4.tar.bz2) = 2055948caa1437547ea823a70d8b24584b65338bb9f1bbf75e3ad7fd60ec9684378facaffa05b7ce496d904213cd192085a43ba889a1476d5fbc813b7e41b56b
-Size (xorg-server-1.18.4.tar.bz2) = 6009508 bytes
+SHA1 (xorg-server-1.19.0.tar.bz2) = 1159dcab6df5cd56d07fc11f5237562366a3d687
+RMD160 (xorg-server-1.19.0.tar.bz2) = cba9341193ce5f975f00b3baf5a1d10c89f2141c
+SHA512 (xorg-server-1.19.0.tar.bz2) = 2431c5f0fe20684c7fa7bb08608853f45d1a6d94a9efe1b3dfbd6e67b77a29cfec9b480478bc96c5ceb1c877161af39cf10ddb7b9f471ed847e9ec72a067f591
+Size (xorg-server-1.19.0.tar.bz2) = 6051462 bytes
 SHA1 (patch-configure) = b3c5ae8cd7aca96dbb5a237dda061e8c2569b2f2
 SHA1 (patch-hw_xfree86_common_xf86pciBus.c) = 896825ba12646431cba603938d118acbdde305dd
 SHA1 (patch-hw_xfree86_common_xf86sbusBus.h) = f56f87336b2f669413ebb1005a2b64568a111f92
@@ -11,7 +11,7 @@ SHA1 (patch-hw_xfree86_dri2_dri2.c) = 0bf58305059321e10f6f58186301dbb7cb858c2a
 SHA1 (patch-hw_xfree86_os-support_bsd_arm__video.c) = 9c03b24f44eafc5fabe27e9d6cc6c54b607e47c3
 SHA1 (patch-hw_xfree86_os-support_bsd_bsd__VTsw.c) = 90343f694c27a6fdd5070e1167687943bd056a99
 SHA1 (patch-hw_xfree86_os-support_bsd_i386__video.c) = f2c72562a40c0e3109991453aff9c2c082526b1b
-SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 74ddd0ce09b8d4426accca5a1a1d25bc6cea6524
+SHA1 (patch-hw_xfree86_os-support_bus_Sbus.c) = 0035b970bdae1bab51b8ca6bfeed060ec4df3a60
 SHA1 (patch-hw_xfree86_os-support_xf86_OSproc.h) = e1c049857893d2f050d5fb297a3e8ef86f0b1d7e
 SHA1 (patch-hw_xfree86_os_support_bus_xf86Sbus.h) = 0e0a243b737f8f762c9f8f24a2265d1b6aefb544
 SHA1 (patch-hw_xfree86_sdksyms.sh) = c403149ad35ffb70ee44f70de94b4497b751c118
