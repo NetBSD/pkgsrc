@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.14 2016/09/08 16:03:55 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2016/11/16 15:59:29 fhajny Exp $
 
-SHA1 (apache-couchdb-1.6.1.tar.gz) = 6275f3818579d7b307052e9735c42a8a64313229
-RMD160 (apache-couchdb-1.6.1.tar.gz) = 9701c8cb7f712ce792ede3fc73e9cf028cea54b5
-SHA512 (apache-couchdb-1.6.1.tar.gz) = 70630a27dec7281fa5bdca0601796baa28fba1d7c9975d8f38b9623bbeedd62b26081118357886c7be00b7769360238b2c99695234e13cecb15a210eb986eadc
-Size (apache-couchdb-1.6.1.tar.gz) = 12085350 bytes
-SHA1 (patch-aa) = 67c5fa5f8bb084302a416bb838c08db378200fcd
-SHA1 (patch-ab) = f07acca555013b1bfde95bdd056cccd9a551440a
-SHA1 (patch-ac) = b5dd1be18110655b1494278b168cf1971e1ca872
-SHA1 (patch-ad) = ce73b043244b5a3f657bd7e13e11d686d8f77f92
-SHA1 (patch-ae) = a760518711e7f013de91a478fc2353183aa5ac5e
+SHA1 (apache-couchdb-2.0.0.tar.gz) = ea59ff4be4550acdf5fd75e4b83d3e67dea38fd9
+RMD160 (apache-couchdb-2.0.0.tar.gz) = 7229c189e342a505e032f61d5f35c82d007ac545
+SHA512 (apache-couchdb-2.0.0.tar.gz) = a22b50823be9b71dcc10d130ce378aa2af9f27d21d27fb5bfc71ecf6501cbc1cfe49d5b258fd21776c9d8ffb5ba95ddebc1c8bde46ab66044cd5e7252599d9aa
+Size (apache-couchdb-2.0.0.tar.gz) = 13494157 bytes
+SHA1 (patch-aa) = f3e0451e68cfc6ab9ba7eef94680d1481a013ff4
+SHA1 (patch-rel_overlay_bin_couchdb) = 4c0c88bee25cd8c539bf4e61d4fbaf684c77176e
+SHA1 (patch-rel_overlay_etc_default.ini) = 628a8b506cd578afaa31c65bf03171cc3f5b0c81
+SHA1 (patch-src_config_src_config__app.erl) = 6c0be4a23c47973234ede0435fe4573a620fae6f
+SHA1 (patch-src_couch_rebar.config.script) = d68ffff8e0d368e8f071293b9bcb5525acc2b30f
