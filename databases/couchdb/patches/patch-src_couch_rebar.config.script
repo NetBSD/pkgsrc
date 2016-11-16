@@ -1,0 +1,90 @@
+$NetBSD: patch-src_couch_rebar.config.script,v 1.1 2016/11/16 15:59:29 fhajny Exp $
+
+Set pkgsrc standard paths.
+Use pkg-config to set SpiderMonkey CFLAGS/LDFLAGS.
+
+--- src/couch/rebar.config.script.orig	2016-09-12 09:28:51.000000000 +0000
++++ src/couch/rebar.config.script
+@@ -64,23 +64,28 @@ ConfigSrc = [["#define ", K, " ", V, $\n
+ ConfigBin = iolist_to_binary(ConfigSrc),
+ ok = CopyIfDifferent(CouchJSConfig, ConfigBin),
+ 
++CFLAGS = [os:getenv("CFLAGS")],
++LDFLAGS = [os:getenv("LDFLAGS")],
++JSFLAGS = string:strip(os:cmd("pkg-config --cflags mozjs185"), right, $\n),
++JSLIBS = string:strip(os:cmd("pkg-config --libs mozjs185"), right, $\n),
++
+ %% TODO support curl on Windows
+ {JS_CFLAGS, JS_LDFLAGS} = case lists:keyfind(with_curl, 1, CouchConfig) of
+     {with_curl, true} ->
+         case os:type() of
+             {win32, _} ->
+                 {"/DHAVE_CURL /IC:\\relax\\curl\\include", "/LIBPATH:C:\\relax\\js-1.8.5\\js\\src /LIBPATH:C:\\Relax\\curl\\lib\\release-ssl mozjs185-1.0.lib libcurl_imp.lib"};
+-            {unix, freebsd} ->
+-                {"-DHAVE_CURL -I/usr/local/include", "-DHAVE_CURL -lmozjs185 -lcurl"};
++            {unix, bsd} ->
++                {"$CFLAGS -DHAVE_CURL " ++ JSFLAGS, "$LDFLAGS -DHAVE_CURL -lcurl " ++ JSLIBS};
+             _ ->
+-                {"-DHAVE_CURL", "-DHAVE_CURL -lmozjs185 -lcurl"}
++                {"$CFLAGS -DHAVE_CURL " ++ JSFLAGS, "$LDFLAGS -DHAVE_CURL -lcurl " ++ JSLIBS}
+         end;
+     _ ->
+         case os:type() of
+             {win32, _} ->
+                 {"", "/LIBPATH:C:\\relax\\js-1.8.5\\js\\src mozjs185-1.0.lib"};
+             _ ->
+-                {"", "-lmozjs185"}
++                {"$CFLAGS " ++ JSFLAGS, "$LDFLAGS " ++ JSLIBS}
+         end
+ end,
+ 
+@@ -88,33 +93,38 @@ CouchJSSrc = ["priv/couch_js/*.c"],
+ 
+ IcuPath = "priv/couch_icu_driver.so",
+ IcuSrc = ["priv/icu_driver/*.c"],
+-IcuEnv = [{"DRV_CFLAGS",  "$DRV_CFLAGS -DPIC -O2 -fno-common"},
+-          {"DRV_LDFLAGS", "$DRV_LDFLAGS -lm -licuuc -licudata -licui18n -lpthread"}],
++IcuEnv = [{"DRV_CFLAGS", "$CFLAGS $DRV_CFLAGS -DPIC -O2 -fno-common"},
++          {"DRV_LDFLAGS", "$DRV_LDFLAGS $LDFLAGS -lm -licuuc -licudata -licui18n -lpthread"}],
+ IcuDarwinEnv = [{"CFLAGS", "-DXP_UNIX -I/usr/local/opt/icu4c/include"},
+                 {"LDFLAGS", "-L/usr/local/opt/icu4c/lib"}],
+ IcuBsdEnv = [{"CFLAGS", "-DXP_UNIX -I/usr/local/include"},
+              {"LDFLAGS", "-L/usr/local/lib"}],
+ IcuWinEnv = [{"CFLAGS", "/DXP_WIN /IC:\\relax\\icu\\include"},
+              {"LDFLAGS", "/LIBPATH:C:\\relax\\icu\\lib64 icuin.lib icudt.lib icuuc.lib"}],
++UnixEnv = [{"CFLAGS", " $CFLAGS -DXP_UNIX"},
++             {"LDFLAGS", " $LDFLAGS -lm"}],
+ 
+ ComparePath = "priv/couch_ejson_compare.so",
+ CompareSrc = ["priv/couch_ejson_compare/*.c"],
+ 
+ BaseSpecs = [
+         %% couchjs
+-        {"darwin", CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX -I/usr/local/include/js"}, {"LDFLAGS", JS_LDFLAGS ++ " -L/usr/local/lib"}]}]},
+-        {"linux",  CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX -I/usr/include/js"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
+-        {"bsd",   CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX -I/usr/local/include/js"}, {"LDFLAGS", JS_LDFLAGS ++ " -L/usr/local/lib -lm"}]}]},
++        {"darwin", CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS}]}]},
++        {"linux",  CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
++        {"bsd",   CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
++        {"solaris",   CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " -DXP_UNIX"}, {"LDFLAGS", JS_LDFLAGS ++ " -lm"}]}]},
+         {"win32",  CouchJSPath, CouchJSSrc, [{env, [{"CFLAGS", JS_CFLAGS ++ " /DXP_WIN /IC:\\relax\\js-1.8.5\\js\\src"}, {"LDFLAGS", JS_LDFLAGS}]}]},
+         % ICU
+-        {"darwin", IcuPath, IcuSrc, [{env, IcuEnv ++ IcuDarwinEnv}]},
+-        {"linux",  IcuPath, IcuSrc, [{env, IcuEnv}]},
+-        {"bsd",   IcuPath, IcuSrc, [{env, IcuEnv ++ IcuBsdEnv}]},
++        {"darwin", IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {"linux",  IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {"bsd",   IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {"solaris",   IcuPath, IcuSrc, [{env, IcuEnv ++ UnixEnv}]},
+         {"win32",  IcuPath, IcuSrc, [{env, IcuWinEnv}]},
+         % ejson_compare
+-        {"darwin", ComparePath, CompareSrc, [{env, IcuEnv ++ IcuDarwinEnv}]},
+-        {"linux",  ComparePath, CompareSrc, [{env, IcuEnv}]},
+-        {"bsd",   ComparePath, CompareSrc, [{env, IcuEnv ++ IcuBsdEnv}]},
++        {"darwin", ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {"linux",  ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {"bsd",   ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
++        {"solaris",   ComparePath, CompareSrc, [{env, IcuEnv ++ UnixEnv}]},
+         {"win32",  ComparePath, CompareSrc, [{env, IcuWinEnv}]}
+ ],
+ 
