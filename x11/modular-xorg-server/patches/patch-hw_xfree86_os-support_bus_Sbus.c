@@ -1,11 +1,11 @@
-$NetBSD: patch-hw_xfree86_os-support_bus_Sbus.c,v 1.2 2015/09/20 15:32:38 tnn Exp $
+$NetBSD: patch-hw_xfree86_os-support_bus_Sbus.c,v 1.3 2016/11/16 10:14:37 wiz Exp $
 
 Merge most of netbsdSbus.c from xsrc.
 
---- hw/xfree86/os-support/bus/Sbus.c.orig	2015-06-16 13:55:48.000000000 +0000
+--- hw/xfree86/os-support/bus/Sbus.c.orig	2016-08-11 19:08:48.000000000 +0000
 +++ hw/xfree86/os-support/bus/Sbus.c
 @@ -34,6 +34,9 @@
- #ifdef sun
+ #ifdef __sun
  #include <sys/utsname.h>
  #endif
 +#if defined(__NetBSD__) && defined(__sparc__)

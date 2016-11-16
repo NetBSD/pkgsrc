@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2016/03/14 02:13:33 tnn Exp $
+@comment $NetBSD: PLIST,v 1.27 2016/11/16 10:14:36 wiz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -162,6 +162,7 @@ include/xorg/xkbstr.h
 include/xorg/xorg-server.h
 include/xorg/xorgVersion.h
 include/xorg/xserver-properties.h
+include/xorg/xserver_poll.h
 include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/pkgconfig/xorg-server.pc
