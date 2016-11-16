@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/04/15 14:20:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/11/16 12:08:26 wiz Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -18,6 +18,9 @@ include/gstreamer-1.0/gst/base/gstflowcombiner.h
 include/gstreamer-1.0/gst/base/gstpushsrc.h
 include/gstreamer-1.0/gst/base/gstqueuearray.h
 include/gstreamer-1.0/gst/base/gsttypefindhelper.h
+include/gstreamer-1.0/gst/gstconfig.h
+include/gstreamer-1.0/gst/gststreamcollection.h
+include/gstreamer-1.0/gst/gststreams.h
 include/gstreamer-1.0/gst/gsttracer.h
 include/gstreamer-1.0/gst/gsttracerfactory.h
 include/gstreamer-1.0/gst/gsttracerrecord.h
@@ -116,7 +119,6 @@ lib/girepository-1.0/GstBase-1.0.typelib
 ${PLIST.gstcheck}lib/girepository-1.0/GstCheck-1.0.typelib
 lib/girepository-1.0/GstController-1.0.typelib
 lib/girepository-1.0/GstNet-1.0.typelib
-lib/gstreamer-1.0/include/gst/gstconfig.h
 lib/gstreamer-1.0/libgstcoreelements.la
 lib/gstreamer-1.0/libgstcoretracers.la
 lib/libgstbase-1.0.la
@@ -207,6 +209,8 @@ share/gtk-doc/html/gstreamer-1.0/gstreamer-GstParamSpec.html
 share/gtk-doc/html/gstreamer-1.0/gstreamer-GstParse.html
 share/gtk-doc/html/gstreamer-1.0/gstreamer-GstPoll.html
 share/gtk-doc/html/gstreamer-1.0/gstreamer-GstProtectionMeta.html
+share/gtk-doc/html/gstreamer-1.0/gstreamer-GstStream.html
+share/gtk-doc/html/gstreamer-1.0/gstreamer-GstStreamCollection.html
 share/gtk-doc/html/gstreamer-1.0/gstreamer-GstTocSetter.html
 share/gtk-doc/html/gstreamer-1.0/gstreamer-GstTypeFind.html
 share/gtk-doc/html/gstreamer-1.0/gstreamer-GstUri.html
@@ -228,6 +232,8 @@ share/gtk-doc/html/gstreamer-1.0/ix05.html
 share/gtk-doc/html/gstreamer-1.0/ix06.html
 share/gtk-doc/html/gstreamer-1.0/ix07.html
 share/gtk-doc/html/gstreamer-1.0/ix08.html
+share/gtk-doc/html/gstreamer-1.0/ix09.html
+share/gtk-doc/html/gstreamer-1.0/ix10.html
 share/gtk-doc/html/gstreamer-1.0/left-insensitive.png
 share/gtk-doc/html/gstreamer-1.0/left.png
 share/gtk-doc/html/gstreamer-1.0/libgstreamer.html
@@ -284,6 +290,8 @@ share/gtk-doc/html/gstreamer-libs-1.0/ix03.html
 share/gtk-doc/html/gstreamer-libs-1.0/ix04.html
 share/gtk-doc/html/gstreamer-libs-1.0/ix05.html
 share/gtk-doc/html/gstreamer-libs-1.0/ix06.html
+share/gtk-doc/html/gstreamer-libs-1.0/ix07.html
+share/gtk-doc/html/gstreamer-libs-1.0/ix08.html
 share/gtk-doc/html/gstreamer-libs-1.0/left-insensitive.png
 share/gtk-doc/html/gstreamer-libs-1.0/left.png
 share/gtk-doc/html/gstreamer-libs-1.0/right-insensitive.png
