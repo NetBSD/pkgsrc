@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.10 2016/07/21 13:00:40 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2016/11/16 10:42:49 wiz Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
-DISTNAME=	enigmail-1.9.4
+DISTNAME=	enigmail-1.9.6
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.enigmail.net/download/source/
 
@@ -20,9 +20,8 @@ MAKE_JOBS_SAFE=	no
 DEPENDS+=		pinentry-gtk2-[0-9]*:../../security/pinentry-gtk2
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird-enigmail/distinfo
-PATCHDIR=	${.CURDIR}/../../mail/thunderbird-enigmail/patches
+#PATCHDIR=	${.CURDIR}/../../mail/thunderbird-enigmail/patches
 
-REPLACE_PERL+=	config/getOsTarget.pl
 REPLACE_PERL+=	util/fixlang.pl
 REPLACE_PERL+=	util/make-lang-xpi.pl
 
