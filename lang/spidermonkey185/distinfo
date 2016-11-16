@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/11/16 13:13:43 fhajny Exp $
+
+SHA1 (js185-1.0.0.tar.gz) = 52a01449c48d7a117b35f213d3e4263578d846d6
+RMD160 (js185-1.0.0.tar.gz) = 23e6ddc81d5b63e015aecc1a104b2d3d3ced5005
+Size (js185-1.0.0.tar.gz) = 6164605 bytes
+SHA1 (patch-configure) = 77366fff7e8b766b5691d0432b8740d4c8c362a6
+SHA1 (patch-v8-dtoa_platform.cc) = 24670e996fcc7ca0d1e7b1b3765a67ac05e9a661
+SHA1 (patch-v8-dtoa_platform.h) = 1d618d8f51e3ee169606297950d3030fcf72abbc
