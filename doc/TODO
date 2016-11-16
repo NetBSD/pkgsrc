@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16704 2016/11/16 10:24:04 wiz Exp $
+$NetBSD: TODO,v 1.16705 2016/11/16 10:38:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1629,8 +1629,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.25
 	o vile-9.8q
-	o vim-8.0.0066
-	o vim-share-8.0.0066
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
