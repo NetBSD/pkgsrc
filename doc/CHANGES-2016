@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4700 2016/11/16 10:19:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4701 2016/11/16 10:23:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6478,3 +6478,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBD-SQLite to 1.52 [wiz 2016-11-16]
 	Updated time/p5-DateTime-Locale to 1.11 [wiz 2016-11-16]
 	Updated time/p5-DateTime-TimeZone to 2.08 [wiz 2016-11-16]
+	Updated devel/p5-Log-Log4perl to 1.48 [wiz 2016-11-16]
