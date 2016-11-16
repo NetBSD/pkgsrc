@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4705 2016/11/16 10:43:01 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4706 2016/11/16 12:08:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6483,3 +6483,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/vim to 8.0.0086 [wiz 2016-11-16]
 	Added misc/fzy version 0.7 [leot 2016-11-16]
 	Updated mail/thunderbird-enigmail to 1.9.6 [wiz 2016-11-16]
+	Updated multimedia/gstreamer1 to 1.10.0 [wiz 2016-11-16]
