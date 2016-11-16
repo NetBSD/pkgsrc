@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16707 2016/11/16 12:08:53 wiz Exp $
+$NetBSD: TODO,v 1.16708 2016/11/16 16:31:05 taca Exp $
 
 Suggested new packages
 ======================
@@ -1170,7 +1170,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oniguruma-5.9.6
 	o oo2c-2.1.7
 	o opal-3.16.2
-	o open-vm-tools-2010.09.19.301124
+	o open-vm-tools-10.1.0
 	o opencsg-1.4.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
