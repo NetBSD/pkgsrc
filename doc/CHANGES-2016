@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4708 2016/11/16 13:14:07 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4709 2016/11/16 13:21:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6486,3 +6486,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gstreamer1 to 1.10.0 [wiz 2016-11-16]
 	Updated sysutils/entr to 3.6 [leot 2016-11-16]
 	Added lang/spidermonkey185 version 1.8.5 [fhajny 2016-11-16]
+	Updated sysutils/py-borgbackup to 1.0.8 [wiz 2016-11-16]
