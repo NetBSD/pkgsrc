@@ -10,8 +10,9 @@
     <dependency name="filesystem" grouping="require_all" restart_on="error" type="service">
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
-    <dependency name='@SMF_NAME@-epmd' grouping='require_all' restart_on='none' type='service'>
-      <service_fmri value='svc:/@SMF_PREFIX@/epmd' />
+    <dependency name='@SMF_NAME@-epmd' grouping='require_any' restart_on='restart' type='service'>
+      <service_fmri value="svc:/@SMF_PREFIX@/couch-epmd:default" />
+      <service_fmri value='svc:/@SMF_PREFIX@/epmd:default' />
     </dependency>
     <method_context working_directory="@COUCH_DBDIR@">
       <method_credential user="@COUCH_USER@" group="@COUCH_GROUP@" />
@@ -20,11 +21,11 @@
         <envvar name="HOME" value="@COUCH_DBDIR@" />
       </method_environment>
     </method_context>
-    <exec_method type="method" name="start" exec="@PREFIX@/bin/couchdb -b" timeout_seconds="60" />
+    <exec_method type="method" name="start" exec="@PREFIX@/bin/couchdb" timeout_seconds="60" />
     <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
     <property_group name="startd" type="framework">
-      <propval name="duration" type="astring" value="contract" />
-      <propval name="ignore_error" type="astring" value="core,signal" />
+      <propval name="duration" type="astring" value="child" />
+      <propval name="ignore_error" type="astring" value="core" />
     </property_group>
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/local.ini" />
@@ -32,6 +33,35 @@
     <template>
       <common_name>
         <loctext xml:lang="C">CouchDB server</loctext>
+      </common_name>
+    </template>
+  </service>
+  <service name="@SMF_PREFIX@/couch-epmd" type="service" version="1">
+    <create_default_instance enabled="false" />
+    <single_instance />
+    <dependency name="network" grouping="require_all" restart_on="error" type="service">
+      <service_fmri value="svc:/milestone/network:default" />
+    </dependency>
+    <dependency name="filesystem" grouping="require_all" restart_on="error" type="service">
+      <service_fmri value="svc:/system/filesystem/local" />
+    </dependency>
+    <dependency name="couch-epmd" grouping="exclude_all" restart_on="restart" type="service">
+      <service_fmri value="svc:/@SMF_PREFIX@/epmd:default" />
+    </dependency>
+    <method_context>
+      <method_credential user="@COUCH_USER@" group="@COUCH_GROUP@" />
+    </method_context>
+    <exec_method type="method" name="start" exec="@PREFIX@/couchdb/erts-@ERTS_VERSION@/bin/epmd -daemon" timeout_seconds="60" />
+    <exec_method type="method" name="stop" exec="@PREFIX@/couchdb/erts-@ERTS_VERSION@/bin/epmd -kill" timeout_seconds="60" />
+    <property_group name="startd" type="framework">
+      <propval name="duration" type="astring" value="contract" />
+      <propval name="ignore_error" type="astring" value="core,signal" />
+    </property_group>
+    <property_group name="application" type="application"></property_group>
+    <stability value="Evolving" />
+    <template>
+      <common_name>
+        <loctext xml:lang="C">Erlang Port Mapper Daemon</loctext>
       </common_name>
     </template>
   </service>
