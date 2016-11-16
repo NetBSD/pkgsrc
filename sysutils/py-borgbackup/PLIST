@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/08/19 22:34:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/11/16 13:21:14 wiz Exp $
 bin/borg-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -37,6 +37,9 @@ ${PYSITELIB}/borg/helpers.pyo
 ${PYSITELIB}/borg/key.py
 ${PYSITELIB}/borg/key.pyc
 ${PYSITELIB}/borg/key.pyo
+${PYSITELIB}/borg/keymanager.py
+${PYSITELIB}/borg/keymanager.pyc
+${PYSITELIB}/borg/keymanager.pyo
 ${PYSITELIB}/borg/locking.py
 ${PYSITELIB}/borg/locking.pyc
 ${PYSITELIB}/borg/locking.pyo
