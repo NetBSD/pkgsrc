@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/11/16 22:19:16 wiz Exp $
+$NetBSD: distinfo,v 1.7 2016/11/17 21:00:05 wiz Exp $
 
-SHA1 (xf86-video-amdgpu-1.1.2.tar.bz2) = 6f16fc95bd3d4ddc72e8c4e006097c3a3d75cdfd
-RMD160 (xf86-video-amdgpu-1.1.2.tar.bz2) = 8e9d3fd5a41411a80dbc67934fa5ed5ae8225bcc
-SHA512 (xf86-video-amdgpu-1.1.2.tar.bz2) = c381120000ba7ec1651f01e77e4093ccb939eb0e8925ea76532d6204b1072f3240cef412136ac4cf2a67268dfa9fda9bb455fe29874a4fd4a3be07d9a04b17ba
-Size (xf86-video-amdgpu-1.1.2.tar.bz2) = 383690 bytes
-SHA1 (patch-src_compat-api.h) = 889f2b3fd51140f94ad63968bc11c1d3f9283d94
+SHA1 (xf86-video-amdgpu-1.2.0.tar.bz2) = 434ab94fcda4070c333c208ffdc19c31341c01c1
+RMD160 (xf86-video-amdgpu-1.2.0.tar.bz2) = 8a9e675b8e3391f4ff13ed40e12a1c7464ac0c0b
+SHA512 (xf86-video-amdgpu-1.2.0.tar.bz2) = 92253848e81e41ec971f0a706639eda4b5231b6944148e21bc0f58ac1d10b963a76a5f10f8ca7ec4b3a631306636ec31efa3e62433f5b95ebdb26e2b0561d0f2
+Size (xf86-video-amdgpu-1.2.0.tar.bz2) = 388108 bytes
