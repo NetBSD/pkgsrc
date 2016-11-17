@@ -1,4 +1,6 @@
-$NetBSD: patch-src_sun__mouse.c,v 1.1 2015/04/06 13:28:22 tnn Exp $
+$NetBSD: patch-src_sun__mouse.c,v 1.2 2016/11/17 08:06:52 wiz Exp $
+
+rearrange includes to fix build on OmniOS. Include unistd.h for ioctl(2).
 
 --- src/sun_mouse.c.orig	2014-08-12 06:36:34.000000000 +0000
 +++ src/sun_mouse.c
