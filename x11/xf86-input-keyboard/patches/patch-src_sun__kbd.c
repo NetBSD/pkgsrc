@@ -1,4 +1,6 @@
-$NetBSD: patch-src_sun__kbd.c,v 1.1 2015/04/06 13:28:22 tnn Exp $
+$NetBSD: patch-src_sun__kbd.c,v 1.2 2016/11/17 08:05:55 wiz Exp $
+
+rearrange includes to fix build on OmniOS. Include unistd.h for ioctl(2).
 
 --- src/sun_kbd.c.orig	2013-03-27 00:56:38.000000000 +0000
 +++ src/sun_kbd.c

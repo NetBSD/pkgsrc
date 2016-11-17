@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.13 2016/11/16 22:53:22 wiz Exp $
+$NetBSD: distinfo,v 1.14 2016/11/17 08:05:55 wiz Exp $
 
-SHA1 (xf86-input-keyboard-1.8.1.tar.bz2) = c23cbba8b665c09cbc12ada36bc3cbf4ac4eff9f
-RMD160 (xf86-input-keyboard-1.8.1.tar.bz2) = a88e5d2e48c4672fc8ab6979e103f2f021af0b33
-SHA512 (xf86-input-keyboard-1.8.1.tar.bz2) = 51c6ed6c7daa660a519f1c96d3100e3a0cabf6245a05cd5b8797e9c4b237508802a7087e7e0327cdda1a3b681f83845ecc625fb739d7e992020026f385af8d5d
-Size (xf86-input-keyboard-1.8.1.tar.bz2) = 319232 bytes
-SHA1 (patch-src_kbd.c) = 96069a646855384aa6ed696fb9cefe8c460261e4
-SHA1 (patch-src_sun__kbd.c) = d988239bc09a21cd634134a48d39e3026cda960d
+SHA1 (xf86-input-keyboard-1.9.0.tar.bz2) = 24b5d84d221a75650f390ff63315912bf9a94992
+RMD160 (xf86-input-keyboard-1.9.0.tar.bz2) = 1b6d2d6fc538f7d57a0b452173184248e22d87d0
+SHA512 (xf86-input-keyboard-1.9.0.tar.bz2) = d1a52d10039096d0d5e09750b6a8c2388345748331615af93e5be499646c3bc5fbbfc897fcebdeada5efaafff94f26a2ab84d6e35f01a875b8b9956a42015df9
+Size (xf86-input-keyboard-1.9.0.tar.bz2) = 341693 bytes
+SHA1 (patch-src_sun__kbd.c) = 21da7cb7110ae8b08f9245de1d1678965ba7a0c8
