@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2016/10/25 19:55:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.445 2016/11/17 06:32:10 jnemeth Exp $
 #
 
 COMMENT=	Programming languages
@@ -228,6 +228,7 @@ SUBDIR+=	smlnj11072
 SUBDIR+=	snobol
 SUBDIR+=	spidermonkey
 SUBDIR+=	spidermonkey17
+SUBDIR+=	spidermonkey185
 SUBDIR+=	spl
 SUBDIR+=	squeak
 SUBDIR+=	squeak-vm
