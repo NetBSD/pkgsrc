@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4722 2016/11/17 15:34:57 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4723 2016/11/17 20:58:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6500,3 +6500,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime to 1.41 [wen 2016-11-17]
 	Updated mail/squirrelmail to 1.4.23pre14605 [taca 2016-11-17]
 	Updated math/p5-Math-BigInt to 1.999800 [wen 2016-11-17]
+	Updated x11/xf86-video-ati to 7.8.0 [wiz 2016-11-17]
