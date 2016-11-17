@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4720 2016/11/17 14:41:00 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4721 2016/11/17 15:11:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6498,3 +6498,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-Create to 1.38 [wen 2016-11-17]
 	Updated www/drupal7 to 7.52 [taca 2016-11-17]
 	Updated time/p5-DateTime to 1.41 [wen 2016-11-17]
+	Updated mail/squirrelmail to 1.4.23pre14605 [taca 2016-11-17]
