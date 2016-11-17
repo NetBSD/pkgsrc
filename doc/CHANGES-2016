@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4717 2016/11/17 08:07:03 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4718 2016/11/17 14:23:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6495,3 +6495,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/py-numexpr to 2.6.1 [alnsn 2016-11-17]
 	Updated x11/xf86-input-keyboard to 1.9.0 [wiz 2016-11-17]
 	Updated x11/xf86-input-mouse to 1.9.2 [wiz 2016-11-17]
+	Updated textproc/p5-PDF-Create to 1.38 [wen 2016-11-17]
