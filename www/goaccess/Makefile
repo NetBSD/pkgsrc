@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/11/17 22:33:54 wiedi Exp $
+# $NetBSD: Makefile,v 1.14 2016/11/17 22:44:03 wiedi Exp $
 
 DISTNAME=	goaccess-1.1
 CATEGORIES=	www
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 
-USE_TOOLS+=     pkg-config aclocal automake
+USE_TOOLS+=     pkg-config aclocal autoconf automake
 USE_NCURSES=	yes
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
