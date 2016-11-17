@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4716 2016/11/17 08:06:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4717 2016/11/17 08:07:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6494,3 +6494,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao35 to 3.5.19 [taca 2016-11-16]
 	Updated math/py-numexpr to 2.6.1 [alnsn 2016-11-17]
 	Updated x11/xf86-input-keyboard to 1.9.0 [wiz 2016-11-17]
+	Updated x11/xf86-input-mouse to 1.9.2 [wiz 2016-11-17]
