@@ -1,4 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2014/06/14 09:56:16 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/11/17 22:33:54 wiedi Exp $
 bin/goaccess
 man/man1/goaccess.1
+share/doc/goaccess/app.css
+share/doc/goaccess/app.js
+share/doc/goaccess/bootstrap.min.css
+share/doc/goaccess/charts.js
+share/doc/goaccess/d3.v3.min.js
+share/doc/goaccess/fa.min.css
+share/doc/goaccess/hogan.min.js
+share/doc/goaccess/tpls.html
 share/examples/goaccess/goaccess.conf
