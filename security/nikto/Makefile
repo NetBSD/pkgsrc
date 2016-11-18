@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/11/18 16:40:19 khorben Exp $
+# $NetBSD: Makefile,v 1.25 2016/11/18 16:51:03 khorben Exp $
 
 DISTNAME=	nikto-2.1.5
+PKGREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/nikto/
 
@@ -17,8 +18,9 @@ AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
-SUBST_FILES.conf=	nikto.pl
+SUBST_FILES.conf=	nikto.pl docs/nikto.1
 SUBST_SED.conf=		-e "s|/etc/nikto\.conf|${PKG_SYSCONFDIR}/nikto.conf|g"
+SUBST_SED.conf+=	-e "s|/etc/nikto\\\&\.conf|${PKG_SYSCONFDIR}/nikto\\\\\\&.conf|g"
 SUBST_MESSAGE.conf=	Fixing path to nikto.conf
 
 SUBST_CLASSES+=		execdir
