@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/02/26 11:27:17 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/18 08:10:24 wiz Exp $
 
-DISTNAME=	xf86-input-joystick-1.6.2
-PKGREVISION=	1
+DISTNAME=	xf86-input-joystick-1.6.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
