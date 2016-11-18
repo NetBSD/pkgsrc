@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2015/06/12 10:50:41 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/11/18 09:58:53 jperkin Exp $
 
-DISTNAME=	get_iplayer-2.94
-PKGREVISION=	1
+DISTNAME=	get_iplayer-2.97
 CATEGORIES=	net multimedia
-MASTER_SITES=	ftp://ftp.infradead.org/pub/get_iplayer/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=get-iplayer/}
 
 MAINTAINER=	shattered@NetBSD.org
-HOMEPAGE=	http://www.infradead.org/get_iplayer/html/get_iplayer.html
+HOMEPAGE=	https://github.com/get-iplayer/${GITHUB_PROJECT}
 COMMENT=	Search, index, record or stream BBC iPlayer broadcasts
 LICENSE=	gnu-gpl-v3
+
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Cookies>=6.0:../../www/p5-HTTP-Cookies
@@ -18,26 +19,22 @@ DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
 DEPENDS+=	rtmpdump>=1.8:../../net/rtmpdump
 DEPENDS+=	flvstreamer>=1.8:../../multimedia/flvstreamer
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 REPLACE_PERL=	get_iplayer
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
-SUBST_MESSAGE.prefix=	Fixup config and plugin paths
-SUBST_FILES.prefix=	get_iplayer
-SUBST_SED.prefix=	-e s:@PREFIX@:${PREFIX}:
-
 PKG_SYSCONFSUBDIR=	get_iplayer
-EGDIR=			${PREFIX}/share/examples/get_iplayer
-CONF_FILES=		${EGDIR}/options ${PKG_SYSCONFDIR}/options
-INSTALLATION_DIRS+=	${EGDIR}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	get_iplayer
+SUBST_SED.paths=	-e "s:/etc/get_iplayer:${PKG_SYSCONFDIR}:g"
+SUBST_SED.paths+=	-e "s:/usr/share/get_iplayer:${PREFIX}/share/get_iplayer:g"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/get_iplayer ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/get_iplayer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA} ${FILESDIR}/options.default ${DESTDIR}${EGDIR}/options
 
 .include "../../mk/bsd.pkg.mk"
