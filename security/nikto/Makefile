@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 06:38:55 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/11/18 16:40:19 khorben Exp $
 
-DISTNAME=	nikto-1.36
-PKGREVISION=	5
+DISTNAME=	nikto-2.1.5
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/nikto/
 
@@ -10,34 +9,47 @@ HOMEPAGE=	http://www.cirt.net/code/nikto.shtml
 COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
-DEPENDS+=	nmap>=2.00:../../net/nmap
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	nikto.pl
-NO_BUILD=	YES
+NO_BUILD=	yes
+AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
-SUBST_FILES.conf=	config.txt
-SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_MESSAGE.conf=	Fixing PREFIX in files.
+SUBST_FILES.conf=	nikto.pl
+SUBST_SED.conf=		-e "s|/etc/nikto\.conf|${PKG_SYSCONFDIR}/nikto.conf|g"
+SUBST_MESSAGE.conf=	Fixing path to nikto.conf
 
-CONF_FILES=	${PREFIX}/share/examples/nikto/config.txt \
-			 ${PREFIX}/share/nikto/config.txt
+SUBST_CLASSES+=		execdir
+SUBST_STAGE.execdir=	post-patch
+SUBST_FILES.execdir=	nikto.conf
+SUBST_SED.execdir=	-e "s|^\# EXECDIR=/opt/nikto|EXECDIR=${PREFIX}/libdata/nikto|g"
+SUBST_MESSAGE.execdir=	Fixing path to EXECDIR
 
-INSTALLATION_DIRS=	bin libdata/nikto/docs libdata/nikto/plugins \
-			share/doc/nikto share/examples/nikto share/nikto
+SUBST_CLASSES+=		manual
+SUBST_STAGE.manual=	post-patch
+SUBST_FILES.manual=	docs/nikto.1
+SUBST_SED.manual=	-e "s|/usr/local/bin/nikto|nikto|g"
+SUBST_MESSAGE.manual=	Fixing path to nikto
+
+CONF_FILES=	${PREFIX}/share/examples/nikto/nikto.conf \
+			 ${PREFIX}/${PKG_SYSCONFDIR}/nikto.conf
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/share/doc/nikto
 	${INSTALL_DATA} ${WRKSRC}/docs/CHANGES.txt ${DESTDIR}${PREFIX}/libdata/nikto/docs
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${DESTDIR}${PREFIX}/share/doc/nikto
-	${INSTALL_DATA} ${WRKSRC}/config.txt ${DESTDIR}${PREFIX}/share/examples/nikto
+	${INSTALL_DATA} ${WRKSRC}/docs/nikto.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/nikto.conf ${DESTDIR}${PREFIX}/share/examples/nikto
 	${INSTALL_SCRIPT} ${WRKSRC}/nikto.pl ${DESTDIR}${PREFIX}/bin/nikto
+	${INSTALL_DATA} ${WRKSRC}/databases/db_* \
+	    ${DESTDIR}${PREFIX}/libdata/nikto/databases
 	${INSTALL_DATA} ${WRKSRC}/plugins/*.plugin \
 	    ${DESTDIR}${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA} ${WRKSRC}/plugins/LW.pm ${DESTDIR}${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA} ${WRKSRC}/plugins/*.db ${DESTDIR}${PREFIX}/libdata/nikto/plugins
-	${INSTALL_DATA} ${WRKSRC}/plugins/*.txt ${DESTDIR}${PREFIX}/libdata/nikto/plugins
+	${INSTALL_DATA} ${WRKSRC}/templates/*.tmpl \
+	    ${DESTDIR}${PREFIX}/libdata/nikto/templates
+	${INSTALL_DATA} ${WRKSRC}/plugins/JSON-PP.pm ${DESTDIR}${PREFIX}/libdata/nikto/plugins
+	${INSTALL_DATA} ${WRKSRC}/plugins/LW2.pm ${DESTDIR}${PREFIX}/libdata/nikto/plugins
 
 .include "../../mk/bsd.pkg.mk"
