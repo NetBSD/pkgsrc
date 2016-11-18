@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/11/14 20:56:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/11/18 18:20:05 joerg Exp $
 
 DISTNAME=	creduce-2.5.0
 PKGREVISION=	1
@@ -21,6 +21,8 @@ DEPENDS+=	p5-Getopt-Tabular-[0-9]*:../../devel/p5-Getopt-Tabular
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Sys-CPU-[0-9]*:../../sysutils/p5-Sys-CPU
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.prefs.mk"
 
