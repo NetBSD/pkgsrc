@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/10/09 15:43:31 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/11/18 12:41:36 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gtk3.${RUBY_DLEXT}
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/ext/gtk3/extconf.rb
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-cell-layout.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-container.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-private.h
+${GEM_LIBDIR}/ext/gtk3/rb-gtk3-spin-button.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-tree-model.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-tree-view.c
 ${GEM_LIBDIR}/ext/gtk3/rb-gtk3-widget.c
@@ -181,6 +182,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/font-features.ui
 ${GEM_LIBDIR}/sample/gtk-demo/font_features.rb
 ${GEM_LIBDIR}/sample/gtk-demo/glarea-fragment.glsl
 ${GEM_LIBDIR}/sample/gtk-demo/glarea-vertex.glsl
+${GEM_LIBDIR}/sample/gtk-demo/glarea.rb
 ${GEM_LIBDIR}/sample/gtk-demo/gnome-applets.png
 ${GEM_LIBDIR}/sample/gtk-demo/gnome-calendar.png
 ${GEM_LIBDIR}/sample/gtk-demo/gnome-foot.png
@@ -204,6 +206,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/infobar.rb
 ${GEM_LIBDIR}/sample/gtk-demo/item_factory.rb
 ${GEM_LIBDIR}/sample/gtk-demo/links.rb
 ${GEM_LIBDIR}/sample/gtk-demo/list_store.rb
+${GEM_LIBDIR}/sample/gtk-demo/listbox.rb
 ${GEM_LIBDIR}/sample/gtk-demo/listbox.ui
 ${GEM_LIBDIR}/sample/gtk-demo/main.rb
 ${GEM_LIBDIR}/sample/gtk-demo/main.ui
@@ -245,6 +248,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/s_resize_cursor.png
 ${GEM_LIBDIR}/sample/gtk-demo/scale.rb
 ${GEM_LIBDIR}/sample/gtk-demo/scale.ui
 ${GEM_LIBDIR}/sample/gtk-demo/se_resize_cursor.png
+${GEM_LIBDIR}/sample/gtk-demo/search_entry.rb
 ${GEM_LIBDIR}/sample/gtk-demo/search_entry2.rb
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-boxes.ui
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-builder.ui
@@ -253,6 +257,7 @@ ${GEM_LIBDIR}/sample/gtk-demo/shortcuts-gedit.ui
 ${GEM_LIBDIR}/sample/gtk-demo/shortcuts.ui
 ${GEM_LIBDIR}/sample/gtk-demo/sidebar.rb
 ${GEM_LIBDIR}/sample/gtk-demo/sizegroup.rb
+${GEM_LIBDIR}/sample/gtk-demo/spinbutton.rb
 ${GEM_LIBDIR}/sample/gtk-demo/spinbutton.ui
 ${GEM_LIBDIR}/sample/gtk-demo/spinner.rb
 ${GEM_LIBDIR}/sample/gtk-demo/stack.rb
