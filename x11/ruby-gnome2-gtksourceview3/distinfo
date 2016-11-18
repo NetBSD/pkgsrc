@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/10/09 15:43:31 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2016/11/18 12:41:36 tsutsui Exp $
 
-SHA1 (gtksourceview3-3.0.9.gem) = 4ba61a035bb467fd0fd19b23b8ab86c90ae073d3
-RMD160 (gtksourceview3-3.0.9.gem) = 35b58968af09f6b1f9584f48a2feb058b3e39660
-SHA512 (gtksourceview3-3.0.9.gem) = 993bcd9024e3ecc7fc3709e587714033dc9b72904cadc0fb480b0e616deb37d08064c06158be62f9c5b5e33eb99db71e51d88c060362306b602e929166de9546
-Size (gtksourceview3-3.0.9.gem) = 7680 bytes
+SHA1 (gtksourceview3-3.1.0.gem) = 5d7b57e8ec5d144dbe42c173e9c05a6833f3ece3
+RMD160 (gtksourceview3-3.1.0.gem) = f8218180b2f3766382ae748c32e86b2f7bee0093
+SHA512 (gtksourceview3-3.1.0.gem) = 8adc9f15c32d9cfe3d519322ee1104b2f83f433e04db3a211723171502b04d9b964358732fe4d7e801bcdea13eb34702fab2ce962a8c8a7cb869b1d2ffdfc0f7
+Size (gtksourceview3-3.1.0.gem) = 7680 bytes
