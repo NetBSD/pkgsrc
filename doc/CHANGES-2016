@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4729 2016/11/18 12:46:53 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.4730 2016/11/18 16:41:27 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6528,3 +6528,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.1.0 [tsutsui 2016-11-18]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.0 [tsutsui 2016-11-18]
 	Updated x11/ruby-gnome2-vte to 3.1.0 [tsutsui 2016-11-18]
+	Updated security/nikto to 2.1.5 [khorben 2016-11-18]
