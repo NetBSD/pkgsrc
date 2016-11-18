@@ -1,14 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/07/02 11:30:01 adrianp Exp $
+$NetBSD: MESSAGE,v 1.3 2016/11/18 16:40:19 khorben Exp $
 
-You may need to create your own config.txt file before running nikto.
-A sample file can be found in "${PREFIX}/share/nikto".
+You may need to create your own nikto.conf file before running nikto.
+A sample file can be found in "${PREFIX}/share/examples/nikto".
 
 Once you have customised this file for your environment it must be in
 your current working directory when nikto is run.  Alternatively you can use
 the new ./nikto -config <filename> directive to specify a config file.
 
 You may want to run "nikto -update" as root once you have customised
-your config.txt file.  This will ensure you have the latest updates
+your nikto.conf file.  This will ensure you have the latest updates
 for the nikto scanner.
 ===========================================================================
