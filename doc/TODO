@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16709 2016/11/17 22:34:48 wiedi Exp $
+$NetBSD: TODO,v 1.16710 2016/11/18 16:41:27 khorben Exp $
 
 Suggested new packages
 ======================
@@ -1146,7 +1146,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netio-1.32
 	o netramet-50
 	o newmail-1.0.2
-	o nikto-2.1.5
 	o nim-0.15.0
 	o nqp-2016.02
 	o ns-3.14.1
