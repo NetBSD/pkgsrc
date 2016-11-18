@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/10/09 15:43:31 tsutsui Exp $
+$NetBSD: distinfo,v 1.4 2016/11/18 12:41:36 tsutsui Exp $
 
-SHA1 (vte-3.0.9.gem) = 2ab5d68fb096b0575caca0b45e76e124941a7fbc
-RMD160 (vte-3.0.9.gem) = fadc3a5ccc75be7d001d8cd799b93258db9ee932
-SHA512 (vte-3.0.9.gem) = f578f42d54431f025452ed9e33d67b6f3417c22c4b36d558e807a6aee4878c13abffedd2479c2b0759753e797de316a2e176816f9207b97ed8b88b6d11ec512e
-Size (vte-3.0.9.gem) = 14848 bytes
+SHA1 (vte-3.1.0.gem) = 4eb87bb1dc905bcd1095fc936abaf606170837be
+RMD160 (vte-3.1.0.gem) = 37a568c64cc98fff5f054a0602283c85a4c4f1fe
+SHA512 (vte-3.1.0.gem) = b5d708757786c2bd1d8c77fc0352149e5ca9db20042bfc72afd0e01bcce43293676fac1ef6749618849fa34bbfa5f26cf15b9bea84054957a34717b9bfdb314c
+Size (vte-3.1.0.gem) = 14848 bytes
