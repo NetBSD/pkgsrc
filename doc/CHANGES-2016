@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4727 2016/11/18 08:10:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4728 2016/11/18 09:59:05 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6505,3 +6505,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/goaccess to 1.1 [wiedi 2016-11-17]
 	Updated x11/xf86-video-vmware to 13.2.1 [wiz 2016-11-18]
 	Updated x11/xf86-input-joystick to 1.6.3 [wiz 2016-11-18]
+	Updated net/get_iplayer to 2.97 [jperkin 2016-11-18]
