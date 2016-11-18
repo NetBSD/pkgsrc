@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/11/15 17:48:56 marino Exp $
+# $NetBSD: Makefile,v 1.17 2016/11/18 14:10:18 marino Exp $
 
 DISTNAME=	pkg-1.8.7
 PKGREVISION=	8
@@ -146,6 +146,10 @@ post-install:
 PKGNG_DBDIR?=	${PKG_DBDIR}
 .else
 PKGNG_DBDIR?=	${PREFIX}/pkgng-db
+.endif
+
+.if ${OPSYS} == "NetBSD"
+BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 .endif
 
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly" && ${OPSYS} != "NetBSD"
