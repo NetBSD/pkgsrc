@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/01/24 05:03:22 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/11/18 12:41:34 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gio2.${RUBY_DLEXT}
@@ -15,18 +15,26 @@ ${GEM_LIBDIR}/lib/gio2.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/gio2/action-map.rb
 ${GEM_LIBDIR}/lib/gio2/action.rb
 ${GEM_LIBDIR}/lib/gio2/application-command-line.rb
+${GEM_LIBDIR}/lib/gio2/content-type.rb
 ${GEM_LIBDIR}/lib/gio2/deprecated.rb
+${GEM_LIBDIR}/lib/gio2/file.rb
 ${GEM_LIBDIR}/lib/gio2/inet-address.rb
 ${GEM_LIBDIR}/lib/gio2/input-stream.rb
 ${GEM_LIBDIR}/lib/gio2/loader.rb
 ${GEM_LIBDIR}/lib/gio2/pollable-input-stream.rb
 ${GEM_LIBDIR}/lib/gio2/pollable-output-stream.rb
 ${GEM_LIBDIR}/lib/gio2/resources.rb
+${GEM_LIBDIR}/lib/gio2/settings-schema-source.rb
+${GEM_LIBDIR}/lib/gio2/settings.rb
 ${GEM_LIBDIR}/lib/gio2/simple-action.rb
 ${GEM_LIBDIR}/test/fixture/content-type/x-content/unix-software/autorun.sh
 ${GEM_LIBDIR}/test/fixture/resource/Rakefile
 ${GEM_LIBDIR}/test/fixture/resource/logo.png
 ${GEM_LIBDIR}/test/fixture/resource/ruby-gio2.gresource.xml
+${GEM_LIBDIR}/test/fixture/schema/settings/Rakefile
+${GEM_LIBDIR}/test/fixture/schema/settings/jp.ruby-gnome2.test.value.gschema.xml
+${GEM_LIBDIR}/test/fixture/schema/source/Rakefile
+${GEM_LIBDIR}/test/fixture/schema/source/jp.ruby-gnome2.test.source.gschema.xml
 ${GEM_LIBDIR}/test/gio2-test-utils.rb
 ${GEM_LIBDIR}/test/gio2-test-utils/fixture.rb
 ${GEM_LIBDIR}/test/gio2-test-utils/omissions.rb
@@ -51,6 +59,8 @@ ${GEM_LIBDIR}/test/test-output-stream.rb
 ${GEM_LIBDIR}/test/test-pollable-input-stream.rb
 ${GEM_LIBDIR}/test/test-pollable-output-stream.rb
 ${GEM_LIBDIR}/test/test-resources.rb
+${GEM_LIBDIR}/test/test-settings-schema-source.rb
+${GEM_LIBDIR}/test/test-settings.rb
 ${GEM_LIBDIR}/test/test-simple-action.rb
 ${GEM_LIBDIR}/test/test-version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

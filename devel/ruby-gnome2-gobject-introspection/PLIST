@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/01/24 05:03:23 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/11/18 12:41:34 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gobject_introspection.${RUBY_DLEXT}
@@ -43,6 +43,7 @@ ${GEM_LIBDIR}/ext/gobject-introspection/rb-gobject-introspection.c
 ${GEM_LIBDIR}/ext/gobject-introspection/rb-gobject-introspection.h
 ${GEM_LIBDIR}/ext/gobject-introspection/rbgiversion.h
 ${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/gi.rb
 ${GEM_LIBDIR}/lib/gobject-introspection.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/arg-info.rb
 ${GEM_LIBDIR}/lib/gobject-introspection/boxed-info.rb
