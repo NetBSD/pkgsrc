@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2016/11/18 16:51:03 khorben Exp $
+# $NetBSD: Makefile,v 1.26 2016/11/18 16:58:21 khorben Exp $
 
 DISTNAME=	nikto-2.1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security www
 MASTER_SITES=	http://www.cirt.net/nikto/
 

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2016/11/18 16:40:19 khorben Exp $
+$NetBSD: distinfo,v 1.10 2016/11/18 16:58:21 khorben Exp $
 
 SHA1 (nikto-2.1.5.tar.gz) = 95d24bead999509cb70e8d586b2dcbf366d0d0e8
 RMD160 (nikto-2.1.5.tar.gz) = 428c3cd6dcda3651263de971d3568df72a63a05a
 SHA512 (nikto-2.1.5.tar.gz) = b6a1e7277a501055a4693d2e7179801bda0566350f3718cd169c3baf61003a936b14e9a4ba59f3597a83be8ef509953fdae546ec57e487a33b2b3efbabe84b67
 Size (nikto-2.1.5.tar.gz) = 371663 bytes
+SHA1 (patch-docs_nikto.1) = 217ebaac85a5637411175872013b2f69b260a5f1
