@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/03/26 13:44:34 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/19 14:47:22 taca Exp $
 
 DISTNAME=	journey-1.0.4
 CATEGORIES=	www
@@ -8,7 +8,7 @@ HOMEPAGE=	http://github.com/rails/journey
 COMMENT=	Journey is a router
 LICENSE=	mit
 
-RUBY_RDOC_REQD=	3.11
+OVERRIDE_GEMSPEC+=	rdoc:
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
