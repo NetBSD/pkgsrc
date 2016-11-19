@@ -1,10 +1,10 @@
-$NetBSD: patch-libinterp_Makefile.am,v 1.1 2016/02/16 04:21:40 dbj Exp $
+$NetBSD: patch-libinterp_module.mk,v 1.1 2016/11/19 21:53:12 maya Exp $
 
 install .oct loadable modules with INSTALL_LIB to avoid stripping them
 
---- libinterp/Makefile.am.orig	2015-05-23 14:21:53.000000000 +0000
-+++ libinterp/Makefile.am
-@@ -351,7 +351,7 @@ install-oct:
+--- libinterp/module.mk.orig	2016-11-13 15:16:10.000000000 +0000
++++ libinterp/module.mk
+@@ -306,7 +306,7 @@ install-oct:
  	  f=`echo $$ltlib | $(SED) 's,.*/,,'`; \
  	  dl=`$(SED) -n -e "s/dlname='\([^']*\)'/\1/p" < $$f`; \
  	  if [ -n "$$dl" ]; then \
