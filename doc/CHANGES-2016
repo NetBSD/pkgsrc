@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4735 2016/11/19 15:07:28 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4736 2016/11/19 21:53:32 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6534,3 +6534,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-Date-Extract to 0.06 [wen 2016-11-18]
 	Updated textproc/p5-XML-XPath to 1.40 [wen 2016-11-18]
 	Updated textproc/p5-podlators to 4.09 [wen 2016-11-18]
+	Updated math/octave to 4.2.0 [maya 2016-11-19]
