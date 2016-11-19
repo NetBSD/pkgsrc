@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.55 2016/02/25 15:49:44 jperkin Exp $
+# $NetBSD: options.mk,v 1.56 2016/11/19 17:43:38 dholland Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -339,9 +339,11 @@ CONFIGURE_ARGS+=	--disable-xvid
 .endif
 
 .if !empty(PKG_OPTIONS:Mmplayer-ssse3)
-# needs a recent assembler
-.include "../../devel/binutils/buildlink3.mk"
-.include "../../devel/binutils/override-as.mk"
+.  if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)        
+     # needs a recent assembler                         
+.    include "../../devel/binutils/buildlink3.mk"      
+.    include "../../devel/binutils/override-as.mk"      
+.  endif                                               
 .else
 CONFIGURE_ARGS+=	--disable-ssse3
 .endif
