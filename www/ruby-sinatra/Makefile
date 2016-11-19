@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/15 16:23:48 taca Exp $
+# $NetBSD: Makefile,v 1.19 2016/11/19 14:38:04 taca Exp $
 
 DISTNAME=	sinatra-1.4.7
 CATEGORIES=	www
@@ -11,8 +11,6 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.5<2:../../www/ruby-rack
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-protection>=1.4<2:../../www/ruby-rack-protection
 DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.3.4<3:../../textproc/ruby-tilt
-
-RUBY_RDOC_REQD=	3.0
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
