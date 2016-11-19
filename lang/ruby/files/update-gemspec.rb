@@ -1,9 +1,9 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.7 2014/07/20 01:11:28 obache Exp $
+# $NetBSD: update-gemspec.rb,v 1.8 2016/11/19 13:50:19 taca Exp $
 #
-# Copyright (c) 2011, 2012, 2013 The NetBSD Foundation, Inc.
+# Copyright (c) 2011, 2012, 2013, 2014, 2015, 2016 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -103,7 +103,6 @@ class GemSpecUpdater
   def modify
     dependencies = @spec.instance_variable_get(:@dependencies)
     dependencies.each do |dep|
-      next if dep.type != :runtime
       update = @requirements[dep.name]
       if not update.nil? and update[:method] == :update
         r = dep.requirement.requirements
@@ -115,7 +114,6 @@ class GemSpecUpdater
       end
     end
     dependencies.delete_if { |dep|
-      next if dep.type != :runtime
       update = @requirements[dep.name]
       not update.nil? and update[:method] == :delete
     }
