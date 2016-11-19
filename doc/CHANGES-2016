@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4734 2016/11/19 14:51:34 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4735 2016/11/19 15:07:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6533,3 +6533,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MooseX-App to 1.37 [wen 2016-11-18]
 	Updated time/p5-Date-Extract to 0.06 [wen 2016-11-18]
 	Updated textproc/p5-XML-XPath to 1.40 [wen 2016-11-18]
+	Updated textproc/p5-podlators to 4.09 [wen 2016-11-18]
