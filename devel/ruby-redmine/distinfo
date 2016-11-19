@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/21 09:32:07 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2016/11/19 15:57:26 taca Exp $
 
 SHA1 (actionmailer-4.2.4.gem) = a866394bb4682afaa6d54458b1f3be0dca5e862e
 RMD160 (actionmailer-4.2.4.gem) = d703ffa8caa8fb150f5fb2aaa5ec915f4498224c
@@ -224,4 +224,3 @@ SHA1 (unicorn-5.0.1.gem) = 0402ec9b670b22cd3476a7272a6c428d3598bec5
 RMD160 (unicorn-5.0.1.gem) = f83d63c0906a3dd091d6e72ee183d6ae41371745
 SHA512 (unicorn-5.0.1.gem) = 57298a925215a6652dfaf2c8887374984ee5eb0a2b70b0b7d8f8558a31eef84c430484ebf6052f0f95ad3b21395cae01d9c408210f2173a25da7b53e10806c5d
 Size (unicorn-5.0.1.gem) = 208896 bytes
-SHA1 (patch-tilt-1.4.1.gemspec) = e334acb71636f1ecf896da8e121665d100356381
