@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2016/09/28 02:54:15 maya Exp $
+$NetBSD: patch-configure,v 1.5 2016/11/19 21:53:12 maya Exp $
 
 install .oct loadable modules with INSTALL_LIB to avoid stripping them
 
@@ -8,9 +8,9 @@ the guess it had for linux (x86_64-unknown-linux-gnu), seems to trample
 over our own tools:
 https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
 
---- configure.orig	2015-05-26 16:21:37.000000000 +0000
+--- configure.orig	2016-11-13 15:22:50.000000000 +0000
 +++ configure
-@@ -1952,6 +1952,7 @@ DEFAULT_PAGER
+@@ -1971,6 +1971,7 @@ DEFAULT_PAGER
  GNUPLOT
  GHOSTSCRIPT
  DESKTOP_FILE_INSTALL
@@ -18,7 +18,7 @@ https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
  LN_S
  TEXI2PDF
  TEXI2DVI
-@@ -5870,7 +5871,7 @@ case $host_os in *\ *) host_os=`echo "$h
+@@ -5938,7 +5939,7 @@ case $host_os in *\ *) host_os=`echo "$h
      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: configuring Octave for unknown system type" >&5
  $as_echo "$as_me: WARNING: configuring Octave for unknown system type" >&2;}
    fi
@@ -27,18 +27,18 @@ https://mail-index.netbsd.org/pkgsrc-users/2014/03/26/msg019464.html
  
    if test -z "$host_cpu"; then
      host_cpu=unknown
-@@ -8620,7 +8621,9 @@ fi
+@@ -9211,8 +9212,9 @@ fi
  
  
  
--INSTALL_SCRIPT='${INSTALL}'
 +test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
-+
+ 
+-INSTALL_SCRIPT="${INSTALL}"
 +test -z "$INSTALL_LIB" && INSTALL_LIB='${INSTALL_SCRIPT}'
  
  
  
-@@ -14005,7 +14008,12 @@ else
+@@ -28323,7 +28325,12 @@ else
  fi
  	  done
  	  ;;
