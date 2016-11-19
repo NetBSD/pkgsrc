@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2016/09/28 02:54:15 maya Exp $
+$NetBSD: distinfo,v 1.49 2016/11/19 00:47:08 maya Exp $
 
 SHA1 (octave-4.0.3.tar.xz) = c798346a8271e0141d9dbe5610584dabb8311277
 RMD160 (octave-4.0.3.tar.xz) = 32bad5cdb6b832d651183b92f59b396940d6ec04
@@ -28,7 +28,7 @@ SHA1 (patch-libinterp_dldfcn_config-module.awk) = 50d7173114f597038b01ed4479583c
 SHA1 (patch-libinterp_dldfcn_module.mk) = 7627fa6132036f26b77743d30dbbe99ed6442b42
 SHA1 (patch-libinterp_oct-conf.in.h) = 9a6b0e8d38bc2f9da916cb3d8145307e7a415f4f
 SHA1 (patch-liboctave_numeric_oct-fftw.h) = b152566ad3fcf6c5c1808f4428e6d51966ca1daf
-SHA1 (patch-liboctave_operators_mx-inlines.cc) = 3f01077700a3b8f51a3a171fdc11bafd784e3ea3
+SHA1 (patch-liboctave_operators_mx-inlines.cc) = 3002122937942a4a2bbcc6fff90398d082971d53
 SHA1 (patch-liboctave_system_oct-time.cc) = 7b8a33911c69861572e35320e13c6c777048bc6c
 SHA1 (patch-m4_acinclude.m4) = 194b8c3cf6f5e45a0251b229af9b3a47c12aa608
 SHA1 (patch-scripts_pkg_private_configure__make.m) = 7d4b620f889faa66c4c9c581ef8a7e7692b68c94
