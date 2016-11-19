@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/10/09 21:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/11/19 15:57:26 taca Exp $
 
 DISTNAME=	redmine-3.1.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -155,6 +155,10 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 GEM_EXTSDIR_NEEDS_SUBDIR=	no
 .include "../../lang/ruby/gem-extract.mk"
 
+# remove rdoc dependency
+pre-configure:
+	${RUBY} ${.CURDIR}/${UPDATE_GEMSPEC} ${WRKDIR}/tilt-1.4.1.gemspec rdoc:
+
 do-build:
 .for _gem_ in ${DISTFILES:M*.gem:S/.gem$//g}
 	${RUN} cd ${WRKDIR}/${_gem_} && ${SETENV} ${MAKE_ENV} ${RUBYGEM_ENV} \
@@ -198,7 +202,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${RM_DIR}/app
 	${INSTALL_DATA} ${FILESDIR}/secrets.yml \
 		${DESTDIR}${PREFIX}/${RM_DIR}/app/config
-	# XXX: Rewrite this to use ${INSTALL_DATA} and remove pax from USE_TOOLS
+#	XXX: Rewrite this to use ${INSTALL_DATA} and remove pax from USE_TOOLS
 	cd ${WRKDIR}/${DISTNAME} && pax -rw -pmp . \
 		${DESTDIR}${PREFIX}/${RM_DIR}/app
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/redmine_*${RUBY_SUFFIX}.sh
