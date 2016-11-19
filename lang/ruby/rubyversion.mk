@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.165 2016/09/08 15:19:17 joerg Exp $
+# $NetBSD: rubyversion.mk,v 1.166 2016/11/19 15:35:43 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -201,6 +201,11 @@
 #
 # RUBY_SITERIDIR
 #	version specific site ri directory.
+#
+# === supporting scripts ===
+#
+# UPDATE_GEMSPEC
+#	a tool to modify gemspec file.
 #
 # Keywords: ruby
 #
@@ -687,5 +692,8 @@ PRINT_PLIST_AWK+=	/\/${RUBY_NAME}/ \
 			{ sub(/${RUBY_NAME}/, "$${RUBY_NAME}"); }
 PRINT_PLIST_AWK+=	/^${GEM_HOME:S|/|\\/|g:S|.|\\.|g}/ \
 			{ gsub(/${GEM_HOME:S|/|\\/|g}/, "$${GEM_HOME}"); }
+
+# supporting scripts
+UPDATE_GEMSPEC=		../../lang/ruby/files/update-gemspec.rb
 
 .endif # _RUBY_MK
