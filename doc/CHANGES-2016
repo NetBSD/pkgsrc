@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4742 2016/11/20 09:41:31 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4743 2016/11/20 10:21:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6540,3 +6540,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-Twitter to 4.01041 [wen 2016-11-20]
 	Updated shells/bash to 4.4.005 [wen 2016-11-20]
 	Updated games/lgogdownloader to 3.0 [wiz 2016-11-20]
+	Added devel/py-incremental version 16.10.1 [wiz 2016-11-20]
