@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2016/10/07 18:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.56 2016/11/20 13:02:14 leot Exp $
 
-DISTNAME=	netsurf-all-3.5
+DISTNAME=	netsurf-all-3.6
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -21,9 +20,11 @@ USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
 SUBST_CLASSES+=			ssl-certs
 SUBST_STAGE.ssl-certs=		pre-configure
 SUBST_MESSAGE.ssl-certs=	Fixing hardcoded paths for SSL certs
-SUBST_FILES.ssl-certs=		netsurf/beos/gui.cpp netsurf/gtk/gui.c
-SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices
-SUBST_FILES.ssl-certs+=		netsurf/test/nsoption.c
+SUBST_FILES.ssl-certs=		netsurf/frontends/beos/gui.cpp
+SUBST_FILES.ssl-certs+=		netsurf/frontends/gtk/gui.c
+SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices-all
+SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices-full
+SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices-short
 SUBST_SED.ssl-certs=		-e 's,/etc/ssl/certs,${SSLCERTS},'
 
 # Avoid possible problems with already often defined HOST
