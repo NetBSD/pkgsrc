@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/09/19 09:04:29 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2016/11/20 01:14:21 dholland Exp $
 
 READLINE_VERSION=	7.0
 
@@ -21,7 +21,7 @@ INFO_FILES=		yes
 CONFIGURE_ENV.NetBSD+=	bash_cv_wcwidth_broken=no
 .endif
 
-BUILD_TARGET=		all-libtool examples
+BUILD_TARGET=		everything-libtool
 INSTALL_TARGET=		install-libtool
 
 .include "../../mk/termcap.buildlink3.mk"
