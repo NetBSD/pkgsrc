@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4753 2016/11/20 21:15:43 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.4754 2016/11/20 21:23:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6551,3 +6551,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p5-Archive-Tar to 2.18 [wiz 2016-11-20]
 	Updated multimedia/py-m3u8 to 0.3.0 [joerg 2016-11-20]
 	Updated multimedia/mkvtoolnix to 9.5.0 [joerg 2016-11-20]
+	Updated net/youtube-dl to 20161118 [leot 2016-11-20]
