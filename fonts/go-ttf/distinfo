@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/11/20 19:59:35 wiz Exp $
+
+SHA1 (go-ttf-20161118/ttfs.tar.gz) = 80b00360a75dbe18b3140a353e60f94e56f0860d
+RMD160 (go-ttf-20161118/ttfs.tar.gz) = 98d61ba353049c4afcc25f8b96538ba6f63ac529
+SHA512 (go-ttf-20161118/ttfs.tar.gz) = f78fe6c490b775e040f0bba2305052b239d3ee8dae987c0ad56633b0586fe9aecef200f0ee9295498abcc5ca0d37a8c7ce59d73b26d6ab7398a8abe93e363429
+Size (go-ttf-20161118/ttfs.tar.gz) = 704738 bytes
