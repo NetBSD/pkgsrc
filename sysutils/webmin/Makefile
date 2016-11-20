@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/07/09 06:39:03 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2016/11/20 01:11:40 rillig Exp $
 
 .include "version.mk"
 
@@ -75,15 +75,15 @@ post-extract:
 
 pre-configure:
 	cd ${WRKSRC} &&							\
-	ptn="@"`${ECHO} ${WEBMIN_MINIMAL_MODULES}|sed -e 's/ /@/g'`"@" &&	\
-	for m in `${ECHO} */module.info | sed -e 's/\/module.info//g'`; do \
-		case $${ptn} in						\
-		*@$${m}@*) ;;						\
-		*)	rm -rf $${m} ;;					\
+	for m in */module.info; do 					\
+		moduledir=$${m%/module.info};				\
+		case $${moduledir} in					\
+		${WEBMIN_MINIMAL_MODULES:ts|}) ;;			\
+		*)	rm -rf $${moduledir} ;;				\
 		esac;							\
 	done &&								\
-	for t in `${ECHO} */theme.info | sed -e 's/\/theme.info//g'`; do\
-		rm -rf $${t};						\
+	for t in */theme.info; do					\
+		rm -rf $${t%/theme.info};				\
 	done &&								\
 	touch ${WRKSRC}/minimal-install
 
