@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2016/10/23 19:56:38 christos Exp $
+$NetBSD: distinfo,v 1.12 2016/11/20 22:12:44 joerg Exp $
 
 SHA1 (15.2-Isengard.tar.gz) = 4acb4a60eadc7289f873cff5add31693b9520cba
 RMD160 (15.2-Isengard.tar.gz) = d81d3f15783b2b69920ea85d7e04f01872f2d85f
@@ -16,7 +16,7 @@ SHA1 (patch-m4_xbmc__arch.m4) = ec0018a5a07cd8ab0e6718585fe8dcc9dd561c02
 SHA1 (patch-xbmc_GUIInfoManager.cpp) = 8ffd619dfc7f611da927422e9be295d8fa5fb71c
 SHA1 (patch-xbmc_Makefile.in) = 8a55856686715244d9999f846a2cc8bac6f08a21
 SHA1 (patch-xbmc_TextureDatabase.cpp) = b2fef50f58d9d89ec844ae8ba959bb63451df990
-SHA1 (patch-xbmc_Util.cpp) = 6284dfb29649ec9eeb5e9f9b07e2c164e6df304f
+SHA1 (patch-xbmc_Util.cpp) = 9b9f330d5a8f81378f5772ba84b0dc07ae5888d6
 SHA1 (patch-xbmc_addons_Addon.cpp) = 9060723ebba93311eb6f4657bae73d9589b96a77
 SHA1 (patch-xbmc_addons_AddonDll.h) = 77905da081d2436c383328421e1ab9316fb5939d
 SHA1 (patch-xbmc_addons_AddonManager.cpp) = 10c583ed0c2c8eabef34ea4497a845765ce53c79
