@@ -1,4 +1,4 @@
-$NetBSD: patch-xbmc_Util.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
+$NetBSD: patch-xbmc_Util.cpp,v 1.2 2016/11/20 22:12:44 joerg Exp $
 
 --- xbmc/Util.cpp.orig	2015-10-19 06:31:15.000000000 +0000
 +++ xbmc/Util.cpp
@@ -24,7 +24,7 @@ $NetBSD: patch-xbmc_Util.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
      strExecutablePath = "";
    else
      strExecutablePath = buf;
-+#elif defined(TARGET_NETBSD)
++#elif defined(TARGET_NETBSD) && defined(KERN_PROC_PATHNAME)
 +  char buf[PATH_MAX];
 +  size_t buflen;
 +  int mib[4];
