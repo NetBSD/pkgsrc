@@ -1,8 +1,12 @@
-$NetBSD: patch-ae,v 1.17 2014/03/12 10:04:50 wiz Exp $
+$NetBSD: patch-ae,v 1.18 2016/11/20 01:14:21 dholland Exp $
 
+Libtoolify.
 Pass -no-undefined to libtool for building shared library.
+Don't ignore failures during installation.
+Don't ignore failures building the examples.
+Fix race condition so the examples are built *after* the library.
 
---- Makefile.in.orig	2014-01-27 14:52:00.000000000 +0000
+--- Makefile.in.orig	2015-08-26 14:15:59.000000000 +0000
 +++ Makefile.in
 @@ -18,6 +18,9 @@
  RL_LIBRARY_VERSION = @LIBVERSION@
@@ -14,7 +18,7 @@ Pass -no-undefined to libtool for building shared library.
  PACKAGE = @PACKAGE_NAME@
  VERSION = @PACKAGE_VERSION@
  
-@@ -78,6 +81,7 @@ CTAGS = ctags -tw
+@@ -76,6 +79,7 @@ CTAGS = ctags -tw
  CFLAGS = @CFLAGS@
  LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
  CPPFLAGS = @CPPFLAGS@
@@ -22,7 +26,7 @@ Pass -no-undefined to libtool for building shared library.
  
  DEFS = @DEFS@ @CROSS_COMPILE@
  LOCAL_DEFS = @LOCAL_DEFS@
-@@ -100,9 +104,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
+@@ -98,9 +102,15 @@ GCC_LINT_CFLAGS = $(XCCFLAGS) $(GCC_LINT
  	${RM} $@
  	$(CC) -c $(CCFLAGS) $<
  
@@ -38,16 +42,19 @@ Pass -no-undefined to libtool for building shared library.
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -160,6 +170,8 @@ INSTALL_TARGETS = @STATIC_INSTALL_TARGET
+@@ -157,8 +167,10 @@ TARGETS = @STATIC_TARGET@ @SHARED_TARGET
+ INSTALL_TARGETS = @STATIC_INSTALL_TARGET@ @SHARED_INSTALL_TARGET@
  
  all: $(TARGETS)
- 
 +all-libtool: $(LIBTOOL_LIBS)
-+
- everything: all examples
+ 
+-everything: all examples
++everything: all .WAIT examples
++everything-libtool: all-libtool .WAIT examples
  
  static: $(STATIC_LIBS)
-@@ -169,17 +181,33 @@ libreadline.a: $(OBJECTS)
+ 
+@@ -167,17 +179,33 @@ libreadline.a: $(OBJECTS)
  	$(AR) $(ARFLAGS) $@ $(OBJECTS)
  	-test -n "$(RANLIB)" && $(RANLIB) $@
  
@@ -81,7 +88,17 @@ Pass -no-undefined to libtool for building shared library.
  readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
  	$(CC) $(CCFLAGS) -DREADLINE_LIBRARY -o $@ $(top_srcdir)/examples/rl.c ./libreadline.a ${TERMCAP_LIB}
  
-@@ -264,6 +292,12 @@ install-examples: installdirs install-he
+@@ -214,8 +242,7 @@ documentation: force
+ 	-( cd doc && $(MAKE) $(MFLAGS) )
+ 
+ examples: force
+-	-test -d examples || mkdir examples
+-	-(cd examples && ${MAKE} ${MFLAGS} all )
++	(cd examples && ${MAKE} ${MFLAGS} all )
+ 
+ force:
+ 
+@@ -262,6 +289,12 @@ install-examples: installdirs install-he
  uninstall-examples: maybe-uninstall-headers
  	-( cd examples; ${MAKE} ${MFLAGS} DESTDIR=${DESTDIR} uninstall )
  

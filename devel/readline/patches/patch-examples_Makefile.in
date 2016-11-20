@@ -1,19 +1,23 @@
-$NetBSD: patch-examples_Makefile.in,v 1.3 2016/09/19 09:04:29 wiz Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.4 2016/11/20 01:14:21 dholland Exp $
 
 Patch to link correctly against libtool built libs.
 
+Note: to make the patch smaller this uses "CC" to link and "REALCC"
+to compile. There's only one compile line and many link lines.
+
 --- examples/Makefile.in.orig	2016-04-26 13:50:18.000000000 +0000
 +++ examples/Makefile.in
-@@ -46,7 +46,7 @@ OBJEXT = @OBJEXT@
+@@ -46,7 +46,8 @@ OBJEXT = @OBJEXT@
  DESTDIR =
  
  DEFS = @DEFS@
 -CC = @CC@
++REALCC = $(LIBTOOL) --mode=compile @CC@
 +CC = $(LIBTOOL) --mode=link @CC@
  CFLAGS = @CFLAGS@
  LOCAL_CFLAGS = @LOCAL_CFLAGS@ -DREADLINE_LIBRARY -DRL_LIBRARY_VERSION='"$(RL_LIBRARY_VERSION)"'
  CPPFLAGS = @CPPFLAGS@
-@@ -56,8 +56,8 @@ INCLUDES = -I$(srcdir) -I$(top_srcdir) -
+@@ -56,14 +57,14 @@ INCLUDES = -I$(srcdir) -I$(top_srcdir) -
  CCFLAGS  = $(DEFS) $(LOCAL_CFLAGS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
  LDFLAGS = -g -L.. @LDFLAGS@
  
@@ -24,3 +28,10 @@ Patch to link correctly against libtool built libs.
  
  TERMCAP_LIB = @TERMCAP_LIB@
  
+ .c.o:
+ 	${RM} $@
+-	$(CC) $(CCFLAGS) -c $<
++	$(REALCC) $(CCFLAGS) -c $<
+ 
+ SOURCES = excallback.c fileman.c histexamp.c manexamp.c rl-fgets.c rl.c \
+ 		rlbasic.c rlcat.c rlevent.c rlptytest.c rltest.c rlversion.c \
