@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4745 2016/11/20 11:04:42 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.4746 2016/11/20 11:47:47 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6543,3 +6543,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-incremental version 16.10.1 [wiz 2016-11-20]
 	Updated devel/lua-penlight to 1.4.1 [alnsn 2016-11-20]
 	Updated textproc/LDoc to 1.4.5 [alnsn 2016-11-20]
+	Updated math/R-XML to 3.98-1.5 [alnsn 2016-11-20]
