@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2016/09/28 08:04:05 wiz Exp $
+# $NetBSD: options.mk,v 1.25 2016/11/20 21:13:46 joerg Exp $
 
 # Global and legacy options
 
@@ -120,11 +120,8 @@ PLIST_VARS+=		compressed_mbox
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)	\
 	|| make(distinfo) || make(mps) || make(makepatchsum)
 PLIST.compressed_mbox=	yes
-#PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
-#PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
-# use the 1.6.0 patch, as suggested by Andreas Kusalananda Kahari
-PATCH_SITES+=		http://mutt.org.ua/download/mutt-1.6.0/
-PATCHFILES+=		patch-1.6.0.rr.compressed.gz
+PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
+PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--enable-compressed
 SUBST_CLASSES+=		compress
