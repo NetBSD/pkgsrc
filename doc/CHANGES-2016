@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4740 2016/11/20 07:18:24 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4741 2016/11/20 08:03:32 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6538,3 +6538,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.4.7 [tsutsui 2016-11-20]
 	Updated databases/p5-DBD-mysql to 4.040 [wen 2016-11-20]
 	Updated net/p5-Net-Twitter to 4.01041 [wen 2016-11-20]
+	Updated shells/bash to 4.4.005 [wen 2016-11-20]
