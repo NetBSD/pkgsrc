@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4749 2016/11/20 20:00:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4750 2016/11/20 20:21:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6547,3 +6547,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cmph to 2.0 [alnsn 2016-11-20]
 	Updated www/netsurf to 3.6 [leot 2016-11-20]
 	Added fonts/go-ttf version 20161118 [wiz 2016-11-20]
+	Updated x11/p5-Wx to 0.9928 [wiz 2016-11-20]
