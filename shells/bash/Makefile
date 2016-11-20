@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.77 2016/09/19 09:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2016/11/20 08:02:26 wen Exp $
 
 BASH_VERSION=		4.4
-#BASH_PATCHLEVEL=	039
+BASH_PATCHLEVEL=	005
 
 DISTNAME=	bash-${BASH_VERSION}
-#PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
+PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
-#PATCH_SITES=	${MASTER_SITES:=bash-4.3-patches/}
-#PATCHFILES+=	bash43-001 bash43-002 bash43-003 bash43-004 bash43-005
+PATCH_SITES=	${MASTER_SITES:=bash-4.4-patches/}
+PATCHFILES+=	bash44-001 bash44-002 bash44-003 bash44-004 bash44-005
 #PATCHFILES+=	bash43-006 bash43-007 bash43-008 bash43-009 bash43-010
 #PATCHFILES+=	bash43-011 bash43-012 bash43-013 bash43-014 bash43-015
 #PATCHFILES+=	bash43-016 bash43-017 bash43-018 bash43-019 bash43-020
