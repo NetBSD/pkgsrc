@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4748 2016/11/20 13:02:34 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4749 2016/11/20 20:00:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6546,3 +6546,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-XML to 3.98-1.5 [alnsn 2016-11-20]
 	Updated devel/cmph to 2.0 [alnsn 2016-11-20]
 	Updated www/netsurf to 3.6 [leot 2016-11-20]
+	Added fonts/go-ttf version 20161118 [wiz 2016-11-20]
