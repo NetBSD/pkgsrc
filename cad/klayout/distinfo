@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2016/07/12 13:29:35 mef Exp $
+$NetBSD: distinfo,v 1.5 2016/11/20 22:14:47 joerg Exp $
 
 SHA1 (klayout-0.24.8.tar.gz) = 795e32c9aebc53aaa70ceaf20311acd78af4194a
 RMD160 (klayout-0.24.8.tar.gz) = 2e674413de96f7a718e28eddd79f5d75a818295d
@@ -7,4 +7,5 @@ Size (klayout-0.24.8.tar.gz) = 11262068 bytes
 SHA1 (patch-build.sh) = 3a1e61100de101cbe82b0c4abfa10a0ab2f7ead7
 SHA1 (patch-config_Makefile_conf_freebsd-32-gcc-release) = 8ee1a6f42465ef650fbd26ec6dcdea4db249d018
 SHA1 (patch-config_Makefile_conf_netbsd-32-gcc-release) = 1fd264f8a25d4410cd48fcfbbbfbf149e65e3b22
+SHA1 (patch-src_Makefile.rules) = 067908224dc86cd781679515dc05ebb8a7af8e41
 SHA1 (patch-src_layApplication.cc) = d3f115836e75a76ab2322048d8698c0dcd6c7492
