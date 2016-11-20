@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2333 2016/11/08 12:05:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.2334 2016/11/20 10:21:38 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1808,6 +1808,7 @@ SUBDIR+=	py-hgtools
 SUBDIR+=	py-hgview
 SUBDIR+=	py-hypothesis
 SUBDIR+=	py-idle
+SUBDIR+=	py-incremental
 SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
