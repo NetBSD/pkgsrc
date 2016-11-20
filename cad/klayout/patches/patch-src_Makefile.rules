@@ -1,0 +1,18 @@
+$NetBSD: patch-src_Makefile.rules,v 1.1 2016/11/20 22:14:47 joerg Exp $
+
+--- src/Makefile.rules.orig	2016-11-20 01:03:39.000000000 +0000
++++ src/Makefile.rules
+@@ -165,6 +165,13 @@ vpath %.ui $(SOURCE)
+ %.o: %.cc %.d
+ 	$(CXX) $(INC) $(CXXOPTS_PROD) $@ $(<)
+ 
++gsiExpression.o: gsiExpression.cc gsiExpression.d
++	$(CXX) $(INC) $(CXXOPTS_PROD) $@ $(<) -O1
++pyaMarshal.o: pyaMarshal.cc pyaMarshal.d
++	$(CXX) $(INC) $(CXXOPTS_PROD) $@ $(<) -O1
++rba.o: rba.cc rba.d
++	$(CXX) $(INC) $(CXXOPTS_PROD) $@ $(<) -O1
++
+ %_moc.o: %_moc.cc %.dm
+ 	$(CXX) $(INC) $(CXXOPTS_PROD) $@ $(<)
+ 
