@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2016/05/30 16:03:13 taca Exp $
+# $NetBSD: options.mk,v 1.9 2016/11/20 13:00:08 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
 PKG_SUPPORTED_OPTIONS=	csharp java erlang python perl php ruby
@@ -81,6 +81,9 @@ CONFIGURE_ARGS+=	--enable-gen-php
 PLIST.php=		yes
 # XXX: avoid override from php Makefile.common
 EXTRACT_SUFX=		.tar.gz
+
+# support PHP 5.6's API only
+PHP_VERSIONS_ACCEPTED=	56
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/Makefile.common"
