@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/11/20 19:59:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/11/20 20:05:32 wiz Exp $
 
 DISTNAME=	ttfs
-PKGNAME=	go-ttf-20161118
+PKGNAME=	go-ttf-0.0.20161118
 CATEGORIES=	fonts
 MASTER_SITES=	https://go.googlesource.com/image/+archive/${COMMIT_ID}/font/gofont/
 
