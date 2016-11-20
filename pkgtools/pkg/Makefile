@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/11/18 14:10:18 marino Exp $
+# $NetBSD: Makefile,v 1.18 2016/11/20 01:18:46 marino Exp $
 
-DISTNAME=	pkg-1.8.7
-PKGREVISION=	8
+DISTNAME=	pkg-1.9.99.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://files.etoilebsd.net/pkg/
 EXTRACT_SUFX=	.tar.xz
@@ -19,6 +18,7 @@ USE_LANGUAGES=	c
 CPPFLAGS+=	-D_LOCALBASE="\"${PREFIX}\""
 CPPFLAGS+=	-DPORTSDIR="\"${PKG.portsdir}\""
 CPPFLAGS+=	-DDEFAULT_VULNXML_URL="\"http://muscles.dragonflybsd.org/pkgsrc-vuxml/vuln.xml.bz2\""
+CFLAGS+=	-DSYSCONFDIR=\"${PKG_SYSCONFDIR}\"
 
 .if defined(DEBUG_PKGNG)
 CFLAGS:=	${CFLAGS:N-O2} -ggdb -O0
@@ -92,13 +92,6 @@ SUBST_FILES.vuxml=	libpkg/pkg_audit.c
 SUBST_SED.vuxml=	-e "s|https://vuxml.FreeBSD.org/freebsd|http://muscles.dragonflybsd.org/pkgsrc-vuxml/reports|"
 SUBST_MESSAGE.vuxml=	Direct audit reports to Pkgsrc vuxml
 
-SUBST_CLASSES+=		ldhints
-SUBST_STAGE.ldhints=	post-patch
-SUBST_FILES.ldhints=	libpkg/private/ldconfig.h libpkg/elfhints.c
-SUBST_SED.ldhints=	-e "s|/var/run/ld-elf.so.hints|/var/run/ld.so.hints|" \
-			-e 's,ifndef __linux__,if defined __FreeBSD__ || defined __DragonFly__,'
-SUBST_MESSAGE.ldhints=	Disable ldconfig hints for NetBSD
-
 .if defined(PACKAGE_BUILDING) # set by Synth which has custom location, so use default path
 PKG.portsdir?=	/usr/pkgsrc
 .else
@@ -112,9 +105,6 @@ BUILDLINK_PASSTHRU_RPATHDIRS=	/lib/priv
 .endif
 
 post-patch:
-	${CP} ${FILESDIR}/readpassphrase_compat.h \
-		${WRKSRC}/src/
-
 # DragonFly SSL libraries are private.
 .if exists(/usr/lib/priv/libprivate_ssl.so)
 	${SED} -i.bak \
