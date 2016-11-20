@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4747 2016/11/20 12:24:10 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.4748 2016/11/20 13:02:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6545,3 +6545,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/LDoc to 1.4.5 [alnsn 2016-11-20]
 	Updated math/R-XML to 3.98-1.5 [alnsn 2016-11-20]
 	Updated devel/cmph to 2.0 [alnsn 2016-11-20]
+	Updated www/netsurf to 3.6 [leot 2016-11-20]
