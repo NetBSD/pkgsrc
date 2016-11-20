@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 00:34:59 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/11/20 22:12:19 joerg Exp $
 
 SHA1 (ekiga-3.2.6.tar.bz2) = 1c9d2004aa57643a951c1d454e9cfb207143c021
 RMD160 (ekiga-3.2.6.tar.bz2) = f53fe740856e4a4c5b6141086ba25288aabe51ac
@@ -32,6 +32,8 @@ SHA1 (patch-lib_engine_components_resource-list_rl-presentity.cpp) = 4950c841389
 SHA1 (patch-lib_engine_components_resource-list_rl-presentity.h) = 61567eba2198ad3f81b7d367f16bb06e4429c2de
 SHA1 (patch-lib_engine_presence_cluster-impl.h) = bbdb345cbcb5eae14737021960434343b87bf5fe
 SHA1 (patch-lib_engine_presence_heap-impl.h) = 7a28aa97722d3d81653a2eb98b9d92acc80a6f79
+SHA1 (patch-lib_engine_presence_presence-core.cpp) = 34acd3931c89bcf0623dfd92b1ae2547541b2f01
+SHA1 (patch-lib_engine_presence_presence-core.h) = bee3155ebe7d4d0debdc15ed499cda26362c8f02
 SHA1 (patch-lib_gui_xwindow.cpp) = d6f5b3b07357e3390afe9f9c7ab632ac9a9ba006
 SHA1 (patch-lib_gui_xwindow.h) = 121b40b104d8ac4ad30cf81ddb8237ad5a5a247c
 SHA1 (patch-src_Makefile.am) = 54a6fd59b640c118b928af19fe3aa9943550a3dc
