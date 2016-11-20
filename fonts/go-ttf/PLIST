@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2016/11/20 19:59:35 wiz Exp $
+share/fonts/X11/TTF/Go-Bold-Italic.ttf
+share/fonts/X11/TTF/Go-Bold.ttf
+share/fonts/X11/TTF/Go-Italic.ttf
+share/fonts/X11/TTF/Go-Medium-Italic.ttf
+share/fonts/X11/TTF/Go-Medium.ttf
+share/fonts/X11/TTF/Go-Mono-Bold-Italic.ttf
+share/fonts/X11/TTF/Go-Mono-Bold.ttf
+share/fonts/X11/TTF/Go-Mono-Italic.ttf
+share/fonts/X11/TTF/Go-Mono.ttf
+share/fonts/X11/TTF/Go-Regular.ttf
