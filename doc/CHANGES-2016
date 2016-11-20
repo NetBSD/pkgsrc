@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4751 2016/11/20 20:23:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4752 2016/11/20 21:13:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6549,3 +6549,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added fonts/go-ttf version 20161118 [wiz 2016-11-20]
 	Updated x11/p5-Wx to 0.9928 [wiz 2016-11-20]
 	Updated archivers/p5-Archive-Tar to 2.18 [wiz 2016-11-20]
+	Updated multimedia/py-m3u8 to 0.3.0 [joerg 2016-11-20]
