@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2016/11/01 15:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2016/11/20 10:47:36 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 COMMENT=	Framework for writing networked applications
 .include "../../net/py-twisted/Makefile.common"
 
+DEPENDS+=	${PYPKGPREFIX}-incremental-[0-9]*:../../devel/py-incremental
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.0.1:../../devel/py-ZopeInterface
 
