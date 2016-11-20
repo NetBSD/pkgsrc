@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/11/20 10:20:37 wiz Exp $
+
+SHA1 (incremental-16.10.1.tar.gz) = 7ec58968fd367d20856488a8991f3a586c7a8695
+RMD160 (incremental-16.10.1.tar.gz) = f57220e5a6d0f4be82c8b20fa9b3ea540ba59a11
+SHA512 (incremental-16.10.1.tar.gz) = b60ebc41c32f27da5a489ebd76c7fa1707a5a38c32097bfab20f355a86b490ce21acc7be157d0309a30c63b85d79f72f850587d1449110bd1a8075ca3586db5e
+Size (incremental-16.10.1.tar.gz) = 16066 bytes
