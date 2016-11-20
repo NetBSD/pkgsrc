@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/06 23:19:07 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/11/20 10:57:31 alnsn Exp $
 bin/ldoc${LUADOTVER}
 ${LUA_LDIR}/ldoc/SciTE.properties
 ${LUA_LDIR}/ldoc/builtin/coroutine.lua
@@ -13,9 +13,12 @@ ${LUA_LDIR}/ldoc/builtin/os.lua
 ${LUA_LDIR}/ldoc/builtin/package.lua
 ${LUA_LDIR}/ldoc/builtin/string.lua
 ${LUA_LDIR}/ldoc/builtin/table.lua
+${LUA_LDIR}/ldoc/builtin/utf8.lua
 ${LUA_LDIR}/ldoc/config.ld
 ${LUA_LDIR}/ldoc/doc.lua
 ${LUA_LDIR}/ldoc/html.lua
+${LUA_LDIR}/ldoc/html/_code_css.lua
+${LUA_LDIR}/ldoc/html/_reset_css.lua
 ${LUA_LDIR}/ldoc/html/ldoc_css.lua
 ${LUA_LDIR}/ldoc/html/ldoc_fixed_css.lua
 ${LUA_LDIR}/ldoc/html/ldoc_ltp.lua
