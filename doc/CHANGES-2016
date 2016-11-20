@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4736 2016/11/19 21:53:32 maya Exp $
+$NetBSD: CHANGES-2016,v 1.4737 2016/11/20 02:58:56 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6535,3 +6535,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-XPath to 1.40 [wen 2016-11-18]
 	Updated textproc/p5-podlators to 4.09 [wen 2016-11-18]
 	Updated math/octave to 4.2.0 [maya 2016-11-19]
+	Updated net/mikutter to 3.4.7 [tsutsui 2016-11-20]
