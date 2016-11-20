@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2016/04/27 21:21:18 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2016/11/20 21:10:41 joerg Exp $
 
 SHA1 (firefox-38.8.0esr.source.tar.bz2) = 14367a7102ef2c54e0715bf16340fb4de9cb75ed
 RMD160 (firefox-38.8.0esr.source.tar.bz2) = 70368259e1c2c05253dfd1b0f15f696a890882c3
@@ -43,7 +43,7 @@ SHA1 (patch-gfx_skia_generate__mozbuild.py) = e0bf45842ae74f896678b1c29d97606165
 SHA1 (patch-gfx_skia_moz.build) = ce83717ec6e386d52af75a0f5592fa866b83b3bc
 SHA1 (patch-gfx_thebes_moz.build) = fa468f388322819bfa87681bf0a443fbd16568d1
 SHA1 (patch-gfx_ycbcr_moz.build) = 121386ef62ff7425e6f93bc624555199f2ac3485
-SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f9909ded72762b2c3547dd002707db43745f2b9d
+SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = dc136475637d808055e710a17b16899380b59068
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = ec12085f52b3614bc67b797c3a6b36ab5daee9ea
 SHA1 (patch-intl_hyphenation_hnjalloc.h) = 5b5ac622ed2dd8711f00be0af59c95ebc86a8a78
 SHA1 (patch-intl_unicharutil_util_moz.build) = 1e8eb1f6e66ed80a1689e2205a7d04efe5243d5b
