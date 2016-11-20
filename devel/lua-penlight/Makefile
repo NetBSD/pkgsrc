@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/01/30 10:52:43 alnsn Exp $
+# $NetBSD: Makefile,v 1.10 2016/11/20 10:37:50 alnsn Exp $
 #
 
 DISTNAME=	penlight-${PL_VERSION}
@@ -13,7 +13,7 @@ HOMEPAGE=	http://stevedonovan.github.com/Penlight/
 COMMENT=	Lua libraries for functional programming, OS path management, etc
 LICENSE=	mit
 
-PL_VERSION=	1.3.2
+PL_VERSION=	1.4.1
 DIST_SUBDIR=	lua-penlight
 
 NO_BUILD=	yes
