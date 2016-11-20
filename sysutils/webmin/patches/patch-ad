@@ -1,7 +1,5 @@
-$NetBSD: patch-ad,v 1.8 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-ad,v 1.9 2016/11/20 01:10:47 rillig Exp $
 
---- os_list.txt.orig	2009-03-18 07:30:26.000000000 +0200
-+++ os_list.txt	2009-04-09 12:31:24.000000000 +0300
 --- os_list.txt.orig	2009-03-18 05:30:26.000000000 +0000
 +++ os_list.txt
 @@ -255,19 +255,13 @@ openmamba Linux			$1	openmamba-linux	$1
