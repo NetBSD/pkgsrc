@@ -1,18 +1,16 @@
-$NetBSD: patch-Makefile.PL,v 1.1 2016/06/21 13:23:32 mef Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2016/11/20 09:51:50 wiz Exp $
 
-Adhoc work around not to pick the definition of CURL_DID_MEMORY_FUNC_TYPEDEFS:
-./curlopt-constants.c:19:58: error: non-void function 'constant' should return a value [-Wreturn-type]
-if (strEQ(name, "DID_MEMORY_FUNC_TYPEDEFS")) return CURL_DID_MEMORY_FUNC_TYPEDEFS;
-^
+Build fix for curl-7.50.2.
+https://rt.cpan.org/Public/Bug/Display.html?id=117793
 
---- Makefile.PL.orig	2016-06-21 21:55:38.000000000 +0900
-+++ Makefile.PL	2016-06-21 21:57:43.000000000 +0900
+--- Makefile.PL.orig	2014-02-21 16:08:09.000000000 +0000
++++ Makefile.PL
 @@ -127,7 +127,7 @@ if (!defined($curl_h)) {
      close H;
  
      for my $e (sort @syms) {
 -       if($e =~ /(OBSOLETE|^CURL_EXTERN|_LAST\z|_LASTENTRY\z)/) {
-+       if($e =~ /(OBSOLETE|^CURL_EXTERN|_LAST\z|_LASTENTRY\z|CURL_DID_MEMORY_FUNC_TYPEDEFS\z)/) {
++       if($e =~ /(OBSOLETE|^CURL_EXTERN|^CURL_STRICTER\z||_LAST\z|_LASTENTRY\z)/) {
            next;
         }
         my ($group) = $e =~ m/^([^_]+_)/;
