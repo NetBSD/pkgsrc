@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2016/11/18 18:20:05 joerg Exp $
+$NetBSD: distinfo,v 1.3 2016/11/20 22:14:07 joerg Exp $
 
 SHA1 (creduce-2.5.0.tar.gz) = 3b0400bf9163ff707d9a046b501b75a233f73533
 RMD160 (creduce-2.5.0.tar.gz) = c7166d53c8e57455fabcdbbab82304de7395e05b
@@ -10,5 +10,6 @@ SHA1 (patch-clang__delta_Makefile.in) = 49b005fe89225f785bbe41fb5e0b4a3027121a79
 SHA1 (patch-clang__delta_RemoveBaseClass.cpp) = 1f075a0c271620d9130880afc4f8f774b10a3e8e
 SHA1 (patch-clang__delta_RemoveUnusedOuterClass.cpp) = 647a8950b650c6d786b2ef777716b5bf53e042e2
 SHA1 (patch-clang__delta_RewriteUtils.cpp) = 9ad7111dcf422eed58c7ebc676060e468057c373
+SHA1 (patch-clang__delta_SimplifyNestedClass.cpp) = 1859b62daf06c15f7e5571ecf6caecd4d64f2ab7
 SHA1 (patch-clang__delta_SimplifyStruct.cpp) = 5447d61fef8e95cabb8e735e1b80487bbb866f24
 SHA1 (patch-clang__delta_TransformationManager.cpp) = a280d1eebeb21ea51ec38565230b700a87a66553
