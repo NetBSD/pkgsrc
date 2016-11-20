@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2016/08/17 00:06:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2016/11/20 22:13:18 joerg Exp $
 
 DISTNAME=	fuppes-0.660
 PKGREVISION=	28
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--enable-lame
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/twolame/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/simage/buildlink3.mk"
