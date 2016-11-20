@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.27 2016/09/19 09:04:29 wiz Exp $
+$NetBSD: distinfo,v 1.28 2016/11/20 01:14:21 dholland Exp $
 
 SHA1 (readline-7.0.tar.gz) = d9095fa14a812495052357e1d678b3f2ac635463
 RMD160 (readline-7.0.tar.gz) = 745bfdddd989fe46c55eea1b41cae7848c3bf2e0
 SHA512 (readline-7.0.tar.gz) = 18243189d39bf0d4c8a76cddcce75243c1bae8824c686e9b6ba352667607e5b10c5feb79372a1093c1c388d821841670702e940df12eae94bcebdeed90047870
 Size (readline-7.0.tar.gz) = 2910016 bytes
-SHA1 (patch-ae) = 98ef48c55111de4a9cc9b19fb44b7d139f6de40f
+SHA1 (patch-ae) = d76f0887b2cbb2bb08c5a123397d05e0fbbe2acf
 SHA1 (patch-ag) = 3114e6959dfff3e2aae74c3df3ba4b0f692b79bb
 SHA1 (patch-ah) = d812ea068415939beb42c72dd9bed8d210db57d1
 SHA1 (patch-colors.c) = beb4cdb33e1b361804a7d8d3b36dbd137e7502fd
-SHA1 (patch-examples_Makefile.in) = f9fce95533ee578c5323d3dbf5eb95fa344dd4ef
+SHA1 (patch-examples_Makefile.in) = 406e208ca140cab4bd34a1aabe63e2c05dacc924
