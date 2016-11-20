@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4741 2016/11/20 08:03:32 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4742 2016/11/20 09:41:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6539,3 +6539,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBD-mysql to 4.040 [wen 2016-11-20]
 	Updated net/p5-Net-Twitter to 4.01041 [wen 2016-11-20]
 	Updated shells/bash to 4.4.005 [wen 2016-11-20]
+	Updated games/lgogdownloader to 3.0 [wiz 2016-11-20]
