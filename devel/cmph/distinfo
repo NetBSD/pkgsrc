@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:19 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/11/20 12:22:48 alnsn Exp $
 
-SHA1 (cmph-1.1.tar.gz) = 005b17395451284cfbc9d4b3d65c7f64a2a97997
-RMD160 (cmph-1.1.tar.gz) = 55392941671d7aa5ade26e8d2f62ea05cc47e543
-SHA512 (cmph-1.1.tar.gz) = e920696bb962c111e2770fbaefc3fa63b04278fd89d7cc8ee44a1cb1bbd15456260c5d0fbc30032044fe19f500b2e58012df03e8864b173a2500427fbb93a13c
-Size (cmph-1.1.tar.gz) = 425150 bytes
-SHA1 (patch-src_brz.c) = 771589ac40e11240a0746f19cb63490d828c61db
+SHA1 (cmph-2.0.tar.gz) = eabdd4cd9f9bb2fed6773caac8d91638ad2d02b7
+RMD160 (cmph-2.0.tar.gz) = fdeb1807657d1cd1ad155a4c81ed222ce8c6c90a
+SHA512 (cmph-2.0.tar.gz) = 7f37a8dcfce047ada9968681e07f66f014f8090aa5ce99358944a60715c7ef2bc62abf4b5c146fe99a0c812f2286ff0c009683b702a4e20c66617d955cf80caa
+Size (cmph-2.0.tar.gz) = 480924 bytes
+SHA1 (patch-src_brz.c) = 56060fd25dcad2844383f310e26f2ae5cd6aaabf
 SHA1 (patch-src_fch__buckets.c) = 847906f8278ea8068a0897259e7a1bdfb6634d9b
