@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1136 2016/11/10 06:15:48 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1137 2016/11/21 11:58:49 fhajny Exp $
 #
 
 COMMENT=	Networking tools
@@ -625,6 +625,7 @@ SUBDIR+=	py-irclib
 SUBDIR+=	py-junos-eznc
 SUBDIR+=	py-kenosis
 SUBDIR+=	py-kombu
+SUBDIR+=	py-lexicon
 SUBDIR+=	py-libdnet
 SUBDIR+=	py-libpcap
 SUBDIR+=	py-medusa
@@ -647,6 +648,7 @@ SUBDIR+=	py-softlayer
 SUBDIR+=	py-softlayer_messaging
 SUBDIR+=	py-spreadmodule
 SUBDIR+=	py-suds
+SUBDIR+=	py-tldextract
 SUBDIR+=	py-tweepy
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-docs
