@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.19 2016/01/28 20:50:07 tron Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.20 2016/11/21 00:01:01 pho Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -53,7 +53,7 @@ PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install libfuse."
 PKG_FAIL_REASON+=	"Couldn't find fuse headers, please install librefuse."
 .     endif
 
-CFLAGS.NetBSD+=		-D_KERNTYPES
+CFLAGS.NetBSD+=		-D_KERNTYPES -D_NETBSD_SOURCE
 LDFLAGS.DragonFly+=	-lpuffs
 
 .    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
