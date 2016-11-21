@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/11/21 18:20:30 minskim Exp $
+
+SHA1 (benchmark-1.1.0.tar.gz) = 8c539bbe2a212618fa87b6c38fba087100b6e4ae
+RMD160 (benchmark-1.1.0.tar.gz) = 7e7f2d687ef515a846c04933545f7c63752d2de5
+SHA512 (benchmark-1.1.0.tar.gz) = 533061531e6a37723a626addc9e779018c4c2cfc8634ae45860eec0d3800103b5b562f865ac1dc0c8dbe045579b81e59de887e1c48318cebf160f03c18321831
+Size (benchmark-1.1.0.tar.gz) = 87199 bytes
