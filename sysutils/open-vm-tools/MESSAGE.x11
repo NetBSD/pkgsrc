@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE.x11,v 1.1 2016/11/21 00:14:16 pho Exp $
+
+You need to mount the vmblock file system in order to enable the clipboard
+synchronization and drag and drop support:
+
+    # mkdir /var/run/vmblock-fuse
+    # vmware-vmblock-fuse /var/run/vmblock-fuse
+
+Then start vmware-user-suid-wrapper in your .xinitrc:
+
+    % vmware-user-suid-wrapper
+
+===========================================================================
