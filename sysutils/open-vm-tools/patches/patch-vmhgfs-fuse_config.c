@@ -1,4 +1,4 @@
-$NetBSD: patch-vmhgfs-fuse_config.c,v 1.1 2016/11/21 00:14:16 pho Exp $
+$NetBSD: patch-vmhgfs-fuse_config.c,v 1.2 2016/11/21 00:16:29 wiz Exp $
 
 * The original SysCompatCheck() only works on Linux.
 * librefuse doesn't support the old style -ho option.
@@ -17,7 +17,7 @@ $NetBSD: patch-vmhgfs-fuse_config.c,v 1.1 2016/11/21 00:14:16 pho Exp $
  #define PROC_FILESYSTEMS       "/proc/filesystems"
  #define FUSER_KERNEL_FS        "fuse"
  
-+#if defined(__linuX__)
++#if defined(__linux__)
  /*
   *----------------------------------------------------------------------
   *
