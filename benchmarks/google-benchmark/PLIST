@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/11/21 18:20:30 minskim Exp $
+include/benchmark/benchmark.h
+include/benchmark/benchmark_api.h
+include/benchmark/macros.h
+include/benchmark/reporter.h
+lib/libbenchmark.a
