@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4755 2016/11/21 00:14:16 pho Exp $
+$NetBSD: CHANGES-2016,v 1.4756 2016/11/21 11:45:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6553,3 +6553,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mkvtoolnix to 9.5.0 [joerg 2016-11-20]
 	Updated net/youtube-dl to 20161118 [leot 2016-11-20]
 	Updated sysutils/open-vm-tools to 10.0.7nb4 [pho 2016-11-20]
+	Added devel/py-requests-file version 1.4.1 [fhajny 2016-11-21]
