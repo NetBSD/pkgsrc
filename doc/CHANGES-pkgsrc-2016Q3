@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.13 2016/11/07 19:16:38 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.14 2016/11/21 07:08:58 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -110,4 +110,7 @@ www/py-django: security fix
 
 Pullup ticket #5146 - requested by spz
 emulators/qemu: security fix
+
+Pullup ticket #5157 - requested by taca
+lang/php56: security fix
 
