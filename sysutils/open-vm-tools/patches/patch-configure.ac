@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2016/10/09 03:41:56 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.3 2016/11/21 00:14:16 pho Exp $
 
 --- configure.ac.orig	2016-02-16 20:06:45.000000000 +0000
 +++ configure.ac
@@ -12,6 +12,15 @@ $NetBSD: patch-configure.ac,v 1.2 2016/10/09 03:41:56 ryoon Exp $
     [*])
        AC_MSG_WARN([This is an untested and unsupported Operating System. Proceed at your own peril.])
        ;;
+@@ -374,7 +377,7 @@ AC_VMW_CHECK_LIB([fuse],
+                  [],
+                  [],
+                  [fuse.h],
+-                 [fuse_main],
++                 [fuse_exit],
+                  [have_fuse=yes],
+                  [have_fuse=no;
+                   AC_MSG_WARN([Fuse is missing, vmblock-fuse/vmhgfs-fuse will be disabled.])])
 @@ -1064,6 +1067,15 @@ if test "$os" = "linux"; then
     buildHgfsmounter=yes
  fi
