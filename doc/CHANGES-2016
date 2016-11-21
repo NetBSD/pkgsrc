@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4757 2016/11/21 11:50:15 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4758 2016/11/21 11:56:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6555,3 +6555,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/open-vm-tools to 10.0.7nb4 [pho 2016-11-20]
 	Added devel/py-requests-file version 1.4.1 [fhajny 2016-11-21]
 	Added net/py-tldextract version 2.0.2 [fhajny 2016-11-21]
+	Added net/py-lexicon version 1.1.18 [fhajny 2016-11-21]
