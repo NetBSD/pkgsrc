@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2016/11/20 01:18:46 marino Exp $
+$NetBSD: distinfo,v 1.10 2016/11/21 14:04:35 marino Exp $
 
-SHA1 (pkg-1.9.99.3.tar.xz) = 89a75e19cccda903ca74e1f44c5bbd03ae32fee3
-RMD160 (pkg-1.9.99.3.tar.xz) = 9bab612c3def26b4b9e1124f5c04fbd3762a584c
-SHA512 (pkg-1.9.99.3.tar.xz) = 602b5d8cbe1e55a1539cfb68045c061c17c20f8cf1705ba14dfac9b889840be48b21d5e452ab69c51636f1708df89b16636c5f807812f28e739f76caa2fc93d7
-Size (pkg-1.9.99.3.tar.xz) = 1918096 bytes
+SHA1 (pkg-1.9.99.4.tar.xz) = e7f2f5c9481c6a4f5e05e08818ea8f114fc1bfcf
+RMD160 (pkg-1.9.99.4.tar.xz) = 320f9866503d028f4f54f466a9ebc86cc9378331
+SHA512 (pkg-1.9.99.4.tar.xz) = eb4b01e26cffec6b6cd5604a81ba515eadcce09b4742876285bf8f510591c122665a1e598c100266f943439d0b2867b5a6e5702bc174ea302688bb73e0128d8b
+Size (pkg-1.9.99.4.tar.xz) = 1923452 bytes
 SHA1 (patch-docs_Makefile.am) = aa6d5c9310c644d13d55c3176cd186c37cccc7c2
