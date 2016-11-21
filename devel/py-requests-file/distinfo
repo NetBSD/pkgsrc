@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/11/21 11:45:32 fhajny Exp $
+
+SHA1 (requests-file-1.4.1.tar.gz) = 7ad7ecd8279f943477b79d59c9418f968bd44641
+RMD160 (requests-file-1.4.1.tar.gz) = d91c353c3f811fe4ae171e614e780656307f8efc
+SHA512 (requests-file-1.4.1.tar.gz) = 3ca1a365153f1a6b9114cdc0ad6165d22e07e9a29509e0a1a7f35558cff66d506db6e6cc1cad47a4b7695ca12f824607c951acb7da5904ff23073c90c5352f39
+Size (requests-file-1.4.1.tar.gz) = 5856 bytes
