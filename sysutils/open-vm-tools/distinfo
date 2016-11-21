@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2016/10/17 20:55:49 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2016/11/21 00:14:16 pho Exp $
 
 SHA1 (open-vm-tools-10.0.7-3227872.tar.gz) = cd22a3d79d68de46647e8add78bcaf829bb0598d
 RMD160 (open-vm-tools-10.0.7-3227872.tar.gz) = df8cfa62ffd0fbba0432cb0deac0f202b2278625
@@ -27,7 +27,7 @@ SHA1 (patch-bh) = 813a390478247b12c0ec0dd9e84302f1700b99ad
 SHA1 (patch-bm) = 219f196fc07e3746e9e6eb340be5e647544a255a
 SHA1 (patch-bt) = 34c85d8d994c33fb4e18f76bb8b6baa41098f23e
 SHA1 (patch-bu) = 33da24db6d7e3dd75ee6f4f1249772de506ab64d
-SHA1 (patch-configure.ac) = cf2c2bb8526ee4916a1a81059b9b776cec97b877
+SHA1 (patch-configure.ac) = 1a8422cdca984b32c0d9e4fa926a92fa3b9178ba
 SHA1 (patch-libDeployPkg_linuxDeployment.c) = f50c7ff2fa07ab15716128654cc814a81cb924af
 SHA1 (patch-libDeployPkg_processPosix.c) = 9f62110eb903eec85e51d8e579abc3d36e54fe7e
 SHA1 (patch-lib_dynxdr_xdrutil.c) = 2a644aeb47bcef7f4db953250b116ec700940531
@@ -53,3 +53,5 @@ SHA1 (patch-vgauth_common_VGAuthLog.c) = 9beacc4665fb6133059279be2594892ebb6ba5d
 SHA1 (patch-vgauth_lib_common.c) = 0d949bc3c4a00a92f89177e4f20ef2f848f78532
 SHA1 (patch-vgauth_lib_impersonateLinux.c) = 1c925eab81525df06e4ebf906f835170b4320768
 SHA1 (patch-vmblockmounter_vmblockmounter.c) = 4287303b188f4df7a2785fe72bbab820e33d6a07
+SHA1 (patch-vmhgfs-fuse_config.c) = d14e2c585a7c5716ea9dd4b60ef1411d299282ae
+SHA1 (patch-vmhgfs-fuse_fsutil.h) = 9233e5612a1f22ab4b43b04cfca5f0f7d120bc21
