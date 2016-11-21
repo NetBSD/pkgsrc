@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST.common,v 1.3 2016/10/09 03:41:56 ryoon Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2016/11/21 00:14:16 pho Exp $
+bin/vmhgfs-fuse
 bin/vmtoolsd
 bin/vmware-checkvm
 bin/vmware-hgfsclient
 bin/vmware-namespace-cmd
 bin/vmware-rpctool
 bin/vmware-toolbox-cmd
+bin/vmware-vmblock-fuse
 bin/vmware-xferlogs
 include/libDeployPkg/guestcust-events.h
 include/libDeployPkg/imgcust-api.h
