@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4756 2016/11/21 11:45:45 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4757 2016/11/21 11:50:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6554,3 +6554,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20161118 [leot 2016-11-20]
 	Updated sysutils/open-vm-tools to 10.0.7nb4 [pho 2016-11-20]
 	Added devel/py-requests-file version 1.4.1 [fhajny 2016-11-21]
+	Added net/py-tldextract version 2.0.2 [fhajny 2016-11-21]
