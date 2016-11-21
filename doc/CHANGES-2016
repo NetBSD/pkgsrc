@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4758 2016/11/21 11:56:54 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4759 2016/11/21 18:22:20 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6556,3 +6556,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-requests-file version 1.4.1 [fhajny 2016-11-21]
 	Added net/py-tldextract version 2.0.2 [fhajny 2016-11-21]
 	Added net/py-lexicon version 1.1.18 [fhajny 2016-11-21]
+	Added benchmarks/google-benchmark version 1.1.0 [minskim 2016-11-21]
