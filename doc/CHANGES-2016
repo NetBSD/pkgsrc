@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4762 2016/11/22 15:20:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4763 2016/11/22 21:03:03 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6560,3 +6560,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mpv to 0.22.0 [leot 2016-11-22]
 	Updated www/w3m to 0.5.3.0.20161120 [wiz 2016-11-22]
 	Updated graphics/tiff to 4.0.7 [wiz 2016-11-22]
+	Updated sysutils/xentools46 to 4.6.3nb2 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel46 to 4.6.3nb2 [bouyer 2016-11-22]
+	Updated sysutils/xentools45 to 4.5.5nb1 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel45 to 4.5.5nb1 [bouyer 2016-11-22]
+	Updated sysutils/xentools42 to 4.2.5nb19 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel42 to 4.2.5nb13 [bouyer 2016-11-22]
+	Updated sysutils/xentools41 to 4.1.6.1nb17 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel41 to 4.1.6.1nb21 [bouyer 2016-11-22]
