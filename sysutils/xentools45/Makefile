@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2016/09/21 17:03:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.40 2016/11/22 20:57:10 bouyer Exp $
 
 VERSION=	4.5.5
-#PKGREVISION=	0
+PKGREVISION=	1
 VERSION_IPXE=	9a93db3f0947484e30e753bbd61a10b17336e20e
 
 DISTNAME=		xen-${VERSION}
