@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2016/07/04 07:30:49 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2016/11/22 20:59:01 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -20,6 +20,9 @@ SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736
 SHA1 (patch-.._docs_misc_xl-disk-configuration.txt) = 5b59cfc2569d1a4c10d6c0fcb98ed35278723b79
 SHA1 (patch-Makefile) = 87defa487fcc7ba36fada41a7347e2f969f59045
 SHA1 (patch-Rules.mk) = ec0af52c494718204f15adac30ddd06713ff572c
+SHA1 (patch-XSA-197-1) = 4d373d23cd7032cc505300d865b6eaa8e80e2290
+SHA1 (patch-XSA-197-2) = 3dc303f22d0744f64eb4552f4de10fc11f32bb01
+SHA1 (patch-XSA-198) = 5a61b6b4af265ba0b90d5750166924daafe554d7
 SHA1 (patch-configure) = a58d149de07613fb03444234278778a6a24b9b26
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
