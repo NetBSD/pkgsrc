@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4763 2016/11/22 21:03:03 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.4764 2016/11/22 23:52:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6568,3 +6568,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel42 to 4.2.5nb13 [bouyer 2016-11-22]
 	Updated sysutils/xentools41 to 4.1.6.1nb17 [bouyer 2016-11-22]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb21 [bouyer 2016-11-22]
+	Updated net/syncthing to 0.14.12 [wiz 2016-11-22]
