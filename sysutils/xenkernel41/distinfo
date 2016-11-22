@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2016/09/08 15:41:01 bouyer Exp $
+$NetBSD: distinfo,v 1.45 2016/11/22 20:53:40 bouyer Exp $
 
 SHA1 (xen-4.1.6.1.tar.gz) = e5f15feb0821578817a65ede16110c6eac01abd0
 RMD160 (xen-4.1.6.1.tar.gz) = bff11421fc44a26f2cc3156713267abcb36d7a19
@@ -41,6 +41,9 @@ SHA1 (patch-XSA-182) = 70a7a6175a4b87ffaf72cbc5a3932f076efa3f9c
 SHA1 (patch-XSA-185) = a2313922aa4dad734b96c80f64fe54eca3c14019
 SHA1 (patch-XSA-187-1) = 55ea0c2d9c7d8d9476a5ab97342ff552be4faf56
 SHA1 (patch-XSA-187-2) = e21b24771fa9417f593b8f6d1550660bbad36b98
+SHA1 (patch-XSA-191) = 5da559e104543b8d22ea60378d9160d2ad83b8d0
+SHA1 (patch-XSA-192) = b0f2801fe6db91c2a98b82897cdee057062c6c2b
+SHA1 (patch-XSA-195) = a04295b397126e1cc1f129bb3cb9fb872fcbb373
 SHA1 (patch-xen_Makefile) = d1c7e4860221f93d90818f45a77748882486f92b
 SHA1 (patch-xen_arch_x86_Rules.mk) = 6b9b4bfa28924f7d3f6c793a389f1a7ac9d228e2
 SHA1 (patch-xen_arch_x86_cpu_mcheck_vmce.c) = 5afd01780a13654f1d21bf1562f6431c8370be0b

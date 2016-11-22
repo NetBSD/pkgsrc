@@ -1,0 +1,67 @@
+$NetBSD: patch-XSA-197-2,v 1.1 2016/11/22 20:55:29 bouyer Exp $
+
+Backported from:
+
+From: Jan Beulich <jbeulich@suse.com>
+Subject: xen: fix ioreq handling
+
+Avoid double fetches and bounds check size to avoid overflowing
+internal variables.
+
+This is XSA-197.
+
+Reported-by: yanghongke <yanghongke@huawei.com>
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: Stefano Stabellini <sstabellini@kernel.org>
+
+--- qemu-xen/xen-all.c.orig	2016-11-22 15:13:15.000000000 +0100
++++ qemu-xen/xen-all.c	2016-11-22 16:19:25.000000000 +0100
+@@ -661,6 +661,10 @@
+ 
+     sign = req->df ? -1 : 1;
+ 
++    if (req->size > sizeof(uint32_t)) {
++        hw_error("PIO: bad size (%u)", req->size);
++    }
++
+     if (req->dir == IOREQ_READ) {
+         if (!req->data_is_ptr) {
+             req->data = do_inp(req->addr, req->size);
+@@ -696,6 +700,10 @@
+ 
+     sign = req->df ? -1 : 1;
+ 
++    if (req->size > sizeof(req->data)) {
++        hw_error("MMIO: bad size (%u)", req->size);
++    }
++
+     if (!req->data_is_ptr) {
+         if (req->dir == IOREQ_READ) {
+             for (i = 0; i < req->count; i++) {
+@@ -783,11 +791,13 @@
+         req.df = 1;
+         req.type = buf_req->type;
+         req.data_is_ptr = 0;
++        xen_rmb();
+         qw = (req.size == 8);
+         if (qw) {
+             buf_req = &state->buffered_io_page->buf_ioreq[
+                 (state->buffered_io_page->read_pointer + 1) % IOREQ_BUFFER_SLOT_NUM];
+             req.data |= ((uint64_t)buf_req->data) << 32;
++            xen_rmb();
+         }
+ 
+         handle_ioreq(&req);
+@@ -819,7 +829,11 @@
+ 
+     handle_buffered_iopage(state);
+     if (req) {
+-        handle_ioreq(req);
++        ioreq_t copy = *req;
++
++        xen_rmb();
++        handle_ioreq(&copy);
++        req->data = copy.data;
+ 
+         if (req->state != STATE_IOREQ_INPROCESS) {
+             fprintf(stderr, "Badness in I/O request ... not in service?!: "
