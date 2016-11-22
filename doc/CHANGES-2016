@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4759 2016/11/21 18:22:20 minskim Exp $
+$NetBSD: CHANGES-2016,v 1.4760 2016/11/22 11:06:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6557,3 +6557,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/py-tldextract version 2.0.2 [fhajny 2016-11-21]
 	Added net/py-lexicon version 1.1.18 [fhajny 2016-11-21]
 	Added benchmarks/google-benchmark version 1.1.0 [minskim 2016-11-21]
+	Updated multimedia/mpv to 0.22.0 [leot 2016-11-22]
