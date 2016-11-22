@@ -1,0 +1,69 @@
+$NetBSD: patch-XSA-197,v 1.1 2016/11/22 20:53:40 bouyer Exp $
+
+Backported from:
+
+From: Jan Beulich <jbeulich@suse.com>
+Subject: xen: fix ioreq handling
+
+Avoid double fetches and bounds check size to avoid overflowing
+internal variables.
+
+This is XSA-197.
+
+Reported-by: yanghongke <yanghongke@huawei.com>
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: Ian Jackson <ian.jackson@eu.citrix.com>
+
+--- ioemu-qemu-xen/i386-dm/helper2.c.orig	2013-07-17 12:59:40.000000000 +0200
++++ ioemu-qemu-xen/i386-dm/helper2.c	2016-11-22 16:15:32.000000000 +0100
+@@ -333,6 +333,11 @@
+ 
+     sign = req->df ? -1 : 1;
+ 
++    if (req->size > sizeof(unsigned long)) {
++        fprintf(stderr, "PIO: bad size (%u)\n", req->size);
++        exit(-1);
++    }
++
+     if (req->dir == IOREQ_READ) {
+         if (!req->data_is_ptr) {
+             req->data = do_inp(env, req->addr, req->size);
+@@ -368,6 +373,11 @@
+ 
+     sign = req->df ? -1 : 1;
+ 
++    if (req->size > sizeof(req->data)) {
++        fprintf(stderr, "MMIO: bad size (%u)\n", req->size);
++        exit(-1);
++    }
++
+     if (!req->data_is_ptr) {
+         if (req->dir == IOREQ_READ) {
+             for (i = 0; i < req->count; i++) {
+@@ -481,11 +491,13 @@
+         req.df = 1;
+         req.type = buf_req->type;
+         req.data_is_ptr = 0;
++        xen_rmb();
+         qw = (req.size == 8);
+         if (qw) {
+             buf_req = &buffered_io_page->buf_ioreq[
+                 (buffered_io_page->read_pointer+1) % IOREQ_BUFFER_SLOT_NUM];
+             req.data |= ((uint64_t)buf_req->data) << 32;
++            xen_rmb();
+         }
+ 
+         __handle_ioreq(env, &req);
+@@ -512,7 +524,11 @@
+ 
+     __handle_buffered_iopage(env);
+     if (req) {
+-        __handle_ioreq(env, req);
++        ioreq_t copy = *req;
++
++        xen_rmb();
++        __handle_ioreq(env, &copy);
++        req->data = copy.data;
+ 
+         if (req->state != STATE_IOREQ_INPROCESS) {
+             fprintf(logfile, "Badness in I/O request ... not in service?!: "
