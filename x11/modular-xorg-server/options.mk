@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2016/03/14 02:13:33 tnn Exp $
+# $NetBSD: options.mk,v 1.16 2016/11/22 16:02:54 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-dri2
 CONFIGURE_ARGS+=	--enable-dri3
 CONFIGURE_ARGS+=	--enable-glx
-CONFIGURE_ARGS+=	--enable-aiglx
 CONFIGURE_ARGS+=	--enable-glamor
 CONFIGURE_ARGS+=	--enable-present
 .else
