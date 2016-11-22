@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2016/09/21 17:03:38 bouyer Exp $
+$NetBSD: distinfo,v 1.28 2016/11/22 20:57:10 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -21,6 +21,9 @@ SHA1 (patch-.._docs_misc_xl-disk-configuration.txt) = 5b59cfc2569d1a4c10d6c0fcb9
 SHA1 (patch-Makefile) = eb5d3211b26c5f10a24fcca658c83d5f60990d9f
 SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
 SHA1 (patch-XSA-184) = b9089f29b67d1756e2c4919df30041282cebdfed
+SHA1 (patch-XSA-197-1) = a481196957f8942253cb18e5eef089e491d02652
+SHA1 (patch-XSA-197-2) = f5cf82cf04303f145e3cfea29c4104bc058dd043
+SHA1 (patch-XSA-198) = 5a61b6b4af265ba0b90d5750166924daafe554d7
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
 SHA1 (patch-configure) = 97fa4274e425984d593cd93aea36edc681462b88
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
