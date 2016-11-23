@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/29 19:41:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/23 15:22:48 fhajny Exp $
 bin/oid2name
 bin/pg_standby
 bin/vacuumlo
@@ -218,7 +218,8 @@ share/postgresql/extension/unaccent--1.0--1.1.sql
 share/postgresql/extension/unaccent--1.1.sql
 share/postgresql/extension/unaccent--unpackaged--1.0.sql
 share/postgresql/extension/unaccent.control
-${PLIST.uuid}share/postgresql/extension/uuid-ossp--1.0.sql
+${PLIST.uuid}share/postgresql/extension/uuid-ossp--1.0--1.1.sql
+${PLIST.uuid}share/postgresql/extension/uuid-ossp--1.1.sql
 ${PLIST.uuid}share/postgresql/extension/uuid-ossp--unpackaged--1.0.sql
 ${PLIST.uuid}share/postgresql/extension/uuid-ossp.control
 share/postgresql/tsearch_data/unaccent.rules
