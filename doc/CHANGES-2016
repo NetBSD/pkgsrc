@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4769 2016/11/23 09:23:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4770 2016/11/23 09:27:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6574,3 +6574,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/p5-XML-Compile version 1.54 [wiz 2016-11-23]
 	Added textproc/p5-XML-Compile-Cache version 1.05 [wiz 2016-11-23]
 	Added textproc/p5-XML-Compile-SOAP version 3.20 [wiz 2016-11-23]
+	Added textproc/p5-XML-Compile-SOAP12 version 3.04 [wiz 2016-11-23]
