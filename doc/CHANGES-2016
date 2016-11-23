@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4765 2016/11/23 08:20:34 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4766 2016/11/23 09:15:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6570,3 +6570,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel41 to 4.1.6.1nb21 [bouyer 2016-11-22]
 	Updated net/syncthing to 0.14.12 [wiz 2016-11-22]
 	Updated x11/slock to 1.4 [leot 2016-11-23]
+	Added textproc/p5-XML-Compile-Tester version 0.90 [wiz 2016-11-23]
