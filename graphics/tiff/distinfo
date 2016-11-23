@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.70 2016/11/22 15:19:54 wiz Exp $
+$NetBSD: distinfo,v 1.71 2016/11/23 13:51:29 he Exp $
 
 SHA1 (tiff-4.0.7.tar.gz) = 2c1b64478e88f93522a42dd5271214a0e5eae648
 RMD160 (tiff-4.0.7.tar.gz) = 582e19c31e7f29d9ed36995dcad7ad68802cbadb
 SHA512 (tiff-4.0.7.tar.gz) = 941357bdd5f947cdca41a1d31ae14b3fadc174ae5dce7b7981dbe58f61995f575ac2e97a7cc4fcc435184012017bec0920278263490464644f2cdfad9a6c5ddc
 Size (tiff-4.0.7.tar.gz) = 2076392 bytes
 SHA1 (patch-configure) = a0032133f06b6ac92bbf52349fabe83f74ea14a6
+SHA1 (patch-html_man_Makefile.in) = 705604e2a3065da192e7354a4a9cdcd16bd6823d
+SHA1 (patch-man_Makefile.in) = ff073529c9d3ab98a03efa7d98c3263c1782482f
