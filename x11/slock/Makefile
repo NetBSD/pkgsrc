@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/02/28 19:49:06 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2016/11/23 08:20:21 leot Exp $
 
-DISTNAME=		slock-1.3
+DISTNAME=		slock-1.4
 CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/tools/
 
@@ -10,6 +10,8 @@ COMMENT=		Simple X11 screen locker
 LICENSE=		mit
 
 MAKE_JOBS_SAFE=	no
+
+.include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure
@@ -22,6 +24,9 @@ SUBST_SED.makefile+=	-e '/^CPPFLAGS/ s,-DHAVE_SHADOW_H,,'
 SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^CPPFLAGS *= ,CPPFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
+.if ${OPSYS} == "OpenBSD"
+SUBST_SED.makefile+=	-e 's,^COMPATSRC *=.*$$,COMPATSRC = ,'
+.endif
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 
 # Bump _XOPEN_SOURCE version to 600 in order to avoid "Compiler or options
@@ -34,16 +39,15 @@ SUBST_SED.slock+=	-e '/_XOPEN_SOURCE/ s/500/600/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/bsd.prefs.mk"
-
 .if !(${OPSYS:M*BSD} != "" || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly")
-CFLAGS+=		-DHAVE_SHADOW_H
+CPPFLAGS+=		-DHAVE_SHADOW_H
 .endif
 
 .if !(${OPSYS} == "OpenBSD" || ${OPSYS} == "Darwin")
 LIBS+=	-lcrypt
-
 .endif
+
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# needed for setgroups(2)
 
 SPECIAL_PERMS+=	bin/slock ${SETUID_ROOT_PERMS}
 
