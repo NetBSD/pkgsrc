@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16714 2016/11/22 15:20:06 wiz Exp $
+$NetBSD: TODO,v 1.16715 2016/11/23 07:40:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1211,6 +1211,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
+	o p5-IO-Socket-SSL-2.039
 	o p5-IP-Country-3.03
 	o p5-JSON-XS-3.030
 	o p5-Memoize-Memcached-0.11
@@ -1231,6 +1232,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
+	o p5-Params-ValidationCompiler-0.19
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Publican-4.3.2
@@ -1242,6 +1244,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
+	o p5-Time-HiRes-1.9741
 	o p5-X11-Protocol-29
 	o p5-YAML-1.19
 	o p5-eBay-API-0.29
