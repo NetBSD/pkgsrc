@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4767 2016/11/23 09:17:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4768 2016/11/23 09:21:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6572,3 +6572,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/slock to 1.4 [leot 2016-11-23]
 	Added textproc/p5-XML-Compile-Tester version 0.90 [wiz 2016-11-23]
 	Added textproc/p5-XML-Compile version 1.54 [wiz 2016-11-23]
+	Added textproc/p5-XML-Compile-Cache version 1.05 [wiz 2016-11-23]
