@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/11/07 13:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/11/23 16:11:52 wiedi Exp $
 
 DISTNAME=		xapian-core-${VERSION}
 VERSION=		1.4.1
@@ -17,6 +17,8 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
 TEST_TARGET=		check
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/libuuid/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
