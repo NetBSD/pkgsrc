@@ -1,0 +1,6 @@
+Many (professional) applications process XML messages based on a
+formal specification, expressed in XML Schemas. XML::Compile
+translates between XML and Perl with the help of such schemas. Your
+Perl program only handles a tree of nested HASHes and ARRAYs, and
+does not need to understand namespaces and other general XML and
+schema nastiness.
