@@ -1,0 +1,4 @@
+The XML::Compile module suite has extensive regression testing.
+Probably, you want to do regression testing as well. This module
+provide functions which simplify writing tests for XML::Compile
+related distributions.
