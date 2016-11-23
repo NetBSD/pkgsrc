@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.897 2016/10/26 07:50:54 kleink Exp $
+# $NetBSD: Makefile,v 1.898 2016/11/23 09:26:31 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -593,6 +593,11 @@ SUBDIR+=	p5-XML-Bare
 SUBDIR+=	p5-XML-Catalog
 SUBDIR+=	p5-XML-Checker
 SUBDIR+=	p5-XML-Clean
+SUBDIR+=	p5-XML-Compile
+SUBDIR+=	p5-XML-Compile-Cache
+SUBDIR+=	p5-XML-Compile-SOAP
+SUBDIR+=	p5-XML-Compile-SOAP12
+SUBDIR+=	p5-XML-Compile-Tester
 SUBDIR+=	p5-XML-DOM
 SUBDIR+=	p5-XML-Descent
 SUBDIR+=	p5-XML-Dumper
