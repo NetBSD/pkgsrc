@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/11/22 15:19:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/11/23 13:51:29 he Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/pal2rgb
@@ -30,8 +30,6 @@ man/man1/fax2tiff.1
 man/man1/pal2rgb.1
 man/man1/ppm2tiff.1
 man/man1/raw2tiff.1
-man/man1/rgb2ycbcr.1
-man/man1/thumbnail.1
 man/man1/tiff2bw.1
 man/man1/tiff2pdf.1
 man/man1/tiff2ps.1
@@ -174,8 +172,6 @@ share/doc/tiff/html/man/libtiff.3tiff.html
 share/doc/tiff/html/man/pal2rgb.1.html
 share/doc/tiff/html/man/ppm2tiff.1.html
 share/doc/tiff/html/man/raw2tiff.1.html
-share/doc/tiff/html/man/rgb2ycbcr.1.html
-share/doc/tiff/html/man/thumbnail.1.html
 share/doc/tiff/html/man/tiff2bw.1.html
 share/doc/tiff/html/man/tiff2pdf.1.html
 share/doc/tiff/html/man/tiff2ps.1.html
