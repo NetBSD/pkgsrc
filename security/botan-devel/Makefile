@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/11/11 19:46:05 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2016/11/23 13:01:54 joerg Exp $
 
 DISTNAME=	Botan-1.11.33
 PKGNAME=	${DISTNAME:tl}
@@ -25,6 +25,18 @@ REPLACE_PYTHON+=	*.py src/scripts/*.py
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 CONFIGURE_ARGS+=	--cc-bin=${CXX} --cc=clang
+.endif
+
+.if ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ARGS+=	--cpu=amd64
+.elif ${MACHINE_ARCH} == "i386"
+CONFIGURE_ARGS+=	--cpu=i386
+.elif ${MACHINE_ARCH} == "powerpc"
+CONFIGURE_ARGS+=	--cpu=ppc
+.elif ${MACHINE_ARCH} == "powerpc64"
+CONFIGURE_ARGS+=	--cpu=ppc64
+.elif ${MACHINE_ARCH} == "arm"
+CONFIGURE_ARGS+=	--cpu=arm
 .endif
 
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
