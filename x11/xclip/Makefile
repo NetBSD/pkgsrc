@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/11/16 15:29:35 leot Exp $
+# $NetBSD: Makefile,v 1.20 2016/11/23 23:41:30 wiedi Exp $
 
 DISTNAME=	xclip-0.13
 CATEGORIES=	x11
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake
+
+LDFLAGS.SunOS+=	-liconv
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
