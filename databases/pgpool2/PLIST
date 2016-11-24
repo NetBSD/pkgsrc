@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/11 21:30:55 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/24 12:52:47 fhajny Exp $
 bin/pcp_attach_node
 bin/pcp_detach_node
 bin/pcp_node_count
@@ -12,6 +12,8 @@ bin/pcp_stop_pgpool
 bin/pcp_watchdog_info
 bin/pg_md5
 bin/pgpool
+bin/pgpool_setup
+bin/watchdog_setup
 include/libpcp_ext.h
 include/pcp.h
 include/pool_process_reporting.h
@@ -20,7 +22,6 @@ lib/libpcp.la
 lib/postgresql/pgpool-recovery.so
 lib/postgresql/pgpool-regclass.so
 lib/postgresql/pgpool_adm.so
-man/man8/pgpool.8
 share/examples/pgpool2/pcp.conf.sample
 share/examples/pgpool2/pgpool.conf.sample
 share/examples/pgpool2/pgpool.conf.sample-master-slave
