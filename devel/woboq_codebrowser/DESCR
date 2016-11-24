@@ -1,0 +1,9 @@
+Woboq Code Browser is a clang-based code analysis tool. It provides a
+post-processing tool for C/C++ code to create static web sites with a
+wide range of information:
+- place of declaration and use for symbols, including type of use,
+- hyperlinking between calls/definitions, uses/declarations,
+- macro expansions,
+- intelligent identifier search,
+- inheritance diagrams
+and much more.
