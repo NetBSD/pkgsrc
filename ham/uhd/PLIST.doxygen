@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doxygen,v 1.6 2016/06/08 00:00:56 gdt Exp $
+@comment $NetBSD: PLIST.doxygen,v 1.7 2016/11/24 13:43:36 mef Exp $
 share/doc/uhd/doxygen/html/Ettus_Logo.png
 share/doc/uhd/doxygen/html/N2xx-JTAG.jpg
 share/doc/uhd/doxygen/html/TRRS.png
@@ -7,8 +7,6 @@ share/doc/uhd/doxygen/html/algorithm_8hpp.js
 share/doc/uhd/doxygen/html/algorithm_8hpp_source.html
 share/doc/uhd/doxygen/html/annotated.html
 share/doc/uhd/doxygen/html/annotated_dup.js
-share/doc/uhd/doxygen/html/arrowdown.png
-share/doc/uhd/doxygen/html/arrowright.png
 share/doc/uhd/doxygen/html/assert__has_8hpp.html
 share/doc/uhd/doxygen/html/assert__has_8hpp.js
 share/doc/uhd/doxygen/html/assert__has_8hpp_source.html

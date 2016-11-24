@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/06/19 22:59:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/11/24 13:43:35 mef Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -43,8 +43,6 @@ lib/pkgconfig/qof-1.pc
 lib/pkgconfig/qof.pc
 share/doc/qof/html/doxy/annotated.html
 share/doc/qof/html/doxy/annotated_dup.js
-share/doc/qof/html/doxy/arrowdown.png
-share/doc/qof/html/doxy/arrowright.png
 share/doc/qof/html/doxy/backendapi.html
 share/doc/qof/html/doxy/backenderrors.html
 share/doc/qof/html/doxy/bc_s.png
@@ -191,6 +189,8 @@ share/doc/qof/html/doxy/kvputil_8h.js
 share/doc/qof/html/doxy/kvputil_8h_source.html
 share/doc/qof/html/doxy/md5_8c_source.html
 share/doc/qof/html/doxy/md5_8h_source.html
+share/doc/qof/html/doxy/menu.js
+share/doc/qof/html/doxy/menudata.js
 share/doc/qof/html/doxy/modules.html
 share/doc/qof/html/doxy/modules.js
 share/doc/qof/html/doxy/nav_f.png
