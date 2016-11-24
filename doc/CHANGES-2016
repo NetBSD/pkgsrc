@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4773 2016/11/24 08:01:15 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4774 2016/11/24 12:09:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6577,3 +6577,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/p5-XML-Compile-SOAP12 version 3.04 [wiz 2016-11-23]
 	Added devel/woboq_codebrowser version 2.0.1 [joerg 2016-11-24]
 	Updated www/nghttp2 to 1.16.1 [adam 2016-11-24]
+	Updated textproc/mdoclint to 1.43 [wiz 2016-11-24]
