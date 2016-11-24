@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4771 2016/11/24 01:10:32 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.4772 2016/11/24 01:11:09 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6575,4 +6575,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/p5-XML-Compile-Cache version 1.05 [wiz 2016-11-23]
 	Added textproc/p5-XML-Compile-SOAP version 3.20 [wiz 2016-11-23]
 	Added textproc/p5-XML-Compile-SOAP12 version 3.04 [wiz 2016-11-23]
-	Updated devel/woboq_codebrowser to 2.0.1 [joerg 2016-11-24]
+	Added devel/woboq_codebrowser to 2.0.1 [joerg 2016-11-24]
