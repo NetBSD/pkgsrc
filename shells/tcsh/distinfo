@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.36 2015/12/13 10:46:26 markd Exp $
+$NetBSD: distinfo,v 1.37 2016/11/24 15:45:06 christos Exp $
 
-SHA1 (tcsh-6.19.00.tar.gz) = cdb1abe319fab5d3caff101c393293e5b3607f0c
-RMD160 (tcsh-6.19.00.tar.gz) = 0f1e8c5fdee634baff6670290bd30074db965da3
-SHA512 (tcsh-6.19.00.tar.gz) = e34f267c05308d52db08576d6c67ec4b5f092b42494be4b432bd1ffe5705c3030a3bf1b6aba1fa4e7d8ff4151ef5a695503ab7e0d968e35620791959c27bcadf
-Size (tcsh-6.19.00.tar.gz) = 947135 bytes
-SHA1 (patch-aa) = cedcb5e0b209c50a945db6778fd86574ad16ad6b
+SHA1 (tcsh-6.20.00.tar.gz) = a77d68434cc4bed731a46a39b9e01523e3a1e98c
+RMD160 (tcsh-6.20.00.tar.gz) = 3f119421ef3500cea1bebe2edf35c6d81ca1c8f3
+SHA512 (tcsh-6.20.00.tar.gz) = c5635393c22341e62fb9a0b953ddf8871a876ab09deb08c98237f93afa9257b4a3381d1db65eefe769e22ef845db29ab7bc78773f1f609d73c8205689a6683e9
+Size (tcsh-6.20.00.tar.gz) = 1001696 bytes
+SHA1 (patch-aa) = 440849534fc49afdbd70b95d6cbc62ff5abee240
 SHA1 (patch-ab) = 8cf26988778b5331360eb1aab98bfcc920c71ac2
 SHA1 (patch-configure) = 91c2019da8c074bd6f24b84bf798ccd497110727
 SHA1 (patch-sh.h) = ac6211ddd5e552e9baec2d35aed5e7e573cab04e
-SHA1 (patch-tc.alloc.c) = 826edfd3c8d5bb4a9c5515b69ba28a4ad0eff99e
