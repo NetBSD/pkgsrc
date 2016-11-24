@@ -1,8 +1,8 @@
-$NetBSD: patch-c-posix.c,v 1.6 2014/04/30 16:27:04 marino Exp $
+$NetBSD: patch-c-posix.c,v 1.7 2016/11/24 22:53:13 marino Exp $
 
   Add DragonFly support and resolve BADSIG ambiguity
 
---- c-posix.c.orig	2012-05-10 13:32:15.000000000 +0000
+--- c-posix.c.orig	2012-05-10 13:32:15 UTC
 +++ c-posix.c
 @@ -689,6 +689,25 @@ typedef struct siginfo {
  
@@ -38,6 +38,24 @@ $NetBSD: patch-c-posix.c,v 1.6 2014/04/30 16:27:04 marino Exp $
  
  #ifdef HAVE_struct_aiocb
    GT1(aiocb, 1)
+@@ -1669,7 +1689,7 @@ void print_type_declaration(char const n
+   }
+   switch (type->typekind) {
+   case SIGNED_INTEGER_TYPE:
+-    ifprintf(fp,"   type %s is range -2**%d .. (2**%d)-1;\n",
++    ifprintf(fp,"   type %s is range -2**%d .. (2**%d) - 1;\n",
+       type->typename,
+       type->typesize*bits_per_byte-1,
+       type->typesize*bits_per_byte-1);
+@@ -3142,7 +3162,7 @@ void create_posix() {
+ 
+   ifprintf(fp,"   Byte_Size : constant :=  %d;\n\n",bits_per_byte);
+ 
+-  ifprintf(fp,"   type IO_Count is range -2**%d .. (2**%d)-1;\n\n",
++  ifprintf(fp,"   type IO_Count is range -2**%d .. (2**%d) - 1;\n\n",
+     sizeof(ssize_t)*bits_per_byte-1,
+     sizeof(ssize_t)*bits_per_byte-1);
+   ifprintf(fp,"   for IO_Count'Size use %d;\n", sizeof(ssize_t)*bits_per_byte);
 @@ -5130,9 +5150,9 @@ void create_c() {
   */
  
