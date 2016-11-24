@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2015/10/12 14:53:17 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.8 2016/11/24 11:35:23 maya Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -74,6 +74,11 @@ OWN_DIRS=		${NGINX_LOGDIR}
 OWN_DIRS_PERMS+=	${NGINX_DATADIR} ${NGINX_USER} ${NGINX_GROUP} 0700
 
 BUILD_TARGET=		build
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix+=	pre-configure
+SUBST_FILES.prefix+=	auto/lib/pcre/conf
+SUBST_SED.prefix+=	-e 's,@PREFIX@,${PREFIX},g'
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
