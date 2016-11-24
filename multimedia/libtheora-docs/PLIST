@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2015/02/09 21:56:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/11/24 13:43:36 mef Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.xml
 share/doc/${SUBDIR}/html/annotated.html
-share/doc/${SUBDIR}/html/arrowdown.png
-share/doc/${SUBDIR}/html/arrowright.png
 share/doc/${SUBDIR}/html/bc_s.png
 share/doc/${SUBDIR}/html/bdwn.png
 share/doc/${SUBDIR}/html/classes.html
@@ -36,6 +34,8 @@ share/doc/${SUBDIR}/html/group__encfuncs.html
 share/doc/${SUBDIR}/html/group__oldfuncs.html
 share/doc/${SUBDIR}/html/index.html
 share/doc/${SUBDIR}/html/jquery.js
+share/doc/${SUBDIR}/html/menu.js
+share/doc/${SUBDIR}/html/menudata.js
 share/doc/${SUBDIR}/html/modules.html
 share/doc/${SUBDIR}/html/nav_f.png
 share/doc/${SUBDIR}/html/nav_g.png
