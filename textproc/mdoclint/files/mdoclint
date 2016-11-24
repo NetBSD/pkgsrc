@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.48 2016/01/24 20:10:48 schwarze Exp $
-# $NetBSD: mdoclint,v 1.61 2016/09/03 18:19:40 wiz Exp $
+# $NetBSD: mdoclint,v 1.62 2016/11/24 12:09:14 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -139,6 +139,7 @@ my %libraries = (
     "libppath" => 1,
     "libprop" => 1,
     "libpthread" => 1,
+    "libpthread_dbg" => 1,
     "libpuffs" => 1,
     "libquota" => 1,
     "librefuse" => 1,
