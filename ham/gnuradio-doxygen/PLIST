@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/07/20 15:03:14 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/11/24 13:43:35 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -299,8 +299,6 @@ share/doc/gnuradio-${PKGVERSION}/html/argmax__ss_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/argmax__ss_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/argmax__ss_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/argmax__ss_8h_source.html
-share/doc/gnuradio-${PKGVERSION}/html/arrowdown.png
-share/doc/gnuradio-${PKGVERSION}/html/arrowright.png
 share/doc/gnuradio-${PKGVERSION}/html/async__decoder_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/async__decoder_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/async__decoder_8h__incl.md5
