@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2335 2016/11/21 11:46:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.2336 2016/11/24 01:11:59 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -2263,6 +2263,7 @@ SUBDIR+=	visualvm
 SUBDIR+=	vtcl
 SUBDIR+=	waf
 SUBDIR+=	wide
+SUBDIR+=	woboq_codebrowser
 SUBDIR+=	xa65
 SUBDIR+=	xdelta
 SUBDIR+=	xdelta3
