@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/11/15 20:30:01 riastradh Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/11/24 13:43:35 mef Exp $
 avr/include/alloca.h
 avr/include/assert.h
 avr/include/avr/boot.h
@@ -633,8 +633,6 @@ ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/FAQ.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/acks.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/alloca_8h_source.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/annotated.html
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/arrowdown.png
-${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/arrowright.png
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/assembler.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/assert_8h.html
 ${PLIST.doc}share/doc/avr-libc/avr-libc-user-manual/assert_8h_source.html
