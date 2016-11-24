@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2015/06/15 17:14:27 marino Exp $
+# $NetBSD: options.mk,v 1.3 2016/11/24 15:43:38 marino Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc5-aux
-PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap
+PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap allstages
 PKG_SUGGESTED_OPTIONS=  #fortran objc 
 
 # disable nls for now (build error involving iconv)
@@ -56,17 +56,7 @@ APPLY_DIFFS+= gcc-testsuite
 ##  NATIONAL LANGUAGE SUPPORT  ##
 #################################
 
-.if !empty(PKG_OPTIONS:Mnls) && empty(PKG_OPTIONS:Mbootstrap)
-USE_BUILTIN.iconv= no
-USE_TOOLS+= msgfmt
-EXTRA_CONFARGS+= --enable-nls
-EXTRA_CONFARGS+= --with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
-MY_MAKE_ENV+= ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
-.include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.else
 EXTRA_CONFARGS+= --disable-nls
-.endif
 
 
 ###############################
@@ -120,7 +110,9 @@ EXTRA_CONFARGS+= --with-boot-ldflags=-static
 EXTRA_CONFARGS+= --with-system-zlib
 .  endif
 .else
-EXTRA_CONFARGS+= --enable-shared
+.  if !empty(PKG_OPTIONS:Mallstages)
 EXTRA_CONFARGS+= --disable-bootstrap
-
+EXTRA_CONFARGS+= --disable-libcc1
+.  endif
+EXTRA_CONFARGS+= --enable-shared
 .endif
