@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4775 2016/11/24 12:52:59 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4776 2016/11/24 13:34:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6579,3 +6579,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nghttp2 to 1.16.1 [adam 2016-11-24]
 	Updated textproc/mdoclint to 1.43 [wiz 2016-11-24]
 	Updated databases/pgpool2 to 3.6.0 [fhajny 2016-11-24]
+	Updated devel/doxygen to 1.8.12 [mef 2016-11-24]
