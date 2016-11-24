@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/11/24 13:43:35 mef Exp $
+# $NetBSD: Makefile,v 1.46 2016/11/24 14:11:31 mef Exp $
 
 DISTNAME=		avr-libc-1.8.1
 PKGREVISION=		4
@@ -20,6 +20,8 @@ CONFIGURE_ARGS+=	--host=avr
 CONFIGURE_ARGS+=	--disable-versioned-doc
 CONFIGURE_ARGS+=	CC=${PREFIX}/bin/avr-gcc
 CONFIGURE_ARGS+=	CPPFLAGS="-I${PREFIX}/include -I${PREFIX}/avr/include"
+
+BUILD_DEPENDS+=		doxygen>=1.8.12:../../devel/doxygen
 
 #   In doc/examples/demo directory, we have sample Makefile both for
 #   generating *.hex file at pkg installation time, and for installing

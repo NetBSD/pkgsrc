@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/11/24 13:43:36 mef Exp $
+# $NetBSD: Makefile,v 1.48 2016/11/24 14:11:31 mef Exp $
 
 DISTNAME=	tidy-20091027
 PKGREVISION=	8
@@ -11,6 +11,7 @@ COMMENT=	Fixes and tidies up HTML files
 LICENSE=	mit
 
 BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+=	doxygen>=1.8.12:../../devel/doxygen
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tidy
 PKG_SUPPORTED_OPTIONS=	doc
