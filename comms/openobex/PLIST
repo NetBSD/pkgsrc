@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/02/02 02:47:02 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/11/24 13:43:35 mef Exp $
 include/openobex/obex.h
 include/openobex/obex_const.h
 include/openobex/version.h
@@ -12,8 +12,6 @@ lib/libopenobex.so.2
 lib/pkgconfig/openobex.pc
 share/doc/openobex/html/annotated.html
 share/doc/openobex/html/api_8c.html
-share/doc/openobex/html/arrowdown.png
-share/doc/openobex/html/arrowright.png
 share/doc/openobex/html/bc_s.png
 share/doc/openobex/html/bdwn.png
 share/doc/openobex/html/classes.html
@@ -42,6 +40,8 @@ share/doc/openobex/html/globals_t.html
 share/doc/openobex/html/globals_type.html
 share/doc/openobex/html/index.html
 share/doc/openobex/html/jquery.js
+share/doc/openobex/html/menu.js
+share/doc/openobex/html/menudata.js
 share/doc/openobex/html/nav_f.png
 share/doc/openobex/html/nav_g.png
 share/doc/openobex/html/nav_h.png

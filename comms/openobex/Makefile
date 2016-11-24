@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2015/02/02 02:47:02 mef Exp $
+# $NetBSD: Makefile,v 1.29 2016/11/24 13:43:35 mef Exp $
 
 DISTNAME=	openobex-1.7.1-Source
 PKGNAME=	${DISTNAME:C/-Source//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
