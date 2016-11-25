@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2016/07/09 06:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2016/11/25 16:05:07 adam Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
@@ -118,6 +118,8 @@ post-extract:
 # XXX make it build on OS X 10.10; remove on the next update
 .elif ${OPSYS} == "Darwin"
 	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin14.h
+	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin15.h
+	ln -s ${WRKSRC}/include/net-snmp/system/darwin13.h ${WRKSRC}/include/net-snmp/system/darwin16.h
 .endif
 
 post-wrapper:
