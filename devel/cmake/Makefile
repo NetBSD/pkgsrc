@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.125 2016/11/12 07:49:18 adam Exp $
+# $NetBSD: Makefile,v 1.126 2016/11/25 13:36:37 joerg Exp $
 
 .include "Makefile.version"
 
@@ -72,4 +72,11 @@ BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+
+.if !exists(${BUILDLINK_INCDIRS.curses}/form.h) && \
+     exists(${BUILDLINK_INCDIRS.curses}/ncurses/form.h)
+CFLAGS+=	-I${BUILDLINK_INCDIRS.curses}/ncurses
+CXXFLAGS+=	-I${BUILDLINK_INCDIRS.curses}/ncurses
+.endif
+
 .include "../../mk/bsd.pkg.mk"
