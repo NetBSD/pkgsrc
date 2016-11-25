@@ -1,11 +1,11 @@
-$NetBSD: patch-src_gprlib.adb,v 1.2 2014/04/30 16:28:09 marino Exp $
+$NetBSD: patch-src_gprlib.adb,v 1.3 2016/11/25 20:36:49 marino Exp $
 
 Marino's modification to give Ada programs build with GPRBUILD proper
 -rpath support
 
---- src/gprlib.adb.orig	2013-04-16 14:36:02.000000000 +0000
+--- src/gprlib.adb.orig	2015-05-06 11:08:38 UTC
 +++ src/gprlib.adb
-@@ -390,6 +390,11 @@ procedure Gprlib is
+@@ -393,6 +393,11 @@ procedure Gprlib is
  
     Separate_Run_Path_Options : Boolean := False;
  
@@ -17,7 +17,7 @@ Marino's modification to give Ada programs build with GPRBUILD proper
     Rpath : String_List_Access := null;
     --  Allocated only if Path Option is supported
  
-@@ -1009,7 +1014,12 @@ begin
+@@ -1011,7 +1016,12 @@ begin
                    Use_GNAT_Lib := False;
                 end if;
  
@@ -29,9 +29,22 @@ Marino's modification to give Ada programs build with GPRBUILD proper
 +                    (new String'(Line (1 .. Last)));
 +               end if;
  
-             when Library_Path =>
-                Osint.Fail ("library path should not be specified");
-@@ -2127,7 +2137,7 @@ begin
+             when Gprexch.Library_Rpath_Options =>
+                Library_Rpath_Options_Table.Append
+@@ -1143,10 +1153,10 @@ begin
+ 
+                      Libgnat :=
+                        new String'
+-                         ("-lgnat-" & Line (6 .. Last));
++                         ("-lgnat-" & Line (6));
+                      Libgnarl :=
+                        new String'
+-                         ("-lgnarl-" & Line (6 .. Last));
++                         ("-lgnarl-" & Line (6));
+                   end if;
+ 
+                else
+@@ -2113,7 +2123,7 @@ begin
           Library_Switches_Table.Append
             (new String'("-L" & Imported_Library_Directories.Table (J).all));
  
