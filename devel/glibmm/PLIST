@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2016/04/12 21:27:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2016/11/25 17:11:50 prlw1 Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/action.h
 include/giomm-2.4/giomm/actiongroup.h
@@ -66,6 +66,8 @@ include/giomm-2.4/giomm/init.h
 include/giomm-2.4/giomm/initable.h
 include/giomm-2.4/giomm/inputstream.h
 include/giomm-2.4/giomm/iostream.h
+include/giomm-2.4/giomm/listmodel.h
+include/giomm-2.4/giomm/liststore.h
 include/giomm-2.4/giomm/loadableicon.h
 include/giomm-2.4/giomm/memoryinputstream.h
 include/giomm-2.4/giomm/memoryoutputstream.h
@@ -148,6 +150,8 @@ include/giomm-2.4/giomm/private/inetsocketaddress_p.h
 include/giomm-2.4/giomm/private/initable_p.h
 include/giomm-2.4/giomm/private/inputstream_p.h
 include/giomm-2.4/giomm/private/iostream_p.h
+include/giomm-2.4/giomm/private/listmodel_p.h
+include/giomm-2.4/giomm/private/liststore_p.h
 include/giomm-2.4/giomm/private/loadableicon_p.h
 include/giomm-2.4/giomm/private/memoryinputstream_p.h
 include/giomm-2.4/giomm/private/memoryoutputstream_p.h
@@ -278,6 +282,7 @@ include/glibmm-2.4/glibmm/date.h
 include/glibmm-2.4/glibmm/datetime.h
 include/glibmm-2.4/glibmm/debug.h
 include/glibmm-2.4/glibmm/dispatcher.h
+include/glibmm-2.4/glibmm/enums.h
 include/glibmm-2.4/glibmm/error.h
 include/glibmm-2.4/glibmm/exception.h
 include/glibmm-2.4/glibmm/exceptionhandler.h
@@ -310,6 +315,7 @@ include/glibmm-2.4/glibmm/private/checksum_p.h
 include/glibmm-2.4/glibmm/private/convert_p.h
 include/glibmm-2.4/glibmm/private/date_p.h
 include/glibmm-2.4/glibmm/private/datetime_p.h
+include/glibmm-2.4/glibmm/private/enums_p.h
 include/glibmm-2.4/glibmm/private/fileutils_p.h
 include/glibmm-2.4/glibmm/private/interface_p.h
 include/glibmm-2.4/glibmm/private/iochannel_p.h
@@ -614,6 +620,15 @@ share/doc/glibmm-2.4/reference/html/classGio_1_1Initable__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGio_1_1InputStream-members.html
 share/doc/glibmm-2.4/reference/html/classGio_1_1InputStream.html
 share/doc/glibmm-2.4/reference/html/classGio_1_1InputStream__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListModel-members.html
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListModel.html
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListModel__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListStore-members.html
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListStore.html
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListStoreBase-members.html
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListStoreBase.html
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListStoreBase__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGio_1_1ListStore__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGio_1_1LoadableIcon-members.html
 share/doc/glibmm-2.4/reference/html/classGio_1_1LoadableIcon.html
 share/doc/glibmm-2.4/reference/html/classGio_1_1LoadableIcon__inherit__graph.png
@@ -968,6 +983,12 @@ share/doc/glibmm-2.4/reference/html/classGlib_1_1PropertyProxy__WriteOnly-member
 share/doc/glibmm-2.4/reference/html/classGlib_1_1PropertyProxy__WriteOnly.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1PropertyProxy__WriteOnly__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1PropertyProxy__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__ReadOnly-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__ReadOnly.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__ReadOnly__inherit__graph.png
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__WriteOnly-members.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__WriteOnly.html
+share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__WriteOnly__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Property__inherit__graph.png
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Quark-members.html
 share/doc/glibmm-2.4/reference/html/classGlib_1_1Quark.html
@@ -1603,7 +1624,9 @@ share/doc/glibmm-2.4/reference/html/since_2_42.html
 share/doc/glibmm-2.4/reference/html/since_2_44.html
 share/doc/glibmm-2.4/reference/html/since_2_46.html
 share/doc/glibmm-2.4/reference/html/since_2_48.html
+share/doc/glibmm-2.4/reference/html/since_2_50.html
 share/doc/glibmm-2.4/reference/html/since_2_6.html
+share/doc/glibmm-2.4/reference/html/since_2_8.html
 share/doc/glibmm-2.4/reference/html/splitbar.png
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits-members.html
 share/doc/glibmm-2.4/reference/html/structGlib_1_1Container__Helpers_1_1TypeTraits.html
