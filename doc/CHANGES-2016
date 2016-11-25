@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4788 2016/11/25 17:32:37 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4789 2016/11/25 17:52:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6592,3 +6592,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/glibmm to 2.50.0 [prlw1 2016-11-25]
 	Updated x11/gtkmm3 to 3.22.0 [prlw1 2016-11-25]
 	Updated devel/pangomm to 2.40.1 [prlw1 2016-11-25]
+	Updated x11/gtksourceview3 to 3.22.0 [prlw1 2016-11-25]
