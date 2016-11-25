@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/04/12 21:25:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2016/11/25 15:39:51 prlw1 Exp $
 include/sigc++-2.0/sigc++/adaptors/adaptor_trait.h
 include/sigc++-2.0/sigc++/adaptors/adaptors.h
 include/sigc++-2.0/sigc++/adaptors/bind.h
@@ -288,6 +288,30 @@ share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal7__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_1_1accumulated-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_1_1accumulated.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_1_1accumulated__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_00_01T__arg4_08_4.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4_1_1accumulated.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_00_01T__arg3_08_4__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4_1_1accumulated-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4_1_1accumulated.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4_1_1accumulated__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_00_01T__arg2_08_4__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_08_4-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_08_4.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_08_4_1_1accumulated-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_08_4_1_1accumulated.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_08_4_1_1accumulated__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07T__arg1_08_4__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07_08_4-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07_08_4.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07_08_4_1_1accumulated-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07_08_4_1_1accumulated.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07_08_4_1_1accumulated__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal_3_01T__return_07_08_4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1signal__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot.html
@@ -315,6 +339,9 @@ share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot6__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot7-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot7.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot7__inherit__graph.png
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot_3_01T__return_07T__arg_8_8_8_08_4-members.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot_3_01T__return_07T__arg_8_8_8_08_4.html
+share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot_3_01T__return_07T__arg_8_8_8_08_4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot__base-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot__base.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot__base__inherit__graph.png
