@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.8 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2016/11/25 13:05:12 prlw1 Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
-VER=			3.20.0
+VER=			3.22.0
 DISTNAME=		pygobject-${VER}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/${PKGVERSION_NOREV:R}/}
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject3/distinfo
-PATCHDIR=		${.CURDIR}/../../devel/py-gobject3/patches
+#PATCHDIR=		${.CURDIR}/../../devel/py-gobject3/patches
 
 PKGCONFIG_OVERRIDE+=	pygobject-3.0.pc.in
 PY_PATCHPLIST=		yes
