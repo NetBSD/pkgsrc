@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.88 2016/08/21 21:47:29 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.89 2016/11/25 12:42:21 prlw1 Exp $
 bin/gapplication
 bin/gdbus
+bin/gio
 bin/gio-querymodules
 bin/glib-compile-resources
 bin/glib-compile-schemas
@@ -290,12 +291,12 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.4800.2-gdb.py
-share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.4800.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libglib-2.0.so.0.5000.2-gdb.py
+share/gdb/auto-load${LOCALBASE}/lib/libgobject-2.0.so.0.5000.2-gdb.py
 share/gettext/its/gschema.its
 share/gettext/its/gschema.loc
-share/glib-2.0/gdb/glib.py
-share/glib-2.0/gdb/gobject.py
+share/glib-2.0/gdb/glib_gdb.py
+share/glib-2.0/gdb/gobject_gdb.py
 share/glib-2.0/gettext/po/Makefile.in.in
 share/glib-2.0/schemas/gschema.dtd
 share/gtk-doc/html/gio/GAction.html
@@ -447,6 +448,7 @@ share/gtk-doc/html/gio/api-index-2-42.html
 share/gtk-doc/html/gio/api-index-2-44.html
 share/gtk-doc/html/gio/api-index-2-46.html
 share/gtk-doc/html/gio/api-index-2-48.html
+share/gtk-doc/html/gio/api-index-2-50.html
 share/gtk-doc/html/gio/api-index-deprecated.html
 share/gtk-doc/html/gio/api-index-full.html
 share/gtk-doc/html/gio/application.html
@@ -482,6 +484,7 @@ share/gtk-doc/html/gio/gdbus-convenience.html
 share/gtk-doc/html/gio/gdbus-example-gdbus-codegen.html
 share/gtk-doc/html/gio/gdbus-lowlevel.html
 share/gtk-doc/html/gio/gdbus.html
+share/gtk-doc/html/gio/gio.html
 share/gtk-doc/html/gio/gio-D-Bus-Addresses.html
 share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html
 share/gtk-doc/html/gio/gio-D-Bus-Utilities.html
@@ -572,6 +575,7 @@ share/gtk-doc/html/glib/api-index-2-42.html
 share/gtk-doc/html/glib/api-index-2-44.html
 share/gtk-doc/html/glib/api-index-2-46.html
 share/gtk-doc/html/glib/api-index-2-48.html
+share/gtk-doc/html/glib/api-index-2-50.html
 share/gtk-doc/html/glib/api-index-2-6.html
 share/gtk-doc/html/glib/api-index-2-8.html
 share/gtk-doc/html/glib/api-index-deprecated.html
