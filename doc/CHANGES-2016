@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4780 2016/11/25 12:49:23 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4781 2016/11/25 12:52:00 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6584,3 +6584,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 7.2.0 [fhajny 2016-11-24]
 	Updated devel/glib2 to 2.50.2 [prlw1 2016-11-25]
 	Updated devel/at-spi2-core to 2.22.0 [prlw1 2016-11-25]
+	Updated devel/at-spi2-atk to 2.22.0 [prlw1 2016-11-25]
