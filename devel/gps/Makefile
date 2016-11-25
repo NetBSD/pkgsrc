@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2016/10/09 21:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/11/25 20:36:49 marino Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTFILES=	gps-5.2.1-1-src.tgz
@@ -12,6 +12,17 @@ HOMEPAGE=	http://www.adacore.com/home/products/gnatpro/toolsuite/gps/
 COMMENT=	GNAT Programming Studio - IDE for Ada and many other languages
 LICENSE=	gnu-gpl-v2
 
+# GPS is several years behind and normally tied to the latest Ada compiler.
+# To update it would require several new and complicated dependencies.
+# The maintainer has no interest in doing this work.  Somebody else is free
+# to take over and use the FreeBSD Ports Collection as a reference point.
+#
+# The internal project support (GPR files) are illegally configured for
+# today's standards and gprbuild won't let the build progress far.
+# The only practical way forward to update to version 6.0.1 (which is at
+# least one year behind the current version of GPS)
+PKG_FAIL_REASON=	Unbuildable with gcc5-aux.  Scheduled for removal Jan 2017
+
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake sed perl awk pkg-config
 
@@ -20,7 +31,7 @@ USE_LANGUAGES=		c ada c++
 MY_CONFIGURE_ENV+=	ADA_PROJECT_PATH=${APP}
 MY_MAKE_ENV+=		PROCESSORS=${MAKE_JOBS:U1:Q} \
 			ADA_PROJECT_PATH=${APP} \
-			PATH=${PREFIX}/gcc-aux/bin:${PATH}
+			PATH=${PREFIX}/gcc5-aux/bin:${PATH}
 MAKE_ARGS=		Build=Production
 APP=			${PREFIX}/lib/gnat
 WRKSRC=			${WRKDIR}/gps-release-ide-${GPS_VERSION}-src

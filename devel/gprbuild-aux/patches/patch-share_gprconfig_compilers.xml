@@ -1,10 +1,10 @@
-$NetBSD: patch-share_gprconfig_compilers.xml,v 1.2 2014/04/30 16:28:09 marino Exp $
+$NetBSD: patch-share_gprconfig_compilers.xml,v 1.3 2016/11/25 20:36:49 marino Exp $
 
 Tailor standard gprbuild to recognize gcc-aux / Ada framework
 
---- share/gprconfig/compilers.xml.orig	2013-01-09 18:09:30.000000000 +0000
+--- share/gprconfig/compilers.xml.orig	2015-04-28 15:02:41 UTC
 +++ share/gprconfig/compilers.xml
-@@ -456,16 +456,15 @@
+@@ -693,17 +693,15 @@
      </version>
      <languages>Ada</languages>
      <variable name="gcc_version">
@@ -16,8 +16,9 @@ Tailor standard gprbuild to recognize gcc-aux / Ada framework
 -       <directory group="default" >\.\./lib/gcc(-lib)?/$TARGET/$gcc_version/adalib/</directory>
 -       <directory group="default" contents="^rts-">\.\./lib/gcc(-lib)?/$TARGET/$gcc_version/ada_object_path</directory>
 -       <directory group="2" >\.\./lib/gcc(-lib)?/$TARGET/$gcc_version/rts-(.*)/adalib/</directory>
+-       <directory group="1" >\.\./$TARGET/lib/gnat/(.*)/adalib/</directory>
 +       <directory group="default">\.\./lib/gcc/$TARGET/$gcc_version/adalib</directory>
-+       <directory group="0">@AUXPREFIX@/lib/gcc/$TARGET/$gcc_version/adalib</directory>
++       <directory group="0">/usr/local/gcc5-aux/lib/gcc/$TARGET/$gcc_version/adalib</directory>
      </runtimes>
      <target>
 -      <external>${PREFIX}gcc -dumpmachine</external>
