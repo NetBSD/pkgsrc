@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2016/09/19 13:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/11/25 20:36:50 marino Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
 PKGNAME=	aws-demos-${AWS_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,8 +27,8 @@ CONFIGURE_ARGS+=	DEBUG=true
 
 MY_MAKE_ENV+=		ADA_PROJECT_PATH=${PREFIX}/lib/gnat
 MY_MAKE_ENV+=		AWK=awk
-MY_MAKE_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
-MY_CONF_ENV+=		PATH=${PREFIX}/gcc-aux/bin:${PATH}
+MY_MAKE_ENV+=		PATH=${PREFIX}/gcc5-aux/bin:${PATH}
+MY_CONF_ENV+=		PATH=${PREFIX}/gcc5-aux/bin:${PATH}
 CONFIGURE_ARGS+=	LPATH=${BUILDLINK_PREFIX.openssl}/lib
 CONFIGURE_ARGS+=	ZPATH=${BUILDLINK_PREFIX.zlib}/lib
 

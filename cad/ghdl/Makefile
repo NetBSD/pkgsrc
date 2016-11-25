@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/12/11 20:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/11/25 20:36:50 marino Exp $
 
 GCCVER=		4.9.2
 DISTNAME=	ghdl-0.32rc1
 CATEGORIES=	cad
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 GCCDISTNAME=	gcc-${GCCVER}.tar.bz2
