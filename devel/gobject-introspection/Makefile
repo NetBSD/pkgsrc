@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2016/04/08 19:49:26 adam Exp $
+# $NetBSD: Makefile,v 1.49 2016/11/25 13:00:13 prlw1 Exp $
 
-DISTNAME=	gobject-introspection-1.48.0
+DISTNAME=	gobject-introspection-1.50.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gobject-introspection/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -38,7 +38,7 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 
 #REPLACE_PYTHON+=	tools/g-ir-tool-template.in
 SUBST_CLASSES+=		pyenv
-SUBST_STAGE.pyenv+=	pre-configure
+SUBST_STAGE.pyenv=	pre-configure
 SUBST_FILES.pyenv+=	tools/g-ir-tool-template.in
 SUBST_SED.pyenv+=	-e 's,/usr/bin/env ,,'
 
@@ -50,7 +50,7 @@ CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 #.include "../../graphics/cairo-gobject/buildlink3.mk"
 #TEST_TARGET=	check
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.44.0
+BUILDLINK_API_DEPENDS.glib2+= glib2>=2.50.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libffi+= libffi>=3.0.0
 .include "../../devel/libffi/buildlink3.mk"
