@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2016/09/27 02:37:32 maya Exp $
+# $NetBSD: Makefile,v 1.70 2016/11/25 17:11:50 prlw1 Exp $
 
-DISTNAME=	glibmm-2.48.1
-PKGREVISION=	1
+DISTNAME=	glibmm-2.50.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -32,8 +31,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/glibmm-2.4/doctool/${tool}
 .endfor
 
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.48.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.50.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsigcpp+=	libsigc++>=2.2.10
+BUILDLINK_API_DEPENDS.libsigcpp+=	libsigc++>=2.9.1
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
