@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2016/04/07 20:57:14 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/11/25 13:00:13 prlw1 Exp $
 bin/g-ir-annotation-tool
 bin/g-ir-compiler
 bin/g-ir-generate
+bin/g-ir-inspect
 bin/g-ir-scanner
 include/gobject-introspection-1.0/giarginfo.h
 include/gobject-introspection-1.0/gibaseinfo.h
