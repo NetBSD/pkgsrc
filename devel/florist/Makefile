@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2016/11/24 00:27:03 marino Exp $
+# $NetBSD: Makefile,v 1.19 2016/11/25 20:36:49 marino Exp $
 #
 
 DISTNAME=		florist-gpl-2012-src
 PKGNAME=		florist-gpl-2012
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=		.tgz

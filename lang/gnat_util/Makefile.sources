@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.sources,v 1.1 2014/04/30 16:25:20 marino Exp $
+# $NetBSD: Makefile.sources,v 1.2 2016/11/25 20:36:49 marino Exp $
 
 GNAT_SRCS= \
 	ali-util.adb \
@@ -53,8 +53,6 @@ GNAT_SRCS= \
 	mlib-fil.ads \
 	mlib-tgt-specific.adb \
 	mlib-tgt-specific.ads \
-	mlib-tgt-vms_common.adb \
-	mlib-tgt-vms_common.ads \
 	mlib-tgt.adb \
 	mlib-tgt.ads \
 	mlib-utl.adb \
