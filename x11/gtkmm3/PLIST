@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/05/23 18:02:36 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/11/25 17:18:31 prlw1 Exp $
 include/gdkmm-3.0/gdkmm.h
 include/gdkmm-3.0/gdkmm/applaunchcontext.h
 include/gdkmm-3.0/gdkmm/color.h
@@ -8,9 +8,11 @@ include/gdkmm-3.0/gdkmm/devicemanager.h
 include/gdkmm-3.0/gdkmm/display.h
 include/gdkmm-3.0/gdkmm/displaymanager.h
 include/gdkmm-3.0/gdkmm/dragcontext.h
+include/gdkmm-3.0/gdkmm/drawingcontext.h
 include/gdkmm-3.0/gdkmm/event.h
 include/gdkmm-3.0/gdkmm/general.h
 include/gdkmm-3.0/gdkmm/glcontext.h
+include/gdkmm-3.0/gdkmm/monitor.h
 include/gdkmm-3.0/gdkmm/pixbuf.h
 include/gdkmm-3.0/gdkmm/pixbufanimation.h
 include/gdkmm-3.0/gdkmm/pixbufanimationiter.h
@@ -24,8 +26,10 @@ include/gdkmm-3.0/gdkmm/private/devicemanager_p.h
 include/gdkmm-3.0/gdkmm/private/display_p.h
 include/gdkmm-3.0/gdkmm/private/displaymanager_p.h
 include/gdkmm-3.0/gdkmm/private/dragcontext_p.h
+include/gdkmm-3.0/gdkmm/private/drawingcontext_p.h
 include/gdkmm-3.0/gdkmm/private/event_p.h
 include/gdkmm-3.0/gdkmm/private/glcontext_p.h
+include/gdkmm-3.0/gdkmm/private/monitor_p.h
 include/gdkmm-3.0/gdkmm/private/pixbuf_p.h
 include/gdkmm-3.0/gdkmm/private/pixbufanimation_p.h
 include/gdkmm-3.0/gdkmm/private/pixbufanimationiter_p.h
@@ -376,6 +380,7 @@ include/gtkmm-3.0/gtkmm/private/separator_p.h
 include/gtkmm-3.0/gtkmm/private/separatormenuitem_p.h
 include/gtkmm-3.0/gtkmm/private/separatortoolitem_p.h
 include/gtkmm-3.0/gtkmm/private/settings_p.h
+include/gtkmm-3.0/gtkmm/private/shortcutlabel_p.h
 include/gtkmm-3.0/gtkmm/private/shortcutsgroup_p.h
 include/gtkmm-3.0/gtkmm/private/shortcutssection_p.h
 include/gtkmm-3.0/gtkmm/private/shortcutsshortcut_p.h
@@ -464,6 +469,7 @@ include/gtkmm-3.0/gtkmm/separator.h
 include/gtkmm-3.0/gtkmm/separatormenuitem.h
 include/gtkmm-3.0/gtkmm/separatortoolitem.h
 include/gtkmm-3.0/gtkmm/settings.h
+include/gtkmm-3.0/gtkmm/shortcutlabel.h
 include/gtkmm-3.0/gtkmm/shortcutsgroup.h
 include/gtkmm-3.0/gtkmm/shortcutssection.h
 include/gtkmm-3.0/gtkmm/shortcutsshortcut.h
@@ -580,6 +586,9 @@ share/doc/gtkmm-3.0/reference/html/classGdk_1_1Display__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1DragContext-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1DragContext.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1DragContext__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1DrawingContext-members.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1DrawingContext.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1DrawingContext__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Event-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Event.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLContext-members.html
@@ -588,6 +597,9 @@ share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLContext__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLError-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLError.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLError__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1Monitor-members.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1Monitor.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1Monitor__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Pixbuf-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Pixbuf.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1PixbufAnimation-members.html
@@ -1200,6 +1212,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1Separator__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Settings-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Settings.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Settings__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutLabel-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutLabel.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutLabel__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsGroup-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsGroup.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsGroup__inherit__graph.png
@@ -1767,6 +1782,7 @@ share/doc/gtkmm-3.0/reference/html/since_2_22.html
 share/doc/gtkmm-3.0/reference/html/since_2_24.html
 share/doc/gtkmm-3.0/reference/html/since_2_26.html
 share/doc/gtkmm-3.0/reference/html/since_2_30.html
+share/doc/gtkmm-3.0/reference/html/since_2_36.html
 share/doc/gtkmm-3.0/reference/html/since_2_4.html
 share/doc/gtkmm-3.0/reference/html/since_2_6.html
 share/doc/gtkmm-3.0/reference/html/since_2_8.html
