@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 12:14:58 marino Exp $
+# $NetBSD: Makefile,v 1.6 2016/11/25 01:05:47 marino Exp $
 #
 
 DISTNAME=	gprbuild-aux-${SNAPSHOT}
 CATEGORIES=	devel
-MASTER_SITES=	http://downloads.dragonlace.net/src/ \
-		http://dragonlace.mirrors.ada.cx/src/
+MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTFILES=	gprbuild-gpl-${YEAR}-src.tgz
 
 MAINTAINER=	draco@marino.st
