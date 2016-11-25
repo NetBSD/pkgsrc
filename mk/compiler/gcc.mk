@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.170 2016/10/10 08:26:08 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.171 2016/11/25 20:36:49 marino Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -97,8 +97,8 @@ GCC_REQD+=	2.8.0
 GCC_REQD+=	3.0
 .endif
 
-# Only one compiler defined here supports Ada: lang/gcc-aux
-# If the Ada language is requested, force lang/gcc-aux to be selected
+# Only one compiler defined here supports Ada: lang/gcc5-aux
+# If the Ada language is requested, force lang/gcc5-aux to be selected
 .if !empty(USE_LANGUAGES:Mada)
 GCC_REQD+=	20120614
 .endif
@@ -623,16 +623,16 @@ _USE_GCC_SHLIB?=	yes
 .  endif
 .elif !empty(_NEED_GCC_AUX:M[yY][eE][sS])
 #
-# We require Ada-capable compiler in the lang/gcc-aux directory.
+# We require Ada-capable compiler in the lang/gcc5-aux directory.
 #
-_GCC_PKGBASE=		gcc-aux
-.  if !empty(PKGPATH:Mlang/gcc-aux)
+_GCC_PKGBASE=		gcc5-aux
+.  if !empty(PKGPATH:Mlang/gcc5-aux)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
 .  endif
 .  if !defined(_IGNORE_GCC) && !empty(_LANGUAGES.gcc)
-_GCC_PKGSRCDIR=		../../lang/gcc-aux
-_GCC_DEPENDENCY=	gcc-aux>=${_GCC_REQD}:../../lang/gcc-aux
+_GCC_PKGSRCDIR=		../../lang/gcc5-aux
+_GCC_DEPENDENCY=	gcc5-aux>=${_GCC_REQD}:../../lang/gcc5-aux
 .    if !empty(_LANGUAGES.gcc:Mc++) || \
         !empty(_LANGUAGES.gcc:Mfortran) || \
         !empty(_LANGUAGES.gcc:Mfortran77) || \
