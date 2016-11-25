@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2016/07/28 16:53:43 prlw1 Exp $
+$NetBSD: distinfo,v 1.14 2016/11/25 17:52:04 prlw1 Exp $
 
-SHA1 (gtksourceview-3.20.4.tar.xz) = 593d75b165cf623ffab5c941709ca42bf2f44a77
-RMD160 (gtksourceview-3.20.4.tar.xz) = 64050ec63e7a071089effff722117b6e24d3842f
-SHA512 (gtksourceview-3.20.4.tar.xz) = 4b69759e77acd120da24683e9cacd994e5bcef4c7b6404bad2df930b228a39f99f9391e137583fadb4939189f66f088bd386192b4d23bc232d718804156db941
-Size (gtksourceview-3.20.4.tar.xz) = 1582240 bytes
+SHA1 (gtksourceview-3.22.0.tar.xz) = e7cf519e8585490552ca8bce0b32be5acc440f2e
+RMD160 (gtksourceview-3.22.0.tar.xz) = 58be2fe965690fb29f031c5c0d7cbec169f214ba
+SHA512 (gtksourceview-3.22.0.tar.xz) = 728c5c13de57a6ebd3d837d3d9440daa5e64a18e92cfbf0a635d8e3708ee257b568e110fa88c4e11c18bc0534d58ec1556f3fa974793cadeae3264c9ef449e26
+Size (gtksourceview-3.22.0.tar.xz) = 1595016 bytes
