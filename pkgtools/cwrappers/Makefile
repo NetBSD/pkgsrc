@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/09/15 17:08:14 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2016/11/25 22:46:40 joerg Exp $
 
 PKGNAME=		cwrappers-20160908
 CATEGORIES=		pkgtools sysutils
@@ -16,6 +16,7 @@ INSTALLATION_DIRS=	libexec/cwrappers
 .include "../../mk/bsd.prefs.mk"
 
 CHECK_PERMS=		no
+PKGSRC_LOCKTYPE=	none	# avoid dependency cycles with pkgtool/shlock
 
 .if ${OPSYS} != "NetBSD" || !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)
 MAKE_ENV+=	NEED_MI_VECTOR_HASH=1
