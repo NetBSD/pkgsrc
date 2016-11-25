@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2014/12/21 02:39:24 obache Exp $
+# $NetBSD: Makefile,v 1.3 2016/11/25 20:36:49 marino Exp $
 
 PKGNAME=	gnat_util-${SNAPSHOT}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 DISTFILES=	gcc-${GCC_VERSION}.tar.bz2
@@ -11,8 +10,12 @@ HOMEPAGE=	http://www.dragonlace.net/
 COMMENT=	Library used to build GNAT source-based tools
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
+# gnat_util existed to construct gprbuild-aux which no longer requires it.
+# The package is still buildable, but its not practically useful.
+PKG_SKIP_REASON=	Deprecated (no longer useful), scheduled for removal Jan 2017
+
 .include "../../mk/bsd.prefs.mk"
-.include "../../lang/gcc-aux/Makefile.version"
+.include "../../lang/gcc5-aux/Makefile.version"
 .include "Makefile.sources"
 
 MAKE_ENV=	MAKEOBJDIR=${WRKSRC}/obj
