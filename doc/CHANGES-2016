@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4786 2016/11/25 17:12:09 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4787 2016/11/25 17:19:04 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6590,3 +6590,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/gtk3 to 3.22.4 [prlw1 2016-11-25]
 	Updated devel/libsigc++ to 2.10.0 [prlw1 2016-11-25]
 	Updated devel/glibmm to 2.50.0 [prlw1 2016-11-25]
+	Updated x11/gtkmm3 to 3.22.0 [prlw1 2016-11-25]
