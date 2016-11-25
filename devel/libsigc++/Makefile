@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2016/07/09 06:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2016/11/25 15:39:51 prlw1 Exp $
 
-DISTNAME=	libsigc++-2.8.0
-PKGREVISION=	1
-CATEGORIES=	devel
+DISTNAME=	libsigc++-2.10.0
+CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
@@ -18,7 +17,8 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
 CONFLICTS+=		libsigc++2-[0-9]*
-GCC_REQD+=		4.7
+GCC_REQD+=		4.8
+CXXFLAGS+=		-std=c++11
 
 # use something that can extract long filenames in GNU format on NetBSD 1.6.x
 EXTRACT_USING=		bsdtar
@@ -31,4 +31,6 @@ TEST_TARGET=		check
 CONFIGURE_ARGS+=	--disable-threads
 .endif
 
+BUILDLINK_API_DEPENDS.mm-common+=	mm-common>=0.9.10
+.include "../../devel/mm-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
