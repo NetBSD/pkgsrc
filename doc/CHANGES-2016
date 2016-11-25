@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4789 2016/11/25 17:52:23 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4790 2016/11/25 18:02:03 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6593,3 +6593,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/gtkmm3 to 3.22.0 [prlw1 2016-11-25]
 	Updated devel/pangomm to 2.40.1 [prlw1 2016-11-25]
 	Updated x11/gtksourceview3 to 3.22.0 [prlw1 2016-11-25]
+	Updated math/gnome-calculator to 3.22.2 [prlw1 2016-11-25]
