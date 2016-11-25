@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4778 2016/11/24 19:26:59 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4779 2016/11/25 12:42:47 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6582,3 +6582,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/doxygen to 1.8.12 [mef 2016-11-24]
 	Updated shells/tcsh to 6.20.00 [christos 2016-11-24]
 	Updated lang/nodejs to 7.2.0 [fhajny 2016-11-24]
+	Updated devel/glib2 to 2.50.2 [prlw1 2016-11-25]
