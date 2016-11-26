@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4796 2016/11/26 12:52:24 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4797 2016/11/26 14:16:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6602,3 +6602,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/hitori to 3.22.0 [prlw1 2016-11-26]
 	Updated print/evince3 to 3.22.1 [prlw1 2016-11-26]
 	Updated graphics/eog3 to 3.20.5 [prlw1 2016-11-26]
+	Updated multimedia/streamlink to 0.1.0 [maya 2016-11-26]
