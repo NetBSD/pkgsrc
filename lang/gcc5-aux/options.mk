@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/11/24 15:43:38 marino Exp $
+# $NetBSD: options.mk,v 1.4 2016/11/26 16:12:18 marino Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc5-aux
 PKG_SUPPORTED_OPTIONS=  fortran objc testsuite static bootstrap allstages
@@ -110,7 +110,7 @@ EXTRA_CONFARGS+= --with-boot-ldflags=-static
 EXTRA_CONFARGS+= --with-system-zlib
 .  endif
 .else
-.  if !empty(PKG_OPTIONS:Mallstages)
+.  if empty(PKG_OPTIONS:Mallstages)
 EXTRA_CONFARGS+= --disable-bootstrap
 EXTRA_CONFARGS+= --disable-libcc1
 .  endif

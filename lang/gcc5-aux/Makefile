@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 17:59:36 marino Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/26 16:12:18 marino Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -36,7 +36,7 @@ GARCH=			${MACHINE_ARCH:S/amd64/x86_64/}
 BLD_TARGET=		${GARCH}-aux-${LOWER_OPSYS}${OS_VERSION}
 OS_LABEL4VERS=		[${OPSYS}${GARCH:M*64:S/amd_//:S/x86_//}]
 FULL_GNATGCC=		NOT SET
-FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
+FULL_PATH=		/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/gcc5-aux/bin:${PREFIX}/sbin:${PREFIX}/bin
 
 .if ${OPSYS} == DragonFly
 BOOTSTRAP_COMPILER=	ada-bootstrap.${GARCH}.dragonfly.41.tar.bz2
@@ -131,11 +131,11 @@ PKG_PREFIX=		${PREFIX}/gcc5-aux
 BSFILENAME=		ada-bootstrap.${GARCH}.${LOWER_OPSYS}.${OS_VERSION:C/[A-Z_.-]//g}.tar
 
 
-# testing if gcc-aux is already installed - if so, use this compiler along with
+# testing if gcc5-aux is already installed - if so, use this compiler along with
 # its gnatlink, gnatbind, and gnatmake rather than the older bootstrap versions
-.if exists(${LOCALBASE}/gcc-aux/bin/ada)
-FULL_GNATGCC=${LOCALBASE}/gcc-aux/bin/ada
-FULL_GNATGXX=${LOCALBASE}/gcc-aux/bin/g++
+.if exists(${LOCALBASE}/gcc5-aux/bin/ada)
+FULL_GNATGCC=${LOCALBASE}/gcc5-aux/bin/ada
+FULL_GNATGXX=${LOCALBASE}/gcc5-aux/bin/g++
 .endif
 
 
@@ -231,7 +231,7 @@ post-extract:
 	  ${WRKSRC}/gcc/ada/gcc-interface/Makefile.in
 .  endif
 .endif
-.if !exists(${LOCALBASE}/gcc-aux/bin/ada) && ${OPSYS} == SunOS
+.if !exists(${LOCALBASE}/gcc5-aux/bin/ada) && ${OPSYS} == SunOS
 	# In case /usr/pkg/bin/gas doesn't exist, establish fallback
 	${LN} -s ${PREFIX}/bin/gas ${BOOTSTRAP_PREFIX}/bin/as
 .endif
@@ -239,7 +239,7 @@ post-extract:
 	# elfdump was present on OmniOS but not in Joyent dev area
 	${PERL5} -i -pe 's|/usr/ccs/bin|/usr/bin|g;' \
 	  -pe 's|readelf -s|greadelf -s|' ${WRKSRC}/contrib/make_sunver.pl
-	# Update LINK_SPEC to add gcc-aux lib runpath in every binary
+	# Update LINK_SPEC to add gcc5-aux lib runpath in every binary
 	@${ECHO} "Configuring LINK_SPEC runpath"
 	${PERL5} -pi -e 's;\@PREFIX\@;${PREFIX};' \
 	  ${WRKSRC}/gcc/config/dragonfly.h \
