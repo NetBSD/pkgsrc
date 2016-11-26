@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2016/11/25 20:36:50 marino Exp $
+# $NetBSD: Makefile,v 1.37 2016/11/26 18:20:58 marino Exp $
 #
 
 DISTNAME=	gtkada-${GTKADA_VERSION}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	x11
 MASTER_SITES=	http://downloads.dragonlace.net/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +14,7 @@ HOMEPAGE=	http://libre.adacore.com/libre/tools/gtkada/
 COMMENT=	Ada graphical toolkit based on Gtk+
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl pkg-config
@@ -43,8 +43,9 @@ GENERATE_PLIST=	cd ${DESTDIR}${PREFIX}; \
 GTK2PC=		${BUILDLINK_DIR}/lib/pkgconfig/gtk+-2.0.pc
 
 # Make it find libgcc_s.so from lang/gcc-aux.
-BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/gcc-aux/lib
-LDFLAGS+=			-Wl,-R${PREFIX}/gcc-aux/lib
+BUILDLINK_DEPMETHOD.gcc5-aux=	full
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/gcc5-aux/lib
+LDFLAGS+=			-Wl,-R${PREFIX}/gcc5-aux/lib
 
 post-wrapper:
 	# This hack works around missing gmodule entry in gtk2
