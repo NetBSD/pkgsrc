@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2003/04/11 04:00:18 uebayasi Exp $
+$NetBSD: patch-af,v 1.3 2016/11/26 06:38:06 dholland Exp $
 
---- src/Makefile.in.orig	Thu Mar 27 12:43:25 2003
+--- src/Makefile.in.orig	2016-11-26 06:25:26.875919180 +0000
 +++ src/Makefile.in
-@@ -329,7 +329,7 @@
+@@ -329,7 +329,7 @@ LIBXMENU=
  #ifdef USE_X_TOOLKIT
  #define @X_TOOLKIT_TYPE@
  #if defined (LUCID) || defined (ATHENA)
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.2 2003/04/11 04:00:18 uebayasi Exp $
  #endif
  #ifdef MOTIF
  #if defined (HAVE_MOTIF_2_1) && defined (HAVE_LIBXP)
-@@ -402,7 +402,7 @@
+@@ -402,7 +402,7 @@ LIBX= $(LIBXMENU) LD_SWITCH_X_SITE -lX10
     ask GCC explicitly where to find libgcc.a.  */
  
  #ifndef LINKER
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.2 2003/04/11 04:00:18 uebayasi Exp $
  #endif
  
  #ifndef LIB_GCC
-@@ -804,14 +804,7 @@
+@@ -804,14 +804,7 @@ LIBES = $(LOADLIBES) $(LDLIBS) $(LIBX) L
  #define OBJECTS_MACHINE
  #endif
  
@@ -36,3 +36,19 @@ $NetBSD: patch-af,v 1.2 2003/04/11 04:00:18 uebayasi Exp $
  
  emacs: temacs ${etc}DOC ${lisp}
  #ifdef CANNOT_DUMP
+@@ -823,6 +816,7 @@ emacs: temacs ${etc}DOC ${lisp}
+ #else /* ! defined (HAVE_SHM) */
+ 	./temacs -batch -l loadup dump
+ #endif /* ! defined (HAVE_SHM) */
++	/usr/sbin/paxctl +a emacs || true
+ #endif /* ! defined (CANNOT_DUMP) */
+ 	-./emacs -q -batch -f list-load-path-shadows
+ 
+@@ -851,6 +845,7 @@ temacs: MAKE_PARALLEL $(LOCALCPP) $(STAR
+ 	$(LD) YMF_PASS_LDFLAGS (${STARTFLAGS} ${ALL_LDFLAGS}) \
+     -o temacs ${STARTFILES} ${obj} ${otherobj}  \
+     OBJECTS_SYSTEM OBJECTS_MACHINE ${LIBES}
++	/usr/sbin/paxctl +a temacs || true
+ 
+ /* We don't use ALL_LDFLAGS because LD_SWITCH_SYSTEM and LD_SWITCH_MACHINE
+    often contain options that have to do with using Emacs's crt0,
