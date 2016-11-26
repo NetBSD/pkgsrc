@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/27 14:30:58 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/26 10:02:27 tsutsui Exp $
 bin/sayaka
-share/sayaka/colormap16.png
-share/sayaka/colormap8.png
-share/sayaka/colormapx68k16.png
