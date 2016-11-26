@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4790 2016/11/25 18:02:03 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4791 2016/11/26 07:21:18 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6594,3 +6594,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/pangomm to 2.40.1 [prlw1 2016-11-25]
 	Updated x11/gtksourceview3 to 3.22.0 [prlw1 2016-11-25]
 	Updated math/gnome-calculator to 3.22.2 [prlw1 2016-11-25]
+	Updated editors/emacs20 to 20.7nb21 [dholland 2016-11-26]
+	Updated editors/emacs21 to 21.4anb37 [dholland 2016-11-26]
+	Updated editors/emacs20 to 20.7nb22 [dholland 2016-11-26]
