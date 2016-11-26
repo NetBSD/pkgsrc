@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/18 16:39:43 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/26 14:15:57 maya Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -72,6 +72,9 @@ ${PYSITELIB}/streamlink/packages/flashmedia/util.pyo
 ${PYSITELIB}/streamlink/packages/pbs.py
 ${PYSITELIB}/streamlink/packages/pbs.pyc
 ${PYSITELIB}/streamlink/packages/pbs.pyo
+${PYSITELIB}/streamlink/packages/shutil_which.py
+${PYSITELIB}/streamlink/packages/shutil_which.pyc
+${PYSITELIB}/streamlink/packages/shutil_which.pyo
 ${PYSITELIB}/streamlink/plugin/__init__.py
 ${PYSITELIB}/streamlink/plugin/__init__.pyc
 ${PYSITELIB}/streamlink/plugin/__init__.pyo
@@ -99,6 +102,9 @@ ${PYSITELIB}/streamlink/plugin/plugin.pyo
 ${PYSITELIB}/streamlink/plugins/__init__.py
 ${PYSITELIB}/streamlink/plugins/__init__.pyc
 ${PYSITELIB}/streamlink/plugins/__init__.pyo
+${PYSITELIB}/streamlink/plugins/adultswim.py
+${PYSITELIB}/streamlink/plugins/adultswim.pyc
+${PYSITELIB}/streamlink/plugins/adultswim.pyo
 ${PYSITELIB}/streamlink/plugins/afreeca.py
 ${PYSITELIB}/streamlink/plugins/afreeca.pyc
 ${PYSITELIB}/streamlink/plugins/afreeca.pyo
@@ -270,6 +276,9 @@ ${PYSITELIB}/streamlink/plugins/periscope.pyo
 ${PYSITELIB}/streamlink/plugins/picarto.py
 ${PYSITELIB}/streamlink/plugins/picarto.pyc
 ${PYSITELIB}/streamlink/plugins/picarto.pyo
+${PYSITELIB}/streamlink/plugins/piczel.py
+${PYSITELIB}/streamlink/plugins/piczel.pyc
+${PYSITELIB}/streamlink/plugins/piczel.pyo
 ${PYSITELIB}/streamlink/plugins/rtlxl.py
 ${PYSITELIB}/streamlink/plugins/rtlxl.pyc
 ${PYSITELIB}/streamlink/plugins/rtlxl.pyo
@@ -360,6 +369,9 @@ ${PYSITELIB}/streamlink/plugins/vidio.pyo
 ${PYSITELIB}/streamlink/plugins/wattv.py
 ${PYSITELIB}/streamlink/plugins/wattv.pyc
 ${PYSITELIB}/streamlink/plugins/wattv.pyo
+${PYSITELIB}/streamlink/plugins/webtv.py
+${PYSITELIB}/streamlink/plugins/webtv.pyc
+${PYSITELIB}/streamlink/plugins/webtv.pyo
 ${PYSITELIB}/streamlink/plugins/weeb.py
 ${PYSITELIB}/streamlink/plugins/weeb.pyc
 ${PYSITELIB}/streamlink/plugins/weeb.pyo
