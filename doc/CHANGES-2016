@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4794 2016/11/26 10:27:17 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4795 2016/11/26 12:44:42 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6600,3 +6600,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/sayaka to 3.3.0 [tsutsui 2016-11-26]
 	Updated editors/gedit3 to 3.22.0 [prlw1 2016-11-26]
 	Updated games/hitori to 3.22.0 [prlw1 2016-11-26]
+	Updated print/evince3 to 3.22.1 [prlw1 2016-11-26]
