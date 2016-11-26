@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4791 2016/11/26 07:21:18 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.4792 2016/11/26 10:03:19 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6597,3 +6597,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/emacs20 to 20.7nb21 [dholland 2016-11-26]
 	Updated editors/emacs21 to 21.4anb37 [dholland 2016-11-26]
 	Updated editors/emacs20 to 20.7nb22 [dholland 2016-11-26]
+	Updated net/sayaka to 3.3.0 [tsutsui 2016-11-26]
