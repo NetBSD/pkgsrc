@@ -1,8 +1,27 @@
-$NetBSD: patch-ah,v 1.1 2007/06/11 13:38:35 markd Exp $
+$NetBSD: patch-ah,v 1.2 2016/11/26 04:22:40 dholland Exp $
 
---- src/unexelf.c.orig	2002-10-16 03:21:44.000000000 +1300
+- Set ELFSIZE correctly (from exec_elf.h)
+- not sure what the rest is about (XXX)
+
+--- src/unexelf.c.orig	2002-10-15 14:21:44.000000000 +0000
 +++ src/unexelf.c
-@@ -971,8 +971,13 @@ unexec (new_name, old_name, data_start, 
+@@ -499,12 +499,14 @@ typedef struct {
+ /*
+  * NetBSD does not have normal-looking user-land ELF support.
+  */
++# include <sys/exec_elf.h>
++# ifndef ELFSIZE
+ # if defined __alpha__ || defined __sparc_v9__
+ #  define ELFSIZE	64
+ # else
+ #  define ELFSIZE	32
+ # endif
+-# include <sys/exec_elf.h>
++# endif
+ 
+ # ifndef PT_LOAD
+ #  define PT_LOAD	Elf_pt_load
+@@ -971,8 +973,13 @@ unexec (new_name, old_name, data_start, 
  	}
        else
  	{
@@ -18,7 +37,7 @@ $NetBSD: patch-ah,v 1.1 2007/06/11 13:38:35 markd Exp $
  #ifdef SOLARIS_POWERPC
  	  /* On PPC Reference Platform running Solaris 2.5.1
  	     the plt section is also of type NOBI like the bss section.
-@@ -986,9 +991,8 @@ unexec (new_name, old_name, data_start, 
+@@ -986,9 +993,8 @@ unexec (new_name, old_name, data_start, 
  	      >= OLD_SECTION_H (old_bss_index-1).sh_offset)
  	    NEW_SECTION_H (nn).sh_offset += new_data2_size;
  #else
