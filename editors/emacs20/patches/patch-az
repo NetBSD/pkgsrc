@@ -1,17 +1,21 @@
-$NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+$NetBSD: patch-az,v 1.2 2016/11/26 03:50:16 dholland Exp $
 
---- src/unexelf.c.orig	Mon May 15 01:14:02 2000
-+++ src/unexelf.c	Tue Sep 26 14:18:05 2000
-@@ -470,7 +470,7 @@
+--- src/unexelf.c.orig	2000-05-15 08:14:02.000000000 +0000
++++ src/unexelf.c
+@@ -470,15 +470,18 @@ typedef struct {
  /*
   * NetBSD does not have normal-looking user-land ELF support.
   */
 -# ifdef __alpha__
++# include <sys/exec_elf.h>
++# if !defined(ELFSIZE)
 +# if defined(__alpha__) || defined(__sparc_v9__)
  #  define ELFSIZE	64
  # else
  #  define ELFSIZE	32
-@@ -479,6 +479,7 @@
+ # endif
+-# include <sys/exec_elf.h>
++# endif
  
  # ifndef PT_LOAD
  #  define PT_LOAD	Elf_pt_load
@@ -19,7 +23,7 @@ $NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  #  define SHT_SYMTAB	Elf_sht_symtab
  #  define SHT_DYNSYM	Elf_sht_dynsym
  #  define SHT_NULL	Elf_sht_null
-@@ -495,9 +496,14 @@
+@@ -495,9 +498,14 @@ typedef struct {
  #  include <sys/exec_ecoff.h>
  #  define HDRR		struct ecoff_symhdr
  #  define pHDRR		HDRR *
@@ -35,7 +39,7 @@ $NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  #ifdef __OpenBSD__
  # include <sys/exec_elf.h>
  #endif
-@@ -512,7 +518,7 @@
+@@ -512,7 +520,7 @@ typedef struct {
  # else
  #  define ElfBitsW(bits, type) Elf/**/bits/**/_/**/type
  # endif
@@ -44,7 +48,7 @@ $NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  #  define ELFSIZE 64
  # else
  #  define ELFSIZE 32
-@@ -522,6 +528,14 @@
+@@ -522,6 +530,14 @@ typedef struct {
  # define ElfW(type) ElfExpandBitsW (ELFSIZE, type)
  #endif
  
@@ -59,7 +63,7 @@ $NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  #ifndef ELF_BSS_SECTION_NAME
  #define ELF_BSS_SECTION_NAME ".bss"
  #endif
-@@ -613,12 +627,53 @@
+@@ -613,12 +629,53 @@ find_section (name, section_names, file_
        if (noerror)
  	return -1;
        else
@@ -114,7 +118,7 @@ $NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
  /* ****************************************************************
   * unexec
   *
-@@ -1005,22 +1060,11 @@
+@@ -1005,22 +1062,11 @@ unexec (new_name, old_name, data_start, 
  	  == 0)
  	{
  	  pHDRR symhdr = (pHDRR) (NEW_SECTION_H (nn).sh_offset + new_base);
@@ -139,7 +143,7 @@ $NetBSD: patch-az,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
        if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG
  	  && old_mdebug_index != -1) 
          {
-@@ -1030,20 +1074,17 @@
+@@ -1030,20 +1076,17 @@ unexec (new_name, old_name, data_start, 
  
  	  if (diff)
  	    {
