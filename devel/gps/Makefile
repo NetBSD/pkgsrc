@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2016/11/25 20:36:49 marino Exp $
+# $NetBSD: Makefile,v 1.47 2016/11/26 18:34:47 marino Exp $
 #
 
 DISTNAME=	gps-${GPS_VERSION}
@@ -69,7 +69,8 @@ post-install:
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gps/html/users_guide/_sources
 	${RM} -rf ${DESTDIR}${PREFIX}/share/doc/gps/html/tutorial/_sources
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+BUILDLINK_DEPMETHOD.gprbuild-aux=	full
 
 .include "../../lang/python/application.mk"
 .include "../../x11/gtkada/buildlink3.mk"
