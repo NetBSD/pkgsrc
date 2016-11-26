@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/09/16 08:52:33 richard Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/11/26 12:44:05 prlw1 Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -153,7 +153,6 @@ share/gtk-doc/html/evince/evince-frontend.html
 share/gtk-doc/html/evince/evince.devhelp2
 share/gtk-doc/html/evince/home.png
 share/gtk-doc/html/evince/index.html
-share/gtk-doc/html/evince/index.sgml
 share/gtk-doc/html/evince/left-insensitive.png
 share/gtk-doc/html/evince/left.png
 share/gtk-doc/html/evince/licence.html
@@ -200,7 +199,6 @@ share/gtk-doc/html/libevdocument-3.0/document-helpers.html
 share/gtk-doc/html/libevdocument-3.0/document-interfaces.html
 share/gtk-doc/html/libevdocument-3.0/home.png
 share/gtk-doc/html/libevdocument-3.0/index.html
-share/gtk-doc/html/libevdocument-3.0/index.sgml
 share/gtk-doc/html/libevdocument-3.0/left-insensitive.png
 share/gtk-doc/html/libevdocument-3.0/left.png
 share/gtk-doc/html/libevdocument-3.0/libevdocument-3.0.devhelp2
@@ -223,6 +221,7 @@ share/gtk-doc/html/libevdocument-3.0/style.css
 share/gtk-doc/html/libevdocument-3.0/up-insensitive.png
 share/gtk-doc/html/libevdocument-3.0/up.png
 share/gtk-doc/html/libevview-3.0/EvJob.html
+share/gtk-doc/html/libevview-3.0/annotation-glossary.html
 share/gtk-doc/html/libevview-3.0/api-index-3-10.html
 share/gtk-doc/html/libevview-3.0/api-index-3-6.html
 share/gtk-doc/html/libevview-3.0/api-index-3-8.html
@@ -230,7 +229,6 @@ share/gtk-doc/html/libevview-3.0/api-index-deprecated.html
 share/gtk-doc/html/libevview-3.0/api-index-full.html
 share/gtk-doc/html/libevview-3.0/home.png
 share/gtk-doc/html/libevview-3.0/index.html
-share/gtk-doc/html/libevview-3.0/index.sgml
 share/gtk-doc/html/libevview-3.0/left-insensitive.png
 share/gtk-doc/html/libevview-3.0/left.png
 share/gtk-doc/html/libevview-3.0/libevview-3.0.devhelp2
@@ -3000,6 +2998,7 @@ share/locale/gl/LC_MESSAGES/evince.mo
 share/locale/gu/LC_MESSAGES/evince.mo
 share/locale/he/LC_MESSAGES/evince.mo
 share/locale/hi/LC_MESSAGES/evince.mo
+share/locale/hr/LC_MESSAGES/evince.mo
 share/locale/hu/LC_MESSAGES/evince.mo
 share/locale/id/LC_MESSAGES/evince.mo
 share/locale/is/LC_MESSAGES/evince.mo
