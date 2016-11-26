@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2016/08/30 14:37:43 prlw1 Exp $
+# $NetBSD: Makefile,v 1.29 2016/11/26 12:52:02 prlw1 Exp $
 
-DISTNAME=	eog-3.20.4
+DISTNAME=	eog-3.20.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -30,7 +30,7 @@ BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.30.0
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../x11/gnome-desktop3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.19.3
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.22.0
 .include "../../x11/gtk3/buildlink3.mk"
 
 # "semi-optional":
