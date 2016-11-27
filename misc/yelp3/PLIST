@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/05/07 08:45:55 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/11/27 00:03:17 prlw1 Exp $
 bin/gnome-help
 bin/yelp
 include/libyelp/yelp-bookmarks.h
@@ -32,7 +32,6 @@ share/gtk-doc/html/libyelp/ch01.html
 share/gtk-doc/html/libyelp/ch01s02.html
 share/gtk-doc/html/libyelp/home.png
 share/gtk-doc/html/libyelp/index.html
-share/gtk-doc/html/libyelp/index.sgml
 share/gtk-doc/html/libyelp/left-insensitive.png
 share/gtk-doc/html/libyelp/left.png
 share/gtk-doc/html/libyelp/libyelp-yelp-error.html
