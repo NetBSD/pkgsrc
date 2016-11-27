@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/11/27 15:41:10 taca Exp $
+# $NetBSD: Makefile,v 1.8 2016/11/27 16:06:32 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	standard-edition
@@ -31,7 +30,7 @@ NO_BUILD=	yes
 
 EG_CONFIG=	app/config/config.yml app/config/config_dev.yml \
 		app/config/config_prod.yml app/config/config_test.yml \
-		app/config/parameters.yml app/config/routing.yml \
+		app/config/parameters.yml.dist app/config/routing.yml \
 		app/config/routing_dev.yml app/config/security.yml
 EG_DATA=	app/config
 
@@ -79,8 +78,6 @@ PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
 
 pre-configure:
-	${MV} ${WRKSRC}/app/config/parameters.yml.dist \
-		${WRKSRC}/app/config/parameters.yml
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
 
 do-install:
