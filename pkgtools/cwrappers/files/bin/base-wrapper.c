@@ -1,4 +1,4 @@
-/* $NetBSD: base-wrapper.c,v 1.2 2015/04/19 14:30:07 jperkin Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.3 2016/11/27 11:46:45 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -102,6 +102,7 @@ libtool_mode(struct arglist *args)
 int
 main(int argc, char **argv)
 {
+	extern char **environ;
 	int do_fork, rv;
 	FILE *fp;
 	struct arglist args;
@@ -169,7 +170,7 @@ skip_transforms:
 	do_fork = 0;
 #endif
 
-	rv = command_exec(&args, do_fork);
+	rv = command_exec(&args, do_fork, environ);
 
 #if defined(WRAPPER_LIBTOOL) || defined(WRAPPER_SHLIBTOOL)
 	if (rv == 0)
