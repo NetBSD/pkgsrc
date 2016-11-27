@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/10/06 10:17:06 grant Exp $
+$NetBSD: patch-ab,v 1.2 2016/11/27 09:04:27 wiz Exp $
 
 --- src/Makefile.in.orig	2004-02-18 01:37:47.000000000 +0900
 +++ src/Makefile.in	2004-09-29 00:32:45.000000000 +0900
-@@ -60,16 +60,16 @@
+@@ -60,14 +60,14 @@
  		  $(srcdir)/platon/str/strdyn.c \
  		  $(srcdir)/platon/str/dynfgets.c
  
@@ -27,8 +27,6 @@ $NetBSD: patch-ab,v 1.1 2004/10/06 10:17:06 grant Exp $
 +		  $(top_builddir)/src/platon/str/strdyn.lo \
 +		  $(top_builddir)/src/platon/str/dynfgets.lo
  
- # SunOS 4 make does not allow multiple makefiles to be specified in one ­include directive.
- DEP_FILES = $(top_builddir)/src/.deps/cfg+.P \
 @@ -97,8 +97,7 @@
  				  platon/str/strplus.h
  
