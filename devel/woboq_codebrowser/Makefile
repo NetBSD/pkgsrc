@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/11/24 01:10:16 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2016/11/27 08:51:55 wiz Exp $
 
 DISTNAME=	woboq_codebrowser-2.0.1
 CATEGORIES=	devel lang
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	woboq_codebrowser
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://code.woboq.org/
 COMMENT=	Code analysis tool
-LICENSE=	cc-by-nc-sa-v3.0
+LICENSE=	cc-by-nc-sa-v3.0-license
 
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q} \
