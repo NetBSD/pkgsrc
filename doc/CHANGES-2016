@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4807 2016/11/27 15:45:42 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4808 2016/11/27 16:07:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6611,5 +6611,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/cwrappers to 20161125 [joerg 2016-11-27]
 	Updated security/opendnssec to 1.4.12nb1 [he 2016-11-27]
 	Updated textproc/php-mecab to 0.6.0nb1 [taca 2016-11-27]
-	Updated www/contao42 to 4.2.5nb1 [taca 2016-11-27]
 	Updated www/typo3_62 to 6.2.29 [taca 2016-11-27]
