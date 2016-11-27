@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4801 2016/11/27 08:51:20 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4802 2016/11/27 09:33:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6607,3 +6607,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/pmw to 4.29 [prlw1 2016-11-27]
 	Updated comms/asterisk to 11.25.0 [jnemeth 2016-11-27]
 	Updated comms/asterisk13 to 13.13.0 [jnemeth 2016-11-27]
+	Updated audio/snd to 16.9 [wiz 2016-11-27]
