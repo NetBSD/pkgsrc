@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4808 2016/11/27 16:07:30 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4809 2016/11/27 22:59:22 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6612,3 +6612,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/opendnssec to 1.4.12nb1 [he 2016-11-27]
 	Updated textproc/php-mecab to 0.6.0nb1 [taca 2016-11-27]
 	Updated www/typo3_62 to 6.2.29 [taca 2016-11-27]
+	Updated comms/asterisk14 to 14.2.0 [jnemeth 2016-11-27]
