@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/11/25 22:46:40 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2016/11/27 11:46:45 joerg Exp $
 
-PKGNAME=		cwrappers-20160908
+PKGNAME=		cwrappers-20161125
 CATEGORIES=		pkgtools sysutils
 
 MAINTAINER=		joerg@NetBSD.org
@@ -8,6 +8,7 @@ HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		pkgsrc compiler wrappers
 LICENSE=		modified-bsd
 
+GNU_CONFIGURE=		yes
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES=		nbcompat
 
