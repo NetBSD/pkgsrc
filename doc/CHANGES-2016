@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4798 2016/11/27 00:03:40 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.4799 2016/11/27 00:13:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6604,3 +6604,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/eog3 to 3.20.5 [prlw1 2016-11-26]
 	Updated multimedia/streamlink to 0.1.0 [maya 2016-11-26]
 	Updated misc/yelp3 to 3.22.0 [prlw1 2016-11-27]
+	Updated print/pmw to 4.29 [prlw1 2016-11-27]
