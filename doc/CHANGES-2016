@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4804 2016/11/27 14:26:29 he Exp $
+$NetBSD: CHANGES-2016,v 1.4805 2016/11/27 14:56:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6610,3 +6610,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/snd to 16.9 [wiz 2016-11-27]
 	Updated pkgtools/cwrappers to 20161125 [joerg 2016-11-27]
 	Updated security/opendnssec to 1.4.12nb1 [he 2016-11-27]
+	Updated textproc/php-mecab to 0.6.0nb1 [taca 2016-11-27]
