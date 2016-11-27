@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4802 2016/11/27 09:33:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4803 2016/11/27 11:47:16 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6608,3 +6608,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk to 11.25.0 [jnemeth 2016-11-27]
 	Updated comms/asterisk13 to 13.13.0 [jnemeth 2016-11-27]
 	Updated audio/snd to 16.9 [wiz 2016-11-27]
+	Updated pkgtools/cwrappers to 20161125 [joerg 2016-11-27]
