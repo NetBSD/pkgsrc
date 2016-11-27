@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2016/11/01 12:34:48 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.31 2016/11/27 13:49:14 jdc Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${BOOST_VERSION}
@@ -11,9 +11,9 @@ ${PLIST.context}lib/libboost_context.so.${BOOST_VERSION}
 lib/libboost_container.a
 lib/libboost_container.so
 lib/libboost_container.so.${BOOST_VERSION}
-lib/libboost_coroutine.a
-lib/libboost_coroutine.so
-lib/libboost_coroutine.so.${BOOST_VERSION}
+${PLIST.context}lib/libboost_coroutine.a
+${PLIST.context}lib/libboost_coroutine.so
+${PLIST.context}lib/libboost_coroutine.so.${BOOST_VERSION}
 lib/libboost_date_time.a
 lib/libboost_date_time.so
 lib/libboost_date_time.so.${BOOST_VERSION}
