@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/11/27 15:41:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/11/27 16:06:32 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -7862,7 +7862,7 @@ ${CT_EGDIR}/app/config/config.yml
 ${CT_EGDIR}/app/config/config_dev.yml
 ${CT_EGDIR}/app/config/config_prod.yml
 ${CT_EGDIR}/app/config/config_test.yml
-${CT_EGDIR}/app/config/parameters.yml
+${CT_EGDIR}/app/config/parameters.yml.dist
 ${CT_EGDIR}/app/config/routing.yml
 ${CT_EGDIR}/app/config/routing_dev.yml
 ${CT_EGDIR}/app/config/security.yml
