@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/11/12 16:17:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/11/27 15:43:34 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -3026,7 +3026,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Installation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Introduction/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/OutOfTheBoxCssStyling/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Resources/Private/Language/locallang_em.xlf
@@ -3107,7 +3107,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/KnownProblems/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/KnownProblems/ResultsOfDatabaseComparisonOperations/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/KnownProblems/SequencesCollideWithImportedData/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/KnownProblems/SomeFieldNamesAreTooLong/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/To-doList/GeneralTodo/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/To-doList/Index.rst
@@ -3924,7 +3924,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/LoginMechanism/Displ
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/LoginMechanism/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/LoginMechanism/LoginProcess/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/LoginMechanism/RedirectModes/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/UsersManual/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Migrations/Code/ClassAliasMap.php
@@ -4521,7 +4521,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Introduction/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Settings.cfg
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Settings.yml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Tests/Attributes/button.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Tests/Attributes/checkbox.txt
@@ -5112,7 +5111,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/IndexingConfi
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/IndexingConfigurations/ShowingResults/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/Introduction/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/KnownProblems/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/TechnicalDetails/AccessRestrictedPages/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/TechnicalDetails/ExternalMedia/Index.rst
@@ -5777,7 +5776,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Introduction/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/LargeSites/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/NextSteps/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Resources/Private/Language/Module/locallang.xlf
@@ -5862,7 +5861,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Images/YahooOpenIdScr
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/UsersManual/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Migrations/Code/ClassAliasMap.php
@@ -5971,7 +5970,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Images/RecyclerMain
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/composer.json
@@ -6053,7 +6052,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Administration/Index
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/UsersManual/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Migrations/Code/ClassAliasMap.php
@@ -6170,7 +6169,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Installation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Troubleshooting/FirefoxExtensionNoscript/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Troubleshooting/GzipCachingProblem/Index.rst
@@ -6648,7 +6647,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Installation
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Introduction/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Licenses/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Overview/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Resources/Private/Language/locallang_em.xlf
@@ -6725,7 +6724,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Installation/Setup
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Introduction/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/KnownProblems/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Overview/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/To-doList/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Migrations/Code/ClassAliasMap.php
@@ -6812,7 +6811,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Images/SqlQueryAc
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/UsersManual/CreateBackendUser/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/UsersManual/EditRecords/Index.rst
@@ -8994,7 +8993,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Images/ExampleScr
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/composer.json
@@ -9226,7 +9225,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Images/WorkspaceS
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Introduction/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Settings.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Settings.cfg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Targets.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/UsersGuide/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Migrations/Code/ClassAliasMap.php
