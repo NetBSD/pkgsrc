@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2016/09/15 17:02:24 wiz Exp $
+$NetBSD: distinfo,v 1.20 2016/11/27 09:33:11 wiz Exp $
 
-SHA1 (snd-16.8.tar.gz) = c39ca568f5ae3b28bb700ab281ec59e64dff2a45
-RMD160 (snd-16.8.tar.gz) = b53496fc0dc161bd4938951e84fd72a756214fd1
-SHA512 (snd-16.8.tar.gz) = a5d1121104d1828deeb9ab762567de7b42ba2b50fe362ccd14672338d8b70c4e57ba7834ee78d18f9ff761a1b3e670614ef734c419711352440ff263e3e9819a
-Size (snd-16.8.tar.gz) = 15018578 bytes
+SHA1 (snd-16.9.tar.gz) = 479c8cd8800f4cd8bec534f4d5190cf3c4b1a05b
+RMD160 (snd-16.9.tar.gz) = 7ca41770db942adc15570871b11440054bf9ee3a
+SHA512 (snd-16.9.tar.gz) = 4b2769a0bb7b698bf3d86c5c77b8e59bf3a8c318a0061e93a92a3c7b3619a8da4cef628eceeafac15379e5dd1fd1073f4a7b7d3e28793656cc4c4be5ab7f4d8b
+Size (snd-16.9.tar.gz) = 15032677 bytes
