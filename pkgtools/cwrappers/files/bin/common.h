@@ -1,4 +1,4 @@
-/* $NetBSD: common.h,v 1.4 2015/04/19 13:30:35 tnn Exp $ */
+/* $NetBSD: common.h,v 1.5 2016/11/27 11:46:45 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -58,7 +58,7 @@ char	*concat(const char *, const char *);
 char	*concat2(const char *, const char *, size_t);
 void	arglist_from_argc(struct arglist *, int, char **);
 void	arglist_apply_config(struct arglist *);
-int	command_exec(struct arglist *, int);
+int	command_exec(struct arglist *, int, char **);
 size_t	wrapper_hash(const char *);
 size_t	wrapper_hash2(const char *, size_t);
 
