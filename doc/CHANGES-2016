@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4818 2016/11/28 12:32:23 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4819 2016/11/28 12:37:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6622,3 +6622,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/neomutt to 20161126 [wiz 2016-11-28]
 	Updated math/p5-Math-BigInt to 1.999801 [wen 2016-11-28]
 	Updated misc/calibre to 2.73.0 [wiz 2016-11-28]
+	Updated math/p5-Math-Prime-Util to 0.60 [wen 2016-11-28]
