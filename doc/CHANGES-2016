@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4847 2016/11/28 15:32:38 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4848 2016/11/28 15:34:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6651,3 +6651,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-virtualenv to 15.1.0 [wiz 2016-11-28]
 	Updated net/wireshark to 2.2.2 [wiz 2016-11-28]
 	Updated audio/libopenmpt to 0.2.7386 [wiz 2016-11-28]
+	Updated graphics/cairomm to 1.12.2 [wiz 2016-11-28]
