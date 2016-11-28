@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/11/07 13:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/11/28 12:51:35 wiz Exp $
 
-DISTNAME=	notmuch-0.23.1
-PKGREVISION=	1
+DISTNAME=	notmuch-0.23.2
 CATEGORIES=	mail
 MASTER_SITES=	http://notmuchmail.org/releases/
 
