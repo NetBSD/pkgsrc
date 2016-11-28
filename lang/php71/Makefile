@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/12 15:38:01 taca Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2016/11/28 18:22:28 bsiegert Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -11,7 +11,7 @@ COMMENT=		PHP Hypertext Preprocessor version 7.1
 LICENSE=		php
 
 # 7.1 is in beta, available only on dev location
-MASTER_SITES=   https://downloads.php.net/~davey/
+MASTER_SITES=   https://downloads.php.net/~krakjoe/
 
 TEST_TARGET=		test
 
