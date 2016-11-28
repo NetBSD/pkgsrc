@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.14 2016/11/21 07:08:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.15 2016/11/28 20:28:57 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -113,4 +113,17 @@ emulators/qemu: security fix
 
 Pullup ticket #5157 - requested by taca
 lang/php56: security fix
+
+Pullup ticket #5158 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5159 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5162 - requested by wiz
+www/w3m: security fix
+www/w3m-img: security fix
+
+Pullup ticket #5163 - requested by wiz
+graphics/tiff: security fix
 
