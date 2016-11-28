@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2016/11/07 10:48:13 wiz Exp $
+$NetBSD: distinfo,v 1.36 2016/11/28 13:15:51 wiz Exp $
 
-SHA1 (cryptography-1.5.3.tar.gz) = 8e9c28362e049abf34a41932c04a9cb280bbad3c
-RMD160 (cryptography-1.5.3.tar.gz) = 74f671739dbdd81d88a443abc7041e9c28fdc526
-SHA512 (cryptography-1.5.3.tar.gz) = 0985d22a77821c2b3e78887e17d4046873bf19ff167561e228cfea4cabc02e6ac894b2c72638b7c3414ae5aeb51d1b8bbd67e255ef3dc2043cfcc8ee67bb412f
-Size (cryptography-1.5.3.tar.gz) = 400889 bytes
+SHA1 (cryptography-1.6.tar.gz) = da131a13f595daa9fa739baffb3fb05760a58fe9
+RMD160 (cryptography-1.6.tar.gz) = 835a2fc36598ef2d2a2aa6c32824e5e81dba7699
+SHA512 (cryptography-1.6.tar.gz) = d88ee2e81414964be461c8401c01f94d03ac7870242d3e90b401ec4b46eab3023a7950425792d50992c15459c6e5789dd859b15adf6e081d672682038d1447ea
+Size (cryptography-1.6.tar.gz) = 410073 bytes
