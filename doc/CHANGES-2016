@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4821 2016/11/28 12:46:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4822 2016/11/28 12:47:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6625,3 +6625,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Math-Prime-Util to 0.60 [wen 2016-11-28]
 	Updated textproc/pugixml to 1.8.1 [wiz 2016-11-28]
 	Updated devel/py-flake8 to 3.2.1 [wiz 2016-11-28]
+	Updated devel/p5-Test-Simple to 1.302067 [wiz 2016-11-28]
