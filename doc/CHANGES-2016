@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4828 2016/11/28 13:07:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4829 2016/11/28 13:08:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6632,3 +6632,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-IO-Socket-SSL to 2.039 [wiz 2016-11-28]
 	Updated devel/libuv to 1.10.1 [wiz 2016-11-28]
 	Updated time/p5-DateTime-TimeZone to 2.09 [wiz 2016-11-28]
+	Updated time/p5-Time-HiRes to 1.9741 [wiz 2016-11-28]
