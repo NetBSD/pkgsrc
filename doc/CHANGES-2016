@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4844 2016/11/28 15:07:24 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4845 2016/11/28 15:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6648,3 +6648,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/pinentry-gtk2 to 1.0.0 [wiz 2016-11-28]
 	Updated security/pinentry-qt4 to 1.0.0 [wiz 2016-11-28]
 	Updated graphics/ImageMagick to 7.0.3.8 [wiz 2016-11-28]
+	Updated devel/py-virtualenv to 15.1.0 [wiz 2016-11-28]
