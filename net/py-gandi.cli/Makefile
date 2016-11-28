@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/10/27 10:15:18 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2016/11/28 23:38:18 joerg Exp $
 
 GITHUB_TAG=	0.19
 DISTNAME=	${GITHUB_TAG}
@@ -13,6 +13,8 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	https://github.com/Gandi/gandi.cli
 COMMENT=	Command line interface for Gandi.net
 LICENSE=	gnu-gpl-v3
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 DEPENDS+=	${PYPKGPREFIX}-click>=3.1:../../devel/py-click
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
