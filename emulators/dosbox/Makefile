@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2016/09/19 09:13:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2016/11/28 06:51:23 dholland Exp $
 
 DISTNAME=	dosbox-0.74
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
@@ -25,6 +25,8 @@ SUBST_CLASSES+=		fixme
 SUBST_STAGE.fixme=	post-patch
 SUBST_FILES.fixme=	docs/dosbox.1
 SUBST_SED.fixme=	-e s,/usr/share/,${PREFIX}/share/,g
+
+NOT_PAX_MPROTECT_SAFE+=	bin/dosbox
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/dosbox
