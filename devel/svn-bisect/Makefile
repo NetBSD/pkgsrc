@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/11/28 19:08:07 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2016/11/28 22:28:52 wiz Exp $
 
 DISTNAME=	svn-bisect-1.1
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	svn-bisect
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/App-SVN-Bisect/
-COMMENT=	Perl5 module for 'unblessing' perl objects
+COMMENT=	Bisect SVN repositories to find a particular change
 LICENSE=	artistic-2.0
 
 DEPENDS+=	subversion-base-[0-9]:../../devel/subversion-base
