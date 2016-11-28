@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_Makefile.in,v 1.1 2014/03/10 14:22:01 taca Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.2 2016/11/28 16:11:37 wiz Exp $
 
 Shared library handling on pkgsrc.
 
---- unix/Makefile.in.orig	2013-09-16 16:45:24.000000000 +0000
+--- unix/Makefile.in.orig	2016-02-09 15:50:02.000000000 +0000
 +++ unix/Makefile.in
 @@ -13,6 +13,7 @@ MAJOR_VERSION		= @TK_MAJOR_VERSION@
  MINOR_VERSION		= @TK_MINOR_VERSION@
@@ -66,7 +66,7 @@ Shared library handling on pkgsrc.
  SHELL_ENV = \
  	@LD_LIBRARY_PATH_VAR@="`pwd`:${TCL_BIN_DIR}:$${@LD_LIBRARY_PATH_VAR@}"; \
  	export @LD_LIBRARY_PATH_VAR@; \
-@@ -568,6 +577,11 @@ ${LIB_FILE}: ${OBJS} ${STUB_LIB_FILE} @L
+@@ -568,6 +577,11 @@ ${LIB_FILE}: ${STUB_LIB_FILE} @LIB_RSRC_
  	rm -f $@
  	@MAKE_LIB@
  
@@ -76,18 +76,18 @@ Shared library handling on pkgsrc.
 +	$(RANLIB) $@
 +
  ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
- 	rm -f $@
- 	@MAKE_STUB_LIB@
+ 	@if test "x${LIB_FILE}" = "xlibtk${MAJOR_VERSION}.${MINOR_VERSION}.dll"; then \
+ 	    (cd ${TOP_DIR}/win; ${MAKE} tk${MAJOR_VERSION}${MINOR_VERSION}.dll); \
 @@ -685,7 +699,7 @@ install-strip:
  # some ranlibs write to current directory, and this might not always be
  # possible (e.g. if installing as root).
  
--install-binaries: $(TK_LIB_FILE) $(TK_STUB_LIB_FILE) ${WISH_EXE}
-+install-binaries: $(TK_LIB_FILE) $(TK_LIB_A_FILE) $(TK_STUB_LIB_FILE) ${WISH_EXE} ${TK_LIB_A_FILE}
+-install-binaries: $(TK_STUB_LIB_FILE) $(TK_LIB_FILE) ${WISH_EXE}
++install-binaries: $(TK_STUB_LIB_FILE) $(TK_LIB_A_FILE) $(TK_LIB_FILE) ${WISH_EXE}
  	@for i in "$(LIB_INSTALL_DIR)" "$(BIN_INSTALL_DIR)" \
  	    "$(PKG_INSTALL_DIR)" "$(CONFIG_INSTALL_DIR)" ; \
  	    do \
-@@ -715,7 +729,13 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
+@@ -715,7 +729,13 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
  	    fi
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
@@ -102,7 +102,7 @@ Shared library handling on pkgsrc.
  	@if test -f "tk${MAJOR_VERSION}${MINOR_VERSION}.dll"; then \
  	    $(INSTALL_LIBRARY) "tk${MAJOR_VERSION}${MINOR_VERSION}.dll" "$(DLL_INSTALL_DIR)";\
  	    chmod 555 "$(DLL_INSTALL_DIR)/tk${MAJOR_VERSION}${MINOR_VERSION}.dll";\
-@@ -724,6 +744,7 @@ install-binaries: $(TK_LIB_FILE) $(TK_ST
+@@ -724,6 +744,7 @@ install-binaries: $(TK_STUB_LIB_FILE) $(
  	fi
  	@echo "Installing ${WISH_EXE} as $(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
  	@$(INSTALL_PROGRAM) ${WISH_EXE} "$(BIN_INSTALL_DIR)/wish$(VERSION)${EXE_SUFFIX}"
@@ -110,7 +110,7 @@ Shared library handling on pkgsrc.
  	@echo "Installing tkConfig.sh to $(CONFIG_INSTALL_DIR)/"
  	@$(INSTALL_DATA) tkConfig.sh "$(CONFIG_INSTALL_DIR)/tkConfig.sh"
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -828,7 +849,7 @@ install-doc:
+@@ -831,7 +852,7 @@ install-doc:
  install-headers:
  	@if test "$(@TK_WINDOWINGSYSTEM@_XLIB_HDRS)" != ""; then \
  	    XLIB_INCLUDE_INSTALL_DIR="$(INCLUDE_INSTALL_DIR)"/X11; fi; \
@@ -119,7 +119,7 @@ Shared library handling on pkgsrc.
  	    do \
  	    if [ -n "$$i" -a ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -837,9 +858,12 @@ install-headers:
+@@ -840,9 +861,12 @@ install-headers:
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
