@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/04 11:05:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/11/28 12:26:03 wiz Exp $
 bin/mutt
 bin/mutt_dotlock
 bin/pgpewrap
@@ -111,8 +111,8 @@ share/doc/mutt/samples/smime_keys_test.pl
 share/doc/mutt/security.html
 share/doc/mutt/smime-notes.txt
 share/doc/mutt/tuning.html
-share/doc/mutt/vim-keybindings/README.md
-share/doc/mutt/vim-keybindings/vim-keybindings.rc
+share/doc/mutt/vim-keys/README.md
+share/doc/mutt/vim-keys/vim-keys.rc
 share/examples/mutt/Muttrc
 share/examples/mutt/Muttrc.dist
 share/examples/mutt/mime.types
@@ -123,6 +123,7 @@ share/locale/cs/LC_MESSAGES/mutt.mo
 share/locale/da/LC_MESSAGES/mutt.mo
 share/locale/de/LC_MESSAGES/mutt.mo
 share/locale/el/LC_MESSAGES/mutt.mo
+share/locale/en_GB/LC_MESSAGES/mutt.mo
 share/locale/eo/LC_MESSAGES/mutt.mo
 share/locale/es/LC_MESSAGES/mutt.mo
 share/locale/et/LC_MESSAGES/mutt.mo
