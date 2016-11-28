@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4816 2016/11/28 12:26:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4817 2016/11/28 12:31:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6620,3 +6620,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-Twig to 3.52 [wen 2016-11-28]
 	Updated textproc/p5-Encode to 2.87 [wen 2016-11-28]
 	Updated mail/neomutt to 20161126 [wiz 2016-11-28]
+	Updated math/p5-Math-BigInt to 1.999801 [wen 2016-11-28]
