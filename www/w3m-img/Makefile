@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2016/03/05 11:29:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.28.6.1 2016/11/28 20:22:06 bsiegert Exp $
 
-PKGNAME=	w3m-img-${W3M_VERS}
-PKGREVISION=	6
+PKGNAME=	w3m-img-${W3M_PKGVERS}
 COMMENT=	Multilingualized version of w3m with inline image support
 
 CONFLICTS+=	w3m-[0-9]*
 
 DISTINFO_FILE=	${.CURDIR}/../../www/w3m/distinfo
 PATCHDIR=	${.CURDIR}/../../www/w3m/patches
-PLIST_SRC=	${.CURDIR}/../../www/w3m/PLIST
+PLIST_SRC=	${.CURDIR}/../../www/w3m/PLIST ${.CURDIR}/PLIST
 
 USE_TOOLS+=	msgfmt
 
