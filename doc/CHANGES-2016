@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4836 2016/11/28 13:52:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4837 2016/11/28 13:56:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6640,3 +6640,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/p5-JSON-XS to 3.03 [wiz 2016-11-28]
 	Updated graphics/p5-Image-ExifTool to 10.36 [wiz 2016-11-28]
 	Updated devel/p5-Params-ValidationCompiler to 0.19 [wiz 2016-11-28]
+	Updated net/py-twisted to 16.6.0 [wiz 2016-11-28]
