@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2015/11/25 12:54:07 jperkin Exp $
+# $NetBSD: options.mk,v 1.14.8.1 2016/11/28 20:22:06 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
 PKG_SUPPORTED_OPTIONS=	inet6 migemo w3m-lynx-key
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 .if ${_W3M_USE_IMAGE} == "YES"
 PKG_OPTIONS_REQUIRED_GROUPS+=	imagelib
-PKG_SUGGESTED_OPTIONS+=		w3m-image-gdk-pixbuf
+PKG_SUGGESTED_OPTIONS+=		w3m-image-gtk2
 .else
 PKG_OPTIONS_OPTIONAL_GROUPS+=	imagelib
 .endif
