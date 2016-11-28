@@ -1,0 +1,6 @@
+svn-bisect is a small tool to determine which revision of a subversion
+repository contains a change. It does this by employing a binary search.
+It will manage the current revision of your checkout directory, and
+narrow in on the target revision, as you give it clues about the current
+revision such as "before" (this revision is before the one you want) or
+"after" (this revision is after the one you want).
