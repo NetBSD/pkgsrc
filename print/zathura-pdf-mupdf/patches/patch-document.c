@@ -1,12 +1,15 @@
-$NetBSD: patch-document.c,v 1.2 2016/04/27 12:38:45 leot Exp $
+$NetBSD: patch-document.c,v 1.3 2016/11/28 14:41:40 leot Exp $
 
 o Correct the glib-2.0 include header file path.
-o Update to mupdf-1.9 API
+o Update to mupdf-1.10 API
 
 --- document.c.orig	2016-02-14 22:49:46.000000000 +0000
 +++ document.c
-@@ -6,7 +6,7 @@
- #include <mupdf/xps.h>
+@@ -3,10 +3,9 @@
+ #define _POSIX_C_SOURCE 1
+ 
+ #include <mupdf/fitz.h>
+-#include <mupdf/xps.h>
  #include <mupdf/pdf.h>
  
 -#include <glib-2.0/glib.h>
@@ -14,7 +17,7 @@ o Update to mupdf-1.9 API
  
  #include "plugin.h"
  
-@@ -109,12 +109,7 @@ pdf_document_save_as(zathura_document_t*
+@@ -109,12 +108,7 @@ pdf_document_save_as(zathura_document_t*
    }
  
    fz_try (mupdf_document->ctx) {
