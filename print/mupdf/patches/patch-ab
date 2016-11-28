@@ -1,32 +1,37 @@
-$NetBSD: patch-ab,v 1.12 2016/04/27 12:34:58 leot Exp $
+$NetBSD: patch-ab,v 1.13 2016/11/28 14:40:42 leot Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Properly recognize glfw support
 
---- Makerules.orig	2016-04-06 12:06:53.000000000 +0000
+--- Makerules.orig	2016-11-21 10:21:11.000000000 +0000
 +++ Makerules
-@@ -43,46 +43,6 @@ ifeq "$(largefile)" "yes"
+@@ -60,51 +60,6 @@ ifeq "$(largefile)" "yes"
  CFLAGS += -DFZ_LARGEFILE
  endif
  
 -# Windows (MINGW) build doesn't use system libraries.
 -ifeq "$(OS)" "MINGW"
 -
+-WINDRES = windres
 -HAVE_X11 ?= no
+-HAVE_WIN32 = yes
+-CC=gcc
+-# Add flags required for Harfbuzz because of missing strdup
+-CFLAGS+= -U__STRICT_ANSI__
 -
 -# Mac OS X doesn't have pkg-config so we hard code paths.
 -else ifeq "$(OS)" "MACOS"
 -
--HAVE_X11 ?= yes
+-HAVE_X11 ?= no
 -HAVE_PTHREADS ?= yes
 -
--# Mac OS X deprecated openssl, so the default is to not include it.
--HAVE_OPENSSL ?= no
--SYS_OPENSSL_CFLAGS =
--SYS_OPENSSL_LIBS =
--ifeq "$(HAVE_OPENSSL)" "yes"
--SYS_OPENSSL_CFLAGS = -DHAVE_OPENSSL
--SYS_OPENSSL_LIBS = -lcrypto
+-# Mac OS X deprecated libcrypto, so the default is to not include it.
+-HAVE_LIBCRYTO ?= no
+-SYS_LIBCRYPTO_CFLAGS =
+-SYS_LIBCRYPTO_LIBS =
+-ifeq "$(HAVE_LIBCRYPTO)" "yes"
+-SYS_LIBCRYPTO_CFLAGS = -DHAVE_LIBCRYPTO
+-SYS_LIBCRYPTO_LIBS = -lcrypto
 -endif
 -
 -SYS_CURL_DEPS = -lpthread
@@ -49,12 +54,12 @@ o Properly recognize glfw support
 -# Linux uses pkg-config for system libraries.
 -else ifeq "$(OS)" "Linux"
 -
- HAVE_X11 ?= yes
  HAVE_PTHREADS ?= yes
  
-@@ -101,6 +61,17 @@ SYS_CURL_DEPS = -lpthread -lrt
- SYS_X11_CFLAGS = $(shell pkg-config --cflags x11 xext)
+ ifeq "$(shell pkg-config --exists libcrypto && echo yes)" "yes"
+@@ -131,6 +86,17 @@ SYS_X11_CFLAGS = $(shell pkg-config --cf
  SYS_X11_LIBS = $(shell pkg-config --libs x11 xext)
+ endif
  
 +ifeq "$(shell pkg-config --exists glut && echo yes)" "yes"
 +SYS_GLUT_CFLAGS = $(shell pkg-config --cflags glut)
@@ -67,10 +72,10 @@ o Properly recognize glfw support
 +SYS_GLFW_LIBS = $(shell pkg-config --libs glfw3)
 +endif
 +
+ ifeq "$(shell pkg-config --exists harfbuzz && echo yes)" "yes"
  SYS_HARFBUZZ_CFLAGS = $(shell pkg-config --cflags harfbuzz)
  SYS_HARFBUZZ_LIBS = $(shell pkg-config --libs harfbuzz)
- SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)
-@@ -111,8 +82,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
+@@ -150,8 +116,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
  
