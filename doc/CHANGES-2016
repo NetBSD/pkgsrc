@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4842 2016/11/28 14:59:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4843 2016/11/28 14:59:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6646,3 +6646,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/zathura-pdf-mupdf to 0.3.0nb5 [leot 2016-11-28]
 	Updated security/pinentry to 1.0.0 [wiz 2016-11-28]
 	Updated security/pinentry-gtk2 to 1.0.0 [wiz 2016-11-28]
+	Updated security/pinentry-qt4 to 1.0.0 [wiz 2016-11-28]
