@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4852 2016/11/28 15:42:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4853 2016/11/28 16:11:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6656,3 +6656,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/links to 2.14 [wiz 2016-11-28]
 	Updated www/links-gui to 2.14 [wiz 2016-11-28]
 	Updated textproc/p5-YAML to 1.19 [wiz 2016-11-28]
+	Updated x11/tk85 to 8.5.19 [wiz 2016-11-28]
