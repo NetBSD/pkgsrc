@@ -1,6 +1,6 @@
-$NetBSD: patch-plugin.h,v 1.1 2016/04/27 12:38:45 leot Exp $
+$NetBSD: patch-plugin.h,v 1.2 2016/11/28 14:41:40 leot Exp $
 
-Update to mupdf-1.9 API.
+Update to mupdf-1.10 API.
 
 --- plugin.h.orig	2016-02-14 22:49:46.000000000 +0000
 +++ plugin.h
