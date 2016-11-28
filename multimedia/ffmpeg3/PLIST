@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/10/28 19:15:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/11/28 08:27:51 adam Exp $
 bin/ffmpeg3
 bin/ffprobe3
 bin/ffserver3
@@ -113,7 +113,7 @@ include/ffmpeg3/libswscale/version.h
 lib/ffmpeg3/libavcodec.a
 lib/ffmpeg3/libavcodec.so
 lib/ffmpeg3/libavcodec.so.57
-lib/ffmpeg3/libavcodec.so.57.64.100
+lib/ffmpeg3/libavcodec.so.57.64.101
 lib/ffmpeg3/libavdevice.a
 lib/ffmpeg3/libavdevice.so
 lib/ffmpeg3/libavdevice.so.57
