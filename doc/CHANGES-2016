@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4814 2016/11/28 12:14:57 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4815 2016/11/28 12:23:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6618,3 +6618,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nghttp2 to 1.17.0 [adam 2016-11-28]
 	Updated www/p5-Mojolicious to 7.10 [wen 2016-11-28]
 	Updated textproc/p5-XML-Twig to 3.52 [wen 2016-11-28]
+	Updated textproc/p5-Encode to 2.87 [wen 2016-11-28]
