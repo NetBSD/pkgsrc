@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.30 2016/11/01 15:55:46 wiz Exp $
+$NetBSD: distinfo,v 1.31 2016/11/28 13:55:50 wiz Exp $
 
-SHA1 (Twisted-16.5.0.tar.bz2) = fae668e042fccdcabc76c145698d888fcecd0eca
-RMD160 (Twisted-16.5.0.tar.bz2) = cd033fc84f91c4e8f46035e82a5723c650d3db46
-SHA512 (Twisted-16.5.0.tar.bz2) = 4d137df8e48eb7d75f1c8f45929b9f7a3974db101bccb1ad8fecd05350d4a7e7caa0ddfad706d1c3d404d8de85317a521bd46b4294391930324d1291d40e6fe7
-Size (Twisted-16.5.0.tar.bz2) = 2970708 bytes
+SHA1 (Twisted-16.6.0.tar.bz2) = 57ea06c54e59c314f904870946c4a3586d7b86ea
+RMD160 (Twisted-16.6.0.tar.bz2) = 28cb89fd05e68a2574e69f22284c54bee4503a7b
+SHA512 (Twisted-16.6.0.tar.bz2) = 0b8de0ec7f64457f76c396fced64b366b8e63c6e000a5edc6c6388cd917fb2f95711918cd8edda39e0aa77e2cd32b5d775d23630a5ad10fc013c18f8316300cf
+Size (Twisted-16.6.0.tar.bz2) = 2979747 bytes
 SHA1 (patch-src_twisted_runner_portmap.c) = b3bd85bfa067bdb7050e83eeff53da83b3e6b998
