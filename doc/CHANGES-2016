@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4830 2016/11/28 13:16:01 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4831 2016/11/28 13:24:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6634,3 +6634,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 2.09 [wiz 2016-11-28]
 	Updated time/p5-Time-HiRes to 1.9741 [wiz 2016-11-28]
 	Updated security/py-cryptography to 1.6 [wiz 2016-11-28]
+	Updated devel/p5-Devel-NYTProf to 6.04 [wen 2016-11-28]
