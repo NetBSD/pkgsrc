@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4825 2016/11/28 12:51:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4826 2016/11/28 13:00:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6629,3 +6629,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/iso-codes to 3.71 [wiz 2016-11-28]
 	Updated security/libgpg-error to 1.25 [wiz 2016-11-28]
 	Updated mail/notmuch to 0.23.2 [wiz 2016-11-28]
+	Updated security/p5-IO-Socket-SSL to 2.039 [wiz 2016-11-28]
