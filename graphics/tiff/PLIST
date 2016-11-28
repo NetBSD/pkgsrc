@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.21 2015/09/13 09:27:08 wiz Exp $
-bin/bmp2tiff
+@comment $NetBSD: PLIST,v 1.21.10.1 2016/11/28 20:27:03 bsiegert Exp $
 bin/fax2ps
 bin/fax2tiff
-bin/gif2tiff
 bin/pal2rgb
 bin/ppm2tiff
-bin/ras2tiff
 bin/raw2tiff
-bin/rgb2ycbcr
-bin/thumbnail
 bin/tiff2bw
 bin/tiff2pdf
 bin/tiff2ps
@@ -30,16 +25,12 @@ include/tiffvers.h
 lib/libtiff.la
 lib/libtiffxx.la
 lib/pkgconfig/libtiff-4.pc
-man/man1/bmp2tiff.1
 man/man1/fax2ps.1
 man/man1/fax2tiff.1
-man/man1/gif2tiff.1
 man/man1/pal2rgb.1
 man/man1/ppm2tiff.1
-man/man1/ras2tiff.1
 man/man1/raw2tiff.1
 man/man1/rgb2ycbcr.1
-man/man1/sgi2tiff.1
 man/man1/thumbnail.1
 man/man1/tiff2bw.1
 man/man1/tiff2pdf.1
@@ -55,7 +46,6 @@ man/man1/tiffinfo.1
 man/man1/tiffmedian.1
 man/man1/tiffset.1
 man/man1/tiffsplit.1
-man/man1/tiffsv.1
 man/man3/TIFFClose.3
 man/man3/TIFFDataWidth.3
 man/man3/TIFFError.3
@@ -177,18 +167,14 @@ share/doc/tiff/html/man/TIFFsize.3tiff.html
 share/doc/tiff/html/man/TIFFstrip.3tiff.html
 share/doc/tiff/html/man/TIFFswab.3tiff.html
 share/doc/tiff/html/man/TIFFtile.3tiff.html
-share/doc/tiff/html/man/bmp2tiff.1.html
 share/doc/tiff/html/man/fax2ps.1.html
 share/doc/tiff/html/man/fax2tiff.1.html
-share/doc/tiff/html/man/gif2tiff.1.html
 share/doc/tiff/html/man/index.html
 share/doc/tiff/html/man/libtiff.3tiff.html
 share/doc/tiff/html/man/pal2rgb.1.html
 share/doc/tiff/html/man/ppm2tiff.1.html
-share/doc/tiff/html/man/ras2tiff.1.html
 share/doc/tiff/html/man/raw2tiff.1.html
 share/doc/tiff/html/man/rgb2ycbcr.1.html
-share/doc/tiff/html/man/sgi2tiff.1.html
 share/doc/tiff/html/man/thumbnail.1.html
 share/doc/tiff/html/man/tiff2bw.1.html
 share/doc/tiff/html/man/tiff2pdf.1.html
@@ -204,7 +190,6 @@ share/doc/tiff/html/man/tiffinfo.1.html
 share/doc/tiff/html/man/tiffmedian.1.html
 share/doc/tiff/html/man/tiffset.1.html
 share/doc/tiff/html/man/tiffsplit.1.html
-share/doc/tiff/html/man/tiffsv.1.html
 share/doc/tiff/html/misc.html
 share/doc/tiff/html/support.html
 share/doc/tiff/html/tools.html
@@ -251,3 +236,4 @@ share/doc/tiff/html/v4.0.4.html
 share/doc/tiff/html/v4.0.4beta.html
 share/doc/tiff/html/v4.0.5.html
 share/doc/tiff/html/v4.0.6.html
+share/doc/tiff/html/v${PKGVERSION}.html
