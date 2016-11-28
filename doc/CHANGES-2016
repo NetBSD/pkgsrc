@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4834 2016/11/28 13:44:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4835 2016/11/28 13:51:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6638,3 +6638,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-oauthlib to 2.0.1 [wiz 2016-11-28]
 	Updated textproc/p5-Text-Unidecode to 1.30 [wiz 2016-11-28]
 	Updated converters/p5-JSON-XS to 3.03 [wiz 2016-11-28]
+	Updated graphics/p5-Image-ExifTool to 10.36 [wiz 2016-11-28]
