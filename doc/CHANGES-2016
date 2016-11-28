@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4810 2016/11/28 06:51:43 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.4811 2016/11/28 08:30:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6614,3 +6614,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/typo3_62 to 6.2.29 [taca 2016-11-27]
 	Updated comms/asterisk14 to 14.2.0 [jnemeth 2016-11-27]
 	Updated emulators/dosbox to 0.74nb8 [dholland 2016-11-28]
+	Updated multimedia/ffmpeg3 to 3.2.1 [adam 2016-11-28]
