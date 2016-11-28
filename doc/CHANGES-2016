@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4832 2016/11/28 13:35:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4833 2016/11/28 13:38:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -990,7 +990,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/js_of_ocaml to 2.7nb1 [jaapb 2016-02-17]
 	Updated sysutils/ansible to 1.9.4nb1 [he 2016-02-17]
 	Updated devel/nspr to 4.12 [ryoon 2016-02-17]
-	Updated textproc/p5-Text-Unidecode to 2.17 [wen 2016-02-18]
+	Updated textproc/p5-Text-Unidecode to 1.27 [wen 2016-02-18]
 	Updated textproc/p5-Unicode-LineBreak to 2015.12 [wen 2016-02-18]
 	Updated textproc/p5-XML-Entities to 1.0002 [wen 2016-02-18]
 	Updated textproc/p5-XML-Feed to 0.53 [wen 2016-02-18]
@@ -6636,3 +6636,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-cryptography to 1.6 [wiz 2016-11-28]
 	Updated devel/p5-Devel-NYTProf to 6.04 [wen 2016-11-28]
 	Updated security/py-oauthlib to 2.0.1 [wiz 2016-11-28]
+	Updated textproc/p5-Text-Unidecode to 1.30 [wiz 2016-11-28]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16729 2016/11/28 13:35:58 wiz Exp $
+$NetBSD: TODO,v 1.16730 2016/11/28 13:38:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1243,7 +1243,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SVN-Simple-0.312
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
-	o p5-Text-Unidecode-1.30
 	o p5-Tie-DBI-1.06
 	o p5-X11-Protocol-29
 	o p5-YAML-1.19
