@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_configure,v 1.1 2014/03/10 14:22:01 taca Exp $
+$NetBSD: patch-unix_configure,v 1.2 2016/11/28 16:11:37 wiz Exp $
 
 Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
 
---- unix/configure.orig	2013-09-16 16:45:24.000000000 +0000
+--- unix/configure.orig	2016-02-09 15:50:02.000000000 +0000
 +++ unix/configure
 @@ -4844,10 +4844,10 @@ fi
      # LDFLAGS_ARCH so they eventually end up in LDFLAGS even if [load]
@@ -17,7 +17,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = yes; then
-@@ -5766,7 +5766,7 @@ fi
+@@ -5771,7 +5771,7 @@ fi
  	    CC_SEARCH_FLAGS=""
  	    LD_SEARCH_FLAGS=""
  	    ;;
@@ -26,7 +26,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  	    arch=`arch -s`
  	    case "$arch" in
  	    vax)
-@@ -5788,7 +5788,7 @@ fi
+@@ -5800,7 +5800,7 @@ fi
  fi
  
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
@@ -35,7 +35,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  		LDFLAGS="-Wl,-export-dynamic"
  		;;
  	    esac
-@@ -5823,7 +5823,7 @@ fi
+@@ -5835,7 +5835,7 @@ fi
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
@@ -44,34 +44,16 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  	    if test $doRpath = yes; then
  
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
-@@ -5839,16 +5839,11 @@ fi
- 
+@@ -5852,7 +5852,7 @@ fi
  fi
  
--	    case $system in
--	    FreeBSD-3.*)
--	    	# FreeBSD-3 doesn't handle version numbers with dots.
- 	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
- 	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
- 	    	TCL_LIB_VERSIONS_OK=nodots
--		;;
--	    esac
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -5874,7 +5869,7 @@ fi
- 	    # Version numbers are dot-stripped by system policy.
- 	    TCL_TRIM_DOTS=`echo ${VERSION} | tr -d .`
- 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
--	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1'
-+	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
- 	    TCL_LIB_VERSIONS_OK=nodots
- 	    ;;
- 	Darwin-*)
-@@ -7052,7 +7047,7 @@ fi
+@@ -7060,7 +7060,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
@@ -80,7 +62,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
-@@ -7062,12 +7057,12 @@ fi
+@@ -7070,12 +7070,12 @@ fi
  
      if test "$SHARED_LIB_SUFFIX" = ""; then
  
@@ -95,7 +77,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  fi
  
      DLL_INSTALL_DIR="\$(LIB_INSTALL_DIR)"
-@@ -7083,7 +7078,11 @@ fi
+@@ -7091,7 +7091,11 @@ fi
  
  else
  
@@ -108,7 +90,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  
  fi
  
-@@ -7117,7 +7116,7 @@ fi
+@@ -7125,7 +7129,7 @@ fi
  else
  
          MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
@@ -117,7 +99,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  
  fi
  
-@@ -10252,7 +10251,7 @@ echo $ECHO_N "checking for X11 libraries
+@@ -10260,7 +10264,7 @@ echo $ECHO_N "checking for X11 libraries
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl -o -r $i/libX11.dylib; then
  		echo "$as_me:$LINENO: result: $i" >&5
  echo "${ECHO_T}$i" >&6
@@ -126,7 +108,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  		x_libraries="$i"
  		break
  	    fi
-@@ -10261,7 +10260,7 @@ echo "${ECHO_T}$i" >&6
+@@ -10269,7 +10273,7 @@ echo "${ECHO_T}$i" >&6
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -135,7 +117,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -11446,14 +11445,10 @@ else
+@@ -11532,14 +11536,10 @@ else
  	TK_LIB_FLAG="-ltk`echo ${TK_VERSION} | tr -d .`"
  	TK_BUILD_LIB_SPEC="-L\$(TOP_DIR)/win ${TK_LIB_FLAG}"
      else
@@ -151,7 +133,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  fi
  
  #--------------------------------------------------------------------
-@@ -11465,11 +11460,7 @@ fi
+@@ -11551,11 +11551,7 @@ fi
  eval "TK_STUB_LIB_FILE=libtkstub${TK_UNSHARED_LIB_SUFFIX}"
  eval "TK_STUB_LIB_DIR=${libdir}"
  
@@ -164,7 +146,7 @@ Shared library handling on pkgsrc and add support for OpenBSD and MirBSD.
  
  TK_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TK_STUB_LIB_FLAG}"
  TK_STUB_LIB_SPEC="-L${TK_STUB_LIB_DIR} ${TK_STUB_LIB_FLAG}"
-@@ -12290,6 +12281,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
+@@ -12376,6 +12372,7 @@ s,@APP_RSRC_FILE@,$APP_RSRC_FILE,;t t
  s,@REZ@,$REZ,;t t
  s,@REZ_FLAGS@,$REZ_FLAGS,;t t
  s,@LTLIBOBJS@,$LTLIBOBJS,;t t

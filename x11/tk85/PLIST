@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/10 14:22:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/11/28 16:11:37 wiz Exp $
 bin/wish
 bin/wish${BASEVER}
 include/tk.h
@@ -39,6 +39,7 @@ lib/libtk${SONUM}.a
 lib/libtk${SONUM}.so
 lib/libtk${SONUM}.so.1.0
 lib/libtkstub${SONUM}.a
+lib/pkgconfig/tk.pc
 lib/tk${BASEVER}/bgerror.tcl
 lib/tk${BASEVER}/button.tcl
 lib/tk${BASEVER}/choosedir.tcl
@@ -529,6 +530,7 @@ man/mann/send.n
 man/mann/spinbox.n
 man/mann/text.n
 man/mann/tk.n
+man/mann/tk::mac.n
 man/mann/tk_bindForTraversal.n
 man/mann/tk_bisque.n
 man/mann/tk_chooseColor.n
