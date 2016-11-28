@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4809 2016/11/27 22:59:22 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4810 2016/11/28 06:51:43 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6613,3 +6613,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/php-mecab to 0.6.0nb1 [taca 2016-11-27]
 	Updated www/typo3_62 to 6.2.29 [taca 2016-11-27]
 	Updated comms/asterisk14 to 14.2.0 [jnemeth 2016-11-27]
+	Updated emulators/dosbox to 0.74nb8 [dholland 2016-11-28]
