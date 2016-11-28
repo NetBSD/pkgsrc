@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4827 2016/11/28 13:04:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4828 2016/11/28 13:07:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6631,3 +6631,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/notmuch to 0.23.2 [wiz 2016-11-28]
 	Updated security/p5-IO-Socket-SSL to 2.039 [wiz 2016-11-28]
 	Updated devel/libuv to 1.10.1 [wiz 2016-11-28]
+	Updated time/p5-DateTime-TimeZone to 2.09 [wiz 2016-11-28]
