@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4859 2016/11/29 22:29:29 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4860 2016/11/29 22:51:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6666,3 +6666,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/nss to 3.27.1nb1 [ryoon 2016-11-29]
 	Updated devel/subversion to 1.9.5 [bsiegert 2016-11-29]
 	Updated devel/nss to 3.27.1nb2 [ryoon 2016-11-29]
+	Updated devel/nss to 3.27.2 [ryoon 2016-11-29]
