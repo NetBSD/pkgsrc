@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.15 2016/11/28 20:28:57 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.16 2016/11/29 17:51:28 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -126,4 +126,7 @@ www/w3m-img: security fix
 
 Pullup ticket #5163 - requested by wiz
 graphics/tiff: security fix
+
+Pullup ticket #5161 - requested by sevan
+net/wpa_gui: security fix
 
