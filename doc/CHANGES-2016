@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4855 2016/11/28 22:45:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4856 2016/11/29 08:50:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6659,3 +6659,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/tk85 to 8.5.19 [wiz 2016-11-28]
 	Added devel/svn-bisect version 1.1 [joerg 2016-11-28]
 	Updated databases/p5-DBD-mysql to 4.041 [wiz 2016-11-28]
+	Updated databases/sqlite3 to 3.15.2 [adam 2016-11-29]
+	Updated databases/sqlite3-docs to 3.15.2 [adam 2016-11-29]
+	Updated databases/sqlite3-tcl to 3.15.2 [adam 2016-11-29]
+	Updated devel/lemon to 1.0.3.15.2 [adam 2016-11-29]
