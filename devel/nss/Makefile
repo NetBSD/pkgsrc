@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.120 2016/10/08 10:26:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2016/11/29 12:24:10 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.27.1
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_${NSS_PATCH_VERSION}_RTM/src/}
 
@@ -98,6 +99,18 @@ SUBST_FILES.config+=	nss.pc nss-config
 INSTALLATION_DIRS=	bin include/nss lib/nss lib/pkgconfig
 DIST=	${WRKSRC}/dist
 
+INSTALL_CMDS+=		certcgi certutil cmsutil crlutil derdump makepqg \
+			mangle modutil ocspclnt oidcalc p7content p7env p7sign \
+			p7verify pk12util rsaperf shlibsign signtool signver \
+			ssltap strsclnt symkeyutil vfychain vfyserv
+
+CMDS_DIR=		${OPSYS}${OS_VERSION}_OPT.OBJ
+.for platform in ${LP64PLATFORMS}
+.  if ${MACHINE_PLATFORM:M${platform}}
+CMDS_DIR=		${OPSYS}${OS_VERSION}_64_OPT.OBJ
+.  endif
+.endfor
+
 post-extract:
 	find ${WRKSRC} -type f | xargs ${CHMOD} 644
 	find ${WRKSRC} -type d | xargs ${CHMOD} 755
@@ -112,6 +125,10 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/nss/
 	${INSTALL_DATA} ${WRKSRC}/nss.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
 	${INSTALL_SCRIPT} ${WRKSRC}/nss-config ${DESTDIR}${PREFIX}/bin/nss-config
+.for cmd in ${INSTALL_CMDS}
+	${INSTALL_PROGRAM} ${WRKSRC}/dist/${CMDS_DIR}/bin/${cmd} \
+		${DESTDIR}${PREFIX}/bin
+.endfor
 
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
