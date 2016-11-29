@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.121 2016/11/29 12:24:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.122 2016/11/29 22:28:55 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.27.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_${NSS_PATCH_VERSION}_RTM/src/}
 
@@ -136,5 +136,6 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
