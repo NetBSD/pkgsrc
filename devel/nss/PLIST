@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/11/29 12:24:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/11/29 12:57:08 ryoon Exp $
 bin/certcgi
 bin/certutil
 bin/cmsutil
@@ -125,12 +125,12 @@ include/nss/nss/utilpars.h
 include/nss/nss/utilparst.h
 include/nss/nss/utilrename.h
 lib/nss/libcrmf.a
-lib/nss/libfreebl3.so
-lib/nss/libnss3.so
-lib/nss/libnssckbi.so
-lib/nss/libnssdbm3.so
-lib/nss/libnssutil3.so
-lib/nss/libsmime3.so
-lib/nss/libsoftokn3.so
-lib/nss/libssl3.so
+lib/nss/libfreebl3.${SO_SUFFIX}
+lib/nss/libnss3.${SO_SUFFIX}
+lib/nss/libnssckbi.${SO_SUFFIX}
+lib/nss/libnssdbm3.${SO_SUFFIX}
+lib/nss/libnssutil3.${SO_SUFFIX}
+lib/nss/libsmime3.${SO_SUFFIX}
+lib/nss/libsoftokn3.${SO_SUFFIX}
+lib/nss/libssl3.${SO_SUFFIX}
 lib/pkgconfig/nss.pc
