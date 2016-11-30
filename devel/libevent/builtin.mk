@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2015/02/05 07:09:31 pettai Exp $
+# $NetBSD: builtin.mk,v 1.18 2016/11/30 13:21:47 wiz Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -143,10 +143,12 @@ do-configure-pre-hook: override-libevent-pkgconfig
 
 BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
 LIBEVENT_PKGCFGF=	libevent.pc
+LIBEVENT_OPENSSL_PKGCFGF=	libevent_openssl.pc
+LIBEVENT_PTHREADS_PKGCFGF=	libevent_pthreads.pc
 
 override-libevent-pkgconfig: override-message-libevent-pkgconfig
 override-message-libevent-pkgconfig:
-	@${STEP_MSG} "Generating pkg-config file for builtin libevent package."
+	@${STEP_MSG} "Generating pkg-config files for builtin libevent package."
 
 override-libevent-pkgconfig:
 	${RUN}						\
@@ -163,6 +165,33 @@ override-libevent-pkgconfig:
 	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent";	\
 	${ECHO} "Cflags: -I\$${includedir}";		\
 	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_PKGCFGF};
+	${RUN}						\
+	{						\
+	${ECHO} "prefix=${LIBEVENT_PREFIX}";		\
+	${ECHO} "exec_prefix=\$${prefix}";		\
+	${ECHO} "libdir=\$${exec_prefix}/lib";		\
+	${ECHO} "includedir=\$${prefix}/include";	\
+	${ECHO} "";					\
+	${ECHO} "Name: libevent_openssl";			\
+	${ECHO} "Description: libevent_openssl adds openssl-based TLS support to libevent"; \
+	${ECHO} "Version: ${BUILTIN_VERSION.libevent}";	\
+	${ECHO} "Requires: libevent";	\
+	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent_openssl";	\
+	${ECHO} "Cflags: -I\$${includedir}";		\
+	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_OPENSSL_PKGCFGF};
+	${RUN}						\
+	{						\
+	${ECHO} "prefix=${LIBEVENT_PREFIX}";		\
+	${ECHO} "exec_prefix=\$${prefix}";		\
+	${ECHO} "libdir=\$${exec_prefix}/lib";		\
+	${ECHO} "includedir=\$${prefix}/include";	\
+	${ECHO} "";					\
+	${ECHO} "Name: libevent_pthreads";			\
+	${ECHO} "Description: libevent_pthreads adds pthreads-based threading support to libevent"; \
+	${ECHO} "Version: ${BUILTIN_VERSION.libevent}";	\
+	${ECHO} "Requires: libevent";	\
+	${ECHO} "Libs: ${COMPILER_RPATH_FLAG}\$${libdir} -L\$${libdir} -levent_pthreads";	\
+	${ECHO} "Cflags: -I\$${includedir} -pthread";		\
+	} >> ${BLKDIR_PKGCFG}/${LIBEVENT_PTHREADS_PKGCFGF};
 .  endif
 .endif
-
