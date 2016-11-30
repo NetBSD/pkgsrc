@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2016/10/28 17:27:21 schnoebe Exp $
+# $NetBSD: Makefile,v 1.57 2016/11/30 18:00:08 schnoebe Exp $
 
-DISTNAME=	hplip-3.16.10
+DISTNAME=	hplip-3.16.11
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -34,9 +34,10 @@ CONFIGURE_ARGS+=	--with-hpppddir=${PREFIX}/share/hplip/ppd/HP
 CONFIGURE_ARGS+=	--enable-network-build
 CONFIGURE_ARGS+=	--disable-pp-build
 CONFIGURE_ARGS+=	--enable-hpcups-install
-CONFIGURE_ARGS+=	--enable-hpijs-install
 CONFIGURE_ARGS+=	--enable-cups-drv-install
 CONFIGURE_ARGS+=	--enable-cups-ppd-install
+# deprecated options
+CONFIGURE_ARGS+=	--enable-hpijs-install
 CONFIGURE_ARGS+=	--enable-foomatic-drv-install
 CONFIGURE_ARGS+=	--enable-foomatic-ppd-install
 CONFIGURE_ARGS+=	--enable-foomatic-rip-hplip-install
