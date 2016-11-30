@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16747 2016/11/30 13:31:58 wiz Exp $
+$NetBSD: TODO,v 1.16748 2016/11/30 13:46:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1164,7 +1164,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
 	o ocaml-4.04.0
-	o ocaml-findlib-1.7.1
 	o ocaml-graphics-4.02.3
 	o ocrad-0.25
 	o odbc-postgresql-09.03.0400
