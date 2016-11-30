@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/11/30 20:19:29 jdolecek Exp $
+
+SHA1 (deepdiff-2.5.1.tar.gz) = eb4fb32427f2fa83a3185ce74256b3bfec1e3124
+RMD160 (deepdiff-2.5.1.tar.gz) = c189e4392ee02043e854a1f5a1b1545510320daf
+SHA512 (deepdiff-2.5.1.tar.gz) = 57d96b49e99c616a190e45a6b4822ea028823b848424507f998f009b30d809ad7b41041d5d7da69d9c0da066dd1437c238f85be635d0ab811e913cd7bb840fae
+Size (deepdiff-2.5.1.tar.gz) = 13780 bytes
