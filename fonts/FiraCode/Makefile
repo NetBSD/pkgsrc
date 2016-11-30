@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/09/18 21:49:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/11/30 14:24:47 mef Exp $
 
-DISTNAME=	FiraCode_1.203
+DISTNAME=	FiraCode_1.204
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tonsky/}
