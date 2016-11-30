@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4863 2016/11/30 12:25:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4864 2016/11/30 12:29:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6670,3 +6670,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.14.13 [wiz 2016-11-30]
 	Updated meta-pkgs/modular-xorg-drivers to 1.19.0 [wiz 2016-11-30]
 	Added devel/py-constantly version 15.1.0 [wiz 2016-11-30]
+	Updated net/py-twisted to 16.6.0nb1 [wiz 2016-11-30]
