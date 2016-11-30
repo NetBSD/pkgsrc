@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4867 2016/11/30 13:10:26 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4868 2016/11/30 13:31:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6674,3 +6674,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/hydrogen to 0.9.7 [wiz 2016-11-30]
 	Updated x11/libdrm to 2.4.74 [wiz 2016-11-30]
 	Updated fonts/terminus-font to 4.40 [mef 2016-11-30]
+	Updated devel/ocaml-cppo to 1.4.1 [wiz 2016-11-30]
