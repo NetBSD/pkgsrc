@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4873 2016/11/30 20:19:56 jdolecek Exp $
+$NetBSD: CHANGES-2016,v 1.4874 2016/11/30 21:33:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6680,3 +6680,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/FiraCode to 1.204 [mef 2016-11-30]
 	Updated print/hplip to 3.16.11 [schnoebe 2016-11-30]
 	Added textproc/py-deepdiff version 2.5.1 [jdolecek 2016-11-30]
+	Updated net/py-lexicon to 1.1.20 [fhajny 2016-11-30]
