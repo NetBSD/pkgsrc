@@ -1,0 +1,25 @@
+When you try to sort a list of strings that contain numbers, the
+normal python sort algorithm sorts lexicographically, so you might
+not get the results that you expect:
+
+>>> a = ['a2', 'a9', 'a1', 'a4', 'a10']
+>>> sorted(a)
+['a1', 'a10', 'a2', 'a4', 'a9']
+
+Notice that it has the order (‘1’, ‘10’, ‘2’) - this is because the
+list is being sorted in lexicographical order, which sorts numbers
+like you would letters (i.e. ‘b’, ‘ba’, ‘c’).
+
+natsort provides a function natsorted that helps sort lists
+“naturally”, either as real numbers (i.e. signed/unsigned floats
+or ints), or as versions. Using natsorted is simple:
+
+>>> from natsort import natsorted
+>>> a = ['a2', 'a9', 'a1', 'a4', 'a10']
+>>> natsorted(a)
+['a1', 'a2', 'a4', 'a9', 'a10']
+
+natsorted identifies numbers anywhere in a string and sorts them
+naturally. Here are some other things you can do with natsort (please
+see the examples for a quick start guide, or the api for more
+details).
