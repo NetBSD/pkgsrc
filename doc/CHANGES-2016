@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4868 2016/11/30 13:31:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4869 2016/11/30 13:46:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6675,3 +6675,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libdrm to 2.4.74 [wiz 2016-11-30]
 	Updated fonts/terminus-font to 4.40 [mef 2016-11-30]
 	Updated devel/ocaml-cppo to 1.4.1 [wiz 2016-11-30]
+	Updated devel/ocaml-findlib to 1.7.1 [wiz 2016-11-30]
