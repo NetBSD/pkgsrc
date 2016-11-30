@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4871 2016/11/30 14:25:00 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4872 2016/11/30 17:59:46 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6678,3 +6678,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-findlib to 1.7.1 [wiz 2016-11-30]
 	Added textproc/py-natsort version 5.0.1 [jdolecek 2016-11-30]
 	Updated fonts/FiraCode to 1.204 [mef 2016-11-30]
+	Updated print/hplip to 3.16.11 [schnoebe 2016-11-30]
