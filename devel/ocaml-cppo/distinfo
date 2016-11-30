@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2016/09/01 16:28:57 wiz Exp $
+$NetBSD: distinfo,v 1.4 2016/11/30 13:31:48 wiz Exp $
 
-SHA1 (cppo-1.4.0.tar.gz) = 4db0e5832a5db0d1aac205a068e2eed7c6fed654
-RMD160 (cppo-1.4.0.tar.gz) = 0eb839624ac05f4a1126b3c43a89ef42c0d5faef
-SHA512 (cppo-1.4.0.tar.gz) = c81d6478248e84ab25ec19a5021341663f414a7c62075f2ad79922fdcc077b8de8bd609d22b3f34475eca735a68747966e4e1bbbc419f55f0333ee3d5805a284
-Size (cppo-1.4.0.tar.gz) = 26450 bytes
+SHA1 (cppo-1.4.1.tar.gz) = 28258ea762010d88fab7c762abf51ad9e81319bb
+RMD160 (cppo-1.4.1.tar.gz) = 1c69dd9683a3d473703ec022b64d3edd72c6a95b
+SHA512 (cppo-1.4.1.tar.gz) = efbc82d2eb31b9e16c43ffbd7a2a56a5356934c32bee62205f55295a9342e4747ce13b9ad6572f3180e656b215a9255d402712ff7bae1ef9e8eccdabb2d00c16
+Size (cppo-1.4.1.tar.gz) = 26547 bytes
 SHA1 (patch-Makefile) = 87b19139b022291eb826734d948f362a6812dc3e
