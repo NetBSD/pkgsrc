@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2016/11/30 12:34:20 wiz Exp $
+$NetBSD: distinfo,v 1.16 2016/11/30 12:43:35 wiz Exp $
 
 SHA1 (Hydrogen-0.9.7.tar.gz) = 016c5427d0598f933f0975d6d25434736ba0a0b6
 RMD160 (Hydrogen-0.9.7.tar.gz) = 87d2bed2ef1fd84e5cb9bcfc4a89b40818610ce0
 SHA512 (Hydrogen-0.9.7.tar.gz) = 1480a18d1181d12e92a53e89a4d1c8f4ae9a8a9a02271e6af4089afaaca9d658abb3876dc7db08a453bbe3ab7f66f31567d992f30102818782b62ebba5141f58
 Size (Hydrogen-0.9.7.tar.gz) = 6424575 bytes
-SHA1 (patch-src_core_src_logger.cpp) = 37434775148873248b6f559df2b6d821ad5a9405
+SHA1 (patch-src_core_src_logger.cpp) = 27c778a352b917a4a33eeab87b0855a631da471b
