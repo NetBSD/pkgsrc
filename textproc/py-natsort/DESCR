@@ -6,12 +6,12 @@ not get the results that you expect:
 >>> sorted(a)
 ['a1', 'a10', 'a2', 'a4', 'a9']
 
-Notice that it has the order (‘1’, ‘10’, ‘2’) - this is because the
+Notice that it has the order ('1', '10', '2') - this is because the
 list is being sorted in lexicographical order, which sorts numbers
-like you would letters (i.e. ‘b’, ‘ba’, ‘c’).
+like you would letters (i.e. 'b', 'ba', 'c').
 
 natsort provides a function natsorted that helps sort lists
-“naturally”, either as real numbers (i.e. signed/unsigned floats
+"naturally", either as real numbers (i.e. signed/unsigned floats
 or ints), or as versions. Using natsorted is simple:
 
 >>> from natsort import natsorted
@@ -20,6 +20,4 @@ or ints), or as versions. Using natsorted is simple:
 ['a1', 'a2', 'a4', 'a9', 'a10']
 
 natsorted identifies numbers anywhere in a string and sorts them
-naturally. Here are some other things you can do with natsort (please
-see the examples for a quick start guide, or the api for more
-details).
+naturally.
