@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/06/25 13:55:15 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/11/30 13:46:14 wiz Exp $
 bin/ocamlfind
 ${OCAML_SITELIB}/bigarray/META
 ${OCAML_SITELIB}/bytes/META
@@ -16,7 +16,10 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_dynload.a
 ${OCAML_SITELIB}/findlib/findlib_dynload.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_dynload.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_dynload.cmxs
+${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_top.a
 ${OCAML_SITELIB}/findlib/findlib_top.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_top.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/findlib/findlib_top.cmxs
 ${OCAML_SITELIB}/findlib/fl_dynload.cmi
 ${OCAML_SITELIB}/findlib/fl_dynload.mli
 ${OCAML_SITELIB}/findlib/fl_metascanner.cmi
@@ -38,8 +41,8 @@ ${OCAML_SITELIB}/str/META
 ${OCAML_SITELIB}/threads/META
 ${OCAML_SITELIB}/unix/META
 lib/ocaml/topfind
-@comment man/man1/ocamlfind.1
-@comment man/man5/META.5
-@comment man/man5/findlib.conf.5
-@comment man/man5/site-lib.5
+man/man1/ocamlfind.1
+man/man5/META.5
+man/man5/findlib.conf.5
+man/man5/site-lib.5
 share/examples/ocaml-findlib/ocamlfind.conf
