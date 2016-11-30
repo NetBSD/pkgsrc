@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2016/11/30 20:19:29 jdolecek Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/deepdiff/__init__.py
+${PYSITELIB}/deepdiff/__init__.pyc
+${PYSITELIB}/deepdiff/__init__.pyo
+${PYSITELIB}/deepdiff/contenthash.py
+${PYSITELIB}/deepdiff/contenthash.pyc
+${PYSITELIB}/deepdiff/contenthash.pyo
+${PYSITELIB}/deepdiff/diff.py
+${PYSITELIB}/deepdiff/diff.pyc
+${PYSITELIB}/deepdiff/diff.pyo
+${PYSITELIB}/deepdiff/helper.py
+${PYSITELIB}/deepdiff/helper.pyc
+${PYSITELIB}/deepdiff/helper.pyo
+${PYSITELIB}/deepdiff/search.py
+${PYSITELIB}/deepdiff/search.pyc
+${PYSITELIB}/deepdiff/search.pyo
