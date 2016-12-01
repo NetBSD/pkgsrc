@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/15 07:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/01 15:03:21 marino Exp $
 
 DISTNAME=	ggplot-0.10.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Python implementation of the grammar of graphics
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-brewer2mpl-[0-9]*:../../graphics/py-brewer2mpl
-DEPENDS+=	${PYPKGPREFIX}-cycler-[0-9]*:../../devel/py-cycler
+DEPENDS+=	${PYPKGPREFIX}-cycler-[0-9]*:../../graphics/py-cycler
 DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pandas-[0-9]*:../../math/py-pandas
 DEPENDS+=	${PYPKGPREFIX}-patsy-[0-9]*:../../math/py-patsy
