@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2014/10/09 14:06:38 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/12/01 18:34:57 nros Exp $
 
 DISTNAME=		clamsmtp-1.10
 #PKGREVISION=		1
@@ -26,6 +26,8 @@ CONF_FILES=		${EGDIR}/clamsmtpd.conf \
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
 
 PKG_USERS_VARS=		CLAMAV_USER
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${DESTDIR}${EGDIR}
