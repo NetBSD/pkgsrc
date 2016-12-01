@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: Makefile,v 1.63 2016/12/01 14:48:02 wiz Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 LICENSE=	gnu-gpl-v2
 
-CONFLICTS+=	imp-3.*{,nb*}
+CONFLICTS+=	imp-3.*
 
 DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
