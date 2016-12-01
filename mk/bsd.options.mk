@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.72 2016/03/23 11:50:01 jperkin Exp $
+# $NetBSD: bsd.options.mk,v 1.73 2016/12/01 15:28:57 wiz Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -85,6 +85,10 @@
 #		This is the list of the selected build options, properly
 #		filtered to remove unsupported and duplicate options.
 #
+#	PKG_DISABLED_OPTIONS
+#		This is the list of the disabled build options; this is
+#               the complement of PKG_OPTIONS.
+#
 
 .if !defined(BSD_OPTIONS_MK)
 BSD_OPTIONS_MK=		# defined
@@ -158,6 +162,7 @@ _PKG_VARS.options=	PKG_SUPPORTED_OPTIONS PKG_OPTIONS_VAR		\
 	PKG_OPTIONS_NONEMPTY_SETS PKG_SUGGESTED_OPTIONS			\
 	PKG_OPTIONS_LEGACY_VARS PKG_OPTIONS_LEGACY_OPTS			\
 	PKG_LEGACY_OPTIONS PKG_OPTIONS_DEPRECATED_WARNINGS
+_PKG_VARS.options+=	PKG_DISABLED_OPTIONS
 _SYS_VARS.options=	PKG_OPTIONS
 
 .include "bsd.prefs.mk"
@@ -215,6 +220,8 @@ PKG_SUPPORTED_OPTIONS+=	${_opt_}
 _PKG_OPTIONS_ALL_SETS+=	${_opt_}
 .  endfor
 .endfor
+
+PKG_DISABLED_OPTIONS:=	${PKG_SUPPORTED_OPTIONS:O:u}
 
 #
 # include deprecated variable to options mapping
@@ -359,6 +366,10 @@ PKG_FAIL_REASON+=	"[bsd.options.mk] The following selected options are not suppo
 
 .undef _OPTIONS_DEFAULT_SUPPORTED
 PKG_OPTIONS:=	${PKG_OPTIONS:O:u}
+
+.for _opt_ in ${PKG_OPTIONS}
+PKG_DISABLED_OPTIONS:=	${PKG_DISABLED_OPTIONS:N${_opt_}}
+.endfor
 
 _PKG_OPTIONS_WORDWRAP_FILTER=						\
 	${XARGS} -n 1 |							\
