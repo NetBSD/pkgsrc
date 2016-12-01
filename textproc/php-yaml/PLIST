@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/12/01 12:23:47 roy Exp $
+lib/php/20151203/yaml.so
+share/examples/php/yaml.ini
+@pkgdir share/doc/php70-yaml
