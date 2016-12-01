@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/06/08 19:25:17 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2016/12/01 14:48:02 wiz Exp $
 
 DISTNAME=	URI-1.71
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 # recommended
 DEPENDS+=	p5-Business-ISBN-[0-9]*:../../misc/p5-Business-ISBN
 
-CONFLICTS+=	p5-libwww-5.36{,nb*}	# URI used to be part of that package
+CONFLICTS+=	p5-libwww>=5.36<5.37	# URI used to be part of that package
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/URI/.packlist
