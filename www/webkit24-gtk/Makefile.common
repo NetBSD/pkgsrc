@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2016/07/09 13:04:16 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2016/12/01 14:27:21 martin Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -76,10 +76,6 @@ CPPFLAGS+=		-DUSE_SYSTEM_MALLOC
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
-BUILDLINK_DEPMETHOD.gobject-introspection+=	build
-.include "../../devel/gobject-introspection/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-introspection
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/flex/buildlink3.mk"
