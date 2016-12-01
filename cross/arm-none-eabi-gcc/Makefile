@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/10/19 12:48:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/01 03:45:57 sevan Exp $
 
 DISTNAME=		gcc-6.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -28,8 +28,8 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 
-CONFIG_SHELL=		${LOCALBASE}/bin/bash
-WRAPPER_SHELL=		${LOCALBASE}/bin/bash
+CONFIG_SHELL=		${TOOLS_PATH.bash}
+WRAPPER_SHELL=		${TOOLS_PATH.bash}
 USE_TOOLS+=		bash
 
 USE_TOOLS+=		gmake makeinfo
