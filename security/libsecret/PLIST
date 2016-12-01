@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/12 10:17:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/12/01 12:51:12 martin Exp $
 bin/secret-tool
 include/libsecret-1/libsecret/secret-attributes.h
 include/libsecret-1/libsecret/secret-collection.h
@@ -13,12 +13,12 @@ include/libsecret-1/libsecret/secret-service.h
 include/libsecret-1/libsecret/secret-types.h
 include/libsecret-1/libsecret/secret-value.h
 include/libsecret-1/libsecret/secret.h
-lib/girepository-1.0/Secret-1.typelib
+${PLIST.introspection}lib/girepository-1.0/Secret-1.typelib
 lib/libsecret-1.la
 lib/pkgconfig/libsecret-1.pc
 lib/pkgconfig/libsecret-unstable.pc
 man/man1/secret-tool.1
-share/gir-1.0/Secret-1.gir
+${PLIST.introspection}share/gir-1.0/Secret-1.gir
 share/gtk-doc/html/libsecret-1/SecretCollection.html
 share/gtk-doc/html/libsecret-1/SecretItem.html
 share/gtk-doc/html/libsecret-1/SecretPrompt.html
