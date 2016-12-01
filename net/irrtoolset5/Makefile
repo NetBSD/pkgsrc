@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/07/15 02:02:27 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.9 2016/12/01 14:48:02 wiz Exp $
 
 VERSION=		5.0.1
 DISTNAME=		irrtoolset-${VERSION}
@@ -11,7 +10,7 @@ HOMEPAGE=		http://irrtoolset.isc.org/
 COMMENT=		The Internet Routing Registry Toolset - client to IRRd
 LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
 
-CONFLICTS=		IRRToolSet-4.*{,nb*}
+CONFLICTS=		IRRToolSet-4.*
 
 .include "../../mk/bsd.prefs.mk"
 
