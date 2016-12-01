@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4875 2016/12/01 09:28:44 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4876 2016/12/01 12:24:07 roy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6682,3 +6682,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/py-deepdiff version 2.5.1 [jdolecek 2016-11-30]
 	Updated net/py-lexicon to 1.1.20 [fhajny 2016-11-30]
 	Updated textproc/the_silver_searcher to 1.0.1 [leot 2016-12-01]
+	Updated textproc/php-yaml to 2.0.0 [roy 2016-12-01]
