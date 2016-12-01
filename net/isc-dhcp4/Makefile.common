@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2016/03/30 15:55:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.32 2016/12/01 14:48:02 wiz Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -15,7 +15,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://www.isc.org/sw/dhcp
 LICENSE=		isc
 
-CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
+CONFLICTS+=		isc-dhcp-base-3.*
 
 VERSION=		4.3.4
 

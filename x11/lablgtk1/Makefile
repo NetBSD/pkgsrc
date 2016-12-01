@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/05/05 11:45:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.15 2016/12/01 14:48:02 wiz Exp $
 
 DISTNAME=	lablgtk-1.2.7
 PKGNAME=	lablgtk1-1.2.7
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake
 BUILDLINK_DEPMETHOD.ocaml=	full
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.0.5
 
-CONFLICTS+=	lablgtk-1.*{,nb*}
+CONFLICTS+=	lablgtk-1.*
 
 .include "../../mk/bsd.prefs.mk"
 
