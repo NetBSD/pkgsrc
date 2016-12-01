@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/11/16 12:08:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/12/01 11:08:56 martin Exp $
 bin/gst-inspect-1.0
 bin/gst-launch-1.0
 bin/gst-stats-1.0
@@ -114,11 +114,11 @@ include/gstreamer-1.0/gst/net/gstnettimepacket.h
 include/gstreamer-1.0/gst/net/gstnettimeprovider.h
 include/gstreamer-1.0/gst/net/gstptpclock.h
 include/gstreamer-1.0/gst/net/net.h
-lib/girepository-1.0/Gst-1.0.typelib
-lib/girepository-1.0/GstBase-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/Gst-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GstBase-1.0.typelib
 ${PLIST.gstcheck}lib/girepository-1.0/GstCheck-1.0.typelib
-lib/girepository-1.0/GstController-1.0.typelib
-lib/girepository-1.0/GstNet-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GstController-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GstNet-1.0.typelib
 lib/gstreamer-1.0/libgstcoreelements.la
 lib/gstreamer-1.0/libgstcoretracers.la
 lib/libgstbase-1.0.la
@@ -141,11 +141,11 @@ share/bash-completion/completions/gst-inspect-1.0
 share/bash-completion/completions/gst-launch-1.0
 share/bash-completion/helpers/gst
 share/bash-completion/helpers/gst-completion-helper-1.0
-share/gir-1.0/Gst-1.0.gir
-share/gir-1.0/GstBase-1.0.gir
+${PLIST.introspection}share/gir-1.0/Gst-1.0.gir
+${PLIST.introspection}share/gir-1.0/GstBase-1.0.gir
 ${PLIST.gstcheck}share/gir-1.0/GstCheck-1.0.gir
-share/gir-1.0/GstController-1.0.gir
-share/gir-1.0/GstNet-1.0.gir
+${PLIST.introspection}share/gir-1.0/GstController-1.0.gir
+${PLIST.introspection}share/gir-1.0/GstNet-1.0.gir
 share/gtk-doc/html/gstreamer-1.0/GstAllocator.html
 share/gtk-doc/html/gstreamer-1.0/GstBin.html
 share/gtk-doc/html/gstreamer-1.0/GstBuffer.html
