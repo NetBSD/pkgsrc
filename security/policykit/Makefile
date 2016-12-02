@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2016/07/09 06:38:56 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.33 2016/12/02 19:58:23 wiz Exp $
 
 POLICYKIT_VER=		0.9
 DISTNAME=		PolicyKit-${POLICYKIT_VER}
 PKGNAME=		policykit-${POLICYKIT_VER}
-PKGREVISION=		19
+PKGREVISION=		20
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
@@ -66,8 +65,6 @@ SPECIAL_PERMS+=		${PREFIX}/libexec/polkit-explicit-grant-helper \
 SPECIAL_PERMS+=		${PREFIX}/libexec/polkit-grant-helper \
 				${REAL_ROOT_USER} ${POLICYKIT_GROUP} 2555
 SPECIAL_PERMS+=		${PREFIX}/libexec/polkit-read-auth-helper \
-				${REAL_ROOT_USER} ${POLICYKIT_GROUP} 2555
-SPECIAL_PERMS+=		${PREFIX}/libexec/polkit-read-grant-helper \
 				${REAL_ROOT_USER} ${POLICYKIT_GROUP} 2555
 SPECIAL_PERMS+=		${PREFIX}/libexec/polkit-revoke-helper \
 				${REAL_ROOT_USER} ${POLICYKIT_GROUP} 2555
