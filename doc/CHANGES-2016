@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4879 2016/12/02 11:00:53 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4880 2016/12/02 12:33:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6686,3 +6686,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/miniupnpc version 2.0 [adam 2016-12-01]
 	Updated devel/py-argcomplete to 1.7.0 [fhajny 2016-12-02]
 	Updated net/rabbitmq to 3.6.6 [fhajny 2016-12-02]
+	Updated www/py-django to 1.10.4 [adam 2016-12-02]
+	Updated www/py-django-cms to 3.4.1 [adam 2016-12-02]
