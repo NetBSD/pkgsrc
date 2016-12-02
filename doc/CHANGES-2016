@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4884 2016/12/02 23:19:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4885 2016/12/02 23:23:17 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6692,3 +6692,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/lyx to 2.2.2 [maya 2016-12-02]
 	Updated security/policykit to 0.9nb20 [wiz 2016-12-02]
 	Updated devel/py-mercurial to 4.0.1 [wiz 2016-12-02]
+	Updated www/goaccess to 1.1.1 [wiedi 2016-12-02]
