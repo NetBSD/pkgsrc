@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2016/08/14 11:17:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.27 2016/12/02 11:00:39 fhajny Exp $
 
-DISTNAME=		rabbitmq-server-3.6.5
+DISTNAME=		rabbitmq-server-3.6.6
 PKGNAME=		${DISTNAME:S/-server//}
 CATEGORIES=		net
 MASTER_SITES=		http://www.rabbitmq.com/releases/rabbitmq-server/v${PKGVERSION_NOREV}/
@@ -52,7 +52,7 @@ RABBITMQ_HOME=		${PREFIX}/lib/erlang/lib/rabbitmq_server-${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	share/examples/rabbitmq
 
-SCRIPTS_DIR=		${WRKSRC}/scripts
+SCRIPTS_DIR=		${WRKSRC}/deps/rabbit/scripts
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
@@ -76,11 +76,12 @@ MAKE_ENV+=		MANDIR="${PREFIX}/${PKGMANDIR}"
 MAKE_ENV+=		RMQ_BINDIR="${PREFIX}/sbin"
 MAKE_ENV+=		RMQ_LIBDIR="${PREFIX}/lib/erlang/lib"
 MAKE_ENV+=		RSYNC="${PREFIX}/bin/rsync"
+MAKE_ENV+=		VERSION="${PKGVERSION_NOREV}"
 
 INSTALL_TARGET=		install-erlapp install-scripts install-bin install-man
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/docs/rabbitmq.config.example		\
+	${INSTALL_DATA} ${WRKSRC}/deps/rabbit/docs/rabbitmq.config.example		\
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
 	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf 				\
 		${DESTDIR}${PREFIX}/share/examples/rabbitmq
