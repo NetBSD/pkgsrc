@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4877 2016/12/01 22:29:48 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4878 2016/12/02 10:24:41 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6684,3 +6684,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/the_silver_searcher to 1.0.1 [leot 2016-12-01]
 	Updated textproc/php-yaml to 2.0.0 [roy 2016-12-01]
 	Added net/miniupnpc version 2.0 [adam 2016-12-01]
+	Updated devel/py-argcomplete to 1.7.0 [fhajny 2016-12-02]
