@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/08/14 11:17:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/12/02 11:00:39 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -8,6 +8,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-BSD-base64js
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-BSD-glMatrix
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-EPL-OTP
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-EJS10
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Erlware-Commons
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Flot
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Mochi
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-Mochiweb
@@ -27,8 +28,6 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/gm.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/lqueue.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/mirrored_supervisor_sups.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/mnesia_sync.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/mochinum.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/pg2_fixed.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/pg_local.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit.app
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit.beam
@@ -50,6 +49,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_client_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_connection_helper_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_connection_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_control_main.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_control_pbe.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_ctl_usage.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_dead_letter.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_diagnostics.beam
@@ -93,6 +93,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password_hashing_md5.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password_hashing_sha256.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password_hashing_sha512.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_pbe.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins_main.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins_usage.beam
