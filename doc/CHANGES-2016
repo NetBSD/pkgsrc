@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4881 2016/12/02 12:55:20 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.4882 2016/12/02 19:14:17 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6689,3 +6689,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django to 1.10.4 [adam 2016-12-02]
 	Updated www/py-django-cms to 3.4.1 [adam 2016-12-02]
 	Updated net/mikutter to 3.4.8 [tsutsui 2016-12-02]
+	Updated editors/lyx to 2.2.2 [maya 2016-12-02]
