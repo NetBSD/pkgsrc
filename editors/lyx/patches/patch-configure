@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2016/12/02 19:07:16 maya Exp $
+
+attempt to use -lexecinfo on all BSDs, not just freebsd.
+needed for libc++ users
+
+--- configure.orig	2016-10-10 15:42:42.000000000 +0000
++++ configure
+@@ -12389,7 +12389,7 @@ fi
+ lyx_win_res=false;
+ case ${host} in
+     *mingw*|*cygwin*) lyx_win_res=true;;
+-    *freebsd*) { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing backtrace_symbols" >&5
++    *bsd*) { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing backtrace_symbols" >&5
+ $as_echo_n "checking for library containing backtrace_symbols... " >&6; }
+ if ${ac_cv_search_backtrace_symbols+:} false; then :
+   $as_echo_n "(cached) " >&6
