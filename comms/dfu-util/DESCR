@@ -1,0 +1,2 @@
+Host (PC) side implementation of the USB DFU (Universal Serial Bus Device
+Firmware Upgrade) protocol.
