@@ -1,12 +1,12 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.7 2016/11/09 19:33:24 maya Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.8 2016/12/03 09:58:26 ryoon Exp $
 
 * Restore OSS audio support code
 
---- media/libcubeb/src/cubeb_oss.c.orig	2016-11-09 15:26:24.842721769 +0000
+--- media/libcubeb/src/cubeb_oss.c.orig	2016-11-29 13:25:18.814351604 +0000
 +++ media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,414 @@
+@@ -0,0 +1,442 @@
 +/*
-+ * Copyright © 2014 Mozilla Foundation
++ * Copyright Â© 2014 Mozilla Foundation
 + *
 + * This program is made available under an ISC-style license.  See the
 + * accompanying file LICENSE for details.
@@ -35,8 +35,6 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.7 2016/11/09 19:33:24 maya Ex
 +#endif
 +
 +#define OSS_BUFFER_SIZE 1024
-+
-+#define SATURATE(f) fmaxf(-1,fminf(1,f))
 +
 +struct cubeb {
 +  struct cubeb_ops const * ops;
@@ -133,8 +131,8 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.7 2016/11/09 19:33:24 maya Ex
 +  return got;
 +}
 +
-+static void apply_volume(int16_t* buffer, unsigned int n,
-+                         float volume, float panning)
++static void apply_volume_int(int16_t* buffer, unsigned int n,
++                             float volume, float panning)
 +{
 +  float left = volume;
 +  float right = volume;
@@ -151,6 +149,26 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.7 2016/11/09 19:33:24 maya Ex
 +    buffer[i] = ((int)buffer[i])*pan[i%2]/128;
 +  }
 +}
++
++static void apply_volume_float(float* buffer, unsigned int n,
++                               float volume, float panning)
++{
++  float left = volume;
++  float right = volume;
++  unsigned int i;
++  float pan[2];
++  if (panning<0) {
++    right *= (1+panning);
++  } else {
++    left *= (1-panning);
++  }
++  pan[0] = left;
++  pan[1] = right;
++  for(i=0; i<n; i++){
++    buffer[i] = buffer[i]*pan[i%2];
++  }
++}
++
 +
 +static void *writer(void *stm)
 +{
@@ -176,15 +194,25 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.7 2016/11/09 19:33:24 maya Ex
 +    if (stream->floating) {
 +      got = run_data_callback(stream, f_buffer,
 +                              OSS_BUFFER_SIZE/stream->params.channels);
++      apply_volume_float(f_buffer, got*stream->params.channels,
++                                   stream->volume, stream->panning);
 +      for (i=0; i<((unsigned long)got)*stream->params.channels; i++) {
-+          buffer[i] = SATURATE(f_buffer[i])*32767.0;
++        /* Clipping is prefered to overflow */
++	if(f_buffer[i]>=1.0){
++	  f_buffer[i]=1.0;
++	}
++        if(f_buffer[i]<=-1.0){
++	  f_buffer[i]=-1.0;
++	}
++        /* One might think that multipling by 32767.0 is logical but results in clipping */
++        buffer[i] = f_buffer[i]*32767.0;
 +      }
 +    } else {
 +      got = run_data_callback(stream, buffer,
 +                              OSS_BUFFER_SIZE/stream->params.channels);
++      apply_volume_int(buffer, got*stream->params.channels,
++                               stream->volume, stream->panning);
 +    }
-+    apply_volume(buffer, got*stream->params.channels,
-+                         stream->volume, stream->panning);
 +    if (got<0) {
 +      run_state_callback(stream, CUBEB_STATE_ERROR);
 +      break;
@@ -264,9 +292,9 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.7 2016/11/09 19:33:24 maya Ex
 +  oss_try_set_latency(stream, latency); 
 +
 +  stream->floating = 0;
-+  SET(SNDCTL_DSP_CHANNELS, output_stream_params->channels);
-+  SET(SNDCTL_DSP_SPEED, output_stream_params->rate);
-+  switch (output_stream_params->format) {
++  SET(SNDCTL_DSP_CHANNELS, stream->params.channels);
++  SET(SNDCTL_DSP_SPEED, stream->params.rate);
++  switch (stream->params.format) {
 +    case CUBEB_SAMPLE_S16LE:
 +      SET(SNDCTL_DSP_SETFMT, AFMT_S16_LE);
 +    break;
