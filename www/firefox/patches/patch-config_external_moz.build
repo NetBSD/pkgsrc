@@ -1,22 +1,16 @@
-$NetBSD: patch-config_external_moz.build,v 1.13 2016/08/06 08:46:59 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.14 2016/12/03 09:58:26 ryoon Exp $
 
 * Support system libraries
 
---- config/external/moz.build.orig	2016-07-25 20:22:04.000000000 +0000
+--- config/external/moz.build.orig	2016-10-31 20:15:28.000000000 +0000
 +++ config/external/moz.build
-@@ -21,10 +21,19 @@ if CONFIG['MOZ_UPDATER']:
+@@ -21,12 +21,21 @@ if CONFIG['MOZ_UPDATER']:
  external_dirs += ['modules/brotli']
  external_dirs += ['modules/woff2']
  
 -if CONFIG['MOZ_VORBIS']:
 +if not CONFIG['MOZ_SYSTEM_OGG']:
 +    external_dirs += ['media/libogg']
-+
-+if not CONFIG['MOZ_SYSTEM_CELT'] or not CONFIG['MOZ_SYSTEM_OPUS']:
-+    external_dirs += ['media/libopus']
-+
-+if not CONFIG['MOZ_SYSTEM_THEORA']:
-+    external_dirs += ['media/libtheora']
 +
 +if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_SYSTEM_VORBIS']:
      external_dirs += ['media/libvorbis']
@@ -25,14 +19,25 @@ $NetBSD: patch-config_external_moz.build,v 1.13 2016/08/06 08:46:59 ryoon Exp $
 +if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_SYSTEM_TREMOR']:
      external_dirs += ['media/libtremor']
  
++if not CONFIG['MOZ_SYSTEM_THEORA']:
++    external_dirs += ['media/libtheora']
++
++if not CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
++    external_dirs += ['media/libsoundtouch']
++
  if CONFIG['MOZ_WEBM_ENCODER']:
-@@ -52,9 +61,6 @@ external_dirs += [
+     external_dirs += ['media/libmkv']
+ 
+@@ -52,12 +61,9 @@ external_dirs += [
      'media/kiss_fft',
      'media/libcubeb',
      'media/libnestegg',
 -    'media/libogg',
--    'media/libopus',
+     'media/libopus',
 -    'media/libtheora',
      'media/libspeex_resampler',
      'media/libstagefright',
-     'media/libsoundtouch',
+-    'media/libsoundtouch',
+ ]
+ 
+ DIRS += ['../../' + i for i in external_dirs]

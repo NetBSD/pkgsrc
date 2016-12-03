@@ -1,8 +1,8 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.17 2016/12/03 09:58:26 ryoon Exp $
 
 * Support alsa audio under NetBSD
 
---- media/libcubeb/src/cubeb_alsa.c.orig	2016-04-15 16:57:46.000000000 +0000
+--- media/libcubeb/src/cubeb_alsa.c.orig	2016-10-31 20:15:39.000000000 +0000
 +++ media/libcubeb/src/cubeb_alsa.c
 @@ -7,12 +7,18 @@
  #undef NDEBUG
@@ -23,7 +23,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  #include <unistd.h>
  #include <alsa/asoundlib.h>
  #include "cubeb/cubeb.h"
-@@ -25,6 +31,51 @@
+@@ -25,6 +31,50 @@
  
  #define ALSA_PA_PLUGIN "ALSA <-> PulseAudio PCM I/O Plugin"
  
@@ -46,7 +46,6 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
 +MAKE_TYPEDEF(snd_pcm_close);
 +MAKE_TYPEDEF(snd_pcm_delay);
 +MAKE_TYPEDEF(snd_pcm_drain);
-+MAKE_TYPEDEF(snd_pcm_forward);
 +MAKE_TYPEDEF(snd_pcm_frames_to_bytes);
 +MAKE_TYPEDEF(snd_pcm_get_params);
 +/* snd_pcm_hw_params_alloca is actually a macro */
@@ -75,7 +74,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  /* ALSA is not thread-safe.  snd_pcm_t instances are individually protected
     by the owning cubeb_stream's mutex.  snd_pcm_t creation and destruction
     is not thread-safe until ALSA 1.0.24 (see alsa-lib.git commit 91c9c8f1),
-@@ -65,6 +116,8 @@ struct cubeb {
+@@ -65,6 +115,8 @@ struct cubeb {
       workaround is not required. */
    snd_config_t * local_config;
    int is_pa;
@@ -84,7 +83,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  };
  
  enum stream_state {
-@@ -257,32 +310,35 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -255,15 +307,16 @@ alsa_refill_stream(cubeb_stream * stm)
    long got;
    void * p;
    int draining;
@@ -94,64 +93,26 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
    pthread_mutex_lock(&stm->mutex);
  
--  r = snd_pcm_poll_descriptors_revents(stm->pcm, stm->fds, stm->nfds, &revents);
--  if (r < 0 || revents != POLLOUT) {
--    /* This should be a stream error; it makes no sense for poll(2) to wake
--       for this stream and then have the stream report that it's not ready.
--       Unfortunately, this does happen, so just bail out and try again. */
--    pthread_mutex_unlock(&stm->mutex);
--    return RUNNING;
--  }
--
 -  avail = snd_pcm_avail_update(stm->pcm);
--  if (avail == -EPIPE) {
++  avail = WRAP(snd_pcm_avail_update)(stm->pcm);
+   if (avail < 0) {
 -    snd_pcm_recover(stm->pcm, avail, 1);
 -    avail = snd_pcm_avail_update(stm->pcm);
--  }
-+  for (pipefailures = 0;;) {
-+    r = WRAP(snd_pcm_poll_descriptors_revents)(stm->pcm, stm->fds, stm->nfds, &revents);
-+    if (r < 0 || revents != POLLOUT ||
-+      (avail = WRAP(snd_pcm_avail_update)(stm->pcm)) == 0) {
-+      /* This should be a stream error; it makes no sense for poll(2) to wake
-+         for this stream and then have the stream report that it's not ready.
-+         Unfortunately, this does happen, so just bail out and try again. */
-+      pthread_mutex_unlock(&stm->mutex);
-+      return RUNNING;
-+    }
- 
--  /* Failed to recover from an xrun, this stream must be broken. */
--  if (avail < 0) {
--    pthread_mutex_unlock(&stm->mutex);
--    stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
--    return ERROR;
-+    if (avail > 0)
-+      break;
-+    if (pipefailures++ > 11) {
-+      fprintf(stderr, "%s: repeated failures from snd_pcm_avail_update, "
-+              "giving up\n", __func__);
-+      pthread_mutex_unlock(&stm->mutex);
-+      stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+      return ERROR;
-+    }
 +    WRAP(snd_pcm_recover)(stm->pcm, avail, 1);
++    avail = WRAP(snd_pcm_avail_update)(stm->pcm);
+   }
+ 
+   /* Failed to recover from an xrun, this stream must be broken. */
+@@ -272,6 +325,7 @@ alsa_refill_stream(cubeb_stream * stm)
+     stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
+     return ERROR;
    }
 +  pipefailures = againfailures = 0;
  
    /* This should never happen. */
    if ((unsigned int) avail > stm->buffer_size) {
-@@ -293,8 +349,8 @@ alsa_refill_stream(cubeb_stream * stm)
-      available to write.  If avail is still zero here, the stream must be in
-      a funky state, so recover and try again. */
-   if (avail == 0) {
--    snd_pcm_recover(stm->pcm, -EPIPE, 1);
--    avail = snd_pcm_avail_update(stm->pcm);
-+    WRAP(snd_pcm_recover)(stm->pcm, -EPIPE, 1);
-+    avail = WRAP(snd_pcm_avail_update)(stm->pcm);
-     if (avail <= 0) {
-       pthread_mutex_unlock(&stm->mutex);
-       stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-@@ -302,7 +358,7 @@ alsa_refill_stream(cubeb_stream * stm)
-     }
+@@ -286,7 +340,7 @@ alsa_refill_stream(cubeb_stream * stm)
+     return RUNNING;
    }
  
 -  p = calloc(1, snd_pcm_frames_to_bytes(stm->pcm, avail));
@@ -159,11 +120,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    assert(p);
  
    pthread_mutex_unlock(&stm->mutex);
-@@ -311,10 +367,11 @@ alsa_refill_stream(cubeb_stream * stm)
-   if (got < 0) {
-     pthread_mutex_unlock(&stm->mutex);
-     stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+    free(p);
+@@ -299,7 +353,7 @@ alsa_refill_stream(cubeb_stream * stm)
      return ERROR;
    }
    if (got > 0) {
@@ -172,82 +129,21 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
      if (stm->params.format == CUBEB_SAMPLE_FLOAT32NE) {
        float * b = (float *) p;
-@@ -327,14 +384,66 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -312,10 +366,10 @@ alsa_refill_stream(cubeb_stream * stm)
          b[i] *= stm->volume;
        }
      }
 -    wrote = snd_pcm_writei(stm->pcm, p, got);
--    if (wrote == -EPIPE) {
++    wrote = WRAP(snd_pcm_writei)(stm->pcm, p, got);
+     if (wrote < 0) {
 -      snd_pcm_recover(stm->pcm, wrote, 1);
 -      wrote = snd_pcm_writei(stm->pcm, p, got);
--    }
--    assert(wrote >= 0 && wrote == got);
--    stm->write_position += wrote;
--    gettimeofday(&stm->last_activity, NULL);
-+    for (;;) {
-+      wrote = WRAP(snd_pcm_writei)(stm->pcm, p,
-+        towrite > avail ? avail : towrite);
-+      switch(wrote) {
-+      case -EPIPE:
-+        if (pipefailures++ > 3) {
-+          fprintf(stderr, "%s: Too many underflows, giving up\n", __func__);
-+          stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+          pthread_mutex_unlock(&stm->mutex);
-+          free(p);
-+          return ERROR;
-+        }
-+        WRAP(snd_pcm_recover)(stm->pcm, wrote, 1);
-+        continue;
-+      case -EAGAIN:
-+        if (againfailures++ > 3) {
-+          fprintf(stderr, "%s: Too many -EAGAIN errors from snd_pcm_writei, "
-+	    "giving up\n", __func__);
-+          stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+          pthread_mutex_unlock(&stm->mutex);
-+          free(p);
-+          return ERROR;
-+        }
-+        continue;
-+#if __linux__
-+      case -EBADFD:
-+#else
-+      case -EBADF:
-+#endif
-+        fprintf(stderr, "%s: snc_pcm_writei returned -%s, giving up\n",
-+                __func__, "EBADFD");
-+        free(p);
-+        stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+        pthread_mutex_unlock(&stm->mutex);
-+        return ERROR;
-+      }
-+      if (wrote < 0) {
-+        fprintf(stderr, "%s: snc_pcm_writei returned unexpected error %lld, "
-+                "giving up\n", __func__, (long long)wrote);
-+        free(p);
-+        stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+        pthread_mutex_unlock(&stm->mutex);
-+        return ERROR;
-+      }
-+      pipefailures = againfailures = 0;
-+      stm->write_position += wrote;
-+      gettimeofday(&stm->last_activity, NULL);
-+      if (wrote > towrite) {
-+        fprintf(stderr, "%s: snc_pcm_writei wrote %lld frames, which was more "
-+	        "than we requested (%lld). This should not happen, giving up\n",
-+                __func__, (long long)wrote, (long long)towrite);
-+        free(p);
-+        stm->state_callback(stm, stm->user_ptr, CUBEB_STATE_ERROR);
-+        pthread_mutex_unlock(&stm->mutex);
-+        return ERROR;
-+      }
-+      if (towrite == wrote)
-+        break;
-+      towrite -= wrote;
-+    }
-   }
-   if (got != avail) {
-     long buffer_fill = stm->buffer_size - (avail - got);
-@@ -342,7 +451,7 @@ alsa_refill_stream(cubeb_stream * stm)
++      WRAP(snd_pcm_recover)(stm->pcm, wrote, 1);
++      wrote = WRAP(snd_pcm_writei)(stm->pcm, p, got);
+     }
+     assert(wrote >= 0 && wrote == got);
+     stm->write_position += wrote;
+@@ -327,7 +381,7 @@ alsa_refill_stream(cubeb_stream * stm)
  
      /* Fill the remaining buffer with silence to guarantee one full period
         has been written. */
@@ -256,7 +152,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
      set_timeout(&stm->drain_timeout, buffer_time * 1000);
  
-@@ -453,26 +562,26 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -440,26 +494,26 @@ get_slave_pcm_node(snd_config_t * lconf,
  
    slave_def = NULL;
  
@@ -288,7 +184,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      if (r < 0) {
        break;
      }
-@@ -481,7 +590,7 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -468,7 +522,7 @@ get_slave_pcm_node(snd_config_t * lconf,
      if (r < 0 || r > (int) sizeof(node_name)) {
        break;
      }
@@ -297,7 +193,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      if (r < 0) {
        break;
      }
-@@ -490,7 +599,7 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -477,7 +531,7 @@ get_slave_pcm_node(snd_config_t * lconf,
    } while (0);
  
    if (slave_def) {
@@ -306,7 +202,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    }
  
    return NULL;
-@@ -513,22 +622,22 @@ init_local_config_with_workaround(char c
+@@ -500,22 +554,22 @@ init_local_config_with_workaround(char c
  
    lconf = NULL;
  
@@ -333,7 +229,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      if (r < 0) {
        break;
      }
-@@ -537,7 +646,7 @@ init_local_config_with_workaround(char c
+@@ -524,7 +578,7 @@ init_local_config_with_workaround(char c
      if (r < 0 || r > (int) sizeof(node_name)) {
        break;
      }
@@ -342,7 +238,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      if (r < 0) {
        break;
      }
-@@ -548,12 +657,12 @@ init_local_config_with_workaround(char c
+@@ -535,12 +589,12 @@ init_local_config_with_workaround(char c
      }
  
      /* Fetch the PCM node's type, and bail out if it's not the PulseAudio plugin. */
@@ -357,7 +253,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      if (r < 0) {
        break;
      }
-@@ -564,18 +673,18 @@ init_local_config_with_workaround(char c
+@@ -551,18 +605,18 @@ init_local_config_with_workaround(char c
  
      /* Don't clobber an explicit existing handle_underrun value, set it only
         if it doesn't already exist. */
@@ -379,7 +275,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      if (r < 0) {
        break;
      }
-@@ -583,7 +692,7 @@ init_local_config_with_workaround(char c
+@@ -570,7 +624,7 @@ init_local_config_with_workaround(char c
      return lconf;
    } while (0);
  
@@ -388,7 +284,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
    return NULL;
  }
-@@ -595,9 +704,9 @@ alsa_locked_pcm_open(snd_pcm_t ** pcm, s
+@@ -582,9 +636,9 @@ alsa_locked_pcm_open(snd_pcm_t ** pcm, s
  
    pthread_mutex_lock(&cubeb_alsa_mutex);
    if (local_config) {
@@ -400,7 +296,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    }
    pthread_mutex_unlock(&cubeb_alsa_mutex);
  
-@@ -610,7 +719,7 @@ alsa_locked_pcm_close(snd_pcm_t * pcm)
+@@ -597,7 +651,7 @@ alsa_locked_pcm_close(snd_pcm_t * pcm)
    int r;
  
    pthread_mutex_lock(&cubeb_alsa_mutex);
@@ -409,7 +305,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    pthread_mutex_unlock(&cubeb_alsa_mutex);
  
    return r;
-@@ -667,12 +776,65 @@ alsa_init(cubeb ** context, char const *
+@@ -654,12 +708,65 @@ alsa_init(cubeb ** context, char const *
    pthread_attr_t attr;
    snd_pcm_t * dummy;
  
@@ -476,7 +372,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      cubeb_alsa_error_handler_set = 1;
    }
    pthread_mutex_unlock(&cubeb_alsa_mutex);
-@@ -680,6 +842,8 @@ alsa_init(cubeb ** context, char const *
+@@ -667,6 +774,8 @@ alsa_init(cubeb ** context, char const *
    ctx = calloc(1, sizeof(*ctx));
    assert(ctx);
  
@@ -485,7 +381,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    ctx->ops = &alsa_ops;
  
    r = pthread_mutex_init(&ctx->mutex, NULL);
-@@ -729,7 +893,7 @@ alsa_init(cubeb ** context, char const *
+@@ -716,7 +825,7 @@ alsa_init(cubeb ** context, char const *
         config fails with EINVAL, the PA PCM is too old for this workaround. */
      if (r == -EINVAL) {
        pthread_mutex_lock(&cubeb_alsa_mutex);
@@ -494,7 +390,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
        pthread_mutex_unlock(&cubeb_alsa_mutex);
        ctx->local_config = NULL;
      } else if (r >= 0) {
-@@ -768,9 +932,13 @@ alsa_destroy(cubeb * ctx)
+@@ -755,9 +864,13 @@ alsa_destroy(cubeb * ctx)
    pthread_mutex_destroy(&ctx->mutex);
    free(ctx->fds);
  
@@ -509,7 +405,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      pthread_mutex_unlock(&cubeb_alsa_mutex);
    }
  
-@@ -849,7 +1017,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+@@ -842,7 +955,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
      return CUBEB_ERROR;
    }
  
@@ -517,19 +413,17 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
 +  r = WRAP(snd_pcm_nonblock)(stm->pcm, 1);
    assert(r == 0);
  
-   /* Ugly hack: the PA ALSA plugin allows buffer configurations that can't
-@@ -859,23 +1027,23 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
-     latency = latency < 500 ? 500 : latency;
+   latency_us = latency_frames * 1e6 / stm->params.rate;
+@@ -855,7 +968,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+     latency_us = latency_us < min_latency ? min_latency: latency_us;
    }
  
 -  r = snd_pcm_set_params(stm->pcm, format, SND_PCM_ACCESS_RW_INTERLEAVED,
--                         stm->params.channels, stm->params.rate, 1,
--                         latency * 1000);
 +  r = WRAP(snd_pcm_set_params)(stm->pcm, format, SND_PCM_ACCESS_RW_INTERLEAVED,
-+                               stm->params.channels, stm->params.rate, 1,
-+                               latency * 1000);
+                          stm->params.channels, stm->params.rate, 1,
+                          latency_us);
    if (r < 0) {
-     alsa_stream_destroy(stm);
+@@ -863,15 +976,15 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
      return CUBEB_ERROR_INVALID_FORMAT;
    }
  
@@ -548,7 +442,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    assert((nfds_t) r == stm->nfds);
  
    r = pthread_cond_init(&stm->cond, NULL);
-@@ -906,7 +1074,7 @@ alsa_stream_destroy(cubeb_stream * stm)
+@@ -902,7 +1015,7 @@ alsa_stream_destroy(cubeb_stream * stm)
    pthread_mutex_lock(&stm->mutex);
    if (stm->pcm) {
      if (stm->state == DRAINING) {
@@ -557,7 +451,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
      }
      alsa_locked_pcm_close(stm->pcm);
      stm->pcm = NULL;
-@@ -916,7 +1084,10 @@ alsa_stream_destroy(cubeb_stream * stm)
+@@ -912,7 +1025,10 @@ alsa_stream_destroy(cubeb_stream * stm)
    pthread_mutex_destroy(&stm->mutex);
  
    r = pthread_cond_destroy(&stm->cond);
@@ -569,7 +463,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
    alsa_unregister_stream(stm);
  
-@@ -948,12 +1119,12 @@ alsa_get_max_channel_count(cubeb * ctx, 
+@@ -944,12 +1060,12 @@ alsa_get_max_channel_count(cubeb * ctx, 
      return CUBEB_ERROR;
    }
  
@@ -584,12 +478,12 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    if (r < 0) {
      return CUBEB_ERROR;
    }
-@@ -973,34 +1144,34 @@ alsa_get_preferred_sample_rate(cubeb * c
+@@ -969,34 +1085,34 @@ alsa_get_preferred_sample_rate(cubeb * c
  
    /* get a pcm, disabling resampling, so we get a rate the
     * hardware/dmix/pulse/etc. supports. */
--  r = snd_pcm_open(&pcm, CUBEB_ALSA_PCM_NAME, SND_PCM_STREAM_PLAYBACK | SND_PCM_NO_AUTO_RESAMPLE, 0);
-+  r = WRAP(snd_pcm_open)(&pcm, CUBEB_ALSA_PCM_NAME, SND_PCM_STREAM_PLAYBACK | SND_PCM_NO_AUTO_RESAMPLE, 0);
+-  r = snd_pcm_open(&pcm, CUBEB_ALSA_PCM_NAME, SND_PCM_STREAM_PLAYBACK, SND_PCM_NO_AUTO_RESAMPLE);
++  r = WRAP(snd_pcm_open)(&pcm, CUBEB_ALSA_PCM_NAME, SND_PCM_STREAM_PLAYBACK, SND_PCM_NO_AUTO_RESAMPLE);
    if (r < 0) {
      return CUBEB_ERROR;
    }
@@ -627,7 +521,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
    return CUBEB_OK;
  }
-@@ -1024,7 +1195,7 @@ alsa_stream_start(cubeb_stream * stm)
+@@ -1020,7 +1136,7 @@ alsa_stream_start(cubeb_stream * stm)
    ctx = stm->context;
  
    pthread_mutex_lock(&stm->mutex);
@@ -636,7 +530,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    gettimeofday(&stm->last_activity, NULL);
    pthread_mutex_unlock(&stm->mutex);
  
-@@ -1058,7 +1229,7 @@ alsa_stream_stop(cubeb_stream * stm)
+@@ -1054,7 +1170,7 @@ alsa_stream_stop(cubeb_stream * stm)
    pthread_mutex_unlock(&ctx->mutex);
  
    pthread_mutex_lock(&stm->mutex);
@@ -645,7 +539,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
    pthread_mutex_unlock(&stm->mutex);
  
    return CUBEB_OK;
-@@ -1074,14 +1245,17 @@ alsa_stream_get_position(cubeb_stream * 
+@@ -1070,14 +1186,16 @@ alsa_stream_get_position(cubeb_stream * 
    pthread_mutex_lock(&stm->mutex);
  
    delay = -1;
@@ -660,13 +554,12 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.16 2016/11/09 16:59:46 maya 
  
 -  assert(delay >= 0);
 +  if (delay < 0) {
-+    WRAP(snd_pcm_forward)(stm->pcm, -delay);
 +    delay = 0;
 +  }
  
    *position = 0;
    if (stm->write_position >= (snd_pcm_uframes_t) delay) {
-@@ -1100,7 +1274,7 @@ alsa_stream_get_latency(cubeb_stream * s
+@@ -1096,7 +1214,7 @@ alsa_stream_get_latency(cubeb_stream * s
    snd_pcm_sframes_t delay;
    /* This function returns the delay in frames until a frame written using
       snd_pcm_writei is sent to the DAC. The DAC delay should be < 1ms anyways. */

@@ -1,10 +1,32 @@
-$NetBSD: patch-dom_media_moz.build,v 1.5 2016/08/06 08:46:59 ryoon Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.6 2016/12/03 09:58:26 ryoon Exp $
 
 * Support system libraries
 
---- dom/media/moz.build.orig	2016-07-25 20:22:03.000000000 +0000
+--- dom/media/moz.build.orig	2016-10-31 20:15:34.000000000 +0000
 +++ dom/media/moz.build
-@@ -327,6 +327,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
+@@ -319,6 +319,21 @@ if CONFIG['MOZ_WEBRTC']:
+ 
+ DEFINES['MOZILLA_INTERNAL_API'] = True
+ 
++if CONFIG['MOZ_SYSTEM_OGG']:
++    CXXFLAGS += CONFIG['MOZ_OGG_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_THEORA']:
++    CXXFLAGS += CONFIG['MOZ_THEORA_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_VORBIS']:
++    CXXFLAGS += CONFIG['MOZ_VORBIS_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_TREMOR']:
++    CXXFLAGS += CONFIG['MOZ_TREMOR_CFLAGS']
++
++if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
++    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
++
+ if CONFIG['OS_TARGET'] == 'WINNT':
+     DEFINES['WEBRTC_WIN'] = True
+ else:
+@@ -333,6 +348,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
  if CONFIG['MOZ_GONK_MEDIACODEC']:
      DEFINES['MOZ_GONK_MEDIACODEC'] = True
  
