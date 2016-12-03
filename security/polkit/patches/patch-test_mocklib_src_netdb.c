@@ -1,4 +1,4 @@
-$NetBSD: patch-test_mocklib_src_netdb.c,v 1.2 2016/06/18 12:16:23 youri Exp $
+$NetBSD: patch-test_mocklib_src_netdb.c,v 1.3 2016/12/03 01:58:50 marino Exp $
 
 Darwin has setnetgrent.
 SunOS has endnetgrent.
@@ -9,7 +9,7 @@ SunOS has endnetgrent.
  
  // REMEMBER: 1 means success, 0 means failure for netgroup methods
  
-+#if !defined(__APPLE__) && !defined(__FreeBSD__)
++#if !defined(__APPLE__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
  int setnetgrent(const char *netgroup) {
    if (!global_netgroup_head)
      global_netgroup_head = netgroup_parse_all();
