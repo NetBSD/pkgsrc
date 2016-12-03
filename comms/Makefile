@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2016/10/25 08:29:16 jnemeth Exp $
+# $NetBSD: Makefile,v 1.105 2016/12/03 03:32:35 sevan Exp $
 #
 
 COMMENT=	Communication utilities
@@ -15,6 +15,7 @@ SUBDIR+=	bthfp
 SUBDIR+=	conserver
 SUBDIR+=	conserver8
 SUBDIR+=	deforaos-phone
+SUBDIR+=	dfu-util
 SUBDIR+=	dl-ezkit
 SUBDIR+=	efax
 SUBDIR+=	efax-gtk
