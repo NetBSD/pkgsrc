@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/03 23:54:56 wiedi Exp $
+
+SHA1 (slibtool-0.5.12.tar.gz) = 7f958fc5d1662cfc6a57b45326b430c20a15ed16
+RMD160 (slibtool-0.5.12.tar.gz) = 97e5bee99ac5fc9c811bffdbc9e5e2bf8c696e38
+SHA512 (slibtool-0.5.12.tar.gz) = 70e800449080656d34f0f9e017541f18020e210414dceea6332a3e2b323a08226bd5ec18310a62aaefbdb3dbcbb2b66f0979f79d3130f6837fbf06c4702b1c91
+Size (slibtool-0.5.12.tar.gz) = 60423 bytes
