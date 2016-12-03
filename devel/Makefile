@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2338 2016/11/30 12:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2339 2016/12/03 23:54:56 wiedi Exp $
 #
 
 COMMENT=	Development utilities
@@ -2179,6 +2179,7 @@ SUBDIR+=	sgi-stl-docs
 SUBDIR+=	shtk
 SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
+SUBDIR+=	slibtool
 SUBDIR+=	sml-mode
 SUBDIR+=	snappy
 SUBDIR+=	snappy-java10
