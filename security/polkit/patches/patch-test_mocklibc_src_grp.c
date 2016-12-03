@@ -1,4 +1,4 @@
-$NetBSD: patch-test_mocklibc_src_grp.c,v 1.3 2016/09/27 21:56:13 maya Exp $
+$NetBSD: patch-test_mocklibc_src_grp.c,v 1.4 2016/12/03 01:58:50 marino Exp $
 
 * XXX: no fgetgrent(3)
 
@@ -11,7 +11,7 @@ prototype: int setgrent(void)
  
  static FILE *global_stream = NULL;
  
-+#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
 +static struct group *fgetgrent(FILE *stream) {
 +  return NULL;
 +}
