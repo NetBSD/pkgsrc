@@ -1,25 +1,56 @@
-$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.1 2015/07/12 00:37:47 wiz Exp $
+$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.2 2016/12/03 16:30:05 martin Exp $
 
---- Source/WTF/wtf/Platform.h.orig	2015-01-07 09:45:42.000000000 +0000
-+++ Source/WTF/wtf/Platform.h
-@@ -632,6 +632,11 @@
- #define USE_SYSTEM_MALLOC 1
+Add support for sparc and sparc64, disable ASSEMBLER and YARR_JIT for now
+
+--- Source/WTF/wtf/Platform.h.orig	2016-04-10 08:48:36.000000000 +0200
++++ Source/WTF/wtf/Platform.h	2016-12-02 18:12:33.703875988 +0100
+@@ -153,6 +153,18 @@
+ #define WTF_CPU_BIG_ENDIAN 1
  #endif
  
-+/* Workaround an alignment issue with fastMalloc on NetBSD/arm */
-+#if OS(NETBSD) && CPU(ARM)
-+#define USE_SYSTEM_MALLOC 1
++/* CPU(SPARC) - SPARC 32-bit */
++#if defined(__sparc__) && !defined(_LP64)
++#define WTF_CPU_SPARC 1
++#define WTF_CPU_BIG_ENDIAN 1
 +#endif
 +
- #if !defined(ENABLE_GLOBAL_FASTMALLOC_NEW)
- #define ENABLE_GLOBAL_FASTMALLOC_NEW 1
++/* CPU(SPARC64) - SPARC 64-bit */
++#if defined(__sparc__) && defined(_LP64)
++#define WTF_CPU_SPARC64 1
++#define WTF_CPU_BIG_ENDIAN 1
++#endif
++
+ /* CPU(X86) - i386 / x86 32-bit */
+ #if   defined(__i386__) \
+     || defined(i386)     \
+@@ -656,6 +668,7 @@
+     || CPU(ALPHA) \
+     || CPU(ARM64) \
+     || CPU(S390X) \
++    || CPU(SPARC64) \
+     || CPU(MIPS64) \
+     || CPU(PPC64) \
+     || CPU(PPC64LE)
+@@ -824,7 +837,7 @@
+ #define ENABLE_REGEXP_TRACING 0
+ 
+ /* Yet Another Regex Runtime - turned on by default for JIT enabled ports. */
+-#if !defined(ENABLE_YARR_JIT) && (ENABLE(JIT) || ENABLE(LLINT_C_LOOP))
++#if !defined(ENABLE_YARR_JIT) && (ENABLE(JIT) || ENABLE(LLINT_C_LOOP)) && !CPU(SPARC64) && !CPU(SPARC)
+ #define ENABLE_YARR_JIT 1
+ 
+ /* Setting this flag compares JIT results with interpreter results. */
+@@ -837,10 +850,12 @@
+ #if defined(ENABLE_ASSEMBLER) && !ENABLE_ASSEMBLER
+ #error "Cannot enable the JIT or RegExp JIT without enabling the Assembler"
+ #else
++#if !CPU(SPARC) && !CPU(SPARC64)
+ #undef ENABLE_ASSEMBLER
+ #define ENABLE_ASSEMBLER 1
  #endif
-@@ -723,7 +728,7 @@
-    low-level interpreter. */
- #if !defined(ENABLE_LLINT) \
-     && ENABLE(JIT) \
--    && (OS(DARWIN) || OS(LINUX) || OS(FREEBSD) || OS(HURD)) \
-+    && (OS(DARWIN) || OS(LINUX) || OS(FREEBSD) || OS(NETBSD) || OS(HURD)) \
-     && (PLATFORM(MAC) || PLATFORM(IOS) || PLATFORM(GTK)) \
-     && (CPU(X86) || CPU(X86_64) || CPU(ARM_THUMB2) || CPU(ARM_TRADITIONAL) || CPU(ARM64) || CPU(MIPS) || CPU(SH4))
- #define ENABLE_LLINT 1
+ #endif
++#endif
+ 
+ /* If the Disassembler is enabled, then the Assembler must be enabled as well: */
+ #if ENABLE(DISASSEMBLER)
+
