@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2015/09/07 12:02:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.13 2016/12/03 05:00:46 marino Exp $
 #
 # used by editors/emacs24/Makefile
 # used by editors/emacs24-nox11/Makefile
@@ -51,6 +51,10 @@ CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+CFLAGS+=	-fno-builtin-malloc	# Not really DF, but GCC >= 5.0
+.endif
 
 .if (${OPSYS} == "NetBSD") && \
     !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)
