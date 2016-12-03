@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/03 03:26:07 sevan Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/03 13:02:22 sevan Exp $
 #
 
 DISTNAME=		dfu-util-0.9
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+= 	CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "FreeBSD" || ${OPSYS} != "DragonFly"
+.if ${OPSYS} != "FreeBSD" && ${OPSYS} != "DragonFly"
 BUILDLINK_TRANSFORM+=	l:usb:usb-1.0
 .endif
 
