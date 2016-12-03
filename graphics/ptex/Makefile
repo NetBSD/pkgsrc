@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/10/18 02:47:16 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/03 20:17:57 wiedi Exp $
 
 DISTNAME=	ptex-2.1.28
 CATEGORIES=	graphics
@@ -19,4 +19,5 @@ TEST_TARGET=	test
 
 TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/src/ptex/
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
