@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:23:04 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/03 22:45:50 wiedi Exp $
 #
 
 DISTNAME=	toppler-1.1.6
@@ -18,5 +18,6 @@ USE_LANGUAGES=		c c++
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
