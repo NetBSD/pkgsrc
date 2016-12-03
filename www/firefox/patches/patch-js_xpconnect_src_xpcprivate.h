@@ -1,12 +1,12 @@
-$NetBSD: patch-js_xpconnect_src_xpcprivate.h,v 1.2 2015/01/30 07:32:24 pho Exp $
+$NetBSD: patch-js_xpconnect_src_xpcprivate.h,v 1.3 2016/12/03 09:58:26 ryoon Exp $
 
 From commit log 1.1:
   Instantiate WeakMapPtr explicitly to get the right visibility with
   clang.
 
---- js/xpconnect/src/xpcprivate.h.orig	2015-01-23 06:00:06.000000000 +0000
+--- js/xpconnect/src/xpcprivate.h.orig	2016-10-31 20:15:38.000000000 +0000
 +++ js/xpconnect/src/xpcprivate.h
-@@ -1016,6 +1016,8 @@ static inline bool IS_PROTO_CLASS(const 
+@@ -860,6 +860,8 @@ typedef nsTArray<InterpositionWhitelistP
  /***************************************************************************/
  // XPCWrappedNativeScope is one-to-one with a JS global object.
  
@@ -14,4 +14,4 @@ From commit log 1.1:
 +
  class nsIAddonInterposition;
  class nsXPCComponentsBase;
- class XPCWrappedNativeScope : public PRCList
+ class XPCWrappedNativeScope final : public PRCList
