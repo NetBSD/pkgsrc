@@ -1,8 +1,8 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.7 2016/08/06 08:46:59 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.8 2016/12/03 09:58:26 ryoon Exp $
 
 * Support system libraries
 
---- toolkit/library/moz.build.orig	2016-07-25 20:22:07.000000000 +0000
+--- toolkit/library/moz.build.orig	2016-11-05 00:20:16.000000000 +0000
 +++ toolkit/library/moz.build
 @@ -211,6 +211,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
      ]
@@ -12,7 +12,16 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.7 2016/08/06 08:46:59 ryoon Exp $
  OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
  OS_LIBS += CONFIG['MOZ_SERVO_LIBS']
  
-@@ -223,6 +224,30 @@ if CONFIG['MOZ_SYSTEM_PNG']:
+@@ -220,9 +221,30 @@ if CONFIG['MOZ_SYSTEM_JPEG']:
+ if CONFIG['MOZ_SYSTEM_PNG']:
+     OS_LIBS += CONFIG['MOZ_PNG_LIBS']
+ 
++if CONFIG['MOZ_SYSTEM_GRAPHITE2']:
++    OS_LIBS += CONFIG['MOZ_GRAPHITE2_LIBS']
++
++if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
++    OS_LIBS += CONFIG['MOZ_HARFBUZZ_LIBS']
++
  if CONFIG['MOZ_SYSTEM_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -28,28 +37,20 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.7 2016/08/06 08:46:59 ryoon Exp $
 +if CONFIG['MOZ_SYSTEM_TREMOR']:
 +    OS_LIBS += CONFIG['MOZ_TREMOR_LIBS']
 +
-+if CONFIG['MOZ_SYSTEM_CELT']:
-+    OS_LIBS += CONFIG['MOZ_CELT_LIBS']
-+
-+if CONFIG['MOZ_SYSTEM_OPUS']:
-+    OS_LIBS += CONFIG['MOZ_OPUS_LIBS']
-+
-+if CONFIG['MOZ_SYSTEM_SPEEX']:
-+    OS_LIBS += CONFIG['MOZ_SPEEX_LIBS']
-+
 +if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
 +    OS_LIBS += CONFIG['MOZ_SOUNDTOUCH_LIBS']
 +
  if CONFIG['MOZ_SYSTEM_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -235,6 +260,9 @@ if not CONFIG['MOZ_TREE_PIXMAN']:
- if CONFIG['MOZ_ALSA']:
-     OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
+@@ -232,8 +254,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
+ if not CONFIG['MOZ_TREE_PIXMAN']:
+     OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  
+-if CONFIG['MOZ_ALSA']:
+-    OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
 +if CONFIG['MOZ_OSS']:
 +    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
-+
+ 
  if CONFIG['HAVE_CLOCK_MONOTONIC']:
      OS_LIBS += CONFIG['REALTIME_LIBS']
- 
