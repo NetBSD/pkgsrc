@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4896 2016/12/03 18:57:47 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.4897 2016/12/03 23:55:40 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6705,3 +6705,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/ruby-squib to 0.12.0 [wiz 2016-12-03]
 	Updated devel/hdf5 to 1.8.18 [alnsn 2016-12-03]
 	Updated devel/hdf5-c++ to 1.8.18 [alnsn 2016-12-03]
+	Added devel/slibtool version 0.5.12 [wiedi 2016-12-03]
