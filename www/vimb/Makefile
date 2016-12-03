@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/08/03 10:23:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/12/03 23:13:39 wiedi Exp $
 
 DISTNAME=	vimb-2.11
 PKGREVISION=	4
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake pkg-config
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# needed for LOCK_* macros in <fcntl.h>
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 # Bump _XOPEN_SOURCE version to 600 in order to avoid "Compiler or options
 # invalid for pre-UNIX 03 X/Open applications" error on SunOS and correctly
