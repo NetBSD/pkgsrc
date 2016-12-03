@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2016/11/12 00:50:19 gdt Exp $
+# $NetBSD: Makefile,v 1.116 2016/12/03 21:57:47 marino Exp $
 
 DISTNAME=	pulseaudio-9.0
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/PulseAudio
 COMMENT=	Sound server for POSIX and Win32 systems
 LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
+
+NOT_FOR_PLATFORM=	DragonFly-*-*
 
 LIBTOOL_REQD=	2.4
 GCC_REQD+=	4.8
