@@ -1,0 +1,22 @@
+$NetBSD: patch-extensions_spellcheck_hunspell_glue_moz.build,v 1.1 2016/12/03 09:58:26 ryoon Exp $
+
+--- extensions/spellcheck/hunspell/glue/moz.build.orig	2016-10-31 20:15:27.000000000 +0000
++++ extensions/spellcheck/hunspell/glue/moz.build
+@@ -11,12 +11,14 @@ SOURCES += [
+     'RemoteSpellCheckEngineParent.cpp',
+ ]
+ 
+-CXXFLAGS += CONFIG['MOZ_HUNSPELL_CFLAGS']
+-
+ FINAL_LIBRARY = 'xul'
+ 
++if CONFIG['MOZ_SYSTEM_HUNSPELL']:
++    CXXFLAGS += CONFIG['MOZ_HUNSPELL_CFLAGS']
++else:
++    LOCAL_INCLUDES += ['../src']
++
+ LOCAL_INCLUDES += [
+-    '../src',
+     '/dom/base',
+     '/extensions/spellcheck/src',
+ ]
