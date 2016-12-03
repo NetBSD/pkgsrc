@@ -1,0 +1,14 @@
+$NetBSD: patch-dom_base_moz.build,v 1.3 2016/12/03 09:58:26 ryoon Exp $
+
+--- dom/base/moz.build.orig	2016-10-31 20:15:32.000000000 +0000
++++ dom/base/moz.build
+@@ -457,6 +457,9 @@ if CONFIG['MOZ_BUILD_APP'] in ['browser'
+ if CONFIG['MOZ_X11']:
+     CXXFLAGS += CONFIG['TK_CFLAGS']
+ 
++if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
+ GENERATED_FILES += [
+     'PropertyUseCounterMap.inc',
+     'UseCounterList.h',
