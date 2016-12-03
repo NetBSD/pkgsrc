@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/07/09 06:39:00 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/12/03 14:54:01 marino Exp $
 #
 
 DISTNAME=		hal-info-20091130
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer (info subpackage)
 LICENSE=		gnu-gpl-v2 # OR Academic-Free-License-v2.1
+
+TOOL_DEPENDS+=		libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
