@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/05/07 09:05:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/03 20:23:44 wiedi Exp $
 
 DISTNAME=	stlink-1.2.0
 CATEGORIES=	cross
@@ -13,6 +13,8 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	automake pkg-config
 GNU_CONFIGURE=	yes
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-configure:
 	cd ${WRKSRC} && \
