@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/09/17 15:23:42 richard Exp $
+# $NetBSD: Makefile,v 1.28 2016/12/03 16:42:28 marino Exp $
 
 DISTNAME=	libsoup-2.54.1
 CATEGORIES=	net gnome
@@ -59,4 +59,5 @@ BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-introspection
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
