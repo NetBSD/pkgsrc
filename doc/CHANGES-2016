@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4886 2016/12/03 02:29:19 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.4887 2016/12/03 03:08:35 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6694,3 +6694,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mercurial to 4.0.1 [wiz 2016-12-02]
 	Updated www/goaccess to 1.1.1 [wiedi 2016-12-02]
 	Updated fonts/sourcecodepro-fonts to 1.050 [khorben 2016-12-03]
+	Updated www/mediawiki to 1.28.0 [wen 2016-12-03]
