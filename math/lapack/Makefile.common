@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2016/10/18 14:08:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2016/12/03 15:37:34 marino Exp $
 # used by math/blas/Makefile
 # used by math/lapack/Makefile
 
@@ -18,3 +18,9 @@ DISTINFO_FILE=	${.CURDIR}/../../math/lapack/distinfo
 PATCHDIR=	${.CURDIR}/../../math/lapack/patches
 
 INSTALLATION_DIRS=	lib
+
+# blas fails using the gold linker with:
+# fatal error: --sysroot=: must take a non-empty argument
+# Work around it on DragonFly by specifying the classic gnu linker
+
+MAKE_ENV+=	LDVER=ld.bfd
