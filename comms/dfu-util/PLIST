@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/12/03 03:26:07 sevan Exp $
+bin/dfu-prefix
+bin/dfu-suffix
+bin/dfu-util
+man/man1/dfu-util.1
