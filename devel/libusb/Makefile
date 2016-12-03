@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/04/10 15:26:57 richard Exp $
+# $NetBSD: Makefile,v 1.39 2016/12/03 04:19:05 marino Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	4
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	libusb.pc.in
 # supports one of these APIs, add it here and also in the configure
 # script. Solaris support has been hacked on separately.
 ONLY_FOR_PLATFORM=	Linux-*-*
-ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-*
 ONLY_FOR_PLATFORM+=	Darwin-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
