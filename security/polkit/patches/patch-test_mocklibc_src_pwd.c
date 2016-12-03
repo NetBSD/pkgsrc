@@ -1,4 +1,4 @@
-$NetBSD: patch-test_mocklibc_src_pwd.c,v 1.2 2016/06/18 12:16:23 youri Exp $
+$NetBSD: patch-test_mocklibc_src_pwd.c,v 1.3 2016/12/03 01:58:50 marino Exp $
 
 * XXX: no fgetpwent(3)
 
@@ -8,7 +8,7 @@ $NetBSD: patch-test_mocklibc_src_pwd.c,v 1.2 2016/06/18 12:16:23 youri Exp $
  
  static FILE *global_stream = NULL;
  
-+#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
 +static struct passwd *fgetpwent(FILE* stream) {
 +  return NULL;
 +}
