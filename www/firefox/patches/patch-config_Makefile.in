@@ -1,21 +1,20 @@
-$NetBSD: patch-config_Makefile.in,v 1.7 2016/08/06 08:46:59 ryoon Exp $
+$NetBSD: patch-config_Makefile.in,v 1.8 2016/12/03 09:58:26 ryoon Exp $
 
 * Support system libraries
 
---- config/Makefile.in.orig	2016-07-25 20:22:04.000000000 +0000
+--- config/Makefile.in.orig	2016-10-31 20:15:27.000000000 +0000
 +++ config/Makefile.in
-@@ -49,6 +49,14 @@ export:: $(export-preqs)
+@@ -49,6 +49,13 @@ export:: $(export-preqs)
  		-DMOZ_SYSTEM_LIBEVENT=$(MOZ_SYSTEM_LIBEVENT) \
  		-DMOZ_SYSTEM_LIBVPX=$(MOZ_SYSTEM_LIBVPX) \
  		-DMOZ_SYSTEM_ICU=$(MOZ_SYSTEM_ICU) \
++		-DMOZ_SYSTEM_GRAPHITE2=$(MOZ_SYSTEM_GRAPHITE2) \
++		-DMOZ_SYSTEM_HARFBUZZ=$(MOZ_SYSTEM_HARFBUZZ) \
 +		-DMOZ_SYSTEM_OGG=$(MOZ_SYSTEM_OGG) \
 +		-DMOZ_SYSTEM_THEORA=$(MOZ_SYSTEM_THEORA) \
 +		-DMOZ_SYSTEM_VORBIS=$(MOZ_SYSTEM_VORBIS) \
 +		-DMOZ_SYSTEM_TREMOR=$(MOZ_SYSTEM_TREMOR) \
-+		-DMOZ_SYSTEM_CELT=$(MOZ_SYSTEM_CELT) \
-+		-DMOZ_SYSTEM_OPUS=$(MOZ_SYSTEM_OPUS) \
-+		-DMOZ_SYSTEM_SPEEX=$(MOZ_SYSTEM_SPEEX) \
 +		-DMOZ_SYSTEM_SOUNDTOUCH=$(MOZ_SYSTEM_SOUNDTOUCH) \
- 		$(srcdir)/system-headers | $(PERL) $(topsrcdir)/nsprpub/config/make-system-wrappers.pl system_wrappers
+ 		$(srcdir)/system-headers $(srcdir)/stl-headers | $(PERL) $(topsrcdir)/nsprpub/config/make-system-wrappers.pl system_wrappers
  	$(INSTALL) system_wrappers $(DIST)
  
