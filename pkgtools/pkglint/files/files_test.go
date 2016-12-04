@@ -65,7 +65,7 @@ func (s *Suite) Test_show_autofix(c *check.C) {
 	lines := LoadExistingLines(fname, true)
 
 	if !lines[1].AutofixReplaceRegexp(`.`, "X") {
-		lines[1].Warn0("Something's wrong here.") // Prints the autofix NOTE afterwards
+		lines[1].Warnf("Something's wrong here.") // Prints the autofix NOTE afterwards
 	}
 	SaveAutofixChanges(lines)
 
@@ -85,7 +85,7 @@ func (s *Suite) Test_autofix(c *check.C) {
 	lines := LoadExistingLines(fname, true)
 
 	if !lines[1].AutofixReplaceRegexp(`.`, "X") {
-		lines[1].Warn0("Something's wrong here.") // Prints the autofix NOTE afterwards
+		lines[1].Warnf("Something's wrong here.") // Prints the autofix NOTE afterwards
 	}
 	SaveAutofixChanges(lines)
 
