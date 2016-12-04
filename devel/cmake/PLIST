@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2016/11/12 07:49:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2016/12/04 08:52:56 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -142,7 +142,7 @@ share/cmake-${CMAKE_API}/Help/generator/Visual Studio 10 2010.rst
 share/cmake-${CMAKE_API}/Help/generator/Visual Studio 11 2012.rst
 share/cmake-${CMAKE_API}/Help/generator/Visual Studio 12 2013.rst
 share/cmake-${CMAKE_API}/Help/generator/Visual Studio 14 2015.rst
-share/cmake-${CMAKE_API}/Help/generator/Visual Studio 15.rst
+share/cmake-${CMAKE_API}/Help/generator/Visual Studio 15 2017.rst
 share/cmake-${CMAKE_API}/Help/generator/Visual Studio 6.rst
 share/cmake-${CMAKE_API}/Help/generator/Visual Studio 7 .NET 2003.rst
 share/cmake-${CMAKE_API}/Help/generator/Visual Studio 7.rst
@@ -839,6 +839,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_JAVA_SOURCE_DIR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NATIVE_LIB_DEPENDENCIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NATIVE_LIB_DIRECTORIES.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_HOST_TAG.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_PROCESS_MAX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_ANDROID_PROGUARD.rst
@@ -968,12 +969,14 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_DEFAULT_COMPONENT_NAME.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_MESSAGE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_NAME_DIR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_PREFIX.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_RPATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_RPATH_USE_LINK_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INTERNAL_PLATFORM_ABI.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_IOS_INSTALL_COMBINED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_JOB_POOL_COMPILE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_JOB_POOL_LINK.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ANDROID_TOOLCHAIN_MACHINE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ANDROID_TOOLCHAIN_PREFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ANDROID_TOOLCHAIN_SUFFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_APPEND.rst
