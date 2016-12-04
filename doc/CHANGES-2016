@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4897 2016/12/03 23:55:40 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.4898 2016/12/04 04:13:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6706,3 +6706,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/hdf5 to 1.8.18 [alnsn 2016-12-03]
 	Updated devel/hdf5-c++ to 1.8.18 [alnsn 2016-12-03]
 	Added devel/slibtool version 0.5.12 [wiedi 2016-12-03]
+	Updated textproc/icu to 58.1 [ryoon 2016-12-04]
