@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2016/11/20 13:02:14 leot Exp $
+$NetBSD: distinfo,v 1.8 2016/12/04 12:41:47 martin Exp $
 
 SHA1 (netsurf-all-3.6.tar.gz) = d25345415b9b26343c22929280c48066302da916
 RMD160 (netsurf-all-3.6.tar.gz) = 73b7768434b5365c912761837f7d6003c28fb84c
@@ -6,3 +6,9 @@ SHA512 (netsurf-all-3.6.tar.gz) = 1b7dcc80efe8e3944e5db7d74da749821adb3ae39700df
 Size (netsurf-all-3.6.tar.gz) = 8403623 bytes
 SHA1 (patch-netsurf_utils_config.h) = de48304e3484a883509ea3ad92658788f7869041
 SHA1 (patch-nsgenbind_src_Makefile) = 1798b84c28fbb9bbdaafe3f182fbd301f5438df1
+SHA1 (patch-nsgenbind_src_nsgenbind-ast.c) = 5931ab321f15dc9754b71545d40bac01274938f6
+SHA1 (patch-nsgenbind_src_nsgenbind-ast.h) = acae94b6386be7dbde190eb7218a25a622b4763b
+SHA1 (patch-nsgenbind_src_nsgenbind-parser.y) = d16777ad3dde63ff4e00553103998326a1ad2903
+SHA1 (patch-nsgenbind_src_webidl-ast.c) = 09d8007e7e5a7b9799a721f180ee16b2cfbda0a9
+SHA1 (patch-nsgenbind_src_webidl-ast.h) = e01bf956b170ad53c60c993ec728d03d1b208e5b
+SHA1 (patch-nsgenbind_src_webidl-parser.y) = 930e39c1efa0fb4c4d4d9737584f83250cbb4a8f
