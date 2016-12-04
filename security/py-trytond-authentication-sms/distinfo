@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:08 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 43fc420ca42c1d0951604ca9726a42d636c727c8
+RMD160 (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 17bfc6ef1e5ef6268548b64071630683b36ce200
+SHA512 (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 8bde9bb049e0a6b07fda3d098aa403ca505cc336bfbc39ea724653a015f23e8be67afce76077260c4fe424040c7e185930187d8cd9ad6d39f5cf55c88c3c7b46
+Size (tryton-4.2/trytond_authentication_sms-4.2.0.tar.gz) = 23182 bytes
