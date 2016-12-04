@@ -11,10 +11,8 @@ import (
 )
 
 type MkLine struct {
-	Line *Line
-
-	xtype uint8
-	data  interface{} // One of the following mkLine* types
+	*Line
+	data interface{} // One of the following mkLine* types
 }
 type mkLineAssign struct {
 	varname    string
@@ -28,6 +26,8 @@ type mkLineAssign struct {
 type mkLineShell struct {
 	command string
 }
+type mkLineComment struct{}
+type mkLineEmpty struct{}
 type mkLineConditional struct {
 	indent    string
 	directive string
@@ -35,6 +35,7 @@ type mkLineConditional struct {
 }
 type mkLineInclude struct {
 	mustexist     bool
+	sys           bool
 	indent        string
 	includeFile   string
 	conditionVars string // (filled in later)
@@ -44,21 +45,14 @@ type mkLineDependency struct {
 	sources string
 }
 
-func (mkline *MkLine) Error1(format, arg1 string)      { mkline.Line.Error1(format, arg1) }
-func (mkline *MkLine) Warn0(format string)             { mkline.Line.Warn0(format) }
-func (mkline *MkLine) Warn1(format, arg1 string)       { mkline.Line.Warn1(format, arg1) }
-func (mkline *MkLine) Warn2(format, arg1, arg2 string) { mkline.Line.Warn2(format, arg1, arg2) }
-func (mkline *MkLine) Note0(format string)             { mkline.Line.Note0(format) }
-func (mkline *MkLine) Note2(format, arg1, arg2 string) { mkline.Line.Note2(format, arg1, arg2) }
-
 func NewMkLine(line *Line) (mkline *MkLine) {
 	mkline = &MkLine{Line: line}
 
 	text := line.Text
 
 	if hasPrefix(text, " ") {
-		mkline.Warn0("Makefile lines should not start with space characters.")
-		Explain3(
+		mkline.Warnf("Makefile lines should not start with space characters.")
+		Explain(
 			"If you want this line to contain a shell program, use a tab",
 			"character for indentation.  Otherwise please remove the leading",
 			"white-space.")
@@ -73,7 +67,7 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 				break
 			default:
 				if !line.AutofixReplace(varname+spaceAfterVarname+op, varname+op) {
-					line.Warn1("Unnecessary space after variable name %q.", varname)
+					line.Warnf("Unnecessary space after variable name %q.", varname)
 				}
 			}
 		}
@@ -81,7 +75,6 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 		value = strings.Replace(value, "\\#", "#", -1)
 		varparam := varnameParam(varname)
 
-		mkline.xtype = 1
 		mkline.data = mkLineAssign{
 			varname,
 			varnameCanon(varname),
@@ -96,45 +89,40 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 
 	if hasPrefix(text, "\t") {
 		shellcmd := text[1:]
-		mkline.xtype = 2
 		mkline.data = mkLineShell{shellcmd}
 		mkline.Tokenize(shellcmd)
 		return
 	}
 
 	if index := strings.IndexByte(text, '#'); index != -1 && strings.TrimSpace(text[:index]) == "" {
-		mkline.xtype = 3
+		mkline.data = mkLineComment{}
 		return
 	}
 
 	if strings.TrimSpace(text) == "" {
-		mkline.xtype = 4
+		mkline.data = mkLineEmpty{}
 		return
 	}
 
 	if m, indent, directive, args := matchMkCond(text); m {
-		mkline.xtype = 5
 		mkline.data = mkLineConditional{indent, directive, args}
 		return
 	}
 
 	if m, indent, directive, includefile := MatchMkInclude(text); m {
-		mkline.xtype = 6
-		mkline.data = mkLineInclude{directive == "include", indent, includefile, ""}
+		mkline.data = mkLineInclude{directive == "include", false, indent, includefile, ""}
 		return
 	}
 
 	if m, indent, directive, includefile := match3(text, `^\.(\s*)(s?include)\s+<([^>]+)>\s*(?:#.*)?$`); m {
-		mkline.xtype = 7
-		mkline.data = mkLineInclude{directive == "include", indent, includefile, ""}
+		mkline.data = mkLineInclude{directive == "include", true, indent, includefile, ""}
 		return
 	}
 
 	if m, targets, whitespace, sources := match3(text, `^([^\s:]+(?:\s*[^\s:]+)*)(\s*):\s*([^#]*?)(?:\s*#.*)?$`); m {
-		mkline.xtype = 8
 		mkline.data = mkLineDependency{targets, sources}
 		if whitespace != "" {
-			line.Warn0("Space before colon in dependency line.")
+			line.Warnf("Space before colon in dependency line.")
 		}
 		return
 	}
@@ -143,21 +131,27 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 		return
 	}
 
-	line.Error0("Unknown Makefile line format.")
+	line.Errorf("Unknown Makefile line format.")
 	return mkline
 }
 
 func (mkline *MkLine) String() string {
 	return fmt.Sprintf("%s:%s", mkline.Line.Fname, mkline.Line.linenos())
 }
-func (mkline *MkLine) IsVarassign() bool        { return mkline.xtype == 1 }
-func (mkline *MkLine) IsShellcmd() bool         { return mkline.xtype == 2 }
-func (mkline *MkLine) IsComment() bool          { return mkline.xtype == 3 }
-func (mkline *MkLine) IsEmpty() bool            { return mkline.xtype == 4 }
-func (mkline *MkLine) IsCond() bool             { return mkline.xtype == 5 }
-func (mkline *MkLine) IsInclude() bool          { return mkline.xtype == 6 }
-func (mkline *MkLine) IsSysinclude() bool       { return mkline.xtype == 7 }
-func (mkline *MkLine) IsDependency() bool       { return mkline.xtype == 8 }
+func (mkline *MkLine) IsVarassign() bool { _, ok := mkline.data.(mkLineAssign); return ok }
+func (mkline *MkLine) IsShellcmd() bool  { _, ok := mkline.data.(mkLineShell); return ok }
+func (mkline *MkLine) IsComment() bool   { _, ok := mkline.data.(mkLineComment); return ok }
+func (mkline *MkLine) IsEmpty() bool     { _, ok := mkline.data.(mkLineEmpty); return ok }
+func (mkline *MkLine) IsCond() bool      { _, ok := mkline.data.(mkLineConditional); return ok }
+func (mkline *MkLine) IsInclude() bool {
+	incl, ok := mkline.data.(mkLineInclude)
+	return ok && !incl.sys
+}
+func (mkline *MkLine) IsSysinclude() bool {
+	incl, ok := mkline.data.(mkLineInclude)
+	return ok && incl.sys
+}
+func (mkline *MkLine) IsDependency() bool       { _, ok := mkline.data.(mkLineDependency); return ok }
 func (mkline *MkLine) Varname() string          { return mkline.data.(mkLineAssign).varname }
 func (mkline *MkLine) Varcanon() string         { return mkline.data.(mkLineAssign).varcanon }
 func (mkline *MkLine) Varparam() string         { return mkline.data.(mkLineAssign).varparam }
@@ -195,7 +189,7 @@ func (mkline *MkLine) Check() {
 
 	case mkline.IsComment():
 		if hasPrefix(mkline.Line.Text, "# url2pkg-marker") {
-			mkline.Line.Error0("This comment indicates unfinished work (url2pkg).")
+			mkline.Line.Errorf("This comment indicates unfinished work (url2pkg).")
 		}
 
 	case mkline.IsInclude():
@@ -221,8 +215,8 @@ func (mkline *MkLine) checkInclude() {
 
 	switch {
 	case hasSuffix(includefile, "/Makefile"):
-		mkline.Line.Error0("Other Makefiles must not be included directly.")
-		Explain4(
+		mkline.Line.Errorf("Other Makefiles must not be included directly.")
+		Explain(
 			"If you want to include portions of another Makefile, extract",
 			"the common parts and put them into a Makefile.common.  After",
 			"that, both this one and the other package should include the",
@@ -230,7 +224,7 @@ func (mkline *MkLine) checkInclude() {
 
 	case includefile == "../../mk/bsd.prefs.mk":
 		if path.Base(mkline.Line.Fname) == "buildlink3.mk" {
-			mkline.Note0("For efficiency reasons, please include bsd.fast.prefs.mk instead of bsd.prefs.mk.")
+			mkline.Notef("For efficiency reasons, please include bsd.fast.prefs.mk instead of bsd.prefs.mk.")
 		}
 		if G.Pkg != nil {
 			G.Pkg.setSeenBsdPrefsMk()
@@ -242,16 +236,16 @@ func (mkline *MkLine) checkInclude() {
 		}
 
 	case hasSuffix(includefile, "/x11-links/buildlink3.mk"):
-		mkline.Error1("%s must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.", includefile)
+		mkline.Errorf("%s must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.", includefile)
 
 	case hasSuffix(includefile, "/jpeg/buildlink3.mk"):
-		mkline.Error1("%s must not be included directly. Include \"../../mk/jpeg.buildlink3.mk\" instead.", includefile)
+		mkline.Errorf("%s must not be included directly. Include \"../../mk/jpeg.buildlink3.mk\" instead.", includefile)
 
 	case hasSuffix(includefile, "/intltool/buildlink3.mk"):
-		mkline.Warn0("Please write \"USE_TOOLS+= intltool\" instead of this line.")
+		mkline.Warnf("Please write \"USE_TOOLS+= intltool\" instead of this line.")
 
 	case hasSuffix(includefile, "/builtin.mk"):
-		mkline.Line.Error2("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includefile, path.Dir(includefile))
+		mkline.Line.Errorf("%s must not be included directly. Include \"%s/buildlink3.mk\" instead.", includefile, path.Dir(includefile))
 	}
 }
 
@@ -265,7 +259,7 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 		if indentation.Len() > 1 {
 			indentation.Pop()
 		} else {
-			mkline.Error1("Unmatched .%s.", directive)
+			mkline.Errorf("Unmatched .%s.", directive)
 		}
 	}
 
@@ -284,11 +278,11 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 	needsArgument := matches(directive, `^(?:if|ifdef|ifndef|elif|for|undef)$`)
 	if needsArgument != (args != "") {
 		if needsArgument {
-			mkline.Error1("\".%s\" requires arguments.", directive)
+			mkline.Errorf("\".%s\" requires arguments.", directive)
 		} else {
-			mkline.Error1("\".%s\" does not take arguments.", directive)
+			mkline.Errorf("\".%s\" does not take arguments.", directive)
 			if directive == "else" {
-				mkline.Note0("If you meant \"else if\", use \".elif\".")
+				mkline.Notef("If you meant \"else if\", use \".elif\".")
 			}
 		}
 
@@ -303,15 +297,15 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 		if m, vars, values := match2(args, `^(\S+(?:\s*\S+)*?)\s+in\s+(.*)$`); m {
 			for _, forvar := range splitOnSpace(vars) {
 				if !G.Infrastructure && hasPrefix(forvar, "_") {
-					mkline.Warn1("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", forvar)
+					mkline.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", forvar)
 				}
 
 				if matches(forvar, `^[_a-z][_a-z0-9]*$`) {
 					// Fine.
 				} else if matches(forvar, `[A-Z]`) {
-					mkline.Warn0(".for variable names should not contain uppercase letters.")
+					mkline.Warnf(".for variable names should not contain uppercase letters.")
 				} else {
-					mkline.Error1("Invalid variable name %q.", forvar)
+					mkline.Errorf("Invalid variable name %q.", forvar)
 				}
 
 				forVars[forvar] = true
@@ -338,7 +332,7 @@ func (mkline *MkLine) checkCond(forVars map[string]bool) {
 	} else if directive == "undef" && args != "" {
 		for _, uvar := range splitOnSpace(args) {
 			if forVars[uvar] {
-				mkline.Note0("Using \".undef\" after a \".for\" loop is unnecessary.")
+				mkline.Notef("Using \".undef\" after a \".for\" loop is unnecessary.")
 			}
 		}
 	}
@@ -378,8 +372,8 @@ func (mkline *MkLine) checkDependencyRule(allowedTargets map[string]bool) {
 			// TODO: Check for spelling mistakes.
 
 		} else if !allowedTargets[target] {
-			mkline.Warn1("Unusual target %q.", target)
-			Explain3(
+			mkline.Warnf("Unusual target %q.", target)
+			Explain(
 				"If you want to define your own targets, you can \"declare\"",
 				"them by inserting a \".PHONY: my-target\" line before this line.  This",
 				"will tell make(1) to not interpret this target's name as a filename.")
@@ -395,7 +389,7 @@ func (mkline *MkLine) Tokenize(s string) []*MkToken {
 	p := NewMkParser(mkline.Line, s, true)
 	tokens := p.MkTokens()
 	if p.Rest() != "" {
-		mkline.Warn1("Pkglint parse error in MkLine.Tokenize at %q.", p.Rest())
+		mkline.Warnf("Pkglint parse error in MkLine.Tokenize at %q.", p.Rest())
 	}
 	return tokens
 }
@@ -453,7 +447,7 @@ func (mkline *MkLine) checkVarassignDefPermissions() {
 			mkline.Line.Warnf("The variable %s may not be %s by any package.",
 				varname, needed.HumanString())
 		}
-		Explain4(
+		Explain(
 			"The allowed actions for a variable are determined based on the file",
 			"name in which the variable is used or defined.  The exact rules are",
 			"hard-coded into pkglint.  If they seem to be incorrect, please ask",
@@ -477,7 +471,7 @@ func (mkline *MkLine) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 		!varIsUsed(varname) &&
 		!(G.Mk != nil && G.Mk.forVars[varname]) &&
 		!containsVarRef(varname) {
-		mkline.Warn1("%s is used but not defined. Spelling mistake?", varname)
+		mkline.Warnf("%s is used but not defined. Spelling mistake?", varname)
 	}
 
 	mkline.CheckVarusePermissions(varname, vartype, vuc)
@@ -497,7 +491,7 @@ func (mkline *MkLine) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 	}
 
 	if G.globalData.UserDefinedVars[varname] != nil && !G.globalData.SystemBuildDefs[varname] && !G.Mk.buildDefs[varname] {
-		mkline.Warn1("The user-defined variable %s is used but not added to BUILD_DEFS.", varname)
+		mkline.Warnf("The user-defined variable %s is used but not added to BUILD_DEFS.", varname)
 		Explain(
 			"When a pkgsrc package is built, many things can be configured by the",
 			"pkgsrc user in the mk.conf file.  All these configurations should be",
@@ -553,7 +547,7 @@ func (mkline *MkLine) CheckVarusePermissions(varname string, vartype *Vartype, v
 		done = tool.Predefined && (G.Mk == nil || G.Mk.SeenBsdPrefsMk || G.Pkg == nil || G.Pkg.SeenBsdPrefsMk)
 
 		if !done && G.Pkg != nil && !G.Pkg.SeenBsdPrefsMk && G.Mk != nil && !G.Mk.SeenBsdPrefsMk {
-			mkline.Warn1("To use the tool %q at load time, bsd.prefs.mk has to be included before.", varname)
+			mkline.Warnf("To use the tool %q at load time, bsd.prefs.mk has to be included before.", varname)
 			done = true
 		}
 
@@ -563,14 +557,14 @@ func (mkline *MkLine) CheckVarusePermissions(varname string, vartype *Vartype, v
 				done = true
 			}
 			if defined && !usable {
-				mkline.Warn1("To use the tool %q at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.", varname)
+				mkline.Warnf("To use the tool %q at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.", varname)
 				done = true
 			}
 		}
 	}
 
 	if !done && isLoadTime && !isIndirect {
-		mkline.Warn1("%s should not be evaluated at load time.", varname)
+		mkline.Warnf("%s should not be evaluated at load time.", varname)
 		Explain(
 			"Many variables, especially lists of something, get their values",
 			"incrementally.  Therefore it is generally unsafe to rely on their",
@@ -585,8 +579,8 @@ func (mkline *MkLine) CheckVarusePermissions(varname string, vartype *Vartype, v
 	}
 
 	if !done && isLoadTime && isIndirect {
-		mkline.Warn1("%s should not be evaluated indirectly at load time.", varname)
-		Explain4(
+		mkline.Warnf("%s should not be evaluated indirectly at load time.", varname)
+		Explain(
 			"The variable on the left-hand side may be evaluated at load time,",
 			"but the variable on the right-hand side may not.  Because of the",
 			"assignment in this line, the variable might be used indirectly",
@@ -601,12 +595,12 @@ func (mkline *MkLine) CheckVarusePermissions(varname string, vartype *Vartype, v
 		}
 		alternativeFiles := vartype.AllowedFiles(needed)
 		if alternativeFiles != "" {
-			mkline.Warn2("%s may not be used in this file; it would be ok in %s.",
+			mkline.Warnf("%s may not be used in this file; it would be ok in %s.",
 				varname, alternativeFiles)
 		} else {
-			mkline.Warn1("%s may not be used in any file; it is a write-only variable.", varname)
+			mkline.Warnf("%s may not be used in any file; it is a write-only variable.", varname)
 		}
-		Explain4(
+		Explain(
 			"The allowed actions for a variable are determined based on the file",
 			"name in which the variable is used or defined.  The exact rules are",
 			"hard-coded into pkglint.  If they seem to be incorrect, please ask",
@@ -615,7 +609,7 @@ func (mkline *MkLine) CheckVarusePermissions(varname string, vartype *Vartype, v
 }
 
 func (mkline *MkLine) WarnVaruseLocalbase() {
-	mkline.Warn0("The LOCALBASE variable should not be used by packages.")
+	mkline.Warnf("The LOCALBASE variable should not be used by packages.")
 	Explain(
 		// from jlam via private mail.
 		"Currently, LOCALBASE is typically used in these cases:",
@@ -654,8 +648,8 @@ func (mkline *MkLine) checkVaruseFor(varname string, vartype *Vartype, needsQuot
 		vartype != nil &&
 		vartype.kindOfList != lkSpace &&
 		needsQuoting != nqDoesntMatter {
-		mkline.Warn1("The variable %s should not be used in .for loops.", varname)
-		Explain4(
+		mkline.Warnf("The variable %s should not be used in .for loops.", varname)
+		Explain(
 			"The .for loop splits its argument at sequences of white-space, as",
 			"opposed to all other places in make(1), which act like the shell.",
 			"Therefore only variables that are split at whitespace or don't",
@@ -682,7 +676,7 @@ func (mkline *MkLine) CheckVaruseShellword(varname string, vartype *Vartype, vuc
 	}
 
 	if mod == ":M*:Q" && !needMstar {
-		mkline.Line.Note0("The :M* modifier is not needed here.")
+		mkline.Line.Notef("The :M* modifier is not needed here.")
 
 	} else if needsQuoting == nqYes {
 		correctMod := strippedMod + ifelseStr(needMstar, ":M*:Q", ":Q")
@@ -715,7 +709,7 @@ func (mkline *MkLine) CheckVaruseShellword(varname string, vartype *Vartype, vuc
 				mkline.Line.Warnf("Please use ${%s%s} instead of ${%s%s} and make sure"+
 					" the variable appears outside of any quoting characters.", varname, correctMod, varname, mod)
 			}
-			Explain1(
+			Explain(
 				"See the pkgsrc guide, section \"quoting guideline\", for details.")
 
 		} else if vuc.quoting != vucQuotPlain {
@@ -738,11 +732,11 @@ func (mkline *MkLine) CheckVaruseShellword(varname string, vartype *Vartype, vuc
 		needExplain := false
 		if needsQuoting == nqNo && !mkline.Line.AutofixReplace(bad, good) {
 			needExplain = true
-			mkline.Warn1("The :Q operator should not be used for ${%s} here.", varname)
+			mkline.Warnf("The :Q operator should not be used for ${%s} here.", varname)
 		}
 		if needsQuoting == nqDoesntMatter && !mkline.Line.AutofixReplace(bad, good) {
 			needExplain = true
-			mkline.Line.Note1("The :Q operator isn't necessary for ${%s} here.", varname)
+			mkline.Line.Notef("The :Q operator isn't necessary for ${%s} here.", varname)
 		}
 		if needExplain {
 			Explain(
@@ -770,7 +764,7 @@ func (mkline *MkLine) checkVarassignPythonVersions(varname, value string) {
 	for i, strversion := range strversions {
 		iver, err := strconv.Atoi(strversion)
 		if err != nil || !(iver > 0) {
-			mkline.Error1("All values for %s must be positive integers.", varname)
+			mkline.Errorf("All values for %s must be positive integers.", varname)
 			return
 		}
 		intversions[i] = iver
@@ -778,8 +772,8 @@ func (mkline *MkLine) checkVarassignPythonVersions(varname, value string) {
 
 	for i, ver := range intversions {
 		if i > 0 && ver >= intversions[i-1] {
-			mkline.Warn1("The values for %s should be in decreasing order.", varname)
-			Explain2(
+			mkline.Warnf("The values for %s should be in decreasing order.", varname)
+			Explain(
 				"If they aren't, it may be possible that needless versions of",
 				"packages are installed.")
 		}
@@ -816,7 +810,7 @@ func (mkline *MkLine) checkVarassign() {
 		} else if deprecated := G.globalData.Deprecated; deprecated[varname] != "" || deprecated[varcanon] != "" {
 			// Ok
 		} else {
-			mkline.Warn1("%s is defined but not used. Spelling mistake?", varname)
+			mkline.Warnf("%s is defined but not used. Spelling mistake?", varname)
 		}
 	}
 
@@ -852,9 +846,9 @@ func (mkline *MkLine) checkVarassign() {
 	}
 
 	if fix := G.globalData.Deprecated[varname]; fix != "" {
-		mkline.Warn2("Definition of %s is deprecated. %s", varname, fix)
+		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
 	} else if fix := G.globalData.Deprecated[varcanon]; fix != "" {
-		mkline.Warn2("Definition of %s is deprecated. %s", varname, fix)
+		mkline.Warnf("Definition of %s is deprecated. %s", varname, fix)
 	}
 
 	mkline.checkVarassignPlistComment(varname, value)
@@ -931,11 +925,11 @@ func (mkline *MkLine) checkVarassignSpecific() {
 	value := mkline.Value()
 
 	if contains(value, "/etc/rc.d") {
-		mkline.Warn0("Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.")
+		mkline.Warnf("Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.")
 	}
 
 	if hasPrefix(varname, "_") && !G.Infrastructure {
-		mkline.Warn1("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
+		mkline.Warnf("Variable names starting with an underscore (%s) are reserved for internal pkgsrc use.", varname)
 	}
 
 	if varname == "PERL5_PACKLIST" && G.Pkg != nil {
@@ -944,14 +938,14 @@ func (mkline *MkLine) checkVarassignSpecific() {
 
 			ucvalue, ucguess := strings.ToUpper(value), strings.ToUpper(guess)
 			if ucvalue != ucguess && ucvalue != "${PERL5_SITEARCH}/"+ucguess {
-				mkline.Warn1("Unusual value for PERL5_PACKLIST -- %q expected.", guess)
+				mkline.Warnf("Unusual value for PERL5_PACKLIST -- %q expected.", guess)
 			}
 		}
 	}
 
 	if varname == "CONFIGURE_ARGS" && contains(value, "=${PREFIX}/share/kde") {
-		mkline.Note0("Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.")
-		Explain3(
+		mkline.Notef("Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.")
+		Explain(
 			"That file does many things automatically and consistently that this",
 			"package also does.  When using kde3.mk, you can probably also leave",
 			"out some explicit dependencies.")
@@ -962,7 +956,7 @@ func (mkline *MkLine) checkVarassignSpecific() {
 	}
 
 	if mkline.VarassignComment() == "# defined" && !hasSuffix(varname, "_MK") && !hasSuffix(varname, "_COMMON") {
-		mkline.Note0("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".")
+		mkline.Notef("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".")
 		Explain(
 			"The value #defined says something about the state of the variable,",
 			"but not what that _means_.  In some cases a variable that is defined",
@@ -978,11 +972,11 @@ func (mkline *MkLine) checkVarassignSpecific() {
 	}
 
 	if hasPrefix(varname, "SITES_") {
-		mkline.Warn0("SITES_* is deprecated. Please use SITES.* instead.")
+		mkline.Warnf("SITES_* is deprecated. Please use SITES.* instead.")
 	}
 
 	if varname == "PKG_SKIP_REASON" && G.Mk.indentation.DependsOn("OPSYS") {
-		mkline.Note0("Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.")
+		mkline.Notef("Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.")
 	}
 }
 
@@ -993,7 +987,7 @@ func (mkline *MkLine) checkVarassignBsdPrefs() {
 			return
 		}
 
-		mkline.Warn0("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
+		mkline.Warnf("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".")
 		Explain(
 			"The ?= operator is used to provide a default value to a variable.",
 			"In pkgsrc, many variables can be set by the pkgsrc user in the",
@@ -1010,7 +1004,7 @@ func (mkline *MkLine) checkVarassignBsdPrefs() {
 func (mkline *MkLine) checkVarassignPlistComment(varname, value string) {
 	if false && // This is currently neither correct nor helpful
 		contains(value, "@comment") && !matches(value, `="@comment "`) {
-		mkline.Warn1("Please don't use @comment in %s.", varname)
+		mkline.Warnf("Please don't use @comment in %s.", varname)
 		Explain(
 			"If you are defining a PLIST conditional here, use one of the",
 			"following patterns instead:",
@@ -1048,7 +1042,7 @@ func (mkline *MkLine) CheckVartype(varname string, op MkOperator, value, comment
 
 	if op == opAssignAppend {
 		if vartype != nil && !vartype.MayBeAppendedTo() {
-			mkline.Warn0("The \"+=\" operator should only be used with lists.")
+			mkline.Warnf("The \"+=\" operator should only be used with lists.")
 		}
 	}
 
@@ -1111,7 +1105,7 @@ func (mkline *MkLine) checkText(text string) {
 	}
 
 	if contains(text, "${WRKSRC}/..") {
-		mkline.Warn0("Building the package should take place entirely inside ${WRKSRC}, not \"${WRKSRC}/..\".")
+		mkline.Warnf("Building the package should take place entirely inside ${WRKSRC}, not \"${WRKSRC}/..\".")
 		Explain(
 			"WRKSRC should be defined so that there is no need to do anything",
 			"outside of this directory.",
@@ -1128,7 +1122,7 @@ func (mkline *MkLine) checkText(text string) {
 
 	// Note: A simple -R is not detected, as the rate of false positives is too high.
 	if m, flag := match1(text, `\b(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R)\b`); m {
-		mkline.Warn1("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
+		mkline.Warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
 	}
 
 	rest := text
@@ -1147,7 +1141,7 @@ func (mkline *MkLine) checkText(text string) {
 			instead = G.globalData.Deprecated[varcanon]
 		}
 		if instead != "" {
-			mkline.Warn2("Use of %q is deprecated. %s", varname, instead)
+			mkline.Warnf("Use of %q is deprecated. %s", varname, instead)
 		}
 	}
 }
@@ -1160,7 +1154,7 @@ func (mkline *MkLine) CheckCond() {
 	p := NewMkParser(mkline.Line, mkline.Args(), false)
 	cond := p.MkCond()
 	if !p.EOF() {
-		mkline.Warn1("Invalid conditional %q.", mkline.Args())
+		mkline.Warnf("Invalid conditional %q.", mkline.Args())
 		return
 	}
 
@@ -1168,7 +1162,7 @@ func (mkline *MkLine) CheckCond() {
 		varuse := node.args[0].(MkVarUse)
 		varname := varuse.varname
 		if matches(varname, `^\$.*:[MN]`) {
-			mkline.Warn0("The empty() function takes a variable name as parameter, not a variable expression.")
+			mkline.Warnf("The empty() function takes a variable name as parameter, not a variable expression.")
 			Explain(
 				"Instead of empty(${VARNAME:Mpattern}), you should write either",
 				"of the following:",
@@ -1195,21 +1189,25 @@ func (mkline *MkLine) CheckCond() {
 		varmods := varuse.modifiers
 		value := node.args[2].(string)
 		if len(varmods) == 0 {
-			mkline.CheckVartype(varname, opUse, value, "")
-			if varname == "PKGSRC_COMPILER" {
-				op := node.args[1].(string)
-				mkline.Line.Warnf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", ifelseStr(op == "==", "M", "N"), value, op)
-				Explain(
-					"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache",
-					"distcc clang\".  Therefore, comparing it using == or != leads to",
-					"wrong results in these cases.")
-			}
+			mkline.checkCompareVarStr(varname, node.args[1].(string), value)
 		} else if len(varmods) == 1 && matches(varmods[0], `^[MN]`) && value != "" {
 			mkline.CheckVartype(varname, opUseMatch, value, "")
 		}
 	})
 
 	mkline.rememberUsedVariables(cond)
+}
+
+func (mkline *MkLine) checkCompareVarStr(varname, op, value string) {
+	mkline.CheckVartype(varname, opUseCompare, value, "")
+
+	if varname == "PKGSRC_COMPILER" {
+		mkline.Line.Warnf("Use ${PKGSRC_COMPILER:%s%s} instead of the %s operator.", ifelseStr(op == "==", "M", "N"), value, op)
+		Explain(
+			"The PKGSRC_COMPILER can be a list of chained compilers, e.g. \"ccache",
+			"distcc clang\".  Therefore, comparing it using == or != leads to",
+			"wrong results in these cases.")
+	}
 }
 
 func (mkline *MkLine) rememberUsedVariables(cond *Tree) {
@@ -1245,12 +1243,12 @@ func (mkline *MkLine) CheckValidCharactersInValue(reValid RegexPattern) {
 		for _, c := range rest {
 			uni += fmt.Sprintf(" %U", c)
 		}
-		mkline.Warn2("%s contains invalid characters (%s).", mkline.Varname(), uni[1:])
+		mkline.Warnf("%s contains invalid characters (%s).", mkline.Varname(), uni[1:])
 	}
 }
 
 func (mkline *MkLine) explainRelativeDirs() {
-	Explain3(
+	Explain(
 		"Directories in the form \"../../category/package\" make it easier to",
 		"move a package around in pkgsrc, for example from pkgsrc-wip to the",
 		"main pkgsrc repository.")
@@ -1262,12 +1260,12 @@ func (mkline *MkLine) CheckRelativePkgdir(pkgdir string) {
 
 	if m, otherpkgpath := match1(pkgdir, `^(?:\./)?\.\./\.\./([^/]+/[^/]+)$`); m {
 		if !fileExists(G.globalData.Pkgsrcdir + "/" + otherpkgpath + "/Makefile") {
-			mkline.Error1("There is no package in %q.", otherpkgpath)
+			mkline.Errorf("There is no package in %q.", otherpkgpath)
 		}
 
 	} else if !containsVarRef(pkgdir) {
-		mkline.Warn1("%q is not a valid relative package directory.", pkgdir)
-		Explain3(
+		mkline.Warnf("%q is not a valid relative package directory.", pkgdir)
+		Explain(
 			"A relative pathname always starts with \"../../\", followed",
 			"by a category, a slash and a the directory name of the package.",
 			"For example, \"../../misc/screen\" is a valid relative pathname.")
@@ -1276,7 +1274,7 @@ func (mkline *MkLine) CheckRelativePkgdir(pkgdir string) {
 
 func (mkline *MkLine) CheckRelativePath(path string, mustExist bool) {
 	if !G.Wip && contains(path, "/wip/") {
-		mkline.Line.Error0("A main pkgsrc package must not depend on a pkgsrc-wip package.")
+		mkline.Line.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
 	resolvedPath := resolveVarsInRelativePath(path, true)
@@ -1290,7 +1288,7 @@ func (mkline *MkLine) CheckRelativePath(path string, mustExist bool) {
 	}
 	if _, err := os.Stat(abs); err != nil {
 		if mustExist {
-			mkline.Error1("%q does not exist.", resolvedPath)
+			mkline.Errorf("%q does not exist.", resolvedPath)
 		}
 		return
 	}
@@ -1299,7 +1297,7 @@ func (mkline *MkLine) CheckRelativePath(path string, mustExist bool) {
 		!matches(path, `^\.\./\.\./[^/]+/[^/]`) &&
 		!(G.CurPkgsrcdir == ".." && hasPrefix(path, "../mk/")) && // For category Makefiles.
 		!hasPrefix(path, "../../mk/") {
-		mkline.Warn1("Invalid relative path %q.", path)
+		mkline.Warnf("Invalid relative path %q.", path)
 	}
 }
 
@@ -1749,4 +1747,8 @@ func (ind *Indentation) Varnames() string {
 		}
 	}
 	return varnames
+}
+
+func MatchMkInclude(text string) (m bool, indentation, directive, filename string) {
+	return match3(text, `^\.(\s*)(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`)
 }
