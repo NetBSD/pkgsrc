@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.61 2016/04/11 16:15:22 ryoon Exp $
+$NetBSD: distinfo,v 1.62 2016/12/04 04:11:32 ryoon Exp $
 
-SHA1 (icu4c-57_1-src.tgz) = ca5f5cc584f45e87bf56bf8b7f9244d12a5ada67
-RMD160 (icu4c-57_1-src.tgz) = a2b72756d7dddb0f459074dfc943fc9383d82d9b
-SHA512 (icu4c-57_1-src.tgz) = a3c701e9c81622db545bcf93f315c7b13159750f43f009d0aec59ceae3a8e1ccb751826d4b8a7387aca47f38bff2a85816b1a123b07d2bf731558c7b66e47b8a
-Size (icu4c-57_1-src.tgz) = 22360664 bytes
-SHA1 (patch-aa) = fd5c513e75ca17a46be4ed010455bda63731afff
+SHA1 (icu4c-58_1-src.tgz) = 0739f45f985e4dfd0fcda978aecbb0de4d7ddaa6
+RMD160 (icu4c-58_1-src.tgz) = f7b2401c18d5b786890a0cbc38fefdf2c3d30570
+SHA512 (icu4c-58_1-src.tgz) = 59b2a76834192a35125fda326587e613ef4486152cf0278c6f22568d4ae02c4b2d897efcea2654ef2b11bd1c3154aecd38cb68a70f69430736f343689f94c155
+Size (icu4c-58_1-src.tgz) = 23366443 bytes
+SHA1 (patch-aa) = 67440d3af9b62b8c0be258c490255ba17f778ab4
 SHA1 (patch-ab) = 32f0e4c241535e37e4cad9b871ed3d36b4184199
 SHA1 (patch-ac) = e7cee161315321d2580074054d87714b55319886
 SHA1 (patch-acinclude.m4) = f7de1a16aad0ca77c4bbc457ba76b6171199ce09
@@ -12,6 +12,7 @@ SHA1 (patch-ad) = c2a9469bf896b5f0702d5795c3b1c2b394893663
 SHA1 (patch-af) = 07421b669780e5eea5dc455cc39ca9737c0f728a
 SHA1 (patch-common_putil.cpp) = 3058a542bcb2fdfa34b36acf389570990acd0da5
 SHA1 (patch-common_putilimp.h) = a68faa97c2bffeecaca1586e26f5bbe48e71b262
+SHA1 (patch-common_ulist.c) = 8dd2c8152f99d762aab7e9d48293de3ccfb711cf
 SHA1 (patch-common_umutex.h) = 096d3e15ef7b84533456af4570ed70747a4ef70c
 SHA1 (patch-common_unicode_platform.h) = 8b7b8bcf6f5185225a1ca516ac212a495f7b47e8
 SHA1 (patch-common_uposixdefs.h) = 02dedd10282961dec66673069796122b447dac33
@@ -20,5 +21,9 @@ SHA1 (patch-config_mh-scoosr5) = 47703dcc184f58c0382da3225f849424ab74d472
 SHA1 (patch-config_mh-solaris-gcc) = 19f76c27bef22cc3b572e4b67a526d5f1aa077bc
 SHA1 (patch-configure) = 429c0b3eb3f7d0a8cf3d01a9bc359132eebe8cf4
 SHA1 (patch-configure.ac) = b0291cf02351cbad9b0c7340baea9eb81cabb158
+SHA1 (patch-i18n_digitlst.cpp) = 57decf47ef778b5931b3ab247ceb5e8c95344956
+SHA1 (patch-i18n_ucol__res.cpp) = 5e13b689941cf07bee997544aca19a6d6ce64511
+SHA1 (patch-test_intltest_apicoll.cpp) = e55d7cd13d2bb9f6b08f2c9c59ae475b875f110f
+SHA1 (patch-test_intltest_apicoll.h) = e2a93be1da65e08abe3e6b28bd8aee33307a7c3e
 SHA1 (patch-tools-toolutil-pkg_genc.c) = b5a9eb679908d9f579ff095c5389ec1aa8df8e1e
 SHA1 (patch-tools_pkgdata_pkgdata.cpp) = 1c87fcc511f0e6cedbaf01c5164e522c33f19458

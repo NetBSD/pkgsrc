@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.17 2014/10/07 16:09:53 adam Exp $
+$NetBSD: patch-aa,v 1.18 2016/12/04 04:11:33 ryoon Exp $
 
 Add linker flags for finding the libraries to pkg-config files.
 Avoid using programs which need elevated privileges during the build.
 
---- Makefile.in.orig	2014-10-03 16:18:36.000000000 +0000
+--- Makefile.in.orig	2016-09-09 21:28:18.000000000 +0000
 +++ Makefile.in
 @@ -272,7 +272,7 @@ config/icu-i18n.pc: config/icu.pc Makefi
  	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Internationalization library" >> $@
@@ -22,17 +22,8 @@ Avoid using programs which need elevated privileges during the build.
 +	@echo "Libs:" '-L$${libdir}' "${ICULIBS_IO}" >> $@
  	@echo $@ updated.
  
- config/icu-le.pc: config/icu.pc Makefile icudefs.mk
-@@ -288,7 +288,7 @@ config/icu-le.pc: config/icu.pc Makefile
- 	@echo "Description: $(PACKAGE_ICU_DESCRIPTION): Layout library" >> $@
- 	@echo "Name: $(PACKAGE)-le" >> $@
- 	@echo "Requires: icu-uc" >> $@
--	@echo "Libs:" "${ICULIBS_LE}" >> $@
-+	@echo "Libs:" '-L$${libdir}' "${ICULIBS_LE}" >> $@
- 	@echo $@ updated.
- 
  ICULEHB_LIBS=@ICULEHB_LIBS@
-@@ -307,7 +307,7 @@ ifneq ($(ICULEHB_LIBS),)
+@@ -299,7 +299,7 @@ ifneq ($(ICULEHB_LIBS),)
  else
  	@echo "Requires: icu-le" >> $@
  endif
@@ -41,12 +32,3 @@ Avoid using programs which need elevated privileges during the build.
  	@echo $@ updated.
  
  
-@@ -329,7 +329,7 @@ $(top_builddir)/config/pkgdataMakefile:
- 
- $(top_builddir)/config/icu-config: $(top_builddir)/Makefile $(top_srcdir)/config/icu-config-top $(top_srcdir)/config/icu-config-bottom $(top_builddir)/config/Makefile.inc @platform_make_fragment@ $(top_srcdir)/config/make2sh.sed
- 	-$(RMV) $@
--	$(INSTALL_SCRIPT) $(top_srcdir)/config/icu-config-top $@
-+	cp -f $(top_srcdir)/config/icu-config-top $@
- 	chmod u+w $@
- 	@echo "# Following from @platform_make_fragment@" >> $@
- 	LC_ALL=C sed -f $(top_srcdir)/config/make2sh.sed < $(top_builddir)/config/Makefile.inc | grep -v '#M#' | uniq >> $@
