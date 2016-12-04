@@ -56,7 +56,7 @@ func (ck *PatchChecker) Check() {
 			patchedFile := ck.exp.m[1]
 			if ck.exp.AdvanceIfMatches(rePatchUniFileDel) {
 				ck.checkBeginDiff(line, patchedFiles)
-				ck.exp.PreviousLine().Warn0("Unified diff headers should be first ---, then +++.")
+				ck.exp.PreviousLine().Warnf("Unified diff headers should be first ---, then +++.")
 				ck.checkUnifiedDiff(patchedFile)
 				patchedFiles++
 				continue
@@ -68,7 +68,7 @@ func (ck *PatchChecker) Check() {
 		if ck.exp.AdvanceIfMatches(`^\*\*\*\s(\S+)(.*)$`) {
 			if ck.exp.AdvanceIfMatches(`^---\s(\S+)(.*)$`) {
 				ck.checkBeginDiff(line, patchedFiles)
-				line.Warn0("Please use unified diffs (diff -u) for patches.")
+				line.Warnf("Please use unified diffs (diff -u) for patches.")
 				return
 			}
 
@@ -85,7 +85,7 @@ func (ck *PatchChecker) Check() {
 	if patchedFiles > 1 {
 		NewLineWhole(ck.lines[0].Fname).Warnf("Contains patches for %d files, should be only one.", patchedFiles)
 	} else if patchedFiles == 0 {
-		NewLineWhole(ck.lines[0].Fname).Error0("Contains no patch.")
+		NewLineWhole(ck.lines[0].Fname).Errorf("Contains no patch.")
 	}
 
 	ChecklinesTrailingEmptyLines(ck.lines)
@@ -133,19 +133,19 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 			case hasPrefix(text, "\\"):
 				// \ No newline at end of file
 			default:
-				line.Error0("Invalid line in unified patch hunk")
+				line.Errorf("Invalid line in unified patch hunk")
 				return
 			}
 		}
 	}
 	if !hasHunks {
-		ck.exp.CurrentLine().Error1("No patch hunks for %q.", patchedFile)
+		ck.exp.CurrentLine().Errorf("No patch hunks for %q.", patchedFile)
 	}
 	if !ck.exp.EOF() {
 		line := ck.exp.CurrentLine()
 		if !ck.isEmptyLine(line.Text) && !matches(line.Text, rePatchUniFileDel) {
-			line.Warn0("Empty line or end of file expected.")
-			Explain3(
+			line.Warnf("Empty line or end of file expected.")
+			Explain(
 				"This empty line makes the end of the patch clearly visible.",
 				"Otherwise the reader would have to count lines to see where",
 				"the patch ends.")
@@ -159,7 +159,7 @@ func (ck *PatchChecker) checkBeginDiff(line *Line, patchedFiles int) {
 	}
 
 	if !ck.seenDocumentation && patchedFiles == 0 {
-		line.Error0("Each patch must be documented.")
+		line.Errorf("Each patch must be documented.")
 		Explain(
 			"Pkgsrc tries to have as few patches as possible.  Therefore, each",
 			"patch must document why it is necessary.  Typical reasons are",
@@ -175,7 +175,7 @@ func (ck *PatchChecker) checkBeginDiff(line *Line, patchedFiles int) {
 	}
 	if G.opts.WarnSpace && !ck.previousLineEmpty {
 		if !line.AutofixInsertBefore("") {
-			line.Note0("Empty line expected.")
+			line.Notef("Empty line expected.")
 		}
 	}
 }
@@ -209,8 +209,8 @@ func (ck *PatchChecker) checklineAdded(addedText string, patchedFileType FileTyp
 		checklineSourceAbsolutePathname(line, addedText)
 	case ftConfigure:
 		if hasSuffix(addedText, ": Avoid regenerating within pkgsrc") {
-			line.Error0("This code must not be included in patches.")
-			Explain4(
+			line.Errorf("This code must not be included in patches.")
+			Explain(
 				"It is generated automatically by pkgsrc after the patch phase.",
 				"",
 				"For more details, look for \"configure-scripts-override\" in",
@@ -229,8 +229,8 @@ func (ck *PatchChecker) checktextUniHunkCr() {
 	line := ck.exp.PreviousLine()
 	if hasSuffix(line.Text, "\r") {
 		if !line.AutofixReplace("\r\n", "\n") {
-			line.Error0("The hunk header must not end with a CR character.")
-			Explain1(
+			line.Errorf("The hunk header must not end with a CR character.")
+			Explain(
 				"The MacOS X patch utility cannot handle these.")
 		}
 	}
@@ -242,9 +242,9 @@ func (ck *PatchChecker) checktextRcsid(text string) {
 	}
 	if m, tagname := match1(text, `\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|NetBSD)(?::[^\$]*)?\$`); m {
 		if matches(text, rePatchUniHunk) {
-			ck.exp.PreviousLine().Warn1("Found RCS tag \"$%s$\". Please remove it.", tagname)
+			ck.exp.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it.", tagname)
 		} else {
-			ck.exp.PreviousLine().Warn1("Found RCS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
+			ck.exp.PreviousLine().Warnf("Found RCS tag \"$%s$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".", tagname)
 		}
 	}
 }
@@ -329,7 +329,7 @@ func checkwordAbsolutePathname(line *Line, word string) {
 		// Probably a sed(1) command
 	case matches(word, `^/(?:[a-z]|\$[({])`):
 		// Absolute paths probably start with a lowercase letter.
-		line.Warn1("Found absolute pathname: %s", word)
+		line.Warnf("Found absolute pathname: %s", word)
 		Explain(
 			"Absolute pathnames are often an indicator for unportable code.  As",
 			"pkgsrc aims to be a portable system, absolute pathnames should be",

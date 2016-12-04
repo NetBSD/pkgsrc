@@ -90,7 +90,7 @@ func ChecklinesDescr(lines []*Line) {
 		line.CheckTrailingWhitespace()
 		line.CheckValidCharacters(`[\t -~]`)
 		if contains(line.Text, "${") {
-			line.Note0("Variables are not expanded in the DESCR file.")
+			line.Notef("Variables are not expanded in the DESCR file.")
 		}
 	}
 	ChecklinesTrailingEmptyLines(lines)
@@ -99,7 +99,7 @@ func ChecklinesDescr(lines []*Line) {
 		line := lines[maxlines]
 
 		line.Warnf("File too long (should be no more than %d lines).", maxlines)
-		Explain3(
+		Explain(
 			"The DESCR file should fit on a traditional terminal of 80x25",
 			"characters.  It is also intended to give a _brief_ summary about",
 			"the package's contents.")
@@ -114,7 +114,7 @@ func ChecklinesMessage(lines []*Line) {
 	}
 
 	explainMessage := func() {
-		Explain4(
+		Explain(
 			"A MESSAGE file should consist of a header line, having 75 \"=\"",
 			"characters, followed by a line containing only the RCS Id, then an",
 			"empty line, your text and finally the footer line, which is the",
@@ -123,14 +123,14 @@ func ChecklinesMessage(lines []*Line) {
 
 	if len(lines) < 3 {
 		lastLine := lines[len(lines)-1]
-		lastLine.Warn0("File too short.")
+		lastLine.Warnf("File too short.")
 		explainMessage()
 		return
 	}
 
 	hline := strings.Repeat("=", 75)
 	if line := lines[0]; line.Text != hline {
-		line.Warn0("Expected a line of exactly 75 \"=\" characters.")
+		line.Warnf("Expected a line of exactly 75 \"=\" characters.")
 		explainMessage()
 	}
 	lines[1].CheckRcsid(``, "")
@@ -140,7 +140,7 @@ func ChecklinesMessage(lines []*Line) {
 		line.CheckValidCharacters(`[\t -~]`)
 	}
 	if lastLine := lines[len(lines)-1]; lastLine.Text != hline {
-		lastLine.Warn0("Expected a line of exactly 75 \"=\" characters.")
+		lastLine.Warnf("Expected a line of exactly 75 \"=\" characters.")
 		explainMessage()
 	}
 	ChecklinesTrailingEmptyLines(lines)
@@ -168,7 +168,7 @@ func Checkfile(fname string) {
 	basename := path.Base(fname)
 	if hasPrefix(basename, "work") || hasSuffix(basename, "~") || hasSuffix(basename, ".orig") || hasSuffix(basename, ".rej") {
 		if G.opts.Import {
-			NewLineWhole(fname).Error0("Must be cleaned up before committing the package.")
+			NewLineWhole(fname).Errorf("Must be cleaned up before committing the package.")
 		}
 		return
 	}
@@ -181,8 +181,8 @@ func Checkfile(fname string) {
 
 	if st.Mode().IsRegular() && st.Mode().Perm()&0111 != 0 && !isCommitted(fname) {
 		line := NewLine(fname, 0, "", nil)
-		line.Warn0("Should not be executable.")
-		Explain4(
+		line.Warnf("Should not be executable.")
+		Explain(
 			"No package file should ever be executable.  Even the INSTALL and",
 			"DEINSTALL scripts are usually not usable in the form they have in",
 			"the package, as the pathnames get adjusted during installation.",
@@ -197,16 +197,16 @@ func Checkfile(fname string) {
 		case matches(fname, `(?:^|/)files/[^/]*$`):
 			// Ok
 		case !isEmptyDir(fname):
-			NewLineWhole(fname).Warn0("Unknown directory name.")
+			NewLineWhole(fname).Warnf("Unknown directory name.")
 		}
 
 	case st.Mode()&os.ModeSymlink != 0:
 		if !hasPrefix(basename, "work") {
-			NewLineWhole(fname).Warn0("Unknown symlink name.")
+			NewLineWhole(fname).Warnf("Unknown symlink name.")
 		}
 
 	case !st.Mode().IsRegular():
-		NewLineWhole(fname).Error0("Only files and directories are allowed in pkgsrc.")
+		NewLineWhole(fname).Errorf("Only files and directories are allowed in pkgsrc.")
 
 	case basename == "ALTERNATIVES":
 		if G.opts.CheckAlternatives {
@@ -259,7 +259,7 @@ func Checkfile(fname string) {
 		}
 
 	case matches(fname, `(?:^|/)patches/[^/]*$`):
-		NewLineWhole(fname).Warn0("Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
+		NewLineWhole(fname).Warnf("Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 
 	case matches(basename, `^(?:.*\.mk|Makefile.*)$`) && !matches(fname, `files/`) && !matches(fname, `patches/`):
 		if G.opts.CheckMk {
@@ -287,7 +287,7 @@ func Checkfile(fname string) {
 		// Ok in regression tests
 
 	default:
-		NewLineWhole(fname).Warn0("Unexpected file found.")
+		NewLineWhole(fname).Warnf("Unexpected file found.")
 		if G.opts.CheckExtra {
 			CheckfileExtra(fname)
 		}
@@ -301,7 +301,7 @@ func ChecklinesTrailingEmptyLines(lines []*Line) {
 		last--
 	}
 	if last != max {
-		lines[last].Note0("Trailing empty lines.")
+		lines[last].Notef("Trailing empty lines.")
 	}
 }
 
@@ -383,66 +383,6 @@ func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueA
 	value = strings.TrimSpace(string(valuebuf[:j]))
 	comment = text[commentStart:commentEnd]
 	return
-}
-
-func MatchMkInclude(text string) (bool, string, string, string) {
-	goto start
-fail:
-	return false, "", "", ""
-
-start:
-	len := len(text)
-	if len == 0 || text[0] != '.' {
-		goto fail
-	}
-
-	i := 1
-
-	spaceStart := i
-	for i < len && (text[i] == ' ' || text[i] == '\t') {
-		i++
-	}
-	spaceEnd := i
-
-	directiveStart := i
-	if i < len && text[i] == 's' {
-		i++
-	}
-	if !(i+7 < len && text[i] == 'i' && text[i+1] == 'n' && text[i+2] == 'c' && text[i+3] == 'l' && text[i+4] == 'u' && text[i+5] == 'd' && text[i+6] == 'e') {
-		goto fail
-	}
-	i += 7
-	directiveEnd := i
-
-	for i < len && (text[i] == ' ' || text[i] == '\t') {
-		i++
-	}
-	if !(i < len && text[i] == '"') {
-		goto fail
-	}
-	i++
-
-	pathStart := i
-	for i < len && text[i] != '"' {
-		i++
-	}
-	pathEnd := i
-	if !(pathStart < pathEnd) {
-		goto fail
-	}
-
-	if !(i < len && text[i] == '"') {
-		goto fail
-	}
-	i++
-
-	for i < len && (text[i] == ' ' || text[i] == '\t') {
-		i++
-	}
-	if !(i == len || i < len && text[i] == '#') {
-		goto fail
-	}
-	return true, text[spaceStart:spaceEnd], text[directiveStart:directiveEnd], text[pathStart:pathEnd]
 }
 
 type DependencyPattern struct {
