@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/09/08 11:57:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/04 22:59:56 wiedi Exp $
 
-DISTNAME=	ncdu-1.10
-PKGREVISION=	2
+DISTNAME=	ncdu-1.12
 CATEGORIES=	filesystems
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ncdu/}
+MASTER_SITES=	https://dev.yorhel.nl/download/
 
 COMMENT=	Disk usage visualization tool
 MAINTAINER=	slitvinov@gmail.com
