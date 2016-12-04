@@ -17,14 +17,14 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 		line := exp.PreviousLine()
 		// See pkgtools/createbuildlink/files/createbuildlink
 		if hasPrefix(line.Text, "# XXX This file was created automatically") {
-			line.Error0("This comment indicates unfinished work (url2pkg).")
+			line.Errorf("This comment indicates unfinished work (url2pkg).")
 		}
 	}
 
 	exp.ExpectEmptyLine()
 
 	if exp.AdvanceIfMatches(`^BUILDLINK_DEPMETHOD\.(\S+)\?=.*$`) {
-		exp.PreviousLine().Warn0("This line belongs inside the .ifdef block.")
+		exp.PreviousLine().Warnf("This line belongs inside the .ifdef block.")
 		for exp.AdvanceIfEquals("") {
 		}
 	}
@@ -35,7 +35,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 
 	// First paragraph: Introduction of the package identifier
 	if !exp.AdvanceIfMatches(`^BUILDLINK_TREE\+=\s*(\S+)$`) {
-		exp.CurrentLine().Warn0("Expected a BUILDLINK_TREE line.")
+		exp.CurrentLine().Warnf("Expected a BUILDLINK_TREE line.")
 		return
 	}
 	pkgbase = exp.m[1]
@@ -48,13 +48,13 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			{"${PHP_PKG_PREFIX}", "php"},
 		} {
 			if contains(pkgbase, pair.varuse) {
-				pkgbaseLine.Warn2("Please use %q instead of %q (also in other variables in this file).", pair.simple, pair.varuse)
+				pkgbaseLine.Warnf("Please use %q instead of %q (also in other variables in this file).", pair.simple, pair.varuse)
 				warned = true
 			}
 		}
 		if !warned {
 			if m, varuse := match1(pkgbase, `(\$\{\w+\})`); m {
-				pkgbaseLine.Warn1("Please replace %q with a simple string (also in other variables in this file).", varuse)
+				pkgbaseLine.Warnf("Please replace %q with a simple string (also in other variables in this file).", varuse)
 				warned = true
 			}
 		}
@@ -99,7 +99,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	indentLevel := 1 // The first .if is from the second paragraph.
 	for {
 		if exp.EOF() {
-			exp.CurrentLine().Warn0("Expected .endif")
+			exp.CurrentLine().Warnf("Expected .endif")
 			return
 		}
 
@@ -149,7 +149,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 
 			if varparam := mkline.Varparam(); varparam != "" && varparam != pkgbase {
 				if hasPrefix(varname, "BUILDLINK_") && mkline.Varcanon() != "BUILDLINK_API_DEPENDS.*" {
-					line.Warn2("Only buildlink variables for %q, not %q may be set in this file.", pkgbase, varparam)
+					line.Warnf("Only buildlink variables for %q, not %q may be set in this file.", pkgbase, varparam)
 				}
 			}
 
@@ -181,7 +181,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 		}
 	}
 	if apiLine == nil {
-		exp.CurrentLine().Warn0("Definition of BUILDLINK_API_DEPENDS is missing.")
+		exp.CurrentLine().Warnf("Definition of BUILDLINK_API_DEPENDS is missing.")
 	}
 	exp.ExpectEmptyLine()
 
@@ -191,7 +191,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	}
 
 	if !exp.EOF() {
-		exp.CurrentLine().Warn0("The file should end here.")
+		exp.CurrentLine().Warnf("The file should end here.")
 	}
 
 	if G.Pkg != nil {

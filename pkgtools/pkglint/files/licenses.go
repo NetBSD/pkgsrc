@@ -85,7 +85,7 @@ func checkToplevelUnusedLicenses() {
 		licensepath := licensedir + "/" + licensename
 		if fileExists(licensepath) {
 			if !G.UsedLicenses[licensename] {
-				NewLineWhole(licensepath).Warn0("This license seems to be unused.")
+				NewLineWhole(licensepath).Warnf("This license seems to be unused.")
 			}
 		}
 	}
@@ -100,9 +100,9 @@ func (lc *LicenseChecker) Check(value string, op MkOperator) {
 
 	if licenses == nil {
 		if op == opAssign {
-			lc.MkLine.Line.Error1("Parse error for license condition %q.", value)
+			lc.MkLine.Line.Errorf("Parse error for license condition %q.", value)
 		} else {
-			lc.MkLine.Line.Error1("Parse error for appended license condition %q.", value)
+			lc.MkLine.Line.Errorf("Parse error for appended license condition %q.", value)
 		}
 		return
 	}
@@ -130,7 +130,7 @@ func (lc *LicenseChecker) checkNode(cond *LicenseCondition) {
 	}
 
 	if !fileExists(licenseFile) {
-		lc.MkLine.Warn1("License file %s does not exist.", cleanpath(licenseFile))
+		lc.MkLine.Warnf("License file %s does not exist.", cleanpath(licenseFile))
 	}
 
 	switch license {
@@ -139,7 +139,7 @@ func (lc *LicenseChecker) checkNode(cond *LicenseCondition) {
 		"no-profit",
 		"no-redistribution",
 		"shareware":
-		lc.MkLine.Error1("License %q must not be used.", license)
+		lc.MkLine.Errorf("License %q must not be used.", license)
 		Explain(
 			"Instead of using these deprecated licenses, extract the actual",
 			"license from the package into the pkgsrc/licenses/ directory",
@@ -148,7 +148,7 @@ func (lc *LicenseChecker) checkNode(cond *LicenseCondition) {
 	}
 
 	if len(cond.And) > 0 && len(cond.Or) > 0 {
-		lc.MkLine.Line.Error0("AND and OR operators in license conditions can only be combined using parentheses.")
+		lc.MkLine.Line.Errorf("AND and OR operators in license conditions can only be combined using parentheses.")
 		Explain(
 			"Examples for valid license conditions are:",
 			"",
