@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/24 14:49:45 richard Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/04 21:13:09 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_company_work_time
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python time
@@ -8,8 +8,8 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Company work time module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-trytond-company-[0-9]*:../../misc/py-trytond-company
-DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
+DEPENDS+=	${PYPKGPREFIX}-trytond-company>=${TRYTON_BASEVER}:../../misc/py-trytond-company
+DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
