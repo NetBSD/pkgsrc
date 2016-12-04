@@ -1,128 +1,249 @@
-# $NetBSD: Makefile.common,v 1.10 2016/07/09 13:03:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2016/12/04 21:12:59 rodent Exp $
 
-# used by meta-pkgs/py-tryton-platform/Makefile
+# used by databases/py-ldap-authentication/Makefile
 # used by devel/py-proteus/Makefile
 # used by devel/py-tryton/Makefile
 # used by devel/py-trytond/Makefile
 # used by finance/py-trytond-account-asset/Makefile
+# used by finance/py-trytond-account-be/Makefile
+# used by finance/py-trytond-account-credit-limit/Makefile
+# used by finance/py-trytond-account-de-skr03/Makefile
+# used by finance/py-trytond-account-deposit/Makefile
+# used by finance/py-trytond-account-dunning/Makefile
+# used by finance/py-trytond-account-dunning-fee/Makefile
+# used by finance/py-trytond-account-dunning-letter/Makefile
 # used by finance/py-trytond-account-fr/Makefile
 # used by finance/py-trytond-account-invoice-history/Makefile
 # used by finance/py-trytond-account-invoice-line-standalone/Makefile
 # used by finance/py-trytond-account-invoice-stock/Makefile
 # used by finance/py-trytond-account-invoice/Makefile
 # used by finance/py-trytond-account-payment-clearing/Makefile
-# used by finance/py-trytond-account-payment-sepa/Makefile
 # used by finance/py-trytond-account-payment/Makefile
+# used by finance/py-trytond-account-payment-sepa/Makefile
+# used by finance/py-trytond-account-payment-sepa-cfonb/Makefile
 # used by finance/py-trytond-account-product/Makefile
 # used by finance/py-trytond-account-statement/Makefile
+# used by finance/py-trytond-account-stock-anglo-saxon/Makefile
 # used by finance/py-trytond-account-stock-continental/Makefile
+# used by finance/py-trytond-account-stock-landed-cost/Makefile
+# used by finance/py-trytond-account-stock-landed-cost-weight/Makefile
+# used by finance/py-trytond-account-tax-rule-country/Makefile
 # used by finance/py-trytond-account/Makefile
 # used by finance/py-trytond-analytic-account/Makefile
 # used by finance/py-trytond-analytic-invoice/Makefile
 # used by finance/py-trytond-analytic-purchase/Makefile
 # used by finance/py-trytond-analytic-sale/Makefile
 # used by finance/py-trytond-bank/Makefile
+# used by finance/py-trytond-commission-waiting/Makefile
+# used by finance/py-trytond-commission/Makefile
 # used by finance/py-trytond-currency/Makefile
+# used by finance/py-trytond-customs/Makefile
 # used by finance/py-trytond-product-cost-fifo/Makefile
 # used by finance/py-trytond-product-cost-history/Makefile
 # used by finance/py-trytond-product-price-list/Makefile
 # used by finance/py-trytond-purchase-invoice-line-standalone/Makefile
+# used by finance/py-trytond-purchase-request/Makefile
+# used by finance/py-trytond-purchase-requisition/Makefile
+# used by finance/py-trytond-purchase-shipment-cost/Makefile
 # used by finance/py-trytond-purchase/Makefile
 # used by finance/py-trytond-sale/Makefile
+# used by finance/py-trytond-sale-complaint/Makefile
+# used by finance/py-trytond-sale-credit-limit/Makefile
+# used by finance/py-trytond-sale-extra/Makefile
+# used by finance/py-trytond-sale-invoice-grouping/Makefile
+# used by finance/py-trytond-sale-opportunity/Makefile
+# used by finance/py-trytond-sale-price-list/Makefile
+# used by finance/py-trytond-sale-promotion/Makefile
+# used by finance/py-trytond-sale-shipment-cost/Makefile
+# used by finance/py-trytond-sale-shipment-grouping/Makefile
+# used by finance/py-trytond-sale-stock-quantity/Makefile
+# used by finance/py-trytond-sale-supply/Makefile
+# used by finance/py-trytond-sale-supply-drop-shipment/Makefile
+# used by finance/py-trytond-stock-supply-day/Makefile
+# used by finance/py-trytond-stock-supply-forecast/Makefile
+# used by finance/py-trytond-stock-supply-production/Makefile
 # used by finance/py-trytond-stock-supply/Makefile
 # used by geography/py-trytond-country/Makefile
+# used by geography/py-trytond-google-maps/Makefile
+# used by meta-pkgs/py-tryton-platform/Makefile
+# used by misc/py-trytond-carrier-percentage/Makefile
+# used by misc/py-trytond-carrier-weight/Makefile
+# used by misc/py-trytond-carrier/Makefile
 # used by misc/py-trytond-company/Makefile
+# used by misc/py-trytond-dashboard/Makefile
 # used by misc/py-trytond-party-relationship/Makefile
 # used by misc/py-trytond-party-siret/Makefile
+# used by misc/py-trytond-party-vcarddav/Makefile
 # used by misc/py-trytond-party/Makefile
 # used by misc/py-trytond-product-attribute/Makefile
+# used by misc/py-trytond-product-classification-taxonomic/Makefile
+# used by misc/py-trytond-product-classification/Makefile
+# used by misc/py-trytond-product-measurements/Makefile
 # used by misc/py-trytond-product/Makefile
+# used by misc/py-trytond-production-routing/Makefile
+# used by misc/py-trytond-production-split/Makefile
+# used by misc/py-trytond-production-work-timesheet/Makefile
+# used by misc/py-trytond-production-work/Makefile
 # used by misc/py-trytond-production/Makefile
+# used by misc/py-trytond-project-invoice/Makefile
+# used by misc/py-trytond-project-plan/Makefile
+# used by misc/py-trytond-project-revenue/Makefile
+# used by misc/py-trytond-project/Makefile
+# used by misc/py-trytond-stock-forecast/Makefile
 # used by misc/py-trytond-stock-inventory-location/Makefile
+# used by misc/py-trytond-stock-location-sequence/Makefile
+# used by misc/py-trytond-stock-lot-sled/Makefile
 # used by misc/py-trytond-stock-lot/Makefile
+# used by misc/py-trytond-stock-package-shipping-dpd/Makefile
+# used by misc/py-trytond-stock-package-shipping-ups/Makefile
+# used by misc/py-trytond-stock-package-shipping/Makefile
+# used by misc/py-trytond-stock-package/Makefile
 # used by misc/py-trytond-stock-product-location/Makefile
+# used by misc/py-trytond-stock-split/Makefile
 # used by misc/py-trytond-stock/Makefile
+# used by security/py-trytond-authentication-sms/Makefile
+# used by time/py-trytond-calendar-classification/Makefile
+# used by time/py-trytond-calendar-scheduling/Makefile
+# used by time/py-trytond-calendar-todo/Makefile
 # used by time/py-trytond-calendar/Makefile
 # used by time/py-trytond-company-work-time/Makefile
+# used by time/py-trytond-timesheet-cost/Makefile
+# used by time/py-trytond-timesheet/Makefile
+# used by www/py-trytond-web-user/Makefile
+# used by www/py-trytond-webdav/Makefile
 
-TRYTON_BASEVER=		3.8
+TRYTON_BASEVER=		4.2
 
-#specific module revisions:
-#MODULE_REVISION.proteus=					1
-MODULE_REVISION.tryton=						2
-#MODULE_REVISION.trytond=					3
-#MODULE_REVISION.trytond_account=				1
-#MODULE_REVISION.trytond_account_asset=				1
-#MODULE_REVISION.trytond_account_fr=				0
-#MODULE_REVISION.trytond_account_invoice=			1
-#MODULE_REVISION.trytond_account_invoice_history=		1
-#MODULE_REVISION.trytond_account_invoice_line_standalone=	1
-#MODULE_REVISION.trytond_account_invoice_stock=			1
-#MODULE_REVISION.trytond_account_payment=			1
-#MODULE_REVISION.trytond_account_payment_clearing=		1
-#MODULE_REVISION.trytond_account_payment_sepa=			1
-#MODULE_REVISION.trytond_account_product=			1
-#MODULE_REVISION.trytond_account_statement=			1
-#MODULE_REVISION.trytond_account_stock_continental=		1
-#MODULE_REVISION.trytond_analytic_account=			1
-#MODULE_REVISION.trytond_analytic_invoice=			1
-#MODULE_REVISION.trytond_analytic_purchase=			1
-#MODULE_REVISION.trytond_analytic_sale=				1
-#MODULE_REVISION.trytond_bank=					1
-#MODULE_REVISION.trytond_calendar=				1
-#MODULE_REVISION.trytond_carrier=				1
-#MODULE_REVISION.trytond_carrier_percentage=			1
-#MODULE_REVISION.trytond_carrier_weight=				1
-#MODULE_REVISION.trytond_company=				1
-#MODULE_REVISION.trytond_company_work_time=			1
-#MODULE_REVISION.trytond_country=				1
-#MODULE_REVISION.trytond_currency=				1
-#MODULE_REVISION.trytond_dashboard=				1
-#MODULE_REVISION.trytond_google_maps=				1
-#MODULE_REVISION.trytond_ldap_authentication=			1
-#MODULE_REVISION.trytond_party=					1
-#MODULE_REVISION.trytond_party_relationship=			1
-#MODULE_REVISION.trytond_party_siret=				1
-#MODULE_REVISION.trytond_party_vcarddav=				1
-#MODULE_REVISION.trytond_product=				1
-#MODULE_REVISION.trytond_product_attribute=			1
-#MODULE_REVISION.trytond_product_cost_fifo=			1
-#MODULE_REVISION.trytond_product_cost_history=			1
-#MODULE_REVISION.trytond_product_measurements=			1
-#MODULE_REVISION.trytond_product_price_list=			1
-#MODULE_REVISION.trytond_production=				1
-#MODULE_REVISION.trytond_project=				1
-#MODULE_REVISION.trytond_project_invoice=			1
-#MODULE_REVISION.trytond_project_plan=				1
-#MODULE_REVISION.trytond_project_revenue=			1
-#MODULE_REVISION.trytond_purchase=				1
-#MODULE_REVISION.trytond_purchase_invoice_line_standalone=	1
-#MODULE_REVISION.trytond_purchase_shipment_cost=			1
-#MODULE_REVISION.trytond_sale=					1
-#MODULE_REVISION.trytond_sale_credit_limit=			1
-#MODULE_REVISION.trytond_sale_invoice_grouping=			1
-#MODULE_REVISION.trytond_sale_opportunity=			2
-#MODULE_REVISION.trytond_sale_price_list=			1
-#MODULE_REVISION.trytond_sale_shipment_cost=			1
-#MODULE_REVISION.trytond_sale_shipment_grouping=			1
-#MODULE_REVISION.trytond_sale_supply=				1
-#MODULE_REVISION.trytond_sale_supply_drop_shipment=		1
-#MODULE_REVISION.trytond_stock=					1
-#MODULE_REVISION.trytond_stock_forecast=				1
-#MODULE_REVISION.trytond_stock_inventory_location=		1
-#MODULE_REVISION.trytond_stock_location_sequence=		1
-#MODULE_REVISION.trytond_stock_lot=				1
-#MODULE_REVISION.trytond_stock_package=				1
-#MODULE_REVISION.trytond_stock_product_location=			1
-#MODULE_REVISION.trytond_stock_split=				1
-#MODULE_REVISION.trytond_stock_supply=				1
-#MODULE_REVISION.trytond_stock_supply_day=			1
-#MODULE_REVISION.trytond_stock_supply_production=		1
-#MODULE_REVISION.trytond_timesheet=				1
-#MODULE_REVISION.trytond_timesheet_cost=				1
+# NB: the following commands can help getting a list of module revisions:
 #
-# default to 0 if not defined above
-MODULE_REVISION.${TRYTON_MODULE_NAME}?=				0
+#     elinks "http://downloads.tryton.org/4.2/" | grep -o 'http:[^"]*' |\
+#       grep -Ev '\.asc|SHA|\.exe|\.dmg|sao|last' | cut -d'/' -f 5 | sort -d
+#
+#     links -source "http://downloads.tryton.org/4.2/" | grep -Eo '.*.tar.gz' |\
+#       grep -Ev '\.asc|SHA|\.exe|\.dmg|sao|last' | html2text -nobs
+#
+# after updating the revisions below, distinfo can be regenerated
+# for all the updated modules as follows:
+#
+#	cd ../../meta-pkgs/py-tryton-platform
+#	make fetch-list | sh	# or 'bmake' when not on NetBSD
+#	for p in ../../*/py-tryton*; do make -C $p mdi; done
+#	cd ../../devel/py-proteus
+#	make fetch-list | sh ; make mdi
+#
+# specific module revisions:
+MODULE_REVISION.proteus=					0
+MODULE_REVISION.tryton=						0
+MODULE_REVISION.trytond=					0
+MODULE_REVISION.trytond_account=				0
+MODULE_REVISION.trytond_account_asset=				0
+MODULE_REVISION.trytond_account_be=				0
+MODULE_REVISION.trytond_account_credit_limit=			0
+MODULE_REVISION.trytond_account_deposit=			0
+MODULE_REVISION.trytond_account_de_skr03=			0
+MODULE_REVISION.trytond_account_dunning=			0
+MODULE_REVISION.trytond_account_dunning_fee=			0
+MODULE_REVISION.trytond_account_dunning_letter=			0
+MODULE_REVISION.trytond_account_fr=				0
+MODULE_REVISION.trytond_account_invoice=			0
+MODULE_REVISION.trytond_account_invoice_history=		0
+MODULE_REVISION.trytond_account_invoice_line_standalone=	0
+MODULE_REVISION.trytond_account_invoice_stock=			0
+MODULE_REVISION.trytond_account_payment=			0
+MODULE_REVISION.trytond_account_payment_clearing=		0
+MODULE_REVISION.trytond_account_payment_sepa=			0
+MODULE_REVISION.trytond_account_payment_sepa_cfonb=		0
+MODULE_REVISION.trytond_account_product=			0
+MODULE_REVISION.trytond_account_statement=			0
+MODULE_REVISION.trytond_account_stock_anglo_saxon=		0
+MODULE_REVISION.trytond_account_stock_continental=		0
+MODULE_REVISION.trytond_account_stock_landed_cost=		0
+MODULE_REVISION.trytond_account_stock_landed_cost_weight=	0
+MODULE_REVISION.trytond_account_tax_rule_country=		0
+MODULE_REVISION.trytond_analytic_account=			0
+MODULE_REVISION.trytond_analytic_invoice=			0
+MODULE_REVISION.trytond_analytic_purchase=			0
+MODULE_REVISION.trytond_analytic_sale=				0
+MODULE_REVISION.trytond_authentication_sms=			0
+MODULE_REVISION.trytond_bank=					0
+MODULE_REVISION.trytond_calendar=				0
+MODULE_REVISION.trytond_calendar_classification=		0
+MODULE_REVISION.trytond_calendar_scheduling=			0
+MODULE_REVISION.trytond_calendar_todo=				0
+MODULE_REVISION.trytond_carrier=				0
+MODULE_REVISION.trytond_carrier_percentage=			0
+MODULE_REVISION.trytond_carrier_weight=				0
+MODULE_REVISION.trytond_commission=				0
+MODULE_REVISION.trytond_commission_waiting=			0
+MODULE_REVISION.trytond_company=				0
+MODULE_REVISION.trytond_company_work_time=			0
+MODULE_REVISION.trytond_country=				0
+MODULE_REVISION.trytond_currency=				0
+MODULE_REVISION.trytond_customs=				0
+MODULE_REVISION.trytond_dashboard=				0
+MODULE_REVISION.trytond_google_maps=				0
+MODULE_REVISION.trytond_ldap_authentication=			0
+MODULE_REVISION.trytond_party=					0
+MODULE_REVISION.trytond_party_relationship=			0
+MODULE_REVISION.trytond_party_siret=				0
+MODULE_REVISION.trytond_party_vcarddav=				0
+MODULE_REVISION.trytond_product=				0
+MODULE_REVISION.trytond_product_attribute=			0
+MODULE_REVISION.trytond_product_classification=			0
+MODULE_REVISION.trytond_product_classification_taxonomic=	0
+MODULE_REVISION.trytond_product_cost_fifo=			0
+MODULE_REVISION.trytond_product_cost_history=			0
+MODULE_REVISION.trytond_production=				0
+MODULE_REVISION.trytond_production_routing=			0
+MODULE_REVISION.trytond_production_split=			0
+MODULE_REVISION.trytond_production_work=			0
+MODULE_REVISION.trytond_production_work_timesheet=		0
+MODULE_REVISION.trytond_product_measurements=			0
+MODULE_REVISION.trytond_product_price_list=			0
+MODULE_REVISION.trytond_project=				0
+MODULE_REVISION.trytond_project_invoice=			0
+MODULE_REVISION.trytond_project_plan=				0
+MODULE_REVISION.trytond_project_revenue=			0
+MODULE_REVISION.trytond_purchase=				0
+MODULE_REVISION.trytond_purchase_invoice_line_standalone=	0
+MODULE_REVISION.trytond_purchase_request=			0
+MODULE_REVISION.trytond_purchase_requisition=			0
+MODULE_REVISION.trytond_purchase_shipment_cost=			0
+MODULE_REVISION.trytond_sale=					0
+MODULE_REVISION.trytond_sale_complaint=				0
+MODULE_REVISION.trytond_sale_credit_limit=			0
+MODULE_REVISION.trytond_sale_extra=				0
+MODULE_REVISION.trytond_sale_invoice_grouping=			0
+MODULE_REVISION.trytond_sale_opportunity=			0
+MODULE_REVISION.trytond_sale_price_list=			0
+MODULE_REVISION.trytond_sale_promotion=				0
+MODULE_REVISION.trytond_sale_shipment_cost=			0
+MODULE_REVISION.trytond_sale_shipment_grouping=			0
+MODULE_REVISION.trytond_sale_stock_quantity=			0
+MODULE_REVISION.trytond_sale_supply=				0
+MODULE_REVISION.trytond_sale_supply_drop_shipment=		0
+MODULE_REVISION.trytond_stock=					0
+MODULE_REVISION.trytond_stock_forecast=				0
+MODULE_REVISION.trytond_stock_inventory_location=		0
+MODULE_REVISION.trytond_stock_location_sequence=		0
+MODULE_REVISION.trytond_stock_lot=				0
+MODULE_REVISION.trytond_stock_lot_sled=				0
+MODULE_REVISION.trytond_stock_package=				0
+MODULE_REVISION.trytond_stock_package_shipping=			0
+MODULE_REVISION.trytond_stock_package_shipping_dpd=		0
+MODULE_REVISION.trytond_stock_package_shipping_ups=		0
+MODULE_REVISION.trytond_stock_product_location=			0
+MODULE_REVISION.trytond_stock_split=				0
+MODULE_REVISION.trytond_stock_supply=				0
+MODULE_REVISION.trytond_stock_supply_day=			0
+MODULE_REVISION.trytond_stock_supply_forecast=			0
+MODULE_REVISION.trytond_stock_supply_production=		0
+MODULE_REVISION.trytond_timesheet=				0
+MODULE_REVISION.trytond_timesheet_cost=				0
+MODULE_REVISION.trytond_web_user=				0
+MODULE_REVISION.trytond_webdav=					0
+#
+# DO NOT default to 0 if not defined above (which are also for dependencies)
 
 TRYTON_VERSION=	${TRYTON_BASEVER}.${MODULE_REVISION.${TRYTON_MODULE_NAME}}
 
@@ -135,3 +256,8 @@ MASTER_SITES=   ${TRYTON_SITES}
 DIST_SUBDIR=	tryton-${TRYTON_BASEVER}
 
 PYTHON_VERSIONS_INCOMPATIBLE=   34 35 # py-gtk2 via py-pycha via py-relatorio
+# predefine these so modules don't have to.
+PY_PATCHPLIST=	yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+OPSYSVARS+=	DEPENDS

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:07 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = f743285670b3fe73446be5e8ad9855f2b15bd2a7
+RMD160 (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = 30f4f0b9a02dd954d3952a2973b2ee2e50d047dd
+SHA512 (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = 8107576f5ff4bee3e3bc94c513cf17b211a3fb0dc1de0dc6660ee7f658a1ace641f45cf90157457d5c5d7da527e3a63f16f703652c858f1beb2ad3aedad570f4
+Size (tryton-4.2/trytond_stock_lot_sled-4.2.0.tar.gz) = 27489 bytes
