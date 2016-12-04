@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/02/25 15:15:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.14.6.1 2016/12/04 15:18:40 bsiegert Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -603,6 +603,7 @@ share/drupal/modules/simpletest/files/html-1.txt
 share/drupal/modules/simpletest/files/html-2.html
 share/drupal/modules/simpletest/files/image-1.png
 share/drupal/modules/simpletest/files/image-2.jpg
+share/drupal/modules/simpletest/files/image-test-no-transparency.gif
 share/drupal/modules/simpletest/files/image-test-transparent-out-of-range.gif
 share/drupal/modules/simpletest/files/image-test.gif
 share/drupal/modules/simpletest/files/image-test.jpg
@@ -742,6 +743,7 @@ share/drupal/modules/simpletest/tests/system_incompatible_module_version_test.mo
 share/drupal/modules/simpletest/tests/system_project_namespace_test.info
 share/drupal/modules/simpletest/tests/system_project_namespace_test.module
 share/drupal/modules/simpletest/tests/system_test.info
+share/drupal/modules/simpletest/tests/system_test.install
 share/drupal/modules/simpletest/tests/system_test.module
 share/drupal/modules/simpletest/tests/tablesort.test
 share/drupal/modules/simpletest/tests/taxonomy_test.info
@@ -917,6 +919,7 @@ share/drupal/modules/update/tests/drupal.0.xml
 share/drupal/modules/update/tests/drupal.1.xml
 share/drupal/modules/update/tests/drupal.2-sec.xml
 share/drupal/modules/update/tests/drupal.dev.xml
+share/drupal/modules/update/tests/themes/update_test_admintheme/update_test_admintheme.info
 share/drupal/modules/update/tests/themes/update_test_basetheme/update_test_basetheme.info
 share/drupal/modules/update/tests/themes/update_test_subtheme/update_test_subtheme.info
 share/drupal/modules/update/tests/update_test.info
@@ -1092,3 +1095,5 @@ share/drupal/update.php
 share/drupal/xmlrpc.php
 share/examples/drupal/default.settings.php
 share/examples/drupal/drupal.conf
+@pkgdir share/drupal/sites
+@pkgdir share/drupal/files
