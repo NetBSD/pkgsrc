@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/22 08:05:10 richard Exp $
+$NetBSD: distinfo,v 1.6 2016/12/04 21:13:06 rodent Exp $
 
-SHA1 (tryton-3.8/trytond_party_siret-3.8.0.tar.gz) = 1a72eda34ec3b3a38988a1ff1e30696b6542178c
-RMD160 (tryton-3.8/trytond_party_siret-3.8.0.tar.gz) = 1504d6bd5958aa998cae8f2ec8248b3804aa755a
-SHA512 (tryton-3.8/trytond_party_siret-3.8.0.tar.gz) = d6048cf22e58a499cfe0f503611332f281f655c09d08d40da1776e29cca51e26a579a728e405c7cf800798b32ea6e2a263fdb12fdd601bcfab000310f203d1a1
-Size (tryton-3.8/trytond_party_siret-3.8.0.tar.gz) = 20164 bytes
+SHA1 (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = 32de4a44759c627ff84921d0e5de0cfe187c1f05
+RMD160 (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = 458730325acba868e100794190bdf7a72be7ab6e
+SHA512 (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = ec6fd8fa1deb0bfc9474a13a1f1264e0810432d2dd65042242a5c54f330006c49d44f4c29236d80177a20029315611f4f21fbe3e0b4b84d932338d6aeb59c9f2
+Size (tryton-4.2/trytond_party_siret-4.2.0.tar.gz) = 20260 bytes

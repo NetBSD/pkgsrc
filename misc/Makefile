@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.475 2016/11/16 10:40:05 leot Exp $
+# $NetBSD: Makefile,v 1.476 2016/12/04 21:12:58 rodent Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -254,17 +254,41 @@ SUBDIR+=	py-anki2
 SUBDIR+=	py-ansi
 SUBDIR+=	py-carddav
 SUBDIR+=	py-stdnum
+SUBDIR+=	py-trytond-carrier
+SUBDIR+=	py-trytond-carrier-percentage
+SUBDIR+=	py-trytond-carrier-weight
 SUBDIR+=	py-trytond-company
+SUBDIR+=	py-trytond-dashboard
 SUBDIR+=	py-trytond-party
 SUBDIR+=	py-trytond-party-relationship
 SUBDIR+=	py-trytond-party-siret
+SUBDIR+=	py-trytond-party-vcarddav
 SUBDIR+=	py-trytond-product
 SUBDIR+=	py-trytond-product-attribute
+SUBDIR+=	py-trytond-product-classification
+SUBDIR+=	py-trytond-product-classification-taxonomic
+SUBDIR+=	py-trytond-product-measurements
 SUBDIR+=	py-trytond-production
+SUBDIR+=	py-trytond-production-routing
+SUBDIR+=	py-trytond-production-split
+SUBDIR+=	py-trytond-production-work
+SUBDIR+=	py-trytond-production-work-timesheet
+SUBDIR+=	py-trytond-project
+SUBDIR+=	py-trytond-project-invoice
+SUBDIR+=	py-trytond-project-plan
+SUBDIR+=	py-trytond-project-revenue
 SUBDIR+=	py-trytond-stock
+SUBDIR+=	py-trytond-stock-forecast
 SUBDIR+=	py-trytond-stock-inventory-location
+SUBDIR+=	py-trytond-stock-location-sequence
 SUBDIR+=	py-trytond-stock-lot
+SUBDIR+=	py-trytond-stock-lot-sled
+SUBDIR+=	py-trytond-stock-package
+SUBDIR+=	py-trytond-stock-package-shipping
+SUBDIR+=	py-trytond-stock-package-shipping-dpd
+SUBDIR+=	py-trytond-stock-package-shipping-ups
 SUBDIR+=	py-trytond-stock-product-location
+SUBDIR+=	py-trytond-stock-split
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	raspberrypi-userland

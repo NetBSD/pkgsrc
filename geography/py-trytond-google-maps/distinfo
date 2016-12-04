@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:05 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_google_maps-4.2.0.tar.gz) = 5f30a853495ad9dbc3f4d6d60c57157b652e61aa
+RMD160 (tryton-4.2/trytond_google_maps-4.2.0.tar.gz) = c04f320ae2f66d56a0174fb31d4b36317a46c9da
+SHA512 (tryton-4.2/trytond_google_maps-4.2.0.tar.gz) = 159df0401d4ac5b12d97c2054f18ef5c8990815b8661aa5168adece6b86bb35b7fc7c03166435b78e632b634df5dce083ecee3c099d6c3c7fb99673d7f156d9f
+Size (tryton-4.2/trytond_google_maps-4.2.0.tar.gz) = 19265 bytes

@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/12/04 21:12:59 rodent Exp $
+
+Getting started with Tryton:
+
+0. Modify the stock configuration file and setup your database connection;
+
+1. Create the database, roles, schemas, etc. depending on your backend;
+
+2. Run: trytond-admin@PYVERSSUFFIX@ -c @PKG_SYSCONFDIR@/tryton/trytond.conf -d $YOURDB --all
+
+3. Start trytond: @RC_SCRIPTS_DIR@/trytond start;
+===========================================================================

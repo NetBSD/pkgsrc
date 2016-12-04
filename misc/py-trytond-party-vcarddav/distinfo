@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:06 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = b39d8215f7290306137372c4c61ca0fe5c08d9b0
+RMD160 (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = 81f00fb54a8e825c85a36e55be8eae623c4c3023
+SHA512 (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = 58b2855949927a9014a04e50b12f7571ad3c70ea426f7c86aa702cc394e6bb1d7caf9c6961a94bba667c2ba6ef344eaeaa4e9a4263f033ed849c3403be5ba061
+Size (tryton-4.2/trytond_party_vcarddav-4.2.0.tar.gz) = 24487 bytes

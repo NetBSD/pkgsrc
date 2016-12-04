@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:00 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 9035f8989065a0348a2a484eaf1b9bdedade0d15
+RMD160 (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 16e5df9dbb46c46881441c7636a30e6423fa6e0b
+SHA512 (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 0f9a08130bb601d4c69af4be0b3c8fb000fec00ebb6b5ffdbbddd661e67b7c292373e78e047b346861ec4ae124954c84edb65fb11265159e7fbe067419161565
+Size (tryton-4.2/trytond_account_dunning-4.2.0.tar.gz) = 34153 bytes

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:12:59 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_ldap_authentication-4.2.0.tar.gz) = 2e76856719718efade1412dd5787f3e668417e26
+RMD160 (tryton-4.2/trytond_ldap_authentication-4.2.0.tar.gz) = e6c83c71adcfda09250e2f39c09a281e7ce35d5b
+SHA512 (tryton-4.2/trytond_ldap_authentication-4.2.0.tar.gz) = 973f3fcba57d4846de8c1eee7b73d41f898dcf25afcdcc5f8e73fe3bb4d3211ed76857e31229659ba278a777c831cc75a4e98eb89a2147e2ac3ff7ecfd35bdcb
+Size (tryton-4.2/trytond_ldap_authentication-4.2.0.tar.gz) = 21675 bytes

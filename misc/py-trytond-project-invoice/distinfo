@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:07 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_project_invoice-4.2.0.tar.gz) = c851bac3bf86d1fa3dbe618471d0088ec9f3024b
+RMD160 (tryton-4.2/trytond_project_invoice-4.2.0.tar.gz) = 1b9a3a1283a2e20e0ca8d12ab7918d4c85987cea
+SHA512 (tryton-4.2/trytond_project_invoice-4.2.0.tar.gz) = a141be51c9bc4351d2b2261971b50ef6b99f434e70cfb1e89935cfd608ccd002d3dba3b7a36fd89fe26c17a02ac4433ba6237dac865bd9df7ee87ef0e492d0ea
+Size (tryton-4.2/trytond_project_invoice-4.2.0.tar.gz) = 31116 bytes

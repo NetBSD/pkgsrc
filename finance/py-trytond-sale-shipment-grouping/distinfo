@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:04 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = bd788afb972b2e502ebe6282d14d58bcfdcdd7e6
+RMD160 (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = 2d31801a4a10945a2acb3900fdb466ad54dec6eb
+SHA512 (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = 7ad963b4f7b384f8ccc92e0d9076900fea2054d227a77a431b2c910d0c95ae14796d5af91841e66c04fc8ad020a48089ea72bd6e0613d1d9afd5cd927f15be51
+Size (tryton-4.2/trytond_sale_shipment_grouping-4.2.0.tar.gz) = 21060 bytes
