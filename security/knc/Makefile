@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/12/10 14:06:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2016/12/04 03:51:16 marino Exp $
 #
 
 DISTNAME=		knc-1.7.1
@@ -17,4 +17,5 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 
 .include "../../mk/krb5.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
