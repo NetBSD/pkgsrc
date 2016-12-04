@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:04 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_sale_supply_drop_shipment-4.2.0.tar.gz) = 8903cb1bf1239c849d228ff3e87b2885f7223ffd
+RMD160 (tryton-4.2/trytond_sale_supply_drop_shipment-4.2.0.tar.gz) = ede893188d3e2925f690fa982332b557552046c2
+SHA512 (tryton-4.2/trytond_sale_supply_drop_shipment-4.2.0.tar.gz) = 496d017131707ba1602486233aa2b2b1dee3a45406270da9ed4a8c53fbe62bea3987f15930eed5c629039ee9fef4ea1e9242f006947f16e0239be694e48c36e5
+Size (tryton-4.2/trytond_sale_supply_drop_shipment-4.2.0.tar.gz) = 36245 bytes

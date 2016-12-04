@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2339 2016/12/03 23:54:56 wiedi Exp $
+# $NetBSD: Makefile,v 1.2340 2016/12/04 21:12:58 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -1723,6 +1723,7 @@ SUBDIR+=	py-Pyro
 SUBDIR+=	py-ZopeComponent
 SUBDIR+=	py-ZopeEvent
 SUBDIR+=	py-ZopeInterface
+SUBDIR+=	py-appdirs
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argh
 SUBDIR+=	py-argparse

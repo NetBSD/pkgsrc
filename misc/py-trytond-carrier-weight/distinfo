@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:05 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = 2410974d112864748d57e1089122f7295cfe2a1f
+RMD160 (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = d6b538c715ba862b8e666c2ec007a176bacd6524
+SHA512 (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = 90b44ca55f7c6eb81d16e76440e22cfed51ec144f7b075b28bbaa0dc32f563d9fc56290304973dc2c851bea4321fcf5027edbfcb4d2daf235a0c4c6300c38fe8
+Size (tryton-4.2/trytond_carrier_weight-4.2.0.tar.gz) = 24890 bytes

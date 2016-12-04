@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:01 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_account_stock_landed_cost_weight-4.2.0.tar.gz) = 08a6ac294880b2d13bf7063516ed9673eee1698a
+RMD160 (tryton-4.2/trytond_account_stock_landed_cost_weight-4.2.0.tar.gz) = 775575aac89004f6235fdb18fb27968bdff06b6d
+SHA512 (tryton-4.2/trytond_account_stock_landed_cost_weight-4.2.0.tar.gz) = f5fe512ebe3388583cec8b9cecdcb0a007d5a1ca71b66f70a53557a93b6d55888acdde52912787651c58a86824d0d2d6ebdac17cd26e820a8b943952c4f69618
+Size (tryton-4.2/trytond_account_stock_landed_cost_weight-4.2.0.tar.gz) = 20414 bytes

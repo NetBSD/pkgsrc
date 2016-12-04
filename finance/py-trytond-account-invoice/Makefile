@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/08/24 14:49:41 richard Exp $
+# $NetBSD: Makefile,v 1.9 2016/12/04 21:13:00 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_account_invoice
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -9,13 +9,13 @@ COMMENT=	Account invoice module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-python-sql-[0-9]*:../../databases/py-python-sql
-DEPENDS+=	${PYPKGPREFIX}-trytond-account-product-[0-9]*:../../finance/py-trytond-account-product
-DEPENDS+=	${PYPKGPREFIX}-trytond-account-[0-9]*:../../finance/py-trytond-account
-DEPENDS+=	${PYPKGPREFIX}-trytond-currency-[0-9]*:../../finance/py-trytond-currency
-DEPENDS+=	${PYPKGPREFIX}-trytond-company-[0-9]*:../../misc/py-trytond-company
-DEPENDS+=	${PYPKGPREFIX}-trytond-party-[0-9]*:../../misc/py-trytond-party
-DEPENDS+=	${PYPKGPREFIX}-trytond-product-[0-9]*:../../misc/py-trytond-product
-DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
+DEPENDS+=	${PYPKGPREFIX}-trytond-account-product>=${TRYTON_BASEVER}:../../finance/py-trytond-account-product
+DEPENDS+=	${PYPKGPREFIX}-trytond-account>=${TRYTON_BASEVER}:../../finance/py-trytond-account
+DEPENDS+=	${PYPKGPREFIX}-trytond-currency>=${TRYTON_BASEVER}:../../finance/py-trytond-currency
+DEPENDS+=	${PYPKGPREFIX}-trytond-company>=${TRYTON_BASEVER}:../../misc/py-trytond-company
+DEPENDS+=	${PYPKGPREFIX}-trytond-party>=${TRYTON_BASEVER}:../../misc/py-trytond-party
+DEPENDS+=	${PYPKGPREFIX}-trytond-product>=${TRYTON_BASEVER}:../../misc/py-trytond-product
+DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 

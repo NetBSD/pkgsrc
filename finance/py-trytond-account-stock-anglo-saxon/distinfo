@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:01 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_account_stock_anglo_saxon-4.2.0.tar.gz) = 992ade4c710f30d1e8581953c8a62845f0e032c8
+RMD160 (tryton-4.2/trytond_account_stock_anglo_saxon-4.2.0.tar.gz) = 2072dd2920ddda25ba6ed1a22b92cbba5afc751a
+SHA512 (tryton-4.2/trytond_account_stock_anglo_saxon-4.2.0.tar.gz) = c5f8ac7605dfbccac9f65605f73fe41b34c7e4688b3137868d875508397665c5c1dc7278cf44fe973bff0ab6d5079d3e0f7a02f568f075b09db7518d66709bff
+Size (tryton-4.2/trytond_account_stock_anglo_saxon-4.2.0.tar.gz) = 29436 bytes

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:03 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_sale_invoice_grouping-4.2.0.tar.gz) = e162ee64a64cc2ae92a7da59be943b673844eb31
+RMD160 (tryton-4.2/trytond_sale_invoice_grouping-4.2.0.tar.gz) = e3e8c4c1df3364c188752a17080972e6f55913cb
+SHA512 (tryton-4.2/trytond_sale_invoice_grouping-4.2.0.tar.gz) = 4885c22a19707c616a0638dce9c87b5610b856876f1b180b135f0b173998197c6cadd03df1575b62232cceea80d1c35f6b7617df1a2746a15e5f80ca8c0bfd5b
+Size (tryton-4.2/trytond_sale_invoice_grouping-4.2.0.tar.gz) = 21083 bytes

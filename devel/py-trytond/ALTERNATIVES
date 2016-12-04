@@ -1,1 +1,3 @@
+bin/trytond-admin @PREFIX@/bin/trytond-admin@PYVERSSUFFIX@
+bin/trytond-cron @PREFIX@/bin/trytond-cron@PYVERSSUFFIX@
 bin/trytond @PREFIX@/bin/trytond@PYVERSSUFFIX@

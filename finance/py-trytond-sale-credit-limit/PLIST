@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:03 rodent Exp $
+${PYSITELIB}/trytond/modules/sale_credit_limit/__init__.py
+${PYSITELIB}/trytond/modules/sale_credit_limit/__init__.pyc
+${PYSITELIB}/trytond/modules/sale_credit_limit/__init__.pyo
+${PYSITELIB}/trytond/modules/sale_credit_limit/party.py
+${PYSITELIB}/trytond/modules/sale_credit_limit/party.pyc
+${PYSITELIB}/trytond/modules/sale_credit_limit/party.pyo
+${PYSITELIB}/trytond/modules/sale_credit_limit/sale.py
+${PYSITELIB}/trytond/modules/sale_credit_limit/sale.pyc
+${PYSITELIB}/trytond/modules/sale_credit_limit/sale.pyo
+${PYSITELIB}/trytond/modules/sale_credit_limit/tests/__init__.py
+${PYSITELIB}/trytond/modules/sale_credit_limit/tests/__init__.pyc
+${PYSITELIB}/trytond/modules/sale_credit_limit/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/sale_credit_limit/tests/test_sale_credit_limit.py
+${PYSITELIB}/trytond/modules/sale_credit_limit/tests/test_sale_credit_limit.pyc
+${PYSITELIB}/trytond/modules/sale_credit_limit/tests/test_sale_credit_limit.pyo
+${PYSITELIB}/trytond/modules/sale_credit_limit/tryton.cfg
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

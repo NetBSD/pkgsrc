@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+${PYSITELIB}/trytond/modules/account_be/__init__.py
+${PYSITELIB}/trytond/modules/account_be/__init__.pyc
+${PYSITELIB}/trytond/modules/account_be/__init__.pyo
+${PYSITELIB}/trytond/modules/account_be/account.py
+${PYSITELIB}/trytond/modules/account_be/account.pyc
+${PYSITELIB}/trytond/modules/account_be/account.pyo
+${PYSITELIB}/trytond/modules/account_be/account_be_fr.xml
+${PYSITELIB}/trytond/modules/account_be/account_be_nl.xml
+${PYSITELIB}/trytond/modules/account_be/tax_be_fr.xml
+${PYSITELIB}/trytond/modules/account_be/tax_be_nl.xml
+${PYSITELIB}/trytond/modules/account_be/tests/__init__.py
+${PYSITELIB}/trytond/modules/account_be/tests/__init__.pyc
+${PYSITELIB}/trytond/modules/account_be/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/account_be/tests/test_account_be.py
+${PYSITELIB}/trytond/modules/account_be/tests/test_account_be.pyc
+${PYSITELIB}/trytond/modules/account_be/tests/test_account_be.pyo
+${PYSITELIB}/trytond/modules/account_be/tryton.cfg
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

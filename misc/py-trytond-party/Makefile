@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/03/15 00:17:35 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2016/12/04 21:13:05 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_party
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
@@ -8,8 +8,8 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Party module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-trytond-country-[0-9]*:../../geography/py-trytond-country
-DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
+DEPENDS+=	${PYPKGPREFIX}-trytond-country>=${TRYTON_BASEVER}:../../geography/py-trytond-country
+DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 

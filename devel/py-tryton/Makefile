@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/08/28 15:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/12/04 21:12:59 rodent Exp $
 TRYTON_MODULE_NAME=	tryton
 PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
@@ -12,11 +12,11 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=		# none
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
-PY_PATCHPLIST=			yes
+
+PYTHON_VERSIONS_INCOMPATIBLE=   34 35
 
 .include "options.mk"
 
-OPSYSVARS+=		DEPENDS
 DEPENDS+=		${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS.Darwin+=	${PYPKGPREFIX}-py2app-[0-9]*:../../devel/py-py2app
 

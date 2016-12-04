@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:07 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 017bfcceec09dce7186f15cf5f347b299c156217
+RMD160 (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 984307479ec1dc182b77fa512dda2a7bb23a9329
+SHA512 (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 2560ffc46ea9a11df18c21dbbce15556c88bf55ccea1a02960538c81edf5f1ace08dc29445f83c59d965f49b34f2fd7473f9ee1687e421eb2b036d0b19d9b3fb
+Size (tryton-4.2/trytond_production_work_timesheet-4.2.0.tar.gz) = 21006 bytes
