@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.130 2016/07/09 13:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2016/12/04 05:17:23 ryoon Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	60
+PKGREVISION=	61
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 

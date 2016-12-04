@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2016/10/07 18:25:43 adam Exp $
+# $NetBSD: Makefile,v 1.63 2016/12/04 05:17:24 ryoon Exp $
 #
 
 DISTNAME=	kdevelop-4.7.0
 PKGNAME=	kdevelop4-4.7.0
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.7.0/src/}
 EXTRACT_SUFX=	.tar.xz
