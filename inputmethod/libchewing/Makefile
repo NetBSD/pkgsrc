@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/04/11 19:01:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2016/12/04 03:51:15 marino Exp $
 #
 
 DISTNAME=	libchewing-0.4.0
@@ -21,4 +21,5 @@ PKGCONFIG_OVERRIDE=	chewing.pc.in
 TEST_TARGET=	check
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
