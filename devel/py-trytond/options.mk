@@ -1,14 +1,13 @@
-# $NetBSD: options.mk,v 1.9 2016/08/18 19:25:31 wiz Exp $
+# $NetBSD: options.mk,v 1.10 2016/12/04 21:12:59 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-trytond
 PKG_SUPPORTED_OPTIONS=	cdecimal mysql pydot psycopg pytz simplejson sphinx
-PKG_SUPPORTED_OPTIONS+=	webdav
 PKG_SUGGESTED_OPTIONS+=	psycopg pytz simplejson sphinx
 
 .include "../../mk/bsd.options.mk"
 
-# XXX Supports unoconv http://dag.wieers.com/home-made/unoconv/) and
-# XXX python-Levenshtein (http://github.com/miohtama/python-Levenshtein) options
+# XXX: Supports unoconv http://dag.wieers.com/home-made/unoconv/) option and
+# XXX: python-Levenshtein (http://github.com/miohtama/python-Levenshtein) option
 
 .if !empty(PKG_OPTIONS:Mcdecimal)
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-cdecimal is obsolete for that version and thus not available
@@ -38,9 +37,4 @@ DEPENDS+=		${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 
 .if !empty(PKG_OPTIONS:Msphinx)
 DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-.endif
-
-.if !empty(PKG_OPTIONS:Mwebdav)
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-pywebdav
-DEPENDS+=		${PYPKGPREFIX}-pywebdav-[0-9]*:../../www/py-pywebdav
 .endif
