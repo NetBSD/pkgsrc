@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/04/11 19:01:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2016/12/04 03:51:15 marino Exp $
 
 DISTNAME=	ibus-array-0.1.0
 PKGREVISION=	3
@@ -32,4 +32,5 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/10/09 21:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/12/04 03:51:15 marino Exp $
 
 DISTNAME=	libzdb-3.1
 PKGREVISION=	4
@@ -18,4 +18,5 @@ PKGCONFIG_OVERRIDE+=	zdb.pc.in
 
 .include "options.mk"
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
