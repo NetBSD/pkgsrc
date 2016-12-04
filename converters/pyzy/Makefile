@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/04/11 19:01:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/04 03:51:15 marino Exp $
 
 DISTNAME=	pyzy-0.1.0
 PKGREVISION=	5
@@ -57,4 +57,5 @@ CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-headers}
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

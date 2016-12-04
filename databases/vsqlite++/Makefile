@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/04/11 19:01:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2016/12/04 03:51:15 marino Exp $
 
 DISTNAME=	vsqlite++-0.3.13
 PKGREVISION=	3
@@ -16,4 +16,5 @@ USE_LANGUAGES=	c c++
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

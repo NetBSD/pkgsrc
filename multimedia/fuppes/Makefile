@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2016/11/20 22:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2016/12/04 03:51:16 marino Exp $
 
 DISTNAME=	fuppes-0.660
 PKGREVISION=	28
@@ -38,4 +38,5 @@ CONFIGURE_ARGS+=	--enable-lame
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../graphics/simage/buildlink3.mk"
 .include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

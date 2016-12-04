@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/09/19 13:04:24 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2016/12/04 03:51:16 marino Exp $
 
 DISTNAME=	aria2-1.19.2
 PKGREVISION=	3
@@ -49,4 +49,5 @@ CONFIGURE_ARGS+=	--disable-xmltest
 .include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
