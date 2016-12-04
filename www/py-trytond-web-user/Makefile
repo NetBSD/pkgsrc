@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:13:09 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/04 22:02:00 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_web_user
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python www
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-trytond-party>=${TRYTON_BASEVER}:../../misc/py-trytond-party
 DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 DEPENDS+=	${PYPKGPREFIX}-bcrypt-[0-9]*:../../security/py-bcrypt
-DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../converters/py-html2text
+DEPENDS+=	${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
 USE_LANGUAGES=	# none
 
