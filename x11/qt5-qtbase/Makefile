@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/12/04 05:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.39 2016/12/04 21:46:54 marino Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -84,6 +84,7 @@ BUILDLINK_PASSTHRU_DIRS+=/usr/local/include/bind /usr/local/lib/bind
 SYS_LIBS=		-lbind -ldb -ldl
 .elif ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
+LDFLAGS+=		-lexecinfo
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	-platform macx-clang
 CONFIGURE_ARGS+=	-no-framework
