@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:08 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_calendar_classification-4.2.0.tar.gz) = f23310988059a391c387c20bcf4d25c2513f2def
+RMD160 (tryton-4.2/trytond_calendar_classification-4.2.0.tar.gz) = 4b3cf0d57ed4387eaa3cdc2dbbab40c5e18af481
+SHA512 (tryton-4.2/trytond_calendar_classification-4.2.0.tar.gz) = bf5bfd7f0ee0376238a85ba9245cbf90568469cd1a4c940956ea1f01718b358b4df44ed5a7023f6bb9c60e0e8aaf1d8fb40ff4d6347314fe4044a80c8eb4287a
+Size (tryton-4.2/trytond_calendar_classification-4.2.0.tar.gz) = 19109 bytes

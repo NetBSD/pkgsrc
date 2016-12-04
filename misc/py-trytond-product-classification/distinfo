@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:06 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = a8b8c0cc023067734cce566a4f5a8b3b8be3a63d
+RMD160 (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = 8e98b9345a0944266df2978703850e214c99a982
+SHA512 (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = c6f9c21a960044eec94566bd16a762cdd4ebc336b47477ce3b6792e2d8b04e15c53063eb4e352a04c2d528e3cd26adf4aea2bd4e0ef67c92e98e9736a48e8f54
+Size (tryton-4.2/trytond_product_classification-4.2.0.tar.gz) = 22740 bytes

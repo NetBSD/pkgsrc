@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/22 08:05:08 richard Exp $
+$NetBSD: distinfo,v 1.6 2016/12/04 21:13:00 rodent Exp $
 
-SHA1 (tryton-3.8/trytond_account_asset-3.8.0.tar.gz) = 762d9d9d9ca1801004a69b8e9b676dcd9712aba3
-RMD160 (tryton-3.8/trytond_account_asset-3.8.0.tar.gz) = c154e6ee9a1af9aa6206b821270fca939f0b9ebf
-SHA512 (tryton-3.8/trytond_account_asset-3.8.0.tar.gz) = b2ec25a62e08ea4efd19deac8fefd248e8a6900aacbdcaeae36e85516a6206aac997508fc65a10331daf03a25de39491c40a1e80f08981d6d8a1aa1e61efdd9a
-Size (tryton-3.8/trytond_account_asset-3.8.0.tar.gz) = 69888 bytes
+SHA1 (tryton-4.2/trytond_account_asset-4.2.0.tar.gz) = 596cf7e2d3838d42755663f8ca4aec8913c5e0ab
+RMD160 (tryton-4.2/trytond_account_asset-4.2.0.tar.gz) = b3855442e3c8c2de4591b35905d1027bd86799a3
+SHA512 (tryton-4.2/trytond_account_asset-4.2.0.tar.gz) = 75097cbc0240a389841f160ab4d4d80598ffca768ff6b6b31a7e6d385b025b7e2187f7546164677722da8a3dfd90b415ec0773dce84febc14e59311eda2fc457
+Size (tryton-4.2/trytond_account_asset-4.2.0.tar.gz) = 75514 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/12/04 21:13:02 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_bank
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	finance python
@@ -9,9 +9,9 @@ COMMENT=	Bank module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=   ${PYPKGPREFIX}-stdnum-[0-9]*:../../misc/py-stdnum
-DEPENDS+=   ${PYPKGPREFIX}-trytond-currency-[0-9]*:../../finance/py-trytond-currency
-DEPENDS+=   ${PYPKGPREFIX}-trytond-party-[0-9]*:../../misc/py-trytond-party
-DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
+DEPENDS+=   ${PYPKGPREFIX}-trytond-currency>=${TRYTON_BASEVER}:../../finance/py-trytond-currency
+DEPENDS+=   ${PYPKGPREFIX}-trytond-party>=${TRYTON_BASEVER}:../../misc/py-trytond-party
+DEPENDS+=   ${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
