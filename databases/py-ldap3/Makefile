@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:12:59 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/04 23:12:58 rodent Exp $
 
 DISTNAME=	ldap3-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	${MASTER_SITE_PYPI:=l/ldap3}
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/ldap3/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/cannatag/ldap3
