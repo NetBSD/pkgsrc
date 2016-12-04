@@ -26,7 +26,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 	pkg := NewPackage("x11/9term")
 
 	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"DISTNAME=9term",
 		"CATEGORIES=x11"))
@@ -34,7 +34,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 	c.Check(s.Output(), equals, "")
 
 	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"DISTNAME=9term",
 		"CATEGORIES=x11",
@@ -114,7 +114,7 @@ func (s *Suite) Test_checkdirPackage(c *check.C) {
 
 func (s *Suite) Test_checkdirPackage__meta_package_without_license(c *check.C) {
 	s.CreateTmpFileLines(c, "Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"META_PACKAGE=\tyes")
 	G.CurrentDir = s.tmpdir
@@ -151,7 +151,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 		"# dummy")
 
 	s.CreateTmpFileLines(c, "category/pkgbase/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"COMMENT= Unit test",
 		"LICENSE= bsd-2",
