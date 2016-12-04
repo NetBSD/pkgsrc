@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2016/12/04 21:12:58 rodent Exp $
+# $NetBSD: Makefile,v 1.147 2016/12/04 22:02:00 rodent Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -98,7 +98,6 @@ SUBDIR+=	psiconv
 SUBDIR+=	pstotext
 SUBDIR+=	py-cairosvg
 SUBDIR+=	py-chardet
-SUBDIR+=	py-html2text
 SUBDIR+=	py-jpCodecs
 SUBDIR+=	py-simplejson
 SUBDIR+=	py-yenc
