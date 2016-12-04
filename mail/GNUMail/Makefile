@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2016/04/11 19:01:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2016/12/04 05:17:32 ryoon Exp $
 
 DISTNAME=	GNUMail-1.2.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 

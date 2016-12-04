@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2016/11/12 17:12:22 leot Exp $
+# $NetBSD: Makefile,v 1.15 2016/12/04 05:17:17 ryoon Exp $
 #
 
 DISTNAME=	glyr-1.0.10
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sahib/}
 
