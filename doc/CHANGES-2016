@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4898 2016/12/04 04:13:28 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4899 2016/12/04 07:27:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6707,3 +6707,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/hdf5-c++ to 1.8.18 [alnsn 2016-12-03]
 	Added devel/slibtool version 0.5.12 [wiedi 2016-12-03]
 	Updated textproc/icu to 58.1 [ryoon 2016-12-04]
+	Updated graphics/ruby-cairo to 1.15.3 [wiz 2016-12-04]
