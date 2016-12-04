@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:06 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = 796b4470c84dfd186a9abefa9a5a32ccabfe8a4d
+RMD160 (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = 88ac62c745daf7663490ed33bc033e10aeb6bf7e
+SHA512 (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = c7d2e9a87fd9e1905e9afb9347d342bf32bd89c21d0af208fb9afdfb6fa5cc2a8acd1d3e7a463de703057465dc42cda5e508dd15199b53448f594ed3bf51fa29
+Size (tryton-4.2/trytond_production_routing-4.2.0.tar.gz) = 25352 bytes
