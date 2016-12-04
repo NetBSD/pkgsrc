@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4900 2016/12/04 08:54:40 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4901 2016/12/04 10:03:24 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6709,3 +6709,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/icu to 58.1 [ryoon 2016-12-04]
 	Updated graphics/ruby-cairo to 1.15.3 [wiz 2016-12-04]
 	Updated devel/cmake to 3.7.1 [adam 2016-12-04]
+	Added converters/p5-Convert-Bencode version 1.03 [simonb 2016-12-04]
