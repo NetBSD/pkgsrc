@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2016/04/11 19:01:38 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2016/12/04 05:17:13 ryoon Exp $
 
 BUILDLINK_TREE+=	mono-xsp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	mono-xsp
 MONO_XSP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mono-xsp+=	mono-xsp>=2.0
-BUILDLINK_ABI_DEPENDS.mono-xsp+=	mono-xsp>=3.8nb2
+BUILDLINK_ABI_DEPENDS.mono-xsp+=	mono-xsp>=3.8nb3
 BUILDLINK_PKGSRCDIR.mono-xsp?=	../../www/mono-xsp
 
 .include "../../databases/sqlite3/buildlink3.mk"
