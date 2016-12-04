@@ -10,7 +10,7 @@ func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) 
 	s.UseCommandLine(c, "--autofix", "-Wspace")
 	tmpfile := s.CreateTmpFile(c, "fname.mk", "")
 	mklines := s.NewMkLines(tmpfile,
-		"# $"+"NetBSD$",
+		mkrcsid,
 		".if defined(A)",
 		".for a in ${A}",
 		".if defined(C)",
@@ -38,7 +38,7 @@ func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) 
 
 func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
 	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"echo: echo.c",
 		"\tcc -o ${.TARGET} ${.IMPSRC}")
@@ -63,7 +63,7 @@ func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 	G.globalData.InitVartypes()
 	G.Pkg = NewPackage("category/pkgbase")
 	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"GNU_CONFIGURE=\tyes",
 		"CONFIGURE_ENV+=\tX_LIBS=${X11_LDFLAGS:Q}")
 
@@ -77,7 +77,7 @@ func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 	s.UseCommandLine(c, "-Wspace")
 	fname := s.CreateTmpFileLines(c, "Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"VAR= \\", // In continuation lines, indenting with spaces is ok
 		"\tvalue",
@@ -151,7 +151,7 @@ func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 func (s *Suite) Test_MkLines__variable_alignment_space_and_tab(c *check.C) {
 	s.UseCommandLine(c, "-Wspace")
 	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"VAR=    space",
 		"VAR=\ttab ${VAR}")
@@ -167,7 +167,7 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 	s.RegisterTool(&Tool{Name: "find", Varname: "FIND", Predefined: true})
 	s.RegisterTool(&Tool{Name: "pax", Varname: "PAX", Predefined: true})
 	mklines := s.NewMkLines("audio/squeezeboxserver/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		".for _list_ _dir_ in ${SBS_COPY}",
 		"\tcd ${WRKSRC} && ${FIND} ${${_list_}} -type f ! -name '*.orig' 2>/dev/null "+
@@ -186,8 +186,10 @@ func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("databases/gdbm_compat/builtin.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		".if ${USE_BUILTIN.gdbm} == \"no\"",
+		".endif",
+		".if ${USE_BUILTIN.gdbm:tu} == \"no\"", // Can never be true, since "no" is not uppercase.
 		".endif")
 
 	mklines.Check()
@@ -200,7 +202,7 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("lang/qore/module.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"qore-version=\tqore --short-version | ${SED} -e s/-.*//",
 		"PLIST_SUBST+=\tQORE_VERSION=\"${qore-version:sh}\"")
 
@@ -221,7 +223,7 @@ func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("converters/wv2/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"CONFIGURE_ARGS+=\t\t${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}",
 		"CONFIGURE_ARGS.gnu-iconv=\t--with-libiconv=${BUILDLINK_PREFIX.iconv}")
 
@@ -234,7 +236,7 @@ func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("chat/xchat/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"GCONF_SCHEMAS=\tapps_xchat_url_handler.schemas",
 		"post-install:",
 		"\t${GCONF_SCHEMAS:@.s.@"+
@@ -251,7 +253,7 @@ func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
 func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"PKG_SKIP_REASON+=\t\"Fails everywhere\"",
 		".if ${OPSYS} == \"Cygwin\"",
 		"PKG_SKIP_REASON+=\t\"Fails on Cygwin\"",
@@ -266,7 +268,7 @@ func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	mklines := s.NewMkLines("net/uucp/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"post-configure:",
 		".for var in MAIL_PROGRAM CMDPATH",
@@ -316,7 +318,7 @@ func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *chec
 func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 	s.UseCommandLine(c, "--show-autofix")
 	s.NewMkLines("Makefile.common",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"# used by sysutils/mc",
 	).checkForUsedComment("sysutils/mc")
@@ -328,20 +330,20 @@ func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 	c.Check(s.Output(), equals, "")
 
 	s.NewMkLines("Makefile.common",
-		"# $"+"NetBSD$",
+		mkrcsid,
 	).checkForUsedComment("category/package")
 
 	c.Check(s.Output(), equals, "")
 
 	s.NewMkLines("Makefile.common",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 	).checkForUsedComment("category/package")
 
 	c.Check(s.Output(), equals, "")
 
 	s.NewMkLines("Makefile.common",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"VARNAME=\tvalue",
 	).checkForUsedComment("category/package")
@@ -351,7 +353,7 @@ func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 		"AUTOFIX: Makefile.common:2: Inserting a line \"# used by category/package\" before this line.\n")
 
 	s.NewMkLines("Makefile.common",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"#",
 		"#",
 	).checkForUsedComment("category/package")

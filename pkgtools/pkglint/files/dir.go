@@ -24,7 +24,7 @@ func CheckDirent(fname string) {
 	G.Infrastructure = matches(absCurrentDir, `/mk/|/mk$`)
 	G.CurPkgsrcdir = findPkgsrcTopdir(G.CurrentDir)
 	if G.CurPkgsrcdir == "" {
-		NewLineWhole(fname).Error1("Cannot determine the pkgsrc root directory for %q.", G.CurrentDir)
+		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", G.CurrentDir)
 		return
 	}
 
@@ -44,6 +44,6 @@ func CheckDirent(fname string) {
 	case ".":
 		CheckdirToplevel()
 	default:
-		NewLineWhole(fname).Error0("Cannot check directories outside a pkgsrc tree.")
+		NewLineWhole(fname).Errorf("Cannot check directories outside a pkgsrc tree.")
 	}
 }

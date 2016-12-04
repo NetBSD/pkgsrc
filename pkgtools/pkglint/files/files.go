@@ -9,11 +9,11 @@ import (
 func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 	lines, err := readLines(fname, joinContinuationLines)
 	if err != nil {
-		NewLineWhole(fname).Error0("Cannot be read.")
+		NewLineWhole(fname).Errorf("Cannot be read.")
 		return nil
 	}
 	if len(lines) == 0 {
-		NewLineWhole(fname).Error0("Must not be empty.")
+		NewLineWhole(fname).Errorf("Must not be empty.")
 		return nil
 	}
 	return lines
@@ -132,7 +132,7 @@ func convertToLogicalLines(fname string, rawText string, joinContinuationLines b
 	}
 
 	if 0 < len(rawLines) && !hasSuffix(rawLines[len(rawLines)-1].textnl, "\n") {
-		NewLineEOF(fname).Error0("File must end with a newline.")
+		NewLineEOF(fname).Errorf("File must end with a newline.")
 	}
 
 	return loglines
@@ -166,12 +166,12 @@ func SaveAutofixChanges(lines []*Line) (autofixed bool) {
 		}
 		err := ioutil.WriteFile(tmpname, []byte(text), 0666)
 		if err != nil {
-			NewLineWhole(tmpname).Error0("Cannot write.")
+			NewLineWhole(tmpname).Errorf("Cannot write.")
 			continue
 		}
 		err = os.Rename(tmpname, fname)
 		if err != nil {
-			NewLineWhole(fname).Error0("Cannot overwrite with auto-fixed content.")
+			NewLineWhole(fname).Errorf("Cannot overwrite with auto-fixed content.")
 			continue
 		}
 		msg := "Has been auto-fixed. Please re-run pkglint."
