@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2016/05/25 07:16:36 he Exp $
+$NetBSD: distinfo,v 1.112.4.1 2016/12/04 15:40:22 bsiegert Exp $
 
 SHA1 (libxml2-2.9.4.tar.gz) = 958ae70baf186263a4bd801a81dd5d682aedd1db
 RMD160 (libxml2-2.9.4.tar.gz) = bb59656e0683d64a38a2f1a45ca9d918837e1e56
@@ -10,6 +10,7 @@ SHA1 (patch-ac) = 34afe787f6012b460a85be993048e133907a1621
 SHA1 (patch-ad) = d65b7e3be9694147e96ce4bb70a1739e2279ba81
 SHA1 (patch-ae) = 4eede9719724f94402e850ee6d6043a74aaf62b2
 SHA1 (patch-encoding.c) = 6cf0a7d421828b9f40a4079ee85adb791c54d096
+SHA1 (patch-parseInternals.c) = dc58145943a4fb6368d848c0155d144b1f9b676c
 SHA1 (patch-runtest.c) = 759fcee959833b33d72e85108f7973859dcba1f6
 SHA1 (patch-testlimits.c) = 8cba18464b619469abbb8488fd950a32a567be7b
 SHA1 (patch-timsort.h) = e09118e7c99d53f71c28fe4d54269c4801244959
