@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4903 2016/12/04 19:04:34 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4904 2016/12/04 21:04:41 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6712,3 +6712,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added converters/p5-Convert-Bencode version 1.03 [simonb 2016-12-04]
 	Updated lang/go to 1.7.4 [bsiegert 2016-12-04]
 	Updated archivers/zstd to 1.1.1 [wiz 2016-12-04]
+	Updated security/fail2ban to 0.9.5 [nils 2016-12-04]
