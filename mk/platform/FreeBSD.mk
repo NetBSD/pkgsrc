@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.32 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: FreeBSD.mk,v 1.33 2016/12/04 15:37:41 bsiegert Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -63,6 +63,7 @@ SERIAL_DEVICES?=	/dev/cuaa0
 PKG_HAVE_KQUEUE=	# defined
 .endif
 
+_OPSYS_SUPPORTS_CWRAPPERS=	yes
 _OPSYS_CAN_CHECK_SHLIBS=	yes # use readelf in check/bsd.check-vars.mk
 
 # check for maximum command line length and set it in configure's environment,
