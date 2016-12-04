@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16750 2016/12/03 09:59:21 ryoon Exp $
+$NetBSD: TODO,v 1.16751 2016/12/04 04:13:28 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -902,7 +902,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o icedtea-web-1.6.2
 	o ices-mp3-2.0.2
 	o icinga-base-2.4.1
-	o icu-58.1 [do not update - https://mail-index.netbsd.org/tech-pkg/2016/10/23/msg017447.html]
 	o ike-2.0.1 [pkg/37032]
 	o imapfilter-2.6.5
 	o imapsync-1.678
