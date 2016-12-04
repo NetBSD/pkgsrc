@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:02 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_account_tax_rule_country-4.2.0.tar.gz) = fe24e9981430b3e39111fb6dba495a02d8e0ad75
+RMD160 (tryton-4.2/trytond_account_tax_rule_country-4.2.0.tar.gz) = f3010c857b728aea82cd20ef9562b9b34bcdc28d
+SHA512 (tryton-4.2/trytond_account_tax_rule_country-4.2.0.tar.gz) = 866a5f29ab6e5382dba77e867e30fea43821dac88e6ec13143e54ef923af20d5f013d78aafae28093c4ae2210b3192baf995ad3cd8e370f06596356bc854bc94
+Size (tryton-4.2/trytond_account_tax_rule_country-4.2.0.tar.gz) = 20417 bytes

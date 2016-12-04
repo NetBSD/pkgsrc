@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:03 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_purchase_requisition-4.2.0.tar.gz) = 5bd26b017f7874357cc8df57d99e2e5c042b2101
+RMD160 (tryton-4.2/trytond_purchase_requisition-4.2.0.tar.gz) = b9d34c9731a73dcbea617dafadcea5ef32db4c0e
+SHA512 (tryton-4.2/trytond_purchase_requisition-4.2.0.tar.gz) = b43ec871d5e76384102355ceaf71ae681f7afa89647f1203ac780de98f1dce7797b507b93991211c843af5e7e3b3fdaae7e901092fc774db7589a176d1b4ec6a
+Size (tryton-4.2/trytond_purchase_requisition-4.2.0.tar.gz) = 32135 bytes

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:08 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_stock_package_shipping_ups-4.2.0.tar.gz) = 108ce6e3fa1cee0240446b992475c10e52b6d4fb
+RMD160 (tryton-4.2/trytond_stock_package_shipping_ups-4.2.0.tar.gz) = 0aba370f97705822510c9097053de6435af964e3
+SHA512 (tryton-4.2/trytond_stock_package_shipping_ups-4.2.0.tar.gz) = edbad70ac74588473e8e7210894af45cff636e1206e5805e9d6ad1cd41d3b483539836289165d7d6f682934e9a59c6db4851bcde0eda091a646dfcc62a78791b
+Size (tryton-4.2/trytond_stock_package_shipping_ups-4.2.0.tar.gz) = 31484 bytes

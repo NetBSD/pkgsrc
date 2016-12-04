@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/22 08:05:09 richard Exp $
+$NetBSD: distinfo,v 1.4 2016/12/04 21:13:03 rodent Exp $
 
-SHA1 (tryton-3.8/trytond_purchase-3.8.0.tar.gz) = 6d164b4da67cc7614e290c161428795f3d802d15
-RMD160 (tryton-3.8/trytond_purchase-3.8.0.tar.gz) = f6a344b3736f0be9f0cf2a816072f956fcbca1d2
-SHA512 (tryton-3.8/trytond_purchase-3.8.0.tar.gz) = 1a4a3f46b6497e2bb54d14cd7600e981fa8f458f8b4ec63fe2923298fd63c79a5c69989aea68beca09a35c1e72766507ab5210e3cd2f0f1d724aca135f8ac27b
-Size (tryton-3.8/trytond_purchase-3.8.0.tar.gz) = 91234 bytes
+SHA1 (tryton-4.2/trytond_purchase-4.2.0.tar.gz) = 41616440815ff9dbbe43b0deaaef5ad55ed388b8
+RMD160 (tryton-4.2/trytond_purchase-4.2.0.tar.gz) = 8d2545a13b69f0e912a8eee6e3bec1f04468c1ae
+SHA512 (tryton-4.2/trytond_purchase-4.2.0.tar.gz) = 3d762e9ae935695b839d922daefe9cef23269fd7e3b32ceb196674542c0460f1cac5b27469d654a9c76760edebd5dae54ddebf1bc01b15ec135766adc1fa7969
+Size (tryton-4.2/trytond_purchase-4.2.0.tar.gz) = 95101 bytes

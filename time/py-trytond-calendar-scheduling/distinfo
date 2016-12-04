@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:08 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_calendar_scheduling-4.2.0.tar.gz) = 8da252c535310cfee05ab3f9c1ad033a3d8609f3
+RMD160 (tryton-4.2/trytond_calendar_scheduling-4.2.0.tar.gz) = b5185a05a76111f16fdf8f1c82b9c67c9440b681
+SHA512 (tryton-4.2/trytond_calendar_scheduling-4.2.0.tar.gz) = 87ee74dc21ceff1c24078d39e533e773a4d8671f81cb18122e9b8c7e52b7c52420ce42d0452b65464c5220275705087b40115d61ac3f19cb0008e8a034893f9a
+Size (tryton-4.2/trytond_calendar_scheduling-4.2.0.tar.gz) = 29743 bytes
