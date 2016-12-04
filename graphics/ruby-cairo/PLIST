@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/11 23:46:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/12/04 07:26:55 wiz Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 ${GEM_EXTSDIR}/cairo.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/rb_cairo.h
@@ -79,6 +78,7 @@ ${GEM_LIBDIR}/test/test_font_face.rb
 ${GEM_LIBDIR}/test/test_font_options.rb
 ${GEM_LIBDIR}/test/test_image_surface.rb
 ${GEM_LIBDIR}/test/test_paper.rb
+${GEM_LIBDIR}/test/test_pdf_surface.rb
 ${GEM_LIBDIR}/test/test_quartz_image_surface.rb
 ${GEM_LIBDIR}/test/test_raster_source_pattern.rb
 ${GEM_LIBDIR}/test/test_recording_surface.rb
@@ -87,9 +87,11 @@ ${GEM_LIBDIR}/test/test_scaled_font.rb
 ${GEM_LIBDIR}/test/test_script_device.rb
 ${GEM_LIBDIR}/test/test_script_surface.rb
 ${GEM_LIBDIR}/test/test_surface.rb
+${GEM_LIBDIR}/test/test_svg_surface.rb
 ${GEM_LIBDIR}/test/test_tee_surface.rb
 ${GEM_LIBDIR}/test/test_text_cluster.rb
 ${GEM_LIBDIR}/test/test_text_extents.rb
 ${GEM_LIBDIR}/test/test_text_to_glyphs_data.rb
 ${GEM_LIBDIR}/test/test_xml_device.rb
 ${GEM_LIBDIR}/test/test_xml_surface.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
