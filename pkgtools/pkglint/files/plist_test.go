@@ -178,6 +178,16 @@ func (s *Suite) TestPlistChecker_checkpath__PKGMANDIR(c *check.C) {
 	c.Check(s.Output(), equals, "NOTE: PLIST:2: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".\n")
 }
 
+func (s *Suite) TestPlistChecker_checkpath__python_egg(c *check.C) {
+	lines := s.NewLines("PLIST",
+		"@comment $"+"NetBSD$",
+		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO")
+
+	ChecklinesPlist(lines)
+
+	c.Check(s.Output(), equals, "WARN: PLIST:2: Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.\n")
+}
+
 func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 
