@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4908 2016/12/04 22:02:00 rodent Exp $
+$NetBSD: CHANGES-2016,v 1.4909 2016/12/04 23:00:25 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6828,3 +6828,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/py-trytond-stock-product-location to 4.2.0 [rodent 2016-12-04]
 	Updated time/py-trytond-calendar to 4.2.0 [rodent 2016-12-04]
 	Updated time/py-trytond-company-work-time to 4.2.0 [rodent 2016-12-04]
+	Updated sysutils/ncdu to 1.12 [wiedi 2016-12-04]
