@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.extras,v 1.2 2015/12/13 17:20:21 taca Exp $
+@comment $NetBSD: PLIST.extras,v 1.2.8.1 2016/12/04 15:21:07 bsiegert Exp $
 share/examples/php/mecab/allmorphs-func.php
 share/examples/php/mecab/allmorphs-ns.php
 share/examples/php/mecab/allmorphs-oo.php
@@ -16,6 +16,7 @@ share/examples/php/mecab/format-ns.php
 share/examples/php/mecab/format-ns2.php
 share/examples/php/mecab/format-oo.php
 share/examples/php/mecab/format-oo2.php
+share/examples/php/mecab.ini
 share/examples/php/mecab/nbest-func.php
 share/examples/php/mecab/nbest-ns.php
 share/examples/php/mecab/nbest-oo.php
