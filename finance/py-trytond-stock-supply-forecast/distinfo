@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:13:04 rodent Exp $
+
+SHA1 (tryton-4.2/trytond_stock_supply_forecast-4.2.0.tar.gz) = fe62cb698e953e9fbe391b3b429407b7fb31adfd
+RMD160 (tryton-4.2/trytond_stock_supply_forecast-4.2.0.tar.gz) = 55703264e2971449f0db937c91f988d407abba3b
+SHA512 (tryton-4.2/trytond_stock_supply_forecast-4.2.0.tar.gz) = 5fbf1c7fa7b60801af8ef13935fcf8feb72a28a3334352c6b0c6262951f98f94d79281d3414411ae32997cadda9147a3ed6b495d60d5dc1fd23a123103c60050
+Size (tryton-4.2/trytond_stock_supply_forecast-4.2.0.tar.gz) = 17143 bytes

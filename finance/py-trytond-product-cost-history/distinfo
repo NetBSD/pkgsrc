@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/22 08:05:09 richard Exp $
+$NetBSD: distinfo,v 1.4 2016/12/04 21:13:02 rodent Exp $
 
-SHA1 (tryton-3.8/trytond_product_cost_history-3.8.0.tar.gz) = f4088029d826c1ba12cd3343a0b3077b6bdb24f0
-RMD160 (tryton-3.8/trytond_product_cost_history-3.8.0.tar.gz) = e0456d368694eeb9c778755e6ae0be53329086ef
-SHA512 (tryton-3.8/trytond_product_cost_history-3.8.0.tar.gz) = 3b3fb830df376d7d58655224b578062201da9eddcd83eb22241c6127cf07ffb92019bbd9ed7852ab891f72750bf6b14cf2f83ed49afc2e0817100770ccd766c3
-Size (tryton-3.8/trytond_product_cost_history-3.8.0.tar.gz) = 21304 bytes
+SHA1 (tryton-4.2/trytond_product_cost_history-4.2.0.tar.gz) = 5d7b724bad1a338e1e27266cb4db1a03d9565223
+RMD160 (tryton-4.2/trytond_product_cost_history-4.2.0.tar.gz) = 1e06f18102c533562f6b19bbc3c9fca056075e1d
+SHA512 (tryton-4.2/trytond_product_cost_history-4.2.0.tar.gz) = 75790f25c00e39a0607edd9c7c48aba4cd425834e7b6358778db156f0ac91c2793cf4a7bd40fda03d4ee02f88ad8840a1fc618f8f45127c9262791bca371508b
+Size (tryton-4.2/trytond_product_cost_history-4.2.0.tar.gz) = 21824 bytes

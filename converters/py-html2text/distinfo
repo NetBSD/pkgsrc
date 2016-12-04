@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 21:12:59 rodent Exp $
+
+SHA1 (html2text-2016.9.19.tar.gz) = d0ad27c5d7e27472339c357669b56fd846c5e85e
+RMD160 (html2text-2016.9.19.tar.gz) = dac3afaeb4213a2fd34fc129e235d2c6c98ca8b9
+SHA512 (html2text-2016.9.19.tar.gz) = cbc67f2815c20bfed84bfdff1c44ac3f4d6cbeb5e5b62adaf08b485fb2c886605b7f8a9f85f420e1158117194e7aa3de064aaef5ca018f5c81d15ebf5065b061
+Size (html2text-2016.9.19.tar.gz) = 47899 bytes

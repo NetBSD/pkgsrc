@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/22 08:05:07 richard Exp $
+$NetBSD: distinfo,v 1.5 2016/12/04 21:12:59 rodent Exp $
 
-SHA1 (tryton-3.8/proteus-3.8.0.tar.gz) = 18a47cf46544d4971d68a1e14a350ebe4de86cbf
-RMD160 (tryton-3.8/proteus-3.8.0.tar.gz) = 6f76cd3f255c4c134d8295c6738236271935f7ea
-SHA512 (tryton-3.8/proteus-3.8.0.tar.gz) = d448ad9a535a2cb70181777b19da65e488ef2eeed5d9f09ef12b95877984305dbdb4ae02571de7679454d247b31080ec703b6be35db0699a2e76106ef6578b96
-Size (tryton-3.8/proteus-3.8.0.tar.gz) = 37154 bytes
+SHA1 (tryton-4.2/proteus-4.2.0.tar.gz) = 0d3bb9b5b129cdfb9d5907b9d9a3532a143d8327
+RMD160 (tryton-4.2/proteus-4.2.0.tar.gz) = 1c66511574067c94abffbaaf399f26e200e5a44b
+SHA512 (tryton-4.2/proteus-4.2.0.tar.gz) = 9bafbcb7cab43a6624dc70933efe2267e72cdd788c6dd87a1d4673ffde3c96b39ab99f430133ed10c69d563ce023bca3dbe74694c56d867d13774b44ffea47cf
+Size (tryton-4.2/proteus-4.2.0.tar.gz) = 37393 bytes

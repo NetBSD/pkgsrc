@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/22 08:05:10 richard Exp $
+$NetBSD: distinfo,v 1.7 2016/12/04 21:13:05 rodent Exp $
 
-SHA1 (tryton-3.8/trytond_country-3.8.0.tar.gz) = bc476d86d7648b10a4faaacdd3c9df729d1332b6
-RMD160 (tryton-3.8/trytond_country-3.8.0.tar.gz) = 0e1b20e10702614efecf94c42bfca320493003b3
-SHA512 (tryton-3.8/trytond_country-3.8.0.tar.gz) = 2f0ab41d29730334431cfdfcf0ad32893dd955309892b61e3e9afc964446b44f7c68ccac892565e4b65847f1a4f0b7fd2c5b8dc8f82c520906564fece1566ed8
-Size (tryton-3.8/trytond_country-3.8.0.tar.gz) = 1334482 bytes
+SHA1 (tryton-4.2/trytond_country-4.2.0.tar.gz) = c8a3fb220fe40f55e43e0eecd0d5b43e30528571
+RMD160 (tryton-4.2/trytond_country-4.2.0.tar.gz) = 622dad336616e7b91604ac64915d3ceaf6a1cf51
+SHA512 (tryton-4.2/trytond_country-4.2.0.tar.gz) = c9e267d69409fe7a2925b0819a92f5a1ee1978989efe05a7ed5b409ae1e3547769295788088ccddd28a667d06c15b9dd11dbb653e05b9a9e63eb0b97687a2a03
+Size (tryton-4.2/trytond_country-4.2.0.tar.gz) = 1362126 bytes

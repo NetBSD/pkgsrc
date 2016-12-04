@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/08/24 14:49:44 richard Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/04 21:13:08 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_stock_product_location
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	misc python
@@ -8,9 +8,9 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Stock product location module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-trytond-product-[0-9]*:../../misc/py-trytond-product
-DEPENDS+=	${PYPKGPREFIX}-trytond-stock-[0-9]*:../../misc/py-trytond-stock
-DEPENDS+=	${PYPKGPREFIX}-trytond-[0-9]*:../../devel/py-trytond
+DEPENDS+=	${PYPKGPREFIX}-trytond-product>=${TRYTON_BASEVER}:../../misc/py-trytond-product
+DEPENDS+=	${PYPKGPREFIX}-trytond-stock>=${TRYTON_BASEVER}:../../misc/py-trytond-stock
+DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 

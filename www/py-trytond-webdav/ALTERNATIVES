@@ -1,0 +1,1 @@
+bin/trytond-webdav @PREFIX@/bin/trytond-webdav@PYVERSSUFFIX@

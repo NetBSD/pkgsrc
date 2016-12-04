@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:13:00 rodent Exp $
+${PYSITELIB}/trytond/modules/account_de_skr03/__init__.py
+${PYSITELIB}/trytond/modules/account_de_skr03/__init__.pyc
+${PYSITELIB}/trytond/modules/account_de_skr03/__init__.pyo
+${PYSITELIB}/trytond/modules/account_de_skr03/account_de.xml
+${PYSITELIB}/trytond/modules/account_de_skr03/tests/__init__.py
+${PYSITELIB}/trytond/modules/account_de_skr03/tests/__init__.pyc
+${PYSITELIB}/trytond/modules/account_de_skr03/tests/__init__.pyo
+${PYSITELIB}/trytond/modules/account_de_skr03/tests/test_account_de_skr03.py
+${PYSITELIB}/trytond/modules/account_de_skr03/tests/test_account_de_skr03.pyc
+${PYSITELIB}/trytond/modules/account_de_skr03/tests/test_account_de_skr03.pyo
+${PYSITELIB}/trytond/modules/account_de_skr03/tryton.cfg
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
