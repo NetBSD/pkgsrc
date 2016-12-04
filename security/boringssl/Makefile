@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/10/29 08:59:48 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2016/12/04 16:30:00 bsiegert Exp $
 
 DISTNAME=	boringssl-20151230
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
