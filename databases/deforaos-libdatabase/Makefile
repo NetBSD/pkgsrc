@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2016/10/09 21:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/12/04 05:17:20 ryoon Exp $
 
 DISTNAME=	libDatabase-0.0.1
 PKGNAME=	deforaos-libdatabase-0.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.defora.org/os/download/download/4373/
 
