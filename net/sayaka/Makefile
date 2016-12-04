@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/11/26 10:02:27 tsutsui Exp $
+# $NetBSD: Makefile,v 1.8 2016/12/04 04:22:24 tsutsui Exp $
 
 DISTNAME=	sayaka-3.3.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=isaki68k/}
 GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
@@ -16,12 +17,6 @@ USE_TOOLS+=	gmake pax pkg-config
 INSTALLATION_DIRS+=	bin share/sayaka
 
 .include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=		prefix
-SUBST_MESSAGE.prefix=	Fixing ${PREFIX}
-SUBST_STAGE.prefix=	pre-configure
-SUBST_FILES.prefix=	vala/sayaka.vala
-SUBST_SED.prefix=	-e 's,@PREFIX@,${PREFIX},g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vala/sayaka ${DESTDIR}${PREFIX}/bin
