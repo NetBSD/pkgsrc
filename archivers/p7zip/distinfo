@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.50 2016/07/19 08:26:10 mef Exp $
+$NetBSD: distinfo,v 1.50.2.1 2016/12/04 15:28:33 bsiegert Exp $
 
 SHA1 (p7zip_16.02_src_all.tar.bz2) = e8819907132811aa1afe5ef296181d3a15cc8f22
 RMD160 (p7zip_16.02_src_all.tar.bz2) = 03550898e45b3eabe4ea0df5ee3787bd8f179fd0
 SHA512 (p7zip_16.02_src_all.tar.bz2) = d2c4d53817f96bb4c7683f42045198d4cd509cfc9c3e2cb85c8d9dc4ab6dfa7496449edeac4e300ecf986a9cbbc90bd8f8feef8156895d94617c04e507add55f
 Size (p7zip_16.02_src_all.tar.bz2) = 4239909 bytes
+SHA1 (patch-CPP_7zip_Archive_7z_7zIn.cpp) = cce409d45be6ae8e96314dad1c51d9feb09bc817
 SHA1 (patch-CPP_Windows_DLL.cpp) = 12fb3f3cf4d32b8848f741dde6bcb0e56a9c6745
 SHA1 (patch-aa) = 9c103fa831cc6ff099e3a604c763ff416f1b48ec
 SHA1 (patch-ab) = c680fb037b9ef5e19e4c8dc71dd710598277a61b
