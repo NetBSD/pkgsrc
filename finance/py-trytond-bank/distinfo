@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/22 08:05:09 richard Exp $
+$NetBSD: distinfo,v 1.6 2016/12/04 21:13:02 rodent Exp $
 
-SHA1 (tryton-3.8/trytond_bank-3.8.0.tar.gz) = fba6bdd00b89b7879f75df56d9e403d3b956b7d2
-RMD160 (tryton-3.8/trytond_bank-3.8.0.tar.gz) = 3dc78944da6d821ea9db7817cd1957d92828a559
-SHA512 (tryton-3.8/trytond_bank-3.8.0.tar.gz) = 49c1865e34046ebce8bff623163612e2512ae37a7a1b3cbb638f6b13630bdf8ec2b9027902e84bc79d06c1b09e86e39246a76d0fcb8fbd1e27c017b6cfecebcf
-Size (tryton-3.8/trytond_bank-3.8.0.tar.gz) = 27104 bytes
+SHA1 (tryton-4.2/trytond_bank-4.2.0.tar.gz) = 50c282a25fe63cf63f3b59d1fd43b6361cf67474
+RMD160 (tryton-4.2/trytond_bank-4.2.0.tar.gz) = c34981c691cb913c32d3749a9f49664ee83a08e6
+SHA512 (tryton-4.2/trytond_bank-4.2.0.tar.gz) = 34e23759ffd398212b571b8d6842e1192b40b6446c1b3c89503cc3ad052b95e610502f6c7a3da7676cc455cbac0ebaeeb3fdda1134bd52f2b4e4f673cceb7689
+Size (tryton-4.2/trytond_bank-4.2.0.tar.gz) = 28127 bytes
