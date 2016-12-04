@@ -37,11 +37,11 @@ func CheckdirToplevel() {
 
 func (ctx *Toplevel) checkSubdir(line *Line, commentedOut bool, indentation, subdir, comment string) {
 	if commentedOut && comment == "" {
-		line.Warn1("%q commented out without giving a reason.", subdir)
+		line.Warnf("%q commented out without giving a reason.", subdir)
 	}
 
 	if indentation != "\t" {
-		line.Warn0("Indentation should be a single tab character.")
+		line.Warnf("Indentation should be a single tab character.")
 	}
 
 	if contains(subdir, "$") || !fileExists(G.CurrentDir+"/"+subdir+"/Makefile") {
@@ -53,11 +53,11 @@ func (ctx *Toplevel) checkSubdir(line *Line, commentedOut bool, indentation, sub
 	case subdir > prev:
 		// Correctly ordered
 	case subdir == prev:
-		line.Error0("Each subdir must only appear once.")
+		line.Errorf("Each subdir must only appear once.")
 	case subdir == "archivers" && prev == "x11":
 		// This exception is documented in the top-level Makefile.
 	default:
-		line.Warn2("%s should come before %s", subdir, prev)
+		line.Warnf("%s should come before %s", subdir, prev)
 	}
 	ctx.previousSubdir = subdir
 

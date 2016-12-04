@@ -59,7 +59,7 @@ func (p *MkParser) VarUse() *MkVarUse {
 		varname := p.Varname()
 		if varname != "" {
 			if usingRoundParen && p.EmitWarnings {
-				p.Line.Warn1("Please use curly braces {} instead of round parentheses () for %s.", varname)
+				p.Line.Warnf("Please use curly braces {} instead of round parentheses () for %s.", varname)
 			}
 			modifiers := p.VarUseModifiers(varname, closing)
 			if repl.AdvanceStr(closing) {
@@ -89,7 +89,7 @@ func (p *MkParser) VarUse() *MkVarUse {
 	if repl.PeekByte() == '$' && repl.AdvanceRegexp(`^\$(\w)`) {
 		varname := repl.m[1]
 		if p.EmitWarnings {
-			p.Line.Warn1("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Makefile variable or $$%[1]s if you mean a shell variable.", varname)
+			p.Line.Warnf("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Makefile variable or $$%[1]s if you mean a shell variable.", varname)
 		}
 		return &MkVarUse{varname, nil}
 	}
@@ -158,7 +158,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 				for p.VarUse() != nil || repl.AdvanceRegexp(RegexPattern(`^([^$:@`+closing+`\\]|\$\$|\\.)+`)) {
 				}
 				if !repl.AdvanceStr("@") && p.EmitWarnings {
-					p.Line.Warn2("Modifier ${%s:@%s@...@} is missing the final \"@\".", varname, loopvar)
+					p.Line.Warnf("Modifier ${%s:@%s@...@} is missing the final \"@\".", varname, loopvar)
 				}
 				modifiers = append(modifiers, repl.Since(modifierMark))
 				continue

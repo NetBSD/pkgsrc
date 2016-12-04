@@ -35,7 +35,7 @@ type GlobalVars struct {
 	logErr                io.Writer
 	debugOut              io.Writer
 
-	res       map[string]*regexp.Regexp // Compiled regular expressions
+	res       map[RegexPattern]*regexp.Regexp // Compiled regular expressions
 	rematch   *Histogram
 	renomatch *Histogram
 	retime    *Histogram // Total time taken by matching a regular expression

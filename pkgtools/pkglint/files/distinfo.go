@@ -48,7 +48,7 @@ type distinfoLinesChecker struct {
 func (ck *distinfoLinesChecker) checkLines(lines []*Line) {
 	lines[0].CheckRcsid(``, "")
 	if 1 < len(lines) && lines[1].Text != "" {
-		lines[1].Note0("Empty line expected.")
+		lines[1].Notef("Empty line expected.")
 	}
 
 	for i, line := range lines {
@@ -57,7 +57,7 @@ func (ck *distinfoLinesChecker) checkLines(lines []*Line) {
 		}
 		m, alg, filename, hash := match3(line.Text, `^(\w+) \((\w[^)]*)\) = (.*)(?: bytes)?$`)
 		if !m {
-			line.Error0("Invalid line.")
+			line.Errorf("Invalid line.")
 			continue
 		}
 
@@ -78,10 +78,10 @@ func (ck *distinfoLinesChecker) onFilenameChange(line *Line, nextFname string) {
 		algorithms := strings.Join(ck.algorithms, ", ")
 		if ck.isPatch {
 			if algorithms != "SHA1" {
-				line.Error2("Expected SHA1 hash for %s, got %s.", currentFname, algorithms)
+				line.Errorf("Expected SHA1 hash for %s, got %s.", currentFname, algorithms)
 			}
 		} else if hasPrefix(currentFname, "patch-") && algorithms == "SHA1" {
-			ck.currentFirstLine.Warn2("Patch file %q does not exist in directory %q.", currentFname, cleanpath(ck.patchdir))
+			ck.currentFirstLine.Warnf("Patch file %q does not exist in directory %q.", currentFname, cleanpath(ck.patchdir))
 			Explain(
 				"If the patches directory looks correct, the patch may have been",
 				"removed without updating the distinfo file.  In such a case please",
@@ -89,7 +89,7 @@ func (ck *distinfoLinesChecker) onFilenameChange(line *Line, nextFname string) {
 				"",
 				"If the patches directory looks wrong, pkglint needs to be improved.")
 		} else if algorithms != "SHA1, RMD160, Size" && algorithms != "SHA1, RMD160, SHA512, Size" {
-			line.Error2("Expected SHA1, RMD160, SHA512, Size checksums for %q, got %s.", currentFname, algorithms)
+			line.Errorf("Expected SHA1, RMD160, SHA512, Size checksums for %q, got %s.", currentFname, algorithms)
 		}
 	}
 
@@ -102,7 +102,7 @@ func (ck *distinfoLinesChecker) onFilenameChange(line *Line, nextFname string) {
 func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFname, distinfoSha1Hex string) {
 	patchBytes, err := ioutil.ReadFile(G.CurrentDir + "/" + patchFname)
 	if err != nil {
-		line.Error1("%s does not exist.", patchFname)
+		line.Errorf("%s does not exist.", patchFname)
 		return
 	}
 
@@ -158,7 +158,7 @@ func (ck *distinfoLinesChecker) checkUncommittedPatch(line *Line, patchName, sha
 	if ck.isPatch {
 		patchFname := ck.patchdir + "/" + patchName
 		if ck.distinfoIsCommitted && !isCommitted(G.CurrentDir+"/"+patchFname) {
-			line.Warn1("%s is registered in distinfo but not added to CVS.", patchFname)
+			line.Warnf("%s is registered in distinfo but not added to CVS.", patchFname)
 		}
 		ck.checkPatchSha1(line, patchFname, sha1Hash)
 		ck.patches[patchName] = true

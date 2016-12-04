@@ -70,7 +70,7 @@ func (s *Suite) Test_Line_show_autofix_AutofixReplace(c *check.C) {
 		29, "after\n"))
 
 	if !line.AutofixReplace("old", "new") {
-		line.Warn0("Using \"old\" is deprecated.")
+		line.Warnf("Using \"old\" is deprecated.")
 	}
 
 	c.Check(s.Output(), equals, ""+
@@ -88,7 +88,7 @@ func (s *Suite) Test_Line_show_autofix_AutofixInsertBefore(c *check.C) {
 	line := NewLine("Makefile", 30, "original", s.NewRawLines(30, "original\n"))
 
 	if !line.AutofixInsertBefore("inserted") {
-		line.Warn0("Dummy")
+		line.Warnf("Dummy")
 	}
 
 	c.Check(s.Output(), equals, ""+
@@ -104,7 +104,7 @@ func (s *Suite) Test_Line_show_autofix_AutofixDelete(c *check.C) {
 	line := NewLine("Makefile", 30, "to be deleted", s.NewRawLines(30, "to be deleted\n"))
 
 	if !line.AutofixDelete() {
-		line.Warn0("Dummy")
+		line.Warnf("Dummy")
 	}
 
 	c.Check(s.Output(), equals, ""+

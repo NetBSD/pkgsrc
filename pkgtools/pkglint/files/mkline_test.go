@@ -323,7 +323,7 @@ func (s *Suite) Test_MkLine_checkVarassign(c *check.C) {
 	G.globalData.InitVartypes()
 
 	G.Mk = s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"ac_cv_libpari_libs+=\t-L${BUILDLINK_PREFIX.pari}/lib") // From math/clisp-pari/Makefile, rev. 1.8
 
 	G.Mk.mklines[1].checkVarassign()
@@ -375,7 +375,7 @@ func (s *Suite) Test_MkLine_CheckVarusePermissions(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("options.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"COMMENT=\t${GAMES_USER}",
 		"COMMENT:=\t${PKGBASE}",
 		"PYPKGPREFIX=${PKGBASE}")
@@ -397,7 +397,7 @@ func (s *Suite) Test_MkLine_CheckVarusePermissions__load_time(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("options.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"WRKSRC:=${.CURDIR}")
 
 	mklines.Check()
@@ -418,7 +418,7 @@ func (s *Suite) Test_MkLines_Check__extra(c *check.C) {
 	G.globalData.InitVartypes()
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Mk = s.NewMkLines("options.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		".for word in ${PKG_FAIL_REASON}",
 		"PYTHON_VERSIONS_ACCEPTED=\t27 35 30",
 		"CONFIGURE_ARGS+=\t--sharedir=${PREFIX}/share/kde",
@@ -529,7 +529,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_command(c *check.C)
 	s.RegisterTool(&Tool{Name: "sort", Varname: "SORT", Predefined: true})
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Mk = s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"GENERATE_PLIST= cd ${DESTDIR}${PREFIX}; ${FIND} * \\( -type f -or -type l \\) | ${SORT};")
 
 	G.Mk.determineDefinedVariables()
@@ -543,7 +543,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__word_as_part_of_word(c *check.
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"EGDIR=\t${EGDIR}/${MACHINE_GNU_PLATFORM}")
 
 	G.Mk.mklines[1].Check()
@@ -563,7 +563,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_as_command_argument(c 
 	s.RegisterTool(&Tool{Name: "bash", Varname: "BASH", Predefined: true})
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"\t${RUN} cd ${WRKSRC} && ( ${ECHO} ${PERL5:Q} ; ${ECHO} ) | ${BASH} ./install",
 		"\t${RUN} cd ${WRKSRC} && ( ${ECHO} ${PERL5} ; ${ECHO} ) | ${BASH} ./install")
 
@@ -580,7 +580,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__URL_as_part_of_word_in_list(c 
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"MASTER_SITES=${HOMEPAGE}archive/")
 
 	G.Mk.mklines[1].Check()
@@ -599,7 +599,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_subshell(c *check.C
 	s.RegisterTool(&Tool{Name: "awk", Varname: "AWK", Predefined: true})
 	s.RegisterTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
 	G.Mk = s.NewMkLines("xpi.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"\t id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"",
 		"\t id=`${AWK} '{print}' < ${WRKSRC}/idfile` && echo \"$$id\"")
 
@@ -616,7 +616,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__LDFLAGS_in_single_quotes(c *ch
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("x11/mlterm/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"SUBST_SED.link=-e 's|(LIBTOOL_LINK).*(LIBS)|& ${LDFLAGS:M*:Q}|g'",
 		"SUBST_SED.link=-e 's|(LIBTOOL_LINK).*(LIBS)|& '${LDFLAGS:M*:Q}'|g'")
 
@@ -631,7 +631,7 @@ func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
 	s.RegisterMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("devel/catch/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"HOMEPAGE=\t${MASTER_SITE_GITHUB:=philsquared/Catch/}",
 		"HOMEPAGE=\t${MASTER_SITE_GITHUB}",
 		"HOMEPAGE=\t${MASTER_SITES}",
@@ -652,7 +652,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_quotes_in_subshell_in_
 	s.RegisterTool(&Tool{Name: "sh", Varname: "SH", Predefined: true})
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("x11/labltk/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"CONFIGURE_ARGS+=\t-tklibs \"`${SH} -c '${ECHO} $$TK_LD_FLAGS'`\"")
 
 	G.Mk.mklines[1].Check()
@@ -687,7 +687,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_guessed_list_variable_in_quotes
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("audio/jack-rack/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"LADSPA_PLUGIN_PATH?=\t${PREFIX}/lib/ladspa",
 		"CPPFLAGS+=\t\t-DLADSPA_PATH=\"\\\"${LADSPA_PLUGIN_PATH}\\\"\"")
 
@@ -700,7 +700,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_list_in_list(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("x11/eterm/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"DISTFILES=\t${DEFAULT_DISTFILES} ${PIXMAP_FILES}")
 
 	G.Mk.Check()
@@ -713,7 +713,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_PKGNAME_and_URL_list_in_URL_lis
 	s.RegisterMasterSite("MASTER_SITE_GNOME", "http://ftp.gnome.org/")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("x11/gtk3/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"MASTER_SITES=\tftp://ftp.gtk.org/${PKGNAME}/ ${MASTER_SITE_GNOME:=subdir/}")
 
 	G.Mk.mklines[1].checkVarassignVaruse()
@@ -728,7 +728,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_tool_in_CONFIGURE_ENV(c *check.
 	G.globalData.Tools.RegisterVarname("tar", "TAR")
 
 	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"CONFIGURE_ENV+=\tSYS_TAR_COMMAND_PATH=${TOOLS_TAR:Q}")
 
@@ -754,7 +754,7 @@ func (s *Suite) Test_MkLine_CheckCond_comparison_with_shell_command(c *check.C) 
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("security/openssl/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		".if ${PKGSRC_COMPILER} == \"gcc\" && ${CC} == \"cc\"",
 		".endif")
 
@@ -781,7 +781,7 @@ func (s *Suite) Test_MkLine_Pkgmandir(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("chat/ircII/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"CONFIGURE_ARGS+=--mandir=${DESTDIR}${PREFIX}/man",
 		"CONFIGURE_ARGS+=--mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}")
 
@@ -794,7 +794,7 @@ func (s *Suite) Test_MkLine_Check_CFLAGS_with_backticks(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("chat/pidgin-icb/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"CFLAGS+=\t`pkg-config pidgin --cflags`")
 	mkline := G.Mk.mklines[1]
 
@@ -812,7 +812,7 @@ func (s *Suite) Test_MkLine_Check_VERSION_as_wordpart_in_MASTER_SITES(c *check.C
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("geography/viking/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"MASTER_SITES=\t${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/")
 
 	mklines.Check()
@@ -825,7 +825,7 @@ func (s *Suite) Test_MkLine_Check_shell_command_as_wordpart_in_ENV_list(c *check
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("x11/lablgtk1/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"CONFIGURE_ENV+=\tCC=${CC}")
 
 	mklines.Check()
@@ -839,7 +839,7 @@ func (s *Suite) Test_MkLine_shell_varuse_in_backt_dquot(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("x11/motif/Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"post-patch:",
 		"\tfiles=`${GREP} -l \".fB$${name}.fP(3)\" *.3`")
 
@@ -863,7 +863,7 @@ func (s *Suite) Test_MkLine_getVariableType(c *check.C) {
 func (s *Suite) Test_MkLine_CheckVartype_CFLAGS(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"CPPFLAGS.SunOS+=\t-DPIPECOMMAND=\\\"/usr/sbin/sendmail -bs %s\\\"")
 
 	mklines.Check()

@@ -7,7 +7,7 @@ import (
 func (s *Suite) Test_ChecklinesBuildlink3Mk(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"# XXX This file was created automatically using createbuildlink-@PKGVERSION@",
 		"",
 		"BUILDLINK_TREE+=        Xbae",
@@ -43,7 +43,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch(c *check.C) {
 	G.Pkg.EffectivePkgbase = "X11"
 	G.Pkg.EffectivePkgnameLine = NewMkLine(NewLine("Makefile", 3, "DISTNAME=\tX11-1.0", nil))
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\ths-X11",
 		"",
@@ -65,7 +65,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_multiple_inclusion(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\tpkgbase1",
 		"",
@@ -86,7 +86,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_multiple_inclusion(c *
 func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_abi_api(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\ths-X11",
 		"",
@@ -108,7 +108,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_abi_api(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_abi_api_versions(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\ths-X11",
 		"",
@@ -131,7 +131,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_abi_api_versions(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_beginning(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		".if !defined(HS_X11_BUILDLINK3_MK)",
 		"HS_X11_BUILDLINK3_MK:=",
@@ -152,7 +152,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_beginning(c *ch
 func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_end(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_DEPMETHOD.hs-X11?=\tfull",
 		"",
@@ -179,7 +179,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_end(c *check.C)
 func (s *Suite) Test_ChecklinesBuildlink3Mk_multiple_inclusion_wrong(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\ths-X11",
 		"",
@@ -196,7 +196,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_multiple_inclusion_wrong(c *check.C)
 func (s *Suite) Test_ChecklinesBuildlink3Mk_missing_endif(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\tpkgbase1",
 		"",
@@ -211,7 +211,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_missing_endif(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_unknown_dependency_patterns(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+= hs-X11",
 		"",
@@ -236,7 +236,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_unknown_dependency_patterns(c *check
 func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_variable(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\t${PYPKGPREFIX}-wxWidgets",
 		"",
@@ -258,7 +258,7 @@ func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_variable(c *check.C) {
 func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_unknown_variable(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
-		"# $"+"NetBSD$",
+		mkrcsid,
 		"",
 		"BUILDLINK_TREE+=\t${LICENSE}-wxWidgets",
 		"",
