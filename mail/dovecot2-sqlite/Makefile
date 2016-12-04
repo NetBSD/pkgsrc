@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/07/18 15:03:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/04 03:51:16 marino Exp $
 #
 
 .include "../../mail/dovecot2/Makefile.plugin"
@@ -21,4 +21,5 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/dovecot/dict/libdriver_sqlite.so
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

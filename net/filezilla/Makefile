@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2016/10/21 15:29:11 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2016/12/04 03:51:16 marino Exp $
 
 VERSION=	3.21.0
 DISTNAME=	FileZilla_${VERSION}_src
@@ -38,4 +38,5 @@ BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=3.4.0
 BUILDLINK_API_DEPENDS.tinyxml+=	tinyxml>=2.6.2nb1
 .include "../../textproc/pugixml/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/08/21 19:16:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.14 2016/12/04 03:51:15 marino Exp $
 #
 
 .include "../../databases/libdbi-driver-sqlite3/Makefile_drivers"
@@ -17,4 +17,5 @@ CONFIGURE_ARGS+=	--with-sqlite3-libdir=${BUILDLINK_PREFIX.sqlite}/lib
 
 .include "../../databases/libdbi/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

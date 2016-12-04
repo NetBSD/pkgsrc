@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/10/30 05:04:09 manu Exp $
+# $NetBSD: Makefile,v 1.21 2016/12/04 03:51:15 marino Exp $
 
 PKGNAME=	${DISTNAME:S/-/-smbk5pwd-/}
 PKGREVISION=	2
@@ -34,4 +34,5 @@ MAKE_ENV+=	EXTRA_LIBS=${LIBS:M*:Q}
 
 .include "../../databases/openldap/Makefile.common"
 .include "../../databases/openldap-client/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

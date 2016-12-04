@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/08/03 10:22:08 adam Exp $
+# $NetBSD: Makefile,v 1.50 2016/12/04 03:51:14 marino Exp $
 
 DISTNAME=	libgpod-0.8.2
 PKGREVISION=	26
@@ -31,4 +31,5 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.0
 .include "../../textproc/libplist/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
