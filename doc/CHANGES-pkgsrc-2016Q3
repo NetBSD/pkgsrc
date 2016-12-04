@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.16 2016/11/29 17:51:28 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.17 2016/12/04 20:01:06 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -129,4 +129,16 @@ graphics/tiff: security fix
 
 Pullup ticket #5161 - requested by sevan
 net/wpa_gui: security fix
+
+Pullup ticket #5164 - requested by taca
+www/drupal7: security fix
+
+Pullup ticket #5165 - requested by taca
+textproc/php-mecab: build fix
+
+Pullup ticket #5167 - requested by sevan
+archivers/p7zip: security fix
+
+Pullup ticket #5168 - requested by sevan
+textproc/libxml2: security fix
 
