@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/04 10:00:34 simonb Exp $
+
+SHA1 (Convert-Bencode-1.03.tar.gz) = 45c97223f67cabd6cefbbf6a34543269f263ca76
+RMD160 (Convert-Bencode-1.03.tar.gz) = 2e9897080aa80740fbabed7f6244497a49bd7373
+SHA512 (Convert-Bencode-1.03.tar.gz) = 880ca4acff1e93b3bddf837921225d31bb0a697214db5eec8f906897b305ddc4d11b67587e5cae43b0dd7e4aa6c3bee6aee172c51750a3b70929ac3c99b8f582
+Size (Convert-Bencode-1.03.tar.gz) = 10640 bytes
