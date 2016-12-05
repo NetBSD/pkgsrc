@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/12/05 00:56:21 marino Exp $
+# $NetBSD: Makefile,v 1.42 2016/12/05 01:11:11 marino Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -74,6 +74,7 @@ SUBDIR+=	py-trytond-sale-stock-quantity
 SUBDIR+=	py-trytond-sale-supply
 SUBDIR+=	py-trytond-sale-supply-drop-shipment
 SUBDIR+=	py-trytond-stock-supply
+SUBDIR+=	py-trytond-stock-supply-day
 SUBDIR+=	py-trytond-stock-supply-forecast
 SUBDIR+=	py-trytond-stock-supply-production
 SUBDIR+=	py-vatnumber
