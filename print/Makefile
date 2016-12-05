@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.676 2016/11/08 11:42:16 wiz Exp $
+# $NetBSD: Makefile,v 1.677 2016/12/05 19:54:15 marino Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -67,6 +67,7 @@ SUBDIR+=	if-psprint
 SUBDIR+=	ijs
 SUBDIR+=	img2eps
 SUBDIR+=	imposter
+SUBDIR+=	indexinfo
 SUBDIR+=	ja-a2ps
 SUBDIR+=	ja-ptex
 SUBDIR+=	ja-vflib
