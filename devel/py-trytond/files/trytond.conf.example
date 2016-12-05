@@ -1,0 +1,150 @@
+# Stock trytond.conf file based on doc/topics/configuration.rst.
+# The defaults are listed as per the documentation.
+
+# =============================
+# Configuration file for Tryton
+# =============================
+
+
+# The configuration file controls some aspects of the behavior of Tryton.
+# The file uses a simple ini-file format. It consists of sections, led by a
+# '[section]' header and followed by 'name = value' entries.
+
+
+# Defines the behavior of the web interface.
+
+[web]
+
+# Defines the couple of host (or IP address) and port number separated by a
+# colon to listen on.
+
+listen = localhost:8000
+
+# Defines the hostname.
+
+#hostname = 
+
+# Defines the root path served by `GET` requests.
+
+#root = /var/www/localhost/tryton
+
+
+# Defines how the database is managed.
+
+[database]
+
+# Contains the URI to connect to the SQL database. The URI follows the RFC-3986.
+# The typical form is:  database://username:password@host:port/
+
+# The available databases are:
+
+# PostgreSQL
+# pyscopg2 supports two type of connections:
+#    - TCP/IP connection: `postgresql://user:password@localhost:5432/`
+#    - Unix domain connection: `postgresql://username:password@/`
+
+# SQLite
+# The only possible URI is: `sqlite://`
+
+# MySQL
+# Same as for PostgreSQL.
+
+#uri = sqlite://
+
+# The directory where Tryton stores files and so the user running trytond
+# must have write access on this directory.
+
+#path = /var/lib/trytond/
+
+# A boolean value to list available databases.
+
+list = True
+
+# The number of retries when a database operational error occurs during a
+# request.
+
+retry = 5
+
+# The main language of the database that will be used for storage in the main
+# table for translations.
+
+language = en_US
+
+
+# Defines size of various cache.
+
+[cache]
+
+# The number of different models kept in the cache per transaction.
+
+model = 200
+
+# The number of records loaded kept in the cache of the list.
+
+record = 2000
+
+# The number of field to load with an `eager` :attr:`Field.loading`.
+
+field = 100
+
+
+# This section allows to override the default generated table name for a
+# :class:`ModelSQL`. The main goal is to bypass limitation on the name length of
+# the database backend.
+# For example::
+
+#    [table]
+#    account.invoice.line = acc_inv_line
+#    account.invoice.tax = acc_inv_tax
+
+#[table]
+
+
+# Activates SSL_ on all network protocols.
+
+#[ssl]
+
+# The path to the private key.
+
+#privatekey = 
+
+# The path to the certificate.
+
+#certificate = 
+
+
+[email]
+
+# The SMTP-URL to connect to the SMTP server which is extended to support SSL
+# and STARTTLS. The available protocols are:
+#    - smtp: simple SMTP
+#    - smtp+tls: SMTP with STARTTLS
+#    - smtps: SMTP with SSL
+
+uri = smtp://localhost:25
+
+# Defines the default `From` address for emails sent by Tryton.
+
+#from = 
+
+
+[session]
+
+# The time in seconds until a session expires.
+
+timeout = 600
+
+
+# The server password used to authenticate from the client for database
+# management tasks. It is encrypted using using the Unix crypt(3) routine.
+# A password can be generated using this command line:
+#    python -c 'import getpass,crypt,random,string; print crypt.crypt(getpass.getpass(), "".join(random.sample(string.ascii_letters + string.digits, 8)))'
+
+#super_pwd = 
+
+
+[report]
+
+# The parameters for `unoconv`.
+
+unoconv = pipe,name=trytond;urp;StarOffice.ComponentContext
