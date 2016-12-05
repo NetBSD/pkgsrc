@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16754 2016/12/04 21:29:33 rodent Exp $
+$NetBSD: TODO,v 1.16755 2016/12/05 14:50:33 taca Exp $
 
 Suggested new packages
 ======================
@@ -584,7 +584,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dpkg-1.18.4
 	o drivel-3.0.5
 	o dropbear-2016.74
-	o drupal-8.0.3
+	o drupal-8.2.3
 	o dtach-0.9
 	o duplicity-0.7.10
 	o dvdisaster-0.79.5
