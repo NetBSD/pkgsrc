@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4913 2016/12/05 10:40:18 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4914 2016/12/05 10:51:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6842,3 +6842,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/rsyslog-pgsql to 8.23.0 [fhajny 2016-12-05]
 	Updated sysutils/rsyslog-rabbitmq to 8.23.0 [fhajny 2016-12-05]
 	Updated sysutils/rsyslog-snmp to 8.23.0 [fhajny 2016-12-05]
+	Updated databases/elasticsearch to 5.0.2 [fhajny 2016-12-05]
