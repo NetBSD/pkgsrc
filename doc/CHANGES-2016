@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4915 2016/12/05 11:38:00 adam Exp $
+$NetBSD: CHANGES-2016,v 1.4916 2016/12/05 14:20:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6845,3 +6845,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/elasticsearch to 5.0.2 [fhajny 2016-12-05]
 	Updated graphics/pngcrush to 1.8.10 [adam 2016-12-05]
 	Updated devel/scons to 2.5.1 [adam 2016-12-05]
+	Updated devel/git to 2.11.0 [adam 2016-12-05]
