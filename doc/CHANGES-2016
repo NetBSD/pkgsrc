@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4918 2016/12/05 15:05:01 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4919 2016/12/05 15:12:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6853,3 +6853,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-readline to 2.2.6nb1 [taca 2016-12-05]
 	Updated x11/ruby-tk to 2.2.6nb4 [taca 2016-12-05]
 	Updated lang/ruby22 to 2.2.6 [taca 2016-12-05]
+	Updated databases/postgresql-postgis2 to 2.3.1 [gdt 2016-12-05]
