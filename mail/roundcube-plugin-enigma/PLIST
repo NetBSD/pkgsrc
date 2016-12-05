@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/13 15:58:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/12/05 16:15:33 taca Exp $
 share/examples/roundcube/plugins/enigma/config.inc.php
 share/roundcube/plugins/enigma/README
 share/roundcube/plugins/enigma/composer.json
@@ -28,6 +28,7 @@ share/roundcube/plugins/enigma/localization/el_GR.inc
 share/roundcube/plugins/enigma/localization/en_GB.inc
 share/roundcube/plugins/enigma/localization/en_US.inc
 share/roundcube/plugins/enigma/localization/es_ES.inc
+share/roundcube/plugins/enigma/localization/eu_ES.inc
 share/roundcube/plugins/enigma/localization/fi_FI.inc
 share/roundcube/plugins/enigma/localization/fo_FO.inc
 share/roundcube/plugins/enigma/localization/fr_FR.inc
@@ -49,6 +50,7 @@ share/roundcube/plugins/enigma/localization/pt_BR.inc
 share/roundcube/plugins/enigma/localization/pt_PT.inc
 share/roundcube/plugins/enigma/localization/ru_RU.inc
 share/roundcube/plugins/enigma/localization/sk_SK.inc
+share/roundcube/plugins/enigma/localization/sq_AL.inc
 share/roundcube/plugins/enigma/localization/sv_SE.inc
 share/roundcube/plugins/enigma/localization/tr_TR.inc
 share/roundcube/plugins/enigma/localization/uk_UA.inc
