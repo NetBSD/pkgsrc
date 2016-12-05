@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4926 2016/12/05 20:04:40 asau Exp $
+$NetBSD: CHANGES-2016,v 1.4927 2016/12/05 20:11:49 asau Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6866,3 +6866,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/tor to 0.2.8.10 [leot 2016-12-05]
 	Added print/indexinfo version 0.2.6 [marino 2016-12-05]
 	Updated lang/sbcl to 1.3.12 [asau 2016-12-05]
+	Updated lang/racket-textual to 6.7 [asau 2016-12-05]
