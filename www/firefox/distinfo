@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.262 2016/12/03 09:58:25 ryoon Exp $
+$NetBSD: distinfo,v 1.263 2016/12/05 11:54:45 martin Exp $
 
 SHA1 (firefox-50.0.2.source.tar.xz) = 083b9a803b25064b2d7d43e289797a9f2a2e9e5d
 RMD160 (firefox-50.0.2.source.tar.xz) = 67395703c955b3285237b66317df13229aeec479
@@ -43,6 +43,7 @@ SHA1 (patch-gfx_thebes_gfxFontUtils.cpp) = 639c610a3a1441d5c7e2e9fa0f42b8df1c8e4
 SHA1 (patch-gfx_thebes_moz.build) = 7c0610d8e6595de2333162a46c9f4f94834e4dc5
 SHA1 (patch-gfx_ycbcr_moz.build) = 705c36b972ef1533330e4a180002cef1c22755bf
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = 79587891c2a1716a27d4dca0e5b5880069a430eb
+SHA1 (patch-image_decoders_nsIconDecoder.cpp) = 804e3bdade8b0c56979e811a0e44df5eaf158381
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = ed86c3fbb3aef753eec6f6a97940594aac5f3f2f
 SHA1 (patch-intl_hyphenation_glue_hnjalloc.h) = abe01bea5872a57f3d00bbbf89f958621f08a655
 SHA1 (patch-intl_lwbrk_nsJISx4051LineBreaker.cpp) = 7169c1f7eccea9ea3b14d46aa972d0d6b8159eec
