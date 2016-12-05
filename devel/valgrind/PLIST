@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/28 20:50:07 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/12/05 20:17:56 wiedi Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -201,6 +201,8 @@ lib/valgrind/none-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/power64-core-valgrind-s1.xml
 lib/valgrind/power64-core-valgrind-s2.xml
 lib/valgrind/power64-core.xml
+lib/valgrind/power64-core2-valgrind-s1.xml
+lib/valgrind/power64-core2-valgrind-s2.xml
 lib/valgrind/power64-linux-valgrind-s1.xml
 lib/valgrind/power64-linux-valgrind-s2.xml
 lib/valgrind/power64-linux.xml
@@ -216,6 +218,9 @@ lib/valgrind/power-fpu.xml
 lib/valgrind/power-linux-valgrind-s1.xml
 lib/valgrind/power-linux-valgrind-s2.xml
 lib/valgrind/power-linux.xml
+lib/valgrind/power-vsx-valgrind-s1.xml
+lib/valgrind/power-vsx-valgrind-s2.xml
+lib/valgrind/power-vsx.xml
 lib/valgrind/powerpc-altivec32l-valgrind.xml
 lib/valgrind/powerpc-altivec32l.xml
 lib/valgrind/powerpc-altivec64l-valgrind.xml
