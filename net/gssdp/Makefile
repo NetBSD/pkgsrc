@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2016/12/04 22:50:04 maya Exp $
+# $NetBSD: Makefile,v 1.62 2016/12/05 02:19:27 marino Exp $
 
 DISTNAME=	gssdp-1.0.0
 PKGREVISION=	1
@@ -22,10 +22,4 @@ PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
-
-# XXX dragonflybsd fails to build because one of the dependencies
-# needs -lreadline
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
