@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/03 10:22:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/05 21:14:58 wiedi Exp $
 
 DISTNAME=	codelite-9.1
 PKGREVISION=	1
@@ -54,6 +54,7 @@ REPLACE_BASH+=		svgs/find-bar/convert-svg-to-png.sh
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/codelite
 
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
