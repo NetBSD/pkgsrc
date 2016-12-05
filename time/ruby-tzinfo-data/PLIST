@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/02 17:03:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/12/05 16:20:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -245,6 +245,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Aqtau.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Aqtobe.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Ashgabat.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Ashkhabad.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Atyrau.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Baghdad.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Bahrain.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Baku.rb
@@ -265,6 +266,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Dhaka.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Dili.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Dubai.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Dushanbe.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Famagusta.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Gaza.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Harbin.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Hebron.rb
@@ -470,6 +472,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Rome.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Samara.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/San_Marino.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Sarajevo.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Saratov.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Simferopol.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Skopje.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Sofia.rb
