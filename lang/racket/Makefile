@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2016/12/04 05:17:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2016/12/05 20:11:22 asau Exp $
 
-PKGNAME=	racket-6.6
-PKGREVISION=	1
+PKGNAME=	racket-6.7
 DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
@@ -10,6 +9,8 @@ MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)
 		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
 		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/ \
 		http://russell.cs.bilgi.edu.tr/racket-installers/$(PKGVERSION_NOREV)/
+# Pre-release:
+#MASTER_SITES_PLT=	http://pre-release.racket-lang.org/installers/
 MASTER_SITES=	$(MASTER_SITES_PLT)
 EXTRACT_SUFX=	.tgz
 
@@ -32,8 +33,6 @@ UNLIMIT_RESOURCES=	datasize
 
 LDFLAGS.DragonFly+=	-rdynamic
 
-REPLACE_SH=	collects/tests/framework/framework-test
-
 CHECK_INTERPRETER_SKIP=	collects/meta/build/sitemap/setup.py \
 			collects/meta/build/sitemap/test_sitemap_gen.py
 
@@ -51,10 +50,6 @@ REPLACE_INTERPRETER+=	racket
 REPLACE.racket.old=	.*racket
 REPLACE.racket.new=	$(LOCALBASE)/bin/racket
 REPLACE_FILES.racket=	$(REPLACE_RACKET)
-
-post-install:
-	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/png.rkt.orig
-	$(RM) -f $(DESTDIR)$(PREFIX)/lib/racket/collects/racket/draw/unsafe/jpeg.rkt.orig
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
