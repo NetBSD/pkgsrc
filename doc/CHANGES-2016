@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4911 2016/12/05 07:52:52 tron Exp $
+$NetBSD: CHANGES-2016,v 1.4912 2016/12/05 10:09:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6831,3 +6831,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/ncdu to 1.12 [wiedi 2016-12-04]
 	Updated sysutils/intel-microcode-netbsd to 20161104 [msaitoh 2016-11-04]
 	Updated mail/mutt to 1.7.2 [tron 2016-12-05]
+	Updated textproc/the_silver_searcher to 1.0.2 [leot 2016-12-05]
