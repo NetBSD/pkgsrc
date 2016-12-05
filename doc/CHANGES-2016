@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4909 2016/12/04 23:00:25 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.4910 2016/12/05 03:42:31 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6829,3 +6829,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-trytond-calendar to 4.2.0 [rodent 2016-12-04]
 	Updated time/py-trytond-company-work-time to 4.2.0 [rodent 2016-12-04]
 	Updated sysutils/ncdu to 1.12 [wiedi 2016-12-04]
+	Updated sysutils/intel-microcode-netbsd to 20161104 [msaitoh 2016-11-04]
