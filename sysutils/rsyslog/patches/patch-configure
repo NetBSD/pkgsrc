@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/12/05 10:36:46 fhajny Exp $
+
+Portability.
+
+--- configure.orig	2016-11-13 15:48:32.000000000 +0000
++++ configure
+@@ -15255,7 +15255,7 @@ if test -d "$srcdir"/.git && ! test -f
+   in_git_src=yes
+ fi
+ 
+- if test x$os_type == xlinux; then
++ if test x$os_type = xlinux; then
+   OS_LINUX_TRUE=
+   OS_LINUX_FALSE='#'
+ else
