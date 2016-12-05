@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4921 2016/12/05 15:50:29 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4922 2016/12/05 16:17:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6858,3 +6858,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/ruby23 to 2.3.3 [taca 2016-12-05]
 	Updated devel/ruby-mode to 2.3.3 [taca 2016-12-05]
 	Updated net/ntp4 to 4.2.8p9 [taca 2016-12-05]
+	Updated mail/roundcube to 1.2.3 [taca 2016-12-05]
+	Updated mail/roundcube-plugin-enigma to 1.2.3 [taca 2016-12-05]
+	Updated mail/roundcube-plugin-password to 1.2.3 [taca 2016-12-05]
+	Updated mail/roundcube-plugin-zipdownload to 1.2.3 [taca 2016-12-05]
