@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2016/05/09 08:58:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/12/05 11:36:51 adam Exp $
 bin/scons
-bin/${PKGNAME}
+bin/scons-${PKGVERSION}
+bin/scons-configure-cache
+bin/scons-configure-cache-${PKGVERSION}
 bin/scons-time
 bin/scons-time-${PKGVERSION}
 bin/sconsign
