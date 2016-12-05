@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4917 2016/12/05 14:50:03 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4918 2016/12/05 15:05:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6847,3 +6847,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/scons to 2.5.1 [adam 2016-12-05]
 	Updated devel/git to 2.11.0 [adam 2016-12-05]
 	Added www/contao43 version 4.3.0 [taca 2016-12-05]
+	Updated lang/ruby22-base to 2.2.6 [taca 2016-12-05]
+	Updated databases/ruby-gdbm to 2.2.6 [taca 2016-12-05]
+	Updated devel/ruby-fiddle to 2.2.6 [taca 2016-12-05]
+	Updated devel/ruby-readline to 2.2.6nb1 [taca 2016-12-05]
+	Updated x11/ruby-tk to 2.2.6nb4 [taca 2016-12-05]
+	Updated lang/ruby22 to 2.2.6 [taca 2016-12-05]
