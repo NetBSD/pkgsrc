@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4924 2016/12/05 17:09:57 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4925 2016/12/05 19:55:54 marino Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6864,3 +6864,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/roundcube-plugin-zipdownload to 1.2.3 [taca 2016-12-05]
 	Updated time/ruby-tzinfo-data to 1.2016.10 [taca 2016-12-05]
 	Updated net/tor to 0.2.8.10 [leot 2016-12-05]
+	Added print/indexinfo version 0.2.6 [marino 2016-12-05]
