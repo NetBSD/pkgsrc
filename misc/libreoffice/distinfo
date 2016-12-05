@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2016/08/15 19:15:25 ryoon Exp $
+$NetBSD: distinfo,v 1.24 2016/12/05 04:16:06 pgoyette Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -170,6 +170,7 @@ SHA512 (libreoffice/libreoffice-translations-5.1.5.2.tar.xz) = b3272dfaa7f70e149
 Size (libreoffice/libreoffice-translations-5.1.5.2.tar.xz) = 131744520 bytes
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = e3223111488a6ebabf66ae74c3b6c30095fd2294
 SHA1 (patch-configure.ac) = fe603f79587b66fcd56f105330359526384e6e58
+SHA1 (patch-i18npool_source_breakiterator_breakiterator__unicode.cxx) = 375013076276ff955148713e078c63408cb4909e
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = 75af6e02b29bf1dfc619bda9cd5674f19adf2c95
 SHA1 (patch-solenv_gbuild_Module.mk) = 45d5b2c41b468bb071253ae0f78d01d535662c40
 SHA1 (patch-ucb_source_ucp_ftp_ftploaderthread.cxx) = 7f0c472fd5395610ca352463acb1029d3349668c
