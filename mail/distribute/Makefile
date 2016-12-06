@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2016/08/15 11:30:31 maya Exp $
+# $NetBSD: Makefile,v 1.32 2016/12/06 23:53:36 wiedi Exp $
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/
 # AWOL
