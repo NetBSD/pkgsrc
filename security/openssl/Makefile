@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2016/10/03 11:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2016/12/06 18:18:54 marino Exp $
 
 DISTNAME=	openssl-1.0.2j
 PKGREVISION=	1
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 USE_GCC_RUNTIME=	yes
 
-USE_TOOLS+=		fgrep gmake perl:run
+USE_TOOLS+=		fgrep gmake makedepend perl:run
 BUILD_TARGET=		depend all
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
