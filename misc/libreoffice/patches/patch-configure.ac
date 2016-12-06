@@ -1,20 +1,28 @@
-$NetBSD: patch-configure.ac,v 1.4 2016/02/13 08:46:03 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.5 2016/12/06 15:21:00 ryoon Exp $
 
-* Adapt for mdds-1.0.
 * Adapt ant path for pkgsrc.
 
---- configure.ac.orig	2016-01-27 00:58:25.000000000 +0000
+--- configure.ac.orig	2016-10-28 14:50:26.000000000 +0000
 +++ configure.ac
-@@ -8768,7 +8768,7 @@ AC_SUBST(SYSTEM_BOOST)
- dnl ===================================================================
- dnl Check for system mdds
- dnl ===================================================================
--libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds >= 0.12.0], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
-+libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds-1.0 >= 0.12.0], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
+@@ -6069,14 +6069,14 @@ if test "$GCC" = "yes" -o "$COM_IS_CLANG
+         ], [AC_MSG_RESULT([no])])
+     AC_LANG_POP([C++])
  
- dnl ===================================================================
- dnl Check for system glm
-@@ -11998,8 +11998,8 @@ EOF
+-    AC_MSG_CHECKING([whether $CXX defines __cxa_exceptions in cxxabi.h])
++    AC_MSG_CHECKING([whether $CXX defines __cxa_exception in cxxabi.h])
+     AC_LANG_PUSH([C++])
+     AC_COMPILE_IFELSE([AC_LANG_SOURCE([
+             #include <cstddef>
+             #include <cxxabi.h>
+-            std::size_t f() { return sizeof(__cxxabiv1::__cxa_exceptions); }
++            std::size_t f() { return sizeof(__cxxabiv1::__cxa_exception); }
+         ])], [
+-            AC_DEFINE([HAVE_CXXABI_H_CXA_EXCEPTIONS],[1])
++            AC_DEFINE([HAVE_CXXABI_H_CXA_EXCEPTION],[1])
+             AC_MSG_RESULT([yes])
+         ], [AC_MSG_RESULT([no])])
+     AC_LANG_POP([C++])
+@@ -11966,8 +11966,8 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
