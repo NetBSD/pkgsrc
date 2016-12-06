@@ -1,0 +1,16 @@
+$NetBSD: patch-external_libmariadb_mariadb-netbsd.patch,v 1.1 2016/12/06 15:21:00 ryoon Exp $
+
+--- external/libmariadb/mariadb-netbsd.patch.orig	2016-08-12 02:11:42.265441950 +0000
++++ external/libmariadb/mariadb-netbsd.patch
+@@ -0,0 +1,11 @@
++--- mariadb/include/my_global.h.orig	2014-04-04 10:21:01.000000000 +0000
+++++ mariadb/include/my_global.h
++@@ -190,7 +190,7 @@ double my_ulonglong2double(unsigned long
++ #ifdef HAVE_UNISTD_H
++ #include <unistd.h>
++ #endif
++-#if defined(__cplusplus) && defined(NO_CPLUSPLUS_ALLOCA)
+++#if (defined(__cplusplus) && defined(NO_CPLUSPLUS_ALLOCA)) || defined(__NetBSD__)
++ #undef HAVE_ALLOCA
++ #undef HAVE_ALLOCA_H
++ #endif
