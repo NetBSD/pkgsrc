@@ -1,11 +1,38 @@
-$NetBSD: patch-configure,v 1.5 2016/02/13 08:46:02 wiz Exp $
+$NetBSD: patch-configure,v 1.6 2016/12/06 15:13:20 ryoon Exp $
 
-Fix unportable test(1) operator.
-Adapt for mdds-1.0.
+* Fix unportable test(1) operator.
+* Support pkgsrc pkg-config file name rule
 
---- configure.orig	2015-06-18 23:43:37.000000000 +0000
+--- configure.orig	2016-05-12 01:03:48.000000000 +0000
 +++ configure
-@@ -17533,7 +17533,7 @@ else
+@@ -17272,7 +17272,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ # added as of 1.35.0.  If we have a version <1.35, we must not attempt to
+ # find Boost.System as it didn't exist by then.
+ if test $boost_major_version -ge 135; then
+-  if test x"$BOOST_SYSTEM_LIBS" == "x" -o x"$BOOST_SYSTEM_LDFLAGS" == "x"; then
++  if test x"$BOOST_SYSTEM_LIBS" = "x" -o x"$BOOST_SYSTEM_LDFLAGS" = "x"; then
+ if test x"$boost_cv_inc_path" = xno; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Boost not available, not searching for the Boost system library" >&5
+ $as_echo "$as_me: Boost not available, not searching for the Boost system library" >&6;}
+@@ -17565,7 +17565,7 @@ boost_filesystem_save_LIBS=$LIBS
+ boost_filesystem_save_LDFLAGS=$LDFLAGS
+ LIBS="$LIBS $BOOST_SYSTEM_LIBS"
+ LDFLAGS="$LDFLAGS $BOOST_SYSTEM_LDFLAGS"
+-if test x"$BOOST_FILESYSTEM_LIBS" == "x" -o x"$BOOST_FILESYSTEM_LDFLAGS" == "x"; then
++if test x"$BOOST_FILESYSTEM_LIBS" = "x" -o x"$BOOST_FILESYSTEM_LDFLAGS" = "x"; then
+ if test x"$boost_cv_inc_path" = xno; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Boost not available, not searching for the Boost filesystem library" >&5
+ $as_echo "$as_me: Boost not available, not searching for the Boost filesystem library" >&6;}
+@@ -17858,7 +17858,7 @@ LIBS=$boost_filesystem_save_LIBS
+ LDFLAGS=$boost_filesystem_save_LDFLAGS
+ 
+ 
+-if test x"$BOOST_SYSTEM_LIBS" == "x" -o x"$BOOST_SYSTEM_LDFLAGS" == "x"; then
++if test x"$BOOST_SYSTEM_LIBS" = "x" -o x"$BOOST_SYSTEM_LDFLAGS" = "x"; then
+ if test x"$boost_cv_inc_path" = xno; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Boost not available, not searching for the Boost system library" >&5
+ $as_echo "$as_me: Boost not available, not searching for the Boost system library" >&6;}
+@@ -18158,7 +18158,7 @@ else
  
  fi
  
@@ -14,62 +41,80 @@ Adapt for mdds-1.0.
  
  	CXXFLAGS="$CXXFLAGS -Werror"
  
-@@ -19229,7 +19229,7 @@ fi
- fi
+@@ -18401,7 +18401,7 @@ fi
  
- # ============
--# mdds support
-+# mdds-1.0 support
- # ============
+ if test "x$with_gnumeric_filter" != "xno"; then :
  
- pkg_failed=no
-@@ -19240,12 +19240,12 @@ if test -n "$MDDS_CFLAGS"; then
-     pkg_cv_MDDS_CFLAGS="$MDDS_CFLAGS"
+-        if test x"$BOOST_IOSTREAMS_LIBS" == "x" -o x"$BOOST_IOSTREAMS_LDFLAGS" == "x"; then
++        if test x"$BOOST_IOSTREAMS_LIBS" = "x" -o x"$BOOST_IOSTREAMS_LDFLAGS" = "x"; then
+ if test x"$boost_cv_inc_path" = xno; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Boost not available, not searching for the Boost iostreams library" >&5
+ $as_echo "$as_me: Boost not available, not searching for the Boost iostreams library" >&6;}
+@@ -18694,7 +18694,7 @@ fi
+ 
+ if test "x$with_tools" != "xno"; then :
+ 
+-        if test x"$BOOST_PROGRAM_OPTIONS_LIBS" == "x" -o x"$BOOST_PROGRAM_OPTIONS_LDFLAGS" == "x"; then
++        if test x"$BOOST_PROGRAM_OPTIONS_LIBS" = "x" -o x"$BOOST_PROGRAM_OPTIONS_LDFLAGS" = "x"; then
+ if test x"$boost_cv_inc_path" = xno; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Boost not available, not searching for the Boost program_options library" >&5
+ $as_echo "$as_me: Boost not available, not searching for the Boost program_options library" >&6;}
+@@ -18982,7 +18982,7 @@ fi
+ 
+ 
+ 
+-        if test x"$BOOST_SYSTEM_LIBS" == "x" -o x"$BOOST_SYSTEM_LDFLAGS" == "x"; then
++        if test x"$BOOST_SYSTEM_LIBS" = "x" -o x"$BOOST_SYSTEM_LDFLAGS" = "x"; then
+ if test x"$boost_cv_inc_path" = xno; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Boost not available, not searching for the Boost system library" >&5
+ $as_echo "$as_me: Boost not available, not searching for the Boost system library" >&6;}
+@@ -19769,12 +19769,12 @@ if test -n "$PYTHON_CFLAGS"; then
+     pkg_cv_PYTHON_CFLAGS="$PYTHON_CFLAGS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
--    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds >= 0.11.0\""; } >&5
--  ($PKG_CONFIG --exists --print-errors "mdds >= 0.11.0") 2>&5
-+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds-1.0 >= 0.11.0\""; } >&5
-+  ($PKG_CONFIG --exists --print-errors "mdds-1.0 >= 0.11.0") 2>&5
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python3 >= 0.28\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "python3 >= 0.28") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python-@PYVERSSUFFIX@ >= 0.28\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "python-@PYVERSSUFFIX@ >= 0.28") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
--  pkg_cv_MDDS_CFLAGS=`$PKG_CONFIG --cflags "mdds >= 0.11.0" 2>/dev/null`
-+  pkg_cv_MDDS_CFLAGS=`$PKG_CONFIG --cflags "mdds-1.0 >= 0.11.0" 2>/dev/null`
+-  pkg_cv_PYTHON_CFLAGS=`$PKG_CONFIG --cflags "python3 >= 0.28" 2>/dev/null`
++  pkg_cv_PYTHON_CFLAGS=`$PKG_CONFIG --cflags "python-@PYVERSSUFFIX@ >= 0.28" 2>/dev/null`
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -19257,12 +19257,12 @@ if test -n "$MDDS_LIBS"; then
-     pkg_cv_MDDS_LIBS="$MDDS_LIBS"
+@@ -19786,12 +19786,12 @@ if test -n "$PYTHON_LIBS"; then
+     pkg_cv_PYTHON_LIBS="$PYTHON_LIBS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
--    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds >= 0.11.0\""; } >&5
--  ($PKG_CONFIG --exists --print-errors "mdds >= 0.11.0") 2>&5
-+    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds-1.0 >= 0.11.0\""; } >&5
-+  ($PKG_CONFIG --exists --print-errors "mdds-1.0 >= 0.11.0") 2>&5
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python3 >= 0.28\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "python3 >= 0.28") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"python-@PYVERSSUFFIX@ >= 0.28\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "python-@PYVERSSUFFIX@ >= 0.28") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
    test $ac_status = 0; }; then
--  pkg_cv_MDDS_LIBS=`$PKG_CONFIG --libs "mdds >= 0.11.0" 2>/dev/null`
-+  pkg_cv_MDDS_LIBS=`$PKG_CONFIG --libs "mdds-1.0 >= 0.11.0" 2>/dev/null`
+-  pkg_cv_PYTHON_LIBS=`$PKG_CONFIG --libs "python3 >= 0.28" 2>/dev/null`
++  pkg_cv_PYTHON_LIBS=`$PKG_CONFIG --libs "python-@PYVERSSUFFIX@ >= 0.28" 2>/dev/null`
  		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -19283,14 +19283,14 @@ else
+@@ -19812,14 +19812,14 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
--	        MDDS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "mdds >= 0.11.0" 2>&1`
-+	        MDDS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "mdds-1.0 >= 0.11.0" 2>&1`
+-	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "python3 >= 0.28" 2>&1`
++	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "python-@PYVERSSUFFIX@ >= 0.28" 2>&1`
          else
--	        MDDS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "mdds >= 0.11.0" 2>&1`
-+	        MDDS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "mdds-1.0 >= 0.11.0" 2>&1`
+-	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "python3 >= 0.28" 2>&1`
++	        PYTHON_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "python-@PYVERSSUFFIX@ >= 0.28" 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
- 	echo "$MDDS_PKG_ERRORS" >&5
+ 	echo "$PYTHON_PKG_ERRORS" >&5
  
--	as_fn_error $? "Package requirements (mdds >= 0.11.0) were not met:
-+	as_fn_error $? "Package requirements (mdds-1.0 >= 0.11.0) were not met:
+-	as_fn_error $? "Package requirements (python3 >= 0.28) were not met:
++	as_fn_error $? "Package requirements (python-@PYVERSSUFFIX@ >= 0.28) were not met:
  
- $MDDS_PKG_ERRORS
+ $PYTHON_PKG_ERRORS
  
