@@ -1,8 +1,10 @@
-$NetBSD: patch-acinclude.m4,v 1.1 2015/12/06 15:17:31 taca Exp $
+$NetBSD: patch-acinclude.m4,v 1.2 2016/12/06 08:53:48 adam Exp $
 
---- acinclude.m4.orig	2015-06-23 17:33:33.000000000 +0000
+On Darwin, allow native iconv when Command Line Tools are not installed.
+
+--- acinclude.m4.orig	2016-11-09 01:22:57.000000000 +0000
 +++ acinclude.m4
-@@ -2354,7 +2354,7 @@ AC_DEFUN([PHP_SETUP_OPENSSL],[
+@@ -2355,7 +2355,7 @@ AC_DEFUN([PHP_SETUP_OPENSSL],[
    if test "$found_openssl" = "no"; then
    
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -11,3 +13,19 @@ $NetBSD: patch-acinclude.m4,v 1.1 2015/12/06 15:17:31 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
+@@ -2489,7 +2489,15 @@ AC_DEFUN([PHP_SETUP_ICONV], [
+     done
+ 
+     if test -z "$ICONV_DIR"; then
++    case $host_alias in
++    *darwin*)
++      ICONV_DIR=/usr
++      iconv_lib_name=iconv
++      ;;
++    *)
+       AC_MSG_ERROR([Please specify the install prefix of iconv with --with-iconv=<DIR>])
++      ;;
++    esac
+     fi
+   
+     if test -f $ICONV_DIR/$PHP_LIBDIR/lib$iconv_lib_name.a ||
