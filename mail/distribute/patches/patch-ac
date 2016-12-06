@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.6 2016/08/15 12:02:37 maya Exp $
+$NetBSD: patch-ac,v 1.7 2016/12/06 23:53:36 wiedi Exp $
 
 write_index() uses bodysum, call it only after calculating it.
 otherwise the initial value of 0 is used.
 
 PR pkg/18422.
 
---- distribute.c.orig	2016-08-15 10:57:27.530046718 +0000
+--- distribute.c.orig	2016-12-06 23:29:55.439064411 +0000
 +++ distribute.c
 @@ -49,7 +49,8 @@
  #define	index	strchr
@@ -13,7 +13,7 @@ PR pkg/18422.
  
 -#if defined(__bsdi__)		/* may be wrong -- we need to use NET/2 def.*/
 +/* may be wrong -- we need to use NET/2 def.*/
-+#if defined(__bsdi__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#if !defined(_PATH_SENDMAIL)
  # include <paths.h>		/* for sendmail path */
  #endif
  
