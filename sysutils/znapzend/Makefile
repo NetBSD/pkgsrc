@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/06 00:11:52 wiedi Exp $
 
-DISTNAME=	znapzend-0.15.3
-PKGREVISION=	1
+DISTNAME=	znapzend-0.16.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
 
@@ -20,7 +19,7 @@ TEST_TARGET=	test
 
 DEPENDS+=	p5-Mojolicious>=6.46:../../www/p5-Mojolicious
 DEPENDS+=	p5-Mojo-IOLoop-ForkCall>=0.17:../../devel/p5-Mojo-IOLoop-ForkCall
+DEPENDS+=	p5-Scalar-List-Utils>=1.45:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Test-Harness>=3.35:../../devel/p5-Test-Harness
-
 
 .include "../../mk/bsd.pkg.mk"
