@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4929 2016/12/06 00:12:35 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.4930 2016/12/06 00:34:35 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6869,3 +6869,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/racket-textual to 6.7 [asau 2016-12-05]
 	Updated lang/racket to 6.7 [asau 2016-12-05]
 	Updated sysutils/znapzend to 0.16.0 [wiedi 2016-12-06]
+	Updated devel/gflags to 2.1.2 [rodent 2016-12-06]
