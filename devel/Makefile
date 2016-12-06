@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2340 2016/12/04 21:12:58 rodent Exp $
+# $NetBSD: Makefile,v 1.2341 2016/12/06 00:34:18 rodent Exp $
 #
 
 COMMENT=	Development utilities
@@ -267,6 +267,7 @@ SUBDIR+=	gettext-asprintf
 SUBDIR+=	gettext-lib
 SUBDIR+=	gettext-m4
 SUBDIR+=	gettext-tools
+SUBDIR+=	gflags
 SUBDIR+=	gflib
 SUBDIR+=	giblib
 SUBDIR+=	gindent
