@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.2 2014/08/05 06:12:57 jperkin Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.3 2016/12/06 23:17:16 wiedi Exp $
 lib/rpm/platform/aarch64-solaris/macros
 lib/rpm/platform/alpha-solaris/macros
 lib/rpm/platform/alphaev5-solaris/macros
@@ -12,7 +12,10 @@ lib/rpm/platform/armv4b-solaris/macros
 lib/rpm/platform/armv4l-solaris/macros
 lib/rpm/platform/armv5tejl-solaris/macros
 lib/rpm/platform/armv5tel-solaris/macros
+lib/rpm/platform/armv6hl-solaris/macros
 lib/rpm/platform/armv6l-solaris/macros
+lib/rpm/platform/armv7hl-solaris/macros
+lib/rpm/platform/armv7hnl-solaris/macros
 lib/rpm/platform/armv7l-solaris/macros
 lib/rpm/platform/athlon-solaris/macros
 lib/rpm/platform/geode-solaris/macros
@@ -22,6 +25,7 @@ lib/rpm/platform/i586-solaris/macros
 lib/rpm/platform/i686-solaris/macros
 lib/rpm/platform/ia32e-solaris/macros
 lib/rpm/platform/ia64-solaris/macros
+lib/rpm/platform/m68k-solaris/macros
 lib/rpm/platform/noarch-solaris/macros
 lib/rpm/platform/pentium3-solaris/macros
 lib/rpm/platform/pentium4-solaris/macros
@@ -29,6 +33,7 @@ lib/rpm/platform/ppc-solaris/macros
 lib/rpm/platform/ppc32dy4-solaris/macros
 lib/rpm/platform/ppc64-solaris/macros
 lib/rpm/platform/ppc64iseries-solaris/macros
+lib/rpm/platform/ppc64le-solaris/macros
 lib/rpm/platform/ppc64p7-solaris/macros
 lib/rpm/platform/ppc64pseries-solaris/macros
 lib/rpm/platform/ppc8260-solaris/macros
