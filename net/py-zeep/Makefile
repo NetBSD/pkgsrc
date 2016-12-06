@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:13:08 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/06 10:41:19 jperkin Exp $
 
 DISTNAME=	zeep-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,8 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-defusedxml>=0.4.1:../../textproc/py-defusedxml
 DEPENDS+=	${PYPKGPREFIX}-cached-property>=1.0.0:../../devel/py-cached-property
 DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 
-
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35	# devel/py-cached-property
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
