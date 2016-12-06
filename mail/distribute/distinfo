@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2016/08/15 12:02:37 maya Exp $
+$NetBSD: distinfo,v 1.10 2016/12/06 23:53:36 wiedi Exp $
 
 SHA1 (distribute/distribute-2.1-pl19.tar.gz) = f33f63d42d0233eceec759dc0378a914087c0344
 RMD160 (distribute/distribute-2.1-pl19.tar.gz) = 5ffb23682176a86291eb5374ea98c9c5d002947d
@@ -34,5 +34,5 @@ SHA512 (distribute/patch.26e.gz) = c0c1de2467d1b28320585cb4933029182932345e7e8b3
 Size (distribute/patch.26e.gz) = 12560 bytes
 SHA1 (patch-aa) = 6c23421d76b166acffc782271f37e405b45617ed
 SHA1 (patch-ab) = 4c07a6ae9bb1e9dacd33db96624d2c2fefbb9240
-SHA1 (patch-ac) = 8b4753845920b480fff4240c1928c8fef2046d99
+SHA1 (patch-ac) = 89873e55470070a2ceff7bc06fa63d2673aee766
 SHA1 (patch-tmpl2c.pl) = 5cdf21381f98df64b37609173e35448427edf231
