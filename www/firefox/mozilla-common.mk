@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.83 2016/09/20 20:01:41 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.84 2016/12/06 08:14:22 martin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -108,11 +108,15 @@ OBJDIR=			../build
 CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 
-PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue
+PLIST_VARS+=	sps vorbis tremor glskia throwwrapper mozglue avx86
 
 .include "../../mk/endian.mk"
 .if ${MACHINE_ENDIAN} == "little"
 PLIST.glskia=	yes
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PLIST.avx86=	yes	# see media/libav/README_MOZILLA: only used on x86
 .endif
 
 .if ${MACHINE_ARCH} != "sparc64"
