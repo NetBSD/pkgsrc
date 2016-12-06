@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.2 2016/02/11 09:45:26 ryoon Exp $
+@comment $NetBSD: PLIST.java,v 1.3 2016/12/06 15:21:00 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
