@@ -1,17 +1,17 @@
-$NetBSD: patch-src_swap.c,v 1.3 2016/10/13 15:17:28 fhajny Exp $
+$NetBSD: patch-src_swap.c,v 1.4 2016/12/07 17:28:39 fhajny Exp $
 
 Extend support for NetBSD, and add per-swap-device
 reporting for HAVE_SWAPCTL_THREE_ARGS.
 
---- src/swap.c.orig	2016-09-11 08:10:25.271038709 +0000
+--- src/swap.c.orig	2016-11-30 08:52:01.324910450 +0000
 +++ src/swap.c
-@@ -77,9 +77,12 @@ static _Bool report_bytes = 0;
+@@ -78,9 +78,12 @@ static _Bool report_bytes = 0;
  static _Bool report_by_device = 0;
  /* #endif KERNEL_LINUX */
  
 -#elif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS
 +#elif HAVE_SWAPCTL && (HAVE_SWAPCTL_TWO_ARGS || HAVE_SWAPCTL_THREE_ARGS)
- # define SWAP_HAVE_REPORT_BY_DEVICE 1
+ #define SWAP_HAVE_REPORT_BY_DEVICE 1
  static derive_t pagesize;
 +#if KERNEL_NETBSD
 +static _Bool report_bytes = 0;
@@ -19,35 +19,35 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
  static _Bool report_by_device = 0;
  /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
  
-@@ -117,7 +120,7 @@ static int swap_config (oconfig_item_t *
- 	{
- 		oconfig_item_t *child = ci->children + i;
- 		if (strcasecmp ("ReportBytes", child->key) == 0)
+@@ -117,7 +120,7 @@ static int swap_config(oconfig_item_t *c
+   for (int i = 0; i < ci->children_num; i++) {
+     oconfig_item_t *child = ci->children + i;
+     if (strcasecmp("ReportBytes", child->key) == 0)
 -#if KERNEL_LINUX
 +#if KERNEL_LINUX || KERNEL_NETBSD
- 			cf_util_get_boolean (child, &report_bytes);
+       cf_util_get_boolean(child, &report_bytes);
  #else
- 			WARNING ("swap plugin: The \"ReportBytes\" option "
-@@ -150,7 +153,7 @@ static int swap_init (void) /* {{{ */
- 	pagesize = (derive_t) sysconf (_SC_PAGESIZE);
+       WARNING("swap plugin: The \"ReportBytes\" option "
+@@ -149,7 +152,7 @@ static int swap_init(void) /* {{{ */
+   pagesize = (derive_t)sysconf(_SC_PAGESIZE);
  /* #endif KERNEL_LINUX */
  
 -#elif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS
 +#elif HAVE_SWAPCTL && (HAVE_SWAPCTL_TWO_ARGS || HAVE_SWAPCTL_THREE_ARGS)
- 	/* getpagesize(3C) tells me this does not fail.. */
- 	pagesize = (derive_t) getpagesize ();
+   /* getpagesize(3C) tells me this does not fail.. */
+   pagesize = (derive_t)getpagesize();
  /* #endif HAVE_SWAPCTL */
-@@ -216,7 +219,7 @@ static void swap_submit_usage (char cons
- 				other_name, other_value, NULL);
+@@ -209,7 +212,7 @@ static void swap_submit_usage(char const
+                                free, other_name, other_value, NULL);
  } /* }}} void swap_submit_usage */
  
 -#if KERNEL_LINUX || HAVE_PERFSTAT
 +#if KERNEL_LINUX || HAVE_PERFSTAT || KERNEL_NETBSD
- __attribute__((nonnull(1)))
- static void swap_submit_derive (char const *type_instance, /* {{{ */
- 		derive_t value)
-@@ -618,6 +621,43 @@ static int swap_read (void) /* {{{ */
- /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
+ __attribute__((nonnull(1))) static void
+ swap_submit_derive(char const *type_instance, /* {{{ */
+                    derive_t value) {
+@@ -579,6 +582,43 @@ static int swap_read(void) /* {{{ */
+   /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_TWO_ARGS */
  
  #elif HAVE_SWAPCTL && HAVE_SWAPCTL_THREE_ARGS
 +#if KERNEL_NETBSD
@@ -56,90 +56,89 @@ reporting for HAVE_SWAPCTL_THREE_ARGS.
 +static int
 +swap_read_io (void) /* {{{ */
 +{
-+	static int uvmexp_mib[] = { CTL_VM, VM_UVMEXP2 };
-+	struct uvmexp_sysctl uvmexp;
-+	size_t ssize;
-+	derive_t swap_in, swap_out;
++  static int uvmexp_mib[] = { CTL_VM, VM_UVMEXP2 };
++  struct uvmexp_sysctl uvmexp;
++  size_t ssize;
++  derive_t swap_in, swap_out;
 +
-+	ssize = sizeof(uvmexp);
-+	memset(&uvmexp, 0, ssize);
-+	if (sysctl(uvmexp_mib, __arraycount(uvmexp_mib), &uvmexp,
-+		&ssize, NULL, 0) == -1) {
-+			char errbuf[1024];
-+			WARNING ("swap: sysctl for uvmexp failed: %s",
-+				sstrerror (errno, errbuf, sizeof (errbuf)));
-+			return (-1);
-+	}
++  ssize = sizeof(uvmexp);
++  memset(&uvmexp, 0, ssize);
++  if (sysctl(uvmexp_mib, __arraycount(uvmexp_mib), &uvmexp,
++    &ssize, NULL, 0) == -1) {
++      char errbuf[1024];
++      WARNING ("swap: sysctl for uvmexp failed: %s",
++        sstrerror (errno, errbuf, sizeof (errbuf)));
++      return (-1);
++  }
 +
-+	swap_in  = uvmexp.pgswapin;
-+	swap_out = uvmexp.pgswapout;
++  swap_in  = uvmexp.pgswapin;
++  swap_out = uvmexp.pgswapout;
 +
-+	if (report_bytes)
-+	{
-+		swap_in = swap_in * pagesize;
-+		swap_out = swap_out * pagesize;
-+	}
++  if (report_bytes)
++  {
++    swap_in = swap_in * pagesize;
++    swap_out = swap_out * pagesize;
++  }
 +
-+	swap_submit_derive ("in",  swap_in);
-+	swap_submit_derive ("out", swap_out);
++  swap_submit_derive ("in",  swap_in);
++  swap_submit_derive ("out", swap_out);
 +
-+	return (0);
++  return (0);
 +} /* }}} */
 +#endif
 +
- static int swap_read (void) /* {{{ */
+ static int swap_read(void) /* {{{ */
  {
- 	struct swapent *swap_entries;
-@@ -663,12 +703,33 @@ static int swap_read (void) /* {{{ */
- 	 * swap_entries[i].se_path */
- 	for (int i = 0; i < swap_num; i++)
- 	{
-+		char path[PATH_MAX];
-+		gauge_t this_used;
-+		gauge_t this_total;
+   struct swapent *swap_entries;
+@@ -617,12 +657,32 @@ static int swap_read(void) /* {{{ */
+   /* TODO: Report per-device stats. The path name is available from
+    * swap_entries[i].se_path */
+   for (int i = 0; i < swap_num; i++) {
++    char path[PATH_MAX];
++    gauge_t this_used;
++    gauge_t this_total;
 +
- 		if ((swap_entries[i].se_flags & SWF_ENABLE) == 0)
- 			continue;
+     if ((swap_entries[i].se_flags & SWF_ENABLE) == 0)
+       continue;
  
--		used  += ((gauge_t) swap_entries[i].se_inuse) * C_SWAP_BLOCK_SIZE;
--		total += ((gauge_t) swap_entries[i].se_nblks) * C_SWAP_BLOCK_SIZE;
--	}
-+		this_used = ((gauge_t) swap_entries[i].se_inuse)
-+			* C_SWAP_BLOCK_SIZE;
-+		this_total = ((gauge_t) swap_entries[i].se_nblks)
-+			* C_SWAP_BLOCK_SIZE;
+-    used += ((gauge_t)swap_entries[i].se_inuse) * C_SWAP_BLOCK_SIZE;
+-    total += ((gauge_t)swap_entries[i].se_nblks) * C_SWAP_BLOCK_SIZE;
+-  }
++    this_used = ((gauge_t) swap_entries[i].se_inuse)
++      * C_SWAP_BLOCK_SIZE;
++    this_total = ((gauge_t) swap_entries[i].se_nblks)
++      * C_SWAP_BLOCK_SIZE;
 +
++    /* Shortcut for the "combined" setting (default) */
++    if (!report_by_device)
++    {
++      used  += this_used;
++      total += this_total;
++      continue;
++    }
 +
-+		/* Shortcut for the "combined" setting (default) */
-+		if (!report_by_device)
-+		{
-+			used  += this_used;
-+			total += this_total;
-+			continue;
-+		}
++    sstrncpy (path, swap_entries[i].se_path, sizeof (path));
++    escape_slashes (path, sizeof (path));
 +
-+		sstrncpy (path, swap_entries[i].se_path, sizeof (path));
-+		escape_slashes (path, sizeof (path));
-+
-+		swap_submit_usage (path, this_used, this_total - this_used,
-+				  NULL, NAN);
-+	} /* for (swap_num) */
++    swap_submit_usage (path, this_used, this_total - this_used,
++                       NULL, NAN);
++  } /* for (swap_num) */
  
- 	if (total < used)
- 	{
-@@ -679,8 +740,15 @@ static int swap_read (void) /* {{{ */
- 	}
+   if (total < used) {
+     ERROR(
+@@ -633,8 +693,15 @@ static int swap_read(void) /* {{{ */
+   }
  
- 	swap_submit_usage (NULL, used, total - used, NULL, NAN);
-+	/* If the "separate" option was specified (report_by_device == 1), all
-+	 * values have already been dispatched from within the loop. */
-+	if (!report_by_device)
-+		swap_submit_usage (NULL, used, total - used, NULL, NAN);
+   swap_submit_usage(NULL, used, total - used, NULL, NAN);
++  /* If the "separate" option was specified (report_by_device == 1), all
++   * values have already been dispatched from within the loop. */
++  if (!report_by_device)
++    swap_submit_usage (NULL, used, total - used, NULL, NAN);
  
- 	sfree (swap_entries);
+   sfree(swap_entries);
 +#if KERNEL_NETBSD
-+	swap_read_io ();
++  swap_read_io ();
 +#endif
- 	return (0);
+   return (0);
  } /* }}} int swap_read */
- /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_THREE_ARGS */
+   /* #endif HAVE_SWAPCTL && HAVE_SWAPCTL_THREE_ARGS */

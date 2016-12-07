@@ -1,12 +1,12 @@
-$NetBSD: patch-src_df.c,v 1.4 2015/08/18 07:52:20 he Exp $
+$NetBSD: patch-src_df.c,v 1.5 2016/12/07 17:28:39 fhajny Exp $
 
 Older NetBSD doesn't have float_t.
 
---- src/df.c.orig	2015-03-10 14:14:45.000000000 +0000
+--- src/df.c.orig	2016-11-30 08:52:01.312911569 +0000
 +++ src/df.c
 @@ -28,6 +28,14 @@
- #include "utils_mount.h"
  #include "utils_ignorelist.h"
+ #include "utils_mount.h"
  
 +#if defined(__NetBSD__)
 +#include <sys/param.h>
@@ -17,5 +17,5 @@ Older NetBSD doesn't have float_t.
 +#endif
 +
  #if HAVE_STATVFS
- # if HAVE_SYS_STATVFS_H
- #  include <sys/statvfs.h>
+ #if HAVE_SYS_STATVFS_H
+ #include <sys/statvfs.h>
