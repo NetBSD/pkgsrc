@@ -1,22 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2015/11/26 10:40:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/12/07 21:34:58 fhajny Exp $
 
-DISTNAME=	lz4-r131
-PKGNAME=	${DISTNAME:S/-r/-/}
-PKGREVISION=	1
+DISTNAME=	lz4-1.7.4.2
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=lz4/}
 
 MAINTAINER=	filip@joyent.com
-HOMEPAGE=	http://github.com/Cyan4973/lz4/
+HOMEPAGE=	http://lz4.github.io/lz4/
 COMMENT=	Extremely Fast Compression algorithm
 LICENSE=	2-clause-bsd
 
-GITHUB_TAG=	r${PKGVERSION_NOREV}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c c99
 USE_TOOLS+=	gmake pkg-config
-
-CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
 PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
 
