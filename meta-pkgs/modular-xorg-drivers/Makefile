@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2016/11/30 12:24:10 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2016/12/07 22:00:44 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -47,8 +48,7 @@ DEPENDS+=	xf86-video-glint-[0-9]*:../../x11/xf86-video-glint
 DEPENDS+=	xf86-input-hyperpen-[0-9]*:../../x11/xf86-input-hyperpen
 DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
-# broken with modular-xorg-server-1.19.0
-#DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
+DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
 .if ${OPSYS} != "SunOS"
 DEPENDS+=	xf86-input-joystick-[0-9]*:../../x11/xf86-input-joystick
 .endif
