@@ -1,7 +1,8 @@
-$NetBSD: patch-SConstruct,v 1.7 2016/10/30 11:39:14 adam Exp $
+$NetBSD: patch-SConstruct,v 1.8 2016/12/07 20:00:20 maya Exp $
 
 Hack: Use OPENSSL variable as final shared library path; fixes lib id on Darwin.
 Don't append -O2 compiler flag.
+Don't special case sunos5 in naming shlibs
 
 --- SConstruct.orig	2015-09-17 12:46:24.000000000 +0000
 +++ SConstruct
@@ -22,7 +23,17 @@ Don't append -O2 compiler flag.
                    tools=('default', 'textfile',),
                    CPPPATH=['.', ],
                    )
-@@ -257,7 +258,6 @@ if sys.platform != 'win32':
+@@ -215,8 +216,7 @@ incdir = '$PREFIX/include/serf-$MAJOR'
+ # Unfortunately we can't set the .dylib compatibility_version option separately
+ # from current_version, so don't use the PATCH level to avoid that build and
+ # runtime patch levels have to be identical.
+-if sys.platform != 'sunos5':
+-  env['SHLIBVERSION'] = '%d.%d.%d' % (MAJOR, MINOR, 0)
++env['SHLIBVERSION'] = '%d.%d.%d' % (MAJOR, MINOR, 0)
+ 
+ LIBNAME = 'libserf-%d' % (MAJOR,)
+ if sys.platform != 'win32':
+@@ -257,7 +257,6 @@ if sys.platform != 'win32':
      env.Append(CCFLAGS=['-g'])
      env.Append(CPPDEFINES=['DEBUG', '_DEBUG'])
    else:
@@ -30,7 +41,7 @@ Don't append -O2 compiler flag.
      env.Append(CPPDEFINES=['NDEBUG'])
  
    ### works for Mac OS. probably needs to change
-@@ -391,6 +391,11 @@ if sys.platform == 'win32':
+@@ -391,6 +390,11 @@ if sys.platform == 'win32':
  for d in env['LIBPATH']:
    env.Append(RPATH=':'+d)
  
@@ -42,7 +53,7 @@ Don't append -O2 compiler flag.
  # Set up the construction of serf-*.pc
  pkgconfig = env.Textfile('serf-%d.pc' % (MAJOR,),
                           env.File('build/serf.pc.in'),
-@@ -429,7 +434,7 @@ if sys.platform == 'darwin':
+@@ -429,7 +433,7 @@ if sys.platform == 'darwin':
    # make applications depend on the exact major.minor.patch version of serf.
  
    install_shared_path = install_shared[0].abspath
