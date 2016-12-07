@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4932 2016/12/06 15:22:02 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.4933 2016/12/07 17:36:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6872,3 +6872,18 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/gflags to 2.1.2 [rodent 2016-12-06]
 	Updated converters/orcus to 0.11.2 [ryoon 2016-12-06]
 	Updated misc/libreoffice to 5.2.3.3 [ryoon 2016-12-06]
+	Updated sysutils/collectd to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-amqp to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-curl to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-dbi to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-dns to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-memcached to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-mysql to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-network to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-notify-email to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-postgresql to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-riemann to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-rrdtool to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/collectd-snmp to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/p5-collectd to 5.6.2 [fhajny 2016-12-07]
+	Updated sysutils/py-collectd to 5.6.2 [fhajny 2016-12-07]
