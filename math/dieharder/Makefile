@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/10/26 05:52:06 agc Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/07 00:14:56 wiedi Exp $
 #
 
 DISTNAME=	dieharder-3.31.1
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 AUTOMAKE_REQD=	1.9.6
+USE_LANGUAGES=	c99
 USE_TOOLS+=	automake gmake
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
