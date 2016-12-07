@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.139 2016/11/03 22:46:43 joerg Exp $
+$NetBSD: distinfo,v 1.140 2016/12/07 22:01:28 maya Exp $
 
 SHA1 (seamonkey-2.40.source.tar.xz) = ecf99bc7478319835a0e19f35ed5b7b1aa2c0046
 RMD160 (seamonkey-2.40.source.tar.xz) = 4030688f145fdf35a6d2728d097cf7cda8e50231
@@ -80,7 +80,7 @@ SHA1 (patch-mozilla_js_xpconnect_src_XPCConvert.cpp) = d866b89d5d741125430c0e3ac
 SHA1 (patch-mozilla_js_xpconnect_src_xpcprivate.h) = 56e9de48605f2310fdc2777b4fcab8ce2de50d0a
 SHA1 (patch-mozilla_media_libcubeb_AUTHORS) = 1a516754289470319fd181315f0bc7a04a4aaf85
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb.c) = f4018f850cfd2b73226c66dbddb310e1efe40475
-SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 7af1dfbd5e190e4ee57699de2c0d2997a4430cd0
+SHA1 (patch-mozilla_media_libcubeb_src_cubeb__alsa.c) = 94227c01e187365c7021e9bb40f3f65a56d599f5
 SHA1 (patch-mozilla_media_libcubeb_src_cubeb__oss.c) = 808c5b237e83c9db99095def1ef546fdb3ad3b3c
 SHA1 (patch-mozilla_media_libcubeb_src_moz.build) = c701606254f82ee195fd0191ff269b312b14da40
 SHA1 (patch-mozilla_media_libpng_pngpriv.h) = b3bf9d7aeaf00a7cd0c9cc491fe6ac474c002655
