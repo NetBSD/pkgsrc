@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.26 2016/06/11 19:54:44 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.27 2016/12/08 00:44:40 yyamano Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -164,7 +164,7 @@ LIST+=          ${ANOTHER_LIST}   # 2
 </sect2>
 
 <sect2 id="echo-literal">
-<title>Echoing a string exacty as-is</title>
+<title>Echoing a string exactly as-is</title>
 
 <para>Echoing a string containing special characters needs special
 work.</para>
