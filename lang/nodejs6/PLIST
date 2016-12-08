@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/25 19:54:00 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/12/08 23:02:13 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -727,8 +727,12 @@ lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/exampl
 lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/package.json
 lib/node_modules/npm/node_modules/init-package-json/node_modules/promzard/promzard.js
 lib/node_modules/npm/node_modules/init-package-json/package.json
+lib/node_modules/npm/node_modules/lockfile/.npmignore
+lib/node_modules/npm/node_modules/lockfile/.travis.yml
+lib/node_modules/npm/node_modules/lockfile/CHANGELOG.md
 lib/node_modules/npm/node_modules/lockfile/LICENSE
 lib/node_modules/npm/node_modules/lockfile/README.md
+lib/node_modules/npm/node_modules/lockfile/gen-changelog.sh
 lib/node_modules/npm/node_modules/lockfile/lockfile.js
 lib/node_modules/npm/node_modules/lockfile/package.json
 lib/node_modules/npm/node_modules/lodash._baseindexof/LICENSE.txt
@@ -1803,7 +1807,6 @@ lib/node_modules/npm/node_modules/once/README.md
 lib/node_modules/npm/node_modules/once/once.js
 lib/node_modules/npm/node_modules/once/package.json
 lib/node_modules/npm/node_modules/opener/LICENSE.txt
-lib/node_modules/npm/node_modules/opener/README.md
 lib/node_modules/npm/node_modules/opener/opener.js
 lib/node_modules/npm/node_modules/opener/package.json
 lib/node_modules/npm/node_modules/osenv/.npmignore
@@ -1822,7 +1825,6 @@ lib/node_modules/npm/node_modules/osenv/osenv.js
 lib/node_modules/npm/node_modules/osenv/package.json
 lib/node_modules/npm/node_modules/osenv/x.tap
 lib/node_modules/npm/node_modules/path-is-inside/LICENSE.txt
-lib/node_modules/npm/node_modules/path-is-inside/README.md
 lib/node_modules/npm/node_modules/path-is-inside/lib/path-is-inside.js
 lib/node_modules/npm/node_modules/path-is-inside/package.json
 lib/node_modules/npm/node_modules/read-cmd-shim/.npmignore
@@ -2081,23 +2083,32 @@ lib/node_modules/npm/node_modules/request/node_modules/forever-agent/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/forever-agent/README.md
 lib/node_modules/npm/node_modules/request/node_modules/forever-agent/index.js
 lib/node_modules/npm/node_modules/request/node_modules/forever-agent/package.json
-lib/node_modules/npm/node_modules/request/node_modules/form-data/.dockerignore
-lib/node_modules/npm/node_modules/request/node_modules/form-data/.editorconfig
-lib/node_modules/npm/node_modules/request/node_modules/form-data/.eslintignore
 lib/node_modules/npm/node_modules/request/node_modules/form-data/License
 lib/node_modules/npm/node_modules/request/node_modules/form-data/Readme.md
 lib/node_modules/npm/node_modules/request/node_modules/form-data/lib/browser.js
 lib/node_modules/npm/node_modules/request/node_modules/form-data/lib/form_data.js
 lib/node_modules/npm/node_modules/request/node_modules/form-data/lib/populate.js
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/CHANGELOG.md
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/LICENSE
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/README.md
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/dist/async.js
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/dist/async.min.js
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js
-lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/async/package.json
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/LICENSE
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/README.md
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/bench.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/index.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/abort.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/async.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/defer.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/iterate.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/readable_asynckit.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/readable_parallel.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/readable_serial.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/readable_serial_ordered.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/state.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/streamify.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/lib/terminator.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/package.json
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/parallel.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/serial.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/serialOrdered.js
+lib/node_modules/npm/node_modules/request/node_modules/form-data/node_modules/asynckit/stream.js
 lib/node_modules/npm/node_modules/request/node_modules/form-data/package.json
-lib/node_modules/npm/node_modules/request/node_modules/form-data/wercker.yml
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/README.md
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/bin/har-validator
@@ -2179,7 +2190,9 @@ lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_module
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/package.json
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/generate-object-property/test.js
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/.travis.yml
+lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/LICENSE.md
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/README.md
+lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/benchmark.js
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/jsonpointer.js
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/package.json
 lib/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/node_modules/jsonpointer/test.js
@@ -2381,6 +2394,9 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modul
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/README.md
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/assert.js
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/package.json
+lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/bcrypt-pbkdf/README.md
+lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/bcrypt-pbkdf/index.js
+lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/bcrypt-pbkdf/package.json
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/README.md
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/etc/dashdash.bash_completion.in
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/lib/dashdash.js
@@ -2424,6 +2440,7 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modul
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/jsbn/package.json
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/CHANGELOG.md
+lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/COPYING.txt
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/README.md
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl-fast.js
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/tweetnacl/nacl-fast.min.js
@@ -2549,7 +2566,6 @@ lib/node_modules/npm/node_modules/slide/lib/chain.js
 lib/node_modules/npm/node_modules/slide/lib/slide.js
 lib/node_modules/npm/node_modules/slide/package.json
 lib/node_modules/npm/node_modules/sorted-object/LICENSE.txt
-lib/node_modules/npm/node_modules/sorted-object/README.md
 lib/node_modules/npm/node_modules/sorted-object/lib/sorted-object.js
 lib/node_modules/npm/node_modules/sorted-object/package.json
 lib/node_modules/npm/node_modules/strip-ansi/index.js
@@ -2678,6 +2694,8 @@ lib/node_modules/npm/node_modules/write-file-atomic/package.json
 lib/node_modules/npm/package.json
 lib/node_modules/npm/scripts/changelog.js
 lib/node_modules/npm/scripts/clean-old.sh
+lib/node_modules/npm/scripts/dep-update
+lib/node_modules/npm/scripts/dev-dep-update
 lib/node_modules/npm/scripts/doc-build.sh
 lib/node_modules/npm/scripts/gen-changelog
 lib/node_modules/npm/scripts/index-build.js
