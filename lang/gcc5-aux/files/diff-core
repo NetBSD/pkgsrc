@@ -250,6 +250,27 @@
  #endif
 +#endif
  }
+--- gcc/config/netbsd-elf.h.orig
++++ gcc/config/netbsd-elf.h
+@@ -70,6 +70,7 @@
+ #define NETBSD_LINK_SPEC_ELF \
+   "%{assert*} %{R*} %{rpath*} \
+    %{shared:-shared} \
++   %{!static:-rpath @PREFIX@/@GCCAUX@/lib} \
+    %{!shared: \
+      -dc -dp \
+      %{!nostdlib: \
+@@ -84,3 +85,10 @@
+ #ifdef HAVE_LD_AS_NEEDED
+ #define USE_LD_AS_NEEDED 1
+ #endif
++
++/* Define this to be nonzero if static stack checking is supported. */
++#define STACK_CHECK_STATIC_BUILTIN 1
++
++#if defined(HAVE_LD_EH_FRAME_HDR)
++#define LINK_EH_SPEC "%{!static:--eh-frame-hdr} "
++#endif
 --- gcc/config.gcc.orig
 +++ gcc/config.gcc
 @@ -1399,12 +1399,16 @@
@@ -287,42 +308,6 @@
  esac
  
  if test x$gcc_cv_target_dl_iterate_phdr = xyes; then
---- gcc/config/i386/netbsd-elf.h.orig
-+++ gcc/config/i386/netbsd-elf.h
-@@ -38,7 +38,8 @@
- /* Provide a LINK_SPEC appropriate for a NetBSD/i386 ELF target.  */
- 
- #undef LINK_SPEC
--#define LINK_SPEC NETBSD_LINK_SPEC_ELF
-+#define LINK_SPEC NETBSD_LINK_SPEC_ELF \
-+"%{!static:-rpath @PREFIX@/@GCCAUX@/lib}"
- 
- #define NETBSD_ENTRY_POINT "__start"
- 
-@@ -121,3 +122,10 @@
- #define HAVE_ENABLE_EXECUTE_STACK
- 
- #define IX86_MAYBE_NO_LIBGCC_TFMODE
-+
-+/* Define this to be nonzero if static stack checking is supported. */
-+#define STACK_CHECK_STATIC_BUILTIN 1
-+
-+#if defined(HAVE_LD_EH_FRAME_HDR)
-+#define LINK_EH_SPEC "%{!static:--eh-frame-hdr} "
-+#endif
---- gcc/config/i386/netbsd64.h.orig
-+++ gcc/config/i386/netbsd64.h
-@@ -69,3 +69,10 @@
- #define HAVE_ENABLE_EXECUTE_STACK
- 
- #define IX86_MAYBE_NO_LIBGCC_TFMODE
-+
-+/* Define this to be nonzero if static stack checking is supported. */
-+#define STACK_CHECK_STATIC_BUILTIN 1
-+
-+#if defined(HAVE_LD_EH_FRAME_HDR)
-+#define LINK_EH_SPEC "%{!static:--eh-frame-hdr} "
-+#endif
 --- libgcc/crtstuff.c.orig
 +++ libgcc/crtstuff.c
 @@ -81,7 +81,7 @@
