@@ -184,7 +184,7 @@ II. The pkgsrc developer's guide
         12.3. Code snippets
 
             12.3.1. Adding things to a list
-            12.3.2. Echoing a string exacty as-is
+            12.3.2. Echoing a string exactly as-is
             12.3.3. Passing CFLAGS to GNU configure scripts
             12.3.4. Handling possibly empty variables
 
@@ -2399,7 +2399,7 @@ Table of Contents
     12.3. Code snippets
 
         12.3.1. Adding things to a list
-        12.3.2. Echoing a string exacty as-is
+        12.3.2. Echoing a string exactly as-is
         12.3.3. Passing CFLAGS to GNU configure scripts
         12.3.4. Handling possibly empty variables
 
@@ -3384,7 +3384,7 @@ Table of Contents
 12.3. Code snippets
 
     12.3.1. Adding things to a list
-    12.3.2. Echoing a string exacty as-is
+    12.3.2. Echoing a string exactly as-is
     12.3.3. Passing CFLAGS to GNU configure scripts
     12.3.4. Handling possibly empty variables
 
@@ -3500,7 +3500,7 @@ ANOTHER_LIST=   a=b c=d
 LIST+=          ${STRING:Q}       # 1
 LIST+=          ${ANOTHER_LIST}   # 2
 
-12.3.2. Echoing a string exacty as-is
+12.3.2. Echoing a string exactly as-is
 
 Echoing a string containing special characters needs special work.
 
