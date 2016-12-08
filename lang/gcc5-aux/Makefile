@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/12/08 03:31:27 marino Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/08 19:32:10 marino Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -109,8 +109,8 @@ MY_CONFIGURE_ENV+=	RANLIB=${PREFIX}/bin/granlib
 .  if defined(NATIVE_LINKER)
 EXTRA_CONFARGS+=	--without-gnu-ld --with-ld=${NATIVE_LINKER}
 .  else
-EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld.gold
-MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld.gold
+EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=${PREFIX}/bin/gld.bfd
+MY_CONFIGURE_ENV+=	LD=${PREFIX}/bin/gld.bfd
 .  endif
 .else
 EXTRA_CONFARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
@@ -243,8 +243,8 @@ post-extract:
 	@${ECHO} "Configuring LINK_SPEC runpath"
 	${PERL5} -pi -e 's;\@PREFIX\@/\@GCCAUX\@;${PREFIX}/gcc5-aux;' \
 	  ${WRKSRC}/gcc/config/dragonfly.h \
-	  ${WRKSRC}/gcc/config/i386/freebsd.h \
-	  ${WRKSRC}/gcc/config/i386/netbsd-elf.h
+	  ${WRKSRC}/gcc/config/netbsd-elf.h \
+	  ${WRKSRC}/gcc/config/i386/freebsd.h
 
 .if defined(BOOTSTRAP_TRIPLET)
 	# Bootstrap compiler has statically linked z, gmp, mpc, mpfr and iconv
