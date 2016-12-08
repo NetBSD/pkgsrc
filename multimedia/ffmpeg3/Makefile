@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/12/07 12:56:19 adam Exp $
+# $NetBSD: Makefile,v 1.16 2016/12/08 10:20:08 maya Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg3/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -7,7 +7,7 @@ COMMENT=	Decoding, encoding and streaming software (v3.x)
 
 CONFIGURE_ARGS+=	--enable-avfilter
 #CONFIGURE_ARGS+=	--enable-avfilter-lavf
-CONFIGURE_ARGS+=	--enable-lto
+#CONFIGURE_ARGS+=	--enable-lto
 CONFIGURE_ARGS+=	--enable-postproc
 CONFIGURE_ARGS+=	--disable-ffplay
 
