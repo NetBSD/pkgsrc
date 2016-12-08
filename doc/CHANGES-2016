@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4937 2016/12/07 22:00:53 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4938 2016/12/08 15:19:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6891,3 +6891,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/lz4 to 1.7.4.2 [fhajny 2016-12-07]
 	Updated x11/xf86-video-intel to 2.99.917nb5 [wiz 2016-12-07]
 	Updated meta-pkgs/modular-xorg-drivers to 1.19.0nb1 [wiz 2016-12-07]
+	Updated www/moodle to 3.2 [wen 2016-12-08]
