@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/11/26 16:12:18 marino Exp $
+# $NetBSD: Makefile,v 1.5 2016/12/08 03:31:27 marino Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -241,7 +241,7 @@ post-extract:
 	  -pe 's|readelf -s|greadelf -s|' ${WRKSRC}/contrib/make_sunver.pl
 	# Update LINK_SPEC to add gcc5-aux lib runpath in every binary
 	@${ECHO} "Configuring LINK_SPEC runpath"
-	${PERL5} -pi -e 's;\@PREFIX\@;${PREFIX};' \
+	${PERL5} -pi -e 's;\@PREFIX\@/\@GCCAUX\@;${PREFIX}/gcc5-aux;' \
 	  ${WRKSRC}/gcc/config/dragonfly.h \
 	  ${WRKSRC}/gcc/config/i386/freebsd.h \
 	  ${WRKSRC}/gcc/config/i386/netbsd-elf.h
