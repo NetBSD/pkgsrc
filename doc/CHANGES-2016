@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4941 2016/12/08 23:03:41 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.4942 2016/12/08 23:20:22 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6895,3 +6895,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs4 to 4.7.0 [fhajny 2016-12-08]
 	Updated lang/nodejs6 to 6.9.2 [fhajny 2016-12-08]
 	Updated lang/nodejs to 7.2.1 [fhajny 2016-12-08]
+	Updated net/nsd to 4.1.14 [pettai 2016-12-08]
