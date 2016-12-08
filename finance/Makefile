@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2016/12/05 01:11:11 marino Exp $
+# $NetBSD: Makefile,v 1.43 2016/12/08 02:56:11 jnemeth Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -22,8 +22,8 @@ SUBDIR+=	py-trytond-account
 SUBDIR+=	py-trytond-account-asset
 SUBDIR+=	py-trytond-account-be
 SUBDIR+=	py-trytond-account-credit-limit
-SUBDIR+=	py-trytond-account-deposit
 SUBDIR+=	py-trytond-account-de-skr03
+SUBDIR+=	py-trytond-account-deposit
 SUBDIR+=	py-trytond-account-dunning
 SUBDIR+=	py-trytond-account-dunning-fee
 SUBDIR+=	py-trytond-account-dunning-letter
