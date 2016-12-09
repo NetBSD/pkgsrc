@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/04/20 12:10:33 nros Exp $
+# $NetBSD: Makefile,v 1.53 2016/12/09 14:43:39 wiedi Exp $
 
 DISTNAME=	WSoundPrefs-1.1.1
 PKGNAME=	wsoundprefs-1.1.1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	WSoundServer configuration utility
 LICENSE=	modified-bsd
 
+USE_TOOLS+=	pkg-config
 USE_IMAKE=		yes
 BROKEN_GETTEXT_DETECTION=	yes
 
