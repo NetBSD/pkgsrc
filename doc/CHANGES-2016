@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4952 2016/12/09 19:04:33 nros Exp $
+$NetBSD: CHANGES-2016,v 1.4953 2016/12/09 22:28:39 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6906,3 +6906,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/gammu to 1.37.91 [leot 2016-12-09]
 	Updated comms/py-gammu to 2.7 [leot 2016-12-09]
 	Updated lang/qore to 0.8.12.4 [nros 2016-12-09]
+	Updated net/knot to 2.3.3 [pettai 2016-12-09]
