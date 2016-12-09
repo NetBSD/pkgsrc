@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4943 2016/12/09 08:07:05 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4944 2016/12/09 08:21:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6897,3 +6897,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 7.2.1 [fhajny 2016-12-08]
 	Updated net/nsd to 4.1.14 [pettai 2016-12-08]
 	Updated graphics/girara to 0.2.6nb2 [leot 2016-12-09]
+	Updated print/mupdf to 1.10a [leot 2016-12-09]
