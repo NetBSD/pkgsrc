@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2016/11/14 10:45:48 leot Exp $
+@comment $NetBSD: PLIST,v 1.32 2016/12/09 08:29:09 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1475,9 +1475,6 @@ ${PYSITELIB}/youtube_dl/extractor/screencastomatic.pyo
 ${PYSITELIB}/youtube_dl/extractor/screenjunkies.py
 ${PYSITELIB}/youtube_dl/extractor/screenjunkies.pyc
 ${PYSITELIB}/youtube_dl/extractor/screenjunkies.pyo
-${PYSITELIB}/youtube_dl/extractor/screenwavemedia.py
-${PYSITELIB}/youtube_dl/extractor/screenwavemedia.pyc
-${PYSITELIB}/youtube_dl/extractor/screenwavemedia.pyo
 ${PYSITELIB}/youtube_dl/extractor/seeker.py
 ${PYSITELIB}/youtube_dl/extractor/seeker.pyc
 ${PYSITELIB}/youtube_dl/extractor/seeker.pyo
@@ -1631,6 +1628,9 @@ ${PYSITELIB}/youtube_dl/extractor/teachingchannel.pyo
 ${PYSITELIB}/youtube_dl/extractor/teamcoco.py
 ${PYSITELIB}/youtube_dl/extractor/teamcoco.pyc
 ${PYSITELIB}/youtube_dl/extractor/teamcoco.pyo
+${PYSITELIB}/youtube_dl/extractor/teamfourstar.py
+${PYSITELIB}/youtube_dl/extractor/teamfourstar.pyc
+${PYSITELIB}/youtube_dl/extractor/teamfourstar.pyo
 ${PYSITELIB}/youtube_dl/extractor/techtalks.py
 ${PYSITELIB}/youtube_dl/extractor/techtalks.pyc
 ${PYSITELIB}/youtube_dl/extractor/techtalks.pyo
@@ -1766,6 +1766,9 @@ ${PYSITELIB}/youtube_dl/extractor/tv3.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv4.py
 ${PYSITELIB}/youtube_dl/extractor/tv4.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv4.pyo
+${PYSITELIB}/youtube_dl/extractor/tvanouvelles.py
+${PYSITELIB}/youtube_dl/extractor/tvanouvelles.pyc
+${PYSITELIB}/youtube_dl/extractor/tvanouvelles.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvc.py
 ${PYSITELIB}/youtube_dl/extractor/tvc.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvc.pyo
@@ -1976,6 +1979,9 @@ ${PYSITELIB}/youtube_dl/extractor/watchindianporn.pyo
 ${PYSITELIB}/youtube_dl/extractor/wdr.py
 ${PYSITELIB}/youtube_dl/extractor/wdr.pyc
 ${PYSITELIB}/youtube_dl/extractor/wdr.pyo
+${PYSITELIB}/youtube_dl/extractor/webcaster.py
+${PYSITELIB}/youtube_dl/extractor/webcaster.pyc
+${PYSITELIB}/youtube_dl/extractor/webcaster.pyo
 ${PYSITELIB}/youtube_dl/extractor/webofstories.py
 ${PYSITELIB}/youtube_dl/extractor/webofstories.pyc
 ${PYSITELIB}/youtube_dl/extractor/webofstories.pyo
