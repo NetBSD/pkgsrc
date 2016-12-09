@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/12/08 16:58:50 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2016/12/09 22:25:28 joerg Exp $
 #
 PROGS=	as-wrapper cc-wrapper c++-wrapper cpp-wrapper f77-wrapper \
 	imake-wrapper ld-wrapper libtool-wrapper shlibtool-wrapper
@@ -39,7 +39,7 @@ CLEANFILES+=	.work-new.log \
 
 transform-cc.c: transform-gcc.c
 
-.ifdef MAINTAINER_NODE
+.ifdef MAINTAINER_MODE
 transform-gcc.c: transform-gcc-rules rules2src.awk
 	awk -v output=transform-gcc.c -f rules2src.awk transform-gcc-rules
 .endif
