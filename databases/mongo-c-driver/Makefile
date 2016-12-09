@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/10/02 09:31:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2016/12/09 13:54:21 fhajny Exp $
 
-DISTNAME=	mongo-c-driver-1.4.2
+DISTNAME=	mongo-c-driver-1.5.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -20,18 +20,19 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-CHECK_PORTABILITY_SKIP+=	src/libbson/configure
-CONFIGURE_ARGS+=		--with-libbson=system
+CONFIGURE_ARGS+=	--enable-man-pages=yes
+CONFIGURE_ARGS+=	--with-libbson=system
 
 PKGCONFIG_OVERRIDE+=	src/libmongoc-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	src/libmongoc-ssl-1.0.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/man/mongoc*.3 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+# Test behaves incosistently
+#TEST_MAKE_FLAGS+=	MONGOC_TEST_SKIP_LIVE=on
+#TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.libbson+=	libbson>=1.4.2
+# libbson and mongo-c-driver released are tied
+BUILDLINK_API_DEPENDS.libbson+=	libbson>=${PKGVERSION_NOREV}
 .include "../../devel/libbson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
