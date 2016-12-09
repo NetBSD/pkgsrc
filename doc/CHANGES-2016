@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4948 2016/12/09 13:05:27 martin Exp $
+$NetBSD: CHANGES-2016,v 1.4949 2016/12/09 13:54:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6902,3 +6902,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20161209 [leot 2016-12-09]
 	Updated devel/libbson to 1.5.0 [fhajny 2016-12-09]
 	Updated www/firefox to 50.0.2nb3 [martin 2016-12-09]
+	Updated databases/mongo-c-driver to 1.5.0 [fhajny 2016-12-09]
