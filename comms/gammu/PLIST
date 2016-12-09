@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/02/07 15:29:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/12/09 14:56:34 leot Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -34,11 +34,11 @@ include/gammu/gammu-unicode.h
 include/gammu/gammu-wap.h
 include/gammu/gammu.h
 lib/libGammu.so
-lib/libGammu.so.7
-lib/libGammu.so.7.${PKGVERSION}
+lib/libGammu.so.8
+lib/libGammu.so.8.${PKGVERSION}
 lib/libgsmsd.so
-lib/libgsmsd.so.7
-lib/libgsmsd.so.7.${PKGVERSION}
+lib/libgsmsd.so.8
+lib/libgsmsd.so.8.${PKGVERSION}
 lib/pkgconfig/gammu-smsd.pc
 lib/pkgconfig/gammu.pc
 man/man1/gammu-config.1
