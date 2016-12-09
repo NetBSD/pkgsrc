@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4950 2016/12/09 14:57:18 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4951 2016/12/09 14:57:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6904,3 +6904,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 50.0.2nb3 [martin 2016-12-09]
 	Updated databases/mongo-c-driver to 1.5.0 [fhajny 2016-12-09]
 	Updated comms/gammu to 1.37.91 [leot 2016-12-09]
+	Updated comms/py-gammu to 2.7 [leot 2016-12-09]
