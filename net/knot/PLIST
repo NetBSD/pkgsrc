@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.11 2016/10/29 09:42:48 pettai Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/12/09 22:28:17 pettai Exp $
 bin/kdig
 bin/khost
+bin/kjournalprint
 bin/knsec3hash
 bin/knsupdate
 bin/kzonecheck
@@ -75,6 +76,7 @@ lib/pkgconfig/libzscanner.pc
 libexec/knot1to2
 man/man1/kdig.1
 man/man1/khost.1
+man/man1/kjournalprint.1
 man/man1/knot1to2.1
 man/man1/knsec3hash.1
 man/man1/knsupdate.1
