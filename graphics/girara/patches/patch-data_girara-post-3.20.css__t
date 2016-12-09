@@ -1,0 +1,43 @@
+$NetBSD: patch-data_girara-post-3.20.css__t,v 1.1 2016/12/09 08:06:50 leot Exp $
+
+Update font handling for changes in Gtk+ 3.21
+(from upstream commit 949c879aa84e9496fabc7d3602060e29f9dc42a1)
+
+--- data/girara-post-3.20.css_t.orig	2016-04-18 20:35:34.000000000 +0000
++++ data/girara-post-3.20.css_t
+@@ -1,17 +1,22 @@
++#@session@ * {
++  color: @default-fg@;
++  background-color: @default-bg@;
++  background-image: none;
++  font-family: @font-family@;
++  font-size: @font-size@;
++  font-weight: @font-weight@;
++}
++
++/* Scrollbar */
++
+ #@session@ scrolledwindow scrollbar {
+   background-color: @scrollbar-bg@;
+ }
++
+ #@session@ scrolledwindow scrollbar > slider {
+   background-color: @scrollbar-fg@;
+ }
+ 
+-#@session@ * {
+-  color: @default-fg@;
+-  background-color: @default-bg@;
+-  background-image: none;
+-  font: @font@;
+-}
+-
+ /* Inputbar */
+ 
+ #@session@ entry.inputbar {
+@@ -111,4 +116,5 @@
+ #@session@ scrolledwindow overshoot.right,
+ #@session@ scrolledwindow overshoot.right:backdrop {
+   background-color: transparent;
++  background-image: none;
+ }
