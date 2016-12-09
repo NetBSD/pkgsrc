@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2016/08/17 14:07:08 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/12/09 10:05:57 fhajny Exp $
 include/libbson-1.0/bcon.h
 include/libbson-1.0/bson-atomic.h
 include/libbson-1.0/bson-clock.h
 include/libbson-1.0/bson-compat.h
 include/libbson-1.0/bson-config.h
 include/libbson-1.0/bson-context.h
+include/libbson-1.0/bson-decimal128.h
 include/libbson-1.0/bson-endian.h
 include/libbson-1.0/bson-error.h
 include/libbson-1.0/bson-iter.h
@@ -35,6 +36,7 @@ man/man3/bson_append_code.3
 man/man3/bson_append_code_with_scope.3
 man/man3/bson_append_date_time.3
 man/man3/bson_append_dbpointer.3
+man/man3/bson_append_decimal128.3
 man/man3/bson_append_document.3
 man/man3/bson_append_document_begin.3
 man/man3/bson_append_document_end.3
@@ -57,7 +59,6 @@ man/man3/bson_append_utf8.3
 man/man3/bson_append_value.3
 man/man3/bson_as_json.3
 man/man3/bson_check_version.3
-man/man3/bson_clock.3
 man/man3/bson_compare.3
 man/man3/bson_concat.3
 man/man3/bson_context_destroy.3
@@ -69,6 +70,9 @@ man/man3/bson_copy_to.3
 man/man3/bson_copy_to_excluding.3
 man/man3/bson_count_keys.3
 man/man3/bson_creating.3
+man/man3/bson_decimal128_from_string.3
+man/man3/bson_decimal128_t.3
+man/man3/bson_decimal128_to_string.3
 man/man3/bson_destroy.3
 man/man3/bson_destroy_with_steal.3
 man/man3/bson_endianness.3
@@ -80,6 +84,7 @@ man/man3/bson_get_data.3
 man/man3/bson_get_major_version.3
 man/man3/bson_get_micro_version.3
 man/man3/bson_get_minor_version.3
+man/man3/bson_get_monotonic_time.3
 man/man3/bson_get_version.3
 man/man3/bson_has_field.3
 man/man3/bson_index.3
@@ -96,6 +101,7 @@ man/man3/bson_iter_code.3
 man/man3/bson_iter_codewscope.3
 man/man3/bson_iter_date_time.3
 man/man3/bson_iter_dbpointer.3
+man/man3/bson_iter_decimal128.3
 man/man3/bson_iter_document.3
 man/man3/bson_iter_double.3
 man/man3/bson_iter_dup_utf8.3
@@ -111,6 +117,7 @@ man/man3/bson_iter_key.3
 man/man3/bson_iter_next.3
 man/man3/bson_iter_oid.3
 man/man3/bson_iter_overwrite_bool.3
+man/man3/bson_iter_overwrite_decimal128.3
 man/man3/bson_iter_overwrite_double.3
 man/man3/bson_iter_overwrite_int32.3
 man/man3/bson_iter_overwrite_int64.3
@@ -231,3 +238,4 @@ man/man3/bson_zero_free.3
 share/doc/libbson/COPYING
 share/doc/libbson/NEWS
 share/doc/libbson/README
+share/doc/libbson/THIRD_PARTY_NOTICES

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/10/02 09:31:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2016/12/09 10:05:57 fhajny Exp $
 
-DISTNAME=	libbson-1.4.2
+DISTNAME=	libbson-1.5.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -19,6 +19,8 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	src/libbson-1.0.pc.in
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man3
+
+TEST_TARGET=	test
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/bson_*.3 \
