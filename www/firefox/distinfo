@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.263 2016/12/05 11:54:45 martin Exp $
+$NetBSD: distinfo,v 1.264 2016/12/09 11:51:09 martin Exp $
 
 SHA1 (firefox-50.0.2.source.tar.xz) = 083b9a803b25064b2d7d43e289797a9f2a2e9e5d
 RMD160 (firefox-50.0.2.source.tar.xz) = 67395703c955b3285237b66317df13229aeec479
@@ -105,6 +105,8 @@ SHA1 (patch-mobile_android_installer_Makefile.in) = fcf4ab03ab033f8637813e30b75a
 SHA1 (patch-mobile_android_installer_package-manifest.in) = e978af41ff0c4b5e477bd3387594e238dc2ec224
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 133b1658839d9b0f932a601670862c1f4cd70881
 SHA1 (patch-modules_libpref_init_all.js) = 3bc5962fdabb5aecb72ffc7e73bb56392d1ea717
+SHA1 (patch-modules_woff2_src_store_bytes.h) = f7081a6ffadc79e19f30137ca805b962e60821e8
+SHA1 (patch-modules_woff2_src_woff2_common.cc) = 77dec15dad41d47a3f85e578587c3a137a8dc7f3
 SHA1 (patch-moz.configure) = cd4d3851e9dc2c1adb6a92b6f3cd1966adcd5beb
 SHA1 (patch-mozglue_build_arm.cpp) = f41ace63b3f1d2a8ccaffc98c3c64d1e22af5249
 SHA1 (patch-mozglue_build_arm.h) = 5e272f4e19b9681d43a63c45d78b0e44a392c7dc
