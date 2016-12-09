@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4944 2016/12/09 08:21:01 leot Exp $
+$NetBSD: CHANGES-2016,v 1.4945 2016/12/09 08:21:15 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6898,3 +6898,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/nsd to 4.1.14 [pettai 2016-12-08]
 	Updated graphics/girara to 0.2.6nb2 [leot 2016-12-09]
 	Updated print/mupdf to 1.10a [leot 2016-12-09]
+	Updated print/zathura-pdf-mupdf to 0.3.0nb6 [leot 2016-12-09]
