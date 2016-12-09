@@ -1,4 +1,4 @@
-/* $NetBSD: common.c,v 1.5 2016/11/27 11:46:45 joerg Exp $ */
+/* $NetBSD: common.c,v 1.6 2016/12/09 22:25:28 joerg Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -314,6 +314,9 @@ worklog_cmd(FILE *worklog, const char *prefix, const char *cmd,
 		free(buf);
 }
 
+#if __GNUC__ + 0 >= 3
+__attribute__((__noreturn__))
+#endif
 static void
 command_child_exec(char **argv)
 {
