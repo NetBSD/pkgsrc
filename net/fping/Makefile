@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/11/01 14:53:29 adam Exp $
+# $NetBSD: Makefile,v 1.16 2016/12/10 23:18:54 wiedi Exp $
 
 DISTNAME=	fping-3.13
 CATEGORIES=	net
@@ -13,6 +13,8 @@ GNU_CONFIGURE=		yes
 
 SPECIAL_PERMS+=		sbin/fping ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		sbin/fping6 ${SETUID_ROOT_PERMS}
+
+CPPFLAGS.SunOS+=	-Dn_time=uint32_t
 
 .include "options.mk"
 
