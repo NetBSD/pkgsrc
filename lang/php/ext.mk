@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.43 2016/10/18 19:09:10 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.44 2016/12/10 07:08:39 taca Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -49,7 +49,7 @@ DIST_SUBDIR?=		php-${MODNAME}
 EXTRACT_SUFX?=		.tgz
 .endif
 
-EGDIR=      ${PREFIX}/share/examples/php
+EGDIR?=      ${PREFIX}/share/examples/php
 CONF_FILES= ${EGDIR}/${MODNAME}.ini ${PHP_EXT_CONF_DIR}/${MODNAME}.ini
 
 PHP_EXT_CONF_DIR?=	${PKG_SYSCONFDIR}/php.d
