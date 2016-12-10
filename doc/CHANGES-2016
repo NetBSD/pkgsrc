@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4954 2016/12/10 07:12:28 taca Exp $
+$NetBSD: CHANGES-2016,v 1.4955 2016/12/10 10:26:59 spz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6910,3 +6910,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.29 [taca 2016-12-10]
 	Updated lang/php70 to 7.0.14 [taca 2016-12-10]
 	Updated lang/php71 to 7.1.0 [taca 2016-12-10]
+	Updated net/xymon to 4.3.27 [spz 2016-12-09]
+	Updated net/xymonclient to 4.3.27 [spz 2016-12-09]
