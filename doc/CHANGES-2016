@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4955 2016/12/10 10:26:59 spz Exp $
+$NetBSD: CHANGES-2016,v 1.4956 2016/12/10 14:06:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6912,3 +6912,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php71 to 7.1.0 [taca 2016-12-10]
 	Updated net/xymon to 4.3.27 [spz 2016-12-09]
 	Updated net/xymonclient to 4.3.27 [spz 2016-12-09]
+	Updated cad/gtkwave to 3.3.78 [mef 2016-12-10]
