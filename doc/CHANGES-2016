@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4970 2016/12/11 07:51:02 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4971 2016/12/11 08:20:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6929,3 +6929,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-HTTP-Entity-Parser to 0.18 [wen 2016-12-11]
 	Updated textproc/p5-YAML to 1.20 [wen 2016-12-11]
 	Updated textproc/p5-Swim to 0.1.44 [wen 2016-12-11]
+	Updated textproc/p5-Pod-Simple to 3.35 [wen 2016-12-11]
