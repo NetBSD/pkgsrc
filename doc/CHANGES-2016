@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4967 2016/12/11 07:25:01 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4968 2016/12/11 07:34:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6926,3 +6926,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Date-Manip to 6.57 [wen 2016-12-11]
 	Updated www/p5-Mojolicious to 7.11 [wen 2016-12-11]
 	Updated www/p5-Role-REST-Client to 0.19 [wen 2016-12-11]
+	Updated www/p5-HTTP-Entity-Parser to 0.18 [wen 2016-12-11]
