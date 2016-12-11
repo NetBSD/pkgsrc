@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4976 2016/12/11 21:34:39 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.4977 2016/12/11 23:53:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6935,3 +6935,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/wavpack to 5.0.0 [adam 2016-12-11]
 	Updated databases/py-postgresql to 5.0.3 [darcy 2016-12-11]
 	Updated devel/libdwarf to 20161124 [kamil 2016-12-11]
+	Updated www/apache24 to 2.4.23nb4 [taca 2016-12-11]
