@@ -1,8 +1,8 @@
-$NetBSD: patch-c++_examples_run-c++-ex.sh.in,v 1.2 2015/11/26 11:25:10 adam Exp $
+$NetBSD: patch-c++_examples_run-c++-ex.sh.in,v 1.2.8.1 2016/12/11 17:18:02 spz Exp $
 
 Fix paths to examples.
 
---- c++/examples/run-c++-ex.sh.in.orig	2015-10-24 05:14:06.000000000 +0000
+--- c++/examples/run-c++-ex.sh.in.orig	2016-04-26 12:44:06.000000000 +0000
 +++ c++/examples/run-c++-ex.sh.in
 @@ -20,7 +20,7 @@
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -17,7 +17,7 @@ Fix paths to examples.
  
  # Where the tool is installed.
  # default is relative path to installed location of the tools
--prefix="${prefix:-../../..}"
+-prefix="${prefix:-../../../}"
 +prefix="${prefix:-../../../..}"
  AR="@AR@"
  RANLIB="@RANLIB@"
