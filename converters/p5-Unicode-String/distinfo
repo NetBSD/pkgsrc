@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:43:53 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/12/11 02:30:37 wen Exp $
 
-SHA1 (Unicode-String-2.09.tar.gz) = 7cc47c5a1c5e38f23886bbc613b27a4a4a3d5459
-RMD160 (Unicode-String-2.09.tar.gz) = 97306208d760b7f59e61a8e9a6c2537df1361c6b
-SHA512 (Unicode-String-2.09.tar.gz) = 88bd5fe4a1e8ac05b7da5f75411f3e2cb17fb756ca926ace7f46d047ba7a7f22e54462efb61c2f0bf651d2c63d6fe74bffa8b7bcf49aa59847135a43b5cde759
-Size (Unicode-String-2.09.tar.gz) = 122705 bytes
+SHA1 (Unicode-String-2.10.tar.gz) = 24834f6155adf070204c56f9ddae01aab485a287
+RMD160 (Unicode-String-2.10.tar.gz) = 9e41594482075b87fc23dd8e5a294f5a7f29c3d6
+SHA512 (Unicode-String-2.10.tar.gz) = e1fad14dcda301d1e5199c9968efe2f33408fd56ef701d7ede40262a50d4d13a3b78ed7aab5c5319e63f551d40dd48b06dfd74e49f3e434b7b2f8d2f592f0b0e
+Size (Unicode-String-2.10.tar.gz) = 121287 bytes
