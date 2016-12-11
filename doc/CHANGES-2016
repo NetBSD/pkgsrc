@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4972 2016/12/11 08:47:16 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4973 2016/12/11 08:58:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6931,3 +6931,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Swim to 0.1.44 [wen 2016-12-11]
 	Updated textproc/p5-Pod-Simple to 3.35 [wen 2016-12-11]
 	Updated devel/p5-MooseX-Types to 0.48 [wen 2016-12-11]
+	Updated textproc/p5-PDF-Create to 1.39 [wen 2016-12-11]
