@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1.2.2 2016/12/11 20:47:09 spz Exp $
+
+Remove references to ancient builtin copy of curl.
+
+--- Makefile.in~	2006-07-16 01:48:28.000000000 +0000
++++ Makefile.in
+@@ -178,7 +178,7 @@ target_vendor = @target_vendor@
+ 
+ # require automake 1.4
+ AUTOMAKE_OPTIONS = 1.4
+-SUBDIRS = curl tinyxml utils utilssdl utilsgl tools data game
++SUBDIRS = tinyxml utils utilssdl utilsgl tools data game
+ DIST_SUBDIRS = $(SUBDIRS)
+ man_MANS = critter.6
+ EXTRA_DIST = $(man_MANS)

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2015/04/25 14:22:53 tnn Exp $
+# $NetBSD: Makefile,v 1.37.12.1 2016/12/11 20:47:09 spz Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=criticalmass/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,9 +19,14 @@ USE_TOOLS+=	gmake
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
+# delete builtin curl
+post-extract:
+	${RM} -rf ${WRKSRC}/curl
+
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
