@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/01/23 03:43:11 zafer Exp $
+# $NetBSD: Makefile,v 1.37 2016/12/11 03:58:36 dholland Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -39,6 +39,8 @@ pre-build:
 		${LN} -s i386-freebsd-cc.rul x86_64-freebsd-cc.rul;	\
 		${LN} -s i386-freebsd-gcc.rul amd64-freebsd-gcc.rul;	\
 		${LN} -s i386-freebsd-cc.rul amd64-freebsd-cc.rul;	\
-		${LN} -s x86_64-netbsd-cc.rul amd64-openbsd-cc.rul
+		${LN} -s x86_64-netbsd-cc.rul amd64-openbsd-cc.rul;	\
+		${LN} -s sun4-sunos5-cc.rul sun4v-sunos5-cc.rul;	\
+		${LN} -s sun4-sunos5-gcc.rul sun4v-sunos5-gcc.rul
 
 .include "../../mk/bsd.pkg.mk"
