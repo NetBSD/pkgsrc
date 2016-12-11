@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2341 2016/12/06 00:34:18 rodent Exp $
+# $NetBSD: Makefile,v 1.2342 2016/12/11 00:27:37 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1451,6 +1451,7 @@ SUBDIR+=	p5-Sub-Install
 SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Name
 SUBDIR+=	p5-Sub-Override
+SUBDIR+=	p5-Sub-Quote
 SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-Symbol-Global-Name
 SUBDIR+=	p5-Syntax-Keyword-Junction
