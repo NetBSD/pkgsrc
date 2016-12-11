@@ -1,0 +1,24 @@
+$NetBSD: patch-game_Makefile.in,v 1.1.2.2 2016/12/11 20:47:09 spz Exp $
+
+Remove references to ancient builtin copy of curl.
+
+--- game/Makefile.in~	2006-07-16 01:48:26.000000000 +0000
++++ game/Makefile.in
+@@ -71,7 +71,7 @@ am_critter_OBJECTS = ActionCallbacks.$(O
+ critter_OBJECTS = $(am_critter_OBJECTS)
+ critter_LDADD = $(LDADD)
+ @WIN32_TRUE@am__DEPENDENCIES_1 = critter.res
+-critter_DEPENDENCIES = ../curl/lib/libcurl.a ../utils/libutils.a \
++critter_DEPENDENCIES = ../utils/libutils.a \
+ 	../utilssdl/libutilssdl.a ../utilsgl/libutilsgl.a \
+ 	../tinyxml/libtinyxml.a $(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+@@ -231,7 +231,7 @@ critter_SOURCES = \
+         XMLHelper.cpp \
+         main.cpp
+ 
+-LDADD = ../curl/lib/libcurl.a ../utils/libutils.a \
++LDADD = -lcurl ../utils/libutils.a \
+ 	../utilssdl/libutilssdl.a ../utilsgl/libutilsgl.a \
+ 	../tinyxml/libtinyxml.a $(am__append_1)
+ @APPLE_FALSE@@WIN32_FALSE@INCLUDES = -I../curl/include -I../tinyxml -I../utils -I../utilssdl -I../utilsgl -DDATA_DIR=\"$(pkgdatadir)/\"
