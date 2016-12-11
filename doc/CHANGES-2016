@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4965 2016/12/11 03:19:00 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4966 2016/12/11 03:33:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6924,3 +6924,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-Fsdb to 2.62 [wen 2016-12-11]
 	Updated devel/p5-Class-Inspector to 1.31 [wen 2016-12-11]
 	Updated devel/p5-Date-Manip to 6.57 [wen 2016-12-11]
+	Updated www/p5-Mojolicious to 7.11 [wen 2016-12-11]
