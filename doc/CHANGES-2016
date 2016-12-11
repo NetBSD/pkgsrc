@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4975 2016/12/11 11:27:43 darcy Exp $
+$NetBSD: CHANGES-2016,v 1.4976 2016/12/11 21:34:39 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6934,3 +6934,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-Create to 1.39 [wen 2016-12-11]
 	Updated audio/wavpack to 5.0.0 [adam 2016-12-11]
 	Updated databases/py-postgresql to 5.0.3 [darcy 2016-12-11]
+	Updated devel/libdwarf to 20161124 [kamil 2016-12-11]
