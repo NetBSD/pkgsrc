@@ -1,16 +1,20 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 20:56:47 agc Exp $
+$NetBSD: distinfo,v 1.13.8.1 2016/12/11 20:47:09 spz Exp $
 
 SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
 SHA512 (CriticalMass-1.0.2.tar.bz2) = af3200adc4b6ed9f24eaa89ef5b2f31e8d09e402d0c2eef8db604afcbb2d36bad48e76c3c11c1b2410d2d4e0ffd8554e2e9749a8c8cc4752b4636b8919a66037
 Size (CriticalMass-1.0.2.tar.bz2) = 5122126 bytes
-SHA1 (patch-aa) = a5caa2facea22cd5e7d208540626ed2163d81f18
+SHA1 (patch-Makefile.am) = 32fb9a02d4bd9875317f0a53ac25c7e1f3886542
+SHA1 (patch-Makefile.in) = c63d831b2a3760f4880a0f6480d08950398823e3
+SHA1 (patch-aa) = 9fc730c1eb872ee30a24551be873161a79bffb66
 SHA1 (patch-game_BitmapManager.cpp) = 31265aeb2f97b642ca8d7f862de13e6442287a27
 SHA1 (patch-game_CallbackManager.cpp) = 6c5a7285397e52f3792420cc3bd775b6c0bd1c67
 SHA1 (patch-game_CallbackManager.hpp) = 8eb7c0830fe883b75e23c163d488dd1ef5e1980b
 SHA1 (patch-game_FontManager.cpp) = 13e99966beba8b27e9bd1de41859fb7c6745b111
 SHA1 (patch-game_Input.cpp) = a7b8587fc7a11879017a439e1a22b351c1819af2
 SHA1 (patch-game_Input.hpp) = 25cda998a93075d527f79938f27e2f7d70248125
+SHA1 (patch-game_Makefile.am) = 9b9e63de5c937e3242968d773f3bee641768f284
+SHA1 (patch-game_Makefile.in) = ca85a895312fe3e7f7a557bb9358bd77ef241e75
 SHA1 (patch-game_ModelManager.cpp) = 5f2bd67348673aefb8fb2b45e8e899e9afbff2d7
 SHA1 (patch-game_ModelManager.hpp) = f12fdc00bc675480f39671dc0019637672b09814
 SHA1 (patch-game_ParticleGroup.cpp) = f027845125e3ea383976a3062f704a03d74865c4
@@ -21,7 +25,7 @@ SHA1 (patch-game_SelectableFactory.cpp) = 885893f1f5b7f9faddcdcb9723bea879c0241f
 SHA1 (patch-game_SelectableFactory.hpp) = 99fab8bf9857f3e5b298caf08e3752870801daf6
 SHA1 (patch-game_WeaponDepot.cpp) = bc58e929983e1db2597f58c76b8567274a864133
 SHA1 (patch-game_WeaponDepot.hpp) = 3e54c85932c9c1dec781b5a6c57f0c855b40854f
-SHA1 (patch-game_main.cpp) = 9dbf9b3de9de4ce97b0ed99ab4f4c983159124c0
+SHA1 (patch-game_main.cpp) = 2c8983487e6cd50bc7cea1e7b1f6e19ea8591a0e
 SHA1 (patch-tinyxml_tinyxml.cpp) = e25526fff0121795c1a54089b87ede52eb86f124
 SHA1 (patch-tinyxml_tinyxmlparser.cpp) = 236ff1cbd6fe83045df28022a6b02f9f65da4ee8
 SHA1 (patch-tools_Packer.cpp) = 06f2ce956fd627ef2293c3650238996b3f800d4c

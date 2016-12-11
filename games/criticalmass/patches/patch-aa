@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2011/06/20 09:29:50 wiz Exp $
+$NetBSD: patch-aa,v 1.4.44.1 2016/12/11 20:47:09 spz Exp $
 
 Fix configure with png>1.2.
+Remove references to ancient builtin copy of curl.
 
 --- configure.orig	2006-07-16 01:48:28.000000000 +0000
 +++ configure
-@@ -3864,13 +3864,13 @@ else
+@@ -272,7 +272,6 @@ PACKAGE_STRING=
+ PACKAGE_BUGREPORT=
+ 
+ ac_unique_file="game/main.cpp"
+-ac_subdirs_all="$ac_subdirs_all curl"
+ ac_subst_vars='SHELL PATH_SEPARATOR PACKAGE_NAME PACKAGE_TARNAME PACKAGE_VERSION PACKAGE_STRING PACKAGE_BUGREPORT exec_prefix prefix program_transform_name bindir sbindir libexecdir datadir sysconfdir sharedstatedir localstatedir libdir includedir oldincludedir infodir mandir build_alias host_alias target_alias DEFS ECHO_C ECHO_N ECHO_T LIBS build build_cpu build_vendor build_os host host_cpu host_vendor host_os target target_cpu target_vendor target_os INSTALL_PROGRAM INSTALL_SCRIPT INSTALL_DATA CYGPATH_W PACKAGE VERSION ACLOCAL AUTOCONF AUTOMAKE AUTOHEADER MAKEINFO install_sh STRIP ac_ct_STRIP INSTALL_STRIP_PROGRAM mkdir_p AWK SET_MAKE am__leading_dot AMTAR am__tar am__untar CC CFLAGS LDFLAGS CPPFLAGS ac_ct_CC EXEEXT OBJEXT DEPDIR am__include am__quote AMDEP_TRUE AMDEP_FALSE AMDEPBACKSLASH CCDEPMODE am__fastdepCC_TRUE am__fastdepCC_FALSE CXX CXXFLAGS ac_ct_CXX CXXDEPMODE am__fastdepCXX_TRUE am__fastdepCXX_FALSE RANLIB ac_ct_RANLIB APPLE_TRUE APPLE_FALSE WIN32_TRUE WIN32_FALSE USE_LZMA_TRUE USE_LZMA_FALSE subdirs LIBOBJS LTLIBOBJS'
+ ac_subst_files=''
+ 
+@@ -3864,13 +3863,13 @@ else
      LIBS="-L/usr/local/lib -L/usr/X11R6/lib $LIBS"
      CXXFLAGS="$CXXFLAGS -I/usr/X11R6/include"
  
@@ -22,7 +31,7 @@ Fix configure with png>1.2.
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3908,25 +3908,25 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3908,25 +3907,25 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -54,3 +63,11 @@ Fix configure with png>1.2.
  
  else
    { { echo "$as_me:$LINENO: error: libpng is needed" >&5
+@@ -4174,7 +4173,6 @@ fi
+ 
+ 
+ 
+-subdirs="$subdirs curl"
+ 
+ 
+                                                                                           ac_config_files="$ac_config_files Makefile utils/Makefile utilssdl/Makefile utilsgl/Makefile game/Makefile tools/Makefile data/Makefile data/music/Makefile tinyxml/Makefile"

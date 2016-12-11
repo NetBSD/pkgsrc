@@ -1,0 +1,15 @@
+$NetBSD: patch-game_Makefile.am,v 1.1.2.2 2016/12/11 20:47:09 spz Exp $
+
+Remove references to ancient builtin copy of curl.
+
+--- game/Makefile.am~	2005-12-31 00:37:26.000000000 +0000
++++ game/Makefile.am
+@@ -41,7 +41,7 @@ critter_SOURCES = \
+         main.cpp
+ 
+ LDADD = \
+-	../curl/lib/libcurl.a \
++	-lcurl \
+ 	../utils/libutils.a \
+ 	../utilssdl/libutilssdl.a \
+ 	../utilsgl/libutilsgl.a \
