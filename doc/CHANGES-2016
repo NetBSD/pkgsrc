@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4961 2016/12/11 01:19:18 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.4962 2016/12/11 02:32:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6920,3 +6920,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/p5-Unicode-Collate to 1.19 [wen 2016-12-11]
 	Updated comms/asterisk to 11.25.1 [jnemeth 2016-12-11]
 	Updated games/finalbattle to 0.0nb2 [dholland 2016-12-11]
+	Updated converters/p5-Unicode-String to 2.10 [wen 2016-12-11]
