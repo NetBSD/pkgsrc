@@ -1,10 +1,19 @@
-$NetBSD: patch-configure,v 1.1 2015/10/18 15:19:30 adam Exp $
+$NetBSD: patch-configure,v 1.2 2016/12/11 11:08:12 adam Exp $
 
 Portablity fix.
 
---- configure.orig	2015-10-18 15:12:52.000000000 +0000
+--- configure.orig	2016-12-05 19:54:06.000000000 +0000
 +++ configure
-@@ -13514,7 +13514,7 @@ if test "${enable_rpath+set}" = set; the
+@@ -13638,7 +13638,7 @@ if test "x$enable_legacy" = "xyes"; then
+ 
+ fi
+ 
+- if test "x$enable_legacy" == "xyes"; then
++ if test "x$enable_legacy" = "xyes"; then
+   ENABLE_LEGACY_TRUE=
+   ENABLE_LEGACY_FALSE='#'
+ else
+@@ -13673,7 +13673,7 @@ if test "${enable_rpath+set}" = set; the
  fi
  
  
@@ -13,7 +22,7 @@ Portablity fix.
    ENABLE_RPATH_TRUE=
    ENABLE_RPATH_FALSE='#'
  else
-@@ -13529,7 +13529,7 @@ if test "${enable_tests+set}" = set; the
+@@ -13688,7 +13688,7 @@ if test "${enable_tests+set}" = set; the
  fi
  
  
