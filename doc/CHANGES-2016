@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4958 2016/12/11 00:35:39 wen Exp $
+$NetBSD: CHANGES-2016,v 1.4959 2016/12/11 00:41:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6915,3 +6915,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/gtkwave to 3.3.78 [mef 2016-12-10]
 	Added devel/p5-Sub-Quote version 2.003001 [wen 2016-12-11]
 	Updated devel/p5-Moo to 2.003000 [wen 2016-12-11]
+	Updated converters/p5-Unicode-Collate to 1.19 [wen 2016-12-11]
