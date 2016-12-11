@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4956 2016/12/10 14:06:43 mef Exp $
+$NetBSD: CHANGES-2016,v 1.4957 2016/12/11 00:29:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6913,3 +6913,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/xymon to 4.3.27 [spz 2016-12-09]
 	Updated net/xymonclient to 4.3.27 [spz 2016-12-09]
 	Updated cad/gtkwave to 3.3.78 [mef 2016-12-10]
+	Added devel/p5-Sub-Quote version 2.003001 [wen 2016-12-11]
