@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4960 2016/12/11 00:53:20 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.4961 2016/12/11 01:19:18 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6910,10 +6910,13 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.29 [taca 2016-12-10]
 	Updated lang/php70 to 7.0.14 [taca 2016-12-10]
 	Updated lang/php71 to 7.1.0 [taca 2016-12-10]
+	Updated games/supertuxkart to 0.8.1nb6 [dholland 2016-12-10]
 	Updated net/xymon to 4.3.27 [spz 2016-12-09]
 	Updated net/xymonclient to 4.3.27 [spz 2016-12-09]
 	Updated cad/gtkwave to 3.3.78 [mef 2016-12-10]
+	Updated games/criticalmass to 1.0.2nb8 [dholland 2016-12-10]
 	Added devel/p5-Sub-Quote version 2.003001 [wen 2016-12-11]
 	Updated devel/p5-Moo to 2.003000 [wen 2016-12-11]
 	Updated converters/p5-Unicode-Collate to 1.19 [wen 2016-12-11]
 	Updated comms/asterisk to 11.25.1 [jnemeth 2016-12-11]
+	Updated games/finalbattle to 0.0nb2 [dholland 2016-12-11]
