@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.105 2016/05/01 00:48:32 ryoon Exp $
+$NetBSD: distinfo,v 1.105.4.1 2016/12/11 16:41:46 spz Exp $
 
-SHA1 (subversion-1.9.4.tar.bz2) = bc7d51fdda43bea01e1272dfe9d23d0a9d6cd11c
-RMD160 (subversion-1.9.4.tar.bz2) = 9ea97e177a673f7b64f6f4ea8848b8640918387f
-SHA512 (subversion-1.9.4.tar.bz2) = fa512d8315dd6a435dcc5a3c2ca3cd7cf932364dd3a82063be868aa3ebcc04caf87cd3ff732d3e3d8aec86f3f58848e2b55987451d4697479bb151d1269db07f
-Size (subversion-1.9.4.tar.bz2) = 7911473 bytes
+SHA1 (subversion-1.9.5.tar.bz2) = 8bd6a44a1aed30c4c6b6b068488dafb44eaa6adf
+RMD160 (subversion-1.9.5.tar.bz2) = f0efa460a5cf7114871fbf81ea4c4bfbfe54bd93
+SHA512 (subversion-1.9.5.tar.bz2) = ff7241ffae2506e97f40011242b5d5c6fa665f5463743f9acc52136b59ad84b6db00b60e70c44a9060579db49b818db06da1d1352aaee78e5bfe6ce56f32a2cf
+Size (subversion-1.9.5.tar.bz2) = 7904861 bytes
 SHA1 (patch-ad) = 2c158d03d6636309f97fb785bb244b150c4ec8c3
 SHA1 (patch-ae) = a9cd7d26fb5f9da8ff81413ef32948ccd6c4290e
 SHA1 (patch-tools_dev_benchmarks_large__dirs_create__bigdir.sh) = ff19087ff4d348fdcf904eb52406f6b717fe444a
