@@ -1,15 +1,15 @@
-$NetBSD: patch-examples_Makefile.in,v 1.3 2015/11/26 11:25:10 adam Exp $
+$NetBSD: patch-examples_Makefile.in,v 1.3.8.1 2016/12/11 17:18:02 spz Exp $
 
 Fix paths to examples.
 
---- examples/Makefile.in.orig	2015-11-10 14:01:03.000000000 +0000
+--- examples/Makefile.in.orig	2016-05-10 21:24:51.000000000 +0000
 +++ examples/Makefile.in
 @@ -636,8 +636,8 @@ EXTLINK_DIRS = red blue u2w
  
  # Example directory
  # Note: no '/' after DESTDIR.  Explanation in commence.am
--EXAMPLEDIR = ${DESTDIR}$(datarootdir)/hdf5_examples/c
--EXAMPLETOPDIR = ${DESTDIR}$(datarootdir)/hdf5_examples
+-EXAMPLEDIR = ${DESTDIR}$(exec_prefix)/share/hdf5_examples/c
+-EXAMPLETOPDIR = ${DESTDIR}$(exec_prefix)/share/hdf5_examples
 +EXAMPLEDIR = ${DESTDIR}$(datarootdir)/examples/hdf5/c
 +EXAMPLETOPDIR = ${DESTDIR}$(datarootdir)/examples/hdf5
  @BUILD_SHARED_SZIP_CONDITIONAL_TRUE@LD_LIBRARY_PATH = $(LL_PATH)
