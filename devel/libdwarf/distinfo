@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/10 16:54:36 kamil Exp $
+$NetBSD: distinfo,v 1.2 2016/12/11 21:34:26 kamil Exp $
 
-SHA1 (libdwarf-20160115.tar.gz) = 15a86bc3f7fed11092e9610218b3e18a694b3fb3
-RMD160 (libdwarf-20160115.tar.gz) = b086e7ae3e3945bb418732ee2529a8b77aedd9d5
-SHA512 (libdwarf-20160115.tar.gz) = 594519460d3cd3f60f7e97931ce3e3d775393e03068a2c932d72ba95d8cdb2c53b622671c5af8a798712937b62dbf9594e2da8945553a0021a275cf677f4d90a
-Size (libdwarf-20160115.tar.gz) = 1538930 bytes
+SHA1 (libdwarf-20161124.tar.gz) = bef1cb152f5e05646b2cc3f6d9da8a594ffde69d
+RMD160 (libdwarf-20161124.tar.gz) = f1b30ea2e6a8b337a3eab2007c67e2824972738e
+SHA512 (libdwarf-20161124.tar.gz) = 38e480bce5ae8273fd585ec1d8ba94dc3e865a0ef3fcfcf38b5d92fa1ce41f8b8c95a7cf8a6e69e7c6f638a3cc56ebbfb37b6317047309725fa17e7929096799
+Size (libdwarf-20161124.tar.gz) = 1732155 bytes
