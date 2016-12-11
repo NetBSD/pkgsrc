@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.17 2016/12/04 20:01:06 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.18 2016/12/11 20:49:23 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -141,4 +141,18 @@ archivers/p7zip: security fix
 
 Pullup ticket #5168 - requested by sevan
 textproc/libxml2: security fix
+
+Pullup ticket #5154 - requested by bsiegert
+lang/guile20: build fix
+
+Pullup ticket #5169 - requested by bsiegert
+devel/subversion: security update
+devel/p5-subversion: security update
+devel/ruby-subversion: security update
+
+Pullup ticket #5171 - requested by bsiegert
+devel/hdf5: security update
+
+Pullup ticket #5172 - requested by dholland
+games/criticalmass: security fix
 
