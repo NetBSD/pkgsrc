@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.am,v 1.1.2.2 2016/12/11 20:47:09 spz Exp $
+
+Remove references to ancient builtin copy of curl.
+
+--- Makefile.am~	2005-07-15 04:33:04.000000000 +0000
++++ Makefile.am
+@@ -4,7 +4,7 @@
+ AUTOMAKE_OPTIONS = 1.4
+ 
+ ## Any directories that you want built and installed should go here.
+-SUBDIRS = curl tinyxml utils utilssdl utilsgl tools data game
++SUBDIRS = tinyxml utils utilssdl utilsgl tools data game
+ 
+ ## Any directories you want a part of the distribution should be listed
+ ## here, as well as have a Makefile generated at the end of configure.in
