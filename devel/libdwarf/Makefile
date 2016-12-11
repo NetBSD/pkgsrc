@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/04/10 16:54:36 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/11 21:34:26 kamil Exp $
 
-DISTNAME=	libdwarf-20160115
+DISTNAME=	libdwarf-20161124
 CATEGORIES=	devel
 MASTER_SITES=	https://www.prevanders.net/
 
@@ -24,6 +24,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/dwarfdump/dwarfdump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_LIB} ${WRKSRC}/libdwarf/libdwarf.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_LIB} ${WRKSRC}/libdwarf/libdwarf.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/libdwarf/libdwarf.so.1 ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libdwarf/dwarf.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/libdwarf/libdwarf.h ${DESTDIR}${PREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/libdwarf/*.pdf ${DESTDIR}${PREFIX}/share/doc/libdwarf
