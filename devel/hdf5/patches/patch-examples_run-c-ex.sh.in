@@ -1,8 +1,8 @@
-$NetBSD: patch-examples_run-c-ex.sh.in,v 1.2 2015/11/26 11:25:10 adam Exp $
+$NetBSD: patch-examples_run-c-ex.sh.in,v 1.2.8.1 2016/12/11 17:18:02 spz Exp $
 
 Fix path to examples.
 
---- examples/run-c-ex.sh.in.orig	2015-10-24 05:14:08.000000000 +0000
+--- examples/run-c-ex.sh.in.orig	2016-04-26 12:44:10.000000000 +0000
 +++ examples/run-c-ex.sh.in
 @@ -20,7 +20,7 @@
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -17,7 +17,7 @@ Fix path to examples.
   
  # Where the tool is installed.
  # default is relative path to installed location of the tools 
--prefix="${prefix:-../../..}"
+-prefix="${prefix:-../../../}"
 +prefix="${prefix:-../../../..}"
  PARALLEL=@PARALLEL@             # Am I in parallel mode?
  AR="@AR@"
