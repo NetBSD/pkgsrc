@@ -1,0 +1,30 @@
+$NetBSD: patch-makefile,v 1.1 2016/12/11 01:10:26 dholland Exp $
+
+Configure for pkgsrc.
+
+--- makefile~	2016-12-11 00:38:57.236393895 +0000
++++ makefile
+@@ -9,8 +9,8 @@
+ 
+ # Makefile defines
+ 
+-DESTDIR=
+-PREFIX=/usr/local
++#DESTDIR=
++#PREFIX=/usr/local
+ 
+ #CC=cc
+ CC=gcc
+@@ -24,10 +24,10 @@ STRIP=strip
+ 
+ #X11BASE=/usr/openwin
+ #X11BASE=/usr/X11R6
+-X11BASE=/usr/X11
++#X11BASE=/usr/X11
+ 
+ XINCS=-I$(X11BASE)/include
+-XLIBS=-L$(X11BASE)/lib -lX11 # -R$(X11BASE)/lib
++XLIBS=-L$(X11BASE)/lib -lX11 -R$(X11BASE)/lib
+ 
+ DATADIR=$(PREFIX)/share/finalbattle
+ SPRITESDIR=$(DATADIR)/sprites
