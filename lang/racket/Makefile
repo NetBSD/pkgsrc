@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/12/05 20:11:22 asau Exp $
+# $NetBSD: Makefile,v 1.54 2016/12/12 12:08:57 wiz Exp $
 
 PKGNAME=	racket-6.7
 DISTNAME=	$(PKGNAME_NOREV)-src
@@ -7,8 +7,7 @@ MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)
 		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
 		http://www.cs.utah.edu/plt/installers/$(PKGVERSION_NOREV)/ \
 		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
-		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/ \
-		http://russell.cs.bilgi.edu.tr/racket-installers/$(PKGVERSION_NOREV)/
+		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/
 # Pre-release:
 #MASTER_SITES_PLT=	http://pre-release.racket-lang.org/installers/
 MASTER_SITES=	$(MASTER_SITES_PLT)
