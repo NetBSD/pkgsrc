@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/09/01 16:54:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/12/12 14:27:39 wiz Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -77,6 +77,9 @@ ${PYSITELIB}/foolscap/eventual.pyo
 ${PYSITELIB}/foolscap/furl.py
 ${PYSITELIB}/foolscap/furl.pyc
 ${PYSITELIB}/foolscap/furl.pyo
+${PYSITELIB}/foolscap/info.py
+${PYSITELIB}/foolscap/info.pyc
+${PYSITELIB}/foolscap/info.pyo
 ${PYSITELIB}/foolscap/ipb.py
 ${PYSITELIB}/foolscap/ipb.pyc
 ${PYSITELIB}/foolscap/ipb.pyo
@@ -239,6 +242,9 @@ ${PYSITELIB}/foolscap/test/test_eventual.pyo
 ${PYSITELIB}/foolscap/test/test_gifts.py
 ${PYSITELIB}/foolscap/test/test_gifts.pyc
 ${PYSITELIB}/foolscap/test/test_gifts.pyo
+${PYSITELIB}/foolscap/test/test_info.py
+${PYSITELIB}/foolscap/test/test_info.pyc
+${PYSITELIB}/foolscap/test/test_info.pyo
 ${PYSITELIB}/foolscap/test/test_interfaces.py
 ${PYSITELIB}/foolscap/test/test_interfaces.pyc
 ${PYSITELIB}/foolscap/test/test_interfaces.pyo
