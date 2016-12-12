@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4985 2016/12/12 12:28:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4986 2016/12/12 13:33:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6945,3 +6945,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/p5-Business-ISMN to 1.131 [wiz 2016-12-12]
 	Updated audio/chromaprint to 1.4 [wiz 2016-12-12]
 	Updated misc/calibre to 2.74.0 [wiz 2016-12-12]
+	Updated net/tor to 0.2.8.11 [wiz 2016-12-12]
