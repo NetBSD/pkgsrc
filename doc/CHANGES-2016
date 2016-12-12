@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4993 2016/12/12 13:59:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4994 2016/12/12 14:02:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6953,3 +6953,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/cairo-gobject to 1.14.8 [wiz 2016-12-12]
 	Updated sysutils/dbus to 1.10.14 [wiz 2016-12-12]
 	Updated databases/shared-mime-info to 1.8 [wiz 2016-12-12]
+	Updated devel/py-test to 3.0.5 [wiz 2016-12-12]
