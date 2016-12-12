@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16782 2016/12/12 14:51:01 wiz Exp $
+$NetBSD: TODO,v 1.16783 2016/12/12 14:53:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1519,7 +1519,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sparse-0.5.0
 	o spcaview-20060501
 	o spectrwm-2.7.2
-	o speex-1.2.0
 	o spidermonkey-1.8.5
 	o spin-6.45
 	o spl-1.0pre6
