@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4986 2016/12/12 13:33:38 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4987 2016/12/12 13:43:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6946,3 +6946,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/chromaprint to 1.4 [wiz 2016-12-12]
 	Updated misc/calibre to 2.74.0 [wiz 2016-12-12]
 	Updated net/tor to 0.2.8.11 [wiz 2016-12-12]
+	Updated graphics/ImageMagick to 7.0.3.10 [wiz 2016-12-12]
