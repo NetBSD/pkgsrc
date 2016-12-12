@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.72 2016/11/28 12:32:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.73 2016/12/12 12:28:22 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1174,7 +1174,7 @@ lib/calibre/calibre/library/server/opds.py
 lib/calibre/calibre/library/server/utils.py
 lib/calibre/calibre/library/server/xml.py
 lib/calibre/calibre/library/sqlite.py
-lib/calibre/calibre/library/test.py
+lib/calibre/calibre/library/test_cli.py
 lib/calibre/calibre/libunzip.py
 lib/calibre/calibre/linux.py
 lib/calibre/calibre/plugins/_patiencediff_c.so
@@ -2277,7 +2277,6 @@ share/calibre/recipes/estadao.recipe
 share/calibre/recipes/eu_commission.recipe
 share/calibre/recipes/europa_press.recipe
 share/calibre/recipes/europasur.recipe
-share/calibre/recipes/european_voice.recipe
 share/calibre/recipes/evangelizo.recipe
 share/calibre/recipes/everett_herald.recipe
 share/calibre/recipes/evz.ro.recipe
@@ -3058,7 +3057,6 @@ share/calibre/recipes/republica.recipe
 share/calibre/recipes/republika.recipe
 share/calibre/recipes/res_publica.recipe
 share/calibre/recipes/respekt_magazine.recipe
-share/calibre/recipes/resurgence.recipe
 share/calibre/recipes/reuters.recipe
 share/calibre/recipes/reuters_ja.recipe
 share/calibre/recipes/revista_bla.recipe
@@ -3230,7 +3228,6 @@ share/calibre/recipes/telepolis.recipe
 share/calibre/recipes/telepolis_artikel.recipe
 share/calibre/recipes/telepolis_pl.recipe
 share/calibre/recipes/teleread.recipe
-share/calibre/recipes/television_without_pity.recipe
 share/calibre/recipes/thai_post_daily.recipe
 share/calibre/recipes/thairath.recipe
 share/calibre/recipes/the_age.recipe
