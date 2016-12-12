@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2342 2016/12/11 00:27:37 wen Exp $
+# $NetBSD: Makefile,v 1.2343 2016/12/12 00:36:19 marino Exp $
 #
 
 COMMENT=	Development utilities
@@ -34,6 +34,7 @@ SUBDIR+=	accerciser3
 SUBDIR+=	acme
 SUBDIR+=	acr
 SUBDIR+=	acunia-jam
+SUBDIR+=	adacurses
 SUBDIR+=	adocman
 SUBDIR+=	aegis
 SUBDIR+=	afl
