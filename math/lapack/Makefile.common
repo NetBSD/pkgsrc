@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2016/12/12 14:24:59 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/12/12 14:36:23 wiz Exp $
 # used by math/blas/Makefile
 # used by math/lapack/Makefile
 
@@ -19,12 +19,8 @@ PATCHDIR=	${.CURDIR}/../../math/lapack/patches
 
 INSTALLATION_DIRS=	lib
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
 # blas fails using the gold linker with:
 # fatal error: --sysroot=: must take a non-empty argument
 # Work around it on DragonFly by specifying the classic gnu linker
 
-MAKE_ENV+=	LDVER=ld.bfd
-.endif
+MAKE_ENV.DragonFly+=	LDVER=ld.bfd
