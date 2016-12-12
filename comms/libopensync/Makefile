@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/12/04 05:17:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2016/12/12 14:22:02 wiz Exp $
 #
 
 DISTNAME=	libopensync-0.22
@@ -22,5 +22,4 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

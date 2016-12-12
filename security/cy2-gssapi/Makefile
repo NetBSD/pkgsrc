@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/12/04 03:51:16 marino Exp $
+# $NetBSD: Makefile,v 1.25 2016/12/12 14:22:03 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-gssapi/}
 PKGREVISION=	3
@@ -27,5 +27,4 @@ do-install:
 	${SHLIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} libgssapiv2.la ${DESTDIR}${PLUGINDIR}
 
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/12/04 05:17:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2016/12/12 14:22:03 wiz Exp $
 #
 
 DISTNAME=	basic256_0.9.6.71
@@ -45,5 +45,4 @@ MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
