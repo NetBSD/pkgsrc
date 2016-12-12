@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4980 2016/12/12 09:42:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4981 2016/12/12 09:45:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6940,3 +6940,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added misc/ini_file_manager version 03 [marino 2016-12-11]
 	Updated devel/p5-Devel-StackTrace to 2.02 [wiz 2016-12-12]
 	Updated devel/p5-Exception-Class to 1.41 [wiz 2016-12-12]
+	Updated devel/p5-Params-ValidationCompiler to 0.21 [wiz 2016-12-12]
