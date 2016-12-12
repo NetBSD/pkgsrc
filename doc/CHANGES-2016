@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4989 2016/12/12 13:47:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4990 2016/12/12 13:56:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6949,3 +6949,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.3.10 [wiz 2016-12-12]
 	Updated print/abcm2ps to 8.13.1 [wiz 2016-12-12]
 	Updated devel/waf to 1.9.6 [wiz 2016-12-12]
+	Updated graphics/cairo to 1.14.8 [wiz 2016-12-12]
