@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 22:00:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/12/12 13:53:10 hauke Exp $
+${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info
+${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info-1
+${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info-2
+${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info-3
+${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m-ja.info-4
+${NOTFOR_emacs}${EMACS_INFOPREFIX}/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
@@ -56,19 +62,17 @@ ${EMACS_LISPPREFIX}/w3m/w3m-tabmenu.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-ucs.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
 ${FOR_emacs21nox}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
-${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
-${FOR_xemacs215}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/w3m/w3m-ucs.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-util.el
 ${EMACS_LISPPREFIX}/w3m/w3m-util.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.el
 ${EMACS_LISPPREFIX}/w3m/w3m-weather.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-xmas.el
-${FOR_xemacs214}${EMACS_LISPPREFIX}/w3m/w3m-xmas.elc
-${FOR_xemacs215}${EMACS_LISPPREFIX}/w3m/w3m-xmas.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/w3m/w3m-xmas.elc
 ${EMACS_LISPPREFIX}/w3m/w3m.el
 ${EMACS_LISPPREFIX}/w3m/w3m.elc
 ${EMACS_LISPPREFIX}/w3m/mew-shimbun.el
-${PLIST.mew}${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
+${NOTFOR_xemacs}${PLIST.mew}${EMACS_LISPPREFIX}/w3m/mew-shimbun.elc
 ${EMACS_LISPPREFIX}/w3m/w3m-ccl.el
 ${EMACS_LISPPREFIX}/w3m/w3m-favicon.el
 ${EMACS_LISPPREFIX}/w3m/w3m-filter.el
@@ -338,5 +342,5 @@ ${PLIST.gui}${ETCDIR}/state-01.xpm
 ${PLIST.gui}${ETCDIR}/state-10.xpm
 ${PLIST.gui}${ETCDIR}/state-11.xpm
 ${PLIST.gui}${ETCDIR}/weather-up.xpm
-info/emacs-w3m-ja.info
-info/emacs-w3m.info
+${NOTFOR_xemacs}info/emacs-w3m-ja.info
+${NOTFOR_xemacs}info/emacs-w3m.info
