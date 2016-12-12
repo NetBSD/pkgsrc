@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4999 2016/12/12 14:27:49 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5000 2016/12/12 14:51:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6959,3 +6959,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/libunistring to 0.9.7 [wiz 2016-12-12]
 	Updated security/libgcrypt to 1.7.4 [wiz 2016-12-12]
 	Updated net/py-foolscap to 0.12.5 [wiz 2016-12-12]
+	Updated fonts/harfbuzz to 1.3.4 [wiz 2016-12-12]
