@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16761 2016/12/12 09:41:18 wiz Exp $
+$NetBSD: TODO,v 1.16762 2016/12/12 09:42:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1203,7 +1203,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
 	o p5-Date-Manip-6.57
-	o p5-Exception-Class-1.41
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
