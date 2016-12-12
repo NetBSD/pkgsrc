@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2013/04/06 21:07:36 rodent Exp $
+# $NetBSD: Makefile,v 1.32 2016/12/12 13:53:10 hauke Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 
@@ -43,6 +43,12 @@ PLIST_VARS+=	gui
 PLIST.gui=	yes
 .endif
 
+# Work around an xemacs rendering bug for optimized GIFs, see
+# <https://github.com/doitian/emacs-w3m>, 2b
+.if (${EMACS_FLAVOR} == "xemacs")
+DEPENDS+=	gifsicle:../../graphics/gifsicle
+.endif
+
 DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja
 ETCDIR=		${ETCDIR.${EMACS_FLAVOR}}
 ICONDIR=	${PREFIX}/${ETCDIR}
@@ -53,11 +59,18 @@ ETCDIR.emacs=		share/emacs/${_EMACS_VERSION_MAJOR}/etc/w3m
 ETCDIR.xemacs=		lib/xemacs/site-packages/etc/w3m
 
 post-install:
-	for f in ${DOCUMENTS}; do ${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/${ETCDIR}; done
+	for f in ${DOCUMENTS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/${ETCDIR}; \
+	done
 
 .include "options.mk"
 
+.if (${EMACS_FLAVOR} != "xemacs")
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/semi/buildlink3.mk"
 .include "../../editors/mule-ucs/buildlink3.mk"
+.endif
+
+.include "../../devel/flim/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
