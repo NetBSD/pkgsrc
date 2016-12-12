@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16759 2016/12/09 08:21:01 leot Exp $
+$NetBSD: TODO,v 1.16760 2016/12/12 09:36:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1074,6 +1074,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeself-2.2.0
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.180
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
@@ -1202,6 +1203,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
 	o p5-Date-Manip-6.57
+	o p5-Devel-StackTrace-2.02
+	o p5-Exception-Class-1.41
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
@@ -1212,7 +1215,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IP-Country-3.03
 	o p5-Memoize-Memcached-0.11
 	o p5-Mojolicious-7.11
-	o p5-Net-IDN-Encode-2.301
+	o p5-Net-IDN-Encode-2.303
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
@@ -1244,7 +1247,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Tie-DBI-1.06
 	o p5-Unicode-Collate-1.19
 	o p5-X11-Protocol-29
-	o p5-YAML-1.20
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
 	o p5-pcsc-1.4.14
