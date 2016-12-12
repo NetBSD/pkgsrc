@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2015/11/25 12:49:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2016/12/12 11:42:49 hauke Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/flim/flim-1.14/
 
@@ -45,7 +45,7 @@ post-build:
 
 do-install: plist
 	cd ${WRKSRC};							\
-	grep -v '^@' ${PLIST} | grep '/site-lisp/flim/' |		\
+	grep -v '^@' ${PLIST} | grep -E '/site-(|packages/)lisp/flim/' | \
 	while read file; do						\
 		file=$$( basename $$file );				\
 		${INSTALL_DATA} $$file					\
@@ -60,6 +60,9 @@ post-install:
 
 .include "../../editors/emacs/modules.mk"
 
+.if (${EMACS_FLAVOR} != "xemacs")
 BUILDLINK_API_DEPENDS.apel+=	apel>=10.7
 .include "../../devel/apel/buildlink3.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
