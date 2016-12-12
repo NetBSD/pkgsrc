@@ -1,9 +1,7 @@
-# $NetBSD: install_threads.tmpl,v 1.1 2005/08/12 19:59:03 jlam Exp $
+# $NetBSD: install_threads.tmpl,v 1.2 2016/12/12 16:08:00 wiz Exp $
 #
 # Require the presence of a pkgsrc Perl installation that supports threads
 # during the PRE-INSTALL stage, otherwise we bail out.
-
-PERL5="@PERL5@"
 
 case ${STAGE} in
 PRE-INSTALL)
