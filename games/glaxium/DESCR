@@ -1,1 +1,3 @@
 Glaxium is a space-ship "shoot'em up" game, with OpenGL/SDL graphics.
+It is akin to a classic vertical-scrolling arcade game, but with 3D
+perspective.
