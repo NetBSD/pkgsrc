@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2016/10/12 16:58:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.28 2016/12/12 19:21:33 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -20,6 +20,7 @@ lib/mysql/plugin/adt_null.so
 lib/mysql/plugin/auth.so
 ${PLIST.auth_socket}lib/mysql/plugin/auth_socket.so
 lib/mysql/plugin/auth_test_plugin.so
+lib/mysql/plugin/connection_control.so
 lib/mysql/plugin/daemon_example.ini
 ${PLIST.sphinx}lib/mysql/plugin/ha_sphinx.so
 ${PLIST.memcached}lib/mysql/plugin/innodb_engine.so
@@ -1731,7 +1732,6 @@ share/mysql/test/std_data/bug17532932.frm
 share/mysql/test/std_data/bug19371.MYD
 share/mysql/test/std_data/bug19371.MYI
 share/mysql/test/std_data/bug19371.frm
-share/mysql/test/std_data/bug20683959loaddata.txt
 share/mysql/test/std_data/bug30435_10k_items.txt
 share/mysql/test/std_data/bug30435_5k.txt
 share/mysql/test/std_data/bug33029-slave-relay-bin.000001
@@ -2175,6 +2175,39 @@ share/mysql/test/suite/binlog/t/binlog_write_error.test
 share/mysql/test/suite/binlog/t/binlog_xa_handling.test
 share/mysql/test/suite/binlog/t/disabled.def
 share/mysql/test/suite/binlog/t/show_binlog_events_no_lock.test
+share/mysql/test/suite/connection_control/inc/check_connection_delay.inc
+share/mysql/test/suite/connection_control/inc/cleanup_proxy_accounts.inc
+share/mysql/test/suite/connection_control/inc/have_connection_control_plugin.inc
+share/mysql/test/suite/connection_control/inc/have_test_plugin.inc
+share/mysql/test/suite/connection_control/inc/install_connection_control_plugin.inc
+share/mysql/test/suite/connection_control/inc/set_after_marker.inc
+share/mysql/test/suite/connection_control/inc/set_before_marker.inc
+share/mysql/test/suite/connection_control/inc/setup_proxy_accounts.inc
+share/mysql/test/suite/connection_control/inc/uninstall_connection_control_plugin.inc
+share/mysql/test/suite/connection_control/r/connection_delay_anonymous_user.result
+share/mysql/test/suite/connection_control/r/connection_delay_info_schema_view.result
+share/mysql/test/suite/connection_control/r/connection_delay_invalid_users.result
+share/mysql/test/suite/connection_control/r/connection_delay_min_max.result
+share/mysql/test/suite/connection_control/r/connection_delay_proxy_users.result
+share/mysql/test/suite/connection_control/r/connection_delay_valid_users.result
+share/mysql/test/suite/connection_control/r/status_variables.result
+share/mysql/test/suite/connection_control/r/system_variables.result
+share/mysql/test/suite/connection_control/t/connection_delay_anonymous_user-master.opt
+share/mysql/test/suite/connection_control/t/connection_delay_anonymous_user.test
+share/mysql/test/suite/connection_control/t/connection_delay_info_schema_view-master.opt
+share/mysql/test/suite/connection_control/t/connection_delay_info_schema_view.test
+share/mysql/test/suite/connection_control/t/connection_delay_invalid_users-master.opt
+share/mysql/test/suite/connection_control/t/connection_delay_invalid_users.test
+share/mysql/test/suite/connection_control/t/connection_delay_min_max-master.opt
+share/mysql/test/suite/connection_control/t/connection_delay_min_max.test
+share/mysql/test/suite/connection_control/t/connection_delay_proxy_users-master.opt
+share/mysql/test/suite/connection_control/t/connection_delay_proxy_users.test
+share/mysql/test/suite/connection_control/t/connection_delay_valid_users-master.opt
+share/mysql/test/suite/connection_control/t/connection_delay_valid_users.test
+share/mysql/test/suite/connection_control/t/status_variables-master.opt
+share/mysql/test/suite/connection_control/t/status_variables.test
+share/mysql/test/suite/connection_control/t/system_variables-master.opt
+share/mysql/test/suite/connection_control/t/system_variables.test
 share/mysql/test/suite/engines/README
 share/mysql/test/suite/engines/funcs/r/ai_init_alter_table.result
 share/mysql/test/suite/engines/funcs/r/ai_init_create_table.result
@@ -3474,6 +3507,7 @@ share/mysql/test/suite/innodb/include/innodb_stats_table_flag_analyze.inc
 share/mysql/test/suite/innodb/r/add_foreign_key.result
 share/mysql/test/suite/innodb/r/alter_rename_existing.result
 share/mysql/test/suite/innodb/r/analyze_table.result
+share/mysql/test/suite/innodb/r/autoinc_debug.result
 share/mysql/test/suite/innodb/r/blob-update-debug.result
 share/mysql/test/suite/innodb/r/blob_redo.result
 share/mysql/test/suite/innodb/r/checksum.result
@@ -3641,6 +3675,7 @@ share/mysql/test/suite/innodb/r/innodb_stats_auto_recalc_lots.result
 share/mysql/test/suite/innodb/r/innodb_stats_auto_recalc_on_nonexistent.result
 share/mysql/test/suite/innodb/r/innodb_stats_create_on_corrupted.result
 share/mysql/test/suite/innodb/r/innodb_stats_create_table.result
+share/mysql/test/suite/innodb/r/innodb_stats_del_mark.result
 share/mysql/test/suite/innodb/r/innodb_stats_drop_locked.result
 share/mysql/test/suite/innodb/r/innodb_stats_external_pages.result
 share/mysql/test/suite/innodb/r/innodb_stats_fetch.result
@@ -3668,6 +3703,7 @@ share/mysql/test/suite/innodb/r/xa_recovery.result
 share/mysql/test/suite/innodb/t/add_foreign_key.test
 share/mysql/test/suite/innodb/t/alter_rename_existing.test
 share/mysql/test/suite/innodb/t/analyze_table.test
+share/mysql/test/suite/innodb/t/autoinc_debug.test
 share/mysql/test/suite/innodb/t/blob-update-debug.test
 share/mysql/test/suite/innodb/t/blob_redo-master.opt
 share/mysql/test/suite/innodb/t/blob_redo.test
@@ -3871,6 +3907,8 @@ share/mysql/test/suite/innodb/t/innodb_stats_auto_recalc_lots.test
 share/mysql/test/suite/innodb/t/innodb_stats_auto_recalc_on_nonexistent.test
 share/mysql/test/suite/innodb/t/innodb_stats_create_on_corrupted.test
 share/mysql/test/suite/innodb/t/innodb_stats_create_table.test
+share/mysql/test/suite/innodb/t/innodb_stats_del_mark-master.opt
+share/mysql/test/suite/innodb/t/innodb_stats_del_mark.test
 share/mysql/test/suite/innodb/t/innodb_stats_drop_locked.test
 share/mysql/test/suite/innodb/t/innodb_stats_external_pages.test
 share/mysql/test/suite/innodb/t/innodb_stats_fetch.test
@@ -7817,6 +7855,7 @@ share/mysql/test/suite/sys_vars/r/innodb_saved_page_number_debug_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_sort_buffer_size_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_spin_wait_delay_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_stats_auto_recalc_basic.result
+share/mysql/test/suite/sys_vars/r/innodb_stats_include_delete_marked_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_stats_method_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_stats_on_metadata_basic.result
 share/mysql/test/suite/sys_vars/r/innodb_stats_persistent_basic.result
@@ -8432,6 +8471,7 @@ share/mysql/test/suite/sys_vars/t/innodb_saved_page_number_debug_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_sort_buffer_size_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_spin_wait_delay_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_stats_auto_recalc_basic.test
+share/mysql/test/suite/sys_vars/t/innodb_stats_include_delete_marked_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_stats_method_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_stats_on_metadata_basic.test
 share/mysql/test/suite/sys_vars/t/innodb_stats_persistent_basic.test
