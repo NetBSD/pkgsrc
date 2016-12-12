@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4983 2016/12/12 09:49:34 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4984 2016/12/12 10:15:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6943,3 +6943,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Params-ValidationCompiler to 0.21 [wiz 2016-12-12]
 	Updated textproc/p5-Net-IDN-Encode to 2.303 [wiz 2016-12-12]
 	Updated misc/p5-Business-ISMN to 1.131 [wiz 2016-12-12]
+	Updated audio/chromaprint to 1.4 [wiz 2016-12-12]
