@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5004 2016/12/12 15:01:20 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5005 2016/12/12 15:02:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6964,3 +6964,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/hunspell-de to 20161207 [wiz 2016-12-12]
 	Updated devel/py-setuptools to 30.4.0 [wiz 2016-12-12]
 	Updated mail/notmuch to 0.23.3 [wiz 2016-12-12]
+	Updated textproc/iso-codes to 3.72 [wiz 2016-12-12]
