@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5006 2016/12/12 15:06:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5007 2016/12/12 19:25:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6966,3 +6966,10 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/notmuch to 0.23.3 [wiz 2016-12-12]
 	Updated textproc/iso-codes to 3.72 [wiz 2016-12-12]
 	Updated math/gsl to 2.3 [wiz 2016-12-12]
+	Updated textproc/icu to 58.2 [adam 2016-12-12]
+	Updated databases/mysql55-client to 5.5.54 [adam 2016-12-12]
+	Updated databases/mysql55-server to 5.5.54 [adam 2016-12-12]
+	Updated databases/mysql56-client to 5.6.35 [adam 2016-12-12]
+	Updated databases/mysql56-server to 5.6.35 [adam 2016-12-12]
+	Updated databases/mysql57-client to 5.7.17 [adam 2016-12-12]
+	Updated databases/mysql57-server to 5.7.17 [adam 2016-12-12]
