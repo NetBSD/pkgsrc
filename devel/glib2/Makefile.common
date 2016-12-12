@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2016/11/25 12:42:21 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.53 2016/12/12 09:22:54 maya Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -37,6 +37,8 @@ CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
 CONFIGURE_ARGS+=	--disable-modular-tests
 # Avoid unnecessary autotools invocation.
 CONFIGURE_ARGS+=	--disable-maintainer-mode
+# Avoid linux dependency on libmount-dev
+CONFIGURE_ARGS.Linux+=	--disable-libmount
 
 # When ICONV_TYPE=gnu ensure we explicitly use the GNU version, to avoid
 # conflicts between iconv.h from converters/libiconv and builtin libiconv
