@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.18 2016/12/11 20:49:23 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.19 2016/12/12 06:57:29 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -156,3 +156,5 @@ devel/hdf5: security update
 Pullup ticket #5172 - requested by dholland
 games/criticalmass: security fix
 
+Pullup ticket #5170 - requested by bsiegert
+lang/go: security update
