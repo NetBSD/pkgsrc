@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2016/07/21 12:22:55 wiz Exp $
+$NetBSD: distinfo,v 1.12 2016/12/12 10:15:13 wiz Exp $
 
-SHA1 (chromaprint-1.3.2.tar.gz) = 29e86490f14c5d50f8720974b814340f9846f71f
-RMD160 (chromaprint-1.3.2.tar.gz) = 5d350e46d2217ac4f3e0c5389f3ce2c171ce74b5
-SHA512 (chromaprint-1.3.2.tar.gz) = 7f89eb09f293a3691efcb01544da612cf674a00af1c188db3f1075db44fee0a8e0aeff3ca6eccd0731ae6bbff9eb0fd51b22128fa927fdbd21638e2832f76e95
-Size (chromaprint-1.3.2.tar.gz) = 538395 bytes
-SHA1 (patch-cmake_modules_FindFFmpeg.cmake) = a43fc03f36c18477cdafb7382a4e101eed3f6a72
+SHA1 (chromaprint-1.4.tar.gz) = 1f512fdd01a6e0f9e534ad65493c75c4a1432813
+RMD160 (chromaprint-1.4.tar.gz) = 510313d3b02cce9807236f43113f0975ca534459
+SHA512 (chromaprint-1.4.tar.gz) = 7b394c81a5fe9c0fd8008322766841c280613df2f6b605ab449f667b5d2389e062d3dfcc92563d6bf3bdf709d56e66a537be95358070168ca4cbad9bf059469b
+Size (chromaprint-1.4.tar.gz) = 610787 bytes
+SHA1 (patch-cmake_modules_FindFFmpeg.cmake) = 193eac515ea1152762d911cf5cb2fac32ec62b4b
