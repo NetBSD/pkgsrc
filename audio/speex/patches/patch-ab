@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2015/01/16 08:50:47 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2016/12/12 14:53:14 wiz Exp $
 
 Add getopt/ossaudio libraries where needed.
 
---- src/Makefile.in.orig	2014-12-06 19:58:25.000000000 +0000
+--- src/Makefile.in.orig	2016-12-07 23:21:03.000000000 +0000
 +++ src/Makefile.in
-@@ -248,7 +248,7 @@ LD = @LD@
+@@ -260,7 +260,7 @@ LD = @LD@
  LDFLAGS = @LDFLAGS@
  LIBM = @LIBM@
  LIBOBJS = @LIBOBJS@
@@ -13,7 +13,7 @@ Add getopt/ossaudio libraries where needed.
  LIBTOOL = @LIBTOOL@
  LIPO = @LIPO@
  LN_S = @LN_S@
-@@ -351,11 +351,11 @@ include_HEADERS = 
+@@ -366,11 +366,11 @@ include_HEADERS = 
  noinst_HEADERS = wav_io.h
  speexenc_SOURCES = speexenc.c wav_io.c skeleton.c
  speexenc_LDADD = $(top_builddir)/libspeex/libspeex.la \
@@ -22,8 +22,8 @@ Add getopt/ossaudio libraries where needed.
  
  speexdec_SOURCES = speexdec.c wav_io.c
  speexdec_LDADD = $(top_builddir)/libspeex/libspeex.la \
--	$(OGG_LIBS)  @FFT_LIBS@
-+	$(OGG_LIBS)  @FFT_LIBS@ $(LIBOSSAUDIO)
+-	$(OGG_LIBS) @WINMM_LIBS@ @FFT_LIBS@
++	$(OGG_LIBS) @WINMM_LIBS@ @FFT_LIBS@ $(LIBOSSAUDIO)
  
  all: all-am
  
