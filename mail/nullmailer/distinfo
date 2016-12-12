@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 23:27:11 agc Exp $
+$NetBSD: distinfo,v 1.17 2016/12/12 23:54:12 wiedi Exp $
 
 SHA1 (nullmailer-1.13/nullmailer-1.13.tar.gz) = e1178fff0395abee2bb6e77c3ddb8a0a7efcc791
 RMD160 (nullmailer-1.13/nullmailer-1.13.tar.gz) = d9f4663351122826299b04a46ffbb2bf51f41687
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = 6e8fb0269fcca08fd450b08b865f67ab3bfa1675
 SHA1 (patch-ab) = cb6ed64a5cdf413837710a6f27ea22d1e37fd1b9
 SHA1 (patch-ac) = c542bbf35dfc2148dd133837799b7f4634b66489
 SHA1 (patch-lib_fdbuf_fdobuf.h) = 716854a1421ef2021f5383f3e63bd19ece900a23
+SHA1 (patch-src_inject.cc) = eaffa250d87bb9501e6ccac81c73c1efafb1ad54
