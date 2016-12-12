@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.476 2016/12/04 21:12:58 rodent Exp $
+# $NetBSD: Makefile,v 1.477 2016/12/12 00:40:17 marino Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -110,6 +110,7 @@ SUBDIR+=	heirloom-time
 SUBDIR+=	heyu
 SUBDIR+=	howm
 SUBDIR+=	ibutton-pdkit
+SUBDIR+=	ini_file_manager
 SUBDIR+=	ipbt
 SUBDIR+=	iselect
 SUBDIR+=	iwatch
