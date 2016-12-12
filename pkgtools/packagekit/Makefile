@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2016/12/04 05:17:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2016/12/12 14:22:03 wiz Exp $
 
 DISTNAME=	PackageKit-0.4.0
 PKGREVISION=	39
@@ -78,5 +78,4 @@ BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

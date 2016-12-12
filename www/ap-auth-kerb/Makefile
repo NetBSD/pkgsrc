@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/12/04 03:51:17 marino Exp $
+# $NetBSD: Makefile,v 1.13 2016/12/12 14:22:04 wiz Exp $
 
 DISTNAME=	mod_auth_kerb-5.4
 PKGNAME=	${DISTNAME:S/mod/${APACHE_PKG_PREFIX}/:S/_/-/g}
@@ -31,5 +31,4 @@ do-install:
 
 .include "../../mk/apache.mk"
 .include "../../mk/krb5.buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
