@@ -1,6 +1,6 @@
-$NetBSD: patch-cmake_modules_FindFFmpeg.cmake,v 1.2 2015/10/27 06:48:57 adam Exp $
+$NetBSD: patch-cmake_modules_FindFFmpeg.cmake,v 1.3 2016/12/12 10:15:13 wiz Exp $
 
-Include ffmpeg2 pkgsrc paths in search path.
+Include ffmpeg3 pkgsrc paths in search path.
 
 --- cmake/modules/FindFFmpeg.cmake.orig	2013-11-23 15:43:42.000000000 +0000
 +++ cmake/modules/FindFFmpeg.cmake
@@ -8,7 +8,7 @@ Include ffmpeg2 pkgsrc paths in search path.
  	FIND_PATH(FFMPEG_${varname}_INCLUDE_DIRS lib${shortname}/${headername}
  		PATHS
  		${FFMPEG_ROOT}/include
-+		${FFMPEG_ROOT}/include/ffmpeg2
++		${FFMPEG_ROOT}/include/ffmpeg3
  		$ENV{FFMPEG_DIR}/include
  		~/Library/Frameworks
  		/Library/Frameworks
@@ -17,7 +17,7 @@ Include ffmpeg2 pkgsrc paths in search path.
  	)
  	FIND_PATH(FFMPEG_${varname}_INCLUDE_DIRS lib${shortname}/${headername}
 -		PATH_SUFFIXES ffmpeg
-+		PATH_SUFFIXES ffmpeg ffmpeg2
++		PATH_SUFFIXES ffmpeg ffmpeg3
  		DOC "Location of FFMPEG Headers"
  	)
  
@@ -25,7 +25,7 @@ Include ffmpeg2 pkgsrc paths in search path.
          NAMES ${shortname}
          PATHS
          ${FFMPEG_ROOT}/lib
-+        ${FFMPEG_ROOT}/lib/ffmpeg2
++        ${FFMPEG_ROOT}/lib/ffmpeg3
          $ENV{FFMPEG_DIR}/lib
          ~/Library/Frameworks
          /Library/Frameworks
