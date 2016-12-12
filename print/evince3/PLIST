@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/11/26 12:44:05 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/12/12 15:16:05 wiz Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -69,7 +69,7 @@ lib/libevdocument3.la
 lib/libevview3.la
 lib/pkgconfig/evince-document-3.0.pc
 lib/pkgconfig/evince-view-3.0.pc
-lib/systemd/user/evince.service
+${PLIST.dbus}lib/systemd/user/evince.service
 ${PLIST.dbus}libexec/evinced
 man/man1/evince.1
 share/GConf/gsettings/evince.convert
