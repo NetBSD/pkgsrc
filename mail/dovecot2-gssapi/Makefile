@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/12/04 03:51:16 marino Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/12 14:22:03 wiz Exp $
 #
 
 .include "../../mail/dovecot2/Makefile.plugin"
@@ -16,5 +16,4 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/dovecot/auth
 
 .include "../../mk/krb5.buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
