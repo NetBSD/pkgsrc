@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16776 2016/12/12 14:02:30 wiz Exp $
+$NetBSD: TODO,v 1.16777 2016/12/12 14:11:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1371,7 +1371,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-keybinder-0.3.1
 	o py-lasso-2.5.1
 	o py-lupa-1.2
-	o py-lxml-3.7.0
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-mezzanine-4.2.2
