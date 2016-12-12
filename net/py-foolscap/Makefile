@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2016/10/19 12:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/12/12 14:27:39 wiz Exp $
 
-DISTNAME=	foolscap-0.12.4
+DISTNAME=	foolscap-0.12.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/foolscap/}
