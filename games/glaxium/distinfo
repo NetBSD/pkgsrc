@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 20:56:51 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/12/12 06:21:47 dholland Exp $
 
 SHA1 (glaxium_0.5.tar.gz) = 42526a009a377a6fede7b7d343a0cd57c2f8e23e
 RMD160 (glaxium_0.5.tar.gz) = 5c988c53d4205ac80e0011a893a80daecf096c1f
@@ -8,3 +8,5 @@ SHA1 (patch-aa) = 9b8299ed10aaea1e862c929b6f20eef0811cae35
 SHA1 (patch-ab) = e8f2abea9053d73090fdb9ec92806fe21b68d3ce
 SHA1 (patch-ac) = ac0a11ca229865eb637425d6065729d1c8fc3da2
 SHA1 (patch-ad) = 3572e6f5c97f342d5b68024c7ebb17aeedb8b667
+SHA1 (patch-fighter2.cpp) = 7afee16e4d915f724416a626a68a61a50932af69
+SHA1 (patch-variables.cpp) = 8b398ef48cbb08776898cb2d512d4c44d7803c94
