@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2016/08/22 14:01:35 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/12/12 14:11:33 wiz Exp $
 
-DISTNAME=	lxml-3.6.4
+DISTNAME=	lxml-3.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://lxml.de/files/
