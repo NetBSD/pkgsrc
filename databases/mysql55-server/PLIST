@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2016/10/12 16:57:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2016/12/12 19:22:57 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1324,7 +1324,6 @@ share/mysql/test/std_data/bug16266.000001
 share/mysql/test/std_data/bug19371.MYD
 share/mysql/test/std_data/bug19371.MYI
 share/mysql/test/std_data/bug19371.frm
-share/mysql/test/std_data/bug20683959loaddata.txt
 share/mysql/test/std_data/bug30435_10k_items.txt
 share/mysql/test/std_data/bug30435_5k.txt
 share/mysql/test/std_data/bug33029-slave-relay-bin.000001
