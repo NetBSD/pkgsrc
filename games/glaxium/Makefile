@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2015/04/25 14:22:55 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2016/12/12 06:21:47 dholland Exp $
 #
 
 DISTNAME=	glaxium_0.5
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games
 MASTER_SITES=	http://xhosxe.free.fr/glaxium/
 
@@ -24,10 +24,19 @@ SUBST_FILES.bill=	conf.h
 SUBST_SED.bill=		-e "s,share\/games,share,g"
 SUBST_MESSAGE.bill=	Fixing data path.
 
-INSTALLATION_DIRS+=	bin
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
-			exec_prefix=${DESTDIR}${PREFIX} \
-			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man6 \
+			share/glaxium/samples share/glaxium/textures
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/glaxium ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/glaxium.6 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/
+	${INSTALL_DATA} ${WRKSRC}/samples/*.wav \
+		${DESTDIR}${PREFIX}/share/glaxium/samples/
+	${INSTALL_DATA} ${WRKSRC}/samples/*.xm \
+		${DESTDIR}${PREFIX}/share/glaxium/samples/
+	${INSTALL_DATA} ${WRKSRC}/textures/*.png \
+		${DESTDIR}${PREFIX}/share/glaxium/textures/
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
