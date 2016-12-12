@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.4997 2016/12/12 14:18:27 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.4998 2016/12/12 14:19:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6957,3 +6957,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-lxml to 3.7.0 [wiz 2016-12-12]
 	Updated audio/musicpd to 0.19.20 [wiz 2016-12-12]
 	Updated textproc/libunistring to 0.9.7 [wiz 2016-12-12]
+	Updated security/libgcrypt to 1.7.4 [wiz 2016-12-12]
