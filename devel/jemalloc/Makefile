@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/07/09 06:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/12/13 21:52:22 maya Exp $
 
-DISTNAME=	jemalloc-4.2.1
-PKGREVISION=	1
+DISTNAME=	jemalloc-4.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jemalloc/}
 GITHUB_PROJECT=	jemalloc
