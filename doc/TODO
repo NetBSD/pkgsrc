@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16790 2016/12/12 15:24:15 wiz Exp $
+$NetBSD: TODO,v 1.16791 2016/12/13 14:28:31 sevan Exp $
 
 Suggested new packages
 ======================
@@ -344,6 +344,10 @@ Suggested new packages
 	util: gccmakedep, lndir
 	xcb: xcb-demo, xpyb
 	non-xorg: xf86-input-wacom, xinput_calibrator
+
+	SDCC
+	https://sourceforge.net/projects/sdcc
+	Small Device C Compiler suite
 
 Suggested package updates
 =========================
