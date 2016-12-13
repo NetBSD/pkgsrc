@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5010 2016/12/13 10:39:12 he Exp $
+$NetBSD: CHANGES-2016,v 1.5011 2016/12/13 10:58:37 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6978,3 +6978,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/openldap to 2.4.44nb2 [he 2016-12-13]
 	Updated databases/openldap-client to 2.4.44nb3 [he 2016-12-13]
 	Updated databases/openldap-server to 2.4.44nb4 [he 2016-12-13]
+	Updated net/restclient-ui to 3.6.1 [abs 2016-12-13]
