@@ -1,0 +1,18 @@
+$NetBSD: patch-src_flex.skl,v 1.1 2016/12/13 17:07:23 wiedi Exp $
+
+Pull in upstream commit:
+ - https://github.com/westes/flex/commit/347652c32b4614995acd4ee0d686499da2070d9e
+	fix backwards incompatible changes in 2.6.2.
+
+--- src/flex.skl.orig	2016-12-13 16:10:52.192258388 +0000
++++ src/flex.skl
+@@ -106,7 +106,8 @@ m4_ifdef( [[M4_YY_REENTRANT]],  [[m4_def
+ m4_ifdef( [[M4_YY_PREFIX]],, [[m4_define([[M4_YY_PREFIX]], [[yy]])]])
+ 
+ m4preproc_define(`M4_GEN_PREFIX',
+-    ``m4_define(yy[[$1]], [[M4_YY_PREFIX[[$1]]m4_ifelse($'`#,0,,[[($'`@)]])]])'')
++    ``[[#define yy$1 ]]M4_YY_PREFIX[[$1]]
++m4_define([[yy$1]], [[M4_YY_PREFIX[[$1]]m4_ifelse($'`#,0,,[[($'`@)]])]])'')
+ 
+ %if-c++-only
+     /* The c++ scanner is a mess. The FlexLexer.h header file relies on the
