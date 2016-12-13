@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5009 2016/12/13 01:21:02 marino Exp $
+$NetBSD: CHANGES-2016,v 1.5010 2016/12/13 10:39:12 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6975,3 +6975,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql57-server to 5.7.17 [adam 2016-12-12]
 	Updated pkgtools/pkglint to 5.4.13 [rillig 2016-12-13]
 	Added lang/gcc6-aux version 20160822 [marino 2016-12-12]
+	Updated databases/openldap to 2.4.44nb2 [he 2016-12-13]
+	Updated databases/openldap-client to 2.4.44nb3 [he 2016-12-13]
+	Updated databases/openldap-server to 2.4.44nb4 [he 2016-12-13]
