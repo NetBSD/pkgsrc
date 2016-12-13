@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/01/11 13:47:01 abs Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/13 10:57:59 abs Exp $
 
-DISTNAME=	${PKGNAME}-jar-with-dependencies
-PKGNAME=	restclient-ui-3.5
+DISTNAME=	restclient-ui-fat-3.6.1
+PKGNAME=	restclient-ui-3.6.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=wiztools/}rest-client/releases/download/restclient-3.5/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=wiztools/}rest-client/releases/download/3.6.1/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +17,7 @@ USE_JAVA=	yes
 USE_JAVA2=	yes
 WRKSRC=		${WRKDIR}
 
-LIBDIR=		lib/java/restclient-ui
+LIBDIR=			lib/java/restclient-ui
 INSTALLATION_DIRS=	bin ${LIBDIR}
 
 do-build:
