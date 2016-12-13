@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/04/25 14:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2016/12/13 19:17:42 dholland Exp $
 #
 
 DISTNAME=	qonk-0.3.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qonk/}
 
@@ -13,6 +13,11 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+INSTALLATION_DIRS+=	bin share/doc share/qonk
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/qonk.txt
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
