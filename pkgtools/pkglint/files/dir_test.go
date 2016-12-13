@@ -5,7 +5,8 @@ import (
 )
 
 func (s *Suite) Test_CheckDirent_outside(c *check.C) {
-	s.CreateTmpFile(c, "empty", "")
+	s.Init(c)
+	s.CreateTmpFile("empty", "")
 
 	CheckDirent(s.tmpdir)
 
@@ -13,10 +14,11 @@ func (s *Suite) Test_CheckDirent_outside(c *check.C) {
 }
 
 func (s *Suite) Test_CheckDirent(c *check.C) {
-	s.CreateTmpFile(c, "mk/bsd.pkg.mk", "")
-	s.CreateTmpFile(c, "category/package/Makefile", "")
-	s.CreateTmpFile(c, "category/Makefile", "")
-	s.CreateTmpFile(c, "Makefile", "")
+	s.Init(c)
+	s.CreateTmpFile("mk/bsd.pkg.mk", "")
+	s.CreateTmpFile("category/package/Makefile", "")
+	s.CreateTmpFile("category/Makefile", "")
+	s.CreateTmpFile("Makefile", "")
 	G.globalData.Pkgsrcdir = s.tmpdir
 
 	CheckDirent(s.tmpdir)

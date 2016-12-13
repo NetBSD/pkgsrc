@@ -188,6 +188,10 @@ func (cv *VartypeCheck) Comment() {
 	if len(value) > 70 {
 		line.Warnf("COMMENT should not be longer than 70 characters.")
 	}
+	if hasPrefix(value, "\"") && hasSuffix(value, "\"") ||
+		hasPrefix(value, "'") && hasSuffix(value, "'") {
+		line.Warnf("COMMENT should not be enclosed in quotes.")
+	}
 }
 
 func (cv *VartypeCheck) Dependency() {

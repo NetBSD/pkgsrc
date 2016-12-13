@@ -31,22 +31,23 @@ func (s *Suite) Test_parselinesSuggestedUpdates(c *check.C) {
 }
 
 func (s *Suite) Test_GlobalData_loadTools(c *check.C) {
-	s.CreateTmpFileLines(c, "mk/tools/bsd.tools.mk",
+	s.Init(c)
+	s.CreateTmpFileLines("mk/tools/bsd.tools.mk",
 		".include \"flex.mk\"",
 		".include \"gettext.mk\"")
-	s.CreateTmpFileLines(c, "mk/tools/defaults.mk",
+	s.CreateTmpFileLines("mk/tools/defaults.mk",
 		"_TOOLS_VARNAME.chown=CHOWN",
 		"_TOOLS_VARNAME.gawk=AWK",
 		"_TOOLS_VARNAME.mv=MV",
 		"_TOOLS_VARNAME.pwd=PWD")
-	s.CreateTmpFileLines(c, "mk/tools/flex.mk",
+	s.CreateTmpFileLines("mk/tools/flex.mk",
 		"# empty")
-	s.CreateTmpFileLines(c, "mk/tools/gettext.mk",
+	s.CreateTmpFileLines("mk/tools/gettext.mk",
 		"USE_TOOLS+=msgfmt",
 		"TOOLS_CREATE+=msgfmt")
-	s.CreateTmpFileLines(c, "mk/bsd.prefs.mk",
+	s.CreateTmpFileLines("mk/bsd.prefs.mk",
 		"USE_TOOLS+=\tpwd")
-	s.CreateTmpFileLines(c, "mk/bsd.pkg.mk",
+	s.CreateTmpFileLines("mk/bsd.pkg.mk",
 		"USE_TOOLS+=\tmv")
 	G.globalData.Pkgsrcdir = s.tmpdir
 	G.CurrentDir = s.tmpdir
@@ -75,7 +76,8 @@ func (s *Suite) Test_GlobalData_loadTools(c *check.C) {
 }
 
 func (s *Suite) Test_GlobalData_loadDocChangesFromFile(c *check.C) {
-	s.CreateTmpFile(c, "doc/CHANGES-2015", ""+
+	s.Init(c)
+	s.CreateTmpFile("doc/CHANGES-2015", ""+
 		"\tAdded category/package version 1.0 [author1 2015-01-01]\n"+
 		"\tUpdated category/package to 1.5 [author2 2015-01-02]\n"+
 		"\tRenamed category/package to category/pkg [author3 2015-01-03]\n"+

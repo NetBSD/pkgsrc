@@ -61,12 +61,13 @@ func (s *Suite) Test_cleanpath(c *check.C) {
 }
 
 func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
-	s.CreateTmpFile(c, "CVS/Entries", "dummy\n")
+	s.Init(c)
+	s.CreateTmpFile("CVS/Entries", "dummy\n")
 
 	c.Check(isEmptyDir(s.tmpdir), equals, true)
 	c.Check(getSubdirs(s.tmpdir), check.DeepEquals, []string(nil))
 
-	s.CreateTmpFile(c, "somedir/file", "")
+	s.CreateTmpFile("somedir/file", "")
 
 	c.Check(isEmptyDir(s.tmpdir), equals, false)
 	c.Check(getSubdirs(s.tmpdir), check.DeepEquals, []string{"somedir"})

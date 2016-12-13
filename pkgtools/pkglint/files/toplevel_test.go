@@ -5,7 +5,8 @@ import (
 )
 
 func (s *Suite) Test_CheckdirToplevel(c *check.C) {
-	s.CreateTmpFile(c, "Makefile", ""+
+	s.Init(c)
+	s.CreateTmpFile("Makefile", ""+
 		"# $"+"NetBSD$\n"+
 		"\n"+
 		"SUBDIR+= x11\n"+
@@ -15,10 +16,10 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 		"#SUBDIR+=\tignoreme\n"+
 		"SUBDIR+=\tnonexisting\n"+ // This just doesn’t happen in practice.
 		"SUBDIR+=\tbbb\n")
-	s.CreateTmpFile(c, "archivers/Makefile", "")
-	s.CreateTmpFile(c, "bbb/Makefile", "")
-	s.CreateTmpFile(c, "ccc/Makefile", "")
-	s.CreateTmpFile(c, "x11/Makefile", "")
+	s.CreateTmpFile("archivers/Makefile", "")
+	s.CreateTmpFile("bbb/Makefile", "")
+	s.CreateTmpFile("ccc/Makefile", "")
+	s.CreateTmpFile("x11/Makefile", "")
 	G.globalData.InitVartypes()
 
 	G.CurrentDir = s.tmpdir

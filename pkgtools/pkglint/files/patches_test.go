@@ -6,7 +6,8 @@ import (
 )
 
 func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	lines := s.NewLines("patch-WithComment",
 		"$"+"NetBSD$",
 		"",
@@ -27,8 +28,9 @@ func (s *Suite) Test_ChecklinesPatch__with_comment(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPatch__without_empty_line(c *check.C) {
-	fname := s.CreateTmpFile(c, "patch-WithoutEmptyLines", "dummy")
-	s.UseCommandLine(c, "-Wall", "--autofix")
+	s.Init(c)
+	fname := s.CreateTmpFile("patch-WithoutEmptyLines", "dummy")
+	s.UseCommandLine("-Wall", "--autofix")
 	lines := s.NewLines(fname,
 		"$"+"NetBSD$",
 		"Text",
@@ -64,7 +66,8 @@ func (s *Suite) Test_ChecklinesPatch__without_empty_line(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPatch__without_comment(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	lines := s.NewLines("patch-WithoutComment",
 		"$"+"NetBSD$",
 		"",
@@ -82,7 +85,8 @@ func (s *Suite) Test_ChecklinesPatch__without_comment(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPatch__git_without_comment(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	lines := s.NewLines("patch-aa",
 		"$"+"NetBSD$",
 		"",
@@ -108,7 +112,8 @@ func (s *Suite) Test_checklineOtherAbsolutePathname(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPatch__error_code(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	lines := s.NewLines("patch-ErrorCode",
 		"$"+"NetBSD$",
 		"",
@@ -128,7 +133,8 @@ func (s *Suite) Test_ChecklinesPatch__error_code(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPatch__wrong_header_order(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	lines := s.NewLines("patch-WrongOrder",
 		"$"+"NetBSD$",
 		"",
@@ -149,7 +155,8 @@ func (s *Suite) Test_ChecklinesPatch__wrong_header_order(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPatch__context_diff(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	lines := s.NewLines("patch-ctx",
 		"$"+"NetBSD$",
 		"",

@@ -14,10 +14,16 @@ func ChecklinesDistinfo(lines []*Line) {
 	}
 
 	fname := lines[0].Fname
-	var patchesDir = "patches"
-	if G.Pkg != nil && hasSuffix(fname, "/lang/php56/distinfo") {
-		patchesDir = G.CurPkgsrcdir + "/lang/php56/patches"
-	} else if G.Pkg != nil && dirExists(G.CurrentDir+"/"+G.Pkg.Patchdir) {
+	patchesDir := "patches"
+	patchesDirSet := false
+	if G.Pkg != nil && contains(fname, "lang/php") {
+		phpdir := G.globalData.Latest("lang", `^php[0-9]+$`, "/lang/$0")
+		if hasSuffix(fname, phpdir+"/distinfo") {
+			patchesDir = G.CurPkgsrcdir + phpdir + "/patches"
+			patchesDirSet = true
+		}
+	}
+	if G.Pkg != nil && !patchesDirSet && dirExists(G.CurrentDir+"/"+G.Pkg.Patchdir) {
 		patchesDir = G.Pkg.Patchdir
 	}
 	if G.opts.Debug {

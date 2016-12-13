@@ -10,7 +10,8 @@ func (s *Suite) Test_parseLicenses(c *check.C) {
 }
 
 func (s *Suite) Test_checklineLicense(c *check.C) {
-	s.CreateTmpFile(c, "licenses/gnu-gpl-v2", "Most software \u2026")
+	s.Init(c)
+	s.CreateTmpFile("licenses/gnu-gpl-v2", "Most software \u2026")
 	mkline := NewMkLine(NewLine("Makefile", 7, "LICENSE=dummy", nil))
 	G.globalData.Pkgsrcdir = s.tmpdir
 	G.CurrentDir = s.tmpdir
