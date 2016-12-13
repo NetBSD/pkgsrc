@@ -21,6 +21,7 @@ type GlobalData struct {
 	UserDefinedVars     map[string]*MkLine  // varname => line
 	Deprecated          map[string]string   //
 	vartypes            map[string]*Vartype // varcanon => type
+	latest              map[string]string   // "lang/php[0-9]*" => "lang/php70"
 }
 
 // Change is a change entry from the `doc/CHANGES-*` files.
@@ -63,6 +64,41 @@ func (gd *GlobalData) Initialize() {
 	gd.loadDeprecatedVars()
 }
 
+func (gd *GlobalData) Latest(category string, re RegexPattern, repl string) string {
+	key := category + "/" + string(re) + " => " + repl
+	if latest, found := gd.latest[key]; found {
+		return latest
+	}
+
+	if gd.latest == nil {
+		gd.latest = make(map[string]string)
+	}
+
+	error := func() string {
+		dummyLine.Errorf("Cannot find latest version of %q in %q.", re, gd.Pkgsrcdir)
+		gd.latest[key] = ""
+		return ""
+	}
+
+	all, err := ioutil.ReadDir(gd.Pkgsrcdir + "/" + category)
+	if err != nil {
+		return error()
+	}
+
+	latest := ""
+	for _, fileInfo := range all {
+		if matches(fileInfo.Name(), re) {
+			latest = regcomp(re).ReplaceAllString(fileInfo.Name(), repl)
+		}
+	}
+	if latest == "" {
+		return error()
+	}
+
+	gd.latest[key] = latest
+	return latest
+}
+
 func (gd *GlobalData) loadDistSites() {
 	fname := gd.Pkgsrcdir + "/mk/fetch/sites.mk"
 	lines := LoadExistingLines(fname, true)
@@ -70,7 +106,7 @@ func (gd *GlobalData) loadDistSites() {
 	name2url := make(map[string]string)
 	url2name := make(map[string]string)
 	for _, line := range lines {
-		if m, varname, _, _, _, urls, _ := MatchVarassign(line.Text); m {
+		if m, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
 			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				for _, url := range splitOnSpace(urls) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
@@ -150,7 +186,7 @@ func (gd *GlobalData) loadTools() {
 		for _, line := range lines {
 			text := line.Text
 
-			if m, varname, _, _, _, value, _ := MatchVarassign(text); m {
+			if m, varname, _, _, _, value, _, _ := MatchVarassign(text); m {
 				if varname == "USE_TOOLS" {
 					if G.opts.Debug {
 						traceStep("[condDepth=%d] %s", condDepth, value)
@@ -566,7 +602,7 @@ func (tr *ToolRegistry) Trace() {
 }
 
 func (tr *ToolRegistry) ParseToolLine(line *Line) {
-	if m, varname, _, _, _, value, _ := MatchVarassign(line.Text); m {
+	if m, varname, _, _, _, value, _, _ := MatchVarassign(line.Text); m {
 		if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
 			tr.Register(value)
 

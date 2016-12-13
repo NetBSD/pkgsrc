@@ -41,34 +41,35 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 }
 
 func (s *Suite) Test_MatchVarassign(c *check.C) {
-	checkVarassign := func(text string, ck check.Checker, varname, spaceAfterVarname, op, align, value, comment string) {
+	checkVarassign := func(text string, ck check.Checker, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string) {
 		type va struct {
-			varname, spaceAfterVarname, op, align, value, comment string
+			varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string
 		}
-		expected := va{varname, spaceAfterVarname, op, align, value, comment}
-		am, avarname, aspaceAfterVarname, aop, aalign, avalue, acomment := MatchVarassign(text)
+		expected := va{varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment}
+		am, avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment := MatchVarassign(text)
 		if !am {
 			c.Errorf("Text %q doesn’t match variable assignment", text)
 			return
 		}
-		actual := va{avarname, aspaceAfterVarname, aop, aalign, avalue, acomment}
+		actual := va{avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment}
 		c.Check(actual, ck, expected)
 	}
 	checkNotVarassign := func(text string) {
-		m, _, _, _, _, _, _ := MatchVarassign(text)
+		m, _, _, _, _, _, _, _ := MatchVarassign(text)
 		if m {
 			c.Errorf("Text %q matches variable assignment, but shouldn’t.", text)
 		}
 	}
 
-	checkVarassign("C++=c11", equals, "C+", "", "+=", "C++=", "c11", "")
-	checkVarassign("V=v", equals, "V", "", "=", "V=", "v", "")
-	checkVarassign("VAR=#comment", equals, "VAR", "", "=", "VAR=", "", "#comment")
-	checkVarassign("VAR=\\#comment", equals, "VAR", "", "=", "VAR=", "#comment", "")
-	checkVarassign("VAR=\\\\\\##comment", equals, "VAR", "", "=", "VAR=", "\\\\#", "#comment")
-	checkVarassign("VAR=\\", equals, "VAR", "", "=", "VAR=", "\\", "")
-	checkVarassign("VAR += value", equals, "VAR", " ", "+=", "VAR += ", "value", "")
-	checkVarassign(" VAR=value", equals, "VAR", "", "=", " VAR=", "value", "")
+	checkVarassign("C++=c11", equals, "C+", "", "+=", "C++=", "c11", "", "")
+	checkVarassign("V=v", equals, "V", "", "=", "V=", "v", "", "")
+	checkVarassign("VAR=#comment", equals, "VAR", "", "=", "VAR=", "", "", "#comment")
+	checkVarassign("VAR=\\#comment", equals, "VAR", "", "=", "VAR=", "#comment", "", "")
+	checkVarassign("VAR=\\\\\\##comment", equals, "VAR", "", "=", "VAR=", "\\\\#", "", "#comment")
+	checkVarassign("VAR=\\", equals, "VAR", "", "=", "VAR=", "\\", "", "")
+	checkVarassign("VAR += value", equals, "VAR", " ", "+=", "VAR += ", "value", "", "")
+	checkVarassign(" VAR=value", equals, "VAR", "", "=", " VAR=", "value", "", "")
+	checkVarassign("VAR=value #comment", equals, "VAR", "", "=", "VAR=", "value", " ", "#comment")
 	checkNotVarassign("\tVAR=value")
 	checkNotVarassign("?=value")
 	checkNotVarassign("<=value")
@@ -113,4 +114,38 @@ func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
 		"WARN: MESSAGE:1: Expected a line of exactly 75 \"=\" characters.\n"+
 		"ERROR: MESSAGE:2: Expected \"$"+"NetBSD$\".\n"+
 		"WARN: MESSAGE:5: Expected a line of exactly 75 \"=\" characters.\n")
+}
+
+func (s *Suite) Test_GlobalData_Latest(c *check.C) {
+	s.Init(c)
+	G.globalData.Pkgsrcdir = s.TmpDir()
+
+	latest1 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	c.Check(latest1, equals, "")
+	c.Check(s.Output(), equals, "ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".\n")
+
+	s.CreateTmpFile("lang/Makefile", "")
+	G.globalData.latest = nil
+
+	latest2 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	c.Check(latest2, equals, "")
+	c.Check(s.Output(), equals, "ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".\n")
+
+	s.CreateTmpFile("lang/python27/Makefile", "")
+	G.globalData.latest = nil
+
+	latest3 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	c.Check(latest3, equals, "../../lang/python27")
+	c.Check(s.Output(), equals, "")
+
+	s.CreateTmpFile("lang/python35/Makefile", "")
+	G.globalData.latest = nil
+
+	latest4 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
+
+	c.Check(latest4, equals, "../../lang/python35")
+	c.Check(s.Output(), equals, "")
 }

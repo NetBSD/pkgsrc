@@ -305,7 +305,7 @@ func ChecklinesTrailingEmptyLines(lines []*Line) {
 	}
 }
 
-func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueAlign, value, comment string) {
+func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment string) {
 	i, n := 0, len(text)
 
 	for i < n && text[i] == ' ' {
@@ -373,6 +373,11 @@ func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueA
 	}
 
 	commentStart := i
+	for text[i-1] == ' ' || text[i-1] == '\t' {
+		i--
+	}
+	valueEnd := i
+
 	commentEnd := n
 
 	m = true
@@ -381,6 +386,7 @@ func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueA
 	op = text[opStart:opEnd]
 	valueAlign = text[0:valueStart]
 	value = strings.TrimSpace(string(valuebuf[:j]))
+	spaceAfterValue = text[valueEnd:commentStart]
 	comment = text[commentStart:commentEnd]
 	return
 }
@@ -395,16 +401,26 @@ type DependencyPattern struct {
 }
 
 func resolveVarsInRelativePath(relpath string, adjustDepth bool) string {
-
 	tmp := relpath
 	tmp = strings.Replace(tmp, "${PKGSRCDIR}", G.CurPkgsrcdir, -1)
 	tmp = strings.Replace(tmp, "${.CURDIR}", ".", -1)
 	tmp = strings.Replace(tmp, "${.PARSEDIR}", ".", -1)
-	tmp = strings.Replace(tmp, "${LUA_PKGSRCDIR}", "../../lang/lua52", -1)
-	tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", "../../lang/php56", -1)
-	tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", "suse100", -1)
-	tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", "../../lang/python27", -1)
-	tmp = strings.Replace(tmp, "${PYPACKAGE}", "python27", -1)
+	if contains(tmp, "${LUA_PKGSRCDIR}") {
+		tmp = strings.Replace(tmp, "${LUA_PKGSRCDIR}", G.globalData.Latest("lang", `^lua[0-9]+$`, "../../lang/$0"), -1)
+	}
+	if contains(tmp, "${PHPPKGSRCDIR}") {
+		tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", G.globalData.Latest("lang", `^php[0-9]+$`, "../../lang/$0"), -1)
+	}
+	if contains(tmp, "${SUSE_DIR_PREFIX}") {
+		suseDirPrefix := G.globalData.Latest("emulators", `^(suse[0-9]+)_base`, "$1")
+		tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", suseDirPrefix, -1)
+	}
+	if contains(tmp, "${PYPKGSRCDIR}") {
+		tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0"), -1)
+	}
+	if contains(tmp, "${PYPACKAGE}") {
+		tmp = strings.Replace(tmp, "${PYPACKAGE}", G.globalData.Latest("lang", `^python[0-9]+$`, "$0"), -1)
+	}
 	if G.Pkg != nil {
 		tmp = strings.Replace(tmp, "${FILESDIR}", G.Pkg.Filesdir, -1)
 		tmp = strings.Replace(tmp, "${PKGDIR}", G.Pkg.Pkgdir, -1)

@@ -5,7 +5,8 @@ import (
 )
 
 func (s *Suite) Test_Line_modifications(c *check.C) {
-	s.UseCommandLine(c, "--show-autofix")
+	s.Init(c)
+	s.UseCommandLine("--show-autofix")
 
 	line := NewLine("fname", 1, "dummy", s.NewRawLines(1, "original\n"))
 
@@ -63,7 +64,8 @@ func (s *Suite) Test_Line_CheckAbsolutePathname(c *check.C) {
 }
 
 func (s *Suite) Test_Line_show_autofix_AutofixReplace(c *check.C) {
-	s.UseCommandLine(c, "--show-autofix", "--source")
+	s.Init(c)
+	s.UseCommandLine("--show-autofix", "--source")
 	line := NewLineMulti("Makefile", 27, 29, "# old", s.NewRawLines(
 		27, "before\n",
 		28, "The old song\n",
@@ -84,7 +86,8 @@ func (s *Suite) Test_Line_show_autofix_AutofixReplace(c *check.C) {
 }
 
 func (s *Suite) Test_Line_show_autofix_AutofixInsertBefore(c *check.C) {
-	s.UseCommandLine(c, "--show-autofix", "--source")
+	s.Init(c)
+	s.UseCommandLine("--show-autofix", "--source")
 	line := NewLine("Makefile", 30, "original", s.NewRawLines(30, "original\n"))
 
 	if !line.AutofixInsertBefore("inserted") {
@@ -100,7 +103,8 @@ func (s *Suite) Test_Line_show_autofix_AutofixInsertBefore(c *check.C) {
 }
 
 func (s *Suite) Test_Line_show_autofix_AutofixDelete(c *check.C) {
-	s.UseCommandLine(c, "--show-autofix", "--source")
+	s.Init(c)
+	s.UseCommandLine("--show-autofix", "--source")
 	line := NewLine("Makefile", 30, "to be deleted", s.NewRawLines(30, "to be deleted\n"))
 
 	if !line.AutofixDelete() {

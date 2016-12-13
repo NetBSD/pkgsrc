@@ -58,7 +58,7 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 			"white-space.")
 	}
 
-	if m, varname, spaceAfterVarname, op, valueAlign, value, comment := MatchVarassign(text); m {
+	if m, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment := MatchVarassign(text); m {
 		if G.opts.WarnSpace && spaceAfterVarname != "" {
 			switch {
 			case hasSuffix(varname, "+") && op == "=":
@@ -70,6 +70,13 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 					line.Warnf("Unnecessary space after variable name %q.", varname)
 				}
 			}
+		}
+
+		if comment != "" && value != "" && spaceAfterValue == "" {
+			line.Warnf("The # character starts a comment.")
+			Explain(
+				"In a variable assignment, an unescaped # starts a comment that",
+				"continues until the end of the line.  To escape the #, write \\#.")
 		}
 
 		value = strings.Replace(value, "\\#", "#", -1)

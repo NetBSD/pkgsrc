@@ -67,7 +67,8 @@ func (s *Suite) Test_SubstContext__OPSYSVARS(c *check.C) {
 }
 
 func (s *Suite) Test_SubstContext__no_class(c *check.C) {
-	s.UseCommandLine(c, "-Wextra")
+	s.Init(c)
+	s.UseCommandLine("-Wextra")
 	ctx := new(SubstContext)
 
 	ctx.Varassign(newSubstLine(10, "UNRELATED=anything"))

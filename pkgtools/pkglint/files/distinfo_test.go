@@ -5,10 +5,11 @@ import (
 )
 
 func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
-	s.CreateTmpFile(c, "patches/patch-aa", ""+
+	s.Init(c)
+	s.CreateTmpFile("patches/patch-aa", ""+
 		"$"+"NetBSD$ line is ignored\n"+
 		"patch contents\n")
-	s.CreateTmpFile(c, "patches/patch-ab", ""+
+	s.CreateTmpFile("patches/patch-ab", ""+
 		"patch contents\n")
 	G.CurrentDir = s.tmpdir
 
@@ -44,7 +45,8 @@ func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
-	s.CreateTmpFile(c, "patches/patch-aa", ""+
+	s.Init(c)
+	s.CreateTmpFile("patches/patch-aa", ""+
 		"$"+"NetBSD$\n"+
 		"\n"+
 		"--- oldfile\n"+
@@ -52,7 +54,7 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 		"@@ -1,1 +1,1 @@\n"+
 		"-old\n"+
 		"+new\n")
-	s.CreateTmpFile(c, "CVS/Entries",
+	s.CreateTmpFile("CVS/Entries",
 		"/distinfo/...\n")
 	G.CurrentDir = s.tmpdir
 
@@ -66,9 +68,10 @@ func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
-	s.CreateTmpFile(c, "patches/CVS/Entries", "")
-	s.CreateTmpFile(c, "patches/patch-aa", "")
-	s.CreateTmpFile(c, "patches/patch-src-Makefile", "")
+	s.Init(c)
+	s.CreateTmpFile("patches/CVS/Entries", "")
+	s.CreateTmpFile("patches/patch-aa", "")
+	s.CreateTmpFile("patches/patch-src-Makefile", "")
 	G.CurrentDir = s.tmpdir
 
 	ChecklinesDistinfo(s.NewLines(s.tmpdir+"/distinfo",
@@ -85,8 +88,8 @@ func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesDistinfo_manual_patches(c *check.C) {
-	s.CreateTmpFile(c, "patches/manual-libtool.m4",
-		"")
+	s.Init(c)
+	s.CreateTmpFile("patches/manual-libtool.m4", "")
 	G.CurrentDir = s.tmpdir
 
 	ChecklinesDistinfo(s.NewLines(s.tmpdir+"/distinfo",
