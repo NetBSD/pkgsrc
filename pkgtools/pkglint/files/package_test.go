@@ -22,7 +22,8 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 }
 
 func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
-	s.UseCommandLine(c, "-Worder")
+	s.Init(c)
+	s.UseCommandLine("-Worder")
 	pkg := NewPackage("x11/9term")
 
 	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
@@ -99,7 +100,8 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 }
 
 func (s *Suite) Test_checkdirPackage(c *check.C) {
-	s.CreateTmpFile(c, "Makefile", ""+
+	s.Init(c)
+	s.CreateTmpFile("Makefile", ""+
 		"# $"+"NetBSD$\n")
 	G.CurrentDir = s.tmpdir
 
@@ -113,44 +115,46 @@ func (s *Suite) Test_checkdirPackage(c *check.C) {
 }
 
 func (s *Suite) Test_checkdirPackage__meta_package_without_license(c *check.C) {
-	s.CreateTmpFileLines(c, "Makefile",
+	s.Init(c)
+	s.CreateTmpFileLines("Makefile",
 		mkrcsid,
 		"",
 		"META_PACKAGE=\tyes")
-	G.CurrentDir = s.tmpdir
+	G.CurrentDir = s.TmpDir()
 	G.globalData.InitVartypes()
 
-	checkdirPackage(s.tmpdir)
+	checkdirPackage(s.TmpDir())
 
 	c.Check(s.Output(), equals, "WARN: ~/Makefile: No COMMENT given.\n") // No error about missing LICENSE.
 }
 
 func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
-	s.CreateTmpFileLines(c, "doc/CHANGES-2016",
+	s.Init(c)
+	s.CreateTmpFileLines("doc/CHANGES-2016",
 		"# dummy")
-	s.CreateTmpFileLines(c, "doc/TODO",
+	s.CreateTmpFileLines("doc/TODO",
 		"# dummy")
-	s.CreateTmpFileLines(c, "licenses/bsd-2",
+	s.CreateTmpFileLines("licenses/bsd-2",
 		"# dummy")
-	s.CreateTmpFileLines(c, "mk/fetch/sites.mk",
+	s.CreateTmpFileLines("mk/fetch/sites.mk",
 		"# dummy")
-	s.CreateTmpFileLines(c, "mk/bsd.pkg.mk",
+	s.CreateTmpFileLines("mk/bsd.pkg.mk",
 		"# dummy")
-	s.CreateTmpFileLines(c, "mk/defaults/options.description",
+	s.CreateTmpFileLines("mk/defaults/options.description",
 		"option Description")
-	s.CreateTmpFileLines(c, "mk/defaults/mk.conf",
+	s.CreateTmpFileLines("mk/defaults/mk.conf",
 		"# dummy")
-	s.CreateTmpFileLines(c, "mk/tools/bsd.tools.mk",
+	s.CreateTmpFileLines("mk/tools/bsd.tools.mk",
 		".include \"defaults.mk\"")
-	s.CreateTmpFileLines(c, "mk/tools/defaults.mk",
+	s.CreateTmpFileLines("mk/tools/defaults.mk",
 		"TOOLS_CREATE+=false",
 		"TOOLS_CREATE+=nice",
 		"TOOLS_CREATE+=true",
 		"_TOOLS_VARNAME.nice=NICE")
-	s.CreateTmpFileLines(c, "mk/bsd.prefs.mk",
+	s.CreateTmpFileLines("mk/bsd.prefs.mk",
 		"# dummy")
 
-	s.CreateTmpFileLines(c, "category/pkgbase/Makefile",
+	s.CreateTmpFileLines("category/pkgbase/Makefile",
 		mkrcsid,
 		"",
 		"COMMENT= Unit test",
@@ -175,7 +179,7 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 		"\t${ECHO}; ${FALSE}; ${NICE}; ${TRUE}",
 		"",
 		".include \"../../mk/bsd.pkg.mk\"")
-	s.CreateTmpFileLines(c, "category/pkgbase/distinfo",
+	s.CreateTmpFileLines("category/pkgbase/distinfo",
 		"$"+"NetBSD$")
 
 	(&Pkglint{}).Main("pkglint", "-q", "-Wperm", s.tmpdir+"/category/pkgbase")
@@ -188,7 +192,8 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
-	makefile := s.CreateTmpFile(c, "category/package/Makefile", ""+
+	s.Init(c)
+	makefile := s.CreateTmpFile("category/package/Makefile", ""+
 		"# $"+"NetBSD$\n"+
 		"\n"+
 		"PKGNAME=pkgname-1.67\n"+
@@ -205,8 +210,9 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 }
 
 func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
-	s.CreateTmpFileLines(c, "category/package/Makefile",
+	s.CreateTmpFileLines("category/package/Makefile",
 		mkrcsid,
 		"",
 		"COMMENT\t=Description",
@@ -216,23 +222,23 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 		".include \"../../sysutils/coreutils/buildlink3.mk\"",
 		".endif",
 		".include \"../../mk/bsd.pkg.mk\"")
-	s.CreateTmpFileLines(c, "category/package/options.mk",
+	s.CreateTmpFileLines("category/package/options.mk",
 		mkrcsid,
 		"",
 		".if !empty(PKG_OPTIONS:Mzlib)",
 		".  include \"../../devel/zlib/buildlink3.mk\"",
 		".endif",
 		".include \"../../sysutils/coreutils/buildlink3.mk\"")
-	s.CreateTmpFileLines(c, "category/package/PLIST",
+	s.CreateTmpFileLines("category/package/PLIST",
 		"@comment $"+"NetBSD$",
 		"bin/program")
-	s.CreateTmpFileLines(c, "category/package/distinfo",
+	s.CreateTmpFileLines("category/package/distinfo",
 		"$"+"NetBSD$")
 
-	s.CreateTmpFileLines(c, "devel/zlib/buildlink3.mk", "")
-	s.CreateTmpFileLines(c, "licenses/gnu-gpl-v2", "")
-	s.CreateTmpFileLines(c, "mk/bsd.pkg.mk", "")
-	s.CreateTmpFileLines(c, "sysutils/coreutils/buildlink3.mk", "")
+	s.CreateTmpFileLines("devel/zlib/buildlink3.mk", "")
+	s.CreateTmpFileLines("licenses/gnu-gpl-v2", "")
+	s.CreateTmpFileLines("mk/bsd.pkg.mk", "")
+	s.CreateTmpFileLines("sysutils/coreutils/buildlink3.mk", "")
 
 	pkg := NewPackage("category/package")
 	G.globalData.Pkgsrcdir = s.tmpdir

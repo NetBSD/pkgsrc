@@ -102,7 +102,8 @@ func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
 	shline := NewShellLine(G.Mk.mklines[0])
@@ -228,7 +229,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = s.NewMkLines("Makefile",
@@ -245,7 +247,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
-	s.UseCommandLine(c, "-Wall", "--show-autofix")
+	s.Init(c)
+	s.UseCommandLine("-Wall", "--show-autofix")
 	G.globalData.InitVartypes()
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = s.NewMkLines("Makefile",
@@ -260,7 +263,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
-	s.UseCommandLine(c, "-Wall", "--autofix")
+	s.Init(c)
+	s.UseCommandLine("-Wall", "--autofix")
 	G.globalData.InitVartypes()
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = s.NewMkLines("Makefile",
@@ -274,7 +278,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
@@ -312,7 +317,8 @@ func (s *Suite) Test_ShellLine_CheckShelltext__dollar_without_variable(c *check.
 }
 
 func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	shline := NewShellLine(NewMkLine(NewLine("fname", 1, "# dummy", nil)))
 
@@ -362,7 +368,8 @@ func (s *Suite) Test_ShellLine_CheckWord__dollar_without_variable(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	s.RegisterTool(&Tool{Name: "echo", Varname: "ECHO", MustUseVarForm: true, Predefined: true})
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
@@ -486,7 +493,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_option_d(c *check.
 }
 
 func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C) {
-	tmpfile := s.CreateTmpFile(c, "Makefile", ""+
+	s.Init(c)
+	tmpfile := s.CreateTmpFile("Makefile", ""+
 		"# $"+"NetBSD$\n"+
 		"pre-install:\n"+
 		"\t"+"# comment\\\n"+

@@ -31,8 +31,9 @@ func (s *Suite) Test_VartypeCheck_BuildlinkDepmethod(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
-	s.CreateTmpFile(c, "filesyscategory/Makefile", "# empty\n")
-	s.CreateTmpFile(c, "wip/Makefile", "# empty\n")
+	s.Init(c)
+	s.CreateTmpFile("filesyscategory/Makefile", "# empty\n")
+	s.CreateTmpFile("wip/Makefile", "# empty\n")
 	G.CurrentDir = s.tmpdir
 	G.CurPkgsrcdir = "."
 
@@ -67,14 +68,18 @@ func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 		"Versatile Programming Language",
 		"TODO: Short description of the package",
 		"A great package.",
-		"some packages need a very very long comment to explain their basic usefulness")
+		"some packages need a very very long comment to explain their basic usefulness",
+		"\"Quoting the comment is wrong\"",
+		"'Quoting the comment is wrong'")
 
 	c.Check(s.Output(), equals, ""+
 		"ERROR: fname:2: COMMENT must be set.\n"+
 		"WARN: fname:3: COMMENT should not begin with \"A\".\n"+
 		"WARN: fname:3: COMMENT should not end with a period.\n"+
 		"WARN: fname:4: COMMENT should start with a capital letter.\n"+
-		"WARN: fname:4: COMMENT should not be longer than 70 characters.\n")
+		"WARN: fname:4: COMMENT should not be longer than 70 characters.\n"+
+		"WARN: fname:5: COMMENT should not be enclosed in quotes.\n"+
+		"WARN: fname:6: COMMENT should not be enclosed in quotes.\n")
 }
 
 func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
@@ -115,8 +120,9 @@ func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
-	s.CreateTmpFile(c, "x11/alacarte/Makefile", "# empty\n")
-	s.CreateTmpFile(c, "category/package/Makefile", "# empty\n")
+	s.Init(c)
+	s.CreateTmpFile("x11/alacarte/Makefile", "# empty\n")
+	s.CreateTmpFile("category/package/Makefile", "# empty\n")
 	G.globalData.Pkgsrcdir = s.tmpdir
 	G.CurrentDir = s.tmpdir + "/category/package"
 	G.CurPkgsrcdir = "../.."
@@ -374,7 +380,8 @@ func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 
 	c.Check(s.Output(), equals, ""+
 		"NOTE: fname:1: Please always use \"-e\" in sed commands, even if there is only one substitution.\n"+
-		"NOTE: fname:2: Each sed command should appear in an assignment of its own.\n")
+		"NOTE: fname:2: Each sed command should appear in an assignment of its own.\n"+
+		"WARN: fname:3: The # character starts a comment.\n")
 }
 
 func (s *Suite) Test_VartypeCheck_ShellCommands(c *check.C) {

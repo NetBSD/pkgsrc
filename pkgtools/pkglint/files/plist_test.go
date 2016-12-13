@@ -5,7 +5,8 @@ import (
 )
 
 func (s *Suite) Test_ChecklinesPlist(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.Pkg = NewPackage("category/pkgbase")
 	lines := s.NewLines("PLIST",
 		"bin/i386/6c",
@@ -56,10 +57,11 @@ func (s *Suite) Test_ChecklinesPlist__empty(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPlist__commonEnd(c *check.C) {
-	s.CreateTmpFile(c, "PLIST.common", ""+
+	s.Init(c)
+	s.CreateTmpFile("PLIST.common", ""+
 		"@comment $"+"NetBSD$\n"+
 		"bin/common\n")
-	fname := s.CreateTmpFile(c, "PLIST.common_end", ""+
+	fname := s.CreateTmpFile("PLIST.common_end", ""+
 		"@comment $"+"NetBSD$\n"+
 		"sbin/common_end\n")
 
@@ -81,7 +83,8 @@ func (s *Suite) Test_ChecklinesPlist__conditional(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
-	s.UseCommandLine(c, "-Wplist-sort")
+	s.Init(c)
+	s.UseCommandLine("-Wplist-sort")
 	lines := s.NewLines("PLIST",
 		"@comment $"+"NetBSD$",
 		"@comment Do not remove",
@@ -98,9 +101,9 @@ func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
 }
 
 func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
-	s.UseCommandLine(c, "--autofix")
-	tmpfile := s.CreateTmpFile(c, "PLIST", "dummy\n")
-	ck := &PlistChecker{nil, nil, ""}
+	s.Init(c)
+	s.UseCommandLine("--autofix")
+	tmpfile := s.CreateTmpFile("PLIST", "dummy\n")
 	lines := s.NewLines(tmpfile,
 		"@comment $"+"NetBSD$",
 		"@comment Do not remove",
@@ -118,6 +121,7 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 		"lib/before.la",
 		"lib/after.la",
 		"@exec echo \"after lib/after.la\"")
+	ck := &PlistChecker{nil, nil, ""}
 	plines := ck.NewLines(lines)
 
 	NewPlistLineSorter(plines).Sort()
@@ -125,7 +129,7 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 	c.Check(s.Output(), equals, ""+
 		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
-	c.Check(s.LoadTmpFile(c, "PLIST"), equals, ""+
+	c.Check(s.LoadTmpFile("PLIST"), equals, ""+
 		"@comment $"+"NetBSD$\n"+
 		"@comment Do not remove\n"+
 		"A\n"+
@@ -148,7 +152,8 @@ func (s *Suite) Test_PlistChecker_checkpathShare_Desktop(c *check.C) {
 	// Disabled due to PR 46570, item "10. It should stop".
 	return
 
-	s.UseCommandLine(c, "-Wextra")
+	s.Init(c)
+	s.UseCommandLine("-Wextra")
 	G.Pkg = NewPackage("category/pkgpath")
 
 	ChecklinesPlist(s.NewLines("PLIST",
@@ -189,9 +194,10 @@ func (s *Suite) TestPlistChecker_checkpath__python_egg(c *check.C) {
 }
 
 func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 
-	fname := s.CreateTmpFileLines(c, "PLIST",
+	fname := s.CreateTmpFileLines("PLIST",
 		"@comment $"+"NetBSD$",
 		"lib/libvirt/connection-driver/libvirt_driver_storage.la",
 		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la",
@@ -220,7 +226,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"WARN: ~/PLIST:4: \"lib/libvirt/connection-driver/libvirt_driver_libxl.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\".\n"+
 		"NOTE: ~/PLIST:6: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".\n")
 
-	s.UseCommandLine(c, "-Wall", "--autofix")
+	s.UseCommandLine("-Wall", "--autofix")
 	ChecklinesPlist(lines)
 
 	fixedLines := LoadExistingLines(fname, false)
@@ -230,7 +236,7 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
 	c.Check(len(lines), equals, len(fixedLines))
-	c.Check(s.LoadTmpFile(c, "PLIST"), equals, ""+
+	c.Check(s.LoadTmpFile("PLIST"), equals, ""+
 		"@comment $"+"NetBSD$\n"+
 		"${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la\n"+
 		"${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la\n"+

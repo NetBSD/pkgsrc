@@ -5,8 +5,9 @@ import (
 )
 
 func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
-	s.CreateTmpFile(c, "archivers/Makefile", ""+
+	s.CreateTmpFile("archivers/Makefile", ""+
 		"# $\n"+
 		"SUBDIR+=pkg1\n"+
 		"SUBDIR+=\u0020aaaaa\n"+
@@ -34,16 +35,17 @@ func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 }
 
 func (s *Suite) Test_CheckdirCategory_invalid_comment(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
-	s.CreateTmpFile(c, "archivers/Makefile", ""+
+	s.CreateTmpFile("archivers/Makefile", ""+
 		"# $"+"NetBSD$\n"+
 		"COMMENT=\t\\Make $$$$ fast\"\n"+
 		"\n"+
 		"SUBDIR+=\tpackage\n"+
 		"\n"+
 		".include \"../mk/misc/category.mk\"\n")
-	s.CreateTmpFile(c, "archivers/package/Makefile", "# dummy\n")
-	s.CreateTmpFile(c, "mk/misc/category.mk", "# dummy\n")
+	s.CreateTmpFile("archivers/package/Makefile", "# dummy\n")
+	s.CreateTmpFile("mk/misc/category.mk", "# dummy\n")
 	G.CurrentDir = s.tmpdir + "/archivers"
 	G.CurPkgsrcdir = ".."
 

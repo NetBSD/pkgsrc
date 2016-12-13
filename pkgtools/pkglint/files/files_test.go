@@ -57,8 +57,9 @@ func (s *Suite) Test_splitRawLine(c *check.C) {
 }
 
 func (s *Suite) Test_show_autofix(c *check.C) {
-	s.UseCommandLine(c, "--show-autofix")
-	fname := s.CreateTmpFile(c, "Makefile", ""+
+	s.Init(c)
+	s.UseCommandLine("--show-autofix")
+	fname := s.CreateTmpFile("Makefile", ""+
 		"line1\n"+
 		"line2\n"+
 		"line3\n")
@@ -70,15 +71,16 @@ func (s *Suite) Test_show_autofix(c *check.C) {
 	SaveAutofixChanges(lines)
 
 	c.Check(lines[1].raw[0].textnl, equals, "XXXXX\n")
-	c.Check(s.LoadTmpFile(c, "Makefile"), equals, "line1\nline2\nline3\n")
+	c.Check(s.LoadTmpFile("Makefile"), equals, "line1\nline2\nline3\n")
 	c.Check(s.Output(), equals, ""+
 		"WARN: ~/Makefile:2: Something's wrong here.\n"+
 		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".\n")
 }
 
 func (s *Suite) Test_autofix(c *check.C) {
-	s.UseCommandLine(c, "--autofix")
-	fname := s.CreateTmpFile(c, "Makefile", ""+
+	s.Init(c)
+	s.UseCommandLine("--autofix")
+	fname := s.CreateTmpFile("Makefile", ""+
 		"line1\n"+
 		"line2\n"+
 		"line3\n")
@@ -89,7 +91,7 @@ func (s *Suite) Test_autofix(c *check.C) {
 	}
 	SaveAutofixChanges(lines)
 
-	c.Check(s.LoadTmpFile(c, "Makefile"), equals, "line1\nXXXXX\nline3\n")
+	c.Check(s.LoadTmpFile("Makefile"), equals, "line1\nXXXXX\nline3\n")
 	c.Check(s.Output(), equals, ""+
 		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".\n"+
 		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
