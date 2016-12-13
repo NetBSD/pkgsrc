@@ -7,8 +7,9 @@ import (
 const mkrcsid = "# $" + "NetBSD$"
 
 func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) {
-	s.UseCommandLine(c, "--autofix", "-Wspace")
-	tmpfile := s.CreateTmpFile(c, "fname.mk", "")
+	s.Init(c)
+	s.UseCommandLine("--autofix", "-Wspace")
+	tmpfile := s.CreateTmpFile("fname.mk", "")
 	mklines := s.NewMkLines(tmpfile,
 		mkrcsid,
 		".if defined(A)",
@@ -26,7 +27,7 @@ func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) 
 		"AUTOFIX: ~/fname.mk:5: Replacing \".\" with \".    \".\n"+
 		"AUTOFIX: ~/fname.mk:6: Replacing \".\" with \".  \".\n"+
 		"AUTOFIX: ~/fname.mk: Has been auto-fixed. Please re-run pkglint.\n")
-	c.Check(s.LoadTmpFile(c, "fname.mk"), equals, ""+
+	c.Check(s.LoadTmpFile("fname.mk"), equals, ""+
 		"# $"+"NetBSD$\n"+
 		".if defined(A)\n"+
 		".  for a in ${A}\n"+
@@ -59,7 +60,8 @@ func (s *Suite) Test_MkLine_checklineInclude_Makefile(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	G.Pkg = NewPackage("category/pkgbase")
 	mklines := s.NewMkLines("Makefile",
@@ -75,8 +77,9 @@ func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
-	s.UseCommandLine(c, "-Wspace")
-	fname := s.CreateTmpFileLines(c, "Makefile",
+	s.Init(c)
+	s.UseCommandLine("-Wspace")
+	fname := s.CreateTmpFileLines("Makefile",
 		mkrcsid,
 		"",
 		"VAR= \\", // In continuation lines, indenting with spaces is ok
@@ -111,7 +114,7 @@ func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 		"NOTE: ~/Makefile:17: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
 		"NOTE: ~/Makefile:18: This variable value should be aligned with tabs, not spaces, to column 17.\n")
 
-	s.UseCommandLine(c, "-Wspace", "--autofix")
+	s.UseCommandLine("-Wspace", "--autofix")
 
 	mklines.Check()
 
@@ -124,7 +127,7 @@ func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 		"AUTOFIX: ~/Makefile:17: Replacing \"GRP_AAA= \" with \"GRP_AAA=\\t\".\n"+
 		"AUTOFIX: ~/Makefile:18: Replacing \"GRP_AAAA= \" with \"GRP_AAAA=\\t\".\n"+
 		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
-	c.Check(s.LoadTmpFile(c, "Makefile"), equals, ""+
+	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
 		"# $"+"NetBSD$\n"+
 		"\n"+
 		"VAR= \\\n"+
@@ -149,7 +152,8 @@ func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__variable_alignment_space_and_tab(c *check.C) {
-	s.UseCommandLine(c, "-Wspace")
+	s.Init(c)
+	s.UseCommandLine("-Wspace")
 	mklines := s.NewMkLines("Makefile",
 		mkrcsid,
 		"",
@@ -162,7 +166,8 @@ func (s *Suite) Test_MkLines__variable_alignment_space_and_tab(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	s.RegisterTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
 	s.RegisterTool(&Tool{Name: "find", Varname: "FIND", Predefined: true})
 	s.RegisterTool(&Tool{Name: "pax", Varname: "PAX", Predefined: true})
@@ -183,7 +188,8 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("databases/gdbm_compat/builtin.mk",
 		mkrcsid,
@@ -199,7 +205,8 @@ func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("lang/qore/module.mk",
 		mkrcsid,
@@ -220,7 +227,8 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("converters/wv2/Makefile",
 		mkrcsid,
@@ -233,7 +241,8 @@ func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("chat/xchat/Makefile",
 		mkrcsid,
@@ -266,7 +275,8 @@ func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 
 // PR 46570, item "15. net/uucp/Makefile has a make loop"
 func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	mklines := s.NewMkLines("net/uucp/Makefile",
 		mkrcsid,
 		"",
@@ -283,7 +293,8 @@ func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	mklines := s.NewMkLines("converters/chef/Makefile",
 		mkrcsid,
 		"\tcd ${WRKSRC} && tr '\\r' '\\n' < ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} > chef.l")
@@ -296,7 +307,8 @@ func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("games/heretic2-demo/Makefile",
 		mkrcsid,
@@ -316,7 +328,8 @@ func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *chec
 }
 
 func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
-	s.UseCommandLine(c, "--show-autofix")
+	s.Init(c)
+	s.UseCommandLine("--show-autofix")
 	s.NewMkLines("Makefile.common",
 		mkrcsid,
 		"",
@@ -390,8 +403,9 @@ func (s *Suite) Test_MkLines_DetermineUsedVariables__nested(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
-	s.UseCommandLine(c, "-Wall")
 	mklines := s.NewMkLines("fname",
 		mkrcsid,
 		"",
@@ -403,8 +417,9 @@ func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	G.globalData.InitVartypes()
-	s.UseCommandLine(c, "-Wall")
 	mklines := s.NewMkLines("fname",
 		mkrcsid,
 		"TOOLS_CREATE+=\tmd5sum",
@@ -417,7 +432,8 @@ func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
 }
 
 func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
-	s.UseCommandLine(c, "-Wall")
+	s.Init(c)
+	s.UseCommandLine("-Wall")
 	mklines := s.NewMkLines("options.mk",
 		mkrcsid,
 		". if !defined(GUARD_MK)",
