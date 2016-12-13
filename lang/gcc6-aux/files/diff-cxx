@@ -1,0 +1,173 @@
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_base.h
+@@ -43,9 +43,22 @@
+ 
+     // NB: Offsets into ctype<char>::_M_table force a particular size
+     // on the mask type. Because of this, we don't use an enum.
+-    typedef unsigned char      	mask;
+ 
+-#ifndef _CTYPE_U
++#if defined(_CTYPE_BL)
++    typedef unsigned short      mask;
++    static const mask upper     = _CTYPE_U;
++    static const mask lower     = _CTYPE_L;
++    static const mask alpha     = _CTYPE_A;
++    static const mask digit     = _CTYPE_D;
++    static const mask xdigit    = _CTYPE_X;
++    static const mask space     = _CTYPE_S;
++    static const mask print     = _CTYPE_R;
++    static const mask graph     = _CTYPE_G;
++    static const mask cntrl     = _CTYPE_C;
++    static const mask punct     = _CTYPE_P;
++    static const mask alnum     = _CTYPE_A | _CTYPE_D;
++#elif !defined(_CTYPE_U)
++    typedef unsigned char      	mask;
+     static const mask upper    	= _U;
+     static const mask lower 	= _L;
+     static const mask alpha 	= _U | _L;
+@@ -58,6 +71,7 @@
+     static const mask punct 	= _P;
+     static const mask alnum 	= _U | _L | _N;
+ #else
++    typedef unsigned char      	mask;
+     static const mask upper    	= _CTYPE_U;
+     static const mask lower 	= _CTYPE_L;
+     static const mask alpha 	= _CTYPE_U | _CTYPE_L;
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_configure_char.cc.orig
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_configure_char.cc
+@@ -38,11 +38,17 @@
+ 
+ // Information as gleaned from /usr/include/ctype.h
+ 
++#ifndef _CTYPE_BL
+   extern "C" const u_int8_t _C_ctype_[];
++#endif
+ 
+   const ctype_base::mask*
+   ctype<char>::classic_table() throw()
++#ifdef _CTYPE_BL
++  { return _C_ctype_tab_ + 1; }
++#else
+   { return _C_ctype_ + 1; }
++#endif
+ 
+   ctype<char>::ctype(__c_locale, const mask* __table, bool __del, 
+ 		     size_t __refs) 
+@@ -69,14 +75,14 @@
+ 
+   char
+   ctype<char>::do_toupper(char __c) const
+-  { return ::toupper((int) __c); }
++  { return ::toupper((int)(unsigned char) __c); }
+ 
+   const char*
+   ctype<char>::do_toupper(char* __low, const char* __high) const
+   {
+     while (__low < __high)
+       {
+-	*__low = ::toupper((int) *__low);
++	*__low = ::toupper((int)(unsigned char) *__low);
+ 	++__low;
+       }
+     return __high;
+@@ -84,14 +90,14 @@
+ 
+   char
+   ctype<char>::do_tolower(char __c) const
+-  { return ::tolower((int) __c); }
++  { return ::tolower((int)(unsigned char) __c); }
+ 
+   const char* 
+   ctype<char>::do_tolower(char* __low, const char* __high) const
+   {
+     while (__low < __high)
+       {
+-	*__low = ::tolower((int) *__low);
++	*__low = ::tolower((int)(unsigned char) *__low);
+ 	++__low;
+       }
+     return __high;
+--- libstdc++-v3/config/os/bsd/netbsd/ctype_inline.h.orig
++++ libstdc++-v3/config/os/bsd/netbsd/ctype_inline.h
+@@ -48,7 +48,7 @@
+   is(const char* __low, const char* __high, mask* __vec) const
+   {
+     while (__low < __high)
+-      *__vec++ = _M_table[*__low++];
++      *__vec++ = _M_table[(unsigned char)*__low++];
+     return __high;
+   }
+ 
+--- libstdc++-v3/libsupc++/unwind-cxx.h.orig
++++ libstdc++-v3/libsupc++/unwind-cxx.h
+@@ -38,6 +38,7 @@
+ #include <cxxabi.h>
+ 
+ #ifdef _GLIBCXX_HAVE_SYS_SDT_H
++#include <cstdlib>
+ #include <sys/sdt.h>
+ /* We only want to use stap probes starting with v3.  Earlier versions
+    added too much startup cost.  */
+--- libstdc++-v3/configure.host.orig
++++ libstdc++-v3/configure.host
+@@ -262,6 +262,9 @@
+   freebsd*)
+     os_include_dir="os/bsd/freebsd"
+     ;;
++  linux-android*)
++    os_include_dir="os/bionic"
++    ;;
+   linux-musl*)
+     os_include_dir="os/generic"
+     ;;
+--- libstdc++-v3/config/os/bionic/ctype_base.h.orig
++++ libstdc++-v3/config/os/bionic/ctype_base.h
+@@ -38,6 +38,18 @@
+     // Non-standard typedefs.
+     typedef const int* 		__to_type;
+ 
++#ifdef _CTYPE_U
++#define _U _CTYPE_U
++#define _L _CTYPE_L
++#define _D _CTYPE_D
++#define _S _CTYPE_S
++#define _P _CTYPE_P
++#define _C _CTYPE_C
++#define _X _CTYPE_X
++#define _B _CTYPE_B
++#define _N _CTYPE_D
++#endif
++
+     // NB: Offsets into ctype<char>::_M_table force a particular size
+     // on the mask type. Because of this, we don't use an enum.
+     typedef char 		mask;
+--- libstdc++-v3/src/c++11/futex.cc.orig
++++ libstdc++-v3/src/c++11/futex.cc
+@@ -27,7 +27,11 @@
+ #if defined(_GLIBCXX_HAVE_LINUX_FUTEX) && ATOMIC_INT_LOCK_FREE > 1
+ #include <chrono>
+ #include <climits>
++#ifdef __ANDROID__
++#include <sys/syscall.h>
++#else
+ #include <syscall.h>
++#endif
+ #include <unistd.h>
+ #include <sys/time.h>
+ #include <errno.h>
+--- libstdc++-v3/src/filesystem/dir.cc.orig
++++ libstdc++-v3/src/filesystem/dir.cc
+@@ -147,7 +147,13 @@
+ 
+   int err = std::exchange(errno, 0);
+   const auto entp = readdir(dirp);
++#ifdef __ANDROID__
++  int tmperr = errno;
++  errno = err;
++  err = tmperr;
++#else
+   std::swap(errno, err);
++#endif
+ 
+   if (entp)
+     {
