@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2016/06/12 09:44:29 leot Exp $
+# $NetBSD: Makefile,v 1.119 2016/12/13 13:58:12 wiz Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.simplesystems.org/ImageMagick/www/perl-magick.html
 COMMENT=	Object-oriented Perl interface to ImageMagick
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/ImageMagick/distinfo
-PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
+#PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
 
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
@@ -20,7 +20,6 @@ PERL5_PACKLIST=		auto/Image/Magick/.packlist
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 
 pre-configure:
-	${RM} ${WRKSRC}/PerlMagick/Magick.pm
 	${LN} -sf ${WRKSRC}/PerlMagick/quantum/quantum.pm ${WRKSRC}/PerlMagick/quantum/Q16HDRI.pm
 	${LN} -sf ${WRKSRC}/PerlMagick/quantum/quantum.xs ${WRKSRC}/PerlMagick/quantum/Q16HDRI.xs
 
