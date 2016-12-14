@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5015 2016/12/14 13:53:59 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.5016 2016/12/14 15:49:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6983,3 +6983,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/jemalloc to 4.3.1 [maya 2016-12-13]
 	Updated net/syncthing to 0.14.14 [wiz 2016-12-14]
 	Updated misc/libreoffice to 5.2.3.3nb1 [ryoon 2016-12-14]
+	Updated mail/dovecot2 to 2.2.27 [adam 2016-12-14]
