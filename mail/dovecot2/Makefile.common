@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2016/11/12 11:21:45 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2016/12/14 15:48:09 adam Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -9,9 +9,9 @@
 # used by mail/dovecot2-mysql/Makefile
 # used by mail/dovecot2-pgsql/Makefile
 
-DISTNAME=	dovecot-2.2.26.0
+DISTNAME=	dovecot-2.2.27
 CATEGORIES=	mail
-MASTER_SITES=	http://www.dovecot.org/releases/${PKGVERSION_NOREV:R:R}/
+MASTER_SITES=	http://www.dovecot.org/releases/${PKGVERSION_NOREV:R}/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.dovecot.org/
@@ -46,5 +46,6 @@ CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
 MAKE_JOBS_SAFE=	no
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/lz4/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
