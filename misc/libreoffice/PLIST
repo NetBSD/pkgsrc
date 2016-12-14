@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/12/14 13:52:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/12/14 21:06:01 wiz Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -137,6 +137,7 @@ ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
 ${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
 ${PKGNAME}/lib/libreoffice/program/liblocalebe1lo.so
@@ -262,6 +263,7 @@ ${PKGNAME}/lib/libreoffice/program/libvclcanvaslo.so
 ${PKGNAME}/lib/libreoffice/program/libvcllo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_genlo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_gtklo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftcalclo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftdrawlo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftimpresslo.so
@@ -13583,6 +13585,10 @@ ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwright.gif
 ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwup.gif
 ${PKGNAME}/lib/libreoffice/share/glade/libreoffice-catalog.xml
 ${PKGNAME}/lib/libreoffice/share/labels/labels.xml
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_graphic.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_end.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_middle.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_start.png
 ${PKGNAME}/lib/libreoffice/share/palette/arrowhd.soe
 ${PKGNAME}/lib/libreoffice/share/palette/classic.sog
 ${PKGNAME}/lib/libreoffice/share/palette/cmyk.soc
