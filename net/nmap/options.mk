@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2016/07/09 13:03:59 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2016/12/14 22:47:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nmap
 
@@ -13,22 +13,6 @@ PLIST_VARS+=	ndiff zenmap lua
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mndiff)
-CONFIGURE_ARGS+=	--with-ndiff
-PLIST.ndiff=		yes
-PY_PATCHPLIST=		yes
-REPLACE_PYTHON+=	ndiff/*.py
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	ndiff/setup.py
-SUBST_VARS.paths=	PKGMANDIR
-SUBST_MESSAGE.paths=	Fixing paths.
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.else
-CONFIGURE_ARGS+=		--without-ndiff
 .endif
 
 # Enable dynamically loadable preprocessors, detection engine
@@ -58,4 +42,21 @@ CONFIGURE_ARGS+=	--with-liblua=${BUILDLINK_PREFIX.lua}
 PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--without-liblua
+.endif
+
+# this needs to be below zenmap option handling, because that restricts python versions
+.if !empty(PKG_OPTIONS:Mndiff)
+CONFIGURE_ARGS+=	--with-ndiff
+PLIST.ndiff=		yes
+PY_PATCHPLIST=		yes
+REPLACE_PYTHON+=	ndiff/*.py
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	ndiff/setup.py
+SUBST_VARS.paths=	PKGMANDIR
+SUBST_MESSAGE.paths=	Fixing paths.
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.else
+CONFIGURE_ARGS+=		--without-ndiff
 .endif
