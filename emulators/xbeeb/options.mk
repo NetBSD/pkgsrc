@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/02/13 13:47:18 abs Exp $
+# $NetBSD: options.mk,v 1.2 2016/12/14 08:51:53 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,7 +28,7 @@ PLIST_VARS+=		xbeeb-roms
 
 .if !empty(PKG_OPTIONS:Mxbeeb-roms)
 PLIST.xbeeb-roms=	yes
-LICENSE=		xbeeb-pseudolicense
+LICENSE=		generic-nonlicense
 RESTRICTED=		No redistribution allowed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
