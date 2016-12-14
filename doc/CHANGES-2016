@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5017 2016/12/14 21:36:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5018 2016/12/14 23:41:51 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6985,3 +6985,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/libreoffice to 5.2.3.3nb1 [ryoon 2016-12-14]
 	Updated mail/dovecot2 to 2.2.27 [adam 2016-12-14]
 	Updated x11/xf86-video-dummy to 0.3.8 [wiz 2016-12-14]
+	Updated editors/nano to 2.7.2 [wiedi 2016-12-14]
