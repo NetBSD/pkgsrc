@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2016/11/12 16:12:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.51 2016/12/14 15:48:09 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -81,6 +81,7 @@ include/dovecot/dict-sql.h
 include/dovecot/dict-transaction-memory.h
 include/dovecot/dict.h
 include/dovecot/dns-lookup.h
+include/dovecot/dns-util.h
 include/dovecot/doveadm-cmd.h
 include/dovecot/doveadm-dsync.h
 include/dovecot/doveadm-dump.h
@@ -493,8 +494,10 @@ include/dovecot/seq-range-array.h
 include/dovecot/service-settings.h
 include/dovecot/settings-parser.h
 include/dovecot/settings.h
+include/dovecot/sha-common.h
 include/dovecot/sha1.h
 include/dovecot/sha2.h
+include/dovecot/sha3.h
 include/dovecot/shared-storage.h
 include/dovecot/smtp-client.h
 include/dovecot/sort.h
@@ -536,13 +539,16 @@ lib/dovecot/doveadm/lib10_doveadm_acl_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_expire_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_quota_plugin.la
 lib/dovecot/doveadm/lib20_doveadm_fts_plugin.la
+lib/dovecot/doveadm/libdoveadm_mail_crypt_plugin.la
 lib/dovecot/dovecot-config
 lib/dovecot/lib01_acl_plugin.la
 lib/dovecot/lib02_imap_acl_plugin.la
 lib/dovecot/lib02_lazy_expunge_plugin.la
+lib/dovecot/lib05_mail_crypt_acl_plugin.la
 lib/dovecot/lib05_pop3_migration_plugin.la
 lib/dovecot/lib05_snarf_plugin.la
 lib/dovecot/lib10_last_login_plugin.la
+lib/dovecot/lib10_mail_crypt_plugin.la
 lib/dovecot/lib10_mail_filter_plugin.la
 lib/dovecot/lib10_quota_plugin.la
 lib/dovecot/lib11_imap_quota_plugin.la
@@ -574,6 +580,8 @@ lib/dovecot/libdovecot-sql.la
 lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
 lib/dovecot/libfs_compress.la
+lib/dovecot/libfs_crypt.la
+lib/dovecot/libfs_mail_crypt.la
 ${PLIST.ssl}lib/dovecot/libssl_iostream_openssl.la
 lib/dovecot/stats/libstats_auth.la
 lib/dovecot/stats/libstats_mail.la
@@ -637,6 +645,7 @@ man/man1/doveadm-index.1
 man/man1/doveadm-instance.1
 man/man1/doveadm-kick.1
 man/man1/doveadm-log.1
+man/man1/doveadm-mailbox-cryptokey.1
 man/man1/doveadm-mailbox.1
 man/man1/doveadm-mount.1
 man/man1/doveadm-move.1
@@ -838,6 +847,7 @@ share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.Vacation.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Extensions.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extdata.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Extprograms.txt
+share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.IMAPSieve.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.Pipe.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Plugins.txt
 share/doc/dovecot/wiki/Pigeonhole.Sieve.Troubleshooting.txt
@@ -854,10 +864,12 @@ share/doc/dovecot/wiki/Plugins.FTS.txt
 share/doc/dovecot/wiki/Plugins.LastLogin.txt
 share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.Listescape.txt
+share/doc/dovecot/wiki/Plugins.MailCrypt.txt
 share/doc/dovecot/wiki/Plugins.MailFilter.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.MailboxAlias.txt
 share/doc/dovecot/wiki/Plugins.Notify.txt
+share/doc/dovecot/wiki/Plugins.PushNotification.txt
 share/doc/dovecot/wiki/Plugins.QuotaClone.txt
 share/doc/dovecot/wiki/Plugins.Snarf.txt
 share/doc/dovecot/wiki/Plugins.Stats.txt
