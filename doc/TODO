@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16792 2016/12/13 17:36:53 bouyer Exp $
+$NetBSD: TODO,v 1.16793 2016/12/14 12:16:03 hauke Exp $
 
 Suggested new packages
 ======================
@@ -773,6 +773,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
+	o gnumeric-1.2.26
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
