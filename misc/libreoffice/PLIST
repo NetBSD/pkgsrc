@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/12/06 15:21:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/12/14 13:52:56 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -11253,7 +11253,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/setmasterpassworddlg.
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/simplenameclash.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/sslwarndialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/unknownauthdialog.ui
-${PLIST.cups}${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/cupspassworddialog.ui
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/cupspassworddialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/errornocontentdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/errornoprinterdialog.ui
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/printdialog.ui
