@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5014 2016/12/14 12:15:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5015 2016/12/14 13:53:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6982,3 +6982,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/py-diffoscope to 63 [khorben 2016-12-13]
 	Updated devel/jemalloc to 4.3.1 [maya 2016-12-13]
 	Updated net/syncthing to 0.14.14 [wiz 2016-12-14]
+	Updated misc/libreoffice to 5.2.3.3nb1 [ryoon 2016-12-14]
