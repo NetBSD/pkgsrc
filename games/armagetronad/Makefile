@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/07/24 15:43:50 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/15 23:52:43 joerg Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 COMMENT=	Tron clone in 3D with advanced gameplay and multiplayer
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
