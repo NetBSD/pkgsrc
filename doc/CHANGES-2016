@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5028 2016/12/15 20:26:44 abs Exp $
+$NetBSD: CHANGES-2016,v 1.5029 2016/12/15 21:25:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7002,3 +7002,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/isync to 1.2.1 [schmonz 2016-12-15]
 	Updated net/mikutter to 3.5.0-alpha1 [tsutsui 2016-12-15]
 	Added devel/bfg version 1.12.14 [abs 2016-12-15]
+	Updated databases/p5-Redis to 1.991 [mef 2016-12-15]
