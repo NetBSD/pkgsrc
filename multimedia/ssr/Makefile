@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/08/17 00:06:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/15 22:40:10 wiedi Exp $
 #
 
 DISTNAME=	ssr-0.3.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=MaartenBaert/}
 
@@ -18,6 +18,7 @@ USE_LANGUAGES=	c c++
 REPLACE_BASH=	scripts/ssr-glinject
 
 CFLAGS.NetBSD+=	-DBSD
+CFLAGS.SunOS+=	-DBSD
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
