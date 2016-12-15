@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/12/15 23:41:31 joerg Exp $
+
+SHA1 (coursera-dl-0.8.0.tar.gz) = df23d9add320983549dd5ebacb37f50285e72ae2
+RMD160 (coursera-dl-0.8.0.tar.gz) = f7ff3b388d0325cc06e311bdb78f341a91927aa0
+SHA512 (coursera-dl-0.8.0.tar.gz) = a88add229f69f810abc9a156878a57f891378ecd49572c7f5eb0df24250b214daf85fae4c47eac9c13aac23f2dcd92e99f7ef57e916efa5cf59187fc71a324da
+Size (coursera-dl-0.8.0.tar.gz) = 222829 bytes

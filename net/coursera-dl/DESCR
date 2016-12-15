@@ -1,0 +1,6 @@
+Coursera provides a variety of massive open online courses (MOOC)
+covering many different topics. This script makes it easier to batch
+download lecture resources (e.g., videos, ppt, etc) for Coursera classes. 
+Given one or more class names and account credentials, it obtains week
+and class names from the lectures page, and then downloads the related
+materials into appropriately named files and directories.
