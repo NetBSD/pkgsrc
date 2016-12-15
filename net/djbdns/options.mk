@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2011/12/25 21:16:46 schmonz Exp $
+# $NetBSD: options.mk,v 1.18 2016/12/15 12:04:20 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		# inet6
@@ -19,7 +19,7 @@ PKG_SUGGESTED_OPTIONS+=   djbdns-tinydns64
 
 PLIST_VARS+=			inet6
 #.if !empty(PKG_OPTIONS:Minet6)
-#IPV6_PATCH=			djbdns-1.05-test25.diff.bz2
+#IPV6_PATCH=			djbdns-1.05-test27.diff.bz2
 #PATCHFILES+=			${IPV6_PATCH}
 #SITES.${IPV6_PATCH}=		http://www.fefe.de/dns/
 #PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
