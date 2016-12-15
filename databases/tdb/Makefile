@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/07/09 13:03:36 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/12/15 23:47:49 joerg Exp $
 
 DISTNAME=	tdb-1.3.8
 CATEGORIES=	databases
@@ -29,6 +29,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.2.12
 USE_GCC_RUNTIME=	yes
 
 .include "../../mk/bsd.prefs.mk"
+
+# At least on NetBSD unprivileged build fails to create threads in WAF.
+ALL_ENV+=	JOBS=1
 
 .if ${OPSYS} == "Darwin"
 post-build:
