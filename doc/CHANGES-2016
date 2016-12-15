@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5023 2016/12/15 11:24:12 adam Exp $
+$NetBSD: CHANGES-2016,v 1.5024 2016/12/15 13:45:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6997,3 +6997,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-sphinx to 1.5.1 [adam 2016-12-15]
 	Updated devel/py-requests to 2.12.4 [adam 2016-12-15]
 	Updated www/py-bleach to 1.5.0 [adam 2016-12-15]
+	Updated textproc/py-markdown to 2.6.7 [adam 2016-12-15]
