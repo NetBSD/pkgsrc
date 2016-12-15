@@ -1,7 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2015/12/27 11:31:54 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2016/12/15 20:13:56 maya Exp $
 
 Add __ppc64__ and __arm__
 Recognize __sun as well as sun
+Add __ia64__
 
 --- Imake.cf.orig	2015-12-22 01:28:02.000000000 +0000
 +++ Imake.cf
@@ -17,7 +18,18 @@ Recognize __sun as well as sun
  # endif
  # ifdef __i386__
  #  define i386DarwinArchitecture
-@@ -352,7 +357,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+@@ -255,6 +256,10 @@
+ #  define AMD64Architecture
+ #  undef __x86_64__
+ # endif
++# ifdef __ia64__
++#  define ia64Architecture
++#  undef __ia64__
++# endif
+ #endif /* NetBSD */
+ 
+ /* Systems based on kernel of NetBSD */
+@@ -352,7 +357,7 @@
  # endif
  #endif /* AMOEBA */
  
