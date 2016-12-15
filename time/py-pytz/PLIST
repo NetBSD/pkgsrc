@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/11/11 10:16:02 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/12/15 09:54:21 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -262,6 +262,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Aqtau
 ${PYSITELIB}/pytz/zoneinfo/Asia/Aqtobe
 ${PYSITELIB}/pytz/zoneinfo/Asia/Ashgabat
 ${PYSITELIB}/pytz/zoneinfo/Asia/Ashkhabad
+${PYSITELIB}/pytz/zoneinfo/Asia/Atyrau
 ${PYSITELIB}/pytz/zoneinfo/Asia/Baghdad
 ${PYSITELIB}/pytz/zoneinfo/Asia/Bahrain
 ${PYSITELIB}/pytz/zoneinfo/Asia/Baku
@@ -282,6 +283,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Dhaka
 ${PYSITELIB}/pytz/zoneinfo/Asia/Dili
 ${PYSITELIB}/pytz/zoneinfo/Asia/Dubai
 ${PYSITELIB}/pytz/zoneinfo/Asia/Dushanbe
+${PYSITELIB}/pytz/zoneinfo/Asia/Famagusta
 ${PYSITELIB}/pytz/zoneinfo/Asia/Gaza
 ${PYSITELIB}/pytz/zoneinfo/Asia/Harbin
 ${PYSITELIB}/pytz/zoneinfo/Asia/Hebron
@@ -487,6 +489,7 @@ ${PYSITELIB}/pytz/zoneinfo/Europe/Rome
 ${PYSITELIB}/pytz/zoneinfo/Europe/Samara
 ${PYSITELIB}/pytz/zoneinfo/Europe/San_Marino
 ${PYSITELIB}/pytz/zoneinfo/Europe/Sarajevo
+${PYSITELIB}/pytz/zoneinfo/Europe/Saratov
 ${PYSITELIB}/pytz/zoneinfo/Europe/Simferopol
 ${PYSITELIB}/pytz/zoneinfo/Europe/Skopje
 ${PYSITELIB}/pytz/zoneinfo/Europe/Sofia
