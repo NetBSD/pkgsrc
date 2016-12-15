@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.140 2016/12/07 22:01:28 maya Exp $
+$NetBSD: distinfo,v 1.141 2016/12/15 07:48:19 dholland Exp $
 
 SHA1 (seamonkey-2.40.source.tar.xz) = ecf99bc7478319835a0e19f35ed5b7b1aa2c0046
 RMD160 (seamonkey-2.40.source.tar.xz) = 4030688f145fdf35a6d2728d097cf7cda8e50231
@@ -31,6 +31,8 @@ SHA1 (patch-mozilla_dom_media_moz.build) = e21f162f6fb2f053e3e04a8273033b92bd6a7
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp) = 005a611073f3a8b865d19e7204df9d40e5e1c3ff
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginModuleChild.h) = 14038ce0ee2b38db6c7952056a97a65839a2c1a9
 SHA1 (patch-mozilla_dom_plugins_ipc_PluginProcessChild.cpp) = ef2b3f3c134be64c9dbb688e36a8b767c25a008a
+SHA1 (patch-mozilla_dom_smil_nsSMILTimeContainer.cpp) = 8040334532157965086a6926aea2cb42707c9be3
+SHA1 (patch-mozilla_dom_smil_nsSMILTimeContainer.h) = ca80d3991d3025bc9ebe7091be4fd01ffcf75839
 SHA1 (patch-mozilla_dom_system_OSFileConstants.cpp) = f78d502489013f855c1616d8941b960aa73760a2
 SHA1 (patch-mozilla_extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 5c7d5429bd9a84fd2fffa86c3bd1d34d67f66681
 SHA1 (patch-mozilla_gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 818a1b1cb48bc04e91581709065948cef362aebe
