@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2016/07/16 03:07:14 wen Exp $
+# $NetBSD: Makefile,v 1.26 2016/12/15 21:41:48 mef Exp $
 
-DISTNAME=	App-perlbrew-0.76
+DISTNAME=	App-perlbrew-0.78
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
@@ -25,6 +25,7 @@ BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Spec>=0:../../devel/p5-Test-Spec
 BUILD_DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
 BUILD_DEPENDS+=	p5-IO-All>=0.46:../../devel/p5-IO-All
+BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 #		File::Temp in perl 5.14
 
 USE_LANGUAGES=		# empty
