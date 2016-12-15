@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2016/09/20 16:37:24 jperkin Exp $
+$NetBSD: distinfo,v 1.28 2016/12/15 20:13:56 maya Exp $
 
 SHA1 (xorg-cf-files-1.0.6.tar.bz2) = 9b6ed71c74a83181a47eb180787e9ab9a5efdfa2
 RMD160 (xorg-cf-files-1.0.6.tar.bz2) = 544d19c017066cbab2c7108ecf702c4866144755
@@ -13,7 +13,7 @@ SHA1 (patch-ac) = 1f977650d9e903a4ea72afc8541b7649cb989ab8
 SHA1 (patch-ad) = 12c918ad85fa44518525d2c4bc628b342b8c0280
 SHA1 (patch-ae) = 7f39d7b26f8b85529af0b9550ee213ed08aaddde
 SHA1 (patch-af) = 27ee42892b9a3f53e43891ca0caec0301c849c85
-SHA1 (patch-ag) = 72fcd4463207491c23e599f621c86560a2934bea
+SHA1 (patch-ag) = 4cd1c7c8c6392688b9c5fca5bdd365835ae9d563
 SHA1 (patch-ah) = 9b64b2e5f419ab190d47dd8156b8f84634fd6a36
 SHA1 (patch-ai) = 455b398bba0d06ded08ed99f1e0e85cc4ff20449
 SHA1 (patch-aj) = 3be677041b6bff008caa1375d1e6dd5c90d9f501
