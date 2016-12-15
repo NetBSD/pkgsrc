@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/07/24 15:44:49 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/15 23:52:43 joerg Exp $
 #
 
 .include "../../games/armagetronad/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/.src//:S/armagetronad/armagetronad-server/}
+PKGREVISION=	1
 COMMENT=	Server for the armagetronad game
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
