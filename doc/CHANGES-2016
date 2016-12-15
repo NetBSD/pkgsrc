@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5026 2016/12/15 14:15:42 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.5027 2016/12/15 14:42:21 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7000,3 +7000,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-markdown to 2.6.7 [adam 2016-12-15]
 	Updated editors/xemacs-packages to 1.18 [hauke 2016-12-15]
 	Updated mail/isync to 1.2.1 [schmonz 2016-12-15]
+	Updated net/mikutter to 3.5.0-alpha1 [tsutsui 2016-12-15]
