@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 19:24:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/15 21:15:41 mef Exp $
 
 DISTNAME=		IO-Socket-Timeout-0.32
 PKGNAME=		p5-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=		IO::Socket with read/write timeout
 LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-PerlIO-via-Timeout>=0.32:../../devel/p5-PerlIO-via-Timeout
+# for make test
+BUILD_DEPENDS+=		p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
 
 PERL5_PACKLIST=		auto/IO/Socket/Timeout/.packlist
 
