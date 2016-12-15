@@ -8,4 +8,3 @@ bin/rst2s5.py @PREFIX@/bin/rst2s5-@PYVERSSUFFIX@.py
 bin/rst2xetex.py @PREFIX@/bin/rst2xetex-@PYVERSSUFFIX@.py
 bin/rst2xml.py @PREFIX@/bin/rst2xml-@PYVERSSUFFIX@.py
 bin/rstpep2html.py @PREFIX@/bin/rstpep2html-@PYVERSSUFFIX@.py
-

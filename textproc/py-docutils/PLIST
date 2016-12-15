@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.21 2015/02/24 11:03:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/12/15 10:42:30 adam Exp $
 bin/rst2html-${PYVERSSUFFIX}.py
+bin/rst2html5-${PYVERSSUFFIX}.py
 bin/rst2latex-${PYVERSSUFFIX}.py
 bin/rst2man-${PYVERSSUFFIX}.py
 bin/rst2odt-${PYVERSSUFFIX}.py
@@ -55,6 +56,9 @@ ${PYSITELIB}/docutils/languages/eo.pyo
 ${PYSITELIB}/docutils/languages/es.py
 ${PYSITELIB}/docutils/languages/es.pyc
 ${PYSITELIB}/docutils/languages/es.pyo
+${PYSITELIB}/docutils/languages/fa.py
+${PYSITELIB}/docutils/languages/fa.pyc
+${PYSITELIB}/docutils/languages/fa.pyo
 ${PYSITELIB}/docutils/languages/fi.py
 ${PYSITELIB}/docutils/languages/fi.pyc
 ${PYSITELIB}/docutils/languages/fi.pyo
@@ -76,6 +80,9 @@ ${PYSITELIB}/docutils/languages/ja.pyo
 ${PYSITELIB}/docutils/languages/lt.py
 ${PYSITELIB}/docutils/languages/lt.pyc
 ${PYSITELIB}/docutils/languages/lt.pyo
+${PYSITELIB}/docutils/languages/lv.py
+${PYSITELIB}/docutils/languages/lv.pyc
+${PYSITELIB}/docutils/languages/lv.pyo
 ${PYSITELIB}/docutils/languages/nl.py
 ${PYSITELIB}/docutils/languages/nl.pyc
 ${PYSITELIB}/docutils/languages/nl.pyo
@@ -200,6 +207,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/eo.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/es.py
 ${PYSITELIB}/docutils/parsers/rst/languages/es.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/es.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/fa.py
+${PYSITELIB}/docutils/parsers/rst/languages/fa.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/fa.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/fi.py
 ${PYSITELIB}/docutils/parsers/rst/languages/fi.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/fi.pyo
@@ -221,6 +231,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/ja.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/lt.py
 ${PYSITELIB}/docutils/parsers/rst/languages/lt.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/lt.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/lv.py
+${PYSITELIB}/docutils/parsers/rst/languages/lv.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/lv.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/nl.py
 ${PYSITELIB}/docutils/parsers/rst/languages/nl.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/nl.pyo
@@ -314,6 +327,9 @@ ${PYSITELIB}/docutils/utils/math/latex2mathml.pyo
 ${PYSITELIB}/docutils/utils/math/math2html.py
 ${PYSITELIB}/docutils/utils/math/math2html.pyc
 ${PYSITELIB}/docutils/utils/math/math2html.pyo
+${PYSITELIB}/docutils/utils/math/tex2mathml_extern.py
+${PYSITELIB}/docutils/utils/math/tex2mathml_extern.pyc
+${PYSITELIB}/docutils/utils/math/tex2mathml_extern.pyo
 ${PYSITELIB}/docutils/utils/math/tex2unichar.py
 ${PYSITELIB}/docutils/utils/math/tex2unichar.pyc
 ${PYSITELIB}/docutils/utils/math/tex2unichar.pyo
@@ -335,6 +351,9 @@ ${PYSITELIB}/docutils/utils/urischemes.pyo
 ${PYSITELIB}/docutils/writers/__init__.py
 ${PYSITELIB}/docutils/writers/__init__.pyc
 ${PYSITELIB}/docutils/writers/__init__.pyo
+${PYSITELIB}/docutils/writers/_html_base.py
+${PYSITELIB}/docutils/writers/_html_base.pyc
+${PYSITELIB}/docutils/writers/_html_base.pyo
 ${PYSITELIB}/docutils/writers/docutils_xml.py
 ${PYSITELIB}/docutils/writers/docutils_xml.pyc
 ${PYSITELIB}/docutils/writers/docutils_xml.pyo
@@ -342,8 +361,14 @@ ${PYSITELIB}/docutils/writers/html4css1/__init__.py
 ${PYSITELIB}/docutils/writers/html4css1/__init__.pyc
 ${PYSITELIB}/docutils/writers/html4css1/__init__.pyo
 ${PYSITELIB}/docutils/writers/html4css1/html4css1.css
-${PYSITELIB}/docutils/writers/html4css1/math.css
 ${PYSITELIB}/docutils/writers/html4css1/template.txt
+${PYSITELIB}/docutils/writers/html5_polyglot/__init__.py
+${PYSITELIB}/docutils/writers/html5_polyglot/__init__.pyc
+${PYSITELIB}/docutils/writers/html5_polyglot/__init__.pyo
+${PYSITELIB}/docutils/writers/html5_polyglot/math.css
+${PYSITELIB}/docutils/writers/html5_polyglot/minimal.css
+${PYSITELIB}/docutils/writers/html5_polyglot/plain.css
+${PYSITELIB}/docutils/writers/html5_polyglot/template.txt
 ${PYSITELIB}/docutils/writers/latex2e/__init__.py
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyc
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyo
