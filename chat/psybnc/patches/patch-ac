@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2014/06/15 21:55:17 pettai Exp $
+$NetBSD: patch-ac,v 1.2 2016/12/15 23:46:48 joerg Exp $
 
-add pkgsrc path to openssl
+Add pkgsrc path to openssl.
+Don't bother creating SSL keys, they are not installed anyway and should
+be created on the target system.
 
 --- tools/autoconf.c.orig	2011-07-14 18:11:35.000000000 +0000
 +++ tools/autoconf.c
@@ -9,7 +11,7 @@ add pkgsrc path to openssl
      system(sysbuf);
  #else
 -    system(CC " tools/chkssl.c -I/usr/local/ssl/include -L/usr/local/ssl/lib -lssl -lcrypto -o tools/chkssl" DN);
-+    system(CC " tools/chkssl.c -I@PREFIX@/include -L@PREFIX@/lib -lssl -lcrypto -o tools/chkssl" DN);
++    system(CC " tools/chkssl.c -I/usr/pkg/include -L/usr/pkg/lib -lssl -lcrypto -o tools/chkssl" DN);
  #endif
      return checkcmp();
  }
@@ -17,7 +19,7 @@ add pkgsrc path to openssl
  	"/usr/sbin/openssl",
  	"/usr/local/bin/openssl",
  	"/usr/local/ssl/bin/openssl",
-+	"@PREFIX@/bin/openssl",
++	"/usr/pkg/bin/openssl",
  	NULL
      };
  #endif
@@ -26,7 +28,7 @@ add pkgsrc path to openssl
  	    printf("Yes.\n");
  	    strcpy(sslopt,"-DHAVE_SSL ");
 -	    strcpy(ssllib,"-L/usr/local/ssl/lib -lssl -lcrypto ");
-+	    strcpy(ssllib,"-L@PREFIX@/lib -lssl -lcrypto ");
++	    strcpy(ssllib,"-L/usr/pkg/lib -lssl -lcrypto ");
  	}
  #else
  	if(strlen(SSLPATH)+13<sizeof(mbuf))
@@ -35,7 +37,33 @@ add pkgsrc path to openssl
  	fprintf(makefile,"INCLUDE = -I./src/ -I. -I%sinclude %s %s\n", SSLPATH, mysqlheaders, dnsinc);
  #else
 -	fprintf(makefile,"INCLUDE = -I./src/ -I. -I/usr/local/ssl/include %s %s\n", mysqlheaders, dnsinc);
-+	fprintf(makefile,"INCLUDE = -I./src/ -I. -I@PREFIX@/include %s %s\n", mysqlheaders, dnsinc);
++	fprintf(makefile,"INCLUDE = -I./src/ -I. -I/usr/pkg/include %s %s\n", mysqlheaders, dnsinc);
  #endif
      else
  	fprintf(makefile,"INCLUDE = -I./src/ -I. %s %s\n", mysqlheaders, dnsinc);
+@@ -641,25 +642,6 @@ int main()
+ /*    fprintf(makefile,"	@strip $(TARGET)\n");*/
+     if(ssl==0)
+     {
+-	if(!fexists("key/psybnc.cert.pem")) /* only create, if not exist */
+-	{
+-	    mkdir("key",0700);
+-	    fprintf(makefile,"	@echo \"*** GENERATING SSL-KEYS FROM CERTIFICATE **\"\n");
+-	    fprintf(makefile,"	@echo \"* You will be prompted for Cert-Contents  *\"\n");
+-	    fprintf(makefile,"	@echo \"*  This Infos will be used only for SSL   *\"\n");
+-	    fprintf(makefile,"	@echo \"* Alter the informations to your values   *\"\n");
+-	    fprintf(makefile,"	@echo \"* for the sake of correct Cert-Checking   *\"\n");
+-	    fprintf(makefile,"	@echo \"*******************************************\"\n");
+-	    fprintf(makefile,"	@echo \"Generating certificate request .. \"\n");
+-	    fprintf(makefile,"	@%s req -new -config src/ssl.cnf -out key/psybnc.req.pem \\\n",sslbin);
+-	    fprintf(makefile,"      	-keyout key/psybnc.key.pem -nodes\n");
+-	    fprintf(makefile,"	@echo \"Generating self-signed certificate .. \"\n");
+-	    fprintf(makefile,"	@%s req -x509 -days 365 -in key/psybnc.req.pem \\\n",sslbin);
+-    	    fprintf(makefile,"       	-key key/psybnc.key.pem -out key/psybnc.cert.pem\n");
+-	    fprintf(makefile,"	@echo \"Generating fingerprint ..\"\n");
+-	    fprintf(makefile,"	@%s x509 -subject -dates -fingerprint -noout \\\n",sslbin);
+-	    fprintf(makefile,"		-in key/psybnc.cert.pem\n");
+-	}
+ 	if(!fexists("src/ssl.rnd"))
+ 	{
+ 	    sslrnd=fopen("src/ssl.rnd","w");
