@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2343 2016/12/12 00:36:19 marino Exp $
+# $NetBSD: Makefile,v 1.2344 2016/12/15 20:25:31 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -77,6 +77,7 @@ SUBDIR+=	avltree
 SUBDIR+=	bam
 SUBDIR+=	bats
 SUBDIR+=	bcc
+SUBDIR+=	bfg
 SUBDIR+=	bglibs
 SUBDIR+=	bin86
 SUBDIR+=	binutils
