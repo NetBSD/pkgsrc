@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/01/19 18:51:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/12/15 11:21:18 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -17,24 +17,6 @@ ${PYSITELIB}/bleach/encoding.pyo
 ${PYSITELIB}/bleach/sanitizer.py
 ${PYSITELIB}/bleach/sanitizer.pyc
 ${PYSITELIB}/bleach/sanitizer.pyo
-${PYSITELIB}/bleach/tests/__init__.py
-${PYSITELIB}/bleach/tests/__init__.pyc
-${PYSITELIB}/bleach/tests/__init__.pyo
-${PYSITELIB}/bleach/tests/test_basics.py
-${PYSITELIB}/bleach/tests/test_basics.pyc
-${PYSITELIB}/bleach/tests/test_basics.pyo
-${PYSITELIB}/bleach/tests/test_css.py
-${PYSITELIB}/bleach/tests/test_css.pyc
-${PYSITELIB}/bleach/tests/test_css.pyo
-${PYSITELIB}/bleach/tests/test_links.py
-${PYSITELIB}/bleach/tests/test_links.pyc
-${PYSITELIB}/bleach/tests/test_links.pyo
-${PYSITELIB}/bleach/tests/test_security.py
-${PYSITELIB}/bleach/tests/test_security.pyc
-${PYSITELIB}/bleach/tests/test_security.pyo
-${PYSITELIB}/bleach/tests/test_unicode.py
-${PYSITELIB}/bleach/tests/test_unicode.pyc
-${PYSITELIB}/bleach/tests/test_unicode.pyo
-${PYSITELIB}/bleach/tests/tools.py
-${PYSITELIB}/bleach/tests/tools.pyc
-${PYSITELIB}/bleach/tests/tools.pyo
+${PYSITELIB}/bleach/version.py
+${PYSITELIB}/bleach/version.pyc
+${PYSITELIB}/bleach/version.pyo
