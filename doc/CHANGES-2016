@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5030 2016/12/15 22:10:03 mef Exp $
+$NetBSD: CHANGES-2016,v 1.5031 2016/12/15 23:03:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7011,3 +7011,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Dispatch to 2.58 [mef 2016-12-15]
 	Updated devel/p5-File-MimeInfo to 0.28 [mef 2016-12-15]
 	Updated devel/p5-Glib-Object-Introspection to 0.041 [mef 2016-12-15]
+	Updated x11/libXpm to 3.5.12 [wiz 2016-12-15]
