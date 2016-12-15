@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5019 2016/12/15 09:14:01 maya Exp $
+$NetBSD: CHANGES-2016,v 1.5020 2016/12/15 10:12:25 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6987,3 +6987,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xf86-video-dummy to 0.3.8 [wiz 2016-12-14]
 	Updated editors/nano to 2.7.2 [wiedi 2016-12-14]
 	Updated devel/jemalloc to 4.4.0 [maya 2016-12-15]
+	Updated sysutils/agedu to 20160920.853cea9 [schmonz 2016-12-15]
