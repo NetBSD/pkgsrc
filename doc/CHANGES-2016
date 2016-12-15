@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5024 2016/12/15 13:45:27 adam Exp $
+$NetBSD: CHANGES-2016,v 1.5025 2016/12/15 13:47:33 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6998,3 +6998,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-requests to 2.12.4 [adam 2016-12-15]
 	Updated www/py-bleach to 1.5.0 [adam 2016-12-15]
 	Updated textproc/py-markdown to 2.6.7 [adam 2016-12-15]
+	Updated editors/xemacs-packages to 1.18 [hauke 2016-12-15]
