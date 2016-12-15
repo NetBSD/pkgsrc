@@ -1,4 +1,4 @@
-$NetBSD: patch-glinject_Hook.cpp,v 1.1 2016/02/08 20:43:32 markd Exp $
+$NetBSD: patch-glinject_Hook.cpp,v 1.2 2016/12/15 22:40:10 wiedi Exp $
 
 Linux gets environ from unistd.h
 
@@ -8,7 +8,7 @@ Linux gets environ from unistd.h
  #include <GL/glx.h>
  #include <X11/X.h>
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__sun)
 +extern char **environ;
 +#endif
 +
