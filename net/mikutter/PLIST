@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2016/09/17 19:31:41 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.36 2016/12/15 14:40:29 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -15,7 +15,7 @@ share/mikutter/core/boot/shell/plugin_depends.rb
 share/mikutter/core/boot/shell/spec.rb
 share/mikutter/core/config.rb
 share/mikutter/core/configloader.rb
-share/mikutter/core/entity.rb
+share/mikutter/core/directmessage.rb
 share/mikutter/core/environment.rb
 share/mikutter/core/lib/lazy.rb
 share/mikutter/core/lib/mikutwitter.rb
@@ -55,6 +55,23 @@ share/mikutter/core/lib/mikutwitter/test/user_timeline.json
 share/mikutter/core/lib/mikutwitter/utils.rb
 share/mikutter/core/lib/piapro.rb
 share/mikutter/core/lib/reserver.rb
+share/mikutter/core/lib/retriever.rb
+share/mikutter/core/lib/retriever/cast.rb
+share/mikutter/core/lib/retriever/datasource.rb
+share/mikutter/core/lib/retriever/entity/blank_entity.rb
+share/mikutter/core/lib/retriever/entity/regexp_entity.rb
+share/mikutter/core/lib/retriever/entity/segment.rb
+share/mikutter/core/lib/retriever/entity/twitter_entity.rb
+share/mikutter/core/lib/retriever/entity/url_entity.rb
+share/mikutter/core/lib/retriever/error.rb
+share/mikutter/core/lib/retriever/field_generator.rb
+share/mikutter/core/lib/retriever/mixin/message_mixin.rb
+share/mikutter/core/lib/retriever/mixin/photo_mixin.rb
+share/mikutter/core/lib/retriever/mixin/user_mixin.rb
+share/mikutter/core/lib/retriever/model.rb
+share/mikutter/core/lib/retriever/model/identity.rb
+share/mikutter/core/lib/retriever/model/memory.rb
+share/mikutter/core/lib/retriever/uri.rb
 share/mikutter/core/lib/test_unit_extensions.rb
 share/mikutter/core/lib/timelimitedqueue.rb
 share/mikutter/core/lib/timelimitedqueue/test/test_timelimitedqueue.rb
@@ -109,16 +126,15 @@ share/mikutter/core/mui/gtk_keyconfig.rb
 share/mikutter/core/mui/gtk_listlist.rb
 share/mikutter/core/mui/gtk_message_picker.rb
 share/mikutter/core/mui/gtk_mtk.rb
+share/mikutter/core/mui/gtk_photo_pixbuf.rb
 share/mikutter/core/mui/gtk_postbox.rb
 share/mikutter/core/mui/gtk_pseudo_signal_handler.rb
+share/mikutter/core/mui/gtk_retriever_header_widget.rb
 share/mikutter/core/mui/gtk_selectbox.rb
 share/mikutter/core/mui/gtk_timeline_utils.rb
 share/mikutter/core/mui/gtk_tree_view_pretty_scroll.rb
 share/mikutter/core/mui/gtk_userlist.rb
 share/mikutter/core/mui/gtk_web_image_loader.rb
-share/mikutter/core/mui/gtk_web_image_loader_image_cache.rb
-share/mikutter/core/mui/gtk_web_image_loader_image_cache_pixbuf.rb
-share/mikutter/core/mui/gtk_web_image_loader_image_cache_raw.rb
 share/mikutter/core/mui/gtk_webicon.rb
 share/mikutter/core/plugin.rb
 share/mikutter/core/plugin/ChangeLog
@@ -141,6 +157,8 @@ share/mikutter/core/plugin/achievement/po/zh_CN/achievement.po
 share/mikutter/core/plugin/achievement/po/zh_TW/achievement.po
 share/mikutter/core/plugin/activity/.mikutter.yml
 share/mikutter/core/plugin/activity/activity.rb
+share/mikutter/core/plugin/activity/model/activity.rb
+share/mikutter/core/plugin/activity/model_selector.rb
 share/mikutter/core/plugin/activity/po/ar/activity.po
 share/mikutter/core/plugin/activity/po/de/activity.po
 share/mikutter/core/plugin/activity/po/el/activity.po
@@ -378,7 +396,15 @@ share/mikutter/core/plugin/home_timeline/po/zh/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/zh_CN/home_timeline.po
 share/mikutter/core/plugin/home_timeline/po/zh_TW/home_timeline.po
 share/mikutter/core/plugin/image_file_cache/.mikutter.yml
+share/mikutter/core/plugin/image_file_cache/Gemfile
 share/mikutter/core/plugin/image_file_cache/image_file_cache.rb
+share/mikutter/core/plugin/intent/.mikutter.yml
+share/mikutter/core/plugin/intent/intent.rb
+share/mikutter/core/plugin/intent/model/intent.rb
+share/mikutter/core/plugin/intent/model/intent_token.rb
+share/mikutter/core/plugin/intent_selector/.mikutter.yml
+share/mikutter/core/plugin/intent_selector/intent_selector.rb
+share/mikutter/core/plugin/intent_selector/listview.rb
 share/mikutter/core/plugin/libnotify/.mikutter.yml
 share/mikutter/core/plugin/libnotify/libnotify.rb
 share/mikutter/core/plugin/libnotify/notify-send.rb
@@ -410,7 +436,7 @@ share/mikutter/core/plugin/mentions/po/vi/mentions.po
 share/mikutter/core/plugin/mentions/po/zh/mentions.po
 share/mikutter/core/plugin/mentions/po/zh_CN/mentions.po
 share/mikutter/core/plugin/mentions/po/zh_TW/mentions.po
-share/mikutter/core/plugin/message_detail_view/header_widget.rb
+share/mikutter/core/plugin/message_detail_view/.mikutter.yml
 share/mikutter/core/plugin/message_detail_view/message_detail_view.rb
 share/mikutter/core/plugin/message_favorite/.mikutter.yml
 share/mikutter/core/plugin/message_favorite/message_favorite.rb
@@ -436,6 +462,7 @@ share/mikutter/core/plugin/notify/po/zh/notify.po
 share/mikutter/core/plugin/notify/po/zh_CN/notify.po
 share/mikutter/core/plugin/notify/po/zh_TW/notify.po
 share/mikutter/core/plugin/openimg/.mikutter.yml
+share/mikutter/core/plugin/openimg/model/photo.rb
 share/mikutter/core/plugin/openimg/openimg.rb
 share/mikutter/core/plugin/openimg/pattern_file.json
 share/mikutter/core/plugin/openimg/po/ar/openimg.po
@@ -453,6 +480,10 @@ share/mikutter/core/plugin/openimg/po/vi/openimg.po
 share/mikutter/core/plugin/openimg/po/zh/openimg.po
 share/mikutter/core/plugin/openimg/po/zh_CN/openimg.po
 share/mikutter/core/plugin/openimg/po/zh_TW/openimg.po
+share/mikutter/core/plugin/openimg/window.rb
+share/mikutter/core/plugin/photo/.mikutter.yml
+share/mikutter/core/plugin/photo/model/photo.rb
+share/mikutter/core/plugin/photo/photo.rb
 share/mikutter/core/plugin/photo_support/.mikutter.yml
 share/mikutter/core/plugin/photo_support/Gemfile
 share/mikutter/core/plugin/photo_support/photo_support.rb
@@ -526,6 +557,7 @@ share/mikutter/core/plugin/saved_search/po/zh_CN/saved_search.po
 share/mikutter/core/plugin/saved_search/po/zh_TW/saved_search.po
 share/mikutter/core/plugin/saved_search/saved_search.rb
 share/mikutter/core/plugin/search/.mikutter.yml
+share/mikutter/core/plugin/search/model/search.rb
 share/mikutter/core/plugin/search/po/ar/search.po
 share/mikutter/core/plugin/search/po/de/search.po
 share/mikutter/core/plugin/search/po/el/search.po
@@ -618,7 +650,10 @@ share/mikutter/core/plugin/shortcutkey/po/zh_TW/shortcutkey.po
 share/mikutter/core/plugin/shortcutkey/shortcutkey.rb
 share/mikutter/core/plugin/shortcutkey/shortcutkey_listview.rb
 share/mikutter/core/plugin/skin/.mikutter.yml
+share/mikutter/core/plugin/skin/model/image.rb
 share/mikutter/core/plugin/skin/skin.rb
+share/mikutter/core/plugin/skin_setting_gtk/.mikutter.yml
+share/mikutter/core/plugin/skin_setting_gtk/skin_setting_gtk.rb
 share/mikutter/core/plugin/smartthread/.mikutter.yml
 share/mikutter/core/plugin/smartthread/po/ar/smartthread.po
 share/mikutter/core/plugin/smartthread/po/de/smartthread.po
@@ -694,9 +729,9 @@ share/mikutter/core/plugin/user_detail_view/po/zh/user_detail_view.po
 share/mikutter/core/plugin/user_detail_view/po/zh_CN/user_detail_view.po
 share/mikutter/core/plugin/user_detail_view/po/zh_TW/user_detail_view.po
 share/mikutter/core/plugin/user_detail_view/user_detail_view.rb
-share/mikutter/core/plugin/user_filesystem_cache/.mikutter.yml
-share/mikutter/core/plugin/user_filesystem_cache/Gemfile
-share/mikutter/core/plugin/user_filesystem_cache/user_filesystem_cache.rb
+share/mikutter/core/plugin/web/.mikutter.yml
+share/mikutter/core/plugin/web/model/web.rb
+share/mikutter/core/plugin/web/web.rb
 share/mikutter/core/retriever.rb
 share/mikutter/core/serialthread.rb
 share/mikutter/core/service.rb
@@ -761,6 +796,9 @@ share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
 share/mikutter/core/skin/data/verified.png
+share/mikutter/core/system/message.rb
+share/mikutter/core/system/system.rb
+share/mikutter/core/system/user.rb
 share/mikutter/core/user.rb
 share/mikutter/core/userconfig.rb
 share/mikutter/core/userlist.rb
