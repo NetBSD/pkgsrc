@@ -1,13 +1,13 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2014/04/24 14:48:44 schmonz Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2016/12/15 14:15:01 schmonz Exp $
 
 Install example config files in pkgsrc hierarchy.
 
---- src/Makefile.in.orig	2013-12-18 21:09:58.000000000 +0000
+--- src/Makefile.in.orig	2015-07-18 16:11:33.000000000 +0000
 +++ src/Makefile.in
-@@ -331,7 +331,7 @@ noinst_HEADERS = common.h config.h drive
- mdconvert_SOURCES = mdconvert.c
- mdconvert_LDADD = -ldb
- man_MANS = mbsync.1 mdconvert.1
+@@ -356,7 +356,7 @@ mdconvert_LDADD = $(DB_LIBS)
+ @with_mdconvert_TRUE@mdconvert_man = mdconvert.1
+ tst_timers_SOURCES = tst_timers.c util.c
+ man_MANS = mbsync.1 $(mdconvert_man)
 -exampledir = $(docdir)/examples
 +exampledir = $(datadir)/examples/isync
  example_DATA = mbsyncrc.sample
