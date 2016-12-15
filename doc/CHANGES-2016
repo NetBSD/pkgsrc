@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5029 2016/12/15 21:25:13 mef Exp $
+$NetBSD: CHANGES-2016,v 1.5030 2016/12/15 22:10:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7003,3 +7003,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.5.0-alpha1 [tsutsui 2016-12-15]
 	Added devel/bfg version 1.12.14 [abs 2016-12-15]
 	Updated databases/p5-Redis to 1.991 [mef 2016-12-15]
+	Updated devel/p5-Acme-Damn to 0.08 [mef 2016-12-15]
+	Updated devel/p5-Devel-TraceUse to 2.095 [mef 2016-12-15]
+	Updated devel/p5-Devel-PatchPerl to 1.46 [mef 2016-12-15]
+	Updated devel/p5-App-perlbrew to 0.78 [mef 2016-12-15]
+	Updated devel/p5-CPAN-Meta-Check to 0.014 [mef 2016-12-15]
+	Updated devel/p5-Log-Dispatch to 2.58 [mef 2016-12-15]
+	Updated devel/p5-File-MimeInfo to 0.28 [mef 2016-12-15]
+	Updated devel/p5-Glib-Object-Introspection to 0.041 [mef 2016-12-15]
