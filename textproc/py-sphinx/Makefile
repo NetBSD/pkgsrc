@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/12/15 10:48:17 adam Exp $
+# $NetBSD: Makefile,v 1.34 2016/12/15 11:04:10 adam Exp $
 
 DISTNAME=	Sphinx-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-imagesize-[0-9]*:../../graphics/py-imagesize
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
