@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/02/14 13:48:40 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/15 10:11:39 schmonz Exp $
 #
 
-DISTNAME=	agedu-r10126
-PKGNAME=	${DISTNAME:S/-r/-/}
+DISTNAME=	agedu-20160920.853cea9
 CATEGORIES=	sysutils
 MASTER_SITES=	${HOMEPAGE}
 
@@ -11,8 +10,6 @@ HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/agedu/
 COMMENT=	Utility for tracking down wasted disk space
 LICENSE=	mit
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"
