@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/05/05 11:47:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/12/15 11:06:08 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -8,6 +8,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/requests/__init__.py
 ${PYSITELIB}/requests/__init__.pyc
 ${PYSITELIB}/requests/__init__.pyo
+${PYSITELIB}/requests/_internal_utils.py
+${PYSITELIB}/requests/_internal_utils.pyc
+${PYSITELIB}/requests/_internal_utils.pyo
 ${PYSITELIB}/requests/adapters.py
 ${PYSITELIB}/requests/adapters.pyc
 ${PYSITELIB}/requests/adapters.pyo
@@ -153,6 +156,27 @@ ${PYSITELIB}/requests/packages/chardet/universaldetector.pyo
 ${PYSITELIB}/requests/packages/chardet/utf8prober.py
 ${PYSITELIB}/requests/packages/chardet/utf8prober.pyc
 ${PYSITELIB}/requests/packages/chardet/utf8prober.pyo
+${PYSITELIB}/requests/packages/idna/__init__.py
+${PYSITELIB}/requests/packages/idna/__init__.pyc
+${PYSITELIB}/requests/packages/idna/__init__.pyo
+${PYSITELIB}/requests/packages/idna/codec.py
+${PYSITELIB}/requests/packages/idna/codec.pyc
+${PYSITELIB}/requests/packages/idna/codec.pyo
+${PYSITELIB}/requests/packages/idna/compat.py
+${PYSITELIB}/requests/packages/idna/compat.pyc
+${PYSITELIB}/requests/packages/idna/compat.pyo
+${PYSITELIB}/requests/packages/idna/core.py
+${PYSITELIB}/requests/packages/idna/core.pyc
+${PYSITELIB}/requests/packages/idna/core.pyo
+${PYSITELIB}/requests/packages/idna/idnadata.py
+${PYSITELIB}/requests/packages/idna/idnadata.pyc
+${PYSITELIB}/requests/packages/idna/idnadata.pyo
+${PYSITELIB}/requests/packages/idna/intranges.py
+${PYSITELIB}/requests/packages/idna/intranges.pyc
+${PYSITELIB}/requests/packages/idna/intranges.pyo
+${PYSITELIB}/requests/packages/idna/uts46data.py
+${PYSITELIB}/requests/packages/idna/uts46data.pyc
+${PYSITELIB}/requests/packages/idna/uts46data.pyo
 ${PYSITELIB}/requests/packages/urllib3/__init__.py
 ${PYSITELIB}/requests/packages/urllib3/__init__.pyc
 ${PYSITELIB}/requests/packages/urllib3/__init__.pyo
@@ -192,6 +216,12 @@ ${PYSITELIB}/requests/packages/urllib3/filepost.pyo
 ${PYSITELIB}/requests/packages/urllib3/packages/__init__.py
 ${PYSITELIB}/requests/packages/urllib3/packages/__init__.pyc
 ${PYSITELIB}/requests/packages/urllib3/packages/__init__.pyo
+${PYSITELIB}/requests/packages/urllib3/packages/backports/__init__.py
+${PYSITELIB}/requests/packages/urllib3/packages/backports/__init__.pyc
+${PYSITELIB}/requests/packages/urllib3/packages/backports/__init__.pyo
+${PYSITELIB}/requests/packages/urllib3/packages/backports/makefile.py
+${PYSITELIB}/requests/packages/urllib3/packages/backports/makefile.pyc
+${PYSITELIB}/requests/packages/urllib3/packages/backports/makefile.pyo
 ${PYSITELIB}/requests/packages/urllib3/packages/ordered_dict.py
 ${PYSITELIB}/requests/packages/urllib3/packages/ordered_dict.pyc
 ${PYSITELIB}/requests/packages/urllib3/packages/ordered_dict.pyo
