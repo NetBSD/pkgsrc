@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/13 14:47:09 wiz Exp $
+$NetBSD: distinfo,v 1.8 2016/12/15 13:44:20 adam Exp $
 
-SHA1 (Markdown-2.6.4.tar.gz) = 79df1b522b67c98ef70efaeda3ce6d0e35850910
-RMD160 (Markdown-2.6.4.tar.gz) = 453c8c8c5e12bdf2e2ab20f39f983b4aaad16479
-SHA512 (Markdown-2.6.4.tar.gz) = 5fc4ada494880871833046ef9a115385542002e6ec104847353fb2638fce6e46f2bb54ff37bd7d43eb100a448dc424ac425937cadc9ec1d81ea9e70887d8e460
-Size (Markdown-2.6.4.tar.gz) = 301632 bytes
+SHA1 (Markdown-2.6.7.tar.gz) = 76257bca8a4d9cc504fb1fe040fd353a1248b743
+RMD160 (Markdown-2.6.7.tar.gz) = f0980e262c03724f951bb0ec082e9ebc7291a4d5
+SHA512 (Markdown-2.6.7.tar.gz) = bc579b07e31b029dd5288b8f80eab195ae2a371a8c778a78b07755323de19a90844610ddd29d6b29b6fd9f8f87f25cb35466c54bebce60447897ef234b9ad4bd
+Size (Markdown-2.6.7.tar.gz) = 303636 bytes
 SHA1 (patch-setup.py) = 963a54be8e6e31e71908ea7c595f03dba85eb1f4
