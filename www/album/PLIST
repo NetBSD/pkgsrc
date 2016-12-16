@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/08 01:49:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/12/16 15:24:20 hans Exp $
 bin/album
 man/man1/album.1
 share/doc/album/Pics/Caption.gif
@@ -165,7 +165,7 @@ share/doc/album/nl/langhtml
 share/doc/album/nl/langmenu
 share/doc/album/nl/txt_1
 share/doc/album/nl/txt_2
-share/doc/album/nl/txt_2.alt
+share/doc/album/nl/alt.txt_2
 share/doc/album/nl/txt_3
 share/doc/album/nl/txt_4
 share/doc/album/nl/txt_5
