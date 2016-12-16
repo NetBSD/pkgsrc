@@ -1,32 +1,15 @@
-$NetBSD: distinfo,v 1.20 2016/05/16 14:03:40 he Exp $
+$NetBSD: distinfo,v 1.21 2016/12/16 09:44:44 he Exp $
 
-SHA1 (jasper-1.900.1.zip) = 9c5735f773922e580bf98c7c7dfda9bbed4c5191
-RMD160 (jasper-1.900.1.zip) = fb2c188abf5b8c297078ac1f913101734f72db5c
-SHA512 (jasper-1.900.1.zip) = e3a3c803de848b50482f5bd693b1945197c6999285226c45b671855734d7bb2611fbe6f28cd8ba9c56a4ea59417795eba42d72516c9fec93b8fbaa21b8210cb6
-Size (jasper-1.900.1.zip) = 1415752 bytes
-SHA1 (patch-configure) = c8aa09f8432f0e3f5667ecb3ccd738c3c03f3f05
-SHA1 (patch-src_libjasper_base_jas__cm.c) = 51bcaa7d992616c4caf764d190d42c8c802324f8
-SHA1 (patch-src_libjasper_base_jas__icc.c) = 855e8b733a4a043d06cea60deaa497784e55838c
-SHA1 (patch-src_libjasper_base_jas__image.c) = d9119ab45d95f954604167374f5f97c1d94d508f
-SHA1 (patch-src_libjasper_base_jas__malloc.c) = 887509258c8a957932bb212b747aa5b8932e82af
-SHA1 (patch-src_libjasper_base_jas__seq.c) = bc1c38439eb61e3c50a5900e38e4a8992bc790fe
-SHA1 (patch-src_libjasper_base_jas__stream.c) = 1e6cbd1cf0a273f94144e1f12624b9a5d612dd84
-SHA1 (patch-src_libjasper_bmp_bmp__dec.c) = 162f760235fba871c48afc273276fad884250ed6
-SHA1 (patch-src_libjasper_include_jasper_jas__malloc.h) = 3d6e873f11074bc54bd6dc5665d3c80413ef89fe
-SHA1 (patch-src_libjasper_jp2_jp2__cod.c) = 656f23983f97e3b5eea49898e9f29d6b3eef5b19
-SHA1 (patch-src_libjasper_jp2_jp2__dec.c) = 9b8fbb8e947e403fed6c610a0d4a0c63640462e5
-SHA1 (patch-src_libjasper_jp2_jp2__enc.c) = f6a86101e04a2efdb0840b44a2b892de18683c59
-SHA1 (patch-src_libjasper_jpc_jpc__cs.c) = 603ee1ac6089bd190581fd0e00efabc18a41f48a
-SHA1 (patch-src_libjasper_jpc_jpc__dec.c) = 026235b7f59ecaa8ee148f0301dd96dc9a570e80
-SHA1 (patch-src_libjasper_jpc_jpc__enc.c) = 81cf4df888d1542cf52fadb202b82a05c8bdfd83
-SHA1 (patch-src_libjasper_jpc_jpc__mqdec.c) = bcf41d1da270478a731494a913bd626ba7d533f4
-SHA1 (patch-src_libjasper_jpc_jpc__mqenc.c) = b6c80212129f82268c43e5a3e39a7c7e1c12655a
-SHA1 (patch-src_libjasper_jpc_jpc__qmfb.c) = 6e7b5180047c6c8855aa22a3dd94d8deeb39b560
-SHA1 (patch-src_libjasper_jpc_jpc__t1enc.c) = 3aade36d3a171ad08f7be93c48bb51ab9fb9126f
-SHA1 (patch-src_libjasper_jpc_jpc__t2cod.c) = ce1a300066db7adfed03f55fc47d6392dd2d2221
-SHA1 (patch-src_libjasper_jpc_jpc__t2dec.c) = 06a2e58843b59bbf698a5aa15ba253fa51f18568
-SHA1 (patch-src_libjasper_jpc_jpc__t2enc.c) = 0a6119b4fc5a6305a8adb92357805af1fb55f1d9
-SHA1 (patch-src_libjasper_jpc_jpc__tagtree.c) = 9f0594c4aa576ef5d0cb85ec2c01c364efecf855
-SHA1 (patch-src_libjasper_jpc_jpc__util.c) = e7069e6106d7dd883aab18a1fa20c9dbfe1bebf1
-SHA1 (patch-src_libjasper_mif_mif__cod.c) = 7c34864c0c9f82eee89795673014feb5824fc7b5
-SHA1 (patch-src_libjasper_pnm_pnm__enc.c) = 3279f184f6191ea69d1b5ef8fb270ffcc6a69640
+SHA1 (jasper-1.900.29.tar.gz) = 6d50e5ea9e822ad5f88f4451819acab2e3b47f8e
+RMD160 (jasper-1.900.29.tar.gz) = 4ae47353f3dc086b3a11eff86ec7fb57d598c6fb
+SHA512 (jasper-1.900.29.tar.gz) = fdf557889660b9068e3712ff809fe7d4ab0855e1afff9a39eb19763599b4e747472743e4c49a42f7d38beadc6a0aa7a7b402422422853e8bb6d683def81b1544
+Size (jasper-1.900.29.tar.gz) = 1746319 bytes
+SHA1 (patch-configure) = 14039911be04b88559e40f20a01bb46fd0db4488
+SHA1 (patch-src_libjasper_base_jas__seq.c) = a0208cd0271388ae0fdc2e359da3223a35a7ae14
+SHA1 (patch-src_libjasper_base_jas__stream.c) = 2e9ad538ab2c0191063fef06202949b435b0085e
+SHA1 (patch-src_libjasper_jp2_jp2__cod.c) = bfbe752e105d75fbad71a01080013c7a5a8645d8
+SHA1 (patch-src_libjasper_jp2_jp2__dec.c) = 3cbf3a6355168aaa60a68ff8042f7cb4f6d847c4
+SHA1 (patch-src_libjasper_jp2_jp2__enc.c) = 4f23040e7039514bbbc60360121f1820e82017cc
+SHA1 (patch-src_libjasper_jpc_jpc__dec.c) = f76765ff7656af6b44cd4035b26656909abe45f9
+SHA1 (patch-src_libjasper_jpc_jpc__enc.c) = 10fbe41e67da4f2575fb541013833ed85992efea
+SHA1 (patch-src_libjasper_pnm_pnm__enc.c) = a2d5d53cd28f653f9e6e302f76c187fba50b1ce2
