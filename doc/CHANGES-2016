@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5033 2016/12/16 02:13:47 maya Exp $
+$NetBSD: CHANGES-2016,v 1.5034 2016/12/16 04:57:07 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -6938,6 +6938,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/apache24 to 2.4.23nb4 [taca 2016-12-11]
 	Added devel/adacurses version 20150808 [marino 2016-12-11]
 	Added misc/ini_file_manager version 03 [marino 2016-12-11]
+	Updated games/glaxium to 0.5nb11 [dholland 2016-12-12]
 	Updated devel/p5-Devel-StackTrace to 2.02 [wiz 2016-12-12]
 	Updated devel/p5-Exception-Class to 1.41 [wiz 2016-12-12]
 	Updated devel/p5-Params-ValidationCompiler to 0.21 [wiz 2016-12-12]
@@ -6980,12 +6981,14 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/openldap-server to 2.4.44nb4 [he 2016-12-13]
 	Updated net/restclient-ui to 3.6.1 [abs 2016-12-13]
 	Updated sysutils/py-diffoscope to 63 [khorben 2016-12-13]
+	Updated games/qonk to 0.3.1nb10 [dholland 2016-12-13]
 	Updated devel/jemalloc to 4.3.1 [maya 2016-12-13]
 	Updated net/syncthing to 0.14.14 [wiz 2016-12-14]
 	Updated misc/libreoffice to 5.2.3.3nb1 [ryoon 2016-12-14]
 	Updated mail/dovecot2 to 2.2.27 [adam 2016-12-14]
 	Updated x11/xf86-video-dummy to 0.3.8 [wiz 2016-12-14]
 	Updated editors/nano to 2.7.2 [wiedi 2016-12-14]
+	Updated www/seamonkey to 2.40nb7 [dholland 2016-12-15]
 	Updated devel/jemalloc to 4.4.0 [maya 2016-12-15]
 	Updated sysutils/agedu to 20160920.853cea9 [schmonz 2016-12-15]
 	Updated textproc/py-pygments to 2.1.3 [adam 2016-12-15]
@@ -7014,3 +7017,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libXpm to 3.5.12 [wiz 2016-12-15]
 	Added net/coursera-dl version 0.8.0 [joerg 2016-12-15]
 	Updated x11/xorg-cf-files to 1.0.6nb2 [maya 2016-12-16]
+	Updated devel/tradcpp to 0.5.2nb1 [dholland 2016-12-16]
