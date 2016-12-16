@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2016/12/16 08:11:55 manu Exp $
+
+SHA1 (libnfc-1.7.1.tar.bz2) = d77c1408f5e38f24d69778b2ff82f68b2d7bc111
+RMD160 (libnfc-1.7.1.tar.bz2) = e0d7a3ce57fd57281145d3c78042b9fbccf85009
+SHA512 (libnfc-1.7.1.tar.bz2) = 6a03d197c450c0ab8f2d16ae8c1f80e206fa909ece84a32dbb962acd0f7ef693a419608cdaa4c2207a1d2593599e44479520d7413eace7fca19d3230442e506c
+Size (libnfc-1.7.1.tar.bz2) = 484309 bytes
+SHA1 (patch-configure) = d0860d7617260826dc66895f0da202950bf12afc
+SHA1 (patch-libnfc_buses_uart.c) = 05b50592b0609c6c1c435466d840fee8cedf6fcb
+SHA1 (patch-libnfc_drivers_acr122_pcsc.c) = 448bbf340b0961ba7ffb0bd5f18c343bff7c4329
