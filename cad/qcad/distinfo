@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.23 2016/10/09 21:35:18 dholland Exp $
+$NetBSD: distinfo,v 1.24 2016/12/16 11:16:32 plunky Exp $
 
-SHA1 (qcad-3.15.5.3.zip) = 76d88b865cc446ccb4b8cf045b93a8873c571139
-RMD160 (qcad-3.15.5.3.zip) = 40ffbf8aa7232e476520d4acc5657b391f818d20
-SHA512 (qcad-3.15.5.3.zip) = 63ac774ab2721522ce304799ddc46e964c920858e583e3a6f1e526fb548c545db373b3d9b0a5a6ed68989af4f446362eaed6095c3f7ba19b2f5fb3a94a9f2a19
-Size (qcad-3.15.5.3.zip) = 37508749 bytes
-SHA1 (patch-qcad.1) = 64beab5b4d83e889352d80b64ab09aaa080421c2
+SHA1 (qcad-3.16.0.0.zip) = 2f143227c60f4b34d31d9c78657065fcb9ecde9f
+RMD160 (qcad-3.16.0.0.zip) = 7b3059daf6817cb2cb3d1c4c1f48c89b250e8455
+SHA512 (qcad-3.16.0.0.zip) = ed4b1a9275d16efe2af5164961ebec9840ad8c381fac49b4237ea655c04ece3878e6c31966174f0cc349b6296fee14913a64c1d81627d80c1e2519c9210516bb
+Size (qcad-3.16.0.0.zip) = 38101117 bytes
+SHA1 (patch-qcad.pro) = 94b35808a3e55af2623029864e96d5546f4d2716
 SHA1 (patch-scripts_Help_About_About.js) = 011bf46171a3363cca3cd84b5a3f2479414023ba
 SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 362ef9b608bb4c4960b7a79103f9d1b171e93ab6
 SHA1 (patch-scripts_Widgets_LibraryBrowser_LibraryBrowser.js) = 43842ba0e7c3cfadfe433be3f6b93f13867355eb
@@ -29,12 +29,9 @@ SHA1 (patch-src_grid_grid.pro) = 65f5f47cce612b31181a0ac3e153214d29f08767
 SHA1 (patch-src_gui_gui.pro) = 77142df264b5bca8170392f3ff797edc50fe4b95
 SHA1 (patch-src_io_dxf_dxf.pro) = 2d9318d88c44ed6024b286c48dc5f15b842cdfa3
 SHA1 (patch-src_operations_operations.pro) = b7c549e45dfa84141dbf8bedceac992b4b1ca7ca
-SHA1 (patch-src_run_run.pri) = 9ff1f467fabda5d3a4c892677f22960ee9d32ab1
+SHA1 (patch-src_run_run.pri) = 856f798e7dcefbe53a46b5a6b524b10bf0782d6c
 SHA1 (patch-src_scripting_ecmaapi_ecmaapi.pro) = 028cd35f1676bbee6edde4e4d644d8ae1f6a7d88
 SHA1 (patch-src_snap_snap.pro) = fc538a3fcd7f4782016d8221d8758cb8de1594dd
 SHA1 (patch-src_spatialindex_spatialindex.pro) = f7c528feef7f5e1c6171c6b538fa5cf0b8db6dec
 SHA1 (patch-src_stemmer_stemmer.pro) = 2ddb04d1986804a865539a70af5e1539f55ba4ec
 SHA1 (patch-src_zip_zip.pro) = b0af794c8b2803a9d465863c32ad29c1ca962866
-SHA1 (patch-support_examples_exampleplugin_exampleplugin.pro) = 5094e59ab5b8499dc0acbeb5e6ee75d8660c124a
-SHA1 (patch-support_examples_examples.pro) = 85f712c216d7f50c253f81d8962ee6601d055f68
-SHA1 (patch-support_examples_transactionlistener_transactionlistener.pro) = 4c0649e14c2447f19ebab649905f9f161bd15b97
