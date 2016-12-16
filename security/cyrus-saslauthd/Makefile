@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2016/10/17 13:45:45 hans Exp $
+# $NetBSD: Makefile,v 1.51 2016/12/16 15:42:20 hans Exp $
 
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
-PKGREVISION=	5
+PKGREVISION=	6
 CONFLICTS+=	cyrus-sasl<2.1.15nb2
 
 .include "../../security/cyrus-sasl/Makefile.common"
@@ -23,6 +23,8 @@ BUILD_DIRS=		saslauthd
 .include "options.mk"
 
 RCD_SCRIPTS=		saslauthd
+SMF_METHODS=		saslauthd
+SMF_NAME=		saslauthd
 FILES_SUBST+=		ROOT_USER=${REAL_ROOT_USER:Q}
 
 INSTALLATION_DIRS=	bin
