@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5032 2016/12/15 23:43:55 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.5033 2016/12/16 02:13:47 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7013,3 +7013,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Glib-Object-Introspection to 0.041 [mef 2016-12-15]
 	Updated x11/libXpm to 3.5.12 [wiz 2016-12-15]
 	Added net/coursera-dl version 0.8.0 [joerg 2016-12-15]
+	Updated x11/xorg-cf-files to 1.0.6nb2 [maya 2016-12-16]
