@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5035 2016/12/16 08:15:50 manu Exp $
+$NetBSD: CHANGES-2016,v 1.5036 2016/12/16 09:40:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7019,4 +7019,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xorg-cf-files to 1.0.6nb2 [maya 2016-12-16]
 	Updated devel/tradcpp to 0.5.2nb1 [dholland 2016-12-16]
 	Added devel/libnfc version 1.7.1 [manu 2016-12-16]
-	Added devel/lifreefare vrsion 0.4.0 [manu 2016-12-16]
+	Added devel/libfreefare version 0.4.0 [manu 2016-12-16]
