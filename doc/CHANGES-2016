@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5036 2016/12/16 09:40:52 leot Exp $
+$NetBSD: CHANGES-2016,v 1.5037 2016/12/16 09:45:27 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7020,3 +7020,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/tradcpp to 0.5.2nb1 [dholland 2016-12-16]
 	Added devel/libnfc version 1.7.1 [manu 2016-12-16]
 	Added devel/libfreefare version 0.4.0 [manu 2016-12-16]
+	Updated graphics/jasper to 1.900.29 [he 2016-12-16]
