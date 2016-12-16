@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/07/26 12:17:47 mef Exp $
+# $NetBSD: Makefile,v 1.7 2016/12/16 14:01:07 mef Exp $
 
-DISTNAME=	lziprecover-1.17
+DISTNAME=	lziprecover-1.18
 CATEGORIES=	archivers
 MASTER_SITES=	http://download.savannah.gnu.org/releases/lzip/lziprecover/
 
