@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/12/15 11:04:10 adam Exp $
+# $NetBSD: Makefile,v 1.35 2016/12/16 20:05:58 adam Exp $
 
 DISTNAME=	Sphinx-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -31,6 +31,9 @@ REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 USE_TOOLS+=	makeinfo
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} run.py
+
+post-extract:
+	${RM} ${WRKSRC}/sphinx/locale/__init__.pyc
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX}
