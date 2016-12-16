@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5041 2016/12/16 11:17:19 plunky Exp $
+$NetBSD: CHANGES-2016,v 1.5042 2016/12/16 11:50:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7024,3 +7024,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/librecad to 2.1.3 [plunky 2016-12-16]
 	Updated cad/openscad to 2015.03p3 [plunky 2016-12-16]
 	Updated cad/qcad to 3.16.0.0 [plunky 2016-12-16]
+	Updated www/libsass to 3.4.0 [adam 2016-12-16]
+	Updated www/sassc to 3.4.0 [adam 2016-12-16]
