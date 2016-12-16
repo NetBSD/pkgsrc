@@ -1,4 +1,4 @@
-/* $NetBSD: plist_getline.c,v 1.1 2016/10/01 18:37:15 kamil Exp $ */
+/* $NetBSD: plist_getline.c,v 1.2 2016/12/16 00:01:04 joerg Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: plist_getline.c,v 1.1 2016/10/01 18:37:15 kamil Exp $");
+__RCSID("$NetBSD: plist_getline.c,v 1.2 2016/12/16 00:01:04 joerg Exp $");
 
 #include <assert.h>
 #include <err.h>
@@ -53,7 +53,7 @@ repeat:
 	if ((buf = fgetln(stream, &len)) != NULL) {
 		++lineno;
 		if (len == 0) {
-			warnx("Empty line at %d -- skipped", lineno);
+			warnx("Empty line at %zu -- skipped", lineno);
 			goto repeat;
 		}
 		/* Handle proper line with the \n ending */
