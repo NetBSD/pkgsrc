@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2016/10/07 18:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.36 2016/12/16 11:11:15 plunky Exp $
 #
 
-DISTNAME=	LibreCAD-2.1.1
+DISTNAME=	LibreCAD-2.1.3
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LibreCAD/}
 
