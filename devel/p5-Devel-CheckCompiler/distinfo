@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:28:09 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/12/16 12:57:28 mef Exp $
 
-SHA1 (Devel-CheckCompiler-0.06.tar.gz) = a9a8d2e20ab15bcd3e5645db5c98530c8c93f54a
-RMD160 (Devel-CheckCompiler-0.06.tar.gz) = f1cd52a8e21a91024eb06160f9b1ccb673139e50
-SHA512 (Devel-CheckCompiler-0.06.tar.gz) = f484240dd52194aa71f98001bef47d03048cc5336e10ffc6a84db750fec3fb7f5e8aaf86f9fd1bc84928a8f76cccf07ec6a105e2053a2858c4aaa3c87f655735
-Size (Devel-CheckCompiler-0.06.tar.gz) = 11694 bytes
+SHA1 (Devel-CheckCompiler-0.07.tar.gz) = eb90cfe52ff6b026f99fdbcc41403440e5f7619d
+RMD160 (Devel-CheckCompiler-0.07.tar.gz) = b295c4edb257a70b4fe43ae97bb2bd49c13d3f5a
+SHA512 (Devel-CheckCompiler-0.07.tar.gz) = 147fbdab382ff40bf1402d2d6be1143fe77403cd2444e854fdf11eb02e8acdcab8cb6bbdd7f3aef01cc64fac2862efaa044c5148c7770b84b464f7360c399d7a
+Size (Devel-CheckCompiler-0.07.tar.gz) = 11261 bytes
