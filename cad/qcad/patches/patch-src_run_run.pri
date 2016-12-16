@@ -1,4 +1,4 @@
-$NetBSD: patch-src_run_run.pri,v 1.1 2016/08/30 10:56:04 plunky Exp $
+$NetBSD: patch-src_run_run.pri,v 1.2 2016/12/16 11:16:32 plunky Exp $
 
 fix build for pkgsrc, by allowing qmake to link binaries in situ
 and create an install target
@@ -25,4 +25,4 @@ only link to the Qt plugins, no need to copy them over
 +                system(ln -sf "$$[QT_INSTALL_PLUGINS]/$${FILE}" "../../plugins/$${FILE}")
              }
          }
-     }
+ 
