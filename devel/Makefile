@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2344 2016/12/15 20:25:31 abs Exp $
+# $NetBSD: Makefile,v 1.2345 2016/12/16 08:15:50 manu Exp $
 #
 
 COMMENT=	Development utilities
@@ -510,6 +510,7 @@ SUBDIR+=	libextractor
 SUBDIR+=	libf2c
 SUBDIR+=	libffi
 SUBDIR+=	libfirm
+SUBDIR+=	libfreefare
 SUBDIR+=	libftdi
 SUBDIR+=	libftdi1
 SUBDIR+=	libgail-gnome
@@ -555,6 +556,7 @@ SUBDIR+=	libmowgli
 SUBDIR+=	libmtp
 SUBDIR+=	libnet10
 SUBDIR+=	libnet11
+SUBDIR+=	libnfc
 SUBDIR+=	libnjb
 SUBDIR+=	libntlm
 SUBDIR+=	liboil
