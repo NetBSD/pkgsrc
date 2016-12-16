@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5044 2016/12/16 14:07:05 mef Exp $
+$NetBSD: CHANGES-2016,v 1.5045 2016/12/16 15:25:17 hans Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7034,3 +7034,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/zstd to 1.1.2 [mef 2016-12-16]
 	Updated archivers/lziprecover to 1.18 [mef 2016-12-16]
 	Updated archivers/lzip to 1.18 [mef 2016-12-16]
+	Updated www/album to 4.15 [hans 2016-12-16]
