@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+
+This file and its contents are supplied under the terms of the
+Common Development and Distribution License ("CDDL"), version 1.0.
+You may only use this file in accordance with the terms of version
+1.0 of the CDDL.
+A full copy of the text of the CDDL should have accompanied this
+source.  A copy of the CDDL is also available via the Internet at
+http://www.illumos.org/license/CDDL.
+
+-->
+<!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
+<!--
+  Copyright 2016 Hans Rosenfeld <rosenfeld@grumpf.hope-2000.org>
+-->
+<service_bundle type='manifest' name='@SMF_NAME@'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
+    <dependency name='filesystem_minimal' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local' />
+    </dependency>
+    <dependency name='loopback' grouping='require_any' restart_on='error' type='service'>
+      <service_fmri value='svc:/network/loopback' />
+    </dependency>
+    <dependency name='network' grouping='optional_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/milestone/network' />
+    </dependency>
+    <instance name='default' enabled='false'>
+      <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.saslauthd@ %m %i' timeout_seconds='60' />
+      <exec_method type='method' name='stop' exec=':kill' timeout_seconds='60' />
+      <!-- Default property settings for saslauthd(8) instance. -->
+      <property_group name='options' type='application'>
+        <!--	authmech: authentication mechanism -->
+        <propval name='authmech' type='astring' value='pam' />
+        <!--	mechopts: authentication mechanism specific options -->
+        <propval name='mechopts' type='astring' value='' />
+        <!--	nthreads: number of threads to use -->
+        <propval name='nthreads' type='integer' value='' />
+        <!--	caching: enable caching of authentication data -->
+        <propval name='caching' type='boolean' value='true' />
+        <!--	sockpath: path to socket for connection requests -->
+        <propval name='sockpath' type='astring' value='@SASLSOCKETDIR@' />
+      </property_group>
+    </instance>
+    <stability value='Unstable' />
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>cyrus-saslauthd</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='saslauthd' section='8' manpath='@PREFIX@/@PKGMANDIR@' />
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
