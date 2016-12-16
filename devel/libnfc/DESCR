@@ -1,0 +1,7 @@
+libnfc is the first libre low level NFC SDK and Programmers API
+released under the GNU Lesser General Public License. It provides
+complete transparency and royalty-free use for everyone.
+
+The library currently supports modulations for ISO/IEC 14443 A and
+B, FeliCa, Jewel/Topaz tags and Data Exchange Protocol (P2P) as
+target and as initiator.
