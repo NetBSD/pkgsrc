@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:56:23 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/12/16 14:01:07 mef Exp $
 
-SHA1 (lziprecover-1.17.tar.gz) = 004ba46a0bc33e133326dc225a4f6ffdcdc18981
-RMD160 (lziprecover-1.17.tar.gz) = 37389b61739f68cb9a1c5a2abe3da5f2ea4da30c
-SHA512 (lziprecover-1.17.tar.gz) = 409a3634ef15238f8c87e6e69ecf0cf83c48274cff6c54a901a4f80bdc3d475b6bf03215cfee762ac64ca41b3e8a805ab620ceaaa1bec7fc22ffafad049b5f0f
-Size (lziprecover-1.17.tar.gz) = 75941 bytes
+SHA1 (lziprecover-1.18.tar.gz) = 7d6582bce447474b2341ab8b77de9368a12a19a0
+RMD160 (lziprecover-1.18.tar.gz) = bededcded7c1c1b2bc332194fb9988b9019e6f03
+SHA512 (lziprecover-1.18.tar.gz) = 60febb52b5dde8e1fa1e4917c48bb09112bcd3a43c5486a234fdcfa3db1d5049977df306ce66ec0821e812676886f5fa214a3479649cb977151b5cf82018b6b6
+Size (lziprecover-1.18.tar.gz) = 86584 bytes
