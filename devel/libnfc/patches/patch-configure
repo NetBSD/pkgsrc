@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2016/12/16 08:11:55 manu Exp $
+
+POSIXly correct test(1) for equality.
+
+--- configure.orig	2016-12-14 11:06:15.000000000 +0100
++++ configure	2016-12-14 11:07:56.000000000 +0100
+@@ -13966,9 +13966,9 @@
+ 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for readline.h" >&5
+ $as_echo_n "checking for readline.h... " >&6; }
+ 
+-  if test "x$cross_compiling" == "xyes"; then
++  if test "x$cross_compiling" = "xyes"; then
+       without_readline=yes
+   fi
+ 
+   if test "x$without_readline" != "xyes"; then
