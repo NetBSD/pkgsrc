@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.127 2016/11/10 20:25:50 roy Exp $
+# $NetBSD: Makefile,v 1.128 2016/12/16 15:52:52 hans Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.4.1
 PKGNAME=	spamassassin-3.4.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -17,6 +17,8 @@ COMMENT=	Mail filter to identify spam
 LICENSE=	apache-2.0
 
 .include "../../mk/bsd.prefs.mk"
+
+SMF_METHODS=	spamassassin
 
 RULESARCHIVE=	Mail-SpamAssassin-rules-3.4.1.r1675274.tgz
 #RULESARCHIVEASC=${RULESARCHIVE}.asc
