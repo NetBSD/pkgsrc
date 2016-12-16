@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5038 2016/12/16 11:11:54 plunky Exp $
+$NetBSD: CHANGES-2016,v 1.5039 2016/12/16 11:12:45 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7021,5 +7021,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libnfc version 1.7.1 [manu 2016-12-16]
 	Added devel/libfreefare version 0.4.0 [manu 2016-12-16]
 	Updated graphics/jasper to 1.900.29 [he 2016-12-16]
-	Updated cad/librecad to 2.1.3 [plunky 2016-12-16]
 	Updated cad/librecad to 2.1.3 [plunky 2016-12-16]
