@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2016/11/21 00:16:29 wiz Exp $
+$NetBSD: distinfo,v 1.18 2016/12/16 00:04:03 joerg Exp $
 
 SHA1 (open-vm-tools-10.0.7-3227872.tar.gz) = cd22a3d79d68de46647e8add78bcaf829bb0598d
 RMD160 (open-vm-tools-10.0.7-3227872.tar.gz) = df8cfa62ffd0fbba0432cb0deac0f202b2278625
@@ -46,6 +46,8 @@ SHA1 (patch-lib_nicInfo_nicInfoPosix.c) = 0f44134e1e256a46b5ce35fff91d0568649c1b
 SHA1 (patch-lib_user_utilBacktrace.c) = 741cc72d64f962fa0aa48e90b1f912f422c5dd8b
 SHA1 (patch-scripts_Makefile.am) = 5238c5cabf1125f9cd334349e5f67f1b7a568428
 SHA1 (patch-scripts_netbsd_network) = cf4c47e337b0d1f8bba3d4e87678924f85dd635e
+SHA1 (patch-services_plugins_dndcp_copyPasteUIX11.cpp) = 2027b2eb49a1c83ed7bedd1e195f9f3b4a323cbc
+SHA1 (patch-services_plugins_dndcp_dndUIX11.cpp) = 43107436e7bed9aa32786af42ba5fd0abd7c3337
 SHA1 (patch-services_plugins_dndcp_dnd_dndLinux.c) = 61acce40961ac82b48e055c159efd0c3b7a8899c
 SHA1 (patch-services_plugins_timeSync_Makefile.am) = 45a9c9044f1e4274c173d822a74dfc63bde0f5e9
 SHA1 (patch-services_vmtoolsd_Makefile.am) = 8a34599f5bd9722333de1ecf741a27a0636104c5
