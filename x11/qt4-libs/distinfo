@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.110 2016/08/30 07:58:27 richard Exp $
+$NetBSD: distinfo,v 1.111 2016/12/16 00:06:46 joerg Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.7.tar.gz) = 76aef40335c0701e5be7bb3a9101df5d22fe3666
 RMD160 (qt-everywhere-opensource-src-4.8.7.tar.gz) = afb5e5a99388e6429faca59cb5000054feffd166
@@ -63,6 +63,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_StringImpl.h) = d5460b
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_ThreadSafeRefCounted.h) = 2d3176beb56697d033387ab10729cfb6681d01c7
 SHA1 (patch-src_3rdparty_webkit_Source_JavaScriptCore_wtf_Threading.h) = fa7519ef6ac04cd13be085783f663c329e4a14be
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_dom_Element.cpp) = 90fd6a884f9fd058210c3011bea2ce695011d2e3
+SHA1 (patch-src_3rdparty_webkit_Source_WebCore_html_HTMLImageElement.cpp) = e53e7928cd68e74e6476f527b44e77979a74442d
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_DefaultLocalizationStrategy.cpp) = 0377066bd28d5eae02e8fcf200da4360c286ad84
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_MediaPlayer.cpp) = f9a1f71b4607c5f542c059873cf5735fad9ff3a1
 SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_graphics_filters_arm_FEGaussianBlurNEON.cpp) = 51b6bddf81978fd7ae6580132a74aeaec84b724f
@@ -77,3 +78,4 @@ SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
 SHA1 (patch-src_plugins_accessible_widgets_itemviews.cpp) = 1456fbaacef33f3b2422158d758d02990845048a
 SHA1 (patch-src_tools_bootstrap_bootstrap.pro) = ba6f4facabb621388f38ee95f31e8d6f797ae12a
+SHA1 (patch-tools_linguist_linguist_messagemodel.cpp) = abde18cad489f6ce298ab26ab1053e541c99c5e6
