@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/12/15 10:48:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/12/16 13:59:13 joerg Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -223,7 +223,6 @@ ${PYSITELIB}/sphinx/jinja2glue.pyo
 ${PYSITELIB}/sphinx/locale/.DS_Store
 ${PYSITELIB}/sphinx/locale/.tx/config
 ${PYSITELIB}/sphinx/locale/__init__.py
-${PYSITELIB}/sphinx/locale/__init__.pyc
 ${PYSITELIB}/sphinx/locale/__init__.pyc
 ${PYSITELIB}/sphinx/locale/__init__.pyo
 ${PYSITELIB}/sphinx/locale/bn/LC_MESSAGES/sphinx.js
