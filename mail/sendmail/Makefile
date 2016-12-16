@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2016/03/05 11:28:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.129 2016/12/16 16:07:29 hans Exp $
 
 PKGNAME=	sendmail-${DIST_VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -18,6 +18,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 SMRSH_CMDDIR?=	${PREFIX}/libexec/sm.bin
 PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR}
 RCD_SCRIPTS=	sendmail smmsp
+SMF_METHODS=	sendmail sendmail_include smmsp
 
 BUILD_DEFS+=	VARBASE
 
