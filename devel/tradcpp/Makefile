@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2016/09/04 21:21:35 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/16 04:56:04 dholland Exp $
 #
 
 DISTNAME=	tradcpp-0.5.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/dholland/
 
