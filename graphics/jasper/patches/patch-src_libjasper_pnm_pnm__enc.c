@@ -1,7 +1,6 @@
-$NetBSD: patch-src_libjasper_pnm_pnm__enc.c,v 1.1 2016/05/16 14:03:40 he Exp $
+$NetBSD: patch-src_libjasper_pnm_pnm__enc.c,v 1.2 2016/12/16 09:44:44 he Exp $
 
-Fix CVE-2008-3520, patches from
-https://bugs.gentoo.org/show_bug.cgi?id=222819
+Replace one sprintf() with snprintf().
 
 --- src/libjasper/pnm/pnm_enc.c.orig	2007-01-19 21:43:05.000000000 +0000
 +++ src/libjasper/pnm/pnm_enc.c
