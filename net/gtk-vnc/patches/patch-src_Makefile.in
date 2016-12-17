@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2016/12/17 14:22:04 joerg Exp $
+
+--- src/Makefile.in.orig	2016-12-16 14:12:12.173272215 +0000
++++ src/Makefile.in
+@@ -1691,9 +1691,9 @@ vncmarshal.c: vncmarshal.txt
+ vncmarshal.h: vncmarshal.txt
+ 	$(AM_V_GEN)glib-genmarshal --header $< > $@ || (rm -f $@ && exit 1)
+ 
+-vncdisplay.c:: vncmarshal.h vncdisplayenums.h
++vncdisplay.c: vncmarshal.h vncdisplayenums.h
+ 
+-vncconnection.c:: vncmarshal.h vncconnectionenums.h
++vncconnection.c: vncmarshal.h vncconnectionenums.h
+ 
+ @WITH_PYTHON_TRUE@vnc.defs: vncdisplay.h vncdisplayenums.h
+ @WITH_PYTHON_TRUE@	$(AM_V_GEN)$(PYTHON) $(CODEGENDIR)/h2def.py $< > $@
