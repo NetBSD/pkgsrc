@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2016/06/05 09:16:33 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/12/17 03:19:18 mef Exp $
 bin/eagle
+eagle/bin/autodesk-make.png
 eagle/bin/designlink.png
 eagle/bin/eagle
 eagle/bin/eagle-logo.png
@@ -12,6 +13,7 @@ eagle/bin/eagle_ru.qm
 eagle/bin/eagle_zh.qm
 eagle/bin/eagleicon16.png
 eagle/bin/eagleicon50.png
+eagle/bin/ecadio-logo.png
 eagle/bin/freeware.key
 eagle/bin/icons/Add.svg
 eagle/bin/icons/Annotation.svg
@@ -219,9 +221,6 @@ eagle/bin/icons/ZoomRedraw.svg
 eagle/bin/icons/ZoomSelect.svg
 eagle/bin/idf-3d.png
 eagle/bin/pcb-service.png
-eagle/bin/permanent-de.png
-eagle/bin/permanent-euen.png
-eagle/bin/permanent-row.png
 eagle/bin/platforms-lin.png
 eagle/bin/platforms-mac.png
 eagle/bin/platforms-win.png
@@ -230,8 +229,6 @@ eagle/bin/qt_hu.qm
 eagle/bin/qt_ru.qm
 eagle/bin/qt_zh_CN.qm
 eagle/bin/qt_zh_TW.qm
-eagle/bin/splash-de.png
-eagle/bin/splash-en.png
 eagle/cam/DESCRIPTION
 eagle/cam/excellon.cam
 eagle/cam/gerb274x-4layer.cam
@@ -251,8 +248,6 @@ eagle/doc/elektro-tutorial.pdf
 eagle/doc/layer-setup_designrules.pdf
 eagle/doc/library_de.txt
 eagle/doc/library_en.txt
-eagle/doc/license_de.txt
-eagle/doc/license_en.txt
 eagle/doc/manual_de.pdf
 eagle/doc/manual_en.pdf
 eagle/doc/manual_zh.pdf
@@ -907,6 +902,7 @@ eagle/ulp/e-makelist.ulp
 eagle/ulp/e-packages-aus-devices-pin-ist-padname.ulp
 eagle/ulp/eagle.bmp
 eagle/ulp/eagleidfexporter.ulp
+eagle/ulp/ecadio.ulp
 eagle/ulp/edit-used-dev-pac-sym.ulp
 eagle/ulp/editnext-dev-sym-pac.ulp
 eagle/ulp/editnext-lbr.ulp
@@ -977,6 +973,7 @@ eagle/ulp/make_symbol_dual2.bmp
 eagle/ulp/make_symbol_quad.bmp
 eagle/ulp/make_symbol_single.bmp
 eagle/ulp/make_symbol_stripe.bmp
+eagle/ulp/manufacturing.ulp
 eagle/ulp/maskdata.ulp
 eagle/ulp/microstrip-radial-stub.bmp
 eagle/ulp/microstrip-radial-stub.ulp
