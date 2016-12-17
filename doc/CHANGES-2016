@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5055 2016/12/17 13:35:43 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.5056 2016/12/17 14:14:29 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7045,3 +7045,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-flakes to 1.3.0 [adam 2016-12-17]
 	Updated net/syncthing to 0.14.15 [wiz 2016-12-17]
 	Updated pkgtools/pkglint to 5.4.14 [rillig 2016-12-17]
+	Updated devel/gmake to 4.1nb3 [joerg 2016-12-17]
