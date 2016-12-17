@@ -33,7 +33,7 @@ func LoadExistingLines(fname string, foldBackslashLines bool) []*Line {
 func getLogicalLine(fname string, rawLines []*RawLine, pindex *int) *Line {
 	{ // Handle the common case efficiently
 		index := *pindex
-		rawLine := rawLines[*pindex]
+		rawLine := rawLines[index]
 		textnl := rawLine.textnl
 		if hasSuffix(textnl, "\n") && !hasSuffix(textnl, "\\\n") {
 			*pindex = index + 1
