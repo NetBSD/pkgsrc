@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.43 2016/11/14 20:15:33 ryoon Exp $
+$NetBSD: distinfo,v 1.44 2016/12/17 23:28:34 joerg Exp $
 
 SHA1 (cfe-3.9.0.src.tar.xz) = 00d49ee82451130a8e1e7b1d56cffa37b783bcb2
 RMD160 (cfe-3.9.0.src.tar.xz) = a33d18142ce0fd69db59a96b75ffcfd20cef2f2c
 SHA512 (cfe-3.9.0.src.tar.xz) = f405b5819fd19276b2de4da80a51171a3b1c5c00df810e1f284184c693e410775fe2933576f942b881664dd3b75e78f0f15b7e5a3eca7819ffbcfe528d9a578e
 Size (cfe-3.9.0.src.tar.xz) = 10390440 bytes
+SHA1 (patch-docs_JSONCompilationDatabase.rst) = 97251a0f4dcd7b772f56dbc52d8b620ec33d1f75
+SHA1 (patch-include_clang_Driver_Options.td) = e67b312508539abb6ab8492aed0bf0ce6284c5b5
+SHA1 (patch-lib_Driver_Tools.cpp) = c58e13a270a6c2ebd6746d121fa186afda8fd23c
+SHA1 (patch-lib_Tooling_JSONCompilationDatabase.cpp) = 9f815011aa84198cf134d79d56091dff8488a24e
 SHA1 (patch-tools_clang-format_CMakeLists.txt) = 4efc9c9f69caf7df1dd0db384eae644c606c5ca9
