@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5046 2016/12/17 01:16:30 mef Exp $
+$NetBSD: CHANGES-2016,v 1.5047 2016/12/17 02:56:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7036,3 +7036,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/lzip to 1.18 [mef 2016-12-16]
 	Updated www/album to 4.15 [hans 2016-12-16]
 	Updated archivers/p5-Archive-Tar to 2.24 [mef 2016-12-17]
+	Updated www/p5-HTML-Lint to 2.24 [wen 2016-12-17]
