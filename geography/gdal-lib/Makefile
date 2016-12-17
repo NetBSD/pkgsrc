@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2016/12/04 05:17:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2016/12/17 23:24:31 joerg Exp $
 
 DISTNAME=	gdal-1.11.3
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -38,6 +38,9 @@ MAKE_FILE=		GNUmakefile
 CHECK_PORTABILITY_SKIP+=	mkbindist.sh
 
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/gdal
+
+# jasper uses SIZE_MAX and friends in its headers.
+CPPFLAGS+=	-D__STDC_LIMIT_MACROS
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
