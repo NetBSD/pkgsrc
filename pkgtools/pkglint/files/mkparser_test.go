@@ -110,7 +110,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 
 	checkRest("${VAR)", nil, "${VAR)") // Opening brace, closing parenthesis
 	checkRest("$(VAR}", nil, "$(VAR}") // Opening parenthesis, closing brace
-	c.Check(s.Output(), equals, "WARN: Please use curly braces {} instead of round parentheses () for VAR.\n")
+	c.Check(s.Output(), equals, "")    // Warnings are only printed for balanced expressions.
 
 	check("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}@}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}@"))
 	check("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}")) // Missing @ at the end
@@ -208,4 +208,25 @@ func (s *Suite) Test_MkParser_MkCond(c *check.C) {
 	checkRest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
 		NewTree("not", NewTree("empty", varuse("PKG_OPTIONS", "Msndfile"))),
 		" || defined(PKG_OPTIONS:Msamplerate)")
+}
+
+func (s *Suite) Test_MkParser__varuse_parentheses_autofix(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("--autofix")
+	G.globalData.InitVartypes()
+	filename := s.CreateTmpFile("Makefile", "")
+	mklines := s.NewMkLines(filename,
+		mkrcsid,
+		"COMMENT=$(P1) $(P2)) $(P3:Q) ${BRACES}")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, ""+
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P1)\" with \"${P1}\".\n"+
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P2)\" with \"${P2}\".\n"+
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P3:Q)\" with \"${P3:Q}\".\n"+
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
+	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
+		mkrcsid+"\n"+
+		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES}\n")
 }
