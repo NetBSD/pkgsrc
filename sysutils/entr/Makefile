@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/11/16 12:16:49 leot Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/17 12:32:15 leot Exp $
 #
 
 DISTNAME=	entr-3.6
@@ -11,6 +11,8 @@ COMMENT=	Run arbitrary commands when files change
 LICENSE=	isc AND 2-clause-bsd
 
 WRKSRC=		${WRKDIR}/eradman-entr-c15b0be493fc
+
+MAKE_ENV+=	MANPREFIX="${PREFIX}/${PKGMANDIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
