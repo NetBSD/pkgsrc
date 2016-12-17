@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5057 2016/12/17 23:03:11 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.5058 2016/12/17 23:22:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7047,3 +7047,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.4.14 [rillig 2016-12-17]
 	Updated devel/gmake to 4.1nb3 [joerg 2016-12-17]
 	Updated graphics/jasper to 1.900.29nb1 [dholland 2016-12-17]
+	Updated games/ccgo to 0.3.6.5 [joerg 2016-12-17]
