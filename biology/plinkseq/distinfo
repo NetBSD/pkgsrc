@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 18:42:22 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/12/17 12:55:29 rillig Exp $
 
 SHA1 (plinkseq-0.08.tar.gz) = 8bff6b32750eee85559dda2c7c3cf9aea423a3d7
 RMD160 (plinkseq-0.08.tar.gz) = bce0966ea5f25d8c1091157561aaf533a98595ec
 SHA512 (plinkseq-0.08.tar.gz) = c82db774df26988f9af377d5493cf579bbf1a219b43987f74381f795ade2340dd486c8d7d629612fd6068a023ea605540f2c972bf7fb71d665730262ef94cb80
 Size (plinkseq-0.08.tar.gz) = 2991871 bytes
 SHA1 (patch-browser_main.c) = 2bbeed764180b0a0e30f134b40c650cfa20bdcec
-SHA1 (patch-browser_mongoose.c) = 02233e0dd1f4c7923ffabf1a16b30c374253d87e
+SHA1 (patch-browser_mongoose.c) = 02716eb71171edd37ae483d98a045c261e65defe
 SHA1 (patch-lib_annot.cpp) = b405bca26186ea08241ad5936c2a1b43212d8dec
 SHA1 (patch-lib_annot.h) = 5efccddf878b4628ae7186d59a726a157d356196
 SHA1 (patch-lib_token.cpp) = 848e7b790db6a4784697482ea330b4d474731368
