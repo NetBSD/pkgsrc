@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2016/10/02 10:12:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.80 2016/12/17 13:06:18 rillig Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--enable-threads
 .if !empty(MACHINE_PLATFORM:MNetBSD-[56].*)
 
 # a machine without native ethread implementation?
-.if	empty(MACHINE_PLATFORM:M*i386)	&&\
+.  if	empty(MACHINE_PLATFORM:M*i386)	&&\
 	empty(MACHINE_PLATFORM:M*sparc)	&&\
 	empty(MACHINE_PLATFORM:M*sparc64) &&\
 	empty(MACHINE_PLATFORM:M*powerpc) &&\
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--disable-native-ethr-impls\
 			--disable-smp-require-native-atomics
 
-.endif
+.  endif
 .endif
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
