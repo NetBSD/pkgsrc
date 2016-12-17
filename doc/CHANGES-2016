@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5056 2016/12/17 14:14:29 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.5057 2016/12/17 23:03:11 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7046,3 +7046,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.14.15 [wiz 2016-12-17]
 	Updated pkgtools/pkglint to 5.4.14 [rillig 2016-12-17]
 	Updated devel/gmake to 4.1nb3 [joerg 2016-12-17]
+	Updated graphics/jasper to 1.900.29nb1 [dholland 2016-12-17]
