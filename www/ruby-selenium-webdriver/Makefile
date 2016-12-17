@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/13 17:59:44 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/12/17 20:45:42 gson Exp $
 
 DISTNAME=	selenium-webdriver-2.45.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -23,8 +23,8 @@ OVERRIDE_GEMSPEC+= \
 #
 # XXX: Remove this unportable garbage. Breaks on non-Linux targets.
 pre-configure:
-	${RM} ${WRKSRC}/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.${RUBY_DLEXT}
-	${RM} ${WRKSRC}/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.${RUBY_DLEXT}
+	${RM} ${WRKSRC}/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.so
+	${RM} ${WRKSRC}/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.so
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
