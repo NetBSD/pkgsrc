@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/10/20 17:58:05 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2016/12/17 13:43:13 rillig Exp $
 
 DISTNAME=	tbb30_20110325oss_src
 PKGNAME=	threadingbuildingblocks-3.0.6 # for "3.0 update 6"
@@ -10,7 +10,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.threadingbuildingblocks.org/
 COMMENT=	Threading Buildling Blocks
 
-WRKSRC=		$(WRKDIR)/$(DISTNAME:_src=) #tbb30_20101215oss
+WRKSRC=		${WRKDIR}/${DISTNAME:_src=} #tbb30_20101215oss
 
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pax
@@ -19,16 +19,16 @@ BUILD_TARGET=	default
 TEST_TARGET=	test
 
 pre-configure:
-	cd $(WRKSRC)/build/ && cp FreeBSD.gcc.inc NetBSD.gcc.inc && cp FreeBSD.inc NetBSD.inc
+	cd ${WRKSRC}/build/ && cp FreeBSD.gcc.inc NetBSD.gcc.inc && cp FreeBSD.inc NetBSD.inc
 
-INSTALLATION_DIRS=	include lib share/doc/$(PKGBASE)
+INSTALLATION_DIRS=	include lib share/doc/${PKGBASE}
 
 do-install:
-	$(INSTALL_LIB) $(WRKSRC)/build/build_release/libtbb.so $(DESTDIR)$(PREFIX)/lib/
-	$(INSTALL_LIB) $(WRKSRC)/build/build_release/libtbbmalloc.so $(DESTDIR)$(PREFIX)/lib/
-	$(INSTALL_LIB) $(WRKSRC)/build/build_debug/libtbb_debug.so $(DESTDIR)$(PREFIX)/lib/
-	$(INSTALL_LIB) $(WRKSRC)/build/build_debug/libtbbmalloc_debug.so $(DESTDIR)$(PREFIX)/lib/
-	(cd $(WRKSRC)/include && pax -rw tbb $(DESTDIR)$(PREFIX)/include/)
+	${INSTALL_LIB} ${WRKSRC}/build/build_release/libtbb.so ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_LIB} ${WRKSRC}/build/build_release/libtbbmalloc.so ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_LIB} ${WRKSRC}/build/build_debug/libtbb_debug.so ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_LIB} ${WRKSRC}/build/build_debug/libtbbmalloc_debug.so ${DESTDIR}${PREFIX}/lib/
+	(cd ${WRKSRC}/include && pax -rw tbb ${DESTDIR}${PREFIX}/include/)
 # documentation:
 #	(cd $(WRKSRC)/doc/html && pax -rw . $(DESTDIR)$(PREFIX)/share/doc/html/$(PKGBASE)/)
 #	$(INSTALL_DATA) $(WRKSRC)/doc/Release_Notes.txt $(DESTDIR)$(PREFIX)/share/doc/$(PKGBASE)/
