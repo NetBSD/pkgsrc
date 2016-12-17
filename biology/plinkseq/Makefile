@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/02/08 12:27:14 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2016/12/17 12:55:29 rillig Exp $
 
 DISTNAME=	plinkseq-0.08
 PKGREVISION=	1
@@ -20,19 +20,19 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.prefs.mk"
 
-.if $(OPSYS) != "Linux"
+.if ${OPSYS} != "Linux"
 BUILDLINK_TRANSFORM=	rm:-ldl
 .endif
 
 # Put missing protocol description files in place:
 post-extract:
-	$(CP) $(FILESDIR)/pp.proto $(WRKSRC)/lib/
-	$(CP) $(FILESDIR)/variant.proto $(WRKSRC)/lib/
+	${CP} ${FILESDIR}/pp.proto ${WRKSRC}/lib/
+	${CP} ${FILESDIR}/variant.proto ${WRKSRC}/lib/
 
 # Regenerate:
 pre-build:
-	cd $(WRKSRC)/lib && protoc --cpp_out=. pp.proto && mv pp.pb.cc pp.pb.cpp
-	cd $(WRKSRC)/lib && protoc --cpp_out=. variant.proto && mv variant.pb.cc variant.pb.cpp
+	cd ${WRKSRC}/lib && protoc --cpp_out=. pp.proto && mv pp.pb.cc pp.pb.cpp
+	cd ${WRKSRC}/lib && protoc --cpp_out=. variant.proto && mv variant.pb.cc variant.pb.cpp
 
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
