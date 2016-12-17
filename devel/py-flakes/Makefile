@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/12/17 11:45:18 adam Exp $
 
-DISTNAME=	pyflakes-0.9.2
+DISTNAME=	pyflakes-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyflakes/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYDISTUTILSPKG= yes
+PYDISTUTILSPKG=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pyflakes ${DESTDIR}${PREFIX}/bin/pyflakes${PYVERSSUFFIX}
