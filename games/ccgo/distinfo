@@ -1,13 +1,19 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 20:56:45 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/12/17 23:22:30 joerg Exp $
 
-SHA1 (ccgo-0.3.6.3.tar.gz) = 3ef5f779aa7560937f9713b7c189f27033bbb5bb
-RMD160 (ccgo-0.3.6.3.tar.gz) = de97f1a726e0d3ca2c20022823499eeacd05923d
-SHA512 (ccgo-0.3.6.3.tar.gz) = 23791ef69cecdb5efa1870d5e6574929d2aa8d37678e905909b86643a71dbb32138bab119219390b68753f7ff338c64fb67121bb8264cd97529ba20d3606ea7d
-Size (ccgo-0.3.6.3.tar.gz) = 565911 bytes
-SHA1 (patch-aa) = dca8fb6d7765c128d289d6c5f082694b1f7df9f2
-SHA1 (patch-ab) = 7bdb6aab0424a3f785e184e8bf0e47b9aa7a017d
-SHA1 (patch-ac) = e3ace3ec2f31da4cb8df3205b8e9c725ba3a654a
-SHA1 (patch-ad) = 3ba989de543c1b97bd6c0f9aea5fd65682500635
+SHA1 (ccgo-0.3.6.5.tar.gz) = df4cbfc29867215dec8e46f14be09ee2a11f909f
+RMD160 (ccgo-0.3.6.5.tar.gz) = 55db13c15e6318d8fc3e5d61ac96da89d6d6be4e
+SHA512 (ccgo-0.3.6.5.tar.gz) = 268c228eee9c42e49df333bfa0707e7b72c39731ccd64239e3c426958f6c17b65658db91bc7ab89548c4cc647ade791a7c67c30c410a5b3935c8fd3f326bf36b
+Size (ccgo-0.3.6.5.tar.gz) = 639238 bytes
 SHA1 (patch-ae) = cbfaa2fbf222e5690e927ec069a396eca2c47c7a
 SHA1 (patch-af) = abb949cc6729036439583dc544581b3db40f412c
-SHA1 (patch-ag) = 271e5dac7de0d206c1ea242c95f85ec1f3dd3ea8
+SHA1 (patch-gmp_device.cc) = c796af1021f143034505bdfb79057301e68deb50
+SHA1 (patch-gmp_device.hh) = 5cbcfc1f60967129f7b8b49d9d017170186ad2d3
+SHA1 (patch-go_board.cc) = a099b74af931a49840634c17ed9816a6e53d2089
+SHA1 (patch-go_go0.cc) = e6de835e838c44725d93924cd03d7c9b8fb0a8de
+SHA1 (patch-igs_connect.hh) = 7032f14348f7d0039186cb78c721f4b126e6d1d6
+SHA1 (patch-igs_datetime.cc) = 96f87ef65092e4e4ea7ea430ba6358f4c7fbb349
+SHA1 (patch-igs_fork.cc) = 316671d65a3afbd88d8c1ad10b16328996e3c8ac
+SHA1 (patch-igs_game.hh) = 0b5c0a92e7d819bea4b2785e8eae1780682ff4da
+SHA1 (patch-igs_game__list.cc) = 3d81329683ca634d8d2210b3b5a106d5ef0efbbe
+SHA1 (patch-igs_player.hh) = 350c24ea8b662d984f192c439181dbfefd7a7884
+SHA1 (patch-igs_show.cc) = 3c40a3daebf74dc403da262d76804e0823fe4f01
