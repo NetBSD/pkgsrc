@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/11/30 13:31:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/12/17 14:15:48 joerg Exp $
 
 DISTNAME=	cppo-1.4.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -32,4 +32,5 @@ INSTALLATION_DIRS+=	bin ${OCAML_SITELIBDIR}/cppo_ocamlbuild
 OCAML_FINDLIB_DIRS=	cppo_ocamlbuild
 
 .include "../../devel/ocamlbuild/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
