@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.22 2016/12/16 13:05:58 he Exp $
+$NetBSD: distinfo,v 1.23 2016/12/17 23:02:51 dholland Exp $
 
 SHA1 (jasper-1.900.29.tar.gz) = 6d50e5ea9e822ad5f88f4451819acab2e3b47f8e
 RMD160 (jasper-1.900.29.tar.gz) = 4ae47353f3dc086b3a11eff86ec7fb57d598c6fb
 SHA512 (jasper-1.900.29.tar.gz) = fdf557889660b9068e3712ff809fe7d4ab0855e1afff9a39eb19763599b4e747472743e4c49a42f7d38beadc6a0aa7a7b402422422853e8bb6d683def81b1544
 Size (jasper-1.900.29.tar.gz) = 1746319 bytes
+SHA1 (patch-CVE-2016-8654) = 9b430a5f872fbd2d33486d7280eeec04b552ec6f
 SHA1 (patch-configure) = 14039911be04b88559e40f20a01bb46fd0db4488
 SHA1 (patch-src_libjasper_base_jas__seq.c) = a0208cd0271388ae0fdc2e359da3223a35a7ae14
 SHA1 (patch-src_libjasper_base_jas__stream.c) = 2e9ad538ab2c0191063fef06202949b435b0085e
