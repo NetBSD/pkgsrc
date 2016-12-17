@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2016/06/08 19:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/12/17 06:41:01 mef Exp $
 
-DISTNAME=	Any-Moose-0.26
+DISTNAME=	Any-Moose-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Any/}
 
@@ -13,6 +12,9 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 DEPENDS+=	p5-Role-Tiny-[0-9]*:../../devel/p5-Role-Tiny
+DEPENDS+=	p5-Mouse-[0-9]*:../../devel/p5-Mouse
+# for make test
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=	auto/Any/Moose/.packlist
 
