@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5048 2016/12/17 03:19:41 mef Exp $
+$NetBSD: CHANGES-2016,v 1.5049 2016/12/17 06:41:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7038,3 +7038,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p5-Archive-Tar to 2.24 [mef 2016-12-17]
 	Updated www/p5-HTML-Lint to 2.24 [wen 2016-12-17]
 	Updated cad/eagle to 7.7.0 [mef 2016-12-17]
+	Updated devel/p5-Any-Moose to 0.27 [mef 2016-12-17]
