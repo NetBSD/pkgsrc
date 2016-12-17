@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/11/14 20:15:33 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.16 2016/12/17 23:28:34 joerg Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
@@ -112,6 +112,10 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 .endif
+
+# At least LLVM 3.9.0 and subprojects don't correctly add C++11 flags
+# automatically.
+CXXFLAGS+=	-std=c++11
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
