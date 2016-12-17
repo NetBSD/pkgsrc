@@ -58,11 +58,15 @@ func (p *MkParser) VarUse() *MkVarUse {
 		varnameMark := repl.Mark()
 		varname := p.Varname()
 		if varname != "" {
-			if usingRoundParen && p.EmitWarnings {
-				p.Line.Warnf("Please use curly braces {} instead of round parentheses () for %s.", varname)
-			}
 			modifiers := p.VarUseModifiers(varname, closing)
 			if repl.AdvanceStr(closing) {
+				if usingRoundParen && p.EmitWarnings {
+					parenVaruse := repl.Since(mark)
+					bracesVaruse := "${" + parenVaruse[2:len(parenVaruse)-1] + "}"
+					if !p.Line.AutofixReplace(parenVaruse, bracesVaruse) {
+						p.Line.Warnf("Please use curly braces {} instead of round parentheses () for %s.", varname)
+					}
+				}
 				return &MkVarUse{varname, modifiers}
 			}
 		}
