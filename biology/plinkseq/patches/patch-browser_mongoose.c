@@ -1,4 +1,4 @@
-$NetBSD: patch-browser_mongoose.c,v 1.2 2014/04/17 21:23:19 asau Exp $
+$NetBSD: patch-browser_mongoose.c,v 1.3 2016/12/17 12:55:29 rillig Exp $
 
 __BSD_VISIBLE is needed on FreeBSD.
 _XOPEN_SOURCE is not needed on sunos.
