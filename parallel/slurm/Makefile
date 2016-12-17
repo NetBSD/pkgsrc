@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/07/09 06:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/12/17 13:41:57 rillig Exp $
 
 DISTNAME=	slurm-2.6.4
 PKGREVISION=	9
@@ -20,7 +20,7 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--with-hdf5=no
 # Fix installation:
-CONFIGURE_ARGS+=	--htmldir=$(PREFIX)/share/doc/$(PKGNAME_NOREV)/html
+CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 
 REPLACE_PYTHON=	doc/html/shtml2html.py
 
@@ -28,18 +28,18 @@ PKG_GROUPS=		slurm
 PKG_USERS=		slurm:slurm
 
 PKG_GECOS.slurm=	SLURM user
-PKG_SHELL.slurm=	$(NOLOGIN)
+PKG_SHELL.slurm=	${NOLOGIN}
 
 RCD_SCRIPTS+=	slurmd slurmctld
 
 post-install:
-	$(INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)
-	$(INSTALL_DATA) $(WRKSRC)/etc/* $(DESTDIR)$(PREFIX)/share/examples/$(PKGBASE)/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}/
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/tool.mk"
 
-CONFIGURE_ARGS+=	--with-munge=$(BUILDLINK_PREFIX.munge:Q)
+CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge:Q}
 .include "../../security/munge/buildlink3.mk" # optional
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"

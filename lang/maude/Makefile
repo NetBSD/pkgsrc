@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/02 20:11:45 asau Exp $
+# $NetBSD: Makefile,v 1.26 2016/12/17 13:38:55 rillig Exp $
 #
 
 DISTNAME=	Maude-2.6
@@ -15,14 +15,14 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--datadir=$(PREFIX)/share/$(PKGBASE)
+CONFIGURE_ARGS=	--datadir=${PREFIX}/share/${PKGBASE}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	flex bison
 TEST_TARGET=	check
 
 post-install:
-	cd $(WRKSRC)/src/Main && $(INSTALL_DATA) *.maude \
-		$(DESTDIR)$(PREFIX)/share/$(PKGBASE)
+	cd ${WRKSRC}/src/Main && ${INSTALL_DATA} *.maude \
+		${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../devel/buddy/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
