@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/27 00:28:37 wen Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/17 07:28:05 wen Exp $
 
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Seamless R and C++ Integration
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	Rcpp
-R_PKGVER=	0.12.6
+R_PKGVER=	0.12.8
 
 USE_LANGUAGES+=	c++
 
