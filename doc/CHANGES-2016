@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5050 2016/12/17 07:21:09 wen Exp $
+$NetBSD: CHANGES-2016,v 1.5051 2016/12/17 07:29:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7040,3 +7040,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/eagle to 7.7.0 [mef 2016-12-17]
 	Updated devel/p5-Any-Moose to 0.27 [mef 2016-12-17]
 	Updated textproc/p5-Text-Table to 1.132 [wen 2016-12-17]
+	Updated devel/R-Rcpp to 0.12.8 [wen 2016-12-17]
