@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/31 08:30:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/12/17 11:45:18 adam Exp $
 bin/pyflakes${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/pyflakes/test/harness.pyo
 ${PYSITELIB}/pyflakes/test/test_api.py
 ${PYSITELIB}/pyflakes/test/test_api.pyc
 ${PYSITELIB}/pyflakes/test/test_api.pyo
+${PYSITELIB}/pyflakes/test/test_dict.py
+${PYSITELIB}/pyflakes/test/test_dict.pyc
+${PYSITELIB}/pyflakes/test/test_dict.pyo
 ${PYSITELIB}/pyflakes/test/test_doctests.py
 ${PYSITELIB}/pyflakes/test/test_doctests.pyc
 ${PYSITELIB}/pyflakes/test/test_doctests.pyo
