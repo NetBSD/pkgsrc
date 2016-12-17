@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/12/09 13:54:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.22 2016/12/17 14:25:30 joerg Exp $
 
 DISTNAME=	mongo-c-driver-1.5.0
 CATEGORIES=	databases
@@ -31,6 +31,13 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man3
 # Test behaves incosistently
 #TEST_MAKE_FLAGS+=	MONGOC_TEST_SKIP_LIVE=on
 #TEST_TARGET=		check
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
+PYTHON_FOR_BUILD_ONLY=	yes
+REPLACE_PYTHON+=	doc/mallard2man.py
+
+.include "../../lang/python/application.mk"
 
 # libbson and mongo-c-driver released are tied
 BUILDLINK_API_DEPENDS.libbson+=	libbson>=${PKGVERSION_NOREV}
