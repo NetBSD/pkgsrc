@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2016/12/09 08:29:09 leot Exp $
+@comment $NetBSD: PLIST,v 1.33 2016/12/18 23:19:26 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -287,6 +287,9 @@ ${PYSITELIB}/youtube_dl/extractor/cbssports.pyo
 ${PYSITELIB}/youtube_dl/extractor/ccc.py
 ${PYSITELIB}/youtube_dl/extractor/ccc.pyc
 ${PYSITELIB}/youtube_dl/extractor/ccc.pyo
+${PYSITELIB}/youtube_dl/extractor/ccma.py
+${PYSITELIB}/youtube_dl/extractor/ccma.pyc
+${PYSITELIB}/youtube_dl/extractor/ccma.pyo
 ${PYSITELIB}/youtube_dl/extractor/cctv.py
 ${PYSITELIB}/youtube_dl/extractor/cctv.pyc
 ${PYSITELIB}/youtube_dl/extractor/cctv.pyo
@@ -965,6 +968,12 @@ ${PYSITELIB}/youtube_dl/extractor/matchtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/mdr.py
 ${PYSITELIB}/youtube_dl/extractor/mdr.pyc
 ${PYSITELIB}/youtube_dl/extractor/mdr.pyo
+${PYSITELIB}/youtube_dl/extractor/meipai.py
+${PYSITELIB}/youtube_dl/extractor/meipai.pyc
+${PYSITELIB}/youtube_dl/extractor/meipai.pyo
+${PYSITELIB}/youtube_dl/extractor/melonvod.py
+${PYSITELIB}/youtube_dl/extractor/melonvod.pyc
+${PYSITELIB}/youtube_dl/extractor/melonvod.pyo
 ${PYSITELIB}/youtube_dl/extractor/meta.py
 ${PYSITELIB}/youtube_dl/extractor/meta.pyc
 ${PYSITELIB}/youtube_dl/extractor/meta.pyo
@@ -1208,6 +1217,9 @@ ${PYSITELIB}/youtube_dl/extractor/oktoberfesttv.pyo
 ${PYSITELIB}/youtube_dl/extractor/once.py
 ${PYSITELIB}/youtube_dl/extractor/once.pyc
 ${PYSITELIB}/youtube_dl/extractor/once.pyo
+${PYSITELIB}/youtube_dl/extractor/ondemandkorea.py
+${PYSITELIB}/youtube_dl/extractor/ondemandkorea.pyc
+${PYSITELIB}/youtube_dl/extractor/ondemandkorea.pyo
 ${PYSITELIB}/youtube_dl/extractor/onet.py
 ${PYSITELIB}/youtube_dl/extractor/onet.pyc
 ${PYSITELIB}/youtube_dl/extractor/onet.pyo
@@ -1958,6 +1970,9 @@ ${PYSITELIB}/youtube_dl/extractor/vube.pyo
 ${PYSITELIB}/youtube_dl/extractor/vuclip.py
 ${PYSITELIB}/youtube_dl/extractor/vuclip.pyc
 ${PYSITELIB}/youtube_dl/extractor/vuclip.pyo
+${PYSITELIB}/youtube_dl/extractor/vvvvid.py
+${PYSITELIB}/youtube_dl/extractor/vvvvid.pyc
+${PYSITELIB}/youtube_dl/extractor/vvvvid.pyo
 ${PYSITELIB}/youtube_dl/extractor/vyborymos.py
 ${PYSITELIB}/youtube_dl/extractor/vyborymos.pyc
 ${PYSITELIB}/youtube_dl/extractor/vyborymos.pyo
