@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5073 2016/12/18 19:00:34 maya Exp $
+$NetBSD: CHANGES-2016,v 1.5074 2016/12/18 21:02:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7063,3 +7063,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/simh to 4.0.0.20161218 [hans 2016-12-18]
 	Updated www/logswan to 1.06 [maya 2016-12-18]
 	Updated misc/ansiweather to 1.09 [maya 2016-12-18]
+	Updated games/openttd to 1.6.1 [tnn 2016-12-18]
