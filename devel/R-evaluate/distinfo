@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/07/28 14:16:39 wen Exp $
+$NetBSD: distinfo,v 1.5 2016/12/18 02:28:50 wen Exp $
 
-SHA1 (R/evaluate_0.9.tar.gz) = e76782b7b0aa38e8a3e54321fe0fbb9b2a161b52
-RMD160 (R/evaluate_0.9.tar.gz) = c4e77a1770431330ddee64e27294bd43fdaf9829
-SHA512 (R/evaluate_0.9.tar.gz) = 1ca91a744c9889040e22593849ff44aeee7844d7f7c993d7f65fc34932bb26f88ef098f3ce18a4735deb49615aba98234c6087d940d59627015ab54c82324b83
-Size (R/evaluate_0.9.tar.gz) = 19165 bytes
+SHA1 (R/evaluate_0.10.tar.gz) = bb50790641bf430c197f0f2df4463bfa4df8df3e
+RMD160 (R/evaluate_0.10.tar.gz) = 665d13cd10f8fd69fecc1bc88401f4c25d30e59d
+SHA512 (R/evaluate_0.10.tar.gz) = 8aeaaae96e87e81ff32cd23a663c6620c1ada7ec633957420ce9b6446437afd92e1ab7abdaab0c4968c9afef8e3d615db719b5a733c4b67c807f7dbd18346b4b
+Size (R/evaluate_0.10.tar.gz) = 21914 bytes
