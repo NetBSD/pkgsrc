@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: build-client-start,v 1.4 2016/12/18 22:41:12 joerg Exp $
+# $NetBSD: build-client-start,v 1.5 2016/12/18 22:59:35 joerg Exp $
 
 . @PBULK_CONFIG@
 
@@ -13,13 +13,24 @@ fi
 
 for client in ${build_clients}; do
 	case ${client} in 
+	/*)
+		path=${client}
+		port=
+		client=
+		;;
 	*:*)
+		path=
 		port="-p ${client##*:}"
 		client=${client%%:*}
 		;;
 	*)
+		path=
 		port=
 		;;
 	esac
-	ssh $port $client "${pbuild} -c ${master_port_build} -b ${pbuild_script}" &
+	if [ -z "$path" ]; then
+		ssh $port $client "${pbuild} -c ${master_port_build} -b ${pbuild_script}" &
+	else
+		chroot "$path" ${pbuild} -c ${master_port_build} -b ${pbuild_script} &
+	fi
 done
