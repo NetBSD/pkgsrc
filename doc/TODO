@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16797 2016/12/17 23:22:45 joerg Exp $
+$NetBSD: TODO,v 1.16798 2016/12/18 02:53:26 wen Exp $
 
 Suggested new packages
 ======================
@@ -372,7 +372,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-akima-11
 	o R-car-25
 	o R-gdata-2.17.0
-	o R-gtools-3.5.0
 	o R-httpRequest-0.0.10
 	o R-mapproj-3
 	o R-maps-3.1.0
