@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5064 2016/12/18 02:39:58 wen Exp $
+$NetBSD: CHANGES-2016,v 1.5065 2016/12/18 02:46:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7054,3 +7054,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/R-evaluate to 0.10 [wen 2016-12-18]
 	Updated textproc/R-stringr to 1.1.0 [wen 2016-12-18]
 	Updated textproc/R-formatR to 1.4 [wen 2016-12-18]
+	Updated textproc/R-yaml to 2.1.14 [wen 2016-12-18]
