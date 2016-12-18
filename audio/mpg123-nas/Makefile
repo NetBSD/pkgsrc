@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2015/01/01 08:29:07 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2016/12/18 22:58:35 adam Exp $
 
 MPG123_MODULE=	nas
-
-#NOT_FOR_COMPILER=	sunpro
 
 .include "../../audio/mpg123/Makefile.common"
 
