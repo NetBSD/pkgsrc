@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.30 2016/05/09 00:08:21 joerg Exp $
+# $NetBSD: pkg-build,v 1.31 2016/12/18 09:36:38 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -179,7 +179,7 @@ cd ${pkgsrc}/${pkgdir}
 ${make} clean > ${bulklog}/${pkgname}/pre-clean.log 2>&1
 # Install all dependencies the package said it would need
 if [ ! -z "$dependencies" ]; then
-	${pkg_add_cmd} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1
+	${pkg_add_cmd} $dependencies > ${bulklog}/${pkgname}/depends.log 2>&1 || cleanup
 fi
 # Build package, create a separate log file for each major phase
 run_make ${run_checksum} checksum  > ${bulklog}/${pkgname}/checksum.log 2>&1 || cleanup
@@ -214,7 +214,7 @@ fi
 # This is quite expensive and mostly redundant, so it is disabled by default.
 #${pkg_delete} -r \* > /dev/null 2>&1 || cleanup
 
-${sync_package} ${pkgfile} ${pkgname} "${categories}"
+${sync_package} ${pkgfile} ${pkgname} "${categories}" || cleanup
 
 # Clean build area
 ${make} clean > ${bulklog}/${pkgname}/clean.log 2>&1 || true
