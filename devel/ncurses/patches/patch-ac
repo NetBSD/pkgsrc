@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.23 2015/08/17 17:10:32 wiz Exp $
+$NetBSD: patch-ac,v 1.24 2016/12/18 23:30:34 joerg Exp $
 
 Allow ncurses to build with compiler from pkgsrc by dropping the use of
 -no-cpp-precomp which is specific to Apple's supplied toolchain.
@@ -21,3 +21,51 @@ Include local paths before utilising flags from build env
  	;;
  esac
  
+@@ -21894,8 +21889,16 @@ EOF
+ #define HAVE_LIB${cf_have_include} 1
+ EOF
+ 
+-			TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
+-			TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
++			case ${cf_dir} in
++			form|menu|panel)
++				TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}gnu${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
++				TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}gnu${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
++				;;
++			*)
++				TEST_DEPS="${LIB_DIR}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
++				TEST_DEP2="${LIB_2ND}/${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEP2"
++				;;
++			esac
+ 			if test "$DFT_LWR_MODEL" = "libtool"; then
+ 				TEST_ARGS="${TEST_DEPS}"
+ 				TEST_ARG2="${TEST_DEP2}"
+@@ -22181,9 +22184,9 @@ fi
+ ADAHTML_DIR=../../doc/html/ada
+ 
+ # these could be configurable, but are not currently
+-PANEL_NAME=panel
+-MENU_NAME=menu
+-FORM_NAME=form
++PANEL_NAME=gnupanel
++MENU_NAME=gnumenu
++FORM_NAME=gnuform
+ CXX_NAME=ncurses++
+ 
+ # workaround for g++ versus Solaris (20131116)
+@@ -23565,7 +23570,14 @@ CF_EOF
+ 		cf_depsuf="${LIB_SUFFIX}${EXTRA_SUFFIX}${cf_depsuf}"
+ 	fi
+ 
+-			cf_libname=$cf_dir
++			case $cf_dir in
++			form|menu|panel)
++				cf_libname=gnu$cf_dir
++				;;
++			*)
++				cf_libname=$cf_dir
++				;;
++			esac
+ 			test "$cf_dir" = c++ && cf_libname=ncurses++
+ 			if test $cf_item = shared ; then
+ 				if test -n "${LIB_SUFFIX}"

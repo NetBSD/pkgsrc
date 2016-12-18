@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.37 2015/09/08 11:57:49 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.38 2016/12/18 23:30:34 joerg Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -154,6 +154,10 @@ BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
+.  else
+BUILDLINK_TRANSFORM+=		l:form:gnuform
+BUILDLINK_TRANSFORM+=		l:panel:gnupanel
+BUILDLINK_TRANSFORM+=		l:menu:gnumenu
 .  endif
 
 # A full ncurses implementation provides more headers than some curses
