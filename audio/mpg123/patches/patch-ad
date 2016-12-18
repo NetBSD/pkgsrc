@@ -1,24 +1,24 @@
-$NetBSD: patch-ad,v 1.5 2014/11/20 13:07:12 mef Exp $
+$NetBSD: patch-ad,v 1.6 2016/12/18 22:58:34 adam Exp $
 
 Let device portable over environment
 
---- src/output/oss.c.orig	2009-12-05 21:26:23.000000000 +0100
-+++ src/output/oss.c	2010-02-06 20:09:39.000000000 +0100
-@@ -167,7 +167,7 @@
- 	if(!ao) return -1;
- 	
- 	if(!ao->device) {
--		ao->device = "/dev/dsp";
-+		ao->device = DEVOSSAUDIO;
+--- src/libout123/modules/oss.c.orig	2016-09-26 21:20:25.000000000 +0000
++++ src/libout123/modules/oss.c
+@@ -159,7 +159,7 @@ static int open_oss(out123_handle *ao)
+ 
+ 	dev = ao->device;
+ 	if(!dev) {
+-		dev = "/dev/dsp";
++		dev = DEVOSSAUDIO;
  		usingdefdev = 1;
  	}
  	
-@@ -176,7 +176,7 @@
+@@ -168,7 +168,7 @@ static int open_oss(out123_handle *ao)
  	if(ao->fn < 0)
  	{
  		if(usingdefdev) {
--			ao->device = "/dev/sound/dsp";
-+			ao->device = DEVOSSSOUND;
- 			ao->fn = open(ao->device,O_WRONLY);
+-			dev = "/dev/sound/dsp";
++			dev = DEVOSSSOUND;
+ 			ao->fn = open(dev,O_WRONLY);
  			if(ao->fn < 0) {
  				if(!AOQUIET) error("Can't open default sound device!");
