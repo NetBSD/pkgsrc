@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/28 06:31:05 asau Exp $
+# $NetBSD: Makefile,v 1.8 2016/12/18 18:31:28 zafer Exp $
 
 DISTNAME=	spawn-fcgi-1.6.3
 PKGREVISION=	3
 CATEGORIES=	www
-MASTER_SITES=	http://www.lighttpd.net/download/
+MASTER_SITES=	http://download.lighttpd.net/spawn-fcgi/releases-1.6.x/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://redmine.lighttpd.net/projects/spawn-fcgi
