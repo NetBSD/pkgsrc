@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.113 2016/12/06 08:14:22 martin Exp $
+@comment $NetBSD: PLIST,v 1.114 2016/12/18 01:31:00 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -3283,6 +3283,7 @@ lib/firefox/components/ConsoleAPIStorage.js
 lib/firefox/components/ContactManager.js
 lib/firefox/components/ContentProcessSingleton.js
 lib/firefox/components/DownloadLegacy.js
+lib/firefox/components/EditorUtils.js
 lib/firefox/components/FeedProcessor.js
 lib/firefox/components/FormAutofillContentService.js
 lib/firefox/components/FormAutofillStartup.js
