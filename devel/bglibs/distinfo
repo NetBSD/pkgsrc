@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2015/11/03 03:27:16 agc Exp $
+$NetBSD: distinfo,v 1.25 2016/12/18 21:39:58 joerg Exp $
 
 SHA1 (bglibs-1.106.tar.gz) = 5f1914299c0f91a3d5c83bf6c8c1d0b824ffe624
 RMD160 (bglibs-1.106.tar.gz) = d3ac009a0b9196701ff90b6cddbd58596ab480a9
@@ -6,3 +6,10 @@ SHA512 (bglibs-1.106.tar.gz) = c1ae4bb9978b09ffe01231738d1f249c2040a51c2a0bbc4b0
 Size (bglibs-1.106.tar.gz) = 481564 bytes
 SHA1 (patch-ab) = c23a0d4b20bd485a599ba445f6957f10190bdfa2
 SHA1 (patch-ac) = 1b75516a494dbc0c7943bc89b2eaf2f9668048fd
+SHA1 (patch-crypto_hmac-md5.c) = 1982dfb84b42f0e2b3aa7a59664de7694dd65038
+SHA1 (patch-crypto_hmac-sha1.c) = aebb2be7721a38bd1c15fde32831ae6966b8b705
+SHA1 (patch-crypto_hmac-sha256.c) = 578e1c36527d463a8fcca86c32604b0fe94b6b81
+SHA1 (patch-crypto_hmac-sha384.c) = 1ed746c62fcf717d4b2978f55b78f6bec781e077
+SHA1 (patch-crypto_hmac-sha512.c) = 0fddbb7d34dd66197c72c61fe21da8eabb9bc267
+SHA1 (patch-crypto_hmac.c) = 65c1f526d3d73734fc431210088ce4f26a42b313
+SHA1 (patch-crypto_hmac.h) = 1ae05a3160859069160ff1a17a7ae460b622fa12
