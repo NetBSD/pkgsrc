@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2008/06/19 15:19:45 taca Exp $
+$NetBSD: patch-ab,v 1.2 2016/12/18 21:46:33 joerg Exp $
 
 --- qtruby/rubylib/qtruby/Qt.cpp.orig	2007-01-15 11:19:09.000000000 +0000
 +++ qtruby/rubylib/qtruby/Qt.cpp
@@ -56,3 +56,12 @@ $NetBSD: patch-ab,v 1.1 2008/06/19 15:19:45 taca Exp $
      VALUE metaObject_value = rb_funcall(qt_internal_module, rb_intern("getMetaObject"), 1, self);
  
      smokeruby_object *ometa = value_obj_info(metaObject_value);
+@@ -2630,7 +2630,7 @@ isObject(VALUE /*self*/, VALUE obj)
+ {
+     void * ptr = 0;
+     ptr = value_to_ptr(obj);
+-    return (ptr > 0 ? Qtrue : Qfalse);
++    return (ptr ? Qtrue : Qfalse);
+ }
+ 
+ static VALUE
