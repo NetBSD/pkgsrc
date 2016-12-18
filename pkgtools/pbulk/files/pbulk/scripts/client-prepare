@@ -1,0 +1,41 @@
+#!@SH@
+# $NetBSD: client-prepare,v 1.1 2016/12/18 22:38:16 joerg Exp $
+
+. @PBULK_CONFIG@
+
+set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
+
+unique_clients=
+for client in ${scan_clients} ${build_clients}; do
+	case ${unique_clients} in
+	"${client}" | "${client} "* | *" ${client} "* | *" ${client}" )
+		: # exists already
+		;;
+	*)
+		if [ -n "$unique_clients" ]; then
+			unique_clients="$unique_clients "
+		fi
+		unique_clients="$unique_clients ${client}"
+		;;
+	esac
+done
+
+for client in ${unique_clients}; do
+	case ${client} in 
+	*:*)
+		port="-p ${client##*:}"
+		client=${client%%:*}
+		;;
+	*)
+		;;
+	esac
+	ssh $port $client "${client_prepare_action}" &
+done
+
+wait

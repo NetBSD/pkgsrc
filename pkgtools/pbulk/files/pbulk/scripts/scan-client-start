@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan-client-start,v 1.4 2015/06/07 22:49:04 joerg Exp $
+# $NetBSD: scan-client-start,v 1.5 2016/12/18 22:38:16 joerg Exp $
 
 . @PBULK_CONFIG@
 
@@ -17,6 +17,8 @@ else
 	extra_pscan_args=""
 fi
 
+${client_prepare}
+
 for client in ${scan_clients}; do
 	case ${client} in 
 	*:*)
@@ -26,5 +28,5 @@ for client in ${scan_clients}; do
 	*)
 		;;
 	esac
-	ssh $port $client "${pscan_prepare} && ${pscan} -c ${master_port_scan} -M ${make} ${extra_pscan_args} ${pkgsrc}" &
+	ssh $port $client "${pscan} -c ${master_port_scan} -M ${make} ${extra_pscan_args} ${pkgsrc}" &
 done
