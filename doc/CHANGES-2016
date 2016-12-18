@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5075 2016/12/18 21:12:58 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.5076 2016/12/18 21:50:21 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7065,3 +7065,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ansiweather to 1.09 [maya 2016-12-18]
 	Updated games/openttd to 1.6.1 [tnn 2016-12-18]
 	Updated net/synergy to 1.8.6 [tnn 2016-12-18]
+	Updated security/ykclient to 2.13nb3 [joerg 2016-12-18]
