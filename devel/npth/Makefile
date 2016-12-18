@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/09/05 23:19:52 wiedi Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/18 21:27:23 tnn Exp $
 
 DISTNAME=	npth-1.2
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
 post-build:
 	cd ${WRKSRC} && ${RM} npth-config && ${MAKE} npth-config
