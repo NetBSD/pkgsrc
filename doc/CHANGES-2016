@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5076 2016/12/18 21:50:21 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.5077 2016/12/18 21:59:32 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7066,3 +7066,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/openttd to 1.6.1 [tnn 2016-12-18]
 	Updated net/synergy to 1.8.6 [tnn 2016-12-18]
 	Updated security/ykclient to 2.13nb3 [joerg 2016-12-18]
+	Updated security/gnupg21 to 2.1.16 [tnn 2016-12-18]
