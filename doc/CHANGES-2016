@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5068 2016/12/18 03:20:58 taca Exp $
+$NetBSD: CHANGES-2016,v 1.5069 2016/12/18 06:01:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7058,3 +7058,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-gtools to 3.5.0 [wen 2016-12-18]
 	Updated ham/fldigi to 3.23.18 [mef 2016-12-18]
 	Updated www/squid3 to 3.5.23 [taca 2016-12-18]
+	Updated ham/xlog to 2.0.14 [mef 2016-12-18]
