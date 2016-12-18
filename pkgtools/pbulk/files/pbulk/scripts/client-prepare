@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: client-prepare,v 1.2 2016/12/18 22:41:12 joerg Exp $
+# $NetBSD: client-prepare,v 1.3 2016/12/18 22:59:35 joerg Exp $
 
 . @PBULK_CONFIG@
 
@@ -28,15 +28,26 @@ done
 
 for client in ${unique_clients}; do
 	case ${client} in 
+	/*)
+		port=
+		client=
+		path=${client}
+		;;
 	*:*)
 		port="-p ${client##*:}"
 		client=${client%%:*}
+		path=
 		;;
 	*)
 		port=
+		path=
 		;;
 	esac
-	ssh $port $client "${client_prepare_action}" &
+	if [ -z "$path" ]; then
+		ssh $port $client "${client_prepare_action}" &
+	else
+		clients_prepare_chroot "$path" &
+	fi
 done
 
 wait
