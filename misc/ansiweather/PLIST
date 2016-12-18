@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2016/12/18 18:57:05 maya Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/12/18 19:17:44 maya Exp $
 bin/ansiweather
+man/man1/ansiweather.1
 share/doc/ansiweather/AUTHORS
 share/doc/ansiweather/ChangeLog
 share/doc/ansiweather/README.md
-share/doc/ansiweather/ansiweather.1
 share/doc/ansiweather/ansiweather.plugin.zsh
 share/examples/ansiweather/ansiweatherrc.example
