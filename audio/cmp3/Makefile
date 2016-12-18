@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2016/04/20 12:10:25 nros Exp $
+# $NetBSD: Makefile,v 1.32 2016/12/18 23:33:11 joerg Exp $
 #
 
 DISTNAME=	cmp3-2.0pre6
 PKGNAME=	cmp3-2.0.p6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmp3/}
 
