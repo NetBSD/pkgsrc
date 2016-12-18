@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5079 2016/12/18 23:00:23 adam Exp $
+$NetBSD: CHANGES-2016,v 1.5080 2016/12/18 23:19:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7069,3 +7069,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/gnupg21 to 2.1.16 [tnn 2016-12-18]
 	Updated pkgtools/pbulk to 0.65 [joerg 2016-12-18]
 	Updated audio/mpg123 to 1.23.8 [adam 2016-12-18]
+	Removed www/contao42 [taca 2016-12-18]
