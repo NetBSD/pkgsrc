@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/08/18 07:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/12/18 23:33:11 joerg Exp $
 #
 
 DISTNAME=		nload-0.7.4
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nload/}
 
