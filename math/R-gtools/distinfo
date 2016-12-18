@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 23:33:28 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/12/18 02:51:34 wen Exp $
 
-SHA1 (R/gtools_2.6.2.tar.gz) = acbf981bf6c0ce9248a7852fe89c8ad295c4e9d9
-RMD160 (R/gtools_2.6.2.tar.gz) = bb4598020e8299ea173b34e765cf80e18b0fb31a
-SHA512 (R/gtools_2.6.2.tar.gz) = b27d7edf922e73d591b71688f2e37c565181b1535c1e961a1ead6a07855632fd153de83656a39ea93987471f571396a8fdaed86efb5a11f1586f5ec090bc2322
-Size (R/gtools_2.6.2.tar.gz) = 46942 bytes
+SHA1 (R/gtools_3.5.0.tar.gz) = 0a07d2f459b3fea74333cebb7dd16ccefcd93298
+RMD160 (R/gtools_3.5.0.tar.gz) = 45d57e75159ff8aa7cd961907627d996b6a16e4e
+SHA512 (R/gtools_3.5.0.tar.gz) = 3a629d1d9ebb2f0c776b2d7f73d508b057c4a45d2bb5a8d951e218e974351408dddb29890fa5ddb552a046f658841623a9cfd8a46adfed5098523b674079af5b
+Size (R/gtools_3.5.0.tar.gz) = 64855 bytes
