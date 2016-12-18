@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5072 2016/12/18 18:58:30 maya Exp $
+$NetBSD: CHANGES-2016,v 1.5073 2016/12/18 19:00:34 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7060,6 +7060,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squid3 to 3.5.23 [taca 2016-12-18]
 	Updated ham/xlog to 2.0.14 [mef 2016-12-18]
 	Updated www/php-owncloud to 9.1.3 [wen 2016-12-18]
-	Updated emulators/simh to 7964e2b72d9 [hans 2016-12-18]
+	Updated emulators/simh to 4.0.0.20161218 [hans 2016-12-18]
 	Updated www/logswan to 1.06 [maya 2016-12-18]
 	Updated misc/ansiweather to 1.09 [maya 2016-12-18]
