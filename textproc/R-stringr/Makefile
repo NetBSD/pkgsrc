@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/01 13:38:34 wen Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/18 02:33:18 wen Exp $
 
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Make it easier to work with strings
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	stringr
-R_PKGVER=	1.0.0
+R_PKGVER=	1.1.0
 
 DEPENDS=	R-stringi>=0.4.1:../../textproc/R-stringi \
 		R-magrittr>=0:../../devel/R-magrittr
