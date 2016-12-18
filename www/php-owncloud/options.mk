@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/12/25 23:06:41 ryoon Exp $
+# $NetBSD: options.mk,v 1.8 2016/12/18 08:28:08 wen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-owncloud
 
@@ -19,8 +19,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.0:../../databases/php-pdo_mysql
 # php-pdo_sqlite provides sqlite3.  An owncloud instance that was
 # installed as version 2 and upgraded to 3 and then 4
 # complained/failed that PDO was not present.
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.2.0:../../databases/php-pdo_sqlite
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.4.0:../../databases/php-pdo_sqlite
 .elif !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=5.2.0:../../databases/php-pdo_pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.2.0:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=5.4.0:../../databases/php-pdo_pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.4.0:../../databases/php-pgsql
 .endif
