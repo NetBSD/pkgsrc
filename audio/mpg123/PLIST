@@ -1,13 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2014/11/20 13:07:12 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/12/18 22:58:34 adam Exp $
 bin/mpg123
 bin/mpg123-id3dump
 bin/mpg123-strip
 bin/out123
+include/fmt123.h
 include/mpg123.h
+include/out123.h
 lib/libmpg123.la
+lib/libout123.la
+${PLIST.coreaudio}lib/mpg123/output_coreaudio.la
+${PLIST.oss}lib/mpg123/output_oss.la
+${PLIST.sun}lib/mpg123/output_sun.la
 lib/pkgconfig/libmpg123.pc
+lib/pkgconfig/libout123.pc
 man/man1/mpg123.1
 man/man1/out123.1
-${PLIST.coreaudio}lib/mpg123/output_coreaudio.la
-${PLIST.sun}lib/mpg123/output_sun.la
-${PLIST.oss}lib/mpg123/output_oss.la
