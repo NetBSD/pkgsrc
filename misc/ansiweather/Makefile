@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/12/18 18:57:05 maya Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/18 19:17:44 maya Exp $
 
 DISTNAME=	ansiweather-1.09
 CATEGORIES=	misc
@@ -26,18 +26,21 @@ EGDIR=		share/examples/ansiweather
 
 CONF_FILES+=	${EGDIR}/ansiweatherrc.example ${PKG_SYSCONFDIR}/ansiweatherrc
 
-SUBST_CLASSES+=		config shebang
+SUBST_CLASSES+=		config
 SUBST_FILES.config=	ansiweather
 SUBST_SED.config=	-e 's,~/.ansiweatherrc,${PKG_SYSCONFDIR}/ansiweatherrc,'
 SUBST_STAGE.config=	post-patch
 
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 do-install:
 	${RUN}${INSTALL_PROGRAM} ${WRKSRC}/ansiweather ${DESTDIR}${PREFIX}/bin
-.for f in AUTHORS ChangeLog README.md ansiweather.plugin.zsh ansiweather.1
+.for f in AUTHORS ChangeLog README.md ansiweather.plugin.zsh
 	${RUN}${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
+	${RUN}${INSTALL_MAN} ${WRKSRC}/ansiweather.1 \
+	                     ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${RUN}${INSTALL_DATA} ${WRKSRC}/ansiweatherrc.example \
 	                      ${DESTDIR}${PREFIX}/${EGDIR}
 
