@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: bulkbuild-restart,v 1.3 2008/10/08 16:43:34 joerg Exp $
+# $NetBSD: bulkbuild-restart,v 1.4 2016/12/18 22:38:16 joerg Exp $
 
 . @PBULK_CONFIG@
 
@@ -36,6 +36,12 @@ fi
 if [ "$restart_build" = "no" ]; then
 	${script_phase_pre_build}
 	${script_phase_scan}
+else
+	case "${master_mode}" in
+	[yY][eE][sS])
+		${client_prepare}
+		;;
+	esac
 fi
 ${script_phase_build}
 ${script_phase_report}
