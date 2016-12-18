@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: client-prepare,v 1.1 2016/12/18 22:38:16 joerg Exp $
+# $NetBSD: client-prepare,v 1.2 2016/12/18 22:41:12 joerg Exp $
 
 . @PBULK_CONFIG@
 
@@ -33,6 +33,7 @@ for client in ${unique_clients}; do
 		client=${client%%:*}
 		;;
 	*)
+		port=
 		;;
 	esac
 	ssh $port $client "${client_prepare_action}" &
