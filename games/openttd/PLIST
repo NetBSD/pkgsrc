@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/12/31 18:48:55 leot Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/12/18 21:01:41 tnn Exp $
 bin/openttd
 man/man6/openttd.6
 share/applications/openttd.desktop
@@ -20,6 +20,7 @@ share/openttd/ai/compat_1.2.nut
 share/openttd/ai/compat_1.3.nut
 share/openttd/ai/compat_1.4.nut
 share/openttd/ai/compat_1.5.nut
+share/openttd/ai/compat_1.6.nut
 share/openttd/baseset/no_music.obm
 share/openttd/baseset/no_sound.obs
 share/openttd/baseset/openttd.grf
@@ -34,6 +35,7 @@ share/openttd/game/compat_1.2.nut
 share/openttd/game/compat_1.3.nut
 share/openttd/game/compat_1.4.nut
 share/openttd/game/compat_1.5.nut
+share/openttd/game/compat_1.6.nut
 share/openttd/lang/afrikaans.lng
 share/openttd/lang/arabic_egypt.lng
 share/openttd/lang/basque.lng
@@ -81,6 +83,7 @@ share/openttd/lang/simplified_chinese.lng
 share/openttd/lang/slovak.lng
 share/openttd/lang/slovenian.lng
 share/openttd/lang/spanish.lng
+share/openttd/lang/spanish_MX.lng
 share/openttd/lang/swedish.lng
 share/openttd/lang/tamil.lng
 share/openttd/lang/thai.lng
