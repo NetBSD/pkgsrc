@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.26 2016/06/18 11:26:55 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2016/12/18 11:11:28 hans Exp $
 
-SHA1 (simhv39-0.zip) = 1de3938f0dcb51d55b0e53aea8ae9769ccc57bdb
-RMD160 (simhv39-0.zip) = a464e7d1fc6d58dd23a3ef623c3c018d5d60b050
-SHA512 (simhv39-0.zip) = 5e8cbf92e980b7cb40d68ff60a266f70c0bef0eecdc169a8077ae72a6a71fe12a7be5c62bd033ca36727e2cb8f266a5a6f8a5ed6dd509afbf0a9d7b618f1a4f6
-Size (simhv39-0.zip) = 3103657 bytes
-SHA1 (patch-aa) = 00aa93c3d25359529de8fac356b664f13d85d3f2
-SHA1 (patch-ab) = aa6f7fa5246b469ec7de28182922d2e6e18ce0de
-SHA1 (patch-ac) = 9d12df82e971b057be33d4cf54b1539597ae94f3
-SHA1 (patch-sim__timer.h) = 1ee43b9a6586cdeb0f4dd22321957de8d30d3376
+SHA1 (simh-4.0.0-7964e2b72d9cad0309afa7da08dd7e5e2336cd37.tar.gz) = 83ec0e23ef79e13d7149d9c4077d479f1e3c2b2c
+RMD160 (simh-4.0.0-7964e2b72d9cad0309afa7da08dd7e5e2336cd37.tar.gz) = c77adffe16248aa6c0a3f14de321b599c772c3ab
+SHA512 (simh-4.0.0-7964e2b72d9cad0309afa7da08dd7e5e2336cd37.tar.gz) = 8ceae000df2442df925fae0eb2e9142ba4d6be732ae930b88addc9530ba21257bb03f30493ccdf941e06d4f04deeffdfcf12e1f41b3855c34bf7a116edc4d31c
+Size (simh-4.0.0-7964e2b72d9cad0309afa7da08dd7e5e2336cd37.tar.gz) = 9915006 bytes
+SHA1 (patch-aa) = 01ee641734c029fc2ea0de6947971c0bbdc0e267
+SHA1 (patch-sim__ether.c) = 5a67f2cdde8917a32c7655853e5e79d4294d0790
