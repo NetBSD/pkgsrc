@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.12 2016/12/16 16:21:54 hans Exp $
+$NetBSD: distinfo,v 1.13 2016/12/18 21:58:23 tnn Exp $
 
-SHA1 (gnupg-2.1.14.tar.bz2) = bc7609a3a0daf0ed0efb22f77b43e82f28e20e34
-RMD160 (gnupg-2.1.14.tar.bz2) = 22d1f1791133f48ab71e900617ad7fd13c8a4e0f
-SHA512 (gnupg-2.1.14.tar.bz2) = 9f098bf589ecb841eb65fccad3ffd72c6645c8e186ddababf93c657173c485ed103f8f8a7d8bfeb86cfb9e065a1211c7d48b116c86d6aa97ed1b8c8a85e0a840
-Size (gnupg-2.1.14.tar.bz2) = 5706058 bytes
+SHA1 (gnupg-2.1.16.tar.bz2) = 67540161c9fe289153c4a5ea60f7cdce0ef48897
+RMD160 (gnupg-2.1.16.tar.bz2) = 39ed72f52bae352893da7da7b191e1fc6ba4e6df
+SHA512 (gnupg-2.1.16.tar.bz2) = dbac27106e7800e30f286c3fd83ffab85d2b0acf29d6715ce3e388bfbece2a7deb19ebfe897c445d7a3d6d63e01560b9461567566e936504bc5d6cabe1444af7
+Size (gnupg-2.1.16.tar.bz2) = 5840687 bytes
 SHA1 (patch-dirmngr_Makefile.in) = fa74bcf4ea214945c64d383dff039ab938ae1446
-SHA1 (patch-dirmngr_ks-engine-ldap.c) = 3a7d96d877cd52bed66c481af83da99c517d3380
 SHA1 (patch-g13_sh-dmcrypt.c) = a2505039fff9e1e90ab81076776542fa83f55d5e
-SHA1 (patch-kbx_Makefile.in) = 58f7c3711744a42d40f580944fb768f7aaaf1b68
-SHA1 (patch-tests_gpgscm_Makefile.in) = 1418ab0a3a93ae69b49db5198aa68fd3dd369548
