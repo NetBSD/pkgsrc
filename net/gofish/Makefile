@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2013/07/12 10:44:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/12/18 16:36:18 rillig Exp $
 
 DISTNAME=		gofish-1.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gofish/}
 
@@ -14,12 +14,15 @@ WRKSRC=			${WRKDIR}/gofish
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-gopheruser=${GOPHER_USER:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-gopheruser=${GOPHER_USER}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+BUILD_DEFS+=		VARBASE
 
 EGDIR=			${PREFIX}/share/examples/gofish
 RUNTIMEDIR=		${VARBASE}/gopher
+
+.include "../../mk/bsd.prefs.mk"
 
 GOPHER_USER?=		gopher
 GOPHER_GROUP?=		gopher
@@ -36,10 +39,11 @@ OWN_DIRS_PERMS=		${RUNTIMEDIR} ${GOPHER_USER} ${GOPHER_GROUP} 0750
 CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
 
-FILES_SUBST+=		RUNTIMEDIR=${RUNTIMEDIR:Q}
+FILES_SUBST+=		RUNTIMEDIR=${RUNTIMEDIR}
 FILES_SUBST+=		PKG_USERS=${PKG_USERS:Q}
 
 SUBST_CLASSES+=		user
+SUBST_STAGE.user=	pre-configure
 SUBST_MESSAGE.user=	Fixing name of gopher user in files.
 SUBST_FILES.user=	gofish.conf
 SUBST_SED.user=		-e "s/;user = gopher/user = ${GOPHER_USER}/g"
