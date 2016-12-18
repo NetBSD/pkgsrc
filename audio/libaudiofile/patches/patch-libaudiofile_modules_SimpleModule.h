@@ -1,4 +1,4 @@
-$NetBSD: patch-libaudiofile_modules_SimpleModule.h,v 1.1 2016/12/17 16:40:31 maya Exp $
+$NetBSD: patch-libaudiofile_modules_SimpleModule.h,v 1.2 2016/12/18 23:40:23 maya Exp $
 
 Left shift of a negative number is UB and doesn't build (-fpermissive)
 Switch with functionally identical but well-defined operation.
@@ -10,7 +10,7 @@ Switch with functionally identical but well-defined operation.
  
  	static const int kScaleBits = (Format + 1) * CHAR_BIT - 1;
 -	static const int kMinSignedValue = -1 << kScaleBits;
-+	static const int kMinSignedValue = ~((1 << kScaleBits) - 1);
++	static const int kMinSignedValue = -(1 << kScaleBits);
  
  	struct signedToUnsigned : public std::unary_function<SignedType, UnsignedType>
  	{
