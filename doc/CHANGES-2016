@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5070 2016/12/18 08:29:48 wen Exp $
+$NetBSD: CHANGES-2016,v 1.5071 2016/12/18 11:12:01 hans Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7060,3 +7060,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squid3 to 3.5.23 [taca 2016-12-18]
 	Updated ham/xlog to 2.0.14 [mef 2016-12-18]
 	Updated www/php-owncloud to 9.1.3 [wen 2016-12-18]
+	Updated emulators/simh to 7964e2b72d9 [hans 2016-12-18]
