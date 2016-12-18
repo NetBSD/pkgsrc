@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 14:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/18 16:40:20 rillig Exp $
 #
 
 DISTNAME=	ish-v${VERSION}
 PKGNAME=	ishell-${VERSION}
-WRKSRC=		${WRKDIR}/ISHELL-v${VERSION}/
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icmpshell/}
@@ -13,12 +12,13 @@ HOMEPAGE=	http://icmpshell.sourceforge.net/
 COMMENT=	Allow remote shell using ICMP
 
 VERSION=	0.2
+WRKSRC=		${WRKDIR}/ISHELL-v${VERSION}/
 
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
 LIBS.SunOS+=	-lnsl -lsocket
-MAKE_ENV+=	LIBS=${LIBS:M*:Q}
+MAKE_ENV+=	LIBS=${LIBS:Q}
 
 INSTALLATION_DIRS=	bin sbin
 
