@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5058 2016/12/17 23:22:45 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.5059 2016/12/18 01:31:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7048,3 +7048,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/gmake to 4.1nb3 [joerg 2016-12-17]
 	Updated graphics/jasper to 1.900.29nb1 [dholland 2016-12-17]
 	Updated games/ccgo to 0.3.6.5 [joerg 2016-12-17]
+	Updated www/firefox to 50.1.0 [ryoon 2016-12-18]
