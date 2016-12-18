@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2015/10/18 15:07:06 adam Exp $
+# $NetBSD: Makefile.common,v 1.41 2016/12/18 22:58:34 adam Exp $
 #
 # used by audio/mpg123-arts/Makefile
 # used by audio/mpg123-esound/Makefile
@@ -7,7 +7,7 @@
 # used by audio/mpg123-pulse/Makefile
 # used by audio/mpg123-sun/Makefile
 
-DISTNAME=	mpg123-1.22.4
+DISTNAME=	mpg123-1.23.8
 PKGNAME?=	${DISTNAME:C/[[:alnum:]]*/&-${MPG123_MODULE}/}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
@@ -24,21 +24,17 @@ GNU_CONFIGURE?=		yes
 CONFIGURE_ARGS+=	--enable-modules=yes
 CONFIGURE_ENV+=		BUILD_${MPG123_MODULE:tu}=yes
 CONFIGURE_ENV+=		MPG123_MODULE=${MPG123_MODULE:Q}
-MAKE_ENV+=		MPG123_SUBDIRS=${MPG123_SUBDIRS:Q}
-MAKE_ENV+=		MPG123_SUBDIRS.src=${MPG123_SUBDIRS.src:Q}
-MPG123_SUBDIRS?=	src
-MPG123_SUBDIRS.src?=	output
 
-DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
+DISTINFO_FILE=		${.CURDIR}/../../audio/mpg123/distinfo
 
 .if !defined(MPG123_BUILDING_BASE)
 INSTALLATION_DIRS+=	lib/mpg123
 LIBS+=			-lmpg123
-BUILD_DIRS=		src/output
-PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
+BUILD_TARGET=		src/libout123/modules/output_${MPG123_MODULE}.la
+PATCHDIR=		${.CURDIR}/../../audio/mpg123/patches
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_LIB} 			\
-		${WRKSRC}/src/output/output_${MPG123_MODULE}.la 	\
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/src/libout123/modules/output_${MPG123_MODULE}.la \
 		${DESTDIR}${PREFIX}/lib/mpg123
 .endif
 

@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2014/05/20 19:59:09 adam Exp $
+# $NetBSD: Makefile,v 1.55 2016/12/18 22:58:34 adam Exp $
 
 PKGNAME=	${DISTNAME:C/[^[:alnum:]]*//}
 COMMENT=	MPEG layer 1, 2, and 3 audio player
 
 PKGCONFIG_OVERRIDE+=	libmpg123.pc.in
-
-MPG123_SUBDIRS=		src doc
-MPG123_SUBDIRS.src=	output libmpg123
 
 MAKE_ENV+=		MPG123_PROGRAM=mpg123
 MAKE_ENV+=		EXTRA_INSTALL_TARGETS="install-exec-am install-data-am"

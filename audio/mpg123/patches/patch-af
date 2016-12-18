@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2010/03/14 14:19:19 martin Exp $
+$NetBSD: patch-af,v 1.3 2016/12/18 22:58:34 adam Exp $
 
---- src/xfermem.c.orig	2009-12-05 21:26:24.000000000 +0100
-+++ src/xfermem.c	2010-02-06 20:14:14.000000000 +0100
-@@ -37,6 +37,13 @@
+--- src/libout123/xfermem.c.orig	2016-09-26 21:20:25.000000000 +0000
++++ src/libout123/xfermem.c
+@@ -36,6 +36,13 @@ void xfermem_init (txfermem **xf, size_t
  
  #ifdef HAVE_MMAP
  #  ifdef MAP_ANON
@@ -16,18 +16,14 @@ $NetBSD: patch-af,v 1.2 2010/03/14 14:19:19 martin Exp $
  	if ((*xf = (txfermem *) mmap(0, regsize, PROT_READ | PROT_WRITE,
  			MAP_ANON | MAP_SHARED, -1, 0)) == (txfermem *) -1) {
  		perror ("mmap()");
-@@ -92,7 +99,13 @@
- 	if(!xf)
- 		return;
- #ifdef HAVE_MMAP
--	munmap ((caddr_t) xf, xf->size + xf->metasize + sizeof(txfermem));
-+	munmap ((void *) xf, xf->size + xf->metasize + sizeof(txfermem));
-+
+@@ -93,6 +100,10 @@ void xfermem_done (txfermem *xf)
+ 	   Casting to (void*) should silence compilers in case of funny
+ 	   prototype for munmap(). */
+ 	munmap ( (void*)xf, xf->size + xf->metasize + sizeof(txfermem));
 +#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104030000)
 +	if(madvise((void *)xf, (xf->size + xf->metasize), MADV_FREE) < 0)
 +		fprintf(stderr,"madvise failed, continuing anyways..\n");
 +#endif
-+
  #else
  	if (shmdt((void *) xf) == -1) {
  		perror ("shmdt()");
