@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/12/18 16:23:51 rillig Exp $
 
 DISTNAME=	dotse-dnscheck-1.5.4-0-g352a15c
 PKGNAME=	dnscheck-1.5.4
@@ -33,22 +33,22 @@ DEPENDS+=	p5-MIME-Lite-[0-9]*:../../mail/p5-MIME-Lite
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 
-REPLACE_PERL+=  lib/DNSCheck.pm lib/DNSCheck/*.pm
-REPLACE_PERL+=  lib/DNSCheck/Lookup/*.pm lib/DNSCheck/Test/*.pm
-REPLACE_PERL+=  apps/dnscheck-enqueue apps/dnscheck-packetcheck
+REPLACE_PERL+=	lib/DNSCheck.pm lib/DNSCheck/*.pm
+REPLACE_PERL+=	lib/DNSCheck/Lookup/*.pm lib/DNSCheck/Test/*.pm
+REPLACE_PERL+=	apps/dnscheck-enqueue apps/dnscheck-packetcheck
 
-PERL5_PACKLIST=	auto/DNSCheck/.packlist
+PERL5_PACKLIST=			auto/DNSCheck/.packlist
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
 
-BUILD_DEFS+=    IPV6_READY
+BUILD_DEFS+=	IPV6_READY
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${SYSCONFDIR}/${PKGBASE}
 
-SUBST_CLASSES+=         paths
-SUBST_STAGE.paths=      pre-configure
-SUBST_FILES.paths=      lib/DNSCheck/Config.pm
-SUBST_SED.paths+=       -e s!/etc!${SYSCONFDIR}!g
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	lib/DNSCheck/Config.pm
+SUBST_SED.paths+=	-e s!/etc!${SYSCONFDIR}!g
 
 WRKSRC=		${WRKDIR}/dotse-dnscheck-006ca8d/engine
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
