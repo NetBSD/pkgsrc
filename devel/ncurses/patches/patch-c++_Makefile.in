@@ -1,0 +1,22 @@
+$NetBSD: patch-c++_Makefile.in,v 1.1 2016/12/18 23:30:34 joerg Exp $
+
+--- c++/Makefile.in.orig	2015-08-05 23:15:41.000000000 +0000
++++ c++/Makefile.in
+@@ -84,7 +84,7 @@ RANLIB		= @LIB_PREP@
+ CXX		= @CXX@
+ CPP		= @CXXCPP@
+ CXXFLAGS	= @CXXFLAGS@ @EXTRA_CXXFLAGS@
+-CXXLIBS		= @CXXLIBS@
++CXXLIBS		=
+ 
+ INCDIR		= ../include
+ CPPFLAGS	= -DHAVE_CONFIG_H @CPPFLAGS@
+@@ -112,7 +112,7 @@ LOCAL_LIBDIR	= @top_builddir@/lib
+ 
+ LINK		= @LINK_PROGS@ $(LIBTOOL_LINK) @CXXLDFLAGS@
+ SHLIB_DIRS	= -L../lib
+-SHLIB_LIST	= $(SHLIB_DIRS) -lform@USE_LIB_SUFFIX@ -lmenu@USE_LIB_SUFFIX@ -lpanel@USE_LIB_SUFFIX@ -lncurses@USE_LIB_SUFFIX@ @SHLIB_LIST@
++SHLIB_LIST	= $(SHLIB_DIRS) -lgnuform@USE_LIB_SUFFIX@ -lgnumenu@USE_LIB_SUFFIX@ -lgnupanel@USE_LIB_SUFFIX@ -lncurses@USE_LIB_SUFFIX@ @SHLIB_LIST@
+ 
+ LIBROOT		= ncurses++
+ 

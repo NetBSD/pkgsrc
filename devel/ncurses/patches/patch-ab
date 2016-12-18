@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.18 2015/08/17 17:10:32 wiz Exp $
+$NetBSD: patch-ab,v 1.19 2016/12/18 23:30:34 joerg Exp $
 
 --- mk-1st.awk.orig	2014-12-20 23:54:22.000000000 +0000
 +++ mk-1st.awk
-@@ -447,7 +447,7 @@ END	{
+@@ -67,6 +67,9 @@ function is_termlib() {
+ 	}
+ # see lib_name
+ function lib_name_of(a_name) {
++	if (a_name == "form" || a_name == "panel" || a_name == "menu" || a_name == "formw" || a_name == "panelw" || a_name == "menuw")
++		return sprintf("%sgnu%s%s", prefix, a_name, suffix)
++	else
+ 		return sprintf("%s%s%s", prefix, a_name, suffix)
+ 	}
+ # see imp_name
+@@ -447,7 +450,7 @@ END	{
  					which_list = "SHLIB_LIST";
  				}
  				printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) $(%s) \\\n", CC_NAME, CC_FLAG;
@@ -11,7 +21,7 @@ $NetBSD: patch-ab,v 1.18 2015/08/17 17:10:32 wiz Exp $
  				printf "\t\t-rpath $(DESTDIR)$(libdir) \\\n";
  				printf "\t\t%s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(%s) $(LDFLAGS)\n", libtool_version, which_list;
  				print  ""
-@@ -471,7 +471,7 @@ END	{
+@@ -471,7 +474,7 @@ END	{
  				printf "\t$(RANLIB) $@\n"
  				if ( host == "vxworks" )
  				{
@@ -20,7 +30,7 @@ $NetBSD: patch-ab,v 1.18 2015/08/17 17:10:32 wiz Exp $
  				}
  				print  ""
  				print  "install \\"
-@@ -517,7 +517,7 @@ END	{
+@@ -517,7 +520,7 @@ END	{
  			print "mostlyclean::"
  			printf "\t-rm -f $(%s_OBJS)\n", OBJS
  			if ( MODEL == "LIBTOOL" ) {
@@ -29,7 +39,7 @@ $NetBSD: patch-ab,v 1.18 2015/08/17 17:10:32 wiz Exp $
  			}
  		}
  		else if ( found == 2 )
-@@ -526,13 +526,13 @@ END	{
+@@ -526,13 +529,13 @@ END	{
  			print "mostlyclean::"
  			printf "\t-rm -f $(%s_OBJS)\n", OBJS
  			if ( MODEL == "LIBTOOL" ) {
