@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.43 2015/12/11 23:33:33 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2016/12/18 11:11:28 hans Exp $
 
-DISTNAME=	simhv39-0
-PKGNAME=	simh-3.9.0
-PKGREVISION=	4
+DISTNAME=	simh-4.0.0
+PKGNAME=	simh-4.0.0.20161218
 CATEGORIES=	emulators
-MASTER_SITES=	http://simh.trailing-edge.com/sources/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
+GITHUB_PROJECT=	simh
+GITHUB_TAG=	7964e2b72d9cad0309afa7da08dd7e5e2336cd37
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
@@ -15,11 +15,10 @@ USE_TOOLS+=	gmake
 
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9
 
-WRKSRC=			${WRKDIR}
-
 .include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_TRANSFORM+=	rm:-flto
+BUILDLINK_TRANSFORM+=	rm:-fwhole-program
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_TRANSFORM+=	rm:-O2
@@ -30,10 +29,24 @@ BUILDLINK_TRANSFORM+=	rm:-O2
 CFLAGS+=	-fforce-addr
 .endif
 
+CFLAGS.SunOS+=	-DBSD_COMP
+LDFLAGS.SunOS+=	-lm
+
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
 MAKE_FILE=		makefile
-MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
+INCLUDES=		${PREFIX:Q}/include:\
+			${BUILDLINK_PREFIX.SDL_ttf:Q}/include/SDL:\
+			${BUILDLINK_PREFIX.libpcap:Q}/include/pcap:\
+			${BUILDLINK_PREFIX.pcre:Q}/include/pcre:\
+			${BUILDLINK_PREFIX.png:Q}/include
+LIBRARIES=		${PREFIX:Q}/lib:\
+			${BUILDLINK_PREFIX.SDL_ttf:Q}/lib${LIBABISUFFIX}:\
+			${BUILDLINK_PREFIX.libpcap:Q}/lib${LIBABISUFFIX}:\
+			${BUILDLINK_PREFIX.pcre:Q}/lib${LIBABISUFFIX}:\
+			${BUILDLINK_PREFIX.png:Q}/lib${LIBABISUFFIX}
+MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
+MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
 MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q} CFLAGS_O=${CFLAGS:Q}
 
@@ -53,6 +66,11 @@ do-install:
 		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)
 
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
