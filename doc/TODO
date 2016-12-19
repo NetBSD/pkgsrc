@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16802 2016/12/18 21:12:58 tnn Exp $
+$NetBSD: TODO,v 1.16803 2016/12/19 08:45:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -509,7 +509,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cheese-3.16.1
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
-	o chromaprint-1.4.1
 	o chromium-bsu-0.9.16.1
 	o chrony-2.3
 	o cim-5.1
