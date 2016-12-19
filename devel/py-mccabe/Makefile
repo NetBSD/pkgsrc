@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/09/08 06:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/12/19 09:01:48 wiz Exp $
 
-DISTNAME=	mccabe-0.5.2
+DISTNAME=	mccabe-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mccabe/}
