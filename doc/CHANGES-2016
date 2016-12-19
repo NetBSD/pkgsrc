@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5095 2016/12/19 09:33:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5096 2016/12/19 09:34:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7085,3 +7085,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/wireshark to 2.2.3 [wiz 2016-12-19]
 	Updated audio/musicpd to 0.19.21 [wiz 2016-12-19]
 	Updated security/p5-IO-Socket-SSL to 2.040 [wiz 2016-12-19]
+	Updated devel/p5-Test-Simple to 1.302071 [wiz 2016-12-19]
