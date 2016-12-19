@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/12 10:15:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/12/19 08:45:43 wiz Exp $
 bin/fpcalc
 include/chromaprint.h
 lib/libchromaprint.so
 lib/libchromaprint.so.1
-lib/libchromaprint.so.${PKGVERSION}.0
+lib/libchromaprint.so.${PKGVERSION}
 lib/pkgconfig/libchromaprint.pc
