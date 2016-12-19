@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/09/28 10:00:27 kamil Exp $
+# $NetBSD: Makefile,v 1.33 2016/12/19 13:34:53 joerg Exp $
 
 DISTNAME=		cint-5.16.19-source
 PKGNAME=		${DISTNAME:S/-source//}
@@ -36,6 +36,11 @@ BUILDLINK_PASSTHRU_DIRS+=	${PREFIX}/cint/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/cint/lib
 
 BUILD_TARGET=			# empty string required (override "all")
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+MAKE_ENV+=		CFLAGS_NO_RETURN_TYPE=-Wno-error=return-type
+.endif
 
 INSTALLATION_DIRS+=	bin cint cint/lib share/doc/cint
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man2 ${PKGMANDIR}/man3

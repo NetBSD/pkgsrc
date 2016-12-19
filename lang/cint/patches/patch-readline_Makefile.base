@@ -1,0 +1,13 @@
+$NetBSD: patch-readline_Makefile.base,v 1.1 2016/12/19 13:34:53 joerg Exp $
+
+--- readline/Makefile.base.orig	2015-09-21 17:55:28.000000000 +0000
++++ readline/Makefile.base
+@@ -46,7 +46,7 @@ READLINE_DEFINES = $(TYPES) -DVI_MODE 
+ # DEBUG_FLAGS = -O
+ DEBUG_FLAGS = $(OPTIMIZE)
+ LDFLAGS = $(DEBUG_FLAGS) 
+-CFLAGS = $(DEBUG_FLAGS) $(USG) -I.
++CFLAGS = $(DEBUG_FLAGS) $(USG) -I. ${CFLAGS_NO_RETURN_TYPE}
+ 
+ # A good alternative is gcc -traditional.
+ #CC = gcc -traditional
