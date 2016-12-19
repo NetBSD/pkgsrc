@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/08/13 00:07:44 wen Exp $
+$NetBSD: distinfo,v 1.5 2016/12/19 09:01:48 wiz Exp $
 
-SHA1 (mccabe-0.5.2.tar.gz) = 14c5b2794cae2a723cdf4ce520c4e0d8cae62986
-RMD160 (mccabe-0.5.2.tar.gz) = 43fe80fdee73e224c8f5a4ae582266f2daf597c8
-SHA512 (mccabe-0.5.2.tar.gz) = 08dbfadc4d270e5fe58492536a27d9008efd61c77aac817b2d77b9b4510cccb41e76e1e016ff1228ebe3ac6ea1cc6ce396601f6a692388e981ddba2549288e01
-Size (mccabe-0.5.2.tar.gz) = 8366 bytes
+SHA1 (mccabe-0.5.3.tar.gz) = d638c0720f7b87feae6577294ca48d4dc41946c6
+RMD160 (mccabe-0.5.3.tar.gz) = b17e1b6a49591e4d9e6f4385c3fa9cb00eb0e8a9
+SHA512 (mccabe-0.5.3.tar.gz) = c1985deb9c8067948430b553bf28b06e2db32c45e765b7d1733cfd4526c4829572240f809d0f661bc1ba593687d7c1596446d53bbef3a670aa1c4b3492076deb
+Size (mccabe-0.5.3.tar.gz) = 8460 bytes
