@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5089 2016/12/19 09:01:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5090 2016/12/19 09:03:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7079,3 +7079,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-cryptography to 1.7.1 [wiz 2016-12-19]
 	Updated devel/py-dulwich to 0.15.0 [wiz 2016-12-19]
 	Updated devel/py-mccabe to 0.5.3 [wiz 2016-12-19]
+	Updated devel/py-setuptools to 32.1.0 [wiz 2016-12-19]
