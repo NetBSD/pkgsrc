@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.55 2016/12/17 13:39:41 rillig Exp $
+# $NetBSD: Makefile,v 1.56 2016/12/19 15:43:42 asau Exp $
 
 PKGNAME=	racket-6.7
-DISTNAME=	${PKGNAME_NOREV}-src
+DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
-MASTER_SITES_PLT=	http://download.racket-lang.org/installers/${PKGVERSION_NOREV}/ \
-		http://www.eecs.northwestern.edu/racket/${PKGVERSION_NOREV}/ \
-		http://www.cs.utah.edu/plt/installers/${PKGVERSION_NOREV}/ \
-		http://mirror.informatik.uni-tuebingen.de/mirror/racket/${PKGVERSION_NOREV}/ \
-		ftp://infogroep.be/pub/racket/installers/${PKGVERSION_NOREV}/
+MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
+		http://www.eecs.northwestern.edu/racket/$(PKGVERSION_NOREV)/ \
+		http://www.cs.utah.edu/plt/installers/$(PKGVERSION_NOREV)/ \
+		http://mirror.informatik.uni-tuebingen.de/mirror/racket/$(PKGVERSION_NOREV)/ \
+		ftp://infogroep.be/pub/racket/installers/$(PKGVERSION_NOREV)/
 # Pre-release:
 #MASTER_SITES_PLT=	http://pre-release.racket-lang.org/installers/
-MASTER_SITES=	${MASTER_SITES_PLT}
+MASTER_SITES=	$(MASTER_SITES_PLT)
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	asau@inbox.ru
@@ -20,7 +20,7 @@ LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-textual-[0-9]*
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		$(WRKDIR)/$(PKGNAME_NOREV)
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	src
@@ -47,8 +47,8 @@ REPLACE_RACKET+=	share/pkgs/racket-doc/ffi/examples/${f}
 
 REPLACE_INTERPRETER+=	racket
 REPLACE.racket.old=	.*racket
-REPLACE.racket.new=	${LOCALBASE}/bin/racket
-REPLACE_FILES.racket=	${REPLACE_RACKET}
+REPLACE.racket.new=	$(LOCALBASE)/bin/racket
+REPLACE_FILES.racket=	$(REPLACE_RACKET)
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
