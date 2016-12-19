@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:29:37 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/12/19 13:33:43 joerg Exp $
 
 SHA1 (ucommon-6.3.1.tar.gz) = 82db4fda4b11589b0b02a2afb07a4f675edacfb9
 RMD160 (ucommon-6.3.1.tar.gz) = b58ac6dcd7b5e88fdc2e38703cddc9afd17175bf
@@ -7,4 +7,5 @@ Size (ucommon-6.3.1.tar.gz) = 830661 bytes
 SHA1 (patch-commoncpp_tcp.cpp) = 312c1b4ee234852dcecb0ba2fbdf8813e7ca1704
 SHA1 (patch-commoncpp_udp.cpp) = 34607048d74a0c0142334179e43f481aa4affab7
 SHA1 (patch-configure) = 13335dcb186aa37a12e8dafcf64c077ccc543819
+SHA1 (patch-inc_ucommon_thread.h) = 7e90ba09c05e2d1e41525eb078add93746bf8a2d
 SHA1 (patch-utils_keywait.cpp) = 003bc190393f0b1c3e052605136ef9cf50bddc40
