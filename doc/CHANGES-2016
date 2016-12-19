@@ -1,4 +1,6 @@
-$NetBSD: CHANGES-2016,v 1.5097 2016/12/19 10:19:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5098 2016/12/19 12:47:29 wiz Exp $
+
+PKGSRC FREEZE IS ON!
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7087,3 +7089,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-IO-Socket-SSL to 2.040 [wiz 2016-12-19]
 	Updated devel/p5-Test-Simple to 1.302071 [wiz 2016-12-19]
 	Updated finance/gnucash to 2.6.15 [wiz 2016-12-19]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q4 branch [wiz 2016-12-19]
