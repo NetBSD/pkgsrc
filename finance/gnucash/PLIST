@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2016/08/30 04:13:13 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.62 2016/12/19 10:19:22 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -897,7 +897,6 @@ share/gnucash/gtkbuilder/dialog-userpass.glade
 share/gnucash/gtkbuilder/dialog-vendor.glade
 share/gnucash/gtkbuilder/gnc-date-format.glade
 share/gnucash/gtkbuilder/gnc-frequency.glade
-${PLIST.ofx}share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/gtkbuilder/gnc-plugin-page-budget.glade
 share/gnucash/gtkbuilder/gnc-plugin-page-register.glade
 share/gnucash/gtkbuilder/gnc-plugin-page-register2.glade
@@ -944,6 +943,8 @@ share/gnucash/pixmaps/gnc-account-new-16.png
 share/gnucash/pixmaps/gnc-account-new.png
 share/gnucash/pixmaps/gnc-account-open-16.png
 share/gnucash/pixmaps/gnc-account-open.png
+share/gnucash/pixmaps/gnc-account-report-16.png
+share/gnucash/pixmaps/gnc-account-report.png
 share/gnucash/pixmaps/gnc-account.png
 share/gnucash/pixmaps/gnc-gnome-pdf-16.png
 share/gnucash/pixmaps/gnc-gnome-pdf-24.png
@@ -1131,6 +1132,7 @@ share/gnucash/ui/gnc-plugin-csv-import-ui.xml
 share/gnucash/ui/gnc-plugin-customer_import-ui.xml
 share/gnucash/ui/gnc-plugin-file-history-ui.xml
 share/gnucash/ui/gnc-plugin-log-replay-ui.xml
+${PLIST.ofx}share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree2-ui.xml
 share/gnucash/ui/gnc-plugin-page-budget-ui.xml
