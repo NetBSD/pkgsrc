@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5100 2016/12/20 08:55:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5101 2016/12/20 08:57:02 wiz Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7092,3 +7092,4 @@ Changes to the packages collection and infrastructure in 2016:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q4 branch [wiz 2016-12-19]
 	Updated devel/py-tortoisehg to 4.0.1 [wiz 2016-12-20]
 	Updated x11/xf86-video-qxl to 0.1.5 [wiz 2016-12-20]
+	Updated meta-pkgs/modular-xorg-drivers to 1.19.0nb2 [wiz 2016-12-20]
