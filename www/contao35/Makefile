@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/11/16 16:29:34 taca Exp $
+# $NetBSD: Makefile,v 1.20 2016/12/20 21:08:29 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -23,7 +23,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERSION=	3.5.19
+CT_VERSION=	3.5.20
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 FILESDIR?=	${.CURDIR}/files
@@ -66,6 +66,8 @@ REPLACE_FILES.php=	system/bin/automator system/bin/filesync \
     system/bin/ide_compat system/bin/txpurge system/bin/version \
     vendor/bin/lessc vendor/bin/minifycss vendor/bin/minifyjs \
     vendor/bin/pscss vendor/leafo/scssphp/bin/pscss \
+    vendor/matthiasmullie/minify/bin/minifycss \
+    vendor/matthiasmullie/minify/bin/minifyjs \
     vendor/oyejorge/less.php/bin/lessc \
     vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php \
     vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
@@ -88,6 +90,12 @@ PKG_USERS_VARS+=	APACHE_USER
 
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
+	${CHMOD} -x \
+	    ${WRKSRC}/vendor/oyejorge/less.php/lib/Less/Less.php.combine \
+	    ${WRKSRC}/vendor/simplepie/simplepie/.travis.yml \
+	    ${WRKSRC}/vendor/simplepie/simplepie/library/SimplePie.php \
+	    ${WRKSRC}/vendor/simplepie/simplepie/library/SimplePie/Cache/Memcached.php \
+	    ${WRKSRC}/vendor/simplepie/simplepie/library/SimplePie/Registry.php
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
