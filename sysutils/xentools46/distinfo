@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2016/11/22 20:59:01 bouyer Exp $
+$NetBSD: distinfo,v 1.3 2016/12/20 10:22:29 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -23,6 +23,7 @@ SHA1 (patch-Rules.mk) = ec0af52c494718204f15adac30ddd06713ff572c
 SHA1 (patch-XSA-197-1) = 4d373d23cd7032cc505300d865b6eaa8e80e2290
 SHA1 (patch-XSA-197-2) = 3dc303f22d0744f64eb4552f4de10fc11f32bb01
 SHA1 (patch-XSA-198) = 5a61b6b4af265ba0b90d5750166924daafe554d7
+SHA1 (patch-XSA-199) = 481c740d36a5b8415275c4b1152bb7e2a45349a1
 SHA1 (patch-configure) = a58d149de07613fb03444234278778a6a24b9b26
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
