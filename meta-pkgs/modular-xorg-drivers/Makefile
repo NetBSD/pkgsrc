@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2016/12/07 22:00:44 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/12/20 08:56:52 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -64,8 +64,7 @@ DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 DEPENDS+=	xf86-video-nouveau-[0-9]*:../../x11/xf86-video-nouveau
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
 DEPENDS+=	xf86-video-openchrome-[0-9]*:../../x11/xf86-video-openchrome
-# broken with modular-xorg-server-1.19.0
-#DEPENDS+=	xf86-video-qxl-[0-9]*:../../x11/xf86-video-qxl
+DEPENDS+=	xf86-video-qxl-[0-9]*:../../x11/xf86-video-qxl
 DEPENDS+=	xf86-video-r128-[0-9]*:../../x11/xf86-video-r128
 DEPENDS+=	xf86-video-rendition-[0-9]*:../../x11/xf86-video-rendition
 DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
