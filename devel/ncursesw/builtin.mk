@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2016/12/18 23:30:34 joerg Exp $
+# $NetBSD: builtin.mk,v 1.13 2016/12/20 15:06:52 joerg Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -121,6 +121,15 @@ BUILDLINK_CPPFLAGS.ncursesw+=	-DHAVE_WCHAR=1
 BUILDLINK_TRANSFORM+=		l:formw:gnuformw
 BUILDLINK_TRANSFORM+=		l:panelw:gnupanelw
 BUILDLINK_TRANSFORM+=		l:menuw:gnumenuw
+
+.PHONY: buildlink-ncursesw-fake-libs
+buildlink-ncursesw-fake-libs:
+	${RUN}								\
+	for f in form panel menu; do					\
+		${ECHO_BUILDLINK_MSG} "Touching fake ncurses library ($$f)"; \
+		${TOUCH} ${TOUCH_FLAGS} "$BUILDLINK_DIR/lib/lib$${f}w.a"; \
+	done
+BUILDLINK_TARGET+=	buildlink-ncursesw-fake-libs
 .  endif
 
 # According to the ncurses(3) manual page, applications that want to use
