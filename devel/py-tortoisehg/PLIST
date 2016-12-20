@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2016/11/08 08:19:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/12/20 08:53:22 wiz Exp $
 bin/thg
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgext3rd/thg.py
 ${PYSITELIB}/hgext3rd/thg.pyc
 ${PYSITELIB}/hgext3rd/thg.pyo
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
 ${PYSITELIB}/tortoisehg/__init__.pyc
 ${PYSITELIB}/tortoisehg/__init__.pyo
@@ -444,11 +444,12 @@ share/doc/tortoisehg/html/_static/basic.css
 share/doc/tortoisehg/html/_static/comment-bright.png
 share/doc/tortoisehg/html/_static/comment-close.png
 share/doc/tortoisehg/html/_static/comment.png
+share/doc/tortoisehg/html/_static/custom.css
 share/doc/tortoisehg/html/_static/doctools.js
 share/doc/tortoisehg/html/_static/down-pressed.png
 share/doc/tortoisehg/html/_static/down.png
 share/doc/tortoisehg/html/_static/file.png
-share/doc/tortoisehg/html/_static/jquery-1.11.1.js
+share/doc/tortoisehg/html/_static/jquery-3.1.0.js
 share/doc/tortoisehg/html/_static/jquery.js
 share/doc/tortoisehg/html/_static/minus.png
 share/doc/tortoisehg/html/_static/plus.png
