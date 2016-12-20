@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5102 2016/12/20 10:25:04 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.5103 2016/12/20 21:07:19 taca Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7101,3 +7101,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel42 to 4.2.5nb14 [bouyer 2016-11-22]
 	Updated sysutils/xentools41 to 4.1.6.1nb18 [bouyer 2016-11-22]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb22 [bouyer 2016-11-22]
+	Updated www/apache24 to 2.4.25 [taca 2016-12-20]
