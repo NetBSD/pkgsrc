@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/12/17 23:28:34 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2016/12/20 22:40:06 tnn Exp $
 
 DISTNAME=	llvm-3.9.0.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -109,6 +109,11 @@ PLIST_SUBST+=	LLVM_LIBNAME=${LLVM_LIBNAME}
 # At least LLVM 3.9.0 and subprojects don't correctly add C++11 flags
 # automatically.
 CXXFLAGS+=	-std=c++11
+
+# needs std::atomic with 64-bit CAS
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=	-march=i586
+.endif
 
 # replacing config.guess is required even for cmake.
 # It is used to detect correct LLVM_HOST_TRIPLE, e.g. for NetBSD/evbarm.
