@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5098 2016/12/19 12:47:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5099 2016/12/20 08:53:37 wiz Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7090,3 +7090,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Simple to 1.302071 [wiz 2016-12-19]
 	Updated finance/gnucash to 2.6.15 [wiz 2016-12-19]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q4 branch [wiz 2016-12-19]
+	Updated devel/py-tortoisehg to 4.0.1 [wiz 2016-12-20]
