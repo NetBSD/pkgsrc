@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/12/20 10:22:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.42 2016/12/20 18:15:10 gdt Exp $
 
 VERSION=	4.5.5
 PKGREVISION=	2
@@ -27,8 +27,8 @@ DEPENDS+=   ${PYPKGPREFIX}-curses>=0:../../devel/py-curses
 
 PKG_SYSCONFSUBDIR=	xen
 
-ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
+ONLY_FOR_PLATFORM=	Linux-2.6*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
