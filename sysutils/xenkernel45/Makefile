@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/12/20 10:22:28 bouyer Exp $
+# $NetBSD: Makefile,v 1.25 2016/12/20 18:15:09 gdt Exp $
 
 VERSION=	4.5.5
 DISTNAME=	xen-${VERSION}
@@ -13,8 +13,8 @@ COMMENT=	Xen 4.5.x Kernel
 
 LICENSE=	gnu-gpl-v2
 
-ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
+ONLY_FOR_PLATFORM=	Linux-2.6*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
