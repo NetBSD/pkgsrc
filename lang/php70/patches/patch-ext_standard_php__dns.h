@@ -1,4 +1,4 @@
-$NetBSD: patch-ext_standard_php__dns.h,v 1.2 2016/05/02 13:09:49 taca Exp $
+$NetBSD: patch-ext_standard_php__dns.h,v 1.3 2016/12/20 07:22:19 maya Exp $
 
 Fix memory leak.
 
@@ -12,7 +12,7 @@ Fix memory leak.
  #define php_dns_free_handle(res) \
 -			res_nclose(res); \
 +                        res_nclose(res); \
-+                        php_dns_free_res(*res)
++                        php_dns_free_res(res)
 +#else
 +#define php_dns_free_handle(res) \
 +			res_ndestroy(res); \
