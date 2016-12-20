@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/10/25 16:27:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/12/20 21:08:29 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -3259,6 +3259,7 @@ ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/MarkdownInterface.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Readme.md
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Readme.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/composer.json
+${CT_WEBDIR}/vendor/oyejorge/less.php/.gitattributes
 ${CT_WEBDIR}/vendor/oyejorge/less.php/.gitignore
 ${CT_WEBDIR}/vendor/oyejorge/less.php/CHANGES.md
 ${CT_WEBDIR}/vendor/oyejorge/less.php/LICENSE
@@ -3387,6 +3388,7 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Sanitize.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Source.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/XML/Declaration/Parser.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/gzdecode.php
+${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitattributes
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitignore
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.travis.yml
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/CHANGES
