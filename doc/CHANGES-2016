@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5101 2016/12/20 08:57:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5102 2016/12/20 10:25:04 bouyer Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7093,3 +7093,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-tortoisehg to 4.0.1 [wiz 2016-12-20]
 	Updated x11/xf86-video-qxl to 0.1.5 [wiz 2016-12-20]
 	Updated meta-pkgs/modular-xorg-drivers to 1.19.0nb2 [wiz 2016-12-20]
+	Updated sysutils/xentools46 to 4.6.3nb3 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel46 to 4.6.3nb3 [bouyer 2016-11-22]
+	Updated sysutils/xentools45 to 4.5.5nb2 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel45 to 4.5.5nb2 [bouyer 2016-11-22]
+	Updated sysutils/xentools42 to 4.2.5nb20 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel42 to 4.2.5nb14 [bouyer 2016-11-22]
+	Updated sysutils/xentools41 to 4.1.6.1nb18 [bouyer 2016-11-22]
+	Updated sysutils/xenkernel41 to 4.1.6.1nb22 [bouyer 2016-11-22]
