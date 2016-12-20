@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/12/20 10:22:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/20 17:24:58 bouyer Exp $
 
 VERSION=	4.6.3
 VERSION_IPXE=	9a93db3f0947484e30e753bbd61a10b17336e20e
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools46-${VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://bits.xensource.com/oss-xen/release/${VERSION}/
 
