@@ -1,0 +1,9 @@
+amavisd-milter is a sendmail milter (mail filter) for amavisd-new
+2.4.3 or and sendmail 8.13 and above (limited support for sendmail
+8.12 is provided) which use the new AM.PDP protocol.
+
+Instead of older amavis-milter helper program, full amavisd-new
+functionality is available, including adding spam and virus
+information header fields, modifying Subject, adding address
+extensions and removing certain recipients from delivery while
+delivering the same message to the rest.
