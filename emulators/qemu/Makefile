@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2016/10/30 14:48:00 spz Exp $
+# $NetBSD: Makefile,v 1.157 2016/12/21 10:39:15 bsiegert Exp $
 
 DISTNAME=	qemu-2.7.0
 CATEGORIES=	emulators
@@ -37,6 +37,9 @@ CONFIGURE_ARGS+=	--enable-curses
 #HF#CONFIGURE_ARGS+=	--disable-fdt			# HF: build on OS X
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
+
+# Parallel build fails on NetBSD/amd64
+MAKE_JOBS_SAFE=		no
 
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
