@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5106 2016/12/21 00:54:00 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.5107 2016/12/21 10:07:51 wiz Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7105,3 +7105,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao35 to 3.5.20 [taca 2016-12-20]
 	Updated devel/nss to 3.27.2nb2 [ryoon 2016-12-20]
 	Updated www/ikiwiki to 3.20161219 [schmonz 2016-12-21]
+	Updated www/curl to 7.52.0 [wiz 2016-12-21]
