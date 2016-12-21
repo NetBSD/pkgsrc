@@ -1,0 +1,19 @@
+$NetBSD: patch-gcc-4.6.4_gcc_doc_gcc.texi,v 1.1 2016/12/21 13:34:16 joerg Exp $
+
+--- gcc-4.6.4/gcc/doc/gcc.texi.orig	2016-12-18 13:29:14.205349877 +0000
++++ gcc-4.6.4/gcc/doc/gcc.texi
+@@ -84,11 +84,11 @@ This file documents the use of the GNU c
+ Published by:
+ @multitable @columnfractions 0.5 0.5
+ @item GNU Press
+-@tab Website: www.gnupress.org
++@tab Website: @uref{http://www.gnupress.org}
+ @item a division of the
+-@tab General: @tex press@@gnu.org @end tex
++@tab General: @email{press@@gnu.org}
+ @item Free Software Foundation
+-@tab Orders:  @tex sales@@gnu.org @end tex
++@tab Orders:  @email{sales@@gnu.org}
+ @item 51 Franklin Street, Fifth Floor
+ @tab Tel 617-542-5942
+ @item Boston, MA 02110-1301 USA
