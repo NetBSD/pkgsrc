@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5108 2016/12/21 15:38:50 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.5109 2016/12/21 22:46:07 wiz Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7110,3 +7110,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel45 to 4.5.5nb3 [bouyer 2016-12-21]
 	Updated sysutils/xenkernel42 to 4.2.5nb15 [bouyer 2016-12-21]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb23 [bouyer 2016-12-21]
+	Updated net/syncthing to 0.14.16 [wiz 2016-12-21]
