@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/02/19 20:32:04 khorben Exp $
+# $NetBSD: Makefile,v 1.16 2016/12/22 12:11:32 maya Exp $
 #
 
 DISTNAME=	libSystem-0.3.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS core system library
 
 LICENSE=	gnu-lgpl-v3
+
+LDFLAGS.Linux+=	-ldl
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
