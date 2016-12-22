@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2015/11/03 01:12:26 agc Exp $
+$NetBSD: distinfo,v 1.22 2016/12/22 20:58:40 joerg Exp $
 
 SHA1 (bmpx-0.40.14.tar.bz2) = 3284843c45cab302f414663a5cb31eb4373d07c7
 RMD160 (bmpx-0.40.14.tar.bz2) = 12a9939d53b58a43ee9deefa43188ac6b33dae72
@@ -18,6 +18,7 @@ SHA1 (patch-ak) = 10a363145c7e9f75e07ca69fc38515413fc606f8
 SHA1 (patch-library_cc) = 26cbced97d7669081eb4ff60c062a34c258c7337
 SHA1 (patch-mcs_gtk-bind.h) = e9417364df34f8baea6b279b5bc1d1b4ba0d966a
 SHA1 (patch-plugins_vfs_container_libcontainer__folder.cc) = 0a179855b59fc382de68c6cbfc02cf3695dc7a8e
+SHA1 (patch-src_amazon.cc) = b8e275f034686b39d8eb15c97ce0295fd9559d42
 SHA1 (patch-src_debug.cc) = f951e16a43f7d6fed4e806486bb6c8bc6f13ca89
 SHA1 (patch-src_debug.hh) = 58d86f34785d566262b95834cd784b064b47247f
 SHA1 (patch-src_dialog-progress_hh) = cfb3caa62cbca65bc6e8c70543ad20d857f45ce5
