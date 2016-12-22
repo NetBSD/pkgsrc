@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/12/22 17:52:43 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/22 23:52:02 kamil Exp $
 
 GITHUB_PROJECT=	TerminatorPlugins
-DISTNAME=	${PYPKGPREFIX}-terminator-plugins-1.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	terminator-plugins-1.0
 CATEGORIES=	python x11
 MASTER_SITES=	${MASTER_SITE_GITHUB:=camillo/}
 
