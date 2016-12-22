@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5110 2016/12/22 14:15:57 kivinen Exp $
+$NetBSD: CHANGES-2016,v 1.5111 2016/12/22 17:57:50 kamil Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7112,3 +7112,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel41 to 4.1.6.1nb23 [bouyer 2016-12-21]
 	Updated net/syncthing to 0.14.16 [wiz 2016-12-21]
 	Added mail/amavisd-milter version 1.6.1nb1 [kivinen 2016-12-21]
+	Added x11/py-terminator-plugins version 1.0 [kamil 2016-12-22]
