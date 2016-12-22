@@ -1,0 +1,9 @@
+Plugins for terminator
+
+Following plugins are included, yet:
+- LayoutManager
+  Saves and restores Layouts, plus some extra functions for custom commands.
+
+- TerminalExporter
+  Exports full terminal (including buffer) into file.
+  Allows to log terminal's action into file.
