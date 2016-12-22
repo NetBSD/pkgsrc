@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2016/12/22 10:03:07 maya Exp $
+# $NetBSD: Makefile,v 1.43 2016/12/22 11:59:36 maya Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -23,7 +23,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
-USE_LANGUAGES+=		c c++
+USE_LANGUAGES+=		c
 USE_TOOLS+=		gmake makeinfo sed:run perl
 GCC_REQD+=		4.4
 
