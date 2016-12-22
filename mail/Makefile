@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.483 2016/10/27 12:33:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.484 2016/12/22 14:15:57 kivinen Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -11,6 +11,7 @@ SUBDIR+=	YoSucker
 SUBDIR+=	akonadi
 SUBDIR+=	alpine
 SUBDIR+=	amavis-perl
+SUBDIR+=	amavisd-milter
 SUBDIR+=	amavisd-new
 SUBDIR+=	anomy-sanitizer
 SUBDIR+=	archivemail
