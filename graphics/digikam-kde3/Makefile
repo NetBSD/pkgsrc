@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/12/04 05:17:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.53 2016/12/22 21:03:50 joerg Exp $
 
 DISTNAME=		digikam-0.9.6
 PKGREVISION=		47
@@ -41,5 +41,8 @@ BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.2
 BUILDLINK_API_DEPENDS.libkexiv2+=	libkexiv2>=0.1.6
 BUILDLINK_API_DEPENDS.libkdcraw+=	libkdcraw>=0.1.6
+
+# jasper uses SIZE_MAX and friends in its headers.
+CPPFLAGS+=	-D__STDC_LIMIT_MACROS
 
 .include "../../mk/bsd.pkg.mk"
