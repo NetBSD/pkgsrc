@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/12/22 12:11:32 maya Exp $
+# $NetBSD: Makefile,v 1.17 2016/12/22 12:51:16 maya Exp $
 #
 
 DISTNAME=	libSystem-0.3.0
@@ -9,16 +9,13 @@ MASTER_SITES=	http://www.defora.org/os/download/download/4392/
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS core system library
-
 LICENSE=	gnu-lgpl-v3
-
-LDFLAGS.Linux+=	-ldl
 
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	INSTALL=${INSTALL}
+MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -34,6 +31,8 @@ post-install:
 
 REPLACE_SH=	tests/tests.sh
 
+DL_AUTO_VARS=	yes
+.include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.20
 .include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
