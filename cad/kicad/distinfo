@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2016/09/21 13:16:06 bouyer Exp $
+$NetBSD: distinfo,v 1.7 2016/12/22 21:01:21 joerg Exp $
 
 SHA1 (kicad-4.0.4.tar.xz) = d0a124218f91cd40958ca0d68f8fe1f36d368cc3
 RMD160 (kicad-4.0.4.tar.xz) = 563b5168bd94b8c4a34f720fdb60e677c75f75fe
@@ -18,6 +18,7 @@ SHA1 (patch-eeschema_sch_component.cpp) = 7b3363a917e408327061f313e7cce8f77f0977
 SHA1 (patch-eeschema_sch_sheet.cpp) = 83dd03910b1a7f78f46d3fc591bf5ec2670f2ce4
 SHA1 (patch-gerbview_CMakeLists.txt) = 817f7fa3f27e77e42d37e0df4fab1525cfb35053
 SHA1 (patch-include-kicad_string.h) = 16f2db87cab7716171360220a6c41d9a8ee5b8d1
+SHA1 (patch-include_common.h) = 10395bb76634e43a7b4c7cf7f27c44c794793589
 SHA1 (patch-include_hashtables.h) = 4b26adef481406b61c1c9cf660f69847aa76142d
 SHA1 (patch-include_kiway.h) = b8438a192222a4d70266ac612552fd0c76d2867c
 SHA1 (patch-include_tool_coroutine.h) = 635534de04d268a5718ec21e4f86c7dd20f1ffe1
