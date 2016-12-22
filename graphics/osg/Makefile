@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2016/10/09 21:41:59 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2016/12/22 11:37:33 joerg Exp $
 
 DISTNAME=	OpenSceneGraph-3.0.1
 PKGNAME=	osg-3.0.1
@@ -23,6 +23,9 @@ CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
 PLIST_VARS+=	quartz x11
 
 .include "../../mk/bsd.prefs.mk"
+
+# jasper uses SIZE_MAX and friends in its headers.
+CXXFLAGS+=	-D__STDC_LIMIT_MACROS
 
 .if ${OPSYS} == "Darwin"
 PLIST.quartz=	yes
