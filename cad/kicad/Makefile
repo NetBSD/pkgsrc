@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2016/10/07 18:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/12/22 21:01:21 joerg Exp $
 #
 
 V=		4.0.4
 DISTNAME=	kicad-${V}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	https://launchpad.net/kicad/4.0/${V}/+download/
 EXTRACT_SUFX=	.tar.xz
