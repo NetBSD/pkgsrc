@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2015/11/03 21:33:56 agc Exp $
+$NetBSD: distinfo,v 1.27 2016/12/22 21:04:31 joerg Exp $
 
 SHA1 (exiv2-0.25.tar.gz) = adb8ffe63916e7c27bda9792e690d1330ec7273d
 RMD160 (exiv2-0.25.tar.gz) = 2f43f8737dad9ffd7d5759ef4dd9688658125794
@@ -7,6 +7,7 @@ Size (exiv2-0.25.tar.gz) = 5434325 bytes
 SHA1 (patch-aa) = 947061d168d5db0d9969fa91ef837b364c641fcb
 SHA1 (patch-configure) = 39d6589dc82315d7a2bffeb332c21b6f54d69cf1
 SHA1 (patch-contrib_organize_Makefile) = de74227211b79e49126178f27391831507c2948f
+SHA1 (patch-contrib_organize_helpers.cpp) = ec003c826d463b3e7e571ab4c41baffaca1240e9
 SHA1 (patch-src_Makefile) = 09c51b7da85584aece0147b446bff27ebc7f549f
 SHA1 (patch-src_http.cpp) = 75a64b80c37c54c0f65cc8455bd730ae01df0bae
 SHA1 (patch-src_svn_version.sh) = a80e142ab14ba4f5aad62936c5b5375d2a9b4b58
