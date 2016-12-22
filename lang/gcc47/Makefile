@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/10/31 04:10:38 dholland Exp $
+# $NetBSD: Makefile,v 1.42 2016/12/22 10:03:07 maya Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -23,6 +23,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
+USE_LANGUAGES+=		c c++
 USE_TOOLS+=		gmake makeinfo sed:run perl
 GCC_REQD+=		4.4
 
@@ -47,7 +48,7 @@ SUBST_VARS.vars=	GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
 
-LANGS=			c c++
+LANGS=			c
 
 # In some cases LINKER_RPATH_FLAG needs a trailing space.
 LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
