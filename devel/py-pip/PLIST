@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/11/06 00:32:12 wen Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/12/23 19:12:38 jdolecek Exp $
 bin/pip${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -232,6 +232,8 @@ ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/dom.py
 ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/dom.pyc
 ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/dom.pyo
 ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/etree.py
+${PYSITELIB}/pip/_vendor/html5lib/treewalkers/etree.pyc
+${PYSITELIB}/pip/_vendor/html5lib/treewalkers/etree.pyo
 ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/etree_lxml.py
 ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/etree_lxml.pyc
 ${PYSITELIB}/pip/_vendor/html5lib/treewalkers/etree_lxml.pyo
