@@ -1,15 +1,7 @@
-$NetBSD: distinfo,v 1.24 2015/11/03 21:33:55 agc Exp $
+$NetBSD: distinfo,v 1.25 2016/12/23 03:38:24 ryoon Exp $
 
-SHA1 (darktable-1.2.3.tar.xz) = dbd7545d1fbb5f67862f62ae39c7e6ba008d1c10
-RMD160 (darktable-1.2.3.tar.xz) = 3148a7f9063c372b3477525cacf518750c88766d
-SHA512 (darktable-1.2.3.tar.xz) = abd01ecadfd54504e90b50181cc84991e623379d003c445134f60c067e35acb93db2cbdb3a4324d8d4545bde84edff116c2241fcf514b372cf57afeb04e6f58f
-Size (darktable-1.2.3.tar.xz) = 2348864 bytes
-SHA1 (patch-aa) = 7b6987512bdac0477ab724ade75785802903dfd8
-SHA1 (patch-cmake_modules_FindFreetype.cmake) = fb69e7a413f455490649d4b2b39cce74408dd332
-SHA1 (patch-cmake_modules_FindGTK2.cmake) = de1273594801ab82da31b624845e0b36a77b53b3
-SHA1 (patch-src_LibRaw_libraw_libraw__alloc.h) = 8227a7180383cd4379313b07ff964bb7fb9ce694
-SHA1 (patch-src_common_imageio__exr.hh) = 8bef7fab739dfdd0688371b08d6f31503eaf04af
-SHA1 (patch-src_common_imageio__rgbe.c) = 5c396754d6dbb7390062e78afde315ee293215d6
-SHA1 (patch-src_develop_blend.c) = de54957d16b8230e05ffd945c50b76d7a13b4936
-SHA1 (patch-src_iop_invert.c) = 6809fcab0e8201e3b773781b6a83c28cbb36b9c5
-SHA1 (patch-src_iop_lens.c) = 28b5462311f778184143152bdef4e59ee18a6a3f
+SHA1 (darktable-2.2.0.rc3.tar.xz) = cd03d0287eda42f69ee946ab123ab4c2d469090c
+RMD160 (darktable-2.2.0.rc3.tar.xz) = 3f98692b30a678b0dbed66ddf013a4de4e495b6f
+SHA512 (darktable-2.2.0.rc3.tar.xz) = 8565c142e8d44dd7627c94b556a6a491269ae26f3a239e4c24372e3d8e149a9ad95099fb5ac1f7bfd331102094db6ea0f5db8a96463ccf8a2749d502dfdfc6fb
+Size (darktable-2.2.0.rc3.tar.xz) = 3262016 bytes
+SHA1 (patch-tools_noise_benchmark.sh) = 204e8348570703ea1356f9ecce641116ee40905b
