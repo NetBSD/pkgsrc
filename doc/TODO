@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16820 2016/12/23 04:11:44 ryoon Exp $
+$NetBSD: TODO,v 1.16821 2016/12/23 23:19:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -951,6 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
 	o keybinder-0.3.1
+	o kid3-3.4.3
 	o kipi-plugins-4.14.0
 	o kismet-2011.03r2 [pkg/45692]
 	o kismet-2013.03R1b
@@ -1166,7 +1167,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openoffice3-3.3
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
-	o openssh-7.3p1
+	o opensource-cobol-1.5.1J [pkg/51738]
+	o openssh-7.4p1
 	o openssl-1.1.0
 	o openvas-libraries-8.0.8
 	o opera-26
