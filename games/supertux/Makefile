@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/10/07 18:25:50 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/12/23 22:28:42 joerg Exp $
 
 DISTNAME=		supertux-0.4.0
 PKGREVISION=		1
@@ -33,5 +33,6 @@ LDFLAGS+=	-L${BUILDLINK_DIR}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_DIR}/lib
 .include "../../audio/SDL2_mixer/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
