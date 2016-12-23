@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.66 2016/12/23 03:38:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2016/12/23 03:53:16 ryoon Exp $
 
-DISTNAME=	darktable-2.2.0.rc3
-PKGNAME=	${DISTNAME:S/.rc/rc/}
+DISTNAME=	darktable-2.0.7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=darktable-org/}
 GITHUB_PROJECT=	darktable
-GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
+GITHUB_RELEASE=	 release-${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.darktable.org/
 COMMENT=	Photography workflow application
 LICENSE=	gnu-gpl-v3
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/.rc/~rc/}
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
