@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2016/12/23 03:38:24 ryoon Exp $
+$NetBSD: distinfo,v 1.26 2016/12/23 03:53:16 ryoon Exp $
 
-SHA1 (darktable-2.2.0.rc3.tar.xz) = cd03d0287eda42f69ee946ab123ab4c2d469090c
-RMD160 (darktable-2.2.0.rc3.tar.xz) = 3f98692b30a678b0dbed66ddf013a4de4e495b6f
-SHA512 (darktable-2.2.0.rc3.tar.xz) = 8565c142e8d44dd7627c94b556a6a491269ae26f3a239e4c24372e3d8e149a9ad95099fb5ac1f7bfd331102094db6ea0f5db8a96463ccf8a2749d502dfdfc6fb
-Size (darktable-2.2.0.rc3.tar.xz) = 3262016 bytes
-SHA1 (patch-tools_noise_benchmark.sh) = 204e8348570703ea1356f9ecce641116ee40905b
+SHA1 (darktable-2.0.7.tar.xz) = c9392af5df0045b36b89c6548b9ff552f34b7e15
+RMD160 (darktable-2.0.7.tar.xz) = 6d9e7bf1507e2e25a3359bc0b853fb62e4078b26
+SHA512 (darktable-2.0.7.tar.xz) = 568db128bdf1d639d387f32a65ea40e0a706f16b6ec0915c9580255c0385033e3d80c3ddf5c15c3f8adccd1f23530f430c9eb28f9d2771f61ae5a5c479726928
+Size (darktable-2.0.7.tar.xz) = 2960436 bytes
+SHA1 (patch-src_develop_blend.c) = d8b5d72fac9544b37e856c57d511423483c14a9b
