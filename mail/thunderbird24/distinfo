@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2016/01/20 22:14:13 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2016/12/23 22:29:59 joerg Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -82,6 +82,7 @@ SHA1 (patch-mozilla_js_src_jit_AsmJSSignalHandlers.cpp) = b269cc99cf2a432ea3511b
 SHA1 (patch-mozilla_js_src_jsapi-tests_Makefile.in) = 040808720c8fdd82e99893dd2b9fe348a026104b
 SHA1 (patch-mozilla_js_src_jscompartment.h) = 0d51fc8b33130eb47c96e73852318ddb57cabc79
 SHA1 (patch-mozilla_js_src_jsmath.cpp) = b02ecb4a64c6b486645ffdf0446430db9e2dcd71
+SHA1 (patch-mozilla_js_src_jsopcode.cpp) = 7a1c093c365de47d11da3326012c3cc55e4a2b67
 SHA1 (patch-mozilla_js_src_shell_Makefile.in) = c417ab32d5793b7a5167b172b2073087a7d4c638
 SHA1 (patch-mozilla_js_src_vm_ObjectImpl-inl.h) = 266dbcfaef9381cbe8491e2f0f5585c139f58fab
 SHA1 (patch-mozilla_js_src_vm_SPSProfiler.cpp) = be1917d701527106ff9e7c9779542d8c08cd4e50
