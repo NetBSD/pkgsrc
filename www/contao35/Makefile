@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/12/20 21:08:29 taca Exp $
+# $NetBSD: Makefile,v 1.21 2016/12/23 23:02:13 joerg Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -22,6 +22,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.4.0:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
+
+# mcrypt is deprecated and removed in PHP 7.1.x
+PHP_VERSIONS_ACCEPTED=	56 70
 
 CT_VERSION=	3.5.20
 USE_TOOLS=	bash pax
