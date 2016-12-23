@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.64 2016/12/04 05:17:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2016/12/23 04:11:03 ryoon Exp $
 
-DISTNAME=	open-vm-tools-10.0.7-3227872
-PKGNAME=	open-vm-tools-10.0.7
-PKGREVISION=	5
+DISTNAME=	open-vm-tools-10.1.0-4449150
+PKGNAME=	open-vm-tools-10.1.0
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/vmware/open-vm-tools/files/133266/
+MASTER_SITES=	https://github.com/vmware/open-vm-tools/files/590760/
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://github.com/vmware/open-vm-tools
@@ -12,6 +11,8 @@ COMMENT=	Open source VMware tools
 LICENSE=	gnu-lgpl-v2.1
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
+
+WRKSRC=		${WRKDIR}/${DISTNAME}/open-vm-tools
 
 GCC_REQD+=	4.8
 CXXFLAGS+=	-std=gnu++11
@@ -42,8 +43,9 @@ RCD_SCRIPTS=			vmtools
 
 SUBST_CLASSES+=			fix-etc-path
 SUBST_STAGE.fix-etc-path=	pre-configure
-SUBST_MESSAGE.fix-etc-path=	Fixing /etc to ${PREFIX}/etc
+SUBST_MESSAGE.fix-etc-path=	Fixing PREFIX
 SUBST_FILES.fix-etc-path+=	lib/guestApp/guestApp.c
+SUBST_FILES.fix-etc-path+=	lib/procMgr/procMgrPosix.c
 SUBST_VARS.fix-etc-path+=	PREFIX
 
 pre-configure:
