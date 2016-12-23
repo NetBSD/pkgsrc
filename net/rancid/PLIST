@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/08/29 07:56:39 pettai Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/12/23 19:31:26 pettai Exp $
 bin/a10login
 bin/agmrancid
 bin/alogin
@@ -72,6 +72,7 @@ lib/rancid/eos.pm
 lib/rancid/exos.pm
 lib/rancid/foundry.pm
 lib/rancid/ios.pm
+lib/rancid/iosshtech.pm
 lib/rancid/iosxr.pm
 lib/rancid/junos.pm
 lib/rancid/mrv.pm
