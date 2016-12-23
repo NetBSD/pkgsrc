@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/02/07 07:31:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2016/12/23 23:02:13 joerg Exp $
 #
 
 DISTNAME=	concrete5.7.5.6
@@ -21,6 +21,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.3:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.3:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.3:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.3:../../converters/php-mbstring
+
+# mcrypt is deprecated and removed in 7.1.x
+PHP_VERSIONS_ACCEPTED=	56 70
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
