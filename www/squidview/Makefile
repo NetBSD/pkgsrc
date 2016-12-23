@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/08/18 07:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/12/23 22:30:50 joerg Exp $
 
 DISTNAME=	squidview-0.80
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.rillion.net/squidview/
 
