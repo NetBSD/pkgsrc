@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5118 2016/12/23 19:31:56 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.5119 2016/12/24 05:07:19 tsutsui Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7120,3 +7120,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-pip to 9.0.1 [jdolecek 2016-12-23]
 	Updated net/unbound to 1.6.0 [pettai 2016-12-23]
 	Updated net/rancid to 3.6.1 [pettai 2016-12-23]
+	Updated net/sayaka to 3.3.1 [tsutsui 2016-12-23]
