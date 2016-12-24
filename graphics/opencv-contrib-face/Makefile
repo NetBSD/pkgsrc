@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/03/29 10:08:08 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/12/24 00:00:06 markd Exp $
 
 DISTNAME=	opencv_contrib-3.1.0
 PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
@@ -33,6 +33,9 @@ CMAKE_ARGS+=	-D BUILD_DOCS=OFF
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=		-std=c++11
 .endif
+
+# jasper uses SIZE_MAX and friends in its headers.
+CXXFLAGS+=		-D__STDC_LIMIT_MACROS
 
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
