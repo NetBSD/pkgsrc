@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:34:51 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/12/24 10:18:31 joerg Exp $
 
 SHA1 (DarwinStreamingSrvr5.5.5-Source.tar.gz) = ba8419be20e1911f7167dbd48722b2ba5e6f1fe1
 RMD160 (DarwinStreamingSrvr5.5.5-Source.tar.gz) = 62996496da51971e384fc26dd336ef2785c2dca7
@@ -10,6 +10,7 @@ SHA1 (patch-APIModules_QTSSReflectorModule_QTSSReflectorModule.cpp) = 52238d4638
 SHA1 (patch-CommonUtilitiesLib_EventContext.h) = e6d8f19e54670141e35a811df64366ad9983fbd7
 SHA1 (patch-CommonUtilitiesLib_Task.cpp) = 5274c99a1f9239ef5a2096a48e3925a024868615
 SHA1 (patch-CommonUtilitiesLib_Task.h) = 7b231d0f84548c7b11fd392ebad9b96b6764428b
+SHA1 (patch-PrefsSourceLib_XMLParser.cpp) = 9e79da4809c3a046e2354ea7099a75f59803447d
 SHA1 (patch-QTFileTools_QTBroadcaster.tproj_QTBroadcaster.cpp) = 2c3efe74e286e3d2cb66448461f0b7b8d278705c
 SHA1 (patch-Server.tproj_main.cpp) = d50e581a54609dab6a8146a39faf036de9c39ebf
 SHA1 (patch-aa) = 2fc84964264f9b6529d031801b36bcca89f591a6
