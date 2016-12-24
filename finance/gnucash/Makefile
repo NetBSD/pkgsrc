@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2016/12/19 10:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.241 2016/12/24 11:05:15 ryoon Exp $
 
 DISTNAME=		gnucash-2.6.15
 CATEGORIES=		finance
@@ -25,7 +25,6 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		YES
 
 CONFIGURE_ARGS+=	--with-html-engine=webkit
-CONFIGURE_ARGS+=	--disable-dbi
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--with-xdg-data-dirs=${PREFIX}/share
 #CONFIGURE_ARGS+=	GUILE=${PREFIX}/${GUILE20_SUBDIR}/bin/guile
