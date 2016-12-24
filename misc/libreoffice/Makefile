@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2016/12/14 13:52:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2016/12/24 21:45:03 ryoon Exp $
 
-VERREL=		5.2.3
-VERRC=		3
+VERREL=		5.2.4
+VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -87,7 +86,8 @@ MORE_DISTFILES= \
 	language-subtag-registry-2016-02-10.tar.bz2 \
 	libeot-0.01.tar.bz2 \
 	7239a4430efd4d0189c4f24df67f08e5-mysql-connector-c++-1.1.4.tar.gz \
-	c0b4799ea9850eae3ead14f0a60e9418-postgresql-9.2.1.tar.bz2
+	c0b4799ea9850eae3ead14f0a60e9418-postgresql-9.2.1.tar.bz2 \
+	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz
 
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
