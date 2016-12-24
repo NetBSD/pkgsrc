@@ -1,0 +1,16 @@
+$NetBSD: patch-doc_pngs_Makefile.in,v 1.1 2016/12/24 10:17:50 joerg Exp $
+
+montage errors out without some font, even if it doesn't actually end up
+using it.
+
+--- doc/pngs/Makefile.in.orig	2016-12-24 09:37:47.381222017 +0000
++++ doc/pngs/Makefile.in
+@@ -489,7 +489,7 @@ f.png: bigf.png
+ @HAVE_CONVERT_FALSE@	@exit 1
+ 
+ bigf.png: $(STATICIMAGES:.png=.tiny.png)
+-	$(MONTAGE) -tile x3 \
++	$(MONTAGE) -tile x3 -font ${PREFIX}/share/fonts/X11/TTF/Vera.ttf \
+ 		-mode Concatenate -background white -adjoin \
+ 		`find . -regex '.*/.*\.tiny\.png'` \
+ 	bigf.png
