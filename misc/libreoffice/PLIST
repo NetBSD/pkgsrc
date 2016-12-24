@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/12/14 21:06:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/12/24 21:45:03 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -137,7 +137,6 @@ ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
 ${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
 ${PKGNAME}/lib/libreoffice/program/liblocalebe1lo.so
@@ -263,7 +262,6 @@ ${PKGNAME}/lib/libreoffice/program/libvclcanvaslo.so
 ${PKGNAME}/lib/libreoffice/program/libvcllo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_genlo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_gtklo.so
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftcalclo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftdrawlo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftimpresslo.so
@@ -483,6 +481,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/abpug.res
 ${PKGNAME}/lib/libreoffice/program/resource/abpuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/abpuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/abpve.res
+${PKGNAME}/lib/libreoffice/program/resource/abpvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/abpvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/abpxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/abpzh-CN.res
@@ -594,6 +593,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/accug.res
 ${PKGNAME}/lib/libreoffice/program/resource/accuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/accuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/accve.res
+${PKGNAME}/lib/libreoffice/program/resource/accvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/accvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/accxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/acczh-CN.res
@@ -705,6 +705,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/analysisug.res
 ${PKGNAME}/lib/libreoffice/program/resource/analysisuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/analysisuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/analysisve.res
+${PKGNAME}/lib/libreoffice/program/resource/analysisvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/analysisvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/analysisxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/analysiszh-CN.res
@@ -816,6 +817,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/avmediaug.res
 ${PKGNAME}/lib/libreoffice/program/resource/avmediauk.res
 ${PKGNAME}/lib/libreoffice/program/resource/avmediauz.res
 ${PKGNAME}/lib/libreoffice/program/resource/avmediave.res
+${PKGNAME}/lib/libreoffice/program/resource/avmediavec.res
 ${PKGNAME}/lib/libreoffice/program/resource/avmediavi.res
 ${PKGNAME}/lib/libreoffice/program/resource/avmediaxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/avmediazh-CN.res
@@ -927,6 +929,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/basctlug.res
 ${PKGNAME}/lib/libreoffice/program/resource/basctluk.res
 ${PKGNAME}/lib/libreoffice/program/resource/basctluz.res
 ${PKGNAME}/lib/libreoffice/program/resource/basctlve.res
+${PKGNAME}/lib/libreoffice/program/resource/basctlvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/basctlvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/basctlxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/basctlzh-CN.res
@@ -1038,6 +1041,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/bibug.res
 ${PKGNAME}/lib/libreoffice/program/resource/bibuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/bibuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/bibve.res
+${PKGNAME}/lib/libreoffice/program/resource/bibvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/bibvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/bibxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/bibzh-CN.res
@@ -1149,6 +1153,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/chartcontrollerug.res
 ${PKGNAME}/lib/libreoffice/program/resource/chartcontrolleruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/chartcontrolleruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/chartcontrollerve.res
+${PKGNAME}/lib/libreoffice/program/resource/chartcontrollervec.res
 ${PKGNAME}/lib/libreoffice/program/resource/chartcontrollervi.res
 ${PKGNAME}/lib/libreoffice/program/resource/chartcontrollerxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/chartcontrollerzh-CN.res
@@ -1260,6 +1265,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/cnrug.res
 ${PKGNAME}/lib/libreoffice/program/resource/cnruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/cnruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/cnrve.res
+${PKGNAME}/lib/libreoffice/program/resource/cnrvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/cnrvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/cnrxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/cnrzh-CN.res
@@ -1371,6 +1377,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/cuiug.res
 ${PKGNAME}/lib/libreoffice/program/resource/cuiuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/cuiuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/cuive.res
+${PKGNAME}/lib/libreoffice/program/resource/cuivec.res
 ${PKGNAME}/lib/libreoffice/program/resource/cuivi.res
 ${PKGNAME}/lib/libreoffice/program/resource/cuixh.res
 ${PKGNAME}/lib/libreoffice/program/resource/cuizh-CN.res
@@ -1482,6 +1489,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dateug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dateuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dateuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dateve.res
+${PKGNAME}/lib/libreoffice/program/resource/datevec.res
 ${PKGNAME}/lib/libreoffice/program/resource/datevi.res
 ${PKGNAME}/lib/libreoffice/program/resource/datexh.res
 ${PKGNAME}/lib/libreoffice/program/resource/datezh-CN.res
@@ -1593,6 +1601,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dbaug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbauk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbauz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbave.res
+${PKGNAME}/lib/libreoffice/program/resource/dbavec.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbavi.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbaxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbazh-CN.res
@@ -1704,6 +1713,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dbmmug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbmmuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbmmuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbmmve.res
+${PKGNAME}/lib/libreoffice/program/resource/dbmmvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbmmvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbmmxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbmmzh-CN.res
@@ -1815,6 +1825,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dbpug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbpuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbpuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbpve.res
+${PKGNAME}/lib/libreoffice/program/resource/dbpvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbpvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbpxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbpzh-CN.res
@@ -1926,6 +1937,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dbuug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbuuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbuuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbuve.res
+${PKGNAME}/lib/libreoffice/program/resource/dbuvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbuvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbuxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbuzh-CN.res
@@ -2037,6 +2049,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dbwug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbwuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbwuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbwve.res
+${PKGNAME}/lib/libreoffice/program/resource/dbwvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbwvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbwxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/dbwzh-CN.res
@@ -2185,6 +2198,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/deploymentguiug.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentguiuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentguiuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentguive.res
+${PKGNAME}/lib/libreoffice/program/resource/deploymentguivec.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentguivi.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentguixh.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentguizh-CN.res
@@ -2259,6 +2273,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/deploymentug.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentve.res
+${PKGNAME}/lib/libreoffice/program/resource/deploymentvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/deploymentzh-CN.res
@@ -2370,6 +2385,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/dktug.res
 ${PKGNAME}/lib/libreoffice/program/resource/dktuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/dktuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/dktve.res
+${PKGNAME}/lib/libreoffice/program/resource/dktvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/dktvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/dktxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/dktzh-CN.res
@@ -2481,6 +2497,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/editengug.res
 ${PKGNAME}/lib/libreoffice/program/resource/editenguk.res
 ${PKGNAME}/lib/libreoffice/program/resource/editenguz.res
 ${PKGNAME}/lib/libreoffice/program/resource/editengve.res
+${PKGNAME}/lib/libreoffice/program/resource/editengvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/editengvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/editengxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/editengzh-CN.res
@@ -2592,6 +2609,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/epsug.res
 ${PKGNAME}/lib/libreoffice/program/resource/epsuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/epsuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/epsve.res
+${PKGNAME}/lib/libreoffice/program/resource/epsvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/epsvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/epsxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/epszh-CN.res
@@ -2703,6 +2721,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/eurug.res
 ${PKGNAME}/lib/libreoffice/program/resource/euruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/euruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/eurve.res
+${PKGNAME}/lib/libreoffice/program/resource/eurvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/eurvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/eurxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/eurzh-CN.res
@@ -2917,6 +2936,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/foruiug.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruiuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruiuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruive.res
+${PKGNAME}/lib/libreoffice/program/resource/foruivec.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruivi.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruixh.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruizh-CN.res
@@ -2925,6 +2945,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/foruizu.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/foruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/forve.res
+${PKGNAME}/lib/libreoffice/program/resource/forvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/forvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/forxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/forzh-CN.res
@@ -3036,6 +3057,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/fps_officeug.res
 ${PKGNAME}/lib/libreoffice/program/resource/fps_officeuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/fps_officeuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/fps_officeve.res
+${PKGNAME}/lib/libreoffice/program/resource/fps_officevec.res
 ${PKGNAME}/lib/libreoffice/program/resource/fps_officevi.res
 ${PKGNAME}/lib/libreoffice/program/resource/fps_officexh.res
 ${PKGNAME}/lib/libreoffice/program/resource/fps_officezh-CN.res
@@ -3147,6 +3169,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/frmug.res
 ${PKGNAME}/lib/libreoffice/program/resource/frmuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/frmuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/frmve.res
+${PKGNAME}/lib/libreoffice/program/resource/frmvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/frmvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/frmxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/frmzh-CN.res
@@ -3258,6 +3281,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/fweug.res
 ${PKGNAME}/lib/libreoffice/program/resource/fweuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/fweuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/fweve.res
+${PKGNAME}/lib/libreoffice/program/resource/fwevec.res
 ${PKGNAME}/lib/libreoffice/program/resource/fwevi.res
 ${PKGNAME}/lib/libreoffice/program/resource/fwexh.res
 ${PKGNAME}/lib/libreoffice/program/resource/fwezh-CN.res
@@ -3369,6 +3393,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/galug.res
 ${PKGNAME}/lib/libreoffice/program/resource/galuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/galuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/galve.res
+${PKGNAME}/lib/libreoffice/program/resource/galvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/galvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/galxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/galzh-CN.res
@@ -3480,6 +3505,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/impug.res
 ${PKGNAME}/lib/libreoffice/program/resource/impuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/impuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/impve.res
+${PKGNAME}/lib/libreoffice/program/resource/impvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/impvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/impxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/impzh-CN.res
@@ -3591,6 +3617,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/ofaug.res
 ${PKGNAME}/lib/libreoffice/program/resource/ofauk.res
 ${PKGNAME}/lib/libreoffice/program/resource/ofauz.res
 ${PKGNAME}/lib/libreoffice/program/resource/ofave.res
+${PKGNAME}/lib/libreoffice/program/resource/ofavec.res
 ${PKGNAME}/lib/libreoffice/program/resource/ofavi.res
 ${PKGNAME}/lib/libreoffice/program/resource/ofaxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/ofazh-CN.res
@@ -3702,6 +3729,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/pcrug.res
 ${PKGNAME}/lib/libreoffice/program/resource/pcruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/pcruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/pcrve.res
+${PKGNAME}/lib/libreoffice/program/resource/pcrvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/pcrvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/pcrxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/pcrzh-CN.res
@@ -3813,6 +3841,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/pdffilterug.res
 ${PKGNAME}/lib/libreoffice/program/resource/pdffilteruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/pdffilteruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/pdffilterve.res
+${PKGNAME}/lib/libreoffice/program/resource/pdffiltervec.res
 ${PKGNAME}/lib/libreoffice/program/resource/pdffiltervi.res
 ${PKGNAME}/lib/libreoffice/program/resource/pdffilterxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/pdffilterzh-CN.res
@@ -3924,6 +3953,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/pricingug.res
 ${PKGNAME}/lib/libreoffice/program/resource/pricinguk.res
 ${PKGNAME}/lib/libreoffice/program/resource/pricinguz.res
 ${PKGNAME}/lib/libreoffice/program/resource/pricingve.res
+${PKGNAME}/lib/libreoffice/program/resource/pricingvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/pricingvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/pricingxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/pricingzh-CN.res
@@ -4138,6 +4168,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/rptuiug.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuiuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuiuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuive.res
+${PKGNAME}/lib/libreoffice/program/resource/rptuivec.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuivi.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuixh.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuizh-CN.res
@@ -4146,6 +4177,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/rptuizu.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptve.res
+${PKGNAME}/lib/libreoffice/program/resource/rptvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/rptzh-CN.res
@@ -4257,6 +4289,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/sbug.res
 ${PKGNAME}/lib/libreoffice/program/resource/sbuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/sbuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/sbve.res
+${PKGNAME}/lib/libreoffice/program/resource/sbvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/sbvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/sbxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sbzh-CN.res
@@ -4438,6 +4471,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/scnug.res
 ${PKGNAME}/lib/libreoffice/program/resource/scnuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/scnuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/scnve.res
+${PKGNAME}/lib/libreoffice/program/resource/scnvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/scnvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/scnxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/scnzh-CN.res
@@ -4479,6 +4513,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/scug.res
 ${PKGNAME}/lib/libreoffice/program/resource/scuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/scuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/scve.res
+${PKGNAME}/lib/libreoffice/program/resource/scvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/scvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/scxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sczh-CN.res
@@ -4595,6 +4630,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/sdbclug.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbcluk.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbcluz.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbclve.res
+${PKGNAME}/lib/libreoffice/program/resource/sdbclvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbclvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbclxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbclzh-CN.res
@@ -4707,6 +4743,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/sdberrug.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdberruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdberruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdberrve.res
+${PKGNAME}/lib/libreoffice/program/resource/sdberrvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdberrvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdberrxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdberrzh-CN.res
@@ -4825,6 +4862,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/sdbtug.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbtuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbtuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbtve.res
+${PKGNAME}/lib/libreoffice/program/resource/sdbtvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbtvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbtxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdbtzh-CN.res
@@ -4923,6 +4961,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/sdug.res
 ${PKGNAME}/lib/libreoffice/program/resource/sduk.res
 ${PKGNAME}/lib/libreoffice/program/resource/sduz.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdve.res
+${PKGNAME}/lib/libreoffice/program/resource/sdvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sdzh-CN.res
@@ -5034,6 +5073,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/sfxug.res
 ${PKGNAME}/lib/libreoffice/program/resource/sfxuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/sfxuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/sfxve.res
+${PKGNAME}/lib/libreoffice/program/resource/sfxvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/sfxvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/sfxxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/sfxzh-CN.res
@@ -5145,6 +5185,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/smug.res
 ${PKGNAME}/lib/libreoffice/program/resource/smuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/smuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/smve.res
+${PKGNAME}/lib/libreoffice/program/resource/smvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/smvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/smxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/smzh-CN.res
@@ -5256,6 +5297,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/solverug.res
 ${PKGNAME}/lib/libreoffice/program/resource/solveruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/solveruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/solverve.res
+${PKGNAME}/lib/libreoffice/program/resource/solvervec.res
 ${PKGNAME}/lib/libreoffice/program/resource/solvervi.res
 ${PKGNAME}/lib/libreoffice/program/resource/solverxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/solverzh-CN.res
@@ -5367,6 +5409,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/svlug.res
 ${PKGNAME}/lib/libreoffice/program/resource/svluk.res
 ${PKGNAME}/lib/libreoffice/program/resource/svluz.res
 ${PKGNAME}/lib/libreoffice/program/resource/svlve.res
+${PKGNAME}/lib/libreoffice/program/resource/svlvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/svlvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/svlxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/svlzh-CN.res
@@ -5478,6 +5521,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/svtug.res
 ${PKGNAME}/lib/libreoffice/program/resource/svtuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/svtuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/svtve.res
+${PKGNAME}/lib/libreoffice/program/resource/svtvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/svtvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/svtxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/svtzh-CN.res
@@ -5589,6 +5633,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/svxug.res
 ${PKGNAME}/lib/libreoffice/program/resource/svxuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/svxuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/svxve.res
+${PKGNAME}/lib/libreoffice/program/resource/svxvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/svxvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/svxxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/svxzh-CN.res
@@ -5700,6 +5745,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/swug.res
 ${PKGNAME}/lib/libreoffice/program/resource/swuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/swuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/swve.res
+${PKGNAME}/lib/libreoffice/program/resource/swvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/swvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/swxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/swzh-CN.res
@@ -5811,6 +5857,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/t602filterug.res
 ${PKGNAME}/lib/libreoffice/program/resource/t602filteruk.res
 ${PKGNAME}/lib/libreoffice/program/resource/t602filteruz.res
 ${PKGNAME}/lib/libreoffice/program/resource/t602filterve.res
+${PKGNAME}/lib/libreoffice/program/resource/t602filtervec.res
 ${PKGNAME}/lib/libreoffice/program/resource/t602filtervi.res
 ${PKGNAME}/lib/libreoffice/program/resource/t602filterxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/t602filterzh-CN.res
@@ -5922,6 +5969,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/tplug.res
 ${PKGNAME}/lib/libreoffice/program/resource/tpluk.res
 ${PKGNAME}/lib/libreoffice/program/resource/tpluz.res
 ${PKGNAME}/lib/libreoffice/program/resource/tplve.res
+${PKGNAME}/lib/libreoffice/program/resource/tplvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/tplvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/tplxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/tplzh-CN.res
@@ -6033,6 +6081,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/updug.res
 ${PKGNAME}/lib/libreoffice/program/resource/upduk.res
 ${PKGNAME}/lib/libreoffice/program/resource/upduz.res
 ${PKGNAME}/lib/libreoffice/program/resource/updve.res
+${PKGNAME}/lib/libreoffice/program/resource/updvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/updvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/updxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/updzh-CN.res
@@ -6144,6 +6193,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/uuiug.res
 ${PKGNAME}/lib/libreoffice/program/resource/uuiuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/uuiuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/uuive.res
+${PKGNAME}/lib/libreoffice/program/resource/uuivec.res
 ${PKGNAME}/lib/libreoffice/program/resource/uuivi.res
 ${PKGNAME}/lib/libreoffice/program/resource/uuixh.res
 ${PKGNAME}/lib/libreoffice/program/resource/uuizh-CN.res
@@ -6255,6 +6305,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/vclug.res
 ${PKGNAME}/lib/libreoffice/program/resource/vcluk.res
 ${PKGNAME}/lib/libreoffice/program/resource/vcluz.res
 ${PKGNAME}/lib/libreoffice/program/resource/vclve.res
+${PKGNAME}/lib/libreoffice/program/resource/vclvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/vclvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/vclxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/vclzh-CN.res
@@ -6366,6 +6417,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/writerperfectug.res
 ${PKGNAME}/lib/libreoffice/program/resource/writerperfectuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/writerperfectuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/writerperfectve.res
+${PKGNAME}/lib/libreoffice/program/resource/writerperfectvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/writerperfectvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/writerperfectxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/writerperfectzh-CN.res
@@ -6477,6 +6529,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/wziug.res
 ${PKGNAME}/lib/libreoffice/program/resource/wziuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/wziuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/wzive.res
+${PKGNAME}/lib/libreoffice/program/resource/wzivec.res
 ${PKGNAME}/lib/libreoffice/program/resource/wzivi.res
 ${PKGNAME}/lib/libreoffice/program/resource/wzixh.res
 ${PKGNAME}/lib/libreoffice/program/resource/wzizh-CN.res
@@ -6588,6 +6641,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/xmlsecug.res
 ${PKGNAME}/lib/libreoffice/program/resource/xmlsecuk.res
 ${PKGNAME}/lib/libreoffice/program/resource/xmlsecuz.res
 ${PKGNAME}/lib/libreoffice/program/resource/xmlsecve.res
+${PKGNAME}/lib/libreoffice/program/resource/xmlsecvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/xmlsecvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/xmlsecxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/xmlseczh-CN.res
@@ -6699,6 +6753,7 @@ ${PKGNAME}/lib/libreoffice/program/resource/xsltdlgug.res
 ${PKGNAME}/lib/libreoffice/program/resource/xsltdlguk.res
 ${PKGNAME}/lib/libreoffice/program/resource/xsltdlguz.res
 ${PKGNAME}/lib/libreoffice/program/resource/xsltdlgve.res
+${PKGNAME}/lib/libreoffice/program/resource/xsltdlgvec.res
 ${PKGNAME}/lib/libreoffice/program/resource/xsltdlgvi.res
 ${PKGNAME}/lib/libreoffice/program/resource/xsltdlgxh.res
 ${PKGNAME}/lib/libreoffice/program/resource/xsltdlgzh-CN.res
@@ -6971,6 +7026,7 @@ ${PKGNAME}/lib/libreoffice/readmes/README_ug
 ${PKGNAME}/lib/libreoffice/readmes/README_uk
 ${PKGNAME}/lib/libreoffice/readmes/README_uz
 ${PKGNAME}/lib/libreoffice/readmes/README_ve
+${PKGNAME}/lib/libreoffice/readmes/README_vec
 ${PKGNAME}/lib/libreoffice/readmes/README_vi
 ${PKGNAME}/lib/libreoffice/readmes/README_xh
 ${PKGNAME}/lib/libreoffice/readmes/README_zh-CN
@@ -7085,6 +7141,7 @@ ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ug.propertie
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_uk.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_uz.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ve.properties
+${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_vec.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_vi.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_xh.properties
 ${PKGNAME}/lib/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_zh_CN.properties
@@ -7366,7 +7423,10 @@ ${PKGNAME}/lib/libreoffice/share/basic/Tutorials/script.xlb
 ${PKGNAME}/lib/libreoffice/share/basic/dialog.xlc
 ${PKGNAME}/lib/libreoffice/share/basic/script.xlc
 ${PKGNAME}/lib/libreoffice/share/classification/example.xml
+${PKGNAME}/lib/libreoffice/share/classification/example_ca-ES.xml
+${PKGNAME}/lib/libreoffice/share/classification/example_fr-FR.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_hu-HU.xml
+${PKGNAME}/lib/libreoffice/share/classification/example_nl-NL.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_pt-BR.xml
 ${PKGNAME}/lib/libreoffice/share/classification/example_sl-SI.xml
 ${PKGNAME}/lib/libreoffice/share/config/images_breeze.zip
@@ -7639,6 +7699,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/cui/ui/res/zh-CN.zip
@@ -7823,6 +7884,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/dbaccess/ui/res/zh-CN.zip
@@ -7958,6 +8020,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/desktop/ui/res/zh-CN.zip
@@ -8080,6 +8143,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/filter/ui/res/zh-CN.zip
@@ -8199,6 +8263,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/formula/ui/res/zh-CN.zip
@@ -8313,6 +8378,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/fps/ui/res/zh-CN.zip
@@ -8447,6 +8513,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/ug.z
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/res/zh-CN.zip
@@ -8598,6 +8665,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/ug.z
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/dbreport/ui/res/zh-CN.zip
@@ -8724,6 +8792,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/ug.z
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sabpilot/ui/res/zh-CN.zip
@@ -8841,6 +8910,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sbibliography/ui/res/zh-CN.zip
@@ -9090,6 +9160,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scalc/ui/res/zh-CN.zip
@@ -9249,6 +9320,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/ug.zi
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/scanner/ui/res/zh-CN.zip
@@ -9386,6 +9458,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/schart/ui/res/zh-CN.zip
@@ -9437,7 +9510,9 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/oleo
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/outlinetext.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/page.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagepane.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagepanemaster.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagepanenosel.xml
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagepanenoselmaster.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/pagetab.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/table.xml
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/tabletext.xml
@@ -9608,6 +9683,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/res/zh-CN.zip
@@ -9879,6 +9955,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/ug.z
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/simpress/ui/res/zh-CN.zip
@@ -10008,6 +10085,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/smath/ui/res/zh-CN.zip
@@ -10128,6 +10206,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/ug
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/spropctrlr/ui/res/zh-CN.zip
@@ -10588,6 +10667,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/ug.zi
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/modules/swriter/ui/res/zh-CN.zip
@@ -10823,6 +10903,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/sfx/ui/res/zh-CN.zip
@@ -10955,6 +11036,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svt/ui/res/zh-CN.zip
@@ -11116,6 +11198,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/svx/ui/res/zh-CN.zip
@@ -11246,6 +11329,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/uui/ui/res/zh-CN.zip
@@ -11369,6 +11453,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/vcl/ui/res/zh-CN.zip
@@ -11485,6 +11570,7 @@ ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/ug.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/uk.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/uz.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/ve.zip
+${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/vec.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/vi.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/xh.zip
 ${PKGNAME}/lib/libreoffice/share/config/soffice.cfg/xmlsec/ui/res/zh-CN.zip
@@ -11870,6 +11956,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_ug.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_uk.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_uz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_ve.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_vec.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_vi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_xh.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-en/dialog/en_zh_CN.properties
@@ -12102,6 +12189,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ug.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_uk.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_uz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ve.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_vec.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_vi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_xh.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-hu/dialog/hu_HU_zh_CN.properties
@@ -12393,6 +12481,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ug.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_uk.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_uz.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ve.properties
+${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_vec.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_vi.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_xh.properties
 ${PKGNAME}/lib/libreoffice/share/extensions/dict-ru/dialog/ru_RU_zh_CN.properties
@@ -12607,6 +12696,7 @@ ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ug.t
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-uk.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-uz.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-ve.txt
+${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-vec.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-vi.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-xh.txt
 ${PKGNAME}/lib/libreoffice/share/extensions/mysql-connector-ooo/description-zh-CN.txt
@@ -13585,10 +13675,6 @@ ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwright.gif
 ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwup.gif
 ${PKGNAME}/lib/libreoffice/share/glade/libreoffice-catalog.xml
 ${PKGNAME}/lib/libreoffice/share/labels/labels.xml
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_graphic.png
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_end.png
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_middle.png
-${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_start.png
 ${PKGNAME}/lib/libreoffice/share/palette/arrowhd.soe
 ${PKGNAME}/lib/libreoffice/share/palette/classic.sog
 ${PKGNAME}/lib/libreoffice/share/palette/cmyk.soc
@@ -13716,6 +13802,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/Langpack-ug.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-uk.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-uz.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-ve.xcd
+${PKGNAME}/lib/libreoffice/share/registry/Langpack-vec.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-vi.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-xh.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/Langpack-zh-CN.xcd
@@ -13864,6 +13951,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_ug.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_uk.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_uz.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_ve.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_vec.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_vi.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_xh.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/fcfg_langpack_zh-CN.xcd
@@ -13974,6 +14062,7 @@ ${PKGNAME}/lib/libreoffice/share/registry/res/registry_ug.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_uk.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_uz.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_ve.xcd
+${PKGNAME}/lib/libreoffice/share/registry/res/registry_vec.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_vi.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_xh.xcd
 ${PKGNAME}/lib/libreoffice/share/registry/res/registry_zh-CN.xcd
