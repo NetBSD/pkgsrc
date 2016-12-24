@@ -1,0 +1,23 @@
+$NetBSD: patch-nls-catgen,v 1.1 2016/12/24 13:18:43 kim Exp $
+
+use `` instead $() for solaris, bleh.
+
+Index: nls/catgen
+===================================================================
+RCS file: /p/tcsh/cvsroot/tcsh/nls/catgen,v
+retrieving revision 1.4
+retrieving revision 1.5
+diff -u -r1.4 -r1.5
+--- nls/catgen	25 Jul 2014 14:45:25 -0000	1.4
++++ nls/catgen	26 Nov 2016 00:35:37 -0000	1.5
+@@ -13,8 +13,8 @@
+ shift
+ CHARSET="$1"
+ shift
+-cat "${CHARSET}" $(sortit "$@") > "$TMP"
++cat "${CHARSET}" `sortit "$@"` > "$TMP"
+ 
+-echo "$(basename "$OUT" .cat)"
++echo "`basename "$OUT" .cat`"
+ "${GENCAT}" "$OUT" "$TMP"
+ exit 0
