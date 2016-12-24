@@ -1,10 +1,10 @@
-$NetBSD: patch-i18npool_source_breakiterator_breakiterator__unicode.cxx,v 1.1 2016/12/05 04:15:23 pgoyette Exp $
+$NetBSD: patch-i18npool_source_breakiterator_breakiterator__unicode.cxx,v 1.2 2016/12/24 21:45:03 ryoon Exp $
 
 Unbreak build break caused by icu 58 (from FreeBSD)
 
---- i18npool/source/breakiterator/breakiterator_unicode.cxx.orig	2016-05-04 21:28:24 UTC
+--- i18npool/source/breakiterator/breakiterator_unicode.cxx.orig	2016-12-13 16:57:41.000000000 +0000
 +++ i18npool/source/breakiterator/breakiterator_unicode.cxx
-@@ -64,10 +64,13 @@ BreakIterator_Unicode::~BreakIterator_Un
+@@ -63,10 +63,13 @@ BreakIterator_Unicode::~BreakIterator_Un
  class OOoRuleBasedBreakIterator : public RuleBasedBreakIterator
  {
      public:
@@ -18,7 +18,7 @@ Unbreak build break caused by icu 58 (from FreeBSD)
      OOoRuleBasedBreakIterator(UDataMemory* image,
                                UErrorCode &status)
          : RuleBasedBreakIterator(image, status)
-@@ -143,12 +146,21 @@ void SAL_CALL BreakIterator_Unicode::loa
+@@ -142,12 +145,21 @@ void SAL_CALL BreakIterator_Unicode::loa
                  }
              }
              if (rbi) {
@@ -40,4 +40,3 @@ Unbreak build break caused by icu 58 (from FreeBSD)
                  icuBI->aBreakIterator = rbi;
              }
          }
-
