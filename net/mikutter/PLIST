@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2016/12/15 14:40:29 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.37 2016/12/24 15:45:50 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -58,10 +58,11 @@ share/mikutter/core/lib/reserver.rb
 share/mikutter/core/lib/retriever.rb
 share/mikutter/core/lib/retriever/cast.rb
 share/mikutter/core/lib/retriever/datasource.rb
+share/mikutter/core/lib/retriever/entity/basic_twitter_entity.rb
 share/mikutter/core/lib/retriever/entity/blank_entity.rb
+share/mikutter/core/lib/retriever/entity/extended_twitter_entity.rb
 share/mikutter/core/lib/retriever/entity/regexp_entity.rb
 share/mikutter/core/lib/retriever/entity/segment.rb
-share/mikutter/core/lib/retriever/entity/twitter_entity.rb
 share/mikutter/core/lib/retriever/entity/url_entity.rb
 share/mikutter/core/lib/retriever/error.rb
 share/mikutter/core/lib/retriever/field_generator.rb
@@ -71,6 +72,7 @@ share/mikutter/core/lib/retriever/mixin/user_mixin.rb
 share/mikutter/core/lib/retriever/model.rb
 share/mikutter/core/lib/retriever/model/identity.rb
 share/mikutter/core/lib/retriever/model/memory.rb
+share/mikutter/core/lib/retriever/spec.rb
 share/mikutter/core/lib/retriever/uri.rb
 share/mikutter/core/lib/test_unit_extensions.rb
 share/mikutter/core/lib/timelimitedqueue.rb
