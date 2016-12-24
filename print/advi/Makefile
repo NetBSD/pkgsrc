@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2016/12/04 05:17:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2016/12/24 10:17:50 joerg Exp $
 
 DISTNAME=		advi-1.10.2
 PKGREVISION=		12
@@ -22,6 +22,7 @@ DEPENDS+=		tex-fontinst>=1.933:../../fonts/tex-fontinst
 DEPENDS+=		tex-pstools>=1.68:../../graphics/tex-pstools
 DEPENDS+=		tex-cyrillic-bin>=2013:../../print/tex-cyrillic-bin
 DEPENDS+=		hevea-[0-9]*:../../textproc/hevea
+BUILD_DEPENDS+=		vera-ttf-[0-9]*:../../fonts/vera-ttf
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
