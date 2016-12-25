@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2016/12/02 12:28:08 adam Exp $
+# $NetBSD: Makefile,v 1.42 2016/12/25 09:20:24 adam Exp $
 
 DISTNAME=	django-cms-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.django-cms.org/
