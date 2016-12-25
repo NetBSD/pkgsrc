@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2012/07/03 18:06:38 joerg Exp $
+$NetBSD: patch-af,v 1.4 2016/12/25 21:45:09 joerg Exp $
 
 --- src/linpsk.cpp.orig	2005-03-11 17:21:20.000000000 +0000
 +++ src/linpsk.cpp
@@ -20,6 +20,24 @@ $NetBSD: patch-af,v 1.3 2012/07/03 18:06:38 joerg Exp $
    settings.RxChannels++;
    RxDisplay->RxFreq->setAfcDisplayMode(settings.ActChannel->AfcProperties());
    }
+@@ -505,7 +507,7 @@ if ( Modulator != 0 )
+    }   
+ else  
+   {
+-    if (Sound > 0)
++    if (Sound)
+      Sound->PTT(false); 
+     if (RxDisplay->start_process_loop())
+      {
+@@ -602,7 +604,7 @@ if (settings.DemoMode)
+ else
+    Sound = new CSound(settings.serial);
+ 
+-if ( Sound <= 0 )
++if ( Sound == 0 )
+   {
+     QMessageBox::critical(0," Programm Error! LinPsk","Could not create Sound Device for Output");
+     TxDisplay->TxFunctions->RXTX->setStatus(ON);
 @@ -781,7 +783,8 @@ if (Param != 0)
      RxDisplay->RxFreq->setAfcDisplayMode(settings.ActChannel->AfcProperties());
      RxDisplay->RxFreq->setAfcMode(settings.ActChannel->getAfcMode());

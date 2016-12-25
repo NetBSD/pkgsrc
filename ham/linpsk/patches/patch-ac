@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2005/08/15 14:03:53 wulf Exp $
+$NetBSD: patch-ac,v 1.3 2016/12/25 21:45:09 joerg Exp $
 
---- src/crxdisplay.cpp.orig	2005-03-12 03:49:18.000000000 +1030
-+++ src/crxdisplay.cpp	2005-08-15 05:36:46.000000000 +0930
+--- src/crxdisplay.cpp.orig	2005-03-11 17:19:18.000000000 +0000
++++ src/crxdisplay.cpp
 @@ -27,7 +27,7 @@
  #include <qstyle.h>
  #include <qpalette.h>
@@ -11,7 +11,12 @@ $NetBSD: patch-ac,v 1.2 2005/08/15 14:03:53 wulf Exp $
  
  #include "crecording.h"
  #include "crxchannel.h"
-@@ -68,7 +68,7 @@
+@@ -64,11 +64,11 @@ void MyTabBar::paintLabel ( QPainter *p,
+         flags |= QStyle::Style_HasFocus;
+ 
+   QColorGroup Cg=colorGroup();
+-    if (Farbe > 0)
++    if (Farbe)
       {
         int position=t->identifier();
         if ( position >= 0 && position < Farbe->size() ) 
@@ -20,3 +25,12 @@ $NetBSD: patch-ac,v 1.2 2005/08/15 14:03:53 wulf Exp $
       } 
      style().drawControl( QStyle::CE_TabBarLabel, p, this, br,
                            Cg,
+@@ -236,7 +236,7 @@ if ( Sound == 0 )
+       Sound = new CSound(settings.serial);
+     
+   }
+-if ( Sound <= 0 )
++if ( Sound == 0 )
+   return false;
+ m_pDec2InPtr=dec2fir;
+ 
