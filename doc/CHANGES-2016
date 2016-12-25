@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5125 2016/12/25 12:47:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5126 2016/12/25 17:35:44 taca Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7127,3 +7127,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated shells/zsh to 5.3 [ryoon 2016-12-25]
 	Updated mail/exim to 4.88 [wiedi 2016-12-25]
 	Updated finance/moneyguru to 2.10.2nb1 [wiz 2016-12-25]
+	Updated www/contao43 to 4.3.1 [taca 2016-12-25]
