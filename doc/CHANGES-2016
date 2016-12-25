@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5124 2016/12/25 11:30:27 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.5125 2016/12/25 12:47:55 wiz Exp $
 
 PKGSRC FREEZE IS ON!
 
@@ -7126,3 +7126,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/opensource-cobol to 1.5.1J [ryoon 2016-12-25]
 	Updated shells/zsh to 5.3 [ryoon 2016-12-25]
 	Updated mail/exim to 4.88 [wiedi 2016-12-25]
+	Updated finance/moneyguru to 2.10.2nb1 [wiz 2016-12-25]
