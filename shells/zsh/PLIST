@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.34 2016/12/25 00:23:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.35 2016/12/25 12:01:44 ryoon Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
-${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/attr.so
+${PLIST.dynamic}${PLIST.xattr}lib/zsh/${PKGVERSION}/zsh/attr.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/cap.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/clone.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/compctl.so
@@ -27,7 +27,8 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/sched.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/stat.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/system.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/termcap.so
-${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/terminfo.so
+${PLIST.dynamic}${PLIST.curses}lib/zsh/${PKGVERSION}/zsh/curses.so
+${PLIST.dynamic}${PLIST.terminfo}lib/zsh/${PKGVERSION}/zsh/terminfo.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zftp.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zle.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zleparameter.so
