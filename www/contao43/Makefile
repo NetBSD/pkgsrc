@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/12/23 23:02:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/25 17:34:47 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -27,7 +27,7 @@ DEPENDS+=	bash>=4.0:../../shells/bash
 # mcrypt is deprecated and removed in PHP 7.1.x
 PHP_VERSIONS_ACCEPTED=	56 70
 
-CT_VERSION=	4.3.0
+CT_VERSION=	4.3.1
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
@@ -45,36 +45,13 @@ CONF_FILES+=	${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
 .for f in ${EG_CONFIG}
 CONF_FILES+=	${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
 .endfor
-#CONF_FILES+=	${CT_WEBDIR}/app/config/parameters.yml.dist \
-#			${CT_WEBDIR}/app/config/parameters.yml
 
 .for d in ${RESTRICT_DIRS}
 OWN_DIRS_PERMS+= ${CT_WEBDIR}/${d} ${APACHE_USER} ${APACHE_GROUP} 0770
 .endfor
 
-REPLACE_INTERPRETER+=	php
-REPLACE.php.old=	.*php[^ ]*
-REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php= \
-	bin/console vendor/bin/doctrine-dbal vendor/bin/lessc \
-	vendor/bin/minifycss vendor/bin/minifyjs vendor/bin/pscss \
-	vendor/bin/security-checker vendor/doctrine/dbal/bin/doctrine-dbal \
-	vendor/leafo/scssphp/bin/pscss \
-	vendor/matthiasmullie/minify/bin/minifycss \
-	vendor/matthiasmullie/minify/bin/minifyjs \
-	vendor/oyejorge/less.php/bin/lessc \
-	vendor/sensiolabs/security-checker/security-checker \
-	vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php \
-	vendor/symfony/symfony/phpunit
-
-SUBST_CLASSES+=		conf
-SUBST_FILES.conf+=	${WRKDIR}/contao.conf
-SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
-SUBST_SED.conf+=        -e 's|@CT_WEBDIR@|${CT_WEBDIR:Q}|g'
-SUBST_STAGE.conf=	post-configure
-
 WWW_FILES=	CHANGELOG.md README.md app/AppCache.php app/AppKernel.php \
-		app/autoload.php app/bootstrap.php.cache assets bin/console \
+		app/autoload.php assets bin/console \
 		build.xml composer.json composer.lock vendor web
 
 INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR}/app/config \
@@ -83,8 +60,45 @@ INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR}/app/config \
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
 
+REPLACE_BASH+=	vendor/paragonie/random_compat/build-phar.sh \
+	vendor/sensio/distribution-bundle/Resources/bin/build.sh \
+	vendor/sensio/distribution-bundle/Resources/bin/build_demo.sh
+
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php= \
+	bin/console vendor/bin/doctrine-dbal vendor/bin/lessc \
+	vendor/bin/minifycss vendor/bin/minifyjs vendor/bin/pscss \
+	vendor/bin/security-checker vendor/doctrine/dbal/bin/doctrine-dbal \
+	vendor/jeremykendall/php-domain-parser/bin/parse \
+	vendor/jeremykendall/php-domain-parser/bin/update-psl \
+	vendor/leafo/scssphp/bin/pscss \
+	vendor/matthiasmullie/minify/bin/minifycss \
+	vendor/matthiasmullie/minify/bin/minifyjs \
+	vendor/oyejorge/less.php/bin/lessc \
+	vendor/sensio/distribution-bundle/Resources/bin/build_bootstrap.php \
+	vendor/sensiolabs/security-checker/security-checker \
+	vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php \
+	vendor/symfony/symfony/phpunit \
+	vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/bin/simple-phpunit \
+	vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
+
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf+=	${WRKDIR}/contao.conf
+SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
+SUBST_SED.conf+=        -e 's|@CT_WEBDIR@|${CT_WEBDIR:Q}|g'
+SUBST_STAGE.conf=	post-configure
+
+PERMFIXFILES=	vendor/oyejorge/less.php/lib/Less/Less.php.combine \
+	vendor/simplepie/simplepie/.travis.yml \
+	vendor/simplepie/simplepie/library/SimplePie.php \
+	vendor/simplepie/simplepie/library/SimplePie/Cache/Memcached.php \
+	vendor/simplepie/simplepie/library/SimplePie/Registry.php
+
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
+	cd ${WRKSRC}; ${CHMOD} -x ${PERMFIXFILES}
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
