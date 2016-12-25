@@ -1,10 +1,10 @@
-$NetBSD: patch-makefile,v 1.17 2016/09/02 12:22:46 wiz Exp $
+$NetBSD: patch-makefile,v 1.18 2016/12/25 21:44:35 joerg Exp $
 
 Treat all BSDs the same.
 
---- makefile.orig	2016-06-29 06:34:30.000000000 +0000
+--- makefile.orig	2016-10-25 23:47:23.000000000 +0000
 +++ makefile
-@@ -168,19 +168,19 @@ GENIEOS := solaris
+@@ -177,19 +177,19 @@ GENIEOS := solaris
  endif
  ifeq ($(firstword $(filter FreeBSD,$(UNAME))),FreeBSD)
  OS := freebsd
@@ -28,7 +28,7 @@ Treat all BSDs the same.
  endif
  ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
  OS := macosx
-@@ -881,11 +881,6 @@ $(info GCC $(GCC_VERSION) detected)
+@@ -884,11 +884,6 @@ $(info GCC $(GCC_VERSION) detected)
  else
  $(info Clang $(CLANG_VERSION) detected)
  ifneq ($(TARGETOS),asmjs)
@@ -40,3 +40,12 @@ Treat all BSDs the same.
  endif
  endif
  
+@@ -1279,7 +1274,7 @@ freebsd_x86: generate $(PROJECTDIR)/$(MA
+ #-------------------------------------------------
+ 
+ $(PROJECTDIR)/$(MAKETYPE)-netbsd/Makefile: makefile $(SCRIPTS) $(GENIE)
+-	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=netbsd --gcc_version=$(GCC_VERSION) $(MAKETYPE)
++	$(SILENT) $(GENIE) $(PARAMS) $(TARGET_PARAMS) --gcc=netbsd --gcc_version=$(GCC_VERSION) --clang_version=$(CLANG_VERSION) $(MAKETYPE)
+ 
+ .PHONY: netbsd_x64
+ netbsd_x64: generate $(PROJECTDIR)/$(MAKETYPE)-netbsd/Makefile
