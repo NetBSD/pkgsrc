@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/12/13 06:49:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/12/25 23:57:45 markd Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -129,6 +129,7 @@ lib/openmpi/mca_coll_libnbc.la
 lib/openmpi/mca_coll_ml.la
 lib/openmpi/mca_coll_self.la
 lib/openmpi/mca_coll_sm.la
+lib/openmpi/mca_coll_sync.la
 lib/openmpi/mca_coll_tuned.la
 lib/openmpi/mca_compress_bzip.la
 lib/openmpi/mca_compress_gzip.la
@@ -545,6 +546,34 @@ man/man3/MPI_Status_f2c.3
 man/man3/MPI_Status_set_cancelled.3
 man/man3/MPI_Status_set_elements.3
 man/man3/MPI_Status_set_elements_x.3
+man/man3/MPI_T_category_changed.3
+man/man3/MPI_T_category_get_categories.3
+man/man3/MPI_T_category_get_cvars.3
+man/man3/MPI_T_category_get_info.3
+man/man3/MPI_T_category_get_num.3
+man/man3/MPI_T_category_get_pvars.3
+man/man3/MPI_T_cvar_get_info.3
+man/man3/MPI_T_cvar_get_num.3
+man/man3/MPI_T_cvar_handle_alloc.3
+man/man3/MPI_T_cvar_handle_free.3
+man/man3/MPI_T_cvar_read.3
+man/man3/MPI_T_cvar_write.3
+man/man3/MPI_T_enum_get_info.3
+man/man3/MPI_T_enum_get_item.3
+man/man3/MPI_T_finalize.3
+man/man3/MPI_T_init_thread.3
+man/man3/MPI_T_pvar_get_info.3
+man/man3/MPI_T_pvar_get_num.3
+man/man3/MPI_T_pvar_handle_alloc.3
+man/man3/MPI_T_pvar_handle_free.3
+man/man3/MPI_T_pvar_read.3
+man/man3/MPI_T_pvar_readreset.3
+man/man3/MPI_T_pvar_reset.3
+man/man3/MPI_T_pvar_session_create.3
+man/man3/MPI_T_pvar_session_free.3
+man/man3/MPI_T_pvar_start.3
+man/man3/MPI_T_pvar_stop.3
+man/man3/MPI_T_pvar_write.3
 man/man3/MPI_Test.3
 man/man3/MPI_Test_cancelled.3
 man/man3/MPI_Testall.3
@@ -818,6 +847,7 @@ share/openmpi/examples/openmpi-default-hostfile
 share/openmpi/examples/openmpi-mca-params.conf
 share/openmpi/examples/openmpi-totalview.tcl
 share/openmpi/help-btl-vader.txt
+share/openmpi/help-coll-sync.txt
 share/openmpi/help-dash-host.txt
 share/openmpi/help-db-base.txt
 share/openmpi/help-errmgr-base.txt
