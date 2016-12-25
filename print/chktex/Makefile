@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/09/30 11:33:06 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/12/25 19:02:44 markd Exp $
 
 DISTNAME=	chktex-1.7.6
 CATEGORIES=	print
@@ -24,6 +24,9 @@ CFLAGS+=	-D__unix__
 CONFIGURE_ENV+=	PERL5=${PERL5:Q}
 MAKE_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q} EGDIR=${EGDIR:Q}
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
 INSTALLATION_DIRS+=	${EGDIR}
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
