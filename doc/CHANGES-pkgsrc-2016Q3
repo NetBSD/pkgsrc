@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.19 2016/12/12 06:57:29 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q3,v 1.1.2.20 2016/12/28 17:18:26 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2016Q3 branch:
 
@@ -158,3 +158,9 @@ games/criticalmass: security fix
 
 Pullup ticket #5170 - requested by bsiegert
 lang/go: security update
+Pullup ticket #5174 - requested by sevan
+www/lynx: security fix
+
+Pullup ticket #5175 - requested by sevan
+textproc/libxml2: security fix
+
