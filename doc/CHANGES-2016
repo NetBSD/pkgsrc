@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5128 2016/12/29 18:53:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5129 2016/12/29 19:11:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7128,3 +7128,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao43 to 4.3.1 [taca 2016-12-25]
 	Updated graphics/png to 1.6.27 [wiz 2016-12-29]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q4 branch [wiz 2016-12-29]
+	Removed misc/libreoffice4 successor misc/libreoffice [wiz 2016-12-29]
+	Removed misc/libreoffice4-bin successor misc/libreoffice-bin [wiz 2016-12-29]
+	Removed misc/libreoffice43 successor misc/libreoffice [wiz 2016-12-29]
+	Removed misc/openoffice3 successor misc/libreoffice [wiz 2016-12-29]
