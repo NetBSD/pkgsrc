@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5134 2016/12/29 23:01:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5135 2016/12/29 23:47:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7147,3 +7147,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed lang/gcc47 [maya 2016-12-29]
 	Removed lang/gcc47-libs [maya 2016-12-29]
 	Updated meta-pkgs/bulk-medium to 20161229 [wiz 2016-12-29]
+	Updated www/py-idna to 2.2 [wiz 2016-12-29]
