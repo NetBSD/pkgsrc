@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5129 2016/12/29 19:11:09 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5130 2016/12/29 19:13:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7132,3 +7132,10 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed misc/libreoffice4-bin successor misc/libreoffice-bin [wiz 2016-12-29]
 	Removed misc/libreoffice43 successor misc/libreoffice [wiz 2016-12-29]
 	Removed misc/openoffice3 successor misc/libreoffice [wiz 2016-12-29]
+	Removed sysutils/xenkernel3 [wiz 2016-12-29]
+	Removed sysutils/xenkernel33 [wiz 2016-12-29]
+	Removed sysutils/xenkernel41 [wiz 2016-12-29]
+	Removed sysutils/xentools3 [wiz 2016-12-29]
+	Removed sysutils/xentools3-hvm [wiz 2016-12-29]
+	Removed sysutils/xentools33 [wiz 2016-12-29]
+	Removed sysutils/xentools41 [wiz 2016-12-29]
