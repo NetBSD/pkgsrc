@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.1 2016/12/29 23:12:23 wiz Exp $
+
+--- hotplug/NetBSD/vif-ip.orig	2011-04-01 16:04:24.000000000 +0200
++++ hotplug/NetBSD/vif-ip	2011-04-01 16:04:54.000000000 +0200
+@@ -23,7 +23,10 @@
+ 	xip=$(xenstore-read "$xpath/ip")
+ 	xfid=$(xenstore-read "$xpath/frontend-id")
+ 	xhandle=$(xenstore-read "$xpath/handle")
+-	iface=$(xenstore-read "$xpath/vifname")
++ 	iface=$(xenstore-read "$xpath/vifname") || true
++	if [ x${iface} = "x" ] ; then
++		iface=xvif$xfid.$xhandle
++	fi
+ 	echo ifconfig $iface $xip up
+ 	ifconfig $iface $xip up
+ 	xenstore-write $xpath/hotplug-status connected
