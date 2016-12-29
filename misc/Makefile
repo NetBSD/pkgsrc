@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2016/12/12 00:40:17 marino Exp $
+# $NetBSD: Makefile,v 1.478 2016/12/29 19:10:27 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -183,9 +183,6 @@ SUBDIR+=	libkvkontakte
 SUBDIR+=	libmateweather
 SUBDIR+=	libquantum
 SUBDIR+=	libreoffice
-SUBDIR+=	libreoffice4
-SUBDIR+=	libreoffice4-bin
-SUBDIR+=	libreoffice43
 SUBDIR+=	libreoffice5-bin
 SUBDIR+=	libutf
 SUBDIR+=	lile
@@ -214,7 +211,6 @@ SUBDIR+=	ocaml-cudf
 SUBDIR+=	ocaml-opam
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
-SUBDIR+=	openoffice3
 SUBDIR+=	orca
 SUBDIR+=	p5-App-MrShell
 SUBDIR+=	p5-Array-PrintCols
