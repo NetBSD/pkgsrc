@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2016/11/22 11:06:13 leot Exp $
+# $NetBSD: Makefile,v 1.44 2016/12/29 20:09:21 leot Exp $
 
-DISTNAME=	mpv-0.22.0
+DISTNAME=	mpv-0.23.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -33,11 +33,12 @@ SUBST_FILES.audio+=	stream/audio_in.c waftools/checks/custom.py wscript
 SUBST_STAGE.audio=	pre-configure
 SUBST_MESSAGE.audio=	Fixing path to audio device.
 
-SUBST_CLASSES+=		docutils
-SUBST_SED.docutils+=	-e "s,rst2man,rst2man-${PYVERSSUFFIX},"
-SUBST_FILES.docutils+=	wscript
-SUBST_STAGE.docutils=	pre-configure
-SUBST_MESSAGE.docutils=	Fix docutils command names.
+SUBST_CLASSES+=		python
+SUBST_SED.python+=	-e "s,python,python${PYVERSSUFFIX},"
+SUBST_SED.python+=	-e "s,rst2man,rst2man-${PYVERSSUFFIX},"
+SUBST_FILES.python+=	wscript
+SUBST_STAGE.python=	pre-configure
+SUBST_MESSAGE.python=	Fix Python command names.
 
 post-install:
 	cd ${DESTDIR}${PREFIX} && ${MV} etc/mpv/encoding-profiles.conf share/examples/mpv
@@ -59,6 +60,7 @@ post-install:
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ffmpeg3+=	ffmpeg3>=3.2.2
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
