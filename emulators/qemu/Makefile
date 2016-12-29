@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2016/12/27 21:44:42 bsiegert Exp $
+# $NetBSD: Makefile,v 1.159 2016/12/29 22:59:39 wiz Exp $
 
 DISTNAME=	qemu-2.7.0
 CATEGORIES=	emulators
@@ -37,6 +37,12 @@ CONFIGURE_ARGS+=	--enable-curses
 #HF#CONFIGURE_ARGS+=	--disable-fdt			# HF: build on OS X
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
+
+.if defined(PKGSRC_USE_SSP)
+# do not add flags to everything
+PKGSRC_USE_SSP=		no
+CONFIGURE_ARGS+=	--enable-stack-protector
+.endif
 
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-aarch64
 NOT_PAX_MPROTECT_SAFE+=	bin/qemu-system-alpha
