@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.172 2016/12/29 22:21:13 maya Exp $
+# $NetBSD: gcc.mk,v 1.173 2016/12/29 23:07:17 maya Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -245,24 +245,6 @@ _NEED_GCC44?=	no
 _NEED_GCC44=	yes
 .  endif
 .endfor
-_NEED_GCC45?=	no
-.for _pattern_ in ${_GCC45_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC45=	yes
-.  endif
-.endfor
-_NEED_GCC46?=	no
-.for _pattern_ in ${_GCC46_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC46=	yes
-.  endif
-.endfor
-_NEED_GCC47?=	no
-.for _pattern_ in ${_GCC47_PATTERNS}
-.  if !empty(_GCC_REQD:M${_pattern_})
-_NEED_GCC47=	yes
-.  endif
-.endfor
 _NEED_GCC48?=	no
 .for _pattern_ in ${_GCC48_PATTERNS}
 .  if !empty(_GCC_REQD:M${_pattern_})
@@ -296,10 +278,9 @@ _NEED_NEWER_GCC=NO
 .endfor
 .if !empty(_NEED_GCC2:M[nN][oO]) && !empty(_NEED_GCC3:M[nN][oO]) && \
     !empty(_NEED_GCC34:M[nN][oO]) && !empty(_NEED_GCC44:M[nN][oO]) && \
-    !empty(_NEED_GCC45:M[nN][oO]) && !empty(_NEED_GCC46:M[nN][oO]) && \
-    !empty(_NEED_GCC47:M[nN][oO]) && !empty(_NEED_GCC48:M[nN][oO]) && \
-    !empty(_NEED_GCC49:M[nN][oO]) && !empty(_NEED_GCC5:M[nN][oO]) && \
-    !empty(_NEED_GCC6:M[nN][oO]) && !empty(_NEED_GCC_AUX:M[nN][oO])
+    !empty(_NEED_GCC48:M[nN][oO]) && !empty(_NEED_GCC49:M[nN][oO]) && \
+    !empty(_NEED_GCC5:M[nN][oO]) && !empty(_NEED_GCC6:M[nN][oO]) && \
+    !empty(_NEED_GCC_AUX:M[nN][oO])
 _NEED_GCC6=	yes
 .endif
 
@@ -313,12 +294,6 @@ LANGUAGES.gcc=	c c++ fortran77 java objc
 LANGUAGES.gcc=	c c++ fortran77 objc
 .elif !empty(_NEED_GCC44:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 java objc
-.elif !empty(_NEED_GCC45:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 java objc
-.elif !empty(_NEED_GCC46:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 java objc
-.elif !empty(_NEED_GCC47:M[yY][eE][sS])
-LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC48:M[yY][eE][sS])
 LANGUAGES.gcc=	c c++ fortran fortran77 go java objc obj-c++
 .elif !empty(_NEED_GCC49:M[yY][eE][sS])
@@ -932,11 +907,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .if (defined(_USE_GCC_SHLIB) && !empty(_USE_GCC_SHLIB:M[Yy][Ee][Ss])) && !empty(USE_PKGSRC_GCC_RUNTIME:M[Yy][Ee][Ss])
 #  Special case packages which are themselves a dependency of gcc runtime.
 .  if empty(PKGPATH:Mdevel/libtool-base) && empty(PKGPATH:Mdevel/binutils) && empty(PKGPATH:Mlang/gcc??)
-.    if !empty(CC_VERSION:Mgcc-4.6*)
-.      include "../../lang/gcc46-libs/buildlink3.mk"
-.    elif !empty(CC_VERSION:Mgcc-4.7*)
-.      include "../../lang/gcc47-libs/buildlink3.mk"
-.    elif !empty(CC_VERSION:Mgcc-4.8*)
+.    if !empty(CC_VERSION:Mgcc-4.8*)
 .      include "../../lang/gcc48-libs/buildlink3.mk"
 .    elif !empty(CC_VERSION:Mgcc-4.9*)
 .      include "../../lang/gcc49-libs/buildlink3.mk"
