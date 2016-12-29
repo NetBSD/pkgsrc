@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2016/12/29 23:12:23 wiz Exp $
+
+--- Makefile.orig	2011-10-20 17:05:41.000000000 +0000
++++ Makefile
+@@ -24,7 +24,8 @@ SUBDIRS-$(CONFIG_Linux) += memshr
+ SUBDIRS-$(CONFIG_Linux) += blktap
+ SUBDIRS-$(CONFIG_Linux) += blktap2
+ SUBDIRS-$(CONFIG_NetBSD) += libaio
+-SUBDIRS-$(CONFIG_NetBSD) += blktap2
++SUBDIRS-$(CONFIG_NetBSD) += blktap
++#SUBDIRS-$(CONFIG_NetBSD) += blktap2
+ SUBDIRS-$(CONFIG_NetBSD) += xenbackendd
+ SUBDIRS-y += libfsimage
+ SUBDIRS-$(LIBXENAPI_BINDINGS) += libxen

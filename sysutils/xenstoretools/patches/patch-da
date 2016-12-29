@@ -1,0 +1,42 @@
+$NetBSD: patch-da,v 1.1 2016/12/29 23:12:23 wiz Exp $
+
+--- ioemu-qemu-xen/configure.orig	2013-07-17 12:59:40.000000000 +0200
++++ ioemu-qemu-xen/configure	2014-08-28 13:59:55.000000000 +0200
+@@ -1089,7 +1089,7 @@
+ # Check if tools are available to build documentation.
+ if [ -x "`which texi2html 2>/dev/null`" ] && \
+    [ -x "`which pod2man 2>/dev/null`" ]; then
+-  build_docs="yes"
++#  build_docs="yes"
+ fi
+ 
+ ##########################################
+@@ -1124,7 +1124,7 @@
+   if test -z "$prefix" ; then
+       prefix="/usr/local"
+   fi
+-  mansuffix="/share/man"
++  mansuffix="/man"
+   datasuffix="/share/qemu"
+   docsuffix="/share/doc/qemu"
+   binsuffix="/bin"
+@@ -1215,6 +1215,9 @@
+ echo "#define CONFIG_QEMU_SHAREDIR \"$prefix$datasuffix\"" >> $config_h
+ echo "MAKE=$make" >> $config_mak
+ echo "INSTALL=$install" >> $config_mak
++echo "INSTALL_DIR=$install -d -m0755 -p" >> $config_mak
++echo "INSTALL_DATA=$install -d -m0644 -p" >> $config_mak
++echo "INSTALL_PROG=$install -d -m0755 -p" >> $config_mak
+ echo "CC=$cc" >> $config_mak
+ echo "HOST_CC=$host_cc" >> $config_mak
+ echo "AR=$ar" >> $config_mak
+@@ -1492,7 +1495,9 @@
+ # XXX: suppress that
+ if [ "$bsd" = "yes" ] ; then
+   echo "#define O_LARGEFILE 0" >> $config_h
++  echo "#ifndef MAP_ANONYMOUS" >> $config_h
+   echo "#define MAP_ANONYMOUS MAP_ANON" >> $config_h
++  echo "#endif" >> $config_h
+   echo "#define _BSD 1" >> $config_h
+ fi
+ 
