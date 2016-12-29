@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5131 2016/12/29 19:27:20 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5132 2016/12/29 20:09:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7140,3 +7140,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed sysutils/xentools33 [wiz 2016-12-29]
 	Removed sysutils/xentools41 [wiz 2016-12-29]
 	Updated net/syncthing to 0.14.17 [wiz 2016-12-29]
+	Updated multimedia/mpv to 0.23.0 [leot 2016-12-29]
