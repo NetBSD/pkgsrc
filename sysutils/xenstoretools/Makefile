@@ -1,8 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 13:07:20 rillig Exp $
-#
-
-# VERSION is set in xentool41/version.mk
-.include		"../../sysutils/xentools41/version.mk"
+# $NetBSD: Makefile,v 1.6 2016/12/29 23:12:23 wiz Exp $
 
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenstoretools-${VERSION}
@@ -17,10 +13,11 @@ SITES.ipxe-git-v${VERSION_IPXE}.tar.gz+= http://xenbits.xensource.com/xen-extfil
 MAINTAINER=		sborrill@NetBSD.org
 HOMEPAGE=		http://xen.org/
 COMMENT=		Xenstore Tools for Xen 4.1.x
-
 LICENSE=		gnu-gpl-v2
-DISTINFO_FILE=		${.CURDIR}/../xentools41/distinfo
-PATCHDIR=		${.CURDIR}/../xentools41/patches
+
+VERSION=		4.1.6.1
+VERSION_IPXE=		1.0.0
+
 BUILD_DIRS=		xenstore
 BUILD_TARGET=		clients
 INSTALL_TARGET=		installclients
