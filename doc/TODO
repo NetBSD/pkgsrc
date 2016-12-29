@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16826 2016/12/27 18:01:34 leot Exp $
+$NetBSD: TODO,v 1.16827 2016/12/29 19:00:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -556,6 +556,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
+	o darktable-2.2.0
 	o dasher-4.11
 	o davical-1.1.4
 	o dd_rescue-1.46
@@ -661,6 +662,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fetchyahoo-2.14.0
 	o ffmpeg2-2.8.10
 	o filerunner-14.06.18.10
+	o filezilla-3.23.0.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o fish-2.2.0
@@ -829,7 +831,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gzip-1.8
 	o h323plus-1.24.0 [replaces openh323, from http://www.h323plus.org/]
 	o hamster-applet-2.32.1 [GNOME 2.32]
-	o handbrake-0.10.2
+	o handbrake-1.0.0
 	o hanzim-3.5
 	o haproxy-1.7.0
 	o harminv-1.4
@@ -1196,6 +1198,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
 	o p5-DBD-SQLite-1.54
+	o p5-DateTime-1.4200
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
@@ -1292,7 +1295,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pitivi-0.97
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.8
+	o plasma-5.8.5
 	o ploticus-examples-230
 	o poco-1.7.5
 	o podcastdl-0.3.3
@@ -1362,6 +1365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-mezzanine-4.2.2
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
+	o py-ncclient-0.5.3
 	o py-newt-0.52.18
 	o py-notify-0.3.1
 	o py-numpy-1.11.3
@@ -1422,7 +1426,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rio500-0.8.1
 	o robodoc-4.99.6
 	o robotfindskitten-2.7182818.701
-	o root-5.34.01
+	o root-6.08.02
 	o root-tail-1.2
 	o rosegarden-14.12
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
@@ -1589,7 +1593,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-0.2.9.8
+	o tor-0.2.9.8 [pkg/51745]
 	o tor-browser-6.0.7
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
