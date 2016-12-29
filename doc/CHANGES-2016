@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5132 2016/12/29 20:09:54 leot Exp $
+$NetBSD: CHANGES-2016,v 1.5133 2016/12/29 22:54:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7141,3 +7141,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed sysutils/xentools41 [wiz 2016-12-29]
 	Updated net/syncthing to 0.14.17 [wiz 2016-12-29]
 	Updated multimedia/mpv to 0.23.0 [leot 2016-12-29]
+	Removed lang/gcc45 [maya 2016-12-29]
+	Removed lang/gcc46 [maya 2016-12-29]
+	Removed lang/gcc46-libs [maya 2016-12-29]
+	Removed lang/gcc47 [maya 2016-12-29]
+	Removed lang/gcc47-libs [maya 2016-12-29]
