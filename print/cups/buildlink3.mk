@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2016/09/20 11:12:22 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2016/12/30 07:08:34 adam Exp $
 
 BUILDLINK_TREE+=	cups
 
@@ -18,6 +18,10 @@ pkgbase := cups
 
 .if !empty(PKG_BUILD_OPTIONS.cups:Mdnssd)
 .include "../../net/mDNSResponder/buildlink3.mk"
+.endif
+
+.if ${OPSYS} != "Darwin" && !empty(PKG_BUILD_OPTIONS.cups:Mavahi)
+.include "../../net/avahi/buildlink3.mk"
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
