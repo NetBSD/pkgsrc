@@ -1,13 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2016/04/13 13:54:30 hauke Exp $
+# $NetBSD: Makefile,v 1.23 2016/12/30 23:27:14 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
+COMMENT=	XEmacs text editor version 21 (no x11 support)
 
-FILESDIR=	${.CURDIR}/../../editors/xemacs/files
-PATCHDIR=	${.CURDIR}/../../editors/xemacs/patches
-PKGDIR=		${.CURDIR}/../../editors/xemacs
-
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS.xemacs+=	-x11
-
-.include "../../editors/xemacs/Makefile"
+.include "../../editors/xemacs/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
