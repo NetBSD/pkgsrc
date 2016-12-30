@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5145 2016/12/30 00:53:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5146 2016/12/30 00:55:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7158,3 +7158,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime to 1.4200 [wiz 2016-12-30]
 	Updated devel/p5-Scalar-List-Utils to 1.47 [wiz 2016-12-30]
 	Updated textproc/p5-YAML to 1.21 [wiz 2016-12-30]
+	Updated devel/py-dulwich to 0.16.1 [wiz 2016-12-30]
