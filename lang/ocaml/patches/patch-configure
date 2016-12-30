@@ -1,20 +1,9 @@
-$NetBSD: patch-configure,v 1.19 2016/11/04 20:11:40 marino Exp $
+$NetBSD: patch-configure,v 1.20 2016/12/30 11:15:00 jaapb Exp $
 
-Several configure changes to work on and detect NetBSD (and some other OSes)
-See also: <http://caml.inria.fr/mantis/view.php?id=6900>
-
---- configure.orig	2016-04-25 13:36:01.000000000 +0000
+All kinds of OS-specific changes to configure
+--- configure.orig	2016-11-04 16:08:24.000000000 +0000
 +++ configure
-@@ -671,7 +671,7 @@ if test $with_sharedlibs = "yes"; then
-       mkmaindll="$flexlink -maindll"
-       shared_libraries_supported=true;;
-     *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*\
--    |*-*-openbsd*|*-*-netbsd*|*-*-gnu*|*-*-haiku*)
-+    |*-*-openbsd*|*-*-netbsd*|*-*-dragonfly|*-*-gnu*|*-*-haiku*)
-       sharedcccompopts="-fPIC"
-       mksharedlib="$bytecc -shared"
-       bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -699,7 +699,10 @@ if test $with_sharedlibs = "yes"; then
+@@ -726,7 +726,10 @@ if test $with_sharedlibs = "yes"; then
          *gcc*)
            sharedcccompopts="-fPIC"
            if sh ./solaris-ld; then
@@ -26,7 +15,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
              byteccrpath="-R"
              mksharedlibrpath="-R"
            else
-@@ -726,7 +729,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -753,7 +756,7 @@ if test $with_sharedlibs = "yes"; then
        byteccrpath="-Wl,-rpath,"
        mksharedlibrpath="-rpath "
        shared_libraries_supported=true;;
@@ -35,7 +24,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
        mksharedlib="$bytecc -bundle -flat_namespace -undefined suppress \
                     -read_only_relocs suppress"
        bytecccompopts="$dl_defs $bytecccompopts"
-@@ -768,11 +771,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -795,11 +798,7 @@ if test $with_sharedlibs = "yes"; then
      i[3456]86-*-linux*)           natdynlink=true;;
      i[3456]86-*-gnu*)             natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
@@ -48,7 +37,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      x86_64-*-darwin*)             natdynlink=true;;
      s390x*-*-linux*)              natdynlink=true;;
      powerpc*-*-linux*)            natdynlink=true;;
-@@ -785,6 +784,9 @@ if test $with_sharedlibs = "yes"; then
+@@ -813,6 +812,9 @@ if test $with_sharedlibs = "yes"; then
      x86_64-*-openbsd*)            natdynlink=true;;
      i[3456]86-*-netbsd*)          natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -58,7 +47,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      i386-*-gnu0.3)                natdynlink=true;;
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-@@ -814,6 +816,7 @@ case "$target" in
+@@ -842,6 +844,7 @@ case "$target" in
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -66,7 +55,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -823,6 +826,7 @@ case "$target" in
+@@ -851,6 +854,7 @@ case "$target" in
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -74,23 +63,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -848,12 +852,15 @@ case "$target" in
-   armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
-   armv5*-*-linux-gnueabi)       arch=arm; model=armv5; system=linux_eabi;;
-   arm*-*-linux-gnueabi)         arch=arm; system=linux_eabi;;
-+  arm*-*-netbsd*)               arch=arm; system=netbsd;;
-   arm*-*-openbsd*)              arch=arm; system=bsd;;
-   zaurus*-*-openbsd*)           arch=arm; system=bsd;;
-   x86_64-*-linux*)              arch=amd64; system=linux;;
-   x86_64-*-gnu*)                arch=amd64; system=gnu;;
-   x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
-   x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
-+  x86_64-*-dragonfly*)          arch=amd64; system=dragonfly;;
-+  x86_64-*-solaris*)            arch=amd64; system=solaris;;
-   x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
-   x86_64-*-darwin*)             arch=amd64; system=macosx;;
-   x86_64-*-mingw*)              arch=amd64; system=mingw;;
-@@ -894,7 +901,6 @@ case "$arch,$nativecc,$system,$model" in
+@@ -923,7 +927,6 @@ case "$arch,$nativecc,$system,$model" in
    *,*,nextstep,*)      nativecclinkopts="-posix";;
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -98,35 +71,18 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
    power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
    power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
-@@ -912,8 +918,8 @@ case "$arch,$system" in
+@@ -941,8 +944,8 @@ case "$arch,$system" in
                      fi;;
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
 -  i386,solaris)   as="${TOOLPREF}as"
--                  aspp="/usr/ccs/bin/${TOOLPREF}as -P";;
+-                  aspp="${TOOLPREF}gcc -c";;
 +  i386,solaris)   as="${TOOLPREF}as --32"
-+                  aspp="gcc -m32 -c";;
++                  aspp="${TOOLPREF}gcc -m32 -c";;
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -930,6 +936,8 @@ case "$arch,$system" in
-                   esac;;
-   arm,freebsd)    as="${TOOLPREF}cc -c"
-                   aspp="${TOOLPREF}cc -c";;
-+  *,dragonfly)      as="${TOOLPREF}as"
-+                  aspp="${TOOLPREF}cc -c";;
-   *,freebsd)      as="${TOOLPREF}as"
-                   aspp="${TOOLPREF}cc -c";;
-   amd64,*|arm,*|arm64,*|i386,*|power,bsd*|sparc,*)
-@@ -953,6 +961,7 @@ case "$arch,$system" in
-     case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
-   amd64,linux) profiling='prof';;
-   amd64,openbsd) profiling='prof';;
-+  amd64,dragonfly) profiling='prof';;
-   amd64,freebsd) profiling='prof';;
-   amd64,netbsd) profiling='prof';;
-   arm,netbsd) profiling='prof';;
-@@ -960,6 +969,7 @@ case "$arch,$system" in
+@@ -991,6 +994,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -134,25 +90,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    *) profiling='noprof';;
  esac
  
-@@ -1445,6 +1455,8 @@ if test "$pthread_wanted" = "yes"; then
-   case "$target" in
-     *-*-solaris*)  pthread_link="-lpthread -lposix4"
-                    pthread_caml_link="-cclib -lpthread -cclib -lposix4";;
-+    *-*-dragon*)   pthread_link="-pthread"
-+                   pthread_caml_link="-cclib -pthread";;
-     *-*-freebsd*)  pthread_link="-pthread"
-                    pthread_caml_link="-cclib -pthread";;
-     *-*-openbsd*)  pthread_link="-pthread"
-@@ -1461,7 +1473,7 @@ if test "$pthread_wanted" = "yes"; then
-     bytecccompopts="$bytecccompopts -D_REENTRANT"
-     nativecccompopts="$nativecccompopts -D_REENTRANT"
-     case "$target" in
--      *-*-freebsd*)
-+      *-*-freebsd*|*-*-dragonfly*)
-           bytecccompopts="$bytecccompopts -D_THREAD_SAFE"
-           nativecccompopts="$nativecccompopts -D_THREAD_SAFE";;
-       *-*-openbsd*)
-@@ -1505,6 +1517,8 @@ fi
+@@ -1554,6 +1558,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -161,7 +99,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1551,6 +1565,7 @@ if test "$x11_include" = "not found"; th
+@@ -1600,6 +1606,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -169,7 +107,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1608,6 +1623,7 @@ if test "$x11_include" = "not found"; th
+@@ -1657,6 +1664,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -177,18 +115,19 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1629,18 +1645,16 @@ if test "$x11_include" = "not found"; th
+@@ -1678,19 +1686,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
 -        x11_libs="-L$dir"
 -        case "$target" in
+-          *-*-freebsd*|*-*-dragonfly*) x11_link="-L$dir -lX11";;
 -          *-kfreebsd*-gnu) x11_link="-L$dir -lX11";;
 -          *-*-*bsd*) x11_link="-R$dir -L$dir -lX11";;
 -          *) x11_link="-L$dir -lX11";;
 -        esac
-+				x11_libs="-L$dir ${COMPILER_RPATH_FLAG}$dir"
-+				x11_link="-L$dir ${COMPILER_RPATH_FLAG}$dir -lX11"
++        x11_libs="-L$dir ${COMPILER_RPATH_FLAG}$dir"
++        x11_link="-L$dir ${COMPILER_RPATH_FLAG}$dir -lX11"
        fi
        break
      fi
