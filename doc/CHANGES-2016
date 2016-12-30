@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5167 2016/12/30 12:03:00 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5168 2016/12/30 12:04:44 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7180,3 +7180,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ocsigen to 2.8 [jaapb 2016-12-30]
 	Updated www/eliom to 6.1.0 [jaapb 2016-12-30]
 	Added textproc/ocaml-uchar version 0.0.1 [jaapb 2016-12-30]
+	Updated devel/js_of_ocaml to 2.8.3 [jaapb 2016-12-30]
