@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 11:43:47 asau Exp $
+# $NetBSD: Makefile,v 1.4 2016/12/30 23:09:41 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
+COMMENT=	*BETA* XEmacs text editor version ${PKGVERSION_NOREV} (no X11 support)
+PKGREVISION=	23
 
-FILESDIR=	${.CURDIR}/../../editors/xemacs-current/files
-PATCHDIR=	${.CURDIR}/../../editors/xemacs-current/patches
-PKGDIR=		${.CURDIR}/../../editors/xemacs-current
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-jpeg
+CONFIGURE_ARGS+=	--without-png
+CONFIGURE_ARGS+=	--without-tiff
+CONFIGURE_ARGS+=	--without-xpm
+CONFIGURE_ARGS+=	--with-site-prefixes=${PREFIX}
+CONFIGURE_ARGS+=	--with-site-runtime-libraries=${PREFIX}/lib
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS.xemacs+=	-x11 -xft -gtk -lucid -motif
-
-.include "../../editors/xemacs-current/Makefile"
+.include "../../editors/xemacs-current/options.mk"
+.include "../../editors/xemacs-current/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
