@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/30 22:32:54 maya Exp $
+# $NetBSD: Makefile,v 1.2 2016/12/30 22:50:15 maya Exp $
 
 DISTNAME=	pycryptodome-3.4.3
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
@@ -8,8 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptodome/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.pycryptodome.org/
 COMMENT=	Cryptographic and hash functions for Python
-# mostly public domain, but a few bits are:
-LICENSE=	python-software-foundation
+LICENSE=	public-domain AND python-software-foundation
 
 do-test:
 	${RUN}cd ${WRKSRC};${SETENV} ${TEST_ENV} ${PYTHONBIN} ${PYSETUP} test
