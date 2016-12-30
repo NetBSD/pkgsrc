@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.447 2016/12/29 22:46:30 maya Exp $
+# $NetBSD: Makefile,v 1.448 2016/12/30 22:27:04 alnsn Exp $
 #
 
 COMMENT=	Programming languages
@@ -88,7 +88,6 @@ SUBDIR+=	guile20
 SUBDIR+=	gwydion-dylan
 SUBDIR+=	heirloom-awk
 SUBDIR+=	hugs
-SUBDIR+=	icc11
 SUBDIR+=	icon
 SUBDIR+=	inform
 SUBDIR+=	intercal
