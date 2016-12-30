@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2016/12/04 05:17:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.93 2016/12/30 13:23:06 jaapb Exp $
 #
 
-DISTNAME=	coq-8.5pl1
-PKGREVISION=	2
+DISTNAME=	coq-8.6
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PKGVERSION_NOREV}/files/
 
@@ -59,5 +58,4 @@ SUBST_FILES.fix-paths=	config/coq_config.ml
 SUBST_SED.fix-paths=	-e "s,${BUILDLINK_DIR},${PREFIX},g"
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../lang/camlp5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

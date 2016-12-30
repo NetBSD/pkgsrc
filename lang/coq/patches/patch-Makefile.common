@@ -1,8 +1,7 @@
-$NetBSD: patch-Makefile.common,v 1.2 2016/07/02 10:17:18 jaapb Exp $
+$NetBSD: patch-Makefile.common,v 1.3 2016/12/30 13:23:06 jaapb Exp $
 
 Use BSD_INSTALL_*
-Compile with OCaml 4.03
---- Makefile.common.orig	2016-04-11 13:12:51.000000000 +0000
+--- Makefile.common.orig	2016-10-25 20:17:16.000000000 +0000
 +++ Makefile.common
 @@ -35,7 +35,7 @@ else
  endif
@@ -12,13 +11,4 @@ Compile with OCaml 4.03
 +INSTALLLIB:=${BSD_INSTALL_LIB}
  INSTALLSH:=./install.sh
  MKDIR:=install -d
- 
-@@ -231,7 +231,7 @@ endif
- LINKCMO:=$(CORECMA) $(STATICPLUGINS)
- LINKCMX:=$(CORECMA:.cma=.cmxa) $(STATICPLUGINS:.cma=.cmxa)
- 
--IDEDEPS:=lib/clib.cma lib/xml_lexer.cmo lib/xml_parser.cmo lib/xml_printer.cmo lib/errors.cmo lib/spawn.cmo
-+IDEDEPS:=lib/clib.cma lib/errors.cmo lib/spawn.cmo
- IDECMA:=ide/ide.cma
- IDETOPLOOPCMA=ide/coqidetop.cma
  
