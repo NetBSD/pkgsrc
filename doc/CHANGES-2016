@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5160 2016/12/30 11:34:16 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5161 2016/12/30 11:44:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7173,3 +7173,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_optcomp to 114.08+89 [jaapb 2016-12-30]
 	Updated devel/ocaml-ppx_tools to 5.0nb2 [jaapb 2016-12-30]
 	Updated devel/ocaml-reactiveData to 0.2.1 [jaapb 2016-12-30]
+	Updated lang/camlp4 to 4.04+1 [jaapb 2016-12-30]
