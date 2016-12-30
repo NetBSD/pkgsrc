@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/05/05 11:03:26 jaapb Exp $
+$NetBSD: distinfo,v 1.9 2016/12/30 11:43:02 jaapb Exp $
 
-SHA1 (ocaml-camlp4/4.03+1.tar.gz) = f5a043b4439bdd4362fc4843d319dfdaa183d862
-RMD160 (ocaml-camlp4/4.03+1.tar.gz) = 179e1787d6a2eeacbc87769a79a252f2f6689acd
-SHA512 (ocaml-camlp4/4.03+1.tar.gz) = 0a329e18deffebb5245415f822f91e692076fca4dbe38748f18e72f417ce7354faed744fdff25f9976659192cb02d56ceb2cf1be5c64da463413ec4a28a9d3ac
-Size (ocaml-camlp4/4.03+1.tar.gz) = 648030 bytes
+SHA1 (ocaml-camlp4/camlp4-4.04+1.tar.gz) = 3fb182ecfd984df8f3f06c5f4c964d4ad990dc91
+RMD160 (ocaml-camlp4/camlp4-4.04+1.tar.gz) = b7c9e88b85e03457319555f9a8a77e2d37c7227f
+SHA512 (ocaml-camlp4/camlp4-4.04+1.tar.gz) = 7db8eebcf3d230f60650ba62d9cb630c069394237e97b678a40b61d3dcaded752a2b7e089a50ff528f1ea0740d0291b722df123a072f2cee489cadc5201c6776
+Size (ocaml-camlp4/camlp4-4.04+1.tar.gz) = 648320 bytes
