@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/12/30 21:23:54 ryoon Exp $
+
+SHA1 (gpick-gpick-0.2.5.tar.gz) = 9b6663137f7eb73a301156f52c2cee44e658b64c
+RMD160 (gpick-gpick-0.2.5.tar.gz) = ca88fc19dca8bb9f4ee6cee5162bc0db5448f58f
+SHA512 (gpick-gpick-0.2.5.tar.gz) = 05ff855e28dcfede0c825d555d5572650ffda9cfaa6462e5b503d2a64cb340eca675b37780dbd3bf43750dbd2d844cb755277eaba7e7a77cb0c3b7e772d552e6
+Size (gpick-gpick-0.2.5.tar.gz) = 329190 bytes
+SHA1 (patch-SConscript) = 391723077ea44372c316dadb78535a0b54fd2f4c
