@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2014/12/03 13:58:57 joerg Exp $
+# $NetBSD: Makefile.common,v 1.7 2016/12/30 22:25:46 wiz Exp $
 #
 # used by editors/emacs22/Makefile
 # used by editors/emacs22-nox11/Makefile
@@ -22,8 +22,6 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
 SETGIDGAME=		yes
-
-.include "options.mk"
 
 MAKEFLAGS+=		EMACSLOADPATH=${WRKSRC}/lisp
 
@@ -52,6 +50,8 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/snake-scores \
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
 			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE:Q}
 SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/update-game-score ${SETGID_GAMES_PERMS}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
 CPPFLAGS+=		-DDFLY_CRT_USRLIB
@@ -89,8 +89,5 @@ post-install:
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/share/emacs/${PKGVERSION_NOREV}/${file}
 .endfor
 
-
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
-
-.include "../../mk/bsd.pkg.mk"
