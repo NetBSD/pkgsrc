@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/06/20 15:36:04 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/12/30 11:48:41 jaapb Exp $
 ${OCAML_SITELIB}/equeue/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.a
 ${OCAML_SITELIB}/equeue/equeue.cma
@@ -458,6 +458,24 @@ ${OCAML_SITELIB}/netsys/netsys_win32.cmi
 ${OCAML_SITELIB}/netsys/netsys_win32.mli
 ${OCAML_SITELIB}/netsys/netsys_xdr.cmi
 ${OCAML_SITELIB}/netsys/netsys_xdr.mli
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/META
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/dllnettls-gnutls.so
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/gnutls.mli
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/libnettls-gnutls.a
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/libnettls-gnutls.p.a
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettle.mli
+${PLIST.ocaml-opt}${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls-gnutls.a
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls-gnutls.cma
+${PLIST.ocaml-opt}${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls-gnutls.cmxa
+${PLIST.ocaml-opt}${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls-gnutls.p.a
+${PLIST.ocaml-opt}${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls-gnutls.p.cmxa
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_gnutls.cmi
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_gnutls.mli
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_gnutls_bindings.cmi
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_gnutls_bindings.mli
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_gnutls_config.cmi
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_nettle_bindings.cmi
+${PLIST.gnutls}${OCAML_SITELIB}/nettls-gnutls/nettls_nettle_bindings.mli
 ${OCAML_SITELIB}/netunidata/META
 ${OCAML_SITELIB}/netunidata/cmapf.adobe_standard_encoding.netdb
 ${OCAML_SITELIB}/netunidata/cmapf.adobe_symbol_encoding.netdb

@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2016/05/05 16:04:21 jaapb Exp $
+# $NetBSD: options.mk,v 1.5 2016/12/30 11:48:41 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocamlnet
-PKG_SUPPORTED_OPTIONS=	gtk gtk2
-PKG_SUGGESTED_OPTIONS=
+PKG_SUPPORTED_OPTIONS=	gtk gtk2 gnutls
+PKG_SUGGESTED_OPTIONS=	gnutls
+
+PLIST_VARS+=		gnutls
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,4 +39,15 @@ CONFIGURE_ARGS+=	-disable-gtk
 CONFIGURE_ARGS+=	-enable-gtk2
 .else
 CONFIGURE_ARGS+=	-disable-gtk2
+.endif
+
+###
+### GNU TLS support
+###
+.if !empty(PKG_OPTIONS:Mgnutls)
+.  include "../../security/gnutls/buildlink3.mk"
+PLIST.gnutls=		yes
+CONFIGURE_ARGS+=	-enable-gnutls
+.else
+CONFIGURE_ARGS+=	-disable-gnutls
 .endif
