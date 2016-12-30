@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5139 2016/12/30 00:39:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5140 2016/12/30 00:41:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7152,3 +7152,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc6 to 6.3.0 [maya 2016-12-30]
 	Updated graphics/ImageMagick to 7.0.4.0 [wiz 2016-12-30]
 	Updated devel/global to 6.5.6 [wiz 2016-12-30]
+	Updated security/libgcrypt to 1.7.5 [wiz 2016-12-30]
