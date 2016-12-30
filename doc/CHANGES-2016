@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5169 2016/12/30 12:38:19 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5170 2016/12/30 13:23:27 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7182,3 +7182,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/ocaml-uchar version 0.0.1 [jaapb 2016-12-30]
 	Updated devel/js_of_ocaml to 2.8.3 [jaapb 2016-12-30]
 	Updated lang/camlp5 to 6.17 [jaapb 2016-12-30]
+	Updated lang/coq to 8.6 [jaapb 2016-12-30]
