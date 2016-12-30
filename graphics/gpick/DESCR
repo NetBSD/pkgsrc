@@ -1,0 +1,27 @@
+Gpick is an advanced color picker and palette editing tool.
+
+Main features
+    * Magnification and mouse pointer control with keyboard.
+    * Automatic color name assignment.
+    * Export to following formats:
+        * Inkscape/Gimp Palette (*.gpl)
+        * Adobe Swatch Exchange (*.ase)
+        * Alias/WaveFront Material (*.mtl)
+        * Cascaded Style Sheet (*.css)
+        * Hyper Text Markup Language (*.html)
+        * Customizeable text file
+    * Import from following formats:
+        * Inkscape/Gimp Palette (*.gpl)
+        * Adobe Swatch Exchange (*.ase)
+        * Customizeable text file
+    * Oversampling with five falloff types:
+        * Multiple pixel values are averaged to help picking
+          colors from sources with noise, patterns and etc,
+          where each pixel is different and overall color is
+          produced by different amounts of particular color.
+    * Palette from image.
+    * Color scheme creation tools.
+    * Mix two or more colors using variable number of steps
+      and different mixing types.
+    * Lightness and/or saturation variations.
+    * Harmonious colors.
