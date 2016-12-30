@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5162 2016/12/30 11:49:09 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5163 2016/12/30 11:51:06 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7175,3 +7175,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-reactiveData to 0.2.1 [jaapb 2016-12-30]
 	Updated lang/camlp4 to 4.04+1 [jaapb 2016-12-30]
 	Updated net/ocamlnet to 4.1.2 [jaapb 2016-12-30]
+	Updated security/ocaml-ssl to 0.5.3 [jaapb 2016-12-30]
