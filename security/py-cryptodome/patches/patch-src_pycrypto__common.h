@@ -1,7 +1,6 @@
-$NetBSD: patch-src_pycrypto__common.h,v 1.1 2016/12/30 22:32:54 maya Exp $
+$NetBSD: patch-src_pycrypto__common.h,v 1.2 2016/12/30 23:02:57 maya Exp $
 
-alloca.h appears to be a linux only header.
-for NetBSD, alloca is in stdlib.h
+BSDs generally don't have alloca.h, Sun needs it
 
 --- src/pycrypto_common.h.orig	2016-10-16 20:19:30.000000000 +0000
 +++ src/pycrypto_common.h
@@ -9,7 +8,7 @@ for NetBSD, alloca is in stdlib.h
  
  #else
  #include <stdint.h>
-+#ifdef __linux__
++#if defined(__linux__) || defined(__sun)
  #include <alloca.h>
 +#endif /* !linux */
  #endif
