@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/08/18 10:07:41 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/30 11:21:47 jaapb Exp $
 
-VERSION=	2.5.2
+VERSION=	2.5.3
 GITHUB_PROJECT=	batteries-included
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	batteries-${VERSION}
