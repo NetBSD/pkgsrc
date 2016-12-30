@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5136 2016/12/30 00:10:14 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.5137 2016/12/30 00:24:58 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7149,3 +7149,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/bulk-medium to 20161229 [wiz 2016-12-29]
 	Updated www/py-idna to 2.2 [wiz 2016-12-29]
 	Updated geography/viking to 1.6.2 [gdt 2016-12-30]
+	Updated lang/gcc6 to 6.3.0 [maya 2016-12-30]
