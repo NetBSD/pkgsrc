@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5156 2016/12/30 11:20:01 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5157 2016/12/30 11:22:16 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7169,3 +7169,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/python27 to 2.7.13 [adam 2016-12-30]
 	Updated lang/ocaml to 4.04.0 [jaapb 2016-12-30]
 	Updated databases/pgocaml to 2.3nb1 [jaapb 2016-12-30]
+	Updated devel/ocaml-batteries to 2.5.3 [jaapb 2016-12-30]
