@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.597 2016/12/08 03:00:12 jnemeth Exp $
+# $NetBSD: Makefile,v 1.598 2016/12/30 22:34:14 maya Exp $
 #
 
 COMMENT=	Security tools
@@ -384,6 +384,7 @@ SUBDIR+=	py-certifi
 SUBDIR+=	py-crack
 SUBDIR+=	py-cryptkit
 SUBDIR+=	py-crypto
+SUBDIR+=	py-cryptodome
 SUBDIR+=	py-cryptography
 SUBDIR+=	py-cryptopp
 SUBDIR+=	py-cybox
