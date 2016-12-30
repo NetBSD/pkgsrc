@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/11/24 23:35:19 marino Exp $
+# $NetBSD: Makefile,v 1.66 2016/12/30 11:45:51 wiz Exp $
 
 READLINE_VERSION=	7.0
 
@@ -24,10 +24,5 @@ CONFIGURE_ENV.NetBSD+=	bash_cv_wcwidth_broken=no
 BUILD_TARGET=		everything-libtool
 INSTALL_TARGET=		install-libtool
 
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--with-curses=yes
-.include "../../mk/curses.buildlink3.mk"
-.else
 .include "../../mk/termcap.buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
