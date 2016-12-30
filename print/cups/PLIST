@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.57 2016/10/09 08:33:16 leot Exp $
+@comment $NetBSD: PLIST,v 1.58 2016/12/30 07:08:34 adam Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
 bin/cupstestppd
+${PLIST.ippfind}bin/ippfind
 bin/ipptool
 bin/lp
 bin/lpoptions
@@ -35,6 +36,10 @@ lib/libcupscgi.la
 lib/libcupsimage.la
 lib/libcupsmime.la
 lib/libcupsppdc.la
+${PLIST.apple}libexec/cups/apple/http
+${PLIST.apple}libexec/cups/apple/https
+${PLIST.apple}libexec/cups/apple/ipp
+${PLIST.apple}libexec/cups/apple/ipps
 ${PLIST.dnssd}libexec/cups/backend/dnssd
 libexec/cups/backend/http
 libexec/cups/backend/https
@@ -72,6 +77,7 @@ man/man1/cups-config.1
 man/man1/cups.1
 man/man1/cupstestdsc.1
 man/man1/cupstestppd.1
+${PLIST.ippfind}man/man1/ippfind.1
 man/man1/ipptool.1
 man/man1/lp.1
 man/man1/lpoptions.1
@@ -711,8 +717,8 @@ share/doc/cups/pt_BR/index.html
 share/doc/cups/robots.txt
 share/doc/cups/ru/index.html
 share/examples/cups/cups-files.conf
-share/examples/cups/cupsd.conf
 ${PLIST.pam}share/examples/cups/cups.pam
+share/examples/cups/cupsd.conf
 share/examples/cups/snmp.conf
 share/locale/ca/cups_ca.po
 share/locale/cs/cups_cs.po
