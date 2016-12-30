@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/24 01:25:30 dholland Exp $
+# $NetBSD: Makefile,v 1.10 2016/12/30 22:25:46 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/emacs/emacs22/:S/-/-nox11-/}
 PKGREVISION=	4
@@ -12,8 +12,5 @@ PKGDIR=		${.CURDIR}/../../editors/emacs22
 # This needs to be set before including bsd.prefs.mk.
 SETGIDGAME=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS.emacs+=	-x11 -gtk -motif -xaw
-
 .include "../../editors/emacs22/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
