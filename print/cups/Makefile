@@ -1,24 +1,25 @@
-# $NetBSD: Makefile,v 1.236 2016/12/12 14:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.237 2016/12/30 07:08:34 adam Exp $
 
 DISTNAME=	cups-2.2.1-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
-GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	sbd@NetBSD.org
 HOMEPAGE=	http://www.cups.org/
 COMMENT=	Common UNIX Printing System
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
+
 CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES=	datasize memorysize
 USE_LANGUAGES=		c c++	# pdftops is a C++ application
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		aclocal autoconf automake gmake
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
@@ -34,6 +35,7 @@ CONFIGURE_ARGS+=	--enable-libpaper
 CONFIGURE_ARGS+=	--enable-libtool
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--with-manext=bsd
+CONFIGURE_ARGS+=	--without-bundledir
 CONFIGURE_ARGS+=	--without-icondir
 CONFIGURE_ARGS+=	--without-menudir
 CONFIGURE_ARGS+=	--without-perl
@@ -55,11 +57,6 @@ CONFIGURE_ENV+=		ac_cv_func_epoll_create=no
 .endif
 LIBS+=			${BUILDLINK_LDADD.iconv}
 
-PLIST_VARS+=		notmac
-.if ${OPSYS} != "Darwin"
-PLIST.notmac=		yes
-.endif
-
 # Avoid the following error when compiling with clang.
 # /usr/local/bin/ld: /usr/lib/crt1.o: relocation R_X86_64_32 against `_DYNAMIC'
 # can not be used when making a shared object; recompile with -fPIC
@@ -77,7 +74,7 @@ FILES_SUBST+=		CUPS_GROUP=${CUPS_GROUP}
 FILES_SUBST+=		CUPS_SYSTEM_GROUPS=${CUPS_SYSTEM_GROUPS:Q}
 
 PKG_GROUPS_VARS+=	CUPS_GROUP CUPS_SYSTEM_GROUPS
-PKG_USERS_VARS+=	CUPS_USER
+PKG_USERS_VARS=		CUPS_USER
 
 BUILD_DEFS+=		CUPS_USER CUPS_GROUP CUPS_SYSTEM_GROUPS VARBASE
 
@@ -133,10 +130,6 @@ SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
 SUBST_STAGE.piefix=	post-patch
 .endif
 
-.if ${OPSYS} == "Darwin"
-PLIST_SRC=		PLIST.Darwin
-.endif
-
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR} ${CUPS_CONFDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
@@ -171,9 +164,9 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../print/libpaper/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../print/libpaper/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
