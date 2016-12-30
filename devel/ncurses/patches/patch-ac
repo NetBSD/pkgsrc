@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.24 2016/12/18 23:30:34 joerg Exp $
+$NetBSD: patch-ac,v 1.25 2016/12/30 11:28:19 wiz Exp $
 
 Allow ncurses to build with compiler from pkgsrc by dropping the use of
 -no-cpp-precomp which is specific to Apple's supplied toolchain.
@@ -7,6 +7,15 @@ Include local paths before utilising flags from build env
 
 --- configure.orig	2015-08-05 09:20:32.000000000 +0000
 +++ configure
+@@ -4930,7 +4930,7 @@ test -z "$cf_cv_libtool_version" && unse
+ echo "$as_me: error: Cannot find libtool" >&2;}
+    { (exit 1); exit 1; }; }
+ 	fi
+-	LIB_CREATE='${LIBTOOL} --mode=link ${CC} -rpath ${DESTDIR}${libdir} ${LIBTOOL_VERSION} `cut -f1 ${top_srcdir}/VERSION` ${LIBTOOL_OPTS} ${LT_UNDEF} $(LIBS) -o'
++	LIB_CREATE='${LIBTOOL} --mode=link ${CC} -rpath ${libdir} ${LIBTOOL_VERSION} `cut -f1 ${top_srcdir}/VERSION` ${LIBTOOL_OPTS} ${LT_UNDEF} $(LIBS) -o'
+ 	LIB_OBJECT='${OBJECTS:.o=.lo}'
+ 	LIB_SUFFIX=.la
+ 	LIB_CLEAN='${LIBTOOL} --mode=clean'
 @@ -11090,12 +11090,7 @@ case ".$MANPAGE_RENAMES" in
  (.no)
  	;;
@@ -53,7 +62,7 @@ Include local paths before utilising flags from build env
  CXX_NAME=ncurses++
  
  # workaround for g++ versus Solaris (20131116)
-@@ -23565,7 +23570,14 @@ CF_EOF
+@@ -23565,7 +23568,14 @@ CF_EOF
  		cf_depsuf="${LIB_SUFFIX}${EXTRA_SUFFIX}${cf_depsuf}"
  	fi
  

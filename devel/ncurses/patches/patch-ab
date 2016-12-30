@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.19 2016/12/18 23:30:34 joerg Exp $
+$NetBSD: patch-ab,v 1.20 2016/12/30 11:28:19 wiz Exp $
 
 --- mk-1st.awk.orig	2014-12-20 23:54:22.000000000 +0000
 +++ mk-1st.awk
@@ -12,15 +12,17 @@ $NetBSD: patch-ab,v 1.19 2016/12/18 23:30:34 joerg Exp $
  		return sprintf("%s%s%s", prefix, a_name, suffix)
  	}
  # see imp_name
-@@ -447,7 +450,7 @@ END	{
+@@ -447,8 +450,8 @@ END	{
  					which_list = "SHLIB_LIST";
  				}
  				printf "\tcd ../lib && $(LIBTOOL_LINK) $(%s) $(%s) \\\n", CC_NAME, CC_FLAG;
 -				printf "\t\t-o %s $(%s_OBJS:$o=.lo) \\\n", lib_name, OBJS;
+-				printf "\t\t-rpath $(DESTDIR)$(libdir) \\\n";
 +				printf "\t\t-o %s $(%s_OBJS:.o=.lo) \\\n", lib_name, OBJS;
- 				printf "\t\t-rpath $(DESTDIR)$(libdir) \\\n";
++				printf "\t\t-rpath $(libdir) \\\n";
  				printf "\t\t%s $(NCURSES_MAJOR):$(NCURSES_MINOR) $(LT_UNDEF) $(%s) $(LDFLAGS)\n", libtool_version, which_list;
  				print  ""
+ 				print  "install \\"
 @@ -471,7 +474,7 @@ END	{
  				printf "\t$(RANLIB) $@\n"
  				if ( host == "vxworks" )
