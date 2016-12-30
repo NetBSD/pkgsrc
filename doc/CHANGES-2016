@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5146 2016/12/30 00:55:46 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5147 2016/12/30 03:21:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7159,3 +7159,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Scalar-List-Utils to 1.47 [wiz 2016-12-30]
 	Updated textproc/p5-YAML to 1.21 [wiz 2016-12-30]
 	Updated devel/py-dulwich to 0.16.1 [wiz 2016-12-30]
+	Updated www/ikiwiki to 3.20161229 [schmonz 2016-12-30]
