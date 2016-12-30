@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2016/07/02 15:05:43 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2016/12/30 10:53:21 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1437,8 +1437,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-8.1.1-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-20.10.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-9.0.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-28.8.0-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -2090,9 +2090,6 @@ lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_basestring.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_buffer.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_buffer.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_buffer.pyo
-lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_callable.py
-lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_callable.pyc
-lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_callable.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_dict.py
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_dict.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/fixes/fix_dict.pyo
@@ -2688,6 +2685,7 @@ lib/python${PY_VER_SUFFIX}/test/__init__.pyo
 lib/python${PY_VER_SUFFIX}/test/_mock_backport.py
 lib/python${PY_VER_SUFFIX}/test/_mock_backport.pyc
 lib/python${PY_VER_SUFFIX}/test/_mock_backport.pyo
+lib/python${PY_VER_SUFFIX}/test/allsans.pem
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.aiff
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.au
 lib/python${PY_VER_SUFFIX}/test/audiodata/pluck-pcm16.wav
@@ -2728,7 +2726,6 @@ lib/python${PY_VER_SUFFIX}/test/capath/6e88d7b8.0
 lib/python${PY_VER_SUFFIX}/test/capath/99d0fa06.0
 lib/python${PY_VER_SUFFIX}/test/capath/ce7b8643.0
 lib/python${PY_VER_SUFFIX}/test/cfgparser.1
-lib/python${PY_VER_SUFFIX}/test/check_soundcard.vbs
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5-utf8.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5.txt
 lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5hkscs-utf8.txt
@@ -3035,6 +3032,9 @@ lib/python${PY_VER_SUFFIX}/test/ssl_key.pem
 lib/python${PY_VER_SUFFIX}/test/ssl_servers.py
 lib/python${PY_VER_SUFFIX}/test/ssl_servers.pyc
 lib/python${PY_VER_SUFFIX}/test/ssl_servers.pyo
+lib/python${PY_VER_SUFFIX}/test/ssltests.py
+lib/python${PY_VER_SUFFIX}/test/ssltests.pyc
+lib/python${PY_VER_SUFFIX}/test/ssltests.pyo
 lib/python${PY_VER_SUFFIX}/test/string_tests.py
 lib/python${PY_VER_SUFFIX}/test/string_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/string_tests.pyo
