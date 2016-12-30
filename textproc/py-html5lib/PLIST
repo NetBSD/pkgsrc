@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/01/17 23:32:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/12/30 10:09:36 ryoon Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/html5lib/__init__.py
 ${PYSITELIB}/html5lib/__init__.pyc
