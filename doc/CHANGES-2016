@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5138 2016/12/30 00:35:34 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5139 2016/12/30 00:39:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7151,3 +7151,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/viking to 1.6.2 [gdt 2016-12-30]
 	Updated lang/gcc6 to 6.3.0 [maya 2016-12-30]
 	Updated graphics/ImageMagick to 7.0.4.0 [wiz 2016-12-30]
+	Updated devel/global to 6.5.6 [wiz 2016-12-30]
