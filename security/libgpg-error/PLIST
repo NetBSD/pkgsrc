@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/02/01 19:49:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/12/30 00:42:53 wiz Exp $
 bin/gpg-error
 bin/gpg-error-config
 include/gpg-error.h
@@ -10,6 +10,7 @@ share/common-lisp/source/gpg-error/gpg-error-codes.lisp
 share/common-lisp/source/gpg-error/gpg-error-package.lisp
 share/common-lisp/source/gpg-error/gpg-error.asd
 share/common-lisp/source/gpg-error/gpg-error.lisp
+share/libgpg-error/errorref.txt
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/libgpg-error.mo
 ${PLIST.nls}share/locale/de/LC_MESSAGES/libgpg-error.mo
