@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2016/09/04 09:21:04 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.48 2016/12/30 10:00:16 ryoon Exp $
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
@@ -61,7 +61,6 @@ man/man8/qemu-ga.8
 man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
-share/doc/qemu/qemu-tech.html
 share/doc/qemu/qmp-commands.txt
 share/qemu/QEMU,cgthree.bin
 share/qemu/QEMU,tcx.bin
@@ -135,6 +134,7 @@ share/qemu/qemu-icon.bmp
 share/qemu/qemu_logo_no_text.svg
 share/qemu/s390-ccw.img
 share/qemu/sgabios.bin
+share/qemu/skiboot.lid
 share/qemu/slof.bin
 share/qemu/spapr-rtas.bin
 share/qemu/trace-events-all
