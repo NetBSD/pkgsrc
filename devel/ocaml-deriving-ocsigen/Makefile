@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2016/06/17 10:48:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2016/12/30 11:16:58 jaapb Exp $
 #
 
 VERSION=	0.7.1
 GITHUB_PROJECT=	deriving
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${GITHUB_PROJECT}-ocsigen-${VERSION}
+PKGREVISION=	1
 COMMENT=	Extension to OCaml for deriving functions from type declarations
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
