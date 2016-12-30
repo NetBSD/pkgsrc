@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2016/12/30 22:41:33 maya Exp $
+$NetBSD: distinfo,v 1.4 2016/12/30 23:23:20 maya Exp $
 
 SHA1 (streamlink-0.2.0.tar.gz) = 6f56764b3b6fbf6eb74c0d92afe6f5f93ccb2198
 RMD160 (streamlink-0.2.0.tar.gz) = d437e47bf5e811a92fe0bef69ae4a4606b87d082
 SHA512 (streamlink-0.2.0.tar.gz) = 10ccf30ef024c34f15b16539ac1e9329351eb26dffe0c36546240354fcf635e7dabc63a56cf70d43763adbfdc41651b86f189e625215d475d54d04f8e3b24ab1
 Size (streamlink-0.2.0.tar.gz) = 996839 bytes
+SHA1 (patch-setup.py) = c3b628dcc7cad49c90a8116e1b40baa67bd8b76d
