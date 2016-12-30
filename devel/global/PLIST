@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/04/08 15:01:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/12/30 00:39:30 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -20,8 +20,6 @@ man/man1/htags-server.1
 man/man1/htags.1
 man/man5/gtags.conf.5
 share/gtags/AUTHORS
-share/gtags/BOKIN_MODEL
-share/gtags/BOKIN_MODEL_FAQ
 share/gtags/BUILD_TOOLS
 share/gtags/COPYING
 share/gtags/COPYING.LIB
@@ -38,6 +36,7 @@ share/gtags/README.PATCHES
 share/gtags/SERVERSIDE_HOWTO
 share/gtags/THANKS
 share/gtags/completion.cgi
+share/gtags/dot_htaccess
 share/gtags/elvis-2.2_0.patch
 share/gtags/elvis.rc
 share/gtags/geco.rc
