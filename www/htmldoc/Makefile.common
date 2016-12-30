@@ -1,0 +1,38 @@
+# $NetBSD: Makefile.common,v 1.14 2016/12/30 12:54:20 wiz Exp $
+#
+# used by www/htmldoc/Makefile
+# used by www/htmldoc-x11/Makefile
+
+# This section contains variables that might be overridden.
+PKGNAME?=	${PKGNAME_BASE}
+COMMENT?=	Converts HTML to indexed HTML, PDF and/or PostScript
+
+# Normal package Makefile contents follow.
+VERSION= 	1.8.27
+DISTNAME=	htmldoc-${VERSION}-source
+PKGNAME_BASE=	${DISTNAME:S/-source//}
+CATEGORIES=	www
+MASTER_SITES=	ftp://ftp.easysw.com/pub/htmldoc/${PKGVERSION_NOREV}/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+#HOMEPAGE=	http://www.htmldoc.org/
+LICENSE=	gnu-gpl-v2
+
+PATCHDIR=		${.CURDIR}/../../www/htmldoc/patches
+DISTINFO_FILE=		${.CURDIR}/../../www/htmldoc/distinfo
+PLIST_SRC=		${.CURDIR}/../../www/htmldoc/PLIST
+
+.include "${.CURDIR}/../../www/htmldoc/options.mk"
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+
+INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin
+INSTALL_MAKE_FLAGS+=	datadir=${DESTDIR}${PREFIX}/share
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
