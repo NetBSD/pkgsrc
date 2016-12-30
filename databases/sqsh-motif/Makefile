@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2012/10/02 21:25:54 asau Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/30 13:33:45 wiz Exp $
 
-PKGNAME=	${PKGNAME_BASE:S/-/-motif-/}
+PKGNAME=	sqsh-motif-${VERSION}
 COMMENT=	SQL shell for Sybase and MS-SQL servers (Motif GUI)
 
-FILESDIR=	${.CURDIR}/../../databases/sqsh/files
-PATCHDIR=	${.CURDIR}/../../databases/sqsh/patches
-PKGDIR=		${.CURDIR}/../../databases/sqsh
+CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS.sqsh+=	sqsh-motif -sqsh-xaw
-
-.include "../../databases/sqsh/Makefile"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
+.include "../../databases/sqsh/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
