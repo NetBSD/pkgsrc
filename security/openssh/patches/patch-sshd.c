@@ -1,11 +1,11 @@
-$NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
+$NetBSD: patch-sshd.c,v 1.8 2016/12/30 04:43:16 taca Exp $
 
 * Interix support
 * Revive tcp_wrappers support.
 
---- sshd.c.orig	2016-03-09 18:04:48.000000000 +0000
+--- sshd.c.orig	2016-12-19 04:59:41.000000000 +0000
 +++ sshd.c
-@@ -125,6 +125,13 @@
+@@ -123,6 +123,13 @@
  #include "version.h"
  #include "ssherr.h"
  
@@ -16,10 +16,10 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
 +int deny_severity;
 +#endif /* LIBWRAP */
 +
- #ifndef O_NOCTTY
- #define O_NOCTTY	0
- #endif
-@@ -236,7 +243,11 @@ int *startup_pipes = NULL;
+ /* Re-exec fds */
+ #define REEXEC_DEVCRYPTO_RESERVED_FD	(STDERR_FILENO + 1)
+ #define REEXEC_STARTUP_PIPE_FD		(STDERR_FILENO + 2)
+@@ -220,7 +227,11 @@ int *startup_pipes = NULL;
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -31,7 +31,7 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  struct monitor *pmonitor = NULL;
  int privsep_is_preauth = 1;
  
-@@ -632,7 +643,7 @@ privsep_preauth_child(void)
+@@ -541,7 +552,7 @@ privsep_preauth_child(void)
  	demote_sensitive_data();
  
  	/* Demote the child */
@@ -40,7 +40,7 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  		/* Change our root directory */
  		if (chroot(_PATH_PRIVSEP_CHROOT_DIR) == -1)
  			fatal("chroot(\"%s\"): %s", _PATH_PRIVSEP_CHROOT_DIR,
-@@ -643,10 +654,15 @@ privsep_preauth_child(void)
+@@ -552,10 +563,15 @@ privsep_preauth_child(void)
  		/* Drop our privileges */
  		debug3("privsep user:group %u:%u", (u_int)privsep_pw->pw_uid,
  		    (u_int)privsep_pw->pw_gid);
@@ -56,7 +56,7 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  	}
  }
  
-@@ -713,10 +729,17 @@ privsep_preauth(Authctxt *authctxt)
+@@ -619,10 +635,17 @@ privsep_preauth(Authctxt *authctxt)
  		/* Arrange for logging to be sent to the monitor */
  		set_log_handler(mm_log_handler, pmonitor);
  
@@ -74,16 +74,16 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  
  		return 0;
  	}
-@@ -730,7 +753,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -634,7 +657,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
--	if (authctxt->pw->pw_uid == 0 || options.use_login) {
-+	if (authctxt->pw->pw_uid == ROOTUID || options.use_login) {
+-	if (authctxt->pw->pw_uid == 0) {
++	if (authctxt->pw->pw_uid == ROOTUID) {
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1497,8 +1520,10 @@ main(int ac, char **av)
+@@ -1389,8 +1412,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -95,7 +95,7 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1925,7 +1950,7 @@ main(int ac, char **av)
+@@ -1766,7 +1791,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -104,7 +104,7 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1948,8 +1973,10 @@ main(int ac, char **av)
+@@ -1789,8 +1814,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -115,7 +115,7 @@ $NetBSD: patch-sshd.c,v 1.7 2016/03/15 20:54:07 bsiegert Exp $
  
  	if (rexec_flag) {
  		rexec_argv = xcalloc(rexec_argc + 2, sizeof(char *));
-@@ -2145,6 +2172,25 @@ main(int ac, char **av)
+@@ -1972,6 +1999,25 @@ main(int ac, char **av)
  	audit_connection_from(remote_ip, remote_port);
  #endif
  
