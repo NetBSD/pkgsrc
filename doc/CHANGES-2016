@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5148 2016/12/30 04:43:48 taca Exp $
+$NetBSD: CHANGES-2016,v 1.5149 2016/12/30 04:45:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7161,3 +7161,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-dulwich to 0.16.1 [wiz 2016-12-30]
 	Updated www/ikiwiki to 3.20161229 [schmonz 2016-12-30]
 	Updated security/openssh to 7.4.1 [taca 2016-12-30]
+	Updated databases/phpmyadmin to 4.6.5.2 [taca 2016-12-30]
