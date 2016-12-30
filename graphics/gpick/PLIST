@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2016/12/30 21:23:54 ryoon Exp $
+bin/gpick
+man/man1/gpick.1
+share/applications/gpick.desktop
+share/doc/gpick/copyright
+share/gpick/colors.txt
+share/gpick/colors0.txt
+share/gpick/gpick-falloff-cubic.png
+share/gpick/gpick-falloff-exponential.png
+share/gpick/gpick-falloff-linear.png
+share/gpick/gpick-falloff-none.png
+share/gpick/gpick-falloff-quadratic.png
+share/gpick/gpick-gray-pattern.png
+share/gpick/helpers.lua
+share/gpick/init.lua
+share/gpick/layouts.lua
+share/icons/hicolor/48x48/apps/gpick.png
+share/icons/hicolor/scalable/apps/gpick.svg
+share/locale/es/LC_MESSAGES/gpick.mo
+share/locale/lt/LC_MESSAGES/gpick.mo
+share/locale/ru/LC_MESSAGES/gpick.mo
