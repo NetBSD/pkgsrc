@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.105 2016/07/13 15:01:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.106 2016/12/30 11:15:00 jaapb Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		2
+#PKGREVISION=		2
 
-#CONFIGURE_ARGS+=	-no-tk
-#CONFIGURE_ARGS+=	-cc ${CC}
 CONFIGURE_ENV+=		disable_x11=yes
 
 BUILD_TARGET=		world
