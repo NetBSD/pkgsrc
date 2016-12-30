@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16833 2016/12/30 00:41:45 wiz Exp $
+$NetBSD: TODO,v 1.16834 2016/12/30 00:43:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -998,7 +998,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
-	o libgpg-error-1.26
 	o libgroove-4.2.1
 	o libisoburn-1.4.0
 	o libisofs-1.4.2
