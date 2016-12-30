@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.150 2016/08/23 15:53:14 taca Exp $
+# $NetBSD: Makefile,v 1.151 2016/12/30 04:44:43 taca Exp $
 
-DISTNAME=	phpMyAdmin-4.6.4-all-languages
+DISTNAME=	phpMyAdmin-4.6.5.2-all-languages
 PKGNAME=	${DISTNAME:S/-all-languages//:tl}
 CATEGORIES=	databases www
 MASTER_SITES=	https://files.phpmyadmin.net/phpMyAdmin/${PKGVERSION_NOREV}/
