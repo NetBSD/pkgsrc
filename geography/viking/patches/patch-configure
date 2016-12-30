@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2016/12/30 00:10:03 gdt Exp $
+
+Remediate bashisms.  I believe this has been reported upstream, but
+that should be verified with upstream head.
+
+--- configure.orig	2015-11-24 22:18:34.000000000 +0000
++++ configure
+@@ -8585,7 +8585,7 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
+ if test "$INTLTOOL_APPLIED_VERSION_AS_INT" -ge 5000; then
+       INTLTOOL_XML_NOMERGE_RULE='%.xml:       %.xml.in       $(INTLTOOL_MERGE) ; $(INTLTOOL_V_MERGE)LC_ALL=C $(INTLTOOL_MERGE) $(INTLTOOL_V_MERGE_OPTIONS) -x -u --no-translations $< $@'
+ else
+-      INTLTOOL_XML_NOMERGE_RULE='%.xml:       %.xml.in       $(INTLTOOL_MERGE) ; $(INTLTOOL_V_MERGE)_it_tmp_dir=tmp.intltool.$$RANDOM && mkdir $$_it_tmp_dir && LC_ALL=C $(INTLTOOL_MERGE) $(INTLTOOL_V_MERGE_OPTIONS) -x -u $$_it_tmp_dir $< $@ && rmdir $$_it_tmp_dir'
++      INTLTOOL_XML_NOMERGE_RULE='%.xml:       %.xml.in       $(INTLTOOL_MERGE) ; $(INTLTOOL_V_MERGE)_it_tmp_dir=tmp.intltool.not-random && mkdir $$_it_tmp_dir && LC_ALL=C $(INTLTOOL_MERGE) $(INTLTOOL_V_MERGE_OPTIONS) -x -u $$_it_tmp_dir $< $@ && rmdir $$_it_tmp_dir'
+ fi
+       INTLTOOL_XAM_RULE='%.xam:       %.xml.in       $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; $(INTLTOOL_V_MERGE)LC_ALL=C $(INTLTOOL_MERGE) $(INTLTOOL_V_MERGE_OPTIONS) -x -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@'
+       INTLTOOL_KBD_RULE='%.kbd:       %.kbd.in       $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po) ; $(INTLTOOL_V_MERGE)LC_ALL=C $(INTLTOOL_MERGE) $(INTLTOOL_V_MERGE_OPTIONS) -x -u -m -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@'
+@@ -12428,7 +12428,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+- if test "x$XP" != "x" && test -r "$DB2MAN_XSL" && test "${HAVE_SCROLLKEEPER}" == "yes" ; then
++ if test "x$XP" != "x" && test -r "$DB2MAN_XSL" && test "${HAVE_SCROLLKEEPER}" = "yes" ; then
+   GEN_MANPAGES_TRUE=
+   GEN_MANPAGES_FALSE='#'
+ else
