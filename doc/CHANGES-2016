@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5172 2016/12/30 16:19:27 adam Exp $
+$NetBSD: CHANGES-2016,v 1.5173 2016/12/30 21:24:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7185,3 +7185,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/coq to 8.6 [jaapb 2016-12-30]
 	Updated www/ikiwiki to 3.20161229.1 [schmonz 2016-12-30]
 	Updated print/cups-filters to 1.13.2 [adam 2016-12-30]
+	Added graphics/gpick version 0.2.5 [ryoon 2016-12-30]
