@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5165 2016/12/30 11:56:15 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5166 2016/12/30 11:57:51 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7178,3 +7178,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/ocaml-ssl to 0.5.3 [jaapb 2016-12-30]
 	Updated textproc/ocaml-tyxml to 4.0.1 [jaapb 2016-12-30]
 	Updated www/ocsigen to 2.8 [jaapb 2016-12-30]
+	Updated www/eliom to 6.1.0 [jaapb 2016-12-30]
