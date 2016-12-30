@@ -1,0 +1,23 @@
+$NetBSD: patch-SConscript,v 1.1 2016/12/30 21:23:55 ryoon Exp $
+
+* Fix man page path
+
+--- SConscript.orig	2013-02-28 17:34:31.000000000 +0000
++++ SConscript
+@@ -10,6 +10,7 @@ env = GpickEnvironment(ENV=os.environ, B
+ 
+ vars = Variables(os.path.join(env.GetLaunchDir(), 'user-config.py'))
+ vars.Add('DESTDIR', 'Directory to install under', '/usr/local')
++vars.Add('PKGMANDIR', 'Path to man pages', 'man')
+ vars.Add('LOCALEDIR', 'Path to locale directory', '')
+ vars.Add('DEBARCH', 'Debian package architecture', 'i386')
+ vars.Add(BoolVariable('ENABLE_NLS', 'Compile with gettext support', True))
+@@ -164,7 +165,7 @@ env.Alias(target="install", source=[
+ 	env.InstallData(dir=env['DESTDIR'] +'/share/applications', source=['share/applications/gpick.desktop']),
+ 	env.InstallData(dir=env['DESTDIR'] +'/share/doc/gpick', source=['share/doc/gpick/copyright']),
+ 	env.InstallData(dir=env['DESTDIR'] +'/share/gpick', source=[env.Glob('share/gpick/*.png'), env.Glob('share/gpick/*.lua'), env.Glob('share/gpick/*.txt')]),
+-	env.InstallData(dir=env['DESTDIR'] +'/share/man/man1', source=['share/man/man1/gpick.1']),
++	env.InstallData(dir=env['DESTDIR'] + '/' + env['PKGMANDIR'] + '/man1', source=['share/man/man1/gpick.1']),
+ 	env.InstallData(dir=env['DESTDIR'] +'/share/icons/hicolor/48x48/apps/', source=[env.Glob('share/icons/hicolor/48x48/apps/*.png')]),
+ 	env.InstallData(dir=env['DESTDIR'] +'/share/icons/hicolor/scalable/apps/', source=[env.Glob('share/icons/hicolor/scalable/apps/*.svg')]),
+ 	env.InstallDataAutoDir(dir=env['DESTDIR'] + '/share/locale/', relative_dir='share/locale/', source=[env.Glob('share/locale/*/LC_MESSAGES/gpick.mo')]),
