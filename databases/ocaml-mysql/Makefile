@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2016/07/02 09:42:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2016/12/30 11:16:58 jaapb Exp $
 #
 
 VERSION=	1.2.0
 GITHUB_PROJECT=	ocaml-mysql
 GITHUB_TAG=	v${VERSION}
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ygrek/}
 
