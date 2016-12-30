@@ -1,57 +1,49 @@
-$NetBSD: patch-tools_Makefile.shared,v 1.4 2016/05/05 08:12:01 jaapb Exp $
+$NetBSD: patch-tools_Makefile.shared,v 1.5 2016/12/30 11:15:00 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 
---- tools/Makefile.shared.orig	2016-04-01 12:53:41.000000000 +0000
+--- tools/Makefile.shared.orig	2016-09-05 13:19:52.000000000 +0000
 +++ tools/Makefile.shared
-@@ -66,9 +66,9 @@ INSTALL_BINDIR=$(DESTDIR)$(BINDIR)
- INSTALL_LIBDIR=$(DESTDIR)$(LIBDIR)
- 
- install::
--	cp ocamldep "$(INSTALL_BINDIR)/ocamldep$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocamldep "$(INSTALL_BINDIR)/ocamldep$(EXE)"
- 	if test -f ocamldep.opt; then \
--	  cp ocamldep.opt "$(INSTALL_BINDIR)/ocamldep.opt$(EXE)"; else :; fi
-+	  $(BSD_INSTALL_PROGRAM) ocamldep.opt "$(INSTALL_BINDIR)/ocamldep.opt$(EXE)"; else :; fi
- 
- # The profiler
- 
-@@ -95,13 +95,13 @@ ocamloptp: ocamloptp.cmo
+@@ -140,10 +140,10 @@ $(call byte_and_opt,ocamloptp,$(ocamlcp_
  opt:: profiling.cmx
  
  install::
--	cp ocamlprof "$(INSTALL_BINDIR)/ocamlprof$(EXE)"
--	cp ocamlcp "$(INSTALL_BINDIR)/ocamlcp$(EXE)"
--	cp ocamloptp "$(INSTALL_BINDIR)/ocamloptp$(EXE)"
--	cp profiling.cmi profiling.cmo "$(INSTALL_LIBDIR)"
-+	$(BSD_INSTALL_SCRIPT) ocamlprof "$(INSTALL_BINDIR)/ocamlprof$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocamlcp "$(INSTALL_BINDIR)/ocamlcp$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocamloptp "$(INSTALL_BINDIR)/ocamloptp$(EXE)"
-+	$(BSD_INSTALL_DATA) profiling.cmi profiling.cmo "$(INSTALL_LIBDIR)"
+-	cp -- profiling.cmi profiling.cmo "$(INSTALL_LIBDIR)"
++	$(BSD_INSTALL_DATA) -- profiling.cmi profiling.cmo "$(INSTALL_LIBDIR)"
  
  installopt::
--	cp profiling.cmx profiling.$(O) "$(INSTALL_LIBDIR)"
-+	$(BSD_INSTALL_DATA) profiling.cmx profiling.$(O) "$(INSTALL_LIBDIR)"
+-	cp -- profiling.cmx profiling.$(O) "$(INSTALL_LIBDIR)"
++	$(BSD_INSTALL_DATA) -- profiling.cmx profiling.$(O) "$(INSTALL_LIBDIR)"
  
- clean::
- 	rm -f ocamlprof ocamlcp ocamloptp
-@@ -114,7 +114,7 @@ ocamlmklib: ocamlmklibconfig.cmo ocamlmk
- 	         ocamlmklib.cmo
+ # To help building mixed-mode libraries (OCaml + C)
+ 
+@@ -230,9 +230,9 @@ endif
+ install::
+ 	for i in $(install_files); \
+ 	do \
+-	  cp -- "$$i" "$(INSTALL_BINDIR)/$$i.byte$(EXE)" && \
++	  $(BSD_INSTALL_SCRIPT) -- "$$i" "$(INSTALL_BINDIR)/$$i.byte$(EXE)" && \
+ 	  if test -f "$$i".opt; then \
+-	    cp -- "$$i.opt" "$(INSTALL_BINDIR)/$$i.opt$(EXE)" && \
++	    $(BSD_INSTALL_PROGRAM) -- "$$i.opt" "$(INSTALL_BINDIR)/$$i.opt$(EXE)" && \
+ 	    (cd "$(INSTALL_BINDIR)/" && $(LN) "$$i.opt$(EXE)" "$$i$(EXE)"); \
+ 	  else \
+ 	    (cd "$(INSTALL_BINDIR)/" && $(LN) "$$i.byte$(EXE)" "$$i$(EXE)"); \
+@@ -329,7 +329,7 @@ OBJINFO=../compilerlibs/ocamlcommon.cma 
+ $(call byte_and_opt,ocamlobjinfo,$(OBJINFO),objinfo_helper$(EXE))
  
  install::
--	cp ocamlmklib "$(INSTALL_BINDIR)/ocamlmklib$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) ocamlmklib "$(INSTALL_BINDIR)/ocamlmklib$(EXE)"
- 
- clean::
- 	rm -f ocamlmklib
-@@ -287,8 +287,8 @@ objinfo: objinfo_helper$(EXE) $(OBJINFO)
- 	$(CAMLC) -o objinfo $(OBJINFO)
- 
- install::
--	cp objinfo "$(INSTALL_BINDIR)/ocamlobjinfo$(EXE)"
 -	cp objinfo_helper$(EXE) "$(INSTALL_LIBDIR)/objinfo_helper$(EXE)"
-+	$(BSD_INSTALL_SCRIPT) objinfo "$(INSTALL_BINDIR)/ocamlobjinfo$(EXE)"
 +	$(BSD_INSTALL_SCRIPT) objinfo_helper$(EXE) "$(INSTALL_LIBDIR)/objinfo_helper$(EXE)"
  
- clean::
- 	rm -f objinfo objinfo_helper$(EXE)
+ # Scan object files for required primitives
+ $(call byte_and_opt,primreq,config.cmo primreq.cmo,)
+@@ -356,7 +356,7 @@ $(call byte_and_opt,cmpbyt,$(CMPBYT),)
+ 
+ ifeq "$(RUNTIMEI)" "true"
+ install::
+-	cp ocaml-instr-graph ocaml-instr-report "$(INSTALL_BINDIR)/"
++	$(BSD_INSTALL_SCRIPT) ocaml-instr-graph ocaml-instr-report "$(INSTALL_BINDIR)/"
+ endif
+ 
+ # Common stuff
