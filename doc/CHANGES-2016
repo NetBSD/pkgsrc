@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5170 2016/12/30 13:23:27 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.5171 2016/12/30 13:59:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7183,3 +7183,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/js_of_ocaml to 2.8.3 [jaapb 2016-12-30]
 	Updated lang/camlp5 to 6.17 [jaapb 2016-12-30]
 	Updated lang/coq to 8.6 [jaapb 2016-12-30]
+	Updated www/ikiwiki to 3.20161229.1 [schmonz 2016-12-30]
