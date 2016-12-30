@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2016/08/03 10:22:40 adam Exp $
+# $NetBSD: Makefile,v 1.54 2016/12/30 22:25:46 wiz Exp $
 
 PKGREVISION=	43
 
 CONFLICTS+=	emacs22-nox11-[0-9]*
 
+.include "options.mk"
+
 .include "../../editors/emacs22/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
