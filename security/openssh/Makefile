@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.249 2016/09/18 17:30:10 taca Exp $
+# $NetBSD: Makefile,v 1.250 2016/12/30 04:43:16 taca Exp $
 
-DISTNAME=		openssh-7.3p1
+DISTNAME=		openssh-7.4p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
