@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/09/20 13:07:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2016/12/30 11:16:57 jaapb Exp $
 
 VERSION=	2.2
 PKGNAME=	ocaml-ldap-${VERSION}
+PKGREVISION=	1
 DISTNAME=	ocamldap-${VERSION}
 CATEGORIES=	databases
 MASTER_SITES=	http://bitbucket.org/deplai_j/ocamldap/downloads/

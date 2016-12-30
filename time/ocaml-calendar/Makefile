@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2016/06/20 10:31:22 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2016/12/30 11:17:02 jaapb Exp $
 #
 
 DISTNAME=	calendar-2.04
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	time devel
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1481/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2016/05/05 11:45:36 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2016/12/30 11:16:57 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml-cryptokit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ocaml-cryptokit
 OCAML_CRYPTOKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ocaml-cryptokit+=	ocaml-cryptokit>=1.5
-BUILDLINK_ABI_DEPENDS.ocaml-cryptokit?=	ocaml-cryptokit>=1.9nb4
+BUILDLINK_ABI_DEPENDS.ocaml-cryptokit?=	ocaml-cryptokit>=1.10nb3
 BUILDLINK_PKGSRCDIR.ocaml-cryptokit?=	../../security/ocaml-cryptokit
 
 .include "../../lang/ocaml/buildlink3.mk"
