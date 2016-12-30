@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2016/06/25 14:30:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.27 2016/12/30 11:17:00 jaapb Exp $
 
 DISTNAME=		pcre-ocaml-7.1.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel
 MASTER_SITES=          ${MASTER_SITE_GITHUB:=mmottl/}
 GITHUB_RELEASE=                v${PKGVERSION_NOREV}

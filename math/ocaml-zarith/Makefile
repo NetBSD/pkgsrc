@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 06:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/12/30 11:17:00 jaapb Exp $
 #
 
 DISTNAME=	ocaml-zarith-1.4.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1574/
 
