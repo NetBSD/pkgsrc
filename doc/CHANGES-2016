@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5143 2016/12/30 00:49:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.5144 2016/12/30 00:51:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7156,3 +7156,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libgpg-error to 1.26 [wiz 2016-12-30]
 	Updated mail/notmuch to 0.23.4 [wiz 2016-12-30]
 	Updated time/p5-DateTime to 1.4200 [wiz 2016-12-30]
+	Updated devel/p5-Scalar-List-Utils to 1.47 [wiz 2016-12-30]
