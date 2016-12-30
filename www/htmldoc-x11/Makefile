@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2012/11/15 13:44:14 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2016/12/30 12:54:21 wiz Exp $
 
-PKGNAME=	${PKGNAME_BASE:S/-/-x11-/}
+PKGNAME=	htmldoc-x11-${VERSION}
 PKGREVISION=	2
 
-FILESDIR=	${.CURDIR}/../../www/htmldoc/files
-PATCHDIR=	${.CURDIR}/../../www/htmldoc/patches
-PKGDIR=		${.CURDIR}/../../www/htmldoc
+CONFIGURE_ARGS+=	--with-gui --with-x
 
-DESCR_SRC=	${.CURDIR}/DESCR
-
-.include "../../mk/bsd.prefs.mk"
-
-PKG_OPTIONS.htmldoc+=	x11
-
-.include "../../www/htmldoc/Makefile"
+.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
+.include "../../www/htmldoc/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

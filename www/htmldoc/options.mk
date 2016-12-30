@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2009/07/03 14:04:12 drochner Exp $
+# $NetBSD: options.mk,v 1.4 2016/12/30 12:54:20 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.htmldoc
-PKG_SUPPORTED_OPTIONS=		x11
+PKG_SUPPORTED_OPTIONS=		# empty
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
 PKG_OPTIONS_GROUP.ssl=		gnutls ssl
 PKG_SUGGESTED_OPTIONS=		ssl
-PKG_OPTIONS_LEGACY_OPTS+=	htmldoc-gui:x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -31,15 +30,4 @@ CONFIGURE_ARGS+=	--disable-gnutls
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-ssl
-.endif
-
-###
-### X11 GUI support
-###
-.if !empty(PKG_OPTIONS:Mx11)
-.  include "../../x11/fltk/buildlink3.mk"
-.  include "../../x11/libXpm/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gui --with-x
-.else
-CONFIGURE_ARGS+=	--without-gui --without-x
 .endif
