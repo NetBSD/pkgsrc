@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.14 2016/09/04 09:21:04 ryoon Exp $
+$NetBSD: patch-configure,v 1.15 2016/12/30 10:00:16 ryoon Exp $
 
 Don't use gld on SunOS
 add check for shm_open
 avoid bad substitution
 
---- configure.orig	2016-09-02 15:34:17.000000000 +0000
+--- configure.orig	2016-12-20 20:16:44.000000000 +0000
 +++ configure
-@@ -625,7 +625,6 @@ SunOS)
+@@ -631,7 +631,6 @@ SunOS)
    solaris="yes"
    make="${MAKE-gmake}"
    install="${INSTALL-ginstall}"
@@ -14,7 +14,18 @@ avoid bad substitution
    smbd="${SMBD-/usr/sfw/sbin/smbd}"
    needs_libsunmath="no"
    solarisrev=$(uname -r | cut -f2 -d.)
-@@ -3706,6 +3705,27 @@ if compile_prog "" "" ; then
+@@ -2928,8 +2927,8 @@ if test "$curses" != "no" ; then
+     curses_inc_list="$($pkg_config --cflags ncurses 2>/dev/null):"
+     curses_lib_list="$($pkg_config --libs ncurses 2>/dev/null):-lpdcurses"
+   else
+-    curses_inc_list="$($pkg_config --cflags ncursesw 2>/dev/null):-I/usr/include/ncursesw:"
+-    curses_lib_list="$($pkg_config --libs ncursesw 2>/dev/null):-lncursesw:-lcursesw"
++    curses_inc_list="$(@PREFIX@/bin/ncursesw6-config --cflags 2>/dev/null):-I/usr/include/ncursesw:"
++    curses_lib_list="$(@PREFIX@/bin/ncursesw6-config --libs 2>/dev/null):-lncursesw:-lcursesw"
+   fi
+   curses_found=no
+   cat > $TMPC << EOF
+@@ -3762,6 +3761,27 @@ if compile_prog "" "" ; then
    fallocate_zero_range=yes
  fi
  
@@ -42,7 +53,7 @@ avoid bad substitution
  # check for posix_fallocate
  posix_fallocate=no
  cat > $TMPC << EOF
-@@ -3955,8 +3975,13 @@ fi
+@@ -4041,8 +4061,13 @@ fi
  cat > $TMPC <<EOF
  #include <signal.h>
  #include <time.h>
@@ -56,7 +67,7 @@ avoid bad substitution
    return clock_gettime(CLOCK_REALTIME, NULL);
  }
  EOF
-@@ -4607,7 +4632,9 @@ if test "$want_tools" = "yes" ; then
+@@ -4797,7 +4822,9 @@ if test "$want_tools" = "yes" ; then
    tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
@@ -67,7 +78,7 @@ avoid bad substitution
    fi
  fi
  if test "$softmmu" = yes ; then
-@@ -5114,6 +5141,9 @@ fi
+@@ -5303,6 +5330,9 @@ fi
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
  fi
