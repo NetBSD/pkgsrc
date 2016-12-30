@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2016/12/19 08:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2016/12/30 16:14:32 adam Exp $
 
-DISTNAME=	cups-filters-1.13.1
+DISTNAME=	cups-filters-1.13.2
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +32,10 @@ REPLACE_BASH+=	filter/braille/filters/texttobrf.in
 
 .include "../../mk/bsd.prefs.mk"
 
+.if ${OPSYS} == "Darwin"
+CFLAGS+=	-framework IOKit
+.endif
+
 .if ${INIT_SYSTEM} == "rc.d"
 CONFIGURE_ARGS+=	--with-rcdir=${PREFIX}/share/examples/rc.d
 CONFIGURE_ARGS+=	--with-rclevels=""
@@ -47,6 +51,9 @@ CONF_FILES+=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSC
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/etc/cups/cups-browsed.conf ${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
+	# backends that need root access should not have world read and execute permissions
+	${CHMOD} go-rwx ${DESTDIR}${PREFIX}/libexec/cups/backend/parallel
+	${CHMOD} go-rwx ${DESTDIR}${PREFIX}/libexec/cups/backend/serial
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
