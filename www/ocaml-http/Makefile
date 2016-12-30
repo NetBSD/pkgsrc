@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2016/06/25 14:32:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2016/12/30 11:17:03 jaapb Exp $
 #
 
 DISTNAME=	ocaml-http-0.1.5
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/545/
 
