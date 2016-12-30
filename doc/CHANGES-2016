@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5174 2016/12/30 22:28:30 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.5175 2016/12/30 22:35:53 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7187,3 +7187,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/cups-filters to 1.13.2 [adam 2016-12-30]
 	Added graphics/gpick version 0.2.5 [ryoon 2016-12-30]
 	Removed lang/icc11 [alnsn 2016-12-30]
+	Added security/py-cryptodome version 3.4.3 [maya 2016-12-30]
