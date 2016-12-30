@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5154 2016/12/30 10:54:13 adam Exp $
+$NetBSD: CHANGES-2016,v 1.5155 2016/12/30 11:15:43 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7167,3 +7167,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/qemu to 2.8.0 [ryoon 2016-12-30]
 	Updated textproc/py-html5lib to 0.9999999 [ryoon 2016-12-30]
 	Updated lang/python27 to 2.7.13 [adam 2016-12-30]
+	Updated lang/ocaml to 4.04.0 [jaapb 2016-12-30]
