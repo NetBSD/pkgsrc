@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2016/11/28 12:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2016/12/30 00:42:53 wiz Exp $
 
-DISTNAME=	libgpg-error-1.25
+DISTNAME=	libgpg-error-1.26
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/ \
