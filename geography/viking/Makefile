@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2016/12/04 05:17:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.71 2016/12/30 00:10:02 gdt Exp $
 #
 
-VERSION=		1.6
+VERSION=		1.6.2
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		6
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,6 +12,9 @@ HOMEPAGE=		http://viking.sourceforge.net/
 COMMENT=		Viking manages GPS data, supports OpenStreetMap and geocaching
 
 LICENSE=		gnu-gpl-v2
+
+# C++11 is now required.
+USE_LANGUAGES=		c c++
 
 GNU_CONFIGURE=		yes
 
@@ -24,6 +26,11 @@ CONFIGURE_ARGS+=	--disable-magic
 # CONFIGURE_ARGS+=	--disable-realtime-gps-tracking
 
 CONFIGURE_ARGS+=	--disable-mapnik
+
+# Building docs fails because mapnik being optional is not respected.
+# For now, just omit docs until we have mapnik.
+#CONFIGURE_ARGS+=	--enable-gtk-doc
+#.include "../../textproc/gtk-doc/buildlink3.mk"
 
 DEPENDS+=		gpsbabel-[0-9]*:../../geography/gpsbabel
 DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
@@ -40,8 +47,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 .include "../../geography/gpsd/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
