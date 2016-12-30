@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5152 2016/12/30 10:00:59 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.5153 2016/12/30 10:10:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7165,3 +7165,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao35 to 3.5.21 [taca 2016-12-30]
 	Updated www/contao43 to 4.3.2 [taca 2016-12-30]
 	Updated emulators/qemu to 2.8.0 [ryoon 2016-12-30]
+	Updated textproc/py-html5lib to 0.9999999 [ryoon 2016-12-30]
