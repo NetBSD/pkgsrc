@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/06/06 12:01:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/12/30 00:55:33 wiz Exp $
 bin/dul-receive-pack
 bin/dul-upload-pack
 bin/dulwich
@@ -7,6 +7,7 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docs/tutorial/conclusion.txt
+${PYSITELIB}/docs/tutorial/encoding.txt
 ${PYSITELIB}/docs/tutorial/file-format.txt
 ${PYSITELIB}/docs/tutorial/index.txt
 ${PYSITELIB}/docs/tutorial/introduction.txt
@@ -39,9 +40,15 @@ ${PYSITELIB}/dulwich/contrib/__init__.pyo
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.py
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyc
 ${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyo
+${PYSITELIB}/dulwich/contrib/release_robot.py
+${PYSITELIB}/dulwich/contrib/release_robot.pyc
+${PYSITELIB}/dulwich/contrib/release_robot.pyo
 ${PYSITELIB}/dulwich/contrib/swift.py
 ${PYSITELIB}/dulwich/contrib/swift.pyc
 ${PYSITELIB}/dulwich/contrib/swift.pyo
+${PYSITELIB}/dulwich/contrib/test_release_robot.py
+${PYSITELIB}/dulwich/contrib/test_release_robot.pyc
+${PYSITELIB}/dulwich/contrib/test_release_robot.pyo
 ${PYSITELIB}/dulwich/contrib/test_swift.py
 ${PYSITELIB}/dulwich/contrib/test_swift.pyc
 ${PYSITELIB}/dulwich/contrib/test_swift.pyo
