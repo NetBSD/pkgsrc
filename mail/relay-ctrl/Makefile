@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/05/17 10:32:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2016/12/31 16:58:46 schmonz Exp $
 #
 
 DISTNAME=	relay-ctrl-3.1.1
@@ -35,6 +35,9 @@ SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
 SUBST_SED.paths+=	-e 's,@SETENV@,${SETENV},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	do-configure
+
+CFLAGS.SunOS+=		-DSOL_TCP=SOL_SOCKET
+LDFLAGS.SunOS+=		-lsocket
 
 post-extract:
 	for f in ${ADDON_SCRIPTS}; do					\
