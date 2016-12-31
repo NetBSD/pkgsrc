@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/19 22:27:45 alnsn Exp $
+# $NetBSD: Makefile,v 1.13 2016/12/31 09:39:31 wiz Exp $
 
 DISTNAME=	lutok-0.4
 PKGREVISION=	3
@@ -29,7 +29,7 @@ PKGCONFIG_OVERRIDE=	lutok.pc.in
 
 .include "../../mk/bsd.options.mk"
 
-.if $(PKG_OPTIONS:Mtests)
+.if !empty(PKG_OPTIONS:Mtests)
 .  include "../../devel/atf/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-atf
 PLIST_SUBST+=		TESTS=
