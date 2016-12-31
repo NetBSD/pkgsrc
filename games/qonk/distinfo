@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:57:02 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/12/31 10:01:11 dholland Exp $
 
 SHA1 (qonk-0.3.1.tar.gz) = 703fc8282642ff20986c9a395dc6626d4b087ed9
 RMD160 (qonk-0.3.1.tar.gz) = 6ed1ad1fb67cea6677d39d1201da1eca9ea4479b
@@ -20,4 +20,5 @@ SHA1 (patch-ap) = 3f21ccc5a37e9c16648e532df10799c4a34675cd
 SHA1 (patch-src_lisp_lexer.cpp) = 3bc2da31dbb72487a96655d0494083a357c10a28
 SHA1 (patch-src_lisp_lisp_cpp) = 4dfa6c287a221c38348531ef5bceb55d7d20f872
 SHA1 (patch-src_lisp_parser.cpp) = 4cafcda558d3b4a1bc0efb1ecbad55f045b58532
+SHA1 (patch-src_messages.cpp) = b8a5a4c37c2e12da57def85184344ed7fb79dda8
 SHA1 (patch-src_sdl__driver.cpp) = 338a2aa7fa17761ff88d088cdd701be8d7c5fedf
