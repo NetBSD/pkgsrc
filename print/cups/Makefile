@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.237 2016/12/30 07:08:34 adam Exp $
+# $NetBSD: Makefile,v 1.238 2016/12/31 23:06:51 rodent Exp $
 
 DISTNAME=	cups-2.2.1-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -160,6 +160,7 @@ post-install:
 	${LN} -sf ${DESTDIR}${PREFIX}/libexec/cups/backend/dnssd ${DESTDIR}${PREFIX}/libexec/cups/backend/mdns
 .endif
 
+.include "../../mk/readline.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
