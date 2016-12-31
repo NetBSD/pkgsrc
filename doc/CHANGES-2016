@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5176 2016/12/30 22:42:33 maya Exp $
+$NetBSD: CHANGES-2016,v 1.5177 2016/12/31 10:01:32 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7189,3 +7189,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed lang/icc11 [alnsn 2016-12-30]
 	Added security/py-cryptodome version 3.4.3 [maya 2016-12-30]
 	Updated multimedia/streamlink to 0.2.0 [maya 2016-12-30]
+	Updated games/qonk to 0.3.1nb11 [dholland 2016-12-31]
