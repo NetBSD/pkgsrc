@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/12/31 09:39:31 wiz Exp $
 
 DISTNAME=	sysupgrade-1.5
 PKGREVISION=	1
@@ -30,7 +30,7 @@ PKG_SUGGESTED_OPTIONS=	tests
 
 .include "../../mk/bsd.options.mk"
 
-.if $(PKG_OPTIONS:Mtests)
+.if !empty(PKG_OPTIONS:Mtests)
 .  include "../../devel/atf/buildlink3.mk"
 PLIST_SUBST+=	TESTS=
 .else
