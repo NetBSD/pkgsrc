@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/12/04 05:17:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2016/12/31 09:39:31 wiz Exp $
 
 DISTNAME=	kyua-0.13
 PKGREVISION=	1
@@ -30,7 +30,7 @@ PKG_SYSCONFSUBDIR=	kyua
 
 .include "../../mk/bsd.options.mk"
 
-.if $(PKG_OPTIONS:Mtests)
+.if !empty(PKG_OPTIONS:Mtests)
 .  include "../../devel/atf/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-atf
 PLIST_SUBST+=		TESTS=
