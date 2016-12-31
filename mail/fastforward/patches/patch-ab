@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2012/03/12 21:53:09 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2016/12/31 17:51:25 schmonz Exp $
 
 --- hier.c.orig	1998-05-19 16:25:42.000000000 +0000
 +++ hier.c
@@ -8,29 +8,32 @@ $NetBSD: patch-ab,v 1.2 2012/03/12 21:53:09 joerg Exp $
    d(auto_qmail,"bin",-1,-1,0755);
 -  d(auto_qmail,"doc",-1,-1,0755);
 -  d(auto_qmail,"doc/fastforward",-1,-1,0755);
+-  d(auto_qmail,"man",-1,-1,0755);
+-  d(auto_qmail,"man/man1",-1,-1,0755);
+-  d(auto_qmail,"man/cat1",-1,-1,0755);
 +  d(auto_qmail,"share",-1,-1,0755);
 +  d(auto_qmail,"share/doc",-1,-1,0755);
 +  d(auto_qmail,"share/doc/qmail",-1,-1,0755);
 +  d(auto_qmail,"share/doc/qmail/fastforward",-1,-1,0755);
-   d(auto_qmail,"man",-1,-1,0755);
-   d(auto_qmail,"man/man1",-1,-1,0755);
--  d(auto_qmail,"man/cat1",-1,-1,0755);
++  d(auto_qmail,"@PKGMANDIR@",-1,-1,0755);
++  d(auto_qmail,"@PKGMANDIR@/man1",-1,-1,0755);
  
    c(auto_qmail,"bin","fastforward",-1,-1,0755);
    c(auto_qmail,"bin","printforward",-1,-1,0755);
-@@ -19,7 +20,7 @@ void hier()
+@@ -19,21 +20,13 @@ void hier()
    c(auto_qmail,"bin","setmaillist",-1,-1,0755);
    c(auto_qmail,"bin","newinclude",-1,-1,0755);
  
 -  c(auto_qmail,"doc/fastforward","ALIASES",-1,-1,0644);
 +  c(auto_qmail,"share/doc/qmail/fastforward","ALIASES",-1,-1,0644);
  
-   c(auto_qmail,"man/man1","fastforward.1",-1,-1,0644);
-   c(auto_qmail,"man/man1","printforward.1",-1,-1,0644);
-@@ -28,12 +29,4 @@ void hier()
-   c(auto_qmail,"man/man1","printmaillist.1",-1,-1,0644);
-   c(auto_qmail,"man/man1","setmaillist.1",-1,-1,0644);
-   c(auto_qmail,"man/man1","newinclude.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","fastforward.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","printforward.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","setforward.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","newaliases.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","printmaillist.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","setmaillist.1",-1,-1,0644);
+-  c(auto_qmail,"man/man1","newinclude.1",-1,-1,0644);
 -
 -  c(auto_qmail,"man/cat1","fastforward.0",-1,-1,0644);
 -  c(auto_qmail,"man/cat1","printforward.0",-1,-1,0644);
@@ -39,4 +42,11 @@ $NetBSD: patch-ab,v 1.2 2012/03/12 21:53:09 joerg Exp $
 -  c(auto_qmail,"man/cat1","printmaillist.0",-1,-1,0644);
 -  c(auto_qmail,"man/cat1","setmaillist.0",-1,-1,0644);
 -  c(auto_qmail,"man/cat1","newinclude.0",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","fastforward.1",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","printforward.1",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","setforward.1",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","newaliases.1",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","printmaillist.1",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","setmaillist.1",-1,-1,0644);
++  c(auto_qmail,"@PKGMANDIR@/man1","newinclude.1",-1,-1,0644);
  }
