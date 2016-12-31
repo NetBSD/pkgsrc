@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 12:19:11 asau Exp $
+# $NetBSD: Makefile,v 1.23 2016/12/31 17:51:25 schmonz Exp $
 #
 
 DISTNAME=		fastforward-0.51
@@ -15,11 +15,16 @@ DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 CONFLICTS+=		esmtp>=1.2 postfix-[0-9]* sendmail-[0-9]*
 
-BUILD_TARGETS=	install instcheck
+BUILD_TARGETS=		install instcheck
 
 DJB_RESTRICTED=		no
 
 SUBST_FILES.djbware+=	cdb_seek.c
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	do-configure
+SUBST_FILES.paths=	hier.c
+SUBST_SED.paths=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
