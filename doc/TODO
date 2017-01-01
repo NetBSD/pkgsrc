@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16853 2017/01/01 14:07:19 wiz Exp $
+$NetBSD: TODO,v 1.16854 2017/01/01 14:35:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -1382,7 +1382,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
-	o python-3.6.0
 	o pythontidy-1.23
 	o qbzr-0.23.2
 	o qlandkartegt-1.8.1 [pkg/49910]
