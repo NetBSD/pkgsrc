@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.28 2017/01/01 15:23:08 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.29 2017/01/01 15:31:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/python36 version 3.6.0 [adam 2017-01-01]
 	Updated databases/slony1 to 2.2.5 [adam 2017-01-01]
 	Updated textproc/py-lxml to 3.7.1 [wiz 2017-01-01]
+	Updated math/py-numpy to 1.11.3 [wiz 2017-01-01]
