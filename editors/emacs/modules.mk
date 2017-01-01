@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.20 2016/09/18 13:48:34 ryoon Exp $
+# $NetBSD: modules.mk,v 1.21 2017/01/01 02:48:43 dholland Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -46,7 +46,7 @@
 #			emacs21, emacs21nox, emacs20,
 #			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
-#			emacs24
+#			emacs25
 #
 # Variables ELPs can provide:
 #
