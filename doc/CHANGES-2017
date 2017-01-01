@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.37 2017/01/01 16:00:15 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.38 2017/01/01 16:03:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -37,3 +37,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/py36-html-docs version 3.6.0 [leot 2017-01-01]
 	Updated graphics/ImageMagick to 7.0.4.1 [wiz 2017-01-01]
 	Updated misc/calibre to 2.76.0 [wiz 2017-01-01]
+	Updated misc/fzy to 0.8 [leot 2017-01-01]
