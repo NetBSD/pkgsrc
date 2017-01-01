@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.40 2017/01/01 16:15:08 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.41 2017/01/01 16:16:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-boost to 1.63.0 [adam 2017-01-01]
 	Updated meta-pkgs/boost to 1.63.0 [adam 2017-01-01]
 	Updated www/seamonkey to 2.46 [ryoon 2017-01-01]
+	Updated www/seamonkey-l10n to 2.46 [ryoon 2017-01-01]
