@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2016/10/07 18:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/01 16:06:28 adam Exp $
 
 DISTNAME=	kmouth-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 COMMENT=	KDE Speech Synthesizer frontend
 

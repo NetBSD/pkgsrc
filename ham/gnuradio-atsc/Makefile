@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/10/07 18:25:54 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/01 16:06:20 adam Exp $
 
 PKGNAME=	gnuradio-atsc-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Advanced Television Systems Committee, ATSC module of GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"

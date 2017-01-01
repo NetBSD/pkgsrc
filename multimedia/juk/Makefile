@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2016/10/07 18:26:04 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/01 16:06:30 adam Exp $
 
 DISTNAME=	juk-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 COMMENT=	a jukebox, tagger and music collection manager.
 

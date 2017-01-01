@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/10/14 19:28:28 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/01 16:06:07 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
+PKGREVISION=	1
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*

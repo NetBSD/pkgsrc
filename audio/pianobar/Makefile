@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/10/07 18:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/01 16:06:04 adam Exp $
 
 DISTNAME=	pianobar-2015.11.22
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio net
 MASTER_SITES=	https://6xq.net/pianobar/
 EXTRACT_SUFX=	.tar.bz2

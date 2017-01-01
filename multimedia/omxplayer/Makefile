@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/10/07 18:26:05 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/01 16:06:31 adam Exp $
 
 DISTNAME=	omxplayer-20150118
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.invisible.ca/packages/distfiles/
 EXTRACT_SUFX=	.zip
