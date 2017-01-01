@@ -1,0 +1,33 @@
+$NetBSD: patch-Makefile,v 1.1 2017/01/01 22:00:12 schmonz Exp $
+
+Avoid "echo -n" in subshells to fix build on OS X.
+
+--- Makefile.orig	2010-01-21 22:51:26.000000000 +0000
++++ Makefile
+@@ -49,7 +49,7 @@ crypt.lib: compile load
+ 	@echo 'main() { ; }' >trylib-lcrypt.c
+ 	@{ ./compile trylib-lcrypt.c && ./load trylib-lcrypt -lcrypt; } >/dev/null 2>&1 \
+ 	  && { echo -lcrypt >crypt.lib; echo yes; } \
+-	  || { echo -n >crypt.lib; echo no; }
++	  || { : >crypt.lib; echo no; }
+ 	@rm -f trylib-lcrypt.c trylib-lcrypt.o trylib-lcrypt
+ 
+ cvm-benchclient: cvm-benchclient.o ltload libcvm-v2client.la socket.lib
+@@ -317,7 +317,7 @@ s.lib: compile load
+ 	@echo 'main() { ; }' >trylib-ls.c
+ 	@{ ./compile trylib-ls.c && ./load trylib-ls -ls; } >/dev/null 2>&1 \
+ 	  && { echo -ls >s.lib; echo yes; } \
+-	  || { echo -n >s.lib; echo no; }
++	  || { : >s.lib; echo no; }
+ 	@rm -f trylib-ls.c trylib-ls.o trylib-ls
+ 
+ sasl-auth-test: sasl-auth-test.o ltload libcvm-sasl.la libcvm-v2client.la
+@@ -352,7 +352,7 @@ shadow.lib: compile load
+ 	@echo 'main() { ; }' >trylib-lshadow.c
+ 	@{ ./compile trylib-lshadow.c && ./load trylib-lshadow -lshadow; } >/dev/null 2>&1 \
+ 	  && { echo -lshadow >shadow.lib; echo yes; } \
+-	  || { echo -n >shadow.lib; echo no; }
++	  || { : >shadow.lib; echo no; }
+ 	@rm -f trylib-lshadow.c trylib-lshadow.o trylib-lshadow
+ 
+ socket.lib: compile load
