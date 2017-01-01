@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.2 2015/02/15 02:11:03 ryoon Exp $
+$NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.3 2017/01/01 16:14:07 ryoon Exp $
 
---- mozilla/build/gyp.mozbuild.orig	2015-02-05 04:39:22.000000000 +0000
+--- mozilla/build/gyp.mozbuild.orig	2016-12-14 02:09:42.000000000 +0000
 +++ mozilla/build/gyp.mozbuild
-@@ -12,6 +12,7 @@ gyp_vars = {
+@@ -14,6 +14,7 @@ gyp_vars = {
      'have_ethtool_cmd_speed_hi': 1 if CONFIG['MOZ_WEBRTC_HAVE_ETHTOOL_SPEED_HI'] else 0,
      'include_alsa_audio': 1 if CONFIG['MOZ_ALSA'] else 0,
      'include_pulse_audio': 1 if CONFIG['MOZ_PULSEAUDIO'] else 0,
@@ -10,24 +10,3 @@ $NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.2 2015/02/15 02:11:03 ryoon Exp $
      # basic stuff for everything
      'include_internal_video_render': 0,
      'clang_use_chrome_plugins': 0,
-@@ -85,7 +86,7 @@ flavors = {
-     'WINNT': 'win',
-     'Android': 'linux' if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk' else 'android',
-     'Linux': 'linux',
--    'Darwin': 'mac' if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa' else 'ios',
-+    'Darwin': 'ios' if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cairo-uikit' else 'mac',
-     'SunOS': 'solaris',
-     'GNU/kFreeBSD': 'freebsd',
-     'DragonFly': 'dragonfly',
-@@ -120,5 +121,11 @@ if CONFIG['INTEL_ARCHITECTURE']:
-     if not CONFIG['HAVE_TOOLCHAIN_SUPPORT_MSSSE3'] or not CONFIG['HAVE_TOOLCHAIN_SUPPORT_MSSE4_1']:
-         gyp_vars['yuv_disable_asm'] = 1
- 
-+# MacOS X SDK version should be able to configure with ./configure
-+# --enable-macos-target=VER
-+if CONFIG['MACOSX_DEPLOYMENT_TARGET']:
-+    gyp_vars['mac_sdk_min'] = CONFIG['MACOSX_DEPLOYMENT_TARGET']
-+    gyp_vars['mac_deployment_target'] = CONFIG['MACOSX_DEPLOYMENT_TARGET']
-+
- if CONFIG['MACOS_SDK_DIR']:
-     gyp_vars['mac_sdk_path'] = CONFIG['MACOS_SDK_DIR']

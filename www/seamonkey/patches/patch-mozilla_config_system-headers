@@ -1,16 +1,16 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.21 2016/03/30 12:56:53 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.22 2017/01/01 16:14:07 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2016-01-19 02:49:15.000000000 +0000
+--- mozilla/config/system-headers.orig	2016-12-14 02:09:46.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -627,6 +627,7 @@ libgnome/libgnome.h
+@@ -632,6 +632,7 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
  libgnomeui/gnome-icon-theme.h
  libgnomeui/gnome-ui-init.h
 +libv4l2.h
- lib$routines.h
  limits
  limits.h
-@@ -721,6 +722,7 @@ mapiutil.h
+ link.h
+@@ -725,6 +726,7 @@ mapiutil.h
  mapix.h
  Math64.h
  math.h
@@ -18,63 +18,65 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.21 2016/03/30 12:56:53 ryoon Ex
  mbstring.h
  #ifdef ANDROID
  media/AudioEffect.h
-@@ -1324,10 +1326,13 @@ vorbis/codec.h
- theora/theoradec.h
- tremor/ivorbiscodec.h
- speex/speex_resampler.h
-+soundtouch/SoundTouch.h
- ogg/ogg.h
- ogg/os_types.h
- nestegg/nestegg.h
- cubeb/cubeb.h
+@@ -1317,6 +1319,25 @@ vpx/vp8cx.h
+ vpx/vp8dx.h
+ vpx_mem/vpx_mem.h
+ #endif
++#ifdef GKMEDIAS_SHARED_LIBRARY
++vpx/vpx_codec.h
++vpx/vpx_decoder.h
++vpx/vpx_encoder.h
++vpx/vp8cx.h
++vpx/vp8dx.h
++vpx_mem/vpx_mem.h
++vorbis/codec.h
++theora/theoradec.h
++tremor/ivorbiscodec.h
 +speex/speex_resampler.h
 +soundtouch/SoundTouch.h
- #endif
++ogg/ogg.h
++ogg/os_types.h
++nestegg/nestegg.h
++cubeb/cubeb.h
++speex/speex_resampler.h
++soundtouch/SoundTouch.h
++#endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1359,3 +1364,45 @@ unicode/utypes.h
+ gst/app/gstappsrc.h
+@@ -1347,3 +1368,35 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
-+#if MOZ_NATIVE_GRAPHITE2==1
-+graphite2/Font.h
-+graphite2/Log.h
-+graphite2/Segment.h
-+graphite2/Types.h
-+#endif
-+#if MOZ_NATIVE_HARFBUZZ==1
-+harfbuzz/hb-ot.h
-+harfbuzz/hb.h
-+#endif
-+#if MOZ_NATIVE_OGG==1
++#if MOZ_SYSTEM_OGG==1
 +ogg/ogg.h
 +ogg/os_types.h
 +#endif
-+#if MOZ_NATIVE_THEORA==1
++#if MOZ_SYSTEM_THEORA==1
 +theora/theoradec.h
 +#endif
-+#if MOZ_NATIVE_VORBIS==1
++#if MOZ_SYSTEM_VORBIS==1
 +vorbis/codec.h
 +vorbis/vorbisenc.h
 +#endif
-+#if MOZ_NATIVE_TREMOR==1
++#if MOZ_SYSTEM_TREMOR==1
 +tremor/ivorbiscodec.h
 +#endif
-+#if MOZ_NATIVE_CELT==1
++#if MOZ_SYSTEM_CELT==1
 +celt.h
 +celt_header.h
 +celt/celt.h
 +celt/celt_header.h
 +#endif
-+#if MOZ_NATIVE_OPUS==1
++#if MOZ_SYSTEM_OPUS==1
 +opus.h
 +opus_multistream.h
 +opus/opus.h
 +opus/opus_multistream.h
 +#endif
-+#if MOZ_NATIVE_SPEEX==1
++#if MOZ_SYSTEM_SPEEX==1
 +speex/speex_resampler.h
 +#endif
-+#if MOZ_NATIVE_SOUNDTOUCH==1
++#if MOZ_SYSTEM_SOUNDTOUCH==1
 +soundtouch/SoundTouch.h
 +#endif
