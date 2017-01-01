@@ -242,7 +242,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("CONFIG_SHELL", lkNone, BtPathname, "Makefile, Makefile.common: set")
 	acl("CONFIG_SUB_OVERRIDE", lkShell, BtPathmask, "Makefile, Makefile.common: set, append")
 	pkglist("CONFLICTS", lkSpace, BtDependency)
-	pkglist("CONF_FILES", lkShell, BtShellWord)
+	pkglist("CONF_FILES", lkNone, BtConfFiles)
 	pkg("CONF_FILES_MODE", lkNone, enum("0644 0640 0600 0400"))
 	pkglist("CONF_FILES_PERMS", lkShell, BtPerms)
 	sys("COPY", lkNone, enum("-c")) // The flag that tells ${INSTALL} to copy a file
