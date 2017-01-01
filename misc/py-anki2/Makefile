@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2016/07/09 13:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/01/01 14:46:27 wiz Exp $
 
-DISTNAME=	anki-2.0.36
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/}
+DISTNAME=	anki-2.0.38-source
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/:C/-source//}
 CATEGORIES=	misc x11
 MASTER_SITES=	http://ankisrs.net/download/mirror/
 EXTRACT_SUFX=	.tgz
@@ -20,7 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 # XXX: python portaudio
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.0.21
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.0.21
 
 .include "options.mk"
 
@@ -64,6 +66,7 @@ post-extract:
 post-install:
 	rm ${DESTDIR}${PREFIX}/share/anki/Makefile.orig
 	rm ${DESTDIR}${PREFIX}/share/anki/thirdparty/py*/_portaudio.so
+	rm ${DESTDIR}${PREFIX}/share/anki/aqt/forms/#about.py#
 
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
