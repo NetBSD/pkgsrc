@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1 2016/01/07 15:34:33 jperkin Exp $
+$NetBSD: patch-configure,v 1.2 2017/01/01 11:52:36 adam Exp $
 
-Don't remove -g, breaks -gfoo arguments.
+Don't force compiler optimisations.
 
---- configure.orig	2014-11-27 02:46:58.688355504 +0000
+--- configure.orig	2017-01-01 01:48:15.000000000 +0000
 +++ configure
-@@ -19874,7 +19874,7 @@ if test "x$debug" = xtrue; then
+@@ -20547,8 +20547,6 @@ if test "x$debug" = xtrue; then
  	CFLAGS="-g $CFLAGS"
  else
  	CPPFLAGS="-DNDEBUG $CPPFLAGS"
--	CFLAGS=$(echo "$CFLAGS" | sed 's/-O2//;s/-g//')
-+	CFLAGS=$(echo "$CFLAGS" | sed 's/-O2//')
- 	CFLAGS="-O3 -funroll-loops $CFLAGS"
+-	CFLAGS=$(echo "$CFLAGS" | sed 's/-O2//')
+-	CFLAGS="-O3 -funroll-loops $CFLAGS"
  fi
+ 
  
