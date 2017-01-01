@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/07/06 15:22:35 leot Exp $
+$NetBSD: distinfo,v 1.6 2017/01/01 15:44:39 leot Exp $
 
-SHA1 (python/python-2.7.12-docs-html.tar.bz2) = 36219421b09e9af4e2e4fc6deaacb3dfad34d945
-RMD160 (python/python-2.7.12-docs-html.tar.bz2) = 07fa479d9570a4d86f9e355183c91eeea57688d9
-SHA512 (python/python-2.7.12-docs-html.tar.bz2) = 9d8a766d731402df774f2d20dcffba694e2497a17bc78a08f75d7f6bfc75d13227c7f57fdd5c056b75576b5d059b08f8c712c8bc465f5b0b88c04aba3da74198
-Size (python/python-2.7.12-docs-html.tar.bz2) = 4601696 bytes
+SHA1 (python/python-2.7.13-docs-html.tar.bz2) = 3a6f81b6a522df097e8f8f277cf345c7fcbd6482
+RMD160 (python/python-2.7.13-docs-html.tar.bz2) = 8c3a698602d6131a944b775080c66f7cc5515517
+SHA512 (python/python-2.7.13-docs-html.tar.bz2) = f7d1bc6941eb2ed51679030d57157cdb678f5c8007cb623db48511f9b0e83144bef156000f4dec0ef0a01c96d4c2a2f1166b436f81d23bdc78bcd3c32039f01b
+Size (python/python-2.7.13-docs-html.tar.bz2) = 4607137 bytes
