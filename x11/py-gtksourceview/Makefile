@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/08/03 10:23:37 adam Exp $
+# $NetBSD: Makefile,v 1.40 2017/01/01 14:44:08 wiz Exp $
 
 DISTNAME=	pygtksourceview-2.10.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	pygtksourceview-2.0.pc.in
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 PY_PATCHPLIST=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 .include "../../lang/python/extension.mk"
 

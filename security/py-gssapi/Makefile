@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/24 19:08:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:55 wiz Exp $
 
 DISTNAME=	gssapi-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
 AUTO_MKDIRS=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 1.2.0, self tests don't run
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 1.2.0, self tests don't run
 
 .include "../../lang/python/distutils.mk"
 

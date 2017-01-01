@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2016/12/04 05:17:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2017/01/01 14:43:24 wiz Exp $
 
 DISTNAME=	empathy-2.34.0
 PKGREVISION=	51
@@ -10,7 +10,7 @@ HOMEPAGE=	http://live.gnome.org/Empathy
 COMMENT=	Gnome instant messenger client
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gawk gmake gsed intltool msgfmt pkg-config

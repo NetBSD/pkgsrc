@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 13:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:51 wiz Exp $
 
 DISTNAME=	gevent-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.4.1:../../devel/py-greenlet
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 do-test:
 	${RUN} cd ${WRKSRC}/greentest; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testrunner.py

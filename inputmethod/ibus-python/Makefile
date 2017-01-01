@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 13:03:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/01 14:43:44 wiz Exp $
 
 .include "../../inputmethod/ibus/Makefile.common"
 
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=		--disable-gconf
 CONFIGURE_ARGS+=		--enable-python-library
 CONFIGURE_ENV+=			PYTHON2=${PYTHONBIN}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2, py-gobject3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-gobject3
 
 .include "../../devel/py-gobject3/buildlink3.mk"
 PY_PATCHPLIST=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/21 11:30:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:40 wiz Exp $
 
 DISTNAME=	accelerator-0.1.1
 PKGNAME=	${DISTNAME:S/accelerator/accelerator3d/}
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-game-[0-9]*:../../devel/py-game
 DEPENDS+=	${PYPKGPREFIX}-ode-[0-9]*:../../devel/py-ode
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ode
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ode
 
 REPLACE_PYTHON+=		accelerator.py
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/12/04 21:12:59 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/01 14:43:35 wiz Exp $
 TRYTON_MODULE_NAME=	tryton
 PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
@@ -13,7 +13,7 @@ USE_LANGUAGES=		# none
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
-PYTHON_VERSIONS_INCOMPATIBLE=   34 35
+PYTHON_VERSIONS_INCOMPATIBLE=   34 35 36
 
 .include "options.mk"
 

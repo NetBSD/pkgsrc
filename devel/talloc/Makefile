@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/08/01 11:10:24 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/01 14:43:37 wiz Exp $
 
 DISTNAME=	talloc-2.1.8
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 PKGCONFIG_OVERRIDE+=	talloc.pc.in
 PKGCONFIG_OVERRIDE+=	pytalloc-util.pc.in
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=  34 35 # not yet ported as of 2.1.0
+PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 # not yet ported as of 2.1.0
 
 # include/talloc.h
 CONFLICTS+=	samba-[0-9]*

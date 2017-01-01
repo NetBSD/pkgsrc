@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/08/03 10:22:23 adam Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/01 14:44:08 wiz Exp $
 
 DISTNAME=	libdesktop-agnostic-0.3.92
 PKGREVISION=	20
@@ -19,7 +19,7 @@ CONFIGURE_ARGS=	--config-backends=keyfile,gconf	\
 		--desktop-entry-backends=glib
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.92
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3.92
 
 EGDIR=			${PREFIX}/share/examples/libdesktop-agnostic
 PKG_SYSCONFSUBDIR=	xdg

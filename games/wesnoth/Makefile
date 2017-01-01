@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2016/10/07 18:25:51 adam Exp $
+# $NetBSD: Makefile,v 1.122 2017/01/01 14:43:41 wiz Exp $
 
 DISTNAME=	wesnoth-1.12.6
 PKGREVISION=	2
@@ -31,7 +31,7 @@ SUBST_FILES.prefix=	cmake/FindFriBiDi.cmake
 SUBST_MESSAGE.prefix=	Fixing search path.
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.10.6
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.10.6
 REPLACE_PYTHON+=	data/tools/GUI.pyw
 REPLACE_PYTHON+=	data/tools/*.py
 REPLACE_PYTHON+=	data/tools/wesnoth/*.py

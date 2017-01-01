@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/12/12 14:27:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/01/01 14:43:51 wiz Exp $
 
 DISTNAME=	foolscap-0.12.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
 DEPENDS+=	${PYPKGPREFIX}-twisted>=16.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted
 
 TEST_TARGET=	test
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2016/12/04 05:17:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.74 2017/01/01 14:43:39 wiz Exp $
 
 DISTNAME=	glusterfs-3.8.5
 #PKGREVISION=	1
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # only 2.x supported as of 3.6.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # only 2.x supported as of 3.6.0
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	extras/ganesha/scripts/generate-epoch.py

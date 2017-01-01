@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/11/11 12:47:52 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/01 14:43:54 wiz Exp $
 
 DISTNAME=	pisa-3.0.33
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
 DEPENDS+=	${PYPKGPREFIX}-reportlab>=2.2:../../print/py-reportlab
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not ported as of 3.0.33
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not ported as of 3.0.33
 
 # remove CRs: fixes patching on Darwin and stops pkglint from complaining
 pre-patch:

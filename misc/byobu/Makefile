@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/08/17 18:58:05 maya Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:47 wiz Exp $
 
 BYOBUVER=	5.111
 DISTNAME=	byobu_${BYOBUVER}.orig
@@ -23,7 +23,7 @@ REPLACE_BASH+=	usr/share/byobu/tests/*
 
 REPLACE_PERL+=	usr/lib/byobu/include/*
 REPLACE_PYTHON+=	usr/lib/byobu/include/*
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-newt
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-newt
 
 EGDIR=			share/examples/byobu
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${EGDIR}

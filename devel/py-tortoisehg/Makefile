@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/12/20 08:53:22 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2017/01/01 14:43:35 wiz Exp $
 
 DISTNAME=		tortoisehg-4.0.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.8.1:../../devel/py-mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-iniparse, py-mercurial
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-iniparse, py-mercurial
 
 thg_icon=		/share/pixmaps/tortoisehg/icons/thg_logo.ico
 SUBST_CLASSES+=		df

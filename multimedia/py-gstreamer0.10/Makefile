@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 13:03:57 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/01/01 14:43:48 wiz Exp $
 
 DISTNAME=		gst-python-0.10.22
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/gst-python/gstreamer0.10/}
@@ -20,7 +20,7 @@ USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.10.22; use py-gobjects
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.10.22; use py-gobjects
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gst-python.pc.in
 

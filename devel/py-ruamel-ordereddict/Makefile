@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 13:03:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/01 14:43:35 wiz Exp $
 
 DISTNAME=			ruamel.ordereddict-0.4.9
 PKGNAME=			${PYPKGPREFIX}-ruamel-ordereddict-0.4.9
@@ -10,7 +10,7 @@ HOMEPAGE=			https://bitbucket.org/ruamel/ordereddict
 COMMENT=			Version of dict that keeps keys in insertion resp. sorted order
 LICENSE=			mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

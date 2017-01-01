@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/10/07 18:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:22 wiz Exp $
 
 DISTNAME=	ardour-4.7
 PKGREVISION=	3
@@ -140,7 +140,7 @@ CONF_FILES+=		${EGDIR}/trx.menus ${PKG_SYSCONFDIR}/trx.menus
 # As of NetBSD-7.99.21 pkgsrc's checks cannot open file with rare unicode characters
 CHECK_PORTABILITY_SKIP+=	libs/pbd/test/i18n_test/*.tst
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 35 # as of 4.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 35 # as of 4.4
 
 .include "../../mk/bsd.prefs.mk"
 

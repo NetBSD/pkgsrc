@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/08/03 10:22:54 adam Exp $
+# $NetBSD: Makefile,v 1.25 2017/01/01 14:43:42 wiz Exp $
 
 DISTNAME=	mypaint-1.1.0
 PKGREVISION=	2
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash:run msgfmt pkg-config
 
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 USE_PKGLOCALEDIR=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/09/20 11:12:23 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/01/01 14:43:53 wiz Exp $
 
 DISTNAME=	samba-${VERSION}
 PKGREVISION=	4
@@ -186,7 +186,7 @@ REPLACE_PYTHON=	buildtools/bin/waf \
 		source4/scripting/bin/* \
 		lib/tevent/tevent.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 4.3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 4.3.2
 
 .include "../../lang/python/application.mk"
 

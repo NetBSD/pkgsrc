@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 13:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/01 14:43:36 wiz Exp $
 
 DISTNAME=	reposurgeon-3.29
 CATEGORIES=	devel scm
@@ -21,7 +21,7 @@ MAKE_FLAGS+=	mandir=${PKGMANDIR}
 REPLACE_PYTHON=	repodiffer reposurgeon
 REPLACE_SH=	repotool
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # 3.26 uses commands module, which is deprecated in python-3.x
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # 3.26 uses commands module, which is deprecated in python-3.x
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/07/09 13:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/01 14:43:52 wiz Exp $
 
 DISTNAME=	SpreadModule-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/SpreadModule/spreadmodule/}
@@ -17,7 +17,7 @@ SUBST_STAGE.setup=	post-patch
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e 's,/usr/local,${BUILDLINK_PREFIX.spread},g'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.4
 
 .include "../../net/spread/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

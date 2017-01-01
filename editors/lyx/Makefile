@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2016/12/02 19:07:16 maya Exp $
+# $NetBSD: Makefile,v 1.58 2017/01/01 14:43:38 wiz Exp $
 
 DISTNAME=		lyx-2.2.2
 CATEGORIES=		editors
@@ -64,7 +64,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run pkg-config xgettext
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.6.10
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
 LDFLAGS.SunOS+=		-liconv

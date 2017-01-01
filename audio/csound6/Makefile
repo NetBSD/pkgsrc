@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/10/07 18:25:37 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/01 14:43:22 wiz Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound6-${CSOUND_VERSION}
@@ -25,7 +25,7 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/csound6
 # Has long files our tar doesn't understand.
 EXTRACT_USING=		bsdtar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 5.01
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 5.01
 
 INSTALLATION_DIRS=	bin
 
