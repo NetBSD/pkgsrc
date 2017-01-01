@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2016/10/07 18:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.62 2017/01/01 16:06:38 adam Exp $
 
 DISTNAME=	kdewebdev-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 COMMENT=	HTML editor and tools suitable for experienced web developers
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
