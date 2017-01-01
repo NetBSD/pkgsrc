@@ -1,2 +1,6 @@
+$NetBSD: CHANGES-2017,v 1.5 2017/01/01 08:24:43 ryoon Exp $
+
+Changes to the packages collection and infrastructure in 2017:
+
 	Updated ham/fldigi to 3.23.19 [mef 2017-01-01]
 	Updated cad/gtkwave to 3.3.79 [mef 2017-01-01]
