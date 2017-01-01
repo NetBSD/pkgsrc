@@ -1,0 +1,13 @@
+$NetBSD: patch-mozilla_toolkit_moz.configure,v 1.1 2017/01/01 16:14:08 ryoon Exp $
+
+--- mozilla/toolkit/moz.configure.orig	2016-12-14 02:09:56.000000000 +0000
++++ mozilla/toolkit/moz.configure
+@@ -348,7 +348,7 @@ option('--enable-eme',
+ def enable_eme(value, target):
+     # Widevine EME by default enabled on desktop Windows, MacOS and Linux,
+     # x86 and x64 builds.
+-    if (target.kernel in ('Darwin', 'WINNT', 'Linux') and
++    if (target.kernel in ('Darwin', 'WINNT', 'Linux', 'NetBSD') and
+         target.os not in ('Android', 'iOS') and
+         target.cpu in ('x86', 'x86_64')):
+         return value
