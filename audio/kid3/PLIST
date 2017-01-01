@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2015/11/01 09:13:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/01/01 14:01:49 wiz Exp $
 bin/kid3-cli
 bin/kid3-qt
 lib/kid3/libkid3-core.so
-lib/kid3/libkid3-core.so.3.3.0
+lib/kid3/libkid3-core.so.${PKGVERSION}
 lib/kid3/libkid3-gui.so
-lib/kid3/libkid3-gui.so.3.3.0
+lib/kid3/libkid3-gui.so.${PKGVERSION}
 lib/kid3/plugins/imports/Kid3/Kid3Script.qml
 lib/kid3/plugins/imports/Kid3/libkid3qml.so
 lib/kid3/plugins/imports/Kid3/qmldir
