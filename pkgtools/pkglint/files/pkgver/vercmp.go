@@ -1,4 +1,4 @@
-package main
+package pkgver
 
 // See pkgtools/pkg_install/files/lib/dewey.c
 
@@ -22,7 +22,7 @@ func icmp(a, b int) int {
 	return 0
 }
 
-func pkgverCmp(left, right string) int {
+func Compare(left, right string) int {
 	lv := newVersion(left)
 	rv := newVersion(right)
 
@@ -57,22 +57,22 @@ func newVersion(vstr string) *version {
 		case rest[0] == '_' || rest[0] == '.':
 			v.Add(0)
 			rest = rest[1:]
-		case hasPrefix(rest, "alpha"):
+		case strings.HasPrefix(rest, "alpha"):
 			v.Add(-3)
 			rest = rest[5:]
-		case hasPrefix(rest, "beta"):
+		case strings.HasPrefix(rest, "beta"):
 			v.Add(-2)
 			rest = rest[4:]
-		case hasPrefix(rest, "pre"):
+		case strings.HasPrefix(rest, "pre"):
 			v.Add(-1)
 			rest = rest[3:]
-		case hasPrefix(rest, "rc"):
+		case strings.HasPrefix(rest, "rc"):
 			v.Add(-1)
 			rest = rest[2:]
-		case hasPrefix(rest, "pl"):
+		case strings.HasPrefix(rest, "pl"):
 			v.Add(0)
 			rest = rest[2:]
-		case hasPrefix(rest, "nb"):
+		case strings.HasPrefix(rest, "nb"):
 			i := 2
 			n := 0
 			for i < len(rest) && isdigit(rest[i]) {
