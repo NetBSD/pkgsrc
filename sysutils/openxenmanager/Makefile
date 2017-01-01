@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/09/19 13:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/01 14:43:57 wiz Exp $
 
 DISTNAME=	openxenmanager_0.r80+dfsg.orig
 PKGNAME=	openxenmanager-0.0.80
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.7.7:../../www/py-httplib2
 INSTALLATION_DIRS=	bin share
 
 REPLACE_PYTHON=		openxenmanager/*py openxenmanager/pygtk_chart/*py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 OXMDIR=			${PREFIX}
 

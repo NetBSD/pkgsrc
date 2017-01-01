@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/08/03 10:22:31 adam Exp $
+# $NetBSD: Makefile,v 1.51 2017/01/01 14:43:24 wiz Exp $
 
 DISTNAME=	pymusique-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted, py-mcrypt, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted, py-mcrypt, py-gtk2
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

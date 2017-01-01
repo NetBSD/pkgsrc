@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/10/09 21:41:57 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/01 14:43:27 wiz Exp $
 
 DISTNAME=	pyPgSQL-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://pypgsql.sourceforge.net/
 COMMENT=	Python DB-API 2.0 compliant interface to PostgreSQL
 
 WRKSRC=		${WRKDIR}/pypgsql
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-mxDateTime
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-mxDateTime
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

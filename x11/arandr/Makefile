@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/08/27 01:00:49 maya Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/01 14:44:06 wiz Exp $
 
 DISTNAME=	arandr-0.1.9
 CATEGORIES=	x11
@@ -19,7 +19,7 @@ DEPENDS+=	xrandr>=1.2:../../x11/xrandr
 
 PY_PATCHPLIST=			YES
 PYSETUP=			setup.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2, py-docutils
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2, py-docutils
 
 # Adjust setup.py
 SUBST_CLASSES+=		setup

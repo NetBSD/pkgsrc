@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2016/07/09 13:03:34 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2017/01/01 14:43:26 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gramps3
 PKG_SUPPORTED_OPTIONS=	graphviz enchant freefont
@@ -7,7 +7,7 @@ PKG_SUPPORTED_OPTIONS=	graphviz enchant freefont
 
 .if !empty(PKG_OPTIONS:Menchant)
 DEPENDS+=	${PYPKGPREFIX}-enchant-[0-9]*:../../textproc/py-enchant
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
 .include "../../x11/py-gnome2-extras/buildlink3.mk"
 .endif
 

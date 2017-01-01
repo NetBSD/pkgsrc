@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2016/11/28 13:55:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2017/01/01 14:43:52 wiz Exp $
 #
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
@@ -15,4 +15,4 @@ LICENSE=	mit
 DISTINFO_FILE?=		${.CURDIR}/../py-twisted/distinfo
 PATCHDIR?=		${.CURDIR}/../py-twisted/patches
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # many parts not yet ported as of 16.5.0 (PLIST: 465 files missing)
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # many parts not yet ported as of 16.5.0 (PLIST: 465 files missing)

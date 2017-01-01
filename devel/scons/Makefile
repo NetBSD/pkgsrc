@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/12/05 11:36:51 adam Exp $
+# $NetBSD: Makefile,v 1.35 2017/01/01 14:43:37 wiz Exp $
 
 DISTNAME=	scons-2.5.1
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ REPLACE_PYTHON+=	script/scons script/scons-configure-cache
 REPLACE_PYTHON+=	script/scons-time script/sconsign
 
 # not yet ported as of 2.5.1, but progress promised
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

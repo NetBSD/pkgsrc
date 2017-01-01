@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/01 14:43:23 wiz Exp $
 
 DISTNAME=	libmtag-python-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -13,7 +13,7 @@ USE_TOOLS+=	pkg-config
 
 EGG_NAME=	MTag-0.0.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.3.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.3.1
 
 .include "../../lang/python/distutils.mk"
 .include "../../audio/libmtag/buildlink3.mk"
