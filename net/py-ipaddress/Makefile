@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/10/19 12:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:51 wiz Exp $
 
 DISTNAME=	ipaddress-1.0.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/ipaddress
 COMMENT=	Port of the python 3.3+ ipaddress module to 2.6 and 2.7
 LICENSE=	python-software-foundation
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # included in 3.3+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # included in 3.3+
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} test_ipaddress.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/11/14 20:15:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/01 14:43:31 wiz Exp $
 
 DISTNAME=	lldb-3.9.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -22,7 +22,7 @@ USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # compilation failure in 3.8.1 (3.8.0 worked)
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # compilation failure in 3.8.1 (3.8.0 worked)
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
