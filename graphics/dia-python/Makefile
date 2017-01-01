@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/08/03 10:22:50 adam Exp $
+# $NetBSD: Makefile,v 1.48 2017/01/01 14:43:41 wiz Exp $
 
 DIA_SUBPKG=		-python
 PKGREVISION= 1
@@ -12,7 +12,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 REPLACE_PYTHON=	po-checktrans.py
 REPLACE_PYTHON+=	plug-ins/python/gtkcons.py
 REPLACE_PYTHON+=	sheets/checktrans.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 BUILD_DIRS+=		plug-ins/python
 INSTALL_DIRS+=		plug-ins/python

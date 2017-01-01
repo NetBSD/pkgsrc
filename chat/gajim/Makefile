@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/08/03 10:22:33 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/01 14:43:25 wiz Exp $
 
 DISTNAME=	gajim-0.15
 PKGREVISION=	14
@@ -15,7 +15,7 @@ DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
 DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
 .include "options.mk"
 

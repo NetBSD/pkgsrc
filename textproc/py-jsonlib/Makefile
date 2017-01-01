@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 13:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/01 14:44:01 wiz Exp $
 
 DISTNAME=	jsonlib-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

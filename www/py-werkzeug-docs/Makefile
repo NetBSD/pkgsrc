@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/07/09 13:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/01 14:44:06 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
 
@@ -23,7 +23,7 @@ do-install:
 	    && ${FIND} ${DOCDIR}/html -type f -print > ${WRKDIR}/PLIST
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # sphinx detection broken as of 0.9.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # sphinx detection broken as of 0.9.4
 .include "../../lang/python/pyversion.mk"
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 

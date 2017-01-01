@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/09/25 12:05:18 kamil Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/01 14:43:32 wiz Exp $
 
 DISTNAME=		buildbot-0.8.8
 PKGREVISION=		1
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 DEPENDS+=	${PYPKGPREFIX}-sqlparse-[0-9]*:../../databases/py-sqlparse
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted, py-sqlite2, py-sqlalchemy-migrate
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted, py-sqlite2, py-sqlalchemy-migrate
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

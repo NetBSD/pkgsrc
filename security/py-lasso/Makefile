@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/07/09 13:04:04 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/01 14:43:55 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	3
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--disable-perl
 INSTALL_DIRS=	bindings/python
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.4.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 2.4.1
 
 .include "../../lang/python/extension.mk"
 
