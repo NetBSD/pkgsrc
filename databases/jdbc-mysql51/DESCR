@@ -1,0 +1,9 @@
+MySQL provides connectivity for client applications developed in the Java
+programming language via a JDBC driver, which is called MySQL Connector/J.
+
+MySQL Connector/J is a JDBC Type 4 driver. Different versions are available
+that are compatible with the JDBC 3.0 and JDBC 4.0 specifications. The Type
+4 designation means that the driver is pure-Java implementation of the MySQL
+protocol and does not rely on the MySQL client libraries.
+
+In the 5.1 version, useOldAliasMetadataBehavior is default false.
