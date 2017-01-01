@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 13:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:59 wiz Exp $
 
 DISTNAME=	itstool-2.0.2
 CATEGORIES=	textproc
@@ -16,7 +16,7 @@ REPLACE_PYTHON=	${WRKSRC}/itstool.in
 
 DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 
-PYTHON_VERSIONS_INCOMPATIBLE=  34 35 # not yet ported as of 2.0.2
+PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 # not yet ported as of 2.0.2
 #Traceback (most recent call last):
 #  File "/usr/pkg/bin/itstool", line 1516, in <module>
 #    doc.apply_its_rules(not(opts.nobuiltins), params=params)
