@@ -1,10 +1,10 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.4 2017/01/01 16:14:08 ryoon Exp $
 
---- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2015-03-16 18:51:31.000000000 +0000
+--- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2017-01-01 10:19:05.010110210 +0000
 +++ mozilla/media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,402 @@
+@@ -0,0 +1,412 @@
 +/*
-+ * Copyright Â© 2014 Mozilla Foundation
++ * Copyright © 2014 Mozilla Foundation
 + *
 + * This program is made available under an ISC-style license.  See the
 + * accompanying file LICENSE for details.
@@ -23,6 +23,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42
 +#include <errno.h>
 +#include <pthread.h>
 +#include <stdio.h>
++#include <assert.h>
 +
 +#include "cubeb/cubeb.h"
 +#include "cubeb-internal.h"
@@ -121,7 +122,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42
 +  pthread_mutex_lock(&stream->state_mutex);
 +  if (stream->data_callback && stream->running && !stream->stopped) {
 +    pthread_mutex_unlock(&stream->state_mutex);
-+    got = stream->data_callback(stream, stream->user_ptr, buffer, nframes);
++    got = stream->data_callback(stream, stream->user_ptr, NULL, buffer, nframes);
 +  } else {
 +    pthread_mutex_unlock(&stream->state_mutex);
 +  }
@@ -221,7 +222,10 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42
 +
 +static int oss_stream_init(cubeb * context, cubeb_stream ** stm,
 +                           char const * stream_name,
-+                           cubeb_stream_params stream_params,
++                           cubeb_devid input_device,
++                           cubeb_stream_params * input_stream_params,
++                           cubeb_devid output_device,
++                           cubeb_stream_params * output_stream_params,
 +                           unsigned int latency,
 +                           cubeb_data_callback data_callback,
 +                           cubeb_state_callback state_callback, void * user_ptr)
@@ -231,6 +235,12 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42
 +  stream->data_callback = data_callback;
 +  stream->state_callback = state_callback;
 +  stream->user_ptr = user_ptr;
++
++  assert(!input_stream_params && "not supported.");
++  if (input_device || output_device) {
++    /* Device selection not yet implemented. */
++    return CUBEB_ERROR_DEVICE_UNAVAILABLE;
++  }
 +
 +  if ((stream->fd = open(CUBEB_OSS_DEFAULT_OUTPUT, O_WRONLY)) == -1) {
 +    free(stream);
@@ -243,16 +253,16 @@ $NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.3 2015/03/17 19:50:42
 +      free(stream); \
 +      return CUBEB_ERROR_INVALID_FORMAT; } } while (0)
 +
-+  stream->params = stream_params;
++  stream->params = *output_stream_params;
 +  stream->volume = 1.0;
 +  stream->panning = 0.0;
 +
 +  oss_try_set_latency(stream, latency); 
 +
 +  stream->floating = 0;
-+  SET(SNDCTL_DSP_CHANNELS, stream_params.channels);
-+  SET(SNDCTL_DSP_SPEED, stream_params.rate);
-+  switch (stream_params.format) {
++  SET(SNDCTL_DSP_CHANNELS, output_stream_params->channels);
++  SET(SNDCTL_DSP_SPEED, output_stream_params->rate);
++  switch (output_stream_params->format) {
 +    case CUBEB_SAMPLE_S16LE:
 +      SET(SNDCTL_DSP_SETFMT, AFMT_S16_LE);
 +    break;

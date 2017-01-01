@@ -1,9 +1,9 @@
-$NetBSD: patch-mail_app_Makefile.in,v 1.9 2015/02/15 02:11:03 ryoon Exp $
+$NetBSD: patch-mail_app_Makefile.in,v 1.10 2017/01/01 16:14:07 ryoon Exp $
 
---- mail/app/Makefile.in.orig	2015-02-05 04:28:30.000000000 +0000
+--- mail/app/Makefile.in.orig	2016-12-14 01:58:01.000000000 +0000
 +++ mail/app/Makefile.in
-@@ -41,6 +41,10 @@ include $(topsrcdir)/config/rules.mk
- else
+@@ -13,6 +13,10 @@ DEFINES += \
+ 
  # Build a binary bootstrapping with XRE_main
  
 +ifeq ($(OS_ARCH),NetBSD)
