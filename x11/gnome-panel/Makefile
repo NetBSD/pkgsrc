@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2016/12/04 05:17:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.189 2017/01/01 14:44:07 wiz Exp $
 
 DISTNAME=		gnome-panel-2.32.1
 PKGREVISION=		51
@@ -22,7 +22,7 @@ USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE+=	bonobo/libpanel-applet/libpanelapplet-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	libpanel-applet/libpanelapplet-3.0.pc.in
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
 
 # XXX this pkg installs a gio module to ${PREFIX}/lib/gnome-panel/modules
 # but there are two problems with this:

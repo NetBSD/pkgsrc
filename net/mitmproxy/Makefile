@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/07/09 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/01 14:43:50 wiz Exp $
 
 DISTNAME=	mitmproxy-0.17
 CATEGORIES=	net
@@ -37,7 +37,7 @@ DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-watchdog>=0.8.3:../../sysutils/py-watchdog
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.17
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.17
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

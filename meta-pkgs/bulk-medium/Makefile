@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/12/29 23:01:33 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2017/01/01 14:43:47 wiz Exp $
 
 DISTNAME=	bulk-medium-20161229
 CATEGORIES=	meta-pkgs
@@ -10,7 +10,7 @@ COMMENT=	Meta-package for a standard medium-sized limited bulk build
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-matplotlib-gtk2
 
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}

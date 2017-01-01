@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2016/08/03 10:22:13 adam Exp $
+# $NetBSD: Makefile,v 1.88 2017/01/01 14:43:42 wiz Exp $
 
 DISTNAME=	eog-2.32.1
 PKGREVISION=	22
@@ -21,7 +21,7 @@ GCONF_SCHEMAS=	eog.schemas
 # XXX Python plugins do more harm than good for now
 #.include "../../lang/python/application.mk"
 #.include "../../x11/py-gtk2/buildlink3.mk"
-#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+#PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
 .include "../../devel/glib2/buildlink3.mk"

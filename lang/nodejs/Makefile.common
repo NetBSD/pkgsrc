@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2016/10/26 13:00:20 pho Exp $
+# $NetBSD: Makefile.common,v 1.13 2017/01/01 14:43:45 wiz Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 # used by lang/nodejs6/Makefile
@@ -16,7 +16,7 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	bash gmake pkg-config
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.10.24
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.10.24
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
