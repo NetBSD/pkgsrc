@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2016/09/18 12:44:49 kamil Exp $
+# $NetBSD: options.mk,v 1.2 2017/01/01 15:06:24 adam Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.python27
+PKG_OPTIONS_VAR=	PKG_OPTIONS.python35
 PKG_SUPPORTED_OPTIONS+=	x11
 PKG_SUGGESTED_OPTIONS=	x11
 
