@@ -291,7 +291,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		token(shtWord, "echo", shqDquotBackt),
 		token(shtSpace, " ", shqDquotBackt),
 		token(shtWord, "\"", shqDquotBacktDquot),
-		token(shtWord, "\\`echo foo\\`", shqDquotBacktDquot), // One token, since it doesn’t influence parsing.
+		token(shtWord, "\\`echo foo\\`", shqDquotBacktDquot), // One token, since it doesn't influence parsing.
 		token(shtWord, "\"", shqDquotBackt),
 		token(shtWord, "`", shqDquot),
 		token(shtWord, "\"", shqPlain))
@@ -435,7 +435,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 			NewShAtomVaruse("${PATH:Q}", shqPlain, "PATH", "Q")),
 		NewShToken("true", NewShAtom(shtWord, "true", shqPlain)))
 
-	if false { // Don’t know how to tokenize this correctly.
+	if false { // Don't know how to tokenize this correctly.
 		check("id=$$(${AWK} '{print}' < ${WRKSRC}/idfile)",
 			NewShToken("id=$$(${AWK} '{print}' < ${WRKSRC}/idfile)",
 				NewShAtom(shtWord, "id=", shqPlain),
