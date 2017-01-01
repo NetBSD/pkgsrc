@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2016/12/13 20:51:42 wiedi Exp $
+# $NetBSD: Makefile,v 1.56 2017/01/01 13:53:16 wiz Exp $
 
-DISTNAME=	flex-2.6.2
-PKGREVISION=	3
+DISTNAME=	flex-2.6.3
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=westes/}
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
