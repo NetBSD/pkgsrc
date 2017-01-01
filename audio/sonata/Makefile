@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/08/03 10:22:31 adam Exp $
+# $NetBSD: Makefile,v 1.46 2017/01/01 14:43:24 wiz Exp $
 
 EGG_NAME=	Sonata-1.6.2.1
 DISTNAME=	${EGG_NAME:tl}
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-SOAPpy-[0-9]*:../../net/py-soappy
 DEPENDS+=	${PYPKGPREFIX}-mpd-[0-9]*:../../audio/py-mpd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-xml via py-soappy, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-xml via py-soappy, py-gtk2
 
 USE_TOOLS+=	pkg-config msgfmt
 

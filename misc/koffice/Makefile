@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2016/11/08 10:51:28 wiz Exp $
+# $NetBSD: Makefile,v 1.185 2017/01/01 14:43:47 wiz Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	73
@@ -44,7 +44,7 @@ REPLACE_PERL+=		tools/scripts/gdb_output_to_text.pl
 REPLACE_PERL+=		tools/thesaurus/extract.pl
 REPLACE_PERL+=		kpresenter/kprconverter.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.6.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.6.3
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}

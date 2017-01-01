@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/08/28 15:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:58 wiz Exp $
 
 DISTNAME=	v0.7.6
 PROPERNAME=	${DISTNAME:S/v/xattr-/}
@@ -22,7 +22,7 @@ USE_LANGUAGES=	c
 REPLACE_PYTHON=	xattr/tool.py
 
 # XXX: builds, installs, but cannot be executed
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/xattr \

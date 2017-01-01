@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/09/19 08:52:24 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/01 14:43:57 wiz Exp $
 
 DISTNAME=	bup-0.28.1
 CATEGORIES=	sysutils
@@ -25,7 +25,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 # TEST_DEPENDS
 BUILD_DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-fuse-bindings
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-fuse-bindings
 
 DOCDIR=		${WRKDIR}/bup-man
 

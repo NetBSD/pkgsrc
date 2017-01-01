@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 13:03:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/01 14:43:49 wiz Exp $
 
 DISTNAME=	CoilMQ-0.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ SUBST_STAGE.cfg=	post-patch
 SUBST_FILES.cfg=	coilmq/config/__init__.py
 SUBST_SED.cfg=		-e 's,/path/to/config.cfg,${PKG_SYSCONFDIR}/coilmq/defaults.cfg,'
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-stompclient, py-daemon
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-stompclient, py-daemon
 
 EGDIR=			${PREFIX}/share/examples/coilmq
 

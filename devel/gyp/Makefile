@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/07/09 13:03:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/01/01 14:43:30 wiz Exp $
 
 SVN_REVISION=	2019
 DIST_VERSION=	0.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://code.google.com/p/gyp/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=  34 35 # not yet ported as of 0.1pre1718
+PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 # not yet ported as of 0.1pre1718
 EGG_NAME=	gyp-${DIST_VERSION}
 
 # REPLACE_PYTHON settings farmed out due to size...

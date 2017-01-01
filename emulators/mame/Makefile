@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2016/12/04 05:17:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2017/01/01 14:43:38 wiz Exp $
 
 DISTNAME=	mame-0.179
 PKGREVISION=	1
@@ -88,7 +88,7 @@ MAKE_ENV+=	BIGENDIAN=1
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.151
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.151
 
 post-extract:
 	# will be chosen in preference to /usr/include/signal.h, but does not provide kill()

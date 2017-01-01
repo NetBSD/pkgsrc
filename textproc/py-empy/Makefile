@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/08/28 15:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/01 14:44:00 wiz Exp $
 
 DISTNAME=	empy-3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ USE_TOOLS+=		pax
 PYDISTUTILSPKG=		# yes
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 # Fix html path in documentation
 SUBST_CLASSES+=		doc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/12/21 15:35:44 bouyer Exp $
+# $NetBSD: Makefile,v 1.27 2017/01/01 14:43:58 wiz Exp $
 
 VERSION=	4.2.5
 DISTNAME=	xen-${VERSION}
@@ -20,7 +20,7 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 PYTHON_FOR_BUILD_ONLY=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 4.2.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 4.2.3
 
 MAKE_ENV+=	OCAML_TOOLS=no
 

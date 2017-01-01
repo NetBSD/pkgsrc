@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2016/07/09 13:03:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2017/01/01 14:43:50 wiz Exp $
 
 DISTNAME=	pyorbit-2.24.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyorbit/ORBit/}
@@ -23,7 +23,7 @@ PYTHON_SELF_CONFLICT=	YES
 
 BUILDLINK_API_DEPENDS.python26+= python26>=2.6.2nb4
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # dead upstream, no plans to port
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # dead upstream, no plans to port
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 

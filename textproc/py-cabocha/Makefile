@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/09 13:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/01 14:44:00 wiz Exp $
 
 .include "../../textproc/cabocha/Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=	CaboCha python module
 USE_LANGUAGES=	c c++
 
 PYSETUPSUBDIR=	python
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.67
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.67
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
 
