@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.7 2017/01/01 08:27:13 mef Exp $
+$NetBSD: CHANGES-2017,v 1.8 2017/01/01 08:28:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -6,3 +6,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/gtkwave to 3.3.79 [mef 2017-01-01]
 	Updated devel/py-requests to 2.12.4nb1 [ryoon 2017-01-01]
 	Updated archivers/xz to 5.2.3 [mef 2017-01-01]
+	Updated sysutils/py-psutil to 5.0.1 [ryoon 2017-01-01]
