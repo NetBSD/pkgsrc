@@ -230,7 +230,7 @@ func (gd *GlobalData) loadTools() {
 
 	// Some user-defined variables do not influence the binary
 	// package at all and therefore do not have to be added to
-	// BUILD_DEFS; therefore they are marked as “already added”.
+	// BUILD_DEFS; therefore they are marked as "already added".
 	systemBuildDefs["DISTDIR"] = true
 	systemBuildDefs["FETCH_CMD"] = true
 	systemBuildDefs["FETCH_OUTPUT_ARGS"] = true

@@ -4,7 +4,76 @@ import (
 	"strings"
 
 	check "gopkg.in/check.v1"
+	"os"
 )
+
+func (s *Suite) Test_Pkglint_Main_help(c *check.C) {
+	exitcode := new(Pkglint).Main("pkglint", "-h")
+
+	c.Check(exitcode, equals, 0)
+	c.Check(s.Output(), check.Matches, `^\Qusage: pkglint [options] dir...\E\n(?s).+`)
+}
+
+func (s *Suite) Test_Pkglint_Main_version(c *check.C) {
+	exitcode := new(Pkglint).Main("pkglint", "--version")
+
+	c.Check(exitcode, equals, 0)
+	c.Check(s.Output(), equals, confVersion+"\n")
+}
+
+func (s *Suite) Test_Pkglint_Main_no_args(c *check.C) {
+	exitcode := new(Pkglint).Main("pkglint")
+
+	c.Check(exitcode, equals, 1)
+	c.Check(s.Stderr(), equals, "FATAL: \".\" is not inside a pkgsrc tree.\n")
+}
+
+// go test -c -covermode count
+// pkgsrcdir=...
+// env PKGLINT_TESTCMDLINE="$pkgsrcdir -r" ./pkglint.test -test.coverprofile pkglint.cov -check.f TestRunPkglint
+// go tool cover -html=pkglint.cov -o coverage.html
+func (s *Suite) Test_Pkglint_coverage(c *check.C) {
+	cmdline := os.Getenv("PKGLINT_TESTCMDLINE")
+	if cmdline != "" {
+		G.logOut, G.logErr, G.debugOut = os.Stdout, os.Stderr, os.Stdout
+		new(Pkglint).Main(append([]string{"pkglint"}, splitOnSpace(cmdline)...)...)
+	}
+}
+
+func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
+	s.Init(c)
+	s.CreateTmpFile("empty", "")
+
+	new(Pkglint).CheckDirent(s.tmpdir)
+
+	c.Check(s.Output(), equals, "ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".\n")
+}
+
+func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
+	s.Init(c)
+	s.CreateTmpFile("mk/bsd.pkg.mk", "")
+	s.CreateTmpFile("category/package/Makefile", "")
+	s.CreateTmpFile("category/Makefile", "")
+	s.CreateTmpFile("Makefile", "")
+	G.globalData.Pkgsrcdir = s.tmpdir
+	pkglint := new(Pkglint)
+
+	pkglint.CheckDirent(s.tmpdir)
+
+	c.Check(s.Output(), equals, "ERROR: ~/Makefile: Must not be empty.\n")
+
+	pkglint.CheckDirent(s.tmpdir + "/category")
+
+	c.Check(s.Output(), equals, "ERROR: ~/category/Makefile: Must not be empty.\n")
+
+	pkglint.CheckDirent(s.tmpdir + "/category/package")
+
+	c.Check(s.Output(), equals, "ERROR: ~/category/package/Makefile: Must not be empty.\n")
+
+	pkglint.CheckDirent(s.tmpdir + "/category/package/nonexistent")
+
+	c.Check(s.Output(), equals, "ERROR: ~/category/package/nonexistent: No such file or directory.\n")
+}
 
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
 	mkline := NewMkLine(NewLine("fname", 1, "GCC_VERSION=${GCC_VERSION}", nil))
@@ -38,41 +107,6 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 	resolved := resolveVariableRefs("gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
 
 	c.Check(resolved, equals, "gst-plugins0.10-x11/distinfo")
-}
-
-func (s *Suite) Test_MatchVarassign(c *check.C) {
-	checkVarassign := func(text string, ck check.Checker, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string) {
-		type va struct {
-			varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string
-		}
-		expected := va{varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment}
-		am, avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment := MatchVarassign(text)
-		if !am {
-			c.Errorf("Text %q doesn’t match variable assignment", text)
-			return
-		}
-		actual := va{avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment}
-		c.Check(actual, ck, expected)
-	}
-	checkNotVarassign := func(text string) {
-		m, _, _, _, _, _, _, _ := MatchVarassign(text)
-		if m {
-			c.Errorf("Text %q matches variable assignment, but shouldn’t.", text)
-		}
-	}
-
-	checkVarassign("C++=c11", equals, "C+", "", "+=", "C++=", "c11", "", "")
-	checkVarassign("V=v", equals, "V", "", "=", "V=", "v", "", "")
-	checkVarassign("VAR=#comment", equals, "VAR", "", "=", "VAR=", "", "", "#comment")
-	checkVarassign("VAR=\\#comment", equals, "VAR", "", "=", "VAR=", "#comment", "", "")
-	checkVarassign("VAR=\\\\\\##comment", equals, "VAR", "", "=", "VAR=", "\\\\#", "", "#comment")
-	checkVarassign("VAR=\\", equals, "VAR", "", "=", "VAR=", "\\", "", "")
-	checkVarassign("VAR += value", equals, "VAR", " ", "+=", "VAR += ", "value", "", "")
-	checkVarassign(" VAR=value", equals, "VAR", "", "=", " VAR=", "value", "", "")
-	checkVarassign("VAR=value #comment", equals, "VAR", "", "=", "VAR=", "value", " ", "#comment")
-	checkNotVarassign("\tVAR=value")
-	checkNotVarassign("?=value")
-	checkNotVarassign("<=value")
 }
 
 func (s *Suite) Test_ChecklinesDescr(c *check.C) {
