@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.33 2016/02/26 10:57:46 jperkin Exp $
+# $NetBSD: options.mk,v 1.34 2017/01/01 16:14:07 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
-PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc # gnome
+PKG_SUPPORTED_OPTIONS=	alsa dbus debug mozilla-jemalloc
 PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
@@ -15,9 +15,9 @@ PKG_SUGGESTED_OPTIONS+=	webrtc
 .endif
 
 .if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	alsa
+PKG_SUGGESTED_OPTIONS+=	alsa dbus
 .else
-PKG_SUGGESTED_OPTIONS+=	pulseaudio
+PKG_SUGGESTED_OPTIONS+=	dbus pulseaudio
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -29,20 +29,18 @@ CONFIGURE_ARGS+=	--enable-alsa
 CONFIGURE_ARGS+=	--disable-alsa
 .endif
 
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+CONFIGURE_ARGS+=        --enable-dbus
+.else
+CONFIGURE_ARGS+=        --disable-dbus
+.endif
+
 .if !empty(PKG_OPTIONS:Mmozilla-chatzilla)
 PLIST_SRC+=		PLIST.chatzilla
 CONFIGURE_ARGS+=	--enable-extensions=default,irc
 XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/chatzilla*.xpi
-XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/inspector*.xpi
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gnomevfs --enable-dbus --enable-gnomeui
-PLIST.gnome=		yes
-.else
-CONFIGURE_ARGS+=	--disable-gnomevfs --disable-dbus --disable-gnomeui
+XPI_FILES+=		${WRKSRC}/${OBJDIR}/dist/xpi-stage/quitter*.xpi
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
