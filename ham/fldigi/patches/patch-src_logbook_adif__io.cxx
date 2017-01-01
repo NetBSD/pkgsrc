@@ -1,4 +1,6 @@
-$NetBSD: patch-src_logbook_adif__io.cxx,v 1.1 2016/12/22 11:38:01 joerg Exp $
+$NetBSD: patch-src_logbook_adif__io.cxx,v 1.2 2017/01/01 07:27:33 mef Exp $
+
+Pointers don't have a sign.
 
 --- src/logbook/adif_io.cxx.orig	2016-12-21 10:22:23.131474254 +0000
 +++ src/logbook/adif_io.cxx
