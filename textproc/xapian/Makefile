@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2016/11/23 16:11:52 wiedi Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/01 10:40:49 schmonz Exp $
 
 DISTNAME=		xapian-core-${VERSION}
-VERSION=		1.4.1
+VERSION=		1.4.2
 PKGNAME=		xapian-${VERSION}
 CATEGORIES=		textproc
 MASTER_SITES=		http://oligarchy.co.uk/xapian/${VERSION}/
