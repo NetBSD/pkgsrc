@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.150 2016/12/15 07:48:19 dholland Exp $
+# $NetBSD: Makefile,v 1.151 2017/01/01 16:14:07 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	7
-SM_VER=		2.40
+SM_VER=		2.46
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ USE_TOOLS+=	unzip pax
 NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey
 NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey-bin
 
-.include "../../www/firefox45/mozilla-common.mk"
+.include "../../www/firefox/mozilla-common.mk"
 .include "options.mk"
 
 # Workaround to fix pixman.h detection
@@ -55,6 +54,8 @@ SUBST_STAGE.sys-dic=	pre-configure
 SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	mozilla/extensions/spellcheck/hunspell/src/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
+
+CHECK_WRKREF_SKIP=	lib/seamonkey/chrome/toolkit/content/global/buildconfig.html
 
 post-extract:
 	mv ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/mozilla/gfx/ycbcr/yuv_row_arm.S

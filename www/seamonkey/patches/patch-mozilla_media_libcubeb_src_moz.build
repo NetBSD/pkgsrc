@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.5 2016/03/30 12:56:53 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.6 2017/01/01 16:14:08 ryoon Exp $
 
---- mozilla/media/libcubeb/src/moz.build.orig	2016-01-19 02:49:31.000000000 +0000
+--- mozilla/media/libcubeb/src/moz.build.orig	2016-12-14 02:09:53.000000000 +0000
 +++ mozilla/media/libcubeb/src/moz.build
-@@ -17,6 +17,12 @@ if CONFIG['MOZ_ALSA']:
+@@ -19,6 +19,12 @@ if CONFIG['MOZ_ALSA']:
      ]
      DEFINES['USE_ALSA'] = True
  
@@ -15,22 +15,21 @@ $NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.5 2016/03/30 12:56:53 ry
  if CONFIG['MOZ_PULSEAUDIO']:
      SOURCES += [
          'cubeb_pulse.c',
-@@ -31,7 +37,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
-     ]
-     DEFINES['USE_SNDIO'] = True
- 
--if CONFIG['OS_TARGET'] == 'Darwin':
-+if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
-     SOURCES += [
-         'cubeb_audiounit.c',
-     ]
-@@ -65,6 +71,9 @@ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
+@@ -68,6 +74,9 @@ if CONFIG['OS_TARGET'] == 'Android':
  
  FINAL_LIBRARY = 'gkmedias'
  
-+if CONFIG['MOZ_NATIVE_SPEEX']:
++if CONFIG['MOZ_SYSTEM_SPEEX']:
 +    SOURCES['cubeb_resampler.cpp'].flags += CONFIG['MOZ_SPEEX_CFLAGS']
 +
  if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
-     CFLAGS += [
-         '-I%s/%s' % (CONFIG['ANDROID_SOURCE'], d) for d in [
+     if CONFIG['ANDROID_VERSION'] >= '17':
+         LOCAL_INCLUDES += [
+@@ -78,6 +87,7 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
+             '%' + '%s/system/media/wilhelm/include' % CONFIG['ANDROID_SOURCE'],
+         ]
+ 
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
+ CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
+ CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
+ 
