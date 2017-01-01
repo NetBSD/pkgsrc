@@ -10,7 +10,7 @@ package main
 // do not.
 //
 // Some methods allow modification of the raw lines contained in the
-// logical line, but leave the “text” field untouched. These methods are
+// logical line, but leave the Text field untouched. These methods are
 // used in the --autofix mode.
 
 import (
@@ -52,7 +52,7 @@ func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines [
 	return &Line{fname, int32(firstLine), int32(lastLine), text, rawLines, false, nil, nil, ""}
 }
 
-// NewLineEOF creates a dummy line for logging, with the “line number” EOF.
+// NewLineEOF creates a dummy line for logging, with the "line number" EOF.
 func NewLineEOF(fname string) *Line {
 	return NewLineMulti(fname, -1, 0, "", nil)
 }
