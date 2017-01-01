@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 13:03:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/01 14:43:23 wiz Exp $
 
 DISTNAME=	v1.0.0
 PKGNAME=	${PYPKGPREFIX}-acoustid-1.0.0
@@ -17,7 +17,7 @@ DEPENDS+=	chromaprint-[0-9]*:../../audio/chromaprint
 WRKSRC=		${WRKDIR}/pyacoustid-1.0.0
 USE_LANGUAGES=	# none
 EGG_NAME=	pyacoustid-1.0.0
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.0.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.0.0
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

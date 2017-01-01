@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/10/10 13:15:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/01 14:43:27 wiz Exp $
 
 DISTNAME=	mongodb-src-r3.2.10
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -26,7 +26,7 @@ SCONS_ARGS+=	--use-system-zlib
 SCONS_ARGS+=	--js-engine=mozjs
 SCONS_ARGS+=	--release
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet supported as of 3.0.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/12/06 10:41:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/01 14:43:53 wiz Exp $
 
 DISTNAME=	zeep-0.23.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-appdirs>=1.4.0:../../devel/py-appdirs
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35	# devel/py-cached-property
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36	# devel/py-cached-property
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
