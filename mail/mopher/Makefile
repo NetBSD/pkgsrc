@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/09/26 23:29:13 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/01 16:35:38 rillig Exp $
 
 DISTNAME=		mopher-0.5.3
 PKGREVISION=		1
@@ -21,7 +21,7 @@ FILES_SUBST+=		MOPHER_USER=${MOPHER_USER}
 FILES_SUBST+=		MOPHER_GROUP=${MOPHER_GROUP}
 FILES_SUBST+=		MOPHER_HOME=${MOPHER_HOME}
 FILES_SUBST+=		MOPHER_RUN=${MOPHER_RUN}
-FILES_SUBST+=		INSTALL=${INSTALL}
+FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
 HAS_CONFIGURE=		yes
 
@@ -42,12 +42,9 @@ BUILD_TARGET=		build
 PKG_SYSCONFSUBDIR=	mopher
 INSTALLATION_DIRS+=	${EGDIR}
 EGDIR=			${PREFIX}/share/examples/mopher
-CONF_FILES+=		${EGDIR}/mopherd.conf
-CONF_FILES+=		${PKG_SYSCONFDIR}/mopherd.conf
-CONF_FILES+=		${EGDIR}/mopherd.acl
-CONF_FILES+=		${PKG_SYSCONFDIR}/mopherd.acl
-CONF_FILES+=		${EGDIR}/effective_tld_names.dat
-CONF_FILES+=		${PKG_SYSCONFDIR}/effective_tld_names.dat
+CONF_FILES+=		${EGDIR}/mopherd.conf ${PKG_SYSCONFDIR}/mopherd.conf
+CONF_FILES+=		${EGDIR}/mopherd.acl ${PKG_SYSCONFDIR}/mopherd.acl
+CONF_FILES+=		${EGDIR}/effective_tld_names.dat ${PKG_SYSCONFDIR}/effective_tld_names.dat
 MAKE_ENV+=		CONFIG_XPATH=${EGDIR}
 
 PKG_GROUPS=		${MOPHER_GROUP}
