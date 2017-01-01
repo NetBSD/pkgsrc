@@ -117,7 +117,7 @@ func (s *Suite) Test_ChecklinesPatch__error_code(c *check.C) {
 	lines := s.NewLines("patch-ErrorCode",
 		"$"+"NetBSD$",
 		"",
-		"*** Error code 1", // Looks like a context diff, but isn’t.
+		"*** Error code 1", // Looks like a context diff, but isn't.
 		"",
 		"--- file.orig",
 		"+++ file",
@@ -346,7 +346,7 @@ func (s *Suite) Test_ChecklinesPatch__empty_lines_left_out_at_eof(c *check.C) {
 }
 
 // In some context lines, the leading space character is missing.
-// Since this is no problem for patch(1), pkglint also doesn’t complain.
+// Since this is no problem for patch(1), pkglint also doesn't complain.
 func (s *Suite) Test_ChecklinesPatch__context_lines_with_tab_instead_of_space(c *check.C) {
 	lines := s.NewLines("patch-aa",
 		"$"+"NetBSD$",

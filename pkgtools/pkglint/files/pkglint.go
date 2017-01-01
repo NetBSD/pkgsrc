@@ -1,14 +1,224 @@
 package main
 
 import (
+	"fmt"
+	"io"
+	"netbsd.org/pkglint/getopt"
 	"os"
+	"os/user"
 	"path"
+	"path/filepath"
+	"runtime/pprof"
 	"strings"
 )
 
-const (
-	rePkgname = `^([\w\-.+]+)-(\d(?:\w|\.\d)*)$`
-)
+const confMake = "@BMAKE@"
+const confVersion = "@VERSION@"
+
+func main() {
+	G.logOut, G.logErr, G.debugOut = os.Stdout, os.Stderr, os.Stdout
+	os.Exit(new(Pkglint).Main(os.Args...))
+}
+
+type Pkglint struct{}
+
+func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
+	defer func() {
+		if r := recover(); r != nil {
+			if _, ok := r.(pkglintFatal); ok {
+				exitcode = 1
+			} else {
+				panic(r)
+			}
+		}
+	}()
+
+	if exitcode := pkglint.ParseCommandLine(args); exitcode != nil {
+		return *exitcode
+	}
+
+	if G.opts.Profiling {
+		f, err := os.Create("pkglint.pprof")
+		if err != nil {
+			dummyLine.Fatalf("Cannot create profiling file: %s", err)
+		}
+		pprof.StartCPUProfile(f)
+		defer pprof.StopCPUProfile()
+
+		G.rematch = NewHistogram()
+		G.renomatch = NewHistogram()
+		G.retime = NewHistogram()
+		G.loghisto = NewHistogram()
+	}
+
+	for _, arg := range G.opts.args {
+		G.Todo = append(G.Todo, filepath.ToSlash(arg))
+	}
+	if len(G.Todo) == 0 {
+		G.Todo = []string{"."}
+	}
+
+	G.globalData.Initialize()
+
+	currentUser, err := user.Current()
+	if err == nil {
+		// On Windows, this is `Computername\Username`.
+		G.CurrentUsername = regcomp(`^.*\\`).ReplaceAllString(currentUser.Username, "")
+	}
+
+	for len(G.Todo) != 0 {
+		item := G.Todo[0]
+		G.Todo = G.Todo[1:]
+		pkglint.CheckDirent(item)
+	}
+
+	checkToplevelUnusedLicenses()
+	pkglint.PrintSummary()
+	if G.opts.Profiling {
+		G.loghisto.PrintStats("loghisto", G.logOut, 0)
+		G.rematch.PrintStats("rematch", G.logOut, 10)
+		G.renomatch.PrintStats("renomatch", G.logOut, 10)
+		G.retime.PrintStats("retime", G.logOut, 10)
+	}
+	if G.errors != 0 {
+		return 1
+	}
+	return 0
+}
+
+func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
+	gopts := &G.opts
+	opts := getopt.NewOptions()
+
+	check := opts.AddFlagGroup('C', "check", "check,...", "enable or disable specific checks")
+	opts.AddFlagVar('d', "debug", &gopts.Debug, false, "log verbose call traces for debugging")
+	opts.AddFlagVar('e', "explain", &gopts.Explain, false, "explain the diagnostics or give further help")
+	opts.AddFlagVar('f', "show-autofix", &gopts.PrintAutofix, false, "show what pkglint can fix automatically")
+	opts.AddFlagVar('F', "autofix", &gopts.Autofix, false, "try to automatically fix some errors (experimental)")
+	opts.AddFlagVar('g', "gcc-output-format", &gopts.GccOutput, false, "mimic the gcc output format")
+	opts.AddFlagVar('h', "help", &gopts.PrintHelp, false, "print a detailed usage message")
+	opts.AddFlagVar('I', "dumpmakefile", &gopts.DumpMakefile, false, "dump the Makefile after parsing")
+	opts.AddFlagVar('i', "import", &gopts.Import, false, "prepare the import of a wip package")
+	opts.AddFlagVar('m', "log-verbose", &gopts.LogVerbose, false, "allow the same log message more than once")
+	opts.AddFlagVar('p', "profiling", &gopts.Profiling, false, "profile the executing program")
+	opts.AddFlagVar('q', "quiet", &gopts.Quiet, false, "don't print a summary line when finishing")
+	opts.AddFlagVar('r', "recursive", &gopts.Recursive, false, "check subdirectories, too")
+	opts.AddFlagVar('s', "source", &gopts.PrintSource, false, "show the source lines together with diagnostics")
+	opts.AddFlagVar('V', "version", &gopts.PrintVersion, false, "print the version number of pkglint")
+	warn := opts.AddFlagGroup('W', "warning", "warning,...", "enable or disable groups of warnings")
+
+	check.AddFlagVar("ALTERNATIVES", &gopts.CheckAlternatives, true, "check ALTERNATIVES files")
+	check.AddFlagVar("bl3", &gopts.CheckBuildlink3, true, "check buildlink3.mk files")
+	check.AddFlagVar("DESCR", &gopts.CheckDescr, true, "check DESCR file")
+	check.AddFlagVar("distinfo", &gopts.CheckDistinfo, true, "check distinfo file")
+	check.AddFlagVar("extra", &gopts.CheckExtra, false, "check various additional files")
+	check.AddFlagVar("global", &gopts.CheckGlobal, false, "inter-package checks")
+	check.AddFlagVar("INSTALL", &gopts.CheckInstall, true, "check INSTALL and DEINSTALL scripts")
+	check.AddFlagVar("Makefile", &gopts.CheckMakefile, true, "check Makefiles")
+	check.AddFlagVar("MESSAGE", &gopts.CheckMessage, true, "check MESSAGE file")
+	check.AddFlagVar("mk", &gopts.CheckMk, true, "check other .mk files")
+	check.AddFlagVar("patches", &gopts.CheckPatches, true, "check patches")
+	check.AddFlagVar("PLIST", &gopts.CheckPlist, true, "check PLIST files")
+
+	warn.AddFlagVar("absname", &gopts.WarnAbsname, true, "warn about use of absolute file names")
+	warn.AddFlagVar("directcmd", &gopts.WarnDirectcmd, true, "warn about use of direct command names instead of Make variables")
+	warn.AddFlagVar("extra", &gopts.WarnExtra, false, "enable some extra warnings")
+	warn.AddFlagVar("order", &gopts.WarnOrder, false, "warn if Makefile entries are unordered")
+	warn.AddFlagVar("perm", &gopts.WarnPerm, false, "warn about unforeseen variable definition and use")
+	warn.AddFlagVar("plist-depr", &gopts.WarnPlistDepr, false, "warn about deprecated paths in PLISTs")
+	warn.AddFlagVar("plist-sort", &gopts.WarnPlistSort, false, "warn about unsorted entries in PLISTs")
+	warn.AddFlagVar("quoting", &gopts.WarnQuoting, false, "warn about quoting issues")
+	warn.AddFlagVar("space", &gopts.WarnSpace, false, "warn about inconsistent use of white-space")
+	warn.AddFlagVar("style", &gopts.WarnStyle, false, "warn about stylistic issues")
+	warn.AddFlagVar("types", &gopts.WarnTypes, true, "do some simple type checking in Makefiles")
+
+	remainingArgs, err := opts.Parse(args)
+	if err != nil {
+		fmt.Fprintf(G.logErr, "%s\n\n", err)
+		opts.Help(G.logErr, "pkglint [options] dir...")
+		exitcode := 1
+		return &exitcode
+	}
+	gopts.args = remainingArgs
+
+	if gopts.PrintHelp {
+		opts.Help(G.logOut, "pkglint [options] dir...")
+		exitcode := 0
+		return &exitcode
+	}
+
+	if G.opts.PrintVersion {
+		fmt.Fprintf(G.logOut, "%s\n", confVersion)
+		exitcode := 0
+		return &exitcode
+	}
+
+	return nil
+}
+
+func (pkglint *Pkglint) PrintSummary() {
+	if !G.opts.Quiet {
+		if G.errors != 0 || G.warnings != 0 {
+			fmt.Fprintf(G.logOut, "%d %s and %d %s found.\n",
+				G.errors, ifelseStr(G.errors == 1, "error", "errors"),
+				G.warnings, ifelseStr(G.warnings == 1, "warning", "warnings"))
+		} else {
+			io.WriteString(G.logOut, "looks fine.\n")
+		}
+		if G.explanationsAvailable && !G.opts.Explain {
+			fmt.Fprint(G.logOut, "(Run \"pkglint -e\" to show explanations.)\n")
+		}
+		if G.autofixAvailable && !G.opts.PrintAutofix && !G.opts.Autofix {
+			fmt.Fprint(G.logOut, "(Run \"pkglint -fs\" to show what can be fixed automatically.)\n")
+		}
+		if G.autofixAvailable && !G.opts.Autofix {
+			fmt.Fprint(G.logOut, "(Run \"pkglint -F\" to automatically fix some issues.)\n")
+		}
+	}
+}
+
+func (pkglint *Pkglint) CheckDirent(fname string) {
+	if G.opts.Debug {
+		defer tracecall1(fname)()
+	}
+
+	st, err := os.Lstat(fname)
+	if err != nil || !st.Mode().IsDir() && !st.Mode().IsRegular() {
+		NewLineWhole(fname).Errorf("No such file or directory.")
+		return
+	}
+	isDir := st.Mode().IsDir()
+	isReg := st.Mode().IsRegular()
+
+	G.CurrentDir = ifelseStr(isReg, path.Dir(fname), fname)
+	absCurrentDir := abspath(G.CurrentDir)
+	G.Wip = !G.opts.Import && matches(absCurrentDir, `/wip/|/wip$`)
+	G.Infrastructure = matches(absCurrentDir, `/mk/|/mk$`)
+	G.CurPkgsrcdir = findPkgsrcTopdir(G.CurrentDir)
+	if G.CurPkgsrcdir == "" {
+		NewLineWhole(fname).Errorf("Cannot determine the pkgsrc root directory for %q.", G.CurrentDir)
+		return
+	}
+
+	switch {
+	case isDir && isEmptyDir(fname):
+		return
+	case isReg:
+		Checkfile(fname)
+		return
+	}
+
+	switch G.CurPkgsrcdir {
+	case "../..":
+		checkdirPackage(relpath(G.globalData.Pkgsrcdir, G.CurrentDir))
+	case "..":
+		CheckdirCategory()
+	case ".":
+		CheckdirToplevel()
+	default:
+		NewLineWhole(fname).Errorf("Cannot check directories outside a pkgsrc tree.")
+	}
+}
 
 // Returns the pkgsrc top-level directory, relative to the given file or directory.
 func findPkgsrcTopdir(fname string) string {
@@ -51,23 +261,6 @@ func resolveVariableRefs(text string) string {
 		}
 		str = replaced
 	}
-}
-
-func expandVariableWithDefault(varname, defaultValue string) string {
-	mkline := G.Pkg.vardef[varname]
-	if mkline == nil {
-		return defaultValue
-	}
-
-	value := mkline.Value()
-	value = resolveVarsInRelativePath(value, true)
-	if containsVarRef(value) {
-		value = resolveVariableRefs(value)
-	}
-	if G.opts.Debug {
-		traceStep2("Expanded %q to %q", varname, value)
-	}
-	return value
 }
 
 func CheckfileExtra(fname string) {
@@ -277,7 +470,7 @@ func Checkfile(fname string) {
 		// Ok
 
 	case hasPrefix(basename, "CHANGES-"):
-		// This only checks the file, but doesn’t register the changes globally.
+		// This only checks the file, but doesn't register the changes globally.
 		G.globalData.loadDocChangesFromFile(fname)
 
 	case matches(fname, `(?:^|/)files/[^/]*$`):
@@ -303,137 +496,4 @@ func ChecklinesTrailingEmptyLines(lines []*Line) {
 	if last != max {
 		lines[last].Notef("Trailing empty lines.")
 	}
-}
-
-func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment string) {
-	i, n := 0, len(text)
-
-	for i < n && text[i] == ' ' {
-		i++
-	}
-
-	varnameStart := i
-	for ; i < n; i++ {
-		b := text[i]
-		switch {
-		case 'A' <= b && b <= 'Z',
-			'a' <= b && b <= 'z',
-			b == '_',
-			'0' <= b && b <= '9',
-			'$' <= b && b <= '.' && (b == '$' || b == '*' || b == '+' || b == '-' || b == '.'),
-			b == '[',
-			b == '{', b == '}':
-			continue
-		}
-		break
-	}
-	varnameEnd := i
-
-	if varnameEnd == varnameStart {
-		return
-	}
-
-	for i < n && (text[i] == ' ' || text[i] == '\t') {
-		i++
-	}
-
-	opStart := i
-	if i < n {
-		if b := text[i]; b == '!' || b == '+' || b == ':' || b == '?' {
-			i++
-		}
-	}
-	if i < n && text[i] == '=' {
-		i++
-	} else {
-		return
-	}
-	opEnd := i
-
-	if text[varnameEnd-1] == '+' && varnameEnd == opStart && text[opStart] == '=' {
-		varnameEnd--
-		opStart--
-	}
-
-	for i < n && (text[i] == ' ' || text[i] == '\t') {
-		i++
-	}
-
-	valueStart := i
-	valuebuf := make([]byte, n-valueStart)
-	j := 0
-	for ; i < n; i++ {
-		b := text[i]
-		if b == '#' && (i == valueStart || text[i-1] != '\\') {
-			break
-		} else if b != '\\' || i+1 >= n || text[i+1] != '#' {
-			valuebuf[j] = b
-			j++
-		}
-	}
-
-	commentStart := i
-	for text[i-1] == ' ' || text[i-1] == '\t' {
-		i--
-	}
-	valueEnd := i
-
-	commentEnd := n
-
-	m = true
-	varname = text[varnameStart:varnameEnd]
-	spaceAfterVarname = text[varnameEnd:opStart]
-	op = text[opStart:opEnd]
-	valueAlign = text[0:valueStart]
-	value = strings.TrimSpace(string(valuebuf[:j]))
-	spaceAfterValue = text[valueEnd:commentStart]
-	comment = text[commentStart:commentEnd]
-	return
-}
-
-type DependencyPattern struct {
-	pkgbase  string // "freeciv-client", "{gcc48,gcc48-libs}", "${EMACS_REQD}"
-	lowerOp  string // ">=", ">"
-	lower    string // "2.5.0", "${PYVER}"
-	upperOp  string // "<", "<="
-	upper    string // "3.0", "${PYVER}"
-	wildcard string // "[0-9]*", "1.5.*", "${PYVER}"
-}
-
-func resolveVarsInRelativePath(relpath string, adjustDepth bool) string {
-	tmp := relpath
-	tmp = strings.Replace(tmp, "${PKGSRCDIR}", G.CurPkgsrcdir, -1)
-	tmp = strings.Replace(tmp, "${.CURDIR}", ".", -1)
-	tmp = strings.Replace(tmp, "${.PARSEDIR}", ".", -1)
-	if contains(tmp, "${LUA_PKGSRCDIR}") {
-		tmp = strings.Replace(tmp, "${LUA_PKGSRCDIR}", G.globalData.Latest("lang", `^lua[0-9]+$`, "../../lang/$0"), -1)
-	}
-	if contains(tmp, "${PHPPKGSRCDIR}") {
-		tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", G.globalData.Latest("lang", `^php[0-9]+$`, "../../lang/$0"), -1)
-	}
-	if contains(tmp, "${SUSE_DIR_PREFIX}") {
-		suseDirPrefix := G.globalData.Latest("emulators", `^(suse[0-9]+)_base`, "$1")
-		tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", suseDirPrefix, -1)
-	}
-	if contains(tmp, "${PYPKGSRCDIR}") {
-		tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0"), -1)
-	}
-	if contains(tmp, "${PYPACKAGE}") {
-		tmp = strings.Replace(tmp, "${PYPACKAGE}", G.globalData.Latest("lang", `^python[0-9]+$`, "$0"), -1)
-	}
-	if G.Pkg != nil {
-		tmp = strings.Replace(tmp, "${FILESDIR}", G.Pkg.Filesdir, -1)
-		tmp = strings.Replace(tmp, "${PKGDIR}", G.Pkg.Pkgdir, -1)
-	}
-
-	if adjustDepth {
-		if m, pkgpath := match1(tmp, `^\.\./\.\./([^.].*)$`); m {
-			tmp = G.CurPkgsrcdir + "/" + pkgpath
-		}
-	}
-
-	if G.opts.Debug {
-		traceStep2("resolveVarsInRelativePath: %q => %q", relpath, tmp)
-	}
-	return tmp
 }

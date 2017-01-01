@@ -1,8 +1,16 @@
-package main
+package pkgver
 
 import (
 	check "gopkg.in/check.v1"
+	"testing"
 )
+
+type Suite struct{}
+
+func Test(t *testing.T) {
+	check.Suite(&Suite{})
+	check.TestingT(t)
+}
 
 func (s *Suite) Test_newVersion(c *check.C) {
 	c.Check(newVersion("5.0"), check.DeepEquals, &version{[]int{5, 0, 0}, 0})
@@ -13,9 +21,9 @@ func (s *Suite) Test_newVersion(c *check.C) {
 	c.Check(newVersion("20151110"), check.DeepEquals, &version{[]int{20151110}, 0})
 	c.Check(newVersion("0"), check.DeepEquals, &version{[]int{0}, 0})
 	c.Check(newVersion("nb1"), check.DeepEquals, &version{nil, 1})
-	c.Check(newVersion("1.0.1a"), deepEquals, &version{[]int{1, 0, 0, 0, 1, 1}, 0})
-	c.Check(newVersion("1.0.1z"), deepEquals, &version{[]int{1, 0, 0, 0, 1, 26}, 0})
-	c.Check(newVersion("0pre20160620"), deepEquals, &version{[]int{0, -1, 20160620}, 0})
+	c.Check(newVersion("1.0.1a"), check.DeepEquals, &version{[]int{1, 0, 0, 0, 1, 1}, 0})
+	c.Check(newVersion("1.0.1z"), check.DeepEquals, &version{[]int{1, 0, 0, 0, 1, 26}, 0})
+	c.Check(newVersion("0pre20160620"), check.DeepEquals, &version{[]int{0, -1, 20160620}, 0})
 }
 
 func (s *Suite) Test_pkgverCmp(c *check.C) {
@@ -46,15 +54,15 @@ func (s *Suite) Test_pkgverCmp(c *check.C) {
 		for _, iversion := range iversions {
 			for j, jversions := range versions {
 				for _, jversion := range jversions {
-					actual := pkgverCmp(iversion, jversion)
+					actual := Compare(iversion, jversion)
 					if i < j && !(actual < 0) {
-						c.Check([]interface{}{i, iversion, j, jversion, "<0"}, deepEquals, []interface{}{i, iversion, j, jversion, actual})
+						c.Check([]interface{}{i, iversion, j, jversion, "<0"}, check.DeepEquals, []interface{}{i, iversion, j, jversion, actual})
 					}
 					if i == j && !(actual == 0) {
-						c.Check([]interface{}{i, iversion, j, jversion, "==0"}, deepEquals, []interface{}{i, iversion, j, jversion, actual})
+						c.Check([]interface{}{i, iversion, j, jversion, "==0"}, check.DeepEquals, []interface{}{i, iversion, j, jversion, actual})
 					}
 					if i > j && !(actual > 0) {
-						c.Check([]interface{}{i, iversion, j, jversion, ">0"}, deepEquals, []interface{}{i, iversion, j, jversion, actual})
+						c.Check([]interface{}{i, iversion, j, jversion, ">0"}, check.DeepEquals, []interface{}{i, iversion, j, jversion, actual})
 					}
 				}
 			}

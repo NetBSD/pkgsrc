@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
-	lines, err := readLines(fname, joinContinuationLines)
+func LoadNonemptyLines(fname string, joinBackslashLines bool) []*Line {
+	lines, err := readLines(fname, joinBackslashLines)
 	if err != nil {
 		NewLineWhole(fname).Errorf("Cannot be read.")
 		return nil
@@ -19,8 +19,8 @@ func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 	return lines
 }
 
-func LoadExistingLines(fname string, foldBackslashLines bool) []*Line {
-	lines, err := readLines(fname, foldBackslashLines)
+func LoadExistingLines(fname string, joinBackslashLines bool) []*Line {
+	lines, err := readLines(fname, joinBackslashLines)
 	if err != nil {
 		NewLineWhole(fname).Fatalf("Cannot be read.")
 	}
@@ -101,16 +101,16 @@ func splitRawLine(textnl string) (leadingWhitespace, text, trailingWhitespace, c
 	return
 }
 
-func readLines(fname string, joinContinuationLines bool) ([]*Line, error) {
+func readLines(fname string, joinBackslashLines bool) ([]*Line, error) {
 	rawText, err := ioutil.ReadFile(fname)
 	if err != nil {
 		return nil, err
 	}
 
-	return convertToLogicalLines(fname, string(rawText), joinContinuationLines), nil
+	return convertToLogicalLines(fname, string(rawText), joinBackslashLines), nil
 }
 
-func convertToLogicalLines(fname string, rawText string, joinContinuationLines bool) []*Line {
+func convertToLogicalLines(fname string, rawText string, joinBackslashLines bool) []*Line {
 	var rawLines []*RawLine
 	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
@@ -119,7 +119,7 @@ func convertToLogicalLines(fname string, rawText string, joinContinuationLines b
 	}
 
 	var loglines []*Line
-	if joinContinuationLines {
+	if joinBackslashLines {
 		for lineno := 0; lineno < len(rawLines); {
 			loglines = append(loglines, getLogicalLine(fname, rawLines, &lineno))
 		}

@@ -512,7 +512,7 @@ func (s *plistLineSorter) Sort() {
 	firstLine := s.first.line
 	firstLine.RememberAutofix("Sorting the whole file.")
 	firstLine.logAutofix()
-	firstLine.changed = true // Otherwise the changes won’t be saved
+	firstLine.changed = true // Otherwise the changes won't be saved
 	lines := []*Line{firstLine}
 	lines = append(lines, s.after[s.first]...)
 	for _, pline := range s.plines {

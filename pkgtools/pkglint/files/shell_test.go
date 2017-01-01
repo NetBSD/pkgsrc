@@ -426,7 +426,7 @@ func (s *Suite) Test_ShellLine_checkCommandUse(c *check.C) {
 func (s *Suite) Test_splitIntoMkWords(c *check.C) {
 	url := "http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file="
 
-	words, rest := splitIntoShellTokens(dummyLine, url) // Doesn’t really make sense
+	words, rest := splitIntoShellTokens(dummyLine, url) // Doesn't really make sense
 
 	c.Check(words, check.DeepEquals, []string{"http://registry.gimp.org/file/fix-ca.c?action=download", "&", "id=9884", "&", "file="})
 	c.Check(rest, equals, "")

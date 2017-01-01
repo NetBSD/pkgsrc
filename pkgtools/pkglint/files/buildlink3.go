@@ -1,6 +1,7 @@
 package main
 
 import (
+	"netbsd.org/pkglint/pkgver"
 	"strings"
 )
 
@@ -139,7 +140,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			if doCheck {
 				if abi != nil && abi.lower != "" && !containsVarRef(abi.lower) {
 					if api != nil && api.lower != "" && !containsVarRef(api.lower) {
-						if pkgverCmp(abi.lower, api.lower) < 0 {
+						if pkgver.Compare(abi.lower, api.lower) < 0 {
 							abiLine.Warnf("ABI version %q should be at least API version %q (see %s).",
 								abi.lower, api.lower, apiLine.ReferenceFrom(abiLine))
 						}

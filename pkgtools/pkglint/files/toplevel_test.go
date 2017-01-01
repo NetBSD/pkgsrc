@@ -14,7 +14,7 @@ func (s *Suite) Test_CheckdirToplevel(c *check.C) {
 		"SUBDIR+=\tccc\n"+
 		"SUBDIR+=\tccc\n"+
 		"#SUBDIR+=\tignoreme\n"+
-		"SUBDIR+=\tnonexisting\n"+ // This just doesn’t happen in practice.
+		"SUBDIR+=\tnonexisting\n"+ // This doesn't happen in practice, therefore no warning.
 		"SUBDIR+=\tbbb\n")
 	s.CreateTmpFile("archivers/Makefile", "")
 	s.CreateTmpFile("bbb/Makefile", "")

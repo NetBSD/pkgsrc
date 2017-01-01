@@ -11,7 +11,7 @@ func (s *Suite) Test_CheckdirCategory_totally_broken(c *check.C) {
 		"# $\n"+
 		"SUBDIR+=pkg1\n"+
 		"SUBDIR+=\u0020aaaaa\n"+
-		"SUBDIR-=unknown #doesn’t work\n"+
+		"SUBDIR-=unknown #doesn\u2019t work\n"+
 		"\n"+
 		".include \"../mk/category.mk\"\n")
 

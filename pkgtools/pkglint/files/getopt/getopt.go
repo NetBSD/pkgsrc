@@ -1,4 +1,4 @@
-package main
+package getopt
 
 // Self-written getopt to support multi-argument options.
 
@@ -39,10 +39,10 @@ func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 		case arg == "--":
 			remainingArgs = append(remainingArgs, args[i+1:]...)
 			return
-		case hasPrefix(arg, "--"):
+		case strings.HasPrefix(arg, "--"):
 			skip, err = o.parseLongOption(args, i, arg[2:])
 			i += skip
-		case hasPrefix(arg, "-"):
+		case strings.HasPrefix(arg, "-"):
 			skip, err = o.parseShortOptions(args, i, arg[1:])
 			i += skip
 		default:
@@ -165,7 +165,11 @@ func (o *Options) Help(out io.Writer, generalUsage string) {
 			io.WriteString(wr, "    all\t all of the following\n")
 			io.WriteString(wr, "    none\t none of the following\n")
 			for _, flag := range flagGroup.flags {
-				fmt.Fprintf(wr, "    %s\t %s (%v)\n", flag.name, flag.help, ifelseStr(*flag.value, "enabled", "disabled"))
+				state := "disabled"
+				if *flag.value {
+					state = "enabled"
+				}
+				fmt.Fprintf(wr, "    %s\t %s (%v)\n", flag.name, flag.help, state)
 			}
 			wr.Flush()
 		}

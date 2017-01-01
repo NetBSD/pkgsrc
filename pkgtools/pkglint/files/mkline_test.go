@@ -414,7 +414,7 @@ func (s *Suite) Test_MkLine_CheckVarusePermissions__load_time(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "") // Don’t warn that “.CURDIR should not be evaluated at load time.”
+	c.Check(s.Output(), equals, "") // Don't warn that ".CURDIR should not be evaluated at load time."
 }
 
 func (s *Suite) Test_MkLine_WarnVaruseLocalbase(c *check.C) {
@@ -606,7 +606,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__URL_as_part_of_word_in_list(c 
 
 	G.Mk.mklines[1].Check()
 
-	c.Check(s.Output(), equals, "") // Don’t suggest to use ${HOMEPAGE:Q}.
+	c.Check(s.Output(), equals, "") // Don't suggest to use ${HOMEPAGE:Q}.
 }
 
 // Pkglint currently does not parse $$(subshell) commands very well. As
@@ -628,7 +628,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_subshell(c *check.C
 	G.Mk.mklines[1].Check()
 	G.Mk.mklines[2].Check()
 
-	c.Check(s.Output(), equals, "WARN: xpi.mk:2: Invoking subshells via $(...) is not portable enough.\n") // Don’t suggest to use ${AWK:Q}.
+	c.Check(s.Output(), equals, "WARN: xpi.mk:2: Invoking subshells via $(...) is not portable enough.\n") // Don't suggest to use ${AWK:Q}.
 }
 
 // LDFLAGS (and even more so CPPFLAGS and CFLAGS) may contain special
@@ -682,7 +682,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_quotes_in_subshell_in_
 
 	G.Mk.mklines[1].Check()
 
-	c.Check(s.Output(), equals, "") // Don’t suggest ${ECHO:Q} here.
+	c.Check(s.Output(), equals, "") // Don't suggest ${ECHO:Q} here.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__LDADD_in_BUILDLINK_TRANSFORM(c *check.C) {
@@ -707,7 +707,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_command_in_message(c *check.C) 
 
 	G.Mk.mklines[0].Check()
 
-	c.Check(s.Output(), equals, "") // Don’t suggest ${REPLACE_PERL:Q}.
+	c.Check(s.Output(), equals, "") // Don't suggest ${REPLACE_PERL:Q}.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting_guessed_list_variable_in_quotes(c *check.C) {
@@ -734,7 +734,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_list_in_list(c *check.C) {
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, "") // Don’t warn about missing :Q operators.
+	c.Check(s.Output(), equals, "") // Don't warn about missing :Q modifiers.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting_PKGNAME_and_URL_list_in_URL_list(c *check.C) {
@@ -748,7 +748,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting_PKGNAME_and_URL_list_in_URL_lis
 
 	G.Mk.mklines[1].checkVarassignVaruse()
 
-	c.Check(s.Output(), equals, "") // Don’t warn about missing :Q operators.
+	c.Check(s.Output(), equals, "") // Don't warn about missing :Q modifiers.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting_tool_in_CONFIGURE_ENV(c *check.C) {
@@ -779,7 +779,7 @@ func (s *Suite) Test_MkLine_Varuse_Modifier_L(c *check.C) {
 
 	G.Mk.mklines[0].Check()
 
-	c.Check(s.Output(), equals, "") // Don’t warn that ${XKBBASE}/xkbcomp is used but not defined.
+	c.Check(s.Output(), equals, "") // Don't warn that ${XKBBASE}/xkbcomp is used but not defined.
 }
 
 func (s *Suite) Test_MkLine_CheckCond_comparison_with_shell_command(c *check.C) {
@@ -793,7 +793,7 @@ func (s *Suite) Test_MkLine_CheckCond_comparison_with_shell_command(c *check.C) 
 
 	G.Mk.Check()
 
-	// Don’t warn about unknown shell command "cc".
+	// Don't warn about unknown shell command "cc".
 	c.Check(s.Output(), equals, "WARN: security/openssl/Makefile:2: Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.\n")
 }
 
@@ -922,6 +922,41 @@ func (s *Suite) Test_MkLine__comment_in_comment(c *check.C) {
 	mklines.Check()
 
 	c.Check(s.Output(), equals, "WARN: Makefile:2: The # character starts a comment.\n")
+}
+
+func (s *Suite) Test_MatchVarassign(c *check.C) {
+	checkVarassign := func(text string, ck check.Checker, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string) {
+		type va struct {
+			varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string
+		}
+		expected := va{varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment}
+		am, avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment := MatchVarassign(text)
+		if !am {
+			c.Errorf("Text %q doesn't match variable assignment", text)
+			return
+		}
+		actual := va{avarname, aspaceAfterVarname, aop, aalign, avalue, aspaceAfterValue, acomment}
+		c.Check(actual, ck, expected)
+	}
+	checkNotVarassign := func(text string) {
+		m, _, _, _, _, _, _, _ := MatchVarassign(text)
+		if m {
+			c.Errorf("Text %q matches variable assignment, but shouldn't.", text)
+		}
+	}
+
+	checkVarassign("C++=c11", equals, "C+", "", "+=", "C++=", "c11", "", "")
+	checkVarassign("V=v", equals, "V", "", "=", "V=", "v", "", "")
+	checkVarassign("VAR=#comment", equals, "VAR", "", "=", "VAR=", "", "", "#comment")
+	checkVarassign("VAR=\\#comment", equals, "VAR", "", "=", "VAR=", "#comment", "", "")
+	checkVarassign("VAR=\\\\\\##comment", equals, "VAR", "", "=", "VAR=", "\\\\#", "", "#comment")
+	checkVarassign("VAR=\\", equals, "VAR", "", "=", "VAR=", "\\", "", "")
+	checkVarassign("VAR += value", equals, "VAR", " ", "+=", "VAR += ", "value", "", "")
+	checkVarassign(" VAR=value", equals, "VAR", "", "=", " VAR=", "value", "", "")
+	checkVarassign("VAR=value #comment", equals, "VAR", "", "=", "VAR=", "value", " ", "#comment")
+	checkNotVarassign("\tVAR=value")
+	checkNotVarassign("?=value")
+	checkNotVarassign("<=value")
 }
 
 func (s *Suite) Test_Indentation(c *check.C) {
