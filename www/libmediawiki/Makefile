@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2016/10/07 18:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/01 16:06:01 adam Exp $
 #
 
 PKGNAME=	libmediawiki-4.13.0
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	digikam-4.13.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}

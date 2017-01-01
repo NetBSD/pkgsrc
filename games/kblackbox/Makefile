@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2016/10/07 18:25:47 adam Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/01 16:06:13 adam Exp $
 
 DISTNAME=	kblackbox-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 COMMENT=	Find the balls hidden in the black box by shooting laser beams
 
