@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.22 2016/05/13 20:47:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/01/01 15:32:47 adam Exp $
+share/boost-build/__init__.py
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
 share/boost-build/build/__init__.py
@@ -16,7 +17,6 @@ share/boost-build/build/feature.jam
 share/boost-build/build/feature.py
 share/boost-build/build/generators.jam
 share/boost-build/build/generators.py
-share/boost-build/build/project.ann.py
 share/boost-build/build/project.jam
 share/boost-build/build/project.py
 share/boost-build/build/property-set.jam
@@ -88,6 +88,7 @@ share/boost-build/tools/doxygen-config.jam
 share/boost-build/tools/doxygen.jam
 share/boost-build/tools/doxygen/windows-paths-check.doxyfile
 share/boost-build/tools/doxygen/windows-paths-check.hpp
+share/boost-build/tools/emscripten.jam
 share/boost-build/tools/fop.jam
 share/boost-build/tools/fortran.jam
 share/boost-build/tools/gcc.jam
