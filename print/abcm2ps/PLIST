@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2016/09/30 12:48:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/01/01 13:51:25 wiz Exp $
 bin/abcm2ps
+share/abcm2ps/abc2svg.ttf
 share/abcm2ps/flute.fmt
 share/abcm2ps/landscape.fmt
 share/abcm2ps/musicfont.fmt
