@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libtremor_Makefile.in,v 1.1 2014/03/30 04:13:17 ryoon Exp $
+$NetBSD: patch-mozilla_media_libtremor_Makefile.in,v 1.2 2017/01/01 16:14:08 ryoon Exp $
 
---- mozilla/media/libtremor/Makefile.in.orig	2014-03-29 04:22:17.000000000 +0000
+--- mozilla/media/libtremor/Makefile.in.orig	2017-01-01 10:19:05.138856916 +0000
 +++ mozilla/media/libtremor/Makefile.in
 @@ -0,0 +1,9 @@
 +# This Source Code Form is subject to the terms of the Mozilla Public
@@ -9,6 +9,6 @@ $NetBSD: patch-mozilla_media_libtremor_Makefile.in,v 1.1 2014/03/30 04:13:17 ryo
 +
 +include $(topsrcdir)/config/rules.mk
 +
-+ifdef MOZ_NATIVE_OGG
++ifdef MOZ_SYSTEM_OGG
 +CFLAGS += $(MOZ_OGG_CFLAGS)
 +endif
