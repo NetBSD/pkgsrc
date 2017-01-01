@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2016/01/07 15:34:33 jperkin Exp $
+$NetBSD: patch-strip_non_asm_libtool_args.sh,v 1.1 2017/01/01 11:52:36 adam Exp $
 
 Support -kPIC and simplify.
 
