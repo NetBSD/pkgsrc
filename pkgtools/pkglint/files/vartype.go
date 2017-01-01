@@ -111,7 +111,7 @@ func (vt *Vartype) IsConsideredList() bool {
 		return false
 	}
 	switch vt.basicType {
-	case BtAwkCommand, BtSedCommands, BtShellCommand, BtShellCommands, BtLicense:
+	case BtAwkCommand, BtSedCommands, BtShellCommand, BtShellCommands, BtLicense, BtConfFiles:
 		return true
 	}
 	return false
@@ -213,6 +213,7 @@ var (
 	BtCategory               = &BasicType{"Category", (*VartypeCheck).Category}
 	BtCFlag                  = &BasicType{"CFlag", (*VartypeCheck).CFlag}
 	BtComment                = &BasicType{"Comment", (*VartypeCheck).Comment}
+	BtConfFiles              = &BasicType{"ConfFiles", (*VartypeCheck).ConfFiles}
 	BtDependency             = &BasicType{"Dependency", (*VartypeCheck).Dependency}
 	BtDependencyWithPath     = &BasicType{"DependencyWithPath", (*VartypeCheck).DependencyWithPath}
 	BtDistSuffix             = &BasicType{"DistSuffix", (*VartypeCheck).DistSuffix}

@@ -82,6 +82,18 @@ func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 		"WARN: fname:6: COMMENT should not be enclosed in quotes.\n")
 }
 
+func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
+	runVartypeChecks("CONF_FILES", opAssignAppend, (*VartypeCheck).ConfFiles,
+		"single/file",
+		"share/etc/config etc/config",
+		"share/etc/config etc/config file",
+		"share/etc/config etc/config share/etc/config2 etc/config2")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:1: Values for CONF_FILES should always be pairs of paths.\n"+
+		"WARN: fname:3: Values for CONF_FILES should always be pairs of paths.\n")
+}
+
 func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 	runVartypeChecks("CONFLICTS", opAssignAppend, (*VartypeCheck).Dependency,
 		"Perl",
