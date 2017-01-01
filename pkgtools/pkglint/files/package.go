@@ -2,11 +2,14 @@ package main
 
 import (
 	"fmt"
+	"netbsd.org/pkglint/pkgver"
 	"path"
 	"regexp"
 	"strconv"
 	"strings"
 )
+
+const rePkgname = `^([\w\-.+]+)-(\d(?:\w|\.\d)*)$`
 
 // Package contains data for the pkgsrc package that is currently checked.
 type Package struct {
@@ -104,7 +107,7 @@ func (pkg *Package) checkPossibleDowngrade() {
 
 	if change.Action == "Updated" {
 		changeVersion := regcomp(`nb\d+$`).ReplaceAllString(change.Version, "")
-		if pkgverCmp(pkgversion, changeVersion) < 0 {
+		if pkgver.Compare(pkgversion, changeVersion) < 0 {
 			mkline.Line.Warnf("The package is being downgraded from %s (see %s) to %s", change.Version, change.Line.ReferenceFrom(mkline.Line), pkgversion)
 			Explain(
 				"The files in doc/CHANGES-*, in which all version changes are",
@@ -233,10 +236,10 @@ func (pkg *Package) loadPackageMakefile(fname string) *MkLines {
 
 	allLines.DetermineUsedVariables()
 
-	pkg.Pkgdir = expandVariableWithDefault("PKGDIR", ".")
-	pkg.DistinfoFile = expandVariableWithDefault("DISTINFO_FILE", "distinfo")
-	pkg.Filesdir = expandVariableWithDefault("FILESDIR", "files")
-	pkg.Patchdir = expandVariableWithDefault("PATCHDIR", "patches")
+	pkg.Pkgdir = pkg.expandVariableWithDefault("PKGDIR", ".")
+	pkg.DistinfoFile = pkg.expandVariableWithDefault("DISTINFO_FILE", "distinfo")
+	pkg.Filesdir = pkg.expandVariableWithDefault("FILESDIR", "files")
+	pkg.Patchdir = pkg.expandVariableWithDefault("PATCHDIR", "patches")
 
 	if varIsDefined("PHPEXT_MK") {
 		if !varIsDefined("USE_PHP_EXT_PATCHES") {
@@ -283,7 +286,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 		var includeFile, incDir, incBase string
 		if mkline.IsInclude() {
 			inc := mkline.Includefile()
-			includeFile = resolveVariableRefs(resolveVarsInRelativePath(inc, true))
+			includeFile = resolveVariableRefs(mkline.resolveVarsInRelativePath(inc, true))
 			if containsVarRef(includeFile) {
 				if !contains(fname, "/mk/") {
 					line.Notef("Skipping include file %q. This may result in false warnings.", includeFile)
@@ -326,7 +329,7 @@ func (pkg *Package) readMakefile(fname string, mainLines *MkLines, allLines *MkL
 
 				// Only look in the directory relative to the
 				// current file and in the current working directory.
-				// Pkglint doesn’t have an include dir list, like make(1) does.
+				// Pkglint doesn't have an include dir list, like make(1) does.
 				if !fileExists(dirname + "/" + includeFile) {
 					if dirname != G.CurrentDir { // Prevent unnecessary syscalls
 						dirname = G.CurrentDir
@@ -530,6 +533,23 @@ func (pkg *Package) pkgnameFromDistname(pkgname, distname string) string {
 	return result
 }
 
+func (pkg *Package) expandVariableWithDefault(varname, defaultValue string) string {
+	mkline := G.Pkg.vardef[varname]
+	if mkline == nil {
+		return defaultValue
+	}
+
+	value := mkline.Value()
+	value = mkline.resolveVarsInRelativePath(value, true)
+	if containsVarRef(value) {
+		value = resolveVariableRefs(value)
+	}
+	if G.opts.Debug {
+		traceStep2("Expanded %q to %q", varname, value)
+	}
+	return value
+}
+
 func (pkg *Package) checkUpdate() {
 	if pkg.EffectivePkgbase != "" {
 		for _, sugg := range G.globalData.GetSuggestedPackageUpdates() {
@@ -543,7 +563,7 @@ func (pkg *Package) checkUpdate() {
 			}
 
 			pkgnameLine := pkg.EffectivePkgnameLine
-			cmp := pkgverCmp(pkg.EffectivePkgversion, suggver)
+			cmp := pkgver.Compare(pkg.EffectivePkgversion, suggver)
 			switch {
 			case cmp < 0:
 				pkgnameLine.Warnf("This package should be updated to %s%s.", sugg.Version, comment)

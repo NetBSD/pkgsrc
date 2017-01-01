@@ -288,7 +288,7 @@ func guessFileType(line *Line, fname string) (fileType FileType) {
 	}
 
 	basename := path.Base(fname)
-	basename = strings.TrimSuffix(basename, ".in") // doesn’t influence the content type
+	basename = strings.TrimSuffix(basename, ".in") // doesn't influence the content type
 	ext := strings.ToLower(strings.TrimLeft(path.Ext(basename), "."))
 
 	switch {
