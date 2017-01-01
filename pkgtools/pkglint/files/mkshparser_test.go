@@ -263,7 +263,7 @@ func (s *ShSuite) Test_ShellParser_for_clause(c *check.C) {
 			b.Words("in", "esac"),
 			b.List().AddCommand(b.SimpleCommand("echo", "$var")).AddSemicolon())))
 
-	// No semicolon necessary between the two “done”.
+	// No semicolon necessary between the two "done".
 	s.test("for i in 1; do for j in 1; do echo $$i$$j; done done",
 		b.List().AddCommand(b.For(
 			"i",
@@ -323,7 +323,7 @@ func (s *ShSuite) Test_ShellParser_if_clause(c *check.C) {
 			b.List().AddCommand(b.SimpleCommand("echo", "yes")).AddSemicolon(),
 			b.List().AddCommand(b.SimpleCommand("echo", "no")).AddSemicolon())))
 
-	// No semicolon necessary between the two “fi”.
+	// No semicolon necessary between the two "fi".
 	s.test("if cond1; then if cond2; then action; fi fi",
 		b.List().AddCommand(b.If(
 			b.List().AddCommand(b.SimpleCommand("cond1")).AddSemicolon(),

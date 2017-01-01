@@ -119,7 +119,7 @@ func (lc *LicenseChecker) checkNode(cond *LicenseCondition) {
 	var licenseFile string
 	if G.Pkg != nil {
 		if licenseFileValue, ok := G.Pkg.varValue("LICENSE_FILE"); ok {
-			licenseFile = G.CurrentDir + "/" + resolveVarsInRelativePath(licenseFileValue, false)
+			licenseFile = G.CurrentDir + "/" + lc.MkLine.resolveVarsInRelativePath(licenseFileValue, false)
 		}
 	}
 	if licenseFile == "" {

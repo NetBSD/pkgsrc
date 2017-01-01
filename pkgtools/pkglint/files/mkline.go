@@ -216,7 +216,7 @@ func (mkline *MkLine) checkInclude() {
 	includefile := mkline.Includefile()
 	mustExist := mkline.MustExist()
 	if G.opts.Debug {
-		traceStep1("includefile=%s", includefile)
+		traceStep2("includingFile=%s includefile=%s", mkline.Fname, includefile)
 	}
 	mkline.CheckRelativePath(includefile, mustExist)
 
@@ -1106,6 +1106,44 @@ func (mkline *MkLine) withoutMakeVariables(value string) string {
 	}
 }
 
+func (mkline *MkLine) resolveVarsInRelativePath(relpath string, adjustDepth bool) string {
+	tmp := relpath
+	tmp = strings.Replace(tmp, "${PKGSRCDIR}", G.CurPkgsrcdir, -1)
+	tmp = strings.Replace(tmp, "${.CURDIR}", ".", -1)
+	tmp = strings.Replace(tmp, "${.PARSEDIR}", ".", -1)
+	if contains(tmp, "${LUA_PKGSRCDIR}") {
+		tmp = strings.Replace(tmp, "${LUA_PKGSRCDIR}", G.globalData.Latest("lang", `^lua[0-9]+$`, "../../lang/$0"), -1)
+	}
+	if contains(tmp, "${PHPPKGSRCDIR}") {
+		tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", G.globalData.Latest("lang", `^php[0-9]+$`, "../../lang/$0"), -1)
+	}
+	if contains(tmp, "${SUSE_DIR_PREFIX}") {
+		suseDirPrefix := G.globalData.Latest("emulators", `^(suse[0-9]+)_base`, "$1")
+		tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", suseDirPrefix, -1)
+	}
+	if contains(tmp, "${PYPKGSRCDIR}") {
+		tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0"), -1)
+	}
+	if contains(tmp, "${PYPACKAGE}") {
+		tmp = strings.Replace(tmp, "${PYPACKAGE}", G.globalData.Latest("lang", `^python[0-9]+$`, "$0"), -1)
+	}
+	if G.Pkg != nil {
+		tmp = strings.Replace(tmp, "${FILESDIR}", G.Pkg.Filesdir, -1)
+		tmp = strings.Replace(tmp, "${PKGDIR}", G.Pkg.Pkgdir, -1)
+	}
+
+	if adjustDepth {
+		if m, pkgpath := match1(tmp, `^\.\./\.\./([^.].*)$`); m {
+			tmp = G.CurPkgsrcdir + "/" + pkgpath
+		}
+	}
+
+	if G.opts.Debug {
+		traceStep2("resolveVarsInRelativePath: %q => %q", relpath, tmp)
+	}
+	return tmp
+}
+
 func (mkline *MkLine) checkText(text string) {
 	if G.opts.Debug {
 		defer tracecall1(text)()
@@ -1262,8 +1300,12 @@ func (mkline *MkLine) explainRelativeDirs() {
 }
 
 func (mkline *MkLine) CheckRelativePkgdir(pkgdir string) {
+	if G.opts.Debug {
+		defer tracecall1(pkgdir)()
+	}
+
 	mkline.CheckRelativePath(pkgdir, true)
-	pkgdir = resolveVarsInRelativePath(pkgdir, false)
+	pkgdir = mkline.resolveVarsInRelativePath(pkgdir, false)
 
 	if m, otherpkgpath := match1(pkgdir, `^(?:\./)?\.\./\.\./([^/]+/[^/]+)$`); m {
 		if !fileExists(G.globalData.Pkgsrcdir + "/" + otherpkgpath + "/Makefile") {
@@ -1280,11 +1322,15 @@ func (mkline *MkLine) CheckRelativePkgdir(pkgdir string) {
 }
 
 func (mkline *MkLine) CheckRelativePath(path string, mustExist bool) {
+	if G.opts.Debug {
+		defer tracecall(path, mustExist)()
+	}
+
 	if !G.Wip && contains(path, "/wip/") {
 		mkline.Line.Errorf("A main pkgsrc package must not depend on a pkgsrc-wip package.")
 	}
 
-	resolvedPath := resolveVarsInRelativePath(path, true)
+	resolvedPath := mkline.resolveVarsInRelativePath(path, true)
 	if containsVarRef(resolvedPath) {
 		return
 	}
@@ -1621,7 +1667,7 @@ func (mkline *MkLine) determineUsedVariables() (varnames []string) {
 // VarUseContext defines the context in which a variable is defined
 // or used. Whether that is allowed depends on:
 //
-// * The variable’s data type, as defined in vardefs.go.
+// * The variable's data type, as defined in vardefs.go.
 // * When used on the right-hand side of an assigment, the variable can
 //   represent a list of words, a single word or even only part of a
 //   word. This distinction decides upon the correct use of the :Q
@@ -1629,7 +1675,7 @@ func (mkline *MkLine) determineUsedVariables() (varnames []string) {
 // * When used in preprocessing statements like .if or .for, the other
 //   operands of that statement should fit to the variable and are
 //   checked against the variable type. For example, comparing OPSYS to
-//   x86_64 doesn’t make sense.
+//   x86_64 doesn't make sense.
 type VarUseContext struct {
 	vartype    *Vartype
 	time       vucTime
@@ -1649,7 +1695,7 @@ const (
 	vucTimeParse
 
 	// All files have been read, all variables can be referenced.
-	// Variable values don’t change anymore.
+	// Variable values don't change anymore.
 	vucTimeRun
 )
 
@@ -1754,6 +1800,92 @@ func (ind *Indentation) Varnames() string {
 		}
 	}
 	return varnames
+}
+
+func MatchVarassign(text string) (m bool, varname, spaceAfterVarname, op, valueAlign, value, spaceAfterValue, comment string) {
+	i, n := 0, len(text)
+
+	for i < n && text[i] == ' ' {
+		i++
+	}
+
+	varnameStart := i
+	for ; i < n; i++ {
+		b := text[i]
+		switch {
+		case 'A' <= b && b <= 'Z',
+			'a' <= b && b <= 'z',
+			b == '_',
+			'0' <= b && b <= '9',
+			'$' <= b && b <= '.' && (b == '$' || b == '*' || b == '+' || b == '-' || b == '.'),
+			b == '[',
+			b == '{', b == '}':
+			continue
+		}
+		break
+	}
+	varnameEnd := i
+
+	if varnameEnd == varnameStart {
+		return
+	}
+
+	for i < n && (text[i] == ' ' || text[i] == '\t') {
+		i++
+	}
+
+	opStart := i
+	if i < n {
+		if b := text[i]; b == '!' || b == '+' || b == ':' || b == '?' {
+			i++
+		}
+	}
+	if i < n && text[i] == '=' {
+		i++
+	} else {
+		return
+	}
+	opEnd := i
+
+	if text[varnameEnd-1] == '+' && varnameEnd == opStart && text[opStart] == '=' {
+		varnameEnd--
+		opStart--
+	}
+
+	for i < n && (text[i] == ' ' || text[i] == '\t') {
+		i++
+	}
+
+	valueStart := i
+	valuebuf := make([]byte, n-valueStart)
+	j := 0
+	for ; i < n; i++ {
+		b := text[i]
+		if b == '#' && (i == valueStart || text[i-1] != '\\') {
+			break
+		} else if b != '\\' || i+1 >= n || text[i+1] != '#' {
+			valuebuf[j] = b
+			j++
+		}
+	}
+
+	commentStart := i
+	for text[i-1] == ' ' || text[i-1] == '\t' {
+		i--
+	}
+	valueEnd := i
+
+	commentEnd := n
+
+	m = true
+	varname = text[varnameStart:varnameEnd]
+	spaceAfterVarname = text[varnameEnd:opStart]
+	op = text[opStart:opEnd]
+	valueAlign = text[0:valueStart]
+	value = strings.TrimSpace(string(valuebuf[:j]))
+	spaceAfterValue = text[valueEnd:commentStart]
+	comment = text[commentStart:commentEnd]
+	return
 }
 
 func MatchMkInclude(text string) (m bool, indentation, directive, filename string) {
