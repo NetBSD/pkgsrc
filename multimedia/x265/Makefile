@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2016/10/10 17:13:42 adam Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/01 16:31:44 adam Exp $
 
-DISTNAME=	x265_2.1
+DISTNAME=	x265_2.2
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://bitbucket.org/multicoreware/x265/downloads/ \
 		http://download.videolan.org/videolan/x265/
-
-# IMPORTANT: remove on the next update
-DIST_SUBDIR=	x265
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.x265.org/
