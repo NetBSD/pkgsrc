@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/07/09 13:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/01 14:43:45 wiz Exp $
 
 DISTNAME=		archivemail-0.9.0
 PKGREVISION=		1
@@ -14,7 +14,7 @@ USE_LANGUAGES=		# none
 
 INSTALLATION_DIRS=	share/archivemail
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.9.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.9.0
 
 post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} \

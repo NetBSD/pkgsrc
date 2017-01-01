@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 13:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:40 wiz Exp $
 
 DISTNAME=		jools-0.20
 PKGREVISION=		4
@@ -12,7 +12,7 @@ COMMENT=		Bejeweled clone
 
 DEPENDS+=		${PYPKGPREFIX}-game>=1.4:../../devel/py-game
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.20
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.20
 REPLACE_PYTHON=		jools/__init__.py
 
 post-install:

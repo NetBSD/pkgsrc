@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/07/09 13:03:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/01 14:43:49 wiz Exp $
 
 VERSION=	3.4.11
 DISTNAME=	${VERSION}
@@ -36,7 +36,7 @@ REPLACE_PYTHON+=	lib/exabgp/netlink/old.py
 REPLACE_PYTHON+=	lib/exabgp/netlink/route.py
 REPLACE_PYTHON+=	lib/exabgp/reactor/api/encoding.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 3.2.19
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 3.2.19
 
 USE_LANGUAGES=  # none
 

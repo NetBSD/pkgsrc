@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 13:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/01 14:44:04 wiz Exp $
 
 DISTNAME=	graphite-web-0.9.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -61,7 +61,7 @@ CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example	\
 
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
 			--install-lib=${PREFIX}/${PYSITELIB}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-django-tagging
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-django-tagging
 
 INSTALLATION_DIRS+=	share/examples/graphite
 

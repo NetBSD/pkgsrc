@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/03 10:22:24 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/01 14:44:08 wiz Exp $
 
 PKGREVISION= 1
 .include "../../x11/keybinder/Makefile.common"
@@ -14,7 +14,7 @@ CONFIGURE_ARGS+=	--disable-lua
 CONFIGURE_ARGS+=	--enable-python
 
 PY_PATCHPLIST=			yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 INSTALL_DIRS=	python-keybinder
 

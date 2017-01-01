@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 13:04:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/01 14:43:52 wiz Exp $
 
 DISTNAME=	python-txamqp_0.3.orig
 PKGNAME=	${PYPKGPREFIX}-txamqp-0.3
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 
 WRKSRC=		${WRKDIR}/python-txamqp-0.3
 EGG_NAME=	txAMQP-${PKGVERSION_NOREV}
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

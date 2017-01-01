@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/01 14:43:33 wiz Exp $
 
 DISTNAME=	hgview-1.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 REPLACE_PYTHON= *.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.8.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.8.0
 
 USE_TOOLS+=	gmake
 
