@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.43 2017/01/01 16:42:30 rillig Exp $
+$NetBSD: CHANGES-2017,v 1.44 2017/01/01 21:50:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -49,3 +49,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/seamonkey-l10n to 2.46 [ryoon 2017-01-01]
 	Updated multimedia/x265 to 2.2 [adam 2017-01-01]
 	Updated pkgtools/pkglint to 5.4.15 [rillig 2017-01-01]
+	Updated security/py-tlslite to 0.4.8 [schmonz 2017-01-01]
