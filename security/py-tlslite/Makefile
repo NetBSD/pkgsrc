@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 21:50:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/01 22:01:45 schmonz Exp $
 
-DISTNAME=	tlslite-0.4.8
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_GITHUB:=trevp/}
+DISTNAME=		tlslite-0.4.8
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=		security python
+MASTER_SITES=		${MASTER_SITE_GITHUB:=trevp/}
 
-GITHUB_PROJECT=	tlslite
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_PROJECT=		tlslite
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://trevp.net/tlslite/
-COMMENT=	SSL 3.0, TLS 1.0, and TLS 1.1 in Python
-LICENSE=	public-domain
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://trevp.net/tlslite/
+COMMENT=		SSL 3.0, TLS 1.0, and TLS 1.1 in Python
+LICENSE=		public-domain
 
-USE_LANGUAGES=	# none
+USE_LANGUAGES=		# none
 
 post-extract:
 	mv ${WRKSRC}/scripts/tls.py ${WRKSRC}/scripts/tls${PYVERSSUFFIX}.py
