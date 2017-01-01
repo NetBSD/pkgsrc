@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.73 2016/12/12 12:28:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.74 2017/01/01 16:00:03 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1116,6 +1116,7 @@ lib/calibre/calibre/gui2/viewer/bookmarkmanager.py
 lib/calibre/calibre/gui2/viewer/config.py
 lib/calibre/calibre/gui2/viewer/config_ui.py
 lib/calibre/calibre/gui2/viewer/documentview.py
+lib/calibre/calibre/gui2/viewer/fake_net.py
 lib/calibre/calibre/gui2/viewer/flip.py
 lib/calibre/calibre/gui2/viewer/footnote.py
 lib/calibre/calibre/gui2/viewer/gestures.py
@@ -2241,7 +2242,6 @@ share/calibre/recipes/el_tiempo.recipe
 share/calibre/recipes/el_universal.recipe
 share/calibre/recipes/elclubdelebook.recipe
 share/calibre/recipes/elcomercio.recipe
-share/calibre/recipes/elcronista.recipe
 share/calibre/recipes/ele.recipe
 share/calibre/recipes/elektroda_pl.recipe
 share/calibre/recipes/elet_es_irodalom.recipe
@@ -2493,7 +2493,6 @@ share/calibre/recipes/ideal_jaen.recipe
 share/calibre/recipes/idg_now.recipe
 share/calibre/recipes/idg_se.recipe
 share/calibre/recipes/idnes.recipe
-share/calibre/recipes/ieco.recipe
 share/calibre/recipes/ieeespectrum.recipe
 share/calibre/recipes/iekspries.recipe
 share/calibre/recipes/ifzm.recipe
@@ -2641,7 +2640,6 @@ share/calibre/recipes/la_stampa.recipe
 share/calibre/recipes/la_tercera.recipe
 share/calibre/recipes/la_tribuna.recipe
 share/calibre/recipes/la_voce.recipe
-share/calibre/recipes/lacapital.recipe
 share/calibre/recipes/lalibre_be.recipe
 share/calibre/recipes/lamebook.recipe
 share/calibre/recipes/lameuse_be.recipe
