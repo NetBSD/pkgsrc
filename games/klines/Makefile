@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2016/10/07 18:25:48 adam Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/01 16:06:14 adam Exp $
 
 DISTNAME=	klines-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 COMMENT=	inspired by well known game of Color Lines
 

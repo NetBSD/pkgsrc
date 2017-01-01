@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2016/10/20 14:39:51 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2017/01/01 16:05:57 adam Exp $
 #
 # This Makefile fragment is included by packages that use rudiments.
 #
@@ -11,7 +11,7 @@ BUILDLINK_TREE+=	rudiments
 RUDIMENTS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rudiments+=	rudiments>=0.56
-BUILDLINK_ABI_DEPENDS.rudiments+=	rudiments>=0.56.0
+BUILDLINK_ABI_DEPENDS.rudiments+=	rudiments>=0.56.0nb1
 BUILDLINK_PKGSRCDIR.rudiments?=		../../devel/rudiments
 
 .include "../../devel/pcre/buildlink3.mk"
