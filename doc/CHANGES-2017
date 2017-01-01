@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.21 2017/01/01 14:06:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.22 2017/01/01 14:07:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -21,3 +21,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-DB_File to 1.840 [wiz 2017-01-01]
 	Updated net/p5-Net-DNS to 1.07 [wiz 2017-01-01]
 	Updated databases/p5-DBD-SQLite to 1.54 [wiz 2017-01-01]
+	Updated devel/p5-Test-Simple to 1.302073 [wiz 2017-01-01]
