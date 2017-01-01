@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.11 2017/01/01 09:15:17 mef Exp $
+$NetBSD: CHANGES-2017,v 1.12 2017/01/01 10:40:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -10,3 +10,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/aria2 to 1.30.0 [ryoon 2017-01-01]
 	Updated audio/chromaprint to 1.4.2 [mef 2017-01-01]
 	Updated cad/klayout to 0.24.9 [mef 2017-01-01]
+	Updated textproc/xapian to 1.4.2 [schmonz 2017-01-01]
