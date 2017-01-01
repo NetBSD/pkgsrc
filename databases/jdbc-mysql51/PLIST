@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/01 17:16:39 spz Exp $
+lib/java/${DISTNAME}-bin.jar
+share/doc/jdbc-mysql/connector-j.html
+share/doc/jdbc-mysql/README
+share/doc/jdbc-mysql/README.txt
