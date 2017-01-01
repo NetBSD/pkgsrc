@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2016/11/24 11:35:23 maya Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/01/01 16:38:24 rillig Exp $
 # used by www/nginx/Makefile
 # used by www/nginx-devel/Makefile
 
@@ -60,8 +60,7 @@ EGFILES+=		fastcgi.conf fastcgi_params koi-utf koi-win \
 .for file in ${EGFILES}
 CONF_FILES+=	${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
 .	if !empty(PKG_OPTIONS:Mnaxsi)
-CONF_FILES+=	${EGDIR}/conf/naxsi_core.rules
-CONF_FILES+=	${PKG_SYSCONFDIR}/naxsi_core.rules
+CONF_FILES+=	${EGDIR}/conf/naxsi_core.rules ${PKG_SYSCONFDIR}/naxsi_core.rules
 .	endif
 .endfor
 
