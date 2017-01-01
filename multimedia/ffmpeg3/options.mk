@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2016/11/03 21:25:55 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2017/01/01 22:36:34 leot Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
 PKG_SUPPORTED_OPTIONS=	ass doc ebur128 fdk-aac fontconfig freetype \
-			gnutls lame libvpx opencore-amr openssl theora vorbis \
-			x264 x265 xcb xvid
+			gnutls lame libvpx opencore-amr openssl opus theora \
+			vorbis x264 x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
 			theora vorbis x264 xvid
 
@@ -133,6 +133,12 @@ CONFIGURE_ARGS+=	--enable-libvorbis
 BUILDLINK_ABI_DEPENDS.lame+= lame>=3.98.2nb1
 CONFIGURE_ARGS+=	--enable-libmp3lame
 .include "../../audio/lame/buildlink3.mk"
+.endif
+
+# OPUS support
+.if !empty(PKG_OPTIONS:Mopus)
+CONFIGURE_ARGS+=	--enable-libopus
+.include "../../audio/libopus/buildlink3.mk"
 .endif
 
 # XviD support
