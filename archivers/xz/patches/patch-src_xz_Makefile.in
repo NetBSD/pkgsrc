@@ -1,4 +1,8 @@
-$NetBSD: patch-src_xz_Makefile.in,v 1.1 2015/01/06 22:57:58 joerg Exp $
+$NetBSD: patch-src_xz_Makefile.in,v 1.2 2017/01/01 08:24:44 mef Exp $
+
+date: 2015-01-07 07:57:58 +0900;  author: joerg;
+Shuffle flags around to make sure that the system liblzma is not picked
+up first.
 
 --- src/xz/Makefile.in.orig	2015-01-06 21:53:59.000000000 +0000
 +++ src/xz/Makefile.in
