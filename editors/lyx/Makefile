@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2017/01/01 14:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2017/01/01 16:06:11 adam Exp $
 
 DISTNAME=		lyx-2.2.2
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/2.2.x/ \
 			http://gd.tuwien.ac.at/publishing/tex/lyx/stable/2.2.x/ \
