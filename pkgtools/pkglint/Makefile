@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2016/12/17 13:35:32 rillig Exp $
+# $NetBSD: Makefile,v 1.505 2017/01/01 14:47:45 rillig Exp $
 
 PKGNAME=	pkglint-5.4.14
 DISTFILES=	# none
@@ -12,7 +12,7 @@ CONFLICTS+=	pkglint4-[0-9]*
 
 WRKSRC=		${WRKDIR}/netbsd.org/pkglint
 NO_CHECKSUM=	yes
-USE_LANGUAGES=	# none
+USE_LANGUAGES=	c
 USE_TOOLS+=	pax
 AUTO_MKDIRS=	yes
 GO_SRCPATH=	netbsd.org/pkglint
