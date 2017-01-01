@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/07/09 13:03:37 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/01 14:43:30 wiz Exp $
 
 DISTNAME=	Codeville-0.8.0
 PKGNAME=	codeville-0.8.0
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 REPLACE_PYTHON=		*.py
 REPLACE_PYTHON+=	*/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.8.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 0.8.0
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS_EFFECTS+=	CODEVILLE_DATADIR
