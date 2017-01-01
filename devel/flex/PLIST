@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2016/11/06 21:31:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/01/01 13:53:16 wiz Exp $
 bin/flex
 bin/flex++
 include/FlexLexer.h
 info/flex.info
 lib/libfl.la
-lib/libfl_pic.la
 man/man1/flex.1
 share/doc/flex/AUTHORS
 share/doc/flex/COPYING
