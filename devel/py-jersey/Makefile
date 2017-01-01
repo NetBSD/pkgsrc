@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 13:03:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:34 wiz Exp $
 
 DISTNAME=	jersey-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

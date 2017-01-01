@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2016/11/24 13:34:18 mef Exp $
+# $NetBSD: Makefile,v 1.128 2017/01/01 14:43:30 wiz Exp $
 
 DISTNAME=	doxygen-1.8.12.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -21,7 +21,7 @@ USE_LANGUAGES=		c c++
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.8.6
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.8.6
 
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs

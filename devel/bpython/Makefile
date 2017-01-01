@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/08/03 10:22:36 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/01 14:43:29 wiz Exp $
 
 DISTNAME=	bpython-0.12
 PKGREVISION=	9
@@ -26,7 +26,7 @@ PKG_SUGGESTED_OPTIONS=  # empty
 .if !empty(PKG_OPTIONS:Mgtk)
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 .endif
 
 .include "../../lang/python/distutils.mk"
