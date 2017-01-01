@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2016/12/22 11:37:33 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2017/01/01 16:05:58 adam Exp $
 
 DISTNAME=	OpenSceneGraph-3.0.1
 PKGNAME=	osg-3.0.1
-PKGREVISION=	46
+PKGREVISION=	47
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-${PKGVERSION_NOREV}/source/
 EXTRACT_SUFX=	.zip
