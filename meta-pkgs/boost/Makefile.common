@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2017/01/01 15:32:47 adam Exp $
+# $NetBSD: Makefile.common,v 1.64 2017/01/02 10:00:58 wiz Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -29,6 +29,8 @@ COMMENT=	Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
 LICENSE=	boost-license
 
 CONFLICTS+=		boost<1.36.0
+
+DIST_SUBDIR=		boost-1.63.0v2
 
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
