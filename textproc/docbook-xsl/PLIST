@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2017/01/02 07:44:39 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.34 2017/01/02 09:00:19 ryoon Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
@@ -1587,3 +1587,17 @@ share/xsl/docbook/xhtml/titlepage.xsl
 share/xsl/docbook/xhtml/toc.xsl
 share/xsl/docbook/xhtml/verbatim.xsl
 share/xsl/docbook/xhtml/xref.xsl
+share/xsl/docbook/xhtml5/README
+share/xsl/docbook/xhtml5/build.xml
+share/xsl/docbook/xhtml5/chunk.xsl
+share/xsl/docbook/xhtml5/chunkfast.xsl
+share/xsl/docbook/xhtml5/docbook.css.xml
+share/xsl/docbook/xhtml5/docbook.xsl
+share/xsl/docbook/xhtml5/html5-chunk-mods.xsl
+share/xsl/docbook/xhtml5/html5-element-mods.xsl
+share/xsl/docbook/xhtml5/onechunk.xsl
+share/xsl/docbook/xhtml5/profile-chunk.xsl
+share/xsl/docbook/xhtml5/profile-docbook.xsl
+share/xsl/docbook/xhtml5/xhtml-docbook.xsl
+share/xsl/docbook/xhtml5/xhtml-profile-docbook.xsl
+share/xsl/docbook/xhtml5/xhtml2xhtml5.xsl
