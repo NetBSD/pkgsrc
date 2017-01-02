@@ -1,4 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.1 2016/12/29 18:53:01 wiz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.2 2017/01/02 14:41:31 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
+
+Pullup ticket #5176 - requested by gdt
+lang/llvm: build fix
+
+Pullup ticket #5177 - requested by dholland
+editors/emacs: build fix
 
