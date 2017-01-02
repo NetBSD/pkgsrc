@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2017/01/01 15:32:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.35 2017/01/02 07:51:19 jklos Exp $
 include/boost/accumulators/accumulators.hpp
 include/boost/accumulators/accumulators_fwd.hpp
 include/boost/accumulators/framework/accumulator_base.hpp
@@ -9513,13 +9513,10 @@ include/boost/serialization/access.hpp
 include/boost/serialization/archive_input_unordered_map.hpp
 include/boost/serialization/archive_input_unordered_set.hpp
 include/boost/serialization/array.hpp
-include/boost/serialization/array_optimization.hpp
-include/boost/serialization/array_wrapper.hpp
 include/boost/serialization/assume_abstract.hpp
 include/boost/serialization/base_object.hpp
 include/boost/serialization/binary_object.hpp
 include/boost/serialization/bitset.hpp
-include/boost/serialization/boost_array.hpp
 include/boost/serialization/boost_unordered_map.hpp
 include/boost/serialization/boost_unordered_set.hpp
 include/boost/serialization/collection_size_type.hpp
@@ -9529,6 +9526,7 @@ include/boost/serialization/collections_save_imp.hpp
 include/boost/serialization/complex.hpp
 include/boost/serialization/config.hpp
 include/boost/serialization/deque.hpp
+include/boost/serialization/detail/get_data.hpp
 include/boost/serialization/detail/is_default_constructible.hpp
 include/boost/serialization/detail/shared_count_132.hpp
 include/boost/serialization/detail/shared_ptr_132.hpp
@@ -9710,7 +9708,6 @@ include/boost/smart_ptr/detail/sp_forward.hpp
 include/boost/smart_ptr/detail/sp_has_sync.hpp
 include/boost/smart_ptr/detail/sp_if_array.hpp
 include/boost/smart_ptr/detail/sp_interlocked.hpp
-include/boost/smart_ptr/detail/sp_noexcept.hpp
 include/boost/smart_ptr/detail/sp_nullptr_t.hpp
 include/boost/smart_ptr/detail/spinlock.hpp
 include/boost/smart_ptr/detail/spinlock_gcc_arm.hpp
