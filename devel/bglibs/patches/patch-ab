@@ -1,26 +1,39 @@
-$NetBSD: patch-ab,v 1.7 2016/12/31 15:13:43 schmonz Exp $
+$NetBSD: patch-ab,v 1.8 2017/01/02 02:18:30 schmonz Exp $
 
---- Makefile.orig	2009-02-19 17:11:51.000000000 +0000
+Avoid "echo -n" in subshells and unsupported linker flags to fix OS X build.
+
+--- Makefile.orig	2015-02-06 23:57:34.000000000 +0000
 +++ Makefile
 @@ -69,7 +69,7 @@ adt/hashb.lo adt/hashb.o: ltcompile adt/
- adt/hashs.lo adt/hashs.o: ltcompile adt/hashs.c adt/common.h
+ adt/hashs.lo adt/hashs.o: ltcompile adt/hashs.c include/bglibs/adt_common.h
  	./ltcompile adt/hashs.c
  
--all: dotlibs sysdeps.h libraries bg-installer cli-generate selftests
-+all: dotlibs sysdeps.h libraries bg-installer cli-generate
+-all: sysdeps.h libraries programs man selftests
++all: sysdeps.h libraries programs man
  
- base64/asc2bin.lo base64/asc2bin.o: ltcompile base64/asc2bin.c base64/base64.h str/str.h
+ base64/asc2bin.lo base64/asc2bin.o: ltcompile base64/asc2bin.c include/bglibs/base64.h include/bglibs/str.h sysdeps.h
  	./ltcompile base64/asc2bin.c
-@@ -210,7 +210,7 @@ crypt.lib: compile load
- 	@echo 'main() { ; }' >trylib-lcrypt.c
- 	@{ ./compile trylib-lcrypt.c && ./load trylib-lcrypt -lcrypt; } >/dev/null 2>&1 \
- 	  && { echo -lcrypt >crypt.lib; echo yes; } \
--	  || { echo -n >crypt.lib; echo no; }
-+	  || { : >crypt.lib; echo no; }
- 	@rm -f trylib-lcrypt.c trylib-lcrypt.o trylib-lcrypt
+@@ -89,8 +89,8 @@ base64/encode_line.lo base64/encode_line
+ base64/encode_part.lo base64/encode_part.o: ltcompile base64/encode_part.c include/bglibs/base64.h include/bglibs/str.h sysdeps.h
+ 	./ltcompile base64/encode_part.c
  
- crypto/hmac-md5.lo crypto/hmac-md5.o: ltcompile crypto/hmac-md5.c sysdeps.h crypto/hmac.h crypto/md5.h str/str.h
-@@ -290,7 +290,7 @@ dl.lib: compile load
+-bg-installer: bg-installer.o ltload libbg-cli.la libbg.la bg-installer-cli.o
+-	./ltload bg-installer libbg-cli.la libbg.la bg-installer-cli.o -lbg-cli -static 
++bg-installer: bg-installer.o load libbg-cli.la libbg.la bg-installer-cli.o
++	./load bg-installer .libs/libbg-cli.a .libs/libbg.a bg-installer-cli.o
+ 
+ bg-installer-cli.c: bg-installer.cli cli-generate sysdeps.h
+ 	./cli-generate -c $< >$@
+@@ -157,7 +157,7 @@ compile: conf-cc
+ 	chmod 755 compile
+ 
+ crc-gentab: crc-gentab.o load fmt/lcase.o fmt/ucase.o fmt/unum.o iobuf/iobuf_timeout.o iobuf/obuf_flush.o iobuf/obuf_pad.o iobuf/obuf_put3s.o iobuf/obuf_put5s.o iobuf/obuf_putc.o iobuf/obuf_putunumw.o iobuf/obuf_stderr.o iobuf/obuf_stdout.o iobuf/obuf_write.o msg/common.o msg/die.o sys/iopoll.o
+-	./load crc-gentab fmt/lcase.o fmt/ucase.o fmt/unum.o iobuf/iobuf_timeout.o iobuf/obuf_flush.o iobuf/obuf_pad.o iobuf/obuf_put3s.o iobuf/obuf_put5s.o iobuf/obuf_putc.o iobuf/obuf_putunumw.o iobuf/obuf_stderr.o iobuf/obuf_stdout.o iobuf/obuf_write.o msg/common.o msg/die.o sys/iopoll.o -static 
++	./load crc-gentab fmt/lcase.o fmt/ucase.o fmt/unum.o iobuf/iobuf_timeout.o iobuf/obuf_flush.o iobuf/obuf_pad.o iobuf/obuf_put3s.o iobuf/obuf_put5s.o iobuf/obuf_putc.o iobuf/obuf_putunumw.o iobuf/obuf_stderr.o iobuf/obuf_stdout.o iobuf/obuf_write.o msg/common.o msg/die.o sys/iopoll.o
+ 
+ crc-gentab.o: compile crc-gentab.c sysdeps.h include/bglibs/iobuf.h include/bglibs/iobuf_common.h include/bglibs/ibuf.h include/iobuf_common.h include/bglibs/obuf.h sysdeps.h include/bglibs/msg.h sysdeps.h include/bglibs/debug.h
+ 	./compile crc-gentab.c
+@@ -293,7 +293,7 @@ dl.lib: compile load
  	@echo 'main() { ; }' >trylib-ldl.c
  	@{ ./compile trylib-ldl.c && ./load trylib-ldl -ldl; } >/dev/null 2>&1 \
  	  && { echo -ldl >dl.lib; echo yes; } \
@@ -28,35 +41,8 @@ $NetBSD: patch-ab,v 1.7 2016/12/31 15:13:43 schmonz Exp $
 +	  || { : >dl.lib; echo no; }
  	@rm -f trylib-ldl.c trylib-ldl.o trylib-ldl
  
- dotlibs: crypt.lib dl.lib m.lib net.lib rt.lib s.lib shadow.lib socket.lib
-@@ -624,7 +624,7 @@ m.lib: compile load
- 	@echo 'main() { ; }' >trylib-lm.c
- 	@{ ./compile trylib-lm.c && ./load trylib-lm -lm; } >/dev/null 2>&1 \
- 	  && { echo -lm >m.lib; echo yes; } \
--	  || { echo -n >m.lib; echo no; }
-+	  || { : >m.lib; echo no; }
- 	@rm -f trylib-lm.c trylib-lm.o trylib-lm
- 
- makeshlib: conf-ld conf-lib LIBVERSION Makefile
-@@ -632,7 +632,7 @@ makeshlib: conf-ld conf-lib LIBVERSION M
- 	  echo '#!/bin/sh'; \
- 	  echo 'lib="$$1"; shift';\
- 	  echo 'rm -f "$$lib"';\
--	  echo libtool --mode=link --silent $$tag `head -n 1 conf-ld` '-o "$$lib" -rpath' `head -n 1 conf-lib` -version-info `head -n 1 LIBVERSION` '$${1+"$$@"}';\
-+	  echo libtool --mode=link --silent $$tag `head -n 1 conf-ld` '-o "$$lib" -rpath' `head -n 1 conf-lib` -version-info `head -n 1 LIBVERSION` '$${1+"$$@"}' `cat socket.lib`;\
- 	) >makeshlib
- 	chmod 755 makeshlib
- 
-@@ -710,7 +710,7 @@ net.lib: compile load
- 	@echo 'main() { ; }' >trylib-lnet.c
- 	@{ ./compile trylib-lnet.c && ./load trylib-lnet -lnet; } >/dev/null 2>&1 \
- 	  && { echo -lnet >net.lib; echo yes; } \
--	  || { echo -n >net.lib; echo no; }
-+	  || { : >net.lib; echo no; }
- 	@rm -f trylib-lnet.c trylib-lnet.o trylib-lnet
- 
- net/accept4.lo net/accept4.o: ltcompile net/accept4.c net/socket.h net/ipv4.h sysdeps.h net/ipv6.h sysdeps.h
-@@ -876,9 +876,7 @@ path/mktemp.lo path/mktemp.o: ltcompile 
+ fmt/char.lo fmt/char.o: ltcompile fmt/char.c include/bglibs/fmt.h
+@@ -863,9 +863,7 @@ path/mktemp.lo path/mktemp.o: ltcompile 
  	./ltcompile path/mktemp.c
  
  perl-head.pl: 
@@ -67,7 +53,7 @@ $NetBSD: patch-ab,v 1.7 2016/12/31 15:13:43 schmonz Exp $
  	  echo "# WARNING: This file was auto-generated. Do not edit!"; \
  	  echo ) >perl-head.pl
  
-@@ -896,7 +894,7 @@ rt.lib: compile load
+@@ -885,7 +883,7 @@ rt.lib: compile load
  	@echo 'main() { ; }' >trylib-lrt.c
  	@{ ./compile trylib-lrt.c && ./load trylib-lrt -lrt; } >/dev/null 2>&1 \
  	  && { echo -lrt >rt.lib; echo yes; } \
@@ -75,22 +61,4 @@ $NetBSD: patch-ab,v 1.7 2016/12/31 15:13:43 schmonz Exp $
 +	  || { : >rt.lib; echo no; }
  	@rm -f trylib-lrt.c trylib-lrt.o trylib-lrt
  
- s.lib: compile load
-@@ -904,7 +902,7 @@ s.lib: compile load
- 	@echo 'main() { ; }' >trylib-ls.c
- 	@{ ./compile trylib-ls.c && ./load trylib-ls -ls; } >/dev/null 2>&1 \
- 	  && { echo -ls >s.lib; echo yes; } \
--	  || { echo -n >s.lib; echo no; }
-+	  || { : >s.lib; echo no; }
- 	@rm -f trylib-ls.c trylib-ls.o trylib-ls
- 
- selftests: selftests.sh sysdeps.h libbg-sysdeps.la libbg.la
-@@ -915,7 +913,7 @@ shadow.lib: compile load
- 	@echo 'main() { ; }' >trylib-lshadow.c
- 	@{ ./compile trylib-lshadow.c && ./load trylib-lshadow -lshadow; } >/dev/null 2>&1 \
- 	  && { echo -lshadow >shadow.lib; echo yes; } \
--	  || { echo -n >shadow.lib; echo no; }
-+	  || { : >shadow.lib; echo no; }
- 	@rm -f trylib-lshadow.c trylib-lshadow.o trylib-lshadow
- 
- socket.lib: compile load
+ selftest-cmp: selftest-cmp.o ltload libbg.la
