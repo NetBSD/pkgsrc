@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/12 15:00:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/01/02 12:42:32 wen Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -126,6 +126,7 @@ ${GEM_LIBDIR}/test/tc_nsec3param.rb
 ${GEM_LIBDIR}/test/tc_nxt.rb
 ${GEM_LIBDIR}/test/tc_packet.rb
 ${GEM_LIBDIR}/test/tc_packet_unique_push.rb
+${GEM_LIBDIR}/test/tc_ptrin.rb
 ${GEM_LIBDIR}/test/tc_question.rb
 ${GEM_LIBDIR}/test/tc_queue.rb
 ${GEM_LIBDIR}/test/tc_recur.rb
