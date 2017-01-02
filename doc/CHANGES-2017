@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.48 2017/01/02 02:18:35 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.49 2017/01/02 02:19:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -54,3 +54,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTML-Lint to 2.26 [wen 2017-01-02]
 	Updated www/p5-Dancer2 to 0.204002 [wen 2017-01-02]
 	Updated devel/bglibs to 2.03 [schmonz 2017-01-02]
+	Updated mail/relay-ctrl to 3.2 [schmonz 2017-01-02]
