@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.73 2017/01/02 13:47:52 wen Exp $
+$NetBSD: CHANGES-2017,v 1.74 2017/01/02 17:45:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -79,3 +79,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Modern-Perl to 1.20161229 [wen 2017-01-02]
 	Updated devel/p5-Module-CoreList to 5.20161220 [wen 2017-01-02]
 	Updated devel/p5-Module-ScanDeps to 1.23 [wen 2017-01-02]
+	Updated www/firefox45 to 45.6.0 [ryoon 2017-01-02]
