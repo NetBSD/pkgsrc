@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/01/01 15:32:47 adam Exp $
+# $NetBSD: Makefile,v 1.51 2017/01/02 07:33:11 ryoon Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -35,8 +35,9 @@ PLIST.log=		yes
 # (old darwin, netbsd <6). if fiber becomes necessary, set GCC_REQD
 # on other boost-* packages, too.
 # fiber requires context, so also disable it where context cannot be built
+# Additionally fiber checks std::timed_mutex.
 .if ((${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[0-6]*-*)) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-*)) || \
     !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || \
     !empty(MACHINE_ARCH:Msparc64) || \
     (${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang))
