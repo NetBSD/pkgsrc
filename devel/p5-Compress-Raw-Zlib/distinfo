@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.29 2016/04/09 11:41:16 mef Exp $
+$NetBSD: distinfo,v 1.30 2017/01/02 12:13:46 wen Exp $
 
-SHA1 (Compress-Raw-Zlib-2.069.tar.gz) = de1d749c1e423ba5f51405c743d66324018cfe70
-RMD160 (Compress-Raw-Zlib-2.069.tar.gz) = fe3a52b94987a298fb2b98e306767f387ba7c30a
-SHA512 (Compress-Raw-Zlib-2.069.tar.gz) = eadb0b862042f7fe4935f8752b976420d2033e653c610ab97f64d80ee14bcdb9ffa73e1bdcc1a554d5a1a5314580b3398d79d3174b3820e41dc906cdd9b6bfae
-Size (Compress-Raw-Zlib-2.069.tar.gz) = 238435 bytes
+SHA1 (Compress-Raw-Zlib-2.071.tar.gz) = 3ea9f21a315f4a5abcf3b713d475ad5e1ef7b914
+RMD160 (Compress-Raw-Zlib-2.071.tar.gz) = 69291abe0ef70c3a8c0d4f7734fae00019d43169
+SHA512 (Compress-Raw-Zlib-2.071.tar.gz) = 3acfca63def1c7875a5ac35f3ef8e99da427e617cff92c073bcba90670aecde5904a3ce57b0b3301f1112eaa8425a75ce582fe1e64545ec048fa76e982715b79
+Size (Compress-Raw-Zlib-2.071.tar.gz) = 238746 bytes
 SHA1 (patch-aa) = 399f9cc179fcabd4f753be64c94c6ea83de4c10c
