@@ -1,4 +1,6 @@
-$NetBSD: patch-crypto_hmac.c,v 1.1 2016/12/18 21:39:58 joerg Exp $
+$NetBSD: patch-crypto_hmac.c,v 1.2 2017/01/02 02:18:30 schmonz Exp $
+
+Rename hmac to bghmac.
 
 --- crypto/hmac.c.orig	2016-12-18 09:58:18.626636990 +0000
 +++ crypto/hmac.c

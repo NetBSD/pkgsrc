@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.26 2016/12/31 15:13:43 schmonz Exp $
+$NetBSD: distinfo,v 1.27 2017/01/02 02:18:30 schmonz Exp $
 
-SHA1 (bglibs-1.106.tar.gz) = 5f1914299c0f91a3d5c83bf6c8c1d0b824ffe624
-RMD160 (bglibs-1.106.tar.gz) = d3ac009a0b9196701ff90b6cddbd58596ab480a9
-SHA512 (bglibs-1.106.tar.gz) = c1ae4bb9978b09ffe01231738d1f249c2040a51c2a0bbc4b04389a7085a3885cca6483f1bfe65deca213d991273bb3b7b925ebde8b6e2cd9182d8a57cb9a49d8
-Size (bglibs-1.106.tar.gz) = 481564 bytes
-SHA1 (patch-ab) = a1d06fcc1aa73afd92be9acd1001187a28ff03e0
-SHA1 (patch-ac) = 1b75516a494dbc0c7943bc89b2eaf2f9668048fd
-SHA1 (patch-crypto_hmac-md5.c) = 1982dfb84b42f0e2b3aa7a59664de7694dd65038
-SHA1 (patch-crypto_hmac-sha1.c) = aebb2be7721a38bd1c15fde32831ae6966b8b705
-SHA1 (patch-crypto_hmac-sha256.c) = 578e1c36527d463a8fcca86c32604b0fe94b6b81
-SHA1 (patch-crypto_hmac-sha384.c) = 1ed746c62fcf717d4b2978f55b78f6bec781e077
-SHA1 (patch-crypto_hmac-sha512.c) = 0fddbb7d34dd66197c72c61fe21da8eabb9bc267
-SHA1 (patch-crypto_hmac.c) = 65c1f526d3d73734fc431210088ce4f26a42b313
-SHA1 (patch-crypto_hmac.h) = 1ae05a3160859069160ff1a17a7ae460b622fa12
+SHA1 (bglibs-2.03.tar.gz) = 9c1506f60cd3d2572fd2019f676834cdf0a52860
+RMD160 (bglibs-2.03.tar.gz) = 474d460f062f3d573f38d4e4c7451b34a31a29a6
+SHA512 (bglibs-2.03.tar.gz) = 45d600e59394edd696c0e3f8477ce3b711a6729f199a5c263de1380427501d502aa5630c79fe3bc661615faabff754db51718f24fa354b2844ef4ed9f68e71df
+Size (bglibs-2.03.tar.gz) = 676188 bytes
+SHA1 (patch-ab) = c35699dba585340d6c9c7fcefbd80344c86c2102
+SHA1 (patch-crypto_hmac-md5.c) = 197c0d6de2b48dd611430d64d029381d95c8e5d8
+SHA1 (patch-crypto_hmac-sha1.c) = d540ac565ef79e68099186c64578f32c8925cfb1
+SHA1 (patch-crypto_hmac-sha256.c) = 29635908a1012e5a31ed46599a64ed33249c4015
+SHA1 (patch-crypto_hmac-sha384.c) = 1a6300ef2d8ab01e20853439ac578b862de19e7d
+SHA1 (patch-crypto_hmac-sha512.c) = 664430b6c21a3044be713af3770ac672212953d7
+SHA1 (patch-crypto_hmac.c) = 7699db75cdc269fb2fded70ed501bcef635691f6
+SHA1 (patch-include_hmac.h) = e0b113a73dfaf78327be5bf8a7001efd8896a8da
