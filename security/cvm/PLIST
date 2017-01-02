@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/01/01 22:00:12 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/01/02 02:20:08 schmonz Exp $
 bin/cvm-benchclient
 bin/cvm-chain
 bin/cvm-checkpassword
@@ -22,8 +22,9 @@ include/cvm/protocol.h
 include/cvm/sasl.h
 include/cvm/v1client.h
 include/cvm/v2client.h
-lib/libcvm-client.la
+lib/libcvm-client.a
 lib/libcvm-client.${CVM_LIB_EXT}
+lib/libcvm-client.la
 lib/libcvm-command.la
 lib/libcvm-local.la
 lib/libcvm-module.la
