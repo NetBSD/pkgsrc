@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.60 2017/01/02 08:03:10 wen Exp $
+$NetBSD: CHANGES-2017,v 1.61 2017/01/02 08:06:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -66,3 +66,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Moose to 2.1807 [wen 2017-01-02]
 	Updated textproc/docbook-xsl to 1.79.1nb2 [ryoon 2017-01-02]
 	Updated devel/p5-Array-Compare to 3.0.0 [wen 2017-01-02]
+	Updated devel/re2 to 20170101 [mef 2017-01-02]
