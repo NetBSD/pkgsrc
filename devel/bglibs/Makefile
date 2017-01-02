@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/01/02 02:18:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2017/01/02 14:13:32 schmonz Exp $
 #
 
 DISTNAME=		bglibs-2.03
@@ -8,6 +8,7 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/bglibs/
 COMMENT=		Collection of libraries by Bruce Guenter
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		perl:run gmake
 MAKE_ENV+=		PERL5=${TOOLS_PERL5:Q}
