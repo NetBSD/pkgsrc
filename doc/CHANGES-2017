@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.70 2017/01/02 12:43:14 wen Exp $
+$NetBSD: CHANGES-2017,v 1.71 2017/01/02 13:14:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -76,3 +76,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.070 [wen 2017-01-02]
 	Updated devel/p5-Compress-Raw-Zlib to 2.071 [wen 2017-01-02]
 	Updated net/ruby-dnsruby to 1.60.0 [wen 2017-01-02]
+	Updated devel/p5-Modern-Perl to 1.20161229 [wen 2017-01-02]
