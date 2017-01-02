@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.63 2017/01/02 09:53:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.64 2017/01/02 10:15:57 manu Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -69,3 +69,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/re2 to 20170101 [mef 2017-01-02]
 	Updated devel/re2c to 0.16 [mef 2017-01-02]
 	Updated www/nghttp2 to 1.18.0 [adam 2017-01-02]
+	Updated net/nagios-plugin-mysqlslave to 0.2 [manu 2017-01-02]
