@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2016/07/09 06:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2017/01/02 07:44:39 ryoon Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 COMMENT=	Docbook XSL modular stylesheet
@@ -13,13 +13,15 @@ REPLACE_PERL+=	fo/pdf2index
 
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
 # epub requires ruby, so we don't install the XSLMOD
-XSLMODS=	common eclipse fo highlighting html \
+XSLMODS=	common eclipse epub epub3 fo highlighting html \
 		htmlhelp images javahelp lib manpages params \
 		profiling roundtrip slides website xhtml xhtml-1_1
 
 XML_CATALOGS=	${XSLDIR}/catalog.xml
 
 INSTALLATION_DIRS=	${EGDIR} ${XSLDIR}
+
+CHECK_INTERPRETER_SKIP+=	share/xsl/docbook/epub/bin/dbtoepub
 
 do-install:
 	cd ${WRKSRC}/template && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
