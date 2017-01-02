@@ -1,27 +1,31 @@
-# $NetBSD: Makefile,v 1.12 2012/10/08 12:19:15 asau Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/02 02:19:46 schmonz Exp $
 #
 
-DISTNAME=		mailfront-1.12
+DISTNAME=		mailfront-2.12
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}archive/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/mailfront/
 COMMENT=		Mail server network protocol front-ends
+LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 
+# XXX optional: lua 5 or later ("make lua")
+
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
 DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/include > conf-include;	\
-			${ECHO} ${PREFIX}/lib/${PKGBASE} > conf-modules;\
-			${ECHO} ${PREFIX}/lib > conf-cvmlibs
+			${ECHO} ${PREFIX}/lib/${PKGBASE} > conf-modules;
 
 RCD_SCRIPTS=		smtpfront
 INSTALLATION_DIRS=	share/doc/mailfront
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
+
+MAKE_JOBS_SAFE=		no # due to hacky libtoolization
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +49,9 @@ MAKEVARS+=	PKG_SYSCONFDIR.mailfront
 .  endif
 .endif
 
+BUILDLINK_API_DEPENDS.bglibs+=	bglibs>=2.01
 .include "../../devel/bglibs/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cvm+=	cvm>=0.97
 .include "../../security/cvm/buildlink3.mk"
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

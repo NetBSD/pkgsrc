@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:03 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/01/02 02:19:46 schmonz Exp $
 bin/imapfront-auth
 bin/mailfront
 bin/pop3front-auth
@@ -14,17 +14,19 @@ include/mailfront/mailfront.h
 include/mailfront/responses.h
 lib/mailfront/backend-echo.so
 lib/mailfront/backend-qmail.so
+lib/mailfront/backend-queuedir.so
 lib/mailfront/plugin-add-received.so
 lib/mailfront/plugin-check-fqdn.so
 lib/mailfront/plugin-clamav.so
 lib/mailfront/plugin-counters.so
+lib/mailfront/plugin-cvm-authenticate.so
 lib/mailfront/plugin-cvm-validate.so
 lib/mailfront/plugin-mailrules.so
 lib/mailfront/plugin-patterns.so
 lib/mailfront/plugin-qmail-validate.so
-lib/mailfront/plugin-reject.so
-lib/mailfront/plugin-relayclient.so
-lib/mailfront/plugin-require-auth.so
+lib/mailfront/plugin-rbl.so
+lib/mailfront/plugin-spamassassin.so
+lib/mailfront/plugin-starttls-ucspi.so
 lib/mailfront/protocol-qmqp.so
 lib/mailfront/protocol-qmtp.so
 lib/mailfront/protocol-smtp.so
@@ -33,6 +35,7 @@ share/doc/mailfront/NEWS
 share/doc/mailfront/README
 share/doc/mailfront/backend-echo.html
 share/doc/mailfront/backend-qmail.html
+share/doc/mailfront/backend-queuedir.html
 share/doc/mailfront/imapfront.html
 share/doc/mailfront/mailfront.html
 share/doc/mailfront/mailrules.html
@@ -46,14 +49,19 @@ share/doc/mailfront/plugin-api.html
 share/doc/mailfront/plugin-check-fqdn.html
 share/doc/mailfront/plugin-clamav.html
 share/doc/mailfront/plugin-counters.html
+share/doc/mailfront/plugin-cvm-authenticate.html
 share/doc/mailfront/plugin-cvm-validate.html
 share/doc/mailfront/plugin-force-file.html
+share/doc/mailfront/plugin-lua.html
 share/doc/mailfront/plugin-mailrules.html
 share/doc/mailfront/plugin-patterns.html
 share/doc/mailfront/plugin-qmail-validate.html
+share/doc/mailfront/plugin-rbl.html
 share/doc/mailfront/plugin-reject.html
 share/doc/mailfront/plugin-relayclient.html
 share/doc/mailfront/plugin-require-auth.html
+share/doc/mailfront/plugin-spamassassin.html
+share/doc/mailfront/plugin-starttls-ucspi.html
 share/doc/mailfront/plugin-template.html
 share/doc/mailfront/pop3front.html
 share/doc/mailfront/protocol-qmqp.html
