@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2016/12/20 14:20:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.63 2017/01/02 17:52:24 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -152,6 +152,7 @@ share/doc/sqlite3/c3ref/snapshot_cmp.html
 share/doc/sqlite3/c3ref/snapshot_free.html
 share/doc/sqlite3/c3ref/snapshot_get.html
 share/doc/sqlite3/c3ref/snapshot_open.html
+share/doc/sqlite3/c3ref/snapshot_recover.html
 share/doc/sqlite3/c3ref/soft_heap_limit.html
 share/doc/sqlite3/c3ref/soft_heap_limit64.html
 share/doc/sqlite3/c3ref/sqlite3.html
@@ -206,6 +207,7 @@ share/doc/sqlite3/consortium_agreement-20071201.html
 share/doc/sqlite3/copyright-release.html
 share/doc/sqlite3/copyright-release.pdf
 share/doc/sqlite3/copyright.html
+share/doc/sqlite3/cpu.html
 share/doc/sqlite3/crew.html
 share/doc/sqlite3/csv.html
 share/doc/sqlite3/custombuild.html
@@ -295,6 +297,7 @@ share/doc/sqlite3/images/btreemodule_balance_shallower.svg
 share/doc/sqlite3/images/btreemodule_delete1.svg
 share/doc/sqlite3/images/btreemodule_overview.svg
 share/doc/sqlite3/images/chw.jpg
+share/doc/sqlite3/images/cpu-usage.jpg
 share/doc/sqlite3/images/dan1.jpg
 share/doc/sqlite3/images/direct1b.gif
 share/doc/sqlite3/images/drh1.jpg
@@ -478,6 +481,7 @@ share/doc/sqlite3/images/syntax/vacuum-stmt.gif
 share/doc/sqlite3/images/syntax/with-clause.gif
 share/doc/sqlite3/images/table-ex1b2.gif
 share/doc/sqlite3/images/vfs1.gif
+share/doc/sqlite3/imposter.html
 share/doc/sqlite3/index.html
 share/doc/sqlite3/inmemorydb.html
 share/doc/sqlite3/intern-v-extern-blob.html
@@ -527,7 +531,6 @@ share/doc/sqlite3/mingw.html
 share/doc/sqlite3/mmap.html
 share/doc/sqlite3/mostdeployed.html
 share/doc/sqlite3/news.html
-share/doc/sqlite3/not-found.html
 share/doc/sqlite3/np1queryprob.html
 share/doc/sqlite3/nulls.html
 share/doc/sqlite3/oldnews.html
@@ -570,6 +573,7 @@ share/doc/sqlite3/releaselog/3_14_2.html
 share/doc/sqlite3/releaselog/3_15_0.html
 share/doc/sqlite3/releaselog/3_15_1.html
 share/doc/sqlite3/releaselog/3_15_2.html
+share/doc/sqlite3/releaselog/3_16_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
