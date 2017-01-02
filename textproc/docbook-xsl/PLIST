@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2016/03/05 01:12:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.33 2017/01/02 07:44:39 ryoon Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
@@ -110,6 +110,23 @@ share/xsl/docbook/eclipse/build.xml
 share/xsl/docbook/eclipse/eclipse.xsl
 share/xsl/docbook/eclipse/eclipse3.xsl
 share/xsl/docbook/eclipse/profile-eclipse.xsl
+share/xsl/docbook/epub/README
+share/xsl/docbook/epub/bin/dbtoepub
+share/xsl/docbook/epub/bin/lib/docbook.rb
+share/xsl/docbook/epub/bin/xslt/obfuscate.xsl
+share/xsl/docbook/epub/docbook.xsl
+share/xsl/docbook/epub3/README
+share/xsl/docbook/epub3/build.xml
+share/xsl/docbook/epub3/chunk.xsl
+share/xsl/docbook/epub3/chunkfast.xsl
+share/xsl/docbook/epub3/docbook-epub.css.xml
+share/xsl/docbook/epub3/docbook.xsl
+share/xsl/docbook/epub3/epub3-chunk-mods.xsl
+share/xsl/docbook/epub3/epub3-element-mods.xsl
+share/xsl/docbook/epub3/profile-chunk.xsl
+share/xsl/docbook/epub3/profile-docbook.xsl
+share/xsl/docbook/epub3/titlepage.templates.xml
+share/xsl/docbook/epub3/titlepage.templates.xsl
 share/xsl/docbook/fo/admon.xsl
 share/xsl/docbook/fo/annotations.xsl
 share/xsl/docbook/fo/autoidx-kimber.xsl
