@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.61 2017/01/02 08:06:33 mef Exp $
+$NetBSD: CHANGES-2017,v 1.62 2017/01/02 08:09:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -67,3 +67,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/docbook-xsl to 1.79.1nb2 [ryoon 2017-01-02]
 	Updated devel/p5-Array-Compare to 3.0.0 [wen 2017-01-02]
 	Updated devel/re2 to 20170101 [mef 2017-01-02]
+	Updated devel/re2c to 0.16 [mef 2017-01-02]
