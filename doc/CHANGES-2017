@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.67 2017/01/02 12:02:49 wen Exp $
+$NetBSD: CHANGES-2017,v 1.68 2017/01/02 12:06:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -73,3 +73,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask to 0.12 [wen 2017-01-02]
 	Updated devel/p5-autobox-Core to 1.33 [wen 2017-01-02]
 	Updated databases/p5-DBD-ODBC to 1.56 [wen 2017-01-02]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.070 [wen 2017-01-02]
