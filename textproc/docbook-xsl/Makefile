@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2017/01/02 07:44:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.65 2017/01/02 09:00:19 ryoon Exp $
 
 PKGREVISION= 2
 .include "Makefile.common"
@@ -15,7 +15,8 @@ EGDIR=		${PREFIX}/share/examples/docbook-xsl
 # epub requires ruby, so we don't install the XSLMOD
 XSLMODS=	common eclipse epub epub3 fo highlighting html \
 		htmlhelp images javahelp lib manpages params \
-		profiling roundtrip slides website xhtml xhtml-1_1
+		profiling roundtrip slides website xhtml xhtml-1_1 \
+		xhtml5
 
 XML_CATALOGS=	${XSLDIR}/catalog.xml
 
