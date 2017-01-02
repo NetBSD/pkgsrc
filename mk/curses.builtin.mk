@@ -1,10 +1,14 @@
-# $NetBSD: curses.builtin.mk,v 1.11 2016/12/29 20:23:05 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.12 2017/01/02 10:49:33 roy Exp $
 
 BUILTIN_PKG:=	curses
 
 BUILTIN_FIND_LIBS:=			curses
 BUILTIN_FIND_HEADERS_VAR:=		H_CURSES
 BUILTIN_FIND_HEADERS.H_CURSES=		curses.h
+
+BUILTIN_FIND_FILES_VAR+=		H_CURSES_GETSYX
+BUILTIN_FIND_FILES.H_CURSES_GETSYX=	${H_CURSES}
+BUILTIN_FIND_GREP.H_CURSES_GETSYX=	getsyx
 
 BUILTIN_FIND_FILES_VAR+=		H_CURSES_HALFDELAY
 BUILTIN_FIND_FILES.H_CURSES_HALFDELAY=	${H_CURSES}
@@ -78,6 +82,12 @@ USE_BUILTIN.curses!=							\
 .if defined(USE_CURSES) && empty(USE_CURSES:M[yY][eE][sS])
 .  if !empty(USE_CURSES:Mchgat) && !empty(H_CURSES_MVWCHGAT:M__nonexistent__)
 USE_BUILTIN.curses=	no
+.  endif
+# same for getsyx(3)
+.  if !empty(USE_CURSES:Mgetsyx)
+.    if !empty(H_CURSES_GETSYX:M__nonexistent__)
+USE_BUILTIN.curses=	no
+.    endif
 .  endif
 # same for halfdelay(3)
 .  if !empty(USE_CURSES:Mhalfdelay)
