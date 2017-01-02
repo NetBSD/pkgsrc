@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16867 2017/01/02 02:19:06 schmonz Exp $
+$NetBSD: TODO,v 1.16868 2017/01/02 02:19:51 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1055,7 +1055,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o magic-8.1.89
 	o magit-2.5
 	o maildrop-2.8.2
-	o mailfront-2.12
 	o mailman-2.1.22
 	o mailman-3.0.3
 	o mailscanner-4.74
