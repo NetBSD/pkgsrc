@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/12/31 16:58:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/02 02:19:02 schmonz Exp $
 #
 
-DISTNAME=	relay-ctrl-3.1.1
-PKGREVISION=	1
+DISTNAME=	relay-ctrl-3.2
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}
 
@@ -11,8 +10,6 @@ HOMEPAGE=	http://untroubled.org/relay-ctrl/
 COMMENT=	Allows relaying via POP/IMAP-before-SMTP
 
 PKG_DESTDIR_SUPPORT=	destdir
-
-BUILD_DEPENDS+=		bglibs-[0-9]*:../../devel/bglibs
 
 DJB_RESTRICTED=		NO
 DJB_MAKE_TARGETS=	NO
@@ -55,5 +52,6 @@ post-install:
 			${DESTDIR}${PREFIX}/bin;			\
 	done
 
+.include "../../devel/bglibs/buildlink3.mk"
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
