@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/09/08 01:11:28 wen Exp $
+$NetBSD: distinfo,v 1.4 2017/01/02 07:22:14 wen Exp $
 
-SHA1 (Geo-Ellipsoid-1.13.tar.gz) = f2c9c3f1964ca300951ae04cb8b1eaaad97fcb3c
-RMD160 (Geo-Ellipsoid-1.13.tar.gz) = a2c0b7b1550235280d0e2cd714697926eb3e2867
-SHA512 (Geo-Ellipsoid-1.13.tar.gz) = cd9e673cb8d18859cddf33ef15da1010d702b1a160b061e3487827b0aaa6bdfb60ca3385cb21755f71d247e34b382386152f10a52b191cd469cf83ad92ddefa4
-Size (Geo-Ellipsoid-1.13.tar.gz) = 80040 bytes
+SHA1 (Geo-Ellipsoid-1.14.tar.gz) = 489b08142c909aa489686baa288c98a00543b510
+RMD160 (Geo-Ellipsoid-1.14.tar.gz) = 43b0dd9368c5c3b7f02d6fa368be0ec9eac1a587
+SHA512 (Geo-Ellipsoid-1.14.tar.gz) = 662ca563ad86f3d4d97e78703afc8f97e20356ad3dde266b5100d13f3537966cb933d315ac75cd195b65b6f442c2cb1f1bcb1838fa81cdc509095d8fc3084d31
+Size (Geo-Ellipsoid-1.14.tar.gz) = 80125 bytes
