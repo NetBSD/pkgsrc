@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.58 2017/01/02 07:44:04 wen Exp $
+$NetBSD: CHANGES-2017,v 1.59 2017/01/02 07:45:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -64,3 +64,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/p5-Geo-Ellipsoid to 1.14 [wen 2017-01-02]
 	Updated mail/p5-Mail-Sender to 0.903 [wen 2017-01-02]
 	Updated devel/p5-Moose to 2.1807 [wen 2017-01-02]
+	Updated textproc/docbook-xsl to 1.79.1nb2 [ryoon 2017-01-02]
