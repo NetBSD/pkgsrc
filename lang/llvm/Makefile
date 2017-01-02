@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/12/17 23:28:34 joerg Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2017/01/02 14:40:11 bsiegert Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -91,6 +91,11 @@ PLIST_SUBST+=	SOEXT=${SOEXT}
 # At least LLVM 3.9.0 and subprojects don't correctly add C++11 flags
 # automatically.
 CXXFLAGS+=	-std=c++11
+
+# needs std::atomic with 64-bit CAS
+.if ${MACHINE_ARCH} == "i386"
+CXXFLAGS+=	-march=i586
+.endif
 
 .if ${OPSYS} == "Darwin"
 .PHONY: fix-darwin-install-name
