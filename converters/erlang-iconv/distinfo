@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/08/12 09:47:06 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2017/01/03 18:25:29 fhajny Exp $
 
-SHA1 (iconv-1.0.2.tar.gz) = 192504732df34a41fbf8e1fcde8ce9d528a19383
-RMD160 (iconv-1.0.2.tar.gz) = 5777405fd13602839cd328342160249ddaf7c132
-SHA512 (iconv-1.0.2.tar.gz) = 910614320109993f359697bd78bb9c31275eb1e3a45f583f7caeeaff77d0f8aa513ebcb12110dc2ef1bf5ecc59e0f5f1c3e67f0cf47cde837a8af524e951901d
-Size (iconv-1.0.2.tar.gz) = 121331 bytes
-SHA1 (patch-rebar.config) = 61749fe4ebc837bb2f50a31f7563bf8e63aa2bd3
+SHA1 (iconv-1.0.3.tar.gz) = 2099bf57b1e28917908c35dbdfeeaa44640f0932
+RMD160 (iconv-1.0.3.tar.gz) = 4d50bff629f89c3aac7db9827eda7a751c68461d
+SHA512 (iconv-1.0.3.tar.gz) = 33b98d592eb0122b72894e7c06bd31763657615ecd9deefbd2ef6735150347708043bc574d8056be33d1d1bbc07a2bff4c65c504bb2a5170e6b8a2034cb803d0
+Size (iconv-1.0.3.tar.gz) = 121413 bytes
+SHA1 (patch-rebar.config) = 2d33f2b7a874d831194992cf139dd07bfc63aa09
