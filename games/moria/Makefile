@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/03 21:50:53 roy Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
@@ -15,7 +15,7 @@ HOMEPAGE=		http://remarque.org/~grabiner/moria.html
 COMMENT=		Rogue-like game with a different sense of scale than Rogue
 
 WRKSRC=			${WRKDIR}/umoria
-MAKE_FLAGS+=		CURSES=-lncurses VARBASE=${VARBASE}
+MAKE_FLAGS+=		CURSES=-l${BUILDLINK_LIBNAME.curses} VARBASE=${VARBASE}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
@@ -28,5 +28,5 @@ do-configure:
 	@${RM} -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
 	@cd ${WRKSRC}; ${LN} -s source/* unix/* .
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

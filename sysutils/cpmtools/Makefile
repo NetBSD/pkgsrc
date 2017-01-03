@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/08/18 07:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 22:46:53 roy Exp $
 #
 
 DISTNAME=		cpmtools-2.13
@@ -17,5 +17,7 @@ CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/cpmtools
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 INSTALLATION_DIRS+=	bin share/cpmtools ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-.include "../../devel/ncurses/buildlink3.mk"
+# I have no idea why this even wants to link against curses as it appears
+# to use neither curses, terminfo or termcap.
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
