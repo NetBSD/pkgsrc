@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/08/09 09:13:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/03 07:20:55 fhajny Exp $
 
-DISTNAME=	XlsxWriter-0.9.3
+DISTNAME=	XlsxWriter-0.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmcnamara/}
