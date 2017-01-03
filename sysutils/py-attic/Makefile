@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/09/19 13:49:02 wiedi Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	Attic-0.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && mv attic attic${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} attic attic${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/distutils.mk"
 .include "../../security/openssl/buildlink3.mk"
