@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/02 15:27:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/03 00:02:03 khorben Exp $
 include/openconnect.h
 lib/libopenconnect.la
 lib/pkgconfig/openconnect.pc
