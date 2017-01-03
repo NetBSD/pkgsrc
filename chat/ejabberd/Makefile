@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2016/10/02 12:17:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.69 2017/01/03 18:52:33 fhajny Exp $
 
-DISTNAME=	ejabberd-16.09
+DISTNAME=	ejabberd-16.12
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,23 +10,24 @@ HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	erlang-cache_tab>=1.0.4:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-esip>=1.0.8:../../net/erlang-esip
+DEPENDS+=	erlang-cache_tab>=1.0.5:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-esip>=1.0.10:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.1:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.7:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.15:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.6:../../textproc/erlang-fast_yaml
-DEPENDS+=	erlang-iconv>=1.0.2:../../converters/erlang-iconv
-DEPENDS+=	erlang-jiffy>=0.14.7:../../textproc/erlang-jiffy
+DEPENDS+=	erlang-fast_tls>=1.0.9:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.18:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.7:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-iconv>=1.0.3:../../converters/erlang-iconv
+DEPENDS+=	erlang-jiffy>=0.14.8:../../textproc/erlang-jiffy
 DEPENDS+=	erlang-lager>=3.2.1:../../sysutils/erlang-lager
 DEPENDS+=	erlang-luerl>=0.2:../../lang/erlang-luerl
-DEPENDS+=	erlang-p1_mysql>=1.0.1:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_mysql>=1.0.2:../../databases/erlang-p1_mysql
 DEPENDS+=	erlang-p1_oauth2>=0.6.1:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pam>=1.0.0:../../security/erlang-p1_pam
-DEPENDS+=	erlang-p1_pgsql>=1.1.0:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.5:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-stringprep>=1.0.6:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.7:../../net/erlang-stun
+DEPENDS+=	erlang-p1_pgsql>=1.1.1:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_utils>=1.0.6:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-stringprep>=1.0.7:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.0.9:../../net/erlang-stun
+DEPENDS+=	erlang-xmpp>=1.1.4:../../net/erlang-xmpp
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes
@@ -67,8 +68,8 @@ FILES_SUBST+=		EJABBERD_USER=${EJABBERD_USER}
 FILES_SUBST+=		EJABBERD_GROUP=${EJABBERD_GROUP}
 FILES_SUBST+=		EJABBERD_DB=${EJABBERD_DB}
 
-PKG_GROUPS+=		${EJABBERD_GROUP}
-PKG_USERS+=		${EJABBERD_USER}:${EJABBERD_GROUP}
+PKG_GROUPS+=			${EJABBERD_GROUP}
+PKG_USERS+=			${EJABBERD_USER}:${EJABBERD_GROUP}
 PKG_GECOS.${EJABBERD_USER}=	ejabberd user
 PKG_HOME.${EJABBERD_USER}=	${EJABBERD_DB}
 PKG_SHELL.${EJABBERD_USER}=	${SH}
@@ -92,9 +93,9 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Makefile.in ejabberd.yml.example ejabberdctl.template
-SUBST_FILES.paths+=	tools/ejabberdctl.bc
+SUBST_FILES.paths+=	tools/ejabberdctl.bc rebar.config
 SUBST_VARS.paths=	DISTNAME EJABBERD_DB EJABBERD_LOGDIR EJABBERD_PIDDIR
-SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX
+SUBST_VARS.paths+=	PKG_SYSCONFDIR PREFIX LOCALBASE
 
 post-extract:
 	cd ${WRKSRC} && ${MKDIR} deps && ${TOUCH} deps/.got deps/.built
