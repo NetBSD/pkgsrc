@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.77 2017/01/02 17:53:53 adam Exp $
+$NetBSD: CHANGES-2017,v 1.78 2017/01/03 00:00:11 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -86,3 +86,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/sqlite3-docs to 3.16.0 [adam 2017-01-02]
 	Updated databases/sqlite3-tcl to 3.16.0 [adam 2017-01-02]
 	Updated devel/lemon to 1.0.3.16.0 [adam 2017-01-02]
+	Updated mail/thunderbird to 45.6.0 [ryoon 2017-01-02]
