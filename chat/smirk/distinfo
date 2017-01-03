@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:20:24 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/01/03 21:27:33 roy Exp $
 
 SHA1 (smirk-20080111.tar.bz2) = a5cfacbd655e76f39d3d8093b724266f9d6c92ac
 RMD160 (smirk-20080111.tar.bz2) = b834e5c78e7882710d109e603f528fc2fccb7167
 SHA512 (smirk-20080111.tar.bz2) = 3168ea49db68181a543b401134faa391241ba57d582fcdbed0f7e5487be36b449146be40e0c0ca86e5907de41df84a0af338271a835268c18a8446f92c0a509b
 Size (smirk-20080111.tar.bz2) = 151171 bytes
 SHA1 (patch-aa) = 05f337326017d2d457e9d5ee4f369ec1ecf3f30e
+SHA1 (patch-src_comm.c) = 01248034b97a1e084959394e5bd45d26d1d19c3f
+SHA1 (patch-src_forms.c) = 9a9bd84756182609e802632526cf3fb480db9b00
