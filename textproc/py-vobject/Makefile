@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/10/31 16:28:27 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	vobject-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} change_tz change_tz-${PYVERSSUFFIX} && \
-		${MV} ics_diff ics_diff-${PYVERSSUFFIX}
+		${MV} ics_diff ics_diff-${PYVERSSUFFIX} || ${TRUE}
 
 # tests.py is missing in 0.9.3 tarball
 # https://github.com/eventable/vobject/issues/38

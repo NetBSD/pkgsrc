@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	rdflib-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -25,15 +25,15 @@ REPLACE_PYTHON+=	rdflib/tools/rdfpipe.py
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/csv2rdf \
-		${DESTDIR}${PREFIX}/bin/csv2rdf${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/csv2rdf${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/rdf2dot \
-		${DESTDIR}${PREFIX}/bin/rdf2dot${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/rdf2dot${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/rdfgraphisomorphism \
-		${DESTDIR}${PREFIX}/bin/rdfgraphisomorphism${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/rdfgraphisomorphism${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/rdfpipe \
-		${DESTDIR}${PREFIX}/bin/rdfpipe${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/rdfpipe${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/rdfs2dot \
-		${DESTDIR}${PREFIX}/bin/rdfs2dot${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/rdfs2dot${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
