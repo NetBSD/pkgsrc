@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/10/31 16:31:32 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/03 13:23:01 jperkin Exp $
 
 DISTNAME=	sqlparse-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && mv sqlformat sqlformat-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} sqlformat sqlformat-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

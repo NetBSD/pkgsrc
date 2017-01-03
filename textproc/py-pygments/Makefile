@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/12/15 09:42:49 adam Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	Pygments-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 USE_LANGUAGES=		# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/pygmentize ${DESTDIR}${PREFIX}/bin/pygmentize${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/pygmentize ${DESTDIR}${PREFIX}/bin/pygmentize${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
