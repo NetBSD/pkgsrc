@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/08/28 15:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	qrcode-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -27,9 +27,9 @@ SUBST_STAGE.pkgmandir=		post-patch
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/qr \
-		${DESTDIR}${PREFIX}/bin/qr${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/qr${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qr.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qr${PYVERSSUFFIX}.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/qr${PYVERSSUFFIX}.1 || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

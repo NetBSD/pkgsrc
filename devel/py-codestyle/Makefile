@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/30 10:36:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/03 13:23:01 jperkin Exp $
 
 DISTNAME=	pycodestyle-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && mv pycodestyle pycodestyle-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} pycodestyle pycodestyle-${PYVERSSUFFIX} || ${TRUE}
 
 do-test:
 	cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} setup.py test

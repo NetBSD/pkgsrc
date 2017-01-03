@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/12/12 14:02:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/03 13:23:02 jperkin Exp $
 
 DISTNAME=	pytest-3.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -24,7 +24,7 @@ REPLACE_PYTHON+=	_pytest/standalonetemplate.py
 post-install:
 	cd ${DESTDIR}${PREFIX}/bin && \
 		${MV} py.test py.test-${PYVERSSUFFIX} && \
-		${MV} pytest pytest-${PYVERSSUFFIX}
+		${MV} pytest pytest-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

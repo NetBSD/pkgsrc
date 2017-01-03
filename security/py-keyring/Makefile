@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/08/28 15:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	keyring-5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-hgtools>=5.0:../../devel/py-hgtools
 REPLACE_PYTHON+=	keyring/cli.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/keyring ${DESTDIR}${PREFIX}/bin/keyring-${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/keyring ${DESTDIR}${PREFIX}/bin/keyring-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

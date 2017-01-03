@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	hy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,11 +19,11 @@ PY_PATCHPLIST=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/hy \
-		${DESTDIR}${PREFIX}/bin/hy${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/hy${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/hy2py \
-		${DESTDIR}${PREFIX}/bin/hy2py${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/hy2py${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/hyc \
-		${DESTDIR}${PREFIX}/bin/hyc${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/hyc${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

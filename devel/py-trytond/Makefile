@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/12/04 21:12:59 rodent Exp $
+# $NetBSD: Makefile,v 1.16 2017/01/03 13:23:02 jperkin Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
@@ -55,11 +55,11 @@ CONF_FILES+=		${EGDIR}/logging.conf.example \
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond-admin \
-		${DESTDIR}${PREFIX}/bin/trytond-admin${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/trytond-admin${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond-cron \
-		${DESTDIR}${PREFIX}/bin/trytond-cron${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/trytond-cron${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond \
-		${DESTDIR}${PREFIX}/bin/trytond${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/trytond${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${FILESDIR}/trytond.conf.example \
 		${DESTDIR}${PREFIX}/${EGDIR}/trytond.conf.example
 	${INSTALL_DATA} ${FILESDIR}/logging.conf.example \
