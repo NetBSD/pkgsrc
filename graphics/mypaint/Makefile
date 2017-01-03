@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/01 14:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/03 08:54:17 ryoon Exp $
 
 DISTNAME=	mypaint-1.1.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.gna.org/mypaint/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://mypaint.intilinux.com/
+HOMEPAGE=	http://mypaint.org/
 COMMENT=	Fast and easy open-source graphics application for digital painters
 LICENSE=	gnu-gpl-v2
 
