@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2016/11/28 14:58:34 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2017/01/03 18:55:43 roy Exp $
 # -*- Makefile -*-
 # used by security/pinentry/Makefile
 # used by security/pinentry-gtk2/Makefile
@@ -28,5 +28,5 @@ BUILDLINK_API_DEPENDS.libassuan+=       libassuan>=2.1.0
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

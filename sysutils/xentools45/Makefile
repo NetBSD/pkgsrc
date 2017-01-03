@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/01/01 14:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2017/01/03 19:01:41 roy Exp $
 
 VERSION=	4.5.5
 PKGREVISION=	3
@@ -222,7 +222,6 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
@@ -231,4 +230,5 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 .include "../../devel/yajl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
