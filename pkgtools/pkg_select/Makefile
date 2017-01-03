@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2016/05/07 10:08:30 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/03 18:45:15 roy Exp $
 #
 
 DISTNAME=	pkg_select-20090308
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -49,5 +49,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/pkg_select.1				\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
