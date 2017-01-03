@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2016/08/16 00:38:25 wen Exp $
+# $NetBSD: Makefile,v 1.58 2017/01/03 16:44:20 wiz Exp $
 
 DISTNAME=	Curses-1.36
 PKGNAME=	p5-${DISTNAME}
@@ -8,11 +8,9 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Curses/
 COMMENT=	Perl5 module for terminal screen handling and optimization
-# really it's gnu-gpl-v1+ OR artistic-1.0, but currently we don't have gplv1
-LICENSE=	${PERL5_LICENSE}
+LICENSE=	gnu-gpl-v1 OR artistic
 
 PERL5_PACKLIST=		auto/Curses/.packlist
-
 
 MAKE_PARAMS+=	FORMS MENUS
 
