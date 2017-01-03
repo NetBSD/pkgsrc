@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.85 2017/01/03 07:44:09 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.86 2017/01/03 08:38:33 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -94,3 +94,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-xlsxwriter to 0.9.6 [fhajny 2017-01-03]
 	Updated sysutils/consul to 0.7.2 [fhajny 2017-01-03]
 	Updated security/vault to 0.6.4 [fhajny 2017-01-03]
+	Updated lang/erlang to 19.2 [fhajny 2017-01-03]
+	Updated lang/erlang-doc to 19.2 [fhajny 2017-01-03]
+	Updated lang/erlang-man to 19.2 [fhajny 2017-01-03]
