@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/10/02 10:12:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/01/03 08:37:00 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -1427,6 +1427,7 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDialog.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDirDialog.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDirPickerCtrl.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDisplayChangedEvent.html
+lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDropFilesEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxEraseEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxEvtHandler.html

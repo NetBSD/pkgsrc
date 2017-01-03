@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/08/09 15:03:15 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/01/03 08:37:01 fhajny Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -425,6 +425,7 @@ lib/erlang/man/man3/wxDialog.3
 lib/erlang/man/man3/wxDirDialog.3
 lib/erlang/man/man3/wxDirPickerCtrl.3
 lib/erlang/man/man3/wxDisplayChangedEvent.3
+lib/erlang/man/man3/wxDropFilesEvent.3
 lib/erlang/man/man3/wxEraseEvent.3
 lib/erlang/man/man3/wxEvent.3
 lib/erlang/man/man3/wxEvtHandler.3
