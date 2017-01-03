@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/03 13:23:02 jperkin Exp $
 
 DISTNAME=	ipython-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,11 +26,10 @@ USE_LANGUAGES=	# none
 REPLACE_PYTHON=	*/*/*.py */*/*/*.py
 
 post-install:
-	mv ${DESTDIR}${PREFIX}/bin/iptest ${DESTDIR}${PREFIX}/bin/iptest${PYVERSSUFFIX}
-	for f in ipcluster ipcontroller ipengine ipython ; \
-	do \
-		mv ${DESTDIR}${PREFIX}/bin/$$f ${DESTDIR}${PREFIX}/bin/$${f}${PYVERSSUFFIX}; \
-		mv ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}${PYVERSSUFFIX}.1; \
+	${MV} ${DESTDIR}${PREFIX}/bin/iptest ${DESTDIR}${PREFIX}/bin/iptest${PYVERSSUFFIX} || ${TRUE}
+	for f in ipcluster ipcontroller ipengine ipython; do \
+		${MV} ${DESTDIR}${PREFIX}/bin/$$f ${DESTDIR}${PREFIX}/bin/$${f}${PYVERSSUFFIX} || ${TRUE}; \
+		${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}${PYVERSSUFFIX}.1 || ${TRUE}; \
 	done
 
 .include "../../lang/python/distutils.mk"
