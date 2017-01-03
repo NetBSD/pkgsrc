@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/03 22:19:10 roy Exp $
 
 DISTNAME=	whowatch-1.4
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://wizard.ae.krakow.pl/~mike/download/ \
 		http://janek.ae.krakow.pl/~suszyckm/download/
@@ -11,6 +11,7 @@ HOMEPAGE=	http://wizard.ae.krakow.pl/~mike/\#whowatch
 COMMENT=	Interactive who-like program displaying real-time user information
 
 GNU_CONFIGURE=	YES
+FAKE_NCURSES=	yes
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
@@ -18,5 +19,5 @@ INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \
 
 CFLAGS.NetBSD+=	-D_KMEMUSER
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
