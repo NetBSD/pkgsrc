@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.42 2016/10/02 12:17:40 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.43 2017/01/03 18:52:33 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
-lib/erlang/lib/${PKGNAME}/ebin/adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_anonymous.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_digest.beam
@@ -11,6 +10,7 @@ lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_plain.beam
 lib/erlang/lib/${PKGNAME}/ebin/cyrsasl_scram.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.app
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_access_permissions.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_admin.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_app.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_auth.beam
@@ -21,6 +21,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_auth_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_auth_pam.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_auth_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_auth_sql.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_bosh.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_c2s.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_c2s_config.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_captcha.beam
@@ -38,9 +39,11 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_idna.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_listener.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_local.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_logger.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_node_groups.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_mnesia.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_rest.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_oauth_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_piefxis.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_rdbms.beam
@@ -86,7 +89,6 @@ lib/erlang/lib/${PKGNAME}/ebin/gen_mod.beam
 lib/erlang/lib/${PKGNAME}/ebin/gen_pubsub_node.beam
 lib/erlang/lib/${PKGNAME}/ebin/gen_pubsub_nodetree.beam
 lib/erlang/lib/${PKGNAME}/ebin/jd2ejd.beam
-lib/erlang/lib/${PKGNAME}/ebin/jid.beam
 lib/erlang/lib/${PKGNAME}/ebin/jlib.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_adhoc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_admin_extra.beam
@@ -98,6 +100,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_blocking.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_riak.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_blocking_sql.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_bosh.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_caps_riak.beam
@@ -106,7 +109,6 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_carboncopy_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_client_state.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_configure.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_configure2.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_delegation.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_disco.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_echo.beam
@@ -216,6 +218,7 @@ lib/erlang/lib/${PKGNAME}/ebin/pubsub_migrate.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_subscription_sql.beam
 lib/erlang/lib/${PKGNAME}/ebin/randoms.beam
+lib/erlang/lib/${PKGNAME}/ebin/rest.beam
 lib/erlang/lib/${PKGNAME}/ebin/scram.beam
 lib/erlang/lib/${PKGNAME}/ebin/shaper.beam
 lib/erlang/lib/${PKGNAME}/ebin/sql_queries.beam
@@ -225,13 +228,13 @@ lib/erlang/lib/${PKGNAME}/ebin/win32_dns.beam
 lib/erlang/lib/${PKGNAME}/include/ELDAPv3.hrl
 lib/erlang/lib/${PKGNAME}/include/XmppAddr.hrl
 lib/erlang/lib/${PKGNAME}/include/adhoc.hrl
+lib/erlang/lib/${PKGNAME}/include/bosh.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_commands.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_ctl.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_http.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_oauth.hrl
-lib/erlang/lib/${PKGNAME}/include/ejabberd_service.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sm.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sql_pt.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_web_admin.hrl
@@ -255,7 +258,6 @@ lib/erlang/lib/${PKGNAME}/include/mod_roster.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_shared_roster.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_vcard.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_vcard_xupdate.hrl
-lib/erlang/lib/${PKGNAME}/include/ns.hrl
 lib/erlang/lib/${PKGNAME}/include/pubsub.hrl
 lib/erlang/lib/${PKGNAME}/priv/bin/captcha.sh
 lib/erlang/lib/${PKGNAME}/priv/msgs/ca.msg
@@ -294,3 +296,4 @@ share/doc/ejabberd/COPYING
 share/examples/ejabberd/ejabberd.yml
 share/examples/ejabberd/ejabberdctl.cfg
 share/examples/ejabberd/inetrc
+@pkgdir bin
