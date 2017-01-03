@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/01/03 22:16:03 roy Exp $
 #
 
 DISTNAME=	wtail-0.2.2
@@ -12,5 +12,5 @@ COMMENT=	Watch multiple files at once
 
 MAKE_ENV+=	SED=${SED:Q}
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
