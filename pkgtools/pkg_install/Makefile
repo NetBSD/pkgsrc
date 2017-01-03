@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2016/06/21 12:23:01 joerg Exp $
+# $NetBSD: Makefile,v 1.219 2017/01/03 17:53:14 jperkin Exp $
 
 # Notes to package maintainers:
 #
@@ -213,9 +213,9 @@ pre-configure:
 		${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS} ./configure	\
 		--disable-bsdcpio --disable-bsdtar --disable-shared	\
 		--disable-dependency-tracking --without-expat		\
-		--disable-maintainer-mode \
+		--disable-maintainer-mode				\
 		--without-iconv --without-lzo2 --without-nettle		\
-		--without-xml2	\
+		--without-xml2 --without-lz4				\
 		${LIBARCHIVE_CONFIGURE_ARGS}
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
