@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2016/10/17 22:00:22 nros Exp $
+# $NetBSD: options.mk,v 1.13 2017/01/03 14:31:13 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache geoip
+PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache geoip gssapi
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -47,6 +47,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
+PLIST.ldap=		yes
 .endif
 
 ###
@@ -75,6 +76,7 @@ CONFIGURE_ARGS+=	--with-memcache
 .  include "../../mk/mysql.buildlink3.mk"
 MYSQL_CONFIG?=		${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config
 CONFIGURE_ARGS+=	--with-mysql=${MYSQL_CONFIG:Q}
+PLIST.mysql=		yes
 .endif
 
 ###
@@ -90,5 +92,32 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 ###
 .if !empty(PKG_OPTIONS:Mgeoip)
 .  include "../../net/GeoIP/buildlink3.mk"
-CONFIGURE_ARGS+=        --with-geoip
+CONFIGURE_ARGS+=	--with-geoip
+PLIST.geoip=		yes
+.endif
+
+###
+### gssapi
+###
+.if !empty(PKG_OPTIONS:Mgssapi)
+.include "../../security/mit-krb5/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-krb5
+PLIST.gssapi=		yes
+.endif
+
+
+###
+### gdbm
+###
+.if !empty(PKG_OPTIONS:Mgdbm)
+.  include "../../databases/gdbm/buildlink3.mk"
+PLIST.gdbm=		yes
+.endif
+
+###
+### lua
+###
+.if !empty(PKG_OPTIONS:Mlua)
+.  include "../../lang/lua/buildlink3.mk"
+PLIST.lua=		yes
 .endif
