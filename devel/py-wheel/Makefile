@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/28 15:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	wheel-0.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/wheel \
-	      ${DESTDIR}${PREFIX}/bin/wheel-${PYVERSSUFFIX}
+	      ${DESTDIR}${PREFIX}/bin/wheel-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

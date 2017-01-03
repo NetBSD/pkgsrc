@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/01/01 14:43:35 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/03 13:23:02 jperkin Exp $
 TRYTON_MODULE_NAME=	tryton
 PKGREVISION= 1
 .include "../../devel/py-trytond/Makefile.common"
@@ -22,7 +22,7 @@ DEPENDS.Darwin+=	${PYPKGPREFIX}-py2app-[0-9]*:../../devel/py-py2app
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/tryton \
-		${DESTDIR}${PREFIX}/bin/tryton${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/tryton${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

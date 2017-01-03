@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:02 jperkin Exp $
 
 DISTNAME=	modulegraph-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/modulegraph \
-		${DESTDIR}${PREFIX}/bin/modulegraph${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/modulegraph${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

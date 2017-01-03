@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/08/28 15:45:36 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/03 13:23:02 jperkin Exp $
 
 DISTNAME=	py2app-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM=	Darwin-*-*
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/py2applet \
-		${DESTDIR}${PREFIX}/bin/py2applet${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/py2applet${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

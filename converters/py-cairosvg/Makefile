@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/08/28 15:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/03 13:23:01 jperkin Exp $
 
 DISTNAME=	CairoSVG-1.0.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -18,7 +18,7 @@ PY_PATCHPLIST=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/cairosvg \
-		${DESTDIR}${PREFIX}/bin/cairosvg${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/cairosvg${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
