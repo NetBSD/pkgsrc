@@ -1,4 +1,4 @@
-$NetBSD: patch-INSTHIER,v 1.1 2017/01/02 02:19:47 schmonz Exp $
+$NetBSD: patch-INSTHIER,v 1.2 2017/01/03 13:56:41 schmonz Exp $
 
 Libtoolize, and set reasonable permissions on installed headers.
 
@@ -32,25 +32,25 @@ Libtoolize, and set reasonable permissions on installed headers.
 -c:::755::protocol-qmqp.so
 -c:::755::protocol-qmtp.so
 -c:::755::protocol-smtp.so
-+c:::755::backend-echo.so:.libs/backend-echo.0.so
-+c:::755::backend-qmail.so:.libs/backend-qmail.0.so
-+c:::755::backend-queuedir.so:.libs/backend-queuedir.0.so
-+c:::755::plugin-add-received.so:.libs/plugin-add-received.0.so
-+c:::755::plugin-check-fqdn.so:.libs/plugin-check-fqdn.0.so
-+c:::755::plugin-clamav.so:.libs/plugin-clamav.0.so
-+c:::755::plugin-counters.so:.libs/plugin-counters.0.so
-+c:::755::plugin-cvm-authenticate.so:.libs/plugin-cvm-authenticate.0.so
-+c:::755::plugin-cvm-validate.so:.libs/plugin-cvm-validate.0.so
-+c?:::755::plugin-lua.so:.libs/plugin-lua.0.so
-+c:::755::plugin-mailrules.so:.libs/plugin-mailrules.0.so
-+c:::755::plugin-patterns.so:.libs/plugin-patterns.0.so
-+c:::755::plugin-qmail-validate.so:.libs/plugin-qmail-validate.0.so
-+c:::755::plugin-rbl.so:.libs/plugin-rbl.0.so
-+c:::755::plugin-spamassassin.so:.libs/plugin-spamassassin.0.so
-+c:::755::plugin-starttls-ucspi.so:.libs/plugin-starttls-ucspi.0.so
-+c:::755::protocol-qmqp.so:.libs/protocol-qmqp.0.so
-+c:::755::protocol-qmtp.so:.libs/protocol-qmtp.0.so
-+c:::755::protocol-smtp.so:.libs/protocol-smtp.0.so
++c:::755::backend-echo.so:.libs/backend-echo.so
++c:::755::backend-qmail.so:.libs/backend-qmail.so
++c:::755::backend-queuedir.so:.libs/backend-queuedir.so
++c:::755::plugin-add-received.so:.libs/plugin-add-received.so
++c:::755::plugin-check-fqdn.so:.libs/plugin-check-fqdn.so
++c:::755::plugin-clamav.so:.libs/plugin-clamav.so
++c:::755::plugin-counters.so:.libs/plugin-counters.so
++c:::755::plugin-cvm-authenticate.so:.libs/plugin-cvm-authenticate.so
++c:::755::plugin-cvm-validate.so:.libs/plugin-cvm-validate.so
++c?:::755::plugin-lua.so:.libs/plugin-lua.so
++c:::755::plugin-mailrules.so:.libs/plugin-mailrules.so
++c:::755::plugin-patterns.so:.libs/plugin-patterns.so
++c:::755::plugin-qmail-validate.so:.libs/plugin-qmail-validate.so
++c:::755::plugin-rbl.so:.libs/plugin-rbl.so
++c:::755::plugin-spamassassin.so:.libs/plugin-spamassassin.so
++c:::755::plugin-starttls-ucspi.so:.libs/plugin-starttls-ucspi.so
++c:::755::protocol-qmqp.so:.libs/protocol-qmqp.so
++c:::755::protocol-qmtp.so:.libs/protocol-qmtp.so
++c:::755::protocol-smtp.so:.libs/protocol-smtp.so
  
  >include
  d:::755:mailfront
