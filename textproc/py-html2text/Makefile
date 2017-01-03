@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/12/04 22:02:00 rodent Exp $
+# $NetBSD: Makefile,v 1.50 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=		html2text-2016.9.19
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=		# none
 REPLACE_PYTHON=	html2text/__init__.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/html2text ${DESTDIR}${PREFIX}/bin/html2text-${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/html2text ${DESTDIR}${PREFIX}/bin/html2text-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

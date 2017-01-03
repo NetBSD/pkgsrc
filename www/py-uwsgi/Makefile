@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/11/04 21:38:59 maya Exp $
+# $NetBSD: Makefile,v 1.35 2017/01/03 13:23:05 jperkin Exp $
 
 DISTNAME=	uwsgi-2.0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	share/examples/${PYPKGPREFIX}-uwsgi
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/uwsgi \
-		${DESTDIR}${PREFIX}/bin/uwsgi-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/uwsgi-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/examples/* \
 		${DESTDIR}${PREFIX}/share/examples/${PYPKGPREFIX}-uwsgi
 

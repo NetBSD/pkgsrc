@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/12/15 10:42:30 adam Exp $
+# $NetBSD: Makefile,v 1.46 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	docutils-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ CMDS+=	rst2pseudoxml rst2s5 rst2xetex rst2xml rstpep2html
 
 post-install:
 	for f in ${CMDS}; do \
-	${MV} ${DESTDIR}${PREFIX}/bin/$$f.py ${DESTDIR}${PREFIX}/bin/$$f-${PYVERSSUFFIX}.py; \
+	${MV} ${DESTDIR}${PREFIX}/bin/$$f.py ${DESTDIR}${PREFIX}/bin/$$f-${PYVERSSUFFIX}.py || ${TRUE}; \
 	done
 
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/09/09 09:44:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	mod_wsgi-4.4.12
 PKGNAME=	${PYPKGPREFIX}-${APACHE_PKG_PREFIX}-${DISTNAME}
@@ -25,7 +25,7 @@ post-extract:
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/mod_wsgi-express \
-		${DESTDIR}${PREFIX}/bin/mod_wsgi-express${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/mod_wsgi-express${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
