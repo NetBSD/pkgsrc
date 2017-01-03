@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2017/01/03 14:31:13 mef Exp $
+# $NetBSD: options.mk,v 1.14 2017/01/03 14:38:50 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache geoip gssapi
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--with-fam
 .if !empty(PKG_OPTIONS:Mgdbm)
 .  include "../../databases/gdbm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gdbm
+PLIST.gdbm=		yes
 .endif
 
 ###
@@ -103,15 +104,6 @@ PLIST.geoip=		yes
 .include "../../security/mit-krb5/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-krb5
 PLIST.gssapi=		yes
-.endif
-
-
-###
-### gdbm
-###
-.if !empty(PKG_OPTIONS:Mgdbm)
-.  include "../../databases/gdbm/buildlink3.mk"
-PLIST.gdbm=		yes
 .endif
 
 ###
