@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2017/01/02 10:00:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.65 2017/01/03 02:31:36 wiz Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -30,7 +30,7 @@ LICENSE=	boost-license
 
 CONFLICTS+=		boost<1.36.0
 
-DIST_SUBDIR=		boost-1.63.0v2
+DIST_SUBDIR=		boost-1.63.0v3
 
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
