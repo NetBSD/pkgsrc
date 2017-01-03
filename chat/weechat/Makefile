@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2017/01/01 16:06:05 adam Exp $
+# $NetBSD: Makefile,v 1.67 2017/01/03 20:49:23 roy Exp $
 
 DISTNAME=	weechat-1.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat
 MASTER_SITES=	http://www.weechat.org/files/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ USE_TOOLS+=		msgfmt pkg-config
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
+FAKE_NCURSES=		yes
 
 CMAKE_ARGS+=		-DENABLE_ASPELL:BOOL=OFF
 CMAKE_ARGS+=		-DENABLE_GUILE:BOOL=OFF
@@ -39,4 +40,5 @@ LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 .include "../../www/curl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
