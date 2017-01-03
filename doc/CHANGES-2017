@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.91 2017/01/03 18:22:05 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.92 2017/01/03 18:22:16 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -102,3 +102,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/erlang-fast_xml to 1.1.18 [fhajny 2017-01-03]
 	Updated www/lighttpd to 1.4.44 [mef 2017-01-03]
 	Updated textproc/erlang-fast_yaml to 1.0.7 [fhajny 2017-01-03]
+	Updated textproc/erlang-stringprep to 1.0.7 [fhajny 2017-01-03]
