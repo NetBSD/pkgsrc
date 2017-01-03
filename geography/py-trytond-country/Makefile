@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/12/04 21:13:05 rodent Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/03 13:23:03 jperkin Exp $
 TRYTON_MODULE_NAME=	trytond_country
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	geography python
@@ -18,7 +18,7 @@ PY_PATCHPLIST=			yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond_import_zip \
-		${DESTDIR}${PREFIX}/bin/trytond${PYVERSSUFFIX}_import_zip
+		${DESTDIR}${PREFIX}/bin/trytond${PYVERSSUFFIX}_import_zip || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

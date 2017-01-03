@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	pygal-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ PY_PATCHPLIST=	yes
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/pygal_gen.py \
-		${DESTDIR}${PREFIX}/bin/pygal_gen${PYVERSSUFFIX}.py
+		${DESTDIR}${PREFIX}/bin/pygal_gen${PYVERSSUFFIX}.py || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

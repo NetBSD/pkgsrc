@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:33 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	celery-3.1.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,13 +19,13 @@ USE_LANGUAGES=	c
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/celery \
-		${DESTDIR}${PREFIX}/bin/celery${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/celery${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/celerybeat \
-		${DESTDIR}${PREFIX}/bin/celerybeat${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/celerybeat${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/celeryd \
-		${DESTDIR}${PREFIX}/bin/celeryd${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/celeryd${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/celeryd-multi \
-		${DESTDIR}${PREFIX}/bin/celeryd-multi${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/celeryd-multi${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

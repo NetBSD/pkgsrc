@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/08/29 15:44:26 darcy Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/03 13:23:02 jperkin Exp $
 
 DISTNAME=	pylint-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,15 +23,15 @@ REPLACE_PYTHON+=	pylint/__main__.py pylint/test/data/ascript pylint/test/input/n
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/epylint \
-		${DESTDIR}${PREFIX}/bin/epylint-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/epylint-${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/pylint \
-		${DESTDIR}${PREFIX}/bin/pylint-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/pylint-${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/pylint-gui \
-		${DESTDIR}${PREFIX}/bin/pylint-gui-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/pylint-gui-${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/pyreverse \
-		${DESTDIR}${PREFIX}/bin/pyreverse-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/pyreverse-${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/symilar \
-		${DESTDIR}${PREFIX}/bin/symilar-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/symilar-${PYVERSSUFFIX} || ${TRUE}
 	${INSTALL_MAN} ${WRKSRC}/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 do-test:

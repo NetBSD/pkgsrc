@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/10/26 13:44:17 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	jsonschema-2.5.1
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-vcversioner-[0-9]*:../../devel/py-vcversioner
 .include "../../lang/python/egg.mk"
 
 post-install:
-	mv ${DESTDIR}${PREFIX}/bin/jsonschema ${DESTDIR}${PREFIX}/bin/jsonschema${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/jsonschema ${DESTDIR}${PREFIX}/bin/jsonschema${PYVERSSUFFIX} || ${TRUE}
 	${RM} -r -f ${DESTDIR}${PREFIX}${PYSITELIB}/jsonschema/__pycache__
 
 .include "../../mk/bsd.pkg.mk"

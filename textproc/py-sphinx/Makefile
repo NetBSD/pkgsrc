@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/12/16 20:05:58 adam Exp $
+# $NetBSD: Makefile,v 1.36 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	Sphinx-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -36,10 +36,10 @@ post-extract:
 	${RM} ${WRKSRC}/sphinx/locale/__init__.pyc
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX}
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-autogen ${DESTDIR}${PREFIX}/bin/sphinx-autogen${PYVERSSUFFIX}
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-build ${DESTDIR}${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
-	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-quickstart ${DESTDIR}${PREFIX}/bin/sphinx-quickstart${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-autogen ${DESTDIR}${PREFIX}/bin/sphinx-autogen${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-build ${DESTDIR}${PREFIX}/bin/sphinx-build${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-quickstart ${DESTDIR}${PREFIX}/bin/sphinx-quickstart${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

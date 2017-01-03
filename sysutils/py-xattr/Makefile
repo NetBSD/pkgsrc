@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/01 14:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	v0.7.6
 PROPERNAME=	${DISTNAME:S/v/xattr-/}
@@ -26,7 +26,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/xattr \
-		${DESTDIR}${PREFIX}/bin/xattr-${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/xattr-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

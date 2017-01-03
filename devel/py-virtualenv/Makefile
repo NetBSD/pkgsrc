@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/11/28 15:15:40 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	virtualenv-15.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 REPLACE_PYTHON=	virtualenv.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/virtualenv ${DESTDIR}${PREFIX}/bin/virtualenv-${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/virtualenv ${DESTDIR}${PREFIX}/bin/virtualenv-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

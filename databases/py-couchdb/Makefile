@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/01/01 14:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:01 jperkin Exp $
 
 DISTNAME=	CouchDB-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -31,13 +31,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.rst \
 		${DESTDIR}${PREFIX}/share/doc/py-couchdb
 	${MV} ${DESTDIR}${PREFIX}/bin/couchdb-dump \
-		${DESTDIR}${PREFIX}/bin/couchdb-dump${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/couchdb-dump${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/couchdb-load \
-		${DESTDIR}${PREFIX}/bin/couchdb-load${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/couchdb-load${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/couchdb-replicate \
-		${DESTDIR}${PREFIX}/bin/couchdb-replicate${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/couchdb-replicate${PYVERSSUFFIX} || ${TRUE}
 	${MV} ${DESTDIR}${PREFIX}/bin/couchpy \
-		${DESTDIR}${PREFIX}/bin/couchpy${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/couchpy${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

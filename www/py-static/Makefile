@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/03 13:23:05 jperkin Exp $
 
 DISTNAME=	static-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/static ${DESTDIR}${PREFIX}/bin/static-${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/static ${DESTDIR}${PREFIX}/bin/static-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

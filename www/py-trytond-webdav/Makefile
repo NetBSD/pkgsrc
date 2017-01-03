@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/01/01 14:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/03 13:23:05 jperkin Exp $
 TRYTON_MODULE_NAME=	trytond_webdav
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python www
@@ -17,7 +17,7 @@ REPLACE_PYTHON+=	tests/test_webdav.py
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond-webdav \
-		${DESTDIR}${PREFIX}/bin/trytond-webdav${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/trytond-webdav${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

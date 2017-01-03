@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/08/28 15:48:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/03 13:23:02 jperkin Exp $
 
 DISTNAME=		unittest2py3k-0.5.1
 # to match python-2.x name
@@ -20,9 +20,9 @@ PLIST_SUBST+=		DOCDIR=${DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}
-	${RM} ${DESTDIR}${PREFIX}/bin/unit2
+	${RM} -f ${DESTDIR}${PREFIX}/bin/unit2
 	${MV} ${DESTDIR}${PREFIX}/bin/unit2.py \
-		${DESTDIR}${PREFIX}/bin/unit2-${PYVERSSUFFIX}.py
+		${DESTDIR}${PREFIX}/bin/unit2-${PYVERSSUFFIX}.py || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

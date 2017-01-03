@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/08/28 15:48:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/03 13:23:05 jperkin Exp $
 
 DISTNAME=	uwsgitop-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/uwsgitop \
-		${DESTDIR}${PREFIX}/bin/uwsgitop${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/uwsgitop${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

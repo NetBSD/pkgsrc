@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/08/28 15:48:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/01/03 13:23:01 jperkin Exp $
 
 DISTNAME=	chardet-2.3.0
 PKGREVISION=	1
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 REPLACE_PYTHON=		chardet/chardetect.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/chardetect ${DESTDIR}${PREFIX}/bin/chardetect-${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/chardetect ${DESTDIR}${PREFIX}/bin/chardetect-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"

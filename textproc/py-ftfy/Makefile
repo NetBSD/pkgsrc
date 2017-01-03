@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/28 15:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/03 13:23:04 jperkin Exp $
 
 DISTNAME=	ftfy-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/ftfy \
-		${DESTDIR}${PREFIX}/bin/ftfy${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/ftfy${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

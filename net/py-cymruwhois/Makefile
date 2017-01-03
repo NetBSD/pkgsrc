@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/08/28 15:48:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/03 13:23:03 jperkin Exp $
 
 DISTNAME=	python-cymruwhois-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 EGG_NAME=	${DISTNAME:S/python-//}
 
 post-install:
-	cd ${DESTDIR}${PREFIX}/bin && mv cymruwhois cymruwhois-${PYVERSSUFFIX}
+	cd ${DESTDIR}${PREFIX}/bin && ${MV} cymruwhois cymruwhois-${PYVERSSUFFIX} || ${TRUE}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
