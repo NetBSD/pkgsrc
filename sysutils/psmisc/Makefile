@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/08/10 07:31:31 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/03 19:52:38 roy Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -39,9 +39,5 @@ post-install:
 	${LN} -f ${DESTDIR}${PREFIX}/bin/killall ${DESTDIR}${PREFIX}/bin/pidof
 
 .include "../../mk/termcap.buildlink3.mk"
-# XXX configure only tests for ncurses and termcap.
-.if empty(BUILDLINK_TREE:Mncurses)
-BUILDLINK_TRANSFORM+=	l:ncurses:curses
-.endif
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
