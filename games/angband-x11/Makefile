@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2015/09/08 11:57:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2017/01/03 21:39:22 roy Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -47,8 +47,8 @@ post-install:
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
