@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.83 2017/01/03 07:21:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.84 2017/01/03 07:39:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -92,3 +92,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/syncthing to 0.14.18 [wiz 2017-01-03]
 	Updated databases/redis to 3.2.6 [fhajny 2017-01-03]
 	Updated textproc/py-xlsxwriter to 0.9.6 [fhajny 2017-01-03]
+	Updated sysutils/consul to 0.7.2 [fhajny 2017-01-03]
