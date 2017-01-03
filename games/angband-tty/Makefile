@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/08/18 07:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2017/01/03 21:38:29 roy Exp $
 #
 
 DISTNAME=		angband-283
@@ -47,5 +47,5 @@ do-install:
 		${CHMOD} ${GAMEDIRMODE} apex bone data edit file help info save user xtra
 	${INSTALL_PROGRAM} ${WRKSRC}/angband ${DESTDIR}${PREFIX}/bin
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
