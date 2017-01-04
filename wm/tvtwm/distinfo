@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/02 23:42:54 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/01/04 12:20:07 jperkin Exp $
 
 SHA1 (tvtwm.pl11.tar.gz) = a0e092c6dbab072b488606c28a78746d1b55d078
 RMD160 (tvtwm.pl11.tar.gz) = ec346d31b1e9302d781ba5d67d08e8c2728f4a4f
@@ -12,7 +12,7 @@ SHA1 (patch-ag) = ee456b9eef5ef6e1ab55afe13ee39d587e17afa3
 SHA1 (patch-ah) = d2fbfe56a5588c6b490df4c9ada37ee3bc3b0cb9
 SHA1 (patch-ai) = 81475df3d97a1d3506ffc5075d9687857d32af83
 SHA1 (patch-aj) = ec674f384a42375765576873cfba98b292c76e82
-SHA1 (patch-ak) = 952a03dbe17e520a46384c61ecd9b6655eeeb793
+SHA1 (patch-ak) = 6eef3a42620782067542cc2b4c8e0ef413236d18
 SHA1 (patch-al) = 6614b46b5f348ebaf8418494ab1eac71bf845f63
 SHA1 (patch-am) = 3691648d9a7f1b25f742f359cdf50e32bb11ddc3
 SHA1 (patch-an) = db292b1aa120da9a95629352175b5042a1bb7d77
