@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/08/18 07:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/04 01:16:50 roy Exp $
 #
 
 DISTNAME=	iftop-0.17
@@ -14,7 +14,7 @@ USE_NCURSES=		chgat
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-resolver=netdb_1thread
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
