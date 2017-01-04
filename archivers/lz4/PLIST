@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/12/07 21:34:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/01/04 15:43:51 fhajny Exp $
 bin/lz4
 bin/lz4c
 bin/lz4cat
@@ -9,7 +9,7 @@ include/lz4hc.h
 lib/liblz4.a
 lib/liblz4.so
 lib/liblz4.so.1
-lib/liblz4.so.1.7.4
+lib/liblz4.so.${PKGVERSION}
 lib/pkgconfig/liblz4.pc
 man/man1/lz4.1
 man/man1/lz4c.1
