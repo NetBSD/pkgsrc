@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/06 04:12:49 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/04 23:05:13 rodent Exp $
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/controllers/work_time_controller.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/helpers/work_time_helper.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/models/user_issue_month.rb
@@ -7,6 +7,7 @@ share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/models/wt_holi
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/models/wt_member_order.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/models/wt_project_orders.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/models/wt_ticket_relay.rb
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/views/settings/_work_time_project_settings.html.erb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/views/settings/_work_time_settings.html.erb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/views/work_time/_select_project.html.erb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/app/views/work_time/_select_user.html.erb
@@ -39,6 +40,7 @@ share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/ko.
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/no.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/po.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/pt-BR.yml
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/ru.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/tr.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/locales/zh.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/config/routes.rb
@@ -53,6 +55,7 @@ share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/008_rem
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/009_remove_prj_from_wt_project_orders.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/db/migrate/20141029173025_add_parent_id_index_to_issues.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/init.rb
+share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/lib/work_time_projects_helper_patch.rb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/test/fixtures/user_issue_months.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/test/fixtures/wt_daily_memos.yml
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_work_time/test/fixtures/wt_holidays.yml

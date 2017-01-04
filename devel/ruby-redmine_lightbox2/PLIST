@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/06 04:12:49 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/04 23:05:13 rodent Exp $
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/app/views/attachments/_links.html.erb
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/blank.gif
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/fancybox_loading.gif
@@ -6,7 +6,6 @@ share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/fanc
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/fancybox_overlay.png
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/fancybox_sprite.png
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/fancybox_sprite@2x.png
-share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/images/preview.png
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/javascripts/jquery.fancybox-2.1.5.pack.js
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/javascripts/lightbox.js
 share/${RUBY_PKGPREFIX}-redmine/app/plugins/redmine_lightbox2/assets/stylesheets/jquery.fancybox-2.1.5.css
