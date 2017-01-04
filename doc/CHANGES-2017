@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.115 2017/01/04 16:48:31 sborrill Exp $
+$NetBSD: CHANGES-2017,v 1.116 2017/01/04 21:21:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -126,3 +126,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Net-SSLeay to 1.79 [wiz 2017-01-04]
 	Updated archivers/lz4 to 1.7.5 [fhajny 2017-01-04]
 	Updated sysutils/xenstoretools to 4.6.3 [sborrill 2017-01-04]
+	Updated sysutils/sysgen to 20151230 [abs 2017-01-04]
+	Updated net/mrstat to 1.21 [abs 2017-01-04]
