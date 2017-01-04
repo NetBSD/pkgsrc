@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.117 2017/01/04 23:05:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.118 2017/01/04 23:19:18 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -129,3 +129,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/sysgen to 20151230 [abs 2017-01-04]
 	Updated net/mrstat to 1.21 [abs 2017-01-04]
 	Updated emulators/mame to 0.181 [wiz 2017-01-04]
+	Updated devel/ruby-redmine to 3.3.1 [rodent 2017-01-04]
+	Updated devel/ruby-redmine_bootstrap to 0.2.4 [rodent 2017-01-04]
+	Updated devel/ruby-redmine_code_review to 0.8.0 [rodent 2017-01-04]
+	Updated devel/ruby-redmine-flatly-light-theme to 0.1.1 [rodent 2017-01-04]
+	Updated devel/ruby-redmine-gitmike-theme to 1.1.0 [rodent 2017-01-04]
+	Updated devel/ruby-redmine_lightbox2 to 0.3.1 [rodent 2017-01-04]
+	Updated devel/ruby-redmine-minimal-flat-theme to 1.0.2 [rodent 2017-01-04]
+	Updated devel/ruby-redmine_work_time to 0.3.3 [rodent 2017-01-04]
