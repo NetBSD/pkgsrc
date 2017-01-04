@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/12/30 11:25:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/04 00:10:43 jaapb Exp $
 
 VERSION=	114.08+89
+PKGREVISION=	1
 GITHUB_PROJECT=	ppx_optcomp
 GITHUB_TAG=	6f1ce80
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
