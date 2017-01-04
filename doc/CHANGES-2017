@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.114 2017/01/04 15:44:00 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.115 2017/01/04 16:48:31 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -125,3 +125,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Net-IDN-Encode to 2.400 [wiz 2017-01-04]
 	Updated security/p5-Net-SSLeay to 1.79 [wiz 2017-01-04]
 	Updated archivers/lz4 to 1.7.5 [fhajny 2017-01-04]
+	Updated sysutils/xenstoretools to 4.6.3 [sborrill 2017-01-04]
