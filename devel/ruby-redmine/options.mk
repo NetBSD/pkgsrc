@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2015/11/21 09:32:07 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2017/01/04 23:05:12 rodent Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redmine
 
@@ -15,9 +15,9 @@ PLIST_VARS+=	mysql pgsql sqlite3
 ###
 ### Use mysql, pgsql, or sqlite3 backend
 ###
-MYSQL_DISTFILE=		mysql2-0.3.20.gem
+MYSQL_DISTFILE=		mysql2-0.3.21.gem
 PGSQL_DISTFILE=		pg-0.18.4.gem
-SQLITE3_DISTFILE=	sqlite3-1.3.11.gem
+SQLITE3_DISTFILE=	sqlite3-1.3.12.gem
 
 .if make (distinfo) || make (mdi) # for checksum generation only
 GEMS_DISTFILES+=	${MYSQL_DISTFILE}
@@ -44,9 +44,9 @@ RM_PLIST_SRC+=		PLIST.sqlite3
 ###
 .if !empty(PKG_OPTIONS:Municorn) || make (distinfo) || make (mdi)
 RM_PLIST_SRC+=		PLIST.unicorn
-GEMS_DISTFILES+=	kgio-2.10.0.gem \
-			raindrops-0.15.0.gem \
-			unicorn-5.0.1.gem
+GEMS_DISTFILES+=	kgio-2.11.0.gem \
+			raindrops-0.17.0.gem \
+			unicorn-5.2.0.gem
 
 SUBST_CLASSES+=			prefix
 SUBST_STAGE.prefix=		pre-configure
