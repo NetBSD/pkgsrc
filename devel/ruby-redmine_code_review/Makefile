@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:12:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/04 23:05:12 rodent Exp $
 
 PLUGIN_NAME=	redmine_code_review
-DISTNAME=	${PLUGIN_NAME}-0.7.0
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-MASTER_SITES=	https://bitbucket.org/haru_iida/${PLUGIN_NAME}/downloads/
-EXTRACT_SUFX=	.zip
+DISTNAME=	0.8.0
+PKGNAME=	${RUBY_PKGPREFIX}-${PLUGIN_NAME}-${DISTNAME}
+MASTER_SITES=	https://bitbucket.org/haru_iida/${PLUGIN_NAME}/get/
+DIST_SUBDIR=	ruby-${PLUGIN_NAME}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.r-labs.org/projects/codereview
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND mit
 
 .include "../../meta-pkgs/ruby-redmine-plugins/Makefile.common"
 
-WRKSRC=		${WRKDIR}/${PLUGIN_NAME}
+WRKSRC=		${WRKDIR}/haru_iida-${PLUGIN_NAME}-b1e9c70a334d
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

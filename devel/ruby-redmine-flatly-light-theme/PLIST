@@ -1,14 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/07 12:14:45 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/04 23:05:12 rodent Exp $
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/FontAwesome.otf
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.eot
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.svg
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.ttf
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.woff
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/fonts/fontawesome-webfont.woff2
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/javascripts/theme.js
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/DMSF.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/activity.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/application.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/buttons.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/color_tasks.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/font-awesome.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/forum.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/news.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/pagination.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/projects.css
+share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/redminebacklogs.css
 share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/stylesheets/theme.css
 @pkgdir share/${RUBY_PKGPREFIX}-redmine/app/public/themes/flatly_light_redmine/images
