@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2016/07/09 06:38:37 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2017/01/04 21:46:09 roy Exp $
 #
 
 DISTNAME=	vfu-3.04
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	misc
 MASTER_SITES=	http://cade.datamax.bg/vfu/ \
 		${MASTER_SITE_SUNSITE:=utils/file/managers/}
@@ -15,6 +15,7 @@ COMMENT=	Small, handy, easy-to-use file manager
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	rx/rx_*
+FAKE_NCURSES=	yes
 
 DOCDIR=		${PREFIX}/share/doc/vfu
 EGDIR=		${PREFIX}/share/examples/vfu
@@ -39,5 +40,5 @@ post-install:
 	cd ${WRKSRC} &&							\
 	${INSTALL_DATA} ${WRKSRC}/vfu.conf ${DESTDIR}${EGDIR}/vfu.conf
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
