@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.33 2016/07/09 06:38:51 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.34 2017/01/04 21:36:55 abs Exp $
 
 DISTNAME=	if-psprint-1.10
 PKGREVISION=	6
 CATEGORIES=	print
-MASTER_SITES=	http://if-psprint.googlecode.com/files/
-EXTRACT_SUFX=  	.tbz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=abs0/}
 
-MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/if-psprint/
+MAINTAINER=	abs@absd.org
+HOMEPAGE=	https://github.com/abs0/if-psprint
 COMMENT=	Print text or postscript to arbitrary printer, can use smb
+LICENSE=	public-domain
 
 DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
