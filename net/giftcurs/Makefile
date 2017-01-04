@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/08/18 07:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/04 19:36:11 roy Exp $
 #
 
 DISTNAME=	giFTcurs-0.6.2
@@ -18,6 +18,6 @@ USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/gift/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
