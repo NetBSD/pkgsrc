@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/12/30 11:55:53 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/01/04 13:06:18 jaapb Exp $
 bin/ocsigenserver
 ${PLIST.ocaml-opt}bin/ocsigenserver.opt
 share/examples/ocsigen/ocsigenserver.conf
@@ -62,10 +62,10 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.a
 ${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-dbm.cmxs
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.a
-${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cmxs
+${PLIST.pgsql}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.a
+${PLIST.pgsql}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cma
+${PLIST.pgsql}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cmxa
+${PLIST.pgsql}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-pgsql.cmxs
 ${PLIST.sqlite}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-sqlite.a
 ${PLIST.sqlite}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-sqlite.cma
 ${PLIST.sqlite}${PLIST.ocaml-opt}${OCAML_SITELIB}/ocsigenserver/extensions/ocsipersist-sqlite.cmxa
