@@ -1,20 +1,17 @@
-$NetBSD: patch-ak,v 1.2 2004/05/23 23:28:29 danw Exp $
+$NetBSD: patch-ak,v 1.3 2017/01/04 12:20:07 jperkin Exp $
 
-Index: lex.l
-===================================================================
-RCS file: /home/siren/src/tvtwm/lex.l,v
-retrieving revision 1.1.1.1
-retrieving revision 1.2
-diff -u -r1.1.1.1 -r1.2
---- lex.l	1999/08/08 05:46:53	1.1.1.1
-+++ lex.l	1999/08/08 05:56:51	1.2
-@@ -37,12 +37,34 @@
+Ensure the local yywrap is used.
+
+--- lex.l.orig	1993-03-10 20:57:51.000000000 +0000
++++ lex.l
+@@ -37,12 +37,35 @@
   ***********************************************************************/
  
  /* #include <stdio.h> */		/* lex already includes stdio.h */
 +#include "twm.h"
  #include "gram.h"
  #include "parse.h"
++#undef yywrap
  extern char *ProgramName;
  
  extern int ParseError;
@@ -43,7 +40,7 @@ diff -u -r1.1.1.1 -r1.2
  %}
  
  string				\"([^"]|\\.)*\"
-@@ -94,7 +116,10 @@
+@@ -94,7 +117,10 @@ number				[0-9]+
  				}
  %%
  #ifndef yywrap
