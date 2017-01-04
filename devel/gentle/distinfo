@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:27 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/01/04 12:53:49 jperkin Exp $
 
 SHA1 (gentle-97.tar.gz) = 1cbf70aa6c470346630c407f89878a5f3c0c4406
 RMD160 (gentle-97.tar.gz) = 96cbfca6909f23fa192514eaba0f0fffcfac2d40
@@ -14,6 +14,6 @@ SHA1 (patch-be) = 2c606659ca0f7e44f7939ba15be4c56c995299f2
 SHA1 (patch-bf) = 6517ef2f65a802fff764965dc3a50bf5ce34fb2c
 SHA1 (patch-bg) = 46ad7192e8a766f8d98d1588a0e72873586bb82a
 SHA1 (patch-bh) = d6f4b4f6a5c3c8a5d90ae3515209598e851ec0ed
-SHA1 (patch-bi) = 7ae860cb89585fcb6223beee5bd6e7def405f69e
+SHA1 (patch-bi) = d5677a882bc25d2f0a3f7f398af8864a4c2062dd
 SHA1 (patch-gentle_build) = 17134abe5b892f649ebc7dd9a7b46f3eff9b6896
 SHA1 (patch-reflex_build) = d473baf5f91d762457826e7f4d297d6b95750f87
