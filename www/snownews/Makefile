@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2016/07/09 06:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2017/01/04 15:53:56 roy Exp $
 
 DISTNAME=	snownews-1.5.12
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	www
 MASTER_SITES=	http://kiza.kcore.de/software/snownews/download/
 
@@ -16,8 +16,6 @@ HAS_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt perl
 
-.include "options.mk"
-
 REPLACE_PERL+=		configure opml2snow
 
 CONFIG_SHELL=		perl
@@ -25,6 +23,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 MAKE_ENV+=		EXTRA_CFLAGS=${CFLAGS:Q}
 
 INCOMPAT_CURSES=	NetBSD-[0-4].*-*	#WA_BOLD, WA_REVERSE, KEY_RESIZE
+FAKE_NCURSES=		yes
+
+.include "options.mk"
 
 post-configure:
 	${ECHO} LOCALEPATH=${PREFIX}/${PKGLOCALEDIR}/locale >> ${WRKSRC}/platform_settings
