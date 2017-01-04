@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/09/08 11:57:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/04 14:53:02 roy Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/httpd/access_log
 USE_LANGUAGES=		c c++
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
