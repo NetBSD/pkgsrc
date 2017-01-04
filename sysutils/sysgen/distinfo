@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:32 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/01/04 20:44:25 abs Exp $
 
-SHA1 (sysgen.tar.Z) = 1e821ca50073b53231d585b19035a4064337db44
-RMD160 (sysgen.tar.Z) = 88e160da6f190fe9d288edef06466c0c9d62de4b
-SHA512 (sysgen.tar.Z) = c3015b4cd1c6b40e3e34f471e856816455d798d090ab366f489e68d7af42af4588d8ab6d96022b39589301e328674ca4ce80537b602dd4ed13b667f91f09e6ec
-Size (sysgen.tar.Z) = 8228 bytes
+SHA1 (sysgen/sysgen.tar.Z) = 5576c0cbb7a208f2aba0e6018defd414cb8b12f7
+RMD160 (sysgen/sysgen.tar.Z) = 581a795cfd910f64f0c6ef0d4f761c69a4e15f55
+SHA512 (sysgen/sysgen.tar.Z) = 9c5c55b7c613f22c3ed119f91e4d95e1e704da1b9880685b5329db5e0438461f9dfaf0325630b46b13908fa8ea0e1a4f7ebe801e6d9e6cde4213c6ff50185621
+Size (sysgen/sysgen.tar.Z) = 8843 bytes
