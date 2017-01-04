@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16872 2017/01/04 01:26:25 khorben Exp $
+$NetBSD: TODO,v 1.16873 2017/01/04 14:38:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1192,9 +1192,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
+	o p5-IO-Socket-SSL-2.041
 	o p5-IP-Country-3.03
 	o p5-Memoize-Memcached-0.11
+	o p5-Net-IDN-Encode-2.400
 	o p5-Net-ManageSieve-0.13
+	o p5-Net-SSLeay-1.79
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
 	o p5-PAR-1.029
@@ -1526,6 +1529,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
+	o syncthing-0.14.18
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
@@ -1570,7 +1574,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o top-3.8beta1
 	o topgit-0.8
 	o tor-0.2.9.8 [pkg/51745]
-	o tor-browser-6.0.7
+	o tor-browser-6.0.8
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
