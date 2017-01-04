@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2012/10/28 06:30:23 asau Exp $
+# $NetBSD: Makefile,v 1.37 2017/01/04 22:14:56 abs Exp $
 
 DISTNAME=	ns-remote-1.12
 CATEGORIES=	www
-MASTER_SITES=	http://ns-remote.googlecode.com/files/
-EXTRACT_SUFX=	.tbz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=abs0/}
 
-MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/ns-remote/
+MAINTAINER=	abs@absd.org
+HOMEPAGE=	https://github.com/abs0/ns-remote
 COMMENT=	Remote-control of Netscape and Mozilla-based browsers
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
