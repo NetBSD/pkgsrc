@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/01/03 13:23:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/04 23:45:29 rodent Exp $
 TRYTON_MODULE_NAME=	trytond_webdav
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python www
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Webdav module of the Tryton application platform
 LICENSE=	gnu-gpl-v3
