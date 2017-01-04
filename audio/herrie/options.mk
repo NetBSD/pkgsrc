@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2016/07/10 09:42:07 rillig Exp $
+# $NetBSD: options.mk,v 1.9 2017/01/04 16:47:59 roy Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.herrie
 PKG_SUPPORTED_OPTIONS=		curl libao modplug libspiff sndfile	\
@@ -6,6 +6,7 @@ PKG_SUPPORTED_OPTIONS=		curl libao modplug libspiff sndfile	\
 PKG_SUGGESTED_OPTIONS=		curl
 PKG_OPTIONS_LEGACY_OPTS+=	ncursesw:wide-curses
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} == "native"
@@ -64,11 +65,4 @@ CONFIGURE_ARGS+=	no_strip strict
 .  include "../../audio/libvorbis/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	no_vorbis
-.endif
-
-.if !empty(PKG_OPTIONS:Mwide-curses)
-.  include "../../devel/ncursesw/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	ncurses
-.  include "../../devel/ncurses/buildlink3.mk"
 .endif
