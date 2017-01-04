@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/08/09 13:01:56 mef Exp $
+$NetBSD: distinfo,v 1.3 2017/01/04 13:48:02 mef Exp $
 
-SHA1 (Catch-1.5.0.tar.gz) = c87397846ea5126febd39f513b413e32f9ed552b
-RMD160 (Catch-1.5.0.tar.gz) = 6385ad12c0daad51d5d89b7c6d44a18fa84d3839
-SHA512 (Catch-1.5.0.tar.gz) = d7011cdfe6eca86aa081b5da371665be8687bcbb41f3702c3075bf01f73e1d2e00894a0917e6437a8735e730ff287a06e189ce94ea00e583ab7282065f25166d
-Size (Catch-1.5.0.tar.gz) = 311787 bytes
+SHA1 (Catch-1.5.9.tar.gz) = 8bc32146a5a2789cd3d3ce2893772e32f412f1b1
+RMD160 (Catch-1.5.9.tar.gz) = 730d42d0fac347555679ba2de8d64736f58cc32d
+SHA512 (Catch-1.5.9.tar.gz) = 8fc91ad970bf911eb1605b9d082eec03c039bf16835410cb357e13d059fc71cf5190da32a70fee4f367060be268b23aa997c476b80384825a6fcf2ad1a024f0a
+Size (Catch-1.5.9.tar.gz) = 313420 bytes
