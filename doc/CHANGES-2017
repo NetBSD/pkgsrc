@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.116 2017/01/04 21:21:11 abs Exp $
+$NetBSD: CHANGES-2017,v 1.117 2017/01/04 23:05:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xenstoretools to 4.6.3 [sborrill 2017-01-04]
 	Updated sysutils/sysgen to 20151230 [abs 2017-01-04]
 	Updated net/mrstat to 1.21 [abs 2017-01-04]
+	Updated emulators/mame to 0.181 [wiz 2017-01-04]
