@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/01/04 22:59:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/04 23:16:18 wiz Exp $
 
 DISTNAME=	xmpp-1.1.4
-PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
