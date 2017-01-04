@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.105 2017/01/04 12:53:57 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.106 2017/01/04 13:01:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -116,3 +116,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ivykis to 0.41 [fhajny 2017-01-04]
 	Updated lang/nodejs to 7.3.0 [fhajny 2017-01-04]
 	Updated devel/gentle to 97nb4 [jperkin 2017-01-04]
+	Updated lang/nodejs6 to 6.9.3 [fhajny 2017-01-04]
