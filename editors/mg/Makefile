@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/08/18 07:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/04 11:18:44 roy Exp $
 #
 
 DISTNAME=	mg-20110905
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://homepage.boetes.org/software/mg/
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://homepage.boetes.org/software/mg/
 COMMENT=	Small, fast, public domain EMACS style editor
 
 HAS_CONFIGURE=	yes
-USE_NCURSES=	yes # Uses NCURSES internals
+FAKE_NCURSES=	yes
 USE_TOOLS+=	install
 MAKE_ENV+=	prefix=${PREFIX}
 
@@ -29,5 +29,5 @@ SUBST_SED.path=		-e "s|/usr/local|${PREFIX}/|g"
 SUBST_SED.path+=	-e "s|/usr/share/doc|${PREFIX}/share/doc|g"
 SUBST_SED.path+=	-e "s|/usr/bin/install|${INSTALL}|g"
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
