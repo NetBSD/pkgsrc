@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/12/12 09:46:49 wiz Exp $
+$NetBSD: distinfo,v 1.7 2017/01/04 14:47:46 wiz Exp $
 
-SHA1 (Net-IDN-Encode-2.303.tar.gz) = a144568ad18b8656f9151ae5201dd1b4017e5edf
-RMD160 (Net-IDN-Encode-2.303.tar.gz) = ba5fe008f882d1ff4b95e123b8000351c0ec28dc
-SHA512 (Net-IDN-Encode-2.303.tar.gz) = 3053792fdba9dfa5239b20f21f8b9922d438a5e247cc3066d5097df588ec3fe2800b013c72dcebaff847468fefeb709fc2f2dbb8c2e984a384a2d66aa318d379
-Size (Net-IDN-Encode-2.303.tar.gz) = 432454 bytes
+SHA1 (Net-IDN-Encode-2.400.tar.gz) = dad2545b5e3f38ee746d7494933c3015d726608e
+RMD160 (Net-IDN-Encode-2.400.tar.gz) = bc1f9270d12dd4ffa2b5894de5495ce424dd43ed
+SHA512 (Net-IDN-Encode-2.400.tar.gz) = ea58d8825a9552851a0cac898744cdeb0e99e48f76809b58e7586d6992919339cc670506584df2d81c4e98cf7e6cfd1e96330e00f0e216f33033a743cb872d94
+Size (Net-IDN-Encode-2.400.tar.gz) = 432177 bytes
