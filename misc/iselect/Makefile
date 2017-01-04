@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/08/18 07:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2017/01/04 21:54:26 roy Exp $
 #
 
 DISTNAME=		iselect-1.4.0
@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iselect ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/iselect.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
