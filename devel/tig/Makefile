@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/08/18 07:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/04 18:16:32 roy Exp $
 
 DISTNAME=	tig-1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 
@@ -16,7 +16,7 @@ DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-USE_NCURSES=	yes
+FAKE_NCURSES=	yes
 
 CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
