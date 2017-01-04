@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 00:35:42 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/01/04 02:14:12 schmonz Exp $
 
 SHA1 (rblsmtpd-nodefaultrbl.patch) = 5d6048b5928257c13ff5cbcddb40ed0eee9997c0
 RMD160 (rblsmtpd-nodefaultrbl.patch) = fa93dd4522ccc77c5b43d0a79f741ae2ab54f075
+SHA512 (rblsmtpd-nodefaultrbl.patch) = 911086e4de23165dccfc0390600182339defc47cb157abd0d0d86c39400e344db72a1f8fbc59673510ae820a95d2c6f29ac5e178b0108ec4bafc6940441c10d7
 Size (rblsmtpd-nodefaultrbl.patch) = 822 bytes
-SHA1 (ucspi-tcp-0.88-ipv6.diff19.bz2) = c055c7ff33977e595422321600f682b8d8bc9ff2
-RMD160 (ucspi-tcp-0.88-ipv6.diff19.bz2) = 72d4e9de43e7ab69ddc66daa2e6dd1be7edd44b5
-SHA512 (ucspi-tcp-0.88-ipv6.diff19.bz2) = 58e38f9437b03aab121c5c1b9260806b5abd5a72bf22d14468955d6ff7ad2fb2ab285cb7a37b5dc3a568389aa02b8b3ecff0026b49a097ea86cfd340f2b38000
-Size (ucspi-tcp-0.88-ipv6.diff19.bz2) = 22632 bytes
+SHA1 (ucspi-tcp-0.88-ipv6.diff20.bz2) = de20a86034bd616bc1c47cb4a234c16ebb5428bc
+RMD160 (ucspi-tcp-0.88-ipv6.diff20.bz2) = 5a77d1e585833985711270d6a228f81b30eb6151
+SHA512 (ucspi-tcp-0.88-ipv6.diff20.bz2) = f8d3ae49adec2b6a643458958679b712e803b0e4609b4395ff9c4fd13b5a29b6f9fc35aee59f2928b892908d37ed83b708c67346a4a42ec21e05e7782bff215b
+Size (ucspi-tcp-0.88-ipv6.diff20.bz2) = 22088 bytes
 SHA1 (ucspi-tcp-0.88-man-20020317.tar.gz) = 7b2507ff1b49917b44ee64af5995a94a50effd44
 RMD160 (ucspi-tcp-0.88-man-20020317.tar.gz) = 6285882adea8f3c1f700ef82bec0d34078dfa559
 SHA512 (ucspi-tcp-0.88-man-20020317.tar.gz) = e779d6d6b24a3af0edc362def229c657c704143e5f1dfba8d16d26b3e6bcacb9c8ceaabcccac61485a4719221c144bc0c36ebca5182985dca85a6d72101d4146
