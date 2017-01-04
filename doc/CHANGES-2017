@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.107 2017/01/04 13:07:15 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.108 2017/01/04 13:09:32 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/gentle to 97nb4 [jperkin 2017-01-04]
 	Updated lang/nodejs6 to 6.9.3 [fhajny 2017-01-04]
 	Updated www/ocsigen to 2.8nb1 [jaapb 2017-01-04]
+	Updated lang/nodejs4 to 4.7.1 [fhajny 2017-01-04]
