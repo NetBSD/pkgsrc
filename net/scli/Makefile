@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/08/18 07:31:15 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/01/04 20:34:06 roy Exp $
 #
 
 DISTNAME=		scli-0.3.1
@@ -18,10 +18,10 @@ BUILDLINK_API_DEPENDS.readline+=	readline>=4.0
 INFO_FILES=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 # history_list
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/gnet/buildlink3.mk"
 .include "../../net/gsnmp/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
