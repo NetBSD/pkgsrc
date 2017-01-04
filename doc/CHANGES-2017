@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.102 2017/01/04 02:14:17 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.103 2017/01/04 11:45:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -113,3 +113,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/erlang-xmpp version 1.1.4 [fhajny 2017-01-03]
 	Updated chat/ejabberd to 16.12 [fhajny 2017-01-03]
 	Updated net/ucspi-tcp to 0.88nb4 [schmonz 2017-01-04]
+	Updated devel/ivykis to 0.41 [fhajny 2017-01-04]
