@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2016/12/12 14:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/04 10:44:58 roy Exp $
 
 DISTNAME=	libsoup-2.54.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -45,12 +45,6 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 REPLACE_PYTHON= libsoup/tld-parser.py
 PYTHON_FOR_BUILD_ONLY= yes
 .include "../../lang/python/application.mk"
-
-# The following is to avoid -Werror=missing-include-dirs when there
-# is no native ncurses installed...  g-ir-scanner sees that py_curses.h
-# seems to need ncurses, as pyconfig.h says we should have it
-BUILDLINK_DEPMETHOD.ncurses?=	build
-.include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
