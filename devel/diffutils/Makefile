@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2016/08/09 13:35:28 mef Exp $
+# $NetBSD: Makefile,v 1.37 2017/01/04 14:04:30 mef Exp $
 #
 
-DISTNAME=		diffutils-3.4
+DISTNAME=		diffutils-3.5
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
 EXTRACT_SUFX=		.tar.xz
