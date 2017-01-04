@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.109 2017/01/04 13:48:13 mef Exp $
+$NetBSD: CHANGES-2017,v 1.110 2017/01/04 14:04:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ocsigen to 2.8nb1 [jaapb 2017-01-04]
 	Updated lang/nodejs4 to 4.7.1 [fhajny 2017-01-04]
 	Updated devel/catch to 1.5.9 [mef 2017-01-04]
+	Updated devel/diffutils to 3.5 [mef 2017-01-04]
