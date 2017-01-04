@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2015/02/11 13:45:02 jaapb Exp $
+# $NetBSD: options.mk,v 1.5 2017/01/04 13:06:18 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocsigen
-PKG_SUPPORTED_OPTIONS=	camlzip
+PKG_SUPPORTED_OPTIONS=	camlzip pgsql
 PKG_OPTIONS_NONEMPTY_SETS=	database
 PKG_OPTIONS_SET.database=	sqlite gdbm
 PKG_SUGGESTED_OPTIONS=	gdbm camlzip
@@ -33,4 +33,13 @@ CONFIGURE_ARGS+=	--with-camlzip
 PLIST.camlzip=		yes
 .else
 CONFIGURE_ARGS+=	--without-camlzip
+.endif
+
+PLIST_VARS+=	pgsql
+.if !empty(PKG_OPTIONS:Mpgsql)
+.include	"../../databases/pgocaml/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pgsql
+PLIST.pgsql=		yes
+.else
+CONFIGURE_ARGS+=	--without-pgsql
 .endif
