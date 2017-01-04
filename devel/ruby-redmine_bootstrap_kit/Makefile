@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/04 23:05:12 rodent Exp $
 
 GITHUB_PROJECT=	redmine_bootstrap_kit
-DISTNAME=	0.2.3
+DISTNAME=	0.2.4
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jbox-web/}
@@ -20,10 +20,10 @@ WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${PKGVERSION_NOREV}
 USE_TOOLS+=	pax
 
 DISTFILES+=	${DEFAULT_DISTFILES}
-GEMS_DISTFILES=	will_paginate-3.0.7.gem
+GEMS_DISTFILES=	will_paginate-3.1.5.gem
 
 DISTFILES+=			${GEMS_DISTFILES}
-SITES.will_paginate-3.0.7.gem=	https://rubygems.org/downloads/
+SITES.will_paginate-3.1.5.gem=	https://rubygems.org/downloads/
 
 GEM_EXTSDIR_NEEDS_SUBDIR=	no
 
@@ -31,7 +31,7 @@ GEM_EXTSDIR_NEEDS_SUBDIR=	no
 
 RM_BSK_PLUGIN_DIR=	${REDMINE_PLUGINDIR}/${GITHUB_PROJECT}
 
-REPLACE_RUBY+=		${WRKDIR}/will_paginate-3.0.7/spec/console
+REPLACE_RUBY+=		${WRKDIR}/will_paginate-3.1.5/spec/console
 
 INSTALLATION_DIRS+=	${RM_BSK_PLUGIN_DIR}/app/helpers/bootstrap
 INSTALLATION_DIRS+=	${RM_BSK_PLUGIN_DIR}/app/helpers/code_mirror

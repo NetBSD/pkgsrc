@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2015/08/13 12:22:13 ryoon Exp $
+$NetBSD: MESSAGE,v 1.3 2017/01/04 23:05:12 rodent Exp $
 
 To use Redmine with nginx, you will need to perform the following steps.
 
@@ -21,23 +21,8 @@ To use Redmine with nginx, you will need to perform the following steps.
 	> grant all privileges on redmine.* to 'redmine'@'localhost';
 	> grant all privileges on redmine_development.* to 'redmine'@'localhost';
 
-4. Write authentication information to
-   ${PREFIX}/${RM_DIR}/app/config/database.yml:
-	# vi ${PREFIX}/${RM_DIR}/app/config/database.yml
-	production:
-	  adapter: mysql2
-	  database: redmine
-	  host: localhost
-	  username: redmine
-	  password: "redmine_password"
-	  encoding: utf8
-	development:
-	  adapter: mysql2
-	  database: redmine_development
-	  host: localhost
-	  username: redmine
-	  password: "redmine_password"
-	  encoding: utf8
+4. Set the database password for the redmine and redmine_development databases
+     in ${PREFIX}/${RM_DIR}/app/config/database.yml;
 
 5. Create secret token and write to
      ${PREFIX}/${RM_DIR}/app/config/configuration.yml and secrets.yml

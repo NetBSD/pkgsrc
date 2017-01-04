@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:27 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/01/04 23:05:12 rodent Exp $
 
-SHA1 (ruby-redmine-flatly-light-theme/v0.1.tar.gz) = 584c3a2276e2fc0ffec203496be6b3e9b560dc49
-RMD160 (ruby-redmine-flatly-light-theme/v0.1.tar.gz) = fcc4568c579b0e6d5e9ee45d6115a2535933241f
-SHA512 (ruby-redmine-flatly-light-theme/v0.1.tar.gz) = 853e20d4186007565bb3b832a8306716eacc0452eced8699cf24e7c6d4afcdef1037b306016d5a6833b11784fbbae88bc2241c94d5408e3dcfe9bc291fd0f199
-Size (ruby-redmine-flatly-light-theme/v0.1.tar.gz) = 730498 bytes
+SHA1 (ruby-redmine-flatly-light-theme/v0.1.1.tar.gz) = 4ec1499f1c9067f7a1d58be119c043cdd38b93f3
+RMD160 (ruby-redmine-flatly-light-theme/v0.1.1.tar.gz) = 2dc80761622ac4efbbf12f291e92a0cd9631c10a
+SHA512 (ruby-redmine-flatly-light-theme/v0.1.1.tar.gz) = 2c1cecd62e8c55dd664aa73ce0e50a729d761bed07b09575ad40cdab9d0b844c21c16cc0668beefe5be0d06f0134396307a1e9f7ab9cdd68c092670669bfd7d1
+Size (ruby-redmine-flatly-light-theme/v0.1.1.tar.gz) = 1018392 bytes
