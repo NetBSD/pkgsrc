@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2016/12/18 23:33:11 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/04 22:05:37 roy Exp $
 #
 
 DISTNAME=	multitail-4.0.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc sysutils
 MASTER_SITES=	http://www.vanheusden.com/multitail/
 EXTRACT_SUFX=	.tgz
@@ -11,7 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 
-USE_NCURSES=		yes	# Needs the <panel> library.
+INCOMPAT_CURSES+=	NetBSD-[0-7].*-*
+FAKE_NCURSES=		yes
+
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
 			share/examples/multitail
 
@@ -30,5 +32,5 @@ do-install:
 	cd ${WRKSRC:Q} && ${INSTALL_DATA} *.txt manual*.html \
 		${DESTDIR}${PREFIX:Q}/share/doc/multitail/
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
