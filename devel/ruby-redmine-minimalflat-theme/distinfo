@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:27 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/01/04 23:05:13 rodent Exp $
 
-SHA1 (ruby-redmine-minimalflat-theme/v1.0.1.tar.gz) = c965768fce4772c81e617b795aa2eff05ea0696e
-RMD160 (ruby-redmine-minimalflat-theme/v1.0.1.tar.gz) = 8e134b13e5445883ca3a92b52ce07cad3cbaf36b
-SHA512 (ruby-redmine-minimalflat-theme/v1.0.1.tar.gz) = e6f13f4b4e3d71aa734e063507df6e279a1e6a36da95ce10c24e325e8eb89a5e95887e238f88b9cd60e445e2443a0780a12f94fbe6da702158917badf4ac6fbb
-Size (ruby-redmine-minimalflat-theme/v1.0.1.tar.gz) = 392159 bytes
+SHA1 (ruby-redmine-minimalflat-theme/v1.0.2.tar.gz) = 22327a088399561a7a4e55d225b04c75ea1b275e
+RMD160 (ruby-redmine-minimalflat-theme/v1.0.2.tar.gz) = 8df8074ecb96cfcb2beff24e306e4bd5009d653d
+SHA512 (ruby-redmine-minimalflat-theme/v1.0.2.tar.gz) = 60a92017d925d0fe19a2d792f283c3431bd67a6675530a3eab009b06d8116a2b5dba22e6da15955e6c95e36180c64b3b52605ecd261d42424a684d6d398b0551
+Size (ruby-redmine-minimalflat-theme/v1.0.2.tar.gz) = 392389 bytes
