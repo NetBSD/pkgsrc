@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/08/18 07:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/04 14:06:10 roy Exp $
 #
 
 DISTNAME=	xml-coreutils-0.8a
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xml-coreutils/}
 
@@ -13,7 +13,11 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c99
 GNU_CONFIGURE=	yes
 
+# xml-coreutils doesn't actually use curses but does want
+# to link to it regardless.
+FAKE_NCURSES=	yes
+
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/libslang/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
