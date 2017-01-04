@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/08/18 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/04 20:18:54 roy Exp $
 
 DISTNAME=	wimon-0.3
 PKGREVISION=	3
@@ -24,6 +24,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wimon ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/wimon.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
