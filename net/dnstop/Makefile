@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/04 10:01:44 roy Exp $
 #
 
 DISTNAME=	dnstop-20140915
@@ -20,7 +20,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/dnstop.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/dnstop
 
-.include "../../devel/ncurses/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libpcap+=		libpcap>=0.7.0
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
