@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/11/05 10:05:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/01/04 23:05:12 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -102,6 +102,7 @@ share/mame/hash/apple1.xml
 share/mame/hash/apple2.xml
 share/mame/hash/apple2gs.xml
 share/mame/hash/apple3.xml
+share/mame/hash/apricot_flop.xml
 share/mame/hash/aquarius.xml
 share/mame/hash/arcadia.xml
 share/mame/hash/archimedes.xml
@@ -218,12 +219,12 @@ share/mame/hash/horizon.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
 share/mame/hash/hp9845b_rom.xml
+share/mame/hash/hp_ipc.xml
 share/mame/hash/ht68k.xml
 share/mame/hash/i7000_card.xml
 share/mame/hash/ibm5140.xml
 share/mame/hash/ibm5150.xml
 share/mame/hash/ibm5150_cass.xml
-share/mame/hash/ibm5160_flop.xml
 share/mame/hash/ibm5170.xml
 share/mame/hash/ibm5170_cdrom.xml
 share/mame/hash/ibmpcjr_cart.xml
@@ -505,3 +506,4 @@ share/mame/hash/x68k_flop.xml
 share/mame/hash/xegs.xml
 share/mame/hash/xerox820.xml
 share/mame/hash/xerox820ii.xml
+share/mame/hash/zorba.xml
