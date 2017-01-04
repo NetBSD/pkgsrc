@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2017/01/04 16:37:29 sborrill Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/04 16:45:24 sborrill Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools46-${VERSION}
-PKGREVISION=		4
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -61,7 +61,7 @@ MAKE_ENV+=		NO_WERROR=1
 #MAKE_ENV+=		INSTALL_DATA=${BSD_INSTALL_DATA}
 #MAKE_ENV+=		INSTALL_PROG=${BSD_INSTALL_PROGRAM}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	misc/xen-bugtool misc/xen-ringwatch misc/xencons
@@ -238,7 +238,6 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 #.include "../../devel/SDL/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
@@ -248,4 +247,5 @@ MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:M*
 .include "../../devel/argp/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
