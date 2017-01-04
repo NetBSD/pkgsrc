@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.103 2017/01/04 11:45:58 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.104 2017/01/04 12:51:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -114,3 +114,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/ejabberd to 16.12 [fhajny 2017-01-03]
 	Updated net/ucspi-tcp to 0.88nb4 [schmonz 2017-01-04]
 	Updated devel/ivykis to 0.41 [fhajny 2017-01-04]
+	Updated lang/nodejs to 7.3.0 [fhajny 2017-01-04]
