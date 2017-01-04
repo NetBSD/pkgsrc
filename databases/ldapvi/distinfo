@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:13 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/01/04 17:19:52 roy Exp $
 
 SHA1 (ldapvi-1.7.tar.gz) = d1cde4cbb618180f9ae0e77c56a1520b8ad61c9a
 RMD160 (ldapvi-1.7.tar.gz) = f4cd1c2fcfc87e7a9e912269e60280e9ecd82156
@@ -6,4 +6,4 @@ SHA512 (ldapvi-1.7.tar.gz) = 4b38cee0763aa33703afbd5e358a458b1468abf58e43ea88587
 Size (ldapvi-1.7.tar.gz) = 119503 bytes
 SHA1 (patch-aa) = 7f700c9296c724c8afd72d1cd7d8ca898018208a
 SHA1 (patch-ab) = a04bc868aa44f1ac15359cb78858a0f604acb475
-SHA1 (patch-ac) = 52ea228b5ac8bdd2df6c90e7151bcfed13c77b0d
+SHA1 (patch-ac) = 434c0aeacb9260ad692d6bc7b94e2f8a6220e2be
