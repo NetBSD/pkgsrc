@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/04 23:05:13 rodent Exp $
 
-GITHUB_TAG=	r7
+GITHUB_TAG=	v1.1.0
 DISTNAME=	${GITHUB_TAG}
 GITHUB_PROJECT=	redmine-theme-gitmike
-PKGNAME=	${RUBY_PKGPREFIX}-redmine-gitmike-theme-${DISTNAME:S/r//}
+PKGNAME=	${RUBY_PKGPREFIX}-redmine-gitmike-theme-${DISTNAME:S/v//1}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=makotokw/}
 DIST_SUBDIR=	ruby-redmine-gitmike-theme
 
@@ -20,7 +20,7 @@ INSTALLATION_DIRS+=	${GITMIKE_DIR}/images ${GITMIKE_DIR}/sass
 INSTALLATION_DIRS+=	${GITMIKE_DIR}/stylesheets
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/Gruntfile.js \
+	${INSTALL_DATA} ${WRKSRC}/gulpfile.js \
 		${DESTDIR}${PREFIX}/${GITMIKE_DIR}
 	${INSTALL_DATA} ${WRKSRC}/package.json \
 		${DESTDIR}${PREFIX}/${GITMIKE_DIR}
