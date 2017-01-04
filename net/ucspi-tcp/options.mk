@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/06/24 10:10:55 sbd Exp $
+# $NetBSD: options.mk,v 1.5 2017/01/04 02:14:12 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ucspi-tcp
 PKG_SUPPORTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS+=	inet6 ucspi-tcp-nodefaultrbl
 
 PLIST_VARS+=			inet6
 .if !empty(PKG_OPTIONS:Minet6)
-IPV6_PATCH=			ucspi-tcp-0.88-ipv6.diff19.bz2
+IPV6_PATCH=			ucspi-tcp-0.88-ipv6.diff20.bz2
 PATCHFILES+=			${IPV6_PATCH}
 SITES.${IPV6_PATCH}=		http://www.fefe.de/ucspi/
 PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
