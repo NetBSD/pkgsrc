@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.5 2017/01/02 20:52:46 roy Exp $
+$NetBSD: patch-ah,v 1.6 2017/01/04 14:14:28 roy Exp $
 
 Allow py-curses to use NetBSD curses as well as ncurses
 http://bugs.python.org/issue21457
@@ -123,7 +123,7 @@ http://bugs.python.org/issue21457
      PyCursesInitialised;
  
 -    if (!PyArg_ParseTuple(args,"ii:resize_term", &lines, &columns))
-+    if (!PyArg_ParseTuple(args,"ii:resize_term", &nline, &ncolumns))
++    if (!PyArg_ParseTuple(args,"ii:resize_term", &nlines, &ncolumns))
          return NULL;
  
 -    result = PyCursesCheckERR(resize_term(lines, columns), "resize_term");
