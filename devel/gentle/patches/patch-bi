@@ -1,9 +1,10 @@
-$NetBSD: patch-bi,v 1.1 2009/11/30 00:03:08 dholland Exp $
+$NetBSD: patch-bi,v 1.2 2017/01/04 12:53:49 jperkin Exp $
 
 Add standard includes needed for LP64 build.
+Ensure the local yywrap is used.
 
---- reflex/reflex.c~	1998-08-20 09:56:10.000000000 -0400
-+++ reflex/reflex.c	2009-11-29 19:02:55.000000000 -0500
+--- reflex/reflex.c.orig	1998-08-20 13:56:10.000000000 +0000
++++ reflex/reflex.c
 @@ -1,4 +1,6 @@
  #include <stdio.h>
 +#include <stdlib.h>
@@ -11,3 +12,11 @@ Add standard includes needed for LP64 build.
  
  /* ( 1) %{ */
  /* ( 2) YYSTYPE block */
+@@ -76,6 +78,7 @@ char *lexfunc[] = {
+ };
+ /* (15) YYWRAP block */
+ char *yywrap[] = {
++   "#undef yywrap",
+    "#ifndef yywrap",
+    "yywrap() { return 1; }",
+    "#endif",
