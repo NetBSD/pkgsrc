@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1141 2016/12/29 06:12:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1142 2017/01/04 11:15:21 fhajny Exp $
 #
 
 COMMENT=	Networking tools
@@ -125,6 +125,7 @@ SUBDIR+=	enet
 SUBDIR+=	entropy
 SUBDIR+=	erlang-esip
 SUBDIR+=	erlang-stun
+SUBDIR+=	erlang-xmpp
 SUBDIR+=	ether2dns
 SUBDIR+=	etherape
 SUBDIR+=	ettercap
