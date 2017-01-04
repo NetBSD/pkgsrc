@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/02/23 18:21:09 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/04 12:53:49 jperkin Exp $
 #
 
 DISTNAME=		gentle-97
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		http://gentle.compilertools.net/
 
