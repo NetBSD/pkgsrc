@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2016/08/19 13:42:58 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2017/01/04 19:41:14 roy Exp $
 
 DISTNAME=	mtr-0.87
 CATEGORIES=	net
@@ -14,11 +14,6 @@ USE_TOOLS+=		pkg-config
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 
 .include "options.mk"
-
-# mtr uses libtermcap by default, but needs wattr_{on,off} from (n)curses,
-# so we rewrite -ltermcap to -lncurses (which will be auto-mangled into
-# -lcurses on the appropriate platforms).
-BUILDLINK_TRANSFORM+=	l:termcap:ncurses
 
 SPECIAL_PERMS=	sbin/mtr ${SETUID_ROOT_PERMS}
 
@@ -37,5 +32,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${DESTDIR}${PREFIX}/share/doc/mtr
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
