@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/11/03 17:46:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/04 01:49:41 roy Exp $
 #
 
 DISTNAME=	bmon-3.8
@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/fetch/github.mk"
 .include "../../mk/bsd.pkg.mk"
