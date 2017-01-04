@@ -1,0 +1,17 @@
+$NetBSD: patch-src_META.ab,v 1.1 2017/01/04 00:10:43 jaapb Exp $
+
+Add deriving bit - patch from 4.04 branch
+--- src/META.ab.orig	2016-09-02 10:02:01.000000000 +0000
++++ src/META.ab
+@@ -6,3 +6,11 @@ archive(native) = "ppx_optcomp.cmxa"
+ plugin(byte  ) = "ppx_optcomp.cma"
+ plugin(native) = "ppx_optcomp.cmxs"
+ exists_if = "ppx_optcomp.cma"
++
++package "for_ppx_deriving" (
++  description = "Don't use this directly"
++  error(ppx_driver) = "Cannot use ppx_optcomp.for_ppx_deriving when ppx_driver is set"
++  requires = "ppx_core.for_ppx_deriving ppx_deriving"
++  exists_if = "ppx_optcomp.cma"
++  ppxopt = "ppx_deriving,./ppx_optcomp.cma"
++)
