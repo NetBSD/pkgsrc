@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.101 2016/12/01 14:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2017/01/04 21:28:57 roy Exp $
 
 DISTNAME=	TiMidity++-2.14.0
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=timidity/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--with-libFLAC="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},ao,vorbis,flac,speex
 CONFIGURE_ARGS+=	--enable-network
+
+FAKE_NCURSES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,9 +66,9 @@ post-install:
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .if ${OPSYS} == "Linux"
 .  include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
