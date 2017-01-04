@@ -1,44 +1,53 @@
-$NetBSD: patch-programs_Makefile,v 1.6 2016/12/07 21:34:58 fhajny Exp $
+$NetBSD: patch-programs_Makefile,v 1.7 2017/01/04 15:43:51 fhajny Exp $
 
 Unlock install target. Use pkgsrc install scripts.
 
---- programs/Makefile.orig	2016-11-22 20:34:17.000000000 +0000
+--- programs/Makefile.orig	2017-01-03 05:09:52.000000000 +0000
 +++ programs/Makefile
-@@ -30,7 +30,7 @@
+@@ -108,11 +108,6 @@ preview-man: clean-man man
+ 	man ./lz4.1
+ 
+ 
+-#-----------------------------------------------------------------------------
+-# make install is validated only for Linux, OSX, BSD, Hurd and Solaris targets
+-#-----------------------------------------------------------------------------
+-ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU OpenBSD FreeBSD NetBSD DragonFly SunOS))
+-
+ unlz4: lz4
+ 	ln -s lz4 unlz4
+ 
+@@ -130,11 +125,7 @@ PREFIX  ?= /usr/local
  DESTDIR ?=
- PREFIX  ?= /usr/local
- BINDIR  := $(PREFIX)/bin
--MANDIR  := $(PREFIX)/share/man/man1
-+MANDIR  := $(PREFIX)/$(PKGMANDIR)/man1
- LZ4DIR  := ../lib
- VOID    := /dev/null
+ BINDIR  ?= $(PREFIX)/bin
  
-@@ -80,20 +80,16 @@ clean:
- 	@echo Cleaning completed
+-ifneq (,$(filter $(shell uname),OpenBSD FreeBSD NetBSD DragonFly SunOS))
+-MANDIR  ?= $(PREFIX)/man/man1
+-else
+-MANDIR  ?= $(PREFIX)/share/man/man1
+-endif
++MANDIR  ?= $(PREFIX)/$(PKGMANDIR)/man1
  
- 
--#------------------------------------------------------------------------
--#make install is validated only for Linux, OSX, kFreeBSD, Hurd and
--#FreeBSD targets
--ifneq (,$(filter $(shell uname),Linux Darwin GNU/kFreeBSD GNU FreeBSD))
+ INSTALL_PROGRAM ?= $(INSTALL) -m 755
+ INSTALL_SCRIPT  ?= $(INSTALL) -m 755
+@@ -143,13 +134,13 @@ INSTALL_MAN     ?= $(INSTALL) -m 644
  
  install: lz4$(EXT) lz4c$(EXT)
  	@echo Installing binaries
--	@install -d -m 755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(MANDIR)/
--	@install -m 755 lz4$(EXT) $(DESTDIR)$(BINDIR)/lz4$(EXT)
-+	$(BSD_INSTALL_PROGRAM_DIR) -d -m 755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(MANDIR)/
-+	$(BSD_INSTALL_PROGRAM) -m 755 lz4$(EXT) $(DESTDIR)$(BINDIR)/lz4$(EXT)
- 	@ln -sf lz4$(EXT) $(DESTDIR)$(BINDIR)/lz4cat$(EXT)
- 	@ln -sf lz4$(EXT) $(DESTDIR)$(BINDIR)/unlz4$(EXT)
--	@install -m 755 lz4c$(EXT) $(DESTDIR)$(BINDIR)/lz4c$(EXT)
-+	$(BSD_INSTALL_PROGRAM) -m 755 lz4c$(EXT) $(DESTDIR)$(BINDIR)/lz4c$(EXT)
+-	@$(INSTALL) -d -m 755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(MANDIR)/
+-	@$(INSTALL_PROGRAM) lz4 $(DESTDIR)$(BINDIR)/lz4
++	@$(BSD_INSTALL_PROGRAM_DIR) -d -m 755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(MANDIR)/
++	@$(BSD_INSTALL_PROGRAM) lz4 $(DESTDIR)$(BINDIR)/lz4
+ 	@ln -sf lz4 $(DESTDIR)$(BINDIR)/lz4cat
+ 	@ln -sf lz4 $(DESTDIR)$(BINDIR)/unlz4
+-	@$(INSTALL_PROGRAM) lz4c$(EXT) $(DESTDIR)$(BINDIR)/lz4c
++	@$(BSD_INSTALL_PROGRAM) lz4c$(EXT) $(DESTDIR)$(BINDIR)/lz4c
  	@echo Installing man pages
--	@install -m 644 lz4.1 $(DESTDIR)$(MANDIR)/lz4.1
-+	$(BSD_INSTALL_MAN) -m 644 lz4.1 $(DESTDIR)$(MANDIR)/lz4.1
+-	@$(INSTALL_MAN) -m 644 lz4.1 $(DESTDIR)$(MANDIR)/lz4.1
++	@$(BSD_INSTALL_MAN) -m 644 lz4.1 $(DESTDIR)$(MANDIR)/lz4.1
  	@ln -sf lz4.1 $(DESTDIR)$(MANDIR)/lz4c.1
  	@ln -sf lz4.1 $(DESTDIR)$(MANDIR)/lz4cat.1
  	@ln -sf lz4.1 $(DESTDIR)$(MANDIR)/unlz4.1
-@@ -110,4 +106,3 @@ uninstall:
+@@ -166,4 +157,3 @@ uninstall:
  	@$(RM) $(DESTDIR)$(MANDIR)/unlz4.1
  	@echo lz4 programs successfully uninstalled
  
