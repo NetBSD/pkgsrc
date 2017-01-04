@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/07/07 12:16:44 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/04 23:19:54 rodent Exp $
 
-DISTNAME=	redmine-themes-1.2.0
+DISTNAME=	redmine-themes-1.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel meta-pkgs
 MASTER_SITES=	# blank
