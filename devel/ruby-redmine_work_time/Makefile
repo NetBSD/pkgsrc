@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:12:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/04 23:05:13 rodent Exp $
 #
 
 PLUGIN_NAME=	redmine_work_time
-DISTNAME=	${PLUGIN_NAME}-0.3.0
+DISTNAME=	${PLUGIN_NAME}-0.3.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://bitbucket.org/tkusukawa/${PLUGIN_NAME}/downloads/
@@ -30,6 +30,7 @@ INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/assets/javascripts
 INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/assets/stylesheets
 INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/config/locales
 INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/db/migrate
+INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/lib
 INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/test/fixtures
 INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/test/functional
 INSTALLATION_DIRS+=	${WORK_TIME_PLUGIN_DIR}/test/unit
@@ -55,6 +56,8 @@ do-install:
 		 ${DESTDIR}${PREFIX}/${WORK_TIME_PLUGIN_DIR}/config/locales
 	${INSTALL_DATA} ${WRKSRC}/db/migrate/*.rb \
 		 ${DESTDIR}${PREFIX}/${WORK_TIME_PLUGIN_DIR}/db/migrate
+	${INSTALL_DATA} ${WRKSRC}/lib/*.rb \
+		 ${DESTDIR}${PREFIX}/${WORK_TIME_PLUGIN_DIR}/lib
 	${INSTALL_DATA} ${WRKSRC}/test/test_helper.rb \
 		 ${DESTDIR}${PREFIX}/${WORK_TIME_PLUGIN_DIR}/test
 	for i in fixtures functional unit; do \
