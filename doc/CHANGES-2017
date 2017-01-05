@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.124 2017/01/05 12:10:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.125 2017/01/05 12:30:56 roy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -149,3 +149,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/libLLVM to 3.9.1 [adam 2017-01-05]
 	Updated lang/libunwind to 3.9.1 [adam 2017-01-05]
 	Updated lang/llvm to 3.9.1 [adam 2017-01-05]
+	Updated chat/weechat to 1.6 [roy 2017-01-05]
