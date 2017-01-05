@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2017/01/02 20:52:47 roy Exp $
+# $NetBSD: Makefile,v 1.44 2017/01/05 23:16:43 roy Exp $
 
 PKGNAME=	${PYPKGPREFIX}-curses-${PY_DISTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
