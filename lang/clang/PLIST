@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/11/14 20:15:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/01/05 11:54:32 adam Exp $
 bin/c-index-test
 bin/clang
 bin/clang++
@@ -519,6 +519,7 @@ lib/clang/${PKGVERSION}/include/mm3dnow.h
 lib/clang/${PKGVERSION}/include/mm_malloc.h
 lib/clang/${PKGVERSION}/include/mmintrin.h
 lib/clang/${PKGVERSION}/include/module.modulemap
+lib/clang/${PKGVERSION}/include/msa.h
 lib/clang/${PKGVERSION}/include/mwaitxintrin.h
 lib/clang/${PKGVERSION}/include/nmmintrin.h
 lib/clang/${PKGVERSION}/include/opencl-c.h
