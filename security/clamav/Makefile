@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/09/10 23:23:21 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.34 2017/01/05 11:27:21 roy Exp $
 
 .include "Makefile.common"
 
@@ -9,6 +9,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gsed
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
+FAKE_NCURSES=		yes
 CONFIGURE_ARGS+=	--disable-clamav
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-dbdir=${CLAMAV_DBDIR}
@@ -82,12 +83,12 @@ post-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
