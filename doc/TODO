@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16879 2017/01/04 23:21:10 rodent Exp $
+$NetBSD: TODO,v 1.16880 2017/01/05 12:29:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -429,7 +429,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o apache-ivy-2.4.0
 	o apollo-1.7
 	o apr0-2.4.1
-	o ardour-5.0
+	o ardour-5.5
 	o argon2-20151206
 	o argtable-2.9
 	o argus-20121202
@@ -449,7 +449,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o augeas-1.4.0
 	o autoconvert-0.3.16
 	o avant-window-navigator-0.4.2
-	o avidemux-2.6.12
+	o avidemux-2.6.16
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.26
 	o avr-libc-2.0.0
@@ -499,6 +499,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
+	o cdrtools-3.02a07
 	o cfengine3-3.8.1
 	o cflow-mode-1.4
 	o cgal-4.6.1
@@ -526,6 +527,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o compiz-0.8.10
 	o cone-0.92
 	o cook-2.31
+	o coreutils-8.26
 	o courier-0.76.0
 	o courier-authlib-0.66.2
 	o courier-imap-4.16.1
@@ -555,6 +557,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darcs-2.12.0
 	o darktable-2.2.0
 	o dasher-4.11
+	o dateutils-0.4.1
 	o davical-1.1.4
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
@@ -577,9 +580,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dropbear-2016.74
 	o drupal-8.2.3
 	o dtach-0.9
-	o duplicity-0.7.10
+	o duplicity-0.7.11
 	o dvdisaster-0.79.5
-	o dvdstyler-2.9.6
+	o dvdstyler-3.0.3
 	o easymenu-0.7.2p1
 	o eboard-1.1.1
 	o ebook-tools-0.2.2
@@ -673,7 +676,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o foomatic4-db-20160305
 	o fop-2.1
 	o fortunes-calvin-0.3
-	o fox-1.7.54
+	o fox-1.7.57
 	o frama-c-20140301
 	o freenet-0.7
 	o freeradius-3.0.9
@@ -901,6 +904,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o imp-6.2.12
 	o inform-6.32.1
 	o ingo-3.2.8
+	o inkscape-0.92
 	o inn-2.6.0
 	o input-pad-1.4.2
 	o inspircd-2.0.23
@@ -947,7 +951,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kbiff-4.0
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kdbg-2.5.4
-	o kdenlive-16.04.1
+	o kdenlive-16.12
 	o kdevelop-5.0.0
 	o kdevelop4-4.7.2
 	o kdevplatform-1.7.1
@@ -993,6 +997,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgphoto2-2.5.11
 	o libgroove-4.2.1
 	o libisoburn-1.4.0
 	o libisofs-1.4.2
@@ -1063,6 +1068,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
+	o maxima-5.39.0
 	o mbuf-20141227
 	o mbuffer-20160228
 	o mcabber-1.0.2
@@ -1092,6 +1098,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mit-scheme-bin-9.2
 	o mitmproxy-1.0.2
 	o mksh-52b
+	o mkvtoolnix-9.6.0
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
@@ -1139,6 +1146,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o nim-0.15.0
+	o nmap-7.40
 	o npth-1.3
 	o nqp-2016.02
 	o ns-3.14.1
@@ -1170,6 +1178,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openssh-7.4p1
 	o openssl-1.1.0
 	o openvas-libraries-8.0.8
+	o openvpn-2.4.0
 	o opera-26
 	o orcus0.12-0.12.1
 	o oroborus-2.0.18
@@ -1275,7 +1284,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
-	o pitivi-0.97
+	o pitivi-0.98
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.8.5
@@ -1502,13 +1511,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o star-1.5.3
 	o statist-1.3.0
 	o stegavorto-2011.05.26
-	o stella-4.7.2
+	o stella-4.7.3
 	o stellarium-0.13.3
 	o stlport-4.6.2
 	o stow-2.2.2
-	o strace-4.12
+	o strace-4.15
 	o stratagus-2.2.5.5
-	o streamtuner-2.1.4
+	o streamtuner-2.2.0
 	o stunnel-5.37
 	o subtitleeditor-0.52.1
 	o superlu-5.1.1
@@ -1558,7 +1567,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.2
-	o tin-2.3.3
+	o tin-2.4.1
 	o tkhylafax-3.2
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
@@ -1596,8 +1605,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vbetool-1.1
 	o vcdimager-0.7.24
 	o vera-1.23
-	o veusz-1.24
+	o veusz-1.25
 	o vfu-4.09
+	o vice-3.0
 	o vicq-0.4.2
 	o viewvc-1.1.25
 	o vile-9.8q
