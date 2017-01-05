@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/07/15 02:02:28 ryoon Exp $
+# $NetBSD: options.mk,v 1.4 2017/01/05 09:39:02 roy Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pwsafe
 PKG_SUPPORTED_OPTIONS=	readline x11
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS=	readline x11
 .if !empty(PKG_OPTIONS:Mreadline)
 CONFIGURE_ARGS+=	--with-readline
 .  include "../../devel/readline/buildlink3.mk"
-.  include "../../devel/ncurses/buildlink3.mk"
+# configure checks for curses, but doesn't no anything with it
 .else
 CONFIGURE_ARGS+=	--without-readline
 .endif
