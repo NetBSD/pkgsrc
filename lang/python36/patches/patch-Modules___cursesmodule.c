@@ -1,4 +1,4 @@
-$NetBSD: patch-Modules___cursesmodule.c,v 1.2 2017/01/02 21:14:53 roy Exp $
+$NetBSD: patch-Modules___cursesmodule.c,v 1.3 2017/01/05 23:16:42 roy Exp $
 
 Allow py-curses to use NetBSD curses as well as ncurses
 http://bugs.python.org/issue21457
@@ -42,7 +42,7 @@ http://bugs.python.org/issue21457
  
  #ifdef WINDOW_HAS_FLAGS
 -    if (self->win->_flags & _ISPAD)
-+    if (is_keypad(self->win))
++    if (is_pad(self->win))
          return PyCursesCheckERR(pechochar(self->win, ch | attr),
                                  "echochar");
      else
@@ -63,7 +63,7 @@ http://bugs.python.org/issue21457
      if (0)
  #else
 -        if (self->win->_flags & _ISPAD)
-+        if (is_keypad(self->win))
++        if (is_pad(self->win))
  #endif
          {
              switch(PyTuple_Size(args)) {
@@ -72,7 +72,7 @@ http://bugs.python.org/issue21457
      if (0)
  #else
 -        if (self->win->_flags & _ISPAD)
-+        if (is_keypad(self->win))
++        if (is_pad(self->win))
  #endif
          {
              switch(PyTuple_Size(args)) {
@@ -81,7 +81,7 @@ http://bugs.python.org/issue21457
      /* printf("Subwin: %i %i %i %i   \n", nlines, ncols, begin_y, begin_x); */
  #ifdef WINDOW_HAS_FLAGS
 -    if (self->win->_flags & _ISPAD)
-+    if (is_keypad(self->win))
++    if (is_pad(self->win))
          win = subpad(self->win, nlines, ncols, begin_y, begin_x);
      else
  #endif
