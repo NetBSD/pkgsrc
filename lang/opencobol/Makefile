@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/08/18 07:31:10 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/05 15:42:59 roy Exp $
 #
 
 DISTNAME=	open-cobol-1.1
@@ -37,6 +37,6 @@ SUBST_SED.bdb+=		-e 's,ncurses,curses,g'
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
