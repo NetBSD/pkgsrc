@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2345 2016/12/16 08:15:50 manu Exp $
+# $NetBSD: Makefile,v 1.2346 2017/01/05 04:11:29 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1506,6 +1506,7 @@ SUBDIR+=	p5-Test-CleanNamespaces
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Command-Simple
 SUBDIR+=	p5-Test-Compile
+SUBDIR+=	p5-Test-Continuous
 SUBDIR+=	p5-Test-Deep
 SUBDIR+=	p5-Test-DependentModules
 SUBDIR+=	p5-Test-Differences
