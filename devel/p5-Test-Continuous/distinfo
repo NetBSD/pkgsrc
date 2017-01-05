@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/05 04:10:40 schmonz Exp $
+
+SHA1 (Test-Continuous-0.76.tar.gz) = bbfc2bd87512a185a5765f41ec0fd07a1dd65309
+RMD160 (Test-Continuous-0.76.tar.gz) = 6feccca16c8fc2fe78673990f03ddd8250d4e156
+SHA512 (Test-Continuous-0.76.tar.gz) = 22cdf91fa41dee1bac9b807aa12479a630d4c54bfc6f6e2f19918cccd223bd0732cbefef9b9dc23c9cd0147b2c400cf572602d8d38682d45f0565e6f580b7aab
+Size (Test-Continuous-0.76.tar.gz) = 38776 bytes

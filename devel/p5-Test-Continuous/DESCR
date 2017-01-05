@@ -1,0 +1,10 @@
+Continuous Testing is a concept and tool to re-run software tests as
+soon as the developer saves the source code.
+
+"Test::Continuous" is a tool based on App::Prove that implements this
+concept for Perl.
+
+See <http://groups.csail.mit.edu/pag/continuoustesting/> for the
+original implementation of Continuous Testing as an Eclipse plugin. See
+also Zentest <http://www.zenspider.com/ZSS/Products/ZenTest/> for the
+same concept implemented in Ruby's world.
