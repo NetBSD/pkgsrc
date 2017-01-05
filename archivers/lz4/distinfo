@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2017/01/04 15:43:51 fhajny Exp $
+$NetBSD: distinfo,v 1.11 2017/01/05 11:07:55 wiz Exp $
 
 SHA1 (lz4-1.7.5.tar.gz) = a710a7d45beb0951806d2b98f0c1739107e97c14
 RMD160 (lz4-1.7.5.tar.gz) = ff25713033480dead389241f572f327cb6afe175
 SHA512 (lz4-1.7.5.tar.gz) = b4e5b17fe06805e676608e636a45f0b480b79a02c6b7ffce84dc4d607861cb2652b2852493ab9d9249e7caeae6f00b6834801fdc39f58d901cbc1c7347915295
 Size (lz4-1.7.5.tar.gz) = 208019 bytes
 SHA1 (patch-Makefile) = 8519985405e6f2c0ef63cc39129b00c9867382f9
-SHA1 (patch-lib_Makefile) = 016fbc604e6c121fd2eb9d3aba5be40373c6de60
+SHA1 (patch-lib_Makefile) = cb2abb05aacc760395ae1d17e0af7ba6fba04419
 SHA1 (patch-programs_Makefile) = 1bf3864515a1276cbad516ebd519caa918b847b2
