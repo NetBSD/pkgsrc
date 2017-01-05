@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/05 16:43:09 fhajny Exp $
+bin/filebeat
+bin/heartbeat
+bin/metricbeat
+bin/packetbeat
+share/examples/beats/filebeat.full.yml
+share/examples/beats/filebeat.template-es2x.json
+share/examples/beats/filebeat.template.json
+share/examples/beats/filebeat.yml
+share/examples/beats/heartbeat.full.yml
+share/examples/beats/heartbeat.template-es2x.json
+share/examples/beats/heartbeat.template.json
+share/examples/beats/heartbeat.yml
+share/examples/beats/metricbeat.full.yml
+share/examples/beats/metricbeat.template-es2x.json
+share/examples/beats/metricbeat.template.json
+share/examples/beats/metricbeat.yml
+share/examples/beats/packetbeat.full.yml
+share/examples/beats/packetbeat.template-es2x.json
+share/examples/beats/packetbeat.template.json
+share/examples/beats/packetbeat.yml
