@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.12 2017/01/02 10:49:33 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.13 2017/01/05 21:19:24 roy Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -14,13 +14,17 @@ BUILTIN_FIND_FILES_VAR+=		H_CURSES_HALFDELAY
 BUILTIN_FIND_FILES.H_CURSES_HALFDELAY=	${H_CURSES}
 BUILTIN_FIND_GREP.H_CURSES_HALFDELAY=	halfdelay
 
+BUILTIN_FIND_FILES_VAR+=		H_CURSES_PUTWIN
+BUILTIN_FIND_FILES.H_CURSES_PUTWIN=	${H_CURSES}
+BUILTIN_FIND_GREP.H_CURSES_PUTWIN=	putwin
+
 BUILTIN_FIND_FILES_VAR+=		H_CURSES_RESIZETERM
 BUILTIN_FIND_FILES.H_CURSES_RESIZETERM=	${H_CURSES}
 BUILTIN_FIND_GREP.H_CURSES_RESIZETERM=	resizeterm
 
-BUILTIN_FIND_FILES_VAR+=		H_CURSES_PUTWIN
-BUILTIN_FIND_FILES.H_CURSES_PUTWIN=	${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_PUTWIN=	putwin
+BUILTIN_FIND_FILES_VAR+=			H_CURSES_SET_ESCDELAY
+BUILTIN_FIND_FILES.H_CURSES_SET_ESCDELAY=	${H_CURSES}
+BUILTIN_FIND_GREP.H_CURSES_SET_ESCDELAY=	set_escdelay
 
 BUILTIN_FIND_FILES_VAR+=		H_CURSES_WA_NORMAL
 BUILTIN_FIND_FILES.H_CURSES_WA_NORMAL=	${H_CURSES}
@@ -95,9 +99,15 @@ USE_BUILTIN.curses=	no
 USE_BUILTIN.curses=	no
 .    endif
 .  endif
-## same for putwin(3)
+# same for putwin(3)
 .  if !empty(USE_CURSES:Mputwin) && !empty(H_CURSES_PUTWIN:M__nonexistent__)
 USE_BUILTIN.curses=	no
+.  endif
+# same for set_escdelay(3)
+.  if !empty(USE_CURSES:Mset_escdelay)
+.    if !empty(H_CURSES_SET_ESCDELAY:M__nonexistent__)
+USE_BUILTIN.curses=	no
+.    endif
 .  endif
 # same for resizeterm(3)
 .  if !empty(USE_CURSES:Mresizeterm)
@@ -105,13 +115,13 @@ USE_BUILTIN.curses=	no
 USE_BUILTIN.curses=	no
 .    endif
 .  endif
-## same for WA_NORMAL
+# same for WA_NORMAL
 .  if !empty(USE_CURSES:MWA_NORMAL)
 .    if !empty(H_CURSES_WA_NORMAL:M__nonexistent__)
 USE_BUILTIN.curses=	no
 .    endif
 .  endif
-## same for wgetnstr(3)
+# same for wgetnstr(3)
 .  if !empty(USE_CURSES:Mwgetnstr) && !empty(H_CURSES_WGETNSTR:M__nonexistent__)
 USE_BUILTIN.curses=	no
 .  endif
