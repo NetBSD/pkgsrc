@@ -1,0 +1,5 @@
+The Beats are lightweight processes, written in Go, that you install
+on your servers to capture all sorts of operational data like logs,
+operating system metrics or network packet data, and to send it to
+Elasticsearch, either directly or via Logstash, so it can be
+visualized with Kibana.
