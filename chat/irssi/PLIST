@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/09/21 20:53:57 maya Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/01/05 17:14:52 maya Exp $
 bin/irssi
 include/irssi/irssi-config.h
 include/irssi/irssi-version.h
@@ -45,6 +45,8 @@ include/irssi/src/core/session.h
 include/irssi/src/core/settings.h
 include/irssi/src/core/signals.h
 include/irssi/src/core/special-vars.h
+include/irssi/src/core/tls.h
+include/irssi/src/core/utf8.h
 include/irssi/src/core/window-item-def.h
 include/irssi/src/core/window-item-rec.h
 include/irssi/src/core/write-buffer.h
@@ -58,6 +60,7 @@ include/irssi/src/fe-common/core/fe-exec.h
 include/irssi/src/fe-common/core/fe-messages.h
 include/irssi/src/fe-common/core/fe-queries.h
 include/irssi/src/fe-common/core/fe-recode.h
+include/irssi/src/fe-common/core/fe-tls.h
 include/irssi/src/fe-common/core/fe-windows.h
 include/irssi/src/fe-common/core/formats.h
 include/irssi/src/fe-common/core/hilight-text.h
