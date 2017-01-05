@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.685 2016/12/29 19:13:01 wiz Exp $
+# $NetBSD: Makefile,v 1.686 2017/01/05 16:44:02 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -40,6 +40,7 @@ SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bcmfw
 SUBDIR+=	bcollect
+SUBDIR+=	beats
 SUBDIR+=	bkpupsd
 SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
