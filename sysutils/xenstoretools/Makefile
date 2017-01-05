@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/05 08:34:37 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/05 08:38:40 wiz Exp $
 #
 
 # VERSION is set in xentool46/version.mk
@@ -18,8 +18,8 @@ HOMEPAGE=		http://xen.org/
 COMMENT=		Xenstore Tools for Xen 4.6.x
 
 LICENSE=		gnu-gpl-v2
-DISTINFO_FILE=		${.CURDIR}/../xentools46/distinfo
-PATCHDIR=		${.CURDIR}/../xentools46/patches
+DISTINFO_FILE=		${.CURDIR}/../../sysutils/xentools46/distinfo
+PATCHDIR=		${.CURDIR}/../../sysutils/xentools46/patches
 BUILD_DIRS=		xenstore
 BUILD_TARGET=		clients
 INSTALL_DIRS=		xenstore
