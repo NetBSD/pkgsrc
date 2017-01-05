@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/05 16:33:58 roy Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		4
@@ -35,8 +35,8 @@ PLIST.horus=		yes
 .endif
 
 .include "../../archivers/libarchive/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
