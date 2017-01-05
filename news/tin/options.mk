@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2017/01/04 22:45:33 roy Exp $
+# $NetBSD: options.mk,v 1.16 2017/01/05 12:37:08 roy Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
 PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
@@ -7,10 +7,6 @@ PKG_SUGGESTED_OPTIONS=		inet6
 #PKG_SUPPORTED_OPTIONS+=	socks
 
 .include "../../mk/bsd.options.mk"
-
-.include "../../mk/curses.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-screen=${CURSES_TYPE}
-CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.curses}
 
 .if !empty(PKG_OPTIONS:Micu)
 .include "../../textproc/icu/buildlink3.mk"
