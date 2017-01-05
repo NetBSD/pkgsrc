@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/12/25 00:11:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/05 15:46:06 roy Exp $
 
 DISTNAME=	opensource-cobol-1.5.1J-utf8
 PKGNAME=	${DISTNAME:S/-utf8//}
@@ -37,6 +37,6 @@ INFO_FILES=		yes
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
