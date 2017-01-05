@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/01/05 08:38:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/05 12:44:54 sborrill Exp $
 #
 
 # VERSION is set in xentool46/version.mk
@@ -26,6 +26,18 @@ INSTALL_DIRS=		xenstore
 INSTALL_MAKE_FLAGS+=	XENSTORE_XENSTORED=n
 
 GNU_CONFIGURE=		yes
+# configure checks for more components than are required to build the
+# xenstore subdirectory, so provide dummy args to allow it to complete
+# without adding unnecessary dependencies
+CONFIGURE_ARGS+=	ac_cv_path_AS86=/dummy
+CONFIGURE_ARGS+=	ac_cv_path_LD86=/dummy
+CONFIGURE_ARGS+=	ac_cv_path_BCC=/dummy
+CONFIGURE_ARGS+=	ac_cv_lib_yajl_yajl_alloc=yes
+CONFIGURE_ARGS+=	ac_cv_lib_z_deflateCopy=yes
+CONFIGURE_ARGS+=	ac_cv_header_argp_h=yes
+CONFIGURE_ARGS+=	ac_cv_lib_argp_argp_usage=yes
+CONFIGURE_ARGS+=	pixman_CFLAGS=dummy
+CONFIGURE_ARGS+=	pixman_LIBS=/dummy
 
 PKG_SYSCONFSUBDIR=	xen
 WRKSRC=			${WRKDIR}/xen-${VERSION}/tools
@@ -58,8 +70,5 @@ pre-build:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/yajl/buildlink3.mk"
-.include "../../devel/argp/buildlink3.mk"
-.include "../../x11/pixman/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
