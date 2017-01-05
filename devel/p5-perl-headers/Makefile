@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/06/08 19:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/01/05 02:18:02 schmonz Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -19,10 +19,18 @@ PERL5_PACKLIST=		.packlist.h2ph
 NO_CONFIGURE=		yes
 OSVERSION_SPECIFIC=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH}/usr/include)
+USR_INCLUDE=		${OSX_SDK_PATH}/usr/include
+.else
+USR_INCLUDE=		/usr/include
+.endif
+
 do-build:
 	${MKDIR} ${WRKSRC}/h2ph
 	${RM} -f ${WRKSRC}/h2ph_log ${WRKSRC}/packlist
-	( cd "/usr/include" && \
+	( cd "${USR_INCLUDE}" && \
 	  ${BUILDLINK_PREFIX.perl}/bin/h2ph -d ${WRKSRC}/h2ph -r -l . ) \
 		> ${WRKSRC}/h2ph_log
 	( ${ECHO} "${PERL5_INSTALLVENDORARCH}/_h2ph_pre.ph" && \
