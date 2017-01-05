@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2015/11/09 07:18:34 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2017/01/05 17:22:09 roy Exp $
 
 DISTNAME=	ucblogo
 PKGNAME=	${DISTNAME}-6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.berkeley.edu/~bh/downloads/
 # Not at GNU mirrors yet
@@ -33,7 +33,7 @@ post-extract:
 
 BUILDLINK_DEPMETHOD.libXt=	build
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
