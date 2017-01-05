@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/01/04 16:40:11 sborrill Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/05 08:34:37 wiz Exp $
 #
 
 # VERSION is set in xentool46/version.mk
@@ -39,7 +39,7 @@ CONFLICTS+=		xentools20-[0-9]*
 CONFLICTS+=		xentools3*
 CONFLICTS+=		xentools4*
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		bash gmake pkg-config
 
 MAKE_ENV+=		PREFIX=${prefix:Q} WRKSRC=${WRKSRC}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
