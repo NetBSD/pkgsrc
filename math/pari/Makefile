@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2016/07/09 06:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2017/01/05 21:13:53 roy Exp $
 
 DISTNAME=	pari-2.7.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://pari.math.u-bordeaux.fr/pub/pari/unix/
 
@@ -48,7 +48,8 @@ pre-install: replace-interpreter
 
 .include "options.mk"
 
-.include "../../devel/ncurses/buildlink3.mk"
 # rl_save_prompt()
 .include "../../devel/readline/buildlink3.mk"
+# Links against termcap for readline
+.include "../../mk/termcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
