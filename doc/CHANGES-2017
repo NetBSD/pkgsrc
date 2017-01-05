@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.130 2017/01/05 17:17:54 maya Exp $
+$NetBSD: CHANGES-2017,v 1.131 2017/01/05 17:52:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -158,3 +158,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/irssi to 1.0.0 [maya 2017-01-05]
 	Updated chat/irssi-xmpp to 0.53nb3 [maya 2017-01-05]
 	Updated chat/irssi-icb to 0.15nb3 [maya 2017-01-05]
+	Updated databases/sqlite3 to 3.16.1 [adam 2017-01-05]
+	Updated databases/sqlite3-docs to 3.16.1 [adam 2017-01-05]
+	Updated databases/sqlite3-tcl to 3.16.1 [adam 2017-01-05]
