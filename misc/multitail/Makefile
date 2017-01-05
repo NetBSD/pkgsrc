@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/01/04 22:05:37 roy Exp $
+# $NetBSD: Makefile,v 1.29 2017/01/05 12:38:30 roy Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vanheusden.com/multitail/
 COMMENT=	View one or multiple files
 
-INCOMPAT_CURSES+=	NetBSD-[0-7].*-*
+INCOMPAT_CURSES+=	NetBSD-[0-6].*-* NetBSD-7.[0-9].*
 FAKE_NCURSES=		yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
