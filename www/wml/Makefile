@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/07/09 06:39:15 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/01/05 09:27:54 roy Exp $
 
 DISTNAME=	wml-2.0.11
 PKGREVISION=	5
@@ -40,6 +40,6 @@ pre-configure:
 	    cd ${WRKSRC}/$$i && autoreconf --force || exit 1; \
 	done
 
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
