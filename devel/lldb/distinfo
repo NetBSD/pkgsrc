@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2016/11/14 20:15:33 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2017/01/05 11:54:32 adam Exp $
 
-SHA1 (lldb-3.9.0.src.tar.xz) = 413549d22671c189f1548155813b4382de5c6b95
-RMD160 (lldb-3.9.0.src.tar.xz) = dbcbe796ea46fc0081e6d5519b4a96c6c32e0fc5
-SHA512 (lldb-3.9.0.src.tar.xz) = b2d7f36b4462dba8e478022da19981e2d029bc4728efeed50600f0d03e3dd4573e7fb3cee773ec19b11ad3d8ba53b1aef9de1b21612e77d2888d0f6de433b24a
-Size (lldb-3.9.0.src.tar.xz) = 13754516 bytes
+SHA1 (lldb-3.9.1.src.tar.xz) = f6da59c9ed570c4c7091c25f0abe59aba0e29de3
+RMD160 (lldb-3.9.1.src.tar.xz) = ccf20f4099bca5b02aea9173e863d1b2cfa6b72c
+SHA512 (lldb-3.9.1.src.tar.xz) = e2957a1da60284595b21c205b07fa3db5c474bfad1935ab8e1bc832f30af497e9eb709efeb703591ef62e7dd73a28d22fc21398097a232c8a729946d72eb5df7
+Size (lldb-3.9.1.src.tar.xz) = 13750816 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 8f7d06a4b3a1e996af9af4affd650291c4f01fe5
 SHA1 (patch-include_lldb_Utility_regcclass.h) = 9ed649e8deb5924feaf82a6e675f5c596367b3d6
 SHA1 (patch-include_lldb_Utility_regcname.h) = b67145f0437d3c09adc33a925d49267cd9ba4fd7

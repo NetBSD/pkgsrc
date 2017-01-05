@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2017/01/01 14:43:31 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/05 11:54:32 adam Exp $
 
-DISTNAME=	lldb-3.9.0.src
+DISTNAME=	lldb-3.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-#MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc1/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -115,6 +114,11 @@ TEST_TARGET=		check-lldb
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		posix
+.if ${OPSYS} != "Darwin"
+PLIST.posix=		yes
+.endif
 
 .if ${OPSYS} == "NetBSD"
 .  if exists(/usr/include/panel.h)

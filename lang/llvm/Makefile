@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/01/02 00:03:42 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/05 11:54:32 adam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -9,11 +9,10 @@
 # lang/libLLVM
 # lang/libunwind
 
-DISTNAME=	llvm-3.9.0.src
+DISTNAME=	llvm-3.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-#MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -98,6 +97,7 @@ CXXFLAGS+=	-march=i586
 .endif
 
 .if ${OPSYS} == "Darwin"
+CMAKE_ARGS+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
