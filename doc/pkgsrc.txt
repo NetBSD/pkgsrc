@@ -4117,6 +4117,14 @@ PREFER_NATIVE=  getopt skey tcp_wrappers
 A package must have a builtin.mk file to be listed in PREFER_NATIVE, otherwise
 it is simply ignored in that list.
 
+Setting PREFER_NATIVE should be performed straight after bootstrap and
+PREFER_PKGSRC during bootstrap. Switching between settings globally at a later
+date can introduce complications with dependency resolution. This is caused by
+packages built with the opposite preference being installed alongside each
+other.
+
+# ./bootstrap --prefer-pkgsrc yes
+
 Chapter 15. The pkginstall framework
 
 Table of Contents
