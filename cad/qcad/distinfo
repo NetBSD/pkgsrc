@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2016/12/16 11:16:32 plunky Exp $
+$NetBSD: distinfo,v 1.25 2017/01/06 07:23:09 plunky Exp $
 
-SHA1 (qcad-3.16.0.0.zip) = 2f143227c60f4b34d31d9c78657065fcb9ecde9f
-RMD160 (qcad-3.16.0.0.zip) = 7b3059daf6817cb2cb3d1c4c1f48c89b250e8455
-SHA512 (qcad-3.16.0.0.zip) = ed4b1a9275d16efe2af5164961ebec9840ad8c381fac49b4237ea655c04ece3878e6c31966174f0cc349b6296fee14913a64c1d81627d80c1e2519c9210516bb
-Size (qcad-3.16.0.0.zip) = 38101117 bytes
+SHA1 (qcad-3.16.4.0.zip) = 5e36faa9c987e1481976dc94fcc9e27b8d6c02f2
+RMD160 (qcad-3.16.4.0.zip) = 2d44d6091c564ac7c82c0d6e6eff0b040c027de3
+SHA512 (qcad-3.16.4.0.zip) = 31a035476af5ed8ca7835041d98e02f72c694c4a7b08150e3c1a425a48c1dfcda9bd979774baf3cbf2df9a6c394fcc98f65af111a48eef4f8f86232717fde5a4
+Size (qcad-3.16.4.0.zip) = 42662919 bytes
 SHA1 (patch-qcad.pro) = 94b35808a3e55af2623029864e96d5546f4d2716
 SHA1 (patch-scripts_Help_About_About.js) = 011bf46171a3363cca3cd84b5a3f2479414023ba
 SHA1 (patch-scripts_Help_ShowReadme_ShowReadme.js) = 362ef9b608bb4c4960b7a79103f9d1b171e93ab6
