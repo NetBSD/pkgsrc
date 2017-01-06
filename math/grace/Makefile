@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2017/01/01 16:06:26 adam Exp $
+# $NetBSD: Makefile,v 1.63 2017/01/06 10:58:56 fhajny Exp $
 
-DISTNAME=	grace-5.1.23
-PKGREVISION=	7
+DISTNAME=	grace-5.1.25
 CATEGORIES=	math graphics x11
 MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/ \
 		ftp://ftp.fu-berlin.de/unix/graphics/grace/src/stable/ \
@@ -11,6 +10,7 @@ MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c fortran77
@@ -33,7 +33,7 @@ post-install:
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/fftw2/buildlink3.mk"
-.include "../../print/pdflib/buildlink3.mk"
+.include "../../print/pdflib-lite/buildlink3.mk"
 .include "../../x11/Xbae/buildlink3.mk"
 .include "../../x11/XmHTML/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
