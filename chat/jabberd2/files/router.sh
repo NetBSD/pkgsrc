@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: router.sh,v 1.2 2004/06/26 11:21:46 abs Exp $
+# $NetBSD: router.sh,v 1.3 2017/01/06 01:52:20 gdt Exp $
 #
 # PROVIDE: router
-# REQUIRE: DAEMON c2s
+# REQUIRE: DAEMON
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
