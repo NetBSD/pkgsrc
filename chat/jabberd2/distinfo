@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.39 2016/05/25 16:24:54 schnoebe Exp $
+$NetBSD: distinfo,v 1.40 2017/01/06 01:55:12 gdt Exp $
 
-SHA1 (jabberd-2.4.0.tar.xz) = 6c51b4fe77d917d46f63864d3852877c1ed722a9
-RMD160 (jabberd-2.4.0.tar.xz) = c4d07cc205199df808977104d9309ad01fcc0dff
-SHA512 (jabberd-2.4.0.tar.xz) = eb621d2d76806361f54db49d1d3b2be0e0b5559f8ec64bc8ce8cd10f1455e8f4b98395cf790f969cb8ef63f2fa83f5974c5b70aaa82bbe670e1aa15a3d5a0a0b
-Size (jabberd-2.4.0.tar.xz) = 1507452 bytes
+SHA1 (jabberd-2.5.0.tar.xz) = 19462ae2c3ceaa0eb2ca306d1f80d421dd79cade
+RMD160 (jabberd-2.5.0.tar.xz) = 36aa01c9a16e91405c5413ceca2da780f0d3f43b
+SHA512 (jabberd-2.5.0.tar.xz) = e1298f42a199bb31cea324f239368327a259eaaa3e4624eac5b6aca983f32467c47248c57e4621fd7f7eb64a3b86d760f5e9a57b4307174d820d20e77ae3229e
+Size (jabberd-2.5.0.tar.xz) = 1507916 bytes
 SHA1 (patch-Makefile.in) = 31d8dc4a5446e96079e1016afb45dc7a602b98c9
