@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.39 2016/07/10 07:46:29 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.40 2017/01/06 20:26:39 sevan Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -587,6 +587,17 @@ PREFER_NATIVE=  getopt skey tcp_wrappers
       <filename>builtin.mk</filename>
       file to be listed in <varname>PREFER_NATIVE</varname>,
       otherwise it is simply ignored in that list.</para>
+
+      <para>Setting <varname>PREFER_NATIVE</varname> should be performed
+      straight after bootstrap and <varname>PREFER_PKGSRC</varname> during
+      bootstrap.
+      Switching between settings globally at a later date can introduce
+      complications with dependency resolution. This is caused by packages
+      built with the opposite preference being installed alongside each other.</para>
+      
+<screen>
+&rprompt; <userinput>./bootstrap --prefer-pkgsrc yes</userinput>
+</screen>
     </sect2>
   </sect1>
 </chapter>
