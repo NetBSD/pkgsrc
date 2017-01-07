@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.141 2017/01/07 06:37:56 wen Exp $
+$NetBSD: CHANGES-2017,v 1.142 2017/01/07 13:13:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -171,3 +171,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Mouse to 2.4.6 [wen 2017-01-07]
 	Updated time/p5-DateTime-Format-Strptime to 1.70 [wen 2017-01-07]
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.18 [wen 2017-01-07]
+	Updated ham/fldigi to 3.23.20 [mef 2017-01-07]
