@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.23 2016/07/10 07:46:29 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.24 2017/01/07 04:50:50 sevan Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -105,7 +105,7 @@ Create a user with name "pbulk".</para>
 <para>Deploy and configure pbulk tools, e.g.:</para>
 
 <screen>
-&rprompt; <userinput>sh pbulk.sh -n # native (NetBSD)</userinput>
+&rprompt; <userinput>sh pbulk.sh -n # use native make, no bootstrap kit needed (for use on NetBSD)</userinput>
 &rprompt; <userinput>sh pbulk.sh -n -c mk.conf.frag # native, apply settings from given mk.conf fragment</userinput>
 &rprompt; <userinput>sh pbulk.sh -nlc mk.conf.frag # native, apply settings, configure for limited build</userinput>
 </screen>
