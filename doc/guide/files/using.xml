@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.40 2016/06/11 13:39:44 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.41 2017/01/07 02:25:24 sevan Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -49,8 +49,7 @@ and you can still use binary packages from someone else.</para>
     operating system already provides those tools. Download the file and
     extract it in the <filename>/</filename> directory. It will create
     the directories <filename>/usr/pkg</filename> (containing the tools
-    for managing binary packages) and <filename>/var/db/pkg</filename>
-    (the database of installed packages).</para>
+    for managing binary packages and the database of installed packages).</para>
   </sect2>
 
   <sect2 id="installing-binary-packages">
@@ -82,9 +81,9 @@ and you can still use binary packages from someone else.</para>
     easy:</para>
 
 <screen>
-&rprompt; <userinput>pkg_add openoffice2</userinput>
+&rprompt; <userinput>pkg_add libreoffice</userinput>
 &rprompt; <userinput>pkg_add kde-3.5.7</userinput>
-&rprompt; <userinput>pkg_add ap2-php5-*</userinput>
+&rprompt; <userinput>pkg_add ap24-php71-*</userinput>
 </screen>
 
     <para>Note that any prerequisite packages needed to run the
