@@ -1861,7 +1861,7 @@ default locations are:
 LOCALBASE=              /usr/pkg
 PKG_SYSCONFBASE=        /usr/pkg/etc
 VARBASE=                /var
-PKG_DBDIR=              /var/db/pkg
+PKG_DBDIR=              /usr/pkg/pkgdb
 
 In unprivileged mode (when pkgsrc has been installed as any other user), the
 default locations are:
@@ -1869,7 +1869,7 @@ default locations are:
 LOCALBASE=              ${HOME}/pkg
 PKG_SYSCONFBASE=        ${HOME}/pkg/etc
 VARBASE=                ${HOME}/pkg/var
-PKG_DBDIR=              ${HOME}/pkg/var/db/pkg
+PKG_DBDIR=              ${HOME}/pkg/pkgdb
 
 What these four directories are for, and what they look like is explained
 below.
