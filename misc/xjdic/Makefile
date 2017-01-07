@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2015/03/15 15:06:23 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/07 21:53:27 zafer Exp $
 #
 
 DISTNAME=	xjdic24
 PKGNAME=	xjdic-2.4
 CATEGORIES=	japanese misc
-MASTER_SITES=	http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
-		ftp://ftp.nrc.ca/pub/packages/nihongo/ \
-		http://www.bcit-broadcast.com/monash/ \
-		ftp://ftp.u-aizu.ac.jp/pub/SciEng/nihongo/ftp.cc.monash.edu.au/ \
-		ftp://ftp.funet.fi/pub/culture/japan/mirrors/monash/pub/nihongo/
+MASTER_SITES=	ftp://ftp.monash.edu.au/pub/nihongo/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/xjdic/
+HOMEPAGE=	http://nihongo.monash.edu/xjdic/
 COMMENT=	Japanese dictionary
 
 DEPENDS+=	edict-[0-9]*:../../misc/edict
