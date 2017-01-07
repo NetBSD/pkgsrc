@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.167 2016/09/20 08:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.168 2017/01/07 18:49:16 maya Exp $
 
 DISTNAME=	gnutls-3.5.4
 PKGREVISION=	1
@@ -34,15 +34,15 @@ TEST_TARGET=		check
 
 INFO_FILES=		yes
 
-REPLACE_BASH+=	tests/cert-tests/openpgp-certs
-REPLACE_BASH+=	tests/danetool.sh
-REPLACE_BASH+=	tests/ocsp-tests/ocsp-must-staple-connection
-REPLACE_BASH+=	tests/ocsp-tests/ocsp-tls-connection
-REPLACE_BASH+=	tests/key-tests/dsa
-REPLACE_BASH+=	tests/suite/testcompat-main-polarssl
-REPLACE_BASH+=	tests/suite/testcompat-main-openssl
-REPLACE_BASH+=	tests/fastopen.sh
-REPLACE_BASH+=	tests/starttls.sh
+REPLACE_BASH+=		tests/cert-tests/openpgp-certs
+REPLACE_BASH+=		tests/danetool.sh
+REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
+REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection
+REPLACE_BASH+=		tests/key-tests/dsa
+REPLACE_BASH+=		tests/suite/testcompat-main-polarssl
+REPLACE_BASH+=		tests/suite/testcompat-main-openssl
+REPLACE_BASH+=		tests/fastopen.sh
+REPLACE_BASH+=		tests/starttls.sh
 
 REPLACE_PERL+=	doc/scripts/gdoc doc/scripts/sort2.pl
 
@@ -56,6 +56,8 @@ EGDIR=		${PREFIX}/share/examples/gnutls
 
 # Assembler support is broken for SunOS in 3.2.9.
 CONFIGURE_ARGS.SunOS+=	--disable-hardware-acceleration
+
+CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} include/gnutls
 
