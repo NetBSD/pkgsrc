@@ -2211,7 +2211,7 @@ are:</p>
 LOCALBASE=              /usr/pkg
 PKG_SYSCONFBASE=        /usr/pkg/etc
 VARBASE=                /var
-PKG_DBDIR=              /var/db/pkg
+PKG_DBDIR=              /usr/pkg/pkgdb
 </pre>
 <p>In unprivileged mode (when pkgsrc has been installed as any other
 user), the default locations are:</p>
@@ -2219,7 +2219,7 @@ user), the default locations are:</p>
 LOCALBASE=              ${HOME}/pkg
 PKG_SYSCONFBASE=        ${HOME}/pkg/etc
 VARBASE=                ${HOME}/pkg/var
-PKG_DBDIR=              ${HOME}/pkg/var/db/pkg
+PKG_DBDIR=              ${HOME}/pkg/pkgdb
 </pre>
 <p>What these four directories are for, and what they look like is
 explained below.</p>
@@ -8829,7 +8829,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idp140382928609984"></a><dl>
+<a name="idp140472187444112"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8874,7 +8874,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idp140382928610688"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idp140472187444784"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8890,7 +8890,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idp140382928615152"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idp140472187449200"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8908,7 +8908,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idp140382928620160"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idp140472187454208"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8926,7 +8926,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idp140382928625024"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idp140472187459120"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8939,7 +8939,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idp140382928627600"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idp140472187461712"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8955,7 +8955,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idp140382928631440"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idp140472187465600"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8979,7 +8979,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idp140382928639184"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idp140472187473312"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9004,7 +9004,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idp140382928644096"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idp140472187478272"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9052,7 +9052,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idp140382928652944"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idp140472187487104"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
