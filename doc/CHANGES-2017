@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.143 2017/01/07 18:21:54 adam Exp $
+$NetBSD: CHANGES-2017,v 1.144 2017/01/07 19:01:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -176,3 +176,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/sqlite3-docs to 3.16.2 [adam 2017-01-07]
 	Updated databases/sqlite3-tcl to 3.16.2 [adam 2017-01-07]
 	Updated devel/lemon to 1.0.3.16.2 [adam 2017-01-07]
+	Updated editors/nvi-m17n to 1.79.20040608nb6 [maya 2017-01-07]
