@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.39 2016/10/11 15:41:09 sevan Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.40 2017/01/07 00:59:13 sevan Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -143,8 +143,7 @@ minutes!</para>
       </row>
       <row>
         <entry>
-          <ulink url="http://developer.apple.com/darwin/">Darwin</ulink>
-          (<ulink url="http://developer.apple.com/macosx/">Mac OS X</ulink>)
+          <ulink url="https://developer.apple.com/macos/">Darwin / Mac OS X / OS X / macOS</ulink>
         </entry>
         <entry align="center">Oct 2001</entry>
 	<entry><ulink url="http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.MacOSX">README.MacOSX</ulink></entry>
