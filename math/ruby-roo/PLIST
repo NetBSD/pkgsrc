@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2016/10/15 14:45:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/01/07 22:26:46 wiz Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.codeclimate.yml
 ${GEM_LIBDIR}/.github/ISSUE_TEMPLATE
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.simplecov
@@ -41,6 +42,11 @@ ${GEM_LIBDIR}/lib/roo/excelx/sheet_doc.rb
 ${GEM_LIBDIR}/lib/roo/excelx/styles.rb
 ${GEM_LIBDIR}/lib/roo/excelx/workbook.rb
 ${GEM_LIBDIR}/lib/roo/font.rb
+${GEM_LIBDIR}/lib/roo/formatters/base.rb
+${GEM_LIBDIR}/lib/roo/formatters/csv.rb
+${GEM_LIBDIR}/lib/roo/formatters/matrix.rb
+${GEM_LIBDIR}/lib/roo/formatters/xml.rb
+${GEM_LIBDIR}/lib/roo/formatters/yaml.rb
 ${GEM_LIBDIR}/lib/roo/libre_office.rb
 ${GEM_LIBDIR}/lib/roo/link.rb
 ${GEM_LIBDIR}/lib/roo/open_office.rb
@@ -71,6 +77,21 @@ ${GEM_LIBDIR}/test/excelx/cell/test_empty.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_number.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_string.rb
 ${GEM_LIBDIR}/test/excelx/cell/test_time.rb
+${GEM_LIBDIR}/test/formatters/test_csv.rb
+${GEM_LIBDIR}/test/formatters/test_matrix.rb
+${GEM_LIBDIR}/test/formatters/test_xml.rb
+${GEM_LIBDIR}/test/formatters/test_yaml.rb
+${GEM_LIBDIR}/test/helpers/test_accessing_files.rb
+${GEM_LIBDIR}/test/helpers/test_comments.rb
+${GEM_LIBDIR}/test/helpers/test_formulas.rb
+${GEM_LIBDIR}/test/helpers/test_labels.rb
+${GEM_LIBDIR}/test/helpers/test_sheets.rb
+${GEM_LIBDIR}/test/helpers/test_styles.rb
+${GEM_LIBDIR}/test/roo/test_base.rb
+${GEM_LIBDIR}/test/roo/test_csv.rb
+${GEM_LIBDIR}/test/roo/test_excelx.rb
+${GEM_LIBDIR}/test/roo/test_libre_office.rb
+${GEM_LIBDIR}/test/roo/test_open_office.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/test_roo.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
