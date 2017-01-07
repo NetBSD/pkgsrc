@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2016/06/11 18:14:42 rillig Exp $
+# $NetBSD: Makefile.common,v 1.7 2017/01/07 18:00:09 leot Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -40,7 +40,7 @@ MAKE_ENV+=		REQPKGS_PRINT=${REQPKGS_PRINT:Q}
 .  if ${_GUIDE_DEPTYPE} == "run"
 USE_TOOLS+=		gs:run
 .  else
-USE_TOOLS+=		gs
+USE_TOOLS+=		gs pax
 .  endif
 .endif
 
