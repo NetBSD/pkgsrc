@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2016/11/16 10:14:36 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2017/01/07 22:34:56 maya Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -42,7 +42,7 @@ BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5.0
 .include "../../x11/videoproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xf86driproto/buildlink3.mk"
-BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.28
+BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.31
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"
 .endif # MODULAR_XORG_SERVER_BUILDLINK3_MK
