@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2016/11/16 10:14:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2017/01/07 22:34:56 maya Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -108,7 +108,7 @@ BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
 BUILDLINK_API_DEPENDS.xcmiscproto+=	xcmiscproto>=1.2.0
 BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
 BUILDLINK_API_DEPENDS.bigreqsproto+=	bigreqsproto>=1.1.0
-BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.28
+BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.31
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
 BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.99.1
 BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
