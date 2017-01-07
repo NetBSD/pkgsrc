@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.41 2017/01/07 02:25:24 sevan Exp $ -->
+<!-- $NetBSD: using.xml,v 1.42 2017/01/07 03:28:38 sevan Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -174,17 +174,26 @@ and you can still use binary packages from someone else.</para>
       to the root users &man.crontab.5; entry.  For example the entry
       <screen>
 # download vulnerabilities file
-0 3 * * * /usr/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+# audit the installed packages and email results to root
+9 3 * * * /usr/pkg/sbin/pkg_admin auit |mail -s "Installed package audit result" root >/dev/null 2>&1
       </screen>
-      will update the vulnerability list every day at 3AM. You may wish to do
-      this more often than once a day.
+      will update the vulnerability list every day at 3AM, followed by an audit
+      at 3:09AM. The result of the audit are then emailed to root.
 
-      In addition, you may wish to run the package audit from the daily
-      security script.  This may be accomplished by adding the following
-      line to <filename>/etc/security.local</filename>:
+      On NetBSD this may be accomplished instead by adding the following
+      line to <filename>/etc/daily.conf</filename>:
       <screen>
-/usr/sbin/pkg_admin audit
+fetch_pkg_vulnerabilities=YES
       </screen>
+      to fetch the vulnerability list from the daily security script. The system
+      is set to audit the packages by default but can be set explicitly, if
+      desired (not required), by adding the follwing line to
+<filename>/etc/security.conf</filename>:
+      <screen>
+check_pkg_vulnerabilities=YES
+      </screen>
+      see &man.daily.conf.5; and &man.security.conf.5; for more details.
     </para>
   </sect2>
 
