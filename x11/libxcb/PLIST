@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/05/19 07:09:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/01/08 21:48:47 wiz Exp $
 include/xcb/bigreq.h
 include/xcb/composite.h
 include/xcb/damage.h
@@ -48,6 +48,7 @@ lib/libxcb-sync.la
 lib/libxcb-xf86dri.la
 lib/libxcb-xfixes.la
 lib/libxcb-xinerama.la
+lib/libxcb-xinput.la
 lib/libxcb-xkb.la
 lib/libxcb-xtest.la
 lib/libxcb-xv.la
@@ -71,6 +72,7 @@ lib/pkgconfig/xcb-sync.pc
 lib/pkgconfig/xcb-xf86dri.pc
 lib/pkgconfig/xcb-xfixes.pc
 lib/pkgconfig/xcb-xinerama.pc
+lib/pkgconfig/xcb-xinput.pc
 lib/pkgconfig/xcb-xkb.pc
 lib/pkgconfig/xcb-xtest.pc
 lib/pkgconfig/xcb-xv.pc
