@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/12/25 17:34:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2017/01/08 19:46:17 bsiegert Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -8019,6 +8019,7 @@ ${CT_WEBDIR}/vendor/true/punycode/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/true/punycode/src/Punycode.php
 ${CT_WEBDIR}/vendor/twig/twig/.editorconfig
 ${CT_WEBDIR}/vendor/twig/twig/.gitignore
+${CT_WEBDIR}/vendor/twig/twig/.php_cs.dist
 ${CT_WEBDIR}/vendor/twig/twig/.travis.yml
 ${CT_WEBDIR}/vendor/twig/twig/CHANGELOG
 ${CT_WEBDIR}/vendor/twig/twig/LICENSE
@@ -8055,6 +8056,7 @@ ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Extension/Sandbox.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Extension/Staging.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Extension/StringLoader.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/ExtensionInterface.php
+${CT_WEBDIR}/vendor/twig/twig/lib/Twig/FactoryRuntimeLoader.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/FileExtensionEscapingStrategy.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Filter.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Filter/Function.php
