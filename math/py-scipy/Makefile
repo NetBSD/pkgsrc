@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/08/19 10:54:12 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/08 10:39:47 maya Exp $
 
 DISTNAME=	scipy-0.18.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -108,7 +108,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 # self test failures reported at
 # https://github.com/scipy/scipy/issues/6499
 do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} runtests.py -v
+	${PYTHONBIN} -c "import scipy; scipy.test('full')"
+#	cd ${WRKSRC} && ${PYTHONBIN} runtests.py -v
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
