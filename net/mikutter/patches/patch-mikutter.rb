@@ -1,4 +1,4 @@
-$NetBSD: patch-mikutter.rb,v 1.1 2016/12/15 14:40:29 tsutsui Exp $
+$NetBSD: patch-mikutter.rb,v 1.2 2017/01/08 14:20:05 tsutsui Exp $
 
 - pkgsrc can handle location of ruby binary
  http://dev.mikutter.hachune.net/issues/889
@@ -13,4 +13,4 @@ $NetBSD: patch-mikutter.rb,v 1.1 2016/12/15 14:40:29 tsutsui Exp $
 -#!ruby
  =begin rdoc
  = mikutter - the moest twitter client
- Copyright (C) 2009-2016 Toshiaki Asai
+ Copyright (C) 2009-2017 Toshiaki Asai
