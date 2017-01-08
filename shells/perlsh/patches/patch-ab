@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/06/25 23:16:27 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2017/01/08 10:55:51 mef Exp $
+
+DESTDIR support
 
 --- Makefile.PL.orig	2010-06-25 23:12:07.000000000 +0000
 +++ Makefile.PL
