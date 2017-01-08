@@ -1,9 +1,9 @@
-$NetBSD: patch-ah,v 1.7 2017/01/05 23:16:42 roy Exp $
+$NetBSD: patch-ah,v 1.8 2017/01/08 19:45:33 roy Exp $
 
 Allow py-curses to use NetBSD curses as well as ncurses
 http://bugs.python.org/issue21457
 
---- Modules/_cursesmodule.c.orig	2016-06-25 21:49:31.000000000 +0000
+--- Modules/_cursesmodule.c.orig	2016-12-17 20:05:07.000000000 +0000
 +++ Modules/_cursesmodule.c
 @@ -117,9 +117,10 @@ char *PyCursesVersion = "2.2";
      #defines many common symbols (such as "lines") which breaks the
@@ -45,7 +45,7 @@ http://bugs.python.org/issue21457
          return PyCursesCheckERR(pechochar(self->win, ch | attr),
                                  "echochar");
      else
-@@ -1237,7 +1230,7 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
+@@ -1253,7 +1246,7 @@ PyCursesWindow_NoOutRefresh(PyCursesWind
  #ifndef WINDOW_HAS_FLAGS
      if (0)
  #else
@@ -54,7 +54,7 @@ http://bugs.python.org/issue21457
  #endif
          {
              switch(PyTuple_Size(args)) {
-@@ -1380,7 +1373,7 @@ PyCursesWindow_Refresh(PyCursesWindowObj
+@@ -1396,7 +1389,7 @@ PyCursesWindow_Refresh(PyCursesWindowObj
  #ifndef WINDOW_HAS_FLAGS
      if (0)
  #else
@@ -63,7 +63,7 @@ http://bugs.python.org/issue21457
  #endif
          {
              switch(PyTuple_Size(args)) {
-@@ -1447,7 +1440,7 @@ PyCursesWindow_SubWin(PyCursesWindowObje
+@@ -1463,7 +1456,7 @@ PyCursesWindow_SubWin(PyCursesWindowObje
  
      /* printf("Subwin: %i %i %i %i   \n", nlines, ncols, begin_y, begin_x); */
  #ifdef WINDOW_HAS_FLAGS
@@ -72,7 +72,27 @@ http://bugs.python.org/issue21457
          win = subpad(self->win, nlines, ncols, begin_y, begin_x);
      else
  #endif
-@@ -2110,7 +2103,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
+@@ -2107,15 +2100,15 @@ PyCurses_IntrFlush(PyObject *self, PyObj
+ static PyObject *
+ PyCurses_Is_Term_Resized(PyObject *self, PyObject *args)
+ {
+-    int lines;
+-    int columns;
++    int nlines;
++    int ncolumns;
+     int result;
+ 
+     PyCursesInitialised;
+ 
+-    if (!PyArg_ParseTuple(args,"ii:is_term_resized", &lines, &columns))
++    if (!PyArg_ParseTuple(args,"ii:is_term_resized", &nlines, &ncolumns))
+         return NULL;
+-    result = is_term_resized(lines, columns);
++    result = is_term_resized(nlines, ncolumns);
+     if (result == TRUE) {
+         Py_INCREF(Py_True);
+         return Py_True;
+@@ -2126,7 +2119,6 @@ PyCurses_Is_Term_Resized(PyObject *self,
  }
  #endif /* HAVE_CURSES_IS_TERM_RESIZED */
  
@@ -80,7 +100,7 @@ http://bugs.python.org/issue21457
  static PyObject *
  PyCurses_KeyName(PyObject *self, PyObject *args)
  {
-@@ -2129,7 +2121,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+@@ -2145,7 +2137,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
  
      return PyString_FromString((knp == NULL) ? "" : (char *)knp);
  }
@@ -88,7 +108,7 @@ http://bugs.python.org/issue21457
  
  static PyObject *
  PyCurses_KillChar(PyObject *self)
-@@ -2383,16 +2374,16 @@ update_lines_cols(void)
+@@ -2399,16 +2390,16 @@ update_lines_cols(void)
  static PyObject *
  PyCurses_ResizeTerm(PyObject *self, PyObject *args)
  {
@@ -109,7 +129,7 @@ http://bugs.python.org/issue21457
      if (!result)
          return NULL;
      if (!update_lines_cols())
-@@ -2406,17 +2397,17 @@ PyCurses_ResizeTerm(PyObject *self, PyOb
+@@ -2422,17 +2413,17 @@ PyCurses_ResizeTerm(PyObject *self, PyOb
  static PyObject *
  PyCurses_Resize_Term(PyObject *self, PyObject *args)
  {
@@ -131,7 +151,7 @@ http://bugs.python.org/issue21457
      if (!result)
          return NULL;
      if (!update_lines_cols())
-@@ -2674,9 +2665,7 @@ static PyMethodDef PyCurses_methods[] = 
+@@ -2690,9 +2681,7 @@ static PyMethodDef PyCurses_methods[] = 
  #ifdef HAVE_CURSES_IS_TERM_RESIZED
      {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
  #endif
@@ -141,7 +161,7 @@ http://bugs.python.org/issue21457
      {"killchar",            (PyCFunction)PyCurses_KillChar, METH_NOARGS},
      {"longname",            (PyCFunction)PyCurses_longname, METH_NOARGS},
      {"meta",                (PyCFunction)PyCurses_Meta, METH_VARARGS},
-@@ -2785,9 +2774,7 @@ init_curses(void)
+@@ -2801,9 +2790,7 @@ init_curses(void)
      SetDictInt("A_DIM",                 A_DIM);
      SetDictInt("A_BOLD",                A_BOLD);
      SetDictInt("A_ALTCHARSET",          A_ALTCHARSET);
@@ -151,7 +171,7 @@ http://bugs.python.org/issue21457
      SetDictInt("A_PROTECT",         A_PROTECT);
      SetDictInt("A_CHARTEXT",        A_CHARTEXT);
      SetDictInt("A_COLOR",           A_COLOR);
-@@ -2859,7 +2846,6 @@ init_curses(void)
+@@ -2875,7 +2862,6 @@ init_curses(void)
          int key;
          char *key_n;
          char *key_n2;
@@ -159,7 +179,7 @@ http://bugs.python.org/issue21457
          for (key=KEY_MIN;key < KEY_MAX; key++) {
              key_n = (char *)keyname(key);
              if (key_n == NULL || strcmp(key_n,"UNKNOWN KEY")==0)
-@@ -2887,7 +2873,6 @@ init_curses(void)
+@@ -2903,7 +2889,6 @@ init_curses(void)
              if (key_n2 != key_n)
                  free(key_n2);
          }
