@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.2 2017/01/02 14:41:31 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.3 2017/01/08 20:03:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -7,4 +7,21 @@ lang/llvm: build fix
 
 Pullup ticket #5177 - requested by dholland
 editors/emacs: build fix
+
+Pullup ticket #5178 - requested by taca
+security/openssh: security fix
+
+Pullup ticket #5179 - requested by taca
+databases/phpmyadmin: security fix
+
+Pullup ticket #5180 - requested by taca
+www/contao35: security fix
+
+Pullup ticket #5181 - requested by taca
+www/contao43: security fix
+
+Pullup ticket #5182 - requested by maya
+chat/irssi: security fix
+chat/irssi-icb: security fix
+chat/irssi-xmpp: security fix
 
