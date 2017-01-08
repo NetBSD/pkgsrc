@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.18 2016/09/21 20:53:57 maya Exp $
+# $NetBSD: Makefile.common,v 1.18.4.1 2017/01/08 19:59:14 bsiegert Exp $
 #
 # used by chat/irssi-icb/Makefile
 # used by chat/irssi-xmpp/Makefile
 
 # Specific distribution information.
-IRSSI_VERSION=			0.8.20
+IRSSI_VERSION=			0.8.21
 IRSSI_DISTNAME=			irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=		.tar.gz
 IRSSI_DISTFILE=			${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}
