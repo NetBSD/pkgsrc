@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2016/08/23 15:53:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.44.4.1 2017/01/08 19:28:33 bsiegert Exp $
 share/doc/phpmyadmin/CONTRIBUTING.md
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/DCO
@@ -50,6 +50,7 @@ share/phpmyadmin/doc/html/_sources/user.txt
 share/phpmyadmin/doc/html/_sources/vendors.txt
 share/phpmyadmin/doc/html/_static/ajax-loader.gif
 share/phpmyadmin/doc/html/_static/basic.css
+share/phpmyadmin/doc/html/_static/classic.css
 share/phpmyadmin/doc/html/_static/comment-bright.png
 share/phpmyadmin/doc/html/_static/comment-close.png
 share/phpmyadmin/doc/html/_static/comment.png
@@ -1108,6 +1109,7 @@ share/phpmyadmin/libraries/sql-parser/src/Component.php
 share/phpmyadmin/libraries/sql-parser/src/Components/AlterOperation.php
 share/phpmyadmin/libraries/sql-parser/src/Components/Array2d.php
 share/phpmyadmin/libraries/sql-parser/src/Components/ArrayObj.php
+share/phpmyadmin/libraries/sql-parser/src/Components/CaseExpression.php
 share/phpmyadmin/libraries/sql-parser/src/Components/Condition.php
 share/phpmyadmin/libraries/sql-parser/src/Components/CreateDefinition.php
 share/phpmyadmin/libraries/sql-parser/src/Components/DataType.php
@@ -1195,7 +1197,6 @@ share/phpmyadmin/libraries/tcpdf/fonts/dejavusansb.ctg.z
 share/phpmyadmin/libraries/tcpdf/fonts/dejavusansb.php
 share/phpmyadmin/libraries/tcpdf/fonts/dejavusansb.z
 share/phpmyadmin/libraries/tcpdf/fonts/helvetica.php
-share/phpmyadmin/libraries/tcpdf/include/sRGB.icc
 share/phpmyadmin/libraries/tcpdf/include/tcpdf_colors.php
 share/phpmyadmin/libraries/tcpdf/include/tcpdf_font_data.php
 share/phpmyadmin/libraries/tcpdf/include/tcpdf_fonts.php
