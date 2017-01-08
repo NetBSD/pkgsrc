@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2016/05/19 07:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/01/08 21:48:47 wiz Exp $
 
 DISTNAME=	libxcb-1.12
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-build-docs	# or needs doxygen
+CONFIGURE_ARGS+=	--enable-xinput
 CONFIGURE_ARGS+=	--without-doxygen
 
 .include "../../mk/bsd.prefs.mk"
@@ -50,6 +52,7 @@ PKGCONFIG_OVERRIDE+=	xcb-xevie.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xf86dri.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xfixes.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xinerama.pc.in
+PKGCONFIG_OVERRIDE+=	xcb-xinput.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xkb.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xprint.pc.in
 PKGCONFIG_OVERRIDE+=	xcb-xtest.pc.in
