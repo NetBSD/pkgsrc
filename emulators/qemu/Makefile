@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.161 2017/01/01 14:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.162 2017/01/08 02:26:47 kamil Exp $
 
 DISTNAME=	qemu-2.8.0
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +17,7 @@ NOT_FOR_PLATFORM+=	NetBSD-1.[0-6]*-*
 NOT_FOR_PLATFORM+=	NetBSD-5*-*
 
 USE_TOOLS+=		bison gmake makeinfo perl:build pkg-config
-USE_NCURSES=		yes			# requires resize_term()
+FAKE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
 
@@ -135,10 +136,10 @@ post-install:
 .include "../../mk/oss.buildlink3.mk"
 .endif
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
