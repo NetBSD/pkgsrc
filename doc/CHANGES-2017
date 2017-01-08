@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.157 2017/01/08 16:32:18 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.158 2017/01/08 16:55:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -190,3 +190,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/mikutter to 3.5.1 [tsutsui 2017-01-08]
 	Updated multimedia/minidlna to 1.1.5nb4 [wiz 2017-01-08]
 	Updated devel/p5-Test-MockObject to 1.20161202 [schmonz 2017-01-08]
+	Updated www/p5-Test-WWW-Mechanize to 1.48 [schmonz 2017-01-08]
