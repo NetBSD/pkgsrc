@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/08 20:35:55 schmonz Exp $
+bin/swaks
