@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2005/01/21 03:53:17 tv Exp $
+$NetBSD: patch-aa,v 1.2 2017/01/08 10:55:51 mef Exp $
+
+date: 2005-01-21 12:53:17 +0900;  author: tv;  state: Exp;
+Partly Interix fix, but also readonly-root fix:  Don't use "-w '/'" to
+determine whether to install in PREFIX/share.  Just do it anyway.
 
 --- postinstall.pl.orig	2005-01-20 22:51:05.000000000 -0500
 +++ postinstall.pl
