@@ -1,10 +1,10 @@
-$NetBSD: patch-session.c,v 1.7 2016/09/18 17:30:11 taca Exp $
+$NetBSD: patch-session.c,v 1.7.4.1 2017/01/08 11:05:07 bsiegert Exp $
 
 * Interix support.
 
---- session.c.orig	2016-07-27 22:54:27.000000000 +0000
+--- session.c.orig	2016-12-19 04:59:41.000000000 +0000
 +++ session.c
-@@ -1120,7 +1120,7 @@ read_etc_default_login(char ***env, u_in
+@@ -934,7 +934,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)
  		return;
  
@@ -13,16 +13,16 @@ $NetBSD: patch-session.c,v 1.7 2016/09/18 17:30:11 taca Exp $
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1230,7 +1230,7 @@ do_setup_env(Session *s, const char *she
+@@ -1042,7 +1042,7 @@ do_setup_env(Session *s, const char *she
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
- 		if (path == NULL || *path == '\0') {
- 			child_set_env(&env, &envsize, "PATH",
--			    s->pw->pw_uid == 0 ?
-+			    s->pw->pw_uid == ROOTUID ?
- 				SUPERUSER_PATH : _PATH_STDPATH);
- 		}
+ 	if (path == NULL || *path == '\0') {
+ 		child_set_env(&env, &envsize, "PATH",
+-		    s->pw->pw_uid == 0 ?  SUPERUSER_PATH : _PATH_STDPATH);
++		    s->pw->pw_uid == ROOTUID ?  SUPERUSER_PATH : _PATH_STDPATH);
+ 	}
  # endif /* HAVE_CYGWIN */
-@@ -1346,6 +1346,18 @@ do_setup_env(Session *s, const char *she
+ #endif /* HAVE_LOGIN_CAP */
+@@ -1154,6 +1154,18 @@ do_setup_env(Session *s, const char *she
  		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
  		read_environment_file(&env, &envsize, buf);
  	}
@@ -41,7 +41,7 @@ $NetBSD: patch-session.c,v 1.7 2016/09/18 17:30:11 taca Exp $
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1537,11 +1549,13 @@ do_setusercontext(struct passwd *pw)
+@@ -1345,11 +1357,13 @@ do_setusercontext(struct passwd *pw)
  			perror("setgid");
  			exit(1);
  		}
@@ -55,7 +55,7 @@ $NetBSD: patch-session.c,v 1.7 2016/09/18 17:30:11 taca Exp $
  		endgrent();
  #endif
  
-@@ -2388,7 +2402,7 @@ session_pty_cleanup2(Session *s)
+@@ -2148,7 +2162,7 @@ session_pty_cleanup2(Session *s)
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */
