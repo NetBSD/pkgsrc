@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.15 2016/12/30 10:00:16 ryoon Exp $
+$NetBSD: patch-configure,v 1.16 2017/01/08 02:26:47 kamil Exp $
 
 Don't use gld on SunOS
 add check for shm_open
@@ -25,7 +25,23 @@ avoid bad substitution
    fi
    curses_found=no
    cat > $TMPC << EOF
-@@ -3762,6 +3761,27 @@ if compile_prog "" "" ; then
+@@ -2937,14 +2936,13 @@ if test "$curses" != "no" ; then
+ #include <curses.h>
+ #include <wchar.h>
+ int main(void) {
+-  const char *s = curses_version();
+   wchar_t wch = L'w';
+   setlocale(LC_ALL, "");
+   resize_term(0, 0);
+   addwstr(L"wide chars\n");
+   addnwstr(&wch, 1);
+   add_wch(WACS_DEGREE);
+-  return s != 0;
++  return 0;
+ }
+ EOF
+   IFS=:
+@@ -3762,6 +3760,27 @@ if compile_prog "" "" ; then
    fallocate_zero_range=yes
  fi
  
@@ -53,7 +69,7 @@ avoid bad substitution
  # check for posix_fallocate
  posix_fallocate=no
  cat > $TMPC << EOF
-@@ -4041,8 +4061,13 @@ fi
+@@ -4041,8 +4060,13 @@ fi
  cat > $TMPC <<EOF
  #include <signal.h>
  #include <time.h>
@@ -67,7 +83,7 @@ avoid bad substitution
    return clock_gettime(CLOCK_REALTIME, NULL);
  }
  EOF
-@@ -4797,7 +4822,9 @@ if test "$want_tools" = "yes" ; then
+@@ -4797,7 +4821,9 @@ if test "$want_tools" = "yes" ; then
    tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
@@ -78,7 +94,7 @@ avoid bad substitution
    fi
  fi
  if test "$softmmu" = yes ; then
-@@ -5303,6 +5330,9 @@ fi
+@@ -5303,6 +5329,9 @@ fi
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
  fi
