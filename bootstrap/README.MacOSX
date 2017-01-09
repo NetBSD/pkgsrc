@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.32 2016/09/20 00:46:49 gdt Exp $
+$NetBSD: README.MacOSX,v 1.33 2017/01/09 16:19:28 sevan Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -150,7 +150,7 @@ it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
 
 X11 used to be built into OS X, but as of 10.8 it is no longer
 included.  You can install XQuartz from
-http://xquartz.macosforge.org/landing/, or try the newly-added pkgsrc
+https://www.xquartz.org, or try the newly-added pkgsrc
 version.
 
 * OS X Versions
