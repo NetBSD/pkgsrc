@@ -1,30 +1,28 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2014/12/05 14:31:07 schmonz Exp $
+$NetBSD: MESSAGE,v 1.7 2017/01/09 07:01:33 sevan Exp $
 
-You may wish to have the vulnerabilities file downloaded daily so that
-it remains current.  This may be done by adding an appropriate entry
-to a user's crontab(5) entry.  For example the entry
+You may wish to have the vulnerabilities file downloaded daily so that it
+remains current. This may be done by adding an appropriate entry to the root
+users crontab(5) entry. For example the entry
 
-# download vulnerabilities file
+# Download vulnerabilities file
 0 3 * * * ${PREFIX}/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+# Audit the installed packages and email results to root
+9 3 * * * ${PREFIX}/sbin/pkg_admin audit |mail -s "Installed package audit result" \
+	    root >/dev/null 2>&1
+      
+will update the vulnerability list every day at 3AM, followed by an audit at
+3:09AM. The result of the audit are then emailed to root. On NetBSD this may be
+accomplished instead by adding the following line to /etc/daily.conf:
 
-will update the vulnerability list every day at 3AM. You may wish to do
-this more often than once a day.
+fetch_pkg_vulnerabilities=YES
+      
+to fetch the vulnerability list from the daily security script. The system is
+set to audit the packages by default but can be set explicitly, if desired (not
+required), by adding the follwing line to /etc/security.conf:
 
-In addition, you may wish to run the package audit from the daily
-security script.  This may be accomplished by adding the following
-lines to /etc/security.local
-
-if [ -x ${PREFIX}/sbin/pkg_admin ]; then
-        ${PREFIX}/sbin/pkg_admin audit
-fi
-
-Alternatively this can also be acomplished by adding an entry to a user's
-crontab(5) file. e.g.:
-
-# run audit-packages
-0 3 * * * ${PREFIX}/sbin/pkg_admin audit
-
+check_pkg_vulnerabilities=YES
+      
 Both pkg_admin subcommands can be run as as an unprivileged user,
 as long as the user chosen has permission to read the pkgdb and to write
 the pkg-vulnerabilities to ${PKGVULNDIR}.
