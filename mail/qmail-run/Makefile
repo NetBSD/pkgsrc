@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/01/09 04:58:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/09 05:03:51 schmonz Exp $
 #
 
 DISTNAME=		qmail-run-20170109
@@ -13,7 +13,7 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		mess822-[0-9]*:../../mail/mess822
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-# XXX DEPENDS+=		spamdyke-[0-9]*:../../mail/spamdyke
+DEPENDS+=		spamdyke-[0-9]*:../../mail/spamdyke
 DEPENDS+=		stunnel-[0-9]*:../../security/stunnel
 
 CONFLICTS+=		qmail-qfilter-1.5nb1
