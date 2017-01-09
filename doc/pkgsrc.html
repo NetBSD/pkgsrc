@@ -160,7 +160,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#creating.common">10.1. Common types of packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 &amp; KDE4 applications</a></span></dt>
 <dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
@@ -1309,10 +1309,11 @@ and you can still use binary packages from someone else.</p>
       to the root users <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?crontab+5.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
       </p>
 <pre class="screen">
-# download vulnerabilities file
+# Download vulnerabilities file
 0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities &gt;/dev/null 2&gt;&amp;1
-# audit the installed packages and email results to root
-9 3 * * * /usr/pkg/sbin/pkg_admin auit |mail -s "Installed package audit result" root &gt;/dev/null 2&gt;&amp;1
+# Audit the installed packages and email results to root
+9 3 * * * /usr/pkg/sbin/pkg_admin audit |mail -s "Installed package audit result" \
+	    root &gt;/dev/null 2&gt;&amp;1
       </pre>
 <p>
       will update the vulnerability list every day at 3AM, followed by an audit
@@ -2392,7 +2393,7 @@ it contains items for both pkgsrc users and developers.</p>
 <a name="faq-pkgtools"></a>9.2. Utilities for package management (pkgtools)</h2></div></div></div>
 <p>The directory <code class="filename">pkgsrc/pkgtools</code> contains
 a number of useful utilities for both users and developers of pkgsrc.  This
-section attempts only to make the reader aware of the utilities and when
+section attempts only to make the reader aware of some of the utilities and when
 they might be useful, and not to duplicate the documentation that comes
 with each package.</p>
 <p>Utilities used by pkgsrc (automatically installed when needed):</p>
@@ -2401,7 +2402,7 @@ with each package.</p>
 <p>OS tool augmentation (automatically installed when needed):</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p><a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/digest/README.html" target="_top"><code class="filename">pkgtools/digest</code></a>:
-      Calculates various kinds of checksums (including SHA1).</p></li>
+      Calculates various kinds of checksums (including SHA3).</p></li>
 <li class="listitem"><p><a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/libnbcompat/README.html" target="_top"><code class="filename">pkgtools/libnbcompat</code></a>:
       Compatibility library for pkgsrc tools.</p></li>
 <li class="listitem"><p><a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/mtree/README.html" target="_top"><code class="filename">pkgtools/mtree</code></a>: Installed on
@@ -2509,11 +2510,6 @@ you will have to add the following line into
 <pre class="programlisting">
 X11_TYPE=modular
 </pre>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>The DragonFly operating system defaults to using modular X.org from pkgsrc.
-</p>
-</div>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -2688,13 +2684,11 @@ do this, refer to the following two tools (installed as part of the
     including a description of the type of vulnerability, and a URL
     containing more information.</p></li>
 </ol></div>
-<p>Use of these tools is strongly recommended!  After
-<span class="quote">&#8220;<span class="quote">pkg_install</span>&#8221;</span> is installed, please read
-the package's message, which you can get by running <strong class="userinput"><code>pkg_info -D
-pkg_install</code></strong>.</p>
-<p>If this package is installed, pkgsrc builds will use it to
-perform a security check before building any package.  See <a class="xref" href="#variables-affecting-build" title="5.2. Variables affecting the build process">Section 5.2, &#8220;Variables affecting the build process&#8221;</a> for ways to control this
-check.</p>
+<p>Use of these tools is strongly recommended!
+See <a class="xref" href="#vulnerabilities" title="4.1.5. Checking for security vulnerabilities in installed packages">Section 4.1.5, &#8220;Checking for security vulnerabilities in installed packages&#8221;</a> for instructions on how to automate checking and
+reporting.</p>
+<p>If this database is installed, pkgsrc builds will use it to
+perform a security check before building any package.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -2773,7 +2767,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#creating.common">10.1. Common types of packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 &amp; KDE4 applications</a></span></dt>
 <dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
@@ -3003,7 +2997,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#creating.common">10.1. Common types of packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE3 &amp; KDE4 applications</a></span></dt>
 <dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
@@ -3106,10 +3100,11 @@ package from the set of installed files.</p></li>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="creating.kde-app"></a>10.1.2. KDE3 applications</h3></div></div></div>
+<a name="creating.kde-app"></a>10.1.2. KDE3 &amp; KDE4 applications</h3></div></div></div>
 <p>KDE3 applications should always include
 <code class="filename">meta-pkgs/kde3/kde3.mk</code>, which contains numerous
-settings that are typical of KDE3 packages.</p>
+settings that are typical of KDE3 packages and KDE4 applications should
+always include <code class="filename">meta-pkgs/kde4/kde4.mk</code>, respectively.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
@@ -3204,7 +3199,7 @@ not have the word <span class="quote">&#8220;<span class="quote">sources</span>&
 <code class="varname">COMMENT</code> fields. Then the package
 <code class="filename">Makefile</code> looked like that:</p>
 <pre class="programlisting">
-# $NetBSD$
+# $NetBSD $
 #
 
 DISTNAME=       nvu-1.0-sources
@@ -3220,6 +3215,9 @@ COMMENT=        Web Authoring System
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
 </pre>
+<p>On the first line of output above, an artificial space has been added betweeen NetBSD and $,
+this is a workaround to prevent CVS expanding to the filename of the
+guide.</p>
 <p>Then, I quit the editor and watched pkgsrc downloading a large
 source archive:</p>
 <pre class="programlisting">
@@ -4274,8 +4272,11 @@ the following code: <code class="code">${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.<
 <p>Be sure to add a RCS ID line as the first thing in any
     <code class="filename">PLIST</code> file you write:</p>
 <pre class="programlisting">
-@comment $NetBSD$
+@comment $NetBSD $
 </pre>
+<p>An artificial space has been added betweeen NetBSD and $, this is a
+workaround here to prevent CVS expanding to the filename of the guide. When
+adding the RCS ID the space should be ommited.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -4374,13 +4375,16 @@ PLIST.foo=      yes
 </pre>
 <p>And then in <code class="filename">PLIST</code>:</p>
 <pre class="programlisting">
-@comment $NetBSD$
+@comment $NetBSD $
 bin/bar
 man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
 </pre>
+<p>An artificial space has been added betweeen NetBSD and $, this is a
+workaround here to prevent CVS expanding to the filename of the guide. When
+adding the RCS ID the space should be ommited.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -8829,7 +8833,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idp140667445091216"></a><dl>
+<a name="idp140307984268048"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8874,7 +8878,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idp140667445091888"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idp140307984268720"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8890,7 +8894,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idp140667445096352"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idp140307984271888"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8908,7 +8912,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idp140667445101360"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idp140307984276912"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8926,7 +8930,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idp140667445106224"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idp140307982340272"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8939,7 +8943,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idp140667445108848"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idp140307982342816"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8955,7 +8959,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idp140667445112768"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idp140307982346688"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8979,7 +8983,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idp140667445120480"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idp140307982354432"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9004,7 +9008,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idp140667445125392"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idp140307982359392"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9052,7 +9056,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idp140667445134224"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idp140307982368272"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
