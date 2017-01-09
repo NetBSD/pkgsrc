@@ -1,10 +1,10 @@
-$NetBSD: patch-src_hitch.c,v 1.1 2016/05/25 20:15:35 fhajny Exp $
+$NetBSD: patch-src_hitch.c,v 1.2 2017/01/09 13:02:20 fhajny Exp $
 
 Need sys/filio on SunOS for FIONBIO.
 
---- src/hitch.c.orig	2016-01-26 14:58:56.000000000 +0000
+--- src/hitch.c.orig	2016-11-11 13:10:38.000000000 +0000
 +++ src/hitch.c
-@@ -77,6 +77,10 @@
+@@ -62,6 +62,10 @@
  #include <sys/prctl.h>
  #endif
  
@@ -12,6 +12,6 @@ Need sys/filio on SunOS for FIONBIO.
 +#include <sys/filio.h>
 +#endif
 +
- #include "uthash.h"
- #include "ringbuffer.h"
- #include "miniobj.h"
+ #include "config.h"
+ #include "configuration.h"
+ #include "hitch.h"
