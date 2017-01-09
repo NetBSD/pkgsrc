@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.50 2016/09/29 18:02:09 morr Exp $
+$NetBSD: distinfo,v 1.51 2017/01/09 19:10:16 morr Exp $
 
-SHA1 (wordpress-4.6.1.tar.gz) = 027e065d30a64720624a7404a1820e6c6fff1202
-RMD160 (wordpress-4.6.1.tar.gz) = fb28f4e3a357ce346fe6cbeecf2b56a227716699
-SHA512 (wordpress-4.6.1.tar.gz) = 303c8fe8ec877baf7380677dc22505062613dfc33c03f8858f7c6b9ce7a5825ba00a13395730fa554da9d2b3ccab8c3441e40fbc29fee45f7da44f46aa400981
-Size (wordpress-4.6.1.tar.gz) = 7961036 bytes
+SHA1 (wordpress-4.7.tar.gz) = 1e14144c4db71421dc4ed22f94c3914dfc3b7020
+RMD160 (wordpress-4.7.tar.gz) = 8ffa3dce1b36ef68e8d6d03d2dc3d733529509fa
+SHA512 (wordpress-4.7.tar.gz) = 5bbdce5215dc5debc57e00376a94c9035f63d64d20aeb947e973a4dbe1803d262aa85ce27118ddbb3fadaf956ec90974bc76654149102a88c4b1e867740db4ca
+Size (wordpress-4.7.tar.gz) = 7993186 bytes
