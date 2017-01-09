@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/01/23 14:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/09 12:02:23 joerg Exp $
 
 DISTNAME=	pyPdf-1.13
 PKGNAME=	${PYPKGPREFIX}-Pdf-1.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=	http://pybrary.net/pyPdf/
 

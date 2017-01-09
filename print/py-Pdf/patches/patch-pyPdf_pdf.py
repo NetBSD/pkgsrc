@@ -1,6 +1,7 @@
-$NetBSD: patch-pyPdf_pdf.py,v 1.1 2014/01/23 14:38:42 wiz Exp $
+$NetBSD: patch-pyPdf_pdf.py,v 1.2 2017/01/09 12:02:23 joerg Exp $
 
 python-3.x compatibility.
+When renaming resources, make sure that the new name is actually new.
 
 --- pyPdf/pdf.py.orig	2010-12-04 22:49:56.000000000 +0000
 +++ pyPdf/pdf.py
@@ -51,3 +52,18 @@ python-3.x compatibility.
          user_password, key = self._authenticateUserPassword(password)
          if user_password:
              self._decryption_key = key
+@@ -1062,7 +1062,13 @@ class PageObject(DictionaryObject):
+         renameRes = {}
+         for key in page2Res.keys():
+             if newRes.has_key(key) and newRes[key] != page2Res[key]:
+-                newname = NameObject(key + "renamed")
++                base_newkey = key + "renamed"
++                newkey = base_newkey
++                counter = 0
++                while newRes.has_key(newkey) or page2Res.has_key(newkey):
++                    newkey = "%s%d" % (base_newkey, counter)
++                    counter = counter + 1
++                newname = NameObject(newkey)
+                 renameRes[key] = newname
+                 newRes[newname] = page2Res[key]
+             elif not newRes.has_key(key):
