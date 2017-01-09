@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.21 2016/06/30 18:03:46 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.22 2017/01/09 05:03:19 sevan Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -122,11 +122,12 @@ package from the set of installed files.</para></step>
 </sect2>
 
 <sect2 id="creating.kde-app">
-<title>KDE3 applications</title>
+<title>KDE3 & KDE4 applications</title>
 
 <para>KDE3 applications should always include
 <filename>meta-pkgs/kde3/kde3.mk</filename>, which contains numerous
-settings that are typical of KDE3 packages.</para>
+settings that are typical of KDE3 packages and KDE4 applications should
+always include <filename>meta-pkgs/kde4/kde4.mk</filename>, respectively.</para>
 
 </sect2>
 
@@ -231,7 +232,7 @@ not have the word <quote>sources</quote> in it. I also filled in the
 <filename>Makefile</filename> looked like that:</para>
 
 <programlisting>
-# &#36;NetBSD&#36;
+# &#36;NetBSD &#36;
 #
 
 DISTNAME=       nvu-1.0-sources
@@ -247,6 +248,10 @@ COMMENT=        Web Authoring System
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
 </programlisting>
+
+<para>On the first line of output above, an artificial space has been added betweeen NetBSD and $,
+this is a workaround to prevent CVS expanding to the filename of the
+guide.</para>
 
 <para>Then, I quit the editor and watched pkgsrc downloading a large
 source archive:</para>
