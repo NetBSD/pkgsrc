@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.42 2017/01/07 03:28:38 sevan Exp $ -->
+<!-- $NetBSD: using.xml,v 1.43 2017/01/09 07:10:43 sevan Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -173,10 +173,11 @@ and you can still use binary packages from someone else.</para>
       it remains current.  This may be done by adding an appropriate entry
       to the root users &man.crontab.5; entry.  For example the entry
       <screen>
-# download vulnerabilities file
+# Download vulnerabilities file
 0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
-# audit the installed packages and email results to root
-9 3 * * * /usr/pkg/sbin/pkg_admin auit |mail -s "Installed package audit result" root >/dev/null 2>&1
+# Audit the installed packages and email results to root
+9 3 * * * /usr/pkg/sbin/pkg_admin audit |mail -s "Installed package audit result" \
+	    root >/dev/null 2>&1
       </screen>
       will update the vulnerability list every day at 3AM, followed by an audit
       at 3:09AM. The result of the audit are then emailed to root.
