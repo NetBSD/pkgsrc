@@ -10,6 +10,12 @@ POST-INSTALL)
 
 	cd ${PKG_SYSCONFDIR}/alias && ${TOUCH} .qmail-postmaster .qmail-mailer-daemon .qmail-root
 
+	if ! [ -s ${PKG_SYSCONFDIR}/control/concurrencyofmip ]; then
+		${ECHO} 20 > ${PKG_SYSCONFDIR}/control/concurrencyofmip
+		${ECHO} "$psmsg" >> ${PKG_SYSCONFDIR}/control/concurrencyofmip
+		${CHMOD} 644 ${PKG_SYSCONFDIR}/control/concurrencyofmip
+	fi
+
 	if ! [ -s ${PKG_SYSCONFDIR}/control/concurrencypop3 ]; then
 		${ECHO} 20 > ${PKG_SYSCONFDIR}/control/concurrencypop3
 		${ECHO} "$psmsg" >> ${PKG_SYSCONFDIR}/control/concurrencypop3
@@ -30,7 +36,7 @@ POST-INSTALL)
 
 	pop3rule=':allow'
 	smtprule='127.:allow,RELAYCLIENT=""'
-	for i in pop3 smtp; do
+	for i in ofmip pop3 smtp; do
 		if ! [ -s ${PKG_SYSCONFDIR}/tcp.${i} ]; then
 			${ECHO} "$psmsg" > ${PKG_SYSCONFDIR}/tcp.${i}
 			eval ${ECHO} \"\$${i}rule\" > ${PKG_SYSCONFDIR}/tcp.${i}
