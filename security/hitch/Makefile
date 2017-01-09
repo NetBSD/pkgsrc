@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/10/02 09:19:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/09 13:02:20 fhajny Exp $
 
-DISTNAME=	hitch-1.4.1
+DISTNAME=	hitch-1.4.4
 CATEGORIES=	security
 MASTER_SITES=	https://hitch-tls.org/source/
 
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
+CHECK_PORTABILITY_SKIP+=	src/tests/*
+
 CONFIGURE_ARGS+=	--with-rst2man=${PREFIX}/bin/rst2man.py${PYVERSSUFFIX}
 
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
@@ -26,6 +28,7 @@ BUILD_DEFS+=		HITCH_USER HITCH_GROUP HITCH_CERTS
 HITCH_USER?=		hitch
 HITCH_GROUP?=		hitch
 HITCH_CERTS?=		${PKG_SYSCONFDIR}/certs.pem
+HITCH_OCSP?=		${VARBASE}/db/hitch
 
 PKG_GROUPS+=		${HITCH_GROUP}
 PKG_USERS+=		${HITCH_USER}:${HITCH_GROUP}
@@ -37,8 +40,8 @@ MESSAGE_SUBST+=		HITCH_CERTS=${HITCH_CERTS}
 
 SUBST_CLASSES+=		dir
 SUBST_STAGE.dir=	pre-configure
-SUBST_FILES.dir=	hitch.conf.example
-SUBST_VARS.dir=		HITCH_USER HITCH_GROUP HITCH_CERTS
+SUBST_FILES.dir=	hitch.conf.example src/configuration.c
+SUBST_VARS.dir=		HITCH_USER HITCH_GROUP HITCH_CERTS HITCH_OCSP
 SUBST_MESSAGE.dir=	Setting default configuration values
 
 PKG_SYSCONFSUBDIR=	hitch
@@ -46,6 +49,8 @@ CONF_FILES+=		share/examples/hitch/hitch.conf.example \
 			${PKG_SYSCONFDIR}/hitch.conf
 
 INSTALLATION_DIRS+=	share/examples/hitch
+
+OWN_DIRS_PERMS+=	${HITCH_OCSP} ${HITCH_USER} ${HITCH_GROUP} 0755
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/doc/hitch/hitch.conf.example \
