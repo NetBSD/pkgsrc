@@ -144,7 +144,7 @@ II. The pkgsrc developer's guide
         10.1. Common types of packages
 
             10.1.1. Perl modules
-            10.1.2. KDE3 applications
+            10.1.2. KDE3 & KDE4 applications
             10.1.3. Python modules and programs
 
         10.2. Examples
@@ -1134,10 +1134,11 @@ You may wish to have the vulnerabilities file downloaded daily so that it
 remains current. This may be done by adding an appropriate entry to the root
 users crontab(5) entry. For example the entry
 
-# download vulnerabilities file
+# Download vulnerabilities file
 0 3 * * * /usr/pkg/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
-# audit the installed packages and email results to root
-9 3 * * * /usr/pkg/sbin/pkg_admin auit |mail -s "Installed package audit result" root >/dev/null 2>&1
+# Audit the installed packages and email results to root
+9 3 * * * /usr/pkg/sbin/pkg_admin audit |mail -s "Installed package audit result" \
+            root >/dev/null 2>&1
 
 
 will update the vulnerability list every day at 3AM, followed by an audit at
@@ -2037,8 +2038,8 @@ mail-index.NetBSD.org/.
 
 The directory pkgsrc/pkgtools contains a number of useful utilities for both
 users and developers of pkgsrc. This section attempts only to make the reader
-aware of the utilities and when they might be useful, and not to duplicate the
-documentation that comes with each package.
+aware of some of the utilities and when they might be useful, and not to
+duplicate the documentation that comes with each package.
 
 Utilities used by pkgsrc (automatically installed when needed):
 
@@ -2046,7 +2047,7 @@ Utilities used by pkgsrc (automatically installed when needed):
 
 OS tool augmentation (automatically installed when needed):
 
-  * pkgtools/digest: Calculates various kinds of checksums (including SHA1).
+  * pkgtools/digest: Calculates various kinds of checksums (including SHA3).
 
   * pkgtools/libnbcompat: Compatibility library for pkgsrc tools.
 
@@ -2137,10 +2138,6 @@ If you want to use modular X.org from pkgsrc instead of your system's own X11
 mk.conf:
 
 X11_TYPE=modular
-
-Note
-
-The DragonFly operating system defaults to using modular X.org from pkgsrc.
 
 9.6. How to fetch files from behind a firewall
 
@@ -2292,13 +2289,12 @@ following two tools (installed as part of the pkgtools/pkg_install package):
     by output to stdout, including a description of the type of vulnerability,
     and a URL containing more information.
 
-Use of these tools is strongly recommended! After "pkg_install" is installed,
-please read the package's message, which you can get by running pkg_info -D
-pkg_install.
+Use of these tools is strongly recommended! See Section 4.1.5, "Checking for
+security vulnerabilities in installed packages" for instructions on how to
+automate checking and reporting.
 
-If this package is installed, pkgsrc builds will use it to perform a security
-check before building any package. See Section 5.2, "Variables affecting the
-build process" for ways to control this check.
+If this database is installed, pkgsrc builds will use it to perform a security
+check before building any package.
 
 9.15. Why do some packages ignore my CFLAGS?
 
@@ -2359,7 +2355,7 @@ Table of Contents
     10.1. Common types of packages
 
         10.1.1. Perl modules
-        10.1.2. KDE3 applications
+        10.1.2. KDE3 & KDE4 applications
         10.1.3. Python modules and programs
 
     10.2. Examples
@@ -2588,7 +2584,7 @@ Table of Contents
 10.1. Common types of packages
 
     10.1.1. Perl modules
-    10.1.2. KDE3 applications
+    10.1.2. KDE3 & KDE4 applications
     10.1.3. Python modules and programs
 
 10.2. Examples
@@ -2681,10 +2677,11 @@ package involves only a few steps.
 Simple Perl modules are handled automatically by url2pkg, including
 dependencies.
 
-10.1.2. KDE3 applications
+10.1.2. KDE3 & KDE4 applications
 
 KDE3 applications should always include meta-pkgs/kde3/kde3.mk, which contains
-numerous settings that are typical of KDE3 packages.
+numerous settings that are typical of KDE3 packages and KDE4 applications
+should always include meta-pkgs/kde4/kde4.mk, respectively.
 
 10.1.3. Python modules and programs
 
@@ -2753,7 +2750,7 @@ package name should not have the word "sources" in it. I also filled in the
 MAINTAINER, HOMEPAGE and COMMENT fields. Then the package Makefile looked like
 that:
 
-# $NetBSD$
+# $NetBSD $
 #
 
 DISTNAME=       nvu-1.0-sources
@@ -2768,6 +2765,10 @@ COMMENT=        Web Authoring System
 
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
+
+On the first line of output above, an artificial space has been added betweeen
+NetBSD and $, this is a workaround to prevent CVS expanding to the filename of
+the guide.
 
 Then, I quit the editor and watched pkgsrc downloading a large source archive:
 
@@ -3610,7 +3611,11 @@ the PLIST file (or files, see below!).
 
 Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
-@comment $NetBSD$
+@comment $NetBSD $
+
+An artificial space has been added betweeen NetBSD and $, this is a workaround
+here to prevent CVS expanding to the filename of the guide. When adding the RCS
+ID the space should be ommited.
 
 13.2. Semi-automatic PLIST generation
 
@@ -3685,12 +3690,16 @@ PLIST.foo=      yes
 
 And then in PLIST:
 
-@comment $NetBSD$
+@comment $NetBSD $
 bin/bar
 man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
+
+An artificial space has been added betweeen NetBSD and $, this is a workaround
+here to prevent CVS expanding to the filename of the guide. When adding the RCS
+ID the space should be ommited.
 
 13.5. Man page compression
 
