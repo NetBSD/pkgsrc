@@ -1,0 +1,6 @@
+This is a simple wrapper over the kqueue (supported on FreeBSD, NetBSD,
+OpenBSD, and Darwin).  It uses the FFI gem to avoid having to compile a C
+extension.
+
+API documentation is available on rdoc.info:
+http://rdoc.info/projects/mat813/rb-kqueue.
