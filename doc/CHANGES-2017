@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.164 2017/01/09 13:34:12 taca Exp $
+$NetBSD: CHANGES-2017,v 1.165 2017/01/09 13:36:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -197,3 +197,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/libvncserver to 0.9.11 [ryoon 2017-01-09]
 	Updated security/hitch to 1.4.4 [fhajny 2017-01-09]
 	Added net/ruby-public_suffix version 2.0.5 [taca 2017-01-09]
+	Updated net/ruby-addressable to 2.5.0 [taca 2017-01-09]
