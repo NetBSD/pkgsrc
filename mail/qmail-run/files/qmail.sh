@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.3 2004/08/23 03:47:48 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.4 2017/01/09 04:58:09 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control qmail
 # services. Usage resembles the qmailctl script from "Life with qmail".
@@ -59,7 +59,7 @@ qmail_help()
   pause -- temporarily stops mail service (connections accepted, nothing leaves)
    cont -- continues paused mail service
    stat -- displays status of mail service
-    cdb -- rebuild the tcpserver cdb file for smtp and/or pop3
+    cdb -- rebuild the tcpserver cdb file for smtp, ofmip, and/or pop3
 restart -- stops and restarts smtp, sends qmail-send a TERM & restarts it
 doqueue -- schedules queued messages for immediate delivery
  reload -- sends qmail-send HUP, rereading locals and virtualdomains
@@ -70,7 +70,7 @@ doqueue -- schedules queued messages for immediate delivery
 HELP
 }
 
-COMMAND_LIST="qmailsend qmailsmtpd qmailpop3d"
+COMMAND_LIST="qmailsend qmailsmtpd qmailofmipd qmailpop3d"
 
 name="qmail"
 start_cmd="forward_commands"
@@ -80,7 +80,7 @@ reload_cmd="qmailrcd send"; hup_cmd=${reload_cmd}
 status_cmd="forward_commands"; stat_cmd=${status_cmd}
 pause_cmd="forward_commands"
 cont_cmd="forward_commands"
-cdb_cmd="qmailrcd smtpd pop3d"
+cdb_cmd="qmailrcd smtpd ofmipd pop3d"
 queue_cmd="qmailrcd send"
 help_cmd="qmail_help"
 extra_commands="pause cont stat status cdb doqueue reload queue alrm flush hup help"
