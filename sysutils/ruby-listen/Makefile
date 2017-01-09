@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2016/10/20 14:55:53 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/09 15:02:31 taca Exp $
 
 DISTNAME=	listen-3.1.5
+PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
@@ -15,13 +16,8 @@ RUBY_VERSIONS_ACCEPTED= 22 23
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.if ${OPSYS} == "Darwin"
 DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.9.4:../../devel/ruby-rb-fsevent
-OVERRIDE_GEMSPEC+=	rb-inotify:
-.else
 DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9.7:../../sysutils/ruby-rb-inotify
-OVERRIDE_GEMSPEC+=	rb-fsevent:
-.endif
 DEPENDS+=	${RUBY_PKGPREFIX}-dep>=1.2:../../devel/ruby-dep
 
 .include "../../lang/ruby/gem.mk"
