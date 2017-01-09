@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.170 2017/01/09 19:11:12 morr Exp $
+$NetBSD: CHANGES-2017,v 1.171 2017/01/09 19:30:51 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -203,3 +203,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-rb-kqueue version 0.2.4 [taca 2017-01-09]
 	Updated net/haproxy to 1.6.11 [morr 2017-01-09]
 	Updated www/wordpress to 4.7 [morr 2017-01-09]
+	Updated editors/vim-share to 8.0.0161 [morr 2017-01-09]
