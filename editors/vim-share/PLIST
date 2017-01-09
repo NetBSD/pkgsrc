@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2016/11/16 10:38:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2017/01/09 19:26:14 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -76,6 +76,7 @@ share/vim/${VIM_SUBDIR}/compiler/bdf.vim
 share/vim/${VIM_SUBDIR}/compiler/checkstyle.vim
 share/vim/${VIM_SUBDIR}/compiler/context.vim
 share/vim/${VIM_SUBDIR}/compiler/cs.vim
+share/vim/${VIM_SUBDIR}/compiler/csslint.vim
 share/vim/${VIM_SUBDIR}/compiler/cucumber.vim
 share/vim/${VIM_SUBDIR}/compiler/decada.vim
 share/vim/${VIM_SUBDIR}/compiler/dot.vim
@@ -90,6 +91,7 @@ share/vim/${VIM_SUBDIR}/compiler/fpc.vim
 share/vim/${VIM_SUBDIR}/compiler/g95.vim
 share/vim/${VIM_SUBDIR}/compiler/gcc.vim
 share/vim/${VIM_SUBDIR}/compiler/gfortran.vim
+share/vim/${VIM_SUBDIR}/compiler/ghc.vim
 share/vim/${VIM_SUBDIR}/compiler/gnat.vim
 share/vim/${VIM_SUBDIR}/compiler/go.vim
 share/vim/${VIM_SUBDIR}/compiler/haml.vim
@@ -114,6 +116,7 @@ share/vim/${VIM_SUBDIR}/compiler/onsgmls.vim
 share/vim/${VIM_SUBDIR}/compiler/pbx.vim
 share/vim/${VIM_SUBDIR}/compiler/perl.vim
 share/vim/${VIM_SUBDIR}/compiler/php.vim
+share/vim/${VIM_SUBDIR}/compiler/pylint.vim
 share/vim/${VIM_SUBDIR}/compiler/pyunit.vim
 share/vim/${VIM_SUBDIR}/compiler/rake.vim
 share/vim/${VIM_SUBDIR}/compiler/rspec.vim
