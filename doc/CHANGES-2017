@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.168 2017/01/09 15:53:38 taca Exp $
+$NetBSD: CHANGES-2017,v 1.169 2017/01/09 18:58:01 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -201,3 +201,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/ruby-listen to 3.1.5nb1 [taca 2017-01-09]
 	Updated www/ruby-jekyll-watch to 1.5.0nb1 [taca 2017-01-09]
 	Added devel/ruby-rb-kqueue version 0.2.4 [taca 2017-01-09]
+	Updated net/haproxy to 1.6.11 [morr 2017-01-09]
