@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2015/12/12 14:52:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/01/09 13:36:12 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/addressable.gemspec
 ${GEM_LIBDIR}/data/unicode.data
 ${GEM_LIBDIR}/lib/addressable.rb
 ${GEM_LIBDIR}/lib/addressable/idna.rb
