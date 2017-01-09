@@ -1,48 +1,33 @@
-$NetBSD: patch-hitch.conf.example,v 1.1 2016/08/22 09:34:40 fhajny Exp $
+$NetBSD: patch-hitch.conf.example,v 1.2 2017/01/09 13:02:20 fhajny Exp $
 
 Sane default options.
 
---- hitch.conf.example.orig	2016-08-15 13:51:51.000000000 +0000
+--- hitch.conf.example.orig	2016-11-14 13:13:10.000000000 +0000
 +++ hitch.conf.example
-@@ -43,7 +43,7 @@ backend = "[127.0.0.1]:6081"
- # only available for a specific listen endpoint.
- #
- # type: string
--pem-file = ""
-+pem-file = "@HITCH_CERTS@"
+@@ -2,15 +2,15 @@
  
- # OCSP settings
- #
-@@ -120,12 +120,12 @@ chroot = ""
- # Set uid after binding a socket
- #
- # type: string
--user = ""
+ 
+ frontend = {
+-    host = "*"
++    host = "127.0.0.1"
+     port = "443"
+ }
+ backend = "[127.0.0.1]:6086"    # 6086 is the default Varnish PROXY port.
+ workers = 4                     # number of CPU cores
+ 
+ daemon = on
+-user = "nobody"
+-group = "nogroup"
 +user = "@HITCH_USER@"
- 
- # Set gid after binding a socket
- #
- # type: string
--group = ""
 +group = "@HITCH_GROUP@"
  
- # Quiet execution, report only error messages
- #
-@@ -135,7 +135,7 @@ quiet = off
- # Use syslog for logging
- #
- # type: boolean
--syslog = off
-+syslog = on
+ # Enable to let clients negotiate HTTP/2 with ALPN. (default off)
+ # alpn-protos = "http/2, http/1.1"
+@@ -18,4 +18,6 @@ group = "nogroup"
+ # run Varnish as backend over PROXY; varnishd -a :80 -a localhost:6086,PROXY ..
+ write-proxy-v2 = on             # Write PROXY header
  
- # Syslog facility to use
- #
-@@ -145,7 +145,7 @@ syslog-facility = "daemon"
- # Run as daemon
- #
- # type: boolean
--daemon = off
-+daemon = on
- 
- # Report client address by writing IP before sending data
- #
+-
++pem-file = {
++    cert = "@HITCH_CERTS@"
++}
