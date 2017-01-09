@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.24 2016/07/10 07:46:29 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.25 2017/01/09 07:22:52 sevan Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -20,8 +20,11 @@
     <filename>PLIST</filename> file you write:</para>
 
 <programlisting>
-@comment &#36;NetBSD&#36;
+@comment &#36;NetBSD &#36;
 </programlisting>
+     <para>An artificial space has been added betweeen NetBSD and $, this is a
+workaround here to prevent CVS expanding to the filename of the guide. When
+adding the RCS ID the space should be ommited.</para>
   </sect1>
 
   <sect1 id="automatic-plist-generation">
@@ -153,13 +156,17 @@ PLIST.foo=      yes
 
     <para>And then in <filename>PLIST</filename>:</para>
 <programlisting>
-@comment &#36;NetBSD&#36;
+@comment &#36;NetBSD &#36;
 bin/bar
 man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
 </programlisting>
+
+     <para>An artificial space has been added betweeen NetBSD and $, this is a
+workaround here to prevent CVS expanding to the filename of the guide. When
+adding the RCS ID the space should be ommited.</para>
 
   </sect1>
 
