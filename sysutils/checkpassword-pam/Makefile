@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/09 04:01:32 schmonz Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
@@ -11,6 +11,10 @@ COMMENT=		PAM checkpassword-compatible authentication program
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+CHECKPASSWORD_BIN=	bin/checkpassword-pam
+
+.include "../../sysutils/checkpassword/options.mk"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
