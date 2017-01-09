@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2015/11/25 12:51:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2017/01/09 04:58:09 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20141206
+DISTNAME=		qmail-run-20170109
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,8 +10,11 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures qmail to receive and deliver mail
 LICENSE=		2-clause-bsd
 
+DEPENDS+=		mess822-[0-9]*:../../mail/mess822
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
+# XXX DEPENDS+=		spamdyke-[0-9]*:../../mail/spamdyke
+DEPENDS+=		stunnel-[0-9]*:../../security/stunnel
 
 CONFLICTS+=		qmail-qfilter-1.5nb1
 
@@ -21,7 +24,8 @@ NO_CHECKSUM=		yes
 
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
-RCD_SCRIPTS=		qmail qmailpop3d qmailqread qmailsend qmailsmtpd
+MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
+RCD_SCRIPTS=		qmail qmailofmipd qmailpop3d qmailqread qmailsend qmailsmtpd
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
 BUILD_DEFS+=		QMAIL_QUEUE_EXTRA
@@ -43,7 +47,7 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	mailer.conf qmail-procmail qmail-qfilter-queue
-SUBST_FILES.paths+=	qmail-qread-client
+SUBST_FILES.paths+=	qmail-qread-client spamdyke-ofmipd.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g'
@@ -52,10 +56,11 @@ SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
 SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
+SUBST_SED.paths+=	-e 's,@TRUE@,${TRUE},g'
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
-	for f in README.pkgsrc mailer.conf; do				\
+	for f in README.pkgsrc mailer.conf spamdyke-ofmipd.conf stunnel.conf; do \
 	    ${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f;			\
 	done
 	for f in qmail-procmail qmail-qfilter-queue qmail-qread-client; do \
@@ -69,6 +74,10 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/qmail-run
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
+		${DESTDIR}${PREFIX}/share/examples/qmail-run
+	${INSTALL_DATA} ${WRKDIR}/spamdyke-ofmipd.conf \
+		${DESTDIR}${PREFIX}/share/examples/qmail-run
+	${INSTALL_DATA} ${WRKDIR}/stunnel.conf \
 		${DESTDIR}${PREFIX}/share/examples/qmail-run
 
 .include "../../mk/bsd.pkg.mk"
