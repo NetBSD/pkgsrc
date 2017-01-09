@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1142 2017/01/04 11:15:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.1143 2017/01/09 13:33:43 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -701,6 +701,7 @@ SUBDIR+=	ruby-net-ping
 SUBDIR+=	ruby-netaddr
 SUBDIR+=	ruby-netrc
 SUBDIR+=	ruby-pluggaloid
+SUBDIR+=	ruby-public_suffix
 SUBDIR+=	ruby-rubytter
 SUBDIR+=	ruby-snmp
 SUBDIR+=	ruby-soap4r
