@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.54 2016/07/10 07:46:29 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.55 2017/01/09 04:03:34 sevan Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -66,7 +66,7 @@ it contains items for both pkgsrc users and developers.</para>
 
 <para>The directory <filename>pkgsrc/pkgtools</filename> contains
 a number of useful utilities for both users and developers of pkgsrc.  This
-section attempts only to make the reader aware of the utilities and when
+section attempts only to make the reader aware of some of the utilities and when
 they might be useful, and not to duplicate the documentation that comes
 with each package.</para>
 
@@ -87,7 +87,7 @@ with each package.</para>
 
   <listitem>
     <para><filename role="pkg">pkgtools/digest</filename>:
-      Calculates various kinds of checksums (including SHA1).</para>
+      Calculates various kinds of checksums (including SHA3).</para>
   </listitem>
 
   <listitem>
@@ -279,9 +279,6 @@ you will have to add the following line into
 <programlisting>
 X11_TYPE=modular
 </programlisting>
-
-<note><para>The DragonFly operating system defaults to using modular X.org from pkgsrc.
-</para></note>
 
 </sect1>
 
@@ -529,15 +526,12 @@ do this, refer to the following two tools (installed as part of the
 
 </orderedlist>
 
-<para>Use of these tools is strongly recommended!  After
-<quote>pkg_install</quote> is installed, please read
-the package's message, which you can get by running <userinput>pkg_info -D
-pkg_install</userinput>.</para>
+<para>Use of these tools is strongly recommended!
+See <xref linkend="vulnerabilities"/> for instructions on how to automate checking and
+reporting.</para>
 
-<para>If this package is installed, pkgsrc builds will use it to
-perform a security check before building any package.  See <xref
-linkend="variables-affecting-build"/> for ways to control this
-check.</para>
+<para>If this database is installed, pkgsrc builds will use it to
+perform a security check before building any package.</para>
 
 </sect1>
 
