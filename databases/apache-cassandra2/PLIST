@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/21 12:55:29 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/09 22:13:19 fhajny Exp $
 share/cassandra/bin/cassandra
 share/cassandra/bin/cassandra-cli
 share/cassandra/bin/cassandra.in.sh
@@ -815,6 +815,7 @@ share/cassandra/javadoc/org/apache/cassandra/db/NativeDecoratedKey.html
 share/cassandra/javadoc/org/apache/cassandra/db/NativeDeletedCell.html
 share/cassandra/javadoc/org/apache/cassandra/db/NativeExpiringCell.html
 share/cassandra/javadoc/org/apache/cassandra/db/OnDiskAtom.Serializer.html
+share/cassandra/javadoc/org/apache/cassandra/db/OnDiskAtom.SerializerForWriting.html
 share/cassandra/javadoc/org/apache/cassandra/db/OnDiskAtom.html
 share/cassandra/javadoc/org/apache/cassandra/db/PagedRangeCommand.html
 share/cassandra/javadoc/org/apache/cassandra/db/RangeSliceCommand.html
@@ -939,6 +940,7 @@ share/cassandra/javadoc/org/apache/cassandra/db/class-use/NativeDecoratedKey.htm
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/NativeDeletedCell.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/NativeExpiringCell.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/OnDiskAtom.Serializer.html
+share/cassandra/javadoc/org/apache/cassandra/db/class-use/OnDiskAtom.SerializerForWriting.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/OnDiskAtom.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/PagedRangeCommand.html
 share/cassandra/javadoc/org/apache/cassandra/db/class-use/RangeSliceCommand.html
@@ -1363,7 +1365,9 @@ share/cassandra/javadoc/org/apache/cassandra/dht/LongToken.html
 share/cassandra/javadoc/org/apache/cassandra/dht/Murmur3Partitioner.html
 share/cassandra/javadoc/org/apache/cassandra/dht/OrderPreservingPartitioner.html
 share/cassandra/javadoc/org/apache/cassandra/dht/RandomPartitioner.html
+share/cassandra/javadoc/org/apache/cassandra/dht/Range.OrderedRangeContainmentChecker.html
 share/cassandra/javadoc/org/apache/cassandra/dht/Range.html
+share/cassandra/javadoc/org/apache/cassandra/dht/RangeStreamer.ExcludeLocalNodeFilter.html
 share/cassandra/javadoc/org/apache/cassandra/dht/RangeStreamer.FailureDetectorSourceFilter.html
 share/cassandra/javadoc/org/apache/cassandra/dht/RangeStreamer.ISourceFilter.html
 share/cassandra/javadoc/org/apache/cassandra/dht/RangeStreamer.SingleDatacenterFilter.html
@@ -1393,7 +1397,9 @@ share/cassandra/javadoc/org/apache/cassandra/dht/class-use/LongToken.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/Murmur3Partitioner.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/OrderPreservingPartitioner.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/RandomPartitioner.html
+share/cassandra/javadoc/org/apache/cassandra/dht/class-use/Range.OrderedRangeContainmentChecker.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/Range.html
+share/cassandra/javadoc/org/apache/cassandra/dht/class-use/RangeStreamer.ExcludeLocalNodeFilter.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/RangeStreamer.FailureDetectorSourceFilter.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/RangeStreamer.ISourceFilter.html
 share/cassandra/javadoc/org/apache/cassandra/dht/class-use/RangeStreamer.SingleDatacenterFilter.html
@@ -1575,12 +1581,14 @@ share/cassandra/javadoc/org/apache/cassandra/hadoop/pig/package-summary.html
 share/cassandra/javadoc/org/apache/cassandra/hadoop/pig/package-tree.html
 share/cassandra/javadoc/org/apache/cassandra/hadoop/pig/package-use.html
 share/cassandra/javadoc/org/apache/cassandra/io/FSError.html
+share/cassandra/javadoc/org/apache/cassandra/io/FSErrorHandler.html
 share/cassandra/javadoc/org/apache/cassandra/io/FSReadError.html
 share/cassandra/javadoc/org/apache/cassandra/io/FSWriteError.html
 share/cassandra/javadoc/org/apache/cassandra/io/ISSTableSerializer.html
 share/cassandra/javadoc/org/apache/cassandra/io/ISerializer.html
 share/cassandra/javadoc/org/apache/cassandra/io/IVersionedSerializer.html
 share/cassandra/javadoc/org/apache/cassandra/io/class-use/FSError.html
+share/cassandra/javadoc/org/apache/cassandra/io/class-use/FSErrorHandler.html
 share/cassandra/javadoc/org/apache/cassandra/io/class-use/FSReadError.html
 share/cassandra/javadoc/org/apache/cassandra/io/class-use/FSWriteError.html
 share/cassandra/javadoc/org/apache/cassandra/io/class-use/ISSTableSerializer.html
@@ -1648,6 +1656,7 @@ share/cassandra/javadoc/org/apache/cassandra/io/sstable/IndexSummaryBuilder.Read
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/IndexSummaryBuilder.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/IndexSummaryManager.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/IndexSummaryManagerMBean.html
+share/cassandra/javadoc/org/apache/cassandra/io/sstable/IndexSummaryRedistribution.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/KeyIterator.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/ReducingKeyIterator.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/SSTable.html
@@ -1693,6 +1702,7 @@ share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/IndexSummaryBu
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/IndexSummaryBuilder.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/IndexSummaryManager.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/IndexSummaryManagerMBean.html
+share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/IndexSummaryRedistribution.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/KeyIterator.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/ReducingKeyIterator.html
 share/cassandra/javadoc/org/apache/cassandra/io/sstable/class-use/SSTable.html
@@ -1985,6 +1995,7 @@ share/cassandra/javadoc/org/apache/cassandra/net/IncomingTcpConnection.html
 share/cassandra/javadoc/org/apache/cassandra/net/MessageDeliveryTask.html
 share/cassandra/javadoc/org/apache/cassandra/net/MessageIn.html
 share/cassandra/javadoc/org/apache/cassandra/net/MessageOut.html
+share/cassandra/javadoc/org/apache/cassandra/net/MessagingService.SocketThread.html
 share/cassandra/javadoc/org/apache/cassandra/net/MessagingService.Verb.html
 share/cassandra/javadoc/org/apache/cassandra/net/MessagingService.html
 share/cassandra/javadoc/org/apache/cassandra/net/MessagingServiceMBean.html
@@ -2003,6 +2014,7 @@ share/cassandra/javadoc/org/apache/cassandra/net/class-use/IncomingTcpConnection
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessageDeliveryTask.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessageIn.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessageOut.html
+share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessagingService.SocketThread.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessagingService.Verb.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessagingService.html
 share/cassandra/javadoc/org/apache/cassandra/net/class-use/MessagingServiceMBean.html
@@ -2018,6 +2030,7 @@ share/cassandra/javadoc/org/apache/cassandra/notifications/INotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/INotificationConsumer.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/MemtableRenewedNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/SSTableAddedNotification.html
+share/cassandra/javadoc/org/apache/cassandra/notifications/SSTableCompactingNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/SSTableDeletingNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/SSTableListChangedNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/SSTableRepairStatusChanged.html
@@ -2026,6 +2039,7 @@ share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/INotificati
 share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/INotificationConsumer.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/MemtableRenewedNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/SSTableAddedNotification.html
+share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/SSTableCompactingNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/SSTableDeletingNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/SSTableListChangedNotification.html
 share/cassandra/javadoc/org/apache/cassandra/notifications/class-use/SSTableRepairStatusChanged.html
@@ -2207,6 +2221,7 @@ share/cassandra/javadoc/org/apache/cassandra/service/CassandraDaemon.html
 share/cassandra/javadoc/org/apache/cassandra/service/ClientState.html
 share/cassandra/javadoc/org/apache/cassandra/service/DatacenterSyncWriteResponseHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/DatacenterWriteResponseHandler.html
+share/cassandra/javadoc/org/apache/cassandra/service/DefaultFSErrorHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/DigestMismatchException.html
 share/cassandra/javadoc/org/apache/cassandra/service/EchoVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/EmbeddedCassandraService.html
@@ -2256,6 +2271,7 @@ share/cassandra/javadoc/org/apache/cassandra/service/class-use/CassandraDaemon.h
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/ClientState.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/DatacenterSyncWriteResponseHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/DatacenterWriteResponseHandler.html
+share/cassandra/javadoc/org/apache/cassandra/service/class-use/DefaultFSErrorHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/DigestMismatchException.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/EchoVerbHandler.html
 share/cassandra/javadoc/org/apache/cassandra/service/class-use/EmbeddedCassandraService.html
@@ -3373,6 +3389,7 @@ share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GcStats.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetCompactionThreshold.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetCompactionThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetEndpoints.html
+share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetInterDCStreamThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetLoggingLevels.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetSSTables.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.GetStreamThroughput.html
@@ -3392,6 +3409,7 @@ share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.RangeKeySample.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.Rebuild.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.RebuildIndex.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.Refresh.html
+share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.RefreshSizeEstimates.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.ReloadTriggers.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.RemoveNode.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.RemoveToken.html
@@ -3405,6 +3423,7 @@ share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetCacheKeysToSave.h
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetCompactionThreshold.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetCompactionThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetHintedHandoffThrottleInKB.html
+share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetInterDCStreamThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetLoggingLevel.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetStreamThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/NodeTool.SetTraceProbability.html
@@ -3468,6 +3487,7 @@ share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GcStats.ht
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetCompactionThreshold.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetCompactionThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetEndpoints.html
+share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetInterDCStreamThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetLoggingLevels.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetSSTables.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.GetStreamThroughput.html
@@ -3487,6 +3507,7 @@ share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.RangeKeySa
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.Rebuild.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.RebuildIndex.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.Refresh.html
+share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.RefreshSizeEstimates.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.ReloadTriggers.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.RemoveNode.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.RemoveToken.html
@@ -3500,6 +3521,7 @@ share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetCacheKe
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetCompactionThreshold.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetCompactionThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetHintedHandoffThrottleInKB.html
+share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetInterDCStreamThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetLoggingLevel.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetStreamThroughput.html
 share/cassandra/javadoc/org/apache/cassandra/tools/class-use/NodeTool.SetTraceProbability.html
@@ -3582,6 +3604,7 @@ share/cassandra/javadoc/org/apache/cassandra/transport/OptionCodec.Codecable.htm
 share/cassandra/javadoc/org/apache/cassandra/transport/OptionCodec.html
 share/cassandra/javadoc/org/apache/cassandra/transport/ProtocolException.html
 share/cassandra/javadoc/org/apache/cassandra/transport/RequestThreadPoolExecutor.html
+share/cassandra/javadoc/org/apache/cassandra/transport/Server.AbstractSecureIntializer.html
 share/cassandra/javadoc/org/apache/cassandra/transport/Server.ConnectionTracker.html
 share/cassandra/javadoc/org/apache/cassandra/transport/Server.html
 share/cassandra/javadoc/org/apache/cassandra/transport/ServerConnection.html
@@ -3627,6 +3650,7 @@ share/cassandra/javadoc/org/apache/cassandra/transport/class-use/OptionCodec.Cod
 share/cassandra/javadoc/org/apache/cassandra/transport/class-use/OptionCodec.html
 share/cassandra/javadoc/org/apache/cassandra/transport/class-use/ProtocolException.html
 share/cassandra/javadoc/org/apache/cassandra/transport/class-use/RequestThreadPoolExecutor.html
+share/cassandra/javadoc/org/apache/cassandra/transport/class-use/Server.AbstractSecureIntializer.html
 share/cassandra/javadoc/org/apache/cassandra/transport/class-use/Server.ConnectionTracker.html
 share/cassandra/javadoc/org/apache/cassandra/transport/class-use/Server.html
 share/cassandra/javadoc/org/apache/cassandra/transport/class-use/ServerConnection.html
@@ -3964,7 +3988,10 @@ share/cassandra/javadoc/overview-frame.html
 share/cassandra/javadoc/overview-summary.html
 share/cassandra/javadoc/overview-tree.html
 share/cassandra/javadoc/package-list
-share/cassandra/javadoc/script.js
+share/cassandra/javadoc/resources/background.gif
+share/cassandra/javadoc/resources/tab.gif
+share/cassandra/javadoc/resources/titlebar.gif
+share/cassandra/javadoc/resources/titlebar_end.gif
 share/cassandra/javadoc/serialized-form.html
 share/cassandra/javadoc/stylesheet.css
 share/cassandra/lib/ST4-4.0.8.jar
@@ -3973,7 +4000,7 @@ share/cassandra/lib/antlr-runtime-3.5.2.jar
 share/cassandra/lib/${PKGNAME}.jar
 share/cassandra/lib/apache-cassandra-clientutil-${PKGVERSION}.jar
 share/cassandra/lib/apache-cassandra-thrift-${PKGVERSION}.jar
-share/cassandra/lib/cassandra-driver-internal-only-2.7.2.zip
+share/cassandra/lib/cassandra-driver-internal-only-2.7.2-2fc8a2b.zip
 share/cassandra/lib/commons-cli-1.1.jar
 share/cassandra/lib/commons-codec-1.2.jar
 share/cassandra/lib/commons-lang3-3.1.jar
@@ -4025,10 +4052,10 @@ share/cassandra/lib/licenses/reporter-config-2.1.0.txt
 share/cassandra/lib/licenses/six-1.7.3.txt
 share/cassandra/lib/licenses/slf4j-api-1.7.2.txt
 share/cassandra/lib/licenses/snakeyaml-1.11.txt
-share/cassandra/lib/licenses/snappy-java-1.0.5.txt
+share/cassandra/lib/licenses/snappy-java-1.0.5.2.txt
 share/cassandra/lib/licenses/stream-2.5.2.txt
 share/cassandra/lib/licenses/super-csv-2.1.0.txt
-share/cassandra/lib/licenses/thrift-server-0.3.5.txt
+share/cassandra/lib/licenses/thrift-server-0.3.7.txt
 share/cassandra/lib/logback-classic-1.1.2.jar
 share/cassandra/lib/logback-core-1.1.2.jar
 share/cassandra/lib/lz4-1.2.0.jar
@@ -4043,6 +4070,7 @@ share/cassandra/lib/stream-2.5.2.jar
 share/cassandra/lib/super-csv-2.1.0.jar
 share/cassandra/lib/thrift-server-0.3.7.jar
 share/cassandra/pylib/cqlshlib/__init__.py
+share/cassandra/pylib/cqlshlib/copyutil.py
 share/cassandra/pylib/cqlshlib/cql3handling.py
 share/cassandra/pylib/cqlshlib/cqlhandling.py
 share/cassandra/pylib/cqlshlib/displaying.py
