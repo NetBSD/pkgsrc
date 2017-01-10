@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/04 23:05:12 rodent Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/01/10 22:54:47 rodent Exp $
 bin/redmine_fix_gems${RUBY_SUFFIX}.sh
 bin/redmine_generate_secret${RUBY_SUFFIX}.sh
 bin/redmine_migrate_db${RUBY_SUFFIX}.sh
@@ -2084,7 +2084,9 @@ share/${RUBY_PKGPREFIX}-redmine/gems/bin/nokogiri
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/rackup
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/rails
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/rake
+share/${RUBY_PKGPREFIX}-redmine/gems/bin/rdoc
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/redcarpet
+share/${RUBY_PKGPREFIX}-redmine/gems/bin/ri
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/sprockets
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/thor
 share/${RUBY_PKGPREFIX}-redmine/gems/bin/tilt
@@ -2140,13 +2142,14 @@ share/${RUBY_PKGPREFIX}-redmine/gems/cache/railties-4.2.7.1.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/rake-10.4.2.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/rbpdf-1.19.0.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/rbpdf-font-1.19.0.gem
+share/${RUBY_PKGPREFIX}-redmine/gems/cache/rdoc-4.3.0.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/redcarpet-3.3.4.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/request_store-1.0.5.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/rmagick-2.16.0.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/roadie-3.2.0.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/roadie-rails-1.1.1.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/ruby-openid-2.3.0.gem
-share/${RUBY_PKGPREFIX}-redmine/gems/cache/selenium-webdriver-3.0.4.gem
+share/${RUBY_PKGPREFIX}-redmine/gems/cache/selenium-webdriver-2.53.4.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/simplecov-0.9.2.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/sprockets-3.4.0.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/cache/sprockets-rails-3.2.0.gem
@@ -4533,7 +4536,6 @@ share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-3.1/test/test_mime_types_ca
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-3.1/test/test_mime_types_class.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-3.1/test/test_mime_types_lazy.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-3.1/test/test_mime_types_loader.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/cache/mime-types-data-3.2016.0521.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-data-3.2016.0521/Code-of-Conduct.md
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-data-3.2016.0521/Contributing.md
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/mime-types-data-3.2016.0521/History.md
@@ -6093,13 +6095,322 @@ share/${RUBY_PKGPREFIX}-redmine/gems/gems/rbpdf-font-1.19.0/lib/rbpdf-font.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/rbpdf-font-1.19.0/rbpdf-font.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/rbpdf-font-1.19.0/test/rbpdf_font_file_test.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/rbpdf-font-1.19.0/test/test_helper.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/.autotest
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/.document
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/CONTRIBUTING.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/CVE-2013-0256.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/ExampleMarkdown.md
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/ExampleRDoc.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/History.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/LEGAL.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/LICENSE.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/Manifest.txt
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/README.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/RI.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/Rakefile
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/TODO.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/bin/rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/bin/ri
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/gauntlet_rdoc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/alias.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/anon_class.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/any_method.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/attr.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/class_module.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/code_object.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/code_objects.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/comment.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/constant.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/context.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/context/section.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/cross_reference.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/encoding.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/erb_partial.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/erbio.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/extend.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/darkfish.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/json_index.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/markup.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/pot.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/pot/message_extractor.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/pot/po.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/pot/po_entry.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/ri.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/.document
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_footer.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_head.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_VCS_info.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_classes.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_extends.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_in_files.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_includes.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_installed.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_methods.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_navigation.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_pages.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_parent.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_search.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_sections.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/_sidebar_table_of_contents.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/class.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/css/fonts.css
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/css/rdoc.css
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/fonts/Lato-Light.ttf
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/fonts/Lato-LightItalic.ttf
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/fonts/Lato-Regular.ttf
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/fonts/Lato-RegularItalic.ttf
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/fonts/SourceCodePro-Bold.ttf
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/fonts/SourceCodePro-Regular.ttf
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/add.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/arrow_up.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/brick.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/brick_link.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/bug.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/bullet_black.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/bullet_toggle_minus.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/bullet_toggle_plus.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/date.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/delete.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/find.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/loadingAnimation.gif
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/macFFBgHack.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/package.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/page_green.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/page_white_text.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/page_white_width.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/plugin.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/ruby.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/tag_blue.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/tag_green.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/transparent.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/wrench.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/wrench_orange.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/images/zoom.png
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/index.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/js/darkfish.js
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/js/jquery.js
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/js/search.js
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/page.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/servlet_not_found.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/servlet_root.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/darkfish/table_of_contents.rhtml
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/json_index/.document
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/json_index/js/navigation.js
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/generator/template/json_index/js/searcher.js
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ghost_method.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/i18n.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/i18n/locale.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/i18n/text.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/include.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/known_classes.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown.kpeg
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown/entities.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown/literals_1_8.kpeg
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown/literals_1_8.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown/literals_1_9.kpeg
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markdown/literals_1_9.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/attr_changer.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/attr_span.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/attribute_manager.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/attributes.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/blank_line.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/block_quote.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/document.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/formatter.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/formatter_test_case.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/hard_break.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/heading.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/include.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/indented_paragraph.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/inline.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/list.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/list_item.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/paragraph.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/pre_process.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/raw.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/rule.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/special.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/text_formatter_test_case.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_ansi.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_bs.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_html.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_html_crossref.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_html_snippet.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_joined_paragraph.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_label.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_markdown.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_rdoc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_table_of_contents.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_test.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/to_tt_only.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/markup/verbatim.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/meta_method.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/method_attr.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/mixin.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/normal_class.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/normal_module.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/options.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/c.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/changelog.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/markdown.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/rd.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/ruby.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/ruby_tools.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/simple.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/parser/text.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rd.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rd/block_parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rd/block_parser.ry
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rd/inline.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rd/inline_parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rd/inline_parser.ry
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rdoc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/require.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ri.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ri/driver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ri/formatter.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ri/paths.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ri/store.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ruby_lex.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/ruby_token.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/rubygems_hook.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/servlet.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/single_class.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/stats.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/stats/normal.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/stats/quiet.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/stats/verbose.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/store.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/task.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/test_case.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/text.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/token_stream.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/tom_doc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/lib/rdoc/top_level.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Amps and angle encoding.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Auto links.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Backslash escapes.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Blockquotes with code blocks.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Code Blocks.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Code Spans.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Hard-wrapped paragraphs with list-like lines.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Horizontal rules.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Inline HTML (Advanced).text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Inline HTML (Simple).text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Inline HTML comments.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Links, inline style.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Links, reference style.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Links, shortcut references.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Literal quotes in titles.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Markdown Documentation - Basics.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Markdown Documentation - Syntax.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Nested blockquotes.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Ordered and unordered lists.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Strong and em together.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Tabs.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/MarkdownTest_1.0.3/Tidyness.text
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/README
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/binary.dat
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/hidden.zip.txt
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test.ja.largedoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test.ja.rdoc
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test.ja.txt
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test.txt
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_alias.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_any_method.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_attr.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_class_module.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_code_object.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_comment.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_constant.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_context.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_context_section.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_cross_reference.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_encoding.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_extend.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_darkfish.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_json_index.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_markup.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_pot.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_pot_po.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_pot_po_entry.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_generator_ri.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_i18n_locale.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_i18n_text.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_include.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markdown.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markdown_test.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_attribute_manager.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_attributes.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_document.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_formatter.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_hard_break.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_heading.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_include.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_indented_paragraph.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_paragraph.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_pre_process.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_raw.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_ansi.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_bs.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_html.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_html_crossref.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_html_snippet.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_joined_paragraph.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_label.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_markdown.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_rdoc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_table_of_contents.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_to_tt_only.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_markup_verbatim.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_method_attr.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_normal_class.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_normal_module.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_options.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser_c.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser_changelog.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser_markdown.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser_rd.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser_ruby.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_parser_simple.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_rd.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_rd_block_parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_rd_inline.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_rd_inline_parser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_rdoc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_require.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_ri_driver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_ri_paths.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_ruby_lex.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_ruby_token.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_rubygems_hook.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_servlet.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_single_class.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_stats.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_store.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_task.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_text.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_token_stream.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_tom_doc.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/test_rdoc_top_level.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/xref_data.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/rdoc-4.3.0/test/xref_test_case.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/COPYING
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/Gemfile
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/README.markdown
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/Rakefile
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/bin/redcarpet
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/lib/redcarpet.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/lib/redcarpet.${RUBY_DLEXT}
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/lib/redcarpet.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/lib/redcarpet/cli.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/lib/redcarpet/compat.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/redcarpet-3.3.4/lib/redcarpet/render_man.rb
@@ -6509,7 +6820,6 @@ share/${RUBY_PKGPREFIX}-redmine/gems/gems/rmagick-2.16.0/test/srgb.icm
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/rmagick-2.16.0/test/test_all_basic.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/rmagick-2.16.0/test/tmpnam_test.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/rmagick-2.16.0/wercker.yml
-share/${RUBY_PKGPREFIX}-redmine/gems/cache/roadie-3.2.0.gem
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/roadie-3.2.0/.autotest
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/roadie-3.2.0/.travis.yml
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/roadie-3.2.0/.yardopts
@@ -6940,111 +7250,131 @@ share/${RUBY_PKGPREFIX}-redmine/gems/gems/ruby-openid-2.3.0/test/test_xrires.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/ruby-openid-2.3.0/test/test_yadis_discovery.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/ruby-openid-2.3.0/test/testutil.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/ruby-openid-2.3.0/test/util.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/CHANGES
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/Gemfile
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/LICENSE
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/README.md
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium-webdriver.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/server.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/atoms.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/atoms/getAttribute.js
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/chrome.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/chrome/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/chrome/profile.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/chrome/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/action_builder.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/alert.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/bridge_helper.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_input_devices.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_location.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_network_connection.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_remote_status.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_session_id.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_touch_screen.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/has_web_storage.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/rotatable.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/driver_extensions/uploads_files.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/element.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/error.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/file_reaper.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/html5/local_storage.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/html5/session_storage.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/html5/shared_web_storage.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/keyboard.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/keys.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/log_entry.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/logs.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/mouse.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/navigation.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/options.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/platform.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/port_prober.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/profile_helper.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/proxy.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/search_context.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/socket_lock.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/socket_poller.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/target_locator.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/timeouts.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/touch_action_builder.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/touch_screen.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/w3c_error.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/w3c_options.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/wait.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/window.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/common/zipper.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/edge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/edge/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/edge/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/binary.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/extension.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/extension/prefs.json
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/extension/webdriver.xpi
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/launcher.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.${RUBY_DLEXT}
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.${RUBY_DLEXT}
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/profile.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/profiles_ini.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/util.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/firefox/w3c_bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/ie.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/ie/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/ie/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/phantomjs.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/phantomjs/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/phantomjs/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/capabilities.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/commands.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/http/common.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/http/curb.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/http/default.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/http/persistent.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/response.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/server_error.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/w3c_bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/w3c_capabilities.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/remote/w3c_commands.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/safari.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/safari/bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/safari/service.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support/abstract_event_listener.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support/block_event_listener.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support/color.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support/escaper.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support/event_firing_bridge.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/lib/selenium/webdriver/support/select.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-3.0.4/selenium-webdriver.gemspec
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/CHANGES
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/Gemfile
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/LICENSE
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/README.md
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium-client.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium-webdriver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/base.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/driver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/errors.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/extensions.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/idiomatic.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/javascript_expression_builder.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/javascript_frameworks/jquery.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/javascript_frameworks/prototype.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/legacy_driver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/protocol.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/client/selenium_helper.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/rake/server_task.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/server.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/android.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/android/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/chrome.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/chrome/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/chrome/profile.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/chrome/service.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/action_builder.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/alert.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/bridge_helper.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/core_ext/base64.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/core_ext/dir.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_input_devices.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_location.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_network_connection.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_remote_status.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_session_id.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_touch_screen.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/has_web_storage.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/rotatable.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/takes_screenshot.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/driver_extensions/uploads_files.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/element.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/error.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/file_reaper.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/html5/local_storage.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/html5/location.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/html5/session_storage.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/html5/shared_web_storage.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/keyboard.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/keys.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/log_entry.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/logs.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/mouse.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/navigation.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/options.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/platform.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/port_prober.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/profile_helper.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/proxy.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/search_context.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/socket_lock.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/socket_poller.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/target_locator.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/timeouts.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/touch_action_builder.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/touch_screen.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/w3c_error.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/wait.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/window.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/common/zipper.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/edge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/edge/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/edge/legacy_support.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/edge/service.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/binary.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/extension.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/extension/prefs.json
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/extension/webdriver.xpi
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/launcher.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/native/linux/amd64/x_ignore_nofocus.${RUBY_DLEXT}
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/native/linux/x86/x_ignore_nofocus.${RUBY_DLEXT}
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/profile.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/profiles_ini.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/service.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/util.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/firefox/w3c_bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/ie.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/ie/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/ie/server.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/iphone.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/iphone/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/phantomjs.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/phantomjs/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/phantomjs/service.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/capabilities.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/commands.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/http/common.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/http/curb.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/http/default.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/http/persistent.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/response.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/server_error.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/w3c_bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/w3c_capabilities.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/remote/w3c_commands.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/safari.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/safari/bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/safari/browser.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/safari/options.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/safari/resources/client.js
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/safari/server.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/support.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/support/abstract_event_listener.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/support/block_event_listener.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/support/color.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/support/event_firing_bridge.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/lib/selenium/webdriver/support/select.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/selenium-webdriver-2.53.4/selenium-webdriver.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/simplecov-0.9.2/.rspec
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/simplecov-0.9.2/.travis.yml
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/simplecov-0.9.2/.yardopts
@@ -8478,8 +8808,8 @@ share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/c/path_handle
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/c/spec_helper.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/c/struct_handler_spec.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/class_condition_handler_spec.rb
-share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/class_method_handler_shared_examples.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/class_handler_spec.rb
+share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/class_method_handler_shared_examples.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/class_variable_handler_spec.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/constant_handler_spec.rb
 share/${RUBY_PKGPREFIX}-redmine/gems/gems/yard-0.9.5/spec/handlers/decorator_handler_methods_spec.rb
@@ -8792,13 +9122,14 @@ share/${RUBY_PKGPREFIX}-redmine/gems/specifications/railties-4.2.7.1.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/rake-10.4.2.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/rbpdf-1.19.0.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/rbpdf-font-1.19.0.gemspec
+share/${RUBY_PKGPREFIX}-redmine/gems/specifications/rdoc-4.3.0.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/redcarpet-3.3.4.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/request_store-1.0.5.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/rmagick-2.16.0.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/roadie-3.2.0.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/roadie-rails-1.1.1.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/ruby-openid-2.3.0.gemspec
-share/${RUBY_PKGPREFIX}-redmine/gems/specifications/selenium-webdriver-3.0.4.gemspec
+share/${RUBY_PKGPREFIX}-redmine/gems/specifications/selenium-webdriver-2.53.4.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/simplecov-0.9.2.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/sprockets-3.4.0.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/sprockets-rails-3.2.0.gemspec
@@ -8810,22 +9141,22 @@ share/${RUBY_PKGPREFIX}-redmine/gems/specifications/tzinfo-data-1.2016.10.gemspe
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/websocket-1.2.3.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/xpath-2.0.0.gemspec
 share/${RUBY_PKGPREFIX}-redmine/gems/specifications/yard-0.9.5.gemspec
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/gems/nokogiri-1.6.7.2/ports
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/gems/json-1.8.3/java/src/json
-@pkgdir ${GEM_EXTSDIR}/json-1.8.3/json
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/doc
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/build_info
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/vendor
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/sockets
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/sessions
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/imports
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/cache
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/test/mocks/test
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/test/mocks/development
-@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/test/fixtures/mailer
-@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/specifications
-@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/gems
-@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/extensions
-@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/doc
-@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/cache
 @pkgdir lib/ruby/gems/${RUBY_API_VERSION}/build_info
+@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/cache
+@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/doc
+@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/extensions
+@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/gems
+@pkgdir lib/ruby/gems/${RUBY_API_VERSION}/specifications
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/test/fixtures/mailer
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/test/mocks/development
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/test/mocks/test
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/cache
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/imports
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/sessions
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/tmp/sockets
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/app/vendor
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/build_info
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/doc
+@pkgdir ${GEM_EXTSDIR}/json-1.8.3/json
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/gems/json-1.8.3/java/src/json
+@pkgdir share/${RUBY_PKGPREFIX}-redmine/gems/gems/nokogiri-1.6.7.2/ports
