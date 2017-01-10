@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.236 2017/01/10 12:16:08 jperkin Exp $
+# $NetBSD: bootstrap,v 1.237 2017/01/10 12:30:00 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -931,6 +931,14 @@ check_prog whoamiprog whoami
 
 if [ -d "${wrkdir}" ] || [ -f "${wrkdir}" ]; then
 	die "\"${wrkdir}\" already exists, please remove it or use --workdir"
+fi
+
+if [ -f "${prefix}/share/mk/sys.mk" ]; then
+	die "\"${prefix}\" already in use, remove it or use a different --prefix"
+fi
+
+if [ -d "${pkgdbdir}/bootstrap-mk-files-"* ]; then
+	die "\"${pkgdbdir}\" already in use, remove it or use a different --pkgdbdir"
 fi
 
 mkdir_p_early ${wrkdir}
