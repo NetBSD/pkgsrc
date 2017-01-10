@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/08/21 20:22:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.29 2017/01/10 18:54:15 fhajny Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
 
@@ -33,6 +33,11 @@ PLIST_VARS+=		systemd
 .if exists(/bin/systemd)
 PLIST.systemd=		yes
 .endif
+
+PKGCONFIG_OVERRIDE=	libtest/syslog-ng-test.pc.in			\
+			syslog-ng-add-contextual-data.pc.in		\
+			syslog-ng-native-connector.pc.in		\
+			syslog-ng.pc.in
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
