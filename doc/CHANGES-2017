@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.172 2017/01/09 22:13:29 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.173 2017/01/10 10:46:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -205,3 +205,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/wordpress to 4.7 [morr 2017-01-09]
 	Updated editors/vim-share to 8.0.0161 [morr 2017-01-09]
 	Updated databases/apache-cassandra2 to 2.1.16 [fhajny 2017-01-09]
+	Updated net/syncthing to 0.14.19 [wiz 2017-01-10]
