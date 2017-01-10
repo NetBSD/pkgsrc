@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2016/08/21 21:31:24 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.5 2017/01/10 18:54:15 fhajny Exp $
 # used by sysutils/syslog-ng/Makefile
 # used by sysutils/syslog-ng/Makefile.module
 
-DISTNAME=	syslog-ng-3.8.1
+DISTNAME=	syslog-ng-3.9.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=balabit/}
 
