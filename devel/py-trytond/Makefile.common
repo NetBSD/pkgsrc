@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2017/01/01 14:43:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2017/01/10 23:07:41 rodent Exp $
 
 # used by databases/py-ldap-authentication/Makefile
 # used by devel/py-proteus/Makefile
@@ -133,8 +133,8 @@ TRYTON_BASEVER=		4.2
 #
 # specific module revisions:
 MODULE_REVISION.proteus=					0
-MODULE_REVISION.tryton=						0
-MODULE_REVISION.trytond=					0
+MODULE_REVISION.tryton=						1
+MODULE_REVISION.trytond=					1
 MODULE_REVISION.trytond_account=				0
 MODULE_REVISION.trytond_account_asset=				0
 MODULE_REVISION.trytond_account_be=				0
@@ -173,7 +173,7 @@ MODULE_REVISION.trytond_calendar_todo=				0
 MODULE_REVISION.trytond_carrier=				0
 MODULE_REVISION.trytond_carrier_percentage=			0
 MODULE_REVISION.trytond_carrier_weight=				0
-MODULE_REVISION.trytond_commission=				0
+MODULE_REVISION.trytond_commission=				1
 MODULE_REVISION.trytond_commission_waiting=			0
 MODULE_REVISION.trytond_company=				0
 MODULE_REVISION.trytond_company_work_time=			0
@@ -181,13 +181,13 @@ MODULE_REVISION.trytond_country=				0
 MODULE_REVISION.trytond_currency=				0
 MODULE_REVISION.trytond_customs=				0
 MODULE_REVISION.trytond_dashboard=				0
-MODULE_REVISION.trytond_google_maps=				0
+MODULE_REVISION.trytond_google_maps=				1
 MODULE_REVISION.trytond_ldap_authentication=			0
-MODULE_REVISION.trytond_party=					0
+MODULE_REVISION.trytond_party=					1
 MODULE_REVISION.trytond_party_relationship=			0
 MODULE_REVISION.trytond_party_siret=				0
 MODULE_REVISION.trytond_party_vcarddav=				0
-MODULE_REVISION.trytond_product=				0
+MODULE_REVISION.trytond_product=				1
 MODULE_REVISION.trytond_product_attribute=			0
 MODULE_REVISION.trytond_product_classification=			0
 MODULE_REVISION.trytond_product_classification_taxonomic=	0
@@ -236,7 +236,7 @@ MODULE_REVISION.trytond_stock_product_location=			0
 MODULE_REVISION.trytond_stock_split=				0
 MODULE_REVISION.trytond_stock_supply=				0
 MODULE_REVISION.trytond_stock_supply_day=			0
-MODULE_REVISION.trytond_stock_supply_forecast=			0
+MODULE_REVISION.trytond_stock_supply_forecast=			1
 MODULE_REVISION.trytond_stock_supply_production=		0
 MODULE_REVISION.trytond_timesheet=				0
 MODULE_REVISION.trytond_timesheet_cost=				0
