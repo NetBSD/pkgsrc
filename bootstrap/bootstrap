@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.235 2017/01/03 17:53:14 jperkin Exp $
+# $NetBSD: bootstrap,v 1.236 2017/01/10 12:16:08 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -372,8 +372,7 @@ case "$bootstrap_sh" in
 /*)
 	;;
 *)
-	echo "ERROR: The variable SH must contain an absolute path" 1>&2
-	exit 1
+	die "ERROR: The variable SH must contain an absolute path"
 	;;
 esac
 
@@ -391,8 +390,7 @@ if [ "$opsys" != "GNUkFreeBSD" ] && [ "$dash_echo_test" = "@" ]; then
 fi
 
 if [ -n "$PKG_PATH" ]; then
-	echo "ERROR: Please unset PKG_PATH before running bootstrap." 1>&2
-	exit 1;
+	die "ERROR: Please unset PKG_PATH before running bootstrap."
 fi
 
 build_start=`date`
@@ -932,16 +930,14 @@ check_prog shprog sh
 check_prog whoamiprog whoami
 
 if [ -d "${wrkdir}" ] || [ -f "${wrkdir}" ]; then
-	echo "\"${wrkdir}\" already exists, please remove it or use --workdir.";
-	exit 1
+	die "\"${wrkdir}\" already exists, please remove it or use --workdir"
 fi
 
 mkdir_p_early ${wrkdir}
 if touch ${wrkdir}/.writeable; then
 	:
 else
-	echo "\"${wrkdir}\" is not writeable. Try $0 -h.";
-	exit 1
+	die "\"${wrkdir}\" is not writeable. Try $0 -h"
 fi
 echo "Working directory is: ${wrkdir}"
 
