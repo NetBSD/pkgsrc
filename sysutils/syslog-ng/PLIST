@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/08/21 20:18:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/01/10 18:54:15 fhajny Exp $
 bin/dqtool
 bin/loggen
 bin/pdbtool
@@ -24,6 +24,7 @@ include/syslog-ng/compat/compat.h
 include/syslog-ng/compat/getutent.h
 include/syslog-ng/compat/glib.h
 include/syslog-ng/compat/lfs.h
+include/syslog-ng/compat/openssl_support.h
 include/syslog-ng/compat/pio.h
 include/syslog-ng/compat/socket.h
 include/syslog-ng/compat/string.h
@@ -105,6 +106,13 @@ include/syslog-ng/memtrace.h
 include/syslog-ng/messages.h
 include/syslog-ng/ml-batched-timer.h
 include/syslog-ng/module-config.h
+include/syslog-ng/modules/add-contextual-data/add-contextual-data-parser.h
+include/syslog-ng/modules/add-contextual-data/add-contextual-data-selector.h
+include/syslog-ng/modules/add-contextual-data/add-contextual-data-template-selector.h
+include/syslog-ng/modules/add-contextual-data/add-contextual-data.h
+include/syslog-ng/modules/add-contextual-data/context-info-db.h
+include/syslog-ng/modules/add-contextual-data/contextual-data-record-scanner.h
+include/syslog-ng/modules/add-contextual-data/csv-contextual-data-record-scanner.h
 include/syslog-ng/msg-format.h
 include/syslog-ng/parse-number.h
 include/syslog-ng/parser/parser-expr-parser.h
@@ -144,6 +152,8 @@ include/syslog-ng/stats/stats-registry.h
 include/syslog-ng/stats/stats-syslog.h
 include/syslog-ng/stats/stats.h
 include/syslog-ng/str-format.h
+include/syslog-ng/str-repr/decode.h
+include/syslog-ng/str-repr/encode.h
 include/syslog-ng/str-utils.h
 include/syslog-ng/string-list.h
 include/syslog-ng/syslog-names.h
@@ -180,6 +190,7 @@ include/syslog-ng/value-pairs/value-pairs.h
 include/syslog-ng/versioning.h
 lib/libsyslog-ng-native-connector.a
 lib/libsyslog-ng.la
+lib/pkgconfig/syslog-ng-add-contextual-data.pc
 lib/pkgconfig/syslog-ng-native-connector.pc
 lib/pkgconfig/syslog-ng-test.pc
 lib/pkgconfig/syslog-ng.pc
