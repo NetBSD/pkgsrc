@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.27 2014/11/30 08:40:51 spz Exp $
+$NetBSD: patch-mono_utils_mono-sigcontext.h,v 1.1 2017/01/10 10:35:28 he Exp $
 
---- mono/utils/mono-sigcontext.h.orig	2014-09-22 13:23:09.000000000 +0000
+--- mono/utils/mono-sigcontext.h.orig	2015-08-25 20:33:40.000000000 +0000
 +++ mono/utils/mono-sigcontext.h
-@@ -204,6 +204,10 @@ typedef struct ucontext {
+@@ -201,6 +201,10 @@ typedef struct ucontext {
  	#define UCONTEXT_REG_RSI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RSI])
  	#define UCONTEXT_REG_RDI(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RDI])
  	#define UCONTEXT_REG_RIP(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_RIP])
@@ -13,16 +13,19 @@ $NetBSD: patch-ad,v 1.27 2014/11/30 08:40:51 spz Exp $
  	#define UCONTEXT_REG_R12(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R12])
  	#define UCONTEXT_REG_R13(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R13])
  	#define UCONTEXT_REG_R14(ctx) (((ucontext_t*)(ctx))->uc_mcontext.__gregs [_REG_R14])
-@@ -292,7 +296,7 @@ typedef struct ucontext {
+@@ -287,9 +291,9 @@ typedef struct ucontext {
+ 
+ 	#define UCONTEXT_REG_Rn(ctx, n)   (((os_ucontext*)(ctx))->uc_mcontext.__gregs [(n)])
  	#define UCONTEXT_REG_FPRn(ctx, n) (((os_ucontext*)(ctx))->uc_mcontext.__fpregs.__fpu_regs [(n)])
- 	#define UCONTEXT_REG_NIP(ctx)     _UC_MACHINE_PC(ctx)
+-	#define UCONTEXT_REG_NIP(ctx)     _UC_MACHINE_PC(ctx)
++	#define UCONTEXT_REG_NIP(ctx)     _UC_MACHINE_PC((os_ucontext*)(ctx))
  	#define UCONTEXT_REG_LNK(ctx)     (((os_ucontext*)(ctx))->uc_mcontext.__gregs [_REG_LR])
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
  	typedef ucontext_t os_ucontext;
  
  	#define UCONTEXT_REG_Rn(ctx, n)   ((ctx)->uc_mcontext.mc_gpr [(n)])
-@@ -354,6 +358,27 @@ typedef struct ucontext {
+@@ -351,6 +355,27 @@ typedef struct ucontext {
  	#define UCONTEXT_REG_R11(ctx) (((arm_ucontext*)(ctx))->sig_ctx.arm_fp)
  	#define UCONTEXT_REG_R12(ctx) (((arm_ucontext*)(ctx))->sig_ctx.arm_ip)
  	#define UCONTEXT_REG_CPSR(ctx) (((arm_ucontext*)(ctx))->sig_ctx.arm_cpsr)
