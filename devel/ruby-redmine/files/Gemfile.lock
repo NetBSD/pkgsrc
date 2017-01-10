@@ -124,6 +124,7 @@ GEM
       htmlentities (= 4.3.1)
       rbpdf-font (~> 1.19.0)
     rbpdf-font (1.19.0)
+    rdoc (4.3.0)
     redcarpet (3.3.4)
     request_store (1.0.5)
     rmagick (2.16.0)
@@ -135,7 +136,7 @@ GEM
       roadie (~> 3.1)
     ruby-openid (2.3.0)
     rubyzip (1.1.7)
-    selenium-webdriver (3.0.4)
+    selenium-webdriver (2.53.4)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
@@ -189,12 +190,13 @@ DEPENDENCIES
   rails-dom-testing
   rails-html-sanitizer (>= 1.0.3)
   rbpdf (~> 1.19.0)
+  rdoc (~> 4.3)
   redcarpet (~> 3.3.2)
   request_store (= 1.0.5)
   rmagick (>= 2.14.0)
   roadie-rails
   ruby-openid (~> 2.3.0)
-  selenium-webdriver
+  selenium-webdriver (~> 2.53.4)
   simplecov (~> 0.9.1)
   tzinfo-data
   unicorn

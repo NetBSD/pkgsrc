@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2017/01/04 23:05:12 rodent Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/10 22:54:47 rodent Exp $
 
-DISTNAME=	redmine-3.3.1
+DISTNAME=	redmine-3.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PREV_PKGPATH=	devel/redmine
 CATEGORIES=	devel
@@ -38,14 +38,15 @@ GEMS_DISTFILES+=	rails-4.2.7.1.gem rails-deprecated_sanitizer-1.0.3.gem
 GEMS_DISTFILES+=	rails-dom-testing-1.0.7.gem
 GEMS_DISTFILES+=	rails-html-sanitizer-1.0.3.gem railties-4.2.7.1.gem
 GEMS_DISTFILES+=	rake-10.4.2.gem rbpdf-1.19.0.gem rbpdf-font-1.19.0.gem
-GEMS_DISTFILES+=	redcarpet-3.3.4.gem request_store-1.0.5.gem
-GEMS_DISTFILES+=	rmagick-2.16.0.gem roadie-3.2.0.gem
-GEMS_DISTFILES+=	roadie-rails-1.1.1.gem ruby-openid-2.3.0.gem
-GEMS_DISTFILES+=	selenium-webdriver-3.0.4.gem simplecov-0.9.2.gem
-GEMS_DISTFILES+=	sprockets-3.4.0.gem sprockets-rails-3.2.0.gem
-GEMS_DISTFILES+=	thor-0.19.4.gem thread_safe-0.3.5.gem tilt-1.4.1.gem
-GEMS_DISTFILES+=	tzinfo-1.2.2.gem tzinfo-data-1.2016.10.gem
-GEMS_DISTFILES+=	websocket-1.2.3.gem xpath-2.0.0.gem yard-0.9.5.gem
+GEMS_DISTFILES+=	rdoc-4.3.0.gem redcarpet-3.3.4.gem
+GEMS_DISTFILES+=	request_store-1.0.5.gem rmagick-2.16.0.gem
+GEMS_DISTFILES+=	roadie-3.2.0.gem roadie-rails-1.1.1.gem
+GEMS_DISTFILES+=	ruby-openid-2.3.0.gem selenium-webdriver-2.53.4.gem
+GEMS_DISTFILES+=	simplecov-0.9.2.gem sprockets-3.4.0.gem
+GEMS_DISTFILES+=	sprockets-rails-3.2.0.gem thor-0.19.4.gem
+GEMS_DISTFILES+=	thread_safe-0.3.5.gem tilt-1.4.1.gem tzinfo-1.2.2.gem
+GEMS_DISTFILES+=	tzinfo-data-1.2016.10.gem websocket-1.2.3.gem
+GEMS_DISTFILES+=	xpath-2.0.0.gem yard-0.9.5.gem
 
 DISTFILES+=	${DEFAULT_DISTFILES}
 
@@ -83,11 +84,11 @@ REPLACE_RUBY+=	raindrops-0.17.0/examples/linux-listener-stats.rb
 REPLACE_RUBY+=	rake-10.4.2/bin/rake rake-10.4.2/doc/proto_rake.rdoc
 REPLACE_RUBY+=	rake-10.4.2/test/test_rake_file_utils.rb
 REPLACE_RUBY+=	rbpdf-1.19.0/test/test_helper.rb redcarpet-3.3.4/bin/redcarpet
-REPLACE_RUBY+=	redmine-3.3.1/bin/*
-REPLACE_RUBY+=	redmine-3.3.1/extra/mail_handler/rdm-mailhandler.rb
-REPLACE_RUBY+=	redmine-3.3.1/extra/svn/reposman.rb
-REPLACE_RUBY+=	redmine-3.3.1/public/dispatch.fcgi.example
-REPLACE_RUBY+=	redmine-3.3.1/script/* rmagick-2.16.0/doc/ex/*.rb
+REPLACE_RUBY+=	${DISTNAME}/bin/*
+REPLACE_RUBY+=	${DISTNAME}/extra/mail_handler/rdm-mailhandler.rb
+REPLACE_RUBY+=	${DISTNAME}/extra/svn/reposman.rb
+REPLACE_RUBY+=	${DISTNAME}/public/dispatch.fcgi.example
+REPLACE_RUBY+=	${DISTNAME}/script/* rmagick-2.16.0/doc/ex/*.rb
 REPLACE_RUBY+=	rmagick-2.16.0/doc/usage.html rmagick-2.16.0/examples/*.rb
 REPLACE_RUBY+=	rmagick-2.16.0/test/*.rb ruby-openid-2.3.0/examples/discover
 REPLACE_RUBY+=	ruby-openid-2.3.0/examples/rails_openid/public/dispatch.cgi
@@ -123,7 +124,7 @@ SUBST_STAGE.pkgcfg=	pre-configure
 SUBST_CLASSES+=		rake
 SUBST_STAGE.rake=	pre-configure
 SUBST_MESSAGE.rake=	Replacing path to rake programme.
-SUBST_FILES.rake=	redmine-3.3.1/Rakefile
+SUBST_FILES.rake=	${DISTNAME}/Rakefile
 SUBST_FILES.rake+=	actionpack-action_caching-1.1.1/Rakefile
 SUBST_FILES.rake+=	ruby-openid-2.3.0/examples/rails_openid/Rakefile
 SUBST_SED.rake=		-e "s|/usr/bin/env rake|${PREFIX}/${RM_DIR}/gems/bin/rake|g"
@@ -170,7 +171,9 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 
 GEM_EXTSDIR_NEEDS_SUBDIR=	no
 .include "../../lang/ruby/gem-extract.mk"
-UPDATE_GEMSPEC=	../../lang/ruby/files/update-gemspec.rb
+
+pre-configure:
+	${RUBY} ${.CURDIR}/${UPDATE_GEMSPEC} ${WRKDIR}/tilt-1.4.1.gemspec rdoc:
 
 do-build:
 .for _gem_ in ${DISTFILES:M*.gem:S/.gem$//g}
