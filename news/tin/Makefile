@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2017/01/05 12:37:08 roy Exp $
+# $NetBSD: Makefile,v 1.72 2017/01/11 02:15:56 roy Exp $
 #
 
 DISTNAME=	tin-2.2.1
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/ \
 		ftp://ftp.funet.fi/pub/unix/news/tin-unoff/ \
@@ -47,9 +47,6 @@ CONFIGURE_ARGS+=	--with-defaults-dir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-mh-mail-handling
 CONFIGURE_ARGS+=	--with-coffee
 
-CONFIGURE_ARGS+=	--with-screen=${CURSES_TYPE}
-CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.curses}
-
 SUBST_CLASSES+=		tin
 SUBST_STAGE.tin=	pre-configure
 SUBST_MESSAGE.tin=	Adjusting path to the configuration directory.
@@ -68,5 +65,4 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
