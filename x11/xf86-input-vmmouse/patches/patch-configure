@@ -1,8 +1,18 @@
-$NetBSD: patch-configure,v 1.1 2015/06/29 11:15:05 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2017/01/11 12:58:50 wiz Exp $
+
+DragonFly patches from DragonFly dports
+iopl patches for NetBSD
 
 --- configure.orig	2015-06-25 10:27:50.000000000 +0000
 +++ configure
-@@ -18030,7 +18030,7 @@ $as_echo "#define VMMOUSE_OS_BSD 1" >>co
+@@ -18024,13 +18024,13 @@ done
+ $as_echo "#define VMMOUSE_OS_GENERIC 1" >>confdefs.h
+ 
+      ;;
+-     *bsd*)
++     *bsd*|*dragonfly*)
+ 
+ $as_echo "#define VMMOUSE_OS_BSD 1" >>confdefs.h
  
       ;;
       solaris*)
@@ -11,7 +21,12 @@ $NetBSD: patch-configure,v 1.1 2015/06/29 11:15:05 wiz Exp $
              CC="$save_solaris_cc -fms-extensions"
  	 fi
  
-@@ -18077,9 +18077,9 @@ case $host_cpu in
+@@ -18073,13 +18073,13 @@ case $host_cpu in
+ 	;;
+      x86_64*|amd64*)
+ 	case $host_os in
+-		*freebsd*)
++		*freebsd*|*dragonfly*)
  $as_echo "#define USE_DEV_IO 1" >>confdefs.h
   ;;
  		*netbsd*)
