@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2017/01/01 16:41:37 rillig Exp $
+# $NetBSD: Makefile,v 1.508 2017/01/11 23:20:13 tron Exp $
 
 PKGNAME=	pkglint-5.4.15
 DISTFILES=	# none
@@ -23,6 +23,7 @@ SUBST_SED.pkglint+=	-e s\|@VERSION@\|${PKGNAME:S/pkglint-//}\|g
 SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:Q}\|g
 
 do-extract:
+	${RUN} ${MKDIR} ${WRKDIR}/pkglint
 	${RUN} cd ${FILESDIR} && ${PAX} -rw . ${WRKDIR}/pkglint
 
 pre-build:
