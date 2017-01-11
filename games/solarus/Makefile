@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2016/07/16 00:03:36 markd Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/11 23:42:56 rodent Exp $
 
-VERSION=	1.4.2
+VERSION=	1.5.1
 DISTNAME=	solarus-${VERSION}-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.solarus-games.org/downloads/solarus/
 
@@ -21,9 +20,8 @@ USE_LANGUAGES=	c c++
 GCC_REQD+=	4.8
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-pre-install:
-	rm ${WRKSRC}/include/solarus/EntityData.h.orig
-
+.include "../../x11/qt5-qttools/buildlink3.mk"
+.include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 LUA_VERSIONS_ACCEPTED=		51
