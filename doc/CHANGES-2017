@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.179 2017/01/10 23:10:01 rodent Exp $
+$NetBSD: CHANGES-2017,v 1.180 2017/01/11 00:11:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -218,3 +218,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/py-trytond-google-maps to 4.2.1 [rodent 2017-01-10]
 	Updated misc/py-trytond-party to 4.2.1 [rodent 2017-01-10]
 	Updated misc/py-trytond-product to 4.2.1 [rodent 2017-01-10]
+	Updated devel/libgit2 to 0.25.1 [taca 2017-01-11]
