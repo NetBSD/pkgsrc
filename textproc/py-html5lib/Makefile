@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/12/30 10:09:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/11 17:42:23 kleink Exp $
 
-H5LVER=		0.9999999
+H5LVER=		0.999999999
 DISTNAME=	html5lib-python-${H5LVER}
 PKGNAME=	${PYPKGPREFIX}-html5lib-${H5LVER}
 CATEGORIES=	textproc www python
