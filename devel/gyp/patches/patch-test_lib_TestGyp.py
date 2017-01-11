@@ -1,19 +1,10 @@
-$NetBSD: patch-test_lib_TestGyp.py,v 1.1 2014/08/21 14:49:43 he Exp $
+$NetBSD: patch-test_lib_TestGyp.py,v 1.2 2017/01/11 14:47:51 wiz Exp $
 
-Our gnu make says "Nothing to be done" with just single quotes.
+NetBSD's make uses plain quotes.
 
---- test/lib/TestGyp.py.orig	2014-07-14 14:19:50.000000000 +0000
+--- test/lib/TestGyp.py.orig	2017-01-11 14:31:33.000000000 +0000
 +++ test/lib/TestGyp.py
-@@ -640,7 +640,7 @@ class TestGypAndroid(TestGypBase):
-     """
-     Verifies that a build of the specified target is up to date.
-     """
--    kw['stdout'] = ("make: Nothing to be done for `%s'." %
-+    kw['stdout'] = ("make: Nothing to be done for '%s'." %
-                     self.target_name(target))
- 
-     # We need to supply a custom matcher, since we don't want to depend on the
-@@ -784,7 +784,7 @@ class TestGypMake(TestGypBase):
+@@ -570,7 +570,7 @@ class TestGypMake(TestGypBase):
        message_target = 'all'
      else:
        message_target = target
@@ -22,7 +13,7 @@ Our gnu make says "Nothing to be done" with just single quotes.
      return self.build(gyp_file, target, **kw)
    def run_built_executable(self, name, *args, **kw):
      """
-@@ -1198,7 +1198,7 @@ class TestGypXcode(TestGypBase):
+@@ -1002,7 +1002,7 @@ class TestGypXcode(TestGypBase):
                              "PhaseScriptExecution /\\S+/Script-[0-9A-F]+\\.sh\n"
                              "    cd /\\S+\n"
                              "    /bin/sh -c /\\S+/Script-[0-9A-F]+\\.sh\n"
