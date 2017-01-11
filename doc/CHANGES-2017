@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.185 2017/01/11 23:43:09 rodent Exp $
+$NetBSD: CHANGES-2017,v 1.186 2017/01/11 23:52:43 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -224,3 +224,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-html5lib to 0.999999999 [kleink 2017-01-11]
 	Updated x11/gtk3 to 3.22.6 [prlw1 2017-01-11]
 	Updated games/solarus to 1.5.1 [rodent 2017-01-11]
+	Updated net/SDL2_net to 2.0.1 [rodent 2017-01-11]
