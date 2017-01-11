@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2017/01/04 22:31:48 rodent Exp $
+# $NetBSD: Makefile,v 1.240 2017/01/11 13:26:16 ryoon Exp $
 
 DISTNAME=	cups-2.2.1-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -166,6 +166,7 @@ post-install:
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
