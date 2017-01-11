@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.replace-python,v 1.1 2014/08/21 14:49:43 he Exp $
+# $NetBSD: Makefile.replace-python,v 1.2 2017/01/11 14:47:51 wiz Exp $
 
 REPLACE_PYTHON+= *.py
 REPLACE_PYTHON+= buildbot/buildbot_run.py
@@ -23,7 +23,6 @@ REPLACE_PYTHON+= test/actions/src/subdir3/generate_main.py
 REPLACE_PYTHON+= test/additional-targets/gyptest-additional.py
 REPLACE_PYTHON+= test/additional-targets/src/dir1/emit.py
 REPLACE_PYTHON+= test/analyzer/gyptest-analyzer.py
-REPLACE_PYTHON+= test/android/*.py
 REPLACE_PYTHON+= test/assembly/*.py
 REPLACE_PYTHON+= test/build-option/gyptest-build.py
 REPLACE_PYTHON+= test/builddir/*.py

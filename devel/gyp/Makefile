@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.16 2017/01/01 14:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/11 14:47:51 wiz Exp $
 
-SVN_REVISION=	2019
+GIT_VERSION=	20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
 DIST_VERSION=	0.1
-DISTNAME=	gyp-${DIST_VERSION}pre${SVN_REVISION}
+DISTNAME=	gyp-${DIST_VERSION}pre${GIT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/gyp/
+HOMEPAGE=	https://gyp.gsrc.io/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 # not yet ported as of 0.1pre1718
+PYTHON_VERSIONS_INCOMPATIBLE=  34 35 36 # not yet ported as of 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95
 EGG_NAME=	gyp-${DIST_VERSION}
+
+WRKSRC=		${WRKDIR}/gyp
 
 # REPLACE_PYTHON settings farmed out due to size...
 .include "Makefile.replace-python"
