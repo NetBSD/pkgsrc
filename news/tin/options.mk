@@ -1,12 +1,22 @@
-# $NetBSD: options.mk,v 1.16 2017/01/05 12:37:08 roy Exp $
+# $NetBSD: options.mk,v 1.17 2017/01/11 02:15:56 roy Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.tin
+PKG_OPTIONS_REQUIRED_GROUPS=	display
+PKG_OPTIONS_GROUP.display=	curses wide-curses termcap
 PKG_SUPPORTED_OPTIONS=		icu inet6 tin-use-inn-spool
-PKG_SUGGESTED_OPTIONS=		inet6
+PKG_SUGGESTED_OPTIONS=		inet6 termcap # see PR #51819
 # untested
 #PKG_SUPPORTED_OPTIONS+=	socks
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mcurses) || !empty(PKG_OPTIONS:Mwide-curses)
+.include "../../mk/curses.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-screen=${CURSES_TYPE}
+CONFIGURE_ARGS+=	--with-curses-dir=${BUILDLINK_PREFIX.curses}
+.else
+.include "../../mk/termcap.buildlink3.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Micu)
 .include "../../textproc/icu/buildlink3.mk"
