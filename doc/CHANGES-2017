@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.181 2017/01/11 02:16:00 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.182 2017/01/11 14:52:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -220,3 +220,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/py-trytond-product to 4.2.1 [rodent 2017-01-10]
 	Updated devel/libgit2 to 0.25.1 [taca 2017-01-11]
 	Updated www/ikiwiki to 3.20170110 [schmonz 2017-01-11]
+	Updated devel/gyp to 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95 [wiz 2017-01-11]
