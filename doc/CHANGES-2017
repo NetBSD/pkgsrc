@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.184 2017/01/11 21:49:33 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.185 2017/01/11 23:43:09 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -223,3 +223,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/gyp to 0.1pre20161117.940a15ee3f1c89f193cb4c19373b3f6e9ad15b95 [wiz 2017-01-11]
 	Updated textproc/py-html5lib to 0.999999999 [kleink 2017-01-11]
 	Updated x11/gtk3 to 3.22.6 [prlw1 2017-01-11]
+	Updated games/solarus to 1.5.1 [rodent 2017-01-11]
