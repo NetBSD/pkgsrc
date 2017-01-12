@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.212 2017/01/12 16:03:05 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.213 2017/01/12 16:53:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -252,3 +252,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/php-nextcloud version 11.0.0 [ryoon 2017-01-12]
 	Updated security/py-acme to 0.10.0 [fhajny 2017-01-12]
 	Updated security/py-certbot to 0.10.0 [fhajny 2017-01-12]
+	Updated devel/flex to 2.6.3nb1 [wiz 2017-01-12]
