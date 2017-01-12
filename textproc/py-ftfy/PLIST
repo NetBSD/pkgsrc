@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/02 22:36:59 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/12 00:45:43 rodent Exp $
 bin/ftfy${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -36,3 +36,6 @@ ${PYSITELIB}/ftfy/compatibility.pyo
 ${PYSITELIB}/ftfy/fixes.py
 ${PYSITELIB}/ftfy/fixes.pyc
 ${PYSITELIB}/ftfy/fixes.pyo
+${PYSITELIB}/ftfy/formatting.py
+${PYSITELIB}/ftfy/formatting.pyc
+${PYSITELIB}/ftfy/formatting.pyo
