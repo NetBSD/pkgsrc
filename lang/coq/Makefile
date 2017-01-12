@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2016/12/30 13:23:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.94 2017/01/12 09:11:27 jaapb Exp $
 #
 
 DISTNAME=	coq-8.6
@@ -57,5 +57,6 @@ SUBST_MESSAGE.fix-paths=	Remove buildlink references from Coq_config module
 SUBST_FILES.fix-paths=	config/coq_config.ml
 SUBST_SED.fix-paths=	-e "s,${BUILDLINK_DIR},${PREFIX},g"
 
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
