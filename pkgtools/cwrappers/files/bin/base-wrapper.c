@@ -1,4 +1,4 @@
-/* $NetBSD: base-wrapper.c,v 1.3 2016/11/27 11:46:45 joerg Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.4 2017/01/12 14:56:35 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -71,7 +71,7 @@ libtool_mode(struct arglist *args)
 		if (strcmp(arg->val, "--mode") == 0) {
 			arg = TAILQ_NEXT(arg, link);
 			if (arg == NULL || *arg->val == '-')
-				errx(255, "Misssing --mode argument");
+				errx(255, "Missing --mode argument");
 			mode = arg->val;
 			continue;
 		}
@@ -82,14 +82,14 @@ libtool_mode(struct arglist *args)
 		if (strcmp(arg->val, "--tag") == 0) {
 			arg = TAILQ_NEXT(arg, link);
 			if (arg == NULL || *arg->val == '-')
-				errx(255, "Misssing --tag argument");
+				errx(255, "Missing --tag argument");
 			continue;
 		}
 	}
 	if (arg == NULL)
 		return 1;
 	if (mode == NULL)
-		errx(255, "Misssing --mode=XXX");
+		errx(255, "Missing --mode=XXX");
 	
 	if (strcmp(mode, "compile") == 0 ||
 	    strcmp(mode, "link") == 0)
