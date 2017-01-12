@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.193 2017/01/12 00:44:20 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.194 2017/01/12 00:48:35 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -233,3 +233,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/modular-xorg-xephyr to 1.19.1 [wiz 2017-01-12]
 	Updated textproc/py-acora to 2.0 [rodent 2017-01-12]
 	Updated www/ikiwiki to 3.20170111 [schmonz 2017-01-12]
+	Updated textproc/py-ftfy to 4.2.0 [rodent 2017-01-12]
