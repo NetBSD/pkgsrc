@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/10 01:48:58 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/12 11:42:51 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,3 +11,6 @@ ${PYSITELIB}/flask_babel/__init__.pyo
 ${PYSITELIB}/flask_babel/_compat.py
 ${PYSITELIB}/flask_babel/_compat.pyc
 ${PYSITELIB}/flask_babel/_compat.pyo
+${PYSITELIB}/flask_babel/speaklater.py
+${PYSITELIB}/flask_babel/speaklater.pyc
+${PYSITELIB}/flask_babel/speaklater.pyo
