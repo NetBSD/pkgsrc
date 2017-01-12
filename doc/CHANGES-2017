@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.188 2017/01/11 23:59:18 rodent Exp $
+$NetBSD: CHANGES-2017,v 1.189 2017/01/12 00:06:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -227,3 +227,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/SDL2_net to 2.0.1 [rodent 2017-01-11]
 	Updated devel/py-d2to1 to 0.2.12 [rodent 2017-01-11]
 	Updated devel/py-rply to 0.7.4 [rodent 2017-01-11]
+	Updated net/bind910 to 9.10.4pl5 [taca 2017-01-12]
+	Updated net/bind99 to 9.9.9pl5 [taca 2017-01-12]
