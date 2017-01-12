@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/06/08 17:43:47 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/12 11:58:23 rodent Exp $
 
-DISTNAME=	Flask-User-0.6.1
+DISTNAME=	Flask-User-0.6.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-User/}
 DIST_SUBDIR=	${PKGBASE:tl:S/${PYPKGPREFIX}/py/1}
@@ -14,7 +13,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-passlib-[0-9]*:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-py-bcrypt-[0-9]*:../../security/py-py-bcrypt
-DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+DEPENDS+=	${PYPKGPREFIX}-cryptodome-[0-9]*:../../security/py-cryptodome
 DEPENDS+=	${PYPKGPREFIX}-flask-[0-9]*:../../www/py-flask
 DEPENDS+=	${PYPKGPREFIX}-flask-babel-[0-9]*:../../www/py-flask-babel
 DEPENDS+=	${PYPKGPREFIX}-flask-login-[0-9]*:../../www/py-flask-login
