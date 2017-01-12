@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/10/11 09:23:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/12 16:02:44 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
@@ -28,6 +28,10 @@ DEPENDS+=	${PYPKGPREFIX}-rfc3339-[0-9]*:../../time/py-rfc3339
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-ZopeComponent-[0-9]*:../../devel/py-ZopeComponent
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+
+# Needed for the test target
+# https://github.com/certbot/certbot/issues/2956
+BUILD_DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 
 BUILD_DEFS+=		VARBASE
 
