@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.207 2017/01/12 12:25:21 adam Exp $
+$NetBSD: CHANGES-2017,v 1.208 2017/01/12 14:44:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -247,3 +247,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask-sslify to 0.1.5 [rodent 2017-01-12]
 	Updated www/py-flask-testing to 0.6.1 [rodent 2017-01-12]
 	Updated databases/mysql-connector-c++ to 1.1.8 [adam 2017-01-12]
+	Updated devel/libbson to 1.5.3 [fhajny 2017-01-12]
