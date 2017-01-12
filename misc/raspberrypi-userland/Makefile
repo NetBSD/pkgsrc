@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2016/11/01 16:45:27 skrll Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/12 05:49:54 skrll Exp $
 #
 
-DISTNAME=	userland-20161101
+DISTNAME=	userland-20170109
 PKGNAME=	raspberrypi-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jaredmcneill/}
 GITHUB_PROJECT=	userland
-GITHUB_TAG=	f23cb469c938c6035ebd9a285257743f9a2f9de1
+GITHUB_TAG=	734d76b0675685e9ec9148694f2cc00f58e5ebc0
 
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://github.com/jaredmcneill/userland
