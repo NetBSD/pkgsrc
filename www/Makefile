@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1200 2016/12/18 23:18:42 taca Exp $
+# $NetBSD: Makefile,v 1.1201 2017/01/12 15:09:20 ryoon Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -567,6 +567,7 @@ SUBDIR+=	php-fpm
 SUBDIR+=	php-http
 SUBDIR+=	php-http3
 SUBDIR+=	php-ja-wordpress
+SUBDIR+=	php-nextcloud
 SUBDIR+=	php-owncloud
 SUBDIR+=	php-phrasea2
 SUBDIR+=	php-piwigo
