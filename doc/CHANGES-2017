@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.190 2017/01/12 00:26:46 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.191 2017/01/12 00:27:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -230,3 +230,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/bind910 to 9.10.4pl5 [taca 2017-01-12]
 	Updated net/bind99 to 9.9.9pl5 [taca 2017-01-12]
 	Updated x11/modular-xorg-server to 1.19.1 [wiz 2017-01-12]
+	Updated x11/modular-xorg-xephyr to 1.19.1 [wiz 2017-01-12]
