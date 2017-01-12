@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/12 11:30:23 rodent Exp $
 
-DISTNAME=	orderedmultidict-0.7.5
+DISTNAME=	orderedmultidict-0.7.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=o/orderedmultidict/}
@@ -13,9 +13,6 @@ LICENSE=	unlicense
 DEPENDS+=	${PYPKGPREFIX}-six>=1.8.0:../../lang/py-six
 
 USE_LANGUAGES=	# none
-
-post-install:
-	chmod a-x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
