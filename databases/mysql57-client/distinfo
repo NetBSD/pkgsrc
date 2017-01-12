@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/01/03 12:27:27 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2017/01/12 09:39:47 jperkin Exp $
 
 SHA1 (mysql-5.7.17.tar.gz) = 7d159e2d056ab6e10c89e0c8ef12ee7af3b99ef0
 RMD160 (mysql-5.7.17.tar.gz) = acd8714fe1bda26466c4490b9e71d510677ac9a5
@@ -23,6 +23,7 @@ SHA1 (patch-mysql-test_CMakeLists.txt) = 4ba56ce255f5f89d9aece93181e54ddb572f301
 SHA1 (patch-mysys__ssl_CMakeLists.txt) = 7ec44642cd13c5477175a94a007354c583ca9c3c
 SHA1 (patch-mysys_kqueue__timers.c) = 836803e9c7353b813bc22a5b69cc263dea384c9b
 SHA1 (patch-mysys_stacktrace.c) = 3e0794f544f0e35f44a694330885478247657842
+SHA1 (patch-rapid_plugin_group__replication_rpcgen.cmake) = 5c14be97bd1fd04b2b845f1a2422452445733474
 SHA1 (patch-rapid_plugin_x_CMakeLists.txt) = 4e8ddfbdfa2d4e1f4b5c9421aeb4a337b5741165
 SHA1 (patch-rapid_unittest_gunit_xplugin_CMakeLists.txt) = a531745be680ee06944678cfd35be10c653d1b17
 SHA1 (patch-scripts_CMakeLists.txt) = b149f40f65c4ce8f6f4a7adf75f5ec4be44319f1
