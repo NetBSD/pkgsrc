@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.200 2017/01/12 11:24:30 rodent Exp $
+$NetBSD: CHANGES-2017,v 1.201 2017/01/12 11:30:33 rodent Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -240,3 +240,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/raspberrypi-userland to 20170109 [skrll 2017-01-12]
 	Updated editors/ed to 1.14.1 [wiz 2017-01-12]
 	Updated textproc/p5-HTML-FormatText-WithLinks-AndTables to 0.07 [rodent 2017-01-12]
+	Updated databases/py-orderedmultidict to 0.7.11 [rodent 2017-01-12]
