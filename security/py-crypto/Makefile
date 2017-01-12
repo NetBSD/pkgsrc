@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/01/12 11:53:16 rodent Exp $
+# $NetBSD: Makefile,v 1.39 2017/01/12 16:36:35 rodent Exp $
 
 DISTNAME=	pycrypto-2.6.1
 PKGNAME=	${DISTNAME:S/^py/${PYPKGPREFIX}-/}
@@ -12,7 +12,6 @@ COMMENT=	Cryptographic and hash functions for Python
 LICENSE=	public-domain AND python-software-foundation
 
 CONFLICTS+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
-CONFLICTS+=	${PYPKGPREFIX}-cryptodome-[0-9]*
 SUPERSEDES+=	${PYPKGPREFIX}-amkCrypto-[0-9]*
 
 GNU_CONFIGURE=	yes
