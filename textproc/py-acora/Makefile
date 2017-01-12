@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/12 00:36:53 rodent Exp $
 
-DISTNAME=	acora-1.8
+DISTNAME=	acora-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/acora/}
