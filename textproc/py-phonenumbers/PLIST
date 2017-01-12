@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/12/03 22:41:09 rodent Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/01/12 00:52:25 rodent Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/phonenumbers/carrierdata/data0.pyo
 ${PYSITELIB}/phonenumbers/carrierdata/data1.py
 ${PYSITELIB}/phonenumbers/carrierdata/data1.pyc
 ${PYSITELIB}/phonenumbers/carrierdata/data1.pyo
+${PYSITELIB}/phonenumbers/carrierdata/data2.py
+${PYSITELIB}/phonenumbers/carrierdata/data2.pyc
+${PYSITELIB}/phonenumbers/carrierdata/data2.pyo
 ${PYSITELIB}/phonenumbers/data/__init__.py
 ${PYSITELIB}/phonenumbers/data/__init__.pyc
 ${PYSITELIB}/phonenumbers/data/__init__.pyo
@@ -960,6 +963,15 @@ ${PYSITELIB}/phonenumbers/geodata/data2.pyo
 ${PYSITELIB}/phonenumbers/geodata/data20.py
 ${PYSITELIB}/phonenumbers/geodata/data20.pyc
 ${PYSITELIB}/phonenumbers/geodata/data20.pyo
+${PYSITELIB}/phonenumbers/geodata/data21.py
+${PYSITELIB}/phonenumbers/geodata/data21.pyc
+${PYSITELIB}/phonenumbers/geodata/data21.pyo
+${PYSITELIB}/phonenumbers/geodata/data22.py
+${PYSITELIB}/phonenumbers/geodata/data22.pyc
+${PYSITELIB}/phonenumbers/geodata/data22.pyo
+${PYSITELIB}/phonenumbers/geodata/data23.py
+${PYSITELIB}/phonenumbers/geodata/data23.pyc
+${PYSITELIB}/phonenumbers/geodata/data23.pyo
 ${PYSITELIB}/phonenumbers/geodata/data3.py
 ${PYSITELIB}/phonenumbers/geodata/data3.pyc
 ${PYSITELIB}/phonenumbers/geodata/data3.pyo
@@ -1122,6 +1134,12 @@ ${PYSITELIB}/phonenumbers/shortdata/region_CC.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_CD.py
 ${PYSITELIB}/phonenumbers/shortdata/region_CD.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_CD.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_CF.py
+${PYSITELIB}/phonenumbers/shortdata/region_CF.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_CF.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_CG.py
+${PYSITELIB}/phonenumbers/shortdata/region_CG.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_CG.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_CH.py
 ${PYSITELIB}/phonenumbers/shortdata/region_CH.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_CH.pyo
@@ -1194,6 +1212,9 @@ ${PYSITELIB}/phonenumbers/shortdata/region_EG.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_EH.py
 ${PYSITELIB}/phonenumbers/shortdata/region_EH.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_EH.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_ER.py
+${PYSITELIB}/phonenumbers/shortdata/region_ER.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_ER.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_ES.py
 ${PYSITELIB}/phonenumbers/shortdata/region_ES.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_ES.pyo
@@ -1341,6 +1362,9 @@ ${PYSITELIB}/phonenumbers/shortdata/region_KM.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_KN.py
 ${PYSITELIB}/phonenumbers/shortdata/region_KN.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_KN.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_KP.py
+${PYSITELIB}/phonenumbers/shortdata/region_KP.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_KP.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_KR.py
 ${PYSITELIB}/phonenumbers/shortdata/region_KR.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_KR.pyo
@@ -1461,6 +1485,9 @@ ${PYSITELIB}/phonenumbers/shortdata/region_NA.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_NC.py
 ${PYSITELIB}/phonenumbers/shortdata/region_NC.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_NC.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_NE.py
+${PYSITELIB}/phonenumbers/shortdata/region_NE.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_NE.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_NF.py
 ${PYSITELIB}/phonenumbers/shortdata/region_NF.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_NF.pyo
@@ -1584,6 +1611,9 @@ ${PYSITELIB}/phonenumbers/shortdata/region_SM.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_SN.py
 ${PYSITELIB}/phonenumbers/shortdata/region_SN.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_SN.pyo
+${PYSITELIB}/phonenumbers/shortdata/region_SO.py
+${PYSITELIB}/phonenumbers/shortdata/region_SO.pyc
+${PYSITELIB}/phonenumbers/shortdata/region_SO.pyo
 ${PYSITELIB}/phonenumbers/shortdata/region_SR.py
 ${PYSITELIB}/phonenumbers/shortdata/region_SR.pyc
 ${PYSITELIB}/phonenumbers/shortdata/region_SR.pyo
