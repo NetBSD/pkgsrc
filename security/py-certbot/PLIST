@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/19 13:45:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/01/12 16:02:44 fhajny Exp $
 bin/certbot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -18,6 +18,9 @@ ${PYSITELIB}/certbot/achallenges.pyo
 ${PYSITELIB}/certbot/auth_handler.py
 ${PYSITELIB}/certbot/auth_handler.pyc
 ${PYSITELIB}/certbot/auth_handler.pyo
+${PYSITELIB}/certbot/cert_manager.py
+${PYSITELIB}/certbot/cert_manager.pyc
+${PYSITELIB}/certbot/cert_manager.pyo
 ${PYSITELIB}/certbot/cli.py
 ${PYSITELIB}/certbot/cli.pyc
 ${PYSITELIB}/certbot/cli.pyo
@@ -66,15 +69,15 @@ ${PYSITELIB}/certbot/hooks.pyo
 ${PYSITELIB}/certbot/interfaces.py
 ${PYSITELIB}/certbot/interfaces.pyc
 ${PYSITELIB}/certbot/interfaces.pyo
-${PYSITELIB}/certbot/log.py
-${PYSITELIB}/certbot/log.pyc
-${PYSITELIB}/certbot/log.pyo
 ${PYSITELIB}/certbot/main.py
 ${PYSITELIB}/certbot/main.pyc
 ${PYSITELIB}/certbot/main.pyo
 ${PYSITELIB}/certbot/notify.py
 ${PYSITELIB}/certbot/notify.pyc
 ${PYSITELIB}/certbot/notify.pyo
+${PYSITELIB}/certbot/ocsp.py
+${PYSITELIB}/certbot/ocsp.pyc
+${PYSITELIB}/certbot/ocsp.pyo
 ${PYSITELIB}/certbot/plugins/__init__.py
 ${PYSITELIB}/certbot/plugins/__init__.pyc
 ${PYSITELIB}/certbot/plugins/__init__.pyo
@@ -150,6 +153,9 @@ ${PYSITELIB}/certbot/tests/acme_util.pyo
 ${PYSITELIB}/certbot/tests/auth_handler_test.py
 ${PYSITELIB}/certbot/tests/auth_handler_test.pyc
 ${PYSITELIB}/certbot/tests/auth_handler_test.pyo
+${PYSITELIB}/certbot/tests/cert_manager_test.py
+${PYSITELIB}/certbot/tests/cert_manager_test.pyc
+${PYSITELIB}/certbot/tests/cert_manager_test.pyo
 ${PYSITELIB}/certbot/tests/cli_test.py
 ${PYSITELIB}/certbot/tests/cli_test.pyc
 ${PYSITELIB}/certbot/tests/cli_test.pyo
@@ -189,15 +195,18 @@ ${PYSITELIB}/certbot/tests/errors_test.pyo
 ${PYSITELIB}/certbot/tests/hook_test.py
 ${PYSITELIB}/certbot/tests/hook_test.pyc
 ${PYSITELIB}/certbot/tests/hook_test.pyo
-${PYSITELIB}/certbot/tests/log_test.py
-${PYSITELIB}/certbot/tests/log_test.pyc
-${PYSITELIB}/certbot/tests/log_test.pyo
 ${PYSITELIB}/certbot/tests/main_test.py
 ${PYSITELIB}/certbot/tests/main_test.pyc
 ${PYSITELIB}/certbot/tests/main_test.pyo
 ${PYSITELIB}/certbot/tests/notify_test.py
 ${PYSITELIB}/certbot/tests/notify_test.pyc
 ${PYSITELIB}/certbot/tests/notify_test.pyo
+${PYSITELIB}/certbot/tests/ocsp_test.py
+${PYSITELIB}/certbot/tests/ocsp_test.pyc
+${PYSITELIB}/certbot/tests/ocsp_test.pyo
+${PYSITELIB}/certbot/tests/renewal_test.py
+${PYSITELIB}/certbot/tests/renewal_test.pyc
+${PYSITELIB}/certbot/tests/renewal_test.pyo
 ${PYSITELIB}/certbot/tests/reporter_test.py
 ${PYSITELIB}/certbot/tests/reporter_test.pyc
 ${PYSITELIB}/certbot/tests/reporter_test.pyo
@@ -207,9 +216,6 @@ ${PYSITELIB}/certbot/tests/reverter_test.pyo
 ${PYSITELIB}/certbot/tests/storage_test.py
 ${PYSITELIB}/certbot/tests/storage_test.pyc
 ${PYSITELIB}/certbot/tests/storage_test.pyo
-${PYSITELIB}/certbot/tests/test_util.py
-${PYSITELIB}/certbot/tests/test_util.pyc
-${PYSITELIB}/certbot/tests/test_util.pyo
 ${PYSITELIB}/certbot/tests/testdata/cert-5sans.pem
 ${PYSITELIB}/certbot/tests/testdata/cert-san.pem
 ${PYSITELIB}/certbot/tests/testdata/cert.b64jose
@@ -237,6 +243,9 @@ ${PYSITELIB}/certbot/tests/testdata/sample-archive/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ancient.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal.conf
 ${PYSITELIB}/certbot/tests/testdata/webrootconftest.ini
+${PYSITELIB}/certbot/tests/util.py
+${PYSITELIB}/certbot/tests/util.pyc
+${PYSITELIB}/certbot/tests/util.pyo
 ${PYSITELIB}/certbot/tests/util_test.py
 ${PYSITELIB}/certbot/tests/util_test.pyc
 ${PYSITELIB}/certbot/tests/util_test.pyo
