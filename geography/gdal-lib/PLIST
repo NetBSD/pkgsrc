@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/11/26 13:37:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/01/13 14:48:26 gdt Exp $
 bin/gdal-config
 bin/gdal_contour
 bin/gdal_grid
@@ -55,6 +55,7 @@ include/gdal_alg.h
 include/gdal_alg_priv.h
 include/gdal_csv.h
 include/gdal_frmts.h
+include/gdal_mdreader.h
 include/gdal_pam.h
 include/gdal_priv.h
 include/gdal_proxy.h
@@ -68,6 +69,8 @@ include/gdalgrid.h
 include/gdalgrid_priv.h
 include/gdaljp2abstractdataset.h
 include/gdaljp2metadata.h
+include/gdaljp2metadatagenerator.h
+include/gdalsse_priv.h
 include/gdalwarper.h
 include/gdalwarpkernel_opencl.h
 include/gvgcpfit.h
@@ -105,6 +108,7 @@ share/gdal/gcs.csv
 share/gdal/gcs.override.csv
 share/gdal/gdal_datum.csv
 share/gdal/gdalicon.png
+share/gdal/gdalvrt.xsd
 share/gdal/geoccs.csv
 share/gdal/gml_registry.xml
 share/gdal/gt_datum.csv
@@ -145,4 +149,5 @@ share/gdal/trailer.dxf
 share/gdal/unit_of_measure.csv
 share/gdal/vertcs.csv
 share/gdal/vertcs.override.csv
+@pkgdir man/man1
 @pkgdir lib/gdalplugins
