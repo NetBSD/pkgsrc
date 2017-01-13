@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2017/01/01 14:43:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2017/01/13 22:03:35 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -61,6 +61,7 @@ CONFIGURE_DIRS=	build
 EGDIR=			share/gnuradio/examples
 PKG_SYSCONFSUBDIR=	gnuradio/conf.d
 
+CXXFLAGS+=		-pthread
 LDFLAGS.DragonFly+=	-lboost_system
 LDFLAGS.SunOS+=		-lboost_system
 CXXFLAGS.SunOS+=	-pthreads
@@ -129,9 +130,11 @@ do-install:
 
 .include	"../../devel/boost-headers/buildlink3.mk"
 .include	"../../devel/boost-libs/buildlink3.mk"
+.include	"../../devel/cppunit/buildlink3.mk"
 # VOLK needs orc.h, so in the common
 .include	"../../devel/orc/buildlink3.mk"
 .include	"../../devel/swig2/buildlink3.mk"
 
 .include	"../../lang/python/application.mk"
 .include	"../../math/fftwf/buildlink3.mk"
+.include	"../../math/gsl/buildlink3.mk"
