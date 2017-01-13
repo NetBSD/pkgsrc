@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2016/10/04 06:41:18 alnsn Exp $
+# $NetBSD: options.mk,v 1.14 2017/01/13 12:16:03 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	gtk3 lua qt5
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--with-gtk3
 PLIST.gtk3=		yes
 POST_INSTALL_TARGETS+=	install-gtk-desktop
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 
 .PHONY: install-gtk-desktop
 install-gtk-desktop:
