@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.29 2016/12/17 23:24:31 joerg Exp $
+$NetBSD: distinfo,v 1.30 2017/01/13 02:26:04 gdt Exp $
 
-SHA1 (gdal-1.11.3.tar.gz) = f0cfa13f62a2ad0f545327897cb90f0f0e08bc63
-RMD160 (gdal-1.11.3.tar.gz) = 8373d8d83d4614cb4086d4048531a4845c588649
-SHA512 (gdal-1.11.3.tar.gz) = 689b36a674fd5763a83e63f3a00460c44149a9447d31793d4e4dc2700c862775d565d5915bf3ac9594f0777ae89cf34c90b82820537d0f4d4d5c2c6a5d78d033
-Size (gdal-1.11.3.tar.gz) = 10758778 bytes
+SHA1 (gdal-1.11.5.tar.gz) = b510f3852e696cffe25c13ab0f8cb06805121c0a
+RMD160 (gdal-1.11.5.tar.gz) = a23f1303802df730563aceee8b4a673abf22ddba
+SHA512 (gdal-1.11.5.tar.gz) = 30d2982a64a243ba662ba7f64e86f927063ec91fdba124837a47d286602a0d55852ace92d7f722ffd2183c32e6cd61f0f7e826101ee19e58b50ed7fa671b80a4
+Size (gdal-1.11.5.tar.gz) = 10748545 bytes
 SHA1 (patch-GDALmake.opt.in) = f8096596d1b808d0c0a02e95ad5d0664b1c895eb
+SHA1 (patch-dist__docs_install__unx.sh) = 359b90c592e002b4b9a8dc0fe6b07300c39c9bf6
 SHA1 (patch-frmts_grib_degrib18_degrib_myutil.c) = 6179ba75d77607cefa6f2413c50443054308cdd3
 SHA1 (patch-frmts_jpeg2000_jpeg2000__vsil__io.cpp) = 89d5d3d8e1604c76cc22ed931a170dfe61ad6880
