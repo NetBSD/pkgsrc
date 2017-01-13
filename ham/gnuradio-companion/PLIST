@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/07/12 11:36:46 mef Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/01/13 22:03:35 mef Exp $
 bin/gnuradio-companion
 ${PYSITELIB}/gnuradio/grc/__init__.py
 ${PYSITELIB}/gnuradio/grc/__init__.pyc
@@ -6,9 +6,6 @@ ${PYSITELIB}/gnuradio/grc/__init__.pyo
 ${PYSITELIB}/gnuradio/grc/__main__.py
 ${PYSITELIB}/gnuradio/grc/__main__.pyc
 ${PYSITELIB}/gnuradio/grc/__main__.pyo
-${PYSITELIB}/gnuradio/grc/checks.py
-${PYSITELIB}/gnuradio/grc/checks.pyc
-${PYSITELIB}/gnuradio/grc/checks.pyo
 ${PYSITELIB}/gnuradio/grc/core/Block.py
 ${PYSITELIB}/gnuradio/grc/core/Block.pyc
 ${PYSITELIB}/gnuradio/grc/core/Block.pyo
