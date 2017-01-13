@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2016/07/20 23:59:56 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/13 22:03:35 mef Exp $
 
 META_PACKAGE=	yes
 
 .include	"../../ham/gnuradio-core/Makefile.version"
 
 DISTNAME=       gnuradio-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	meta-pkgs ham
 MASTER_SITES=	# empty
 DISTFILES=	# empty
