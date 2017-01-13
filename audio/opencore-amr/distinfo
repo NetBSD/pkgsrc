@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:12:44 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/01/13 11:33:43 adam Exp $
 
-SHA1 (opencore-amr-0.1.3.tar.gz) = 737f00e97a237f4ae701ea55913bb38dc5513501
-RMD160 (opencore-amr-0.1.3.tar.gz) = 5631ee1e2a99800a3d276e94fe679ac4eeaece0c
-SHA512 (opencore-amr-0.1.3.tar.gz) = f67e84604fe3fbb87d608343e595503e2057272fa0b3bf9158a176e88a96d272c35149483c3ee47ba2b064bd6b17cdb315888a5285aa82edc0401f17d2ae761b
-Size (opencore-amr-0.1.3.tar.gz) = 881105 bytes
+SHA1 (opencore-amr-0.1.4.tar.gz) = 905cce84963a241dc058fb42357259952ce2e4ab
+RMD160 (opencore-amr-0.1.4.tar.gz) = 4cf67ca567d647e56f4d4c092de3dc1720c3f3ad
+SHA512 (opencore-amr-0.1.4.tar.gz) = 94251bd8fe4ac434f588722cbd180ac7de51296b820d68c85327ef1c88c56ede500b283832823988995371c3086e28f7dee048622aed799d3063982d03c3b867
+Size (opencore-amr-0.1.4.tar.gz) = 929807 bytes
