@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.214 2017/01/13 02:26:11 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.215 2017/01/13 11:35:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -254,3 +254,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.10.0 [fhajny 2017-01-12]
 	Updated devel/flex to 2.6.3nb1 [wiz 2017-01-12]
 	Updated geography/gdal-lib to 1.11.5 [gdt 2017-01-13]
+	Updated audio/fdk-aac to 0.1.5 [adam 2017-01-13]
+	Updated audio/opencore-amr to 0.1.4 [adam 2017-01-13]
