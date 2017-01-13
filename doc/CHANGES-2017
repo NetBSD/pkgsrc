@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.220 2017/01/13 15:30:29 taca Exp $
+$NetBSD: CHANGES-2017,v 1.221 2017/01/13 17:33:32 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -261,3 +261,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/typo3_62 to 6.2.30 [taca 2017-01-13]
 	Updated databases/ruby-moneta to 0.8.1 [taca 2017-01-13]
 	Updated databases/ruby-sequel to 4.42.1 [taca 2017-01-13]
+	Updated converters/py-cairosvg to 1.0.20 [kleink 2017-01-13]
