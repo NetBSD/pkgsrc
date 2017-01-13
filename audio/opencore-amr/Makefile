@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/11/30 18:55:57 adam Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/13 11:33:43 adam Exp $
 
-DISTNAME=	opencore-amr-0.1.3
+DISTNAME=	opencore-amr-0.1.4
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencore-amr/}
 
