@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/08/30 10:24:40 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2017/01/13 20:34:41 bsiegert Exp $
 include/git2.h
 include/git2/annotated_commit.h
 include/git2/attr.h
@@ -35,6 +35,7 @@ include/git2/oidarray.h
 include/git2/pack.h
 include/git2/patch.h
 include/git2/pathspec.h
+include/git2/proxy.h
 include/git2/rebase.h
 include/git2/refdb.h
 include/git2/reflog.h
@@ -59,13 +60,16 @@ include/git2/sys/filter.h
 include/git2/sys/hashsig.h
 include/git2/sys/index.h
 include/git2/sys/mempack.h
+include/git2/sys/merge.h
 include/git2/sys/odb_backend.h
 include/git2/sys/openssl.h
 include/git2/sys/refdb_backend.h
 include/git2/sys/reflog.h
 include/git2/sys/refs.h
+include/git2/sys/remote.h
 include/git2/sys/repository.h
 include/git2/sys/stream.h
+include/git2/sys/time.h
 include/git2/sys/transport.h
 include/git2/tag.h
 include/git2/trace.h
@@ -75,6 +79,6 @@ include/git2/tree.h
 include/git2/types.h
 include/git2/version.h
 lib/libgit2.so
-lib/libgit2.so.0.24.0
-lib/libgit2.so.24
+lib/libgit2.so.0.25.1
+lib/libgit2.so.25
 lib/pkgconfig/libgit2.pc
