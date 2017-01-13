@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.215 2017/01/13 11:35:00 adam Exp $
+$NetBSD: CHANGES-2017,v 1.216 2017/01/13 12:16:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -256,3 +256,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/gdal-lib to 1.11.5 [gdt 2017-01-13]
 	Updated audio/fdk-aac to 0.1.5 [adam 2017-01-13]
 	Updated audio/opencore-amr to 0.1.4 [adam 2017-01-13]
+	Updated net/wireshark to 2.2.3nb1 [leot 2017-01-13]
