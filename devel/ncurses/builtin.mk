@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.39 2016/12/20 15:06:52 joerg Exp $
+# $NetBSD: builtin.mk,v 1.39.2.1 2017/01/13 19:33:47 bsiegert Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -158,15 +158,6 @@ BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
 BUILDLINK_TRANSFORM+=		l:form:gnuform
 BUILDLINK_TRANSFORM+=		l:panel:gnupanel
 BUILDLINK_TRANSFORM+=		l:menu:gnumenu
-
-.PHONY: buildlink-ncurses-fake-libs
-buildlink-ncurses-fake-libs:
-	${RUN}								\
-	for f in form panel menu; do					\
-		${ECHO_BUILDLINK_MSG} "Touching fake ncurses library ($$f)"; \
-		${TOUCH} ${TOUCH_FLAGS} "$BUILDLINK_DIR/lib/lib$$f.a"; \
-	done
-BUILDLINK_TARGET+=	buildlink-ncurses-fake-libs
 .  endif
 
 # A full ncurses implementation provides more headers than some curses
