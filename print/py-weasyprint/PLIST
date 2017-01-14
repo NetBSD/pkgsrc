@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/14 17:05:04 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/14 23:13:49 kleink Exp $
 bin/weasyprint${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -22,6 +22,10 @@ ${PYSITELIB}/weasyprint/css/__init__.pyo
 ${PYSITELIB}/weasyprint/css/computed_values.py
 ${PYSITELIB}/weasyprint/css/computed_values.pyc
 ${PYSITELIB}/weasyprint/css/computed_values.pyo
+${PYSITELIB}/weasyprint/css/descriptors.py
+${PYSITELIB}/weasyprint/css/descriptors.pyc
+${PYSITELIB}/weasyprint/css/descriptors.pyo
+${PYSITELIB}/weasyprint/css/html5_ph.css
 ${PYSITELIB}/weasyprint/css/html5_ua.css
 ${PYSITELIB}/weasyprint/css/properties.py
 ${PYSITELIB}/weasyprint/css/properties.pyc
@@ -36,6 +40,9 @@ ${PYSITELIB}/weasyprint/document.pyo
 ${PYSITELIB}/weasyprint/draw.py
 ${PYSITELIB}/weasyprint/draw.pyc
 ${PYSITELIB}/weasyprint/draw.pyo
+${PYSITELIB}/weasyprint/fonts.py
+${PYSITELIB}/weasyprint/fonts.pyc
+${PYSITELIB}/weasyprint/fonts.pyo
 ${PYSITELIB}/weasyprint/formatting_structure/__init__.py
 ${PYSITELIB}/weasyprint/formatting_structure/__init__.pyc
 ${PYSITELIB}/weasyprint/formatting_structure/__init__.pyo
@@ -127,6 +134,7 @@ ${PYSITELIB}/weasyprint/tests/resources/sheet2.css
 ${PYSITELIB}/weasyprint/tests/resources/sub_directory/sheet1.css
 ${PYSITELIB}/weasyprint/tests/resources/user.css
 ${PYSITELIB}/weasyprint/tests/resources/utf8-test.css
+${PYSITELIB}/weasyprint/tests/resources/weasyprint.otf
 ${PYSITELIB}/weasyprint/tests/test_api.py
 ${PYSITELIB}/weasyprint/tests/test_api.pyc
 ${PYSITELIB}/weasyprint/tests/test_api.pyo
@@ -136,21 +144,33 @@ ${PYSITELIB}/weasyprint/tests/test_boxes.pyo
 ${PYSITELIB}/weasyprint/tests/test_css.py
 ${PYSITELIB}/weasyprint/tests/test_css.pyc
 ${PYSITELIB}/weasyprint/tests/test_css.pyo
+${PYSITELIB}/weasyprint/tests/test_css_descriptors.py
+${PYSITELIB}/weasyprint/tests/test_css_descriptors.pyc
+${PYSITELIB}/weasyprint/tests/test_css_descriptors.pyo
 ${PYSITELIB}/weasyprint/tests/test_css_validation.py
 ${PYSITELIB}/weasyprint/tests/test_css_validation.pyc
 ${PYSITELIB}/weasyprint/tests/test_css_validation.pyo
 ${PYSITELIB}/weasyprint/tests/test_draw.py
 ${PYSITELIB}/weasyprint/tests/test_draw.pyc
 ${PYSITELIB}/weasyprint/tests/test_draw.pyo
+${PYSITELIB}/weasyprint/tests/test_fonts.py
+${PYSITELIB}/weasyprint/tests/test_fonts.pyc
+${PYSITELIB}/weasyprint/tests/test_fonts.pyo
 ${PYSITELIB}/weasyprint/tests/test_layout.py
 ${PYSITELIB}/weasyprint/tests/test_layout.pyc
 ${PYSITELIB}/weasyprint/tests/test_layout.pyo
 ${PYSITELIB}/weasyprint/tests/test_pdf.py
 ${PYSITELIB}/weasyprint/tests/test_pdf.pyc
 ${PYSITELIB}/weasyprint/tests/test_pdf.pyo
+${PYSITELIB}/weasyprint/tests/test_presentational_hints.py
+${PYSITELIB}/weasyprint/tests/test_presentational_hints.pyc
+${PYSITELIB}/weasyprint/tests/test_presentational_hints.pyo
 ${PYSITELIB}/weasyprint/tests/test_stacking.py
 ${PYSITELIB}/weasyprint/tests/test_stacking.pyc
 ${PYSITELIB}/weasyprint/tests/test_stacking.pyo
+${PYSITELIB}/weasyprint/tests/test_tables.py
+${PYSITELIB}/weasyprint/tests/test_tables.pyc
+${PYSITELIB}/weasyprint/tests/test_tables.pyo
 ${PYSITELIB}/weasyprint/tests/test_text.py
 ${PYSITELIB}/weasyprint/tests/test_text.pyc
 ${PYSITELIB}/weasyprint/tests/test_text.pyo
