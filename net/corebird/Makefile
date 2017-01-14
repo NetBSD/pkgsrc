@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/12/04 05:17:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/14 09:28:41 ryoon Exp $
 
-DISTNAME=	corebird-1.3.3
-PKGREVISION=	1
+DISTNAME=	corebird-1.4.1
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/baedert/corebird/releases/download/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.xz
@@ -23,6 +22,8 @@ TEST_TARGET=	check
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../www/librest07/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gspell+=	gspell>=1.2.2
+.include "../../textproc/gspell/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
