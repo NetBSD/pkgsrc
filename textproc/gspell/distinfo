@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/06/19 16:01:57 prlw1 Exp $
+$NetBSD: distinfo,v 1.3 2017/01/14 09:14:54 ryoon Exp $
 
-SHA1 (gspell-1.0.2.tar.xz) = dede61c523bc3cd76b532f9c51a04907527e5b1e
-RMD160 (gspell-1.0.2.tar.xz) = e77262c1d21b8622f2b05b51aee41475f9ecb625
-SHA512 (gspell-1.0.2.tar.xz) = 67ed34b70ca1d8e626f366b62847c04efe204fa21d9e6b3f55ec4d08dca8613f2a03e42de28d38ebe53923889d848ea9064f01a89ede9a7f22772712f5b11aa7
-Size (gspell-1.0.2.tar.xz) = 383844 bytes
+SHA1 (gspell-1.2.2.tar.xz) = 2876ff1c516252ced88d243c687b0c0dffd1f2a2
+RMD160 (gspell-1.2.2.tar.xz) = 55f501d46b535891ea44a4ea5538281efd86fe5b
+SHA512 (gspell-1.2.2.tar.xz) = 3bc8274e63eb11e0364adfeeec5963f480180774797b675f440a092a6208121ab52a39b27e61ba8305acba954a68cdf53dbe49acb4d6ef8e5d92e8efa9824800
+Size (gspell-1.2.2.tar.xz) = 395120 bytes
