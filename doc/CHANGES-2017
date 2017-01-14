@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.222 2017/01/13 22:03:58 mef Exp $
+$NetBSD: CHANGES-2017,v 1.223 2017/01/14 01:04:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -263,3 +263,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/ruby-sequel to 4.42.1 [taca 2017-01-13]
 	Updated converters/py-cairosvg to 1.0.20 [kleink 2017-01-13]
 	Updated ham/gnuradio-core to 3.7.10.1 [mef 2017-01-13]
+	Updated lang/gawk to 4.1.4 [ryoon 2017-01-14]
