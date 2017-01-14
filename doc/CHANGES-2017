@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.229 2017/01/14 23:00:39 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.230 2017/01/14 23:05:21 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -270,3 +270,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/sourcesans-fonts to 2.020 [ryoon 2017-01-14]
 	Updated mail/mess822 to 0.58nb4 [schmonz 2017-01-14]
 	Updated mail/qmail-run to 20170114 [schmonz 2017-01-14]
+	Updated textproc/py-html5lib to 0.999999999nb1 [kleink 2017-01-14]
