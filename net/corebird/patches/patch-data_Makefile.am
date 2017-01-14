@@ -1,8 +1,8 @@
-$NetBSD: patch-data_Makefile.am,v 1.1 2016/09/05 15:12:56 ryoon Exp $
+$NetBSD: patch-data_Makefile.am,v 1.2 2017/01/14 09:28:41 ryoon Exp $
 
 * Workarounf for a lack of 'msgfmt --xml' and 'msgfmt --desktop'
 
---- data/Makefile.am.orig	2016-07-31 06:42:48.000000000 +0000
+--- data/Makefile.am.orig	2017-01-06 15:03:13.000000000 +0000
 +++ data/Makefile.am
 @@ -9,13 +9,17 @@ appdatadir = $(datarootdir)/appdata
  appdata_in_files = org.baedert.corebird.appdata.xml.in
@@ -24,5 +24,5 @@ $NetBSD: patch-data_Makefile.am,v 1.1 2016/09/05 15:12:56 ryoon Exp $
 -	--template $< -o $@
 +	cp $^ $@
  
- # Actually, just ignore gschema translations...
- org.baedert.corebird.gschema.xml: org.baedert.corebird.gschema.xml.in
+ man_MANS = corebird.1
+ 
