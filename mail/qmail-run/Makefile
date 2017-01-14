@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2017/01/09 05:03:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/14 23:00:31 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20170109
+DISTNAME=		qmail-run-20170114
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,8 +13,6 @@ LICENSE=		2-clause-bsd
 DEPENDS+=		mess822-[0-9]*:../../mail/mess822
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-DEPENDS+=		spamdyke-[0-9]*:../../mail/spamdyke
-DEPENDS+=		stunnel-[0-9]*:../../security/stunnel
 
 CONFLICTS+=		qmail-qfilter-1.5nb1
 
@@ -58,6 +56,8 @@ SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
 SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
 SUBST_SED.paths+=	-e 's,@TRUE@,${TRUE},g'
 SUBST_STAGE.paths=	post-patch
+
+.include "options.mk"
 
 post-extract:
 	for f in README.pkgsrc mailer.conf spamdyke-ofmipd.conf stunnel.conf; do \
