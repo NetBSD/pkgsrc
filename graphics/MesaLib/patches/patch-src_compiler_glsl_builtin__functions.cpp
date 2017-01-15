@@ -1,4 +1,6 @@
-$NetBSD: patch-src_compiler_glsl_builtin__functions.cpp,v 1.1 2017/01/15 00:13:44 wiz Exp $
+$NetBSD: patch-src_compiler_glsl_builtin__functions.cpp,v 1.2 2017/01/15 00:14:21 wiz Exp $
+
+Avoid double free().
 
 --- src/compiler/glsl/builtin_functions.cpp.orig	2016-05-09 12:51:42.000000000 +0000
 +++ src/compiler/glsl/builtin_functions.cpp
