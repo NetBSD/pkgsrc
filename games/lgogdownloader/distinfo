@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2016/11/20 09:41:20 wiz Exp $
+$NetBSD: distinfo,v 1.22 2017/01/15 09:29:08 wiz Exp $
 
-SHA1 (lgogdownloader-3.0.tar.gz) = b10a011b1eee2a66f4b041efb964f626c863b85c
-RMD160 (lgogdownloader-3.0.tar.gz) = 8a8fb9eaca1f13fd344a9348710b492ca44e8ecd
-SHA512 (lgogdownloader-3.0.tar.gz) = e99960c7bec55c37b230890911585eb68f133988a76bc00715fc715781b2e41c28879dc92563f3a6564a699dd5abe5c350f10b2d7e1d213e744ef0f768abe434
-Size (lgogdownloader-3.0.tar.gz) = 60859 bytes
+SHA1 (lgogdownloader-3.1.tar.gz) = 2847b4bbda28301b7a640be8b73e1cfe4d32c36d
+RMD160 (lgogdownloader-3.1.tar.gz) = fab195c6db9d662b3e44e7905b6763d8c52ede75
+SHA512 (lgogdownloader-3.1.tar.gz) = e15f6d359298bee0922439703ca256ad9f5f07052a12b241fe03031663dce44bd61427dbe9739115d529736b261a51068c5b2c7669fe4a4b4c0553c2ed77a793
+Size (lgogdownloader-3.1.tar.gz) = 60834 bytes
