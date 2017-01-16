@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.255 2017/01/16 11:00:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.256 2017/01/16 11:02:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-BibTeX to 0.78 [wiz 2017-01-16]
 	Updated devel/p5-Try-Tiny to 0.28 [wiz 2017-01-16]
 	Updated time/py-vdirsyncer to 0.14.1 [wiz 2017-01-16]
+	Updated textproc/iso-codes to 3.73 [wiz 2017-01-16]
