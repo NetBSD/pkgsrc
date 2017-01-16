@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2017/01/05 11:54:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.18 2017/01/16 17:26:47 brook Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
@@ -27,6 +27,8 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 # XXX can't disable static-analyzer without also disabling ARCMT
 CMAKE_ARGS+=	-DCLANG_ENABLE_ARCMT=OFF
+
+CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
 REPLACE_PERL+=		test/make_test_dirs.pl
 REPLACE_PERL+=		tools/scan-build/bin/scan-build
