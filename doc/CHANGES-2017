@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.271 2017/01/16 13:12:32 adam Exp $
+$NetBSD: CHANGES-2017,v 1.272 2017/01/16 13:13:25 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/filezilla to 3.24.0 [wiz 2017-01-16]
 	Updated devel/rudiments to 1.0.2 [fhajny 2017-01-16]
 	Updated graphics/freetype2 to 2.7.1 [adam 2017-01-16]
+	Updated databases/sqlrelay to 1.0.0 [fhajny 2017-01-16]
