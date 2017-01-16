@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:57:03 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/01/16 20:43:07 snj Exp $
 
-SHA1 (quakespasm-0.90.0.tgz) = 975bd05d21bca695a87831e5b48f40c378ae30fc
-RMD160 (quakespasm-0.90.0.tgz) = 8db85cf7b8ca912e7f420d52804b786112450ff6
-SHA512 (quakespasm-0.90.0.tgz) = 205a7ba42305bb585cfa8e7e07ac989774d75e54788709958a39d1aa653efb07af7b055ad6e8059e13b28199c5839d65b680b6c67349f222dd048db051a194a4
-Size (quakespasm-0.90.0.tgz) = 6221873 bytes
+SHA1 (quakespasm-0.92.1.tgz) = ca37bbc73d96a4f34372586e2c1990ec8aac8b17
+RMD160 (quakespasm-0.92.1.tgz) = ad246cb3aebfa0a73edd35d8eccc6330342e3eb3
+SHA512 (quakespasm-0.92.1.tgz) = 4e0aadf6ef232aa9f35e421ebbcbf6780abc483db08a08cc27c153c67b3c8e881215beb2b4fda03a2c98f2fcc8b723c6329132b5fcf8977c79c41e0d56b7a674
+Size (quakespasm-0.92.1.tgz) = 7909800 bytes
 SHA1 (patch-aa) = 3c46fbc72ffa736be66aa4b96e683406a6b05832
