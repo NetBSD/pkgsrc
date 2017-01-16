@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.262 2017/01/16 11:56:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.263 2017/01/16 11:59:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -303,3 +303,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/gsed to 4.3 [wiz 2017-01-16]
 	Updated audio/musicpd to 0.20.2 [wiz 2017-01-16]
 	Updated devel/libuv to 1.10.2 [wiz 2017-01-16]
+	Updated misc/py-anki2 to 2.0.40 [wiz 2017-01-16]
