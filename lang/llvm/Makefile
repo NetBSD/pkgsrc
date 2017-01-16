@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/16 17:26:47 brook Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/16 21:56:35 brook Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -99,7 +99,6 @@ CXXFLAGS+=	-march=i586
 .endif
 
 .if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 .PHONY: fix-darwin-install-name
 post-install: fix-darwin-install-name
 fix-darwin-install-name:
