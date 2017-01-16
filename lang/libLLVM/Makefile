@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/01/16 17:26:47 brook Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/16 21:56:35 brook Exp $
 
 DISTNAME=	llvm-3.9.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -89,10 +89,6 @@ TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CMAKE_ARGS+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
-.endif
 
 # 3.8.0 -> 3.8
 LLVM_MAJOR_MINOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
