@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2016/07/09 13:21:05 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/16 14:06:43 mef Exp $
 
-DISTNAME=	bugzilla-3.2.4
-PKGREVISION=	8
+DISTNAME=	bugzilla-3.6.8
 CATEGORIES=	www devel
-MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
+MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/archived/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
+LICENSE=	mpl-1.0
 
 DEPENDS+=	p5-CGI>=3.21:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=1.41:../../databases/p5-DBI
@@ -71,16 +71,12 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/docs/en/txt/Bugzilla-Guide.txt ${DESTDIR}${DOCDIR}/en
 	${INSTALL_DATA} ${WRKSRC}/docs/en/rel_notes.txt ${DESTDIR}${DOCDIR}/en
-	${INSTALL_DATA} ${WRKSRC}/QUICKSTART ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING-pre-2.8 ${DESTDIR}${DOCDIR}
 
 	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${DESTDIR}${BZDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${DESTDIR}${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${DESTDIR}${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/duplicates.xul ${DESTDIR}${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/Bugzilla.pm ${DESTDIR}${BZDIR}
 
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${DESTDIR}${EGDIR}
