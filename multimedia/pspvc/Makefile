@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2016/08/17 00:06:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2017/01/16 23:45:15 wiz Exp $
 
 DISTNAME=	pspvc-install-0.3
 PSPVCVER=	pspvc-0.3
 PKGNAME=	${PSPVCVER}
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pspvc/}
 

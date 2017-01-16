@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2016/08/17 00:06:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/16 23:45:17 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		20
+PKGREVISION=		21
 COMMENT=		Capture X display to individual frames or MPEG video
 
 CONFIGURE_ARGS+=	--without-gtk2
