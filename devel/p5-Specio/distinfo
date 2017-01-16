@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/11/07 13:30:04 mef Exp $
+$NetBSD: distinfo,v 1.7 2017/01/16 09:40:39 wiz Exp $
 
-SHA1 (Specio-0.31.tar.gz) = 7e1f054b66883169e2e2ebc788af6fc3b5559ed3
-RMD160 (Specio-0.31.tar.gz) = 6e0a0d76481750f5f04649b1b530a4ed2a42516f
-SHA512 (Specio-0.31.tar.gz) = 1d16ff9aeb3e2026c23928db64587e42f74b2488b7aeef6ee7b03ec0542dd4986cca25b3206d7d50e54724d5d3e04e8ab268808d42ff32f179ea719ca6821544
-Size (Specio-0.31.tar.gz) = 82791 bytes
+SHA1 (Specio-0.32.tar.gz) = 8f8988522e3c95c31bc0983859b3068fe754303a
+RMD160 (Specio-0.32.tar.gz) = 47d6a44ebcf7db2ca7b50dbc61c137bf77790de8
+SHA512 (Specio-0.32.tar.gz) = 6803089d5f80d9c7b811c0bddb6937228cbb95a0876424a678b76f38609b32220a2ffee63b904535baf741ddbffb880999b3ea49e41d34731ed83394b5d0628b
+Size (Specio-0.32.tar.gz) = 83679 bytes
