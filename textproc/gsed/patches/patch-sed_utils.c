@@ -1,9 +1,9 @@
-$NetBSD: patch-sed_utils.c,v 1.1 2014/07/17 12:24:34 ryoon Exp $
+$NetBSD: patch-sed_utils.c,v 1.2 2017/01/16 11:45:14 wiz Exp $
 
---- sed/utils.c.orig	2012-03-16 09:13:31.000000000 +0000
+--- sed/utils.c.orig	2016-12-11 19:37:01.000000000 +0000
 +++ sed/utils.c
-@@ -32,6 +32,16 @@
- #include "pathmax.h"
+@@ -31,6 +31,16 @@
+ #include "utils.h"
  #include "fwriting.h"
  
 +/*
