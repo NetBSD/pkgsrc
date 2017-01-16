@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.256 2017/01/16 11:02:48 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.257 2017/01/16 11:07:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Try-Tiny to 0.28 [wiz 2017-01-16]
 	Updated time/py-vdirsyncer to 0.14.1 [wiz 2017-01-16]
 	Updated textproc/iso-codes to 3.73 [wiz 2017-01-16]
+	Updated textproc/py-lxml to 3.7.2 [wiz 2017-01-16]
