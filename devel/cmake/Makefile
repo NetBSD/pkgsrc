@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2017/01/05 22:34:25 joerg Exp $
+# $NetBSD: Makefile,v 1.130 2017/01/16 08:49:42 adam Exp $
 
 .include "Makefile.version"
 
 DISTNAME=	cmake-${CMAKE_VERSION}
-PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	https://cmake.org/files/v${CMAKE_API}/
 
