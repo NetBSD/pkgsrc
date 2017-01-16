@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/01/16 12:36:59 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2017-01-13 19:04:04.000000000 +0000
++++ configure
+@@ -18381,7 +18381,7 @@ else
+   use_mac_sandbox="no"
+ fi
+ 
+-  if test "$use_mac_sandbox" == "yes"; then
++  if test "$use_mac_sandbox" = "yes"; then
+ 
+ $as_echo "#define USE_MAC_SANDBOX 1" >>confdefs.h
+ ]
