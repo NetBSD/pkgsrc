@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2016/08/16 23:53:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2017/01/16 12:12:59 wiz Exp $
 
-DISTNAME=	libvpx-1.6.0
+DISTNAME=	libvpx-1.6.1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_PROJECT=	libvpx
@@ -33,13 +33,10 @@ GCC_REQD+=	4.4
 BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
 
-REPLACE_BASH=		configure \
-			build/make/configure.sh \
-			build/make/version.sh \
-			build/make/gen_asm_deps.sh \
-			build/make/rtcd.sh \
-			examples/gen_example_text.sh \
-			examples/gen_example_code.sh
+REPLACE_BASH=		configure
+REPLACE_BASH+=		build/make/configure.sh
+REPLACE_BASH+=		build/make/version.sh
+REPLACE_BASH+=		build/make/gen_asm_deps.sh
 
 REPLACE_PERL=		build/make/ads2gas.pl
 
