@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.3 2017/01/08 20:03:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.4 2017/01/16 20:06:33 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -24,4 +24,25 @@ Pullup ticket #5182 - requested by maya
 chat/irssi: security fix
 chat/irssi-icb: security fix
 chat/irssi-xmpp: security fix
+
+Pullup ticket #5183 - requested by joerg
+devel/cmake: build fix
+
+Pullup ticket #5186 - requested by taca
+devel/ruby-rb-fsevent: build fix (for www/ruby-jekyll)
+
+Pullup ticket #5187 - requested by taca
+sysutils/ruby-listen: build fix (for www/ruby-jekyll)
+
+Pullup ticket #5188 - requested by taca
+www/ruby-jekyll-watch: build fix (for www/ruby-jekyll)
+
+Pullup ticket #5189 - requested by taca
+net/bind910: security fix
+
+Pullup ticket #5190 - requested by taca
+net/bind99: security fix
+
+Pullup ticket #5191 - requested by taca
+devel/libgit2: security fix
 
