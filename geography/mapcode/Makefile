@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/11/08 08:08:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/16 13:49:40 fhajny Exp $
 
-DISTNAME=	mapcode-cpp-2.5.1
+DISTNAME=	mapcode-cpp-2.5.2
 PKGNAME=	${DISTNAME:S/-cpp//}
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mapcode-foundation/}

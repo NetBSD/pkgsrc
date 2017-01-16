@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2016/11/03 15:06:41 fhajny Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2017/01/16 13:49:40 fhajny Exp $
 
 Fix cmake build, ensure sane lib name.
 
---- CMakeLists.txt.orig	2016-11-02 12:47:12.000000000 +0000
+--- CMakeLists.txt.orig	2017-01-14 14:03:07.000000000 +0000
 +++ CMakeLists.txt
 @@ -43,6 +43,9 @@ set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${MAPC
  set(CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO "${MAPCODE_SANITIZER_LINKER_OPTIONS}")
@@ -14,13 +14,20 @@ Fix cmake build, ensure sane lib name.
  set(SOURCE_FILES_MAPCODELIB
          mapcodelib/internal_data.h
          mapcodelib/internal_alphabet_recognizer.h
-@@ -65,7 +68,8 @@ set(SOURCE_FILES_UNITTEST
- set(SOURCE_FILES_UTILITY
-         utility/mapcode.cpp)
+@@ -95,7 +98,8 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
+ find_package(Threads REQUIRED)
+ find_library(M_LIB m)
  
 -add_library(mapcodelib ${SOURCE_FILES_MAPCODELIB})
 +add_library(mapcodelib SHARED ${SOURCE_FILES_MAPCODELIB})
 +set_target_properties(mapcodelib PROPERTIES OUTPUT_NAME mapcode)
  target_include_directories(mapcodelib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+ target_link_libraries(mapcodelib Threads::Threads)
+ target_link_libraries(mapcodelib ${M_LIB})
+@@ -110,4 +114,4 @@ target_link_libraries(mapcode LINK_PUBLI
+ target_link_libraries(mapcode LINK_PUBLIC Threads::Threads)
+ target_link_libraries(mapcode LINK_PUBLIC ${M_LIB})
  
- add_executable(unittest ${SOURCE_FILES_UNITTEST})
+-install(TARGETS mapcode DESTINATION /usr/local/bin)
+\ No newline at end of file
++install(TARGETS mapcode DESTINATION /usr/local/bin)
