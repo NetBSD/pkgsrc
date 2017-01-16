@@ -1,0 +1,14 @@
+$NetBSD: patch-src_api_nodejs_package__in.json,v 1.1 2017/01/16 13:13:13 fhajny Exp $
+
+npm hates version schemes longer than semver.
+
+--- src/api/nodejs/package_in.json.orig	2016-12-20 08:40:41.000000000 +0000
++++ src/api/nodejs/package_in.json
+@@ -1,6 +1,6 @@
+ {
+ 	"name" : "sqlrelay",
+-	"version" : "@SQLR_VERSION@.0",
++	"version" : "@SQLR_VERSION@",
+ 	"main" : "build/Release/sqlrelay.node",
+ 	"description" : "SQL Relay module for node.js",
+ 	"homepage" : "http://sqlrelay.sourceforge.net",
