@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.241 2017/01/16 09:17:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.242 2017/01/16 09:19:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/cmake to 3.7.2 [adam 2017-01-16]
 	Updated devel/py-mercurial to 4.0.2 [wiz 2017-01-16]
 	Updated devel/afl to 2.36b [wiz 2017-01-16]
+	Updated misc/todoman to 1.8.0 [wiz 2017-01-16]
