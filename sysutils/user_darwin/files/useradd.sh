@@ -98,6 +98,7 @@ else
     dscl . -create /users/$user Comment "$comment"
     dscl . -delete /users/$user AuthenticationAuthority
     dscl . -create /users/$user Password '*'
+    dscl . -create /users/$user IsHidden 1
 fi
 
 if ! nireport . /users/uid=$uid uid 2>/dev/null &&			\
