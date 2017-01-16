@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.276 2017/01/16 14:35:49 adam Exp $
+$NetBSD: CHANGES-2017,v 1.277 2017/01/16 19:55:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/bugzilla3 to 3.6.8 [mef 2017-01-16]
 	Updated security/php-ssh2 to 0.13 [fhajny 2017-01-16]
 	Updated www/apache22 to 2.2.32 [adam 2017-01-16]
+	Updated sysutils/user_darwin to 20170116 [schmonz 2017-01-16]
