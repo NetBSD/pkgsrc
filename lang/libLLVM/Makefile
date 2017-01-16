@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/01/05 11:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/16 17:26:47 brook Exp $
 
 DISTNAME=	llvm-3.9.1.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -24,6 +24,8 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
 CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
+
+CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
 .for tool in 	bugpoint bugpoint_passes dsymutil llc lli llvm_ar	\
 	llvm_as llvm_bcanalyzer llvm_c_test llvm_cov llvm_cxxdump	\
