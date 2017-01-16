@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 03:27:17 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/01/16 14:06:43 mef Exp $
 
-SHA1 (bugzilla-3.2.4.tar.gz) = 5db81f3b373b79ad260e0ceb161a1fa15deed956
-RMD160 (bugzilla-3.2.4.tar.gz) = 590f9ae11f417ad133681fd2c568aa6a3bbe9770
-SHA512 (bugzilla-3.2.4.tar.gz) = e65fd1b0e70108e71f977b9411ea568c18ad5607ed9367f2f0e5802dcfeb61379d5289e13a12dacee268ea32848dda84b0bf5acbae2830093eee10342b72492f
-Size (bugzilla-3.2.4.tar.gz) = 2425683 bytes
+SHA1 (bugzilla-3.6.8.tar.gz) = b763848e73b6f857b6fe728d2742028a6ed5dc7d
+RMD160 (bugzilla-3.6.8.tar.gz) = 9c3236dd049c75445b9b545f3228472488a980fa
+SHA512 (bugzilla-3.6.8.tar.gz) = b0b656fa1b861acb446da29be63fe7a200fe6d569321cbf08586087e2abd5d5a8856ad3963263d99fb6c71c37164e2976a122f8ce84833aa21a419a1484c0cb1
+Size (bugzilla-3.6.8.tar.gz) = 2509304 bytes
