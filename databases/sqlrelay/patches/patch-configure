@@ -1,11 +1,21 @@
-$NetBSD: patch-configure,v 1.5 2016/10/21 14:16:34 fhajny Exp $
+$NetBSD: patch-configure,v 1.6 2017/01/16 13:13:13 fhajny Exp $
 
+Cripple iODBC check, we're using UnixODBC and it was getting in the way.
 Fix Python 3 lookup.
 Fix Ruby support.
 
---- configure.orig	2016-07-26 07:55:32.000000000 +0000
+--- configure.orig	2016-12-20 08:40:38.000000000 +0000
 +++ configure
-@@ -32419,12 +32419,12 @@ then
+@@ -26775,7 +26775,7 @@ fi
+ 
+ 
+ 
+-SEARCHPATH=$ODBCPATH
++SEARCHPATH=OFF_$ODBCPATH
+ NAME=iodbc
+ HEADER=sql.h
+ LIBNAME=iodbc
+@@ -32426,12 +32426,12 @@ then
  
  			for i in "3.9" "3.8" "3.7" "3.6" "3.5" "3.4" "3.3" "3.2" "3.1" "3.0"
  			do
@@ -20,7 +30,7 @@ Fix Ruby support.
  					then
  						PYTHON3INCLUDES="-I$PYTHON3PATH/include/python$i"
  						PYTHON3DIR="$PYTHON3PATH/lib/python$i"
-@@ -32914,7 +32914,7 @@ print CONFIG["arch"]
+@@ -32938,7 +32938,7 @@ print CONFIG["arch"]
  print "\n"
  print "ruby_version = "
  begin
