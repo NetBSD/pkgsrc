@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2017/01/03 14:38:50 mef Exp $
+# $NetBSD: options.mk,v 1.15 2017/01/16 00:30:46 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcache geoip gssapi
+PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi
+PKG_OPTIONS_LEGACY_OPTS+=	memcache:memcached
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
@@ -65,7 +66,7 @@ CONFIGURE_ARGS+=	--with-lua
 ### Support using memcached as an in-memory caching system for the
 ### "trigger before download" and CML modules.
 ###
-.if !empty(PKG_OPTIONS:Mmemcache)
+.if !empty(PKG_OPTIONS:Mmemcached)
 .  include "../../devel/libmemcache/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-memcache
 .endif
