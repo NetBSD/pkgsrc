@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/05 11:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/16 17:26:47 brook Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -32,6 +32,8 @@ CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
+
+CMAKE_ARGS.Darwin+=	-DCMAKE_LIBTOOL=/usr/bin/libtool
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
