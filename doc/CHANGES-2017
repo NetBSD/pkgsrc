@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.252 2017/01/16 10:53:34 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.253 2017/01/16 10:55:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -293,3 +293,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Net-SSLeay to 1.80 [wiz 2017-01-16]
 	Updated devel/p5-Specio to 0.32 [wiz 2017-01-16]
 	Updated devel/p5-Test-Simple to 1.302075 [wiz 2017-01-16]
+	Updated textproc/p5-Text-BibTeX to 0.78 [wiz 2017-01-16]
