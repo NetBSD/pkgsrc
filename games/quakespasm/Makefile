@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 14:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/16 20:43:07 snj Exp $
 
-DISTNAME=	quakespasm-0.90.0
-PKGREVISION=	1
+DISTNAME=	quakespasm-0.92.1
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quakespasm/}
 EXTRACT_SUFX=	.tgz
