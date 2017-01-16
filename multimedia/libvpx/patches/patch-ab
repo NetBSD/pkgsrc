@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2016/08/16 23:53:25 ryoon Exp $
+$NetBSD: patch-ab,v 1.8 2017/01/16 12:12:59 wiz Exp $
 
---- libs.mk.orig	2016-07-21 01:15:41.000000000 +0000
+--- libs.mk.orig	2017-01-12 20:27:27.000000000 +0000
 +++ libs.mk
-@@ -169,7 +169,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
+@@ -172,7 +172,6 @@ INSTALL-LIBS-$(CONFIG_SHARED) += $(forea
  endif
  else
  INSTALL-LIBS-$(CONFIG_STATIC) += $(LIBSUBDIR)/libvpx.a
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.7 2016/08/16 23:53:25 ryoon Exp $
  endif
  
  CODEC_SRCS=$(call enabled,CODEC_SRCS)
-@@ -226,8 +225,8 @@ endif
+@@ -229,8 +228,8 @@ endif
  else
  LIBVPX_OBJS=$(call objs,$(CODEC_SRCS))
  OBJS-yes += $(LIBVPX_OBJS)
@@ -20,4 +20,4 @@ $NetBSD: patch-ab,v 1.7 2016/08/16 23:53:25 ryoon Exp $
 +$(BUILD_PFX)libvpx.a: $(LIBVPX_OBJS)
  
  SO_VERSION_MAJOR := 4
- SO_VERSION_MINOR := 0
+ SO_VERSION_MINOR := 1
