@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16921 2017/01/16 11:56:33 wiz Exp $
+$NetBSD: TODO,v 1.16922 2017/01/16 11:59:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1327,7 +1327,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.19
 	o py-acme-0.10.1
-	o py-anki2-2.0.39
 	o py-apache-libcloud-0.20.1
 	o py-buildbot-0.9.1
 	o py-buildbot-slave-0.9.1
