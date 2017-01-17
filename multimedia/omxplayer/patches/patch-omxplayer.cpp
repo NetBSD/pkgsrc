@@ -1,18 +1,8 @@
-$NetBSD: patch-omxplayer.cpp,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
+$NetBSD: patch-omxplayer.cpp,v 1.2 2017/01/17 07:33:50 skrll Exp $
 
---- omxplayer.cpp.orig	2015-01-12 15:10:50.000000000 +0000
+--- omxplayer.cpp.orig	2016-10-10 15:38:42.000000000 +0000
 +++ omxplayer.cpp
-@@ -23,7 +23,9 @@
- #include <stdint.h>
- #include <termios.h>
- #include <sys/mman.h>
-+#if defined(__linux__)
- #include <linux/fb.h>
-+#endif
- #include <sys/ioctl.h>
- #include <getopt.h>
- #include <string.h>
-@@ -90,8 +92,8 @@ bool              m_osd                 
+@@ -83,8 +83,8 @@ bool              m_osd                 
  bool              m_no_keys             = false;
  std::string       m_external_subtitles_path;
  bool              m_has_external_subtitles = false;
