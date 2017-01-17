@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"netbsd.org/pkglint/regex"
+)
 
 type MkShList struct {
 	AndOrs     []*MkShAndOr
@@ -144,7 +147,7 @@ func (c *StrCommand) HasOption(opt string) bool {
 	return false
 }
 
-func (c *StrCommand) AnyArgMatches(pattern RegexPattern) bool {
+func (c *StrCommand) AnyArgMatches(pattern regex.RegexPattern) bool {
 	for _, arg := range c.Args {
 		if matches(arg, pattern) {
 			return true

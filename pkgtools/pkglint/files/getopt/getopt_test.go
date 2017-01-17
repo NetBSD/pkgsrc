@@ -5,8 +5,7 @@ import (
 	"testing"
 )
 
-type Suite struct {
-}
+type Suite struct{}
 
 var _ = check.Suite(new(Suite))
 

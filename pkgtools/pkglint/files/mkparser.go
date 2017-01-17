@@ -1,6 +1,8 @@
 package main
 
 import (
+	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
@@ -8,7 +10,7 @@ type MkParser struct {
 	*Parser
 }
 
-func NewMkParser(line *Line, text string, emitWarnings bool) *MkParser {
+func NewMkParser(line Line, text string, emitWarnings bool) *MkParser {
 	return &MkParser{NewParser(line, text, emitWarnings)}
 }
 
@@ -28,9 +30,9 @@ func (p *MkParser) MkTokens() []*MkToken {
 		}
 
 	again:
-		dollar := strings.IndexByte(repl.rest, '$')
+		dollar := strings.IndexByte(repl.Rest(), '$')
 		if dollar == -1 {
-			dollar = len(repl.rest)
+			dollar = len(repl.Rest())
 		}
 		repl.Skip(dollar)
 		if repl.AdvanceStr("$$") {
@@ -71,7 +73,7 @@ func (p *MkParser) VarUse() *MkVarUse {
 			}
 		}
 
-		for p.VarUse() != nil || repl.AdvanceRegexp(RegexPattern(`^([^$:`+closing+`]|\$\$)+`)) {
+		for p.VarUse() != nil || repl.AdvanceRegexp(regex.RegexPattern(`^([^$:`+closing+`]|\$\$)+`)) {
 		}
 		rest := p.Rest()
 		if hasPrefix(rest, ":L") || hasPrefix(rest, ":?") {
@@ -91,7 +93,7 @@ func (p *MkParser) VarUse() *MkVarUse {
 		return &MkVarUse{"<", nil}
 	}
 	if repl.PeekByte() == '$' && repl.AdvanceRegexp(`^\$(\w)`) {
-		varname := repl.m[1]
+		varname := repl.Group(1)
 		if p.EmitWarnings {
 			p.Line.Warnf("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Makefile variable or $$%[1]s if you mean a shell variable.", varname)
 		}
@@ -116,7 +118,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 				continue
 			}
 			if repl.AdvanceStr("ts") {
-				rest := repl.rest
+				rest := repl.Rest()
 				if len(rest) >= 2 && (rest[1] == closing[0] || rest[1] == ':') {
 					repl.Skip(1)
 				} else if len(rest) >= 1 && (rest[0] == closing[0] || rest[0] == ':') {
@@ -130,7 +132,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 
 		case '=', 'D', 'M', 'N', 'U':
 			if repl.AdvanceRegexp(`^[=DMNU]`) {
-				for p.VarUse() != nil || repl.AdvanceRegexp(RegexPattern(`^([^$:`+closing+`]|\$\$)+`)) {
+				for p.VarUse() != nil || repl.AdvanceRegexp(regex.RegexPattern(`^([^$:`+closing+`]|\$\$)+`)) {
 				}
 				modifiers = append(modifiers, repl.Since(modifierMark))
 				continue
@@ -138,9 +140,9 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 
 		case 'C', 'S':
 			if repl.AdvanceRegexp(`^[CS]([%,/:;@^|])`) {
-				separator := repl.m[1]
+				separator := repl.Group(1)
 				repl.AdvanceStr("^")
-				re := RegexPattern(`^([^\` + separator + `$` + closing + `\\]|\$\$|\\.)+`)
+				re := regex.RegexPattern(`^([^\` + separator + `$` + closing + `\\]|\$\$|\\.)+`)
 				for p.VarUse() != nil || repl.AdvanceRegexp(re) {
 				}
 				repl.AdvanceStr("$")
@@ -158,8 +160,8 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 
 		case '@':
 			if repl.AdvanceRegexp(`^@([\w.]+)@`) {
-				loopvar := repl.m[1]
-				for p.VarUse() != nil || repl.AdvanceRegexp(RegexPattern(`^([^$:@`+closing+`\\]|\$\$|\\.)+`)) {
+				loopvar := repl.Group(1)
+				for p.VarUse() != nil || repl.AdvanceRegexp(regex.RegexPattern(`^([^$:@`+closing+`\\]|\$\$|\\.)+`)) {
 				}
 				if !repl.AdvanceStr("@") && p.EmitWarnings {
 					p.Line.Warnf("Modifier ${%s:@%s@...@} is missing the final \"@\".", varname, loopvar)
@@ -176,7 +178,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 
 		case '?':
 			repl.AdvanceStr("?")
-			re := RegexPattern(`^([^$:` + closing + `]|\$\$)+`)
+			re := regex.RegexPattern(`^([^$:` + closing + `]|\$\$)+`)
 			for p.VarUse() != nil || repl.AdvanceRegexp(re) {
 			}
 			if repl.AdvanceStr(":") {
@@ -188,7 +190,7 @@ func (p *MkParser) VarUseModifiers(varname, closing string) []string {
 		}
 
 		repl.Reset(modifierMark)
-		for p.VarUse() != nil || repl.AdvanceRegexp(RegexPattern(`^([^:$`+closing+`]|\$\$)+`)) {
+		for p.VarUse() != nil || repl.AdvanceRegexp(regex.RegexPattern(`^([^:$`+closing+`]|\$\$)+`)) {
 		}
 		if suffixSubst := repl.Since(modifierMark); contains(suffixSubst, "=") {
 			modifiers = append(modifiers, suffixSubst)
@@ -253,8 +255,8 @@ func (p *MkParser) mkCondAnd() *Tree {
 }
 
 func (p *MkParser) mkCondAtom() *Tree {
-	if G.opts.Debug {
-		defer tracecall1(p.Rest())()
+	if trace.Tracing {
+		defer trace.Call1(p.Rest())()
 	}
 
 	repl := p.repl
@@ -288,7 +290,7 @@ func (p *MkParser) mkCondAtom() *Tree {
 			}
 		}
 	case repl.AdvanceRegexp(`^(commands|exists|make|target)\s*\(`):
-		funcname := repl.m[1]
+		funcname := repl.Group(1)
 		argMark := repl.Mark()
 		for p.VarUse() != nil || repl.AdvanceRegexp(`^[^$)]+`) {
 		}
@@ -308,14 +310,14 @@ func (p *MkParser) mkCondAtom() *Tree {
 		}
 		if lhs != nil {
 			if repl.AdvanceRegexp(`^\s*(<|<=|==|!=|>=|>)\s*(\d+(?:\.\d+)?)`) {
-				return NewTree("compareVarNum", *lhs, repl.m[1], repl.m[2])
+				return NewTree("compareVarNum", *lhs, repl.Group(1), repl.Group(2))
 			}
 			if repl.AdvanceRegexp(`^\s*(<|<=|==|!=|>=|>)\s*`) {
-				op := repl.m[1]
+				op := repl.Group(1)
 				if (op == "!=" || op == "==") && repl.AdvanceRegexp(`^"([^"\$\\]*)"`) {
-					return NewTree("compareVarStr", *lhs, op, repl.m[1])
+					return NewTree("compareVarStr", *lhs, op, repl.Group(1))
 				} else if repl.AdvanceRegexp(`^\w+`) {
-					return NewTree("compareVarStr", *lhs, op, repl.m[0])
+					return NewTree("compareVarStr", *lhs, op, repl.Group(0))
 				} else if rhs := p.VarUse(); rhs != nil {
 					return NewTree("compareVarVar", *lhs, op, *rhs)
 				} else if repl.PeekByte() == '"' {
@@ -334,7 +336,7 @@ func (p *MkParser) mkCondAtom() *Tree {
 			}
 		}
 		if repl.AdvanceRegexp(`^\d+(?:\.\d+)?`) {
-			return NewTree("literalNum", repl.m[0])
+			return NewTree("literalNum", repl.Group(0))
 		}
 	}
 	repl.Reset(mark)

@@ -1,12 +1,13 @@
 package main
 
 import (
+	"netbsd.org/pkglint/trace"
 	"sort"
 )
 
 func CheckdirCategory() {
-	if G.opts.Debug {
-		defer tracecall1(G.CurrentDir)()
+	if trace.Tracing {
+		defer trace.Call1(G.CurrentDir)()
 	}
 
 	lines := LoadNonemptyLines(G.CurrentDir+"/Makefile", true)
@@ -23,7 +24,7 @@ func CheckdirCategory() {
 	exp.ExpectEmptyLine()
 
 	if exp.AdvanceIfMatches(`^COMMENT=\t*(.*)`) {
-		mklines.mklines[exp.index-1].CheckValidCharactersInValue(`[- '(),/0-9A-Za-z]`)
+		MkLineChecker{mklines.mklines[exp.index-1]}.CheckValidCharactersInValue(`[- '(),/0-9A-Za-z]`)
 	} else {
 		exp.CurrentLine().Errorf("COMMENT= line expected.")
 	}
@@ -31,7 +32,7 @@ func CheckdirCategory() {
 
 	type subdir struct {
 		name   string
-		line   *Line
+		line   Line
 		active bool
 	}
 
@@ -46,7 +47,7 @@ func CheckdirCategory() {
 	prevSubdir := ""
 	for !exp.EOF() {
 		line := exp.CurrentLine()
-		text := line.Text
+		text := line.Text()
 
 		if m, commentFlag, indentation, name, comment := match4(text, `^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
 			commentedOut := commentFlag == "#"
@@ -71,7 +72,7 @@ func CheckdirCategory() {
 			exp.Advance()
 
 		} else {
-			if line.Text != "" {
+			if line.Text() != "" {
 				line.Errorf("SUBDIR+= line or empty line expected.")
 			}
 			break
@@ -95,7 +96,7 @@ func CheckdirCategory() {
 
 	var subdirs []string
 
-	var line *Line
+	var line Line
 	mActive := false
 
 	for !(mAtend && fAtend) {

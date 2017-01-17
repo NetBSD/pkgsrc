@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"io"
 	"netbsd.org/pkglint/getopt"
+	"netbsd.org/pkglint/histogram"
+	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/trace"
 	"os"
 	"os/user"
 	"path"
@@ -16,7 +19,7 @@ const confMake = "@BMAKE@"
 const confVersion = "@VERSION@"
 
 func main() {
-	G.logOut, G.logErr, G.debugOut = os.Stdout, os.Stderr, os.Stdout
+	G.logOut, G.logErr, trace.Out = os.Stdout, os.Stderr, os.Stdout
 	os.Exit(new(Pkglint).Main(os.Args...))
 }
 
@@ -45,10 +48,12 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 		pprof.StartCPUProfile(f)
 		defer pprof.StopCPUProfile()
 
-		G.rematch = NewHistogram()
-		G.renomatch = NewHistogram()
-		G.retime = NewHistogram()
-		G.loghisto = NewHistogram()
+		regex.Profiling = true
+		G.loghisto = histogram.New()
+		defer func() {
+			G.loghisto.PrintStats("loghisto", G.logOut, 0)
+			regex.PrintStats()
+		}()
 	}
 
 	for _, arg := range G.opts.args {
@@ -63,7 +68,7 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 	currentUser, err := user.Current()
 	if err == nil {
 		// On Windows, this is `Computername\Username`.
-		G.CurrentUsername = regcomp(`^.*\\`).ReplaceAllString(currentUser.Username, "")
+		G.CurrentUsername = regex.Compile(`^.*\\`).ReplaceAllString(currentUser.Username, "")
 	}
 
 	for len(G.Todo) != 0 {
@@ -74,12 +79,6 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 
 	checkToplevelUnusedLicenses()
 	pkglint.PrintSummary()
-	if G.opts.Profiling {
-		G.loghisto.PrintStats("loghisto", G.logOut, 0)
-		G.rematch.PrintStats("rematch", G.logOut, 10)
-		G.renomatch.PrintStats("renomatch", G.logOut, 10)
-		G.retime.PrintStats("retime", G.logOut, 10)
-	}
 	if G.errors != 0 {
 		return 1
 	}
@@ -91,7 +90,7 @@ func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 	opts := getopt.NewOptions()
 
 	check := opts.AddFlagGroup('C', "check", "check,...", "enable or disable specific checks")
-	opts.AddFlagVar('d', "debug", &gopts.Debug, false, "log verbose call traces for debugging")
+	opts.AddFlagVar('d', "debug", &trace.Tracing, false, "log verbose call traces for debugging")
 	opts.AddFlagVar('e', "explain", &gopts.Explain, false, "explain the diagnostics or give further help")
 	opts.AddFlagVar('f', "show-autofix", &gopts.PrintAutofix, false, "show what pkglint can fix automatically")
 	opts.AddFlagVar('F', "autofix", &gopts.Autofix, false, "try to automatically fix some errors (experimental)")
@@ -178,8 +177,8 @@ func (pkglint *Pkglint) PrintSummary() {
 }
 
 func (pkglint *Pkglint) CheckDirent(fname string) {
-	if G.opts.Debug {
-		defer tracecall1(fname)()
+	if trace.Tracing {
+		defer trace.Call1(fname)()
 	}
 
 	st, err := os.Lstat(fname)
@@ -222,7 +221,7 @@ func (pkglint *Pkglint) CheckDirent(fname string) {
 
 // Returns the pkgsrc top-level directory, relative to the given file or directory.
 func findPkgsrcTopdir(fname string) string {
-	for _, dir := range []string{".", "..", "../..", "../../.."} {
+	for _, dir := range [...]string{".", "..", "../..", "../../.."} {
 		if fileExists(fname + "/" + dir + "/mk/bsd.pkg.mk") {
 			return dir
 		}
@@ -231,15 +230,15 @@ func findPkgsrcTopdir(fname string) string {
 }
 
 func resolveVariableRefs(text string) string {
-	if G.opts.Debug {
-		defer tracecall1(text)()
+	if trace.Tracing {
+		defer trace.Call1(text)()
 	}
 
 	visited := make(map[string]bool) // To prevent endless loops
 
 	str := text
 	for {
-		replaced := regcomp(`\$\{([\w.]+)\}`).ReplaceAllStringFunc(str, func(m string) string {
+		replaced := regex.Compile(`\$\{([\w.]+)\}`).ReplaceAllStringFunc(str, func(m string) string {
 			varname := m[2 : len(m)-1]
 			if !visited[varname] {
 				visited[varname] = true
@@ -264,8 +263,8 @@ func resolveVariableRefs(text string) string {
 }
 
 func CheckfileExtra(fname string) {
-	if G.opts.Debug {
-		defer tracecall1(fname)()
+	if trace.Tracing {
+		defer trace.Call1(fname)()
 	}
 
 	if lines := LoadNonemptyLines(fname, false); lines != nil {
@@ -273,16 +272,16 @@ func CheckfileExtra(fname string) {
 	}
 }
 
-func ChecklinesDescr(lines []*Line) {
-	if G.opts.Debug {
-		defer tracecall1(lines[0].Fname)()
+func ChecklinesDescr(lines []Line) {
+	if trace.Tracing {
+		defer trace.Call1(lines[0].Filename())()
 	}
 
 	for _, line := range lines {
-		line.CheckLength(80)
-		line.CheckTrailingWhitespace()
-		line.CheckValidCharacters(`[\t -~]`)
-		if contains(line.Text, "${") {
+		LineChecker{line}.CheckLength(80)
+		LineChecker{line}.CheckTrailingWhitespace()
+		LineChecker{line}.CheckValidCharacters(`[\t -~]`)
+		if contains(line.Text(), "${") {
 			line.Notef("Variables are not expanded in the DESCR file.")
 		}
 	}
@@ -301,9 +300,9 @@ func ChecklinesDescr(lines []*Line) {
 	SaveAutofixChanges(lines)
 }
 
-func ChecklinesMessage(lines []*Line) {
-	if G.opts.Debug {
-		defer tracecall1(lines[0].Fname)()
+func ChecklinesMessage(lines []Line) {
+	if trace.Tracing {
+		defer trace.Call1(lines[0].Filename())()
 	}
 
 	explainMessage := func() {
@@ -322,17 +321,17 @@ func ChecklinesMessage(lines []*Line) {
 	}
 
 	hline := strings.Repeat("=", 75)
-	if line := lines[0]; line.Text != hline {
+	if line := lines[0]; line.Text() != hline {
 		line.Warnf("Expected a line of exactly 75 \"=\" characters.")
 		explainMessage()
 	}
-	lines[1].CheckRcsid(``, "")
+	LineChecker{lines[1]}.CheckRcsid(``, "")
 	for _, line := range lines {
-		line.CheckLength(80)
-		line.CheckTrailingWhitespace()
-		line.CheckValidCharacters(`[\t -~]`)
+		LineChecker{line}.CheckLength(80)
+		LineChecker{line}.CheckTrailingWhitespace()
+		LineChecker{line}.CheckValidCharacters(`[\t -~]`)
 	}
-	if lastLine := lines[len(lines)-1]; lastLine.Text != hline {
+	if lastLine := lines[len(lines)-1]; lastLine.Text() != hline {
 		lastLine.Warnf("Expected a line of exactly 75 \"=\" characters.")
 		explainMessage()
 	}
@@ -340,8 +339,8 @@ func ChecklinesMessage(lines []*Line) {
 }
 
 func CheckfileMk(fname string) {
-	if G.opts.Debug {
-		defer tracecall1(fname)()
+	if trace.Tracing {
+		defer trace.Call1(fname)()
 	}
 
 	lines := LoadNonemptyLines(fname, true)
@@ -354,8 +353,8 @@ func CheckfileMk(fname string) {
 }
 
 func Checkfile(fname string) {
-	if G.opts.Debug {
-		defer tracecall1(fname)()
+	if trace.Tracing {
+		defer trace.Call1(fname)()
 	}
 
 	basename := path.Base(fname)
@@ -447,8 +446,8 @@ func Checkfile(fname string) {
 		}
 
 	case matches(fname, `(?:^|/)patches/manual[^/]*$`):
-		if G.opts.Debug {
-			traceStep1("Unchecked file %q.", fname)
+		if trace.Tracing {
+			trace.Step1("Unchecked file %q.", fname)
 		}
 
 	case matches(fname, `(?:^|/)patches/[^/]*$`):
@@ -487,10 +486,10 @@ func Checkfile(fname string) {
 	}
 }
 
-func ChecklinesTrailingEmptyLines(lines []*Line) {
+func ChecklinesTrailingEmptyLines(lines []Line) {
 	max := len(lines)
 	last := max
-	for last > 1 && lines[last-1].Text == "" {
+	for last > 1 && lines[last-1].Text() == "" {
 		last--
 	}
 	if last != max {

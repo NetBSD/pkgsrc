@@ -26,7 +26,7 @@ func (s *Suite) Test_newVersion(c *check.C) {
 	c.Check(newVersion("0pre20160620"), check.DeepEquals, &version{[]int{0, -1, 20160620}, 0})
 }
 
-func (s *Suite) Test_pkgverCmp(c *check.C) {
+func (s *Suite) Test_Compare(c *check.C) {
 	var versions = [][]string{
 		{"0pre20160620"},
 		{"0"},

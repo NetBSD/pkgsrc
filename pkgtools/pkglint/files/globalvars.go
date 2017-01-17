@@ -2,7 +2,7 @@ package main
 
 import (
 	"io"
-	"regexp"
+	"netbsd.org/pkglint/histogram"
 )
 
 type GlobalVars struct {
@@ -19,7 +19,7 @@ type GlobalVars struct {
 	Testing         bool     // Is pkglint in self-testing mode (only during development)?
 	CurrentUsername string   // For checking against OWNER and MAINTAINER
 	CvsEntriesDir   string   // Cached to avoid I/O
-	CvsEntriesLines []*Line
+	CvsEntriesLines []Line
 
 	Hash         map[string]*Hash // Maps "alg:fname" => hash (inter-package check).
 	UsedLicenses map[string]bool  // Maps "license name" => true (inter-package check).
@@ -30,16 +30,10 @@ type GlobalVars struct {
 	explanationsAvailable bool
 	explanationsGiven     map[string]bool
 	autofixAvailable      bool
-	traceDepth            int
 	logOut                io.Writer
 	logErr                io.Writer
-	debugOut              io.Writer
 
-	res       map[RegexPattern]*regexp.Regexp // Compiled regular expressions
-	rematch   *Histogram
-	renomatch *Histogram
-	retime    *Histogram // Total time taken by matching a regular expression
-	loghisto  *Histogram
+	loghisto *histogram.Histogram
 }
 
 type CmdOpts struct {
@@ -78,7 +72,6 @@ type CmdOpts struct {
 	Profiling,
 	Quiet,
 	Recursive,
-	Debug,
 	PrintAutofix,
 	PrintSource,
 	PrintVersion bool
@@ -88,7 +81,7 @@ type CmdOpts struct {
 
 type Hash struct {
 	hash string
-	line *Line
+	line Line
 }
 
 var G GlobalVars

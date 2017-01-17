@@ -2,6 +2,7 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
+	"netbsd.org/pkglint/trace"
 )
 
 func (s *Suite) Test_GlobalData_InitVartypes(c *check.C) {
@@ -55,7 +56,7 @@ func (s *Suite) Test_GlobalData_loadTools(c *check.C) {
 
 	G.globalData.loadTools()
 
-	G.opts.Debug = true
+	trace.Tracing = true
 	G.globalData.Tools.Trace()
 
 	c.Check(s.Output(), equals, ""+
@@ -102,7 +103,7 @@ func (s *Suite) Test_GlobalData_deprecated(c *check.C) {
 	G.globalData.loadDeprecatedVars()
 
 	line := NewLine("Makefile", 5, "USE_PERL5=\tyes", nil)
-	NewMkLine(line).checkVarassign()
+	MkLineChecker{NewMkLine(line)}.checkVarassign()
 
 	c.Check(s.Output(), equals, "WARN: Makefile:5: Definition of USE_PERL5 is deprecated. Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.\n")
 }
