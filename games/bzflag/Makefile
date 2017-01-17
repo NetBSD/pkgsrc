@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2017/01/01 16:06:12 adam Exp $
+# $NetBSD: Makefile,v 1.56 2017/01/17 15:36:16 roy Exp $
 
 DISTNAME=	bzflag-2.4.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
@@ -14,7 +14,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_NCURSES=	# resize_term()
+FAKE_NCURSES=	yes	# They assume non ncurses is Solaris
+USE_CURSES=	resizeterm
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,7 +32,6 @@ CONFIGURE_ARGS+=	--with-ncurses
 CHECK_PORTABILITY_SKIP+=	debian/*
 
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
@@ -40,5 +40,6 @@ CHECK_PORTABILITY_SKIP+=	debian/*
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
