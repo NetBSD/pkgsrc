@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"netbsd.org/pkglint/trace"
 	"strconv"
 )
 
-func parseShellProgram(line *Line, program string) (list *MkShList, err error) {
-	if G.opts.Debug {
-		defer tracecall(program)()
+func parseShellProgram(line Line, program string) (list *MkShList, err error) {
+	if trace.Tracing {
+		defer trace.Call(program)()
 	}
 
 	tokens, rest := splitIntoShellTokens(line, program)
@@ -54,16 +55,16 @@ func (lex *ShellLexer) Lex(lval *shyySymType) (ttype int) {
 		return 0
 	}
 
-	if G.opts.Debug {
+	if trace.Tracing {
 		defer func() {
 			tname := shyyTokname(shyyTok2[ttype-shyyPrivate])
 			switch ttype {
 			case tkWORD, tkASSIGNMENT_WORD:
-				traceStep("lex %v %q", tname, lval.Word.MkText)
+				trace.Stepf("lex %v %q", tname, lval.Word.MkText)
 			case tkIO_NUMBER:
-				traceStep("lex %v %v", tname, lval.IONum)
+				trace.Stepf("lex %v %v", tname, lval.IONum)
 			default:
-				traceStep("lex %v", tname)
+				trace.Stepf("lex %v", tname)
 			}
 		}()
 	}

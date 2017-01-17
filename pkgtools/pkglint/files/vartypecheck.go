@@ -1,6 +1,8 @@
 package main
 
 import (
+	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/trace"
 	"path"
 	"sort"
 	"strings"
@@ -8,13 +10,25 @@ import (
 
 type VartypeCheck struct {
 	MkLine     *MkLine
-	Line       *Line
+	Line       Line
 	Varname    string
 	Op         MkOperator
 	Value      string
 	ValueNoVar string
 	MkComment  string
 	Guessed    bool // Whether the type definition is guessed (based on the variable name) or explicitly defined (see vardefs.go).
+}
+
+// NewVartypeCheckValue creates a VartypeCheck context by copying all
+// fields except the value. This is typically used when checking parts
+// of composite types.
+func NewVartypeCheckValue(vc *VartypeCheck, value string) *VartypeCheck {
+	valueNoVar := vc.MkLine.withoutMakeVariables(value)
+
+	copy := *vc
+	copy.Value = value
+	copy.ValueNoVar = valueNoVar
+	return &copy
 }
 
 type MkOperator uint8
@@ -107,14 +121,14 @@ var (
 )
 
 func (cv *VartypeCheck) AwkCommand() {
-	if G.opts.Debug {
-		traceStep1("Unchecked AWK command: %q", cv.Value)
+	if trace.Tracing {
+		trace.Step1("Unchecked AWK command: %q", cv.Value)
 	}
 }
 
 func (cv *VartypeCheck) BasicRegularExpression() {
-	if G.opts.Debug {
-		traceStep1("Unchecked basic regular expression: %q", cv.Value)
+	if trace.Tracing {
+		trace.Step1("Unchecked basic regular expression: %q", cv.Value)
 	}
 }
 
@@ -199,6 +213,19 @@ func (cv *VartypeCheck) ConfFiles() {
 	if len(words)%2 != 0 {
 		cv.Line.Warnf("Values for %s should always be pairs of paths.", cv.Varname)
 	}
+
+	for i, word := range words {
+		NewVartypeCheckValue(cv, word).Pathname()
+
+		if i%2 == 1 && !hasPrefix(word, "${") {
+			cv.Line.Warnf("The destination file %q should start with a variable reference.", word)
+			Explain(
+				"Since pkgsrc can be installed in different locations, the",
+				"configuration files will also end up in different locations.",
+				"Typical variables that are used for configuration files are",
+				"PKG_SYSCONFDIR, PKG_SYSCONFBASE, PREFIX, VARBASE.")
+		}
+	}
 }
 
 func (cv *VartypeCheck) Dependency() {
@@ -206,7 +233,7 @@ func (cv *VartypeCheck) Dependency() {
 
 	parser := NewParser(line, value, false)
 	deppat := parser.Dependency()
-	if deppat != nil && deppat.wildcard == "" && (parser.Rest() == "{,nb*}" || parser.Rest() == "{,nb[0-9]*}") {
+	if deppat != nil && deppat.Wildcard == "" && (parser.Rest() == "{,nb*}" || parser.Rest() == "{,nb[0-9]*}") {
 		line.Warnf("Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.")
 		Explain(
 			"The \"{,nb*}\" extension is only necessary for dependencies of the",
@@ -226,7 +253,7 @@ func (cv *VartypeCheck) Dependency() {
 		return
 	}
 
-	wildcard := deppat.wildcard
+	wildcard := deppat.Wildcard
 	if m, inside := match1(wildcard, `^\[(.*)\]\*$`); m {
 		if inside != "0-9" {
 			line.Warnf("Only [0-9]* is allowed in the numeric part of a dependency.")
@@ -248,14 +275,14 @@ func (cv *VartypeCheck) Dependency() {
 		}
 
 	} else if wildcard == "*" {
-		line.Warnf("Please use \"%[1]s-[0-9]*\" instead of \"%[1]s-*\".", deppat.pkgbase)
+		line.Warnf("Please use \"%[1]s-[0-9]*\" instead of \"%[1]s-*\".", deppat.Pkgbase)
 		Explain(
 			"If you use a * alone, the package specification may match other",
 			"packages that have the same prefix, but a longer name.  For example,",
 			"foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.")
 	}
 
-	if nocclasses := regcomp(`\[[\d-]+\]`).ReplaceAllString(wildcard, ""); contains(nocclasses, "-") {
+	if nocclasses := regex.Compile(`\[[\d-]+\]`).ReplaceAllString(wildcard, ""); contains(nocclasses, "-") {
 		line.Warnf("The version pattern %q should not contain a hyphen.", wildcard)
 		Explain(
 			"Pkgsrc interprets package names with version numbers like this:",
@@ -274,7 +301,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 	}
 
 	if m, pattern, relpath, pkg := match3(value, `(.*):(\.\./\.\./[^/]+/([^/]+))$`); m {
-		cv.MkLine.CheckRelativePkgdir(relpath)
+		MkLineChecker{cv.MkLine}.CheckRelativePkgdir(relpath)
 
 		switch pkg {
 		case "msgfmt", "gettext":
@@ -285,7 +312,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 			line.Warnf("Please use USE_TOOLS+=gmake instead of this dependency.")
 		}
 
-		cv.MkLine.CheckVartypePrimitive(cv.Varname, BtDependency, cv.Op, pattern, cv.MkComment, cv.Guessed)
+		MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtDependency, cv.Op, pattern, cv.MkComment, cv.Guessed)
 		return
 	}
 
@@ -350,7 +377,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 }
 
 func (cv *VartypeCheck) FetchURL() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
 	for siteURL, siteName := range G.globalData.MasterSiteURLToVar {
 		if hasPrefix(cv.Value, siteURL) {
@@ -410,7 +437,7 @@ func (cv *VartypeCheck) FileMode() {
 }
 
 func (cv *VartypeCheck) Homepage() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtURL, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 
 	if m, wrong, sitename, subdir := match3(cv.Value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`); m {
 		baseURL := G.globalData.MasterSiteVarToURL[sitename]
@@ -591,8 +618,8 @@ func (cv *VartypeCheck) Option() {
 	line, value, valueNovar := cv.Line, cv.Value, cv.ValueNoVar
 
 	if value != valueNovar {
-		if G.opts.Debug {
-			traceStep1("Unchecked option name: %q", value)
+		if trace.Tracing {
+			trace.Step1("Unchecked option name: %q", value)
 		}
 		return
 	}
@@ -620,7 +647,7 @@ func (cv *VartypeCheck) Option() {
 // The PATH environment variable
 func (cv *VartypeCheck) Pathlist() {
 	if !contains(cv.Value, ":") && cv.Guessed {
-		cv.MkLine.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+		MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 		return
 	}
 
@@ -648,7 +675,7 @@ func (cv *VartypeCheck) Pathmask() {
 	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%*?/\[\]]*`) {
 		cv.Line.Warnf("%q is not a valid pathname mask.", cv.Value)
 	}
-	cv.Line.CheckAbsolutePathname(cv.Value)
+	LineChecker{cv.Line}.CheckAbsolutePathname(cv.Value)
 }
 
 // Like Filename, but including slashes
@@ -660,7 +687,7 @@ func (cv *VartypeCheck) Pathname() {
 	if !matches(cv.ValueNoVar, `^[#\-0-9A-Za-z._~+%/]*$`) {
 		cv.Line.Warnf("%q is not a valid pathname.", cv.Value)
 	}
-	cv.Line.CheckAbsolutePathname(cv.Value)
+	LineChecker{cv.Line}.CheckAbsolutePathname(cv.Value)
 }
 
 func (cv *VartypeCheck) Perl5Packlist() {
@@ -683,7 +710,7 @@ func (cv *VartypeCheck) PkgName() {
 }
 
 func (cv *VartypeCheck) PkgOptionsVar() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtVariableName, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtVariableName, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 	if matches(cv.Value, `\$\{PKGBASE[:\}]`) {
 		cv.Line.Errorf("PKGBASE must not be used in PKG_OPTIONS_VAR.")
 		Explain(
@@ -701,14 +728,14 @@ func (cv *VartypeCheck) PkgOptionsVar() {
 // A directory name relative to the top-level pkgsrc directory.
 // Despite its name, it is more similar to RelativePkgDir than to RelativePkgPath.
 func (cv *VartypeCheck) PkgPath() {
-	cv.MkLine.CheckRelativePkgdir(G.CurPkgsrcdir + "/" + cv.Value)
+	MkLineChecker{cv.MkLine}.CheckRelativePkgdir(G.CurPkgsrcdir + "/" + cv.Value)
 }
 
 func (cv *VartypeCheck) PkgRevision() {
 	if !matches(cv.Value, `^[1-9]\d*$`) {
 		cv.Line.Warnf("%s must be a positive integer number.", cv.Varname)
 	}
-	if path.Base(cv.Line.Fname) != "Makefile" {
+	if path.Base(cv.Line.Filename()) != "Makefile" {
 		cv.Line.Errorf("%s only makes sense directly in the package Makefile.", cv.Varname)
 		Explain(
 			"Usually, different packages using the same Makefile.common have",
@@ -797,12 +824,12 @@ func (cv *VartypeCheck) PythonDependency() {
 
 // Refers to a package directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
-	cv.MkLine.CheckRelativePkgdir(cv.Value)
+	MkLineChecker{cv.MkLine}.CheckRelativePkgdir(cv.Value)
 }
 
 // Refers to a file or directory, e.g. ../../category/pkgbase, ../../category/pkgbase/Makefile.
 func (cv *VartypeCheck) RelativePkgPath() {
-	cv.MkLine.CheckRelativePath(cv.Value, true)
+	MkLineChecker{cv.MkLine}.CheckRelativePath(cv.Value, true)
 }
 
 func (cv *VartypeCheck) Restricted() {
@@ -820,11 +847,10 @@ func (cv *VartypeCheck) SedCommand() {
 
 func (cv *VartypeCheck) SedCommands() {
 	line := cv.Line
-	mkline := cv.MkLine
 
 	tokens, rest := splitIntoShellTokens(line, cv.Value)
 	if rest != "" {
-		if strings.Contains(line.Text, "#") {
+		if strings.Contains(line.Text(), "#") {
 			line.Errorf("Invalid shell words %q in sed commands.", rest)
 			Explain(
 				"When sed commands have embedded \"#\" characters, they need to be",
@@ -858,7 +884,7 @@ func (cv *VartypeCheck) SedCommands() {
 						"",
 						"This way, short sed commands cannot be hidden at the end of a line.")
 				}
-				mkline.CheckVartypePrimitive(cv.Varname, BtSedCommand, cv.Op, tokens[i], cv.MkComment, cv.Guessed)
+				MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtSedCommand, cv.Op, tokens[i], cv.MkComment, cv.Guessed)
 			} else {
 				line.Errorf("The -e option to sed requires an argument.")
 			}
@@ -1002,7 +1028,7 @@ func (cv *VartypeCheck) WrapperTransform() {
 }
 
 func (cv *VartypeCheck) WrkdirSubdirectory() {
-	cv.MkLine.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
+	MkLineChecker{cv.MkLine}.CheckVartypePrimitive(cv.Varname, BtPathname, cv.Op, cv.Value, cv.MkComment, cv.Guessed)
 }
 
 // A directory relative to ${WRKSRC}, for use in CONFIGURE_DIRS and similar variables.
