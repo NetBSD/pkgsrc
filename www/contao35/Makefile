@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/12/30 04:46:19 taca Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/17 16:23:08 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -26,7 +26,7 @@ DEPENDS+=	bash>=4.0:../../shells/bash
 # mcrypt is deprecated and removed in PHP 7.1.x
 PHP_VERSIONS_ACCEPTED=	56 70
 
-CT_VERSION=	3.5.21
+CT_VERSION=	3.5.23
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 FILESDIR?=	${.CURDIR}/files
