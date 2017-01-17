@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.85 2016/11/13 11:06:40 jdolecek Exp $
+# $NetBSD: Darwin.mk,v 1.86 2017/01/17 15:32:17 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -81,11 +81,13 @@ _OPSYS_EMULDIR.darwin=	# empty
 _OPSYS_SYSTEM_RPATH?=	/usr/lib
 _OPSYS_LIB_DIRS?=	/usr/lib
 
+.if !defined(OSX_VERSION)
 OSX_VERSION!=		sw_vers -productVersion
 .  if ${OSX_VERSION:R:R} != ${OSX_VERSION:R}
 OSX_VERSION:=		${OSX_VERSION:R}
 .  endif
 MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
+.endif
 
 #
 # From Xcode 5 onwards system headers are no longer installed by default
@@ -97,10 +99,12 @@ MAKEFLAGS+=		OSX_VERSION=${OSX_VERSION:Q}
 .if exists(/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 .elif exists(/usr/bin/xcrun)
+.  if !defined(OSX_SDK_PATH)
 OSX_SDK_PATH!=	/usr/bin/xcrun --sdk macosx${OSX_VERSION} --show-sdk-path 2>/dev/null || echo /nonexistent
+MAKEFLAGS+=	OSX_SDK_PATH=${OSX_SDK_PATH:Q}
+.  endif
 .  if exists(${OSX_SDK_PATH}/usr/include/stdio.h)
 _OPSYS_INCLUDE_DIRS?=	${OSX_SDK_PATH}/usr/include
-MAKEFLAGS+=		OSX_SDK_PATH=${OSX_SDK_PATH:Q}
 .  else
 PKG_FAIL_REASON+=	"No suitable Xcode SDK or Command Line Tools installed."
 .  endif
