@@ -2,6 +2,8 @@ package main
 
 import (
 	"io/ioutil"
+	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/trace"
 	"path"
 	"sort"
 	"strings"
@@ -26,7 +28,7 @@ type GlobalData struct {
 
 // Change is a change entry from the `doc/CHANGES-*` files.
 type Change struct {
-	Line    *Line
+	Line    Line
 	Action  string
 	Pkgpath string
 	Version string
@@ -36,7 +38,7 @@ type Change struct {
 
 // SuggestedUpdate is from the `doc/TODO` file.
 type SuggestedUpdate struct {
-	Line    *Line
+	Line    Line
 	Pkgname string
 	Version string
 	Comment string
@@ -64,7 +66,7 @@ func (gd *GlobalData) Initialize() {
 	gd.loadDeprecatedVars()
 }
 
-func (gd *GlobalData) Latest(category string, re RegexPattern, repl string) string {
+func (gd *GlobalData) Latest(category string, re regex.RegexPattern, repl string) string {
 	key := category + "/" + string(re) + " => " + repl
 	if latest, found := gd.latest[key]; found {
 		return latest
@@ -88,7 +90,7 @@ func (gd *GlobalData) Latest(category string, re RegexPattern, repl string) stri
 	latest := ""
 	for _, fileInfo := range all {
 		if matches(fileInfo.Name(), re) {
-			latest = regcomp(re).ReplaceAllString(fileInfo.Name(), repl)
+			latest = regex.Compile(re).ReplaceAllString(fileInfo.Name(), repl)
 		}
 	}
 	if latest == "" {
@@ -106,7 +108,7 @@ func (gd *GlobalData) loadDistSites() {
 	name2url := make(map[string]string)
 	url2name := make(map[string]string)
 	for _, line := range lines {
-		if m, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text); m {
+		if m, varname, _, _, _, urls, _, _ := MatchVarassign(line.Text()); m {
 			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				for _, url := range splitOnSpace(urls) {
 					if matches(url, `^(?:http://|https://|ftp://)`) {
@@ -123,8 +125,8 @@ func (gd *GlobalData) loadDistSites() {
 	// Explicitly allowed, although not defined in mk/fetch/sites.mk.
 	name2url["MASTER_SITE_LOCAL"] = "ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/LOCAL_PORTS/"
 
-	if G.opts.Debug {
-		traceStep("Loaded %d MASTER_SITE_* URLs.", len(url2name))
+	if trace.Tracing {
+		trace.Stepf("Loaded %d MASTER_SITE_* URLs.", len(url2name))
 	}
 	gd.MasterSiteURLToVar = url2name
 	gd.MasterSiteVarToURL = name2url
@@ -136,7 +138,7 @@ func (gd *GlobalData) loadPkgOptions() {
 
 	gd.PkgOptions = make(map[string]string)
 	for _, line := range lines {
-		if m, optname, optdescr := match2(line.Text, `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
+		if m, optname, optdescr := match2(line.Text(), `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
 			gd.PkgOptions[optname] = optdescr
 		} else {
 			line.Fatalf("Unknown line format.")
@@ -150,7 +152,7 @@ func (gd *GlobalData) loadTools() {
 		fname := G.globalData.Pkgsrcdir + "/mk/tools/bsd.tools.mk"
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			if m, _, _, includefile := MatchMkInclude(line.Text); m {
+			if m, _, _, includefile := MatchMkInclude(line.Text()); m {
 				if !contains(includefile, "/") {
 					toolFiles = append(toolFiles, includefile)
 				}
@@ -178,23 +180,23 @@ func (gd *GlobalData) loadTools() {
 		}
 	}
 
-	for _, basename := range []string{"bsd.prefs.mk", "bsd.pkg.mk"} {
+	for _, basename := range [...]string{"bsd.prefs.mk", "bsd.pkg.mk"} {
 		fname := G.globalData.Pkgsrcdir + "/mk/" + basename
 		condDepth := 0
 
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			text := line.Text
+			text := line.Text()
 
 			if m, varname, _, _, _, value, _, _ := MatchVarassign(text); m {
 				if varname == "USE_TOOLS" {
-					if G.opts.Debug {
-						traceStep("[condDepth=%d] %s", condDepth, value)
+					if trace.Tracing {
+						trace.Stepf("[condDepth=%d] %s", condDepth, value)
 					}
 					if condDepth == 0 || condDepth == 1 && basename == "bsd.prefs.mk" {
 						for _, toolname := range splitOnSpace(value) {
 							if !containsVarRef(toolname) {
-								for _, tool := range []*Tool{reg.Register(toolname), reg.Register("TOOLS_" + toolname)} {
+								for _, tool := range [...]*Tool{reg.Register(toolname), reg.Register("TOOLS_" + toolname)} {
 									tool.Predefined = true
 									if basename == "bsd.prefs.mk" {
 										tool.UsableAtLoadtime = true
@@ -221,11 +223,11 @@ func (gd *GlobalData) loadTools() {
 		}
 	}
 
-	if G.opts.Debug {
+	if trace.Tracing {
 		reg.Trace()
 	}
-	if G.opts.Debug {
-		traceStep("systemBuildDefs: %v", systemBuildDefs)
+	if trace.Tracing {
+		trace.Stepf("systemBuildDefs: %v", systemBuildDefs)
 	}
 
 	// Some user-defined variables do not influence the binary
@@ -251,11 +253,11 @@ func loadSuggestedUpdates(fname string) []SuggestedUpdate {
 	return parselinesSuggestedUpdates(lines)
 }
 
-func parselinesSuggestedUpdates(lines []*Line) []SuggestedUpdate {
+func parselinesSuggestedUpdates(lines []Line) []SuggestedUpdate {
 	var updates []SuggestedUpdate
 	state := 0
 	for _, line := range lines {
-		text := line.Text
+		text := line.Text()
 
 		if state == 0 && text == "Suggested package updates" {
 			state = 1
@@ -292,9 +294,9 @@ func (gd *GlobalData) loadSuggestedUpdates() {
 func (gd *GlobalData) loadDocChangesFromFile(fname string) []*Change {
 	lines := LoadExistingLines(fname, false)
 
-	parseChange := func(line *Line) *Change {
-		text := line.Text
-		if !hasPrefix(line.Text, "\t") {
+	parseChange := func(line Line) *Change {
+		text := line.Text()
+		if !hasPrefix(text, "\t") {
 			return nil
 		}
 
@@ -327,8 +329,8 @@ func (gd *GlobalData) loadDocChangesFromFile(fname string) []*Change {
 	for _, line := range lines {
 		if change := parseChange(line); change != nil {
 			changes = append(changes, change)
-		} else if len(line.Text) >= 2 && line.Text[0] == '\t' && 'A' <= line.Text[1] && line.Text[1] <= 'Z' {
-			line.Warnf("Unknown doc/CHANGES line: %q", line.Text)
+		} else if text := line.Text(); len(text) >= 2 && text[0] == '\t' && 'A' <= text[1] && text[1] <= 'Z' {
+			line.Warnf("Unknown doc/CHANGES line: %q", text)
 			Explain("See mk/misc/developer.mk for the rules.")
 		}
 	}
@@ -586,8 +588,8 @@ func (tr *ToolRegistry) RegisterTool(tool *Tool) {
 }
 
 func (tr *ToolRegistry) Trace() {
-	if G.opts.Debug {
-		defer tracecall0()()
+	if trace.Tracing {
+		defer trace.Call0()()
 	}
 
 	var keys []string
@@ -597,12 +599,12 @@ func (tr *ToolRegistry) Trace() {
 	sort.Strings(keys)
 
 	for _, toolname := range keys {
-		traceStep("tool %+v", tr.byName[toolname])
+		trace.Stepf("tool %+v", tr.byName[toolname])
 	}
 }
 
-func (tr *ToolRegistry) ParseToolLine(line *Line) {
-	if m, varname, _, _, _, value, _, _ := MatchVarassign(line.Text); m {
+func (tr *ToolRegistry) ParseToolLine(line Line) {
+	if m, varname, _, _, _, value, _, _ := MatchVarassign(line.Text()); m {
 		if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
 			tr.Register(value)
 
