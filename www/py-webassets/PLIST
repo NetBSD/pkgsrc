@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/25 16:00:42 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/01/17 15:13:20 kleink Exp $
 bin/webassets
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -32,6 +32,9 @@ ${PYSITELIB}/webassets/filter/__init__.pyo
 ${PYSITELIB}/webassets/filter/autoprefixer.py
 ${PYSITELIB}/webassets/filter/autoprefixer.pyc
 ${PYSITELIB}/webassets/filter/autoprefixer.pyo
+${PYSITELIB}/webassets/filter/babel.py
+${PYSITELIB}/webassets/filter/babel.pyc
+${PYSITELIB}/webassets/filter/babel.pyo
 ${PYSITELIB}/webassets/filter/cleancss.py
 ${PYSITELIB}/webassets/filter/cleancss.pyc
 ${PYSITELIB}/webassets/filter/cleancss.pyo
@@ -107,9 +110,15 @@ ${PYSITELIB}/webassets/filter/less_ruby.pyo
 ${PYSITELIB}/webassets/filter/libsass.py
 ${PYSITELIB}/webassets/filter/libsass.pyc
 ${PYSITELIB}/webassets/filter/libsass.pyo
+${PYSITELIB}/webassets/filter/node_sass.py
+${PYSITELIB}/webassets/filter/node_sass.pyc
+${PYSITELIB}/webassets/filter/node_sass.pyo
 ${PYSITELIB}/webassets/filter/pyscss.py
 ${PYSITELIB}/webassets/filter/pyscss.pyc
 ${PYSITELIB}/webassets/filter/pyscss.pyo
+${PYSITELIB}/webassets/filter/replace.py
+${PYSITELIB}/webassets/filter/replace.pyc
+${PYSITELIB}/webassets/filter/replace.pyo
 ${PYSITELIB}/webassets/filter/requirejs.py
 ${PYSITELIB}/webassets/filter/requirejs.pyc
 ${PYSITELIB}/webassets/filter/requirejs.pyo
