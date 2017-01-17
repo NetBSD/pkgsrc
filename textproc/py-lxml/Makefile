@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/01/17 11:10:13 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2017/01/17 12:58:29 wiz Exp $
 
 DISTNAME=	lxml-3.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 # https://bugs.launchpad.net/lxml/+bug/1522052
 # third error in 3.6.1
 # https://bugs.launchpad.net/lxml/+bug/1608479
-* two more errors since 3.7.2
+# two more errors since 3.7.2
 # https://bugs.launchpad.net/lxml/+bug/1655054
 TEST_TARGET=	test_inplace
 
