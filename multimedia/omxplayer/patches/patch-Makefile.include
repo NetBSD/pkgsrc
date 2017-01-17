@@ -1,6 +1,6 @@
-$NetBSD: patch-Makefile.include,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
+$NetBSD: patch-Makefile.include,v 1.2 2017/01/17 07:33:50 skrll Exp $
 
---- Makefile.include.orig	2015-01-12 15:10:50.000000000 +0000
+--- Makefile.include.orig	2016-10-10 15:38:42.000000000 +0000
 +++ Makefile.include
 @@ -1,40 +1,7 @@
 -USE_BUILDROOT=0
@@ -36,7 +36,7 @@ $NetBSD: patch-Makefile.include,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
 -RANLIB			:= $(TOOLCHAIN)/bin/$(HOST)-ranlib
 -STRIP				:= $(TOOLCHAIN)/bin/$(HOST)-strip
 -AR 					:= $(TOOLCHAIN)/bin/$(HOST)-ar
-+LDFLAGS			:= -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib/ffmpeg2 -L$(LOCALBASE)/lib/ffmpeg2 -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
++LDFLAGS			:= -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib/ffmpeg3 -L$(LOCALBASE)/lib/ffmpeg3 -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib
  CXXCP 			:= $(CXX) -E
 -PATH 				:= $(PREFIX)/bin:$(BUILDROOT)/output/host/usr/bin:$(PATH)
 +STRIP			:= strip
@@ -46,4 +46,4 @@ $NetBSD: patch-Makefile.include,v 1.1 2015/01/18 23:09:25 jmcneill Exp $
 -LDFLAGS			+= -L$(SDKSTAGE)/lib -L$(SDKSTAGE)/usr/lib -L$(SDKSTAGE)/opt/vc/lib/ -Lpcre/build
 -#INCLUDES		+= -isystem$(SDKSTAGE)/usr/include -isystem$(SDKSTAGE)/opt/vc/include -isystem$(SYSROOT)/usr/include -isystem$(SDKSTAGE)/opt/vc/include/interface/vcos/pthreads -isystem$(SDKSTAGE)/usr/include/freetype2
 -INCLUDES		+= -isystem$(SDKSTAGE)/opt/vc/include -isystem$(SYSROOT)/usr/include -isystem$(SDKSTAGE)/opt/vc/include/interface/vcos/pthreads -Ipcre/build -Iboost-trunk -Ifreetype2/include
-+INCLUDES		+= -I$(LOCALBASE)/include -I$(LOCALBASE)/include/interface/vcos/pthreads -I$(LOCALBASE)/include/interface/vmcs_host/linux
++INCLUDES		+= -I$(LOCALBASE)/include -I$(LOCALBASE)/include/interface/vcos/pthreads -I$(LOCALBASE)/include/interface/vmcs_host/linux -I$(LOCALBASE)/include/dbus-1.0 -I$(LOCALBASE)/lib/dbus-1.0/include
