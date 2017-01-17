@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.279 2017/01/17 07:35:53 skrll Exp $
+$NetBSD: CHANGES-2017,v 1.280 2017/01/17 12:32:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -320,3 +320,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/user_darwin to 20170116 [schmonz 2017-01-16]
 	Updated games/quakespasm to 0.92.1 [snj 2017-01-16]
 	Updated multimedia/omxplayer to 20170112 [skrll 2017-01-17]
+	Updated mail/neomutt to 20170113 [wiz 2017-01-17]
