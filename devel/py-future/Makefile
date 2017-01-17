@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/05/08 07:22:24 wen Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/17 17:14:14 fhajny Exp $
 
-DISTNAME=	future-0.15.2
+DISTNAME=	future-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/future/}
