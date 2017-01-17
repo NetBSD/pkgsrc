@@ -4,11 +4,6 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) Test_parseLicenses(c *check.C) {
-	c.Check(parseLicenses("gnu-gpl-v2"), check.DeepEquals, &LicenseCondition{Name: "gnu-gpl-v2"})
-	c.Check(parseLicenses("AND artistic"), check.IsNil)
-}
-
 func (s *Suite) Test_checklineLicense(c *check.C) {
 	s.Init(c)
 	s.CreateTmpFile("licenses/gnu-gpl-v2", "Most software \u2026")
