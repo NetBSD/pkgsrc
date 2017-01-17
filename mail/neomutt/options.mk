@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/10/04 21:52:36 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2017/01/17 12:32:42 wiz Exp $
 
 # Global and legacy options
 
@@ -96,7 +96,6 @@ CONFIGURE_ARGS+=	--disable-smime
 .if !empty(PKG_OPTIONS:Mmutt-hcache)
 .  if !empty(PKG_OPTIONS:Mtokyocabinet)
 .  include "../../databases/tokyocabinet/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hcache
 CONFIGURE_ARGS+=	--with-tokyocabinet
 CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ARGS+=	--without-bdb
@@ -104,7 +103,7 @@ CONFIGURE_ARGS+=	--without-bdb
 BDB_ACCEPTED=		db4 db5
 BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
 .  include "../../mk/bdb.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hcache
+CONFIGURE_ARGS+=	--with-bdb
 CONFIGURE_ARGS+=	--without-gdbm
 # BDB_INCLUDE_DIR_ and BDB_LIB_DIR don't have to be particularly accurate
 # since the real -I and -L flags are added by buildlink already.
