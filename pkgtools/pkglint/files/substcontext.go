@@ -96,7 +96,7 @@ func (ctx *SubstContext) Finish(mkline *MkLine) {
 		mkline.Warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_FILES"))
 	}
 	if len(ctx.sed) == 0 && len(ctx.vars) == 0 && ctx.filterCmd == "" {
-		mkline.Line.Warnf("Incomplete SUBST block: %s, %s or %s missing.",
+		mkline.Warnf("Incomplete SUBST block: %s, %s or %s missing.",
 			ctx.varname("SUBST_SED"), ctx.varname("SUBST_VARS"), ctx.varname("SUBST_FILTER_CMD"))
 	}
 	ctx.id = ""

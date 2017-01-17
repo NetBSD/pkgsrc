@@ -11,6 +11,8 @@ import (
 	"testing"
 
 	check "gopkg.in/check.v1"
+	"netbsd.org/pkglint/textproc"
+	"netbsd.org/pkglint/trace"
 )
 
 var equals = check.Equals
@@ -79,8 +81,8 @@ func (s *Suite) NewRawLines(args ...interface{}) []*RawLine {
 	return rawlines[:j]
 }
 
-func (s *Suite) NewLines(fname string, texts ...string) []*Line {
-	result := make([]*Line, len(texts))
+func (s *Suite) NewLines(fname string, texts ...string) []Line {
+	result := make([]Line, len(texts))
 	for i, text := range texts {
 		textnl := text + "\n"
 		result[i] = NewLine(fname, i+1, text, s.NewRawLines(i+1, textnl))
@@ -93,15 +95,15 @@ func (s *Suite) NewMkLines(fname string, lines ...string) *MkLines {
 }
 
 func (s *Suite) BeginDebugToStdout() {
-	G.debugOut = os.Stdout
 	G.logOut = os.Stdout
-	G.opts.Debug = true
+	trace.Out = os.Stdout
+	trace.Tracing = true
 }
 
 func (s *Suite) EndDebugToStdout() {
-	G.debugOut = &s.stdout
 	G.logOut = &s.stdout
-	G.opts.Debug = false
+	trace.Out = &s.stdout
+	trace.Tracing = false
 }
 
 func (s *Suite) UseCommandLine(args ...string) {
@@ -185,7 +187,8 @@ func (s *Suite) ExpectFatalError(action func()) {
 
 func (s *Suite) SetUpTest(c *check.C) {
 	G = GlobalVars{Testing: true}
-	G.logOut, G.logErr, G.debugOut = &s.stdout, &s.stderr, &s.stdout
+	textproc.Testing = true
+	G.logOut, G.logErr, trace.Out = &s.stdout, &s.stderr, &s.stdout
 	s.checkC = c
 	s.UseCommandLine( /* no arguments */ )
 	s.checkC = nil
@@ -194,6 +197,7 @@ func (s *Suite) SetUpTest(c *check.C) {
 
 func (s *Suite) TearDownTest(c *check.C) {
 	G = GlobalVars{}
+	textproc.Testing = false
 	if out := s.Output(); out != "" {
 		fmt.Fprintf(os.Stderr, "Unchecked output in %q; check with: c.Check(s.Output(), equals, %q)", c.TestName(), out)
 	}
