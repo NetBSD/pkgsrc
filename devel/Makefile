@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2347 2017/01/09 15:53:14 taca Exp $
+# $NetBSD: Makefile,v 1.2348 2017/01/17 19:42:36 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -877,6 +877,7 @@ SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-GitLike
 SUBDIR+=	p5-Config-Grammar
 SUBDIR+=	p5-Config-INI
+SUBDIR+=	p5-Config-INI-Reader-Ordered
 SUBDIR+=	p5-Config-IniFiles
 SUBDIR+=	p5-Config-MVP
 SUBDIR+=	p5-Config-MVP-Reader-INI
