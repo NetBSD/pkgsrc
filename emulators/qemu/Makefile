@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.162 2017/01/08 02:26:47 kamil Exp $
+# $NetBSD: Makefile,v 1.163 2017/01/17 09:10:11 roy Exp $
 
 DISTNAME=	qemu-2.8.0
 PKGREVISION=	1
@@ -17,6 +17,7 @@ NOT_FOR_PLATFORM+=	NetBSD-1.[0-6]*-*
 NOT_FOR_PLATFORM+=	NetBSD-5*-*
 
 USE_TOOLS+=		bison gmake makeinfo perl:build pkg-config
+USE_CURSES=		resize_term wide
 FAKE_NCURSES=		yes
 UNLIMIT_RESOURCES=	datasize
 HAS_CONFIGURE=		yes
