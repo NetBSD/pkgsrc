@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/17 19:43:56 schmonz Exp $
+
+SHA1 (Reply-0.42.tar.gz) = 80de428a3913ee7bf5dd7f69b44ed1d9bd6b9b3c
+RMD160 (Reply-0.42.tar.gz) = 039c8871bf82c389cb50209d11a8f4a3fa2fb614
+SHA512 (Reply-0.42.tar.gz) = d60a584b3cf676be97bbe199d965a488d6a869b1f6cd55d6b405da3f9c717cf63b4380408a72e6f1e06d3d32a90aa5633889a907d94da147e35804b9d0387662
+Size (Reply-0.42.tar.gz) = 28721 bytes
