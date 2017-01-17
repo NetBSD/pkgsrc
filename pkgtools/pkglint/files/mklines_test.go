@@ -49,10 +49,10 @@ func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: Makefile:3: Unusual target \"echo\".\n")
 }
 
-func (s *Suite) Test_MkLine_checklineInclude_Makefile(c *check.C) {
+func (s *Suite) Test_MkLineChecker_checkInclude__Makefile(c *check.C) {
 	mkline := NewMkLine(NewLine("Makefile", 2, ".include \"../../other/package/Makefile\"", nil))
 
-	mkline.checkInclude()
+	MkLineChecker{mkline}.checkInclude()
 
 	c.Check(s.Output(), equals, ""+
 		"ERROR: Makefile:2: \"/other/package/Makefile\" does not exist.\n"+

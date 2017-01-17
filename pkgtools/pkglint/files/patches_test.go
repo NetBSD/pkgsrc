@@ -106,7 +106,7 @@ func (s *Suite) Test_ChecklinesPatch__git_without_comment(c *check.C) {
 func (s *Suite) Test_checklineOtherAbsolutePathname(c *check.C) {
 	line := NewLine("patch-ag", 1, "+$install -s -c ./bin/rosegarden ${DESTDIR}$BINDIR", nil)
 
-	checklineOtherAbsolutePathname(line, line.Text)
+	checklineOtherAbsolutePathname(line, line.Text())
 
 	c.Check(s.Output(), equals, "")
 }
