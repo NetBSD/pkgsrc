@@ -1,13 +1,15 @@
 package main
 
+import "netbsd.org/pkglint/trace"
+
 type Toplevel struct {
 	previousSubdir string
 	subdirs        []string
 }
 
 func CheckdirToplevel() {
-	if G.opts.Debug {
-		defer tracecall1(G.CurrentDir)()
+	if trace.Tracing {
+		defer trace.Call1(G.CurrentDir)()
 	}
 
 	ctx := new(Toplevel)
@@ -19,7 +21,7 @@ func CheckdirToplevel() {
 	}
 
 	for _, line := range lines {
-		if m, commentedOut, indentation, subdir, comment := match4(line.Text, `^(#?)SUBDIR\s*\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
+		if m, commentedOut, indentation, subdir, comment := match4(line.Text(), `^(#?)SUBDIR\s*\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
 			ctx.checkSubdir(line, commentedOut == "#", indentation, subdir, comment)
 		}
 	}
@@ -35,7 +37,7 @@ func CheckdirToplevel() {
 	}
 }
 
-func (ctx *Toplevel) checkSubdir(line *Line, commentedOut bool, indentation, subdir, comment string) {
+func (ctx *Toplevel) checkSubdir(line Line, commentedOut bool, indentation, subdir, comment string) {
 	if commentedOut && comment == "" {
 		line.Warnf("%q commented out without giving a reason.", subdir)
 	}

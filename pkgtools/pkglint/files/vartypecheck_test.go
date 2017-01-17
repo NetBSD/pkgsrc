@@ -85,13 +85,16 @@ func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
 	runVartypeChecks("CONF_FILES", opAssignAppend, (*VartypeCheck).ConfFiles,
 		"single/file",
-		"share/etc/config etc/config",
-		"share/etc/config etc/config file",
-		"share/etc/config etc/config share/etc/config2 etc/config2")
+		"share/etc/config ${PKG_SYSCONFDIR}/etc/config",
+		"share/etc/config ${PKG_SYSCONFBASE}/etc/config file",
+		"share/etc/config ${PREFIX}/etc/config share/etc/config2 ${VARBASE}/config2",
+		"share/etc/bootrc /etc/bootrc")
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: Values for CONF_FILES should always be pairs of paths.\n"+
-		"WARN: fname:3: Values for CONF_FILES should always be pairs of paths.\n")
+		"WARN: fname:3: Values for CONF_FILES should always be pairs of paths.\n"+
+		"WARN: fname:5: Found absolute pathname: /etc/bootrc\n"+
+		"WARN: fname:5: The destination file \"/etc/bootrc\" should start with a variable reference.\n")
 }
 
 func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {

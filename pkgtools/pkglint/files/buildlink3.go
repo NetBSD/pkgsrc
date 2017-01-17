@@ -2,12 +2,13 @@ package main
 
 import (
 	"netbsd.org/pkglint/pkgver"
+	"netbsd.org/pkglint/trace"
 	"strings"
 )
 
 func ChecklinesBuildlink3Mk(mklines *MkLines) {
-	if G.opts.Debug {
-		defer tracecall1(mklines.lines[0].Fname)()
+	if trace.Tracing {
+		defer trace.Call1(mklines.lines[0].Filename())()
 	}
 
 	mklines.Check()
@@ -17,7 +18,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	for exp.AdvanceIfPrefix("#") {
 		line := exp.PreviousLine()
 		// See pkgtools/createbuildlink/files/createbuildlink
-		if hasPrefix(line.Text, "# XXX This file was created automatically") {
+		if hasPrefix(line.Text(), "# XXX This file was created automatically") {
 			line.Errorf("This comment indicates unfinished work (url2pkg).")
 		}
 	}
@@ -31,7 +32,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	}
 
 	pkgbaseLine, pkgbase := exp.CurrentLine(), ""
-	var abiLine, apiLine *Line
+	var abiLine, apiLine Line
 	var abi, api *DependencyPattern
 
 	// First paragraph: Introduction of the package identifier
@@ -42,7 +43,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	pkgbase = exp.m[1]
 	if containsVarRef(pkgbase) {
 		warned := false
-		for _, pair := range []struct{ varuse, simple string }{
+		for _, pair := range [...]struct{ varuse, simple string }{
 			{"${PYPKGPREFIX}", "py"},
 			{"${RUBY_BASE}", "ruby"},
 			{"${RUBY_PKGPREFIX}", "ruby"},
@@ -133,16 +134,16 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 				}
 				doCheck = true
 			}
-			if doCheck && abi != nil && api != nil && abi.pkgbase != api.pkgbase && !hasPrefix(api.pkgbase, "{") {
+			if doCheck && abi != nil && api != nil && abi.Pkgbase != api.Pkgbase && !hasPrefix(api.Pkgbase, "{") {
 				abiLine.Warnf("Package name mismatch between ABI %q and API %q (from %s).",
-					abi.pkgbase, api.pkgbase, apiLine.ReferenceFrom(abiLine))
+					abi.Pkgbase, api.Pkgbase, apiLine.ReferenceFrom(abiLine))
 			}
 			if doCheck {
-				if abi != nil && abi.lower != "" && !containsVarRef(abi.lower) {
-					if api != nil && api.lower != "" && !containsVarRef(api.lower) {
-						if pkgver.Compare(abi.lower, api.lower) < 0 {
+				if abi != nil && abi.Lower != "" && !containsVarRef(abi.Lower) {
+					if api != nil && api.Lower != "" && !containsVarRef(api.Lower) {
+						if pkgver.Compare(abi.Lower, api.Lower) < 0 {
 							abiLine.Warnf("ABI version %q should be at least API version %q (see %s).",
-								abi.lower, api.lower, apiLine.ReferenceFrom(abiLine))
+								abi.Lower, api.Lower, apiLine.ReferenceFrom(abiLine))
 						}
 					}
 				}
@@ -175,8 +176,8 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			}
 
 		} else {
-			if G.opts.Debug {
-				traceStep1("Unchecked line %s in third paragraph.", exp.CurrentLine().linenos())
+			if trace.Tracing {
+				trace.Step1("Unchecked line %s in third paragraph.", exp.CurrentLine().Linenos())
 			}
 			exp.Advance()
 		}

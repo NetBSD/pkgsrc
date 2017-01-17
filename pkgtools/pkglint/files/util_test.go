@@ -2,6 +2,8 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
+	"netbsd.org/pkglint/regex"
+	"netbsd.org/pkglint/textproc"
 	"testing"
 )
 
@@ -33,7 +35,7 @@ func (s *Suite) Test_MkopSubst__gflag(c *check.C) {
 }
 
 func (s *Suite) Test_replaceFirst(c *check.C) {
-	m, rest := replaceFirst("a+b+c+d", `(\w)(.)(\w)`, "X")
+	m, rest := regex.ReplaceFirst("a+b+c+d", `(\w)(.)(\w)`, "X")
 
 	c.Assert(m, check.NotNil)
 	c.Check(m, check.DeepEquals, []string{"a+b", "a", "+", "b"})
@@ -83,7 +85,7 @@ func (s *Suite) Test_isEmptyDir_and_getSubdirs(c *check.C) {
 }
 
 func (s *Suite) Test_PrefixReplacer_Since(c *check.C) {
-	repl := NewPrefixReplacer("hello, world")
+	repl := textproc.NewPrefixReplacer("hello, world")
 	mark := repl.Mark()
 	repl.AdvanceRegexp(`^\w+`)
 	c.Check(repl.Since(mark), equals, "hello")

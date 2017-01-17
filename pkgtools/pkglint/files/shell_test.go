@@ -2,6 +2,7 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
+	"netbsd.org/pkglint/textproc"
 )
 
 func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
@@ -237,9 +238,6 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 		"\techo ${PKGNAME:Q}")
 	shline := NewShellLine(G.Mk.mklines[0])
 
-	c.Check(shline.line.raw[0].textnl, equals, "\techo ${PKGNAME:Q}\n")
-	c.Check(shline.line.raw[0].Lineno, equals, 1)
-
 	shline.CheckShellCommandLine("echo ${PKGNAME:Q}")
 
 	c.Check(s.Output(), equals, ""+
@@ -375,7 +373,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 		"# dummy")
 	mkline := NewMkLine(NewLine("fname", 3, "# dummy", nil))
 
-	mkline.checkText("echo \"hello, world\"")
+	MkLineChecker{mkline}.checkText("echo \"hello, world\"")
 
 	c.Check(s.Output(), equals, "")
 
@@ -510,11 +508,11 @@ func (s *Suite) Test_ShellLine_unescapeBackticks(c *check.C) {
 	shline := NewShellLine(NewMkLine(dummyLine))
 	// foobar="`echo \"foo   bar\"`"
 	text := "foobar=\"`echo \\\"foo   bar\\\"`\""
-	repl := NewPrefixReplacer(text)
+	repl := textproc.NewPrefixReplacer(text)
 	repl.AdvanceStr("foobar=\"`")
 
 	backtCommand, newQuoting := shline.unescapeBackticks(text, repl, shqDquotBackt)
 	c.Check(backtCommand, equals, "echo \"foo   bar\"")
 	c.Check(newQuoting, equals, shqDquot)
-	c.Check(repl.rest, equals, "\"")
+	c.Check(repl.Rest(), equals, "\"")
 }

@@ -70,7 +70,7 @@ func (s *Suite) Test_show_autofix(c *check.C) {
 	}
 	SaveAutofixChanges(lines)
 
-	c.Check(lines[1].raw[0].textnl, equals, "XXXXX\n")
+	c.Check(lines[1].(*LineImpl).raw[0].textnl, equals, "XXXXX\n")
 	c.Check(s.LoadTmpFile("Makefile"), equals, "line1\nline2\nline3\n")
 	c.Check(s.Output(), equals, ""+
 		"WARN: ~/Makefile:2: Something's wrong here.\n"+
