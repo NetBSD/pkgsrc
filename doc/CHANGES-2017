@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.288 2017/01/17 19:42:55 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.289 2017/01/17 19:44:32 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -331,3 +331,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/elasticsearch to 5.1.2 [fhajny 2017-01-17]
 	Updated sysutils/beats to 5.1.2 [fhajny 2017-01-17]
 	Added devel/p5-Config-INI-Reader-Ordered version 0.020 [schmonz 2017-01-17]
+	Added devel/p5-Reply version 0.42 [schmonz 2017-01-17]
