@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.12 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: MirBSD.mk,v 1.13 2017/01/17 22:57:39 wiz Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -38,7 +38,6 @@ _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	no	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.5.22nb5
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF	# shared lib type
