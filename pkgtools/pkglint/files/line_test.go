@@ -8,7 +8,7 @@ func (s *Suite) Test_Line_modifications(c *check.C) {
 	s.Init(c)
 	s.UseCommandLine("--show-autofix")
 
-	line := NewLine("fname", 1, "dummy", s.NewRawLines(1, "original\n"))
+	line := NewLine("fname", 1, "dummy", s.NewRawLines(1, "original\n")).(*LineImpl)
 
 	c.Check(line.changed, equals, false)
 	c.Check(line.raw, check.DeepEquals, s.NewRawLines(1, "original\n"))
@@ -52,15 +52,6 @@ func (s *Suite) Test_Line_modifications(c *check.C) {
 		"",
 		"between middle and after\n",
 		"after\n"})
-}
-
-func (s *Suite) Test_Line_CheckAbsolutePathname(c *check.C) {
-	line := NewLine("Makefile", 1, "# dummy", nil)
-
-	line.CheckAbsolutePathname("bindir=/bin")
-	line.CheckAbsolutePathname("bindir=/../lib")
-
-	c.Check(s.Output(), equals, "WARN: Makefile:1: Found absolute pathname: /bin\n")
 }
 
 func (s *Suite) Test_Line_show_autofix_AutofixReplace(c *check.C) {
@@ -116,30 +107,4 @@ func (s *Suite) Test_Line_show_autofix_AutofixDelete(c *check.C) {
 		"- to be deleted\n"+
 		"WARN: Makefile:30: Dummy\n"+
 		"AUTOFIX: Makefile:30: Deleting this line.\n")
-}
-
-func (s *Suite) Test_Line_CheckTrailingWhitespace(c *check.C) {
-	line := NewLine("Makefile", 32, "The line must go on   ", nil)
-
-	line.CheckTrailingWhitespace()
-
-	c.Check(s.Output(), equals, "NOTE: Makefile:32: Trailing white-space.\n")
-}
-
-func (s *Suite) Test_Line_CheckRcsid(c *check.C) {
-	lines := s.NewLines("fname",
-		"$"+"NetBSD: dummy $",
-		"$"+"NetBSD$",
-		"$"+"Id: dummy $",
-		"$"+"Id$",
-		"$"+"FreeBSD$")
-
-	for _, line := range lines {
-		line.CheckRcsid(``, "")
-	}
-
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:3: Expected \"$"+"NetBSD$\".\n"+
-		"ERROR: fname:4: Expected \"$"+"NetBSD$\".\n"+
-		"ERROR: fname:5: Expected \"$"+"NetBSD$\".\n")
 }
