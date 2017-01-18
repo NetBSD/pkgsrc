@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/04 12:03:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/01/18 09:52:13 wiz Exp $
 bin/abcde
-@comment bin/abcde-musicbrainz-tool
+bin/abcde-musicbrainz-tool
 bin/cddb-tool
 man/man1/abcde.1
 man/man1/cddb-tool.1
