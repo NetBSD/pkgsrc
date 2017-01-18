@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/11/16 22:12:12 wiz Exp $
+$NetBSD: distinfo,v 1.10 2017/01/18 20:17:32 wiz Exp $
 
-SHA1 (xf86-video-glint-1.2.8.tar.bz2) = 40f817c3aaac1b04bff28f4552bc4b4fe522013b
-RMD160 (xf86-video-glint-1.2.8.tar.bz2) = f1692d995cec5cb2f2a57471a5e2256f82d3467d
-SHA512 (xf86-video-glint-1.2.8.tar.bz2) = ea8c566877a8ef6d7c08bec317da62f41ffa080ca76f06587a2bbb2a976966ca4138fae60ede757cf470222912c915f4361aa90513901c370eae335818f33468
-Size (xf86-video-glint-1.2.8.tar.bz2) = 395371 bytes
-SHA1 (patch-src_compat-api.h) = 41208bc3e931da61a966b48aa6c54ac24c3a8737
-SHA1 (patch-src_glint__driver.c) = 831fdbaabaaf91e83669c4a9a1b0d6242efe20c6
+SHA1 (xf86-video-glint-1.2.9.tar.bz2) = 93b56f77d5d57f7b8746f58a5098a05ca9825b1d
+RMD160 (xf86-video-glint-1.2.9.tar.bz2) = 57a7e65babf625babd26e7a585aead47f8c8ce59
+SHA512 (xf86-video-glint-1.2.9.tar.bz2) = 29b573abc2c77992562ab72ea99dfac5fa4baee99404747c53494680fe750b9c096833cd6c8013aa85f7fb5db5bdbee2a9b26dff633a6a4fe2dc8cd9f0adff12
+Size (xf86-video-glint-1.2.9.tar.bz2) = 419524 bytes
