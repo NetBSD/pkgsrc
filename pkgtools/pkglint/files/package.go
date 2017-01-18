@@ -616,7 +616,7 @@ func (pkg *Package) ChecklinesPackageMakefileVarorder(mklines *MkLines) {
 				{"PKGNAME", optional},
 				{"PKGREVISION", optional},
 				{"CATEGORIES", once},
-				{"MASTER_SITES", optional},
+				{"MASTER_SITES", many},
 				{"DIST_SUBDIR", optional},
 				{"EXTRACT_SUFX", optional},
 				{"DISTFILES", many},
