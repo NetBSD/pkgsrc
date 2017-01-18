@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.296 2017/01/18 12:09:22 wen Exp $
+$NetBSD: CHANGES-2017,v 1.297 2017/01/18 12:26:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -339,3 +339,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Mojolicious to 7.20 [wen 2017-01-18]
 	Updated devel/p5-Modern-Perl to 1.20170117 [wen 2017-01-18]
 	Updated devel/p5-Mouse to 2.4.7 [wen 2017-01-18]
+	Updated mail/p5-Email-Simple to 2.213 [wen 2017-01-18]
