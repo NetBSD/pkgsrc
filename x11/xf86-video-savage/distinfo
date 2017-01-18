@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/11/16 21:59:38 wiz Exp $
+$NetBSD: distinfo,v 1.12 2017/01/18 20:19:57 wiz Exp $
 
-SHA1 (xf86-video-savage-2.3.8.tar.bz2) = cc2150f4195ccf82c80e272f9924f41a56e5f4f6
-RMD160 (xf86-video-savage-2.3.8.tar.bz2) = 6f467dd1621c937be4ca5b4f2e05e2d83c303629
-SHA512 (xf86-video-savage-2.3.8.tar.bz2) = c0a8eb58bde2d3f28dbf4f1e2a6e6e8eb019d3e61cf40bab56a586d614cf3d2a09c0ac43962ae25becfa9489f0ba36a4dd1010b6f181ffe77d10fe0bb10f3127
-Size (xf86-video-savage-2.3.8.tar.bz2) = 418649 bytes
-SHA1 (patch-src_compat-api.h) = 9df8f857f2c9a2ef8c49d01dbb317eb896539c92
+SHA1 (xf86-video-savage-2.3.9.tar.bz2) = 5896fc5560c4b7242a5d3df2e6840f09f4995a4c
+RMD160 (xf86-video-savage-2.3.9.tar.bz2) = 03c5d5476195dd5a32ff70c8886400d7941cbd1b
+SHA512 (xf86-video-savage-2.3.9.tar.bz2) = 35fe52651fe5799bbbc6e7b3608a655102547e8f8f2189288d3f5b477f819bfc56a9a8eef39813ca455e56076e4f7c36304480c3ccddbac6c794672828cf705a
+Size (xf86-video-savage-2.3.9.tar.bz2) = 433686 bytes
