@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16929 2017/01/17 16:21:18 taca Exp $
+$NetBSD: TODO,v 1.16930 2017/01/18 20:40:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -688,6 +688,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freewais-sf-2.2.14
 	o frink-2.3.1a2
 	o frotz-2.44
+	o fs-uae-2.8.2 [pkg/51895]
 	o ftplibpp-2.0.2
 	o fuse-archivemount-0.8.7
 	o fuse-emulator-1.2.0
@@ -788,7 +789,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gossip-0.31
 	o gource-0.43
 	o gourmet-0.13.3
-	o gperiodic-3.0.0
+	o gperiodic-3.0.2
 	o gps-6.1.1
 	o gpsd-3.16
 	o gpsdrive-2.11
