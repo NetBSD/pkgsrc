@@ -1,6 +1,7 @@
-$NetBSD: patch-abcde-musicbrainz-tool,v 1.1 2017/01/18 09:52:13 wiz Exp $
+$NetBSD: patch-abcde-musicbrainz-tool,v 1.2 2017/01/18 10:48:18 wiz Exp $
 
 Fix undefined variable problem.
+https://abcde.einval.com/bugzilla/show_bug.cgi?id=52
 
 --- abcde-musicbrainz-tool.orig	2017-01-14 00:53:48.000000000 +0000
 +++ abcde-musicbrainz-tool
