@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.74 2017/01/01 14:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2017/01/18 13:52:44 manu Exp $
 
-DISTNAME=	glusterfs-3.8.5
+DISTNAME=	glusterfs-3.8.8
 #PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -22,7 +21,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # only 2.x supported as of 3.6.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36  # only 2.x supported as of 3.8.8
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	extras/ganesha/scripts/generate-epoch.py
