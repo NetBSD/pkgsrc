@@ -1,0 +1,20 @@
+$NetBSD: patch-abcde-musicbrainz-tool,v 1.1 2017/01/18 09:52:13 wiz Exp $
+
+Fix undefined variable problem.
+
+--- abcde-musicbrainz-tool.orig	2017-01-14 00:53:48.000000000 +0000
++++ abcde-musicbrainz-tool
+@@ -92,12 +92,12 @@ if ($command =~ m/^id/) {
+     foreach my $release (@releases) {
+         my $a_artist = $release->artist()->name();
+         my $va = 0;
++        my $rel_year = "";
+         if ($a_artist =~ /Various Artists/) {
+             $va = 1;
+         }
+ 	if ($release->release_event_list()->count() > 0) {
+ 	    my @events = @{$release->release_event_list()->events()};
+-	    my $rel_year = "";
+ 	    $rel_year =  substr($events[0]->date(),0,4);
+ 	}
+ 
