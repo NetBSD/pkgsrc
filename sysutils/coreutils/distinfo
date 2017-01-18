@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.33 2016/01/31 09:20:50 ryoon Exp $
+$NetBSD: distinfo,v 1.34 2017/01/18 21:10:42 wiz Exp $
 
-SHA1 (coreutils-8.25.tar.xz) = 301f186c24afb882a3ca73d19a102a2ce6f456c3
-RMD160 (coreutils-8.25.tar.xz) = 9a957473c66db3b12b55cb92275a32be670d8a8f
-SHA512 (coreutils-8.25.tar.xz) = 571f95d44987d373081ed4c6ac82155ad3dcd95621d7b1a7163597e80ecbbafef2cd74b2ef594587a443a1a4355083879f898a286bb0230c48112d43d076ccd6
-Size (coreutils-8.25.tar.xz) = 5725008 bytes
+SHA1 (coreutils-8.26.tar.xz) = d6268b2495c52d7a0ecc6156e36e0eca16e601ea
+RMD160 (coreutils-8.26.tar.xz) = 54fb9280a4629ef300c7b9b66eee970a9d3d29ef
+SHA512 (coreutils-8.26.tar.xz) = 1ca7b32a1564855e672f64cb815f858619dd4308af1c9763959d06fab1ecd51385c4c61d987ceec7ff6baaaac699f2db10be4be7e40b2c6a6d4ffc3911180b03
+Size (coreutils-8.26.tar.xz) = 5810244 bytes
 SHA1 (patch-Makefile.in) = fce694c56777081a6a54d157dd0573945250f381
 SHA1 (patch-lib-fflush.c) = adfd2c0da90c63e082d4f6bf3938f63a6260d018
 SHA1 (patch-lib_string.in.h) = 4fcd9c511eed2bb476db0d7bb8cceba03c1da180
