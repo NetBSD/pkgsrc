@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2016/06/20 15:25:39 schnoebe Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/18 09:54:51 he Exp $
 #
 
 PKGVER=		8.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	conserver-${PKGVER}
 PKGNAME=	conserver8-${PKGVER}
 CATEGORIES=	comms
 MASTER_SITES=	http://www.conserver.com/
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.conserver.com/
 COMMENT=	Application that allows multiple users to watch serial consoles
 #LICENSE=	# modified-bsd and more (see LICENSE file)
