@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/11/16 21:51:13 wiz Exp $
+$NetBSD: distinfo,v 1.10 2017/01/18 18:23:24 wiz Exp $
 
-SHA1 (xf86-video-tdfx-1.4.6.tar.bz2) = a6c5abc7a957c7396b57d36a09f4f5e0143e4d15
-RMD160 (xf86-video-tdfx-1.4.6.tar.bz2) = f0c4441215f249691b04f4e4f214210d011db808
-SHA512 (xf86-video-tdfx-1.4.6.tar.bz2) = d47421000f7aaeabcd13700c39a0a869c2967e6e1d02526cc348155415ac62064f61bbc5416c75b7e44a55fa9124a9feabbe6008d43c41a2305c1a0c842f384c
-Size (xf86-video-tdfx-1.4.6.tar.bz2) = 368300 bytes
-SHA1 (patch-src_compat-api.h) = 5c78972b5783c93713be51f9118d52a48f91e959
+SHA1 (xf86-video-tdfx-1.4.7.tar.bz2) = 536e3136b85e44deab36be3bf24983453ac0422a
+RMD160 (xf86-video-tdfx-1.4.7.tar.bz2) = 5e62ee026850bc8e3c2faf3bd9dee2043748a08e
+SHA512 (xf86-video-tdfx-1.4.7.tar.bz2) = 573eea7a6b05ed33a963f8e2f80ac1cb14632b7fd10d8d90da16c07db432e73641ced885ee979f68e4ead8429b39506b2f231ca4ac296a0780c9f6d223c3b405
+Size (xf86-video-tdfx-1.4.7.tar.bz2) = 372249 bytes
