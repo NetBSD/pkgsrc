@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST.docs,v 1.4 2015/01/08 09:02:27 wiz Exp $
+@comment $NetBSD: PLIST.docs,v 1.5 2017/01/18 13:44:46 leot Exp $
 share/doc/${PKGNAME}/examples/img/webpage1.png
 share/doc/${PKGNAME}/examples/img/webpage2.png
+share/doc/${PKGNAME}/examples/mom/letter.pdf
+share/doc/${PKGNAME}/examples/mom/mom-pdf.pdf
+share/doc/${PKGNAME}/examples/mom/sample_docs.pdf
+share/doc/${PKGNAME}/examples/mom/typesetting.pdf
 share/doc/${PKGNAME}/examples/webpage-1.html
 share/doc/${PKGNAME}/examples/webpage-10.html
 share/doc/${PKGNAME}/examples/webpage-11.html
@@ -93,4 +97,5 @@ share/doc/${PKGNAME}/html/pic-7.html
 share/doc/${PKGNAME}/html/pic-8.html
 share/doc/${PKGNAME}/html/pic-9.html
 share/doc/${PKGNAME}/html/pic.html
+share/doc/${PKGNAME}/pdf/mom-pdf.pdf
 share/doc/${PKGNAME}/pdf/pdfmark.pdf
