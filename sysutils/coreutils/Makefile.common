@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2016/02/26 10:24:11 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.16 2017/01/18 21:10:42 wiz Exp $
+#
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
-DISTNAME=	coreutils-8.25
+DISTNAME=	coreutils-8.26
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 EXTRACT_SUFX=	.tar.xz
@@ -41,7 +42,7 @@ CONFIGURE_ENV.DragonFly+= 	gl_cv_search_pthread_join=-lpthread
 
 # Various tests rely on GCC's -O2 behaviour (e.g. -D__NO_INLINE__) and
 # without it we run into undefined symbol issues.
-.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "gcc"
+.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER:Mgcc}
 CFLAGS+=		-O2
 .endif
 
