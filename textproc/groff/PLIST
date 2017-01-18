@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/10/02 11:33:14 richard Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/01/18 13:44:46 leot Exp $
 bin/addftinfo
 bin/afmtodit
 bin/gchem
@@ -235,16 +235,12 @@ share/doc/${PKGNAME}/examples/mom/README.txt
 share/doc/${PKGNAME}/examples/mom/elvis_syntax
 share/doc/${PKGNAME}/examples/mom/elvis_syntax.new
 share/doc/${PKGNAME}/examples/mom/letter.mom
-share/doc/${PKGNAME}/examples/mom/letter.pdf
 share/doc/${PKGNAME}/examples/mom/mom-pdf.mom
-share/doc/${PKGNAME}/examples/mom/mom-pdf.pdf
 share/doc/${PKGNAME}/examples/mom/mom.vim
 share/doc/${PKGNAME}/examples/mom/penguin.pdf
 share/doc/${PKGNAME}/examples/mom/penguin.ps
 share/doc/${PKGNAME}/examples/mom/sample_docs.mom
-share/doc/${PKGNAME}/examples/mom/sample_docs.pdf
 share/doc/${PKGNAME}/examples/mom/typesetting.mom
-share/doc/${PKGNAME}/examples/mom/typesetting.pdf
 share/doc/${PKGNAME}/examples/webpage.ms
 share/doc/${PKGNAME}/examples/webpage.ps
 share/doc/${PKGNAME}/html/mom/appendices.html
@@ -276,7 +272,6 @@ share/doc/${PKGNAME}/meintro_fr.me
 share/doc/${PKGNAME}/meintro_fr.ps
 share/doc/${PKGNAME}/meref.me
 share/doc/${PKGNAME}/meref.ps
-share/doc/${PKGNAME}/pdf/mom-pdf.pdf
 share/doc/${PKGNAME}/pic.ms
 share/doc/${PKGNAME}/pic.ps
 share/groff/${PKGVERSION}/eign
