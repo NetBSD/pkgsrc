@@ -47,6 +47,23 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 		"WARN: Makefile:6: The canonical position for the required variable LICENSE is here.\n")
 }
 
+// https://mail-index.netbsd.org/tech-pkg/2017/01/18/msg017698.html
+func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder__MASTER_SITES(c *check.C) {
+	s.Init(c)
+	s.UseCommandLine("-Worder")
+	pkg := NewPackage("category/package")
+
+	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
+		mkrcsid,
+		"",
+		"PKGNAME=\tpackage-1.0",
+		"CATEGORIES=\tcategory",
+		"MASTER_SITES=\thttp://example.org/",
+		"MASTER_SITES+=\thttp://mirror.example.org/"))
+
+	c.Check(s.Output(), equals, "") // No warning that "MASTER_SITES appears too late"
+}
+
 func (s *Suite) Test_Package_getNbpart(c *check.C) {
 	pkg := NewPackage("category/pkgbase")
 	pkg.vardef["PKGREVISION"] = NewMkLine(NewLine("Makefile", 1, "PKGREVISION=14", nil))
