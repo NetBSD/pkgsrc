@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.294 2017/01/18 11:58:11 wen Exp $
+$NetBSD: CHANGES-2017,v 1.295 2017/01/18 12:02:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -337,3 +337,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/conserver8 to 8.2.1nb3 [he 2017-01-18]
 	Updated misc/calibre1 to 1.48.0nb22 [kleink 2017-01-18]
 	Updated www/p5-Mojolicious to 7.20 [wen 2017-01-18]
+	Updated devel/p5-Modern-Perl to 1.20170117 [wen 2017-01-18]
