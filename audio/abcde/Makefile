@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2017/01/16 12:27:18 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2017/01/18 09:52:13 wiz Exp $
 
 DISTNAME=	abcde-2.8
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://abcde.einval.com/download/
 
@@ -13,13 +14,15 @@ DEPENDS+=	cd-discid>=0.7:../../audio/cd-discid
 DEPENDS+=	eyeD3-[0-9]*:../../audio/eyeD3
 DEPENDS+=	id3-[0-9]*:../../audio/id3
 DEPENDS+=	cdparanoia>=3.0.9.7:../../audio/cdparanoia
+DEPENDS+=	p5-MusicBrainz-DiscID-[0-9]*:../../audio/p5-MusicBrainz-DiscID
+DEPENDS+=	p5-WebService-MusicBrainz-[0-9]*:../../net/p5-WebService-MusicBrainz
 # depend on cdrkit for icedax?
 DEPENDS+=	mkcue>=2.1:../../misc/mkcue
 
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_TOOLS+=	bash:run ftp:run gsed:run
+USE_TOOLS+=	bash:run ftp:run gsed:run perl:run
 REPLACE_BASH=	abcde cddb-tool
 REPLACE_PERL+=	abcde-musicbrainz-tool
 
@@ -50,7 +53,7 @@ SUBST_SED.gsed=		-e "s, sed , ${TOOLS_PATH.gsed} ,g"
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/abcde ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/cddb-tool ${DESTDIR}${PREFIX}/bin
-#	${INSTALL_SCRIPT} ${WRKSRC}/abcde-musicbrainz-tool ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/abcde-musicbrainz-tool ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/abcde.conf ${DESTDIR}${EGDIR}
 	${INSTALL_MAN} ${WRKSRC}/abcde.1 \
