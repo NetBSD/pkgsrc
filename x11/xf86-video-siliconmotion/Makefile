@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/02/26 11:27:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/18 18:31:17 wiz Exp $
 
-DISTNAME=	xf86-video-siliconmotion-1.7.8
-PKGREVISION=	1
+DISTNAME=	xf86-video-siliconmotion-1.7.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
