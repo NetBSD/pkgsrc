@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/18 20:47:40 wiz Exp $
 
-DISTNAME=	ipaddress-1.0.17
+DISTNAME=	ipaddress-1.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES+=	${MASTER_SITE_PYPI:=i/ipaddress/}
