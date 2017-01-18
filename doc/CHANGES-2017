@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.290 2017/01/17 23:19:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.291 2017/01/18 09:52:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Config-INI-Reader-Ordered version 0.020 [schmonz 2017-01-17]
 	Added devel/p5-Reply version 0.42 [schmonz 2017-01-17]
 	Updated misc/calibre to 2.76.0nb1 [wiz 2017-01-17]
+	Updated audio/abcde to 2.8nb1 [wiz 2017-01-18]
