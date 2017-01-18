@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16930 2017/01/18 20:40:47 wiz Exp $
+$NetBSD: TODO,v 1.16931 2017/01/18 20:44:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -336,7 +336,7 @@ Suggested new packages
 	xf86-input-spaceorb, xf86-input-summa, xf86-input-synaptics [pkg/47082],
 	xf86-input-tek4957, xf86-input-ur98, xf86-video-amd, xf86-video-dummy,
 	xf86-video-freedreno, xf86-video-glide, xf86-video-impact,
-	xf86-video-omap, xf86-video-sisusb, xf86-video-sunbw2,
+	xf86-video-omap, xf86-video-sisusb (Linux-only), xf86-video-sunbw2,
 	xf86-video-sunleo, xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-xgixp
 	lib: liboldX
@@ -1336,7 +1336,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-django-photologue-2.7
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.1.0
-	o py-dulwich-0.16.3
 	o py-ephem3-3.7.6.0
 	o py-foolscap-0.12.6
 	o py-gmpy-1.17
