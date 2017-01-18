@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.71 2016/07/09 06:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.72 2017/01/18 21:10:42 wiz Exp $
 
-PKGREVISION= 1
 .include "../../sysutils/coreutils/Makefile.common"
 
 CONFIGURE_ARGS+=	--without-gmp
@@ -41,7 +40,7 @@ SUBST_STAGE.libname=	pre-configure
 SUBST_FILES.libname=	Makefile.in
 SUBST_SED.libname=	-e '/^src_libstdbuf_so_LDFLAGS/s,$$, -install_name ${PREFIX}/libexec/coreutils/glibstdbuf.so,'
 
-PROGS=	[ base64 basename cat chcon chgrp chmod chown chroot cksum comm \
+PROGS=	[ b2sum base32 base64 basename cat chcon chgrp chmod chown chroot cksum comm \
 	cp csplit cut date dd df dir dircolors dirname du hostid echo env \
 	expand expr factor false fmt fold groups head id install join kill \
 	link ln logname ls md5sum mkdir mkfifo mknod mktemp mv nice nl \

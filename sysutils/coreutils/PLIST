@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.18 2016/01/31 09:20:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/01/18 21:10:42 wiz Exp $
 bin/g[
+bin/gb2sum
 bin/gbase32
 bin/gbase64
 bin/gbasename
@@ -104,6 +105,8 @@ bin/gwho
 bin/gwhoami
 bin/gyes
 gnu/bin/[
+gnu/bin/b2sum
+gnu/bin/base32
 gnu/bin/base64
 gnu/bin/basename
 gnu/bin/cat
@@ -206,6 +209,8 @@ gnu/bin/wc
 gnu/bin/who
 gnu/bin/whoami
 gnu/bin/yes
+gnu/man/man1/b2sum.1
+gnu/man/man1/base32.1
 gnu/man/man1/base64.1
 gnu/man/man1/basename.1
 gnu/man/man1/cat.1
@@ -310,6 +315,7 @@ gnu/man/man1/whoami.1
 gnu/man/man1/yes.1
 info/coreutils.info
 ${PLIST.stdbuf}libexec/coreutils/libstdbuf.so
+man/man1/gb2sum.1
 man/man1/gbase32.1
 man/man1/gbase64.1
 man/man1/gbasename.1
