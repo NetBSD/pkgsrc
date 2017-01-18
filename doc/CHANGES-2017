@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.315 2017/01/18 20:46:44 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.316 2017/01/18 20:47:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -358,3 +358,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xf86-video-r128 to 6.10.2 [wiz 2017-01-18]
 	Updated devel/py-dulwich to 0.16.3 [wiz 2017-01-18]
 	Updated net/py-foolscap to 0.12.6 [wiz 2017-01-18]
+	Updated net/py-ipaddress to 1.0.18 [wiz 2017-01-18]
