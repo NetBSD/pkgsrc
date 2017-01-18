@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/02/26 11:27:19 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.20 2017/01/18 20:17:32 wiz Exp $
 
-DISTNAME=	xf86-video-glint-1.2.8
-PKGREVISION=	4
+DISTNAME=	xf86-video-glint-1.2.9
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
