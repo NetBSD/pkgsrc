@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.304 2017/01/18 18:25:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.305 2017/01/18 18:26:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -347,3 +347,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated filesystems/glusterfs to 3.8.8 [manu 2017-01-18]
 	Updated x11/xf86-video-tdfx to 1.4.7 [wiz 2017-01-18]
 	Updated x11/xf86-video-sis to 0.10.9 [wiz 2017-01-18]
+	Updated x11/xf86-video-mga to 1.6.5 [wiz 2017-01-18]
