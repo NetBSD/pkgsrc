@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/12/04 05:17:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/19 09:43:37 markd Exp $
 
 DISTNAME=	baloo-${KF5VER}
 PKGNAME=	baloo5-${KF5VER}
@@ -22,6 +22,12 @@ CONF_FILES+=    ${PREFIX}/share/examples/baloo5/baloo_file.desktop \
 
 post-extract:
 	cp ${FILESDIR}/FindLibinotify.cmake ${WRKSRC}/cmake/
+
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/kioslaves/kded/CMakeFiles/baloosearchmodule_automoc.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../mk/bsd.prefs.mk"
 

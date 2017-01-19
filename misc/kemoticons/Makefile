@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/12/04 05:17:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2017/01/19 09:40:50 markd Exp $
 
 DISTNAME=	kemoticons-${KF5VER}
 PKGREVISION=	1
@@ -7,6 +7,15 @@ CATEGORIES=	misc
 HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Support for emoticons and emoticons themes
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
+
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/providers/xmpp/CMakeFiles/emoticonstheme_xmpp_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/providers/kde/CMakeFiles/emoticonstheme_kde_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/providers/adium/CMakeFiles/emoticonstheme_adium_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/src/providers/pidgin/CMakeFiles/emoticonstheme_pidgin_automoc.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../meta-pkgs/kf5/Makefile.common"
 
