@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.48 2016/02/18 23:24:45 jperkin Exp $
+$NetBSD: distinfo,v 1.49 2017/01/19 08:44:10 markd Exp $
 
-SHA1 (kdelibs-4.14.15.tar.xz) = 7a50824fbcd2a4a72c8780da7b1425b038415419
-RMD160 (kdelibs-4.14.15.tar.xz) = f56c85a572817c344ef3897512385c125a9046ac
-SHA512 (kdelibs-4.14.15.tar.xz) = a50dcf8bd06024efe4c4e62a7822cd4e20820452812e1a41961d32b8b8dd2ae52346220830a5ab2ebf6f7a99071852fa21f8dca6e4ba6ddb872b5023b7b2d6df
-Size (kdelibs-4.14.15.tar.xz) = 11633836 bytes
+SHA1 (kdelibs-4.14.27.tar.xz) = e7aaf7e11151eed4309ffff9a5a6b033b04819f5
+RMD160 (kdelibs-4.14.27.tar.xz) = 3a91207a8db272fa0a92e843fdc09eeef16303f4
+SHA512 (kdelibs-4.14.27.tar.xz) = 52a76c6e5cb8366bf353a1eee8286f4165fcdf962ac0da5545a96e066bb513a9eedbbacd7ee6981d9034e08a84f795c68d26fa2f02774938ac1a4971a8a18427
+Size (kdelibs-4.14.27.tar.xz) = 11641732 bytes
 SHA1 (patch-ConfigureChecks.cmake) = b03b38108d68d940782fbbb876affd011a39acf4
 SHA1 (patch-aa) = 86c801869ba1fd2608256519cc92088225c4dafc
 SHA1 (patch-ab) = 3f89ddfa9a6101a016128d82dbbd0e985e396cae
