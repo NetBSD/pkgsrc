@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/09/18 12:44:49 kamil Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/19 13:55:53 wen Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python35-${PY_DISTVERSION}
-PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -150,6 +149,10 @@ SUBST_FILES.sslbase=	setup.py
 SUBST_VARS.sslbase=	SSLBASE
 
 CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
+
+# Avoid error: Cannot generate ./Include/opcode.h, python not found !
+post-configure:
+	touch ${WRKSRC}/Include/opcode.h
 
 .if ${OPSYS} == "HPUX"
 post-install:
