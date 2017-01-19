@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.155 2016/11/16 10:38:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.156 2017/01/19 09:54:56 markd Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
@@ -55,6 +55,11 @@ ALTERNATIVES_SRC=	${.CURDIR}/../../editors/vim-share/ALTERNATIVES
 .else
 ALTERNATIVES_SRC=
 .endif
+
+SUBST_CLASSES+=		sysconfdir
+SUBST_FILES.sysconfdir=	feature.h
+SUBST_STAGE.sysconfdir=	post-patch
+SUBST_VARS.sysconfdir=	PKG_SYSCONFDIR
 
 post-patch:
 	find ${WRKDIR} -name '*.orig_dist' -exec rm -f {} \;
