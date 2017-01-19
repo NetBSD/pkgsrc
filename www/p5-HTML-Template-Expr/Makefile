@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 19:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/19 18:52:29 agc Exp $
 
 DISTNAME=		HTML-Template-Expr-0.07
 PKGNAME=		p5-${DISTNAME}
 PKGREVISION=		5
 CATEGORIES=		www perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/} \
-			${MASTER_SITE_SOURCEFORGE:=html-template/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
+MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=html-template/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-Template-Expr/

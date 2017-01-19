@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/12/08 19:32:10 marino Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/19 18:52:13 agc Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -155,8 +155,8 @@ FULL_PATH=${BOOTSTRAP_PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:${PREFIX}/sbin:$
 
 # for port maintenance, invoke "make mdi PLUS_BOOTSTRAPS=1"
 .if defined(PLUS_BOOTSTRAPS)
-MASTER_SITES= http://downloads.dragonlace.net/src/ \
-   ${MASTER_SITE_GNU:=gcc/${IDENTIFICATION}/}
+MASTER_SITES=	http://downloads.dragonlace.net/src/
+MASTER_SITES+=	${MASTER_SITE_GNU:=gcc/${IDENTIFICATION}/}
 DISTFILES= \
    ${DISTNAME}.tar.bz2 \
    ada-bootstrap.i386.freebsd.84.tar.bz2 \

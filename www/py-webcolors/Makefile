@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/03/15 20:13:23 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/19 18:52:29 agc Exp $
 
 DISTNAME=	webcolors-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://bitbucket.org/ubernostrum/webcolors/downloads/ \
-		http://pypi.python.org/packages/source/w/webcolors/
+MASTER_SITES=	http://bitbucket.org/ubernostrum/webcolors/downloads/
+MASTER_SITES+=	http://pypi.python.org/packages/source/w/webcolors/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitbucket.org/ubernostrum/webcolors/overview/

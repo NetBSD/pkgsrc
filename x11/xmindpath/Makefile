@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2013/04/06 14:58:21 rodent Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:30 agc Exp $
 
 DISTNAME=	magicpoint-1.09a
 PKGNAME=	xmindpath-1.09a
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.riken.go.jp/pub/misc/Japan/MagicPoint/ \
-				ftp://ftp.icm.edu.pl/packages/mgp/
+MASTER_SITES=	ftp://ftp.riken.go.jp/pub/misc/Japan/MagicPoint/
+MASTER_SITES+=	ftp://ftp.icm.edu.pl/packages/mgp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MindPath PocketPoint user-level driver for X11
