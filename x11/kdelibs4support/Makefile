@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/12/04 05:17:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/19 09:45:39 markd Exp $
 
 DISTNAME=	kdelibs4support-${KF5VER}
 PKGREVISION=	1
@@ -37,6 +37,13 @@ CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Royal.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Royal.colors
 CONF_FILES+=	${PREFIX}/share/examples/kdelibs4support/colors/Web.colors \
 		${PKG_SYSCONFDIR}/xdg/colors/Web.colors
+
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/solid-networkstatus/kded/CMakeFiles/kded_networkstatus_automoc.dir/AutogenInfo.cmake
+SUBST_FILES.fix-moc+=	_KDE_build/autotests/CMakeFiles/klibloadertestmodule5_automoc.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../misc/kemoticons/buildlink3.mk"
 .include "../../devel/kitemmodels/buildlink3.mk"
