@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2016/12/30 04:43:16 taca Exp $
+# $NetBSD: Makefile,v 1.251 2017/01/19 03:50:53 maya Exp $
 
 DISTNAME=		openssh-7.4p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
@@ -143,17 +143,7 @@ CONFIGURE_ARGS+=	--with-xauth=${PREFIX}/bin/xauth
 
 CONFS=			ssh_config sshd_config moduli
 
-PLIST_VARS+=		darwin prng
-
-.if exists(/dev/urandom)
-.  if ${OPSYS} == "NetBSD"
-MESSAGE_SRC+=		${.CURDIR}/MESSAGE.urandom
-.  endif
-.else
-CONFIGURE_ARGS+=	--without-random
-CONFS+=			ssh_prng_cmds
-PLIST.prng=		yes
-.endif
+PLIST_VARS+=		darwin
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
