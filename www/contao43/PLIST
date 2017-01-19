@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/12/30 04:48:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/01/19 14:57:05 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -2876,6 +2876,15 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/tl_news
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/tl_news_feed.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ru/tl_user_group.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/default.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/modules.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_layout.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_news.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_news_archive.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_news_feed.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_user.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/sl/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/zh/default.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/zh/modules.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/zh/tl_layout.xlf
@@ -3117,6 +3126,7 @@ ${CT_WEBDIR}/vendor/doctrine/common/README.md
 ${CT_WEBDIR}/vendor/doctrine/common/UPGRADE_TO_2_1
 ${CT_WEBDIR}/vendor/doctrine/common/UPGRADE_TO_2_2
 ${CT_WEBDIR}/vendor/doctrine/common/composer.json
+${CT_WEBDIR}/vendor/doctrine/common/humbug.json.dist
 ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/ClassLoader.php
 ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/CommonException.php
 ${CT_WEBDIR}/vendor/doctrine/common/lib/Doctrine/Common/Comparable.php
@@ -3442,7 +3452,9 @@ ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/DoctrineBundle.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/LICENSE
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/ManagerConfigurator.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Mapping/ClassMetadataCollection.php
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Mapping/ContainerAwareEntityListenerResolver.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Mapping/DisconnectedMetadataFactory.php
+${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Mapping/EntityListenerServiceResolver.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/README.md
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Registry.php
 ${CT_WEBDIR}/vendor/doctrine/doctrine-bundle/Resources/config/dbal.xml
@@ -4649,7 +4661,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/.github/ISSUE_TEMPLATE.md
 ${CT_WEBDIR}/vendor/symfony/symfony/.github/PULL_REQUEST_TEMPLATE.md
 ${CT_WEBDIR}/vendor/symfony/symfony/.github/build-packages.php
 ${CT_WEBDIR}/vendor/symfony/symfony/.gitignore
-${CT_WEBDIR}/vendor/symfony/symfony/.php_cs
+${CT_WEBDIR}/vendor/symfony/symfony/.php_cs.dist
 ${CT_WEBDIR}/vendor/symfony/symfony/.travis.yml
 ${CT_WEBDIR}/vendor/symfony/symfony/CHANGELOG-3.0.md
 ${CT_WEBDIR}/vendor/symfony/symfony/CHANGELOG-3.1.md
@@ -5071,8 +5083,10 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInje
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Loader/FilesystemLoader.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/README.md
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/form.xml
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/routing/errors.xml
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/schema/twig-1.0.xsd
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/templating.xml
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/config/twig.xml
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.atom.twig
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/Exception/error.css.twig
@@ -5230,6 +5244,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/Adapter/ProxyAda
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/Adapter/RedisAdapter.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/Adapter/TagAwareAdapter.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/Adapter/TagAwareAdapterInterface.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/CHANGELOG.md
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/CacheItem.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/DoctrineProvider.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Cache/Exception/CacheException.php
@@ -7117,6 +7132,7 @@ ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/Exception/Connect
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/Exception/DriverNotFoundException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/Exception/ExceptionInterface.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/Exception/LdapException.php
+${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/Exception/NotBoundException.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/LICENSE
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/Ldap.php
 ${CT_WEBDIR}/vendor/symfony/symfony/src/Symfony/Component/Ldap/LdapClient.php
@@ -8157,6 +8173,7 @@ ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Node/SetTemp.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Node/Spaceless.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Node/Text.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/Node/With.php
+${CT_WEBDIR}/vendor/twig/twig/lib/Twig/NodeCaptureInterface.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/NodeInterface.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/NodeOutputInterface.php
 ${CT_WEBDIR}/vendor/twig/twig/lib/Twig/NodeTraverser.php
