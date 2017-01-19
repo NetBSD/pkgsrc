@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/09/07 06:29:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2017/01/19 18:52:11 agc Exp $
 # used by graphics/GraphicsMagick/Makefile
 # used by graphics/p5-GraphicsMagick/Makefile
 
@@ -7,8 +7,8 @@ GM_MINOR_VER=	25
 DISTVERSION=	${GM_MAJOR_VER}.${GM_MINOR_VER}
 DISTNAME=	GraphicsMagick-${DISTVERSION}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
-		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/${GM_MAJOR_VER}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/}
+MASTER_SITES+=	ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/${GM_MAJOR_VER}/
 EXTRACT_SUFX=	.tar.xz
 
 DISTINFO_FILE=	${.CURDIR}/../../graphics/GraphicsMagick/distinfo

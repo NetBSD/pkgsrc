@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2012/12/21 04:23:45 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:15 agc Exp $
 
 DISTNAME=	vscmV1R2
 PKGNAME=	vscm-1.4
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vscm/} \
-	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/vscm/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vscm/}
+MASTER_SITES+=	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/vscm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	http://www.cs.princeton.edu/~blume/vscm/

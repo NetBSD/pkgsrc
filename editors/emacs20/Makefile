@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.56 2016/11/26 06:38:06 dholland Exp $
+# $NetBSD: Makefile,v 1.57 2017/01/19 18:52:08 agc Exp $
 
 DISTNAME=	emacs-20.7
 PKGNAME=	${DISTNAME:S/emacs/emacs20/}
 PKGREVISION=	22
 CATEGORIES=	editors
-MASTER_SITES=	http://ftp.gnu.org/pub/old-gnu/emacs/	\
-		ftp://ftp.gnu.org/pub/old-gnu/emacs
+MASTER_SITES=	http://ftp.gnu.org/pub/old-gnu/emacs/
+MASTER_SITES+=	ftp://ftp.gnu.org/pub/old-gnu/emacs
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	${DISTNAME}-mule-4.1b-elc${EXTRACT_SUFX}
 SITES.${DISTNAME}-mule-4.1b-elc.tar.gz=	${MASTER_SITE_LOCAL}

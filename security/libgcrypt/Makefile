@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.86 2016/12/30 00:41:35 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2017/01/19 18:52:23 agc Exp $
 
 DISTNAME=	libgcrypt-1.7.5
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
-		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
+MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/
+MASTER_SITES+=	http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

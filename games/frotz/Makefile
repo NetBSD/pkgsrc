@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2017/01/03 21:30:38 roy Exp $
+# $NetBSD: Makefile,v 1.32 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=	frotz-2.43
 PKGREVISION=	5
 CATEGORIES=	games
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=frotz/} \
-		ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=frotz/}
+MASTER_SITES+=	ftp://ftp.ifarchive.org/if-archive/infocom/interpreters/frotz/
 
 MAINTAINER=	seebs@plethora.net
 HOMEPAGE=	http://frotz.sourceforge.net/

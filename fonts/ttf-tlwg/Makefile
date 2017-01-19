@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/08/17 18:33:08 leot Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/19 18:52:09 agc Exp $
 
 DISTNAME=	ttf-tlwg-0.6.1
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/thai-ttf/ \
-		http://linux.thai.net/pub/thailinux/software/thai-ttf/
+MASTER_SITES=	ftp://linux.thai.net/pub/thailinux/software/thai-ttf/
+MASTER_SITES+=	http://linux.thai.net/pub/thailinux/software/thai-ttf/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

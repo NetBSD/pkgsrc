@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2013/02/17 19:17:56 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:03 agc Exp $
 
 DISTNAME=	irchat-pj-2.4.24.22
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	chat
-MASTER_SITES=	http://his.luky.org/ftp/mirrors/irchat-pj/ \
-		http://gouketsu.net/irchat-pj/src/
+MASTER_SITES=	http://his.luky.org/ftp/mirrors/irchat-pj/
+MASTER_SITES+=	http://gouketsu.net/irchat-pj/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org

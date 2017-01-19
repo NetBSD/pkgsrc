@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2015/03/15 19:51:07 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/19 18:52:06 agc Exp $
 
 DISTNAME=	libthai-0.1.21
 CATEGORIES=	devel
-MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
-		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
+MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
+MASTER_SITES+=	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

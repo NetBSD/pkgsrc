@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.57 2017/01/04 21:46:09 roy Exp $
+# $NetBSD: Makefile,v 1.58 2017/01/19 18:52:18 agc Exp $
 #
 
 DISTNAME=	vfu-3.04
 PKGREVISION=	11
 CATEGORIES=	misc
-MASTER_SITES=	http://cade.datamax.bg/vfu/ \
-		${MASTER_SITE_SUNSITE:=utils/file/managers/}
+MASTER_SITES=	http://cade.datamax.bg/vfu/
+MASTER_SITES+=	${MASTER_SITE_SUNSITE:=utils/file/managers/}
 EXTRACT_SUFX=	.src.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2016/02/25 16:20:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:19 agc Exp $
 #
 
 DISTNAME=	ftpproxy-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	http://www.ftpproxy.org/download/ \
-		http://www.ftpproxy.org/download/older_releases/
+MASTER_SITES=	http://www.ftpproxy.org/download/
+MASTER_SITES+=	http://www.ftpproxy.org/download/older_releases/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

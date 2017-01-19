@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.53 2015/03/31 15:27:06 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2017/01/19 18:52:08 agc Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
 PKGNAME=		snes9x-${SNESVER}
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.lysator.liu.se/snes9x/${SNESVER}/ \
-			http://files.ipherswipsite.com/snes9x/
+MASTER_SITES=		http://www.lysator.liu.se/snes9x/${SNESVER}/
+MASTER_SITES+=		http://files.ipherswipsite.com/snes9x/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/

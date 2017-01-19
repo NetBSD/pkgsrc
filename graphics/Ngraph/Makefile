@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2012/10/06 14:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:11 agc Exp $
 #
 
 DISTNAME=	Ngraph-6.3.30-src
 PKGREVISION=	3
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	graphics
-MASTER_SITES=	http://www2e.biglobe.ne.jp/~isizaka/bin/ \
-		ftp://ftp.cs.umb.edu/pub/interleaf/CDE/
+MASTER_SITES=	http://www2e.biglobe.ne.jp/~isizaka/bin/
+MASTER_SITES+=	ftp://ftp.cs.umb.edu/pub/interleaf/CDE/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Ngraph-6.3.30-doc.tar.gz \
 		ileaf-widgets.tar.Z
 

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.42 2012/10/06 11:54:53 asau Exp $
+# $NetBSD: Makefile,v 1.43 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
 PKGREVISION=	3
 CATEGORIES=	games
-MASTER_SITES=	http://ftp.giga.or.at/pub/lost-distfiles/ \
-		ftp://ftp.tw.freebsd.org/pub/ports/distfiles/ \
-		http://www.uberstudent.org/archive/programs/games/
+MASTER_SITES=	http://ftp.giga.or.at/pub/lost-distfiles/
+MASTER_SITES+=	ftp://ftp.tw.freebsd.org/pub/ports/distfiles/
+MASTER_SITES+=	http://www.uberstudent.org/archive/programs/games/
 # was http://usa.lostboys.nl/medialab/rollemup/Linux/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

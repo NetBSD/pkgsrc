@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 20:11:51 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:14 agc Exp $
 #
 
 DISTNAME=	rexx-imc-1.76
 PKGREVISION=	2
 CATEGORIES=	lang
-MASTER_SITES=	http://users.comlab.ox.ac.uk/ian.collier/distribution/ \
-		ftp://ftp.sai.msu.su/pub/unix/rexx/
+MASTER_SITES=	http://users.comlab.ox.ac.uk/ian.collier/distribution/
+MASTER_SITES+=	ftp://ftp.sai.msu.su/pub/unix/rexx/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.comlab.ox.ac.uk/ian.collier/Rexx/

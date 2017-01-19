@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2016/12/17 13:38:55 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2017/01/19 18:52:14 agc Exp $
 #
 
 DISTNAME=	Maude-2.6
 PKGNAME=	maude-2.6
 CATEGORIES=	lang
-MASTER_SITES=	http://maude.cs.uiuc.edu/download/ \
-		http://maude.cs.uiuc.edu/download/current/
+MASTER_SITES=	http://maude.cs.uiuc.edu/download/
+MASTER_SITES+=	http://maude.cs.uiuc.edu/download/current/
 
 MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://maude.cs.uiuc.edu/

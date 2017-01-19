@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 11:54:55 asau Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
 PKGREVISION=	5
 CATEGORIES=	games
-MASTER_SITES=	http://sjeng.sourceforge.net/ftp/ \
-		${MASTER_SITE_SOURCEFORGE:=sjeng/}
+MASTER_SITES=	http://sjeng.sourceforge.net/ftp/
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=sjeng/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sjeng.org/

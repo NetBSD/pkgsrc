@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2012/10/23 19:51:13 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/19 18:52:26 agc Exp $
 #
 
 DISTNAME=	mktemp-1.7
 CATEGORIES=	sysutils security
-MASTER_SITES=	ftp://ftp.mktemp.org/pub/mktemp/ \
-		ftp://ftp.usa.openbsd.org/pub/mktemp/
+MASTER_SITES=	ftp://ftp.mktemp.org/pub/mktemp/
+MASTER_SITES+=	ftp://ftp.usa.openbsd.org/pub/mktemp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mktemp.org/

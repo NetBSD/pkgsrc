@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2013/10/21 09:22:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.38 2017/01/19 18:52:19 agc Exp $
 #
 
 DISTNAME=	ipv6calc-0.94.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/ \
-		ftp://sunsite.icm.edu.pl/pub/Linux/ipv6/bipv6/ipv6calc/
+MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
+MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/Linux/ipv6/bipv6/ipv6calc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.deepspace6.net/projects/ipv6calc.html

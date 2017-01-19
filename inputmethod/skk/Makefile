@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2016/10/02 12:18:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:13 agc Exp $
 #
 
 DISTNAME=	ddskk-16.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/ \
-		http://openlab.ring.gr.jp/skk/maintrunk/old-releases/
+MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
+MASTER_SITES+=	http://openlab.ring.gr.jp/skk/maintrunk/old-releases/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://openlab.ring.gr.jp/skk/index.html

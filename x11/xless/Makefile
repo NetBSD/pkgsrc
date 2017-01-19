@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2012/10/29 05:07:14 asau Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/19 18:52:30 agc Exp $
 
 DISTNAME=	xless-1.7
 PKGREVISION=	4
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
-		ftp://ftp.cs.berkeley.edu/ucb/people/dglo/xless/
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
+MASTER_SITES+=	ftp://ftp.cs.berkeley.edu/ucb/people/dglo/xless/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 text viewer; useful as an add-on tool for other apps

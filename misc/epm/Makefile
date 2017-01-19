@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 09:57:21 asau Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:18 agc Exp $
 #
 
 DISTNAME=	epm-4.2-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	misc
-MASTER_SITES=	http://ftp.easysw.com/pub/epm/${VERSION}/ \
-		http://ftp2.easysw.com/pub/epm/${VERSION}/ \
-		http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/epm/${VERSION}/
+MASTER_SITES=	http://ftp.easysw.com/pub/epm/${VERSION}/
+MASTER_SITES+=	http://ftp2.easysw.com/pub/epm/${VERSION}/
+MASTER_SITES+=	http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/epm/${VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org

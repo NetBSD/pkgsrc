@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 09:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/19 18:52:18 agc Exp $
 
 DISTNAME=	logsurfer-1.8
 PKGNAME=	logsurfer-1.8
 CATEGORIES=	misc
-MASTER_SITES=	http://kerryt.orcon.net.nz/ \
-		http://www.crypt.gen.nz/logsurfer/
+MASTER_SITES=	http://kerryt.orcon.net.nz/
+MASTER_SITES+=	http://www.crypt.gen.nz/logsurfer/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.crypt.gen.nz/logsurfer/

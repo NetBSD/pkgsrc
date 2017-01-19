@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.36 2016/10/09 21:42:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/01/19 18:52:20 agc Exp $
 
 DISTNAME=	pure-ftpd-1.0.35
 PKGREVISION=	6
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/ \
-		http://download.pureftpd.org/pub/pure-ftpd/releases/ \
-		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
-		ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/ \
-		ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/ \
-		ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/ \
-		ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
-		ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/ \
-		${MASTER_SITE_SOURCEFORGE:=pureftpd/}
+MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=	http://download.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=	ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=	ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/
+MASTER_SITES+=	ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/
+MASTER_SITES+=	ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=	ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=	ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=pureftpd/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	dawszy@arhea.net

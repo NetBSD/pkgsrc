@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.24 2014/07/25 15:39:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:10 agc Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
 PKGNAME=	heretic2-demo-2.0
 PKGREVISION=	1
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/heretic2/ \
-		ftp://download.linuxlords.com/pub/demos/heretic2/ \
-		ftp://ftp.linux.tucows.com/pub/Loki/demos/heretic2/
+MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/heretic2/
+MASTER_SITES+=	ftp://download.linuxlords.com/pub/demos/heretic2/
+MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/heretic2/
 EXTRACT_SUFX=	.run
 
 MAINTAINER=	abs@NetBSD.org

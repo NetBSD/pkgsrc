@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:16 agc Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
 PKGREVISION=	2
 CATEGORIES=	mail www
-MASTER_SITES=	http://ftp.horde.org/pub/mimp/ \
-		ftp://ftp.horde.org/pub/mimp/
+MASTER_SITES=	http://ftp.horde.org/pub/mimp/
+MASTER_SITES+=	ftp://ftp.horde.org/pub/mimp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/apps/mimp/

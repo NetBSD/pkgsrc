@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/02/25 16:20:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/19 18:52:21 agc Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
 CATEGORIES=	net
-MASTER_SITES=	ftp://unix.hensa.ac.uk/sites/archive.ubuntu.com/ubuntu/pool/universe/t/traceroute-nanog/ \
-		http://www.ftp.uni-erlangen.de/pub/pc/TheOpenCD/old-images/ubuntu/pool/universe/t/traceroute-nanog/ \
-		http://traceroute-nanog.sourcearchive.com/downloads/6.4.2-1/
+MASTER_SITES=	ftp://unix.hensa.ac.uk/sites/archive.ubuntu.com/ubuntu/pool/universe/t/traceroute-nanog/
+MASTER_SITES+=	http://www.ftp.uni-erlangen.de/pub/pc/TheOpenCD/old-images/ubuntu/pool/universe/t/traceroute-nanog/
+MASTER_SITES+=	http://traceroute-nanog.sourcearchive.com/downloads/6.4.2-1/
 
 # for the man page:
 PATCH_SITES=	${MASTER_SITES}

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2015/02/13 14:05:07 pho Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/19 18:52:18 agc Exp $
 #
 
 DISTNAME=	elscreen-1.4.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/ \
-		ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/old/
+MASTER_SITES=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/
+MASTER_SITES+=	ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/old/
 DISTFILES=	${DISTNAME}.tar.gz \
 		elscreen-color-theme-0.0.0.tar.gz \
 		elscreen-dired-0.1.0.tar.gz \

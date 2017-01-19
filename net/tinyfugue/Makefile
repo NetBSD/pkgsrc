@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2016/04/21 16:02:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:21 agc Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
 PKGREVISION=	9
 CATEGORIES=	net games
-MASTER_SITES=	ftp://laurel.actlab.utexas.edu/pub/tinyfugue/ \
-		${MASTER_SITE_SOURCEFORGE:=tinyfugue/}
+MASTER_SITES=	ftp://laurel.actlab.utexas.edu/pub/tinyfugue/
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=tinyfugue/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyfugue.sourceforge.net/

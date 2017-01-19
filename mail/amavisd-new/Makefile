@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2016/09/14 18:20:30 spz Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:15 agc Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
 CATEGORIES=	mail security
-MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
-		http://mirrors.catpipe.net/amavisd-new/ \
-		http://mirror.mainloop.se/amavisd/ \
-		http://mirror.cedratnet.com/amavisd-new/ \
-		http://mirror.omroep.nl/amavisd-new/
+MASTER_SITES=	http://www.ijs.si/software/amavisd/
+MASTER_SITES+=	http://mirrors.catpipe.net/amavisd-new/
+MASTER_SITES+=	http://mirror.mainloop.se/amavisd/
+MASTER_SITES+=	http://mirror.cedratnet.com/amavisd-new/
+MASTER_SITES+=	http://mirror.omroep.nl/amavisd-new/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	spz@NetBSD.org

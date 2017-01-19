@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.45 2015/07/04 16:18:35 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2017/01/19 18:52:11 agc Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
 PKGREVISION=		9
 CATEGORIES=		games x11
-MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
-			http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/
+MASTER_SITES=		http://chaos2.org/xpuyopuyo/
+MASTER_SITES+=		http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/

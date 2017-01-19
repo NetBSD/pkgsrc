@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: Makefile,v 1.25 2017/01/19 18:52:16 agc Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
 PKGREVISION=	2
 CATEGORIES=	mail www
-MASTER_SITES=	http://ftp.horde.org/pub/ingo/ \
-		ftp://ftp.horde.org/pub/ingo/
+MASTER_SITES=	http://ftp.horde.org/pub/ingo/
+MASTER_SITES+=	ftp://ftp.horde.org/pub/ingo/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/apps/ingo/

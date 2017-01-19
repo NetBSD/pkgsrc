@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/01/19 18:52:03 agc Exp $
 #
 
 DISTNAME=		hmmer-3.0
 CATEGORIES=		biology
-MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/} \
-			http://selab.janelia.org/software/hmmer3/3.0/ \
-			ftp://selab.janelia.org/pub/software/hmmer3/3.0/
+MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
+MASTER_SITES+=		http://selab.janelia.org/software/hmmer3/3.0/
+MASTER_SITES+=		ftp://selab.janelia.org/pub/software/hmmer3/3.0/
 
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://hmmer.janelia.org/

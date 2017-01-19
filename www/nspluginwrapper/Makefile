@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.53 2017/01/01 16:06:39 adam Exp $
+# $NetBSD: Makefile,v 1.54 2017/01/19 18:52:29 agc Exp $
 #
 
 DISTNAME=	nspluginwrapper-1.4.4
 PKGREVISION=	6
 CATEGORIES=	www
-MASTER_SITES=	http://nspluginwrapper.org/download/ \
-		http://teokurebsd.org/netbsd/packages/distfiles/nspluginwrapper/
+MASTER_SITES=	http://nspluginwrapper.org/download/
+MASTER_SITES+=	http://teokurebsd.org/netbsd/packages/distfiles/nspluginwrapper/
 DISTFILES=	${DISTNAME}.tar.gz ${DISTNAME}-suse121-generic.${WRAPPER_ARCH}.tar.gz
 
 MAINTAINER=	tsutsui@NetBSD.org

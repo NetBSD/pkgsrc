@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2013/08/31 14:52:50 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/19 18:52:19 agc Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
 PKGREVISION=	3
 CATEGORIES=	multimedia x11
-MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/ \
-		ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/modules/ \
-		ftp://ftp.nstu.ru/pub/mirrors/xanim.va.pubnix.com/ \
-		ftp://ftp.nstu.ru/pub/mirrors/xanim.va.pubnix.com/modules/
+MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/
+MASTER_SITES+=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/modules/
+MASTER_SITES+=	ftp://ftp.nstu.ru/pub/mirrors/xanim.va.pubnix.com/
+MASTER_SITES+=	ftp://ftp.nstu.ru/pub/mirrors/xanim.va.pubnix.com/modules/
 DISTFILES=	${EXTRACT_ONLY} ${CODEC_FILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

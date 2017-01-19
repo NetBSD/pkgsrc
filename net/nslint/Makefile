@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2016/03/07 23:14:39 nros Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/19 18:52:20 agc Exp $
 
 DISTNAME=	nslint-3.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.ee.lbl.gov/ \
-		ftp://ftp.ee.lbl.gov/old/
+MASTER_SITES=	ftp://ftp.ee.lbl.gov/
+MASTER_SITES+=	ftp://ftp.ee.lbl.gov/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ee.lbl.gov/ftp.html

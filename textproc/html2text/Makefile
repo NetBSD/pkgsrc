@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2013/12/23 11:57:06 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:27 agc Exp $
 
 DISTNAME=	html2text-1.3.2a
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.mbayer.de/html2text/downloads/	\
-		${MASTER_SITE_SUNSITE:=apps/www/converters/}
+MASTER_SITES=	http://www.mbayer.de/html2text/downloads/
+MASTER_SITES+=	${MASTER_SITE_SUNSITE:=apps/www/converters/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mbayer.de/html2text/

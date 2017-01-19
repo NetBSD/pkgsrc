@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:03 agc Exp $
 
 DISTNAME=	clustalw-2.1
 CATEGORIES=	biology
-MASTER_SITES=	ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.1/ \
-		http://www.clustal.org/download/current/
+MASTER_SITES=	ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.1/
+MASTER_SITES+=	http://www.clustal.org/download/current/
 
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://bips.u-strasbg.fr/fr/Documentation/ClustalW/

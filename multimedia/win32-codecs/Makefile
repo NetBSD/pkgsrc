@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2012/10/08 09:21:14 asau Exp $
+# $NetBSD: Makefile,v 1.35 2017/01/19 18:52:19 agc Exp $
 
 DISTNAME=	windows-all-20071007
 PKGNAME=	win32-codecs-071007
 CATEGORIES=	multimedia
-MASTER_SITES=	ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/ \
-		http://www1.mplayerhq.hu/MPlayer/releases/codecs/ \
-		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
-		ftp://ftp5.mplayerhq.hu/MPlayer/releases/codecs/
+MASTER_SITES=	ftp://ftp.mplayerhq.hu/MPlayer/releases/codecs/
+MASTER_SITES+=	http://www1.mplayerhq.hu/MPlayer/releases/codecs/
+MASTER_SITES+=	http://www2.mplayerhq.hu/MPlayer/releases/codecs/
+MASTER_SITES+=	ftp://ftp5.mplayerhq.hu/MPlayer/releases/codecs/
 EXTRACT_SUFX=	.zip
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=	rp9codecs-win32-20050115.tar.bz2

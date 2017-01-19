@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2016/07/24 20:44:51 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/19 18:52:17 agc Exp $
 
 DISTNAME=	ScientificPython-2.4.5
 PKGNAME=	py-${DISTNAME:S/Python/-doc/}
 PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	http://starship.python.net/crew/hinsen/ScientificPython/ \
-		http://dirac.cnrs-orleans.fr/programs/ScientificPython/
+MASTER_SITES=	http://starship.python.net/crew/hinsen/ScientificPython/
+MASTER_SITES+=	http://dirac.cnrs-orleans.fr/programs/ScientificPython/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/hinsen/scientific.html

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 13:45:38 asau Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/19 18:52:22 agc Exp $
 
 .include "Makefile.common"
 
@@ -11,8 +11,8 @@ PKGNAME=	${DISTNAME:S/-filters-/-/}
 # copy at MASTER_SITE_LOCAL periodically and update this package
 # accordingly.
 #
-MASTER_SITES=	${MASTER_SITE_LOCAL} \
-		http://www.linuxprinting.org/download/foomatic/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES+=	http://www.linuxprinting.org/download/foomatic/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Foomatic PPDs collection

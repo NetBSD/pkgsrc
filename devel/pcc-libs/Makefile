@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/01/15 15:04:29 mef Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/19 18:52:07 agc Exp $
 
 DISTNAME=	pcc-libs-1.1.0
 CATEGORIES=	devel
-MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc-releases/ \
-		http://pcc.ludd.ltu.se/ftp/pub/pcc-releases/
+MASTER_SITES=	ftp://pcc.ludd.ltu.se/pub/pcc-releases/
+MASTER_SITES+=	http://pcc.ludd.ltu.se/ftp/pub/pcc-releases/
 EXTRACT_SUFX=	.tgz
 
 HOMEPAGE=	http://pcc.ludd.ltu.se/
