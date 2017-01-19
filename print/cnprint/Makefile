@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2014/12/21 12:47:48 mef Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/19 18:52:22 agc Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
 PKGREVISION=		1
 CATEGORIES=		print
-MASTER_SITES=		http://www.ywpw.com/cai/software/cnp/ \
-			http://www.ywpw.com/cai/software/cnp/fonts/ \
-			http://www.ywpw.com/cai/software/cnp/metrics/ \
-			ftp://ftp.csc.cuhk.edu.hk/pub/chinese/ifcss/software/fonts/misc/
+MASTER_SITES=		http://www.ywpw.com/cai/software/cnp/
+MASTER_SITES+=		http://www.ywpw.com/cai/software/cnp/fonts/
+MASTER_SITES+=		http://www.ywpw.com/cai/software/cnp/metrics/
+MASTER_SITES+=		ftp://ftp.csc.cuhk.edu.hk/pub/chinese/ifcss/software/fonts/misc/
 EXTRACT_SUFX=		#empty
 DISTFILES+=		cnprint330b.c \
 			cnprint330b.readme \

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 11:55:01 asau Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/19 18:52:11 agc Exp $
 
 DISTNAME=		xjump_2.7.5.orig
 PKGNAME=		xjump-2.7.5
 PKGREVISION=		4
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/\
-			http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/x/xjump/
+MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles
+MASTER_SITES+=		http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/x/xjump/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/x/xjump/

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.61 2016/09/19 13:04:28 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2017/01/19 18:52:28 agc Exp $
 
 DISTNAME=		elinks-0.12pre6
 PKGNAME=		${DISTNAME:S/pre/rc/}
 PKGREVISION=		11
 CATEGORIES=		www
-MASTER_SITES=		http://elinks.or.cz/download/ \
-			http://ftp.icm.edu.pl/packages/elinks/
+MASTER_SITES=		http://elinks.or.cz/download/
+MASTER_SITES+=		http://ftp.icm.edu.pl/packages/elinks/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
