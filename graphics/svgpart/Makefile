@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2017/01/01 16:06:20 adam Exp $
+# $NetBSD: Makefile,v 1.33 2017/01/19 09:06:22 markd Exp $
 
-DISTNAME=	svgpart-15.12.0
-PKGREVISION=	3
+DISTNAME=	svgpart-16.08.0
 CATEGORIES=	graphics
 COMMENT=	KDE svg part
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
