@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2017/01/19 23:45:33 wiedi Exp $
+lib/GNUstep/Frameworks/SOGo.framework/Versions/3/sogo/libSOGo.so.3
+lib/sogo/libGDLContentStore.so.4.9
+lib/sogo/libNGCards.so.4.9
+lib/sogo/libSOGo.so.3
+lib/sogo/libSOGoUI.so.3.2
