@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2017/01/01 16:06:06 adam Exp $
+# $NetBSD: Makefile,v 1.112 2017/01/19 18:52:04 agc Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -9,9 +9,9 @@ DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 PKGREVISION=	13
 CATEGORIES=	comms net audio
-MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
-		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
-		http://downloads.asterisk.org/pub/telephony/sounds/releases/
+MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
+MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
+MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/sounds/releases/
 
 OWNER=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/

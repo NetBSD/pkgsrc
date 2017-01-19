@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2017/01/04 21:54:26 roy Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/19 18:52:18 agc Exp $
 #
 
 DISTNAME=		iselect-1.4.0
 PKGREVISION=		2
 CATEGORIES=		misc
-MASTER_SITES=		ftp://ftp.ossp.org/pkg/tool/iselect/ \
-			ftp://ftp.ntua.gr/pub/utils/ossp/tool/iselect/
+MASTER_SITES=		ftp://ftp.ossp.org/pkg/tool/iselect/
+MASTER_SITES+=		ftp://ftp.ntua.gr/pub/utils/ossp/tool/iselect/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ossp.org/pkg/tool/iselect/
