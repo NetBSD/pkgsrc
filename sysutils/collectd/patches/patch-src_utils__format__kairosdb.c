@@ -1,4 +1,7 @@
-$NetBSD: patch-src_utils__format__kairosdb.c,v 1.3 2016/12/24 10:16:07 joerg Exp $
+$NetBSD: patch-src_utils__format__kairosdb.c,v 1.4 2017/01/19 17:20:42 he Exp $
+
+Cast arguments to isalnum() and tolower() to "unsigned char" to
+squelch warnings.
 
 --- src/utils_format_kairosdb.c.orig	2016-11-30 08:52:01.000000000 +0000
 +++ src/utils_format_kairosdb.c

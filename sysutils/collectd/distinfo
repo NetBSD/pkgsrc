@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2016/12/24 10:16:07 joerg Exp $
+$NetBSD: distinfo,v 1.32 2017/01/19 17:20:42 he Exp $
 
 SHA1 (collectd-5.6.2.tar.bz2) = 358b53ac5e0b00532d74bd40eb2658c6772d1458
 RMD160 (collectd-5.6.2.tar.bz2) = 81818c24db06f7a8922dc24e7be8cbf5d86e050c
@@ -17,8 +17,9 @@ SHA1 (patch-src_irq.c) = 78f1757ff2ed6db9fb1d0e773c2a01eb190d53a0
 SHA1 (patch-src_libcollectclient_network__buffer.c) = 62924943831e6d0585b103e567888f9af5c46f9e
 SHA1 (patch-src_memory.c) = 2934cd50e454fc14d0ec952854c88b0a830fa9a7
 SHA1 (patch-src_netstat__udp.c) = 30cb12d25f56c60959658dbd181783212e00cc61
-SHA1 (patch-src_processes.c) = 9a1a7a6943ea05d1a38cedf26e7aab8508df7ff1
+SHA1 (patch-src_processes.c) = dbcbb733b00bd77b0eae6d16f03fb0bcb3cbcbff
+SHA1 (patch-src_statsd.c) = 35f4349d2d2c9bddc0f4770344f969157cd012f6
 SHA1 (patch-src_swap.c) = 24da6e04e3006639311e8111f26f72e4fab4054a
 SHA1 (patch-src_tcpconns.c) = b85de1d0eb03989df12d9688b38d61733a13c028
 SHA1 (patch-src_utils__dns.c) = 138a3168dc109d785412ffd068edab3b4dacca36
-SHA1 (patch-src_utils__format__kairosdb.c) = db5d13e6bbbe5adc07cd8a26ec78902cd3503bec
+SHA1 (patch-src_utils__format__kairosdb.c) = 2f7bde47682d2b877f9bd2d2c794a21c297aa9e5
