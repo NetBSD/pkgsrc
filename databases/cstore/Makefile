@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2016/07/09 06:37:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/19 18:52:04 agc Exp $
 
 DISTNAME=	cstore0.2
 PKGNAME=	cstore-0.2
 PKGREVISION=	9
 CATEGORIES=	databases
-MASTER_SITES=	http://db.lcs.mit.edu/projects/cstore/ \
-		http://db.csail.mit.edu/data/
+MASTER_SITES=	http://db.lcs.mit.edu/projects/cstore/
+MASTER_SITES+=	http://db.csail.mit.edu/data/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} data4.tar.gz D6.data.ros.gz
 
 MAINTAINER=	agc@NetBSD.org

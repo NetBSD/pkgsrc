@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/08/18 07:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/19 18:52:25 agc Exp $
 #
 
 DISTNAME=	dtpstree-1.0.3
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://code.douglasthrift.net/files/dtpstree/ \
-		http://apt.douglasthrift.net/files/dtpstree/
+MASTER_SITES=	http://code.douglasthrift.net/files/dtpstree/
+MASTER_SITES+=	http://apt.douglasthrift.net/files/dtpstree/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	douglas@douglasthrift.net

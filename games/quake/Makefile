@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.49 2015/04/25 14:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
 PKGREVISION=	6
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/ \
-		ftp://ftp.idsoftware.com/idstuff/source/
+MASTER_SITES=	ftp://ftp.fu-berlin.de/pc/msdos/games/idgames/idstuff/source/
+MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/source/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

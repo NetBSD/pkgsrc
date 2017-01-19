@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 12:19:13 asau Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:16 agc Exp $
 #
 
 DISTNAME=	hypermail-2.3.0
 CATEGORIES=	mail www
-MASTER_SITES=	${HOMEPAGE} \
-		${MASTER_SITE_SOURCEFORGE:=hypermail/}
+MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=hypermail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hypermail-project.org/

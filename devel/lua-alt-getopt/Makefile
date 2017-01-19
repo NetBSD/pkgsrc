@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2015/01/10 20:52:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/19 18:52:07 agc Exp $
 
 DISTNAME=	lua-alt-getopt-0.7.0
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/lua-//}
 PKGREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lua-alt-getopt/} \
-		http://mova.org/~cheusov/pub/lua_alt_getopt/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lua-alt-getopt/}
+MASTER_SITES+=	http://mova.org/~cheusov/pub/lua_alt_getopt/
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	https://sourceforge.net/projects/lua-alt-getopt/

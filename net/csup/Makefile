@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2016/03/05 11:29:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/19 18:52:19 agc Exp $
 #
 
 DISTNAME=	csup-snap-20100404
 PKGNAME=	${DISTNAME:S/-snap//}
 PKGREVISION=	3
 CATEGORIES=	net devel
-MASTER_SITES=	http://distfiles.aydogan.net/net/ \
-				http://www.plhk.ru/static/csup/
+MASTER_SITES=	http://distfiles.aydogan.net/net/
+MASTER_SITES+=	http://www.plhk.ru/static/csup/
 
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://www.mu.org/~mux/csup.html

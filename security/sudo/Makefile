@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.152 2016/09/12 17:12:24 taca Exp $
+# $NetBSD: Makefile,v 1.153 2017/01/19 18:52:24 agc Exp $
 
 DISTNAME=	sudo-1.8.17p1
 CATEGORIES=	security
-MASTER_SITES=	http://www.sudo.ws/dist/ \
-		ftp://ftp.sudo.ws/pub/sudo/ \
-		ftp://ftp.uwsg.indiana.edu/pub/security/sudo/ \
-		ftp://ftp.twaren.net/Unix/Security/Sudo/ \
-		http://ftp.tux.org/pub/security/sudo/
+MASTER_SITES=	http://www.sudo.ws/dist/
+MASTER_SITES+=	ftp://ftp.sudo.ws/pub/sudo/
+MASTER_SITES+=	ftp://ftp.uwsg.indiana.edu/pub/security/sudo/
+MASTER_SITES+=	ftp://ftp.twaren.net/Unix/Security/Sudo/
+MASTER_SITES+=	http://ftp.tux.org/pub/security/sudo/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.sudo.ws/

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2014/12/14 13:47:49 mef Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:23 agc Exp $
 #
 
 DISTNAME=	xpdf-hebrew-2011-aug-15
 PKGNAME=	xpdf-hebrew-20110815
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
-		http://gd.tuwien.ac.at/publishing/xpdf/
+MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
+MASTER_SITES+=	http://gd.tuwien.ac.at/publishing/xpdf/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/

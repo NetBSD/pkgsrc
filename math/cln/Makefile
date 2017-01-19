@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2016/02/25 15:26:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/19 18:52:17 agc Exp $
 
 DISTNAME=	cln-1.3.4
 CATEGORIES=	math
-MASTER_SITES=	http://www.ginac.de/CLN/ \
-		ftp://ftpthep.physik.uni-mainz.de/pub/gnu/
+MASTER_SITES=	http://www.ginac.de/CLN/
+MASTER_SITES+=	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org

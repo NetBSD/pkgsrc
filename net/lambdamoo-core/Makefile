@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 17:18:32 asau Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/19 18:52:20 agc Exp $
 
 DISTNAME=	LambdaCore-12Apr99.db
 PKGNAME=	lambdamoo-core-990412
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lambdamoo/} \
-		ftp://ftp.kanga.nu/pub/mirrors/ftp.lambda.moo.mud.org/pub/MOO/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lambdamoo/}
+MASTER_SITES+=	ftp://ftp.kanga.nu/pub/mirrors/ftp.lambda.moo.mud.org/pub/MOO/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

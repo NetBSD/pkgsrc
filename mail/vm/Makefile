@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.42 2013/04/06 20:27:24 rodent Exp $
+# $NetBSD: Makefile,v 1.43 2017/01/19 18:52:17 agc Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
-		ftp://tug.org/vm/ \
-		ftp://psg.com/pub/vm/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/vm/ \
-		http://www.interhack.net/projects/vm/ \
-		http://ftp.lip6.fr/pub/unix/mail/vm/ \
-		http://ftp.jussieu.fr/pub/unix/mail/vm/ \
-		ftp://ftp.surfnet.nl/pub/mail/vm/
+MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/
+MASTER_SITES+=	ftp://tug.org/vm/
+MASTER_SITES+=	ftp://psg.com/pub/vm/
+MASTER_SITES+=	ftp://sunsite.cnlab-switch.ch/mirror/vm/
+MASTER_SITES+=	http://www.interhack.net/projects/vm/
+MASTER_SITES+=	http://ftp.lip6.fr/pub/unix/mail/vm/
+MASTER_SITES+=	http://ftp.jussieu.fr/pub/unix/mail/vm/
+MASTER_SITES+=	ftp://ftp.surfnet.nl/pub/mail/vm/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wonderworks.com/vm/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2016/09/11 06:11:15 richard Exp $
+# $NetBSD: Makefile.common,v 1.25 2017/01/19 18:52:23 agc Exp $
 #
 # used by security/cyrus-sasl/Makefile
 # used by security/cy2-anonymous/Makefile
@@ -19,8 +19,8 @@
 
 DISTNAME=	cyrus-sasl-2.1.26
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/ \
-		ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
+MASTER_SITES=	ftp://ftp.cyrusimap.org/cyrus-sasl/
+MASTER_SITES+=	ftp://ftp.cyrusimap.org/cyrus-sasl/OLD-VERSIONS/
 PATCHFILES+=	cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2
 SITES.cyrus-sasl-dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d.patch.v2= \
 		-https://cgit.cyrus.foundation/cyrus-sasl/patch/?id=dedad73e5e7a75d01a5f3d5a6702ab8ccd2ff40d

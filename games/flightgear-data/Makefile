@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/04/21 17:02:51 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=	FlightGear-data-2.8.0
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	games
-MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Shared/ \
-		ftp://ftp.de.flightgear.org/pub/fgfs/Shared/ \
-		ftp://ftp.linux.kiev.ua/pub/mirrors/ftp.flightgear.org/flightgear/Shared/
+MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Shared/
+MASTER_SITES+=	ftp://ftp.de.flightgear.org/pub/fgfs/Shared/
+MASTER_SITES+=	ftp://ftp.linux.kiev.ua/pub/mirrors/ftp.flightgear.org/flightgear/Shared/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

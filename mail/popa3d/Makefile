@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.54 2014/09/12 21:50:49 shattered Exp $
+# $NetBSD: Makefile,v 1.55 2017/01/19 18:52:16 agc Exp $
 #
 
 DISTNAME=	popa3d-1.0.3
 CATEGORIES=	mail
-MASTER_SITES=	http://www.openwall.com/popa3d/ \
-		ftp://ftp.openwall.com/pub/projects/popa3d/
+MASTER_SITES=	http://www.openwall.com/popa3d/
+MASTER_SITES+=	ftp://ftp.openwall.com/pub/projects/popa3d/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwall.com/popa3d/

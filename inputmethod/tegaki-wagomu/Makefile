@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2017/01/01 14:43:44 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:13 agc Exp $
 
 DISTNAME=	tegaki-wagomu-0.3.1
 PKGREVISION=	6
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/ \
-		http://www.tegaki.org/releases/0.3/
+MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
+MASTER_SITES+=	http://www.tegaki.org/releases/0.3/
 DISTFILES=	tegaki-wagomu-0.3${EXTRACT_SUFX} ${DEFAULT_DISTFILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

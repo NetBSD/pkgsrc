@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2017/01/19 18:52:08 agc Exp $
 #
 # used by editors/ce-x11/Makefile
 # used by editors/ce-doc/Makefile
@@ -6,8 +6,8 @@
 DISTNAME=		ce-${VERSION}
 VERSION=		4.6
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.cwru.edu/pub/chet/ \
-			http://tiswww.case.edu/php/chet/dist/
+MASTER_SITES=		ftp://ftp.cwru.edu/pub/chet/
+MASTER_SITES+=		http://tiswww.case.edu/php/chet/dist/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://tiswww.case.edu/php/chet/

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2016/06/12 16:05:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/19 18:52:21 agc Exp $
 #
 
 DISTNAME=	distbb-0.47.2
 CATEGORIES=	pkgtools
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/distbb/ \
-		http://mova.org/~cheusov/pub/distbb/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/distbb/
+MASTER_SITES+=	http://mova.org/~cheusov/pub/distbb/
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://mova.org/~cheusov/pub/distbb/

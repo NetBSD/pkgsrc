@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.45 2016/03/05 11:29:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.46 2017/01/19 18:52:24 agc Exp $
 
 DISTNAME=	pam_ldap-186
 PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	6
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.padl.com/pub/ \
-		http://www.padl.com/download/
+MASTER_SITES=	ftp://ftp.padl.com/pub/
+MASTER_SITES+=	http://www.padl.com/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html

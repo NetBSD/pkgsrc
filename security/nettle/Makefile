@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2016/10/03 12:28:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:24 agc Exp $
 
 DISTNAME=	nettle-3.3
 CATEGORIES=	devel security
-MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/ \
-		ftp://ftp.lysator.liu.se/pub/security/lsh/
+MASTER_SITES=	http://www.lysator.liu.se/~nisse/archive/
+MASTER_SITES+=	ftp://ftp.lysator.liu.se/pub/security/lsh/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lysator.liu.se/~nisse/nettle/

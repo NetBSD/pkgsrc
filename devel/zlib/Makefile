@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.53 2015/08/30 10:54:11 richard Exp $
+# $NetBSD: Makefile,v 1.54 2017/01/19 18:52:08 agc Exp $
 
 DISTNAME=	zlib-1.2.8
 PKGREVISION=	3
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
-		http://zlib.net/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/}
+MASTER_SITES+=	http://zlib.net/
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org

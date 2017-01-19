@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2014/10/09 14:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2017/01/19 18:52:16 agc Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
 PKGREVISION=	11
 CATEGORIES=	mail
-MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/	\
-		ftp://ftp.research.telcordia.com/pub/nsb/
+MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/
+MASTER_SITES+=	ftp://ftp.research.telcordia.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

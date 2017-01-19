@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2016/08/03 10:22:59 adam Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/19 18:52:13 agc Exp $
 #
 
 DISTNAME=	ibus-libthai-0.1.2
 PKGREVISION=	3
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
-		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
+MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
+MASTER_SITES+=	ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

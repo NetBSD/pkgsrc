@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2015/07/04 16:18:31 joerg Exp $
+# $NetBSD: Makefile.common,v 1.18 2017/01/19 18:52:09 agc Exp $
 
 # used by fonts/cyr-rfx-bulgarian-mik/Makefile
 # used by fonts/cyr-rfx-ibm-cp866/Makefile
@@ -15,9 +15,8 @@
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
-MASTER_SITES=	\
-	ftp://ftp.ptc.spbu.ru/mirror/ftp.inp.nsk.su/pub/BINP/X11/fonts/cyr-rfx/ \
-	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/
+MASTER_SITES=	ftp://ftp.ptc.spbu.ru/mirror/ftp.inp.nsk.su/pub/BINP/X11/fonts/cyr-rfx/
+MASTER_SITES+=	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	shattered@NetBSD.org

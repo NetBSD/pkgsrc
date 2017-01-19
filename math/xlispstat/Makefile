@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2016/02/25 15:26:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/19 18:52:18 agc Exp $
 
 DISTNAME=		xlispstat-3-52-20
 PKGNAME=		xlispstat-3.52.20
 CATEGORIES=		math lang
-MASTER_SITES=		http://lib.stat.cmu.edu/xlispstat/Src/3-52/ \
-			ftp://ftp.stat.umn.edu/pub/xlispstat/3-52/
+MASTER_SITES=		http://lib.stat.cmu.edu/xlispstat/Src/3-52/
+MASTER_SITES+=		ftp://ftp.stat.umn.edu/pub/xlispstat/3-52/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.stat.uiowa.edu/~luke/xls/xlsinfo/

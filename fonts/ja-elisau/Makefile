@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2015/07/04 16:18:31 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:09 agc Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
 PKGREVISION=		2
 CATEGORIES=		fonts x11 japanese
-MASTER_SITES=		http://www.wheel.gr.jp/~dai/software/ \
-			ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
+MASTER_SITES=		http://www.wheel.gr.jp/~dai/software/
+MASTER_SITES+=		ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
 EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} clR5x8.bdf
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2013/10/01 16:07:02 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/19 18:52:02 agc Exp $
 #
 
 DISTNAME=		libmpd-11.8.17
 CATEGORIES=		audio
-MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/11.8/ \
-			${MASTER_SITE_SOURCEFORGE:=musicpd/}
+MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/11.8/
+MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gmpc.wikia.com/?title=Libmpd

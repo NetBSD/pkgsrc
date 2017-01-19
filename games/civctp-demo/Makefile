@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2012/10/06 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/19 18:52:09 agc Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
 PKGREVISION=	1
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/civctp/ \
-		ftp://download.linuxlords.com/pub/demos/civctp/ \
-		ftp://ftp.linux.tucows.com/pub/Loki/demos/civctp/
+MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/civctp/
+MASTER_SITES+=	ftp://download.linuxlords.com/pub/demos/civctp/
+MASTER_SITES+=	ftp://ftp.linux.tucows.com/pub/Loki/demos/civctp/
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/products/civctp/

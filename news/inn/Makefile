@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.123 2016/06/08 19:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2017/01/19 18:52:21 agc Exp $
 
 DISTNAME=		inn-2.5.5
 PKGREVISION=		2
 CATEGORIES=		news
-MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
-			ftp://ftp.fu-berlin.de/unix/news/inn/
+MASTER_SITES=		ftp://ftp.isc.org/isc/inn/
+MASTER_SITES+=		ftp://ftp.fu-berlin.de/unix/news/inn/
 
 MAINTAINER=		spz@NetBSD.org
 HOMEPAGE=		http://www.isc.org/software/inn/

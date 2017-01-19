@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2015/04/24 12:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/19 18:52:18 agc Exp $
 
 DISTNAME=	src-mdp-1.9a5
 PKGNAME=	${DISTNAME:S/src-//}
 PKGREVISION=	1
 CATEGORIES=	mbone
-MASTER_SITES=	http://downloads.pf.itd.nrl.navy.mil/mdp/ \
-		http://downloads.pf.itd.nrl.navy.mil/protolib/
+MASTER_SITES=	http://downloads.pf.itd.nrl.navy.mil/mdp/
+MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/protolib/
 DISTFILES=	src-mdp-1.9a5.tgz src-protolib-1.0a3d.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
