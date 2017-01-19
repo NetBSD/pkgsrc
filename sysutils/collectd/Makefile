@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2016/10/13 15:17:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/19 17:20:42 he Exp $
 
 .include "../../sysutils/collectd/Makefile.common"
+
+PKGREVISION=	1
 
 COMMENT=	Statistics collection daemon base
 
