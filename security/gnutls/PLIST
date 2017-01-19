@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2016/09/19 12:33:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53.4.1 2017/01/19 19:55:17 bsiegert Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -83,6 +83,7 @@ man/man3/gnutls_anon_free_client_credentials.3
 man/man3/gnutls_anon_free_server_credentials.3
 man/man3/gnutls_anon_set_params_function.3
 man/man3/gnutls_anon_set_server_dh_params.3
+man/man3/gnutls_anon_set_server_known_dh_params.3
 man/man3/gnutls_anon_set_server_params_function.3
 man/man3/gnutls_auth_client_get_type.3
 man/man3/gnutls_auth_get_type.3
@@ -114,8 +115,10 @@ man/man3/gnutls_certificate_server_set_request.3
 man/man3/gnutls_certificate_set_dh_params.3
 man/man3/gnutls_certificate_set_flags.3
 man/man3/gnutls_certificate_set_key.3
+man/man3/gnutls_certificate_set_known_dh_params.3
 man/man3/gnutls_certificate_set_ocsp_status_request_file.3
 man/man3/gnutls_certificate_set_ocsp_status_request_function.3
+man/man3/gnutls_certificate_set_ocsp_status_request_function2.3
 man/man3/gnutls_certificate_set_openpgp_key.3
 man/man3/gnutls_certificate_set_openpgp_key_file.3
 man/man3/gnutls_certificate_set_openpgp_key_file2.3
@@ -170,7 +173,6 @@ man/man3/gnutls_cipher_get_name.3
 man/man3/gnutls_cipher_get_tag_size.3
 man/man3/gnutls_cipher_init.3
 man/man3/gnutls_cipher_list.3
-man/man3/gnutls_cipher_self_test.3
 man/man3/gnutls_cipher_set_iv.3
 man/man3/gnutls_cipher_suite_get_name.3
 man/man3/gnutls_cipher_suite_info.3
@@ -219,7 +221,6 @@ man/man3/gnutls_digest_get_id.3
 man/man3/gnutls_digest_get_name.3
 man/man3/gnutls_digest_get_oid.3
 man/man3/gnutls_digest_list.3
-man/man3/gnutls_digest_self_test.3
 man/man3/gnutls_dtls_cookie_send.3
 man/man3/gnutls_dtls_cookie_verify.3
 man/man3/gnutls_dtls_get_data_mtu.3
@@ -301,7 +302,6 @@ man/man3/gnutls_mac_get_key_size.3
 man/man3/gnutls_mac_get_name.3
 man/man3/gnutls_mac_get_nonce_size.3
 man/man3/gnutls_mac_list.3
-man/man3/gnutls_mac_self_test.3
 man/man3/gnutls_memcmp.3
 man/man3/gnutls_memset.3
 man/man3/gnutls_ocsp_req_add_cert.3
@@ -326,6 +326,7 @@ man/man3/gnutls_ocsp_resp_get_extension.3
 man/man3/gnutls_ocsp_resp_get_nonce.3
 man/man3/gnutls_ocsp_resp_get_produced.3
 man/man3/gnutls_ocsp_resp_get_responder.3
+man/man3/gnutls_ocsp_resp_get_responder2.3
 man/man3/gnutls_ocsp_resp_get_responder_raw_id.3
 man/man3/gnutls_ocsp_resp_get_response.3
 man/man3/gnutls_ocsp_resp_get_signature.3
@@ -437,7 +438,6 @@ man/man3/gnutls_pk_get_id.3
 man/man3/gnutls_pk_get_name.3
 man/man3/gnutls_pk_get_oid.3
 man/man3/gnutls_pk_list.3
-man/man3/gnutls_pk_self_test.3
 man/man3/gnutls_pk_to_sign.3
 man/man3/gnutls_pkcs11_add_provider.3
 man/man3/gnutls_pkcs11_copy_attached_extension.3
@@ -538,6 +538,7 @@ man/man3/gnutls_pkcs7_get_crt_count.3
 man/man3/gnutls_pkcs7_get_crt_raw.3
 man/man3/gnutls_pkcs7_get_crt_raw2.3
 man/man3/gnutls_pkcs7_get_embedded_data.3
+man/man3/gnutls_pkcs7_get_embedded_data_oid.3
 man/man3/gnutls_pkcs7_get_signature_count.3
 man/man3/gnutls_pkcs7_get_signature_info.3
 man/man3/gnutls_pkcs7_import.3
@@ -624,6 +625,7 @@ man/man3/gnutls_psk_set_server_credentials_file.3
 man/man3/gnutls_psk_set_server_credentials_function.3
 man/man3/gnutls_psk_set_server_credentials_hint.3
 man/man3/gnutls_psk_set_server_dh_params.3
+man/man3/gnutls_psk_set_server_known_dh_params.3
 man/man3/gnutls_psk_set_server_params_function.3
 man/man3/gnutls_pubkey_deinit.3
 man/man3/gnutls_pubkey_encrypt_data.3
@@ -696,6 +698,7 @@ man/man3/gnutls_session_channel_binding.3
 man/man3/gnutls_session_enable_compatibility_mode.3
 man/man3/gnutls_session_etm_status.3
 man/man3/gnutls_session_ext_master_secret_status.3
+man/man3/gnutls_session_ext_register.3
 man/man3/gnutls_session_force_valid.3
 man/man3/gnutls_session_get_data.3
 man/man3/gnutls_session_get_data2.3
@@ -716,6 +719,7 @@ man/man3/gnutls_session_set_ptr.3
 man/man3/gnutls_session_set_verify_cert.3
 man/man3/gnutls_session_set_verify_cert2.3
 man/man3/gnutls_session_set_verify_function.3
+man/man3/gnutls_session_supplemental_register.3
 man/man3/gnutls_session_ticket_enable_client.3
 man/man3/gnutls_session_ticket_enable_server.3
 man/man3/gnutls_session_ticket_key_generate.3
@@ -797,6 +801,7 @@ man/man3/gnutls_transport_set_pull_timeout_function.3
 man/man3/gnutls_transport_set_push_function.3
 man/man3/gnutls_transport_set_vec_push_function.3
 man/man3/gnutls_url_is_supported.3
+man/man3/gnutls_utf8_password_normalize.3
 man/man3/gnutls_verify_stored_pubkey.3
 man/man3/gnutls_x509_aia_deinit.3
 man/man3/gnutls_x509_aia_get.3
@@ -828,6 +833,7 @@ man/man3/gnutls_x509_crl_get_extension_info.3
 man/man3/gnutls_x509_crl_get_extension_oid.3
 man/man3/gnutls_x509_crl_get_issuer_dn.3
 man/man3/gnutls_x509_crl_get_issuer_dn2.3
+man/man3/gnutls_x509_crl_get_issuer_dn3.3
 man/man3/gnutls_x509_crl_get_issuer_dn_by_oid.3
 man/man3/gnutls_x509_crl_get_next_update.3
 man/man3/gnutls_x509_crl_get_number.3
@@ -865,6 +871,7 @@ man/man3/gnutls_x509_crq_get_basic_constraints.3
 man/man3/gnutls_x509_crq_get_challenge_password.3
 man/man3/gnutls_x509_crq_get_dn.3
 man/man3/gnutls_x509_crq_get_dn2.3
+man/man3/gnutls_x509_crq_get_dn3.3
 man/man3/gnutls_x509_crq_get_dn_by_oid.3
 man/man3/gnutls_x509_crq_get_dn_oid.3
 man/man3/gnutls_x509_crq_get_extension_by_oid.3
@@ -912,6 +919,7 @@ man/man3/gnutls_x509_crt_check_email.3
 man/man3/gnutls_x509_crt_check_hostname.3
 man/man3/gnutls_x509_crt_check_hostname2.3
 man/man3/gnutls_x509_crt_check_issuer.3
+man/man3/gnutls_x509_crt_check_key_purpose.3
 man/man3/gnutls_x509_crt_check_revocation.3
 man/man3/gnutls_x509_crt_cpy_crl_dist_points.3
 man/man3/gnutls_x509_crt_deinit.3
@@ -928,6 +936,7 @@ man/man3/gnutls_x509_crt_get_ca_status.3
 man/man3/gnutls_x509_crt_get_crl_dist_points.3
 man/man3/gnutls_x509_crt_get_dn.3
 man/man3/gnutls_x509_crt_get_dn2.3
+man/man3/gnutls_x509_crt_get_dn3.3
 man/man3/gnutls_x509_crt_get_dn_by_oid.3
 man/man3/gnutls_x509_crt_get_dn_oid.3
 man/man3/gnutls_x509_crt_get_expiration_time.3
@@ -944,6 +953,7 @@ man/man3/gnutls_x509_crt_get_issuer_alt_name2.3
 man/man3/gnutls_x509_crt_get_issuer_alt_othername_oid.3
 man/man3/gnutls_x509_crt_get_issuer_dn.3
 man/man3/gnutls_x509_crt_get_issuer_dn2.3
+man/man3/gnutls_x509_crt_get_issuer_dn3.3
 man/man3/gnutls_x509_crt_get_issuer_dn_by_oid.3
 man/man3/gnutls_x509_crt_get_issuer_dn_oid.3
 man/man3/gnutls_x509_crt_get_issuer_unique_id.3
@@ -1030,6 +1040,7 @@ man/man3/gnutls_x509_dn_export.3
 man/man3/gnutls_x509_dn_export2.3
 man/man3/gnutls_x509_dn_get_rdn_ava.3
 man/man3/gnutls_x509_dn_get_str.3
+man/man3/gnutls_x509_dn_get_str2.3
 man/man3/gnutls_x509_dn_import.3
 man/man3/gnutls_x509_dn_init.3
 man/man3/gnutls_x509_dn_oid_known.3
@@ -1115,6 +1126,7 @@ man/man3/gnutls_x509_privkey_sign_hash.3
 man/man3/gnutls_x509_privkey_verify_params.3
 man/man3/gnutls_x509_privkey_verify_seed.3
 man/man3/gnutls_x509_rdn_get.3
+man/man3/gnutls_x509_rdn_get2.3
 man/man3/gnutls_x509_rdn_get_by_oid.3
 man/man3/gnutls_x509_rdn_get_oid.3
 man/man3/gnutls_x509_tlsfeatures_add.3
