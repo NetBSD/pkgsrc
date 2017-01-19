@@ -1,8 +1,17 @@
-$NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
+$NetBSD: patch-setup.py,v 1.3 2017/01/19 13:55:53 wen Exp $
 
---- setup.py.orig	2016-06-25 21:38:39.000000000 +0000
+--- setup.py.orig	2017-01-17 07:57:54.000000000 +0000
 +++ setup.py
-@@ -44,7 +44,8 @@ host_platform = get_platform()
+@@ -7,7 +7,7 @@ import importlib._bootstrap
+ import importlib.util
+ import sysconfig
+ 
+-from distutils import log
++from distutils import log,text_file
+ from distutils.errors import *
+ from distutils.core import Extension, setup
+ from distutils.command.build_ext import build_ext
+@@ -43,7 +43,8 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -12,7 +21,7 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (after any relative
-@@ -488,15 +489,15 @@ class PyBuildExt(build_ext):
+@@ -487,15 +488,15 @@ class PyBuildExt(build_ext):
              return ['m']
  
      def detect_modules(self):
@@ -37,17 +46,17 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -809,8 +810,7 @@ class PyBuildExt(build_ext):
+@@ -808,8 +809,7 @@ class PyBuildExt(build_ext):
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
 -                              '/usr/local/ssl/include',
 -                              '/usr/contrib/ssl/include/'
-+                              '@SSLBASE@/include'
++                              '/usr/include'
                               ]
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
                               search_for_ssl_incs_in
-@@ -821,9 +821,7 @@ class PyBuildExt(build_ext):
+@@ -820,9 +820,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -58,7 +67,7 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -842,7 +840,7 @@ class PyBuildExt(build_ext):
+@@ -841,7 +839,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -67,7 +76,7 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -1216,6 +1214,30 @@ class PyBuildExt(build_ext):
+@@ -1215,6 +1213,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -98,7 +107,7 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1227,7 +1249,7 @@ class PyBuildExt(build_ext):
+@@ -1226,7 +1248,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -107,7 +116,7 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -2027,10 +2049,7 @@ class PyBuildExt(build_ext):
+@@ -2028,10 +2050,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -119,7 +128,7 @@ $NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
              libraries = []
              sources = [
                '_decimal/_decimal.c',
-@@ -2276,7 +2295,7 @@ def main():
+@@ -2277,7 +2296,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
