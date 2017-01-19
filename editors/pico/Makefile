@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2012/10/03 11:43:42 asau Exp $
+# $NetBSD: Makefile,v 1.79 2017/01/19 18:52:08 agc Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -10,8 +10,8 @@ DISTNAME=	pine4.64
 PKGNAME=	pico-4.10
 PKGREVISION=	2
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
-		ftp://ftp.fu-berlin.de/unix/mail/pine/
+MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
+MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/mail/pine/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2014/10/09 14:06:10 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:06 agc Exp $
 #
 
 DISTNAME=	slang-2.2.4
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/ \
-		ftp://ftp.ntua.gr/pub/lang/slang/slang/v2.2/
+MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/
+MASTER_SITES+=	ftp://ftp.ntua.gr/pub/lang/slang/slang/v2.2/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

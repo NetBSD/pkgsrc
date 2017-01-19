@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2015/03/06 21:54:56 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:26 agc Exp $
 #
 
 VERSION=		2.14.4
 DISTNAME=		iwlwifi-3945-ucode-${VERSION}
 PKGNAME=		wpi-firmware2-${VERSION}
 CATEGORIES=		sysutils
-MASTER_SITES=		http://intellinuxwireless.org/iwlwifi/downloads/ \
-			http://firmware.openbsd.org/firmware-dist/
+MASTER_SITES=		http://intellinuxwireless.org/iwlwifi/downloads/
+MASTER_SITES+=		http://firmware.openbsd.org/firmware-dist/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

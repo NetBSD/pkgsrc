@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/03/06 21:54:56 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:26 agc Exp $
 #
 
 DISTNAME=		ipw2200-fw-3.0
 PKGNAME=		iwi-firmware3-3.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://damien.bergamini.free.fr/iwifw/ \
-			http://firmware.openbsd.org/firmware-dist/
+MASTER_SITES=		http://damien.bergamini.free.fr/iwifw/
+MASTER_SITES+=		http://firmware.openbsd.org/firmware-dist/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		Damien.Bergamini@Free.FR

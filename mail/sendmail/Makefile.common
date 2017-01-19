@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2016/05/20 12:11:39 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.65 2017/01/19 18:52:17 agc Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -8,9 +8,9 @@
 
 DISTNAME=	sendmail.${DIST_VERS}
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
-		ftp://ftp.sendmail.org/pub/sendmail/past-releases/ \
-		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/
+MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
+MASTER_SITES+=	ftp://ftp.sendmail.org/pub/sendmail/past-releases/
+MASTER_SITES+=	ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/
 
 OWNER?=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/

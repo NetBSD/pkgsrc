@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.61 2017/01/16 23:45:12 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=	flightgear-2.8.0
 PKGREVISION=	32
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Source/ \
-		http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/ \
-		ftp://ftp.kingmont.com/flightsims/flightgear/Source/
+MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Source/
+MASTER_SITES+=	http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Source/
+MASTER_SITES+=	ftp://ftp.kingmont.com/flightsims/flightgear/Source/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
