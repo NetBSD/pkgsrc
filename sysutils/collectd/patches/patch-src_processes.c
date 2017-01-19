@@ -1,8 +1,8 @@
-$NetBSD: patch-src_processes.c,v 1.4 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_processes.c,v 1.5 2017/01/19 17:20:42 he Exp $
 
 Add a port to NetBSD.
 
---- src/processes.c.orig	2016-11-30 08:52:01.324910450 +0000
+--- src/processes.c.orig	2016-11-30 08:52:01.000000000 +0000
 +++ src/processes.c
 @@ -95,14 +95,14 @@
  /* #endif KERNEL_LINUX */
@@ -63,7 +63,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
    pagesize = getpagesize();
-@@ -1917,6 +1933,187 @@ static int ps_read(void) {
+@@ -1917,6 +1933,191 @@ static int ps_read(void) {
      ps_submit_proc_list(ps_ptr);
  /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
  
@@ -166,6 +166,10 @@ Add a port to NetBSD.
 +      pse.cpu_system = 0;
 +      pse.cpu_user_counter = 0;
 +      pse.cpu_system_counter = 0;
++      /* context switch counters not implemented */
++      pse.cswitch_vol = -1;
++      pse.cswitch_invol = -1;
++
 +      /*
 +       * The u-area might be swapped out, and we can't get
 +       * at it because we have a crashdump and no swap.
