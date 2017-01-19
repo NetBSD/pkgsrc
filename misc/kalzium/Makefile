@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2017/01/01 16:06:27 adam Exp $
+# $NetBSD: Makefile,v 1.34 2017/01/19 09:08:59 markd Exp $
 
-DISTNAME=	kalzium-15.12.0
-PKGREVISION=	3
+DISTNAME=	kalzium-16.08.0
 CATEGORIES=	misc
 COMMENT=	Periodic table of elements
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.08.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
