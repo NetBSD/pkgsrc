@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2016/06/08 19:25:20 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2017/01/19 18:52:30 agc Exp $
 
 DISTNAME=	rxvt-unicode-9.22
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://dist.schmorp.de/rxvt-unicode/ \
-		http://dist.schmorp.de/rxvt-unicode/Attic/
+MASTER_SITES=	http://dist.schmorp.de/rxvt-unicode/
+MASTER_SITES+=	http://dist.schmorp.de/rxvt-unicode/Attic/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

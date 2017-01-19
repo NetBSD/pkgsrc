@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2016/07/09 06:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:04 agc Exp $
 
 DISTNAME=	jcode.pl-2.13
 PKGNAME=	${DISTNAME:S/jcode.pl/jcode-perl/}
 PKGREVISION=	9
 CATEGORIES=	japanese converters perl5
-MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
-		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
+MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/
+MASTER_SITES+=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org

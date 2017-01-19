@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2016/09/25 23:14:52 kamil Exp $
+# $NetBSD: Makefile,v 1.40 2017/01/19 18:52:03 agc Exp $
 
 DISTNAME=		benchfft-2.0
 PKGREVISION=		5
 CATEGORIES=		benchmarks math
-MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
-			ftp://ftp.fftw.org/pub/fftw/old/benchfft/
+MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/
+MASTER_SITES+=		ftp://ftp.fftw.org/pub/fftw/old/benchfft/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} fftw-2.0.1${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

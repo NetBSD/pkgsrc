@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2015/03/15 17:09:00 hiramatsu Exp $
+# $NetBSD: Makefile.common,v 1.10 2017/01/19 18:52:27 agc Exp $
 #
 # used by textproc/java-native-hyperestraier/Makefile
 # used by textproc/java-pure-hyperestraier/Makefile
@@ -8,8 +8,8 @@
 
 DISTNAME=	hyperestraier-${HYPERESTRAIER_VERSION}
 CATEGORIES=	japanese textproc www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hyperestraier/}		\
-		http://hyperestraier.sourceforge.net/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hyperestraier/}
+MASTER_SITES+=	http://hyperestraier.sourceforge.net/
 HYPERESTRAIER_VERSION=1.4.13
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
