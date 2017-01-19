@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.167 2016/09/20 08:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.167.4.1 2017/01/19 19:55:17 bsiegert Exp $
 
-DISTNAME=	gnutls-3.5.4
-PKGREVISION=	1
+DISTNAME=	gnutls-3.5.8
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.5/
 EXTRACT_SUFX=	.tar.xz
@@ -24,9 +23,9 @@ CONFIGURE_ARGS+=	--disable-libdane
 CONFIGURE_ARGS+=	--without-tpm
 CONFIGURE_ARGS+=	--disable-valgrind-tests
 
-# as of 3.5.4, 0 test failures
+# as of 3.5.8, 0 test failures
 TEST_TARGET=		check
-# without the USE_TOOLS line below, two more shell script based tests fail
+# without the USE_TOOLS line below, the fastopen.sh test fails
 # but when this line is added, the tool path for bash is embedded
 # in to the binaries, so only enable this for testing and
 # disable before commit
@@ -34,15 +33,15 @@ TEST_TARGET=		check
 
 INFO_FILES=		yes
 
-REPLACE_BASH+=	tests/cert-tests/openpgp-certs
-REPLACE_BASH+=	tests/danetool.sh
-REPLACE_BASH+=	tests/ocsp-tests/ocsp-must-staple-connection
-REPLACE_BASH+=	tests/ocsp-tests/ocsp-tls-connection
-REPLACE_BASH+=	tests/key-tests/dsa
-REPLACE_BASH+=	tests/suite/testcompat-main-polarssl
-REPLACE_BASH+=	tests/suite/testcompat-main-openssl
-REPLACE_BASH+=	tests/fastopen.sh
-REPLACE_BASH+=	tests/starttls.sh
+REPLACE_BASH+=		tests/cert-tests/openpgp-certs
+REPLACE_BASH+=		tests/danetool.sh
+REPLACE_BASH+=		tests/ocsp-tests/ocsp-must-staple-connection
+REPLACE_BASH+=		tests/ocsp-tests/ocsp-tls-connection
+REPLACE_BASH+=		tests/key-tests/dsa
+REPLACE_BASH+=		tests/suite/testcompat-main-polarssl
+REPLACE_BASH+=		tests/suite/testcompat-main-openssl
+REPLACE_BASH+=		tests/fastopen.sh
+REPLACE_BASH+=		tests/starttls.sh
 
 REPLACE_PERL+=	doc/scripts/gdoc doc/scripts/sort2.pl
 
@@ -56,6 +55,8 @@ EGDIR=		${PREFIX}/share/examples/gnutls
 
 # Assembler support is broken for SunOS in 3.2.9.
 CONFIGURE_ARGS.SunOS+=	--disable-hardware-acceleration
+
+CONFIGURE_ARGS.FreeBSD+=	ac_cv_type_max_align_t=yes
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} include/gnutls
 
@@ -73,10 +74,11 @@ post-install:
 CHECK_BUILTIN.zlib:=yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
+BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=4.9
 .include "../../security/libtasn1/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nettle+=		nettle>=3.1
 .include "../../security/nettle/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
 # guile is useful for selftests, but bindings should be separate pkgs
 #.include "../../lang/guile20/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
