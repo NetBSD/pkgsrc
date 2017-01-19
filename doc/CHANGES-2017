@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.329 2017/01/19 14:57:35 taca Exp $
+$NetBSD: CHANGES-2017,v 1.330 2017/01/19 14:58:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -400,3 +400,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php71 to 7.1.1 [taca 2017-01-19]
 	Updated lang/php70 to 7.0.15 [taca 2017-01-19]
 	Updated www/contao43 to 4.3.3 [taca 2017-01-19]
+	Updated www/contao35 to 3.5.24 [taca 2017-01-19]
