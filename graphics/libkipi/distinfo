@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 21:34:08 agc Exp $
+$NetBSD: distinfo,v 1.18 2017/01/19 09:05:06 markd Exp $
 
-SHA1 (libkipi-4.14.3.tar.xz) = bb9eb81d5843736e1736a442e9e8422abcabc4db
-RMD160 (libkipi-4.14.3.tar.xz) = a156d6cf50415305dc1798143ee31f4f926203d2
-SHA512 (libkipi-4.14.3.tar.xz) = 62c93663e82336d302d454cb923d001592e255a90ceb6eabfab95637a0b4c220e10601bfeda381383b165c56db5f114da094dca3861f365874587bee14052941
-Size (libkipi-4.14.3.tar.xz) = 94636 bytes
+SHA1 (libkipi-15.08.3.tar.xz) = e8d260f58d3287eec629fc8237f411831190f475
+RMD160 (libkipi-15.08.3.tar.xz) = 08c9232cd24b47bcea1c6395d8f4871e7fe1458a
+SHA512 (libkipi-15.08.3.tar.xz) = e1dfeef8d71e5e22a361d4adc1e9dd1f4d613ac195cf93ad1851740012199b67cc17afea276a22a7c20c9b599c5ee6eb804c3104606dbeead73e0adc07a42eac
+Size (libkipi-15.08.3.tar.xz) = 95080 bytes
