@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: distinfo,v 1.15 2017/01/19 06:48:46 wen Exp $
 
-SHA1 (bwbasic-3.00.zip) = 89bb9e960bb91339752bb6d9796d93998d9ca3f6
-RMD160 (bwbasic-3.00.zip) = 3d78b2fc3c6a73856b92443c296d71cd5b39208e
-SHA512 (bwbasic-3.00.zip) = 28d43aa272bf75eda822e7629bcf227049cb8d05ad24f7ebe6229871c302a8bc360b8c5cb252248e8285065be8c06b7fa94d53e7c81042078f3bcda281584afe
-Size (bwbasic-3.00.zip) = 2777709 bytes
-SHA1 (patch-aa) = baa2ae3e72dda0146914d57285aba715d93aec60
-SHA1 (patch-ac) = c82d9eb2159faae0ad3f22da525d2a2dd2de4e95
+SHA1 (bwbasic-3.10.zip) = da5966490b83c47b61c937f5090e75c50d4df520
+RMD160 (bwbasic-3.10.zip) = 1b0b279a5e559f189c1dba8e83a0b2689af8ac1c
+SHA512 (bwbasic-3.10.zip) = 36e896bafaac370c1c03f066e1d7830e308b022c9a62833756c13ee179a80cb948cdae1f0ad3129bdd5f72a5f40432bc3989744fc183812ea4bf99807c75c7d8
+Size (bwbasic-3.10.zip) = 3158727 bytes
+SHA1 (patch-aa) = 948ffb5ccde6ffa371fc96c836314738bfdfd789
+SHA1 (patch-ac) = c471944fd4e8d86ebc53746aa008a2e7424a6dc3
 SHA1 (patch-renum.c) = 458affe1dd9742b54040b9721d2a8a7cfa82956b
