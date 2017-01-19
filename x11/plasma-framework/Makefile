@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/12/04 05:17:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/19 09:47:02 markd Exp $
 
 DISTNAME=	plasma-framework-${KF5VER}
 PKGREVISION=	2
@@ -13,6 +13,12 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 BUILD_DEPENDS+=	kdoctools>=${KF5VER}:../../devel/kdoctools
 
 USE_TOOLS+=	msgmerge pkg-config
+
+SUBST_CLASSES+=		fix-moc
+SUBST_STAGE.fix-moc=	post-configure
+SUBST_MESSAGE.fix-moc=	Cleaning up MOC includes
+SUBST_FILES.fix-moc=	_KDE_build/src/scriptengines/qml/CMakeFiles/plasma_appletscript_declarative_automoc.dir/AutogenInfo.cmake
+SUBST_SED.fix-moc=	-e 's,;${PREFIX}/include;,;,g'
 
 .include "../../devel/kdeclarative/buildlink3.mk"
 .include "../../x11/kactivities5/buildlink3.mk"
