@@ -1,11 +1,11 @@
-$NetBSD: patch-Lib_distutils_unixccompiler.py,v 1.2 2016/02/23 15:07:36 joerg Exp $
+$NetBSD: patch-Lib_distutils_unixccompiler.py,v 1.3 2017/01/19 13:55:53 wen Exp $
 
 Do not force RUNPATH vs RPATH, trust the compiler to know what the
 platform wants.
 
---- Lib/distutils/unixccompiler.py.orig	2013-05-15 16:32:54.000000000 +0000
+--- Lib/distutils/unixccompiler.py.orig	2017-01-17 07:57:48.000000000 +0000
 +++ Lib/distutils/unixccompiler.py
-@@ -232,22 +232,7 @@ class UnixCCompiler(CCompiler):
+@@ -236,22 +236,7 @@ class UnixCCompiler(CCompiler):
          elif sys.platform[:7] == "irix646" or sys.platform[:6] == "osf1V5":
              return ["-rpath", dir]
          else:
@@ -29,3 +29,12 @@ platform wants.
  
      def library_option(self, lib):
          return "-l" + lib
+@@ -298,7 +283,7 @@ class UnixCCompiler(CCompiler):
+ 
+             if sys.platform == 'darwin' and (
+                 dir.startswith('/System/') or (
+-                dir.startswith('/usr/') and not dir.startswith('/usr/local/'))):
++                dir.startswith('/usr/') and not dir.startswith('/usr/pkg/'))):
+ 
+                 shared = os.path.join(sysroot, dir[1:], shared_f)
+                 dylib = os.path.join(sysroot, dir[1:], dylib_f)
