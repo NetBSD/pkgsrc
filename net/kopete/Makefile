@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2017/01/01 16:06:33 adam Exp $
+# $NetBSD: Makefile,v 1.28 2017/01/19 09:23:36 markd Exp $
 
-DISTNAME=	kopete-15.12.0
-PKGREVISION=	5
+DISTNAME=	kopete-16.12.0
 CATEGORIES=	net
 COMMENT=	Multi-protocol instant messenger client
-MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
 
 # Race on translatorplugin.h
 MAKE_JOBS_SAFE=	no
@@ -38,6 +37,7 @@ BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../chat/meanwhile/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/qjson/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
