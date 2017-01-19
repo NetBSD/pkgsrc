@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.82 2015/03/07 15:30:58 mef Exp $
+# $NetBSD: Makefile,v 1.83 2017/01/19 18:52:22 agc Exp $
 
 DISTNAME=	xpdf-3.04
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
-		${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/xpdf/} \
-		http://gd.tuwien.ac.at/publishing/xpdf/
+MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
+MASTER_SITES+=	${MASTER_SITE_SUNSITE:=apps/graphics/viewers/X/xpdf/}
+MASTER_SITES+=	http://gd.tuwien.ac.at/publishing/xpdf/
 PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

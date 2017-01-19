@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2013/04/08 11:17:17 rodent Exp $
+# $NetBSD: Makefile,v 1.45 2017/01/19 18:52:19 agc Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
 PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://www.delegate.org/anonftp/DeleGate/ \
-		ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/delegate.org/
+MASTER_SITES=	http://www.delegate.org/anonftp/DeleGate/
+MASTER_SITES+=	ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/delegate.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.delegate.org/delegate/

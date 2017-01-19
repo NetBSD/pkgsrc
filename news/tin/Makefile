@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.72 2017/01/11 02:15:56 roy Exp $
+# $NetBSD: Makefile,v 1.73 2017/01/19 18:52:21 agc Exp $
 #
 
 DISTNAME=	tin-2.2.1
 PKGREVISION=	11
 CATEGORIES=	news
-MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/ \
-		ftp://ftp.funet.fi/pub/unix/news/tin-unoff/ \
-		ftp://ftp.lip6.fr/pub/unix/news/readers/tin-unoff/ \
-		ftp://ftp.akk.uni-karlsruhe.de/pub/news/clients/tin/stable/ \
-		ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/ \
-		ftp://ftp.cuhk.edu.hk/pub/packages/news/tin/stable/ \
-		ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/
+MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/
+MASTER_SITES+=	ftp://ftp.funet.fi/pub/unix/news/tin-unoff/
+MASTER_SITES+=	ftp://ftp.lip6.fr/pub/unix/news/readers/tin-unoff/
+MASTER_SITES+=	ftp://ftp.akk.uni-karlsruhe.de/pub/news/clients/tin/stable/
+MASTER_SITES+=	ftp://ftp.cs.tu-berlin.de/pub/net/news/tin/stable/
+MASTER_SITES+=	ftp://ftp.cuhk.edu.hk/pub/packages/news/tin/stable/
+MASTER_SITES+=	ftp://sunsite.icm.edu.pl/pub/unix/news/tin/stable/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

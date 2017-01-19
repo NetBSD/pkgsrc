@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.78 2016/12/01 14:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2017/01/19 18:52:28 agc Exp $
 
 DISTNAME=	horde-3.3.13
 PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
-		ftp://ftp.horde.org/pub/horde/
+MASTER_SITES=	http://ftp.horde.org/pub/horde/
+MASTER_SITES+=	ftp://ftp.horde.org/pub/horde/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/

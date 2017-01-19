@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/19 18:52:21 agc Exp $
 
 PKGNAME=		teamspeak-server-2.0.24.01
 DISTNAME=		ts2_server_rc2_202319
 PKGREVISION=		1
 CATEGORIES=		net audio
-MASTER_SITES=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202401/ \
-			ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202319/
+MASTER_SITES=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202401/
+MASTER_SITES+=		ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202319/
 EXTRACT_SUFX=		.tar.bz2
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} server_linux

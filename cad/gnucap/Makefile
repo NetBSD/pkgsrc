@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2015/05/03 19:43:21 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/19 18:52:03 agc Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
 PKGNAME=	gnucap-20060708
 PKGREVISION=	3
 CATEGORIES=	cad
-MASTER_SITES=	http://www.gnucap.org/devel/ \
-		http://www.geda.seul.org/dist/
+MASTER_SITES=	http://www.gnucap.org/devel/
+MASTER_SITES+=	http://www.geda.seul.org/dist/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.gnucap.org/

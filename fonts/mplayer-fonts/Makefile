@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2016/01/22 08:08:49 zafer Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/19 18:52:09 agc Exp $
 
 DISTNAME=	mplayer-fonts-20030714
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://ftp1.mplayerhq.hu/MPlayer/releases/fonts/ \
-		http://www1.mplayerhq.hu/MPlayer/releases/fonts/ \
-		http://www2.mplayerhq.hu/MPlayer/releases/fonts/
+MASTER_SITES=	ftp://ftp1.mplayerhq.hu/MPlayer/releases/fonts/
+MASTER_SITES+=	http://www1.mplayerhq.hu/MPlayer/releases/fonts/
+MASTER_SITES+=	http://www2.mplayerhq.hu/MPlayer/releases/fonts/
 DISTFILES=	font-arial-iso-8859-1.tar.bz2 \
 		font-arial-iso-8859-2.tar.bz2 \
 		font-arial-iso-8859-7.tar.bz2 \

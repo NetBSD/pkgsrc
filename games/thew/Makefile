@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/08/18 07:31:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/01/19 18:52:10 agc Exp $
 
 DISTNAME=		thew-1.1.1
 PKGREVISION=		3
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=thew/} \
-			http://dinotte.altervista.org/files/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=thew/}
+MASTER_SITES+=		http://dinotte.altervista.org/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ilfoglionascosto@netcat.it

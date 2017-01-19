@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2014/10/09 14:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/19 18:52:17 agc Exp $
 
 DISTNAME=	fftw-2.1.5
 PKGNAME=	fftw2-2.1.5
 PKGREVISION=	3
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/ \
-		http://www.fftw.org/
+MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/
+MASTER_SITES+=	http://www.fftw.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fftw.org/

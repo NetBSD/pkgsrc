@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2015/07/04 16:18:31 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2017/01/19 18:52:09 agc Exp $
 
 DISTNAME=	freefonts-0.10
 PKGREVISION=	3
 CATEGORIES=	fonts
-MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/fonts/} \
-		http://download.gimp.org/pub/gimp/fonts/
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/fonts/}
+MASTER_SITES+=	http://download.gimp.org/pub/gimp/fonts/
 
 MAINTAINER=	reed@reedmedia.net
 COMMENT=	Collection of 79 freely available fonts

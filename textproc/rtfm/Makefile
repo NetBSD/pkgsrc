@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/10/25 06:56:55 asau Exp $
+# $NetBSD: Makefile,v 1.11 2017/01/19 18:52:27 agc Exp $
 
 DISTNAME=	rtfm-1.0
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/	\
-		ftp://ftp.pl.freebsd.org/pub/FreeBSD/ports/distfiles/
+MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/
+MASTER_SITES+=	ftp://ftp.pl.freebsd.org/pub/FreeBSD/ports/distfiles/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NetBSD documentation and GNU Texinfo files search mechanism

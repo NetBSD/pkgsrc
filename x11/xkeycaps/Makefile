@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2012/10/29 05:07:13 asau Exp $
+# $NetBSD: Makefile,v 1.19 2017/01/19 18:52:30 agc Exp $
 #
 
 DISTNAME=	xkeycaps-2.46
 PKGREVISION=	3
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
-		http://www.jwz.org/xkeycaps/
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
+MASTER_SITES+=	http://www.jwz.org/xkeycaps/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

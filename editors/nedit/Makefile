@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.57 2014/04/14 16:41:56 gdt Exp $
+# $NetBSD: Makefile,v 1.58 2017/01/19 18:52:08 agc Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
 PKGREVISION=	9
 CATEGORIES=	editors
 # @pkglint: MASTER_SITE_NEDIT is defined below
-MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/} \
-		${MASTER_SITE_SOURCEFORGE:=nedit/}
+MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/}
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=nedit/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

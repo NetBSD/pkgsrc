@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2015/07/04 16:18:32 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:09 agc Exp $
 #
 
 DISTNAME=	hanyang-font-pcf
 PKGNAME=	ko-hanyang-20010718
 PKGREVISION=	2
 CATEGORIES=	fonts x11 korean
-MASTER_SITES+=	ftp://ftp.kaist.ac.kr/pub/hangul/fonts/ \
-		ftp://ftp.kreonet.re.kr/pub/hangul/cair-archive/fonts/
+MASTER_SITES+=	ftp://ftp.kaist.ac.kr/pub/hangul/fonts/
+MASTER_SITES+=	ftp://ftp.kreonet.re.kr/pub/hangul/cair-archive/fonts/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 fonts for KSC 5601 standard

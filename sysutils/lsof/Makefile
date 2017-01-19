@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.122 2016/07/09 06:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.123 2017/01/19 18:52:26 agc Exp $
 
 DISTNAME=		lsof_4.88
 PKGNAME=		${DISTNAME:S/_/-/}
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
-			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
-			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/ \
-			ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/ \
-			ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/NEW/ \
-			ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/OLD/ \
-			ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/ \
-			ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/NEW/ \
-			ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/OLD/ \
-			ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/ \
-			ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/NEW/ \
-			ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/OLD/ \
-			ftp://sunsite.ualberta.ca/pub/Mirror/lsof/ \
-			ftp://sunsite.ualberta.ca/pub/Mirror/lsof/NEW/ \
-			ftp://sunsite.ualberta.ca/pub/Mirror/lsof/OLD/
+MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
+MASTER_SITES+=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/
+MASTER_SITES+=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
+MASTER_SITES+=		ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/
+MASTER_SITES+=		ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/NEW/
+MASTER_SITES+=		ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/OLD/
+MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/
+MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/NEW/
+MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/OLD/
+MASTER_SITES+=		ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/
+MASTER_SITES+=		ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/NEW/
+MASTER_SITES+=		ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/OLD/
+MASTER_SITES+=		ftp://sunsite.ualberta.ca/pub/Mirror/lsof/
+MASTER_SITES+=		ftp://sunsite.ualberta.ca/pub/Mirror/lsof/NEW/
+MASTER_SITES+=		ftp://sunsite.ualberta.ca/pub/Mirror/lsof/OLD/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2017/01/03 22:19:10 roy Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/19 18:52:26 agc Exp $
 
 DISTNAME=	whowatch-1.4
 PKGREVISION=	6
 CATEGORIES=	sysutils
-MASTER_SITES=	http://wizard.ae.krakow.pl/~mike/download/ \
-		http://janek.ae.krakow.pl/~suszyckm/download/
+MASTER_SITES=	http://wizard.ae.krakow.pl/~mike/download/
+MASTER_SITES+=	http://janek.ae.krakow.pl/~suszyckm/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wizard.ae.krakow.pl/~mike/\#whowatch

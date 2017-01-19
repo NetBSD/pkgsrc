@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2013/04/06 14:22:40 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2017/01/19 18:52:17 agc Exp $
 #
 
 DISTNAME=	gap4r3
 PKGNAME=	gap-4.3.5
 PKGREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/ \
-		ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/ \
-		ftp://ftp.ccs.neu.edu/pub/mirrors/ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/
+MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/
+MASTER_SITES+=	ftp://ftp.math.rwth-aachen.de/pub/gap/gap4/
+MASTER_SITES+=	ftp://ftp.ccs.neu.edu/pub/mirrors/ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 			fix4r3n5.tar.gz
 

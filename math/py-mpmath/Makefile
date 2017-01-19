@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2016/06/10 09:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/19 18:52:18 agc Exp $
 
 DISTNAME=	mpmath-0.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_PYPI:=m/mpmath/} \
-		http://mpmath.org/files/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mpmath/}
+MASTER_SITES+=	http://mpmath.org/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mpmath.org/

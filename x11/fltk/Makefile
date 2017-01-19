@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.83 2015/04/25 14:25:03 tnn Exp $
+# $NetBSD: Makefile,v 1.84 2017/01/19 18:52:29 agc Exp $
 
 DISTNAME=	fltk-1.1.10-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 PKGREVISION=	7
 CATEGORIES=	x11
-MASTER_SITES=	http://ftp.easysw.com/pub/fltk/${VERS}/ \
-		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/${VERS}/ \
-		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/${VERS}/
+MASTER_SITES=	http://ftp.easysw.com/pub/fltk/${VERS}/
+MASTER_SITES+=	ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/${VERS}/
+MASTER_SITES+=	ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/${VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

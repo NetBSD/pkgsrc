@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2016/12/15 21:54:25 mef Exp $
+# $NetBSD: Makefile,v 1.12 2017/01/19 18:52:07 agc Exp $
 
 DISTNAME=	Glib-Object-Introspection-0.041
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/} \
-		${MASTER_SITE_PERL_CPAN:=Glib/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
+MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=Glib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/

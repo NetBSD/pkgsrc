@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.62 2016/01/22 08:33:09 zafer Exp $
+# $NetBSD: Makefile,v 1.63 2017/01/19 18:52:28 agc Exp $
 
 DISTNAME=	analog-6.0
 PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	${HOMEPAGE} \
-		http://www.web42.com/analog/
+MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES+=	http://www.web42.com/analog/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.analog.cx/

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.63 2017/01/06 10:58:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.64 2017/01/19 18:52:17 agc Exp $
 
 DISTNAME=	grace-5.1.25
 CATEGORIES=	math graphics x11
-MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/ \
-		ftp://ftp.fu-berlin.de/unix/graphics/grace/src/stable/ \
-		ftp://ftp.ru.xemacs.org/pub/math/grace/src/stable/ \
-		ftp://ftp.u-aizu.ac.jp/pub/SciEng/math/grace/src/stable/
+MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/
+MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/graphics/grace/src/stable/
+MASTER_SITES+=	ftp://ftp.ru.xemacs.org/pub/math/grace/src/stable/
+MASTER_SITES+=	ftp://ftp.u-aizu.ac.jp/pub/SciEng/math/grace/src/stable/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/

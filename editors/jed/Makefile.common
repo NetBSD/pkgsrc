@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.common,v 1.13 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2017/01/19 18:52:08 agc Exp $
 #
 # used by editors/jed/Makefile
 # used by editors/xjed/Makefile
 
 DISTNAME=		jed-0.99-16
 CATEGORIES=		editors
-MASTER_SITES=	ftp://space.mit.edu/pub/davis/jed/v0.99/ \
-			ftp://ftp.fu-berlin.de/pub/unix/editors/jed/v0.99/ \
-			ftp://ftp.ntua.gr/pub/lang/slang/jed/v0.99/ \
-			ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/v0.99/
+MASTER_SITES=		ftp://space.mit.edu/pub/davis/jed/v0.99/
+MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/editors/jed/v0.99/
+MASTER_SITES+=		ftp://ftp.ntua.gr/pub/lang/slang/jed/v0.99/
+MASTER_SITES+=		ftp://ftp.uni-stuttgart.de/pub/unix/misc/slang/jed/v0.99/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@gmx.net
