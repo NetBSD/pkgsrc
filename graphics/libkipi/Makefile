@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2017/01/01 16:05:58 adam Exp $
+# $NetBSD: Makefile,v 1.70 2017/01/19 09:05:06 markd Exp $
 
-DISTNAME=	libkipi-${_KDE_VERSION}
-PKGREVISION=	5
+DISTNAME=	libkipi-15.08.3
 CATEGORIES=	graphics
 COMMENT=	KDE image plugin interface
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
