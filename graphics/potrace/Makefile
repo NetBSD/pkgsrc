@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2013/03/15 23:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/19 18:52:12 agc Exp $
 
 DISTNAME=	potrace-1.11
 CATEGORIES=	graphics
-MASTER_SITES=	http://potrace.sourceforge.net/download/ \
-		${MASTER_SITE_SOURCEFORGE:=potrace/}
+MASTER_SITES=	http://potrace.sourceforge.net/download/
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=potrace/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://potrace.sourceforge.net/
