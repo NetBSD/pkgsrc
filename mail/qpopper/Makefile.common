@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.22 2012/03/22 14:13:28 taca Exp $
+# $NetBSD: Makefile.common,v 1.23 2017/01/19 18:52:16 agc Exp $
 # used by mail/poppassd/Makefile
 
-QPOPPER_MASTER_SITES+=	ftp://ftp.qualcomm.com/eudora/servers/unix/popper/ \
-			http://core.ring.gr.jp/archives/net/mail/qpopper/
+QPOPPER_MASTER_SITES+=	ftp://ftp.qualcomm.com/eudora/servers/unix/popper/
+QPOPPER_MASTER_SITES+=	http://core.ring.gr.jp/archives/net/mail/qpopper/
 QPOPPER_HOMEPAGE=	http://www.eudora.com/products/unsupported/qpopper/
 #QPOPPER_PATCHSITES+=	http://www.imasy.or.jp/~ume/ipv6/
 #QPOPPER_PATCHFILES=	qpopper4.0.9-ipv6-20060626.diff.gz

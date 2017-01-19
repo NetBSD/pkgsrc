@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2013/06/13 16:31:55 asau Exp $
+# $NetBSD: Makefile,v 1.20 2017/01/19 18:52:13 agc Exp $
 
 DISTNAME=		gprolog-1.4.4
 CATEGORIES=		lang
-MASTER_SITES=		${HOMEPAGE} \
-			http://gprolog.univ-paris1.fr/
+MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES+=		http://gprolog.univ-paris1.fr/
 
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.gprolog.org/

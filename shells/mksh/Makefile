@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.33 2016/07/09 06:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/01/19 18:52:25 agc Exp $
 
 DISTNAME=			mksh-R51
 PKGNAME=			${DISTNAME:S/-R/-/}
 PKGREVISION=			1
 CATEGORIES=			shells
-MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
-				http://pub.allbsd.org/MirOS/dist/mir/mksh/
+MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/
+MASTER_SITES+=			http://pub.allbsd.org/MirOS/dist/mir/mksh/
 SITES.${DISTNAME}.cat1.gz=	${MASTER_SITES:S/dist/cats/}
 
 EXTRACT_SUFX=			.tgz

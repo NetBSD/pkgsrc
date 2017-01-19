@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2016/02/25 12:22:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/19 18:52:08 agc Exp $
 
 DISTNAME=	ve-1.0
 CATEGORIES=	editors
-MASTER_SITES=	ftp://freebsd.ntu.edu.tw/FreeBSD/woju/source/ \
-		ftp://freebsd.csie.nctu.edu.tw/pub/taiwan/NTU/woju/source/
+MASTER_SITES=	ftp://freebsd.ntu.edu.tw/FreeBSD/woju/source/
+MASTER_SITES+=	ftp://freebsd.csie.nctu.edu.tw/pub/taiwan/NTU/woju/source/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@NetBSD.org
