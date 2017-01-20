@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/12 15:07:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/20 21:33:51 ryoon Exp $
 share/nextcloud/.htaccess
 share/nextcloud/.user.ini
 share/nextcloud/3rdparty/.drone.yml
@@ -2676,7 +2676,11 @@ share/nextcloud/apps/activity/appinfo/signature.json
 share/nextcloud/apps/activity/appinfo/update.php
 share/nextcloud/apps/activity/css/settings.css
 share/nextcloud/apps/activity/css/style.css
+share/nextcloud/apps/activity/docs/create.md
 share/nextcloud/apps/activity/docs/endpoint-v2.md
+share/nextcloud/apps/activity/docs/filter.md
+share/nextcloud/apps/activity/docs/provider.md
+share/nextcloud/apps/activity/docs/setting.md
 share/nextcloud/apps/activity/img/activity-dark.svg
 share/nextcloud/apps/activity/img/activity.svg
 share/nextcloud/apps/activity/img/add-color.svg
@@ -3072,6 +3076,8 @@ share/nextcloud/apps/dav/appinfo/v1/webdav.php
 share/nextcloud/apps/dav/appinfo/v2/remote.php
 share/nextcloud/apps/dav/bin/chunkperf.php
 share/nextcloud/apps/dav/l10n/.gitkeep
+share/nextcloud/apps/dav/l10n/bg_BG.js
+share/nextcloud/apps/dav/l10n/bg_BG.json
 share/nextcloud/apps/dav/l10n/cs_CZ.js
 share/nextcloud/apps/dav/l10n/cs_CZ.json
 share/nextcloud/apps/dav/l10n/de.js
@@ -3210,6 +3216,8 @@ share/nextcloud/apps/dav/lib/Files/Sharing/FilesDropPlugin.php
 share/nextcloud/apps/dav/lib/Files/Sharing/PublicLinkCheckPlugin.php
 share/nextcloud/apps/dav/lib/HookManager.php
 share/nextcloud/apps/dav/lib/Migration/FixBirthdayCalendarComponent.php
+share/nextcloud/apps/dav/lib/Migration/ValueFix.php
+share/nextcloud/apps/dav/lib/Migration/ValueFixInsert.php
 share/nextcloud/apps/dav/lib/RootCollection.php
 share/nextcloud/apps/dav/lib/Server.php
 share/nextcloud/apps/dav/lib/SystemTag/SystemTagMappingNode.php
@@ -8006,6 +8014,8 @@ share/nextcloud/apps/twofactor_backupcodes/l10n/pt_BR.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/pt_BR.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/ru.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/ru.json
+share/nextcloud/apps/twofactor_backupcodes/l10n/sv.js
+share/nextcloud/apps/twofactor_backupcodes/l10n/sv.json
 share/nextcloud/apps/twofactor_backupcodes/l10n/tr.js
 share/nextcloud/apps/twofactor_backupcodes/l10n/tr.json
 share/nextcloud/apps/twofactor_backupcodes/lib/Controller/SettingsController.php
@@ -8601,6 +8611,12 @@ share/nextcloud/apps/workflowengine/l10n/pt_BR.js
 share/nextcloud/apps/workflowengine/l10n/pt_BR.json
 share/nextcloud/apps/workflowengine/l10n/ru.js
 share/nextcloud/apps/workflowengine/l10n/ru.json
+share/nextcloud/apps/workflowengine/l10n/sk_SK.js
+share/nextcloud/apps/workflowengine/l10n/sk_SK.json
+share/nextcloud/apps/workflowengine/l10n/sq.js
+share/nextcloud/apps/workflowengine/l10n/sq.json
+share/nextcloud/apps/workflowengine/l10n/sv.js
+share/nextcloud/apps/workflowengine/l10n/sv.json
 share/nextcloud/apps/workflowengine/l10n/zh_TW.js
 share/nextcloud/apps/workflowengine/l10n/zh_TW.json
 share/nextcloud/apps/workflowengine/lib/AppInfo/Application.php
@@ -9603,12 +9619,16 @@ share/nextcloud/core/l10n/pt_PT.js
 share/nextcloud/core/l10n/pt_PT.json
 share/nextcloud/core/l10n/ru.js
 share/nextcloud/core/l10n/ru.json
+share/nextcloud/core/l10n/sk_SK.js
+share/nextcloud/core/l10n/sk_SK.json
 share/nextcloud/core/l10n/sl.js
 share/nextcloud/core/l10n/sl.json
 share/nextcloud/core/l10n/sq.js
 share/nextcloud/core/l10n/sq.json
 share/nextcloud/core/l10n/sv.js
 share/nextcloud/core/l10n/sv.json
+share/nextcloud/core/l10n/th_TH.js
+share/nextcloud/core/l10n/th_TH.json
 share/nextcloud/core/l10n/tr.js
 share/nextcloud/core/l10n/tr.json
 share/nextcloud/core/l10n/uk.js
@@ -9748,6 +9768,8 @@ share/nextcloud/lib/composer/composer/autoload_psr4.php
 share/nextcloud/lib/composer/composer/autoload_real.php
 share/nextcloud/lib/composer/composer/autoload_static.php
 share/nextcloud/lib/composer/composer/installed.json
+share/nextcloud/lib/l10n/bg_BG.js
+share/nextcloud/lib/l10n/bg_BG.json
 share/nextcloud/lib/l10n/cs_CZ.js
 share/nextcloud/lib/l10n/cs_CZ.json
 share/nextcloud/lib/l10n/de.js
@@ -9774,6 +9796,12 @@ share/nextcloud/lib/l10n/pt_BR.js
 share/nextcloud/lib/l10n/pt_BR.json
 share/nextcloud/lib/l10n/ru.js
 share/nextcloud/lib/l10n/ru.json
+share/nextcloud/lib/l10n/sk_SK.js
+share/nextcloud/lib/l10n/sk_SK.json
+share/nextcloud/lib/l10n/sq.js
+share/nextcloud/lib/l10n/sq.json
+share/nextcloud/lib/l10n/sv.js
+share/nextcloud/lib/l10n/sv.json
 share/nextcloud/lib/l10n/zh_TW.js
 share/nextcloud/lib/l10n/zh_TW.json
 share/nextcloud/lib/private/Accounts/AccountManager.php
