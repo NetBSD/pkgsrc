@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2016/10/13 04:10:16 jnemeth Exp $
+# $NetBSD: Makefile,v 1.93 2017/01/20 11:01:38 fhajny Exp $
 #
 
 COMMENT=	CAD tools
@@ -47,6 +47,7 @@ SUBDIR+=	mpac
 SUBDIR+=	nelma
 SUBDIR+=	ng-spice
 SUBDIR+=	ntesla
+SUBDIR+=	oce
 SUBDIR+=	openscad
 SUBDIR+=	p5-gds2
 SUBDIR+=	pcb
