@@ -1,0 +1,6 @@
+The package's principal command, \diagbox, takes two arguments
+(texts for the slash-separated parts of the box), and an
+optional argument with which the direction the slash will go,
+the box dimensions, etc., may be controlled. The package also
+provides \slashbox and \backslashbox commands for compatibility
+with the slashbox package, which it supersedes.

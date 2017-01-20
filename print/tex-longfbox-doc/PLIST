@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:43:59 markd Exp $
+share/texmf-dist/doc/latex/longfbox/README
+share/texmf-dist/doc/latex/longfbox/longfbox.html
+share/texmf-dist/doc/latex/longfbox/longfbox.pdf

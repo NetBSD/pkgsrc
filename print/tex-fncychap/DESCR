@@ -1,0 +1,4 @@
+Each style can be modified using a set of simple commands.
+Optionally one can modify the formatting routines in order to
+create additional chapter headings. This package was previously
+known as FancyChapter.
