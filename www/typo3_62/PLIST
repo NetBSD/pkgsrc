@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/11/27 15:43:34 taca Exp $
+@comment $NetBSD: PLIST,v 1.16.2.1 2017/01/20 18:38:21 bsiegert Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -2596,6 +2596,10 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FAL/Mod
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FAL/Modify/DataSet/modifyContentWFileReference.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FAL/Modify/DataSet/moveContentToDifferentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FAL/Modify/DataSet/moveContentToDifferentPageNChangeSorting.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FlexformIrre/ActionTestCase.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FlexformIrre/DataSet/LiveDefaultElements.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FlexformIrre/DataSet/LiveDefaultPages.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/FlexformIrre/Fixtures/fileadmin/typo3-logo.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/Framework/ActionService.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/Framework/DataSet.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/Group/AbstractActionTestCase.php
