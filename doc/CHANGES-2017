@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.344 2017/01/20 21:57:08 markd Exp $
+$NetBSD: CHANGES-2017,v 1.345 2017/01/20 22:38:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -447,3 +447,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-trimspaces version 1.1 [markd 2017-01-20]
 	Added print/tex-trimspaces-doc version 1.1 [markd 2017-01-20]
 	Added print/tex-sfmath version 0.8 [markd 2017-01-20]
+	Updated textproc/py-vobject to 0.9.4 [wiz 2017-01-20]
