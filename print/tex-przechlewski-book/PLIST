@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 23:22:49 markd Exp $
+share/texmf-dist/bibtex/bst/przechlewski-book/papalike.bst
+share/texmf-dist/tex/latex/przechlewski-book/upmgr.cls
+share/texmf-dist/tex/latex/przechlewski-book/wkmgr.cls
