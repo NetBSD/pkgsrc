@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:03:15 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/20 23:09:56 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2016
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	39729
@@ -39,7 +39,7 @@ DEPENDS+=	tex-metauml-[0-9]*:../../graphics/tex-metauml
 DEPENDS+=	tex-mfpic-[0-9]*:../../graphics/tex-mfpic
 DEPENDS+=	tex-mfpic4ode-[0-9]*:../../graphics/tex-mfpic4ode
 DEPENDS+=	tex-mp3d-[0-9]*:../../graphics/tex-mp3d
-# depend mparrows
+DEPENDS+=	tex-mparrows-[0-9]*:../../graphics/tex-mparrows
 DEPENDS+=	tex-mpattern-[0-9]*:../../graphics/tex-mpattern
 DEPENDS+=	tex-mpcolornames-[0-9]*:../../graphics/tex-mpcolornames
 DEPENDS+=	tex-mpgraphics-[0-9]*:../../graphics/tex-mpgraphics
