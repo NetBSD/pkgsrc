@@ -1,0 +1,5 @@
+The bundle provides support for typesetting technical and
+scientific Brazilian documents (like academic thesis, articles,
+reports, research project and others) based on the ABNT rules
+(Associacao Brasileira de Normas Tecnicas). It replaces the old
+abntex.
