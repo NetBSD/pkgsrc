@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.340 2017/01/20 16:13:11 he Exp $
+$NetBSD: CHANGES-2017,v 1.341 2017/01/20 17:54:31 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox45 to 45.6.0nb2 [ryoon 2017-01-20]
 	Updated www/firefox to 50.1.0nb2 [ryoon 2017-01-20]
 	Updated security/opendnssec to 1.4.13 [he 2017-01-20]
+	Added www/py-flask-webpack version 0.1.0 [kleink 2017-01-20]
