@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/08/07 11:31:58 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/20 22:13:28 markd Exp $
 
 DISTNAME=	collection-publishers
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41769
@@ -15,7 +15,7 @@ DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-lat
 DEPENDS+=	tex-IEEEconf-[0-9]*:../../print/tex-IEEEconf
 DEPENDS+=	tex-IEEEtran-[0-9]*:../../print/tex-IEEEtran
 # depend aastex
-# depend abntex2
+DEPENDS+=	tex-abntex2-[0-9]*:../../print/tex-abntex2
 # depend acmart
 DEPENDS+=	tex-acmconf-[0-9]*:../../print/tex-acmconf
 # depend active-conf

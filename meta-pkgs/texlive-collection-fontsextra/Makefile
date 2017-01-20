@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/08/07 11:02:11 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/20 22:13:28 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41736
@@ -182,7 +182,7 @@ DEPENDS+=	tex-merriweather-[0-9]*:../../fonts/tex-merriweather
 # depend miama
 DEPENDS+=	tex-mintspirit-[0-9]*:../../fonts/tex-mintspirit
 DEPENDS+=	tex-mnsymbol-[0-9]*:../../fonts/tex-mnsymbol
-# depend mweights
+DEPENDS+=	tex-mweights-[0-9]*:../../print/tex-mweights
 DEPENDS+=	tex-newpx-[0-9]*:../../fonts/tex-newpx
 DEPENDS+=	tex-newtx-[0-9]*:../../fonts/tex-newtx
 DEPENDS+=	tex-newtxsf-[0-9]*:../../fonts/tex-newtxsf
