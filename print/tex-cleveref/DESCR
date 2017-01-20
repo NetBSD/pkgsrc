@@ -1,0 +1,11 @@
+The package enhances LaTeX's cross-referencing features,
+allowing the format of references to be determined
+automatically according to the type of reference. The formats
+used may be customised in the preamble of a document; babel
+support is available (though the choice of languages remains
+limited: currently Danish, Dutch, English, French, German,
+Italian, Norwegian, Russian, Spanish and Ukranian). The package
+also offers a means of referencing a list of references, each
+formatted according to its type. In such lists, it can collapse
+sequences of numerically-consecutive labels to a reference
+range.

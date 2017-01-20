@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:43:58 markd Exp $
+share/texmf-dist/tex/latex/blindtext/blindtext.sty

@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:44:00 markd Exp $
+share/texmf-dist/tex/latex/tcolorbox/blueshade.png
+share/texmf-dist/tex/latex/tcolorbox/crinklepaper.png
+share/texmf-dist/tex/latex/tcolorbox/goldshade.png
+share/texmf-dist/tex/latex/tcolorbox/pink_marble.png
+share/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbdocumentation.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty

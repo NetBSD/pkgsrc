@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/20 21:43:59 markd Exp $
+
+SHA1 (tex-longfbox-39028/longfbox.tar.xz) = 158b493bfa325b2c8cde9873836690dd1be447da
+RMD160 (tex-longfbox-39028/longfbox.tar.xz) = 06c1fb00e15fad5a3f0c3c45e09e45421b3727ea
+SHA512 (tex-longfbox-39028/longfbox.tar.xz) = ac607b3137f09d189c03d35179064b6140f4758ad7cf0ff3e406f01ad3353927eec38e0733b7fcb6067125980077c76e93e3e942e062b307d1709280aeadda06
+Size (tex-longfbox-39028/longfbox.tar.xz) = 17088 bytes

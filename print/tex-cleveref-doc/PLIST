@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:43:59 markd Exp $
+share/texmf-dist/doc/latex/cleveref/README
+share/texmf-dist/doc/latex/cleveref/cleveref.pdf

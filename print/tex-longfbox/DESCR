@@ -1,0 +1,3 @@
+The longfbox package provides framed boxes that can be
+customized using standard CSS attributes. It was written to
+support precise rendering of Madoko documents in LaTeX.

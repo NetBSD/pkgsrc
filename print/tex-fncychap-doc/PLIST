@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:43:59 markd Exp $
+share/texmf-dist/doc/latex/fncychap/Bjarne.eps
+share/texmf-dist/doc/latex/fncychap/Bjarnes.eps
+share/texmf-dist/doc/latex/fncychap/Bjornstrup.eps
+share/texmf-dist/doc/latex/fncychap/BjornstrupS.eps
+share/texmf-dist/doc/latex/fncychap/Conny.eps
+share/texmf-dist/doc/latex/fncychap/Connys.eps
+share/texmf-dist/doc/latex/fncychap/Glenn.eps
+share/texmf-dist/doc/latex/fncychap/Glenns.eps
+share/texmf-dist/doc/latex/fncychap/Lenny.eps
+share/texmf-dist/doc/latex/fncychap/Lennys.eps
+share/texmf-dist/doc/latex/fncychap/README
+share/texmf-dist/doc/latex/fncychap/Rejne.eps
+share/texmf-dist/doc/latex/fncychap/Rejnes.eps
+share/texmf-dist/doc/latex/fncychap/Sonny.eps
+share/texmf-dist/doc/latex/fncychap/Sonnys.eps
+share/texmf-dist/doc/latex/fncychap/fncychap.pdf
+share/texmf-dist/doc/latex/fncychap/fncychap.tex
+share/texmf-dist/doc/latex/fncychap/manifest.txt

@@ -1,0 +1,7 @@
+The package provides the commands \blindtext and \Blindtext for
+creating 'blind' text useful in testing new classes and
+packages, and \blinddocument, \Blinddocument for creating an
+entire random document with sections, lists, mathematics, etc.
+The package supports three languages, english, (n)german and
+latin; the latin option provides a short "lorem ipsum" (for a
+fuller lorem ipsum text, see the lipsum package).
