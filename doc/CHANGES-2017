@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.342 2017/01/20 19:03:56 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.343 2017/01/20 21:35:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -415,3 +415,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-flask-webpack version 0.1.0 [kleink 2017-01-20]
 	Updated www/py-werkzeug to 0.11.15 [kleink 2017-01-20]
 	Updated www/py-werkzeug-docs to 0.11.15 [kleink 2017-01-20]
+	Updated www/php-nextcloud to 11.0.1 [ryoon 2017-01-20]
