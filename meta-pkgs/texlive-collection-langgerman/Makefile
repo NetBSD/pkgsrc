@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/08/07 11:11:45 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/20 23:35:18 markd Exp $
 
 DISTNAME=	collection-langgerman
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41610
@@ -40,7 +40,7 @@ DEPENDS+=	tex-hyphen-german-[0-9]*:../../print/tex-hyphen-german
 # lshort-german is documentation only
 # lualatex-doc-de is documentation only
 # microtype-de is documentation only
-# depend milog
+DEPENDS+=	tex-milog-[0-9]*:../../print/tex-milog
 # presentations is documentation only
 DEPENDS+=	tex-r_und_s-[0-9]*:../../print/tex-r_und_s
 # templates-fenn is documentation only
@@ -56,7 +56,7 @@ DEPENDS+=	tex-r_und_s-[0-9]*:../../print/tex-r_und_s
 # translation-filecontents-de is documentation only
 # translation-moreverb-de is documentation only
 DEPENDS+=	tex-udesoftec-[0-9]*:../../print/tex-udesoftec
-# depend uhrzeit
+DEPENDS+=	tex-uhrzeit-[0-9]*:../../print/tex-uhrzeit
 DEPENDS+=	tex-umlaute-[0-9]*:../../print/tex-umlaute
 # voss-mathcol is documentation only
 
