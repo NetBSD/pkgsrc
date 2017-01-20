@@ -1,0 +1,33 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+
+Do not version lib and share subdirs.
+
+--- CMakeLists.txt.orig	2017-01-13 05:34:36.000000000 +0000
++++ CMakeLists.txt
+@@ -853,7 +853,7 @@ if(MSVC OR (MINGW AND OCE_INSTALL_PRIVAT
+ 	endif(NOT DEFINED OCE_INSTALL_PACKAGE_LIB_DIR)
+ else(MSVC)
+ 	if(NOT DEFINED OCE_INSTALL_PACKAGE_LIB_DIR)
+-		set(OCE_INSTALL_PACKAGE_LIB_DIR ${OCE_INSTALL_LIB_DIR}/oce-${OCE_VERSION})
++		set(OCE_INSTALL_PACKAGE_LIB_DIR ${OCE_INSTALL_LIB_DIR}/oce)
+ 	endif(NOT DEFINED OCE_INSTALL_PACKAGE_LIB_DIR)
+ endif()
+ 
+@@ -883,7 +883,7 @@ endif(NOT DEFINED OCE_INSTALL_SCRIPT_DIR
+ # Data
+ if(NOT DEFINED OCE_INSTALL_DATA_DIR)
+ 	if(NOT MSVC)
+-		set(OCE_INSTALL_DATA_DIR share/oce-${OCE_VERSION})
++		set(OCE_INSTALL_DATA_DIR share/oce)
+ 	else ()
+ 		set(OCE_INSTALL_DATA_DIR "share/oce")
+ 	endif(NOT MSVC)
+@@ -908,7 +908,7 @@ if(NOT DEFINED OCE_INSTALL_CMAKE_DATA_DI
+ 				OCE.framework/Versions/${OCE_VERSION}/Resources)
+ 		else(APPLE)
+ 			set(OCE_INSTALL_CMAKE_DATA_DIR
+-				lib${LIB_SUFFIX}/oce-${OCE_VERSION})
++				lib${LIB_SUFFIX}/oce)
+ 		endif(APPLE)
+ 	endif(WIN32)
+ endif(NOT DEFINED OCE_INSTALL_CMAKE_DATA_DIR)
