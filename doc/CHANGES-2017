@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.333 2017/01/19 23:46:19 wiedi Exp $
+$NetBSD: CHANGES-2017,v 1.334 2017/01/20 00:44:49 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -404,3 +404,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/collectd to 5.6.2nb1 [he 2017-01-19]
 	Updated lang/py35-html-docs to 3.5.3 [leot 2017-01-19]
 	Added www/SOGo3 version 3.2.5 [wiedi 2017-01-19]
+	Updated lang/php56 to 5.6.30 [taca 2017-01-20]
