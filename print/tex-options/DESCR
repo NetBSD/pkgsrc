@@ -1,0 +1,4 @@
+The options package provides easy to use key-value options for
+LaTeX package writers. It has a similar interface as pgfkeys
+with path options but comes with more built-in data types and
+more convenient support for families and searching.

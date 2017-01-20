@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:44:00 markd Exp $
+share/texmf-dist/doc/latex/options/README
+share/texmf-dist/doc/latex/options/options.html
+share/texmf-dist/doc/latex/options/options.pdf
