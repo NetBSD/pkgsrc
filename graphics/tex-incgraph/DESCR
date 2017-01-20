@@ -1,0 +1,7 @@
+The package provides tools for including graphics at the full
+size of the output medium, or for creating "pages" whose size
+is that of the graphic they contain. A principal use case is
+documents that require inclusion of (potentially many) scans or
+photographs. Bookmarking is especially supported. The tool box
+has basic macros and a 'convenience' user interface that wraps
+\includegraphics.
