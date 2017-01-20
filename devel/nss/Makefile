@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.126 2016/12/20 23:47:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.127 2017/01/20 15:01:23 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.27.2
-PKGREVISION=		2
+NSS_RELEASE=		3.28.1
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_${NSS_PATCH_VERSION}_RTM/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_DIST_DIR_VERSION:S/_0$//}_RTM/src/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
@@ -71,11 +70,12 @@ MAKE_ENV+=	USE_64=1
 MAKE_ENV+=	BUILD_OPT=1
 #MAKE_ENV+=	OPTIMIZER=${CFLAGS:Q}
 MAKE_ENV+=	INCLUDES=-I${BUILDLINK_PREFIX.nspr}/include/nspr
-MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
+#MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
 MAKE_ENV+=	ZLIB_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -L${BUILDLINK_PREFIX.zlib}/lib -lz"
 MAKE_ENV+=	USE_SYSTEM_ZLIB=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4"
 MAKE_ENV+=	NSS_DISABLE_GTESTS=yes
+MAKE_ENV+=	NSS_ENABLE_TLS_1_3=1
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-4.[0-7]*)
 CFLAGS+=	-DNSS_NO_GCC48
@@ -84,6 +84,8 @@ CFLAGS+=	-DNSS_NO_GCC48
 NSS_MAJOR_VERSION=	${NSS_RELEASE:C/\.[0-9.]*//}
 NSS_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
 NSS_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
+NSS_DIST_DIR_VERSION=	${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_${NSS_PATCH_VERSION}
+
 
 SUBST_CLASSES+=		config
 SUBST_SED.config+=	-e "s,@PREFIX@,${PREFIX},g"
@@ -125,7 +127,7 @@ do-install:
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.4.2
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.12
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.13.1
 .include "../../devel/nspr/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
