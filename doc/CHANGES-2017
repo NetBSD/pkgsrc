@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.345 2017/01/20 22:38:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.346 2017/01/20 23:49:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -448,3 +448,18 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-trimspaces-doc version 1.1 [markd 2017-01-20]
 	Added print/tex-sfmath version 0.8 [markd 2017-01-20]
 	Updated textproc/py-vobject to 0.9.4 [wiz 2017-01-20]
+	Added graphics/tex-mparrows version 0.1 [markd 2017-01-20]
+	Added graphics/tex-mparrows-doc version 0.1 [markd 2017-01-20]
+	Updated meta-pkgs/texlive-collection-metapost to 2016 [markd 2017-01-20]
+	Added print/tex-eqparbox version 4.0 [markd 2017-01-20]
+	Added print/tex-eqparbox-doc version 4.0 [markd 2017-01-20]
+	Added print/tex-milog version 1.0 [markd 2017-01-20]
+	Added print/tex-milog-doc version 1.0 [markd 2017-01-20]
+	Added print/tex-przechlewski-book version 2016 [markd 2017-01-20]
+	Added print/tex-przechlewski-book-doc version 2016 [markd 2017-01-20]
+	Added print/tex-uhrzeit version 0.2c [markd 2017-01-20]
+	Added print/tex-uhrzeit-doc version 0.2c [markd 2017-01-20]
+	Added print/tex-urlbst version 0.7 [markd 2017-01-20]
+	Updated meta-pkgs/texlive-collection-langpolish to 2016 [markd 2017-01-20]
+	Updated meta-pkgs/texlive-collection-langgerman to 2016 [markd 2017-01-20]
+	Added meta-pkgs/texlive-collection-all version 2016pre1 [markd 2017-01-20]
