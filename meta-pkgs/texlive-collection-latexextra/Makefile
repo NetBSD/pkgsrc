@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2016/09/20 13:49:20 markd Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/20 22:13:28 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2016pre4
+PKGNAME=	texlive-${DISTNAME}-2016pre5
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41662
@@ -87,7 +87,7 @@ DEPENDS+=	tex-bezos-[0-9]*:../../print/tex-bezos
 # depend bigfoot
 # depend bigints
 # depend bizcard
-# depend blindtext
+DEPENDS+=	tex-blindtext-[0-9]*:../../print/tex-blindtext
 DEPENDS+=	tex-blkarray-[0-9]*:../../print/tex-blkarray
 DEPENDS+=	tex-block-[0-9]*:../../print/tex-block
 # depend bnumexpr
@@ -152,13 +152,12 @@ DEPENDS+=	tex-chngcntr-[0-9]*:../../print/tex-chngcntr
 # depend circ
 # depend classics
 # depend clefval
-# depend cleveref
+DEPENDS+=	tex-cleveref-[0-9]*:../../print/tex-cleveref
 # depend clipboard
 # depend clock
 # depend cmdstring
 # depend cmdtrack
 DEPENDS+=	tex-cmsd-[0-9]*:../../fonts/tex-cmsd
-# depend cmsd
 # depend cnltx
 # depend cntformats
 # depend cntperchap
@@ -270,7 +269,7 @@ DEPENDS+=	tex-dblfloatfix-[0-9]*:../../print/tex-dblfloatfix
 # depend decorule
 # depend delimtxt
 # depend denisbdoc
-# depend diagbox
+DEPENDS+=	tex-diagbox-[0-9]*:../../print/tex-diagbox
 # depend diagnose
 # depend dialogl
 # depend dichokey
@@ -301,7 +300,6 @@ DEPENDS+=	tex-draftwatermark-[0-9]*:../../print/tex-draftwatermark
 # depend dynblocks
 # depend ean13isbn
 # depend easy
-# depend easy-todo
 DEPENDS+=	tex-easy-todo-[0-9]*:../../print/tex-easy-todo
 # depend easyfig
 # depend easylist
@@ -411,13 +409,13 @@ DEPENDS+=	tex-flowfram-[0-9]*:../../print/tex-flowfram
 DEPENDS+=	tex-fmtcount-[0-9]*:../../print/tex-fmtcount
 # depend fn2end
 # depend fnbreak
-# depend fncychap
+DEPENDS+=	tex-fncychap-[0-9]*:../../print/tex-fncychap
 DEPENDS+=	tex-fncylab-[0-9]*:../../print/tex-fncylab
 DEPENDS+=	tex-fnpara-[0-9]*:../../print/tex-fnpara
 # depend fnpct
 # depend fnumprint
 # depend foilhtml
-# depend fontaxes
+DEPENDS+=	tex-fontaxes-[0-9]*:../../print/tex-fontaxes
 # depend fonttable
 DEPENDS+=	tex-footmisc-[0-9]*:../../print/tex-footmisc
 # depend footnotebackref
@@ -519,7 +517,7 @@ DEPENDS+=	tex-ifplatform-[0-9]*:../../print/tex-ifplatform
 # depend image-gallery
 # depend imakeidx
 DEPENDS+=	tex-import-[0-9]*:../../print/tex-import
-# depend incgraph
+DEPENDS+=	tex-incgraph-[0-9]*:../../graphics/tex-incgraph
 # depend indextools
 # depend inlinedef
 # depend inputtrc
@@ -588,7 +586,7 @@ DEPENDS+=	tex-localloc-[0-9]*:../../print/tex-localloc
 # depend logbox
 # depend logical-markup-utils
 # depend logpap
-# depend longfbox
+DEPENDS+=	tex-longfbox-[0-9]*:../../print/tex-longfbox
 # depend longfigure
 # depend longnamefilelist
 # depend loops
@@ -616,7 +614,6 @@ DEPENDS+=	tex-makecmds-[0-9]*:../../print/tex-makecmds
 # depend makeglos
 # depend mandi
 DEPENDS+=	tex-manfnt-[0-9]*:../../fonts/tex-manfnt
-# depend manfnt
 # depend manuscript
 # depend marginfix
 DEPENDS+=	tex-marginnote-[0-9]*:../../print/tex-marginnote
@@ -733,7 +730,7 @@ DEPENDS+=	tex-onlyamsmath-[0-9]*:../../print/tex-onlyamsmath
 # depend opcit
 # depend optidef
 DEPENDS+=	tex-optional-[0-9]*:../../print/tex-optional
-# depend options
+DEPENDS+=	tex-options-[0-9]*:../../print/tex-options
 # depend outline
 # depend outliner
 # depend outlines
@@ -822,7 +819,7 @@ DEPENDS+=	tex-pst-pdf-[0-9]*:../../graphics/tex-pst-pdf
 # depend rcs-multi
 DEPENDS+=	tex-rcsinfo-[0-9]*:../../print/tex-rcsinfo
 DEPENDS+=	tex-readarray-[0-9]*:../../print/tex-readarray
-# depend realboxes
+DEPENDS+=	tex-realboxes-[0-9]*:../../print/tex-realboxes
 # depend recipe
 # depend recipebook
 # depend recipecard
@@ -879,7 +876,7 @@ DEPENDS+=	tex-selectp-[0-9]*:../../print/tex-selectp
 # depend seqsplit
 # depend sf298
 # depend sffms
-# depend sfmath
+DEPENDS+=	tex-sfmath-[0-9]*:../../print/tex-sfmath
 DEPENDS+=	tex-shadethm-[0-9]*:../../print/tex-shadethm
 DEPENDS+=	tex-shadow-[0-9]*:../../print/tex-shadow
 DEPENDS+=	tex-shadowtext-[0-9]*:../../print/tex-shadowtext
@@ -972,7 +969,7 @@ DEPENDS+=	tex-tabu-[0-9]*:../../print/tex-tabu
 # depend tamefloats
 # depend tasks
 # depend tcldoc
-# depend tcolorbox
+DEPENDS+=	tex-tcolorbox-[0-9]*:../../print/tex-tcolorbox
 # depend tdclock
 # depend technics
 # depend ted
@@ -1006,7 +1003,7 @@ DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
 # depend titlepic
 DEPENDS+=	tex-titleref-[0-9]*:../../print/tex-titleref
 DEPENDS+=	tex-titlesec-[0-9]*:../../print/tex-titlesec
-# depend titling
+DEPENDS+=	tex-titling-[0-9]*:../../print/tex-titling
 DEPENDS+=	tex-tocbibind-[0-9]*:../../print/tex-tocbibind
 DEPENDS+=	tex-tocloft-[0-9]*:../../print/tex-tocloft
 # depend tocvsec2
@@ -1019,7 +1016,7 @@ DEPENDS+=	tex-todonotes-[0-9]*:../../print/tex-todonotes
 DEPENDS+=	tex-totpages-[0-9]*:../../print/tex-totpages
 # depend translations
 # depend trfsigns
-# depend trimspaces
+DEPENDS+=	tex-trimspaces-[0-9]*:../../print/tex-trimspaces
 # depend trivfloat
 # depend trsym
 DEPENDS+=	tex-truncate-[0-9]*:../../print/tex-truncate
@@ -1054,7 +1051,6 @@ DEPENDS+=	tex-verbasef-[0-9]*:../../print/tex-verbasef
 DEPENDS+=	tex-verbatimbox-[0-9]*:../../print/tex-verbatimbox
 # depend verbatimcopy
 DEPENDS+=	tex-verbdef-[0-9]*:../../print/tex-verbdef
-# depend verbdef
 # depend verbments
 DEPENDS+=	tex-version-[0-9]*:../../print/tex-version
 # depend versions
