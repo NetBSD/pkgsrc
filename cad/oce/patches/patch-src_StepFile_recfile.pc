@@ -1,0 +1,15 @@
+$NetBSD: patch-src_StepFile_recfile.pc,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+
+malloc.h must not be included on fbsd.
+
+--- src/StepFile/recfile.pc.orig	2015-09-25 14:19:16.000000000 +0000
++++ src/StepFile/recfile.pc
+@@ -16,7 +16,7 @@
+ #include "stdio.h"
+ #include "string.h"
+ #include "stdlib.h"
+-#if (!defined(_WIN32) && !defined(__APPLE__))
++#if (!defined(_WIN32) && !defined(__APPLE__) && !defined(__FreeBSD__))
+ #include "malloc.h"
+ #endif
+ #include "recfile.ph" 
