@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.334 2017/01/20 00:44:49 taca Exp $
+$NetBSD: CHANGES-2017,v 1.335 2017/01/20 09:39:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/py35-html-docs to 3.5.3 [leot 2017-01-19]
 	Added www/SOGo3 version 3.2.5 [wiedi 2017-01-19]
 	Updated lang/php56 to 5.6.30 [taca 2017-01-20]
+	Updated devel/py-argcomplete to 1.8.0 [fhajny 2017-01-20]
