@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/01/20 22:13:28 markd Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/20 23:29:08 markd Exp $
 
 DISTNAME=	collection-latexextra
 PKGNAME=	texlive-${DISTNAME}-2016pre5
@@ -339,7 +339,7 @@ DEPENDS+=	tex-envlab-[0-9]*:../../print/tex-envlab
 # depend eqell
 # depend eqlist
 # depend eqname
-# depend eqparbox
+DEPENDS+=	tex-eqparbox-[0-9]*:../../print/tex-eqparbox
 # depend errata
 # depend esami
 # depend esdiff
