@@ -1,0 +1,11 @@
+LaTeX users sometimes need to ensure that two or more blocks of
+text occupy the same amount of horizontal space on the page. To
+that end, the eqparbox package defines a new command,
+\eqparbox, which works just like \parbox, except that instead
+of specifying a width, one specifies a tag. All eqparboxes with
+the same tag--regardless of where they are in the document--
+will stretch to fit the widest eqparbox with that tag. This
+simple, equal-width mechanism can be used for a variety of
+alignment purposes, as is evidenced by the examples in
+eqparbox's documentation. Various derivatives of \eqparbox are
+also provided.
