@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/08/07 10:54:52 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/20 23:31:08 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre3
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	41634
@@ -121,7 +121,7 @@ DEPENDS+=	tex-splitbib-[0-9]*:../../print/tex-splitbib
 # depend turabian-formatting
 # depend uni-wtal-ger
 # depend uni-wtal-lin
-# depend urlbst
+DEPENDS+=	tex-urlbst-[0-9]*:../../print/tex-urlbst
 # depend usebib
 # depend vak
 # depend xcite
