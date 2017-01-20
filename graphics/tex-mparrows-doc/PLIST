@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 23:06:05 markd Exp $
+share/texmf-dist/doc/metapost/mparrows/LICENSE
+share/texmf-dist/doc/metapost/mparrows/README
+share/texmf-dist/doc/metapost/mparrows/mparrows.pdf
+share/texmf-dist/doc/metapost/mparrows/mparrows.tex
+share/texmf-dist/doc/metapost/mparrows/mparrowsexamples.mp
