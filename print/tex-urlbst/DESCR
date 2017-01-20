@@ -1,0 +1,5 @@
+Supports a new BibTeX 'webpage' entry type and 'url',
+'lastchecked', and 'eprint' and 'DOI' fields. The Perl script
+urlbst can be used to add this support to an arbitrary .bst
+file which has a reasonably conventional structure. The result
+is meant to be robust rather than pretty.
