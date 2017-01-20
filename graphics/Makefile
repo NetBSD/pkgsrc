@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.756 2017/01/20 21:10:58 markd Exp $
+# $NetBSD: Makefile,v 1.757 2017/01/20 23:07:38 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -585,6 +585,8 @@ SUBDIR+=	tex-mfpic4ode
 SUBDIR+=	tex-mfpic4ode-doc
 SUBDIR+=	tex-mp3d
 SUBDIR+=	tex-mp3d-doc
+SUBDIR+=	tex-mparrows
+SUBDIR+=	tex-mparrows-doc
 SUBDIR+=	tex-mpattern
 SUBDIR+=	tex-mpattern-doc
 SUBDIR+=	tex-mpcolornames
