@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.338 2017/01/20 15:02:05 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.339 2017/01/20 15:04:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -409,3 +409,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added cad/oce version 0.18 [fhajny 2017-01-20]
 	Updated archivers/p5-Archive-Extract to 0.80 [mef 2017-01-20]
 	Updated devel/nss to 3.28.1 [ryoon 2017-01-20]
+	Updated www/firefox45 to 45.6.0nb2 [ryoon 2017-01-20]
+	Updated www/firefox to 50.1.0nb2 [ryoon 2017-01-20]
