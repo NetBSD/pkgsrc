@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 23:22:49 markd Exp $
+share/texmf-dist/doc/latex/milog/201605.csv
+share/texmf-dist/doc/latex/milog/201605.dat
+share/texmf-dist/doc/latex/milog/README.md
+share/texmf-dist/doc/latex/milog/makefile
+share/texmf-dist/doc/latex/milog/manifest.txt
+share/texmf-dist/doc/latex/milog/milog
+share/texmf-dist/doc/latex/milog/milog-example.pdf
+share/texmf-dist/doc/latex/milog/milog-example.tex
+share/texmf-dist/doc/latex/milog/milog-formular.pdf
+share/texmf-dist/doc/latex/milog/milog-formular.tex
+share/texmf-dist/doc/latex/milog/milog.cfg
+share/texmf-dist/doc/latex/milog/milog.dtx
+share/texmf-dist/doc/latex/milog/milog.pdf
