@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.265 2016/12/18 01:31:00 ryoon Exp $
+$NetBSD: distinfo,v 1.266 2017/01/20 15:03:36 ryoon Exp $
 
 SHA1 (firefox-50.1.0.source.tar.xz) = 6024dc49a566ed6296ad6cd707a199d41f090176
 RMD160 (firefox-50.1.0.source.tar.xz) = 8931f3ad4e8a2543b8cfc1c191289b5897e081de
@@ -111,6 +111,7 @@ SHA1 (patch-moz.configure) = cd4d3851e9dc2c1adb6a92b6f3cd1966adcd5beb
 SHA1 (patch-mozglue_build_arm.cpp) = f41ace63b3f1d2a8ccaffc98c3c64d1e22af5249
 SHA1 (patch-mozglue_build_arm.h) = 5e272f4e19b9681d43a63c45d78b0e44a392c7dc
 SHA1 (patch-netwerk_dns_moz.build) = d4ad35ee7152ca206156403954cbd247d1252ab0
+SHA1 (patch-netwerk_protocol_http_Http2Session.cpp) = 9a2170e60aff96abda22c0784f5ee7dd00d79586
 SHA1 (patch-python_mozbuild_mozbuild_configure_options.py) = f862ee425ae016df6fe12b55050a8dc075ecce89
 SHA1 (patch-rc) = 9628b038f036f3fc0e37bdf84fa0abf99dbc8d2a
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 27e90fdfd5587f670958d832cd56107740b226ee
