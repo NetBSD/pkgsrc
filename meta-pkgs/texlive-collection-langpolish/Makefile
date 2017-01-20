@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/09/20 13:32:19 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/20 23:32:41 markd Exp $
 
 DISTNAME=	collection-langpolish
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2016
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	30372
@@ -23,7 +23,7 @@ DEPENDS+=	tex-mex-[0-9]*:../../print/tex-mex
 DEPENDS+=	tex-mwcls-[0-9]*:../../print/tex-mwcls
 DEPENDS+=	tex-pl-[0-9]*:../../fonts/tex-pl
 DEPENDS+=	tex-polski-[0-9]*:../../print/tex-polski
-# depend przechlewski-book
+DEPENDS+=	tex-przechlewski-book-[0-9]*:../../print/tex-przechlewski-book
 DEPENDS+=	tex-qpxqtx-[0-9]*:../../fonts/tex-qpxqtx
 DEPENDS+=	tex-tap-[0-9]*:../../print/tex-tap
 # tex-virtual-academy-pl is documentation only
