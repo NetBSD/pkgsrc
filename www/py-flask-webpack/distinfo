@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/20 17:53:09 kleink Exp $
+
+SHA1 (flask-webpack-0.1.0.tar.gz) = 0e1e41ed7962a71b75ce31a18c4ddee474da1b29
+RMD160 (flask-webpack-0.1.0.tar.gz) = d592da02ea0bf8fbdf4b524abd35efbbb2966618
+SHA512 (flask-webpack-0.1.0.tar.gz) = 3213dc082cc28d8cc902336ef2ee34dc1d9d2b05ffde07b6b1588f45d80f78dce30676dc7e9950e46a04eb6ea6e71f010258a0e32661733b0454d9f60414ac3c
+Size (flask-webpack-0.1.0.tar.gz) = 91035 bytes
