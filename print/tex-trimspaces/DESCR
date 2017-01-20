@@ -1,0 +1,5 @@
+A very short package that allows you to expandably remove
+spaces around a token list (commands are provided to remove
+spaces before, spaces after, or both); or to remove surrounding
+spaces within a macro definition, or to define space-stripped
+macros.

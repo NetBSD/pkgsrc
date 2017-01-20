@@ -1,0 +1,6 @@
+The titling package provides control over the typesetting of
+the \maketitle command and \thanks commands, and makes the
+\title, \author and \date information permanently available.
+Multiple titles are allowed in a single document. New titling
+elements can be added and a titlepage title can be centered on
+a physical page.

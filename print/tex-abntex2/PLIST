@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/20 21:43:58 markd Exp $
+share/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib
+share/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst
+share/texmf-dist/bibtex/bst/abntex2/abntex2-num.bst
+share/texmf-dist/tex/latex/abntex2/abntex2.cls
+share/texmf-dist/tex/latex/abntex2/abntex2abrev.sty
+share/texmf-dist/tex/latex/abntex2/abntex2cite.sty

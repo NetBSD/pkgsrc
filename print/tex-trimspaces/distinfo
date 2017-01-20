@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/20 21:44:00 markd Exp $
+
+SHA1 (tex-trimspaces-15878/trimspaces.tar.xz) = 00c0adc53f0dd0d1a36cf64ee2b2fdc78a3c522b
+RMD160 (tex-trimspaces-15878/trimspaces.tar.xz) = 0c1ff118856317b08e75d759acfcf9756be664be
+SHA512 (tex-trimspaces-15878/trimspaces.tar.xz) = d24cf81f896c3483458788d1447f2a6dc67293502f6d13c04a39075a4122220025975890f84d89a49cdd3696f817a825b19da695059494ee1c18810b1d4b8b78
+Size (tex-trimspaces-15878/trimspaces.tar.xz) = 940 bytes
