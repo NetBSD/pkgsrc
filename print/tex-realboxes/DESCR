@@ -1,0 +1,10 @@
+The package uses the author's package collectbox to define
+variants of common box related macros which read the content as
+real box and not as macro argument. This enables the use of
+verbatim or other special material as part of this content. The
+provided macros have the same names as the original versions
+but start with an upper-case letter instead. The "long-form"
+macros, like \Makebox, can also be used as environments, but
+not the "short-form" macros, like \Mbox. However, normally the
+long form uses the short form anyway when no optional arguments
+are used.
