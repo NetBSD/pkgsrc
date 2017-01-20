@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.678 2017/01/20 21:51:32 markd Exp $
+# $NetBSD: Makefile,v 1.679 2017/01/20 23:26:37 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -553,6 +553,8 @@ SUBDIR+=	tex-epsf
 SUBDIR+=	tex-epsf-doc
 SUBDIR+=	tex-epsf-dvipdfmx
 SUBDIR+=	tex-epsf-dvipdfmx-doc
+SUBDIR+=	tex-eqparbox
+SUBDIR+=	tex-eqparbox-doc
 SUBDIR+=	tex-eso-pic
 SUBDIR+=	tex-eso-pic-doc
 SUBDIR+=	tex-etdipa-doc
@@ -898,6 +900,8 @@ SUBDIR+=	tex-microtype-doc
 SUBDIR+=	tex-midpage
 SUBDIR+=	tex-midpage-doc
 SUBDIR+=	tex-mil3-doc
+SUBDIR+=	tex-milog
+SUBDIR+=	tex-milog-doc
 SUBDIR+=	tex-minitoc
 SUBDIR+=	tex-minitoc-doc
 SUBDIR+=	tex-minted
@@ -1041,6 +1045,8 @@ SUBDIR+=	tex-program
 SUBDIR+=	tex-program-doc
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-prosper-doc
+SUBDIR+=	tex-przechlewski-book
+SUBDIR+=	tex-przechlewski-book-doc
 SUBDIR+=	tex-psfrag
 SUBDIR+=	tex-psfrag-doc
 SUBDIR+=	tex-psizzl
@@ -1270,6 +1276,8 @@ SUBDIR+=	tex-ucs
 SUBDIR+=	tex-ucs-doc
 SUBDIR+=	tex-udesoftec
 SUBDIR+=	tex-udesoftec-doc
+SUBDIR+=	tex-uhrzeit
+SUBDIR+=	tex-uhrzeit-doc
 SUBDIR+=	tex-ukrhyph
 SUBDIR+=	tex-ukrhyph-doc
 SUBDIR+=	tex-ulem
@@ -1288,6 +1296,8 @@ SUBDIR+=	tex-upquote
 SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-url
 SUBDIR+=	tex-url-doc
+SUBDIR+=	tex-urlbst
+SUBDIR+=	tex-urlbst-doc
 SUBDIR+=	tex-utf8mex
 SUBDIR+=	tex-utf8mex-doc
 SUBDIR+=	tex-varisize
