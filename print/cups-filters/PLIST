@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/12/19 08:49:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/01/21 11:58:29 leot Exp $
 bin/driverless
 bin/foomatic-rip
 bin/ttfread
@@ -54,7 +54,6 @@ libexec/cups/filter/texttobrf
 libexec/cups/filter/texttopdf
 libexec/cups/filter/texttops
 libexec/cups/filter/texttotext
-libexec/cups/filter/urftopdf
 man/man1/driverless.1
 man/man1/foomatic-rip.1
 man/man5/cups-browsed.conf.5
