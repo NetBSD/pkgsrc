@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.352 2017/01/21 19:57:11 adam Exp $
+$NetBSD: CHANGES-2017,v 1.353 2017/01/21 20:05:37 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -469,3 +469,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/reposurgeon to 3.40 [kim 2017-01-21]
 	Updated audio/pulseaudio to 10.0 [ryoon 2017-01-21]
 	Updated math/fftw to 3.3.6 [adam 2017-01-21]
+	Updated databases/erlang-p1_pgsql to 1.1.2 [fhajny 2017-01-21]
