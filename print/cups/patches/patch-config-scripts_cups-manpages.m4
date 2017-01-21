@@ -1,11 +1,11 @@
-$NetBSD: patch-config-scripts_cups-manpages.m4,v 1.3 2016/09/30 14:10:55 wiz Exp $
+$NetBSD: patch-config-scripts_cups-manpages.m4,v 1.4 2017/01/21 11:57:10 leot Exp $
 
 Add '--with-manext' configure option.
 
---- config-scripts/cups-manpages.m4.orig	2016-09-13 23:39:47.000000000 +0000
+--- config-scripts/cups-manpages.m4.orig	2017-01-17 19:27:22.000000000 +0000
 +++ config-scripts/cups-manpages.m4
 @@ -11,6 +11,8 @@ dnl which should have been included with
- dnl file is missing or damaged, see the license at "http://www.cups.org/".
+ dnl missing or damaged, see the license at "http://www.cups.org/".
  dnl
  
 +AC_ARG_WITH(manext, [  --with-manext           set man page extension style (bsd,irix,sysv,none)],manext="$withval",manext="")
