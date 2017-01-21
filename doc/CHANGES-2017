@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.348 2017/01/21 11:57:23 leot Exp $
+$NetBSD: CHANGES-2017,v 1.349 2017/01/21 11:58:52 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -465,3 +465,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added meta-pkgs/texlive-collection-all version 2016pre1 [markd 2017-01-20]
 	Updated cad/pcb to 4.0.0 [dmcmahill 2017-01-20]
 	Updated print/cups to 2.2.2 [leot 2017-01-21]
+	Updated print/cups-filters to 1.13.3 [leot 2017-01-21]
