@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.346 2017/01/20 23:49:35 markd Exp $
+$NetBSD: CHANGES-2017,v 1.347 2017/01/21 01:58:02 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -463,3 +463,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated meta-pkgs/texlive-collection-langpolish to 2016 [markd 2017-01-20]
 	Updated meta-pkgs/texlive-collection-langgerman to 2016 [markd 2017-01-20]
 	Added meta-pkgs/texlive-collection-all version 2016pre1 [markd 2017-01-20]
+	Updated cad/pcb to 4.0.0 [dmcmahill 2017-01-20]
