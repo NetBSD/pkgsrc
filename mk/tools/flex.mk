@@ -1,4 +1,4 @@
-# $NetBSD: flex.mk,v 1.1 2011/11/26 14:58:45 hans Exp $
+# $NetBSD: flex.mk,v 1.2 2017/01/21 17:10:26 brook Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,7 +47,7 @@ FLEX_REQD?=		2.5.4
 .  if !defined(_TOOLS_USE_PKGSRC.flex)
 _TOOLS_VERSION.flex!=							\
 	${TOOLS_PLATFORM.flex} --version |				\
-	${SED} -e 's/\(.*\) \(.*\)$$/\2/'
+	${SED} -e 's/^[[:blank:]]*\([^[:blank:]]\{1,\}\)[[:blank:]]\{1,\}\([^[:blank:]]\{1,\}\).*$$/\2/'
 _TOOLS_PKG.flex=		flex-${_TOOLS_VERSION.flex}
 _TOOLS_USE_PKGSRC.flex=	no
 .    for _dep_ in flex>=${FLEX_REQD}
