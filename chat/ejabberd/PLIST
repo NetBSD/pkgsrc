@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2017/01/03 18:52:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.44 2017/01/21 20:20:33 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -33,7 +33,6 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_ctl.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_frontend_socket.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_hooks.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http.beam
-lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_bind.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_http_ws.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_idna.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_listener.beam
@@ -114,7 +113,6 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_disco.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_echo.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_fail2ban.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_http_api.beam
-lib/erlang/lib/${PKGNAME}/ebin/mod_http_bind.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_http_fileserver.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_http_upload.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_http_upload_quota.beam
