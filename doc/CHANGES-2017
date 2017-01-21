@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.350 2017/01/21 12:13:28 kim Exp $
+$NetBSD: CHANGES-2017,v 1.351 2017/01/21 19:33:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -467,3 +467,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/cups to 2.2.2 [leot 2017-01-21]
 	Updated print/cups-filters to 1.13.3 [leot 2017-01-21]
 	Updated devel/reposurgeon to 3.40 [kim 2017-01-21]
+	Updated audio/pulseaudio to 10.0 [ryoon 2017-01-21]
