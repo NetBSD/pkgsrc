@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/08/06 15:56:50 richard Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/01/21 19:32:11 ryoon Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -81,6 +81,8 @@ ${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-sink.a
 ${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-sink.so
 ${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-source.a
 ${PLIST.alsa}lib/pulse-${PKGVERSION}/modules/module-alsa-source.so
+lib/pulse-${PKGVERSION}/modules/module-allow-passthrough.a
+lib/pulse-${PKGVERSION}/modules/module-allow-passthrough.so
 lib/pulse-${PKGVERSION}/modules/module-always-sink.a
 lib/pulse-${PKGVERSION}/modules/module-always-sink.so
 lib/pulse-${PKGVERSION}/modules/module-augment-properties.a
@@ -267,6 +269,7 @@ share/examples/pulseaudio/pulseaudio-system.conf
 ${PLIST.x11}share/examples/pulseaudio/pulseaudio.desktop
 share/examples/pulseaudio/system.pa
 share/locale/as/LC_MESSAGES/pulseaudio.mo
+share/locale/be/LC_MESSAGES/pulseaudio.mo
 share/locale/bn_IN/LC_MESSAGES/pulseaudio.mo
 share/locale/ca/LC_MESSAGES/pulseaudio.mo
 share/locale/cs/LC_MESSAGES/pulseaudio.mo
@@ -276,6 +279,7 @@ share/locale/el/LC_MESSAGES/pulseaudio.mo
 share/locale/es/LC_MESSAGES/pulseaudio.mo
 share/locale/fi/LC_MESSAGES/pulseaudio.mo
 share/locale/fr/LC_MESSAGES/pulseaudio.mo
+share/locale/gl/LC_MESSAGES/pulseaudio.mo
 share/locale/gu/LC_MESSAGES/pulseaudio.mo
 share/locale/he/LC_MESSAGES/pulseaudio.mo
 share/locale/hi/LC_MESSAGES/pulseaudio.mo
@@ -285,6 +289,7 @@ share/locale/it/LC_MESSAGES/pulseaudio.mo
 share/locale/ja/LC_MESSAGES/pulseaudio.mo
 share/locale/kn/LC_MESSAGES/pulseaudio.mo
 share/locale/ko/LC_MESSAGES/pulseaudio.mo
+share/locale/lt/LC_MESSAGES/pulseaudio.mo
 share/locale/ml/LC_MESSAGES/pulseaudio.mo
 share/locale/mr/LC_MESSAGES/pulseaudio.mo
 share/locale/nl/LC_MESSAGES/pulseaudio.mo

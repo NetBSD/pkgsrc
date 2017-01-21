@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2016/12/03 21:57:47 marino Exp $
+# $NetBSD: Makefile,v 1.117 2017/01/21 19:32:11 ryoon Exp $
 
-DISTNAME=	pulseaudio-9.0
-PKGREVISION=	1
+DISTNAME=	pulseaudio-10.0
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -125,6 +124,5 @@ pre-configure:
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
