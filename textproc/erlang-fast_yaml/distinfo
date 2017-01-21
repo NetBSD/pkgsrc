@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2017/01/03 18:19:26 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2017/01/21 20:15:46 fhajny Exp $
 
-SHA1 (fast_yaml-1.0.7.tar.gz) = 4b490691d208a465dc9a4d93a4d1196d68e6f5d4
-RMD160 (fast_yaml-1.0.7.tar.gz) = 1e9d7ce8735a33c1c1945db3bf1dde6621b664a0
-SHA512 (fast_yaml-1.0.7.tar.gz) = 7d8dfd759fb6c406cb1e514b8bf66768b52e6be726067843035b037e88fa1986a465b173ead680971457059743d42829f0a9c0d9259fd0918e07804b6fbae89f
-Size (fast_yaml-1.0.7.tar.gz) = 49524 bytes
+SHA1 (fast_yaml-1.0.8.tar.gz) = d3851af638e9fa48b708bf5896b377cfcec407af
+RMD160 (fast_yaml-1.0.8.tar.gz) = cd37bc4edc52aac7273343a45e2fedec4b0c1655
+SHA512 (fast_yaml-1.0.8.tar.gz) = 07881eb824b6e27c2bd6b26fe01f3b25fa9382515259af680235ffdd12a3497a088c63d8500aac5d5f1baf7e7726326ef71bf8e329542d1aa731847560049d62
+Size (fast_yaml-1.0.8.tar.gz) = 49575 bytes
 SHA1 (patch-rebar.config) = 392e37d508d18ffd7de11a58ce2a24a50366bee7
