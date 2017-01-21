@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/25 14:20:46 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2017/01/21 20:10:55 fhajny Exp $
 
-SHA1 (ezlib-1.0.1.tar.gz) = ce7b9ffab3d410960a26dfe2298ae649b222f7fe
-RMD160 (ezlib-1.0.1.tar.gz) = 7616581573b7261dfc03412342a72e0a4737df30
-SHA512 (ezlib-1.0.1.tar.gz) = 7ec02dd91034eeaad3556071ef78ff6d8e890bc49b2ce5010280db48f9eb65ebfe62628fbbb89110310e359847f0da616f9281683926fb7d0f72972ee77a463b
-Size (ezlib-1.0.1.tar.gz) = 45307 bytes
+SHA1 (ezlib-1.0.2.tar.gz) = c1a694d5e2e2c00520a4d994130dc005f2680f3a
+RMD160 (ezlib-1.0.2.tar.gz) = 8f906a43f35e769db787b37d4ff5e08ae7263f04
+SHA512 (ezlib-1.0.2.tar.gz) = 90671fdf0bbc23a7f54da665dfb31a3ed2d92180ff5c58d872001481584e6c8b39cd84b3dc947f1efdae10792c2547218017381cbc7056070d22b140e941c9bb
+Size (ezlib-1.0.2.tar.gz) = 45369 bytes
