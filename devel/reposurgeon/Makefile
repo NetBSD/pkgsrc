@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/21 12:07:28 kim Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/21 12:23:48 kim Exp $
 
 DISTNAME=	reposurgeon-3.40
 CATEGORIES=	devel scm
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/reposurgeon/
 COMMENT=	Tool for editing version-control repository history
-LICENSE=	modified-bsd
+LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
