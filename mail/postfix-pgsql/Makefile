@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/10/09 21:42:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/21 23:49:02 rillig Exp $
 #
 
-COMMENT=		Postfix SMTP server PostgreSQL backend module
 PKGREVISION=		1
+COMMENT=		Postfix SMTP server PostgreSQL backend module
 
 POSTFIX_LIB=		pgsql
 POSTFIX_LIBDIR=		src/global
