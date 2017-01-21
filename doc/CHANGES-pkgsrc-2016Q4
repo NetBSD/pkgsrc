@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.4 2017/01/16 20:06:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.5 2017/01/21 10:52:00 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -45,4 +45,31 @@ net/bind99: security fix
 
 Pullup ticket #5191 - requested by taca
 devel/libgit2: security fix
+
+Pullup ticket #5193 - requested by wiz
+security/libtasn1: bugfix, build fix
+
+Pullup ticket #5185 - requested by wiz
+security/gnutls: security fix
+
+Pullup ticket #5185 (second part) - requested by wiz
+security/gnutls: build fix
+
+Pullup ticket #5192 - requested by schmonz
+www/ikiwiki: security fix
+
+Pullup ticket #5194 - requested by joerg
+security/botan-devel: build fix
+
+Pullup ticket #5195 - requested by taca
+www/typo3_62: security fix
+
+Pullup ticket #5196 - requested by taca
+lang/php71: security fix
+
+Pullup ticket #5197 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #5198 - requested by taca
+lang/php56: security fix
 
