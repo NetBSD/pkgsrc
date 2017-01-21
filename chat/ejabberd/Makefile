@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.69 2017/01/03 18:52:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.70 2017/01/21 20:20:33 fhajny Exp $
 
-DISTNAME=	ejabberd-16.12
+DISTNAME=	ejabberd-17.01
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,12 +10,12 @@ HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	erlang-cache_tab>=1.0.5:../../devel/erlang-cache_tab
+DEPENDS+=	erlang-cache_tab>=1.0.6:../../devel/erlang-cache_tab
 DEPENDS+=	erlang-esip>=1.0.10:../../net/erlang-esip
-DEPENDS+=	erlang-ezlib>=1.0.1:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.9:../../security/erlang-fast_tls
-DEPENDS+=	erlang-fast_xml>=1.1.18:../../textproc/erlang-fast_xml
-DEPENDS+=	erlang-fast_yaml>=1.0.7:../../textproc/erlang-fast_yaml
+DEPENDS+=	erlang-ezlib>=1.0.2:../../devel/erlang-ezlib
+DEPENDS+=	erlang-fast_tls>=1.0.10:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_xml>=1.1.19:../../textproc/erlang-fast_xml
+DEPENDS+=	erlang-fast_yaml>=1.0.8:../../textproc/erlang-fast_yaml
 DEPENDS+=	erlang-iconv>=1.0.3:../../converters/erlang-iconv
 DEPENDS+=	erlang-jiffy>=0.14.8:../../textproc/erlang-jiffy
 DEPENDS+=	erlang-lager>=3.2.1:../../sysutils/erlang-lager
@@ -23,11 +23,11 @@ DEPENDS+=	erlang-luerl>=0.2:../../lang/erlang-luerl
 DEPENDS+=	erlang-p1_mysql>=1.0.2:../../databases/erlang-p1_mysql
 DEPENDS+=	erlang-p1_oauth2>=0.6.1:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pam>=1.0.0:../../security/erlang-p1_pam
-DEPENDS+=	erlang-p1_pgsql>=1.1.1:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_pgsql>=1.1.2:../../databases/erlang-p1_pgsql
 DEPENDS+=	erlang-p1_utils>=1.0.6:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-stringprep>=1.0.7:../../textproc/erlang-stringprep
 DEPENDS+=	erlang-stun>=1.0.9:../../net/erlang-stun
-DEPENDS+=	erlang-xmpp>=1.1.4:../../net/erlang-xmpp
+DEPENDS+=	erlang-xmpp>=1.1.5:../../net/erlang-xmpp
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes
