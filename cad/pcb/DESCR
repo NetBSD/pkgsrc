@@ -1,3 +1,8 @@
 pcb is a printed circuit board layout tool.  It includes connectivity driven
 layout (rat lines), a layout versus netlist check, design rule checker as well
-as industry standard RS274-X (Gerber) photoplot export.
+as industry standard RS274-X (Gerber) photoplot export.  Other features include
+  - PNG/JPEG/EPS output for documentation
+  - Bill of materials output
+  - X-Y pick and place output
+  - Two different autorouters
+  - Growing footprint library
