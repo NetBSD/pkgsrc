@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/10/25 23:31:39 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2017/01/22 15:56:07 gdt Exp $
 
 DISTNAME=	geos-3.5.1
 CATEGORIES=	geography
@@ -21,7 +21,7 @@ EXTRACT_SUFX=	.tar.bz2
 #   geography/gdal-lib
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://geos.refractions.net/
+HOMEPAGE=	https://trac.osgeo.org/geos
 COMMENT=	C++ port of the Java Topology Suite (JTS)
 LICENSE=	gnu-lgpl-v2.1
 
