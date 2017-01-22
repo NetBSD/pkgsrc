@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/10/31 16:26:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/01/22 14:43:24 wiz Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -10,6 +10,9 @@ ${PYSITELIB}/numpy/__config__.pyo
 ${PYSITELIB}/numpy/__init__.py
 ${PYSITELIB}/numpy/__init__.pyc
 ${PYSITELIB}/numpy/__init__.pyo
+${PYSITELIB}/numpy/_distributor_init.py
+${PYSITELIB}/numpy/_distributor_init.pyc
+${PYSITELIB}/numpy/_distributor_init.pyo
 ${PYSITELIB}/numpy/_globals.py
 ${PYSITELIB}/numpy/_globals.pyc
 ${PYSITELIB}/numpy/_globals.pyo
@@ -50,6 +53,9 @@ ${PYSITELIB}/numpy/core/cversions.pyo
 ${PYSITELIB}/numpy/core/defchararray.py
 ${PYSITELIB}/numpy/core/defchararray.pyc
 ${PYSITELIB}/numpy/core/defchararray.pyo
+${PYSITELIB}/numpy/core/einsumfunc.py
+${PYSITELIB}/numpy/core/einsumfunc.pyc
+${PYSITELIB}/numpy/core/einsumfunc.pyo
 ${PYSITELIB}/numpy/core/fromnumeric.py
 ${PYSITELIB}/numpy/core/fromnumeric.pyc
 ${PYSITELIB}/numpy/core/fromnumeric.pyo
@@ -460,6 +466,9 @@ ${PYSITELIB}/numpy/f2py/tests/src/kind/foo.f90
 ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo.f
 ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo_fixed.f90
 ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo_free.f90
+${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_both.f90
+${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_integer.f90
+${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_real.f90
 ${PYSITELIB}/numpy/f2py/tests/src/regression/inout.f90
 ${PYSITELIB}/numpy/f2py/tests/src/size/foo.f90
 ${PYSITELIB}/numpy/f2py/tests/test_array_from_pyobj.py
@@ -467,6 +476,7 @@ ${PYSITELIB}/numpy/f2py/tests/test_assumed_shape.py
 ${PYSITELIB}/numpy/f2py/tests/test_callback.py
 ${PYSITELIB}/numpy/f2py/tests/test_kind.py
 ${PYSITELIB}/numpy/f2py/tests/test_mixed.py
+${PYSITELIB}/numpy/f2py/tests/test_parameter.py
 ${PYSITELIB}/numpy/f2py/tests/test_regression.py
 ${PYSITELIB}/numpy/f2py/tests/test_return_character.py
 ${PYSITELIB}/numpy/f2py/tests/test_return_complex.py
@@ -750,6 +760,7 @@ ${PYSITELIB}/numpy/tests/test_matlib.py
 ${PYSITELIB}/numpy/tests/test_numpy_version.py
 ${PYSITELIB}/numpy/tests/test_reloading.py
 ${PYSITELIB}/numpy/tests/test_scripts.py
+${PYSITELIB}/numpy/tests/test_warnings.py
 ${PYSITELIB}/numpy/version.py
 ${PYSITELIB}/numpy/version.pyc
 ${PYSITELIB}/numpy/version.pyo
