@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_glue_StringUtil.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-ipc_glue_StringUtil.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Just because OS_ARCH is Darwin does not mean
 sys_string_conversions_mac.mm can be used.

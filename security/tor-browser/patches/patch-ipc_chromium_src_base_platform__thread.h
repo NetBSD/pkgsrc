@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- ipc/chromium/src/base/platform_thread.h.orig	2013-09-10 03:43:34.000000000 +0000
 +++ ipc/chromium/src/base/platform_thread.h

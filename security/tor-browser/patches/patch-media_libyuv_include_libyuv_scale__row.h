@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libyuv_include_libyuv_scale__row.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libyuv_include_libyuv_scale__row.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/libyuv/include/libyuv/scale_row.h.orig	2014-11-13 22:50:11.000000000 +0000
 +++ media/libyuv/include/libyuv/scale_row.h
