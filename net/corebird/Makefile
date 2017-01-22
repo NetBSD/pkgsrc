@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/01/14 09:43:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2017/01/22 20:48:07 maya Exp $
 
 DISTNAME=	corebird-1.4.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baedert/}
 GITHUB_PROJECT=	corebird
@@ -21,6 +22,7 @@ USE_TOOLS+=	gettext-m4 pkg-config gmake msgfmt
 
 TEST_TARGET=	check
 
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../www/librest07/buildlink3.mk"
