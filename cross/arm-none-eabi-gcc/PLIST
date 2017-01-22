@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/10/19 12:48:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/22 12:35:02 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/include/_ansi.h
 cross-arm-none-eabi/arm-none-eabi/include/_newlib_version.h
 cross-arm-none-eabi/arm-none-eabi/include/_syslist.h
@@ -277,6 +277,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/algorit
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/any
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/array
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/bits/erase_if.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/bits/lfts_config.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/bits/shared_ptr.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/bits/string_view.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/experimental/chrono
@@ -781,7 +782,9 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/utility
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/valarray
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/vector
 cross-arm-none-eabi/arm-none-eabi/include/complex.h
+cross-arm-none-eabi/arm-none-eabi/include/cpio.h
 cross-arm-none-eabi/arm-none-eabi/include/ctype.h
+cross-arm-none-eabi/arm-none-eabi/include/devctl.h
 cross-arm-none-eabi/arm-none-eabi/include/dirent.h
 cross-arm-none-eabi/arm-none-eabi/include/envlock.h
 cross-arm-none-eabi/arm-none-eabi/include/envz.h
@@ -801,6 +804,8 @@ cross-arm-none-eabi/arm-none-eabi/include/limits.h
 cross-arm-none-eabi/arm-none-eabi/include/locale.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/_arc4random.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h
+cross-arm-none-eabi/arm-none-eabi/include/machine/_endian.h
+cross-arm-none-eabi/arm-none-eabi/include/machine/_time.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/_types.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/ansi.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/endian.h
@@ -816,6 +821,7 @@ cross-arm-none-eabi/arm-none-eabi/include/machine/time.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/types.h
 cross-arm-none-eabi/arm-none-eabi/include/malloc.h
 cross-arm-none-eabi/arm-none-eabi/include/math.h
+cross-arm-none-eabi/arm-none-eabi/include/memory.h
 cross-arm-none-eabi/arm-none-eabi/include/newlib.h
 cross-arm-none-eabi/arm-none-eabi/include/paths.h
 cross-arm-none-eabi/arm-none-eabi/include/pthread.h
@@ -837,6 +843,8 @@ cross-arm-none-eabi/arm-none-eabi/include/string.h
 cross-arm-none-eabi/arm-none-eabi/include/strings.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_default_fcntl.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/_locale.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h
@@ -1441,6 +1449,3 @@ cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/__init__.py
 cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/v6/__init__.py
 cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
-@pkgdir cross-arm-none-eabi/include
-@pkgdir cross-arm-none-eabi/arm-none-eabi/include/rpc
-@pkgdir cross-arm-none-eabi/arm-none-eabi/include/bits
