@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/09/19 10:32:39 mef Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/01/22 13:10:18 wiz Exp $
 
-DISTNAME=	Tie-Cycle-1.221
+DISTNAME=	Tie-Cycle-1.222
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tie/}
