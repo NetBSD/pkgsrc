@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.360 2017/01/21 20:20:43 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.361 2017/01/22 01:33:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -477,3 +477,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/erlang-fast_yaml to 1.0.8 [fhajny 2017-01-21]
 	Updated net/erlang-xmpp to 1.1.5 [fhajny 2017-01-21]
 	Updated chat/ejabberd to 17.01 [fhajny 2017-01-21]
+	Updated chat/weechat to 1.7 [ryoon 2017-01-22]
