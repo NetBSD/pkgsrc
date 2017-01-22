@@ -1,4 +1,4 @@
-$NetBSD: patch-build_gyp.mozbuild,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-build_gyp.mozbuild,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Hunk #2:
   On Darwin, don't assume iOS just because the toolkit is not

@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_atomicops.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_atomicops.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 * Avoid invalid cast errors under NetBSD/evbearmv7hf-el.
 

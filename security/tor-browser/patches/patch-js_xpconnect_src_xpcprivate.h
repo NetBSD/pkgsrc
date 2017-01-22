@@ -1,4 +1,4 @@
-$NetBSD: patch-js_xpconnect_src_xpcprivate.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-js_xpconnect_src_xpcprivate.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 From commit log 1.1:
   Instantiate WeakMapPtr explicitly to get the right visibility with
