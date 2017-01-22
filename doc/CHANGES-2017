@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.363 2017/01/22 02:04:48 wiedi Exp $
+$NetBSD: CHANGES-2017,v 1.364 2017/01/22 10:33:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -480,3 +480,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/weechat to 1.7 [ryoon 2017-01-22]
 	Updated misc/screen to 4.5.0 [ryoon 2017-01-22]
 	Updated editors/nano to 2.7.4 [wiedi 2017-01-22]
+	Added graphics/guetzli version 0.2 [wiz 2017-01-22]
