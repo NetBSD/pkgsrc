@@ -1,4 +1,4 @@
-$NetBSD: patch-dom_plugins_ipc_PluginProcessChild.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-dom_plugins_ipc_PluginProcessChild.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Just because OS_ARCH is Darwin does not mean
 libplugin_child_interpose.dylib is used.

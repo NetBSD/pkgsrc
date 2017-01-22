@@ -1,10 +1,14 @@
-$NetBSD: patch-media_libtheora_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libtheora_moz.build,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
---- media/libtheora/moz.build.orig	2015-02-17 21:40:41.000000000 +0000
+--- media/libtheora/moz.build.orig	2015-08-24 21:53:11.000000000 +0000
 +++ media/libtheora/moz.build
-@@ -93,3 +93,5 @@ if CONFIG['GNU_AS']:
-         if CONFIG['OS_TARGET'] == 'Android':
-             DEFINES['__linux__'] = True
+@@ -21,6 +21,9 @@ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
+ # The encoder is currently not included.
+ DEFINES['THEORA_DISABLE_ENCODE'] = True
  
 +if CONFIG['MOZ_NATIVE_OGG']:
 +    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']
++
+ # Suppress warnings in third-party code.
+ if CONFIG['GNU_CC']:
+     CFLAGS += ['-Wno-type-limits']

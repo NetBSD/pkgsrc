@@ -1,24 +1,16 @@
-$NetBSD: patch-config_system-headers,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
---- config/system-headers.orig	2015-12-14 23:36:05.000000000 +0000
+--- config/system-headers.orig	2016-01-15 01:01:40.000000000 +0000
 +++ config/system-headers
-@@ -189,7 +189,6 @@ asm/signal.h
- ASRegistry.h
- assert.h
- atk/atk.h
--atk-bridge.h
- atlcom.h
- atlconv.h
- atlctl.cpp
-@@ -638,6 +637,7 @@ libgnomevfs/gnome-vfs-mime-handlers.h
- libgnomevfs/gnome-vfs-mime-utils.h
- libgnomevfs/gnome-vfs-ops.h
- libgnomevfs/gnome-vfs-standard-callbacks.h
+@@ -627,6 +627,7 @@ libgnome/libgnome.h
+ libgnomeui/gnome-icon-lookup.h
+ libgnomeui/gnome-icon-theme.h
+ libgnomeui/gnome-ui-init.h
 +libv4l2.h
  lib$routines.h
  limits
  limits.h
-@@ -732,6 +732,7 @@ mapiutil.h
+@@ -721,6 +722,7 @@ mapiutil.h
  mapix.h
  Math64.h
  math.h
@@ -26,37 +18,39 @@ $NetBSD: patch-config_system-headers,v 1.1 2016/02/14 07:30:54 ryoon Exp $
  mbstring.h
  #ifdef ANDROID
  media/AudioEffect.h
-@@ -1268,7 +1269,6 @@ X11/Xlocale.h
- X11/Xos.h
- X11/Xutil.h
- zmouse.h
--soundtouch/SoundTouch.h
- #if MOZ_NATIVE_PNG==1
- png.h
+@@ -1313,6 +1315,25 @@ vpx/vp8cx.h
+ vpx/vp8dx.h
+ vpx_mem/vpx_mem.h
  #endif
-@@ -1330,10 +1330,13 @@ vorbis/codec.h
- theora/theoradec.h
- tremor/ivorbiscodec.h
- speex/speex_resampler.h
-+soundtouch/SoundTouch.h
- ogg/ogg.h
- ogg/os_types.h
- nestegg/nestegg.h
- cubeb/cubeb.h
++#ifdef GKMEDIAS_SHARED_LIBRARY
++vpx/vpx_codec.h
++vpx/vpx_decoder.h
++vpx/vpx_encoder.h
++vpx/vp8cx.h
++vpx/vp8dx.h
++vpx_mem/vpx_mem.h
++vorbis/codec.h
++theora/theoradec.h
++tremor/ivorbiscodec.h
 +speex/speex_resampler.h
 +soundtouch/SoundTouch.h
- #endif
++ogg/ogg.h
++ogg/os_types.h
++nestegg/nestegg.h
++cubeb/cubeb.h
++speex/speex_resampler.h
++soundtouch/SoundTouch.h
++#endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1362,3 +1365,45 @@ unicode/utypes.h
+ gst/app/gstappsrc.h
+@@ -1343,3 +1364,43 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
 +#if MOZ_NATIVE_GRAPHITE2==1
 +graphite2/Font.h
-+graphite2/Log.h
 +graphite2/Segment.h
-+graphite2/Types.h
 +#endif
 +#if MOZ_NATIVE_HARFBUZZ==1
 +harfbuzz/hb-ot.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-build_autoconf_compiler-opts.m4,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-build_autoconf_compiler-opts.m4,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 It's true Clang is required if we use the cocoa toolkit, but we don't
 do that anyway. GCC is perfectly working as long as we use cairo-gtk2.
