@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__arm__netbsd.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp.orig	2014-11-26 12:30:27.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcstubs_arm_netbsd.cpp

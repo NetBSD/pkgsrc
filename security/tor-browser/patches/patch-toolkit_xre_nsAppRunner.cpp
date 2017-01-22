@@ -1,4 +1,4 @@
-$NetBSD: patch-toolkit_xre_nsAppRunner.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-toolkit_xre_nsAppRunner.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 MacOS X < 10.6 had an undocumented behavior concerning execve(2)
 inside a threaded process. If a process tried to call execve(2) and

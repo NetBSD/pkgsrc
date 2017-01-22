@@ -1,4 +1,4 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2014-05-29 23:31:23.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc

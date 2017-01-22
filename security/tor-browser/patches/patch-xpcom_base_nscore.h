@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_base_nscore.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xpcom_base_nscore.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- xpcom/base/nscore.h.orig	2014-05-29 23:31:50.000000000 +0000
 +++ xpcom/base/nscore.h
