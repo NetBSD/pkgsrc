@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_message__loop.cc,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_message__loop.cc,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Don't assume cocoa toolkit just because OS_ARCH is Darwin.
 
