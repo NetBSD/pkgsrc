@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.39 2017/01/05 12:30:39 roy Exp $
+$NetBSD: distinfo,v 1.40 2017/01/22 01:32:53 ryoon Exp $
 
-SHA1 (weechat-1.6.tar.bz2) = 8a80d16f73c3b451f4c8bf6cf9a0e2a7d77c4f9d
-RMD160 (weechat-1.6.tar.bz2) = 40e62dee2654eb21c71197e1384091819edca321
-SHA512 (weechat-1.6.tar.bz2) = ff0666904eae180f7091f475fade089128999ab1736e0e4a64ff79139eecb14f091d830be3110b75ec50ce85472bbf49343606ec827959d7711a19a33bfd4059
-Size (weechat-1.6.tar.bz2) = 2558398 bytes
+SHA1 (weechat-1.7.tar.bz2) = f8683d940417e8de1bfd933fff50fa1bbcf5d7b6
+RMD160 (weechat-1.7.tar.bz2) = 0a7b7faad1362599db8273edcc205c2760e917d5
+SHA512 (weechat-1.7.tar.bz2) = f591834ce669d42ac35e02e029f5991e0aa366eb7abc6d557cf969ebd35c6d39f2a1d03c65885ae4061fd9b1b9628c6c6572f26196a7f5aee64e1002b58a1ece
+Size (weechat-1.7.tar.bz2) = 2592656 bytes
 SHA1 (patch-ab) = 2a4583e0f5b0336e8c42ad9eb5a65bbec4730207
 SHA1 (patch-cmake_FindRuby_cmake.patch) = c9987559eca2240fddb03023092fa8d02ad25976
 SHA1 (patch-po_CMakeLists.txt) = 9b97a4a4da4175e31ea53352fd0b95e1c985ba1e
