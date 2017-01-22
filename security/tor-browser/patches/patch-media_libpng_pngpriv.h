@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libpng_pngpriv.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libpng_pngpriv.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/libpng/pngpriv.h.orig	2014-02-12 21:29:13.000000000 +0000
 +++ media/libpng/pngpriv.h

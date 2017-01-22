@@ -1,4 +1,4 @@
-$NetBSD: patch-gfx_graphite2_src_Bidi.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-gfx_graphite2_src_Bidi.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- gfx/graphite2/src/Bidi.cpp.orig	2013-05-11 19:19:30.000000000 +0000
 +++ gfx/graphite2/src/Bidi.cpp

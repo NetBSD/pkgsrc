@@ -1,4 +1,4 @@
-$NetBSD: patch-js_xpconnect_src_XPCConvert.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-js_xpconnect_src_XPCConvert.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Suggested workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=1147837
 Avoids a crash on big endian 64 bit architectures.

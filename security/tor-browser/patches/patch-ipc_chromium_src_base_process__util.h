@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_process__util.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- ipc/chromium/src/base/process_util.h.orig	2015-01-09 04:38:16.000000000 +0000
 +++ ipc/chromium/src/base/process_util.h
