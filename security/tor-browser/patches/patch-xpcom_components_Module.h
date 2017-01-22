@@ -1,8 +1,10 @@
-$NetBSD: patch-xpcom_components_Module.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xpcom_components_Module.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
---- xpcom/components/Module.h.orig	2016-01-21 05:38:42.000000000 +0000
+* Workaround for binutils/GNU ld 2.26 from NetBSD/amd64 7.99.26
+
+--- xpcom/components/Module.h.orig	2016-01-23 23:23:51.000000000 +0000
 +++ xpcom/components/Module.h
-@@ -124,7 +124,7 @@ struct Module
+@@ -125,7 +125,7 @@ struct Module
  #    define NSMODULE_SECTION __declspec(allocate(".kPStaticModules$M"), dllexport)
  #  elif defined(__GNUC__)
  #    if defined(__ELF__)

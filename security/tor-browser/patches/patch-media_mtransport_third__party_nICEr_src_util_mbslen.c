@@ -1,9 +1,9 @@
-$NetBSD: patch-media_mtransport_third__party_nICEr_src_util_mbslen.c,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_mtransport_third__party_nICEr_src_util_mbslen.c,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
---- media/mtransport/third_party/nICEr/src/util/mbslen.c.orig	2014-04-18 02:03:49.000000000 +0000
+--- media/mtransport/third_party/nICEr/src/util/mbslen.c.orig	2016-02-25 23:02:01.000000000 +0000
 +++ media/mtransport/third_party/nICEr/src/util/mbslen.c
-@@ -54,6 +54,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- # endif
+@@ -47,6 +47,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ #define HAVE_XLOCALE
  #endif
  
 +#ifdef __DragonFly__

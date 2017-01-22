@@ -1,4 +1,4 @@
-$NetBSD: patch-config_rules.mk,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-config_rules.mk,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- config/rules.mk.orig	2015-02-17 21:40:40.000000000 +0000
 +++ config/rules.mk

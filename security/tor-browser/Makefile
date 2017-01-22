@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.13 2017/01/21 20:06:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/22 12:27:21 ryoon Exp $
 
-TORBVER=	5.5.4
+TORBVER=	6.0.8
 
-DISTNAME=	tor-browser-38.7.1esr-5.5-1
+DISTNAME=	v6.0.8-esr45.6.0
 PKGNAME=	tor-browser-${TORBVER}
-PKGREVISION=	7
 CATEGORIES=	www
-MASTER_SITES+=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	.tar.xz
+# Use OpenBSD distfile
+MASTER_SITES=	${MASTER_SITE_OPENBSD:=distfiles/tor-browser/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://www.torproject.org/projects/torbrowser.html.en
 COMMENT=	Tor Browser based on Firefox
 LICENSE=	mpl-1.1
+
+# A name of OpenBSD Ports distfile does not have 'tor-browser' inside.
+DIST_SUBDIR=	tor-browser
+
+EXTRACT_USING=	bsdtar
+WRKSRC=		${WRKDIR}/${DISTNAME:S/v/torb-/}
 
 DEPENDS+=	tor-[0-9]*:../../net/tor
 
@@ -32,6 +37,9 @@ CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--disable-gnomeui
 CONFIGURE_ARGS+=        --disable-libnotify
 CONFIGURE_ARGS+=        --enable-pie
+CONFIGURE_ARGS+=        --enable-tor-data-in-home-dir
+CFLAGS+=		-DTOR_BROWSER_DATA_IN_HOME_DIR=1
+CFLAGS+=		-DTOR_BROWSER_DATA_OUTSIDE_APP_DIR=1
 
 # Avoid build failure from security/manager/ssl/src/nsNSSCallbacks.cpp:601
 CFLAGS+=	-fpermissive
@@ -53,7 +61,7 @@ LDFLAGS.DragonFly=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD=	-lplc4 -lnspr4
 LDFLAGS.Linux=		-lnspr4
 
-.include "../../www/firefox38/mozilla-common.mk"
+.include "../../www/firefox45/mozilla-common.mk"
 .include "options.mk"
 
 CHECK_INTERPRETER_SKIP+=lib/firefox-sdk/sdk/bin/header.py
@@ -71,13 +79,13 @@ SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
 SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/src/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
 
+post-extract:
+	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
+
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC} && autoconf
 	cd ${WRKSRC}/js/src && autoconf
-# XXX Makefile is broken? When libxul is provided from devel/xulrunner,
-# XXX please remove this.
-	mkdir ${WRKSRC}/js/src/.deps
 
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
