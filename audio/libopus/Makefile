@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/07/21 12:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/22 13:04:55 wiz Exp $
 
-DISTNAME=	opus-1.1.3
+DISTNAME=	opus-1.1.4
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/opus/
@@ -10,7 +10,6 @@ HOMEPAGE=	http://opus-codec.org/
 COMMENT=	Totally open, royalty-free, highly versatile audio codec library
 LICENSE=	modified-bsd
 
-CONFLICTS=	opus<=1.0.2
 SUPERSEDES=	opus<=1.0.2
 
 GNU_CONFIGURE=	yes
