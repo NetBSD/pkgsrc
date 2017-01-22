@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2017/01/22 01:32:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2017/01/22 15:31:28 jperkin Exp $
 
 DISTNAME=	weechat-1.7
 CATEGORIES=	chat
@@ -29,6 +29,7 @@ CMAKE_ARGS+=		-DLOCALEDIR:STRING=${PKGLOCALEDIR}/locale
 CMAKE_ARGS+=		-DENABLE_CHARSET:BOOL=ON
 
 LDFLAGS+=		${BUILDLINK_LDADD.gettext}
+LDFLAGS.Darwin+=	-lresolv
 
 .include "options.mk"
 
