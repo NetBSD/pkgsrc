@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.72 2017/01/01 16:06:18 adam Exp $
+# $NetBSD: Makefile,v 1.73 2017/01/22 21:27:49 gdt Exp $
 #
 
 VERSION=		1.6.2
 DISTNAME=		viking-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viking/}${VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -33,7 +33,11 @@ CONFIGURE_ARGS+=	--disable-mapnik
 #CONFIGURE_ARGS+=	--enable-gtk-doc
 #.include "../../textproc/gtk-doc/buildlink3.mk"
 
-DEPENDS+=		gpsbabel-[0-9]*:../../geography/gpsbabel
+# According to upstream, gpsbabel is merely recommended.  gpsbabel is
+# about to depend on qt5, and will thus become very large.  Users can
+# install it and use it at runtime, so don't depend on it.
+#DEPENDS+=		gpsbabel-[0-9]*:../../geography/gpsbabel
+
 DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 REPLACE_PERL=		viking-remote
 
