@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.375 2017/01/22 13:12:15 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.376 2017/01/22 13:13:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -493,3 +493,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-libwww to 6.16 [wiz 2017-01-22]
 	Updated devel/p5-Tie-Cycle to 1.222 [wiz 2017-01-22]
 	Updated net/p5-WebService-MusicBrainz to 0.94 [wiz 2017-01-22]
+	Updated devel/py-test-runner to 2.10.1 [wiz 2017-01-22]
