@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2016/12/14 23:41:16 wiedi Exp $
+# $NetBSD: Makefile,v 1.58 2017/01/22 02:04:15 wiedi Exp $
 
-DISTNAME=	nano-2.7.2
+DISTNAME=	nano-2.7.4
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nano-editor.org/dist/v2.7/
 
@@ -34,7 +34,7 @@ INSTALLATION_DIRS+=	share/examples/nano
 CONF_FILES+=		share/examples/nano/nanorc ${PKG_SYSCONFDIR}/nanorc
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/nanorc.sample ${DESTDIR}${PREFIX}/share/examples/nano/nanorc
+	${INSTALL_DATA} ${WRKSRC}/doc/sample.nanorc ${DESTDIR}${PREFIX}/share/examples/nano/nanorc
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
