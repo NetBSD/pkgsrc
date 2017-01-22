@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.377 2017/01/22 13:14:55 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.378 2017/01/22 14:43:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-WebService-MusicBrainz to 0.94 [wiz 2017-01-22]
 	Updated devel/py-test-runner to 2.10.1 [wiz 2017-01-22]
 	Updated x11/libxkbcommon to 0.7.1 [wiz 2017-01-22]
+	Updated math/py-numpy to 1.12.0 [wiz 2017-01-22]
