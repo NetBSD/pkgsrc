@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.46 2017/01/18 10:48:18 wiz Exp $
+$NetBSD: distinfo,v 1.47 2017/01/22 10:35:31 wiz Exp $
 
-SHA1 (abcde-2.8.tar.gz) = 951071d3ed710d9e40dccaba9f47af2ff82b4c61
-RMD160 (abcde-2.8.tar.gz) = f080f1e499b8d6fec34d7777e5b396d01200682a
-SHA512 (abcde-2.8.tar.gz) = 2124b2fd4fcea984a258ebeffeb7654eecc92d62bb20e76f032ed2e0de5084e9afaf665cccf0b632983baeb572321ce6913e3a956c7865da40fecccc9d23243d
-Size (abcde-2.8.tar.gz) = 148444 bytes
+SHA1 (abcde-2.8.1.tar.gz) = 6b2d7d75a3b94304f4fea8c5a81fc12476141747
+RMD160 (abcde-2.8.1.tar.gz) = e98d53ec173ecec0386282f9249423af7f9190fe
+SHA512 (abcde-2.8.1.tar.gz) = 18e9e46ec69d0b99fc5e2b71ec549e3961e5f6d7f88cef1a6c8da154689554a70cc8bc748c1ef78f81583a510f8b03906b8a4fec454aa0b06f0169d0bc4a7b36
+Size (abcde-2.8.1.tar.gz) = 149238 bytes
 SHA1 (patch-ab) = 04771bb4d0ace2886fe7612a06b4476696d0429d
-SHA1 (patch-abcde-musicbrainz-tool) = a9ac831e77f50a1746dcd7748670a7fe84666a9d
