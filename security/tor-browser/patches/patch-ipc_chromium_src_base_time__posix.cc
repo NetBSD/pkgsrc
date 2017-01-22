@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_chromium_src_base_time__posix.cc,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_time__posix.cc,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- ipc/chromium/src/base/time_posix.cc.orig	2013-05-11 19:19:32.000000000 +0000
 +++ ipc/chromium/src/base/time_posix.cc

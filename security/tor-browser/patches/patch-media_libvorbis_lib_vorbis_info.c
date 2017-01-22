@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libvorbis_lib_vorbis_info.c,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libvorbis_lib_vorbis_info.c,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/libvorbis/lib/vorbis_info.c.orig	2015-01-23 05:59:59.000000000 +0000
 +++ media/libvorbis/lib/vorbis_info.c	2015-02-16 14:36:05.000000000 +0000

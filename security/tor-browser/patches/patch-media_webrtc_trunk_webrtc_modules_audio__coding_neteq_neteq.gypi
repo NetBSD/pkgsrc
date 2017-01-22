@@ -1,4 +1,4 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__coding_neteq_neteq.gypi,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_audio__coding_neteq_neteq.gypi,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/webrtc/trunk/webrtc/modules/audio_coding/neteq/neteq.gypi.orig	2015-05-04 00:43:28.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/audio_coding/neteq/neteq.gypi

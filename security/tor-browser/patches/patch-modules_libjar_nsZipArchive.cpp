@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_libjar_nsZipArchive.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-modules_libjar_nsZipArchive.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- modules/libjar/nsZipArchive.cpp.orig	2013-06-18 11:01:37.000000000 +0000
 +++ modules/libjar/nsZipArchive.cpp

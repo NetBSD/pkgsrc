@@ -1,4 +1,4 @@
-$NetBSD: patch-memory_volatile_VolatileBufferOSX.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-memory_volatile_VolatileBufferOSX.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- memory/volatile/VolatileBufferOSX.cpp.orig	2015-03-27 02:20:26.000000000 +0000
 +++ memory/volatile/VolatileBufferOSX.cpp

@@ -1,4 +1,4 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_desktop__capture_screen__capturer.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_desktop__capture_screen__capturer.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/webrtc/trunk/webrtc/modules/desktop_capture/screen_capturer.h.orig	2014-10-11 09:06:41.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/desktop_capture/screen_capturer.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_build_PoisonIOInterposer.h,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xpcom_build_PoisonIOInterposer.h,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Replace XP_MACOSX with XP_DARWIN as the former is not defined when the
 toolkit is not cocoa.

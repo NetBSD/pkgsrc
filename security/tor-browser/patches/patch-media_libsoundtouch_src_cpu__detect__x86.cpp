@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2014-04-18 02:03:48.000000000 +0000
 +++ media/libsoundtouch/src/cpu_detect_x86.cpp

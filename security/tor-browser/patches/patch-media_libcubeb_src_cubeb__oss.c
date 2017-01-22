@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/libcubeb/src/cubeb_oss.c.orig	2015-02-20 05:47:26.000000000 +0000
 +++ media/libcubeb/src/cubeb_oss.c
