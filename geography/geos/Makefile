@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2017/01/22 23:42:18 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2017/01/22 23:44:47 gdt Exp $
 
 # Do not update to 3.6, because there is serious ABI breakage which
 # prevents osm2pgsql from working, and may well cause other programs
 # to have issues.  osm2pgsql plans to stop using geos, and it seems
 # better to have slightly old geos in pkgsrc then to have a bunch of
 # broken other programs.  Please email me if you have a problem with
-# this.  -- gdt, 20160122
+# this.  -- gdt, 20170122
 DISTNAME=	geos-3.5.1
 CATEGORIES=	geography
 MASTER_SITES=	http://download.osgeo.org/geos/
