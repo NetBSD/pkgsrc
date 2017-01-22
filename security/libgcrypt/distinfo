@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.70 2016/12/30 00:41:35 wiz Exp $
+$NetBSD: distinfo,v 1.71 2017/01/22 12:55:29 wiz Exp $
 
-SHA1 (libgcrypt-1.7.5.tar.bz2) = fa485d854748fc06ea041b3057b2de2f12fbc17f
-RMD160 (libgcrypt-1.7.5.tar.bz2) = f7c9592a1722cb9b38782a9914faa34251a1d1fb
-SHA512 (libgcrypt-1.7.5.tar.bz2) = 575cc6cda3a7c3770e62089d5de1d26de3136a1360b9913814727fdef1c803890d77c57f61621687419d7e572ffd3bc11090cc8899cc4b6af2908ed38324405c
-Size (libgcrypt-1.7.5.tar.bz2) = 2883968 bytes
+SHA1 (libgcrypt-1.7.6.tar.bz2) = d2b9e0f413064cfc67188f80d3cbda887c755a62
+RMD160 (libgcrypt-1.7.6.tar.bz2) = bc9843aa76a13f3e7ea5ac291717241242d497f0
+SHA512 (libgcrypt-1.7.6.tar.bz2) = fb7e20c50280f2ca715c3fc9a457f1cc22224797812f8dfa3ec756471bd0049c2cf75ffe12daa543aefe6cdcd1b90b4b9f943f148c073ad99d3a7dee42a8173f
+Size (libgcrypt-1.7.6.tar.bz2) = 2897695 bytes
 SHA1 (patch-aa) = 60b3f4453b217ed8879a2ffd8d485c0195ffb5f8
 SHA1 (patch-cipher_rijndael-arm.S) = ef3cb7f481022440780eb48ae31cbfad0a3ec115
 SHA1 (patch-src_visibility.h) = 8cbbf6803ab34b4b7dda832aa8ee18247aa89518
