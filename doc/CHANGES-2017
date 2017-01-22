@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.378 2017/01/22 14:43:34 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.379 2017/01/22 14:44:33 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -496,3 +496,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test-runner to 2.10.1 [wiz 2017-01-22]
 	Updated x11/libxkbcommon to 0.7.1 [wiz 2017-01-22]
 	Updated math/py-numpy to 1.12.0 [wiz 2017-01-22]
+	Updated devel/meld to 3.16.4nb1 [leot 2017-01-22]
