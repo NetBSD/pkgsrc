@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2016/04/23 10:43:02 wiz Exp $
+$NetBSD: distinfo,v 1.26 2017/01/22 14:06:07 abs Exp $
 
 SHA1 (xemacs/xemacs-21.4.24.tar.gz) = e9ff7693adbef333b78f51b4dfdddd296bad0fcc
 RMD160 (xemacs/xemacs-21.4.24.tar.gz) = 0e01971c0dd47d9dd401d02e508edf241208969b
@@ -12,6 +12,8 @@ SHA1 (patch-man_lispref_intro.texi) = 5837f8a0e8057649921cdbddd8e8329165ec1104
 SHA1 (patch-man_xemacs_custom.texi) = e564906bced48b0a7c788c217c02eafe167fee59
 SHA1 (patch-src_Makefile.in.in) = 8d2c262983ff16197c99429e7d4cc80cd8371775
 SHA1 (patch-src_config.h.in) = 25ac897560abad51d83b58818e1dc2e77a8519e4
+SHA1 (patch-src_emacs.c) = 19bbba8b9a777388060bab637b2bdc5e9027e11f
 SHA1 (patch-src_lisp.h) = ed1210a179f7dce537634e3129acc93f9c9b5966
+SHA1 (patch-src_sound.c) = fd3717943310c049fbcc8598b072d80d9812ae20
 SHA1 (patch-src_unexelf.c) = 5147a3f41d1188aaf08b99e768d8b93e9e28d305
 SHA1 (patch-src_unexfreebsd.c) = 8bcbd103884430cec31c584bc489e4ab98d79448
