@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16939 2017/01/21 19:33:05 ryoon Exp $
+$NetBSD: TODO,v 1.16940 2017/01/22 10:20:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -358,6 +358,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.4.5
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
@@ -379,6 +380,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o SOPE-3.0.2
 	o TiffIO-140a
 	o YoSucker-81
+	o abcde-2.8.1
+	o abcm2ps-8.13.4
 	o abcmidi-20160505
 	o abook-0.6.1
 	o accerciser-3.22.0
@@ -491,6 +494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
+	o calibre-2.77
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -657,6 +661,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
+	o fftwf-3.3.6pl1
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
@@ -915,6 +920,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ircservices-5.1.21
 	o iroffer-1.4b01
 	o isc-dhcp-4.3.5
+	o iso-codes-3.74
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
 	o ispell-ru-io-0.99g5
@@ -988,6 +994,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
+	o libgcrypt-1.7.6
 	o libgdiplus-4.2
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -1009,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopus-1.1.4
 	o libowfat-0.29
 	o libpgm-5.2.122
 	o libprelude-3.1.0
@@ -1026,6 +1034,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libvdpau-1.1.1
 	o libvirt-2.3
 	o libxdg-basedir-1.2.0
+	o libxkbcommon-0.7.1
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
@@ -1069,6 +1078,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbuffer-20160228
 	o mcabber-1.0.2
 	o mcollective-2.3.2
+	o mcookie-2.29.1
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.39.1
@@ -1224,10 +1234,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SVN-Simple-0.312
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
+	o p5-Tie-Cycle-1.222
 	o p5-Tie-DBI-1.06
+	o p5-WebService-MusicBrainz-0.94
 	o p5-X11-Protocol-29
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
+	o p5-libwww-6.16
 	o p5-pcsc-1.4.14
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
@@ -1349,6 +1362,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ncclient-0.5.3
 	o py-newt-0.52.18
 	o py-notify-0.3.1
+	o py-numpy-1.12.0
 	o py-numpydoc-0.6.0
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.6.4
@@ -1366,6 +1380,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-static-1.1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-test-runner-2.10.1
 	o py-tornado-4.4.1
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
@@ -1412,7 +1427,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-pppoe-3.11
 	o rpm-4.13
 	o rsnapshot-1.4.2
-	o rspamd-1.4.2
+	o rspamd-1.4.3
 	o rt4-4.4.0
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1554,6 +1569,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thttpd-2.27
 	o tidy-5.1.25 [wip]
 	o tig-2.2
+	o tigervnc-1.7.1
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.2
@@ -1600,8 +1616,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.25
 	o vile-9.8q
-	o vim-8.0.0187
-	o vim-share-8.0.0187
+	o vim-8.0.0211
+	o vim-share-8.0.0211
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1639,7 +1655,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20170114
+	o x264-devel-20170121
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
