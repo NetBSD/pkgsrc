@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.74 2017/01/01 16:00:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.75 2017/01/22 15:10:41 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -3191,7 +3191,6 @@ share/calibre/recipes/strategy-business.recipe
 share/calibre/recipes/sueddeutsche.recipe
 share/calibre/recipes/sueddeutsche_mobil.recipe
 share/calibre/recipes/sueddeutschezeitung.recipe
-share/calibre/recipes/sunday_times.recipe
 share/calibre/recipes/superbebe.recipe
 share/calibre/recipes/superesportes.recipe
 share/calibre/recipes/svd_se.recipe
