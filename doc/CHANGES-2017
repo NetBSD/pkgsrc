@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.383 2017/01/22 15:20:18 kamil Exp $
+$NetBSD: CHANGES-2017,v 1.384 2017/01/22 20:48:30 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -501,3 +501,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/iso-codes to 3.74 [wiz 2017-01-22]
 	Updated misc/calibre to 2.77.0 [wiz 2017-01-22]
 	Updated graphics/py-pygal to 2.3.1 [kamil 2017-01-22]
+	Updated net/corebird to 1.4.1nb1 [maya 2017-01-22]
