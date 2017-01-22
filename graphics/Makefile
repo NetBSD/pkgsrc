@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2017/01/20 23:07:38 markd Exp $
+# $NetBSD: Makefile,v 1.758 2017/01/22 10:33:20 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -223,6 +223,7 @@ SUBDIR+=	gtkam
 SUBDIR+=	gtkglext
 SUBDIR+=	gtkimageview
 SUBDIR+=	gtksee
+SUBDIR+=	guetzli
 SUBDIR+=	guile-cairo
 SUBDIR+=	gwenview
 SUBDIR+=	gwenview-i18n-kde3
