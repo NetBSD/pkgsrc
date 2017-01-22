@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.6 2017/01/22 18:10:35 maya Exp $
+$NetBSD: README.OpenBSD,v 1.7 2017/01/22 20:14:50 maya Exp $
 
 Please read the general README file as well.
 
@@ -19,7 +19,9 @@ bootstrap. Copy it to your $sysconfdir directory. If $sysconfdir/mk.conf doesn't
 exist, the example is copied into place.
 
 3. It's possible to use pkgsrc libraries instead of system libraries. For
-example, to use OpenSSL, you can add the following line to $prefix/etc/mk.conf:
+example, to use OpenSSL, you can use:
+	./bootstrap --prefer-pkgsrc=openssl
+Or after a bootstrap, you can add the following line to $prefix/etc/mk.conf:
 	PREFER.openssl=pkgsrc
 
 bootstrap-pkgsrc has been tested on OpenBSD 3.2 and 3.5 (i386). Some testing has
