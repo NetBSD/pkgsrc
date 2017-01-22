@@ -1,4 +1,4 @@
-$NetBSD: patch-js__src__vm__SPSProfiler.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-js__src__vm__SPSProfiler.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 Unclear fallout from our version of bug 840242, attachment v1: some architectures
 fail to link if we do not add the inlines here - might be compiler/arch specific.

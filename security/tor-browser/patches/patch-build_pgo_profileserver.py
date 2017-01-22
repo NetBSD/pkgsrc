@@ -1,4 +1,4 @@
-$NetBSD: patch-build_pgo_profileserver.py,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-build_pgo_profileserver.py,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- build/pgo/profileserver.py.orig	2014-03-15 05:19:09.000000000 +0000
 +++ build/pgo/profileserver.py

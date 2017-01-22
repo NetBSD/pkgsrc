@@ -1,4 +1,4 @@
-$NetBSD: patch-config_stl__wrappers_ostream,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-config_stl__wrappers_ostream,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- config/stl_wrappers/ostream.orig	2013-05-13 18:22:40.000000000 +0000
 +++ config/stl_wrappers/ostream

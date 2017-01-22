@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp.orig	2014-10-11 09:06:50.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp

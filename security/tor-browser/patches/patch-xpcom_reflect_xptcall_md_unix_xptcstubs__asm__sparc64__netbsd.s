@@ -1,4 +1,4 @@
-$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- xpcom/reflect/xptcall/md/unix/xptcstubs_asm_sparc64_netbsd.s.orig	2014-10-14 18:49:14.000000000 +0000
 +++ xpcom/reflect/xptcall/md/unix/xptcstubs_asm_sparc64_netbsd.s

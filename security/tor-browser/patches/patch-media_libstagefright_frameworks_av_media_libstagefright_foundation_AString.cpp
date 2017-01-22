@@ -1,4 +1,4 @@
-$NetBSD: patch-media_libstagefright_frameworks_av_media_libstagefright_foundation_AString.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-media_libstagefright_frameworks_av_media_libstagefright_foundation_AString.cpp,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 --- media/libstagefright/frameworks/av/media/libstagefright/foundation/AString.cpp.orig	2015-02-23 07:39:35.000000000 +0000
 +++ media/libstagefright/frameworks/av/media/libstagefright/foundation/AString.cpp

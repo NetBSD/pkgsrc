@@ -1,8 +1,8 @@
-$NetBSD: patch-netwerk_dns_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-netwerk_dns_moz.build,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
---- netwerk/dns/moz.build.orig	2015-05-04 00:43:34.000000000 +0000
+--- netwerk/dns/moz.build.orig	2016-02-25 23:02:18.000000000 +0000
 +++ netwerk/dns/moz.build
-@@ -68,5 +68,8 @@ LOCAL_INCLUDES += [
+@@ -66,6 +66,9 @@ LOCAL_INCLUDES += [
      '/netwerk/base',
  ]
  
@@ -10,4 +10,5 @@ $NetBSD: patch-netwerk_dns_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
 +    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
 +
  if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk' and CONFIG['ANDROID_VERSION'] > '19':
-     CXXFLAGS += ['-I%s/bionic/libc/dns/include' % CONFIG['ANDROID_SOURCE']]
+     LOCAL_INCLUDES += ['%' + '%s/bionic/libc/dns/include' % CONFIG['ANDROID_SOURCE']]
+ 

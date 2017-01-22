@@ -1,4 +1,4 @@
-$NetBSD: patch-xulrunner_installer_Makefile.in,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-xulrunner_installer_Makefile.in,v 1.2 2017/01/22 12:27:22 ryoon Exp $
 
 * Install pkg-config pc files to package specific directory.
 
