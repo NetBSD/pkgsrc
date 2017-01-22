@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.381 2017/01/22 14:53:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.382 2017/01/22 15:10:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/meld to 3.16.4nb1 [leot 2017-01-22]
 	Updated math/fftwf to 3.3.6pl1 [wiz 2017-01-22]
 	Updated textproc/iso-codes to 3.74 [wiz 2017-01-22]
+	Updated misc/calibre to 2.77.0 [wiz 2017-01-22]
