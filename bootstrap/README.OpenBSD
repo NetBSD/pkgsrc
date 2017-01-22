@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.5 2016/11/15 11:19:09 jperkin Exp $
+$NetBSD: README.OpenBSD,v 1.6 2017/01/22 18:10:35 maya Exp $
 
 Please read the general README file as well.
 
@@ -17,6 +17,10 @@ good idea to move them out of the way to avoid confusion, e.g.:
 pkgsrc/bootstrap/work/mk.conf.example. It contains the settings you provided to 
 bootstrap. Copy it to your $sysconfdir directory. If $sysconfdir/mk.conf doesn't
 exist, the example is copied into place.
+
+3. It's possible to use pkgsrc libraries instead of system libraries. For
+example, to use OpenSSL, you can add the following line to $prefix/etc/mk.conf:
+	PREFER.openssl=pkgsrc
 
 bootstrap-pkgsrc has been tested on OpenBSD 3.2 and 3.5 (i386). Some testing has
 been done on 3.0 as well and 5.6 (amd64). It has been used successfully on 5.5
