@@ -1,36 +1,28 @@
-# $NetBSD: Makefile,v 1.9 2016/04/11 04:22:34 dbj Exp $
-#
+# $NetBSD: Makefile,v 1.10 2017/01/23 18:20:59 adam Exp $
 
-DISTNAME=	libvdpau-0.5
+DISTNAME=	libvdpau-1.1.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://people.freedesktop.org/~aplattner/vdpau/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://http.download.nvidia.com/XFree86/vdpau/doxygen/html/index.html
 COMMENT=	Video Decode and Presentation API for Unix
 LICENSE=	mit
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config gmake
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-documentation
-
-AUTO_MKDIRS=	yes
 
 PKGCONFIG_OVERRIDE+=	vdpau.pc.in
 
-DOCDIR=		${PREFIX}/share/doc/libvdpau
 EGDIR=		${PREFIX}/share/examples/libvdpau
 CONF_FILES=	${EGDIR}/vdpau_wrapper.cfg \
 		${PKG_SYSCONFDIR}/vdpau_wrapper.cfg
 
 INSTALL_MAKE_FLAGS=	sysconfdir=${EGDIR}
-
-DOCFILES=		README NEWS COPYING AUTHORS
-post-install:
-	set -e; cd ${WRKSRC}; \
-	${INSTALL_DATA} ${DOCFILES} ${DESTDIR}${DOCDIR}
 
 .include "available.mk"
 .if ${VDPAU_AVAILABLE} == no
