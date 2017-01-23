@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2017/01/21 19:45:21 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2017/01/23 12:24:18 wiz Exp $
 
 BUILDLINK_TREE+=	pulseaudio
 
@@ -36,7 +36,6 @@ pkgbase:= pulseaudio
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
 .endif # PULSEAUDIO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pulseaudio
