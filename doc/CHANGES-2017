@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.387 2017/01/23 15:29:26 adam Exp $
+$NetBSD: CHANGES-2017,v 1.388 2017/01/23 15:57:29 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -505,3 +505,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated shells/bash to 4.4.011 [maya 2017-01-22]
 	Updated x11/libXi to 1.7.9 [wiz 2017-01-23]
 	Updated multimedia/x264-devel to 20170122 [adam 2017-01-23]
+	Updated sysutils/dmidecode to 3.0nb1 [msaitoh 2017-01-23]
