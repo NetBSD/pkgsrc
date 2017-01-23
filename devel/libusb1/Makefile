@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/04/09 08:18:58 richard Exp $
+# $NetBSD: Makefile,v 1.14 2017/01/23 18:50:02 maya Exp $
 
 DISTNAME=	libusb-1.0.20
 PKGNAME=	${DISTNAME:S/libusb/libusb1/}
@@ -22,6 +22,9 @@ USE_TOOLS+=	pkg-config
 MAKE_JOBS_SAFE=            no
 
 PKGCONFIG_OVERRIDE+=	libusb-1.0.pc.in
+
+# systemd dependency
+CONFIGURE_ARGS.Linux+=	--disable-udev
 
 CONFIGURE_ARGS+=	--enable-tests-build
 #CONFIGURE_ARGS+=	--enable-examples-build
