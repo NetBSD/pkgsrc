@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.401 2017/01/24 08:30:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.402 2017/01/24 08:59:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/orcus0.12 to 0.12.1 [wiz 2017-01-24]
 	Updated devel/lua-lpeg to 1.0.1 [alnsn 2017-01-24]
 	Updated net/tigervnc to 1.7.1 [wiz 2017-01-24]
+	Updated net/tor to 0.2.9.9 [wiz 2017-01-24]
