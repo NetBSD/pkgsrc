@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.15 2016/08/24 09:34:32 maya Exp $
+# $NetBSD: options.mk,v 1.16 2017/01/24 17:44:45 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao musepack faad wavpack pulseaudio
 PKG_SUPPORTED_OPTIONS+=		ffmpeg opus jack
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
-PKG_SUGGESTED_OPTIONS=		flac libao mad modplug vorbis
+PKG_SUGGESTED_OPTIONS=		flac libao mad modplug opus vorbis
 PKG_OPTIONS_LEGACY_OPTS=	ao:libao
 PKG_OPTIONS_LEGACY_OPTS=	mpcdec:musepack
 
