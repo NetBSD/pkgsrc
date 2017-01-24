@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1145 2017/01/24 13:48:57 mef Exp $
+# $NetBSD: Makefile,v 1.1146 2017/01/24 17:22:09 bsiegert Exp $
 #
 
 COMMENT=	Networking tools
@@ -177,6 +177,7 @@ SUBDIR+=	gnugk
 SUBDIR+=	go-dns
 SUBDIR+=	go-grpc
 SUBDIR+=	go-net
+SUBDIR+=	go-ovh
 SUBDIR+=	go-vultr
 SUBDIR+=	gofish
 SUBDIR+=	gopher
