@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2016/09/20 21:02:40 maya Exp $
+$NetBSD: MESSAGE,v 1.2 2017/01/24 12:31:18 maya Exp $
 
-If you are experiencing crashes while plotting, you can try:
->> graphics_toolkit gnuplot
+If you are experiencing crashes while plotting, you can try adding the
+following line to ~/.octaverc:
+	graphics_toolkit("gnuplot");
 
 ===========================================================================
