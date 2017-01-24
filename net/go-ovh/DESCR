@@ -1,0 +1,2 @@
+go-ovh is a lightweight Go wrapper around OVH's APIs. It handles all the hard
+work including credential creation and request signing.
