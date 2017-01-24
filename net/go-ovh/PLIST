@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/24 17:22:09 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/ovh/go-ovh/ovh.a
+gopkg/src/github.com/ovh/go-ovh/CONTRIBUTING.md
+gopkg/src/github.com/ovh/go-ovh/LICENSE
+gopkg/src/github.com/ovh/go-ovh/README.md
+gopkg/src/github.com/ovh/go-ovh/ovh/configuration.go
+gopkg/src/github.com/ovh/go-ovh/ovh/configuration_test.go
+gopkg/src/github.com/ovh/go-ovh/ovh/consumer_key.go
+gopkg/src/github.com/ovh/go-ovh/ovh/consumer_key_test.go
+gopkg/src/github.com/ovh/go-ovh/ovh/error.go
+gopkg/src/github.com/ovh/go-ovh/ovh/error_test.go
+gopkg/src/github.com/ovh/go-ovh/ovh/ovh.go
+gopkg/src/github.com/ovh/go-ovh/ovh/ovh_test.go
+@pkgdir bin
