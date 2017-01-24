@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2017/01/22 19:18:33 abs Exp $
+$NetBSD: MESSAGE,v 1.6 2017/01/24 20:31:14 hauke Exp $
 
 * See ${PREFIX}/lib/${DISTNAME}/etc/sample.init.el for a sample user
   configuration.  Copying it to ~/.xemacs/init.el is an easy start.
@@ -7,8 +7,6 @@ $NetBSD: MESSAGE,v 1.5 2017/01/22 19:18:33 abs Exp $
 * See ${PREFIX}/lib/${DISTNAME}/etc/sample.Xdefaults for a sample X
   resource setting.
 
-* Install `xemacs-packages' for a full set of support packages. Without
-  this UI operations such as File>Open will fail with
-    "Symbol's function definition is void: make-annotation"
+* Install `xemacs-packages' for a full set of support packages.
 
 ===========================================================================
