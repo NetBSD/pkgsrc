@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.22 2016/12/30 23:27:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2017/01/24 20:31:14 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
 
 DISTNAME=	xemacs-21.4.24
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
@@ -97,6 +97,7 @@ post-extract:
 
 pre-build:
 	rm -f ${WRKSRC}/etc/ctags.1.orig
+	rm -f ${WRKSRC}/lisp/gui.el.orig
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Installation ${DESTDIR}${LIBDIR}/etc/
