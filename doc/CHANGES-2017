@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.390 2017/01/23 21:53:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.391 2017/01/24 01:39:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/dmidecode to 3.0nb1 [msaitoh 2017-01-23]
 	Updated multimedia/libvdpau to 1.1.1 [adam 2017-01-23]
 	Updated audio/wavpack to 5.1.0 [wiz 2017-01-23]
+	Updated www/p5-Hijk to 0.27 [wen 2017-01-24]
