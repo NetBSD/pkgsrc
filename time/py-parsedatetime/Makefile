@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/04/05 14:07:45 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/24 13:18:04 fhajny Exp $
 
-DISTNAME=	parsedatetime-2.1
+DISTNAME=	parsedatetime-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=bear/}
@@ -12,6 +12,8 @@ LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	parsedatetime
 GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

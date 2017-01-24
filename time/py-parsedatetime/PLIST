@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2016/04/05 14:07:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/01/24 13:18:04 fhajny Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/parsedatetime/__init__.py
 ${PYSITELIB}/parsedatetime/__init__.pyc
@@ -30,6 +31,9 @@ ${PYSITELIB}/parsedatetime/pdt_locales/en_US.pyo
 ${PYSITELIB}/parsedatetime/pdt_locales/es.py
 ${PYSITELIB}/parsedatetime/pdt_locales/es.pyc
 ${PYSITELIB}/parsedatetime/pdt_locales/es.pyo
+${PYSITELIB}/parsedatetime/pdt_locales/fr_FR.py
+${PYSITELIB}/parsedatetime/pdt_locales/fr_FR.pyc
+${PYSITELIB}/parsedatetime/pdt_locales/fr_FR.pyo
 ${PYSITELIB}/parsedatetime/pdt_locales/icu.py
 ${PYSITELIB}/parsedatetime/pdt_locales/icu.pyc
 ${PYSITELIB}/parsedatetime/pdt_locales/icu.pyo
