@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.405 2017/01/24 13:18:13 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.406 2017/01/24 13:32:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -523,3 +523,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/syncthing to 0.14.20 [wiz 2017-01-24]
 	Updated net/py-lexicon to 1.2.2 [fhajny 2017-01-24]
 	Updated time/py-parsedatetime to 2.2 [fhajny 2017-01-24]
+	Updated www/seamonkey to 2.46nb3 [ryoon 2017-01-24]
