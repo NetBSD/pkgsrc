@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.397 2017/01/24 07:32:58 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.398 2017/01/24 07:37:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -515,3 +515,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/p5-Time-Local to 1.25 [wen 2017-01-24]
 	Removed converters/libwps03 successor converters/libwps [wiz 2017-01-24]
 	Removed devel/mdds0.12 successor devel/mdds [wiz 2017-01-24]
+	Removed converters/orcus0.8 successor converters/orcus [wiz 2017-01-24]
