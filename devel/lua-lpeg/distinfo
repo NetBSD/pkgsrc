@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:47 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/01/24 08:18:48 alnsn Exp $
 
-SHA1 (lpeg-1.0.0.tar.gz) = 64a0920c9243b624a277c987d2219b6c50c43971
-RMD160 (lpeg-1.0.0.tar.gz) = 952b65755901fe02804b72ce6ab1ab8e12aaef60
-SHA512 (lpeg-1.0.0.tar.gz) = a245d2e0b8604121d8b4466052ab5da4f2b1f81c1c4b2579d8d5498920fc351d46fe4159a0b5948d1b377ef9bda410c4bf40ffd228b9f26bf346dfba2a7b9fb7
-Size (lpeg-1.0.0.tar.gz) = 70267 bytes
+SHA1 (lpeg-1.0.1.tar.gz) = b2f81624e0ce9c99c0731287c3475fac1f1c0f50
+RMD160 (lpeg-1.0.1.tar.gz) = ce31666f7d55ad6957c2b274983d7d201fa797dd
+SHA512 (lpeg-1.0.1.tar.gz) = 7b43fbee7eff443000986684bc56bba6d2796a31cf860740746c70e155bdea1b62a46b93f97e2747e3ef0f63e965148778ac2985d0f2d83e1e37ec4ebbabf4aa
+Size (lpeg-1.0.1.tar.gz) = 71527 bytes
