@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.27 2016/07/10 13:28:41 rillig Exp $
+# $NetBSD: xorg.mk,v 1.28 2017/01/24 14:25:00 mrg Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -43,6 +43,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXpresent/buildlink3.mk"
 .include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
@@ -53,6 +54,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+.include "../../x11/presentproto/buildlink3.mk"
 .include "../../x11/printproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/recordproto/buildlink3.mk"
