@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.142 2017/01/01 16:14:07 ryoon Exp $
+$NetBSD: distinfo,v 1.143 2017/01/24 13:31:37 ryoon Exp $
 
 SHA1 (seamonkey-2.46.source.tar.xz) = 5322723a0c7757f29db5636fc60f4c9f3f6734c5
 RMD160 (seamonkey-2.46.source.tar.xz) = ba09b9606457371c46524fdda3b73f3b37571f30
@@ -82,6 +82,7 @@ SHA1 (patch-mozilla_modules_libjar_nsZipArchive.cpp) = a399e0bd0e83c47938bbee077
 SHA1 (patch-mozilla_modules_libpref_init_all.js) = f366d7acf841117bf8c896d355f04e9549ebf17f
 SHA1 (patch-mozilla_mozglue_build_arm.cpp) = 592ae5ce1a404227cc2ab6a06418cc813c5743c9
 SHA1 (patch-mozilla_mozglue_build_arm.h) = 94e2b1a1a9ebf20bfa8a542066aa0dad475db320
+SHA1 (patch-mozilla_netwerk_protocol_http_Http2Session.cpp) = 7d7556575028ef4ee5fccbcb712d5c9f2827f7e6
 SHA1 (patch-mozilla_old-configure.in) = 865300929353ffbd31ae01793dd496352e2ccb70
 SHA1 (patch-mozilla_python_mozbuild_mozbuild_configure_options.py) = c95e9ffa8bae63b6e68c8363903dadef93ce7d75
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = 0b5cad33bc9a90f4ae2d6346065707b642aba3a9
