@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16958 2017/01/24 07:44:00 wiz Exp $
+$NetBSD: TODO,v 1.16959 2017/01/24 08:30:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1552,7 +1552,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thttpd-2.27
 	o tidy-5.1.25 [wip]
 	o tig-2.2
-	o tigervnc-1.7.1
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.2
