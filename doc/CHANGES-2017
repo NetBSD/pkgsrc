@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.411 2017/01/24 19:34:59 maya Exp $
+$NetBSD: CHANGES-2017,v 1.412 2017/01/24 19:53:28 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -528,4 +528,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/p5-XMLRPC-Lite version 0.717 [mef 2017-01-24]
 	Updated pkgtools/x11-links to 1.03 [mrg 2017-01-24]
 	Updated cad/py-gds to 1.1 [mef 2017-01-24]
+	Added net/go-ovh version 0.20170102 [bsiegert 2017-01-24]
 	Updated audio/cmus to 2.7.1nb6 [maya 2017-01-24]
