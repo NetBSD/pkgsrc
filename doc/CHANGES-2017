@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.398 2017/01/24 07:37:29 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.399 2017/01/24 07:44:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed converters/libwps03 successor converters/libwps [wiz 2017-01-24]
 	Removed devel/mdds0.12 successor devel/mdds [wiz 2017-01-24]
 	Removed converters/orcus0.8 successor converters/orcus [wiz 2017-01-24]
+	Updated converters/orcus0.12 to 0.12.1 [wiz 2017-01-24]
