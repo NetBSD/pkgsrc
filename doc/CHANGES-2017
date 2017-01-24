@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.402 2017/01/24 08:59:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.403 2017/01/24 09:54:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -520,3 +520,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/lua-lpeg to 1.0.1 [alnsn 2017-01-24]
 	Updated net/tigervnc to 1.7.1 [wiz 2017-01-24]
 	Updated net/tor to 0.2.9.9 [wiz 2017-01-24]
+	Updated net/syncthing to 0.14.20 [wiz 2017-01-24]
