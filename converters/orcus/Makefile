@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/01/01 16:06:06 adam Exp $
+# $NetBSD: Makefile,v 1.18 2017/01/24 07:38:00 wiz Exp $
 
 DISTNAME=	liborcus-0.11.2
 PKGNAME=	${DISTNAME:S/lib//}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://gitlab.com/orcus/orcus
-COMMENT=	Import filter library for spreadsheet documents (0.10 branch)
+COMMENT=	Import filter library for spreadsheet documents (0.11 branch)
 LICENSE=	mpl-2.0
 
 SUBST_CLASSES+=			fix-python
