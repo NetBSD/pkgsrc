@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/24 13:45:36 mef Exp $
+
+SHA1 (XMLRPC-Lite-0.717.tar.gz) = a88218bf5b3ad5d25a8d19a249f05d26845eec7a
+RMD160 (XMLRPC-Lite-0.717.tar.gz) = 7f3dac2db73d1b890447a9ac77add9082c1fc74d
+SHA512 (XMLRPC-Lite-0.717.tar.gz) = bce50efb0e7fec81834c1fc2cdc987aed8530b11738c713446f6c2cf2bc503f4d05411f630eb78f4e109fe89eaf9bb835e8e0f069548f19c164ba8b182ab8b24
+Size (XMLRPC-Lite-0.717.tar.gz) = 10276 bytes
