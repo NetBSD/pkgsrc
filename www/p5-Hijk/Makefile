@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 19:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/24 01:38:31 wen Exp $
 
-DISTNAME=	Hijk-0.26
+DISTNAME=	Hijk-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/
+MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GU/GUGOD/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/
