@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2349 2017/01/17 19:44:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.2350 2017/01/24 07:32:30 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -649,7 +649,6 @@ SUBDIR+=	mate-common
 SUBDIR+=	matio
 SUBDIR+=	mcpp
 SUBDIR+=	mdds
-SUBDIR+=	mdds0.12
 SUBDIR+=	mdds1.2
 SUBDIR+=	meld
 SUBDIR+=	mell
