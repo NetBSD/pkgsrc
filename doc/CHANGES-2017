@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.392 2017/01/24 01:49:06 wen Exp $
+$NetBSD: CHANGES-2017,v 1.393 2017/01/24 01:57:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/wavpack to 5.1.0 [wiz 2017-01-23]
 	Updated www/p5-Hijk to 0.27 [wen 2017-01-24]
 	Updated textproc/p5-Text-Xslate to 3.4.0 [wen 2017-01-24]
+	Updated textproc/p5-XML-Compile-SOAP to 3.21 [wen 2017-01-24]
