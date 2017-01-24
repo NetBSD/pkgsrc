@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.409 2017/01/24 14:26:19 mrg Exp $
+$NetBSD: CHANGES-2017,v 1.410 2017/01/24 14:32:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/p5-XML-RPC version 0.9 [mef 2017-01-24]
 	Added net/p5-XMLRPC-Lite version 0.717 [mef 2017-01-24]
 	Updated pkgtools/x11-links to 1.03 [mrg 2017-01-24]
+	Updated cad/py-gds to 1.1 [mef 2017-01-24]
