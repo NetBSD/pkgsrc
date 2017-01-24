@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16957 2017/01/24 03:35:43 ryoon Exp $
+$NetBSD: TODO,v 1.16958 2017/01/24 07:44:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1175,7 +1175,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openvas-libraries-8.0.8
 	o openvpn-2.4.0
 	o opera-26
-	o orcus0.12-0.12.1
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
