@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.423 2017/01/25 12:34:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.424 2017/01/25 13:25:27 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -541,3 +541,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Variable-Magic to 0.61 [wiz 2017-01-25]
 	Updated security/py-certbot to 0.10.1 [wiz 2017-01-25]
 	Updated security/py-acme to 0.10.1 [wiz 2017-01-25]
+	Updated www/firefox to 51.0 [ryoon 2017-01-25]
