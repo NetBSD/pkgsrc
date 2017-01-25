@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/01/01 14:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/01/25 12:17:08 wiz Exp $
 
-DISTNAME=	Params-ValidationCompiler-0.22
+DISTNAME=	Params-ValidationCompiler-0.23
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
