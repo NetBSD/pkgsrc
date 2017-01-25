@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16964 2017/01/25 12:21:19 wiz Exp $
+$NetBSD: TODO,v 1.16965 2017/01/25 12:34:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1324,7 +1324,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-buildbot-0.9.1
 	o py-buildbot-slave-0.9.1
 	o py-cassa-1.11.0
-	o py-certbot-0.10.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
 	o py-cups-1.9.73
