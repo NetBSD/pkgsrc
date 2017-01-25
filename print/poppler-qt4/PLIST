@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2012/07/04 20:26:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/01/25 14:34:56 wiz Exp $
 include/poppler/qt4/poppler-annotation.h
 include/poppler/qt4/poppler-export.h
 include/poppler/qt4/poppler-form.h
+include/poppler/qt4/poppler-link-private.h
 include/poppler/qt4/poppler-link.h
 include/poppler/qt4/poppler-media.h
 include/poppler/qt4/poppler-optcontent.h
