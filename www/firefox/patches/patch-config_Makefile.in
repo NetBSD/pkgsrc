@@ -1,8 +1,8 @@
-$NetBSD: patch-config_Makefile.in,v 1.8 2016/12/03 09:58:26 ryoon Exp $
+$NetBSD: patch-config_Makefile.in,v 1.9 2017/01/25 13:24:51 ryoon Exp $
 
 * Support system libraries
 
---- config/Makefile.in.orig	2016-10-31 20:15:27.000000000 +0000
+--- config/Makefile.in.orig	2017-01-22 22:50:48.440016062 +0000
 +++ config/Makefile.in
 @@ -49,6 +49,13 @@ export:: $(export-preqs)
  		-DMOZ_SYSTEM_LIBEVENT=$(MOZ_SYSTEM_LIBEVENT) \
