@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/09/12 22:13:54 maya Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/25 15:17:41 adam Exp $
 
 GCC_PKGNAME=		gcc6
 .include		"version.mk"
@@ -90,6 +90,11 @@ CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 
+# multilib on Darwin requires fat-binaries
+CONFIGURE_ARGS.Darwin+=	--disable-multilib
+.if !empty(OSX_SDK_PATH)
+CONFIGURE_ARGS.Darwin+=	--with-sysroot=${OSX_SDK_PATH}
+.endif
 CONFIGURE_ARGS.NetBSD+=	--with-gnu-ld --with-ld=/usr/bin/ld
 CONFIGURE_ARGS.NetBSD+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
