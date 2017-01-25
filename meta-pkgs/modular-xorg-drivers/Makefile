@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2016/12/20 08:56:52 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2017/01/25 11:40:29 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -76,6 +76,7 @@ DEPENDS+=	xf86-video-suncg14-[0-9]*:../../x11/xf86-video-suncg14
 DEPENDS+=	xf86-video-suncg3-[0-9]*:../../x11/xf86-video-suncg3
 DEPENDS+=	xf86-video-suncg6-[0-9]*:../../x11/xf86-video-suncg6
 DEPENDS+=	xf86-video-sunffb-[0-9]*:../../x11/xf86-video-sunffb
+DEPENDS+=	xf86-video-sunleo-[0-9]*:../../x11/xf86-video-sunleo
 DEPENDS+=	xf86-video-suntcx-[0-9]*:../../x11/xf86-video-suntcx
 DEPENDS+=	xf86-video-tdfx-[0-9]*:../../x11/xf86-video-tdfx
 DEPENDS+=	xf86-video-tga-[0-9]*:../../x11/xf86-video-tga
