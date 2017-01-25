@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2017/01/01 14:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2017/01/25 14:36:39 wiz Exp $
 
 DISTNAME=		gnome-commander-1.2.8.15
-PKGREVISION=		49
+PKGREVISION=		50
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-commander/1.2/}
 EXTRACT_SUFX=		.tar.xz
