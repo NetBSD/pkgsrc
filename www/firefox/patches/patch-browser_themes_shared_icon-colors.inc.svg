@@ -1,0 +1,13 @@
+$NetBSD: patch-browser_themes_shared_icon-colors.inc.svg,v 1.1 2017/01/25 13:24:51 ryoon Exp $
+
+--- browser/themes/shared/icon-colors.inc.svg.orig	2017-01-16 16:16:51.000000000 +0000
++++ browser/themes/shared/icon-colors.inc.svg
+@@ -2,7 +2,7 @@
+ 
+ .fieldtext {
+   fill: -moz-fieldtext;
+-#ifdef XP_LINUX
++#ifdef MOZ_WIDGET_GTK
+   /* The fill-opacity needs to be sufficient for high-contrast settings, and
+      pathological Gtk themes where -moz-fieldtext provides low contrast by
+      default. */
