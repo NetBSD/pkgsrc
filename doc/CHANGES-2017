@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.419 2017/01/25 12:17:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.420 2017/01/25 12:20:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added x11/xf86-video-sunleo version 1.2.2 [wiz 2017-01-25]
 	Updated meta-pkgs/modular-xorg-drivers to 1.19.0nb3 [wiz 2017-01-25]
 	Updated devel/p5-Params-ValidationCompiler to 0.23 [wiz 2017-01-25]
+	Updated devel/p5-Specio to 0.33 [wiz 2017-01-25]
