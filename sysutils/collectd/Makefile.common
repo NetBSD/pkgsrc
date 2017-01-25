@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2016/12/07 17:28:39 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.14 2017/01/25 14:10:18 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -16,7 +16,7 @@
 # used by sysutils/p5-collectd/Makefile
 # used by sysutils/py-collectd/Makefile
 
-DISTNAME=	collectd-5.6.2
+DISTNAME=	collectd-5.7.1
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
@@ -89,6 +89,11 @@ SUBST_SED.ver=		-e 's,m4_esyscmd(./version-gen.sh),${PKGVERSION_NOREV},'
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
+
+# Dirty, but needed by several plugin sub-packages
+pre-build:
+	cd ${WRKSRC}/src/daemon && ${BUILD_MAKE_CMD} ${MAKE_FLAGS} \
+		 libcommon.la libmetadata.la
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

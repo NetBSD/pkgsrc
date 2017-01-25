@@ -1,37 +1,32 @@
-$NetBSD: patch-src_entropy.c,v 1.7 2016/12/07 17:28:39 fhajny Exp $
+$NetBSD: patch-src_entropy.c,v 1.8 2017/01/25 14:10:18 fhajny Exp $
 
 Provide a NetBSD implementation for graphing available entropy.
 This version tries to keep /dev/urandom open (for repeated use),
 instead of constantly re-opening/closing it, since the latter will
 needlessly reduce the kernel's entropy estimate.
 
---- src/entropy.c.orig	2016-11-30 08:52:01.312911569 +0000
+--- src/entropy.c.orig	2017-01-23 07:53:57.704448789 +0000
 +++ src/entropy.c
-@@ -29,27 +29,16 @@
+@@ -29,23 +29,16 @@
  #include "common.h"
  #include "plugin.h"
  
 -#if !KERNEL_LINUX
--#error "No applicable input method."
 +static void entropy_submit (double);
 +static int entropy_read (void);
 +
 +#if !KERNEL_LINUX && !KERNEL_NETBSD
-+#  error "No applicable input method."
+ #error "No applicable input method."
  #endif
  
 +#if KERNEL_LINUX
  #define ENTROPY_FILE "/proc/sys/kernel/random/entropy_avail"
  
--static void entropy_submit(double entropy) {
--  value_t values[1];
+-static void entropy_submit(value_t value) {
 -  value_list_t vl = VALUE_LIST_INIT;
 -
--  values[0].gauge = entropy;
--
--  vl.values = values;
+-  vl.values = &value;
 -  vl.values_len = 1;
--  sstrncpy(vl.host, hostname_g, sizeof(vl.host));
 -  sstrncpy(vl.plugin, "entropy", sizeof(vl.plugin));
 -  sstrncpy(vl.type, "entropy", sizeof(vl.type));
 -
@@ -39,10 +34,10 @@ needlessly reduce the kernel's entropy estimate.
 -}
 -
  static int entropy_read(void) {
-   double entropy;
-   FILE *fh;
-@@ -72,6 +61,68 @@ static int entropy_read(void) {
- 
+   value_t v;
+   if (parse_value_file(ENTROPY_FILE, &v, DS_TYPE_GAUGE) != 0) {
+@@ -56,6 +49,63 @@ static int entropy_read(void) {
+   entropy_submit(v);
    return (0);
  }
 +#endif /* KERNEL_LINUX */
@@ -92,20 +87,15 @@ needlessly reduce the kernel's entropy estimate.
 +
 +#endif /* KERNEL_NETBSD */
 +
-+static void entropy_submit (double entropy)
-+{
-+  value_t values[1];
++static void entropy_submit(value_t value) {
 +  value_list_t vl = VALUE_LIST_INIT;
 +
-+  values[0].gauge = entropy;
-+
-+  vl.values = values;
++  vl.values = &value;
 +  vl.values_len = 1;
-+  sstrncpy (vl.host, hostname_g, sizeof (vl.host));
-+  sstrncpy (vl.plugin, "entropy", sizeof (vl.plugin));
-+  sstrncpy (vl.type, "entropy", sizeof (vl.type));
++  sstrncpy(vl.plugin, "entropy", sizeof(vl.plugin));
++  sstrncpy(vl.type, "entropy", sizeof(vl.type));
 +
-+  plugin_dispatch_values (&vl);
++  plugin_dispatch_values(&vl);
 +}
  
  void module_register(void) {
