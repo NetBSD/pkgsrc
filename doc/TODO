@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16959 2017/01/24 08:30:36 wiz Exp $
+$NetBSD: TODO,v 1.16960 2017/01/25 07:43:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -660,6 +660,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
+	o firefox-51.0
 	o fish-2.2.0
 	o flashplayer-0.4.13
 	o flashrom-0.9.8
@@ -703,7 +704,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcloud-golang-metadata-0.6.0
 	o gcombust-0.1.55
 	o gcompris-15.02
-	o gdb-7.12
+	o gdb-7.12.1
 	o gdb6-6.8a
 	o gdeskcal-1.01
 	o gdl-3.16.0
@@ -1010,6 +1011,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libowfat-0.29
+	o libpcap-1.8.1
 	o libpgm-5.2.122
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
@@ -1213,6 +1215,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
+	o p5-Params-ValidationCompiler-0.23
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Publican-4.3.2
@@ -1221,9 +1224,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
+	o p5-Specio-0.33
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
+	o p5-Variable-Magic-0.61
 	o p5-X11-Protocol-29
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
@@ -1374,8 +1379,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
-	o qt5-5.7.1
-	o qt5-qtbase-5.7.1
+	o qt5-5.8
+	o qt5-qtbase-5.8
 	o quodlibet2-3.5.3
 	o radare2-1.0.2
 	o radiance-4R1
@@ -1531,6 +1536,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
+	o tcpdump-4.8.1
 	o tcpillust-1.00b
 	o tcpreplay-4.0.4
 	o tct-1.19
