@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/25 11:39:37 wiz Exp $
+
+SHA1 (xf86-video-sunleo-1.2.2.tar.bz2) = 9a24e61435b7f8ddc9f0ba69f503dfe849fd66b7
+RMD160 (xf86-video-sunleo-1.2.2.tar.bz2) = 4f217f90ffa0a2a6fab5058012b99528d3f18412
+SHA512 (xf86-video-sunleo-1.2.2.tar.bz2) = 467559e608b59dcf2a50cbaddc218ad0778e88515906fed9d6346db09187f3f7645482113882bcf81428d4af3d3f2cccec7f24663c12c23a411f8a87551ef23f
+Size (xf86-video-sunleo-1.2.2.tar.bz2) = 314043 bytes
