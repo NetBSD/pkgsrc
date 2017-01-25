@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2017/01/25 03:18:35 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.17 2017/01/25 23:17:08 wiz Exp $
 
 DISTNAME=	tigervnc-1.7.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -55,9 +56,14 @@ XORG_CONFIGURE_ARGS+=	--disable-xorg --disable-xnest --disable-xvfb --disable-dm
 XORG_CONFIGURE_ARGS+=	--disable-config-hal --disable-config-udev --with-pic
 XORG_CONFIGURE_ARGS+=	--disable-unit-tests --disable-devel-docs --disable-selective-werror
 XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --disable-dri3 --enable-glx --enable-glx-tls
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} != "modular"
 # when using native X, tigervnc server can't find xkb rules or xkbcomp without the following:
 XORG_CONFIGURE_ARGS+=	--with-xkb-path=${X11BASE}/lib/X11/xkb
 XORG_CONFIGURE_ARGS+=	--with-xkb-bin-directory=${X11BASE}/bin
+.endif
 
 pre-configure:
 	cd ${WRKSRC}/unix/xserver && autoreconf -fvi &&	\
