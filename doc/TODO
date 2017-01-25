@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16960 2017/01/25 07:43:49 wiz Exp $
+$NetBSD: TODO,v 1.16961 2017/01/25 11:49:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,7 +337,7 @@ Suggested new packages
 	xf86-input-tek4957, xf86-input-ur98, xf86-video-amd, xf86-video-dummy,
 	xf86-video-freedreno, xf86-video-glide, xf86-video-impact,
 	xf86-video-omap, xf86-video-sisusb (Linux-only), xf86-video-sunbw2,
-	xf86-video-sunleo, xf86-video-v4l, xf86-video-vermilion,
+	xf86-video-v4l, xf86-video-vermilion,
 	xf86-video-xgixp
 	lib: liboldX
 	test: xorg-gtest, xts
