@@ -1,10 +1,10 @@
-$NetBSD: patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.3 2017/01/25 13:24:51 ryoon Exp $
 
 * Read pkgsrc hunspell dictionaries
 
---- extensions/spellcheck/hunspell/glue/mozHunspell.cpp.orig	2015-12-04 00:37:13.000000000 +0000
+--- extensions/spellcheck/hunspell/glue/mozHunspell.cpp.orig	2017-01-16 16:16:49.000000000 +0000
 +++ extensions/spellcheck/hunspell/glue/mozHunspell.cpp
-@@ -392,6 +392,14 @@ mozHunspell::LoadDictionaryList(bool aNo
+@@ -358,6 +358,14 @@ mozHunspell::LoadDictionaryList(bool aNo
      }
    }
  
