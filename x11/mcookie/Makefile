@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/01/24 21:42:26 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/25 14:52:30 wiz Exp $
+#
+# Changelog: see
+# https://git.kernel.org/cgit/utils/util-linux/util-linux.git/log/misc-utils/mcookie.c
+# https://git.kernel.org/cgit/utils/util-linux/util-linux.git/log/misc-utils/mcookie.1
 
-DISTNAME=	util-linux-2.29
-PKGREVISION=	1
+DISTNAME=	util-linux-2.29.1
 PKGNAME=	${DISTNAME:S/util-linux/mcookie/}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v${PKGVERSION_NOREV}/
+MASTER_SITES=	https://www.kernel.org/pub/linux/utils/util-linux/v2.29/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	reed@reedmedia.net
