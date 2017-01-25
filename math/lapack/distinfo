@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.19 2016/10/18 14:08:14 wiz Exp $
+$NetBSD: distinfo,v 1.20 2017/01/25 15:53:06 adam Exp $
 
-SHA1 (lapack-3.6.1.tgz) = 7220a9bc9c766cb513007f313b804d88f110c228
-RMD160 (lapack-3.6.1.tgz) = 227e893b3716286d405e683ad0e29df475c9ebde
-SHA512 (lapack-3.6.1.tgz) = 2c0af80f6082283395d9c6dc0a463b5a291d7bda3bc3aa68b8f2c7405bfdfac9e4ae417d156da75aa6ed0d90765d0c2ee30bd87ca13ced3c29f8f065038203a1
-Size (lapack-3.6.1.tgz) = 6813749 bytes
-SHA1 (patch-BLAS_SRC_Makefile) = e0ee6f76e94352b05edac151c0a47f82e8773210
-SHA1 (patch-aa) = 3612216affbe323d1e7e46e66988f94f9f7a3574
+SHA1 (lapack-3.7.0.tgz) = 27dbd06bedc76619150f8e28de6412f7df0c649a
+RMD160 (lapack-3.7.0.tgz) = 71841959ce7cd6a07e721a2de8ff29c89735b103
+SHA512 (lapack-3.7.0.tgz) = e4f4c7d0ba8a096eeb813160c6dbcdd535647df6b2ad5beac9181908158956b31d1a9554ec9b9836fd44fe7404c1f377b297cbb20d744f20d70e357fd246c91b
+Size (lapack-3.7.0.tgz) = 7359812 bytes
+SHA1 (patch-BLAS_SRC_Makefile) = daffb940f6ec0cd03dcce22799e27096a4d98607
+SHA1 (patch-aa) = e6a5a34a182d14a1859c9bf24823ab1f9cfabf2f
 SHA1 (patch-ac) = 14945f2d5d18a6e310a2237ca413967dc5bdf4ff
-SHA1 (patch-ad) = c8768f0efd2473b06251f2234b8b14951a9a877c
+SHA1 (patch-ad) = aba4eae370d65e291b5cf6303cb9b4a6555a788c
