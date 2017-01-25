@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/09/10 11:08:19 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/01/25 16:37:57 prlw1 Exp $
 ${PYSITELIB}/pyatspi/Accessibility.py
 ${PYSITELIB}/pyatspi/Accessibility.pyc
 ${PYSITELIB}/pyatspi/Accessibility.pyo
@@ -14,6 +14,9 @@ ${PYSITELIB}/pyatspi/appevent.pyo
 ${PYSITELIB}/pyatspi/application.py
 ${PYSITELIB}/pyatspi/application.pyc
 ${PYSITELIB}/pyatspi/application.pyo
+${PYSITELIB}/pyatspi/atspienum.py
+${PYSITELIB}/pyatspi/atspienum.pyc
+${PYSITELIB}/pyatspi/atspienum.pyo
 ${PYSITELIB}/pyatspi/collection.py
 ${PYSITELIB}/pyatspi/collection.pyc
 ${PYSITELIB}/pyatspi/collection.pyo
@@ -32,9 +35,6 @@ ${PYSITELIB}/pyatspi/document.pyo
 ${PYSITELIB}/pyatspi/editabletext.py
 ${PYSITELIB}/pyatspi/editabletext.pyc
 ${PYSITELIB}/pyatspi/editabletext.pyo
-${PYSITELIB}/pyatspi/enum.py
-${PYSITELIB}/pyatspi/enum.pyc
-${PYSITELIB}/pyatspi/enum.pyo
 ${PYSITELIB}/pyatspi/hypertext.py
 ${PYSITELIB}/pyatspi/hypertext.pyc
 ${PYSITELIB}/pyatspi/hypertext.pyo
