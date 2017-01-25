@@ -1,20 +1,17 @@
-$NetBSD: patch-ad,v 1.4 2014/08/19 13:37:15 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2017/01/25 15:53:06 adam Exp $
 
---- INSTALL/Makefile.orig	2011-10-01 02:37:03.000000000 +0000
+Use LIBTOOL.
+
+--- INSTALL/Makefile.orig	2016-12-23 23:01:32.000000000 +0000
 +++ INSTALL/Makefile
-@@ -28,8 +28,11 @@ testversion: ilaver.o LAPACK_version.o
- 
+@@ -29,7 +29,7 @@ testversion: ilaver.o LAPACK_version.o
  clean:
  	rm -f *.o
--.f.o: 
--	$(FORTRAN) $(OPTS) -c $< -o $@
- 
--slamch.o: slamch.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
--dlamch.o: dlamch.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
-+.f.o:
+ .f.o:
+-	$(FORTRAN) $(OPTS) -c -o $@ $<
 +	${LIBTOOL} --mode=compile --tag=FC ${FC} ${FFLAGS} -c $<
-+
-+slamch.o: slamch.f
-+	${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
-+dlamch.o: dlamch.f
-+	${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
+ 
+-slamch.o: slamch.f ; $(FORTRAN) $(NOOPT) -c -o $@ $<
+-dlamch.o: dlamch.f ; $(FORTRAN) $(NOOPT) -c -o $@ $<
++slamch.o: slamch.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
++dlamch.o: dlamch.f ; ${LIBTOOL} --mode=compile --tag=FC $(FC) $(NOOPT) -c $< -o $@
