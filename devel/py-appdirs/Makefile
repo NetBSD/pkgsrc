@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:12:59 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/25 17:26:56 adam Exp $
 
 DISTNAME=	appdirs-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/ActiveState/appdirs
 COMMENT=	Module for determining appropriate, platform-specific dirs
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/appdirs-1.4.0
 
 USE_LANGUAGES=	# none
 
