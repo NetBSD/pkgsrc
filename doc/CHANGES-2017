@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.424 2017/01/25 13:25:27 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.425 2017/01/25 13:27:19 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -542,3 +542,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.10.1 [wiz 2017-01-25]
 	Updated security/py-acme to 0.10.1 [wiz 2017-01-25]
 	Updated www/firefox to 51.0 [ryoon 2017-01-25]
+	Updated www/firefox-l10n to 51.0 [ryoon 2017-01-25]
