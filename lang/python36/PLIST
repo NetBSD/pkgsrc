@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/01 14:34:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/25 19:35:49 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -322,17 +322,17 @@ lib/python${PY_VER_SUFFIX}/concurrent/futures/process.pyo
 lib/python${PY_VER_SUFFIX}/concurrent/futures/thread.py
 lib/python${PY_VER_SUFFIX}/concurrent/futures/thread.pyc
 lib/python${PY_VER_SUFFIX}/concurrent/futures/thread.pyo
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Makefile
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Setup
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Setup.config
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/Setup.local
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/config.c
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/config.c.in
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/install-sh
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/libpython${PY_VER_SUFFIX}.a
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/makesetup
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python-config.py
-lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}/python.o
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/Makefile
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/Setup
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/Setup.config
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/Setup.local
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/config.c
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/config.c.in
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/install-sh
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/libpython${PY_VER_SUFFIX}.a
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/makesetup
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/python-config.py
+lib/python${PY_VER_SUFFIX}/config-${PY_VER_SUFFIX}-${PY_PLATNAME}/python.o
 lib/python${PY_VER_SUFFIX}/configparser.py
 lib/python${PY_VER_SUFFIX}/configparser.pyc
 lib/python${PY_VER_SUFFIX}/configparser.pyo
