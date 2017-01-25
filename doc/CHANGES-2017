@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.435 2017/01/25 19:50:29 adam Exp $
+$NetBSD: CHANGES-2017,v 1.436 2017/01/25 23:17:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -554,3 +554,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-pyparsing to 2.1.10 [adam 2017-01-25]
 	Updated net/syncthing to 0.14.21 [wiz 2017-01-25]
 	Updated math/py-scipy to 0.18.1 [adam 2017-01-25]
+	Updated net/tigervnc to 1.7.1nb1 [wiz 2017-01-25]
