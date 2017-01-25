@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.414 2017/01/25 01:17:44 maya Exp $
+$NetBSD: CHANGES-2017,v 1.415 2017/01/25 09:19:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -531,5 +531,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/go-ovh version 0.20170102 [bsiegert 2017-01-24]
 	Updated audio/cmus to 2.7.1nb6 [maya 2017-01-24]
 	Updated misc/screen to 4.5.0nb1 [maya 2017-01-25]
-	Updated misc/screen to 4.5.0nb1 [maya 2017-01-25]
 	Updated misc/screen to 4.5.0nb2 [maya 2017-01-25]
+	Updated textproc/mdoclint to 1.45 [wiz 2017-01-25]
