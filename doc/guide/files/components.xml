@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.53 2016/07/10 07:46:29 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.54 2017/01/25 20:10:46 leot Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -116,6 +116,11 @@ converters    games         mbone         print         x11
     <listitem><para><varname>COMMENT</varname> is a one-line
     description of the package (should not include the package
     name).</para></listitem>
+
+    <listitem><para><varname>LICENSE</varname> indicates the license(s)
+    applicable for the package. See <xref
+    linkend="handling-licenses"/> for further details.</para>
+    </listitem>
   </itemizedlist></para>
 
   <para>Other variables that affect the build:
