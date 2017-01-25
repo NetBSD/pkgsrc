@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.427 2017/01/25 14:12:59 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.428 2017/01/25 14:35:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -545,3 +545,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox-l10n to 51.0 [ryoon 2017-01-25]
 	Updated sysutils/collectd to 5.7.1 [fhajny 2017-01-25]
 	Removed textproc/p5-XML-Sablotron [wiz 2017-01-25]
+	Updated print/poppler to 0.50.0 [wiz 2017-01-25]
