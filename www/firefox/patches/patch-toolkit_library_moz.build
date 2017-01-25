@@ -1,27 +1,10 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.8 2016/12/03 09:58:26 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.9 2017/01/25 13:24:51 ryoon Exp $
 
 * Support system libraries
 
---- toolkit/library/moz.build.orig	2016-11-05 00:20:16.000000000 +0000
+--- toolkit/library/moz.build.orig	2017-01-22 14:52:50.338659055 +0000
 +++ toolkit/library/moz.build
-@@ -211,6 +211,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
-     ]
- 
- OS_LIBS += CONFIG['MOZ_CAIRO_OSLIBS']
-+OS_LIBS += CONFIG['MOZ_LIBV4L2_LIBS']
- OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
- OS_LIBS += CONFIG['MOZ_SERVO_LIBS']
- 
-@@ -220,9 +221,30 @@ if CONFIG['MOZ_SYSTEM_JPEG']:
- if CONFIG['MOZ_SYSTEM_PNG']:
-     OS_LIBS += CONFIG['MOZ_PNG_LIBS']
- 
-+if CONFIG['MOZ_SYSTEM_GRAPHITE2']:
-+    OS_LIBS += CONFIG['MOZ_GRAPHITE2_LIBS']
-+
-+if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
-+    OS_LIBS += CONFIG['MOZ_HARFBUZZ_LIBS']
-+
+@@ -241,6 +241,21 @@ if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
  if CONFIG['MOZ_SYSTEM_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -43,14 +26,3 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.8 2016/12/03 09:58:26 ryoon Exp $
  if CONFIG['MOZ_SYSTEM_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -232,8 +254,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
- if not CONFIG['MOZ_TREE_PIXMAN']:
-     OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
- 
--if CONFIG['MOZ_ALSA']:
--    OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
-+if CONFIG['MOZ_OSS']:
-+    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
- 
- if CONFIG['HAVE_CLOCK_MONOTONIC']:
-     OS_LIBS += CONFIG['REALTIME_LIBS']
