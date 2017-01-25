@@ -1,4 +1,4 @@
-# $NetBSD: xorg.MesaLib,v 1.1 2017/01/24 14:25:00 mrg Exp $
+# $NetBSD: xorg.MesaLib,v 1.2 2017/01/25 02:51:35 mrg Exp $
 #
 include/GL/internal/dri_interface.h
 include/GL/internal/glcore.h
@@ -56,6 +56,7 @@ lib/libEGL.so
 lib/libEGL.so.0
 lib/libEGL.so.0.0
 lib/libEGL.so.1.0
+lib/pkgconfig/dri.pc
+lib/pkgconfig/egl.pc
 lib/pkgconfig/gl.pc
 lib/pkgconfig/glw.pc
-lib/pkgconfig/egl.pc
