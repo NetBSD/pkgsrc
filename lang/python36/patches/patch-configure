@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2017/01/01 14:34:27 adam Exp $
+$NetBSD: patch-configure,v 1.2 2017/01/25 19:35:49 adam Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -99,15 +99,3 @@ Fix linking on Darwin.
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -14895,11 +14896,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
- $as_echo "$LDVERSION" >&6; }
- 
- 
--if test x$PLATFORM_TRIPLET = x; then
-   LIBPL='$(prefix)'"/lib/python${VERSION}/config-${LDVERSION}"
--else
--  LIBPL='$(prefix)'"/lib/python${VERSION}/config-${LDVERSION}-${PLATFORM_TRIPLET}"
--fi
- 
- 
- # Check whether right shifting a negative integer extends the sign bit
