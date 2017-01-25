@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/04/13 18:13:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/01/25 16:09:06 adam Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -17,6 +17,9 @@ ${PYSITELIB}/Cython/Build/Cythonize.pyo
 ${PYSITELIB}/Cython/Build/Dependencies.py
 ${PYSITELIB}/Cython/Build/Dependencies.pyc
 ${PYSITELIB}/Cython/Build/Dependencies.pyo
+${PYSITELIB}/Cython/Build/Distutils.py
+${PYSITELIB}/Cython/Build/Distutils.pyc
+${PYSITELIB}/Cython/Build/Distutils.pyo
 ${PYSITELIB}/Cython/Build/Inline.py
 ${PYSITELIB}/Cython/Build/Inline.pyc
 ${PYSITELIB}/Cython/Build/Inline.pyo
@@ -253,6 +256,9 @@ ${PYSITELIB}/Cython/Distutils/build_ext.pyo
 ${PYSITELIB}/Cython/Distutils/extension.py
 ${PYSITELIB}/Cython/Distutils/extension.pyc
 ${PYSITELIB}/Cython/Distutils/extension.pyo
+${PYSITELIB}/Cython/Distutils/old_build_ext.py
+${PYSITELIB}/Cython/Distutils/old_build_ext.pyc
+${PYSITELIB}/Cython/Distutils/old_build_ext.pyo
 ${PYSITELIB}/Cython/Includes/Deprecated/python.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/python2.5.pxd
 ${PYSITELIB}/Cython/Includes/Deprecated/python_bool.pxd
@@ -308,6 +314,7 @@ ${PYSITELIB}/Cython/Includes/cpython/int.pxd
 ${PYSITELIB}/Cython/Includes/cpython/iterator.pxd
 ${PYSITELIB}/Cython/Includes/cpython/list.pxd
 ${PYSITELIB}/Cython/Includes/cpython/long.pxd
+${PYSITELIB}/Cython/Includes/cpython/longintrepr.pxd
 ${PYSITELIB}/Cython/Includes/cpython/mapping.pxd
 ${PYSITELIB}/Cython/Includes/cpython/mem.pxd
 ${PYSITELIB}/Cython/Includes/cpython/method.pxd
@@ -357,6 +364,8 @@ ${PYSITELIB}/Cython/Includes/libcpp/queue.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/set.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/stack.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/string.pxd
+${PYSITELIB}/Cython/Includes/libcpp/typeindex.pxd
+${PYSITELIB}/Cython/Includes/libcpp/typeinfo.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/unordered_map.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/unordered_set.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/utility.pxd
@@ -465,6 +474,7 @@ ${PYSITELIB}/Cython/Utility/CConvert.pyx
 ${PYSITELIB}/Cython/Utility/CMath.c
 ${PYSITELIB}/Cython/Utility/Capsule.c
 ${PYSITELIB}/Cython/Utility/CommonTypes.c
+${PYSITELIB}/Cython/Utility/Complex.c
 ${PYSITELIB}/Cython/Utility/Coroutine.c
 ${PYSITELIB}/Cython/Utility/CpdefEnums.pyx
 ${PYSITELIB}/Cython/Utility/CppConvert.pyx
