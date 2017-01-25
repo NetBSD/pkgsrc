@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.428 2017/01/25 14:35:14 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.429 2017/01/25 14:52:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/collectd to 5.7.1 [fhajny 2017-01-25]
 	Removed textproc/p5-XML-Sablotron [wiz 2017-01-25]
 	Updated print/poppler to 0.50.0 [wiz 2017-01-25]
+	Updated x11/mcookie to 2.29.1 [wiz 2017-01-25]
