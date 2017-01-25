@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16968 2017/01/25 14:52:40 wiz Exp $
+$NetBSD: TODO,v 1.16969 2017/01/25 15:54:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o binutils-2.27
 	o bird-1.5.0
 	o bird6-1.5.0
-	o blas-3.7.0
 	o blender-2.78a
 	o bliz++-0.10
 	o blur6ex-0.3.462
@@ -972,7 +971,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kstart-4.2
 	o ktorrent3-3.3.4
 	o labelnation-1.218
-	o lapack-3.7.0
 	o latex2html-2015
 	o lbdb-0.40
 	o lcc-4.2
