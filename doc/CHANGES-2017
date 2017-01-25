@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.429 2017/01/25 14:52:40 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.430 2017/01/25 15:54:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -547,3 +547,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed textproc/p5-XML-Sablotron [wiz 2017-01-25]
 	Updated print/poppler to 0.50.0 [wiz 2017-01-25]
 	Updated x11/mcookie to 2.29.1 [wiz 2017-01-25]
+	Updated math/blas to 3.7.0 [adam 2017-01-25]
+	Updated math/lapack to 3.7.0 [adam 2017-01-25]
