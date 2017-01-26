@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/01/26 14:06:18 ryoon Exp $
+
+SHA1 (mdp-1.0.9.tar.gz) = 2a729d084ea9d4b7f127f16c937aa2575dccdd59
+RMD160 (mdp-1.0.9.tar.gz) = dc3dbf2bc99230ac0953ecc7c3183dfcc50fd5c9
+SHA512 (mdp-1.0.9.tar.gz) = ba8630a4b20b4776c6c14f0bf620806f3bc2ae8bc61a956d3bdb61900baf1a8fcd5b280b2aaf5732ba789b49e851e2ba01b4d9edf32ee875841ce3c4a4714335
+Size (mdp-1.0.9.tar.gz) = 36877 bytes
+SHA1 (patch-Makefile) = 737637cc7ec0ff84de30011241ffddeb93c77ae6
