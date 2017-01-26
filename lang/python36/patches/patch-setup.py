@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2017/01/01 14:34:27 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2017/01/26 09:45:23 jperkin Exp $
 
 Disable modules, so they can be built as separate packages.
 
@@ -17,7 +17,7 @@ Disable modules, so they can be built as separate packages.
  
  # This global variable is used to hold the list of modules to be disabled.
 -disabled_module_list = []
-+disabled_module_list = ["_bsddb", "_curses", "_curses_panel", "_elementtree",
++disabled_module_list = ["_curses", "_curses_panel", "_elementtree",
 +"_sqlite3", "_tkinter", "_gdbm", "pyexpat", "readline", "spwd", "xxlimited"]
  
  def add_dir_to_list(dirlist, dir):
