@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.442 2017/01/26 13:43:35 mef Exp $
+$NetBSD: CHANGES-2017,v 1.443 2017/01/26 13:50:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-bsddb3 to 6.2.4 [wiz 2017-01-26]
 	Updated emulators/stella to 4.7.3 [mef 2017-01-26]
 	Updated devel/p5-App-FatPacker to 0.010007 [mef 2017-01-26]
+	Updated geography/qgis to 2.18.3 [ryoon 2017-01-26]
