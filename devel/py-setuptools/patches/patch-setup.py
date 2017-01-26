@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.3 2016/07/21 12:54:49 wiz Exp $
+$NetBSD: patch-setup.py,v 1.4 2017/01/26 18:09:19 adam Exp $
 
 Do not install easy_install without python version suffix to allow
 parallel installation of this package for multiple python versions.
 
 --- setup.py.orig	2016-07-14 05:17:28.000000000 +0000
 +++ setup.py
-@@ -28,7 +28,7 @@ scripts = []
+@@ -30,7 +30,7 @@ scripts = []
  
  
  def _gen_console_scripts():
