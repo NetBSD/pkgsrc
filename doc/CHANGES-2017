@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.445 2017/01/26 15:12:42 mef Exp $
+$NetBSD: CHANGES-2017,v 1.446 2017/01/26 16:32:08 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/qgis to 2.18.3 [ryoon 2017-01-26]
 	Added misc/mdp version 1.0.9 [ryoon 2017-01-26]
 	Updated devel/p5-CPAN-Perl-Releases to 3.08 [mef 2017-01-26]
+	Updated security/openssl to 1.0.2k [jperkin 2017-01-26]
