@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.46 2015/12/21 06:46:04 dbj Exp $
+# $NetBSD: Makefile,v 1.47 2017/01/26 12:45:41 mef Exp $
 
-STELLA_VERSION=	4.6.7
-DISTNAME=	stella-${STELLA_VERSION}-src
-PKGNAME=	stella-${STELLA_VERSION}
+STELLA_VERSION=	4.7.3
+DISTNAME=	stella-${STELLA_VERSION}
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stella/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=stella-emu/}
+GITHUB_TAG=	release-${STELLA_VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stella.sourceforge.net/
 COMMENT=	Multi-platform Atari 2600 VCS emulator
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${PKGBASE}-release-${PKGVERSION_NOREV}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 UNLIMIT_RESOURCES=	datasize
