@@ -1,10 +1,20 @@
-$NetBSD: patch-Lib_distutils_sysconfig.py,v 1.1 2017/01/01 14:34:27 adam Exp $
+$NetBSD: patch-Lib_distutils_sysconfig.py,v 1.2 2017/01/26 09:13:27 adam Exp $
 
+Remove _multiarch from config path (differs across platforms).
 Simplify _sysconfigdata to include only platform name.
 
---- Lib/distutils/sysconfig.py.orig	2017-01-01 13:54:39.000000000 +0000
+--- Lib/distutils/sysconfig.py.orig	2016-12-23 02:21:19.000000000 +0000
 +++ Lib/distutils/sysconfig.py
-@@ -419,10 +419,8 @@ def _init_posix():
+@@ -242,8 +242,6 @@ def get_makefile_filename():
+         return os.path.join(_sys_home or project_base, "Makefile")
+     lib_dir = get_python_lib(plat_specific=0, standard_lib=1)
+     config_file = 'config-{}{}'.format(get_python_version(), build_flags)
+-    if hasattr(sys.implementation, '_multiarch'):
+-        config_file += '-%s' % sys.implementation._multiarch
+     return os.path.join(lib_dir, config_file, 'Makefile')
+ 
+ 
+@@ -419,10 +417,8 @@ def _init_posix():
      """Initialize the module as appropriate for POSIX systems."""
      # _sysconfigdata is generated at build time, see the sysconfig module
      name = os.environ.get('_PYTHON_SYSCONFIGDATA_NAME',
