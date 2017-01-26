@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/08/25 06:19:29 richard Exp $
+# $NetBSD: Makefile,v 1.4 2017/01/26 11:03:17 adam Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (6.n -> 6.(n+1))
@@ -6,9 +6,8 @@
 # ABI depends in buildlink3.mk and bump PKGREVISIONs for all dependencies.
 # In particular, take care to include BDB_ACCEPTED=db6 packages.
 
-DISTNAME=	db-6.1.26
+DISTNAME=	db-6.2.23
 PKGNAME=	${DISTNAME:S/db/db6/}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
@@ -35,7 +34,7 @@ CONFIGURE_ENV+=		LIBSO_LIBS=${LIBSO_LIBS:Q}
 
 CHECK_PORTABILITY_SKIP=	test/xa/*/*.sh
 
-# DB5 only want pthreads because it's really after POSIX 1003.1
+# DB6 only want pthreads because it's really after POSIX 1003.1
 # inter-process mutexes.  In this case, we only care to use the native
 # threads.
 PTHREAD_OPTS+=		native
