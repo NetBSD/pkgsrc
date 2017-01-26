@@ -1,6 +1,6 @@
-$NetBSD: patch-src_video_SDL__egl.c,v 1.3 2016/01/03 11:15:12 wiz Exp $
+$NetBSD: patch-src_video_SDL__egl.c,v 1.4 2017/01/26 03:46:20 nat Exp $
 
---- src/video/SDL_egl.c.orig	2016-01-02 19:56:31.000000000 +0000
+--- src/video/SDL_egl.c.orig	2016-10-20 03:56:26.000000000 +0000
 +++ src/video/SDL_egl.c
 @@ -40,10 +40,10 @@
  
