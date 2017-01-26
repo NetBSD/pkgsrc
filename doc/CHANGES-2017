@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.438 2017/01/26 08:40:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.439 2017/01/26 11:04:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -557,3 +557,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/tigervnc to 1.7.1nb1 [wiz 2017-01-25]
 	Updated lang/php71 to 7.1.1nb1 [maya 2017-01-26]
 	Updated x11/presentproto to 1.1 [wiz 2017-01-26]
+	Updated databases/db6 to 6.2.23 [adam 2017-01-26]
