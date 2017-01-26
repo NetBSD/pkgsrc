@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/11/01 20:36:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/01/26 08:40:32 wiz Exp $
 
-DISTNAME=	presentproto-1.0
+DISTNAME=	presentproto-1.1
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/archive/individual/proto/
 EXTRACT_SUFX=	.tar.bz2
