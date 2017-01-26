@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/01/26 12:03:15 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2017/01/26 13:01:36 wiz Exp $
 
 DISTNAME=	bsddb3-6.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/bsddb3/
 COMMENT=	Python bindings for Oracle Berkeley DB
 LICENSE=	modified-bsd
 
-BDB_ACCEPTED=		db4 db5
+BDB_ACCEPTED=	db6 db5 db4
 
 PYSETUPBUILDARGS=	--berkeley-db=${BDBBASE}
 PYSETUPINSTALLARGS=	--berkeley-db=${BDBBASE}
@@ -26,6 +26,8 @@ SUBST_CLASSES+=		bdb
 SUBST_STAGE.bdb=	pre-configure
 SUBST_FILES.bdb=	${WRKSRC}/setup2.py ${WRKSRC}/setup3.py
 SUBST_SED.bdb=		-e "s,dblib = 'db',dblib = '${BDB_TYPE}',g"
+
+MAKE_ENV+=		YES_I_HAVE_THE_RIGHT_TO_USE_THIS_BERKELEY_DB_VERSION=1
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} test.py
