@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2017/01/22 11:42:22 maya Exp $
+# $NetBSD: Makefile,v 1.7 2017/01/26 00:40:47 maya Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
 #
 PKGNAME=		php-${PHP_VERSION:S/RC/rc/}
 CATEGORIES=		lang
+PKGREVISION=		1
 
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 7.1
@@ -44,9 +45,9 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 # segfault generating phar.phar for i386 & SPARC
 # revisit this if builtin PCRE is updated beyond PCRE1 8.38
 # https://bugs.php.net/bug.php?id=73880
-#.if ${MACHINE_ARCH} != "x86_64"
+.if ${MACHINE_ARCH} != "x86_64"
 CONFIGURE_ARGS+=	--without-pcre-jit
-#.endif
+.endif
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
