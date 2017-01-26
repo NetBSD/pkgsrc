@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/01/01 18:52:52 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/01/26 11:03:17 adam Exp $
 
 BUILDLINK_TREE+=	db6
 
@@ -7,8 +7,8 @@ DB6_BUILDLINK3_MK:=
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-BUILDLINK_API_DEPENDS.db6+=	db6>=6.1.19
-BUILDLINK_ABI_DEPENDS.db6+=	db6>=6.1.19
+BUILDLINK_API_DEPENDS.db6+=	db6>=6.2.23
+BUILDLINK_ABI_DEPENDS.db6+=	db6>=6.2.23
 BUILDLINK_PKGSRCDIR.db6?=	../../databases/db6
 BUILDLINK_INCDIRS.db6?=		include/db6
 BUILDLINK_LDADD.db6=		-ldb6
