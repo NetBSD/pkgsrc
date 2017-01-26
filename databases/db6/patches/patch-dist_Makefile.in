@@ -1,9 +1,9 @@
-$NetBSD: patch-dist_Makefile.in,v 1.1 2015/01/01 18:52:52 ryoon Exp $
+$NetBSD: patch-dist_Makefile.in,v 1.2 2017/01/26 11:03:17 adam Exp $
 
 * For pkgsrc installation.
 * Use db6 instead of db.
 
---- dist/Makefile.in.orig	2014-06-10 15:32:54.000000000 +0000
+--- dist/Makefile.in.orig	2016-03-28 19:45:48.000000000 +0000
 +++ dist/Makefile.in
 @@ -17,7 +17,7 @@ exec_prefix=@exec_prefix@
  bindir=	@bindir@
@@ -41,19 +41,20 @@ $NetBSD: patch-dist_Makefile.in,v 1.1 2015/01/01 18:52:52 ryoon Exp $
  libcxx=		$(libcxx_base).a
  libcxx_version=	$(libcxx_base)-$(LIBVERSION).a
  libxso=		$(libcxx_base)-$(LIBVERSION)@SOSUFFIX@
-@@ -158,9 +158,9 @@ JAVA_EXDIR=	$(exampledir)/java/src
- JAVA_SLEEPYCAT=	$(langdir)/java/src/com/sleepycat
- JAVA_MANIFEST=	$(langdir)/java/jarManifestEntries
+@@ -162,10 +162,10 @@ JAVA_MANIFEST=	$(langdir)/java/jarManife
+ 
+ JDK_VERSION=	`$(JAVAC) -version 2>&1 | sed 's/.*\.\(.*\)\..*/\\1/'`
  
 -libj_jarfile=	db.jar
 +libj_jarfile=	db6.jar
  libj_exjarfile=	dbexamples.jar
+ libj_demojarfile=dbdemos.jar
 -libjso_base=	libdb_java
 +libjso_base=	libdb6_java
  libjso=		$(libjso_base)-$(LIBVERSION)@JMODSUFFIX@
  libjso_static=	$(libjso_base)-$(LIBVERSION).a
  libjso_target=	$(libjso_base)-$(LIBVERSION).la
-@@ -176,7 +176,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
+@@ -181,7 +181,7 @@ libjso_g=	$(libjso_base)-$(LIBVERSION)_g
  TCL_INCLUDE_SPEC=	@TCL_INCLUDE_SPEC@
  LIBTSO_LIBS=	@LIBTSO_LIBS@ @LIBSO_LIBS@
  TCL_SRCDIR=	$(langdir)/tcl
@@ -62,7 +63,7 @@ $NetBSD: patch-dist_Makefile.in,v 1.1 2015/01/01 18:52:52 ryoon Exp $
  libtcl=		$(libtcl_base).a
  libtcl_version=	$(libtcl_base)-$(LIBVERSION).a
  libtso=		$(libtcl_base)-$(LIBVERSION)@LIBTSO_MODSUFFIX@
-@@ -1103,8 +1103,7 @@ install_include: $(INCDOT)
+@@ -1167,8 +1167,7 @@ install_include: $(INCDOT)
  	@for f in $(INCDOT); do \
  	    basef=`echo $$f | $(SED) 's,.*/,,'` ; \
  	    $(RM) $(DESTDIR)$(includedir)/$$basef ; \
@@ -72,7 +73,7 @@ $NetBSD: patch-dist_Makefile.in,v 1.1 2015/01/01 18:52:52 ryoon Exp $
  	done
  
  uninstall_include:
-@@ -1150,10 +1149,8 @@ install_utilities:
+@@ -1215,10 +1214,8 @@ install_utilities:
  	@for i in $(UTIL_PROGS); do \
  		test -f $$i.exe && i=$$i.exe; \
  		e=`echo $$i | $(SED) '$(transform)'`; \
@@ -85,7 +86,7 @@ $NetBSD: patch-dist_Makefile.in,v 1.1 2015/01/01 18:52:52 ryoon Exp $
  	done
  
  uninstall_utilities:
-@@ -1175,7 +1172,7 @@ install_docs:
+@@ -1258,7 +1255,7 @@ install_docs:
  	    ($(MKDIR) -p $(DESTDIR)$(docdir) && \
  	    $(CHMOD) $(dmode) $(DESTDIR)$(docdir))
  	@cd $(DESTDIR)$(docdir) && $(RM) -r $(DOCLIST)
