@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/14 10:52:57 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/01/26 11:03:17 adam Exp $
 bin/db6_archive
 bin/db6_checkpoint
 bin/db6_deadlock
@@ -16,11 +16,11 @@ bin/db6_verify
 include/db6/db.h
 include/db6/db_185.h
 include/db6/db_cxx.h
-lib/libdb6-6.1.la
+lib/libdb6-6.2.la
 lib/libdb6-6.so
 lib/libdb6.a
 lib/libdb6.so
-lib/libdb6_cxx-6.1.la
+lib/libdb6_cxx-6.2.la
 lib/libdb6_cxx-6.so
 lib/libdb6_cxx.a
 lib/libdb6_cxx.so
@@ -124,6 +124,7 @@ share/doc/db6/api_reference/C/dbget_lk_exclusive.html
 share/doc/db6/api_reference/C/dbget_lorder.html
 share/doc/db6/api_reference/C/dbget_mpf.html
 share/doc/db6/api_reference/C/dbget_msgfile.html
+share/doc/db6/api_reference/C/dbget_msgpfx.html
 share/doc/db6/api_reference/C/dbget_multiple.html
 share/doc/db6/api_reference/C/dbget_open_flags.html
 share/doc/db6/api_reference/C/dbget_pagesize.html
@@ -136,12 +137,14 @@ share/doc/db6/api_reference/C/dbget_re_delim.html
 share/doc/db6/api_reference/C/dbget_re_len.html
 share/doc/db6/api_reference/C/dbget_re_pad.html
 share/doc/db6/api_reference/C/dbget_re_source.html
+share/doc/db6/api_reference/C/dbget_slices.html
 share/doc/db6/api_reference/C/dbget_transactional.html
 share/doc/db6/api_reference/C/dbget_type.html
 share/doc/db6/api_reference/C/dbgetenv.html
 share/doc/db6/api_reference/C/dbjoin.html
 share/doc/db6/api_reference/C/dbkey_range.html
 share/doc/db6/api_reference/C/dbm.html
+share/doc/db6/api_reference/C/dbmsg.html
 share/doc/db6/api_reference/C/dbopen.html
 share/doc/db6/api_reference/C/dbput.html
 share/doc/db6/api_reference/C/dbremove.html
@@ -171,6 +174,7 @@ share/doc/db6/api_reference/C/dbset_lk_exclusive.html
 share/doc/db6/api_reference/C/dbset_lorder.html
 share/doc/db6/api_reference/C/dbset_msgcall.html
 share/doc/db6/api_reference/C/dbset_msgfile.html
+share/doc/db6/api_reference/C/dbset_msgpfx.html
 share/doc/db6/api_reference/C/dbset_pagesize.html
 share/doc/db6/api_reference/C/dbset_partition.html
 share/doc/db6/api_reference/C/dbset_partition_dirs.html
@@ -180,12 +184,14 @@ share/doc/db6/api_reference/C/dbset_re_delim.html
 share/doc/db6/api_reference/C/dbset_re_len.html
 share/doc/db6/api_reference/C/dbset_re_pad.html
 share/doc/db6/api_reference/C/dbset_re_source.html
+share/doc/db6/api_reference/C/dbset_slice_callback.html
 share/doc/db6/api_reference/C/dbsite_close.html
 share/doc/db6/api_reference/C/dbsite_get_address.html
 share/doc/db6/api_reference/C/dbsite_get_config.html
 share/doc/db6/api_reference/C/dbsite_get_eid.html
 share/doc/db6/api_reference/C/dbsite_remove.html
 share/doc/db6/api_reference/C/dbsite_set_config.html
+share/doc/db6/api_reference/C/dbslice_lookup.html
 share/doc/db6/api_reference/C/dbsort_multiple.html
 share/doc/db6/api_reference/C/dbsql.html
 share/doc/db6/api_reference/C/dbstat.html
@@ -250,8 +256,12 @@ share/doc/db6/api_reference/C/envget_mp_mtxcount.html
 share/doc/db6/api_reference/C/envget_mp_pagesize.html
 share/doc/db6/api_reference/C/envget_mp_tablesize.html
 share/doc/db6/api_reference/C/envget_msgfile.html
+share/doc/db6/api_reference/C/envget_msgpfx.html
 share/doc/db6/api_reference/C/envget_open_flags.html
+share/doc/db6/api_reference/C/envget_region_dir.html
 share/doc/db6/api_reference/C/envget_shm_key.html
+share/doc/db6/api_reference/C/envget_slice_count.html
+share/doc/db6/api_reference/C/envget_slices.html
 share/doc/db6/api_reference/C/envget_thread_count.html
 share/doc/db6/api_reference/C/envget_timeout.html
 share/doc/db6/api_reference/C/envget_tmp_dir.html
@@ -262,6 +272,7 @@ share/doc/db6/api_reference/C/envlog_get_config.html
 share/doc/db6/api_reference/C/envlog_set_config.html
 share/doc/db6/api_reference/C/envlog_verify.html
 share/doc/db6/api_reference/C/envlsn_reset.html
+share/doc/db6/api_reference/C/envmsg.html
 share/doc/db6/api_reference/C/envopen.html
 share/doc/db6/api_reference/C/envremove.html
 share/doc/db6/api_reference/C/envset_alloc.html
@@ -305,6 +316,8 @@ share/doc/db6/api_reference/C/envset_mp_pagesize.html
 share/doc/db6/api_reference/C/envset_mp_tablesize.html
 share/doc/db6/api_reference/C/envset_msgcall.html
 share/doc/db6/api_reference/C/envset_msgfile.html
+share/doc/db6/api_reference/C/envset_msgpfx.html
+share/doc/db6/api_reference/C/envset_region_dir.html
 share/doc/db6/api_reference/C/envset_shm_key.html
 share/doc/db6/api_reference/C/envset_thread_count.html
 share/doc/db6/api_reference/C/envset_thread_id.html
@@ -323,6 +336,7 @@ share/doc/db6/api_reference/C/frame_main.html
 share/doc/db6/api_reference/C/get_blob_dir.html
 share/doc/db6/api_reference/C/get_blob_threshold.html
 share/doc/db6/api_reference/C/historic.html
+share/doc/db6/api_reference/C/home_dir_parameter.html
 share/doc/db6/api_reference/C/hsearch.html
 share/doc/db6/api_reference/C/index.html
 share/doc/db6/api_reference/C/introduction.html
@@ -435,6 +449,7 @@ share/doc/db6/api_reference/C/repmgrget_ack_policy.html
 share/doc/db6/api_reference/C/repmgrget_incoming_queue_max.html
 share/doc/db6/api_reference/C/repmgrset_ack_policy.html
 share/doc/db6/api_reference/C/repmgrset_incoming_queue_max.html
+share/doc/db6/api_reference/C/repmgrset_socket.html
 share/doc/db6/api_reference/C/repmgrsite_list.html
 share/doc/db6/api_reference/C/repmgrstart.html
 share/doc/db6/api_reference/C/repmgrstat.html
@@ -489,13 +504,16 @@ share/doc/db6/api_reference/C/set_mp_max_openfd_parameter.html
 share/doc/db6/api_reference/C/set_mp_max_write_parameter.html
 share/doc/db6/api_reference/C/set_mp_mmapsize_parameter.html
 share/doc/db6/api_reference/C/set_open_flags_parameter.html
+share/doc/db6/api_reference/C/set_region_dir_parameter.html
 share/doc/db6/api_reference/C/set_shm_key_parameter.html
+share/doc/db6/api_reference/C/set_slice_count_parameter.html
 share/doc/db6/api_reference/C/set_thread_count_parameter.html
 share/doc/db6/api_reference/C/set_timeout_parameter.html
 share/doc/db6/api_reference/C/set_tmp_dir_parameter.html
 share/doc/db6/api_reference/C/set_tx_max_parameter.html
 share/doc/db6/api_reference/C/set_verbose_parameter.html
 share/doc/db6/api_reference/C/setfunc.html
+share/doc/db6/api_reference/C/slice_parameter.html
 share/doc/db6/api_reference/C/sqlite3.html
 share/doc/db6/api_reference/C/txn.html
 share/doc/db6/api_reference/C/txnabort.html
@@ -584,6 +602,7 @@ share/doc/db6/api_reference/CXX/dbget_lk_exclusive.html
 share/doc/db6/api_reference/CXX/dbget_lorder.html
 share/doc/db6/api_reference/CXX/dbget_mpf.html
 share/doc/db6/api_reference/CXX/dbget_msgfile.html
+share/doc/db6/api_reference/CXX/dbget_msgpfx.html
 share/doc/db6/api_reference/CXX/dbget_multiple.html
 share/doc/db6/api_reference/CXX/dbget_open_flags.html
 share/doc/db6/api_reference/CXX/dbget_pagesize.html
@@ -596,6 +615,7 @@ share/doc/db6/api_reference/CXX/dbget_re_delim.html
 share/doc/db6/api_reference/CXX/dbget_re_len.html
 share/doc/db6/api_reference/CXX/dbget_re_pad.html
 share/doc/db6/api_reference/CXX/dbget_re_source.html
+share/doc/db6/api_reference/CXX/dbget_slices.html
 share/doc/db6/api_reference/CXX/dbget_transactional.html
 share/doc/db6/api_reference/CXX/dbget_type.html
 share/doc/db6/api_reference/CXX/dbgetenv.html
@@ -603,6 +623,7 @@ share/doc/db6/api_reference/CXX/dbjoin.html
 share/doc/db6/api_reference/CXX/dbkey_range.html
 share/doc/db6/api_reference/CXX/dblocknotgranted.html
 share/doc/db6/api_reference/CXX/dbmemory.html
+share/doc/db6/api_reference/CXX/dbmsg.html
 share/doc/db6/api_reference/CXX/dbmultiplebuilder.html
 share/doc/db6/api_reference/CXX/dbmultipledatabuilder.html
 share/doc/db6/api_reference/CXX/dbmultipledataiterator.html
@@ -644,6 +665,7 @@ share/doc/db6/api_reference/CXX/dbset_lorder.html
 share/doc/db6/api_reference/CXX/dbset_message_stream.html
 share/doc/db6/api_reference/CXX/dbset_msgcall.html
 share/doc/db6/api_reference/CXX/dbset_msgfile.html
+share/doc/db6/api_reference/CXX/dbset_msgpfx.html
 share/doc/db6/api_reference/CXX/dbset_pagesize.html
 share/doc/db6/api_reference/CXX/dbset_partition.html
 share/doc/db6/api_reference/CXX/dbset_partition_dirs.html
@@ -653,12 +675,14 @@ share/doc/db6/api_reference/CXX/dbset_re_delim.html
 share/doc/db6/api_reference/CXX/dbset_re_len.html
 share/doc/db6/api_reference/CXX/dbset_re_pad.html
 share/doc/db6/api_reference/CXX/dbset_re_source.html
+share/doc/db6/api_reference/CXX/dbset_slice_callback.html
 share/doc/db6/api_reference/CXX/dbsite_close.html
 share/doc/db6/api_reference/CXX/dbsite_get_address.html
 share/doc/db6/api_reference/CXX/dbsite_get_config.html
 share/doc/db6/api_reference/CXX/dbsite_get_eid.html
 share/doc/db6/api_reference/CXX/dbsite_remove.html
 share/doc/db6/api_reference/CXX/dbsite_set_config.html
+share/doc/db6/api_reference/CXX/dbslice_lookup.html
 share/doc/db6/api_reference/CXX/dbsort_multiple.html
 share/doc/db6/api_reference/CXX/dbsql.html
 share/doc/db6/api_reference/CXX/dbstat.html
@@ -722,8 +746,12 @@ share/doc/db6/api_reference/CXX/envget_mp_mtxcount.html
 share/doc/db6/api_reference/CXX/envget_mp_pagesize.html
 share/doc/db6/api_reference/CXX/envget_mp_tablesize.html
 share/doc/db6/api_reference/CXX/envget_msgfile.html
+share/doc/db6/api_reference/CXX/envget_msgpfx.html
 share/doc/db6/api_reference/CXX/envget_open_flags.html
+share/doc/db6/api_reference/CXX/envget_region_dir.html
 share/doc/db6/api_reference/CXX/envget_shm_key.html
+share/doc/db6/api_reference/CXX/envget_slice_count.html
+share/doc/db6/api_reference/CXX/envget_slices.html
 share/doc/db6/api_reference/CXX/envget_thread_count.html
 share/doc/db6/api_reference/CXX/envget_timeout.html
 share/doc/db6/api_reference/CXX/envget_tmp_dir.html
@@ -734,6 +762,7 @@ share/doc/db6/api_reference/CXX/envlog_get_config.html
 share/doc/db6/api_reference/CXX/envlog_set_config.html
 share/doc/db6/api_reference/CXX/envlog_verify.html
 share/doc/db6/api_reference/CXX/envlsn_reset.html
+share/doc/db6/api_reference/CXX/envmsg.html
 share/doc/db6/api_reference/CXX/envopen.html
 share/doc/db6/api_reference/CXX/envremove.html
 share/doc/db6/api_reference/CXX/envset_alloc.html
@@ -778,6 +807,8 @@ share/doc/db6/api_reference/CXX/envset_mp_pagesize.html
 share/doc/db6/api_reference/CXX/envset_mp_tablesize.html
 share/doc/db6/api_reference/CXX/envset_msgcall.html
 share/doc/db6/api_reference/CXX/envset_msgfile.html
+share/doc/db6/api_reference/CXX/envset_msgpfx.html
+share/doc/db6/api_reference/CXX/envset_region_dir.html
 share/doc/db6/api_reference/CXX/envset_shm_key.html
 share/doc/db6/api_reference/CXX/envset_thread_count.html
 share/doc/db6/api_reference/CXX/envset_thread_id.html
@@ -795,6 +826,7 @@ share/doc/db6/api_reference/CXX/frame_index.html
 share/doc/db6/api_reference/CXX/frame_main.html
 share/doc/db6/api_reference/CXX/get_blob_dir.html
 share/doc/db6/api_reference/CXX/get_blob_threshold.html
+share/doc/db6/api_reference/CXX/home_dir_parameter.html
 share/doc/db6/api_reference/CXX/index.html
 share/doc/db6/api_reference/CXX/introduction.html
 share/doc/db6/api_reference/CXX/lock.html
@@ -906,6 +938,7 @@ share/doc/db6/api_reference/CXX/repmgrget_ack_policy.html
 share/doc/db6/api_reference/CXX/repmgrget_incoming_queue_max.html
 share/doc/db6/api_reference/CXX/repmgrset_ack_policy.html
 share/doc/db6/api_reference/CXX/repmgrset_incoming_queue_max.html
+share/doc/db6/api_reference/CXX/repmgrset_socket.html
 share/doc/db6/api_reference/CXX/repmgrsite_list.html
 share/doc/db6/api_reference/CXX/repmgrstart.html
 share/doc/db6/api_reference/CXX/repmgrstat.html
@@ -960,12 +993,15 @@ share/doc/db6/api_reference/CXX/set_mp_max_openfd_parameter.html
 share/doc/db6/api_reference/CXX/set_mp_max_write_parameter.html
 share/doc/db6/api_reference/CXX/set_mp_mmapsize_parameter.html
 share/doc/db6/api_reference/CXX/set_open_flags_parameter.html
+share/doc/db6/api_reference/CXX/set_region_dir_parameter.html
 share/doc/db6/api_reference/CXX/set_shm_key_parameter.html
+share/doc/db6/api_reference/CXX/set_slice_count_parameter.html
 share/doc/db6/api_reference/CXX/set_thread_count_parameter.html
 share/doc/db6/api_reference/CXX/set_timeout_parameter.html
 share/doc/db6/api_reference/CXX/set_tmp_dir_parameter.html
 share/doc/db6/api_reference/CXX/set_tx_max_parameter.html
 share/doc/db6/api_reference/CXX/set_verbose_parameter.html
+share/doc/db6/api_reference/CXX/slice_parameter.html
 share/doc/db6/api_reference/CXX/sqlite3.html
 share/doc/db6/api_reference/CXX/txn.html
 share/doc/db6/api_reference/CXX/txnabort.html
@@ -1364,6 +1400,8 @@ share/doc/db6/bdb-sql/bfile-extension.html
 share/doc/db6/bdb-sql/bfile-sql.html
 share/doc/db6/bdb-sql/buildinstall.html
 share/doc/db6/bdb-sql/changedpragmas.html
+share/doc/db6/bdb-sql/configcache.html
+share/doc/db6/bdb-sql/control_log_file.html
 share/doc/db6/bdb-sql/datamigration.html
 share/doc/db6/bdb-sql/dbfeatures.html
 share/doc/db6/bdb-sql/dbsqlbasics.html
@@ -1383,11 +1421,14 @@ share/doc/db6/bdb-sql/reppragma.html
 share/doc/db6/bdb-sql/repstatistics.html
 share/doc/db6/bdb-sql/selectpage_size.html
 share/doc/db6/bdb-sql/sequencesupport.html
+share/doc/db6/bdb-sql/sql_db_config.html
 share/doc/db6/bdb-sql/sql_encryption.html
 share/doc/db6/bdb-sql/sqlrep.html
 share/doc/db6/bdb-sql/statsql.html
 share/doc/db6/bdb-sql/sync.html
 share/doc/db6/bdb-sql/unsupportedpragmas.html
+share/doc/db6/bdb-sql/user_authentication.html
+share/doc/db6/bdb-sql/using_dbconfig.html
 share/doc/db6/bdb-sql/verifysql.html
 share/doc/db6/collections/tutorial/BasicProgram.html
 share/doc/db6/collections/tutorial/BerkeleyDB-Java-Collections.pdf
@@ -1593,6 +1634,7 @@ share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_BlobDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_Creation.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_DuplicateCompare.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_Duplicates.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_ExternalFileDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_NoReverseSplitting.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_BTreeDatabaseConfig_UseRecordNumbers.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_BackupOptions_Clean.htm
@@ -1629,6 +1671,7 @@ share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_ErrorFeedback.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_ErrorPrefix.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_Feedback.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_FreeThreaded.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_MessagePrefix.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_NoMMap.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_NoWaitDbExclusiveLock.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseConfig_NonDurableTxns.htm
@@ -1646,6 +1689,7 @@ share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_DataDirs.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_ErrorFeedback.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_ErrorPrefix.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_EventNotify.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_ExternalFileDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_Feedback.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_ForceFlush.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_FreeThreaded.htm
@@ -1656,6 +1700,7 @@ share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_LockSystemCfg.h
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_Lockdown.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_LogSystemCfg.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MPoolSystemCfg.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MessagePrefix.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MetadataDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_MutexSystemCfg.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_DatabaseEnvironmentConfig_NoBuffer.htm
@@ -1742,10 +1787,12 @@ share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_BlobDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_Creation.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_DuplicateCompare.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_Duplicates.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_ExternalFileDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_HashComparison.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HashDatabaseConfig_HashFunction.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HeapDatabaseConfig_BlobDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_HeapDatabaseConfig_Creation.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_HeapDatabaseConfig_ExternalFileDir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LSN_LogFileNumber.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LSN_Offset.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LockingConfig_DeadlockResolution.htm
@@ -1756,6 +1803,7 @@ share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_Dir.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_ForceSync.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_InMemory.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_LogBlobContent.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_LogExternalFileContent.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_NoBuffer.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_NoSync.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_LogConfig_ZeroOnCreate.htm
@@ -1780,6 +1828,7 @@ share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_AutoInit.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_BulkTransfer.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_DelayClientSync.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_Elections.htm
+share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_ForwardWrites.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_InMemory.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_NoBlocking.htm
 share/doc/db6/csharp/html/F_BerkeleyDB_ReplicationConfig_PrefmasClient.htm
@@ -2941,6 +2990,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_ActiveTransaction_ThreadID.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_BlobThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_Compress.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_Decompress.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_MinKeysPerPage.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_NParts.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabaseConfig_Partition.htm
@@ -2952,6 +3002,8 @@ share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_Compress.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_Decompress.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_DupCompare.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_Duplicates.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_ExternalFileDir.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_MinKeysPerPage.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_NParts.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeDatabase_Partition.htm
@@ -2977,6 +3029,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_PageSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_Version.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_nBlobRecords.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_nData.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_nExternalFiles.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_nKeys.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BTreeStats_nPages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_AutoCommit.htm
@@ -2994,6 +3047,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_FileName.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_FreeThreaded.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_HasMultiple.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_InHostOrder.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_MessagePrefix.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_Msgfile.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_NoMMap.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_BaseDatabase_NoWaitDbExclusiveLock.htm
@@ -3027,6 +3081,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseConfig_EncryptionPassword.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseConfig_PageSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_Blob.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_Data.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_ExternalFile.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_Partial.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_PartialLen.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_PartialOffset.htm
@@ -3034,6 +3089,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEntry_ReadOnly.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_BlobThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_EncryptAlgorithm.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_EncryptionPassword.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_InitThreadCount.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_InitTxnCount.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironmentConfig_LockTimeout.htm
@@ -3058,6 +3114,8 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_EncryptAlgorithm.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_ErrorFeedback.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_ErrorPrefix.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_EventNotify.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_ExternalFileDir.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_Feedback.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_ForceFlush.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_FreeThreaded.htm
@@ -3081,6 +3139,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogAutoRemove.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogBlobContent.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogBufferSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogDir.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogExternalFileContent.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogFileMode.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogForceSync.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_LogInMemory.htm
@@ -3098,6 +3157,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxObjects.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxOpenFiles.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxSequentialWrites.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MaxTransactions.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MessagePrefix.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MetadataDir.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_Msgfile.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_MutexAlignment.htm
@@ -3109,6 +3169,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_NoPanic.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_NumTestAndSetSpins.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_Overwrite.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_Private.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RegionDir.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RegionMemoryLimitBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RegionMemoryLimitGBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_Register.htm
@@ -3122,6 +3183,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepConnectionRetry.ht
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepDelayClientSync.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepElectionRetry.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepElectionTimeout.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepForwardWrites.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepFullElectionTimeout.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepHeartbeatMonitor.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepHeartbeatSend.htm
@@ -3144,6 +3206,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepTransmitLimitBytes
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepTransmitLimitGBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepTransport.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepUseMasterLeases.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepWriteForwardTimeout.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_ReplicationView.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepmgrIncomingQueueMaxBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DatabaseEnvironment_RepmgrIncomingQueueMaxGBytes.htm
@@ -3190,6 +3253,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_DbSite_Legacy.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DbSite_LocalSite.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_DbSite_Peer.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabaseConfig_BlobThreshold.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabaseConfig_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabaseConfig_FillFactor.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabaseConfig_NParts.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabaseConfig_Partition.htm
@@ -3200,6 +3264,8 @@ share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_BlobThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_Compare.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_DupCompare.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_Duplicates.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_ExternalFileDir.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_FillFactor.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_HashFunction.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashDatabase_NParts.htm
@@ -3221,15 +3287,19 @@ share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_PageSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_Version.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_nBlobRecords.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_nData.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_nExternalFiles.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_nHashBuckets.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_nKeys.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HashStats_nPages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_BlobThreshold.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_MaxSizeBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_MaxSizeGBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabaseConfig_RegionSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_BlobDir.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_BlobThreshold.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_ExternalFileDir.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_ExternalFileThreshold.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_MaxSizeBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_MaxSizeGBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapDatabase_RegionSize.htm
@@ -3241,6 +3311,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_PageSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_RegionSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_Version.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_nBlobRecords.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_nExternalFiles.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_nPages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_nRecords.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_HeapStats_nRegions.htm
@@ -3364,7 +3435,6 @@ share/doc/db6/csharp/html/P_BerkeleyDB_MPoolFileStats_PagesRead.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolFileStats_PagesWritten.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_BlockedOperations.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_BucketsCheckedDuringAlloc.htm
-share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_CacheRegions.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_CacheSettings.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_CleanPages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_CleanPagesEvicted.htm
@@ -3384,6 +3454,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MappedPages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxBucketsCheckedDuringAlloc.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxBufferWrites.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxBufferWritesSleep.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxCacheRegions.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxHashLockNoWait.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxHashLockWait.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_MPoolStats_MaxMMapSize.htm
@@ -3477,7 +3548,9 @@ share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_PageSize.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_RecordLength.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_RecordPadByte.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_Version.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_nBlobRecords.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_nData.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_nExternalFiles.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_nKeys.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RecnoStats_nPages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_AutoTakeovers.htm
@@ -3494,6 +3567,8 @@ share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_ParticipantSites.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_QueuedMessages.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_TotalSites.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_ViewSites.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_WriteOpsForwarded.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_RepMgrStats_WriteOpsReceived.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_AckTimeout.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_CheckpointDelay.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_ClockskewFast.htm
@@ -3514,6 +3589,7 @@ share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_RetransmissionRequestMa
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_RetransmissionRequestMin.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_TransmitLimitBytes.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_TransmitLimitGBytes.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationConfig_WriteForwardTimeout.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_AppliedTransactions.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_AwaitedLSN.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_AwaitedPage.htm
@@ -3544,6 +3620,10 @@ share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_Elections.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_ElectionsWon.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_EnvID.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_EnvPriority.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_ExternalFileDuplicated.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_ExternalFileRecords.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_ExternalFileRerequests.htm
+share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_ExternalFileUpdateRerequests.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_FailedMessageSends.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_ForcedRerequests.htm
 share/doc/db6/csharp/html/P_BerkeleyDB_ReplicationStats_IgnoredMessages.htm
@@ -4167,6 +4247,8 @@ share/doc/db6/gsg_db_rep/C/repmgr_init_example_c.html
 share/doc/db6/gsg_db_rep/C/rywc.html
 share/doc/db6/gsg_db_rep/C/simpleprogramlisting.html
 share/doc/db6/gsg_db_rep/C/txnapp.html
+share/doc/db6/gsg_db_rep/C/wrfor_programlisting.html
+share/doc/db6/gsg_db_rep/C/writeforwarding.html
 share/doc/db6/gsg_db_rep/CXX/Replication-CXX-GSG.pdf
 share/doc/db6/gsg_db_rep/CXX/addfeatures.html
 share/doc/db6/gsg_db_rep/CXX/apioverview.html
@@ -4196,6 +4278,8 @@ share/doc/db6/gsg_db_rep/CXX/repmgr_init_example_c.html
 share/doc/db6/gsg_db_rep/CXX/rywc.html
 share/doc/db6/gsg_db_rep/CXX/simpleprogramlisting.html
 share/doc/db6/gsg_db_rep/CXX/txnapp.html
+share/doc/db6/gsg_db_rep/CXX/wrfor_programlisting.html
+share/doc/db6/gsg_db_rep/CXX/writeforwarding.html
 share/doc/db6/gsg_db_rep/JAVA/Replication-JAVA-GSG.pdf
 share/doc/db6/gsg_db_rep/JAVA/addfeatures.html
 share/doc/db6/gsg_db_rep/JAVA/apioverview.html
@@ -4224,6 +4308,31 @@ share/doc/db6/gsg_db_rep/JAVA/repmgr_init_example_c.html
 share/doc/db6/gsg_db_rep/JAVA/rywc.html
 share/doc/db6/gsg_db_rep/JAVA/simpleprogramlisting.html
 share/doc/db6/gsg_db_rep/JAVA/txnapp.html
+share/doc/db6/gsg_db_rep/JAVA/wrfor_programlisting.html
+share/doc/db6/gsg_db_rep/JAVA/writeforwarding.html
+share/doc/db6/gsg_db_server/JAVA/Server-JAVA-GSG.pdf
+share/doc/db6/gsg_db_server/JAVA/client.admin_api.html
+share/doc/db6/gsg_db_server/JAVA/client.bulk_api.html
+share/doc/db6/gsg_db_server/JAVA/client.concurrency.html
+share/doc/db6/gsg_db_server/JAVA/client.connect.html
+share/doc/db6/gsg_db_server/JAVA/client.connectssl.html
+share/doc/db6/gsg_db_server/JAVA/client.html
+share/doc/db6/gsg_db_server/JAVA/client.resource_api.html
+share/doc/db6/gsg_db_server/JAVA/client.secondary.html
+share/doc/db6/gsg_db_server/JAVA/client.stat_api.html
+share/doc/db6/gsg_db_server/JAVA/config.html
+share/doc/db6/gsg_db_server/JAVA/connection.html
+share/doc/db6/gsg_db_server/JAVA/gettingStarted.css
+share/doc/db6/gsg_db_server/JAVA/index.html
+share/doc/db6/gsg_db_server/JAVA/intro.client.html
+share/doc/db6/gsg_db_server/JAVA/introduction.html
+share/doc/db6/gsg_db_server/JAVA/moreinfo.html
+share/doc/db6/gsg_db_server/JAVA/preface.html
+share/doc/db6/gsg_db_server/JAVA/server.html
+share/doc/db6/gsg_db_server/JAVA/server.ssl.html
+share/doc/db6/gsg_db_server/JAVA/server.startshell.html
+share/doc/db6/gsg_db_server/JAVA/server.stop.html
+share/doc/db6/gsg_db_server/JAVA/utilities.html
 share/doc/db6/gsg_txn/C/BerkeleyDB-Core-C-Txn.pdf
 share/doc/db6/gsg_txn/C/abortresults.html
 share/doc/db6/gsg_txn/C/apireq.html
@@ -4252,6 +4361,7 @@ share/doc/db6/gsg_txn/C/nestedtxn.html
 share/doc/db6/gsg_txn/C/nodurabletxn.html
 share/doc/db6/gsg_txn/C/perftune-intro.html
 share/doc/db6/gsg_txn/C/preface.html
+share/doc/db6/gsg_txn/C/readblock-pdf.jpg
 share/doc/db6/gsg_txn/C/readblock.jpg
 share/doc/db6/gsg_txn/C/readmodifywrite.html
 share/doc/db6/gsg_txn/C/recovery-intro.html
@@ -4259,7 +4369,6 @@ share/doc/db6/gsg_txn/C/recovery.html
 share/doc/db6/gsg_txn/C/reversesplit.html
 share/doc/db6/gsg_txn/C/rwlocks1-pdf.jpg
 share/doc/db6/gsg_txn/C/rwlocks1.jpg
-share/doc/db6/gsg_txn/C/simplelock-pdf.jpg
 share/doc/db6/gsg_txn/C/simplelock.jpg
 share/doc/db6/gsg_txn/C/sysfailure.html
 share/doc/db6/gsg_txn/C/txn_ccursor.html
@@ -4299,6 +4408,7 @@ share/doc/db6/gsg_txn/CXX/nestedtxn.html
 share/doc/db6/gsg_txn/CXX/nodurabletxn.html
 share/doc/db6/gsg_txn/CXX/perftune-intro.html
 share/doc/db6/gsg_txn/CXX/preface.html
+share/doc/db6/gsg_txn/CXX/readblock-pdf.jpg
 share/doc/db6/gsg_txn/CXX/readblock.jpg
 share/doc/db6/gsg_txn/CXX/readmodifywrite.html
 share/doc/db6/gsg_txn/CXX/recovery-intro.html
@@ -4306,7 +4416,6 @@ share/doc/db6/gsg_txn/CXX/recovery.html
 share/doc/db6/gsg_txn/CXX/reversesplit.html
 share/doc/db6/gsg_txn/CXX/rwlocks1-pdf.jpg
 share/doc/db6/gsg_txn/CXX/rwlocks1.jpg
-share/doc/db6/gsg_txn/CXX/simplelock-pdf.jpg
 share/doc/db6/gsg_txn/CXX/simplelock.jpg
 share/doc/db6/gsg_txn/CXX/sysfailure.html
 share/doc/db6/gsg_txn/CXX/txn_ccursor.html
@@ -4346,6 +4455,7 @@ share/doc/db6/gsg_txn/JAVA/nestedtxn.html
 share/doc/db6/gsg_txn/JAVA/nodurabletxn.html
 share/doc/db6/gsg_txn/JAVA/perftune-intro.html
 share/doc/db6/gsg_txn/JAVA/preface.html
+share/doc/db6/gsg_txn/JAVA/readblock-pdf.jpg
 share/doc/db6/gsg_txn/JAVA/readblock.jpg
 share/doc/db6/gsg_txn/JAVA/readmodifywrite.html
 share/doc/db6/gsg_txn/JAVA/recovery-intro.html
@@ -4353,7 +4463,6 @@ share/doc/db6/gsg_txn/JAVA/recovery.html
 share/doc/db6/gsg_txn/JAVA/reversesplit.html
 share/doc/db6/gsg_txn/JAVA/rwlocks1-pdf.jpg
 share/doc/db6/gsg_txn/JAVA/rwlocks1.jpg
-share/doc/db6/gsg_txn/JAVA/simplelock-pdf.jpg
 share/doc/db6/gsg_txn/JAVA/simplelock.jpg
 share/doc/db6/gsg_txn/JAVA/sysfailure.html
 share/doc/db6/gsg_txn/JAVA/txn_ccursor.html
@@ -4385,6 +4494,7 @@ share/doc/db6/installation/build_unix_db_nosync.html
 share/doc/db6/installation/build_unix_encrypt.html
 share/doc/db6/installation/build_unix_flags.html
 share/doc/db6/installation/build_unix_freebsd.html
+share/doc/db6/installation/build_unix_hpux.html
 share/doc/db6/installation/build_unix_install.html
 share/doc/db6/installation/build_unix_iphone.html
 share/doc/db6/installation/build_unix_irix.html
@@ -4424,6 +4534,7 @@ share/doc/db6/installation/changelog_5_2.html
 share/doc/db6/installation/changelog_5_3.html
 share/doc/db6/installation/changelog_6_0.html
 share/doc/db6/installation/changelog_6_1.html
+share/doc/db6/installation/changelog_6_2.html
 share/doc/db6/installation/compare_func.html
 share/doc/db6/installation/cross_compile_unix.html
 share/doc/db6/installation/debug.html
@@ -4443,6 +4554,7 @@ share/doc/db6/installation/log_nosync.html
 share/doc/db6/installation/moreinfo.html
 share/doc/db6/installation/preface.html
 share/doc/db6/installation/remlockdetect.html
+share/doc/db6/installation/renaming_blobs_external.html
 share/doc/db6/installation/rep_auto_takeover.html
 share/doc/db6/installation/rep_views.html
 share/doc/db6/installation/repmgr_inqueue.html
@@ -4498,6 +4610,21 @@ share/doc/db6/installation/upgrade_52_toc.html
 share/doc/db6/installation/upgrade_53_toc.html
 share/doc/db6/installation/upgrade_60_toc.html
 share/doc/db6/installation/upgrade_61_toc.html
+share/doc/db6/installation/upgrade_62_toc.html
+share/doc/db6/installation/upgrade_droppsupp62.html
+share/doc/db6/installation/upgrade_javarem.html
+share/doc/db6/installation/upgrade_jdbcbuild.html
+share/doc/db6/installation/upgrade_msgprefix.html
+share/doc/db6/installation/upgrade_regiondir.html
+share/doc/db6/installation/upgrade_repmgripv6.html
+share/doc/db6/installation/upgrade_slices.html
+share/doc/db6/installation/upgrade_sqldefault.html
+share/doc/db6/installation/upgrade_sqlitever62.html
+share/doc/db6/installation/upgrade_sqlreindex.html
+share/doc/db6/installation/upgrade_supparm64.html
+share/doc/db6/installation/upgrade_suppjava8.html
+share/doc/db6/installation/upgrade_varargs.html
+share/doc/db6/installation/upgrade_writeforward.html
 share/doc/db6/installation/win_additional_options.html
 share/doc/db6/installation/win_build64.html
 share/doc/db6/installation/win_build_cxx.html
@@ -4756,6 +4883,8 @@ share/doc/db6/java/com/sleepycat/db/SecondaryMultiKeyCreator.html
 share/doc/db6/java/com/sleepycat/db/Sequence.html
 share/doc/db6/java/com/sleepycat/db/SequenceConfig.html
 share/doc/db6/java/com/sleepycat/db/SequenceStats.html
+share/doc/db6/java/com/sleepycat/db/Slice.html
+share/doc/db6/java/com/sleepycat/db/SliceCorruptException.html
 share/doc/db6/java/com/sleepycat/db/StatsConfig.html
 share/doc/db6/java/com/sleepycat/db/Transaction.html
 share/doc/db6/java/com/sleepycat/db/TransactionConfig.html
@@ -4869,6 +4998,8 @@ share/doc/db6/java/com/sleepycat/db/class-use/SecondaryMultiKeyCreator.html
 share/doc/db6/java/com/sleepycat/db/class-use/Sequence.html
 share/doc/db6/java/com/sleepycat/db/class-use/SequenceConfig.html
 share/doc/db6/java/com/sleepycat/db/class-use/SequenceStats.html
+share/doc/db6/java/com/sleepycat/db/class-use/Slice.html
+share/doc/db6/java/com/sleepycat/db/class-use/SliceCorruptException.html
 share/doc/db6/java/com/sleepycat/db/class-use/StatsConfig.html
 share/doc/db6/java/com/sleepycat/db/class-use/Transaction.html
 share/doc/db6/java/com/sleepycat/db/class-use/TransactionConfig.html
@@ -5037,10 +5168,7 @@ share/doc/db6/java/overview-frame.html
 share/doc/db6/java/overview-summary.html
 share/doc/db6/java/overview-tree.html
 share/doc/db6/java/package-list
-share/doc/db6/java/resources/background.gif
-share/doc/db6/java/resources/tab.gif
-share/doc/db6/java/resources/titlebar.gif
-share/doc/db6/java/resources/titlebar_end.gif
+share/doc/db6/java/script.js
 share/doc/db6/java/serialized-form.html
 share/doc/db6/java/style.css
 share/doc/db6/license/license_db.html
@@ -5104,13 +5232,16 @@ share/doc/db6/programmer_reference/arch_progmodel.html
 share/doc/db6/programmer_reference/arch_script.html
 share/doc/db6/programmer_reference/arch_smallpic.gif
 share/doc/db6/programmer_reference/arch_utilities.html
+share/doc/db6/programmer_reference/bdb_server.html
+share/doc/db6/programmer_reference/bdb_slices.html
 share/doc/db6/programmer_reference/bdb_usenix.pdf
 share/doc/db6/programmer_reference/blobs.html
 share/doc/db6/programmer_reference/bt_conf.html
 share/doc/db6/programmer_reference/cam.html
 share/doc/db6/programmer_reference/cam_app.html
 share/doc/db6/programmer_reference/cam_fail.html
-share/doc/db6/programmer_reference/ch13s02.html
+share/doc/db6/programmer_reference/ch15s02.html
+share/doc/db6/programmer_reference/comm_repsites.html
 share/doc/db6/programmer_reference/csharp.html
 share/doc/db6/programmer_reference/dumpload.html
 share/doc/db6/programmer_reference/dumpload_format.html
@@ -5219,10 +5350,11 @@ share/doc/db6/programmer_reference/rep_replicate.html
 share/doc/db6/programmer_reference/rep_ryw.html
 share/doc/db6/programmer_reference/rep_trans.html
 share/doc/db6/programmer_reference/rep_twosite.html
-share/doc/db6/programmer_reference/repmgr_channels.html
 share/doc/db6/programmer_reference/rq_conf.html
 share/doc/db6/programmer_reference/second.javas
 share/doc/db6/programmer_reference/sequence.html
+share/doc/db6/programmer_reference/slice-apis.html
+share/doc/db6/programmer_reference/slice-keys.html
 share/doc/db6/programmer_reference/solaris.txt
 share/doc/db6/programmer_reference/stl.html
 share/doc/db6/programmer_reference/stl_complex_rw.html
