@@ -1,10 +1,18 @@
-$NetBSD: patch-Lib_sysconfig.py,v 1.1 2017/01/01 14:34:27 adam Exp $
+$NetBSD: patch-Lib_sysconfig.py,v 1.2 2017/01/26 09:13:27 adam Exp $
 
+Remove _multiarch from config path (differs across platforms).
 Simplify _sysconfigdata to include only platform name.
 
---- Lib/sysconfig.py.orig	2017-01-01 13:52:46.000000000 +0000
+--- Lib/sysconfig.py.orig	2016-12-23 02:21:19.000000000 +0000
 +++ Lib/sysconfig.py
-@@ -344,10 +344,8 @@ def get_makefile_filename():
+@@ -337,17 +337,13 @@ def get_makefile_filename():
+         config_dir_name = 'config-%s%s' % (_PY_VERSION_SHORT, sys.abiflags)
+     else:
+         config_dir_name = 'config'
+-    if hasattr(sys.implementation, '_multiarch'):
+-        config_dir_name += '-%s' % sys.implementation._multiarch
+     return os.path.join(get_path('stdlib'), config_dir_name, 'Makefile')
+ 
  
  def _get_sysconfigdata_name():
      return os.environ.get('_PYTHON_SYSCONFIGDATA_NAME',
