@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.450 2017/01/26 21:12:39 adam Exp $
+$NetBSD: CHANGES-2017,v 1.451 2017/01/26 23:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -570,3 +570,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/spdylay to 1.4.0 [adam 2017-01-26]
 	Updated www/nghttp2 to 1.19.0 [adam 2017-01-26]
 	Updated www/h2o to 2.1.0 [adam 2017-01-26]
+	Updated lang/python27 to 2.7.13nb1 [wiz 2017-01-26]
