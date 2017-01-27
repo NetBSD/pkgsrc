@@ -1,10 +1,11 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.9 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.10 2017/01/27 01:36:21 maya Exp $
 
 * Support system libraries
+* Restore OSS support
 
---- toolkit/library/moz.build.orig	2017-01-22 14:52:50.338659055 +0000
+--- toolkit/library/moz.build.orig	2017-01-16 16:16:52.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -241,6 +241,21 @@ if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
+@@ -234,6 +234,21 @@ if CONFIG['MOZ_SYSTEM_PNG']:
  if CONFIG['MOZ_SYSTEM_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -25,4 +26,14 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.9 2017/01/25 13:24:51 ryoon Exp $
 +
  if CONFIG['MOZ_SYSTEM_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
+ 
+@@ -246,6 +261,9 @@ if not CONFIG['MOZ_TREE_PIXMAN']:
+ if CONFIG['MOZ_ALSA']:
+     OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
+ 
++if CONFIG['MOZ_OSS']:
++    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
++
+ if CONFIG['HAVE_CLOCK_MONOTONIC']:
+     OS_LIBS += CONFIG['REALTIME_LIBS']
  
