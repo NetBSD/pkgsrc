@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.168 2017/01/25 14:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.169 2017/01/27 10:24:56 kleink Exp $
 
 DISTNAME=	calibre-2.77.0
 PKGREVISION=	1
@@ -26,7 +26,6 @@ DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.9:../../textproc/py-cssutils
 DEPENDS+=	${PYPKGPREFIX}-psutil>=0.6.1:../../sysutils/py-psutil
 ## Let's depend on the ones we have in pkgsrc instead of the bundled ones.
-#DEPENDS+=	${PYPKGPREFIX}-Pdf-[0-9]*:../../print/py-Pdf
 DEPENDS+=	${PYPKGPREFIX}-cherrypy-[0-9]*:../../www/py-cherrypy
 DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 #DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
@@ -94,7 +93,7 @@ MAKE_ENV+=		SIP_BIN=${BUILDLINK_PREFIX.py-sip}/bin/sip${PYVERSSUFFIX}
 
 # Let's depend on the ones we have in pkgsrc instead of the bundled ones.
 pre-configure:
-	cd ${WRKSRC} && rm -rf src/cherrypy src/pyPdf src/html5lib src/chardet
+	cd ${WRKSRC} && rm -rf src/cherrypy src/html5lib src/chardet
 
 # Turn off x bits on non-executable files.
 post-extract:
