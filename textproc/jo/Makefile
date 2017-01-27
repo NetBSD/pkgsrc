@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/01/04 12:44:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2017/01/27 11:33:11 fhajny Exp $
 
 DISTNAME=	jo-1.0
 CATEGORIES=	textproc
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/jpmens/jo
 COMMENT=	JSON output from a shell
 LICENSE=	gnu-gpl-v2
 
-GITHUB_RELEASE=	${DISTNAME}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 GNU_CONFIGURE=	yes
 
