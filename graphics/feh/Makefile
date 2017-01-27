@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2017/01/01 16:06:18 adam Exp $
+# $NetBSD: Makefile,v 1.78 2017/01/27 12:04:08 szptvlfn Exp $
 
-DISTNAME=	feh-2.16.1
-PKGREVISION=	2
+DISTNAME=	feh-2.18.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,8 +10,7 @@ HOMEPAGE=	http://feh.finalrewind.org/
 COMMENT=	Imlib2 based image viewer
 LICENSE=	mit
 
-#GNU_CONFIGURE=	YES
-#CONFIGURE_ARGS+=	--program-transform-name=s,cam,feh_cam,
+USE_LANGUAGES=	c99
 
 USE_TOOLS+=	gmake
 
@@ -21,6 +19,7 @@ LDFLAGS.SunOS+=		-lnsl -lsocket
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
