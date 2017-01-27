@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.459 2017/01/27 14:28:21 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.460 2017/01/27 14:33:24 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/xulrunner45 to 45.7.0 [ryoon 2017-01-27]
 	Updated www/firefox45-l10n to 45.7.0 [ryoon 2017-01-27]
 	Updated devel/py-argcomplete to 1.8.2 [fhajny 2017-01-27]
+	Updated sysutils/consul to 0.7.3 [fhajny 2017-01-27]
