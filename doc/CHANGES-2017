@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.452 2017/01/27 09:40:34 adam Exp $
+$NetBSD: CHANGES-2017,v 1.453 2017/01/27 12:15:50 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/h2o to 2.1.0 [adam 2017-01-26]
 	Updated lang/python27 to 2.7.13nb1 [wiz 2017-01-26]
 	Updated lang/perl5 to 5.24.1 [adam 2017-01-27]
+	Updated graphics/feh to 2.18.1 [szptvlfn 2017-01-27]
