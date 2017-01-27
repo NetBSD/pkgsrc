@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/14 13:39:40 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/27 15:45:05 prlw1 Exp $
 bin/ccache-swig3.0
 bin/swig3.0
 share/swig/3.0/allegrocl/allegrocl.swg
@@ -34,6 +34,7 @@ share/swig/3.0/csharp/director.swg
 share/swig/3.0/csharp/enums.swg
 share/swig/3.0/csharp/enumsimple.swg
 share/swig/3.0/csharp/enumtypesafe.swg
+share/swig/3.0/csharp/std_array.i
 share/swig/3.0/csharp/std_auto_ptr.i
 share/swig/3.0/csharp/std_common.i
 share/swig/3.0/csharp/std_deque.i
@@ -354,6 +355,24 @@ share/swig/3.0/php/std_vector.i
 share/swig/3.0/php/stl.i
 share/swig/3.0/php/typemaps.i
 share/swig/3.0/php/utils.i
+share/swig/3.0/php5/const.i
+share/swig/3.0/php5/director.swg
+share/swig/3.0/php5/factory.i
+share/swig/3.0/php5/globalvar.i
+share/swig/3.0/php5/php.swg
+share/swig/3.0/php5/phpinit.swg
+share/swig/3.0/php5/phpkw.swg
+share/swig/3.0/php5/phppointers.i
+share/swig/3.0/php5/phprun.swg
+share/swig/3.0/php5/std_common.i
+share/swig/3.0/php5/std_deque.i
+share/swig/3.0/php5/std_map.i
+share/swig/3.0/php5/std_pair.i
+share/swig/3.0/php5/std_string.i
+share/swig/3.0/php5/std_vector.i
+share/swig/3.0/php5/stl.i
+share/swig/3.0/php5/typemaps.i
+share/swig/3.0/php5/utils.i
 share/swig/3.0/pike/pike.swg
 share/swig/3.0/pike/pikekw.swg
 share/swig/3.0/pike/pikerun.swg
@@ -720,7 +739,6 @@ share/swig/3.0/typemaps/swigmacros.swg
 share/swig/3.0/typemaps/swigobject.swg
 share/swig/3.0/typemaps/swigtype.swg
 share/swig/3.0/typemaps/swigtypemaps.swg
-share/swig/3.0/typemaps/traits.swg
 share/swig/3.0/typemaps/typemaps.swg
 share/swig/3.0/typemaps/valtypes.swg
 share/swig/3.0/typemaps/void.swg
