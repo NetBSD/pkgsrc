@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.598 2016/12/30 22:34:14 maya Exp $
+# $NetBSD: Makefile,v 1.599 2017/01/28 01:19:06 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -386,6 +386,7 @@ SUBDIR+=	py-cryptkit
 SUBDIR+=	py-crypto
 SUBDIR+=	py-cryptodome
 SUBDIR+=	py-cryptography
+SUBDIR+=	py-cryptography_vectors
 SUBDIR+=	py-cryptopp
 SUBDIR+=	py-cybox
 SUBDIR+=	py-denyhosts
