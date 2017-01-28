@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.461 2017/01/27 15:45:30 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.462 2017/01/28 01:19:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -582,3 +582,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-argcomplete to 1.8.2 [fhajny 2017-01-27]
 	Updated sysutils/consul to 0.7.3 [fhajny 2017-01-27]
 	Updated devel/swig3 to 3.0.11 [prlw1 2017-01-27]
+	Added security/py-cryptography_vectors version 1.7.2 [wiz 2017-01-28]
