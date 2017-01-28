@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2017/01/02 01:29:37 wen Exp $
+# $NetBSD: Makefile,v 1.41 2017/01/28 12:26:57 wen Exp $
 
-DISTNAME=	Dancer2-0.204002
+DISTNAME=	Dancer2-0.204004
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CR/CROMEDOME/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Dancer2/
@@ -31,6 +31,7 @@ DEPENDS+=	p5-HTTP-Body>=0:../../www/p5-HTTP-Body
 DEPENDS+=	p5-HTTP-Date>=0:../../www/p5-HTTP-Date
 DEPENDS+=	p5-HTTP-Message>=0:../../www/p5-HTTP-Message
 DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
+DEPENDS+=	p5-JSON-MaybeXS>=0:../../converters/p5-JSON-MaybeXS
 #DEPENDS+=	{perl>=5.7.3,p5-MIME-Base64>=0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-Module-Pluggable>=0:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Moo>=2.000000:../../devel/p5-Moo
