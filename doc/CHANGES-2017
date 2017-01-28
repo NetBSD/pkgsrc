@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.470 2017/01/28 12:09:24 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.471 2017/01/28 12:28:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -591,3 +591,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/wordpress to 4.7.2 [morr 2017-01-28]
 	Updated security/py-cryptography to 1.7.2nb1 [wiz 2017-01-28]
 	Updated security/py-OpenSSL to 16.2.0 [wiz 2017-01-28]
+	Updated www/p5-Dancer2 to 0.204004 [wen 2017-01-28]
