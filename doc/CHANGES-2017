@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.464 2017/01/28 04:41:43 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.465 2017/01/28 04:50:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -585,3 +585,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/py-cryptography_vectors version 1.7.2 [wiz 2017-01-28]
 	Updated security/py-cryptography to 1.7.2 [wiz 2017-01-28]
 	Updated shells/bash to 4.4.012 [ryoon 2017-01-28]
+	Updated audio/libopus to 1.1.4nb1 [ryoon 2017-01-28]
