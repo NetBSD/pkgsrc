@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.12 2016/01/31 07:49:23 ryoon Exp $
+# $NetBSD: options.mk,v 1.13 2017/01/28 04:57:57 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=		apache-mpm-event apache-mpm-prefork apache-mpm-worker \
 				lua http2 suexec
 PKG_SUGGESTED_OPTIONS=		apache-mpm-event apache-mpm-prefork \
-				apache-mpm-worker
+				apache-mpm-worker http2
 
 .if ${OPSYS} == "SunOS" && !empty(OS_VERSION:M5.1[0-9])
 PKG_SUPPORTED_OPTIONS+=		privileges
