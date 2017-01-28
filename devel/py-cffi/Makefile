@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/11/14 14:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/01/28 15:34:19 wiz Exp $
 
 DISTNAME=	cffi-1.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,12 +13,10 @@ LICENSE=	mit
 USE_TOOLS+=	pkg-config
 
 DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-NOT_PAX_MPROTECT_SAFE=	${PYSITELIB}/_cffi_backend.so
-
-# tests don't run on MPROTECT enabled systems, and I haven't found
-# the magic to fix that, so workaround:
-# sysctl -w security.pax.mprotect.global=0
+do-test:
+	cd ${WRKSRC} && py.test-${PYVERSSUFFIX} -v
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/python/egg.mk"
