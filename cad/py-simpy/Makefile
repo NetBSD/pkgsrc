@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/06/08 17:43:20 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/01/28 23:39:24 mef Exp $
 
-DISTNAME=		simpy-3.0.8
+DISTNAME=		simpy-3.0.10
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		cad math
 MASTER_SITES=		${MASTER_SITE_PYPI:=s/simpy/}
@@ -13,8 +13,8 @@ LICENSE=		mit
 # it is only for test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0:../../devel/py-test
 
-do-test:
-	${SETENV} ${TEST_ENV} ${PYTHONBIN} -c "import simpy; simpy.test()"
+#do-test:
+#	${SETENV} ${TEST_ENV} ${PYTHONBIN} -c "import simpy; simpy.test()"
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
