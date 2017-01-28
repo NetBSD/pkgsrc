@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2016/12/19 08:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2017/01/28 01:20:01 wiz Exp $
 
-DISTNAME=	cryptography-1.7.1
+DISTNAME=	cryptography-1.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cryptography/}
@@ -20,6 +20,9 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 BUILD_DEPENDS+=	${PYPKGPREFIX}-requests>=0.8:../../devel/py-requests
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=0.8:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+BUILD_DEPENDS+=	${PYPKGPREFIX}-cryptography_vectors-[0-9]*:../../security/py-cryptography_vectors
+BUILD_DEPENDS+=	${PYPKGPREFIX}-asn1-modules-[0-9]*:../../security/py-asn1-modules
 
 .include "../../lang/python/pyversion.mk"
 
