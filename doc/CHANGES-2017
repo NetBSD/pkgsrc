@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.471 2017/01/28 12:28:18 wen Exp $
+$NetBSD: CHANGES-2017,v 1.472 2017/01/28 12:43:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -592,3 +592,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-cryptography to 1.7.2nb1 [wiz 2017-01-28]
 	Updated security/py-OpenSSL to 16.2.0 [wiz 2017-01-28]
 	Updated www/p5-Dancer2 to 0.204004 [wen 2017-01-28]
+	Updated www/p5-Mojolicious to 7.22 [wen 2017-01-28]
