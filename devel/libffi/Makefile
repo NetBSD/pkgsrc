@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/01/28 15:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/28 15:39:56 wiz Exp $
 
 DISTNAME=	libffi-3.2.1
 PKGREVISION=	2
@@ -10,8 +10,6 @@ HOMEPAGE=	https://www.sourceware.org/libffi/
 COMMENT=	Foreign function interface
 LICENSE=	mit
 
-BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
-
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
@@ -19,8 +17,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--includedir=${PREFIX}/include
 PKGCONFIG_OVERRIDE+=	libffi.pc.in
 INFO_FILES=		yes
-
-TEST_TARGET=		check
 
 .include "../../mk/compiler.mk"
 # The Compaq C frontend groks .s, but not .S. Assemble osf.S directly w/ as(1).
