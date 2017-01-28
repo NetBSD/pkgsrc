@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.468 2017/01/28 10:14:53 morr Exp $
+$NetBSD: CHANGES-2017,v 1.469 2017/01/28 11:15:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache24 to 2.4.25nb2 [ryoon 2017-01-28]
 	Updated filesystems/tahoe-lafs to 1.12.1 [riastradh 2017-01-28]
 	Updated www/wordpress to 4.7.2 [morr 2017-01-28]
+	Updated security/py-cryptography to 1.7.2nb1 [wiz 2017-01-28]
