@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/11/18 12:41:34 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/01/29 07:54:19 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/gio2.${RUBY_DLEXT}
@@ -27,13 +27,12 @@ ${GEM_LIBDIR}/lib/gio2/resources.rb
 ${GEM_LIBDIR}/lib/gio2/settings-schema-source.rb
 ${GEM_LIBDIR}/lib/gio2/settings.rb
 ${GEM_LIBDIR}/lib/gio2/simple-action.rb
+${GEM_LIBDIR}/test/fixture/Rakefile
 ${GEM_LIBDIR}/test/fixture/content-type/x-content/unix-software/autorun.sh
 ${GEM_LIBDIR}/test/fixture/resource/Rakefile
 ${GEM_LIBDIR}/test/fixture/resource/logo.png
 ${GEM_LIBDIR}/test/fixture/resource/ruby-gio2.gresource.xml
-${GEM_LIBDIR}/test/fixture/schema/settings/Rakefile
-${GEM_LIBDIR}/test/fixture/schema/settings/jp.ruby-gnome2.test.value.gschema.xml
-${GEM_LIBDIR}/test/fixture/schema/source/Rakefile
+${GEM_LIBDIR}/test/fixture/schema/default/jp.ruby-gnome2.test.settings.gschema.xml
 ${GEM_LIBDIR}/test/fixture/schema/source/jp.ruby-gnome2.test.source.gschema.xml
 ${GEM_LIBDIR}/test/gio2-test-utils.rb
 ${GEM_LIBDIR}/test/gio2-test-utils/fixture.rb
