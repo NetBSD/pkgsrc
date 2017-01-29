@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.478 2017/01/29 04:30:08 mef Exp $
+$NetBSD: CHANGES-2017,v 1.479 2017/01/29 05:20:18 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -599,3 +599,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cross/avrdude to 6.3 [mef 2017-01-29]
 	Updated security/stunnel to 5.40 [schmonz 2017-01-29]
 	Updated cross/avr-libc to 2.0.0 [mef 2017-01-29]
+	Updated cross/avr-gdb to 7.12.1 [mef 2017-01-29]
