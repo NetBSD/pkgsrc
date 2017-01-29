@@ -1,0 +1,30 @@
+$NetBSD: patch-Makefile,v 1.1 2017/01/29 11:57:03 adam Exp $
+
+Libtoolize.
+
+--- Makefile.orig	2017-01-29 09:14:56.000000000 +0000
++++ Makefile
+@@ -1,7 +1,7 @@
+ -include config.mk
+ 
+ STATICLIB=libimagequant.a
+-SHAREDLIB=libimagequant.$(SOLIBSUFFIX)
++SHAREDLIB=libimagequant.la
+ SOVER=0
+ 
+ JNILIB=libimagequant.jnilib
+@@ -38,11 +38,11 @@ $(STATICLIB): $(OBJS)
+ 	$(AR) $(ARFLAGS) $@ $^
+ 
+ $(SHAREDOBJS):
+-	$(CC) -fPIC $(CFLAGS) -c $(@:.lo=.c) -o $@
++	${LIBTOOL} --mode=compile $(CC) -fPIC $(CFLAGS) -c $(@:.lo=.c) -o $@
+ 
+ $(SHAREDLIB): $(SHAREDOBJS)
+-	$(CC) -shared -Wl,-soname,$(SHAREDLIB).$(SOVER) -o $(SHAREDLIB).$(SOVER) $^ $(LDFLAGS)
+-	ln -fs $(SHAREDLIB).$(SOVER) $(SHAREDLIB)
++	${LIBTOOL} --mode=link $(CC) -o $(SHAREDLIB) $^ $(LDFLAGS) \
++		-rpath ${PREFIX}/lib -version-info $(subst .,:,$(VERSION))
+ 
+ $(OBJS): $(wildcard *.h) config.mk
+ 
