@@ -21,12 +21,12 @@ func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) 
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: ~/fname.mk:3: Replacing \".\" with \".  \".\n"+
-		"AUTOFIX: ~/fname.mk:4: Replacing \".\" with \".    \".\n"+
-		"AUTOFIX: ~/fname.mk:5: Replacing \".\" with \".    \".\n"+
-		"AUTOFIX: ~/fname.mk:6: Replacing \".\" with \".  \".\n"+
-		"AUTOFIX: ~/fname.mk: Has been auto-fixed. Please re-run pkglint.\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/fname.mk:3: Replacing \".\" with \".  \".",
+		"AUTOFIX: ~/fname.mk:4: Replacing \".\" with \".    \".",
+		"AUTOFIX: ~/fname.mk:5: Replacing \".\" with \".    \".",
+		"AUTOFIX: ~/fname.mk:6: Replacing \".\" with \".  \".",
+		"AUTOFIX: ~/fname.mk: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(s.LoadTmpFile("fname.mk"), equals, ""+
 		"# $"+"NetBSD$\n"+
 		".if defined(A)\n"+
@@ -38,6 +38,7 @@ func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) 
 }
 
 func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
+	s.Init(c)
 	mklines := s.NewMkLines("Makefile",
 		mkrcsid,
 		"",
@@ -46,17 +47,19 @@ func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "WARN: Makefile:3: Unusual target \"echo\".\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:3: Unusual target \"echo\".")
 }
 
 func (s *Suite) Test_MkLineChecker_checkInclude__Makefile(c *check.C) {
+	s.Init(c)
 	mkline := NewMkLine(NewLine("Makefile", 2, ".include \"../../other/package/Makefile\"", nil))
 
 	MkLineChecker{mkline}.checkInclude()
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: Makefile:2: \"/other/package/Makefile\" does not exist.\n"+
-		"ERROR: Makefile:2: Other Makefiles must not be included directly.\n")
+	s.CheckOutputLines(
+		"ERROR: Makefile:2: \"/other/package/Makefile\" does not exist.",
+		"ERROR: Makefile:2: Other Makefiles must not be included directly.")
 }
 
 func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
@@ -71,9 +74,9 @@ func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.\n"+
-		"WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.",
+		"WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.")
 }
 
 func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
@@ -105,28 +108,28 @@ func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: ~/Makefile:6: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
-		"NOTE: ~/Makefile:7: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
-		"NOTE: ~/Makefile:12: This variable value should be aligned to column 17.\n"+
-		"NOTE: ~/Makefile:15: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
-		"NOTE: ~/Makefile:16: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
-		"NOTE: ~/Makefile:17: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
-		"NOTE: ~/Makefile:18: This variable value should be aligned with tabs, not spaces, to column 17.\n")
+	s.CheckOutputLines(
+		"NOTE: ~/Makefile:6: This variable value should be aligned with tabs, not spaces, to column 9.",
+		"NOTE: ~/Makefile:7: This variable value should be aligned with tabs, not spaces, to column 9.",
+		"NOTE: ~/Makefile:12: This variable value should be aligned to column 17.",
+		"NOTE: ~/Makefile:15: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: ~/Makefile:16: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: ~/Makefile:17: This variable value should be aligned with tabs, not spaces, to column 17.",
+		"NOTE: ~/Makefile:18: This variable value should be aligned with tabs, not spaces, to column 17.")
 
 	s.UseCommandLine("-Wspace", "--autofix")
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: ~/Makefile:6: Replacing \"VAR= \" with \"VAR=\\t\".\n"+
-		"AUTOFIX: ~/Makefile:7: Replacing \"VAR=  \" with \"VAR=\\t\".\n"+
-		"AUTOFIX: ~/Makefile:12: Replacing \"BLOCK=\\t\" with \"BLOCK=\\t\\t\".\n"+
-		"AUTOFIX: ~/Makefile:15: Replacing \"GRP_A= \" with \"GRP_A=\\t\\t\".\n"+
-		"AUTOFIX: ~/Makefile:16: Replacing \"GRP_AA= \" with \"GRP_AA=\\t\\t\".\n"+
-		"AUTOFIX: ~/Makefile:17: Replacing \"GRP_AAA= \" with \"GRP_AAA=\\t\".\n"+
-		"AUTOFIX: ~/Makefile:18: Replacing \"GRP_AAAA= \" with \"GRP_AAAA=\\t\".\n"+
-		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:6: Replacing \"VAR= \" with \"VAR=\\t\".",
+		"AUTOFIX: ~/Makefile:7: Replacing \"VAR=  \" with \"VAR=\\t\".",
+		"AUTOFIX: ~/Makefile:12: Replacing \"BLOCK=\\t\" with \"BLOCK=\\t\\t\".",
+		"AUTOFIX: ~/Makefile:15: Replacing \"GRP_A= \" with \"GRP_A=\\t\\t\".",
+		"AUTOFIX: ~/Makefile:16: Replacing \"GRP_AA= \" with \"GRP_AA=\\t\\t\".",
+		"AUTOFIX: ~/Makefile:17: Replacing \"GRP_AAA= \" with \"GRP_AAA=\\t\".",
+		"AUTOFIX: ~/Makefile:18: Replacing \"GRP_AAAA= \" with \"GRP_AAAA=\\t\".",
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
 		"# $"+"NetBSD$\n"+
 		"\n"+
@@ -162,7 +165,8 @@ func (s *Suite) Test_MkLines__variable_alignment_space_and_tab(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "NOTE: Makefile:3: Variable values should be aligned with tabs, not spaces.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:3: Variable values should be aligned with tabs, not spaces.")
 }
 
 func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
@@ -181,10 +185,10 @@ func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: audio/squeezeboxserver/Makefile:3: Variable names starting with an underscore (_list_) are reserved for internal pkgsrc use.\n"+
-		"WARN: audio/squeezeboxserver/Makefile:3: Variable names starting with an underscore (_dir_) are reserved for internal pkgsrc use.\n"+
-		"WARN: audio/squeezeboxserver/Makefile:4: The exitcode of the left-hand-side command of the pipe operator is ignored.\n")
+	s.CheckOutputLines(
+		"WARN: audio/squeezeboxserver/Makefile:3: Variable names starting with an underscore (_list_) are reserved for internal pkgsrc use.",
+		"WARN: audio/squeezeboxserver/Makefile:3: Variable names starting with an underscore (_dir_) are reserved for internal pkgsrc use.",
+		"WARN: audio/squeezeboxserver/Makefile:4: The exitcode of the left-hand-side command of the pipe operator is ignored.")
 }
 
 func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
@@ -213,17 +217,17 @@ func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 		"qore-version=\tqore --short-version | ${SED} -e s/-.*//",
 		"PLIST_SUBST+=\tQORE_VERSION=\"${qore-version:sh}\"")
 
-	vars2 := mklines.mklines[1].determineUsedVariables()
+	vars2 := mklines.mklines[1].DetermineUsedVariables()
 
 	c.Check(vars2, deepEquals, []string{"SED"})
 
-	vars3 := mklines.mklines[2].determineUsedVariables()
+	vars3 := mklines.mklines[2].DetermineUsedVariables()
 
 	c.Check(vars3, deepEquals, []string{"qore-version"})
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "") // No warnings about defined but not used or vice versa
+	s.CheckOutputEmpty() // No warnings about defined but not used or vice versa
 }
 
 func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
@@ -237,7 +241,7 @@ func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "") // No warnings about defined but not used or vice versa
+	s.CheckOutputEmpty() // No warnings about defined but not used or vice versa
 }
 
 func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
@@ -260,6 +264,7 @@ func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
 
 // PR 46570
 func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("Makefile",
 		mkrcsid,
@@ -270,7 +275,8 @@ func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "NOTE: Makefile:4: Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:4: Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.")
 }
 
 // PR 46570, item "15. net/uucp/Makefile has a make loop"
@@ -288,8 +294,8 @@ func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 	mklines.Check()
 
 	// No warning about UUCP_${var} being used but not defined.
-	c.Check(s.Output(), equals, ""+
-		"WARN: net/uucp/Makefile:5: Unknown shell command \"${ECHO}\".\n")
+	s.CheckOutputLines(
+		"WARN: net/uucp/Makefile:5: Unknown shell command \"${ECHO}\".")
 }
 
 func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
@@ -301,9 +307,9 @@ func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: converters/chef/Makefile:2: Unknown shell command \"tr\".\n"+
-		"WARN: converters/chef/Makefile:2: The list variable DISTFILES should not be embedded in a word.\n")
+	s.CheckOutputLines(
+		"WARN: converters/chef/Makefile:2: Unknown shell command \"tr\".",
+		"WARN: converters/chef/Makefile:2: The list variable DISTFILES should not be embedded in a word.")
 }
 
 func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *check.C) {
@@ -321,10 +327,10 @@ func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *chec
 
 	// No warning about an unknown shell command in line 3,
 	// since that line depends on OPSYS.
-	c.Check(s.Output(), equals, ""+
-		"WARN: games/heretic2-demo/Makefile:3: The variable TOOLS_PLATFORM.gtar may not be set by any package.\n"+
-		"WARN: games/heretic2-demo/Makefile:5: The variable TOOLS_PLATFORM.gtar may not be set by any package.\n"+
-		"WARN: games/heretic2-demo/Makefile:5: Unknown shell command \"/usr/bin/bsdtar\".\n")
+	s.CheckOutputLines(
+		"WARN: games/heretic2-demo/Makefile:3: The variable TOOLS_PLATFORM.gtar may not be set by any package.",
+		"WARN: games/heretic2-demo/Makefile:5: The variable TOOLS_PLATFORM.gtar may not be set by any package.",
+		"WARN: games/heretic2-demo/Makefile:5: Unknown shell command \"/usr/bin/bsdtar\".")
 }
 
 func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
@@ -336,24 +342,24 @@ func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 		"# used by sysutils/mc",
 	).checkForUsedComment("sysutils/mc")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	s.NewMkLines("Makefile.common").checkForUsedComment("category/package")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	s.NewMkLines("Makefile.common",
 		mkrcsid,
 	).checkForUsedComment("category/package")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	s.NewMkLines("Makefile.common",
 		mkrcsid,
 		"",
 	).checkForUsedComment("category/package")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	s.NewMkLines("Makefile.common",
 		mkrcsid,
@@ -361,9 +367,9 @@ func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 		"VARNAME=\tvalue",
 	).checkForUsedComment("category/package")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile.common:2: Please add a line \"# used by category/package\" here.\n"+
-		"AUTOFIX: Makefile.common:2: Inserting a line \"# used by category/package\" before this line.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile.common:2: Please add a line \"# used by category/package\" here.",
+		"AUTOFIX: Makefile.common:2: Inserting a line \"# used by category/package\" before this line.")
 
 	s.NewMkLines("Makefile.common",
 		mkrcsid,
@@ -371,9 +377,9 @@ func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
 		"#",
 	).checkForUsedComment("category/package")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile.common:3: Please add a line \"# used by category/package\" here.\n"+
-		"AUTOFIX: Makefile.common:3: Inserting a line \"# used by category/package\" before this line.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile.common:3: Please add a line \"# used by category/package\" here.",
+		"AUTOFIX: Makefile.common:3: Inserting a line \"# used by category/package\" before this line.")
 }
 
 func (s *Suite) Test_MkLines_DetermineUsedVariables__simple(c *check.C) {
@@ -413,7 +419,8 @@ func (s *Suite) Test_MkLines_PrivateTool_Undefined(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "WARN: fname:3: Unknown shell command \"md5sum\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: Unknown shell command \"md5sum\".")
 }
 
 func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
@@ -428,7 +435,7 @@ func (s *Suite) Test_MkLines_PrivateTool_Defined(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLines_Check_indentation(c *check.C) {
