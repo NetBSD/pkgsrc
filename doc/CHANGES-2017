@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.477 2017/01/29 04:18:28 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.478 2017/01/29 04:30:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -598,3 +598,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/py-simpy to 3.0.10 [mef 2017-01-28]
 	Updated cross/avrdude to 6.3 [mef 2017-01-29]
 	Updated security/stunnel to 5.40 [schmonz 2017-01-29]
+	Updated cross/avr-libc to 2.0.0 [mef 2017-01-29]
