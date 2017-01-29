@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2014/10/07 15:10:29 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/01/29 02:24:54 mef Exp $
 bin/avrdude
+include/libavrdude.h
 info/avrdude.info
+lib/libavrdude.la
 man/man1/avrdude.1
 share/doc/${DISTNAME}/avrdude-html/avrdude.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_1.html
