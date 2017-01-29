@@ -47,7 +47,8 @@ func (s *Suite) Test_Pkglint_CheckDirent__outside(c *check.C) {
 
 	new(Pkglint).CheckDirent(s.tmpdir)
 
-	c.Check(s.Output(), equals, "ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".\n")
+	s.CheckOutputLines(
+		"ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".")
 }
 
 func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
@@ -61,19 +62,23 @@ func (s *Suite) Test_Pkglint_CheckDirent(c *check.C) {
 
 	pkglint.CheckDirent(s.tmpdir)
 
-	c.Check(s.Output(), equals, "ERROR: ~/Makefile: Must not be empty.\n")
+	s.CheckOutputLines(
+		"ERROR: ~/Makefile: Must not be empty.")
 
 	pkglint.CheckDirent(s.tmpdir + "/category")
 
-	c.Check(s.Output(), equals, "ERROR: ~/category/Makefile: Must not be empty.\n")
+	s.CheckOutputLines(
+		"ERROR: ~/category/Makefile: Must not be empty.")
 
 	pkglint.CheckDirent(s.tmpdir + "/category/package")
 
-	c.Check(s.Output(), equals, "ERROR: ~/category/package/Makefile: Must not be empty.\n")
+	s.CheckOutputLines(
+		"ERROR: ~/category/package/Makefile: Must not be empty.")
 
 	pkglint.CheckDirent(s.tmpdir + "/category/package/nonexistent")
 
-	c.Check(s.Output(), equals, "ERROR: ~/category/package/nonexistent: No such file or directory.\n")
+	s.CheckOutputLines(
+		"ERROR: ~/category/package/nonexistent: No such file or directory.")
 }
 
 func (s *Suite) Test_resolveVariableRefs__circular_reference(c *check.C) {
@@ -111,6 +116,7 @@ func (s *Suite) Test_resolveVariableRefs__special_chars(c *check.C) {
 }
 
 func (s *Suite) Test_ChecklinesDescr(c *check.C) {
+	s.Init(c)
 	lines := s.NewLines("DESCR",
 		strings.Repeat("X", 90),
 		"", "", "", "", "", "", "", "", "10",
@@ -120,22 +126,25 @@ func (s *Suite) Test_ChecklinesDescr(c *check.C) {
 
 	ChecklinesDescr(lines)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: DESCR:1: Line too long (should be no more than 80 characters).\n"+
-		"NOTE: DESCR:11: Variables are not expanded in the DESCR file.\n"+
-		"WARN: DESCR:25: File too long (should be no more than 24 lines).\n")
+	s.CheckOutputLines(
+		"WARN: DESCR:1: Line too long (should be no more than 80 characters).",
+		"NOTE: DESCR:11: Variables are not expanded in the DESCR file.",
+		"WARN: DESCR:25: File too long (should be no more than 24 lines).")
 }
 
 func (s *Suite) Test_ChecklinesMessage__short(c *check.C) {
+	s.Init(c)
 	lines := s.NewLines("MESSAGE",
 		"one line")
 
 	ChecklinesMessage(lines)
 
-	c.Check(s.Output(), equals, "WARN: MESSAGE:1: File too short.\n")
+	s.CheckOutputLines(
+		"WARN: MESSAGE:1: File too short.")
 }
 
 func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
+	s.Init(c)
 	lines := s.NewLines("MESSAGE",
 		"1",
 		"2",
@@ -145,10 +154,10 @@ func (s *Suite) Test_ChecklinesMessage__malformed(c *check.C) {
 
 	ChecklinesMessage(lines)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: MESSAGE:1: Expected a line of exactly 75 \"=\" characters.\n"+
-		"ERROR: MESSAGE:2: Expected \"$"+"NetBSD$\".\n"+
-		"WARN: MESSAGE:5: Expected a line of exactly 75 \"=\" characters.\n")
+	s.CheckOutputLines(
+		"WARN: MESSAGE:1: Expected a line of exactly 75 \"=\" characters.",
+		"ERROR: MESSAGE:2: Expected \"$"+"NetBSD$\".",
+		"WARN: MESSAGE:5: Expected a line of exactly 75 \"=\" characters.")
 }
 
 func (s *Suite) Test_GlobalData_Latest(c *check.C) {
@@ -158,7 +167,8 @@ func (s *Suite) Test_GlobalData_Latest(c *check.C) {
 	latest1 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest1, equals, "")
-	c.Check(s.Output(), equals, "ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".\n")
+	s.CheckOutputLines(
+		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".")
 
 	s.CreateTmpFile("lang/Makefile", "")
 	G.globalData.latest = nil
@@ -166,7 +176,8 @@ func (s *Suite) Test_GlobalData_Latest(c *check.C) {
 	latest2 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest2, equals, "")
-	c.Check(s.Output(), equals, "ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".\n")
+	s.CheckOutputLines(
+		"ERROR: Cannot find latest version of \"^python[0-9]+$\" in \"~\".")
 
 	s.CreateTmpFile("lang/python27/Makefile", "")
 	G.globalData.latest = nil
@@ -174,7 +185,7 @@ func (s *Suite) Test_GlobalData_Latest(c *check.C) {
 	latest3 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest3, equals, "../../lang/python27")
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	s.CreateTmpFile("lang/python35/Makefile", "")
 	G.globalData.latest = nil
@@ -182,5 +193,5 @@ func (s *Suite) Test_GlobalData_Latest(c *check.C) {
 	latest4 := G.globalData.Latest("lang", `^python[0-9]+$`, "../../lang/$0")
 
 	c.Check(latest4, equals, "../../lang/python35")
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
