@@ -1,0 +1,66 @@
+$NetBSD: patch-configure,v 1.1 2017/01/29 11:57:03 adam Exp $
+
+Remove SSE auto-detection, it is not portable.
+Remove unwanted compiler flags.
+
+--- configure.orig	2016-12-23 23:22:46.000000000 +0000
++++ configure
+@@ -125,7 +124,7 @@ cflags "-std=c99 -I."
+ 
+ # DEBUG
+ if [ -z "$DEBUG" ]; then
+-    cflags "-O3 -DNDEBUG"
++    cflags "-DNDEBUG"
+     status "Debug" "no"
+ else
+     cflags "-O1 -g"
+@@ -133,13 +132,6 @@ else
+ fi
+ 
+ # SSE
+-if [ "$SSE" = 'auto' ]; then
+-    if [[ "$(uname -m)" =~ (amd|x86_)64 ||
+-          "$(grep -E -m1 "^flags" /proc/cpuinfo)" =~ "sse" ]]; then
+-        SSE=1
+-    fi
+-fi
+-
+ if [ "$SSE" -eq 1 ]; then
+     status "SSE" "yes"
+     cflags "-DUSE_SSE=1"
+@@ -160,15 +152,9 @@ if [ -n "$OPENMP" ]; then
+     else
+         OPENMPFLAGS="-fopenmp"
+     fi
+-    if [[ "$("$CC" -xc -E $OPENMPFLAGS <(echo "#ifdef _OPENMP
+-           #include <omp.h>
+-           #endif") 2>&1)" =~ "omp_get_thread_num" ]]; then
+         cflags "$OPENMPFLAGS"
+         lflags "$OPENMPFLAGS"
+         status "OpenMP" "yes"
+-    else
+-        error "OpenMP" "not supported by compiler (please install a compiler that supports OpenMP (e.g. gcc) and specify it with the CC= argument)"
+-    fi
+ else
+     # silence warnings about omp pragmas
+     cflags "-Wno-unknown-pragmas"
+@@ -177,19 +163,9 @@ else
+ fi
+ 
+ # Cocoa
+-if [[ "$OSTYPE" =~ "darwin" ]]; then
+-    cflags "-mmacosx-version-min=10.6"
+-    lflags "-mmacosx-version-min=10.6"
+-fi
+ 
+ if [[ "$OSTYPE" =~ "darwin" ]]; then
+     SOLIBSUFFIX=dylib
+-
+-    # Search Developer SDK paths, since Apple seems to have dropped the standard Unixy ones
+-    XCODE_CMD="xcode-select"
+-    XCODE_PATH=$($XCODE_CMD -p)
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib")
+-    DIRS+=("$XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include $XCODE_PATH/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib")
+ else
+     SOLIBSUFFIX=so
+ fi
