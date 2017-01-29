@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.480 2017/01/29 05:31:39 mef Exp $
+$NetBSD: CHANGES-2017,v 1.481 2017/01/29 05:54:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -601,3 +601,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cross/avr-libc to 2.0.0 [mef 2017-01-29]
 	Updated cross/avr-gdb to 7.12.1 [mef 2017-01-29]
 	Updated shells/zsh to 5.3.1 [mef 2017-01-29]
+	Updated x11/xfstt to 1.9.3 [mef 2017-01-29]
