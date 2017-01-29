@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/04/16 17:41:04 tsutsui Exp $
+# $NetBSD: Makefile,v 1.26 2017/01/29 07:54:20 tsutsui Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
@@ -12,6 +12,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-cairo-gobject>=${VERSION}:../../graphics/ruby-gnome2-cairo-gobject
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter>=${VERSION}:../../graphics/ruby-gnome2-clutter
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter-gdk>=${VERSION}:../../graphics/ruby-gnome2-clutter-gdk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter-gtk>=${VERSION}:../../graphics/ruby-gnome2-clutter-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdk3>=${VERSION}:../../graphics/ruby-gnome2-gdk3
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
