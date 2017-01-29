@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.488 2017/01/29 12:48:09 adam Exp $
+$NetBSD: CHANGES-2017,v 1.489 2017/01/29 23:24:32 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -633,3 +633,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/cvs-fast-export to 1.40 [kim 2017-01-29]
 	Added graphics/libimagequant version 2.8.2 [adam 2017-01-29]
 	Updated graphics/py-Pillow to 4.0.0 [adam 2017-01-29]
+	Updated multimedia/gstreamer1 to 1.10.0nb1 [maya 2017-01-29]
