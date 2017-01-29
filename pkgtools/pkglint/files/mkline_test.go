@@ -75,10 +75,10 @@ func (s *Suite) Test_VaralignBlock_Check__reduce_indentation(c *check.C) {
 	}
 	varalign.Finish()
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: file.mk:1: Variable values should be aligned with tabs, not spaces.\n"+
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
-		"NOTE: file.mk:3: This variable value should be aligned to column 9.\n")
+	s.CheckOutputLines(
+		"NOTE: file.mk:1: Variable values should be aligned with tabs, not spaces.",
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 9.",
+		"NOTE: file.mk:3: This variable value should be aligned to column 9.")
 }
 
 func (s *Suite) Test_VaralignBlock_Check_longest_line_no_space(c *check.C) {
@@ -96,11 +96,11 @@ func (s *Suite) Test_VaralignBlock_Check_longest_line_no_space(c *check.C) {
 	}
 	varalign.Finish()
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
-		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
-		"NOTE: file.mk:4: This variable value should be aligned to column 33.\n")
+	s.CheckOutputLines(
+		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.",
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.",
+		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.",
+		"NOTE: file.mk:4: This variable value should be aligned to column 33.")
 }
 
 func (s *Suite) Test_VaralignBlock_Check_only_spaces(c *check.C) {
@@ -118,11 +118,11 @@ func (s *Suite) Test_VaralignBlock_Check_only_spaces(c *check.C) {
 	}
 	varalign.Finish()
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
-		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
-		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
-		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33.\n")
+	s.CheckOutputLines(
+		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.",
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.",
+		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.",
+		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33.")
 }
 
 func (s *Suite) Test_NewMkLine(c *check.C) {
@@ -180,7 +180,8 @@ func (s *Suite) Test_NewMkLine(c *check.C) {
 	c.Check(ln[9].Varcanon(), equals, "VARNAME")
 	c.Check(ln[9].Varparam(), equals, "")
 
-	c.Check(s.Output(), equals, "WARN: test.mk:9: Space before colon in dependency line.\n")
+	s.CheckOutputLines(
+		"WARN: test.mk:9: Space before colon in dependency line.")
 }
 
 func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
@@ -195,19 +196,19 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 
 	CheckfileMk(fname)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: ~/Makefile:2: Unnecessary space after variable name \"VARNAME\".\n"+
-		"WARN: ~/Makefile:4: Unnecessary space after variable name \"VARNAME+\".\n")
+	s.CheckOutputLines(
+		"WARN: ~/Makefile:2: Unnecessary space after variable name \"VARNAME\".",
+		"WARN: ~/Makefile:4: Unnecessary space after variable name \"VARNAME+\".")
 
 	s.UseCommandLine("-Wspace", "--autofix")
 
 	CheckfileMk(fname)
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: ~/Makefile:2: Replacing \"VARNAME +=\" with \"VARNAME+=\".\n"+
-		"AUTOFIX: ~/Makefile:4: Replacing \"VARNAME+ +=\" with \"VARNAME++=\".\n"+
-		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n"+
-		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing \"VARNAME +=\" with \"VARNAME+=\".",
+		"AUTOFIX: ~/Makefile:4: Replacing \"VARNAME+ +=\" with \"VARNAME++=\".",
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.",
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
 		mkrcsid+"\n"+
 		"VARNAME+=\t${VARNAME}\n"+
@@ -216,16 +217,16 @@ func (s *Suite) Test_NewMkLine__autofix_space_after_varname(c *check.C) {
 		"pkgbase := pkglint\n")
 }
 
-func (s *Suite) Test_MkLine_getVariableType_varparam(c *check.C) {
+func (s *Suite) Test_MkLine_VariableType_varparam(c *check.C) {
 	mkline := NewMkLine(NewLine("fname", 1, "# dummy", nil))
 	G.globalData.InitVartypes()
 
-	t1 := mkline.getVariableType("FONT_DIRS")
+	t1 := mkline.VariableType("FONT_DIRS")
 
 	c.Assert(t1, check.NotNil)
 	c.Check(t1.String(), equals, "ShellList of Pathmask")
 
-	t2 := mkline.getVariableType("FONT_DIRS.ttf")
+	t2 := mkline.VariableType("FONT_DIRS.ttf")
 
 	c.Assert(t2, check.NotNil)
 	c.Check(t2.String(), equals, "ShellList of Pathmask")
@@ -234,7 +235,7 @@ func (s *Suite) Test_MkLine_getVariableType_varparam(c *check.C) {
 func (s *Suite) Test_VarUseContext_String(c *check.C) {
 	G.globalData.InitVartypes()
 	mkline := NewMkLine(NewLine("fname", 1, "# dummy", nil))
-	vartype := mkline.getVariableType("PKGNAME")
+	vartype := mkline.VariableType("PKGNAME")
 	vuc := &VarUseContext{vartype, vucTimeUnknown, vucQuotBackt, false}
 
 	c.Check(vuc.String(), equals, "(PkgName time:unknown quoting:backt wordpart:false)")
@@ -244,6 +245,7 @@ func (s *Suite) Test_VarUseContext_String(c *check.C) {
 // it is escaped by a backslash. In shell commands, on the other hand, it
 // is interpreted literally.
 func (s *Suite) Test_NewMkLine_numbersign(c *check.C) {
+	s.Init(c)
 	mklineVarassignEscaped := NewMkLine(NewLine("fname", 1, "SED_CMD=\t's,\\#,hash,g'", nil))
 
 	c.Check(mklineVarassignEscaped.Varname(), equals, "SED_CMD")
@@ -257,18 +259,21 @@ func (s *Suite) Test_NewMkLine_numbersign(c *check.C) {
 	mklineCommandUnescaped := NewMkLine(NewLine("fname", 1, "\t# $ sha1 patches/patch-ac", nil))
 
 	c.Check(mklineCommandUnescaped.Shellcmd(), equals, "# $ sha1 patches/patch-ac")
-	c.Check(s.Output(), equals, "") // No warning about parsing the lonely dollar sign.
+	s.CheckOutputEmpty() // No warning about parsing the lonely dollar sign.
 
 	mklineVarassignUnescaped := NewMkLine(NewLine("fname", 1, "SED_CMD=\t's,#,hash,'", nil))
 
 	c.Check(mklineVarassignUnescaped.Value(), equals, "'s,")
-	c.Check(s.Output(), equals, "WARN: fname:1: The # character starts a comment.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The # character starts a comment.")
 }
 
 func (s *Suite) Test_NewMkLine_leading_space(c *check.C) {
+	s.Init(c)
 	_ = NewMkLine(NewLine("rubyversion.mk", 427, " _RUBYVER=\t2.15", nil))
 
-	c.Check(s.Output(), equals, "WARN: rubyversion.mk:427: Makefile lines should not start with space characters.\n")
+	s.CheckOutputLines(
+		"WARN: rubyversion.mk:427: Makefile lines should not start with space characters.")
 }
 
 func (s *Suite) Test_MkLines_Check__extra(c *check.C) {
@@ -290,13 +295,13 @@ func (s *Suite) Test_MkLines_Check__extra(c *check.C) {
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: options.mk:3: The values for PYTHON_VERSIONS_ACCEPTED should be in decreasing order.\n"+
-		"NOTE: options.mk:4: Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.\n"+
-		"NOTE: options.mk:5: Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".\n"+
-		"WARN: options.mk:7: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".\n"+
-		"WARN: options.mk:10: Building the package should take place entirely inside ${WRKSRC}, not \"${WRKSRC}/..\".\n"+
-		"NOTE: options.mk:10: You can use \"../build\" instead of \"${WRKSRC}/../build\".\n")
+	s.CheckOutputLines(
+		"WARN: options.mk:3: The values for PYTHON_VERSIONS_ACCEPTED should be in decreasing order.",
+		"NOTE: options.mk:4: Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.",
+		"NOTE: options.mk:5: Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".",
+		"WARN: options.mk:7: Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".",
+		"WARN: options.mk:10: Building the package should take place entirely inside ${WRKSRC}, not \"${WRKSRC}/..\".",
+		"NOTE: options.mk:10: You can use \"../build\" instead of \"${WRKSRC}/../build\".")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__unknown_rhs(c *check.C) {
@@ -304,7 +309,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__unknown_rhs(c *check.C) {
 	G.globalData.InitVartypes()
 
 	vuc := &VarUseContext{G.globalData.vartypes["PKGNAME"], vucTimeParse, vucQuotUnknown, false}
-	nq := mkline.variableNeedsQuoting("UNKNOWN", nil, vuc)
+	nq := mkline.VariableNeedsQuoting("UNKNOWN", nil, vuc)
 
 	c.Check(nq, equals, nqDontKnow)
 }
@@ -317,13 +322,13 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__append_URL_to_list_of_URLs(c *
 	mkline := NewMkLine(NewLine("Makefile", 95, "MASTER_SITES=\t${HOMEPAGE}", nil))
 
 	vuc := &VarUseContext{G.globalData.vartypes["MASTER_SITES"], vucTimeRun, vucQuotPlain, false}
-	nq := mkline.variableNeedsQuoting("HOMEPAGE", G.globalData.vartypes["HOMEPAGE"], vuc)
+	nq := mkline.VariableNeedsQuoting("HOMEPAGE", G.globalData.vartypes["HOMEPAGE"], vuc)
 
 	c.Check(nq, equals, nqNo)
 
 	MkLineChecker{mkline}.checkVarassign()
 
-	c.Check(s.Output(), equals, "") // Up to pkglint 5.3.6, it warned about a missing :Q here, which was wrong.
+	s.CheckOutputEmpty() // Up to pkglint 5.3.6, it warned about a missing :Q here, which was wrong.
 }
 
 // Assigning lists to lists is ok.
@@ -336,7 +341,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__append_list_to_list(c *check.C
 
 	MkLineChecker{mkline}.checkVarassign()
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__eval_shell(c *check.C) {
@@ -347,9 +352,9 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__eval_shell(c *check.C) {
 
 	MkLineChecker{mkline}.checkVarassign()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: builtin.mk:3: PKG_ADMIN should not be evaluated at load time.\n"+
-		"NOTE: builtin.mk:3: The :Q operator isn't necessary for ${BUILTIN_PKG.Xfixes} here.\n")
+	s.CheckOutputLines(
+		"WARN: builtin.mk:3: PKG_ADMIN should not be evaluated at load time.",
+		"NOTE: builtin.mk:3: The :Q operator isn't necessary for ${BUILTIN_PKG.Xfixes} here.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_single_quotes(c *check.C) {
@@ -360,7 +365,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_single_quotes(c *ch
 
 	MkLineChecker{mkline}.checkVarassign()
 
-	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use ${INSTALL:Q} instead of ${INSTALL} and make sure the variable appears outside of any quoting characters.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:3: Please use ${INSTALL:Q} instead of ${INSTALL} and make sure the variable appears outside of any quoting characters.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_command(c *check.C) {
@@ -374,11 +380,11 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_command(c *check.C)
 		mkrcsid,
 		"GENERATE_PLIST= cd ${DESTDIR}${PREFIX}; ${FIND} * \\( -type f -or -type l \\) | ${SORT};")
 
-	G.Mk.determineDefinedVariables()
+	G.Mk.DetermineDefinedVariables()
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:2: The exitcode of the left-hand-side command of the pipe operator is ignored.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:2: The exitcode of the left-hand-side command of the pipe operator is ignored.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__word_as_part_of_word(c *check.C) {
@@ -391,7 +397,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__word_as_part_of_word(c *check.
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 // As an argument to ${ECHO}, the :Q modifier should be used, but pkglint
@@ -414,9 +420,9 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_as_command_argument(c 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 	MkLineChecker{G.Mk.mklines[2]}.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:2: The exitcode of the left-hand-side command of the pipe operator is ignored.\n"+
-		"WARN: Makefile:3: The exitcode of the left-hand-side command of the pipe operator is ignored.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:2: The exitcode of the left-hand-side command of the pipe operator is ignored.",
+		"WARN: Makefile:3: The exitcode of the left-hand-side command of the pipe operator is ignored.")
 }
 
 // Based on mail/mailfront/Makefile.
@@ -430,7 +436,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__URL_as_part_of_word_in_list(c 
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 
-	c.Check(s.Output(), equals, "") // Don't suggest to use ${HOMEPAGE:Q}.
+	s.CheckOutputEmpty() // Don't suggest to use ${HOMEPAGE:Q}.
 }
 
 // Pkglint currently does not parse $$(subshell) commands very well. As
@@ -452,7 +458,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_subshell(c *check.C
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 	MkLineChecker{G.Mk.mklines[2]}.Check()
 
-	c.Check(s.Output(), equals, "WARN: xpi.mk:2: Invoking subshells via $(...) is not portable enough.\n") // Don't suggest to use ${AWK:Q}.
+	s.CheckOutputLines(
+		"WARN: xpi.mk:2: Invoking subshells via $(...) is not portable enough.") // Don't suggest to use ${AWK:Q}.
 }
 
 // LDFLAGS (and even more so CPPFLAGS and CFLAGS) may contain special
@@ -470,7 +477,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__LDFLAGS_in_single_quotes(c *ch
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 	MkLineChecker{G.Mk.mklines[2]}.Check()
 
-	c.Check(s.Output(), equals, "WARN: x11/mlterm/Makefile:2: Please move ${LDFLAGS:M*:Q} outside of any quoting characters.\n")
+	s.CheckOutputLines(
+		"WARN: x11/mlterm/Makefile:2: Please move ${LDFLAGS:M*:Q} outside of any quoting characters.")
 }
 
 func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
@@ -487,11 +495,11 @@ func (s *Suite) Test_MkLines_Check__MASTER_SITE_in_HOMEPAGE(c *check.C) {
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: devel/catch/Makefile:2: HOMEPAGE should not be defined in terms of MASTER_SITEs. Use https://github.com/philsquared/Catch/ directly.\n"+
-		"WARN: devel/catch/Makefile:3: HOMEPAGE should not be defined in terms of MASTER_SITEs. Use https://github.com/ directly.\n"+
-		"WARN: devel/catch/Makefile:4: HOMEPAGE should not be defined in terms of MASTER_SITEs.\n"+
-		"WARN: devel/catch/Makefile:5: HOMEPAGE should not be defined in terms of MASTER_SITEs.\n")
+	s.CheckOutputLines(
+		"WARN: devel/catch/Makefile:2: HOMEPAGE should not be defined in terms of MASTER_SITEs. Use https://github.com/philsquared/Catch/ directly.",
+		"WARN: devel/catch/Makefile:3: HOMEPAGE should not be defined in terms of MASTER_SITEs. Use https://github.com/ directly.",
+		"WARN: devel/catch/Makefile:4: HOMEPAGE should not be defined in terms of MASTER_SITEs.",
+		"WARN: devel/catch/Makefile:5: HOMEPAGE should not be defined in terms of MASTER_SITEs.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_quotes_in_subshell_in_shellwords(c *check.C) {
@@ -506,7 +514,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_quotes_in_subshell_in_
 
 	MkLineChecker{G.Mk.mklines[1]}.Check()
 
-	c.Check(s.Output(), equals, "") // Don't suggest ${ECHO:Q} here.
+	s.CheckOutputEmpty() // Don't suggest ${ECHO:Q} here.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__LDADD_in_BUILDLINK_TRANSFORM(c *check.C) {
@@ -519,7 +527,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__LDADD_in_BUILDLINK_TRANSFORM(c
 	MkLineChecker{G.Mk.mklines[0]}.Check()
 
 	// Note: The :M* modifier is not necessary, since this is not a GNU Configure package.
-	c.Check(s.Output(), equals, "WARN: x11/qt5-qtbase/Makefile.common:1: Please use ${BUILDLINK_LDADD.dl:Q} instead of ${BUILDLINK_LDADD.dl:M*}.\n")
+	s.CheckOutputLines(
+		"WARN: x11/qt5-qtbase/Makefile.common:1: Please use ${BUILDLINK_LDADD.dl:Q} instead of ${BUILDLINK_LDADD.dl:M*}.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_message(c *check.C) {
@@ -531,7 +540,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__command_in_message(c *check.C)
 
 	MkLineChecker{G.Mk.mklines[0]}.Check()
 
-	c.Check(s.Output(), equals, "") // Don't suggest ${REPLACE_PERL:Q}.
+	s.CheckOutputEmpty() // Don't suggest ${REPLACE_PERL:Q}.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__guessed_list_variable_in_quotes(c *check.C) {
@@ -545,7 +554,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__guessed_list_variable_in_quote
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, "WARN: audio/jack-rack/Makefile:3: The list variable LADSPA_PLUGIN_PATH should not be embedded in a word.\n")
+	s.CheckOutputLines(
+		"WARN: audio/jack-rack/Makefile:3: The list variable LADSPA_PLUGIN_PATH should not be embedded in a word.")
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__list_in_list(c *check.C) {
@@ -558,7 +568,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__list_in_list(c *check.C) {
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, "") // Don't warn about missing :Q modifiers.
+	s.CheckOutputEmpty() // Don't warn about missing :Q modifiers.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__PKGNAME_and_URL_list_in_URL_list(c *check.C) {
@@ -572,7 +582,7 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__PKGNAME_and_URL_list_in_URL_li
 
 	MkLineChecker{G.Mk.mklines[1]}.checkVarassignVaruse()
 
-	c.Check(s.Output(), equals, "") // Don't warn about missing :Q modifiers.
+	s.CheckOutputEmpty() // Don't warn about missing :Q modifiers.
 }
 
 func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check.C) {
@@ -591,7 +601,8 @@ func (s *Suite) Test_MkLine_variableNeedsQuoting__tool_in_CONFIGURE_ENV(c *check
 
 	// The TOOLS_* variables only contain the path to the tool,
 	// without any additional arguments that might be necessary.
-	c.Check(s.Output(), equals, "NOTE: Makefile:3: The :Q operator isn't necessary for ${TOOLS_TAR} here.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:3: The :Q operator isn't necessary for ${TOOLS_TAR} here.")
 }
 
 func (s *Suite) Test_MkLine_Pkgmandir(c *check.C) {
@@ -605,7 +616,8 @@ func (s *Suite) Test_MkLine_Pkgmandir(c *check.C) {
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, "WARN: chat/ircII/Makefile:2: Please use ${PKGMANDIR} instead of \"man\".\n")
+	s.CheckOutputLines(
+		"WARN: chat/ircII/Makefile:2: Please use ${PKGMANDIR} instead of \"man\".")
 }
 
 func (s *Suite) Test_MkLines_Check__VERSION_as_wordpart_in_MASTER_SITES(c *check.C) {
@@ -632,9 +644,9 @@ func (s *Suite) Test_MkLines_Check__shell_command_as_wordpart_in_ENV_list(c *che
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: x11/lablgtk1/Makefile:2: Please use ${CC:Q} instead of ${CC}.\n"+
-		"WARN: x11/lablgtk1/Makefile:2: Please use ${CC:Q} instead of ${CC}.\n")
+	s.CheckOutputLines(
+		"WARN: x11/lablgtk1/Makefile:2: Please use ${CC:Q} instead of ${CC}.",
+		"WARN: x11/lablgtk1/Makefile:2: Please use ${CC:Q} instead of ${CC}.")
 }
 
 func (s *Suite) Test_MkLine_shell_varuse_in_backt_dquot(c *check.C) {
@@ -648,20 +660,22 @@ func (s *Suite) Test_MkLine_shell_varuse_in_backt_dquot(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "WARN: x11/motif/Makefile:3: Unknown shell command \"${GREP}\".\n") // No parse errors.
+	s.CheckOutputLines(
+		"WARN: x11/motif/Makefile:3: Unknown shell command \"${GREP}\".") // No parse errors.
 }
 
 // See PR 46570, Ctrl+F "3. In lang/perl5".
-func (s *Suite) Test_MkLine_getVariableType(c *check.C) {
+func (s *Suite) Test_MkLine_VariableType(c *check.C) {
 	mkline := NewMkLine(dummyLine)
 
-	c.Check(mkline.getVariableType("_PERL5_PACKLIST_AWK_STRIP_DESTDIR"), check.IsNil)
-	c.Check(mkline.getVariableType("SOME_DIR").guessed, equals, true)
-	c.Check(mkline.getVariableType("SOMEDIR").guessed, equals, true)
+	c.Check(mkline.VariableType("_PERL5_PACKLIST_AWK_STRIP_DESTDIR"), check.IsNil)
+	c.Check(mkline.VariableType("SOME_DIR").guessed, equals, true)
+	c.Check(mkline.VariableType("SOMEDIR").guessed, equals, true)
 }
 
 // PR 51696, security/py-pbkdf2/Makefile, r1.2
 func (s *Suite) Test_MkLine__comment_in_comment(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("Makefile",
 		mkrcsid,
@@ -669,10 +683,23 @@ func (s *Suite) Test_MkLine__comment_in_comment(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "WARN: Makefile:2: The # character starts a comment.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:2: The # character starts a comment.")
+}
+
+func (s *Suite) Test_MkLine_ConditionVars(c *check.C) {
+	s.Init(c)
+	var mkline MkLine = NewMkLine(NewLine("Makefile", 45, ".include \"../../category/package/buildlink3.mk\"", nil))
+
+	c.Check(mkline.ConditionVars(), equals, "")
+
+	mkline.SetConditionVars("OPSYS")
+
+	c.Check(mkline.ConditionVars(), equals, "OPSYS")
 }
 
 func (s *Suite) Test_MatchVarassign(c *check.C) {
+	s.Init(c)
 	checkVarassign := func(text string, ck check.Checker, varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string) {
 		type va struct {
 			varname, spaceAfterVarname, op, align, value, spaceAfterValue, comment string
