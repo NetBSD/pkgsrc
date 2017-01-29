@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/08/10 12:47:53 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2017/01/29 06:26:51 mef Exp $
 #
 
-DISTNAME=	unicode-screensaver-0.4
+DISTNAME=	unicode-screensaver-0.5
 CATEGORIES=	x11
 MASTER_SITES=	http://www.joachim-breitner.de/archive/unicode-screensaver/
 
