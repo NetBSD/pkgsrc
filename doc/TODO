@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16971 2017/01/26 13:24:54 ryoon Exp $
+$NetBSD: TODO,v 1.16972 2017/01/29 02:25:05 mef Exp $
 
 Suggested new packages
 ======================
@@ -451,7 +451,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
 	o avr-binutils-2.26
 	o avr-libc-2.0.0
-	o avrdude-6.3
 	o awesome-4.0
 	o baci-20040415
 	o base-1.4.5
