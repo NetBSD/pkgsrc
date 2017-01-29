@@ -12,7 +12,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__simple_type(c *check.C) {
 	c.Assert(vartype1, check.NotNil)
 	c.Check(vartype1.guessed, equals, false)
 
-	vartype := mkline.getVariableType("COMMENT")
+	vartype := mkline.VariableType("COMMENT")
 
 	c.Assert(vartype, check.NotNil)
 	c.Check(vartype.basicType.name, equals, "Comment")
@@ -34,13 +34,14 @@ func (s *Suite) Test_MkLineChecker_CheckVartype(c *check.C) {
 // Pkglint once interpreted all lists as consisting of shell tokens,
 // splitting this URL at the ampersands.
 func (s *Suite) Test_MkLineChecker_checkVarassign__URL_with_shell_special_characters(c *check.C) {
+	s.Init(c)
 	G.Pkg = NewPackage("graphics/gimp-fix-ca")
 	G.globalData.InitVartypes()
 	mkline := NewMkLine(NewLine("fname", 10, "MASTER_SITES=http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file=", nil))
 
 	MkLineChecker{mkline}.checkVarassign()
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
@@ -60,36 +61,42 @@ func (s *Suite) Test_MkLineChecker_Check__conditions(c *check.C) {
 
 	MkLineChecker{NewMkLine(NewLine("fname", 1, ".if ${HOMEPAGE} == \"mailto:someone@example.org\"", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, "WARN: fname:1: \"mailto:someone@example.org\" is not a valid URL.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: \"mailto:someone@example.org\" is not a valid URL.")
 
 	MkLineChecker{NewMkLine(NewLine("fname", 1, ".if !empty(PKGSRC_RUN_TEST:M[Y][eE][sS])", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, "WARN: fname:1: PKGSRC_RUN_TEST should be matched against \"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Y][eE][sS]\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: PKGSRC_RUN_TEST should be matched against \"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Y][eE][sS]\".")
 
 	MkLineChecker{NewMkLine(NewLine("fname", 1, ".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	MkLineChecker{NewMkLine(NewLine("fname", 1, ".if !empty(${IS_BUILTIN.Xfixes:M[yY][eE][sS]})", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, "WARN: fname:1: The empty() function takes a variable name as parameter, not a variable expression.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The empty() function takes a variable name as parameter, not a variable expression.")
 
 	MkLineChecker{NewMkLine(NewLine("fname", 1, ".if ${EMUL_PLATFORM} == \"linux-x386\"", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, "WARN: fname:1: \"x386\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: \"x386\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.")
 
 	MkLineChecker{NewMkLine(NewLine("fname", 1, ".if ${EMUL_PLATFORM:Mlinux-x386}", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, "WARN: fname:1: The pattern \"x386\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of EMUL_PLATFORM.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The pattern \"x386\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of EMUL_PLATFORM.")
 
 	MkLineChecker{NewMkLine(NewLine("fname", 98, ".if ${MACHINE_PLATFORM:MUnknownOS-*-*} || ${MACHINE_ARCH:Mx86}", nil))}.CheckCond()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:98: The pattern \"UnknownOS\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of MACHINE_PLATFORM.\n"+
-		"WARN: fname:98: The pattern \"x86\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for MACHINE_ARCH.\n")
+	s.CheckOutputLines(
+		"WARN: fname:98: The pattern \"UnknownOS\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of MACHINE_PLATFORM.",
+		"WARN: fname:98: The pattern \"x86\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for MACHINE_ARCH.")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
 
 	G.Mk = s.NewMkLines("Makefile",
@@ -98,7 +105,8 @@ func (s *Suite) Test_MkLineChecker_checkVarassign(c *check.C) {
 
 	MkLineChecker{G.Mk.mklines[1]}.checkVarassign()
 
-	c.Check(s.Output(), equals, "WARN: Makefile:2: ac_cv_libpari_libs is defined but not used. Spelling mistake?\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:2: ac_cv_libpari_libs is defined but not used. Spelling mistake?")
 }
 
 func (s *Suite) Test_MkLineChecker_checkVarassignDefPermissions(c *check.C) {
@@ -109,7 +117,8 @@ func (s *Suite) Test_MkLineChecker_checkVarassignDefPermissions(c *check.C) {
 
 	MkLineChecker{mkline}.checkVarassignDefPermissions()
 
-	c.Check(s.Output(), equals, "WARN: options.mk:2: The variable PKG_DEVELOPER may not be given a default value by any package.\n")
+	s.CheckOutputLines(
+		"WARN: options.mk:2: The variable PKG_DEVELOPER may not be given a default value by any package.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVarusePermissions(c *check.C) {
@@ -121,18 +130,18 @@ func (s *Suite) Test_MkLineChecker_CheckVarusePermissions(c *check.C) {
 		"COMMENT=\t${GAMES_USER}",
 		"COMMENT:=\t${PKGBASE}",
 		"PYPKGPREFIX=${PKGBASE}")
-	G.globalData.UserDefinedVars = map[string]*MkLine{
+	G.globalData.UserDefinedVars = map[string]MkLine{
 		"GAMES_USER": mklines.mklines[0],
 	}
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: options.mk:2: The user-defined variable GAMES_USER is used but not added to BUILD_DEFS.\n"+
-		"WARN: options.mk:3: PKGBASE should not be evaluated at load time.\n"+
-		"WARN: options.mk:4: The variable PYPKGPREFIX may not be set in this file; it would be ok in pyversion.mk.\n"+
-		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.\n"+
-		"NOTE: options.mk:4: This variable value should be aligned to column 17.\n")
+	s.CheckOutputLines(
+		"WARN: options.mk:2: The user-defined variable GAMES_USER is used but not added to BUILD_DEFS.",
+		"WARN: options.mk:3: PKGBASE should not be evaluated at load time.",
+		"WARN: options.mk:4: The variable PYPKGPREFIX may not be set in this file; it would be ok in pyversion.mk.",
+		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.",
+		"NOTE: options.mk:4: This variable value should be aligned to column 17.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVarusePermissions__load_time(c *check.C) {
@@ -145,37 +154,41 @@ func (s *Suite) Test_MkLineChecker_CheckVarusePermissions__load_time(c *check.C)
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "") // Don't warn that ".CURDIR should not be evaluated at load time."
+	s.CheckOutputEmpty() // Don't warn that ".CURDIR should not be evaluated at load time."
 }
 
 func (s *Suite) Test_MkLineChecker_WarnVaruseLocalbase(c *check.C) {
+	s.Init(c)
 	mkline := NewMkLine(NewLine("options.mk", 56, "PKGNAME=${LOCALBASE}", nil))
 
 	MkLineChecker{mkline}.WarnVaruseLocalbase()
 
-	c.Check(s.Output(), equals, "WARN: options.mk:56: The LOCALBASE variable should not be used by packages.\n")
+	s.CheckOutputLines(
+		"WARN: options.mk:56: The LOCALBASE variable should not be used by packages.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckRelativePkgdir(c *check.C) {
+	s.Init(c)
 	mkline := NewMkLine(NewLine("Makefile", 46, "# dummy", nil))
 
 	MkLineChecker{mkline}.CheckRelativePkgdir("../pkgbase")
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: Makefile:46: \"../pkgbase\" does not exist.\n"+
-		"WARN: Makefile:46: \"../pkgbase\" is not a valid relative package directory.\n")
+	s.CheckOutputLines(
+		"ERROR: Makefile:46: \"../pkgbase\" does not exist.",
+		"WARN: Makefile:46: \"../pkgbase\" is not a valid relative package directory.")
 }
 
 // PR pkg/46570, item 2
 func (s *Suite) Test_MkLineChecker__unclosed_varuse(c *check.C) {
+	s.Init(c)
 	mkline := NewMkLine(NewLine("Makefile", 93, "EGDIRS=${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d", nil))
 
 	MkLineChecker{mkline}.checkVarassign()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:93: Pkglint parse error in MkLine.Tokenize at \"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\".\n"+
-		"WARN: Makefile:93: Pkglint parse error in ShTokenizer.ShAtom at \"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\" (quoting=plain)\n"+
-		"WARN: Makefile:93: EGDIRS is defined but not used. Spelling mistake?\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:93: Pkglint parse error in MkLine.Tokenize at \"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\".",
+		"WARN: Makefile:93: Pkglint parse error in ShTokenizer.ShAtom at \"${EGDIR/apparmor.d ${EGDIR/dbus-1/system.d ${EGDIR/pam.d\" (quoting=plain)",
+		"WARN: Makefile:93: EGDIRS is defined but not used. Spelling mistake?")
 }
 
 func (s *Suite) Test_MkLineChecker__Varuse_Modifier_L(c *check.C) {
@@ -187,7 +200,7 @@ func (s *Suite) Test_MkLineChecker__Varuse_Modifier_L(c *check.C) {
 
 	MkLineChecker{G.Mk.mklines[0]}.Check()
 
-	c.Check(s.Output(), equals, "") // Don't warn that ${XKBBASE}/xkbcomp is used but not defined.
+	s.CheckOutputEmpty() // Don't warn that ${XKBBASE}/xkbcomp is used but not defined.
 }
 
 func (s *Suite) Test_MkLineChecker_CheckCond__comparison_with_shell_command(c *check.C) {
@@ -202,7 +215,8 @@ func (s *Suite) Test_MkLineChecker_CheckCond__comparison_with_shell_command(c *c
 	G.Mk.Check()
 
 	// Don't warn about unknown shell command "cc".
-	c.Check(s.Output(), equals, "WARN: security/openssl/Makefile:2: Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.\n")
+	s.CheckOutputLines(
+		"WARN: security/openssl/Makefile:2: Use ${PKGSRC_COMPILER:Mgcc} instead of the == operator.")
 }
 
 func (s *Suite) Test_MkLine_CheckCond_comparing_PKGSRC_COMPILER_with_eqeq(c *check.C) {
@@ -216,7 +230,8 @@ func (s *Suite) Test_MkLine_CheckCond_comparing_PKGSRC_COMPILER_with_eqeq(c *che
 
 	G.Mk.Check()
 
-	c.Check(s.Output(), equals, "WARN: audio/pulseaudio/Makefile:2: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.\n")
+	s.CheckOutputLines(
+		"WARN: audio/pulseaudio/Makefile:2: Use ${PKGSRC_COMPILER:Mclang} instead of the == operator.")
 }
 
 func (s *Suite) Test_MkLineChecker_CheckVartype__CFLAGS_with_backticks(c *check.C) {
@@ -228,20 +243,21 @@ func (s *Suite) Test_MkLineChecker_CheckVartype__CFLAGS_with_backticks(c *check.
 		"CFLAGS+=\t`pkg-config pidgin --cflags`")
 	mkline := G.Mk.mklines[1]
 
-	words, rest := splitIntoMkWords(mkline.Line, mkline.Value())
+	words, rest := splitIntoMkWords(mkline, mkline.Value())
 
 	c.Check(words, deepEquals, []string{"`pkg-config pidgin --cflags`"})
 	c.Check(rest, equals, "")
 
 	MkLineChecker{G.Mk.mklines[1]}.CheckVartype("CFLAGS", opAssignAppend, "`pkg-config pidgin --cflags`", "")
 
-	c.Check(s.Output(), equals, "") // No warning about "`pkg-config" being an unknown CFlag.
+	s.CheckOutputEmpty() // No warning about "`pkg-config" being an unknown CFlag.
 }
 
 // See PR 46570, Ctrl+F "4. Shell quoting".
 // Pkglint is correct, since the shell sees this definition for
 // CPPFLAGS as three words, not one word.
 func (s *Suite) Test_MkLineChecker_CheckVartype_CFLAGS(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("Makefile",
 		mkrcsid,
@@ -249,7 +265,7 @@ func (s *Suite) Test_MkLineChecker_CheckVartype_CFLAGS(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:2: Unknown compiler flag \"-bs\".\n"+
-		"WARN: Makefile:2: Compiler flag \"%s\\\\\\\"\" should start with a hyphen.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:2: Unknown compiler flag \"-bs\".",
+		"WARN: Makefile:2: Compiler flag \"%s\\\\\\\"\" should start with a hyphen.")
 }
