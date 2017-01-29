@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/01/24 05:03:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/01/29 07:54:20 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/poppler.${RUBY_DLEXT}
@@ -46,8 +46,11 @@ ${GEM_LIBDIR}/sample/pdfcrop.rb
 ${GEM_LIBDIR}/sample/pdfdiv.rb
 ${GEM_LIBDIR}/test/fixtures/image.pdf
 ${GEM_LIBDIR}/test/fixtures/image.png
+${GEM_LIBDIR}/test/fixtures/outline.odt
+${GEM_LIBDIR}/test/fixtures/outline.pdf
 ${GEM_LIBDIR}/test/poppler-test-utils.rb
 ${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-index-iter.rb
 ${GEM_LIBDIR}/test/test-version.rb
 ${GEM_LIBDIR}/test/test_annotation.rb
 ${GEM_LIBDIR}/test/test_color.rb

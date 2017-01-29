@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.52 2016/11/18 12:41:35 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.53 2017/01/29 07:54:20 tsutsui Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -7,6 +7,7 @@
 # used by devel/ruby-gnome2-pango/Makefile
 # used by graphics/ruby-gnome2-cairo-gobject/Makefile
 # used by graphics/ruby-gnome2-clutter/Makefile
+# used by graphics/ruby-gnome2-clutter-gdk/Makefile
 # used by graphics/ruby-gnome2-clutter-gtk/Makefile
 # used by graphics/ruby-gnome2-gdk3/Makefile
 # used by graphics/ruby-gnome2-gdkpixbuf/Makefile
@@ -28,4 +29,4 @@ MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://ruby-gnome2.osdn.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		3.1.0
+VERSION=		3.1.1
