@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2016/12/01 11:08:56 martin Exp $
+# $NetBSD: options.mk,v 1.6 2017/01/29 23:24:10 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
-PKG_SUPPORTED_OPTIONS=	gstreamer-gstcheck introspection
+PKG_SUPPORTED_OPTIONS=	gstreamer-gstcheck introspection ptp-suid
 PKG_SUGGESTED_OPTIONS=	introspection
 
 .include "../../mk/bsd.options.mk"
@@ -21,4 +21,14 @@ CONFIGURE_ARGS+=--disable-check
 PLIST.introspection=yes
 .else
 CONFIGURE_ARGS+=--disable-introspection
+.endif
+
+# PTP network clock requires setuid root for gst-ptp-helper
+# It's not useful enough to be a default, but left as an option
+# for those interested in it.
+.if !empty(PKG_OPTIONS:Mptp-suid)
+SPECIAL_PERMS+=		libexec/gstreamer-1.0/gst-ptp-helper ${SETUID_ROOT_PERMS}
+CONFIGURE_ARGS+=	--with-ptp-helper-permissions=setuid-root
+.else
+CONFIGURE_ARGS+=	--with-ptp-helper-permissions=none
 .endif
