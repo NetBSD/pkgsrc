@@ -66,14 +66,14 @@ func (s *Suite) Test_Line_show_autofix_AutofixReplace(c *check.C) {
 		line.Warnf("Using \"old\" is deprecated.")
 	}
 
-	c.Check(s.Output(), equals, ""+
-		"\n"+
-		"> before\n"+
-		"- The old song\n"+
-		"+ The new song\n"+
-		"> after\n"+
-		"WARN: Makefile:27--29: Using \"old\" is deprecated.\n"+
-		"AUTOFIX: Makefile:27--29: Replacing \"old\" with \"new\".\n")
+	s.CheckOutputLines(
+		"",
+		"> before",
+		"- The old song",
+		"+ The new song",
+		"> after",
+		"WARN: Makefile:27--29: Using \"old\" is deprecated.",
+		"AUTOFIX: Makefile:27--29: Replacing \"old\" with \"new\".")
 }
 
 func (s *Suite) Test_Line_show_autofix_AutofixInsertBefore(c *check.C) {
@@ -85,12 +85,12 @@ func (s *Suite) Test_Line_show_autofix_AutofixInsertBefore(c *check.C) {
 		line.Warnf("Dummy")
 	}
 
-	c.Check(s.Output(), equals, ""+
-		"\n"+
-		"+ inserted\n"+
-		"> original\n"+
-		"WARN: Makefile:30: Dummy\n"+
-		"AUTOFIX: Makefile:30: Inserting a line \"inserted\" before this line.\n")
+	s.CheckOutputLines(
+		"",
+		"+ inserted",
+		"> original",
+		"WARN: Makefile:30: Dummy",
+		"AUTOFIX: Makefile:30: Inserting a line \"inserted\" before this line.")
 }
 
 func (s *Suite) Test_Line_show_autofix_AutofixDelete(c *check.C) {
@@ -102,9 +102,9 @@ func (s *Suite) Test_Line_show_autofix_AutofixDelete(c *check.C) {
 		line.Warnf("Dummy")
 	}
 
-	c.Check(s.Output(), equals, ""+
-		"\n"+
-		"- to be deleted\n"+
-		"WARN: Makefile:30: Dummy\n"+
-		"AUTOFIX: Makefile:30: Deleting this line.\n")
+	s.CheckOutputLines(
+		"",
+		"- to be deleted",
+		"WARN: Makefile:30: Dummy",
+		"AUTOFIX: Makefile:30: Deleting this line.")
 }

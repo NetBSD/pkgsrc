@@ -28,32 +28,34 @@ func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: PLIST:1: Expected \"@comment $"+"NetBSD$\".\n"+
-		"WARN: PLIST:1: The bin/ directory should not have subdirectories.\n"+
-		"WARN: PLIST:2: Manual page missing for bin/program.\n"+
-		"ERROR: PLIST:3: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.\n"+
-		"ERROR: PLIST:4: RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.\n"+
-		"ERROR: PLIST:6: \"info/dir\" must not be listed. Use install-info to add/remove an entry.\n"+
-		"WARN: PLIST:7: Library filename \"c.so\" should start with \"lib\".\n"+
-		"WARN: PLIST:8: Redundant library found. The libtool library is in line 9.\n"+
-		"WARN: PLIST:9: \"lib/libc.la\" should be sorted before \"lib/libc.so.6\".\n"+
-		"WARN: PLIST:10: Preformatted manual page without unformatted one.\n"+
-		"WARN: PLIST:10: Preformatted manual pages should end in \".0\".\n"+
-		"WARN: PLIST:11: IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.\n"+
-		"WARN: PLIST:12: Please remove this line. It is no longer necessary.\n"+
-		"WARN: PLIST:13: Manual page missing for sbin/clockctl.\n"+
-		"ERROR: PLIST:14: The package Makefile must include \"../../graphics/gnome-icon-theme/buildlink3.mk\".\n"+
-		"ERROR: PLIST:16: Duplicate filename \"share/tzinfo\", already appeared in line 15.\n")
+	s.CheckOutputLines(
+		"ERROR: PLIST:1: Expected \"@comment $"+"NetBSD$\".",
+		"WARN: PLIST:1: The bin/ directory should not have subdirectories.",
+		"WARN: PLIST:2: Manual page missing for bin/program.",
+		"ERROR: PLIST:3: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.",
+		"ERROR: PLIST:4: RCD_SCRIPTS must not be registered in the PLIST. Please use the RCD_SCRIPTS framework.",
+		"ERROR: PLIST:6: \"info/dir\" must not be listed. Use install-info to add/remove an entry.",
+		"WARN: PLIST:7: Library filename \"c.so\" should start with \"lib\".",
+		"WARN: PLIST:8: Redundant library found. The libtool library is in line 9.",
+		"WARN: PLIST:9: \"lib/libc.la\" should be sorted before \"lib/libc.so.6\".",
+		"WARN: PLIST:10: Preformatted manual page without unformatted one.",
+		"WARN: PLIST:10: Preformatted manual pages should end in \".0\".",
+		"WARN: PLIST:11: IMAKE_MANNEWSUFFIX is not meant to appear in PLISTs.",
+		"WARN: PLIST:12: Please remove this line. It is no longer necessary.",
+		"WARN: PLIST:13: Manual page missing for sbin/clockctl.",
+		"ERROR: PLIST:14: The package Makefile must include \"../../graphics/gnome-icon-theme/buildlink3.mk\".",
+		"ERROR: PLIST:16: Duplicate filename \"share/tzinfo\", already appeared in line 15.")
 }
 
 func (s *Suite) Test_ChecklinesPlist__empty(c *check.C) {
+	s.Init(c)
 	lines := s.NewLines("PLIST",
 		"@comment $"+"NetBSD$")
 
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, "WARN: PLIST:1: PLIST files shouldn't be empty.\n")
+	s.CheckOutputLines(
+		"WARN: PLIST:1: PLIST files shouldn't be empty.")
 }
 
 func (s *Suite) Test_ChecklinesPlist__commonEnd(c *check.C) {
@@ -67,10 +69,11 @@ func (s *Suite) Test_ChecklinesPlist__commonEnd(c *check.C) {
 
 	ChecklinesPlist(LoadExistingLines(fname, false))
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ChecklinesPlist__conditional(c *check.C) {
+	s.Init(c)
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Pkg.plistSubstCond["PLIST.bincmds"] = true
 	lines := s.NewLines("PLIST",
@@ -79,7 +82,8 @@ func (s *Suite) Test_ChecklinesPlist__conditional(c *check.C) {
 
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, "WARN: PLIST:2: The bin/ directory should not have subdirectories.\n")
+	s.CheckOutputLines(
+		"WARN: PLIST:2: The bin/ directory should not have subdirectories.")
 }
 
 func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
@@ -95,9 +99,9 @@ func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
 
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: PLIST:5: \"bin/otherprogram\" should be sorted before \"sbin/program\".\n"+
-		"WARN: PLIST:6: \"bin/cat\" should be sorted before \"bin/otherprogram\".\n")
+	s.CheckOutputLines(
+		"WARN: PLIST:5: \"bin/otherprogram\" should be sorted before \"sbin/program\".",
+		"WARN: PLIST:6: \"bin/cat\" should be sorted before \"bin/otherprogram\".")
 }
 
 func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
@@ -126,9 +130,9 @@ func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 
 	NewPlistLineSorter(plines).Sort()
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
-		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/PLIST:1: Sorting the whole file.",
+		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(s.LoadTmpFile("PLIST"), equals, ""+
 		"@comment $"+"NetBSD$\n"+
 		"@comment Do not remove\n"+
@@ -160,37 +164,44 @@ func (s *Suite) Test_PlistChecker_checkpathShare_Desktop(c *check.C) {
 		"@comment $"+"NetBSD$",
 		"share/applications/pkgbase.desktop"))
 
-	c.Check(s.Output(), equals, "WARN: PLIST:2: Packages that install a .desktop entry should .include \"../../sysutils/desktop-file-utils/desktopdb.mk\".\n")
+	s.CheckOutputLines(
+		"WARN: PLIST:2: Packages that install a .desktop entry should .include \"../../sysutils/desktop-file-utils/desktopdb.mk\".")
 }
 
 func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
+	s.Init(c)
 	G.Pkg = NewPackage("category/pkgbase")
 
 	ChecklinesPlist(s.NewLines("PLIST",
 		"@comment $"+"NetBSD$",
 		"man/man3/strerror.3.gz"))
 
-	c.Check(s.Output(), equals, "NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.\n")
+	s.CheckOutputLines(
+		"NOTE: PLIST:2: The .gz extension is unnecessary for manual pages.")
 }
 
 func (s *Suite) TestPlistChecker_checkpath__PKGMANDIR(c *check.C) {
+	s.Init(c)
 	lines := s.NewLines("PLIST",
 		"@comment $"+"NetBSD$",
 		"${PKGMANDIR}/man1/sh.1")
 
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, "NOTE: PLIST:2: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".\n")
+	s.CheckOutputLines(
+		"NOTE: PLIST:2: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".")
 }
 
 func (s *Suite) TestPlistChecker_checkpath__python_egg(c *check.C) {
+	s.Init(c)
 	lines := s.NewLines("PLIST",
 		"@comment $"+"NetBSD$",
 		"${PYSITELIB}/gdspy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO")
 
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, "WARN: PLIST:2: Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.\n")
+	s.CheckOutputLines(
+		"WARN: PLIST:2: Include \"../../lang/python/egg.mk\" instead of listing .egg-info files directly.")
 }
 
 func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
@@ -221,20 +232,20 @@ func (s *Suite) Test_PlistChecker__autofix(c *check.C) {
 	lines := LoadExistingLines(fname, false)
 	ChecklinesPlist(lines)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: ~/PLIST:3: \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_storage.la\".\n"+
-		"WARN: ~/PLIST:4: \"lib/libvirt/connection-driver/libvirt_driver_libxl.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\".\n"+
-		"NOTE: ~/PLIST:6: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".\n")
+	s.CheckOutputLines(
+		"WARN: ~/PLIST:3: \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_storage.la\".",
+		"WARN: ~/PLIST:4: \"lib/libvirt/connection-driver/libvirt_driver_libxl.la\" should be sorted before \"lib/libvirt/connection-driver/libvirt_driver_nodedev.la\".",
+		"NOTE: ~/PLIST:6: PLIST files should mention \"man/\" instead of \"${PKGMANDIR}\".")
 
 	s.UseCommandLine("-Wall", "--autofix")
 	ChecklinesPlist(lines)
 
 	fixedLines := LoadExistingLines(fname, false)
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: ~/PLIST:6: Replacing \"${PKGMANDIR}/\" with \"man/\".\n"+
-		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
-		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/PLIST:6: Replacing \"${PKGMANDIR}/\" with \"man/\".",
+		"AUTOFIX: ~/PLIST:1: Sorting the whole file.",
+		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(len(lines), equals, len(fixedLines))
 	c.Check(s.LoadTmpFile("PLIST"), equals, ""+
 		"@comment $"+"NetBSD$\n"+

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -8,7 +9,7 @@ import (
 	"strings"
 )
 
-func ChecklinesPlist(lines []Line) {
+func ChecklinesPlist(lines []line.Line) {
 	if trace.Tracing {
 		defer trace.Call1(lines[0].Filename())()
 	}
@@ -43,12 +44,12 @@ type PlistChecker struct {
 }
 
 type PlistLine struct {
-	line        Line
+	line        line.Line
 	conditional string // e.g. PLIST.docs
 	text        string // Like line.text, without the conditional
 }
 
-func (ck *PlistChecker) Check(plainLines []Line) {
+func (ck *PlistChecker) Check(plainLines []line.Line) {
 	plines := ck.NewLines(plainLines)
 	ck.collectFilesAndDirs(plines)
 
@@ -76,7 +77,7 @@ func (ck *PlistChecker) Check(plainLines []Line) {
 	}
 }
 
-func (ck *PlistChecker) NewLines(lines []Line) []*PlistLine {
+func (ck *PlistChecker) NewLines(lines []line.Line) []*PlistLine {
 	plines := make([]*PlistLine, len(lines))
 	for i, line := range lines {
 		conditional, text := "", line.Text()
@@ -471,14 +472,14 @@ func (pline *PlistLine) warnImakeMannewsuffix() {
 type plistLineSorter struct {
 	first     *PlistLine
 	plines    []*PlistLine
-	lines     []Line
-	after     map[*PlistLine][]Line
+	lines     []line.Line
+	after     map[*PlistLine][]line.Line
 	swapped   bool
 	autofixed bool
 }
 
 func NewPlistLineSorter(plines []*PlistLine) *plistLineSorter {
-	s := &plistLineSorter{first: plines[0], after: make(map[*PlistLine][]Line)}
+	s := &plistLineSorter{first: plines[0], after: make(map[*PlistLine][]line.Line)}
 	prev := plines[0]
 	for _, pline := range plines[1:] {
 		if hasPrefix(pline.text, "@") || contains(pline.text, "$") {
@@ -513,7 +514,7 @@ func (s *plistLineSorter) Sort() {
 
 	firstLine := s.first.line
 	firstLine.AutofixMark("Sorting the whole file.")
-	lines := []Line{firstLine}
+	lines := []line.Line{firstLine}
 	lines = append(lines, s.after[s.first]...)
 	for _, pline := range s.plines {
 		lines = append(lines, pline.line)

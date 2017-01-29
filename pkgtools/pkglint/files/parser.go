@@ -1,17 +1,18 @@
 package main
 
 import (
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/textproc"
 	"strings"
 )
 
 type Parser struct {
-	Line         Line
+	Line         line.Line
 	repl         *textproc.PrefixReplacer
 	EmitWarnings bool
 }
 
-func NewParser(line Line, s string, emitWarnings bool) *Parser {
+func NewParser(line line.Line, s string, emitWarnings bool) *Parser {
 	return &Parser{line, textproc.NewPrefixReplacer(s), emitWarnings}
 }
 
