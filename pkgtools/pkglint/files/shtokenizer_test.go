@@ -5,6 +5,7 @@ import (
 )
 
 func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
+	s.Init(c)
 	checkRest := func(s string, expected ...*ShAtom) string {
 		p := NewShTokenizer(dummyLine, s, false)
 		q := shqPlain
@@ -17,7 +18,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	check := func(str string, expected ...*ShAtom) {
 		rest := checkRest(str, expected...)
 		c.Check(rest, equals, "")
-		c.Check(s.Output(), equals, "")
+		s.CheckOutputEmpty()
 	}
 
 	token := func(typ ShAtomType, text string, quoting ShQuoting) *ShAtom {
@@ -356,13 +357,14 @@ func (s *Suite) Test_Shtokenizer_ShAtom__quoting(c *check.C) {
 }
 
 func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
+	s.Init(c)
 	check := func(str string, expected ...*ShToken) {
 		p := NewShTokenizer(dummyLine, str, false)
 		for _, exp := range expected {
 			c.Check(p.ShToken(), deepEquals, exp)
 		}
 		c.Check(p.Rest(), equals, "")
-		c.Check(s.Output(), equals, "")
+		s.CheckOutputEmpty()
 	}
 
 	check("",

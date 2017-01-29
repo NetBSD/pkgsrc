@@ -135,7 +135,7 @@ func (gd *GlobalData) InitVartypes() {
 	usr("LOCALPATCHES", lkNone, BtPathname)
 
 	// The remaining variables from mk/defaults/mk.conf follow the
-	// naming conventions from MkLine.getVariableType, furthermore
+	// naming conventions from MkLine.VariableType, furthermore
 	// they may be redefined by packages. Therefore they cannot be
 	// defined as user-defined.
 	if false {
