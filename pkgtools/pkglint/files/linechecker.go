@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 )
 
 type LineChecker struct {
-	Line Line
+	Line line.Line
 }
 
 func (ck LineChecker) CheckAbsolutePathname(text string) {

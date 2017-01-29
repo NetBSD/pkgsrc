@@ -51,5 +51,6 @@ func (s *Suite) Test_CheckdirCategory_invalid_comment(c *check.C) {
 
 	CheckdirCategory()
 
-	c.Check(s.Output(), equals, "WARN: ~/archivers/Makefile:2: COMMENT contains invalid characters (U+005C U+0024 U+0024 U+0024 U+0024 U+0022).\n")
+	s.CheckOutputLines(
+		"WARN: ~/archivers/Makefile:2: COMMENT contains invalid characters (U+005C U+0024 U+0024 U+0024 U+0024 U+0022).")
 }

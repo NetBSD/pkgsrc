@@ -1,6 +1,7 @@
 package main
 
 import (
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -9,8 +10,8 @@ import (
 )
 
 type VartypeCheck struct {
-	MkLine     *MkLine
-	Line       Line
+	MkLine     MkLine
+	Line       line.Line
 	Varname    string
 	Op         MkOperator
 	Value      string
@@ -23,7 +24,7 @@ type VartypeCheck struct {
 // fields except the value. This is typically used when checking parts
 // of composite types.
 func NewVartypeCheckValue(vc *VartypeCheck, value string) *VartypeCheck {
-	valueNoVar := vc.MkLine.withoutMakeVariables(value)
+	valueNoVar := vc.MkLine.WithoutMakeVariables(value)
 
 	copy := *vc
 	copy.Value = value
@@ -209,7 +210,7 @@ func (cv *VartypeCheck) Comment() {
 }
 
 func (cv *VartypeCheck) ConfFiles() {
-	words, _ := splitIntoMkWords(cv.MkLine.Line, cv.Value)
+	words, _ := splitIntoMkWords(cv.MkLine, cv.Value)
 	if len(words)%2 != 0 {
 		cv.Line.Warnf("Values for %s should always be pairs of paths.", cv.Varname)
 	}
@@ -318,7 +319,7 @@ func (cv *VartypeCheck) DependencyWithPath() {
 
 	if matches(value, `:\.\./[^/]+$`) {
 		line.Warnf("Dependencies should have the form \"../../category/package\".")
-		cv.MkLine.explainRelativeDirs()
+		cv.MkLine.ExplainRelativeDirs()
 		return
 	}
 

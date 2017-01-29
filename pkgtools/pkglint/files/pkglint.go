@@ -5,6 +5,7 @@ import (
 	"io"
 	"netbsd.org/pkglint/getopt"
 	"netbsd.org/pkglint/histogram"
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"netbsd.org/pkglint/trace"
 	"os"
@@ -272,7 +273,7 @@ func CheckfileExtra(fname string) {
 	}
 }
 
-func ChecklinesDescr(lines []Line) {
+func ChecklinesDescr(lines []line.Line) {
 	if trace.Tracing {
 		defer trace.Call1(lines[0].Filename())()
 	}
@@ -300,7 +301,7 @@ func ChecklinesDescr(lines []Line) {
 	SaveAutofixChanges(lines)
 }
 
-func ChecklinesMessage(lines []Line) {
+func ChecklinesMessage(lines []line.Line) {
 	if trace.Tracing {
 		defer trace.Call1(lines[0].Filename())()
 	}
@@ -486,7 +487,7 @@ func Checkfile(fname string) {
 	}
 }
 
-func ChecklinesTrailingEmptyLines(lines []Line) {
+func ChecklinesTrailingEmptyLines(lines []line.Line) {
 	max := len(lines)
 	last := max
 	for last > 1 && lines[last-1].Text() == "" {

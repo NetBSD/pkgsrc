@@ -7,27 +7,33 @@ import (
 )
 
 func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("PLIST_AWK", opAssignAppend, (*VartypeCheck).AwkCommand,
 		"{print $0}",
 		"{print $$0}")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: $0 is ambiguous. Use ${0} if you mean a Makefile variable or $$0 if you mean a shell variable.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: $0 is ambiguous. Use ${0} if you mean a Makefile variable or $$0 if you mean a shell variable.")
 }
 
 func (s *Suite) Test_VartypeCheck_BasicRegularExpression(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("REPLACE_FILES.pl", opAssign, (*VartypeCheck).BasicRegularExpression,
 		".*\\.pl$",
 		".*\\.pl$$")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: Pkglint parse error in MkLine.Tokenize at \"$\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Pkglint parse error in MkLine.Tokenize at \"$\".")
 }
 
 func (s *Suite) Test_VartypeCheck_BuildlinkDepmethod(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("BUILDLINK_DEPMETHOD.libc", opAssignDefault, (*VartypeCheck).BuildlinkDepmethod,
 		"full",
 		"unknown")
 
-	c.Check(s.Output(), equals, "WARN: fname:2: Invalid dependency method \"unknown\". Valid methods are \"build\" or \"full\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: Invalid dependency method \"unknown\". Valid methods are \"build\" or \"full\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
@@ -43,12 +49,13 @@ func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 		"filesyscategory",
 		"wip")
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:2: Invalid category \"arabic\".\n"+
-		"ERROR: fname:4: Invalid category \"wip\".\n")
+	s.CheckOutputLines(
+		"ERROR: fname:2: Invalid category \"arabic\".",
+		"ERROR: fname:4: Invalid category \"wip\".")
 }
 
 func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("CFLAGS", opAssignAppend, (*VartypeCheck).CFlag,
 		"-Wall",
 		"/W3",
@@ -57,13 +64,14 @@ func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 		"-XX:+PrintClassHistogramAfterFullGC",
 		"`pkg-config pidgin --cflags`")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: Compiler flag \"/W3\" should start with a hyphen.\n"+
-		"WARN: fname:3: Compiler flag \"target:sparc64\" should start with a hyphen.\n"+
-		"WARN: fname:5: Unknown compiler flag \"-XX:+PrintClassHistogramAfterFullGC\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: Compiler flag \"/W3\" should start with a hyphen.",
+		"WARN: fname:3: Compiler flag \"target:sparc64\" should start with a hyphen.",
+		"WARN: fname:5: Unknown compiler flag \"-XX:+PrintClassHistogramAfterFullGC\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("COMMENT", opAssign, (*VartypeCheck).Comment,
 		"Versatile Programming Language",
 		"TODO: Short description of the package",
@@ -72,17 +80,18 @@ func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 		"\"Quoting the comment is wrong\"",
 		"'Quoting the comment is wrong'")
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:2: COMMENT must be set.\n"+
-		"WARN: fname:3: COMMENT should not begin with \"A\".\n"+
-		"WARN: fname:3: COMMENT should not end with a period.\n"+
-		"WARN: fname:4: COMMENT should start with a capital letter.\n"+
-		"WARN: fname:4: COMMENT should not be longer than 70 characters.\n"+
-		"WARN: fname:5: COMMENT should not be enclosed in quotes.\n"+
-		"WARN: fname:6: COMMENT should not be enclosed in quotes.\n")
+	s.CheckOutputLines(
+		"ERROR: fname:2: COMMENT must be set.",
+		"WARN: fname:3: COMMENT should not begin with \"A\".",
+		"WARN: fname:3: COMMENT should not end with a period.",
+		"WARN: fname:4: COMMENT should start with a capital letter.",
+		"WARN: fname:4: COMMENT should not be longer than 70 characters.",
+		"WARN: fname:5: COMMENT should not be enclosed in quotes.",
+		"WARN: fname:6: COMMENT should not be enclosed in quotes.")
 }
 
 func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("CONF_FILES", opAssignAppend, (*VartypeCheck).ConfFiles,
 		"single/file",
 		"share/etc/config ${PKG_SYSCONFDIR}/etc/config",
@@ -90,11 +99,11 @@ func (s *Suite) Test_VartypeCheck_ConfFiles(c *check.C) {
 		"share/etc/config ${PREFIX}/etc/config share/etc/config2 ${VARBASE}/config2",
 		"share/etc/bootrc /etc/bootrc")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Values for CONF_FILES should always be pairs of paths.\n"+
-		"WARN: fname:3: Values for CONF_FILES should always be pairs of paths.\n"+
-		"WARN: fname:5: Found absolute pathname: /etc/bootrc\n"+
-		"WARN: fname:5: The destination file \"/etc/bootrc\" should start with a variable reference.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Values for CONF_FILES should always be pairs of paths.",
+		"WARN: fname:3: Values for CONF_FILES should always be pairs of paths.",
+		"WARN: fname:5: Found absolute pathname: /etc/bootrc",
+		"WARN: fname:5: The destination file \"/etc/bootrc\" should start with a variable reference.")
 }
 
 func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
@@ -173,36 +182,42 @@ func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 }
 
 func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("EXTRACT_SUFX", opAssign, (*VartypeCheck).DistSuffix,
 		".tar.gz",
 		".tar.bz2")
 
-	c.Check(s.Output(), equals, "NOTE: fname:1: EXTRACT_SUFX is \".tar.gz\" by default, so this definition may be redundant.\n")
+	s.CheckOutputLines(
+		"NOTE: fname:1: EXTRACT_SUFX is \".tar.gz\" by default, so this definition may be redundant.")
 }
 
 func (s *Suite) Test_VartypeCheck_EmulPlatform(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("EMUL_PLATFORM", opAssign, (*VartypeCheck).EmulPlatform,
 		"linux-i386",
 		"nextbsd-8087",
 		"${LINUX}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: \"nextbsd\" is not valid for the operating system part of EMUL_PLATFORM. Use one of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } instead.\n"+
-		"WARN: fname:2: \"8087\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.\n"+
-		"WARN: fname:3: \"${LINUX}\" is not a valid emulation platform.\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: \"nextbsd\" is not valid for the operating system part of EMUL_PLATFORM. Use one of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } instead.",
+		"WARN: fname:2: \"8087\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.",
+		"WARN: fname:3: \"${LINUX}\" is not a valid emulation platform.")
 }
 
 func (s *Suite) Test_VartypeCheck_Enum(c *check.C) {
+	s.Init(c)
 	runVartypeMatchChecks("JDK", enum("jdk1 jdk2 jdk4").checker,
 		"*",
 		"jdk*",
 		"sun-jdk*",
 		"${JDKNAME}")
 
-	c.Check(s.Output(), equals, "WARN: fname:3: The pattern \"sun-jdk*\" cannot match any of { jdk1 jdk2 jdk4 } for JDK.\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: The pattern \"sun-jdk*\" cannot match any of { jdk1 jdk2 jdk4 } for JDK.")
 }
 
 func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
+	s.Init(c)
 	s.RegisterMasterSite("MASTER_SITE_GNU", "http://ftp.gnu.org/pub/gnu/")
 	s.RegisterMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 
@@ -212,90 +227,101 @@ func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 		"${MASTER_SITE_GNU:=bison}",
 		"${MASTER_SITE_INVALID:=subdir/}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Please use ${MASTER_SITE_GITHUB:=example/} instead of \"https://github.com/example/project/\" and run \""+confMake+" help topic=github\" for further tips.\n"+
-		"WARN: fname:2: Please use ${MASTER_SITE_GNU:=bison} instead of \"http://ftp.gnu.org/pub/gnu/bison\".\n"+
-		"ERROR: fname:3: The subdirectory in MASTER_SITE_GNU must end with a slash.\n"+
-		"ERROR: fname:4: The site MASTER_SITE_INVALID does not exist.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Please use ${MASTER_SITE_GITHUB:=example/} instead of \"https://github.com/example/project/\" and run \""+confMake+" help topic=github\" for further tips.",
+		"WARN: fname:2: Please use ${MASTER_SITE_GNU:=bison} instead of \"http://ftp.gnu.org/pub/gnu/bison\".",
+		"ERROR: fname:3: The subdirectory in MASTER_SITE_GNU must end with a slash.",
+		"ERROR: fname:4: The site MASTER_SITE_INVALID does not exist.")
 
 	// PR 46570, keyword gimp-fix-ca
 	runVartypeChecks("MASTER_SITES", opAssign, (*VartypeCheck).FetchURL,
 		"https://example.org/download.cgi?fname=fname&sha1=12341234")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	runVartypeChecks("MASTER_SITES", opAssign, (*VartypeCheck).FetchURL,
 		"http://example.org/distfiles/",
 		"http://example.org/download?fname=distfile;version=1.0",
 		"http://example.org/download?fname=<distfile>;version=<version>")
 
-	c.Check(s.Output(), equals, "WARN: fname:3: \"http://example.org/download?fname=<distfile>;version=<version>\" is not a valid URL.\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: \"http://example.org/download?fname=<distfile>;version=<version>\" is not a valid URL.")
 }
 
 func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("FNAME", opAssign, (*VartypeCheck).Filename,
 		"Filename with spaces.docx",
 		"OS/2-manual.txt")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: \"Filename with spaces.docx\" is not a valid filename.\n"+
-		"WARN: fname:2: A filename should not contain a slash.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: \"Filename with spaces.docx\" is not a valid filename.",
+		"WARN: fname:2: A filename should not contain a slash.")
 }
 
 func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("LDFLAGS", opAssignAppend, (*VartypeCheck).LdFlag,
 		"-lc",
 		"-L/usr/lib64",
 		"`pkg-config pidgin --ldflags`",
 		"-unknown")
 
-	c.Check(s.Output(), equals, "WARN: fname:4: Unknown linker flag \"-unknown\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:4: Unknown linker flag \"-unknown\".")
 }
 
 func (s *Suite) Test_VartypeCheck_License(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("LICENSE", opAssign, (*VartypeCheck).License,
 		"gnu-gpl-v2",
 		"AND mit")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: License file /licenses/gnu-gpl-v2 does not exist.\n"+
-		"ERROR: fname:2: Parse error for license condition \"AND mit\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: License file /licenses/gnu-gpl-v2 does not exist.",
+		"ERROR: fname:2: Parse error for license condition \"AND mit\".")
 
 	runVartypeChecks("LICENSE", opAssignAppend, (*VartypeCheck).License,
 		"gnu-gpl-v2",
 		"AND mit")
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:1: Parse error for appended license condition \"gnu-gpl-v2\".\n"+
-		"WARN: fname:2: License file /licenses/mit does not exist.\n")
+	s.CheckOutputLines(
+		"ERROR: fname:1: Parse error for appended license condition \"gnu-gpl-v2\".",
+		"WARN: fname:2: License file /licenses/mit does not exist.")
 }
 
 func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
+	s.Init(c)
 	runVartypeMatchChecks("MACHINE_GNU_PLATFORM", (*VartypeCheck).MachineGnuPlatform,
 		"x86_64-pc-cygwin",
 		"Cygwin-*-amd64")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: The pattern \"Cygwin\" cannot match any of { aarch64 aarch64_be alpha amd64 arc arm armeb armv4 armv4eb armv6 armv6eb armv7 armv7eb cobalt convex dreamcast hpcmips hpcsh hppa hppa64 i386 i486 ia64 m5407 m68010 m68k m88k mips mips64 mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh shle sparc sparc64 vax x86_64 } for the hardware architecture part of MACHINE_GNU_PLATFORM.\n"+
-		"WARN: fname:2: The pattern \"amd64\" cannot match any of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } for the operating system part of MACHINE_GNU_PLATFORM.\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: The pattern \"Cygwin\" cannot match any of { aarch64 aarch64_be alpha amd64 arc arm armeb armv4 armv4eb armv6 armv6eb armv7 armv7eb cobalt convex dreamcast hpcmips hpcsh hppa hppa64 i386 i486 ia64 m5407 m68010 m68k m88k mips mips64 mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh shle sparc sparc64 vax x86_64 } for the hardware architecture part of MACHINE_GNU_PLATFORM.",
+		"WARN: fname:2: The pattern \"amd64\" cannot match any of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } for the operating system part of MACHINE_GNU_PLATFORM.")
 }
 
 func (s *Suite) Test_VartypeCheck_MailAddress(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("MAINTAINER", opAssign, (*VartypeCheck).MailAddress,
 		"pkgsrc-users@netbsd.org")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: Please write \"NetBSD.org\" instead of \"netbsd.org\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Please write \"NetBSD.org\" instead of \"netbsd.org\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Message(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("SUBST_MESSAGE.id", opAssign, (*VartypeCheck).Message,
 		"\"Correct paths\"",
 		"Correct paths")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: SUBST_MESSAGE.id should not be quoted.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: SUBST_MESSAGE.id should not be quoted.")
 }
 
 func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
+	s.Init(c)
 	G.globalData.PkgOptions = map[string]string{
 		"documented":   "Option description",
 		"undocumented": "",
@@ -306,50 +332,58 @@ func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
 		"undocumented",
 		"unknown")
 
-	c.Check(s.Output(), equals, "WARN: fname:3: Unknown option \"unknown\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: Unknown option \"unknown\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Pathlist(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("PATH", opAssign, (*VartypeCheck).Pathlist,
 		"/usr/bin:/usr/sbin:.:${LOCALBASE}/bin")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: All components of PATH (in this case \".\") should be absolute paths.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: All components of PATH (in this case \".\") should be absolute paths.")
 }
 
 func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("CONF_FILES_PERMS", opAssignAppend, (*VartypeCheck).Perms,
 		"root",
 		"${ROOT_USER}",
 		"ROOT_USER",
 		"${REAL_ROOT_USER}")
 
-	c.Check(s.Output(), equals, "ERROR: fname:2: ROOT_USER must not be used in permission definitions. Use REAL_ROOT_USER instead.\n")
+	s.CheckOutputLines(
+		"ERROR: fname:2: ROOT_USER must not be used in permission definitions. Use REAL_ROOT_USER instead.")
 }
 
 func (s *Suite) Test_VartypeCheck_PkgOptionsVar(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("PKG_OPTIONS_VAR.screen", opAssign, (*VartypeCheck).PkgOptionsVar,
 		"PKG_OPTIONS.${PKGBASE}",
 		"PKG_OPTIONS.anypkgbase")
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:1: PKGBASE must not be used in PKG_OPTIONS_VAR.\n")
+	s.CheckOutputLines(
+		"ERROR: fname:1: PKGBASE must not be used in PKG_OPTIONS_VAR.")
 }
 
 func (s *Suite) Test_VartypeCheck_PkgRevision(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("PKGREVISION", opAssign, (*VartypeCheck).PkgRevision,
 		"3a")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: PKGREVISION must be a positive integer number.\n"+
-		"ERROR: fname:1: PKGREVISION only makes sense directly in the package Makefile.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: PKGREVISION must be a positive integer number.",
+		"ERROR: fname:1: PKGREVISION only makes sense directly in the package Makefile.")
 
 	runVartypeChecksFname("Makefile", "PKGREVISION", opAssign, (*VartypeCheck).PkgRevision,
 		"3")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
+	s.Init(c)
 	runVartypeMatchChecks("ONLY_FOR_PLATFORM", (*VartypeCheck).MachinePlatformPattern,
 		"linux-i386",
 		"nextbsd-5.0-8087",
@@ -359,74 +393,85 @@ func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
 		"FreeBSD-*",
 		"${LINUX}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: \"linux-i386\" is not a valid platform pattern.\n"+
-		"WARN: fname:2: The pattern \"nextbsd\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:2: The pattern \"8087\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:3: The pattern \"netbsd\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:3: The pattern \"l*\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:5: \"FreeBSD*\" is not a valid platform pattern.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: \"linux-i386\" is not a valid platform pattern.",
+		"WARN: fname:2: The pattern \"nextbsd\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of ONLY_FOR_PLATFORM.",
+		"WARN: fname:2: The pattern \"8087\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.",
+		"WARN: fname:3: The pattern \"netbsd\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of ONLY_FOR_PLATFORM.",
+		"WARN: fname:3: The pattern \"l*\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.",
+		"WARN: fname:5: \"FreeBSD*\" is not a valid platform pattern.")
 }
 
 func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("PYTHON_VERSIONED_DEPENDENCIES", opAssign, (*VartypeCheck).PythonDependency,
 		"cairo",
 		"${PYDEP}",
 		"cairo,X")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: Python dependencies should not contain variables.\n"+
-		"WARN: fname:3: Invalid Python dependency \"cairo,X\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: Python dependencies should not contain variables.",
+		"WARN: fname:3: Invalid Python dependency \"cairo,X\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("NO_BIN_ON_CDROM", opAssign, (*VartypeCheck).Restricted,
 		"May only be distributed free of charge")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: The only valid value for NO_BIN_ON_CDROM is ${RESTRICTED}.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The only valid value for NO_BIN_ON_CDROM is ${RESTRICTED}.")
 }
 
 func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("SUBST_SED.dummy", opAssign, (*VartypeCheck).SedCommands,
 		"s,@COMPILER@,gcc,g",
 		"-e s,a,b, -e a,b,c,",
 		"-e \"s,#,comment ,\"",
 		"-e \"s,\\#,comment ,\"")
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: fname:1: Please always use \"-e\" in sed commands, even if there is only one substitution.\n"+
-		"NOTE: fname:2: Each sed command should appear in an assignment of its own.\n"+
-		"WARN: fname:3: The # character starts a comment.\n")
+	s.CheckOutputLines(
+		"NOTE: fname:1: Please always use \"-e\" in sed commands, even if there is only one substitution.",
+		"NOTE: fname:2: Each sed command should appear in an assignment of its own.",
+		"WARN: fname:3: The # character starts a comment.")
 }
 
 func (s *Suite) Test_VartypeCheck_ShellCommands(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("GENERATE_PLIST", opAssign, (*VartypeCheck).ShellCommands,
 		"echo bin/program",
 		"echo bin/program;")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: This shell command list should end with a semicolon.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: This shell command list should end with a semicolon.")
 }
 
 func (s *Suite) Test_VartypeCheck_Stage(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("SUBST_STAGE.dummy", opAssign, (*VartypeCheck).Stage,
 		"post-patch",
 		"post-modern",
 		"pre-test")
 
-	c.Check(s.Output(), equals, "WARN: fname:2: Invalid stage name \"post-modern\". Use one of {pre,do,post}-{extract,patch,configure,build,test,install}.\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: Invalid stage name \"post-modern\". Use one of {pre,do,post}-{extract,patch,configure,build,test,install}.")
 }
 
 func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("BUILD_DEFS", opAssign, (*VartypeCheck).VariableName,
 		"VARBASE",
 		"VarBase",
 		"PKG_OPTIONS_VAR.pkgbase",
 		"${INDIRECT}")
 
-	c.Check(s.Output(), equals, "WARN: fname:2: \"VarBase\" is not a valid variable name.\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: \"VarBase\" is not a valid variable name.")
 }
 
 func (s *Suite) Test_VartypeCheck_Version(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("PERL5_REQD", opAssignAppend, (*VartypeCheck).Version,
 		"0",
 		"1.2.3.4.5.6",
@@ -434,51 +479,55 @@ func (s *Suite) Test_VartypeCheck_Version(c *check.C) {
 		"4.1-SNAPSHOT",
 		"4pre7")
 
-	c.Check(s.Output(), equals, "WARN: fname:4: Invalid version number \"4.1-SNAPSHOT\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:4: Invalid version number \"4.1-SNAPSHOT\".")
 }
 
 func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("APACHE_MODULE", opAssign, (*VartypeCheck).Yes,
 		"yes",
 		"no",
 		"${YESVAR}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: APACHE_MODULE should be set to YES or yes.\n"+
-		"WARN: fname:3: APACHE_MODULE should be set to YES or yes.\n")
+	s.CheckOutputLines(
+		"WARN: fname:2: APACHE_MODULE should be set to YES or yes.",
+		"WARN: fname:3: APACHE_MODULE should be set to YES or yes.")
 
 	runVartypeMatchChecks("PKG_DEVELOPER", (*VartypeCheck).Yes,
 		"yes",
 		"no",
 		"${YESVAR}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.\n"+
-		"WARN: fname:2: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.\n"+
-		"WARN: fname:3: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.",
+		"WARN: fname:2: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.",
+		"WARN: fname:3: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("GNU_CONFIGURE", opAssign, (*VartypeCheck).YesNo,
 		"yes",
 		"no",
 		"ja",
 		"${YESVAR}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n"+
-		"WARN: fname:4: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.",
+		"WARN: fname:4: GNU_CONFIGURE should be set to YES, yes, NO, or no.")
 }
 
 func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {
+	s.Init(c)
 	runVartypeChecks("GNU_CONFIGURE", opAssign, (*VartypeCheck).YesNoIndirectly,
 		"yes",
 		"no",
 		"ja",
 		"${YESVAR}")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.")
 }
 
 func runVartypeChecks(varname string, op MkOperator, checker func(*VartypeCheck), values ...string) {
@@ -487,8 +536,8 @@ func runVartypeChecks(varname string, op MkOperator, checker func(*VartypeCheck)
 	}
 	for i, value := range values {
 		mkline := NewMkLine(NewLine("fname", i+1, varname+op.String()+value, nil))
-		valueNovar := mkline.withoutMakeVariables(mkline.Value())
-		vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
+		valueNovar := mkline.WithoutMakeVariables(mkline.Value())
+		vc := &VartypeCheck{mkline, mkline, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
 		checker(vc)
 	}
 }
@@ -497,8 +546,8 @@ func runVartypeMatchChecks(varname string, checker func(*VartypeCheck), values .
 	for i, value := range values {
 		text := fmt.Sprintf(".if ${%s:M%s} == \"\"", varname, value)
 		mkline := NewMkLine(NewLine("fname", i+1, text, nil))
-		valueNovar := mkline.withoutMakeVariables(value)
-		vc := &VartypeCheck{mkline, mkline.Line, varname, opUseMatch, value, valueNovar, "", false}
+		valueNovar := mkline.WithoutMakeVariables(value)
+		vc := &VartypeCheck{mkline, mkline, varname, opUseMatch, value, valueNovar, "", false}
 		checker(vc)
 	}
 }
@@ -506,8 +555,8 @@ func runVartypeMatchChecks(varname string, checker func(*VartypeCheck), values .
 func runVartypeChecksFname(fname, varname string, op MkOperator, checker func(*VartypeCheck), values ...string) {
 	for i, value := range values {
 		mkline := NewMkLine(NewLine(fname, i+1, varname+op.String()+value, nil))
-		valueNovar := mkline.withoutMakeVariables(value)
-		vc := &VartypeCheck{mkline, mkline.Line, varname, op, value, valueNovar, "", false}
+		valueNovar := mkline.WithoutMakeVariables(value)
+		vc := &VartypeCheck{mkline, mkline, varname, op, value, valueNovar, "", false}
 		checker(vc)
 	}
 }

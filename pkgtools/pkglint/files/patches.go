@@ -3,22 +3,24 @@ package main
 // Checks for patch files.
 
 import (
+	"netbsd.org/pkglint/line"
+	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
 )
 
-func ChecklinesPatch(lines []Line) {
+func ChecklinesPatch(lines []line.Line) {
 	if trace.Tracing {
 		defer trace.Call1(lines[0].Filename())()
 	}
 
-	(&PatchChecker{lines, NewExpecter(lines), false, false}).Check()
+	(&PatchChecker{lines, textproc.NewExpecter(lines), false, false}).Check()
 }
 
 type PatchChecker struct {
-	lines             []Line
-	exp               *Expecter
+	lines             []line.Line
+	exp               *textproc.Expecter
 	seenDocumentation bool
 	previousLineEmpty bool
 }
@@ -37,7 +39,7 @@ func (ck *PatchChecker) Check() {
 	if (LineChecker{ck.lines[0]}).CheckRcsid(``, "") {
 		ck.exp.Advance()
 	}
-	ck.previousLineEmpty = ck.exp.ExpectEmptyLine()
+	ck.previousLineEmpty = ck.exp.ExpectEmptyLine(G.opts.WarnSpace)
 
 	patchedFiles := 0
 	for !ck.exp.EOF() {
@@ -45,7 +47,7 @@ func (ck *PatchChecker) Check() {
 		if ck.exp.AdvanceIfMatches(rePatchUniFileDel) {
 			if ck.exp.AdvanceIfMatches(rePatchUniFileAdd) {
 				ck.checkBeginDiff(line, patchedFiles)
-				ck.checkUnifiedDiff(ck.exp.m[1])
+				ck.checkUnifiedDiff(ck.exp.Group(1))
 				patchedFiles++
 				continue
 			}
@@ -54,7 +56,7 @@ func (ck *PatchChecker) Check() {
 		}
 
 		if ck.exp.AdvanceIfMatches(rePatchUniFileAdd) {
-			patchedFile := ck.exp.m[1]
+			patchedFile := ck.exp.Group(1)
 			if ck.exp.AdvanceIfMatches(rePatchUniFileDel) {
 				ck.checkBeginDiff(line, patchedFiles)
 				ck.exp.PreviousLine().Warnf("Unified diff headers should be first ---, then +++.")
@@ -107,8 +109,8 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	hasHunks := false
 	for ck.exp.AdvanceIfMatches(rePatchUniHunk) {
 		hasHunks = true
-		linesToDel := toInt(ck.exp.m[2], 1)
-		linesToAdd := toInt(ck.exp.m[4], 1)
+		linesToDel := toInt(ck.exp.Group(2), 1)
+		linesToAdd := toInt(ck.exp.Group(4), 1)
 		if trace.Tracing {
 			trace.Stepf("hunk -%d +%d", linesToDel, linesToAdd)
 		}
@@ -154,7 +156,7 @@ func (ck *PatchChecker) checkUnifiedDiff(patchedFile string) {
 	}
 }
 
-func (ck *PatchChecker) checkBeginDiff(line Line, patchedFiles int) {
+func (ck *PatchChecker) checkBeginDiff(line line.Line, patchedFiles int) {
 	if trace.Tracing {
 		defer trace.Call0()()
 	}
@@ -283,7 +285,7 @@ func (ft FileType) String() string {
 }
 
 // This is used to select the proper subroutine for detecting absolute pathnames.
-func guessFileType(line Line, fname string) (fileType FileType) {
+func guessFileType(line line.Line, fname string) (fileType FileType) {
 	if trace.Tracing {
 		defer trace.Call(fname, "=>", &fileType)()
 	}
@@ -316,7 +318,7 @@ func guessFileType(line Line, fname string) (fileType FileType) {
 	return ftUnknown
 }
 
-func checkwordAbsolutePathname(line Line, word string) {
+func checkwordAbsolutePathname(line line.Line, word string) {
 	if trace.Tracing {
 		defer trace.Call1(word)()
 	}
@@ -345,7 +347,7 @@ func checkwordAbsolutePathname(line Line, word string) {
 }
 
 // Looks for strings like "/dev/cd0" appearing in source code
-func checklineSourceAbsolutePathname(line Line, text string) {
+func checklineSourceAbsolutePathname(line line.Line, text string) {
 	if !strings.ContainsAny(text, "\"'") {
 		return
 	}
@@ -367,7 +369,7 @@ func checklineSourceAbsolutePathname(line Line, text string) {
 	}
 }
 
-func checklineOtherAbsolutePathname(line Line, text string) {
+func checklineOtherAbsolutePathname(line line.Line, text string) {
 	if trace.Tracing {
 		defer trace.Call1(text)()
 	}

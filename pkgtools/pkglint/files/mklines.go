@@ -1,6 +1,7 @@
 package main
 
 import (
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/trace"
 	"path"
 	"strings"
@@ -8,22 +9,22 @@ import (
 
 // MkLines contains data for the Makefile (or *.mk) that is currently checked.
 type MkLines struct {
-	mklines        []*MkLine
-	lines          []Line
-	forVars        map[string]bool    // The variables currently used in .for loops
-	target         string             // Current make(1) target
-	vardef         map[string]*MkLine // varname => line; for all variables that are defined in the current file
-	varuse         map[string]*MkLine // varname => line; for all variables that are used in the current file
-	buildDefs      map[string]bool    // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
-	plistVars      map[string]bool    // Variables that are registered in PLIST_VARS, to ensure that all user-defined variables are added to it.
-	tools          map[string]bool    // Set of tools that are declared to be used.
-	toolRegistry   ToolRegistry       // Tools defined in file scope.
+	mklines        []MkLine
+	lines          []line.Line
+	forVars        map[string]bool   // The variables currently used in .for loops
+	target         string            // Current make(1) target
+	vardef         map[string]MkLine // varname => line; for all variables that are defined in the current file
+	varuse         map[string]MkLine // varname => line; for all variables that are used in the current file
+	buildDefs      map[string]bool   // Variables that are registered in BUILD_DEFS, to ensure that all user-defined variables are added to it.
+	plistVars      map[string]bool   // Variables that are registered in PLIST_VARS, to ensure that all user-defined variables are added to it.
+	tools          map[string]bool   // Set of tools that are declared to be used.
+	toolRegistry   ToolRegistry      // Tools defined in file scope.
 	SeenBsdPrefsMk bool
 	indentation    Indentation // Indentation depth of preprocessing directives
 }
 
-func NewMkLines(lines []Line) *MkLines {
-	mklines := make([]*MkLine, len(lines))
+func NewMkLines(lines []line.Line) *MkLines {
+	mklines := make([]MkLine, len(lines))
 	for i, line := range lines {
 		mklines[i] = NewMkLine(line)
 	}
@@ -39,8 +40,8 @@ func NewMkLines(lines []Line) *MkLines {
 		lines,
 		make(map[string]bool),
 		"",
-		make(map[string]*MkLine),
-		make(map[string]*MkLine),
+		make(map[string]MkLine),
+		make(map[string]MkLine),
 		make(map[string]bool),
 		make(map[string]bool),
 		tools,
@@ -49,7 +50,7 @@ func NewMkLines(lines []Line) *MkLines {
 		Indentation{}}
 }
 
-func (mklines *MkLines) DefineVar(mkline *MkLine, varname string) {
+func (mklines *MkLines) DefineVar(mkline MkLine, varname string) {
 	if mklines.vardef[varname] == nil {
 		mklines.vardef[varname] = mkline
 	}
@@ -59,7 +60,7 @@ func (mklines *MkLines) DefineVar(mkline *MkLine, varname string) {
 	}
 }
 
-func (mklines *MkLines) UseVar(mkline *MkLine, varname string) {
+func (mklines *MkLines) UseVar(mkline MkLine, varname string) {
 	varcanon := varnameCanon(varname)
 	mklines.varuse[varname] = mkline
 	mklines.varuse[varcanon] = mkline
@@ -96,7 +97,7 @@ func (mklines *MkLines) Check() {
 	// In the first pass, all additions to BUILD_DEFS and USE_TOOLS
 	// are collected to make the order of the definitions irrelevant.
 	mklines.DetermineUsedVariables()
-	mklines.determineDefinedVariables()
+	mklines.DetermineDefinedVariables()
 
 	// In the second pass, the actual checks are done.
 
@@ -150,7 +151,7 @@ func (mklines *MkLines) Check() {
 	SaveAutofixChanges(mklines.lines)
 }
 
-func (mklines *MkLines) determineDefinedVariables() {
+func (mklines *MkLines) DetermineDefinedVariables() {
 	if trace.Tracing {
 		defer trace.Call0()()
 	}
@@ -210,13 +211,13 @@ func (mklines *MkLines) determineDefinedVariables() {
 			}
 		}
 
-		mklines.toolRegistry.ParseToolLine(mkline.Line)
+		mklines.toolRegistry.ParseToolLine(mkline)
 	}
 }
 
 func (mklines *MkLines) DetermineUsedVariables() {
 	for _, mkline := range mklines.mklines {
-		varnames := mkline.determineUsedVariables()
+		varnames := mkline.DetermineUsedVariables()
 		for _, varname := range varnames {
 			mklines.UseVar(mkline, varname)
 		}
@@ -234,7 +235,7 @@ func (mklines *MkLines) setSeenBsdPrefsMk() {
 
 type VaralignBlock struct {
 	info []struct {
-		mkline *MkLine
+		mkline MkLine
 		prefix string
 		align  string
 	}
@@ -245,8 +246,8 @@ type VaralignBlock struct {
 	maxTabWidth    int
 }
 
-func (va *VaralignBlock) Check(mkline *MkLine) {
-	if !G.opts.WarnSpace || mkline.Line.IsMultiline() || mkline.IsComment() || mkline.IsCond() {
+func (va *VaralignBlock) Check(mkline MkLine) {
+	if !G.opts.WarnSpace || mkline.IsMultiline() || mkline.IsComment() || mkline.IsCond() {
 		return
 	}
 	if mkline.IsEmpty() {
@@ -263,7 +264,7 @@ func (va *VaralignBlock) Check(mkline *MkLine) {
 	align := valueAlign[len(prefix):]
 
 	va.info = append(va.info, struct {
-		mkline *MkLine
+		mkline MkLine
 		prefix string
 		align  string
 	}{mkline, prefix, align})
@@ -291,7 +292,7 @@ func (va *VaralignBlock) Check(mkline *MkLine) {
 func (va *VaralignBlock) Finish() {
 	if !va.skip {
 		for _, info := range va.info {
-			if !info.mkline.Line.IsMultiline() {
+			if !info.mkline.IsMultiline() {
 				va.fixalign(info.mkline, info.prefix, info.align)
 			}
 		}
@@ -299,7 +300,7 @@ func (va *VaralignBlock) Finish() {
 	*va = VaralignBlock{}
 }
 
-func (va *VaralignBlock) fixalign(mkline *MkLine, prefix, oldalign string) {
+func (va *VaralignBlock) fixalign(mkline MkLine, prefix, oldalign string) {
 	if mkline.Value() == "" && mkline.VarassignComment() == "" {
 		return
 	}
