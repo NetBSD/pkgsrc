@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.485 2017/01/29 08:01:07 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.486 2017/01/29 08:40:24 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -629,3 +629,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.1.1 [tsutsui 2017-01-29]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.1 [tsutsui 2017-01-29]
 	Updated x11/ruby-gnome2-vte to 3.1.1 [tsutsui 2017-01-29]
+	Updated net/mikutter to 3.5.2 [tsutsui 2017-01-29]
