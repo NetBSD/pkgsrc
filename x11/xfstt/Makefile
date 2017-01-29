@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2015/07/04 16:18:43 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2017/01/29 05:54:21 mef Exp $
 
-DISTNAME=		xfstt-1.9.1
+DISTNAME=		xfstt-1.9.3
 CATEGORIES=		x11 net fonts
 MASTER_SITES=		http://archive.hadrons.org/software/xfstt/
 EXTRACT_SUFX=		.tar.xz
