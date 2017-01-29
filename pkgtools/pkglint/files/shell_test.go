@@ -6,12 +6,14 @@ import (
 )
 
 func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
+	s.Init(c)
 	words, rest := splitIntoShellTokens(dummyLine, "if true; then \\")
 
 	c.Check(words, check.DeepEquals, []string{"if", "true", ";", "then"})
 	c.Check(rest, equals, "\\")
 
-	c.Check(s.Output(), equals, "WARN: Pkglint parse error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain)\n")
+	s.CheckOutputLines(
+		"WARN: Pkglint parse error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain)")
 }
 
 func (s *Suite) Test_splitIntoShellTokens__dollar_slash(c *check.C) {
@@ -111,14 +113,14 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 
 	shline.CheckShellCommandLine("@# Comment")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	shline.CheckShellCommandLine("uname=`uname`; echo $$uname; echo")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Unknown shell command \"uname\".\n"+
-		"WARN: fname:1: Unknown shell command \"echo\".\n"+
-		"WARN: fname:1: Unknown shell command \"echo\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Unknown shell command \"uname\".",
+		"WARN: fname:1: Unknown shell command \"echo\".",
+		"WARN: fname:1: Unknown shell command \"echo\".")
 
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
 	G.Mk = s.NewMkLines("fname",
@@ -127,58 +129,59 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 
 	shline.CheckShellCommandLine("echo ${PKGNAME:Q}") // vucQuotPlain
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: PKGNAME may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.\n"+
-		"NOTE: fname:1: The :Q operator isn't necessary for ${PKGNAME} here.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: PKGNAME may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"NOTE: fname:1: The :Q operator isn't necessary for ${PKGNAME} here.")
 
 	shline.CheckShellCommandLine("echo \"${CFLAGS:Q}\"") // vucQuotDquot
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Please don't use the :Q operator in double quotes.\n"+
-		"WARN: fname:1: CFLAGS may not be used in this file; it would be ok in Makefile, Makefile.common, options.mk, *.mk.\n"+
-		"WARN: fname:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} and make sure the variable appears outside of any quoting characters.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Please don't use the :Q operator in double quotes.",
+		"WARN: fname:1: CFLAGS may not be used in this file; it would be ok in Makefile, Makefile.common, options.mk, *.mk.",
+		"WARN: fname:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} and make sure the variable appears outside of any quoting characters.")
 
 	shline.CheckShellCommandLine("echo '${COMMENT:Q}'") // vucQuotSquot
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: COMMENT may not be used in any file; it is a write-only variable.\n"+
-		"WARN: fname:1: Please move ${COMMENT:Q} outside of any quoting characters.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: COMMENT may not be used in any file; it is a write-only variable.",
+		"WARN: fname:1: Please move ${COMMENT:Q} outside of any quoting characters.")
 
 	shline.CheckShellCommandLine("echo target=$@ exitcode=$$? '$$' \"\\$$\"")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Please use \"${.TARGET}\" instead of \"$@\".\n"+
-		"WARN: fname:1: The $? shell variable is often not available in \"set -e\" mode.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Please use \"${.TARGET}\" instead of \"$@\".",
+		"WARN: fname:1: The $? shell variable is often not available in \"set -e\" mode.")
 
 	shline.CheckShellCommandLine("echo $$@")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: The $@ shell variable should only be used in double quotes.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The $@ shell variable should only be used in double quotes.")
 
 	shline.CheckShellCommandLine("echo \"$$\"") // As seen by make(1); the shell sees: echo "$"
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Pkglint parse error in ShTokenizer.ShAtom at \"$$\\\"\" (quoting=d)\n"+
-		"WARN: fname:1: Pkglint ShellLine.CheckShellCommand: parse error at [\"]\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Pkglint parse error in ShTokenizer.ShAtom at \"$$\\\"\" (quoting=d)",
+		"WARN: fname:1: Pkglint ShellLine.CheckShellCommand: parse error at [\"]")
 
 	shline.CheckShellCommandLine("echo \"\\n\"")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	shline.CheckShellCommandLine("${RUN} for f in *.c; do echo $${f%.c}; done")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	shline.CheckShellCommandLine("${RUN} echo $${variable+set}")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	// Based on mail/thunderbird/Makefile, rev. 1.159
 	shline.CheckShellCommandLine("${RUN} subdir=\"`unzip -c \"$$e\" install.rdf | awk '/re/ { print \"hello\" }'`\"")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.\n"+
-		"WARN: fname:1: Unknown shell command \"unzip\".\n"+
-		"WARN: fname:1: Unknown shell command \"awk\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.",
+		"WARN: fname:1: Unknown shell command \"unzip\".",
+		"WARN: fname:1: Unknown shell command \"awk\".")
 
 	// From mail/thunderbird/Makefile, rev. 1.159
 	shline.CheckShellCommandLine("" +
@@ -189,14 +192,14 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"  ${UNZIP_CMD} -aqo $$e; " +
 		"done")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: XPI_FILES is used but not defined. Spelling mistake?\n"+
-		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.\n"+
-		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?\n"+
-		"WARN: fname:1: Unknown shell command \"awk\".\n"+
-		"WARN: fname:1: Unknown shell command \"${MKDIR}\".\n"+
-		"WARN: fname:1: MKDIR is used but not defined. Spelling mistake?\n"+
-		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: XPI_FILES is used but not defined. Spelling mistake?",
+		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.",
+		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?",
+		"WARN: fname:1: Unknown shell command \"awk\".",
+		"WARN: fname:1: Unknown shell command \"${MKDIR}\".",
+		"WARN: fname:1: MKDIR is used but not defined. Spelling mistake?",
+		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?")
 
 	// From x11/wxGTK28/Makefile
 	shline.CheckShellCommandLine("" +
@@ -206,27 +209,27 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 		"  ${TOOLS_PATH.msgfmt} -c -o \"$${lang%.po}.mo\" \"$${lang}\"; " +
 		"done")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: WRKSRC may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.\n"+
-		"WARN: fname:1: Unknown shell command \"[\".\n"+
-		"WARN: fname:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: WRKSRC may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"WARN: fname:1: Unknown shell command \"[\".",
+		"WARN: fname:1: Unknown shell command \"${TOOLS_PATH.msgfmt}\".")
 
 	shline.CheckShellCommandLine("@cp from to")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: The shell command \"cp\" should not be hidden.\n"+
-		"WARN: fname:1: Unknown shell command \"cp\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The shell command \"cp\" should not be hidden.",
+		"WARN: fname:1: Unknown shell command \"cp\".")
 
 	shline.CheckShellCommandLine("${RUN} ${INSTALL_DATA_DIR} share/pkgbase ${PREFIX}/share/pkgbase")
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: fname:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" instead of \"${INSTALL_DATA_DIR}\".\n"+
-		"WARN: fname:1: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
+	s.CheckOutputLines(
+		"NOTE: fname:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" instead of \"${INSTALL_DATA_DIR}\".",
+		"WARN: fname:1: The INSTALL_*_DIR commands can only handle one directory at a time.")
 
 	// See PR 46570, item "1. It does not"
 	shline.CheckShellCommandLine("for x in 1 2 3; do echo \"$$x\" || exit 1; done")
 
-	c.Check(s.Output(), equals, "") // No warning about missing error checking.
+	s.CheckOutputEmpty() // No warning about missing error checking.
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
@@ -240,8 +243,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 
 	shline.CheckShellCommandLine("echo ${PKGNAME:Q}")
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
@@ -255,9 +258,9 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
 
 	shline.CheckShellCommandLine("echo ${PKGNAME:Q}")
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.\n"+
-		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.",
+		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
@@ -271,8 +274,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
 
 	shline.CheckShellCommandLine("echo ${PKGNAME:Q}")
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".\n")
+	s.CheckOutputLines(
+		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C) {
@@ -293,7 +296,8 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 
 	shline.CheckWord(text, false)
 
-	c.Check(s.Output(), equals, "WARN: fname:1: Unknown shell command \"echo\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Unknown shell command \"echo\".")
 
 	shline.CheckShellCommandLine(text)
 
@@ -302,6 +306,7 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C)
 }
 
 func (s *Suite) Test_ShellLine_CheckShelltext__dollar_without_variable(c *check.C) {
+	s.Init(c)
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
@@ -311,7 +316,7 @@ func (s *Suite) Test_ShellLine_CheckShelltext__dollar_without_variable(c *check.
 
 	shline.CheckShellCommandLine("pax -rwpp -s /.*~$$//g . ${DESTDIR}${PREFIX}")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
@@ -322,47 +327,50 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 
 	shline.CheckWord("${${list}}", false)
 
-	c.Check(s.Output(), equals, "") // No warning for variables that are completely indirect.
+	s.CheckOutputEmpty() // No warning for variables that are completely indirect.
 
 	shline.CheckWord("${SED_FILE.${id}}", false)
 
-	c.Check(s.Output(), equals, "") // No warning for variables that are partly indirect.
+	s.CheckOutputEmpty() // No warning for variables that are partly indirect.
 
 	shline.CheckWord("\"$@\"", false)
 
-	c.Check(s.Output(), equals, "WARN: fname:1: Please use \"${.TARGET}\" instead of \"$@\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: Please use \"${.TARGET}\" instead of \"$@\".")
 
 	shline.CheckWord("${COMMENT:Q}", true)
 
-	c.Check(s.Output(), equals, "WARN: fname:1: COMMENT may not be used in any file; it is a write-only variable.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: COMMENT may not be used in any file; it is a write-only variable.")
 
 	shline.CheckWord("\"${DISTINFO_FILE:Q}\"", true)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: DISTINFO_FILE may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.\n"+
-		"NOTE: fname:1: The :Q operator isn't necessary for ${DISTINFO_FILE} here.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: DISTINFO_FILE may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"NOTE: fname:1: The :Q operator isn't necessary for ${DISTINFO_FILE} here.")
 
 	shline.CheckWord("embed${DISTINFO_FILE:Q}ded", true)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: DISTINFO_FILE may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.\n"+
-		"NOTE: fname:1: The :Q operator isn't necessary for ${DISTINFO_FILE} here.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: DISTINFO_FILE may not be used in this file; it would be ok in Makefile, Makefile.*, *.mk.",
+		"NOTE: fname:1: The :Q operator isn't necessary for ${DISTINFO_FILE} here.")
 
 	shline.CheckWord("s,\\.,,", true)
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	shline.CheckWord("\"s,\\.,,\"", true)
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLine_CheckWord__dollar_without_variable(c *check.C) {
+	s.Init(c)
 	shline := NewShellLine(NewMkLine(NewLine("fname", 1, "# dummy", nil)))
 
 	shline.CheckWord("/.*~$$//g", false) // Typical argument to pax(1).
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
@@ -375,37 +383,41 @@ func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 
 	MkLineChecker{mkline}.checkText("echo \"hello, world\"")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	NewShellLine(mkline).CheckShellCommandLine("echo \"hello, world\"")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: fname:3: Please use \"${ECHO}\" instead of \"echo\".\n")
+	s.CheckOutputLines(
+		"WARN: fname:3: Please use \"${ECHO}\" instead of \"echo\".")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C) {
+	s.Init(c)
 	text := "\tfor f in *.pl; do ${SED} s,@PREFIX@,${PREFIX}, < $f > $f.tmp && ${MV} $f.tmp $f; done"
 
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 3, text, nil)))
 	shline.CheckShellCommandLine(text)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.\n"+
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.\n"+
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.\n"+
-		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.\n"+
-		"NOTE: Makefile:3: Please use the SUBST framework instead of ${SED} and ${MV}.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
+		"WARN: Makefile:3: $f is ambiguous. Use ${f} if you mean a Makefile variable or $$f if you mean a shell variable.",
+		"NOTE: Makefile:3: Please use the SUBST framework instead of ${SED} and ${MV}.")
 
 	shline.CheckShellCommandLine("install -c manpage.1 ${PREFIX}/man/man1/manpage.1")
 
-	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use ${PKGMANDIR} instead of \"man\".\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:3: Please use ${PKGMANDIR} instead of \"man\".")
 
 	shline.CheckShellCommandLine("cp init-script ${PREFIX}/etc/rc.d/service")
 
-	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:3: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.")
 }
 
 func (s *Suite) Test_ShellLine_checkCommandUse(c *check.C) {
+	s.Init(c)
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
 	G.Mk.target = "do-install"
@@ -414,11 +426,13 @@ func (s *Suite) Test_ShellLine_checkCommandUse(c *check.C) {
 
 	shline.checkCommandUse("sed")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: The shell command \"sed\" should not be used in the install phase.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: The shell command \"sed\" should not be used in the install phase.")
 
 	shline.checkCommandUse("cp")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: ${CP} should not be used to install files.\n")
+	s.CheckOutputLines(
+		"WARN: fname:1: ${CP} should not be used to install files.")
 }
 
 func (s *Suite) Test_splitIntoMkWords(c *check.C) {
@@ -441,53 +455,59 @@ func (s *Suite) Test_splitIntoMkWords(c *check.C) {
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__sed_and_mv(c *check.C) {
+	s.Init(c)
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} ${SED} 's,#,// comment:,g' fname > fname.tmp; ${MV} fname.tmp fname", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
-	c.Check(s.Output(), equals, "NOTE: Makefile:85: Please use the SUBST framework instead of ${SED} and ${MV}.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:85: Please use the SUBST framework instead of ${SED} and ${MV}.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__subshell(c *check.C) {
+	s.Init(c)
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} uname=$$(uname)", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
-	c.Check(s.Output(), equals, "WARN: Makefile:85: Invoking subshells via $(...) is not portable enough.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:85: Invoking subshells via $(...) is not portable enough.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_dir(c *check.C) {
+	s.Init(c)
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/dir1 ${DESTDIR}${PREFIX}/dir2", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".\n"+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".\n"+
-		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".",
+		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.")
 
 	shline.CheckShellCommandLine("${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/share/examples/gdchart")
 
 	// No warning about multiple directories, since 0755 is an option, not an argument.
-	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/examples/gdchart\" instead of \"${INSTALL_DATA_DIR}\".\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/examples/gdchart\" instead of \"${INSTALL_DATA_DIR}\".")
 
 	shline.CheckShellCommandLine("${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/dir1 ${PREFIX}/dir2")
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".\n"+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".\n"+
-		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".",
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".",
+		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.")
 }
 
 func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_option_d(c *check.C) {
+	s.Init(c)
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} ${INSTALL} -d ${DESTDIR}${PREFIX}/dir1 ${DESTDIR}${PREFIX}/dir2", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
-	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL} -d\".\n"+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL} -d\".\n")
+	s.CheckOutputLines(
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL} -d\".",
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL} -d\".")
 }
 
 func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C) {
@@ -501,7 +521,8 @@ func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C)
 
 	NewMkLines(lines).Check()
 
-	c.Check(s.Output(), equals, "WARN: ~/Makefile:3--4: A shell comment does not stop at the end of line.\n")
+	s.CheckOutputLines(
+		"WARN: ~/Makefile:3--4: A shell comment does not stop at the end of line.")
 }
 
 func (s *Suite) Test_ShellLine_unescapeBackticks(c *check.C) {
