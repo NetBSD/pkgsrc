@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/08/03 10:22:17 adam Exp $
+# $NetBSD: Makefile,v 1.38 2017/01/29 07:09:18 tsutsui Exp $
 
 DISTNAME=	clutter-gst-2.0.12
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/clutter-gst/2.0/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.clutter-project.org/
+HOMEPAGE=	https://wiki.gnome.org/Projects/Clutter
 COMMENT=	Clutter GStreamer integration
 LICENSE=	gnu-lgpl-v2.1
 
