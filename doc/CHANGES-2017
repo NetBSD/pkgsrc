@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.482 2017/01/29 06:12:19 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.483 2017/01/29 06:27:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -605,3 +605,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/gdk-pixbuf2 to 2.36.4 [tsutsui 2017-01-29]
 	Updated graphics/gdk-pixbuf2-jasper to 2.36.4 [tsutsui 2017-01-29]
 	Updated graphics/gdk-pixbuf2-xlib to 2.36.4 [tsutsui 2017-01-29]
+	Updated x11/unicode-screensaver to 0.5 [mef 2017-01-29]
