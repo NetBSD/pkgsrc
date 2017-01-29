@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2016/10/09 17:49:38 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/01/29 06:09:51 tsutsui Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-pixdata
 bin/gdk-pixbuf-query-loaders
+bin/gdk-pixbuf-thumbnailer
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h
 include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h
@@ -115,6 +116,7 @@ share/locale/eu/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/fa/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/fi/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/fr/LC_MESSAGES/gdk-pixbuf.mo
+share/locale/fur/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/ga/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/gl/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/gu/LC_MESSAGES/gdk-pixbuf.mo
@@ -187,3 +189,4 @@ share/locale/yi/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/zh_CN/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/zh_HK/LC_MESSAGES/gdk-pixbuf.mo
 share/locale/zh_TW/LC_MESSAGES/gdk-pixbuf.mo
+share/thumbnailers/gdk-pixbuf-thumbnailer.thumbnailer
