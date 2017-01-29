@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.484 2017/01/29 06:38:11 mef Exp $
+$NetBSD: CHANGES-2017,v 1.485 2017/01/29 08:01:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -607,3 +607,25 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/gdk-pixbuf2-xlib to 2.36.4 [tsutsui 2017-01-29]
 	Updated x11/unicode-screensaver to 0.5 [mef 2017-01-29]
 	Updated x11/wmweather to 2.4.6 [mef 2017-01-29]
+	Updated devel/ruby-gnome2-atk to 3.1.1 [tsutsui 2017-01-29]
+	Updated devel/ruby-gnome2-gio to 3.1.1 [tsutsui 2017-01-29]
+	Updated devel/ruby-gnome2-glib to 3.1.1 [tsutsui 2017-01-29]
+	Updated devel/ruby-gnome2-gobject-introspection to 3.1.1 [tsutsui 2017-01-29]
+	Updated devel/ruby-gnome2-pango to 3.1.1 [tsutsui 2017-01-29]
+	Updated graphics/ruby-gnome2-cairo-gobject to 3.1.1 [tsutsui 2017-01-29]
+	Updated graphics/ruby-gnome2-clutter to 3.1.1 [tsutsui 2017-01-29]
+	Added graphics/ruby-gnome2-clutter-gdk version 3.1.1 [tsutsui 2017-01-29]
+	Updated graphics/ruby-gnome2-clutter-gtk to 3.1.1 [tsutsui 2017-01-29]
+	Updated graphics/ruby-gnome2-gdk3 to 3.1.1 [tsutsui 2017-01-29]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 3.1.1 [tsutsui 2017-01-29]
+	Updated graphics/ruby-gnome2-rsvg to 3.1.1 [tsutsui 2017-01-29]
+	Updated multimedia/ruby-gnome2-clutter-gstreamer to 3.1.1 [tsutsui 2017-01-29]
+	Updated multimedia/ruby-gnome2-gstreamer to 3.1.1 [tsutsui 2017-01-29]
+	Updated print/ruby-gnome2-poppler to 3.1.1 [tsutsui 2017-01-29]
+	Updated www/ruby-gnome2-webkit-gtk to 3.1.1 [tsutsui 2017-01-29]
+	Updated www/ruby-gnome2-webkit-gtk2 to 3.1.1 [tsutsui 2017-01-29]
+	Updated x11/ruby-gnome2-gtk to 3.1.1 [tsutsui 2017-01-29]
+	Updated x11/ruby-gnome2-gtk3 to 3.1.1 [tsutsui 2017-01-29]
+	Updated x11/ruby-gnome2-gtksourceview2 to 3.1.1 [tsutsui 2017-01-29]
+	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.1 [tsutsui 2017-01-29]
+	Updated x11/ruby-gnome2-vte to 3.1.1 [tsutsui 2017-01-29]
