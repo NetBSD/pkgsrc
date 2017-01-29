@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/29 07:41:10 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/clutter-gdk.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
