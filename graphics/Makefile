@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.758 2017/01/22 10:33:20 wiz Exp $
+# $NetBSD: Makefile,v 1.759 2017/01/29 07:41:49 tsutsui Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -482,6 +482,7 @@ SUBDIR+=	ruby-color-tools
 SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-gnome2-cairo-gobject
 SUBDIR+=	ruby-gnome2-clutter
+SUBDIR+=	ruby-gnome2-clutter-gdk
 SUBDIR+=	ruby-gnome2-clutter-gtk
 SUBDIR+=	ruby-gnome2-gdk3
 SUBDIR+=	ruby-gnome2-gdkpixbuf
