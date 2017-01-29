@@ -1,4 +1,7 @@
-$NetBSD: patch-doc_api_Makefile.in,v 1.1 2016/06/19 16:49:46 joerg Exp $
+$NetBSD: patch-doc_api_Makefile.in,v 1.2 2017/01/29 04:29:54 mef Exp $
+
+Fix dependencies. Ultimately ignore the errors from latex though, since
+undefined references remain.
 
 --- doc/api/Makefile.in.orig	2016-06-19 16:33:29.514161905 +0000
 +++ doc/api/Makefile.in
