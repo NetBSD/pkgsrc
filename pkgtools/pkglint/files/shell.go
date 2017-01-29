@@ -3,6 +3,7 @@ package main
 // Parsing and checking shell commands embedded in Makefiles
 
 import (
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 	"path"
@@ -17,12 +18,11 @@ const (
 )
 
 type ShellLine struct {
-	line   Line
-	mkline *MkLine
+	mkline MkLine
 }
 
-func NewShellLine(mkline *MkLine) *ShellLine {
-	return &ShellLine{mkline.Line, mkline}
+func NewShellLine(mkline MkLine) *ShellLine {
+	return &ShellLine{mkline}
 }
 
 var shellcommandsContextType = &Vartype{lkNone, BtShellCommands, []AclEntry{{"*", aclpAllRuntime}}, false}
@@ -37,7 +37,7 @@ func (shline *ShellLine) CheckWord(token string, checkQuoting bool) {
 		return
 	}
 
-	line := shline.line
+	var line line.Line = shline.mkline
 
 	p := NewMkParser(line, token, false)
 	if varuse := p.VarUse(); varuse != nil && p.EOF() {
@@ -184,7 +184,7 @@ func (shline *ShellLine) checkVaruseToken(parser *MkParser, quoting ShQuoting) b
 	varname := varuse.varname
 
 	if varname == "@" {
-		shline.line.Warnf("Please use \"${.TARGET}\" instead of \"$@\".")
+		shline.mkline.Warnf("Please use \"${.TARGET}\" instead of \"$@\".")
 		Explain(
 			"The variable $@ can easily be confused with the shell variable of",
 			"the same name, which has a completely different meaning.")
@@ -200,7 +200,7 @@ func (shline *ShellLine) checkVaruseToken(parser *MkParser, quoting ShQuoting) b
 	case (quoting == shqSquot || quoting == shqDquot) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
 		// This is ok if we don't allow these variables to have embedded [\$\\\"\'\`].
 	case quoting == shqDquot && varuse.IsQ():
-		shline.line.Warnf("Please don't use the :Q operator in double quotes.")
+		shline.mkline.Warnf("Please don't use the :Q operator in double quotes.")
 		Explain(
 			"Either remove the :Q or the double quotes.  In most cases, it is",
 			"more appropriate to remove the double quotes.")
@@ -224,7 +224,7 @@ func (shline *ShellLine) unescapeBackticks(shellword string, repl *textproc.Pref
 		defer trace.Call(shellword, quoting, "=>", trace.Ref(&unescaped))()
 	}
 
-	line := shline.line
+	var line line.Line = shline.mkline
 	for !repl.EOF() {
 		switch {
 		case repl.AdvanceStr("`"):
@@ -276,7 +276,7 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 		defer trace.Call1(shelltext)()
 	}
 
-	line := shline.line
+	var line line.Line = shline.mkline
 
 	if contains(shelltext, "${SED}") && contains(shelltext, "${MV}") {
 		line.Notef("Please use the SUBST framework instead of ${SED} and ${MV}.")
@@ -325,13 +325,14 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool) {
 		defer trace.Call()()
 	}
 
-	program, err := parseShellProgram(shline.line, shellcmd)
+	var line line.Line = shline.mkline
+	program, err := parseShellProgram(line, shellcmd)
 	if err != nil && contains(shellcmd, "$$(") { // Hack until the shell parser can handle subshells.
-		shline.line.Warnf("Invoking subshells via $(...) is not portable enough.")
+		line.Warnf("Invoking subshells via $(...) is not portable enough.")
 		return
 	}
 	if err != nil {
-		shline.line.Warnf("Pkglint ShellLine.CheckShellCommand: %s", err)
+		line.Warnf("Pkglint ShellLine.CheckShellCommand: %s", err)
 		return
 	}
 
@@ -352,7 +353,7 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool) {
 		}
 
 		if cmd, ok := node.(*MkShPipeline); ok {
-			spc.checkPipeExitcode(shline.line, cmd)
+			spc.checkPipeExitcode(line, cmd)
 		}
 
 		if word, ok := node.(*ShToken); ok {
@@ -365,7 +366,7 @@ func (shline *ShellLine) CheckShellCommands(shellcmds string) {
 	setE := true
 	shline.CheckShellCommand(shellcmds, &setE)
 	if !hasSuffix(shellcmds, ";") {
-		shline.line.Warnf("This shell command list should end with a semicolon.")
+		shline.mkline.Warnf("This shell command list should end with a semicolon.")
 	}
 }
 
@@ -385,7 +386,7 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 		// Shell comments may be hidden, since they cannot have side effects.
 
 	default:
-		tokens, _ := splitIntoShellTokens(shline.line, rest)
+		tokens, _ := splitIntoShellTokens(shline.mkline, rest)
 		if len(tokens) > 0 {
 			cmd := tokens[0]
 			switch cmd {
@@ -398,7 +399,7 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 				"${WARNING_CAT}", "${WARNING_MSG}":
 				break
 			default:
-				shline.line.Warnf("The shell command %q should not be hidden.", cmd)
+				shline.mkline.Warnf("The shell command %q should not be hidden.", cmd)
 				Explain(
 					"Hidden shell commands do not appear on the terminal or in the log",
 					"file when they are executed.  When they fail, the error message",
@@ -412,7 +413,7 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 	}
 
 	if contains(hiddenAndSuppress, "-") {
-		shline.line.Warnf("Using a leading \"-\" to suppress errors is deprecated.")
+		shline.mkline.Warnf("Using a leading \"-\" to suppress errors is deprecated.")
 		Explain(
 			"If you really want to ignore any errors from this command, append",
 			"\"|| ${TRUE}\" to the command.")
@@ -461,7 +462,7 @@ func (scc *SimpleCommandChecker) checkCommandStart() {
 	case scc.handleComment():
 	default:
 		if G.opts.WarnExtra && !(G.Mk != nil && G.Mk.indentation.DependsOn("OPSYS")) {
-			scc.shline.line.Warnf("Unknown shell command %q.", shellword)
+			scc.shline.mkline.Warnf("Unknown shell command %q.", shellword)
 			Explain(
 				"If you want your package to be portable to all platforms that pkgsrc",
 				"supports, you should only use shell commands that are covered by the",
@@ -485,11 +486,11 @@ func (scc *SimpleCommandChecker) handleTool() bool {
 	}
 
 	if !localTool && !G.Mk.tools[shellword] && !G.Mk.tools["g"+shellword] {
-		scc.shline.line.Warnf("The %q tool is used but not added to USE_TOOLS.", shellword)
+		scc.shline.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", shellword)
 	}
 
 	if tool.MustUseVarForm {
-		scc.shline.line.Warnf("Please use \"${%s}\" instead of %q.", tool.Varname, shellword)
+		scc.shline.mkline.Warnf("Please use \"${%s}\" instead of %q.", tool.Varname, shellword)
 	}
 
 	scc.shline.checkCommandUse(shellword)
@@ -504,7 +505,7 @@ func (scc *SimpleCommandChecker) handleForbiddenCommand() bool {
 	shellword := scc.strcmd.Name
 	switch path.Base(shellword) {
 	case "ktrace", "mktexlsr", "strace", "texconfig", "truss":
-		scc.shline.line.Errorf("%q must not be used in Makefiles.", shellword)
+		scc.shline.mkline.Errorf("%q must not be used in Makefiles.", shellword)
 		Explain(
 			"This command must appear in INSTALL scripts, not in the package",
 			"Makefile, so that the package also works if it is installed as a binary",
@@ -524,13 +525,13 @@ func (scc *SimpleCommandChecker) handleCommandVariable() bool {
 
 		if tool := G.globalData.Tools.byVarname[varname]; tool != nil {
 			if !G.Mk.tools[tool.Name] {
-				scc.shline.line.Warnf("The %q tool is used but not added to USE_TOOLS.", tool.Name)
+				scc.shline.mkline.Warnf("The %q tool is used but not added to USE_TOOLS.", tool.Name)
 			}
 			scc.shline.checkCommandUse(shellword)
 			return true
 		}
 
-		if vartype := scc.shline.mkline.getVariableType(varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
+		if vartype := scc.shline.mkline.VariableType(varname); vartype != nil && vartype.basicType.name == "ShellCommand" {
 			scc.shline.checkCommandUse(shellword)
 			return true
 		}
@@ -559,13 +560,13 @@ func (scc *SimpleCommandChecker) handleComment() bool {
 	}
 
 	semicolon := contains(shellword, ";")
-	multiline := scc.shline.line.IsMultiline()
+	multiline := scc.shline.mkline.IsMultiline()
 
 	if semicolon {
-		scc.shline.line.Warnf("A shell comment should not contain semicolons.")
+		scc.shline.mkline.Warnf("A shell comment should not contain semicolons.")
 	}
 	if multiline {
-		scc.shline.line.Warnf("A shell comment does not stop at the end of line.")
+		scc.shline.mkline.Warnf("A shell comment does not stop at the end of line.")
 	}
 
 	if semicolon || multiline {
@@ -595,10 +596,10 @@ func (scc *SimpleCommandChecker) checkAbsolutePathnames() {
 	isSubst := false
 	for _, arg := range scc.strcmd.Args {
 		if !isSubst {
-			LineChecker{scc.shline.line}.CheckAbsolutePathname(arg)
+			LineChecker{scc.shline.mkline}.CheckAbsolutePathname(arg)
 		}
 		if false && isSubst && !matches(arg, `"^[\"\'].*[\"\']$`) {
-			scc.shline.line.Warnf("Substitution commands like %q should always be quoted.", arg)
+			scc.shline.mkline.Warnf("Substitution commands like %q should always be quoted.", arg)
 			Explain(
 				"Usually these substitution commands contain characters like '*' or",
 				"other shell metacharacters that might lead to lookup of matching",
@@ -628,7 +629,7 @@ func (scc *SimpleCommandChecker) checkAutoMkdirs() {
 	for _, arg := range scc.strcmd.Args {
 		if !contains(arg, "$$") && !matches(arg, `\$\{[_.]*[a-z]`) {
 			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
-				scc.shline.line.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
+				scc.shline.mkline.Notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
 				Explain(
 					"Many packages include a list of all needed directories in their",
 					"PLIST file.  In such a case, you can just set AUTO_MKDIRS=yes and",
@@ -662,7 +663,7 @@ func (scc *SimpleCommandChecker) checkInstallMulti() {
 				break
 			default:
 				if prevdir != "" {
-					scc.shline.line.Warnf("The INSTALL_*_DIR commands can only handle one directory at a time.")
+					scc.shline.mkline.Warnf("The INSTALL_*_DIR commands can only handle one directory at a time.")
 					Explain(
 						"Many implementations of install(1) can handle more, but pkgsrc aims",
 						"at maximum portability.")
@@ -680,7 +681,7 @@ func (scc *SimpleCommandChecker) checkPaxPe() {
 	}
 
 	if scc.strcmd.Name == "${PAX}" && scc.strcmd.HasOption("-pe") {
-		scc.shline.line.Warnf("Please use the -pp option to pax(1) instead of -pe.")
+		scc.shline.mkline.Warnf("Please use the -pp option to pax(1) instead of -pe.")
 		Explain(
 			"The -pe option tells pax to preserve the ownership of the files, which",
 			"means that the installed files will belong to the user that has built",
@@ -694,7 +695,7 @@ func (scc *SimpleCommandChecker) checkEchoN() {
 	}
 
 	if scc.strcmd.Name == "${ECHO}" && scc.strcmd.HasOption("-n") {
-		scc.shline.line.Warnf("Please use ${ECHO_N} instead of \"echo -n\".")
+		scc.shline.mkline.Warnf("Please use ${ECHO_N} instead of \"echo -n\".")
 	}
 }
 
@@ -720,7 +721,7 @@ func (spc *ShellProgramChecker) checkConditionalCd(list *MkShList) {
 
 	checkConditionalCd := func(cmd *MkShSimpleCommand) {
 		if NewStrCommand(cmd).Name == "cd" {
-			spc.shline.line.Errorf("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
+			spc.shline.mkline.Errorf("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
 			Explain(
 				"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
 				"shell will exit, no matter if it is protected by an \"if\" or the",
@@ -762,7 +763,7 @@ func (spc *ShellProgramChecker) checkWord(word *ShToken, checkQuoting bool) {
 	spc.shline.CheckWord(word.MkText, checkQuoting)
 }
 
-func (scc *ShellProgramChecker) checkPipeExitcode(line Line, pipeline *MkShPipeline) {
+func (scc *ShellProgramChecker) checkPipeExitcode(line line.Line, pipeline *MkShPipeline) {
 	if trace.Tracing {
 		defer trace.Call()()
 	}
@@ -786,7 +787,7 @@ func (scc *ShellProgramChecker) checkSetE(list *MkShList, eflag *bool) {
 	// Disabled until the shell parser can recognize "command || exit 1" reliably.
 	if false && G.opts.WarnExtra && !*eflag && "the current token" == ";" {
 		*eflag = true
-		scc.shline.line.Warnf("Please switch to \"set -e\" mode before using a semicolon (the one after %q) to separate commands.", "previous token")
+		scc.shline.mkline.Warnf("Please switch to \"set -e\" mode before using a semicolon (the one after %q) to separate commands.", "previous token")
 		Explain(
 			"Normally, when a shell command fails (returns non-zero), the",
 			"remaining commands are still executed.  For example, the following",
@@ -813,7 +814,7 @@ func (shline *ShellLine) checkCommandUse(shellcmd string) {
 		return
 	}
 
-	line := shline.line
+	var line line.Line = shline.mkline
 	switch shellcmd {
 	case "${INSTALL}",
 		"${INSTALL_DATA}", "${INSTALL_DATA_DIR}",
@@ -848,7 +849,7 @@ func (shline *ShellLine) checkCommandUse(shellcmd string) {
 }
 
 // Example: "word1 word2;;;" => "word1", "word2", ";;", ";"
-func splitIntoShellTokens(line Line, text string) (tokens []string, rest string) {
+func splitIntoShellTokens(line line.Line, text string) (tokens []string, rest string) {
 	if trace.Tracing {
 		defer trace.Call(line, text)()
 	}
@@ -880,7 +881,7 @@ func splitIntoShellTokens(line Line, text string) (tokens []string, rest string)
 
 // Example: "word1 word2;;;" => "word1", "word2;;;"
 // Compare devel/bmake/files/str.c, function brk_string.
-func splitIntoMkWords(line Line, text string) (words []string, rest string) {
+func splitIntoMkWords(line line.Line, text string) (words []string, rest string) {
 	if trace.Tracing {
 		defer trace.Call(line, text)()
 	}

@@ -11,6 +11,7 @@ import (
 	"testing"
 
 	check "gopkg.in/check.v1"
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/textproc"
 	"netbsd.org/pkglint/trace"
 )
@@ -61,6 +62,18 @@ func (s *Suite) Output() string {
 	return output
 }
 
+func (s *Suite) CheckOutputEmpty() {
+	s.c().Check(s.Output(), equals, "")
+}
+
+func (s *Suite) CheckOutputLines(expectedLines ...string) {
+	expectedOutput := ""
+	for _, expectedLine := range expectedLines {
+		expectedOutput += expectedLine + "\n"
+	}
+	s.c().Check(s.Output(), equals, expectedOutput)
+}
+
 // Arguments are either (lineno, orignl) or (lineno, orignl, textnl).
 func (s *Suite) NewRawLines(args ...interface{}) []*RawLine {
 	rawlines := make([]*RawLine, len(args)/2)
@@ -81,8 +94,8 @@ func (s *Suite) NewRawLines(args ...interface{}) []*RawLine {
 	return rawlines[:j]
 }
 
-func (s *Suite) NewLines(fname string, texts ...string) []Line {
-	result := make([]Line, len(texts))
+func (s *Suite) NewLines(fname string, texts ...string) []line.Line {
+	result := make([]line.Line, len(texts))
 	for i, text := range texts {
 		textnl := text + "\n"
 		result[i] = NewLine(fname, i+1, text, s.NewRawLines(i+1, textnl))

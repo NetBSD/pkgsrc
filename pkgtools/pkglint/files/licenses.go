@@ -24,7 +24,7 @@ func checkToplevelUnusedLicenses() {
 }
 
 type LicenseChecker struct {
-	MkLine *MkLine
+	MkLine MkLine
 }
 
 func (lc *LicenseChecker) Check(value string, op MkOperator) {
@@ -47,7 +47,7 @@ func (lc *LicenseChecker) checkLicenseName(license string) {
 	var licenseFile string
 	if G.Pkg != nil {
 		if licenseFileValue, ok := G.Pkg.varValue("LICENSE_FILE"); ok {
-			licenseFile = G.CurrentDir + "/" + lc.MkLine.resolveVarsInRelativePath(licenseFileValue, false)
+			licenseFile = G.CurrentDir + "/" + lc.MkLine.ResolveVarsInRelativePath(licenseFileValue, false)
 		}
 	}
 	if licenseFile == "" {

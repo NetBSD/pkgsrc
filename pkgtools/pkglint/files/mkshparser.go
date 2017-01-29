@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/trace"
 	"strconv"
 )
 
-func parseShellProgram(line Line, program string) (list *MkShList, err error) {
+func parseShellProgram(line line.Line, program string) (list *MkShList, err error) {
 	if trace.Tracing {
 		defer trace.Call(program)()
 	}

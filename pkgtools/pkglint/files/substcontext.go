@@ -12,7 +12,7 @@ type SubstContext struct {
 	filterCmd string
 }
 
-func (ctx *SubstContext) Varassign(mkline *MkLine) {
+func (ctx *SubstContext) Varassign(mkline MkLine) {
 	if !G.opts.WarnExtra {
 		return
 	}
@@ -85,7 +85,7 @@ func (ctx *SubstContext) IsComplete() bool {
 		(len(ctx.sed) != 0 || len(ctx.vars) != 0 || ctx.filterCmd != "")
 }
 
-func (ctx *SubstContext) Finish(mkline *MkLine) {
+func (ctx *SubstContext) Finish(mkline MkLine) {
 	if ctx.id == "" || !G.opts.WarnExtra {
 		return
 	}
@@ -116,14 +116,14 @@ func (ctx *SubstContext) varname(varbase string) string {
 	}
 }
 
-func (ctx *SubstContext) dup(mkline *MkLine, pstr *string, varname, value string) {
+func (ctx *SubstContext) dup(mkline MkLine, pstr *string, varname, value string) {
 	if *pstr != "" {
 		mkline.Warnf("Duplicate definition of %q.", varname)
 	}
 	*pstr = value
 }
 
-func (ctx *SubstContext) duplist(mkline *MkLine, plist *[]string, varname string, op MkOperator, value string) {
+func (ctx *SubstContext) duplist(mkline MkLine, plist *[]string, varname string, op MkOperator, value string) {
 	if len(*plist) > 0 && op != opAssignAppend {
 		mkline.Warnf("All but the first %q lines should use the \"+=\" operator.", varname)
 	}

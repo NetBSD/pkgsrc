@@ -16,6 +16,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"netbsd.org/pkglint/line"
 	"netbsd.org/pkglint/regex"
 	"path"
 	"strconv"
@@ -32,28 +33,6 @@ func (rline *RawLine) String() string {
 	return strconv.Itoa(rline.Lineno) + ":" + rline.textnl
 }
 
-type Line interface {
-	fmt.Stringer
-
-	Filename() string
-	Linenos() string
-	Text() string
-	IsMultiline() bool
-	IsChanged() bool
-
-	Fatalf(fmt string, args ...interface{})
-	Errorf(fmt string, args ...interface{})
-	Warnf(fmt string, args ...interface{})
-	Notef(fmt string, args ...interface{})
-	ReferenceFrom(Line) string
-
-	AutofixReplace(from, to string) bool
-	AutofixReplaceRegexp(from regex.RegexPattern, to string) bool
-	AutofixInsertBefore(text string) bool
-	AutofixDelete() bool
-	AutofixMark(reason string)
-}
-
 type LineImpl struct {
 	fname          string
 	firstLine      int32 // Zero means not applicable, -1 means EOF
@@ -66,22 +45,22 @@ type LineImpl struct {
 	autofixMessage string
 }
 
-func NewLine(fname string, lineno int, text string, rawLines []*RawLine) Line {
+func NewLine(fname string, lineno int, text string, rawLines []*RawLine) line.Line {
 	return NewLineMulti(fname, lineno, lineno, text, rawLines)
 }
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
-func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines []*RawLine) Line {
+func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines []*RawLine) line.Line {
 	return &LineImpl{fname, int32(firstLine), int32(lastLine), text, rawLines, false, nil, nil, ""}
 }
 
 // NewLineEOF creates a dummy line for logging, with the "line number" EOF.
-func NewLineEOF(fname string) Line {
+func NewLineEOF(fname string) line.Line {
 	return NewLineMulti(fname, -1, 0, "", nil)
 }
 
 // NewLineWhole creates a dummy line for logging messages that affect a file as a whole.
-func NewLineWhole(fname string) Line {
+func NewLineWhole(fname string) line.Line {
 	return NewLine(fname, 0, "", nil)
 }
 
@@ -120,7 +99,7 @@ func (line *LineImpl) Linenos() string {
 	}
 }
 
-func (line *LineImpl) ReferenceFrom(other Line) string {
+func (line *LineImpl) ReferenceFrom(other line.Line) string {
 	if line.fname != other.Filename() {
 		return cleanpath(relpath(path.Dir(other.Filename()), line.fname)) + ":" + line.Linenos()
 	}
@@ -259,4 +238,8 @@ func (line *LineImpl) AutofixMark(reason string) {
 	line.RememberAutofix(reason)
 	line.logAutofix()
 	line.changed = true
+}
+
+func init() {
+	line.NewLineEOF = NewLineEOF
 }
