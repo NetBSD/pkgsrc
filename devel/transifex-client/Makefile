@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/08/11 14:49:01 taca Exp $
+# $NetBSD: Makefile,v 1.10 2017/01/29 14:57:42 rillig Exp $
 
 DISTNAME=	${VERS}
 PKGNAME=	transifex-client-${VERS}
@@ -10,10 +10,10 @@ HOMEPAGE=	https://github.com/transifex/${GITHUB_PROJECT}
 COMMENT=	Transifex Command-line Client
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+= ${PYPKGPREFIX}-urllib3>=1.14:../../www/py-urllib3
+DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.14:../../www/py-urllib3
 
 VERS=		0.12.1
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
