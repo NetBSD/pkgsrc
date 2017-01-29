@@ -5,6 +5,7 @@ import (
 )
 
 func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
+	s.Init(c)
 	pkg := NewPackage("dummy")
 	pkg.vardef["PKGNAME"] = NewMkLine(NewLine("Makefile", 5, "PKGNAME=dummy", nil))
 
@@ -18,7 +19,7 @@ func (s *Suite) Test_Package_pkgnameFromDistname(c *check.C) {
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:C/beta/.0./}", "fspanel-0.8beta1"), equals, "${DISTNAME:C/beta/.0./}")
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S/-0$/.0/1}", "aspell-af-0.50-0"), equals, "aspell-af-0.50.0")
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
@@ -32,7 +33,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 		"DISTNAME=9term",
 		"CATEGORIES=x11"))
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 
 	pkg.ChecklinesPackageMakefileVarorder(s.NewMkLines("Makefile",
 		mkrcsid,
@@ -42,9 +43,9 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder(c *check.C) {
 		"",
 		".include \"../../mk/bsd.pkg.mk\""))
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:6: The canonical position for the required variable COMMENT is here.\n"+
-		"WARN: Makefile:6: The canonical position for the required variable LICENSE is here.\n")
+	s.CheckOutputLines(
+		"WARN: Makefile:6: The canonical position for the required variable COMMENT is here.",
+		"WARN: Makefile:6: The canonical position for the required variable LICENSE is here.")
 }
 
 // https://mail-index.netbsd.org/tech-pkg/2017/01/18/msg017698.html
@@ -61,7 +62,7 @@ func (s *Suite) Test_Package_ChecklinesPackageMakefileVarorder__MASTER_SITES(c *
 		"MASTER_SITES=\thttp://example.org/",
 		"MASTER_SITES+=\thttp://mirror.example.org/"))
 
-	c.Check(s.Output(), equals, "") // No warning that "MASTER_SITES appears too late"
+	s.CheckOutputEmpty() // No warning that "MASTER_SITES appears too late"
 }
 
 func (s *Suite) Test_Package_getNbpart(c *check.C) {
@@ -93,6 +94,7 @@ func (s *Suite) Test_Package_determineEffectivePkgVars__precedence(c *check.C) {
 }
 
 func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
+	s.Init(c)
 	G.Pkg = NewPackage("category/pkgbase")
 	G.CurPkgsrcdir = "../.."
 	G.Pkg.EffectivePkgname = "package-1.0nb15"
@@ -107,13 +109,14 @@ func (s *Suite) Test_Package_checkPossibleDowngrade(c *check.C) {
 
 	G.Pkg.checkPossibleDowngrade()
 
-	c.Check(s.Output(), equals, "WARN: category/pkgbase/Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES:116) to 1.0nb15\n")
+	s.CheckOutputLines(
+		"WARN: category/pkgbase/Makefile:5: The package is being downgraded from 1.8 (see ../../doc/CHANGES:116) to 1.0nb15")
 
 	G.globalData.LastChange["category/pkgbase"].Version = "1.0nb22"
 
 	G.Pkg.checkPossibleDowngrade()
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_checkdirPackage(c *check.C) {
@@ -124,11 +127,11 @@ func (s *Suite) Test_checkdirPackage(c *check.C) {
 
 	checkdirPackage(s.tmpdir)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: ~/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?\n"+
-		"WARN: ~/distinfo: File not found. Please run \"@BMAKE@ makesum\".\n"+
-		"ERROR: ~/Makefile: Each package must define its LICENSE.\n"+
-		"WARN: ~/Makefile: No COMMENT given.\n")
+	s.CheckOutputLines(
+		"WARN: ~/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?",
+		"WARN: ~/distinfo: File not found. Please run \"@BMAKE@ makesum\".",
+		"ERROR: ~/Makefile: Each package must define its LICENSE.",
+		"WARN: ~/Makefile: No COMMENT given.")
 }
 
 func (s *Suite) Test_checkdirPackage__meta_package_without_license(c *check.C) {
@@ -142,7 +145,8 @@ func (s *Suite) Test_checkdirPackage__meta_package_without_license(c *check.C) {
 
 	checkdirPackage(s.TmpDir())
 
-	c.Check(s.Output(), equals, "WARN: ~/Makefile: No COMMENT given.\n") // No error about missing LICENSE.
+	s.CheckOutputLines(
+		"WARN: ~/Makefile: No COMMENT given.") // No error about missing LICENSE.
 }
 
 func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
@@ -201,11 +205,11 @@ func (s *Suite) Test_Package__varuse_at_load_time(c *check.C) {
 
 	(&Pkglint{}).Main("pkglint", "-q", "-Wperm", s.tmpdir+"/category/pkgbase")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: ~/category/pkgbase/Makefile:8: To use the tool \"FALSE\" at load time, bsd.prefs.mk has to be included before.\n"+
-		"WARN: ~/category/pkgbase/Makefile:9: To use the tool \"NICE\" at load time, bsd.prefs.mk has to be included before.\n"+
-		"WARN: ~/category/pkgbase/Makefile:10: To use the tool \"TRUE\" at load time, bsd.prefs.mk has to be included before.\n"+
-		"WARN: ~/category/pkgbase/Makefile:16: To use the tool \"NICE\" at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.\n")
+	s.CheckOutputLines(
+		"WARN: ~/category/pkgbase/Makefile:8: To use the tool \"FALSE\" at load time, bsd.prefs.mk has to be included before.",
+		"WARN: ~/category/pkgbase/Makefile:9: To use the tool \"NICE\" at load time, bsd.prefs.mk has to be included before.",
+		"WARN: ~/category/pkgbase/Makefile:10: To use the tool \"TRUE\" at load time, bsd.prefs.mk has to be included before.",
+		"WARN: ~/category/pkgbase/Makefile:16: To use the tool \"NICE\" at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.")
 }
 
 func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
@@ -223,7 +227,7 @@ func (s *Suite) Test_Package_loadPackageMakefile(c *check.C) {
 
 	pkg.loadPackageMakefile(makefile)
 
-	c.Check(s.Output(), equals, "")
+	s.CheckOutputEmpty()
 }
 
 func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
@@ -265,8 +269,8 @@ func (s *Suite) Test_Package_conditionalAndUnconditionalInclude(c *check.C) {
 
 	checkdirPackage("category/package")
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: ~/category/package/options.mk:3: Unknown option \"zlib\".\n"+
-		"WARN: ~/category/package/options.mk:4: \"../../devel/zlib/buildlink3.mk\" is included conditionally here (depending on PKG_OPTIONS) and unconditionally in Makefile:5.\n"+
-		"WARN: ~/category/package/options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is included unconditionally here and conditionally in Makefile:7 (depending on OPSYS).\n")
+	s.CheckOutputLines(
+		"WARN: ~/category/package/options.mk:3: Unknown option \"zlib\".",
+		"WARN: ~/category/package/options.mk:4: \"../../devel/zlib/buildlink3.mk\" is included conditionally here (depending on PKG_OPTIONS) and unconditionally in Makefile:5.",
+		"WARN: ~/category/package/options.mk:6: \"../../sysutils/coreutils/buildlink3.mk\" is included unconditionally here and conditionally in Makefile:7 (depending on OPSYS).")
 }

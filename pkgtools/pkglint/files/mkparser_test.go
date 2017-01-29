@@ -5,6 +5,7 @@ import (
 )
 
 func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
+	s.Init(c)
 	checkRest := func(input string, expectedTokens []*MkToken, expectedRest string) {
 		p := NewMkParser(dummyLine, input, true)
 		actualTokens := p.MkTokens()
@@ -106,15 +107,17 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	check("${VAR:ts\\124}", varuse("VAR", "ts\\124"))       // Or even decimal.
 
 	check("$(GNUSTEP_USER_ROOT)", varuseText("$(GNUSTEP_USER_ROOT)", "GNUSTEP_USER_ROOT"))
-	c.Check(s.Output(), equals, "WARN: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.\n")
+	s.CheckOutputLines(
+		"WARN: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.")
 
 	checkRest("${VAR)", nil, "${VAR)") // Opening brace, closing parenthesis
 	checkRest("$(VAR}", nil, "$(VAR}") // Opening parenthesis, closing brace
-	c.Check(s.Output(), equals, "")    // Warnings are only printed for balanced expressions.
+	s.CheckOutputEmpty()               // Warnings are only printed for balanced expressions.
 
 	check("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}@}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}@"))
 	check("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}")) // Missing @ at the end
-	c.Check(s.Output(), equals, "WARN: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".\n")
+	s.CheckOutputLines(
+		"WARN: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".")
 
 	checkRest("hello, ${W:L:tl}orld", []*MkToken{
 		literal("hello, "),
@@ -221,11 +224,11 @@ func (s *Suite) Test_MkParser__varuse_parentheses_autofix(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, ""+
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(P1)\" with \"${P1}\".\n"+
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(P2)\" with \"${P2}\".\n"+
-		"AUTOFIX: ~/Makefile:2: Replacing \"$(P3:Q)\" with \"${P3:Q}\".\n"+
-		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
+	s.CheckOutputLines(
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P1)\" with \"${P1}\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P2)\" with \"${P2}\".",
+		"AUTOFIX: ~/Makefile:2: Replacing \"$(P3:Q)\" with \"${P3:Q}\".",
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.")
 	c.Check(s.LoadTmpFile("Makefile"), equals, ""+
 		mkrcsid+"\n"+
 		"COMMENT=${P1} ${P2}) ${P3:Q} ${BRACES}\n")
