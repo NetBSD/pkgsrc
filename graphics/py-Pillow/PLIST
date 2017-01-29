@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/08/13 08:07:22 wen Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/01/29 12:46:45 adam Exp $
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -173,7 +173,6 @@ ${PYSITELIB}/PIL/MpoImagePlugin.pyo
 ${PYSITELIB}/PIL/MspImagePlugin.py
 ${PYSITELIB}/PIL/MspImagePlugin.pyc
 ${PYSITELIB}/PIL/MspImagePlugin.pyo
-${PYSITELIB}/PIL/OleFileIO-README.md
 ${PYSITELIB}/PIL/OleFileIO.py
 ${PYSITELIB}/PIL/OleFileIO.pyc
 ${PYSITELIB}/PIL/OleFileIO.pyo
@@ -277,5 +276,6 @@ ${PYSITELIB}/PIL/features.pyo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
