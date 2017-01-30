@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.507 2017/01/30 17:26:49 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.508 2017/01/30 19:50:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -657,3 +657,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Eval-LineNumbers version 0.1 [mef 2017-01-30]
 	Added sysutils/p5-Daemon-Generic version 0.84 [mef 2017-01-30]
 	Updated x11/gtk3 to 3.22.7 [prlw1 2017-01-30]
+	Added math/amath version 1.6.2 [leot 2017-01-30]
