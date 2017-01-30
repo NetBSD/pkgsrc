@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/01/24 08:18:48 alnsn Exp $
+# $NetBSD: Makefile,v 1.13 2017/01/30 21:16:34 alnsn Exp $
 #
 
 DISTNAME=	lpeg-1.0.1
@@ -19,7 +19,11 @@ TEST_TARGET=	test
 BUILD_TARGET.Darwin=	macosx
 BUILD_TARGET.*=		linux
 
-REPLACE_LUA+=	test.lua
+SUBST_CLASSES+=		test
+SUBST_MESSAGE.test=	Fixing shebang in test.lua
+SUBST_STAGE.test=	post-build
+SUBST_FILES.test=	test.lua
+SUBST_SED.test=		-e 's,/usr/bin/env *lua,${LUA_INTERPRETER},'
 
 INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR} ${LUA_DOCDIR}
 
