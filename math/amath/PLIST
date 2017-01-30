@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/30 19:49:26 leot Exp $
+bin/amath
