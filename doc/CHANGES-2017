@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.505 2017/01/30 14:25:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.506 2017/01/30 14:37:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -650,3 +650,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-PPIx-Regexp to 0.051 [mef 2017-01-30]
 	Updated print/mupdf to 1.10anb2 [leot 2017-01-30]
 	Updated www/squid3 to 3.5.24 [adam 2017-01-30]
+	Added devel/p5-Data-ObjectDriver version 0.14 [mef 2017-01-30]
+	Added devel/p5-File-Flock version 2014.01 [mef 2017-01-30]
+	Added devel/p5-Data-Structure-Util version 0.16 [mef 2017-01-30]
+	Added devel/p5-TheSchwartz version 1.12 [mef 2017-01-30]
+	Added devel/p5-Eval-LineNumbers version 0.1 [mef 2017-01-30]
+	Added sysutils/p5-Daemon-Generic version 0.84 [mef 2017-01-30]
