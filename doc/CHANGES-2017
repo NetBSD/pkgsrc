@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.491 2017/01/30 01:45:27 wen Exp $
+$NetBSD: CHANGES-2017,v 1.492 2017/01/30 01:48:25 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -636,3 +636,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/gstreamer1 to 1.10.0nb1 [maya 2017-01-29]
 	Updated devel/p5-Moose to 2.2001 [wen 2017-01-30]
 	Updated www/p5-Mojolicious to 7.23 [wen 2017-01-30]
+	Updated devel/p5-Specio to 0.34 [wen 2017-01-30]
