@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.504 2017/01/30 14:06:15 leot Exp $
+$NetBSD: CHANGES-2017,v 1.505 2017/01/30 14:25:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/libdiscid to 0.6.2 [mef 2017-01-30]
 	Updated devel/p5-PPIx-Regexp to 0.051 [mef 2017-01-30]
 	Updated print/mupdf to 1.10anb2 [leot 2017-01-30]
+	Updated www/squid3 to 3.5.24 [adam 2017-01-30]
