@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2350 2017/01/24 07:32:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2351 2017/01/30 14:37:25 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -904,6 +904,7 @@ SUBDIR+=	p5-Data-Hierarchy
 SUBDIR+=	p5-Data-Integer
 SUBDIR+=	p5-Data-MessagePack
 SUBDIR+=	p5-Data-Munge
+SUBDIR+=	p5-Data-ObjectDriver
 SUBDIR+=	p5-Data-OptList
 SUBDIR+=	p5-Data-Page
 SUBDIR+=	p5-Data-Page-Pageset
@@ -918,6 +919,7 @@ SUBDIR+=	p5-Data-Section-Simple
 SUBDIR+=	p5-Data-Serializer
 SUBDIR+=	p5-Data-ShowTable
 SUBDIR+=	p5-Data-Stag
+SUBDIR+=	p5-Data-Structure-Util
 SUBDIR+=	p5-Data-Taxi
 SUBDIR+=	p5-Data-TemporaryBag
 SUBDIR+=	p5-Data-UUID
@@ -980,6 +982,7 @@ SUBDIR+=	p5-EV
 SUBDIR+=	p5-Env-Path
 SUBDIR+=	p5-Error
 SUBDIR+=	p5-Eval-Closure
+SUBDIR+=	p5-Eval-LineNumbers
 SUBDIR+=	p5-Event
 SUBDIR+=	p5-Event-ExecFlow
 SUBDIR+=	p5-Event-RPC
@@ -1025,6 +1028,7 @@ SUBDIR+=	p5-File-Find-Rule-Perl
 SUBDIR+=	p5-File-Find-Rule-Permissions
 SUBDIR+=	p5-File-Find-Rule-VCS
 SUBDIR+=	p5-File-Flat
+SUBDIR+=	p5-File-Flock
 SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-HomeDir
 SUBDIR+=	p5-File-LibMagic
@@ -1586,6 +1590,7 @@ SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Test-utf8
 SUBDIR+=	p5-Test2-Plugin-NoWarnings
 SUBDIR+=	p5-Test2-Suite
+SUBDIR+=	p5-TheSchwartz
 SUBDIR+=	p5-Throwable
 SUBDIR+=	p5-Tie-Array-AsHash
 SUBDIR+=	p5-Tie-Array-Sorted
