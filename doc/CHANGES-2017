@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.490 2017/01/30 01:40:33 wen Exp $
+$NetBSD: CHANGES-2017,v 1.491 2017/01/30 01:45:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -635,3 +635,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/py-Pillow to 4.0.0 [adam 2017-01-29]
 	Updated multimedia/gstreamer1 to 1.10.0nb1 [maya 2017-01-29]
 	Updated devel/p5-Moose to 2.2001 [wen 2017-01-30]
+	Updated www/p5-Mojolicious to 7.23 [wen 2017-01-30]
