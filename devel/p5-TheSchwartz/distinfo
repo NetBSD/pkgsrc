@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/01/30 14:14:07 mef Exp $
+
+SHA1 (TheSchwartz-1.12.tar.gz) = 0d82a2a45ef4ae19a436762f29b63f9324ce2866
+RMD160 (TheSchwartz-1.12.tar.gz) = dc4afdb75d618adac7d73bd0b24549fa94b6c7c6
+SHA512 (TheSchwartz-1.12.tar.gz) = 87c691c6aee0603a68d4116e9254308331974042d8578d6df086bc6f0f07783d757951f8c3a35227b9d716e94ccecbcea1f92ab488005384c2caf2ba9aecae59
+Size (TheSchwartz-1.12.tar.gz) = 55047 bytes
