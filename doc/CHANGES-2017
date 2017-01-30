@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.497 2017/01/30 03:05:37 wen Exp $
+$NetBSD: CHANGES-2017,v 1.498 2017/01/30 04:19:43 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -642,3 +642,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-IO-Compress to 2.070 [wen 2017-01-30]
 	Updated textproc/p5-PDF-Create to 1.41 [wen 2017-01-30]
 	Updated lang/go to 1.7.5 [wen 2017-01-30]
+	Updated audio/moc to 2.5.0nb4 [maya 2017-01-30]
