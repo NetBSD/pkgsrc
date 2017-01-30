@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.686 2017/01/05 16:44:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.687 2017/01/30 14:37:25 mef Exp $
 #
 
 COMMENT=	System utilities
@@ -387,6 +387,7 @@ SUBDIR+=	openxenmanager
 SUBDIR+=	osname
 SUBDIR+=	p5-Config-Augeas
 SUBDIR+=	p5-Config-Simple
+SUBDIR+=	p5-Daemon-Generic
 SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-Inplace
 SUBDIR+=	p5-File-Remove
