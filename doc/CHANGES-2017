@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.510 2017/01/31 10:10:05 leot Exp $
+$NetBSD: CHANGES-2017,v 1.511 2017/01/31 10:11:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -660,3 +660,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added math/amath version 1.6.2 [leot 2017-01-30]
 	Updated graphics/girara to 0.2.7 [leot 2017-01-31]
 	Updated print/zathura to 0.3.7 [leot 2017-01-31]
+	Updated print/zathura-ps to 0.2.4 [leot 2017-01-31]
