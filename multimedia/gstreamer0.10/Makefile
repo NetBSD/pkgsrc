@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2016/07/09 06:38:39 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2017/01/31 15:54:39 martin Exp $
 #
 
 DISTNAME=		gstreamer-0.10.36
@@ -51,10 +51,11 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0nb1
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
-PKG_SUPPORTED_OPTIONS=	gstcheck
+PKG_SUPPORTED_OPTIONS=	gstcheck introspection
+PKG_SUGGESTED_OPTIONS=	introspection
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	gstcheck
+PLIST_VARS+=	gstcheck introspection
 .if !empty(PKG_OPTIONS:Mgstcheck)
 .include "../../devel/check/buildlink3.mk"
 PLIST.gstcheck=	yes
@@ -64,8 +65,12 @@ TEST_TARGET=	check-torture
 .else
 CONFIGURE_ARGS+= --disable-check
 .endif
-
-.include "../../devel/glib2/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mintrospection)
+PLIST.introspection=	yes
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-introspection
+.endif
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
