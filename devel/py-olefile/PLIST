@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/01/31 14:04:02 leot Exp $
+${PYSITELIB}/OleFileIO_PL.py
+${PYSITELIB}/OleFileIO_PL.pyc
+${PYSITELIB}/OleFileIO_PL.pyo
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/olefile/CONTRIBUTORS.txt
+${PYSITELIB}/olefile/LICENSE.txt
+${PYSITELIB}/olefile/README.html
+${PYSITELIB}/olefile/README.rst
+${PYSITELIB}/olefile/__init__.py
+${PYSITELIB}/olefile/__init__.pyc
+${PYSITELIB}/olefile/__init__.pyo
+${PYSITELIB}/olefile/olefile.py
+${PYSITELIB}/olefile/olefile.pyc
+${PYSITELIB}/olefile/olefile.pyo
