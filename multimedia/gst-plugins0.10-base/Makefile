@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/07/09 06:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2017/01/31 16:43:55 martin Exp $
 #
 
 .include "Makefile.common"
@@ -16,11 +16,24 @@ MAKE_JOBS_SAFE=		no
 PKGCONFIG_OVERRIDE+=	pkgconfig/*.pc.in
 REPLACE_PERL+=		tools/gst-visualise-m.m
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gst-plugins0.10-base
+PKG_SUPPORTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	introspection
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	introspection
+
 # only useful if gstreamer was built with the "gstcheck" option
 TEST_TARGET=		check-torture
 
 # soft dependency only, .pc file not needed
 #.include "../../textproc/iso-codes/buildlink3.mk"
 
+.if !empty(PKG_OPTIONS:Mintrospection)
+PLIST.introspection=	yes
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-introspection
+.endif
+
 .include "../../mk/bsd.pkg.mk"
