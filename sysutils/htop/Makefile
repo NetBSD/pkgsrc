@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/07/22 05:45:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/01/31 22:24:28 maya Exp $
 
 DISTNAME=	htop-2.0.2
 CATEGORIES=	sysutils
@@ -14,8 +14,6 @@ GNU_CONFIGURE=	yes
 USE_NCURSES=	yes # uses ncurses mouse definitions
 
 USE_LIBTOOL=	yes
-
-#ONLY_FOR_PLATFORM=     Linux-*-* FreeBSD-*-* NetBSD-*-*
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
