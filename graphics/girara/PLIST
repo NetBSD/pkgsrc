@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/14 13:38:37 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/01/31 10:09:15 leot Exp $
 include/girara/callbacks.h
 include/girara/commands.h
 include/girara/completion.h
@@ -8,6 +8,7 @@ include/girara/datastructures.h
 include/girara/entry.h
 include/girara/girara.h
 include/girara/input-history.h
+include/girara/log.h
 include/girara/macros.h
 include/girara/session.h
 include/girara/settings.h
