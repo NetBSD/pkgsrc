@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.508 2017/01/30 19:50:28 leot Exp $
+$NetBSD: CHANGES-2017,v 1.509 2017/01/31 10:09:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -658,3 +658,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/p5-Daemon-Generic version 0.84 [mef 2017-01-30]
 	Updated x11/gtk3 to 3.22.7 [prlw1 2017-01-30]
 	Added math/amath version 1.6.2 [leot 2017-01-30]
+	Updated graphics/girara to 0.2.7 [leot 2017-01-31]
