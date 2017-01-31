@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2012/10/30 12:54:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/01/31 15:54:39 martin Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -90,10 +90,10 @@ include/gstreamer-0.10/gst/net/gstnet.h
 include/gstreamer-0.10/gst/net/gstnetclientclock.h
 include/gstreamer-0.10/gst/net/gstnettimepacket.h
 include/gstreamer-0.10/gst/net/gstnettimeprovider.h
-lib/girepository-1.0/Gst-0.10.typelib
-lib/girepository-1.0/GstBase-0.10.typelib
-lib/girepository-1.0/GstController-0.10.typelib
-lib/girepository-1.0/GstNet-0.10.typelib
+${PLIST.introspection}lib/girepository-1.0/Gst-0.10.typelib
+${PLIST.introspection}lib/girepository-1.0/GstBase-0.10.typelib
+${PLIST.introspection}lib/girepository-1.0/GstController-0.10.typelib
+${PLIST.introspection}lib/girepository-1.0/GstNet-0.10.typelib
 lib/gstreamer-0.10/libgstcoreelements.la
 lib/gstreamer-0.10/libgstcoreindexers.la
 lib/libgstbase-0.10.la
@@ -116,10 +116,10 @@ man/man1/gst-typefind-0.10.1
 man/man1/gst-xmlinspect-0.10.1
 man/man1/gst-xmllaunch-0.10.1
 share/aclocal/gst-element-check-0.10.m4
-share/gir-1.0/Gst-0.10.gir
-share/gir-1.0/GstBase-0.10.gir
-share/gir-1.0/GstController-0.10.gir
-share/gir-1.0/GstNet-0.10.gir
+${PLIST.introspection}share/gir-1.0/Gst-0.10.gir
+${PLIST.introspection}share/gir-1.0/GstBase-0.10.gir
+${PLIST.introspection}share/gir-1.0/GstController-0.10.gir
+${PLIST.introspection}share/gir-1.0/GstNet-0.10.gir
 share/gtk-doc/html/gstreamer-0.10/GstBin.html
 share/gtk-doc/html/gstreamer-0.10/GstBus.html
 share/gtk-doc/html/gstreamer-0.10/GstChildProxy.html
