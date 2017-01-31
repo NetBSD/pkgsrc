@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2017/01/29 12:46:45 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/01/31 14:08:06 leot Exp $
 
 DISTNAME=	Pillow-4.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
 
@@ -11,6 +12,8 @@ COMMENT=	Python Imaging Library (Fork)
 LICENSE=	hpnd
 
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
+
+DEPENDS+=	${PYPKGPREFIX}-olefile-*:../../devel/py-olefile
 
 SUBST_CLASSES+=		fix-path
 SUBST_MESSAGE.fix-path=	Fixing paths.
