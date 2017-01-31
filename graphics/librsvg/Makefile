@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2016/08/03 10:22:15 adam Exp $
+# $NetBSD: Makefile,v 1.88 2017/01/31 17:06:38 martin Exp $
 
 DISTNAME=	librsvg-2.40.15
 PKGREVISION=	1
@@ -19,7 +19,6 @@ USE_TOOLS+=		pkg-config gmake
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tools
-CONFIGURE_ARGS+=	--enable-introspection
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
@@ -31,8 +30,22 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 
 CONFIGURE_ARGS.Darwin+=	--disable-Bsymbolic
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.librsvg
+PKG_SUPPORTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	introspection
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	introspection
+
+.if !empty(PKG_OPTIONS:Mintrospection)
+PLIST.introspection=	yes
+CONFIGURE_ARGS+=	--enable-introspection
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-introspection
+.endif
+
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
