@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2017/01/22 20:48:07 maya Exp $
+# $NetBSD: Makefile,v 1.23 2017/01/31 13:26:22 ryoon Exp $
 
-DISTNAME=	corebird-1.4.1
-PKGREVISION=	1
+DISTNAME=	corebird-1.4.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=baedert/}
 GITHUB_PROJECT=	corebird
-GITHUB_RELEASE=	1.4.1
+GITHUB_RELEASE=	1.4.2
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
