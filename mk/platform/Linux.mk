@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.70 2017/02/01 03:00:35 sevan Exp $
+# $NetBSD: Linux.mk,v 1.71 2017/02/01 07:25:28 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -50,33 +50,33 @@ _OPSYS_EMULDIR.linux32=	# empty
 
 # Support Debian/Ubuntu's multiarch hierarchy.
 .if exists(/etc/debian_version)
-.if !empty(MACHINE_ARCH:Mx86_64)
+.  if !empty(MACHINE_ARCH:Mx86_64)
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu
-.endif
-.if !empty(MACHINE_ARCH:Mi386)
+.  endif
+.  if !empty(MACHINE_ARCH:Mi386)
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/i386-linux-gnu /usr/lib/i386-linux-gnu
-.endif
-.if !empty(MACHINE_ARCH:Marm*)
-.if exists(/etc/ld.so.conf.d/arm-linux-gnueabihf.conf)
+.  endif
+.  if !empty(MACHINE_ARCH:Marm*)
+.    if exists(/etc/ld.so.conf.d/arm-linux-gnueabihf.conf)
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabihf:/usr/lib/arm-linux-gnueabihf
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabihf /usr/lib/arm-linux-gnueabihf
-.else
+.    else
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}:/lib/arm-linux-gnueabi:/usr/lib/arm-linux-gnueabi
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX} /lib/arm-linux-gnueabi /usr/lib/arm-linux-gnueabi
-.endif
-.endif
-.if !empty(MACHINE_ARCH:Maarch64)
+.    endif
+.  endif
+.  if !empty(MACHINE_ARCH:Maarch64)
 LIBABISUFFIX?=		/aarch64-linux-gnu
 _OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
-.endif
-.if !empty(MACHINE_ARCH:Mppc64le)
+.  endif
+.  if !empty(MACHINE_ARCH:Mppc64le)
 LIBABISUFFIX?=		/powerpc64le-linux-gnu
 _OPSYS_SYSTEM_RPATH=	/lib:/usr/lib:/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib /usr/lib /lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
-.endif
+.  endif
 .else
 _OPSYS_SYSTEM_RPATH=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
