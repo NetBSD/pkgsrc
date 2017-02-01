@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.526 2017/02/01 13:16:00 mef Exp $
+$NetBSD: CHANGES-2017,v 1.527 2017/02/01 13:28:36 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -676,3 +676,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/bozohttpd to 20170201 [mrg 2017-02-01]
 	Updated sysutils/wbm-virtual-server to 5.05 [mef 2017-02-01]
 	Removed sysutils/wbm-passwd [mef 2017-02-01]
+	Updated multimedia/gstreamer1 to 1.10.3 [maya 2017-02-01]
