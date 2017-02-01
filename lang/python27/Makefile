@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2017/01/26 23:10:35 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2017/02/01 11:31:50 jperkin Exp $
 
 .include "dist.mk"
 
@@ -208,5 +208,6 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
