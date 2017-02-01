@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.12 2015/11/25 12:53:29 jperkin Exp $
+# $NetBSD: wbm.mk,v 1.13 2017/02/01 13:00:44 mef Exp $
 #
 # Makefile fragment for Webmin modules
 #
@@ -15,6 +15,7 @@
 #
 # WBM_DEPEND_MODULES	Depending webmin modules.
 #
+LICENSE=	modified-bsd
 
 .include "version.mk"
 
