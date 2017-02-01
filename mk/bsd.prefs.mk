@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.388 2016/10/27 10:31:05 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.389 2017/02/01 09:55:07 sevan Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -769,8 +769,8 @@ LP64PLATFORMS=		*-*-aarch64 *-*-aarch64eb *-*-alpha *-*-ia64 \
 #
 _BIGENDIANCPUS=		coldfire hppa m68000 m68k mips64eb mipseb or1k \
 			powerpc powerpc64 sh3eb sparc sparc64
-_LITTLEENDIANCPUS=	alpha i386 ia64 mips64el mipsel riscv32 riscv64 \
-			sh3el vax x86_64
+_LITTLEENDIANCPUS=	alpha i386 ia64 mips64el mipsel powerpc64le riscv32 \
+			riscv64 sh3el vax x86_64
 
 # piles of ARM variants
 _ARMCPUS+=		arm earm earmhf earmv4 earmv5 earmv6 earmv6hf
