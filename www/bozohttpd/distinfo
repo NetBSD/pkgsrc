@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.65 2016/04/15 20:59:16 mrg Exp $
+$NetBSD: distinfo,v 1.66 2017/02/01 13:05:36 mrg Exp $
 
-SHA1 (bozohttpd-20160415.tar.bz2) = 4dddd40db0a004741e48ea4d3b4c4b850b9e41f5
-RMD160 (bozohttpd-20160415.tar.bz2) = 949a2dce5c195ce8270307563e892fa8b821b52b
-SHA512 (bozohttpd-20160415.tar.bz2) = 0377b472a0e26ad4cfeb2b0eac084ef3da0ea8d41f3f81da021bed373a14dec85a57ed5bd790826c204ef293a1aa05d29ea9a57afe3a5fe87159f71ad38ced30
-Size (bozohttpd-20160415.tar.bz2) = 55045 bytes
+SHA1 (bozohttpd-20170201.tar.bz2) = 725f1a4d1f8782126079608b479cf196ccb5e1d6
+RMD160 (bozohttpd-20170201.tar.bz2) = e1605eeb335896cf099cfd2eabd011fb9277e918
+SHA512 (bozohttpd-20170201.tar.bz2) = f8fba17a454b3825bf0562072bf0acf5890639d83e3bc5c6b7e87f13860d37a3dfc3fd155bd9873d5201b85f31185b24677c22db1cb303fd556f22afa8b7895e
+Size (bozohttpd-20170201.tar.bz2) = 55730 bytes
 SHA1 (patch-aa) = 2e70d3d10aa8bc228331cc1a229ef04106aca210
 SHA1 (patch-ab) = a1a56a188084440ab907995c7728e435961c5fbd
 SHA1 (patch-cgi-bozo.c) = 420f981575d7fa1a96ac7049116b9bf64de719df
