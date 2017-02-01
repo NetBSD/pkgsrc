@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.530 2017/02/01 15:28:11 leot Exp $
+$NetBSD: CHANGES-2017,v 1.531 2017/02/01 18:19:59 agc Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -680,3 +680,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-IO-Event version 0.813 [mef 2017-02-01]
 	Updated sysutils/vifm to 0.8.2 [mef 2017-02-01]
 	Added www/py-robobrowser version 0.5.3 [leot 2017-02-01]
+	Updated security/netpgpverify to 20170201 [agc 2017-02-01]
+	Updated security/libnetpgpverify to 20170201 [agc 2017-02-01]
