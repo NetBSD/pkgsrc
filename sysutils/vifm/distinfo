@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:34 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/02/01 14:17:21 mef Exp $
 
-SHA1 (vifm-0.7.8.tar.bz2) = 644c49df27bb5b89dac93757152f99b65dee9363
-RMD160 (vifm-0.7.8.tar.bz2) = 46247edf337e5c0b383de4995fe10ea1e259a6da
-SHA512 (vifm-0.7.8.tar.bz2) = ac70055739aeee915ccf5b22bd497ff691d159d9c0aaa4d38de69db33538a5360c9cabe0678ce51f7bce26adfc5657860d071725a14adf577f263bd180fab676
-Size (vifm-0.7.8.tar.bz2) = 623154 bytes
-SHA1 (patch-src_utils_mntent.c) = 8fe977c3c7647cbb4cdeec6e64e8842fda3ee870
+SHA1 (vifm-0.8.2.tar.bz2) = 1ae4179b2b9a43c440290af0ecc91b9235203be7
+RMD160 (vifm-0.8.2.tar.bz2) = 2e451ba17197b01b63c65e245d656e5e361ac990
+SHA512 (vifm-0.8.2.tar.bz2) = e2c9f84b8a24542f7153ef8a27b38ba8c251cb0ded72401f5e93fa92540d51b5c368a73147b9fa4a883dda5f880c1d8585c1b4879d46c0e00dea87eacecfdb25
+Size (vifm-0.8.2.tar.bz2) = 892414 bytes
+SHA1 (patch-src_utils_mntent.c) = bde775d1942d8ce6097c55af5f03bdb99635d144
