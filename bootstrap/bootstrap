@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.237 2017/01/10 12:30:00 jperkin Exp $
+# $NetBSD: bootstrap,v 1.238 2017/02/01 09:54:21 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -714,7 +714,14 @@ Linux)
 	fi
 	need_sed=no
 	set_opsys=no
-	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
+	case `uname -m` in
+	ppc64le)
+		machine_arch=powerpc64le
+			;;
+	*)
+		machine_arch=`uname -m | sed -e 's/i.86/i386/'`
+			;;
+	esac
 	;;
 Minix)
 	root_group=operator
@@ -866,6 +873,7 @@ powerpc/64)	abi=64	machine_arch=powerpc64	;;
 powerpc/*)	abi=32	machine_arch=powerpc	;;
 powerpc64/32)	abi=32	machine_arch=powerpc	;;
 powerpc64/*)	abi=64	machine_arch=powerpc64	;;
+powerpc64le/*)	abi=64	machine_arch=powerpc64le;;
 # "sparc" can support 64-bit, e.g. SunOS, defaults to 32-bit.
 sparc/64)	abi=64	machine_arch=sparc64	;;
 sparc/*)	abi=32	machine_arch=sparc	;;
