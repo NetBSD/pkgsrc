@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2016/06/02 12:25:47 hauke Exp $
+# $NetBSD: Makefile,v 1.40 2017/02/01 09:29:18 he Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
 PKGNAME=	tcl-scotty-${DIST_VERS}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net tcl
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
