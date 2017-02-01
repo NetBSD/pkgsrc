@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.529 2017/02/01 14:17:37 mef Exp $
+$NetBSD: CHANGES-2017,v 1.530 2017/02/01 15:28:11 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -679,3 +679,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/gstreamer1 to 1.10.3 [maya 2017-02-01]
 	Added devel/p5-IO-Event version 0.813 [mef 2017-02-01]
 	Updated sysutils/vifm to 0.8.2 [mef 2017-02-01]
+	Added www/py-robobrowser version 0.5.3 [leot 2017-02-01]
