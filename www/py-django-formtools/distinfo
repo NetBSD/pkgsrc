@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/13 20:02:26 adam Exp $
+$NetBSD: distinfo,v 1.2 2017/02/01 18:58:57 adam Exp $
 
-SHA1 (django-formtools-1.0.tar.gz) = 840ee7a79af1c56b385ec32d48cd01aa10650c27
-RMD160 (django-formtools-1.0.tar.gz) = cb9d051f78624b4d727c46ec227b625829917b8a
-SHA512 (django-formtools-1.0.tar.gz) = 828ea5f5057d7ec72ab6cc6613e8af950f16595115bba658892e15aec39498f6e7c3dcb5c50ac4fc7ef54e12a640ed93e76a968f41bec59388630cdc43c9e3ce
-Size (django-formtools-1.0.tar.gz) = 70505 bytes
+SHA1 (django-formtools-2.0.tar.gz) = e8f66d69f821a16e018610372e26a6109f456292
+RMD160 (django-formtools-2.0.tar.gz) = 4915d6dc89741988fdb4e01d356c433084ad5806
+SHA512 (django-formtools-2.0.tar.gz) = 462f46243aa59e1b3d129da520947908a9912884a727ba0a29eacad6d205ed98be81de45a1987bd13edff53892dd29c7672f432764ce59879e240ad2b39d9b49
+Size (django-formtools-2.0.tar.gz) = 70043 bytes
