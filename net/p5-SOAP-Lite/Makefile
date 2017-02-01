@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2016/07/09 02:05:35 wen Exp $
+# $NetBSD: Makefile,v 1.49 2017/02/01 13:31:52 mef Exp $
 
 DISTNAME=	SOAP-Lite-1.20
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,8 @@ DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
 
 BUILD_DEPENDS+=	p5-XML-Parser-Lite>=0:../../textproc/p5-XML-Parser-Lite
+# for make test
+BUILD_DEPENDS+=	p5-Test-Warn>=0:../../devel/p5-Test-Warn
 
 SUPERSEDES+=	p5-SOAP-Transport-TCP-[0-9]*
 
