@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.527 2017/02/01 13:28:36 maya Exp $
+$NetBSD: CHANGES-2017,v 1.528 2017/02/01 13:38:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -677,3 +677,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/wbm-virtual-server to 5.05 [mef 2017-02-01]
 	Removed sysutils/wbm-passwd [mef 2017-02-01]
 	Updated multimedia/gstreamer1 to 1.10.3 [maya 2017-02-01]
+	Added devel/p5-IO-Event version 0.813 [mef 2017-02-01]
