@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/01 15:27:14 leot Exp $
+
+SHA1 (robobrowser-0.5.3.tar.gz) = 82e6e6efa161d0d9bf73677332ad97981d760d9a
+RMD160 (robobrowser-0.5.3.tar.gz) = d2192d22f67b09cd07730784123f1a92ecccd6fa
+SHA512 (robobrowser-0.5.3.tar.gz) = d26d351d65fc963459b49ff277c2c412165ee70b75f17581f61991ef6000cdf574648b72e65ef778425f7023a14109f02b1a0e53b67d9ac793941d0382060f54
+Size (robobrowser-0.5.3.tar.gz) = 22040 bytes
