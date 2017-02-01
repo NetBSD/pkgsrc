@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.10 2016/03/03 03:02:21 dsainty Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.11 2017/02/01 01:58:52 yyamano Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -131,9 +131,10 @@ extract)
 	# "mozilla-rootcert-<n>.pem" in the current working directory.
 	#
 	# gawk will corrupt the output data stream in multibyte locales,
-	# so force the locale to "C".
+	# so force the locale to "C". 
+	# Setting just LANG is not enough. LC_ALL has higher priority.
 	#
-	cat "$certfile" | LANG=C ${AWK} -v OPENSSL=${OPENSSL} '
+	cat "$certfile" | LC_ALL=C LANG=C ${AWK} -v OPENSSL=${OPENSSL} '
 	function base8to10(o,	octal, decimal, power, i, n) {
 		decimal = 0
 		n = split(o, octal, "")
