@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.532 2017/02/01 18:59:54 adam Exp $
+$NetBSD: CHANGES-2017,v 1.533 2017/02/01 23:51:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/netpgpverify to 20170201 [agc 2017-02-01]
 	Updated security/libnetpgpverify to 20170201 [agc 2017-02-01]
 	Updated www/py-django-formtools to 2.0 [adam 2017-02-01]
+	Updated sysutils/wbm-cyrus-imapd to 1.6.2 [mef 2017-02-01]
