@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.14 2015/11/18 10:41:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/02/01 13:03:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlalchemy/__init__.py
 ${PYSITELIB}/sqlalchemy/__init__.pyc
@@ -72,9 +73,15 @@ ${PYSITELIB}/sqlalchemy/dialects/mysql/base.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/cymysql.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/cymysql.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/cymysql.pyo
+${PYSITELIB}/sqlalchemy/dialects/mysql/enumerated.py
+${PYSITELIB}/sqlalchemy/dialects/mysql/enumerated.pyc
+${PYSITELIB}/sqlalchemy/dialects/mysql/enumerated.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/gaerdbms.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/gaerdbms.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/gaerdbms.pyo
+${PYSITELIB}/sqlalchemy/dialects/mysql/json.py
+${PYSITELIB}/sqlalchemy/dialects/mysql/json.pyc
+${PYSITELIB}/sqlalchemy/dialects/mysql/json.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/mysqlconnector.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/mysqlconnector.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/mysqlconnector.pyo
@@ -90,6 +97,12 @@ ${PYSITELIB}/sqlalchemy/dialects/mysql/pymysql.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/pyodbc.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/pyodbc.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/pyodbc.pyo
+${PYSITELIB}/sqlalchemy/dialects/mysql/reflection.py
+${PYSITELIB}/sqlalchemy/dialects/mysql/reflection.pyc
+${PYSITELIB}/sqlalchemy/dialects/mysql/reflection.pyo
+${PYSITELIB}/sqlalchemy/dialects/mysql/types.py
+${PYSITELIB}/sqlalchemy/dialects/mysql/types.pyc
+${PYSITELIB}/sqlalchemy/dialects/mysql/types.pyo
 ${PYSITELIB}/sqlalchemy/dialects/mysql/zxjdbc.py
 ${PYSITELIB}/sqlalchemy/dialects/mysql/zxjdbc.pyc
 ${PYSITELIB}/sqlalchemy/dialects/mysql/zxjdbc.pyo
@@ -105,18 +118,21 @@ ${PYSITELIB}/sqlalchemy/dialects/oracle/cx_oracle.pyo
 ${PYSITELIB}/sqlalchemy/dialects/oracle/zxjdbc.py
 ${PYSITELIB}/sqlalchemy/dialects/oracle/zxjdbc.pyc
 ${PYSITELIB}/sqlalchemy/dialects/oracle/zxjdbc.pyo
-${PYSITELIB}/sqlalchemy/dialects/postgres.py
-${PYSITELIB}/sqlalchemy/dialects/postgres.pyc
-${PYSITELIB}/sqlalchemy/dialects/postgres.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/__init__.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/__init__.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/__init__.pyo
+${PYSITELIB}/sqlalchemy/dialects/postgresql/array.py
+${PYSITELIB}/sqlalchemy/dialects/postgresql/array.pyc
+${PYSITELIB}/sqlalchemy/dialects/postgresql/array.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/base.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/base.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/base.pyo
-${PYSITELIB}/sqlalchemy/dialects/postgresql/constraints.py
-${PYSITELIB}/sqlalchemy/dialects/postgresql/constraints.pyc
-${PYSITELIB}/sqlalchemy/dialects/postgresql/constraints.pyo
+${PYSITELIB}/sqlalchemy/dialects/postgresql/dml.py
+${PYSITELIB}/sqlalchemy/dialects/postgresql/dml.pyc
+${PYSITELIB}/sqlalchemy/dialects/postgresql/dml.pyo
+${PYSITELIB}/sqlalchemy/dialects/postgresql/ext.py
+${PYSITELIB}/sqlalchemy/dialects/postgresql/ext.pyc
+${PYSITELIB}/sqlalchemy/dialects/postgresql/ext.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/hstore.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/hstore.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/hstore.pyo
@@ -132,6 +148,9 @@ ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2cffi.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2cffi.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/psycopg2cffi.pyo
+${PYSITELIB}/sqlalchemy/dialects/postgresql/pygresql.py
+${PYSITELIB}/sqlalchemy/dialects/postgresql/pygresql.pyc
+${PYSITELIB}/sqlalchemy/dialects/postgresql/pygresql.pyo
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pypostgresql.py
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pypostgresql.pyc
 ${PYSITELIB}/sqlalchemy/dialects/postgresql/pypostgresql.pyo
@@ -255,6 +274,9 @@ ${PYSITELIB}/sqlalchemy/ext/horizontal_shard.pyo
 ${PYSITELIB}/sqlalchemy/ext/hybrid.py
 ${PYSITELIB}/sqlalchemy/ext/hybrid.pyc
 ${PYSITELIB}/sqlalchemy/ext/hybrid.pyo
+${PYSITELIB}/sqlalchemy/ext/indexable.py
+${PYSITELIB}/sqlalchemy/ext/indexable.pyc
+${PYSITELIB}/sqlalchemy/ext/indexable.pyo
 ${PYSITELIB}/sqlalchemy/ext/instrumentation.py
 ${PYSITELIB}/sqlalchemy/ext/instrumentation.pyc
 ${PYSITELIB}/sqlalchemy/ext/instrumentation.pyo
@@ -441,9 +463,6 @@ ${PYSITELIB}/sqlalchemy/testing/assertsql.pyo
 ${PYSITELIB}/sqlalchemy/testing/config.py
 ${PYSITELIB}/sqlalchemy/testing/config.pyc
 ${PYSITELIB}/sqlalchemy/testing/config.pyo
-${PYSITELIB}/sqlalchemy/testing/distutils_run.py
-${PYSITELIB}/sqlalchemy/testing/distutils_run.pyc
-${PYSITELIB}/sqlalchemy/testing/distutils_run.pyo
 ${PYSITELIB}/sqlalchemy/testing/engines.py
 ${PYSITELIB}/sqlalchemy/testing/engines.pyc
 ${PYSITELIB}/sqlalchemy/testing/engines.pyo
