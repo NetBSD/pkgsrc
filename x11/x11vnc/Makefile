@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2017/01/09 08:07:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2017/02/01 11:17:15 maya Exp $
 #
 
 DISTNAME=	x11vnc-0.9.13
@@ -28,6 +28,7 @@ INSTALL_DIRS=	x11vnc classes
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
