@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/12/22 01:49:16 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/01 12:54:57 mef Exp $
 
 WBM_NAME=	ipfilter
-PKGREVISION=	1
 
 WBM_DEPEND_MODULES+=	net
 
