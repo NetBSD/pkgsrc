@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.531 2017/02/01 18:19:59 agc Exp $
+$NetBSD: CHANGES-2017,v 1.532 2017/02/01 18:59:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -682,3 +682,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-robobrowser version 0.5.3 [leot 2017-02-01]
 	Updated security/netpgpverify to 20170201 [agc 2017-02-01]
 	Updated security/libnetpgpverify to 20170201 [agc 2017-02-01]
+	Updated www/py-django-formtools to 2.0 [adam 2017-02-01]
