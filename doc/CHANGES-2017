@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.524 2017/02/01 13:06:18 mrg Exp $
+$NetBSD: CHANGES-2017,v 1.525 2017/02/01 13:08:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -674,3 +674,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/webmin to 1.831 [mef 2017-02-01]
 	Updated databases/py-sqlalchemy to 1.1.5 [adam 2017-02-01]
 	Updated www/bozohttpd to 20170201 [mrg 2017-02-01]
+	Updated sysutils/wbm-virtual-server to 5.05 [mef 2017-02-01]
