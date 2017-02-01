@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/12/22 01:30:17 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/01 12:54:59 mef Exp $
 
 WBM_NAME=	syslog
-PKGREVISION=	1
 
 COMMENT=	Webmin module to configure the syslog server view log files
 

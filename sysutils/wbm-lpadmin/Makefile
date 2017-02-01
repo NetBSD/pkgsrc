@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/12/22 01:16:57 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/01 12:54:57 mef Exp $
 
 WBM_NAME=	lpadmin
-PKGREVISION=	1
 
 COMMENT=	Webmin module to manage local and remote printers
 

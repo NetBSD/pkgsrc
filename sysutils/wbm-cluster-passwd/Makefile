@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2012/12/22 03:47:33 dholland Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/01 12:54:56 mef Exp $
 
 WBM_NAME=	cluster-passwd
-PKGREVISION=	1
 
 WBM_DEPEND_MODULES=	cluster-useradmin
 
