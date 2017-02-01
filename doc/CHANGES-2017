@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.521 2017/02/01 09:29:55 he Exp $
+$NetBSD: CHANGES-2017,v 1.522 2017/02/01 13:01:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -671,3 +671,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-olefile version 0.44 [leot 2017-01-31]
 	Updated graphics/py-Pillow to 4.0.0nb1 [leot 2017-01-31]
 	Updated net/tcl-scotty to 2.1.11nb13 [he 2017-02-01]
+	Updated sysutils/webmin to 1.831 [mef 2017-02-01]
