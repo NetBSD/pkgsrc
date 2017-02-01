@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/12/20 23:02:17 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/01 12:54:58 mef Exp $
 
 WBM_NAME=	net
-PKGREVISION=	1
 
 COMMENT=	Webmin module for network configuration
 
