@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.528 2017/02/01 13:38:45 mef Exp $
+$NetBSD: CHANGES-2017,v 1.529 2017/02/01 14:17:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -678,3 +678,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed sysutils/wbm-passwd [mef 2017-02-01]
 	Updated multimedia/gstreamer1 to 1.10.3 [maya 2017-02-01]
 	Added devel/p5-IO-Event version 0.813 [mef 2017-02-01]
+	Updated sysutils/vifm to 0.8.2 [mef 2017-02-01]
