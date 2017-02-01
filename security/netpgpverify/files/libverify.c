@@ -306,6 +306,10 @@ struct pgpv_cursor_t {
 #define MIN(a,b)			(((a)<(b))?(a):(b))
 #endif
 
+#ifndef howmany
+#define howmany(x, y)   		(((x)+((y)-1))/(y))
+#endif
+
 #define BITS_TO_BYTES(b)		(((b) + (CHAR_BIT - 1)) / CHAR_BIT)
 
 /* packet types */
