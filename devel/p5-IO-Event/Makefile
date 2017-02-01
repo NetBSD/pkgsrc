@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/02/01 13:35:33 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/01 13:36:15 mef Exp $
 
 DISTNAME=	IO-Event-0.813
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	devel
+CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MU/MUIR/modules/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
