@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.687 2017/01/30 14:37:25 mef Exp $
+# $NetBSD: Makefile,v 1.688 2017/02/01 13:13:23 mef Exp $
 #
 
 COMMENT=	System utilities
@@ -613,7 +613,6 @@ SUBDIR+=	wbm-mount
 SUBDIR+=	wbm-mysql
 SUBDIR+=	wbm-net
 SUBDIR+=	wbm-openslp
-SUBDIR+=	wbm-passwd
 SUBDIR+=	wbm-postfix
 SUBDIR+=	wbm-postgresql
 SUBDIR+=	wbm-qmailadmin
