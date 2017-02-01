@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:24:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/01 13:31:52 mef Exp $
 
 DISTNAME=	XML-Parser-Lite-0.721
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-ParserLite/
 COMMENT=	Lightweight regexp-based XML parser
 LICENSE=	${PERL5_LICENSE}
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 
 PERL5_PACKLIST=		auto/XML/Parser/Lite/.packlist
 

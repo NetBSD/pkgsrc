@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/06/08 19:25:04 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/02/01 13:31:52 mef Exp $
 #
 
 DISTNAME=	HTML-Scrubber-0.15
@@ -14,6 +14,11 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-HTML-Parser>=3.47:../../www/p5-HTML-Parser
 BUILD_DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-CPAN-Meta-[0-9]*:../../devel/p5-Test-CPAN-Meta
+BUILD_DEPENDS+=	p5-Test-EOL-[0-9]*:../../devel/p5-Test-EOL
+BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
 
 PERL5_MODULE_TYPE=	Module::Build
 
