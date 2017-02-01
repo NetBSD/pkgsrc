@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/01 13:35:33 mef Exp $
+
+SHA1 (IO-Event-0.813.tar.gz) = a7d37fd9608419d107c30056916df2f4307f851a
+RMD160 (IO-Event-0.813.tar.gz) = 523c97878f1ccb69a5637f5b9e6ee49c5e2f3dac
+SHA512 (IO-Event-0.813.tar.gz) = 234fe3037e9600b843b7db094b2bb67ff6d573d5a8cf48cec813d5cf6a996ae32bfde0eb35f8593c0cfe4d2d56a56882183e5fa291498df845a3c9fcb0ba7293
+Size (IO-Event-0.813.tar.gz) = 34477 bytes
