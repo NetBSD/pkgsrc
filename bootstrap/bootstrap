@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.238 2017/02/01 09:54:21 sevan Exp $
+# $NetBSD: bootstrap,v 1.239 2017/02/01 10:14:09 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -714,13 +714,11 @@ Linux)
 	fi
 	need_sed=no
 	set_opsys=no
-	case `uname -m` in
-	ppc64le)
-		machine_arch=powerpc64le
-			;;
-	*)
-		machine_arch=`uname -m | sed -e 's/i.86/i386/'`
-			;;
+	machine_arch=`uname -m`
+	# Override machine_arch where required.
+	case "$machine_arch" in
+	i?86)		machine_arch=i386 ;;
+	ppc64le)	machine_arch=powerpc64le ;;
 	esac
 	;;
 Minix)
