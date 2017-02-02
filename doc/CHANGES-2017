@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.534 2017/02/02 00:27:56 rodent Exp $
+$NetBSD: CHANGES-2017,v 1.535 2017/02/02 07:55:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -685,3 +685,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-formtools to 2.0 [adam 2017-02-01]
 	Updated sysutils/wbm-cyrus-imapd to 1.6.2 [mef 2017-02-01]
 	Updated devel/ruby-redmine_lightbox2 to 0.3.2 [rodent 2017-02-02]
+	Updated www/py-django-mptt to 0.8.7 [adam 2017-02-02]
+	Updated www/py-django-reversion to 2.0.8 [adam 2017-02-02]
+	Updated www/py-django-treebeard to 4.1.0 [adam 2017-02-02]
+	Updated www/py-django-cms to 3.4.2 [adam 2017-02-02]
