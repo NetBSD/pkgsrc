@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/01/04 23:05:13 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/02 00:27:24 rodent Exp $
 #
 
-GITHUB_TAG=	v0.3.1
+GITHUB_TAG=	v0.3.2
 DISTNAME=	${GITHUB_TAG}
 GITHUB_PROJECT=	redmine_lightbox2
 PKGNAME=	${RUBY_PKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME:S/v//1}
