@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2016/12/02 12:28:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2017/02/02 07:54:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -599,6 +599,9 @@ ${PYSITELIB}/cms/models/static_placeholder.pyo
 ${PYSITELIB}/cms/models/titlemodels.py
 ${PYSITELIB}/cms/models/titlemodels.pyc
 ${PYSITELIB}/cms/models/titlemodels.pyo
+${PYSITELIB}/cms/operations.py
+${PYSITELIB}/cms/operations.pyc
+${PYSITELIB}/cms/operations.pyo
 ${PYSITELIB}/cms/page_rendering.py
 ${PYSITELIB}/cms/page_rendering.pyc
 ${PYSITELIB}/cms/page_rendering.pyo
@@ -1492,6 +1495,9 @@ ${PYSITELIB}/cms/tests/test_placeholder.pyo
 ${PYSITELIB}/cms/tests/test_placeholder_app_admin.py
 ${PYSITELIB}/cms/tests/test_placeholder_app_admin.pyc
 ${PYSITELIB}/cms/tests/test_placeholder_app_admin.pyo
+${PYSITELIB}/cms/tests/test_placeholder_operation_signals.py
+${PYSITELIB}/cms/tests/test_placeholder_operation_signals.pyc
+${PYSITELIB}/cms/tests/test_placeholder_operation_signals.pyo
 ${PYSITELIB}/cms/tests/test_plugins.py
 ${PYSITELIB}/cms/tests/test_plugins.pyc
 ${PYSITELIB}/cms/tests/test_plugins.pyo
