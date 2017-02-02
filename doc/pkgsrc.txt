@@ -1150,7 +1150,7 @@ fetch_pkg_vulnerabilities=YES
 
 to fetch the vulnerability list from the daily security script. The system is
 set to audit the packages by default but can be set explicitly, if desired (not
-required), by adding the follwing line to /etc/security.conf:
+required), by adding the following line to /etc/security.conf:
 
 check_pkg_vulnerabilities=YES
 
@@ -2766,7 +2766,7 @@ COMMENT=        Web Authoring System
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
 
-On the first line of output above, an artificial space has been added betweeen
+On the first line of output above, an artificial space has been added between
 NetBSD and $, this is a workaround to prevent CVS expanding to the filename of
 the guide.
 
@@ -3616,7 +3616,7 @@ Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
 @comment $NetBSD $
 
-An artificial space has been added betweeen NetBSD and $, this is a workaround
+An artificial space has been added between NetBSD and $, this is a workaround
 here to prevent CVS expanding to the filename of the guide. When adding the RCS
 ID the space should be ommited.
 
@@ -3700,7 +3700,7 @@ ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
 
-An artificial space has been added betweeen NetBSD and $, this is a workaround
+An artificial space has been added between NetBSD and $, this is a workaround
 here to prevent CVS expanding to the filename of the guide. When adding the RCS
 ID the space should be ommited.
 
