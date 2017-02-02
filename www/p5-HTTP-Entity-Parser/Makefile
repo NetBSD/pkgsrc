@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/02/02 12:01:48 mef Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/02 12:39:46 mef Exp $
 
 DISTNAME=	HTTP-Entity-Parser-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,7 @@ DEPENDS+=	p5-HTTP-MultiPartParser>=0:../../www/p5-HTTP-MultiPartParser
 
 # for make test
 BUILD_DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+BUILD_DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 BUILD_DEPENDS+=	p5-Hash-MultiValue-[0-9]*:../../devel/p5-Hash-MultiValue
 BUILD_DEPENDS+=	p5-Stream-Buffered-[0-9]*:../../devel/p5-Stream-Buffered
 BUILD_DEPENDS+=	p5-HTTP-Message-[0-9]*:../../www/p5-HTTP-Message
