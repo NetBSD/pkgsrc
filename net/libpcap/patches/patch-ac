@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2015/10/17 10:07:54 adam Exp $
+$NetBSD: patch-ac,v 1.11 2017/02/02 18:46:39 maya Exp $
 
 Add libtoolization
 Fix manpage installation
@@ -14,7 +14,7 @@ Fix manpage installation
  AR = @AR@
  LN_S = @LN_S@
  MKDEP = @MKDEP@
-@@ -80,7 +80,8 @@ YACC = @V_YACC@
+@@ -75,7 +75,8 @@ YACC = @YACC@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -24,8 +24,8 @@ Fix manpage installation
  	@rm -f $@
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
  
-@@ -91,13 +92,13 @@ CSRC =	pcap.c inet.c gencode.c optimize.
- 	savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \
+@@ -86,13 +87,13 @@ CSRC =	pcap.c inet.c fad-helpers.c genco
+ 	etherent.c savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \
  	bpf_image.c bpf_dump.c
  GENSRC = scanner.c grammar.c bpf_filter.c version.c
 -LIBOBJS = @LIBOBJS@
@@ -41,8 +41,8 @@ Fix manpage installation
  	pcap.h \
  	pcap-bpf.h \
 @@ -358,12 +359,10 @@ EXTRA_DIST = \
- 	Win32/Src/inet_net.c \
- 	Win32/Src/inet_pton.c
+ 	Win32/Prj/wpcap.vcxproj \
+ 	Win32/Prj/wpcap.vcxproj.filters
  
 -all: libpcap.a shared pcap-config
 +all: libpcap.la pcap-config
@@ -56,27 +56,30 @@ Fix manpage installation
  
  shared: libpcap.$(DYEXT)
  
-@@ -450,10 +449,10 @@ scanner.c: $(srcdir)/scanner.l
- 	cat $(srcdir)/$@.top $@.bottom > $@
- 	@rm $@.bottom
+@@ -452,10 +451,10 @@ scanner.h: scanner.c
+ 		$(MAKE) $(MAKEFLAGS) scanner.c; \
+ 	fi
  
--scanner.o: scanner.c tokdefs.h
-+scanner.lo: scanner.c tokdefs.h
+-scanner.o: scanner.c grammar.h
++scanner.lo: scanner.c grammar.h
  	$(CC) $(FULL_CFLAGS) -c scanner.c
  
--pcap.o: version.h
-+pcap.lo: version.h
+-pcap.o: pcap_version.h
++pcap.lo: pcap_version.h
  
- tokdefs.h: grammar.c
  grammar.c: $(srcdir)/grammar.y
-@@ -462,17 +461,17 @@ grammar.c: $(srcdir)/grammar.y
- 	mv y.tab.c grammar.c
- 	mv y.tab.h tokdefs.h
+ 	$(YACC) -p pcap_ -o grammar.c -d $<
+@@ -466,19 +465,19 @@ grammar.h: grammar.c
+ 		$(MAKE) $(MAKEFLAGS) grammar.c; \
+ 	fi
  
 -grammar.o: grammar.c
 +grammar.lo: grammar.c
- 	@rm -f $@
- 	$(CC) $(FULL_CFLAGS) -Dyylval=pcap_lval -c grammar.c
+ 	$(CC) $(FULL_CFLAGS) -c grammar.c
+ 
+-gencode.o: $(srcdir)/gencode.c grammar.h scanner.h
++gencode.lo: $(srcdir)/gencode.c grammar.h scanner.h
+ 	$(CC) $(FULL_CFLAGS) -c $(srcdir)/gencode.c
  
 -version.o: version.c
 +version.lo: version.c
@@ -86,21 +89,12 @@ Fix manpage installation
 +snprintf.lo: $(srcdir)/missing/snprintf.c
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/snprintf.c
  
--version.c: $(srcdir)/VERSION
-+version.c: #$(srcdir)/VERSION
- 	@rm -f $@
- 	if grep GIT ${srcdir}/VERSION >/dev/null; then \
- 		read ver <${srcdir}/VERSION; \
-@@ -489,7 +488,7 @@ version.c: $(srcdir)/VERSION
- # so we make the version string static and return it from
- # a function, which does work.
- #
--version.h: $(srcdir)/VERSION
-+version.h: #$(srcdir)/VERSION
- 	@rm -f $@
- 	if grep GIT ${srcdir}/VERSION >/dev/null; then \
- 		read ver <${srcdir}/VERSION; \
-@@ -503,7 +502,7 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
+-strtok_r.o: $(srcdir)/missing/strtok_r.c
++strtok_r.lo: $(srcdir)/missing/strtok_r.c
+ 	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strtok_r.c
+ 
+ version.c: $(srcdir)/VERSION $(srcdir)/gen_version_c.sh
+@@ -498,7 +497,7 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
  	rm -f bpf_filter.c
  	ln -s $(srcdir)/bpf/net/bpf_filter.c bpf_filter.c
  
@@ -109,7 +103,7 @@ Fix manpage installation
  	$(CC) $(FULL_CFLAGS) -c bpf_filter.c
  
  #
-@@ -549,7 +548,7 @@ selpolltest: tests/selpolltest.c libpcap
+@@ -550,7 +549,7 @@ selpolltest: tests/selpolltest.c libpcap
  valgrindtest: tests/valgrindtest.c libpcap.a
  	$(CC) $(FULL_CFLAGS) -I. -L. -o valgrindtest $(srcdir)/tests/valgrindtest.c libpcap.a $(LIBS)
  
@@ -118,7 +112,7 @@ Fix manpage installation
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -564,56 +563,73 @@ install: install-shared install-archive 
+@@ -565,56 +564,73 @@ install: install-shared install-archive 
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -232,3 +226,40 @@ Fix manpage installation
  	for i in $(MANFILE); do \
  		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done
+@@ -656,15 +672,15 @@ install-shared-shareda: libpcap.shareda
+ install-shared-none:
+ 
+ install-archive: install-archive-$(DYEXT)
+-install-archive-so install-archive-dylib install-archive-sl install-archive-none: libpcap.a
++install-archive-so install-archive-dylib install-archive-sl install-archive-none: libpcap.la
+ 	#
+ 	# Most platforms have separate suffixes for shared and
+ 	# archive libraries, so we install both.
+ 	#
+ 	[ -d $(DESTDIR)$(libdir) ] || \
+ 	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
+-	$(INSTALL_DATA) libpcap.a $(DESTDIR)$(libdir)/libpcap.a
+-	$(RANLIB) $(DESTDIR)$(libdir)/libpcap.a
++	$(INSTALL_DATA) libpcap.la $(DESTDIR)$(libdir)/libpcap.la
++	$(RANLIB) $(DESTDIR)$(libdir)/libpcap.la
+ install-archive-shareda:
+ 	#
+ 	# AIX, however, doesn't, so we don't install the archive
+@@ -672,7 +688,7 @@ install-archive-shareda:
+ 	#
+ 
+ uninstall: uninstall-shared
+-	rm -f $(DESTDIR)$(libdir)/libpcap.a
++	rm -f $(DESTDIR)$(libdir)/libpcap.la
+ 	for i in $(PUBHDR); do \
+ 		rm -f $(DESTDIR)$(includedir)/$$i; done
+ 	-rmdir $(DESTDIR)$(includedir)/pcap
+@@ -720,7 +736,7 @@ uninstall-shared-sl:
+ 	rm -f $(DESTDIR)$(libdir)/libpcap.$$MAJOR_VER; \
+ 	rm -f $(DESTDIR)$(libdir)/libpcap.sl
+ uninstall-shared-shareda:
+-	rm -f $(DESTDIR)$(libdir)/libpcap.a
++	rm -f $(DESTDIR)$(libdir)/libpcap.la
+ uninstall-shared-none:
+ 
+ clean:
