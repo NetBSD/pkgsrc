@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16985 2017/02/01 23:51:53 mef Exp $
+$NetBSD: TODO,v 1.16986 2017/02/02 18:08:51 maya Exp $
 
 Suggested new packages
 ======================
@@ -1540,7 +1540,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-4.8.1
 	o tcpillust-1.00b
 	o tcpreplay-4.0.4
 	o tct-1.19
