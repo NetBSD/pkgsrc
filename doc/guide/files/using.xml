@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.43 2017/01/09 07:10:43 sevan Exp $ -->
+<!-- $NetBSD: using.xml,v 1.44 2017/02/02 07:22:13 yyamano Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -189,7 +189,7 @@ fetch_pkg_vulnerabilities=YES
       </screen>
       to fetch the vulnerability list from the daily security script. The system
       is set to audit the packages by default but can be set explicitly, if
-      desired (not required), by adding the follwing line to
+      desired (not required), by adding the following line to
 <filename>/etc/security.conf</filename>:
       <screen>
 check_pkg_vulnerabilities=YES
