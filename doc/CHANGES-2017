@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.539 2017/02/02 15:31:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.540 2017/02/02 18:08:51 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -693,3 +693,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/zeromq to 4.2.1 [fhajny 2017-02-02]
 	Updated net/py-zmq to 16.0.2 [fhajny 2017-02-02]
 	Updated security/libressl to 2.5.1 [wiz 2017-02-02]
+	Updated net/tcpdump to 4.9.0 [maya 2017-02-02]
