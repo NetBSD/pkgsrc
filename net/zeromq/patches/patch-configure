@@ -1,21 +1,21 @@
-$NetBSD: patch-configure,v 1.4 2014/03/01 08:38:12 obache Exp $
+$NetBSD: patch-configure,v 1.5 2017/02/02 10:09:53 fhajny Exp $
 
-* DragonFly support
+Portability.
 
---- configure.orig	2013-11-24 18:02:49.000000000 +0000
+--- configure.orig	2016-11-04 10:30:55.000000000 +0000
 +++ configure
-@@ -17123,6 +17123,14 @@ $as_echo "#define ZMQ_FORCE_MUTEXES 1" >
-         LDFLAGS="-lssp $LDFLAGS"
-         CPPFLAGS="$CPPFLAGS -Wno-long-long"
-         ;;
-+    *dragonfly*)
-+        # Define on DragonFly to enable all library features
-+        CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
-+
-+$as_echo "#define ZMQ_HAVE_FREEBSD 1" >>confdefs.h
-+$as_echo "#define ZMQ_DRAGONFLY 1" >>confdefs.h
-+
-+        ;;
-     *freebsd*)
-         # Define on FreeBSD to enable all library features
-         CPPFLAGS="-D__BSD_VISIBLE $CPPFLAGS"
+@@ -20286,12 +20286,12 @@ if test "${with_poller+set}" = set; then
+ fi
+ 
+ 
+-    if test "x$with_poller" == "x"; then
++    if test "x$with_poller" = "x"; then
+         pollers=auto
+     else
+         pollers=$with_poller
+     fi
+-    if test "$pollers" == "auto"; then
++    if test "$pollers" = "auto"; then
+         # We search for pollers in this order
+         pollers="kqueue epoll devpoll pollset poll select"
+     fi
