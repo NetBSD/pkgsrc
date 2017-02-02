@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2017/01/14 11:11:52 leot Exp $
+@comment $NetBSD: PLIST,v 1.35 2017/02/02 08:41:10 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -164,6 +164,9 @@ ${PYSITELIB}/youtube_dl/extractor/audiomack.pyo
 ${PYSITELIB}/youtube_dl/extractor/awaan.py
 ${PYSITELIB}/youtube_dl/extractor/awaan.pyc
 ${PYSITELIB}/youtube_dl/extractor/awaan.pyo
+${PYSITELIB}/youtube_dl/extractor/azmedien.py
+${PYSITELIB}/youtube_dl/extractor/azmedien.pyc
+${PYSITELIB}/youtube_dl/extractor/azmedien.pyo
 ${PYSITELIB}/youtube_dl/extractor/azubu.py
 ${PYSITELIB}/youtube_dl/extractor/azubu.pyc
 ${PYSITELIB}/youtube_dl/extractor/azubu.pyo
@@ -179,6 +182,9 @@ ${PYSITELIB}/youtube_dl/extractor/bandcamp.pyo
 ${PYSITELIB}/youtube_dl/extractor/bbc.py
 ${PYSITELIB}/youtube_dl/extractor/bbc.pyc
 ${PYSITELIB}/youtube_dl/extractor/bbc.pyo
+${PYSITELIB}/youtube_dl/extractor/beampro.py
+${PYSITELIB}/youtube_dl/extractor/beampro.pyc
+${PYSITELIB}/youtube_dl/extractor/beampro.pyo
 ${PYSITELIB}/youtube_dl/extractor/beatport.py
 ${PYSITELIB}/youtube_dl/extractor/beatport.pyc
 ${PYSITELIB}/youtube_dl/extractor/beatport.pyo
@@ -446,6 +452,9 @@ ${PYSITELIB}/youtube_dl/extractor/discovery.pyo
 ${PYSITELIB}/youtube_dl/extractor/discoverygo.py
 ${PYSITELIB}/youtube_dl/extractor/discoverygo.pyc
 ${PYSITELIB}/youtube_dl/extractor/discoverygo.pyo
+${PYSITELIB}/youtube_dl/extractor/disney.py
+${PYSITELIB}/youtube_dl/extractor/disney.pyc
+${PYSITELIB}/youtube_dl/extractor/disney.pyo
 ${PYSITELIB}/youtube_dl/extractor/dispeak.py
 ${PYSITELIB}/youtube_dl/extractor/dispeak.pyc
 ${PYSITELIB}/youtube_dl/extractor/dispeak.pyo
@@ -809,6 +818,9 @@ ${PYSITELIB}/youtube_dl/extractor/iqiyi.pyo
 ${PYSITELIB}/youtube_dl/extractor/ir90tv.py
 ${PYSITELIB}/youtube_dl/extractor/ir90tv.pyc
 ${PYSITELIB}/youtube_dl/extractor/ir90tv.pyo
+${PYSITELIB}/youtube_dl/extractor/itv.py
+${PYSITELIB}/youtube_dl/extractor/itv.pyc
+${PYSITELIB}/youtube_dl/extractor/itv.pyo
 ${PYSITELIB}/youtube_dl/extractor/ivi.py
 ${PYSITELIB}/youtube_dl/extractor/ivi.pyc
 ${PYSITELIB}/youtube_dl/extractor/ivi.pyo
@@ -1316,6 +1328,9 @@ ${PYSITELIB}/youtube_dl/extractor/porn91.pyo
 ${PYSITELIB}/youtube_dl/extractor/porncom.py
 ${PYSITELIB}/youtube_dl/extractor/porncom.pyc
 ${PYSITELIB}/youtube_dl/extractor/porncom.pyo
+${PYSITELIB}/youtube_dl/extractor/pornflip.py
+${PYSITELIB}/youtube_dl/extractor/pornflip.pyc
+${PYSITELIB}/youtube_dl/extractor/pornflip.pyo
 ${PYSITELIB}/youtube_dl/extractor/pornhd.py
 ${PYSITELIB}/youtube_dl/extractor/pornhd.pyc
 ${PYSITELIB}/youtube_dl/extractor/pornhd.pyo
@@ -1784,6 +1799,9 @@ ${PYSITELIB}/youtube_dl/extractor/tv3.pyo
 ${PYSITELIB}/youtube_dl/extractor/tv4.py
 ${PYSITELIB}/youtube_dl/extractor/tv4.pyc
 ${PYSITELIB}/youtube_dl/extractor/tv4.pyo
+${PYSITELIB}/youtube_dl/extractor/tva.py
+${PYSITELIB}/youtube_dl/extractor/tva.pyc
+${PYSITELIB}/youtube_dl/extractor/tva.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvanouvelles.py
 ${PYSITELIB}/youtube_dl/extractor/tvanouvelles.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvanouvelles.pyo
