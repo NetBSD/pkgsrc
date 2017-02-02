@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/15 02:09:46 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/02/02 10:16:30 fhajny Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
@@ -60,6 +60,8 @@ ${PYSITELIB}/zmq/backend/cython/_device.so
 ${PYSITELIB}/zmq/backend/cython/_poll.so
 ${PYSITELIB}/zmq/backend/cython/_version.so
 ${PYSITELIB}/zmq/backend/cython/checkrc.pxd
+${PYSITELIB}/zmq/backend/cython/constant_enums.pxi
+${PYSITELIB}/zmq/backend/cython/constants.pxi
 ${PYSITELIB}/zmq/backend/cython/constants.so
 ${PYSITELIB}/zmq/backend/cython/context.pxd
 ${PYSITELIB}/zmq/backend/cython/context.so
@@ -69,11 +71,13 @@ ${PYSITELIB}/zmq/backend/cython/message.pxd
 ${PYSITELIB}/zmq/backend/cython/message.so
 ${PYSITELIB}/zmq/backend/cython/socket.pxd
 ${PYSITELIB}/zmq/backend/cython/socket.so
-${PYSITELIB}/zmq/backend/cython/utils.pxd
 ${PYSITELIB}/zmq/backend/cython/utils.so
 ${PYSITELIB}/zmq/backend/select.py
 ${PYSITELIB}/zmq/backend/select.pyc
 ${PYSITELIB}/zmq/backend/select.pyo
+${PYSITELIB}/zmq/decorators.py
+${PYSITELIB}/zmq/decorators.pyc
+${PYSITELIB}/zmq/decorators.pyo
 ${PYSITELIB}/zmq/devices/__init__.py
 ${PYSITELIB}/zmq/devices/__init__.pyc
 ${PYSITELIB}/zmq/devices/__init__.pyo
@@ -97,6 +101,9 @@ ${PYSITELIB}/zmq/error.pyo
 ${PYSITELIB}/zmq/eventloop/__init__.py
 ${PYSITELIB}/zmq/eventloop/__init__.pyc
 ${PYSITELIB}/zmq/eventloop/__init__.pyo
+${PYSITELIB}/zmq/eventloop/future.py
+${PYSITELIB}/zmq/eventloop/future.pyc
+${PYSITELIB}/zmq/eventloop/future.pyo
 ${PYSITELIB}/zmq/eventloop/ioloop.py
 ${PYSITELIB}/zmq/eventloop/ioloop.pyc
 ${PYSITELIB}/zmq/eventloop/ioloop.pyo
@@ -196,6 +203,9 @@ ${PYSITELIB}/zmq/sugar/poll.pyo
 ${PYSITELIB}/zmq/sugar/socket.py
 ${PYSITELIB}/zmq/sugar/socket.pyc
 ${PYSITELIB}/zmq/sugar/socket.pyo
+${PYSITELIB}/zmq/sugar/stopwatch.py
+${PYSITELIB}/zmq/sugar/stopwatch.pyc
+${PYSITELIB}/zmq/sugar/stopwatch.pyo
 ${PYSITELIB}/zmq/sugar/tracker.py
 ${PYSITELIB}/zmq/sugar/tracker.pyc
 ${PYSITELIB}/zmq/sugar/tracker.pyo
@@ -217,6 +227,9 @@ ${PYSITELIB}/zmq/tests/test_constants.pyo
 ${PYSITELIB}/zmq/tests/test_context.py
 ${PYSITELIB}/zmq/tests/test_context.pyc
 ${PYSITELIB}/zmq/tests/test_context.pyo
+${PYSITELIB}/zmq/tests/test_decorators.py
+${PYSITELIB}/zmq/tests/test_decorators.pyc
+${PYSITELIB}/zmq/tests/test_decorators.pyo
 ${PYSITELIB}/zmq/tests/test_device.py
 ${PYSITELIB}/zmq/tests/test_device.pyc
 ${PYSITELIB}/zmq/tests/test_device.pyo
@@ -226,9 +239,15 @@ ${PYSITELIB}/zmq/tests/test_error.pyo
 ${PYSITELIB}/zmq/tests/test_etc.py
 ${PYSITELIB}/zmq/tests/test_etc.pyc
 ${PYSITELIB}/zmq/tests/test_etc.pyo
+${PYSITELIB}/zmq/tests/test_future.py
+${PYSITELIB}/zmq/tests/test_future.pyc
+${PYSITELIB}/zmq/tests/test_future.pyo
 ${PYSITELIB}/zmq/tests/test_imports.py
 ${PYSITELIB}/zmq/tests/test_imports.pyc
 ${PYSITELIB}/zmq/tests/test_imports.pyo
+${PYSITELIB}/zmq/tests/test_includes.py
+${PYSITELIB}/zmq/tests/test_includes.pyc
+${PYSITELIB}/zmq/tests/test_includes.pyo
 ${PYSITELIB}/zmq/tests/test_ioloop.py
 ${PYSITELIB}/zmq/tests/test_ioloop.pyc
 ${PYSITELIB}/zmq/tests/test_ioloop.pyo
@@ -259,15 +278,18 @@ ${PYSITELIB}/zmq/tests/test_pubsub.pyo
 ${PYSITELIB}/zmq/tests/test_reqrep.py
 ${PYSITELIB}/zmq/tests/test_reqrep.pyc
 ${PYSITELIB}/zmq/tests/test_reqrep.pyo
+${PYSITELIB}/zmq/tests/test_retry_eintr.py
+${PYSITELIB}/zmq/tests/test_retry_eintr.pyc
+${PYSITELIB}/zmq/tests/test_retry_eintr.pyo
 ${PYSITELIB}/zmq/tests/test_security.py
 ${PYSITELIB}/zmq/tests/test_security.pyc
 ${PYSITELIB}/zmq/tests/test_security.pyo
 ${PYSITELIB}/zmq/tests/test_socket.py
 ${PYSITELIB}/zmq/tests/test_socket.pyc
 ${PYSITELIB}/zmq/tests/test_socket.pyo
-${PYSITELIB}/zmq/tests/test_stopwatch.py
-${PYSITELIB}/zmq/tests/test_stopwatch.pyc
-${PYSITELIB}/zmq/tests/test_stopwatch.pyo
+${PYSITELIB}/zmq/tests/test_ssh.py
+${PYSITELIB}/zmq/tests/test_ssh.pyc
+${PYSITELIB}/zmq/tests/test_ssh.pyo
 ${PYSITELIB}/zmq/tests/test_version.py
 ${PYSITELIB}/zmq/tests/test_version.pyc
 ${PYSITELIB}/zmq/tests/test_version.pyo
