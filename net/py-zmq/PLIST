@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/02 10:16:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/02/02 19:05:01 fhajny Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/zmq/__init__.py
 ${PYSITELIB}/zmq/__init__.pyc
 ${PYSITELIB}/zmq/__init__.pyo
+${PLIST.py3x}${PYSITELIB}/zmq/asyncio/__init__.py
+${PLIST.py3x}${PYSITELIB}/zmq/asyncio/__init__.pyc
+${PLIST.py3x}${PYSITELIB}/zmq/asyncio/__init__.pyo
 ${PYSITELIB}/zmq/auth/__init__.py
 ${PYSITELIB}/zmq/auth/__init__.pyc
 ${PYSITELIB}/zmq/auth/__init__.pyo
+${PLIST.py3x}${PYSITELIB}/zmq/auth/asyncio/__init__.py
+${PLIST.py3x}${PYSITELIB}/zmq/auth/asyncio/__init__.pyc
+${PLIST.py3x}${PYSITELIB}/zmq/auth/asyncio/__init__.pyo
 ${PYSITELIB}/zmq/auth/base.py
 ${PYSITELIB}/zmq/auth/base.pyc
 ${PYSITELIB}/zmq/auth/base.pyo
@@ -215,6 +221,15 @@ ${PYSITELIB}/zmq/sugar/version.pyo
 ${PYSITELIB}/zmq/tests/__init__.py
 ${PYSITELIB}/zmq/tests/__init__.pyc
 ${PYSITELIB}/zmq/tests/__init__.pyo
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/__init__.py
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/__init__.pyc
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/__init__.pyo
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/_test_asyncio.py
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/_test_asyncio.pyc
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/_test_asyncio.pyo
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/test_asyncio.py
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/test_asyncio.pyc
+${PLIST.py3x}${PYSITELIB}/zmq/tests/asyncio/test_asyncio.pyo
 ${PYSITELIB}/zmq/tests/test_auth.py
 ${PYSITELIB}/zmq/tests/test_auth.pyc
 ${PYSITELIB}/zmq/tests/test_auth.pyo
