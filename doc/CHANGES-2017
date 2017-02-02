@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.546 2017/02/02 18:47:00 maya Exp $
+$NetBSD: CHANGES-2017,v 1.547 2017/02/02 18:47:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/xorg-util-macros to 1.19.1 [wiz 2017-02-02]
 	Updated x11/xauth to 1.0.10 [wiz 2017-02-02]
 	Updated net/libpcap to 1.8.1 [maya 2017-02-02]
+	Updated x11/xkeyboard-config to 2.20 [wiz 2017-02-02]
