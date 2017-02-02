@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/08/28 15:48:36 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/02/02 20:30:55 nils Exp $
 
-DISTNAME=		pelican-3.6.3
+DISTNAME=		pelican-3.7.1
 GITHUB_PROJECT=		pelican
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www textproc
@@ -23,7 +23,7 @@ DEPENDS+=		${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=		${PYPKGPREFIX}-six>=1.4:../../lang/py-six
 DEPENDS+=		${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
-USE_TOOLS+=		bash:run make:build
+USE_TOOLS+=		bash:run make:build sed:build
 
 REPLACE_PYTHON+=	pelican/tools/pelican_import.py
 REPLACE_PYTHON+=	pelican/tools/pelican_quickstart.py
@@ -35,6 +35,13 @@ REPLACE_INTERPRETER+=		bash
 REPLACE.bash.old=			/usr/bin/env bash
 REPLACE.bash.new=			${TOOLS_PATH.bash}
 REPLACE_FILES.bash=			pelican/tools/templates/develop_server.sh.in
+
+SUBST_CLASSES+=		version
+SUBST_STAGE.version=	pre-build
+SUBST_MESSAGE.version=	Removing useless import of pelican.
+SUBST_FILES.version=	docs/conf.py
+SUBST_SED.version=	-e 's,from pelican,\#from pelican,g'
+SUBST_SED.version+=	-e 's,release = __version__,release = "${PKGVERSION_NOREV}",g'
 
 DOCDIR=			${PREFIX}/share/doc/pelican
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1/ ${DOCDIR}
