@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/12/04 21:02:55 nils Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/02 18:35:56 nils Exp $
 #
 
-DISTNAME=	fail2ban-0.9.5
+DISTNAME=	fail2ban-0.9.6
 #PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	-https://github.com/fail2ban/fail2ban/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
@@ -33,11 +33,11 @@ CONF_FILES+=		${EGDIR}/${config} ${PKG_SYSCONFDIR}/${config}
 .endfor
 
 
-.for action in apf.conf badips.conf badips.py blocklist_de.conf bsd-ipfw.conf cloudflare.conf complain.conf dshield.conf dummy.conf firewallcmd-allports.conf firewallcmd-ipset.conf firewallcmd-multiport.conf firewallcmd-new.conf firewallcmd-rich-logging.conf firewallcmd-rich-rules.conf hostsdeny.conf ipfilter.conf ipfw.conf iptables-allports.conf iptables-common.conf iptables-ipset-proto4.conf iptables-ipset-proto6-allports.conf iptables-ipset-proto6.conf iptables-multiport-log.conf iptables-multiport.conf iptables-new.conf iptables-xt_recent-echo.conf iptables.conf mail-buffered.conf mail-whois-common.conf mail-whois-lines.conf mail-whois.conf mail.conf mynetwatchman.conf nftables-allports.conf nftables-common.conf nftables-multiport.conf nsupdate.conf osx-afctl.conf osx-ipfw.conf pf.conf route.conf sendmail-buffered.conf sendmail-common.conf sendmail-geoip-lines.conf sendmail-whois-ipjailmatches.conf sendmail-whois-ipmatches.conf sendmail-whois-lines.conf sendmail-whois-matches.conf sendmail-whois.conf sendmail.conf shorewall-ipset-proto6.conf shorewall.conf smtp.py symbiosis-blacklist-allports.conf ufw.conf xarf-login-attack.conf
+.for action in apf.conf badips.conf badips.py blocklist_de.conf bsd-ipfw.conf cloudflare.conf complain.conf dshield.conf dummy.conf firewallcmd-allports.conf firewallcmd-ipset.conf firewallcmd-multiport.conf firewallcmd-new.conf firewallcmd-rich-logging.conf firewallcmd-rich-rules.conf hostsdeny.conf ipfilter.conf ipfw.conf iptables-allports.conf iptables-common.conf iptables-ipset-proto4.conf iptables-ipset-proto6-allports.conf iptables-ipset-proto6.conf iptables-multiport-log.conf iptables-multiport.conf iptables-new.conf iptables-xt_recent-echo.conf iptables.conf mail-buffered.conf mail-whois-common.conf mail-whois-lines.conf mail-whois.conf mail.conf mynetwatchman.conf nftables-allports.conf nftables-common.conf nftables-multiport.conf npf.conf nsupdate.conf osx-afctl.conf osx-ipfw.conf pf.conf route.conf sendmail-buffered.conf sendmail-common.conf sendmail-geoip-lines.conf sendmail-whois-ipjailmatches.conf sendmail-whois-ipmatches.conf sendmail-whois-lines.conf sendmail-whois-matches.conf sendmail-whois.conf sendmail.conf shorewall-ipset-proto6.conf shorewall.conf smtp.py symbiosis-blacklist-allports.conf ufw.conf xarf-login-attack.conf
 CONF_FILES+=		${EGDIR}/action.d/${action} ${PKG_SYSCONFDIR}/action.d/${action}
 .endfor
 
-.for filter in 3proxy.conf apache-auth.conf apache-badbots.conf apache-botsearch.conf apache-common.conf apache-fakegooglebot.conf apache-modsecurity.conf apache-nohome.conf apache-noscript.conf apache-overflows.conf apache-pass.conf apache-shellshock.conf assp.conf asterisk.conf botsearch-common.conf common.conf counter-strike.conf courier-auth.conf courier-smtp.conf cyrus-imap.conf directadmin.conf dovecot.conf dropbear.conf drupal-auth.conf ejabberd-auth.conf exim-common.conf exim-spam.conf exim.conf freeswitch.conf froxlor-auth.conf groupoffice.conf gssftpd.conf guacamole.conf haproxy-http-auth.conf horde.conf kerio.conf lighttpd-auth.conf monit.conf murmur.conf mysqld-auth.conf nagios.conf named-refused.conf nginx-botsearch.conf nginx-http-auth.conf nginx-limit-req.conf nsd.conf openhab.conf openwebmail.conf oracleims.conf pam-generic.conf perdition.conf php-url-fopen.conf portsentry.conf postfix-rbl.conf postfix-sasl.conf postfix.conf proftpd.conf pure-ftpd.conf qmail.conf recidive.conf roundcube-auth.conf screensharingd.conf selinux-common.conf selinux-ssh.conf sendmail-auth.conf sendmail-reject.conf sieve.conf slapd.conf sogo-auth.conf solid-pop3d.conf squid.conf squirrelmail.conf sshd-ddos.conf sshd.conf stunnel.conf suhosin.conf tine20.conf uwimap-auth.conf vsftpd.conf webmin-auth.conf wuftpd.conf xinetd-fail.conf
+.for filter in 3proxy.conf apache-auth.conf apache-badbots.conf apache-botsearch.conf apache-common.conf apache-fakegooglebot.conf apache-modsecurity.conf apache-nohome.conf apache-noscript.conf apache-overflows.conf apache-pass.conf apache-shellshock.conf assp.conf asterisk.conf botsearch-common.conf common.conf counter-strike.conf courier-auth.conf courier-smtp.conf cyrus-imap.conf directadmin.conf dovecot.conf dropbear.conf drupal-auth.conf ejabberd-auth.conf exim-common.conf exim-spam.conf exim.conf freeswitch.conf froxlor-auth.conf groupoffice.conf gssftpd.conf guacamole.conf haproxy-http-auth.conf horde.conf kerio.conf lighttpd-auth.conf mongodb-auth.conf monit.conf murmur.conf mysqld-auth.conf nagios.conf named-refused.conf nginx-botsearch.conf nginx-http-auth.conf nginx-limit-req.conf nsd.conf openhab.conf openwebmail.conf oracleims.conf pam-generic.conf perdition.conf php-url-fopen.conf portsentry.conf postfix-rbl.conf postfix-sasl.conf postfix.conf proftpd.conf pure-ftpd.conf qmail.conf recidive.conf roundcube-auth.conf screensharingd.conf selinux-common.conf selinux-ssh.conf sendmail-auth.conf sendmail-reject.conf sieve.conf slapd.conf sogo-auth.conf solid-pop3d.conf squid.conf squirrelmail.conf sshd-ddos.conf sshd.conf stunnel.conf suhosin.conf tine20.conf uwimap-auth.conf vsftpd.conf webmin-auth.conf wuftpd.conf xinetd-fail.conf
 CONF_FILES+=		${EGDIR}/filter.d/${filter} ${PKG_SYSCONFDIR}/filter.d/${filter}
 .endfor
 
@@ -109,8 +109,11 @@ post-install:
 .for manfile5 in ${MANPAGES5}
 	${INSTALL_MAN} ${WRKSRC}/man/${manfile5} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 .endfor
-.for i in ${TXTDOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/doc/build/text/${i} ${DESTDIR}${DOCDIR}/
+.for txt1 in ${TXTDOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/doc/build/text/${txt1} ${DESTDIR}${DOCDIR}/
+.endfor
+.for txt2 in DEVELOP FILTERS README.Solaris README.md doc/run-rootless.txt
+	${INSTALL_DATA} ${WRKSRC}/${txt2} ${DESTDIR}${DOCDIR}/
 .endfor
 
 .include "options.mk"
