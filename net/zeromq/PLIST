@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.6 2015/08/28 12:52:01 he Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/02/02 10:09:53 fhajny Exp $
 bin/curve_keygen
 include/zmq.h
 include/zmq_utils.h
 lib/libzmq.la
 lib/pkgconfig/libzmq.pc
+man/man3/zmq_atomic_counter_dec.3
+man/man3/zmq_atomic_counter_destroy.3
+man/man3/zmq_atomic_counter_inc.3
+man/man3/zmq_atomic_counter_new.3
+man/man3/zmq_atomic_counter_set.3
+man/man3/zmq_atomic_counter_value.3
 man/man3/zmq_bind.3
 man/man3/zmq_close.3
 man/man3/zmq_connect.3
@@ -13,6 +19,7 @@ man/man3/zmq_ctx_set.3
 man/man3/zmq_ctx_shutdown.3
 man/man3/zmq_ctx_term.3
 man/man3/zmq_curve_keypair.3
+man/man3/zmq_curve_public.3
 man/man3/zmq_disconnect.3
 man/man3/zmq_errno.3
 man/man3/zmq_getsockopt.3
@@ -28,8 +35,10 @@ man/man3/zmq_msg_init_size.3
 man/man3/zmq_msg_more.3
 man/man3/zmq_msg_move.3
 man/man3/zmq_msg_recv.3
+man/man3/zmq_msg_routing_id.3
 man/man3/zmq_msg_send.3
 man/man3/zmq_msg_set.3
+man/man3/zmq_msg_set_routing_id.3
 man/man3/zmq_msg_size.3
 man/man3/zmq_poll.3
 man/man3/zmq_proxy.3
@@ -56,3 +65,5 @@ man/man7/zmq_pgm.7
 man/man7/zmq_plain.7
 man/man7/zmq_tcp.7
 man/man7/zmq_tipc.7
+man/man7/zmq_udp.7
+man/man7/zmq_vmci.7
