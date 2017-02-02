@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.543 2017/02/02 18:40:34 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.544 2017/02/02 18:43:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -697,3 +697,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/fail2ban to 0.9.6 [nils 2017-02-02]
 	Updated x11/libdrm to 2.4.75 [wiz 2017-02-02]
 	Updated x11/xconsole to 1.0.7 [wiz 2017-02-02]
+	Updated devel/xorg-util-macros to 1.19.1 [wiz 2017-02-02]
