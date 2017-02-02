@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.25 2017/01/09 07:22:52 sevan Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.26 2017/02/02 07:22:13 yyamano Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -22,7 +22,7 @@
 <programlisting>
 @comment &#36;NetBSD &#36;
 </programlisting>
-     <para>An artificial space has been added betweeen NetBSD and $, this is a
+     <para>An artificial space has been added between NetBSD and $, this is a
 workaround here to prevent CVS expanding to the filename of the guide. When
 adding the RCS ID the space should be ommited.</para>
   </sect1>
@@ -164,7 +164,7 @@ ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
 </programlisting>
 
-     <para>An artificial space has been added betweeen NetBSD and $, this is a
+     <para>An artificial space has been added between NetBSD and $, this is a
 workaround here to prevent CVS expanding to the filename of the guide. When
 adding the RCS ID the space should be ommited.</para>
 
