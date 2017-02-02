@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.549 2017/02/02 20:32:09 nils Exp $
+$NetBSD: CHANGES-2017,v 1.550 2017/02/02 20:43:17 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -703,3 +703,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xkeyboard-config to 2.20 [wiz 2017-02-02]
 	Updated x11/xf86-video-ati to 7.8.0nb1 [wiz 2017-02-02]
 	Updated www/py-pelican to 3.7.1 [nils 2017-02-02]
+	Updated x11/st-term to 0.7nb1 [leot 2017-02-02]
