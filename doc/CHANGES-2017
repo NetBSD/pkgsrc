@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.544 2017/02/02 18:43:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.545 2017/02/02 18:45:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -698,3 +698,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/libdrm to 2.4.75 [wiz 2017-02-02]
 	Updated x11/xconsole to 1.0.7 [wiz 2017-02-02]
 	Updated devel/xorg-util-macros to 1.19.1 [wiz 2017-02-02]
+	Updated x11/xauth to 1.0.10 [wiz 2017-02-02]
