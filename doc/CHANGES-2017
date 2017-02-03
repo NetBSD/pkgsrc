@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.551 2017/02/03 02:07:29 wen Exp $
+$NetBSD: CHANGES-2017,v 1.552 2017/02/03 02:19:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -705,3 +705,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-pelican to 3.7.1 [nils 2017-02-02]
 	Updated x11/st-term to 0.7nb1 [leot 2017-02-02]
 	Updated devel/p5-Moose to 2.2004 [wen 2017-02-03]
+	Updated devel/p5-MooseX-Types-Common to 0.001014 [wen 2017-02-03]
