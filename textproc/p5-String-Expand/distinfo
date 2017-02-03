@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/03 15:33:58 hauke Exp $
+
+SHA1 (String-Expand-0.04.tar.gz) = 04aac4fa81b2e04b65f82e5cded5260ab1a9fc92
+RMD160 (String-Expand-0.04.tar.gz) = a26e518e0ff6e33bea9974107d2a4483d656f1e3
+SHA512 (String-Expand-0.04.tar.gz) = 3f987fae841a644593e092f35ab6f5af019bc97cb391f61727e008064fa9f18d3dd508314a46fd44ebda1670747f5f0ff0f32f0e69df345275c1e5d1ce10198d
+Size (String-Expand-0.04.tar.gz) = 12463 bytes
