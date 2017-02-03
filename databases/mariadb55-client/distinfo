@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2016/09/13 19:15:13 maya Exp $
+$NetBSD: distinfo,v 1.6 2017/02/03 16:20:18 roy Exp $
 
 SHA1 (mariadb-5.5.52.tar.gz) = bbedcc0eba7580d1ef16f2dfe4868cf9f31a636d
 RMD160 (mariadb-5.5.52.tar.gz) = fcad9e40ecd29b341a8cdc42afc18aa83b85e60c
@@ -11,14 +11,14 @@ Size (sphinx-2.2.7-release.tar.gz) = 2969037 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = 02b414235a2cdfc1d5c95946010e0cdbada76c5d
 SHA1 (patch-CMakeLists.txt) = 9c56523626837ab83ecef26f1c0609e084976fa7
 SHA1 (patch-client_completion_hash.cc) = 810dab31e17a19804323059d38f5ec7f0d55c3ab
-SHA1 (patch-client_mysql.cc) = bb50cbd627ce71bcc792ad285016e0269dbc741c
+SHA1 (patch-client_mysql.cc) = e2f1ef8325d08c8bc68ea0849f0cc8d49f9a69a1
 SHA1 (patch-client_mysqladmin.cc) = ab05c6944d50c9b22365426656f0b61a5906d632
 SHA1 (patch-client_mysqlbinlog.cc) = 00146dfd7d0a6e0bb1a8c30395bc707af3b4a6c7
 SHA1 (patch-client_mysqlshow.c) = 82ddfb98ab85b3e96e56b5ecc0df25cc315b8dbc
 SHA1 (patch-cmake_dtrace.cmake) = 460799dee4d7f9d6c1e3b2dbf0412f8576297991
 SHA1 (patch-cmake_libutils.cmake) = 0c3f25f8e73ab0a062b539a8d551342a6ddf57c4
 SHA1 (patch-cmake_plugin.cmake) = b7566d25c80c2492a96c5617b96f9b6212b0fe93
-SHA1 (patch-cmake_readline.cmake) = eeadad96a6c8f042c82134b5488956f8094ba4ac
+SHA1 (patch-cmake_readline.cmake) = 4652c45743919857a888fa216fc6bd0a6567d9c9
 SHA1 (patch-config.h.cmake) = 75d4c09eb34353057c6a8e36523f55d1bfdace59
 SHA1 (patch-include_CMakeLists.txt) = 9ce9db088fda6ed76039b818c27b74d584bae151
 SHA1 (patch-include_my__context.h) = 16e9f69c35243967e5b95022b0350b36c02725da
