@@ -1,0 +1,17 @@
+This module implements utility functions for expanding embedded
+variables in a string. Variable references are embedded in strings in
+a similar form to the Bourne shell, namely, in the form $NAME or
+${NAME}. In the former case, the NAME must consist of a capital letter
+or underscore, and may be followed by zero or more capital letters,
+digits or underscores. In the latter case, the name can consist of any
+characters, but will be terminated by the first close brace character
+'}'.
+
+The string may also contain literal dollar marks, escaped by \$, and
+literal escape marks, escaped by \\. These will be converted to $ and
+\ respectively on return.
+
+While there are many other modules that also provide expansion such as
+this, this module provides the function expand_strings(), which will
+perform variable expansions in all the values in a given hash, where
+values can refer to other values within the same hash.
