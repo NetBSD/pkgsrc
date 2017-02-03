@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/11/16 12:08:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/02/03 15:27:10 maya Exp $
 include/gstreamer-1.0/gst/audio/gstaudioaggregator.h
 include/gstreamer-1.0/gst/base/gstaggregator.h
 include/gstreamer-1.0/gst/basecamerabinsrc/gstbasecamerasrc.h
@@ -127,8 +127,10 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLContext.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLDisplay.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLFilter.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLFramebuffer.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLSLStage.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLShader.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLUpload.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLViewConvert.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/GstGLWindow.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/annotation-glossary.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/api-index-deprecated.html
@@ -147,23 +149,17 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-DVB-var
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-DVB-variants-of-MPEG-TS-sections.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstAggregator.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstAggregatorPad.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstEGLImageMemory.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstEGLImage.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLAPI.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLBuffer.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLContextCocoa.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLContextEGL.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLContextEagl.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLContextGLX.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLContextWGL.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLDisplayWayland.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLDisplayX11.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLMemory.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLOverlayCompositor.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLQuery.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLRenderbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLSL.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLSyncMeta.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLWindowAndroid.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLWindowCocoa.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLWindowDispmanx.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLWindowWayland.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLWindowWin32.html
-share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstGLWindowX11.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstInsertbin.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstPhotography.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-GstVideoAggregator.html
@@ -174,6 +170,7 @@ share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-OpenGL-
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-OpenGL-debugging.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-gstglbasememory.html
+share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-gstglmemoryegl.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-gstglmemorypbo.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-gstmpegvideometa.html
 share/doc/gst-plugins-0.10/gst-plugins-bad-libs-1.0/gst-plugins-bad-libs-gstplayer-gmaincontextsignaldispatcher.html

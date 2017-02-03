@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2016/11/16 12:08:25 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2017/02/03 15:27:10 maya Exp $
 #
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
@@ -13,7 +13,7 @@
 #
 
 GST_PLUGINS1_TYPE=	bad
-GST_PLUGINS1_VER=	1.10.0
+GST_PLUGINS1_VER=	1.10.3
 
 # Disable all drivers and features by default.
 .for driver in	\
