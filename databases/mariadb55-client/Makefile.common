@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/09/13 19:15:13 maya Exp $
+# $NetBSD: Makefile.common,v 1.5 2017/02/03 16:20:18 roy Exp $
 #
 # used by databases/mariadb55-client/Makefile
 # used by databases/mariadb55-server/Makefile
@@ -63,7 +63,6 @@ CMAKE_ARGS+=		-DINSTALL_SUPPORTFILESDIR="share/mariadb"
 CMAKE_ARGS+=		-DMYSQL_DATADIR=${MYSQL_DATADIR}
 
 # always use our own readline, not MySQL bundled one
-CMAKE_ARGS+=		-DWITH_LIBEDIT=OFF
 CMAKE_ARGS+=		-DWITH_READLINE=OFF
 CMAKE_ARGS+=		-DDEFAULT_CHARSET=${MYSQL_CHARSET:Q}
 CMAKE_ARGS+=		-DDEFAULT_COLLATION=${MYSQL_COLLATION:Q}
@@ -120,12 +119,9 @@ SUBST_MESSAGE.scr=	Fixing scripts.
 
 .include "../../mk/readline.buildlink3.mk"
 .if !empty(READLINE_TYPE:Mreadline)
-CMAKE_ARGS+=	-DREADLINE_FOUND=system
-LDFLAGS+=	-lreadline
+CMAKE_ARGS+=    -DREADLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 .else
-CMAKE_ARGS+=	-DLIBEDIT_FOUND=system
-LDFLAGS+=	-ledit
+CMAKE_ARGS+=    -DLIBEDIT_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 .endif
-CMAKE_ARGS+=	-DREADLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 
 .include "../../devel/zlib/buildlink3.mk"
