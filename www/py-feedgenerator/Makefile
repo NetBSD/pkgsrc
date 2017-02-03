@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2015/11/27 16:49:19 nils Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/03 09:47:12 nils Exp $
 
-DISTNAME=		feedgenerator-1.7
+DISTNAME=		feedgenerator-1.9
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_PYPI:=f/feedgenerator/}
 
 MAINTAINER=		nils@NetBSD.org
-HOMEPAGE=		https://github.com/dmdm/feedgenerator-py3k.git
+HOMEPAGE=		https://github.com/getpelican/feedgenerator
 COMMENT=		Standalone version of django.utils.feedgenerator, compatible with Py3k
 LICENSE=		modified-bsd
 
