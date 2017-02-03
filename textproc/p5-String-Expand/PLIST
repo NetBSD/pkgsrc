@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/03 15:33:58 hauke Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/String/Expand.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/String/Expand/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/String::Expand.3
