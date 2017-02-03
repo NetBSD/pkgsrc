@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.7 2017/01/24 21:34:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.8 2017/02/03 11:26:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -78,4 +78,7 @@ sysutils/py-borgbackup: security update
 
 Pullup ticket #5200 - requested by wiz
 net/tor: security fix
+
+Pullup ticket #5204 - requested by sevan
+www/apache2: security fix
 
