@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/08/27 21:44:59 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/02/03 08:42:32 leot Exp $
 
 DISTNAME=	xdg-user-dirs-0.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://user-dirs.freedesktop.org/releases/
 
@@ -17,7 +17,8 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
 
-EGDIR=	${PREFIX}/share/examples/xdg
+EGDIR=		${PREFIX}/share/examples/xdg
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg
 
 CONF_FILES+=	${EGDIR}/user-dirs.conf \
 		${PKG_SYSCONFDIR}/xdg/user-dirs.conf
