@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.560 2017/02/03 13:47:36 sborrill Exp $
+$NetBSD: CHANGES-2017,v 1.561 2017/02/03 14:08:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -714,3 +714,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/mozilla-rootcerts to 1.0.20170121 [maya 2017-02-03]
 	Updated www/py-pelican to 3.7.1nb1 [nils 2017-02-03]
 	Updated sysutils/salt to 2016.11.2 [sborrill 2017-02-03]
+	Updated sysutils/e2fsprogs to 1.43.4 [mef 2017-02-03]
