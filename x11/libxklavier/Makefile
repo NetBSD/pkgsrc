@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2016/06/06 19:41:36 youri Exp $
-#
+# $NetBSD: Makefile,v 1.42 2017/02/03 07:46:25 wiz Exp $
 
 DISTNAME=	libxklavier-5.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/libxklavier/libxklavier-5.4.tar.bz2/13af74dcb6011ecedf1e3ed122bd31fa/
 EXTRACT_SUFX=	.tar.bz2
@@ -36,7 +35,7 @@ TOOLS_NOOP+=	gtkdoc-rebase
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/gobject-introspection/buildlink3.mk"
+#.include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
