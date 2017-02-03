@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.564 2017/02/03 15:38:07 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.565 2017/02/03 17:08:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -717,3 +717,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/e2fsprogs to 1.43.4 [mef 2017-02-03]
 	Updated devel/py-mercurial to 4.1 [wiz 2017-02-03]
 	Added textproc/p5-String-Expand 0.04 [hauke 2017-02-03]
+	Updated multimedia/gst-plugins1-libav to 1.10.3 [maya 2017-02-03]
+	Updated multimedia/gst-plugins1-good to 1.10.3 [maya 2017-02-03]
+	Updated multimedia/gst-plugins1-bad to 1.10.3 [maya 2017-02-03]
+	Updated multimedia/gst-plugins1-base to 1.10.3 [maya 2017-02-03]
+	Updated multimedia/gst-plugins1-ugly to 1.10.3 [maya 2017-02-03]
