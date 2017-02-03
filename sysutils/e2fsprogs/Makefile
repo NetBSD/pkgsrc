@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2016/08/09 21:46:06 jdolecek Exp $
+# $NetBSD: Makefile,v 1.23 2017/02/03 14:08:11 mef Exp $
 
-DISTNAME=	e2fsprogs-1.43.1
+DISTNAME=	e2fsprogs-1.43.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
 
@@ -24,6 +24,7 @@ PLIST.fsck=		yes
 .else
 CONFIGURE_ARGS+=	--disable-fsck
 .endif
+#CONFIGURE_ARGS+=	--mandir=${PREFIX}/man
 
 EGDIR=			${PREFIX}/share/examples/ext2fs
 CONF_FILES+=		${EGDIR}/mke2fs.conf ${PKG_SYSCONFDIR}/mke2fs.conf
