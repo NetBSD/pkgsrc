@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.550 2017/02/02 20:43:17 leot Exp $
+$NetBSD: CHANGES-2017,v 1.551 2017/02/03 02:07:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -704,3 +704,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xf86-video-ati to 7.8.0nb1 [wiz 2017-02-02]
 	Updated www/py-pelican to 3.7.1 [nils 2017-02-02]
 	Updated x11/st-term to 0.7nb1 [leot 2017-02-02]
+	Updated devel/p5-Moose to 2.2004 [wen 2017-02-03]
