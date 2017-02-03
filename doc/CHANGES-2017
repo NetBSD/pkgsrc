@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.557 2017/02/03 09:48:36 nils Exp $
+$NetBSD: CHANGES-2017,v 1.558 2017/02/03 09:57:52 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -711,3 +711,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/libxklavier to 5.4nb2 [wiz 2017-02-03]
 	Updated x11/xdg-user-dirs to 0.15nb2 [leot 2017-02-03]
 	Updated www/py-feedgenerator to 1.9 [nils 2017-02-03]
+	Updated security/mozilla-rootcerts to 1.0.20170121 [maya 2017-02-03]
