@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.555 2017/02/03 07:46:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.556 2017/02/03 08:42:48 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-MooseX-Types to 0.49 [wen 2017-02-03]
 	Updated devel/p5-Pegex to 0.63 [wen 2017-02-03]
 	Updated x11/libxklavier to 5.4nb2 [wiz 2017-02-03]
+	Updated x11/xdg-user-dirs to 0.15nb2 [leot 2017-02-03]
