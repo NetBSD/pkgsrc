@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/11/03 11:13:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/02/03 14:44:37 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -18,9 +18,6 @@ ${PYSITELIB}/hgext/bugzilla.pyo
 ${PYSITELIB}/hgext/censor.py
 ${PYSITELIB}/hgext/censor.pyc
 ${PYSITELIB}/hgext/censor.pyo
-${PYSITELIB}/hgext/chgserver.py
-${PYSITELIB}/hgext/chgserver.pyc
-${PYSITELIB}/hgext/chgserver.pyo
 ${PYSITELIB}/hgext/children.py
 ${PYSITELIB}/hgext/children.pyc
 ${PYSITELIB}/hgext/children.pyo
@@ -100,6 +97,15 @@ ${PYSITELIB}/hgext/fsmonitor/pywatchman/bser.so
 ${PYSITELIB}/hgext/fsmonitor/pywatchman/capabilities.py
 ${PYSITELIB}/hgext/fsmonitor/pywatchman/capabilities.pyc
 ${PYSITELIB}/hgext/fsmonitor/pywatchman/capabilities.pyo
+${PYSITELIB}/hgext/fsmonitor/pywatchman/compat.py
+${PYSITELIB}/hgext/fsmonitor/pywatchman/compat.pyc
+${PYSITELIB}/hgext/fsmonitor/pywatchman/compat.pyo
+${PYSITELIB}/hgext/fsmonitor/pywatchman/encoding.py
+${PYSITELIB}/hgext/fsmonitor/pywatchman/encoding.pyc
+${PYSITELIB}/hgext/fsmonitor/pywatchman/encoding.pyo
+${PYSITELIB}/hgext/fsmonitor/pywatchman/load.py
+${PYSITELIB}/hgext/fsmonitor/pywatchman/load.pyc
+${PYSITELIB}/hgext/fsmonitor/pywatchman/load.pyo
 ${PYSITELIB}/hgext/fsmonitor/pywatchman/pybser.py
 ${PYSITELIB}/hgext/fsmonitor/pywatchman/pybser.pyc
 ${PYSITELIB}/hgext/fsmonitor/pywatchman/pybser.pyo
@@ -265,9 +271,15 @@ ${PYSITELIB}/mercurial/changegroup.pyo
 ${PYSITELIB}/mercurial/changelog.py
 ${PYSITELIB}/mercurial/changelog.pyc
 ${PYSITELIB}/mercurial/changelog.pyo
+${PYSITELIB}/mercurial/chgserver.py
+${PYSITELIB}/mercurial/chgserver.pyc
+${PYSITELIB}/mercurial/chgserver.pyo
 ${PYSITELIB}/mercurial/cmdutil.py
 ${PYSITELIB}/mercurial/cmdutil.pyc
 ${PYSITELIB}/mercurial/cmdutil.pyo
+${PYSITELIB}/mercurial/color.py
+${PYSITELIB}/mercurial/color.pyc
+${PYSITELIB}/mercurial/color.pyo
 ${PYSITELIB}/mercurial/commands.py
 ${PYSITELIB}/mercurial/commands.pyc
 ${PYSITELIB}/mercurial/commands.pyo
@@ -292,6 +304,9 @@ ${PYSITELIB}/mercurial/dagparser.pyo
 ${PYSITELIB}/mercurial/dagutil.py
 ${PYSITELIB}/mercurial/dagutil.pyc
 ${PYSITELIB}/mercurial/dagutil.pyo
+${PYSITELIB}/mercurial/debugcommands.py
+${PYSITELIB}/mercurial/debugcommands.pyc
+${PYSITELIB}/mercurial/debugcommands.pyo
 ${PYSITELIB}/mercurial/default.d/mergetools.rc
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
@@ -303,6 +318,9 @@ ${PYSITELIB}/mercurial/diffhelpers.so
 ${PYSITELIB}/mercurial/dirstate.py
 ${PYSITELIB}/mercurial/dirstate.pyc
 ${PYSITELIB}/mercurial/dirstate.pyo
+${PYSITELIB}/mercurial/dirstateguard.py
+${PYSITELIB}/mercurial/dirstateguard.pyc
+${PYSITELIB}/mercurial/dirstateguard.pyo
 ${PYSITELIB}/mercurial/discovery.py
 ${PYSITELIB}/mercurial/discovery.pyc
 ${PYSITELIB}/mercurial/discovery.pyo
@@ -366,11 +384,9 @@ ${PYSITELIB}/mercurial/help/internals/requirements.txt
 ${PYSITELIB}/mercurial/help/internals/revlogs.txt
 ${PYSITELIB}/mercurial/help/internals/wireprotocol.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
-${PYSITELIB}/mercurial/help/multirevs.txt
 ${PYSITELIB}/mercurial/help/patterns.txt
 ${PYSITELIB}/mercurial/help/phases.txt
 ${PYSITELIB}/mercurial/help/revisions.txt
-${PYSITELIB}/mercurial/help/revsets.txt
 ${PYSITELIB}/mercurial/help/scripting.txt
 ${PYSITELIB}/mercurial/help/subrepos.txt
 ${PYSITELIB}/mercurial/help/templates.txt
@@ -468,6 +484,9 @@ ${PYSITELIB}/mercurial/mdiff.pyo
 ${PYSITELIB}/mercurial/merge.py
 ${PYSITELIB}/mercurial/merge.pyc
 ${PYSITELIB}/mercurial/merge.pyo
+${PYSITELIB}/mercurial/mergeutil.py
+${PYSITELIB}/mercurial/mergeutil.pyc
+${PYSITELIB}/mercurial/mergeutil.pyo
 ${PYSITELIB}/mercurial/minirst.py
 ${PYSITELIB}/mercurial/minirst.pyc
 ${PYSITELIB}/mercurial/minirst.pyo
@@ -537,9 +556,6 @@ ${PYSITELIB}/mercurial/pushkey.pyo
 ${PYSITELIB}/mercurial/pvec.py
 ${PYSITELIB}/mercurial/pvec.pyc
 ${PYSITELIB}/mercurial/pvec.pyo
-${PYSITELIB}/mercurial/py3kcompat.py
-${PYSITELIB}/mercurial/py3kcompat.pyc
-${PYSITELIB}/mercurial/py3kcompat.pyo
 ${PYSITELIB}/mercurial/pycompat.py
 ${PYSITELIB}/mercurial/pycompat.pyc
 ${PYSITELIB}/mercurial/pycompat.pyo
@@ -567,6 +583,9 @@ ${PYSITELIB}/mercurial/scmutil.pyo
 ${PYSITELIB}/mercurial/scmwindows.py
 ${PYSITELIB}/mercurial/scmwindows.pyc
 ${PYSITELIB}/mercurial/scmwindows.pyo
+${PYSITELIB}/mercurial/server.py
+${PYSITELIB}/mercurial/server.pyc
+${PYSITELIB}/mercurial/server.pyo
 ${PYSITELIB}/mercurial/setdiscovery.py
 ${PYSITELIB}/mercurial/setdiscovery.pyc
 ${PYSITELIB}/mercurial/setdiscovery.pyo
@@ -588,15 +607,15 @@ ${PYSITELIB}/mercurial/sslutil.pyo
 ${PYSITELIB}/mercurial/statichttprepo.py
 ${PYSITELIB}/mercurial/statichttprepo.pyc
 ${PYSITELIB}/mercurial/statichttprepo.pyo
+${PYSITELIB}/mercurial/statprof.py
+${PYSITELIB}/mercurial/statprof.pyc
+${PYSITELIB}/mercurial/statprof.pyo
 ${PYSITELIB}/mercurial/store.py
 ${PYSITELIB}/mercurial/store.pyc
 ${PYSITELIB}/mercurial/store.pyo
 ${PYSITELIB}/mercurial/streamclone.py
 ${PYSITELIB}/mercurial/streamclone.pyc
 ${PYSITELIB}/mercurial/streamclone.pyo
-${PYSITELIB}/mercurial/strutil.py
-${PYSITELIB}/mercurial/strutil.pyc
-${PYSITELIB}/mercurial/strutil.pyo
 ${PYSITELIB}/mercurial/subrepo.py
 ${PYSITELIB}/mercurial/subrepo.pyc
 ${PYSITELIB}/mercurial/subrepo.pyo
@@ -804,6 +823,7 @@ ${PYSITELIB}/mercurial/wireproto.pyo
 ${PYSITELIB}/mercurial/worker.py
 ${PYSITELIB}/mercurial/worker.pyc
 ${PYSITELIB}/mercurial/worker.pyo
+${PYSITELIB}/mercurial/zstd.so
 man/man1/hg.1
 man/man5/hgignore.5
 man/man5/hgrc.5
