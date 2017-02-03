@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.65 2016/07/29 11:10:24 wiz Exp $
+$NetBSD: distinfo,v 1.65.4.1 2017/02/03 11:26:04 bsiegert Exp $
 
-SHA1 (httpd-2.2.31.tar.bz2) = e3b55387112206307ba76526820a2627472f3787
-RMD160 (httpd-2.2.31.tar.bz2) = 5b073f5f556c74e19eba8e40faa5c5fa308e018a
-SHA512 (httpd-2.2.31.tar.bz2) = 5aa47d4b76f692bbd8b309135ff99152df98cf69b505b9daf3f13f7f2a31443eaf4995161adfbc47a133b4d0e091fda2d95fc6b87a956f0ada18d7466ee28e74
-Size (httpd-2.2.31.tar.bz2) = 5610489 bytes
+SHA1 (httpd-2.2.32.tar.bz2) = 36dc7f2ac97627192dcff0a121408b897f91b121
+RMD160 (httpd-2.2.32.tar.bz2) = 88789518915babeaa8dbf0e8130b6d630bebb6c3
+SHA512 (httpd-2.2.32.tar.bz2) = b1802579f4fc950705ddcf0a24f502ffadbd91d5693fdd3b290ac7ca40122f8fa48132ad1055afae9b841dd55e8bb343239be07ca431b0f60ea081f5c2fad2c3
+Size (httpd-2.2.32.tar.bz2) = 5777509 bytes
 SHA1 (patch-aa) = e0bfdf6bc9cb034bea46a390a12a5508e363c9a7
 SHA1 (patch-ab) = 365cc3b0ac2d9d68ccb94f5699fe168a1c9b0150
 SHA1 (patch-ac) = 515043b5c215d49fe8f6d3191b502c978e2a2dad
@@ -15,11 +15,6 @@ SHA1 (patch-al) = 56b9f5c2f6fd01fe5067f9210e328cbf674c68f1
 SHA1 (patch-am) = ab4a2f7e5a1a3064e908b61157e7fd349c0b0c08
 SHA1 (patch-aw) = ca53d67beeb2c2c4d9adb04d3d79e24a8c427fd4
 SHA1 (patch-docs_man_apxs.8) = 70797ea73ae6379492971bec1106a8427ae7fdaa
-SHA1 (patch-include_ap_mmn.h) = 2fec04379f38ecc90debc69faafe38932099e5e1
 SHA1 (patch-lock.c) = 770ca03f1cb4421879bd5baa5a7c30cc91acb6e1
-SHA1 (patch-modules_proxy_mod_proxy.c) = 67d8d441c546a46aa729ed82673da4883f73dec8
-SHA1 (patch-modules_proxy_mod_proxy.h) = a4453d85f6a3cf43df44f4e491aee07aaff44905
 SHA1 (patch-modules_proxy_mod_proxy_connect.c) = b2b5d0242a92c7bf20b14c16d8cd3abae42f3746
-SHA1 (patch-modules_proxy_proxy_util.c) = 1368694ef3141c3a1e9a1ddd73664bbb33465271
 SHA1 (patch-repos.c) = 0e0361b91d4b0fe6c7c55a12fdfd2e6aacc710e1
-SHA1 (patch-server_util__script.c) = 770f773ba278ec774f1f5a812fa9956fad9cc3f8
