@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/04 01:41:41 ryoon Exp $
+bin/sd2raw
+bin/sd2svg
+bin/sd2text
+bin/sdc2csv
+bin/sdw2html
+include/libstaroffice-0.0/libstaroffice/STOFFDocument.hxx
+include/libstaroffice-0.0/libstaroffice/libstaroffice.hxx
+lib/libstaroffice-0.0.la
+lib/pkgconfig/libstaroffice-0.0.pc
