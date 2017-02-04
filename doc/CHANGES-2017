@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.565 2017/02/03 17:08:20 maya Exp $
+$NetBSD: CHANGES-2017,v 1.566 2017/02/04 01:17:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -722,3 +722,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/gst-plugins1-bad to 1.10.3 [maya 2017-02-03]
 	Updated multimedia/gst-plugins1-base to 1.10.3 [maya 2017-02-03]
 	Updated multimedia/gst-plugins1-ugly to 1.10.3 [maya 2017-02-03]
+	Updated lang/openjdk8 to 1.8.121 [ryoon 2017-02-04]
