@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/12/18 21:58:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/02/04 07:12:35 maya Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -54,6 +54,7 @@ share/doc/gnupg/examples/scd-event
 share/doc/gnupg/examples/systemd-user/README
 share/doc/gnupg/examples/systemd-user/dirmngr.service
 share/doc/gnupg/examples/systemd-user/dirmngr.socket
+share/doc/gnupg/examples/systemd-user/gpg-agent-browser.socket
 share/doc/gnupg/examples/systemd-user/gpg-agent-extra.socket
 share/doc/gnupg/examples/systemd-user/gpg-agent-ssh.socket
 share/doc/gnupg/examples/systemd-user/gpg-agent.service
