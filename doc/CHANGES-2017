@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.570 2017/02/04 01:48:27 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.571 2017/02/04 02:41:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added converters/libzmf version 0.0.1 [ryoon 2017-02-04]
 	Added converters/libstaroffice version 0.0.2 [ryoon 2017-02-04]
 	Updated misc/libreoffice to 5.3.0.3 [ryoon 2017-02-04]
+	Updated devel/p5-CPANPLUS to 0.9162 [mef 2017-02-04]
