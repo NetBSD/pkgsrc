@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.24 2016/08/28 09:40:35 richard Exp $
+# $NetBSD: egg.mk,v 1.25 2017/02/04 11:43:17 sevan Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -46,7 +46,7 @@ privileged-install-hook:	fixup-egg-info
 fixup-egg-info:	# ensure egg-info directory contents are always 644
 	if ${TEST} -d "${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}"; then \
 	    ${FIND} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR} -type f \
-		-exec ${CHMOD} ${SHAREMODE} '{}' +; \
+		-exec ${CHMOD} ${SHAREMODE} '{}' + \; ; \
 	fi
 
 .include "../../lang/python/extension.mk"
