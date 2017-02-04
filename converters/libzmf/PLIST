@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/04 01:38:36 ryoon Exp $
+bin/zmf2raw
+bin/zmf2svg
+include/libzmf-0.0/libzmf/ZMFDocument.h
+include/libzmf-0.0/libzmf/libzmf.h
+lib/libzmf-0.0.la
+lib/pkgconfig/libzmf-0.0.pc

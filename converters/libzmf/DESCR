@@ -1,0 +1,3 @@
+libzmf is a library that parses the file format of Zoner Callisto/Draw
+documents. Currently it only understands documents created by Zoner
+Draw version 4 and 5.
