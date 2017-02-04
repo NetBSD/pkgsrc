@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.573 2017/02/04 06:58:34 mef Exp $
+$NetBSD: CHANGES-2017,v 1.574 2017/02/04 07:12:55 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-CPANPLUS to 0.9162 [mef 2017-02-04]
 	Updated devel/p5-ExtUtils-ModuleMaker to 0.56 [mef 2017-02-04]
 	Updated devel/p5-Exporter-Tiny to 0.044 [mef 2017-02-04]
+	Updated security/gnupg21 to 2.1.18 [maya 2017-02-04]
