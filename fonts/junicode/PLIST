@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/04 18:20:50 wiz Exp $
+share/doc/junicode/Junicode.pdf
+share/doc/junicode/Junicode.tex
+share/doc/junicode/aelfric_job.pdf
+share/doc/junicode/aelfric_job.tex
+share/doc/junicode/homer_sample.pdf
+share/doc/junicode/homer_sample.tex
+share/fonts/X11/TTF/Junicode-Bold.ttf
+share/fonts/X11/TTF/Junicode-BoldItalic.ttf
+share/fonts/X11/TTF/Junicode-Italic.ttf
+share/fonts/X11/TTF/Junicode.ttf
