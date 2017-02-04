@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2017/02/04 11:12:04 maya Exp $
+# $NetBSD: options.mk,v 1.35 2017/02/04 11:14:27 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -10,6 +10,10 @@ PLIST_VARS+=		gnome jemalloc debug
 PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc dbus
 .elif ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	alsa dbus
+.elif ${OPSYS} == "FreeBSD"
+PKG_SUGGESTED_OPTIONS+=	oss dbus
+.elif ${OPSYS} == "DragonFly"
+PKG_SUGGESTED_OPTIONS+=	oss dbus
 .else
 PKG_SUGGESTED_OPTIONS+= dbus pulseaudio
 .endif
