@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.38 2016/06/21 12:57:39 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.39 2017/02/04 16:20:12 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
 bin/mlfc
 bin/mlterm
 ${PLIST.fb}bin/mlterm-fb
-lib/libkik.la
-lib/libmkf.la
-lib/libmlterm_core.la
-lib/mkf/libmkf_8bits.la
-lib/mkf/libmkf_jajp.la
-lib/mkf/libmkf_kokr.la
-lib/mkf/libmkf_zh.la
+lib/libmef.la
+lib/libmlterm_${CORE}.la
+lib/libpobl.la
+lib/mef/libmef_8bits.la
+lib/mef/libmef_jajp.la
+lib/mef/libmef_kokr.la
+lib/mef/libmef_zh.la
 lib/mlterm/libathena.la
 ${PLIST.bidi}lib/mlterm/libctl_bidi.la
 ${PLIST.ind}lib/mlterm/libctl_iscii.la
