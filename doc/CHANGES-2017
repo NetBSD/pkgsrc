@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.566 2017/02/04 01:17:00 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.567 2017/02/04 01:37:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -716,7 +716,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/salt to 2016.11.2 [sborrill 2017-02-03]
 	Updated sysutils/e2fsprogs to 1.43.4 [mef 2017-02-03]
 	Updated devel/py-mercurial to 4.1 [wiz 2017-02-03]
-	Added textproc/p5-String-Expand 0.04 [hauke 2017-02-03]
+	Added textproc/p5-String-Expand version 0.04 [hauke 2017-02-03]
 	Updated multimedia/gst-plugins1-libav to 1.10.3 [maya 2017-02-03]
 	Updated multimedia/gst-plugins1-good to 1.10.3 [maya 2017-02-03]
 	Updated multimedia/gst-plugins1-bad to 1.10.3 [maya 2017-02-03]
