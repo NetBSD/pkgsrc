@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/09/07 13:45:29 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/02/04 12:42:06 adam Exp $
 
-DISTNAME=	django-treebeard-4.0.1
+DISTNAME=	django-treebeard-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-treebeard/}
