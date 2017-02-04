@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2016/06/21 12:57:39 tsutsui Exp $
+# $NetBSD: options.mk,v 1.13 2017/02/04 16:20:12 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
 PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
@@ -73,8 +73,10 @@ CONFIGURE_ARGS+=	--disable-m17nlib
 .include "../../fonts/harfbuzz/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-otl
 PLIST.otl=		yes
+PLIST_SUBST+=		CORE="coreotl"
 .else
 CONFIGURE_ARGS+=	--disable-otl
+PLIST_SUBST+=		CORE="core"
 .endif
 
 .if !empty(PKG_OPTIONS:Mscim)
