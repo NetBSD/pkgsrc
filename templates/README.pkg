@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<!-- $NetBSD: README.pkg,v 1.27 2015/10/03 13:17:57 bsiegert Exp $ -->
+<!-- $NetBSD: README.pkg,v 1.28 2017/02/04 03:47:47 riastradh Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%PORT%%</title>
@@ -84,7 +84,7 @@ Available machine architectures and package versions:
 
 <p>
 The NetBSD packages collection is designed to permit
-            easy <a href="../../README">installation from source</a> -
+            easy <a href="../../doc/pkgsrc.html">installation from source</a> -
             particularly useful if the latest binary package is
             not available for your chosen platform.
 </p>
