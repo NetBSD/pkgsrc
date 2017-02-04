@@ -1,4 +1,6 @@
-$NetBSD: patch-solenv_gbuild_AllLangResTarget.mk,v 1.2 2016/02/11 09:45:27 ryoon Exp $
+$NetBSD: patch-solenv_gbuild_AllLangResTarget.mk,v 1.3 2017/02/04 01:48:00 ryoon Exp $
+
+* Do not pass arguments to RSC. Prevent a build failure
 
 --- solenv/gbuild/AllLangResTarget.mk.orig	2016-01-27 00:58:25.000000000 +0000
 +++ solenv/gbuild/AllLangResTarget.mk

@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.java,v 1.5 2017/02/04 01:48:00 ryoon Exp $
 ${PKGNAME}/lib/libreoffice/program/JREProperties.class
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptFramework.jar
 ${PKGNAME}/lib/libreoffice/program/classes/ScriptProviderForBeanShell.jar
@@ -2799,4 +2800,3 @@ ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/registration/LICENSE
 ${PKGNAME}/lib/libreoffice/share/extensions/wiki-publisher/templates/MediaWiki/mediawiki.ott
 ${PKGNAME}/lib/libreoffice/share/registry/reportbuilder.xcd
 ${PKGNAME}/lib/libreoffice/share/template/common/wizard/report/default.otr
-@comment $NetBSD: PLIST.java,v 1.4 2016/12/24 21:45:03 ryoon Exp $
