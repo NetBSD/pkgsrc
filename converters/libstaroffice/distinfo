@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/04 01:41:41 ryoon Exp $
+
+SHA1 (libstaroffice-0.0.2.tar.bz2) = fb7ec416807e49cb8cb12b1e46003499fad9df5f
+RMD160 (libstaroffice-0.0.2.tar.bz2) = b387b4feb04371ad816553a8b984b9c3f91561bf
+SHA512 (libstaroffice-0.0.2.tar.bz2) = dc66324dd8b365db73ea6dea16188b808648970311d443f09302648ab6b3d27c95e91f09f2be6d0d8ef173d8c5129afe6d493b1e2664dbe229553060142858e8
+Size (libstaroffice-0.0.2.tar.bz2) = 886950 bytes
