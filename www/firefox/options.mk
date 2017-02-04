@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2016/12/03 11:30:28 ryoon Exp $
+# $NetBSD: options.mk,v 1.34 2017/02/04 11:12:04 maya Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -53,7 +53,6 @@ O0TRACKING=-fvar-tracking-assignments -fvar-tracking
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}"
-CONFIGURE_ARGS+=	--enable-debug-symbols
 CONFIGURE_ARGS+=	--disable-optimize
 CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
