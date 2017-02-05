@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/05 11:41:06 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/examples/app.rb
+${GEM_LIBDIR}/examples/autobahn_client.rb
+${GEM_LIBDIR}/examples/client.rb
+${GEM_LIBDIR}/examples/config.ru
+${GEM_LIBDIR}/examples/haproxy.conf
+${GEM_LIBDIR}/examples/proxy_server.rb
+${GEM_LIBDIR}/examples/rainbows.conf
+${GEM_LIBDIR}/examples/server.rb
+${GEM_LIBDIR}/examples/sse.html
+${GEM_LIBDIR}/examples/ws.html
+${GEM_LIBDIR}/lib/faye/adapters/goliath.rb
+${GEM_LIBDIR}/lib/faye/adapters/rainbows.rb
+${GEM_LIBDIR}/lib/faye/adapters/rainbows_client.rb
+${GEM_LIBDIR}/lib/faye/adapters/thin.rb
+${GEM_LIBDIR}/lib/faye/eventsource.rb
+${GEM_LIBDIR}/lib/faye/rack_stream.rb
+${GEM_LIBDIR}/lib/faye/websocket.rb
+${GEM_LIBDIR}/lib/faye/websocket/adapter.rb
+${GEM_LIBDIR}/lib/faye/websocket/api.rb
+${GEM_LIBDIR}/lib/faye/websocket/api/event.rb
+${GEM_LIBDIR}/lib/faye/websocket/api/event_target.rb
+${GEM_LIBDIR}/lib/faye/websocket/client.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
