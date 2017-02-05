@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2017/02/04 01:48:00 ryoon Exp $
+$NetBSD: distinfo,v 1.29 2017/02/05 02:26:01 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -212,6 +212,7 @@ SHA1 (libreoffice/libreoffice-translations-5.3.0.3.tar.xz) = 1eaa20f207ec236e4d6
 RMD160 (libreoffice/libreoffice-translations-5.3.0.3.tar.xz) = de2b3b4d848bc6a696b84a8c96ed1d82747db6f8
 SHA512 (libreoffice/libreoffice-translations-5.3.0.3.tar.xz) = 569e5450802201a34011e9e98d2de32676b5aac98abffa2241ab1aa23ade60baf222687a60e931fa28a55421f49b4c97f26169348172f272b3bf88aff9ed9457
 Size (libreoffice/libreoffice-translations-5.3.0.3.tar.xz) = 140659960 bytes
+SHA1 (patch-Makefile.in) = 5bb39185b12d57b69c72771a3afc214ac243e694
 SHA1 (patch-autogen.sh) = 81d14387f32658c69a40a07f0af1373a90f70364
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__intel_share.hxx) = c1f5a013b88e847dd9ecfb4e4abe78b1b5965a0b
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = f7eaf2748c66a27a772fdbdb370a4c6b3bdafca4
