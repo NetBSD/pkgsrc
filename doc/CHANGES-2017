@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.583 2017/02/05 01:14:23 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.584 2017/02/05 01:20:31 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-sawyer to 0.8.1 [tsutsui 2017-02-05]
 	Updated www/ruby-faraday to 0.11.0 [tsutsui 2017-02-05]
 	Updated www/ruby-http to 2.2.0 [tsutsui 2017-02-05]
+	Updated net/ruby-twitter to 6.1.0 [tsutsui 2017-02-05]
