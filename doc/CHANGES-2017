@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.592 2017/02/05 11:14:15 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.593 2017/02/05 11:22:39 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -748,3 +748,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/ruby-twitter-text to 1.14.5 [tsutsui 2017-02-05]
 	Added www/ruby-faraday_middleware version 0.11.0.1 [tsutsui 2017-02-05]
 	Added www/ruby-websocket-extensions version 0.1.2 [tsutsui 2017-02-05]
+	Added www/ruby-websocket-driver version 0.6.5 [tsutsui 2017-02-05]
