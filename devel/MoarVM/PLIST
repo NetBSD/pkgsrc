@@ -1,20 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/08 20:26:46 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/02/05 12:36:59 bsiegert Exp $
 bin/moar
-include/libuv/android-ifaddrs.h
-include/libuv/pthread-fixes.h
-include/libuv/stdint-msvc2008.h
-include/libuv/tree.h
-include/libuv/uv-aix.h
-include/libuv/uv-bsd.h
-include/libuv/uv-darwin.h
-include/libuv/uv-errno.h
-include/libuv/uv-linux.h
-include/libuv/uv-sunos.h
-include/libuv/uv-threadpool.h
-include/libuv/uv-unix.h
-include/libuv/uv-version.h
-include/libuv/uv-win.h
-include/libuv/uv.h
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
 include/moar/6model/containers.h
@@ -29,6 +14,7 @@ include/moar/6model/reprs/CStruct.h
 include/moar/6model/reprs/CUnion.h
 include/moar/6model/reprs/ConcBlockingQueue.h
 include/moar/6model/reprs/ConditionVariable.h
+include/moar/6model/reprs/Decoder.h
 include/moar/6model/reprs/HashAttrStore.h
 include/moar/6model/reprs/KnowHOWAttributeREPR.h
 include/moar/6model/reprs/KnowHOWREPR.h
@@ -73,6 +59,7 @@ include/moar/core/args.h
 include/moar/core/bytecode.h
 include/moar/core/bytecodedump.h
 include/moar/core/callsite.h
+include/moar/core/callstack.h
 include/moar/core/coerce.h
 include/moar/core/compunit.h
 include/moar/core/continuation.h
@@ -91,6 +78,7 @@ include/moar/core/nativecall_dyncall.h
 include/moar/core/nativecall_libffi.h
 include/moar/core/oplabels.h
 include/moar/core/ops.h
+include/moar/core/regionalloc.h
 include/moar/core/threadcontext.h
 include/moar/core/threads.h
 include/moar/core/validation.h
@@ -130,6 +118,7 @@ include/moar/mast/driver.h
 include/moar/mast/nodes.h
 include/moar/math/bigintops.h
 include/moar/math/num.h
+include/moar/memdebug.h
 include/moar/moar.h
 include/moar/platform/inttypes.h
 include/moar/platform/io.h
@@ -139,6 +128,7 @@ include/moar/platform/stdint.h
 include/moar/platform/sys.h
 include/moar/platform/threads.h
 include/moar/platform/time.h
+include/moar/profiler/heapsnapshot.h
 include/moar/profiler/instrument.h
 include/moar/profiler/log.h
 include/moar/profiler/profile.h
@@ -151,6 +141,7 @@ include/moar/spesh/facts.h
 include/moar/spesh/graph.h
 include/moar/spesh/inline.h
 include/moar/spesh/log.h
+include/moar/spesh/lookup.h
 include/moar/spesh/manipulate.h
 include/moar/spesh/optimize.h
 include/moar/spesh/osr.h
@@ -164,6 +155,7 @@ include/moar/strings/normalize.h
 include/moar/strings/ops.h
 include/moar/strings/unicode.h
 include/moar/strings/unicode_gen.h
+include/moar/strings/unicode_ops.h
 include/moar/strings/utf16.h
 include/moar/strings/utf8.h
 include/moar/strings/utf8_c8.h
