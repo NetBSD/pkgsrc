@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2017/01/03 13:23:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2017/02/05 10:08:13 leot Exp $
 
 DISTNAME=	twill-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
 
@@ -9,6 +10,8 @@ MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://twill.idyll.org/
 COMMENT=	Python package for the twill Web browsing language
 LICENSE=	mit
+
+DEPENDS+=	${PYPKGPREFIX}-cssselect-*:../../textproc/py-cssselect
 
 USE_LANGUAGES=	# none
 
