@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/02/05 01:46:53 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/02/05 14:41:14 wiz Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -13738,6 +13738,9 @@ ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwright.gif
 ${PKGNAME}/lib/libreoffice/share/gallery/www-graf/ylwup.gif
 ${PKGNAME}/lib/libreoffice/share/glade/libreoffice-catalog.xml
 ${PKGNAME}/lib/libreoffice/share/labels/labels.xml
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_end.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_middle.png
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/share/libreofficekit/handle_image_start.png
 ${PKGNAME}/lib/libreoffice/share/palette/arrowhd.soe
 ${PKGNAME}/lib/libreoffice/share/palette/breeze.soc
 ${PKGNAME}/lib/libreoffice/share/palette/classic.sog
