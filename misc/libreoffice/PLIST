@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/02/04 01:48:00 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/02/05 01:46:53 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -136,7 +136,9 @@ ${PKGNAME}/lib/libreoffice/program/libintrospectionlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocadaptlo.so
 ${PKGNAME}/lib/libreoffice/program/libinvocationlo.so
 ${PKGNAME}/lib/libreoffice/program/libiolo.so
+${PLIST.kde4}${PKGNAME}/lib/libreoffice/program/libkde4be1lo.so
 ${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
 ${PKGNAME}/lib/libreoffice/program/liblocalebe1lo.so
@@ -262,6 +264,8 @@ ${PKGNAME}/lib/libreoffice/program/libvclcanvaslo.so
 ${PKGNAME}/lib/libreoffice/program/libvcllo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_genlo.so
 ${PKGNAME}/lib/libreoffice/program/libvclplug_gtklo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/libvclplug_gtk3lo.so
+${PLIST.kde4}${PKGNAME}/lib/libreoffice/program/libvclplug_kde4lo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftcalclo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftdrawlo.so
 ${PKGNAME}/lib/libreoffice/program/libwpftimpresslo.so
@@ -14812,82 +14816,3 @@ share/mimelnk/application/libreoffice-spreadsheet-template.desktop
 share/mimelnk/application/libreoffice-spreadsheet.desktop
 share/mimelnk/application/libreoffice-text-template.desktop
 share/mimelnk/application/libreoffice-text.desktop
-@pkgdir ${PKGNAME}/lib/libreoffice/share/uno_packages/cache/uno_packages
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/zu
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/xh
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/vec
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ve
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/uz
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/uk
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ug
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tt
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ts
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/th
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/tg
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/te
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ta
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sw-TZ
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/st
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ss
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sr-Latn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sr
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sq
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sid
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/si
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sd
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sat
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/sa-IN
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/rw
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/pa-IN
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/or
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/om
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/oc
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nso
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nr
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ne
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/nb
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/my
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mr
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mni
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ml
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mk
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/mai
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/lv
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/lo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/lb
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ks
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kok
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kmr-Latn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/kk
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ka
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/id
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/hi
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/he
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gug
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gu
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gl
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/gd
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ga
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/eu
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/et
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/eo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/el
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/dz
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/dgo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/cy
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ca-valencia
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bs
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/brx
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/br
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bo
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bn-IN
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/bn
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/be
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ast
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/as
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/ar
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/am
-@pkgdir ${PKGNAME}/lib/libreoffice/share/autotext/af
