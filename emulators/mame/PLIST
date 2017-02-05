@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/01/04 23:05:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/02/05 17:55:52 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -227,6 +227,7 @@ share/mame/hash/ibm5150.xml
 share/mame/hash/ibm5150_cass.xml
 share/mame/hash/ibm5170.xml
 share/mame/hash/ibm5170_cdrom.xml
+share/mame/hash/ibm6580.xml
 share/mame/hash/ibmpcjr_cart.xml
 share/mame/hash/ibmpcjr_flop.xml
 share/mame/hash/interact.xml
@@ -443,6 +444,7 @@ share/mame/hash/svi318_cass.xml
 share/mame/hash/svi318_flop.xml
 share/mame/hash/svision.xml
 share/mame/hash/svmu.xml
+share/mame/hash/t1000.xml
 share/mame/hash/tandy200.xml
 share/mame/hash/tandy2k.xml
 share/mame/hash/tandy6k.xml
@@ -492,6 +494,8 @@ share/mame/hash/vixen.xml
 share/mame/hash/vreader.xml
 share/mame/hash/vsmile_cart.xml
 share/mame/hash/vsmile_cd.xml
+share/mame/hash/vsmileb_cart.xml
+share/mame/hash/vsmilem_cart.xml
 share/mame/hash/vz_cass.xml
 share/mame/hash/wangpc.xml
 share/mame/hash/wicat.xml
