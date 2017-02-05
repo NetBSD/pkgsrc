@@ -1,0 +1,7 @@
+Websocket-driver module provides a complete implementation of
+the WebSocket protocols that can be hooked up to any TCP library.
+It aims to simplify things by decoupling the protocol details
+from the I/O layer, such that users only need to implement code
+to stream data in and out of it without needing to know anything
+about how the protocol actually works. Think of it as a complete
+WebSocket system with pluggable I/O.
