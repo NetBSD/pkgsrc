@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/05 11:13:00 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/websocket/extensions.rb
+${GEM_LIBDIR}/lib/websocket/extensions/parser.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
