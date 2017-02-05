@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.595 2017/02/05 11:52:06 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.596 2017/02/05 12:38:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/ruby-websocket-driver version 0.6.5 [tsutsui 2017-02-05]
 	Added www/ruby-faye-websocket version 0.10.6 [tsutsui 2017-02-05]
 	Added net/ruby-slack-api version 1.3.0 [tsutsui 2017-02-05]
+	Updated devel/MoarVM to 2017.01 [bsiegert 2017-02-05]
