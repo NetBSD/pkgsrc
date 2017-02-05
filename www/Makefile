@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1207 2017/02/05 11:22:15 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1208 2017/02/05 11:41:52 tsutsui Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -742,6 +742,7 @@ SUBDIR+=	ruby-em-http-request
 SUBDIR+=	ruby-erubis
 SUBDIR+=	ruby-faraday
 SUBDIR+=	ruby-faraday_middleware
+SUBDIR+=	ruby-faye-websocket
 SUBDIR+=	ruby-fcgi
 SUBDIR+=	ruby-gnome2-webkit-gtk
 SUBDIR+=	ruby-gnome2-webkit-gtk2
