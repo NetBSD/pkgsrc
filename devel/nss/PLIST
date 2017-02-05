@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/01/20 15:01:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/02/05 02:41:13 ryoon Exp $
 bin/certcgi
 bin/certutil
 bin/cmsutil
@@ -132,7 +132,6 @@ lib/nss/libnssckbi.${SO_SUFFIX}
 lib/nss/libnssdbm3.${SO_SUFFIX}
 lib/nss/libnssutil3.${SO_SUFFIX}
 lib/nss/libsmime3.${SO_SUFFIX}
-lib/nss/libsqlite3.${SO_SUFFIX}
 lib/nss/libsoftokn3.${SO_SUFFIX}
 lib/nss/libssl3.${SO_SUFFIX}
 lib/pkgconfig/nss.pc
