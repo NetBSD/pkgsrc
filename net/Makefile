@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1146 2017/01/24 17:22:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.1147 2017/02/05 11:51:34 tsutsui Exp $
 #
 
 COMMENT=	Networking tools
@@ -706,6 +706,7 @@ SUBDIR+=	ruby-netrc
 SUBDIR+=	ruby-pluggaloid
 SUBDIR+=	ruby-public_suffix
 SUBDIR+=	ruby-rubytter
+SUBDIR+=	ruby-slack-api
 SUBDIR+=	ruby-snmp
 SUBDIR+=	ruby-soap4r
 SUBDIR+=	ruby-stompserver
