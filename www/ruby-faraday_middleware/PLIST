@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/05 10:57:47 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/faraday_middleware.rb
+${GEM_LIBDIR}/lib/faraday_middleware/addressable_patch.rb
+${GEM_LIBDIR}/lib/faraday_middleware/backwards_compatibility.rb
+${GEM_LIBDIR}/lib/faraday_middleware/gzip.rb
+${GEM_LIBDIR}/lib/faraday_middleware/instrumentation.rb
+${GEM_LIBDIR}/lib/faraday_middleware/rack_compatible.rb
+${GEM_LIBDIR}/lib/faraday_middleware/request/encode_json.rb
+${GEM_LIBDIR}/lib/faraday_middleware/request/method_override.rb
+${GEM_LIBDIR}/lib/faraday_middleware/request/oauth.rb
+${GEM_LIBDIR}/lib/faraday_middleware/request/oauth2.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/caching.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/chunked.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/follow_redirects.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/mashify.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/parse_dates.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/parse_json.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/parse_marshal.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/parse_xml.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/parse_yaml.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response/rashify.rb
+${GEM_LIBDIR}/lib/faraday_middleware/response_middleware.rb
+${GEM_LIBDIR}/lib/faraday_middleware/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
