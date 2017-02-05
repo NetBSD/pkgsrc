@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.600 2017/02/05 18:25:03 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.601 2017/02/05 18:34:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -756,3 +756,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/mame to 0.182 [wiz 2017-02-05]
 	Updated graphics/ImageMagick to 7.0.4.7 [wiz 2017-02-05]
 	Updated graphics/p5-PerlMagick to 7.0.4.7 [wiz 2017-02-05]
+	Updated misc/calibre to 2.78.0 [wiz 2017-02-05]
