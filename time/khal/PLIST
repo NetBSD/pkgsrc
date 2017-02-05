@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/09/19 06:02:44 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/02/05 19:26:55 wiz Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -13,9 +13,6 @@ ${PYSITELIB}/khal/__init__.pyo
 ${PYSITELIB}/khal/__main__.py
 ${PYSITELIB}/khal/__main__.pyc
 ${PYSITELIB}/khal/__main__.pyo
-${PYSITELIB}/khal/aux.py
-${PYSITELIB}/khal/aux.pyc
-${PYSITELIB}/khal/aux.pyo
 ${PYSITELIB}/khal/calendar_display.py
 ${PYSITELIB}/khal/calendar_display.pyc
 ${PYSITELIB}/khal/calendar_display.pyo
@@ -34,9 +31,6 @@ ${PYSITELIB}/khal/exceptions.pyo
 ${PYSITELIB}/khal/khalendar/__init__.py
 ${PYSITELIB}/khal/khalendar/__init__.pyc
 ${PYSITELIB}/khal/khalendar/__init__.pyo
-${PYSITELIB}/khal/khalendar/aux.py
-${PYSITELIB}/khal/khalendar/aux.pyc
-${PYSITELIB}/khal/khalendar/aux.pyo
 ${PYSITELIB}/khal/khalendar/backend.py
 ${PYSITELIB}/khal/khalendar/backend.pyc
 ${PYSITELIB}/khal/khalendar/backend.pyo
@@ -49,6 +43,12 @@ ${PYSITELIB}/khal/khalendar/exceptions.pyo
 ${PYSITELIB}/khal/khalendar/khalendar.py
 ${PYSITELIB}/khal/khalendar/khalendar.pyc
 ${PYSITELIB}/khal/khalendar/khalendar.pyo
+${PYSITELIB}/khal/khalendar/utils.py
+${PYSITELIB}/khal/khalendar/utils.pyc
+${PYSITELIB}/khal/khalendar/utils.pyo
+${PYSITELIB}/khal/khalendar/vdir.py
+${PYSITELIB}/khal/khalendar/vdir.pyc
+${PYSITELIB}/khal/khalendar/vdir.pyo
 ${PYSITELIB}/khal/log.py
 ${PYSITELIB}/khal/log.pyc
 ${PYSITELIB}/khal/log.pyo
@@ -86,6 +86,9 @@ ${PYSITELIB}/khal/ui/startendeditor.pyo
 ${PYSITELIB}/khal/ui/widgets.py
 ${PYSITELIB}/khal/ui/widgets.pyc
 ${PYSITELIB}/khal/ui/widgets.pyo
+${PYSITELIB}/khal/utils.py
+${PYSITELIB}/khal/utils.pyc
+${PYSITELIB}/khal/utils.pyo
 ${PYSITELIB}/khal/version.py
 ${PYSITELIB}/khal/version.pyc
 ${PYSITELIB}/khal/version.pyo
