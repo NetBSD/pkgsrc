@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2016/10/18 15:27:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/02/05 01:13:32 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES.md
@@ -20,6 +21,9 @@ ${GEM_LIBDIR}/lib/http/client.rb
 ${GEM_LIBDIR}/lib/http/connection.rb
 ${GEM_LIBDIR}/lib/http/content_type.rb
 ${GEM_LIBDIR}/lib/http/errors.rb
+${GEM_LIBDIR}/lib/http/feature.rb
+${GEM_LIBDIR}/lib/http/features/auto_deflate.rb
+${GEM_LIBDIR}/lib/http/features/auto_inflate.rb
 ${GEM_LIBDIR}/lib/http/headers.rb
 ${GEM_LIBDIR}/lib/http/headers/known.rb
 ${GEM_LIBDIR}/lib/http/headers/mixin.rb
@@ -32,6 +36,7 @@ ${GEM_LIBDIR}/lib/http/request.rb
 ${GEM_LIBDIR}/lib/http/request/writer.rb
 ${GEM_LIBDIR}/lib/http/response.rb
 ${GEM_LIBDIR}/lib/http/response/body.rb
+${GEM_LIBDIR}/lib/http/response/inflater.rb
 ${GEM_LIBDIR}/lib/http/response/parser.rb
 ${GEM_LIBDIR}/lib/http/response/status.rb
 ${GEM_LIBDIR}/lib/http/response/status/reasons.rb
@@ -43,9 +48,12 @@ ${GEM_LIBDIR}/lib/http/version.rb
 ${GEM_LIBDIR}/logo.png
 ${GEM_LIBDIR}/spec/lib/http/client_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/content_type_spec.rb
+${GEM_LIBDIR}/spec/lib/http/features/auto_deflate_spec.rb
+${GEM_LIBDIR}/spec/lib/http/features/auto_inflate_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/headers/mixin_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/headers_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/body_spec.rb
+${GEM_LIBDIR}/spec/lib/http/options/features_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/form_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/headers_spec.rb
 ${GEM_LIBDIR}/spec/lib/http/options/json_spec.rb
