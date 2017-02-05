@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.269 2017/01/27 13:28:11 ryoon Exp $
+$NetBSD: distinfo,v 1.270 2017/02/05 15:41:58 martin Exp $
 
 SHA1 (firefox-51.0.1.source.tar.xz) = b73255fd4f90fd0c1b107b566679da2df3f31cf1
 RMD160 (firefox-51.0.1.source.tar.xz) = 6acc6fc8e3e317842d75b0233a24b0f19c9d3f34
@@ -33,10 +33,14 @@ SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 9961e956016f274a1b9b52b489b
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 15c01df2fa7f989b533ef769ce77438b5e9bfdb9
 SHA1 (patch-dom_system_OSFileConstants.cpp) = 6e5a347c317947c869415d740f25813332ee9597
 SHA1 (patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp) = 5678e4a44927326de55f1f0fd2907102b314ca10
+SHA1 (patch-gfx_2d_BorrowedContext.h) = 5efa43c865ccd95ffe82fc23db3bde7ef8bf8441
 SHA1 (patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 6e91ca436b73affe42ed4e683b3400beb28c4bc6
 SHA1 (patch-gfx_gl_GLContextProviderGLX.cpp) = 2cc997cab71a84c1f50a791693519a0626564426
 SHA1 (patch-gfx_graphite2_moz-gr-update.sh) = 09eb2fa66109d38a3aedc940fcaaee5f91e216ae
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 9b357196b795f7698f0763cb6cfcd39b4aea6420
+SHA1 (patch-gfx_layers_composite_LayerManagerComposite.cpp) = b3ef914b5fa735b4740d45d01478f67018532a3a
+SHA1 (patch-gfx_layers_composite_LayerManagerComposite.h) = f4d61ffaecaec7e77909d1d08b5b10837e999741
+SHA1 (patch-gfx_layers_moz.build) = e43f1b234357b0af7f58aaceb275d9d0e3468097
 SHA1 (patch-gfx_moz.build) = 0d669ac6dc1af17ea8ed7e84e4915947c2a6b1ca
 SHA1 (patch-gfx_skia_generate__mozbuild.py) = 0c1faddbda7d819a82a4f1bd97a753c835f0c81d
 SHA1 (patch-gfx_skia_moz.build) = 1def6cf3bce77e9294c0f05f62a33b7baed12b12

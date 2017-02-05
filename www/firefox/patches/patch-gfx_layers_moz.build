@@ -1,0 +1,26 @@
+$NetBSD: patch-gfx_layers_moz.build,v 1.1 2017/02/05 15:41:58 martin Exp $
+
+Backport of upstream commit 
+	https://hg.mozilla.org/mozilla-central/rev/c1e18cb7926e
+
+diff gfx/layers/moz.build.orig gfx/layers/moz.build
+--- gfx/layers/moz.build.orig	2017-01-16 17:16:50.000000000 +0100
++++ gfx/layers/moz.build	2017-02-05 11:06:16.475345819 +0100
+@@ -340,7 +340,6 @@
+     'composite/ImageHost.cpp',
+     'composite/ImageLayerComposite.cpp',
+     'composite/LayerManagerComposite.cpp',
+-    'composite/PaintCounter.cpp',
+     'composite/PaintedLayerComposite.cpp',
+     'composite/TextRenderer.cpp',
+     'composite/TextureHost.cpp',
+@@ -485,3 +484,8 @@
+ 
+ if CONFIG['GNU_CXX']:
+     CXXFLAGS += ['-Wno-error=shadow']
++
++if CONFIG['MOZ_ENABLE_SKIA']:
++  UNIFIED_SOURCES += [
++    'composite/PaintCounter.cpp',
++  ]
+
