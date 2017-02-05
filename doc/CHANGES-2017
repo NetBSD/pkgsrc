@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.580 2017/02/04 23:26:08 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.581 2017/02/05 00:47:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -736,3 +736,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/mlterm to 3.8.0 [tsutsui 2017-02-04]
 	Added fonts/junicode version 0.7.8 [wiz 2017-02-04]
 	Updated archivers/unzip to 6.0nb8 [wiz 2017-02-04]
+	Updated www/ruby-sawyer to 0.8.1 [tsutsui 2017-02-05]
