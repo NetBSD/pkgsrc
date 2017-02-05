@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2016/10/04 09:34:01 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/02/05 12:28:14 bsiegert Exp $
 
 DISTNAME=		ltm-1.0
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=libtom/}
 GITHUB_PROJECT=		libtommath
@@ -15,6 +16,7 @@ LICENSE=		public-domain
 WRKSRC=			${WRKDIR}/libtommath-1.0
 USE_LIBTOOL=		yes
 MAKE_FILE=		makefile.shared
+MAKE_ENV+=		LIBPATH=${PREFIX}/lib
 BUILD_TARGET=		default
 USE_TOOLS+=		gmake
 
