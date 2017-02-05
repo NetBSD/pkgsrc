@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2016/12/30 00:35:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.93 2017/02/05 18:24:43 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -338,7 +338,6 @@ share/doc/ImageMagick-7/www/Magick++/thumbnail-sample-plain.jpg
 share/doc/ImageMagick-7/www/advanced-unix-installation.html
 share/doc/ImageMagick-7/www/advanced-windows-installation.html
 share/doc/ImageMagick-7/www/animate.html
-share/doc/ImageMagick-7/www/api.html
 share/doc/ImageMagick-7/www/api/Image++.html
 share/doc/ImageMagick-7/www/api/MagickCore/ImageMagick_8h-source.html
 share/doc/ImageMagick-7/www/api/MagickCore/ImageMagick_8h.html
@@ -1171,7 +1170,6 @@ share/doc/ImageMagick-7/www/api/version.php
 share/doc/ImageMagick-7/www/api/wand-view.html
 share/doc/ImageMagick-7/www/api/wand-view.php
 share/doc/ImageMagick-7/www/architecture.html
-share/doc/ImageMagick-7/www/binary-releases.html
 share/doc/ImageMagick-7/www/changelog.html
 share/doc/ImageMagick-7/www/cipher.html
 share/doc/ImageMagick-7/www/color-management.html
@@ -1188,6 +1186,7 @@ share/doc/ImageMagick-7/www/contact.html
 share/doc/ImageMagick-7/www/convert.html
 share/doc/ImageMagick-7/www/css/README.txt
 share/doc/ImageMagick-7/www/css/magick.css
+share/doc/ImageMagick-7/www/develop.html
 share/doc/ImageMagick-7/www/display.html
 share/doc/ImageMagick-7/www/distribute-pixel-cache.html
 share/doc/ImageMagick-7/www/download.html
@@ -1217,6 +1216,7 @@ share/doc/ImageMagick-7/www/magick-vector-graphics.html
 share/doc/ImageMagick-7/www/magick-wand.html
 share/doc/ImageMagick-7/www/magick.html
 share/doc/ImageMagick-7/www/miff.html
+share/doc/ImageMagick-7/www/mirror.html
 share/doc/ImageMagick-7/www/mogrify.html
 share/doc/ImageMagick-7/www/montage.html
 share/doc/ImageMagick-7/www/motion-picture.html
