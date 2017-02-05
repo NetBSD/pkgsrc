@@ -1,8 +1,8 @@
-$NetBSD: patch-build_probe.pm,v 1.1 2016/04/08 20:26:46 bsiegert Exp $
+$NetBSD: patch-build_probe.pm,v 1.2 2017/02/05 12:36:59 bsiegert Exp $
 
 Add LDFLAGS for Configure.pl probes so e.g. finding libffi works.
 
---- build/probe.pm.orig	2015-12-25 12:37:32.000000000 +0000
+--- build/probe.pm.orig	2016-11-16 14:34:28.000000000 +0000
 +++ build/probe.pm
 @@ -57,7 +57,7 @@ sub compile {
          push @objs, $obj;
@@ -13,3 +13,12 @@ Add LDFLAGS for Configure.pl probes so e.g. finding libffi works.
      system $command
          and return;
      return 1;
+@@ -102,7 +102,7 @@ EOT
+     }
+ 
+     if ($can_compile) {
+-        $command = "$config->{ld} $config->{ldout}$leaf $obj $config->{ldlibs} 2>&1";
++        $command = "$config->{ld} $ENV{'LDFLAGS'} $config->{ldout}$leaf $obj $config->{ldlibs} 2>&1";
+         $output  = `$command` || $!;
+         if ($? >> 8 == 0) {
+             $can_link = 1;
