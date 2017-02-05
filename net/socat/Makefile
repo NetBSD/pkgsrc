@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2016/03/05 11:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2017/02/05 20:40:32 leot Exp $
 
-DISTNAME=	socat-1.7.3.1
-PKGREVISION=	1
+DISTNAME=	socat-1.7.3.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://www.dest-unreach.org/socat/
 COMMENT=	"netcat++" (extended design, new implementation)
 LICENSE=	gnu-gpl-v2
