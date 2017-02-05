@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.587 2017/02/05 02:30:57 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.588 2017/02/05 02:42:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -743,3 +743,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nim to 0.16.0 [kamil 2017-02-05]
 	Updated misc/libreoffice to 5.3.0.3nb1 [ryoon 2017-02-05]
 	Updated net/ruby-tw to 1.0.12 [tsutsui 2017-02-05]
+	Updated devel/nss to 3.28.1nb1 [ryoon 2017-02-05]
