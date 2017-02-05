@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1206 2017/02/05 11:13:42 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1207 2017/02/05 11:22:15 tsutsui Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -808,6 +808,7 @@ SUBDIR+=	ruby-unicorn
 SUBDIR+=	ruby-url_mount
 SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-websocket
+SUBDIR+=	ruby-websocket-driver
 SUBDIR+=	ruby-websocket-extensions
 SUBDIR+=	ruby-webunit
 SUBDIR+=	sassc
