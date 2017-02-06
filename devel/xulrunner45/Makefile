@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/01/27 13:43:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2017/02/06 13:54:43 wiz Exp $
 
 MOZ_BRANCH=		45.7
 MOZ_BRANCH_MINOR=	.0esr
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${MOZ_VER}/source/}
 EXTRACT_SUFX=		.tar.xz
 
 PKGNAME=	xulrunner45-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//:S/b/beta/}
+PKGREVISION=	1
 CATEGORIES=	devel www
 
 MAINTAINER=	ryoon@NetBSD.org
