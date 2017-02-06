@@ -1,0 +1,3 @@
+Gradle is a Java based build tool which allows creating
+project build scripts using a domain-specific language
+based on Groovy.
