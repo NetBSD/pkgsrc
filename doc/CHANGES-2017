@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.614 2017/02/06 14:51:37 adam Exp $
+$NetBSD: CHANGES-2017,v 1.615 2017/02/06 15:39:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -771,3 +771,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/harfbuzz to 1.4.2 [wiz 2017-02-06]
 	Updated www/c-icap to 0.4.4 [adam 2017-02-06]
 	Updated www/c-icap-modules to 0.4.4 [adam 2017-02-06]
+	Updated www/squidclamav to 6.16 [adam 2017-02-06]
