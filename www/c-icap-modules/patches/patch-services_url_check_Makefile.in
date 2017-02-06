@@ -1,10 +1,10 @@
-$NetBSD: patch-services_url_check_Makefile.in,v 1.4 2015/06/12 23:40:16 taca Exp $
+$NetBSD: patch-services_url_check_Makefile.in,v 1.5 2017/02/06 14:15:18 adam Exp $
 
 Handle configuration files
 
 --- services/url_check/Makefile.in.orig	2013-12-27 15:35:48.000000000 +0000
 +++ services/url_check/Makefile.in
-@@ -730,8 +730,7 @@ uninstall-man: uninstall-man8
+@@ -842,8 +842,7 @@ uninstall-man: uninstall-man8
  	$(do_subst) < $< > $@
  
  install-data-local:
