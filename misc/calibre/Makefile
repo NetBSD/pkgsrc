@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.170 2017/02/05 18:34:09 wiz Exp $
+# $NetBSD: Makefile,v 1.171 2017/02/06 13:55:41 wiz Exp $
 
 DISTNAME=	calibre-2.78.0
+PKGREVISION=	1
 CATEGORIES=	misc
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 MASTER_SITES=	http://download.calibre-ebook.com/${PKGVERSION_NOREV}/

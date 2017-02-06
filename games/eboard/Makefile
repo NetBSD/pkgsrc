@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2016/08/03 10:22:45 adam Exp $
+# $NetBSD: Makefile,v 1.42 2017/02/06 13:55:20 wiz Exp $
 #
 
 DISTNAME=		eboard-1.0.4
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2017/01/21 20:06:46 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2017/02/06 13:54:59 wiz Exp $
 
 BUILDLINK_TREE+=	qt5-qtwebkit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtwebkit
 QT5_QTWEBKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtwebkit+=	qt5-qtwebkit>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-qtwebkit+=	qt5-qtwebkit>=5.5.1nb7
+BUILDLINK_ABI_DEPENDS.qt5-qtwebkit+=	qt5-qtwebkit>=5.5.1nb8
 BUILDLINK_PKGSRCDIR.qt5-qtwebkit?=	../../x11/qt5-qtwebkit
 
 BUILDLINK_INCDIRS.qt5-qtwebkit+=	qt5/include

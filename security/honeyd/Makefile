@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2016/03/05 11:29:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2017/02/06 13:55:55 wiz Exp $
 #
 
 DISTNAME=	honeyd-1.5b
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	security net
 MASTER_SITES=	http://www.citi.umich.edu/u/provos/honeyd/
 
