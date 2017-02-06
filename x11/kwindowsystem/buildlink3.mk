@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/12/04 05:17:15 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2017/02/06 13:54:55 wiz Exp $
 
 BUILDLINK_TREE+=	kwindowsystem
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kwindowsystem
 KWINDOWSYSTEM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kwindowsystem+=	kwindowsystem>=5.18.0
-BUILDLINK_ABI_DEPENDS.kwindowsystem?=	kwindowsystem>=5.25.0nb1
+BUILDLINK_ABI_DEPENDS.kwindowsystem?=	kwindowsystem>=5.25.0nb3
 BUILDLINK_PKGSRCDIR.kwindowsystem?=	../../x11/kwindowsystem
 
 .include "../../x11/qt5-qtbase/buildlink3.mk"

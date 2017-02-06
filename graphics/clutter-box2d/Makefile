@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2016/08/03 10:22:49 adam Exp $
+# $NetBSD: Makefile,v 1.32 2017/02/06 13:55:24 wiz Exp $
 #
 
 DISTNAME=	clutter-box2d-0.10.0
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	graphics
 MASTER_SITES=	http://source.clutter-project.org/sources/clutter-box2d/0.10/
 

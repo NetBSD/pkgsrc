@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/08/03 10:22:16 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2017/02/06 13:54:46 wiz Exp $
 
 BUILDLINK_TREE+=	libdbusmenu
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libdbusmenu
 LIBDBUSMENU_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libdbusmenu+=	libdbusmenu>=12.10.2
-BUILDLINK_ABI_DEPENDS.libdbusmenu?=	libdbusmenu>=12.10.2nb1
+BUILDLINK_ABI_DEPENDS.libdbusmenu?=	libdbusmenu>=12.10.2nb2
 BUILDLINK_PKGSRCDIR.libdbusmenu?=	../../meta-pkgs/libdbusmenu
 
 .include "../../textproc/libxslt/buildlink3.mk"

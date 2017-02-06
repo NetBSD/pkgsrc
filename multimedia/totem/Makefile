@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2016/12/04 05:17:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2017/02/06 13:54:47 wiz Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	37
+PKGREVISION=	38
 
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 
