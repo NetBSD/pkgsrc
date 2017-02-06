@@ -1,0 +1,16 @@
+$NetBSD: patch-services_content__filtering_Makefile.in,v 1.1 2017/02/06 14:15:18 adam Exp $
+
+Handle configuration files.
+
+--- services/content_filtering/Makefile.in.orig	2017-02-06 13:15:55.000000000 +0000
++++ services/content_filtering/Makefile.in
+@@ -690,8 +690,7 @@ uninstall-am: uninstall-cicapmoduleLTLIB
+ 
+ 
+ install-data-local:
+-	$(INSTALL) -m 0644 srv_content_filtering.conf.default $(DESTDIR)$(CONFIGDIR)/srv_content_filtering.conf.default
+-	if test ! -f $(DESTDIR)$(CONFIGDIR)/srv_content_filtering.conf.default; then $(INSTALL) -m 0644 srv_content_filtering.conf.default $(DESTDIR)$(CONFIGDIR)/srv_content_filtering.conf; fi
++	$(INSTALL) -m 0644 srv_content_filtering.conf.default $(DESTDIR)$(datadir)/c-icap/srv_content_filtering.conf.default
+ 	$(mkinstalldirs) $(DESTDIR)$(cicapdatadir)/templates/srv_content_filtering/en
+ 	$(INSTALL) -m 0644 $(TMPLS) $(DESTDIR)$(cicapdatadir)/templates/srv_content_filtering/en/
+ 
