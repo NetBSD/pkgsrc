@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/08/15 19:26:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/02/06 01:29:10 markd Exp $
 bin/blender
 share/blender/${BLENDERVER}/datafiles/fonts/bmonofont-i18n.ttf.gz
 share/blender/${BLENDERVER}/datafiles/fonts/droidsans.ttf.gz
@@ -50,7 +50,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_pydecimal.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_pyio.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sitebuiltins.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_strptime.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sysconfigdata.py
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sysconfigdata.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_threading_local.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_weakrefset.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/abc.py
@@ -61,7 +61,9 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ast.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asynchat.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/base_events.py
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/base_futures.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/base_subprocess.py
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/base_tasks.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/compat.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/constants.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/asyncio/coroutines.py
@@ -98,7 +100,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/code.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/codecs.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/codeop.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/collections/__init__.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/collections/__main__.py
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/collections/__main__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/collections/abc.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/colorsys.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/compileall.py
@@ -269,6 +271,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/mac_roman
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/mac_romanian.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/mac_turkish.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/mbcs.py
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/oem.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/palmos.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/ptcp154.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/punycode.py
@@ -295,8 +298,10 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/uu_codec.
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/encodings/zlib_codec.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/__main__.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/pip-8.1.1-py2.py3-none-any.whl
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/setuptools-20.10.1-py2.py3-none-any.whl
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/pip-8.1.1-py2.py3-none-any.whl
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/setuptools-20.10.1-py2.py3-none-any.whl
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/pip-9.0.1-py2.py3-none-any.whl
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_bundled/setuptools-28.8.0-py2.py3-none-any.whl
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/ensurepip/_uninstall.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/enum.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/filecmp.py
@@ -341,7 +346,9 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/json/encoder.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/json/scanner.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/json/tool.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/keyword.py
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_asyncio.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_bisect.so
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_blake2.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_bz2.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_codecs_cn.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_codecs_hk.so
@@ -370,6 +377,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_posixs
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_random.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_sha1.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_sha256.so
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_sha3.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_sha512.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_socket.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_ssl.so
@@ -466,6 +474,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/reprlib.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/rlcompleter.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/runpy.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/sched.py
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/secrets.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/selectors.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/shelve.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/shlex.py
@@ -1508,3 +1517,4 @@ share/blender/blender.svg
 share/blender/copyright.txt
 share/blender/jemalloc-license.txt
 share/blender/readme.html
+@pkgdir share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/site-packages

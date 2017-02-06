@@ -1,20 +1,10 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2015/12/19 20:52:12 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2017/02/06 01:29:10 markd Exp $
+${PLIST.py36}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/_sysconfigdata_linux.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/_sqlite3.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/ossaudiodev.so
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/pyexpat.so
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/lib-dynload/readline.so
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/CDROM.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/DLFCN.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/IN.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/TYPES.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/regen
-share/blender/blender-thumbnailer.py
-share/blender/icons/16x16/apps/blender.png
-share/blender/icons/22x22/apps/blender.png
-share/blender/icons/24x24/apps/blender.png
-share/blender/icons/256x256/apps/blender.png
-share/blender/icons/32x32/apps/blender.png
-share/blender/icons/48x48/apps/blender.png
-share/blender/icons/blender_icon_source.svg
-share/blender/icons/scalable/apps/blender.svg
-share/blender/blenderplayer
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/CDROM.py
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/DLFCN.py
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/IN.py
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/TYPES.py
+${PLIST.py35}share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/plat-linux/regen
