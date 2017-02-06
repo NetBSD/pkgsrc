@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 02:46:50 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/02/06 14:15:18 adam Exp $
 
-SHA1 (c_icap_modules-0.3.2.tar.gz) = 98dd7b3bf40b8831e297ffa8c4e1eaf7cef57cd0
-RMD160 (c_icap_modules-0.3.2.tar.gz) = dfbce2a53e9b8d79ac7ad756cbad26881a1c6488
-SHA512 (c_icap_modules-0.3.2.tar.gz) = 9143ca5a2bbd6b6046eea073b6ec78e61967c4dbbdfee9d87f31add984f795eb3f053d7cc3c6c5ed75517be202a70c09b47b3c40ca771176bb77a91d9d76ceed
-Size (c_icap_modules-0.3.2.tar.gz) = 384788 bytes
-SHA1 (patch-configure) = f38098a56ae58ae89a5850dad176b539cf034836
-SHA1 (patch-services_url_check_Makefile.in) = 9cb97ef3441ab4fb0346a96aff2b8f635c66ec11
-SHA1 (patch-services_virus_scan_Makefile.in) = 367f8de33f664447d815180f7a1e805c591198e1
+SHA1 (c_icap_modules-0.4.4.tar.gz) = 87cda48500107a58ada1abcb16907f7f4862ca36
+RMD160 (c_icap_modules-0.4.4.tar.gz) = 6e68ed062a59248c6ac0d21068a33dfd277f9027
+SHA512 (c_icap_modules-0.4.4.tar.gz) = 3374dff7e3275ef7da7d727d098ca7bb17b401379e9f88ac5a6e6f7475b3a0859d1d4f5ac9037d35babf5079dd0a7893c9975a005c97cbd209699b04a4a6b76b
+Size (c_icap_modules-0.4.4.tar.gz) = 429224 bytes
+SHA1 (patch-configure) = c3db6a813132d052cb07008da5caa23e8e4a7dce
+SHA1 (patch-services_content__filtering_Makefile.in) = 665d10b59f2f26be7568a6f476db0fe7e64b58e1
+SHA1 (patch-services_url_check_Makefile.in) = e9a7caa1ab388fc49b36dcd199e124f058ca8300
+SHA1 (patch-services_virus_scan_Makefile.in) = c9ebb1986d0a36151eb949546ad6ad6fabb1108f
