@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2017/02/04 01:42:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.152 2017/02/06 07:10:00 wiz Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -56,7 +56,6 @@ SUBDIR+=	mpack
 SUBDIR+=	nkf
 SUBDIR+=	odt2txt
 SUBDIR+=	opencc
-SUBDIR+=	orcus
 SUBDIR+=	orcus0.12
 SUBDIR+=	p5-Convert-Bencode
 SUBDIR+=	p5-Convert-BinHex
