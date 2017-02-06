@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/10/11 07:00:19 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2017/02/06 10:23:40 maya Exp $
 
 DISTNAME=	libpciaccess-0.13.4
 PKGREVISION=	1
@@ -13,14 +13,7 @@ LICENSE=	mit AND x11
 
 DEPENDS+=	pciids-[0-9]*:../../misc/pciids
 
-###
-### XXX This list is probably not exhaustive.
-###
-ONLY_FOR_PLATFORM=	FreeBSD-*-i386 OpenBSD-*-i386
-ONLY_FOR_PLATFORM+=	FreeBSD-*-x86_64 OpenBSD-*-x86_64
-ONLY_FOR_PLATFORM+=	DragonFly-*-i386 DragonFly-*-x86_64
-ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
-ONLY_FOR_PLATFORM+=	NetBSD-*-*
+BROKEN_ON_PLATFORM+=	Darwin-*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-zlib
