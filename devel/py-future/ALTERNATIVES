@@ -1,0 +1,2 @@
+bin/futurize @PREFIX@/bin/futurize-@PYVERSSUFFIX@
+bin/pasteurize @PREFIX@/bin/pasteurize-@PYVERSSUFFIX@
