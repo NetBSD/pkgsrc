@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.8 2017/02/03 11:26:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.9 2017/02/06 09:11:05 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -81,4 +81,7 @@ net/tor: security fix
 
 Pullup ticket #5204 - requested by sevan
 www/apache2: security fix
+
+Pullup ticket #5207 - requested by wiz
+archivers/unzip: security fix
 
