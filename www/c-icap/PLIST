@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/06/12 23:39:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/02/06 14:14:48 adam Exp $
 bin/c-icap
 bin/c-icap-client
 bin/c-icap-config
@@ -13,6 +13,7 @@ include/c_icap/c-icap-conf.h
 include/c_icap/c-icap.h
 include/c_icap/cache.h
 include/c_icap/cfg_param.h
+include/c_icap/ci_regex.h
 include/c_icap/ci_threads.h
 include/c_icap/commands.h
 include/c_icap/debug.h
@@ -42,6 +43,7 @@ ${PLIST.bdb}lib/c_icap/bdb_tables.la
 lib/c_icap/dnsbl_tables.la
 ${PLIST.ldap}lib/c_icap/ldap_module.la
 ${PLIST.perl}lib/c_icap/perl_handler.la
+lib/c_icap/shared_cache.la
 lib/c_icap/srv_echo.la
 lib/c_icap/srv_ex206.la
 lib/c_icap/sys_logger.la
