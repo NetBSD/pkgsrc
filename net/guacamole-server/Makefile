@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/01/21 20:06:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/06 13:55:49 wiz Exp $
 
 DISTNAME=	guacamole-server-0.9.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=guacamole/}
 
