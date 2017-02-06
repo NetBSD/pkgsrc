@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/12/25 23:57:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/02/06 04:19:12 markd Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -107,6 +107,7 @@ ${PLIST.java}lib/mpi.jar
 lib/mpi.mod
 ${PLIST.ignoretkr}lib/mpi_ext.mod
 ${PLIST.f08}lib/mpi_f08.mod
+${PLIST.f08}lib/mpi_f08_callbacks.mod
 ${PLIST.f08}lib/mpi_f08_ext.mod
 ${PLIST.f08}lib/mpi_f08_interfaces.mod
 ${PLIST.f08}lib/mpi_f08_interfaces_callbacks.mod
@@ -678,6 +679,7 @@ ${PLIST.oshmem}man/man3/shfree.3
 ${PLIST.oshmem}man/man3/shmalloc.3
 ${PLIST.oshmem}man/man3/shmem_addr_accessible.3
 ${PLIST.oshmem}man/man3/shmemalign.3
+${PLIST.oshmem}man/man3/shmem_align.3
 ${PLIST.oshmem}man/man3/shmem_barrier.3
 ${PLIST.oshmem}man/man3/shmem_barrier_all.3
 ${PLIST.oshmem}man/man3/shmem_broadcast32.3
@@ -709,6 +711,7 @@ ${PLIST.oshmem}man/man3/shmem_double_swap.3
 ${PLIST.oshmem}man/man3/shmem_fcollect32.3
 ${PLIST.oshmem}man/man3/shmem_fcollect64.3
 ${PLIST.oshmem}man/man3/shmem_fence.3
+${PLIST.oshmem}man/man3/shmem_finalize.3
 ${PLIST.oshmem}man/man3/shmem_float_g.3
 ${PLIST.oshmem}man/man3/shmem_float_get.3
 ${PLIST.oshmem}man/man3/shmem_float_iget.3
@@ -720,13 +723,18 @@ ${PLIST.oshmem}man/man3/shmem_float_prod_to_all.3
 ${PLIST.oshmem}man/man3/shmem_float_put.3
 ${PLIST.oshmem}man/man3/shmem_float_sum_to_all.3
 ${PLIST.oshmem}man/man3/shmem_float_swap.3
+${PLIST.oshmem}man/man3/shmem_free.3
 ${PLIST.oshmem}man/man3/shmem_get128.3
 ${PLIST.oshmem}man/man3/shmem_get32.3
 ${PLIST.oshmem}man/man3/shmem_get64.3
 ${PLIST.oshmem}man/man3/shmem_getmem.3
+${PLIST.oshmem}man/man3/shmem_global_exit.3
 ${PLIST.oshmem}man/man3/shmem_iget128.3
 ${PLIST.oshmem}man/man3/shmem_iget32.3
 ${PLIST.oshmem}man/man3/shmem_iget64.3
+${PLIST.oshmem}man/man3/shmem_info_get_name.3
+${PLIST.oshmem}man/man3/shmem_info_get_version.3
+${PLIST.oshmem}man/man3/shmem_init.3
 ${PLIST.oshmem}man/man3/shmem_int_add.3
 ${PLIST.oshmem}man/man3/shmem_int_and_to_all.3
 ${PLIST.oshmem}man/man3/shmem_int_cswap.3
@@ -802,6 +810,9 @@ ${PLIST.oshmem}man/man3/shmem_long_swap.3
 ${PLIST.oshmem}man/man3/shmem_long_wait.3
 ${PLIST.oshmem}man/man3/shmem_long_wait_until.3
 ${PLIST.oshmem}man/man3/shmem_long_xor_to_all.3
+${PLIST.oshmem}man/man3/shmem_malloc.3
+${PLIST.oshmem}man/man3/shmem_my_pe.3
+${PLIST.oshmem}man/man3/shmem_n_pes.3
 ${PLIST.oshmem}man/man3/shmem_pe_accessible.3
 ${PLIST.oshmem}man/man3/shmem_ptr.3
 ${PLIST.oshmem}man/man3/shmem_put128.3
@@ -809,6 +820,7 @@ ${PLIST.oshmem}man/man3/shmem_put32.3
 ${PLIST.oshmem}man/man3/shmem_put64.3
 ${PLIST.oshmem}man/man3/shmem_putmem.3
 ${PLIST.oshmem}man/man3/shmem_quiet.3
+${PLIST.oshmem}man/man3/shmem_realloc.3
 ${PLIST.oshmem}man/man3/shmem_set_cache_inv.3
 ${PLIST.oshmem}man/man3/shmem_set_cache_line_inv.3
 ${PLIST.oshmem}man/man3/shmem_set_lock.3
@@ -842,7 +854,6 @@ man/man7/orte_hosts.7
 man/man7/orte_snapc.7
 man/man7/orte_sstore.7
 share/openmpi/amca-param-sets/example.conf
-${PLIST.linux}share/openmpi/doc/COPYRIGHT-ptmalloc2.txt
 share/openmpi/examples/openmpi-default-hostfile
 share/openmpi/examples/openmpi-mca-params.conf
 share/openmpi/examples/openmpi-totalview.tcl
@@ -882,11 +893,11 @@ share/openmpi/help-opal-compress-gzip.txt
 share/openmpi/help-opal-crs-base.txt
 share/openmpi/help-opal-crs-none.txt
 share/openmpi/help-opal-hwloc-base.txt
-${PLIST.linux}share/openmpi/help-opal-memory-linux.txt
 share/openmpi/help-opal-runtime.txt
 share/openmpi/help-opal-shmem-mmap.txt
 share/openmpi/help-opal-shmem-posix.txt
 share/openmpi/help-opal-shmem-sysv.txt
+${PLIST.linux}share/openmpi/help-opal-timer-linux.txt
 share/openmpi/help-opal-util.txt
 share/openmpi/help-opal-wrapper.txt
 share/openmpi/help-opal_info.txt
