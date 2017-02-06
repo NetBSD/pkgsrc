@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2017/01/21 20:06:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2017/02/06 13:34:21 maya Exp $
 
 DISTNAME=	wine-1.9.18
 PKGREVISION=	5
@@ -40,34 +40,21 @@ CONFIGURE_ENV+=		LDD=${LDD:Q}
 LIBS+=			${LDFLAGS}
 
 PLIST_VARS+=		oss wine16 wine32 wine64
-# If we're doing a 32-bit build, make sure that the appropriate multilib
-# options are passed through as these values are used with winegcc
-# (which wrapper doesn't handle).
-# XXX seems not needed anymore; to be removed on next update
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_ARCH:Mi386)
-#CONFIGURE_ENV+=		ac_cv_prog_CC=${CC:Q}\ -m32
-#CONFIGURE_ENV+=		ac_cv_prog_CXX=${CXX:Q}\ -m32
-#CONFIGURE_ENV+=		ac_cv_prog_AS=${AS:Q}\ --32
-#CONFIGURE_ENV+=		ac_cv_prog_LD=${LD:Q}\ -m\ elf_i386
-#PLIST.wine16=		yes
-PLIST_SRC=	PLIST.wine32
+PLIST_SRC=		PLIST.wine32
 NOT_PAX_MPROTECT_SAFE+=	bin/wine
-#PLIST.wine32=		yes
 .endif
-# Avoid using gethostbyname_r in netbsd, it's not
-# linux-like
-CONFIGURE_ARGS.NetBSD+=		wine_cv_linux_gethostbyname_r_6=no
-# NetBSD doesn't allow manipulation of _res by
-# multithreaded programs. avoid its use, networking
-# still works fine.
-CONFIGURE_ARGS.NetBSD+=		ac_cv_header_resolv_h=no
+
 .if !empty(MACHINE_ARCH:Mx86_64)
 CONFIGURE_ARGS+=	--enable-win64 --libdir=${PREFIX}/lib
 NOT_PAX_MPROTECT_SAFE+=	bin/wine64
-PLIST_SRC=	PLIST.wine64
-#PLIST.wine64=		yes
+PLIST_SRC=		PLIST.wine64
 .endif
+
+# NetBSD changes
+CONFIGURE_ARGS.NetBSD+=		wine_cv_linux_gethostbyname_r_6=no
+CONFIGURE_ARGS.NetBSD+=		ac_cv_header_resolv_h=no
 
 .if ${OPSYS} != "Darwin"
 PLIST.oss=		yes
