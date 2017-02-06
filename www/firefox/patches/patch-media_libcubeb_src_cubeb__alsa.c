@@ -1,6 +1,7 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.19 2017/02/06 19:00:44 martin Exp $
 
 * Support alsa audio under NetBSD
+* Avoid https://github.com/kinetiknz/cubeb/issues/226
 
 --- media/libcubeb/src/cubeb_alsa.c.orig	2016-10-31 20:15:39.000000000 +0000
 +++ media/libcubeb/src/cubeb_alsa.c
@@ -71,7 +72,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
  /* ALSA is not thread-safe.  snd_pcm_t instances are individually protected
     by the owning cubeb_stream's mutex.  snd_pcm_t creation and destruction
     is not thread-safe until ALSA 1.0.24 (see alsa-lib.git commit 91c9c8f1),
-@@ -65,6 +113,8 @@ struct cubeb {
+@@ -65,6 +113,8 @@
       workaround is not required. */
    snd_config_t * local_config;
    int is_pa;
@@ -80,7 +81,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
  };
  
  enum stream_state {
-@@ -260,10 +310,10 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -260,10 +310,10 @@
  
    pthread_mutex_lock(&stm->mutex);
  
@@ -94,7 +95,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    }
  
    /* Failed to recover from an xrun, this stream must be broken. */
-@@ -286,7 +336,7 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -286,7 +336,7 @@
      return RUNNING;
    }
  
@@ -103,7 +104,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    assert(p);
  
    pthread_mutex_unlock(&stm->mutex);
-@@ -312,10 +362,10 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -312,10 +362,10 @@
          b[i] *= stm->volume;
        }
      }
@@ -117,7 +118,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      }
      assert(wrote >= 0 && wrote == got);
      stm->write_position += wrote;
-@@ -327,7 +377,7 @@ alsa_refill_stream(cubeb_stream * stm)
+@@ -327,7 +377,7 @@
  
      /* Fill the remaining buffer with silence to guarantee one full period
         has been written. */
@@ -126,7 +127,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
  
      set_timeout(&stm->drain_timeout, buffer_time * 1000);
  
-@@ -440,26 +490,26 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -440,26 +490,26 @@
  
    slave_def = NULL;
  
@@ -158,7 +159,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      if (r < 0) {
        break;
      }
-@@ -468,7 +518,7 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -468,7 +518,7 @@
      if (r < 0 || r > (int) sizeof(node_name)) {
        break;
      }
@@ -167,7 +168,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      if (r < 0) {
        break;
      }
-@@ -477,7 +527,7 @@ get_slave_pcm_node(snd_config_t * lconf,
+@@ -477,7 +527,7 @@
    } while (0);
  
    if (slave_def) {
@@ -176,7 +177,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    }
  
    return NULL;
-@@ -500,22 +550,22 @@ init_local_config_with_workaround(char c
+@@ -500,22 +550,22 @@
  
    lconf = NULL;
  
@@ -203,7 +204,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      if (r < 0) {
        break;
      }
-@@ -524,7 +574,7 @@ init_local_config_with_workaround(char c
+@@ -524,7 +574,7 @@
      if (r < 0 || r > (int) sizeof(node_name)) {
        break;
      }
@@ -212,7 +213,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      if (r < 0) {
        break;
      }
-@@ -535,12 +585,12 @@ init_local_config_with_workaround(char c
+@@ -535,12 +585,12 @@
      }
  
      /* Fetch the PCM node's type, and bail out if it's not the PulseAudio plugin. */
@@ -227,7 +228,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      if (r < 0) {
        break;
      }
-@@ -551,18 +601,18 @@ init_local_config_with_workaround(char c
+@@ -551,18 +601,18 @@
  
      /* Don't clobber an explicit existing handle_underrun value, set it only
         if it doesn't already exist. */
@@ -249,7 +250,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      if (r < 0) {
        break;
      }
-@@ -570,7 +620,7 @@ init_local_config_with_workaround(char c
+@@ -570,7 +620,7 @@
      return lconf;
    } while (0);
  
@@ -258,7 +259,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
  
    return NULL;
  }
-@@ -582,9 +632,9 @@ alsa_locked_pcm_open(snd_pcm_t ** pcm, s
+@@ -582,9 +632,9 @@
  
    pthread_mutex_lock(&cubeb_alsa_mutex);
    if (local_config) {
@@ -270,7 +271,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    }
    pthread_mutex_unlock(&cubeb_alsa_mutex);
  
-@@ -597,7 +647,7 @@ alsa_locked_pcm_close(snd_pcm_t * pcm)
+@@ -597,7 +647,7 @@
    int r;
  
    pthread_mutex_lock(&cubeb_alsa_mutex);
@@ -279,7 +280,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    pthread_mutex_unlock(&cubeb_alsa_mutex);
  
    return r;
-@@ -654,12 +704,65 @@ alsa_init(cubeb ** context, char const *
+@@ -654,12 +704,65 @@
    pthread_attr_t attr;
    snd_pcm_t * dummy;
  
@@ -346,7 +347,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      cubeb_alsa_error_handler_set = 1;
    }
    pthread_mutex_unlock(&cubeb_alsa_mutex);
-@@ -667,6 +770,8 @@ alsa_init(cubeb ** context, char const *
+@@ -667,6 +770,8 @@
    ctx = calloc(1, sizeof(*ctx));
    assert(ctx);
  
@@ -355,7 +356,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    ctx->ops = &alsa_ops;
  
    r = pthread_mutex_init(&ctx->mutex, NULL);
-@@ -716,7 +821,7 @@ alsa_init(cubeb ** context, char const *
+@@ -716,7 +821,7 @@
         config fails with EINVAL, the PA PCM is too old for this workaround. */
      if (r == -EINVAL) {
        pthread_mutex_lock(&cubeb_alsa_mutex);
@@ -364,7 +365,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
        pthread_mutex_unlock(&cubeb_alsa_mutex);
        ctx->local_config = NULL;
      } else if (r >= 0) {
-@@ -755,9 +860,13 @@ alsa_destroy(cubeb * ctx)
+@@ -755,9 +860,13 @@
    pthread_mutex_destroy(&ctx->mutex);
    free(ctx->fds);
  
@@ -379,7 +380,16 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      pthread_mutex_unlock(&cubeb_alsa_mutex);
    }
  
-@@ -842,7 +951,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+@@ -836,13 +945,16 @@
+   r = pthread_mutex_init(&stm->mutex, NULL);
+   assert(r == 0);
+ 
++  r = pthread_cond_init(&stm->cond, NULL);
++  assert(r == 0);
++
+   r = alsa_locked_pcm_open(&stm->pcm, SND_PCM_STREAM_PLAYBACK, ctx->local_config);
+   if (r < 0) {
+     alsa_stream_destroy(stm);
      return CUBEB_ERROR;
    }
  
@@ -388,7 +398,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    assert(r == 0);
  
    latency_us = latency_frames * 1e6 / stm->params.rate;
-@@ -855,7 +964,7 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+@@ -855,7 +967,7 @@
      latency_us = latency_us < min_latency ? min_latency: latency_us;
    }
  
@@ -397,7 +407,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
                           stm->params.channels, stm->params.rate, 1,
                           latency_us);
    if (r < 0) {
-@@ -863,15 +972,15 @@ alsa_stream_init(cubeb * ctx, cubeb_stre
+@@ -863,20 +975,17 @@
      return CUBEB_ERROR_INVALID_FORMAT;
    }
  
@@ -415,8 +425,13 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
 +  r = WRAP(snd_pcm_poll_descriptors)(stm->pcm, stm->saved_fds, stm->nfds);
    assert((nfds_t) r == stm->nfds);
  
-   r = pthread_cond_init(&stm->cond, NULL);
-@@ -902,7 +1011,7 @@ alsa_stream_destroy(cubeb_stream * stm)
+-  r = pthread_cond_init(&stm->cond, NULL);
+-  assert(r == 0);
+-
+   if (alsa_register_stream(ctx, stm) != 0) {
+     alsa_stream_destroy(stm);
+     return CUBEB_ERROR;
+@@ -902,7 +1011,7 @@
    pthread_mutex_lock(&stm->mutex);
    if (stm->pcm) {
      if (stm->state == DRAINING) {
@@ -425,7 +440,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      }
      alsa_locked_pcm_close(stm->pcm);
      stm->pcm = NULL;
-@@ -944,12 +1053,12 @@ alsa_get_max_channel_count(cubeb * ctx, 
+@@ -944,12 +1053,12 @@
      return CUBEB_ERROR;
    }
  
@@ -440,7 +455,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    if (r < 0) {
      return CUBEB_ERROR;
    }
-@@ -969,34 +1078,34 @@ alsa_get_preferred_sample_rate(cubeb * c
+@@ -969,34 +1078,34 @@
  
    /* get a pcm, disabling resampling, so we get a rate the
     * hardware/dmix/pulse/etc. supports. */
@@ -483,7 +498,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
  
    return CUBEB_OK;
  }
-@@ -1020,7 +1129,7 @@ alsa_stream_start(cubeb_stream * stm)
+@@ -1020,7 +1129,7 @@
    ctx = stm->context;
  
    pthread_mutex_lock(&stm->mutex);
@@ -492,7 +507,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    gettimeofday(&stm->last_activity, NULL);
    pthread_mutex_unlock(&stm->mutex);
  
-@@ -1054,7 +1163,7 @@ alsa_stream_stop(cubeb_stream * stm)
+@@ -1054,7 +1163,7 @@
    pthread_mutex_unlock(&ctx->mutex);
  
    pthread_mutex_lock(&stm->mutex);
@@ -501,7 +516,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
    pthread_mutex_unlock(&stm->mutex);
  
    return CUBEB_OK;
-@@ -1070,8 +1179,8 @@ alsa_stream_get_position(cubeb_stream * 
+@@ -1070,8 +1179,8 @@
    pthread_mutex_lock(&stm->mutex);
  
    delay = -1;
@@ -512,7 +527,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.18 2017/01/25 13:24:51 ryoon
      *position = stm->last_position;
      pthread_mutex_unlock(&stm->mutex);
      return CUBEB_OK;
-@@ -1096,7 +1205,7 @@ alsa_stream_get_latency(cubeb_stream * s
+@@ -1096,7 +1205,7 @@
    snd_pcm_sframes_t delay;
    /* This function returns the delay in frames until a frame written using
       snd_pcm_writei is sent to the DAC. The DAC delay should be < 1ms anyways. */
