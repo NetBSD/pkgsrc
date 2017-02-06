@@ -1,15 +1,28 @@
-$NetBSD: patch-etc_Makefile.in,v 1.1.1.1 2011/05/11 04:31:15 adam Exp $
+$NetBSD: patch-etc_Makefile.in,v 1.2 2017/02/06 15:37:41 adam Exp $
 
 Handle configuration files.
 
---- etc/Makefile.in.orig	2011-05-10 09:05:26.000000000 +0000
+--- etc/Makefile.in.orig	2016-08-30 21:02:59.000000000 +0000
 +++ etc/Makefile.in
-@@ -167,7 +167,7 @@ top_build_prefix = @top_build_prefix@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
- EXTRA_DIST = squidclamav.conf
+@@ -175,7 +175,7 @@ top_srcdir = @top_srcdir@
+ CONFS = squidclamav.conf
+ cicapdatadir = @DATADIR@
+ CONFIGDIR = @CONFDIR@
 -CFGINST = @CFGDIR@
 +CFGINST = $(datadir)/squidclamav
+ TMPLS = templates/en/MALWARE_FOUND
+ EXTRA_DIST = squidclamav.conf $(TMPLS)
  all: all-am
+@@ -370,10 +370,9 @@ uninstall-am:
  
- .SUFFIXES:
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(CONFIGDIR)
++	$(mkinstalldirs) $(DESTDIR)$(CFGINST)
+ 	for f in $(CONFS); do \
+-		$(INSTALL) $$f $(DESTDIR)$(CONFIGDIR)/$$f.default; \
+-		if test ! -f $(DESTDIR)$(CONFIGDIR)/$$f; then $(INSTALL) $$f $(DESTDIR)$(CONFIGDIR)/$$f; fi \
++		$(INSTALL) $$f $(DESTDIR)$(CFGINST)/$$f.default; \
+ 	done
+ 	$(mkinstalldirs) $(DESTDIR)$(cicapdatadir)/templates/squidclamav/en/
+ 	for f in $(TMPLS); do $(INSTALL) $$f $(DESTDIR)$(cicapdatadir)/templates/squidclamav/en/; done

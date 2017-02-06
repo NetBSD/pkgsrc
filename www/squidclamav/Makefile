@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:39:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/06 15:37:41 adam Exp $
 
-DISTNAME=	squidclamav-6.10
-PKGREVISION=	3
+DISTNAME=	squidclamav-6.16
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squidclamav/}
 
@@ -23,7 +22,7 @@ CONFIGURE_ARGS=		--with-c-icap=${BUILDLINK_PREFIX.c-icap}
 REPLACE_PERL=		cgi-bin/*
 
 EGDIR=		${PREFIX}/share/squidclamav
-CONF_FILES=	${EGDIR}/squidclamav.conf ${PKG_SYSCONFDIR}/squidclamav.conf
+CONF_FILES=	${EGDIR}/squidclamav.conf.default ${PKG_SYSCONFDIR}/squidclamav.conf
 
 SUBST_CLASSES+=		fix-cfg
 SUBST_STAGE.fix-cfg=	pre-configure
