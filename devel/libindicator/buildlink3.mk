@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2016/08/03 10:22:11 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2017/02/06 13:54:41 wiz Exp $
 
 BUILDLINK_TREE+=	libindicator
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libindicator
 LIBINDICATOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libindicator+=	libindicator>=12.10.1
-BUILDLINK_ABI_DEPENDS.libindicator?=	libindicator>=12.10.1nb1
+BUILDLINK_ABI_DEPENDS.libindicator?=	libindicator>=12.10.1nb2
 BUILDLINK_PKGSRCDIR.libindicator?=	../../devel/libindicator
 
 .include "../../x11/gtk2/buildlink3.mk"

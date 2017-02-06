@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2017/01/01 14:43:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/02/06 13:54:40 wiz Exp $
 
 USE_GTK_VERSION=		2
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
