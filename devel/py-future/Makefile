@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2017/01/17 17:14:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/06 01:06:05 markd Exp $
 
 DISTNAME=	future-0.16.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/future/}
 
@@ -12,6 +13,11 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/pyversion.mk"
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/futurize \
+		${DESTDIR}${PREFIX}/bin/futurize-${PYVERSSUFFIX} || ${TRUE}
+	${MV} ${DESTDIR}${PREFIX}/bin/pasteurize \
+		${DESTDIR}${PREFIX}/bin/pasteurize-${PYVERSSUFFIX} || ${TRUE}
+
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
