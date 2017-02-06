@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.56 2016/08/03 10:22:24 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.57 2017/02/06 13:54:57 wiz Exp $
 
 BUILDLINK_TREE+=	pygnome2
 
@@ -8,7 +8,7 @@ PYGNOME2_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pygnome2+=	${PYPKGPREFIX}-gnome2>=2.10.0
-BUILDLINK_ABI_DEPENDS.pygnome2+=	${PYPKGPREFIX}-gnome2>=2.28.1nb31
+BUILDLINK_ABI_DEPENDS.pygnome2+=	${PYPKGPREFIX}-gnome2>=2.28.1nb32
 BUILDLINK_PKGSRCDIR.pygnome2?=	../../x11/py-gnome2
 
 .include "../../net/py-ORBit/buildlink3.mk"
