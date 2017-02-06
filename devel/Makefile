@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2353 2017/02/01 13:38:45 mef Exp $
+# $NetBSD: Makefile,v 1.2354 2017/02/06 22:28:54 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -322,6 +322,7 @@ SUBDIR+=	gperftools
 SUBDIR+=	gprbuild-aux
 SUBDIR+=	gps
 SUBDIR+=	gputils
+SUBDIR+=	gradle
 SUBDIR+=	grantlee
 SUBDIR+=	grantlee-qt5
 SUBDIR+=	gsoap
