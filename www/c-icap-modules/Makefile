@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:29:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2017/02/06 14:15:18 adam Exp $
 
-DISTNAME=	c_icap_modules-0.3.2
+DISTNAME=	c_icap_modules-0.4.4
 PKGNAME=	${DISTNAME:S/_/-/g}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=c-icap/}
 
@@ -26,6 +25,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../www/c-icap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
