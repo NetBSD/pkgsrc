@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/02/04 20:48:03 spz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/02/06 15:55:49 prlw1 Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -52,7 +52,7 @@ share/tomcat/lib/tomcat-websocket.jar
 share/tomcat/lib/websocket-api.jar
 share/tomcat/webapps/ROOT/RELEASE-NOTES.txt
 share/tomcat/webapps/ROOT/WEB-INF/web.xml
-share/tomcat/webapps/ROOT/asf-logo.svg
+share/tomcat/webapps/ROOT/asf-logo-wide.svg
 share/tomcat/webapps/ROOT/bg-button.png
 share/tomcat/webapps/ROOT/bg-middle.png
 share/tomcat/webapps/ROOT/bg-nav-item.png
