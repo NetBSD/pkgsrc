@@ -1,7 +1,9 @@
-$NetBSD: patch-conv_convd.c,v 1.2 2015/06/25 07:02:42 dholland Exp $
+$NetBSD: patch-conv_convd.c,v 1.3 2017/02/07 23:55:05 joerg Exp $
 
 - Don't rely on __unused from netbsd's <cdefs.h> existing.
 - Remove unused variable that causes build failure with gcc48.
+- Add explicit casts if the constants are not value preserved
+  on signed char platforms.
 
 --- conv/convd.c.orig	2013-01-02 23:00:43.000000000 +0000
 +++ conv/convd.c
@@ -32,3 +34,21 @@ $NetBSD: patch-conv_convd.c,v 1.2 2015/06/25 07:02:42 dholland Exp $
  
      signal(SIGPIPE, SIG_IGN);  /* we'll find out soon enough */
      signal(SIGALRM, sigalrm);  /* to handle timeout */
+@@ -357,7 +359,7 @@ intro(int fd)
+     char     sc;		/* used for slot number selection */
+ 
+     /* tell user not to update screen until done with intro */
+-    sc = META | UPDATE | 00;	
++    sc = (char)(META | UPDATE | 00);
+     write(fd, &sc, 1);
+ 
+     /* first go through and add all the windows */
+@@ -404,7 +406,7 @@ intro(int fd)
+     }
+ 
+     /* now he can update the screen */
+-    sc = META | UPDATE | 01;
++    sc = (char)(META | UPDATE | 01);
+     write(fd, &sc, 1);
+ }
+ 
