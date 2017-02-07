@@ -1,0 +1,17 @@
+$NetBSD: patch-Xsession.d_25unburden-home-dir-xdg,v 1.1 2017/02/07 14:34:36 hauke Exp $
+
+Fix absolute paths.
+
+--- Xsession.d/25unburden-home-dir-xdg.orig	2016-10-17 14:13:06.000000000 +0000
++++ Xsession.d/25unburden-home-dir-xdg
+@@ -5,8 +5,8 @@
+ if [ -z "$UNBURDEN_HOME_DIR_COMMON_SOURCED" ]; then
+     if [ -e share/common.sh ]; then
+         . share/common.sh
+-    elif [ -e /usr/share/unburden-home-dir/common.sh ]; then
+-        . /usr/share/unburden-home-dir/common.sh
++    elif [ -e @PREFIX@/libexec/unburden-home-dir/common.sh ]; then
++        . @PREFIX@/libexec/unburden-home-dir/common.sh
+     fi
+ fi
+ 
