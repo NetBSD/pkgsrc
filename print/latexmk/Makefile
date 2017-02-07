@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/10/31 16:19:03 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/02/07 12:58:05 wiz Exp $
 
-DISTNAME=	latexmk-448
+DISTNAME=	latexmk-452c
 CATEGORIES=	print
 MASTER_SITES=	http://users.phys.psu.edu/~collins/software/latexmk/
 EXTRACT_SUFX=	.zip
