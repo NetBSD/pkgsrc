@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/07 01:25:06 joerg Exp $
+
+SHA1 (oath-1.4.1.tar.gz) = 4314780b9553de1b2b7dc771bb5a71bb2dbd1f9a
+RMD160 (oath-1.4.1.tar.gz) = 5519fa1bfb52d08360a6cb7e52674d6b3e7c9363
+SHA512 (oath-1.4.1.tar.gz) = 2d02f2bf1d0390ad5d1829ef85f0549ef0c5ae083cfa3cce0f334f803842ef16ccebd6154ce471aa0cfba307d255dbaa9abb223da57500b4ef2156e08b37b241
+Size (oath-1.4.1.tar.gz) = 108414 bytes
