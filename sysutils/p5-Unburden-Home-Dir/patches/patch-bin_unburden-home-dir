@@ -1,0 +1,51 @@
+$NetBSD: patch-bin_unburden-home-dir,v 1.1 2017/02/07 14:34:36 hauke Exp $
+
+We depend on sysutils/lsof, so we do not need to hunt for it
+Rename the config file, sticking to conventions
+
+--- bin/unburden-home-dir.orig	2016-10-17 14:13:06.000000000 +0000
++++ bin/unburden-home-dir
+@@ -88,7 +88,7 @@ my %OPTIONS = ();
+ my $FILTER = undef;
+ my $UID = getpwuid($<);
+ my $USE_LSOF = 1;
+-my $LSOF_CMD = undef;
++my $LSOF_CMD = '@PREFIX@/bin/lsof';
+ 
+ # Some messages for Getopt::Std
+ sub VERSION_MESSAGE {
+@@ -153,10 +153,10 @@ foreach my $key (keys %OPTIONS) {
+ }
+ 
+ # By default check for a system wide and a user configuration and list file
+-my @CONFFILES = ("/etc/$BASENAME",
+-                 "$ENV{HOME}/.$BASENAME",
++my @CONFFILES = ("@SYSCONFDIR@/$BASENAME.conf",
++                 "$ENV{HOME}/.$BASENAME.conf",
+                  config_home($BASENAME).'/config');
+-my @LISTFILES = ("/etc/$BASENAME.$LISTSUFFIX",
++my @LISTFILES = ("@SYSCONFDIR@/$BASENAME.$LISTSUFFIX",
+                  "$ENV{HOME}/.$BASENAME.$LISTSUFFIX",
+                  config_home($BASENAME)."/$LISTSUFFIX");
+ 
+@@ -221,20 +221,6 @@ my $rsync = File::Rsync->new(
+     },
+ );
+ 
+-# Check for lsof in search path
+-my $which_lsof = which('lsof');
+-# Extra check for crappy distributions which place lsof outside a
+-# user's $PATH. Fixes GH#8.
+-if (!$which_lsof and -x '/usr/sbin/lsof') {
+-    $which_lsof = '/usr/sbin/lsof';
+-}
+-if (!$which_lsof) {
+-    warn "WARNING: lsof not found, not checking for files in use.\n";
+-    $USE_LSOF = 0;
+-} else {
+-    $LSOF_CMD = $which_lsof;
+-}
+-
+ # Standard Error reporting function; Warning
+ sub report_problem {
+     warn "WARNING: Can't handle $_[0]: $_[1]";
