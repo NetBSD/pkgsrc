@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.616 2017/02/06 22:29:42 maya Exp $
+$NetBSD: CHANGES-2017,v 1.617 2017/02/07 00:06:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -772,4 +772,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/c-icap to 0.4.4 [adam 2017-02-06]
 	Updated www/c-icap-modules to 0.4.4 [adam 2017-02-06]
 	Updated www/squidclamav to 6.16 [adam 2017-02-06]
-	Added devel/gradle to 3.0.rc.1 [maya 2017-02-06]
+	Added devel/gradle version 3.0rc1 [maya 2017-02-06]
