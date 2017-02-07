@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/07 23:48:57 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyjsparser/__init__.py
+${PYSITELIB}/pyjsparser/__init__.pyc
+${PYSITELIB}/pyjsparser/__init__.pyo
+${PYSITELIB}/pyjsparser/parser.py
+${PYSITELIB}/pyjsparser/parser.pyc
+${PYSITELIB}/pyjsparser/parser.pyo
+${PYSITELIB}/pyjsparser/pyjsparserdata.py
+${PYSITELIB}/pyjsparser/pyjsparserdata.pyc
+${PYSITELIB}/pyjsparser/pyjsparserdata.pyo
+${PYSITELIB}/pyjsparser/std_nodes.py
+${PYSITELIB}/pyjsparser/std_nodes.pyc
+${PYSITELIB}/pyjsparser/std_nodes.pyo
