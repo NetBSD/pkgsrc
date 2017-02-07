@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.623 2017/02/07 12:03:30 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.624 2017/02/07 12:07:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -779,3 +779,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/p5-File-Rsync version 0.49 [hauke 2017-02-07]
 	Updated security/p5-IO-Socket-SSL to 2.044 [wiz 2017-02-07]
 	Updated devel/p5-Type-Tiny to 1.000006 [wiz 2017-02-07]
+	Updated www/p5-libwww to 6.18 [wiz 2017-02-07]
