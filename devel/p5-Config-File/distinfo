@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/07 09:22:18 hauke Exp $
+
+SHA1 (Config-File-1.50.tar.gz) = cd5aa960af80dbbac60dad39febb851343a8fc85
+RMD160 (Config-File-1.50.tar.gz) = ce446a396a28df98cd69024fb4121be433df3165
+SHA512 (Config-File-1.50.tar.gz) = 86312a008b2e18cd7ec1a5b98a23569478e95aec5ac3985d696c2447a8b62c5f38d80254acb57f7caed9ccfbe707ee5f70f3700475178f766db6b95aa435da9e
+Size (Config-File-1.50.tar.gz) = 11376 bytes

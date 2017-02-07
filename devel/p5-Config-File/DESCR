@@ -1,0 +1,2 @@
+read_config_file parses a simple configuration file and stores its
+values in an anonymous hash reference.
