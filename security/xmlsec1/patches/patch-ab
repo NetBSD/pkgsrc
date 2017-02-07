@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.6 2014/03/26 06:23:12 asau Exp $
+$NetBSD: patch-ab,v 1.7 2017/02/07 01:19:15 joerg Exp $
 
 * portability fix
 * DragonFly also not require extra libs for OpenSSL.
 
---- configure.orig	2011-05-11 23:02:14.000000000 +0000
+--- configure.orig	2013-03-24 21:36:30.000000000 +0000
 +++ configure
-@@ -9818,7 +9818,7 @@ darwin* | rhapsody*)
+@@ -10688,7 +10688,7 @@ darwin* | rhapsody*)
    soname_spec='${libname}${release}${major}$shared_ext'
    shlibpath_overrides_runpath=yes
    shlibpath_var=DYLD_LIBRARY_PATH
@@ -14,7 +14,7 @@ $NetBSD: patch-ab,v 1.6 2014/03/26 06:23:12 asau Exp $
  
    sys_lib_search_path_spec="$sys_lib_search_path_spec /usr/local/lib"
    sys_lib_dlsearch_path_spec='/usr/local/lib /lib /usr/lib'
-@@ -11005,7 +11005,7 @@ CC="$lt_save_CC"
+@@ -11923,7 +11923,7 @@ CC="$lt_save_CC"
  
  
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ab,v 1.6 2014/03/26 06:23:12 asau Exp $
      # Extract the first word of "rm", so it can be a program name with args.
  set dummy rm; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
-@@ -11718,7 +11718,7 @@ else
+@@ -12597,7 +12597,7 @@ else
  fi
  
  
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.6 2014/03/26 06:23:12 asau Exp $
      shrext=$shrext_cmds
  fi
  
-@@ -12465,6 +12465,8 @@ elif test "z$with_openssl" != "z" ; then
+@@ -13349,15 +13349,13 @@ elif test "z$with_openssl" != "z" ; then
  	*-*-osf5*) openssl_exlibs=;;
  	*-*-openbsd*) openssl_exlibs=;;
  	*-*-netbsd*) openssl_exlibs=;;
@@ -41,7 +41,17 @@ $NetBSD: patch-ab,v 1.6 2014/03/26 06:23:12 asau Exp $
  	#FIXME: check if lib "dl" is required
  	*)          openssl_exlibs=-ldl;;
      esac
-@@ -12864,7 +12866,7 @@ else
+     OPENSSL_CFLAGS="$OPENSSL_CFLAGS -I$with_openssl/include"
+-    if test -f "$with_openssl/lib/libcrypto${XMLSEC_SHLIBSFX}" ; then
+-	OPENSSL_LIBS="-L$with_openssl/lib -lcrypto $openssl_exlibs"
+-    else
+-	OPENSSL_LIBS="$with_openssl/lib/libcrypto.a $openssl_exlibs"
+-    fi
++    OPENSSL_LIBS="-L$with_openssl/lib -lcrypto $openssl_exlibs"
+     OPENSSL_FOUND="yes"
+ elif test "z$PKGCONFIG_FOUND" = "zyes" ; then
+     if test "z$OPENSSL_VERSION" = "z" ; then
+@@ -13828,7 +13826,7 @@ else
      XMLSEC_CRYPTO_DISABLED_LIST="$XMLSEC_CRYPTO_DISABLED_LIST openssl"
  fi
  
