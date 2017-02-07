@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.641 2017/02/07 21:40:19 roy Exp $
+$NetBSD: CHANGES-2017,v 1.642 2017/02/07 23:49:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -798,3 +798,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/p5-Unburden-Home-Dir version g99a9278 [hauke 2017-02-07]
 	Updated multimedia/ffmpeg3 to 3.2.3 [adam 2017-02-07]
 	Updated www/php-apcu to 5.1.8 [roy 2017-02-07]
+	Added lang/py-jsparser version 2.4.5 [joerg 2017-02-07]
