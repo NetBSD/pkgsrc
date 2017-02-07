@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/02/06 22:25:24 maya Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/07 00:04:40 wiz Exp $
 
 DISTNAME=	gradle-3.0-rc-1-bin
-PKGNAME=	${DISTNAME:S/-bin//:S/-rc-1/.rc.1/}
+PKGNAME=	${DISTNAME:S/-bin//:S/-rc-/rc/}
 CATEGORIES=	devel java
 MASTER_SITES=	http://services.gradle.org/distributions/
 EXTRACT_SUFX=	.zip
