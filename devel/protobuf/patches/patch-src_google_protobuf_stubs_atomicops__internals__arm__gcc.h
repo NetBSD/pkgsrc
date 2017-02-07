@@ -1,8 +1,8 @@
-$NetBSD: patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h,v 1.2 2016/08/06 11:40:14 kamil Exp $
+$NetBSD: patch-src_google_protobuf_stubs_atomicops__internals__arm__gcc.h,v 1.3 2017/02/07 13:50:31 wiz Exp $
 
 Add ARM support.
 
---- src/google/protobuf/stubs/atomicops_internals_arm_gcc.h.orig	2016-04-28 21:34:30.000000000 +0000
+--- src/google/protobuf/stubs/atomicops_internals_arm_gcc.h.orig	2017-01-27 23:49:29.000000000 +0000
 +++ src/google/protobuf/stubs/atomicops_internals_arm_gcc.h
 @@ -39,44 +39,19 @@ namespace google {
  namespace protobuf {
@@ -83,7 +83,7 @@ Add ARM support.
 @@ -116,7 +89,7 @@ inline void NoBarrier_Store(volatile Ato
  }
  
- inline void MemoryBarrier() {
+ inline void MemoryBarrierInternal() {
 -  pLinuxKernelMemoryBarrier();
 +  __sync_synchronize();
  }
