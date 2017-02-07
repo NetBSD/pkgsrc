@@ -1,0 +1,2 @@
+Js2Py translates JavaScript up to ECMAscript 6 into Python.
+It does not require any external dependencies.
