@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.451 2017/02/07 23:49:26 joerg Exp $
+# $NetBSD: Makefile,v 1.452 2017/02/07 23:50:48 joerg Exp $
 #
 
 COMMENT=	Programming languages
@@ -174,6 +174,7 @@ SUBDIR+=	py-basicproperty
 SUBDIR+=	py-byterun
 SUBDIR+=	py-cxfreeze
 SUBDIR+=	py-hy
+SUBDIR+=	py-js2py
 SUBDIR+=	py-jsparser
 SUBDIR+=	py-pyrex
 SUBDIR+=	py-pythonz
