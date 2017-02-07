@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/10/19 12:13:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/02/07 13:50:31 wiz Exp $
 bin/protoc
 include/google/protobuf/any.h
 include/google/protobuf/any.pb.h
@@ -17,6 +17,7 @@ include/google/protobuf/compiler/java/java_generator.h
 include/google/protobuf/compiler/java/java_names.h
 include/google/protobuf/compiler/javanano/javanano_generator.h
 include/google/protobuf/compiler/js/js_generator.h
+include/google/protobuf/compiler/js/well_known_types_embed.h
 include/google/protobuf/compiler/objectivec/objectivec_generator.h
 include/google/protobuf/compiler/objectivec/objectivec_helpers.h
 include/google/protobuf/compiler/parser.h
@@ -75,10 +76,10 @@ include/google/protobuf/stubs/atomicops_internals_arm64_gcc.h
 include/google/protobuf/stubs/atomicops_internals_arm_gcc.h
 include/google/protobuf/stubs/atomicops_internals_arm_qnx.h
 include/google/protobuf/stubs/atomicops_internals_atomicword_compat.h
+include/google/protobuf/stubs/atomicops_internals_generic_c11_atomic.h
 include/google/protobuf/stubs/atomicops_internals_generic_gcc.h
 include/google/protobuf/stubs/atomicops_internals_macosx.h
 include/google/protobuf/stubs/atomicops_internals_mips_gcc.h
-include/google/protobuf/stubs/atomicops_internals_pnacl.h
 include/google/protobuf/stubs/atomicops_internals_power.h
 include/google/protobuf/stubs/atomicops_internals_ppc_gcc.h
 include/google/protobuf/stubs/atomicops_internals_solaris.h
