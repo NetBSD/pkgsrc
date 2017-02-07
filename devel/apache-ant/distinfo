@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.24 2016/04/17 09:52:28 wiz Exp $
+$NetBSD: distinfo,v 1.25 2017/02/07 13:05:15 wiz Exp $
 
-SHA1 (apache-ant-1.9.7-bin.tar.bz2) = 230c6a5c59dc08364f615deb240aa50c23ccfe2a
-RMD160 (apache-ant-1.9.7-bin.tar.bz2) = 145fc5ed7e3c428eb6cd5c10af22c5ce58e89459
-SHA512 (apache-ant-1.9.7-bin.tar.bz2) = 3954a6ad3f522c135f327ba0d376eb16ae42103849c8cc5cd6c8c6e87b8c5433c95a0f2d4dfa3e6c2705ee0b8996e5b27d0b2248f64a05fc8c902116cc45a7b2
-Size (apache-ant-1.9.7-bin.tar.bz2) = 4392108 bytes
+SHA1 (apache-ant-1.10.0-bin.tar.bz2) = b681834c9b773065c018c130c56380e13f06552a
+RMD160 (apache-ant-1.10.0-bin.tar.bz2) = 5986951626e6601d349d3b13908eb86de3b7dfa0
+SHA512 (apache-ant-1.10.0-bin.tar.bz2) = 8e21144d9303e06747f5c121cb29f5d57540e32e70497c01f65b6a5ccc7d0a508576078c67c8abf14a4b710257d4deb8fa542858c5977e0291ee2393c0e40e1d
+Size (apache-ant-1.10.0-bin.tar.bz2) = 4578753 bytes
 SHA1 (patch-aa) = 2cbee5444e1da56072fc61506b28d22dde6dbcdc
