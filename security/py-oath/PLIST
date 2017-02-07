@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/07 01:25:06 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/oath/__init__.py
+${PYSITELIB}/oath/__init__.pyc
+${PYSITELIB}/oath/__init__.pyo
+${PYSITELIB}/oath/_hotp.py
+${PYSITELIB}/oath/_hotp.pyc
+${PYSITELIB}/oath/_hotp.pyo
+${PYSITELIB}/oath/_ocra.py
+${PYSITELIB}/oath/_ocra.pyc
+${PYSITELIB}/oath/_ocra.pyo
+${PYSITELIB}/oath/_totp.py
+${PYSITELIB}/oath/_totp.pyc
+${PYSITELIB}/oath/_totp.pyo
+${PYSITELIB}/oath/_utils.py
+${PYSITELIB}/oath/_utils.pyc
+${PYSITELIB}/oath/_utils.pyo
+${PYSITELIB}/oath/google_authenticator.py
+${PYSITELIB}/oath/google_authenticator.pyc
+${PYSITELIB}/oath/google_authenticator.pyo
