@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/01/12 16:02:44 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/02/07 14:03:58 wiz Exp $
 bin/certbot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -57,6 +57,9 @@ ${PYSITELIB}/certbot/display/ops.pyo
 ${PYSITELIB}/certbot/display/util.py
 ${PYSITELIB}/certbot/display/util.pyc
 ${PYSITELIB}/certbot/display/util.pyo
+${PYSITELIB}/certbot/eff.py
+${PYSITELIB}/certbot/eff.pyc
+${PYSITELIB}/certbot/eff.pyo
 ${PYSITELIB}/certbot/error_handler.py
 ${PYSITELIB}/certbot/error_handler.pyc
 ${PYSITELIB}/certbot/error_handler.pyo
@@ -186,6 +189,9 @@ ${PYSITELIB}/certbot/tests/display/ops_test.pyo
 ${PYSITELIB}/certbot/tests/display/util_test.py
 ${PYSITELIB}/certbot/tests/display/util_test.pyc
 ${PYSITELIB}/certbot/tests/display/util_test.pyo
+${PYSITELIB}/certbot/tests/eff_test.py
+${PYSITELIB}/certbot/tests/eff_test.pyc
+${PYSITELIB}/certbot/tests/eff_test.pyo
 ${PYSITELIB}/certbot/tests/error_handler_test.py
 ${PYSITELIB}/certbot/tests/error_handler_test.pyc
 ${PYSITELIB}/certbot/tests/error_handler_test.pyo
