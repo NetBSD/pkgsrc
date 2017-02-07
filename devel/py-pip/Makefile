@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/12/23 19:12:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.19 2017/02/07 23:42:04 wiz Exp $
 
 DISTNAME=	pip-9.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,11 @@ REPLACE_PYTHON+=	pip/_vendor/requests/packages/chardet/chardetect.py
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/bin/pip
 	${RM} -f ${DESTDIR}${PREFIX}/bin/pip[2-3]
+
+# tests not included in tarball
+# https://github.com/pypa/pip/issues/3370
+#do-test:
+#	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
