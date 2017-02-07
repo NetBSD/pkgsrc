@@ -1,0 +1,3 @@
+This Python module allows by-passing of Cloudfare's anti-bot page. It
+will dynamically evaluate the Javascript challenge as proof of web
+browserness. It cannot handle reCAPTCHA challenges.
