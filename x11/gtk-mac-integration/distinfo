@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/02/07 11:15:43 adam Exp $
 
-SHA1 (gtk-mac-integration-2.0.5.tar.xz) = 74e43c2fff14ca4aff3a8f6c35660bedc7a349a1
-RMD160 (gtk-mac-integration-2.0.5.tar.xz) = 917fccbe278204f9c56d50bf02e5fabff1137a3e
-SHA512 (gtk-mac-integration-2.0.5.tar.xz) = c26c9ceadb4b8c4410636e38fcd57f76a5b04b6dd14be44e62217973fe9ad1b1107a9771ddcc66e8e8fa078fa3b521df834b9928ba9371ef08cc5a55953426cd
-Size (gtk-mac-integration-2.0.5.tar.xz) = 305656 bytes
+SHA1 (gtk-mac-integration-2.0.8.tar.xz) = 6143f2191a9122b3d198f87c9a1556550640ece1
+RMD160 (gtk-mac-integration-2.0.8.tar.xz) = 53fd44172a3fa076e4401b6aac1adb10b76a5b7c
+SHA512 (gtk-mac-integration-2.0.8.tar.xz) = a5c791df84502b5959e4699269168eec2c6fb15919d19bb0c3a9fb5b73f0ded4f302dac12be50fc35307dd9eab0f20c51d9a9533e7ba185e64359d8ba74edbe6
+Size (gtk-mac-integration-2.0.8.tar.xz) = 325684 bytes
