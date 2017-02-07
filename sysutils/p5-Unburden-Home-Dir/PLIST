@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/07 14:34:35 hauke Exp $
+bin/unburden-home-dir
+libexec/unburden-home-dir/common.sh
+man/man1/unburden-home-dir.1
+share/doc/unburden-home-dir/bugs.md
+share/doc/unburden-home-dir/configuration.md
+share/doc/unburden-home-dir/contact.md
+share/doc/unburden-home-dir/credits.md
+share/doc/unburden-home-dir/howto.md
+share/doc/unburden-home-dir/index.md
+share/doc/unburden-home-dir/installation.md
+share/doc/unburden-home-dir/license.md
+share/doc/unburden-home-dir/qa.md
+share/doc/unburden-home-dir/see-also.md
+share/doc/unburden-home-dir/source-code.md
+share/doc/unburden-home-dir/todo.md
+share/doc/unburden-home-dir/troubleshooting.md
+share/doc/unburden-home-dir/unburden-home-dir.1.md
+share/examples/unburden-home-dir/unburden-home-dir
+share/examples/unburden-home-dir/unburden-home-dir-xdg
+share/examples/unburden-home-dir/unburden-home-dir.conf
+share/examples/unburden-home-dir/unburden-home-dir.list
