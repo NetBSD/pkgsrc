@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2016/12/04 16:30:01 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/07 13:03:17 wiz Exp $
 
-DISTNAME=	go-runewidth-0.0.1
-PKGREVISION=	4
+DISTNAME=	go-runewidth-0.0.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mattn/}
-GITHUB_PROJECT=	go-runewidth
-GITHUB_TAG=	v0.0.1
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mattn/go-runewidth
