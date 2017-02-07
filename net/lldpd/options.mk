@@ -1,4 +1,5 @@
-# $NetBSD: options.mk,v 1.1 2014/06/13 03:06:09 mef Exp $
+# $NetBSD: options.mk,v 1.2 2017/02/07 12:13:12 wiz Exp $
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lldpd
 PKG_SUPPORTED_OPTIONS=	json snmp xml
 PKG_SUGGESTED_OPTIONS=	json snmp xml
@@ -12,7 +13,6 @@ CONFIGURE_ARGS+=	--with-json
 .if !empty(PKG_OPTIONS:Msnmp)
 .	include "../../net/net-snmp/buildlink3.mk"
 USE_TOOLS+= perl
-BUILDLINK_API_DEPENDS.perl+= perl>=5.16.0
 .	include "../../lang/perl5/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-snmp
 .endif
