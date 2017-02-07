@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.40 2017/01/22 01:32:53 ryoon Exp $
+$NetBSD: distinfo,v 1.41 2017/02/07 12:30:29 roy Exp $
 
 SHA1 (weechat-1.7.tar.bz2) = f8683d940417e8de1bfd933fff50fa1bbcf5d7b6
 RMD160 (weechat-1.7.tar.bz2) = 0a7b7faad1362599db8273edcc205c2760e917d5
@@ -8,5 +8,6 @@ SHA1 (patch-ab) = 2a4583e0f5b0336e8c42ad9eb5a65bbec4730207
 SHA1 (patch-cmake_FindRuby_cmake.patch) = c9987559eca2240fddb03023092fa8d02ad25976
 SHA1 (patch-po_CMakeLists.txt) = 9b97a4a4da4175e31ea53352fd0b95e1c985ba1e
 SHA1 (patch-src_gui_curses_CMakeLists_txt) = 28a1b3b9920cc130d0454a18b111d37b8090038b
+SHA1 (patch-src_gui_curses_gui-curses-main.c) = 928b4049177574277f8b250a4c3f6c76b6d48113
 SHA1 (patch-src_gui_curses_gui-curses-term_c) = 900af9a94e74f229b32031bfeced1b85ea3a0ccf
 SHA1 (patch-src_plugins_charset_charset.c) = f0b6e5268908caab5efa8048c8a55b0083ec0ca4
