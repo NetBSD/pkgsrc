@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/02/07 23:54:08 joerg Exp $
+
+-pedantic breaks <atomic> with libc++.
+
+--- CMakeLists.txt.orig	2017-01-08 19:22:40.698979204 +0000
++++ CMakeLists.txt
+@@ -75,8 +75,6 @@ else()
+   add_cxx_compiler_flag(-Werror RELEASE)
+   add_cxx_compiler_flag(-Werror RELWITHDEBINFO)
+   add_cxx_compiler_flag(-Werror MINSIZEREL)
+-  add_cxx_compiler_flag(-pedantic)
+-  add_cxx_compiler_flag(-pedantic-errors)
+   add_cxx_compiler_flag(-Wshorten-64-to-32)
+   add_cxx_compiler_flag(-Wfloat-equal)
+   add_cxx_compiler_flag(-fstrict-aliasing)
