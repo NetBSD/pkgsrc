@@ -1,0 +1,5 @@
+python-oath is a package implementing the three main OATH specifications:
+ - HOTP, an event based one-time password standard (RFC 4226)
+ - TOTP, a time based OTP (6238)
+ - OCRA, a mixed OTP / signature system based on HOTP for complex use cases
+   (RFC 6287)
