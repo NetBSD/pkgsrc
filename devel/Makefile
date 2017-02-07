@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2354 2017/02/06 22:28:54 maya Exp $
+# $NetBSD: Makefile,v 1.2355 2017/02/07 09:22:18 hauke Exp $
 #
 
 COMMENT=	Development utilities
@@ -872,6 +872,7 @@ SUBDIR+=	p5-Config-Any
 SUBDIR+=	p5-Config-Any-Merge
 SUBDIR+=	p5-Config-Auto
 SUBDIR+=	p5-Config-AutoConf
+SUBDIR+=	p5-Config-File
 SUBDIR+=	p5-Config-Find
 SUBDIR+=	p5-Config-General
 SUBDIR+=	p5-Config-GitLike
