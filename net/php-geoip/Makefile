@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/11 17:03:27 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/07 10:36:59 jdolecek Exp $
 #
 
 MODNAME=		geoip
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pecl.php.net/package/geoip/
 COMMENT=		PHP module to map IP address to geographic places
 LICENSE=		php
-
-PHP_VERSIONS_ACCEPTED=	56 70
 
 USE_LANGUAGES=		c c++
 
