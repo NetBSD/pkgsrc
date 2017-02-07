@@ -1,0 +1,86 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "UNBURDEN\-HOME\-DIR" "1" "February 2017" "" "Unburden Your Home Directory"
+.
+.SH "NAME"
+\fBunburden\-home\-dir\fR \- unburdens home directories from caches and trashes
+.
+.SH "SYNOPSIS"
+\fBunburden\-home\-dir\fR [ \fB\-n\fR | \fB\-u\fR | \fB\-f\fR \fIfilter\fR ]
+.
+.br
+\fBunburden\-home\-dir\fR ( \fB\-h\fR | \fB\-\-help\fR | \fB\-\-version\fR )
+.
+.SH "DESCRIPTION"
+unburden\-home\-dir unburdens the home directory from files and directory which cause high I/O or disk usage but are neither important if they are lost, e\.g\. caches or trash directory\.
+.
+.P
+When being run it moves the files and directories given in the configuration file to a location outside the home directory, e\.g\. \fB/tmp\fR or \fB/scratch\fR, and puts appropriate symbolic links in the home directory instead\.
+.
+.SH "OPTIONS"
+.
+.TP
+\fB\-b\fR
+use the given string as basename instead of "unburden\-home\-dir"\.
+.
+.TP
+\fB\-c\fR
+read an additional configuration file\.
+.
+.TP
+\fB\-C\fR
+read only the given configuration file
+.
+.TP
+\fB\-f\fR
+just unburden those directory matched by the given filter (a perl regular expression) \- it matches the already unburdened directories if used together with \fB\-u\fR\.
+.
+.TP
+\fB\-F\fR
+Do not check for files in use with lsof before (re)moving files\.
+.
+.TP
+\fB\-l\fR
+read an additional list file
+.
+.TP
+\fB\-L\fR
+read only the given list file
+.
+.TP
+\fB\-n\fR
+dry run (show what would be done)
+.
+.TP
+\fB\-u\fR
+undo (reverse the functionality and put stuff back into the home directory)
+.
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+show this help
+.
+.TP
+\fB\-\-version\fR
+show the program\'s version
+.
+.SH "EXAMPLES"
+Example configuration files can be found at \fB@PREFIX@/share/examples/unburden\-home\-dir/\fR and in the \fBetc/\fR directory of the source tar ball\.
+.
+.SH "FILES"
+\fB@SYSCONFDIR@/unburden\-home\-dir\.conf\fR, \fB@SYSCONFDIR@/unburden\-home\-dir\.list\fR, \fB~/\.unburden\-home\-dir\.conf\fR, \fB~/\.unburden\-home\-dir\.list\fR, \fB~/\.config/unburden\-home\-dir/config\fR, \fB~/\.config/unburden\-home\-dir/list\fR
+.
+.P
+Read the documentation at either \fB@PREFIX@/share/doc/unburden\-home\-dir/\fR, at https://unburden\-home\-dir\.readthedocs\.io/ online, or in the \fBdocs/\fR directory in the source tar ball for an explanation of these files\.
+.
+.SH "SEE ALSO"
+corekeeper \fIhttps://packages\.debian\.org/corekeeper\fR, autotrash(1), agedu(1), bleachbit(1), mundus \fIhttps://sebikul\.github\.io/mundus/\fR, computer\-janitor(1), rmlint(1)\.
+.
+.P
+Of, course, du(1) can help you to find potential files or directories to handle by unburden\-home\-dir, but there are quite some du(1)\-like tools out there which are way more comfortable, e\.g\. ncdu(1) (text\-mode), baobab(1) (GNOME), filelight(1) (KDE), xdiskusage(1) (X tool calling du(1) itself), or xdu(1) (X tool reading du(1) output from STDIN)\.
+.
+.SH "AUTHOR"
+Unburden Home Dir is written and maintained by Axel Beckert \fIabe@deuxchevaux\.org\fR\.
+.
+.SH "LICENSE"
+Unburden Home Dir is available under the terms of the GNU General Public License (GPL) version 2 or any later version at your option\.

@@ -1,0 +1,7 @@
+unburden-home-dir allows users to move cache files from browsers,
+etc. off their (nfs or ssd based) home directory, i.e. on a local
+harddisk or tmpfs and replace them with a symbolic link to the new
+location (e.g. on /tmp/ or /scratch/) upon login.
+
+Optionally the contents of these directories and files can be removed
+instead of moved.
