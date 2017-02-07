@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/07 23:52:16 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/cfscrape/__init__.py
+${PYSITELIB}/cfscrape/__init__.pyc
+${PYSITELIB}/cfscrape/__init__.pyo
