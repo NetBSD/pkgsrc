@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/12/18 16:23:51 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2017/02/07 12:13:12 wiz Exp $
 
 DISTNAME=	dotse-dnscheck-1.5.4-0-g352a15c
 PKGNAME=	dnscheck-1.5.4
@@ -38,7 +38,6 @@ REPLACE_PERL+=	lib/DNSCheck/Lookup/*.pm lib/DNSCheck/Test/*.pm
 REPLACE_PERL+=	apps/dnscheck-enqueue apps/dnscheck-packetcheck
 
 PERL5_PACKLIST=			auto/DNSCheck/.packlist
-BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.1
 
 BUILD_DEFS+=	IPV6_READY
 
