@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/08/16 00:11:48 wen Exp $
-#
+# $NetBSD: Makefile,v 1.22 2017/02/07 12:16:48 wiz Exp $
 
 DISTNAME=	Test-Most-0.35
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +14,7 @@ DEPENDS+=	p5-Exception-Class>=1.14:../../devel/p5-Exception-Class
 DEPENDS+=	p5-Test-Deep>=0.119:../../devel/p5-Test-Deep
 DEPENDS+=	p5-Test-Differences>=0.6400:../../devel/p5-Test-Differences
 DEPENDS+=	p5-Test-Exception>=0.43:../../devel/p5-Test-Exception
-DEPENDS+=	{perl>=5.21.8,p5-Test-Harness>=3.35}:../../devel/p5-Test-Harness
+#DEPENDS+=	{perl>=5.21.8,p5-Test-Harness>=3.35}:../../devel/p5-Test-Harness
 DEPENDS+=	p5-Test-Simple>=0.1.302047:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Test-Warn>=0.30:../../devel/p5-Test-Warn
 
