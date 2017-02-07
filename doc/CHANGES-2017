@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.626 2017/02/07 12:21:08 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.627 2017/02/07 12:34:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-libwww to 6.18 [wiz 2017-02-07]
 	Updated devel/afl to 2.39b [wiz 2017-02-07]
 	Updated misc/py-anki2 to 2.0.41 [wiz 2017-02-07]
+	Updated devel/py-tortoisehg to 4.0.2 [wiz 2017-02-07]
