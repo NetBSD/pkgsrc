@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.640 2017/02/07 19:30:22 adam Exp $
+$NetBSD: CHANGES-2017,v 1.641 2017/02/07 21:40:19 roy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.11.1 [wiz 2017-02-07]
 	Added sysutils/p5-Unburden-Home-Dir version g99a9278 [hauke 2017-02-07]
 	Updated multimedia/ffmpeg3 to 3.2.3 [adam 2017-02-07]
+	Updated www/php-apcu to 5.1.8 [roy 2017-02-07]
