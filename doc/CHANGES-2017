@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.639 2017/02/07 14:35:25 hauke Exp $
+$NetBSD: CHANGES-2017,v 1.640 2017/02/07 19:30:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-acme to 0.11.1 [wiz 2017-02-07]
 	Updated security/py-certbot to 0.11.1 [wiz 2017-02-07]
 	Added sysutils/p5-Unburden-Home-Dir version g99a9278 [hauke 2017-02-07]
+	Updated multimedia/ffmpeg3 to 3.2.3 [adam 2017-02-07]
