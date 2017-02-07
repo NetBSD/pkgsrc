@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/07 09:22:18 hauke Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Config/File.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Config/File/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Config::File.3
