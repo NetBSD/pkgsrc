@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/11/28 08:27:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/02/07 19:28:09 adam Exp $
 bin/ffmpeg3
 bin/ffprobe3
 bin/ffserver3
@@ -125,11 +125,11 @@ lib/ffmpeg3/libavfilter.so.6.65.100
 lib/ffmpeg3/libavformat.a
 lib/ffmpeg3/libavformat.so
 lib/ffmpeg3/libavformat.so.57
-lib/ffmpeg3/libavformat.so.57.56.100
+lib/ffmpeg3/libavformat.so.57.56.101
 lib/ffmpeg3/libavutil.a
 lib/ffmpeg3/libavutil.so
 lib/ffmpeg3/libavutil.so.55
-lib/ffmpeg3/libavutil.so.55.34.100
+lib/ffmpeg3/libavutil.so.55.34.101
 lib/ffmpeg3/libpostproc.a
 lib/ffmpeg3/libpostproc.so
 lib/ffmpeg3/libpostproc.so.54
