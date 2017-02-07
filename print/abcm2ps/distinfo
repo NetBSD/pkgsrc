@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2017/01/22 10:36:54 wiz Exp $
+$NetBSD: distinfo,v 1.20 2017/02/07 00:39:02 wiz Exp $
 
-SHA1 (abcm2ps-8.13.4.tar.gz) = de8041e39aa06299633ab8a2bb7d2af26abb781a
-RMD160 (abcm2ps-8.13.4.tar.gz) = 02ea9157d861cd7fbe65540917d0629199dd10e7
-SHA512 (abcm2ps-8.13.4.tar.gz) = 38e2024467acffb47c432e2df53732f287eb1e75c840939efc85ab657a3b512ef6bc5462b89705db7e0cab007a607c9891d4fb401fddd543070320158de32149
-Size (abcm2ps-8.13.4.tar.gz) = 247604 bytes
+SHA1 (abcm2ps-8.13.5.tar.gz) = 5b68c347c4a4ee6debd1e27695d0bf03879c669c
+RMD160 (abcm2ps-8.13.5.tar.gz) = 4c0aabf31128422721708fa75c71467288211ebf
+SHA512 (abcm2ps-8.13.5.tar.gz) = e411f67c90fbc36ffbef74c91617158fe3429e156bc3b1052eb82c27f91fdbb4bcf1de28904ac0b8ec832e61103486c7e50730a5cc429a7c814e174dbf10aad4
+Size (abcm2ps-8.13.5.tar.gz) = 247642 bytes
