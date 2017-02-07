@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.627 2017/02/07 12:34:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.628 2017/02/07 12:36:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -783,3 +783,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/afl to 2.39b [wiz 2017-02-07]
 	Updated misc/py-anki2 to 2.0.41 [wiz 2017-02-07]
 	Updated devel/py-tortoisehg to 4.0.2 [wiz 2017-02-07]
+	Updated x11/gtk-mac-integration to 2.0.8 [adam 2017-02-07]
+	Updated graphics/gimp to 2.8.20 [adam 2017-02-07]
