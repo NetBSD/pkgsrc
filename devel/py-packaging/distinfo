@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/08 12:10:01 wiz Exp $
+
+SHA1 (packaging-16.8.tar.gz) = 68f9574b50683c0962ad90346879e7a2319cc6d8
+RMD160 (packaging-16.8.tar.gz) = a6b8e25435ae429add03db68e63e10ffe9d56292
+SHA512 (packaging-16.8.tar.gz) = d1a7b65472c7c02dd758f0c469d6c6aeea34de7b798613f7fcdf45fcccbeba1e9085cab113fa89b392a60f758f8747d13b1c265c809566990c22e61ca8db49bb
+Size (packaging-16.8.tar.gz) = 44706 bytes
