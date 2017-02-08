@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/02/07 13:05:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/02/08 11:50:02 prlw1 Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant-antlr.jar
@@ -22,6 +22,7 @@ lib/java/ant/ant-launcher.jar
 lib/java/ant/ant-netrexx.jar
 lib/java/ant/ant-swing.jar
 lib/java/ant/ant-testutil.jar
+lib/java/ant/ant-xz.jar
 lib/java/ant/ant.jar
 share/doc/java/ant/Integration/anttool1.gif
 share/doc/java/ant/Integration/jext-plugin.html
@@ -1070,6 +1071,11 @@ share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/windows/Attrib.htm
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/windows/package-frame.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/windows/package-summary.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/windows/package-tree.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/xz/Unxz.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/xz/Xz.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/xz/package-frame.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/xz/package-summary.html
+share/doc/java/ant/api/org/apache/tools/ant/taskdefs/optional/xz/package-tree.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/package-frame.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/package-summary.html
 share/doc/java/ant/api/org/apache/tools/ant/taskdefs/package-tree.html
@@ -1179,6 +1185,10 @@ share/doc/java/ant/api/org/apache/tools/ant/types/optional/image/package-tree.ht
 share/doc/java/ant/api/org/apache/tools/ant/types/optional/package-frame.html
 share/doc/java/ant/api/org/apache/tools/ant/types/optional/package-summary.html
 share/doc/java/ant/api/org/apache/tools/ant/types/optional/package-tree.html
+share/doc/java/ant/api/org/apache/tools/ant/types/optional/xz/XzResource.html
+share/doc/java/ant/api/org/apache/tools/ant/types/optional/xz/package-frame.html
+share/doc/java/ant/api/org/apache/tools/ant/types/optional/xz/package-summary.html
+share/doc/java/ant/api/org/apache/tools/ant/types/optional/xz/package-tree.html
 share/doc/java/ant/api/org/apache/tools/ant/types/package-frame.html
 share/doc/java/ant/api/org/apache/tools/ant/types/package-summary.html
 share/doc/java/ant/api/org/apache/tools/ant/types/package-tree.html
