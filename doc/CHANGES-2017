@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.645 2017/02/08 01:06:06 kamil Exp $
+$NetBSD: CHANGES-2017,v 1.646 2017/02/08 04:49:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/py-js2py version 0.43 [joerg 2017-02-07]
 	Added www/py-cfscrape version 1.6.8 [joerg 2017-02-07]
 	Added devel/libpthread_dbg version 20161124 [kamil 2017-02-08]
+	Added devel/py-sortedcontainers version 1.5.7 [minskim 2017-02-08]
