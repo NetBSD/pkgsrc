@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/01/01 14:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/08 14:21:26 wiz Exp $
 
-DISTNAME=	eyeD3-0.7.5
+DISTNAME=	eyeD3-0.7.10
 CATEGORIES=	audio
-MASTER_SITES=	http://eyed3.nicfit.net/releases/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/eyeD3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://eyed3.nicfit.net/
@@ -18,7 +17,7 @@ SUBST_CLASSES+=		python
 SUBST_SED.python+=	-e "s,python,${PYTHONBIN},"
 SUBST_MESSAGE.python=	Fixing path to python executable.
 SUBST_FILES.python+=	bin/eyeD3
-SUBST_STAGE.python+=	post-configure
+SUBST_STAGE.python=	post-configure
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
