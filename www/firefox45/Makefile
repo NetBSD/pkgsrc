@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/02/06 13:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/02/08 07:32:01 maya Exp $
 
 MOZILLA_PKG_NAME=	firefox45
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
@@ -7,7 +7,7 @@ MOZ_BRANCH_MINOR=	.0esr
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	${MOZILLA_PKG_NAME}-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -65,6 +65,7 @@ SUBST_VARS.sys-dic=	PREFIX
 
 post-extract:
 	mv ${WRKSRC}/gfx/ycbcr/yuv_row_arm.s ${WRKSRC}/gfx/ycbcr/yuv_row_arm.S
+	${CP} files/cubeb_oss.c ${WRKSRC}/media/libcubeb/src/cubeb_oss.c
 
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
