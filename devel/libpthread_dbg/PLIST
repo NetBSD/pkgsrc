@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/08 01:02:19 kamil Exp $
+include/pthread_dbg.h
+lib/libpthread_dbg.a
+lib/libpthread_dbg.so
+lib/libpthread_dbg.so.2
+lib/libpthread_dbg.so.2.0
+lib/libpthread_dbg_p.a
+lib/libpthread_dbg_pic.a
+man/man3/pthread_dbg.3
+man/man3/td_close.3
+man/man3/td_map_pth2thr.3
+man/man3/td_open.3
+man/man3/td_thr_getname.3
+man/man3/td_thr_info.3
+man/man3/td_thr_iter.3
