@@ -1,11 +1,11 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2013/03/15 23:21:39 wiz Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2017/02/08 17:53:52 adam Exp $
 
 The result of replacing EXTRA_LIBRARIES with lib_LTLIBRARIES
 and rerunning automake-1.11.3 to make it install the needed libpotrace.
 
---- src/Makefile.in.orig	2013-02-20 00:49:08.000000000 +0000
+--- src/Makefile.in.orig	2015-10-23 01:42:02.000000000 +0000
 +++ src/Makefile.in
-@@ -296,8 +339,7 @@ libsources = curve.c curve.h trace.c tra
+@@ -378,8 +378,7 @@ libsources = curve.c curve.h trace.c tra
   decompose.h potracelib.c potracelib.h lists.h auxiliary.h bitmap.h	\
   progress.h
  
@@ -13,20 +13,13 @@ and rerunning automake-1.11.3 to make it install the needed libpotrace.
 -EXTRA_LTLIBRARIES = libpotrace.la
 +lib_LTLIBRARIES = libpotrace.la
  libpotrace_la_SOURCES = $(libsources)
- libpotrace_la_LDFLAGS = -version-info 0:1:0 -rpath '$(libdir)' \
+ libpotrace_la_LDFLAGS = -version-info 0:3:0 -rpath '$(libdir)' \
   -export-symbols $(srcdir)/libpotrace-export.sym -no-undefined
-@@ -372,14 +415,14 @@ uninstall-libLTLIBRARIES:
+@@ -464,7 +463,7 @@ clean-libLTLIBRARIES:
+ 	}
  
- clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
- 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
- 	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
- 	  test "$$dir" != "$$p" || dir=.; \
- 	  echo "rm -f \"$${dir}/so_locations\""; \
- 	  rm -f "$${dir}/so_locations"; \
- 	done
  libpotrace.la: $(libpotrace_la_OBJECTS) $(libpotrace_la_DEPENDENCIES) $(EXTRA_libpotrace_la_DEPENDENCIES) 
--	$(libpotrace_la_LINK)  $(libpotrace_la_OBJECTS) $(libpotrace_la_LIBADD) $(LIBS)
+-	$(AM_V_CCLD)$(libpotrace_la_LINK)  $(libpotrace_la_OBJECTS) $(libpotrace_la_LIBADD) $(LIBS)
 +	$(AM_V_CCLD)$(libpotrace_la_LINK) -rpath $(libdir) $(libpotrace_la_OBJECTS) $(libpotrace_la_LIBADD) $(LIBS)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
