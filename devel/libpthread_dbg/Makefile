@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/08 01:02:19 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/08 02:06:34 kamil Exp $
 #
 
 PKGNAME=	libpthread_dbg-20161124
@@ -14,6 +14,8 @@ USE_TOOLS=		nroff
 
 INSTALLATION_DIRS+=	include lib ${PKGMANDIR}/man3
 PKGSRC_LOCKTYPE=	none	# avoid "bootstrapping problem"
+
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
