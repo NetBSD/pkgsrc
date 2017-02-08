@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/04/17 21:56:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/02/08 18:03:27 adam Exp $
 bin/mkbitmap
 bin/potrace
+include/potracelib.h
 lib/libpotrace.la
 man/man1/mkbitmap.1
 man/man1/potrace.1

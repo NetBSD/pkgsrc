@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/02/08 17:53:51 adam Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/08 18:03:27 adam Exp $
 
 DISTNAME=	potrace-1.13
 CATEGORIES=	graphics
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-libpotrace
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
