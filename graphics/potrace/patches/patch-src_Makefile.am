@@ -1,9 +1,9 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2013/03/15 23:21:39 wiz Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2017/02/08 17:53:52 adam Exp $
 
 The result of replacing EXTRA_LIBRARIES with lib_LTLIBRARIES
 and rerunning automake-1.11.3 to make it install the needed libpotrace.
 
---- src/Makefile.am.orig	2013-02-20 00:43:08.000000000 +0000
+--- src/Makefile.am.orig	2015-10-23 01:25:37.000000000 +0000
 +++ src/Makefile.am
 @@ -39,8 +39,7 @@ libsources = curve.c curve.h trace.c tra
   decompose.h potracelib.c potracelib.h lists.h auxiliary.h bitmap.h	\
@@ -13,5 +13,5 @@ and rerunning automake-1.11.3 to make it install the needed libpotrace.
 -EXTRA_LTLIBRARIES = libpotrace.la
 +lib_LTLIBRARIES = libpotrace.la
  libpotrace_la_SOURCES = $(libsources)
- libpotrace_la_LDFLAGS = -version-info 0:1:0 -rpath '$(libdir)' \
+ libpotrace_la_LDFLAGS = -version-info 0:3:0 -rpath '$(libdir)' \
   -export-symbols $(srcdir)/libpotrace-export.sym -no-undefined
