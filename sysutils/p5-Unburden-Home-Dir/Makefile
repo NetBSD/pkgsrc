@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2017/02/08 11:05:28 hauke Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/08 11:54:57 hauke Exp $
 
-GIT_COMMIT=	135afb2
-COMMIT_DATE=	20170205
+VERSION_TAG=	0.4.0.1
 
-DISTNAME=	Unburden-Home-Dir-${COMMIT_DATE}
+DISTNAME=	Unburden-Home-Dir-${VERSION_TAG}
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	sysutils perl5
-MASTER_SITES=	-https://codeload.github.com/xtaran/unburden-home-dir/tar.gz/${GIT_COMMIT}
+MASTER_SITES=	-https://codeload.github.com/xtaran/unburden-home-dir/tar.gz/${VERSION_TAG}
 
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	https://github.com/xtaran/unburden-home-dir
 COMMENT=	Automatically unburden HOME directory from caches etc
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/unburden-home-dir-${GIT_COMMIT}
+WRKSRC=		${WRKDIR}/unburden-home-dir-${VERSION_TAG}
 
 DEPENDS+=	p5-Config-File-[0-9]*:../../devel/p5-Config-File
 DEPENDS+=	p5-File-BaseDir-[0-9]*:../../devel/p5-File-BaseDir
