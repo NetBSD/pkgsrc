@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.26 2017/02/04 21:39:05 wiz Exp $
+# $NetBSD: egg.mk,v 1.27 2017/02/08 12:09:30 wiz Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -37,7 +37,21 @@ PRINT_PLIST_AWK+=	{ gsub(/${PYVERSSUFFIX}/, \
 
 _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 
+# py-setuptools depends on a couple py-* packages that need to be installed
+# beforehand. Of course, those can not be built and installed using py-setuptools
+# itself; so use the setuptools version included with python itself for installing
+# them.
+BOOTSTRAP_SETUPTOOLS?=	no
+.if ${BOOTSTRAP_SETUPTOOLS} == "yes"
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+do-build: ensurepip
+.PHONY: ensurepip
+
+ensurepip:
+	${SETENV} ${MAKE_ENV} ${PYTHONBIN} -m ensurepip --user
+.else
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.8:../../devel/py-setuptools
+.endif
 
 INSTALLATION_DIRS+=	${PYSITELIB}
 
