@@ -1,6 +1,6 @@
-$NetBSD: patch-src_ipc__listener.cpp,v 1.1 2017/02/03 16:39:16 maya Exp $
+$NetBSD: patch-src_ipc__listener.cpp,v 1.2 2017/02/08 18:15:44 maya Exp $
 
-NetBSD has SOCK_CLOEXEC -- but uses it with paccept, not accept4
+NetBSD<8 has SOCK_CLOEXEC -- but uses it with paccept, not accept4
 
 --- src/ipc_listener.cpp.orig	2016-12-31 15:25:47.000000000 +0000
 +++ src/ipc_listener.cpp
