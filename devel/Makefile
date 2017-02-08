@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2355 2017/02/07 09:22:18 hauke Exp $
+# $NetBSD: Makefile,v 1.2356 2017/02/08 01:05:09 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -569,6 +569,7 @@ SUBDIR+=	libpgm
 SUBDIR+=	libphutil
 SUBDIR+=	libportlib
 SUBDIR+=	libproplist
+SUBDIR+=	libpthread_dbg
 SUBDIR+=	librfuncs
 SUBDIR+=	librlog
 SUBDIR+=	librxspencer
