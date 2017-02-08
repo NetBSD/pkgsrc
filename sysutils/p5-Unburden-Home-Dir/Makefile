@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/02/07 14:34:35 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/08 11:05:28 hauke Exp $
 
-GIT_COMMIT=	99a9278
+GIT_COMMIT=	135afb2
+COMMIT_DATE=	20170205
 
-DISTNAME=	Unburden-Home-Dir-g${GIT_COMMIT}
+DISTNAME=	Unburden-Home-Dir-${COMMIT_DATE}
 PKGNAME=	p5-${DISTNAME}
 #PKGREVISION=	1
 CATEGORIES=	sysutils perl5
@@ -18,7 +19,6 @@ WRKSRC=		${WRKDIR}/unburden-home-dir-${GIT_COMMIT}
 DEPENDS+=	p5-Config-File-[0-9]*:../../devel/p5-Config-File
 DEPENDS+=	p5-File-BaseDir-[0-9]*:../../devel/p5-File-BaseDir
 
-# http://search.cpan.org/~leakin/File-Rsync/Rsync.pm
 DEPENDS+=	p5-File-Rsync-[0-9]*:../../net/p5-File-Rsync
 DEPENDS+=	p5-File-Touch-[0-9]*:../../devel/p5-File-Touch
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
