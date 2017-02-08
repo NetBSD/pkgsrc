@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2356 2017/02/08 01:05:09 kamil Exp $
+# $NetBSD: Makefile,v 1.2357 2017/02/08 04:48:28 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1944,6 +1944,7 @@ SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_scm
 SUBDIR+=	py-setuptools_trial
 SUBDIR+=	py-singledispatch
+SUBDIR+=	py-sortedcontainers
 SUBDIR+=	py-speaklater
 SUBDIR+=	py-spwd
 SUBDIR+=	py-stompclient
