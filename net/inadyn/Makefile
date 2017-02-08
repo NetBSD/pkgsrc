@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/05/29 22:32:11 abs Exp $
+# $NetBSD: Makefile,v 1.14 2017/02/08 23:48:45 dmcmahill Exp $
 
 DISTNAME=	inadyn-1.99.15
 CATEGORIES=	net
@@ -39,6 +39,20 @@ SUBST_SED.var=		-e "s|/var|${VARBASE}|"
 SUBST_FILES.var=	man/inadyn.conf.5 man/inadyn.8 include/ddns.h
 SUBST_MESSAGE.var=	Adjusting path to VARBASE
 SUBST_STAGE.var=	pre-configure
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.inadyn
+PKG_SUPPORTED_OPTIONS=  static
+
+.include "../../mk/bsd.options.mk"
+
+##
+## Static link
+##
+.if !empty(PKG_OPTIONS:Mstatic)
+LDFLAGS+=	-static
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
