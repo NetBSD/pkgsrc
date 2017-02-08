@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/02/07 09:50:32 hauke Exp $
+$NetBSD: distinfo,v 1.2 2017/02/08 10:35:21 hauke Exp $
 
 SHA1 (File-Rsync-0.49.tar.gz) = fee1c985bd3f5064cd47f2a9f10fd3d256b50e77
 RMD160 (File-Rsync-0.49.tar.gz) = 9953e960bb1132aaee9e6dd5fe56415e9416d7eb
 SHA512 (File-Rsync-0.49.tar.gz) = 2d8d227a5f7bedc97be678250b741c11279105f191ea773fb45b48fc8f3a3bf8f14e96103aa33fe8a6a5b2ae99e622dc2001f4df33a9de7b09d560f5b490cdb1
 Size (File-Rsync-0.49.tar.gz) = 21914 bytes
+SHA1 (patch-Rsync.pm) = 144875c61e2f119d2ac65a321472c355374ea8c3
