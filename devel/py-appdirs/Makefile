@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/01/25 17:26:56 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/08 12:11:08 wiz Exp $
 
 DISTNAME=	appdirs-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Module for determining appropriate, platform-specific dirs
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
+BOOTSTRAP_SETUPTOOLS=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
