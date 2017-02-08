@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/08/07 16:06:24 nils Exp $
+# $NetBSD: Makefile,v 1.9 2017/02/08 12:11:09 wiz Exp $
 
 DISTNAME=	six-1.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,17 @@ HOMEPAGE=	http://pypi.python.org/pypi/six/
 COMMENT=	Python 2 and 3 compatibility utilities
 LICENSE=	mit
 
+# TEST_DEPENDS
+# not enabled because this is a bootstrap package
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES=	# none
+
+BOOTSTRAP_SETUPTOOLS=	yes
+
+do-test:
+	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
