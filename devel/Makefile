@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2357 2017/02/08 04:48:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2358 2017/02/08 12:10:33 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1865,6 +1865,7 @@ SUBDIR+=	py-nosexcover
 SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
 SUBDIR+=	py-open-vcdiff
+SUBDIR+=	py-packaging
 SUBDIR+=	py-pbr
 SUBDIR+=	py-pep8
 SUBDIR+=	py-pexpect
