@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_unburden-home-dir,v 1.1 2017/02/07 14:34:36 hauke Exp $
+$NetBSD: patch-bin_unburden-home-dir,v 1.2 2017/02/08 11:05:29 hauke Exp $
 
 We depend on sysutils/lsof, so we do not need to hunt for it
 Rename the config file, sticking to conventions
@@ -10,7 +10,7 @@ Rename the config file, sticking to conventions
  my $UID = getpwuid($<);
  my $USE_LSOF = 1;
 -my $LSOF_CMD = undef;
-+my $LSOF_CMD = '@PREFIX@/bin/lsof';
++my $LSOF_CMD = '@PREFIX@/sbin/lsof';
  
  # Some messages for Getopt::Std
  sub VERSION_MESSAGE {
