@@ -1,0 +1,17 @@
+The pthread_dbg library provides an implementation of the standard POSIX
+threads library debugging facilities.
+
+The NetBSD implementation is based on 1:1 thread model, therefore each
+pthread(3) has a kernel thread, called a light-weight process (LWP).
+
+Note that the system private thread interfaces upon which the pthread(3)
+library is built are subject to change without notice.  In order to
+remain compatible with future NetBSD releases, programs must be linked
+against the dynamic version of the thread library.  Statically linked
+programs using the POSIX threads framework may not work when run on a
+future version of the system.
+
+The pthread_dbg library is designed to be used in debuggers and to
+control and introspect the NetBSD implementation of the POSIX threads.
+Software may use native LWP threads without pthread(3) layer, in that
+case pthread_dbg cannot be used.
