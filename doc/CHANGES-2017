@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.647 2017/02/08 07:32:17 maya Exp $
+$NetBSD: CHANGES-2017,v 1.648 2017/02/08 11:50:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -804,3 +804,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/libpthread_dbg version 20161124 [kamil 2017-02-08]
 	Added devel/py-sortedcontainers version 1.5.7 [minskim 2017-02-08]
 	Updated www/firefox45 to 45.7.0nb2 [maya 2017-02-08]
+	Updated devel/apache-ant to 1.10.1 [prlw1 2017-02-08]
