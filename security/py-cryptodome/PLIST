@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/30 22:32:54 maya Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/02/08 00:06:54 joerg Exp $
 ${PYSITELIB}/Crypto/Cipher/AES.py
 ${PYSITELIB}/Crypto/Cipher/AES.pyc
 ${PYSITELIB}/Crypto/Cipher/AES.pyo
@@ -667,7 +667,7 @@ ${PYSITELIB}/Crypto/Util/strxor.pyo
 ${PYSITELIB}/Crypto/__init__.py
 ${PYSITELIB}/Crypto/__init__.pyc
 ${PYSITELIB}/Crypto/__init__.pyo
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
