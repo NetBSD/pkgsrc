@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.1 2016/09/09 15:40:17 scole Exp $
-Add fnm_extmatch.h dependency
+$NetBSD: patch-Makefile,v 1.2 2017/02/09 18:16:08 scole Exp $
+Add fnm_extmatch.h dependency, use options framework
 
---- Makefile.orig	2014-05-11 18:56:00.000000000 +0000
-+++ Makefile
+--- Makefile.orig	2014-05-11 11:56:00.000000000 -0700
++++ Makefile	2017-02-06 12:08:05.000000000 -0800
 @@ -15,7 +15,7 @@
  # Obviously, you must select at least one of the available gzip, lzma, lzo
  # compression types.
@@ -12,7 +12,34 @@ Add fnm_extmatch.h dependency
  
  ########### Building XZ support #############
  #
-@@ -229,7 +229,8 @@ mksquashfs: $(MKSQUASHFS_OBJS)
+@@ -81,7 +81,7 @@
+ # in Mksquashfs.  Obviously the compression algorithm must have been
+ # selected to be built
+ #
+-COMP_DEFAULT = gzip
++#COMP_DEFAULT = gzip
+ 
+ ###############################################
+ #  Extended attribute (XATTRs) build options  #
+@@ -92,7 +92,7 @@
+ # If your C library or build/target environment doesn't support XATTRs then
+ # comment out the next line to build Mksquashfs and Unsquashfs without XATTR
+ # support
+-XATTR_SUPPORT = 1
++#XATTR_SUPPORT = 1
+ 
+ # Select whether you wish xattrs to be stored by Mksquashfs and extracted
+ # by Unsquashfs by default.  If selected users can disable xattr support by
+@@ -100,7 +100,7 @@
+ #
+ # If unselected, Mksquashfs/Unsquashfs won't store and extract xattrs by
+ # default.  Users can enable xattrs by using the -xattrs option.
+-XATTR_DEFAULT = 1
++#XATTR_DEFAULT = 1
+ 
+ 
+ ###############################################
+@@ -229,7 +229,8 @@
  
  mksquashfs.o: Makefile mksquashfs.c squashfs_fs.h squashfs_swap.h mksquashfs.h \
  	sort.h pseudo.h compressor.h xattr.h action.h error.h progressbar.h \
@@ -22,7 +49,7 @@ Add fnm_extmatch.h dependency
  
  read_fs.o: read_fs.c squashfs_fs.h squashfs_swap.h compressor.h xattr.h \
  	error.h mksquashfs.h
-@@ -247,7 +248,7 @@ xattr.o: xattr.c squashfs_fs.h squashfs_
+@@ -247,7 +248,7 @@
  
  read_xattrs.o: read_xattrs.c squashfs_fs.h squashfs_swap.h xattr.h error.h
  
@@ -31,7 +58,7 @@ Add fnm_extmatch.h dependency
  
  progressbar.o: progressbar.c error.h
  
-@@ -279,7 +280,7 @@ unsquashfs: $(UNSQUASHFS_OBJS)
+@@ -279,7 +280,7 @@
  	$(CC) $(LDFLAGS) $(EXTRA_LDFLAGS) $(UNSQUASHFS_OBJS) $(LIBS) -o $@
  
  unsquashfs.o: unsquashfs.h unsquashfs.c squashfs_fs.h squashfs_swap.h \
