@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/02/08 11:54:57 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/09 10:37:12 hauke Exp $
 
 VERSION_TAG=	0.4.0.1
 
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/unburden-home-dir-${VERSION_TAG}
 
 DEPENDS+=	p5-Config-File-[0-9]*:../../devel/p5-Config-File
 DEPENDS+=	p5-File-BaseDir-[0-9]*:../../devel/p5-File-BaseDir
-
 DEPENDS+=	p5-File-Rsync-[0-9]*:../../net/p5-File-Rsync
 DEPENDS+=	p5-File-Touch-[0-9]*:../../devel/p5-File-Touch
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
@@ -50,8 +49,7 @@ SUBST_FILES.fix-paths+=		share/common.sh
 SUBST_FILES.fix-paths+=		unburden-home-dir.1
 SUBST_FILES.fix-paths+=		Xsession.d/25unburden-home-dir-xdg
 SUBST_FILES.fix-paths+=		Xsession.d/95unburden-home-dir
-SUBST_SED.fix-paths+=		-e 's,@SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths+=		PKG_SYSCONFDIR PREFIX
 
 SUBST_CLASSES+=			comment-cfg
 SUBST_STAGE.comment-cfg=	pre-install
