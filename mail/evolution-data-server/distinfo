@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.85 2016/01/31 07:01:55 richard Exp $
+$NetBSD: distinfo,v 1.86 2017/02/09 00:19:15 joerg Exp $
 
 SHA1 (evolution-data-server-2.32.3.tar.bz2) = cbf32c3438c4f1650b35b87007a337ebc1c56cec
 RMD160 (evolution-data-server-2.32.3.tar.bz2) = adc8b07aef41a89d16fc426541c12190a3688b8f
@@ -13,6 +13,7 @@ SHA1 (patch-calendar_backends_caldav_e-cal-backend-caldav.c) = 756ce60a8b684369b
 SHA1 (patch-calendar_libecal_e-cal.c) = 0478b795b298bbab23db39f7a63bd3529691dd95
 SHA1 (patch-calendar_libedata-cal_e-cal-backend-intervaltree.c) = af78b5854666325a9dd1229702968c093805ec03
 SHA1 (patch-calendar_libegdbus_Makefile.in) = ac5aabae5160967c498f12c0f29be3e206e03622
+SHA1 (patch-camel_providers_imapx_camel-imapx-tokens.txt) = 8a62d2064d9bda5f9f79eb9473e71734560c3983
 SHA1 (patch-cc) = a59bbc664a96f467888cae89cb00eb9a9033a925
 SHA1 (patch-cd) = 6e366e65e68cd0c5a8eafa67c7f9152c6521de12
 SHA1 (patch-ce) = 1da2a3773ff89319bc79bbb7375e8259f0be89e4
