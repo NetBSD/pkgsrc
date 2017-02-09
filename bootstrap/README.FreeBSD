@@ -1,11 +1,12 @@
-$NetBSD: README.FreeBSD,v 1.7 2016/11/15 11:19:09 jperkin Exp $
+$NetBSD: README.FreeBSD,v 1.8 2017/02/09 00:20:59 sevan Exp $
 
 Please read the general README file as well.
 
-Care should be taken so that the tools that this kit installs do not conflict
-with the FreeBSD userland tools.
+On legacy releases (9.3 and prior), care should be taken so that the tools
+installed by this kit do not conflict with the tools already provided as part of
+the FreeBSD userland.
 
-If you do not intend to use the FreeBSD ports tools, it may be a
+If you do not intend to use the FreeBSD ports tools (on 9.3 and prior), it may be a
 good idea to move them out of the way to avoid confusion, e.g.:
 	cd /usr/sbin
 	mv pkg_add pkg_add.orig
@@ -15,5 +16,12 @@ good idea to move them out of the way to avoid confusion, e.g.:
 
 Alternatively, take care to get pkgsrc tools first in PATH.
 
+This is not an issue with releases of FreeBSD which solely support pkgng such as
+10.0-RELEASE and newer.
+
+Currently bootstrap is only supported using the compiler shipped in base and not
+a version of GCC installed from ports, clang from ports is untested.
+
 bootstrap-pkgsrc has been tested on FreeBSD 4.x and 5.x (i386).
-pkgsrc works well on FreeBSD 6.2-6.4, 7.1-7.3 (i386), 9.0-9.1 (amd64).
+pkgsrc works well on FreeBSD 6.2-6.4, 7.1-7.3 (i386), 9.0-9.1, 10.1-10.3,
+11-12-CURRENT (amd64).
