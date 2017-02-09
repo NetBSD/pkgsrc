@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.6 2017/02/06 14:14:48 adam Exp $
+$NetBSD: patch-configure,v 1.7 2017/02/09 00:17:07 joerg Exp $
 
 Detect Berkeley DB.
+Link against librt on NetBSD, too.
 
 --- configure.orig	2016-09-21 12:09:36.000000000 +0000
 +++ configure
@@ -28,3 +29,12 @@ Detect Berkeley DB.
  else
    libdb="no"; echo "no";
  
+@@ -14585,7 +14584,7 @@ if test a"$POSIX_SHARED_MEM" = "a1"; the
+ # Linux and solaris define the shm_open in -rt library.
+ # This library already included in LIBS for solaris
+ case "$target_os" in
+-     linux*)
++     linux*|netbsd*)
+         EXTRALIBS="$EXTRALIBS -lrt"
+      ;;
+      *)
