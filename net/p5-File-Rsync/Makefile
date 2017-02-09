@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/02/08 14:15:30 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/09 10:16:21 hauke Exp $
 
 DISTNAME=	File-Rsync-0.49
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths
 SUBST_FILES.fix-paths=		Rsync.pm
-SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_VARS.fix-paths+=		PREFIX
 
 PERL5_MODULE_TYPE=      MakeMaker
 PERL5_PACKLIST=         auto/File/Rsync/.packlist
