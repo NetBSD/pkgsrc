@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/02/06 13:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/09 00:21:52 joerg Exp $
 
 DISTNAME=	gpick-gpick-0.2.5
 PKGNAME=	${DISTNAME:S/gpick-//}
@@ -14,6 +14,7 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
+USE_TOOLS+=	pkg-config
 
 SCONS=		${PREFIX}/bin/scons
 SCONS_ARGS+=	DESTDIR=${DESTDIR}${PREFIX}
