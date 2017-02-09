@@ -1,4 +1,4 @@
-$NetBSD: patch-docs_unburden-home-dir.1.md,v 1.1 2017/02/07 14:34:36 hauke Exp $
+$NetBSD: patch-docs_unburden-home-dir.1.md,v 1.2 2017/02/09 10:37:12 hauke Exp $
 
 Fix absolute paths, and normalize config file name
 
@@ -17,7 +17,7 @@ Fix absolute paths, and normalize config file name
  
 -`/etc/unburden-home-dir`, `/etc/unburden-home-dir.list`,
 -`~/.unburden-home-dir`, `~/.unburden-home-dir.list`,
-+`@SYSCONFDIR@/unburden-home-dir.conf`, `@SYSCONFDIR@/unburden-home-dir.list`,
++`@PKG_SYSCONFDIR@/unburden-home-dir.conf`, `@PKG_SYSCONFDIR@/unburden-home-dir.list`,
 +`~/.unburden-home-dir.conf`, `~/.unburden-home-dir.list`,
  `~/.config/unburden-home-dir/config`,
 -`~/.config/unburden-home-dir/list`, `/etc/default/unburden-home-dir`,
