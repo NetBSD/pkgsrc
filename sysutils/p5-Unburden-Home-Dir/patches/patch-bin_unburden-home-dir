@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_unburden-home-dir,v 1.2 2017/02/08 11:05:29 hauke Exp $
+$NetBSD: patch-bin_unburden-home-dir,v 1.3 2017/02/09 10:37:12 hauke Exp $
 
 We depend on sysutils/lsof, so we do not need to hunt for it
 Rename the config file, sticking to conventions
@@ -20,11 +20,11 @@ Rename the config file, sticking to conventions
  # By default check for a system wide and a user configuration and list file
 -my @CONFFILES = ("/etc/$BASENAME",
 -                 "$ENV{HOME}/.$BASENAME",
-+my @CONFFILES = ("@SYSCONFDIR@/$BASENAME.conf",
++my @CONFFILES = ("@PKG_SYSCONFDIR@/$BASENAME.conf",
 +                 "$ENV{HOME}/.$BASENAME.conf",
                   config_home($BASENAME).'/config');
 -my @LISTFILES = ("/etc/$BASENAME.$LISTSUFFIX",
-+my @LISTFILES = ("@SYSCONFDIR@/$BASENAME.$LISTSUFFIX",
++my @LISTFILES = ("@PKG_SYSCONFDIR@/$BASENAME.$LISTSUFFIX",
                   "$ENV{HOME}/.$BASENAME.$LISTSUFFIX",
                   config_home($BASENAME)."/$LISTSUFFIX");
  
