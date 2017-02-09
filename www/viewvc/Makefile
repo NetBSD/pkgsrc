@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2016/07/09 13:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.25.4.1 2017/02/09 19:47:25 bsiegert Exp $
 
-DISTNAME=	viewvc-1.1.23
+DISTNAME=	viewvc-1.1.26
 CATEGORIES=	devel www
-MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/49392/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=viewvc/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.viewvc.org/
@@ -10,7 +10,8 @@ COMMENT=	Viewing the content of CVS/SVN repositories with a Webbrowser
 LICENSE=	2-clause-bsd
 
 REPLACE_PYTHON=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.1.20
+# https://github.com/viewvc/viewvc/issues/138
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.1.26
 
 .if !exists(/usr/bin/rlog)
 DEPENDS+=	rcs-[0-9]*:../../devel/rcs
