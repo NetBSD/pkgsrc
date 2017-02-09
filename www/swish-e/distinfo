@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:47:39 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/02/09 00:18:01 joerg Exp $
 
 SHA1 (swish-e-2.4.5.tar.gz) = 9e93580ef75c372eb232bc0a4940ce76f41a87f6
 RMD160 (swish-e-2.4.5.tar.gz) = b89d8cc8d8f850d2ddf0b52b583a1cb1c0f3c1b3
@@ -9,3 +9,14 @@ SHA1 (patch-ac) = 48d4828baf70ea1f387e93973419329ee08ffe9c
 SHA1 (patch-ad) = 52e5061b9fb54d6f68b833dcbaa13c24b1138927
 SHA1 (patch-ae) = 216aaac5d791ec537f00c73d4e77033e90e15147
 SHA1 (patch-af) = a15bd7a6d6c6077b657a7b4b7c29e08a31f18a76
+SHA1 (patch-src_btree.c) = 5c5fde012c52b187649dc5d05618ccc718a963c4
+SHA1 (patch-src_compress.c) = 33adc08cb02adf24c87a4ca3e6ea81eee33f18ad
+SHA1 (patch-src_compress.h) = 5946b3c2d8c40491269d5a46b5ade09ba0315fec
+SHA1 (patch-src_db__native.c) = f845c49a2d5fd6d1436a5b6a52350e6333bb5e74
+SHA1 (patch-src_db__read.c) = f95833b15ee4e797613d7bfd9cd1705eaa4b60c5
+SHA1 (patch-src_db__write.c) = aef2f748675c459086d75f2bf7e3c50963f8a9ec
+SHA1 (patch-src_dump.c) = 4f8a2242cea218aa18b9c8519df54aa7a485630a
+SHA1 (patch-src_index.c) = e9abd6b2c8be0a1aa53166413d1ab37762b5edb6
+SHA1 (patch-src_merge.c) = ab2fe40304697635d01657bdcab6faeb245a4c75
+SHA1 (patch-src_result__sort.c) = 438293733093084926f7e310ef77421055f09ae1
+SHA1 (patch-src_search.c) = c8a1a9bd5676245ce5576b31049b6eca071f2581
