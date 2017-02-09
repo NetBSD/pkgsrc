@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.653 2017/02/08 21:59:38 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.654 2017/02/09 00:49:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -810,3 +810,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/eyeD3 to 0.7.10 [wiz 2017-02-08]
 	Updated graphics/potrace to 1.13 [adam 2017-02-08]
 	Updated net/syncthing to 0.14.23 [wiz 2017-02-08]
+	Updated net/bind910 to 9.10.4pl6 [taca 2017-02-09]
