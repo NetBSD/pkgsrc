@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2016/10/01 13:00:42 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/09 18:16:07 scole Exp $
 
+VERSION=        4.3
 DISTNAME=       squashfs${VERSION}
 PKGNAME=        squashfs-${VERSION}
-VERSION=        4.3
+
+PKGREVISION=	1
 CATEGORIES=     filesystems
 MASTER_SITES=   http://downloads.sourceforge.net/project/squashfs/squashfs/${DISTNAME}/
 
@@ -19,13 +21,13 @@ USE_LANGUAGES=  c
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin \
-			share/doc/${PKGNAME} \
-			share/doc/${PKGNAME}/OLD-READMEs \
-			share/examples/${PKGNAME}
+			share/doc/squashfs \
+			share/doc/squashfs/OLD-READMEs \
+			share/examples/squashfs
 
 SQUASH_DIR=	${WRKDIR}/${DISTNAME}
 WRKSRC=		${SQUASH_DIR}/squashfs-tools
-SQUASH_PKG_DOC=	${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
+SQUASH_PKG_DOC=	${DESTDIR}${PREFIX}/share/doc/squashfs
 
 do-build:
 	cd ${WRKSRC} && env EXTRA_LDFLAGS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
@@ -43,6 +45,6 @@ do-install:
 	${INSTALL_DATA}	${SQUASH_DIR}/README             ${SQUASH_PKG_DOC}
 	${INSTALL_DATA}	${SQUASH_DIR}/README-4.3         ${SQUASH_PKG_DOC}
 	${INSTALL_DATA}	${SQUASH_DIR}/OLD-READMEs/*      ${SQUASH_PKG_DOC}/OLD-READMEs/
-	${INSTALL_DATA}	${SQUASH_DIR}/pseudo-file.example ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/
+	${INSTALL_DATA}	${SQUASH_DIR}/pseudo-file.example ${DESTDIR}${PREFIX}/share/examples/squashfs/
 
 .include "../../mk/bsd.pkg.mk"
