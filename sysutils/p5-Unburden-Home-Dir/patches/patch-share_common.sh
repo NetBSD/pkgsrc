@@ -1,4 +1,4 @@
-$NetBSD: patch-share_common.sh,v 1.1 2017/02/07 14:34:36 hauke Exp $
+$NetBSD: patch-share_common.sh,v 1.2 2017/02/09 10:37:12 hauke Exp $
 
 Fix absolute paths.
 Normalize prefs filename.
@@ -11,8 +11,8 @@ Normalize prefs filename.
  
 -if [ -e /etc/default/"${UNBURDEN_BASENAME}" ]; then
 -    . /etc/default/"${UNBURDEN_BASENAME}"
-+if [ -e @SYSCONFDIR@/"${UNBURDEN_BASENAME}".conf ]; then
-+    . @SYSCONFDIR@/"${UNBURDEN_BASENAME}".conf
++if [ -e @PKG_SYSCONFDIR@/"${UNBURDEN_BASENAME}".conf ]; then
++    . @PKG_SYSCONFDIR@/"${UNBURDEN_BASENAME}".conf
  fi
  
 -if [ -e /etc/"${UNBURDEN_BASENAME}" ]; then
