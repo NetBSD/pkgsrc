@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.655 2017/02/09 00:50:47 taca Exp $
+$NetBSD: CHANGES-2017,v 1.656 2017/02/09 06:08:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/syncthing to 0.14.23 [wiz 2017-02-08]
 	Updated net/bind910 to 9.10.4pl6 [taca 2017-02-09]
 	Updated net/bind99 to 9.9.9pl6 [taca 2017-02-09]
+	Updated math/octave to 4.2.0nb5 [minskim 2017-02-09]
