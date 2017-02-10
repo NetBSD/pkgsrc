@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.662 2017/02/10 07:01:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.663 2017/02/10 07:04:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -818,3 +818,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/ruby-gherkin version 4.0.0 [minskim 2017-02-10]
 	Updated graphics/inkscape to 0.92 [adam 2017-02-10]
 	Updated devel/p5-List-AllUtils to 0.14 [wiz 2017-02-10]
+	Updated devel/p5-Devel-Symdump to 2.1800 [wiz 2017-02-10]
