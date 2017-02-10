@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.663 2017/02/10 07:04:01 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.664 2017/02/10 10:39:22 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/inkscape to 0.92 [adam 2017-02-10]
 	Updated devel/p5-List-AllUtils to 0.14 [wiz 2017-02-10]
 	Updated devel/p5-Devel-Symdump to 2.1800 [wiz 2017-02-10]
+	Updated comms/conserver8 to 8.2.1nb4 [he 2017-02-10]
