@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/09 06:38:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/10 19:59:50 minskim Exp $
 
 DISTNAME=	gperftools-2.4
 PKGREVISION=	2
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-frame-pointers # per README
 
 .if ${OPSYS} == "Darwin"
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/heap_checker.html ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/heap_checker.html
+	${INSTALL_DATA} ${WRKSRC}/doc/heap_checker.html ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}/heap_checker.html
 .endif
 
 # http://code.google.com/p/gperftools/issues/detail?id=609
