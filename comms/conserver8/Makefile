@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/02/10 10:35:06 he Exp $
+# $NetBSD: Makefile,v 1.24 2017/02/10 10:38:42 he Exp $
 #
 
 PKGVER=		8.2.1
@@ -25,9 +25,10 @@ CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT:Q}
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE:Q}/log/conserver
 
-.include "options.mk"
-
 BUILD_DEFS+=	CONSERVER_DEFAULTPORT CONSERVER_DEFAULTHOST VARBASE
+
+.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 RCD_SCRIPTS=	conserver8
 
