@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2016/10/10 09:01:39 adam Exp $
+# $NetBSD: options.mk,v 1.22 2017/02/10 08:41:25 sborrill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	ecap inet6 snmp ssl squid-backend-aufs \
@@ -132,6 +132,7 @@ CONFIGURE_ARGS+=	--disable-snmp
 
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--enable-ssl --with-openssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--enable-ssl-crtd
 .  include "../../security/openssl/buildlink3.mk"
 PLIST.ssl=		yes
 .endif
