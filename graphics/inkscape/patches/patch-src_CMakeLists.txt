@@ -1,0 +1,14 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2017/02/10 05:51:43 adam Exp $
+
+Shared libs go into lib/.
+
+--- src/CMakeLists.txt.orig	2017-02-08 19:49:12.000000000 +0000
++++ src/CMakeLists.txt
+@@ -570,6 +570,6 @@ if(NOT WIN32)
+     inkscape
+     inkview 
+     RUNTIME DESTINATION bin
+-    LIBRARY DESTINATION lib/inkscape
++    LIBRARY DESTINATION lib
+     ARCHIVE DESTINATION lib/inkscape)
+ endif()
