@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.666 2017/02/10 22:58:42 mef Exp $
+$NetBSD: CHANGES-2017,v 1.667 2017/02/10 23:03:20 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/conserver8 to 8.2.1nb4 [he 2017-02-10]
 	Updated www/cgit to 1.1 [roy 2017-02-10]
 	Updated net/p5-Nmap-Parser to 1.330 [mef 2017-02-10]
+	Updated lang/lua53 to 5.3.4 [alnsn 2017-02-10]
