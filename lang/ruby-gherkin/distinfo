@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/10 05:40:31 minskim Exp $
+
+SHA1 (gherkin-4.0.0.gem) = 986db3079d6af421b811713d38bda11fd9aa31d7
+RMD160 (gherkin-4.0.0.gem) = 9e54eb7f1d67900e1e9d8476f2b10185a969e6f2
+SHA512 (gherkin-4.0.0.gem) = 5260d1a5e083b497ddcafb04796162f8bfb62113faaf956df0a082414962eb9ee141c0198bb14392606b917e9ff778d22a8968979f44cec2b1d0bb0969b2221f
+Size (gherkin-4.0.0.gem) = 31744 bytes
