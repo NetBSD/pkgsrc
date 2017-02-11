@@ -1,0 +1,17 @@
+Owl Lisp is a purely functional dialect of Scheme. It is based on the
+applicable subset of R7RS standard, extending it mainly with threads and data
+structures necessary for purely functional operation. Owl can be used on most
+UNIX-like systems, such as Linux, BSDs and OS X. Programs are typically
+compiled via C to standalone binaries, so Owl isn't needed to run programs
+written in it.
+
+Owl project originally got started both as an attempt to extend R5RS Scheme
+with some necessary features, such as threads and modules, and as an experiment
+on how being purely functional influences the runtime and use of an applicative
+order purely functional language. While things have been added to Scheme, Owl
+tries to keep the core language as simple as possible.
+
+Implementationwise the goal was to get a small portable system which could be
+used to ship programs easily. This is currently accomplished by using a small
+register-based virtual machine, which can be extended with program-specific
+instructions to reduce interpretive overhead.
