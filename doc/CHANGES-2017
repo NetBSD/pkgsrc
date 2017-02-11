@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.673 2017/02/11 02:11:42 mef Exp $
+$NetBSD: CHANGES-2017,v 1.674 2017/02/11 02:30:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -829,3 +829,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/owl-lisp version 0.1.13 [kamil 2017-02-11]
 	Added devel/radamsa version 0.5 [kamil 2017-02-11]
 	Updated net/arping to 2.18 [mef 2017-02-11]
+	Updated net/bird to 1.6.3 [mef 2017-02-11]
