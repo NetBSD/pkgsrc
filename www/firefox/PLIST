@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.115 2017/01/25 13:24:51 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.116 2017/02/11 12:12:02 abs Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -3397,6 +3397,7 @@ lib/firefox/firefox-bin
 lib/firefox/gmp-clearkey/0.1/clearkey.info
 lib/firefox/gmp-clearkey/0.1/libclearkey.so
 lib/firefox/greprefs.js
+${PLIST.gtk3}lib/firefox/gtk2/libmozgtk.so
 lib/firefox/hyphenation/hyph_af.dic
 lib/firefox/hyphenation/hyph_bg.dic
 lib/firefox/hyphenation/hyph_ca.dic
@@ -3434,6 +3435,7 @@ lib/firefox/hyphenation/hyph_sv.dic
 lib/firefox/hyphenation/hyph_tr.dic
 lib/firefox/hyphenation/hyph_uk.dic
 lib/firefox/liblgpllibs.so
+${PLIST.gtk3}lib/firefox/libmozgtk.so
 ${PLIST.avx86}lib/firefox/libmozavcodec.so
 ${PLIST.avx86}lib/firefox/libmozavutil.so
 lib/firefox/libmozsqlite3.so
