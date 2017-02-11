@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/11 01:40:27 kamil Exp $
+bin/ol
+bin/ovm
+man/man1/ol.1
+man/man1/ovm.1
