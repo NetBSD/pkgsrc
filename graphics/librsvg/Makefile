@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2017/02/06 13:54:45 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2017/02/11 08:44:09 ryoon Exp $
 
 DISTNAME=	librsvg-2.40.15
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,6 +20,7 @@ USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tools
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
+CONFIGURE_ARGS+=	--disable-pixbuf-loader
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
@@ -56,5 +57,5 @@ BUILDLINK_DEPMETHOD.cairo-gobject+=	build
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf2/loaders.mk"
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
