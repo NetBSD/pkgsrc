@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/09 20:26:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/02/11 14:24:37 adam Exp $
+include/bitstream/atsc/a52.h
 include/bitstream/common.h
 include/bitstream/dvb/ci.h
 include/bitstream/dvb/si.h
@@ -79,8 +80,27 @@ include/bitstream/dvb/si/tot.h
 include/bitstream/dvb/si/tot_print.h
 include/bitstream/dvb/si_print.h
 include/bitstream/dvb/sim.h
+include/bitstream/dvb/sub.h
+include/bitstream/dvb/telx.h
+include/bitstream/dvb/vbi.h
+include/bitstream/ieee/ethernet.h
+include/bitstream/ietf/ip.h
+include/bitstream/ietf/rfc4175.h
+include/bitstream/ietf/rtcp.h
+include/bitstream/ietf/rtcp_fb.h
+include/bitstream/ietf/rtcp_rr.h
+include/bitstream/ietf/rtcp_sr.h
 include/bitstream/ietf/rtp.h
+include/bitstream/ietf/rtp2250.h
+include/bitstream/ietf/rtp3551.h
+include/bitstream/ietf/rtp6184.h
+include/bitstream/ietf/rtp7587.h
+include/bitstream/ietf/udp.h
+include/bitstream/itu/h265.h
 include/bitstream/mpeg/aac.h
+include/bitstream/mpeg/h264.h
+include/bitstream/mpeg/mp2v.h
+include/bitstream/mpeg/mpga.h
 include/bitstream/mpeg/pes.h
 include/bitstream/mpeg/psi.h
 include/bitstream/mpeg/psi/cat.h
@@ -131,3 +151,12 @@ include/bitstream/mpeg/psi/tsdt.h
 include/bitstream/mpeg/psi/tsdt_print.h
 include/bitstream/mpeg/psi_print.h
 include/bitstream/mpeg/ts.h
+include/bitstream/scte/104.h
+include/bitstream/scte/35.h
+include/bitstream/scte/35_print.h
+include/bitstream/smpte/2010.h
+include/bitstream/smpte/2022_1_fec.h
+include/bitstream/smpte/2022_6_hbrmt.h
+include/bitstream/smpte/291.h
+include/bitstream/smpte/337.h
+include/bitstream/smpte/rdd08.h
