@@ -1,6 +1,11 @@
-# $NetBSD: options.mk,v 1.35 2017/02/04 11:14:27 maya Exp $
+# $NetBSD: options.mk,v 1.36 2017/02/11 12:12:02 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
+
+PKG_OPTIONS_REQUIRED_GROUPS=	gtk
+PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
+PKG_SUGGESTED_OPTIONS=		gtk2
+
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
 PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio dbus
@@ -22,6 +27,21 @@ PKG_SUGGESTED_OPTIONS+= dbus pulseaudio
 PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		gtk3
+.if !empty(PKG_OPTIONS:Mgtk2)
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
+BUILDLINK_API_DEPENDS.gtk2+=  gtk2+>=2.18.3nb1
+.include "../../x11/gtk2/buildlink3.mk"
+PLIST.gtk3=		no
+.endif
+
+# As of firefox-51 gtk2 is still pulled in implicitly
+.if !empty(PKG_OPTIONS:Mgtk3)
+CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk3
+.include "../../x11/gtk3/buildlink3.mk"
+PLIST.gtk3=		yes
+.endif
 
 .if !empty(PKG_OPTIONS:Malsa)
 CONFIGURE_ARGS+=	--enable-alsa
