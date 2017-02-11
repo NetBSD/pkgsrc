@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:33:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/02/11 11:26:42 mef Exp $
 
-SHA1 (Math-BaseCnv-1.8.B59BrZX.tgz) = db14a09a9e32a80eb73656fa15165b840ac0d378
-RMD160 (Math-BaseCnv-1.8.B59BrZX.tgz) = 2c565ad114b4be8f330a6115ec4b0b52e0c378a7
-SHA512 (Math-BaseCnv-1.8.B59BrZX.tgz) = 4eee9c76c28e395796276f1530426e315cb69fad211045701296fac9883d081e37887d8fbe79c3886e65b17d068a8a5b172b434d2724dc476df6935cf1e1ce8c
-Size (Math-BaseCnv-1.8.B59BrZX.tgz) = 12401 bytes
+SHA1 (Math-BaseCnv-1.14.tgz) = dcdee9196826cc455b47dc6f716c8fe29cca27bc
+RMD160 (Math-BaseCnv-1.14.tgz) = 2a7340367aab7c0b67f3ac8cf2e015a6a6315e8c
+SHA512 (Math-BaseCnv-1.14.tgz) = 0100dcf8786fe0983bbddffb2a44876d75cf023b78a04687b4d410c3667e44606f8315fb30ee5ca4efd26d8784be8af07cd810813e72d9b0c9ae16725e09a5e6
+Size (Math-BaseCnv-1.14.tgz) = 26946 bytes
