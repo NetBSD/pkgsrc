@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.670 2017/02/11 01:35:43 mef Exp $
+$NetBSD: CHANGES-2017,v 1.671 2017/02/11 01:41:43 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/R-quantreg to 5.29 [mef 2017-02-10]
 	Updated devel/reposurgeon to 3.41 [mef 2017-02-11]
 	Updated devel/ropper to 1.10.10 [mef 2017-02-11]
+	Added lang/owl-lisp version 0.1.13 [kamil 2017-02-11]
