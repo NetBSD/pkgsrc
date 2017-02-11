@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/08/09 20:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/11 14:24:37 adam Exp $
 
-DISTNAME=	bitstream-1.0
+DISTNAME=	bitstream-1.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/bitstream/${PKGVERSION}/
 EXTRACT_SUFX=	.tar.bz2
