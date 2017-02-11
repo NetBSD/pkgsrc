@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.86 2017/01/27 01:36:21 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.87 2017/02/11 12:12:02 abs Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -48,7 +48,6 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}browser/extensions/loop/run-all-loop-tests
 CONFIGURE_ARGS+=	--enable-pie
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--with-pthreads
-CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--enable-system-cairo
 CONFIGURE_ARGS+=	--enable-system-pixman
 CONFIGURE_ARGS+=	--with-system-libvpx
@@ -205,6 +204,7 @@ BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
+# gtk2 needed even if --enable-default-toolkit=cairo-gtk3
 BUILDLINK_API_DEPENDS.gtk2+=  gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
