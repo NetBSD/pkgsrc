@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.37 2017/01/16 00:30:46 schmonz Exp $
+$NetBSD: distinfo,v 1.38 2017/02/11 21:13:08 he Exp $
 
 SHA1 (lighttpd-1.4.45.tar.xz) = 03e516f8be59396bc148218fe7b993219dacaf5d
 RMD160 (lighttpd-1.4.45.tar.xz) = 114d047df0aadb0decd5a25357ddb6a9d7e4188e
 SHA512 (lighttpd-1.4.45.tar.xz) = d030674a8c55aab12d32ac75f8df2628ba2332a5263c8bd2dd4f39342530080edc6ba2a6fee749c1301d601ab766a265d3c630b04d38bb26bba3cf045935573d
 Size (lighttpd-1.4.45.tar.xz) = 660432 bytes
 SHA1 (patch-doc_config_lighttpd.conf) = de14fd0aa0ed2cac5846d810b5c89af4036f1b70
+SHA1 (patch-src_fdevent__freebsd__kqueue.c) = d244910413125ff0e697538b9d1b3c21a19f4cd2
