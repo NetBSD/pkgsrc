@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.668 2017/02/10 23:11:18 mef Exp $
+$NetBSD: CHANGES-2017,v 1.669 2017/02/11 00:29:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -824,3 +824,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Nmap-Parser to 1.330 [mef 2017-02-10]
 	Updated lang/lua53 to 5.3.4 [alnsn 2017-02-10]
 	Updated math/R-quantreg to 5.29 [mef 2017-02-10]
+	Updated devel/reposurgeon to 3.41 [mef 2017-02-11]
