@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.684 2017/02/11 10:22:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.685 2017/02/11 11:28:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -846,3 +846,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/postgresql94 to 9.4.11 [adam 2016-10-29]
 	Updated databases/postgresql95 to 9.5.6 [adam 2016-10-29]
 	Updated databases/postgresql96 to 9.6.2 [adam 2016-10-29]
+	Updated math/p5-Math-BigInt to 1.999809 [mef 2017-02-11]
+	Updated math/p5-Math-BigInt-GMP to 1.6004 [mef 2017-02-11]
+	Updated math/p5-Math-GMP to 2.14 [mef 2017-02-11]
+	Updated math/p5-Math-MatrixReal to 2.13 [mef 2017-02-11]
+	Updated math/p5-Spreadsheet-Read to 0.69 [mef 2017-02-11]
+	Updated math/p5-Math-BaseCnv to 1.14 [mef 2017-02-11]
