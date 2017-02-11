@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2017/02/05 02:26:01 ryoon Exp $
+$NetBSD: distinfo,v 1.30 2017/02/11 08:48:44 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -28,10 +28,6 @@ SHA1 (libreoffice/2c9b0f83ed5890af02c0df1c1776f39b-commons-httpclient-3.1-src.ta
 RMD160 (libreoffice/2c9b0f83ed5890af02c0df1c1776f39b-commons-httpclient-3.1-src.tar.gz) = 12e2f383b8b13afbb63a9460008f97b3356d0ac2
 SHA512 (libreoffice/2c9b0f83ed5890af02c0df1c1776f39b-commons-httpclient-3.1-src.tar.gz) = e73ceeba3f34a35c30b24a3c6cb8dfc2102ff21079a5ff9270935908cb2f707d366c2f31a53fbdafa99673cc2b82e05470a2bf40d96767c72b2ab037c0f55490
 Size (libreoffice/2c9b0f83ed5890af02c0df1c1776f39b-commons-httpclient-3.1-src.tar.gz) = 1882664 bytes
-SHA1 (libreoffice/3069842a88b8f40c6b83ad2850cda293-graphite2-minimal-1.3.9.tgz) = b69f48af4983989279a314cab3f667202e4c5b5b
-RMD160 (libreoffice/3069842a88b8f40c6b83ad2850cda293-graphite2-minimal-1.3.9.tgz) = 126297ce65bf2d9852fb5a3ce322d9aef202fb18
-SHA512 (libreoffice/3069842a88b8f40c6b83ad2850cda293-graphite2-minimal-1.3.9.tgz) = ee5f4678076a17505dbaca78ff6ef6c05bd0ac431c6dbb176cb0ac218ecb52d96cabd868b00a1165dd94dabb718c586053f08622b267c3cf3ff8fe0bf962626e
-Size (libreoffice/3069842a88b8f40c6b83ad2850cda293-graphite2-minimal-1.3.9.tgz) = 155458 bytes
 SHA1 (libreoffice/33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip) = bdc4350b771c6c23e8a40b2413595d1055cff2ab
 RMD160 (libreoffice/33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip) = 4d9bcd7680c173333ddbe3fd3b386acc483322c1
 SHA512 (libreoffice/33e1e61fab06a547851ed308b4ffef42-dejavu-fonts-ttf-2.37.zip) = f5628efe484b6220d0bf8177aa826c28e7a36f0bcca2019e057c20f5915d579057f931377ec686dbfeebef05fcf6453472be77a21ef282bd9d8d0eaf62549a49
@@ -184,10 +180,6 @@ SHA1 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 5e
 RMD160 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 575a7daf02efbab9ea972e03a6870f7f13112806
 SHA512 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = c1a15ebbfe817ec79d4b3f1c97d096bf8511737d7d35d97302856ccfb3de14a1cd16bd31000415d9ab24bbd9ef770d37855cee4b819ff0e8fca2f2766920a114
 Size (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 211919 bytes
-SHA1 (libreoffice/harfbuzz-1.3.2.tar.bz2) = 1ae99f7b8c50467e9fdaeac1e385edc27dcc1a5a
-RMD160 (libreoffice/harfbuzz-1.3.2.tar.bz2) = cdb261333f44e691f9bb5f508492efbe4e4a2133
-SHA512 (libreoffice/harfbuzz-1.3.2.tar.bz2) = 19f846ee75d8a2d94da2a2b489fa8e54a5120599f998e451187f6695aa3931b28c491bbc0837892eaaebbd1da3441effe01f5f2470454f83cfa6a7c510ebcb32
-Size (libreoffice/harfbuzz-1.3.2.tar.bz2) = 1357986 bytes
 SHA1 (libreoffice/language-subtag-registry-2016-02-10.tar.bz2) = 930e1e01da294af239f85f42df78d35cf3e120d0
 RMD160 (libreoffice/language-subtag-registry-2016-02-10.tar.bz2) = efaab283f8a5c2aeeb71c208a6e0ecaf47e8439d
 SHA512 (libreoffice/language-subtag-registry-2016-02-10.tar.bz2) = 39515bfd3feceae0121e0e03ca5b341cf748acf1059b73e832395bee809d730e0a51311c233e017050d4c1df190df77c077de40ddc726f076a4dfa595b0a7de8
