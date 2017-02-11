@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17024 2017/02/10 07:04:01 wiz Exp $
+$NetBSD: TODO,v 1.17025 2017/02/11 02:30:07 mef Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o binkd-1.04
 	o bind-9.11.0
 	o binutils-2.27
-	o bird-1.5.0
 	o bird6-1.5.0
 	o blender-2.78a
 	o bliz++-0.10
