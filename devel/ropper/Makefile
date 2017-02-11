@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/06/17 10:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/11 01:35:27 mef Exp $
 
-DISTNAME=	Ropper-1.9.5
+DISTNAME=	Ropper-1.10.10
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sashs/}
