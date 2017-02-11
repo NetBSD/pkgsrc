@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/07/24 08:30:28 wen Exp $
+$NetBSD: distinfo,v 1.12 2017/02/11 11:23:39 mef Exp $
 
-SHA1 (Spreadsheet-Read-0.66.tgz) = 7a8205779fe1287deb12071c7ec361ed9df6ecf2
-RMD160 (Spreadsheet-Read-0.66.tgz) = 02e979727077bee345d1f30a0c186ae6de47a3b3
-SHA512 (Spreadsheet-Read-0.66.tgz) = 714c3febe9a1382cfba4939060d87d120fc4128e2873eb9ef6544389a4960ef396307992be34aa1905127b6ac24ba099855cea395a5d61efe94d6517c2c349d8
-Size (Spreadsheet-Read-0.66.tgz) = 163995 bytes
+SHA1 (Spreadsheet-Read-0.69.tgz) = 89adf5ea5d51a85b510eee3b9132e838beb96afc
+RMD160 (Spreadsheet-Read-0.69.tgz) = 88f91c7ebb4243ab7031857e22c31bd10c5b8f6b
+SHA512 (Spreadsheet-Read-0.69.tgz) = c230a748c770dda4e61276aecd819502834d0c68c14c78bada7ee9aa13e97475de792394a14546c6f06316f8e29670b863a6857109eba4d596d2cea1a1bc28e5
+Size (Spreadsheet-Read-0.69.tgz) = 166606 bytes
