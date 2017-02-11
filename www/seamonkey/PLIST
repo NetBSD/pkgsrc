@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2017/01/01 16:14:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.57 2017/02/11 12:12:25 abs Exp $
 bin/seamonkey
 lib/seamonkey/application.ini
 lib/seamonkey/blocklist.xml
@@ -4406,6 +4406,7 @@ lib/seamonkey/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/seamonkey/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 lib/seamonkey/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 lib/seamonkey/greprefs.js
+${PLIST.gtk3}lib/seamonkey/gtk2/libmozgtk.so
 lib/seamonkey/hyphenation/hyph_af.dic
 lib/seamonkey/hyphenation/hyph_bg.dic
 lib/seamonkey/hyphenation/hyph_ca.dic
@@ -4452,6 +4453,7 @@ lib/seamonkey/isp/rss.rdf
 lib/seamonkey/libldap60.so
 lib/seamonkey/libldif60.so
 lib/seamonkey/liblgpllibs.so
+${PLIST.gtk3}lib/seamonkey/libmozgtk.so
 lib/seamonkey/libmozsqlite3.so
 lib/seamonkey/libprldap60.so
 lib/seamonkey/libxul.so
