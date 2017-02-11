@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.27 2016/02/25 16:20:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2017/02/11 02:51:53 mef Exp $
 
-DISTNAME=	bing-1.0.4
+DISTNAME=	bing_src-1.1.3
+PKGNAME=	${DISTNAME:S/_src//}
 CATEGORIES=	net
 MASTER_SITES=	http://fgouget.free.fr/bing/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fgouget.free.fr/bing/index-en.shtml
 COMMENT=	Bing is a point-to-point bandwidth measurement tool
+LICENSE=	original-bsd
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/doc/bing
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/bing
+	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${DESTDIR}${PREFIX}/share/doc/bing
 
 .include "../../mk/bsd.pkg.mk"
 
