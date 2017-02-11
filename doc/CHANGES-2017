@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.680 2017/02/11 08:44:41 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.681 2017/02/11 08:49:09 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -836,3 +836,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/thunderbird-l10n to 45.7.0 [ryoon 2017-02-11]
 	Updated www/firefox to 51.0.1nb2 [ryoon 2017-02-11]
 	Updated graphics/librsvg to 2.40.15nb3 [ryoon 2017-02-11]
+	Updated misc/libreoffice to 5.3.0.3nb3 [ryoon 2017-02-11]
