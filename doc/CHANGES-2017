@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.688 2017/02/11 21:13:54 he Exp $
+$NetBSD: CHANGES-2017,v 1.689 2017/02/11 22:27:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -855,3 +855,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/bitstream to 1.2 [adam 2017-02-11]
 	Updated sysutils/lsof to 4.89 [rodent 2017-02-11]
 	Updated www/lighttpd to 1.4.45nb1 [he 2017-02-11]
+	Updated print/podofo to 0.9.5 [adam 2017-02-11]
