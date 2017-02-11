@@ -1,7 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2015/08/17 17:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/11 02:29:48 mef Exp $
 
 CONFIGURE_ARGS+=	--enable-ipv6
 BIRD6=			6
-
-PKGREVISION= 1
 .include "../../net/bird/Makefile.common"
