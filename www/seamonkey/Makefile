@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2017/02/06 13:56:06 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2017/02/11 12:12:25 abs Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -21,8 +21,9 @@ USE_TOOLS+=	unzip pax
 NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey
 NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey-bin
 
-.include "../../www/firefox/mozilla-common.mk"
+.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+.include "../../www/firefox/mozilla-common.mk"
 
 # Workaround to fix pixman.h detection
 CFLAGS+=	-I${BUILDLINK_PREFIX.pixman}/include/pixman-1
