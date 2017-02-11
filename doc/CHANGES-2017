@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.675 2017/02/11 02:52:23 mef Exp $
+$NetBSD: CHANGES-2017,v 1.676 2017/02/11 07:25:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/arping to 2.18 [mef 2017-02-11]
 	Updated net/bird to 1.6.3 [mef 2017-02-11]
 	Updated net/bing to 1.1.3 [mef 2017-02-11]
+	Updated devel/nss to 3.29 [ryoon 2017-02-11]
