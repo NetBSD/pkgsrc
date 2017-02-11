@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.239 2017/02/01 10:14:09 jperkin Exp $
+# $NetBSD: bootstrap,v 1.240 2017/02/11 16:08:31 tron Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -569,7 +569,7 @@ Darwin)
 		;;
 	esac
 	case "$macosx_version" in
-	10.[8-9]|10.1[01])
+	10.[8-9]|10.1[012])
 		need_awk=yes
 		need_sed=yes
 		;;
