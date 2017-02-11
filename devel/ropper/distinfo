@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/06/14 07:14:39 kamil Exp $
+$NetBSD: distinfo,v 1.2 2017/02/11 01:35:27 mef Exp $
 
-SHA1 (Ropper-1.9.5.tar.gz) = fa2a1189e97afc2b3920eb56ed6b85a1c7e864b3
-RMD160 (Ropper-1.9.5.tar.gz) = 71841993f4e714a42066adf65f85927acd9585f3
-SHA512 (Ropper-1.9.5.tar.gz) = cb14b763ab181c6e0e6ffb17a2fa533aef897d14775ea42037a66929e6d1992c69aa323693830a8e48510ffee48c84510d1fa7047d9fd6777c9549dbac8ac403
-Size (Ropper-1.9.5.tar.gz) = 600503 bytes
+SHA1 (Ropper-1.10.10.tar.gz) = dfd7d7ed1f87f76c3c91c17c5d0a0a1f268d96b9
+RMD160 (Ropper-1.10.10.tar.gz) = 62ec5d87f88ed69fd17d1f4522135deda0bc8cee
+SHA512 (Ropper-1.10.10.tar.gz) = 5ef06837a5ceeb61cf12dbf3d529fad5f98b581a655490ee9d62909ace9b2a31885be2c972eba448252299a1de3417452ba5ec33235c8dfb50d477279c7c34b8
+Size (Ropper-1.10.10.tar.gz) = 1457535 bytes
