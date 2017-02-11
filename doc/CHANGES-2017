@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.685 2017/02/11 11:28:04 mef Exp $
+$NetBSD: CHANGES-2017,v 1.686 2017/02/11 14:25:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -852,3 +852,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Math-MatrixReal to 2.13 [mef 2017-02-11]
 	Updated math/p5-Spreadsheet-Read to 0.69 [mef 2017-02-11]
 	Updated math/p5-Math-BaseCnv to 1.14 [mef 2017-02-11]
+	Updated multimedia/bitstream to 1.2 [adam 2017-02-11]
