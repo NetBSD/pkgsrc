@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2017/02/03 14:08:11 mef Exp $
+# $NetBSD: Makefile,v 1.24 2017/02/11 15:10:33 tron Exp $
 
 DISTNAME=	e2fsprogs-1.43.4
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
+MASTER_SITES=	https://www.kernel.org/pub/linux/kernel/people/tytso/e2fsprogs/${DISTNAME:S/e2fsprogs-/v/}/ \
+		${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://e2fsprogs.sourceforge.net/
