@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2017/01/31 17:06:38 martin Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/02/11 08:44:09 ryoon Exp $
 bin/rsvg-convert
 include/librsvg-2.0/librsvg/librsvg-enum-types.h
 include/librsvg-2.0/librsvg/librsvg-features.h
 include/librsvg-2.0/librsvg/rsvg-cairo.h
 include/librsvg-2.0/librsvg/rsvg.h
-lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader-svg.la
 ${PLIST.introspection}lib/girepository-1.0/Rsvg-2.0.typelib
 lib/librsvg-2.la
 lib/pkgconfig/librsvg-2.0.pc
