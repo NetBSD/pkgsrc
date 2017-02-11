@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2017/02/06 13:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2017/02/11 09:05:27 leot Exp $
 
 DISTNAME=	mpv-0.23.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -57,6 +57,7 @@ post-install:
 .include "../../mk/oss.buildlink3.mk"
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/waf/waf.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
