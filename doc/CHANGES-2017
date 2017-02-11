@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.669 2017/02/11 00:29:52 mef Exp $
+$NetBSD: CHANGES-2017,v 1.670 2017/02/11 01:35:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/lua53 to 5.3.4 [alnsn 2017-02-10]
 	Updated math/R-quantreg to 5.29 [mef 2017-02-10]
 	Updated devel/reposurgeon to 3.41 [mef 2017-02-11]
+	Updated devel/ropper to 1.10.10 [mef 2017-02-11]
