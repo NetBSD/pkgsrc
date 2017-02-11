@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2017/01/19 18:52:26 agc Exp $
+# $NetBSD: Makefile,v 1.124 2017/02/11 15:25:38 rodent Exp $
 
-DISTNAME=		lsof_4.88
+DISTNAME=		lsof_4.89
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
 MASTER_SITES+=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/
