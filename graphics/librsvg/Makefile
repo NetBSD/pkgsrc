@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2017/02/12 06:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2017/02/12 06:52:24 ryoon Exp $
 
 DISTNAME=	librsvg-2.40.15
 PKGREVISION=	4
@@ -20,7 +20,6 @@ USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tools
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
-CONFIGURE_ARGS+=	--disable-pixbuf-loader
 
 PKGCONFIG_OVERRIDE=	librsvg.pc.in
 
