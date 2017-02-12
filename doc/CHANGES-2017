@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.691 2017/02/12 01:01:29 mef Exp $
+$NetBSD: CHANGES-2017,v 1.692 2017/02/12 01:30:37 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -858,3 +858,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/podofo to 0.9.5 [adam 2017-02-11]
 	Updated net/gst-rtsp-server to 1.10.3 [prlw1 2017-02-11]
 	Updated net/dante to 1.4.2 [mef 2017-02-12]
+	Updated fonts/harfbuzz to 1.4.2nb1 [ryoon 2017-02-12]
