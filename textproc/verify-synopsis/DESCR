@@ -1,0 +1,2 @@
+This package contains a tool to verify that the functions in the
+SYNOPSIS of a man page match the actual implementation.
