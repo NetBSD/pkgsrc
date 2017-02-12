@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.695 2017/02/12 03:24:20 wen Exp $
+$NetBSD: CHANGES-2017,v 1.696 2017/02/12 04:02:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -862,3 +862,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added mail/courier-unicode version 1.4 [mef 2017-02-12]
 	Updated www/p5-Mojolicious to 7.25 [wen 2017-02-12]
 	Updated devel/p5-MooseX-Types to 0.50 [wen 2017-02-12]
+	Updated www/py-beautifulsoup4 to 4.5.3 [wen 2017-02-12]
