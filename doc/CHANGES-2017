@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.692 2017/02/12 01:30:37 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.693 2017/02/12 02:16:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/gst-rtsp-server to 1.10.3 [prlw1 2017-02-11]
 	Updated net/dante to 1.4.2 [mef 2017-02-12]
 	Updated fonts/harfbuzz to 1.4.2nb1 [ryoon 2017-02-12]
+	Added mail/courier-unicode version 1.4 [mef 2017-02-12]
