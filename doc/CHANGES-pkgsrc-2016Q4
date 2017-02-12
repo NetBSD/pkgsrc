@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.9 2017/02/06 09:11:05 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.10 2017/02/12 22:01:02 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -84,4 +84,21 @@ www/apache2: security fix
 
 Pullup ticket #5207 - requested by wiz
 archivers/unzip: security fix
+
+Pullup ticket #5205 - requested by bsiegert
+net/tcpdump: security update
+
+Pullup ticket #5206 - requested by bsiegert
+sysutils/webmin: security update
+sysutils/wbm-*: security update
+
+Pullup ticket #5203 - requested by maya
+lang/php70: build fix
+lang/php71: build fix
+
+Pullup ticket #5210 - requested by taca
+net/bind910: security update
+
+Pullup ticket #5211 - requested by taca
+net/bind99: security update
 
