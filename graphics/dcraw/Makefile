@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2015/07/16 16:46:47 adam Exp $
+# $NetBSD: Makefile,v 1.44 2017/02/12 20:28:23 adam Exp $
 #
 # Changes can be found in the RCS file at
 # http://www.cybercom.net/~dcoffin/dcraw/RCS/dcraw.c,v
 
-DISTNAME=	dcraw-9.26.0
+DISTNAME=	dcraw-9.27.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/archive/
 
