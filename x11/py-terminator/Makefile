@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/02/06 13:56:11 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/02/12 06:26:14 ryoon Exp $
 
 DISTNAME=	terminator-0.98
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	https://launchpad.net/terminator/trunk/${PKGVERSION_NOREV}/+download/
 
