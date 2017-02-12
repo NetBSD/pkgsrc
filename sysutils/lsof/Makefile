@@ -1,23 +1,12 @@
-# $NetBSD: Makefile,v 1.124 2017/02/11 15:25:38 rodent Exp $
+# $NetBSD: Makefile,v 1.125 2017/02/12 11:08:13 wiz Exp $
 
 DISTNAME=		lsof_4.89
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
-MASTER_SITES+=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/
 MASTER_SITES+=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/
-MASTER_SITES+=		ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/
-MASTER_SITES+=		ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/NEW/
-MASTER_SITES+=		ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/OLD/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/
-MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/NEW/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/pub/unix/tools/lsof/OLD/
-MASTER_SITES+=		ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/
-MASTER_SITES+=		ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/NEW/
-MASTER_SITES+=		ftp://gd.tuwien.ac.at/utils/admin-tools/lsof/OLD/
-MASTER_SITES+=		ftp://sunsite.ualberta.ca/pub/Mirror/lsof/
-MASTER_SITES+=		ftp://sunsite.ualberta.ca/pub/Mirror/lsof/NEW/
-MASTER_SITES+=		ftp://sunsite.ualberta.ca/pub/Mirror/lsof/OLD/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
