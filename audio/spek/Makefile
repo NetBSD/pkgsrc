@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/02/06 13:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/02/12 06:25:06 ryoon Exp $
 
 DISTNAME=	spek-0.8.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	https://spek.googlecode.com/files/
 EXTRACT_SUFX=	.tar.xz

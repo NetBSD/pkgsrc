@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2017/02/06 13:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/02/12 06:24:54 ryoon Exp $
 #
 
 DISTNAME=	gtkmm-utils-0.4.1
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	x11
 MASTER_SITES=	http://gtkmm-utils.googlecode.com/files/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2017/02/06 13:54:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2017/02/12 06:24:55 ryoon Exp $
 #
 
 BUILDLINK_TREE+=	libmatekbd
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	libmatekbd
 LIBMATEKBD_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmatekbd+=	libmatekbd>=1.8.0
-BUILDLINK_ABI_DEPENDS.libmatekbd?=	libmatekbd>=1.14.1nb2
+BUILDLINK_ABI_DEPENDS.libmatekbd?=	libmatekbd>=1.14.1nb3
 BUILDLINK_PKGSRCDIR.libmatekbd?=	../../x11/libmatekbd
 
 .include "../../devel/glib2/buildlink3.mk"
