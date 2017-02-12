@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2017/02/07 11:51:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.58 2017/02/12 22:29:13 adam Exp $
 bin/gimp
 bin/gimp-2.8
 bin/gimp-console
@@ -1123,7 +1123,6 @@ share/gtk-doc/html/libgimp/home.png
 share/gtk-doc/html/libgimp/index.html
 share/gtk-doc/html/libgimp/left-insensitive.png
 share/gtk-doc/html/libgimp/left.png
-share/gtk-doc/html/libgimp/libgimp-Gimp.html
 share/gtk-doc/html/libgimp/libgimp-GimpItemComboBox.html
 share/gtk-doc/html/libgimp/libgimp-GimpProcView.html
 share/gtk-doc/html/libgimp/libgimp-data.html
