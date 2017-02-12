@@ -1,0 +1,4 @@
+#!/bin/sh
+TMPFILE=/tmp/verify-synopsis.$$.c
+mandoc -Ttree "$@" | awk -f @PREFIX@/libexec/dmpsynopsis.awk > "$TMPFILE" && gcc -c -o /dev/null -Wall "$TMPFILE" 2>&1
+rm -f "$TMPFILE"
