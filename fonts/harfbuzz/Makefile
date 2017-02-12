@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2017/02/06 12:45:09 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2017/02/12 01:29:30 ryoon Exp $
 
 DISTNAME=	harfbuzz-1.4.2
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.freedesktop.org/software/harfbuzz/release/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cairo=no
-CONFIGURE_ARGS+=	--with-graphite2=yes
+CONFIGURE_ARGS+=	--with-graphite2=no
 
 PKGCONFIG_OVERRIDE+=	src/harfbuzz.pc.in
 PKGCONFIG_OVERRIDE+=	src/harfbuzz-icu.pc.in
@@ -56,5 +57,6 @@ PLIST.coretext=		yes
 #BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
 #.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/graphite2/buildlink3.mk"
+# graphite2 support breaks graphics/librsvg
+#.include "../../graphics/graphite2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
