@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.701 2017/02/12 18:57:21 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.702 2017/02/12 21:50:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -868,3 +868,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/awstats to 7.6 [adam 2017-02-12]
 	Moved pkgtools/pkg_comp to pkgtools/pkg_comp1 [jmmv 2017-02-12]
 	Added textproc/verify-synopsis version 1.0 [wiz 2017-02-12]
+	Updated graphics/dcraw to 9.27.0 [adam 2017-02-12]
+	Updated graphics/ImageMagick6 to 6.9.7.7 [adam 2017-02-12]
+	Updated graphics/pfstools to 2.0.5 [adam 2017-02-12]
