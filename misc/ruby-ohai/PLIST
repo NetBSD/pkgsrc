@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/10/20 15:01:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/02/12 05:11:57 mef Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -76,6 +76,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/freebsd/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/gce.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/go.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/groovy.rb
+${GEM_LIBDIR}/lib/ohai/plugins/haskell.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/hostname.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/init_package.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ip_scopes.rb
@@ -147,6 +148,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/solaris2/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/solaris2/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/solaris2/zpools.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ssh_host_key.rb
+${GEM_LIBDIR}/lib/ohai/plugins/sysconf.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/timezone.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/uptime.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/virtualbox.rb
@@ -262,6 +264,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/freebsd/platform_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/gce_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/go_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/groovy_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/haskell_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/init_package_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/ip_scopes_spec.rb
@@ -327,6 +330,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/solaris2/platform_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/solaris2/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/solaris2/zpools_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/ssh_host_keys_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/sysconf_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/timezone_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/virtualbox_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/vmware_spec.rb
