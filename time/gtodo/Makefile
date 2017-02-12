@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2017/02/06 13:56:02 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2017/02/12 06:26:05 ryoon Exp $
 #
 
 DISTNAME=	gtodo-0.14
-PKGREVISION=	44
+PKGREVISION=	45
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtodo/}
 

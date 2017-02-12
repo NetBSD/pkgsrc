@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2017/02/06 13:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/02/12 06:25:15 ryoon Exp $
 #
 
 DISTNAME=	Editor-0.4.0
 PKGNAME=	deforaos-editor-0.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.defora.org/os/download/download/4398/
 

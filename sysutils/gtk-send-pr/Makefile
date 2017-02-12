@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.57 2017/02/06 13:55:58 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2017/02/12 06:26:00 ryoon Exp $
 #
 
 DISTNAME=		gtk-send-pr-0.4.9
-PKGREVISION=		28
+PKGREVISION=		29
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.berlios.de/gtk-send-pr/
 EXTRACT_SUFX=		.tar.bz2
