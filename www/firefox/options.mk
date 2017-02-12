@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.36 2017/02/11 12:12:02 abs Exp $
+# $NetBSD: options.mk,v 1.37 2017/02/12 07:36:27 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -33,7 +33,6 @@ PLIST_VARS+=		gtk3
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 BUILDLINK_API_DEPENDS.gtk2+=  gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
-PLIST.gtk3=		no
 .endif
 
 # As of firefox-51 gtk2 is still pulled in implicitly
