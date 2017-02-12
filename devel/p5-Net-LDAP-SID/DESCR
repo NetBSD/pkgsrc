@@ -1,0 +1,7 @@
+METHODS
+- new
+  Constructor. Can pass either the binary or string representation of the SID.
+- as_string
+  Returns string representation of SID.
+- as_binary
+  Returns binary representation of SID.
