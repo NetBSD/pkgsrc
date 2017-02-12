@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.10 2015/09/13 21:55:15 leot Exp $
+$NetBSD: patch-ab,v 1.11 2017/02/12 01:01:19 mef Exp $
 
 o Delete the -Werror flag in order to recognise the type of sa_len:
 
@@ -27,24 +27,6 @@ o Add support for DragonFly BSD
     unset sa_len_type_found
     for type in uint8_t "unsigned char"; do
         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -21835,7 +21833,7 @@ keyword="no-route"
- keycnt=0
- for keyval in ${ERRNO_NOROUTE}; do
-     for errno in $ERRNOVALS; do
--	if test x"$keyval" == x"$errno"; then
-+	if test x"$keyval" = x"$errno"; then
- 	    echo "   { \"$keyword\",	$errno	}," >>$ERRNOSRC
- 	    keycnt=`expr $keycnt + 1`
- 	fi
-@@ -22633,7 +22631,7 @@ keyword="foo"
- keycnt=0
- for keyval in ${ERRNO_foo}; do
-     for errno in $GAIERRVALS; do
--	if test x"$keyval" == x"$errno"; then
-+	if test x"$keyval" = x"$errno"; then
- 	    echo "   { \"$keyword\",	$errno	}," >>$ERRNOSRC
- 	    keycnt=`expr $keycnt + 1`
- 	fi
 @@ -24719,8 +24717,13 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
  #include <netdb.h>
  #include <unistd.h>
