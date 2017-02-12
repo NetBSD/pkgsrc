@@ -1,15 +1,15 @@
-$NetBSD: patch-ad,v 1.4 2016/05/09 17:55:35 adam Exp $
+$NetBSD: patch-ad,v 1.5 2017/02/12 10:27:41 adam Exp $
 
 Fix ampersand encoding that breaks XHTML output, ID 1824230.
 
---- wwwroot/cgi-bin/lib/search_engines.pm.orig	2016-04-29 09:44:16.000000000 +0000
+--- wwwroot/cgi-bin/lib/search_engines.pm.orig	2016-09-22 19:07:19.000000000 +0000
 +++ wwwroot/cgi-bin/lib/search_engines.pm
-@@ -1264,7 +1264,7 @@
- 'excite','<a href="http://www.excite.com/" rel="nofollow" title="Search Engine Home Page [new window]" target="_blank">Excite</a>',
- # Minor international search engines
- 'google4counter','<a href="http://www.4-counter.com/" rel="nofollow" title="Search Engine Home Page [new window]" target="_blank">4-counter (Google)</a>',
--'att','<a href="http://www.att.net/" rel="nofollow" title="Search Engine Home Page [new window]" target="_blank">AT&T search (powered by Google)</a>',
-+'att','<a href="http://www.att.net/" rel="nofollow" title="Search Engine Home Page [new window]" target="_blank">AT&amp;T search (powered by Google)</a>',
- 'bungeebonesdotcom','<a href="http://BungeeBones.com/search.php/" rel="nofollow" title="Search Engine Home Page [new window]" target="_blank">BungeeBones</a>',
- 'go','Go.com',
- 'askde','<a href="http://de.ask.com/" rel="nofollow" title="Search Engine Home Page [new window]" target="_blank">Ask Deutschland</a>',
+@@ -5084,7 +5084,7 @@
+ 'atlanticbb','atlanticbb',
+ 'atlas','Atlas.cz',
+ 'atomz','Atomz',
+-'att','<a href="http://www.att.net/" title="Search Engine Home Page [new window]" rel="nofollow" target="_blank">AT&T search (powered by Google)</a>',
++'att','<a href="http://www.att.net/" title="Search Engine Home Page [new window]" rel="nofollow" target="_blank">AT&amp;T search (powered by Google)</a>',
+ 'auone','auone',
+ 'avantfind','<a href="http://www.avantfind.com/" title="Search Engine Home Page [new window]" rel="nofollow" target="_blank">Avantfind</a>',
+ 'avg','avg',
