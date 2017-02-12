@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.36 2016/05/09 17:55:35 adam Exp $
+$NetBSD: distinfo,v 1.37 2017/02/12 10:27:41 adam Exp $
 
-SHA1 (awstats-7.5.tar.gz) = ee1483ee76f7d54d75b575761969b4c2232bb098
-RMD160 (awstats-7.5.tar.gz) = c7367f3fb9f8dc9a6154240c93dc5cebceaacaf8
-SHA512 (awstats-7.5.tar.gz) = d69a66b5ef94d8a7378ece0453a3617f71ad030d81c45cff926fae1319eacdcdcbe2e68513153cd7444d77cbb950827964b0157ce74c04be76781c071f016a35
-Size (awstats-7.5.tar.gz) = 2936644 bytes
+SHA1 (awstats-7.6.tar.gz) = de0f4842442cbbbfbff61301ff30ca7788dda8a1
+RMD160 (awstats-7.6.tar.gz) = 62e7b046d1c9e40c91889a9109a59fbebb27a506
+SHA512 (awstats-7.6.tar.gz) = ebce29dcbdc1f0eef68f1faf6a511212daba3e3621db682dce692dffa584e0c456fb260b9f8e1b7ac25a2a7d5d2bea5034692d2395d4e56a16fa5a36844c79d5
+Size (awstats-7.6.tar.gz) = 2955876 bytes
 SHA1 (patch-aa) = dcd1f70c0196118c57daf22eb41663be675ae4ad
 SHA1 (patch-ab) = 5108717a44d993baea7a98e7c3e791e3be766c6c
-SHA1 (patch-ad) = bb6b1565c6426ff2a2e529c92aaa76fa0baaa1e3
+SHA1 (patch-ad) = f82ee8731bd15d3c956cca6437552df2036190f6

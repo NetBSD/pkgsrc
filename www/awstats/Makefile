@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2016/07/09 06:39:11 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2017/02/12 10:27:41 adam Exp $
 
-DISTNAME=	awstats-7.5
-PKGREVISION=	1
+DISTNAME=	awstats-7.6
 CATEGORIES=	www
 MASTER_SITES=	http://www.awstats.org/files/
 
@@ -10,8 +9,12 @@ HOMEPAGE=	http://www.awstats.org/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 LICENSE=	gnu-gpl-v3
 
-NO_BUILD=		yes
+DEPENDS+=	p5-Geo-IPfree-[0-9]*:../../net/p5-Geo-IPfree
+DEPENDS+=	p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
+DEPENDS+=	p5-Net-XWhois-[0-9]*:../../net/p5-Net-XWhois
+DEPENDS+=	p5-Time-Local-[0-9]*:../../time/p5-Time-Local
 
+NO_BUILD=		yes
 USE_TOOLS+=		perl:run pax
 REPLACE_PERL+=		tools/*.pl
 REPLACE_PERL+=		wwwroot/cgi-bin/*.pl
@@ -19,7 +22,6 @@ REPLACE_PERL+=		wwwroot/cgi-bin/plugins/*.pm
 REPLACE_PERL+=		wwwroot/classes/src/*.pl
 
 .include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
