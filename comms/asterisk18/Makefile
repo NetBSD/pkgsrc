@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2017/02/06 13:55:09 wiz Exp $
+# $NetBSD: Makefile,v 1.114 2017/02/12 06:25:09 ryoon Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -7,7 +7,7 @@ DISTNAME=	asterisk-1.8.32.3
 DIST_SUBDIR=	${PKGNAME_NOREV}
 DISTFILES=	${DEFAULT_DISTFILES}
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/

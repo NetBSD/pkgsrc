@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/02/06 13:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/02/12 06:26:13 ryoon Exp $
 
-PKGREVISION= 4
+PKGREVISION= 5
 PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../meta-pkgs/mate/Makefile.common"
 
