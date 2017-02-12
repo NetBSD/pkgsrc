@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.700 2017/02/12 10:48:55 jmmv Exp $
+$NetBSD: CHANGES-2017,v 1.701 2017/02/12 18:57:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -866,4 +866,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/ruby-ohai to 8.23.0 [mef 2017-02-12]
 	Updated misc/libreoffice to 5.3.0.3nb4 [ryoon 2017-02-12]
 	Updated www/awstats to 7.6 [adam 2017-02-12]
-	Moved pkgtools/pkg_comp to pkgtools/pkg_comp1 [2017-02-12]
+	Moved pkgtools/pkg_comp to pkgtools/pkg_comp1 [jmmv 2017-02-12]
+	Added textproc/verify-synopsis version 1.0 [wiz 2017-02-12]
