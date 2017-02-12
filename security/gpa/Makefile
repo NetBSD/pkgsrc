@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2017/02/06 13:55:54 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2017/02/12 06:25:57 ryoon Exp $
 
 DISTNAME=	gpa-0.9.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpa/
 EXTRACT_SUFX=	.tar.bz2

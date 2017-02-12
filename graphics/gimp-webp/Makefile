@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/02/06 13:55:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/02/12 06:25:27 ryoon Exp $
 
 DISTNAME=	gimp-webp-0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nathan-osman/}
 EXTRACT_USING=	bsdtar

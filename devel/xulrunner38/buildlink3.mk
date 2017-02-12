@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2017/02/06 13:54:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2017/02/12 06:24:42 ryoon Exp $
 
 BUILDLINK_TREE+=	xulrunner38
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xulrunner38
 XULRUNNER38_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xulrunner38+=	xulrunner38>=38.4.0
-BUILDLINK_ABI_DEPENDS.xulrunner38+=	xulrunner38>=38.8.0nb2
+BUILDLINK_ABI_DEPENDS.xulrunner38+=	xulrunner38>=38.8.0nb3
 BUILDLINK_PKGSRCDIR.xulrunner38?=	../../devel/xulrunner38
 
 BUILDLINK_INCDIRS.xulrunner38+=		lib/xulrunner38/include

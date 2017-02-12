@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2017/02/06 13:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/02/12 06:25:07 ryoon Exp $
 #
 
 DISTNAME=	openbabel-2.3.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openbabel/}
 
