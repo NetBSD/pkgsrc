@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.32 2017/02/06 13:54:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2017/02/12 06:24:47 ryoon Exp $
 
 BUILDLINK_TREE+=	gnome-media
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-media
 GNOME_MEDIA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-media+=		gnome-media>=2.12.0nb1
-BUILDLINK_ABI_DEPENDS.gnome-media+=	gnome-media>=2.28.5nb40
+BUILDLINK_ABI_DEPENDS.gnome-media+=	gnome-media>=2.28.5nb41
 BUILDLINK_PKGSRCDIR.gnome-media?=	../../multimedia/gnome-media
 
 .include "../../devel/GConf-ui/buildlink3.mk"

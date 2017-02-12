@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2017/02/06 13:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2017/02/12 06:24:40 ryoon Exp $
 #
 
 DISTNAME=		libglade-2.6.4
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.6/}
 EXTRACT_SUFX=		.tar.bz2

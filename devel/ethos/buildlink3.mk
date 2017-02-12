@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2017/02/06 13:54:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2017/02/12 06:24:37 ryoon Exp $
 
 BUILDLINK_TREE+=	ethos
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ethos
 ETHOS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ethos+=	ethos>=0.2.2
-BUILDLINK_ABI_DEPENDS.ethos+=	ethos>=0.2.2nb21
+BUILDLINK_ABI_DEPENDS.ethos+=	ethos>=0.2.2nb22
 BUILDLINK_PKGSRCDIR.ethos?=	../../devel/ethos
 
 .include "../../devel/glib2/buildlink3.mk"
