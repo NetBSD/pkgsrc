@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/12 02:14:01 mef Exp $
+
+SHA1 (courier-unicode-1.4.tar.bz2) = 722d554f78e5decec24c418ccea01651fecbee25
+RMD160 (courier-unicode-1.4.tar.bz2) = a5006b510799b341e6f3d266b34b3df31be5bf11
+SHA512 (courier-unicode-1.4.tar.bz2) = 1d9cc3efbbafa88631e37de0647d2e873a8264a02a0ce588687b90e15dedb60c23058312abbc771ed1ddf824ba7c81b16adebfe9db69da953b9856eb66d31264
+Size (courier-unicode-1.4.tar.bz2) = 434338 bytes
