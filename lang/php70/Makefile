@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/24 15:27:57 taca Exp $
+# $NetBSD: Makefile,v 1.4.6.1 2017/02/12 21:38:25 spz Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -40,6 +40,13 @@ SUBST_SED.path=		-e 's,@CGIDIR@,${CGIDIR},g'
 SUBST_SED.path+=	-e 's,@PREFIX@,${PREFIX},g'
 
 INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
+
+# segfault generating phar.phar for i386 & SPARC
+# revisit this if builtin PCRE is updated beyond PCRE1 8.38
+# https://bugs.php.net/bug.php?id=73880
+.if ${MACHINE_ARCH} != "x86_64"
+CONFIGURE_ARGS+=	--without-pcre-jit
+.endif
 
 # Make sure modules can link correctly
 .if ${OPSYS} == "Darwin"
