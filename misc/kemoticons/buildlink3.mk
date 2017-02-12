@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2017/02/06 13:54:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2017/02/12 06:24:46 ryoon Exp $
 
 BUILDLINK_TREE+=	kemoticons
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	kemoticons
 KEMOTICONS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kemoticons+=	kemoticons>=5.19.0
-BUILDLINK_ABI_DEPENDS.kemoticons?=	kemoticons>=5.25.0nb2
+BUILDLINK_ABI_DEPENDS.kemoticons?=	kemoticons>=5.25.0nb3
 BUILDLINK_PKGSRCDIR.kemoticons?=	../../misc/kemoticons
 
 .include "../../archivers/karchive/buildlink3.mk"
