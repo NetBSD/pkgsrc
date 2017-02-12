@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.103 2017/02/11 08:48:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2017/02/12 06:45:20 ryoon Exp $
 
 VERREL=		5.3.0
 VERRC=		3
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -95,6 +95,8 @@ MORE_DISTFILES= \
 	7239a4430efd4d0189c4f24df67f08e5-mysql-connector-c++-1.1.4.tar.gz \
 	c0b4799ea9850eae3ead14f0a60e9418-postgresql-9.2.1.tar.bz2 \
 	edc4d741888bc0d38e32dbaa17149596-source-sans-pro-2.010R-ro-1.065R-it.tar.gz \
+	harfbuzz-1.3.2.tar.bz2 \
+	3069842a88b8f40c6b83ad2850cda293-graphite2-minimal-1.3.9.tgz \
 	1725634df4bb3dcb1b2c91a6175f8789-GentiumBasic_1102.zip \
 	EmojiOneColor-SVGinOT-1.3.tar.gz
 
@@ -193,8 +195,8 @@ CONFIGURE_ARGS+=	--with-system-libgltf
 # internal sane should be used because only header files are used.
 CONFIGURE_ARGS+=	--without-system-sane
 # Use internal harfbuzz because fonts/harfbuzz has no graphite2 support.
-#CONFIGURE_ARGS+=	--without-system-harfbuzz
-#CONFIGURE_ARGS+=	--without-system-graphite
+CONFIGURE_ARGS+=	--without-system-harfbuzz
+CONFIGURE_ARGS+=	--without-system-graphite
 # sbin might not be in PATH
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCCODE=${BUILDLINK_PREFIX.icu}/sbin/genccode
 CONFIGURE_ARGS+=	ac_cv_path_SYSTEM_GENCMN=${BUILDLINK_PREFIX.icu}/sbin/gencmn
