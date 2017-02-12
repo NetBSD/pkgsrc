@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/05/09 17:55:35 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/02/12 10:27:41 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -347,6 +347,7 @@ awstats/icon/flags/edu.png
 awstats/icon/flags/ee.png
 awstats/icon/flags/eg.png
 awstats/icon/flags/eh.png
+awstats/icon/flags/el.png
 awstats/icon/flags/en.png
 awstats/icon/flags/er.png
 awstats/icon/flags/es.png
@@ -554,11 +555,14 @@ awstats/icon/mime/document.png
 awstats/icon/mime/dotnet.png
 awstats/icon/mime/encrypt.png
 awstats/icon/mime/flash.png
+awstats/icon/mime/fon.png
 awstats/icon/mime/glasses.png
+awstats/icon/mime/gpx.png
 awstats/icon/mime/html.png
 awstats/icon/mime/image.png
 awstats/icon/mime/jnlp.png
 awstats/icon/mime/jscript.png
+awstats/icon/mime/json.png
 awstats/icon/mime/library.png
 awstats/icon/mime/lit.png
 awstats/icon/mime/mdb.png
@@ -639,6 +643,7 @@ awstats/icon/os/macintosh.png
 awstats/icon/os/macosx.png
 awstats/icon/os/macosx10.png
 awstats/icon/os/macosx11.png
+awstats/icon/os/macosx12.png
 awstats/icon/os/macosx4.png
 awstats/icon/os/macosx5.png
 awstats/icon/os/macosx6.png
