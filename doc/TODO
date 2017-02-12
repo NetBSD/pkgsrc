@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17027 2017/02/12 01:01:30 mef Exp $
+$NetBSD: TODO,v 1.17028 2017/02/12 10:26:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -972,6 +972,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libconfuse-3.0
 	o libdatrie-0.2.10
+	o libepoxy-1.4
 	o libevent-2.1.8
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
@@ -997,6 +998,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.7561beta20.5
 	o libowfat-0.29
 	o libpgm-5.2.122
 	o libprelude-3.1.0
@@ -1060,6 +1062,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.39.1
 	o megatools-1.9.97
+	o meld-3.17.0
 	o memached-1.4.33
 	o mergeant-0.67
 	o merkaator-0.18.2
@@ -1099,6 +1102,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
 	o mpeg4ip-1.6.1
+	o mpv-0.24.0
 	o mserv-devel-0.41
 	o msgpack-1.4.1 [pkg/51083]
 	o multitail-6.4.2
@@ -1302,6 +1306,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.19
+	o py-anki2-2.0.42
 	o py-apache-libcloud-0.20.1
 	o py-buildbot-0.9.1
 	o py-buildbot-slave-0.9.1
@@ -1315,6 +1320,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
+	o py-flake8-3.3.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-hsm-1.1.1
@@ -1348,7 +1354,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-static-1.1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-test-runner-2.11.1
 	o py-tornado-4.4.1
+	o py-twisted-17.1.0
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1579,8 +1587,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vicq-0.4.2
 	o viewvc-1.1.25
 	o vile-9.8q
-	o vim-8.0.0304
-	o vim-share-8.0.0304
+	o vim-8.0.0326
+	o vim-share-8.0.0326
 	o vinagre-3.16.1
 	o vino-3.16.0
 	o virt-manager-1.3.2
@@ -1615,7 +1623,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20170204
+	o x264-devel-20170211
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
