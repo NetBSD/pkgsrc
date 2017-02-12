@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/22 01:19:46 dholland Exp $
+@comment $NetBSD: PLIST,v 1.7.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/mailboxes/config
 share/webmin/mailboxes/CHANGELOG
 share/webmin/mailboxes/Makefile
@@ -15,6 +15,7 @@ share/webmin/mailboxes/config.info.de
 share/webmin/mailboxes/config.info.de.UTF-8
 share/webmin/mailboxes/config.info.el
 share/webmin/mailboxes/config.info.fi
+share/webmin/mailboxes/config.info.hu
 share/webmin/mailboxes/config.info.it
 share/webmin/mailboxes/config.info.it.UTF-8
 share/webmin/mailboxes/config.info.ja_JP.UTF-8
@@ -24,6 +25,7 @@ share/webmin/mailboxes/config.info.ko_KR.euc
 share/webmin/mailboxes/config.info.nl
 share/webmin/mailboxes/config.info.nl.UTF-8
 share/webmin/mailboxes/config.info.no
+share/webmin/mailboxes/config.info.no.UTF-8
 share/webmin/mailboxes/config.info.pt_BR
 share/webmin/mailboxes/config.info.ru_RU
 share/webmin/mailboxes/config_info.pl
@@ -59,6 +61,8 @@ share/webmin/mailboxes/lang/fi
 share/webmin/mailboxes/lang/fi.UTF-8
 share/webmin/mailboxes/lang/fr
 share/webmin/mailboxes/lang/fr.UTF-8
+share/webmin/mailboxes/lang/hu
+share/webmin/mailboxes/lang/hu.UTF-8
 share/webmin/mailboxes/lang/it
 share/webmin/mailboxes/lang/it.UTF-8
 share/webmin/mailboxes/lang/ja_JP.UTF-8
@@ -69,6 +73,7 @@ share/webmin/mailboxes/lang/ko_KR.euc
 share/webmin/mailboxes/lang/nl
 share/webmin/mailboxes/lang/nl.UTF-8
 share/webmin/mailboxes/lang/no
+share/webmin/mailboxes/lang/no.UTF-8
 share/webmin/mailboxes/lang/pl
 share/webmin/mailboxes/lang/pl.UTF-8
 share/webmin/mailboxes/lang/pt
@@ -349,3 +354,4 @@ share/webmin/mailboxes/xinha/skins/xp-green/hover.png
 share/webmin/mailboxes/xinha/skins/xp-green/selected.png
 share/webmin/mailboxes/xinha/skins/xp-green/separator.png
 share/webmin/mailboxes/xinha/skins/xp-green/skin.css
+@pkgdir share/webmin/mailboxes/xinha/plugins

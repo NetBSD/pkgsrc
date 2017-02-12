@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:32:38 agc Exp $
+$NetBSD: distinfo,v 1.8.10.1 2017/02/12 15:28:37 spz Exp $
 
-SHA1 (webmin-1.600.tar.gz) = b915b7127a9579cac8993c4ef54462dfa404bf64
-RMD160 (webmin-1.600.tar.gz) = 33f0c67b47bc7db625fc66b85ee1872e77f32ad5
-SHA512 (webmin-1.600.tar.gz) = bd73ba2ed6df9ed7c6e336ea07571ca17f552f1d41ffda2f78ea00f43e31e4652a9afc8877addc5cd2bdcfebae1d787294601f17cfc43db78c3682a6200fe0d6
-Size (webmin-1.600.tar.gz) = 21397348 bytes
+SHA1 (webmin-1.831.tar.gz) = 5f244a71c2aa49b50ba3a7ca5369e5f09601b41a
+RMD160 (webmin-1.831.tar.gz) = ed879915241683e7baa230cd0c39d448f423eaac
+SHA512 (webmin-1.831.tar.gz) = 2118decd7aa5509aff5823335cfd9e464e72a997e728bf95650fd39ae170a6eaff17f7657da2aca3ee7d47ac3a13a578e80594a10a4cf9c47fdfa71be07c015b
+Size (webmin-1.831.tar.gz) = 28549588 bytes

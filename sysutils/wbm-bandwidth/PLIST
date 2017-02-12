@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 02:03:04 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:33 spz Exp $
 share/examples/webmin/bandwidth/config
 share/webmin/bandwidth/CHANGELOG
 share/webmin/bandwidth/acl_security.pl
@@ -18,9 +18,12 @@ share/webmin/bandwidth/config.info.fr.UTF-8
 share/webmin/bandwidth/config.info.hr
 share/webmin/bandwidth/config.info.hu
 share/webmin/bandwidth/config.info.hu.UTF-8
+share/webmin/bandwidth/config.info.ms_MY
+share/webmin/bandwidth/config.info.ms_MY.UTF-8
 share/webmin/bandwidth/config.info.nl
 share/webmin/bandwidth/config.info.nl.UTF-8
 share/webmin/bandwidth/config.info.no
+share/webmin/bandwidth/config.info.no.UTF-8
 share/webmin/bandwidth/config.info.pl
 share/webmin/bandwidth/config.info.pl.UTF-8
 share/webmin/bandwidth/config.info.ru_RU
@@ -53,9 +56,12 @@ share/webmin/bandwidth/lang/fr.UTF-8
 share/webmin/bandwidth/lang/hr
 share/webmin/bandwidth/lang/hu
 share/webmin/bandwidth/lang/hu.UTF-8
+share/webmin/bandwidth/lang/ms_MY
+share/webmin/bandwidth/lang/ms_MY.UTF-8
 share/webmin/bandwidth/lang/nl
 share/webmin/bandwidth/lang/nl.UTF-8
 share/webmin/bandwidth/lang/no
+share/webmin/bandwidth/lang/no.UTF-8
 share/webmin/bandwidth/lang/pl
 share/webmin/bandwidth/lang/pl.UTF-8
 share/webmin/bandwidth/lang/ru_RU

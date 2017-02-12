@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/12/22 01:39:29 dholland Exp $
+# $NetBSD: Makefile,v 1.7.34.1 2017/02/12 15:28:36 spz Exp $
 
 WBM_NAME=	time
-PKGREVISION=	1
 
 COMMENT=	Webmin module to set the system time
 

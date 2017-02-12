@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 02:10:39 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/htaccess-htpasswd/config
 share/webmin/htaccess-htpasswd/CHANGELOG
 share/webmin/htaccess-htpasswd/acl_security.pl
@@ -27,6 +27,7 @@ share/webmin/htaccess-htpasswd/config.info.ms
 share/webmin/htaccess-htpasswd/config.info.nl
 share/webmin/htaccess-htpasswd/config.info.nl.UTF-8
 share/webmin/htaccess-htpasswd/config.info.no
+share/webmin/htaccess-htpasswd/config.info.no.UTF-8
 share/webmin/htaccess-htpasswd/config.info.tr
 share/webmin/htaccess-htpasswd/config.info.zh_TW.Big5
 share/webmin/htaccess-htpasswd/config.info.zh_TW.UTF-8
@@ -62,9 +63,12 @@ share/webmin/htaccess-htpasswd/lang/ko_KR.UTF-8
 share/webmin/htaccess-htpasswd/lang/ko_KR.euc
 share/webmin/htaccess-htpasswd/lang/ms
 share/webmin/htaccess-htpasswd/lang/ms.UTF-8
+share/webmin/htaccess-htpasswd/lang/ms_MY
+share/webmin/htaccess-htpasswd/lang/ms_MY.UTF-8
 share/webmin/htaccess-htpasswd/lang/nl
 share/webmin/htaccess-htpasswd/lang/nl.UTF-8
 share/webmin/htaccess-htpasswd/lang/no
+share/webmin/htaccess-htpasswd/lang/no.UTF-8
 share/webmin/htaccess-htpasswd/lang/tr
 share/webmin/htaccess-htpasswd/lang/zh_TW.Big5
 share/webmin/htaccess-htpasswd/lang/zh_TW.UTF-8

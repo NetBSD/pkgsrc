@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/12/22 02:02:06 dholland Exp $
+# $NetBSD: Makefile,v 1.6.34.1 2017/02/12 15:28:33 spz Exp $
 
 WBM_NAME=	at
-PKGREVISION=	1
 
 COMMENT=	Webmin module to schedule execution of commands
 

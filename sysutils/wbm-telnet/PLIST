@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:19:30 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/telnet/config
 share/webmin/telnet/CHANGELOG
 share/webmin/telnet/config
@@ -13,6 +13,7 @@ share/webmin/telnet/config.info.es
 share/webmin/telnet/config.info.es.UTF-8
 share/webmin/telnet/config.info.fr
 share/webmin/telnet/config.info.fr.UTF-8
+share/webmin/telnet/config.info.hu
 share/webmin/telnet/config.info.it
 share/webmin/telnet/config.info.it.UTF-8
 share/webmin/telnet/config.info.ja_JP.UTF-8
@@ -21,9 +22,12 @@ share/webmin/telnet/config.info.ko_KR.UTF-8
 share/webmin/telnet/config.info.ko_KR.euc
 share/webmin/telnet/config.info.ms
 share/webmin/telnet/config.info.ms.UTF-8
+share/webmin/telnet/config.info.ms_MY
+share/webmin/telnet/config.info.ms_MY.UTF-8
 share/webmin/telnet/config.info.nl
 share/webmin/telnet/config.info.nl.UTF-8
 share/webmin/telnet/config.info.no
+share/webmin/telnet/config.info.no.UTF-8
 share/webmin/telnet/config.info.pl
 share/webmin/telnet/config.info.pl.UTF-8
 share/webmin/telnet/config.info.pt_BR
@@ -44,6 +48,7 @@ share/webmin/telnet/config.info.zh_TW.UTF-8
 share/webmin/telnet/images/icon.gif
 share/webmin/telnet/images/smallicon.gif
 share/webmin/telnet/index.cgi
+share/webmin/telnet/install_check.pl
 share/webmin/telnet/jta26.jar
 share/webmin/telnet/lang/ca
 share/webmin/telnet/lang/ca.UTF-8
@@ -57,6 +62,8 @@ share/webmin/telnet/lang/es
 share/webmin/telnet/lang/es.UTF-8
 share/webmin/telnet/lang/fr
 share/webmin/telnet/lang/fr.UTF-8
+share/webmin/telnet/lang/hu
+share/webmin/telnet/lang/hu.UTF-8
 share/webmin/telnet/lang/it
 share/webmin/telnet/lang/it.UTF-8
 share/webmin/telnet/lang/ja_JP.UTF-8
@@ -65,9 +72,12 @@ share/webmin/telnet/lang/ko_KR.UTF-8
 share/webmin/telnet/lang/ko_KR.euc
 share/webmin/telnet/lang/ms
 share/webmin/telnet/lang/ms.UTF-8
+share/webmin/telnet/lang/ms_MY
+share/webmin/telnet/lang/ms_MY.UTF-8
 share/webmin/telnet/lang/nl
 share/webmin/telnet/lang/nl.UTF-8
 share/webmin/telnet/lang/no
+share/webmin/telnet/lang/no.UTF-8
 share/webmin/telnet/lang/pl
 share/webmin/telnet/lang/pl.UTF-8
 share/webmin/telnet/lang/pt

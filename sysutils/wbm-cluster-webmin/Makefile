@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/12/22 02:08:58 dholland Exp $
+# $NetBSD: Makefile,v 1.6.34.1 2017/02/12 15:28:34 spz Exp $
 
 WBM_NAME=	cluster-webmin
-PKGREVISION=	1
 
 COMMENT=	Webmin module to manage Webmin settings across a Webmin cluster
 

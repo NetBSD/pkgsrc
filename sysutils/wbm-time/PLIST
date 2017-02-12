@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 01:39:29 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/time/config
 share/webmin/time/CHANGELOG
 share/webmin/time/acl_security.pl
@@ -36,9 +36,12 @@ share/webmin/time/config.info.ko_KR.UTF-8
 share/webmin/time/config.info.ko_KR.euc
 share/webmin/time/config.info.ms
 share/webmin/time/config.info.ms.UTF-8
+share/webmin/time/config.info.ms_MY
+share/webmin/time/config.info.ms_MY.UTF-8
 share/webmin/time/config.info.nl
 share/webmin/time/config.info.nl.UTF-8
 share/webmin/time/config.info.no
+share/webmin/time/config.info.no.UTF-8
 share/webmin/time/config.info.pl
 share/webmin/time/config.info.pl.UTF-8
 share/webmin/time/config.info.pt_BR
@@ -202,9 +205,12 @@ share/webmin/time/lang/ko_KR.UTF-8
 share/webmin/time/lang/ko_KR.euc
 share/webmin/time/lang/ms
 share/webmin/time/lang/ms.UTF-8
+share/webmin/time/lang/ms_MY
+share/webmin/time/lang/ms_MY.UTF-8
 share/webmin/time/lang/nl
 share/webmin/time/lang/nl.UTF-8
 share/webmin/time/lang/no
+share/webmin/time/lang/no.UTF-8
 share/webmin/time/lang/pl
 share/webmin/time/lang/pl.UTF-8
 share/webmin/time/lang/pt_BR
