@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/12 10:48:55 jmmv Exp $
+sbin/pkg_comp
+man/man8/pkg_comp.8
