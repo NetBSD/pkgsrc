@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/12 18:56:54 wiz Exp $
+bin/verify-synopsis
+libexec/dmpsynopsis.awk
+man/man1/verify-synopsis.1
