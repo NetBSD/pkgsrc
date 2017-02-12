@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:18:28 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/status/config
 share/webmin/status/CHANGELOG
 share/webmin/status/WEBMIN-STATUS-MIB.txt
@@ -31,6 +31,7 @@ share/webmin/status/config.info.es.UTF-8
 share/webmin/status/config.info.fa
 share/webmin/status/config.info.fr
 share/webmin/status/config.info.fr.UTF-8
+share/webmin/status/config.info.hu
 share/webmin/status/config.info.it
 share/webmin/status/config.info.ja_JP.UTF-8
 share/webmin/status/config.info.ja_JP.euc
@@ -39,6 +40,7 @@ share/webmin/status/config.info.ko_KR.euc
 share/webmin/status/config.info.nl
 share/webmin/status/config.info.nl.UTF-8
 share/webmin/status/config.info.no
+share/webmin/status/config.info.no.UTF-8
 share/webmin/status/config.info.pl
 share/webmin/status/config.info.pl.UTF-8
 share/webmin/status/config.info.ru.UTF-8
@@ -96,15 +98,20 @@ share/webmin/status/lang/es.UTF-8
 share/webmin/status/lang/fa
 share/webmin/status/lang/fr
 share/webmin/status/lang/fr.UTF-8
+share/webmin/status/lang/hu
+share/webmin/status/lang/hu.UTF-8
 share/webmin/status/lang/it
 share/webmin/status/lang/it.UTF-8
 share/webmin/status/lang/ja_JP.UTF-8
 share/webmin/status/lang/ja_JP.euc
 share/webmin/status/lang/ko_KR.UTF-8
 share/webmin/status/lang/ko_KR.euc
+share/webmin/status/lang/ms_MY
+share/webmin/status/lang/ms_MY.UTF-8
 share/webmin/status/lang/nl
 share/webmin/status/lang/nl.UTF-8
 share/webmin/status/lang/no
+share/webmin/status/lang/no.UTF-8
 share/webmin/status/lang/pl
 share/webmin/status/lang/pl.UTF-8
 share/webmin/status/lang/ru.UTF-8
@@ -120,6 +127,7 @@ share/webmin/status/lang/zh_CN
 share/webmin/status/lang/zh_CN.UTF-8
 share/webmin/status/lang/zh_TW.Big5
 share/webmin/status/lang/zh_TW.UTF-8
+share/webmin/status/ldap-monitor.pl
 share/webmin/status/list_tmpls.cgi
 share/webmin/status/load-monitor.pl
 share/webmin/status/log_parser.pl
@@ -163,12 +171,14 @@ share/webmin/status/services/samba.serv
 share/webmin/status/services/sendmail.serv
 share/webmin/status/services/squid.serv
 share/webmin/status/services/xinetd.serv
+share/webmin/status/slapd-monitor.pl
 share/webmin/status/space-monitor.pl
 share/webmin/status/squid-monitor.pl
 share/webmin/status/sshd-monitor.pl
 share/webmin/status/sslcert-monitor.pl
 share/webmin/status/status-lib.pl
 share/webmin/status/status_monitor_api.pl
+share/webmin/status/system_info.pl
 share/webmin/status/tcp-monitor.pl
 share/webmin/status/traffic-monitor.pl
 share/webmin/status/uninstall.pl

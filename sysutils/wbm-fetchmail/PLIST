@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 02:09:50 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:34 spz Exp $
 share/examples/webmin/fetchmail/config
 share/webmin/fetchmail/CHANGELOG
 share/webmin/fetchmail/acl_security.pl
@@ -37,6 +37,7 @@ share/webmin/fetchmail/config.info.it.UTF-8
 share/webmin/fetchmail/config.info.nl
 share/webmin/fetchmail/config.info.nl.UTF-8
 share/webmin/fetchmail/config.info.no
+share/webmin/fetchmail/config.info.no.UTF-8
 share/webmin/fetchmail/config.info.pl
 share/webmin/fetchmail/config.info.pl.UTF-8
 share/webmin/fetchmail/config.info.ru.UTF-8
@@ -79,6 +80,7 @@ share/webmin/fetchmail/lang/ko_KR.euc
 share/webmin/fetchmail/lang/nl
 share/webmin/fetchmail/lang/nl.UTF-8
 share/webmin/fetchmail/lang/no
+share/webmin/fetchmail/lang/no.UTF-8
 share/webmin/fetchmail/lang/pl
 share/webmin/fetchmail/lang/pl.UTF-8
 share/webmin/fetchmail/lang/ru.UTF-8

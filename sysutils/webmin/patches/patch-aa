@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-aa,v 1.8.34.1 2017/02/12 15:28:37 spz Exp $
 
---- setup.sh.orig	2009-03-18 07:30:26.000000000 +0200
-+++ setup.sh	2009-04-09 12:24:40.000000000 +0300
-@@ -35,6 +35,11 @@
+--- setup.sh.orig	2016-10-03 12:34:36.000000000 +0900
++++ setup.sh	2016-11-12 07:08:43.000000000 +0900
+@@ -37,6 +37,11 @@ echo ""
  
  # Only root can run this
- id | grep "uid=0(" >/dev/null
+ id | grep -i "uid=0(" >/dev/null
 +#
 +# For pkgsrc, we allow anyone to run this script, including unprivileged
 +# users.
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
  if [ $? != "0" ]; then
  	uname -a | grep -i CYGWIN >/dev/null
  	if [ $? != "0" ]; then
-@@ -122,6 +127,9 @@
+@@ -124,6 +129,9 @@ if [ -r "$config_dir/config" ]; then
  	upgrading=1
  fi
  
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
  # Check if upgrading from an old version
  if [ "$upgrading" = 1 ]; then
  	echo ""
-@@ -199,6 +207,10 @@
+@@ -202,6 +210,10 @@ if [ "$upgrading" = 1 ]; then
  else
  	# Config directory exists .. make sure it is not in use
  	ls $config_dir | grep -v rpmsave >/dev/null 2>&1
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
  	if [ "$?" = "0" -a "$config_dir" != "/etc/webmin" ]; then
  		echo "ERROR: Config directory $config_dir is not empty"
  		echo ""
-@@ -528,6 +540,12 @@
+@@ -541,6 +553,12 @@ else
  
  	kfile=$config_dir/miniserv.pem
  	openssl version >/dev/null 2>&1
@@ -48,10 +48,11 @@ $NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
  	if [ "$?" = "0" ]; then
  		# We can generate a new SSL key for this host
  		host=`hostname`
-@@ -742,44 +760,47 @@
+@@ -762,45 +780,47 @@ EOF
+ 	echo "..done"
  	echo ""
  fi
- 
+-
 -echo "Changing ownership and permissions .."
 -# Make all config dirs non-world-readable
 -for m in $newmods; do
@@ -73,7 +74,7 @@ $NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
 -	chmod -R og-w "$wadir"
 -	chmod -R a+rx "$wadir"
 -fi
--if [ $var_dir != "/var" ]; then
+-if [ $var_dir != "/var" -a "$upgrading" != 1 ]; then
 -	# Make log directory non-world-readable or writable
 -	chown -R root $var_dir
 -	chgrp -R bin $var_dir
@@ -114,7 +115,7 @@ $NetBSD: patch-aa,v 1.8 2012/11/02 19:02:51 shattered Exp $
 +#	chmod -R og-w "$wadir"
 +#	chmod -R a+rx "$wadir"
 +#fi
-+#if [ $var_dir != "/var" ]; then
++#if [ $var_dir != "/var" -a "$upgrading" != 1 ]; then
 +#	# Make log directory non-world-readable or writable
 +#	chown -R root $var_dir
 +#	chgrp -R bin $var_dir

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:16:37 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/quota/config
 share/webmin/quota/CHANGELOG
 share/webmin/quota/acl_security.pl
@@ -27,12 +27,15 @@ share/webmin/quota/config.info.es
 share/webmin/quota/config.info.es.UTF-8
 share/webmin/quota/config.info.fr
 share/webmin/quota/config.info.fr.UTF-8
+share/webmin/quota/config.info.hu
 share/webmin/quota/config.info.it
 share/webmin/quota/config.info.it.UTF-8
 share/webmin/quota/config.info.ko_KR.UTF-8
 share/webmin/quota/config.info.ko_KR.euc
 share/webmin/quota/config.info.nl
 share/webmin/quota/config.info.nl.UTF-8
+share/webmin/quota/config.info.no
+share/webmin/quota/config.info.no.UTF-8
 share/webmin/quota/config.info.pl
 share/webmin/quota/config.info.pl.UTF-8
 share/webmin/quota/config.info.ru.UTF-8
@@ -259,14 +262,20 @@ share/webmin/quota/lang/es
 share/webmin/quota/lang/es.UTF-8
 share/webmin/quota/lang/fr
 share/webmin/quota/lang/fr.UTF-8
+share/webmin/quota/lang/hu
+share/webmin/quota/lang/hu.UTF-8
 share/webmin/quota/lang/it
 share/webmin/quota/lang/it.UTF-8
 share/webmin/quota/lang/ja_JP.UTF-8
 share/webmin/quota/lang/ja_JP.euc
 share/webmin/quota/lang/ko_KR.UTF-8
 share/webmin/quota/lang/ko_KR.euc
+share/webmin/quota/lang/ms_MY
+share/webmin/quota/lang/ms_MY.UTF-8
 share/webmin/quota/lang/nl
 share/webmin/quota/lang/nl.UTF-8
+share/webmin/quota/lang/no
+share/webmin/quota/lang/no.UTF-8
 share/webmin/quota/lang/pl
 share/webmin/quota/lang/pl.UTF-8
 share/webmin/quota/lang/pt

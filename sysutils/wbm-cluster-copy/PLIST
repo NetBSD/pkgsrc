@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/22 02:05:07 dholland Exp $
+@comment $NetBSD: PLIST,v 1.4.34.1 2017/02/12 15:28:33 spz Exp $
 share/examples/webmin/cluster-copy/config
 share/webmin/cluster-copy/CHANGELOG
 share/webmin/cluster-copy/chooser.cgi
@@ -9,9 +9,15 @@ share/webmin/cluster-copy/config.info.ca
 share/webmin/cluster-copy/config.info.ca.UTF-8
 share/webmin/cluster-copy/config.info.de
 share/webmin/cluster-copy/config.info.de.UTF-8
+share/webmin/cluster-copy/config.info.hu
+share/webmin/cluster-copy/config.info.ms_MY
+share/webmin/cluster-copy/config.info.ms_MY.UTF-8
 share/webmin/cluster-copy/config.info.nl
 share/webmin/cluster-copy/config.info.nl.UTF-8
 share/webmin/cluster-copy/config.info.no
+share/webmin/cluster-copy/config.info.no.UTF-8
+share/webmin/cluster-copy/config.info.pl
+share/webmin/cluster-copy/config.info.pl.UTF-8
 share/webmin/cluster-copy/copy.pl
 share/webmin/cluster-copy/delete.cgi
 share/webmin/cluster-copy/edit.cgi
@@ -21,6 +27,8 @@ share/webmin/cluster-copy/help/intro.ca.html
 share/webmin/cluster-copy/help/intro.html
 share/webmin/cluster-copy/help/intro.nl.UTF-8.html
 share/webmin/cluster-copy/help/intro.nl.html
+share/webmin/cluster-copy/help/intro.pl.UTF-8.html
+share/webmin/cluster-copy/help/intro.pl.html
 share/webmin/cluster-copy/images/icon.gif
 share/webmin/cluster-copy/images/smallicon.gif
 share/webmin/cluster-copy/index.cgi
@@ -37,9 +45,14 @@ share/webmin/cluster-copy/lang/es.UTF-8
 share/webmin/cluster-copy/lang/fr
 share/webmin/cluster-copy/lang/fr.UTF-8
 share/webmin/cluster-copy/lang/hr
+share/webmin/cluster-copy/lang/hu
+share/webmin/cluster-copy/lang/hu.UTF-8
 share/webmin/cluster-copy/lang/nl
 share/webmin/cluster-copy/lang/nl.UTF-8
 share/webmin/cluster-copy/lang/no
+share/webmin/cluster-copy/lang/no.UTF-8
+share/webmin/cluster-copy/lang/pl
+share/webmin/cluster-copy/lang/pl.UTF-8
 share/webmin/cluster-copy/log_parser.pl
 share/webmin/cluster-copy/module.info
 share/webmin/cluster-copy/save.cgi

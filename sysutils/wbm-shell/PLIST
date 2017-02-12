@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:17:33 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/shell/config
+share/webmin/shell/CHANGELOG
 share/webmin/shell/acl_security.pl
 share/webmin/shell/config
 share/webmin/shell/config.info
@@ -7,6 +8,8 @@ share/webmin/shell/config.info.ca
 share/webmin/shell/config.info.ca.UTF-8
 share/webmin/shell/config.info.cz
 share/webmin/shell/config.info.cz.UTF-8
+share/webmin/shell/config.info.de
+share/webmin/shell/config.info.de.UTF-8
 share/webmin/shell/config.info.es
 share/webmin/shell/config.info.es.UTF-8
 share/webmin/shell/config.info.fr
@@ -17,9 +20,12 @@ share/webmin/shell/config.info.ja_JP.UTF-8
 share/webmin/shell/config.info.ja_JP.euc
 share/webmin/shell/config.info.ko_KR.UTF-8
 share/webmin/shell/config.info.ko_KR.euc
+share/webmin/shell/config.info.ms_MY
+share/webmin/shell/config.info.ms_MY.UTF-8
 share/webmin/shell/config.info.nl
 share/webmin/shell/config.info.nl.UTF-8
 share/webmin/shell/config.info.no
+share/webmin/shell/config.info.no.UTF-8
 share/webmin/shell/config.info.sk
 share/webmin/shell/config.info.sk.UTF-8
 share/webmin/shell/defaultacl
@@ -49,9 +55,12 @@ share/webmin/shell/lang/ko_KR.UTF-8
 share/webmin/shell/lang/ko_KR.euc
 share/webmin/shell/lang/ms
 share/webmin/shell/lang/ms.UTF-8
+share/webmin/shell/lang/ms_MY
+share/webmin/shell/lang/ms_MY.UTF-8
 share/webmin/shell/lang/nl
 share/webmin/shell/lang/nl.UTF-8
 share/webmin/shell/lang/no
+share/webmin/shell/lang/no.UTF-8
 share/webmin/shell/lang/pl
 share/webmin/shell/lang/pl.UTF-8
 share/webmin/shell/lang/ru.UTF-8
