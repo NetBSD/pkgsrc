@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 02:04:12 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:33 spz Exp $
 share/examples/webmin/change-user/config
 share/webmin/change-user/CHANGELOG
 share/webmin/change-user/acl_security.pl
@@ -35,9 +35,12 @@ share/webmin/change-user/lang/ko_KR.UTF-8
 share/webmin/change-user/lang/ko_KR.euc
 share/webmin/change-user/lang/ms
 share/webmin/change-user/lang/ms.UTF-8
+share/webmin/change-user/lang/ms_MY
+share/webmin/change-user/lang/ms_MY.UTF-8
 share/webmin/change-user/lang/nl
 share/webmin/change-user/lang/nl.UTF-8
 share/webmin/change-user/lang/no
+share/webmin/change-user/lang/no.UTF-8
 share/webmin/change-user/lang/pl
 share/webmin/change-user/lang/pl.UTF-8
 share/webmin/change-user/lang/ru.UTF-8

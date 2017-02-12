@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 01:26:34 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/sendmail/config
 share/webmin/sendmail/CHANGELOG
 share/webmin/sendmail/access-lib.pl
@@ -9,6 +9,9 @@ share/webmin/sendmail/backup_config.pl
 share/webmin/sendmail/boxes-lib.pl
 share/webmin/sendmail/build.cgi
 share/webmin/sendmail/cgi_args.pl
+share/webmin/sendmail/config-CentOS-Linux-7.0-*
+share/webmin/sendmail/config-Redhat-Enterprise-Linux-7.0-*
+share/webmin/sendmail/config-Scientific-Linux-7.0-*
 share/webmin/sendmail/config-aix
 share/webmin/sendmail/config-cobalt-linux
 share/webmin/sendmail/config-coherent-linux
@@ -64,9 +67,11 @@ share/webmin/sendmail/config.info.es
 share/webmin/sendmail/config.info.es.UTF-8
 share/webmin/sendmail/config.info.fr
 share/webmin/sendmail/config.info.fr.UTF-8
+share/webmin/sendmail/config.info.hu
 share/webmin/sendmail/config.info.nl
 share/webmin/sendmail/config.info.nl.UTF-8
 share/webmin/sendmail/config.info.no
+share/webmin/sendmail/config.info.no.UTF-8
 share/webmin/sendmail/config.info.pl
 share/webmin/sendmail/config.info.pl.UTF-8
 share/webmin/sendmail/config.info.pt_BR
@@ -411,6 +416,9 @@ share/webmin/sendmail/help/opt_MaxQueueRunSize.sv.UTF-8.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.sv.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.zh_TW.Big5.html
 share/webmin/sendmail/help/opt_MaxQueueRunSize.zh_TW.UTF-8.html
+share/webmin/sendmail/help/opt_MaxRecipientsPerMessage.ca.UTF-8.html
+share/webmin/sendmail/help/opt_MaxRecipientsPerMessage.ca.html
+share/webmin/sendmail/help/opt_MaxRecipientsPerMessage.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.ca.UTF-8.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.ca.html
 share/webmin/sendmail/help/opt_MinFreeBlocks.es.UTF-8.html
@@ -633,6 +641,8 @@ share/webmin/sendmail/lang/es
 share/webmin/sendmail/lang/es.UTF-8
 share/webmin/sendmail/lang/fr
 share/webmin/sendmail/lang/fr.UTF-8
+share/webmin/sendmail/lang/hu
+share/webmin/sendmail/lang/hu.UTF-8
 share/webmin/sendmail/lang/ja_JP.UTF-8
 share/webmin/sendmail/lang/ja_JP.euc
 share/webmin/sendmail/lang/ja_JP.jis
@@ -641,6 +651,7 @@ share/webmin/sendmail/lang/ko_KR.euc
 share/webmin/sendmail/lang/nl
 share/webmin/sendmail/lang/nl.UTF-8
 share/webmin/sendmail/lang/no
+share/webmin/sendmail/lang/no.UTF-8
 share/webmin/sendmail/lang/pl
 share/webmin/sendmail/lang/pl.UTF-8
 share/webmin/sendmail/lang/pt

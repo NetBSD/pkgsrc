@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 00:59:14 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:34 spz Exp $
 share/examples/webmin/custom/config
 share/webmin/custom/CHANGELOG
 share/webmin/custom/acl_security.pl
+share/webmin/custom/backup_config.pl
 share/webmin/custom/cgi_args.pl
 share/webmin/custom/config
 share/webmin/custom/config-*-linux
@@ -21,9 +22,12 @@ share/webmin/custom/config.info.it
 share/webmin/custom/config.info.it.UTF-8
 share/webmin/custom/config.info.ko_KR.UTF-8
 share/webmin/custom/config.info.ko_KR.euc
+share/webmin/custom/config.info.ms_MY
+share/webmin/custom/config.info.ms_MY.UTF-8
 share/webmin/custom/config.info.nl
 share/webmin/custom/config.info.nl.UTF-8
 share/webmin/custom/config.info.no
+share/webmin/custom/config.info.no.UTF-8
 share/webmin/custom/config.info.pl
 share/webmin/custom/config.info.pl.UTF-8
 share/webmin/custom/config.info.ru.UTF-8
@@ -52,6 +56,7 @@ share/webmin/custom/help/after.ko_KR.UTF-8.html
 share/webmin/custom/help/after.ko_KR.euc.html
 share/webmin/custom/help/after.nl.UTF-8.html
 share/webmin/custom/help/after.nl.html
+share/webmin/custom/help/after.no.UTF-8.html
 share/webmin/custom/help/after.no.html
 share/webmin/custom/help/after.pl.UTF-8.html
 share/webmin/custom/help/after.pl.html
@@ -75,6 +80,8 @@ share/webmin/custom/help/beforeedit.ca.html
 share/webmin/custom/help/beforeedit.html
 share/webmin/custom/help/beforeedit.nl.UTF-8.html
 share/webmin/custom/help/beforeedit.nl.html
+share/webmin/custom/help/beforeedit.pl.UTF-8.html
+share/webmin/custom/help/beforeedit.pl.html
 share/webmin/custom/help/clear.ca.UTF-8.html
 share/webmin/custom/help/clear.ca.html
 share/webmin/custom/help/clear.html
@@ -84,6 +91,8 @@ share/webmin/custom/help/clear.ko_KR.UTF-8.html
 share/webmin/custom/help/clear.ko_KR.euc.html
 share/webmin/custom/help/clear.nl.UTF-8.html
 share/webmin/custom/help/clear.nl.html
+share/webmin/custom/help/clear.pl.UTF-8.html
+share/webmin/custom/help/clear.pl.html
 share/webmin/custom/help/cmd.ca.UTF-8.html
 share/webmin/custom/help/cmd.ca.html
 share/webmin/custom/help/cmd.de.UTF-8.html
@@ -173,6 +182,8 @@ share/webmin/custom/help/desc2.ca.html
 share/webmin/custom/help/desc2.html
 share/webmin/custom/help/desc2.nl.UTF-8.html
 share/webmin/custom/help/desc2.nl.html
+share/webmin/custom/help/desc2.pl.UTF-8.html
+share/webmin/custom/help/desc2.pl.html
 share/webmin/custom/help/dir.ca.UTF-8.html
 share/webmin/custom/help/dir.ca.html
 share/webmin/custom/help/dir.de.UTF-8.html
@@ -184,6 +195,8 @@ share/webmin/custom/help/dir.ko_KR.UTF-8.html
 share/webmin/custom/help/dir.ko_KR.euc.html
 share/webmin/custom/help/dir.nl.UTF-8.html
 share/webmin/custom/help/dir.nl.html
+share/webmin/custom/help/dir.pl.UTF-8.html
+share/webmin/custom/help/dir.pl.html
 share/webmin/custom/help/edit.ca.UTF-8.html
 share/webmin/custom/help/edit.ca.html
 share/webmin/custom/help/edit.de.UTF-8.html
@@ -283,6 +296,8 @@ share/webmin/custom/help/fileid.it.UTF-8.html
 share/webmin/custom/help/fileid.it.html
 share/webmin/custom/help/fileid.nl.UTF-8.html
 share/webmin/custom/help/fileid.nl.html
+share/webmin/custom/help/fileid.pl.UTF-8.html
+share/webmin/custom/help/fileid.pl.html
 share/webmin/custom/help/fintro.ca.UTF-8.html
 share/webmin/custom/help/fintro.ca.html
 share/webmin/custom/help/fintro.de.UTF-8.html
@@ -303,6 +318,8 @@ share/webmin/custom/help/id.it.UTF-8.html
 share/webmin/custom/help/id.it.html
 share/webmin/custom/help/id.nl.UTF-8.html
 share/webmin/custom/help/id.nl.html
+share/webmin/custom/help/id.pl.UTF-8.html
+share/webmin/custom/help/id.pl.html
 share/webmin/custom/help/intro.ca.UTF-8.html
 share/webmin/custom/help/intro.ca.html
 share/webmin/custom/help/intro.de.UTF-8.html
@@ -333,6 +350,8 @@ share/webmin/custom/help/noshow.it.UTF-8.html
 share/webmin/custom/help/noshow.it.html
 share/webmin/custom/help/noshow.nl.UTF-8.html
 share/webmin/custom/help/noshow.nl.html
+share/webmin/custom/help/noshow.pl.UTF-8.html
+share/webmin/custom/help/noshow.pl.html
 share/webmin/custom/help/order.ca.UTF-8.html
 share/webmin/custom/help/order.ca.html
 share/webmin/custom/help/order.de.UTF-8.html
@@ -417,6 +436,8 @@ share/webmin/custom/help/timeout.it.UTF-8.html
 share/webmin/custom/help/timeout.it.html
 share/webmin/custom/help/timeout.nl.UTF-8.html
 share/webmin/custom/help/timeout.nl.html
+share/webmin/custom/help/timeout.pl.UTF-8.html
+share/webmin/custom/help/timeout.pl.html
 share/webmin/custom/help/user.ca.UTF-8.html
 share/webmin/custom/help/user.ca.html
 share/webmin/custom/help/user.de.UTF-8.html
@@ -445,6 +466,8 @@ share/webmin/custom/help/usermin.it.UTF-8.html
 share/webmin/custom/help/usermin.it.html
 share/webmin/custom/help/usermin.nl.UTF-8.html
 share/webmin/custom/help/usermin.nl.html
+share/webmin/custom/help/usermin.pl.UTF-8.html
+share/webmin/custom/help/usermin.pl.html
 share/webmin/custom/images/icon.gif
 share/webmin/custom/images/smallicon.gif
 share/webmin/custom/index.cgi
@@ -469,9 +492,12 @@ share/webmin/custom/lang/ja_JP.UTF-8
 share/webmin/custom/lang/ja_JP.euc
 share/webmin/custom/lang/ko_KR.UTF-8
 share/webmin/custom/lang/ko_KR.euc
+share/webmin/custom/lang/ms_MY
+share/webmin/custom/lang/ms_MY.UTF-8
 share/webmin/custom/lang/nl
 share/webmin/custom/lang/nl.UTF-8
 share/webmin/custom/lang/no
+share/webmin/custom/lang/no.UTF-8
 share/webmin/custom/lang/pl
 share/webmin/custom/lang/pl.UTF-8
 share/webmin/custom/lang/pt

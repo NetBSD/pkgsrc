@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2016/11/20 01:11:40 rillig Exp $
+# $NetBSD: Makefile,v 1.44.2.1 2017/02/12 15:28:37 spz Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
-PKGREVISION=	8
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
@@ -138,5 +137,10 @@ do-install:
 			    ${DESTDIR}${WEBMIN_EGDIR}/module.infos.cache
 	cd ${DESTDIR}${WEBMIN_DIR} &&					\
 				${CHMOD} 0400 setup.pl setup.sh setup-pre.sh
+
+	cd ${DESTDIR}${WEBMIN_DIR} &&  \
+	${CHMOD} -x *.pl */*.pl */*.gif */*/*.gif */*/*.html */*.ca lang/* \
+	*/lang/* */*.svg */*.png */*.eu
+
 
 .include "../../mk/bsd.pkg.mk"

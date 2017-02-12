@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:15:49 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/qmailadmin/config
 share/webmin/qmailadmin/CHANGELOG
 share/webmin/qmailadmin/autoreply.pl
@@ -17,6 +17,8 @@ share/webmin/qmailadmin/config.info.es
 share/webmin/qmailadmin/config.info.es.UTF-8
 share/webmin/qmailadmin/config.info.nl
 share/webmin/qmailadmin/config.info.nl.UTF-8
+share/webmin/qmailadmin/config.info.no
+share/webmin/qmailadmin/config.info.no.UTF-8
 share/webmin/qmailadmin/config.info.ru.UTF-8
 share/webmin/qmailadmin/config.info.ru_RU
 share/webmin/qmailadmin/config.info.ru_SU
@@ -65,10 +67,14 @@ share/webmin/qmailadmin/lang/en
 share/webmin/qmailadmin/lang/en.UTF-8
 share/webmin/qmailadmin/lang/es
 share/webmin/qmailadmin/lang/es.UTF-8
+share/webmin/qmailadmin/lang/hu
+share/webmin/qmailadmin/lang/hu.UTF-8
 share/webmin/qmailadmin/lang/it
 share/webmin/qmailadmin/lang/it.UTF-8
 share/webmin/qmailadmin/lang/nl
 share/webmin/qmailadmin/lang/nl.UTF-8
+share/webmin/qmailadmin/lang/no
+share/webmin/qmailadmin/lang/no.UTF-8
 share/webmin/qmailadmin/lang/ru.UTF-8
 share/webmin/qmailadmin/lang/ru_RU
 share/webmin/qmailadmin/lang/ru_SU

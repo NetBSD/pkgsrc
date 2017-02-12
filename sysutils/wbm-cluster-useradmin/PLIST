@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/22 02:08:07 dholland Exp $
+@comment $NetBSD: PLIST,v 1.4.34.1 2017/02/12 15:28:34 spz Exp $
 share/examples/webmin/cluster-useradmin/config
 share/webmin/cluster-useradmin/CHANGELOG
 share/webmin/cluster-useradmin/add.cgi
@@ -16,9 +16,15 @@ share/webmin/cluster-useradmin/config.info.es.UTF-8
 share/webmin/cluster-useradmin/config.info.fr
 share/webmin/cluster-useradmin/config.info.fr.UTF-8
 share/webmin/cluster-useradmin/config.info.hr
+share/webmin/cluster-useradmin/config.info.hu
+share/webmin/cluster-useradmin/config.info.ms_MY
+share/webmin/cluster-useradmin/config.info.ms_MY.UTF-8
 share/webmin/cluster-useradmin/config.info.nl
 share/webmin/cluster-useradmin/config.info.nl.UTF-8
 share/webmin/cluster-useradmin/config.info.no
+share/webmin/cluster-useradmin/config.info.no.UTF-8
+share/webmin/cluster-useradmin/config.info.pl
+share/webmin/cluster-useradmin/config.info.pl.UTF-8
 share/webmin/cluster-useradmin/create_group.cgi
 share/webmin/cluster-useradmin/create_user.cgi
 share/webmin/cluster-useradmin/delete_group.cgi
@@ -35,6 +41,8 @@ share/webmin/cluster-useradmin/help/intro.es.html
 share/webmin/cluster-useradmin/help/intro.html
 share/webmin/cluster-useradmin/help/intro.nl.UTF-8.html
 share/webmin/cluster-useradmin/help/intro.nl.html
+share/webmin/cluster-useradmin/help/intro.pl.UTF-8.html
+share/webmin/cluster-useradmin/help/intro.pl.html
 share/webmin/cluster-useradmin/images/icon.gif
 share/webmin/cluster-useradmin/images/smallicon.gif
 share/webmin/cluster-useradmin/index.cgi
@@ -51,9 +59,14 @@ share/webmin/cluster-useradmin/lang/es.UTF-8
 share/webmin/cluster-useradmin/lang/fr
 share/webmin/cluster-useradmin/lang/fr.UTF-8
 share/webmin/cluster-useradmin/lang/hr
+share/webmin/cluster-useradmin/lang/hu
+share/webmin/cluster-useradmin/lang/hu.UTF-8
 share/webmin/cluster-useradmin/lang/nl
 share/webmin/cluster-useradmin/lang/nl.UTF-8
 share/webmin/cluster-useradmin/lang/no
+share/webmin/cluster-useradmin/lang/no.UTF-8
+share/webmin/cluster-useradmin/lang/pl
+share/webmin/cluster-useradmin/lang/pl.UTF-8
 share/webmin/cluster-useradmin/log_parser.pl
 share/webmin/cluster-useradmin/module.info
 share/webmin/cluster-useradmin/refresh.cgi

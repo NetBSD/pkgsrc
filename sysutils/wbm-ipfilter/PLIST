@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/12/22 01:49:16 dholland Exp $
+@comment $NetBSD: PLIST,v 1.3.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/ipfilter/config
 share/webmin/ipfilter/CHANGELOG
 share/webmin/ipfilter/apply.cgi
@@ -8,6 +8,7 @@ share/webmin/ipfilter/cluster.cgi
 share/webmin/ipfilter/cluster_add.cgi
 share/webmin/ipfilter/cluster_delete.cgi
 share/webmin/ipfilter/config
+share/webmin/ipfilter/config-freebsd
 share/webmin/ipfilter/config-netbsd
 share/webmin/ipfilter/config-solaris-10-*
 share/webmin/ipfilter/config.info

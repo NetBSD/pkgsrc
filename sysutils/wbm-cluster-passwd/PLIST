@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/22 03:47:33 dholland Exp $
+@comment $NetBSD: PLIST,v 1.4.34.1 2017/02/12 15:28:34 spz Exp $
 share/examples/webmin/cluster-passwd/config
 share/webmin/cluster-passwd/CHANGELOG
 share/webmin/cluster-passwd/acl_security.pl
@@ -18,11 +18,17 @@ share/webmin/cluster-passwd/config.info.es.UTF-8
 share/webmin/cluster-passwd/config.info.fr
 share/webmin/cluster-passwd/config.info.fr.UTF-8
 share/webmin/cluster-passwd/config.info.hr
+share/webmin/cluster-passwd/config.info.hu
 share/webmin/cluster-passwd/config.info.ms
 share/webmin/cluster-passwd/config.info.ms.UTF-8
+share/webmin/cluster-passwd/config.info.ms_MY
+share/webmin/cluster-passwd/config.info.ms_MY.UTF-8
 share/webmin/cluster-passwd/config.info.nl
 share/webmin/cluster-passwd/config.info.nl.UTF-8
 share/webmin/cluster-passwd/config.info.no
+share/webmin/cluster-passwd/config.info.no.UTF-8
+share/webmin/cluster-passwd/config.info.pl
+share/webmin/cluster-passwd/config.info.pl.UTF-8
 share/webmin/cluster-passwd/defaultacl
 share/webmin/cluster-passwd/edit_passwd.cgi
 share/webmin/cluster-passwd/images/icon.gif
@@ -42,11 +48,18 @@ share/webmin/cluster-passwd/lang/es.UTF-8
 share/webmin/cluster-passwd/lang/fr
 share/webmin/cluster-passwd/lang/fr.UTF-8
 share/webmin/cluster-passwd/lang/hr
+share/webmin/cluster-passwd/lang/hu
+share/webmin/cluster-passwd/lang/hu.UTF-8
 share/webmin/cluster-passwd/lang/ms
 share/webmin/cluster-passwd/lang/ms.UTF-8
+share/webmin/cluster-passwd/lang/ms_MY
+share/webmin/cluster-passwd/lang/ms_MY.UTF-8
 share/webmin/cluster-passwd/lang/nl
 share/webmin/cluster-passwd/lang/nl.UTF-8
 share/webmin/cluster-passwd/lang/no
+share/webmin/cluster-passwd/lang/no.UTF-8
+share/webmin/cluster-passwd/lang/pl
+share/webmin/cluster-passwd/lang/pl.UTF-8
 share/webmin/cluster-passwd/log_parser.pl
 share/webmin/cluster-passwd/module.info
 share/webmin/cluster-passwd/save_passwd.cgi

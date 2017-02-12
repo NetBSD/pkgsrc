@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:06:02 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:34 spz Exp $
 share/examples/webmin/cluster-cron/config
 share/webmin/cluster-cron/CHANGELOG
 share/webmin/cluster-cron/cluster-cron-lib.pl
@@ -12,6 +12,8 @@ share/webmin/cluster-cron/help/intro.de.html
 share/webmin/cluster-cron/help/intro.html
 share/webmin/cluster-cron/help/intro.nl.UTF-8.html
 share/webmin/cluster-cron/help/intro.nl.html
+share/webmin/cluster-cron/help/intro.pl.UTF-8.html
+share/webmin/cluster-cron/help/intro.pl.html
 share/webmin/cluster-cron/images/icon.gif
 share/webmin/cluster-cron/images/smallicon.gif
 share/webmin/cluster-cron/index.cgi
@@ -28,9 +30,14 @@ share/webmin/cluster-cron/lang/es.UTF-8
 share/webmin/cluster-cron/lang/fr
 share/webmin/cluster-cron/lang/fr.UTF-8
 share/webmin/cluster-cron/lang/hr
+share/webmin/cluster-cron/lang/hu
+share/webmin/cluster-cron/lang/hu.UTF-8
 share/webmin/cluster-cron/lang/nl
 share/webmin/cluster-cron/lang/nl.UTF-8
 share/webmin/cluster-cron/lang/no
+share/webmin/cluster-cron/lang/no.UTF-8
+share/webmin/cluster-cron/lang/pl
+share/webmin/cluster-cron/lang/pl.UTF-8
 share/webmin/cluster-cron/log_parser.pl
 share/webmin/cluster-cron/module.info
 share/webmin/cluster-cron/save.cgi

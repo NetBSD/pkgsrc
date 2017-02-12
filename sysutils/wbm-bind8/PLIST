@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2012/12/22 00:55:30 dholland Exp $
+@comment $NetBSD: PLIST,v 1.10.34.1 2017/02/12 15:28:33 spz Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
@@ -90,11 +90,15 @@ share/webmin/bind8/config.info.es.UTF-8
 share/webmin/bind8/config.info.fa
 share/webmin/bind8/config.info.fr
 share/webmin/bind8/config.info.fr.UTF-8
+share/webmin/bind8/config.info.hu
 share/webmin/bind8/config.info.ja_JP.UTF-8
 share/webmin/bind8/config.info.ja_JP.euc
+share/webmin/bind8/config.info.ms_MY
+share/webmin/bind8/config.info.ms_MY.UTF-8
 share/webmin/bind8/config.info.nl
 share/webmin/bind8/config.info.nl.UTF-8
 share/webmin/bind8/config.info.no
+share/webmin/bind8/config.info.no.UTF-8
 share/webmin/bind8/config.info.pl
 share/webmin/bind8/config.info.pl.UTF-8
 share/webmin/bind8/config.info.pt_BR
@@ -155,11 +159,13 @@ share/webmin/bind8/images/A.gif
 share/webmin/bind8/images/AAAA.gif
 share/webmin/bind8/images/ALL.gif
 share/webmin/bind8/images/CNAME.gif
+share/webmin/bind8/images/DMARC.gif
 share/webmin/bind8/images/HINFO.gif
 share/webmin/bind8/images/KEY.gif
 share/webmin/bind8/images/LOC.gif
 share/webmin/bind8/images/MX.gif
 share/webmin/bind8/images/NS.gif
+share/webmin/bind8/images/NSEC3PARAM.gif
 share/webmin/bind8/images/PTR.gif
 share/webmin/bind8/images/RP.gif
 share/webmin/bind8/images/SPF.gif
@@ -221,6 +227,8 @@ share/webmin/bind8/lang/es.UTF-8
 share/webmin/bind8/lang/fa
 share/webmin/bind8/lang/fr
 share/webmin/bind8/lang/fr.UTF-8
+share/webmin/bind8/lang/hu
+share/webmin/bind8/lang/hu.UTF-8
 share/webmin/bind8/lang/it
 share/webmin/bind8/lang/it.UTF-8
 share/webmin/bind8/lang/ja_JP.UTF-8
@@ -228,9 +236,12 @@ share/webmin/bind8/lang/ja_JP.euc
 share/webmin/bind8/lang/ja_JP.jis
 share/webmin/bind8/lang/ko_KR.UTF-8
 share/webmin/bind8/lang/ko_KR.euc
+share/webmin/bind8/lang/ms_MY
+share/webmin/bind8/lang/ms_MY.UTF-8
 share/webmin/bind8/lang/nl
 share/webmin/bind8/lang/nl.UTF-8
 share/webmin/bind8/lang/no
+share/webmin/bind8/lang/no.UTF-8
 share/webmin/bind8/lang/pl
 share/webmin/bind8/lang/pl.UTF-8
 share/webmin/bind8/lang/pt
@@ -273,7 +284,6 @@ share/webmin/bind8/restart.cgi
 share/webmin/bind8/restart_zone.cgi
 share/webmin/bind8/save_acls.cgi
 share/webmin/bind8/save_controls.cgi
-share/webmin/bind8/save_delegation.cgi
 share/webmin/bind8/save_dnssec.cgi
 share/webmin/bind8/save_dnssectools.cgi
 share/webmin/bind8/save_files.cgi
@@ -307,7 +317,6 @@ share/webmin/bind8/syslog_logs.pl
 share/webmin/bind8/unfreeze_zone.cgi
 share/webmin/bind8/view_form.cgi
 share/webmin/bind8/view_text.cgi
-share/webmin/bind8/whois-servers
 share/webmin/bind8/whois.cgi
 share/webmin/bind8/xfer.cgi
 share/webmin/bind8/zone_dnssecmgt_dt.cgi

@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 01:30:17 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/syslog/config
 share/webmin/syslog/CHANGELOG
 share/webmin/syslog/acl_security.pl
 share/webmin/syslog/backup_config.pl
 share/webmin/syslog/cgi_args.pl
 share/webmin/syslog/config-CentOS-Linux-6.0-*
+share/webmin/syslog/config-Redhat-Enterprise-Linux-6.0-*
 share/webmin/syslog/config-Ubuntu-Linux-10.04-*
 share/webmin/syslog/config-aix
 share/webmin/syslog/config-cobalt-linux
@@ -65,6 +66,7 @@ share/webmin/syslog/config.info.ko_KR.euc
 share/webmin/syslog/config.info.nl
 share/webmin/syslog/config.info.nl.UTF-8
 share/webmin/syslog/config.info.no
+share/webmin/syslog/config.info.no.UTF-8
 share/webmin/syslog/config.info.pl
 share/webmin/syslog/config.info.pl.UTF-8
 share/webmin/syslog/config.info.ru.UTF-8
@@ -105,9 +107,12 @@ share/webmin/syslog/lang/ja_JP.UTF-8
 share/webmin/syslog/lang/ja_JP.euc
 share/webmin/syslog/lang/ko_KR.UTF-8
 share/webmin/syslog/lang/ko_KR.euc
+share/webmin/syslog/lang/ms_MY
+share/webmin/syslog/lang/ms_MY.UTF-8
 share/webmin/syslog/lang/nl
 share/webmin/syslog/lang/nl.UTF-8
 share/webmin/syslog/lang/no
+share/webmin/syslog/lang/no.UTF-8
 share/webmin/syslog/lang/pl
 share/webmin/syslog/lang/pl.UTF-8
 share/webmin/syslog/lang/ru.UTF-8
@@ -123,7 +128,6 @@ share/webmin/syslog/lang/zh_TW.Big5
 share/webmin/syslog/lang/zh_TW.UTF-8
 share/webmin/syslog/log_parser.pl
 share/webmin/syslog/low.risk
-share/webmin/syslog/low.skill
 share/webmin/syslog/m4.cgi
 share/webmin/syslog/medium.risk
 share/webmin/syslog/module.info
