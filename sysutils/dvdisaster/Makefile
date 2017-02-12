@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2017/02/06 13:55:56 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/02/12 06:25:59 ryoon Exp $
 #
 
 DISTNAME=		dvdisaster-0.72.4
-PKGREVISION=		15
+PKGREVISION=		16
 CATEGORIES=		sysutils
 MASTER_SITES=		http://dvdisaster.net/downloads/
 EXTRACT_SUFX=		.tar.bz2

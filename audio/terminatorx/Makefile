@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2017/02/06 13:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/02/12 06:25:06 ryoon Exp $
 #
 
 DISTNAME=	terminatorX-3.82
 PKGNAME=	${DISTNAME:S/X/x/}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	audio
 MASTER_SITES=	http://terminatorx.org/dist/
 EXTRACT_SUFX=	.tar.bz2

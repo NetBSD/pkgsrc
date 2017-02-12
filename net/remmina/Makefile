@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/02/06 13:55:51 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2017/02/12 06:25:53 ryoon Exp $
 
 DISTNAME=	remmina-0.9.3
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=remmina/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2017/02/06 13:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2017/02/12 06:25:38 ryoon Exp $
 
 PKGNAME=	racket-6.7
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/
