@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 01:15:13 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:34 spz Exp $
 share/examples/webmin/file/config
 share/webmin/file/ACLEditor.class
 share/webmin/file/ACLEntry.class
@@ -112,6 +112,7 @@ share/webmin/file/config.info.el
 share/webmin/file/config.info.es
 share/webmin/file/config.info.es.UTF-8
 share/webmin/file/config.info.fa
+share/webmin/file/config.info.hu
 share/webmin/file/config.info.it
 share/webmin/file/config.info.it.UTF-8
 share/webmin/file/config.info.ko_KR.UTF-8
@@ -119,6 +120,9 @@ share/webmin/file/config.info.ko_KR.euc
 share/webmin/file/config.info.nl
 share/webmin/file/config.info.nl.UTF-8
 share/webmin/file/config.info.no
+share/webmin/file/config.info.no.UTF-8
+share/webmin/file/config.info.pl
+share/webmin/file/config.info.pl.UTF-8
 share/webmin/file/config.info.tr
 share/webmin/file/contents.cgi
 share/webmin/file/copy.cgi
@@ -202,6 +206,8 @@ share/webmin/file/lang/es.UTF-8
 share/webmin/file/lang/fa
 share/webmin/file/lang/fr
 share/webmin/file/lang/fr.UTF-8
+share/webmin/file/lang/hu
+share/webmin/file/lang/hu.UTF-8
 share/webmin/file/lang/it
 share/webmin/file/lang/it.UTF-8
 share/webmin/file/lang/ja_JP.UTF-8
@@ -211,6 +217,7 @@ share/webmin/file/lang/ko_KR.euc
 share/webmin/file/lang/nl
 share/webmin/file/lang/nl.UTF-8
 share/webmin/file/lang/no
+share/webmin/file/lang/no.UTF-8
 share/webmin/file/lang/pl
 share/webmin/file/lang/pl.UTF-8
 share/webmin/file/lang/pt
@@ -235,6 +242,7 @@ share/webmin/file/list_exports.cgi
 share/webmin/file/list_shares.cgi
 share/webmin/file/log_parser.pl
 share/webmin/file/makelink.cgi
+share/webmin/file/manifest.txt
 share/webmin/file/mkdir.cgi
 share/webmin/file/module.info
 share/webmin/file/mount.cgi
@@ -511,3 +519,4 @@ share/webmin/file/xinha/skins/xp-green/hover.png
 share/webmin/file/xinha/skins/xp-green/selected.png
 share/webmin/file/xinha/skins/xp-green/separator.png
 share/webmin/file/xinha/skins/xp-green/skin.css
+@pkgdir share/webmin/file/xinha/plugins

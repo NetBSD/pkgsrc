@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 01:16:57 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/lpadmin/config
 share/webmin/lpadmin/CHANGELOG
 share/webmin/lpadmin/acl_security.pl
@@ -16,6 +16,9 @@ share/webmin/lpadmin/cluster_add.cgi
 share/webmin/lpadmin/cluster_delete.cgi
 share/webmin/lpadmin/colour.fig
 share/webmin/lpadmin/colour.ps
+share/webmin/lpadmin/config-CentOS-Linux-7.0-*
+share/webmin/lpadmin/config-Redhat-Enterprise-Linux-7.0-*
+share/webmin/lpadmin/config-Scientific-Linux-7.0-*
 share/webmin/lpadmin/config-aix
 share/webmin/lpadmin/config-coherent-linux
 share/webmin/lpadmin/config-corel-linux
@@ -72,6 +75,7 @@ share/webmin/lpadmin/config.info.ja_JP.euc
 share/webmin/lpadmin/config.info.nl
 share/webmin/lpadmin/config.info.nl.UTF-8
 share/webmin/lpadmin/config.info.no
+share/webmin/lpadmin/config.info.no.UTF-8
 share/webmin/lpadmin/config.info.pl
 share/webmin/lpadmin/config.info.pl.UTF-8
 share/webmin/lpadmin/config.info.pt_BR
@@ -127,6 +131,7 @@ share/webmin/lpadmin/lang/ko_KR.euc
 share/webmin/lpadmin/lang/nl
 share/webmin/lpadmin/lang/nl.UTF-8
 share/webmin/lpadmin/lang/no
+share/webmin/lpadmin/lang/no.UTF-8
 share/webmin/lpadmin/lang/pl
 share/webmin/lpadmin/lang/pl.UTF-8
 share/webmin/lpadmin/lang/pt

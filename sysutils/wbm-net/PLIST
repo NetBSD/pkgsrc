@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/12/20 23:02:17 dholland Exp $
+@comment $NetBSD: PLIST,v 1.8.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/net/config
 share/webmin/net/CHANGELOG
 share/webmin/net/acl_security.pl
@@ -29,11 +29,13 @@ share/webmin/net/config.info.es.UTF-8
 share/webmin/net/config.info.fa
 share/webmin/net/config.info.fr
 share/webmin/net/config.info.fr.UTF-8
+share/webmin/net/config.info.hu
 share/webmin/net/config.info.ja_JP.UTF-8
 share/webmin/net/config.info.ja_JP.euc
 share/webmin/net/config.info.nl
 share/webmin/net/config.info.nl.UTF-8
 share/webmin/net/config.info.no
+share/webmin/net/config.info.no.UTF-8
 share/webmin/net/config.info.pl
 share/webmin/net/config.info.pl.UTF-8
 share/webmin/net/config.info.pt_BR
@@ -90,6 +92,8 @@ share/webmin/net/lang/es.UTF-8
 share/webmin/net/lang/fa
 share/webmin/net/lang/fr
 share/webmin/net/lang/fr.UTF-8
+share/webmin/net/lang/hu
+share/webmin/net/lang/hu.UTF-8
 share/webmin/net/lang/it
 share/webmin/net/lang/it.UTF-8
 share/webmin/net/lang/ja_JP.UTF-8
@@ -99,6 +103,7 @@ share/webmin/net/lang/ko_KR.euc
 share/webmin/net/lang/nl
 share/webmin/net/lang/nl.UTF-8
 share/webmin/net/lang/no
+share/webmin/net/lang/no.UTF-8
 share/webmin/net/lang/pl
 share/webmin/net/lang/pl.UTF-8
 share/webmin/net/lang/pt

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/12/22 02:15:49 dholland Exp $
+# $NetBSD: Makefile,v 1.6.34.1 2017/02/12 15:28:36 spz Exp $
 
 WBM_NAME=	qmailadmin
-PKGREVISION=	1
 
 COMMENT=	Webmin module to configure the qmail mail server
 

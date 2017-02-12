@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 02:14:46 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/postfix/config
 share/webmin/postfix/CHANGELOG
 share/webmin/postfix/acl_security.pl
@@ -15,6 +15,7 @@ share/webmin/postfix/canonical_edit.cgi
 share/webmin/postfix/client.cgi
 share/webmin/postfix/config
 share/webmin/postfix/config-freebsd
+share/webmin/postfix/config-freebsd-8-*
 share/webmin/postfix/config-mandrake-linux
 share/webmin/postfix/config-msc-linux
 share/webmin/postfix/config-netbsd
@@ -30,11 +31,13 @@ share/webmin/postfix/config.info.es
 share/webmin/postfix/config.info.es.UTF-8
 share/webmin/postfix/config.info.fr
 share/webmin/postfix/config.info.fr.UTF-8
+share/webmin/postfix/config.info.hu
 share/webmin/postfix/config.info.ja_JP.UTF-8
 share/webmin/postfix/config.info.ja_JP.euc
 share/webmin/postfix/config.info.nl
 share/webmin/postfix/config.info.nl.UTF-8
 share/webmin/postfix/config.info.no
+share/webmin/postfix/config.info.no.UTF-8
 share/webmin/postfix/config.info.pl
 share/webmin/postfix/config.info.pl.UTF-8
 share/webmin/postfix/config.info.ru.UTF-8
@@ -161,6 +164,8 @@ share/webmin/postfix/help/canonical.pl.UTF-8.html
 share/webmin/postfix/help/canonical.pl.html
 share/webmin/postfix/help/canonical.sv.UTF-8.html
 share/webmin/postfix/help/canonical.sv.html
+share/webmin/postfix/help/dependent.ca.UTF-8.html
+share/webmin/postfix/help/dependent.ca.html
 share/webmin/postfix/help/dependent.html
 share/webmin/postfix/help/general_opts.ca.UTF-8.html
 share/webmin/postfix/help/general_opts.ca.html
@@ -1773,6 +1778,8 @@ share/webmin/postfix/lang/es
 share/webmin/postfix/lang/es.UTF-8
 share/webmin/postfix/lang/fr
 share/webmin/postfix/lang/fr.UTF-8
+share/webmin/postfix/lang/hu
+share/webmin/postfix/lang/hu.UTF-8
 share/webmin/postfix/lang/ja_JP.UTF-8
 share/webmin/postfix/lang/ja_JP.euc
 share/webmin/postfix/lang/ja_JP.jis
@@ -1781,6 +1788,7 @@ share/webmin/postfix/lang/ko_KR.euc
 share/webmin/postfix/lang/nl
 share/webmin/postfix/lang/nl.UTF-8
 share/webmin/postfix/lang/no
+share/webmin/postfix/lang/no.UTF-8
 share/webmin/postfix/lang/pl
 share/webmin/postfix/lang/pl.UTF-8
 share/webmin/postfix/lang/pt_BR
@@ -1809,6 +1817,7 @@ share/webmin/postfix/module.info
 share/webmin/postfix/postfinger.cgi
 share/webmin/postfix/postfix-lib.pl
 share/webmin/postfix/rate.cgi
+share/webmin/postfix/reload.cgi
 share/webmin/postfix/relocated.cgi
 share/webmin/postfix/resource.cgi
 share/webmin/postfix/sasl.cgi

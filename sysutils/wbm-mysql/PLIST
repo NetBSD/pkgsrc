@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 01:23:28 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/mysql/config
 share/webmin/mysql/CHANGELOG
 share/webmin/mysql/acl_security.pl
@@ -8,12 +8,16 @@ share/webmin/mysql/backup_db.cgi
 share/webmin/mysql/backup_form.cgi
 share/webmin/mysql/cgi_args.pl
 share/webmin/mysql/config
+share/webmin/mysql/config-CentOS-Linux-7.0-*
+share/webmin/mysql/config-Redhat-Enterprise-Linux-7.0-*
+share/webmin/mysql/config-Scientific-Linux-7.0-*
 share/webmin/mysql/config-aix
 share/webmin/mysql/config-cobalt-linux
 share/webmin/mysql/config-coherent-linux
 share/webmin/mysql/config-debian-linux
 share/webmin/mysql/config-debian-linux-2.2-*
 share/webmin/mysql/config-freebsd
+share/webmin/mysql/config-freebsd-8-*
 share/webmin/mysql/config-gentoo-linux
 share/webmin/mysql/config-mandrake-linux
 share/webmin/mysql/config-mandrake-linux-10.1-*
@@ -56,6 +60,7 @@ share/webmin/mysql/config.info.ja_JP.euc
 share/webmin/mysql/config.info.nl
 share/webmin/mysql/config.info.nl.UTF-8
 share/webmin/mysql/config.info.no
+share/webmin/mysql/config.info.no.UTF-8
 share/webmin/mysql/config.info.pl
 share/webmin/mysql/config.info.pl.UTF-8
 share/webmin/mysql/config.info.pt_BR
@@ -111,6 +116,7 @@ share/webmin/mysql/help/backup_form.hu.UTF-8.html
 share/webmin/mysql/help/backup_form.hu.html
 share/webmin/mysql/help/backup_form.it.UTF-8.html
 share/webmin/mysql/help/backup_form.it.html
+share/webmin/mysql/help/backup_form.no.UTF-8.html
 share/webmin/mysql/help/backup_form.no.html
 share/webmin/mysql/help/cnf.ca.UTF-8.html
 share/webmin/mysql/help/cnf.ca.html
@@ -119,6 +125,8 @@ share/webmin/mysql/help/cnf.it.UTF-8.html
 share/webmin/mysql/help/cnf.it.html
 share/webmin/mysql/help/cnf.nl.UTF-8.html
 share/webmin/mysql/help/cnf.nl.html
+share/webmin/mysql/help/cnf.no.UTF-8.html
+share/webmin/mysql/help/cnf.no.html
 share/webmin/mysql/help/cpriv.ca.UTF-8.html
 share/webmin/mysql/help/cpriv.ca.html
 share/webmin/mysql/help/cpriv.es.UTF-8.html
@@ -130,6 +138,8 @@ share/webmin/mysql/help/cpriv.it.UTF-8.html
 share/webmin/mysql/help/cpriv.it.html
 share/webmin/mysql/help/cpriv.nl.UTF-8.html
 share/webmin/mysql/help/cpriv.nl.html
+share/webmin/mysql/help/cpriv.no.UTF-8.html
+share/webmin/mysql/help/cpriv.no.html
 share/webmin/mysql/help/cpriv.sv.UTF-8.html
 share/webmin/mysql/help/cpriv.sv.html
 share/webmin/mysql/help/cpriv.zh_TW.Big5.html
@@ -145,6 +155,8 @@ share/webmin/mysql/help/cprivs.it.UTF-8.html
 share/webmin/mysql/help/cprivs.it.html
 share/webmin/mysql/help/cprivs.nl.UTF-8.html
 share/webmin/mysql/help/cprivs.nl.html
+share/webmin/mysql/help/cprivs.no.UTF-8.html
+share/webmin/mysql/help/cprivs.no.html
 share/webmin/mysql/help/cprivs.sv.UTF-8.html
 share/webmin/mysql/help/cprivs.sv.html
 share/webmin/mysql/help/cprivs.zh_TW.Big5.html
@@ -564,6 +576,7 @@ share/webmin/mysql/lang/ko_KR.euc
 share/webmin/mysql/lang/nl
 share/webmin/mysql/lang/nl.UTF-8
 share/webmin/mysql/lang/no
+share/webmin/mysql/lang/no.UTF-8
 share/webmin/mysql/lang/pl
 share/webmin/mysql/lang/pl.UTF-8
 share/webmin/mysql/lang/pt_BR

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/22 01:27:55 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/sshd/config
 share/webmin/sshd/CHANGELOG
 share/webmin/sshd/apply.cgi
@@ -40,6 +40,7 @@ share/webmin/sshd/config.info.eu.UTF-8
 share/webmin/sshd/config.info.fa
 share/webmin/sshd/config.info.fr
 share/webmin/sshd/config.info.fr.UTF-8
+share/webmin/sshd/config.info.hu
 share/webmin/sshd/config.info.it
 share/webmin/sshd/config.info.it.UTF-8
 share/webmin/sshd/config.info.ja_JP.UTF-8
@@ -49,6 +50,7 @@ share/webmin/sshd/config.info.ko_KR.euc
 share/webmin/sshd/config.info.nl
 share/webmin/sshd/config.info.nl.UTF-8
 share/webmin/sshd/config.info.no
+share/webmin/sshd/config.info.no.UTF-8
 share/webmin/sshd/config.info.pl
 share/webmin/sshd/config.info.pl.UTF-8
 share/webmin/sshd/config.info.ru.UTF-8
@@ -222,15 +224,20 @@ share/webmin/sshd/lang/eu.UTF-8
 share/webmin/sshd/lang/fa
 share/webmin/sshd/lang/fr
 share/webmin/sshd/lang/fr.UTF-8
+share/webmin/sshd/lang/hu
+share/webmin/sshd/lang/hu.UTF-8
 share/webmin/sshd/lang/it
 share/webmin/sshd/lang/it.UTF-8
 share/webmin/sshd/lang/ja_JP.UTF-8
 share/webmin/sshd/lang/ja_JP.euc
 share/webmin/sshd/lang/ko_KR.UTF-8
 share/webmin/sshd/lang/ko_KR.euc
+share/webmin/sshd/lang/ms_MY
+share/webmin/sshd/lang/ms_MY.UTF-8
 share/webmin/sshd/lang/nl
 share/webmin/sshd/lang/nl.UTF-8
 share/webmin/sshd/lang/no
+share/webmin/sshd/lang/no.UTF-8
 share/webmin/sshd/lang/pl
 share/webmin/sshd/lang/pl.UTF-8
 share/webmin/sshd/lang/ru.UTF-8

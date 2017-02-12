@@ -1,32 +1,15 @@
-$NetBSD: patch-ac,v 1.5 2012/11/02 19:02:51 shattered Exp $
+$NetBSD: patch-ac,v 1.5.34.1 2017/02/12 15:28:37 spz Exp $
 
---- software/search.cgi.orig	2011-04-27 00:18:43.000000000 +0200
-+++ software/search.cgi	2011-06-15 23:15:13.000000000 +0200
-@@ -34,7 +34,7 @@ if (@match == 1 && $in{'goto'}) {
- if (@match) {
- 	@match = sort { lc($packages{$a,'name'}) cmp lc($packages{$b,'name'}) }
- 		      @match;
--	print "<b>",&text('search_match', "<tt>$s</tt>"),"</b><p>\n";
-+        print "<b>",&text('search_match', "<tt>" . &html_escape($s) . "</tt>"),"</b><p>\n";
- 	print &ui_form_start("delete_packs.cgi", "post");
- 	print &ui_hidden("search", $in{'search'});
- 	@tds = ( "width=5" );
+
+--- software/search.cgi.orig	2016-10-03 12:34:48.000000000 +0900
++++ software/search.cgi	2016-11-12 07:47:09.000000000 +0900
 @@ -49,7 +49,8 @@ if (@match) {
  		local @cols;
  		local $v = $packages{$i,'shortversion'} ||
  			   $packages{$i,'version'};
--		push(@cols, "<a href=\"edit_pack.cgi?search=$s&package=".
-+                push(@cols, "<a href=\"edit_pack.cgi?search=" .
-+                       &urlize($s) . "&package=".
+-		push(@cols, &ui_link("edit_pack.cgi?search=$s&package=".
++		push(@cols, &ui_link("edit_pack.cgi?search=" .
++		      &urlize($s) . "&package=".
  		      &urlize($packages{$i,'name'})."&version=".
- 		      &urlize($packages{$i,'version'})."\">".&html_escape(
- 			$packages{$i,'name'}.($v ?  " $v" : ""))."</a>");
-@@ -70,7 +71,7 @@ if (@match) {
- 	print &ui_form_end([ [ undef, $text{'search_delete'} ] ]);
- 	}
- else {
--	print "<b>",&text('search_nomatch', "<tt>$s</tt>"),"</b><p>\n";
-+        print "<b>",&text('search_nomatch', "<tt>" . &html_escape($s) . "</tt>"),"</b><p>\n";
- 	}
- 
- &ui_print_footer("", $text{'index_return'});
+ 		      &urlize($packages{$i,'version'}), &html_escape(
+ 			$packages{$i,'name'}.($v ?  " $v" : "")) ) );

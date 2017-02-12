@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/22 02:13:39 dholland Exp $
+@comment $NetBSD: PLIST,v 1.5.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/openslp/config
 share/webmin/openslp/README
 share/webmin/openslp/backup_config.pl
 share/webmin/openslp/config
 share/webmin/openslp/config-cobalt-linux
 share/webmin/openslp/config-coherent-linux
+share/webmin/openslp/config-freebsd
 share/webmin/openslp/config-mandrake-linux
 share/webmin/openslp/config-msc-linux
 share/webmin/openslp/config-open-linux
@@ -24,9 +25,12 @@ share/webmin/openslp/config.info.de
 share/webmin/openslp/config.info.de.UTF-8
 share/webmin/openslp/config.info.ms
 share/webmin/openslp/config.info.ms.UTF-8
+share/webmin/openslp/config.info.ms_MY
+share/webmin/openslp/config.info.ms_MY.UTF-8
 share/webmin/openslp/config.info.nl
 share/webmin/openslp/config.info.nl.UTF-8
 share/webmin/openslp/config.info.no
+share/webmin/openslp/config.info.no.UTF-8
 share/webmin/openslp/config.info.ru.UTF-8
 share/webmin/openslp/config.info.ru_RU
 share/webmin/openslp/config.info.ru_SU
@@ -37,6 +41,8 @@ share/webmin/openslp/edit_netcfg.cgi
 share/webmin/openslp/edit_snda.cgi
 share/webmin/openslp/help/english.ca.UTF-8.html
 share/webmin/openslp/help/english.ca.html
+share/webmin/openslp/help/english.de.UTF-8.html
+share/webmin/openslp/help/english.de.html
 share/webmin/openslp/help/english.html
 share/webmin/openslp/help/english.nl.UTF-8.html
 share/webmin/openslp/help/english.nl.html
@@ -58,9 +64,12 @@ share/webmin/openslp/lang/en
 share/webmin/openslp/lang/en.UTF-8
 share/webmin/openslp/lang/ms
 share/webmin/openslp/lang/ms.UTF-8
+share/webmin/openslp/lang/ms_MY
+share/webmin/openslp/lang/ms_MY.UTF-8
 share/webmin/openslp/lang/nl
 share/webmin/openslp/lang/nl.UTF-8
 share/webmin/openslp/lang/no
+share/webmin/openslp/lang/no.UTF-8
 share/webmin/openslp/lang/ru.UTF-8
 share/webmin/openslp/lang/ru_RU
 share/webmin/openslp/lang/ru_SU

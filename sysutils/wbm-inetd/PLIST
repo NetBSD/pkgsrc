@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2012/12/22 02:11:37 dholland Exp $
+@comment $NetBSD: PLIST,v 1.7.34.1 2017/02/12 15:28:35 spz Exp $
 share/examples/webmin/inetd/config
+share/webmin/inetd/CHANGELOG
 share/webmin/inetd/backup_config.pl
 share/webmin/inetd/cgi_args.pl
 share/webmin/inetd/config-aix
@@ -9,6 +10,7 @@ share/webmin/inetd/config-corel-linux
 share/webmin/inetd/config-debian-linux
 share/webmin/inetd/config-freebsd
 share/webmin/inetd/config-freebsd-2.1-2.2
+share/webmin/inetd/config-freebsd-8-*
 share/webmin/inetd/config-generic-linux
 share/webmin/inetd/config-hpux
 share/webmin/inetd/config-irix
@@ -53,6 +55,7 @@ share/webmin/inetd/config.info.hu.UTF-8
 share/webmin/inetd/config.info.nl
 share/webmin/inetd/config.info.nl.UTF-8
 share/webmin/inetd/config.info.no
+share/webmin/inetd/config.info.no.UTF-8
 share/webmin/inetd/config.info.pl
 share/webmin/inetd/config.info.pl.UTF-8
 share/webmin/inetd/config.info.ru.UTF-8
@@ -111,6 +114,7 @@ share/webmin/inetd/lang/ko_KR.euc
 share/webmin/inetd/lang/nl
 share/webmin/inetd/lang/nl.UTF-8
 share/webmin/inetd/lang/no
+share/webmin/inetd/lang/no.UTF-8
 share/webmin/inetd/lang/pl
 share/webmin/inetd/lang/pl.UTF-8
 share/webmin/inetd/lang/sv

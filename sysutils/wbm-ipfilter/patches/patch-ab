@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.7 2012/12/22 01:44:00 dholland Exp $
+$NetBSD: patch-ab,v 1.7.34.1 2017/02/12 15:28:35 spz Exp $
 
 NetBSD has ipfilter too.
 
---- ipfilter/module.info.orig	2012-09-21 18:08:40.000000000 +0000
-+++ ipfilter/module.info
-@@ -1,7 +1,7 @@
- desc_ca=Tallafocs IPFIlter
- version=1.600
+--- ipfilter/module.info.orig	2017-01-07 15:11:25.000000000 +0900
++++ ipfilter/module.info	2017-02-01 20:27:15.000000000 +0900
+@@ -2,7 +2,7 @@ desc_ca=Tallafocs IPFIlter
+ longdesc_ca=Configura un tallafocs utilitzant el paquet IPFilter, bo i creant i editant regles.
+ version=1.831
  longdesc=Configure a firewall using the IPFilter package, by creating and editing rules.
 -os_support=solaris {&has_command("ipf")}
 +os_support=netbsd solaris {&has_command("ipf")}

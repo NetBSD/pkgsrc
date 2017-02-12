@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/12/22 01:25:03 dholland Exp $
+@comment $NetBSD: PLIST,v 1.8.34.1 2017/02/12 15:28:36 spz Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -8,11 +8,15 @@ share/webmin/postgresql/backup_config.pl
 share/webmin/postgresql/backup_form.cgi
 share/webmin/postgresql/cgi_args.pl
 share/webmin/postgresql/config
+share/webmin/postgresql/config-CentOS-Linux-7.0-*
+share/webmin/postgresql/config-Redhat-Enterprise-Linux-7.0-*
+share/webmin/postgresql/config-Scientific-Linux-7.0-*
 share/webmin/postgresql/config-cobalt-linux
 share/webmin/postgresql/config-coherent-linux
 share/webmin/postgresql/config-debian-linux
 share/webmin/postgresql/config-debian-linux-4.0-*
 share/webmin/postgresql/config-freebsd
+share/webmin/postgresql/config-freebsd-8-*
 share/webmin/postgresql/config-gentoo-linux
 share/webmin/postgresql/config-mandrake-linux
 share/webmin/postgresql/config-msc-linux
@@ -50,6 +54,8 @@ share/webmin/postgresql/config.info.ko_KR.UTF-8
 share/webmin/postgresql/config.info.ko_KR.euc
 share/webmin/postgresql/config.info.nl
 share/webmin/postgresql/config.info.nl.UTF-8
+share/webmin/postgresql/config.info.no
+share/webmin/postgresql/config.info.no.UTF-8
 share/webmin/postgresql/config.info.pl
 share/webmin/postgresql/config.info.pl.UTF-8
 share/webmin/postgresql/config.info.ru.UTF-8
@@ -352,6 +358,8 @@ share/webmin/postgresql/lang/ko_KR.UTF-8
 share/webmin/postgresql/lang/ko_KR.euc
 share/webmin/postgresql/lang/nl
 share/webmin/postgresql/lang/nl.UTF-8
+share/webmin/postgresql/lang/no
+share/webmin/postgresql/lang/no.UTF-8
 share/webmin/postgresql/lang/pl
 share/webmin/postgresql/lang/pl.UTF-8
 share/webmin/postgresql/lang/pt
