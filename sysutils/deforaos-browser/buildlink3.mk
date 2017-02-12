@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2017/02/06 13:54:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2017/02/12 06:24:49 ryoon Exp $
 
 BUILDLINK_TREE+=	deforaos-browser
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	deforaos-browser
 DEFORAOS_BROWSER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.deforaos-browser+=	deforaos-browser>=0.5.0
-BUILDLINK_ABI_DEPENDS.deforaos-browser?=	deforaos-browser>=0.5.1nb2
+BUILDLINK_ABI_DEPENDS.deforaos-browser?=	deforaos-browser>=0.5.1nb3
 BUILDLINK_PKGSRCDIR.deforaos-browser?=	../../sysutils/deforaos-browser
 
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"

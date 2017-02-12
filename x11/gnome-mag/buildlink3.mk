@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2017/02/06 13:54:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2017/02/12 06:24:53 ryoon Exp $
 
 BUILDLINK_TREE+=	gnome-mag
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gnome-mag
 GNOME_MAG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gnome-mag+=	gnome-mag>=0.12.0
-BUILDLINK_ABI_DEPENDS.gnome-mag+=	gnome-mag>=0.16.3nb23
+BUILDLINK_ABI_DEPENDS.gnome-mag+=	gnome-mag>=0.16.3nb24
 BUILDLINK_PKGSRCDIR.gnome-mag?=	../../x11/gnome-mag
 
 .include "../../devel/gettext-lib/buildlink3.mk"
