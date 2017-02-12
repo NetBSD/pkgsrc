@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17026 2017/02/11 23:28:28 prlw1 Exp $
+$NetBSD: TODO,v 1.17027 2017/02/12 01:01:30 mef Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cyrus-imapd23-2.3.19
 	o cyrus-imapd24-2.4.18
 	o dact-0.8.42
-	o dante-1.4.2
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
