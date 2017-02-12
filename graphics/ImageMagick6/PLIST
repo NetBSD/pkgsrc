@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/25 12:41:17 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/02/12 21:41:52 adam Exp $
 bin/Magick++-config6
 bin/Magick-config6
 bin/MagickCore-config6
@@ -33,7 +33,6 @@ include/ImageMagick-6/Magick++/STL.h
 include/ImageMagick-6/Magick++/TypeMetric.h
 include/ImageMagick-6/magick/ImageMagick.h
 include/ImageMagick-6/magick/MagickCore.h
-include/ImageMagick-6/magick/accelerate.h
 include/ImageMagick-6/magick/animate.h
 include/ImageMagick-6/magick/annotate.h
 include/ImageMagick-6/magick/api.h
@@ -150,7 +149,7 @@ include/ImageMagick-6/wand/pixel-iterator.h
 include/ImageMagick-6/wand/pixel-wand.h
 include/ImageMagick-6/wand/stream.h
 include/ImageMagick-6/wand/wand-view.h
-lib/ImageMagick-6.9.4/config-Q16/configure.xml
+lib/ImageMagick-6.9.7/config-Q16/configure.xml
 lib/libMagick++-6.Q16.la
 lib/libMagickCore-6.Q16.la
 lib/libMagickWand-6.Q16.la
@@ -340,7 +339,6 @@ share/doc/ImageMagick-6/www/Magick++/thumbnail-sample-plain.jpg
 share/doc/ImageMagick-6/www/advanced-unix-installation.html
 share/doc/ImageMagick-6/www/advanced-windows-installation.html
 share/doc/ImageMagick-6/www/animate.html
-share/doc/ImageMagick-6/www/api.html
 share/doc/ImageMagick-6/www/api/Image++.html
 share/doc/ImageMagick-6/www/api/MagickCore/ImageMagick_8h-source.html
 share/doc/ImageMagick-6/www/api/MagickCore/ImageMagick_8h.html
@@ -1113,7 +1111,6 @@ share/doc/ImageMagick-6/www/api/transform.html
 share/doc/ImageMagick-6/www/api/version.html
 share/doc/ImageMagick-6/www/api/wand-view.html
 share/doc/ImageMagick-6/www/architecture.html
-share/doc/ImageMagick-6/www/binary-releases.html
 share/doc/ImageMagick-6/www/changelog.html
 share/doc/ImageMagick-6/www/cipher.html
 share/doc/ImageMagick-6/www/color-management.html
@@ -1130,6 +1127,7 @@ share/doc/ImageMagick-6/www/contact.html
 share/doc/ImageMagick-6/www/convert.html
 share/doc/ImageMagick-6/www/css/README.txt
 share/doc/ImageMagick-6/www/css/magick.css
+share/doc/ImageMagick-6/www/develop.html
 share/doc/ImageMagick-6/www/display.html
 share/doc/ImageMagick-6/www/distribute-pixel-cache.html
 share/doc/ImageMagick-6/www/download.html
@@ -1154,9 +1152,12 @@ share/doc/ImageMagick-6/www/license.html
 share/doc/ImageMagick-6/www/links.html
 share/doc/ImageMagick-6/www/magick++.html
 share/doc/ImageMagick-6/www/magick-core.html
+share/doc/ImageMagick-6/www/magick-script.html
 share/doc/ImageMagick-6/www/magick-vector-graphics.html
 share/doc/ImageMagick-6/www/magick-wand.html
+share/doc/ImageMagick-6/www/magick.html
 share/doc/ImageMagick-6/www/miff.html
+share/doc/ImageMagick-6/www/mirror.html
 share/doc/ImageMagick-6/www/mogrify.html
 share/doc/ImageMagick-6/www/montage.html
 share/doc/ImageMagick-6/www/motion-picture.html
@@ -1167,6 +1168,7 @@ share/doc/ImageMagick-6/www/porting.html
 share/doc/ImageMagick-6/www/quantize.html
 share/doc/ImageMagick-6/www/resources.html
 share/doc/ImageMagick-6/www/search.html
+share/doc/ImageMagick-6/www/security-policy.html
 share/doc/ImageMagick-6/www/sitemap.html
 share/doc/ImageMagick-6/www/source/analyze.c
 share/doc/ImageMagick-6/www/source/coder.xml
@@ -1191,7 +1193,6 @@ share/doc/ImageMagick-6/www/source/type-ghostscript.xml
 share/doc/ImageMagick-6/www/source/type-windows.xml
 share/doc/ImageMagick-6/www/source/type.xml
 share/doc/ImageMagick-6/www/source/wand.c
-share/doc/ImageMagick-6/www/sponsors.html
 share/doc/ImageMagick-6/www/stream.html
 share/doc/ImageMagick-6/www/support.html
 share/doc/ImageMagick-6/www/wand.png
