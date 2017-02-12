@@ -1,16 +1,24 @@
-# $NetBSD: options.mk,v 1.4 2016/02/25 13:37:48 jperkin Exp $
+# $NetBSD: options.mk,v 1.5 2017/02/12 21:50:17 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfstools
-PKG_SUPPORTED_OPTIONS=	imagemagick octave qt opengl
+PKG_SUPPORTED_OPTIONS=	fftw imagemagick octave qt opengl
 
 PKG_SUGGESTED_OPTIONS.Darwin+=	opengl
 
-PLIST_VARS+=	im octave qt gl
+PLIST_VARS+=	fftw im octave qt gl
 
 .include "../../mk/bsd.options.mk"
 
+.if !empty(PKG_OPTIONS:Mfftw)
+.include "../../math/fftwf/buildlink3.mk"
+PLIST.fftw=	yes
+CMAKE_ARGS+=	-DWITH_FFTW=YES
+.else
+CMAKE_ARGS+=	-DWITH_FFTW=NO
+.endif
+
 .if !empty(PKG_OPTIONS:Mimagemagick)
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 PLIST.im=	yes
 CMAKE_ARGS+=	-DWITH_ImageMagick=YES
 .else
