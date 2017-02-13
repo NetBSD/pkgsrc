@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.689 2017/02/07 14:34:35 hauke Exp $
+# $NetBSD: Makefile,v 1.690 2017/02/13 19:08:20 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -481,6 +481,7 @@ SUBDIR+=	rsyslog-libgcrypt
 SUBDIR+=	rsyslog-mysql
 SUBDIR+=	rsyslog-pgsql
 SUBDIR+=	rsyslog-rabbitmq
+SUBDIR+=	rsyslog-relp
 SUBDIR+=	rsyslog-snmp
 SUBDIR+=	rtty
 SUBDIR+=	ruby-activesambaldap
