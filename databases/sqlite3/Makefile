@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2017/01/02 17:52:23 adam Exp $
-#
-# used by databases/sqlite3-tcl/Makefile
+# $NetBSD: Makefile,v 1.114 2017/02/13 17:44:01 adam Exp $
 
 .include "Makefile.common"
 
