@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2358 2017/02/08 12:10:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2359 2017/02/13 03:22:57 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2037,6 +2037,7 @@ SUBDIR+=	ruby-celluloid-pool
 SUBDIR+=	ruby-celluloid-supervision
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-contracts
+SUBDIR+=	ruby-cucumber-core
 SUBDIR+=	ruby-curses
 SUBDIR+=	ruby-curses-gem
 SUBDIR+=	ruby-daemon_controller
