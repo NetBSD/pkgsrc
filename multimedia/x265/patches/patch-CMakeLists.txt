@@ -1,0 +1,24 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/02/13 13:39:55 fhajny Exp $
+
+Solaris ld: Provided assembler is not PIC, so we pass "-mimpure-text"
+            to the compiler so it doesn't send "-ztext" to ld.
+
+Solaris ld: Passing "-Wa,--noexecstack" to gcc will generate an ELF section
+            requesting a non executable stack. I don't know if Solaris ld
+            is complying or just ignoring it.
+
+--- CMakeLists.txt.OLD	2017-01-27 02:42:21.295232904 +0000
++++ CMakeLists.txt	2017-01-27 02:51:32.144600352 +0000
+@@ -523,7 +523,11 @@
+         elseif(CYGWIN)
+             # Cygwin is not officially supported or tested. MinGW with msys is recommended.
+         else()
+-            list(APPEND LINKER_OPTIONS "-Wl,-Bsymbolic,-znoexecstack")
++            if(${CMAKE_SYSTEM_NAME} MATCHES "SunOS")
++                list(APPEND LINKER_OPTIONS "-mimpure-text -Wa,--noexecstack")
++            else()
++                list(APPEND LINKER_OPTIONS "-Wl,-Bsymbolic,-znoexecstack")
++            endif()
+         endif()
+     endif()
+     set_target_properties(x265-shared PROPERTIES SOVERSION ${X265_BUILD})
