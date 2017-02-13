@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/02/13 21:08:29 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/13 21:10:12 adam Exp $
 
 DISTNAME=	m2r-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/m2r/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
