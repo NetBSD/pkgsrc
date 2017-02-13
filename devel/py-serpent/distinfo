@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:16 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/02/13 21:59:10 adam Exp $
 
-SHA1 (serpent-1.4.tar.gz) = eff24b6662660b6dabdf040f2f91247b2ff6f5d9
-RMD160 (serpent-1.4.tar.gz) = 54fd725cacbbe4d470c49fbd975b92f061c00bcc
-SHA512 (serpent-1.4.tar.gz) = 2d50a77a73f9191642269cf629665ca5c035dcf639c3892cfdeb120ef7f6f78076d0d34effc0d989b3f8b0aaab12f5d43785743c0d64d8c6d06534ea71ac0771
-Size (serpent-1.4.tar.gz) = 7988 bytes
+SHA1 (serpent-1.16.tar.gz) = 470c192e7c0292a91e94035641408aa7814714bc
+RMD160 (serpent-1.16.tar.gz) = 1ae4d2b37f8e71c08419472db1d71c2dc0f43a21
+SHA512 (serpent-1.16.tar.gz) = 67482581825b8dec0b9e535707b53ea77a49030c77a91082959d84a95ee655534f5701ece144bb95379de1d418602d273b5bb471d8efad9515e516f387f1529e
+Size (serpent-1.16.tar.gz) = 11699 bytes

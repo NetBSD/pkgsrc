@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/13 21:59:10 adam Exp $
 
-DISTNAME=	serpent-1.4
-PKGNAME=	${PYPKGPREFIX}-serpent-1.4
-CATEGORIES=	devel
+DISTNAME=	serpent-1.16
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/serpent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,5 +12,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
