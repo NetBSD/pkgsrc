@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.906 2017/02/13 21:06:21 adam Exp $
+# $NetBSD: Makefile,v 1.907 2017/02/13 21:08:29 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -738,6 +738,7 @@ SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-loremipsum
 SUBDIR+=	py-lxml
+SUBDIR+=	py-m2r
 SUBDIR+=	py-marisa
 SUBDIR+=	py-markdown
 SUBDIR+=	py-markdown2
