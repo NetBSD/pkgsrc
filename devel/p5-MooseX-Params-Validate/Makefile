@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/06/08 19:23:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/02/13 12:16:16 mef Exp $
 #
 
 DISTNAME=	MooseX-Params-Validate-0.21
@@ -15,12 +15,15 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Params/Validate/.packlist
 
-BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
-
 DEPENDS+=	p5-Devel-Caller-[0-9]*:../../devel/p5-Devel-Caller
 DEPENDS+=	p5-Moose>=0.58:../../devel/p5-Moose
 DEPENDS+=	p5-Params-Validate>=0.88:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Sub-Exporter-[0-9]*:../../devel/p5-Sub-Exporter
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
+
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
