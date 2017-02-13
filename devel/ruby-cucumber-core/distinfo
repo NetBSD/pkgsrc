@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/13 03:22:02 minskim Exp $
+
+SHA1 (cucumber-core-2.0.0.gem) = b39eefb6a2b9a1f0c4443e226070ab0703937c3e
+RMD160 (cucumber-core-2.0.0.gem) = 017a79542abc7bbf7234a86794a9d60f48b3e9f5
+SHA512 (cucumber-core-2.0.0.gem) = 91bc6647e380473fa25d2a88619518097b1a1f4938b0f23e2a11c943816f774c65ba67945d88cb7558e77efb6c715ccc43d2774175b951a92fc72f48c3c526f5
+Size (cucumber-core-2.0.0.gem) = 50688 bytes
