@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.718 2017/02/13 17:28:15 adam Exp $
+$NetBSD: CHANGES-2017,v 1.719 2017/02/13 17:45:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -898,3 +898,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/py-portend version 1.8 [adam 2017-02-13]
 	Added www/py-cheroot version 5.1.0 [adam 2017-02-13]
 	Updated www/py-cherrypy to 10.1.0 [adam 2017-02-13]
+	Updated databases/sqlite3 to 3.17.0 [adam 2017-02-13]
+	Updated databases/sqlite3-docs to 3.17.0 [adam 2017-02-13]
+	Updated databases/sqlite3-tcl to 3.17.0 [adam 2017-02-13]
+	Updated devel/lemon to 1.0.3.17.0 [adam 2017-02-13]
