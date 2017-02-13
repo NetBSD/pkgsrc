@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.713 2017/02/13 14:05:58 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.714 2017/02/13 14:10:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -866,6 +866,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-beautifulsoup4 to 4.5.3 [wen 2017-02-12]
 	Updated misc/ruby-ohai to 8.23.0 [mef 2017-02-12]
 	Updated misc/libreoffice to 5.3.0.3nb4 [ryoon 2017-02-12]
+	Added devel/p5-Net-LDAP-SID version 0.001 [mef 2017-02-12]
 	Updated www/awstats to 7.6 [adam 2017-02-12]
 	Moved pkgtools/pkg_comp to pkgtools/pkg_comp1 [jmmv 2017-02-12]
 	Added textproc/verify-synopsis version 1.0 [wiz 2017-02-12]
@@ -882,3 +883,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-Email-MIME to 1.940 [wen 2017-02-13]
 	Updated lang/nodejs to 7.5.0 [fhajny 2017-02-13]
 	Updated lang/nodejs6 to 6.9.5 [fhajny 2017-02-13]
+	Updated devel/p5-MooseX-Singleton to 0.30 [mef 2017-02-13]
+	Updated devel/p5-Log-Dispatch-FileRotate to 1.23 [mef 2017-02-13]
+	Updated devel/p5-Hash-FieldHash to 0.15 [mef 2017-02-13]
+	Updated devel/p5-Glib-Object-Introspection to 0.042 [mef 2017-02-13]
+	Updated devel/p5-File-Save-Home to 0.10 [mef 2017-02-13]
+	Updated devel/p5-MooX-Types-MooseLike-Numeric to 1.03 [mef 2017-02-13]
+	Updated devel/p5-File-Find-Object to 0.3.2 [mef 2017-02-13]
+	Updated devel/p5-File-ChangeNotify to 0.27 [mef 2017-02-13]
