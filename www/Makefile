@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1211 2017/02/13 17:22:06 adam Exp $
+# $NetBSD: Makefile,v 1.1212 2017/02/13 21:21:09 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -686,6 +686,7 @@ SUBDIR+=	py-mod_wsgi
 SUBDIR+=	py-mod_wsgi-metrics
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
+SUBDIR+=	py-parsel
 SUBDIR+=	py-paste
 SUBDIR+=	py-pelican
 SUBDIR+=	py-pendrell
@@ -710,6 +711,7 @@ SUBDIR+=	py-uliweb
 SUBDIR+=	py-urllib3
 SUBDIR+=	py-uwsgi
 SUBDIR+=	py-uwsgitop
+SUBDIR+=	py-w3lib
 SUBDIR+=	py-waitress
 SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
