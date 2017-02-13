@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2016/12/05 10:36:46 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.25 2017/02/13 19:59:36 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -8,11 +8,12 @@
 # used by sysutils/rsyslog-mysql/Makefile
 # used by sysutils/rsyslog-pgsql/Makefile
 # used by sysutils/rsyslog-rabbitmq/Makefile
+# used by sysutils/rsyslog-relp/Makefile
 # used by sysutils/rsyslog-snmp/Makefile
 
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=		rsyslog-8.23.0
+DISTNAME=		rsyslog-8.24.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
