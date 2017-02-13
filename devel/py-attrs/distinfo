@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/14 11:06:27 leot Exp $
+$NetBSD: distinfo,v 1.2 2017/02/13 18:57:05 adam Exp $
 
-SHA1 (attrs-15.2.0.tar.gz) = eacb016efc4f6ae0a938318a87c69972c151cb15
-RMD160 (attrs-15.2.0.tar.gz) = 18658fe3760a14206092fc1154693be076636aec
-SHA512 (attrs-15.2.0.tar.gz) = f34f70acbd01dc94c6f994ce7c764e169e26f5d71454522f4f88859b67309556e88e20504e2a6a63590e4ad8e55f04ba7cc9a90c024364c1bf932bfadd5a4491
-Size (attrs-15.2.0.tar.gz) = 36766 bytes
+SHA1 (attrs-16.3.0.tar.gz) = ce3d6456b024a21cc20291d605964dbcff205e64
+RMD160 (attrs-16.3.0.tar.gz) = 89b7aa7b8ffe2463faf83520d596c88c49af5ebd
+SHA512 (attrs-16.3.0.tar.gz) = 1a91e6f27ecaf20c409c3abf88ffed5c6cfdbba8cff44637399b713271ff838a054f5859dd29440b2780d81b40673033e3f8e43dd491bece72e0a4f08c4ef688
+Size (attrs-16.3.0.tar.gz) = 57512 bytes
