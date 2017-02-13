@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/13 21:18:15 adam Exp $
+
+SHA1 (PyDispatcher-2.0.5.tar.gz) = 77cdbd76be5e0a922d52b0108d10c008a8506bd5
+RMD160 (PyDispatcher-2.0.5.tar.gz) = 1b74f1ee498bd4b2806076994a8d543d58bd6734
+SHA512 (PyDispatcher-2.0.5.tar.gz) = b361463f006a775e1f22cfe07520951649f76c26be35a80ca016620c8ef466129c4abeafe42f0ffdc605e7523287b1e804967f19d951089d24e052fe10d88e6f
+Size (PyDispatcher-2.0.5.tar.gz) = 34437 bytes
