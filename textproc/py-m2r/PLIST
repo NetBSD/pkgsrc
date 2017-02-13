@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/13 21:08:29 adam Exp $
+bin/m2r
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/m2r.py
+${PYSITELIB}/m2r.pyc
+${PYSITELIB}/m2r.pyo
+${PYSITELIB}/tests/__init__.py
+${PYSITELIB}/tests/__init__.pyc
+${PYSITELIB}/tests/__init__.pyo
+${PYSITELIB}/tests/test_cli.py
+${PYSITELIB}/tests/test_cli.pyc
+${PYSITELIB}/tests/test_cli.pyo
+${PYSITELIB}/tests/test_r s.py
+${PYSITELIB}/tests/test_r s.pyc
+${PYSITELIB}/tests/test_r s.pyo
+${PYSITELIB}/tests/test_renderer.py
+${PYSITELIB}/tests/test_renderer.pyc
+${PYSITELIB}/tests/test_renderer.pyo
