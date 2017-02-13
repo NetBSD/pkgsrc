@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17032 2017/02/13 21:52:47 adam Exp $
+$NetBSD: TODO,v 1.17033 2017/02/13 22:03:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -1318,7 +1318,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-django-photologue-2.7
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
-	o py-flake8-3.3.0
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-hsm-1.1.1
@@ -1344,7 +1343,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-quixote-2.9
 	o py-radare2-1.0.1
 	o py-scgi-1.15
-	o py-serpent-1.12
 	o py-simpletal-5.1
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
