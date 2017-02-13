@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.22 2017/02/09 00:18:36 joerg Exp $
+$NetBSD: distinfo,v 1.23 2017/02/13 19:59:36 fhajny Exp $
 
-SHA1 (rsyslog-8.23.0.tar.gz) = a9c4c60957460e525e27e9212117596d1172f326
-RMD160 (rsyslog-8.23.0.tar.gz) = f75c771c565f9564be6e39f0a9a80fbe42a3ffe2
-SHA512 (rsyslog-8.23.0.tar.gz) = 4e4832287f02d4b0435b3711241d58cad9f393ce14318bbccce7b89dceeed01205960e7df4b2629831429e550c0865407374eb6a5548ecb47a3aea90c7d7df2d
-Size (rsyslog-8.23.0.tar.gz) = 2338318 bytes
+SHA1 (rsyslog-8.24.0.tar.gz) = 615ee5b47ca4c3a28de3c8ee4477c721c20f31aa
+RMD160 (rsyslog-8.24.0.tar.gz) = a0f4085df59440ecd34c41a8fd2dc5be624c8d9f
+SHA512 (rsyslog-8.24.0.tar.gz) = b25b8ae72133376f732f54863c97aea3c8dfbf37c62c6a61840932996913c9d4e63155a24ffc577db48a18514f3e35b6fb109b1864380ba93ddf3fa6d84d728d
+Size (rsyslog-8.24.0.tar.gz) = 2374240 bytes
 SHA1 (patch-configure) = aaba67d65b249b6aebfe8c5b3a1c9cd07e06c794
-SHA1 (patch-grammar_lexer.l) = d52518e8b962820a030e01fcf5d00c1e3f1377ec
+SHA1 (patch-grammar_lexer.l) = 6de5aac9253ebcfae124f8dc3c7178446248f2b4
 SHA1 (patch-platform_redhat_rsyslog.conf) = b2fc1dbeb2b679b82d6c1a86ec1e4e72ef460433
 SHA1 (patch-plugins_imfile_imfile.c) = 65b56f6799e2b206e1a8c3d055a4e9dc22da88be
 SHA1 (patch-plugins_impstats_impstats.c) = a4eb7b8b9870271204d856c3a9e05fd24cee702b
 SHA1 (patch-plugins_imptcp_imptcp.c) = 47f7184acf0279df4117924108f961529b22a21e
 SHA1 (patch-plugins_imuxsock_imuxsock.c) = a3c682d5a2132cd4796893f286193259087223da
-SHA1 (patch-plugins_mmexternal_mmexternal.c) = 09b8007f44abc9a20fed884a132e734c8b613fb4
+SHA1 (patch-plugins_mmexternal_mmexternal.c) = 14546fb631822c697c8ef766450a24afaf4ebf7a
 SHA1 (patch-runtime_lookup.c) = cedb0531ff00063d44467029beba852ce4fbc0be
 SHA1 (patch-runtime_nsd__ptcp.c) = fcc8bdd5c5068cc0fb2f3b29d53a6bee41c7a437
 SHA1 (patch-tools_rsyslogd.8) = a3c79f551111b7bf5933ca5e0930b1f52875f341
-SHA1 (patch-tools_rsyslogd.c) = 116f75e4e3edf32f339a2e66591b8a3d681d804f
+SHA1 (patch-tools_rsyslogd.c) = 0776a632143a2dbbb3bf00159e4e3376c55418ff
 SHA1 (patch-tools_syslogd.c) = 6855271d05da979d53ae7cee167163a563922b00
