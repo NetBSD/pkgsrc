@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/13 17:15:00 adam Exp $
+bin/calc-prorate
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/tempora/__init__.py
+${PYSITELIB}/tempora/__init__.pyc
+${PYSITELIB}/tempora/__init__.pyo
+${PYSITELIB}/tempora/schedule.py
+${PYSITELIB}/tempora/schedule.pyc
+${PYSITELIB}/tempora/schedule.pyo
+${PYSITELIB}/tempora/tests/test_schedule.py
+${PYSITELIB}/tempora/tests/test_schedule.pyc
+${PYSITELIB}/tempora/tests/test_schedule.pyo
+${PYSITELIB}/tempora/timing.py
+${PYSITELIB}/tempora/timing.pyc
+${PYSITELIB}/tempora/timing.pyo
