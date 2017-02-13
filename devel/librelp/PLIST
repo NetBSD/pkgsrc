@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/13 18:33:24 fhajny Exp $
+include/librelp.h
+lib/librelp.la
+lib/pkgconfig/relp.pc

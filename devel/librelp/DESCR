@@ -1,0 +1,3 @@
+librelp is a core protocol library for RELP, the "reliable event
+logging protocol". It was created to provide ultra-reliable
+delivery of syslog messages and is quite good at that.
