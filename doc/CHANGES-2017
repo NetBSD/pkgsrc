@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.703 2017/02/12 22:02:45 leot Exp $
+$NetBSD: CHANGES-2017,v 1.704 2017/02/13 00:11:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -872,3 +872,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/ImageMagick6 to 6.9.7.7 [adam 2017-02-12]
 	Updated graphics/pfstools to 2.0.5 [adam 2017-02-12]
 	Updated multimedia/mpv to 0.24.0 [leot 2017-02-12]
+	Updated sysutils/vifm to 0.8.2nb1 [maya 2017-02-13]
