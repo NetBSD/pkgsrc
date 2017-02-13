@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.704 2017/02/13 00:11:56 maya Exp $
+$NetBSD: CHANGES-2017,v 1.705 2017/02/13 03:23:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/pfstools to 2.0.5 [adam 2017-02-12]
 	Updated multimedia/mpv to 0.24.0 [leot 2017-02-12]
 	Updated sysutils/vifm to 0.8.2nb1 [maya 2017-02-13]
+	Added devel/ruby-cucumber-core version 2.0.0 [minskim 2017-02-13]
