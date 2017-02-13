@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2017/01/05 02:33:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.27 2017/02/13 14:06:59 mef Exp $
 
-DISTNAME=	File-ChangeNotify-0.26
+DISTNAME=	File-ChangeNotify-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
@@ -12,11 +11,16 @@ COMMENT=	Watch for changes to files, cross-platform style
 LICENSE=	artistic-2.0
 
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
-DEPENDS+=	p5-Moose>=2:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Params-Validate>=0.08:../../devel/p5-MooseX-Params-Validate
 DEPENDS+=	p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 DEPENDS+=	p5-Type-Tiny-[0-9]*:../../devel/p5-Type-Tiny
+
+# for make test
+BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
+BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
+BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 
 PERL5_PACKLIST=		auto/File/ChangeNotify/.packlist
 
