@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2016/12/19 08:49:00 wiz Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2017/02/13 06:11:34 spz Exp $
 
 DISTNAME=	cups-filters-1.13.1
++PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -39,6 +40,7 @@ CONFIGURE_ARGS+=	--with-rclevels=""
 CONFIGURE_ARGS+=	--disable-ldap
 CONFIGURE_ARGS+=	--disable-mutool
 CONFIGURE_ARGS+=	--with-shell=${TOOLS_PATH.bash}
+CONFIGURE_ARGS+=	--with-pdftops-path=${PREFIX}/bin/pdftops
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/cups-filters
 
@@ -46,7 +48,7 @@ CONF_FILES=		${PREFIX}/share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf
 CONF_FILES+=		${PREFIX}/share/examples/cups-filters/cups-browsed.conf ${PKG_SYSCONFDIR}/cups/cups-browsed.conf
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/etc/cups/cups-browsed.conf ${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
+	${MV} ${DESTDIR}${PKG_SYSCONFDIR}/cups/cups-browsed.conf ${DESTDIR}${PREFIX}/share/examples/cups-filters/cups-browsed.conf
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
