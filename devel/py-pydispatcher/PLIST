@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/13 21:18:15 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pydispatch/__init__.py
+${PYSITELIB}/pydispatch/__init__.pyc
+${PYSITELIB}/pydispatch/__init__.pyo
+${PYSITELIB}/pydispatch/dispatcher.py
+${PYSITELIB}/pydispatch/dispatcher.pyc
+${PYSITELIB}/pydispatch/dispatcher.pyo
+${PYSITELIB}/pydispatch/errors.py
+${PYSITELIB}/pydispatch/errors.pyc
+${PYSITELIB}/pydispatch/errors.pyo
+${PYSITELIB}/pydispatch/robust.py
+${PYSITELIB}/pydispatch/robust.pyc
+${PYSITELIB}/pydispatch/robust.pyo
+${PYSITELIB}/pydispatch/robustapply.py
+${PYSITELIB}/pydispatch/robustapply.pyc
+${PYSITELIB}/pydispatch/robustapply.pyo
+${PYSITELIB}/pydispatch/saferef.py
+${PYSITELIB}/pydispatch/saferef.pyc
+${PYSITELIB}/pydispatch/saferef.pyo
