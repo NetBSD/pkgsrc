@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/13 21:19:51 adam Exp $
+
+SHA1 (w3lib-1.17.0.tar.gz) = 7dd33133de5f8bfae23c07a435a48a34b74c7c2a
+RMD160 (w3lib-1.17.0.tar.gz) = 8c52dbd4c35c9aed6caf317c2c5228930502f15f
+SHA512 (w3lib-1.17.0.tar.gz) = a131e1671e27d34c77ff62ce17aa1d28461d12b66e1fef4f4410d061f2a75ee4cdbbb447eea16c265ca6e4f1da2e72c8cf30f87fe1a92a8f3f70df036b4b2c96
+Size (w3lib-1.17.0.tar.gz) = 30357 bytes
