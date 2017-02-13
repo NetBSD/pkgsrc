@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1210 2017/02/09 06:38:03 wiz Exp $
+# $NetBSD: Makefile,v 1.1211 2017/02/13 17:22:06 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -599,6 +599,7 @@ SUBDIR+=	py-bleach
 SUBDIR+=	py-blosxom
 SUBDIR+=	py-bottle
 SUBDIR+=	py-cfscrape
+SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
