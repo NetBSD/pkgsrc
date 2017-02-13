@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.706 2017/02/13 06:47:50 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.707 2017/02/13 09:36:15 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -875,3 +875,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/mpv to 0.24.0 [leot 2017-02-12]
 	Updated sysutils/vifm to 0.8.2nb1 [maya 2017-02-13]
 	Added devel/ruby-cucumber-core version 2.0.0 [minskim 2017-02-13]
+	Updated pkgtools/gimme to 20170213 [jperkin 2017-02-13]
