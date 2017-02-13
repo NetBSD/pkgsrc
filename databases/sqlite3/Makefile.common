@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.50 2016/10/22 00:18:39 kamil Exp $
+# $NetBSD: Makefile.common,v 1.51 2017/02/13 17:44:01 adam Exp $
+#
+# used by databases/sqlite3-tcl/Makefile
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 
