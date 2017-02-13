@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/02/01 14:17:21 mef Exp $
+$NetBSD: distinfo,v 1.6 2017/02/13 00:11:35 maya Exp $
 
 SHA1 (vifm-0.8.2.tar.bz2) = 1ae4179b2b9a43c440290af0ecc91b9235203be7
 RMD160 (vifm-0.8.2.tar.bz2) = 2e451ba17197b01b63c65e245d656e5e361ac990
 SHA512 (vifm-0.8.2.tar.bz2) = e2c9f84b8a24542f7153ef8a27b38ba8c251cb0ded72401f5e93fa92540d51b5c368a73147b9fa4a883dda5f880c1d8585c1b4879d46c0e00dea87eacecfdb25
 Size (vifm-0.8.2.tar.bz2) = 892414 bytes
-SHA1 (patch-src_utils_mntent.c) = bde775d1942d8ce6097c55af5f03bdb99635d144
