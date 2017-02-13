@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.722 2017/02/13 19:07:49 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.723 2017/02/13 19:59:49 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -907,3 +907,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-attrs to 16.3.0 [adam 2017-02-13]
 	Updated net/py-twisted to 17.1.0 [adam 2017-02-13]
 	Added sysutils/rsyslog-relp version 8.23.0 [fhajny 2017-02-13]
+	Updated sysutils/rsyslog to 8.24.0 [fhajny 2017-02-13]
