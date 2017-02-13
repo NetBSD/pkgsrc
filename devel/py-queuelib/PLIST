@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/13 21:15:41 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/queuelib/__init__.py
+${PYSITELIB}/queuelib/__init__.pyc
+${PYSITELIB}/queuelib/__init__.pyo
+${PYSITELIB}/queuelib/pqueue.py
+${PYSITELIB}/queuelib/pqueue.pyc
+${PYSITELIB}/queuelib/pqueue.pyo
+${PYSITELIB}/queuelib/queue.py
+${PYSITELIB}/queuelib/queue.pyc
+${PYSITELIB}/queuelib/queue.pyo
+${PYSITELIB}/queuelib/tests/__init__.py
+${PYSITELIB}/queuelib/tests/__init__.pyc
+${PYSITELIB}/queuelib/tests/__init__.pyo
+${PYSITELIB}/queuelib/tests/test_pqueue.py
+${PYSITELIB}/queuelib/tests/test_pqueue.pyc
+${PYSITELIB}/queuelib/tests/test_pqueue.pyo
+${PYSITELIB}/queuelib/tests/test_queue.py
+${PYSITELIB}/queuelib/tests/test_queue.pyc
+${PYSITELIB}/queuelib/tests/test_queue.pyo
