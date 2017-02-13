@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2017/02/01 14:17:21 mef Exp $
+# $NetBSD: Makefile,v 1.28 2017/02/13 00:11:35 maya Exp $
 #
 
 DISTNAME=	vifm-0.8.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 EXTRACT_SUFX=	.tar.bz2
