@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/10/12 12:44:42 mef Exp $
+$NetBSD: distinfo,v 1.7 2017/02/13 12:48:02 mef Exp $
 
-SHA1 (Log-Dispatch-FileRotate-1.22.tar.gz) = add0731d7c6ce43391b64d8499e85b5ddc037142
-RMD160 (Log-Dispatch-FileRotate-1.22.tar.gz) = 5e6632e286ab4bdcf02e5b6cfc44c9f2e26c568e
-SHA512 (Log-Dispatch-FileRotate-1.22.tar.gz) = 35ab1310de510d4e5fdad29e3e04c6a1f0d30f17c5743bfd96c22367d3b2d0a0a1c9612b35a527d6bb45e71d8634cf8aaf34080fcc6e5f068639752354f68391
-Size (Log-Dispatch-FileRotate-1.22.tar.gz) = 22263 bytes
+SHA1 (Log-Dispatch-FileRotate-1.23.tar.gz) = 33449d6bc77b5f854aeea162c3b1b43696603e91
+RMD160 (Log-Dispatch-FileRotate-1.23.tar.gz) = 32fe5ba5c57659820991778d974d401ae9d0784a
+SHA512 (Log-Dispatch-FileRotate-1.23.tar.gz) = f82158001a047532f1d43452da0f656ee7723cce131d89d743586a8fce59bcc670113a42c4682afe53eabd92c669443fb14c37fde28a5fce9cd615097c6290db
+Size (Log-Dispatch-FileRotate-1.23.tar.gz) = 23660 bytes
