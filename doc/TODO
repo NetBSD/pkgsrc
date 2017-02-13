@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17029 2017/02/12 22:02:45 leot Exp $
+$NetBSD: TODO,v 1.17030 2017/02/13 06:47:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1584,7 +1584,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vfu-4.09
 	o vice-3.0
 	o vicq-0.4.2
-	o viewvc-1.1.25
 	o vile-9.8q
 	o vim-8.0.0326
 	o vim-share-8.0.0326
