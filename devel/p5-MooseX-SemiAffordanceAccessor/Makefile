@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/06/08 19:23:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/02/13 12:06:22 mef Exp $
 #
 
 DISTNAME=	MooseX-SemiAffordanceAccessor-0.10
@@ -17,6 +17,8 @@ PERL5_PACKLIST=		auto/MooseX/SemiAffordanceAccessor/.packlist
 
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Moose>=0.94:../../devel/p5-Moose
+# for make test
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
