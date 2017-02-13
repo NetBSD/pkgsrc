@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/11/22 21:57:38 agc Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/13 09:36:04 jperkin Exp $
 
-DISTNAME=		gimme-20151122
+DISTNAME=		gimme-20170213
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -12,7 +12,7 @@ LICENSE=		modified-bsd
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
-DEPENDS+=		pkg_comp>=1.38nb1:../../pkgtools/pkg_comp
+DEPENDS+=		pkg_comp1>=1.38nb1:../../pkgtools/pkg_comp1
 
 AUTO_MKDIRS=		yes
 
