@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2360 2017/02/13 18:33:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.2361 2017/02/13 21:15:41 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1751,6 +1751,7 @@ SUBDIR+=	py-at-spi
 SUBDIR+=	py-at-spi2
 SUBDIR+=	py-atomicwrites
 SUBDIR+=	py-attrs
+SUBDIR+=	py-automat
 SUBDIR+=	py-babel
 SUBDIR+=	py-backports_abc
 SUBDIR+=	py-binaryornot
@@ -1928,6 +1929,7 @@ SUBDIR+=	py-pyparsing
 SUBDIR+=	py-pysvn
 SUBDIR+=	py-pytemplate
 SUBDIR+=	py-pyutil
+SUBDIR+=	py-queuelib
 SUBDIR+=	py-quixote
 SUBDIR+=	py-radare2
 SUBDIR+=	py-readline
