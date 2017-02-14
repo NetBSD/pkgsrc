@@ -1,18 +1,18 @@
-$NetBSD: patch-src_entropy.c,v 1.8 2017/01/25 14:10:18 fhajny Exp $
+$NetBSD: patch-src_entropy.c,v 1.9 2017/02/14 21:23:13 joerg Exp $
 
 Provide a NetBSD implementation for graphing available entropy.
 This version tries to keep /dev/urandom open (for repeated use),
 instead of constantly re-opening/closing it, since the latter will
 needlessly reduce the kernel's entropy estimate.
 
---- src/entropy.c.orig	2017-01-23 07:53:57.704448789 +0000
+--- src/entropy.c.orig	2017-01-23 07:53:57.000000000 +0000
 +++ src/entropy.c
 @@ -29,23 +29,16 @@
  #include "common.h"
  #include "plugin.h"
  
 -#if !KERNEL_LINUX
-+static void entropy_submit (double);
++static void entropy_submit (value_t);
 +static int entropy_read (void);
 +
 +#if !KERNEL_LINUX && !KERNEL_NETBSD
@@ -36,7 +36,7 @@ needlessly reduce the kernel's entropy estimate.
  static int entropy_read(void) {
    value_t v;
    if (parse_value_file(ENTROPY_FILE, &v, DS_TYPE_GAUGE) != 0) {
-@@ -56,6 +49,63 @@ static int entropy_read(void) {
+@@ -56,6 +49,70 @@ static int entropy_read(void) {
    entropy_submit(v);
    return (0);
  }
@@ -63,8 +63,10 @@ needlessly reduce the kernel's entropy estimate.
 +static int
 +entropy_read (void)
 +{
++  value_t v;
 +  rndpoolstat_t rs;
 +  static int fd;
++  char buf[30];
 +
 +  if (fd == 0) {
 +    fd = open(_PATH_URANDOM, O_RDONLY, 0644);
@@ -79,8 +81,13 @@ needlessly reduce the kernel's entropy estimate.
 +    fd = 0; /* signal a reopening on next attempt */
 +    return -1;
 +  }
++  snprintf(buf, sizeof(buf), "%ju", (uintmax_t)rs.curentropy);
++  if (parse_value(buf, &v, DS_TYPE_GAUGE) != 0) {
++    ERROR("entropy plugin: Parsing \"%s\" failed.", buf);
++    return (-1);
++  }
 +
-+  entropy_submit (rs.curentropy);
++  entropy_submit (v);
 +
 +  return 0;
 +}
