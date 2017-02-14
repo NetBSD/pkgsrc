@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2015/11/04 01:32:08 agc Exp $
+$NetBSD: distinfo,v 1.29 2017/02/14 21:22:43 joerg Exp $
 
 SHA1 (cdrdao-1.2.3.tar.bz2) = 70d6547795a1342631c7ab56709fd1940c2aff9f
 RMD160 (cdrdao-1.2.3.tar.bz2) = a162bdf2bc4d65581816d3a9e3c0d3ba66bb6523
@@ -28,3 +28,4 @@ SHA1 (patch-dao_CdrDriver.cc) = b618b4521d010f4153f73a9fab33d5ed56dfb651
 SHA1 (patch-dao_CdrDriver.h) = 71113a5d536aa8eba74e141e612c91e958dadda3
 SHA1 (patch-xdao_CdDevice.cc) = fb83427cef2fc0b7afdb526664f61863cd6bc715
 SHA1 (patch-xdao_CdDevice.h) = 11b9868cc54d2b926e5e588eb467f0941deb1208
+SHA1 (patch-xdao_SampleDisplay.cc) = edca89e680962d5a8add90d87f4ce9854c40d450
