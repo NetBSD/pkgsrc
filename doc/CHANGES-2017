@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.735 2017/02/14 10:30:12 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.736 2017/02/14 10:36:11 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -930,3 +930,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-lexicon to 1.2.4 [fhajny 2017-02-14]
 	Updated sysutils/consul to 0.7.4 [fhajny 2017-02-14]
 	Updated databases/redis to 3.2.8 [fhajny 2017-02-14]
+	Updated databases/elasticsearch to 5.2.0 [fhajny 2017-02-14]
