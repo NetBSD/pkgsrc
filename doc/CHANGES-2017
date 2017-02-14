@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.729 2017/02/14 08:05:57 adam Exp $
+$NetBSD: CHANGES-2017,v 1.730 2017/02/14 10:04:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -923,3 +923,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-pystache version 0.5.4 [adam 2017-02-14]
 	Updated www/py-static to 1.1.1 [adam 2017-02-14]
 	Updated devel/nasm to 2.12.02 [adam 2017-02-14]
+	Updated editors/texworks to 0.6.1 [markd 2017-02-14]
+	Updated lang/py-cxfreeze to 5.0.1 [markd 2017-02-14]
