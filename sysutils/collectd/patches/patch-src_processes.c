@@ -1,8 +1,8 @@
-$NetBSD: patch-src_processes.c,v 1.5 2017/01/19 17:20:42 he Exp $
+$NetBSD: patch-src_processes.c,v 1.6 2017/02/14 21:23:13 joerg Exp $
 
 Add a port to NetBSD.
 
---- src/processes.c.orig	2016-11-30 08:52:01.000000000 +0000
+--- src/processes.c.orig	2017-01-23 07:53:57.000000000 +0000
 +++ src/processes.c
 @@ -95,14 +95,14 @@
  /* #endif KERNEL_LINUX */
@@ -21,7 +21,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
  #include <procinfo.h>
-@@ -244,10 +244,15 @@ static long pagesize_g;
+@@ -244,10 +244,15 @@ static void ps_fill_details(const procst
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -39,7 +39,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
  static struct procentry64 procentry[MAXPROCENTRY];
-@@ -607,10 +612,21 @@ static int ps_init(void) {
+@@ -601,10 +606,21 @@ static int ps_init(void) {
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -63,7 +63,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
    pagesize = getpagesize();
-@@ -1917,6 +1933,191 @@ static int ps_read(void) {
+@@ -1896,6 +1912,187 @@ static int ps_read(void) {
      ps_submit_proc_list(ps_ptr);
  /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
  
@@ -157,13 +157,9 @@ Add a port to NetBSD.
 +      pse.vmem_data = procs[i].p_vm_dsize * pagesize;
 +      pse.vmem_code = procs[i].p_vm_tsize * pagesize;
 +      pse.stack_size = procs[i].p_vm_ssize * pagesize;
-+      pse.vmem_minflt = 0;
 +      pse.vmem_minflt_counter = procs[i].p_uru_minflt;
-+      pse.vmem_majflt = 0;
 +      pse.vmem_majflt_counter = procs[i].p_uru_majflt;
 +
-+      pse.cpu_user = 0;
-+      pse.cpu_system = 0;
 +      pse.cpu_user_counter = 0;
 +      pse.cpu_system_counter = 0;
 +      /* context switch counters not implemented */
