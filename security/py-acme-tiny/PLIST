@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/14 00:38:56 khorben Exp $
+bin/acme_tiny
+share/doc/${PYPKGPREFIX}-acme-tiny/README.md
