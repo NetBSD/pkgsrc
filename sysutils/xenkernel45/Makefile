@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/01/01 14:43:58 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2017/02/14 21:36:15 joerg Exp $
 
 VERSION=	4.5.5
 DISTNAME=	xen-${VERSION}
@@ -34,7 +34,9 @@ MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR}
 EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=parentheses-equality -Wno-error=enum-conversion \
 		-Wno-error=unused-function -Wno-error=unused-const-variable \
-		-Wno-error=ignored-attributes -Wno-error=initializer-overrides
+		-Wno-error=ignored-attributes -Wno-error=initializer-overrides \
+		-Wno-error=constant-conversion \
+		-Wno-error=address-of-packed-member
 .endif
 .if !empty(PKGSRC_COMPILER:Mgcc) && empty(CC_VERSION:Mgcc-[1-4].*)
 EXTRA_CFLAGS+=	-Wno-error=maybe-uninitialized
