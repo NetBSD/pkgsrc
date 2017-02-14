@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2017/01/25 14:36:37 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2017/02/14 09:19:43 markd Exp $
 
-DISTNAME=	texworks-0.4.5-r1281
-PKGNAME=	texworks-0.4.5
-PKGREVISION=	16
+DISTNAME=	texworks-0.6.1
 CATEGORIES=	editors
-MASTER_SITES=	http://texworks.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=TeXworks/}
+GITHUB_PROJECT=	texworks
+GITHUB_TAG=     release-${PKGVERSION_NOREV}
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texworks/
@@ -13,22 +13,17 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config gmake
-MAKE_ENV+=	INSTALL_ROOT=${DESTDIR}
+USE_CMAKE=	yes
+
+CMAKE_ARGS+=	-DWITH_LUA:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
+CMAKE_ARGS+=	-DTeXworks_DIC_DIR:PATH=share/hunspell
+CMAKE_ARGS+=	-DTeXworks_MAN_DIR:PATH=${PKGMANDIR}/man1
 
 DEPENDS+=	poppler-data>=0.4.5:../../print/poppler-data
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-configure
-SUBST_FILES.man=	Makefile
-SUBST_SED.man=		-e "s!/share/man/man1!/${PKGMANDIR}/man1!g"
-
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
-
-do-configure:
-	cd ${WRKSRC}; env QTDIR=${QTDIR} qmake INSTALL_PREFIX=${PREFIX} TW_DICPATH=${BUILDLINK_PREFIX.hunspell}/share/hunspell
 
 BUILDLINK_DEPMETHOD.qt4-tools=	full
 
