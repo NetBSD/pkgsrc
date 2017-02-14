@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2010/01/23 23:21:45 is Exp $
+$NetBSD: patch-ac,v 1.2 2017/02/14 21:27:04 joerg Exp $
+
+Pointers are not ordered. Fix the code to actually compare to the element
+and not a promoted boolean.
 
 --- src/ordinal.cpp.orig	2010-01-17 04:51:35.000000000 +0000
 +++ src/ordinal.cpp
@@ -11,3 +14,12 @@ $NetBSD: patch-ac,v 1.1 2010/01/23 23:21:45 is Exp $
  {
  }
  
+@@ -1420,7 +1420,7 @@ const Ordinal& ord::finiteFunctionalTest
+ 		if (params[index]->getImpl().psuedoCodeLevel() ==
+ 			CantorNormalElement::cantorCodeLevel) continue ;
+ 		if (maxIndex < 0) maxIndex = index ;
+-		else if (params[maxIndex]->compare(params[index]<0)) maxIndex = index ;
++		else if (params[maxIndex]->compare(*params[index]) < 0) maxIndex = index ;
+ 	}
+ 	if (maxIndex >= 0) {
+ 		bool maxPredNz = false ;
