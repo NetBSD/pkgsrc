@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/01/01 16:06:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/14 16:36:59 fhajny Exp $
 #
 
 RSYSLOG_MOD=	elasticsearch
 PKGNAME=	${DISTNAME:S/rsyslog/rsyslog-${RSYSLOG_MOD}/}
-PKGREVISION=	1
 
 DEPENDS+=	rsyslog>=${PKGVERSION_NOREV}:../../sysutils/rsyslog
 
