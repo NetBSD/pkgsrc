@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.728 2017/02/14 07:35:37 adam Exp $
+$NetBSD: CHANGES-2017,v 1.729 2017/02/14 08:05:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -922,3 +922,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/py-acme-tiny version 0.0.20170214 [khorben 2017-02-14]
 	Added www/py-pystache version 0.5.4 [adam 2017-02-14]
 	Updated www/py-static to 1.1.1 [adam 2017-02-14]
+	Updated devel/nasm to 2.12.02 [adam 2017-02-14]
