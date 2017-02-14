@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/09/18 13:36:18 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2017/02/14 09:07:37 markd Exp $
 
 PKG_OPTIONS_VAR=			PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=			dbus xft2 svg xml gnutls
@@ -92,6 +92,7 @@ CONFIGURE_ARGS+=	--with-png
 ### Enable font backend
 ###
 .  if !empty(PKG_OPTIONS:Mxft2)
+USE_TOOLS+=		pkg-config
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/libotf/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
