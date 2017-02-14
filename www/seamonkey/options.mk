@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.35 2017/02/11 12:12:25 abs Exp $
+# $NetBSD: options.mk,v 1.36 2017/02/14 14:09:28 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 
@@ -31,7 +31,6 @@ PLIST_VARS+=		gtk3
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 .include "../../x11/gtk2/buildlink3.mk"
-PLIST.gtk3=		no
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk3)
