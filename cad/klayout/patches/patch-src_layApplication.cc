@@ -1,11 +1,19 @@
-$NetBSD: patch-src_layApplication.cc,v 1.1 2016/03/15 15:15:59 mef Exp $
+$NetBSD: patch-src_layApplication.cc,v 1.2 2017/02/14 21:33:08 joerg Exp $
 
 To avoid following message
 error: 'struct sigaction' has no member named 'sa_restorer'
 
---- src/layApplication.cc.orig	2016-02-27 07:20:30.000000000 +0900
-+++ src/layApplication.cc	2016-03-08 23:52:13.000000000 +0900
-@@ -349,7 +349,7 @@ static void install_signal_handlers ()
+--- src/layApplication.cc.orig	2016-11-27 22:52:20.000000000 +0000
++++ src/layApplication.cc
+@@ -69,6 +69,7 @@
+ #  include <execinfo.h>
+ #endif
+ 
++#include <unistd.h>
+ #include <iostream>
+ #include <memory>
+ #include <algorithm>
+@@ -350,7 +351,7 @@ static void install_signal_handlers ()
    act.sa_sigaction = signal_handler;
    sigemptyset (&act.sa_mask);
    act.sa_flags = SA_SIGINFO;
