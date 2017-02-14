@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2017/02/05 18:46:29 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/02/14 21:26:22 joerg Exp $
 
 SHA1 (dpkg_1.18.22.tar.xz) = 2756deecfc0095e7ccd0c0d51abdd20cc74c3fbf
 RMD160 (dpkg_1.18.22.tar.xz) = 7f8f86eb8d495311cc8683706795d7895a0aa73f
 SHA512 (dpkg_1.18.22.tar.xz) = c4653b92d3b3ab3051e1cbe7abb757f75b8ab902a54dcd6e2379115d3f36ae7c5d6e0a00f34a3cec1a96484dc708197061824dd81e465d8627e726bfc48eb2b4
 Size (dpkg_1.18.22.tar.xz) = 4520088 bytes
+SHA1 (patch-dselect_cxx-support.cc) = 852d9b6de83062a747b61ef416436bde97c6ffb7
 SHA1 (patch-lib_compat_strsignal.c) = 7fa145059f28faa1f3e7bb34848ebd5e62941a20
