@@ -1,4 +1,4 @@
-$NetBSD: patch-CodeLite_CMakeLists.txt,v 1.1 2016/06/15 22:04:17 kamil Exp $
+$NetBSD: patch-CodeLite_CMakeLists.txt,v 1.2 2017/02/14 21:31:43 joerg Exp $
 
 Add switch for NetBSD to not fall under "other OS".
 
@@ -9,7 +9,7 @@ Add switch for NetBSD to not fall under "other OS".
      if ( IS_FREEBSD )
          set(ADDITIONAL_LIBRARIES "-lkvm")
 +    elseif ( IS_NETBSD )
-+        set(ADDITIONAL_LIBRARIES "")
++        set(ADDITIONAL_LIBRARIES "-lutil")
      elseif ( UNIX AND NOT APPLE )
          set(ADDITIONAL_LIBRARIES "-ldl -lutil")
      else ( )
