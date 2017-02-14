@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/02/13 17:24:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/02/14 12:20:43 wiz Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -18,9 +18,6 @@ ${PYSITELIB}/cherrypy/_cpchecker.pyo
 ${PYSITELIB}/cherrypy/_cpcompat.py
 ${PYSITELIB}/cherrypy/_cpcompat.pyc
 ${PYSITELIB}/cherrypy/_cpcompat.pyo
-${PLIST.py2x}${PYSITELIB}/cherrypy/_cpcompat_subprocess.py
-${PLIST.py2x}${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyc
-${PLIST.py2x}${PYSITELIB}/cherrypy/_cpcompat_subprocess.pyo
 ${PYSITELIB}/cherrypy/_cpconfig.py
 ${PYSITELIB}/cherrypy/_cpconfig.pyc
 ${PYSITELIB}/cherrypy/_cpconfig.pyo
@@ -63,9 +60,9 @@ ${PYSITELIB}/cherrypy/_cpwsgi_server.pyo
 ${PYSITELIB}/cherrypy/_helper.py
 ${PYSITELIB}/cherrypy/_helper.pyc
 ${PYSITELIB}/cherrypy/_helper.pyo
+${PYSITELIB}/cherrypy/daemon.py
 ${PYSITELIB}/cherrypy/daemon.pyc
 ${PYSITELIB}/cherrypy/daemon.pyo
-${PYSITELIB}/cherrypy/daemon.py
 ${PYSITELIB}/cherrypy/favicon.ico
 ${PYSITELIB}/cherrypy/lib/__init__.py
 ${PYSITELIB}/cherrypy/lib/__init__.pyc
@@ -309,10 +306,10 @@ ${PYSITELIB}/cherrypy/test/test_xmlrpc.pyo
 ${PYSITELIB}/cherrypy/test/webtest.py
 ${PYSITELIB}/cherrypy/test/webtest.pyc
 ${PYSITELIB}/cherrypy/test/webtest.pyo
+${PYSITELIB}/cherrypy/tutorial/README.rst
 ${PYSITELIB}/cherrypy/tutorial/__init__.py
 ${PYSITELIB}/cherrypy/tutorial/__init__.pyc
 ${PYSITELIB}/cherrypy/tutorial/__init__.pyo
-${PYSITELIB}/cherrypy/tutorial/README.rst
 ${PYSITELIB}/cherrypy/tutorial/custom_error.html
 ${PYSITELIB}/cherrypy/tutorial/pdf_file.pdf
 ${PYSITELIB}/cherrypy/tutorial/tut01_helloworld.py
@@ -346,6 +343,3 @@ ${PYSITELIB}/cherrypy/tutorial/tut10_http_errors.py
 ${PYSITELIB}/cherrypy/tutorial/tut10_http_errors.pyc
 ${PYSITELIB}/cherrypy/tutorial/tut10_http_errors.pyo
 ${PYSITELIB}/cherrypy/tutorial/tutorial.conf
-${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.py
-${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyc
-${PLIST.py2x}${PYSITELIB}/cherrypy/wsgiserver/ssl_pyopenssl.pyo
