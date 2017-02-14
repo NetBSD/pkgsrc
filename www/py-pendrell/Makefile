@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/01/01 14:44:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/14 10:26:29 wiz Exp $
 
 DISTNAME=	pendrell-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=10.0.0:../../net/py-twisted
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # as of 0.2.3
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
