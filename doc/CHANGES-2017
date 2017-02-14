@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.731 2017/02/14 10:12:45 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.732 2017/02/14 10:14:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/texworks to 0.6.1 [markd 2017-02-14]
 	Updated lang/py-cxfreeze to 5.0.1 [markd 2017-02-14]
 	Updated www/nginx to 1.10.3 [fhajny 2017-02-14]
+	Updated www/nginx-devel to 1.11.9 [fhajny 2017-02-14]
