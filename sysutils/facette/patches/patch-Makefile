@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.1 2016/03/08 16:52:44 imil Exp $
+$NetBSD: patch-Makefile,v 1.2 2017/02/14 21:24:04 joerg Exp $
 
 Make facette Makefile NetBSD-friendly.
 
@@ -8,7 +8,7 @@ Make facette Makefile NetBSD-friendly.
 
 --- Makefile.orig	2015-12-22 05:00:11.000000000 +0000
 +++ Makefile
-@@ -16,6 +16,13 @@ UNAME := $(shell uname -s)
+@@ -16,6 +16,13 @@ TAGS ?= facette \
  
  GO ?= go
  
@@ -36,6 +36,21 @@ Make facette Makefile NetBSD-friendly.
  
  .PHONY: install
  install: install-bin install-doc install-static
+@@ -118,10 +130,10 @@ $(BIN_OUTPUT): $(PKG_SRC) $(BIN_SRC) $(B
+ 	@$(call mesg_start,$(notdir $@),Building $(notdir $@)...)
+ 	@install -d -m 0755 $(dir $@) && $(GO) build \
+ 			-ldflags " \
+-				-X main.version $(VERSION) \
+-				-X main.buildDate '$(BUILD_DATE)' \
+-				$(PKG_LIST:%=-X github.com/facette/facette/%.version $(VERSION)) \
+-				$(PKG_LIST:%=-X github.com/facette/facette/%.buildDate '$(BUILD_DATE)') \
++				-X main.version=$(VERSION) \
++				-X main.buildDate='$(BUILD_DATE)' \
++				$(PKG_LIST:%=-X github.com/facette/facette/%.version=$(VERSION)) \
++				$(PKG_LIST:%=-X github.com/facette/facette/%.buildDate='$(BUILD_DATE)') \
+ 			" \
+ 			-tags "$(TAGS)" \
+ 			-o $@ cmd/$(notdir $@)/*.go && \
 @@ -277,7 +289,7 @@ $(SCRIPT_EXTRA_OUTPUT): $(SCRIPT_EXTRA)
  $(MESG_OUTPUT): $(MESG_SRC)
  	@$(call mesg_start,static,Packing $(MESG_SRC) file...)
