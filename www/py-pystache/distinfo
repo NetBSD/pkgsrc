@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/14 07:33:27 adam Exp $
+
+SHA1 (pystache-0.5.4.tar.gz) = 6a050b531c3f2bc8098dc048bd8535369134acff
+RMD160 (pystache-0.5.4.tar.gz) = 07b303af8cb3841fb1afb1bf73c625cf54b6fe94
+SHA512 (pystache-0.5.4.tar.gz) = 4ac325e1431f58f740218c9ec309821db82d89989ef4ca7fc3536dea0ef1c90e8e85ebaa7df27f33129ca02252b84bcbd7429a1ed999b496f62f174dd66502cb
+Size (pystache-0.5.4.tar.gz) = 75131 bytes
