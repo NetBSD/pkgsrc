@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.12 2017/02/13 19:06:08 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.13 2017/02/14 14:43:10 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -107,3 +107,7 @@ net/bind99: security update
 
 Pullup ticket #5199 - requested by leot
 print/cups-filters: build fix
+
+Pullup ticket #5201 - requested by wiz
+net/tigervnc: security update
+
