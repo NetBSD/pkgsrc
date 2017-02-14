@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.727 2017/02/14 00:40:23 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.728 2017/02/14 07:35:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -920,3 +920,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-djangorestframework to 3.5.4 [adam 2017-02-13]
 	Updated devel/py-serpent to 1.16 [adam 2017-02-13]
 	Added security/py-acme-tiny version 0.0.20170214 [khorben 2017-02-14]
+	Added www/py-pystache version 0.5.4 [adam 2017-02-14]
+	Updated www/py-static to 1.1.1 [adam 2017-02-14]
