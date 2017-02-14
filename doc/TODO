@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17033 2017/02/13 22:03:35 adam Exp $
+$NetBSD: TODO,v 1.17034 2017/02/14 07:35:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -1347,7 +1347,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
 	o py-spf-2.0.12t
-	o py-static-1.1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-test-runner-2.11.1
