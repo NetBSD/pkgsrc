@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2016/12/18 11:11:28 hans Exp $
+# $NetBSD: Makefile,v 1.45 2017/02/15 01:27:00 maya Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20161218
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
@@ -31,6 +32,9 @@ CFLAGS+=	-fforce-addr
 
 CFLAGS.SunOS+=	-DBSD_COMP
 LDFLAGS.SunOS+=	-lm
+
+CFLAGS+=		-DUSE_NETWORK
+LDFLAGS+=		-lpcap
 
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
