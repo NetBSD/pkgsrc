@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17034 2017/02/14 07:35:38 adam Exp $
+$NetBSD: TODO,v 1.17035 2017/02/15 09:22:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -476,6 +476,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bsdtar-3.2.2
 	o bugzilla-5.0.2
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
+	o byacc-20170201
 	o bzr-2.7.0
 	o bzr-explorer-1.3.0
 	o bzr-gtk-0.103.0
@@ -485,6 +486,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
+	o calibre-2.79.1
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -1267,7 +1269,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pitivi-0.98
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.9.1
+	o plasma-5.9.2
 	o ploticus-examples-230
 	o poco-1.7.5
 	o podcastdl-0.3.3
