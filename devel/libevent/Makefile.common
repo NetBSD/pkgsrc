@@ -1,9 +1,18 @@
-# $NetBSD: Makefile.common,v 1.2 2015/02/04 08:04:34 spz Exp $
-
+# $NetBSD: Makefile.common,v 1.3 2017/02/15 17:34:37 adam Exp $
+#
 # used by devel/libevent/Makefile
 # used by devel/py-libevent-rpcgen/Makefile
 
-LIBEVENT_VERSION=	2.0.22
+DISTNAME=	libevent-2.1.8-stable
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libevent/}
 
-DISTNAME=		libevent-${LIBEVENT_VERSION}-stable
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=levent/}
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://libevent.org/
+LICENSE=	modified-bsd
+
+GITHUB_PROJECT=	libevent
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}-stable
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/libevent/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/libevent/patches
