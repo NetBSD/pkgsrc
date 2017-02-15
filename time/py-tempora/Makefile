@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/02/13 17:20:35 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/15 02:21:53 joerg Exp $
 
 DISTNAME=	tempora-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Objects and routines pertaining to date and time
 LICENSE=	mit
 
 USE_LANGUAGES=		# none
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
