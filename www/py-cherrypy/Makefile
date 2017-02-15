@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/02/13 17:24:30 adam Exp $
+# $NetBSD: Makefile,v 1.18 2017/02/15 23:21:07 joerg Exp $
 
 DISTNAME=	CherryPy-10.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -16,6 +16,7 @@ REPLACE_PYTHON+=	cherrypy/test/sessiondemo.py
 
 DEPENDS+=	${PYPKGPREFIX}-cheroot-[0-9]*:../../www/py-cheroot
 DEPENDS+=	${PYPKGPREFIX}-portend-[0-9]*:../../net/py-portend
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
