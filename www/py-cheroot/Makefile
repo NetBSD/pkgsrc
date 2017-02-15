@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/13 17:22:07 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/15 23:21:07 joerg Exp $
 
 DISTNAME=	cheroot-5.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	High-performance, pure-Python HTTP server used by CherryPy
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=		# none
+
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
