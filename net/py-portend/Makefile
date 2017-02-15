@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/13 17:20:06 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/15 23:21:07 joerg Exp $
 
 DISTNAME=	portend-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=		# none
 
 DEPENDS+=	${PYPKGPREFIX}-tempora-[0-9]*:../../time/py-tempora
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
