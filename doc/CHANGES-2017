@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.741 2017/02/15 17:36:38 adam Exp $
+$NetBSD: CHANGES-2017,v 1.742 2017/02/15 20:52:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/simh to 4.0.0.20161218nb1 [maya 2017-02-15]
 	Updated devel/p5-Test-BDD-Cucumber to 0.52 [schmonz 2017-02-15]
 	Updated devel/libevent to 2.1.8 [adam 2017-02-15]
+	Updated www/logswan to 1.07 [maya 2017-02-15]
