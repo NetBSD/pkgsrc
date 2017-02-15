@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/01/24 13:18:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/02/15 00:53:26 joerg Exp $
 
 DISTNAME=	parsedatetime-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +14,7 @@ GITHUB_PROJECT=	parsedatetime
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-future-[0-9]*:../../devel/py-future
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
