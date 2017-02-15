@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/12/18 18:49:39 maya Exp $
+$NetBSD: distinfo,v 1.7 2017/02/15 20:51:57 maya Exp $
 
-SHA1 (logswan-1.06.tar.gz) = 2885b0e9ce8760fd99c3901c89bf9c7e766f322d
-RMD160 (logswan-1.06.tar.gz) = 67816fbf92747dded4618fb2dd8d9224c0a8104f
-SHA512 (logswan-1.06.tar.gz) = f9c38e267ef47816fd0c6b6dc9a4d6c145c71bf9eadd22a8dd93f6897646407c48ede1c96c73cf82ea911409ccf33b7bf8979275dd0265e5c3ee616f9654d6a6
-Size (logswan-1.06.tar.gz) = 18621 bytes
-SHA1 (patch-CMakeLists.txt) = 1933d865dd34f4ca56e244541430479177faf958
+SHA1 (logswan-1.07.tar.gz) = d12e2f480549eac8801e36600647f72cff3dd72a
+RMD160 (logswan-1.07.tar.gz) = b6a6bb17764096b1b5bdad739d0770d141aca9d1
+SHA512 (logswan-1.07.tar.gz) = c87af5cb01ee7c6d005593f64b76d1670e4182f07ed612df21d10be8e16f41ffa7a2000706a5e34391c99126f67781f5f43e38e409c44c9045316a11f69eed19
+Size (logswan-1.07.tar.gz) = 18697 bytes
