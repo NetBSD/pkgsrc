@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17035 2017/02/15 09:22:13 wiz Exp $
+$NetBSD: TODO,v 1.17036 2017/02/15 09:25:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1175,6 +1175,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-AuthCAS-1.6
 	o p5-Authen-TacacsPlus-0.26
 	o p5-CDDB-2.00
+	o p5-CPAN-2.16
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
@@ -1185,6 +1186,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
+	o p5-IO-Socket-SSL-2.045
 	o p5-IP-Country-3.03
 	o p5-Memoize-Memcached-0.11
 	o p5-Net-ManageSieve-0.13
@@ -1212,12 +1214,15 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
+	o p5-Specio-0.35
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
 	o p5-X11-Protocol-29
+	o p5-YAML-1.22
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
+	o p5-libwww-6.19
 	o p5-pcsc-1.4.14
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
