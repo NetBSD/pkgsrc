@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/08/12 14:39:06 he Exp $
+$NetBSD: patch-ab,v 1.1.96.1 2017/02/15 19:39:10 bsiegert Exp $
+
+Document that escape sequence converts to "telnet break" when using telnet.
 
 --- conserver.cf/conserver.cf.man.orig	2004-11-06 01:20:30.000000000 +0100
 +++ conserver.cf/conserver.cf.man
