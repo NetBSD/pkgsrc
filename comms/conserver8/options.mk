@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/06/20 15:25:39 schnoebe Exp $
+# $NetBSD: options.mk,v 1.4.6.1 2017/02/15 19:39:10 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
 
@@ -7,7 +7,13 @@ PKG_OPTIONS_GROUP.connectivity=inet6 uds
 
 PKG_SUPPORTED_OPTIONS=	pam ssl
 
-PKG_SUGGESTED_OPTIONS=	ssl inet6
+PKG_SUGGESTED_OPTIONS=	ssl
+
+# The BSDs require separate inet6 & inet sockets,
+# and conserver8 doesn't have code to do that as of 8.2.1
+.if ${OPSYS} != "NetBSD" && ${OPSYS} != "FreeBSD" && ${OPSYS} != "OpenBSD" && ${OPSYS} != "DragonFly"
+PKG_SUGGESTED_OPTIONS+=	inet6
+.endif
 
 .include "../../mk/bsd.options.mk"
 
