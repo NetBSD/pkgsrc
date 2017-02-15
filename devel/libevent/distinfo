@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.32 2015/11/03 03:27:40 agc Exp $
+$NetBSD: distinfo,v 1.33 2017/02/15 17:34:37 adam Exp $
 
-SHA1 (libevent-2.0.22-stable.tar.gz) = a586882bc93a208318c70fc7077ed8fca9862864
-RMD160 (libevent-2.0.22-stable.tar.gz) = 6a7e8e3ebcfd2227fa807a604b5c773c90c8b8cc
-SHA512 (libevent-2.0.22-stable.tar.gz) = 990637f12e890bfa7f86c194c8b112701436e92b60afb829194879efb85d558b986261e6508fe29bde73981feada874438e2d442cec8ea5730c889954f9bc907
-Size (libevent-2.0.22-stable.tar.gz) = 854987 bytes
-SHA1 (patch-Makefile.am) = 4bada3e2ddb6cff34edf92abbe22e5d9a64b8ee8
-SHA1 (patch-Makefile.in) = 8fcd6f893c3c967599fa4f528953e449e85ac8f0
-SHA1 (patch-evutil__rand.c) = e8e0bbccd27ccbb7a9cf077352a8c56a35e87b47
+SHA1 (libevent-2.1.8-stable.tar.gz) = 2a1b8bb7a262d3fd0ed6a080a20991a6eed675ec
+RMD160 (libevent-2.1.8-stable.tar.gz) = 6c7ce8cb51279f9b6b8d8897192db6a2da3d6797
+SHA512 (libevent-2.1.8-stable.tar.gz) = a2fd3dd111e73634e4aeb1b29d06e420b15c024d7b47778883b5f8a4ff320b5057a8164c6d50b53bd196c79d572ce2639fe6265e03a93304b09c22b41e4c2a17
+Size (libevent-2.1.8-stable.tar.gz) = 1026485 bytes
+SHA1 (patch-Makefile.in) = 09c7524eb8657e1f76232db97273806a8c900219
+SHA1 (patch-evutil__rand.c) = 28f7e540e85d1e13f7ca71b2dff22eafb1a804b1
