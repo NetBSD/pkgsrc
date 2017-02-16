@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2017/02/10 05:51:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/02/16 09:46:54 adam Exp $
 bin/inkscape
 bin/inkview
 lib/inkscape/lib2geom_LIB.a
@@ -697,6 +697,16 @@ share/inkscape/tutorials/edge3d.svg
 share/inkscape/tutorials/gpl-2.svg
 share/inkscape/tutorials/making_markers.svg
 share/inkscape/tutorials/oldguitar.jpg
+share/inkscape/tutorials/pixelart-dialog.de.png
+share/inkscape/tutorials/pixelart-dialog.el.png
+share/inkscape/tutorials/pixelart-dialog.en.png
+share/inkscape/tutorials/pixelart-dialog.fr.png
+share/inkscape/tutorials/pixelart-dialog.nl.png
+share/inkscape/tutorials/pixelart-dialog.png
+share/inkscape/tutorials/pixelart-dialog.pt.png
+share/inkscape/tutorials/pixelart-dialog.ru.png
+share/inkscape/tutorials/pixelart-dialog.sk.png
+share/inkscape/tutorials/pixelart-dialog.zh_TW.png
 share/inkscape/tutorials/potrace.be.png
 share/inkscape/tutorials/potrace.ca.png
 share/inkscape/tutorials/potrace.de.png
@@ -885,6 +895,8 @@ share/inkscape/tutorials/tutorial-tracing-pixelart.el.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.fr.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.nl.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.pt.svg
+share/inkscape/tutorials/tutorial-tracing-pixelart.ru.svg
+share/inkscape/tutorials/tutorial-tracing-pixelart.sk.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.svg
 share/inkscape/tutorials/tutorial-tracing-pixelart.zh_TW.svg
 share/inkscape/tutorials/tutorial-tracing.be.svg
