@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:26 agc Exp $
+# $NetBSD: Makefile,v 1.34 2017/02/16 05:52:55 msaitoh Exp $
 
-DISTNAME=	pciutils-3.5.2
+DISTNAME=	pciutils-3.5.3
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/
 MASTER_SITES+=	ftp://ftp.kernel.org/pub/software/utils/pciutils/
