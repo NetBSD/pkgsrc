@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.744 2017/02/16 10:47:29 adam Exp $
+$NetBSD: CHANGES-2017,v 1.745 2017/02/16 11:10:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -939,3 +939,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/logswan to 1.07 [maya 2017-02-15]
 	Updated sysutils/pciutils to 3.5.3 [msaitoh 2017-02-16]
 	Updated graphics/inkscape to 0.92.1 [adam 2017-02-16]
+	Updated net/py-twisted to 17.1.0nb1 [wiz 2017-02-16]
