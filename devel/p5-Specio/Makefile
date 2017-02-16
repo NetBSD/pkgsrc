@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/01/30 01:47:44 wen Exp $
+# $NetBSD: Makefile,v 1.11 2017/02/16 15:10:04 wiz Exp $
 
-DISTNAME=	Specio-0.34
+DISTNAME=	Specio-0.35
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
@@ -14,6 +14,7 @@ DEPENDS+=	p5-Eval-Closure-[0-9]*:../../devel/p5-Eval-Closure
 DEPENDS+=	p5-Role-Tiny>=1.003003:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=	p5-Devel-StackTrace-[0-9]*:../../devel/p5-Devel-StackTrace
+DEPENDS+=	p5-Module-Runtime-[0-9]*:../../devel/p5-Module-Runtime
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	p5-Test-Needs-[0-9]*:../../devel/p5-Test-Needs
