@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.272 2017/02/11 08:27:33 ryoon Exp $
+$NetBSD: distinfo,v 1.273 2017/02/16 02:25:16 maya Exp $
 
 SHA1 (firefox-51.0.1.source.tar.xz) = b73255fd4f90fd0c1b107b566679da2df3f31cf1
 RMD160 (firefox-51.0.1.source.tar.xz) = 6acc6fc8e3e317842d75b0233a24b0f19c9d3f34
@@ -6,7 +6,7 @@ SHA512 (firefox-51.0.1.source.tar.xz) = 556e31b717c0640ef5e181e00b9d2a6ea0ace7c1
 Size (firefox-51.0.1.source.tar.xz) = 202142716 bytes
 SHA1 (patch-aa) = 42dbb30745fc0e40cf582376c8fbfcd0715fcf5e
 SHA1 (patch-ao) = 1564bc503670dc07ec8b9b43927f0c5879f3a44d
-SHA1 (patch-as) = d01c9173f1055cbafff4b08bcd5bbbc2eca63044
+SHA1 (patch-as) = 632ebd35287f8f97d18721d39a0514d4cdbb12cc
 SHA1 (patch-browser_app_nsBrowserApp.cpp) = f109f5430e1b9fd11f8263d756bea0572b8ffa20
 SHA1 (patch-browser_components_nsBrowserGlue.js) = 01eef808fadc361215e60e44d79cfc8a4336107f
 SHA1 (patch-browser_installer_package-manifest.in) = d1f003f9ac65e12eb04b1d19a4d9a780bded9fd9
@@ -14,6 +14,7 @@ SHA1 (patch-browser_themes_shared_icon-colors.inc.svg) = 222924b45ceb00d712cbc5b
 SHA1 (patch-build_autoconf_toolchain.m4) = f7f5ad59a7cefbc7989e99f10b48520f1bd4bad1
 SHA1 (patch-build_gyp.mozbuild) = 481270e6703e556fb87a3440cb3cfb3d4fcc4c86
 SHA1 (patch-build_moz.configure_init.configure) = f2df0c6b92aa825a61f6a4ee1f70f5443c61858e
+SHA1 (patch-build_moz.configure_memory.configure) = 46237c1415eff3f99d4889a6300ec96af925f0a6
 SHA1 (patch-build_moz.configure_old.configure) = 143e1d0b416b33ae92950f347898cf6ed22d0f6f
 SHA1 (patch-build_moz.configure_toolchain.configure) = f02501a573b65f3e9c793c6146f26dd1d3e19222
 SHA1 (patch-build_pgo_profileserver.py) = 48ad50f716eda2157cbc225298f6672f164b4207
