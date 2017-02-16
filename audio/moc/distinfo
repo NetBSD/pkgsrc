@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2017/01/30 04:19:22 maya Exp $
+$NetBSD: distinfo,v 1.13 2017/02/16 13:31:44 maya Exp $
 
 SHA1 (moc-2.5.0.tar.bz2) = a02c10075541995771dbdccb7f2d0ecd19d70b81
 RMD160 (moc-2.5.0.tar.bz2) = 0c5d927b7c8ef54338ff6970f9e5d4f71dcb6168
@@ -7,5 +7,4 @@ Size (moc-2.5.0.tar.bz2) = 594532 bytes
 SHA1 (patch-ab) = 37a3cc45df7b528613ce5c714c95895988f1570c
 SHA1 (patch-ad) = 4d4d73f819717698b37ca937477989b010adb5c8
 SHA1 (patch-decoder__plugins_vorbis_vorbis.m4) = 50f2967146be40a6d6b881cdffe5f25c4c226175
-SHA1 (patch-interface__elements.c) = ce04fadc67b823dcef48dfbcfcfcad25213dab51
 SHA1 (patch-playlist__file.c) = cc2d5280992d713c846bfe16e8869238df6dca5d
