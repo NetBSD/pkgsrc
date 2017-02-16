@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/11/23 09:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/16 17:33:44 joerg Exp $
 
 DISTNAME=	XML-Compile-Tester-0.90
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	textproc
+PKGREVISION=	2
+CATEGORIES=	devel textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MA/MARKOV/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
