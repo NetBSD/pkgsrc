@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2016/12/30 07:08:34 adam Exp $
+# $NetBSD: options.mk,v 1.20 2017/02/16 13:09:19 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_SUPPORTED_OPTIONS=	acl dnssd kerberos pam tcpwrappers
@@ -59,6 +59,7 @@ CONFIGURE_ARGS+=	--disable-dnssd
 CONFIGURE_ARGS+=	--enable-gssapi
 .else
 CONFIGURE_ARGS+=	--disable-gssapi
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.nokerberos
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibusb)
@@ -77,7 +78,7 @@ MESSAGE_SRC+=		${PKGDIR}/MESSAGE.pam
 PLIST.pam=		yes
 .else
 CONFIGURE_ARGS+=	--disable-pam
-MESSAGE_SRC=		${.CURDIR}/MESSAGE
+MESSAGE_SRC+=		${.CURDIR}/MESSAGE
 .endif
 
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
