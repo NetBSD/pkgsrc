@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2362 2017/02/13 21:18:14 adam Exp $
+# $NetBSD: Makefile,v 1.2363 2017/02/16 07:48:42 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1312,6 +1312,7 @@ SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-LDAP-Batch
 SUBDIR+=	p5-Net-LDAP-Class
+SUBDIR+=	p5-Net-LDAP-SID
 SUBDIR+=	p5-Net-LDAP-Server-Test
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
@@ -1996,6 +1997,7 @@ SUBDIR+=	qof
 SUBDIR+=	qore-uuid-module
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
+SUBDIR+=	radamsa
 SUBDIR+=	radare2
 SUBDIR+=	radare2-valabind
 SUBDIR+=	ragel
