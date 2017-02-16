@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.749 2017/02/16 14:31:00 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.750 2017/02/16 14:48:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -944,3 +944,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/moc to 2.5.0nb5 [maya 2017-02-16]
 	Updated security/pcsc-lite to 1.8.20 [gdt 2017-02-16]
 	Updated security/ccid to 1.4.26 [gdt 2017-02-16]
+	Updated security/pcsc-tools to 1.4.27 [gdt 2017-02-16]
