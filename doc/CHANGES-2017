@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.742 2017/02/15 20:52:20 maya Exp $
+$NetBSD: CHANGES-2017,v 1.743 2017/02/16 05:55:09 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -937,3 +937,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-BDD-Cucumber to 0.52 [schmonz 2017-02-15]
 	Updated devel/libevent to 2.1.8 [adam 2017-02-15]
 	Updated www/logswan to 1.07 [maya 2017-02-15]
+	Updated sysutils/pciutils to 3.5.3 [msaitoh 2017-02-16]
