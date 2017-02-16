@@ -1,16 +1,16 @@
---- Makefile.orig	2016-10-04 04:58:31.000000000 +0900
-+++ Makefile	2016-10-07 14:59:10.000000000 +0900
+--- Makefile.orig	2017-02-15 18:17:08.000000000 +0900
++++ Makefile	2017-02-16 12:34:04.536298774 +0900
 @@ -1,8 +1,7 @@
  # Makefile for The PCI Utilities
- # (c) 1998--2016 Martin Mares <mj@ucw.cz>
+ # (c) 1998--2017 Martin Mares <mj@ucw.cz>
  
 -OPT=-O2
 -CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
 +CFLAGS=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
  
- VERSION=3.5.2
- DATE=2016-10-03
-@@ -13,7 +12,7 @@
+ VERSION=3.5.3
+ DATE=2017-02-15
+@@ -13,7 +12,7 @@ RELEASE=
  CROSS_COMPILE=
  
  # Support for compressed pci.ids (yes/no, default: detect)
@@ -19,7 +19,7 @@
  
  # Support for resolving ID's by DNS (yes/no, default: detect)
  DNS=
-@@ -29,23 +28,23 @@
+@@ -29,23 +28,23 @@ HWDB=
  
  # ABI version suffix in the name of the shared library
  # (as we use proper symbol versioning, this seldom needs changing)
@@ -52,7 +52,7 @@
  AR=$(CROSS_COMPILE)ar
  RANLIB=$(CROSS_COMPILE)ranlib
  
-@@ -110,12 +109,18 @@
+@@ -110,12 +109,18 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
@@ -77,7 +77,7 @@
  ifeq ($(SHARED),yes)
  ifeq ($(LIBEXT),dylib)
  	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME)$(ABI_VERSION).$(LIBEXT)
-@@ -129,13 +134,14 @@
+@@ -129,13 +134,14 @@ install: install-pcilib
  endif
  
  install-pcilib: lib/$(PCILIB)
