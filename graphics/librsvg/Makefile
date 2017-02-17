@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.92 2017/02/12 06:52:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.93 2017/02/17 17:03:19 joerg Exp $
 
 DISTNAME=	librsvg-2.40.15
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -48,11 +48,12 @@ CONFIGURE_ARGS+=	--disable-introspection
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPMETHOD.cairo-gobject+=	build
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2/loaders.mk"
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
