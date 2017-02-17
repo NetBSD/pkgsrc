@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/01/30 19:49:26 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/17 17:09:16 joerg Exp $
 
 DISTNAME=	amath-1.6.2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://suyai.innolan.net/
 
