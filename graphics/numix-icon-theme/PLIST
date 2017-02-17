@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/14 15:44:13 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/02/17 17:03:50 joerg Exp $
 share/icons/Numix-Light/16/animations/nm-stage01-connecting01.svg
 share/icons/Numix-Light/16/animations/nm-stage01-connecting02.svg
 share/icons/Numix-Light/16/animations/nm-stage01-connecting03.svg
@@ -6198,6 +6198,7 @@ share/icons/Numix/16/mimetypes/text-rust.svg
 share/icons/Numix/16/mimetypes/text-sgml.svg
 share/icons/Numix/16/mimetypes/text-spreadsheet.svg
 share/icons/Numix/16/mimetypes/text-vcalendar.svg
+share/icons/Numix/16/mimetypes/text-x-R.svg
 share/icons/Numix/16/mimetypes/text-x-arduino.svg
 share/icons/Numix/16/mimetypes/text-x-authors.svg
 share/icons/Numix/16/mimetypes/text-x-bak.svg
@@ -10403,6 +10404,7 @@ share/icons/Numix/22/mimetypes/text-rust.svg
 share/icons/Numix/22/mimetypes/text-sgml.svg
 share/icons/Numix/22/mimetypes/text-spreadsheet.svg
 share/icons/Numix/22/mimetypes/text-vcalendar.svg
+share/icons/Numix/22/mimetypes/text-x-R.svg
 share/icons/Numix/22/mimetypes/text-x-arduino.svg
 share/icons/Numix/22/mimetypes/text-x-authors.svg
 share/icons/Numix/22/mimetypes/text-x-bak.svg
@@ -14547,6 +14549,7 @@ share/icons/Numix/24/mimetypes/text-rust.svg
 share/icons/Numix/24/mimetypes/text-sgml.svg
 share/icons/Numix/24/mimetypes/text-spreadsheet.svg
 share/icons/Numix/24/mimetypes/text-vcalendar.svg
+share/icons/Numix/24/mimetypes/text-x-R.svg
 share/icons/Numix/24/mimetypes/text-x-arduino.svg
 share/icons/Numix/24/mimetypes/text-x-authors.svg
 share/icons/Numix/24/mimetypes/text-x-bak.svg
@@ -18653,6 +18656,7 @@ share/icons/Numix/32/mimetypes/text-rust.svg
 share/icons/Numix/32/mimetypes/text-sgml.svg
 share/icons/Numix/32/mimetypes/text-spreadsheet.svg
 share/icons/Numix/32/mimetypes/text-vcalendar.svg
+share/icons/Numix/32/mimetypes/text-x-R.svg
 share/icons/Numix/32/mimetypes/text-x-arduino.svg
 share/icons/Numix/32/mimetypes/text-x-authors.svg
 share/icons/Numix/32/mimetypes/text-x-bak.svg
@@ -21531,6 +21535,7 @@ share/icons/Numix/48/mimetypes/text-rust.svg
 share/icons/Numix/48/mimetypes/text-sgml.svg
 share/icons/Numix/48/mimetypes/text-spreadsheet.svg
 share/icons/Numix/48/mimetypes/text-vcalendar.svg
+share/icons/Numix/48/mimetypes/text-x-R.svg
 share/icons/Numix/48/mimetypes/text-x-arduino.svg
 share/icons/Numix/48/mimetypes/text-x-authors.svg
 share/icons/Numix/48/mimetypes/text-x-bak.svg
@@ -24442,6 +24447,7 @@ share/icons/Numix/64/mimetypes/text-rust.svg
 share/icons/Numix/64/mimetypes/text-sgml.svg
 share/icons/Numix/64/mimetypes/text-spreadsheet.svg
 share/icons/Numix/64/mimetypes/text-vcalendar.svg
+share/icons/Numix/64/mimetypes/text-x-R.svg
 share/icons/Numix/64/mimetypes/text-x-arduino.svg
 share/icons/Numix/64/mimetypes/text-x-authors.svg
 share/icons/Numix/64/mimetypes/text-x-bak.svg
