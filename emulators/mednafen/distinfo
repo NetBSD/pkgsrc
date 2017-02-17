@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.15 2016/12/17 14:24:37 joerg Exp $
+$NetBSD: distinfo,v 1.16 2017/02/17 17:02:45 joerg Exp $
 
 SHA1 (mednafen-0.8.D.3.tar.bz2) = b19b92101853cb653506456fd8ab1c0bb0b6e636
 RMD160 (mednafen-0.8.D.3.tar.bz2) = 546f49a9541ba4d0367fe682aef23cdadf3d7325
 SHA512 (mednafen-0.8.D.3.tar.bz2) = 40c47554ae42025640c754fe4a578f5b6e1adb623418126adca587b2795ae4e6581d6d96ffa497849706a1ea4d11f9962c44df2040ead788670e6314d8a9b7e7
 Size (mednafen-0.8.D.3.tar.bz2) = 2442705 bytes
 SHA1 (patch-src_cdrom_cdromfile.cpp) = 870e5563cc2a0d69826cc8931305aa982303aaf0
+SHA1 (patch-src_file.cpp) = 471e1bbbdd0ca7bf0648810dd16875ab3c70c97f
 SHA1 (patch-src_mempatcher.cpp) = 43fbb9d00948f485dd61594f10a91fc28fdb84eb
 SHA1 (patch-src_nes_ines.cpp) = e9d3a8c151ffe5e21ad5ddef64a7ba4b95e2b851
 SHA1 (patch-src_psf.cpp) = e3e60fd90cbcb0d5dac32e5ab9bfb71f94a879f1
