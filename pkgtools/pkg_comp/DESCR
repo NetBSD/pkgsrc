@@ -1,0 +1,6 @@
+pkg_comp is a tool to automate the maintenance of pkgsrc binary packages
+and the pkgsrc source tree by means of a single command and a configuration
+file that tells pkg_comp what to do.
+
+Make sure to check the pgbuild-user package for a way to trivially set
+up periodic package rebuilds.
