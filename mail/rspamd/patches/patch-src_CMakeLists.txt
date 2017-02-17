@@ -1,15 +1,16 @@
-$NetBSD: patch-src_CMakeLists.txt,v 1.1 2016/08/27 15:07:42 wiz Exp $
+$NetBSD: patch-src_CMakeLists.txt,v 1.2 2017/02/17 15:01:33 wiz Exp $
 
 Add librt to link line for shm_open().
 
---- src/CMakeLists.txt.orig	2016-07-23 16:14:45.000000000 +0000
+--- src/CMakeLists.txt.orig	2016-10-17 14:30:59.000000000 +0000
 +++ src/CMakeLists.txt
-@@ -140,6 +140,8 @@ TARGET_LINK_LIBRARIES(rspamd-server rspa
- TARGET_LINK_LIBRARIES(rspamd-server rspamd-cdb)
- TARGET_LINK_LIBRARIES(rspamd-server rspamd-lpeg)
+@@ -141,6 +141,9 @@ TARGET_LINK_LIBRARIES(rspamd-server rspa
  TARGET_LINK_LIBRARIES(rspamd-server lcbtrie)
+ TARGET_LINK_LIBRARIES(rspamd-server rspamd-zstd)
+ 
 +# for shm_open
 +TARGET_LINK_LIBRARIES(rspamd-server rt)
- 
++
  IF (ENABLE_CLANG_PLUGIN MATCHES "ON")
  	ADD_DEPENDENCIES(rspamd-server rspamd-clang)
+ ENDIF()
