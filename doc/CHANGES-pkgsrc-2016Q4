@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.13 2017/02/14 14:43:10 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.14 2017/02/17 19:19:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -110,4 +110,10 @@ print/cups-filters: build fix
 
 Pullup ticket #5201 - requested by wiz
 net/tigervnc: security update
+
+Pullup ticket #5212 - requested by he
+comms/conserver8: bugfix
+
+Pullup ticket #5214 - requested by maya
+devel/memcached: security fix
 
