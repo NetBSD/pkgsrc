@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2017/02/17 21:23:42 jmmv Exp $
+share/sandboxctl/darwin_native.subr
+${TESTS}tests/sandboxctl/modules/darwin_native_test
