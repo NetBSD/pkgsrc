@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2016/08/15 10:24:31 richard Exp $
+$NetBSD: distinfo,v 1.11 2017/02/17 17:07:32 joerg Exp $
 
 SHA1 (mono-2.10.9.tar.bz2) = 1a6e8c5a0c3d88d87982259aa04402e028a283de
 RMD160 (mono-2.10.9.tar.bz2) = ac9784c413eb2cdb490750a86a96cce5c11ad5bd
@@ -22,7 +22,7 @@ SHA1 (patch-aq) = a356e520eeb95a8c3bb1485cb460710703882e39
 SHA1 (patch-ar) = 7a2a916f3362da087b2dcfe6b91ba47339151e5b
 SHA1 (patch-as) = 9f434c84f57e985d4734872e2dbce1079c87fcfa
 SHA1 (patch-ba) = 872ca1579a5a3e4003b17d3406abe9c5d3a935cf
-SHA1 (patch-bc) = bbf1a903cf7fee1dbd3a070b0ef0d5aecbdf67e2
+SHA1 (patch-bc) = 39b34f40176ea34362e82637ad8de90fb2eb11db
 SHA1 (patch-bd) = 15c803bf85ad36ad08bcaaf7dbc371a6473ae5f2
 SHA1 (patch-be) = d7a6232690ecd15c32ed44dcc498e596c248f332
 SHA1 (patch-bf) = e945b13fbffc1239a4c459a2c6be543e67e883f9
@@ -52,3 +52,4 @@ SHA1 (patch-mcs_class_System.Web_System.Web.dll.sources) = 751139d6dc4bf8f2cda76
 SHA1 (patch-mcs_class_System.Web_System.Web_WebROCollection.cs) = ff95c3898df3aa4809d1222c29f9bf81e87e9af1
 SHA1 (patch-mono_profiler_proflog.c) = 2f7826873ab7fdb858db3d39606028ee87a34a46
 SHA1 (patch-mono_utils_mono-compiler.h) = 0dce7994bdb350f7080464f416b725cbe3e7e293
+SHA1 (patch-mono_utils_mono-tls.h) = 6230428437c77123227c2f9b5fd859c09b9fb471
