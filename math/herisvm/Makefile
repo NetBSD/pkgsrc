@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/07/25 09:18:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/17 11:12:15 cheusov Exp $
 
-DISTNAME=		herisvm-0.7.0
+DISTNAME=		herisvm-0.8.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cheusov/}
 
