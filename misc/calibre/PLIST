@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.76 2017/02/05 18:34:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.77 2017/02/17 15:43:43 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -346,7 +346,6 @@ lib/calibre/calibre/ebooks/metadata/html.py
 lib/calibre/calibre/ebooks/metadata/imp.py
 lib/calibre/calibre/ebooks/metadata/kdl.py
 lib/calibre/calibre/ebooks/metadata/kfx.py
-lib/calibre/calibre/ebooks/metadata/library_thing.py
 lib/calibre/calibre/ebooks/metadata/lit.py
 lib/calibre/calibre/ebooks/metadata/lrx.py
 lib/calibre/calibre/ebooks/metadata/meta.py
@@ -3314,7 +3313,6 @@ share/calibre/recipes/the_manila_bulletin.recipe
 share/calibre/recipes/the_manila_times.recipe
 share/calibre/recipes/the_marker.recipe
 share/calibre/recipes/the_nation.recipe
-share/calibre/recipes/the_nation_thai.recipe
 share/calibre/recipes/the_new_age_za.recipe
 share/calibre/recipes/the_new_republic.recipe
 share/calibre/recipes/the_oz.recipe
