@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2017/02/17 17:00:03 joerg Exp $
 
 --- common/ttio.c.orig	1997-02-21 23:06:09.000000000 +0000
 +++ common/ttio.c
-@@ -45,12 +45,20 @@ static char copyright[] =
+@@ -45,12 +45,21 @@ static char copyright[] =
  #include "osdep.h"
  #include "cdefs.h"
  #include "global.h"
@@ -14,6 +14,7 @@ $NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
  #include "ttio.h"
  #include <pwd.h>
 +#include <stdlib.h>
++#include <sys/stat.h>
 +#include <sys/ioctl.h>
 +#ifndef __sun
 +#include <util.h>
@@ -23,7 +24,7 @@ $NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
  
  static void dectl PROTO ((char *, int, char *, int, char *));
  
-@@ -73,6 +81,16 @@ int ttsetup (name)
+@@ -73,6 +82,16 @@ int ttsetup (name)
      {
        if (chown (nbuf, pw -> pw_uid, pw -> pw_gid) < 0)
  	warn ("Can't set owner on %s: %m", nbuf);
@@ -40,7 +41,7 @@ $NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
      }
  
    /* Open the terminal device. */
-@@ -131,20 +149,19 @@ int ttsetup (name)
+@@ -131,20 +150,19 @@ int ttsetup (name)
    return fd;
  }
  
@@ -64,7 +65,7 @@ $NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
  {
    int i;
  
-@@ -203,10 +220,8 @@ static int tteof = 0;
+@@ -203,10 +221,8 @@ static int tteof = 0;
  
  /* Match the specified string with input from the specified tty.
     Return nonzero if input matches, zero if not. */
@@ -77,7 +78,7 @@ $NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
  {
    TIME entry, now, to;
    int cur, curmatch, next;
-@@ -230,7 +245,7 @@ ttmatch (ANSI_DECL (int) tty, ANSI_DECL 
+@@ -230,7 +246,7 @@ ttmatch (ANSI_DECL (int) tty, ANSI_DECL 
  	 match, try reading some more data from the tty... */
        matchID = 1;
        VA_start (list, timeout);
@@ -86,7 +87,7 @@ $NetBSD: patch-ab,v 1.6 2013/09/10 14:15:11 joerg Exp $
  	{
  	  syslog (LOG_DEBUG, "Matching against %s", string);
  	  for (cur = ttstart; cur != ttend; cur = NEXT (cur))
-@@ -316,9 +331,7 @@ ttmatch (ANSI_DECL (int) tty, ANSI_DECL 
+@@ -316,9 +332,7 @@ ttmatch (ANSI_DECL (int) tty, ANSI_DECL 
  }
  
  /* Read a connect speed from standard in... */
