@@ -1,0 +1,7 @@
+This package sets up periodic builds of binary packages using the
+pkgtools/pkg_comp utility given minimal configuration.  All that is
+needed from the user is to determine which packages to build
+automatically.
+
+If you are on NetBSD, see also sysutils/sysbuild-user, which is the
+perfect companion to this package to periodically build the base system.
