@@ -1,0 +1,20 @@
+sandboxctl is a tool to interact with chroot-based sandboxes.
+
+The sandboxctl tool provides an automated mechanism to create and
+interact with chroot-based sandboxes.  These sandboxes can be transient
+(e.g. to run a single command within them) or long-lived (e.g. to run a
+system service in a safe manner).
+
+Sandboxes can be created using multiple mechanisms, which range from
+extracting fresh distribution sets to bind-mounting the outer file
+systems inside the sandbox.  The specific mechanism depends on the
+features supported by the underlying operating system and the chosen
+sandbox type.  Currently, sandboxctl includes support for FreeBSD,
+Linux, macOS (Darwin), and NetBSD.
+
+Each sandbox is defined via a configuration file provided by the user
+and a system-specific template provided by this package.  The user
+configuration is simple and semantically-rich, allowing the system
+administrator to not worry about the environment-specific details.
+
+This is not an official Google product.
