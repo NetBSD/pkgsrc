@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/07/14 15:44:13 youri Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/17 17:03:50 joerg Exp $
 
 GITHUB_PROJECT=	numix-icon-theme
 GITHUB_TAG=	72c00cb61622e4a0c00243eda405746866dd82f9
 DISTNAME=	numix-icon-theme-0.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=numixproject/}
 
