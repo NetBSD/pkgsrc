@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.nokerberos,v 1.1 2017/02/16 13:09:19 wiz Exp $
-
-When running a non-kerberized cupsd, you need to remove the kerberos
-section from the config file. Otherwise cupsd will not start.
-
-===========================================================================
