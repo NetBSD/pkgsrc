@@ -1,17 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/17 19:55:53 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/02/17 21:20:07 jmmv Exp $
 bin/shtk
 lib/pkgconfig/shtk.pc
 man/man1/shtk.1
 man/man3/shtk.3
+man/man3/shtk_abort.3
 man/man3/shtk_bool.3
 man/man3/shtk_bool_check.3
 man/man3/shtk_cleanup.3
 man/man3/shtk_cleanup_register.3
 man/man3/shtk_cli.3
+man/man3/shtk_cli_debug.3
 man/man3/shtk_cli_dirname.3
 man/man3/shtk_cli_error.3
 man/man3/shtk_cli_info.3
+man/man3/shtk_cli_log_level.3
 man/man3/shtk_cli_progname.3
+man/man3/shtk_cli_set_log_level.3
 man/man3/shtk_cli_usage_error.3
 man/man3/shtk_cli_warning.3
 man/man3/shtk_config.3
@@ -30,6 +34,11 @@ man/man3/shtk_cvs.3
 man/man3/shtk_cvs_checkout.3
 man/man3/shtk_cvs_fetch.3
 man/man3/shtk_cvs_update.3
+man/man3/shtk_fs.3
+man/man3/shtk_fs_join_paths.3
+man/man3/shtk_fs_normalize_path.3
+man/man3/shtk_hw.3
+man/man3/shtk_hw_ncpus.3
 man/man3/shtk_import.3
 man/man3/shtk_list.3
 man/man3/shtk_list_contains.3
@@ -59,8 +68,8 @@ man/man3/shtk_version_is.3
 share/aclocal/shtk.m4
 share/doc/shtk/AUTHORS
 share/doc/shtk/COPYING
-share/doc/shtk/NEWS
-share/doc/shtk/README
+share/doc/shtk/NEWS.md
+share/doc/shtk/README.md
 share/shtk/base.subr
 share/shtk/bool.subr
 share/shtk/bootstrap.subr
@@ -68,6 +77,8 @@ share/shtk/cleanup.subr
 share/shtk/cli.subr
 share/shtk/config.subr
 share/shtk/cvs.subr
+share/shtk/fs.subr
+share/shtk/hw.subr
 share/shtk/list.subr
 share/shtk/process.subr
 share/shtk/unittest.subr
@@ -82,6 +93,8 @@ tests/shtk/cleanup_test
 tests/shtk/cli_test
 tests/shtk/config_test
 tests/shtk/cvs_test
+tests/shtk/fs_test
+tests/shtk/hw_test
 tests/shtk/list_test
 tests/shtk/process_test
 tests/shtk/shtk_test
