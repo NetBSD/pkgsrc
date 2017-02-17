@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/17 21:25:46 jmmv Exp $
+
+SHA1 (pkg_comp-2.0.tar.gz) = fe91c1d3f42a30ccaed2da7ca4fcb68a8ce78d3f
+RMD160 (pkg_comp-2.0.tar.gz) = 8b41936bf8c28b0a9cc711aa566b947b57d8fdfa
+SHA512 (pkg_comp-2.0.tar.gz) = dd7d96e36e05a5c4bb3dc0bda6c27a574f86e4b279e4ab3a97d156959d5bf7a9d12bd4d029ddfcef7a368f15d1891eb17ccd9b428000cfca2d41ce2073d587a7
+Size (pkg_comp-2.0.tar.gz) = 92496 bytes
