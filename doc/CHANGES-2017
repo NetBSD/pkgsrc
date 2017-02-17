@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.765 2017/02/17 17:04:36 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.766 2017/02/17 17:05:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -960,3 +960,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/pup version 0.4.0 [fhajny 2017-02-17]
 	Updated misc/calibre to 2.79.1 [wiz 2017-02-17]
 	Updated graphics/numix-icon-theme-circle to 0.1nb1 [joerg 2017-02-17]
+	Updated graphics/numix-icon-theme to 0.1nb1 [joerg 2017-02-17]
