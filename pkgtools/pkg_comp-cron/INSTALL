@@ -1,0 +1,81 @@
+#! /bin/sh
+
+BUILDBASE="@BUILDBASE@"
+EGDIR="@EGDIR@"
+PKG_COMP_HOME="@PKG_COMP_HOME@"
+PKG_COMP_USER="@PKG_COMP_USER@"
+PKG_COMP_EGDIR="@PKG_COMP_EGDIR@"
+SANDBOXCTL_EGDIR="@SANDBOXCTL_EGDIR@"
+
+# Regexp to match our crontab entry.
+CRONTAB_RE="${PREFIX}/sbin/pkg_comp4cron .*${BUILDBASE}/pkg_comp.conf"
+
+# Dumps the pkg_comp user's crontab to a temporary file and outputs
+# the path to the file.  If the crontab does not exist, populates
+# the output with some basic contents.
+get_crontab() {
+    local tempfile="$(mktemp "${TMPDIR:-/tmp}/pkg_comp.XXXXXX")"
+    if ! crontab -u "${PKG_COMP_USER}" -l >>"${tempfile}"; then
+        cat >>"${tempfile}" <<EOF
+PATH=${PREFIX}/bin:${PREFIX}/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+SHELL=/bin/sh
+
+# Cheatsheet: minute hour day-of-month month day-of-week(0,7=Sun)
+EOF
+    fi
+    echo "${tempfile}"
+}
+
+# Adds an entry to for pkg_comp to the crontab if not yet present.
+install_crontab() {
+    local tempfile; tempfile="$(get_crontab)" || return
+    if ! grep "${CRONTAB_RE}" "${tempfile}" >/dev/null; then
+        echo "@daily ${PREFIX}/sbin/pkg_comp4cron -l \"${BUILDBASE}/log\"" \
+            "-- -c \"${BUILDBASE}/pkg_comp.conf\" auto" \
+            >>"${tempfile}"
+        crontab -u "${PKG_COMP_USER}" - <"${tempfile}"
+        echo "pkg_comp daily entry added to ${PKG_COMP_USER}'s crontab"
+    fi
+    rm -f "${tempfile}"
+}
+
+# Removes the previously-configured crontab entry by this package.
+uninstall_crontab() {
+    local tempfile; tempfile="$(get_crontab)" || return
+    if grep "${CRONTAB_RE}" "${tempfile}" >/dev/null; then
+        local tempfile2="$(mktemp "${TMPDIR:-/tmp}/pkg_comp.XXXXXX")"
+        grep -v "${CRONTAB_RE}" "${tempfile}" >>"${tempfile2}"
+        if [ -s "${tempfile2}" ]; then
+            crontab -u "${PKG_COMP_USER}" "${tempfile2}"
+        else
+            crontab -u "${PKG_COMP_USER}" -r
+        fi
+        echo "pkg_comp daily entry removed from ${PKG_COMP_USER}'s crontab"
+        rm -f "${tempfile2}"
+    fi
+    rm -f "${tempfile}"
+}
+
+case "${STAGE}" in
+    POST-INSTALL)
+        if [ ! -e "${PKG_COMP_HOME}/sandbox.conf" ]; then
+            echo "${PKGNAME}: Installing sample sandbox.conf file"
+            ${MKDIR} -p "${PKG_COMP_HOME}"
+            sed "s,^SANDBOX_ROOT=.*$,SANDBOX_ROOT=${PKG_COMP_HOME}/sandbox," \
+                "${SANDBOXCTL_EGDIR}/default.conf" \
+                >"${PKG_COMP_HOME}/sandbox.conf"
+        fi
+
+        if [ ! -e "${PKG_COMP_HOME}/extra.mk.conf" ]; then
+            echo "${PKGNAME}: Installing sample extra.mk.conf file"
+            ${MKDIR} -p "${PKG_COMP_HOME}"
+            cp "${PKG_COMP_EGDIR}/extra.mk.conf" "${PKG_COMP_HOME}/"
+        fi
+
+        install_crontab
+        ;;
+
+    DEINSTALL)
+        uninstall_crontab
+        ;;
+esac
