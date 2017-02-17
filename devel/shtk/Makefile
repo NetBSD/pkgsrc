@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/03/11 19:39:57 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/17 21:20:07 jmmv Exp $
 
-DISTNAME=	shtk-1.6
+DISTNAME=	shtk-1.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 GITHUB_RELEASE=	${DISTNAME}
