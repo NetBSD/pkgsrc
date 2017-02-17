@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.690 2017/02/13 19:08:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.691 2017/02/17 21:23:42 jmmv Exp $
 #
 
 COMMENT=	System utilities
@@ -503,6 +503,7 @@ SUBDIR+=	safetynet
 SUBDIR+=	salt
 SUBDIR+=	salt-docs
 SUBDIR+=	same
+SUBDIR+=	sandboxctl
 SUBDIR+=	sarah
 SUBDIR+=	screenbrightness
 SUBDIR+=	screenfetch

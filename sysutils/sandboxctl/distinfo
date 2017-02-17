@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/17 21:23:42 jmmv Exp $
+
+SHA1 (sandboxctl-1.0.tar.gz) = 8040df9de356b1292431a454367b9a379ab2d799
+RMD160 (sandboxctl-1.0.tar.gz) = 5eabc9f69e2993636312d97358b838f4ebc538bb
+SHA512 (sandboxctl-1.0.tar.gz) = db6aaa44dfae3aa2c8090b1c8225a3d74034168711ddae9dcf5b4a02d194604080f423f0fa39acd1b9749a4158037160c317b7714ffe4070dbac2f1d06016f90
+Size (sandboxctl-1.0.tar.gz) = 95965 bytes

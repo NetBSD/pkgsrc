@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2017/02/17 21:23:42 jmmv Exp $
+share/sandboxctl/netbsd_native.subr
+share/sandboxctl/netbsd_release.subr
+${TESTS}tests/sandboxctl/modules/netbsd_native_test
+${TESTS}tests/sandboxctl/modules/netbsd_release_test

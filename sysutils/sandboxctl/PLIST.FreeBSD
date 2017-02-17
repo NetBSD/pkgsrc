@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2017/02/17 21:23:42 jmmv Exp $
+share/sandboxctl/freebsd_native.subr
+${TESTS}tests/sandboxctl/modules/freebsd_native_test
