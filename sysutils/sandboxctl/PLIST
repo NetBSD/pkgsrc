@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/17 21:23:42 jmmv Exp $
+man/man5/sandboxctl.conf.5
+man/man8/sandboxctl.8
+sbin/sandboxctl
+share/doc/sandboxctl/AUTHORS
+share/doc/sandboxctl/CONTRIBUTING.md
+share/doc/sandboxctl/CONTRIBUTORS
+share/doc/sandboxctl/COPYING
+share/doc/sandboxctl/NEWS
+share/doc/sandboxctl/README
+share/examples/sandboxctl/default.conf
+share/sandboxctl/empty.subr
+share/shtk/sandbox.subr
+${TESTS}tests/sandboxctl/Kyuafile
+${TESTS}tests/sandboxctl/modules/Kyuafile
+${TESTS}tests/sandboxctl/sandbox_test
+${TESTS}tests/sandboxctl/sandboxctl_test
