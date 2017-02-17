@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/17 21:27:38 jmmv Exp $
+share/examples/pkg_comp-cron/list.txt
+share/examples/pkg_comp-cron/pkg_comp.conf

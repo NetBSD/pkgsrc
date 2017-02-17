@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2017/02/17 21:27:38 jmmv Exp $
+
+The system has been configured to perform daily rebuilds of packages for
+the current platform.  Please take the time to review the following files:
+
+	${PKG_COMP_HOME}/extra.mk.conf
+	${PKG_COMP_HOME}/list.txt
+	${PKG_COMP_HOME}/pkg_comp.conf
+	${PKG_COMP_HOME}/sandbox.conf
+
+At the very minimum, you will have to modify the list.txt file to specify
+the set of packages you want to build.
+
+Make sure to review that the changes to the ${PKG_COMP_USER}'s crontab(5)
+are correct and that the chosen schedule suits your needs.
+
+Built binary packages can be used by setting:
+
+	PKG_PATH=file://${PKG_COMP_HOME}/packages/All
+
+Lastly, remember that you can trigger manual pkg_comp operations by doing:
+
+	su - ${PKG_COMP_USER} ${PREFIX}/sbin/pkg_comp \
+	    -c ${PKG_COMP_HOME}/pkg_comp.conf <arguments>
+
+===========================================================================
