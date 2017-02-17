@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/12 02:14:01 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/17 17:08:14 joerg Exp $
 
 DISTNAME=	courier-unicode-1.4
 CATEGORIES=	mail
@@ -11,6 +11,7 @@ COMMENT=	Implements several algorithms related to the Unicode Standard
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake autoconf aclocal automake
+USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 GNU_CONFIGURE=	yes
 
