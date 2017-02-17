@@ -1,0 +1,35 @@
+$NetBSD: patch-CMakeLists.txt,v 1.3 2017/02/17 15:01:52 wiz Exp $
+
+For pkgsrc. Install config files to examples directory.
+
+--- CMakeLists.txt.orig	2016-09-01 11:42:54.000000000 +0000
++++ CMakeLists.txt
+@@ -1244,9 +1244,9 @@ FILE(GLOB_RECURSE CONF_FILES RELATIVE "$
+ 	"${CMAKE_CURRENT_SOURCE_DIR}/conf/*" )
+ FOREACH(CONF_FILE ${CONF_FILES})
+ 	GET_FILENAME_COMPONENT(_rp ${CONF_FILE} PATH)
+-	INSTALL(CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}${CONFDIR}/${_rp})")
++	INSTALL(CODE "FILE(MAKE_DIRECTORY \$ENV{DESTDIR}${EXAMPLESDIR}/${_rp})")
+ 	INSTALL(FILES "${CMAKE_CURRENT_SOURCE_DIR}/conf/${CONF_FILE}"
+-		DESTINATION ${CONFDIR}/${_rp})
++		DESTINATION ${EXAMPLESDIR}/${_rp})
+ ENDFOREACH(CONF_FILE)
+ 
+ # Main config is special due to systemd
+@@ -1256,13 +1256,13 @@ ELSE(WANT_SYSTEMD_UNITS MATCHES "ON")
+ 	SET(MAIN_CONF "conf/rspamd.sysvinit.conf")
+ ENDIF(WANT_SYSTEMD_UNITS MATCHES "ON")
+ IF(BUILD_PORT)
+-	INSTALL_IF_NOT_EXISTS(${MAIN_CONF} ${CONFDIR} "rspamd.conf" ".sample")
++	INSTALL_IF_NOT_EXISTS(${MAIN_CONF} ${EXAMPLESDIR} "rspamd.conf" ".sample")
+ ELSE(BUILD_PORT)
+-	INSTALL_IF_NOT_EXISTS(${MAIN_CONF} ${CONFDIR} "rspamd.conf" "")
++	INSTALL_IF_NOT_EXISTS(${MAIN_CONF} ${EXAMPLESDIR} "rspamd.conf" "")
+ ENDIF(BUILD_PORT)
+ # Debian is also special
+ IF(DEBIAN_BUILD)
+-	INSTALL_IF_NOT_EXISTS("conf/rspamd.sysvinit.conf" ${CONFDIR} "rspamd.sysvinit.conf" "")
++	INSTALL_IF_NOT_EXISTS("conf/rspamd.sysvinit.conf" ${EXAMPLESDIR} "rspamd.sysvinit.conf" "")
+ ENDIF(DEBIAN_BUILD)
+ IF(INSTALL_EXAMPLES MATCHES "ON")
+ 	INSTALL(FILES ${MAIN_CONF} DESTINATION ${EXAMPLESDIR})
