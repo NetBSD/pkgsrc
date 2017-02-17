@@ -1,0 +1,3 @@
+pup is a command line tool for processing HTML. It reads from
+stdin, prints to stdout, and allows the user to filter parts of
+the page using CSS selectors.

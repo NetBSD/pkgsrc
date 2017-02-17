@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/17 15:39:38 fhajny Exp $
+
+SHA1 (pup-0.4.0.tar.gz) = 3ed97478292a0ae0499fd6cc499b454663a7d8c1
+RMD160 (pup-0.4.0.tar.gz) = 8b34a54dad0aac9f633d02ac31e81715f9ce5ad6
+SHA512 (pup-0.4.0.tar.gz) = 5228a283cdbc6425888b08154873e059f5808efd68eb86880d15572398e50b0a431922e6ef5e6acf04bc18c95bfd793590d5df2eccb9a041a64dc03731ec1874
+Size (pup-0.4.0.tar.gz) = 2762349 bytes
