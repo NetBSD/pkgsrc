@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.759 2017/02/17 14:49:34 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.760 2017/02/17 15:02:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -954,3 +954,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/neomutt to 20170206 [wiz 2017-02-17]
 	Updated devel/py-test-runner to 2.11.1 [wiz 2017-02-17]
 	Updated misc/py-anki2 to 2.0.42 [wiz 2017-02-17]
+	Updated mail/rspamd to 1.4.3 [wiz 2017-02-17]
