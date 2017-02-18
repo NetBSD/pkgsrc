@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2017/02/02 08:41:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.36 2017/02/18 20:19:12 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -377,6 +377,9 @@ ${PYSITELIB}/youtube_dl/extractor/commonprotocols.pyo
 ${PYSITELIB}/youtube_dl/extractor/condenast.py
 ${PYSITELIB}/youtube_dl/extractor/condenast.pyc
 ${PYSITELIB}/youtube_dl/extractor/condenast.pyo
+${PYSITELIB}/youtube_dl/extractor/corus.py
+${PYSITELIB}/youtube_dl/extractor/corus.pyc
+${PYSITELIB}/youtube_dl/extractor/corus.pyo
 ${PYSITELIB}/youtube_dl/extractor/coub.py
 ${PYSITELIB}/youtube_dl/extractor/coub.pyc
 ${PYSITELIB}/youtube_dl/extractor/coub.pyo
@@ -575,6 +578,9 @@ ${PYSITELIB}/youtube_dl/extractor/fc2.pyo
 ${PYSITELIB}/youtube_dl/extractor/fczenit.py
 ${PYSITELIB}/youtube_dl/extractor/fczenit.pyc
 ${PYSITELIB}/youtube_dl/extractor/fczenit.pyo
+${PYSITELIB}/youtube_dl/extractor/filmon.py
+${PYSITELIB}/youtube_dl/extractor/filmon.pyc
+${PYSITELIB}/youtube_dl/extractor/filmon.pyo
 ${PYSITELIB}/youtube_dl/extractor/firstpost.py
 ${PYSITELIB}/youtube_dl/extractor/firstpost.pyc
 ${PYSITELIB}/youtube_dl/extractor/firstpost.pyo
@@ -665,6 +671,9 @@ ${PYSITELIB}/youtube_dl/extractor/gamespot.pyo
 ${PYSITELIB}/youtube_dl/extractor/gamestar.py
 ${PYSITELIB}/youtube_dl/extractor/gamestar.pyc
 ${PYSITELIB}/youtube_dl/extractor/gamestar.pyo
+${PYSITELIB}/youtube_dl/extractor/gaskrank.py
+${PYSITELIB}/youtube_dl/extractor/gaskrank.pyc
+${PYSITELIB}/youtube_dl/extractor/gaskrank.pyo
 ${PYSITELIB}/youtube_dl/extractor/gazeta.py
 ${PYSITELIB}/youtube_dl/extractor/gazeta.pyc
 ${PYSITELIB}/youtube_dl/extractor/gazeta.pyo
@@ -1508,6 +1517,9 @@ ${PYSITELIB}/youtube_dl/extractor/screencast.pyo
 ${PYSITELIB}/youtube_dl/extractor/screencastomatic.py
 ${PYSITELIB}/youtube_dl/extractor/screencastomatic.pyc
 ${PYSITELIB}/youtube_dl/extractor/screencastomatic.pyo
+${PYSITELIB}/youtube_dl/extractor/scrippsnetworks.py
+${PYSITELIB}/youtube_dl/extractor/scrippsnetworks.pyc
+${PYSITELIB}/youtube_dl/extractor/scrippsnetworks.pyo
 ${PYSITELIB}/youtube_dl/extractor/seeker.py
 ${PYSITELIB}/youtube_dl/extractor/seeker.pyc
 ${PYSITELIB}/youtube_dl/extractor/seeker.pyo
@@ -1598,6 +1610,9 @@ ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyo
 ${PYSITELIB}/youtube_dl/extractor/sportschau.py
 ${PYSITELIB}/youtube_dl/extractor/sportschau.pyc
 ${PYSITELIB}/youtube_dl/extractor/sportschau.pyo
+${PYSITELIB}/youtube_dl/extractor/sprout.py
+${PYSITELIB}/youtube_dl/extractor/sprout.pyc
+${PYSITELIB}/youtube_dl/extractor/sprout.pyo
 ${PYSITELIB}/youtube_dl/extractor/srgssr.py
 ${PYSITELIB}/youtube_dl/extractor/srgssr.pyc
 ${PYSITELIB}/youtube_dl/extractor/srgssr.pyo
@@ -1823,6 +1838,9 @@ ${PYSITELIB}/youtube_dl/extractor/tvp.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvplay.py
 ${PYSITELIB}/youtube_dl/extractor/tvplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvplay.pyo
+${PYSITELIB}/youtube_dl/extractor/tvplayer.py
+${PYSITELIB}/youtube_dl/extractor/tvplayer.pyc
+${PYSITELIB}/youtube_dl/extractor/tvplayer.pyo
 ${PYSITELIB}/youtube_dl/extractor/tweakers.py
 ${PYSITELIB}/youtube_dl/extractor/tweakers.pyc
 ${PYSITELIB}/youtube_dl/extractor/tweakers.pyo
@@ -1934,6 +1952,9 @@ ${PYSITELIB}/youtube_dl/extractor/videomore.pyo
 ${PYSITELIB}/youtube_dl/extractor/videopremium.py
 ${PYSITELIB}/youtube_dl/extractor/videopremium.pyc
 ${PYSITELIB}/youtube_dl/extractor/videopremium.pyo
+${PYSITELIB}/youtube_dl/extractor/videopress.py
+${PYSITELIB}/youtube_dl/extractor/videopress.pyc
+${PYSITELIB}/youtube_dl/extractor/videopress.pyo
 ${PYSITELIB}/youtube_dl/extractor/vidio.py
 ${PYSITELIB}/youtube_dl/extractor/vidio.pyc
 ${PYSITELIB}/youtube_dl/extractor/vidio.pyo
@@ -1979,6 +2000,9 @@ ${PYSITELIB}/youtube_dl/extractor/vlive.pyo
 ${PYSITELIB}/youtube_dl/extractor/vodlocker.py
 ${PYSITELIB}/youtube_dl/extractor/vodlocker.pyc
 ${PYSITELIB}/youtube_dl/extractor/vodlocker.pyo
+${PYSITELIB}/youtube_dl/extractor/vodpl.py
+${PYSITELIB}/youtube_dl/extractor/vodpl.pyc
+${PYSITELIB}/youtube_dl/extractor/vodpl.pyo
 ${PYSITELIB}/youtube_dl/extractor/vodplatform.py
 ${PYSITELIB}/youtube_dl/extractor/vodplatform.pyc
 ${PYSITELIB}/youtube_dl/extractor/vodplatform.pyo
