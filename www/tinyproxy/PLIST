@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:18 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/02/18 05:59:23 nonaka Exp $
 man/man5/tinyproxy.conf.5
 man/man8/tinyproxy.8
 sbin/tinyproxy
@@ -7,3 +7,11 @@ share/examples/tinyproxy/tinyproxy.conf.default
 share/tinyproxy/debug.html
 share/tinyproxy/default.html
 share/tinyproxy/stats.html
+@exec ${MKDIR} ${VARBASE}/log/tinyproxy || ${TRUE}
+@exec ${CHOWN} ${TINYPROXY_USER}:${TINYPROXY_GROUP} ${VARBASE}/log/tinyproxy || ${TRUE}
+@exec ${CHMOD} 755 ${VARBASE}/log/tinyproxy || ${TRUE}
+@exec ${MKDIR} ${VARBASE}/run/tinyproxy || ${TRUE}
+@exec ${CHOWN} ${TINYPROXY_USER}:${TINYPROXY_GROUP} ${VARBASE}/run/tinyproxy || ${TRUE}
+@exec ${CHMOD} 755 ${VARBASE}/run/tinyproxy || ${TRUE}
+@unexec ${RMDIR} ${VARBASE}/log/tinyproxy 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} ${VARBASE}/run/tinyproxy 2>/dev/null || ${TRUE}
