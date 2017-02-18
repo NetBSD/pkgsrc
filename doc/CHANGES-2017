@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.780 2017/02/18 13:39:22 leot Exp $
+$NetBSD: CHANGES-2017,v 1.781 2017/02/18 20:19:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -978,3 +978,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php71 to 7.1.2 [taca 2017-02-18]
 	Updated devel/ruby-rugged to 0.25.1.1 [taca 2017-02-18]
 	Updated print/zathura-pdf-mupdf to 0.3.1nb3 [leot 2017-02-18]
+	Updated net/youtube-dl to 20170217 [leot 2017-02-18]
