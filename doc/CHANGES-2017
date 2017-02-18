@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.771 2017/02/18 06:50:49 adam Exp $
+$NetBSD: CHANGES-2017,v 1.772 2017/02/18 07:30:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added pkgtools/pkg_comp-cron version 1.0 [jmmv 2017-02-17]
 	Added finance/ledger version 3.1.1nb1 [riastradh 2017-02-18]
 	Updated databases/py-ldap to 2.4.32 [adam 2017-02-18]
+	Updated filesystems/p5-Path-Tiny to 0.104 [wen 2017-02-18]
