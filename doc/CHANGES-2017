@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.772 2017/02/18 07:30:04 wen Exp $
+$NetBSD: CHANGES-2017,v 1.773 2017/02/18 07:37:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -970,3 +970,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added finance/ledger version 3.1.1nb1 [riastradh 2017-02-18]
 	Updated databases/py-ldap to 2.4.32 [adam 2017-02-18]
 	Updated filesystems/p5-Path-Tiny to 0.104 [wen 2017-02-18]
+	Updated devel/p5-Mouse to 2.4.8 [wen 2017-02-18]
