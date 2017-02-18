@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.769 2017/02/17 21:29:13 jmmv Exp $
+$NetBSD: CHANGES-2017,v 1.770 2017/02/18 05:48:51 riastradh Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -967,3 +967,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/sandboxctl version 1.0 [jmmv 2017-02-17]
 	Added pkgtools/pkg_comp version 2.0 [jmmv 2017-02-17]
 	Added pkgtools/pkg_comp-cron version 1.0 [jmmv 2017-02-17]
+	Added finance/ledger version 3.1.1nb1 [riastradh 2017-02-18]

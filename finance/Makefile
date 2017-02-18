@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/12/08 02:56:11 jnemeth Exp $
+# $NetBSD: Makefile,v 1.44 2017/02/18 05:48:51 riastradh Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -7,6 +7,7 @@ SUBDIR+=	gkrellm-stock
 SUBDIR+=	gnucash
 SUBDIR+=	gnucash-docs
 SUBDIR+=	kmymoney2
+SUBDIR+=	ledger
 SUBDIR+=	libofx
 SUBDIR+=	magento
 SUBDIR+=	moneyguru
