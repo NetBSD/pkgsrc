@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/03/05 11:29:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2017/02/18 05:59:23 nonaka Exp $
 #
 
 DISTNAME=	tinyproxy-1.8.3
@@ -32,6 +32,7 @@ FILES_SUBST+=		TINYPROXY_GROUP=${TINYPROXY_GROUP:Q}
 
 CONFIGURE_ARGS+=	--with-config=${PKG_SYSCONFDIR}/tinyproxy.conf
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--enable-transparent-proxy
 
 EGDIR=		${PREFIX}/share/examples/tinyproxy
@@ -47,6 +48,12 @@ SUBST_SED.docs+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.docs+=	-e 's,@VARBASE@,${VARBASE},g'
 
 INSTALLATION_DIRS=	${EGDIR} share/doc/tinyproxy
+
+PLIST_SUBST+=		VARBASE=${VARBASE:Q}
+PLIST_SUBST+=		TINYPROXY_USER=${TINYPROXY_USER:Q}
+PLIST_SUBST+=		TINYPROXY_GROUP=${TINYPROXY_GROUP:Q}
+PLIST_SUBST+=		MKDIR=${MKDIR:Q} RMDIR=${RMDIR:Q} TRUE=${TRUE:Q}
+PLIST_SUBST+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/tinyproxy.conf \
