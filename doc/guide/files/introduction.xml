@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.40 2017/01/07 00:59:13 sevan Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.41 2017/02/18 05:45:46 riastradh Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -276,7 +276,9 @@ minutes!</para>
 	    that describe what's necessary
 	    to build a certain piece of software using
             pkgsrc. Packages are traditionally stored under
-	    <filename>/usr/pkgsrc</filename>.</para>
+	    <filename>/usr/pkgsrc</filename>,
+	    but may be stored in any location,
+	    referred to as <varname>PKGSRCDIR</varname>.</para>
 	</listitem>
       </varlistentry>
 
