@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:47:40 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/02/18 05:59:23 nonaka Exp $
 
 SHA1 (tinyproxy-1.8.3.tar.gz) = ebf4bda60ff2d0fdf1846467f07b3bbd9ef90faf
 RMD160 (tinyproxy-1.8.3.tar.gz) = 41cae4c8fcc99650a76d7bed52a379a9dd0faef0
@@ -8,6 +8,7 @@ SHA1 (patch-configure) = f446276a457c915fd2155bbe5bb1c4aa4b88c9d7
 SHA1 (patch-docs_man5_tinyproxy.conf.txt.in) = 1641f7c44ce84f2ebac6e945760af3ba77976f31
 SHA1 (patch-docs_man8_tinyproxy.txt.in) = 12c43d0f874a8794cbe8da7c702e406e8b10a99b
 SHA1 (patch-etc_Makefile.in) = 34ab3402bf11be5d2c1521f8ca0254ecbf19fc3c
+SHA1 (patch-etc_tinyproxy.conf.in) = d15ffe67b6ee86d4db41a6661d6d731c1ef149cc
 SHA1 (patch-src_child.c) = 2263f1aa7edbc31a7b31343487afa4be4fb30405
 SHA1 (patch-src_hashmap.c) = 92234430d31cd97620038a268ffd813344b262ba
 SHA1 (patch-src_reqs.c) = 9a1186ab9ebe71009384ec12aa56aff86f3a1007
