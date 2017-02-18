@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/02/18 13:13:07 taca Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -260,6 +260,7 @@ include/php/main/win95nt.h
 include/php/sapi/cli/cli.h
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
+lib/php/build/ax_check_compile_flag.m4
 lib/php/build/config.guess
 lib/php/build/config.sub
 lib/php/build/libtool.m4
