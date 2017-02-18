@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/06/08 19:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/02/18 08:11:05 wen Exp $
 
-DISTNAME=	AuthCAS-1.5
+DISTNAME=	AuthCAS-1.7
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OS/OSALAUN/}
 
@@ -17,6 +16,8 @@ DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 USE_LANGUAGES=		#
 
 PERL5_PACKLIST=	auto/AuthCAS/.packlist
+
+REPLACE_PERL+=	sampleCasClient.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
