@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.788 2017/02/19 11:22:55 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.789 2017/02/19 11:40:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-YAML to 1.22 [wiz 2017-02-19]
 	Updated devel/p5-CPAN to 2.1600 [wiz 2017-02-19]
 	Updated archivers/libzip to 1.2.0 [wiz 2017-02-19]
+	Updated print/cups-filters to 1.13.4 [leot 2017-02-19]
