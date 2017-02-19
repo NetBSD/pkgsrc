@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/19 18:53:25 adam Exp $
+
+SHA1 (typing-3.5.3.0.tar.gz) = 3d4ae527347610b064533be9504d4aec832112cc
+RMD160 (typing-3.5.3.0.tar.gz) = 23e668619f848f41b3470455407cb42889c491f0
+SHA512 (typing-3.5.3.0.tar.gz) = e1930de61cbb0b49ebeec49b87ce3a60752ed062ebf44ff2c5becf2e19a22726d08607ce6723b5b4e633190d8a9686176d44f7672c44bd246acb8e367c5d3c37
+Size (typing-3.5.3.0.tar.gz) = 60350 bytes
