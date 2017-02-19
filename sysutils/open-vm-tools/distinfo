@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2016/12/23 04:11:03 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2017/02/19 22:45:27 wiz Exp $
 
 SHA1 (open-vm-tools-10.1.0-4449150.tar.gz) = ed888568783eb8720d862314fee05c16b2381481
 RMD160 (open-vm-tools-10.1.0-4449150.tar.gz) = f18840f835ec030f72c55713fd7140396253aae5
@@ -49,6 +49,7 @@ SHA1 (patch-scripts_Makefile.am) = 5238c5cabf1125f9cd334349e5f67f1b7a568428
 SHA1 (patch-scripts_netbsd_network) = 0bb7e6f71fa811e1c789a4d0825b4bd0181fb2cf
 SHA1 (patch-services_plugins_dndcp_dnd_dndLinux.c) = 61acce40961ac82b48e055c159efd0c3b7a8899c
 SHA1 (patch-services_plugins_timeSync_Makefile.am) = c92d64573e7c5718e955d32991c8951ea2408d43
+SHA1 (patch-services_plugins_vix_vixTools.c) = a7e9df7fde7997315ef0ea77c50bbf1d410a2d9d
 SHA1 (patch-services_vmtoolsd_Makefile.am) = 8a34599f5bd9722333de1ecf741a27a0636104c5
 SHA1 (patch-vgauth_common_VGAuthLog.c) = 9beacc4665fb6133059279be2594892ebb6ba5d9
 SHA1 (patch-vgauth_lib_common.c) = 0d949bc3c4a00a92f89177e4f20ef2f848f78532
