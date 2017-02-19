@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.793 2017/02/19 18:35:46 snj Exp $
+$NetBSD: CHANGES-2017,v 1.794 2017/02/19 18:56:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -991,3 +991,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Swim to 0.1.46 [schmonz 2017-02-19]
 	Updated www/p5-Mojolicious to 7.26 [wiz 2017-02-19]
 	Updated www/w3m to 0.5.3.0.20170102 [snj 2017-02-19]
+	Added devel/py-typing version 3.5.3.0 [adam 2017-02-19]
+	Updated security/py-m2crypto to 0.25.1 [adam 2017-02-19]
