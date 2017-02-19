@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/19 18:53:25 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/typing.py
+${PYSITELIB}/typing.pyc
+${PYSITELIB}/typing.pyo
