@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2015/11/02 23:00:34 agc Exp $
+$NetBSD: distinfo,v 1.20 2017/02/19 20:18:16 maya Exp $
 
 SHA1 (INIT.2012-08-01.tgz) = 0b472a615db384fe707042baaa3347dc1aa1c81e
 RMD160 (INIT.2012-08-01.tgz) = 48f1830bc85a26125dd986256d38be435668d445
@@ -10,6 +10,7 @@ SHA512 (ast-ksh.2012-08-01.tgz) = 244df8c4cbcd719da24bfc6e52272488e0a06a7274725c
 Size (ast-ksh.2012-08-01.tgz) = 2053532 bytes
 SHA1 (patch-ab) = 98ec5d5e90f3f9bf45bdbd7199f85e932e07eada
 SHA1 (patch-ad) = a85c7ac72c3443e4c140ee36bbc35b2a4eb42062
+SHA1 (patch-src_lib_libast_comp_tmpnam.c) = 829fbedaffb46a5a2dd18dc4782cb7074521357d
 SHA1 (patch-src_lib_libast_features_lib) = 28bee8d00364a415c46bef63899329bc3326fe34
 SHA1 (patch-src_lib_libast_features_map.c) = efc25164d5e153ee3fc3b519d4d2abbc7c3f2f6b
 SHA1 (patch-src_lib_libast_features_sys) = 32a3f793395bb06e23c58e31ef534415da0d626b
