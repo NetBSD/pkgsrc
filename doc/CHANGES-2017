@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.794 2017/02/19 18:56:51 adam Exp $
+$NetBSD: CHANGES-2017,v 1.795 2017/02/19 19:15:10 snj Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -993,3 +993,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/w3m to 0.5.3.0.20170102 [snj 2017-02-19]
 	Added devel/py-typing version 3.5.3.0 [adam 2017-02-19]
 	Updated security/py-m2crypto to 0.25.1 [adam 2017-02-19]
+	Updated editors/vim-share to 8.0.0341 [snj 2017-02-19]
