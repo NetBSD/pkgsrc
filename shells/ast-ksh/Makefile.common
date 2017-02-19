@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2016/03/22 19:31:15 richard Exp $
+# $NetBSD: Makefile.common,v 1.35 2017/02/19 20:18:16 maya Exp $
 #
 # used by shells/ast-ksh/Makefile
 # used by shells/static-ast-ksh/Makefile
@@ -36,17 +36,14 @@ PDKSH=		/bin/ksh
 # this is kind of a hack -
 # better would be to fix the 'meta makefile' to pass this
 # or to use the ksh-provided math routines.
-
-.if ${OPSYS} == "DragonFly"
-KSH93_MAKEFLAGS+=	CCFLAGS=-lm
-.endif
+KSH93_MAKEFLAGS+=	LDFLAGS=-lm
 
 .if ${OPSYS} == "SunOS"
 # need c99 and _XPG6 in order to avoid patching libast/features/standards
 # __EXTENSIONS__ is needed in case of __STDC__ == 1 (i.e. -std=c99 not gnu99)
 # for things like mamake, ratz and some others for now.
-USE_LANGUAGES+=	c99
-KSH93_MAKEFLAGS+=	LDFLAGS=-lm CCFLAGS="-D_XPG6 -D__EXTENSIONS__"
+USE_LANGUAGES+=		c99
+KSH93_MAKEFLAGS+=	CCFLAGS="-D_XPG6 -D__EXTENSIONS__"
 .endif
 
 PKG_SHELL=	bin/ksh93
