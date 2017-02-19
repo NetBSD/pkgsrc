@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.784 2017/02/19 02:37:08 mef Exp $
+$NetBSD: CHANGES-2017,v 1.785 2017/02/19 08:49:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -982,3 +982,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/ImageMagick6 to 6.9.7.9 [joerg 2017-02-18]
 	Added textproc/ruby-builder30 version 3.0.4 [minskim 2017-02-19]
 	Updated devel/p5-Dist-Zooky to 0.22 [mef 2017-02-19]
+	Updated security/p5-IO-Socket-SSL to 2.047 [wiz 2017-02-19]
