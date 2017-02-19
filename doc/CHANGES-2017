@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.786 2017/02/19 08:54:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.787 2017/02/19 08:55:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -984,3 +984,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Dist-Zooky to 0.22 [mef 2017-02-19]
 	Updated security/p5-IO-Socket-SSL to 2.047 [wiz 2017-02-19]
 	Updated textproc/p5-YAML to 1.22 [wiz 2017-02-19]
+	Updated devel/p5-CPAN to 2.1600 [wiz 2017-02-19]
