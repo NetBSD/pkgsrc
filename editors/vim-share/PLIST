@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2017/01/09 19:26:14 morr Exp $
+@comment $NetBSD: PLIST,v 1.30 2017/02/19 19:13:35 snj Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -285,6 +285,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/arch.vim
 share/vim/${VIM_SUBDIR}/ftplugin/art.vim
 share/vim/${VIM_SUBDIR}/ftplugin/aspvbs.vim
 share/vim/${VIM_SUBDIR}/ftplugin/automake.vim
+share/vim/${VIM_SUBDIR}/ftplugin/awk.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bdf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/btm.vim
