@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 15:12:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/19 02:13:33 minskim Exp $
 
 DISTNAME=	activemodel-${RUBY_RAILS_VERSION}
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ COMMENT=	Toolkit for building modeling frameworks (part of Rails 3.2)
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
-DEPENDS+=	${RUBY_PKGPREFIX}-builder>=3.0.0<3.1:../../textproc/ruby-builder
+DEPENDS+=	${RUBY_PKGPREFIX}-builder>=3.0.0<3.1:../../textproc/ruby-builder30
 
 RUBY_RAILS_SUPPORTED=	32
 RUBY_RAILS_STRICT_DEP=	yes
