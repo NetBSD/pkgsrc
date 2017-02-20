@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2017/02/12 06:26:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2017/02/20 09:19:27 tnn Exp $
 
 DISTNAME=	open-vm-tools-10.1.0-4449150
 PKGNAME=	open-vm-tools-10.1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/vmware/open-vm-tools/files/590760/
 
@@ -67,8 +67,6 @@ CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/xml-security-c/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
 
 .include "options.mk"
 
