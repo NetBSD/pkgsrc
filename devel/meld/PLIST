@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/04/08 14:40:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/02/20 10:33:35 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
@@ -19,9 +19,6 @@ ${PYSITELIB}/meld/diffgrid.pyo
 ${PYSITELIB}/meld/diffmap.py
 ${PYSITELIB}/meld/diffmap.pyc
 ${PYSITELIB}/meld/diffmap.pyo
-${PYSITELIB}/meld/diffutil.py
-${PYSITELIB}/meld/diffutil.pyc
-${PYSITELIB}/meld/diffutil.pyo
 ${PYSITELIB}/meld/dirdiff.py
 ${PYSITELIB}/meld/dirdiff.pyc
 ${PYSITELIB}/meld/dirdiff.pyo
@@ -40,9 +37,21 @@ ${PYSITELIB}/meld/gutterrendererchunk.pyo
 ${PYSITELIB}/meld/linkmap.py
 ${PYSITELIB}/meld/linkmap.pyc
 ${PYSITELIB}/meld/linkmap.pyo
-${PYSITELIB}/meld/matchers.py
-${PYSITELIB}/meld/matchers.pyc
-${PYSITELIB}/meld/matchers.pyo
+${PYSITELIB}/meld/matchers/__init__.py
+${PYSITELIB}/meld/matchers/__init__.pyc
+${PYSITELIB}/meld/matchers/__init__.pyo
+${PYSITELIB}/meld/matchers/diffutil.py
+${PYSITELIB}/meld/matchers/diffutil.pyc
+${PYSITELIB}/meld/matchers/diffutil.pyo
+${PYSITELIB}/meld/matchers/helpers.py
+${PYSITELIB}/meld/matchers/helpers.pyc
+${PYSITELIB}/meld/matchers/helpers.pyo
+${PYSITELIB}/meld/matchers/merge.py
+${PYSITELIB}/meld/matchers/merge.pyc
+${PYSITELIB}/meld/matchers/merge.pyo
+${PYSITELIB}/meld/matchers/myers.py
+${PYSITELIB}/meld/matchers/myers.pyc
+${PYSITELIB}/meld/matchers/myers.pyo
 ${PYSITELIB}/meld/meldapp.py
 ${PYSITELIB}/meld/meldapp.pyc
 ${PYSITELIB}/meld/meldapp.pyo
@@ -55,9 +64,6 @@ ${PYSITELIB}/meld/melddoc.pyo
 ${PYSITELIB}/meld/meldwindow.py
 ${PYSITELIB}/meld/meldwindow.pyc
 ${PYSITELIB}/meld/meldwindow.pyo
-${PYSITELIB}/meld/merge.py
-${PYSITELIB}/meld/merge.pyc
-${PYSITELIB}/meld/merge.pyo
 ${PYSITELIB}/meld/misc.py
 ${PYSITELIB}/meld/misc.pyc
 ${PYSITELIB}/meld/misc.pyo
@@ -100,6 +106,9 @@ ${PYSITELIB}/meld/ui/gladesupport.pyo
 ${PYSITELIB}/meld/ui/gnomeglade.py
 ${PYSITELIB}/meld/ui/gnomeglade.pyc
 ${PYSITELIB}/meld/ui/gnomeglade.pyo
+${PYSITELIB}/meld/ui/gtkcompat.py
+${PYSITELIB}/meld/ui/gtkcompat.pyc
+${PYSITELIB}/meld/ui/gtkcompat.pyo
 ${PYSITELIB}/meld/ui/historyentry.py
 ${PYSITELIB}/meld/ui/historyentry.pyc
 ${PYSITELIB}/meld/ui/historyentry.pyo
@@ -109,6 +118,9 @@ ${PYSITELIB}/meld/ui/listwidget.pyo
 ${PYSITELIB}/meld/ui/msgarea.py
 ${PYSITELIB}/meld/ui/msgarea.pyc
 ${PYSITELIB}/meld/ui/msgarea.pyo
+${PYSITELIB}/meld/ui/notebook.py
+${PYSITELIB}/meld/ui/notebook.pyc
+${PYSITELIB}/meld/ui/notebook.pyo
 ${PYSITELIB}/meld/ui/notebooklabel.py
 ${PYSITELIB}/meld/ui/notebooklabel.pyc
 ${PYSITELIB}/meld/ui/notebooklabel.pyo
@@ -127,12 +139,6 @@ ${PYSITELIB}/meld/ui/wraplabel.pyo
 ${PYSITELIB}/meld/undo.py
 ${PYSITELIB}/meld/undo.pyc
 ${PYSITELIB}/meld/undo.pyo
-${PYSITELIB}/meld/util/__init__.py
-${PYSITELIB}/meld/util/__init__.pyc
-${PYSITELIB}/meld/util/__init__.pyo
-${PYSITELIB}/meld/util/compat.py
-${PYSITELIB}/meld/util/compat.pyc
-${PYSITELIB}/meld/util/compat.pyo
 ${PYSITELIB}/meld/vc/COPYING
 ${PYSITELIB}/meld/vc/README
 ${PYSITELIB}/meld/vc/__init__.py
@@ -162,6 +168,9 @@ ${PYSITELIB}/meld/vc/svn.pyo
 ${PYSITELIB}/meld/vcview.py
 ${PYSITELIB}/meld/vcview.pyc
 ${PYSITELIB}/meld/vcview.pyo
+${PYSITELIB}/meld/windowstate.py
+${PYSITELIB}/meld/windowstate.pyc
+${PYSITELIB}/meld/windowstate.pyo
 man/man1/meld.1
 share/appdata/meld.appdata.xml
 share/applications/meld.desktop
