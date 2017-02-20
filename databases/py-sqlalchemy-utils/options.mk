@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/04/13 23:12:40 rodent Exp $
+# $NetBSD: options.mk,v 1.4 2017/02/20 17:00:35 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-sqlalchemy-utils
 PKG_SUPPORTED_OPTIONS=	arrow babel color furl intervals ipaddress json password
@@ -6,8 +6,6 @@ PKG_SUPPORTED_OPTIONS+=	phone tests timezone
 PKG_SUGGESTED_OPTIONS+=	# blank
 
 .include "../../mk/bsd.options.mk"
-
-.include "../../lang/python/versioned_dependencies.mk"
 
 .if !empty(PKG_OPTIONS:Marrow)
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
@@ -63,9 +61,9 @@ DEPENDS+=	${PYPKGPREFIX}-ipaddr-[0-9]*:../../devel/py-ipaddr
 DEPENDS+=	${PYPKGPREFIX}-anyjson>=0.3.3:../../textproc/py-anyjson
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
-PYTHON_VERSIONED_DEPENDENCIES+=	dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 .endif
 
 .if !empty(PKG_OPTIONS:Mtimezone)
-PYTHON_VERSIONED_DEPENDENCIES+=	dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 .endif
