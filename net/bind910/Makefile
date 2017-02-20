@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2017/02/09 00:48:59 taca Exp $
+# $NetBSD: Makefile,v 1.30 2017/02/20 15:19:54 fhajny Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 
@@ -27,7 +28,7 @@ GNU_CONFIGURE=		yes
 #CONFIG_SHELL=		sh -x
 
 CONFIGURE_ARGS+=	--with-libtool
-CONFIGURE_ARGS+=	--sysconfdir=/etc
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-openssl-version-check
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
