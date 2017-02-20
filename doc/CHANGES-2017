@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.801 2017/02/20 09:32:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.802 2017/02/20 09:44:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -999,3 +999,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-cucumber-wire version 0.0.1 [minskim 2017-02-20]
 	Updated graphics/freeimage to 3.17.0nb1 [snj 2017-02-20]
 	Updated www/tidy to 5.2.0 [wiz 2017-02-20]
+	Updated devel/pcre2 to 10.23 [wiz 2017-02-20]
