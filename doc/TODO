@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17054 2017/02/19 19:15:10 snj Exp $
+$NetBSD: TODO,v 1.17055 2017/02/20 09:32:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1536,7 +1536,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tfmxplay-1.1.6
 	o thaixfonts-1.2.7
 	o thttpd-2.27
-	o tidy-5.1.25 [wip]
 	o tig-2.2
 	o tightvnc-2.7.10
 	o tile-0.7.4
