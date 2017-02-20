@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/02/17 21:25:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.58 2017/02/20 11:15:19 jmmv Exp $
 
 DISTNAME=	pkg_comp-2.0
 CATEGORIES=	sysutils
@@ -18,6 +18,7 @@ USE_TOOLS=		pkg-config
 PKG_SYSCONFSUBDIR=	pkg_comp
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	PKG_COMP_CONFSUBDIR=
+CONFIGURE_ARGS+=	SANDBOXCTL=${PREFIX}/sbin/sandboxctl
 INSTALL_MAKE_FLAGS+=	pkg_comp_confdir=${EGDIR}
 EGDIR=			${PREFIX}/share/examples/pkg_comp
 CONF_FILES+=		${EGDIR}/default.conf ${PKG_SYSCONFDIR}/default.conf
