@@ -39,7 +39,7 @@ CDDL HEADER END
       <service_fmri value='svc:/milestone/network' />
     </dependency>
     <dependency name='config-files' grouping='require_any' restart_on='refresh' type='path'>
-      <service_fmri value='file://localhost/etc/named.conf' />
+      <service_fmri value='file://localhost@PKG_SYSCONFDIR@/named.conf' />
     </dependency>
     <!--
         In order to run multiple named(1M) processes with their own

@@ -56,9 +56,9 @@ umount_chroot ()
 
 get_config ()
 {   
-    configuration_file=/etc/named.conf
-    rndc_config_file=/etc/rndc.conf
-    rndc_key_file=/etc/rndc.key
+    configuration_file=@PKG_SYSCONFDIR@/named.conf
+    rndc_config_file=@PKG_SYSCONFDIR@/rndc.conf
+    rndc_key_file=@PKG_SYSCONFDIR@/rndc.key
     rndc_cmd_opts="-a"
     libraries="/usr/pkg/lib/engines/libgost.so"
     cmdopts=""
@@ -127,7 +127,7 @@ get_config ()
 
     configuration_dir=$(sed -n -e 's,^[[:space:]]*directory.*"\(.*\)";,\1,p' \
         ${configuration_file})
-    [ "${configuration_dir}" == "" ] && configuration_dir=/etc/namedb
+    [ "${configuration_dir}" == "" ] && configuration_dir=@PKG_SYSCONFDIR@/namedb
 
     configuration_files=$(sed -n -e \
         "s,^[[:space:]]*file.*\"\(.*\)\";,${configuration_dir}/\1,p" \
