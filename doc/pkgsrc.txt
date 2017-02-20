@@ -2767,7 +2767,7 @@ COMMENT=        Web Authoring System
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
 
-On the first line of output above, an artificial space has been added betweeen
+On the first line of output above, an artificial space has been added between
 NetBSD and $, this is a workaround to prevent CVS expanding to the filename of
 the guide.
 
