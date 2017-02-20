@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.818 2017/02/20 14:51:34 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.819 2017/02/20 15:27:56 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1017,3 +1017,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/wget to 1.19.1 [ryoon 2017-02-20]
 	Updated devel/nss to 3.29.1 [ryoon 2017-02-20]
 	Updated textproc/py-vobject to 0.9.4.1 [kleink 2017-02-20]
+	Updated www/py-flask-wtf to 0.14.2 [kleink 2017-02-20]
