@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.163 2017/01/17 09:10:11 roy Exp $
+# $NetBSD: Makefile,v 1.164 2017/02/20 04:03:07 ryoon Exp $
 
 DISTNAME=	qemu-2.8.0
 PKGREVISION=	1
 CATEGORIES=	emulators
-MASTER_SITES=	http://wiki.qemu.org/download/
+MASTER_SITES=	http://download.qemu-project.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.qemu.org/
+HOMEPAGE=	http://www.qemu-project.org/
 COMMENT=	CPU emulator using dynamic translation
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1 AND mit AND modified-bsd
 
