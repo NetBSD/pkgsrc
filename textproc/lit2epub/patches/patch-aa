@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/06/06 23:41:12 markd Exp $
+$NetBSD: patch-aa,v 1.2 2017/02/20 10:18:33 wiz Exp $
 
---- src/tools/lit2epub.orig	2008-06-07 21:09:38.000000000 +0200
+--- src/tools/lit2epub.orig	2012-09-04 14:32:32.000000000 +0000
 +++ src/tools/lit2epub
-@@ -2,7 +2,7 @@
- # Uses clit to convert .lit files to valid epub
- # known issues: created metadata uses the old spec
+@@ -14,7 +14,7 @@ check_tool()
+     eval "$var=$toolpath"
+ }
   
--CLIT=$(which clit)
-+CLIT=$(which convertlit)
+-check_tool CLIT clit
++check_tool CLIT convertlit
+ check_tool ZIP zip
  
- if [ "$?" != 0 ]; then
-     echo "Can't find clit, please make sure it is in your path"
-@@ -42,7 +42,7 @@ if [ "$?" != 0 ]; then
+ LIT=$1
+@@ -43,7 +43,7 @@ if [ "$?" != 0 ]; then
      fi
      
  else
