@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:56:05 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2017/02/20 10:18:33 wiz Exp $
 
-DISTNAME=	ebook-tools-0.1.1
-PKGNAME=	lit2epub-0.1.1
+DISTNAME=	ebook-tools-0.2.2
+PKGNAME=	lit2epub-0.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ebook-tools/}
 
