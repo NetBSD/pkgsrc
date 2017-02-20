@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2017/01/07 18:00:09 leot Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/02/20 09:35:16 wiz Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -21,7 +21,7 @@ _GUIDE_DEPENDS+=	opensp>=1.5:../../textproc/opensp
 _GUIDE_DEPENDS+=	libxslt>=1.0.30:../../textproc/libxslt
 
 .if !empty(_GUIDE_OUTPUTS:Mhtml*)
-_GUIDE_DEPENDS+=	tidy>=20021108:../../www/tidy
+_GUIDE_DEPENDS+=	tidy-[0-9]*:../../www/tidy
 .endif
 
 .if !empty(_GUIDE_OUTPUTS:Mascii)
