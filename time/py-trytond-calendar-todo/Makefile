@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/12/04 21:13:09 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/20 17:00:37 wiz Exp $
 TRYTON_MODULE_NAME=	trytond_calendar_todo
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	python time
@@ -8,6 +8,7 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Calendar TODO module of Tryton's application platform
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.0:../../textproc/py-vobject
 DEPENDS+=	${PYPKGPREFIX}-pywebdav>=0.9.8:../../www/py-pywebdav
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
@@ -18,9 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-trytond>=${TRYTON_BASEVER}:../../devel/py-trytond
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
-
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"

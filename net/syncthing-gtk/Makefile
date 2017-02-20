@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/02/12 06:25:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2017/02/20 17:00:36 wiz Exp $
 
 DISTNAME=	syncthing-gtk-0.9.2.3
 PKGREVISION=	3
@@ -13,9 +13,9 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	syncthing>=0.13.0:../../net/syncthing
 DEPENDS+=	psmisc-[0-9]*:../../sysutils/psmisc # for killall
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
 PYTHON_VERSIONS_ACCEPTED=	27
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 EGG_NAME=	${DISTNAME:S/0/v0/:S/-/_/}
 
 REPLACE_PYTHON+=		*.py scripts/*.py syncthing_gtk/*.py
@@ -36,7 +36,6 @@ BUILDLINK_ABI_DEPENDS.libnotify+=	libnotify>=0.7.6nb4
 BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.40.9nb2	# for introspection
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
