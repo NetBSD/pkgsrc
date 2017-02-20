@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.12 2016/01/11 01:30:34 markd Exp $
+$NetBSD: distinfo,v 1.13 2017/02/20 09:35:17 wiz Exp $
 
 SHA1 (kde-baseapps-15.12.0.tar.xz) = 4b111c8ab4982edb661674ec1045b83537997642
 RMD160 (kde-baseapps-15.12.0.tar.xz) = 89b15d1f980a6bc2cf343bec154062e76684d1ea
 SHA512 (kde-baseapps-15.12.0.tar.xz) = 67dfcfc46d0c9f10c6071927833d9a16c5c2696a16c1be7315a28d4c33ceb402c1505a613ff6222635771f55e6e71cb5df954ec6f477ee0ab199e8727aea8ed4
 Size (kde-baseapps-15.12.0.tar.xz) = 2050764 bytes
-SHA1 (patch-dolphin_src_CMakeLists.txt) = 2f1c6b33146c519c5741aa040ef93312d3cdd0e6
+SHA1 (patch-dolphin_src_CMakeLists.txt) = f524104916a8de097309fbc3d775b2ff7f9b13a8
 SHA1 (patch-dolphin_src_dolphin.desktop) = c97d4e0e9ac393b87f62fa88d4414944e18a014d
 SHA1 (patch-dolphin_src_kitemviews_private_kdirectorycontentscounterworker.cpp) = db1d193f2413ae1aa53dbc979076ba76d485883f
+SHA1 (patch-konq-plugins_validators_tidy__validator.cpp) = b1dbebad77ce52d4b07ed1015256378778400641
