@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.804 2017/02/20 09:50:46 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.805 2017/02/20 09:53:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1002,3 +1002,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/pcre2 to 10.23 [wiz 2017-02-20]
 	Updated graphics/ImageMagick to 7.0.4.10 [wiz 2017-02-20]
 	Updated graphics/p5-PerlMagick to 7.0.4.10 [wiz 2017-02-20]
+	Updated misc/khard to 0.11.4 [wiz 2017-02-20]
