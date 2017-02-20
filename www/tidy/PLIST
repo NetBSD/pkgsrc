@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:37 joerg Exp $
-bin/tab2space
+@comment $NetBSD: PLIST,v 1.8 2017/02/20 09:31:53 wiz Exp $
 bin/tidy
-include/tidy/buffio.h
-include/tidy/platform.h
 include/tidy/tidy.h
+include/tidy/tidybuffio.h
 include/tidy/tidyenum.h
-lib/libtidy.la
+include/tidy/tidyplatform.h
+lib/libtidy.so
+lib/libtidy.so.5
+lib/libtidy.so.${PKGVERSION}
+lib/libtidys.a
 man/man1/tidy.1
