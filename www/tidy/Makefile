@@ -1,69 +1,23 @@
-# $NetBSD: Makefile,v 1.49 2016/11/25 16:05:23 leot Exp $
+# $NetBSD: Makefile,v 1.50 2017/02/20 09:31:53 wiz Exp $
 
-DISTNAME=	tidy-20091027
-PKGREVISION=	8
-CATEGORIES=	www
-MASTER_SITES=	# manually created tarballs on ftp.NetBSD.org only
+DISTNAME=	tidy-html5-5.2.0
+PKGNAME=	${DISTNAME:S/-html5//}
+CATEGORIES=	www textproc
+MASTER_SITES=	${MASTER_SITE_GITHUB:=htacg/}
+GITHUB_PROJECT=	tidy-html5
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.html-tidy.org/
 COMMENT=	Fixes and tidies up HTML files
 LICENSE=	mit
 
-BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
+# for man page
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.tidy
-PKG_SUPPORTED_OPTIONS=	doc
-PKG_SUGGESTED_OPTIONS=	doc
+USE_LANGUAGES=	c c++
 
-.include "../../mk/bsd.options.mk"
-
-WRKSRC=		${WRKDIR}/tidy
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoconf automake gmake
-CPPFLAGS+=	-DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_UTF16_ENCODINGS=1
-CPPFLAGS+=	-DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_GETPWNAM=1
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
-PLIST_SRC+=		${PKGDIR}/PLIST
-
-.if !empty(PKG_OPTIONS:Mdoc)
-BUILD_DEPENDS+= doxygen>=1.8.12:../../devel/doxygen
-
-HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif tidy.css faq.html \
-		license.html pending.html release-notes.html tidy.gif
-HTML_DOCDIR=	${PREFIX}/share/doc/tidy
-INSTALLATION_DIRS+=	${HTML_DOCDIR} ${HTML_DOCDIR}/api
-PLIST_SRC+=	${PKGDIR}/PLIST.doc
-.endif
-
-pre-configure:
-	cd ${WRKSRC}/build/gnuauto && cp -R -f * ${WRKSRC}
-	cd ${WRKSRC} && \
-		touch NEWS README AUTHORS ChangeLog; \
-		libtoolize --force --copy; \
-		aclocal; \
-		autoconf; \
-		automake -acf
-
-post-build:
-	cd ${WRKSRC}/htmldoc && \
-	${WRKSRC}/console/tidy -xml-help > tidy.xml && \
-	${WRKSRC}/console/tidy -xml-config > tidy-config.xml && \
-	xsltproc tidy1.xsl tidy.xml > tidy.1
-.if !empty(PKG_OPTIONS:Mdoc)
-	cd ${WRKSRC} && \
-	doxygen htmldoc/doxygen.cfg
-.endif
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/htmldoc/tidy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-.if !empty(PKG_OPTIONS:Mdoc)
-	for doc in ${HTML_DOCFILES}; do					\
-	    ${INSTALL_DATA} ${WRKSRC}/htmldoc/$$doc ${DESTDIR}${HTML_DOCDIR} ;	\
-	done
-	${INSTALL_DATA} ${WRKSRC}/htmldoc/api/* ${DESTDIR}${HTML_DOCDIR}/api
-.endif
+USE_CMAKE=	yes
+CMAKE_ARGS+=	-DMAN_INSTALL_DIR:PATH=${PKGMANDIR}/man1
+CMAKE_ARGS+=	-DINCLUDE_INSTALL_DIR:PATH=include/tidy
 
 .include "../../mk/bsd.pkg.mk"
