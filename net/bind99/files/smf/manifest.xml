@@ -41,7 +41,6 @@ CDDL HEADER END
     <dependency name='config-files' grouping='require_any' restart_on='refresh' type='path'>
       <service_fmri value='file://localhost@PKG_SYSCONFDIR@/named.conf' />
     </dependency>
-    <exec_method type='method' name='stop' exec=':kill' timeout_seconds='60' />
     <!--
         In order to run multiple named(1M) processes with their own
         configuration file or properties each must have a unique
@@ -50,21 +49,14 @@ CDDL HEADER END
     <instance name='default' enabled='false'>
       <exec_method type='method' name='start' exec='@PREFIX@/@SMF_METHOD_FILE.named@ %m %i' timeout_seconds='60'>
         <method_context>
-          <!--
-                privileges: (see privileges(5) and /etc/security/priv_names)
-                file_dac_read, file_dac_search:
-                        Necessary for reading the configuration file
-                        even it is restricted by the file permission.
-                net_privaddr:
-                        Bind to a privileged port number.
-                sys_resource:
-                        Permit the setting of resource limits (eg. stack
-                        size).
-                proc_chroot:
-                        Permit use of chroot(2).
-          -->
-          <method_credential user='root' group='root' privileges='basic,!proc_session,!proc_info,!file_link_any,net_privaddr,file_dac_read,file_dac_search,sys_resource,proc_chroot' />
+          <method_credential user='root' group='root' />
         </method_context>
+      </exec_method>
+      <exec_method type='method' name='stop' exec='@PREFIX@/@SMF_METHOD_FILE.named@ %m %i %{restarter/contract}' timeout_seconds='60'>
+        <method_context>
+          <method_credential user='root' group='root' />
+        </method_context>
+
       </exec_method>
       <!--
               SIGHUP causes named to reread its configuration file, but not any
@@ -126,6 +118,12 @@ CDDL HEADER END
                 Equivalent command line option '-t <pathname>'.
         -->
         <propval name='chroot_dir' type='astring' value='' />
+	<!--
+		user: Change the user id after processing command line
+		arguments, but before reading the configuration file.
+		Equivalent command line option '-u <user>'.
+	-->
+        <propval name='user' type='astring' value='named' />
       </property_group>
     </instance>
     <template>
