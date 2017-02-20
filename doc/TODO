@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17067 2017/02/20 10:33:48 wiz Exp $
+$NetBSD: TODO,v 1.17068 2017/02/20 20:01:59 gdt Exp $
 
 Suggested new packages
 ======================
@@ -805,7 +805,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o guile-gtk-2.1
-	o guile20-2.0.14
 	o gvfs-1.22.0
 	o gworkspace-0.9.4
 	o gxine-0.99.9
