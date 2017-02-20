@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/10/19 13:39:33 wiz Exp $
+$NetBSD: distinfo,v 1.5 2017/02/20 10:00:08 wiz Exp $
 
-SHA1 (requests-oauthlib-0.7.0.tar.gz) = 7bef0dfed117982efeb258c97d5f644481ca5f02
-RMD160 (requests-oauthlib-0.7.0.tar.gz) = 530a12769b6ed4ab9e187a9bde68a858447921b8
-SHA512 (requests-oauthlib-0.7.0.tar.gz) = 97734dddcb1ffef5dbe8e1748489fdad2e097a9f167193be513ce33535fe094b37e74a4fbd6a625b0e0e447ca115749e7ed56a37d856c232afd07d6b60e86c03
-Size (requests-oauthlib-0.7.0.tar.gz) = 82847 bytes
+SHA1 (requests-oauthlib-0.8.0.tar.gz) = 101e2716bd747a0cf859662fcfefa08d8c6189d9
+RMD160 (requests-oauthlib-0.8.0.tar.gz) = 8a41f15c2907174e0ea842af9b727526305225e0
+SHA512 (requests-oauthlib-0.8.0.tar.gz) = 267c6f60cefecc133495d7407986ae23d238ad449cfbbcf2148b444a2498445991677bf416074bae59e16881953d52d338aa2c1470432ca608797ca3d2bcd999
+Size (requests-oauthlib-0.8.0.tar.gz) = 84110 bytes
