@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/01/10 23:07:41 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2017/02/20 17:00:35 wiz Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
@@ -8,6 +8,7 @@ HOMEPAGE=	http://www.tryton.org/
 COMMENT=	Server of the Tryton application platform
 LICENSE=	gnu-gpl-v3
 
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-python-sql>=0.4:../../databases/py-python-sql
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-wrapt-[0-9]*:../../devel/py-wrapt
@@ -34,7 +35,6 @@ REPLACE_PYTHON+=	trytond/tests/test_transaction.py
 REPLACE_PYTHON+=	trytond/tests/test_trigger.py
 REPLACE_PYTHON+=	trytond/tests/test_tryton.py
 
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 PY_PATCHPLIST=			yes
 PLIST_SUBST+=			PYPKGPREFIX=${PYPKGPREFIX}
 
