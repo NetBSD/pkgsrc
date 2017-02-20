@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.797 2017/02/20 05:23:55 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.798 2017/02/20 05:29:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -995,4 +995,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-m2crypto to 0.25.1 [adam 2017-02-19]
 	Updated editors/vim-share to 8.0.0341 [snj 2017-02-19]
 	Updated shells/ast-ksh to 20120801nb2 [maya 2017-02-19]
-	Updated textproc/ruby-builder to 3.2.2 [minskim 2017-02-19]
+	Updated textproc/ruby-builder to 3.1.4 [minskim 2017-02-19]
