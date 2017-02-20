@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.817 2017/02/20 12:31:20 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.818 2017/02/20 14:51:34 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1016,3 +1016,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/seamonkey to 2.46nb6 [ryoon 2017-02-20]
 	Updated net/wget to 1.19.1 [ryoon 2017-02-20]
 	Updated devel/nss to 3.29.1 [ryoon 2017-02-20]
+	Updated textproc/py-vobject to 0.9.4.1 [kleink 2017-02-20]
