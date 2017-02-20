@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.59 2017/02/20 09:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2017/02/20 10:06:43 wiz Exp $
 
-DISTNAME=	prayer-1.3.4
-PKGREVISION=	12
+DISTNAME=	prayer-1.3.5
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
+#HOMEPAGE=	http://www-uxsup.csx.cam.ac.uk/~dpc22/prayer/
 COMMENT=	Small, fast, web mail interface
 LICENSE=		gnu-gpl-v2
 
