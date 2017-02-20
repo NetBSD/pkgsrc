@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/20 05:52:31 minskim Exp $
+
+SHA1 (cucumber-wire-0.0.1.gem) = a0fc2d59ac0d1fa785a47955ef9124ba86239810
+RMD160 (cucumber-wire-0.0.1.gem) = 0111b7d70a7f48ee0234ddabe3e046ea9288ff97
+SHA512 (cucumber-wire-0.0.1.gem) = c6bae727814f6a2d1dfa8cfee9bc9e63e3bfa755f6bb070f907a24d52009dd29652ab21ea7719527a5423ddf4471208f91a388ec53555d7021abac7769b2109a
+Size (cucumber-wire-0.0.1.gem) = 16384 bytes
