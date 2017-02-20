@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/07/05 19:43:01 rodent Exp $
+# $NetBSD: options.mk,v 1.2 2017/02/20 17:00:37 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-wtforms-components
 PKG_SUPPORTED_OPTIONS=	arrow babel color ipaddress password phone tests
@@ -6,8 +6,6 @@ PKG_SUPPORTED_OPTIONS+=	timezone
 PKG_SUGGESTED_OPTIONS+=	# blank
 
 .include "../../mk/bsd.options.mk"
-
-.include "../../lang/python/versioned_dependencies.mk"
 
 .if !empty(PKG_OPTIONS:Marrow)
 DEPENDS+=	${PYPKGPREFIX}-arrow>=0.3.4:../../time/py-arrow
@@ -50,9 +48,9 @@ DEPENDS+=	${PYPKGPREFIX}-ipaddr-[0-9]*:../../devel/py-ipaddr
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6<2.0:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-phonenumbers>=5.9.2:../../textproc/py-phonenumbers
 DEPENDS+=	${PYPKGPREFIX}-wtforms-test>=0.1.1:../../www/py-wtforms-test
-PYTHON_VERSIONED_DEPENDENCIES+=	dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 .endif
 
 .if !empty(PKG_OPTIONS:Mtimezone)
-PYTHON_VERSIONED_DEPENDENCIES+=	dateutil
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 .endif

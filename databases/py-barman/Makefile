@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/06 14:56:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/02/20 17:00:35 wiz Exp $
 
 DISTNAME=	barman-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,9 +13,8 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-argcomplete-[0-9]*:../../devel/py-argcomplete
 DEPENDS+=	${PYPKGPREFIX}-argh>=0.21.2:../../devel/py-argh
 DEPENDS+=	${PYPKGPREFIX}-psycopg2-[0-9]*:../../databases/py-psycopg2
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
-
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 USE_LANGUAGES=	# none
 
@@ -54,5 +53,4 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/barman/barman.conf
 
 .include "../../lang/python/egg.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../mk/bsd.pkg.mk"
