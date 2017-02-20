@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.23 2017/02/20 17:00:35 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.24 2017/02/20 23:42:25 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -249,7 +249,7 @@ COMMENT=        Web Authoring System
 .include "../../mk/bsd.pkg.mk"
 </programlisting>
 
-<para>On the first line of output above, an artificial space has been added betweeen NetBSD and $,
+<para>On the first line of output above, an artificial space has been added between NetBSD and $,
 this is a workaround to prevent CVS expanding to the filename of the
 guide.</para>
 
