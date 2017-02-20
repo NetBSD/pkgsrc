@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 06:30:23 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/20 09:37:12 wiz Exp $
 #
 
 DISTNAME=	nanoblogger-3.4.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nanoblogger/}
 
