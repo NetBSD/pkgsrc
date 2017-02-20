@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/01/27 10:24:56 kleink Exp $
+# $NetBSD: Makefile,v 1.26 2017/02/20 17:00:36 wiz Exp $
 
 DISTNAME=	calibre-1.48.0
 PKGREVISION=	23
@@ -18,6 +18,7 @@ DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
+DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7.1:../../textproc/py-cssselect
@@ -28,8 +29,6 @@ DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 DEPENDS+=	${PYPKGPREFIX}-netifaces-[0-9]*:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-apsw-[0-9]*:../../databases/py-apsw
-
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 # We also need the distfile for qt4-libs to extract some private header files
 # If QTVERSION changes, the distinfo file needs to be updated too.
@@ -119,7 +118,6 @@ post-install:
 	    ${DESTDIR}${PREFIX}/share/doc/calibre
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/versioned_dependencies.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/chmlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
