@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:28 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/02/20 10:17:54 wiz Exp $
 
-SHA1 (ebook-tools-0.1.1.tar.gz) = 5c7c177914767412f3c8b145319fa4683755ac90
-RMD160 (ebook-tools-0.1.1.tar.gz) = 02ee38ed7175e94577f718cc68c468f4e9d229ea
-SHA512 (ebook-tools-0.1.1.tar.gz) = f902f7a5831b2a1fbdbb7169cea65113bc1b57d7c5aca9aff4d75b0ddcb509acccfc18cd75738ce0a47b6aa2a0cef3b8752d5951a1ebd54eda561fd9d949a7f0
-Size (ebook-tools-0.1.1.tar.gz) = 43280 bytes
-SHA1 (patch-CMakeLists.txt) = 4fbb30c510a8e3a33a1edcf0c85dcda6667ab5a2
+SHA1 (ebook-tools-0.2.2.tar.gz) = 1f10bef62c9125cf804366134e486a58308f07ff
+RMD160 (ebook-tools-0.2.2.tar.gz) = 2808a20b7bc9dc01b54be0e46dfb4cf96508d1a2
+SHA512 (ebook-tools-0.2.2.tar.gz) = b4518249835ed7cc672392bf2f8b1c62bc218e41c53663bb26ab34c9e43a99b6b7ae794babdb4bd775e467bb17918703a66ee57c8cf94cb7afc4ba2a7f74816a
+Size (ebook-tools-0.2.2.tar.gz) = 46889 bytes
+SHA1 (patch-CMakeLists.txt) = 79f2c390746a643b2c20416f38ef159505f7acc6
 SHA1 (patch-ab) = 63d64a50962969f83033af63f4fd00fd91a1f38c
