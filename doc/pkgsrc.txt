@@ -602,7 +602,8 @@ Package
 
     A set of files and building instructions that describe what's necessary to
     build a certain piece of software using pkgsrc. Packages are traditionally
-    stored under /usr/pkgsrc.
+    stored under /usr/pkgsrc, but may be stored in any location, referred to as
+    PKGSRCDIR.
 
 The NetBSD package system
 
@@ -2723,7 +2724,7 @@ PYTHON_VERSIONED_DEPENDENCIES to the list of packages that should be depended
 upon and include "../../lang/python/versioned_dependencies.mk", then the pkgsrc
 infrastructure will depend on the appropriate package version. For example:
 
-PYTHON_VERSIONED_DEPENDENCIES=dateutil
+PYTHON_VERSIONED_DEPENDENCIES=gobject
 
 Look inside versioned_dependencies.mk for a list of supported packages.
 
@@ -2766,7 +2767,7 @@ COMMENT=        Web Authoring System
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
 
-On the first line of output above, an artificial space has been added between
+On the first line of output above, an artificial space has been added betweeen
 NetBSD and $, this is a workaround to prevent CVS expanding to the filename of
 the guide.
 
