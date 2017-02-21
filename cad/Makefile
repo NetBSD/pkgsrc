@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2017/01/20 11:01:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.94 2017/02/21 20:37:03 plunky Exp $
 #
 
 COMMENT=	CAD tools
@@ -57,6 +57,7 @@ SUBDIR+=	py-simpy
 SUBDIR+=	qcad
 SUBDIR+=	qcad-partlibrary
 SUBDIR+=	sci-wcalc
+SUBDIR+=	solvespace
 SUBDIR+=	spice
 SUBDIR+=	spiceprm
 SUBDIR+=	stdio-wcalc
