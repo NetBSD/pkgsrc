@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.830 2017/02/21 18:25:50 adam Exp $
+$NetBSD: CHANGES-2017,v 1.831 2017/02/21 20:38:37 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/leptonica to 1.74.1 [fhajny 2017-02-21]
 	Updated graphics/tesseract to 3.05.00 [fhajny 2017-02-21]
 	Updated graphics/jasper to 2.0.10 [adam 2017-02-21]
+	Added cad/solvespace version 2.3 [plunky 2017-02-21]
