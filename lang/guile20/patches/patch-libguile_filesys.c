@@ -1,4 +1,4 @@
-$NetBSD: patch-libguile_filesys.c,v 1.1 2017/02/20 20:01:45 gdt Exp $
+$NetBSD: patch-libguile_filesys.c,v 1.2 2017/02/21 02:32:00 gdt Exp $
 
 When using mkostemp (an interface not defined by POSIX), restrict
 flags to the set defined by the documentation of particular operating
@@ -14,7 +14,7 @@ This patch has not yet been sent upstream.
        mode_bits = scm_i_mode_bits (mode);
      }
  
-+#ifdef APPLE
++#ifdef __APPLE__
 +  /* https://debbugs.gnu.org/cgi/bugreport.cgi?bug=24862#23 */
 +  open_flags &= O_APPEND|O_SHLOCK|O_EXLOCK|O_CLOEXEC;
 +#endif
