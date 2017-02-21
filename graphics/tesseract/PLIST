@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/03/17 12:51:14 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/02/21 17:51:18 fhajny Exp $
 bin/ambiguous_words
 bin/classifier_tester
 bin/cntraining
@@ -91,6 +91,7 @@ share/tessdata/configs/pdf
 share/tessdata/configs/quiet
 share/tessdata/configs/rebox
 share/tessdata/configs/strokewidth
+share/tessdata/configs/tsv
 share/tessdata/configs/txt
 share/tessdata/configs/unlv
 share/tessdata/cym.traineddata

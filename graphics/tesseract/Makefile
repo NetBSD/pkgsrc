@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2017/02/12 06:25:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2017/02/21 17:51:18 fhajny Exp $
 
-DISTNAME=	tesseract-3.04.01
-PKGREVISION=	4
+DISTNAME=	tesseract-3.05.00
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tesseract-ocr/}
 DISTFILES=	${DEFAULT_DISTFILES}
@@ -17,7 +16,7 @@ SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata/archive/${LANGVER}.
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pax pkg-config
+USE_TOOLS+=		autoconf automake make pax pkg-config
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
@@ -28,6 +27,10 @@ INSTALLATION_DIRS=	libexec share/doc/tesseract share/tesseract
 
 post-extract:
 	${MV} ${WRKDIR}/tessdata-${LANGVER}/* ${WRKSRC}/tessdata
+
+# For some reason this release tarball lacks these
+pre-configure:
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${SH} ./autogen.sh
 
 # Building the training tools requires that the base build is done
 post-build:
