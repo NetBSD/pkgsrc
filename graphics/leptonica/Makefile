@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/03/17 12:44:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/21 14:04:49 fhajny Exp $
 
-DISTNAME=	leptonica-1.73
+DISTNAME=	leptonica-1.74.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.leptonica.org/source/
 
