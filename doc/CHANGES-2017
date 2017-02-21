@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.821 2017/02/20 23:27:10 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.822 2017/02/21 01:20:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1020,3 +1020,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask-wtf to 0.14.2 [kleink 2017-02-20]
 	Updated lang/guile20 to 2.0.14 [gdt 2017-02-20]
 	Added security/ruby-metasploit_payloads-mettle version 0.1.7 [minskim 2017-02-20]
+	Added devel/ruby-bit-struct version 0.15.0 [minskim 2017-02-21]
