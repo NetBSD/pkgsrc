@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/02/21 20:36:39 plunky Exp $
+
+disable finding the commit hash: we provide it in the Makefile
+
+--- CMakeLists.txt.orig	2016-12-24 02:09:48.000000000 +0000
++++ CMakeLists.txt
+@@ -20,7 +20,7 @@ set(CMAKE_USER_MAKE_RULES_OVERRIDE_CXX
+ # NOTE TO PACKAGERS: The embedded git commit hash is critical for rapid bug triage when the builds
+ # can come from a variety of sources. If you are mirroring the sources or otherwise build when
+ # the .git directory is not present, please comment the following line:
+-include(GetGitCommitHash)
++# include(GetGitCommitHash)
+ # and instead uncomment the following, adding the complete git hash of the checkout you are using:
+ # set(GIT_COMMIT_HASH 0000000000000000000000000000000000000000)
+ 
