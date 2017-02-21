@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2016/11/22 16:02:54 wiz Exp $
+# $NetBSD: options.mk,v 1.17 2017/02/21 14:56:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	inet6 debug dtrace
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--disable-dri
 CONFIGURE_ARGS+=	--disable-dri2
 CONFIGURE_ARGS+=	--disable-dri3
 CONFIGURE_ARGS+=	--disable-glx
+CONFIGURE_ARGS+=	--disable-glamor
 CONFIGURE_ARGS+=	--disable-present
 pre-build: disable-modesetting
 .PHONY: disable-modesetting
