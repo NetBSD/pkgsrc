@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/21 06:30:46 minskim Exp $
+
+SHA1 (multi_test-0.1.2.gem) = 4882331f0a9caee72dffa2b954f2856e768950df
+RMD160 (multi_test-0.1.2.gem) = 73a1c31f041e763a55b4a791a1ed3a5406bff4ad
+SHA512 (multi_test-0.1.2.gem) = a0d59f51dc959b7febe9c32853b5ac5cbbb3215e8810de5e46fe10fa42931c1ea89df477155cc8124264d608c5928e54fd4e1949e7d0940f927e1430bfd60a2b
+Size (multi_test-0.1.2.gem) = 9216 bytes
