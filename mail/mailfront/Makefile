@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/01/02 02:19:46 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2017/02/21 16:04:04 joerg Exp $
 #
 
 DISTNAME=		mailfront-2.12
@@ -24,6 +24,8 @@ DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/include > conf-include;	\
 RCD_SCRIPTS=		smtpfront
 INSTALLATION_DIRS=	share/doc/mailfront
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
+
+USE_LIBTOOL=		yes
 
 MAKE_JOBS_SAFE=		no # due to hacky libtoolization
 
