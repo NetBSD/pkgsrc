@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.823 2017/02/21 06:32:15 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.824 2017/02/21 07:47:29 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1022,3 +1022,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/ruby-metasploit_payloads-mettle version 0.1.7 [minskim 2017-02-20]
 	Added devel/ruby-bit-struct version 0.15.0 [minskim 2017-02-21]
 	Added devel/ruby-multi_test version 0.1.2 [minskim 2017-02-21]
+	Updated textproc/p5-Text-vCard to 3.09 [kleink 2017-02-21]
