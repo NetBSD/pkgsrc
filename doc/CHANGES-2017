@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.824 2017/02/21 07:47:29 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.825 2017/02/21 08:01:19 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1023,3 +1023,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-bit-struct version 0.15.0 [minskim 2017-02-21]
 	Added devel/ruby-multi_test version 0.1.2 [minskim 2017-02-21]
 	Updated textproc/p5-Text-vCard to 3.09 [kleink 2017-02-21]
+	Updated geopgraphy/py-geojson to 1.3.4 [kleink 2017-02-21]
