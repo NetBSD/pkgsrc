@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2367 2017/02/21 01:19:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2368 2017/02/21 06:31:46 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2110,6 +2110,7 @@ SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mocha
 SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-msgpack
+SUBDIR+=	ruby-multi_test
 SUBDIR+=	ruby-ncurses
 SUBDIR+=	ruby-needle
 SUBDIR+=	ruby-nenv
