@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2366 2017/02/20 05:53:10 minskim Exp $
+# $NetBSD: Makefile,v 1.2367 2017/02/21 01:19:45 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2032,6 +2032,7 @@ SUBDIR+=	ruby-amstd
 SUBDIR+=	ruby-assistance
 SUBDIR+=	ruby-atomic
 SUBDIR+=	ruby-backports
+SUBDIR+=	ruby-bit-struct
 SUBDIR+=	ruby-blankslate
 SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
