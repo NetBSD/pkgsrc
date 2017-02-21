@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.454 2017/02/16 07:48:58 wiz Exp $
+# $NetBSD: Makefile,v 1.455 2017/02/21 21:46:16 minskim Exp $
 #
 
 COMMENT=	Programming languages
@@ -202,6 +202,7 @@ SUBDIR+=	ruby-coffee-script-source
 SUBDIR+=	ruby-doc-stdlib
 SUBDIR+=	ruby-execjs
 SUBDIR+=	ruby-gherkin
+SUBDIR+=	ruby-rkelly-remix
 SUBDIR+=	ruby18
 SUBDIR+=	ruby18-base
 SUBDIR+=	ruby21
