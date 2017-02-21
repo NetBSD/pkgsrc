@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/12/18 19:17:44 maya Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/21 11:36:43 maya Exp $
 
-DISTNAME=	ansiweather-1.09
+DISTNAME=	ansiweather-1.10
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
