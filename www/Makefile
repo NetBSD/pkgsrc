@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1215 2017/02/17 15:40:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.1216 2017/02/22 13:19:24 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -593,6 +593,7 @@ SUBDIR+=	py-PasteScript
 SUBDIR+=	py-Routes
 SUBDIR+=	py-URLObject
 SUBDIR+=	py-WebOb
+SUBDIR+=	py-autobahn
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
 SUBDIR+=	py-betamax
