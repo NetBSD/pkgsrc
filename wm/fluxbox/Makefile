@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2013/07/05 13:29:43 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.65 2017/02/22 12:20:51 wiz Exp $
 
-DISTNAME=	fluxbox-1.3.2
-PKGREVISION=	6
+DISTNAME=	fluxbox-1.3.7
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,11 +8,13 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://fluxbox.sourceforge.net/
 COMMENT=	Window Manager for X based on Blackbox
+LICENSE=	mit
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	YES
+EXTRACT_USING=	bsdtar
 
 .include "../../mk/bsd.prefs.mk"
 
