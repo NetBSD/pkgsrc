@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.856 2017/02/22 13:15:08 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.857 2017/02/22 13:19:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1058,3 +1058,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-scandir version 1.5 [wiz 2017-02-22]
 	Updated devel/p5-Devel-PatchPerl to 1.48 [mef 2017-02-22]
 	Added devel/py-txaio version 2.6.0 [wiz 2017-02-22]
+	Added www/py-autobahn version 0.17.1 [wiz 2017-02-22]
