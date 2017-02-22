@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.840 2017/02/22 11:39:44 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.841 2017/02/22 11:41:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1038,3 +1038,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs6 to 6.10.0 [fhajny 2017-02-22]
 	Updated www/p5-LWP-Protocol-https to 6.07 [wiz 2017-02-22]
 	Updated devel/p5-Log-Log4perl to 1.49 [wiz 2017-02-22]
+	Updated net/p5-Net-DNS to 1.08 [wiz 2017-02-22]
