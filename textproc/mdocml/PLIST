@@ -1,28 +1,16 @@
-@comment $NetBSD: PLIST,v 1.14 2016/09/07 18:50:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/02/22 10:45:05 wiz Exp $
 bin/apropos
 bin/demandoc
 bin/man
 bin/mandoc
 bin/msoelim
 bin/whatis
-include/mandoc/man.h
-include/mandoc/mandoc.h
-include/mandoc/mandoc_aux.h
-include/mandoc/mdoc.h
-include/mandoc/roff.h
-lib/mandoc/libmandoc.a
 man/man1/apropos.1
 man/man1/demandoc.1
 man/man1/man.1
 man/man1/mandoc.1
 man/man1/msoelim.1
 man/man1/whatis.1
-man/man3/mandoc.3
-man/man3/mandoc_escape.3
-man/man3/mandoc_malloc.3
-man/man3/mansearch.3
-man/man3/mchars_alloc.3
-man/man3/tbl.3
 man/man5/man.conf.5
 man/man5/mandoc.db.5
 man/man7/eqn.7
