@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2371 2017/02/22 13:14:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2372 2017/02/22 14:06:09 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1801,6 +1801,7 @@ SUBDIR+=	py-fann2
 SUBDIR+=	py-fastimport
 SUBDIR+=	py-filebytes
 SUBDIR+=	py-filechunkio
+SUBDIR+=	py-fixtures
 SUBDIR+=	py-flake8
 SUBDIR+=	py-flakes
 SUBDIR+=	py-flexmock
