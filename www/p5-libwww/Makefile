@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2017/02/22 11:44:34 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2017/02/22 12:26:49 wiz Exp $
 
 DISTNAME=	libwww-perl-6.21
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -45,7 +45,7 @@ BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 
 USE_LANGUAGES=		# empty
 
-PERL5_PACKLIST=		auto/LWP/.packlist
+PERL5_PACKLIST=		auto/libwww/perl/.packlist
 MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
 
 .include "../../mk/bsd.prefs.mk"
