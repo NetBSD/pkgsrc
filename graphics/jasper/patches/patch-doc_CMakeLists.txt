@@ -1,0 +1,10 @@
+$NetBSD: patch-doc_CMakeLists.txt,v 1.1 2017/02/22 11:53:49 ryoon Exp $
+
+--- doc/CMakeLists.txt.orig	2016-12-30 16:53:52.000000000 +0000
++++ doc/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-if (DOXYGEN_FOUND)
++if (XXX_DOXYGEN_FOUND)
+ 
+ 	configure_file("${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in"
+ 	  "${CMAKE_CURRENT_BINARY_DIR}/Doxyfile" @ONLY)
