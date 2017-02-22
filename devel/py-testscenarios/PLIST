@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/22 14:21:40 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/testscenarios/__init__.py
+${PYSITELIB}/testscenarios/__init__.pyc
+${PYSITELIB}/testscenarios/__init__.pyo
+${PYSITELIB}/testscenarios/scenarios.py
+${PYSITELIB}/testscenarios/scenarios.pyc
+${PYSITELIB}/testscenarios/scenarios.pyo
+${PYSITELIB}/testscenarios/testcase.py
+${PYSITELIB}/testscenarios/testcase.pyc
+${PYSITELIB}/testscenarios/testcase.pyo
+${PYSITELIB}/testscenarios/tests/__init__.py
+${PYSITELIB}/testscenarios/tests/__init__.pyc
+${PYSITELIB}/testscenarios/tests/__init__.pyo
+${PYSITELIB}/testscenarios/tests/test_scenarios.py
+${PYSITELIB}/testscenarios/tests/test_scenarios.pyc
+${PYSITELIB}/testscenarios/tests/test_scenarios.pyo
+${PYSITELIB}/testscenarios/tests/test_testcase.py
+${PYSITELIB}/testscenarios/tests/test_testcase.pyc
+${PYSITELIB}/testscenarios/tests/test_testcase.pyo
