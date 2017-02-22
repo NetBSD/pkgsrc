@@ -1,8 +1,8 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2017/02/21 18:24:20 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2017/02/22 00:45:06 ryoon Exp $
 
 Remove the weird hack.
 
---- CMakeLists.txt.orig	2017-02-21 17:54:13.000000000 +0000
+--- CMakeLists.txt.orig	2016-12-30 16:53:52.000000000 +0000
 +++ CMakeLists.txt
 @@ -55,11 +55,7 @@ set(JAS_SO_MINOR 0)
  set(JAS_SO_RELEASE 0)
@@ -16,3 +16,12 @@ Remove the weird hack.
  
  message("Shared library ABI version: ${JAS_SO_VERSION}")
  message("Shared library build version: ${JAS_SO_NAME}")
+@@ -368,7 +364,7 @@ endif()
+ 
+ add_subdirectory(src/libjasper)
+ add_subdirectory(src/appl)
+-add_subdirectory(doc)
++#add_subdirectory(doc)
+ 
+ # The package configuation (pc) file should be installed in
+ # ${CMAKE_INSTALL_PREFIX}/lib/pkgconfig.
