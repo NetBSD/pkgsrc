@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2016/04/27 04:20:10 mef Exp $
-#
+# $NetBSD: Makefile,v 1.26 2017/02/22 11:46:58 wiz Exp $
 
-DISTNAME=	atf-0.20
+DISTNAME=	atf-0.21
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
 GITHUB_RELEASE=	${DISTNAME}
@@ -22,5 +21,7 @@ CONFIGURE_ARGS+=	ATF_SHELL=${SH:Q}
 PKGCONFIG_OVERRIDE=	atf-c/atf-c.pc.in
 PKGCONFIG_OVERRIDE+=	atf-c++/atf-c++.pc.in
 PKGCONFIG_OVERRIDE+=	atf-sh/atf-sh.pc.in
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
