@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.33 2015/11/02 23:42:52 agc Exp $
+$NetBSD: distinfo,v 1.34 2017/02/22 12:20:51 wiz Exp $
 
-SHA1 (fluxbox-1.3.2.tar.bz2) = 069d810d449c2a223f447aa7a2374f42094bd87b
-RMD160 (fluxbox-1.3.2.tar.bz2) = b0b5f1ca76f7776d90c7619148dca6aa999bd2a9
-SHA512 (fluxbox-1.3.2.tar.bz2) = 2624c337e85b98e39398319170cbf57f8ab031539844e62f2f61aefd5c2e307b8390261b9658073bcf557f7f006c9df95c72a4420f12fa7122742b4623a17d49
-Size (fluxbox-1.3.2.tar.bz2) = 787400 bytes
-SHA1 (patch-aa) = 70dacee8af0acee5a75c322260d0b8448e531210
-SHA1 (patch-ac) = 1e480faa2c3c56de39e3ea3c5fc5e104cd396916
-SHA1 (patch-af) = 1cdde9aa6901e23ba42377d71cefb19f073445fa
+SHA1 (fluxbox-1.3.7.tar.bz2) = f8939f43b4c353ebef5fec2b95e8cbfd3cd5ac4d
+RMD160 (fluxbox-1.3.7.tar.bz2) = efb8d458edf2b429fb2999eb184ab3aed6a54f7a
+SHA512 (fluxbox-1.3.7.tar.bz2) = c40cc765f5d542210e18dca21b98b97a048c6685b605a68e2c64f4e886329f4e6d3a3a7e76b3ca0ce488242f38d0ee2a4d6dfebc9ce97d37c68f84c3948aac8c
+Size (fluxbox-1.3.7.tar.bz2) = 911098 bytes
+SHA1 (patch-aa) = e237a1b172c95fe5f251ab8795ed63c1888be83b
+SHA1 (patch-af) = 871c9ce0bdfecda2c4180bd33b21186111ddecac
 SHA1 (patch-bd) = 75532deb83a0f7e8c91f43acb0299d46d69496ba
 SHA1 (patch-be) = 0c8c0cfa12bbfeca28d76b12b488777b589bb43a
-SHA1 (patch-bf) = db8892e83021a92055621bd394f5697cb696eb10
+SHA1 (patch-bf) = 7da25f4e9a0e738da7c24264a91e6ab036d5acf2
 SHA1 (patch-bg) = 8f4decdb2ff611dcc1af64145801fac35f83e25a
 SHA1 (patch-bj) = 9b0ac35028644b142073a498bc3d59324c51d349
 SHA1 (patch-bk) = ae0c9857dd0cd203c8ae3f4bf5a0c7126cf48c92
-SHA1 (patch-util_fbsetbg) = 052029bb1938a783359eb527a7059c407e8988aa
+SHA1 (patch-src_fluxbox.cc) = a652d685cd80896b45bfa7b2dfd5e98b2561e326
