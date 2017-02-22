@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/22 14:02:49 wiz Exp $
+
+SHA1 (fixtures-3.0.0.tar.gz) = 7a29a1dc634ddd47d97a77be0cfa10ef55591261
+RMD160 (fixtures-3.0.0.tar.gz) = dd67b5e47562b36cd68c0b0788de492ba3224c54
+SHA512 (fixtures-3.0.0.tar.gz) = e52ba864c42d15a8baa60583761006b2dd78e3cd5f3f043f5702346aef428b933d62e8fa5889b7cb4196e4072acc5df3b7ffa39702a1b782887bdc109299b695
+Size (fixtures-3.0.0.tar.gz) = 56629 bytes
