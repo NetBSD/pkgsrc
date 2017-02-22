@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/06/01 21:10:39 kleink Exp $
+$NetBSD: distinfo,v 1.5 2017/02/22 21:05:21 kleink Exp $
 
-SHA1 (Flask-Uploads-0.2.0.tar.gz) = b276d9498848d9dc795583adc71df95e3ec3afa1
-RMD160 (Flask-Uploads-0.2.0.tar.gz) = d8da87d67306e4e0144ac464be26531cb6d2954d
-SHA512 (Flask-Uploads-0.2.0.tar.gz) = 7151dc5bad2813040afac84434518a3dc6df7394b60add31a26d5e19c10d42b78729eebfd5ef5a12e289ca73377f0a20b5b4b649036eba9d9e494c054d3e4efc
-Size (Flask-Uploads-0.2.0.tar.gz) = 7628 bytes
-SHA1 (patch-flask_uploads.py) = 9490423d8037c8824e01f5c579bb5cfa122991de
+SHA1 (Flask-Uploads-0.2.1.tar.gz) = 802b2502569155fe6bc942e18c9fd9b7f7c1d5c3
+RMD160 (Flask-Uploads-0.2.1.tar.gz) = 393211d40a79879ee6cbbfdbaadb86da3b77a996
+SHA512 (Flask-Uploads-0.2.1.tar.gz) = ec9f9e80a00cd440ea03d3c3f697038b18d5190be30167182edaa091a088f3fc294917d1217988fadc3102d629c07851ce3db2a41fda7260277ba2d895c3ab58
+Size (Flask-Uploads-0.2.1.tar.gz) = 7625 bytes
