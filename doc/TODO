@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17075 2017/02/22 11:41:43 wiz Exp $
+$NetBSD: TODO,v 1.17076 2017/02/22 11:43:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1206,7 +1206,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
 	o p5-X11-Protocol-29
-	o p5-YAML-1.23
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
 	o p5-libwww-6.21
