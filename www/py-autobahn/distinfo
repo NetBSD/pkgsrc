@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/22 13:19:07 wiz Exp $
+
+SHA1 (autobahn-0.17.1.tar.gz) = 395164a4e9773c6431d3b94b3e9f6a135182282b
+RMD160 (autobahn-0.17.1.tar.gz) = 206ebca32d79d3873dcfa62bfbdae019c534ccd3
+SHA512 (autobahn-0.17.1.tar.gz) = 93e723436f24f82a1be72d955f81fc9958104085137e5ba25970c113cd202ffc8c6a73d81f637890fc795b4b787743f55fbd2806506de7ff2e3d410c2428f9ac
+Size (autobahn-0.17.1.tar.gz) = 189827 bytes
