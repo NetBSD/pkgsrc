@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.19 2014/02/08 15:54:58 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/02/22 11:46:58 wiz Exp $
 bin/atf-sh
 include/atf-c++.hpp
 include/atf-c++/build.hpp
 include/atf-c++/check.hpp
-include/atf-c++/config.hpp
 include/atf-c++/macros.hpp
 include/atf-c++/tests.hpp
 include/atf-c++/utils.hpp
 include/atf-c.h
 include/atf-c/build.h
 include/atf-c/check.h
-include/atf-c/config.h
 include/atf-c/defs.h
 include/atf-c/error.h
 include/atf-c/error_fwd.h
@@ -28,9 +26,13 @@ man/man1/atf-check.1
 man/man1/atf-sh.1
 man/man1/atf-test-program.1
 man/man3/atf-c++-api.3
+man/man3/atf-c++.3
 man/man3/atf-c-api.3
+man/man3/atf-c.3
 man/man3/atf-sh-api.3
+man/man3/atf-sh.3
 man/man4/atf-test-case.4
+man/man7/atf.7
 share/aclocal/atf-c++.m4
 share/aclocal/atf-c.m4
 share/aclocal/atf-common.m4
@@ -45,7 +47,6 @@ tests/atf/atf-c++/Kyuafile
 tests/atf/atf-c++/atf_c++_test
 tests/atf/atf-c++/build_test
 tests/atf/atf-c++/check_test
-tests/atf/atf-c++/config_test
 tests/atf/atf-c++/detail/Kyuafile
 tests/atf/atf-c++/detail/application_test
 tests/atf/atf-c++/detail/auto_array_test
@@ -53,7 +54,6 @@ tests/atf/atf-c++/detail/env_test
 tests/atf/atf-c++/detail/exceptions_test
 tests/atf/atf-c++/detail/fs_test
 tests/atf/atf-c++/detail/process_test
-tests/atf/atf-c++/detail/sanity_test
 tests/atf/atf-c++/detail/text_test
 tests/atf/atf-c++/detail/version_helper
 tests/atf/atf-c++/macros_hpp_test.cpp
@@ -66,7 +66,6 @@ tests/atf/atf-c/Kyuafile
 tests/atf/atf-c/atf_c_test
 tests/atf/atf-c/build_test
 tests/atf/atf-c/check_test
-tests/atf/atf-c/config_test
 tests/atf/atf-c/detail/Kyuafile
 tests/atf/atf-c/detail/dynstr_test
 tests/atf/atf-c/detail/env_test
