@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/22 11:54:09 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/02/22 20:53:33 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,27 @@ ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/version_info.json
-${PYSITELIB}/flask_login.py
-${PYSITELIB}/flask_login.pyc
-${PYSITELIB}/flask_login.pyo
+${PYSITELIB}/flask_login/__about__.py
+${PYSITELIB}/flask_login/__about__.pyc
+${PYSITELIB}/flask_login/__about__.pyo
+${PYSITELIB}/flask_login/__init__.py
+${PYSITELIB}/flask_login/__init__.pyc
+${PYSITELIB}/flask_login/__init__.pyo
+${PYSITELIB}/flask_login/_compat.py
+${PYSITELIB}/flask_login/_compat.pyc
+${PYSITELIB}/flask_login/_compat.pyo
+${PYSITELIB}/flask_login/config.py
+${PYSITELIB}/flask_login/config.pyc
+${PYSITELIB}/flask_login/config.pyo
+${PYSITELIB}/flask_login/login_manager.py
+${PYSITELIB}/flask_login/login_manager.pyc
+${PYSITELIB}/flask_login/login_manager.pyo
+${PYSITELIB}/flask_login/mixins.py
+${PYSITELIB}/flask_login/mixins.pyc
+${PYSITELIB}/flask_login/mixins.pyo
+${PYSITELIB}/flask_login/signals.py
+${PYSITELIB}/flask_login/signals.pyc
+${PYSITELIB}/flask_login/signals.pyo
+${PYSITELIB}/flask_login/utils.py
+${PYSITELIB}/flask_login/utils.pyc
+${PYSITELIB}/flask_login/utils.pyo
