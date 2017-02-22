@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.4 2007/01/15 17:41:28 tonio Exp $
+$NetBSD: patch-af,v 1.5 2017/02/22 12:20:51 wiz Exp $
 
---- src/FbTk/I18n.cc.orig	2007-01-15 17:54:14.000000000 +0100
+--- src/FbTk/I18n.cc.orig	2015-02-08 10:44:45.000000000 +0000
 +++ src/FbTk/I18n.cc
-@@ -76,7 +76,9 @@ void NLSInit(const char *catalog) {
- I18n::I18n():m_multibyte(false), m_utf8_translate(false), m_catalog_fd((nl_catd)(-1)) {
- #ifdef 	HAVE_SETLOCALE
+@@ -209,7 +209,9 @@ void I18n::init(const char* catalog) {
+ I18n::I18n() : m_multibyte(false), m_utf8_translate(false) {
+ #if defined(HAVE_SETLOCALE) && defined(NLS)
      //make sure we don't get 0 to m_locale string
 -    char *temp = setlocale(LC_MESSAGES, "");
 +    char *temp;
