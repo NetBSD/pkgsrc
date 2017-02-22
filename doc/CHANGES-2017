@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.843 2017/02/22 11:41:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.844 2017/02/22 11:43:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-Net-DNS to 1.08 [wiz 2017-02-22]
 	Updated lang/nodejs4 to 4.8.0 [fhajny 2017-02-22]
 	Updated www/p5-Net-HTTP to 6.13 [wiz 2017-02-22]
+	Updated textproc/p5-YAML to 1.23 [wiz 2017-02-22]
