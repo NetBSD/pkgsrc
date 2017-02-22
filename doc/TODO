@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17079 2017/02/22 11:47:09 wiz Exp $
+$NetBSD: TODO,v 1.17080 2017/02/22 11:49:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1382,7 +1382,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-pppoe-3.11
 	o rpm-4.13
 	o rsnapshot-1.4.2
-	o rspamd-1.4.4
 	o rt4-4.4.0
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
