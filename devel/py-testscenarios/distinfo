@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/22 14:21:40 wiz Exp $
+
+SHA1 (testscenarios-0.5.0.tar.gz) = c9eb11775119a1636a07a9f72f1676b6cb4dc7db
+RMD160 (testscenarios-0.5.0.tar.gz) = c1c502651021c3067eeb29b67b8be9b03ae37eeb
+SHA512 (testscenarios-0.5.0.tar.gz) = f08b868babf504482369c5cb945d3e95bca1cc00f92d5013f6898c488051be0c26dc49aaabcef362aea45450a8d041d9826fb6b5c848beec013fb102d6935521
+Size (testscenarios-0.5.0.tar.gz) = 20951 bytes
