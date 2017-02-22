@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.833 2017/02/21 22:01:43 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.834 2017/02/22 00:45:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1031,3 +1031,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added cad/solvespace version 2.3 [plunky 2017-02-21]
 	Added lang/ruby-rkelly-remix version 0.0.7 [minskim 2017-02-21]
 	Updated security/argon2 to 20161029 [kleink 2017-02-21]
+	Updated graphics/jasper to 2.0.10nb1 [ryoon 2017-02-22]
