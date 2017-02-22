@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.867 2017/02/22 19:06:02 maya Exp $
+$NetBSD: CHANGES-2017,v 1.868 2017/02/22 20:54:03 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/poppler to 0.52.0 [wiz 2017-02-22]
 	Updated www/py-flask-admin to 1.4.2 [kleink 2017-02-22]
 	Updated net/tcpdump to 4.9.0nb1 [maya 2017-02-22]
+	Updated www/py-flask-login to 0.4.0 [kleink 2017-02-22]
