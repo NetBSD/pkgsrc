@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.837 2017/02/22 11:22:54 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.838 2017/02/22 11:34:51 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1035,3 +1035,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/curl to 7.53.0 [wiz 2017-02-22]
 	Updated textproc/mdocml to 1.14.1 [wiz 2017-02-22]
 	Updated lang/nodejs to 7.6.0 [fhajny 2017-02-22]
+	Updated lang/nodejs6 to 6.10.0 [fhajny 2017-02-22]
