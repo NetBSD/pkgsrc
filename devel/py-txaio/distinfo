@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/22 13:14:02 wiz Exp $
+
+SHA1 (txaio-2.6.0.tar.gz) = bca77609fe219a7ed37a0864974b6597dd121c99
+RMD160 (txaio-2.6.0.tar.gz) = 849e727d6f1a217d2d0a7725c71b4d42115ea132
+SHA512 (txaio-2.6.0.tar.gz) = 2a816ec4b3b0f1647734453b23f237d14e3cbc5e00169a631bd4a686a595a15ce4e3f741c5ead447fef3050e480005210e1651e0e17b1a880b24be9ef3c1c29d
+Size (txaio-2.6.0.tar.gz) = 41433 bytes
