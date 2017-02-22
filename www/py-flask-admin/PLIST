@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/01/08 17:05:47 kleink Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/02/22 16:18:24 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -298,6 +298,7 @@ ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/model/list.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/model/modals/create.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/model/modals/details.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/model/modals/edit.html
+${PYSITELIB}/flask_admin/templates/bootstrap2/admin/model/row_actions.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/rediscli/console.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/rediscli/response.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/static.html
@@ -321,6 +322,7 @@ ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/model/list.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/model/modals/create.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/model/modals/details.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/model/modals/edit.html
+${PYSITELIB}/flask_admin/templates/bootstrap3/admin/model/row_actions.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/rediscli/console.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/rediscli/response.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/static.html
@@ -403,6 +405,8 @@ ${PYSITELIB}/flask_admin/tests/test_model.pyo
 ${PYSITELIB}/flask_admin/tests/test_tools.py
 ${PYSITELIB}/flask_admin/tests/test_tools.pyc
 ${PYSITELIB}/flask_admin/tests/test_tools.pyo
+${PYSITELIB}/flask_admin/tests/tmp/copyleft.jpg
+${PYSITELIB}/flask_admin/tests/tmp/inner/test1.txt
 ${PYSITELIB}/flask_admin/tools.py
 ${PYSITELIB}/flask_admin/tools.pyc
 ${PYSITELIB}/flask_admin/tools.pyo
@@ -501,6 +505,8 @@ ${EGDIR}/simple/__init__.py
 ${EGDIR}/simple/app.py
 ${EGDIR}/sqla-custom-filter/__init__.py
 ${EGDIR}/sqla-custom-filter/app.py
+${EGDIR}/sqla-filter-selectable/__init__.py
+${EGDIR}/sqla-filter-selectable/app.py
 ${EGDIR}/sqla-hybrid_property/__init__.py
 ${EGDIR}/sqla-hybrid_property/app.py
 ${EGDIR}/sqla/__init__.py
