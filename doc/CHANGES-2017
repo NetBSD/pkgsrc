@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.858 2017/02/22 13:26:09 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.859 2017/02/22 13:48:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-txaio version 2.6.0 [wiz 2017-02-22]
 	Added www/py-autobahn version 0.17.1 [wiz 2017-02-22]
 	Updated textproc/py-JWT to 1.4.2 [wiz 2017-02-22]
+	Updated devel/py-extras to 1.0.0 [wiz 2017-02-22]
