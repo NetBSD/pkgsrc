@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/01/08 17:05:47 kleink Exp $
+# $NetBSD: Makefile,v 1.17 2017/02/22 16:18:24 kleink Exp $
 
-DISTNAME=	Flask-Admin-1.4.0
+DISTNAME=	Flask-Admin-1.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Admin/}
@@ -21,13 +21,14 @@ PLIST_SUBST+=   	EGDIR=${EGDIR}
 INSTALLATION_DIRS+=     ${EGDIR}
 
 post-extract:
-	rm -f ${WRKSRC}/examples/__init__.py
+	${RM} -f ${WRKSRC}/examples/__init__.py
+	${FIND} ${WRKSRC} -type f -name .DS_Store -print | ${XARGS} ${RM} -f
 
 post-install:
-.for i in LICENSE select2.css select2.min.js
-	${CHMOD} -x \
-	    ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_admin/static/vendor/select2/${i}
-.endfor
+	${FIND} \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_admin/static \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/flask_admin/templates \
+	    -type f -print | ${XARGS} ${CHMOD} -x
 	${TOUCH} ${DESTDIR}${PREFIX}/${EGDIR}/__init__.py
 	cd ${WRKSRC}/examples && pax -rwppm . ${DESTDIR}${PREFIX}/${EGDIR}
 
