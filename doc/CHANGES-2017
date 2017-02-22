@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.835 2017/02/22 10:29:55 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.836 2017/02/22 10:45:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1033,3 +1033,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/argon2 to 20161029 [kleink 2017-02-21]
 	Updated graphics/jasper to 2.0.10nb1 [ryoon 2017-02-22]
 	Updated www/curl to 7.53.0 [wiz 2017-02-22]
+	Updated textproc/mdocml to 1.14.1 [wiz 2017-02-22]
