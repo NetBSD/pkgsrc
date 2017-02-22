@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2016/12/04 05:17:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2017/02/22 10:45:05 wiz Exp $
 
-DISTNAME=	mdocml-1.13.4
-PKGREVISION=	2
+DISTNAME=	mdocml-1.14.1
 CATEGORIES=	textproc devel
 MASTER_SITES=	http://mdocml.bsd.lv/snapshots/
 
@@ -19,6 +18,10 @@ SUBST_STAGE.roff=	pre-build
 SUBST_FILES.roff=	mandoc.1 mandoc.3
 SUBST_FILES.roff+=	eqn.7 man.7 mdoc.7 tbl.7
 SUBST_SED.roff=		-e 's,Xr roff,Xr mandoc-roff,g'
+
+# test needs perl
+USE_TOOLS+=	perl:build
+TEST_TARGET=	regress
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -44,6 +47,5 @@ post-extract:
 	${ECHO} STATIC= >> ${WRKSRC}/configure.local
 .endif
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
