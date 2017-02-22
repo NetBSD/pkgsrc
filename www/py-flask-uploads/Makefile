@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:45 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/22 21:05:21 kleink Exp $
 
-DISTNAME=	Flask-Uploads-0.2.0
+DISTNAME=	Flask-Uploads-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Uploads/}
 
 MAINTAINER=	kleink@NetBSD.org
-HOMEPAGE=	https://pythonhosted.org/Flask-Uploads/
+HOMEPAGE=	http://flask-uploads.readthedocs.io/
 COMMENT=	Flexible and efficient upload handling for Flask
 LICENSE=	mit
 
