@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2017/02/15 01:27:00 maya Exp $
+# $NetBSD: Makefile,v 1.46 2017/02/23 10:18:06 rin Exp $
 
 DISTNAME=	simh-4.0.0
 PKGNAME=	simh-4.0.0.20161218
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
@@ -33,9 +33,6 @@ CFLAGS+=	-fforce-addr
 CFLAGS.SunOS+=	-DBSD_COMP
 LDFLAGS.SunOS+=	-lm
 
-CFLAGS+=		-DUSE_NETWORK
-LDFLAGS+=		-lpcap
-
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
 MAKE_FILE=		makefile
@@ -43,12 +40,14 @@ INCLUDES=		${PREFIX:Q}/include:\
 			${BUILDLINK_PREFIX.SDL_ttf:Q}/include/SDL:\
 			${BUILDLINK_PREFIX.libpcap:Q}/include/pcap:\
 			${BUILDLINK_PREFIX.pcre:Q}/include/pcre:\
-			${BUILDLINK_PREFIX.png:Q}/include
+			${BUILDLINK_PREFIX.png:Q}/include:\
+			/usr/include
 LIBRARIES=		${PREFIX:Q}/lib:\
 			${BUILDLINK_PREFIX.SDL_ttf:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.libpcap:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.pcre:Q}/lib${LIBABISUFFIX}:\
-			${BUILDLINK_PREFIX.png:Q}/lib${LIBABISUFFIX}
+			${BUILDLINK_PREFIX.png:Q}/lib${LIBABISUFFIX}:\
+			/usr/lib${LIBABISUFFIX}
 MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
 MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
