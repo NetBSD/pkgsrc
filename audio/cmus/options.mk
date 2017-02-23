@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2017/01/24 17:44:45 maya Exp $
+# $NetBSD: options.mk,v 1.17 2017/02/23 14:45:22 fhajny Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts libao musepack faad wavpack pulseaudio
@@ -149,7 +149,7 @@ PLIST.modplug=		yes
 #
 .if !empty(PKG_OPTIONS:Mfaad)
 .include "../../audio/faad2/buildlink3.mk"
-.include "../../multimedia/libmp4v2/buildlink3.mk"
+.include "../../multimedia/mp4v2/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_AAC=y
 CONFIGURE_ARGS+=	CONFIG_MP4=y
 PLIST.faad=		yes
