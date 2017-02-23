@@ -1,23 +1,18 @@
-$NetBSD: patch-mk_rt.mk,v 1.2 2016/09/12 13:27:33 ryoon Exp $
+$NetBSD: patch-mk_rt.mk,v 1.3 2017/02/23 09:35:16 jperkin Exp $
 
-Fix library location on SunOS.
+Don't build gcc_personality_v0.o on NetBSD.
 
---- mk/rt.mk.orig	2016-08-16 01:54:35.000000000 +0000
+--- mk/rt.mk.orig	2017-02-09 01:37:48.000000000 +0000
 +++ mk/rt.mk
-@@ -269,6 +269,16 @@ endif
- COMPRT_DEFINES_$(1) := -DCOMPILER_RT_ENABLE_IOS=ON
- endif
+@@ -552,9 +552,11 @@ endif
+ ifeq ($$(findstring msvc,$(1)),)
  
-+ifeq ($$(findstring solaris,$(1)),solaris)
-+COMPRT_DIR_$(1) := sunos
-+COMPRT_LIB_NAME_$(1) := clang_rt.builtins-$$(COMPRT_ARCH_$(1))
+ ifeq ($$(findstring freebsd,$(1)),)
++ifeq ($$(findstring netbsd,$(1)),)
+ $(call ADD_INTRINSIC,$(1),gcc_personality_v0.o)
+ endif
+ endif
 +endif
-+
-+ifeq ($$(findstring netbsd,$(1)),netbsd)
-+COMPRT_DIR_$(1) := netbsd
-+COMPRT_LIB_NAME_$(1) := clang_rt.builtins-$$(COMPRT_ARCH_$(1))
-+endif
-+
- ifndef COMPRT_DIR_$(1)
- # NB: FreeBSD and NetBSD output to "linux"...
- COMPRT_DIR_$(1) := linux
+ 
+ ifeq ($$(findstring aarch64,$(1)),aarch64)
+ $(foreach intrinsic,comparetf2.o \
