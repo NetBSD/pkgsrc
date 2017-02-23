@@ -1,13 +1,13 @@
-$NetBSD: patch-src_librustc__trans_back_linker.rs,v 1.1 2016/09/06 10:36:49 jperkin Exp $
+$NetBSD: patch-src_librustc__trans_back_linker.rs,v 1.2 2017/02/23 09:35:16 jperkin Exp $
 
 Permit post-install install_name_tool fixup.
 
---- src/librustc_trans/back/linker.rs.orig	2016-08-16 01:54:35.000000000 +0000
+--- src/librustc_trans/back/linker.rs.orig	2017-02-09 01:37:48.000000000 +0000
 +++ src/librustc_trans/back/linker.rs
-@@ -206,6 +206,8 @@ impl<'a> Linker for GnuLinker<'a> {
-             self.cmd.args(&["-dynamiclib", "-Wl,-dylib"]);
- 
-             if self.sess.opts.cg.rpath {
+@@ -213,6 +213,8 @@ impl<'a> Linker for GnuLinker<'a> {
+             // the right `-Wl,-install_name` with an `@rpath` in it.
+             if self.sess.opts.cg.rpath ||
+                self.sess.opts.debugging_opts.osx_rpath_install_name {
 +                // Ensure we can use install_name_tool later to fixup.
 +                self.cmd.arg("-Wl,-headerpad_max_install_names");
                  let mut v = OsString::from("-Wl,-install_name,@rpath/");
