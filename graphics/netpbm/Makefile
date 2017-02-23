@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.210 2016/08/11 22:48:00 is Exp $
+# $NetBSD: Makefile,v 1.211 2017/02/23 23:13:42 wiz Exp $
 
-TEST_TARGETS=	test
-
-DISTNAME=	netpbm-10.68.02
+DISTNAME=	netpbm-10.77.02
 CATEGORIES=	graphics
 MASTER_SITES=	#
-PKGREVISION=	5
-
 # manually created from svn checkout of
 # svn checkout http://svn.code.sf.net/p/netpbm/code/advanced netpbm
-# tar --exclude netpbm/.svn/\* -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
+# tar --exclude netpbm/.svn -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
 # where VERSION comes from reading netpbm/doc/HISTORY
 # for the documentation:
 # svn checkout http://svn.code.sf.net/p/netpbm/code/userguide netpbm-userguide
 # cd netpbm-userguide && for i in *.html; do python2.7 ../netpbm/buildtools/makeman $i; done && cd ..
 # tar -cvzf /archive/distfiles/netpbm-docs-r${SVN_REVISION}.tar.gz netpbm-userguide/*.[0-9]
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r2313${EXTRACT_SUFX}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} netpbm-docs-r2897${EXTRACT_SUFX}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
@@ -50,6 +46,9 @@ SUBST_STAGE.rgb_txt=	post-patch
 SUBST_MESSAGE.rgb_txt=	Configure RGB_TXT
 SUBST_FILES.rgb_txt=	config.mk
 SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.txt,'
+
+# needs pkg-config and x11?!
+TEST_TARGET=	test
 
 .include "../../mk/bsd.prefs.mk"
 
