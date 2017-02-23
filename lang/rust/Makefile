@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/11/14 20:56:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/23 09:35:16 jperkin Exp $
 
-DISTNAME=	rustc-1.11.0-src
+DISTNAME=	rustc-1.15.1-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
 
@@ -10,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rust-lang.org/
 COMMENT=	Safe, concurrent, practical language
 LICENSE=	mit OR apache-2.0
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 USE_GCC_RUNTIME=	yes
 USE_LANGUAGES=		c c++
@@ -23,6 +20,13 @@ CONFIGURE_ARGS+=	--build=${RUST_ARCH}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--release-channel=stable
 CONFIGURE_ENV+=		CFG_DISABLE_CODEGEN_TESTS=1
+
+#
+# Use the Makefile-based build system.  Unfortunately this will be going away,
+# likely in the next release, forcing us to use a cargo-based system which will
+# require further binary bootstraps.  Hold out as long as we can.
+#
+CONFIGURE_ARGS+=	--disable-rustbuild
 
 UNLIMIT_RESOURCES+=	cputime
 
@@ -70,42 +74,50 @@ CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
 
 #
 # Rust unfortunately requires itself to build.  On platforms which aren't
-# supported by upstream (where they offer binary bootstraps), or where we
-# do not trust random binaries from the Internet, we need to build and
-# provide our own bootstrap.
-#
-# pkgsrc can be used to do this, but the resulting bootstrap must be
-# relocatable (i.e. $ORIGIN) and not depend on anything from pkgsrc (so it
-# is common to use rust's internal llvm).
-#
-# The following variables need to be modified/commented out when producing
-# a stage2 bootstrap.
+# supported by upstream (where they offer binary bootstraps), or where we do
+# not trust random binaries from the Internet, we need to build and provide our
+# own bootstrap.  See the stage0-bootstrap below for more details.
 #
 CONFIGURE_ARGS+=	--enable-local-rust
-CONFIGURE_ARGS+=	--local-rust-root=${WRKDIR}/rust-${RUST_STAGE2_VER}-${RUST_ARCH}/rustc
+CONFIGURE_ARGS+=	--local-rust-root=${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/rustc
 #
-.if !empty(MACHINE_PLATFORM:MDarwin-*-i386)
-RUST_ARCH=		i686-apple-darwin
-.elif !empty(MACHINE_PLATFORM:MDarwin-*-x86_64)
-RUST_ARCH=		x86_64-apple-darwin
-.elif !empty(MACHINE_PLATFORM:MLinux-*-i386)
-RUST_ARCH=		i686-unknown-linux-gnu
-.elif !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-RUST_ARCH=		x86_64-unknown-linux-gnu
-.elif !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
-RUST_ARCH=		x86_64-sun-solaris
-SITES.${RUST_STAGE2}=	https://us-east.manta.joyent.com/pkgsrc/public/tmp/
-.elif !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
+DISTFILES:=		${DEFAULT_DISTFILES}
+RUST_STAGE0_VER=	1.14.0
+#
+.if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		i686-apple-darwin
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+.endif
+.if !empty(MACHINE_PLATFORM:MDarwin-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		x86_64-apple-darwin
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+.endif
+.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		i686-unknown-linux-gnu
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+.endif
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		x86_64-unknown-linux-gnu
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+.endif
+.if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
+RUST_ARCH:=		x86_64-sun-solaris
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+SITES.${RUST_STAGE0}=	https://us-east.manta.joyent.com/pkgsrc/public/pkg-bootstraps/
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH=		x86_64-unknown-netbsd
-.else
-NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
+RUST_STAGE0:=		rust-${RUST_STAGE0_VER}-${RUST_ARCH}.tar.gz
+DISTFILES:=		${DISTFILES} ${RUST_STAGE0}
 .endif
 
-.if defined(RUST_ARCH)
-RUST_STAGE2_VER=	1.10.0
-RUST_STAGE2?=		rust-${RUST_STAGE2_VER}-${RUST_ARCH}.tar.gz
-SITES.${RUST_STAGE2}?=	https://static.rust-lang.org/dist/
-DISTFILES=		${DEFAULT_DISTFILES} ${RUST_STAGE2}
+.if !defined(RUST_ARCH)
+NOT_FOR_PLATFORM+=	${MACHINE_PLATFORM}
 .endif
 
 PLIST_SRC=		PLIST
@@ -119,7 +131,7 @@ OPSYSVARS+=		SOEXT
 SOEXT.Darwin=		dylib
 SOEXT.*=		so
 
-RUST_VERHASH=		39b92f95
+RUST_VERHASH=		570da8f8
 PLIST_SUBST+=		RUST_ARCH=${RUST_ARCH:Q}
 PLIST_SUBST+=		RUST_VERHASH=${RUST_VERHASH:Q}
 PLIST_SUBST+=		SOEXT=${SOEXT:Q}
@@ -167,6 +179,35 @@ fix-darwin-install-name:
 	done
 .  endfor
 .endif
+
+#
+# Create a relocatable stage2 bootstrap from the bits we just built that can be
+# used to build the next version of rust.  Currently only tested on SmartOS.
+#
+BOOTSTRAP_TMPDIR=	${WRKDIR}/${PKGNAME}-${RUST_ARCH}/rustc
+USE_TOOLS+=		gtar
+
+stage0-bootstrap: install
+	${MKDIR} ${BOOTSTRAP_TMPDIR}
+	${CP} -R ${DESTDIR}/${PREFIX}/bin ${BOOTSTRAP_TMPDIR}/
+	${CP} -R ${DESTDIR}/${PREFIX}/lib ${BOOTSTRAP_TMPDIR}/
+.if ${OS_VARIANT} == "SmartOS"
+	for lib in libgcc_s.so.1 libssp.so.0 libstdc++.so.6; do \
+		${CP} `${PKG_CC} -print-file-name=$${lib}` \
+		    ${BOOTSTRAP_TMPDIR}/lib/; \
+	done
+	for f in ${BOOTSTRAP_TMPDIR}/bin/rust{c,doc}; do \
+		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN/../lib' $$f; \
+	done
+	for f in ${BOOTSTRAP_TMPDIR}/lib/*.so*; do \
+		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN' $$f; \
+	done
+	for f in ${BOOTSTRAP_TMPDIR}/lib/rustlib/${RUST_ARCH}/lib/*.so*; do \
+		/usr/bin/elfedit -e 'dyn:runpath $$ORIGIN:$$ORIGIN/../../..' $$f; \
+	done
+.endif
+	(cd ${WRKDIR}; \
+	 ${GTAR} -zcf ${PKGNAME}-${RUST_ARCH}.tar.gz ${PKGNAME}-${RUST_ARCH})
 
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../lang/python/tool.mk"
