@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.13 2016/12/30 23:27:14 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2017/02/23 10:46:34 hauke Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.xemacs
-PKG_SUPPORTED_OPTIONS+=		ldap xface canna debug
+PKG_SUPPORTED_OPTIONS+=		ldap canna debug
 
 .include "../../mk/bsd.options.mk"
 
