@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.67 2017/01/24 19:34:37 maya Exp $
+# $NetBSD: Makefile,v 1.68 2017/02/23 14:47:57 fhajny Exp $
 
 DISTNAME=		cmus-2.7.1
 PKGREVISION=		6
 CATEGORIES=		audio
-MASTER_SITES=		-https://github.com/cmus/cmus/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=cmus/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://cmus.github.io/
