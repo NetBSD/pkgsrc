@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2015/10/01 12:32:22 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2017/02/23 06:20:07 tnn Exp $
 
 DISTNAME=		xinit-1.3.4
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,12 +11,15 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X init program
 LICENSE=		mit
 
+DEPENDS+=		mcookie-[0-9]*:../../x11/mcookie
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xinit=${PREFIX}/bin/xinit
 USE_TOOLS+=		pkg-config xauth:run gmake # nb: gmake is needed on Darwin
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+CONFIGURE_ENV+=		ac_cv_path_MCOOKIE="${PREFIX}/bin/mcookie"
 
 INSTALL_MAKE_FLAGS+=	xinitrcdir=${PREFIX}/share/examples/xinit
 CONF_FILES=		${PREFIX}/share/examples/xinit/xinitrc ${PREFIX}/etc/X11/xinit/xinitrc
