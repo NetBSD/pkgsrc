@@ -1,8 +1,8 @@
-$NetBSD: patch-mk_rustllvm.mk,v 1.1 2016/09/06 10:36:49 jperkin Exp $
+$NetBSD: patch-mk_rustllvm.mk,v 1.2 2017/02/23 09:35:16 jperkin Exp $
 
 Ensure we can find generated LLVM includes.
 
---- mk/rustllvm.mk.orig	2016-07-04 18:04:09.000000000 +0000
+--- mk/rustllvm.mk.orig	2016-09-27 07:17:04.000000000 +0000
 +++ mk/rustllvm.mk
 @@ -17,11 +17,9 @@ define DEF_RUSTLLVM_TARGETS
  # FIXME: Lately, on windows, llvm-config --includedir is not enough
@@ -15,4 +15,4 @@ Ensure we can find generated LLVM includes.
 -endif
  
  RUSTLLVM_OBJS_CS_$(1) := $$(addprefix rustllvm/, \
- 	ExecutionEngineWrapper.cpp RustWrapper.cpp PassWrapper.cpp \
+ 	RustWrapper.cpp PassWrapper.cpp \
