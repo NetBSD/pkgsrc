@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/11/23 16:12:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/02/23 23:13:42 wiz Exp $
 bin/411toppm
 bin/anytopnm
 bin/asciitopgm
@@ -106,6 +106,7 @@ bin/pamtooctaveimg
 bin/pamtopam
 bin/pamtopdbimg
 bin/pamtopfm
+bin/pamtopng
 bin/pamtopnm
 bin/pamtosrf
 bin/pamtosvg
@@ -115,6 +116,7 @@ bin/pamtouil
 bin/pamtowinicon
 bin/pamtoxvmini
 bin/pamundice
+bin/pamunlookup
 bin/pamvalidate
 bin/pamwipeout
 bin/pbmclean
@@ -194,6 +196,8 @@ bin/pgmtolispm
 bin/pgmtopbm
 bin/pgmtopgm
 bin/pgmtoppm
+bin/pgmtosbig
+bin/pgmtost4
 bin/pi1toppm
 bin/pi3topbm
 bin/picttoppm
@@ -317,6 +321,7 @@ bin/ppmtorgb3
 bin/ppmtosixel
 bin/ppmtospu
 bin/ppmtoterm
+bin/ppmtotga
 bin/ppmtouil
 bin/ppmtowinicon
 bin/ppmtoxpm
@@ -341,6 +346,7 @@ bin/spctoppm
 bin/spottopgm
 bin/sputoppm
 bin/srftopam
+bin/st4topgm
 bin/sunicontopnm
 bin/svgtopam
 bin/tgatoppm
@@ -357,8 +363,8 @@ bin/xwdtopnm
 bin/ybmtopbm
 bin/yuvsplittoppm
 bin/yuvtoppm
+bin/yuy2topam
 bin/zeisstopnm
-include/netpbm/bitio.h
 include/netpbm/colorname.h
 include/netpbm/mallocvar.h
 include/netpbm/pam.h
@@ -377,11 +383,12 @@ include/netpbm/ppmcmap.h
 include/netpbm/ppmdfont.h
 include/netpbm/ppmdraw.h
 include/netpbm/ppmfloyd.h
+include/netpbm/runlength.h
 include/netpbm/shhopt.h
 lib/libnetpbm.a
 lib/libnetpbm.so
 lib/libnetpbm.so.11
-lib/libnetpbm.so.11.68
+lib/libnetpbm.so.11.77
 man/man1/411toppm.1
 man/man1/anytopnm.1
 man/man1/asciitopgm.1
@@ -494,6 +501,7 @@ man/man1/pamtooctaveimg.1
 man/man1/pamtopam.1
 man/man1/pamtopdbimg.1
 man/man1/pamtopfm.1
+man/man1/pamtopng.1
 man/man1/pamtopnm.1
 man/man1/pamtosrf.1
 man/man1/pamtosvg.1
@@ -503,6 +511,7 @@ man/man1/pamtouil.1
 man/man1/pamtowinicon.1
 man/man1/pamtoxvmini.1
 man/man1/pamundice.1
+man/man1/pamunlookup.1
 man/man1/pamvalidate.1
 man/man1/pamwipeout.1
 man/man1/pamx.1
@@ -584,6 +593,8 @@ man/man1/pgmtolispm.1
 man/man1/pgmtopbm.1
 man/man1/pgmtopgm.1
 man/man1/pgmtoppm.1
+man/man1/pgmtosbig.1
+man/man1/pgmtost4.1
 man/man1/pi1toppm.1
 man/man1/pi3topbm.1
 man/man1/picttoppm.1
@@ -733,6 +744,7 @@ man/man1/spctoppm.1
 man/man1/spottopgm.1
 man/man1/sputoppm.1
 man/man1/srftopam.1
+man/man1/st4topgm.1
 man/man1/sunicontopnm.1
 man/man1/svgtopam.1
 man/man1/tgatoppm.1
@@ -751,6 +763,7 @@ man/man1/xwdtopnm.1
 man/man1/ybmtopbm.1
 man/man1/yuvsplittoppm.1
 man/man1/yuvtoppm.1
+man/man1/yuy2topam.1
 man/man1/zeisstopnm.1
 man/man3/libmaketmpfile.3
 man/man3/libmaketmpfilefd.3
