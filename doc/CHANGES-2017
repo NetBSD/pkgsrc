@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.870 2017/02/22 21:17:24 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.871 2017/02/23 09:35:25 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1072,3 +1072,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask-login to 0.4.0 [kleink 2017-02-22]
 	Updated www/py-flask-uploads to 0.2.1 [kleink 2017-02-22]
 	Updated www/py-flask-frozen to 0.13 [kleink 2017-02-22]
+	Updated lang/rust to 1.15.1 [jperkin 2017-02-23]
