@@ -1,0 +1,67 @@
+$NetBSD: patch-va_Makefile.am,v 1.1 2017/02/24 16:44:03 maya Exp $
+
+Don't hardcore -ldl
+
+--- va/Makefile.am.orig	2016-11-10 00:34:35.000000000 +0000
++++ va/Makefile.am
+@@ -76,13 +76,13 @@ noinst_HEADERS			= $(libva_source_h_priv
+ libva_la_SOURCES		= $(libva_source_c)
+ libva_la_LDFLAGS		= $(libva_ldflags)
+ libva_la_DEPENDENCIES		= libva.syms
+-libva_la_LIBADD			= $(LIBVA_LIBS) -ldl
++libva_la_LIBADD			= $(LIBVA_LIBS)
+ 
+ lib_LTLIBRARIES			+= libva-tpi.la
+ libva_tpi_la_SOURCES		= va_tpi.c
+ libva_tpi_la_LDFLAGS		= $(LDADD) -no-undefined
+ libva_tpi_la_DEPENDENCIES	= libva.la 
+-libva_tpi_la_LIBADD		= libva.la -ldl
++libva_tpi_la_LIBADD		= libva.la
+ 
+ if USE_DRM
+ SUBDIRS				+= drm
+@@ -91,7 +91,7 @@ libva_drm_la_SOURCES		=
+ libva_drm_la_LDFLAGS		= $(LDADD)
+ libva_drm_la_DEPENDENCIES	= libva.la drm/libva_drm.la
+ libva_drm_la_LIBADD		= libva.la drm/libva_drm.la \
+-	$(LIBVA_LIBS) $(DRM_LIBS) -ldl
++	$(LIBVA_LIBS) $(DRM_LIBS)
+ endif
+ 
+ if USE_X11
+@@ -102,7 +102,7 @@ libva_x11_la_SOURCES		= 
+ libva_x11_la_LDFLAGS		= $(LDADD)
+ libva_x11_la_DEPENDENCIES	= libva.la x11/libva_x11.la
+ libva_x11_la_LIBADD		= libva.la x11/libva_x11.la \
+-	$(LIBVA_LIBS) $(X11_LIBS) $(XEXT_LIBS) $(XFIXES_LIBS) $(DRM_LIBS) -ldl
++	$(LIBVA_LIBS) $(X11_LIBS) $(XEXT_LIBS) $(XFIXES_LIBS) $(DRM_LIBS)
+ endif
+ 
+ if USE_GLX
+@@ -112,7 +112,7 @@ libva_glx_la_SOURCES		=
+ libva_glx_la_LDFLAGS		= $(LDADD)
+ libva_glx_la_DEPENDENCIES	= libva.la glx/libva_glx.la libva-x11.la
+ libva_glx_la_LIBADD		= libva.la glx/libva_glx.la libva-x11.la \
+-	$(GLX_LIBS) -ldl
++	$(GLX_LIBS)
+ endif
+ 
+ if USE_EGL
+@@ -122,7 +122,7 @@ libva_egl_la_SOURCES		=
+ libva_egl_la_LDFLAGS		= $(LDADD)
+ libva_egl_la_DEPENDENCIES	= libva.la egl/libva_egl.la 
+ libva_egl_la_LIBADD		= libva.la egl/libva_egl.la \
+-	$(EGL_LIBS) -ldl
++	$(EGL_LIBS)
+ endif
+ 
+ if USE_WAYLAND
+@@ -132,7 +132,7 @@ libva_wayland_la_SOURCES	=
+ libva_wayland_la_LDFLAGS	= $(LDADD)
+ libva_wayland_la_DEPENDENCIES	= libva.la wayland/libva_wayland.la
+ libva_wayland_la_LIBADD		= libva.la wayland/libva_wayland.la \
+-	$(WAYLAND_LIBS) $(DRM_LIBS) -ldl
++	$(WAYLAND_LIBS) $(DRM_LIBS)
+ endif
+ 
+ DIST_SUBDIRS = x11 glx egl drm wayland
