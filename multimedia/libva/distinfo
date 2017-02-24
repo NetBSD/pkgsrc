@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2017/02/24 00:10:04 maya Exp $
+$NetBSD: distinfo,v 1.6 2017/02/24 03:25:36 maya Exp $
 
 SHA1 (libva-1.7.3.tar.bz2) = 18e46f3d5a0e971eb0ec9fe14bc021e69eb13fb8
 RMD160 (libva-1.7.3.tar.bz2) = d29e432f666df9df8b312c45cd7d9ec2f6ef6e3c
@@ -6,5 +6,5 @@ SHA512 (libva-1.7.3.tar.bz2) = ecc1ba17e2afea2efe4d36e8d9358d420015b3ad9d2a510ee
 Size (libva-1.7.3.tar.bz2) = 824490 bytes
 SHA1 (patch-aa) = 3e4966037c46fada25cc869b672a7e78dda5b04b
 SHA1 (patch-ac) = 776cd2f381ec974bf25054b949912a713d832ae3
-SHA1 (patch-ad) = d19b14007a7b031a6b8d2ec2607057b2dea839c9
 SHA1 (patch-va_glx_va__glx__private.h) = daf6552189295a86f1f073ef107b7449e4098251
+SHA1 (patch-va_va__trace.c) = 874c1ec2abd16368fb0df7de57ba17521d08b3c2
