@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2017/01/16 23:45:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2017/02/24 21:48:08 maya Exp $
 
 BUILDLINK_TREE+=	ffmpeg3
 
@@ -36,6 +36,14 @@ pkgbase := ffmpeg3
 
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg3:Mlibvpx)
 .  include "../../multimedia/libvpx/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.ffmpeg3:Mvaapi)
+.  include "../../multimedia/libva/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.ffmpeg3:Mvdpau)
+.  include "../../multimedia/libvdpau/buildlink3.mk"
 .endif
 
 BUILDLINK_INCDIRS.ffmpeg3+=		include/ffmpeg3
