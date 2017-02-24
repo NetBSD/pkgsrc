@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.882 2017/02/24 23:31:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.883 2017/02/24 23:55:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added multimedia/adobe-flash-player24 version 24.0.0.221 [tsutsui 2017-02-24]
 	Updated multimedia/libva to 1.7.3nb3 [maya 2017-02-24]
 	Updated mail/mutt to 1.8.0 [wiz 2017-02-24]
+	Updated mail/im to 153 [mef 2017-02-24]
