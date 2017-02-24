@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2017/02/24 00:16:55 maya Exp $
+# $NetBSD: Makefile,v 1.133 2017/02/24 13:48:33 maya Exp $
 
 DISTNAME=	mesa-11.2.2
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -105,11 +105,17 @@ INSTALLATION_DIRS+=	share/examples/MesaLib
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/mesa/drivers/dri/common/drirc ${DESTDIR}${PREFIX}/share/examples/MesaLib
 
+PLIST_VARS+=	vdpau vaapi
+
 .include "../../multimedia/libvdpau/available.mk"
-PLIST_VARS+=	vdpau
 .if ${VDPAU_AVAILABLE} == "yes"
 PLIST.vdpau=	yes
 .include "../../multimedia/libvdpau/buildlink3.mk"
+.endif
+
+.include "../../multimedia/libva/available.mk"
+.if ${VAAPI_AVAILABLE} == "yes"
+PLIST.vaapi=	yes
 .include "../../multimedia/libva/buildlink3.mk"
 .endif
 
