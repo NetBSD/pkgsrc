@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2016/06/08 19:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/02/24 23:55:36 mef Exp $
 
-DISTNAME=	im-152
-PKGREVISION=	1
+DISTNAME=	im-153
 CATEGORIES=	mail
 MASTER_SITES=	http://tats.haun.org/im/
 
@@ -43,7 +42,7 @@ post-install:
 .for file in ${MAN_JA}
 	${INSTALL_DATA} ${WRKSRC}/man/${file} ${DESTDIR}${DOCDIR}/man/ja
 .endfor
-	cp -r ${WRKSRC}/dot.im/* ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/dot.im/* ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
