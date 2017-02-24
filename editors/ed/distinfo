@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/03/05 14:43:14 bsiegert Exp $
+$NetBSD: distinfo,v 1.10.8.1 2017/02/24 19:22:06 bsiegert Exp $
 
-SHA1 (ed-1.13.tar.lz) = 31fc89eeaa99d6505bc7367651166e925d8fa430
-RMD160 (ed-1.13.tar.lz) = ea6a0365b8da87fba7ea526e6998f8f21f14eb57
-SHA512 (ed-1.13.tar.lz) = f5da185843bce0165326438fa493b5ba3a7b20415276e2269902cccb4f623b09ac5d6c15fb24a8cf89ab27781af05f6235f2b13000eae825074ebabe2f73ffb6
-Size (ed-1.13.tar.lz) = 63832 bytes
+SHA1 (ed-1.14.1.tar.lz) = a91f785f7e16dc68e1c9c86d532ebd9698171ba0
+RMD160 (ed-1.14.1.tar.lz) = b4c74158c8a8806f68e3b8763302ce656d741040
+SHA512 (ed-1.14.1.tar.lz) = dfcd764e2c5b3f1be4656b7f3998bc7d6a2b8296c37e6db7375ba65fe2dc6e62b4d92468e5b9d2ca05e6486c3b480a172bf4b99598412d1b9451505e426fe093
+Size (ed-1.14.1.tar.lz) = 67365 bytes
