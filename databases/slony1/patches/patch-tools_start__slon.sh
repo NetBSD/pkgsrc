@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2011/11/26 11:49:51 adam Exp $
+$NetBSD: patch-tools_start__slon.sh,v 1.1 2017/02/24 22:07:34 adam Exp $
+
+Portability fix.
 
 --- tools/start_slon.sh.orig	2011-10-11 20:20:52.000000000 +0000
 +++ tools/start_slon.sh

@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2017/02/24 22:07:34 adam Exp $
+
+Add DragonFly support.
+Detect presence of alloca.h.
+
+--- configure.orig	2016-05-31 01:56:39.000000000 +0000
++++ configure
+@@ -2409,6 +2409,7 @@ case $host_os in
+   darwin*) template=darwin ;;
+     dgux*) template=dgux ;;
+  freebsd*) template=freebsd ;;
++ dragonfly*) template=dragonfly ;;
+     hpux*) template=hpux ;;
+     irix*) template=irix ;;
+    linux*|gnu*|k*bsd*-gnu)
+@@ -4311,7 +4312,7 @@ fi
+ 
+ # On IRIX 5.3, sys/types and inttypes.h are conflicting.
+ for ac_header in sys/types.h sys/stat.h stdlib.h string.h memory.h strings.h \
+-		  inttypes.h stdint.h unistd.h
++		  inttypes.h stdint.h unistd.h alloca.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default

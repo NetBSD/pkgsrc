@@ -1,0 +1,13 @@
+$NetBSD: patch-config.h.in,v 1.1 2017/02/24 22:07:34 adam Exp $
+
+Define HAVE_ALLOCA_H.
+
+--- config.h.in.orig	2017-02-24 21:58:27.000000000 +0000
++++ config.h.in
+@@ -79,4 +79,6 @@
+ 
+ #undef HAS_LOOKUPEXPLICITNAMESPACE_2
+ 
++#undef HAVE_ALLOCA_H
++
+ #endif /* SLONY_I_CONFIG_H */
