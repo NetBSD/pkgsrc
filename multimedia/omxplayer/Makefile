@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/01/17 07:33:50 skrll Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/24 21:54:52 maya Exp $
 
 DISTNAME=	omxplayer-20170112
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=popcornmix/}
 GITHUB_PROJECT= omxplayer
