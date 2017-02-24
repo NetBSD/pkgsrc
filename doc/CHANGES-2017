@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.878 2017/02/24 08:04:01 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.879 2017/02/24 16:44:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libvdpau to 1.1.1nb1 [maya 2017-02-24]
 	Updated multimedia/libva to 1.7.3nb1 [maya 2017-02-24]
 	Updated mail/tnef to 1.4.13 [wiz 2017-02-24]
+	Updated multimedia/libva to 1.7.3nb2 [maya 2017-02-24]
