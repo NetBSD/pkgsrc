@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.873 2017/02/23 23:14:06 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.874 2017/02/24 00:11:58 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1075,3 +1075,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/rust to 1.15.1 [jperkin 2017-02-23]
 	Updated security/argon2 to 20161029nb1 [kleink 2017-02-23]
 	Updated graphics/netpbm to 10.77.02 [wiz 2017-02-23]
+	Updated multimedia/libva to 1.7.3 [maya 2017-02-24]
