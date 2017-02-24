@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2017/02/24 03:25:36 maya Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/24 16:44:03 maya Exp $
 #
 
 DISTNAME=	libva-1.7.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.freedesktop.org/software/vaapi/releases/libva/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ USE_TOOLS+=	autoreconf autoconf automake gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
-DRIVER_SEARCH_PATH=	${PREFIX}/lib/xorg/modules/dri
+DRIVER_SEARCH_PATH=	${X11BASE}/lib/dri
 
 CONFIGURE_ARGS+=	--enable-i965-driver
 CONFIGURE_ARGS+=	--enable-shared
@@ -33,11 +33,14 @@ PKGCONFIG_OVERRIDE+=	libva-tpi.pc.in
 PKGCONFIG_OVERRIDE+=	libva-x11.pc.in
 PKGCONFIG_OVERRIDE+=	libva.pc.in
 
-PLIST_VARS+=		egl
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
+# XXX introduces a circular dependency if this package
+# is a dependency to MesaLib, but seems to work anyway
+# worth checking if it's necessary for anything
+#PLIST_VARS+=		egl
 #.include "../../graphics/MesaLib/buildlink3.mk"
 #.if !empty(MESALIB_SUPPORTS_EGL:Myes)
 #PLIST.egl=		yes
