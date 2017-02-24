@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2017/01/16 23:45:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/02/24 21:54:51 maya Exp $
 
 DISTNAME=	chromaprint-1.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	https://bitbucket.org/acoustid/chromaprint/downloads/
 
