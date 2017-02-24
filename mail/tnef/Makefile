@@ -1,15 +1,20 @@
-# $NetBSD: Makefile,v 1.29 2015/10/15 12:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/02/24 08:03:50 wiz Exp $
 
-DISTNAME=	tnef-1.4.12
+DISTNAME=	tnef-1.4.13
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tnef/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=verdammelt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tnef.sourceforge.net/
 COMMENT=	Decode MS-TNEF MIME attachments
+LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		autoconf automake autoreconf
 TEST_TARGET=		check
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnef
 PKG_SUPPORTED_OPTIONS=	debug
