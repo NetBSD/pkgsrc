@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2016/02/23 14:40:36 tnn Exp $
+@comment $NetBSD: PLIST,v 1.34 2017/02/24 00:16:55 maya Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -63,3 +63,21 @@ ${PLIST.dri}lib/pkgconfig/glesv2.pc
 ${PLIST.wayland}lib/pkgconfig/wayland-egl.pc
 ${PLIST.xatracker}lib/pkgconfig/xatracker.pc
 share/examples/MesaLib/drirc
+${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so
+${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1
+${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0
+${PLIST.vdpau}lib/vdpau/libvdpau_nouveau.so.1.0.0
+${PLIST.vdpau}lib/vdpau/libvdpau_r300.so
+${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1
+${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0
+${PLIST.vdpau}lib/vdpau/libvdpau_r300.so.1.0.0
+${PLIST.vdpau}lib/vdpau/libvdpau_r600.so
+${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1
+${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1.0
+${PLIST.vdpau}lib/vdpau/libvdpau_r600.so.1.0.0
+${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so
+${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1
+${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0
+${PLIST.vdpau}lib/vdpau/libvdpau_radeonsi.so.1.0.0
+${PLIST.vdpau}lib/dri/gallium_drv_video.la
+${PLIST.vdpau}lib/dri/gallium_drv_video.so
