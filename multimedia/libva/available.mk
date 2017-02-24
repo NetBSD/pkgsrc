@@ -1,4 +1,4 @@
-# $NetBSD: available.mk,v 1.7 2017/02/24 16:44:03 maya Exp $
+# $NetBSD: available.mk,v 1.8 2017/02/24 17:07:51 maya Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -9,7 +9,7 @@
 # The following should be kept up-to-date!
 .if ${OPSYS} == "DragonFly"
 VAAPI_AVAILABLE=	yes
-.if ${OPSYS} == "FreeBSD"
+.elif ${OPSYS} == "FreeBSD"
 VAAPI_AVAILABLE=	yes
 .elif ${OPSYS} == "NetBSD"
 VAAPI_AVAILABLE=	yes
