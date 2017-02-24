@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/10/13 17:53:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/02/24 23:31:24 wiz Exp $
 bin/flea
 bin/mutt
 bin/mutt_dotlock
@@ -79,6 +79,7 @@ share/examples/mutt/pgp5.rc
 share/examples/mutt/pgp6.rc
 share/examples/mutt/sample.mailcap
 share/examples/mutt/sample.muttrc
+share/examples/mutt/sample.muttrc-compress
 share/examples/mutt/sample.muttrc-sidebar
 share/examples/mutt/sample.muttrc-tlr
 share/examples/mutt/sample.vimrc-sidebar
