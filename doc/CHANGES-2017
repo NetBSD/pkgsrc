@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.876 2017/02/24 01:04:28 maya Exp $
+$NetBSD: CHANGES-2017,v 1.877 2017/02/24 03:26:10 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1078,3 +1078,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libva to 1.7.3 [maya 2017-02-24]
 	Updated graphics/MesaLib to 11.2.2nb2 [maya 2017-02-24]
 	Updated multimedia/libvdpau to 1.1.1nb1 [maya 2017-02-24]
+	Updated multimedia/libva to 1.7.3nb1 [maya 2017-02-24]
