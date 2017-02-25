@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/25 17:38:41 wiz Exp $
+
+SHA1 (py3dns-3.1.1a.tar.gz) = b84edb0ebb1a063c64a92e8221b176e10d0a8813
+RMD160 (py3dns-3.1.1a.tar.gz) = 157a2c23621e1efaf0cbd4513686802d8c49bb4b
+SHA512 (py3dns-3.1.1a.tar.gz) = 5f22ba12db502f997be4c2479697cc21fe15aac218da1d347bd400a3ab73d86ad32b57740292a10eacb73e07eba977f67b881e59be16f902afab47053efd6c6e
+Size (py3dns-3.1.1a.tar.gz) = 29981 bytes
