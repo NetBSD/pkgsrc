@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.883 2017/02/24 23:55:49 mef Exp $
+$NetBSD: CHANGES-2017,v 1.884 2017/02/25 00:05:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1085,3 +1085,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libva to 1.7.3nb3 [maya 2017-02-24]
 	Updated mail/mutt to 1.8.0 [wiz 2017-02-24]
 	Updated mail/im to 153 [mef 2017-02-24]
+	Updated mail/gmime to 2.6.23 [mef 2017-02-25]
