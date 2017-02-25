@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.895 2017/02/25 14:16:37 mef Exp $
+$NetBSD: CHANGES-2017,v 1.896 2017/02/25 14:29:07 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Term-Screen to 1.06 [mef 2017-02-25]
 	Updated devel/p5-String-PerlIdentifier to 0.06 [mef 2017-02-25]
 	Updated devel/p5-Test-Warn to 0.32 [mef 2017-02-25]
+	Updated devel/p5-Hook-LexWrap to 0.26 [mef 2017-02-25]
