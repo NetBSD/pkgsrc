@@ -1,63 +1,82 @@
 ARCHIVE_ENTRY_ACL(3)	 BSD Library Functions Manual	  ARCHIVE_ENTRY_ACL(3)
 
-NAME
-     archive_entry_acl_add_entry, archive_entry_acl_add_entry_w,
-     archive_entry_acl_clear, archive_entry_acl_count, archive_entry_acl_next,
-     archive_entry_acl_next_w, archive_entry_acl_reset,
-     archive_entry_acl_text_w — functions for manipulating Access Control
-     Lists in archive entry descriptions
+1mNAME0m
+     1marchive_entry_acl_add_entry22m, 1marchive_entry_acl_add_entry_w22m,
+     1marchive_entry_acl_clear22m, 1marchive_entry_acl_count22m,
+     1marchive_entry_acl_from_text22m, 1marchive_entry_acl_from_text_w,0m
+     1marchive_entry_acl_next22m, 1marchive_entry_acl_next_w22m,
+     1marchive_entry_acl_reset22m, 1marchive_entry_acl_to_text22m,
+     1marchive_entry_acl_to_text_w22m, 1marchive_entry_acl_types 22m— functions for
+     manipulating Access Control Lists in archive entry descriptions
 
-LIBRARY
+1mLIBRARY0m
      Streaming Archive Library (libarchive, -larchive)
 
-SYNOPSIS
-     #include <archive_entry.h>
+1mSYNOPSIS0m
+     1m#include <archive_entry.h>0m
 
-     void
-     archive_entry_acl_add_entry(struct archive_entry *a, int type,
-	 int permset, int tag, int qualifier, const char *name);
+     4mvoid0m
+     1marchive_entry_acl_add_entry22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint24m 4mtype24m,
+	 4mint24m 4mpermset24m, 4mint24m 4mtag24m, 4mint24m 4mqualifier24m, 4mconst24m 4mchar24m 4m*name24m);
 
-     void
-     archive_entry_acl_add_entry_w(struct archive_entry *a, int type,
-	 int permset, int tag, int qualifier, const wchar_t *name);
+     4mvoid0m
+     1marchive_entry_acl_add_entry_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint24m 4mtype24m,
+	 4mint24m 4mpermset24m, 4mint24m 4mtag24m, 4mint24m 4mqualifier24m, 4mconst24m 4mwchar_t24m 4m*name24m);
 
-     void
-     archive_entry_acl_clear(struct archive_entry *a);
+     4mvoid0m
+     1marchive_entry_acl_clear22m(4mstruct24m 4marchive_entry24m 4m*a24m);
 
-     int
-     archive_entry_acl_count(struct archive_entry *a, int type);
+     4mint0m
+     1marchive_entry_acl_count22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint24m 4mtype24m);
 
-     int
-     archive_entry_acl_next(struct archive_entry *a, int type, int *ret_type,
-	 int *ret_permset, int *ret_tag, int *ret_qual,
-	 const char **ret_name);
+     4mint0m
+     1marchive_entry_acl_from_text22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mconst24m 4mchar24m 4m*text24m,
+	 4mint24m 4mtype24m);
 
-     int
-     archive_entry_acl_next_w(struct archive_entry *a, int type,
-	 int *ret_type, int *ret_permset, int *ret_tag, int *ret_qual,
-	 const wchar_t **ret_name);
+     4mint0m
+     1marchive_entry_acl_from_text_w22m(4mstruct24m 4marchive_entry24m 4m*a24m,
+	 4mconst24m 4mwchar_t24m 4m*text24m, 4mint24m 4mtype24m);
 
-     int
-     archive_entry_acl_reset(struct archive_entry *a, int type);
+     4mint0m
+     1marchive_entry_acl_next22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint24m 4mtype24m, 4mint24m 4m*ret_type24m,
+	 4mint24m 4m*ret_permset24m, 4mint24m 4m*ret_tag24m, 4mint24m 4m*ret_qual24m,
+	 4mconst24m 4mchar24m 4m**ret_name24m);
 
-     const wchar_t *
-     archive_entry_acl_text_w(struct archive_entry *a, int flags);
+     4mint0m
+     1marchive_entry_acl_next_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint24m 4mtype24m,
+	 4mint24m 4m*ret_type24m, 4mint24m 4m*ret_permset24m, 4mint24m 4m*ret_tag24m, 4mint24m 4m*ret_qual24m,
+	 4mconst24m 4mwchar_t24m 4m**ret_name24m);
 
-DESCRIPTION
-     An “Access Control List” is a generalisation of the classic Unix permis‐
-     sion system.  The ACL interface of libarchive is derived from the
-     POSIX.1e draft, but restricted to simplify dealing with practical imple‐
-     mentations in various Operating Systems and archive formats.
+     4mint0m
+     1marchive_entry_acl_reset22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mint24m 4mtype24m);
 
-     An ACL consists of a number of independent entries.  Each entry specifies
-     the permission set as bitmask of basic permissions.  Valid permissions
-     are:
-	   ARCHIVE_ENTRY_ACL_EXECUTE
-	   ARCHIVE_ENTRY_ACL_WRITE
-	   ARCHIVE_ENTRY_ACL_READ
+     4mchar24m 4m*0m
+     1marchive_entry_acl_to_text22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mssize_t24m 4m*len_p24m,
+	 4mint24m 4mflags24m);
+
+     4mwchar_t24m 4m*0m
+     1marchive_entry_acl_to_text_w22m(4mstruct24m 4marchive_entry24m 4m*a24m, 4mssize_t24m 4m*len_p24m,
+	 4mint24m 4mflags24m);
+
+     4mint0m
+     1marchive_entry_acl_types22m(4mstruct24m 4marchive_entry24m 4m*a24m);
+
+1mDESCRIPTION0m
+     The “Access Control Lists (ACLs)” extend the standard Unix perssion
+     model.  The ACL interface of 1mlibarchive 22msupports both POSIX.1e and NFSv4
+     style ACLs. Use of ACLs is restricted by various levels of ACL support in
+     operating systems, file systems and archive formats.
+
+   1mPOSIX.1e Access Control Lists0m
+     A POSIX.1e ACL consists of a number of independent entries.  Each entry
+     specifies the permission set as bitmask of basic permissions.  Valid per‐
+     missions in the 4mpermset24m are:
+	   ARCHIVE_ENTRY_ACL_READ (1mr22m)
+	   ARCHIVE_ENTRY_ACL_WRITE (1mw22m)
+	   ARCHIVE_ENTRY_ACL_EXECUTE (1mx22m)
      The permissions correspond to the normal Unix permissions.
 
-     The tag specifies the principal to which the permission applies.  Valid
+     The 4mtag24m specifies the principal to which the permission applies.  Valid
      values are:
 	   ARCHIVE_ENTRY_ACL_USER	The user specified by the name field.
 	   ARCHIVE_ENTRY_ACL_USER_OBJ	The owner of the file.
@@ -65,71 +84,215 @@ DESCRIPTION
 	   ARCHIVE_ENTRY_ACL_GROUP_OBJ	The group who owns the file.
 	   ARCHIVE_ENTRY_ACL_MASK	The maximum permissions to be obtained
 					via group permissions.
-	   ARCHIVE_ENTRY_ACL_OTHER	Any principal who doesn't have a user
-					or group entry.
+	   ARCHIVE_ENTRY_ACL_OTHER	Any principal who is not file owner or
+					a member of the owning group.
+
      The principals ARCHIVE_ENTRY_ACL_USER_OBJ, ARCHIVE_ENTRY_ACL_GROUP_OBJ
      and ARCHIVE_ENTRY_ACL_OTHER are equivalent to user, group and other in
      the classic Unix permission model and specify non-extended ACL entries.
 
-     All files have an access ACL (ARCHIVE_ENTRY_ACL_TYPE_ACCESS).  This spec‐
-     ifies the permissions required for access to the file itself.  Directo‐
-     ries have an additional ACL (ARCHIVE_ENTRY_ACL_TYPE_DEFAULT), which con‐
-     trols the initial access ACL for newly created directory entries.
+     All files with have an access ACL (ARCHIVE_ENTRY_ACL_TYPE_ACCESS).  This
+     specifies the permissions required for access to the file itself.	Direc‐
+     tories have an additional ACL (ARCHIVE_ENTRY_ACL_TYPE_DEFAULT), which
+     controls the initial access ACL for newly created directory entries.
 
-     archive_entry_acl_add_entry() and archive_entry_acl_add_entry_w() add a
+   1mNFSv4 Access Control Lists0m
+     A NFSv4 ACL consists of multiple individual entries called Access Control
+     Entries (ACEs).
+
+     There are four possible types of a NFSv4 ACE:
+	   ARCHIVE_ENTRY_ACL_TYPE_ALLOW Allow principal to perform actions
+					requiring given permissions.
+	   ARCHIVE_ENTRY_ACL_TYPE_DENY	Prevent principal from performing
+					actions requiring given permissions.
+	   ARCHIVE_ENTRY_ACL_TYPE_AUDIT Log access attempts by principal which
+					require given permissions.
+	   ARCHIVE_ENTRY_ACL_TYPE_ALARM Trigger a system alarm on access
+					attempts by principal which require
+					given permissions.
+
+     The 4mtag24m specifies the principal to which the permission applies.  Valid
+     values are:
+	   ARCHIVE_ENTRY_ACL_USER	The user specified by the name field.
+	   ARCHIVE_ENTRY_ACL_USER_OBJ	The owner of the file.
+	   ARCHIVE_ENTRY_ACL_GROUP	The group specied by the name field.
+	   ARCHIVE_ENTRY_ACL_GROUP_OBJ	The group who owns the file.
+	   ARCHIVE_ENTRY_ACL_EVERYONE	Any principal who is not file owner or
+					a member of the owning group.
+
+     Entries with the ARCHIVE_ENTRY_ACL_USER or ARCHIVE_ENTRY_ACL_GROUP tag
+     store the user and group name in the 4mname24m string and optionally the user
+     or group ID in the 4mqualifier24m integer.
+
+     NFSv4 ACE permissions and flags are stored in the same 4mpermset24m bitfield.
+     Some permissions share the same constant and permission character but
+     have different effect on directories than on files. The following ACE
+     permissions are supported:
+	   ARCHIVE_ENTRY_ACL_READ_DATA (1mr22m)
+		   Read data (file).
+	   ARCHIVE_ENTRY_ACL_LIST_DIRECTORY (1mr22m)
+		   List entries (directory).
+	   ARCHIVE_ENTRY_ACL_WRITE_DATA (1mw22m)
+		   Write data (file).
+	   ARCHIVE_ENTRY_ACL_ADD_FILE (1mw22m)
+		   Create files (directory).
+	   ARCHIVE_ENTRY_ACL_EXECUTE (1mx22m)
+		   Execute file or change into a directory.
+	   ARCHIVE_ENTRY_ACL_APPEND_DATA (1mp22m)
+		   Append data (file).
+	   ARCHIVE_ENTRY_ACL_ADD_SUBDIRECTORY (1mp22m)
+		   Create subdirectories (directory).
+	   ARCHIVE_ENTRY_ACL_DELETE_CHILD (1mD22m)
+		   Remove files and subdirectories inside a directory.
+	   ARCHIVE_ENTRY_ACL_DELETE (1md22m)
+		   Remove file or directory.
+	   ARCHIVE_ENTRY_ACL_READ_ATTRIBUTES (1ma22m)
+		   Read file or directory attributes.
+	   ARCHIVE_ENTRY_ACL_WRITE_ATTRIBUTES (1mA22m)
+		   Write file or directory attributes.
+	   ARCHIVE_ENTRY_ACL_READ_NAMED_ATTRS (1mR22m)
+		   Read named file or directory attributes.
+	   ARCHIVE_ENTRY_ACL_WRITE_NAMED_ATTRS (1mW22m)
+		   Write named file or directory attributes.
+	   ARCHIVE_ENTRY_ACL_READ_ACL (1mc22m)
+		   Read file or directory ACL.
+	   ARCHIVE_ENTRY_ACL_WRITE_ACL (1mC22m)
+		   Write file or directory ACL.
+	   ARCHIVE_ENTRY_ACL_WRITE_OWNER (1mo22m)
+		   Change owner of a file or directory.
+	   ARCHIVE_ENTRY_ACL_SYNCHRONIZE (1ms22m)
+		   Use synchronous I/O.
+
+     The following NFSv4 ACL inheritance flags are supported:
+	   ARCHIVE_ENTRY_ACL_ENTRY_FILE_INHERIT (1mf22m)
+		   Inherit parent directory ACE to files.
+	   ARCHIVE_ENTRY_ACL_ENTRY_DIRECTORY_INHERIT (1md22m)
+		   Inherit parent directory ACE to subdirectories.
+	   ARCHIVE_ENTRY_ACL_ENTRY_INHERIT_ONLY (1mi22m)
+		   Only inherit, do not apply the permission on the directory
+		   itself.
+	   ARCHIVE_ENTRY_ACL_ENTRY_NO_PROPAGATE_INHERIT (1mn22m)
+		   Do not propagate inherit flags. Only first-level entries
+		   inherit ACLs.
+	   ARCHIVE_ENTRY_ACL_ENTRY_SUCCESSFUL_ACCESS (1mS22m)
+		   Trigger alarm or audit on succesful access.
+	   ARCHIVE_ENTRY_ACL_ENTRY_FAILED_ACCESS (1mF22m)
+		   Trigger alarm or audit on failed access.
+	   ARCHIVE_ENTRY_ACL_ENTRY_INHERITED (1mI22m)
+		   Mark that ACE was inherited.
+
+   1mFunctions0m
+     1marchive_entry_acl_add_entry22m() and 1marchive_entry_acl_add_entry_w22m() add a
      single ACL entry.	For the access ACL and non-extended principals, the
-     classic Unix permissions are updated.
+     classic Unix permissions are updated. An archive enry cannot contain both
+     POSIX.1e and NFSv4 ACL entries.
 
-     archive_entry_acl_clear() removes all ACL entries and resets the enumera‐
+     1marchive_entry_acl_clear22m() removes all ACL entries and resets the enumera‐
      tion pointer.
 
-     archive_entry_acl_count() counts the ACL entries that have the given type
-     mask.  type can be the bitwise-or of ARCHIVE_ENTRY_ACL_TYPE_ACCESS and
-     ARCHIVE_ENTRY_ACL_TYPE_DEFAULT.  If ARCHIVE_ENTRY_ACL_TYPE_ACCESS is
+     1marchive_entry_acl_count22m() counts the ACL entries that have the given type
+     mask.  4mtype24m can be the bitwise-or of
+	   ARCHIVE_ENTRY_ACL_TYPE_ACCESS
+	   ARCHIVE_ENTRY_ACL_TYPE_DEFAULT
+     for POSIX.1e ACLs and
+	   ARCHIVE_ENTRY_ACL_TYPE_ALLOW
+	   ARCHIVE_ENTRY_ACL_TYPE_DENY
+	   ARCHIVE_ENTRY_ACL_TYPE_AUDIT
+	   ARCHIVE_ENTRY_ACL_TYPE_ALARM
+     for NFSv4 ACLs. For POSIX.1e ACLs if ARCHIVE_ENTRY_ACL_TYPE_ACCESS is
      included and at least one extended ACL entry is found, the three non-
      extened ACLs are added.
 
-     archive_entry_acl_next() and archive_entry_acl_next_w() return the next
+     1marchive_entry_acl_from_text22m() and 1marchive_entry_acl_from_text_w22m() add new
+     (or merge with existing) ACL entries from (wide) text. The argument 4mtype0m
+     may take one of the following values:
+	   ARCHIVE_ENTRY_ACL_TYPE_ACCESS
+	   ARCHIVE_ENTRY_ACL_TYPE_DEFAULT
+	   ARCHIVE_ENTRY_ACL_TYPE_NFS4
+     Supports all formats that can be created with 1marchive_entry_acl_to_text22m()
+     or respective 1marchive_entry_acl_to_text_w22m().	Existing ACL entries are
+     preserved. To get a clean new ACL from text 1marchive_entry_acl_clear22m()
+     must be called first. Entries prefixed with “default:” are treated as
+     ARCHIVE_ENTRY_ACL_TYPE_DEFAULT unless 4mtype24m is
+     ARCHIVE_ENTRY_ACL_TYPE_NFS4.  Invalid entries, non-parseable ACL entries
+     and entries beginning with the ‘#’ character (comments) are skipped.
+
+     1marchive_entry_acl_next22m() and 1marchive_entry_acl_next_w22m() return the next
      entry of the ACL list.  This functions may only be called after
-     archive_entry_acl_reset() has indicated the presence of extended ACL
+     1marchive_entry_acl_reset22m() has indicated the presence of extended ACL
      entries.
 
-     archive_entry_acl_reset() prepare reading the list of ACL entries with
-     archive_entry_acl_next() or archive_entry_acl_next_w().  The function
+     1marchive_entry_acl_reset22m() prepare reading the list of ACL entries with
+     1marchive_entry_acl_next22m() or 1marchive_entry_acl_next_w22m().	The function
      returns either 0, if no non-extended ACLs are found.  In this case, the
      access permissions should be obtained by archive_entry_mode(3) or set
      using chmod(2).  Otherwise, the function returns the same value as
-     archive_entry_acl_count().
+     1marchive_entry_acl_count22m().
 
-     archive_entry_acl_text_w() converts the ACL entries for the given type
-     mask into a wide string.  In addition to the normal type flags,
-     ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID and ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT
-     can be specified to further customize the result.	The returned long
-     string is valid until the next call to archive_entry_acl_clear(),
-     archive_entry_acl_add_entry(), archive_entry_acl_add_entry_w() or
-     archive_entry_acl_text_w().
+     1marchive_entry_acl_to_text22m() and 1marchive_entry_acl_to_text_w22m() convert the
+     ACL entries for the given type into a (wide) string of ACL entries sepa‐
+     rated by newline. If the the pointer 4mlen_p24m is not NULL, then the function
+     shall return the length of the string (not including the NULL terminator)
+     in the location pointed to by 4mlen_p24m.	The 4mflag24m argument is a bitwise-or.
 
-RETURN VALUES
-     archive_entry_acl_count() and archive_entry_acl_reset() returns the num‐
-     ber of ACL entries that match the given type mask.  If the type mask
-     includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS and at least one extended ACL
-     entry exists, the three classic Unix permissions are counted.
+     The following flags are effective only on POSIX.1e ACL:
+	   ARCHIVE_ENTRY_ACL_TYPE_ACCESS
+		   Output access ACLs.
+	   ARCHIVE_ENTRY_ACL_TYPE_DEFAULT
+		   Output POSIX.1e default ACLs.
+	   ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT
+		   Prefix each default ACL entry with the word “default:”.
+	   ARCHIVE_ENTRY_ACL_STYLE_SOLARIS
+		   The mask and other ACLs don not contain a double colon.
 
-     archive_entry_acl_next() and archive_entry_acl_next_w() return ARCHIVE_OK
+     The following flags are effecive only on NFSv4 ACL:
+	   ARCHIVE_ENTRY_ACL_STYLE_COMPACT
+		   Do not output minus characters for unset permissions and
+		   flags in NFSv4 ACL permission and flag fields.
+
+     The following flags are effective on both POSIX.1e and NFSv4 ACL:
+	   ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID
+		   Add an additional colon-separated field containing the user
+		   or group id.
+	   ARCHIVE_ENTRY_ACL_STYLE_SEPARATOR_COMMA
+		   Separate ACL entries with comma instead of newline.
+
+     If the archive entry contains NFSv4 ACLs, all types of NFSv4 ACLs are
+     returned.	It the entry contains POSIX.1e ACLs and none of the flags
+     ARCHIVE_ENTRY_ACL_TYPE_ACCESS or ARCHIVE_ENTRY_ACL_TYPE_DEFAULT are spec‐
+     ified, both access and default entries are returned and default entries
+     are prefixed with “default:”.
+
+     1marchive_entry_acl_types22m() get ACL entry types contained in an archive
+     entry's ACL. As POSIX.1e and NFSv4 ACL entries cannot be mixed, this
+     function is a very efficient way to detect if an ACL already contains
+     POSIX.1e or NFSv4 ACL entries.
+
+1mRETURN VALUES0m
+     1marchive_entry_acl_count22m() and 1marchive_entry_acl_reset22m() returns the num‐
+     ber of ACL entries that match the given type mask.  For POSIX.1e ACLS if
+     the type mask includes ARCHIVE_ENTRY_ACL_TYPE_ACCESS and at least one
+     extended ACL entry exists, the three classic Unix permissions are
+     counted.
+
+     1marchive_entry_acl_from_text22m() and 1marchive_entry_acl_from_text_w22m() return
+     ARCHIVE_OK if all entries were successfully parsed and ARCHIVE_WARN if
+     one or more entries were invalid or non-parseable.
+
+     1marchive_entry_acl_next22m() and 1marchive_entry_acl_next_w22m() return ARCHIVE_OK
      on success, ARCHIVE_EOF if no more ACL entries exist and ARCHIVE_WARN if
-     archive_entry_acl_reset() has not been called first.
+     1marchive_entry_acl_reset22m() has not been called first.
 
-     archive_entry_text_w() returns a wide string representation of the ACL
-     entrise matching the given type mask.  The returned long string is valid
-     until the next call to archive_entry_acl_clear(),
-     archive_entry_acl_add_entry(), archive_entry_acl_add_entry_w() or
-     archive_entry_acl_text_w().
+     1marchive_entry_acl_to_text22m() returns a string representing the ACL entries
+     matching the given type and flags on success or NULL on error.
 
-SEE ALSO
-     archive_entry(3) libarchive(3),
+     1marchive_entry_acl_to_text_w22m() returns a wide string representing the ACL
+     entries matching the given type and flags on success or NULL on error.
 
-BUGS
-     ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID and ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT
-     are not documented.
+     1marchive_entry_acl_types22m() returns a bitmask of ACL entry types or 0 if
+     archive entry has no ACL entries.
 
-BSD			       February 2, 2012 			   BSD
+1mSEE ALSO0m
+     archive_entry(3), libarchive(3)
+
+BSD			       February 15, 2017			   BSD
