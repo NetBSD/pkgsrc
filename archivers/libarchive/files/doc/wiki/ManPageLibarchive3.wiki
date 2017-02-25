@@ -117,19 +117,19 @@ More detailed information can be found in the individual manual
 pages for each API or utility function. 
 == READING AN ARCHIVE == 
 See 
-[[ManPagerchiveead3]]. 
+[[ManPageArchiveRead3]]. 
 == WRITING AN ARCHIVE == 
 See 
-[[ManPagerchiverite3]]. 
+[[ManPageArchiveWrite3]]. 
 == WRITING ENTRIES TO DISK == 
 The 
-[[ManPagerchiveriteisk3]] 
+[[ManPageArchiveWriteDisk3]] 
 API allows you to write 
-[[ManPagerchiventry3]] 
+[[ManPageArchiveEntry3]] 
 objects to disk using the same API used by 
-[[ManPagerchiverite3]]. 
+[[ManPageArchiveWrite3]]. 
 The 
-[[ManPagerchiveriteisk3]] 
+[[ManPageArchiveWriteDisk3]] 
 API is used internally by 
 '''archive_read_extract'''('';'') 
 using it directly can provide greater control over how entries 
@@ -139,21 +139,21 @@ archive-to-archive copy and archive-to-disk extraction
 operations. 
 == READING ENTRIES FROM DISK == 
 The 
-[[ManPagerchiveeadisk3]] 
+[[ManPageArchiveReadDisk3]] 
 supports for populating 
-[[ManPagerchiventry3]] 
+[[ManPageArchiveEntry3]] 
 objects from information in the filesystem. 
 This includes the information accessible from the 
 [[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 
 system call as well as ACLs, extended attributes, 
 and other metadata. 
 The 
-[[ManPagerchiveeadisk3]] 
+[[ManPageArchiveReadDisk3]] 
 API also supports iterating over directory trees, 
 which allows directories of files to be read using 
 an API compatible with 
 the 
-[[ManPagerchiveead3]] 
+[[ManPageArchiveRead3]] 
 API. 
 == DESCRIPTION == 
 Detailed descriptions of each function are provided by the 
@@ -168,7 +168,7 @@ The
 structure contains a complete description of a single archive 
 entry. 
 It uses an opaque interface that is fully documented in 
-[[ManPagerchiventry3]]. 
+[[ManPageArchiveEntry3]]. 
 
 Users familiar with historic formats should be aware that the newer 
 variants have eliminated most restrictions on the length of textual fields. 
@@ -216,14 +216,14 @@ and
 functions can be used to obtain more information. 
 == ENVIRONMENT == 
 There are character set conversions within the 
-[[ManPagerchiventry3]] 
+[[ManPageArchiveEntry3]] 
 functions that are impacted by the currently-selected locale. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPagerchiventry3]], 
-[[ManPagerchiveead3]], 
-[[ManPagerchivetil3]], 
-[[ManPagerchiverite3]], 
+[[ManPageArchiveEntry3]], 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveUtil3]], 
+[[ManPageArchiveWrite3]], 
 [[ManPageTar5]] 
 == HISTORY == 
 The 

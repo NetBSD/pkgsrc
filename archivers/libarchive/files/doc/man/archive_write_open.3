@@ -42,6 +42,7 @@ Freeze the settings, open the archive, and prepare for writing entries.
 This is the most generic form of this function, which accepts
 pointers to three callback functions which will be invoked by
 the compression layer to write the constructed archive.
+This does not alter the default archive padding.
 .TP
 \fB\%archive_write_open_fd\fP()
 A convenience form of
@@ -104,12 +105,21 @@ is currently in use.
 You should be careful to ensure that this variable
 remains allocated until after the archive is
 closed.
+This function will disable padding unless you
+have specifically set the block size.
 .RE
 More information about the
 \fIstruct\fP archive
 object and the overall design of the library can be found in the
 \fBlibarchive\fP(3)
 overview.
+.PP
+Note that the convenience forms above vary in how
+they block the output.
+See
+\fBarchive_write_blocksize\fP(3)
+if you need to control the block size used for writes
+or the end-of-file padding behavior.
 .SH CLIENT CALLBACKS
 .ad l
 To use this library, you will need to define and register
@@ -202,6 +212,7 @@ functions.
 \fBtar\fP(1),
 \fBlibarchive\fP(3),
 \fBarchive_write\fP(3),
+\fBarchive_write_blocksize\fP(3),
 \fBarchive_write_filter\fP(3),
 \fBarchive_write_format\fP(3),
 \fBarchive_write_new\fP(3),
