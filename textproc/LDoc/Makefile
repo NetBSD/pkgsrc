@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/11/20 10:57:31 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/25 09:21:10 alnsn Exp $
 
-DISTNAME=	LDoc-1.4.5
+DISTNAME=	LDoc-1.4.6
 PKGNAME=	${DISTNAME:S/LDoc/${LUA_PKGPREFIX}-LDoc/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=stevedonovan/}
