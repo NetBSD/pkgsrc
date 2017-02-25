@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.887 2017/02/25 02:52:15 maya Exp $
+$NetBSD: CHANGES-2017,v 1.888 2017/02/25 06:46:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1087,6 +1087,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/im to 153 [mef 2017-02-24]
 	Updated mail/gmime to 2.6.23 [mef 2017-02-25]
 	Updated mail/imapfilter to 2.6.10 [mef 2017-02-25]
+	Updated mail/cyrus-imapd24 to 2.4.18 [mef 2017-02-25]
 	Added devel/py-iso3166 version 0.8 [maya 2017-02-25]
 	Added devel/py-iso-639 version 0.4.5 [maya 2017-02-25]
 	Updated multimedia/streamlink to 0.3.2 [maya 2017-02-25]
