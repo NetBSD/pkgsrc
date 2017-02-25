@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.888 2017/02/25 06:46:36 mef Exp $
+$NetBSD: CHANGES-2017,v 1.889 2017/02/25 08:34:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1091,3 +1091,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-iso3166 version 0.8 [maya 2017-02-25]
 	Added devel/py-iso-639 version 0.4.5 [maya 2017-02-25]
 	Updated multimedia/streamlink to 0.3.2 [maya 2017-02-25]
+	Updated multimedia/x265 to 2.3 [adam 2017-02-25]
+	Updated devel/git to 2.12.0 [adam 2017-02-25]
