@@ -42,6 +42,7 @@ DEFINE_TEST(test_write_format_gnutar_filenames)
 	struct archive_entry *ae, *template;
 	struct archive *a;
 	size_t used;
+	int i;
 
 	buff = malloc(buffsize); /* million bytes of work area */
 	assert(buff != NULL);
@@ -55,7 +56,7 @@ DEFINE_TEST(test_write_format_gnutar_filenames)
 	archive_entry_set_mode(template, S_IFREG | 0755);
 	archive_entry_set_size(template, 8);
 
-	for (int i = 0; i < 2000; ++i) {
+	for (i = 0; i < 2000; ++i) {
 		filename[i] = 'a';
 		filename[i + 1] = '\0';
 		archive_entry_copy_pathname(template, filename);
@@ -97,6 +98,11 @@ DEFINE_TEST(test_write_format_gnutar_linknames)
 	struct archive_entry *ae, *template;
 	struct archive *a;
 	size_t used;
+	int i;
+
+#ifdef S_IFLNK
+	assertEqualInt(S_IFLNK, AE_IFLNK);
+#endif
 
 	buff = malloc(buffsize); /* million bytes of work area */
 	assert(buff != NULL);
@@ -107,10 +113,10 @@ DEFINE_TEST(test_write_format_gnutar_linknames)
 	archive_entry_set_birthtime(template, 3, 30);
 	archive_entry_set_ctime(template, 4, 40);
 	archive_entry_set_mtime(template, 5, 50);
-	archive_entry_set_mode(template, S_IFLNK | 0755);
+	archive_entry_set_mode(template, AE_IFLNK | 0755);
 	archive_entry_copy_pathname(template, "link");
 
-	for (int i = 0; i < 2000; ++i) {
+	for (i = 0; i < 2000; ++i) {
 		filename[i] = 'a';
 		filename[i + 1] = '\0';
 		archive_entry_copy_symlink(template, filename);
