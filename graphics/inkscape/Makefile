@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2017/02/16 09:46:54 adam Exp $
+# $NetBSD: Makefile,v 1.143 2017/02/25 15:31:53 wiz Exp $
 
 DISTNAME=	inkscape-0.92.1
 CATEGORIES=	graphics
@@ -25,7 +25,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool msgfmt perl:run pkg-config
+USE_TOOLS+=		intltool msgfmt msgmerge perl:run pkg-config
 
 REPLACE_PERL+=		fix-roff-punct
 REPLACE_PERL+=		share/extensions/*.p[lm]
