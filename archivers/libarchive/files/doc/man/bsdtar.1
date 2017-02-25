@@ -1,4 +1,4 @@
-.TH TAR 1 "September 16, 2014" ""
+.TH TAR 1 "February 24, 2017" ""
 .SH NAME
 .ad l
 \fB\%tar\fP
@@ -110,7 +110,7 @@ all operating modes.
 .RS 5
 .TP
 \fB@\fP \fIarchive\fP
-(c and r mode only)
+(c and r modes only)
 The specified archive is opened and the entries
 in it will be appended to the current archive.
 As a simple example,
@@ -168,6 +168,17 @@ and gzip compression,
 if it is unknown suffix or no suffix, creates a new archive with
 restricted pax format and bzip2 compression.
 .TP
+\fB\-Fl\fP acls
+(c, r, u, x modes only)
+Archive or extract POSIX.1e or NFSv4 ACLs. This is the reverse of
+\fB\-Fl\fP no-acls
+and the default behavior in c, r, and u modes (except Mac OS X) or if
+\fB\%tar\fP
+is run in x mode as root. On Mac OS X this option translates extended ACLs
+to NFSv4 ACLs. To store extended ACLs the
+\fB\-Fl\fP mac-metadata
+option is preferred.
+.TP
 \fB\-B\fP, \fB\-Fl\fP read-full-blocks
 Ignored for compatibility with other
 \fBtar\fP(1)
@@ -197,16 +208,19 @@ options and before extracting any files.
 Before removing file system objects to replace them, clear platform-specific
 file flags that might prevent removal.
 .TP
-\fB\-Fl\fP disable-copyfile
-Mac OS X specific.
-Disable the use of
-\fBcopyfile\fP(3).
-.TP
 \fB\-Fl\fP exclude \fIpattern\fP
 Do not process files or directories that match the
 specified pattern.
 Note that exclusions take precedence over patterns or filenames
 specified on the command line.
+.TP
+\fB\-Fl\fP fflags
+(c, r, u, x modes only)
+Archive or extract file flags. This is the reverse of
+\fB\-Fl\fP no-fflags
+and the default behavior in c, r, and u modes or if
+\fB\%tar\fP
+is run in x mode as root.
 .TP
 \fB\-Fl\fP format \fIformat\fP
 (c, r, u mode only)
@@ -260,12 +274,12 @@ in the archive;
 the name will not be verified against the system group database.
 .TP
 \fB\-H\fP
-(c and r mode only)
+(c and r modes only)
 Symbolic links named on the command line will be followed; the
 target of the link will be archived, not the link itself.
 .TP
 \fB\-h\fP
-(c and r mode only)
+(c and r modes only)
 Synonym for
 \fB\-L\fP.
 .TP
@@ -278,7 +292,8 @@ Show usage.
 .TP
 \fB\-Fl\fP hfsCompression
 (x mode only)
-Mac OS X specific(v10.6 or later). Compress extracted regular files with HFS+ compression.
+Mac OS X specific (v10.6 or later). Compress extracted regular files with HFS+
+compression.
 .TP
 \fB\-Fl\fP ignore-zeros
 An alias of
@@ -338,7 +353,7 @@ Do not overwrite existing files that are newer than the
 versions appearing in the archive being extracted.
 .TP
 \fB\-L\fP, \fB\-Fl\fP dereference
-(c and r mode only)
+(c and r modes only)
 All symbolic links will be followed.
 Normally, symbolic links are archived as such.
 With this option, the target of the link will be archived instead.
@@ -379,6 +394,17 @@ In extract or list modes, this option is ignored.
 (x mode only)
 Do not extract modification time.
 By default, the modification time is set to the time stored in the archive.
+.TP
+\fB\-Fl\fP mac-metadata
+(c, r, u and x mode only)
+Mac OS X specific. Archive or extract extended ACLs and extended attributes
+using
+\fBcopyfile\fP(3)
+in AppleDouble format. This is the reverse of
+\fB\-Fl\fP no-mac-metadata.
+and the default behavior in c, r, and u modes or if
+\fB\%tar\fP
+is run in x mode as root.
 .TP
 \fB\-n\fP, \fB\-Fl\fP norecurse, \fB\-Fl\fP no-recursion
 (c, r, u modes only)
@@ -428,6 +454,34 @@ This is often used to read filenames output by the
 option to
 \fBfind\fP(1).
 .TP
+\fB\-Fl\fP no-acls
+(c, r, u, x modes only)
+Do not archive or extract POSIX.1e or NFSv4 ACLs. This is the reverse of
+\fB\-Fl\fP acls
+and the default behavior if
+\fB\%tar\fP
+is run as non-root in x mode (on Mac OS X also in c, r and u modes).
+.TP
+\fB\-Fl\fP no-fflags
+(c, r, u, x modes only)
+Do not archive or extract file flags. This is the reverse of
+\fB\-Fl\fP fflags
+and the default behavior if
+\fB\%tar\fP
+is run as non-root in x mode.
+.TP
+\fB\-Fl\fP no-mac-metadata
+(x mode only)
+Mac OS X specific. Do not archive or extract ACLs and extended attributes using
+\fBcopyfile\fP(3)
+in AppleDouble format. This is the reverse of
+\fB\-Fl\fP mac-metadata.
+and the default behavior if
+\fB\%tar\fP
+is run as non-root in x mode.
+.TP
+\fB\-n\fP, \fB\-Fl\fP norecurse, \fB\-Fl\fP no-recursion
+.TP
 \fB\-Fl\fP no-same-owner
 (x mode only)
 Do not extract owner and group IDs.
@@ -445,7 +499,22 @@ This is the reverse of
 \fB\-p\fP
 and the default behavior if
 \fB\%tar\fP
-is run as non-root.
+is run as non-root and can be overridden by also specifying
+\fB\-Fl\fP acls,
+\fB\-Fl\fP fflags,
+\fB\-Fl\fP mac-metadata,
+\fB\-Fl\fP same-owner,
+\fB\-Fl\fP same-permissions
+and
+\fB\-Fl\fP xattrs.
+.TP
+\fB\-Fl\fP no-xattrs
+(c, r, u, x modes only)
+Do not archive or extract extended attributes. This is the reverse of
+\fB\-Fl\fP xattrs
+and the default behavior if
+\fB\%tar\fP
+is run as non-root in x mode.
 .TP
 \fB\-Fl\fP numeric-owner
 This is equivalent to
@@ -664,14 +733,18 @@ This option suppresses these behaviors.
 \fB\-p\fP, \fB\-Fl\fP insecure, \fB\-Fl\fP preserve-permissions
 (x mode only)
 Preserve file permissions.
-Attempt to restore the full permissions, including owner, file modes, file
-flags and ACLs, if available, for each item extracted from the archive.
-This is the default, if
+Attempt to restore the full permissions, including owner, file modes, ACLs,
+extended atributes and extended file flags, if available, for each item
+extracted from the archive. This is the default, if
 \fB\%tar\fP
 is being run by root and can be overridden by also specifying
-\fB\-Fl\fP no-same-owner
+\fB\-Fl\fP no-acls,
+\fB\-Fl\fP no-fflags,
+\fB\-Fl\fP no-mac-metadata,
+\fB\-Fl\fP no-same-owner,
+\fB\-Fl\fP no-same-permissions
 and
-\fB\-Fl\fP no-same-permissions.
+\fB\-Fl\fP no-xattrs.
 .TP
 \fB\-Fl\fP passphrase \fIpassphrase\fP
 The
@@ -782,7 +855,7 @@ you probably want to use
 as well.
 .TP
 \fB\-Fl\fP totals
-(c, r, u mode only)
+(c, r, u modes only)
 After archiving all files, print a summary to stderr.
 .TP
 \fB\-U\fP, \fB\-Fl\fP unlink, \fB\-Fl\fP unlink-first
@@ -852,6 +925,14 @@ Read a list of exclusion patterns from the specified file.
 See
 \fB\-Fl\fP exclude
 for more information about the handling of exclusions.
+.TP
+\fB\-Fl\fP xattrs
+(c, r, u, x modes only)
+Archive or extract extended attributes. This is the reverse of
+\fB\-Fl\fP no-xattrs
+and the default behavior in c, r, and u modes or if
+\fB\%tar\fP
+is run in x mode as root.
 .TP
 \fB\-y\fP
 (c mode only)
