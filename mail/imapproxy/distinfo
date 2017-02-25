@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:27:07 agc Exp $
+$NetBSD: distinfo,v 1.10 2017/02/25 00:35:13 mef Exp $
 
-SHA1 (up-imapproxy-1.2.7.tar.gz) = 1e09730c19cbde3590093b5b4c4599ab69bfced7
-RMD160 (up-imapproxy-1.2.7.tar.gz) = 32eddc89fb35c49334eedc3135ede0fc1241e831
-SHA512 (up-imapproxy-1.2.7.tar.gz) = 6575a2e714fbe60c55c27123bec620f03d96a677dcf78746307214b28abad7c1843bef749ddf6a2b1c48a2756199e34f191314f5800a95f8b90d3c59563e115f
-Size (up-imapproxy-1.2.7.tar.gz) = 137843 bytes
+SHA1 (squirrelmail-imap_proxy-1.2.7.tar.gz) = b2e324383ae8a2cdb3b5bd0340a2e2174941bd65
+RMD160 (squirrelmail-imap_proxy-1.2.7.tar.gz) = 87f3b9ab367e9da2a3f532e6de867004abbe75cf
+SHA512 (squirrelmail-imap_proxy-1.2.7.tar.gz) = 355816e26eb9fa273b2b4e6cf0c2f55b85d0568291095913a4b05dd73a428a173c2a5b327c4ef296ca74ca500250b22fa2ae44d7d44613624641954fc9603507
+Size (squirrelmail-imap_proxy-1.2.7.tar.gz) = 136209 bytes
 SHA1 (patch-aa) = 7818f16b5e9339672eef4fb0ec89303a11a2e72a
 SHA1 (patch-ba) = 8f3d8adbac5a147cc143d7737d56a83401736a9d
 SHA1 (patch-bb) = 348768062f5f9e314223fb7d385f749646ed04be
