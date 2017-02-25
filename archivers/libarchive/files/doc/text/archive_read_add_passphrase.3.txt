@@ -1,35 +1,35 @@
 ARCHIVE_READ_ADD_PASS... BSD Library Functions Manual ARCHIVE_READ_ADD_PASS...
 
-NAME
-     archive_read_add_passphrase, archive_read_set_passphrase_callback — func‐
+1mNAME0m
+     1marchive_read_add_passphrase22m, 1marchive_read_set_passphrase_callback 22m— func‐
      tions for reading encrypted archives
 
-LIBRARY
+1mLIBRARY0m
      Streaming Archive Library (libarchive, -larchive)
 
-SYNOPSIS
-     #include <archive.h>
+1mSYNOPSIS0m
+     1m#include <archive.h>0m
 
-     int
-     archive_read_add_passphrase(struct archive *, const char *passphrase);
+     4mint0m
+     1marchive_read_add_passphrase22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mchar24m 4m*passphrase24m);
 
-     int
-     archive_read_set_passphrase_callback(struct archive *, void *client_data,
-	 archive_passphrase_callback *);
+     4mint0m
+     1marchive_read_set_passphrase_callback22m(4mstruct24m 4marchive24m 4m*24m, 4mvoid24m 4m*client_data24m,
+	 4marchive_passphrase_callback24m 4m*24m);
 
-DESCRIPTION
-     archive_read_add_passphrase()
+1mDESCRIPTION0m
+     1marchive_read_add_passphrase22m()
 	     Register passphrases for reading an encryption archive.  If
-	     passphrase is NULL or empty, this function will do nothing and
-	     ARCHIVE_FAILED will be returned.  Otherwise, ARCHIVE_OK will be
+	     4mpassphrase24m is NULL or empty, this function will do nothing and
+	     1mARCHIVE_FAILED 22mwill be returned.  Otherwise, 1mARCHIVE_OK 22mwill be
 	     returned.
 
-     archive_read_set_passphrase_callback()
+     1marchive_read_set_passphrase_callback22m()
 	     Register callback function that will be invoked to get a
 	     passphrase for decrption after trying all passphrases registered
-	     by the archive_read_add_passphrase() function failed.
+	     by the 1marchive_read_add_passphrase22m() function failed.
 
-SEE ALSO
+1mSEE ALSO0m
      tar(1), libarchive(3), archive_read(3), archive_read_set_options(3)
 
 BSD			      September 14, 2014			   BSD
