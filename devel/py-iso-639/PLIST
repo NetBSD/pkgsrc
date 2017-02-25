@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/25 02:38:59 maya Exp $
+${PYSITELIB}/iso639/__init__.py
+${PYSITELIB}/iso639/__init__.pyc
+${PYSITELIB}/iso639/__init__.pyo
+${PYSITELIB}/iso639/iso-639-3-macrolanguages.tab
+${PYSITELIB}/iso639/iso-639-3.tab
+${PYSITELIB}/iso639/iso-639-3_Name_Index.tab
+${PYSITELIB}/iso639/iso-639-3_Retirements.tab
+${PYSITELIB}/iso639/iso639-1.tsv
+${PYSITELIB}/iso639/iso639-2.tsv
+${PYSITELIB}/iso639/iso639-5.tsv
+${PYSITELIB}/iso639/iso639.py
+${PYSITELIB}/iso639/iso639.pyc
+${PYSITELIB}/iso639/iso639.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

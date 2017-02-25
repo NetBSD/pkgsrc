@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/25 02:38:59 maya Exp $
+
+SHA1 (iso-639-0.4.5.tar.gz) = a315cb0828ceda43deb212b328d6f026e128cc4c
+RMD160 (iso-639-0.4.5.tar.gz) = 601a21b5d90320412f8f406f69ce465ad84f8488
+SHA512 (iso-639-0.4.5.tar.gz) = 5b27cbcd39173f03d6d54e1ecddf879b630e985c549d6084dab29134d30bcd0052f902a2c8ca5a0db891c197deb1a00f1acda880cf728e7589f0471c42982f73
+Size (iso-639-0.4.5.tar.gz) = 167421 bytes
