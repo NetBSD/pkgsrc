@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/25 10:16:20 kamil Exp $
+bin/pdf2svg
