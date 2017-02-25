@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.894 2017/02/25 11:04:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.895 2017/02/25 14:16:37 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1097,3 +1097,9 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/LDoc to 1.4.6 [alnsn 2017-02-25]
 	Added converters/pdf2svg version 0.2.3 [kamil 2017-02-25]
 	Updated devel/py-txaio to 2.6.1 [wiz 2017-02-25]
+	Updated devel/p5-Shell-Perl to 0.0026 [mef 2017-02-25]
+	Updated devel/p5-Test-Aggregate to 0.375 [mef 2017-02-25]
+	Updated devel/p5-Ref-Util to 0.113 [mef 2017-02-25]
+	Updated devel/p5-Term-Screen to 1.06 [mef 2017-02-25]
+	Updated devel/p5-String-PerlIdentifier to 0.06 [mef 2017-02-25]
+	Updated devel/p5-Test-Warn to 0.32 [mef 2017-02-25]
