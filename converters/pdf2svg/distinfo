@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/02/25 10:16:20 kamil Exp $
+
+SHA1 (pdf2svg-0.2.3.tar.gz) = 4d9e64be4964112dbb25770666d51cbe7d93dd06
+RMD160 (pdf2svg-0.2.3.tar.gz) = b5fc21c5a45c176fa9611fa780260ff6b066ac57
+SHA512 (pdf2svg-0.2.3.tar.gz) = e8f0cc34c112c7d9ae02396ca587f1354462add882501f003b0173e05ebb09c09456dc1736679674fec5a2c04bdc0ef4141266090ba7efeba8b194ee602f5ee2
+Size (pdf2svg-0.2.3.tar.gz) = 89461 bytes
