@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.901 2017/02/25 17:40:30 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.902 2017/02/25 17:43:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1109,3 +1109,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-Plack to 1.0043 [wen 2017-02-25]
 	Added net/py-py3dns version 3.1.1a [wiz 2017-02-25]
 	Updated mail/py-spf to 2.0.12nb1 [wiz 2017-02-25]
+	Updated mail/py-policyd-spf to 2.0.1 [wiz 2017-02-25]
