@@ -4,8 +4,8 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[3.2.1])
-m4_define([LIBARCHIVE_VERSION_N],[3002001])
+m4_define([LIBARCHIVE_VERSION_S],[3.3.1])
+m4_define([LIBARCHIVE_VERSION_N],[3003001])
 
 dnl bsdtar and bsdcpio versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
@@ -27,6 +27,7 @@ AC_CONFIG_AUX_DIR([build/autoconf])
 AC_CONFIG_MACRO_DIR([build/autoconf])
 # Must follow AC_CONFIG macros above...
 AM_INIT_AUTOMAKE()
+AM_MAINTAINER_MODE([enable])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
 # Libtool's "interface version" can be computed from the libarchive version.
@@ -88,7 +89,7 @@ inc_windows_files=no
 inc_cygwin_files=no
 case "$host_os" in
   *mingw* ) inc_windows_files=yes ;;
-  *cygwin*) inc_cygwin_files=yes ;;
+  *cygwin* | *msys*) inc_cygwin_files=yes ;;
 esac
 AM_CONDITIONAL([INC_WINDOWS_FILES], [test $inc_windows_files = yes])
 AM_CONDITIONAL([INC_CYGWIN_FILES], [test $inc_cygwin_files = yes])
@@ -242,7 +243,7 @@ AM_CONDITIONAL([STATIC_BSDCPIO], [ test "$static_bsdcpio" = yes ])
 
 # Set up defines needed before including any headers
 case $host in
-  *mingw* | *cygwin* )
+  *mingw* | *cygwin* | *msys*  )
   AC_DEFINE([_WIN32_WINNT], 0x0502, [Define to '0x0502' for Windows Server 2003 APIs.])
   AC_DEFINE([WINVER], 0x0502, [Define to '0x0502' for Windows Server 2003 APIs.])
   AC_DEFINE([NTDDI_VERSION], 0x05020000, [Define to '0x05020000' for Windows Server 2003 APIs.])
@@ -269,6 +270,19 @@ AS_VAR_IF([ac_cv_have_decl_EXT2_IOC_GETFLAGS], [yes],
 
 AC_CHECK_HEADERS([inttypes.h io.h langinfo.h limits.h])
 AC_CHECK_HEADERS([linux/fiemap.h linux/fs.h linux/magic.h linux/types.h])
+
+AC_CACHE_CHECK([whether FS_IOC_GETFLAGS is usable],
+    [ac_cv_have_decl_FS_IOC_GETFLAGS],
+    [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([@%:@include <sys/ioctl.h>
+@%:@include <linux/fs.h>],
+                                   [int x = FS_IOC_GETFLAGS])],
+                  [AS_VAR_SET([ac_cv_have_decl_FS_IOC_GETFLAGS], [yes])],
+                  [AS_VAR_SET([ac_cv_have_decl_FS_IOC_GETFLAGS], [no])])])
+
+AS_VAR_IF([ac_cv_have_decl_FS_IOC_GETFLAGS], [yes],
+    [AC_DEFINE_UNQUOTED([HAVE_WORKING_FS_IOC_GETFLAGS], [1],
+                    [Define to 1 if you have a working FS_IOC_GETFLAGS])])
+
 AC_CHECK_HEADERS([locale.h paths.h poll.h pthread.h pwd.h])
 AC_CHECK_HEADERS([readpassphrase.h signal.h spawn.h])
 AC_CHECK_HEADERS([stdarg.h stdint.h stdlib.h string.h])
@@ -301,7 +315,7 @@ AC_ARG_WITH([bz2lib],
 if test "x$with_bz2lib" != "xno"; then
   AC_CHECK_HEADERS([bzlib.h])
   case "$host_os" in
-    *mingw* | *cygwin*)
+    *mingw* | *cygwin* | *msys*)
       dnl AC_CHECK_LIB cannot be used on the Windows port of libbz2, therefore
 	  dnl use AC_LINK_IFELSE.
 	  AC_MSG_CHECKING([for BZ2_bzDecompressInit in -lbz2])
@@ -323,14 +337,6 @@ if test "x$with_bz2lib" != "xno"; then
       AC_CHECK_LIB(bz2,BZ2_bzDecompressInit)
     ;;
   esac
-fi
-
-AC_ARG_WITH([lzmadec],
-  AS_HELP_STRING([--without-lzmadec], [Don't build support for lzma through lzmadec]))
-
-if test "x$with_lzmadec" != "xno"; then
-  AC_CHECK_HEADERS([lzmadec.h])
-  AC_CHECK_LIB(lzmadec,lzmadec_decode)
 fi
 
 AC_ARG_WITH([iconv],
@@ -373,8 +379,11 @@ if test "x$with_lzma" != "xno"; then
   AC_CACHE_CHECK(
     [whether we have multithread support in lzma],
     ac_cv_lzma_has_mt,
-    [AC_COMPILE_IFELSE([
-      AC_LANG_PROGRAM([[#include <lzma.h>]],
+    [AC_LINK_IFELSE([
+      AC_LANG_PROGRAM([[#include <lzma.h>]
+                       [#if LZMA_VERSION < 50020000]
+                       [#error unsupported]
+                       [#endif]],
                       [[lzma_stream_encoder_mt(0, 0);]])],
       [ac_cv_lzma_has_mt=yes], [ac_cv_lzma_has_mt=no])])
   if test "x$ac_cv_lzma_has_mt" != xno; then
@@ -383,9 +392,9 @@ if test "x$with_lzma" != "xno"; then
 fi
 
 AC_ARG_WITH([lzo2],
-  AS_HELP_STRING([--without-lzo2], [Don't build support for lzop through liblzo2]))
+  AS_HELP_STRING([--with-lzo2], [Build with LZO support from liblzo2]))
 
-if test "x$with_lzo2" != "xno"; then
+if test "x$with_lzo2" = "xyes"; then
   AC_CHECK_HEADERS([lzo/lzoconf.h lzo/lzo1x.h])
   AC_CHECK_LIB(lzo2,lzo1x_decompress_safe)
 fi
@@ -612,6 +621,21 @@ AC_CHECK_FUNCS([_get_timezone _localtime64_s _mkgmtime64])
 # detects cygwin-1.7, as opposed to older versions
 AC_CHECK_FUNCS([cygwin_conv_path])
 
+# DragonFly uses vfsconf, FreeBSD xvfsconf.
+AC_CHECK_TYPES(struct vfsconf,,,
+	[#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#include <sys/mount.h>
+	])
+
+AC_CHECK_TYPES(struct xvfsconf,,,
+	[#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#include <sys/mount.h>
+	])
+
 # There are several variants of readdir_r around; we only
 # accept the POSIX-compliant version.
 AC_COMPILE_IFELSE(
@@ -676,7 +700,8 @@ if test "x$enable_acl" != "xno"; then
    AC_CHECK_HEADERS([acl/libacl.h])
    AC_CHECK_HEADERS([sys/acl.h])
    AC_CHECK_LIB([acl],[acl_get_file])
-   AC_CHECK_FUNCS([acl_create_entry acl_init acl_set_fd acl_set_fd_np acl_set_file])
+   AC_CHECK_FUNCS([acl_create_entry acl_get_fd_np])
+   AC_CHECK_FUNCS([acl_init acl_set_fd acl_set_fd_np acl_set_file])
 
    AC_CHECK_TYPES(acl_permset_t,,,
 	[#if HAVE_SYS_TYPES_H
@@ -691,7 +716,8 @@ if test "x$enable_acl" != "xno"; then
     # (It's a pretty obvious oversight; otherwise, there's no way to
     # test for specific permissions in a permset.)  Linux uses the obvious
     # name, FreeBSD adds _np to mark it as "non-Posix extension."
-    # Test for both as a double-check that we really have POSIX-style ACL support.
+    # Test for both as a double-check that we really have POSIX-style ACL
+    # support.
     AC_CHECK_FUNCS(acl_get_perm_np acl_get_perm acl_get_link acl_get_link_np,,,
 	[#if HAVE_SYS_TYPES_H
 	#include <sys/types.h>
@@ -701,12 +727,41 @@ if test "x$enable_acl" != "xno"; then
 	#endif
 	])
 
+    # Check for acl_is_trivial_np on FreeBSD
+    AC_CHECK_FUNCS(acl_is_trivial_np,,,
+	[#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#if HAVE_SYS_ACL_H
+	#include <sys/acl.h>
+	#endif
+	])
+
+    # Check for ACL_TYPE_NFS4
+    AC_CHECK_DECL([ACL_TYPE_NFS4],
+		[AC_DEFINE(HAVE_ACL_TYPE_NFS4, 1, [True for FreeBSD with NFSv4 ACL support])],
+		[],
+		[#include <sys/acl.h>])
+
     # MacOS has an acl.h that isn't POSIX.  It can be detected by
     # checking for ACL_USER
     AC_CHECK_DECL([ACL_USER],
 		[AC_DEFINE(HAVE_ACL_USER, 1, [True for systems with POSIX ACL support])],
 		[],
 		[#include <sys/acl.h>])
+
+    # MacOS has ACL_TYPE_EXTENDED instead
+    AC_CHECK_DECL([ACL_TYPE_EXTENDED],
+		[AC_DEFINE(HAVE_ACL_TYPE_EXTENDED, 1, [True for MacOS ACL support])],
+		[],
+		[#include <sys/types.h>
+		#include <sys/acl.h>])
+
+    # Solaris and derivates ACLs
+    AC_CHECK_LIB([sec], [acl_get])
+    AC_CHECK_TYPES([aclent_t], [], [], [[#include <sys/acl.h>]])
+    AC_CHECK_TYPES([ace_t], [], [], [[#include <sys/acl.h>]])
+    AC_CHECK_FUNCS(acl_get facl_get acl_set facl_set)
 fi
 
 # Additional requirements
@@ -774,7 +829,7 @@ main(int argc, char **argv)
 ])
 
 case "$host_os" in
-  *mingw* | *cygwin*)
+  *mingw* | *cygwin* | *msys*)
 	;;
   *)
 	CRYPTO_CHECK(MD5, LIBC, md5)
@@ -817,7 +872,7 @@ if test "x$with_openssl" != "xno"; then
     AC_CHECK_HEADERS([openssl/evp.h])
     saved_LIBS=$LIBS
     case "$host_os" in
-      *mingw* | *cygwin*)
+      *mingw* | *cygwin* | *msys*)
         case "$host_cpu" in
           x86_64)
             AC_CHECK_LIB(eay64,OPENSSL_config)
@@ -845,6 +900,7 @@ if test "x$with_openssl" != "xno"; then
     else
       AC_CHECK_FUNCS([PKCS5_PBKDF2_HMAC_SHA1])
     fi
+    AC_CHECK_LIB(crypto,EVP_CIPHER_CTX_init)
 fi
 
 # Probe libmd AFTER OpenSSL/libcrypto.
@@ -862,7 +918,7 @@ if test "x$found_LIBMD" != "xyes"; then
 fi
 
 case "$host_os" in
-  *mingw* | *cygwin*)
+  *mingw* | *cygwin* | *msys*)
 	CRYPTO_CHECK_WIN(MD5, CALG_MD5)
 	CRYPTO_CHECK_WIN(SHA1, CALG_SHA1)
 	CRYPTO_CHECK_WIN(SHA256, CALG_SHA_256)
