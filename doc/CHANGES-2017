@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.891 2017/02/25 09:28:56 alnsn Exp $
+$NetBSD: CHANGES-2017,v 1.892 2017/02/25 10:18:49 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1095,3 +1095,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/git to 2.12.0 [adam 2017-02-25]
 	Updated devel/py-lupa to 1.4 [alnsn 2017-02-25]
 	Updated textproc/LDoc to 1.4.6 [alnsn 2017-02-25]
+	Added converters/pdf2svg version 0.2.3 [kamil 2017-02-25]
+	Added converters/pdf2svg version 0.2.3 [kamil 2017-02-25]
