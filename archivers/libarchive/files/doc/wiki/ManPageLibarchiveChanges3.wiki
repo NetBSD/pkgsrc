@@ -291,13 +291,13 @@ ARCHIVE_DEFAULT_BYTES_PER_BLOCK
 ```
 </dd></dl> 
 == SEE ALSO == 
-[[ManPageibarchive3]], 
-[[ManPagerchiveead3]], 
-[[ManPagerchiveeadilter3]], 
-[[ManPagerchiveeadormat3]], 
-[[ManPagerchiveeadetptions3]], 
-[[ManPagerchiverite3]], 
-[[ManPagerchiveriteilter3]], 
-[[ManPagerchiveriteormat3]], 
-[[ManPagerchiveriteetptions3]], 
-[[ManPagerchivetil3]] 
+[[ManPageLibarchive3]], 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveReadFilter3]], 
+[[ManPageArchiveReadFormat3]], 
+[[ManPageArchiveReadSetOptions3]], 
+[[ManPageArchiveWrite3]], 
+[[ManPageArchiveWriteFilter3]], 
+[[ManPageArchiveWriteFormat3]], 
+[[ManPageArchiveWriteSetOptions3]], 
+[[ManPageArchiveUtil3]] 

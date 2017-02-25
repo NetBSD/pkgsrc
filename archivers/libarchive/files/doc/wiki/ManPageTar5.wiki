@@ -414,11 +414,11 @@ archives to store files much larger than the historic 8GB limit.
 Vendor-specific attributes used by Joerg Schilling's 
 '''star''' 
 implementation. 
-</dd><dt>'''SCHILY.acl.access''', '''SCHILY.acl.default'''</dt><dd> 
-Stores the access and default ACLs as textual strings in a format 
+</dd><dt>'''SCHILY.acl.access''', '''SCHILY.acl.default,''' '''SCHILY.acl.ace'''</dt><dd> 
+Stores the access, default and NFSv4 ACLs as textual strings in a format 
 that is an extension of the format specified by POSIX.1e draft 17. 
-In particular, each user or group access specification can include a fourth 
-colon-separated field with the numeric UID or GID. 
+In particular, each user or group access specification can include 
+an additional colon-separated field with the numeric UID or GID. 
 This allows ACLs to be restored on systems that may not have complete 
 user or group information available (such as when NIS/YP or LDAP services 
 are temporarily unavailable). 
