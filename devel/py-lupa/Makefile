@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/09/07 21:56:21 alnsn Exp $
+# $NetBSD: Makefile,v 1.4 2017/02/25 09:28:09 alnsn Exp $
 
-DISTNAME=	lupa-1.3
+DISTNAME=	lupa-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/lupa/}
