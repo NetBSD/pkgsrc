@@ -1,12 +1,11 @@
-$NetBSD: patch-aa,v 1.15 2016/04/01 16:22:35 jperkin Exp $
+$NetBSD: patch-aa,v 1.16 2017/02/25 00:24:11 mef Exp $
 
 Use pkgsrc layout/flags.
 
 --- src/Makefile.orig	2015-06-29 22:38:56.000000000 +0000
 +++ src/Makefile
-@@ -1,8 +1,6 @@
--DESTDIR =
--PREFIX = /usr/local
+@@ -2,7 +2,7 @@ DESTDIR ?=
+ PREFIX ?= /usr/local
  BINDIR = $(PREFIX)/bin
  SHAREDIR = $(PREFIX)/share/imapfilter
 -MANDIR = $(PREFIX)/man
