@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 19:23:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/02/25 14:01:49 mef Exp $
 #
 
-DISTNAME=	Shell-Perl-0.0023
+DISTNAME=	Shell-Perl-0.0026
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Shell/}
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Shell-Perl/
@@ -18,7 +16,6 @@ PERL5_PACKLIST=		auto/Shell/Perl/.packlist
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
-DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 

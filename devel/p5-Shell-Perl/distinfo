@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:44 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/02/25 14:01:49 mef Exp $
 
-SHA1 (Shell-Perl-0.0023.tgz) = 622b0b09960424af81e95e61208b5e7a65bbf456
-RMD160 (Shell-Perl-0.0023.tgz) = e117caccaf1e71070bc7e600964225ba71f23125
-SHA512 (Shell-Perl-0.0023.tgz) = 167903e3dd55d7b28c06ca9200f3e1ccb68e619b9153401004395f957d952ec2cc36104292747abed7f35c6eca23f2fdf1617fa30c05a68ed2e5ec7aaafedbf5
-Size (Shell-Perl-0.0023.tgz) = 14579 bytes
+SHA1 (Shell-Perl-0.0026.tar.gz) = e49dab0511e5a5698181ce4f77bcd4b0ad63d757
+RMD160 (Shell-Perl-0.0026.tar.gz) = 7e2bb41cd1c327cb03839d129c85a1c644559298
+SHA512 (Shell-Perl-0.0026.tar.gz) = 802c5cc0f07e9d91f16c4f7208b0d85c3434f3b20d07dff74c123ca12a079955ec894c93c39385c9377b716cfc808989c5910f5b684b5ae595b5f54fbba7b783
+Size (Shell-Perl-0.0026.tar.gz) = 14608 bytes
