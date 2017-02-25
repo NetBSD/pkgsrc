@@ -6,7 +6,7 @@
 IF(ENABLE_CAT AND ENABLE_TEST)
   SET(bsdcat_test_SOURCES
     ../../test_utils/test_utils.c
-    main.c
+    ../../test_utils/test_main.c
     test.h
     test_0.c
     test_empty_gz.c
@@ -54,11 +54,13 @@ IF(ENABLE_CAT AND ENABLE_TEST)
   INCLUDE(${CMAKE_CURRENT_BINARY_DIR}/list.h)
   INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
   INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/test_utils)
+  INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/cat/test)
 
   # Experimental new test handling
   ADD_CUSTOM_TARGET(run_bsdcat_test
 	COMMAND	bsdcat_test -p $<TARGET_FILE:bsdcat>
-			    -r ${CMAKE_CURRENT_SOURCE_DIR})
+			    -r ${CMAKE_CURRENT_SOURCE_DIR}
+			    -vv)
   ADD_DEPENDENCIES(run_bsdcat_test bsdcat)
   ADD_DEPENDENCIES(run_all_tests run_bsdcat_test)
 
