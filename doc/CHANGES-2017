@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.903 2017/02/25 21:14:20 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.904 2017/02/25 21:14:36 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1111,3 +1111,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/py-spf to 2.0.12nb1 [wiz 2017-02-25]
 	Updated mail/py-policyd-spf to 2.0.1 [wiz 2017-02-25]
 	Updated archivers/libarchive to 3.3.1 [joerg 2017-02-25]
+	Updated archivers/bsdtar to 3.3.1 [joerg 2017-02-25]
