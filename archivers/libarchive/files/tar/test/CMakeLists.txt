@@ -6,7 +6,7 @@
 IF(ENABLE_TAR AND ENABLE_TEST)
   SET(bsdtar_test_SOURCES
     ../../test_utils/test_utils.c
-    main.c
+    ../../test_utils/test_main.c
     test.h
     test_0.c
     test_basic.c
@@ -96,11 +96,13 @@ IF(ENABLE_TAR AND ENABLE_TEST)
   INCLUDE(${CMAKE_CURRENT_BINARY_DIR}/list.h)
   INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
   INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/test_utils)
+  INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/tar/test)
 
   # Experimental new test handling
   ADD_CUSTOM_TARGET(run_bsdtar_test
 	COMMAND	bsdtar_test -p $<TARGET_FILE:bsdtar>
-			    -r ${CMAKE_CURRENT_SOURCE_DIR})
+			    -r ${CMAKE_CURRENT_SOURCE_DIR}
+			    -vv)
   ADD_DEPENDENCIES(run_bsdtar_test bsdtar)
   ADD_DEPENDENCIES(run_all_tests run_bsdtar_test)
 

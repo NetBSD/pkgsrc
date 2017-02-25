@@ -8,7 +8,7 @@ IF(ENABLE_CPIO AND ENABLE_TEST)
     ../cmdline.c
     ../../libarchive_fe/err.c
     ../../test_utils/test_utils.c
-    main.c
+    ../../test_utils/test_main.c
     test.h
     test_0.c
     test_basic.c
@@ -87,11 +87,13 @@ IF(ENABLE_CPIO AND ENABLE_TEST)
   INCLUDE(${CMAKE_CURRENT_BINARY_DIR}/list.h)
   INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
   INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/test_utils)
+  INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/cpio/test)
 
   # Experimental new test handling
   ADD_CUSTOM_TARGET(run_bsdcpio_test
 	COMMAND	bsdcpio_test -p $<TARGET_FILE:bsdcpio>
-			     -r ${CMAKE_CURRENT_SOURCE_DIR})
+			     -r ${CMAKE_CURRENT_SOURCE_DIR}
+			     -vv)
   ADD_DEPENDENCIES(run_bsdcpio_test bsdcpio)
   ADD_DEPENDENCIES(run_all_tests run_bsdcpio_test)
 ENDIF(ENABLE_CPIO AND ENABLE_TEST)

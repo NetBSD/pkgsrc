@@ -1,36 +1,36 @@
 ARCHIVE_WRITE_DATA(3)	 BSD Library Functions Manual	 ARCHIVE_WRITE_DATA(3)
 
-NAME
-     archive_write_data — functions for creating archives
+1mNAME0m
+     1marchive_write_data 22m— functions for creating archives
 
-LIBRARY
+1mLIBRARY0m
      Streaming Archive Library (libarchive, -larchive)
 
-SYNOPSIS
-     #include <archive.h>
+1mSYNOPSIS0m
+     1m#include <archive.h>0m
 
-     la_ssize_t
-     archive_write_data(struct archive *, const void *, size_t);
+     4mla_ssize_t0m
+     1marchive_write_data22m(4mstruct24m 4marchive24m 4m*24m, 4mconst24m 4mvoid24m 4m*24m, 4msize_t24m);
 
-DESCRIPTION
+1mDESCRIPTION0m
      Write data corresponding to the header just written.
 
-RETURN VALUES
+1mRETURN VALUES0m
      This function returns the number of bytes actually written, or a negative
      error code on error.
 
-ERRORS
+1mERRORS0m
      Detailed error codes and textual descriptions are available from the
-     archive_errno() and archive_error_string() functions.
+     1marchive_errno22m() and 1marchive_error_string22m() functions.
 
-BUGS
+1mBUGS0m
      In libarchive 3.x, this function sometimes returns zero on success
      instead of returning the number of bytes written.	Specifically, this
-     occurs when writing to an archive_write_disk handle.  Clients should
+     occurs when writing to an 4marchive_write_disk24m handle.	Clients should
      treat any value less than zero as an error and consider any non-negative
      value as success.
 
-SEE ALSO
+1mSEE ALSO0m
      tar(1), libarchive(3), archive_write_finish_entry(3),
      archive_write_set_options(3), cpio(5), mtree(5), tar(5)
 

@@ -207,11 +207,11 @@ every name that is recognized.
 [[strtofflags(3)|http://www.freebsd.org/cgi/man.cgi?query=strtofflags&sektion=3]], 
 which stops parsing at the first unrecognized name.) 
 == SEE ALSO == 
-[[ManPagerchiventry3]], 
-[[ManPagerchiventrycl3]], 
-[[ManPagerchiveeadisk3]], 
-[[ManPagerchiveriteisk3]] 
-[[ManPageibarchive3]], 
+[[ManPageArchiveEntry3]], 
+[[ManPageArchiveEntryAcl3]], 
+[[ManPageArchiveReadDisk3]], 
+[[ManPageArchiveWriteDisk3]] 
+[[ManPageLibarchive3]], 
 == BUGS == 
 The platform types 
 ''uid_t'' 

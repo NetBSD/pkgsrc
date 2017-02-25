@@ -4,7 +4,7 @@ LIBARCHIVE-FORMATS(5) manual page
 - archive formats supported by the libarchive library 
 == DESCRIPTION == 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library reads and writes a variety of streaming archive formats. 
 Generally speaking, all of these archive formats consist of a series of 
 "entries". 
@@ -21,7 +21,7 @@ to support, though many programs do use libarchive convenience
 functions to enable all supported formats. 
 === Tar Formats=== 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can read most tar archives. 
 It can write POSIX-standard 
 "ustar" 
@@ -40,7 +40,7 @@ subsequent entries.
 <dl> 
 <dt>'''gnutar'''</dt><dd> 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can read most GNU-format tar archives. 
 It currently supports the most popular GNU extensions, including 
 modern long filename and linkname support, as well as atime and ctime data. 
@@ -50,12 +50,12 @@ It can read GNU sparse file entries, including the new POSIX-based
 formats. 
 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can write GNU tar format, including long filename 
 and linkname support, as well as atime and ctime data. 
 </dd><dt>'''pax'''</dt><dd> 
 The 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 library can read and write POSIX-compliant pax interchange format 
 archives. 
 Pax interchange format archives are an extension of the older ustar 
@@ -163,8 +163,6 @@ and device numbers.
 </dd><dt>Solaris extensions</dt><dd> 
 Libarchive recognizes ACL and extended attribute records written 
 by Solaris tar. 
-Currently, libarchive only has support for old-style ACLs; the 
-newer NFSv4 ACLs are recognized but discarded. 
 </dd></dl> 
 
 The first tar program appeared in Seventh Edition Unix in 1979. 
@@ -381,7 +379,7 @@ although many of the keywords cannot currently be stored in an
 '''archive_entry''' 
 object. 
 When writing, libarchive supports use of the 
-[[ManPagerchiveriteetptions3]] 
+[[ManPageArchiveWriteSetOptions3]] 
 interface to specify which keywords should be included in the 
 output. 
 If libarchive was compiled with access to suitable 

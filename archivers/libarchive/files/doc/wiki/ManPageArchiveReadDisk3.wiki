@@ -35,11 +35,11 @@ Streaming Archive Library (libarchive, -larchive)
 <br> 
 '''archive_read_disk_set_symlink_hybrid'''(''struct archive *''); 
 <br> 
-''int'' 
+''const char *'' 
 <br> 
 '''archive_read_disk_gname'''(''struct archive *'', ''gid_t''); 
 <br> 
-''int'' 
+''const char *'' 
 <br> 
 '''archive_read_disk_uname'''(''struct archive *'', ''uid_t''); 
 <br> 
@@ -138,7 +138,7 @@ object with information about a particular file.
 The 
 '''archive_entry''' 
 object must have already been created with 
-[[ManPagerchiventryew3]] 
+[[ManPageArchiveEntryNew3]] 
 and at least one of the source path or path fields must already be set. 
 (If both are set, the source path will be used.) 
 
@@ -179,7 +179,7 @@ if it was not invoked manually, then releases all resources.
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 overview. 
 == EXAMPLE == 
 The following illustrates basic usage of the library by 
@@ -243,12 +243,12 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPagerchiveead3]], 
-[[ManPagerchivetil3]], 
-[[ManPagerchiverite3]], 
-[[ManPagerchiveriteisk3]], 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveUtil3]], 
+[[ManPageArchiveWrite3]], 
+[[ManPageArchiveWriteDisk3]], 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 
@@ -289,7 +289,7 @@ to look up such information.
 
 This API should provide a set of methods for walking a directory tree. 
 That would make it a direct parallel of the 
-[[ManPagerchiveead3]] 
+[[ManPageArchiveRead3]] 
 API. 
 When such methods are implemented, the 
 "hybrid" 
