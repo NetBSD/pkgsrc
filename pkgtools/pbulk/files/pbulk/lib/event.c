@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.7 2015/09/08 13:57:36 joerg Exp $ */
+/* $NetBSD: event.c,v 1.8 2017/02/25 21:21:53 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -269,7 +269,8 @@ signal_handler(int sig_id)
 	}
 
 	old_errno = errno;
-	write(signal_pipe[1], &buf, 1);
+	if (write(signal_pipe[1], &buf, 1)) {
+	}
 	errno = old_errno;
 }
 
