@@ -31,9 +31,9 @@ Clients should treat any value less than zero as an error
 and consider any non-negative value as success. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]], 
-[[ManPagerchiveriteinishntry3]], 
-[[ManPagerchiveriteetptions3]], 
+[[ManPageLibarchive3]], 
+[[ManPageArchiveWriteFinishEntry3]], 
+[[ManPageArchiveWriteSetOptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

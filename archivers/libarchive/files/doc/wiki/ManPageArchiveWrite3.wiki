@@ -15,7 +15,7 @@ object, set any desired options, initialize the archive, append entries, then
 close the archive and release all resources. 
 === Create archive object=== 
 See 
-[[ManPagerchiveriteew3]]. 
+[[ManPageArchiveWriteNew3]]. 
 
 To write an archive, you must first obtain an initialized 
 '''struct archive''' 
@@ -23,10 +23,10 @@ object from
 '''archive_write_new'''(). 
 === Enable filters and formats, configure block size and padding=== 
 See 
-[[ManPagerchiveriteilter3]], 
-[[ManPagerchiveriteormat3]] 
+[[ManPageArchiveWriteFilter3]], 
+[[ManPageArchiveWriteFormat3]] 
 and 
-[[ManPagerchiveritelocksize3]]. 
+[[ManPageArchiveWriteBlocksize3]]. 
 
 You can then modify this object for the desired operations with the 
 various 
@@ -40,10 +40,10 @@ functions to enable the corresponding compression and format
 support. 
 === Set options=== 
 See 
-[[ManPagerchiveeadetptions3]]. 
+[[ManPageArchiveReadSetOptions3]]. 
 === Open archive=== 
 See 
-[[ManPagerchiveritepen3]]. 
+[[ManPageArchiveWriteOpen3]]. 
 
 Once you have prepared the 
 '''struct archive''' 
@@ -59,9 +59,9 @@ specify a filename, file descriptor,
 object, or a block of memory from which to write the archive data. 
 === Produce archive=== 
 See 
-[[ManPagerchiveriteeader3]] 
+[[ManPageArchiveWriteHeader3]] 
 and 
-[[ManPagerchiveriteata3]]. 
+[[ManPageArchiveWriteData3]]. 
 
 Individual archive entries are written in a three-step 
 process: 
@@ -78,7 +78,7 @@ field, which specifies the type of object and
 field, which specifies the size of the data portion of the object. 
 === Release resources=== 
 See 
-[[ManPagerchiveriteree3]]. 
+[[ManPageArchiveWriteFree3]]. 
 
 After all entries have been written, use the 
 '''archive_write_free'''() 
@@ -180,8 +180,8 @@ int main(int argc, const char **argv)
 ```
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]], 
-[[ManPagerchiveriteetptions3]], 
+[[ManPageLibarchive3]], 
+[[ManPageArchiveWriteSetOptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

@@ -37,6 +37,7 @@ Freeze the settings, open the archive, and prepare for writing entries.
 This is the most generic form of this function, which accepts 
 pointers to three callback functions which will be invoked by 
 the compression layer to write the constructed archive. 
+This does not alter the default archive padding. 
 </dd><dt>'''archive_write_open_fd'''()</dt><dd> 
 A convenience form of 
 '''archive_write_open'''() 
@@ -94,12 +95,21 @@ is currently in use.
 You should be careful to ensure that this variable 
 remains allocated until after the archive is 
 closed. 
+This function will disable padding unless you 
+have specifically set the block size. 
 </dd></dl> 
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 overview. 
+
+Note that the convenience forms above vary in how 
+they block the output. 
+See 
+[[ManPageArchiveWriteBlocksize3]] 
+if you need to control the block size used for writes 
+or the end-of-file padding behavior. 
 == CLIENT CALLBACKS == 
 To use this library, you will need to define and register 
 callback functions that will be invoked to write data to the 
@@ -186,12 +196,13 @@ and
 functions. 
 == SEE ALSO == 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]], 
-[[ManPagerchiverite3]], 
-[[ManPagerchiveriteilter3]], 
-[[ManPagerchiveriteormat3]], 
-[[ManPagerchiveriteew3]], 
-[[ManPagerchiveriteetptions3]], 
+[[ManPageLibarchive3]], 
+[[ManPageArchiveWrite3]], 
+[[ManPageArchiveWriteBlocksize3]], 
+[[ManPageArchiveWriteFilter3]], 
+[[ManPageArchiveWriteFormat3]], 
+[[ManPageArchiveWriteNew3]], 
+[[ManPageArchiveWriteSetOptions3]], 
 [[ManPageCpio5]], 
 [[ManPageMtree5]], 
 [[ManPageTar5]] 

@@ -216,7 +216,7 @@ Build and write a header using the data in the provided
 '''struct archive_entry''' 
 structure. 
 See 
-[[ManPagerchiventry3]] 
+[[ManPageArchiveEntry3]] 
 for information on creating and populating 
 '''struct archive_entry''' 
 objects. 
@@ -269,10 +269,10 @@ if it was not invoked manually, then releases all resources.
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 overview. 
 Many of these functions are also documented under 
-[[ManPagerchiverite3]]. 
+[[ManPageArchiveWrite3]]. 
 == RETURN VALUES == 
 Most functions return 
 '''ARCHIVE_OK''' 
@@ -305,10 +305,10 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-[[ManPagerchiveead3]], 
-[[ManPagerchiverite3]], 
+[[ManPageArchiveRead3]], 
+[[ManPageArchiveWrite3]], 
 [[ManPageBsdtar1]], 
-[[ManPageibarchive3]] 
+[[ManPageLibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

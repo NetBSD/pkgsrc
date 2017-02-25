@@ -498,7 +498,7 @@ long_help(void)
 static void
 version(void)
 {
-	fprintf(stdout,"bsdcpio %s -- %s\n",
+	fprintf(stdout,"bsdcpio %s - %s\n",
 	    BSDCPIO_VERSION_STRING,
 	    archive_version_details());
 	exit(0);
@@ -703,6 +703,7 @@ file_to_archive(struct cpio *cpio, const char *srcpath)
 		lafe_warnc(0, "%s",
 		    archive_error_string(cpio->archive_read_disk));
 	if (r <= ARCHIVE_FAILED) {
+		archive_entry_free(entry);
 		cpio->return_value = 1;
 		return (r);
 	}
@@ -1324,10 +1325,9 @@ lookup_name(struct cpio *cpio, struct name_cache **name_cache_variable,
 
 
 	if (*name_cache_variable == NULL) {
-		*name_cache_variable = malloc(sizeof(struct name_cache));
+		*name_cache_variable = calloc(1, sizeof(struct name_cache));
 		if (*name_cache_variable == NULL)
 			lafe_errc(1, ENOMEM, "No more memory");
-		memset(*name_cache_variable, 0, sizeof(struct name_cache));
 		(*name_cache_variable)->size = name_cache_size;
 	}
 
