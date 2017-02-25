@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.22.3 -->
-<!-- CreationDate: Sun Jun 19 19:54:06 2016 -->
+<!-- CreationDate: Sat Feb 25 11:22:03 2017 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -70,13 +70,15 @@ archive *</i></p>
 
 <p style="margin-left:12%;"><b>archive_read_disk_set_symlink_hybrid</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+<p style="margin-left:6%; margin-top: 1em"><i>const char
+*</i></p>
 
 
 <p style="margin-left:12%;"><b>archive_read_disk_gname</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>gid_t</i>);</p>
 
-<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+<p style="margin-left:6%; margin-top: 1em"><i>const char
+*</i></p>
 
 
 <p style="margin-left:12%;"><b>archive_read_disk_uname</b>(<i>struct&nbsp;archive&nbsp;*</i>,
@@ -146,11 +148,11 @@ information from disk.</p>
 
 <p style="margin-left:17%;">This sets the mode used for
 handling symbolic links. The
-&rsquo;&rsquo;logical&rsquo;&rsquo; mode follows all
-symbolic links. The &rsquo;&rsquo;physical&rsquo;&rsquo;
+&lsquo;&lsquo;logical&rsquo;&rsquo; mode follows all
+symbolic links. The &lsquo;&lsquo;physical&rsquo;&rsquo;
 mode does not follow any symbolic links. The
-&rsquo;&rsquo;hybrid&rsquo;&rsquo; mode currently behaves
-identically to the &rsquo;&rsquo;logical&rsquo;&rsquo;
+&lsquo;&lsquo;hybrid&rsquo;&rsquo; mode currently behaves
+identically to the &lsquo;&lsquo;logical&rsquo;&rsquo;
 mode.</p>
 
 
@@ -323,7 +325,7 @@ was written by Tim Kientzle
 <p style="margin-top: 1em"><b>BUGS</b></p>
 
 <p style="margin-left:6%;">The
-&rsquo;&rsquo;standard&rsquo;&rsquo; user name and group
+&lsquo;&lsquo;standard&rsquo;&rsquo; user name and group
 name lookup functions are not the defaults because
 getgrgid(3) and getpwuid(3) are sometimes too large for
 particular applications. The current design allows the
@@ -346,11 +348,11 @@ such information.</p>
 provide a set of methods for walking a directory tree. That
 would make it a direct parallel of the archive_read(3) API.
 When such methods are implemented, the
-&rsquo;&rsquo;hybrid&rsquo;&rsquo; symbolic link mode will
+&lsquo;&lsquo;hybrid&rsquo;&rsquo; symbolic link mode will
 make sense.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+December&nbsp;30, 2016 BSD</p>
 <hr>
 </body>
 </html>
