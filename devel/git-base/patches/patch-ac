@@ -1,11 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2014/08/01 19:18:39 schmonz Exp $
+$NetBSD: patch-ac,v 1.3 2017/02/25 08:32:57 adam Exp $
 
---- gitk-git/Makefile.orig	2014-05-30 21:38:10.000000000 +0000
+--- gitk-git/Makefile.orig	2017-02-24 19:17:39.000000000 +0000
 +++ gitk-git/Makefile
-@@ -50,9 +50,9 @@ endif
+@@ -50,10 +50,9 @@ endif
  all:: gitk-wish $(ALL_MSGFILES)
  
  install:: all
+-	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(bindir_SQ)'
 -	$(INSTALL) -m 755 gitk-wish '$(DESTDIR_SQ)$(bindir_SQ)'/gitk
 -	$(INSTALL) -d -m 755 '$(DESTDIR_SQ)$(msgsdir_SQ)'
 -	$(foreach p,$(ALL_MSGFILES), $(INSTALL) -m 644 $p '$(DESTDIR_SQ)$(msgsdir_SQ)' &&) true
