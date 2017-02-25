@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2016/10/27 12:30:23 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2017/02/25 17:43:39 wiz Exp $
 
-SHA1 (pypolicyd-spf-1.3.2.tar.gz) = 607d3a7df6d6c5d19edd7c337ba2e0c143ff3499
-RMD160 (pypolicyd-spf-1.3.2.tar.gz) = ce85a3201990f9b57eb21e8f02b666a5987e6bbd
-SHA512 (pypolicyd-spf-1.3.2.tar.gz) = e80b13a0cf9f8406592db5edcb9770051352b3f637d4d9d5bd96295710bf3728a8350c0697e5b430698b0d9d226c83c9decb67923ed5cdb3502ee15509715af4
-Size (pypolicyd-spf-1.3.2.tar.gz) = 32973 bytes
+SHA1 (pypolicyd-spf-2.0.1.tar.gz) = 8506aa1bde24e7a93372500a51a30a260dc36259
+RMD160 (pypolicyd-spf-2.0.1.tar.gz) = 251bb577c6d8acc4f184efbd9752b6e53443870d
+SHA512 (pypolicyd-spf-2.0.1.tar.gz) = 85f51491ab1f44e197dbf9a15f9e723ba3aaf0472d9d1653595490d7211670a67cdca5699111ab5a29f9d919cd935ed58d8d70bd1312a4f0f90da4ef26a50509
+Size (pypolicyd-spf-2.0.1.tar.gz) = 38086 bytes
 SHA1 (patch-policyd-spf) = 43a3ac8491d6120e26c994d696c4143adf0749bc
 SHA1 (patch-policyd-spf.1) = 21363210a9e45978074bc1f59c545c85e5181d7e
 SHA1 (patch-policyd-spf.conf.5) = fa549a2dd726f6a5894c2c4e494136d9860624fb

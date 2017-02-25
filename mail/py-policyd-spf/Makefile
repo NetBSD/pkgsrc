@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/10/27 12:30:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/25 17:43:39 wiz Exp $
 
-VERSION=	1.3.2
+VERSION=	2.0.1
 DISTNAME=	pypolicyd-spf-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-policyd-spf-${VERSION}
 CATEGORIES=	mail python
@@ -11,11 +11,10 @@ HOMEPAGE=	https://pypi.python.org/pypi/pypolicyd-spf
 COMMENT=	Python based policy daemon for Postfix SPF checking
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-ipaddr>0:../../devel/py-ipaddr
-DEPENDS+=	${PYPKGPREFIX}-authres>0:../../mail/py-authres
-DEPENDS+=	${PYPKGPREFIX}-spf>0:../../mail/py-spf
+DEPENDS+=	${PYPKGPREFIX}-authres-[0-9]*:../../mail/py-authres
+DEPENDS+=	${PYPKGPREFIX}-spf>=2.0.9:../../mail/py-spf
 
-PYTHON_VERSIONS_ACCEPTED=	27 # py-ipaddr, py-spf
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
