@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.907 2017/02/26 02:23:04 mef Exp $
+$NetBSD: CHANGES-2017,v 1.908 2017/02/26 06:44:41 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1115,3 +1115,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/aria2 to 1.31.0 [leot 2017-02-25]
 	Updated shells/dash to 0.5.9.1 [ryoon 2017-02-26]
 	Updated devel/p5-Capture-Tiny to 0.46 [mef 2017-02-26]
+	Updated sysutils/pciutils to 3.5.4 [msaitoh 2017-02-26]
