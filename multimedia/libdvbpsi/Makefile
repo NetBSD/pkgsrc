@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2015/02/23 18:28:52 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2017/02/26 10:15:52 adam Exp $
 
-DISTNAME=	libdvbpsi-1.2.0
+DISTNAME=	libdvbpsi-1.3.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.videolan.org/pub/libdvbpsi/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,11 +21,11 @@ CONFIG_GUESS_OVERRIDE=	.auto/config.guess
 CONFIG_SUB_OVERRIDE=	.auto/config.sub
 
 .include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-constant-out-of-range-compare \
-			-Wno-error=tautological-compare
-CWRAPPERS_APPEND.cc+=	-Wno-error=tautological-constant-out-of-range-compare \
-			-Wno-error=tautological-compare
-.endif
+#.if !empty(PKGSRC_COMPILER:Mclang)
+#_WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-constant-out-of-range-compare \
+#			-Wno-error=tautological-compare
+#CWRAPPERS_APPEND.cc+=	-Wno-error=tautological-constant-out-of-range-compare \
+#			-Wno-error=tautological-compare
+#.endif
 
 .include "../../mk/bsd.pkg.mk"
