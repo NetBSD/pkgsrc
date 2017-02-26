@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/09/19 09:30:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2017/02/26 08:41:17 adam Exp $
 
-DISTNAME=	snappy-1.1.3
+DISTNAME=	snappy-1.1.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 
