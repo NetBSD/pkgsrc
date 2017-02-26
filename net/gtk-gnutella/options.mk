@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.3 2008/08/20 10:03:32 adam Exp $
+# $NetBSD: options.mk,v 1.4 2017/02/26 12:58:28 adam Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk-gnutella
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gtk-gnutella
 PKG_SUPPORTED_OPTIONS=		# empty
 PKG_OPTIONS_OPTIONAL_GROUPS=	gui
 PKG_OPTIONS_GROUP.gui=		gtk1 gtk2 headless
