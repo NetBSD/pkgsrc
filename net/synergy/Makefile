@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/01/01 16:06:34 adam Exp $
+# $NetBSD: Makefile,v 1.40 2017/02/26 18:41:59 tnn Exp $
 
 DISTNAME=		synergy-1.8.6
 PKGREVISION=		1
@@ -58,10 +58,10 @@ do-install:
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare \
-			-Wno-logical-op-parentheses
+			-Wno-logical-op-parentheses -Wno-null-dereference
 CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare \
-			-Wno-logical-op-parentheses
+			-Wno-logical-op-parentheses -Wno-null-dereference
 .endif
 
 .include "../../mk/endian.mk"
