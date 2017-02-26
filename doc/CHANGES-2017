@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.912 2017/02/26 12:59:12 adam Exp $
+$NetBSD: CHANGES-2017,v 1.913 2017/02/26 13:02:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1124,3 +1124,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ccache to 3.3.4 [adam 2017-02-26]
 	Updated textproc/p5-Text-CSV to 1.91 [wen 2017-02-26]
 	Updated net/gtk-gnutella to 1.1.11 [adam 2017-02-26]
+	Updated databases/p5-DBD-XBase to 1.08 [wen 2017-02-26]
