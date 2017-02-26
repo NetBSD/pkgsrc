@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/25 14:53:49 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2017/02/26 15:39:59 kamil Exp $
 
 GITHUB_PROJECT=	landslide
 DISTNAME=	landslide-1.1.3
@@ -12,11 +12,11 @@ HOMEPAGE=	https://github.com/adamzap/landslide/
 COMMENT=	Generate HTML5 slideshows from markdown, ReST, or textile
 LICENSE=	apache-2.0
 
-DEPENDS+=	${PYPKGPREFIX}-jinja2:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-pygments:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-markdown:../../textproc/py-markdown
-DEPENDS+=	${PYPKGPREFIX}-docutils:../../textproc/py-docutils
-DEPENDS+=	${PYPKGPREFIX}-textile:../../textproc/py-textile
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
+DEPENDS+=	${PYPKGPREFIX}-markdown-[0-9]*:../../textproc/py-markdown
+DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-textile-[0-9]*:../../textproc/py-textile
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/landslide \
