@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/11/01 22:58:52 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2017/02/26 22:26:44 khorben Exp $
 
 DISTNAME=	xorg-server-${XORG_VERSION}
 PKGNAME=	modular-xorg-xephyr-${XORG_VERSION}
@@ -33,4 +33,5 @@ post-install:
 .include "../../x11/xcb-util-renderutil/buildlink3.mk"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
