@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.918 2017/02/27 09:10:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.919 2017/02/27 09:46:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1131,3 +1131,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-cassandra-driver to 3.8.0 [fhajny 2017-02-27]
 	Updated sysutils/rsyslog to 8.25.0 [fhajny 2017-02-27]
 	Updated x11/libX11 to 1.6.5 [wiz 2017-02-27]
+	Updated graphics/ImageMagick to 7.0.5.0 [wiz 2017-02-27]
