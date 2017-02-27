@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 01:32:37 agc Exp $
-
-SHA1 (passwd-1.600-5.wbm.gz) = c4a027c0bafdeaa2c8b7569caa8919b5d685c3de
-RMD160 (passwd-1.600-5.wbm.gz) = ff1d106f8402099974f6f50865a231aa10d4473c
-SHA512 (passwd-1.600-5.wbm.gz) = 35893845f420ce06b391943ff895bbfe383ad1aa6ebe4cdfafeb92a6f91a52321efddde0ff8526275521d3254e7e3add54fa584999423b6b03a8ffcab2db4700
-Size (passwd-1.600-5.wbm.gz) = 31500 bytes
