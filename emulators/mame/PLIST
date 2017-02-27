@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/02/05 17:55:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/02/27 12:26:00 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -407,6 +407,7 @@ share/mame/hash/segacd.xml
 share/mame/hash/sf7000.xml
 share/mame/hash/sg1000.xml
 share/mame/hash/sgx.xml
+share/mame/hash/sitcom.xml
 share/mame/hash/smc777.xml
 share/mame/hash/sms.xml
 share/mame/hash/snes.xml
@@ -510,4 +511,7 @@ share/mame/hash/x68k_flop.xml
 share/mame/hash/xegs.xml
 share/mame/hash/xerox820.xml
 share/mame/hash/xerox820ii.xml
+share/mame/hash/z88_cart.xml
 share/mame/hash/zorba.xml
+share/mame/hash/zx80_cass.xml
+share/mame/hash/zx81_cass.xml
