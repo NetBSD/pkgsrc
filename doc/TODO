@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17095 2017/02/27 09:55:32 wiz Exp $
+$NetBSD: TODO,v 1.17096 2017/02/27 09:58:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -995,7 +995,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libprelude-3.1.0
 	o libpreludedb-3.1.0
 	o libquantum-1.1.0 [pkg/43728, development release]
-	o libspectre-0.2.8
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtecla-1.6.3
