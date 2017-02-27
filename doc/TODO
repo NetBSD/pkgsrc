@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17101 2017/02/27 10:26:06 wiz Exp $
+$NetBSD: TODO,v 1.17102 2017/02/27 10:29:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1335,7 +1335,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tornado-4.4.1
-	o py-tortoisehg-4.1
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
