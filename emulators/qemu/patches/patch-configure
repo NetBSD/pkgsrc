@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.16 2017/01/08 02:26:47 kamil Exp $
+$NetBSD: patch-configure,v 1.17 2017/02/27 05:19:29 adam Exp $
 
 Don't use gld on SunOS
+Use ncursesw6-config; define NCURSES_WIDECHAR to fix building on Darwin (at least).
 add check for shm_open
 avoid bad substitution
 
@@ -14,18 +15,19 @@ avoid bad substitution
    smbd="${SMBD-/usr/sfw/sbin/smbd}"
    needs_libsunmath="no"
    solarisrev=$(uname -r | cut -f2 -d.)
-@@ -2928,8 +2927,8 @@ if test "$curses" != "no" ; then
+@@ -2928,23 +2927,23 @@ if test "$curses" != "no" ; then
      curses_inc_list="$($pkg_config --cflags ncurses 2>/dev/null):"
      curses_lib_list="$($pkg_config --libs ncurses 2>/dev/null):-lpdcurses"
    else
 -    curses_inc_list="$($pkg_config --cflags ncursesw 2>/dev/null):-I/usr/include/ncursesw:"
 -    curses_lib_list="$($pkg_config --libs ncursesw 2>/dev/null):-lncursesw:-lcursesw"
-+    curses_inc_list="$(@PREFIX@/bin/ncursesw6-config --cflags 2>/dev/null):-I/usr/include/ncursesw:"
-+    curses_lib_list="$(@PREFIX@/bin/ncursesw6-config --libs 2>/dev/null):-lncursesw:-lcursesw"
++    curses_inc_list="$(/dist/pkg/bin/ncursesw6-config --cflags 2>/dev/null):-I/usr/include/ncursesw:"
++    curses_lib_list="$(/dist/pkg/bin/ncursesw6-config --libs 2>/dev/null):-lncursesw:-lcursesw"
    fi
    curses_found=no
    cat > $TMPC << EOF
-@@ -2937,14 +2936,13 @@ if test "$curses" != "no" ; then
+ #include <locale.h>
++#define NCURSES_WIDECHAR 1
  #include <curses.h>
  #include <wchar.h>
  int main(void) {
@@ -41,7 +43,7 @@ avoid bad substitution
  }
  EOF
    IFS=:
-@@ -3762,6 +3760,27 @@ if compile_prog "" "" ; then
+@@ -3762,6 +3761,27 @@ if compile_prog "" "" ; then
    fallocate_zero_range=yes
  fi
  
@@ -69,7 +71,7 @@ avoid bad substitution
  # check for posix_fallocate
  posix_fallocate=no
  cat > $TMPC << EOF
-@@ -4041,8 +4060,13 @@ fi
+@@ -4041,8 +4061,13 @@ fi
  cat > $TMPC <<EOF
  #include <signal.h>
  #include <time.h>
@@ -83,7 +85,7 @@ avoid bad substitution
    return clock_gettime(CLOCK_REALTIME, NULL);
  }
  EOF
-@@ -4797,7 +4821,9 @@ if test "$want_tools" = "yes" ; then
+@@ -4797,7 +4822,9 @@ if test "$want_tools" = "yes" ; then
    tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
@@ -94,7 +96,7 @@ avoid bad substitution
    fi
  fi
  if test "$softmmu" = yes ; then
-@@ -5303,6 +5329,9 @@ fi
+@@ -5303,6 +5330,9 @@ fi
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
  fi
