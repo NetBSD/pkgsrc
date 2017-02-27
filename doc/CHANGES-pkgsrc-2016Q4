@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.16 2017/02/25 09:18:46 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.17 2017/02/27 11:22:50 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -126,3 +126,5 @@ editors/ed: security fix
 Pullup ticket #5213 - requested by he
 www/lighttpd: bugfix
 
+Pullup ticket #5206 take 2 - requested by bsiegert
+sysutils/wbm-passwd: remove broken package
