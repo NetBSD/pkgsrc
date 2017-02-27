@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.914 2017/02/26 22:17:09 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.915 2017/02/27 05:21:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1126,3 +1126,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/gtk-gnutella to 1.1.11 [adam 2017-02-26]
 	Updated databases/p5-DBD-XBase to 1.08 [wen 2017-02-26]
 	Updated chat/irssi to 1.0.1nb1 [wiz 2017-02-26]
+	Updated emulators/qemu to 2.8.0nb2 [adam 2017-02-27]
+	Updated www/nghttp2 to 1.20.0 [adam 2017-02-27]
