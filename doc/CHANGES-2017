@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.916 2017/02/27 08:42:00 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.917 2017/02/27 08:55:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1129,3 +1129,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/qemu to 2.8.0nb2 [adam 2017-02-27]
 	Updated www/nghttp2 to 1.20.0 [adam 2017-02-27]
 	Updated databases/py-cassandra-driver to 3.8.0 [fhajny 2017-02-27]
+	Updated sysutils/rsyslog to 8.25.0 [fhajny 2017-02-27]
