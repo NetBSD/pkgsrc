@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/25 15:58:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/02/27 08:41:48 fhajny Exp $
 ${PYSITELIB}/cassandra/__init__.py
 ${PYSITELIB}/cassandra/__init__.pyc
 ${PYSITELIB}/cassandra/__init__.pyo
@@ -134,6 +134,9 @@ ${PYSITELIB}/cassandra/query.pyo
 ${PYSITELIB}/cassandra/query.so
 ${PYSITELIB}/cassandra/row_parser.pyx
 ${PYSITELIB}/cassandra/row_parser.so
+${PYSITELIB}/cassandra/timestamps.py
+${PYSITELIB}/cassandra/timestamps.pyc
+${PYSITELIB}/cassandra/timestamps.pyo
 ${PYSITELIB}/cassandra/tuple.pxd
 ${PYSITELIB}/cassandra/type_codes.pxd
 ${PYSITELIB}/cassandra/type_codes.py
