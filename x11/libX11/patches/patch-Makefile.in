@@ -1,16 +1,16 @@
-$NetBSD: patch-Makefile.in,v 1.4 2016/10/04 21:58:10 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.5 2017/02/27 09:09:50 wiz Exp $
 
 Avoid unnecessary auto* due to patch-aa modifying configure.ac.
 
---- Makefile.in.orig	2016-10-04 19:03:39.000000000 +0000
+--- Makefile.in.orig	2017-02-26 05:55:34.000000000 +0000
 +++ Makefile.in
-@@ -90,8 +90,7 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/a
+@@ -94,8 +94,7 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/a
  	$(top_srcdir)/m4/libtool.m4 $(top_srcdir)/m4/ltoptions.m4 \
  	$(top_srcdir)/m4/ltsugar.m4 $(top_srcdir)/m4/ltversion.m4 \
  	$(top_srcdir)/m4/lt~obsolete.m4 $(top_srcdir)/configure.ac
 -am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 -	$(ACLOCAL_M4)
 +am__configure_deps = 
+ DIST_COMMON = $(srcdir)/Makefile.am $(top_srcdir)/configure \
+ 	$(am__configure_deps) $(am__DIST_COMMON)
  am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
-  configure.lineno config.status.lineno
- mkinstalldirs = $(install_sh) -d
