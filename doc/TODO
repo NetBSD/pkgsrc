@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17097 2017/02/27 09:59:16 wiz Exp $
+$NetBSD: TODO,v 1.17098 2017/02/27 10:18:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -976,7 +976,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgroove-4.2.1
 	o libisoburn-1.4.0
 	o libisofs-1.4.2
-	o libixion-0.12.2
 	o libixp-0.5 [breaks wmii-3.6, wait for compatible version; see also wmii+ixp entry]
 	o libjit-1.0.2
 	o libjpeg-turbo-1.5.1
