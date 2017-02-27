@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.123 2017/02/20 10:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2017/02/27 10:42:34 wiz Exp $
 
-DISTNAME=	setuptools-34.2.0
+DISTNAME=	setuptools-34.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -19,6 +19,8 @@ DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 REPLACE_PYTHON+=	setuptools/command/easy_install.py
+
+PYSETUPTESTTARGET=	pytest
 
 # upstream often forgets deleting files, and packages on Windows,
 # so permissions are usually wrong
