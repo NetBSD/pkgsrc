@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/02/05 19:30:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/02/27 10:24:11 wiz Exp $
 
-DISTNAME=	todoman-2.0.2
+DISTNAME=	todoman-2.1.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
 
@@ -20,6 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 # TEST_DEPENDS
+BUILD_DEPENDS+=	${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
