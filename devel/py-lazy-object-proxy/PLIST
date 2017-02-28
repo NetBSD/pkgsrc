@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/02/28 17:11:28 fhajny Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/lazy_object_proxy/__init__.py
+${PYSITELIB}/lazy_object_proxy/__init__.pyc
+${PYSITELIB}/lazy_object_proxy/__init__.pyo
+${PYSITELIB}/lazy_object_proxy/cext.c
+${PYSITELIB}/lazy_object_proxy/cext.so
+${PYSITELIB}/lazy_object_proxy/compat.py
+${PYSITELIB}/lazy_object_proxy/compat.pyc
+${PYSITELIB}/lazy_object_proxy/compat.pyo
+${PYSITELIB}/lazy_object_proxy/simple.py
+${PYSITELIB}/lazy_object_proxy/simple.pyc
+${PYSITELIB}/lazy_object_proxy/simple.pyo
+${PYSITELIB}/lazy_object_proxy/slots.py
+${PYSITELIB}/lazy_object_proxy/slots.pyc
+${PYSITELIB}/lazy_object_proxy/slots.pyo
+${PYSITELIB}/lazy_object_proxy/utils.py
+${PYSITELIB}/lazy_object_proxy/utils.pyc
+${PYSITELIB}/lazy_object_proxy/utils.pyo
