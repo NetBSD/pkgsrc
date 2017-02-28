@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.937 2017/02/27 14:38:53 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.938 2017/02/28 07:35:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1150,3 +1150,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/potrace to 1.14 [wiz 2017-02-27]
 	Updated mail/getmail to 4.54.0 [schmonz 2017-02-27]
 	Updated devel/mr to 1.20170129 [schmonz 2017-02-27]
+	Updated x11/sessreg to 1.1.1 [wiz 2017-02-28]
