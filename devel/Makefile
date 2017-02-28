@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2374 2017/02/25 02:44:10 maya Exp $
+# $NetBSD: Makefile,v 1.2375 2017/02/28 08:18:03 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -419,6 +419,7 @@ SUBDIR+=	jflex
 SUBDIR+=	jq
 SUBDIR+=	js2-mode
 SUBDIR+=	js_of_ocaml
+SUBDIR+=	kafka
 SUBDIR+=	kapptemplate
 SUBDIR+=	kbookmarks
 SUBDIR+=	kbuild
