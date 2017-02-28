@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2016/03/17 12:44:58 fhajny Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2017/02/28 15:19:59 ryoon Exp $
 
 BUILDLINK_TREE+=	leptonica
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	leptonica
 LEPTONICA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.leptonica+=	leptonica>=1.71
-BUILDLINK_ABI_DEPENDS.leptonica+=	leptonica>=1.71nb2
+BUILDLINK_ABI_DEPENDS.leptonica+=	leptonica>=1.74.1nb1
 BUILDLINK_PKGSRCDIR.leptonica?=		../../graphics/leptonica
 
 .include "../../graphics/giflib/buildlink3.mk"
