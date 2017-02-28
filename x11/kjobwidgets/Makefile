@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2017/02/12 06:24:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/02/28 15:20:12 ryoon Exp $
 
 DISTNAME=	kjobwidgets-${KF5VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks
