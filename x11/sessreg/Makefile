@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2016/04/07 13:34:12 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2017/02/28 07:34:29 wiz Exp $
 
-DISTNAME=	sessreg-1.1.0
+DISTNAME=	sessreg-1.1.1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
