@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2017/02/28 08:17:28 fhajny Exp $
+
+SHA1 (kafka_2.12-0.10.2.0.tgz) = 655a4b415b0913117ebff88888ea526a3c2a4a06
+RMD160 (kafka_2.12-0.10.2.0.tgz) = bbcb13b9e0b16af72efd4a76258d555c07b99d8f
+SHA512 (kafka_2.12-0.10.2.0.tgz) = 79115d105d68457e437fe539d5f61f404f0a04ca6096299367fc03a3f50f928b9858b6cbf41160ec303de6cdaba8320e12f1219faae467cd08a775c9ac004141
+Size (kafka_2.12-0.10.2.0.tgz) = 34021573 bytes
+SHA1 (patch-bin_connect-distributed.sh) = 49e679e9d9d355921054a3723c96e519af871173
+SHA1 (patch-bin_connect-standalone.sh) = 9c300a771dbf02f733edd2b8a8cdf9f62c9322b4
+SHA1 (patch-bin_kafka-run-class.sh) = 3c3202feb125a575346d91465824d9dc8bcfa6e8
+SHA1 (patch-bin_kafka-server-start.sh) = 2e93ef575af6738e4af5555b395a10092e6de933
+SHA1 (patch-bin_kafka-server-stop.sh) = 6121f1a519aff541d018f0e57946a872f4253fdf
+SHA1 (patch-config_server.properties) = 1bdb5bfded1325a3a5afe070dc3081f6b24185a8
