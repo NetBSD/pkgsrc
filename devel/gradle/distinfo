@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/02/06 22:25:24 maya Exp $
+$NetBSD: distinfo,v 1.2 2017/02/28 08:16:09 fhajny Exp $
 
-SHA1 (gradle-3.0-rc-1-bin.zip) = d5f8ae55d6bb13a82db63423839dac26d0096d56
-RMD160 (gradle-3.0-rc-1-bin.zip) = 12c24b3a5b7954247b00f65fbb84ebe68ab6a95b
-SHA512 (gradle-3.0-rc-1-bin.zip) = fea71e5167365947ef234572198461487a5d5b50e2f7827280f9def6bd152bed95363ded5e1030894303b83cac0d6dd11f9df2e2fdf08242d3ecf3724ba23237
-Size (gradle-3.0-rc-1-bin.zip) = 69305820 bytes
+SHA1 (gradle-3.4-bin.zip) = 06213e96a16b0394c196d40180de35925ffee473
+RMD160 (gradle-3.4-bin.zip) = 3f7efe77e05af40acdc596243141e70426f7ed95
+SHA512 (gradle-3.4-bin.zip) = 5e04a9067288c455621bb52a78fb76aacdfdd3e14128fd7c9ea8ce2b9230e673700b7dea283d27dbfea40058912c8f410f2eac52584c97b44d8ec838e6afb557
+Size (gradle-3.4-bin.zip) = 70308689 bytes
