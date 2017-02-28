@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.949 2017/02/28 20:56:44 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.950 2017/02/28 22:50:29 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1162,3 +1162,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-configparser version 3.5.0 [fhajny 2017-02-28]
 	Added devel/py-isort version 4.2.5 [fhajny 2017-02-28]
 	Added devel/py-lint version 1.6.5 [fhajny 2017-02-28]
+	Updated sysutils/entr to 3.7 [leot 2017-02-28]
