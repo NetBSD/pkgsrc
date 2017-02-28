@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/07/09 06:38:07 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2017/02/28 14:58:43 joerg Exp $
 
 DISTNAME=	gdb-7.11
 PKGREVISION=	3
@@ -26,7 +26,7 @@ SUBST_CLASSES+=			fix-depcomp
 SUBST_STAGE.fix-depcomp+=	pre-configure
 SUBST_MESSAGE.fix-depcomp+=	Read depcomp directly
 SUBST_FILES.fix-depcomp+=	gdb/configure
-SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${PREFIX}/share/libtool/config/depcomp,'
+SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${_OVERRIDE_PATH.depcomp},'
 
 AUTO_MKDIRS=		yes
 
