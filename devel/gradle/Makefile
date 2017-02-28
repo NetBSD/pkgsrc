@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/02/07 00:04:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/02/28 08:16:09 fhajny Exp $
 
-DISTNAME=	gradle-3.0-rc-1-bin
-PKGNAME=	${DISTNAME:S/-bin//:S/-rc-/rc/}
+DISTNAME=	gradle-3.4-bin
+PKGNAME=	${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://services.gradle.org/distributions/
 EXTRACT_SUFX=	.zip
@@ -19,7 +19,7 @@ USE_TOOLS+=	bash:run pax:build
 NO_BUILD=	yes
 
 pre-configure:
-	${CP} files/gradle-launcher ${WRKSRC}/gradle-launcher
+	${CP} ${FILESDIR}/gradle-launcher ${WRKSRC}/gradle-launcher
 
 REPLACE_BASH+=		gradle-launcher
 
