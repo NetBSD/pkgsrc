@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2013/11/23 10:51:09 obache Exp $
+# $NetBSD: builtin.mk,v 1.6 2017/02/28 14:58:09 joerg Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -33,10 +33,17 @@ BUILTIN_VERSION.libarchive!=						\
 			if (found == 0)					\
 			    found=1;					\
 		}							\
-		/\#define[ 	]*ARCHIVE_VERSION_STRING/ {		\
-			vers_str = $$4;					\
+		/\#define[ 	]*ARCHIVE_VERSION_ONLY_STRING/ {	\
+			vers_str = $$3;					\
 			gsub("\"", "", vers_str);			\
 			found=2;					\
+		}							\
+		/\#define[ 	]*ARCHIVE_VERSION_STRING/ {		\
+			if (found == 0) {				\
+				vers_str = $$4;				\
+				gsub("\"", "", vers_str);		\
+				found=2;				\
+			}						\
 		}							\
 		END {							\
 			if (!found)					\
