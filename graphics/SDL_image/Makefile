@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2016/01/06 10:46:52 adam Exp $
+# $NetBSD: Makefile,v 1.51 2017/02/28 15:20:04 ryoon Exp $
 
 DISTNAME=	SDL_image-1.2.12
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_image/release/
 
