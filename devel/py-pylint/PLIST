@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2016/08/29 16:19:04 wiz Exp $
-bin/epylint-${PYVERSSUFFIX}
-bin/pylint-${PYVERSSUFFIX}
-bin/pylint-gui-${PYVERSSUFFIX}
-bin/pyreverse-${PYVERSSUFFIX}
-bin/symilar-${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.6 2017/03/01 13:08:43 fhajny Exp $
+bin/epylint${PYVERSSUFFIX}
+bin/pylint-gui${PYVERSSUFFIX}
+bin/pylint${PYVERSSUFFIX}
+bin/pyreverse${PYVERSSUFFIX}
+bin/symilar${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -371,6 +371,9 @@ ${PYSITELIB}/pylint/test/functional/init_not_called.py
 ${PYSITELIB}/pylint/test/functional/init_not_called.txt
 ${PYSITELIB}/pylint/test/functional/invalid_all_object.py
 ${PYSITELIB}/pylint/test/functional/invalid_all_object.txt
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.py
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.rc
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.txt
 ${PYSITELIB}/pylint/test/functional/invalid_exceptions_caught.py
 ${PYSITELIB}/pylint/test/functional/invalid_exceptions_caught.txt
 ${PYSITELIB}/pylint/test/functional/invalid_exceptions_raised.py
@@ -607,6 +610,15 @@ ${PYSITELIB}/pylint/test/functional/ungrouped_imports.txt
 ${PYSITELIB}/pylint/test/functional/unidiomatic_typecheck.py
 ${PYSITELIB}/pylint/test/functional/unidiomatic_typecheck.txt
 ${PYSITELIB}/pylint/test/functional/uninferable_all_object.py
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_jython.py
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_jython.rc
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_jython.txt
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_py29.py
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_py29.rc
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_py29.txt
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_pypy.py
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_pypy.rc
+${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_pypy.txt
 ${PYSITELIB}/pylint/test/functional/unnecessary_lambda.py
 ${PYSITELIB}/pylint/test/functional/unnecessary_lambda.txt
 ${PYSITELIB}/pylint/test/functional/unnecessary_pass.py
@@ -919,20 +931,8 @@ ${PYSITELIB}/pylint/testutils.py
 ${PYSITELIB}/pylint/utils.py
 ${PYSITELIB}/pylint/utils.pyc
 ${PYSITELIB}/pylint/utils.pyo
-man/man1/epylint.1
-man/man1/pylint-gui.1
-man/man1/pylint.1
-man/man1/pyreverse.1
-man/man1/symilar.1
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.py
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.rc
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/invalid_encoded_data.txt
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_jython.py
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_jython.rc
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_jython.txt
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_py29.py
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_py29.rc
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_py29.txt
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_pypy.py
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_pypy.rc
-${PLIST.py2x}${PYSITELIB}/pylint/test/functional/unknown_encoding_pypy.txt
+man/man1/epylint${PYVERSSUFFIX}.1
+man/man1/pylint-gui${PYVERSSUFFIX}.1
+man/man1/pylint${PYVERSSUFFIX}.1
+man/man1/pyreverse${PYVERSSUFFIX}.1
+man/man1/symilar${PYVERSSUFFIX}.1
