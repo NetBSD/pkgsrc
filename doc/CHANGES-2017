@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.953 2017/03/01 10:32:40 leot Exp $
+$NetBSD: CHANGES-2017,v 1.954 2017/03/01 11:45:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1166,3 +1166,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-Template to 1.47 [wiz 2017-03-01]
 	Updated multimedia/vlc to 2.2.4nb6 [wiz 2017-03-01]
 	Added textproc/py-Levenshtein version 0.12.0 [leot 2017-03-01]
+	Updated net/nsd to 4.1.15 [ryoon 2017-03-01]
