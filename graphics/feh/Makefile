@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.78 2017/01/27 12:04:08 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.79 2017/03/01 21:20:38 szptvlfn Exp $
 
-DISTNAME=	feh-2.18.1
+DISTNAME=	feh-2.18.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://feh.finalrewind.org/
+MASTER_SITES=	https://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://feh.finalrewind.org/
+HOMEPAGE=	https://feh.finalrewind.org/
 COMMENT=	Imlib2 based image viewer
 LICENSE=	mit
 
