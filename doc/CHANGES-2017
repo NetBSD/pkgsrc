@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.950 2017/02/28 22:50:29 leot Exp $
+$NetBSD: CHANGES-2017,v 1.951 2017/03/01 07:24:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1163,3 +1163,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-isort version 4.2.5 [fhajny 2017-02-28]
 	Added devel/py-lint version 1.6.5 [fhajny 2017-02-28]
 	Updated sysutils/entr to 3.7 [leot 2017-02-28]
+	Updated textproc/p5-Text-Template to 1.47 [wiz 2017-03-01]
