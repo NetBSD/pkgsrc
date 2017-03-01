@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2017/02/14 10:36:03 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/03/01 14:19:27 fhajny Exp $
 bin/elasticsearch
 bin/elasticsearch-plugin
 lib/elasticsearch/bin/elasticsearch.in.sh
@@ -16,21 +16,21 @@ lib/elasticsearch/lib/jts-1.13.jar
 lib/elasticsearch/lib/log4j-1.2-api-2.7.jar
 lib/elasticsearch/lib/log4j-api-2.7.jar
 lib/elasticsearch/lib/log4j-core-2.7.jar
-lib/elasticsearch/lib/lucene-analyzers-common-6.4.0.jar
-lib/elasticsearch/lib/lucene-backward-codecs-6.4.0.jar
-lib/elasticsearch/lib/lucene-core-6.4.0.jar
-lib/elasticsearch/lib/lucene-grouping-6.4.0.jar
-lib/elasticsearch/lib/lucene-highlighter-6.4.0.jar
-lib/elasticsearch/lib/lucene-join-6.4.0.jar
-lib/elasticsearch/lib/lucene-memory-6.4.0.jar
-lib/elasticsearch/lib/lucene-misc-6.4.0.jar
-lib/elasticsearch/lib/lucene-queries-6.4.0.jar
-lib/elasticsearch/lib/lucene-queryparser-6.4.0.jar
-lib/elasticsearch/lib/lucene-sandbox-6.4.0.jar
-lib/elasticsearch/lib/lucene-spatial-6.4.0.jar
-lib/elasticsearch/lib/lucene-spatial-extras-6.4.0.jar
-lib/elasticsearch/lib/lucene-spatial3d-6.4.0.jar
-lib/elasticsearch/lib/lucene-suggest-6.4.0.jar
+lib/elasticsearch/lib/lucene-analyzers-common-6.4.1.jar
+lib/elasticsearch/lib/lucene-backward-codecs-6.4.1.jar
+lib/elasticsearch/lib/lucene-core-6.4.1.jar
+lib/elasticsearch/lib/lucene-grouping-6.4.1.jar
+lib/elasticsearch/lib/lucene-highlighter-6.4.1.jar
+lib/elasticsearch/lib/lucene-join-6.4.1.jar
+lib/elasticsearch/lib/lucene-memory-6.4.1.jar
+lib/elasticsearch/lib/lucene-misc-6.4.1.jar
+lib/elasticsearch/lib/lucene-queries-6.4.1.jar
+lib/elasticsearch/lib/lucene-queryparser-6.4.1.jar
+lib/elasticsearch/lib/lucene-sandbox-6.4.1.jar
+lib/elasticsearch/lib/lucene-spatial-6.4.1.jar
+lib/elasticsearch/lib/lucene-spatial-extras-6.4.1.jar
+lib/elasticsearch/lib/lucene-spatial3d-6.4.1.jar
+lib/elasticsearch/lib/lucene-suggest-6.4.1.jar
 lib/elasticsearch/lib/securesm-1.1.jar
 lib/elasticsearch/lib/snakeyaml-1.15.jar
 lib/elasticsearch/lib/spatial4j-0.6.jar
@@ -46,7 +46,7 @@ lib/elasticsearch/modules/lang-expression/asm-5.0.4.jar
 lib/elasticsearch/modules/lang-expression/asm-commons-5.0.4.jar
 lib/elasticsearch/modules/lang-expression/asm-tree-5.0.4.jar
 lib/elasticsearch/modules/lang-expression/lang-expression-${PKGVERSION}.jar
-lib/elasticsearch/modules/lang-expression/lucene-expressions-6.4.0.jar
+lib/elasticsearch/modules/lang-expression/lucene-expressions-6.4.1.jar
 lib/elasticsearch/modules/lang-expression/plugin-descriptor.properties
 lib/elasticsearch/modules/lang-expression/plugin-security.policy
 lib/elasticsearch/modules/lang-groovy/groovy-2.4.6-indy.jar
