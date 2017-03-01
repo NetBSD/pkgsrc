@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/01/12 15:07:38 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2017/03/01 11:43:30 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-nextcloud
 
@@ -18,5 +18,4 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.0:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.4.0:../../databases/php-pdo_sqlite
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=5.4.0:../../databases/php-pdo_pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.4.0:../../databases/php-pgsql
 .endif
