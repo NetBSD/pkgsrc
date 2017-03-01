@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2017/02/17 13:45:42 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2017/03/01 14:21:27 fhajny Exp $
 
-SHA1 (beats-5.2.1.tar.gz) = e9f20e4878d4f92ac4c3fc4854accba60bbc63f1
-RMD160 (beats-5.2.1.tar.gz) = eb15bd1ce1ad823ac183d73fa3023ef7579e47f9
-SHA512 (beats-5.2.1.tar.gz) = f41a66592c009d559e10ee5fc2d71faf2b2fdc8dab5968682214ad27ee408a637dcfe6c46e18d17952e58ee970e7d2d5a7b814df95136ef5e584f40af3599cef
-Size (beats-5.2.1.tar.gz) = 16487289 bytes
+SHA1 (beats-5.2.2.tar.gz) = 579eec6f2e8b99c70073e9719757c617fbc7130a
+RMD160 (beats-5.2.2.tar.gz) = f749832da0e55be4167471aa6cff5fee9e9df3fc
+SHA512 (beats-5.2.2.tar.gz) = 7cf54eb0b27d830e51bf97964f078874eae62e1d9642fb598cdd2f0a405db4a74e1f299c5e57e29a67cfea209b9b3c7f38bdcbe6b2e2885285b77615236971c1
+Size (beats-5.2.2.tar.gz) = 16489808 bytes
 SHA1 (patch-vendor_github.com_tsg_gopacket_pcap_pcap.go) = 2ef13f84cbf2e1da428e7b08625ffa6111ebcdf5
