@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.956 2017/03/01 13:31:28 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.957 2017/03/01 13:32:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1170,3 +1170,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/py-lint successor devel/py-pylint [fhajny 2017-03-01]
 	Updated devel/py-pylint to 1.6.5 [fhajny 2017-03-01]
 	Updated mail/thunderbird to 45.7.1 [ryoon 2017-03-01]
+	Updated mail/thunderbird-l10n to 45.7.1 [ryoon 2017-03-01]
