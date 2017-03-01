@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2016/05/12 15:56:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.58 2017/03/01 09:02:48 wiz Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -205,6 +205,8 @@ lib/vlc/plugins/codec/libt140_plugin.la
 lib/vlc/plugins/codec/libtelx_plugin.la
 lib/vlc/plugins/codec/libtheora_plugin.la
 lib/vlc/plugins/codec/libuleaddvaudio_plugin.la
+lib/vlc/plugins/codec/libvaapi_drm_plugin.la
+lib/vlc/plugins/codec/libvaapi_x11_plugin.la
 lib/vlc/plugins/codec/libvorbis_plugin.la
 lib/vlc/plugins/codec/libvpx_plugin.la
 lib/vlc/plugins/codec/libx264_plugin.la
