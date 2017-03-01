@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/01 10:31:19 leot Exp $
+${PYSITELIB}/Levenshtein/StringMatcher.py
+${PYSITELIB}/Levenshtein/StringMatcher.pyc
+${PYSITELIB}/Levenshtein/StringMatcher.pyo
+${PYSITELIB}/Levenshtein/__init__.py
+${PYSITELIB}/Levenshtein/__init__.pyc
+${PYSITELIB}/Levenshtein/__init__.pyo
+${PYSITELIB}/Levenshtein/_levenshtein.c
+${PYSITELIB}/Levenshtein/_levenshtein.h
+${PYSITELIB}/Levenshtein/_levenshtein.so
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
