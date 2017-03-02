@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2378 2017/03/02 03:56:59 maya Exp $
+# $NetBSD: Makefile,v 1.2379 2017/03/02 09:21:35 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1852,7 +1852,6 @@ SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
 SUBDIR+=	py-limits
 SUBDIR+=	py-linecache2
-SUBDIR+=	py-lint
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logan
 SUBDIR+=	py-logilab-astng
