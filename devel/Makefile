@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2377 2017/02/28 20:59:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.2378 2017/03/02 03:56:59 maya Exp $
 #
 
 COMMENT=	Development utilities
@@ -1840,8 +1840,8 @@ SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython010
 SUBDIR+=	py-ipython013
 SUBDIR+=	py-ipython1
-SUBDIR+=	py-iso3166
 SUBDIR+=	py-iso-639
+SUBDIR+=	py-iso3166
 SUBDIR+=	py-isort
 SUBDIR+=	py-jaraco_util
 SUBDIR+=	py-jersey
