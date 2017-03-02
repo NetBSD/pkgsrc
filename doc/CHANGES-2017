@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.962 2017/03/01 21:20:53 szptvlfn Exp $
+$NetBSD: CHANGES-2017,v 1.963 2017/03/02 06:00:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1176,3 +1176,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/elasticsearch to 5.2.2 [fhajny 2017-03-01]
 	Updated chat/prosody to 0.9.12 [fhajny 2017-03-01]
 	Updated graphics/feh to 2.18.2 [szptvlfn 2017-03-01]
+	Updated graphics/MesaLib to 11.2.2nb3 [maya 2017-03-02]
