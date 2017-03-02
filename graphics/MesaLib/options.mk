@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.50 2017/03/02 04:40:33 maya Exp $
+# $NetBSD: options.mk,v 1.51 2017/03/02 05:37:22 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -51,19 +51,6 @@ PLIST.gbm=		yes
 .endif
 CONFIGURE_ARGS+=	--enable-gles1
 CONFIGURE_ARGS+=	--enable-gles2
-
-# VA-API and VDPAU
-.include "../../multimedia/libva/available.mk"
-.if ${VAAPI_AVAILABLE} == "yes"
-PLIST.vaapi=	yes
-.include "../../multimedia/libva/buildlink3.mk"
-.endif
-
-.include "../../multimedia/libvdpau/available.mk"
-.if ${VDPAU_AVAILABLE} == "yes"
-PLIST.vdpau=	yes
-.include "../../multimedia/libvdpau/buildlink3.mk"
-.endif
 
 # Use Thread Local Storage in GLX where it is supported by Mesa and works.
 .if \
@@ -176,6 +163,18 @@ CONFIGURE_ARGS+=	--with-gallium-drivers=${GALLIUM_DRIVERS:ts,}
 CONFIGURE_ARGS+=	--with-dri-drivers=${DRI_DRIVERS:ts,}
 
 .if !empty(PKG_OPTIONS:Mllvm)
+# VA-API and VDPAU
+.include "../../multimedia/libva/available.mk"
+.if ${VAAPI_AVAILABLE} == "yes"
+PLIST.vaapi=	yes
+.include "../../multimedia/libva/buildlink3.mk"
+.endif
+.include "../../multimedia/libvdpau/available.mk"
+.if ${VDPAU_AVAILABLE} == "yes"
+PLIST.vdpau=	yes
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.endif
+
 # XA is useful for accelerating xf86-video-vmware
 CONFIGURE_ARGS+=	--enable-xa
 PLIST.xatracker=	yes
