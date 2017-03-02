@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.49 2016/02/25 13:37:46 jperkin Exp $
+# $NetBSD: options.mk,v 1.50 2017/03/02 04:40:33 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -37,7 +37,7 @@ PLIST_VARS+=	freedreno ilo i915 i965 nouveau r300 r600 radeonsi	\
 # classic DRI
 PLIST_VARS+=	dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 # other features
-PLIST_VARS+=	gbm wayland xatracker
+PLIST_VARS+=	gbm vaapi vdpau wayland xatracker
 
 .if !empty(PKG_OPTIONS:Mdri)
 
@@ -51,6 +51,19 @@ PLIST.gbm=		yes
 .endif
 CONFIGURE_ARGS+=	--enable-gles1
 CONFIGURE_ARGS+=	--enable-gles2
+
+# VA-API and VDPAU
+.include "../../multimedia/libva/available.mk"
+.if ${VAAPI_AVAILABLE} == "yes"
+PLIST.vaapi=	yes
+.include "../../multimedia/libva/buildlink3.mk"
+.endif
+
+.include "../../multimedia/libvdpau/available.mk"
+.if ${VDPAU_AVAILABLE} == "yes"
+PLIST.vdpau=	yes
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.endif
 
 # Use Thread Local Storage in GLX where it is supported by Mesa and works.
 .if \
