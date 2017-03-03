@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1218 2017/03/02 03:55:06 maya Exp $
+# $NetBSD: Makefile,v 1.1219 2017/03/03 14:09:18 prlw1 Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -99,6 +99,7 @@ SUBDIR+=	dillo
 SUBDIR+=	drivel
 SUBDIR+=	drraw
 SUBDIR+=	drupal7
+SUBDIR+=	e2guardian
 SUBDIR+=	elinks
 SUBDIR+=	eliom
 SUBDIR+=	emacs-w3m
