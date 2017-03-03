@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.969 2017/03/03 12:38:41 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.970 2017/03/03 12:54:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/salt to 2016.11.3 [sborrill 2017-03-03]
 	Updated devel/py-mercurial to 4.1.1 [wiz 2017-03-03]
 	Updated converters/py-zfec to 1.4.24nb2 [wiz 2017-03-03]
+	Updated net/filezilla to 3.24.1nb1 [wiz 2017-03-03]
