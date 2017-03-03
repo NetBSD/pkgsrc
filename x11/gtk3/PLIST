@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/11/25 13:14:03 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/03/03 08:24:57 prlw1 Exp $
 bin/gtk-builder-tool
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
@@ -491,19 +491,6 @@ share/gtk-doc/html/gdk3/X_cursor.png
 share/gtk-doc/html/gdk3/alias_cursor.png
 share/gtk-doc/html/gdk3/all_scroll_cursor.png
 share/gtk-doc/html/gdk3/annotation-glossary.html
-share/gtk-doc/html/gdk3/api-index-3-0.html
-share/gtk-doc/html/gdk3/api-index-3-10.html
-share/gtk-doc/html/gdk3/api-index-3-12.html
-share/gtk-doc/html/gdk3/api-index-3-14.html
-share/gtk-doc/html/gdk3/api-index-3-16.html
-share/gtk-doc/html/gdk3/api-index-3-18.html
-share/gtk-doc/html/gdk3/api-index-3-2.html
-share/gtk-doc/html/gdk3/api-index-3-20.html
-share/gtk-doc/html/gdk3/api-index-3-22.html
-share/gtk-doc/html/gdk3/api-index-3-4.html
-share/gtk-doc/html/gdk3/api-index-3-6.html
-share/gtk-doc/html/gdk3/api-index-3-8.html
-share/gtk-doc/html/gdk3/api-index-deprecated.html
 share/gtk-doc/html/gdk3/api-index-full.html
 share/gtk-doc/html/gdk3/arrow.png
 share/gtk-doc/html/gdk3/based_arrow_down.png
@@ -897,19 +884,6 @@ share/gtk-doc/html/gtk3/aboutdialog.png
 share/gtk-doc/html/gtk3/accel-label.png
 share/gtk-doc/html/gtk3/action-bar.png
 share/gtk-doc/html/gtk3/annotation-glossary.html
-share/gtk-doc/html/gtk3/api-index-3-0.html
-share/gtk-doc/html/gtk3/api-index-3-10.html
-share/gtk-doc/html/gtk3/api-index-3-12.html
-share/gtk-doc/html/gtk3/api-index-3-14.html
-share/gtk-doc/html/gtk3/api-index-3-16.html
-share/gtk-doc/html/gtk3/api-index-3-18.html
-share/gtk-doc/html/gtk3/api-index-3-2.html
-share/gtk-doc/html/gtk3/api-index-3-20.html
-share/gtk-doc/html/gtk3/api-index-3-22.html
-share/gtk-doc/html/gtk3/api-index-3-4.html
-share/gtk-doc/html/gtk3/api-index-3-6.html
-share/gtk-doc/html/gtk3/api-index-3-8.html
-share/gtk-doc/html/gtk3/api-index-deprecated.html
 share/gtk-doc/html/gtk3/api-index-full.html
 share/gtk-doc/html/gtk3/appchooserbutton.png
 share/gtk-doc/html/gtk3/appchooserdialog.png
