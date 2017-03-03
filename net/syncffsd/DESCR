@@ -6,11 +6,11 @@ well for huge directories trees.
 
 syncffsd attempts to improve the situation until kqueue(2) gets better,
 by using FFS superblock's fs_time field, which is updated on every
-filesystem change. This lets syncffsd detects a change immediatly if the
-filesystem is mounted synchronous, or after a few seconds if mounted with
+file system change. This lets syncffsd detects a change immediately if the
+file system is mounted synchronous, or after a few seconds if mounted with
 WAPBL(4) enabled.
 
 Once a change is detected, the relevant nodes are found by walking source
-looking for files that changed since the previous filesystem modification.
+looking for files that changed since the previous file system modification.
 The resulting nodes are deduped (i.e.: we do not retain a node in
 a directory if the directory itself changed), and are fed to rsync(1).
