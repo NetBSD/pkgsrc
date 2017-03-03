@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/09/30 02:03:56 manu Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/03 13:10:41 wiz Exp $
 
 DISTNAME=	syncffsd-0.8
 CATEGORIES=	net
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://ftp.espci.fr/pub/syncffsd/
-COMMENT=	FFS filesystem miroring using rsync
+COMMENT=	FFS file system mirroring using rsync
 LICENSE=	modified-bsd
 
 RCD_SCRIPTS=	syncffsd
