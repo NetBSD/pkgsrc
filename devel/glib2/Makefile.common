@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2016/12/12 09:22:54 maya Exp $
+# $NetBSD: Makefile.common,v 1.54 2017/03/03 08:22:12 prlw1 Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -6,7 +6,7 @@
 
 # When updating this package, please apply patch-ak to configure.in and
 # then run a matching version of autoconf to regen patch-aa.
-DISTNAME=	glib-2.50.2
+DISTNAME=	glib-2.50.3
 PKGNAME=	${DISTNAME:S/glib/glib2/}
 CATEGORIES=	# empty; redefined in Makefile
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib/${PKGVERSION_NOREV:R}/}
@@ -34,7 +34,6 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS+=	--with-pcre=system
 CONFIGURE_ARGS+=	--disable-dtrace
 CONFIGURE_ARGS+=	--disable-man  # Requires xsltproc and Docbook.
-CONFIGURE_ARGS+=	--disable-modular-tests
 # Avoid unnecessary autotools invocation.
 CONFIGURE_ARGS+=	--disable-maintainer-mode
 # Avoid linux dependency on libmount-dev
