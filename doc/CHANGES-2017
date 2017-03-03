@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.966 2017/03/03 08:25:20 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.967 2017/03/03 09:31:21 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 7.7.1 [fhajny 2017-03-02]
 	Updated devel/glib2 to 2.50.3 [prlw1 2017-03-03]
 	Updated x11/gtk3 to 3.22.9 [prlw1 2017-03-03]
+	Updated sysutils/salt to 2016.11.3 [sborrill 2017-03-03]
