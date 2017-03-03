@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.11 2017/02/01 01:58:52 yyamano Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.12 2017/03/03 15:46:27 bsiegert Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -23,6 +23,7 @@ self="@LOCALBASE@/sbin/mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
 certdir="/etc/ssl/certs"
 destdir=
+conffile="/etc/openssl/openssl.cnf"
 
 usage()
 {
@@ -187,6 +188,9 @@ extract)
 	}'
 	;;
 install)
+	# quell warnings for a missing config file
+	touch $destdir$conffile
+
 	if [ ! -d $destdir$SSLDIR ]; then
 		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR does not exist, aborting."
 		exit 1
