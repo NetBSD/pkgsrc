@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2016/10/15 07:35:31 wen Exp $
+# $NetBSD: Makefile,v 1.40 2017/03/04 11:48:09 wen Exp $
 
-DISTNAME=	PDF-API2-2.030
+DISTNAME=	PDF-API2-2.031
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SS/SSIMMS/}
