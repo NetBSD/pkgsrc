@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/20 18:56:55 richard Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/04 11:05:35 wen Exp $
 bin/obspy-dataless2resp
 bin/obspy-dataless2xseed
 bin/obspy-flinn-engdahl
@@ -18,6 +18,7 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/obspy/CONTRIBUTORS.txt
@@ -958,6 +959,8 @@ ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.be-header.be-data.msee
 ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.be-header.le-data.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.le-header.be-data.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/endiantest.le-header.le-data.mseed
+${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/mseed_data_offset_0.mseed
+${PYSITELIB}/obspy/io/mseed/tests/data/bizarre/mseed_no_blkt_1000.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/blockette008.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/brokenlastrecord.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/constructedFileToTestReadViaRecords.mseed
@@ -987,6 +990,7 @@ ${PYSITELIB}/obspy/io/mseed/tests/data/fullseed_dataquality_Q.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/fullseed_dataquality_R.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/gaps.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/infinite-loop.mseed
+${PYSITELIB}/obspy/io/mseed/tests/data/microsecond_wrap.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/not.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/not2.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/not3.mseed
@@ -995,10 +999,13 @@ ${PYSITELIB}/obspy/io/mseed/tests/data/one_record_already_applied_time_correctio
 ${PYSITELIB}/obspy/io/mseed/tests/data/one_record_time_corr_applied_but_time_corr_is_zero.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/qualityflags.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/reclen_1024_without_sequence_numbers.mseed
+${PYSITELIB}/obspy/io/mseed/tests/data/single_record_plus_noise_record.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/steim2.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/test.mseed
+${PYSITELIB}/obspy/io/mseed/tests/data/three_records_zero_data_in_middle.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/timingquality.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/data/two_channels.mseed
+${PYSITELIB}/obspy/io/mseed/tests/data/various_noise_records.mseed
 ${PYSITELIB}/obspy/io/mseed/tests/test_mseed_reading_and_writing.py
 ${PYSITELIB}/obspy/io/mseed/tests/test_mseed_reading_and_writing.pyc
 ${PYSITELIB}/obspy/io/mseed/tests/test_mseed_reading_and_writing.pyo
@@ -1387,6 +1394,7 @@ ${PYSITELIB}/obspy/io/stationxml/tests/data/full_network_field_station.xml
 ${PYSITELIB}/obspy/io/stationxml/tests/data/full_random_stationxml.xml
 ${PYSITELIB}/obspy/io/stationxml/tests/data/full_station_field_station.xml
 ${PYSITELIB}/obspy/io/stationxml/tests/data/minimal_station.xml
+${PYSITELIB}/obspy/io/stationxml/tests/data/minimal_station_with_microseconds.xml
 ${PYSITELIB}/obspy/io/stationxml/tests/data/minimal_with_non_obspy_module_and_sender_tags_station.xml
 ${PYSITELIB}/obspy/io/stationxml/tests/data/no_default_namespace.xml
 ${PYSITELIB}/obspy/io/stationxml/tests/data/stationxml_BK.CMB.__.LKS.xml
@@ -1603,6 +1611,7 @@ ${PYSITELIB}/obspy/io/zmap/tests/__init__.py
 ${PYSITELIB}/obspy/io/zmap/tests/__init__.pyc
 ${PYSITELIB}/obspy/io/zmap/tests/__init__.pyo
 ${PYSITELIB}/obspy/io/zmap/tests/data/neries_events.xml
+${PYSITELIB}/obspy/io/zmap/tests/data/templates.txt
 ${PYSITELIB}/obspy/io/zmap/tests/data/zmap_events.txt
 ${PYSITELIB}/obspy/io/zmap/tests/test_zmap.py
 ${PYSITELIB}/obspy/io/zmap/tests/test_zmap.pyc
@@ -2017,6 +2026,7 @@ ${PYSITELIB}/obspy/taup/tests/data/iasp91_w_comment.nd
 ${PYSITELIB}/obspy/taup/tests/data/iasp91_w_comment.tvel
 ${PYSITELIB}/obspy/taup/tests/data/sample_ttimes_ak135.lst
 ${PYSITELIB}/obspy/taup/tests/data/sample_ttimes_iasp91.lst
+${PYSITELIB}/obspy/taup/tests/data/smooth_geodynamic_model.tvel
 ${PYSITELIB}/obspy/taup/tests/images/cartesian_many_phases.png
 ${PYSITELIB}/obspy/taup/tests/images/cartesian_many_phases_buried_station.png
 ${PYSITELIB}/obspy/taup/tests/images/cartesian_many_phases_single_way.png
