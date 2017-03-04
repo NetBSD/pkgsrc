@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.691 2017/02/17 21:23:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.692 2017/03/04 19:10:32 bsiegert Exp $
 #
 
 COMMENT=	System utilities
@@ -445,6 +445,7 @@ SUBDIR+=	py-collectd
 SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
 SUBDIR+=	py-gnome-menus
+SUBDIR+=	py-google-compute-engine
 SUBDIR+=	py-kazoo
 SUBDIR+=	py-magic
 SUBDIR+=	py-notify
