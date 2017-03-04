@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2015/10/25 11:00:18 wiz Exp $
+# $NetBSD: options.mk,v 1.31 2017/03/04 08:26:54 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack live pulseaudio
@@ -158,6 +158,7 @@ CONFIGURE_ARGS+=	--disable-live555
 ## VAAPI support
 .if !empty(PKG_OPTIONS:Mvaapi)
 CONFIGURE_ARGS+=	--enable-libva
+PLIST.vaapi=		yes
 .include "../../multimedia/libva/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libva
