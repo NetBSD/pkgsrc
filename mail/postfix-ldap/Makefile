@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/01/21 23:49:01 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2017/03/04 06:26:42 taca Exp $
 #
 
-PKGREVISION=		1
 COMMENT=		Postfix SMTP server LDAP backend module
 
 POSTFIX_LIB=		ldap

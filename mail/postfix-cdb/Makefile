@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/01/21 23:49:01 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/04 06:26:42 taca Exp $
 #
 
 COMMENT=		Postfix SMTP server cdb backend module
-PKGREVISION=		1
 
 POSTFIX_LIB=		cdb
 POSTFIX_LIBDIR=		src/global
