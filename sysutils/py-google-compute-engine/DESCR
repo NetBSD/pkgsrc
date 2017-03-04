@@ -1,0 +1,9 @@
+The guest environment denotes the Google provided configuration and tooling
+inside of a Google Compute Engine (GCE) virtual machine. The metadata server is
+a communication channel for transferring information from a client into the
+guest.  The guest environment includes a set of scripts and daemons (long
+running processes) that read the content of the metadata server to make a
+virtual machine run properly on our platform.
+
+You probably do not need this package unless you are running in a virtual
+machine on Google Compute Engine.
