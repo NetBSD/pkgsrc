@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.986 2017/03/05 12:31:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.987 2017/03/05 12:33:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1207,3 +1207,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/lzo to 2.10 [wiz 2017-03-05]
 	Updated security/libgpg-error to 1.27 [wiz 2017-03-05]
 	Updated print/abcm2ps to 8.13.7 [wiz 2017-03-05]
+	Updated mail/notmuch to 0.23.7 [wiz 2017-03-05]
