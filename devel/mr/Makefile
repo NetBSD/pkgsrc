@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2017/02/27 14:38:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2017/03/05 12:25:28 schmonz Exp $
 #
 
-DISTNAME=		myrepos_${GITHUB_TAG}
+DISTNAME=		myrepos_1.20170129
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GITHUB:=joeyh/}
-GITHUB_PROJECT=		myrepos
-GITHUB_TAG=		1.20170129
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://myrepos.branchable.com/
