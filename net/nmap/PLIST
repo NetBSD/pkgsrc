@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/10/31 09:16:29 leot Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/03/05 09:06:46 leot Exp $
 bin/ncat
 ${PLIST.ndiff}bin/ndiff
 bin/nmap
@@ -330,6 +330,7 @@ ${PLIST.lua}share/nmap/nselib/eap.lua
 ${PLIST.lua}share/nmap/nselib/eigrp.lua
 ${PLIST.lua}share/nmap/nselib/formulas.lua
 ${PLIST.lua}share/nmap/nselib/ftp.lua
+${PLIST.lua}share/nmap/nselib/geoip.lua
 ${PLIST.lua}share/nmap/nselib/giop.lua
 ${PLIST.lua}share/nmap/nselib/gps.lua
 ${PLIST.lua}share/nmap/nselib/http.lua
@@ -408,6 +409,7 @@ ${PLIST.lua}share/nmap/nselib/tab.lua
 ${PLIST.lua}share/nmap/nselib/target.lua
 ${PLIST.lua}share/nmap/nselib/tftp.lua
 ${PLIST.lua}share/nmap/nselib/tls.lua
+${PLIST.lua}share/nmap/nselib/tn3270.lua
 ${PLIST.lua}share/nmap/nselib/tns.lua
 ${PLIST.lua}share/nmap/nselib/unicode.lua
 ${PLIST.lua}share/nmap/nselib/unittest.lua
@@ -481,6 +483,8 @@ ${PLIST.lua}share/nmap/scripts/broadcast-xdmcp-discover.nse
 ${PLIST.lua}share/nmap/scripts/cassandra-brute.nse
 ${PLIST.lua}share/nmap/scripts/cassandra-info.nse
 ${PLIST.lua}share/nmap/scripts/cccam-version.nse
+${PLIST.lua}share/nmap/scripts/cics-enum.nse
+${PLIST.lua}share/nmap/scripts/cics-user-enum.nse
 ${PLIST.lua}share/nmap/scripts/citrix-brute-xml.nse
 ${PLIST.lua}share/nmap/scripts/citrix-enum-apps-xml.nse
 ${PLIST.lua}share/nmap/scripts/citrix-enum-apps.nse
@@ -534,6 +538,7 @@ ${PLIST.lua}share/nmap/scripts/epmd-info.nse
 ${PLIST.lua}share/nmap/scripts/eppc-enum-processes.nse
 ${PLIST.lua}share/nmap/scripts/fcrdns.nse
 ${PLIST.lua}share/nmap/scripts/finger.nse
+${PLIST.lua}share/nmap/scripts/fingerprint-strings.nse
 ${PLIST.lua}share/nmap/scripts/firewalk.nse
 ${PLIST.lua}share/nmap/scripts/firewall-bypass.nse
 ${PLIST.lua}share/nmap/scripts/flume-master-info.nse
@@ -699,6 +704,9 @@ ${PLIST.lua}share/nmap/scripts/informix-tables.nse
 ${PLIST.lua}share/nmap/scripts/ip-forwarding.nse
 ${PLIST.lua}share/nmap/scripts/ip-geolocation-geoplugin.nse
 ${PLIST.lua}share/nmap/scripts/ip-geolocation-ipinfodb.nse
+${PLIST.lua}share/nmap/scripts/ip-geolocation-map-bing.nse
+${PLIST.lua}share/nmap/scripts/ip-geolocation-map-google.nse
+${PLIST.lua}share/nmap/scripts/ip-geolocation-map-kml.nse
 ${PLIST.lua}share/nmap/scripts/ip-geolocation-maxmind.nse
 ${PLIST.lua}share/nmap/scripts/ip-https-discover.nse
 ${PLIST.lua}share/nmap/scripts/ipidseq.nse
@@ -790,6 +798,7 @@ ${PLIST.lua}share/nmap/scripts/nfs-ls.nse
 ${PLIST.lua}share/nmap/scripts/nfs-showmount.nse
 ${PLIST.lua}share/nmap/scripts/nfs-statfs.nse
 ${PLIST.lua}share/nmap/scripts/nje-node-brute.nse
+${PLIST.lua}share/nmap/scripts/nje-pass-brute.nse
 ${PLIST.lua}share/nmap/scripts/nntp-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/nping-brute.nse
 ${PLIST.lua}share/nmap/scripts/nrpe-enum.nse
@@ -907,11 +916,11 @@ ${PLIST.lua}share/nmap/scripts/ssh-hostkey.nse
 ${PLIST.lua}share/nmap/scripts/ssh2-enum-algos.nse
 ${PLIST.lua}share/nmap/scripts/sshv1.nse
 ${PLIST.lua}share/nmap/scripts/ssl-ccs-injection.nse
+${PLIST.lua}share/nmap/scripts/ssl-cert-intaddr.nse
 ${PLIST.lua}share/nmap/scripts/ssl-cert.nse
 ${PLIST.lua}share/nmap/scripts/ssl-date.nse
 ${PLIST.lua}share/nmap/scripts/ssl-dh-params.nse
 ${PLIST.lua}share/nmap/scripts/ssl-enum-ciphers.nse
-${PLIST.lua}share/nmap/scripts/ssl-google-cert-catalog.nse
 ${PLIST.lua}share/nmap/scripts/ssl-heartbleed.nse
 ${PLIST.lua}share/nmap/scripts/ssl-known-key.nse
 ${PLIST.lua}share/nmap/scripts/ssl-poodle.nse
@@ -939,8 +948,11 @@ ${PLIST.lua}share/nmap/scripts/telnet-encryption.nse
 ${PLIST.lua}share/nmap/scripts/telnet-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/tftp-enum.nse
 ${PLIST.lua}share/nmap/scripts/tls-nextprotoneg.nse
+${PLIST.lua}share/nmap/scripts/tn3270-screen.nse
 ${PLIST.lua}share/nmap/scripts/tor-consensus-checker.nse
 ${PLIST.lua}share/nmap/scripts/traceroute-geolocation.nse
+${PLIST.lua}share/nmap/scripts/tso-brute.nse
+${PLIST.lua}share/nmap/scripts/tso-enum.nse
 ${PLIST.lua}share/nmap/scripts/unittest.nse
 ${PLIST.lua}share/nmap/scripts/unusual-port.nse
 ${PLIST.lua}share/nmap/scripts/upnp-info.nse
@@ -952,6 +964,7 @@ ${PLIST.lua}share/nmap/scripts/vnc-brute.nse
 ${PLIST.lua}share/nmap/scripts/vnc-info.nse
 ${PLIST.lua}share/nmap/scripts/vnc-title.nse
 ${PLIST.lua}share/nmap/scripts/voldemort-info.nse
+${PLIST.lua}share/nmap/scripts/vtam-enum.nse
 ${PLIST.lua}share/nmap/scripts/vuze-dht-info.nse
 ${PLIST.lua}share/nmap/scripts/wdb-version.nse
 ${PLIST.lua}share/nmap/scripts/weblogic-t3-info.nse
