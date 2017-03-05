@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1003 2017/03/05 14:43:20 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1004 2017/03/05 14:55:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1224,3 +1224,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-sqlparse to 0.2.3 [wiz 2017-03-05]
 	Updated time/py-vdirsyncer to 0.15.0 [wiz 2017-03-05]
 	Updated devel/talloc to 2.1.9 [wiz 2017-03-05]
+	Updated net/tor to 0.2.9.10 [wiz 2017-03-05]
