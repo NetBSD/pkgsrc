@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2017/02/22 11:53:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2017/03/05 12:49:51 wiz Exp $
 
-DISTNAME=	jasper-2.0.10
-PKGREVISION=	2
+DISTNAME=	jasper-2.0.12
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ece.uvic.ca/~mdadams/jasper/software/
 
