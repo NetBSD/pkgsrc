@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2016/01/17 13:45:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/05 14:33:41 wiz Exp $
 
 DISTNAME=	sphinx_rtd_theme-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-sphinx-rtd-theme-${VERSION}
-VERSION=	0.1.9
+VERSION=	0.2.2
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sphinx_rtd_theme/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/sphinx_rtd_theme/
 COMMENT=	Sphinx readthedocs.org theme
-LICENSE=	modified-bsd
+LICENSE=	modified-bsd AND ofl-v1.1
 
 USE_LANGUAGES=	#none
 
