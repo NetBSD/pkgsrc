@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1000 2017/03/05 14:33:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1001 2017/03/05 14:34:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-psycopg2 to 2.7 [wiz 2017-03-05]
 	Updated devel/py-setuptools to 34.3.1 [wiz 2017-03-05]
 	Updated textproc/py-sphinx-rtd-theme to 0.2.2 [wiz 2017-03-05]
+	Updated databases/py-sqlparse to 0.2.3 [wiz 2017-03-05]
