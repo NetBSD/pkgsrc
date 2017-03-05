@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2016/12/30 00:42:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/03/05 12:29:19 wiz Exp $
 bin/gpg-error
 bin/gpg-error-config
 include/gpg-error.h
+include/gpgrt.h
 info/gpgrt.info
 lib/libgpg-error.la
 man/man1/gpg-error-config.1
