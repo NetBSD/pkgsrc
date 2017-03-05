@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2017/01/03 13:23:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2017/03/05 14:34:35 wiz Exp $
 
-DISTNAME=	sqlparse-0.2.2
+DISTNAME=	sqlparse-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlparse/}
