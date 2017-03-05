@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1005 2017/03/05 15:06:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1006 2017/03/05 15:06:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1226,3 +1226,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/talloc to 2.1.9 [wiz 2017-03-05]
 	Updated net/tor to 0.2.9.10 [wiz 2017-03-05]
 	Updated graphics/ImageMagick to 7.0.5.1 [wiz 2017-03-05]
+	Updated graphics/p5-PerlMagick to 7.0.5.1 [wiz 2017-03-05]
