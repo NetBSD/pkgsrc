@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17116 2017/03/05 12:37:41 wiz Exp $
+$NetBSD: TODO,v 1.17117 2017/03/05 12:44:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1159,7 +1159,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
-	o p5-Date-Manip-6.58
 	o p5-DateTime-TimeZone-2.10
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
@@ -1265,7 +1264,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o posh-0.12.6
 	o postal-0.72
 	o postfix-3.2.0
-	o potrace-1.15
 	o pound-2.8a
 	o povray-3.7.0.0
 	o powerdns-3.7.3
