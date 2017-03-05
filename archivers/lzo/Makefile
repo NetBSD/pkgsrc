@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/02/08 16:13:36 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/03/05 12:27:32 wiz Exp $
 
-DISTNAME=	lzo-2.09
+DISTNAME=	lzo-2.10
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/lzo/download/
 
@@ -12,5 +12,6 @@ LICENSE=	gnu-gpl-v2
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
+PKGCONFIG_OVERRIDE=	lzo2.pc.in
 
 .include "../../mk/bsd.pkg.mk"
