@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/10/03 12:11:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/03/05 14:36:49 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,12 +9,18 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/vdirsyncer/__init__.py
 ${PYSITELIB}/vdirsyncer/__init__.pyc
 ${PYSITELIB}/vdirsyncer/__init__.pyo
+${PYSITELIB}/vdirsyncer/__main__.py
+${PYSITELIB}/vdirsyncer/__main__.pyc
+${PYSITELIB}/vdirsyncer/__main__.pyo
 ${PYSITELIB}/vdirsyncer/cli/__init__.py
 ${PYSITELIB}/vdirsyncer/cli/__init__.pyc
 ${PYSITELIB}/vdirsyncer/cli/__init__.pyo
 ${PYSITELIB}/vdirsyncer/cli/config.py
 ${PYSITELIB}/vdirsyncer/cli/config.pyc
 ${PYSITELIB}/vdirsyncer/cli/config.pyo
+${PYSITELIB}/vdirsyncer/cli/discover.py
+${PYSITELIB}/vdirsyncer/cli/discover.pyc
+${PYSITELIB}/vdirsyncer/cli/discover.pyo
 ${PYSITELIB}/vdirsyncer/cli/fetchparams.py
 ${PYSITELIB}/vdirsyncer/cli/fetchparams.pyc
 ${PYSITELIB}/vdirsyncer/cli/fetchparams.pyo
@@ -27,6 +33,9 @@ ${PYSITELIB}/vdirsyncer/cli/utils.pyo
 ${PYSITELIB}/vdirsyncer/exceptions.py
 ${PYSITELIB}/vdirsyncer/exceptions.pyc
 ${PYSITELIB}/vdirsyncer/exceptions.pyo
+${PYSITELIB}/vdirsyncer/http.py
+${PYSITELIB}/vdirsyncer/http.pyc
+${PYSITELIB}/vdirsyncer/http.pyo
 ${PYSITELIB}/vdirsyncer/metasync.py
 ${PYSITELIB}/vdirsyncer/metasync.pyc
 ${PYSITELIB}/vdirsyncer/metasync.pyo
@@ -66,12 +75,9 @@ ${PYSITELIB}/vdirsyncer/sync.pyo
 ${PYSITELIB}/vdirsyncer/utils/__init__.py
 ${PYSITELIB}/vdirsyncer/utils/__init__.pyc
 ${PYSITELIB}/vdirsyncer/utils/__init__.pyo
-${PYSITELIB}/vdirsyncer/utils/http.py
-${PYSITELIB}/vdirsyncer/utils/http.pyc
-${PYSITELIB}/vdirsyncer/utils/http.pyo
-${PYSITELIB}/vdirsyncer/utils/vobject.py
-${PYSITELIB}/vdirsyncer/utils/vobject.pyc
-${PYSITELIB}/vdirsyncer/utils/vobject.pyo
 ${PYSITELIB}/vdirsyncer/version.py
 ${PYSITELIB}/vdirsyncer/version.pyc
 ${PYSITELIB}/vdirsyncer/version.pyo
+${PYSITELIB}/vdirsyncer/vobject.py
+${PYSITELIB}/vdirsyncer/vobject.pyc
+${PYSITELIB}/vdirsyncer/vobject.pyo
