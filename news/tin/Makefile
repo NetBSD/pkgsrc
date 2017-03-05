@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2017/01/19 18:52:21 agc Exp $
-#
+# $NetBSD: Makefile,v 1.74 2017/03/05 12:05:23 wiz Exp $
 
 DISTNAME=	tin-2.2.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.tin.org/pub/news/clients/tin/stable/
 MASTER_SITES+=	ftp://ftp.funet.fi/pub/unix/news/tin-unoff/
@@ -59,6 +58,7 @@ post-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/tin
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/mmdf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/tin-mmdf.5
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/uulib/buildlink3.mk"
