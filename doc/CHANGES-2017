@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.981 2017/03/04 19:11:48 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.982 2017/03/05 09:10:04 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1178,6 +1178,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/feh to 2.18.2 [szptvlfn 2017-03-01]
 	Updated graphics/MesaLib to 11.2.2nb3 [maya 2017-03-02]
 	Updated lang/nodejs to 7.7.1 [fhajny 2017-03-02]
+	Updated net/nmap to 7.40 [jklos 2017-03-02]
 	Updated devel/glib2 to 2.50.3 [prlw1 2017-03-03]
 	Updated x11/gtk3 to 3.22.9 [prlw1 2017-03-03]
 	Updated sysutils/salt to 2016.11.3 [sborrill 2017-03-03]
