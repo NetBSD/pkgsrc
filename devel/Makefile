@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2379 2017/03/02 09:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2380 2017/03/05 14:11:36 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1972,6 +1972,7 @@ SUBDIR+=	py-tabular
 SUBDIR+=	py-test
 SUBDIR+=	py-test-cov
 SUBDIR+=	py-test-runner
+SUBDIR+=	py-testresources
 SUBDIR+=	py-testscenarios
 SUBDIR+=	py-testtools
 SUBDIR+=	py-thrift
