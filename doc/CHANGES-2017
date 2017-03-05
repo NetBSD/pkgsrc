@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.989 2017/03/05 12:44:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.990 2017/03/05 12:46:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1210,3 +1210,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/notmuch to 0.23.7 [wiz 2017-03-05]
 	Updated textproc/miller to 5.0.0 [wiz 2017-03-05]
 	Updated devel/p5-Date-Manip to 6.58 [wiz 2017-03-05]
+	Updated time/p5-DateTime-TimeZone to 2.10 [wiz 2017-03-05]
