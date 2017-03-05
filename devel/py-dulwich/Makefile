@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2017/01/18 20:44:28 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/03/05 13:04:59 wiz Exp $
 
-DISTNAME=	dulwich-0.16.3
+DISTNAME=	dulwich-0.17.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/dulwich/}
@@ -12,6 +12,7 @@ LICENSE=	apache-2.0 OR gnu-gpl-v2
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-gevent-[0-9]*:../../net/py-gevent
 # also needs unpackaged simple and geventhttpclient
 
 .include "../../lang/python/egg.mk"
