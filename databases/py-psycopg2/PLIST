@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/07/24 19:44:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/03/05 14:19:07 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/psycopg2/__init__.py
 ${PYSITELIB}/psycopg2/__init__.pyc
 ${PYSITELIB}/psycopg2/__init__.pyo
+${PYSITELIB}/psycopg2/_ipaddress.py
+${PYSITELIB}/psycopg2/_ipaddress.pyc
+${PYSITELIB}/psycopg2/_ipaddress.pyo
 ${PYSITELIB}/psycopg2/_json.py
 ${PYSITELIB}/psycopg2/_json.pyc
 ${PYSITELIB}/psycopg2/_json.pyo
@@ -28,6 +31,9 @@ ${PYSITELIB}/psycopg2/pool.pyo
 ${PYSITELIB}/psycopg2/psycopg1.py
 ${PYSITELIB}/psycopg2/psycopg1.pyc
 ${PYSITELIB}/psycopg2/psycopg1.pyo
+${PYSITELIB}/psycopg2/sql.py
+${PYSITELIB}/psycopg2/sql.pyc
+${PYSITELIB}/psycopg2/sql.pyo
 ${PYSITELIB}/psycopg2/tests/__init__.py
 ${PYSITELIB}/psycopg2/tests/__init__.pyc
 ${PYSITELIB}/psycopg2/tests/__init__.pyo
@@ -40,6 +46,9 @@ ${PYSITELIB}/psycopg2/tests/dbapi20_tpc.pyo
 ${PYSITELIB}/psycopg2/tests/test_async.py
 ${PYSITELIB}/psycopg2/tests/test_async.pyc
 ${PYSITELIB}/psycopg2/tests/test_async.pyo
+${PYSITELIB}/psycopg2/tests/test_async_keyword.py
+${PYSITELIB}/psycopg2/tests/test_async_keyword.pyc
+${PYSITELIB}/psycopg2/tests/test_async_keyword.pyo
 ${PYSITELIB}/psycopg2/tests/test_bugX000.py
 ${PYSITELIB}/psycopg2/tests/test_bugX000.pyc
 ${PYSITELIB}/psycopg2/tests/test_bugX000.pyo
@@ -67,9 +76,15 @@ ${PYSITELIB}/psycopg2/tests/test_errcodes.pyo
 ${PYSITELIB}/psycopg2/tests/test_extras_dictcursor.py
 ${PYSITELIB}/psycopg2/tests/test_extras_dictcursor.pyc
 ${PYSITELIB}/psycopg2/tests/test_extras_dictcursor.pyo
+${PYSITELIB}/psycopg2/tests/test_fast_executemany.py
+${PYSITELIB}/psycopg2/tests/test_fast_executemany.pyc
+${PYSITELIB}/psycopg2/tests/test_fast_executemany.pyo
 ${PYSITELIB}/psycopg2/tests/test_green.py
 ${PYSITELIB}/psycopg2/tests/test_green.pyc
 ${PYSITELIB}/psycopg2/tests/test_green.pyo
+${PYSITELIB}/psycopg2/tests/test_ipaddress.py
+${PYSITELIB}/psycopg2/tests/test_ipaddress.pyc
+${PYSITELIB}/psycopg2/tests/test_ipaddress.pyo
 ${PYSITELIB}/psycopg2/tests/test_lobject.py
 ${PYSITELIB}/psycopg2/tests/test_lobject.pyc
 ${PYSITELIB}/psycopg2/tests/test_lobject.pyo
@@ -85,6 +100,12 @@ ${PYSITELIB}/psycopg2/tests/test_psycopg2_dbapi20.pyo
 ${PYSITELIB}/psycopg2/tests/test_quote.py
 ${PYSITELIB}/psycopg2/tests/test_quote.pyc
 ${PYSITELIB}/psycopg2/tests/test_quote.pyo
+${PYSITELIB}/psycopg2/tests/test_replication.py
+${PYSITELIB}/psycopg2/tests/test_replication.pyc
+${PYSITELIB}/psycopg2/tests/test_replication.pyo
+${PYSITELIB}/psycopg2/tests/test_sql.py
+${PYSITELIB}/psycopg2/tests/test_sql.pyc
+${PYSITELIB}/psycopg2/tests/test_sql.pyo
 ${PYSITELIB}/psycopg2/tests/test_transaction.py
 ${PYSITELIB}/psycopg2/tests/test_transaction.pyc
 ${PYSITELIB}/psycopg2/tests/test_transaction.pyo
