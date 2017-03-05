@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.165 2017/02/12 06:25:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.166 2017/03/05 15:14:07 wiz Exp $
 
-DISTNAME=	wireshark-2.2.4
-PKGREVISION=	1
+DISTNAME=	wireshark-2.2.5
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
