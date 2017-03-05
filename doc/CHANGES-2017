@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.982 2017/03/05 09:10:04 leot Exp $
+$NetBSD: CHANGES-2017,v 1.983 2017/03/05 12:05:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1203,3 +1203,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-PDF-API2 to 2.031 [wen 2017-03-04]
 	Updated graphics/gnuplot to 5.0.5 [mef 2017-03-04]
 	Added sysutils/py-google-compute-engine version 20170302 [bsiegert 2017-03-04]
+	Updated news/tin to 2.2.1nb12 [wiz 2017-03-05]
