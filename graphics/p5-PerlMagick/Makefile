@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.120 2017/02/28 15:20:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2017/03/05 15:10:31 wiz Exp $
 
-PKGREVISION= 1
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
