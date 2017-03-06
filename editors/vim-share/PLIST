@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2017/02/19 19:13:35 snj Exp $
+@comment $NetBSD: PLIST,v 1.31 2017/03/06 06:07:53 snj Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -457,6 +457,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/tcsh.vim
 share/vim/${VIM_SUBDIR}/ftplugin/terminfo.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tex.vim
 share/vim/${VIM_SUBDIR}/ftplugin/text.vim
+share/vim/${VIM_SUBDIR}/ftplugin/tmux.vim
 share/vim/${VIM_SUBDIR}/ftplugin/treetop.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tt2html.vim
 share/vim/${VIM_SUBDIR}/ftplugin/udevconf.vim
@@ -1223,6 +1224,7 @@ share/vim/${VIM_SUBDIR}/syntax/tf.vim
 share/vim/${VIM_SUBDIR}/syntax/tidy.vim
 share/vim/${VIM_SUBDIR}/syntax/tilde.vim
 share/vim/${VIM_SUBDIR}/syntax/tli.vim
+share/vim/${VIM_SUBDIR}/syntax/tmux.vim
 share/vim/${VIM_SUBDIR}/syntax/tpp.vim
 share/vim/${VIM_SUBDIR}/syntax/trasys.vim
 share/vim/${VIM_SUBDIR}/syntax/treetop.vim
