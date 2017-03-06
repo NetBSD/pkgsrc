@@ -1,17 +1,30 @@
-$NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
+$NetBSD: patch-libltdl_configure,v 1.1 2017/03/06 16:14:07 jperkin Exp $
 
---- libltdl/configure.orig	2016-03-10 10:28:17.599514319 +0000
+Automatically generated using manual-* patches and bootstrap.
+DO NOT MODIFY THIS PATCH MANUALLY!  YOUR CHANGES WILL BE LOST!
+
+--- libltdl/configure.orig	2017-02-02 10:07:29.000000000 +0000
 +++ libltdl/configure
-@@ -4548,7 +4548,7 @@ else
+@@ -4788,7 +4788,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
--  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
-+  netbsd* | freebsd* | openbsd* | mirbsd* | darwin* | dragonfly*)
+-  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
++  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd* | mirbsd*)
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -5042,12 +5042,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
+@@ -4886,6 +4886,9 @@ max_cmd_len=$lt_cv_sys_max_cmd_len
+ 
+ 
+ 
++unset CP
++unset MV
++unset RM
+ : ${CP="cp -f"}
+ : ${MV="mv -f"}
+ : ${RM="rm -f"}
+@@ -5254,12 +5257,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -36,7 +49,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    ;;
  
  newos6*)
-@@ -5057,7 +5064,7 @@ newos6*)
+@@ -5269,7 +5279,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -44,8 +57,8 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
 +  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|S\.a)$'
    ;;
  
- openbsd*)
-@@ -5686,7 +5693,7 @@ fi
+ openbsd* | bitrig*)
+@@ -5901,7 +5911,7 @@ fi
  
  case $host_os in
    darwin*)
@@ -54,7 +67,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    *)
      lock_old_archive_extraction=no ;;
  esac
-@@ -5775,7 +5782,7 @@ osf*)
+@@ -5990,7 +6000,7 @@ osf*)
    symcode='[BCDEGQRST]'
    ;;
  solaris*)
@@ -63,19 +76,19 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    ;;
  sco3.2v5*)
    symcode='[DT]'
-@@ -7843,7 +7850,10 @@ for cc_temp in $compiler""; do
-     *) break;;
-   esac
- done
--cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
-+# Return the actual command name, not our pkgsrc wrapper name because several
-+# decisions are made only based on compiler names
-+if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
-+cc_basename=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+@@ -6386,7 +6396,10 @@ func_cc_basename ()
+         *) break;;
+       esac
+     done
+-    func_cc_basename_result=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
++    # Return the actual command name, not our pkgsrc wrapper name because several
++    # decisions are made only based on compiler names
++    if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
++    func_cc_basename_result=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+ }
  
- 
- # Only perform the check for file, if the check method requires it
-@@ -8156,9 +8166,16 @@ lt_prog_compiler_static=
+ # Check whether --enable-libtool-lock was given.
+@@ -8635,9 +8648,16 @@ lt_prog_compiler_static=
        ;;
  
      darwin* | rhapsody*)
@@ -93,7 +106,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
        ;;
  
      haiku*)
-@@ -8186,6 +8203,13 @@ lt_prog_compiler_static=
+@@ -8665,6 +8685,13 @@ lt_prog_compiler_static=
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -107,7 +120,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -8338,6 +8362,15 @@ lt_prog_compiler_static=
+@@ -8842,6 +8869,15 @@ lt_prog_compiler_static=
        esac
        ;;
  
@@ -123,17 +136,17 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
      newsos6)
        lt_prog_compiler_pic='-KPIC'
        lt_prog_compiler_static='-Bstatic'
-@@ -8413,6 +8446,9 @@ lt_prog_compiler_static=
+@@ -8917,6 +8953,9 @@ lt_prog_compiler_static=
  
  case $host_os in
-   # For platforms which do not support PIC, -DPIC is meaningless:
+   # For platforms that do not support PIC, -DPIC is meaningless:
 +  mint*)
 +    lt_prog_compiler_pic=
 +    ;;
    *djgpp*)
      lt_prog_compiler_pic=
      ;;
-@@ -8958,16 +8994,29 @@ _LT_EOF
+@@ -9495,16 +9534,29 @@ _LT_EOF
        fi
        ;;
  
@@ -143,17 +156,17 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
 -	wlarc=
 +    mirbsd*)
 +      if test -f /usr/libexec/ld.so; then
-+	hardcode_direct=yes
-+	hardcode_shlibpath_var=no
-+	hardcode_direct_absolute=yes
-+	archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
-+	archive_expsym_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
-+	hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
-+	export_dynamic_flag_spec='${wl}-E'
++        hardcode_direct=yes
++        hardcode_shlibpath_var=no
++        hardcode_direct_absolute=yes
++        archive_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
++        archive_expsym_cmds='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
++        hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
++        export_dynamic_flag_spec='${wl}-E'
        else
--	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
--	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+	ld_shlibs=no
+-	archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-	archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++        ld_shlibs=no
        fi
        ;;
  
@@ -169,17 +182,17 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	ld_shlibs=no
-@@ -9376,7 +9425,7 @@ fi
-   allow_undefined_flag="$_lt_dar_allow_undefined"
+@@ -9964,7 +10016,7 @@ fi
+   allow_undefined_flag=$_lt_dar_allow_undefined
    case $cc_basename in
-      ifort*) _lt_dar_can_shared=yes ;;
+      ifort*|nagfor*) _lt_dar_can_shared=yes ;;
 -     *) _lt_dar_can_shared=$GCC ;;
 +     *) _lt_dar_can_shared=yes ;;
    esac
-   if test "$_lt_dar_can_shared" = "yes"; then
+   if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -9588,15 +9637,28 @@ $as_echo "$lt_cv_irix_exported_symbol" >
-       link_all_deplibs=yes
+@@ -10186,15 +10238,28 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       esac
        ;;
  
 -    netbsd*)
@@ -212,7 +225,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
        ;;
  
      newsos6)
-@@ -9608,6 +9670,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+@@ -10206,6 +10271,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
        ;;
  
      *nto* | *qnx*)
@@ -223,8 +236,8 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
 +      hardcode_shlibpath_var=no
        ;;
  
-     openbsd*)
-@@ -10381,7 +10448,7 @@ dgux*)
+     openbsd* | bitrig*)
+@@ -11050,7 +11120,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -233,24 +246,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -10395,7 +10462,7 @@ freebsd* | dragonfly*)
-   version_type=freebsd-$objformat
-   case $version_type in
-     freebsd-elf*)
--      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-       need_version=no
-       need_lib_prefix=no
-       ;;
-@@ -10418,13 +10485,24 @@ freebsd* | dragonfly*)
-     shlibpath_overrides_runpath=no
-     hardcode_into_libs=yes
-     ;;
--  *) # from 4.6 on, and DragonFly
-+  *) # from 4.6 on
-     shlibpath_overrides_runpath=yes
-     hardcode_into_libs=yes
-     ;;
+@@ -11095,6 +11165,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -265,15 +261,15 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
 +  hardcode_into_libs=yes
 +  ;;
 +
- gnu*)
+ haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -10512,12 +10590,7 @@ interix[3-9]*)
+@@ -11172,12 +11253,7 @@ interix[3-9]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
 -    *)
--	if test "$lt_cv_prog_gnu_ld" = yes; then
+-	if test yes = "$lt_cv_prog_gnu_ld"; then
 -		version_type=linux # correct to gnu/linux during the next big refactor
 -	else
 -		version_type=irix
@@ -282,7 +278,7 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -10616,19 +10689,36 @@ fi
+@@ -11301,19 +11377,36 @@ fi
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -315,12 +311,12 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    need_lib_prefix=no
    need_version=no
 -  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
--    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
+-    library_names_spec='$libname$release$shared_ext$versuffix $libname$shared_ext$versuffix'
 -    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
 -    dynamic_linker='NetBSD (a.out) ld.so'
 -  else
--    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
--    soname_spec='${libname}${release}${shared_ext}$major'
+-    library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
+-    soname_spec='$libname$release$shared_ext$major'
 -    dynamic_linker='NetBSD ld.elf_so'
 -  fi
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -329,25 +325,25 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -10654,7 +10744,7 @@ newsos6)
+@@ -11339,7 +11432,7 @@ newsos6)
    ;;
  
- openbsd*)
+ openbsd* | bitrig*)
 -  version_type=sunos
 +  version_type=linux
-   sys_lib_dlsearch_path_spec="/usr/lib"
+   sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
-   # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -10662,7 +10752,7 @@ openbsd*)
-     openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
-     *)				need_version=no  ;;
-   esac
--  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
+@@ -11347,7 +11440,7 @@ openbsd* | bitrig*)
+   else
+     need_version=yes
+   fi
+-  library_names_spec='$libname$release$shared_ext$versuffix $libname$shared_ext$versuffix'
++  library_names_spec='$libname$release$shared_ext$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
-   if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -12196,6 +12286,9 @@ else
+   shlibpath_overrides_runpath=yes
+@@ -12923,6 +13016,9 @@ else
      # at 6.2 and later dlopen does load deplibs.
      lt_cv_sys_dlopen_deplibs=yes
      ;;
@@ -357,3 +353,15 @@ $NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
    netbsd*)
      lt_cv_sys_dlopen_deplibs=yes
      ;;
+@@ -15440,7 +15536,10 @@ func_cc_basename ()
+         *) break;;
+       esac
+     done
+-    func_cc_basename_result=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
++    # Return the actual command name, not our pkgsrc wrapper name because several
++    # decisions are made only based on compiler names
++    if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
++    func_cc_basename_result=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+ }
+ 
+ 
