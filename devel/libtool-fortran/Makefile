@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/18 09:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/03/06 16:14:07 jperkin Exp $
 
 ###########################################################################
 ###########################################################################
@@ -17,8 +17,13 @@
 # these patch files properly; otherwise your changes WILL be lost on the
 # next libtool update.
 #
-# DO NOT MAKE CHANGES TO patch-ab OR patch-ad WITHOUT FOLLOWING THESE
-# INSTRUCTIONS.  There are no exceptions to this rule.
+# DO NOT MAKE CHANGES TO THESE FILES:
+#
+#   patches/patch-build-aux_ltmain.sh
+#   patches/patch-configure
+#   patches/patch-libltdl_configure
+#
+# WITHOUT FOLLOWING THESE INSTRUCTIONS.  There are no exceptions to this rule.
 #
 ###########################################################################
 ###########################################################################
@@ -28,7 +33,6 @@
 FILESDIR=	${.CURDIR}/../libtool-base/files
 
 PKGNAME=	${DISTNAME:S/-/-fortran-/}
-PKGREVISION=	9
 
 COMMENT=	Generic shared library support script (the script itself, incl. Fortran)
 

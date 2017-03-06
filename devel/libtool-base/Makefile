@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2016/07/09 06:38:10 wiz Exp $
+# $NetBSD: Makefile,v 1.118 2017/03/06 16:14:07 jperkin Exp $
 
 ###########################################################################
 ###########################################################################
@@ -17,8 +17,13 @@
 # these patch files properly; otherwise your changes WILL be lost on the
 # next libtool update.
 #
-# DO NOT MAKE CHANGES TO patch-ab OR patch-ad WITHOUT FOLLOWING THESE
-# INSTRUCTIONS.  There are no exceptions to this rule.
+# DO NOT MAKE CHANGES TO THESE FILES:
+#
+#   patches/patch-build-aux_ltmain.sh
+#   patches/patch-configure
+#   patches/patch-libltdl_configure
+#
+# WITHOUT FOLLOWING THESE INSTRUCTIONS.  There are no exceptions to this rule.
 #
 ###########################################################################
 ###########################################################################
@@ -26,7 +31,6 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	13
 
 COMMENT=	Generic shared library support script (the script itself)
 

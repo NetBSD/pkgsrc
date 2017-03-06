@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.82 2014/10/09 14:06:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.83 2017/03/06 16:14:07 jperkin Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-fortran/Makefile
@@ -21,13 +21,18 @@
 # these patch files properly; otherwise your changes WILL be lost on the
 # next libtool update.
 #
-# DO NOT MAKE CHANGES TO patch-ab OR patch-ad WITHOUT FOLLOWING THESE
-# INSTRUCTIONS.  There are no exceptions to this rule.
+# DO NOT MAKE CHANGES TO THESE FILES:
+#
+#   patches/patch-build-aux_ltmain.sh
+#   patches/patch-configure
+#   patches/patch-libltdl_configure
+#
+# WITHOUT FOLLOWING THESE INSTRUCTIONS.  There are no exceptions to this rule.
 #
 ###########################################################################
 ###########################################################################
 
-DISTNAME=	libtool-2.4.2
+DISTNAME=	libtool-2.4.6
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
@@ -38,6 +43,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	glibtool-[0-9]*
 
+USE_TOOLS+=	gm4
 GNU_CONFIGURE=	yes
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/libtool/distinfo
