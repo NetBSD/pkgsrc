@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/08/08 21:29:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/06 08:01:40 snj Exp $
 
 .include "Makefile.common"
 
 COMMENT+=	Ugly plugins
+PKGREVISION=	1
 
 .include "../../mk/bsd.pkg.mk"
