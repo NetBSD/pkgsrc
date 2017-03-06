@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_logrotate.cron,v 1.2 2017/01/26 20:12:32 nils Exp $
+$NetBSD: patch-examples_logrotate.cron,v 1.3 2017/03/06 12:59:53 fhajny Exp $
 
 Add pkgsrc paths compatibility
 
@@ -8,7 +8,7 @@ Add pkgsrc paths compatibility
  #!/bin/sh
  
 -/usr/sbin/logrotate /etc/logrotate.conf
-+/usr/pkg/sbin/logrotate /usr/pkg/etc/logrotate.conf
++@PREFIX@/sbin/logrotate @PKG_SYSCONFDIR@/logrotate.conf
  EXITVALUE=$?
  if [ $EXITVALUE != 0 ]; then
      /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
