@@ -1,6 +1,13 @@
-$NetBSD: README.Linux,v 1.5 2015/02/28 18:50:46 prlw1 Exp $
+$NetBSD: README.Linux,v 1.6 2017/03/06 21:26:01 sevan Exp $
 
 Please read the general README file as well.
+
+==========================================================================
+
+For Debian and derivatives such as Ubuntu the following packages should be
+installed prior to attempting bootstrap
+
+apt-get install cvs libncurses5-dev gcc g++ zlib1g-dev zlib1g libssl-dev libudev-dev
 
 ==========================================================================
 
