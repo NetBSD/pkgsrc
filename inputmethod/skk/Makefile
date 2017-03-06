@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2017/01/19 18:52:13 agc Exp $
+# $NetBSD: Makefile,v 1.34 2017/03/06 09:58:51 ryoon Exp $
 #
 
-DISTNAME=	ddskk-16.1
+DISTNAME=	ddskk-16.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/^ddskk/skk/}
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
@@ -13,8 +13,6 @@ COMMENT=	Japanese input methods for Emacs
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	ddskk-[0-9]*
-
-WRKSRC=		${WRKDIR}/ddskk-ddskk-16.1_Futamata
 
 EMACS_MODULES+=	base leim
 EMACS_BUILDLINK=YES
