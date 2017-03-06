@@ -1,4 +1,4 @@
-$NetBSD: patch-examples_logrotate-default,v 1.4 2017/01/26 20:12:32 nils Exp $
+$NetBSD: patch-examples_logrotate-default,v 1.5 2017/03/06 12:59:53 fhajny Exp $
 
 Add pkgsrc paths compatibility.
 
@@ -26,6 +26,6 @@ Add pkgsrc paths compatibility.
 -    rotate 1
 -}
 +# Packages drop log rotation information into this directory
-+include /usr/pkg/etc/logrotate.d
++include @PKG_SYSCONFDIR@/logrotate.d
  
  # system-specific logs may be also be configured here.
