@@ -1,29 +1,45 @@
-$NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
+$NetBSD: manual-libtool.m4,v 1.46 2017/03/06 16:14:07 jperkin Exp $
 
---- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
-+++ libltdl/m4/libtool.m4
-@@ -123,7 +123,10 @@ m4_defun([_LT_CC_BASENAME],
-     *) break;;
-   esac
- done
--cc_basename=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
-+# Return the actual command name, not our pkgsrc wrapper name because several
-+# decisions are made only based on compiler names
-+if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
-+cc_basename=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
- ])
+Support mirbsd/midnightbsd.
+Handle pkgsrc wrappers.
+Fixup output on various OS.
+
+--- m4/libtool.m4.orig	2015-01-20 16:15:19.000000000 +0000
++++ m4/libtool.m4
+@@ -117,7 +117,10 @@ func_cc_basename ()
+         *) break;;
+       esac
+     done
+-    func_cc_basename_result=`$ECHO "$cc_temp" | $SED "s%.*/%%; s%^$host_alias-%%"`
++    # Return the actual command name, not our pkgsrc wrapper name because several
++    # decisions are made only based on compiler names
++    if test -n "$cc_temp" && new_cc_temp=`$cc_temp --wrappee-name 2>/dev/null`; then :; else new_cc_temp="$cc_temp"; fi
++    func_cc_basename_result=`$ECHO "X$new_cc_temp" | $Xsed -e 's%.*/%%' -e "s%^$host_alias-%%"`
+ }
+ ])# _LT_PREPARE_CC_BASENAME
  
- 
-@@ -1098,7 +1101,7 @@ m4_defun([_LT_DARWIN_LINKER_FEATURES],
-   _LT_TAGVAR(allow_undefined_flag, $1)="$_lt_dar_allow_undefined"
+@@ -141,7 +144,10 @@ cc_basename=$func_cc_basename_result
+ # It is okay to use these file commands and assume they have been set
+ # sensibly after 'm4_require([_LT_FILEUTILS_DEFAULTS])'.
+ m4_defun([_LT_FILEUTILS_DEFAULTS],
+-[: ${CP="cp -f"}
++[unset CP
++unset MV
++unset RM
++: ${CP="cp -f"}
+ : ${MV="mv -f"}
+ : ${RM="rm -f"}
+ ])# _LT_FILEUTILS_DEFAULTS
+@@ -1120,7 +1126,7 @@ m4_defun([_LT_DARWIN_LINKER_FEATURES],
+   _LT_TAGVAR(allow_undefined_flag, $1)=$_lt_dar_allow_undefined
    case $cc_basename in
-      ifort*) _lt_dar_can_shared=yes ;;
+      ifort*|nagfor*) _lt_dar_can_shared=yes ;;
 -     *) _lt_dar_can_shared=$GCC ;;
 +     *) _lt_dar_can_shared=yes ;;
    esac
-   if test "$_lt_dar_can_shared" = "yes"; then
+   if test yes = "$_lt_dar_can_shared"; then
      output_verbose_link_cmd=func_echo_all
-@@ -1482,7 +1485,7 @@ fi
+@@ -1558,7 +1564,7 @@ fi
  
  case $host_os in
    darwin*)
@@ -32,16 +48,16 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    *)
      lock_old_archive_extraction=no ;;
  esac
-@@ -1638,7 +1641,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
+@@ -1714,7 +1720,7 @@ AC_CACHE_VAL([lt_cv_sys_max_cmd_len], [d
      lt_cv_sys_max_cmd_len=8192;
      ;;
  
--  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
-+  netbsd* | freebsd* | openbsd* | mirbsd* | darwin* | dragonfly*)
+-  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd*)
++  bitrig* | darwin* | dragonfly* | freebsd* | netbsd* | openbsd* | mirbsd*)
      # This has been around since 386BSD, at least.  Likely further.
      if test -x /sbin/sysctl; then
        lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
-@@ -2468,7 +2471,7 @@ dgux*)
+@@ -2655,7 +2661,7 @@ dgux*)
    shlibpath_var=LD_LIBRARY_PATH
    ;;
  
@@ -50,24 +66,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    # DragonFly does not have aout.  When/if they implement a new
    # versioning mechanism, adjust this.
    if test -x /usr/bin/objformat; then
-@@ -2482,7 +2485,7 @@ freebsd* | dragonfly*)
-   version_type=freebsd-$objformat
-   case $version_type in
-     freebsd-elf*)
--      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-       need_version=no
-       need_lib_prefix=no
-       ;;
-@@ -2505,13 +2508,24 @@ freebsd* | dragonfly*)
-     shlibpath_overrides_runpath=no
-     hardcode_into_libs=yes
-     ;;
--  *) # from 4.6 on, and DragonFly
-+  *) # from 4.6 on
-     shlibpath_overrides_runpath=yes
-     hardcode_into_libs=yes
-     ;;
+@@ -2700,6 +2706,17 @@ freebsd* | dragonfly*)
    esac
    ;;
  
@@ -82,15 +81,15 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
 +  hardcode_into_libs=yes
 +  ;;
 +
- gnu*)
+ haiku*)
    version_type=linux # correct to gnu/linux during the next big refactor
    need_lib_prefix=no
-@@ -2599,12 +2613,7 @@ interix[[3-9]]*)
+@@ -2777,12 +2794,7 @@ interix[[3-9]]*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
 -    *)
--	if test "$lt_cv_prog_gnu_ld" = yes; then
+-	if test yes = "$lt_cv_prog_gnu_ld"; then
 -		version_type=linux # correct to gnu/linux during the next big refactor
 -	else
 -		version_type=irix
@@ -99,7 +98,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -2684,19 +2693,36 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
+@@ -2887,19 +2899,36 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -132,12 +131,12 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    need_lib_prefix=no
    need_version=no
 -  if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
--    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
+-    library_names_spec='$libname$release$shared_ext$versuffix $libname$shared_ext$versuffix'
 -    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
 -    dynamic_linker='NetBSD (a.out) ld.so'
 -  else
--    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
--    soname_spec='${libname}${release}${shared_ext}$major'
+-    library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
+-    soname_spec='$libname$release$shared_ext$major'
 -    dynamic_linker='NetBSD ld.elf_so'
 -  fi
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -146,25 +145,25 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    shlibpath_var=LD_LIBRARY_PATH
    shlibpath_overrides_runpath=yes
    hardcode_into_libs=yes
-@@ -2722,7 +2748,7 @@ newsos6)
+@@ -2925,7 +2954,7 @@ newsos6)
    ;;
  
- openbsd*)
+ openbsd* | bitrig*)
 -  version_type=sunos
 +  version_type=linux
-   sys_lib_dlsearch_path_spec="/usr/lib"
+   sys_lib_dlsearch_path_spec=/usr/lib
    need_lib_prefix=no
-   # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-@@ -2730,7 +2756,7 @@ openbsd*)
-     openbsd3.3 | openbsd3.3.*)	need_version=yes ;;
-     *)				need_version=no  ;;
-   esac
--  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`"; then
+@@ -2933,7 +2962,7 @@ openbsd* | bitrig*)
+   else
+     need_version=yes
+   fi
+-  library_names_spec='$libname$release$shared_ext$versuffix $libname$shared_ext$versuffix'
++  library_names_spec='$libname$release$shared_ext$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
-   if test -z "`echo __ELF__ | $CC -E - | $GREP __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -3289,12 +3315,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
+   shlibpath_overrides_runpath=yes
+@@ -3546,12 +3575,19 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu 
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -189,7 +188,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    ;;
  
  newos6*)
-@@ -3304,7 +3337,7 @@ newos6*)
+@@ -3561,7 +3597,7 @@ newos6*)
    ;;
  
  *nto* | *qnx*)
@@ -197,8 +196,8 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
 +  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|S\.a)$'
    ;;
  
- openbsd*)
-@@ -3651,7 +3684,7 @@ osf*)
+ openbsd* | bitrig*)
+@@ -3931,7 +3967,7 @@ osf*)
    symcode='[[BCDEGQRST]]'
    ;;
  solaris*)
@@ -207,8 +206,8 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
    ;;
  sco3.2v5*)
    symcode='[[DT]]'
-@@ -3913,9 +3946,15 @@ m4_if([$1], [CXX], [
- 	[_LT_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'])
+@@ -4236,9 +4272,15 @@ m4_if([$1], [CXX], [
+       esac
        ;;
      darwin* | rhapsody*)
 -      # PIC is the default on this platform
@@ -224,7 +223,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -3994,6 +4033,9 @@ m4_if([$1], [CXX], [
+@@ -4317,6 +4359,9 @@ m4_if([$1], [CXX], [
  	    ;;
  	esac
  	;;
@@ -234,7 +233,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
        freebsd* | dragonfly*)
  	# FreeBSD uses GNU C++
  	;;
-@@ -4232,9 +4274,16 @@ m4_if([$1], [CXX], [
+@@ -4561,9 +4606,16 @@ m4_if([$1], [CXX], [
        ;;
  
      darwin* | rhapsody*)
@@ -252,7 +251,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
        ;;
  
      haiku*)
-@@ -4262,6 +4311,13 @@ m4_if([$1], [CXX], [
+@@ -4591,6 +4643,13 @@ m4_if([$1], [CXX], [
        # Instead, we relocate shared libraries at runtime.
        ;;
  
@@ -266,7 +265,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
      msdosdjgpp*)
        # Just because we use GCC doesn't mean we suddenly get shared libraries
        # on systems that don't support them.
-@@ -4415,6 +4471,15 @@ m4_if([$1], [CXX], [
+@@ -4769,6 +4828,15 @@ m4_if([$1], [CXX], [
        esac
        ;;
  
@@ -282,17 +281,17 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
      newsos6)
        _LT_TAGVAR(lt_prog_compiler_pic, $1)='-KPIC'
        _LT_TAGVAR(lt_prog_compiler_static, $1)='-Bstatic'
-@@ -4490,6 +4555,9 @@ m4_if([$1], [CXX], [
+@@ -4844,6 +4912,9 @@ m4_if([$1], [CXX], [
  ])
  case $host_os in
-   # For platforms which do not support PIC, -DPIC is meaningless:
+   # For platforms that do not support PIC, -DPIC is meaningless:
 +  mint*)
 +    _LT_TAGVAR(lt_prog_compiler_pic, $1)=
 +    ;;
    *djgpp*)
      _LT_TAGVAR(lt_prog_compiler_pic, $1)=
      ;;
-@@ -4861,16 +4929,29 @@ _LT_EOF
+@@ -5252,16 +5323,29 @@ _LT_EOF
        fi
        ;;
  
@@ -302,17 +301,17 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
 -	wlarc=
 +    mirbsd*)
 +      if test -f /usr/libexec/ld.so; then
-+	_LT_TAGVAR(hardcode_direct, $1)=yes
-+	_LT_TAGVAR(hardcode_shlibpath_var, $1)=no
-+	_LT_TAGVAR(hardcode_direct_absolute, $1)=yes
-+	_LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
-+	_LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
-+	_LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
-+	_LT_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
++        _LT_TAGVAR(hardcode_direct, $1)=yes
++        _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
++        _LT_TAGVAR(hardcode_direct_absolute, $1)=yes
++        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags'
++        _LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-retain-symbols-file,$export_symbols'
++        _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
++        _LT_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
        else
--	_LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
--	_LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
-+	_LT_TAGVAR(ld_shlibs, $1)=no
+-	_LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
+-	_LT_TAGVAR(archive_expsym_cmds, $1)='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
++        _LT_TAGVAR(ld_shlibs, $1)=no
        fi
        ;;
  
@@ -328,8 +327,8 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
      solaris*)
        if $LD -v 2>&1 | $GREP 'BFD 2\.8' > /dev/null; then
  	_LT_TAGVAR(ld_shlibs, $1)=no
-@@ -5342,15 +5423,28 @@ _LT_EOF
-       _LT_TAGVAR(link_all_deplibs, $1)=yes
+@@ -5794,15 +5878,28 @@ _LT_EOF
+       esac
        ;;
  
 -    netbsd*)
@@ -362,7 +361,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
        ;;
  
      newsos6)
-@@ -5362,6 +5456,11 @@ _LT_EOF
+@@ -5814,6 +5911,11 @@ _LT_EOF
        ;;
  
      *nto* | *qnx*)
@@ -373,19 +372,19 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
 +      _LT_TAGVAR(hardcode_shlibpath_var, $1)=no
        ;;
  
-     openbsd*)
-@@ -5819,9 +5918,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
+     openbsd* | bitrig*)
+@@ -6287,9 +6389,7 @@ m4_defun([_LT_LANG_CXX_CONFIG],
  [m4_require([_LT_FILEUTILS_DEFAULTS])dnl
  m4_require([_LT_DECL_EGREP])dnl
  m4_require([_LT_PATH_MANIFEST_TOOL])dnl
--if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
--    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
--    (test "X$CXX" != "Xg++"))) ; then
+-if test -n "$CXX" && ( test no != "$CXX" &&
+-    ( (test g++ = "$CXX" && `g++ -v >/dev/null 2>&1` ) ||
+-    (test g++ != "$CXX"))); then
 +if test -n "$CXX" && test "X$CXX" != "Xno" ; then
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -7079,6 +7179,22 @@ if test yes != "$_lt_caught_CXX_error"; 
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -408,7 +407,7 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -7093,15 +7209,13 @@ if test yes != "$_lt_caught_CXX_error"; 
  	;;
  
        netbsd*)
@@ -431,58 +430,20 @@ $NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -6739,27 +6850,14 @@ if test "$_lt_caught_CXX_error" != yes; 
+@@ -7275,7 +7389,7 @@ if test yes != "$_lt_caught_CXX_error"; 
  	    # GNU C++ compiler with Solaris linker
- 	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
- 	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
+ 	    if test yes,no = "$GXX,$with_gnu_ld"; then
+ 	      _LT_TAGVAR(no_undefined_flag, $1)=' $wl-z ${wl}defs'
 -	      if $CC --version | $GREP -v '^2\.7' > /dev/null; then
--	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
--	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
--		  $CC -shared $pic_flag -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
--
--	        # Commands to make compiler produce verbose output that lists
--	        # what "hidden" libraries, object files and flags are used when
--	        # linking a shared library.
--	        output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
--	      else
--	        # g++ 2.7 appears to require `-G' NOT `-shared' on this
--	        # platform.
--	        _LT_TAGVAR(archive_cmds, $1)='$CC -G -nostdlib $LDFLAGS $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
--	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
--		  $CC -G -nostdlib ${wl}-M $wl$lib.exp -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
--
--	        # Commands to make compiler produce verbose output that lists
--	        # what "hidden" libraries, object files and flags are used when
--	        # linking a shared library.
--	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
--	      fi
-+	      _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags ${wl}-h $wl$soname -o $lib'
-+	      _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
-+		$CC -shared $pic_flag ${wl}-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
-+
-+	      # Commands to make compiler produce verbose output that lists
-+	      # what "hidden" libraries, object files and flags are used when
-+	      # linking a shared library.
-+	      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
- 
- 	      _LT_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-R $wl$libdir'
- 	      case $host_os in
-@@ -6995,13 +7093,11 @@ if AC_TRY_EVAL(ac_compile); then
-     case ${prev}${p} in
- 
-     -L* | -R* | -l*)
--       # Some compilers place space between "-{L,R}" and the path.
--       # Remove the space.
--       if test $p = "-L" ||
--          test $p = "-R"; then
--	 prev=$p
--	 continue
--       fi
-+       # Some compilers place space between "-{L,R,l}" and the path or
-+       # library.  Remove the space.
-+       case $p in
-+       -L|-R|-l) prev=$p; continue ;;
-+       esac
- 
-        # Expand the sysroot to ease extracting the directories later.
-        if test -z "$prev"; then
++	      if true; then
+ 	        _LT_TAGVAR(archive_cmds, $1)='$CC -shared $pic_flag -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-h $wl$soname -o $lib'
+ 	        _LT_TAGVAR(archive_expsym_cmds, $1)='echo "{ global:" > $lib.exp~cat $export_symbols | $SED -e "s/\(.*\)/\1;/" >> $lib.exp~echo "local: *; };" >> $lib.exp~
+                   $CC -shared $pic_flag -nostdlib $wl-M $wl$lib.exp $wl-h $wl$soname -o $lib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags~$RM $lib.exp'
+@@ -7535,6 +7649,7 @@ if AC_TRY_EVAL(ac_compile); then
+        # Some compilers place space between "-{L,R}" and the path.
+        # Remove the space.
+        if test x-L = "$p" ||
++          test x-l = "$p" ||
+           test x-R = "$p"; then
+ 	 prev=$p
+ 	 continue
