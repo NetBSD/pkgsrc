@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1009 2017/03/06 08:02:07 snj Exp $
+$NetBSD: CHANGES-2017,v 1.1010 2017/03/06 10:01:26 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1230,3 +1230,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/wireshark to 2.2.5 [wiz 2017-03-05]
 	Updated editors/vim-share to 8.0.0425 [snj 2017-03-06]
 	Updated multimedia/gst-plugins1-ugly to 1.10.3nb1 [snj 2017-03-06]
+	Updated inputmethod/skk to 16.2 [ryoon 2017-03-06]
