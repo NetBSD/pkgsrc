@@ -1,19 +1,21 @@
-$NetBSD: patch-aa,v 1.37 2013/04/12 13:44:08 joerg Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2017/03/06 16:14:07 jperkin Exp $
 
---- Makefile.in.orig	2011-10-17 10:18:55.000000000 +0000
+Avoid generating info pages.
+
+--- Makefile.in.orig	2015-02-15 16:14:14.000000000 +0000
 +++ Makefile.in
-@@ -638,9 +638,7 @@ sub_configure_deps = $(sub_aclocal_m4_de
- info_TEXINFOS = doc/libtool.texi
- doc_libtool_TEXINFOS = doc/PLATFORMS doc/fdl.texi doc/notes.texi
- dist_man1_MANS = $(srcdir)/doc/libtool.1 $(srcdir)/doc/libtoolize.1
+@@ -790,9 +790,7 @@ doc_libtool_TEXINFOS = $(doc_dir)/PLATFO
+ 			  $(notes_texi)
+ 
+ dist_man1_MANS = $(libtool_1) $(libtoolize_1)
 -update_mans = \
 -  PATH=".$(PATH_SEPARATOR)$$PATH"; export PATH; \
--  $(HELP2MAN) --output=$@
+-  $(HELP2MAN) --output='$@'
 +update_mans = true
  
- 
- # These are required by libtoolize and must be executable when installed.
-@@ -2033,7 +2031,7 @@ all-am: Makefile $(INFO_DEPS) $(LTLIBRAR
+ ltdldir = $(srcdir)/libltdl
+ pkgauxdir = $(pkgdatadir)/build-aux
+@@ -1901,7 +1899,7 @@ all-am: Makefile $(INFO_DEPS) $(LTLIBRAR
  		$(HEADERS) config.h all-local
  installdirs: installdirs-recursive
  installdirs-am:
@@ -22,7 +24,7 @@ $NetBSD: patch-aa,v 1.37 2013/04/12 13:44:08 joerg Exp $
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: $(BUILT_SOURCES)
-@@ -2104,7 +2102,7 @@ info: info-recursive
+@@ -1973,7 +1971,7 @@ info: info-recursive
  info-am: $(INFO_DEPS)
  
  install-data-am: install-data-local install-includeHEADERS \
