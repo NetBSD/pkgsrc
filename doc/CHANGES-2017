@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1008 2017/03/06 06:08:14 snj Exp $
+$NetBSD: CHANGES-2017,v 1.1009 2017/03/06 08:02:07 snj Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1229,3 +1229,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/p5-PerlMagick to 7.0.5.1 [wiz 2017-03-05]
 	Updated net/wireshark to 2.2.5 [wiz 2017-03-05]
 	Updated editors/vim-share to 8.0.0425 [snj 2017-03-06]
+	Updated multimedia/gst-plugins1-ugly to 1.10.3nb1 [snj 2017-03-06]
