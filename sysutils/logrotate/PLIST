@@ -1,12 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2017/01/26 20:12:32 nils Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/06 12:59:53 fhajny Exp $
 man/man5/logrotate.conf.5
 man/man8/logrotate.8
 sbin/logrotate
-share/doc/logrotate/COPYING
-share/doc/logrotate/ChangeLog.md
-share/doc/logrotate/README.HPUX
-share/doc/logrotate/README.Solaris
-share/doc/logrotate/README.md
 share/examples/logrotate/logrotate.conf
 share/examples/logrotate/logrotate.cron
-@pkgdir etc/logrotate.d

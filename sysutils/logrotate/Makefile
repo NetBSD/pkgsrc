@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.15 2017/01/26 20:12:32 nils Exp $
+# $NetBSD: Makefile,v 1.16 2017/03/06 12:59:53 fhajny Exp $
 
-DISTNAME=		${GHCOMMIT}
-PKGNAME=		logrotate-3.11.0
+DISTNAME=		logrotate-3.11.0
+PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/logrotate/archive/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=logrotate/}
 
 MAINTAINER=		nils@NetBSD.org
 HOMEPAGE=		https://github.com/logrotate/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
 
-GHCOMMIT=		f16495b3e5f3e5f333956a384fdc9917fc8ec81a
-USE_TOOLS+=		gmake gzip:run gunzip:run mail:run automake autoconf
+GITHUB_RELEASE=		${PKGVERSION_NOREV}
+
+USE_TOOLS+=		gmake gzip:run gunzip:run mail:run
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-HAS_CONFIGURE=		yes
 NO_EXPORT_CPP=		yes
 
-WRKSRC=			${WRKDIR}/logrotate-${GHCOMMIT}
 CONFIGURE_ENV+=		STATEFILE=\"${VARBASE}/db/logrotate.status\"
 CONFIGURE_ENV+=		DEFAULT_MAIL_COMMAND=\"${MAIL_CMD:Q}\"
 CONFIGURE_ENV+=		COMPRESS_COMMAND=\"${GZIP_CMD:[1]:Q}\"
@@ -25,37 +24,27 @@ CONFIGURE_ENV+=		UNCOMPRESS_COMMAND=\"${GUNZIP_CMD:[1]:Q}\"
 CONFIGURE_ARGS+=	--with-state-file-path="${VARBASE}/db/logrotate.status"
 
 BUILD_DEFS+=		VARBASE
-EGDIR=			${PREFIX}/share/examples/logrotate
-CONF_FILES=		${EGDIR}/logrotate.conf ${PKG_SYSCONFDIR}/logrotate.conf
-OWN_DIRS=		${PKG_SYSCONFDIR}/logrotate.d
-MESSAGE_SUBST+=		EGDIR=${EGDIR}
-INSTALLATION_DIRS+=	${EGDIR} ${PKG_SYSCONFDIR} ${OWN_DIRS}
-AUTO_MKDIRS=		yes
 
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-build
 SUBST_MESSAGE.paths=	Substituting paths variables.
 SUBST_FILES.paths=	examples/logrotate-default
 SUBST_FILES.paths+=	examples/logrotate.cron
-SUBST_VARS.paths=	PREFIX
-SUBST_VARS.paths+=	VARBASE
-SUBST_VARS.paths+=	PKG_SYSCONFDIR
+SUBST_VARS.paths=	PREFIX PKG_SYSCONFDIR
 
-DOCDIR=			share/doc/logrotate
+CONF_FILES=		${EGDIR}/logrotate.conf ${PKG_SYSCONFDIR}/logrotate.conf
+OWN_DIRS=		${PKG_SYSCONFDIR}/logrotate.d
 
-pre-configure:
-	cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ./autogen.sh
+EGDIR=			share/examples/logrotate
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/logrotate ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/examples/logrotate-default ${DESTDIR}${EGDIR}/logrotate.conf
-	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.cron ${DESTDIR}/${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.* ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog.md ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/logrotate.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/logrotate.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	${EGDIR}
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/examples/logrotate-default \
+		${DESTDIR}${PREFIX}/${EGDIR}/logrotate.conf
+	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.cron \
+		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
