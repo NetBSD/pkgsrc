@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/10/02 12:18:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/03/06 09:58:51 ryoon Exp $
 info/skk.info
 ${EMACS_LISPPREFIX}/skk/ccc.el
 ${EMACS_LISPPREFIX}/skk/ccc.elc
@@ -59,6 +59,8 @@ ${EMACS_LISPPREFIX}/skk/skk-macs.el
 ${EMACS_LISPPREFIX}/skk/skk-macs.elc
 ${EMACS_LISPPREFIX}/skk/skk-num.el
 ${EMACS_LISPPREFIX}/skk/skk-num.elc
+${EMACS_LISPPREFIX}/skk/skk-search-web.el
+${EMACS_LISPPREFIX}/skk/skk-search-web.elc
 ${EMACS_LISPPREFIX}/skk/skk-server-completion.el
 ${EMACS_LISPPREFIX}/skk/skk-server-completion.elc
 ${EMACS_LISPPREFIX}/skk/skk-server.el
@@ -82,6 +84,8 @@ ${EMACS_LISPPREFIX}/skk/skk-viper.el
 ${EMACS_LISPPREFIX}/skk/skk-viper.elc
 ${EMACS_LISPPREFIX}/skk/skk.el
 ${EMACS_LISPPREFIX}/skk/skk.elc
+${EMACS_LISPPREFIX}/skk/tar-util.el
+${EMACS_LISPPREFIX}/skk/tar-util.elc
 share/skk/NICOLA-SKK.tut
 share/skk/SKK.tut
 share/skk/SKK.tut.E
