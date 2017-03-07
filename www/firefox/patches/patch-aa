@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
 
 * MOZ_ENABLE_PROFILER_SPS is not for users, Disable it
 * Disable libjpeg-turbo check
 * Add system libraries option
 * Add OSS audio support
 
---- old-configure.in.orig	2017-01-23 04:07:13.206599109 +0000
+--- old-configure.in.orig	2017-03-04 10:47:32.150192599 +0000
 +++ old-configure.in
-@@ -2195,11 +2195,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
+@@ -2159,11 +2159,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
                     MOZ_SYSTEM_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -2938,6 +2934,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -2894,6 +2890,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_RAW=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -2980,7 +2979,7 @@ dnl Use integers over floats for audio o
+@@ -2936,7 +2935,7 @@ dnl Use integers over floats for audio o
  dnl (regarless of the CPU architecture, because audio
  dnl backends for those platforms don't support floats. We also
  dnl use integers on ARM with other OS, because it's more efficient.
@@ -39,163 +39,7 @@ $NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -3005,6 +3004,155 @@ fi
- AC_SUBST(MOZ_RAW)
- 
- dnl ========================================================
-+dnl Check for libogg
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-ogg,
-+[  --with-system-ogg       Use system libogg (located with pkgconfig)],
-+MOZ_SYSTEM_OGG=1,
-+MOZ_SYSTEM_OGG=)
-+
-+if test -n "$MOZ_SYSTEM_OGG"; then
-+    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
-+
-+    _SAVE_LIBS=$LIBS
-+    LIBS="$LIBS $MOZ_OGG_LIBS"
-+    AC_CHECK_FUNC(ogg_set_mem_functions, [],
-+      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
-+    LIBS=$_SAVE_LIBS
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_OGG)
-+
-+dnl ========================================================
-+dnl Check for libvorbis
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-vorbis,
-+[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
-+MOZ_SYSTEM_VORBIS=1,
-+MOZ_SYSTEM_VORBIS=)
-+
-+if test -n "$MOZ_SYSTEM_VORBIS"; then
-+    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.5)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_VORBIS)
-+
-+dnl ========================================================
-+dnl Check for integer-only libvorbis aka tremor
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-tremor,
-+[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
-+MOZ_SYSTEM_TREMOR=1,
-+MOZ_SYSTEM_TREMOR=)
-+
-+if test -n "$MOZ_SYSTEM_TREMOR"; then
-+    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_TREMOR)
-+
-+dnl ========================================================
-+dnl Check for libcelt
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-celt,
-+[  --with-system-celt      Use system libcelt (located with pkgconfig)],
-+MOZ_SYSTEM_CELT=1,
-+MOZ_SYSTEM_CELT=)
-+
-+if test -n "$MOZ_SYSTEM_CELT"; then
-+    PKG_CHECK_MODULES(MOZ_CELT, celt)
-+else
-+    MOZ_CELT_CFLAGS='-I$(topsrcdir)/media/libopus'
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_CELT)
-+
-+dnl ========================================================
-+dnl Check for libopus
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-opus,
-+[  --with-system-opus      Use system libopus (located with pkgconfig)],
-+MOZ_SYSTEM_OPUS=1,
-+MOZ_SYSTEM_OPUS=)
-+
-+if test -n "$MOZ_SYSTEM_OPUS"; then
-+    PKG_CHECK_MODULES(MOZ_OPUS, opus >= 1.1)
-+else
-+    MOZ_OPUS_CFLAGS='-I$(topsrcdir)/media/libopus/include'
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_OPUS)
-+
-+dnl ========================================================
-+dnl Check for libtheora
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-theora,
-+[  --with-system-theora    Use system libtheora (located with pkgconfig)],
-+MOZ_SYSTEM_THEORA=1,
-+MOZ_SYSTEM_THEORA=)
-+
-+if test -n "$MOZ_SYSTEM_THEORA"; then
-+    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_THEORA)
-+
-+dnl ========================================================
-+dnl Check for libsoundtouch
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-soundtouch,
-+[  --with-system-soundtouch Use system libsoundtouch (located with pkgconfig)],
-+MOZ_SYSTEM_SOUNDTOUCH=1,
-+MOZ_SYSTEM_SOUNDTOUCH=)
-+
-+if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
-+    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.8.0)
-+
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-+    _SAVE_CXXFLAGS=$CXXFLAGS
-+    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
-+    AC_CACHE_CHECK(for soundtouch sample type,
-+                   ac_cv_soundtouch_sample_type,
-+                   [AC_TRY_COMPILE([#include <SoundTouch.h>
-+                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
-+                                    #error soundtouch expects float samples
-+                                    #endif],
-+                                   [],
-+                                   [ac_cv_soundtouch_sample_type=short],
-+                                   [ac_cv_soundtouch_sample_type=float])])
-+    CXXFLAGS=$_SAVE_CXXFLAGS
-+    AC_LANG_RESTORE
-+
-+    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
-+         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
-+        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
-+    fi
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_SOUNDTOUCH)
-+
-+dnl ========================================================
-+dnl = Disable VP8 decoder support
-+dnl ========================================================
-+MOZ_ARG_DISABLE_BOOL(webm,
-+[  --disable-webm          Disable support for WebM media (VP8 video and Vorbis audio)],
-+    MOZ_WEBM=,
-+    MOZ_WEBM=1)
-+
-+if test -n "$MOZ_WEBM"; then
-+    AC_DEFINE(MOZ_WEBM)
-+    MOZ_VPX=1
-+fi;
-+
-+dnl ========================================================
- dnl = Apple platform decoder support
- dnl ========================================================
- if test "$COMPILE_ENVIRONMENT"; then
-@@ -3088,6 +3236,216 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+@@ -3044,6 +3043,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
      fi
  fi
  
@@ -209,112 +53,7 @@ $NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
 +MOZ_SYSTEM_OGG=)
 +
 +if test -n "$MOZ_SYSTEM_OGG"; then
-+    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
-+
-+    _SAVE_LIBS=$LIBS
-+    LIBS="$LIBS $MOZ_OGG_LIBS"
-+    AC_CHECK_FUNC(ogg_set_mem_functions, [],
-+      [AC_DEFINE(MOZ_OGG_NO_MEM_REPORTING)])
-+    LIBS=$_SAVE_LIBS
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_OGG)
-+
-+dnl ========================================================
-+dnl Check for libvorbis
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-vorbis,
-+[  --with-system-vorbis    Use system libvorbis (located with pkgconfig)],
-+MOZ_SYSTEM_VORBIS=1,
-+MOZ_SYSTEM_VORBIS=)
-+
-+if test -n "$MOZ_SYSTEM_VORBIS"; then
-+    PKG_CHECK_MODULES(MOZ_VORBIS, vorbis vorbisenc >= 1.3.5)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_VORBIS)
-+
-+dnl ========================================================
-+dnl Check for integer-only libvorbis aka tremor
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-tremor,
-+[  --with-system-tremor    Use system libtremor (located with pkgconfig)],
-+MOZ_SYSTEM_TREMOR=1,
-+MOZ_SYSTEM_TREMOR=)
-+
-+if test -n "$MOZ_SYSTEM_TREMOR"; then
-+    PKG_CHECK_MODULES(MOZ_TREMOR, vorbisidec >= 1.2.1)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_TREMOR)
-+
-+dnl ========================================================
-+dnl Check for libtheora
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-theora,
-+[  --with-system-theora    Use system libtheora (located with pkgconfig)],
-+MOZ_SYSTEM_THEORA=1,
-+MOZ_SYSTEM_THEORA=)
-+
-+if test -n "$MOZ_SYSTEM_THEORA"; then
-+    PKG_CHECK_MODULES(MOZ_THEORA, theora >= 1.2)
-+fi
-+
-+AC_SUBST(MOZ_SYSTEM_THEORA)
-+
-+dnl ========================================================
-+dnl Check for libSoundTouch
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-soundtouch,
-+[  --with-system-soundtouch Use system libSoundTouch (located with pkgconfig)],
-+MOZ_SYSTEM_SOUNDTOUCH=1,
-+MOZ_SYSTEM_SOUNDTOUCH=)
-+
-+if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
-+    PKG_CHECK_MODULES(MOZ_SOUNDTOUCH, soundtouch >= 1.9.0)
-+
-+    AC_LANG_SAVE
-+    AC_LANG_CPLUSPLUS
-+    _SAVE_CXXFLAGS=$CXXFLAGS
-+    CXXFLAGS="$CXXFLAGS $MOZ_SOUNDTOUCH_CFLAGS"
-+    AC_CACHE_CHECK(for soundtouch sample type,
-+                   ac_cv_soundtouch_sample_type,
-+                   [AC_TRY_COMPILE([#include <SoundTouch.h>
-+                                    #ifndef SOUNDTOUCH_INTEGER_SAMPLES
-+                                    #error soundtouch expects float samples
-+                                    #endif],
-+                                   [],
-+                                   [ac_cv_soundtouch_sample_type=short],
-+                                   [ac_cv_soundtouch_sample_type=float])])
-+    CXXFLAGS=$_SAVE_CXXFLAGS
-+    AC_LANG_RESTORE
-+
-+    if test \( -n "$MOZ_SAMPLE_TYPE_S16" -a "$ac_cv_soundtouch_sample_type" != short \) \
-+         -o \( -n "$MOZ_SAMPLE_TYPE_FLOAT32" -a "$ac_cv_soundtouch_sample_type" != float \) ; then
-+        AC_MSG_ERROR([SoundTouch library is built with incompatible sample type. Either rebuild the library with/without --enable-integer-samples, chase default Mozilla sample type or remove --with-system-soundtouch.])
-+    fi
-+fi
-+
-+if test -n "$MOZ_SYSTEM_SOUNDTOUCH"; then
-+    AC_DEFINE(MOZ_SYSTEM_SOUNDTOUCH)
-+fi
-+AC_SUBST(MOZ_SYSTEM_SOUNDTOUCH)
-+
-+dnl ========================================================
-+dnl Check for libogg
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-ogg,
-+[  --with-system-ogg       Use system libogg (located with pkgconfig)],
-+MOZ_SYSTEM_OGG=1,
-+MOZ_SYSTEM_OGG=)
-+
-+if test -n "$MOZ_SYSTEM_OGG"; then
-+    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.2.1)
++    PKG_CHECK_MODULES(MOZ_OGG, ogg >= 1.3.0)
 +
 +    _SAVE_LIBS=$LIBS
 +    LIBS="$LIBS $MOZ_OGG_LIBS"
@@ -412,7 +151,7 @@ $NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -3252,6 +3610,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -3208,6 +3312,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -480,31 +219,7 @@ $NetBSD: patch-aa,v 1.49 2017/01/25 13:24:51 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -3265,12 +3684,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
-    MOZ_ALSA=1,
-    MOZ_ALSA=)
- 
-+MOZ_ARG_DISABLE_BOOL(alsa-dlopen,
-+[  --disable-alsa-dlopen   Disable runtime linking of libasound.so],
-+   DISABLE_LIBASOUND_DLOPEN=1,
-+   DISABLE_LIBASOUND_DLOPEN=)
-+
- if test -n "$MOZ_ALSA"; then
-     PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
-          [echo "$MOZ_ALSA_PKG_ERRORS"
-           AC_MSG_ERROR([Need alsa for audio output on Linux. (On Ubuntu, you might try installing the package libasound2-dev.)])])
- fi
- 
-+if test -n "$DISABLE_LIBASOUND_DLOPEN"; then
-+    AC_DEFINE(DISABLE_LIBASOUND_DLOPEN)
-+else
-+    MOZ_ALSA_LIBS=
-+fi
-+
- AC_SUBST(MOZ_ALSA)
- 
- dnl ========================================================
-@@ -5220,6 +5650,27 @@ if test "$USE_FC_FREETYPE"; then
+@@ -5023,6 +5188,27 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================

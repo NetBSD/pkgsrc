@@ -1,8 +1,8 @@
-$NetBSD: patch-config_external_moz.build,v 1.14 2016/12/03 09:58:26 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.15 2017/03/07 20:45:43 ryoon Exp $
 
 * Support system libraries
 
---- config/external/moz.build.orig	2016-10-31 20:15:28.000000000 +0000
+--- config/external/moz.build.orig	2017-01-23 16:13:47.000000000 +0000
 +++ config/external/moz.build
 @@ -21,12 +21,21 @@ if CONFIG['MOZ_UPDATER']:
  external_dirs += ['modules/brotli']
@@ -38,6 +38,6 @@ $NetBSD: patch-config_external_moz.build,v 1.14 2016/12/03 09:58:26 ryoon Exp $
      'media/libspeex_resampler',
      'media/libstagefright',
 -    'media/libsoundtouch',
+     'media/psshparser'
  ]
  
- DIRS += ['../../' + i for i in external_dirs]

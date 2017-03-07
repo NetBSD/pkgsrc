@@ -1,24 +1,8 @@
-$NetBSD: patch-build_moz.configure_old.configure,v 1.4 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-build_moz.configure_old.configure,v 1.5 2017/03/07 20:45:43 ryoon Exp $
 
---- build/moz.configure/old.configure.orig	2017-01-16 16:16:51.000000000 +0000
+--- build/moz.configure/old.configure.orig	2017-01-23 16:13:47.000000000 +0000
 +++ build/moz.configure/old.configure
-@@ -159,6 +159,7 @@ def old_configure_options(*options):
-     '--enable-accessibility',
-     '--enable-address-sanitizer',
-     '--enable-alsa',
-+    '--enable-alsa-dlopen',
-     '--enable-android-omx',
-     '--enable-b2g-bt',
-     '--enable-b2g-camera',
-@@ -241,6 +242,7 @@ def old_configure_options(*options):
-     '--enable-url-classifier',
-     '--enable-valgrind',
-     '--enable-verify-mar',
-+    '--enable-webm',
-     '--enable-webrtc',
-     '--enable-xul',
-     '--enable-zipwriter',
-@@ -279,18 +281,26 @@ def old_configure_options(*options):
+@@ -276,6 +276,7 @@ def old_configure_options(*options):
      '--with-nspr-prefix',
      '--with-nss-exec-prefix',
      '--with-nss-prefix',
@@ -26,17 +10,11 @@ $NetBSD: patch-build_moz.configure_old.configure,v 1.4 2017/01/25 13:24:51 ryoon
      '--with-pthreads',
      '--with-qemu-exe',
      '--with-sixgill',
-     '--with-soft-float',
-     '--with-system-bz2',
-+    '--with-system-celt',
-     '--with-system-icu',
-     '--with-system-jpeg',
-     '--with-system-libevent',
+@@ -287,7 +288,12 @@ def old_configure_options(*options):
      '--with-system-libvpx',
      '--with-system-nspr',
      '--with-system-nss',
 +    '--with-system-ogg',
-+    '--with-system-opus',
      '--with-system-png',
 +    '--with-system-soundtouch',
 +    '--with-system-theora',
