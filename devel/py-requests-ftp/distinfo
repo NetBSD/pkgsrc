@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/07 18:15:21 minskim Exp $
+
+SHA1 (requests-ftp-0.3.1.tar.gz) = ea1ff9cec32458fc3b61382d50b2492855570697
+RMD160 (requests-ftp-0.3.1.tar.gz) = 56f6db6e580b0cc0e3d24b938040a1d380a86b47
+SHA512 (requests-ftp-0.3.1.tar.gz) = dfd3bc590a5a7e62d541d1100b424371e1eab2b548131fef8a39332727cb59f5059700f62e1fd870860bf11829a8117e80bc484f3be6c64a1bf94f8a1ec205ba
+Size (requests-ftp-0.3.1.tar.gz) = 7850 bytes
