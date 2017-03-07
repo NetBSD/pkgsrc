@@ -1,0 +1,9 @@
+sphinxcontrib-newsfeed is a extension for adding a simple Blog,
+News or Announcements section to a Sphinx website.
+
+Features:
+
+    Makes feed entries from Sphinx documents.
+    Generates a list of entries with teasers.
+    Saves the feed to a file in RSS format.
+    Supports comments via Disqus.
