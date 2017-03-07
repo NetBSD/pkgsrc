@@ -1,21 +1,31 @@
-# $NetBSD: options.mk,v 1.4 2017/01/17 12:32:42 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2017/03/07 20:42:28 elric Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
-PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
+PKG_SUPPORTED_OPTIONS=	debug gpgme gssapi idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 PKG_SUGGESTED_OPTIONS=	ncursesw gpgme idn mutt-hcache mutt-smtp sasl smime ssl
+PKG_SUGGESTED_OPTIONS+=	gssapi
 PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUGGESTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUGGESTED_OPTIONS+=	mutt-sidebar
 
 .include "../../mk/bsd.options.mk"
+
+###
+### GSSAPI
+###
+
+.if !empty(PKG_OPTIONS:Mgssapi)
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+= --with-gss=${KRB5BASE}
+.endif
 
 ###
 ### Slang
