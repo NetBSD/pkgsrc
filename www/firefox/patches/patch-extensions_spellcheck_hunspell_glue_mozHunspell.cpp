@@ -1,16 +1,16 @@
-$NetBSD: patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.3 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-extensions_spellcheck_hunspell_glue_mozHunspell.cpp,v 1.4 2017/03/07 20:45:43 ryoon Exp $
 
 * Read pkgsrc hunspell dictionaries
 
---- extensions/spellcheck/hunspell/glue/mozHunspell.cpp.orig	2017-01-16 16:16:49.000000000 +0000
+--- extensions/spellcheck/hunspell/glue/mozHunspell.cpp.orig	2017-01-23 16:13:57.000000000 +0000
 +++ extensions/spellcheck/hunspell/glue/mozHunspell.cpp
-@@ -358,6 +358,14 @@ mozHunspell::LoadDictionaryList(bool aNo
+@@ -381,6 +381,14 @@ mozHunspell::LoadDictionaryList(bool aNo
      }
    }
  
 +  // load system hunspell dictionaries
 +  nsCOMPtr<nsIFile> hunDir;
-+  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("@PREFIX@/share/hunspell"),
++  NS_NewNativeLocalFile(NS_LITERAL_CSTRING("%%LOCALBASE%%/share/hunspell"),
 +                        true, getter_AddRefs(hunDir));
 +  if (hunDir) {
 +      LoadDictionariesFromDir(hunDir);

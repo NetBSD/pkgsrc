@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.37 2017/02/12 07:36:27 ryoon Exp $
+# $NetBSD: options.mk,v 1.38 2017/03/07 20:45:43 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
 PKG_OPTIONS_REQUIRED_GROUPS=	gtk
 PKG_OPTIONS_GROUP.gtk=		gtk2 gtk3
-PKG_SUGGESTED_OPTIONS=		gtk2
+PKG_SUGGESTED_OPTIONS=		gtk3
 
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
 PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc webrtc
@@ -52,8 +52,6 @@ CONFIGURE_ARGS+=	--disable-alsa
 .if !empty(PKG_OPTIONS:Moss)
 CONFIGURE_ARGS+=	--with-oss
 .include "../../mk/oss.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-oss
 .endif
 
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
