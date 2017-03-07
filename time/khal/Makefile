@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/03/06 21:55:53 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/03/07 10:43:05 wiz Exp $
 
 DISTNAME=		khal-0.9.3
 CATEGORIES=		time net
@@ -24,6 +24,11 @@ DEPENDS+=		${PYPKGPREFIX}-vdirsyncer>=0.5.2:../../time/py-vdirsyncer
 DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 # not needed, but recommended, so let's just depend on it
 DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
+# for the man page, needs khal installed though, see
+# https://github.com/pimutils/khal/issues/598
+#USE_TOOLS+=		gmake
+#BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+#BUILD_DEPENDS+=		${PYPKGPREFIX}-sphinxcontrib-newsfeed-[0-9]*:../../textproc/py-sphinxcontrib-newsfeed
 # TEST_DEPENDS
 BUILD_DEPENDS+=		${PYPKGPREFIX}-freezegun-[0-9]*:../../devel/py-freezegun
 BUILD_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
@@ -33,6 +38,10 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27 # not supported as of 0.8.0
 INSTALLATION_DIRS=	share/doc/khal
 REPLACE_PYTHON+=	khal/*/*.py
 REPLACE_PYTHON+=	khal/*.py
+
+# man page generation, see above
+#post-build:
+#	cd ${WRKSRC}/doc && gmake SPHINXBUILD=sphinx-build${PYVERSSUFFIX} man
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/khal.conf.sample ${DESTDIR}${PREFIX}/share/doc/khal
