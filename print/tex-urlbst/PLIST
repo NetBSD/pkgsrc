@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/20 23:22:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/03/07 08:26:17 markd Exp $
+bin/urlbst
 share/texmf-dist/bibtex/bst/urlbst/abbrvurl.bst
 share/texmf-dist/bibtex/bst/urlbst/alphaurl.bst
 share/texmf-dist/bibtex/bst/urlbst/plainurl.bst
 share/texmf-dist/bibtex/bst/urlbst/unsrturl.bst
-share/texmf-dist/scripts/urlbst/urlbst
