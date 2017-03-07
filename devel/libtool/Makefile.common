@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.83 2017/03/06 16:14:07 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.84 2017/03/07 13:21:10 joerg Exp $
 # used by devel/libltdl/Makefile
 # used by devel/libtool-base/Makefile
 # used by devel/libtool-fortran/Makefile
@@ -76,4 +76,4 @@ CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
 CONFIGURE_ENV+=		lt_cv_path_NM=${NM:Q}
 .endif
 
-CONFIGURE_ENV+=		RANLIB=${RANLIB:Q}
+CONFIGURE_ENV+=		RANLIB=${RANLIB:Q} HELP2MAN=${TRUE:Q}
