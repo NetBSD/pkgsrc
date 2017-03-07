@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2017/02/24 23:31:24 wiz Exp $
+# $NetBSD: options.mk,v 1.28 2017/03/07 20:42:28 elric Exp $
 
 # Global and legacy options
 
@@ -8,10 +8,21 @@ PKG_OPTIONS_GROUP.display=	curses wide-curses slang
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 # TODO: add kyoto cabinet and lmdb backend options for header cache
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
+PKG_SUPPORTED_OPTIONS+=	gssapi
 PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
+PKG_SUGGESTED_OPTIONS+= gssapi
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 
 .include "../../mk/bsd.options.mk"
+
+###
+### GSSAPI
+###
+
+.if !empty(PKG_OPTIONS:Mgssapi)
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+= --with-gss=${KRB5BASE}
+.endif
 
 ### curses
 ###
