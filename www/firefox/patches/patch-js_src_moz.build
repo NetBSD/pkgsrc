@@ -1,8 +1,8 @@
-$NetBSD: patch-js_src_moz.build,v 1.1 2016/12/03 09:58:26 ryoon Exp $
+$NetBSD: patch-js_src_moz.build,v 1.2 2017/03/07 20:45:43 ryoon Exp $
 
---- js/src/moz.build.orig	2016-10-31 20:15:37.000000000 +0000
+--- js/src/moz.build.orig	2017-02-09 20:24:38.000000000 +0000
 +++ js/src/moz.build
-@@ -733,10 +733,6 @@ OS_LIBS += CONFIG['REALTIME_LIBS']
+@@ -735,10 +735,6 @@ OS_LIBS += CONFIG['REALTIME_LIBS']
  CFLAGS += CONFIG['MOZ_ICU_CFLAGS']
  CXXFLAGS += CONFIG['MOZ_ICU_CFLAGS']
  
@@ -11,5 +11,5 @@ $NetBSD: patch-js_src_moz.build,v 1.1 2016/12/03 09:58:26 ryoon Exp $
 -DIST_INSTALL = True
 -
  # Prepare self-hosted JS code for embedding
- GENERATED_FILES += ['selfhosted.out.h']
- selfhosted = GENERATED_FILES['selfhosted.out.h']
+ GENERATED_FILES += [('selfhosted.out.h', 'selfhosted.js')]
+ selfhosted = GENERATED_FILES[('selfhosted.out.h', 'selfhosted.js')]

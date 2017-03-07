@@ -1,8 +1,8 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.9 2017/01/25 13:24:51 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.10 2017/03/07 20:45:43 ryoon Exp $
 
 * Set pkgsrc directory structure
 
---- config/baseconfig.mk.orig	2016-10-31 20:15:27.000000000 +0000
+--- config/baseconfig.mk.orig	2016-09-19 16:19:29.000000000 +0000
 +++ config/baseconfig.mk
 @@ -2,10 +2,10 @@
  # directly in python/mozbuild/mozbuild/base.py for gmake validation.
