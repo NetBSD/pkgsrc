@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1025 2017/03/07 20:52:11 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1026 2017/03/07 20:53:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1248,3 +1248,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-requests-ftp version 0.3.1 [minskim 2017-03-07]
 	Updated www/firefox to 52.0 [ryoon 2017-03-07]
 	Updated www/firefox-l10n to 52.0 [ryoon 2017-03-07]
+	Updated devel/nss to 3.29.3 [ryoon 2017-03-07]
