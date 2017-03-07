@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2017/02/12 06:25:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2017/03/07 02:07:28 sevan Exp $
 
 DISTNAME=	mtr-0.87
 PKGREVISION=	2
@@ -22,10 +22,6 @@ SPECIAL_PERMS=	sbin/mtr ${SETUID_ROOT_PERMS}
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3.*)
 BUILDLINK_TRANSFORM+=	rm:-Wno-pointer-sign
-.endif
-
-.if !empty(MACHINE_PLATFORM:MDarwin-??.*-*)
-LIBS+=	-lresolv
 .endif
 
 do-install:
