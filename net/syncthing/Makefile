@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/02/08 21:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/03/08 15:46:52 wiz Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -13,7 +13,7 @@
 # Note that the android versioning is disconnected from syncthing versioning;
 # see https://github.com/syncthing/syncthing-android/issues/652 for
 # a fuller explanation.
-DISTNAME=	syncthing-0.14.23
+DISTNAME=	syncthing-0.14.24
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 
