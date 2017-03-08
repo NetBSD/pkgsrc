@@ -1,4 +1,4 @@
-$NetBSD: patch-evutil__rand.c,v 1.2 2017/02/15 17:34:37 adam Exp $
+$NetBSD: patch-evutil__rand.c,v 1.3 2017/03/08 13:37:55 jperkin Exp $
 
 Native illumos arc4random(3C) imported the latest OpenBSD API which
 does not have arc4random_addrandom().
@@ -9,7 +9,7 @@ does not have arc4random_addrandom().
  void
  evutil_secure_rng_add_bytes(const char *buf, size_t n)
  {
-+#if !(defined(_EVENT_HAVE_ARC4RANDOM) && defined(__sun))
++#if !(defined(EVENT__HAVE_ARC4RANDOM) && defined(__sun))
  	arc4random_addrandom((unsigned char*)buf,
  	    n>(size_t)INT_MAX ? INT_MAX : (int)n);
 +#endif
