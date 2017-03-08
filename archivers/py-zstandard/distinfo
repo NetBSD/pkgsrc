@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/08 14:54:26 wiz Exp $
+
+SHA1 (zstandard-0.7.0.tar.gz) = 36b19fe3b531cb8498869283278ff84bf0ef9a99
+RMD160 (zstandard-0.7.0.tar.gz) = a61b531afb7ffd8d143fa1a51044efe45b2b2427
+SHA512 (zstandard-0.7.0.tar.gz) = 016a8142a504757beb99b681386e7d8ea81b91a3a10b44894fa16443c21b567fce1101283e1967a2895e504045d84173b512fe7144a6a962ef64a509fcd83a4a
+Size (zstandard-0.7.0.tar.gz) = 427288 bytes
