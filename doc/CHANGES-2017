@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1030 2017/03/08 10:05:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1031 2017/03/08 11:46:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/calibre to 2.80.0 [wiz 2017-03-07]
 	Updated x11/xf86-video-openchrome to 0.6.0 [wiz 2017-03-08]
 	Updated mail/mutt to 1.8.0nb1 [wiz 2017-03-08]
+	Updated www/p5-libwww to 6.23 [wiz 2017-03-08]
