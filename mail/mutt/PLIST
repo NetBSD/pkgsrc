@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/02/25 14:29:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/03/08 10:05:34 wiz Exp $
 bin/flea
 bin/mutt
 bin/mutt_dotlock
@@ -13,8 +13,8 @@ man/man1/muttbug.1
 man/man1/pgpewrap.1
 man/man1/pgpring.1
 man/man1/smime_keys.1
+man/man5/mmdf.5
 man/man5/mutt-mbox.5
-man/man5/mutt-mmdf.5
 man/man5/muttrc.5
 share/doc/mutt/COPYRIGHT
 share/doc/mutt/ChangeLog
