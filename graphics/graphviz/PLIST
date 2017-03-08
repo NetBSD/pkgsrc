@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2014/05/06 09:33:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.48 2017/03/08 14:51:56 wiz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -75,7 +75,7 @@ ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
 ${PLIST.ghostscript}lib/graphviz/libgvplugin_gs.la
 lib/graphviz/libgvplugin_neato_layout.la
 ${PLIST.pangocairo}lib/graphviz/libgvplugin_pango.la
-${PLIST.rsvg}lib/graphviz/libgvplugin_rsvg.la
+${PLIST.svg}lib/graphviz/libgvplugin_rsvg.la
 ${PLIST.pangocairo}lib/graphviz/libgvplugin_xlib.la
 ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
 ${PLIST.ocaml}lib/graphviz/ocaml/META.gv
@@ -95,12 +95,12 @@ ${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot_builtin.la
 ${PLIST.tcl}lib/graphviz/tcl/libtclplan.la
-${PLIST.tcl}lib/graphviz/tcl/libtkspline.la
 ${PLIST.tcl}lib/graphviz/tcl/pkgIndex.tcl
 lib/libcdt.la
 lib/libcgraph.la
 lib/libgvc.la
 lib/libgvpr.la
+lib/liblab_gamut.la
 lib/libpathplan.la
 lib/libxdot.la
 ${PLIST.lua}lib/lua/gv.so
@@ -110,6 +110,7 @@ lib/pkgconfig/libcdt.pc
 lib/pkgconfig/libcgraph.pc
 lib/pkgconfig/libgvc.pc
 lib/pkgconfig/libgvpr.pc
+lib/pkgconfig/liblab_gamut.pc
 lib/pkgconfig/libpathplan.pc
 lib/pkgconfig/libxdot.pc
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libgdtclft.la
@@ -117,7 +118,6 @@ ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libgv_tcl.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtcldot.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtcldot_builtin.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtclplan.la
-${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/libtkspline.la
 ${PLIST.tcl}lib/tcl${TCL_BASEVER}/graphviz/pkgIndex.tcl
 man/man1/acyclic.1
 man/man1/bcomps.1
@@ -127,7 +127,7 @@ man/man1/cluster.1
 man/man1/diffimg.1
 man/man1/dijkstra.1
 man/man1/dot.1
-${PLIST.x11}man/man1/dotty.1
+man/man1/dotty.1
 man/man1/edgepaint.1
 man/man1/fdp.1
 man/man1/gc.1
@@ -142,8 +142,9 @@ man/man1/gvmap.sh.1
 man/man1/gvpack.1
 man/man1/gvpr.1
 man/man1/gxl2gv.1
-${PLIST.x11}man/man1/lefty.1
-${PLIST.x11}man/man1/lneato.1
+man/man1/lefty.1
+man/man1/lneato.1
+man/man1/mingle.1
 man/man1/mm2gv.1
 man/man1/neato.1
 man/man1/nop.1
@@ -152,6 +153,7 @@ man/man1/patchwork.1
 man/man1/prune.1
 man/man1/sccmap.1
 man/man1/sfdp.1
+man/man1/smyrna.1
 man/man1/tred.1
 man/man1/twopi.1
 man/man1/unflatten.1
@@ -167,10 +169,10 @@ ${PLIST.perl}man/man3/gv.3perl
 ${PLIST.tcl}man/man3/gv.3tcl
 man/man3/gvc.3
 man/man3/gvpr.3
+man/man3/lab_gamut.3
 man/man3/pack.3
 man/man3/pathplan.3
 ${PLIST.tcl}man/man3/tcldot.3tcl
-${PLIST.tcl}man/man3/tkspline.3tk
 man/man3/xdot.3
 man/man7/graphviz.7
 ${PLIST.tcl}share/graphviz/demo/doted.tcl
@@ -197,8 +199,6 @@ ${PLIST.tcl}share/graphviz/demo/pathplan_data/paths.dat
 ${PLIST.tcl}share/graphviz/demo/pathplan_data/rotor.dat
 ${PLIST.tcl}share/graphviz/demo/pathplan_data/u.dat
 ${PLIST.tcl}share/graphviz/demo/pathplan_data/unknown.dat
-${PLIST.tcl}share/graphviz/demo/spline.tcl
-${PLIST.tcl}share/graphviz/demo/spline.tcl.README
 share/graphviz/doc/AUTHORS
 share/graphviz/doc/COPYING
 share/graphviz/doc/ChangeLog
@@ -291,6 +291,7 @@ share/graphviz/doc/html/info/colors.html
 share/graphviz/doc/html/info/command.html
 share/graphviz/doc/html/info/component.gif
 share/graphviz/doc/html/info/constraint.gif
+share/graphviz/doc/html/info/cylinder.gif
 share/graphviz/doc/html/info/diamond.gif
 share/graphviz/doc/html/info/doublecircle.gif
 share/graphviz/doc/html/info/doubleoctagon.gif
@@ -355,6 +356,7 @@ share/graphviz/doc/html/info/output.html
 share/graphviz/doc/html/info/oval.gif
 share/graphviz/doc/html/info/parallelogram.gif
 share/graphviz/doc/html/info/pentagon.gif
+share/graphviz/doc/html/info/plain.gif
 share/graphviz/doc/html/info/plaintext.gif
 share/graphviz/doc/html/info/plugins.png
 share/graphviz/doc/html/info/point.gif
@@ -401,7 +403,7 @@ share/graphviz/doc/pdf/diffimg.1.pdf
 share/graphviz/doc/pdf/dijkstra.1.pdf
 share/graphviz/doc/pdf/dot.1.pdf
 share/graphviz/doc/pdf/dotguide.pdf
-${PLIST.x11}share/graphviz/doc/pdf/dotty.1.pdf
+share/graphviz/doc/pdf/dotty.1.pdf
 share/graphviz/doc/pdf/dottyguide.pdf
 share/graphviz/doc/pdf/edgepaint.1.pdf
 share/graphviz/doc/pdf/expr.3.pdf
@@ -426,10 +428,12 @@ share/graphviz/doc/pdf/gvpack.1.pdf
 share/graphviz/doc/pdf/gvpr.1.pdf
 share/graphviz/doc/pdf/gvpr.3.pdf
 share/graphviz/doc/pdf/gxl2gv.1.pdf
-${PLIST.x11}share/graphviz/doc/pdf/lefty.1.pdf
+share/graphviz/doc/pdf/lab_gamut.3.pdf
+share/graphviz/doc/pdf/lefty.1.pdf
 share/graphviz/doc/pdf/leftyguide.pdf
 share/graphviz/doc/pdf/libguide.pdf
-${PLIST.x11}share/graphviz/doc/pdf/lneato.1.pdf
+share/graphviz/doc/pdf/lneato.1.pdf
+share/graphviz/doc/pdf/mingle.1.pdf
 share/graphviz/doc/pdf/mm2gv.1.pdf
 share/graphviz/doc/pdf/neato.1.pdf
 share/graphviz/doc/pdf/neatoguide.pdf
@@ -442,8 +446,8 @@ share/graphviz/doc/pdf/prune.pdf
 share/graphviz/doc/pdf/sccmap.1.pdf
 share/graphviz/doc/pdf/sfdp.1.pdf
 share/graphviz/doc/pdf/smyrna.pdf
+share/graphviz/doc/pdf/smyrna.1.pdf
 ${PLIST.tcl}share/graphviz/doc/pdf/tcldot.3tcl.pdf
-${PLIST.tcl}share/graphviz/doc/pdf/tkspline.3tk.pdf
 share/graphviz/doc/pdf/tred.1.pdf
 share/graphviz/doc/pdf/twopi.1.pdf
 share/graphviz/doc/pdf/unflatten.1.pdf
@@ -509,13 +513,17 @@ share/graphviz/graphs/undirected/Heawood.gv
 share/graphviz/graphs/undirected/Petersen.gv
 share/graphviz/graphs/undirected/ngk10_4.gv
 share/graphviz/graphs/undirected/process.gv
+share/graphviz/gvpr/addedges
 share/graphviz/gvpr/addranks
 share/graphviz/gvpr/addrings
 share/graphviz/gvpr/anon
 share/graphviz/gvpr/attr
 share/graphviz/gvpr/bb
 share/graphviz/gvpr/bbox
+share/graphviz/gvpr/binduce
+share/graphviz/gvpr/bipart
 share/graphviz/gvpr/chkclusters
+share/graphviz/gvpr/chkedges
 share/graphviz/gvpr/cliptree
 share/graphviz/gvpr/col
 share/graphviz/gvpr/collapse
@@ -531,6 +539,7 @@ share/graphviz/gvpr/dijkstra
 share/graphviz/gvpr/flatten
 share/graphviz/gvpr/get-layers-list
 share/graphviz/gvpr/group
+share/graphviz/gvpr/histogram
 share/graphviz/gvpr/indent
 share/graphviz/gvpr/knbhd
 share/graphviz/gvpr/maxdeg
@@ -553,20 +562,3 @@ share/graphviz/lefty/fractal2.lefty
 share/graphviz/lefty/lefty.psp
 share/graphviz/lefty/slides.lefty
 share/graphviz/lefty/tree.lefty
-@pkgdir share/graphviz/smyrna
-@pkgdir share/graphviz/examples
-@pkgdir share/graphviz/demo/pathplan_data
-@pkgdir lib/graphviz/sharp
-@pkgdir lib/graphviz/ruby
-@pkgdir lib/graphviz/python25
-@pkgdir lib/graphviz/python24
-@pkgdir lib/graphviz/python23
-@pkgdir lib/graphviz/python
-@pkgdir lib/graphviz/php
-@pkgdir lib/graphviz/perl
-@pkgdir lib/graphviz/ocaml
-@pkgdir lib/graphviz/lua
-@pkgdir lib/graphviz/java
-@pkgdir lib/graphviz/io
-@pkgdir lib/graphviz/guile
-@pkgdir lib/graphviz/R
