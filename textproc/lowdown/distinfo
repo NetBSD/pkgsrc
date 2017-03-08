@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/08 15:05:02 wiz Exp $
+
+SHA1 (lowdown-0.1.9.tar.gz) = 4c001e7c6b093d0420e8d8cceed9c71aff4c606a
+RMD160 (lowdown-0.1.9.tar.gz) = 4c565eaea2835669db0508a2d2026f323fa5ee90
+SHA512 (lowdown-0.1.9.tar.gz) = f379c40c2e694a6793ae0d0e1575340c8644383d40eef6cccd5bf9042d13bff247729ac42ecce107a43f97041478cf2bb24104c2204459f98691afd074b6e212
+Size (lowdown-0.1.9.tar.gz) = 62622 bytes
