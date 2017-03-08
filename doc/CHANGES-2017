@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1034 2017/03/08 14:52:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1035 2017/03/08 14:54:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1257,3 +1257,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Moo to 2.003001 [wiz 2017-03-08]
 	Updated time/p5-DateTime-Locale to 1.14 [wiz 2017-03-08]
 	Updated graphics/graphviz to 2.40.1 [wiz 2017-03-08]
+	Added archivers/py-zstandard version 0.7.0 [wiz 2017-03-08]
