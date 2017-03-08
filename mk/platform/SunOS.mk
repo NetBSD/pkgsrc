@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.73 2016/10/27 10:31:06 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.74 2017/03/08 15:26:51 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -95,6 +95,11 @@ BUILDLINK_TRANSFORM+=	opt:-Wl,--rpath:-Wl,-R
 .if ${PKGSRC_COMPILER} == "clang"
 BUILDLINK_TRANSFORM+=	rm:-mimpure-text
 .endif
+
+# The native curses implementations are reasonably old and can cause lots of
+# issues with software which assumes newer interfaces, so it's easier to just
+# use pkgsrc curses at this point.
+_INCOMPAT_CURSES=	SunOS-*-*
 
 # Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
