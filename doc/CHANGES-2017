@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1037 2017/03/08 15:47:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1038 2017/03/08 22:39:32 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1260,3 +1260,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added archivers/py-zstandard version 0.7.0 [wiz 2017-03-08]
 	Added textproc/lowdown version 0.1.9 [wiz 2017-03-08]
 	Updated net/syncthing to 0.14.24 [wiz 2017-03-08]
+	Added security/ruby-rex-struct2 version 0.1.0 [minskim 2017-03-08]
