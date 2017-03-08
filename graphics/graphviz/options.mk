@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.22 2016/09/16 10:53:14 wiz Exp $
+# $NetBSD: options.mk,v 1.23 2017/03/08 14:51:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
-PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml pangocairo rsvg tcl x11 perl # guile does not build with guile20
+PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk lua ocaml pangocairo svg tcl x11 perl # guile does not build with guile20
 PKG_SUGGESTED_OPTIONS=	gd gtk lua pangocairo perl tcl x11
 # Explanation of consequence of options, to help those trying to slim down:
 #   guile ocaml lua tcl perl: extension language support
@@ -10,14 +10,14 @@ PKG_SUGGESTED_OPTIONS=	gd gtk lua pangocairo perl tcl x11
 #   pangocairo: basic ps/pdf support.
 #   gtk: basic graphic format support (in addition to gd, which isn't
 #     maintained anymore)
-#   rsvg: Omitting loses svg support. librsvg has large dependencies
+#   svg: Omitting loses svg support. librsvg has large dependencies
 #     including some GNOME libs.
 #   gd: basic graphic format support, especially gif
 #   ghostscript: provides better ps/pdf-support, plus eps
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gd ghostscript gtk guile lua ocaml pangocairo perl rsvg tcl x11
+PLIST_VARS+=		gd ghostscript gtk guile lua ocaml pangocairo perl svg tcl x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../mk/xaw.buildlink3.mk"
@@ -45,9 +45,9 @@ CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-gnomeui
 .    endif
 
-.    if !empty(PKG_OPTIONS:Mrsvg)
+.    if !empty(PKG_OPTIONS:Msvg)
 .    include "../../graphics/librsvg/buildlink3.mk"
-PLIST.rsvg=		yes
+PLIST.svg=		yes
 .    else
 CONFIGURE_ARGS+=	--without-rsvg
 .    endif
@@ -68,8 +68,8 @@ CONFIGURE_ARGS+=	--without-gdk-pixbuf
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-gnomeui
 
-.    if !empty(PKG_OPTIONS:Mrsvg)
-PKG_FAIL_REASON+=	"option rsvg needs option pangocairo"
+.    if !empty(PKG_OPTIONS:Msvg)
+PKG_FAIL_REASON+=	"option svg needs option pangocairo"
 .    endif
 CONFIGURE_ARGS+=	--without-rsvg
 .  endif
@@ -95,8 +95,8 @@ CONFIGURE_ARGS+=	--without-gdk-pixbuf
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--without-gnomeui
 
-.  if !empty(PKG_OPTIONS:Mrsvg)
-PKG_FAIL_REASON+=	"option rsvg needs option pangocairo and x11"
+.  if !empty(PKG_OPTIONS:Msvg)
+PKG_FAIL_REASON+=	"option svg needs option pangocairo and x11"
 .  endif
 CONFIGURE_ARGS+=	--without-rsvg
 .endif

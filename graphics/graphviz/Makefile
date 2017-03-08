@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.164 2017/02/28 15:20:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.165 2017/03/08 14:51:56 wiz Exp $
 
-DISTNAME=	graphviz-2.38.0
-PKGREVISION=	20
+DISTNAME=	graphviz-2.40.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
@@ -33,11 +32,12 @@ CONFIGURE_ENV+=		ac_cv_prog_RUBY=
 CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
 PKGCONFIG_OVERRIDE+=	lib/cdt/libcdt.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cgraph/libcgraph.pc.in
+PKGCONFIG_OVERRIDE+=	lib/edgepaint/liblab_gamut.pc.in
 PKGCONFIG_OVERRIDE+=	lib/expr/libexpr.pc.in
-PKGCONFIG_OVERRIDE+=	lib/graph/libgraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/gvc/libgvc.pc.in
 PKGCONFIG_OVERRIDE+=	lib/gvpr/libgvpr.pc.in
 PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
+PKGCONFIG_OVERRIDE+=	lib/sfdpgen/libsfdp.pc.in
 PKGCONFIG_OVERRIDE+=	lib/xdot/libxdot.pc.in
 XAW_TYPE=		standard
 
