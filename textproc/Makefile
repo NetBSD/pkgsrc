@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.910 2017/03/07 10:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.911 2017/03/08 15:05:14 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -363,6 +363,7 @@ SUBDIR+=	libyaml
 SUBDIR+=	link-grammar
 SUBDIR+=	lit2epub
 SUBDIR+=	lout
+SUBDIR+=	lowdown
 SUBDIR+=	lq-sp
 SUBDIR+=	lua-cjson
 SUBDIR+=	lua-expat
