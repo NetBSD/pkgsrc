@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1028 2017/03/07 22:47:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1029 2017/03/08 09:13:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1251,3 +1251,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/nss to 3.29.3 [ryoon 2017-03-07]
 	Updated net/youtube-dl to 20170307 [leot 2017-03-07]
 	Updated misc/calibre to 2.80.0 [wiz 2017-03-07]
+	Updated x11/xf86-video-openchrome to 0.6.0 [wiz 2017-03-08]
