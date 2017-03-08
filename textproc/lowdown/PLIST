@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/08 15:05:02 wiz Exp $
+bin/lowdown
+include/lowdown.h
+lib/liblowdown.a
+man/man1/lowdown.1
+man/man3/lowdown.3
