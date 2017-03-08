@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1031 2017/03/08 11:46:23 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1032 2017/03/08 11:48:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1254,3 +1254,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xf86-video-openchrome to 0.6.0 [wiz 2017-03-08]
 	Updated mail/mutt to 1.8.0nb1 [wiz 2017-03-08]
 	Updated www/p5-libwww to 6.23 [wiz 2017-03-08]
+	Updated devel/p5-Moo to 2.003001 [wiz 2017-03-08]
