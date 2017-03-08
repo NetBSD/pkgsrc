@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2017/02/16 16:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2017/03/08 16:09:15 jperkin Exp $
 
 DISTNAME=	dbus-1.10.16
 CATEGORIES=	sysutils
@@ -55,6 +55,11 @@ CONFIGURE_ARGS+=	--enable-static
 
 CONFIGURE_ARGS+=	--with-dbus-user=${DBUS_USER}
 CONFIGURE_ARGS+=	--with-test-socket-dir=${WRKDIR:Q}
+
+SUBST_CLASSES+=		docbook
+SUBST_STAGE.docbook=	pre-configure
+SUBST_FILES.docbook=	doc/*.xml*
+SUBST_SED.docbook=	-e 's,http://www.oasis-open.org/docbook/xml,${PREFIX}/share/xml/docbook,g'
 
 PTHREAD_AUTO_VARS=	yes
 
