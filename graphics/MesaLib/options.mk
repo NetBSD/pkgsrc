@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.52 2017/03/02 06:00:03 maya Exp $
+# $NetBSD: options.mk,v 1.53 2017/03/09 09:51:04 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -7,7 +7,8 @@ PKG_SUGGESTED_OPTIONS=
 # The LLVM option enables JIT accelerated software rendering and
 # is also required to support the latest RADEON GPUs, so enable it
 # by default on platforms where such GPUs might be encountered.
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
+	${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
