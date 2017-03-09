@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2017/03/09 03:01:54 maya Exp $
+# $NetBSD: Makefile,v 1.46 2017/03/09 03:59:17 maya Exp $
 
 DISTNAME=	tcpdump-4.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcpdump.org/release/
 
