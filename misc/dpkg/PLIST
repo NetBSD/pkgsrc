@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/02/05 18:46:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/03/09 11:52:26 wiz Exp $
 bin/dpkg
 bin/dpkg-architecture
 bin/dpkg-buildflags
@@ -214,6 +214,7 @@ man/de/man5/deb822.5
 man/de/man5/dpkg.cfg.5
 man/de/man5/dsc.5
 man/de/man5/dselect.cfg.5
+man/de/man8/start-stop-daemon.8
 man/es/man1/dpkg-distaddfile.1
 man/es/man1/dpkg-divert.1
 man/es/man1/dpkg-gencontrol.1
@@ -227,6 +228,7 @@ man/es/man5/deb-extra-override.5
 man/es/man5/deb-old.5
 man/es/man5/deb-override.5
 man/es/man5/deb-split.5
+man/es/man8/start-stop-daemon.8
 man/fr/man1/dpkg-architecture.1
 man/fr/man1/dpkg-distaddfile.1
 man/fr/man1/dpkg-divert.1
@@ -247,6 +249,7 @@ man/fr/man5/deb-extra-override.5
 man/fr/man5/deb-old.5
 man/fr/man5/deb-override.5
 man/fr/man5/deb-split.5
+man/fr/man8/start-stop-daemon.8
 man/it/man1/dpkg-architecture.1
 man/it/man1/dpkg-distaddfile.1
 man/it/man1/dpkg-maintscript-helper.1
@@ -261,6 +264,7 @@ man/it/man5/deb-extra-override.5
 man/it/man5/deb-old.5
 man/it/man5/deb-override.5
 man/it/man5/deb-split.5
+man/it/man8/start-stop-daemon.8
 man/ja/man1/dpkg-distaddfile.1
 man/ja/man1/dpkg-divert.1
 man/ja/man1/dpkg-gencontrol.1
@@ -274,6 +278,7 @@ man/ja/man5/deb-extra-override.5
 man/ja/man5/deb-old.5
 man/ja/man5/deb-override.5
 man/ja/man5/deb-split.5
+man/ja/man8/start-stop-daemon.8
 man/man1/dpkg-architecture.1
 man/man1/dpkg-buildflags.1
 man/man1/dpkg-buildpackage.1
@@ -369,6 +374,7 @@ man/man5/deb822.5
 man/man5/dpkg.cfg.5
 man/man5/dsc.5
 man/man5/dselect.cfg.5
+man/man8/start-stop-daemon.8
 man/nl/man1/dpkg-architecture.1
 man/nl/man1/dpkg-buildflags.1
 man/nl/man1/dpkg-buildpackage.1
@@ -422,6 +428,7 @@ man/nl/man5/deb822.5
 man/nl/man5/dpkg.cfg.5
 man/nl/man5/dsc.5
 man/nl/man5/dselect.cfg.5
+man/nl/man8/start-stop-daemon.8
 man/pl/man1/dpkg-distaddfile.1
 man/pl/man1/dpkg-divert.1
 man/pl/man1/dpkg-gencontrol.1
@@ -435,6 +442,7 @@ man/pl/man5/deb-extra-override.5
 man/pl/man5/deb-old.5
 man/pl/man5/deb-override.5
 man/pl/man5/deb-split.5
+man/pl/man8/start-stop-daemon.8
 man/sv/man1/dpkg-architecture.1
 man/sv/man1/dpkg-distaddfile.1
 man/sv/man1/dpkg-divert.1
@@ -455,6 +463,8 @@ man/sv/man5/deb-extra-override.5
 man/sv/man5/deb-old.5
 man/sv/man5/deb-override.5
 man/sv/man5/deb-split.5
+man/sv/man8/start-stop-daemon.8
+sbin/start-stop-daemon
 share/dpkg/abitable
 share/dpkg/alternatives/README
 share/dpkg/architecture.mk
