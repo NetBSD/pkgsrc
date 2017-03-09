@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/04/03 18:04:56 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/09 23:47:47 manu Exp $
 #
 
 PKGNAME=	nagios-plugin-dumpdates-${DISTNAME:C/.*-//}
-DISTNAME=	check_dumpdates-0.2
+DISTNAME=	check_dumpdates-0.3
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
