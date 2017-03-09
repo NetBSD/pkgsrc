@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1043 2017/03/09 13:54:43 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1044 2017/03/09 16:32:04 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1269,3 +1269,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/powerdns-recursor to 4.0.4 [fhajny 2017-03-09]
 	Added net/powerdns-geoip version 4.0.3 [fhajny 2017-03-09]
 	Added net/powerdns-odbc version 4.0.3 [fhajny 2017-03-09]
+	Updated filesystems/squashfs to 4.3nb2 [kamil 2017-03-09]
