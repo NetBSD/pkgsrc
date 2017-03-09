@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2017/02/22 19:05:44 maya Exp $
+# $NetBSD: Makefile,v 1.45 2017/03/09 03:01:54 maya Exp $
 
 DISTNAME=	tcpdump-4.9.0
 PKGREVISION=	1
@@ -14,8 +14,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS.Darwin+=	--disable-universal
 
 BUILD_DEFS+=		VARBASE
-PKG_USERS=		_tcpdump
 OWN_DIRS=		${VARBASE}/tcpdump
+PKG_GROUPS=		_tcpdump
+PKG_USERS=		_tcpdump:_tcpdump
 
 # drop privileges when running
 CONFIGURE_ARGS+=	--with-user=_tcpdump
