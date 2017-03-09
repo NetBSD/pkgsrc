@@ -1,21 +1,10 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 00:35:28 agc Exp $
+$NetBSD: distinfo,v 1.16 2017/03/09 13:43:49 fhajny Exp $
 
-SHA1 (pdns-recursor-3.7.3.tar.bz2) = a09d960852ba67c1618dfa9258158a1145f657c1
-RMD160 (pdns-recursor-3.7.3.tar.bz2) = c73738ea571b8ce4ef4c01ee02c971c990d03f42
-SHA512 (pdns-recursor-3.7.3.tar.bz2) = 35b95130e46d04c91adc3c4676a6e5546ac25d21ec576734162764732993d876d34f0e8124b7b6934c8354c0d042ffa5ec30f138b83a9aeaafcefa3808adcf23
-Size (pdns-recursor-3.7.3.tar.bz2) = 245192 bytes
-SHA1 (patch-Makefile.in) = 4aa3fc487afab1795532cc6a09975fa6580625fe
+SHA1 (pdns-recursor-4.0.4.tar.bz2) = e3d2f18e0ea929e425bc9da4256f76331797f691
+RMD160 (pdns-recursor-4.0.4.tar.bz2) = 12b1b7239156d9b898199c02a1edd6875301a7b1
+SHA512 (pdns-recursor-4.0.4.tar.bz2) = 9473dfe9abc509b2bb953139dd7892de2027ee1508902fa0c2cd30dd9a88878fcf44370b8372d573cbab12de32bb8c604005d3b39ea34db2ef86786e689d36ab
+Size (pdns-recursor-4.0.4.tar.bz2) = 1050596 bytes
 SHA1 (patch-dns.hh) = 7e9c1b10a066a605b74ebdbee2d894aed50f6c68
-SHA1 (patch-dnsparser.cc) = acd60fbeaa5ad3aa09db306eeaddb1071bbedfb7
-SHA1 (patch-dnsparser.hh) = 289e271629969a50b41e805ae9f092ce75a1483f
-SHA1 (patch-iputils.hh) = 01134b045189653046036d7cb081a2f4d1ed27e4
-SHA1 (patch-kqueuemplexer.cc) = 1e3923aec5f81400eaedffa07c50762da7bdd5c8
-SHA1 (patch-namespaces.hh) = b7abe73b649569819fb070e10d3c926c95589bfb
-SHA1 (patch-pdns__recursor.1) = de3c561e770558850a9f1bdf13f60570d90a5643
-SHA1 (patch-pdns__recursor.cc) = b1d6ba1d1abfbd2759431caffc113bca22513abd
-SHA1 (patch-rec__channel.cc) = dee9fba4bbe240ca2070cdf8a8f303bb2e3bce61
-SHA1 (patch-rec__channel__rec.cc) = b0b277167fff8a080528f6a5cc75a81658f7c66f
-SHA1 (patch-rec__control.1) = 6a38b768cf5ab6f91fcf6eb7e4d5f0c62824f723
-SHA1 (patch-recursor__cache.cc) = c2f86bd695ed01ae6b415a61a099696c87f78d63
-SHA1 (patch-reczones.cc) = f187de66d755a8e134804282ceb7723aa9bd392e
-SHA1 (patch-sysdeps_SunOS.inc) = e2087d1469437c88266bc30566cf9d7415e7af69
+SHA1 (patch-iputils.hh) = aaf3b913fbe26f5daa9c2b16ff24cc9a7a1d7de0
+SHA1 (patch-kqueuemplexer.cc) = 87b3b6670393ee60fc96cf91c5acf575adfd06c0
+SHA1 (patch-qtype.hh) = f14eb9ad7efc7dd4a0ce220c1f93044ef69e99c2
