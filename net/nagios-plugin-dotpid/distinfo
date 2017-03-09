@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/03/09 18:39:15 maya Exp $
+$NetBSD: distinfo,v 1.6 2017/03/09 23:47:47 manu Exp $
 
-SHA1 (check_dotpid-0.4.tgz) = c75715fc43c9bc11070f9c60fec13845dc4747ac
-RMD160 (check_dotpid-0.4.tgz) = 5daa58b9d4bae6cf59010bb652e5441a58cea52e
-SHA512 (check_dotpid-0.4.tgz) = 8a1816a0a5934ee80a035924a2dc0c5b374102b37bec14087b271e01c505c9149037c74590e86ac6b46d88b8be5b922a42e8958ebd28e2a0ac8dbcc6d73910c8
-Size (check_dotpid-0.4.tgz) = 2258 bytes
-SHA1 (patch-check__dotpid.c) = 5c667d01a206b19d3af1018cbdeb8c61b56bbfd7
+SHA1 (check_dotpid-0.5.tgz) = 3be1b20e41e10483dee09f664926aab4eee89afe
+RMD160 (check_dotpid-0.5.tgz) = 56b9f3342d8a7d9b27fb87919066a3cc66c9d19b
+SHA512 (check_dotpid-0.5.tgz) = ec6a07f6fb73e416a6483405c1919e697a4b1ff84a5a4ef0a8ca064a5c03c4e401d3c6dc78aee0a3c9c56a465a4a34011f882220499a0a3a8aba963682a21a52
+Size (check_dotpid-0.5.tgz) = 2272 bytes

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/09/14 13:46:25 manu Exp $
+# $NetBSD: Makefile,v 1.5 2017/03/09 23:47:47 manu Exp $
 #
 
 PKGNAME=	nagios-plugin-dotpid-${DISTNAME:C/.*-//}
-DISTNAME=	check_dotpid-0.4
+DISTNAME=	check_dotpid-0.5
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
