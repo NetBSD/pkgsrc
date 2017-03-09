@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/01/05 11:54:32 adam Exp $
+$NetBSD: distinfo,v 1.8 2017/03/09 12:45:56 jperkin Exp $
 
 SHA1 (llvm-3.9.1.src.tar.xz) = ce801cf456b8dacd565ce8df8288b4d90e7317ff
 RMD160 (llvm-3.9.1.src.tar.xz) = b0a3c68cfec83a2b4dad6922316b71c0dc25c40a
@@ -10,5 +10,6 @@ SHA1 (patch-cmake_modules_CMakeLists.txt) = bf31e9d3914e2041a7d435390b63ad67282b
 SHA1 (patch-cmake_modules_HandleLLVMOptions.cmake) = 271e6f5a8cebf8162c4e3b758e96f451b434269b
 SHA1 (patch-cmake_modules_TableGen.cmake) = d548208577f45fbb6c8f7b43548c399cc63c7887
 SHA1 (patch-include_llvm_Support_Host.h) = ad6ac520f15bba96ab887c962fb717e22aaee7bf
+SHA1 (patch-lib_Support_Unix_Program.inc) = 49f09e05858243ca57f14b1fdb2fec49c935dfeb
 SHA1 (patch-tools_llvm-config_llvm-config.cpp) = 44835bfcd2bddc16e0b93628fafb627889091f85
-SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 8f538db138219c2a3ce394b7a3c21f277d5544dd
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 8faddae24e937ce0b60a7b6a69370c56b9ff7fe3

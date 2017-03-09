@@ -1,10 +1,10 @@
-$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.1 2016/03/08 21:06:50 tnn Exp $
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.2 2017/03/09 12:45:56 jperkin Exp $
 
-Use the Linux style linking everywhere except Darwin.
+Use the Linux style linking everywhere except Darwin and SunOS.
 
---- ./tools/llvm-shlib/CMakeLists.txt.orig	2015-11-04 23:11:12.000000000 +0000
-+++ ./tools/llvm-shlib/CMakeLists.txt
-@@ -41,11 +41,10 @@ endif()
+--- tools/llvm-shlib/CMakeLists.txt.orig	2016-05-26 04:35:35.000000000 +0000
++++ tools/llvm-shlib/CMakeLists.txt
+@@ -39,11 +39,12 @@ endif()
  add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${SOURCES})
  
  list(REMOVE_DUPLICATES LIB_NAMES)
@@ -14,6 +14,8 @@ Use the Linux style linking everywhere except Darwin.
 -elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
 +if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
    set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
++elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "SunOS")
++  set(LIB_NAMES -Wl,-Bsymbolic -Wl,-z -Wl,allextract ${LIB_NAMES} -Wl,-z -Wl,defaultextract)
 +else()
 +  set(LIB_NAMES -Wl,--whole-archive ${LIB_NAMES} -Wl,--no-whole-archive)
  endif()
