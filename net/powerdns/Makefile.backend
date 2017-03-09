@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.backend,v 1.5 2017/03/09 13:50:07 fhajny Exp $
+# $NetBSD: Makefile.backend,v 1.6 2017/03/09 13:52:34 fhajny Exp $
 # used by net/powerdns-geoip/Makefile
 # used by net/powerdns-ldap/Makefile
 # used by net/powerdns-mysql/Makefile
+# used by net/powerdns-odbc/Makefile
 # used by net/powerdns-pgsql/Makefile
 
 .include "../../net/powerdns/Makefile.common"
