@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2016/05/19 22:12:09 joerg Exp $
+# $NetBSD: options.mk,v 1.5 2017/03/09 13:32:54 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powerdns
-PKG_SUPPORTED_OPTIONS=	bind botan cryptopp pipe random remote sqlite tools
-PKG_SUPPORTED_OPTIONS+=	zeromq
+PKG_SUPPORTED_OPTIONS=	bind botan pipe random remote sqlite tools zeromq
 PKG_SUGGESTED_OPTIONS=	bind pipe random
 
 .include "../../mk/bsd.options.mk"
@@ -18,17 +17,6 @@ PLIST.bind=		yes
 CONFIGURE_ARGS+=	--enable-botan1.10
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/botan/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mcryptopp)
-.include "../../security/crypto++/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-cryptopp=yes
-CRYPTOPP_CFLAGS=	-I${BUILDLINK_PREFIX.cryptopp}/include
-CRYPTOPP_LIBS=		-L${BUILDLINK_PREFIX.cryptopp}/lib -Wl,-R${BUILDLINK_PREFIX.cryptopp}/lib -lcryptopp
-CONFIGURE_ENV+=		CRYPTOPP_CFLAGS=${CRYPTOPP_CFLAGS:Q}
-CONFIGURE_ENV+=		CRYPTOPP_LIBS=${CRYPTOPP_LIBS:Q}
-.else
-CONFIGURE_ARGS+=	--enable-cryptopp=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mpipe)
@@ -58,8 +46,12 @@ PLIST.tools=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mzeromq)
-.include "../../net/zeromq/buildlink3.mk"
+.  if empty(PKG_OPTIONS:Mremote)
+PKG_FAIL_REASON+=	"The 'zeromq' option requires the 'remote' option enabled."
+.  else
 CONFIGURE_ARGS+=	--enable-remotebackend-zeromq=yes
+.include "../../net/zeromq/buildlink3.mk"
+.  endif
 .else
 CONFIGURE_ARGS+=	--enable-remotebackend-zeromq=no
 .endif
