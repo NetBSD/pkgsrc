@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/02/09 18:16:07 scole Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/09 16:31:50 kamil Exp $
 
 VERSION=        4.3
 DISTNAME=       squashfs${VERSION}
 PKGNAME=        squashfs-${VERSION}
 
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=     filesystems
 MASTER_SITES=   http://downloads.sourceforge.net/project/squashfs/squashfs/${DISTNAME}/
 
@@ -29,9 +29,7 @@ SQUASH_DIR=	${WRKDIR}/${DISTNAME}
 WRKSRC=		${SQUASH_DIR}/squashfs-tools
 SQUASH_PKG_DOC=	${DESTDIR}${PREFIX}/share/doc/squashfs
 
-do-build:
-	cd ${WRKSRC} && env EXTRA_LDFLAGS="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib" \
-		${GMAKE} ${BUILD_MAKE_FLAGS}
+MAKE_ENV+=	EXTRA_LDFLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mksquashfs ${DESTDIR}${PREFIX}/bin
@@ -47,4 +45,7 @@ do-install:
 	${INSTALL_DATA}	${SQUASH_DIR}/OLD-READMEs/*      ${SQUASH_PKG_DOC}/OLD-READMEs/
 	${INSTALL_DATA}	${SQUASH_DIR}/pseudo-file.example ${DESTDIR}${PREFIX}/share/examples/squashfs/
 
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
