@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/10/01 03:37:15 manu Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/09 23:47:47 manu Exp $
 #
 
 PKGNAME=	nagios-plugin-milter-${DISTNAME:C/.*-//}
-DISTNAME=	check_milter-0.1
+DISTNAME=	check_milter-0.2
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.espci.fr/pub/nagios-local/
 EXTRACT_SUFX=	.tgz
