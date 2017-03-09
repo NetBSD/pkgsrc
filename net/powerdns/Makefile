@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.22 2017/01/01 16:06:33 adam Exp $
+# $NetBSD: Makefile,v 1.23 2017/03/09 13:32:54 fhajny Exp $
 
 .include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/pdns/powerdns/}
-PKGREVISION=		4
 COMMENT=		Modern, advanced and high performance nameserver
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-modules="geo"
-CONFIGURE_ARGS+=	--with-dynmodules="${PDNS_MODULES}"
+CONFIGURE_ARGS+=	--with-dynmodules=no
+CONFIGURE_ARGS+=	--with-modules="${PDNS_MODULES}"
 
 RCD_SCRIPTS=		pdns
 SMF_NAME=		pdns
 
 EGDIR=			${PREFIX}/share/examples/pdns
-MAKE_ENV+=		EGDIR=${EGDIR}
 
 CONF_FILES+=		${EGDIR}/pdns.conf-dist ${PKG_SYSCONFDIR}/pdns.conf
 
@@ -26,5 +24,9 @@ SUBST_SED.conf=		-e 's,@PREFIX@,${PREFIX},'
 SUBST_SED.conf+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
 
 LDFLAGS.SunOS+=		-lsocket -lnsl
+
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+CHECK_WRKREF_SKIP+=	sbin/pdns_server
 
 .include "../../mk/bsd.pkg.mk"
