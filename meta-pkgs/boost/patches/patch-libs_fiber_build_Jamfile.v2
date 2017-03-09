@@ -1,0 +1,14 @@
+$NetBSD: patch-libs_fiber_build_Jamfile.v2,v 1.1 2017/03/09 16:30:12 jperkin Exp $
+
+Build with -fvisibility=hidden on SunOS.
+
+--- libs/fiber/build/Jamfile.v2.orig	2017-03-09 15:52:54.326169384 +0000
++++ libs/fiber/build/Jamfile.v2
+@@ -18,6 +18,7 @@ project boost/fiber
+       <toolset>gcc,<segmented-stacks>on:<cxxflags>-DBOOST_USE_SEGMENTED_STACKS
+       <toolset>clang,<segmented-stacks>on:<cxxflags>-fsplit-stack
+       <toolset>clang,<segmented-stacks>on:<cxxflags>-DBOOST_USE_SEGMENTED_STACKS
++      <target-os>solaris:<cxxflags>-fvisibility=hidden
+       <link>shared:<define>BOOST_FIBERS_DYN_LINK=1
+       <define>BOOST_FIBERS_SOURCE
+       <threading>multi
