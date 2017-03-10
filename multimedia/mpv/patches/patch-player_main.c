@@ -1,11 +1,11 @@
-$NetBSD: patch-player_main.c,v 1.1 2016/11/03 14:41:28 leot Exp $
+$NetBSD: patch-player_main.c,v 1.2 2017/03/10 15:55:33 nat Exp $
 
 Avoid to check mismatched built vs running libraries version.
 The use in pkgsrc can be considered a legitimate one.
 
---- player/main.c.orig	2016-10-19 21:10:13.000000000 +0000
+--- player/main.c.orig	2017-02-12 01:31:16.000000000 +0000
 +++ player/main.c
-@@ -429,18 +429,6 @@ int mp_initialize(struct MPContext *mpct
+@@ -438,18 +438,6 @@ int mp_initialize(struct MPContext *mpct
  
      handle_deprecated_options(mpctx);
  
