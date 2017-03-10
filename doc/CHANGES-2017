@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1045 2017/03/09 23:47:47 manu Exp $
+$NetBSD: CHANGES-2017,v 1.1046 2017/03/10 03:13:35 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/nagios-plugin-dumpdates to 0.3 [manu 2017-03-10]
 	Updated net/nagios-plugin-milter to 0.2 [manu 2017-03-10]
 	Updated net/nagios-plugin-syncrepl to 0.2 [manu 2017-03-10]
+	Updated mail/qmail to 1.03nb21 [schmonz 2017-03-10]
