@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/10 08:30:51 nils Exp $
+bin/dehydrated
+share/doc/dehydrated/CHANGELOG
+share/doc/dehydrated/LICENSE
+share/doc/dehydrated/README.md
+share/doc/dehydrated/dns-verification.md
+share/doc/dehydrated/domains_txt.md
+share/doc/dehydrated/ecc.md
+share/doc/dehydrated/hook_chain.md
+share/doc/dehydrated/import-from-official-client.md
+share/doc/dehydrated/per-certificate-config.md
+share/doc/dehydrated/staging.md
+share/doc/dehydrated/troubleshooting.md
+share/doc/dehydrated/wellknown.md
+share/examples/dehydrated/config
+share/examples/dehydrated/domains.txt
+share/examples/dehydrated/hook.sh
+@pkgdir etc/dehydrated
