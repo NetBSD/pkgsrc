@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.76 2016/04/10 16:39:28 joerg Exp $
+# $NetBSD: Makefile,v 1.77 2017/03/10 03:13:29 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		20
+PKGREVISION=		21
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -110,7 +110,7 @@ SUBST_SED.paths+=	-e 's,@GREP@,${GREP:Q},g'
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
-USERGROUP_PHASE=	configure
+USERGROUP_PHASE=	pre-install
 PKG_GROUPS=		qmail nofiles
 PKG_USERS+=		alias:nofiles
 PKG_USERS+=		qmaill:nofiles qmaild:nofiles qmailp:nofiles

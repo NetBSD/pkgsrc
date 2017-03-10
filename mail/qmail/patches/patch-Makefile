@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.2 2014/05/30 21:35:04 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.3 2017/03/10 03:13:29 schmonz Exp $
 
 DESTDIR support.
 
@@ -19,3 +19,21 @@ DESTDIR support.
  addresses.0: \
  addresses.5
  	nroff -man addresses.5 > addresses.0
+@@ -110,7 +118,7 @@ auto_split.o: \
+ compile auto_split.c
+ 	./compile auto_split.c
+ 
+-auto_uids.c: \
++auto_uids_orig.c: \
+ auto-uid auto-gid conf-users conf-groups
+ 	( ./auto-uid auto_uida `head -1 conf-users` \
+ 	&&./auto-uid auto_uidd `head -2 conf-users | tail -1` \
+@@ -122,7 +130,7 @@ auto-uid auto-gid conf-users conf-groups
+ 	&&./auto-uid auto_uids `head -8 conf-users | tail -1` \
+ 	&&./auto-gid auto_gidq `head -1 conf-groups` \
+ 	&&./auto-gid auto_gidn `head -2 conf-groups | tail -1` \
+-	) > auto_uids.c.tmp && mv auto_uids.c.tmp auto_uids.c
++	) > auto_uids_orig.c.tmp && mv auto_uids_orig.c.tmp auto_uids_orig.c
+ 
+ auto_uids.o: \
+ compile auto_uids.c
