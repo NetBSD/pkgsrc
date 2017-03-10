@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.31 2017/02/12 22:02:28 leot Exp $
+$NetBSD: distinfo,v 1.32 2017/03/10 15:55:33 nat Exp $
 
 SHA1 (mpv-0.24.0.tar.gz) = ade12ce6a626fdba5cbdb41444805f1ed3dfcb36
 RMD160 (mpv-0.24.0.tar.gz) = 436b62cfd50594e5dd3782cc9eae8f9bf9364501
 SHA512 (mpv-0.24.0.tar.gz) = c1d988ccf9e22765822b9ce75c04f155df4fc4bd4c2aa164903eee8947c36f659116c2ab96668a4af31c4f5aeecbf20ce21191c48456d74e138db617a1e34d96
 Size (mpv-0.24.0.tar.gz) = 2835920 bytes
-SHA1 (patch-player_main.c) = fefba566f5130d24b748b7ab4ecc48bf42bc6bdd
+SHA1 (patch-player_main.c) = 842432e448526a9d170e7efd2b01276e36072e16
+SHA1 (patch-waftools_checks_custom.py) = 4bfc74fa6b2c80bef3f540ad8287eb26cb39c6ad
