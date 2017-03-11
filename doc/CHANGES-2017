@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1056 2017/03/11 09:52:23 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1057 2017/03/11 10:05:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1285,3 +1285,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/oracle-jre8 to 8.0.121 [ryoon 2017-03-11]
 	Updated lang/oracle-jdk8 to 8.0.121 [ryoon 2017-03-11]
 	Updated math/R to 3.3.3 [wen 2017-03-11]
+	Updated www/p5-Dancer2 to 0.205000 [wen 2017-03-11]
