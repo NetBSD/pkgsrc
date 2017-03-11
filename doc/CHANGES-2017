@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1052 2017/03/11 03:30:04 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1053 2017/03/11 03:36:31 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1281,3 +1281,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/pidgin-sametime to 2.11.0nb1 [khorben 2017-03-11]
 	Updated chat/pidgin-silc to 2.11.0nb1 [khorben 2017-03-11]
 	Updated chat/finch to 2.11.0nb2 [khorben 2017-03-11]
+	Updated net/mikutter to 3.5.4 [tsutsui 2017-03-11]
