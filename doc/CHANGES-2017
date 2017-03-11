@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1049 2017/03/11 03:05:30 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1050 2017/03/11 03:08:03 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1278,3 +1278,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/dehydrated version 0.4.0 [nils 2017-03-10]
 	Updated chat/libpurple to 2.11.0nb7 [khorben 2017-03-11]
 	Updated chat/pidgin to 2.11.0nb3 [khorben 2017-03-11]
+	Updated chat/pidgin-sametime to 2.11.0nb1 [khorben 2017-03-11]
