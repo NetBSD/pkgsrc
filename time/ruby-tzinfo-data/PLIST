@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/05 16:20:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/03/11 15:12:34 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -190,6 +190,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Port_of_Spain.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Porto_Acre.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Porto_Velho.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Puerto_Rico.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Punta_Arenas.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Rainy_River.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Rankin_Inlet.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/America/Recife.rb
