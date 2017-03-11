@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2017/01/28 12:26:57 wen Exp $
+# $NetBSD: Makefile,v 1.42 2017/03/11 10:04:50 wen Exp $
 
-DISTNAME=	Dancer2-0.204004
+DISTNAME=	Dancer2-0.205000
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/X/XS/XSAWYERX/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CR/CROMEDOME/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Dancer2/
@@ -45,7 +45,7 @@ DEPENDS+=	p5-Role-Tiny>=2.000000:../../devel/p5-Role-Tiny
 DEPENDS+=	p5-Safe-Isa>=0:../../devel/p5-Safe-Isa
 DEPENDS+=	p5-Template-Tiny>=0:../../textproc/p5-Template-Tiny
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
-#DEPENDS+=	p5-Type-Tiny>=0.008:../../devel/p5-Type-Tiny
+DEPENDS+=	p5-Type-Tiny>=1.000006:../../devel/p5-Type-Tiny
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
 DEPENDS+=	p5-YAML-LibYAML>=0:../../textproc/p5-YAML-LibYAML
