@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2017/03/11 00:46:47 nat Exp $
+# $NetBSD: options.mk,v 1.9 2017/03/11 03:39:15 nat Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
-PKG_SUPPORTED_OPTIONS=	caca lua pulseaudio sdl v4l2 sdl2 rpi ass
-PKG_SUGGESTED_OPTIONS=	lua
+PKG_SUPPORTED_OPTIONS=	ass caca lua pulseaudio sdl v4l2 rpi sdl2
+PKG_SUGGESTED_OPTIONS=	ass lua pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
