@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1063 2017/03/11 11:28:09 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1064 2017/03/11 12:09:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1292,3 +1292,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-IO-Compress to 2.074 [wen 2017-03-11]
 	Updated devel/p5-IO-Prompt to 0.997004 [wen 2017-03-11]
 	Updated devel/p5-Module-CoreList to 5.20170220 [wen 2017-03-11]
+	Updated www/p5-WWW-Mechanize to 1.84 [wen 2017-03-11]
