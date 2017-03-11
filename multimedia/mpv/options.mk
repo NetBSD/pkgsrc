@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2017/03/11 03:39:15 nat Exp $
+# $NetBSD: options.mk,v 1.10 2017/03/11 07:09:10 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 PKG_SUPPORTED_OPTIONS=	ass caca lua pulseaudio sdl v4l2 rpi sdl2
@@ -64,6 +64,7 @@ WAF_CONFIGURE_ARGS+=	--disable-sdl1
 ###
 .if !empty(PKG_OPTIONS:Mass)
 WAF_CONFIGURE_ARGS+=	--enable-libass
+.include "../../multimedia/libass/buildlink3.mk"
 .else
 WAF_CONFIGURE_ARGS+=	--disable-libass
 .endif
