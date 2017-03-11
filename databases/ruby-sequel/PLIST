@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2017/01/13 15:30:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.48 2017/03/11 16:43:31 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/doc/dataset_filtering.rdoc
 ${GEM_LIBDIR}/doc/extensions.rdoc
 ${GEM_LIBDIR}/doc/mass_assignment.rdoc
 ${GEM_LIBDIR}/doc/migration.rdoc
+${GEM_LIBDIR}/doc/model_dataset_method_design.rdoc
 ${GEM_LIBDIR}/doc/model_hooks.rdoc
 ${GEM_LIBDIR}/doc/model_plugins.rdoc
 ${GEM_LIBDIR}/doc/mssql_stored_procedures.rdoc
@@ -132,6 +133,8 @@ ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.40.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.41.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.42.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.43.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.44.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
@@ -244,6 +247,8 @@ ${GEM_LIBDIR}/lib/sequel/dataset/query.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/sql.rb
 ${GEM_LIBDIR}/lib/sequel/deprecated.rb
 ${GEM_LIBDIR}/lib/sequel/exceptions.rb
+${GEM_LIBDIR}/lib/sequel/extensions/_model_constraint_validations.rb
+${GEM_LIBDIR}/lib/sequel/extensions/_model_pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
@@ -267,6 +272,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/from_block.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/graph_each.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/hash_aliases.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/identifier_mangling.rb
+${GEM_LIBDIR}/lib/sequel/extensions/implicit_subquery.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/inflector.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/looser_typecasting.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/meta_def.rb
@@ -482,6 +488,7 @@ ${GEM_LIBDIR}/spec/extensions/hash_aliases_spec.rb
 ${GEM_LIBDIR}/spec/extensions/hook_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/identifier_columns_spec.rb
 ${GEM_LIBDIR}/spec/extensions/identifier_mangling_spec.rb
+${GEM_LIBDIR}/spec/extensions/implicit_subquery_spec.rb
 ${GEM_LIBDIR}/spec/extensions/inflector_spec.rb
 ${GEM_LIBDIR}/spec/extensions/input_transformer_spec.rb
 ${GEM_LIBDIR}/spec/extensions/insert_returning_select_spec.rb
