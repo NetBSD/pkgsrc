@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2016/12/04 05:17:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.36 2017/03/11 16:54:35 taca Exp $
 
-DISTNAME=	sqlite3-1.3.12
-PKGREVISION=	1
+DISTNAME=	sqlite3-1.3.13
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/luislavena/sqlite3-ruby
+HOMEPAGE=	https://github.com/luislavena/sqlite3-ruby
 COMMENT=	Ruby interface for the SQLite database engine
 LICENSE=	modified-bsd
 
