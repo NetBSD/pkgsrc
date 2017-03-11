@@ -3,6 +3,7 @@ authplugins/ip.conf
 authplugins/port.conf
 authplugins/proxy-basic.conf
 authplugins/proxy-digest.conf
+authplugins/proxy-header.conf
 downloadmanagers/default.conf
 downloadmanagers/fancy.conf
 e2guardian.conf
