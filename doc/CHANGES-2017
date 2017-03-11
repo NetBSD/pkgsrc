@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1054 2017/03/11 07:16:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1055 2017/03/11 07:37:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1282,3 +1282,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/pidgin-silc to 2.11.0 [khorben 2017-03-11]
 	Updated chat/finch to 2.11.0 [khorben 2017-03-11]
 	Updated net/mikutter to 3.5.4 [tsutsui 2017-03-11]
+	Updated lang/oracle-jre8 to 8.0.121 [ryoon 2017-03-11]
+	Updated lang/oracle-jdk8 to 8.0.121 [ryoon 2017-03-11]
