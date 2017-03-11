@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/10 20:08:48 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2017/03/11 12:13:00 wen Exp $
 
-SHA1 (WWW-Mechanize-FormFiller-0.11.tar.gz) = 634deeec67c21bbda3c9dfb3a815b2c3ef4bfde7
-RMD160 (WWW-Mechanize-FormFiller-0.11.tar.gz) = 3dbba81bb8e0ad674899e86e698fc2165e34e191
-Size (WWW-Mechanize-FormFiller-0.11.tar.gz) = 20157 bytes
+SHA1 (WWW-Mechanize-FormFiller-0.12.tar.gz) = f91cb459b00dfd6029a96bcb8592d711be017ddc
+RMD160 (WWW-Mechanize-FormFiller-0.12.tar.gz) = 88896c03ec50ff166e61ddd123f7258c722fe68c
+SHA512 (WWW-Mechanize-FormFiller-0.12.tar.gz) = 87db40c49daf6955c8d42b4bd61f4cf4b1f08782ef48789d636ca81881bd000b46d52fb293792918e457aa46845e766d3685d4c3c6d14dd1875b629d6f9f0999
+Size (WWW-Mechanize-FormFiller-0.12.tar.gz) = 19930 bytes
