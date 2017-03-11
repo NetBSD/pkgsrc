@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2017/01/30 01:58:28 wen Exp $
+# $NetBSD: Makefile,v 1.36 2017/03/11 11:20:19 wen Exp $
 
-DISTNAME=	IO-Compress-2.070
+DISTNAME=	IO-Compress-2.074
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
