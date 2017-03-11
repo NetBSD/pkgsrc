@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/12/05 16:20:08 taca Exp $
+$NetBSD: distinfo,v 1.10 2017/03/11 15:12:34 taca Exp $
 
-SHA1 (tzinfo-data-1.2016.10.gem) = 0ad383338611041b401172d962bcdea2bf200565
-RMD160 (tzinfo-data-1.2016.10.gem) = a2815a8d9d016282cb6ab8881866b5ba99be3b0c
-SHA512 (tzinfo-data-1.2016.10.gem) = 889414352b8bac514e4bf654281f98613997e1886efb88f973b98e008a3af166175ad7805447212c92e4c60d8d359d8215307b5a2659af1a2e6d4def8594ba55
-Size (tzinfo-data-1.2016.10.gem) = 316416 bytes
+SHA1 (tzinfo-data-1.2017.1.gem) = 9bd536900fc1cba47c4e3b47c4c2486d846abcb6
+RMD160 (tzinfo-data-1.2017.1.gem) = ea231638ed09e88799c60f05d29b90b5ef2b13c9
+SHA512 (tzinfo-data-1.2017.1.gem) = 8222f2164c7b2fc36faba02457ceaaeb2d61325f2e08ddfdda21634ad7ffc6299020e73e8ed6634fabef6e6ea959a884283e2ee70c32081b10a0df6d1b8c4cf6
+Size (tzinfo-data-1.2017.1.gem) = 315392 bytes
