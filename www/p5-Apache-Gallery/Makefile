@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2016/06/08 19:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2017/03/11 23:21:11 maya Exp $
 
 DISTNAME=	Apache-Gallery-0.9.1
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Image-Imlib2-[0-9]*:../../graphics/p5-Image-Imlib2
 DEPENDS+=	p5-Image-Info>=1.15:../../graphics/p5-Image-Info
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
-DEPENDS+=	p5-libapreq{,2}-[0-9]*:../../www/${LIBAPREQ}
+DEPENDS+=	p5-${APACHE_PKG_PREFIX}-libapreq{,2}-[0-9]*:../../www/${LIBAPREQ}
 
 PERL5_PACKLIST=		auto/Apache/Gallery/.packlist
 
@@ -95,5 +95,5 @@ post-install:
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
-
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
