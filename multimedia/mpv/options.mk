@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2017/03/10 15:55:33 nat Exp $
+# $NetBSD: options.mk,v 1.8 2017/03/11 00:46:47 nat Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
-PKG_SUPPORTED_OPTIONS=	caca lua pulseaudio sdl v4l2 sdl2 rpi libass
+PKG_SUPPORTED_OPTIONS=	caca lua pulseaudio sdl v4l2 sdl2 rpi ass
 PKG_SUGGESTED_OPTIONS=	lua
 
 .include "../../mk/bsd.options.mk"
@@ -62,7 +62,7 @@ WAF_CONFIGURE_ARGS+=	--disable-sdl1
 ###
 ### libASS support
 ###
-.if !empty(PKG_OPTIONS:Mlibass)
+.if !empty(PKG_OPTIONS:Mass)
 WAF_CONFIGURE_ARGS+=	--enable-libass
 .else
 WAF_CONFIGURE_ARGS+=	--disable-libass
@@ -81,7 +81,7 @@ WAF_CONFIGURE_ARGS+=	--disable-libv4l2
 ### Raspberry Pi support
 ###
 .if !empty(PKG_OPTIONS:Mrpi)
-.include "../../misc/raspberrypi-userland/buildlink3.mk"
+BUILD_DEPENDS+=	raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
 CFLAGS+="-L${PREFIX}/lib"
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure
