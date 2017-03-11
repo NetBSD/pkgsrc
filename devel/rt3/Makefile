@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2016/06/08 19:23:48 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2017/03/11 23:26:32 maya Exp $
 
 DISTNAME=		rt-3.8.17
 PKGREVISION=		7
@@ -82,7 +82,7 @@ DEPENDS+=	p5-GnuPG-Interface-[0-9]*:../../security/p5-GnuPG-Interface
 
 # Front-end dependencies:
 .if !empty(PKG_OPTIONS:Mmodperl1)
-DEPENDS+=	p5-libapreq>=1.2:../../www/p5-libapreq
+DEPENDS+=	p5-${APACHE_PKG_PREFIX}-libapreq>=1.2:../../www/p5-libapreq
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 .elif !empty(PKG_OPTIONS:Mmodperl2)
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
@@ -148,4 +148,5 @@ post-extract:
 .include "Makefile.install"
 
 .include "../../databases/p5-DBI/buildlink3.mk"
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
