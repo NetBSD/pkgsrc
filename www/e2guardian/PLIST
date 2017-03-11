@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/03 14:09:18 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/03/11 17:22:45 prlw1 Exp $
 man/man8/e2guardian.8
 sbin/e2guardian
 share/doc/e2guardian/AuthPlugins
@@ -104,6 +104,7 @@ share/examples/e2guardian/authplugins/ip.conf
 share/examples/e2guardian/authplugins/port.conf
 share/examples/e2guardian/authplugins/proxy-basic.conf
 share/examples/e2guardian/authplugins/proxy-digest.conf
+share/examples/e2guardian/authplugins/proxy-header.conf
 share/examples/e2guardian/downloadmanagers/default.conf
 share/examples/e2guardian/downloadmanagers/fancy.conf
 share/examples/e2guardian/e2guardian.conf
