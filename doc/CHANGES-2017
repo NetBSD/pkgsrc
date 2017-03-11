@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1070 2017/03/11 15:35:19 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1071 2017/03/11 16:42:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1299,3 +1299,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/ruby-tzinfo-data to 1.2017.1 [taca 2017-03-11]
 	Updated math/R-zoo to 1.7.14 [wen 2017-03-11]
 	Updated archivers/ruby-zip to 1.2.1 [taca 2017-03-11]
+	Updated databases/ruby-pg to 0.20.0 [taca 2017-03-11]
