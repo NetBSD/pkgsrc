@@ -18188,7 +18188,7 @@ cat >>confdefs.h <<_ACEOF
 _ACEOF
 
 
-    # FreeBSD and MacOS ACL support
+    # MacOS ACL support
     ac_fn_c_check_decl "$LINENO" "ACL_TYPE_EXTENDED" "ac_cv_have_decl_ACL_TYPE_EXTENDED" "#include <sys/types.h>
 		#include <sys/acl.h>
 "
