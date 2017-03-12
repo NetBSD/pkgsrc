@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1079 2017/03/12 09:45:27 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1080 2017/03/12 11:41:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1308,3 +1308,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/p5-WebService-MusicBrainz to 1.0 [wiz 2017-03-12]
 	Updated multimedia/libva to 1.7.3nb5 [leot 2017-03-12]
 	Added multimedia/intel-vaapi-driver version 1.7.3 [leot 2017-03-12]
+	Updated multimedia/mpv to 0.24.0nb3 [leot 2017-03-12]
