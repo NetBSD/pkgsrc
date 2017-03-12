@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1077 2017/03/12 07:42:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1078 2017/03/12 09:27:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1306,3 +1306,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/lgogdownloader to 3.2 [wiz 2017-03-12]
 	Updated textproc/p5-Text-Glob to 0.11 [wiz 2017-03-12]
 	Updated net/p5-WebService-MusicBrainz to 1.0 [wiz 2017-03-12]
+	Updated multimedia/libva to 1.7.3nb5 [leot 2017-03-12]
