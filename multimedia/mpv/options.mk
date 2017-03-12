@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.11 2017/03/12 11:41:44 leot Exp $
+# $NetBSD: options.mk,v 1.12 2017/03/12 11:45:28 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
 .include "../../multimedia/libva/available.mk"
 .include "../../multimedia/libvdpau/available.mk"
 
-PKG_SUPPORTED_OPTIONS=	ass caca lua pulseaudio sdl v4l2 rpi sdl2
+PKG_SUPPORTED_OPTIONS=	ass caca lua pulseaudio rpi sdl sdl2 v4l2 
 PKG_SUGGESTED_OPTIONS=	ass lua pulseaudio
 
 .if ${VAAPI_AVAILABLE} == "yes"
@@ -93,7 +93,7 @@ WAF_CONFIGURE_ARGS+=	--disable-libv4l2
 .endif
 
 ###
-### VAAPI support
+### VAAPI support (video output)
 ###
 .if !empty(PKG_OPTIONS:Mvaapi)
 WAF_CONFIGURE_ARGS+=	--enable-vaapi
@@ -103,7 +103,7 @@ WAF_CONFIGURE_ARGS+=	--disable-vaapi
 .endif
 
 ###
-### VDPAU support
+### VDPAU support (video output)
 ###
 .if !empty(PKG_OPTIONS:Mvdpau)
 WAF_CONFIGURE_ARGS+=	--enable-vdpau
@@ -116,8 +116,8 @@ WAF_CONFIGURE_ARGS+=	--disable-vdpau
 ### Raspberry Pi support
 ###
 .if !empty(PKG_OPTIONS:Mrpi)
-BUILD_DEPENDS+=	raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
-CFLAGS+="-L${PREFIX}/lib"
+BUILD_DEPENDS+=		raspberrypi-userland>=20170109:../../misc/raspberrypi-userland
+CFLAGS+=		"-L${PREFIX}/lib"
 SUBST_CLASSES+=		vc
 SUBST_STAGE.vc=		pre-configure
 SUBST_MESSAGE.vc=	Fixing path to VideoCore libraries.
