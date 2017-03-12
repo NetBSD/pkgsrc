@@ -1,8 +1,22 @@
-# $NetBSD: options.mk,v 1.10 2017/03/11 07:09:10 snj Exp $
+# $NetBSD: options.mk,v 1.11 2017/03/12 11:41:44 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
+
+.include "../../multimedia/libva/available.mk"
+.include "../../multimedia/libvdpau/available.mk"
+
 PKG_SUPPORTED_OPTIONS=	ass caca lua pulseaudio sdl v4l2 rpi sdl2
 PKG_SUGGESTED_OPTIONS=	ass lua pulseaudio
+
+.if ${VAAPI_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+=	vaapi
+PKG_SUGGESTED_OPTIONS+=	vaapi
+.endif
+
+.if ${VDPAU_AVAILABLE} == "yes"
+PKG_SUPPORTED_OPTIONS+=	vdpau
+PKG_SUGGESTED_OPTIONS+=	vdpau
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -76,6 +90,26 @@ WAF_CONFIGURE_ARGS+=	--disable-libass
 WAF_CONFIGURE_ARGS+=	--enable-libv4l2
 .else
 WAF_CONFIGURE_ARGS+=	--disable-libv4l2
+.endif
+
+###
+### VAAPI support
+###
+.if !empty(PKG_OPTIONS:Mvaapi)
+WAF_CONFIGURE_ARGS+=	--enable-vaapi
+.include "../../multimedia/libva/buildlink3.mk"
+.else
+WAF_CONFIGURE_ARGS+=	--disable-vaapi
+.endif
+
+###
+### VDPAU support
+###
+.if !empty(PKG_OPTIONS:Mvdpau)
+WAF_CONFIGURE_ARGS+=	--enable-vdpau
+.include "../../multimedia/libvdpau/buildlink3.mk"
+.else
+WAF_CONFIGURE_ARGS+=	--disable-vdpau
 .endif
 
 ###
