@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1096 2017/03/12 14:45:14 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1097 2017/03/12 18:44:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1330,3 +1330,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-minitest to 5.10.1 [taca 2017-03-12]
 	Updated devel/ruby-msgpack to 1.1.0 [taca 2017-03-12]
 	Updated devel/ruby-test-unit to 3.2.3 [taca 2017-03-12]
+	Updated mail/gmime to 2.6.23nb1 [wiz 2017-03-12]
