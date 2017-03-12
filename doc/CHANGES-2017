@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1088 2017/03/12 13:50:37 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1089 2017/03/12 14:29:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1321,3 +1321,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added meta-pkgs/php71-extensions version 7.1.2 [taca 2017-03-12]
 	Updated devel/SOPE to 2.3.20 [taca 2017-03-12]
 	Updated www/SOGo to 2.3.20 [taca 2017-03-12]
+	Updated databases/php-redis to 2.2.8 [taca 2017-03-12]
+	Updated databases/php-redis3 to 3.1.1 [taca 2017-03-12]
