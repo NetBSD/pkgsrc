@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2017/01/17 16:07:09 taca Exp $
+# $NetBSD: Makefile,v 1.36 2017/03/12 13:49:06 taca Exp $
 #
 
-DISTNAME=	SOPE-2.3.19
+DISTNAME=	SOPE-2.3.20
 CATEGORIES=	devel
 MASTER_SITES=	http://www.sogo.nu/files/downloads/SOGo/Sources/
 
