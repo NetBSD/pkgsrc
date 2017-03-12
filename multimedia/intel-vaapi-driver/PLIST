@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/12 09:44:25 leot Exp $
+lib/dri/i965_drv_video.la
