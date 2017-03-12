@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/03/15 17:07:03 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/03/12 14:34:01 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/fastfilereaderext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
@@ -107,6 +107,7 @@ ${GEM_LIBDIR}/lib/jeventmachine.rb
 ${GEM_LIBDIR}/lib/rubyeventmachine.${RUBY_DLEXT}
 ${GEM_LIBDIR}/rakelib/package.rake
 ${GEM_LIBDIR}/rakelib/test.rake
+${GEM_LIBDIR}/rakelib/test_pure.rake
 ${GEM_LIBDIR}/tests/client.crt
 ${GEM_LIBDIR}/tests/client.key
 ${GEM_LIBDIR}/tests/dhparam.pem
@@ -125,7 +126,6 @@ ${GEM_LIBDIR}/tests/test_exc.rb
 ${GEM_LIBDIR}/tests/test_file_watch.rb
 ${GEM_LIBDIR}/tests/test_fork.rb
 ${GEM_LIBDIR}/tests/test_futures.rb
-${GEM_LIBDIR}/tests/test_get_sock_opt.rb
 ${GEM_LIBDIR}/tests/test_handler_check.rb
 ${GEM_LIBDIR}/tests/test_hc.rb
 ${GEM_LIBDIR}/tests/test_httpclient.rb
@@ -155,10 +155,10 @@ ${GEM_LIBDIR}/tests/test_running.rb
 ${GEM_LIBDIR}/tests/test_sasl.rb
 ${GEM_LIBDIR}/tests/test_send_file.rb
 ${GEM_LIBDIR}/tests/test_servers.rb
-${GEM_LIBDIR}/tests/test_set_sock_opt.rb
 ${GEM_LIBDIR}/tests/test_shutdown_hooks.rb
 ${GEM_LIBDIR}/tests/test_smtpclient.rb
 ${GEM_LIBDIR}/tests/test_smtpserver.rb
+${GEM_LIBDIR}/tests/test_sock_opt.rb
 ${GEM_LIBDIR}/tests/test_spawn.rb
 ${GEM_LIBDIR}/tests/test_ssl_args.rb
 ${GEM_LIBDIR}/tests/test_ssl_dhparam.rb
