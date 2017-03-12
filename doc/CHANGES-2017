@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1081 2017/03/12 12:21:46 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1082 2017/03/12 13:19:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1310,3 +1310,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added multimedia/intel-vaapi-driver version 1.7.3 [leot 2017-03-12]
 	Updated multimedia/mpv to 0.24.0nb3 [leot 2017-03-12]
 	Updated databases/py-sqlalchemy to 1.1.6 [adam 2017-03-12]
+	Updated lang/pear to 1.10.3 [taca 2017-03-12]
