@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1102 2017/03/12 20:31:53 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1103 2017/03/12 20:51:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1339,3 +1339,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/musicpd to 0.20.6 [wiz 2017-03-12]
 	Updated misc/calibre to 2.81.0 [wiz 2017-03-12]
 	Updated lang/nodejs to 7.7.2 [fhajny 2017-03-12]
+	Updated mail/notmuch to 0.23.7nb1 [wiz 2017-03-12]
