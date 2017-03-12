@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2016/12/05 16:13:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.44 2017/03/12 13:34:04 taca Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README.md
@@ -799,6 +799,8 @@ share/roundcube/plugins/managesieve/tests/src/parser_include
 share/roundcube/plugins/managesieve/tests/src/parser_index
 share/roundcube/plugins/managesieve/tests/src/parser_kep14
 share/roundcube/plugins/managesieve/tests/src/parser_kep14.out
+share/roundcube/plugins/managesieve/tests/src/parser_nesting
+share/roundcube/plugins/managesieve/tests/src/parser_nesting.out
 share/roundcube/plugins/managesieve/tests/src/parser_notify_a
 share/roundcube/plugins/managesieve/tests/src/parser_notify_b
 share/roundcube/plugins/managesieve/tests/src/parser_prefix
