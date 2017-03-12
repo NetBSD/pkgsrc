@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1085 2017/03/12 13:37:07 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1086 2017/03/12 13:43:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1317,3 +1317,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/roundcube-plugin-enigma to 1.2.4 [taca 2017-03-12]
 	Updated mail/roundcube-plugin-password to 1.2.4 [taca 2017-03-12]
 	Updated mail/roundcube-plugin-zipdownload to 1.2.4 [taca 2017-03-12]
+	Updated devel/php-xdebug to 2.5.1 [taca 2017-03-12]
