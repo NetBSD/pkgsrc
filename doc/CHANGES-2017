@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1089 2017/03/12 14:29:21 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1090 2017/03/12 14:30:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1323,3 +1323,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/SOGo to 2.3.20 [taca 2017-03-12]
 	Updated databases/php-redis to 2.2.8 [taca 2017-03-12]
 	Updated databases/php-redis3 to 3.1.1 [taca 2017-03-12]
+	Updated devel/hoe to 3.16.0 [taca 2017-03-12]
