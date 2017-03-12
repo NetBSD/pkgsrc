@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2017/03/07 20:42:28 elric Exp $
+# $NetBSD: options.mk,v 1.6 2017/03/12 20:58:20 wiz Exp $
 
 # Global and legacy options
 
@@ -172,4 +172,13 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--with-gpgme-prefix=${BUILDLINK_PREFIX.gpgme}
 .else
 CONFIGURE_ARGS+=	--disable-gpgme
+.endif
+
+###
+### sidebar support
+###
+.if !empty(PKG_OPTIONS:Mmutt-sidebar)
+CONFIGURE_ARGS+=	--enable-sidebar
+.else
+CONFIGURE_ARGS+=	--disable-sidebar
 .endif
