@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1084 2017/03/12 13:27:36 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1085 2017/03/12 13:37:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1313,3 +1313,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/pear to 1.10.3 [taca 2017-03-12]
 	Updated net/pear-Net_SMTP to 1.7.3 [taca 2017-03-12]
 	Updated security/pear-Crypt_GPG to 1.6.0 [taca 2017-03-12]
+	Updated mail/roundcube to 1.2.4 [taca 2017-03-12]
+	Updated mail/roundcube-plugin-enigma to 1.2.4 [taca 2017-03-12]
+	Updated mail/roundcube-plugin-password to 1.2.4 [taca 2017-03-12]
+	Updated mail/roundcube-plugin-zipdownload to 1.2.4 [taca 2017-03-12]
