@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2017/01/15 09:29:08 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2017/03/12 07:24:06 wiz Exp $
 
-DISTNAME=	lgogdownloader-3.1
+DISTNAME=	lgogdownloader-3.2
 CATEGORIES=	games
 MASTER_SITES=	http://sites.google.com/site/gogdownloader/
 
