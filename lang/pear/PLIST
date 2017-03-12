@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/12/12 14:21:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/03/12 13:19:12 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -22,7 +22,6 @@ lib/php/Archive/Tar.php
 lib/php/Console/Getopt.php
 lib/php/OS/Guess.php
 lib/php/PEAR.php
-lib/php/PEAR/Autoloader.php
 lib/php/PEAR/Builder.php
 lib/php/PEAR/ChannelFile.php
 lib/php/PEAR/ChannelFile/Parser.php
@@ -93,6 +92,7 @@ lib/php/PEAR/PackageFile/v2.php
 lib/php/PEAR/PackageFile/v2/Validator.php
 lib/php/PEAR/PackageFile/v2/rw.php
 lib/php/PEAR/Packager.php
+lib/php/PEAR/Proxy.php
 lib/php/PEAR/REST.php
 lib/php/PEAR/REST/10.php
 lib/php/PEAR/REST/11.php
@@ -138,25 +138,28 @@ lib/php/test/Structures_Graph/tests/AllTests.php
 lib/php/test/Structures_Graph/tests/BasicGraphTest.php
 lib/php/test/Structures_Graph/tests/TopologicalSorterTest.php
 lib/php/test/Structures_Graph/tests/helper.inc
-lib/php/test/XML_Util/tests/testBasic_apiVersion.phpt
-lib/php/test/XML_Util/tests/testBasic_attributesToString.phpt
-lib/php/test/XML_Util/tests/testBasic_collapseEmptyTags.phpt
-lib/php/test/XML_Util/tests/testBasic_createCDataSection.phpt
-lib/php/test/XML_Util/tests/testBasic_createComment.phpt
-lib/php/test/XML_Util/tests/testBasic_createEndElement.phpt
-lib/php/test/XML_Util/tests/testBasic_createStartElement.phpt
-lib/php/test/XML_Util/tests/testBasic_createTag.phpt
-lib/php/test/XML_Util/tests/testBasic_createTagFromArray.phpt
-lib/php/test/XML_Util/tests/testBasic_getDocTypeDeclaration.phpt
-lib/php/test/XML_Util/tests/testBasic_getXmlDeclaration.phpt
-lib/php/test/XML_Util/tests/testBasic_isValidName.phpt
-lib/php/test/XML_Util/tests/testBasic_raiseError.phpt
-lib/php/test/XML_Util/tests/testBasic_replaceEntities.phpt
-lib/php/test/XML_Util/tests/testBasic_reverseEntities.phpt
-lib/php/test/XML_Util/tests/testBasic_splitQualifiedName.phpt
-lib/php/test/XML_Util/tests/testBug_18343.phpt
-lib/php/test/XML_Util/tests/testBug_4950.phpt
-lib/php/test/XML_Util/tests/testBug_5392.phpt
+lib/php/test/XML_Util/tests/AbstractUnitTests.php
+lib/php/test/XML_Util/tests/ApiVersionTests.php
+lib/php/test/XML_Util/tests/AttributesToStringTests.php
+lib/php/test/XML_Util/tests/Bug18343Tests.php
+lib/php/test/XML_Util/tests/Bug21177Tests.php
+lib/php/test/XML_Util/tests/Bug21184Tests.php
+lib/php/test/XML_Util/tests/Bug4950Tests.php
+lib/php/test/XML_Util/tests/Bug5392Tests.php
+lib/php/test/XML_Util/tests/CollapseEmptyTagsTests.php
+lib/php/test/XML_Util/tests/CreateCDataSectionTests.php
+lib/php/test/XML_Util/tests/CreateCommentTests.php
+lib/php/test/XML_Util/tests/CreateEndElementTests.php
+lib/php/test/XML_Util/tests/CreateStartElementTests.php
+lib/php/test/XML_Util/tests/CreateTagFromArrayTests.php
+lib/php/test/XML_Util/tests/CreateTagTests.php
+lib/php/test/XML_Util/tests/GetDocTypeDeclarationTests.php
+lib/php/test/XML_Util/tests/GetXmlDeclarationTests.php
+lib/php/test/XML_Util/tests/IsValidNameTests.php
+lib/php/test/XML_Util/tests/RaiseErrorTests.php
+lib/php/test/XML_Util/tests/ReplaceEntitiesTests.php
+lib/php/test/XML_Util/tests/ReverseEntitiesTests.php
+lib/php/test/XML_Util/tests/SplitQualifiedNameTests.php
 share/examples/pear/pear.conf
 @pkgdir lib/php/.registry/.channel.pecl.php.net
 @pkgdir lib/php/.registry/.channel.doc.php.net
