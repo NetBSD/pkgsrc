@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1082 2017/03/12 13:19:44 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1083 2017/03/12 13:24:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1311,3 +1311,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/mpv to 0.24.0nb3 [leot 2017-03-12]
 	Updated databases/py-sqlalchemy to 1.1.6 [adam 2017-03-12]
 	Updated lang/pear to 1.10.3 [taca 2017-03-12]
+	Updated net/pear-Net_SMTP to 1.7.3 [taca 2017-03-12]
