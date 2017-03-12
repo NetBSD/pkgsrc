@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2017/02/25 00:05:06 mef Exp $
-#
+# $NetBSD: Makefile,v 1.37 2017/03/12 18:43:58 wiz Exp $
 
 DISTNAME=	gmime-2.6.23
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gmime/2.6/}
 EXTRACT_SUFX=	.tar.xz
@@ -17,14 +17,13 @@ USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--disable-mono
-PKGCONFIG_OVERRIDE+=	gmime-2.6.pc.in
+PKGCONFIG_OVERRIDE+=	gmime.pc.in
 TEST_TARGET=		check
 
 BUILDLINK_DEPMETHOD.libgpg-error=	build
 
-.include "options.mk"
-
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
