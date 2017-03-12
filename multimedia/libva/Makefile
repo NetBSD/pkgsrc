@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/03/06 10:19:57 maya Exp $
+# $NetBSD: Makefile,v 1.15 2017/03/12 09:27:07 leot Exp $
 #
 
 DISTNAME=	libva-1.7.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.freedesktop.org/software/vaapi/releases/libva/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,16 @@ USE_TOOLS+=	autoreconf autoconf automake gmake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
+#
+# vaapi drivers (e.g. intel-vaapi-driver) can be installed under
+# ${PREFIX}/lib/dri and linked against native X.org. Instruct libva's
+# DRIVER_SEARCH_PATH to look at them too for native X.org.
+#
+.if ${X11_TYPE} == "native"
+DRIVER_SEARCH_PATH=	${X11BASE}/lib/dri:${PREFIX}/lib/dri
+.else
 DRIVER_SEARCH_PATH=	${X11BASE}/lib/dri
+.endif
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-drivers-path=${DRIVER_SEARCH_PATH:Q}
