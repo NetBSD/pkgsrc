@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2017/02/15 23:21:07 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2017/03/12 18:51:01 adam Exp $
 
-DISTNAME=	CherryPy-10.1.0
+DISTNAME=	CherryPy-10.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=C/CherryPy/}
