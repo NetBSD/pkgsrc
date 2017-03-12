@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/03/12 09:44:25 leot Exp $
+
+SHA1 (intel-vaapi-driver-1.7.3.tar.gz) = f2f412edc9d03567897b187d96343db68598fa37
+RMD160 (intel-vaapi-driver-1.7.3.tar.gz) = 2ba7c3d945733bf56f234fc5451422173a612f1d
+SHA512 (intel-vaapi-driver-1.7.3.tar.gz) = 57ae4fbf1bd5799e8a311fcd67eda1a8a6d5b5267df502b83f63f8bd0cdd510a4f78b4d09088833bfa2e98447d841c3d4e7229f4e75a9d9f4b8096fb14027878
+Size (intel-vaapi-driver-1.7.3.tar.gz) = 1648659 bytes
+SHA1 (patch-src_i965__decoder__utils.c) = 1719cac7ee434c92e1a7016ad4130615dd62ddaa
