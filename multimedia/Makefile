@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.253 2017/02/24 18:34:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.254 2017/03/12 09:45:08 leot Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -93,6 +93,7 @@ SUBDIR+=	gxine
 SUBDIR+=	handbrake
 SUBDIR+=	harvid
 SUBDIR+=	hwdecode-demos
+SUBDIR+=	intel-vaapi-driver
 SUBDIR+=	juk
 SUBDIR+=	kaffeine
 SUBDIR+=	kdemultimedia3
