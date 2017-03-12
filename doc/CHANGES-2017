@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1087 2017/03/12 13:47:19 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1088 2017/03/12 13:50:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1319,3 +1319,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/roundcube-plugin-zipdownload to 1.2.4 [taca 2017-03-12]
 	Updated devel/php-xdebug to 2.5.1 [taca 2017-03-12]
 	Added meta-pkgs/php71-extensions version 7.1.2 [taca 2017-03-12]
+	Updated devel/SOPE to 2.3.20 [taca 2017-03-12]
+	Updated www/SOGo to 2.3.20 [taca 2017-03-12]
