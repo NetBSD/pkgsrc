@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.78 2017/03/07 22:47:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.79 2017/03/12 20:30:37 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -379,7 +379,9 @@ lib/calibre/calibre/ebooks/metadata/sources/openlibrary.py
 lib/calibre/calibre/ebooks/metadata/sources/overdrive.py
 lib/calibre/calibre/ebooks/metadata/sources/ozon.py
 lib/calibre/calibre/ebooks/metadata/sources/prefs.py
+lib/calibre/calibre/ebooks/metadata/sources/search_engines.py
 lib/calibre/calibre/ebooks/metadata/sources/test.py
+lib/calibre/calibre/ebooks/metadata/sources/update.py
 lib/calibre/calibre/ebooks/metadata/sources/worker.py
 lib/calibre/calibre/ebooks/metadata/tag_mapper.py
 lib/calibre/calibre/ebooks/metadata/toc.py
@@ -1342,6 +1344,7 @@ lib/calibre/calibre/utils/opensearch/query.py
 lib/calibre/calibre/utils/opensearch/url.py
 lib/calibre/calibre/utils/ordered_dict.py
 lib/calibre/calibre/utils/podofo/__init__.py
+lib/calibre/calibre/utils/random_ua.py
 lib/calibre/calibre/utils/rapydscript.py
 lib/calibre/calibre/utils/recycle_bin.py
 lib/calibre/calibre/utils/resources.py
@@ -1547,7 +1550,6 @@ share/calibre/catalog/section_list_templates.py
 share/calibre/catalog/stylesheet.css
 share/calibre/catalog/template.xhtml
 share/calibre/coffee-script.js
-share/calibre/common-user-agents.txt
 share/calibre/compiled_coffeescript.zip
 share/calibre/content-server/autoreload.js
 share/calibre/content-server/calibre.png
@@ -3527,6 +3529,7 @@ share/calibre/templates/new_book.html
 share/calibre/templates/new_nav.html
 share/calibre/templates/rtf.xsl
 share/calibre/tracer.epub
+share/calibre/user-agent-data.json
 share/calibre/user-manual-translation-stats.json
 share/calibre/viewer/blank.html
 share/calibre/viewer/bookmarks.js
