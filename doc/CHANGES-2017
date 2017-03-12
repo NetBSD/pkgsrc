@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1101 2017/03/12 20:30:51 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1102 2017/03/12 20:31:53 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1338,3 +1338,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/libopenmpt to 0.2.7774 [wiz 2017-03-12]
 	Updated audio/musicpd to 0.20.6 [wiz 2017-03-12]
 	Updated misc/calibre to 2.81.0 [wiz 2017-03-12]
+	Updated lang/nodejs to 7.7.2 [fhajny 2017-03-12]
