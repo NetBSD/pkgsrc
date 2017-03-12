@@ -18160,36 +18160,59 @@ fi
 done
 
 
-    # Check for ACL_TYPE_NFS4
-    ac_fn_c_check_decl "$LINENO" "ACL_TYPE_NFS4" "ac_cv_have_decl_ACL_TYPE_NFS4" "#include <sys/acl.h>
+    # FreeBSD and POSIX
+    # MacOS has no ACL_USER in acl.h
+    ac_fn_c_check_decl "$LINENO" "ACL_TYPE_NFS4" "ac_cv_have_decl_ACL_TYPE_NFS4" "#include <sys/types.h>
+		#include <sys/acl.h>
 "
 if test "x$ac_cv_have_decl_ACL_TYPE_NFS4" = xyes; then :
-
-$as_echo "#define HAVE_ACL_TYPE_NFS4 1" >>confdefs.h
-
+  ac_have_decl=1
+else
+  ac_have_decl=0
 fi
 
-
-    # MacOS has an acl.h that isn't POSIX.  It can be detected by
-    # checking for ACL_USER
-    ac_fn_c_check_decl "$LINENO" "ACL_USER" "ac_cv_have_decl_ACL_USER" "#include <sys/acl.h>
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_ACL_TYPE_NFS4 $ac_have_decl
+_ACEOF
+ac_fn_c_check_decl "$LINENO" "ACL_USER" "ac_cv_have_decl_ACL_USER" "#include <sys/types.h>
+		#include <sys/acl.h>
 "
 if test "x$ac_cv_have_decl_ACL_USER" = xyes; then :
-
-$as_echo "#define HAVE_ACL_USER 1" >>confdefs.h
-
+  ac_have_decl=1
+else
+  ac_have_decl=0
 fi
 
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_ACL_USER $ac_have_decl
+_ACEOF
 
-    # MacOS has ACL_TYPE_EXTENDED instead
+
+    # FreeBSD and MacOS ACL support
     ac_fn_c_check_decl "$LINENO" "ACL_TYPE_EXTENDED" "ac_cv_have_decl_ACL_TYPE_EXTENDED" "#include <sys/types.h>
 		#include <sys/acl.h>
 "
 if test "x$ac_cv_have_decl_ACL_TYPE_EXTENDED" = xyes; then :
-
-$as_echo "#define HAVE_ACL_TYPE_EXTENDED 1" >>confdefs.h
-
+  ac_have_decl=1
+else
+  ac_have_decl=0
 fi
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_ACL_TYPE_EXTENDED $ac_have_decl
+_ACEOF
+ac_fn_c_check_decl "$LINENO" "ACL_SYNCHRONIZE" "ac_cv_have_decl_ACL_SYNCHRONIZE" "#include <sys/types.h>
+		#include <sys/acl.h>
+"
+if test "x$ac_cv_have_decl_ACL_SYNCHRONIZE" = xyes; then :
+  ac_have_decl=1
+else
+  ac_have_decl=0
+fi
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_DECL_ACL_SYNCHRONIZE $ac_have_decl
+_ACEOF
 
 
     # Solaris and derivates ACLs
@@ -18260,8 +18283,7 @@ fi
 cat >>confdefs.h <<_ACEOF
 #define HAVE_DECL_GETACLCNT $ac_have_decl
 _ACEOF
-
-    ac_fn_c_check_decl "$LINENO" "ACE_GETACL" "ac_cv_have_decl_ACE_GETACL" "#include <sys/acl.h>
+ac_fn_c_check_decl "$LINENO" "ACE_GETACL" "ac_cv_have_decl_ACE_GETACL" "#include <sys/acl.h>
 "
 if test "x$ac_cv_have_decl_ACE_GETACL" = xyes; then :
   ac_have_decl=1
