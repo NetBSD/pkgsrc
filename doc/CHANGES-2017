@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1094 2017/03/12 14:40:14 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1095 2017/03/12 14:42:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1328,3 +1328,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-eventmachine to 1.2.3 [taca 2017-03-12]
 	Updated devel/ruby-kgio to 2.11.0 [taca 2017-03-12]
 	Updated devel/ruby-minitest to 5.10.1 [taca 2017-03-12]
+	Updated devel/ruby-msgpack to 1.1.0 [taca 2017-03-12]
