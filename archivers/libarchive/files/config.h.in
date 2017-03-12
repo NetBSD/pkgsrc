@@ -129,14 +129,14 @@
 /* Define to 1 if the system has the type `ace_t'. */
 #undef HAVE_ACE_T
 
+/* Define to 1 if you have the `acl' function. */
+#undef HAVE_ACL
+
 /* Define to 1 if the system has the type `aclent_t'. */
 #undef HAVE_ACLENT_T
 
 /* Define to 1 if you have the `acl_create_entry' function. */
 #undef HAVE_ACL_CREATE_ENTRY
-
-/* Define to 1 if you have the `acl_get' function. */
-#undef HAVE_ACL_GET
 
 /* Define to 1 if you have the `acl_get_fd_np' function. */
 #undef HAVE_ACL_GET_FD_NP
@@ -165,9 +165,6 @@
 /* Define to 1 if the system has the type `acl_permset_t'. */
 #undef HAVE_ACL_PERMSET_T
 
-/* Define to 1 if you have the `acl_set' function. */
-#undef HAVE_ACL_SET
-
 /* Define to 1 if you have the `acl_set_fd' function. */
 #undef HAVE_ACL_SET_FD
 
@@ -176,15 +173,6 @@
 
 /* Define to 1 if you have the `acl_set_file' function. */
 #undef HAVE_ACL_SET_FILE
-
-/* True for MacOS ACL support */
-#undef HAVE_ACL_TYPE_EXTENDED
-
-/* True for FreeBSD with NFSv4 ACL support */
-#undef HAVE_ACL_TYPE_NFS4
-
-/* True for systems with POSIX ACL support */
-#undef HAVE_ACL_USER
 
 /* Define to 1 if you have the `arc4random_buf' function. */
 #undef HAVE_ARC4RANDOM_BUF
@@ -219,9 +207,45 @@
 /* Define to 1 if you have the `cygwin_conv_path' function. */
 #undef HAVE_CYGWIN_CONV_PATH
 
+/* Define to 1 if you have the declaration of `ACE_GETACL', and to 0 if you
+   don't. */
+#undef HAVE_DECL_ACE_GETACL
+
+/* Define to 1 if you have the declaration of `ACE_GETACLCNT', and to 0 if you
+   don't. */
+#undef HAVE_DECL_ACE_GETACLCNT
+
+/* Define to 1 if you have the declaration of `ACE_SETACL', and to 0 if you
+   don't. */
+#undef HAVE_DECL_ACE_SETACL
+
+/* Define to 1 if you have the declaration of `ACL_SYNCHRONIZE', and to 0 if
+   you don't. */
+#undef HAVE_DECL_ACL_SYNCHRONIZE
+
+/* Define to 1 if you have the declaration of `ACL_TYPE_EXTENDED', and to 0 if
+   you don't. */
+#undef HAVE_DECL_ACL_TYPE_EXTENDED
+
+/* Define to 1 if you have the declaration of `ACL_TYPE_NFS4', and to 0 if you
+   don't. */
+#undef HAVE_DECL_ACL_TYPE_NFS4
+
+/* Define to 1 if you have the declaration of `ACL_USER', and to 0 if you
+   don't. */
+#undef HAVE_DECL_ACL_USER
+
 /* Define to 1 if you have the declaration of `EXTATTR_NAMESPACE_USER', and to
    0 if you don't. */
 #undef HAVE_DECL_EXTATTR_NAMESPACE_USER
+
+/* Define to 1 if you have the declaration of `GETACL', and to 0 if you don't.
+   */
+#undef HAVE_DECL_GETACL
+
+/* Define to 1 if you have the declaration of `GETACLCNT', and to 0 if you
+   don't. */
+#undef HAVE_DECL_GETACLCNT
 
 /* Define to 1 if you have the declaration of `INT32_MAX', and to 0 if you
    don't. */
@@ -246,6 +270,10 @@
 /* Define to 1 if you have the declaration of `INTMAX_MIN', and to 0 if you
    don't. */
 #undef HAVE_DECL_INTMAX_MIN
+
+/* Define to 1 if you have the declaration of `SETACL', and to 0 if you don't.
+   */
+#undef HAVE_DECL_SETACL
 
 /* Define to 1 if you have the declaration of `SIZE_MAX', and to 0 if you
    don't. */
@@ -314,11 +342,8 @@
 /* Define to 1 if you have the `extattr_set_file' function. */
 #undef HAVE_EXTATTR_SET_FILE
 
-/* Define to 1 if you have the `facl_get' function. */
-#undef HAVE_FACL_GET
-
-/* Define to 1 if you have the `facl_set' function. */
-#undef HAVE_FACL_SET
+/* Define to 1 if you have the `facl' function. */
+#undef HAVE_FACL
 
 /* Define to 1 if you have the `fchdir' function. */
 #undef HAVE_FCHDIR
@@ -499,9 +524,6 @@
 
 /* Define to 1 if you have the `regex' library (-lregex). */
 #undef HAVE_LIBREGEX
-
-/* Define to 1 if you have the `sec' library (-lsec). */
-#undef HAVE_LIBSEC
 
 /* Define to 1 if you have the `xml2' library (-lxml2). */
 #undef HAVE_LIBXML2
