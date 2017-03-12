@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/13 21:52:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/03/12 18:52:48 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -43,6 +43,9 @@ ${PYSITELIB}/rest_framework/compat.pyo
 ${PYSITELIB}/rest_framework/decorators.py
 ${PYSITELIB}/rest_framework/decorators.pyc
 ${PYSITELIB}/rest_framework/decorators.pyo
+${PYSITELIB}/rest_framework/documentation.py
+${PYSITELIB}/rest_framework/documentation.pyc
+${PYSITELIB}/rest_framework/documentation.pyo
 ${PYSITELIB}/rest_framework/exceptions.py
 ${PYSITELIB}/rest_framework/exceptions.pyc
 ${PYSITELIB}/rest_framework/exceptions.pyo
@@ -207,6 +210,29 @@ ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap-tweaks.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/bootstrap.min.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/default.css
 ${PYSITELIB}/rest_framework/static/rest_framework/css/prettify.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/css/base.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/css/bootstrap-theme.min.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/css/bootstrap.min.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/css/font-awesome-4.0.3.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/css/highlight.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/css/jquery.json-view.min.css
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/fontawesome-webfont.eot
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/fontawesome-webfont.svg
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/fontawesome-webfont.ttf
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/fontawesome-webfont.woff
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/glyphicons-halflings-regular.eot
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/glyphicons-halflings-regular.svg
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/glyphicons-halflings-regular.ttf
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/glyphicons-halflings-regular.woff
+${PYSITELIB}/rest_framework/static/rest_framework/docs/fonts/glyphicons-halflings-regular.woff2
+${PYSITELIB}/rest_framework/static/rest_framework/docs/img/favicon.ico
+${PYSITELIB}/rest_framework/static/rest_framework/docs/img/grid.png
+${PYSITELIB}/rest_framework/static/rest_framework/docs/js/api.js
+${PYSITELIB}/rest_framework/static/rest_framework/docs/js/base.js
+${PYSITELIB}/rest_framework/static/rest_framework/docs/js/bootstrap.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/docs/js/highlight.pack.js
+${PYSITELIB}/rest_framework/static/rest_framework/docs/js/jquery-1.10.2.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/docs/js/jquery.json-view.min.js
 ${PYSITELIB}/rest_framework/static/rest_framework/fonts/glyphicons-halflings-regular.eot
 ${PYSITELIB}/rest_framework/static/rest_framework/fonts/glyphicons-halflings-regular.svg
 ${PYSITELIB}/rest_framework/static/rest_framework/fonts/glyphicons-halflings-regular.ttf
@@ -217,6 +243,7 @@ ${PYSITELIB}/rest_framework/static/rest_framework/img/glyphicons-halflings.png
 ${PYSITELIB}/rest_framework/static/rest_framework/img/grid.png
 ${PYSITELIB}/rest_framework/static/rest_framework/js/ajax-form.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/bootstrap.min.js
+${PYSITELIB}/rest_framework/static/rest_framework/js/coreapi-0.1.0.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/csrf.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/default.js
 ${PYSITELIB}/rest_framework/static/rest_framework/js/jquery-1.12.4.min.js
@@ -232,6 +259,20 @@ ${PYSITELIB}/rest_framework/templates/rest_framework/admin/list_value.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/admin/simple_list_value.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/api.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/base.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/auth/basic.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/auth/session.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/auth/token.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/document.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/index.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/interact.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/javascript-intro.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/javascript.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/python-intro.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/python.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/shell-intro.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/langs/shell.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/link.html
+${PYSITELIB}/rest_framework/templates/rest_framework/docs/sidebar.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/base.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/django_filter.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/filters/django_filter_crispyforms.html
@@ -262,6 +303,7 @@ ${PYSITELIB}/rest_framework/templates/rest_framework/login_base.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/pagination/numbers.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/pagination/previous_and_next.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/raw_data_form.html
+${PYSITELIB}/rest_framework/templates/rest_framework/schema.js
 ${PYSITELIB}/rest_framework/templates/rest_framework/vertical/checkbox.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/vertical/checkbox_multiple.html
 ${PYSITELIB}/rest_framework/templates/rest_framework/vertical/fieldset.html
