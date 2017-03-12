@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1076 2017/03/12 07:39:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1077 2017/03/12 07:42:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1305,3 +1305,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/irssi to 1.0.2 [maya 2017-03-12]
 	Updated games/lgogdownloader to 3.2 [wiz 2017-03-12]
 	Updated textproc/p5-Text-Glob to 0.11 [wiz 2017-03-12]
+	Updated net/p5-WebService-MusicBrainz to 1.0 [wiz 2017-03-12]
