@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2016/09/11 17:03:25 taca Exp $
+# $NetBSD: Makefile,v 1.15 2017/03/12 07:20:51 maya Exp $
 #
 
 DISTNAME=	ampache-3.5.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://ampache.org/downloads/
 
