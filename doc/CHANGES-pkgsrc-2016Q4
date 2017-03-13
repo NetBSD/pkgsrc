@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.19 2017/03/03 15:29:36 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.20 2017/03/13 07:41:53 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -140,3 +140,7 @@ www/apache-tomcat8: security fix
 
 Pullup ticket #5221 - requested by spz
 graphics/gd: security fix
+
+Pullup ticket #5223 - requested by sevan
+security/py-crypto: security patch
+
