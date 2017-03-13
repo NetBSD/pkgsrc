@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/13 16:05:58 taca Exp $
+
+SHA1 (minitar-cli-0.6.1.gem) = 956d019332b1d388b130ce73357d7a285c044410
+RMD160 (minitar-cli-0.6.1.gem) = 53b2ffe4c7c42fef3b9d26ca3b89c59faeb975fa
+SHA512 (minitar-cli-0.6.1.gem) = 33b5a6da265c5e232d8da91eb3f2423b276d654057e6272e85bbab48557ffa003a3d3efb8ef7853782cd9be8f502873016086211999d352dd8ff082457310d92
+Size (minitar-cli-0.6.1.gem) = 17408 bytes
