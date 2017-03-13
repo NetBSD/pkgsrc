@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/02/19 02:13:33 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2017/03/13 09:42:24 taca Exp $
 
 DISTNAME=	actionpack-${RUBY_RAILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,7 +12,7 @@ LICENSE=	mit
 # Comment out dependency in gemspec but already depends indirectly one.
 #DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 DEPENDS+=	${RUBY_ACTIVEMODEL_DEPENDS}
-#DEPENDS+=	${RUBY_PKGPREFIX}-builder>=3.0.0<3.1:../../textproc/ruby-builder30
+#DEPENDS+=	${RUBY_PKGPREFIX}-builder30>=3.0.0<3.1:../../textproc/ruby-builder30
 DEPENDS+=	${RUBY_PKGPREFIX}-rack14>=1.4.5<1.5:../../www/ruby-rack14
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-cache>=1.2<2:../../www/ruby-rack-cache
 DEPENDS+=	${RUBY_PKGPREFIX}-rack-test>=0.6.1<0.7:../../www/ruby-rack-test
