@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2014/01/25 10:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/13 05:22:05 adam Exp $
 
-DISTNAME=	v0.4
-PKGNAME=	${PYPKGPREFIX}-musicbrainz-ngs-0.4
+DISTNAME=	python-musicbrainzngs-0.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//:S/ngs/-ngs/}
 CATEGORIES=	audio net
-MASTER_SITES=	https://github.com/alastair/python-musicbrainz-ngs/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=alastair/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/alastair/python-musicbrainz-ngs
+HOMEPAGE=	https://github.com/alastair/python-musicbrainzngs
 COMMENT=	Python bindings for Musicbrainz' NGS service
 LICENSE=	2-clause-bsd
 
+GITHUB_PROJECT=	python-musicbrainzngs
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-WRKSRC=		${WRKDIR}/python-musicbrainz-ngs-0.4
-DIST_SUBDIR=	py-musicbrainz-ngs
-
-EGG_NAME=			musicbrainzngs-0.4
+EGG_NAME=	${DISTNAME:S/python-//}
 
 do-test:
 	cd ${WRKSRC} && ${PYTHONBIN} setup.py test
