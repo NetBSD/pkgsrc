@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1109 2017/03/13 09:14:44 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1110 2017/03/13 09:20:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1346,3 +1346,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/p5-PerlMagick to 7.0.5.2 [wiz 2017-03-13]
 	Updated fonts/harfbuzz to 1.4.5 [wiz 2017-03-13]
 	Updated multimedia/libmatroska to 1.4.7 [wiz 2017-03-13]
+	Updated sysutils/mc to 4.8.19 [wiz 2017-03-13]
