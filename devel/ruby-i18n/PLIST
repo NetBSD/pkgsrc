@@ -1,17 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2015/03/13 13:38:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/03/13 16:32:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/gemfiles/Gemfile.rails-3.2.x
-${GEM_LIBDIR}/gemfiles/Gemfile.rails-3.2.x.lock
 ${GEM_LIBDIR}/gemfiles/Gemfile.rails-4.0.x
-${GEM_LIBDIR}/gemfiles/Gemfile.rails-4.0.x.lock
 ${GEM_LIBDIR}/gemfiles/Gemfile.rails-4.1.x
-${GEM_LIBDIR}/gemfiles/Gemfile.rails-4.1.x.lock
 ${GEM_LIBDIR}/gemfiles/Gemfile.rails-4.2.x
-${GEM_LIBDIR}/gemfiles/Gemfile.rails-4.2.x.lock
+${GEM_LIBDIR}/gemfiles/Gemfile.rails-5.0.x
 ${GEM_LIBDIR}/gemfiles/Gemfile.rails-master
-${GEM_LIBDIR}/gemfiles/Gemfile.rails-master.lock
 ${GEM_LIBDIR}/lib/i18n.rb
 ${GEM_LIBDIR}/lib/i18n/backend.rb
 ${GEM_LIBDIR}/lib/i18n/backend/base.rb
