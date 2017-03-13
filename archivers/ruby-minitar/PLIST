@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/13 16:05:01 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Code-of-Conduct.md
+${GEM_LIBDIR}/Contributing.md
+${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/Licence.md
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/docs/bsdl.txt
+${GEM_LIBDIR}/docs/ruby.txt
+${GEM_LIBDIR}/lib/archive-tar-minitar.rb
+${GEM_LIBDIR}/lib/archive/tar/minitar.rb
+${GEM_LIBDIR}/lib/archive/tar/minitar/input.rb
+${GEM_LIBDIR}/lib/archive/tar/minitar/output.rb
+${GEM_LIBDIR}/lib/archive/tar/minitar/posix_header.rb
+${GEM_LIBDIR}/lib/archive/tar/minitar/reader.rb
+${GEM_LIBDIR}/lib/archive/tar/minitar/writer.rb
+${GEM_LIBDIR}/lib/minitar.rb
+${GEM_LIBDIR}/test/minitest_helper.rb
+${GEM_LIBDIR}/test/support/tar_test_helpers.rb
+${GEM_LIBDIR}/test/test_tar_header.rb
+${GEM_LIBDIR}/test/test_tar_input.rb
+${GEM_LIBDIR}/test/test_tar_output.rb
+${GEM_LIBDIR}/test/test_tar_reader.rb
+${GEM_LIBDIR}/test/test_tar_writer.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
