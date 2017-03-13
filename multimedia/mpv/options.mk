@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2017/03/12 11:45:28 leot Exp $
+# $NetBSD: options.mk,v 1.13 2017/03/13 10:26:24 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpv
 
@@ -52,8 +52,7 @@ WAF_CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 ###
-###
-### SDL2 support
+### SDL2 support (audio and video output)
 ###
 .if !empty(PKG_OPTIONS:Msdl2)
 WAF_CONFIGURE_ARGS+=	--enable-sdl2
@@ -62,7 +61,6 @@ WAF_CONFIGURE_ARGS+=	--enable-sdl2
 WAF_CONFIGURE_ARGS+=	--disable-sdl2
 .endif
 
-###
 ###
 ### SDL support (audio output)
 ###
