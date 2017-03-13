@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1116 2017/03/13 10:17:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1117 2017/03/13 10:18:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-cryptography to 1.8.1 [wiz 2017-03-13]
 	Updated www/py-idna to 2.5 [wiz 2017-03-13]
 	Updated time/py-parsedatetime to 2.3 [wiz 2017-03-13]
+	Updated devel/py-setuptools to 34.3.2 [wiz 2017-03-13]
