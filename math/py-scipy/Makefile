@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2017/01/25 19:48:50 adam Exp $
+# $NetBSD: Makefile,v 1.24 2017/03/13 19:42:22 adam Exp $
 
-DISTNAME=	scipy-0.18.1
+DISTNAME=	scipy-0.19.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/scipy/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.scipy.org/
@@ -115,6 +116,6 @@ do-test:
 .include "../../lang/python/distutils.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
-BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.7.1
+BUILDLINK_API_DEPENDS.py-numpy+=	${PYPKGPREFIX}-numpy>=1.8.2
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
