@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17151 2017/03/13 09:14:44 wiz Exp $
+$NetBSD: TODO,v 1.17152 2017/03/13 09:20:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1037,7 +1037,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o maxima-5.39.0
 	o mbuf-20141227
 	o mbuffer-20160228
-	o mc-4.8.19
 	o mcabber-1.0.2
 	o mcollective-2.3.2
 	o mcsim-5.6.5
