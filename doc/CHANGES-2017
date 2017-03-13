@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1123 2017/03/13 16:25:00 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1124 2017/03/13 16:33:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1362,3 +1362,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/ruby-archive-tar-minitar to 0.6.1 [taca 2017-03-13]
 	Updated devel/ruby-ffi to 1.9.18 [taca 2017-03-13]
 	Updated devel/ruby-flexmock to 2.3.5 [taca 2017-03-13]
+	Updated devel/ruby-i18n to 0.8.1 [taca 2017-03-13]
