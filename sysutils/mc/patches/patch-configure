@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2017/03/13 09:20:25 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2017-03-04 17:54:35.000000000 +0000
++++ configure
+@@ -15719,7 +15719,7 @@ fi
+ 
+ 
+ 
+-    if test x$enable_tests == xno; then
++    if test x$enable_tests = xno; then
+                 tests_msg="no"
+     else
+ 
+@@ -15786,7 +15786,7 @@ fi
+ $as_echo "$as_me: WARNING: 'Check' testing framework not found. Check your environment" >&2;}
+                 tests_msg="no ('Check' testing framework not found)"
+ 
+-                                                if test x$enable_tests == xyes; then
++                                                if test x$enable_tests = xyes; then
+                     as_fn_error $? "You explicitly specified '--enable-tests', but this requirement cannot be met." "$LINENO" 5
+                 fi
+ 
+@@ -15798,7 +15798,7 @@ $as_echo "no" >&6; }
+ $as_echo "$as_me: WARNING: 'Check' testing framework not found. Check your environment" >&2;}
+                 tests_msg="no ('Check' testing framework not found)"
+ 
+-                                                if test x$enable_tests == xyes; then
++                                                if test x$enable_tests = xyes; then
+                     as_fn_error $? "You explicitly specified '--enable-tests', but this requirement cannot be met." "$LINENO" 5
+                 fi
+ 
