@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/13 16:05:01 taca Exp $
+
+SHA1 (minitar-0.6.1.gem) = 5e2c3938cb6bb3e0d76682e08eed774ccb2f5328
+RMD160 (minitar-0.6.1.gem) = 7b352a7cb83af2a2054296e6ff7f84692bc18366
+SHA512 (minitar-0.6.1.gem) = e8a4acd8c831ef587d9571376ae111454faba1d6d4db5c88f2087c84d3dbb5487cdcac8ad47c5f717e195262b95040a9ee72cdaeaad23715b8a1270baec6ec70
+Size (minitar-0.6.1.gem) = 29184 bytes
