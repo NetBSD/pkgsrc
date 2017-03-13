@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/13 16:05:58 taca Exp $
+bin/minitar${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Contributing.md
+${GEM_LIBDIR}/History.md
+${GEM_LIBDIR}/Licence.md
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/minitar
+${GEM_LIBDIR}/docs/bsdl.txt
+${GEM_LIBDIR}/docs/ruby.txt
+${GEM_LIBDIR}/lib/minitar/cli.rb
+${GEM_LIBDIR}/lib/minitar/cli/command.rb
+${GEM_LIBDIR}/lib/minitar/cli/command/create.rb
+${GEM_LIBDIR}/lib/minitar/cli/command/extract.rb
+${GEM_LIBDIR}/lib/minitar/cli/command/help.rb
+${GEM_LIBDIR}/lib/minitar/cli/command/list.rb
+${GEM_LIBDIR}/lib/minitar/cli/commander.rb
+${GEM_LIBDIR}/test/fixtures/bad-dir.tar.gz
+${GEM_LIBDIR}/test/fixtures/spaces.tar.gz
+${GEM_LIBDIR}/test/minitest_helper.rb
+${GEM_LIBDIR}/test/support/minitar_cli_test_helper.rb
+${GEM_LIBDIR}/test/test_cli_help.rb
+${GEM_LIBDIR}/test/test_cli_list.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
