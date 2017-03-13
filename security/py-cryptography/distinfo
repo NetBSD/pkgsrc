@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.39 2017/01/28 11:15:07 wiz Exp $
+$NetBSD: distinfo,v 1.40 2017/03/13 09:42:25 wiz Exp $
 
-SHA1 (cryptography-1.7.2.tar.gz) = 2b5bc62fda71992633f83164b1a74c16a784acdf
-RMD160 (cryptography-1.7.2.tar.gz) = ca1bf254944ec846cfd0af124001601a3052bedf
-SHA512 (cryptography-1.7.2.tar.gz) = 8ddd119385064e1f8288ff318ec16f500b5c125a3811ccb306aeb2664fac495fcdd3cb5a7cbacd10156505c9526b9cdbd66860b35bbcd2f9a6bb285dd6cba8c5
-Size (cryptography-1.7.2.tar.gz) = 420867 bytes
-SHA1 (patch-src___cffi__src_openssl_callbacks.py) = 476517c3ed673a6dfe4f809622d8b8b034214528
+SHA1 (cryptography-1.8.1.tar.gz) = d15ffd42ca41260a61bc80cbeccf24e2dbf44253
+RMD160 (cryptography-1.8.1.tar.gz) = 674dd4bcdddb501e6f6907d0d874dd475f032af8
+SHA512 (cryptography-1.8.1.tar.gz) = 273c8ca4ad6c9d1151a8a731d148d02e619e14e37df25dc26030b0a90f895b88fbf4d3e320aec5ea7af4a8fcc58f720c61f48968f912c69156d4e0e794743345
+Size (cryptography-1.8.1.tar.gz) = 423560 bytes
