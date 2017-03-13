@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/03/13 15:39:53 wiz Exp $
+
+SHA1 (ncdc-1.20.tar.gz) = cc8b0543423a552a9974445659c59e2723e1452b
+RMD160 (ncdc-1.20.tar.gz) = e52eee5b8a824f2f2c12a3228a607f2271d202c4
+SHA512 (ncdc-1.20.tar.gz) = 0f20d6584aab1e69bcb3a93271a8542c5968adee5fd198b375dc258996b60ee5f642eac5d5e91c5513e367bbfd42eda80ede9e6e93ab38279c33e8da557010a7
+Size (ncdc-1.20.tar.gz) = 367688 bytes
+SHA1 (patch-configure) = 84caf3fd0ca7a561bc980c5b3557730531933c71
