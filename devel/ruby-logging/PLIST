@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2016/03/15 16:54:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/03/13 16:42:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/appenders.rb
@@ -18,6 +19,7 @@ ${GEM_LIBDIR}/examples/loggers.rb
 ${GEM_LIBDIR}/examples/mdc.rb
 ${GEM_LIBDIR}/examples/names.rb
 ${GEM_LIBDIR}/examples/rails4.rb
+${GEM_LIBDIR}/examples/reusing_layouts.rb
 ${GEM_LIBDIR}/examples/rspec_integration.rb
 ${GEM_LIBDIR}/examples/simple.rb
 ${GEM_LIBDIR}/lib/logging.rb
