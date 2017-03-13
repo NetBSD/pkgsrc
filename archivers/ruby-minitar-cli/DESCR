@@ -1,0 +1,7 @@
+minitar-cli is a pure-Ruby command-line tool that uses to provide a
+command-line tool, minitar, for working with POSIX tar(1) archive
+files.
+
+This is release 0.6, extracted from minitar(*) with modernizations.
+
+* https://halostatue.ca/minitar
