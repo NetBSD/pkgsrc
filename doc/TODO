@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17158 2017/03/13 10:18:48 wiz Exp $
+$NetBSD: TODO,v 1.17159 2017/03/13 10:20:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1327,7 +1327,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-smb-1.1.17
 	o py-softlayer-5.1.0
 	o py-spf-2.0.12t
-	o py-sphinx-rtd-theme-0.2.4
 	o py-sqlalchemy-migrate-0.10.0
 	o py-suds-0.4.1
 	o py-sybase-0.37
