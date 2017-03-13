@@ -1,17 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2015/09/25 05:44:03 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/03/13 16:07:28 taca Exp $
 
-DISTNAME=	archive-tar-minitar-0.5.2
-PKGREVISION=	2
-CATEGORIES=	graphics
+DISTNAME=	archive-tar-minitar-0.6.1
+CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# http://rubyforge.org/projects/ruwiki/
+HOMEPAGE=	https://github.com/halostatue/minitar
 COMMENT=	Pure Ruby library for handling POSIX tar archives
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 OR ruby-license
-
-# XXX: graphics/ruby-color depends on minitar but using command minitar?
-
-RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
