@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/03/13 15:39:53 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2016-12-30 11:50:53.000000000 +0000
++++ configure
+@@ -4905,7 +4905,7 @@ else
+   with_geoip=no
+ fi
+ 
+-if test "x$with_geoip" == xyes; then :
++if test "x$with_geoip" = xyes; then :
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GEOIP" >&5
