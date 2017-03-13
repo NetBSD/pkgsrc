@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/02/19 02:00:58 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/13 09:41:29 taca Exp $
 
 DISTNAME=	builder-3.0.4
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/builder/builder30/}
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
