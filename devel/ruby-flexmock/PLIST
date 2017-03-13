@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/10/04 12:12:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/03/13 16:24:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gitignore
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/doc/GoogleExample.rdoc
