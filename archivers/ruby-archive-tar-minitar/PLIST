@@ -1,13 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/13 18:07:52 taca Exp $
-bin/minitar${RUBY_SUFFIX}
-${GEM_HOME}/cache/archive-tar-minitar-${PKGVERSION}.gem
-${GEM_LIBDIR}/ChangeLog
-${GEM_LIBDIR}/Install
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/minitar
-${GEM_LIBDIR}/lib/archive/tar/minitar.rb
-${GEM_LIBDIR}/lib/archive/tar/minitar/command.rb
-${GEM_LIBDIR}/tests/tc_tar.rb
-${GEM_LIBDIR}/tests/testall.rb
-${GEM_HOME}/specifications/archive-tar-minitar-${PKGVERSION}.gemspec
+@comment $NetBSD: PLIST,v 1.5 2017/03/13 16:07:28 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/archive-tar-minitar.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+

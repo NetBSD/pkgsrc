@@ -1,1 +1,0 @@
-bin/minitar @PREFIX@/bin/minitar@RUBY_VER@
