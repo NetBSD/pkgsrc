@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.143 2017/02/25 15:31:53 wiz Exp $
+# $NetBSD: Makefile,v 1.144 2017/03/13 10:11:21 wiz Exp $
 
 DISTNAME=	inkscape-0.92.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	https://media.inkscape.org/dl/resources/file/
 EXTRACT_SUFX=	.tar.bz2
@@ -96,6 +97,7 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=7.4
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
