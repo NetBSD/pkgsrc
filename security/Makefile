@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2017/03/13 09:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.606 2017/03/13 11:26:40 leot Exp $
 #
 
 COMMENT=	Security tools
@@ -491,6 +491,7 @@ SUBDIR+=	snortsnarf
 SUBDIR+=	snow
 SUBDIR+=	softhsm
 SUBDIR+=	spiped
+SUBDIR+=	sqlmap
 SUBDIR+=	srm
 SUBDIR+=	srp_client
 SUBDIR+=	ssdeep
