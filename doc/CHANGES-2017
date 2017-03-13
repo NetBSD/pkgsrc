@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1104 2017/03/13 05:24:07 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1105 2017/03/13 09:04:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 7.7.2 [fhajny 2017-03-12]
 	Updated mail/notmuch to 0.23.7nb1 [wiz 2017-03-12]
 	Updated audio/py-musicbrainz-ngs to 0.6 [adam 2017-03-13]
+	Updated x11/xf86-video-nouveau to 1.0.14 [wiz 2017-03-13]
