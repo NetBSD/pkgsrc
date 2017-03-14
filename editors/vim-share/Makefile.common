@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.156 2017/01/19 09:54:56 markd Exp $
+# $NetBSD: Makefile.common,v 1.157 2017/03/14 15:15:08 jperkin Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk2/Makefile
@@ -27,7 +27,7 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c99
 
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
-CHECK_INTERPRETER_SKIP=	share/vim/vim74/tools/vim132
+CHECK_INTERPRETER_SKIP=	share/vim/${VIM_SUBDIR}/tools/vim132
 
 .include "options.mk"
 
