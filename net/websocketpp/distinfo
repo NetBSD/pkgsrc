@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/14 13:09:37 wiz Exp $
+
+SHA1 (websocketpp-0.7.0.tar.gz) = 29a8cd91adcdc86b379efc8c0c08dc9d99bead11
+RMD160 (websocketpp-0.7.0.tar.gz) = 3f81cd3c12c69cbcc0cfb0d9ccf5860fd7c14f75
+SHA512 (websocketpp-0.7.0.tar.gz) = 91a86d4f5120db3f474169bb146f865f82167b1e9eedabec8793b31005e4ce3d22083283bc1b9f9e37fa0da835addcb2b68260a27c753852c06b3b1bb2f3c12e
+Size (websocketpp-0.7.0.tar.gz) = 682271 bytes
