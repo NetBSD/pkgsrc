@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2016/02/26 10:24:12 jperkin Exp $
+# $NetBSD: options.mk,v 1.11 2017/03/14 15:34:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
 PKG_SUPPORTED_OPTIONS+=	debug x11
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-x
 BUILDLINK_DEPMETHOD.libXt=	build
 .  include "../../x11/libXt/buildlink3.mk"
 .else
-CONFIGURE_ARGS=		--without-x
+CONFIGURE_ARGS+=	--without-x
 .endif
 
 .if !empty(PKG_OPTIONS:Mlaunchd)
