@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1152 2017/03/13 15:40:24 wiz Exp $
+# $NetBSD: Makefile,v 1.1153 2017/03/14 13:09:55 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -840,6 +840,7 @@ SUBDIR+=	wakeup
 SUBDIR+=	walker
 SUBDIR+=	wap-utils
 SUBDIR+=	waste
+SUBDIR+=	websocketpp
 SUBDIR+=	wget
 SUBDIR+=	wgetpaste
 SUBDIR+=	whatmask
