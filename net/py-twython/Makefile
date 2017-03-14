@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/14 19:28:31 adam Exp $
 
-DISTNAME=	twython-3.1.2
+DISTNAME=	twython-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/twython/}
 
@@ -15,5 +14,5 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib>=0.4.0:../../security/py-requests-oauthlib
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
