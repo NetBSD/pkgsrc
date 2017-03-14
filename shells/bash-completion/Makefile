@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/05/10 12:04:00 imil Exp $
+# $NetBSD: Makefile,v 1.9 2017/03/14 14:51:28 jperkin Exp $
 #
 # Note to packagers:
 # packages installing additional completion files should drop
@@ -6,6 +6,7 @@
 # with the name of the package as file name.
 
 DISTNAME=	bash-completion-2.1
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	http://bash-completion.alioth.debian.org/files/
 
