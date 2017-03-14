@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/06/08 19:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/03/14 14:41:27 schmonz Exp $
 
-DISTNAME=	ack-2.14
+DISTNAME=	ack-2.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
