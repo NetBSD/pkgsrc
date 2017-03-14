@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1126 2017/03/13 19:43:03 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1127 2017/03/14 13:10:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1365,3 +1365,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-i18n to 0.8.1 [taca 2017-03-13]
 	Updated devel/ruby-logging to 2.2.0 [taca 2017-03-13]
 	Updated math/py-scipy to 0.19.0 [adam 2017-03-13]
+	Added net/websocketpp version 0.7.0 [wiz 2017-03-14]
