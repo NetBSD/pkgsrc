@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/03/11 17:22:45 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/14 15:38:01 sborrill Exp $
 
-DISTNAME=	e2guardian-3.5.0
+DISTNAME=	e2guardian-3.5.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=e2guardian/}
 GITHUB_PROJECT=	e2guardian
