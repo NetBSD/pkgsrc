@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1131 2017/03/14 14:12:26 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.1132 2017/03/14 14:41:33 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1371,3 +1371,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-werkzeug to 0.12 [kleink 2017-03-14]
 	Updated www/py-werkzeug-docs to 0.12 [kleink 2017-03-14]
 	Updated www/py-flask-admin to 1.5.0 [kleink 2017-03-14]
+	Updated textproc/p5-ack to 2.16 [schmonz 2017-03-14]
