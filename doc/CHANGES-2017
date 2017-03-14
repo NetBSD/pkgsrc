@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1129 2017/03/14 13:37:01 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.1130 2017/03/14 13:49:44 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1368,3 +1368,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/websocketpp version 0.7.0 [wiz 2017-03-14]
 	Added databases/leveldb version 1.20 [wiz 2017-03-14]
 	Updated textproc/py-markupsafe to 1.0 [kleink 2017-03-14]
+	Updated www/py-werkzeug to 0.12 [kleink 2017-03-14]
+	Updated www/py-werkzeug-docs to 0.12 [kleink 2017-03-14]
