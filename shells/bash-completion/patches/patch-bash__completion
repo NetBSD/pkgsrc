@@ -1,9 +1,19 @@
-$NetBSD: patch-bash__completion,v 1.1 2013/05/10 12:01:51 imil Exp $
+$NetBSD: patch-bash__completion,v 1.2 2017/03/14 14:51:28 jperkin Exp $
 
 Added pkgsrc and pkg_install completions
+Pull in upstream fix for bug 1289597.
 
 --- bash_completion.orig	2013-04-05 10:55:51.000000000 +0000
 +++ bash_completion
+@@ -707,7 +707,7 @@ _init_completion()
+         fi
+     done
+ 
+-    [[ $cword -eq 0 ]] && return 1
++    [[ $cword -le 0 ]] && return 1
+     prev=${words[cword-1]}
+ 
+     [[ ${split-} ]] && _split_longopt && split=true
 @@ -1365,6 +1365,34 @@ _terms()
      extract patch configure build install reinstall deinstall clean
      clean-depends kernel buildworld' make
