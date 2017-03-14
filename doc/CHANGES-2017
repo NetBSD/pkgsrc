@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1135 2017/03/14 15:38:46 sborrill Exp $
+$NetBSD: CHANGES-2017,v 1.1136 2017/03/14 19:18:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1375,3 +1375,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask-sqlalchemy to 2.2 [kleink 2017-03-14]
 	Updated shells/bash-completion to 2.1nb1 [jperkin 2017-03-14]
 	Updated www/e2guardian to 3.5.1 [sborrill 2017-03-14]
+	Updated audio/eyeD3 to 0.7.11 [adam 2017-03-14]
