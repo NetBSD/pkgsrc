@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/03/11 17:22:45 prlw1 Exp $
+$NetBSD: distinfo,v 1.3 2017/03/14 15:38:01 sborrill Exp $
 
-SHA1 (e2guardian-3.5.0.tar.gz) = 4d6b7bec574be82cc443a40683be6cabdaca2185
-RMD160 (e2guardian-3.5.0.tar.gz) = ced0c0583f9ea408703654bf2c022f7703ca87e7
-SHA512 (e2guardian-3.5.0.tar.gz) = 44498dad84a048c4b9e2d9416b8d6b7921959d0447633f991c85bac8740f7f59fccf0d0f5bbd8746d6d1748efbcbde82c8397dea6dffe125bbfc8626860f9ffb
-Size (e2guardian-3.5.0.tar.gz) = 529493 bytes
+SHA1 (e2guardian-3.5.1.tar.gz) = ba9190e35c937e934273d1f64aa2f08dbcc489ad
+RMD160 (e2guardian-3.5.1.tar.gz) = 50b1dd13f59d3c3159ebe112560d145ecb016bfe
+SHA512 (e2guardian-3.5.1.tar.gz) = deef797c7ed8ef36c122ab232581c7b1aee91ec7286a26c6b392465a2523dfaf74e0c5ed969f5eef04a10cede3c64b6cb3bcebd8969bce032298bec96ae37b30
+Size (e2guardian-3.5.1.tar.gz) = 529677 bytes
