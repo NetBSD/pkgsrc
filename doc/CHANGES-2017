@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1133 2017/03/14 14:49:51 kleink Exp $
+$NetBSD: CHANGES-2017,v 1.1134 2017/03/14 14:51:36 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1373,3 +1373,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask-admin to 1.5.0 [kleink 2017-03-14]
 	Updated textproc/p5-ack to 2.16 [schmonz 2017-03-14]
 	Updated www/py-flask-sqlalchemy to 2.2 [kleink 2017-03-14]
+	Updated shells/bash-completion to 2.1nb1 [jperkin 2017-03-14]
