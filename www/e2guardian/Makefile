@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/03/14 15:38:01 sborrill Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/15 13:42:03 sborrill Exp $
 
 DISTNAME=	e2guardian-3.5.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=e2guardian/}
 GITHUB_PROJECT=	e2guardian
@@ -46,6 +47,7 @@ CONFIGURE_ARGS+=	--with-proxyuser=${E2G_USER}
 CONFIGURE_ARGS+=	--with-proxygroup=${E2G_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/${E2G_LOG}
+CONFIGURE_ARGS+=	--enable-ntlm
 
 .include "options.mk"
 
