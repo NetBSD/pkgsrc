@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1143 2017/03/15 18:53:04 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.1144 2017/03/15 19:39:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1383,3 +1383,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added finance/py-quickbooks version 0.6.0 [darcy 2017-03-15]
 	Added textproc/docbook2odf version 0.244 [bsiegert 2017-03-15]
 	Updated security/mozilla-rootcerts to 1.0.20170121nb2 [jperkin 2017-03-15]
+	Updated lang/go to 1.8 [bsiegert 2017-03-15]
