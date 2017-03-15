@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2016/09/14 20:43:55 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/03/15 14:07:12 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -250,6 +250,7 @@ include/gnuradio/blocks/tagged_stream_multiply_length.h
 include/gnuradio/blocks/tagged_stream_mux.h
 include/gnuradio/blocks/tagged_stream_to_pdu.h
 include/gnuradio/blocks/tags_strobe.h
+include/gnuradio/blocks/tcp_server_sink.h
 include/gnuradio/blocks/test_tag_variable_rate_ff.h
 include/gnuradio/blocks/threshold_ff.h
 include/gnuradio/blocks/throttle.h
@@ -1108,6 +1109,7 @@ share/gnuradio/grc/blocks/blocks_moving_average_xx.xml
 share/gnuradio/grc/blocks/blocks_multiply_by_tag_value_cc.xml
 share/gnuradio/grc/blocks/blocks_multiply_conjugate_cc.xml
 share/gnuradio/grc/blocks/blocks_multiply_const_vxx.xml
+share/gnuradio/grc/blocks/blocks_multiply_const_xx.xml
 share/gnuradio/grc/blocks/blocks_multiply_matrix_xx.xml
 share/gnuradio/grc/blocks/blocks_multiply_xx.xml
 share/gnuradio/grc/blocks/blocks_mute_xx.xml
@@ -1159,6 +1161,7 @@ share/gnuradio/grc/blocks/blocks_tagged_stream_multiply_length.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_mux.xml
 share/gnuradio/grc/blocks/blocks_tagged_stream_to_pdu.xml
 share/gnuradio/grc/blocks/blocks_tags_strobe.xml
+share/gnuradio/grc/blocks/blocks_tcp_server_sink.xml
 share/gnuradio/grc/blocks/blocks_test_tag_variable_rate_ff.xml
 share/gnuradio/grc/blocks/blocks_threshold_ff.xml
 share/gnuradio/grc/blocks/blocks_throttle.xml
