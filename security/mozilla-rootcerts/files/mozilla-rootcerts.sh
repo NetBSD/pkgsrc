@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.12 2017/03/03 15:46:27 bsiegert Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.13 2017/03/15 18:52:56 jperkin Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -188,9 +188,10 @@ extract)
 	}'
 	;;
 install)
-	# quell warnings for a missing config file
-	touch $destdir$conffile
-
+	if [ `uname -s` = "NetBSD" ]; then
+		# quell warnings for a missing config file
+		touch $destdir$conffile
+	fi
 	if [ ! -d $destdir$SSLDIR ]; then
 		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR does not exist, aborting."
 		exit 1
