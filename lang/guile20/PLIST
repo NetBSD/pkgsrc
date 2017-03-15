@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/09/28 09:04:41 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/03/15 13:56:22 wiz Exp $
 bin/guild
 bin/guile
 bin/guile-config
@@ -395,7 +395,7 @@ lib/libguile-2.0.${GUILE_LIBNAME}-gdb.scm
 lib/libguile-2.0.la
 lib/libguilereadline-v-18.la
 lib/pkgconfig/guile-2.0.pc
-${PKGMANDIR}/man1/guile.1
+man/man1/guile.1
 share/aclocal/guile.m4
 share/guile/2.0/guile-procedures.txt
 share/guile/2.0/ice-9/and-let-star.scm
