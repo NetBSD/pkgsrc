@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/11/24 13:43:35 mef Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/03/15 14:07:12 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -1701,6 +1701,9 @@ share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tagged__stream__to__p
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tags__strobe-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tags__strobe.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tags__strobe.js
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tcp__server__sink-members.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tcp__server__sink.html
+share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1tcp__server__sink.js
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1test__tag__variable__rate__ff-members.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1test__tag__variable__rate__ff.html
 share/doc/gnuradio-${PKGVERSION}/html/classgr_1_1blocks_1_1test__tag__variable__rate__ff.js
@@ -8530,6 +8533,11 @@ share/doc/gnuradio-${PKGVERSION}/html/tags__strobe_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/tags__strobe_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/tags__strobe_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/tags__strobe_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/tcp__server__sink_8h.html
+share/doc/gnuradio-${PKGVERSION}/html/tcp__server__sink_8h__incl.map
+share/doc/gnuradio-${PKGVERSION}/html/tcp__server__sink_8h__incl.md5
+share/doc/gnuradio-${PKGVERSION}/html/tcp__server__sink_8h__incl.png
+share/doc/gnuradio-${PKGVERSION}/html/tcp__server__sink_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/test__tag__variable__rate__ff_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/test__tag__variable__rate__ff_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/test__tag__variable__rate__ff_8h__incl.md5
@@ -9491,6 +9499,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tagged__stream__multip
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tagged__stream__mux.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tagged__stream__to__pdu.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tags__strobe.xml
+share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1tcp__server__sink.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1test__tag__variable__rate__ff.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1threshold__ff.xml
 share/doc/gnuradio-${PKGVERSION}/xml/classgr_1_1blocks_1_1throttle.xml
@@ -10935,6 +10944,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/tagged__stream__mux_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tagged__stream__to__pdu_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tags_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/tags__strobe_8h.xml
+share/doc/gnuradio-${PKGVERSION}/xml/tcp__server__sink_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/test__tag__variable__rate__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/thread_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/thread__affinity_8dox.xml
