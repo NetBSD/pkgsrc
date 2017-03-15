@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/07/12 11:36:47 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/03/15 14:07:12 mef Exp $
 bin/gr_constellation_plot
 bin/gr_psd_plot_b
 bin/gr_psd_plot_c
@@ -112,6 +112,9 @@ ${PYSITELIB}/gnuradio/qtgui/qtgui_swig.pyo
 ${PYSITELIB}/gnuradio/qtgui/range.py
 ${PYSITELIB}/gnuradio/qtgui/range.pyc
 ${PYSITELIB}/gnuradio/qtgui/range.pyo
+${PYSITELIB}/gnuradio/qtgui/util.py
+${PYSITELIB}/gnuradio/qtgui/util.pyc
+${PYSITELIB}/gnuradio/qtgui/util.pyo
 share/doc/gnuradio-${PKGVERSION}/README.qtgui
 share/gnuradio/examples/gr-qtgui.conf
 share/gnuradio/examples/qt-gui/display_qt
