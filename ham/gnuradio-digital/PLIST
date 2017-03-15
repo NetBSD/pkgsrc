@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/07/12 11:36:47 mef Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/03/15 14:07:12 mef Exp $
 include/gnuradio/digital/additive_scrambler_bb.h
 include/gnuradio/digital/api.h
 include/gnuradio/digital/binary_slicer_fb.h
@@ -88,8 +88,12 @@ include/gnuradio/digital/simple_correlator.h
 include/gnuradio/digital/simple_framer.h
 include/gnuradio/digital/simple_framer_sync.h
 include/gnuradio/swig/constellation.i
-include/gnuradio/swig/digital_swig.i
-include/gnuradio/swig/digital_swig_doc.i
+include/gnuradio/swig/digital_swig0.i
+include/gnuradio/swig/digital_swig0_doc.i
+include/gnuradio/swig/digital_swig1.i
+include/gnuradio/swig/digital_swig1_doc.i
+include/gnuradio/swig/digital_swig2.i
+include/gnuradio/swig/digital_swig2_doc.i
 include/gnuradio/swig/ofdm_equalizer.i
 include/gnuradio/swig/packet_header.i
 lib/libgnuradio-digital.so
@@ -98,7 +102,9 @@ lib/pkgconfig/gnuradio-digital.pc
 ${PYSITELIB}/gnuradio/digital/__init__.py
 ${PYSITELIB}/gnuradio/digital/__init__.pyc
 ${PYSITELIB}/gnuradio/digital/__init__.pyo
-${PYSITELIB}/gnuradio/digital/_digital_swig.so
+${PYSITELIB}/gnuradio/digital/_digital_swig0.so
+${PYSITELIB}/gnuradio/digital/_digital_swig1.so
+${PYSITELIB}/gnuradio/digital/_digital_swig2.so
 ${PYSITELIB}/gnuradio/digital/bpsk.py
 ${PYSITELIB}/gnuradio/digital/bpsk.pyc
 ${PYSITELIB}/gnuradio/digital/bpsk.pyo
@@ -114,6 +120,15 @@ ${PYSITELIB}/gnuradio/digital/crc.pyo
 ${PYSITELIB}/gnuradio/digital/digital_swig.py
 ${PYSITELIB}/gnuradio/digital/digital_swig.pyc
 ${PYSITELIB}/gnuradio/digital/digital_swig.pyo
+${PYSITELIB}/gnuradio/digital/digital_swig0.py
+${PYSITELIB}/gnuradio/digital/digital_swig0.pyc
+${PYSITELIB}/gnuradio/digital/digital_swig0.pyo
+${PYSITELIB}/gnuradio/digital/digital_swig1.py
+${PYSITELIB}/gnuradio/digital/digital_swig1.pyc
+${PYSITELIB}/gnuradio/digital/digital_swig1.pyo
+${PYSITELIB}/gnuradio/digital/digital_swig2.py
+${PYSITELIB}/gnuradio/digital/digital_swig2.pyc
+${PYSITELIB}/gnuradio/digital/digital_swig2.pyo
 ${PYSITELIB}/gnuradio/digital/generic_mod_demod.py
 ${PYSITELIB}/gnuradio/digital/generic_mod_demod.pyc
 ${PYSITELIB}/gnuradio/digital/generic_mod_demod.pyo
