@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/03/15 18:43:41 bsiegert Exp $
+
+SHA1 (docbook2odf-0.244.tar.gz) = 299388451c53d135c8f9bbde6f99c7b861d9efad
+RMD160 (docbook2odf-0.244.tar.gz) = 1b011cb9cdffe6e1e3814f242ec5ce9feb728009
+SHA512 (docbook2odf-0.244.tar.gz) = 050a45c38c74b424a283e599a0a64169531b024ef7c69e0df97b816cc184f4c0671ea22ecd9d1387f64edaf05e91b6382784693136f210bdb09aa6fe7c2a7910
+Size (docbook2odf-0.244.tar.gz) = 567200 bytes
+SHA1 (patch-utils_docbook2odf) = 5305e5f69da38faf118ca8cee1f59e89ebe5255c
