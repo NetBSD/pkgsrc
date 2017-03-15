@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2017/03/13 15:39:53 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2017/03/15 09:35:19 wiz Exp $
 
 Fix unportable test(1) operator.
+https://dev.yorhel.nl/ncdc/bug/85
 
 --- configure.orig	2016-12-30 11:50:53.000000000 +0000
 +++ configure
