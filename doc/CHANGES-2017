@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1144 2017/03/15 19:39:57 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.1145 2017/03/15 20:26:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1384,3 +1384,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/docbook2odf version 0.244 [bsiegert 2017-03-15]
 	Updated security/mozilla-rootcerts to 1.0.20170121nb2 [jperkin 2017-03-15]
 	Updated lang/go to 1.8 [bsiegert 2017-03-15]
+	Updated audio/py-audioread to 2.1.4 [adam 2017-03-15]
