@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/16 22:42:56 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/multipledispatch/__init__.py
+${PYSITELIB}/multipledispatch/__init__.pyo
+${PYSITELIB}/multipledispatch/__init__.pyc
+${PYSITELIB}/multipledispatch/conflict.pyo
+${PYSITELIB}/multipledispatch/conflict.pyc
+${PYSITELIB}/multipledispatch/core.pyo
+${PYSITELIB}/multipledispatch/core.pyc
+${PYSITELIB}/multipledispatch/dispatcher.pyo
+${PYSITELIB}/multipledispatch/dispatcher.pyc
+${PYSITELIB}/multipledispatch/utils.pyo
+${PYSITELIB}/multipledispatch/utils.pyc
+${PYSITELIB}/multipledispatch/conflict.py
+${PYSITELIB}/multipledispatch/core.py
+${PYSITELIB}/multipledispatch/dispatcher.py
+${PYSITELIB}/multipledispatch/utils.py
