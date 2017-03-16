@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.69 2017/02/28 15:20:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2017/03/16 21:59:13 prlw1 Exp $
 
-DISTNAME=	opencv-3.1.0
-PKGREVISION=	6
+DISTNAME=	opencv-3.2.0
 CATEGORIES=	graphics devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=opencv/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	anthony.mallet@laas.fr
-HOMEPAGE=	http://code.opencv.org/projects/OpenCV/wiki/WikiStart
+HOMEPAGE=	http://opencv.org/
 COMMENT=	Library for computer vision problems
 LICENSE=	modified-bsd
 
@@ -20,7 +19,8 @@ INSTALLATION_DIRS+=	share/doc/opencv/papers
 INSTALLATION_DIRS+=	share/doc/opencv/ref/pics
 INSTALLATION_DIRS+=	share/OpenCV/haarcascades
 
-PKGCONFIG_OVERRIDE+=	opencv.pc.cmake.in
+PKGCONFIG_OVERRIDE+=		unix-install/opencv.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-configure
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	samples/python/*.py
