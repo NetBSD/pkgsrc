@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1155 2017/03/16 14:13:56 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1156 2017/03/16 14:34:51 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1395,3 +1395,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-LibXML to 2.0129 [wiz 2017-03-16]
 	Updated print/gutenprint-lib to 5.2.12 [gdt 2017-03-16]
 	Updated lang/guile22 to 2.2.0nb1 [wiz 2017-03-16]
+	Updated net/mitmproxy to 0.17nb1 [leot 2017-03-16]
