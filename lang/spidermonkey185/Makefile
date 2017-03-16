@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/11/16 13:13:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/16 10:18:52 fhajny Exp $
 #
 
 DISTNAME=	js185-1.0.0
@@ -21,6 +21,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-threadsafe
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--with-system-nspr
+
+PYTHON_VERSIONS_ACCEPTED=	27
 
 SUBST_CLASSES+=			incdir
 SUBST_STAGE.incdir=		pre-configure
