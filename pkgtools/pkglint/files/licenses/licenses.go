@@ -51,7 +51,7 @@ func (cond *Condition) Walk(callback func(*Condition)) {
 	callback(cond)
 }
 
-//go:generate go tool yacc -p liyy -o licensesyacc.go -v licensesyacc.log licenses.y
+//go:generate goyacc -p liyy -o licensesyacc.go -v licensesyacc.log licenses.y
 
 type licenseLexer struct {
 	repl   *textproc.PrefixReplacer
