@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/02/02 18:35:56 nils Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/16 21:08:35 maya Exp $
 #
 
 DISTNAME=	fail2ban-0.9.6
@@ -92,6 +92,8 @@ SUBST_SED.ostype=	-e "s,\#before = paths-distro.conf,before = paths-netbsd.conf,
 SUBST_SED.ostype=	-e "s,\#before = paths-distro.conf,before = paths-osx.conf,g"
 .elif ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 SUBST_SED.ostype=	-e "s,\#before = paths-distro.conf,before = paths-freebsd.conf,g"
+.else
+SUBST_SED.ostype=	-e 's,this cant be empty,,g'
 .endif
 
 
