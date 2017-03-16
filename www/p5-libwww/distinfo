@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.51 2017/03/08 11:46:09 wiz Exp $
+$NetBSD: distinfo,v 1.52 2017/03/16 14:57:51 wiz Exp $
 
-SHA1 (libwww-perl-6.23.tar.gz) = eca70cdee08e6c88a42d25e67eb1844552954c0f
-RMD160 (libwww-perl-6.23.tar.gz) = a73e03c56ea8ec96c04e5a86885f308c0712a46e
-SHA512 (libwww-perl-6.23.tar.gz) = c6ab7177078c586272f59377225fdefbecc4ce5edf469c9274990c76f44101adfa5420b762ed115dc5fd44cbd95590e61ba6bdd8c18ebd41f6ca282008bd0287
-Size (libwww-perl-6.23.tar.gz) = 160294 bytes
+SHA1 (libwww-perl-6.24.tar.gz) = f3eb59ce251c59efba405519c76fa83a3503cfa2
+RMD160 (libwww-perl-6.24.tar.gz) = b4cf9130ad2dd8f0cb5242c00fa06ad6bc997b99
+SHA512 (libwww-perl-6.24.tar.gz) = 433e62b802f770b1d7c46bbe3a3b16c0e4423ded77b04f394a49340da98a97c74f8332ffc29c1bc0765cdc8277a2fe110a371b6b0be0f9e94ed104273ee0a1d1
+Size (libwww-perl-6.24.tar.gz) = 161940 bytes
