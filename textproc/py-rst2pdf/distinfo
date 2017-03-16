@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/16 20:00:39 darcy Exp $
+
+SHA1 (rst2pdf-0.93.tar.gz) = 2172a10262bc390fea07c7a69241eb4a375c5e0b
+RMD160 (rst2pdf-0.93.tar.gz) = c155440e9ca857a94a5235342959718ebf9c5c77
+SHA512 (rst2pdf-0.93.tar.gz) = 75423b75504d31995d449f4e90fa73ce755bf167d18a38f42f73fe6d76b4d0e5c38bc28cd2cce5a3e485a0a8c5529667d689dc4b41a125c14c9e023b7d6ff7d3
+Size (rst2pdf-0.93.tar.gz) = 1301775 bytes
