@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1165 2017/03/16 21:59:42 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.1166 2017/03/16 22:44:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1413,3 +1413,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated pkgtools/pkglint to 5.4.18 [bsiegert 2017-03-16]
     Added textproc/py-pdfrw version 0.2 [darcy 2017-03-16]
 	Updated graphics/opencv to 3.2.0 [prlw1 2017-03-16]
+	Added devel/py-multipledispatch version 0.4.9 [minskim 2017-03-16]
