@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2017/01/01 14:43:50 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/03/16 14:34:41 leot Exp $
 
 DISTNAME=	mitmproxy-0.17
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mitmproxy/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -31,6 +32,7 @@ DEPENDS+=	${PYPKGPREFIX}-lxml>=3.5.0:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.5:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-pyparsing>=2.1:../../devel/py-pyparsing
 DEPENDS+=	${PYPKGPREFIX}-pyperclip>=1.5.22:../../x11/py-pyperclip
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.9.1:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six>=1.10.0:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3.0:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3.1:../../devel/py-urwid
