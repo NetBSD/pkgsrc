@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1164 2017/03/16 20:10:02 darcy Exp $
+$NetBSD: CHANGES-2017,v 1.1165 2017/03/16 21:59:42 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1412,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-rst2pdf version 0.93 [darcy 2017-03-16]
 	Updated pkgtools/pkglint to 5.4.18 [bsiegert 2017-03-16]
     Added textproc/py-pdfrw version 0.2 [darcy 2017-03-16]
+	Updated graphics/opencv to 3.2.0 [prlw1 2017-03-16]
