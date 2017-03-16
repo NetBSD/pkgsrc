@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2013/05/16 06:02:58 richard Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/16 12:04:25 wiz Exp $
 lib/xorg/modules/drivers/ati_drv.la
 lib/xorg/modules/drivers/radeon_drv.la
 man/man4/ati.4
 man/man4/radeon.4
+share/X11/xorg.conf.d/10-radeon.conf
