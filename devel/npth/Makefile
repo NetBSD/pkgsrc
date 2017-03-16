@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/03/16 15:01:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/03/16 15:08:45 wiz Exp $
 
 DISTNAME=	npth-1.3
 CATEGORIES=	devel
@@ -15,6 +15,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
 
+# https://bugs.gnupg.org/gnupg/issue2998
 CFLAGS.NetBSD+=	-pthread
 
 post-build:
