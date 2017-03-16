@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.912 2017/03/15 18:43:41 bsiegert Exp $
+# $NetBSD: Makefile,v 1.913 2017/03/16 20:00:39 darcy Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -763,6 +763,7 @@ SUBDIR+=	py-pyquery
 SUBDIR+=	py-pytoml
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-relatorio
+SUBDIR+=	py-rst2pdf
 SUBDIR+=	py-snowballstemmer
 SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-rtd-theme
