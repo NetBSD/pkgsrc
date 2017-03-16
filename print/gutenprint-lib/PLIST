@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/09/07 00:20:33 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/03/16 13:17:54 gdt Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -86,6 +86,8 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k3.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k34.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k3v.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k3v10.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k3v10a.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k3v10b.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/pro_ultrachrome_k3v4.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/standard.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/standard_gen0.xml
@@ -94,6 +96,7 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/ultrachrome.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/wf40.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/wf500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/x80.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/xp100.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/artisan.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/b500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cd.xml
@@ -149,6 +152,8 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/media/pro_ultrachrome.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/pro_ultrachrome_k3.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/pro_ultrachrome_k3v.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/pro_ultrachrome_k3v10.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/media/pro_ultrachrome_k3v10a.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/media/pro_ultrachrome_k3v10b.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/r800.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/standard.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/standard_gen0.xml
@@ -184,6 +189,12 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_12.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_120.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_121.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_122.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_123.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_124.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_125.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_126.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_127.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_128.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_13.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_14.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_15.xml
@@ -301,24 +312,24 @@ share/gutenprint/doc/gutenprint-users-manual.odt
 share/gutenprint/doc/gutenprint-users-manual.pdf
 share/gutenprint/doc/gutenprint.pdf
 share/gutenprint/doc/reference-html/book1.html
-share/gutenprint/doc/reference-html/c1715.html
-share/gutenprint/doc/reference-html/c194.html
-share/gutenprint/doc/reference-html/c1966.html
-share/gutenprint/doc/reference-html/c200.html
-share/gutenprint/doc/reference-html/c39.html
-share/gutenprint/doc/reference-html/c464.html
-share/gutenprint/doc/reference-html/c48.html
+share/gutenprint/doc/reference-html/c1714.html
+share/gutenprint/doc/reference-html/c193.html
+share/gutenprint/doc/reference-html/c1965.html
+share/gutenprint/doc/reference-html/c199.html
+share/gutenprint/doc/reference-html/c38.html
+share/gutenprint/doc/reference-html/c463.html
+share/gutenprint/doc/reference-html/c47.html
 share/gutenprint/doc/reference-html/docbook.css
 share/gutenprint/doc/reference-html/f14.html
 share/gutenprint/doc/reference-html/gpl-terms.html
 share/gutenprint/doc/reference-html/gpl.html
 share/gutenprint/doc/reference-html/ln10.html
-share/gutenprint/doc/reference-html/x1667.html
-share/gutenprint/doc/reference-html/x1732.html
-share/gutenprint/doc/reference-html/x271.html
-share/gutenprint/doc/reference-html/x67.html
-share/gutenprint/doc/reference-html/x79.html
-share/gutenprint/doc/reference-html/x953.html
+share/gutenprint/doc/reference-html/x1666.html
+share/gutenprint/doc/reference-html/x1731.html
+share/gutenprint/doc/reference-html/x270.html
+share/gutenprint/doc/reference-html/x66.html
+share/gutenprint/doc/reference-html/x78.html
+share/gutenprint/doc/reference-html/x952.html
 share/gutenprint/samples/colorbars4.png
 share/gutenprint/samples/colorsweep.png
 share/gutenprint/samples/extended.sample
