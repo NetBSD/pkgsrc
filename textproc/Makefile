@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.913 2017/03/16 20:00:39 darcy Exp $
+# $NetBSD: Makefile,v 1.914 2017/03/16 20:07:05 darcy Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -755,6 +755,7 @@ SUBDIR+=	py-natsort
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-openpyxl
 SUBDIR+=	py-pdf-parser
+SUBDIR+=	py-pdfrw
 SUBDIR+=	py-phonenumbers
 SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
