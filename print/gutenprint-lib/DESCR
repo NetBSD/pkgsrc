@@ -11,4 +11,4 @@ of nearly photographic output quality.  Earlier versions of Gutenprint
 were called gimp-print.
 
 This package contains the base library, the Epson utility escputil,
-cups support, and a gimp2 plugin.
+cups support, and a gimp plugin.
