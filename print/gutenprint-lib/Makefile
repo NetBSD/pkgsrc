@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2017/02/12 06:25:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2017/03/16 13:17:54 gdt Exp $
 
-VERSION=	5.2.11
+VERSION=	5.2.12
 DISTNAME=	gutenprint-${VERSION}
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,9 +26,6 @@ USE_TOOLS+=		gmake lex pkg-config perl:run
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 
-# gcc 3.3.3 either can't compile this, or needs huge amounts of RAM (0.5G+).
-# Observed on NetBSD/i386 3 and confirmed with upstream.  Apparently it's
-# just 3.3.3 - there are no known issues with 2.95 or 4.x.
 USE_LANGUAGES+=		c99
 
 GNU_CONFIGURE=		YES
@@ -73,20 +69,12 @@ CONFIGURE_ARGS+=	--disable-translated-cups-ppds
 # the effort.
 CONFIGURE_ARGS+= --enable-escputil
 
-# test pattern generator.  Small, so let it be built
+# test pattern generator.  Small, so let it be built.
 #CONFIGURE_ARGS+=	--enable-test
 #CONFIGURE_ARGS+=	--enable-testpattern
 
 # CUPS support, on by default.  This should be in a split package.
 #CONFIGURE_ARGS+=	--with-cups
-
-# 201105: Reevaluate what this means and whether we want it.
-# Foomatic support.  This should be in a split package, if at all.
-CONFIGURE_ARGS+=	--without-foomatic
-CONFIGURE_ARGS+=	--without-foomatic3
-
-# Ghostscript support.  This should be in a split package, if at all.
-CONFIGURE_ARGS+=	--without-ghostscript
 
 # Something in gutenprint seems to use readline, but it's not clear
 # why, so just disable it to reduce dependencies.
@@ -98,9 +86,6 @@ CONFIGURE_ARGS+=	--without-readline
 
 # XXX Make command.types be a CONF_FILE
 
-# Tests fail unless the package is installed because they use
-# /usr/pkg/libexec/cups/filter/rastertogutenprint.5.2 rather than
-# the pre-installed version.  Reported upstream 20150910.
 TEST_TARGET=		check
 
 # A libintl is optional in gutenprint.
