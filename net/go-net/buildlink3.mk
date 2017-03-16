@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2016/09/11 08:25:40 bsiegert Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2017/03/16 19:14:19 bsiegert Exp $
 
 BUILDLINK_TREE+=	go-net
 
@@ -8,7 +8,7 @@ GO_NET_BUILDLINK3_MK:=
 BUILDLINK_CONTENTS_FILTER.go-net= ${EGREP} gopkg/
 BUILDLINK_DEPMETHOD.go-net?=	build
 
-BUILDLINK_API_DEPENDS.go-net+=	go-net>=20160910
+BUILDLINK_API_DEPENDS.go-net+=	go-net>=20170308
 BUILDLINK_PKGSRCDIR.go-net?=	../../net/go-net
 
 .include "../../textproc/go-text/buildlink3.mk"
