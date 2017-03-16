@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.510 2017/01/18 23:05:43 rillig Exp $
+# $NetBSD: Makefile,v 1.511 2017/03/16 20:03:22 bsiegert Exp $
 
-PKGNAME=	pkglint-5.4.17
+PKGNAME=	pkglint-5.4.18
 DISTFILES=	# none
 CATEGORIES=	pkgtools
 
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Verifier for NetBSD packages
 LICENSE=	2-clause-bsd
 CONFLICTS+=	pkglint4-[0-9]*
+BUILD_DEPENDS+=	go-tools>=1.8:../../devel/go-tools
 
 NO_CHECKSUM=	yes
 USE_LANGUAGES=	c
