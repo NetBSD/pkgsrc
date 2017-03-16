@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/10/04 18:45:22 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2017/03/16 18:55:09 tron Exp $
 
 .include "../../lang/go/version.mk"
 
@@ -25,7 +25,7 @@ TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
 
 GOROOT_FINAL=	${PREFIX}/go14
-INSTALLATION_DIRS= bin go14
+INSTALLATION_DIRS= go14
 
 REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/codewalk/run
