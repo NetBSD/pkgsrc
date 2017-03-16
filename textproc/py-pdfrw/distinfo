@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/16 20:07:05 darcy Exp $
+
+SHA1 (pdfrw-0.2.tar.gz) = 67a64bfdd1c543efe847f13a9a1e521337873e69
+RMD160 (pdfrw-0.2.tar.gz) = 9e46bcdaf58ee4eb0d47f0d36757d4c228c3d215
+SHA512 (pdfrw-0.2.tar.gz) = 4f1ed3b7ddb42969110291b31e02e15e1f98316ede25eaa4d63cdbc443497a278267309769351e04cff52651cdbc44c93771e521cb953ba08d57152f81ee516f
+Size (pdfrw-0.2.tar.gz) = 69177 bytes
