@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17168 2017/03/16 15:02:05 wiz Exp $
+$NetBSD: TODO,v 1.17169 2017/03/16 21:59:42 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -1127,7 +1127,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oo2c-2.1.7
 	o opal-3.16.2
 	o opencsg-1.4.0
-	o opencv-3.2
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openoffice-4.1
