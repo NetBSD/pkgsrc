@@ -1,0 +1,3 @@
+multipledispatch is an efficient, mostly complete implementation of
+multiple dispatch that performs static analysis to avoid conflicts, and
+provides optional namespace support.
