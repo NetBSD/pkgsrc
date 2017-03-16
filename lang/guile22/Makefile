@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2017/03/16 14:13:43 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/16 23:39:05 wiz Exp $
 
 DISTNAME=	guile-2.2.0
 PKGNAME=	${DISTNAME:S/guile/guile22/}
 PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/ \
-		ftp://alpha.gnu.org/gnu/guile/
+MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://www.gnu.org/software/guile/
