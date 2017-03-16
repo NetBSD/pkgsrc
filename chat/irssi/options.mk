@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2017/03/12 06:35:08 maya Exp $
+# $NetBSD: options.mk,v 1.15 2017/03/16 11:41:19 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
-PKG_SUPPORTED_OPTIONS=		inet6 ssl #perl
-PKG_SUGGESTED_OPTIONS=		inet6 ssl
+PKG_SUPPORTED_OPTIONS=		inet6 ssl perl
+PKG_SUGGESTED_OPTIONS=		inet6 ssl perl
 PKG_OPTIONS_LEGACY_OPTS+=	irssi-perl:perl
 
 .include "../../mk/bsd.options.mk"
