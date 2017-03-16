@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-//go:generate go tool yacc -o shellyacc.go -v shellyacc.log -p shyy shell.y
+//go:generate goyacc -o shellyacc.go -v shellyacc.log -p shyy shell.y
 
 type ShAtomType uint8
 
