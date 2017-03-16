@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1162 2017/03/16 20:02:50 darcy Exp $
+$NetBSD: CHANGES-2017,v 1.1163 2017/03/16 20:05:47 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1406,4 +1406,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-libwww to 6.24 [wiz 2017-03-16]
 	Updated devel/npth to 1.3 [wiz 2017-03-16]
 	Updated graphics/png to 1.6.29 [wiz 2017-03-16]
-    Added textproc/py-rst2pdf version 0.93 [darcy 2017-03-16]
+	Updated net/go-net to 20170308 [bsiegert 2017-03-16]
+	Updated security/go-crypto to 0.0.20170317 [bsiegert 2017-03-16]
+	Updated devel/go-tools to 1.8 [bsiegert 2017-03-16]
+	Added textproc/py-rst2pdf version 0.93 [darcy 2017-03-16]
+	Updated pkgtools/pkglint to 5.4.18 [bsiegert 2017-03-16]
