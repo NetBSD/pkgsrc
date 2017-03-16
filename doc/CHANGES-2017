@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1149 2017/03/16 11:57:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1150 2017/03/16 12:04:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1389,3 +1389,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/guile22 version 2.2.0 [wiz 2017-03-16]
 	Updated chat/irssi to 1.0.2nb1 [maya 2017-03-16]
 	Updated x11/modular-xorg-server to 1.19.3 [wiz 2017-03-16]
+	Updated x11/xf86-video-ati to 7.9.0 [wiz 2017-03-16]
