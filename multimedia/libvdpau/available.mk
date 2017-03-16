@@ -1,7 +1,8 @@
-# $NetBSD: available.mk,v 1.6 2017/03/16 19:21:09 maya Exp $
+# $NetBSD: available.mk,v 1.7 2017/03/16 23:07:28 maya Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libvdpau
 PKG_SUPPORTED_OPTIONS+=	x11
 PKG_SUGGESTED_OPTIONS=	x11
 
