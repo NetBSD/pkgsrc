@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:56 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/17 15:47:23 taca Exp $
 
-DISTNAME=	Net_IDNA2-0.1.1
+DISTNAME=	Net_IDNA2-0.2.0
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
