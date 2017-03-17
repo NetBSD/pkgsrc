@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/01/03 08:37:01 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/03/17 14:37:05 fhajny Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -119,6 +119,7 @@ lib/erlang/man/man3/ct_slave.3
 lib/erlang/man/man3/ct_snmp.3
 lib/erlang/man/man3/ct_ssh.3
 lib/erlang/man/man3/ct_telnet.3
+lib/erlang/man/man3/ct_testspec.3
 lib/erlang/man/man3/dbg.3
 lib/erlang/man/man3/debugger.3
 lib/erlang/man/man3/dets.3
