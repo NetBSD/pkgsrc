@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/03/15 18:41:43 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/17 08:42:37 wiz Exp $
 
 DISTNAME=      python-quickbooks-0.6.0
 PKGNAME=       ${PYPKGPREFIX}-quickbooks-0.6.0
 CATEGORIES=    python finance
-MASTER_SITES=  https://pypi.python.org/packages/d6/36/afaba0669ebaf75712e94e99ba1898e060c3114c4125a199b7c25dc1684b/
+MASTER_SITES=  ${MASTER_SITE_PYPI:=p/python-quickbooks/}
 
 MAINTAINER=    darcy@NetBSD.org
 HOMEPAGE=      https://github.com/sidecars/python-quickbooks
