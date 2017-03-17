@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17169 2017/03/16 21:59:42 prlw1 Exp $
+$NetBSD: TODO,v 1.17170 2017/03/17 00:12:14 maya Exp $
 
 Suggested new packages
 ======================
@@ -1273,7 +1273,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pspp-0.10.1
 	o ptlib-2.16.2
 	o pure-ftpd-1.0.40
-	o putty-0.68
 	o pvs-5.0
 	o pwlib-1.11.1
 	o py-HappyDoc-3.0

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1166 2017/03/16 22:44:19 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1167 2017/03/17 00:12:14 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1414,3 +1414,4 @@ Changes to the packages collection and infrastructure in 2017:
     Added textproc/py-pdfrw version 0.2 [darcy 2017-03-16]
 	Updated graphics/opencv to 3.2.0 [prlw1 2017-03-16]
 	Added devel/py-multipledispatch version 0.4.9 [minskim 2017-03-16]
+	Updated security/putty to 0.68 [maya 2017-03-17]
