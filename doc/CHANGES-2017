@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1186 2017/03/17 21:31:50 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1187 2017/03/17 22:01:59 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1437,3 +1437,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/bugzilla to 5.0.3 [mef 2017-03-17]
 	Added devel/py-rauth version 0.7.3 [darcy 2017-03-17]
 	Added devel/py-line_profiler version 2.0 [minskim 2017-03-17]
+	Renamed multimedia/adobe-flash-player24 to multimedia/adobe-flash-player [tsutsui 2017-03-17]
