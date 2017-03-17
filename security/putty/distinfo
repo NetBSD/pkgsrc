@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2017/03/17 00:11:48 maya Exp $
+$NetBSD: distinfo,v 1.22 2017/03/17 11:55:53 maya Exp $
 
 SHA1 (putty-0.68.tar.gz) = e6acf0285e0718516cfa1fe775b1a92765387d70
 RMD160 (putty-0.68.tar.gz) = c5a07a3250f857cdcce619ef35953ed46c260788
@@ -10,6 +10,6 @@ SHA1 (patch-timing.c) = 9dd79fde390878960e97c456628bbd5dcbcd07f9
 SHA1 (patch-unix_Makefile.gtk) = 399636a9b6d445fa0cdd55c7a887efa8f03bdc94
 SHA1 (patch-unix_gtkwin.c) = 110079a07a802f93705c6526a14069491f1c313e
 SHA1 (patch-unix_uxnet.c) = 2d1c2939721993fe5616c2fe3f1935c03a31bb35
-SHA1 (patch-unix_uxpgnt.c) = 2aa46f5ba17f436007d926abc529ee0cfb82ff52
+SHA1 (patch-unix_uxpgnt.c) = b5625b33b940ea2870d3e91d38e2303a80d6887b
 SHA1 (patch-unix_uxucs.c) = a2a5021b515c3bade1126ed062bdc1eece1ca0f9
 SHA1 (patch-windows_window.c) = e851bad963967429131286c18e39d1ac4add4ae7
