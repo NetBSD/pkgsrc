@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/28 12:56:03 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/03/17 22:38:18 adam Exp $
 include/__libunwind_config.h
 include/libunwind.h
 include/mach-o/compact_unwind_encoding.h
 include/unwind.h
+lib/libunwind.a
 lib/libunwind.so
 lib/libunwind.so.1
 lib/libunwind.so.1.0

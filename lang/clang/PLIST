@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.20 2017/01/05 11:54:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/03/17 22:38:17 adam Exp $
 bin/c-index-test
 bin/clang
 bin/clang++
-bin/clang-3.9
+bin/clang-4.0
 bin/clang-cl
 bin/clang-cpp
 bin/clang-format
+bin/clang-import-test
+bin/clang-offload-bundler
 include/clang-c/BuildSystem.h
 include/clang-c/CXCompilationDatabase.h
 include/clang-c/CXErrorCode.h
@@ -125,6 +127,7 @@ include/clang/Analysis/Analyses/Consumed.h
 include/clang/Analysis/Analyses/Dominators.h
 include/clang/Analysis/Analyses/FormatString.h
 include/clang/Analysis/Analyses/LiveVariables.h
+include/clang/Analysis/Analyses/OSLog.h
 include/clang/Analysis/Analyses/PostOrderCFGView.h
 include/clang/Analysis/Analyses/PseudoConstantAnalysis.h
 include/clang/Analysis/Analyses/ReachableCode.h
@@ -141,6 +144,7 @@ include/clang/Analysis/AnalysisDiagnostic.h
 include/clang/Analysis/CFG.h
 include/clang/Analysis/CFGStmtMap.h
 include/clang/Analysis/CallGraph.h
+include/clang/Analysis/CloneDetection.h
 include/clang/Analysis/CodeInjector.h
 include/clang/Analysis/DomainSpecific/CocoaConventions.h
 include/clang/Analysis/DomainSpecific/ObjCNoReturn.h
@@ -168,6 +172,7 @@ include/clang/Basic/BuiltinsPPC.def
 include/clang/Basic/BuiltinsSystemZ.def
 include/clang/Basic/BuiltinsWebAssembly.def
 include/clang/Basic/BuiltinsX86.def
+include/clang/Basic/BuiltinsX86_64.def
 include/clang/Basic/BuiltinsXCore.def
 include/clang/Basic/CapturedStmt.h
 include/clang/Basic/CharInfo.h
@@ -248,6 +253,7 @@ include/clang/CodeGen/SwiftCallingConv.h
 include/clang/Config/config.h
 include/clang/Driver/Action.h
 include/clang/Driver/Compilation.h
+include/clang/Driver/Distro.h
 include/clang/Driver/Driver.h
 include/clang/Driver/DriverDiagnostic.h
 include/clang/Driver/Job.h
@@ -399,6 +405,7 @@ include/clang/Serialization/SerializationDiagnostic.h
 include/clang/StaticAnalyzer/Checkers/Checkers.inc
 include/clang/StaticAnalyzer/Checkers/ClangCheckers.h
 include/clang/StaticAnalyzer/Checkers/LocalCheckers.h
+include/clang/StaticAnalyzer/Checkers/MPIFunctionClassifier.h
 include/clang/StaticAnalyzer/Checkers/ObjCRetainCount.h
 include/clang/StaticAnalyzer/Checkers/SValExplainer.h
 include/clang/StaticAnalyzer/Core/Analyses.def
@@ -457,9 +464,11 @@ include/clang/Tooling/ArgumentsAdjusters.h
 include/clang/Tooling/CommonOptionsParser.h
 include/clang/Tooling/CompilationDatabase.h
 include/clang/Tooling/CompilationDatabasePluginRegistry.h
+include/clang/Tooling/Core/Diagnostic.h
 include/clang/Tooling/Core/Lookup.h
 include/clang/Tooling/Core/QualTypeNames.h
 include/clang/Tooling/Core/Replacement.h
+include/clang/Tooling/DiagnosticsYaml.h
 include/clang/Tooling/FileMatchTrie.h
 include/clang/Tooling/FixIt.h
 include/clang/Tooling/JSONCompilationDatabase.h
@@ -467,7 +476,9 @@ include/clang/Tooling/Refactoring.h
 include/clang/Tooling/RefactoringCallbacks.h
 include/clang/Tooling/ReplacementsYaml.h
 include/clang/Tooling/Tooling.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_builtin_vars.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_cmath.h
+lib/clang/${PKGVERSION}/include/__clang_cuda_complex_builtins.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_intrinsics.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_math_forward_declares.h
 lib/clang/${PKGVERSION}/include/__clang_cuda_runtime_wrapper.h
@@ -479,6 +490,7 @@ lib/clang/${PKGVERSION}/include/altivec.h
 lib/clang/${PKGVERSION}/include/ammintrin.h
 lib/clang/${PKGVERSION}/include/arm_acle.h
 lib/clang/${PKGVERSION}/include/arm_neon.h
+lib/clang/${PKGVERSION}/include/armintr.h
 lib/clang/${PKGVERSION}/include/avx2intrin.h
 lib/clang/${PKGVERSION}/include/avx512bwintrin.h
 lib/clang/${PKGVERSION}/include/avx512cdintrin.h
@@ -499,7 +511,9 @@ lib/clang/${PKGVERSION}/include/bmi2intrin.h
 lib/clang/${PKGVERSION}/include/bmiintrin.h
 lib/clang/${PKGVERSION}/include/clflushoptintrin.h
 lib/clang/${PKGVERSION}/include/cpuid.h
-lib/clang/${PKGVERSION}/include/cuda_builtin_vars.h
+lib/clang/${PKGVERSION}/include/cuda_wrappers/algorithm
+lib/clang/${PKGVERSION}/include/cuda_wrappers/complex
+lib/clang/${PKGVERSION}/include/cuda_wrappers/new
 lib/clang/${PKGVERSION}/include/emmintrin.h
 lib/clang/${PKGVERSION}/include/f16cintrin.h
 lib/clang/${PKGVERSION}/include/float.h
@@ -559,6 +573,7 @@ lib/cmake/clang/ClangConfig.cmake
 lib/cmake/clang/ClangTargets-release.cmake
 lib/cmake/clang/ClangTargets.cmake
 lib/libclang.${SOEXT}
+${PLIST.notdylib}lib/libclang.${SOEXT}.4
 ${PLIST.notdylib}lib/libclang.${SOEXT}.${LLVM_MAJOR}
 lib/libclangAST.a
 lib/libclangASTMatchers.a
