@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/09/11 15:53:51 richard Exp $
+# $NetBSD: Makefile,v 1.56 2017/03/17 03:53:32 darcy Exp $
 
 DISTNAME=	reportlab-3.3.0
 DISTFILES=	${DEFAULT_DISTFILES} pfbfer.zip
@@ -13,7 +13,7 @@ COMMENT=	Powerful PDF-generating toolkit for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=	{${PYPKGPREFIX}-Pillow-[0-9]*,${PYPKGPREFIX}-imaging-[0-9]*}:../../graphics/py-Pillow
+DEPENDS+=	${PYPKGPREFIX}-{Pillow-[0-9]*,imaging-[0-9]*}:../../graphics/py-Pillow
 
 EXTRACT_DIR.pfbfer.zip=	${WRKSRC}/src/reportlab/fonts
 EXTRACT_OPTS_ZIP+=	-L
