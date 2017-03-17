@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 12:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.8 2017/03/17 15:45:18 taca Exp $
 
-DISTNAME=	Auth_SASL-1.0.6
+DISTNAME=	Auth_SASL-1.1.0
 CATEGORIES=	mail
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
