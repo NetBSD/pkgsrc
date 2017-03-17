@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1183 2017/03/17 15:50:20 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1184 2017/03/17 16:27:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1434,3 +1434,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/pear-Auth_SASL to 1.1.0 [taca 2017-03-17]
 	Updated net/pear-Net_IDNA2 to 0.2.0 [taca 2017-03-17]
 	Updated net/pear-Net_Socket to 1.1.0 [taca 2017-03-17]
+	Updated devel/bugzilla to 5.0.3 [mef 2017-03-17]
