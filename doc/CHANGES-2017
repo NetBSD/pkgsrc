@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1173 2017/03/17 11:13:40 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1174 2017/03/17 12:41:53 roy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1420,3 +1420,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox to 52.0nb1 [maya 2017-03-17]
 	Updated lang/nodejs to 7.7.3 [fhajny 2017-03-17]
 	Updated multimedia/ffmpeg3 to 3.2.4nb2 [maya 2017-03-17]
+	Updated devel/libphutil to 20170304 [roy 2017-03-17]
