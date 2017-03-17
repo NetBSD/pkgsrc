@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/03/17 12:40:58 roy Exp $
+# $NetBSD: Makefile,v 1.5 2017/03/17 21:16:38 roy Exp $
 
 DISTNAME=		phabricator-20170316
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		phabricator
@@ -85,7 +86,8 @@ post-extract:
 
 do-install:
 			cd ${WRKSRC} && \
-			${PAX} -rw * ${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
+			${PAX} -rw * -s',.*\.orig$$,,' \
+				${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
