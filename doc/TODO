@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17170 2017/03/17 00:12:14 maya Exp $
+$NetBSD: TODO,v 1.17171 2017/03/17 16:27:28 mef Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bottlerocket-0.05b3
 	o bpython-0.15
 	o brasero-3.4.0
-	o bugzilla-5.0.2
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
 	o byacc-20170201
 	o bzr-2.7.0
