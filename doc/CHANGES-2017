@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1188 2017/03/17 22:12:31 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.1189 2017/03/17 22:41:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1439,3 +1439,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-line_profiler version 2.0 [minskim 2017-03-17]
 	Renamed multimedia/adobe-flash-player24 to multimedia/adobe-flash-player [tsutsui 2017-03-17]
 	Updated multimedia/adobe-flash-player to 25.0.0.127 [tsutsui 2017-03-17]
+	Updated lang/llvm to 4.0.0 [adam 2017-03-17]
+	Updated lang/clang to 4.0.0 [adam 2017-03-17]
+	Updated lang/clang-static-analyzer to 4.0.0 [adam 2017-03-17]
+	Updated lang/libLLVM to 4.0.0 [adam 2017-03-17]
+	Updated lang/libunwind to 4.0.0 [adam 2017-03-17]
+	Updated devel/polly to 4.0.0 [adam 2017-03-17]
+	Updated devel/lldb to 4.0.0 [adam 2017-03-17]
+	Updated devel/include-what-you-use to 0.7nb2 [adam 2017-03-17]
