@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/04 15:54:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/03/17 12:40:58 roy Exp $
 bin/arc
 share/arcanist/LICENSE
 share/arcanist/NOTICE
@@ -21,10 +21,10 @@ share/arcanist/scripts/repository/binary_safe_diff.sh
 share/arcanist/src/__phutil_library_init__.php
 share/arcanist/src/__phutil_library_map__.php
 share/arcanist/src/__tests__/ArcanistLibraryTestCase.php
+share/arcanist/src/configuration/ArcanistBlindlyTrustHTTPEngineExtension.php
 share/arcanist/src/configuration/ArcanistConfiguration.php
 share/arcanist/src/configuration/ArcanistConfigurationManager.php
 share/arcanist/src/configuration/ArcanistSettings.php
-share/arcanist/src/configuration/__tests__/ArcanistBritishTestCase.php
 share/arcanist/src/difference/ArcanistDiffUtils.php
 share/arcanist/src/difference/__tests__/ArcanistDiffUtilsTestCase.php
 share/arcanist/src/differential/ArcanistDifferentialCommitMessage.php
@@ -691,6 +691,7 @@ share/arcanist/src/parser/__tests__/diff/basic-multi-hunk-content.svndiff
 share/arcanist/src/parser/__tests__/diff/basic-multi-hunk.udiff
 share/arcanist/src/parser/__tests__/diff/colorized.hggitdiff
 share/arcanist/src/parser/__tests__/diff/comment.svndiff
+share/arcanist/src/parser/__tests__/diff/custom-prefixes-edit.gitdiff
 share/arcanist/src/parser/__tests__/diff/custom-prefixes.gitdiff
 share/arcanist/src/parser/__tests__/diff/git-binary-change.gitdiff
 share/arcanist/src/parser/__tests__/diff/git-binary.gitdiff
