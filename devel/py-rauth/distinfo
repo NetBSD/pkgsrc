@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2017/03/17 20:44:38 darcy Exp $
+
+SHA1 (rauth-0.7.3.tar.gz) = 687a25b30bb9765699087822a34892eb9e6516c2
+RMD160 (rauth-0.7.3.tar.gz) = ed27ce2563f083b74203c5a580ccbd57d34ae067
+SHA512 (rauth-0.7.3.tar.gz) = 8bb6d10e5d4ddb583c45e3bf166051b8edde8193cd10da8c1a623908d2cc5a3a2cbc9065d5fa397188414e72fa66166051893e4ba956369b3f0f850ae823837e
+Size (rauth-0.7.3.tar.gz) = 16530 bytes
+SHA1 (patch-setup.py) = e44461e9340ec1f3987f8aff0e2088f16e15d898
