@@ -1,17 +1,17 @@
-# $NetBSD: options.mk,v 1.2 2006/10/15 12:21:13 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2017/03/17 16:26:30 mef Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=		mysql pgsql
+PKG_OPTIONS_GROUP.db=		mysql pgsql oracle sqlite
 
-PKG_OPTIONS_LEGACY_OPTS+=	patchviewer:bugzilla-patchviewer
-PKG_OPTIONS_LEGACY_OPTS+=	xmlimportbugs:bugzilla-xmlimportbugs
-PKG_OPTIONS_LEGACY_OPTS+=	charts:bugzilla-charts
-
-PKG_SUPPORTED_OPTIONS=	ldap bugzilla-charts bugzilla-patchviewer mysql pgsql
-PKG_SUPPORTED_OPTIONS+=	bugzilla-xmlimportbugs bugzilla-imagemagick
-PKG_SUGGESTED_OPTIONS=	mysql
+PKG_SUPPORTED_OPTIONS=	bugzilla-notify bugzilla-graphicalreports
+PKG_SUPPORTED_OPTIONS+=	bugzilla-inboundemail bugzilla-movebugs
+PKG_SUPPORTED_OPTIONS+=	bugzilla-imagemagick bugzilla-patchviewer
+PKG_SUPPORTED_OPTIONS+=	bugzilla-descriptions bugzilla-xmlrpc
+PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl radius
+PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap sqlite
+PKG_SUGGESTED_OPTIONS=	                        sqlite
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,11 +19,66 @@ PKG_SUGGESTED_OPTIONS=	mysql
 ### Use mysql or postgresql backend
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	p5-DBD-mysql>=2.9003:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-DBD-mysql>=4.000:../../databases/p5-DBD-mysql
 DBDRIVER=	mysql
+.elif !empty(PKG_OPTIONS:Msqlite)
+DEPENDS+=	p5-DBD-SQLite>=1.54:../../databases/p5-DBD-SQLite
+DEPENDS+=	sqlite3-[0-9]*:../../databases/sqlite3
+DBDRIVER=	sqlite
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql>=1.45:../../databases/p5-DBD-postgresql
-DBDRIVER=	pgsql
+DBDRIVER=	pg
+.elif !empty(PKG_OPTIONS:Moracle)
+DEPENDS+=	p5-DBD-Oracle>=1.19:../../databases/p5-DBD-Oracle
+DBDRIVER=	oracle
+.endif
+
+###
+### Automatic Update Notifications
+###
+.if !empty(PKG_OPTIONS:Mbugzilla-notify)
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+.endif
+
+###
+### RADIUS authentication
+###
+.if !empty(PKG_OPTIONS:Mradius)
+DEPENDS+=	p5-RadiusPerl-[0-9]*:../../net/p5-RadiusPerl
+.endif
+
+###
+### More HTML in Product/Group Descriptions
+###
+.if !empty(PKG_OPTIONS:Mbugzilla-descriptions)
+DEPENDS+=	p5-HTML-Scrubber-[0-9]*:../../www/p5-HTML-Scrubber
+DEPENDS+=	p5-HTML-Parser>=3.40:../../www/p5-HTML-Parser
+.endif
+
+###
+### mod_perl
+###
+.if !empty(PKG_OPTIONS:Mbugzilla-modperl)
+DEPENDS+=	p5-CGI>=3.11:../../www/p5-CGI
+DEPENDS+=	p5-Apache-DBI>=0.96:../../databases/p5-Apache-DBI
+.  if defined(PKG_APACHE)
+.    include "../../www/ap2-perl/buildlink3.mk"
+.  endif
+.endif
+
+###
+### XML-RPC Interface
+###
+.if !empty(PKG_OPTIONS:Mbugzilla-xmlrpc)
+DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
+.endif
+
+###
+### Inbound Email
+###
+.if !empty(PKG_OPTIONS:Mbugzilla-inboundemail)
+DEPENDS+=	p5-Email-MIME-Attachment-Stripper-[0-9]*:../../mail/p5-Email-MIME-Attachment-Stripper
+DEPENDS+=	p5-Email-Reply-[0-9]*:../../mail/p5-Email-Reply
 .endif
 
 ###
@@ -42,13 +97,14 @@ DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 .endif
 
 ###
-### Generation of charts
+### Generation of graphical reports
 ###
-.if !empty(PKG_OPTIONS:Mbugzilla-charts)
+.if !empty(PKG_OPTIONS:Mbugzilla-graphicalreports)
 DEPENDS+=	gd>=1.20:../../graphics/gd
 DEPENDS+=	p5-Chart>=1.0:../../graphics/p5-Chart
 DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
 DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
+DEPENDS+=	p5-Template-GD-[0-9]*:../../graphics/p5-Template-GD
 .endif
 
 ###
@@ -62,6 +118,7 @@ DEPENDS+=	patchutils-[0-9]*:../../devel/patchutils
 ###
 ### Add support for bulk import/export of bugs in XML format
 ###
-.if !empty(PKG_OPTIONS:Mbugzilla-xmlimportbugs)
+.if !empty(PKG_OPTIONS:Mbugzilla-movebugs)
 DEPENDS+=	p5-XML-Twig-[0-9]*:../../textproc/p5-XML-Twig
+DEPENDS+=	p5-MIME-tools>=5.406:../../mail/p5-MIME-tools
 .endif
