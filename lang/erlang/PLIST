@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/01/03 08:37:00 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/03/17 14:37:04 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -3779,20 +3779,25 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/inet_tls_dist.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl.app
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl.appup
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_admin_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_alert.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_app.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_certificate.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_cipher.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_config.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_connection.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_connection_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_crl.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_crl_cache.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_crl_cache_api.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_crl_hash_dir.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_dist_admin_sup.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_dist_connection_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_dist_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_handshake.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_listen_tracker_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_manager.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_pem_cache.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_pkix_db.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_record.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl_session.beam
@@ -3836,6 +3841,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_v1.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/inet6_tls_dist.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/inet_tls_dist.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_admin_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_alert.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_alert.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_api.hrl
@@ -3846,16 +3852,20 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_cipher.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_config.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_connection.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_connection.hrl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_connection_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_crl.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_crl_cache.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_crl_cache_api.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_crl_hash_dir.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_dist_admin_sup.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_dist_connection_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_dist_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_handshake.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_handshake.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_internal.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_listen_tracker_sup.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_manager.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_pem_cache.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_pkix_db.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_record.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_record.hrl
