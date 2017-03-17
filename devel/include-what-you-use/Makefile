@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2016/12/18 23:33:11 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2017/03/17 22:39:30 adam Exp $
 
 DISTNAME=	include-what-you-use-0.7.src
 PKGNAME=	${DISTNAME:.src=}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://include-what-you-use.org/downloads/
 
@@ -13,8 +13,8 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/llvm/tools/clang/tools/include-what-you-use/
 USE_CMAKE=	yes
-CMAKE_ARGS=     -DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 USE_LANGUAGES=	c c++
+CMAKE_ARGS=	-DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 GCC_REQD+=	4.8
 
 REPLACE_PYTHON= *.py
