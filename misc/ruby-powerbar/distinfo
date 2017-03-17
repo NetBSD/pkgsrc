@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/17 00:26:52 taca Exp $
+
+SHA1 (powerbar-1.0.18.gem) = d31b875ad41799b9fe2f2c2c791102012b90f6f3
+RMD160 (powerbar-1.0.18.gem) = 27bd1a1a3d2ba801ad0bacb4d4fc647f7049b99a
+SHA512 (powerbar-1.0.18.gem) = 9208f2e70372c4df59371d5dedf227ef80af2c14ec6deba222873cdcba86452120a7013259105a935aa9834116b22febf88871c0824d12a89e314bc3ed3d2af4
+Size (powerbar-1.0.18.gem) = 12288 bytes
