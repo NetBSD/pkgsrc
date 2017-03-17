@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.479 2017/01/26 14:07:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.480 2017/03/17 00:27:47 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -321,6 +321,7 @@ SUBDIR+=	ruby-mini_portile2
 SUBDIR+=	ruby-naught
 SUBDIR+=	ruby-ohai
 SUBDIR+=	ruby-parallel
+SUBDIR+=	ruby-powerbar
 SUBDIR+=	ruby-progressbar
 SUBDIR+=	ruby-pry
 SUBDIR+=	ruby-rainbow
