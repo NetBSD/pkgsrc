@@ -1,0 +1,10 @@
+NPAPI Adobe Flash player plugin for the Firefox browser.
+This package contains a plugin that enables web browsers to render
+the Flash format.
+
+The nspluginwrapper option (enabled by default on non Linux platforms)
+permits the use of the the Linux x86 and x86_64 flash player in Firefox
+browsers on other x86 systems and x86_64 systems.
+
+For NetBSD this package requires NetBSD 6.2 or 7.1 (and later versions)
+which include procfs fixes for Linux binaries.
