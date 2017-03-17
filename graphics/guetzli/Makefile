@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2017/01/22 10:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/17 14:51:25 adam Exp $
 
-DISTNAME=	guetzli-0.2
+DISTNAME=	guetzli-1.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
-GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/google/guetzli
 COMMENT=	JPEG encoder with great compression at high quality
 LICENSE=	apache-2.0
+
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
