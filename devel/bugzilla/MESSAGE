@@ -1,19 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2013/02/26 12:48:28 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2017/03/17 16:26:30 mef Exp $
 
 To complete the setup you will need to read the Bugzilla-Guide.txt in order
-to setup mySQL properly.  In particular section 2.2.2 of the document deals
-with database setup.  After the initial setup of the database you can then
-check the settings in ${BZDIR}/localconfig and:
+to setup Database counter-part properly.  In particular secion 2.2.2 of the
+document deals with database setup.  After the initial setup of the database
+you can then check the settings in ${BZDIR}/localconfig and with super user
+privilege,
 
-	cd ${BZDIR}
+	cd ${BZDIR};
 	./checksetup.pl
 
 You will need to make Bugzilla accessible through your HTTP server.
 If you are running Apache then you may add the following lines to httpd.conf:
 
-	DirectoryIndex index.cgi index.html
-	Include ${PKG_SYSCONFDIR}/httpd/bugzilla.conf
+	Include ${PKG_SYSCONFDIR}/bugzilla.conf
 
 to make Bugzilla accessible through:
 

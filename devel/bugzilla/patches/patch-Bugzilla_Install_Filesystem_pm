@@ -1,0 +1,15 @@
+$NetBSD: patch-Bugzilla_Install_Filesystem_pm,v 1.1 2017/03/17 16:26:31 mef Exp $
+
+Make it verbose when giving error, which file is missing.
+
+--- Bugzilla/Install/Filesystem.pm.orig	2016-05-17 04:02:18.000000000 +0900
++++ Bugzilla/Install/Filesystem.pm	2017-03-11 22:47:12.306643791 +0900
+@@ -693,7 +693,7 @@ sub _create_files {
+             print "Creating $file...\n";
+             my $info = $files{$file};
+             my $fh = new IO::File($file, O_WRONLY | O_CREAT, $info->{perms})
+-                || die $!;
++                || die $file . ': '. $!;
+             print $fh $info->{contents} if $info->{contents};
+             $fh->close;
+         }
