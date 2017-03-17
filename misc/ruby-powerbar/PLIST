@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/17 00:26:52 taca Exp $
+bin/powerbar-demo${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.ruby-version
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/README.MD
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/powerbar-demo
+${GEM_LIBDIR}/lib/powerbar.rb
+${GEM_LIBDIR}/lib/powerbar/version.rb
+${GEM_LIBDIR}/powerbar.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
