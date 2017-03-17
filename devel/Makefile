@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2382 2017/03/16 22:43:50 minskim Exp $
+# $NetBSD: Makefile,v 1.2383 2017/03/17 20:44:38 darcy Exp $
 #
 
 COMMENT=	Development utilities
@@ -1943,6 +1943,7 @@ SUBDIR+=	py-pyutil
 SUBDIR+=	py-queuelib
 SUBDIR+=	py-quixote
 SUBDIR+=	py-radare2
+SUBDIR+=	py-rauth
 SUBDIR+=	py-readline
 SUBDIR+=	py-rednose
 SUBDIR+=	py-repoze.lru
