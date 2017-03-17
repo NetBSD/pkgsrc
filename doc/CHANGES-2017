@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1174 2017/03/17 12:41:53 roy Exp $
+$NetBSD: CHANGES-2017,v 1.1175 2017/03/17 12:42:15 roy Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1421,3 +1421,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 7.7.3 [fhajny 2017-03-17]
 	Updated multimedia/ffmpeg3 to 3.2.4nb2 [maya 2017-03-17]
 	Updated devel/libphutil to 20170304 [roy 2017-03-17]
+	Updated devel/arcanist to 20170225 [roy 2017-03-17]
