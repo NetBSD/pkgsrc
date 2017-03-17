@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2016/03/04 15:50:36 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/17 12:40:58 roy Exp $
 
-DISTNAME=		libphutil-20160301
+DISTNAME=		libphutil-20170304
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		libphutil
-GITHUB_TAG=		ad3f475c8c13e22096c8c3c60df5f3d886483699
+GITHUB_TAG=		796cb1c2ee274397a8a7bc6c10566fd751619d6d
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://github.com/phacility/libphutil/
@@ -37,9 +37,11 @@ SUBST_FILES.php+=	scripts/test/paypal.php
 SUBST_FILES.php+=	scripts/test/progress_bar.php
 SUBST_FILES.php+=	scripts/test/prompt.php
 SUBST_FILES.php+=	scripts/test/service_profiler.php
+SUBST_FILES.php+=	scripts/timezones/generate_windows_timezone_map.php
 SUBST_FILES.php+=	scripts/update_compat_info.php
 SUBST_FILES.php+=	scripts/utils/directory_fixture.php
 SUBST_FILES.php+=	scripts/utils/lock.php
+SUBST_FILES.php+=	scripts/utils/prosediff.php
 SUBST_FILES.php+=	scripts/utils/utf8.php
 SUBST_FILES.php+=	src/parser/PhutilLanguageGuesser.php
 SUBST_FILES.php+=	src/parser/__tests__/languageguesser/php.shell-env
