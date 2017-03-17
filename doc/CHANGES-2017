@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1169 2017/03/17 00:29:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1170 2017/03/17 03:06:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1416,3 +1416,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-multipledispatch version 0.4.9 [minskim 2017-03-16]
 	Updated security/putty to 0.68 [maya 2017-03-17]
 	Added misc/ruby-powerbar version 1.0.18 [taca 2017-03-17]
+	Updated cross/arm-none-eabi-gcc to 6.3.0nb1 [ryoon 2017-03-17]
