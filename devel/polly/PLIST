@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/11/14 20:49:15 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/03/17 22:38:17 adam Exp $
 include/polly/Canonicalization.h
 include/polly/CodeGen/BlockGenerators.h
 include/polly/CodeGen/CodeGeneration.h
@@ -11,9 +11,13 @@ include/polly/CodeGen/LoopGenerators.h
 include/polly/CodeGen/RuntimeDebugBuilder.h
 include/polly/CodeGen/Utils.h
 include/polly/Config/config.h
+include/polly/DeLICM.h
 include/polly/DependenceInfo.h
+include/polly/FlattenAlgo.h
+include/polly/FlattenSchedule.h
 include/polly/LinkAllPasses.h
 include/polly/Options.h
+include/polly/PolyhedralInfo.h
 include/polly/RegisterPasses.h
 include/polly/ScheduleOptimizer.h
 include/polly/ScopBuilder.h

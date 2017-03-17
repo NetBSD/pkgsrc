@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.8 2017/03/09 12:45:56 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2017/03/17 22:38:18 adam Exp $
 
-SHA1 (llvm-3.9.1.src.tar.xz) = ce801cf456b8dacd565ce8df8288b4d90e7317ff
-RMD160 (llvm-3.9.1.src.tar.xz) = b0a3c68cfec83a2b4dad6922316b71c0dc25c40a
-SHA512 (llvm-3.9.1.src.tar.xz) = 50cbe8ee911080f586e77861c442348701bd02e2de0c090c54c34f82ac275ecfcd712af0f41e387c33b4a6057778a4258a27554292fe68ab4af3fd9dd6d90683
-Size (llvm-3.9.1.src.tar.xz) = 18130436 bytes
+SHA1 (llvm-4.0.0.src.tar.xz) = aee4524e2407f9fe5afc6f70c753180b907011d0
+RMD160 (llvm-4.0.0.src.tar.xz) = 468ae2502ba523b35c5e8340724ddaa50b31ccb5
+SHA512 (llvm-4.0.0.src.tar.xz) = cf681f0626ef6d568d951cdc3e143471a1d7715a0ba11e52aa273cf5d8d421e1357ef2645cc85879eaefcd577e99e74d07b01566825b3d0461171ef2cbfc7704
+Size (llvm-4.0.0.src.tar.xz) = 21016340 bytes
 SHA1 (patch-CMakeLists.txt) = 770e0bc00a987430b6c6be7e4141f33e5be54a8f
-SHA1 (patch-cmake_modules_AddLLVM.cmake) = 1fd7598a55eede8b1ef50556ab8d7277fe5b2f43
-SHA1 (patch-cmake_modules_CMakeLists.txt) = bf31e9d3914e2041a7d435390b63ad67282b272f
+SHA1 (patch-cmake_modules_AddLLVM.cmake) = d9d9b8f9d33ddc3ef8ef55832aeed038500b6de8
+SHA1 (patch-cmake_modules_CMakeLists.txt) = 69514dafb36794eb6923a39ef219bdc7b09c37ee
 SHA1 (patch-cmake_modules_HandleLLVMOptions.cmake) = 271e6f5a8cebf8162c4e3b758e96f451b434269b
-SHA1 (patch-cmake_modules_TableGen.cmake) = d548208577f45fbb6c8f7b43548c399cc63c7887
-SHA1 (patch-include_llvm_Support_Host.h) = ad6ac520f15bba96ab887c962fb717e22aaee7bf
+SHA1 (patch-cmake_modules_TableGen.cmake) = 105aece4014c473a21ec6b427893239bbe881f89
+SHA1 (patch-include_llvm_Support_Host.h) = a4e19a72714084b211b0182c04ccc51bd606e150
 SHA1 (patch-lib_Support_Unix_Program.inc) = 49f09e05858243ca57f14b1fdb2fec49c935dfeb
-SHA1 (patch-tools_llvm-config_llvm-config.cpp) = 44835bfcd2bddc16e0b93628fafb627889091f85
-SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 8faddae24e937ce0b60a7b6a69370c56b9ff7fe3
+SHA1 (patch-tools_llvm-config_llvm-config.cpp) = 4988cd94074cb08dbb5a3606ea2376b42ae8c75f
+SHA1 (patch-tools_llvm-shlib_CMakeLists.txt) = 18e6ec7b8895e55ecdf93c9d4781e92052a6fcb1
