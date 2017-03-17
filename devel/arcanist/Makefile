@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 17:11:22 youri Exp $
+# $NetBSD: Makefile,v 1.6 2017/03/17 12:40:58 roy Exp $
 
-DISTNAME=		arcanist-20160224
+DISTNAME=		arcanist-20170225
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		arcanist
-GITHUB_TAG=		086f5399bfbb65513b1b0e2c5371522202a9beb7
+GITHUB_TAG=		822bc53ca306e06314560d8a76f68771d732e8e0
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://github.com/phacility/arcanist/
