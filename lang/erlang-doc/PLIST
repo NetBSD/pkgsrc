@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/01/03 08:37:00 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/03/17 14:37:05 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -218,6 +218,7 @@ lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_slave.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_snmp.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_ssh.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_telnet.html
+lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/ct_testspec.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/dependencies_chapter.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/event_handler_chapter.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/example_chapter.html
