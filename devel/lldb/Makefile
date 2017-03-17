@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/01/05 11:54:32 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/17 22:38:17 adam Exp $
 
-DISTNAME=	lldb-3.9.1.src
+DISTNAME=	lldb-4.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -131,17 +131,17 @@ CMAKE_ARGS+=	-DLLDB_DISABLE_CURSES:BOOL=TRUE
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
-.include "../../mk/readline.buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
-.include "../../lang/llvm/buildlink3.mk"
+.include "../../devel/libatomic_ops/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 .include "../../lang/clang/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/swig/buildlink3.mk"
-.include "../../devel/libatomic_ops/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
