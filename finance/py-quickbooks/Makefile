@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/03/17 08:42:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/17 20:46:51 darcy Exp $
 
 DISTNAME=      python-quickbooks-0.6.0
 PKGNAME=       ${PYPKGPREFIX}-quickbooks-0.6.0
@@ -11,6 +11,8 @@ COMMENT=       Python library for accessing the Quickbooks API
 LICENSE=       mit
 
 USE_LANGUAGES=      # none
+
+DEPENDS+=       ${PYPKGPREFIX}-rauth>=0.7.3:../../devel/py-rauth
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
