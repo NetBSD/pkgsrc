@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/17 21:30:35 minskim Exp $
+
+SHA1 (line_profiler-2.0.tar.gz) = 3b09b4d07c7403d9be3d7874b40e2e7da34b1e70
+RMD160 (line_profiler-2.0.tar.gz) = 60e207075905adf868123edf911773fff4d803eb
+SHA512 (line_profiler-2.0.tar.gz) = c0335fc69fb47c150fa5555af4f7fdf4b172ca12ee6512e04ba854c4a81f3e6ee5594e484d11c8ea7e9e8048e3f3b8661db52332d4ac645195a0e050acea4ecb
+Size (line_profiler-2.0.tar.gz) = 68478 bytes

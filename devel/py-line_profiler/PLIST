@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/17 21:30:35 minskim Exp $
+bin/kernprof${PYVERSSUFFIX}
+${PYSITELIB}/kernprof.pyo
+${PYSITELIB}/kernprof.pyc
+${PYSITELIB}/line_profiler.pyo
+${PYSITELIB}/line_profiler.pyc
+${PYSITELIB}/_line_profiler.so
+${PYSITELIB}/kernprof.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/line_profiler.py
