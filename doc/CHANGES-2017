@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1185 2017/03/17 20:46:04 darcy Exp $
+$NetBSD: CHANGES-2017,v 1.1186 2017/03/17 21:31:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1436,3 +1436,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/pear-Net_Socket to 1.1.0 [taca 2017-03-17]
 	Updated devel/bugzilla to 5.0.3 [mef 2017-03-17]
 	Added devel/py-rauth version 0.7.3 [darcy 2017-03-17]
+	Added devel/py-line_profiler version 2.0 [minskim 2017-03-17]
