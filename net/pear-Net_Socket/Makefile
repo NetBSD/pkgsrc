@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2014/07/23 14:06:10 adam Exp $
+# $NetBSD: Makefile,v 1.16 2017/03/17 15:49:50 taca Exp $
 
-DISTNAME=	Net_Socket-1.0.14
+DISTNAME=	Net_Socket-1.1.0
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
