@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.254 2017/03/12 09:45:08 leot Exp $
+# $NetBSD: Makefile,v 1.255 2017/03/17 21:59:39 tsutsui Exp $
 #
 
 COMMENT=	Multimedia utilities
 
 SUBDIR+=	acidrip
-SUBDIR+=	adobe-flash-player24
+SUBDIR+=	adobe-flash-player
 SUBDIR+=	adobe-flash-plugin11
 SUBDIR+=	alevt
 SUBDIR+=	audiocd-kio
