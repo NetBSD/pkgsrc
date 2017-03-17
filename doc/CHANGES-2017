@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1171 2017/03/17 10:24:31 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1172 2017/03/17 10:52:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1418,3 +1418,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added misc/ruby-powerbar version 1.0.18 [taca 2017-03-17]
 	Updated cross/arm-none-eabi-gcc to 6.3.0nb1 [ryoon 2017-03-17]
 	Updated www/firefox to 52.0nb1 [maya 2017-03-17]
+	Updated lang/nodejs to 7.7.3 [fhajny 2017-03-17]
