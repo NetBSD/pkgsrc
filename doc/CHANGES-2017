@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1176 2017/03/17 12:42:40 roy Exp $
+$NetBSD: CHANGES-2017,v 1.1177 2017/03/17 14:33:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1423,3 +1423,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libphutil to 20170304 [roy 2017-03-17]
 	Updated devel/arcanist to 20170225 [roy 2017-03-17]
 	Updated devel/phabricator to 20170316 [roy 2017-03-17]
+	Updated net/py-lexicon to 2.0.0 [fhajny 2017-03-17]
