@@ -1,0 +1,22 @@
+# PowerBar
+
+This is PowerBar - The last progressbar-library you'll ever need.
+
+## Features
+
+* Detects when stdout is not a terminal and automatically falls back to logging
+  * Does not clutter your log-files with ansi-codes!
+  * If your CLI-app can run interactively and non-interactively (e.g. cronjob)
+    you will automatically get reasonable progress-output in both modes.
+  * By default prints to stderr but can call any output-method
+    of your choice (e.g. your favorite Logger).
+
+* Fully customizable; all output is template-driven.
+
+* All output is optional. You may set PowerBar to silently collect progress
+  information (percentage-done, throughput, ETA, etc.) and then use the
+  computed values elsewhere in your app.
+
+* All state can be updated at any time. For example: If you're monitoring a
+  multi-part operation then you can change the status-message of a running
+  PowerBar to reflect the current state.
