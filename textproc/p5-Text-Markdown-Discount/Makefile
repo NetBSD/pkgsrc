@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/06/08 19:24:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/03/17 17:30:33 schmonz Exp $
 #
 
 DISTNAME=		Text-Markdown-Discount-0.11
@@ -11,6 +11,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Text-Markdown-Discount/
 COMMENT=		Convert Markdown to (X)HTML
 LICENSE=		${PERL5_LICENSE}
+
+BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 
 PERL5_PACKLIST=		auto/Text/Markdown/Discount/.packlist
 USE_LANGUAGES=		c
