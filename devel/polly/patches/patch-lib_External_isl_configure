@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_External_isl_configure,v 1.1 2016/09/12 22:49:24 kamil Exp $
+$NetBSD: patch-lib_External_isl_configure,v 1.2 2017/03/17 22:38:17 adam Exp $
 
 Fix shell portability issue.
 
---- lib/External/isl/configure.orig	2015-12-02 09:35:04.000000000 +0000
+--- lib/External/isl/configure.orig	2016-12-22 23:08:57.000000000 +0000
 +++ lib/External/isl/configure
-@@ -17487,7 +17487,7 @@ else
+@@ -18156,7 +18156,7 @@ else
  fi
  
  
@@ -13,7 +13,7 @@ Fix shell portability issue.
    SMALL_INT_OPT_TRUE=
    SMALL_INT_OPT_FALSE='#'
  else
-@@ -17495,7 +17495,7 @@ else
+@@ -18164,7 +18164,7 @@ else
    SMALL_INT_OPT_FALSE=
  fi
  
@@ -22,7 +22,7 @@ Fix shell portability issue.
  
  
  $as_echo "#define USE_SMALL_INT_OPT /**/" >>confdefs.h
-@@ -21881,4 +21881,3 @@ if test -n "$ac_unrecognized_opts" && te
+@@ -22524,4 +22524,3 @@ if test -n "$ac_unrecognized_opts" && te
    { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
  $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
  fi
