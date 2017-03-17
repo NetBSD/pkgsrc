@@ -1,0 +1,15 @@
+$NetBSD: patch-config,v 1.1 2017/03/17 16:56:47 sborrill Exp $
+
+Add support for strip_domain
+
+--- config.orig	2017-03-17 16:09:59.000000000 +0000
++++ config	2017-03-17 16:10:41.000000000 +0000
+@@ -129,6 +129,8 @@
+ # POST parameter to use for password
+ #http_password_parameter =
+ 
++# Strip @domain off username if email address used for authentication
++strip_domain = False
+ 
+ [git]
+ 
