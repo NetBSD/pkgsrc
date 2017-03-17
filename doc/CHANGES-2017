@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1178 2017/03/17 14:38:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1179 2017/03/17 14:52:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1427,3 +1427,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/erlang to 19.3 [fhajny 2017-03-17]
 	Updated lang/erlang-doc to 19.3 [fhajny 2017-03-17]
 	Updated lang/erlang-man to 19.3 [fhajny 2017-03-17]
+	Updated devel/gflags to 2.2.0 [adam 2017-03-17]
+	Updated graphics/guetzli to 1.0 [adam 2017-03-17]
