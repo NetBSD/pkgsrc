@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/03/04 15:23:56 youri Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/17 12:40:58 roy Exp $
 
-DISTNAME=		phabricator-20160304
+DISTNAME=		phabricator-20170316
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		phabricator
-GITHUB_TAG=		13813d226847cd5bebc3aec2dd21c3975a3c1ed8
+GITHUB_TAG=		6f879559707c57006a1a95d839e2e2e6c64a5ff6
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		http://phabricator.com/
@@ -17,10 +17,11 @@ EXTRACT_USING=		bsdtar
 DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-mbstring-[0-9]*:../../converters/php-mbstring
 DEPENDS+=		${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
-DEPENDS+=		${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=		${PHP_PKG_PREFIX}-mysqli-[0-9]*:../../databases/php-mysqli
 DEPENDS+=		${PHP_PKG_PREFIX}-pcntl-[0-9]*:../../devel/php-pcntl
 DEPENDS+=		${PHP_PKG_PREFIX}-posix-[0-9]*:../../devel/php-posix
 DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
+DEPENDS+=		${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 DEPENDS+=		${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
 DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 #DEPENDS+=		:../../textproc/py-pygments?
@@ -39,8 +40,7 @@ SUBST_MESSAGE.php_env=	Fixing PHP path
 SUBST_STAGE.php_env=	post-configure
 SUBST_FILES.php_env+=	scripts/almanac/manage_almanac.php \
 			scripts/cache/manage_cache.php \
-			scripts/calendar/import_us_holidays.php \
-			scripts/celerity/generate_sprites.php \
+			scripts/celerity/*.php \
 			scripts/daemon/*.php \
 			scripts/diviner/diviner.php \
 			scripts/drydock/drydock_control.php \
@@ -48,6 +48,7 @@ SUBST_FILES.php_env+=	scripts/almanac/manage_almanac.php \
 			scripts/files/manage_files.php \
 			scripts/lipsum/manage_lipsum.php \
 			scripts/mail/*.php \
+			scripts/people/manage_people.php \
 			scripts/repository/*.php \
 			scripts/search/manage_search.php \
 			scripts/setup/*.php \
@@ -77,10 +78,14 @@ CHMOD_FILES=		conf LICENSE NOTICE README.md externals resources src \
 			support webroot scripts/__init_script__.php scripts/fpm/warmup.php
 
 post-extract:
-			cd ${WRKSRC} && ${FIND} ${CHMOD_FILES} -type f -exec ${CHMOD} -x \{\} \;
+			cd ${WRKSRC} && \
+			${FIND} ${CHMOD_FILES} -type f \
+				\! -name aphlict_launcher.php \
+				-exec ${CHMOD} -x \{\} \;
 
 do-install:
-			cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
+			cd ${WRKSRC} && \
+			${PAX} -rw * ${DESTDIR}${PREFIX}/${PHABRICATOR_DIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
