@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/12/08 13:21:23 adam Exp $
+$NetBSD: distinfo,v 1.8 2017/03/18 18:18:45 adam Exp $
 
-SHA1 (libbluray-0.9.2.tar.bz2) = 34eedb13e220eb88a5f58660bdb4e727e775fc83
-RMD160 (libbluray-0.9.2.tar.bz2) = 93dd4ce00cdff3fa871c3f07da14d98020516158
-SHA512 (libbluray-0.9.2.tar.bz2) = f7fda2ef4c0ec70eb9a38aed0e76d21d8784410cb13713e7ee66ecd23a1cc58325977b046d40c526554a4a4e4cf96706a233e15451bf34892aff201b47e25aef
-Size (libbluray-0.9.2.tar.bz2) = 704357 bytes
+SHA1 (libbluray-1.0.0.tar.bz2) = 4548b784d5ca265bd53cca68a7757b401cfc5bc5
+RMD160 (libbluray-1.0.0.tar.bz2) = 1d81c6c4fe9f3808e116a1e49641eed28fa52e14
+SHA512 (libbluray-1.0.0.tar.bz2) = fcf2193c3b76f3436bc88ce8853cac16f29c3bb6c66447109c14202a41ea938cb6814502a8f724fb1b31add6bd36b42d3aed3eb4a8010c123537e073bd7a0be1
+Size (libbluray-1.0.0.tar.bz2) = 713973 bytes
