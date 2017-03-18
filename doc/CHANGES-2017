@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1193 2017/03/18 13:55:14 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1194 2017/03/18 19:40:42 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/dovecot2 to 2.2.28 [adam 2017-03-18]
 	Updated mail/dovecot2-pigeonhole to 0.4.17 [adam 2017-03-18]
 	Updated sysutils/dvdisaster to 0.79.5 [adam 2017-03-18]
+	Updated cad/qcad to 3.16.6.0 [plunky 2017-03-18]
