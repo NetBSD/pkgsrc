@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.27 2016/04/09 10:49:39 adam Exp $
+$NetBSD: distinfo,v 1.28 2017/03/18 07:08:23 adam Exp $
 
-SHA1 (exim-html-4.87.tar.bz2) = 30ef36561866be1f9a1edd193739585cf4deea1b
-RMD160 (exim-html-4.87.tar.bz2) = 1015c6a19a72eeae724efb5490698ad0e7dc3fe4
-SHA512 (exim-html-4.87.tar.bz2) = 224884abfd7ab9a2410dbdd24bb65545faf427f1b83a942c6c72309e7d85771f78bf7dc5ec1439de95e1038959cdfc4ab549abb98852c8b17c8310b51ad0385c
-Size (exim-html-4.87.tar.bz2) = 478953 bytes
+SHA1 (exim-html-4.89.tar.bz2) = 3a3979fba7df3697cec10d3dee846b18384e5de7
+RMD160 (exim-html-4.89.tar.bz2) = de3d3b70f4a653880e8b2d6fe4c407cf37a7eb14
+SHA512 (exim-html-4.89.tar.bz2) = 083678e5dc5acc23cd7f72b6b3e2e6d4e60bab8af25b21e2e6c8f4c1f07e070f9fabc9c8a337784e6d7436cc4aa8d7674700c61030b0c23e4b9c7d3c909e5db0
+Size (exim-html-4.89.tar.bz2) = 480222 bytes
