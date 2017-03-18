@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2017/01/19 18:52:15 agc Exp $
+# $NetBSD: Makefile,v 1.35 2017/03/18 07:08:23 adam Exp $
 
-DISTNAME=	exim-html-4.87
+DISTNAME=	exim-html-4.89
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/
 MASTER_SITES+=	ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/
