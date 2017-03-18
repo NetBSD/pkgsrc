@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2017/02/10 08:41:25 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.14 2017/03/18 21:26:31 adam Exp $
 bin/purge
 bin/squidclient
 ${PLIST.ba_getpwnam}libexec/basic_getpwnam_auth
@@ -7,7 +7,6 @@ ${PLIST.ba_NCSA}libexec/basic_ncsa_auth
 ${PLIST.ba_PAM}libexec/basic_pam_auth
 libexec/cachemgr.cgi
 ${PLIST.ssl}libexec/cert_valid.pl
-${PLIST.ssl}libexec/ssl_crtd
 ${PLIST.da_file}libexec/digest_file_auth
 ${PLIST.da_LDAP}libexec/digest_ldap_auth
 ${PLIST.diskd}libexec/diskd
@@ -22,6 +21,7 @@ ${PLIST.ta_kerberos}libexec/negotiate_kerberos_auth_test
 libexec/ntlm_fake_auth
 libexec/ntlm_smb_lm_auth
 libexec/pinger
+${PLIST.ssl}libexec/ssl_crtd
 libexec/storeid_file_rewrite
 ${PLIST.unlinkd}libexec/unlinkd
 libexec/url_fake_rewrite
@@ -38,8 +38,8 @@ ${PLIST.eacl_LDAP_group}man/man8/ext_ldap_group_acl.8
 ${PLIST.eacl_unix_group}man/man8/ext_unix_group_acl.8
 man/man8/log_db_daemon.8
 ${PLIST.ta_kerberos}man/man8/negotiate_kerberos_auth.8
-${PLIST.ssl}man/man8/ssl_crtd.8
 man/man8/squid.8
+${PLIST.ssl}man/man8/ssl_crtd.8
 man/man8/storeid_file_rewrite.8
 sbin/squid
 share/examples/squid/cachemgr.conf
