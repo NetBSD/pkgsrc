@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.13 2016/12/25 11:29:55 wiedi Exp $
+$NetBSD: patch-scripts_exim__install,v 1.1 2017/03/18 07:08:23 adam Exp $
 
 --- scripts/exim_install.orig	2016-12-18 14:02:28.000000000 +0000
 +++ scripts/exim_install
