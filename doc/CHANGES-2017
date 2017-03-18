@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1191 2017/03/18 01:49:20 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1192 2017/03/18 07:15:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1449,3 +1449,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/include-what-you-use to 0.7nb2 [adam 2017-03-17]
 	Updated pkgtools/pkglint to 5.4.19 [rillig 2017-03-17]
 	Added devel/py-ipython_genutils version 0.2.0 [minskim 2017-03-18]
+	Updated mail/exim to 4.89 [adam 2017-03-18]
+	Updated mail/exim-html to 4.89 [adam 2017-03-18]
+	Updated mail/dovecot2 to 2.2.28 [adam 2017-03-18]
+	Updated mail/dovecot2-pigeonhole to 0.4.17 [adam 2017-03-18]
