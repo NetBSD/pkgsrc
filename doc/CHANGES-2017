@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1195 2017/03/18 21:28:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1196 2017/03/18 23:00:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/qcad to 3.16.6.0 [plunky 2017-03-18]
 	Updated multimedia/libbluray to 1.0.0 [adam 2017-03-18]
 	Updated graphics/libepoxy to 1.4.1 [adam 2017-03-18]
+	Updated www/firefox to 52.0.1 [ryoon 2017-03-18]
