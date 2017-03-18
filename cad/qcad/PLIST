@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/06 07:23:09 plunky Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/03/18 19:39:17 plunky Exp $
 bin/qcad
 lib/libdxflib.la
 lib/libopennurbs.la
@@ -326,6 +326,7 @@ lib/qcad/scripts/Block/AddBlock/AddBlockInit.js
 lib/qcad/scripts/Block/AddBlock/Tests/AddBlockTest00.js
 lib/qcad/scripts/Block/AddBlock/Tests/actual/.gitignore
 lib/qcad/scripts/Block/AddBlock/Tests/required/AddBlockTest00_000.dxf
+lib/qcad/scripts/Block/AddBlock/doc/AddBlock.png
 lib/qcad/scripts/Block/AddBlock/doc/AddBlock_de.html
 lib/qcad/scripts/Block/AddBlock/doc/AddBlock_desc_de.html
 lib/qcad/scripts/Block/AddBlock/doc/AddBlock_desc_en.html
@@ -402,6 +403,7 @@ lib/qcad/scripts/Block/CreateBlock/Tests/required/CreateBlockTest01_000.dxf
 lib/qcad/scripts/Block/CreateBlock/Tests/required/CreateBlockTest02_000.dxf
 lib/qcad/scripts/Block/CreateBlock/Tests/required/CreateBlockTest02_001.dxf
 lib/qcad/scripts/Block/CreateBlock/Tests/required/CreateBlockTest02_002.dxf
+lib/qcad/scripts/Block/CreateBlock/doc/CreateBlock.png
 lib/qcad/scripts/Block/CreateBlock/doc/CreateBlock_de.html
 lib/qcad/scripts/Block/CreateBlock/doc/CreateBlock_desc_de.html
 lib/qcad/scripts/Block/CreateBlock/doc/CreateBlock_desc_en.html
@@ -470,6 +472,7 @@ lib/qcad/scripts/Block/CreateLibraryItem/CreateLibraryItem.js
 lib/qcad/scripts/Block/CreateLibraryItem/CreateLibraryItem.pro
 lib/qcad/scripts/Block/CreateLibraryItem/CreateLibraryItem.svg
 lib/qcad/scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js
+lib/qcad/scripts/Block/CreateLibraryItem/doc/CreateLibraryItem.png
 lib/qcad/scripts/Block/CreateLibraryItem/doc/CreateLibraryItem_de.html
 lib/qcad/scripts/Block/CreateLibraryItem/doc/CreateLibraryItem_desc_de.html
 lib/qcad/scripts/Block/CreateLibraryItem/doc/CreateLibraryItem_desc_en.html
@@ -530,6 +533,7 @@ lib/qcad/scripts/Block/DeselectBlockReferences/DeselectBlockReferences.js
 lib/qcad/scripts/Block/DeselectBlockReferences/DeselectBlockReferences.pro
 lib/qcad/scripts/Block/DeselectBlockReferences/DeselectBlockReferences.svg
 lib/qcad/scripts/Block/DeselectBlockReferences/DeselectBlockReferencesInit.js
+lib/qcad/scripts/Block/DeselectBlockReferences/doc/DeselectBlockReferences.png
 lib/qcad/scripts/Block/DeselectBlockReferences/doc/DeselectBlockReferences_de.html
 lib/qcad/scripts/Block/DeselectBlockReferences/doc/DeselectBlockReferences_desc_de.html
 lib/qcad/scripts/Block/DeselectBlockReferences/doc/DeselectBlockReferences_desc_en.html
@@ -590,6 +594,7 @@ lib/qcad/scripts/Block/EditBlock/EditBlockInit.js
 lib/qcad/scripts/Block/EditBlock/Tests/EditBlockTest00.js
 lib/qcad/scripts/Block/EditBlock/Tests/actual/.gitignore
 lib/qcad/scripts/Block/EditBlock/Tests/required/EditBlockTest00_000.dxf
+lib/qcad/scripts/Block/EditBlock/doc/EditBlock.png
 lib/qcad/scripts/Block/EditBlock/doc/EditBlock_de.html
 lib/qcad/scripts/Block/EditBlock/doc/EditBlock_desc_de.html
 lib/qcad/scripts/Block/EditBlock/doc/EditBlock_desc_en.html
@@ -653,6 +658,7 @@ lib/qcad/scripts/Block/EditFromReference/EditFromReferenceInit.js
 lib/qcad/scripts/Block/EditFromReference/Tests/EditFromReferenceTest00.js
 lib/qcad/scripts/Block/EditFromReference/Tests/actual/.gitignore
 lib/qcad/scripts/Block/EditFromReference/Tests/required/EditFromReferenceTest00_000.dxf
+lib/qcad/scripts/Block/EditFromReference/doc/EditFromReference.png
 lib/qcad/scripts/Block/EditFromReference/doc/EditFromReference_de.html
 lib/qcad/scripts/Block/EditFromReference/doc/EditFromReference_desc_de.html
 lib/qcad/scripts/Block/EditFromReference/doc/EditFromReference_desc_en.html
@@ -715,6 +721,7 @@ lib/qcad/scripts/Block/EditMainDrawing/EditMainDrawing.js
 lib/qcad/scripts/Block/EditMainDrawing/EditMainDrawing.pro
 lib/qcad/scripts/Block/EditMainDrawing/EditMainDrawing.svg
 lib/qcad/scripts/Block/EditMainDrawing/EditMainDrawingInit.js
+lib/qcad/scripts/Block/EditMainDrawing/doc/EditMainDrawing.png
 lib/qcad/scripts/Block/EditMainDrawing/doc/EditMainDrawing_de.html
 lib/qcad/scripts/Block/EditMainDrawing/doc/EditMainDrawing_desc_de.html
 lib/qcad/scripts/Block/EditMainDrawing/doc/EditMainDrawing_desc_en.html
@@ -775,6 +782,7 @@ lib/qcad/scripts/Block/HideAllBlocks/HideAllBlocks.js
 lib/qcad/scripts/Block/HideAllBlocks/HideAllBlocks.pro
 lib/qcad/scripts/Block/HideAllBlocks/HideAllBlocks.svg
 lib/qcad/scripts/Block/HideAllBlocks/HideAllBlocksInit.js
+lib/qcad/scripts/Block/HideAllBlocks/doc/HideAllBlocks.png
 lib/qcad/scripts/Block/HideAllBlocks/doc/HideAllBlocks_de.html
 lib/qcad/scripts/Block/HideAllBlocks/doc/HideAllBlocks_desc_de.html
 lib/qcad/scripts/Block/HideAllBlocks/doc/HideAllBlocks_desc_en.html
@@ -854,6 +862,10 @@ lib/qcad/scripts/Block/InsertBlock/Tests/InsertBlockTest01.js
 lib/qcad/scripts/Block/InsertBlock/Tests/actual/.gitignore
 lib/qcad/scripts/Block/InsertBlock/Tests/required/InsertBlockTest00_000.dxf
 lib/qcad/scripts/Block/InsertBlock/Tests/required/InsertBlockTest01_000.dxf
+lib/qcad/scripts/Block/InsertBlock/doc/ArrayOfBlocks.png
+lib/qcad/scripts/Block/InsertBlock/doc/FlipHorizontal.png
+lib/qcad/scripts/Block/InsertBlock/doc/FlipVertical.png
+lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock.png
 lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_de.html
 lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_desc_de.html
 lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_desc_en.html
@@ -879,6 +891,9 @@ lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_proc_pt.html
 lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_proc_ru.html
 lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_pt.html
 lib/qcad/scripts/Block/InsertBlock/doc/InsertBlock_sl.html
+lib/qcad/scripts/Block/InsertBlock/doc/KeepProportionsOff.png
+lib/qcad/scripts/Block/InsertBlock/doc/KeepProportionsOn.png
+lib/qcad/scripts/Block/InsertBlock/doc/SingleBlock.png
 lib/qcad/scripts/Block/InsertBlock/ts/InsertBlock_cs.qm
 lib/qcad/scripts/Block/InsertBlock/ts/InsertBlock_cs.ts
 lib/qcad/scripts/Block/InsertBlock/ts/InsertBlock_de.qm
@@ -927,6 +942,9 @@ lib/qcad/scripts/Block/InsertBlockItem/InsertBlockItem.pro
 lib/qcad/scripts/Block/InsertBlockItem/InsertBlockItem.svg
 lib/qcad/scripts/Block/InsertBlockItem/InsertBlockItem.ui
 lib/qcad/scripts/Block/InsertBlockItem/InsertBlockItemInit.js
+lib/qcad/scripts/Block/InsertBlockItem/doc/FlipHorizontal.png
+lib/qcad/scripts/Block/InsertBlockItem/doc/FlipVertical.png
+lib/qcad/scripts/Block/InsertBlockItem/doc/InsertBlockItem.png
 lib/qcad/scripts/Block/InsertBlockItem/doc/InsertBlockItem_desc_en.html
 lib/qcad/scripts/Block/InsertBlockItem/doc/InsertBlockItem_desc_ru.html
 lib/qcad/scripts/Block/InsertBlockItem/doc/InsertBlockItem_desc_sl.html
@@ -1018,6 +1036,7 @@ lib/qcad/scripts/Block/RemoveBlock/Tests/RemoveBlockTest00.js
 lib/qcad/scripts/Block/RemoveBlock/Tests/actual/.gitignore
 lib/qcad/scripts/Block/RemoveBlock/Tests/required/RemoveBlockTest00_000.dxf
 lib/qcad/scripts/Block/RemoveBlock/Tests/required/RemoveBlockTest00_001.dxf
+lib/qcad/scripts/Block/RemoveBlock/doc/RemoveBlock.png
 lib/qcad/scripts/Block/RemoveBlock/doc/RemoveBlock_de.html
 lib/qcad/scripts/Block/RemoveBlock/doc/RemoveBlock_desc_de.html
 lib/qcad/scripts/Block/RemoveBlock/doc/RemoveBlock_desc_en.html
@@ -1081,6 +1100,7 @@ lib/qcad/scripts/Block/RenameBlock/RenameBlockInit.js
 lib/qcad/scripts/Block/RenameBlock/Tests/RenameBlockTest00.js
 lib/qcad/scripts/Block/RenameBlock/Tests/actual/.gitignore
 lib/qcad/scripts/Block/RenameBlock/Tests/required/RenameBlockTest00_000.dxf
+lib/qcad/scripts/Block/RenameBlock/doc/RenameBlock.png
 lib/qcad/scripts/Block/RenameBlock/doc/RenameBlock_de.html
 lib/qcad/scripts/Block/RenameBlock/doc/RenameBlock_desc_de.html
 lib/qcad/scripts/Block/RenameBlock/doc/RenameBlock_desc_en.html
@@ -1141,6 +1161,7 @@ lib/qcad/scripts/Block/SelectBlockReferences/SelectBlockReferences.js
 lib/qcad/scripts/Block/SelectBlockReferences/SelectBlockReferences.pro
 lib/qcad/scripts/Block/SelectBlockReferences/SelectBlockReferences.svg
 lib/qcad/scripts/Block/SelectBlockReferences/SelectBlockReferencesInit.js
+lib/qcad/scripts/Block/SelectBlockReferences/doc/SelectBlockReferences.png
 lib/qcad/scripts/Block/SelectBlockReferences/doc/SelectBlockReferences_de.html
 lib/qcad/scripts/Block/SelectBlockReferences/doc/SelectBlockReferences_desc_de.html
 lib/qcad/scripts/Block/SelectBlockReferences/doc/SelectBlockReferences_desc_en.html
@@ -1198,6 +1219,7 @@ lib/qcad/scripts/Block/ShowAllBlocks/ShowAllBlocks.js
 lib/qcad/scripts/Block/ShowAllBlocks/ShowAllBlocks.pro
 lib/qcad/scripts/Block/ShowAllBlocks/ShowAllBlocks.svg
 lib/qcad/scripts/Block/ShowAllBlocks/ShowAllBlocksInit.js
+lib/qcad/scripts/Block/ShowAllBlocks/doc/ShowAllBlocks.png
 lib/qcad/scripts/Block/ShowAllBlocks/doc/ShowAllBlocks_de.html
 lib/qcad/scripts/Block/ShowAllBlocks/doc/ShowAllBlocks_desc_de.html
 lib/qcad/scripts/Block/ShowAllBlocks/doc/ShowAllBlocks_desc_en.html
@@ -1258,6 +1280,7 @@ lib/qcad/scripts/Block/ToggleBlockVisibility/ToggleBlockVisibility.js
 lib/qcad/scripts/Block/ToggleBlockVisibility/ToggleBlockVisibility.pro
 lib/qcad/scripts/Block/ToggleBlockVisibility/ToggleBlockVisibility.svg
 lib/qcad/scripts/Block/ToggleBlockVisibility/ToggleBlockVisibilityInit.js
+lib/qcad/scripts/Block/ToggleBlockVisibility/doc/ToggleBlockVisibility.png
 lib/qcad/scripts/Block/ToggleBlockVisibility/doc/ToggleBlockVisibility_de.html
 lib/qcad/scripts/Block/ToggleBlockVisibility/doc/ToggleBlockVisibility_desc_de.html
 lib/qcad/scripts/Block/ToggleBlockVisibility/doc/ToggleBlockVisibility_desc_en.html
@@ -1313,6 +1336,7 @@ lib/qcad/scripts/Block/ToggleBlockVisibility/ts/ToggleBlockVisibility_zh_CN.qm
 lib/qcad/scripts/Block/ToggleBlockVisibility/ts/ToggleBlockVisibility_zh_CN.ts
 lib/qcad/scripts/Block/ToggleBlockVisibility/ts/ToggleBlockVisibility_zh_TW.qm
 lib/qcad/scripts/Block/ToggleBlockVisibility/ts/ToggleBlockVisibility_zh_TW.ts
+lib/qcad/scripts/Block/doc/Block.png
 lib/qcad/scripts/Block/doc/Block_de.html
 lib/qcad/scripts/Block/doc/Block_en.html
 lib/qcad/scripts/Block/doc/Block_es.html
@@ -1384,6 +1408,7 @@ lib/qcad/scripts/Draw/Arc/Arc2PA/CounterClockwise.svg
 lib/qcad/scripts/Draw/Arc/Arc2PA/Tests/Arc2PATest00.js
 lib/qcad/scripts/Draw/Arc/Arc2PA/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/Arc2PA/Tests/required/Arc2PATest00_000.dxf
+lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA.png
 lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_desc_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_desc_en.html
@@ -1409,6 +1434,8 @@ lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_proc_pt.html
 lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_proc_ru.html
 lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_pt.html
 lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Arc2PA_sl.html
+lib/qcad/scripts/Draw/Arc/Arc2PA/doc/Clockwise.png
+lib/qcad/scripts/Draw/Arc/Arc2PA/doc/CounterClockwise.png
 lib/qcad/scripts/Draw/Arc/Arc2PA/ts/Arc2PA_cs.qm
 lib/qcad/scripts/Draw/Arc/Arc2PA/ts/Arc2PA_cs.ts
 lib/qcad/scripts/Draw/Arc/Arc2PA/ts/Arc2PA_de.qm
@@ -1460,6 +1487,7 @@ lib/qcad/scripts/Draw/Arc/Arc2PH/CounterClockwise.svg
 lib/qcad/scripts/Draw/Arc/Arc2PH/Tests/Arc2PHTest00.js
 lib/qcad/scripts/Draw/Arc/Arc2PH/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/Arc2PH/Tests/required/Arc2PHTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH.png
 lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_desc_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_desc_en.html
@@ -1469,6 +1497,8 @@ lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_ja.html
 lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_proc_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_proc_en.html
 lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Arc2PH_sl.html
+lib/qcad/scripts/Draw/Arc/Arc2PH/doc/Clockwise.png
+lib/qcad/scripts/Draw/Arc/Arc2PH/doc/CounterClockwise.png
 lib/qcad/scripts/Draw/Arc/Arc2PH/ts/Arc2PH_cs.qm
 lib/qcad/scripts/Draw/Arc/Arc2PH/ts/Arc2PH_cs.ts
 lib/qcad/scripts/Draw/Arc/Arc2PH/ts/Arc2PH_de.qm
@@ -1520,6 +1550,7 @@ lib/qcad/scripts/Draw/Arc/Arc2PL/CounterClockwise.svg
 lib/qcad/scripts/Draw/Arc/Arc2PL/Tests/Arc2PLTest00.js
 lib/qcad/scripts/Draw/Arc/Arc2PL/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/Arc2PL/Tests/required/Arc2PLTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL.png
 lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_desc_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_desc_en.html
@@ -1542,6 +1573,8 @@ lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_proc_ja.html
 lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_proc_pt.html
 lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_proc_ru.html
 lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Arc2PL_sl.html
+lib/qcad/scripts/Draw/Arc/Arc2PL/doc/Clockwise.png
+lib/qcad/scripts/Draw/Arc/Arc2PL/doc/CounterClockwise.png
 lib/qcad/scripts/Draw/Arc/Arc2PL/ts/Arc2PL_cs.qm
 lib/qcad/scripts/Draw/Arc/Arc2PL/ts/Arc2PL_cs.ts
 lib/qcad/scripts/Draw/Arc/Arc2PL/ts/Arc2PL_de.qm
@@ -1597,6 +1630,7 @@ lib/qcad/scripts/Draw/Arc/Arc2PR/Solution2.svg
 lib/qcad/scripts/Draw/Arc/Arc2PR/Tests/Arc2PRTest00.js
 lib/qcad/scripts/Draw/Arc/Arc2PR/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/Arc2PR/Tests/required/Arc2PRTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR.png
 lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_desc_de.html
 lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_desc_en.html
@@ -1622,6 +1656,10 @@ lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_proc_pt.html
 lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_proc_ru.html
 lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_pt.html
 lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Arc2PR_sl.html
+lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Clockwise.png
+lib/qcad/scripts/Draw/Arc/Arc2PR/doc/CounterClockwise.png
+lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Solution1.png
+lib/qcad/scripts/Draw/Arc/Arc2PR/doc/Solution2.png
 lib/qcad/scripts/Draw/Arc/Arc2PR/ts/Arc2PR_cs.qm
 lib/qcad/scripts/Draw/Arc/Arc2PR/ts/Arc2PR_cs.ts
 lib/qcad/scripts/Draw/Arc/Arc2PR/ts/Arc2PR_de.qm
@@ -1668,6 +1706,7 @@ lib/qcad/scripts/Draw/Arc/Arc3P/Arc3PInit.js
 lib/qcad/scripts/Draw/Arc/Arc3P/Tests/Arc3PTest00.js
 lib/qcad/scripts/Draw/Arc/Arc3P/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/Arc3P/Tests/required/Arc3PTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/Arc3P/doc/Arc3P.png
 lib/qcad/scripts/Draw/Arc/Arc3P/doc/Arc3P_de.html
 lib/qcad/scripts/Draw/Arc/Arc3P/doc/Arc3P_desc_de.html
 lib/qcad/scripts/Draw/Arc/Arc3P/doc/Arc3P_desc_en.html
@@ -1744,6 +1783,7 @@ lib/qcad/scripts/Draw/Arc/ArcCPA/CounterClockwise.svg
 lib/qcad/scripts/Draw/Arc/ArcCPA/Tests/ArcCPATest00.js
 lib/qcad/scripts/Draw/Arc/ArcCPA/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/ArcCPA/Tests/required/ArcCPATest00_000.dxf
+lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA.png
 lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_de.html
 lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_desc_de.html
 lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_desc_en.html
@@ -1769,6 +1809,8 @@ lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_proc_pt.html
 lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_proc_ru.html
 lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_pt.html
 lib/qcad/scripts/Draw/Arc/ArcCPA/doc/ArcCPA_sl.html
+lib/qcad/scripts/Draw/Arc/ArcCPA/doc/Clockwise.png
+lib/qcad/scripts/Draw/Arc/ArcCPA/doc/CounterClockwise.png
 lib/qcad/scripts/Draw/Arc/ArcCPA/ts/ArcCPA_cs.qm
 lib/qcad/scripts/Draw/Arc/ArcCPA/ts/ArcCPA_cs.ts
 lib/qcad/scripts/Draw/Arc/ArcCPA/ts/ArcCPA_de.qm
@@ -1816,6 +1858,7 @@ lib/qcad/scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js
 lib/qcad/scripts/Draw/Arc/ArcConcentric/Tests/ArcConcentricTest00.js
 lib/qcad/scripts/Draw/Arc/ArcConcentric/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/ArcConcentric/Tests/required/ArcConcentricTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/ArcConcentric/doc/ArcConcentric.png
 lib/qcad/scripts/Draw/Arc/ArcConcentric/doc/ArcConcentric_de.html
 lib/qcad/scripts/Draw/Arc/ArcConcentric/doc/ArcConcentric_desc_de.html
 lib/qcad/scripts/Draw/Arc/ArcConcentric/doc/ArcConcentric_desc_en.html
@@ -1888,6 +1931,7 @@ lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js
 lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/Tests/ArcConcentricThroughTest00.js
 lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/Tests/required/ArcConcentricThroughTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/doc/ArcConcentricThrough.png
 lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/doc/ArcConcentricThrough_de.html
 lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/doc/ArcConcentricThrough_desc_de.html
 lib/qcad/scripts/Draw/Arc/ArcConcentricThrough/doc/ArcConcentricThrough_desc_en.html
@@ -1960,6 +2004,7 @@ lib/qcad/scripts/Draw/Arc/ArcTPR/ArcTPRInit.js
 lib/qcad/scripts/Draw/Arc/ArcTPR/Tests/ArcTPRTest00.js
 lib/qcad/scripts/Draw/Arc/ArcTPR/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/ArcTPR/Tests/required/ArcTPRTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/ArcTPR/doc/ArcTPR.png
 lib/qcad/scripts/Draw/Arc/ArcTPR/doc/ArcTPR_de.html
 lib/qcad/scripts/Draw/Arc/ArcTPR/doc/ArcTPR_desc_de.html
 lib/qcad/scripts/Draw/Arc/ArcTPR/doc/ArcTPR_desc_en.html
@@ -2029,6 +2074,7 @@ lib/qcad/scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js
 lib/qcad/scripts/Draw/Arc/ArcTangential/Tests/ArcTangentialTest00.js
 lib/qcad/scripts/Draw/Arc/ArcTangential/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Arc/ArcTangential/Tests/required/ArcTangentialTest00_000.dxf
+lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential.png
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_de.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_desc_de.html
 lib/qcad/scripts/Draw/Arc/ArcTangential/doc/ArcTangential_desc_en.html
@@ -2092,6 +2138,7 @@ lib/qcad/scripts/Draw/Arc/ArcTangential/ts/ArcTangential_zh_CN.qm
 lib/qcad/scripts/Draw/Arc/ArcTangential/ts/ArcTangential_zh_CN.ts
 lib/qcad/scripts/Draw/Arc/ArcTangential/ts/ArcTangential_zh_TW.qm
 lib/qcad/scripts/Draw/Arc/ArcTangential/ts/ArcTangential_zh_TW.ts
+lib/qcad/scripts/Draw/Arc/doc/Arc.png
 lib/qcad/scripts/Draw/Arc/doc/Arc_de.html
 lib/qcad/scripts/Draw/Arc/doc/Arc_en.html
 lib/qcad/scripts/Draw/Arc/doc/Arc_es.html
@@ -2151,6 +2198,7 @@ lib/qcad/scripts/Draw/Circle/Circle2P/Circle2PInit.js
 lib/qcad/scripts/Draw/Circle/Circle2P/Tests/Circle2PTest00.js
 lib/qcad/scripts/Draw/Circle/Circle2P/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/Circle2P/Tests/required/Circle2PTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2P/doc/Circle2P.png
 lib/qcad/scripts/Draw/Circle/Circle2P/doc/Circle2P_de.html
 lib/qcad/scripts/Draw/Circle/Circle2P/doc/Circle2P_desc_de.html
 lib/qcad/scripts/Draw/Circle/Circle2P/doc/Circle2P_desc_en.html
@@ -2226,6 +2274,7 @@ lib/qcad/scripts/Draw/Circle/Circle2PR/Solution2-inverse.svg
 lib/qcad/scripts/Draw/Circle/Circle2PR/Solution2.svg
 lib/qcad/scripts/Draw/Circle/Circle2PR/Tests/Circle2PRTest00.js
 lib/qcad/scripts/Draw/Circle/Circle2PR/Tests/required/Circle2PRTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR.png
 lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_de.html
 lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_desc_de.html
 lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_desc_en.html
@@ -2251,6 +2300,8 @@ lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_proc_pt.html
 lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_proc_ru.html
 lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_pt.html
 lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Circle2PR_sl.html
+lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Solution1.png
+lib/qcad/scripts/Draw/Circle/Circle2PR/doc/Solution2.png
 lib/qcad/scripts/Draw/Circle/Circle2PR/ts/Circle2PR_cs.qm
 lib/qcad/scripts/Draw/Circle/Circle2PR/ts/Circle2PR_cs.ts
 lib/qcad/scripts/Draw/Circle/Circle2PR/ts/Circle2PR_de.qm
@@ -2295,8 +2346,13 @@ lib/qcad/scripts/Draw/Circle/Circle2TP/Circle2TP.pro
 lib/qcad/scripts/Draw/Circle/Circle2TP/Circle2TP.svg
 lib/qcad/scripts/Draw/Circle/Circle2TP/Circle2TPInit.js
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js
+lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js
+lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest01_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest02_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP.png
 lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP_de.html
 lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP_desc_de.html
 lib/qcad/scripts/Draw/Circle/Circle2TP/doc/Circle2TP_desc_en.html
@@ -2368,6 +2424,7 @@ lib/qcad/scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest01.js
 lib/qcad/scripts/Draw/Circle/Circle2TR/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/Circle2TR/Tests/required/Circle2TRTest00_000.dxf
 lib/qcad/scripts/Draw/Circle/Circle2TR/Tests/required/Circle2TRTest01_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle2TR/doc/Circle2TR.png
 lib/qcad/scripts/Draw/Circle/Circle2TR/doc/Circle2TR_de.html
 lib/qcad/scripts/Draw/Circle/Circle2TR/doc/Circle2TR_desc_de.html
 lib/qcad/scripts/Draw/Circle/Circle2TR/doc/Circle2TR_desc_en.html
@@ -2436,6 +2493,7 @@ lib/qcad/scripts/Draw/Circle/Circle3P/Circle3PInit.js
 lib/qcad/scripts/Draw/Circle/Circle3P/Tests/Circle3PTest00.js
 lib/qcad/scripts/Draw/Circle/Circle3P/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/Circle3P/Tests/required/Circle3PTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle3P/doc/Circle3P.png
 lib/qcad/scripts/Draw/Circle/Circle3P/doc/Circle3P_de.html
 lib/qcad/scripts/Draw/Circle/Circle3P/doc/Circle3P_desc_de.html
 lib/qcad/scripts/Draw/Circle/Circle3P/doc/Circle3P_desc_en.html
@@ -2505,8 +2563,15 @@ lib/qcad/scripts/Draw/Circle/Circle3T/Circle3T.pro
 lib/qcad/scripts/Draw/Circle/Circle3T/Circle3T.svg
 lib/qcad/scripts/Draw/Circle/Circle3T/Circle3TInit.js
 lib/qcad/scripts/Draw/Circle/Circle3T/Tests/Circle3TTest00.js
+lib/qcad/scripts/Draw/Circle/Circle3T/Tests/Circle3TTest01.js
+lib/qcad/scripts/Draw/Circle/Circle3T/Tests/Circle3TTest02.js
+lib/qcad/scripts/Draw/Circle/Circle3T/Tests/Circle3TTest03.js
 lib/qcad/scripts/Draw/Circle/Circle3T/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest01_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest02_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle3T/Tests/required/Circle3TTest03_000.dxf
+lib/qcad/scripts/Draw/Circle/Circle3T/doc/Circle3T.png
 lib/qcad/scripts/Draw/Circle/Circle3T/doc/Circle3T_de.html
 lib/qcad/scripts/Draw/Circle/Circle3T/doc/Circle3T_desc_de.html
 lib/qcad/scripts/Draw/Circle/Circle3T/doc/Circle3T_desc_en.html
@@ -2577,6 +2642,7 @@ lib/qcad/scripts/Draw/Circle/CircleCD/CircleCDInit.js
 lib/qcad/scripts/Draw/Circle/CircleCD/Tests/CircleCDTest00.js
 lib/qcad/scripts/Draw/Circle/CircleCD/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleCD/Tests/required/CircleCDTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleCD/doc/CircleCD.png
 lib/qcad/scripts/Draw/Circle/CircleCD/doc/CircleCD_de.html
 lib/qcad/scripts/Draw/Circle/CircleCD/doc/CircleCD_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleCD/doc/CircleCD_desc_en.html
@@ -2645,6 +2711,7 @@ lib/qcad/scripts/Draw/Circle/CircleCP/CircleCPInit.js
 lib/qcad/scripts/Draw/Circle/CircleCP/Tests/CircleCPTest00.js
 lib/qcad/scripts/Draw/Circle/CircleCP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleCP/Tests/required/CircleCPTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleCP/doc/CircleCP.png
 lib/qcad/scripts/Draw/Circle/CircleCP/doc/CircleCP_de.html
 lib/qcad/scripts/Draw/Circle/CircleCP/doc/CircleCP_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleCP/doc/CircleCP_desc_en.html
@@ -2719,6 +2786,7 @@ lib/qcad/scripts/Draw/Circle/CircleCR/Tests/CircleCRTest00.js
 lib/qcad/scripts/Draw/Circle/CircleCR/Tests/CircleCRTest01.js
 lib/qcad/scripts/Draw/Circle/CircleCR/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleCR/Tests/required/CircleCRTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleCR/doc/CircleCR.png
 lib/qcad/scripts/Draw/Circle/CircleCR/doc/CircleCR_de.html
 lib/qcad/scripts/Draw/Circle/CircleCR/doc/CircleCR_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleCR/doc/CircleCR_desc_en.html
@@ -2791,6 +2859,7 @@ lib/qcad/scripts/Draw/Circle/CircleConcentric/CircleConcentricInit.js
 lib/qcad/scripts/Draw/Circle/CircleConcentric/Tests/CircleConcentricTest00.js
 lib/qcad/scripts/Draw/Circle/CircleConcentric/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleConcentric/Tests/required/CircleConcentricTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleConcentric/doc/CircleConcentric.png
 lib/qcad/scripts/Draw/Circle/CircleConcentric/doc/CircleConcentric_de.html
 lib/qcad/scripts/Draw/Circle/CircleConcentric/doc/CircleConcentric_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleConcentric/doc/CircleConcentric_desc_en.html
@@ -2863,6 +2932,7 @@ lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThroughInit
 lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/Tests/CircleConcentricThroughTest00.js
 lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/Tests/required/CircleConcentricThroughTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/doc/CircleConcentricThrough.png
 lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/doc/CircleConcentricThrough_de.html
 lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/doc/CircleConcentricThrough_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleConcentricThrough/doc/CircleConcentricThrough_desc_en.html
@@ -2934,6 +3004,7 @@ lib/qcad/scripts/Draw/Circle/CircleT2P/CircleT2PInit.js
 lib/qcad/scripts/Draw/Circle/CircleT2P/Tests/CircleT2PTest00.js
 lib/qcad/scripts/Draw/Circle/CircleT2P/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleT2P/Tests/required/CircleT2PTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleT2P/doc/CircleT2P.png
 lib/qcad/scripts/Draw/Circle/CircleT2P/doc/CircleT2P_de.html
 lib/qcad/scripts/Draw/Circle/CircleT2P/doc/CircleT2P_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleT2P/doc/CircleT2P_desc_en.html
@@ -3003,6 +3074,7 @@ lib/qcad/scripts/Draw/Circle/CircleTPR/CircleTPRInit.js
 lib/qcad/scripts/Draw/Circle/CircleTPR/Tests/CircleTPRTest00.js
 lib/qcad/scripts/Draw/Circle/CircleTPR/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Circle/CircleTPR/Tests/required/CircleTPRTest00_000.dxf
+lib/qcad/scripts/Draw/Circle/CircleTPR/doc/CircleTPR.png
 lib/qcad/scripts/Draw/Circle/CircleTPR/doc/CircleTPR_de.html
 lib/qcad/scripts/Draw/Circle/CircleTPR/doc/CircleTPR_desc_de.html
 lib/qcad/scripts/Draw/Circle/CircleTPR/doc/CircleTPR_desc_en.html
@@ -3063,6 +3135,7 @@ lib/qcad/scripts/Draw/Circle/CircleTPR/ts/CircleTPR_zh_CN.qm
 lib/qcad/scripts/Draw/Circle/CircleTPR/ts/CircleTPR_zh_CN.ts
 lib/qcad/scripts/Draw/Circle/CircleTPR/ts/CircleTPR_zh_TW.qm
 lib/qcad/scripts/Draw/Circle/CircleTPR/ts/CircleTPR_zh_TW.ts
+lib/qcad/scripts/Draw/Circle/doc/Circle.png
 lib/qcad/scripts/Draw/Circle/doc/Circle_de.html
 lib/qcad/scripts/Draw/Circle/doc/Circle_en.html
 lib/qcad/scripts/Draw/Circle/doc/Circle_es.html
@@ -3118,8 +3191,10 @@ lib/qcad/scripts/Draw/Dimension/DimAligned/DimAlignedInit.js
 lib/qcad/scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js
 lib/qcad/scripts/Draw/Dimension/DimAligned/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest00_000.dxf
-lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAligned.dxf
-lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAligned.svg
+lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAligned.png
+lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAlignedFigure.dxf
+lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAlignedFigure.png
+lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAlignedFigure.svg
 lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAligned_de.html
 lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAligned_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimAligned/doc/DimAligned_desc_en.html
@@ -3191,8 +3266,10 @@ lib/qcad/scripts/Draw/Dimension/DimAngular/DimAngularInit.js
 lib/qcad/scripts/Draw/Dimension/DimAngular/Tests/DimAngularTest00.js
 lib/qcad/scripts/Draw/Dimension/DimAngular/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimAngular/Tests/required/DimAngularTest00_000.dxf
-lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngular.dxf
-lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngular.svg
+lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngular.png
+lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngularFigure.dxf
+lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngularFigure.png
+lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngularFigure.svg
 lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngular_de.html
 lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngular_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimAngular/doc/DimAngular_desc_en.html
@@ -3264,8 +3341,10 @@ lib/qcad/scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js
 lib/qcad/scripts/Draw/Dimension/DimDiametric/Tests/DimDiametricTest00.js
 lib/qcad/scripts/Draw/Dimension/DimDiametric/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimDiametric/Tests/required/DimDiametricTest00_000.dxf
-lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametric.dxf
-lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametric.svg
+lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametric.png
+lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametricFigure.dxf
+lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametricFigure.png
+lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametricFigure.svg
 lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametric_de.html
 lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametric_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimDiametric/doc/DimDiametric_desc_en.html
@@ -3337,6 +3416,7 @@ lib/qcad/scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js
 lib/qcad/scripts/Draw/Dimension/DimHorizontal/Tests/DimHorizontalTest00.js
 lib/qcad/scripts/Draw/Dimension/DimHorizontal/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimHorizontal/Tests/required/DimHorizontalTest00_000.dxf
+lib/qcad/scripts/Draw/Dimension/DimHorizontal/doc/DimHorizontal.png
 lib/qcad/scripts/Draw/Dimension/DimHorizontal/doc/DimHorizontal_de.html
 lib/qcad/scripts/Draw/Dimension/DimHorizontal/doc/DimHorizontal_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimHorizontal/doc/DimHorizontal_desc_en.html
@@ -3400,6 +3480,7 @@ lib/qcad/scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js
 lib/qcad/scripts/Draw/Dimension/DimOrdinate/Tests/DimOrdinateTest00.js
 lib/qcad/scripts/Draw/Dimension/DimOrdinate/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimOrdinate/Tests/required/DimOrdinateTest00_000.dxf
+lib/qcad/scripts/Draw/Dimension/DimOrdinate/doc/DimOrdinate.png
 lib/qcad/scripts/Draw/Dimension/DimOrdinate/doc/DimOrdinate_de.html
 lib/qcad/scripts/Draw/Dimension/DimOrdinate/doc/DimOrdinate_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimOrdinate/doc/DimOrdinate_desc_en.html
@@ -3471,8 +3552,10 @@ lib/qcad/scripts/Draw/Dimension/DimRadial/DimRadialInit.js
 lib/qcad/scripts/Draw/Dimension/DimRadial/Tests/DimRadialTest00.js
 lib/qcad/scripts/Draw/Dimension/DimRadial/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimRadial/Tests/required/DimRadialTest00_000.dxf
-lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadial.dxf
-lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadial.svg
+lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadial.png
+lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadialFigure.dxf
+lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadialFigure.png
+lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadialFigure.svg
 lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadial_de.html
 lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadial_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimRadial/doc/DimRadial_desc_en.html
@@ -3541,6 +3624,7 @@ lib/qcad/scripts/Draw/Dimension/DimRegen/DimRegen.js
 lib/qcad/scripts/Draw/Dimension/DimRegen/DimRegen.pro
 lib/qcad/scripts/Draw/Dimension/DimRegen/DimRegen.svg
 lib/qcad/scripts/Draw/Dimension/DimRegen/DimRegenInit.js
+lib/qcad/scripts/Draw/Dimension/DimRegen/doc/DimRegen.png
 lib/qcad/scripts/Draw/Dimension/DimRegen/doc/DimRegen_de.html
 lib/qcad/scripts/Draw/Dimension/DimRegen/doc/DimRegen_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimRegen/doc/DimRegen_desc_en.html
@@ -3605,6 +3689,7 @@ lib/qcad/scripts/Draw/Dimension/DimRotated/DimRotatedInit.js
 lib/qcad/scripts/Draw/Dimension/DimRotated/Tests/DimRotatedTest00.js
 lib/qcad/scripts/Draw/Dimension/DimRotated/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimRotated/Tests/required/DimRotatedTest00_000.dxf
+lib/qcad/scripts/Draw/Dimension/DimRotated/doc/DimRotated.png
 lib/qcad/scripts/Draw/Dimension/DimRotated/doc/DimRotated_de.html
 lib/qcad/scripts/Draw/Dimension/DimRotated/doc/DimRotated_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimRotated/doc/DimRotated_desc_en.html
@@ -3676,6 +3761,7 @@ lib/qcad/scripts/Draw/Dimension/DimVertical/DimVerticalInit.js
 lib/qcad/scripts/Draw/Dimension/DimVertical/Tests/DimVerticalTest00.js
 lib/qcad/scripts/Draw/Dimension/DimVertical/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/DimVertical/Tests/required/DimVerticalTest00_000.dxf
+lib/qcad/scripts/Draw/Dimension/DimVertical/doc/DimVertical.png
 lib/qcad/scripts/Draw/Dimension/DimVertical/doc/DimVertical_de.html
 lib/qcad/scripts/Draw/Dimension/DimVertical/doc/DimVertical_desc_de.html
 lib/qcad/scripts/Draw/Dimension/DimVertical/doc/DimVertical_desc_en.html
@@ -3747,8 +3833,10 @@ lib/qcad/scripts/Draw/Dimension/Leader/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Dimension/Leader/Tests/required/LeaderTest00_000.dxf
 lib/qcad/scripts/Draw/Dimension/Leader/Undo-inverse.svg
 lib/qcad/scripts/Draw/Dimension/Leader/Undo.svg
-lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader.dxf
-lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader.svg
+lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader.png
+lib/qcad/scripts/Draw/Dimension/Leader/doc/LeaderFigure.dxf
+lib/qcad/scripts/Draw/Dimension/Leader/doc/LeaderFigure.png
+lib/qcad/scripts/Draw/Dimension/Leader/doc/LeaderFigure.svg
 lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_de.html
 lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_desc_de.html
 lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_desc_en.html
@@ -3774,6 +3862,7 @@ lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_proc_pt.html
 lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_proc_ru.html
 lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_pt.html
 lib/qcad/scripts/Draw/Dimension/Leader/doc/Leader_sl.html
+lib/qcad/scripts/Draw/Dimension/Leader/doc/Undo.png
 lib/qcad/scripts/Draw/Dimension/Leader/ts/Leader_cs.qm
 lib/qcad/scripts/Draw/Dimension/Leader/ts/Leader_cs.ts
 lib/qcad/scripts/Draw/Dimension/Leader/ts/Leader_de.qm
@@ -3821,6 +3910,7 @@ lib/qcad/scripts/Draw/Dimension/Tests/drawing03.dxf
 lib/qcad/scripts/Draw/Dimension/Tests/floor_plan.dxf
 lib/qcad/scripts/Draw/Dimension/UpperToleranceIcon-inverse.svg
 lib/qcad/scripts/Draw/Dimension/UpperToleranceIcon.svg
+lib/qcad/scripts/Draw/Dimension/doc/Dimension.png
 lib/qcad/scripts/Draw/Dimension/doc/Dimension_de.html
 lib/qcad/scripts/Draw/Dimension/doc/Dimension_desc_de.html
 lib/qcad/scripts/Draw/Dimension/doc/Dimension_desc_en.html
@@ -3838,6 +3928,8 @@ lib/qcad/scripts/Draw/Dimension/doc/Dimension_it.html
 lib/qcad/scripts/Draw/Dimension/doc/Dimension_ja.html
 lib/qcad/scripts/Draw/Dimension/doc/Dimension_pt.html
 lib/qcad/scripts/Draw/Dimension/doc/Dimension_sl.html
+lib/qcad/scripts/Draw/Dimension/doc/LowerToleranceIcon.png
+lib/qcad/scripts/Draw/Dimension/doc/UpperToleranceIcon.png
 lib/qcad/scripts/Draw/Dimension/ts/Dimension_cs.qm
 lib/qcad/scripts/Draw/Dimension/ts/Dimension_cs.ts
 lib/qcad/scripts/Draw/Dimension/ts/Dimension_de.qm
@@ -3900,6 +3992,9 @@ lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/Tests/EllipseArcCPPATest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/Tests/lines.dxf
 lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/Tests/required/EllipseArcCPPATest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/doc/Clockwise.png
+lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/doc/CounterClockwise.png
+lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/doc/EllipseArcCPPA.png
 lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/doc/EllipseArcCPPA_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/doc/EllipseArcCPPA_desc_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseArcCPPA/doc/EllipseArcCPPA_desc_en.html
@@ -3971,6 +4066,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js
 lib/qcad/scripts/Draw/Ellipse/EllipseCPP/Tests/EllipseCPPTest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseCPP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseCPP/Tests/required/EllipseCPPTest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseCPP/doc/EllipseCPP.png
 lib/qcad/scripts/Draw/Ellipse/EllipseCPP/doc/EllipseCPP_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseCPP/doc/EllipseCPP_desc_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseCPP/doc/EllipseCPP_desc_en.html
@@ -4044,6 +4140,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js
 lib/qcad/scripts/Draw/Ellipse/EllipseDD/Tests/EllipseDDTest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseDD/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseDD/Tests/required/EllipseDDTest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseDD/doc/EllipseDD.png
 lib/qcad/scripts/Draw/Ellipse/EllipseDD/doc/EllipseDD_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseDD/doc/EllipseDD_en.html
 lib/qcad/scripts/Draw/Ellipse/EllipseDD/doc/EllipseDD_it.html
@@ -4095,6 +4192,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/EllipseInscribedQuadInit.js
 lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/EllipseInscribedQuadTest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/Tests/required/EllipseInscribedQuadTest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/doc/EllipseInscribedQuad.png
 lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/doc/EllipseInscribedQuad_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/doc/EllipseInscribedQuad_desc_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseInscribedQuad/doc/EllipseInscribedQuad_desc_en.html
@@ -4164,6 +4262,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseOffset/EllipseOffsetInit.js
 lib/qcad/scripts/Draw/Ellipse/EllipseOffset/Tests/EllipseOffsetTest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseOffset/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseOffset/Tests/required/EllipseOffsetTest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseOffset/doc/EllipseOffset.png
 lib/qcad/scripts/Draw/Ellipse/EllipseOffset/doc/EllipseOffset_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseOffset/doc/EllipseOffset_desc_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseOffset/doc/EllipseOffset_desc_en.html
@@ -4236,6 +4335,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js
 lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/EllipseOffsetThroughTest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/Tests/required/EllipseOffsetThroughTest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/doc/EllipseOffsetThrough.png
 lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/doc/EllipseOffsetThrough_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/doc/EllipseOffsetThrough_desc_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseOffsetThrough/doc/EllipseOffsetThrough_desc_en.html
@@ -4309,6 +4409,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/Tests/EllipseRRTest00.js
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/Tests/required/EllipseRRTest00_000.dxf
+lib/qcad/scripts/Draw/Ellipse/EllipseRR/doc/EllipseRR.png
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/doc/EllipseRR_de.html
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/doc/EllipseRR_en.html
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/doc/EllipseRR_it.html
@@ -4352,6 +4453,7 @@ lib/qcad/scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_zh_CN.qm
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_zh_CN.ts
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_zh_TW.qm
 lib/qcad/scripts/Draw/Ellipse/EllipseRR/ts/EllipseRR_zh_TW.ts
+lib/qcad/scripts/Draw/Ellipse/doc/Ellipse.png
 lib/qcad/scripts/Draw/Ellipse/doc/Ellipse_de.html
 lib/qcad/scripts/Draw/Ellipse/doc/Ellipse_desc_en.html
 lib/qcad/scripts/Draw/Ellipse/doc/Ellipse_desc_ru.html
@@ -4436,11 +4538,15 @@ lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelection
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest05_000.dxf
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest06_000.dxf
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/Tests/required/HatchFromSelectionTest07_000.dxf
+lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelection.png
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionBoundary.dxf
+lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionBoundary.png
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionBoundary.svg
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionBoundary_de.dxf
+lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionBoundary_de.png
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionBoundary_de.svg
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionIslands.dxf
+lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionIslands.png
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelectionIslands.svg
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelection_de.html
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/doc/HatchFromSelection_desc_de.html
@@ -4505,6 +4611,7 @@ lib/qcad/scripts/Draw/Hatch/HatchFromSelection/ts/HatchFromSelection_zh_CN.qm
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/ts/HatchFromSelection_zh_CN.ts
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/ts/HatchFromSelection_zh_TW.qm
 lib/qcad/scripts/Draw/Hatch/HatchFromSelection/ts/HatchFromSelection_zh_TW.ts
+lib/qcad/scripts/Draw/Hatch/doc/Hatch.png
 lib/qcad/scripts/Draw/Hatch/ts/Hatch_cs.qm
 lib/qcad/scripts/Draw/Hatch/ts/Hatch_cs.ts
 lib/qcad/scripts/Draw/Hatch/ts/Hatch_de.qm
@@ -4555,6 +4662,7 @@ lib/qcad/scripts/Draw/Image/KeepProportionsOff.svg
 lib/qcad/scripts/Draw/Image/KeepProportionsOn-inverse.svg
 lib/qcad/scripts/Draw/Image/KeepProportionsOn.svg
 lib/qcad/scripts/Draw/Image/Tests/ImageTest00.js
+lib/qcad/scripts/Draw/Image/doc/Image.png
 lib/qcad/scripts/Draw/Image/doc/Image_de.html
 lib/qcad/scripts/Draw/Image/doc/Image_desc_de.html
 lib/qcad/scripts/Draw/Image/doc/Image_desc_en.html
@@ -4580,6 +4688,8 @@ lib/qcad/scripts/Draw/Image/doc/Image_proc_pt.html
 lib/qcad/scripts/Draw/Image/doc/Image_proc_ru.html
 lib/qcad/scripts/Draw/Image/doc/Image_pt.html
 lib/qcad/scripts/Draw/Image/doc/Image_sl.html
+lib/qcad/scripts/Draw/Image/doc/KeepProportionsOff.png
+lib/qcad/scripts/Draw/Image/doc/KeepProportionsOn.png
 lib/qcad/scripts/Draw/Image/ts/Image_cs.qm
 lib/qcad/scripts/Draw/Image/ts/Image_cs.ts
 lib/qcad/scripts/Draw/Image/ts/Image_de.qm
@@ -4668,6 +4778,8 @@ lib/qcad/scripts/Draw/Line/Line2P/Tests/required/LinesSnapPolarCoordinate_000.dx
 lib/qcad/scripts/Draw/Line/Line2P/Tests/required/LinesSnapReferences_000.dxf
 lib/qcad/scripts/Draw/Line/Line2P/Undo-inverse.svg
 lib/qcad/scripts/Draw/Line/Line2P/Undo.svg
+lib/qcad/scripts/Draw/Line/Line2P/doc/Close.png
+lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P.png
 lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_de.html
 lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_desc_de.html
 lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_desc_en.html
@@ -4693,6 +4805,8 @@ lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_proc_pt.html
 lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_proc_ru.html
 lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_pt.html
 lib/qcad/scripts/Draw/Line/Line2P/doc/Line2P_sl.html
+lib/qcad/scripts/Draw/Line/Line2P/doc/Redo.png
+lib/qcad/scripts/Draw/Line/Line2P/doc/Undo.png
 lib/qcad/scripts/Draw/Line/Line2P/ts/Line2P_cs.qm
 lib/qcad/scripts/Draw/Line/Line2P/ts/Line2P_cs.ts
 lib/qcad/scripts/Draw/Line/Line2P/ts/Line2P_de.qm
@@ -4744,6 +4858,7 @@ lib/qcad/scripts/Draw/Line/LineAngle/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineAngle/Tests/required/LineAngle00_000.dxf
 lib/qcad/scripts/Draw/Line/LineAngle/Tests/required/LineAngle01_000.dxf
 lib/qcad/scripts/Draw/Line/LineAngle/Tests/required/LineAngle02_000.dxf
+lib/qcad/scripts/Draw/Line/LineAngle/doc/LineAngle.png
 lib/qcad/scripts/Draw/Line/LineAngle/doc/LineAngle_de.html
 lib/qcad/scripts/Draw/Line/LineAngle/doc/LineAngle_desc_de.html
 lib/qcad/scripts/Draw/Line/LineAngle/doc/LineAngle_desc_en.html
@@ -4818,8 +4933,10 @@ lib/qcad/scripts/Draw/Line/LineBisector/Tests/LineBisectorTest01.js
 lib/qcad/scripts/Draw/Line/LineBisector/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineBisector/Tests/required/LineBisectorTest00_000.dxf
 lib/qcad/scripts/Draw/Line/LineBisector/Tests/required/LineBisectorTest01_000.dxf
-lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisector.dxf
-lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisector.svg
+lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisector.png
+lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisectorFigure.dxf
+lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisectorFigure.png
+lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisectorFigure.svg
 lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisector_de.html
 lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisector_desc_de.html
 lib/qcad/scripts/Draw/Line/LineBisector/doc/LineBisector_desc_en.html
@@ -4888,8 +5005,10 @@ lib/qcad/scripts/Draw/Line/LineFreehand/LineFreehand.js
 lib/qcad/scripts/Draw/Line/LineFreehand/LineFreehand.pro
 lib/qcad/scripts/Draw/Line/LineFreehand/LineFreehand.svg
 lib/qcad/scripts/Draw/Line/LineFreehand/LineFreehandInit.js
-lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehand.dxf
-lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehand.svg
+lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehand.png
+lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehandFigure.dxf
+lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehandFigure.png
+lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehandFigure.svg
 lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehand_de.html
 lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehand_desc_de.html
 lib/qcad/scripts/Draw/Line/LineFreehand/doc/LineFreehand_desc_en.html
@@ -4962,6 +5081,7 @@ lib/qcad/scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js
 lib/qcad/scripts/Draw/Line/LineHorizontal/Tests/LineHorizontalTest00.js
 lib/qcad/scripts/Draw/Line/LineHorizontal/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineHorizontal/Tests/required/LineHorizontalTest00_000.dxf
+lib/qcad/scripts/Draw/Line/LineHorizontal/doc/LineHorizontal.png
 lib/qcad/scripts/Draw/Line/LineHorizontal/doc/LineHorizontal_de.html
 lib/qcad/scripts/Draw/Line/LineHorizontal/doc/LineHorizontal_desc_de.html
 lib/qcad/scripts/Draw/Line/LineHorizontal/doc/LineHorizontal_desc_en.html
@@ -5026,6 +5146,7 @@ lib/qcad/scripts/Draw/Line/LineOrthogonal/LineOrthogonalInit.js
 lib/qcad/scripts/Draw/Line/LineOrthogonal/Tests/LineOrthogonalTest00.js
 lib/qcad/scripts/Draw/Line/LineOrthogonal/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineOrthogonal/Tests/required/LineOrthogonalTest00_000.dxf
+lib/qcad/scripts/Draw/Line/LineOrthogonal/doc/LineOrthogonal.png
 lib/qcad/scripts/Draw/Line/LineOrthogonal/doc/LineOrthogonal_de.html
 lib/qcad/scripts/Draw/Line/LineOrthogonal/doc/LineOrthogonal_desc_de.html
 lib/qcad/scripts/Draw/Line/LineOrthogonal/doc/LineOrthogonal_desc_en.html
@@ -5097,6 +5218,7 @@ lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js
 lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/Tests/LineOrthogonalTangentTest00.js
 lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/Tests/required/LineOrthogonalTangentTest00_000.dxf
+lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/doc/LineOrthogonalTangent.png
 lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/doc/LineOrthogonalTangent_de.html
 lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/doc/LineOrthogonalTangent_desc_de.html
 lib/qcad/scripts/Draw/Line/LineOrthogonalTangent/doc/LineOrthogonalTangent_desc_en.html
@@ -5169,6 +5291,7 @@ lib/qcad/scripts/Draw/Line/LineParallel/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineParallel/Tests/data/polyline.dxf
 lib/qcad/scripts/Draw/Line/LineParallel/Tests/required/LineParallelTest00_000.dxf
 lib/qcad/scripts/Draw/Line/LineParallel/Tests/required/LineParallelTest01_000.dxf
+lib/qcad/scripts/Draw/Line/LineParallel/doc/LineParallel.png
 lib/qcad/scripts/Draw/Line/LineParallel/doc/LineParallel_de.html
 lib/qcad/scripts/Draw/Line/LineParallel/doc/LineParallel_desc_de.html
 lib/qcad/scripts/Draw/Line/LineParallel/doc/LineParallel_desc_en.html
@@ -5244,6 +5367,7 @@ lib/qcad/scripts/Draw/Line/LineParallelThrough/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineParallelThrough/Tests/data/polyline.dxf
 lib/qcad/scripts/Draw/Line/LineParallelThrough/Tests/required/LineParallelThroughTest00_000.dxf
 lib/qcad/scripts/Draw/Line/LineParallelThrough/Tests/required/LineParallelThroughTest01_000.dxf
+lib/qcad/scripts/Draw/Line/LineParallelThrough/doc/LineParallelThrough.png
 lib/qcad/scripts/Draw/Line/LineParallelThrough/doc/LineParallelThrough_de.html
 lib/qcad/scripts/Draw/Line/LineParallelThrough/doc/LineParallelThrough_desc_de.html
 lib/qcad/scripts/Draw/Line/LineParallelThrough/doc/LineParallelThrough_desc_en.html
@@ -5316,6 +5440,7 @@ lib/qcad/scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js
 lib/qcad/scripts/Draw/Line/LineRelativeAngle/Tests/LineRelativeAngleTest00.js
 lib/qcad/scripts/Draw/Line/LineRelativeAngle/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineRelativeAngle/Tests/required/LineRelativeAngleTest00_000.dxf
+lib/qcad/scripts/Draw/Line/LineRelativeAngle/doc/LineRelativeAngle.png
 lib/qcad/scripts/Draw/Line/LineRelativeAngle/doc/LineRelativeAngle_de.html
 lib/qcad/scripts/Draw/Line/LineRelativeAngle/doc/LineRelativeAngle_desc_de.html
 lib/qcad/scripts/Draw/Line/LineRelativeAngle/doc/LineRelativeAngle_desc_en.html
@@ -5389,6 +5514,7 @@ lib/qcad/scripts/Draw/Line/LineTangent1/Tests/LineTangent1Test01.js
 lib/qcad/scripts/Draw/Line/LineTangent1/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineTangent1/Tests/required/LineTangent1Test00_000.dxf
 lib/qcad/scripts/Draw/Line/LineTangent1/Tests/required/LineTangent1Test01_000.dxf
+lib/qcad/scripts/Draw/Line/LineTangent1/doc/LineTangent1.png
 lib/qcad/scripts/Draw/Line/LineTangent1/doc/LineTangent1_de.html
 lib/qcad/scripts/Draw/Line/LineTangent1/doc/LineTangent1_desc_de.html
 lib/qcad/scripts/Draw/Line/LineTangent1/doc/LineTangent1_desc_en.html
@@ -5462,6 +5588,7 @@ lib/qcad/scripts/Draw/Line/LineTangent2/Tests/LineTangent2Test01.js
 lib/qcad/scripts/Draw/Line/LineTangent2/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineTangent2/Tests/required/LineTangent2Test00_000.dxf
 lib/qcad/scripts/Draw/Line/LineTangent2/Tests/required/LineTangent2Test01_000.dxf
+lib/qcad/scripts/Draw/Line/LineTangent2/doc/LineTangent2.png
 lib/qcad/scripts/Draw/Line/LineTangent2/doc/LineTangent2_de.html
 lib/qcad/scripts/Draw/Line/LineTangent2/doc/LineTangent2_desc_de.html
 lib/qcad/scripts/Draw/Line/LineTangent2/doc/LineTangent2_desc_en.html
@@ -5533,6 +5660,7 @@ lib/qcad/scripts/Draw/Line/LineVertical/LineVerticalInit.js
 lib/qcad/scripts/Draw/Line/LineVertical/Tests/LineVerticalTest00.js
 lib/qcad/scripts/Draw/Line/LineVertical/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Line/LineVertical/Tests/required/LineVerticalTest00_000.dxf
+lib/qcad/scripts/Draw/Line/LineVertical/doc/LineVertical.png
 lib/qcad/scripts/Draw/Line/LineVertical/doc/LineVertical_de.html
 lib/qcad/scripts/Draw/Line/LineVertical/doc/LineVertical_desc_de.html
 lib/qcad/scripts/Draw/Line/LineVertical/doc/LineVertical_desc_en.html
@@ -5596,6 +5724,7 @@ lib/qcad/scripts/Draw/Line/TypeSegment-inverse.svg
 lib/qcad/scripts/Draw/Line/TypeSegment.svg
 lib/qcad/scripts/Draw/Line/TypeXLine-inverse.svg
 lib/qcad/scripts/Draw/Line/TypeXLine.svg
+lib/qcad/scripts/Draw/Line/doc/Line.png
 lib/qcad/scripts/Draw/Line/doc/Line_de.html
 lib/qcad/scripts/Draw/Line/doc/Line_en.html
 lib/qcad/scripts/Draw/Line/doc/Line_es.html
@@ -5604,6 +5733,10 @@ lib/qcad/scripts/Draw/Line/doc/Line_it.html
 lib/qcad/scripts/Draw/Line/doc/Line_ja.html
 lib/qcad/scripts/Draw/Line/doc/Line_pt.html
 lib/qcad/scripts/Draw/Line/doc/Line_sl.html
+lib/qcad/scripts/Draw/Line/doc/TypeAuto.png
+lib/qcad/scripts/Draw/Line/doc/TypeRay.png
+lib/qcad/scripts/Draw/Line/doc/TypeSegment.png
+lib/qcad/scripts/Draw/Line/doc/TypeXLine.png
 lib/qcad/scripts/Draw/Line/ts/Line_cs.qm
 lib/qcad/scripts/Draw/Line/ts/Line_cs.ts
 lib/qcad/scripts/Draw/Line/ts/Line_de.qm
@@ -5655,6 +5788,7 @@ lib/qcad/scripts/Draw/Point/Point1P/Point1PInit.js
 lib/qcad/scripts/Draw/Point/Point1P/Tests/Point1PTest00.js
 lib/qcad/scripts/Draw/Point/Point1P/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Point/Point1P/Tests/required/Point1PTest00_000.dxf
+lib/qcad/scripts/Draw/Point/Point1P/doc/Point1P.png
 lib/qcad/scripts/Draw/Point/Point1P/doc/Point1P_de.html
 lib/qcad/scripts/Draw/Point/Point1P/doc/Point1P_desc_de.html
 lib/qcad/scripts/Draw/Point/Point1P/doc/Point1P_desc_en.html
@@ -5718,6 +5852,7 @@ lib/qcad/scripts/Draw/Point/Point1P/ts/Point1P_zh_CN.qm
 lib/qcad/scripts/Draw/Point/Point1P/ts/Point1P_zh_CN.ts
 lib/qcad/scripts/Draw/Point/Point1P/ts/Point1P_zh_TW.qm
 lib/qcad/scripts/Draw/Point/Point1P/ts/Point1P_zh_TW.ts
+lib/qcad/scripts/Draw/Point/doc/Point.png
 lib/qcad/scripts/Draw/Point/doc/Point_de.html
 lib/qcad/scripts/Draw/Point/doc/Point_en.html
 lib/qcad/scripts/Draw/Point/doc/Point_es.html
@@ -5782,6 +5917,8 @@ lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest00_00
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Tests/required/DrawPolylineTest01_000.dxf
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Undo-inverse.svg
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/Undo.svg
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/Close.png
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline.png
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_de.html
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_desc_de.html
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_desc_en.html
@@ -5807,6 +5944,8 @@ lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_proc_pt.html
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_proc_ru.html
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_pt.html
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/DrawPolyline_sl.html
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/Redo.png
+lib/qcad/scripts/Draw/Polyline/DrawPolyline/doc/Undo.png
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/ts/DrawPolyline_cs.qm
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/ts/DrawPolyline_cs.ts
 lib/qcad/scripts/Draw/Polyline/DrawPolyline/ts/DrawPolyline_de.qm
@@ -5849,6 +5988,7 @@ lib/qcad/scripts/Draw/Polyline/Polyline-inverse.svg
 lib/qcad/scripts/Draw/Polyline/Polyline.js
 lib/qcad/scripts/Draw/Polyline/Polyline.pro
 lib/qcad/scripts/Draw/Polyline/Polyline.svg
+lib/qcad/scripts/Draw/Polyline/doc/Polyline.png
 lib/qcad/scripts/Draw/Polyline/doc/Polyline_de.html
 lib/qcad/scripts/Draw/Polyline/doc/Polyline_en.html
 lib/qcad/scripts/Draw/Polyline/doc/Polyline_es.html
@@ -5910,6 +6050,7 @@ lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/Tests/ShapePolygonAFCPTest00.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/Tests/required/ShapePolygonAFCPTest00_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/doc/ShapePolygonAFCP.png
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/doc/ShapePolygonAFCP_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/doc/ShapePolygonAFCP_desc_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFCP/doc/ShapePolygonAFCP_desc_en.html
@@ -5964,8 +6105,11 @@ lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.svg
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest00.js
+lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/Tests/ShapePolygonAFPPTest01.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/Tests/required/ShapePolygonAFPPTest00_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/Tests/required/ShapePolygonAFPPTest01_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/doc/ShapePolygonAFPP.png
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/doc/ShapePolygonAFPP_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/doc/ShapePolygonAFPP_desc_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonAFPP/doc/ShapePolygonAFPP_desc_en.html
@@ -6021,9 +6165,12 @@ lib/qcad/scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest00.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest01.js
+lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/ShapePolygonCPTest02.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest00_000.dxf
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest01_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonCP/Tests/required/ShapePolygonCPTest02_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonCP/doc/ShapePolygonCP.png
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/doc/ShapePolygonCP_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/doc/ShapePolygonCP_desc_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonCP/doc/ShapePolygonCP_desc_en.html
@@ -6095,9 +6242,12 @@ lib/qcad/scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest00.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest01.js
+lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/ShapePolygonPPTest02.js
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest00_000.dxf
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest01_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonPP/Tests/required/ShapePolygonPPTest02_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapePolygonPP/doc/ShapePolygonPP.png
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/doc/ShapePolygonPP_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/doc/ShapePolygonPP_desc_de.html
 lib/qcad/scripts/Draw/Shape/ShapePolygonPP/doc/ShapePolygonPP_desc_en.html
@@ -6167,8 +6317,11 @@ lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.pro
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.svg
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest00.js
+lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/Tests/ShapeRectanglePPTest01.js
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/Tests/required/ShapeRectanglePPTest00_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/Tests/required/ShapeRectanglePPTest01_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/doc/ShapeRectanglePP.png
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/doc/ShapeRectanglePP_de.html
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/doc/ShapeRectanglePP_desc_de.html
 lib/qcad/scripts/Draw/Shape/ShapeRectanglePP/doc/ShapeRectanglePP_desc_en.html
@@ -6240,8 +6393,11 @@ lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeInit.js
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest00.js
+lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/Tests/ShapeRectangleSizeTest01.js
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/Tests/required/ShapeRectangleSizeTest00_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/Tests/required/ShapeRectangleSizeTest01_000.dxf
+lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/doc/ShapeRectangleSize.png
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/doc/ShapeRectangleSize_de.html
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/doc/ShapeRectangleSize_desc_de.html
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/doc/ShapeRectangleSize_desc_en.html
@@ -6305,6 +6461,7 @@ lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ts/ShapeRectangleSize_zh_CN.qm
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ts/ShapeRectangleSize_zh_CN.ts
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ts/ShapeRectangleSize_zh_TW.qm
 lib/qcad/scripts/Draw/Shape/ShapeRectangleSize/ts/ShapeRectangleSize_zh_TW.ts
+lib/qcad/scripts/Draw/Shape/doc/Shape.png
 lib/qcad/scripts/Draw/Shape/ts/Shape_cs.qm
 lib/qcad/scripts/Draw/Shape/ts/Shape_cs.ts
 lib/qcad/scripts/Draw/Shape/ts/Shape_de.qm
@@ -6359,9 +6516,12 @@ lib/qcad/scripts/Draw/Spline/SplineControlPoints/Tests/actual/.gitignore
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/Tests/required/SplineControlPointsTest00_000.dxf
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/Undo-inverse.svg
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/Undo.svg
+lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints.png
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints01.dxf
+lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints01.png
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints01.svg
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints02.dxf
+lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints02.png
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints02.svg
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_de.html
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_desc_de.html
@@ -6388,6 +6548,7 @@ lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_proc_pt
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_proc_ru.html
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_pt.html
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints_sl.html
+lib/qcad/scripts/Draw/Spline/SplineControlPoints/doc/Undo.png
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_cs.qm
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_cs.ts
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_de.qm
@@ -6426,6 +6587,7 @@ lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_zh_CN.qm
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_zh_CN.ts
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_zh_TW.qm
 lib/qcad/scripts/Draw/Spline/SplineControlPoints/ts/SplineControlPoints_zh_TW.ts
+lib/qcad/scripts/Draw/Spline/doc/Spline.png
 lib/qcad/scripts/Draw/Spline/doc/Spline_de.html
 lib/qcad/scripts/Draw/Spline/doc/Spline_en.html
 lib/qcad/scripts/Draw/Spline/doc/Spline_es.html
@@ -6584,6 +6746,7 @@ lib/qcad/scripts/Draw/Text/TextDialog/ZoomIn.svg
 lib/qcad/scripts/Draw/Text/TextDialog/ZoomOut-inverse.svg
 lib/qcad/scripts/Draw/Text/TextDialog/ZoomOut.svg
 lib/qcad/scripts/Draw/Text/TextInit.js
+lib/qcad/scripts/Draw/Text/doc/Text.png
 lib/qcad/scripts/Draw/Text/doc/Text_de.html
 lib/qcad/scripts/Draw/Text/doc/Text_desc_de.html
 lib/qcad/scripts/Draw/Text/doc/Text_desc_en.html
@@ -7309,6 +7472,12 @@ lib/qcad/scripts/Edit/ConvertUnit/ConvertUnit.svg
 lib/qcad/scripts/Edit/ConvertUnit/ConvertUnit.ui
 lib/qcad/scripts/Edit/ConvertUnit/ConvertUnitInit.js
 lib/qcad/scripts/Edit/ConvertUnit/Tick.svg
+lib/qcad/scripts/Edit/ConvertUnit/doc/ConvertUnit.png
+lib/qcad/scripts/Edit/ConvertUnit/doc/ConvertUnit_de.html
+lib/qcad/scripts/Edit/ConvertUnit/doc/ConvertUnit_en.html
+lib/qcad/scripts/Edit/ConvertUnit/doc/ConvertUnit_ja.html
+lib/qcad/scripts/Edit/ConvertUnit/doc/ConvertUnit_sl.html
+lib/qcad/scripts/Edit/ConvertUnit/doc/Tick.png
 lib/qcad/scripts/Edit/ConvertUnit/ts/ConvertUnit_cs.qm
 lib/qcad/scripts/Edit/ConvertUnit/ts/ConvertUnit_cs.ts
 lib/qcad/scripts/Edit/ConvertUnit/ts/ConvertUnit_de.qm
@@ -7355,6 +7524,7 @@ lib/qcad/scripts/Edit/Copy/CopyInit.js
 lib/qcad/scripts/Edit/Copy/Tests/CopyTest00.js
 lib/qcad/scripts/Edit/Copy/Tests/actual/.gitignore
 lib/qcad/scripts/Edit/Copy/Tests/required/CopyTest00_000.dxf
+lib/qcad/scripts/Edit/Copy/doc/Copy.png
 lib/qcad/scripts/Edit/Copy/doc/Copy_de.html
 lib/qcad/scripts/Edit/Copy/doc/Copy_desc_de.html
 lib/qcad/scripts/Edit/Copy/doc/Copy_desc_en.html
@@ -7380,10 +7550,15 @@ lib/qcad/scripts/Edit/Copy/doc/Copy_proc_pt.html
 lib/qcad/scripts/Edit/Copy/doc/Copy_proc_ru.html
 lib/qcad/scripts/Edit/Copy/doc/Copy_pt.html
 lib/qcad/scripts/Edit/Copy/doc/Copy_sl.html
+lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_01.png
 lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_01.svg
+lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_02.png
 lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_02.svg
+lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_03.png
 lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_03.svg
+lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_04.png
 lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_04.svg
+lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_05.png
 lib/qcad/scripts/Edit/Copy/doc/img/edit_copy_05.svg
 lib/qcad/scripts/Edit/Copy/doc/img/edit_toolbar_copy.png
 lib/qcad/scripts/Edit/Copy/ts/Copy_cs.qm
@@ -7432,6 +7607,7 @@ lib/qcad/scripts/Edit/CopyWithReference/CopyWithReferenceInit.js
 lib/qcad/scripts/Edit/CopyWithReference/Tests/CopyWithReferenceTest00.js
 lib/qcad/scripts/Edit/CopyWithReference/Tests/actual/.gitignore
 lib/qcad/scripts/Edit/CopyWithReference/Tests/required/CopyWithReferenceTest00_000.dxf
+lib/qcad/scripts/Edit/CopyWithReference/doc/CopyWithReference.png
 lib/qcad/scripts/Edit/CopyWithReference/doc/CopyWithReference_de.html
 lib/qcad/scripts/Edit/CopyWithReference/doc/CopyWithReference_desc_de.html
 lib/qcad/scripts/Edit/CopyWithReference/doc/CopyWithReference_desc_en.html
@@ -7503,6 +7679,7 @@ lib/qcad/scripts/Edit/Cut/CutInit.js
 lib/qcad/scripts/Edit/Cut/Tests/CutTest00.js
 lib/qcad/scripts/Edit/Cut/Tests/actual/.gitignore
 lib/qcad/scripts/Edit/Cut/Tests/required/CutTest00_000.dxf
+lib/qcad/scripts/Edit/Cut/doc/Cut.png
 lib/qcad/scripts/Edit/Cut/doc/Cut_de.html
 lib/qcad/scripts/Edit/Cut/doc/Cut_desc_de.html
 lib/qcad/scripts/Edit/Cut/doc/Cut_desc_en.html
@@ -7566,6 +7743,7 @@ lib/qcad/scripts/Edit/CutWithReference/CutWithReferenceInit.js
 lib/qcad/scripts/Edit/CutWithReference/Tests/CutWithReferenceTest00.js
 lib/qcad/scripts/Edit/CutWithReference/Tests/actual/.gitignore
 lib/qcad/scripts/Edit/CutWithReference/Tests/required/CutWithReferenceTest00_000.dxf
+lib/qcad/scripts/Edit/CutWithReference/doc/CutWithReference.png
 lib/qcad/scripts/Edit/CutWithReference/doc/CutWithReference_de.html
 lib/qcad/scripts/Edit/CutWithReference/doc/CutWithReference_desc_de.html
 lib/qcad/scripts/Edit/CutWithReference/doc/CutWithReference_desc_en.html
@@ -7628,6 +7806,7 @@ lib/qcad/scripts/Edit/Delete/DeleteInit.js
 lib/qcad/scripts/Edit/Delete/Tests/DeleteTest00.js
 lib/qcad/scripts/Edit/Delete/Tests/actual/.gitignore
 lib/qcad/scripts/Edit/Delete/Tests/required/DeleteTest00_000.dxf
+lib/qcad/scripts/Edit/Delete/doc/Delete.png
 lib/qcad/scripts/Edit/Delete/doc/Delete_de.html
 lib/qcad/scripts/Edit/Delete/doc/Delete_desc_de.html
 lib/qcad/scripts/Edit/Delete/doc/Delete_desc_en.html
@@ -8050,6 +8229,7 @@ lib/qcad/scripts/Edit/DrawingPreferences/ViewportSettings/ts/ViewportSettings_zh
 lib/qcad/scripts/Edit/DrawingPreferences/ViewportSettings/ts/ViewportSettings_zh_CN.ts
 lib/qcad/scripts/Edit/DrawingPreferences/ViewportSettings/ts/ViewportSettings_zh_TW.qm
 lib/qcad/scripts/Edit/DrawingPreferences/ViewportSettings/ts/ViewportSettings_zh_TW.ts
+lib/qcad/scripts/Edit/DrawingPreferences/doc/DrawingPreferences.png
 lib/qcad/scripts/Edit/DrawingPreferences/doc/DrawingPreferences_de.html
 lib/qcad/scripts/Edit/DrawingPreferences/doc/DrawingPreferences_desc_de.html
 lib/qcad/scripts/Edit/DrawingPreferences/doc/DrawingPreferences_desc_en.html
@@ -8110,6 +8290,7 @@ lib/qcad/scripts/Edit/Duplicate/DuplicateInit.js
 lib/qcad/scripts/Edit/Duplicate/Tests/DuplicateTest00.js
 lib/qcad/scripts/Edit/Duplicate/Tests/actual/.gitignore
 lib/qcad/scripts/Edit/Duplicate/Tests/required/DuplicateTest00_000.dxf
+lib/qcad/scripts/Edit/Duplicate/doc/Duplicate.png
 lib/qcad/scripts/Edit/Duplicate/doc/Duplicate_de.html
 lib/qcad/scripts/Edit/Duplicate/doc/Duplicate_desc_de.html
 lib/qcad/scripts/Edit/Duplicate/doc/Duplicate_desc_en.html
@@ -8253,6 +8434,9 @@ lib/qcad/scripts/Edit/Paste/Tests/data/block_attributes.dxf
 lib/qcad/scripts/Edit/Paste/Tests/required/PasteTest00_000.dxf
 lib/qcad/scripts/Edit/Paste/Tests/required/PasteTest01_000.dxf
 lib/qcad/scripts/Edit/Paste/Tests/required/PasteTest02_000.dxf
+lib/qcad/scripts/Edit/Paste/doc/FlipHorizontal.png
+lib/qcad/scripts/Edit/Paste/doc/FlipVertical.png
+lib/qcad/scripts/Edit/Paste/doc/Paste.png
 lib/qcad/scripts/Edit/Paste/doc/Paste_de.html
 lib/qcad/scripts/Edit/Paste/doc/Paste_desc_de.html
 lib/qcad/scripts/Edit/Paste/doc/Paste_desc_en.html
@@ -8321,6 +8505,7 @@ lib/qcad/scripts/Edit/Redo/Redo.js
 lib/qcad/scripts/Edit/Redo/Redo.pro
 lib/qcad/scripts/Edit/Redo/Redo.svg
 lib/qcad/scripts/Edit/Redo/RedoInit.js
+lib/qcad/scripts/Edit/Redo/doc/Redo.png
 lib/qcad/scripts/Edit/Redo/doc/Redo_de.html
 lib/qcad/scripts/Edit/Redo/doc/Redo_desc_de.html
 lib/qcad/scripts/Edit/Redo/doc/Redo_desc_en.html
@@ -8381,6 +8566,7 @@ lib/qcad/scripts/Edit/Undo/Undo.js
 lib/qcad/scripts/Edit/Undo/Undo.pro
 lib/qcad/scripts/Edit/Undo/Undo.svg
 lib/qcad/scripts/Edit/Undo/UndoInit.js
+lib/qcad/scripts/Edit/Undo/doc/Undo.png
 lib/qcad/scripts/Edit/Undo/doc/Undo_de.html
 lib/qcad/scripts/Edit/Undo/doc/Undo_desc_de.html
 lib/qcad/scripts/Edit/Undo/doc/Undo_desc_en.html
@@ -8436,6 +8622,9 @@ lib/qcad/scripts/Edit/Undo/ts/Undo_zh_CN.qm
 lib/qcad/scripts/Edit/Undo/ts/Undo_zh_CN.ts
 lib/qcad/scripts/Edit/Undo/ts/Undo_zh_TW.qm
 lib/qcad/scripts/Edit/Undo/ts/Undo_zh_TW.ts
+lib/qcad/scripts/Edit/doc/Clear.png
+lib/qcad/scripts/Edit/doc/Collapse.png
+lib/qcad/scripts/Edit/doc/Edit.png
 lib/qcad/scripts/Edit/doc/Edit_de.html
 lib/qcad/scripts/Edit/doc/Edit_en.html
 lib/qcad/scripts/Edit/doc/Edit_es.html
@@ -8444,6 +8633,7 @@ lib/qcad/scripts/Edit/doc/Edit_it.html
 lib/qcad/scripts/Edit/doc/Edit_ja.html
 lib/qcad/scripts/Edit/doc/Edit_pt.html
 lib/qcad/scripts/Edit/doc/Edit_sl.html
+lib/qcad/scripts/Edit/doc/Expand.png
 lib/qcad/scripts/Edit/ts/Edit_cs.qm
 lib/qcad/scripts/Edit/ts/Edit_cs.ts
 lib/qcad/scripts/Edit/ts/Edit_de.qm
@@ -8532,9 +8722,11 @@ lib/qcad/scripts/File/BitmapExport/BitmapExport-inverse.svg
 lib/qcad/scripts/File/BitmapExport/BitmapExport.js
 lib/qcad/scripts/File/BitmapExport/BitmapExport.pro
 lib/qcad/scripts/File/BitmapExport/BitmapExport.svg
+lib/qcad/scripts/File/BitmapExport/BitmapExport2.js
 lib/qcad/scripts/File/BitmapExport/BitmapExportDialog.ui
 lib/qcad/scripts/File/BitmapExport/BitmapExportInit.js
 lib/qcad/scripts/File/BitmapExport/BitmapExportWorker.js
+lib/qcad/scripts/File/BitmapExport/doc/BitmapExport.png
 lib/qcad/scripts/File/BitmapExport/doc/BitmapExport_de.html
 lib/qcad/scripts/File/BitmapExport/doc/BitmapExport_desc_de.html
 lib/qcad/scripts/File/BitmapExport/doc/BitmapExport_desc_en.html
@@ -8603,6 +8795,7 @@ lib/qcad/scripts/File/CloseFile/CloseFile.js
 lib/qcad/scripts/File/CloseFile/CloseFile.pro
 lib/qcad/scripts/File/CloseFile/CloseFile.svg
 lib/qcad/scripts/File/CloseFile/CloseFileInit.js
+lib/qcad/scripts/File/CloseFile/doc/CloseFile.png
 lib/qcad/scripts/File/CloseFile/doc/CloseFile_de.html
 lib/qcad/scripts/File/CloseFile/doc/CloseFile_desc_de.html
 lib/qcad/scripts/File/CloseFile/doc/CloseFile_desc_en.html
@@ -8667,6 +8860,7 @@ lib/qcad/scripts/File/ImportFile/ImportFile.js
 lib/qcad/scripts/File/ImportFile/ImportFile.pro
 lib/qcad/scripts/File/ImportFile/ImportFile.svg
 lib/qcad/scripts/File/ImportFile/ImportFileInit.js
+lib/qcad/scripts/File/ImportFile/doc/ImportFile.png
 lib/qcad/scripts/File/ImportFile/doc/ImportFile_de.html
 lib/qcad/scripts/File/ImportFile/doc/ImportFile_desc_de.html
 lib/qcad/scripts/File/ImportFile/doc/ImportFile_desc_en.html
@@ -8723,6 +8917,8 @@ lib/qcad/scripts/File/NewFile/NewFile.js
 lib/qcad/scripts/File/NewFile/NewFile.pro
 lib/qcad/scripts/File/NewFile/NewFile.svg
 lib/qcad/scripts/File/NewFile/NewFileInit.js
+lib/qcad/scripts/File/NewFile/doc/Document.png
+lib/qcad/scripts/File/NewFile/doc/NewFile.png
 lib/qcad/scripts/File/NewFile/doc/NewFile_de.html
 lib/qcad/scripts/File/NewFile/doc/NewFile_desc_de.html
 lib/qcad/scripts/File/NewFile/doc/NewFile_desc_en.html
@@ -8783,6 +8979,7 @@ lib/qcad/scripts/File/OpenFile/OpenFile.js
 lib/qcad/scripts/File/OpenFile/OpenFile.pro
 lib/qcad/scripts/File/OpenFile/OpenFile.svg
 lib/qcad/scripts/File/OpenFile/OpenFileInit.js
+lib/qcad/scripts/File/OpenFile/doc/OpenFile.png
 lib/qcad/scripts/File/OpenFile/doc/OpenFile_de.html
 lib/qcad/scripts/File/OpenFile/doc/OpenFile_desc_de.html
 lib/qcad/scripts/File/OpenFile/doc/OpenFile_desc_en.html
@@ -8843,6 +9040,7 @@ lib/qcad/scripts/File/PdfExport/PdfExport.js
 lib/qcad/scripts/File/PdfExport/PdfExport.pro
 lib/qcad/scripts/File/PdfExport/PdfExport.svg
 lib/qcad/scripts/File/PdfExport/PdfExportInit.js
+lib/qcad/scripts/File/PdfExport/doc/PdfExport.png
 lib/qcad/scripts/File/PdfExport/doc/PdfExport_de.html
 lib/qcad/scripts/File/PdfExport/doc/PdfExport_desc_de.html
 lib/qcad/scripts/File/PdfExport/doc/PdfExport_desc_en.html
@@ -8901,6 +9099,7 @@ lib/qcad/scripts/File/Print/Print.js
 lib/qcad/scripts/File/Print/Print.pro
 lib/qcad/scripts/File/Print/Print.svg
 lib/qcad/scripts/File/Print/PrintInit.js
+lib/qcad/scripts/File/Print/doc/Print.png
 lib/qcad/scripts/File/Print/doc/Print_de.html
 lib/qcad/scripts/File/Print/doc/Print_desc_de.html
 lib/qcad/scripts/File/Print/doc/Print_desc_en.html
@@ -8960,6 +9159,7 @@ lib/qcad/scripts/File/PrintCurrentView/PrintCurrentView.js
 lib/qcad/scripts/File/PrintCurrentView/PrintCurrentView.pro
 lib/qcad/scripts/File/PrintCurrentView/PrintCurrentView.svg
 lib/qcad/scripts/File/PrintCurrentView/PrintCurrentViewInit.js
+lib/qcad/scripts/File/PrintCurrentView/doc/PrintCurrentView.png
 lib/qcad/scripts/File/PrintCurrentView/doc/PrintCurrentView_de.html
 lib/qcad/scripts/File/PrintCurrentView/doc/PrintCurrentView_desc_de.html
 lib/qcad/scripts/File/PrintCurrentView/doc/PrintCurrentView_desc_en.html
@@ -9036,6 +9236,20 @@ lib/qcad/scripts/File/PrintPreview/PrintPreviewInit.js
 lib/qcad/scripts/File/PrintPreview/PrintPreviewOffsetCursor.png
 lib/qcad/scripts/File/PrintPreview/PrintPreviewOffsetCursorMask.png
 lib/qcad/scripts/File/PrintPreview/ShowPaperBorders.svg
+lib/qcad/scripts/File/PrintPreview/doc/AutoCenter.png
+lib/qcad/scripts/File/PrintPreview/doc/AutoFitDrawing.png
+lib/qcad/scripts/File/PrintPreview/doc/AutoZoomToPage.png
+lib/qcad/scripts/File/PrintPreview/doc/Close.png
+lib/qcad/scripts/File/PrintPreview/doc/ColorModeBlackWhite.png
+lib/qcad/scripts/File/PrintPreview/doc/ColorModeFullColor.png
+lib/qcad/scripts/File/PrintPreview/doc/ColorModeGrayscale.png
+lib/qcad/scripts/File/PrintPreview/doc/CropMarks.png
+lib/qcad/scripts/File/PrintPreview/doc/CursorHand.png
+lib/qcad/scripts/File/PrintPreview/doc/Landscape.png
+lib/qcad/scripts/File/PrintPreview/doc/PdfExport.png
+lib/qcad/scripts/File/PrintPreview/doc/Portrait.png
+lib/qcad/scripts/File/PrintPreview/doc/Print.png
+lib/qcad/scripts/File/PrintPreview/doc/PrintPreview.png
 lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_de.html
 lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_desc_de.html
 lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_desc_en.html
@@ -9052,6 +9266,7 @@ lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_fr.html
 lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_it.html
 lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_ja.html
 lib/qcad/scripts/File/PrintPreview/doc/PrintPreview_pt.html
+lib/qcad/scripts/File/PrintPreview/doc/ShowPaperBorders.png
 lib/qcad/scripts/File/PrintPreview/ts/PrintPreview_cs.qm
 lib/qcad/scripts/File/PrintPreview/ts/PrintPreview_cs.ts
 lib/qcad/scripts/File/PrintPreview/ts/PrintPreview_de.qm
@@ -9194,6 +9409,7 @@ lib/qcad/scripts/File/Save/Save.js
 lib/qcad/scripts/File/Save/Save.pro
 lib/qcad/scripts/File/Save/Save.svg
 lib/qcad/scripts/File/Save/SaveInit.js
+lib/qcad/scripts/File/Save/doc/Save.png
 lib/qcad/scripts/File/Save/doc/Save_de.html
 lib/qcad/scripts/File/Save/doc/Save_desc_de.html
 lib/qcad/scripts/File/Save/doc/Save_desc_en.html
@@ -9254,6 +9470,7 @@ lib/qcad/scripts/File/SaveAs/SaveAs.js
 lib/qcad/scripts/File/SaveAs/SaveAs.pro
 lib/qcad/scripts/File/SaveAs/SaveAs.svg
 lib/qcad/scripts/File/SaveAs/SaveAsInit.js
+lib/qcad/scripts/File/SaveAs/doc/SaveAs.png
 lib/qcad/scripts/File/SaveAs/doc/SaveAs_de.html
 lib/qcad/scripts/File/SaveAs/doc/SaveAs_desc_de.html
 lib/qcad/scripts/File/SaveAs/doc/SaveAs_desc_en.html
@@ -9316,6 +9533,7 @@ lib/qcad/scripts/File/SvgImport/SvgImport.pro
 lib/qcad/scripts/File/SvgImport/SvgImport.svg
 lib/qcad/scripts/File/SvgImport/SvgImportDialog.ui
 lib/qcad/scripts/File/SvgImport/SvgImportInit.js
+lib/qcad/scripts/File/SvgImport/doc/SvgImport.png
 lib/qcad/scripts/File/SvgImport/doc/SvgImport_de.html
 lib/qcad/scripts/File/SvgImport/doc/SvgImport_desc_de.html
 lib/qcad/scripts/File/SvgImport/doc/SvgImport_desc_en.html
@@ -9371,6 +9589,7 @@ lib/qcad/scripts/File/SvgImport/ts/SvgImport_zh_CN.qm
 lib/qcad/scripts/File/SvgImport/ts/SvgImport_zh_CN.ts
 lib/qcad/scripts/File/SvgImport/ts/SvgImport_zh_TW.qm
 lib/qcad/scripts/File/SvgImport/ts/SvgImport_zh_TW.ts
+lib/qcad/scripts/File/doc/File.png
 lib/qcad/scripts/File/doc/File_de.html
 lib/qcad/scripts/File/doc/File_en.html
 lib/qcad/scripts/File/doc/File_es.html
@@ -9918,6 +10137,7 @@ lib/qcad/scripts/Information/InfoAngle/InfoAngle.js
 lib/qcad/scripts/Information/InfoAngle/InfoAngle.pro
 lib/qcad/scripts/Information/InfoAngle/InfoAngle.svg
 lib/qcad/scripts/Information/InfoAngle/InfoAngleInit.js
+lib/qcad/scripts/Information/InfoAngle/doc/InfoAngle.png
 lib/qcad/scripts/Information/InfoAngle/doc/InfoAngle_de.html
 lib/qcad/scripts/Information/InfoAngle/doc/InfoAngle_desc_de.html
 lib/qcad/scripts/Information/InfoAngle/doc/InfoAngle_desc_en.html
@@ -10001,12 +10221,15 @@ lib/qcad/scripts/Information/InfoArcCircleArea/doc/ArcCircle06.png
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/ArcCircle07.png
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/ArcCircle08.png
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/ArcCircleArea.dxf
+lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea.png
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea_de.html
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea_desc_en.html
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea_en.html
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea_it.html
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea_ja.html
 lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoArcCircleArea_sl.html
+lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoSector.png
+lib/qcad/scripts/Information/InfoArcCircleArea/doc/InfoSlice.png
 lib/qcad/scripts/Information/InfoArcCircleArea/ts/InfoArcCircleArea_cs.qm
 lib/qcad/scripts/Information/InfoArcCircleArea/ts/InfoArcCircleArea_cs.ts
 lib/qcad/scripts/Information/InfoArcCircleArea/ts/InfoArcCircleArea_de.qm
@@ -10055,6 +10278,9 @@ lib/qcad/scripts/Information/InfoArea/InfoArea.pro
 lib/qcad/scripts/Information/InfoArea/InfoArea.svg
 lib/qcad/scripts/Information/InfoArea/InfoArea.ui
 lib/qcad/scripts/Information/InfoArea/InfoAreaInit.js
+lib/qcad/scripts/Information/InfoArea/doc/Calculate.png
+lib/qcad/scripts/Information/InfoArea/doc/Close.png
+lib/qcad/scripts/Information/InfoArea/doc/InfoArea.png
 lib/qcad/scripts/Information/InfoArea/doc/InfoArea_de.html
 lib/qcad/scripts/Information/InfoArea/doc/InfoArea_desc_de.html
 lib/qcad/scripts/Information/InfoArea/doc/InfoArea_desc_en.html
@@ -10134,6 +10360,7 @@ lib/qcad/scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest01_
 lib/qcad/scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest02_000.dxf
 lib/qcad/scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest03_000.dxf
 lib/qcad/scripts/Information/InfoDistanceEE/Tests/required/InfoDistanceEETest04_000.dxf
+lib/qcad/scripts/Information/InfoDistanceEE/doc/InfoDistanceEE.png
 lib/qcad/scripts/Information/InfoDistanceEE/doc/InfoDistanceEE_de.html
 lib/qcad/scripts/Information/InfoDistanceEE/doc/InfoDistanceEE_desc_de.html
 lib/qcad/scripts/Information/InfoDistanceEE/doc/InfoDistanceEE_desc_en.html
@@ -10205,6 +10432,7 @@ lib/qcad/scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js
 lib/qcad/scripts/Information/InfoDistanceEP/Tests/InfoDistanceEPTest00.js
 lib/qcad/scripts/Information/InfoDistanceEP/Tests/actual/.gitignore
 lib/qcad/scripts/Information/InfoDistanceEP/Tests/required/InfoDistanceEPTest00_000.dxf
+lib/qcad/scripts/Information/InfoDistanceEP/doc/InfoDistanceEP.png
 lib/qcad/scripts/Information/InfoDistanceEP/doc/InfoDistanceEP_de.html
 lib/qcad/scripts/Information/InfoDistanceEP/doc/InfoDistanceEP_desc_de.html
 lib/qcad/scripts/Information/InfoDistanceEP/doc/InfoDistanceEP_desc_en.html
@@ -10276,6 +10504,7 @@ lib/qcad/scripts/Information/InfoDistancePP/InfoDistancePPInit.js
 lib/qcad/scripts/Information/InfoDistancePP/Tests/InfoDistancePPTest00.js
 lib/qcad/scripts/Information/InfoDistancePP/Tests/actual/.gitignore
 lib/qcad/scripts/Information/InfoDistancePP/Tests/required/InfoDistancePPTest00_000.dxf
+lib/qcad/scripts/Information/InfoDistancePP/doc/InfoDistancePP.png
 lib/qcad/scripts/Information/InfoDistancePP/doc/InfoDistancePP_de.html
 lib/qcad/scripts/Information/InfoDistancePP/doc/InfoDistancePP_desc_de.html
 lib/qcad/scripts/Information/InfoDistancePP/doc/InfoDistancePP_desc_en.html
@@ -10345,6 +10574,7 @@ lib/qcad/scripts/Information/InfoPolylineArea/InfoPolylineArea.pro
 lib/qcad/scripts/Information/InfoPolylineArea/InfoPolylineArea.svg
 lib/qcad/scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js
 lib/qcad/scripts/Information/InfoPolylineArea/Tests/actual/.gitignore
+lib/qcad/scripts/Information/InfoPolylineArea/doc/InfoPolylineArea.png
 lib/qcad/scripts/Information/InfoPolylineArea/doc/InfoPolylineArea_de.html
 lib/qcad/scripts/Information/InfoPolylineArea/doc/InfoPolylineArea_desc_de.html
 lib/qcad/scripts/Information/InfoPolylineArea/doc/InfoPolylineArea_desc_en.html
@@ -10409,6 +10639,7 @@ lib/qcad/scripts/Information/InfoPosition/InfoPosition.js
 lib/qcad/scripts/Information/InfoPosition/InfoPosition.pro
 lib/qcad/scripts/Information/InfoPosition/InfoPosition.svg
 lib/qcad/scripts/Information/InfoPosition/InfoPositionInit.js
+lib/qcad/scripts/Information/InfoPosition/doc/InfoPosition.png
 lib/qcad/scripts/Information/InfoPosition/doc/InfoPosition_de.html
 lib/qcad/scripts/Information/InfoPosition/doc/InfoPosition_desc_de.html
 lib/qcad/scripts/Information/InfoPosition/doc/InfoPosition_desc_en.html
@@ -10469,6 +10700,7 @@ lib/qcad/scripts/Information/InfoPositionPol/InfoPositionPol.js
 lib/qcad/scripts/Information/InfoPositionPol/InfoPositionPol.pro
 lib/qcad/scripts/Information/InfoPositionPol/InfoPositionPol.svg
 lib/qcad/scripts/Information/InfoPositionPol/InfoPositionPolInit.js
+lib/qcad/scripts/Information/InfoPositionPol/doc/InfoPositionPol.png
 lib/qcad/scripts/Information/InfoPositionPol/doc/InfoPositionPol_de.html
 lib/qcad/scripts/Information/InfoPositionPol/doc/InfoPositionPol_desc_de.html
 lib/qcad/scripts/Information/InfoPositionPol/doc/InfoPositionPol_desc_en.html
@@ -10526,6 +10758,7 @@ lib/qcad/scripts/Information/InfoPositionPolRel/InfoPositionPolRel.js
 lib/qcad/scripts/Information/InfoPositionPolRel/InfoPositionPolRel.pro
 lib/qcad/scripts/Information/InfoPositionPolRel/InfoPositionPolRel.svg
 lib/qcad/scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js
+lib/qcad/scripts/Information/InfoPositionPolRel/doc/InfoPositionPolRel.png
 lib/qcad/scripts/Information/InfoPositionPolRel/doc/InfoPositionPolRel_de.html
 lib/qcad/scripts/Information/InfoPositionPolRel/doc/InfoPositionPolRel_desc_de.html
 lib/qcad/scripts/Information/InfoPositionPolRel/doc/InfoPositionPolRel_desc_en.html
@@ -10583,6 +10816,7 @@ lib/qcad/scripts/Information/InfoPositionRel/InfoPositionRel.js
 lib/qcad/scripts/Information/InfoPositionRel/InfoPositionRel.pro
 lib/qcad/scripts/Information/InfoPositionRel/InfoPositionRel.svg
 lib/qcad/scripts/Information/InfoPositionRel/InfoPositionRelInit.js
+lib/qcad/scripts/Information/InfoPositionRel/doc/InfoPositionRel.png
 lib/qcad/scripts/Information/InfoPositionRel/doc/InfoPositionRel_de.html
 lib/qcad/scripts/Information/InfoPositionRel/doc/InfoPositionRel_desc_de.html
 lib/qcad/scripts/Information/InfoPositionRel/doc/InfoPositionRel_desc_en.html
@@ -10640,6 +10874,7 @@ lib/qcad/scripts/Information/Information.js
 lib/qcad/scripts/Information/Information.pro
 lib/qcad/scripts/Information/Information.svg
 lib/qcad/scripts/Information/Information.ui
+lib/qcad/scripts/Information/doc/Information.png
 lib/qcad/scripts/Information/doc/Information_de.html
 lib/qcad/scripts/Information/doc/Information_desc_de.html
 lib/qcad/scripts/Information/doc/Information_desc_en.html
@@ -10704,6 +10939,7 @@ lib/qcad/scripts/Layer/AddLayer/Tests/actual/.gitignore
 lib/qcad/scripts/Layer/AddLayer/Tests/required/AddLayerTest00_000.dxf
 lib/qcad/scripts/Layer/AddLayer/Tests/required/AddLayerTest01_000.dxf
 lib/qcad/scripts/Layer/AddLayer/Tests/required/AddLayerTest02_000.dxf
+lib/qcad/scripts/Layer/AddLayer/doc/AddLayer.png
 lib/qcad/scripts/Layer/AddLayer/doc/AddLayer_de.html
 lib/qcad/scripts/Layer/AddLayer/doc/AddLayer_desc_de.html
 lib/qcad/scripts/Layer/AddLayer/doc/AddLayer_desc_en.html
@@ -10763,6 +10999,7 @@ lib/qcad/scripts/Layer/DeselectLayer/DeselectLayer.js
 lib/qcad/scripts/Layer/DeselectLayer/DeselectLayer.pro
 lib/qcad/scripts/Layer/DeselectLayer/DeselectLayer.svg
 lib/qcad/scripts/Layer/DeselectLayer/DeselectLayerInit.js
+lib/qcad/scripts/Layer/DeselectLayer/doc/DeselectLayer.png
 lib/qcad/scripts/Layer/DeselectLayer/doc/DeselectLayer_de.html
 lib/qcad/scripts/Layer/DeselectLayer/doc/DeselectLayer_desc_de.html
 lib/qcad/scripts/Layer/DeselectLayer/doc/DeselectLayer_desc_en.html
@@ -10820,6 +11057,7 @@ lib/qcad/scripts/Layer/EditLayer/EditLayer.js
 lib/qcad/scripts/Layer/EditLayer/EditLayer.pro
 lib/qcad/scripts/Layer/EditLayer/EditLayer.svg
 lib/qcad/scripts/Layer/EditLayer/EditLayerInit.js
+lib/qcad/scripts/Layer/EditLayer/doc/EditLayer.png
 lib/qcad/scripts/Layer/EditLayer/doc/EditLayer_de.html
 lib/qcad/scripts/Layer/EditLayer/doc/EditLayer_desc_de.html
 lib/qcad/scripts/Layer/EditLayer/doc/EditLayer_desc_en.html
@@ -10879,6 +11117,7 @@ lib/qcad/scripts/Layer/HideAllLayers/HideAllLayers.js
 lib/qcad/scripts/Layer/HideAllLayers/HideAllLayers.pro
 lib/qcad/scripts/Layer/HideAllLayers/HideAllLayers.svg
 lib/qcad/scripts/Layer/HideAllLayers/HideAllLayersInit.js
+lib/qcad/scripts/Layer/HideAllLayers/doc/HideAllLayers.png
 lib/qcad/scripts/Layer/HideAllLayers/doc/HideAllLayers_de.html
 lib/qcad/scripts/Layer/HideAllLayers/doc/HideAllLayers_desc_de.html
 lib/qcad/scripts/Layer/HideAllLayers/doc/HideAllLayers_desc_en.html
@@ -10946,6 +11185,7 @@ lib/qcad/scripts/Layer/LockAllLayers/LockAllLayers.js
 lib/qcad/scripts/Layer/LockAllLayers/LockAllLayers.pro
 lib/qcad/scripts/Layer/LockAllLayers/LockAllLayers.svg
 lib/qcad/scripts/Layer/LockAllLayers/LockAllLayersInit.js
+lib/qcad/scripts/Layer/LockAllLayers/doc/LockAllLayers.png
 lib/qcad/scripts/Layer/LockAllLayers/doc/LockAllLayers_de.html
 lib/qcad/scripts/Layer/LockAllLayers/doc/LockAllLayers_desc_de.html
 lib/qcad/scripts/Layer/LockAllLayers/doc/LockAllLayers_desc_en.html
@@ -11006,6 +11246,7 @@ lib/qcad/scripts/Layer/RemoveLayer/RemoveLayer.js
 lib/qcad/scripts/Layer/RemoveLayer/RemoveLayer.pro
 lib/qcad/scripts/Layer/RemoveLayer/RemoveLayer.svg
 lib/qcad/scripts/Layer/RemoveLayer/RemoveLayerInit.js
+lib/qcad/scripts/Layer/RemoveLayer/doc/RemoveLayer.png
 lib/qcad/scripts/Layer/RemoveLayer/doc/RemoveLayer_de.html
 lib/qcad/scripts/Layer/RemoveLayer/doc/RemoveLayer_desc_de.html
 lib/qcad/scripts/Layer/RemoveLayer/doc/RemoveLayer_desc_en.html
@@ -11065,6 +11306,7 @@ lib/qcad/scripts/Layer/SelectLayer/SelectLayer.js
 lib/qcad/scripts/Layer/SelectLayer/SelectLayer.pro
 lib/qcad/scripts/Layer/SelectLayer/SelectLayer.svg
 lib/qcad/scripts/Layer/SelectLayer/SelectLayerInit.js
+lib/qcad/scripts/Layer/SelectLayer/doc/SelectLayer.png
 lib/qcad/scripts/Layer/SelectLayer/doc/SelectLayer_de.html
 lib/qcad/scripts/Layer/SelectLayer/doc/SelectLayer_desc_de.html
 lib/qcad/scripts/Layer/SelectLayer/doc/SelectLayer_desc_en.html
@@ -11120,6 +11362,7 @@ lib/qcad/scripts/Layer/ShowActiveLayer/ShowActiveLayer.js
 lib/qcad/scripts/Layer/ShowActiveLayer/ShowActiveLayer.pro
 lib/qcad/scripts/Layer/ShowActiveLayer/ShowActiveLayer.svg
 lib/qcad/scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js
+lib/qcad/scripts/Layer/ShowActiveLayer/doc/ShowActiveLayer.png
 lib/qcad/scripts/Layer/ShowActiveLayer/doc/ShowActiveLayer_de.html
 lib/qcad/scripts/Layer/ShowActiveLayer/doc/ShowActiveLayer_desc_de.html
 lib/qcad/scripts/Layer/ShowActiveLayer/doc/ShowActiveLayer_desc_en.html
@@ -11180,6 +11423,7 @@ lib/qcad/scripts/Layer/ShowAllLayers/ShowAllLayers.js
 lib/qcad/scripts/Layer/ShowAllLayers/ShowAllLayers.pro
 lib/qcad/scripts/Layer/ShowAllLayers/ShowAllLayers.svg
 lib/qcad/scripts/Layer/ShowAllLayers/ShowAllLayersInit.js
+lib/qcad/scripts/Layer/ShowAllLayers/doc/ShowAllLayers.png
 lib/qcad/scripts/Layer/ShowAllLayers/doc/ShowAllLayers_de.html
 lib/qcad/scripts/Layer/ShowAllLayers/doc/ShowAllLayers_desc_de.html
 lib/qcad/scripts/Layer/ShowAllLayers/doc/ShowAllLayers_desc_en.html
@@ -11240,6 +11484,7 @@ lib/qcad/scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.js
 lib/qcad/scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.pro
 lib/qcad/scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibility.svg
 lib/qcad/scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js
+lib/qcad/scripts/Layer/ToggleLayerVisibility/doc/ToggleLayerVisibility.png
 lib/qcad/scripts/Layer/ToggleLayerVisibility/doc/ToggleLayerVisibility_de.html
 lib/qcad/scripts/Layer/ToggleLayerVisibility/doc/ToggleLayerVisibility_desc_de.html
 lib/qcad/scripts/Layer/ToggleLayerVisibility/doc/ToggleLayerVisibility_desc_en.html
@@ -11300,6 +11545,7 @@ lib/qcad/scripts/Layer/UnlockAllLayers/UnlockAllLayers.js
 lib/qcad/scripts/Layer/UnlockAllLayers/UnlockAllLayers.pro
 lib/qcad/scripts/Layer/UnlockAllLayers/UnlockAllLayers.svg
 lib/qcad/scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js
+lib/qcad/scripts/Layer/UnlockAllLayers/doc/UnlockAllLayers.png
 lib/qcad/scripts/Layer/UnlockAllLayers/doc/UnlockAllLayers_de.html
 lib/qcad/scripts/Layer/UnlockAllLayers/doc/UnlockAllLayers_desc_de.html
 lib/qcad/scripts/Layer/UnlockAllLayers/doc/UnlockAllLayers_desc_en.html
@@ -11355,6 +11601,7 @@ lib/qcad/scripts/Layer/UnlockAllLayers/ts/UnlockAllLayers_zh_CN.qm
 lib/qcad/scripts/Layer/UnlockAllLayers/ts/UnlockAllLayers_zh_CN.ts
 lib/qcad/scripts/Layer/UnlockAllLayers/ts/UnlockAllLayers_zh_TW.qm
 lib/qcad/scripts/Layer/UnlockAllLayers/ts/UnlockAllLayers_zh_TW.ts
+lib/qcad/scripts/Layer/doc/Layer.png
 lib/qcad/scripts/Layer/doc/Layer_de.html
 lib/qcad/scripts/Layer/doc/Layer_desc_de.html
 lib/qcad/scripts/Layer/doc/Layer_desc_en.html
@@ -11454,6 +11701,19 @@ lib/qcad/scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_sk.qm
 lib/qcad/scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_sk.ts
 lib/qcad/scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_sl.qm
 lib/qcad/scripts/Misc/Examples/DrawExamples/ExDrawColors/ts/ExDrawColors_sl.ts
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove-inverse.svg
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.pro
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.svg
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_de.qm
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_de.ts
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_ru.qm
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_ru.ts
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_sk.qm
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_sk.ts
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_sl.qm
+lib/qcad/scripts/Misc/Examples/DrawExamples/ExLineDove/ts/ExLineDove_sl.ts
 lib/qcad/scripts/Misc/Examples/DrawExamples/ExText/ExText.js
 lib/qcad/scripts/Misc/Examples/DrawExamples/ExText/ExText.pro
 lib/qcad/scripts/Misc/Examples/DrawExamples/ExText/ts/ExText_de.qm
@@ -11786,6 +12046,7 @@ lib/qcad/scripts/Misc/MiscDevelopment/RunScript/RunScript.pro
 lib/qcad/scripts/Misc/MiscDevelopment/RunScript/RunScript.svg
 lib/qcad/scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui
 lib/qcad/scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js
+lib/qcad/scripts/Misc/MiscDevelopment/RunScript/doc/RunScript.png
 lib/qcad/scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_de.qm
 lib/qcad/scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_de.ts
 lib/qcad/scripts/Misc/MiscDevelopment/RunScript/ts/RunScript_ru.qm
@@ -11823,8 +12084,10 @@ lib/qcad/scripts/Misc/MiscDraw/Cross/Cross.pro
 lib/qcad/scripts/Misc/MiscDraw/Cross/Cross.svg
 lib/qcad/scripts/Misc/MiscDraw/Cross/Cross.ui
 lib/qcad/scripts/Misc/MiscDraw/Cross/CrossInit.js
-lib/qcad/scripts/Misc/MiscDraw/Cross/doc/Cross.dxf
-lib/qcad/scripts/Misc/MiscDraw/Cross/doc/Cross.svg
+lib/qcad/scripts/Misc/MiscDraw/Cross/doc/Cross.png
+lib/qcad/scripts/Misc/MiscDraw/Cross/doc/CrossFigure.dxf
+lib/qcad/scripts/Misc/MiscDraw/Cross/doc/CrossFigure.png
+lib/qcad/scripts/Misc/MiscDraw/Cross/doc/CrossFigure.svg
 lib/qcad/scripts/Misc/MiscDraw/Cross/ts/Cross_de.qm
 lib/qcad/scripts/Misc/MiscDraw/Cross/ts/Cross_de.ts
 lib/qcad/scripts/Misc/MiscDraw/Cross/ts/Cross_ru.qm
@@ -11861,6 +12124,7 @@ lib/qcad/scripts/Misc/MiscDraw/LineDove/LineDove-inverse.svg
 lib/qcad/scripts/Misc/MiscDraw/LineDove/LineDove.js
 lib/qcad/scripts/Misc/MiscDraw/LineDove/LineDove.pro
 lib/qcad/scripts/Misc/MiscDraw/LineDove/LineDove.svg
+lib/qcad/scripts/Misc/MiscDraw/LineDove/LineDove.ui
 lib/qcad/scripts/Misc/MiscDraw/LineDove/LineDoveInit.js
 lib/qcad/scripts/Misc/MiscDraw/LineDove/ts/LineDove_de.qm
 lib/qcad/scripts/Misc/MiscDraw/LineDove/ts/LineDove_de.ts
@@ -12244,6 +12508,7 @@ lib/qcad/scripts/Modify/AutoTrim/Tests/required/AutoTrimTest03_000.dxf
 lib/qcad/scripts/Modify/AutoTrim/Tests/required/AutoTrimTest04_000.dxf
 lib/qcad/scripts/Modify/AutoTrim/Tests/required/AutoTrimTest05_000.dxf
 lib/qcad/scripts/Modify/AutoTrim/Tests/required/AutoTrimTest06_000.dxf
+lib/qcad/scripts/Modify/AutoTrim/doc/AutoTrim.png
 lib/qcad/scripts/Modify/AutoTrim/doc/AutoTrim_de.html
 lib/qcad/scripts/Modify/AutoTrim/doc/AutoTrim_desc_de.html
 lib/qcad/scripts/Modify/AutoTrim/doc/AutoTrim_desc_en.html
@@ -12333,8 +12598,10 @@ lib/qcad/scripts/Modify/Bevel/Tests/required/BevelTest04_000.dxf
 lib/qcad/scripts/Modify/Bevel/Tests/required/BevelTest05_000.dxf
 lib/qcad/scripts/Modify/Bevel/Tests/required/BevelTest06_000.dxf
 lib/qcad/scripts/Modify/Bevel/Tests/required/BevelTest07_000.dxf
-lib/qcad/scripts/Modify/Bevel/doc/Bevel.dxf
-lib/qcad/scripts/Modify/Bevel/doc/Bevel.svg
+lib/qcad/scripts/Modify/Bevel/doc/Bevel.png
+lib/qcad/scripts/Modify/Bevel/doc/BevelFigure.dxf
+lib/qcad/scripts/Modify/Bevel/doc/BevelFigure.png
+lib/qcad/scripts/Modify/Bevel/doc/BevelFigure.svg
 lib/qcad/scripts/Modify/Bevel/doc/Bevel_de.html
 lib/qcad/scripts/Modify/Bevel/doc/Bevel_desc_de.html
 lib/qcad/scripts/Modify/Bevel/doc/Bevel_desc_en.html
@@ -12445,6 +12712,7 @@ lib/qcad/scripts/Modify/BreakOut/Tests/required/BreakOutTest13_000.dxf
 lib/qcad/scripts/Modify/BreakOut/Tests/required/BreakOutTest14_000.dxf
 lib/qcad/scripts/Modify/BreakOut/Tests/required/BreakOutTest15_000.dxf
 lib/qcad/scripts/Modify/BreakOut/Tests/required/BreakOutTest16_000.dxf
+lib/qcad/scripts/Modify/BreakOut/doc/BreakOut.png
 lib/qcad/scripts/Modify/BreakOut/doc/BreakOut_de.html
 lib/qcad/scripts/Modify/BreakOut/doc/BreakOut_desc_de.html
 lib/qcad/scripts/Modify/BreakOut/doc/BreakOut_desc_en.html
@@ -12517,6 +12785,7 @@ lib/qcad/scripts/Modify/BreakOutGap/BreakOutGapInit.js
 lib/qcad/scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js
 lib/qcad/scripts/Modify/BreakOutGap/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/BreakOutGap/Tests/required/BreakOutGapTest01_000.dxf
+lib/qcad/scripts/Modify/BreakOutGap/doc/BreakOutGap.png
 lib/qcad/scripts/Modify/BreakOutGap/doc/BreakOutGap_de.html
 lib/qcad/scripts/Modify/BreakOutGap/doc/BreakOutGap_desc_de.html
 lib/qcad/scripts/Modify/BreakOutGap/doc/BreakOutGap_desc_en.html
@@ -12571,8 +12840,13 @@ lib/qcad/scripts/Modify/BreakOutManual/BreakOutManual.svg
 lib/qcad/scripts/Modify/BreakOutManual/BreakOutManual.ui
 lib/qcad/scripts/Modify/BreakOutManual/BreakOutManualInit.js
 lib/qcad/scripts/Modify/BreakOutManual/Tests/BreakOutManualTest00.js
+lib/qcad/scripts/Modify/BreakOutManual/Tests/BreakOutManualTest01.js
+lib/qcad/scripts/Modify/BreakOutManual/Tests/BreakOutManualTest02.js
 lib/qcad/scripts/Modify/BreakOutManual/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest00_000.dxf
+lib/qcad/scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest01_000.dxf
+lib/qcad/scripts/Modify/BreakOutManual/Tests/required/BreakOutManualTest02_000.dxf
+lib/qcad/scripts/Modify/BreakOutManual/doc/BreakOutManual.png
 lib/qcad/scripts/Modify/BreakOutManual/doc/BreakOutManual_de.html
 lib/qcad/scripts/Modify/BreakOutManual/doc/BreakOutManual_desc_de.html
 lib/qcad/scripts/Modify/BreakOutManual/doc/BreakOutManual_desc_en.html
@@ -12635,6 +12909,7 @@ lib/qcad/scripts/Modify/Divide/Tests/data/line_arc_circle.dxf
 lib/qcad/scripts/Modify/Divide/Tests/data/polylines.dxf
 lib/qcad/scripts/Modify/Divide/Tests/required/DivideTest01_000.dxf
 lib/qcad/scripts/Modify/Divide/Tests/required/DivideTest02_000.dxf
+lib/qcad/scripts/Modify/Divide/doc/Divide.png
 lib/qcad/scripts/Modify/Divide/doc/Divide_de.html
 lib/qcad/scripts/Modify/Divide/doc/Divide_desc_de.html
 lib/qcad/scripts/Modify/Divide/doc/Divide_desc_en.html
@@ -12703,6 +12978,7 @@ lib/qcad/scripts/Modify/EditHatch/EditHatch.js
 lib/qcad/scripts/Modify/EditHatch/EditHatch.pro
 lib/qcad/scripts/Modify/EditHatch/EditHatch.svg
 lib/qcad/scripts/Modify/EditHatch/EditHatchInit.js
+lib/qcad/scripts/Modify/EditHatch/doc/EditHatch.png
 lib/qcad/scripts/Modify/EditHatch/doc/EditHatch_de.html
 lib/qcad/scripts/Modify/EditHatch/doc/EditHatch_desc_de.html
 lib/qcad/scripts/Modify/EditHatch/doc/EditHatch_desc_en.html
@@ -12771,6 +13047,7 @@ lib/qcad/scripts/Modify/EditText/EditText.js
 lib/qcad/scripts/Modify/EditText/EditText.pro
 lib/qcad/scripts/Modify/EditText/EditText.svg
 lib/qcad/scripts/Modify/EditText/EditTextInit.js
+lib/qcad/scripts/Modify/EditText/doc/EditText.png
 lib/qcad/scripts/Modify/EditText/doc/EditText_de.html
 lib/qcad/scripts/Modify/EditText/doc/EditText_desc_de.html
 lib/qcad/scripts/Modify/EditText/doc/EditText_desc_en.html
@@ -12853,6 +13130,7 @@ lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest00_000.dxf
 lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest01_000.dxf
 lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest02_000.dxf
 lib/qcad/scripts/Modify/Explode/Tests/required/ExplodeTest03_000.dxf
+lib/qcad/scripts/Modify/Explode/doc/Explode.png
 lib/qcad/scripts/Modify/Explode/doc/Explode_de.html
 lib/qcad/scripts/Modify/Explode/doc/Explode_desc_de.html
 lib/qcad/scripts/Modify/Explode/doc/Explode_desc_en.html
@@ -12924,6 +13202,7 @@ lib/qcad/scripts/Modify/FlipHorizontal/FlipHorizontalInit.js
 lib/qcad/scripts/Modify/FlipHorizontal/Tests/FlipHorizontalTest00.js
 lib/qcad/scripts/Modify/FlipHorizontal/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/FlipHorizontal/Tests/required/FlipHorizontalTest00_000.dxf
+lib/qcad/scripts/Modify/FlipHorizontal/doc/FlipHorizontal.png
 lib/qcad/scripts/Modify/FlipHorizontal/doc/FlipHorizontal_de.html
 lib/qcad/scripts/Modify/FlipHorizontal/doc/FlipHorizontal_en.html
 lib/qcad/scripts/Modify/FlipHorizontal/doc/FlipHorizontal_it.html
@@ -12975,6 +13254,7 @@ lib/qcad/scripts/Modify/FlipVertical/FlipVerticalInit.js
 lib/qcad/scripts/Modify/FlipVertical/Tests/FlipVerticalTest00.js
 lib/qcad/scripts/Modify/FlipVertical/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/FlipVertical/Tests/required/FlipVerticalTest00_000.dxf
+lib/qcad/scripts/Modify/FlipVertical/doc/FlipVertical.png
 lib/qcad/scripts/Modify/FlipVertical/doc/FlipVertical_de.html
 lib/qcad/scripts/Modify/FlipVertical/doc/FlipVertical_en.html
 lib/qcad/scripts/Modify/FlipVertical/doc/FlipVertical_it.html
@@ -13034,8 +13314,10 @@ lib/qcad/scripts/Modify/Lengthen/Tests/required/LengthenTest00_000.dxf
 lib/qcad/scripts/Modify/Lengthen/Tests/required/LengthenTest01_000.dxf
 lib/qcad/scripts/Modify/Lengthen/Tests/required/LengthenTest02_000.dxf
 lib/qcad/scripts/Modify/Lengthen/Tests/required/LengthenTest03_000.dxf
-lib/qcad/scripts/Modify/Lengthen/doc/Lengthen.dxf
-lib/qcad/scripts/Modify/Lengthen/doc/Lengthen.svg
+lib/qcad/scripts/Modify/Lengthen/doc/Lengthen.png
+lib/qcad/scripts/Modify/Lengthen/doc/LengthenFigure.dxf
+lib/qcad/scripts/Modify/Lengthen/doc/LengthenFigure.png
+lib/qcad/scripts/Modify/Lengthen/doc/LengthenFigure.svg
 lib/qcad/scripts/Modify/Lengthen/doc/Lengthen_de.html
 lib/qcad/scripts/Modify/Lengthen/doc/Lengthen_desc_de.html
 lib/qcad/scripts/Modify/Lengthen/doc/Lengthen_desc_en.html
@@ -13113,6 +13395,8 @@ lib/qcad/scripts/Modify/Mirror/Tests/data/half.dxf
 lib/qcad/scripts/Modify/Mirror/Tests/data/polyline.dxf
 lib/qcad/scripts/Modify/Mirror/Tests/required/MirrorTest00_000.dxf
 lib/qcad/scripts/Modify/Mirror/Tests/required/MirrorTest01_000.dxf
+lib/qcad/scripts/Modify/Mirror/doc/Mirror.png
+lib/qcad/scripts/Modify/Mirror/doc/MirrorDialog.png
 lib/qcad/scripts/Modify/Mirror/doc/Mirror_de.html
 lib/qcad/scripts/Modify/Mirror/doc/Mirror_desc_de.html
 lib/qcad/scripts/Modify/Mirror/doc/Mirror_desc_en.html
@@ -13195,6 +13479,7 @@ lib/qcad/scripts/Modify/Offset/Tests/required/OffsetTest00_000.dxf
 lib/qcad/scripts/Modify/Offset/Tests/required/OffsetTest00_001.dxf
 lib/qcad/scripts/Modify/Offset/Tests/required/OffsetTest01_000.dxf
 lib/qcad/scripts/Modify/Offset/Tests/required/OffsetTest02_000.dxf
+lib/qcad/scripts/Modify/Offset/doc/Offset.png
 lib/qcad/scripts/Modify/Offset/doc/Offset_de.html
 lib/qcad/scripts/Modify/Offset/doc/Offset_desc_de.html
 lib/qcad/scripts/Modify/Offset/doc/Offset_desc_en.html
@@ -13264,6 +13549,7 @@ lib/qcad/scripts/Modify/OffsetThrough/OffsetThrough.pro
 lib/qcad/scripts/Modify/OffsetThrough/OffsetThrough.svg
 lib/qcad/scripts/Modify/OffsetThrough/OffsetThrough.ui
 lib/qcad/scripts/Modify/OffsetThrough/OffsetThroughInit.js
+lib/qcad/scripts/Modify/OffsetThrough/doc/OffsetThrough.png
 lib/qcad/scripts/Modify/OffsetThrough/doc/OffsetThrough_de.html
 lib/qcad/scripts/Modify/OffsetThrough/doc/OffsetThrough_desc_de.html
 lib/qcad/scripts/Modify/OffsetThrough/doc/OffsetThrough_desc_en.html
@@ -13336,6 +13622,7 @@ lib/qcad/scripts/Modify/Reverse/Tests/ReverseTest00.js
 lib/qcad/scripts/Modify/Reverse/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/Reverse/Tests/data/entities.dxf
 lib/qcad/scripts/Modify/Reverse/Tests/required/ReverseTest00_000.dxf
+lib/qcad/scripts/Modify/Reverse/doc/Reverse.png
 lib/qcad/scripts/Modify/Reverse/doc/Reverse_de.html
 lib/qcad/scripts/Modify/Reverse/doc/Reverse_desc_de.html
 lib/qcad/scripts/Modify/Reverse/doc/Reverse_desc_en.html
@@ -13406,6 +13693,9 @@ lib/qcad/scripts/Modify/Rotate/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/Rotate/Tests/data/entities.dxf
 lib/qcad/scripts/Modify/Rotate/Tests/required/RotateTest00_000.dxf
 lib/qcad/scripts/Modify/Rotate/Tests/required/RotateTest01_000.dxf
+lib/qcad/scripts/Modify/Rotate/doc/ByMouse.png
+lib/qcad/scripts/Modify/Rotate/doc/Rotate.png
+lib/qcad/scripts/Modify/Rotate/doc/RotateDialog.png
 lib/qcad/scripts/Modify/Rotate/doc/Rotate_de.html
 lib/qcad/scripts/Modify/Rotate/doc/Rotate_desc_de.html
 lib/qcad/scripts/Modify/Rotate/doc/Rotate_desc_en.html
@@ -13497,8 +13787,11 @@ lib/qcad/scripts/Modify/Rotate2/Tests/required/Rotate2Test03_000.dxf
 lib/qcad/scripts/Modify/Rotate2/Tests/required/Rotate2Test04_000.dxf
 lib/qcad/scripts/Modify/Rotate2/Tests/required/Rotate2Test05_000.dxf
 lib/qcad/scripts/Modify/Rotate2/Tests/required/Rotate2Test06_000.dxf
-lib/qcad/scripts/Modify/Rotate2/doc/Rotate2.dxf
-lib/qcad/scripts/Modify/Rotate2/doc/Rotate2.svg
+lib/qcad/scripts/Modify/Rotate2/doc/Rotate2.png
+lib/qcad/scripts/Modify/Rotate2/doc/Rotate2Dialog.png
+lib/qcad/scripts/Modify/Rotate2/doc/Rotate2Figure.dxf
+lib/qcad/scripts/Modify/Rotate2/doc/Rotate2Figure.png
+lib/qcad/scripts/Modify/Rotate2/doc/Rotate2Figure.svg
 lib/qcad/scripts/Modify/Rotate2/doc/Rotate2_de.html
 lib/qcad/scripts/Modify/Rotate2/doc/Rotate2_desc_de.html
 lib/qcad/scripts/Modify/Rotate2/doc/Rotate2_desc_en.html
@@ -13574,8 +13867,10 @@ lib/qcad/scripts/Modify/Round/Tests/actual/.gitignore
 lib/qcad/scripts/Modify/Round/Tests/data/lines.dxf
 lib/qcad/scripts/Modify/Round/Tests/required/RoundTest00_000.dxf
 lib/qcad/scripts/Modify/Round/Tests/required/RoundTest01_000.dxf
-lib/qcad/scripts/Modify/Round/doc/Round.dxf
-lib/qcad/scripts/Modify/Round/doc/Round.svg
+lib/qcad/scripts/Modify/Round/doc/Round.png
+lib/qcad/scripts/Modify/Round/doc/RoundFigure.dxf
+lib/qcad/scripts/Modify/Round/doc/RoundFigure.png
+lib/qcad/scripts/Modify/Round/doc/RoundFigure.svg
 lib/qcad/scripts/Modify/Round/doc/Round_de.html
 lib/qcad/scripts/Modify/Round/doc/Round_desc_de.html
 lib/qcad/scripts/Modify/Round/doc/Round_desc_en.html
@@ -13674,6 +13969,11 @@ lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest04_000.dxf
 lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest05_000.dxf
 lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest06_000.dxf
 lib/qcad/scripts/Modify/Scale/Tests/required/ScaleTest07_000.dxf
+lib/qcad/scripts/Modify/Scale/doc/ByMouse.png
+lib/qcad/scripts/Modify/Scale/doc/KeepProportionsOff.png
+lib/qcad/scripts/Modify/Scale/doc/KeepProportionsOn.png
+lib/qcad/scripts/Modify/Scale/doc/Scale.png
+lib/qcad/scripts/Modify/Scale/doc/ScaleDialog.png
 lib/qcad/scripts/Modify/Scale/doc/Scale_de.html
 lib/qcad/scripts/Modify/Scale/doc/Scale_desc_de.html
 lib/qcad/scripts/Modify/Scale/doc/Scale_desc_en.html
@@ -13749,8 +14049,10 @@ lib/qcad/scripts/Modify/Stretch/Tests/data/entities0.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/data/entities1.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest00_000.dxf
 lib/qcad/scripts/Modify/Stretch/Tests/required/StretchTest01_000.dxf
-lib/qcad/scripts/Modify/Stretch/doc/Stretch.dxf
-lib/qcad/scripts/Modify/Stretch/doc/Stretch.svg
+lib/qcad/scripts/Modify/Stretch/doc/Stretch.png
+lib/qcad/scripts/Modify/Stretch/doc/StretchFigure.dxf
+lib/qcad/scripts/Modify/Stretch/doc/StretchFigure.png
+lib/qcad/scripts/Modify/Stretch/doc/StretchFigure.svg
 lib/qcad/scripts/Modify/Stretch/doc/Stretch_de.html
 lib/qcad/scripts/Modify/Stretch/doc/Stretch_desc_de.html
 lib/qcad/scripts/Modify/Stretch/doc/Stretch_desc_en.html
@@ -13819,6 +14121,7 @@ lib/qcad/scripts/Modify/ToBack/ToBack.js
 lib/qcad/scripts/Modify/ToBack/ToBack.pro
 lib/qcad/scripts/Modify/ToBack/ToBack.svg
 lib/qcad/scripts/Modify/ToBack/ToBackInit.js
+lib/qcad/scripts/Modify/ToBack/doc/ToBack.png
 lib/qcad/scripts/Modify/ToBack/doc/ToBack_de.html
 lib/qcad/scripts/Modify/ToBack/doc/ToBack_desc_de.html
 lib/qcad/scripts/Modify/ToBack/doc/ToBack_desc_en.html
@@ -13887,6 +14190,7 @@ lib/qcad/scripts/Modify/ToFront/ToFront.js
 lib/qcad/scripts/Modify/ToFront/ToFront.pro
 lib/qcad/scripts/Modify/ToFront/ToFront.svg
 lib/qcad/scripts/Modify/ToFront/ToFrontInit.js
+lib/qcad/scripts/Modify/ToFront/doc/ToFront.png
 lib/qcad/scripts/Modify/ToFront/doc/ToFront_de.html
 lib/qcad/scripts/Modify/ToFront/doc/ToFront_desc_de.html
 lib/qcad/scripts/Modify/ToFront/doc/ToFront_desc_en.html
@@ -13969,6 +14273,8 @@ lib/qcad/scripts/Modify/Translate/Translate.ui
 lib/qcad/scripts/Modify/Translate/TranslateDialog.svg
 lib/qcad/scripts/Modify/Translate/TranslateDialog.ui
 lib/qcad/scripts/Modify/Translate/TranslateInit.js
+lib/qcad/scripts/Modify/Translate/doc/Translate.png
+lib/qcad/scripts/Modify/Translate/doc/TranslateDialog.png
 lib/qcad/scripts/Modify/Translate/doc/Translate_de.html
 lib/qcad/scripts/Modify/Translate/doc/Translate_desc_de.html
 lib/qcad/scripts/Modify/Translate/doc/Translate_desc_en.html
@@ -14048,8 +14354,11 @@ lib/qcad/scripts/Modify/TranslateRotate/TranslateRotate.ui
 lib/qcad/scripts/Modify/TranslateRotate/TranslateRotateDialog.svg
 lib/qcad/scripts/Modify/TranslateRotate/TranslateRotateDialog.ui
 lib/qcad/scripts/Modify/TranslateRotate/TranslateRotateInit.js
-lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotate.dxf
-lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotate.svg
+lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotate.png
+lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotateDialog.png
+lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotateFigure.dxf
+lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotateFigure.png
+lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotateFigure.svg
 lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotate_de.html
 lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotate_desc_de.html
 lib/qcad/scripts/Modify/TranslateRotate/doc/TranslateRotate_desc_en.html
@@ -14148,8 +14457,10 @@ lib/qcad/scripts/Modify/Trim/Trim.js
 lib/qcad/scripts/Modify/Trim/Trim.pro
 lib/qcad/scripts/Modify/Trim/Trim.svg
 lib/qcad/scripts/Modify/Trim/TrimInit.js
-lib/qcad/scripts/Modify/Trim/doc/Trim.dxf
-lib/qcad/scripts/Modify/Trim/doc/Trim.svg
+lib/qcad/scripts/Modify/Trim/doc/Trim.png
+lib/qcad/scripts/Modify/Trim/doc/TrimFigure.dxf
+lib/qcad/scripts/Modify/Trim/doc/TrimFigure.png
+lib/qcad/scripts/Modify/Trim/doc/TrimFigure.svg
 lib/qcad/scripts/Modify/Trim/doc/Trim_de.html
 lib/qcad/scripts/Modify/Trim/doc/Trim_desc_de.html
 lib/qcad/scripts/Modify/Trim/doc/Trim_desc_en.html
@@ -14234,8 +14545,10 @@ lib/qcad/scripts/Modify/TrimBoth/TrimBoth.js
 lib/qcad/scripts/Modify/TrimBoth/TrimBoth.pro
 lib/qcad/scripts/Modify/TrimBoth/TrimBoth.svg
 lib/qcad/scripts/Modify/TrimBoth/TrimBothInit.js
-lib/qcad/scripts/Modify/TrimBoth/doc/TrimBoth.dxf
-lib/qcad/scripts/Modify/TrimBoth/doc/TrimBoth.svg
+lib/qcad/scripts/Modify/TrimBoth/doc/TrimBoth.png
+lib/qcad/scripts/Modify/TrimBoth/doc/TrimBothFigure.dxf
+lib/qcad/scripts/Modify/TrimBoth/doc/TrimBothFigure.png
+lib/qcad/scripts/Modify/TrimBoth/doc/TrimBothFigure.svg
 lib/qcad/scripts/Modify/TrimBoth/doc/TrimBoth_de.html
 lib/qcad/scripts/Modify/TrimBoth/doc/TrimBoth_desc_de.html
 lib/qcad/scripts/Modify/TrimBoth/doc/TrimBoth_desc_en.html
@@ -14299,6 +14612,7 @@ lib/qcad/scripts/Modify/TrimBoth/ts/TrimBoth_zh_CN.qm
 lib/qcad/scripts/Modify/TrimBoth/ts/TrimBoth_zh_CN.ts
 lib/qcad/scripts/Modify/TrimBoth/ts/TrimBoth_zh_TW.qm
 lib/qcad/scripts/Modify/TrimBoth/ts/TrimBoth_zh_TW.ts
+lib/qcad/scripts/Modify/doc/Modify.png
 lib/qcad/scripts/Modify/doc/Modify_de.html
 lib/qcad/scripts/Modify/doc/Modify_en.html
 lib/qcad/scripts/Modify/doc/Modify_es.html
@@ -14429,6 +14743,8 @@ lib/qcad/scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoPro
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest11_000.dxf
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/Top-inverse.svg
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/Top.svg
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/Bottom.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject.png
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_de.html
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_desc_de.html
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_desc_en.html
@@ -14454,6 +14770,13 @@ lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_proc_p
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_proc_ru.html
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_pt.html
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/IsoProject_sl.html
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/Left.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/LeftBack.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/Right.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/RightBack.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/RotateCCW.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/RotateCW.png
+lib/qcad/scripts/Projection/IsometricProjection/IsoProject/doc/Top.png
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/ts/IsoProject_cs.qm
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/ts/IsoProject_cs.ts
 lib/qcad/scripts/Projection/IsometricProjection/IsoProject/ts/IsoProject_de.qm
@@ -14537,6 +14860,7 @@ lib/qcad/scripts/Projection/Projection-inverse.svg
 lib/qcad/scripts/Projection/Projection.js
 lib/qcad/scripts/Projection/Projection.pro
 lib/qcad/scripts/Projection/Projection.svg
+lib/qcad/scripts/Projection/doc/Projection.png
 lib/qcad/scripts/Projection/ts/Projection_cs.qm
 lib/qcad/scripts/Projection/ts/Projection_cs.ts
 lib/qcad/scripts/Projection/ts/Projection_de.qm
@@ -14581,6 +14905,7 @@ lib/qcad/scripts/Reset/Reset.js
 lib/qcad/scripts/Reset/Reset.pro
 lib/qcad/scripts/Reset/Reset.svg
 lib/qcad/scripts/Reset/ResetInit.js
+lib/qcad/scripts/Reset/doc/Reset.png
 lib/qcad/scripts/Reset/doc/Reset_de.html
 lib/qcad/scripts/Reset/doc/Reset_desc_de.html
 lib/qcad/scripts/Reset/doc/Reset_desc_en.html
@@ -14643,6 +14968,7 @@ lib/qcad/scripts/Select/DeselectAll/DeselectAll.js
 lib/qcad/scripts/Select/DeselectAll/DeselectAll.pro
 lib/qcad/scripts/Select/DeselectAll/DeselectAll.svg
 lib/qcad/scripts/Select/DeselectAll/DeselectAllInit.js
+lib/qcad/scripts/Select/DeselectAll/doc/DeselectAll.png
 lib/qcad/scripts/Select/DeselectAll/doc/DeselectAll_de.html
 lib/qcad/scripts/Select/DeselectAll/doc/DeselectAll_desc_de.html
 lib/qcad/scripts/Select/DeselectAll/doc/DeselectAll_desc_en.html
@@ -14703,6 +15029,7 @@ lib/qcad/scripts/Select/InvertSelection/InvertSelection.js
 lib/qcad/scripts/Select/InvertSelection/InvertSelection.pro
 lib/qcad/scripts/Select/InvertSelection/InvertSelection.svg
 lib/qcad/scripts/Select/InvertSelection/InvertSelectionInit.js
+lib/qcad/scripts/Select/InvertSelection/doc/InvertSelection.png
 lib/qcad/scripts/Select/InvertSelection/doc/InvertSelection_de.html
 lib/qcad/scripts/Select/InvertSelection/doc/InvertSelection_desc_de.html
 lib/qcad/scripts/Select/InvertSelection/doc/InvertSelection_desc_en.html
@@ -14767,6 +15094,7 @@ lib/qcad/scripts/Select/SelectAll/SelectAll.js
 lib/qcad/scripts/Select/SelectAll/SelectAll.pro
 lib/qcad/scripts/Select/SelectAll/SelectAll.svg
 lib/qcad/scripts/Select/SelectAll/SelectAllInit.js
+lib/qcad/scripts/Select/SelectAll/doc/SelectAll.png
 lib/qcad/scripts/Select/SelectAll/doc/SelectAll_de.html
 lib/qcad/scripts/Select/SelectAll/doc/SelectAll_desc_de.html
 lib/qcad/scripts/Select/SelectAll/doc/SelectAll_desc_en.html
@@ -14828,6 +15156,7 @@ lib/qcad/scripts/Select/SelectContour/SelectContour.pro
 lib/qcad/scripts/Select/SelectContour/SelectContour.svg
 lib/qcad/scripts/Select/SelectContour/SelectContour.ui
 lib/qcad/scripts/Select/SelectContour/SelectContourInit.js
+lib/qcad/scripts/Select/SelectContour/doc/SelectContour.png
 lib/qcad/scripts/Select/SelectContour/doc/SelectContour_de.html
 lib/qcad/scripts/Select/SelectContour/doc/SelectContour_desc_de.html
 lib/qcad/scripts/Select/SelectContour/doc/SelectContour_desc_en.html
@@ -14897,6 +15226,7 @@ lib/qcad/scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.pro
 lib/qcad/scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.svg
 lib/qcad/scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui
 lib/qcad/scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js
+lib/qcad/scripts/Select/SelectIntersectedEntities/doc/SelectIntersectedEntities.png
 lib/qcad/scripts/Select/SelectIntersectedEntities/doc/SelectIntersectedEntities_de.html
 lib/qcad/scripts/Select/SelectIntersectedEntities/doc/SelectIntersectedEntities_desc_de.html
 lib/qcad/scripts/Select/SelectIntersectedEntities/doc/SelectIntersectedEntities_desc_en.html
@@ -14966,6 +15296,7 @@ lib/qcad/scripts/Select/SelectLayerByEntity/SelectLayerByEntity.pro
 lib/qcad/scripts/Select/SelectLayerByEntity/SelectLayerByEntity.svg
 lib/qcad/scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui
 lib/qcad/scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js
+lib/qcad/scripts/Select/SelectLayerByEntity/doc/SelectLayerByEntity.png
 lib/qcad/scripts/Select/SelectLayerByEntity/doc/SelectLayerByEntity_de.html
 lib/qcad/scripts/Select/SelectLayerByEntity/doc/SelectLayerByEntity_desc_de.html
 lib/qcad/scripts/Select/SelectLayerByEntity/doc/SelectLayerByEntity_desc_en.html
@@ -15035,6 +15366,7 @@ lib/qcad/scripts/Select/SelectRectangle/SelectRectangle.pro
 lib/qcad/scripts/Select/SelectRectangle/SelectRectangle.svg
 lib/qcad/scripts/Select/SelectRectangle/SelectRectangle.ui
 lib/qcad/scripts/Select/SelectRectangle/SelectRectangleInit.js
+lib/qcad/scripts/Select/SelectRectangle/doc/SelectRectangle.png
 lib/qcad/scripts/Select/SelectRectangle/doc/SelectRectangle_de.html
 lib/qcad/scripts/Select/SelectRectangle/doc/SelectRectangle_desc_de.html
 lib/qcad/scripts/Select/SelectRectangle/doc/SelectRectangle_desc_en.html
@@ -15106,6 +15438,7 @@ lib/qcad/scripts/Select/SelectionModeRemove-inverse.svg
 lib/qcad/scripts/Select/SelectionModeRemove.svg
 lib/qcad/scripts/Select/SelectionModeReplace-inverse.svg
 lib/qcad/scripts/Select/SelectionModeReplace.svg
+lib/qcad/scripts/Select/doc/Select.png
 lib/qcad/scripts/Select/doc/Select_de.html
 lib/qcad/scripts/Select/doc/Select_desc_de.html
 lib/qcad/scripts/Select/doc/Select_desc_en.html
@@ -15123,6 +15456,10 @@ lib/qcad/scripts/Select/doc/Select_it.html
 lib/qcad/scripts/Select/doc/Select_ja.html
 lib/qcad/scripts/Select/doc/Select_pt.html
 lib/qcad/scripts/Select/doc/Select_sl.html
+lib/qcad/scripts/Select/doc/SelectionModeAdd.png
+lib/qcad/scripts/Select/doc/SelectionModeIntersect.png
+lib/qcad/scripts/Select/doc/SelectionModeRemove.png
+lib/qcad/scripts/Select/doc/SelectionModeReplace.png
 lib/qcad/scripts/Select/ts/Select_cs.qm
 lib/qcad/scripts/Select/ts/Select_cs.ts
 lib/qcad/scripts/Select/ts/Select_de.qm
@@ -15168,6 +15505,7 @@ lib/qcad/scripts/Snap/LockRelativeZero/LockRelativeZero.js
 lib/qcad/scripts/Snap/LockRelativeZero/LockRelativeZero.pro
 lib/qcad/scripts/Snap/LockRelativeZero/LockRelativeZero.svg
 lib/qcad/scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js
+lib/qcad/scripts/Snap/LockRelativeZero/doc/LockRelativeZero.png
 lib/qcad/scripts/Snap/LockRelativeZero/doc/LockRelativeZero_de.html
 lib/qcad/scripts/Snap/LockRelativeZero/doc/LockRelativeZero_desc_de.html
 lib/qcad/scripts/Snap/LockRelativeZero/doc/LockRelativeZero_desc_en.html
@@ -15229,6 +15567,7 @@ lib/qcad/scripts/Snap/RestrictAngleLength/RestrictAngleLength.pro
 lib/qcad/scripts/Snap/RestrictAngleLength/RestrictAngleLength.svg
 lib/qcad/scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui
 lib/qcad/scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js
+lib/qcad/scripts/Snap/RestrictAngleLength/doc/RestrictAngleLength.png
 lib/qcad/scripts/Snap/RestrictAngleLength/doc/RestrictAngleLength_de.html
 lib/qcad/scripts/Snap/RestrictAngleLength/doc/RestrictAngleLength_en.html
 lib/qcad/scripts/Snap/RestrictAngleLength/doc/RestrictAngleLength_it.html
@@ -15277,6 +15616,7 @@ lib/qcad/scripts/Snap/RestrictHorizontal/RestrictHorizontal.js
 lib/qcad/scripts/Snap/RestrictHorizontal/RestrictHorizontal.pro
 lib/qcad/scripts/Snap/RestrictHorizontal/RestrictHorizontal.svg
 lib/qcad/scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js
+lib/qcad/scripts/Snap/RestrictHorizontal/doc/RestrictHorizontal.png
 lib/qcad/scripts/Snap/RestrictHorizontal/doc/RestrictHorizontal_de.html
 lib/qcad/scripts/Snap/RestrictHorizontal/doc/RestrictHorizontal_desc_de.html
 lib/qcad/scripts/Snap/RestrictHorizontal/doc/RestrictHorizontal_desc_en.html
@@ -15337,6 +15677,7 @@ lib/qcad/scripts/Snap/RestrictOff/RestrictOff.js
 lib/qcad/scripts/Snap/RestrictOff/RestrictOff.pro
 lib/qcad/scripts/Snap/RestrictOff/RestrictOff.svg
 lib/qcad/scripts/Snap/RestrictOff/RestrictOffInit.js
+lib/qcad/scripts/Snap/RestrictOff/doc/RestrictOff.png
 lib/qcad/scripts/Snap/RestrictOff/doc/RestrictOff_de.html
 lib/qcad/scripts/Snap/RestrictOff/doc/RestrictOff_desc_de.html
 lib/qcad/scripts/Snap/RestrictOff/doc/RestrictOff_desc_en.html
@@ -15397,6 +15738,7 @@ lib/qcad/scripts/Snap/RestrictOrthogonal/RestrictOrthogonal.js
 lib/qcad/scripts/Snap/RestrictOrthogonal/RestrictOrthogonal.pro
 lib/qcad/scripts/Snap/RestrictOrthogonal/RestrictOrthogonal.svg
 lib/qcad/scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js
+lib/qcad/scripts/Snap/RestrictOrthogonal/doc/RestrictOrthogonal.png
 lib/qcad/scripts/Snap/RestrictOrthogonal/doc/RestrictOrthogonal_de.html
 lib/qcad/scripts/Snap/RestrictOrthogonal/doc/RestrictOrthogonal_desc_de.html
 lib/qcad/scripts/Snap/RestrictOrthogonal/doc/RestrictOrthogonal_desc_en.html
@@ -15457,6 +15799,7 @@ lib/qcad/scripts/Snap/RestrictVertical/RestrictVertical.js
 lib/qcad/scripts/Snap/RestrictVertical/RestrictVertical.pro
 lib/qcad/scripts/Snap/RestrictVertical/RestrictVertical.svg
 lib/qcad/scripts/Snap/RestrictVertical/RestrictVerticalInit.js
+lib/qcad/scripts/Snap/RestrictVertical/doc/RestrictVertical.png
 lib/qcad/scripts/Snap/RestrictVertical/doc/RestrictVertical_de.html
 lib/qcad/scripts/Snap/RestrictVertical/doc/RestrictVertical_desc_de.html
 lib/qcad/scripts/Snap/RestrictVertical/doc/RestrictVertical_desc_en.html
@@ -15517,6 +15860,7 @@ lib/qcad/scripts/Snap/SetRelativeZero/SetRelativeZero.js
 lib/qcad/scripts/Snap/SetRelativeZero/SetRelativeZero.pro
 lib/qcad/scripts/Snap/SetRelativeZero/SetRelativeZero.svg
 lib/qcad/scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js
+lib/qcad/scripts/Snap/SetRelativeZero/doc/SetRelativeZero.png
 lib/qcad/scripts/Snap/SetRelativeZero/doc/SetRelativeZero_de.html
 lib/qcad/scripts/Snap/SetRelativeZero/doc/SetRelativeZero_desc_de.html
 lib/qcad/scripts/Snap/SetRelativeZero/doc/SetRelativeZero_desc_en.html
@@ -15590,6 +15934,7 @@ lib/qcad/scripts/Snap/SnapAuto/SnapAuto.js
 lib/qcad/scripts/Snap/SnapAuto/SnapAuto.pro
 lib/qcad/scripts/Snap/SnapAuto/SnapAuto.svg
 lib/qcad/scripts/Snap/SnapAuto/SnapAutoInit.js
+lib/qcad/scripts/Snap/SnapAuto/doc/SnapAuto.png
 lib/qcad/scripts/Snap/SnapAuto/doc/SnapAuto_de.html
 lib/qcad/scripts/Snap/SnapAuto/doc/SnapAuto_desc_de.html
 lib/qcad/scripts/Snap/SnapAuto/doc/SnapAuto_desc_en.html
@@ -15650,8 +15995,10 @@ lib/qcad/scripts/Snap/SnapCenter/SnapCenter.js
 lib/qcad/scripts/Snap/SnapCenter/SnapCenter.pro
 lib/qcad/scripts/Snap/SnapCenter/SnapCenter.svg
 lib/qcad/scripts/Snap/SnapCenter/SnapCenterInit.js
-lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenter.dxf
-lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenter.svg
+lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenter.png
+lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenterFigure.dxf
+lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenterFigure.png
+lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenterFigure.svg
 lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenter_de.html
 lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenter_desc_de.html
 lib/qcad/scripts/Snap/SnapCenter/doc/SnapCenter_desc_en.html
@@ -15715,6 +16062,7 @@ lib/qcad/scripts/Snap/SnapCoordinate/SnapCoordinate.ui
 lib/qcad/scripts/Snap/SnapCoordinate/SnapCoordinateInit.js
 lib/qcad/scripts/Snap/SnapCoordinate/Tick-inverse.svg
 lib/qcad/scripts/Snap/SnapCoordinate/Tick.svg
+lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate.png
 lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_de.html
 lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_desc_de.html
 lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_desc_en.html
@@ -15740,6 +16088,7 @@ lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_proc_pt.html
 lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_proc_ru.html
 lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_pt.html
 lib/qcad/scripts/Snap/SnapCoordinate/doc/SnapCoordinate_sl.html
+lib/qcad/scripts/Snap/SnapCoordinate/doc/Tick.png
 lib/qcad/scripts/Snap/SnapCoordinate/ts/SnapCoordinate_cs.qm
 lib/qcad/scripts/Snap/SnapCoordinate/ts/SnapCoordinate_cs.ts
 lib/qcad/scripts/Snap/SnapCoordinate/ts/SnapCoordinate_de.qm
@@ -15786,6 +16135,7 @@ lib/qcad/scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui
 lib/qcad/scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js
 lib/qcad/scripts/Snap/SnapCoordinatePolar/Tick-inverse.svg
 lib/qcad/scripts/Snap/SnapCoordinatePolar/Tick.svg
+lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar.png
 lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_de.html
 lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_desc_de.html
 lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_desc_en.html
@@ -15811,6 +16161,7 @@ lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_proc_pt.html
 lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_proc_ru.html
 lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_pt.html
 lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/SnapCoordinatePolar_sl.html
+lib/qcad/scripts/Snap/SnapCoordinatePolar/doc/Tick.png
 lib/qcad/scripts/Snap/SnapCoordinatePolar/ts/SnapCoordinatePolar_cs.qm
 lib/qcad/scripts/Snap/SnapCoordinatePolar/ts/SnapCoordinatePolar_cs.ts
 lib/qcad/scripts/Snap/SnapCoordinatePolar/ts/SnapCoordinatePolar_de.qm
@@ -15855,8 +16206,10 @@ lib/qcad/scripts/Snap/SnapDistance/SnapDistance.pro
 lib/qcad/scripts/Snap/SnapDistance/SnapDistance.svg
 lib/qcad/scripts/Snap/SnapDistance/SnapDistance.ui
 lib/qcad/scripts/Snap/SnapDistance/SnapDistanceInit.js
-lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistance.dxf
-lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistance.svg
+lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistance.png
+lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistanceFigure.dxf
+lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistanceFigure.png
+lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistanceFigure.svg
 lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistance_de.html
 lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistance_desc_de.html
 lib/qcad/scripts/Snap/SnapDistance/doc/SnapDistance_desc_en.html
@@ -15921,8 +16274,10 @@ lib/qcad/scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js
 lib/qcad/scripts/Snap/SnapDistanceManual/Tests/SnapDistanceManualTest00.js
 lib/qcad/scripts/Snap/SnapDistanceManual/Tests/actual/.gitignore
 lib/qcad/scripts/Snap/SnapDistanceManual/Tests/required/SnapDistanceManualTest00_000.dxf
-lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManual.dxf
-lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManual.svg
+lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManual.png
+lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManualFigure.dxf
+lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManualFigure.png
+lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManualFigure.svg
 lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManualOptions.png
 lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManual_de.html
 lib/qcad/scripts/Snap/SnapDistanceManual/doc/SnapDistanceManual_desc_de.html
@@ -15979,8 +16334,10 @@ lib/qcad/scripts/Snap/SnapEnd/SnapEnd.js
 lib/qcad/scripts/Snap/SnapEnd/SnapEnd.pro
 lib/qcad/scripts/Snap/SnapEnd/SnapEnd.svg
 lib/qcad/scripts/Snap/SnapEnd/SnapEndInit.js
-lib/qcad/scripts/Snap/SnapEnd/doc/SnapEnd.dxf
-lib/qcad/scripts/Snap/SnapEnd/doc/SnapEnd.svg
+lib/qcad/scripts/Snap/SnapEnd/doc/SnapEnd.png
+lib/qcad/scripts/Snap/SnapEnd/doc/SnapEndFigure.dxf
+lib/qcad/scripts/Snap/SnapEnd/doc/SnapEndFigure.png
+lib/qcad/scripts/Snap/SnapEnd/doc/SnapEndFigure.svg
 lib/qcad/scripts/Snap/SnapEnd/doc/SnapEnd_de.html
 lib/qcad/scripts/Snap/SnapEnd/doc/SnapEnd_desc_de.html
 lib/qcad/scripts/Snap/SnapEnd/doc/SnapEnd_desc_en.html
@@ -16041,6 +16398,7 @@ lib/qcad/scripts/Snap/SnapFree/SnapFree.js
 lib/qcad/scripts/Snap/SnapFree/SnapFree.pro
 lib/qcad/scripts/Snap/SnapFree/SnapFree.svg
 lib/qcad/scripts/Snap/SnapFree/SnapFreeInit.js
+lib/qcad/scripts/Snap/SnapFree/doc/SnapFree.png
 lib/qcad/scripts/Snap/SnapFree/doc/SnapFree_de.html
 lib/qcad/scripts/Snap/SnapFree/doc/SnapFree_desc_de.html
 lib/qcad/scripts/Snap/SnapFree/doc/SnapFree_desc_en.html
@@ -16101,6 +16459,7 @@ lib/qcad/scripts/Snap/SnapGrid/SnapGrid.js
 lib/qcad/scripts/Snap/SnapGrid/SnapGrid.pro
 lib/qcad/scripts/Snap/SnapGrid/SnapGrid.svg
 lib/qcad/scripts/Snap/SnapGrid/SnapGridInit.js
+lib/qcad/scripts/Snap/SnapGrid/doc/SnapGrid.png
 lib/qcad/scripts/Snap/SnapGrid/doc/SnapGrid_de.html
 lib/qcad/scripts/Snap/SnapGrid/doc/SnapGrid_desc_de.html
 lib/qcad/scripts/Snap/SnapGrid/doc/SnapGrid_desc_en.html
@@ -16180,8 +16539,10 @@ lib/qcad/scripts/Snap/SnapIntersection/Tests/required/SnapIntersectionTest02_000
 lib/qcad/scripts/Snap/SnapIntersection/Tests/required/SnapIntersectionTest03_000.dxf
 lib/qcad/scripts/Snap/SnapIntersection/Tests/required/SnapIntersectionTest04_000.dxf
 lib/qcad/scripts/Snap/SnapIntersection/Tests/required/SnapIntersectionTest05_000.dxf
-lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersection.dxf
-lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersection.svg
+lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersection.png
+lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersectionFigure.dxf
+lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersectionFigure.png
+lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersectionFigure.svg
 lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersection_de.html
 lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersection_desc_de.html
 lib/qcad/scripts/Snap/SnapIntersection/doc/SnapIntersection_desc_en.html
@@ -16237,6 +16598,7 @@ lib/qcad/scripts/Snap/SnapIntersection/ts/SnapIntersection_zh_CN.qm
 lib/qcad/scripts/Snap/SnapIntersection/ts/SnapIntersection_zh_CN.ts
 lib/qcad/scripts/Snap/SnapIntersection/ts/SnapIntersection_zh_TW.qm
 lib/qcad/scripts/Snap/SnapIntersection/ts/SnapIntersection_zh_TW.ts
+lib/qcad/scripts/Snap/SnapIntersectionManual/PreferencesPage.ui
 lib/qcad/scripts/Snap/SnapIntersectionManual/SnapIntersectionManual-inverse.svg
 lib/qcad/scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js
 lib/qcad/scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.pro
@@ -16246,8 +16608,10 @@ lib/qcad/scripts/Snap/SnapIntersectionManual/Tests/SnapIntersectionManualTest00.
 lib/qcad/scripts/Snap/SnapIntersectionManual/Tests/actual/.gitignore
 lib/qcad/scripts/Snap/SnapIntersectionManual/Tests/data/intersections_manual.dxf
 lib/qcad/scripts/Snap/SnapIntersectionManual/Tests/required/SnapIntersectionManualTest00_000.dxf
-lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManual.dxf
-lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManual.svg
+lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManual.png
+lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManualFigure.dxf
+lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManualFigure.png
+lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManualFigure.svg
 lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManual_de.html
 lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManual_desc_de.html
 lib/qcad/scripts/Snap/SnapIntersectionManual/doc/SnapIntersectionManual_desc_en.html
@@ -16316,8 +16680,10 @@ lib/qcad/scripts/Snap/SnapMiddle/SnapMiddle.js
 lib/qcad/scripts/Snap/SnapMiddle/SnapMiddle.pro
 lib/qcad/scripts/Snap/SnapMiddle/SnapMiddle.svg
 lib/qcad/scripts/Snap/SnapMiddle/SnapMiddleInit.js
-lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddle.dxf
-lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddle.svg
+lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddle.png
+lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddleFigure.dxf
+lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddleFigure.png
+lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddleFigure.svg
 lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddle_de.html
 lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddle_desc_de.html
 lib/qcad/scripts/Snap/SnapMiddle/doc/SnapMiddle_desc_en.html
@@ -16381,8 +16747,10 @@ lib/qcad/scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js
 lib/qcad/scripts/Snap/SnapMiddleManual/Tests/SnapMiddleManualTest00.js
 lib/qcad/scripts/Snap/SnapMiddleManual/Tests/actual/.gitignore
 lib/qcad/scripts/Snap/SnapMiddleManual/Tests/required/SnapMiddleManualTest00_000.dxf
-lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManual.dxf
-lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManual.svg
+lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManual.png
+lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManualFigure.dxf
+lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManualFigure.png
+lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManualFigure.svg
 lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManual_de.html
 lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManual_desc_de.html
 lib/qcad/scripts/Snap/SnapMiddleManual/doc/SnapMiddleManual_desc_en.html
@@ -16451,8 +16819,10 @@ lib/qcad/scripts/Snap/SnapOnEntity/SnapOnEntity.js
 lib/qcad/scripts/Snap/SnapOnEntity/SnapOnEntity.pro
 lib/qcad/scripts/Snap/SnapOnEntity/SnapOnEntity.svg
 lib/qcad/scripts/Snap/SnapOnEntity/SnapOnEntityInit.js
-lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntity.dxf
-lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntity.svg
+lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntity.png
+lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntityFigure.dxf
+lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntityFigure.png
+lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntityFigure.svg
 lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntity_de.html
 lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntity_desc_de.html
 lib/qcad/scripts/Snap/SnapOnEntity/doc/SnapOnEntity_desc_en.html
@@ -16513,6 +16883,7 @@ lib/qcad/scripts/Snap/SnapPerpendicular/SnapPerpendicular.js
 lib/qcad/scripts/Snap/SnapPerpendicular/SnapPerpendicular.pro
 lib/qcad/scripts/Snap/SnapPerpendicular/SnapPerpendicular.svg
 lib/qcad/scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js
+lib/qcad/scripts/Snap/SnapPerpendicular/doc/SnapPerpendicular.png
 lib/qcad/scripts/Snap/SnapPerpendicular/doc/SnapPerpendicular_de.html
 lib/qcad/scripts/Snap/SnapPerpendicular/doc/SnapPerpendicular_desc_de.html
 lib/qcad/scripts/Snap/SnapPerpendicular/doc/SnapPerpendicular_desc_en.html
@@ -16573,8 +16944,10 @@ lib/qcad/scripts/Snap/SnapReference/SnapReference.js
 lib/qcad/scripts/Snap/SnapReference/SnapReference.pro
 lib/qcad/scripts/Snap/SnapReference/SnapReference.svg
 lib/qcad/scripts/Snap/SnapReference/SnapReferenceInit.js
-lib/qcad/scripts/Snap/SnapReference/doc/SnapReference.dxf
-lib/qcad/scripts/Snap/SnapReference/doc/SnapReference.svg
+lib/qcad/scripts/Snap/SnapReference/doc/SnapReference.png
+lib/qcad/scripts/Snap/SnapReference/doc/SnapReferenceFigure.dxf
+lib/qcad/scripts/Snap/SnapReference/doc/SnapReferenceFigure.png
+lib/qcad/scripts/Snap/SnapReference/doc/SnapReferenceFigure.svg
 lib/qcad/scripts/Snap/SnapReference/doc/SnapReference_de.html
 lib/qcad/scripts/Snap/SnapReference/doc/SnapReference_desc_de.html
 lib/qcad/scripts/Snap/SnapReference/doc/SnapReference_desc_en.html
@@ -16635,6 +17008,7 @@ lib/qcad/scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.js
 lib/qcad/scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.pro
 lib/qcad/scripts/Snap/SnapSelectionCenter/SnapSelectionCenter.svg
 lib/qcad/scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js
+lib/qcad/scripts/Snap/SnapSelectionCenter/doc/SnapSelectionCenter.png
 lib/qcad/scripts/Snap/SnapSelectionCenter/doc/SnapSelectionCenter_de.html
 lib/qcad/scripts/Snap/SnapSelectionCenter/doc/SnapSelectionCenter_desc_de.html
 lib/qcad/scripts/Snap/SnapSelectionCenter/doc/SnapSelectionCenter_desc_en.html
@@ -16685,6 +17059,7 @@ lib/qcad/scripts/Snap/SnapTangential/SnapTangential.js
 lib/qcad/scripts/Snap/SnapTangential/SnapTangential.pro
 lib/qcad/scripts/Snap/SnapTangential/SnapTangential.svg
 lib/qcad/scripts/Snap/SnapTangential/SnapTangentialInit.js
+lib/qcad/scripts/Snap/SnapTangential/doc/SnapTangential.png
 lib/qcad/scripts/Snap/SnapTangential/doc/SnapTangential_de.html
 lib/qcad/scripts/Snap/SnapTangential/doc/SnapTangential_desc_de.html
 lib/qcad/scripts/Snap/SnapTangential/doc/SnapTangential_desc_en.html
@@ -16742,6 +17117,7 @@ lib/qcad/scripts/Snap/SnapXManual/SnapXManual.js
 lib/qcad/scripts/Snap/SnapXManual/SnapXManual.pro
 lib/qcad/scripts/Snap/SnapXManual/SnapXManual.svg
 lib/qcad/scripts/Snap/SnapXManual/SnapXManualInit.js
+lib/qcad/scripts/Snap/SnapXManual/doc/SnapXManual.png
 lib/qcad/scripts/Snap/SnapXManual/doc/SnapXManual_de.html
 lib/qcad/scripts/Snap/SnapXManual/doc/SnapXManual_desc_de.html
 lib/qcad/scripts/Snap/SnapXManual/doc/SnapXManual_desc_en.html
@@ -16799,6 +17175,7 @@ lib/qcad/scripts/Snap/SnapYManual/SnapYManual.js
 lib/qcad/scripts/Snap/SnapYManual/SnapYManual.pro
 lib/qcad/scripts/Snap/SnapYManual/SnapYManual.svg
 lib/qcad/scripts/Snap/SnapYManual/SnapYManualInit.js
+lib/qcad/scripts/Snap/SnapYManual/doc/SnapYManual.png
 lib/qcad/scripts/Snap/SnapYManual/doc/SnapYManual_de.html
 lib/qcad/scripts/Snap/SnapYManual/doc/SnapYManual_desc_de.html
 lib/qcad/scripts/Snap/SnapYManual/doc/SnapYManual_desc_en.html
@@ -16847,6 +17224,7 @@ lib/qcad/scripts/Snap/SnapYManual/ts/SnapYManual_zh_CN.qm
 lib/qcad/scripts/Snap/SnapYManual/ts/SnapYManual_zh_CN.ts
 lib/qcad/scripts/Snap/SnapYManual/ts/SnapYManual_zh_TW.qm
 lib/qcad/scripts/Snap/SnapYManual/ts/SnapYManual_zh_TW.ts
+lib/qcad/scripts/Snap/doc/Snap.png
 lib/qcad/scripts/Snap/doc/Snap_de.html
 lib/qcad/scripts/Snap/doc/Snap_en.html
 lib/qcad/scripts/Snap/doc/Snap_es.html
@@ -16904,6 +17282,7 @@ lib/qcad/scripts/View/AntialiasingMode/AntialiasingMode-inverse.svg
 lib/qcad/scripts/View/AntialiasingMode/AntialiasingMode.js
 lib/qcad/scripts/View/AntialiasingMode/AntialiasingMode.pro
 lib/qcad/scripts/View/AntialiasingMode/AntialiasingMode.svg
+lib/qcad/scripts/View/AntialiasingMode/doc/AntialiasingMode.png
 lib/qcad/scripts/View/AntialiasingMode/doc/AntialiasingMode_de.html
 lib/qcad/scripts/View/AntialiasingMode/doc/AntialiasingMode_desc_de.html
 lib/qcad/scripts/View/AntialiasingMode/doc/AntialiasingMode_desc_en.html
@@ -17019,6 +17398,7 @@ lib/qcad/scripts/View/DisplayDistanceAngle/DisplayDistanceAngle.js
 lib/qcad/scripts/View/DisplayDistanceAngle/DisplayDistanceAngle.pro
 lib/qcad/scripts/View/DisplayDistanceAngle/DisplayDistanceAngle.svg
 lib/qcad/scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js
+lib/qcad/scripts/View/DisplayDistanceAngle/doc/DisplayDistanceAngle.png
 lib/qcad/scripts/View/DisplayDistanceAngle/doc/DisplayDistanceAngle_de.html
 lib/qcad/scripts/View/DisplayDistanceAngle/doc/DisplayDistanceAngle_en.html
 lib/qcad/scripts/View/DisplayDistanceAngle/doc/DisplayDistanceAngle_it.html
@@ -17066,6 +17446,7 @@ lib/qcad/scripts/View/DraftMode/DraftMode-inverse.svg
 lib/qcad/scripts/View/DraftMode/DraftMode.js
 lib/qcad/scripts/View/DraftMode/DraftMode.pro
 lib/qcad/scripts/View/DraftMode/DraftMode.svg
+lib/qcad/scripts/View/DraftMode/doc/DraftMode.png
 lib/qcad/scripts/View/DraftMode/doc/DraftMode_de.html
 lib/qcad/scripts/View/DraftMode/doc/DraftMode_desc_de.html
 lib/qcad/scripts/View/DraftMode/doc/DraftMode_desc_en.html
@@ -17125,6 +17506,7 @@ lib/qcad/scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft-inverse.
 lib/qcad/scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js
 lib/qcad/scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.pro
 lib/qcad/scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.svg
+lib/qcad/scripts/View/IsometricView/IsometricGridLeft/doc/IsometricGridLeft.png
 lib/qcad/scripts/View/IsometricView/IsometricGridLeft/doc/IsometricGridLeft_de.html
 lib/qcad/scripts/View/IsometricView/IsometricGridLeft/doc/IsometricGridLeft_en.html
 lib/qcad/scripts/View/IsometricView/IsometricGridLeft/doc/IsometricGridLeft_es.html
@@ -17175,6 +17557,7 @@ lib/qcad/scripts/View/IsometricView/IsometricGridOff/IsometricGridOff-inverse.sv
 lib/qcad/scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js
 lib/qcad/scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.pro
 lib/qcad/scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.svg
+lib/qcad/scripts/View/IsometricView/IsometricGridOff/doc/IsometricGridOff.png
 lib/qcad/scripts/View/IsometricView/IsometricGridOff/doc/IsometricGridOff_de.html
 lib/qcad/scripts/View/IsometricView/IsometricGridOff/doc/IsometricGridOff_en.html
 lib/qcad/scripts/View/IsometricView/IsometricGridOff/doc/IsometricGridOff_es.html
@@ -17225,6 +17608,7 @@ lib/qcad/scripts/View/IsometricView/IsometricGridRight/IsometricGridRight-invers
 lib/qcad/scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js
 lib/qcad/scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.pro
 lib/qcad/scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.svg
+lib/qcad/scripts/View/IsometricView/IsometricGridRight/doc/IsometricGridRight.png
 lib/qcad/scripts/View/IsometricView/IsometricGridRight/doc/IsometricGridRight_de.html
 lib/qcad/scripts/View/IsometricView/IsometricGridRight/doc/IsometricGridRight_en.html
 lib/qcad/scripts/View/IsometricView/IsometricGridRight/doc/IsometricGridRight_es.html
@@ -17275,6 +17659,7 @@ lib/qcad/scripts/View/IsometricView/IsometricGridTop/IsometricGridTop-inverse.sv
 lib/qcad/scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js
 lib/qcad/scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.pro
 lib/qcad/scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.svg
+lib/qcad/scripts/View/IsometricView/IsometricGridTop/doc/IsometricGridTop.png
 lib/qcad/scripts/View/IsometricView/IsometricGridTop/doc/IsometricGridTop_de.html
 lib/qcad/scripts/View/IsometricView/IsometricGridTop/doc/IsometricGridTop_en.html
 lib/qcad/scripts/View/IsometricView/IsometricGridTop/doc/IsometricGridTop_es.html
@@ -17366,6 +17751,7 @@ lib/qcad/scripts/View/LinetypeMode/LinetypeMode-inverse.svg
 lib/qcad/scripts/View/LinetypeMode/LinetypeMode.js
 lib/qcad/scripts/View/LinetypeMode/LinetypeMode.pro
 lib/qcad/scripts/View/LinetypeMode/LinetypeMode.svg
+lib/qcad/scripts/View/LinetypeMode/doc/LinetypeMode.png
 lib/qcad/scripts/View/LinetypeMode/doc/LinetypeMode_de.html
 lib/qcad/scripts/View/LinetypeMode/doc/LinetypeMode_desc_de.html
 lib/qcad/scripts/View/LinetypeMode/doc/LinetypeMode_desc_en.html
@@ -17473,6 +17859,7 @@ lib/qcad/scripts/View/ToggleGrid/ToggleGrid-inverse.svg
 lib/qcad/scripts/View/ToggleGrid/ToggleGrid.js
 lib/qcad/scripts/View/ToggleGrid/ToggleGrid.pro
 lib/qcad/scripts/View/ToggleGrid/ToggleGrid.svg
+lib/qcad/scripts/View/ToggleGrid/doc/ToggleGrid.png
 lib/qcad/scripts/View/ToggleGrid/doc/ToggleGrid_de.html
 lib/qcad/scripts/View/ToggleGrid/doc/ToggleGrid_desc_de.html
 lib/qcad/scripts/View/ToggleGrid/doc/ToggleGrid_desc_en.html
@@ -17578,6 +17965,7 @@ lib/qcad/scripts/View/Zoom/AutoZoom/AutoZoom.js
 lib/qcad/scripts/View/Zoom/AutoZoom/AutoZoom.pro
 lib/qcad/scripts/View/Zoom/AutoZoom/AutoZoom.svg
 lib/qcad/scripts/View/Zoom/AutoZoom/AutoZoomInit.js
+lib/qcad/scripts/View/Zoom/AutoZoom/doc/AutoZoom.png
 lib/qcad/scripts/View/Zoom/AutoZoom/doc/AutoZoom_de.html
 lib/qcad/scripts/View/Zoom/AutoZoom/doc/AutoZoom_desc_de.html
 lib/qcad/scripts/View/Zoom/AutoZoom/doc/AutoZoom_desc_en.html
@@ -17638,6 +18026,7 @@ lib/qcad/scripts/View/Zoom/PanZoom/PanZoom.js
 lib/qcad/scripts/View/Zoom/PanZoom/PanZoom.pro
 lib/qcad/scripts/View/Zoom/PanZoom/PanZoom.svg
 lib/qcad/scripts/View/Zoom/PanZoom/PanZoomInit.js
+lib/qcad/scripts/View/Zoom/PanZoom/doc/PanZoom.png
 lib/qcad/scripts/View/Zoom/PanZoom/doc/PanZoom_de.html
 lib/qcad/scripts/View/Zoom/PanZoom/doc/PanZoom_desc_de.html
 lib/qcad/scripts/View/Zoom/PanZoom/doc/PanZoom_desc_en.html
@@ -17698,6 +18087,7 @@ lib/qcad/scripts/View/Zoom/PreviousView/PreviousView.js
 lib/qcad/scripts/View/Zoom/PreviousView/PreviousView.pro
 lib/qcad/scripts/View/Zoom/PreviousView/PreviousView.svg
 lib/qcad/scripts/View/Zoom/PreviousView/PreviousViewInit.js
+lib/qcad/scripts/View/Zoom/PreviousView/doc/PreviousView.png
 lib/qcad/scripts/View/Zoom/PreviousView/doc/PreviousView_de.html
 lib/qcad/scripts/View/Zoom/PreviousView/doc/PreviousView_desc_de.html
 lib/qcad/scripts/View/Zoom/PreviousView/doc/PreviousView_desc_en.html
@@ -17763,6 +18153,7 @@ lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomCursorMask.png
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomCursorMask@2x.png
 lib/qcad/scripts/View/Zoom/WindowZoom/WindowZoomInit.js
 lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom.html
+lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom.png
 lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom_de.html
 lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom_desc_de.html
 lib/qcad/scripts/View/Zoom/WindowZoom/doc/WindowZoom_desc_en.html
@@ -17835,6 +18226,7 @@ lib/qcad/scripts/View/Zoom/ZoomIn/ZoomIn.js
 lib/qcad/scripts/View/Zoom/ZoomIn/ZoomIn.pro
 lib/qcad/scripts/View/Zoom/ZoomIn/ZoomIn.svg
 lib/qcad/scripts/View/Zoom/ZoomIn/ZoomInInit.js
+lib/qcad/scripts/View/Zoom/ZoomIn/doc/ZoomIn.png
 lib/qcad/scripts/View/Zoom/ZoomIn/doc/ZoomIn_de.html
 lib/qcad/scripts/View/Zoom/ZoomIn/doc/ZoomIn_desc_de.html
 lib/qcad/scripts/View/Zoom/ZoomIn/doc/ZoomIn_desc_en.html
@@ -17895,6 +18287,7 @@ lib/qcad/scripts/View/Zoom/ZoomOut/ZoomOut.js
 lib/qcad/scripts/View/Zoom/ZoomOut/ZoomOut.pro
 lib/qcad/scripts/View/Zoom/ZoomOut/ZoomOut.svg
 lib/qcad/scripts/View/Zoom/ZoomOut/ZoomOutInit.js
+lib/qcad/scripts/View/Zoom/ZoomOut/doc/ZoomOut.png
 lib/qcad/scripts/View/Zoom/ZoomOut/doc/ZoomOut_de.html
 lib/qcad/scripts/View/Zoom/ZoomOut/doc/ZoomOut_desc_de.html
 lib/qcad/scripts/View/Zoom/ZoomOut/doc/ZoomOut_desc_en.html
@@ -17955,6 +18348,7 @@ lib/qcad/scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js
 lib/qcad/scripts/View/Zoom/ZoomToSelection/ZoomToSelection.pro
 lib/qcad/scripts/View/Zoom/ZoomToSelection/ZoomToSelection.svg
 lib/qcad/scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js
+lib/qcad/scripts/View/Zoom/ZoomToSelection/doc/ZoomToSelection.png
 lib/qcad/scripts/View/Zoom/ZoomToSelection/doc/ZoomToSelection_de.html
 lib/qcad/scripts/View/Zoom/ZoomToSelection/doc/ZoomToSelection_desc_de.html
 lib/qcad/scripts/View/Zoom/ZoomToSelection/doc/ZoomToSelection_desc_en.html
@@ -18010,6 +18404,7 @@ lib/qcad/scripts/View/Zoom/ZoomToSelection/ts/ZoomToSelection_zh_CN.qm
 lib/qcad/scripts/View/Zoom/ZoomToSelection/ts/ZoomToSelection_zh_CN.ts
 lib/qcad/scripts/View/Zoom/ZoomToSelection/ts/ZoomToSelection_zh_TW.qm
 lib/qcad/scripts/View/Zoom/ZoomToSelection/ts/ZoomToSelection_zh_TW.ts
+lib/qcad/scripts/View/Zoom/doc/Zoom.png
 lib/qcad/scripts/View/Zoom/ts/Zoom_cs.qm
 lib/qcad/scripts/View/Zoom/ts/Zoom_cs.ts
 lib/qcad/scripts/View/Zoom/ts/Zoom_de.qm
@@ -18049,6 +18444,7 @@ lib/qcad/scripts/View/Zoom/ts/Zoom_zh_CN.ts
 lib/qcad/scripts/View/Zoom/ts/Zoom_zh_TW.qm
 lib/qcad/scripts/View/Zoom/ts/Zoom_zh_TW.ts
 lib/qcad/scripts/View/Zoom/ts/ts.pro
+lib/qcad/scripts/View/doc/View.png
 lib/qcad/scripts/View/doc/View_de.html
 lib/qcad/scripts/View/doc/View_en.html
 lib/qcad/scripts/View/doc/View_es.html
@@ -18112,6 +18508,7 @@ lib/qcad/scripts/Widgets/BlockList/Visible0-inverse.svg
 lib/qcad/scripts/Widgets/BlockList/Visible0.svg
 lib/qcad/scripts/Widgets/BlockList/Visible1-inverse.svg
 lib/qcad/scripts/Widgets/BlockList/Visible1.svg
+lib/qcad/scripts/Widgets/BlockList/doc/BlockList.png
 lib/qcad/scripts/Widgets/BlockList/doc/BlockList_de.html
 lib/qcad/scripts/Widgets/BlockList/doc/BlockList_en.html
 lib/qcad/scripts/Widgets/BlockList/doc/BlockList_es.html
@@ -18120,6 +18517,10 @@ lib/qcad/scripts/Widgets/BlockList/doc/BlockList_it.html
 lib/qcad/scripts/Widgets/BlockList/doc/BlockList_ja.html
 lib/qcad/scripts/Widgets/BlockList/doc/BlockList_pt.html
 lib/qcad/scripts/Widgets/BlockList/doc/BlockList_sl.html
+lib/qcad/scripts/Widgets/BlockList/doc/Edit0.png
+lib/qcad/scripts/Widgets/BlockList/doc/Edit1.png
+lib/qcad/scripts/Widgets/BlockList/doc/Visible0.png
+lib/qcad/scripts/Widgets/BlockList/doc/Visible1.png
 lib/qcad/scripts/Widgets/BlockList/ts/BlockList_cs.qm
 lib/qcad/scripts/Widgets/BlockList/ts/BlockList_cs.ts
 lib/qcad/scripts/Widgets/BlockList/ts/BlockList_de.qm
@@ -18254,6 +18655,7 @@ lib/qcad/scripts/Widgets/CommandLine/CommandLine.ui
 lib/qcad/scripts/Widgets/CommandLine/PreferencesPage.ui
 lib/qcad/scripts/Widgets/CommandLine/ToggleTitleBar-inverse.svg
 lib/qcad/scripts/Widgets/CommandLine/ToggleTitleBar.svg
+lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine.png
 lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_de.html
 lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_desc_de.html
 lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_desc_en.html
@@ -18271,6 +18673,7 @@ lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_it.html
 lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_ja.html
 lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_pt.html
 lib/qcad/scripts/Widgets/CommandLine/doc/CommandLine_sl.html
+lib/qcad/scripts/Widgets/CommandLine/doc/ToggleTitleBar.png
 lib/qcad/scripts/Widgets/CommandLine/ts/CommandLine_cs.qm
 lib/qcad/scripts/Widgets/CommandLine/ts/CommandLine_cs.ts
 lib/qcad/scripts/Widgets/CommandLine/ts/CommandLine_de.qm
@@ -18443,6 +18846,7 @@ lib/qcad/scripts/Widgets/LayerList/LayerList.pro
 lib/qcad/scripts/Widgets/LayerList/LayerList.svg
 lib/qcad/scripts/Widgets/LayerList/LayerList.ui
 lib/qcad/scripts/Widgets/LayerList/PreferencesPage.ui
+lib/qcad/scripts/Widgets/LayerList/doc/LayerList.png
 lib/qcad/scripts/Widgets/LayerList/doc/LayerList_de.html
 lib/qcad/scripts/Widgets/LayerList/doc/LayerList_en.html
 lib/qcad/scripts/Widgets/LayerList/doc/LayerList_es.html
@@ -18450,6 +18854,10 @@ lib/qcad/scripts/Widgets/LayerList/doc/LayerList_fr.html
 lib/qcad/scripts/Widgets/LayerList/doc/LayerList_it.html
 lib/qcad/scripts/Widgets/LayerList/doc/LayerList_ja.html
 lib/qcad/scripts/Widgets/LayerList/doc/LayerList_pt.html
+lib/qcad/scripts/Widgets/LayerList/doc/layerstatus_00.png
+lib/qcad/scripts/Widgets/LayerList/doc/layerstatus_01.png
+lib/qcad/scripts/Widgets/LayerList/doc/layerstatus_10.png
+lib/qcad/scripts/Widgets/LayerList/doc/layerstatus_11.png
 lib/qcad/scripts/Widgets/LayerList/layerstatus_00-inverse.svg
 lib/qcad/scripts/Widgets/LayerList/layerstatus_00.svg
 lib/qcad/scripts/Widgets/LayerList/layerstatus_01-inverse.svg
@@ -18558,6 +18966,18 @@ lib/qcad/scripts/Widgets/LibraryBrowser/db/Tag.js
 lib/qcad/scripts/Widgets/LibraryBrowser/db/TagCategory.js
 lib/qcad/scripts/Widgets/LibraryBrowser/db/TagCategoryPeer.js
 lib/qcad/scripts/Widgets/LibraryBrowser/db/TagPeer.js
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Clear.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Close.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Create.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/DefaultDirectoryIcon.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/EditDrawing.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Empty.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Error.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Favorite.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Find.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Insert.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/JsFile.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser.png
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_de.html
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_desc_de.html
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_desc_en.html
@@ -18575,6 +18995,14 @@ lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_it.html
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_ja.html
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_pt.html
 lib/qcad/scripts/Widgets/LibraryBrowser/doc/LibraryBrowser_sl.html
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Next.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Open.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Previous.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Reset.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/ShowOptionsDown.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/ShowOptionsUp.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Sync.png
+lib/qcad/scripts/Widgets/LibraryBrowser/doc/Tag.png
 lib/qcad/scripts/Widgets/LibraryBrowser/ts/LibraryBrowser_cs.qm
 lib/qcad/scripts/Widgets/LibraryBrowser/ts/LibraryBrowser_cs.ts
 lib/qcad/scripts/Widgets/LibraryBrowser/ts/LibraryBrowser_de.qm
@@ -18678,6 +19106,9 @@ lib/qcad/scripts/Widgets/PropertyEditor/PropertyEditor.svg
 lib/qcad/scripts/Widgets/PropertyEditor/PropertyEditor.ui
 lib/qcad/scripts/Widgets/PropertyEditor/RemoveCustomProperty-inverse.svg
 lib/qcad/scripts/Widgets/PropertyEditor/RemoveCustomProperty.svg
+lib/qcad/scripts/Widgets/PropertyEditor/doc/AddCustomProperty.png
+lib/qcad/scripts/Widgets/PropertyEditor/doc/Clear.png
+lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor.png
 lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_de.html
 lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_en.html
 lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_es.html
@@ -18686,6 +19117,7 @@ lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_it.html
 lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_ja.html
 lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_pt.html
 lib/qcad/scripts/Widgets/PropertyEditor/doc/PropertyEditor_sl.html
+lib/qcad/scripts/Widgets/PropertyEditor/doc/RemoveCustomProperty.png
 lib/qcad/scripts/Widgets/PropertyEditor/ts/PropertyEditor_cs.qm
 lib/qcad/scripts/Widgets/PropertyEditor/ts/PropertyEditor_cs.ts
 lib/qcad/scripts/Widgets/PropertyEditor/ts/PropertyEditor_de.qm
@@ -18955,6 +19387,7 @@ lib/qcad/scripts/Window/CloseAll/CloseAll.js
 lib/qcad/scripts/Window/CloseAll/CloseAll.pro
 lib/qcad/scripts/Window/CloseAll/CloseAll.svg
 lib/qcad/scripts/Window/CloseAll/CloseAllInit.js
+lib/qcad/scripts/Window/CloseAll/doc/CloseAll.png
 lib/qcad/scripts/Window/CloseAll/doc/CloseAll_de.html
 lib/qcad/scripts/Window/CloseAll/doc/CloseAll_desc_de.html
 lib/qcad/scripts/Window/CloseAll/doc/CloseAll_desc_en.html
@@ -19015,6 +19448,7 @@ lib/qcad/scripts/Window/NextWindow/NextWindow.js
 lib/qcad/scripts/Window/NextWindow/NextWindow.pro
 lib/qcad/scripts/Window/NextWindow/NextWindow.svg
 lib/qcad/scripts/Window/NextWindow/NextWindowInit.js
+lib/qcad/scripts/Window/NextWindow/doc/NextWindow.png
 lib/qcad/scripts/Window/NextWindow/doc/NextWindow_de.html
 lib/qcad/scripts/Window/NextWindow/doc/NextWindow_desc_de.html
 lib/qcad/scripts/Window/NextWindow/doc/NextWindow_desc_en.html
@@ -19075,6 +19509,7 @@ lib/qcad/scripts/Window/PreviousWindow/PreviousWindow.js
 lib/qcad/scripts/Window/PreviousWindow/PreviousWindow.pro
 lib/qcad/scripts/Window/PreviousWindow/PreviousWindow.svg
 lib/qcad/scripts/Window/PreviousWindow/PreviousWindowInit.js
+lib/qcad/scripts/Window/PreviousWindow/doc/PreviousWindow.png
 lib/qcad/scripts/Window/PreviousWindow/doc/PreviousWindow_de.html
 lib/qcad/scripts/Window/PreviousWindow/doc/PreviousWindow_desc_de.html
 lib/qcad/scripts/Window/PreviousWindow/doc/PreviousWindow_desc_en.html
@@ -19278,6 +19713,7 @@ lib/qcad/ts/assistant_ja.qm
 lib/qcad/ts/assistant_ko.qm
 lib/qcad/ts/assistant_pl.qm
 lib/qcad/ts/assistant_ru.qm
+lib/qcad/ts/assistant_sk.qm
 lib/qcad/ts/assistant_sl.qm
 lib/qcad/ts/assistant_uk.qm
 lib/qcad/ts/assistant_zh_CN.qm
@@ -19391,11 +19827,13 @@ lib/qcad/ts/qcadgui_zh_CN.ts
 lib/qcad/ts/qcadgui_zh_TW.qm
 lib/qcad/ts/qcadgui_zh_TW.ts
 lib/qcad/ts/qt_ar.qm
+lib/qcad/ts/qt_ca.qm
 lib/qcad/ts/qt_cs.qm
 lib/qcad/ts/qt_da.qm
 lib/qcad/ts/qt_de.qm
 lib/qcad/ts/qt_es.qm
 lib/qcad/ts/qt_fa.qm
+lib/qcad/ts/qt_fi.qm
 lib/qcad/ts/qt_fr.qm
 lib/qcad/ts/qt_gl.qm
 lib/qcad/ts/qt_he.qm
@@ -19405,18 +19843,20 @@ lib/qcad/ts/qt_help_de.qm
 lib/qcad/ts/qt_help_fr.qm
 lib/qcad/ts/qt_help_gl.qm
 lib/qcad/ts/qt_help_hu.qm
+lib/qcad/ts/qt_help_it.qm
 lib/qcad/ts/qt_help_ja.qm
 lib/qcad/ts/qt_help_ko.qm
 lib/qcad/ts/qt_help_pl.qm
 lib/qcad/ts/qt_help_ru.qm
+lib/qcad/ts/qt_help_sk.qm
 lib/qcad/ts/qt_help_sl.qm
 lib/qcad/ts/qt_help_uk.qm
 lib/qcad/ts/qt_help_zh_CN.qm
 lib/qcad/ts/qt_help_zh_TW.qm
 lib/qcad/ts/qt_hu.qm
+lib/qcad/ts/qt_it.qm
 lib/qcad/ts/qt_ja.qm
 lib/qcad/ts/qt_ko.qm
-lib/qcad/ts/qt_ko.ts
 lib/qcad/ts/qt_lt.qm
 lib/qcad/ts/qt_pl.qm
 lib/qcad/ts/qt_pt.qm
@@ -19427,6 +19867,20 @@ lib/qcad/ts/qt_sv.qm
 lib/qcad/ts/qt_uk.qm
 lib/qcad/ts/qt_zh_CN.qm
 lib/qcad/ts/qt_zh_TW.qm
+lib/qcad/ts/qtbase_ca.qm
+lib/qcad/ts/qtbase_cs.qm
+lib/qcad/ts/qtbase_de.qm
+lib/qcad/ts/qtbase_fi.qm
+lib/qcad/ts/qtbase_fr.qm
+lib/qcad/ts/qtbase_he.qm
+lib/qcad/ts/qtbase_hu.qm
+lib/qcad/ts/qtbase_it.qm
+lib/qcad/ts/qtbase_ja.qm
+lib/qcad/ts/qtbase_ko.qm
+lib/qcad/ts/qtbase_lv.qm
+lib/qcad/ts/qtbase_ru.qm
+lib/qcad/ts/qtbase_sk.qm
+lib/qcad/ts/qtbase_uk.qm
 lib/qcad/ts/ts.pro
 man/man1/qcad.1
 share/applications/qcad.desktop
@@ -19543,45 +19997,50 @@ share/qcad/libraries/templates/metric/SLO_OS/pravokotna_A4P.rdf
 share/qcad/libraries/templates/metric/_META/meta.rdf
 share/qcad/libraries/templates/metric/aec_layers.dxf
 share/qcad/libraries/templates/metric/aec_layers.rdf
-share/qcad/libraries/templates/metric/architecture/din_a0_de_landscape_border.dxf
-share/qcad/libraries/templates/metric/architecture/din_a0_de_landscape_border.rdf
-share/qcad/libraries/templates/metric/architecture/din_a0_de_landscape_border_with_header.dxf
-share/qcad/libraries/templates/metric/architecture/din_a0_de_landscape_border_with_header.rdf
-share/qcad/libraries/templates/metric/architecture/din_a1_de_landscape_border.dxf
-share/qcad/libraries/templates/metric/architecture/din_a1_de_landscape_border.rdf
-share/qcad/libraries/templates/metric/architecture/din_a1_de_landscape_border_with_header.dxf
-share/qcad/libraries/templates/metric/architecture/din_a1_de_landscape_border_with_header.rdf
-share/qcad/libraries/templates/metric/architecture/din_a2_de_landscape_border.dxf
-share/qcad/libraries/templates/metric/architecture/din_a2_de_landscape_border.rdf
-share/qcad/libraries/templates/metric/architecture/din_a2_de_landscape_border_with_header.dxf
-share/qcad/libraries/templates/metric/architecture/din_a2_de_landscape_border_with_header.rdf
-share/qcad/libraries/templates/metric/architecture/din_a3_de_landscape_border.dxf
-share/qcad/libraries/templates/metric/architecture/din_a3_de_landscape_border.rdf
-share/qcad/libraries/templates/metric/architecture/din_a3_de_landscape_border_with_header.dxf
-share/qcad/libraries/templates/metric/architecture/din_a3_de_landscape_border_with_header.rdf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a0.dxf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a0.rdf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a1.dxf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a1.rdf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a2.dxf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a2.rdf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a3.dxf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a3.rdf
-share/qcad/libraries/templates/metric/din6771-1_de_landscape_a4.dxf
-share/qcad/libraries/templates/metric/din6771-1_de_portrait_a4.dxf
-share/qcad/libraries/templates/metric/din6771-1_de_portrait_a4.rdf
-share/qcad/libraries/templates/metric/din6771_de_landscape_a3.dxf
-share/qcad/libraries/templates/metric/din6771_de_landscape_a3.rdf
-share/qcad/libraries/templates/metric/din7200_de_landscape_a3.dxf
-share/qcad/libraries/templates/metric/din7200_de_landscape_a3.rdf
 share/qcad/libraries/templates/metric/din_a3_m_landscape.dxf
 share/qcad/libraries/templates/metric/din_a3_m_landscape_bw.dxf
 share/qcad/libraries/templates/metric/din_a3_mm_landscape.dxf
 share/qcad/libraries/templates/metric/din_a3_mm_portrait.dxf
 share/qcad/libraries/templates/metric/din_a4.dxf
 share/qcad/libraries/templates/metric/din_a4_landscape.dxf
-share/qcad/libraries/templates/metric/header_large_landscape_a3.dxf
-share/qcad/libraries/templates/metric/header_large_landscape_a3.rdf
+share/qcad/libraries/templates/metric/dl3dl/01.dxf
+share/qcad/libraries/templates/metric/dl3dl/02.dxf
+share/qcad/libraries/templates/metric/dl3dl/03.dxf
+share/qcad/libraries/templates/metric/dl3dl/04.dxf
+share/qcad/libraries/templates/metric/dl3dl/05.dxf
+share/qcad/libraries/templates/metric/dl3dl/06.dxf
+share/qcad/libraries/templates/metric/dl3dl/07.dxf
+share/qcad/libraries/templates/metric/dl3dl/08.dxf
+share/qcad/libraries/templates/metric/dl3dl/A3_elt.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A0-Querformat-Rahmen-mit PK.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A0-Querformat-Rahmen.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A1-Querformat-Rahmen-mit PK.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A1-Querformat-Rahmen.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A2-Querformat-Rahmen-mit PK.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A2-Querformat-Rahmen.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-CD-Muster.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Nordpfeile-Muster.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Rahmen-PK mit Platzhalter.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Rahmen-PK-schmal.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Rahmen-PK_archi_01.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Rahmen-mit PK.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Rahmen-ohne PK.dxf
+share/qcad/libraries/templates/metric/dl3dl/DIN-A3-Querformat-Rahmen.dxf
+share/qcad/libraries/templates/metric/dl3dl/Plankopf Hilfe.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vl_archi-1.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vl_nordpf-1.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vl_nordpf-2.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_hoch_A4.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_quer_A0.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_quer_A1.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_quer_A2.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_quer_A3.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771-1_quer_A4.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din6771_quer_A3.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Din7200_quer_A3.dxf
+share/qcad/libraries/templates/metric/dl3dl/Vorlage_Qcad_Plankopf gross_quer_A3.dxf
+share/qcad/libraries/templates/metric/dl3dl/_META/meta.rdf
+share/qcad/libraries/templates/metric/dl3dl/nur Plankopf.dxf
 share/qcad/libraries/templates/metric/iso_en_a0.dxf
 share/qcad/libraries/templates/metric/iso_en_a0_metric_landscape_aec.dxf
 share/qcad/libraries/templates/metric/iso_en_a0_metric_landscape_aec.rdf

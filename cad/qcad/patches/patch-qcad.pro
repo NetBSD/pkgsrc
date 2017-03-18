@@ -1,19 +1,15 @@
-$NetBSD: patch-qcad.pro,v 1.1 2016/12/16 11:16:32 plunky Exp $
+$NetBSD: patch-qcad.pro,v 1.2 2017/03/18 19:39:17 plunky Exp $
 
-skip the example plugins
+disable searching outside of the source directory
 
---- qcad.pro.orig	2016-08-29 06:49:22.000000000 +0000
+--- qcad.pro.orig	2017-03-17 14:09:31.000000000 +0000
 +++ qcad.pro
-@@ -5,12 +5,6 @@ SUBDIRS = \
-     src \
-     ts
+@@ -13,7 +13,7 @@ win32 {
+     }
+ }
+ else {
+-    SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v qcadmobile")
++    #SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v qcadmobile")
+ }
  
--!r_mobile {
--    exists(support) {
--        SUBDIRS += support
--    }
--}
--
- # DO NOT REMOVE
- # used by translation (lrelease, lupdate)
- dummy {
+ !r_mobile {
