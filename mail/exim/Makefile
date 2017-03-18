@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.152 2017/01/19 18:52:15 agc Exp $
+# $NetBSD: Makefile,v 1.153 2017/03/18 07:08:23 adam Exp $
 
-DISTNAME=	exim-4.88
+DISTNAME=	exim-4.89
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/
 MASTER_SITES+=	http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/exim4/
@@ -114,7 +114,7 @@ post-build:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
-INSTALLATION_DIRS+= ${PKGMANDIR}/man8 sbin share/examples/exim share/doc/exim
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8 sbin share/examples/exim share/doc/exim
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EXAMPLESDIR}
