@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/03/17 21:16:38 roy Exp $
+# $NetBSD: Makefile,v 1.6 2017/03/18 13:48:48 roy Exp $
 
 DISTNAME=		phabricator-20170316
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		phabricator
