@@ -1,4 +1,4 @@
-$NetBSD: patch-src_applications_diffusion_controller_DiffusionBrowseController.php,v 1.1 2017/03/17 21:16:38 roy Exp $
+$NetBSD: patch-src_applications_diffusion_controller_DiffusionBrowseController.php,v 1.2 2017/03/18 13:48:48 roy Exp $
 
 Leave tab stops alone.
 
@@ -9,7 +9,7 @@ Leave tab stops alone.
  
            // TODO: [HTML] Not ideal.
 -          phutil_safe_html(str_replace("\t", '  ', $line['data'])),
-+          // phutil_safe_html(str_replace("\t", '  ', $line['data'])),
++          phutil_safe_html($line['data']),
          ));
  
        if ($this->coverage) {
