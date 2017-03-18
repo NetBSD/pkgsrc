@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
+$NetBSD: patch-Local_Makefile.pkgsrc,v 1.1 2017/03/18 07:08:23 adam Exp $
 
---- Local/Makefile.pkgsrc.orig	2016-01-10 20:50:29.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	2017-03-18 06:47:43.000000000 +0000
 +++ Local/Makefile.pkgsrc
 @@ -98,7 +98,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
  
  
  
-@@ -373,7 +373,7 @@ PCRE_CONFIG=yes
+@@ -380,7 +380,7 @@ PCRE_CONFIG=yes
  # files are defaulted in the OS/Makefile-Default file, but can be overridden in
  # local OS-specific make files.
  
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -628,16 +628,16 @@ FIXED_NEVER_USERS=root
+@@ -622,7 +622,7 @@ FIXED_NEVER_USERS=root
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -65,18 +65,18 @@ $NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
  # AUTH_CYRUS_SASL=yes
  # AUTH_DOVECOT=yes
  # AUTH_GSASL=yes
- # AUTH_GSASL_PC=libgsasl
+@@ -630,8 +630,8 @@ FIXED_NEVER_USERS=root
  # AUTH_HEIMDAL_GSSAPI=yes
  # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi
+ # AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi heimdal-krb5
 -# AUTH_PLAINTEXT=yes
 -# AUTH_SPA=yes
 +AUTH_PLAINTEXT=yes
 +AUTH_SPA=yes
  # AUTH_TLS=yes
  
- 
- #------------------------------------------------------------------------------
-@@ -822,7 +822,7 @@ HEADERS_CHARSET="ISO-8859-1"
+ # Heimdal through 1.5 required pkg-config 'heimdal-gssapi'; Heimdal 7.1
+@@ -831,7 +831,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -85,7 +85,7 @@ $NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -1080,13 +1080,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -1119,13 +1119,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -106,7 +106,7 @@ $NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -1286,7 +1286,7 @@ TMPDIR="/tmp"
+@@ -1327,7 +1327,7 @@ EXIM_TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -115,7 +115,7 @@ $NetBSD: patch-aa,v 1.24 2016/01/10 20:55:56 bsiegert Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1358,3 +1358,10 @@ TMPDIR="/tmp"
+@@ -1399,3 +1399,10 @@ EXIM_TMPDIR="/tmp"
  # ENABLE_DISABLE_FSYNC=yes
  
  # End of EDITME for Exim 4.

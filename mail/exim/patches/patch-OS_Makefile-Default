@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.16 2012/06/11 11:41:25 adam Exp $
+$NetBSD: patch-OS_Makefile-Default,v 1.1 2017/03/18 07:08:23 adam Exp $
 
 --- OS/Makefile-Default.orig	2012-05-31 00:40:15.000000000 +0000
 +++ OS/Makefile-Default
