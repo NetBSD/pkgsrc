@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2384 2017/03/17 21:31:24 minskim Exp $
+# $NetBSD: Makefile,v 1.2385 2017/03/18 01:48:57 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1840,6 +1840,7 @@ SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython010
 SUBDIR+=	py-ipython013
 SUBDIR+=	py-ipython1
+SUBDIR+=	py-ipython_genutils
 SUBDIR+=	py-iso-639
 SUBDIR+=	py-iso3166
 SUBDIR+=	py-isort
