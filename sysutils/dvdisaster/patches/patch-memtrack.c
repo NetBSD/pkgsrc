@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.3 2012/08/10 15:52:12 drochner Exp $
+$NetBSD: patch-memtrack.c,v 1.1 2017/03/18 13:54:24 adam Exp $
 
-use standard includes
+Don't include malloc.h; malloc() should be defined in stdlib.h.
 
---- memtrack.c.orig	2012-03-26 13:10:43.000000000 +0000
+--- memtrack.c.orig	2015-09-26 20:52:49.000000000 +0000
 +++ memtrack.c
-@@ -21,9 +21,6 @@
+@@ -22,9 +22,6 @@
  
  #define _GNU_SOURCE
  
