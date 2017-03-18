@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/18 01:48:05 minskim Exp $
+
+SHA1 (ipython_genutils-0.2.0.tar.gz) = 5bbf262704d1406ed63e639c5136bf80b87272c5
+RMD160 (ipython_genutils-0.2.0.tar.gz) = 238484bee4bec1775816b14a81192739bb80bbe9
+SHA512 (ipython_genutils-0.2.0.tar.gz) = 0e5a9f8be17d98dfb74ec77d1360ee79276a13fe1914e6d31e8740f06375ed1671c49356a77f118495f50823b8384c1e2c5b6fae73965e3d4249c831b9a2b095
+Size (ipython_genutils-0.2.0.tar.gz) = 22208 bytes
