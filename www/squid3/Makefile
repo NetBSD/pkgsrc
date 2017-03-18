@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2017/02/10 08:41:25 sborrill Exp $
+# $NetBSD: Makefile,v 1.74 2017/03/18 21:26:31 adam Exp $
 
 DISTNAME=	squid-3.5.24
 PKGREVISION=	1
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${SQUID_DATADIR}
 CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/squid
+CONFIGURE_ARGS+=	--disable-arch-native
 CONFIGURE_ARGS+=	--disable-strict-error-checking
 CONFIGURE_ARGS+=	--enable-auth
 CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
@@ -32,8 +33,8 @@ CONFIGURE_ARGS+=	--with-aio
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
 
-# Explicitly disable using CPU optimized instruction
-CONFIGURE_ARGS+=	--disable-arch-native
+# Let 'purge' find correct config file by default.
+CPPFLAGS+=		-DDEFAULT_SQUID_CONF=\"${PKG_SYSCONFDIR}/squid.conf\"
 
 BUILD_DEFS+=		VARBASE
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
