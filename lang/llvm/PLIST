@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/03/17 22:38:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/19 19:01:48 adam Exp $
 bin/FileCheck
 bin/bugpoint
 bin/count
@@ -1236,6 +1236,9 @@ ${PLIST.XCore}lib/libLLVMXCoreDisassembler.a
 ${PLIST.XCore}lib/libLLVMXCoreInfo.a
 lib/libLLVMXRay.a
 lib/libLLVMipo.a
+lib/libLLVM.${SOEXT}
+${PLIST.notdylib}lib/libLLVM-4.0.${SOEXT}
+${PLIST.notdylib}lib/libLLVM-${PKGVERSION}.${SOEXT}
 lib/libLTO.${SOEXT}
 ${PLIST.notdylib}lib/libLTO.${SOEXT}.4
 ${PLIST.notdylib}lib/libLTO.${SOEXT}.${PKGVERSION}
