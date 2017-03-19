@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1205 2017/03/19 16:45:20 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1206 2017/03/19 16:55:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-rb-fsevent to 0.9.8 [taca 2017-03-19]
 	Updated devel/ruby-fast_gettext to 1.4.0 [taca 2017-03-19]
 	Updated devel/ruby-ole to 1.2.12.1 [taca 2017-03-19]
+	Updated devel/ruby-octokit to 4.6.2 [taca 2017-03-19]
