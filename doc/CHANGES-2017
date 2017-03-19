@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1200 2017/03/19 15:28:17 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1201 2017/03/19 15:30:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1462,3 +1462,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-traitlets version 4.3.2 [minskim 2017-03-18]
 	Updated net/mikutter to 3.5.5 [tsutsui 2017-03-19]
 	Renamed textproc/ruby-tilt to textproc/ruby-tilt1 [taca 2017-03-19]
+	Updated textproc/ruby-tilt to 2.0.7 [taca 2017-03-19]
