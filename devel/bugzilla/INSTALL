@@ -1,0 +1,16 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2017/03/19 12:52:57 mef Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+BZDIR="@BZDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${BZDIR} &&
+		${CHOWN} -R ${WWWOWN} ${BZDIR} &&
+		${CHGRP} -R ${WWWGRP} ${BZDIR} &&
+		${CHMOD}         0755 ${BZDIR}
+	;;
+esac
