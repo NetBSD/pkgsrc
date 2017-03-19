@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1204 2017/03/19 16:42:48 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1205 2017/03/19 16:45:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1466,3 +1466,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-tilt1 to 1.4.1nb1 [taca 2017-03-19]
 	Updated devel/ruby-rb-fsevent to 0.9.8 [taca 2017-03-19]
 	Updated devel/ruby-fast_gettext to 1.4.0 [taca 2017-03-19]
+	Updated devel/ruby-ole to 1.2.12.1 [taca 2017-03-19]
