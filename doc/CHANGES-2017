@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1199 2017/03/19 14:24:03 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.1200 2017/03/19 15:28:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1461,3 +1461,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox-l10n to 52.0.1 [ryoon 2017-03-18]
 	Added devel/py-traitlets version 4.3.2 [minskim 2017-03-18]
 	Updated net/mikutter to 3.5.5 [tsutsui 2017-03-19]
+	Renamed textproc/ruby-tilt to textproc/ruby-tilt1 [taca 2017-03-19]
