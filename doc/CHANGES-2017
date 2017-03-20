@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1289 2017/03/20 17:08:27 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1290 2017/03/20 18:13:23 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1575,3 +1575,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/php-pecl-mcrypt version 1.0.1 [taca 2017-03-20]
 	Updated www/contao35 to 3.5.25 [taca 2017-03-20]
 	Updated www/contao43 to 4.3.5 [taca 2017-03-20]
+	Updated sysutils/xenkernel45 to 4.5.5nb4 [bouyer 2017-03-20]
+	Updated sysutils/xentools45 to 4.5.5nb4 [bouyer 2017-03-20]
