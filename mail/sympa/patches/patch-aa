@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2015/09/26 14:56:10 bouyer Exp $
+$NetBSD: patch-aa,v 1.9 2017/03/20 10:24:02 bouyer Exp $
 
---- Makefile.in.orig	2015-09-25 10:55:02.000000000 +0200
-+++ Makefile.in	2015-09-25 16:11:44.000000000 +0200
-@@ -709,8 +709,6 @@
+--- Makefile.in.orig	2016-06-17 16:54:15.000000000 +0200
++++ Makefile.in	2017-03-17 18:51:01.000000000 +0100
+@@ -721,8 +721,6 @@
  			echo "Creating $(DESTDIR)$$dir"; \
  			$(INSTALL) -d -m 755 $(DESTDIR)$$dir; \
  		fi; \
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.8 2015/09/26 14:56:10 bouyer Exp $
  	done
  
  sympa_wizard.pl.inst: $(top_srcdir)/src/sbin/sympa_wizard.pl.in Makefile
-@@ -720,48 +718,17 @@
+@@ -732,48 +730,17 @@
  		< $(top_srcdir)/src/sbin/sympa_wizard.pl.in > $@
  
  installconfig: installdir sympa_wizard.pl.inst
@@ -71,3 +71,16 @@ $NetBSD: patch-aa,v 1.8 2015/09/26 14:56:10 bouyer Exp $
  
  nextstep: 
  	@echo ""
+@@ -796,12 +763,6 @@
+ 	@echo "#######################################################"
+ 
+ importantchanges:
+-	if test -f $(top_srcdir)/previous_sympa_version; then \
+-		export PREVIOUS=`$(CAT) $(top_srcdir)/previous_sympa_version`; \
+-	fi; \
+-	$(PERL) $(top_srcdir)/important_changes.pl \
+-		--current=$(VERSION) \
+-		--previous=$${PREVIOUS};
+ 
+ uninstall-hook:
+ 	rm -f $(DESTDIR)$(confdir)/sympa.conf
