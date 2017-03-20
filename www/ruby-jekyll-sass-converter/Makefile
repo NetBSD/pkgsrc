@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/01/03 08:19:17 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/20 16:40:09 taca Exp $
 
-DISTNAME=	jekyll-sass-converter-1.4.0
+DISTNAME=	jekyll-sass-converter-1.5.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
