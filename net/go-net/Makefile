@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/03/20 12:23:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/03/20 22:53:45 bsiegert Exp $
 
 DISTNAME=		go-net-20170308
 CATEGORIES=		net
@@ -14,8 +14,6 @@ LICENSE=		modified-bsd
 GO_SRCPATH=		golang.org/x/net
 GO_DIST_BASE=		${GITHUB_PROJECT}-${GITHUB_TAG}*
 
-BROKEN=			Depends on go-crypto, which depends on this package.
-
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	notsunos
@@ -27,6 +25,6 @@ PLIST.notsunos=	yes
 .endif
 
 .include "../../textproc/go-text/buildlink3.mk"
-#.include "../../security/go-crypto/buildlink3.mk"
+.include "../../security/go-crypto/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
