@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1246 2017/03/20 14:32:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1247 2017/03/20 14:34:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1524,3 +1524,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/rspamd to 1.5.3 [wiz 2017-03-20]
 	Updated misc/ruby-hashie to 3.5.5 [taca 2017-03-20]
 	Updated net/ruby-amq-protocol to 2.1.0 [taca 2017-03-20]
+	Updated net/rabbitmq to 3.6.8 [fhajny 2017-03-20]
