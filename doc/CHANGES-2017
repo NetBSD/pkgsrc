@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1273 2017/03/20 15:56:38 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1274 2017/03/20 16:02:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1552,3 +1552,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-net-http-digest_auth to 1.4.1 [taca 2017-03-20]
 	Updated www/ruby-pygments.rb to 1.1.1 [taca 2017-03-20]
 	Updated www/ruby-rack-cache to 1.7.0 [taca 2017-03-20]
+	Updated www/ruby-rest-client to 2.0.1 [taca 2017-03-20]
