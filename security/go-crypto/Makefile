@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/03/16 19:27:36 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2017/03/20 12:23:53 wiz Exp $
 
 DISTNAME=	go-crypto-0.0.20170317
 CATEGORIES=	security
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}
 GO_DIST_BASE=	${GITHUB_PROJECT}-${GITHUB_TAG}*
 GO_SRCPATH=	golang.org/x/crypto
 
-.include "../../net/go-net/buildlink3.mk"
+BROKEN=		Depends on go-net, which depends on this package.
+
+#.include "../../net/go-net/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
