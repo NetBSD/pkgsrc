@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2016/07/28 06:38:14 wen Exp $
+# $NetBSD: Makefile,v 1.19 2017/03/20 21:23:49 mef Exp $
 
-DISTNAME=	Module-Install-RTx-0.38
+DISTNAME=	Module-Install-RTx-0.39
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
