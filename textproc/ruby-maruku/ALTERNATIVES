@@ -1,0 +1,2 @@
+bin/maruku @PREFIX@/bin/maruku@RUBY_SUFFIX@
+bin/marutex @PREFIX@/bin/marutex@RUBY_SUFFIX@
