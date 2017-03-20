@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.16 2017/03/20 10:03:27 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.17 2017/03/20 10:03:57 roy Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -18,7 +18,7 @@ BUILTIN_TEST_CURSES_DEFINES=	WA_NORMAL
 .for func in ${BUILTIN_TEST_CURSES_FUNCS}
 BUILTIN_FIND_FILES_VAR+=			H_CURSES_${func:tu}
 BUILTIN_FIND_FILES.H_CURSES_${func:tu}=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_${func:tu}=		${func}x
+BUILTIN_FIND_GREP.H_CURSES_${func:tu}=		${func}
 .endfor
 
 .for defn in ${BUILTIN_TEST_CURSES_DEFINES}
