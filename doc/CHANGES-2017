@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1244 2017/03/20 14:15:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1245 2017/03/20 14:29:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1522,3 +1522,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Script to 1.16 [mef 2017-03-20]
 	Updated devel/py-tortoisehg to 4.1.1 [wiz 2017-03-20]
 	Updated mail/rspamd to 1.5.3 [wiz 2017-03-20]
+	Updated misc/ruby-hashie to 3.5.5 [taca 2017-03-20]
