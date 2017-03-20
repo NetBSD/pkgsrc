@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2016/08/19 13:18:59 mef Exp $
+# $NetBSD: Makefile,v 1.14 2017/03/20 09:30:55 mef Exp $
 
-DISTNAME=	Devel-ebug-0.57
+DISTNAME=	Devel-ebug-0.59
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
@@ -19,6 +19,9 @@ DEPENDS+=	p5-YAML-Syck>=0.85:../../textproc/p5-YAML-Syck
 
 # for test target
 BUILD_DEPENDS+=	p5-Test-Expect-[0-9]*:../../devel/p5-Test-Expect
+BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+BUILD_DEPENDS+=	p5-YAML-[0-9]*:../../textproc/p5-YAML
+BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 
 USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Install
