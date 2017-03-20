@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/20 19:56:55 minskim Exp $
+
+SHA1 (cachetools-2.0.0.tar.gz) = 3efa164096089b0c88652788fada938775229129
+RMD160 (cachetools-2.0.0.tar.gz) = ea9161cb475c0400009a34691948001ba704ef0a
+SHA512 (cachetools-2.0.0.tar.gz) = b1e7a6ed87a82a981f6c9b27bc96f26fdae241a12db85ff890538935e957d7ea88688e20a000691466bdb7db053f8c2145385dfcec6f5f4d84dd812ca419752d
+Size (cachetools-2.0.0.tar.gz) = 18592 bytes
