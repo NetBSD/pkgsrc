@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1240 2017/03/20 13:56:28 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1241 2017/03/20 13:57:33 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1510,3 +1510,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/py-numpy to 1.12.1 [wiz 2017-03-20]
 	Updated databases/py-psycopg2 to 2.7.1 [wiz 2017-03-20]
 	Updated devel/py-test to 3.0.7 [wiz 2017-03-20]
+	Updated games/onscripter to 20161102 [tsutsui 2017-03-20]
