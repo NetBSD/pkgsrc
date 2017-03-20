@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/01/07 22:30:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/03/20 15:36:43 taca Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -156,6 +156,9 @@ ${GEM_LIBDIR}/lib/nokogiri/xml/xpath_context.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt.rb
 ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
+${GEM_LIBDIR}/patches/libxml2/0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch
+${GEM_LIBDIR}/patches/libxml2/0002-Fix-XPointer-paths-beginning-with-range-to.patch
+${GEM_LIBDIR}/patches/libxml2/0003-Disallow-namespace-nodes-in-XPointer-ranges.patch
 ${GEM_LIBDIR}/patches/sort-patches-by-date
 ${GEM_LIBDIR}/suppressions/README.txt
 ${GEM_LIBDIR}/suppressions/nokogiri_ree-1.8.7.358.supp
