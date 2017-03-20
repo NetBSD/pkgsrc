@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/03/19 16:31:43 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2017/03/20 00:31:57 roy Exp $
 
 # gpsd 3.11 has been released.  It has only not been updated because
 # newer versions use scons.
@@ -28,11 +28,8 @@ USE_LANGUAGES=	c99 c++
 # gpsd looks for ncurses but not curses. (Not yet filed upstream.)
 FAKE_NCURSES=	yes
 
-# gpsd uses syncok (which at least NetBSD curses lacks).
-USE_CURSES+=	syncok
-# However, syncok isn't tested in mk/curses.builtin.mk.  For now, test
-# another feature that NetBSD curses lacks.
-USE_CURSES+=	getsyx
+# gpsd uses syncok
+USE_CURSES=	syncok
 
 CFLAGS.SunOS=	-DLOG_PERROR=0
 
