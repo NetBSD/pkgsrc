@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/03/15 14:46:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/20 14:37:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rubocop.yml
@@ -39,13 +39,16 @@ ${GEM_LIBDIR}/lib/net/ldap/version.rb
 ${GEM_LIBDIR}/lib/net/snmp.rb
 ${GEM_LIBDIR}/net-ldap.gemspec
 ${GEM_LIBDIR}/script/changelog
+${GEM_LIBDIR}/script/generate-fixture-ca
 ${GEM_LIBDIR}/script/install-openldap
 ${GEM_LIBDIR}/script/package
 ${GEM_LIBDIR}/script/release
 ${GEM_LIBDIR}/test/ber/core_ext/test_array.rb
 ${GEM_LIBDIR}/test/ber/core_ext/test_string.rb
 ${GEM_LIBDIR}/test/ber/test_ber.rb
-${GEM_LIBDIR}/test/fixtures/cacert.pem
+${GEM_LIBDIR}/test/fixtures/ca/ca.info
+${GEM_LIBDIR}/test/fixtures/ca/cacert.pem
+${GEM_LIBDIR}/test/fixtures/ca/cakey.pem
 ${GEM_LIBDIR}/test/fixtures/openldap/memberof.ldif
 ${GEM_LIBDIR}/test/fixtures/openldap/retcode.ldif
 ${GEM_LIBDIR}/test/fixtures/openldap/slapd.conf.ldif
