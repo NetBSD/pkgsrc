@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/09/13 14:06:36 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/20 15:43:17 taca Exp $
 
-DISTNAME=	timers-4.1.1
+DISTNAME=	timers-4.1.2
 CATEGORIES=	time
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
