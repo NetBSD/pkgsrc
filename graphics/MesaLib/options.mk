@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.53 2017/03/09 09:51:04 jperkin Exp $
+# $NetBSD: options.mk,v 1.54 2017/03/20 23:59:01 gdt Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=
 # is also required to support the latest RADEON GPUs, so enable it
 # by default on platforms where such GPUs might be encountered.
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-	${OPSYS} != "SunOS"
+	${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
