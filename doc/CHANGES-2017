@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1277 2017/03/20 16:14:01 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1278 2017/03/20 16:20:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1556,3 +1556,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-sass to 3.4.23 [taca 2017-03-20]
 	Updated www/ruby-sinatra to 1.4.8 [taca 2017-03-20]
 	Updated www/ruby-websocket to 1.2.4 [taca 2017-03-20]
+	Updated www/ruby-padrino-support to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino-helpers to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino-core to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino-cache to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino-gen to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino-admin to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino-mailer to 0.14.0 [taca 2017-03-20]
+	Updated www/ruby-padrino to 0.14.0 [taca 2017-03-20]
