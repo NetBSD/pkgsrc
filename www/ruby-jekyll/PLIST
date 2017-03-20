@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/10/17 14:17:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/03/20 16:36:16 taca Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.rubocop.yml
@@ -34,6 +34,7 @@ ${GEM_LIBDIR}/lib/jekyll/drops/drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/excerpt_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/jekyll_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/site_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/static_file_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/unified_payload_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/drops/url_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/entry_filter.rb
@@ -41,6 +42,7 @@ ${GEM_LIBDIR}/lib/jekyll/errors.rb
 ${GEM_LIBDIR}/lib/jekyll/excerpt.rb
 ${GEM_LIBDIR}/lib/jekyll/external.rb
 ${GEM_LIBDIR}/lib/jekyll/filters.rb
+${GEM_LIBDIR}/lib/jekyll/filters/grouping_filters.rb
 ${GEM_LIBDIR}/lib/jekyll/filters/url_filters.rb
 ${GEM_LIBDIR}/lib/jekyll/frontmatter_defaults.rb
 ${GEM_LIBDIR}/lib/jekyll/generator.rb
@@ -79,7 +81,9 @@ ${GEM_LIBDIR}/lib/jekyll/theme_builder.rb
 ${GEM_LIBDIR}/lib/jekyll/url.rb
 ${GEM_LIBDIR}/lib/jekyll/utils.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/ansi.rb
+${GEM_LIBDIR}/lib/jekyll/utils/exec.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/platforms.rb
+${GEM_LIBDIR}/lib/jekyll/utils/win_tz.rb
 ${GEM_LIBDIR}/lib/jekyll/version.rb
 ${GEM_LIBDIR}/lib/site_template/.gitignore
 ${GEM_LIBDIR}/lib/site_template/_config.yml
