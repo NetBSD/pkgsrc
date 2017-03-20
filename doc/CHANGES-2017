@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1293 2017/03/20 18:44:19 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1294 2017/03/20 18:44:29 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xentools46 to 4.6.5 [bouyer 2017-03-20]
 	Updated chat/libpurple to 2.12.0 [khorben 2017-03-20]
 	Updated chat/pidgin to 2.12.0 [khorben 2017-03-20]
+	Updated chat/finch to 2.12.0 [khorben 2017-03-20]
