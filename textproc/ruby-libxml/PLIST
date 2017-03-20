@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/10/18 14:36:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/03/20 15:32:38 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -8,7 +8,6 @@ ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/ext/libxml/extconf.h
 ${GEM_LIBDIR}/ext/libxml/extconf.rb
 ${GEM_LIBDIR}/ext/libxml/libxml.c
 ${GEM_LIBDIR}/ext/libxml/libxml_ruby.def
@@ -97,10 +96,7 @@ ${GEM_LIBDIR}/lib/libxml/html_parser.rb
 ${GEM_LIBDIR}/lib/libxml/namespace.rb
 ${GEM_LIBDIR}/lib/libxml/namespaces.rb
 ${GEM_LIBDIR}/lib/libxml/node.rb
-${GEM_LIBDIR}/lib/libxml/ns.rb
 ${GEM_LIBDIR}/lib/libxml/parser.rb
-${GEM_LIBDIR}/lib/libxml/properties.rb
-${GEM_LIBDIR}/lib/libxml/reader.rb
 ${GEM_LIBDIR}/lib/libxml/sax_callbacks.rb
 ${GEM_LIBDIR}/lib/libxml/sax_parser.rb
 ${GEM_LIBDIR}/lib/libxml/schema.rb
@@ -108,7 +104,6 @@ ${GEM_LIBDIR}/lib/libxml/schema/attribute.rb
 ${GEM_LIBDIR}/lib/libxml/schema/element.rb
 ${GEM_LIBDIR}/lib/libxml/schema/type.rb
 ${GEM_LIBDIR}/lib/libxml/tree.rb
-${GEM_LIBDIR}/lib/libxml/xpath_object.rb
 ${GEM_LIBDIR}/lib/libxml_ruby.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/xml.rb
 ${GEM_LIBDIR}/lib/xml/libxml.rb
