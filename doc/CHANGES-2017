@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1234 2017/03/20 13:27:26 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1235 2017/03/20 13:37:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-mistune to 0.7.4 [wiz 2017-03-20]
 	Updated lang/ruby-coffee-script-source to 1.12.2 [taca 2017-03-20]
 	Updated math/ruby-gsl to 2.1.0.2 [taca 2017-03-20]
+	Updated math/ruby-spreadsheet to 1.1.4 [taca 2017-03-20]
