@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/10/17 15:45:26 taca Exp $
+$NetBSD: distinfo,v 1.7 2017/03/20 15:10:13 taca Exp $
 
-SHA1 (sshkit-1.11.3.gem) = f0b9f3c522836dbbe5b51fe0823dde5246cb98d9
-RMD160 (sshkit-1.11.3.gem) = b43782edfadb0d10effe65b437f95ac10fb000d9
-SHA512 (sshkit-1.11.3.gem) = 037793b24159761fcd44a40e958edcefe0d362e4859d535b65031d800673c2a683fec617be87d13d70698e122720700ce6d0ffd2980aec5d951e303b37894d65
-Size (sshkit-1.11.3.gem) = 144896 bytes
+SHA1 (sshkit-1.12.0.gem) = 684327381ccafb9300ed817fb45b8bbc7f1d8ab1
+RMD160 (sshkit-1.12.0.gem) = 69272156f507b3bc6f625a55d543b9f38f3a5ff7
+SHA512 (sshkit-1.12.0.gem) = 62cacc33d80b3727a73cf0756e620dc85e3ec9829762f415089b17759220031be573d12c1fc55a6e585202526b2bdef5e10298d17f5e62f25ab0087697edbaa5
+Size (sshkit-1.12.0.gem) = 146944 bytes
