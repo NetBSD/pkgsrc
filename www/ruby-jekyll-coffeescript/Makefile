@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/03/13 16:43:44 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/20 16:38:33 taca Exp $
 
-DISTNAME=	jekyll-coffeescript-1.0.1
+DISTNAME=	jekyll-coffeescript-1.0.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
