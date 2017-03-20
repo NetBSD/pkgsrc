@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/10/18 16:18:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/03/20 16:04:57 taca Exp $
 bin/sass${RUBY_SUFFIX}
 bin/sass-convert${RUBY_SUFFIX}
 bin/scss${RUBY_SUFFIX}
@@ -16,6 +16,7 @@ ${GEM_LIBDIR}/VERSION_NAME
 ${GEM_LIBDIR}/bin/sass
 ${GEM_LIBDIR}/bin/sass-convert
 ${GEM_LIBDIR}/bin/scss
+${GEM_LIBDIR}/extra/sass-spec-ref.sh
 ${GEM_LIBDIR}/extra/update_watch.rb
 ${GEM_LIBDIR}/init.rb
 ${GEM_LIBDIR}/lib/sass.rb
@@ -41,6 +42,7 @@ ${GEM_LIBDIR}/lib/sass/importers/deprecated_path.rb
 ${GEM_LIBDIR}/lib/sass/importers/filesystem.rb
 ${GEM_LIBDIR}/lib/sass/logger.rb
 ${GEM_LIBDIR}/lib/sass/logger/base.rb
+${GEM_LIBDIR}/lib/sass/logger/delayed.rb
 ${GEM_LIBDIR}/lib/sass/logger/log_level.rb
 ${GEM_LIBDIR}/lib/sass/media.rb
 ${GEM_LIBDIR}/lib/sass/plugin.rb
