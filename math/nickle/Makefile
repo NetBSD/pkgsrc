@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2013/08/12 02:17:43 obache Exp $
+# $NetBSD: Makefile,v 1.16 2017/03/20 13:13:51 wiz Exp $
 
-DISTNAME=	nickle-2.77
+DISTNAME=	nickle-2.79
 CATEGORIES=	math lang
 MASTER_SITES=	http://nickle.org/release/
 
@@ -16,8 +16,5 @@ CONFIGURE_ENV+=	ac_cv_path_DOCBOOK2PDF=
 
 TEST_TARGET=	check
 
-.include "../../mk/bsd.prefs.mk"
-
-# lex.l:131:5: error: 'rl_catch_signals' undeclared (first use in this function)
-.include "../../devel/readline/buildlink3.mk"
+.include "../../mk/readline.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
