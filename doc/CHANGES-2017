@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1242 2017/03/20 14:02:47 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1243 2017/03/20 14:10:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1520,3 +1520,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/onscripter to 20161102 [tsutsui 2017-03-20]
 	Updated devel/p5-Test-Requires-Git to 1.008 [mef 2017-03-20]
 	Updated devel/p5-Test-Script to 1.16 [mef 2017-03-20]
+	Updated devel/py-tortoisehg to 4.1.1 [wiz 2017-03-20]
