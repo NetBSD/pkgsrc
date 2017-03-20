@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1212 2017/03/20 05:05:59 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1213 2017/03/20 06:03:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1474,3 +1474,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/sysupgrade to 1.5nb2 [maya 2017-03-20]
 	Updated devel/py-ipython_genutils to 0.2.0nb1 [minskim 2017-03-20]
 	Updated editors/nano to 2.7.5 [adam 2017-03-20]
+	Updated databases/gdbm to 1.13 [adam 2017-03-20]
