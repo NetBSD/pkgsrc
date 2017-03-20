@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.14 2017/01/05 21:32:39 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.15 2017/03/20 00:10:06 roy Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -29,6 +29,10 @@ BUILTIN_FIND_GREP.H_CURSES_RESIZETERM=		resizeterm
 BUILTIN_FIND_FILES_VAR+=			H_CURSES_SET_ESCDELAY
 BUILTIN_FIND_FILES.H_CURSES_SET_ESCDELAY=	${H_CURSES}
 BUILTIN_FIND_GREP.H_CURSES_SET_ESCDELAY=	set_escdelay
+
+BUILTIN_FIND_FILES_VAR+=			H_CURSES_SYNCOK
+BUILTIN_FIND_FILES.H_CURSES_SYNCOK=		${H_CURSES}
+BUILTIN_FIND_GREP.H_CURSES_SYNCOK=		syncok
 
 BUILTIN_FIND_FILES_VAR+=			H_CURSES_WA_NORMAL
 BUILTIN_FIND_FILES.H_CURSES_WA_NORMAL=		${H_CURSES}
@@ -110,6 +114,12 @@ USE_BUILTIN.curses=	no
 # same for set_escdelay(3)
 .  if !empty(USE_CURSES:Mset_escdelay)
 .    if !empty(H_CURSES_SET_ESCDELAY:M__nonexistent__)
+USE_BUILTIN.curses=	no
+.    endif
+.  endif
+# same for syncok(3)
+.  if !empty(USE_CURSES:Msyncok)
+.    if !empty(H_CURSES_SYNCOK:M__nonexistent__)
 USE_BUILTIN.curses=	no
 .    endif
 .  endif
