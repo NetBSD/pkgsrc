@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/12/12 14:41:21 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/03/20 13:22:21 taca Exp $
 
-DISTNAME=	coffee-script-source-1.10.0
+DISTNAME=	coffee-script-source-1.12.2
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
