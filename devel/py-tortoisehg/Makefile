@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.44 2017/02/27 10:28:56 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2017/03/20 14:09:53 wiz Exp $
 
-DISTNAME=		tortoisehg-4.1
+DISTNAME=		tortoisehg-4.1.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://tortoisehg.bitbucket.org/
+HOMEPAGE=		https://bitbucket.org/tortoisehg/thg/wiki/Home
 COMMENT=		GUI for Mercurial
 LICENSE=		gnu-gpl-v2
 
