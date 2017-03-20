@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2017/03/11 03:02:39 khorben Exp $
+@comment $NetBSD: PLIST,v 1.33 2017/03/20 18:42:50 khorben Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -76,16 +76,10 @@ lib/purple-2/libgg.la
 lib/purple-2/libicq.la
 lib/purple-2/libirc.la
 lib/purple-2/libjabber.la
-lib/purple-2/libmsn.la
-lib/purple-2/libmxit.la
-lib/purple-2/libmyspace.la
 lib/purple-2/libnovell.la
 lib/purple-2/liboscar.la
 lib/purple-2/libsimple.la
 lib/purple-2/libxmpp.la
-lib/purple-2/libyahoo.la
-lib/purple-2/libyahoojp.la
-lib/purple-2/libymsg.la
 lib/purple-2/libzephyr.la
 lib/purple-2/log_reader.la
 lib/purple-2/newline.la
