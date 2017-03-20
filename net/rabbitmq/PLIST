@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/12/02 11:00:39 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.24 2017/03/20 14:34:36 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -18,8 +18,6 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MIT-jQuery164
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MPL-RabbitMQ
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MPL2
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/background_gc.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/delegate.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/delegate_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/dtree.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/file_handle_cache.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/file_handle_cache_stats.beam
@@ -50,6 +48,12 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_connection_helper_sup.b
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_connection_sup.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_control_main.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_control_pbe.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_core_metrics_gc.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_credential_validation.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_credential_validator.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_credential_validator_accept_everything.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_credential_validator_min_password_length.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_credential_validator_password_regexp.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_ctl_usage.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_dead_letter.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_diagnostics.beam
@@ -72,6 +76,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_hipe.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_limiter.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_log.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_memory_monitor.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_metrics.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_coordinator.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_master.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_mirror_queue_misc.beam
@@ -93,7 +98,6 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password_hashing_md5.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password_hashing_sha256.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_password_hashing_sha512.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_pbe.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins_main.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_plugins_usage.beam
@@ -138,14 +142,14 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/gm_specs.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/old_builtin_types.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_cli.hrl
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_core_metrics.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_framing.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_misc.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/include/rabbit_msg_store.hrl
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/README
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/amqp_client-${PKGVERSION}.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-1.0.3.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowlib-1.0.1.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/mochiweb-2.13.1.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowboy-1.0.4.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/cowlib-1.0.2.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbit_common-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_amqp1_0-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_auth_backend_ldap-${PKGVERSION}.ez
@@ -159,8 +163,8 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management-${PKGVE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_agent-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_management_visualiser-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_mqtt-${PKGVERSION}.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_recent_history_exchange-1.2.1.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_sharding-0.1.0.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_recent_history_exchange-${PKGVERSION}.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_sharding-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_shovel-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_shovel_management-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_stomp-${PKGVERSION}.ez
@@ -168,11 +172,12 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_top-${PKGVERSION}.
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_tracing-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_trust_store-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_dispatch-${PKGVERSION}.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_mqtt-${PKGVERSION}.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_mqtt_examples-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_stomp-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_stomp_examples-${PKGVERSION}.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/ranch-1.2.1.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/ranch-1.3.0.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/sockjs-0.3.4.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/webmachine-1.10.3.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-defaults
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-env
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-plugins
