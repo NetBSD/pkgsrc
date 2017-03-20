@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1299 2017/03/20 19:58:10 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1300 2017/03/20 20:34:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1587,3 +1587,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xentools46 to 4.6.5nb1 [bouyer 2017-03-20]
 	Updated devel/py-traitlets to 4.3.2nb1 [minskim 2017-03-20]
 	Added devel/py-cachetools version 2.0.0 [minskim 2017-03-20]
+	Updated net/youtube-dl to 20170320 [leot 2017-03-20]
