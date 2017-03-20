@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2017/03/07 21:57:13 leot Exp $
+@comment $NetBSD: PLIST,v 1.38 2017/03/20 20:34:39 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -227,6 +227,9 @@ ${PYSITELIB}/youtube_dl/extractor/bloomberg.pyo
 ${PYSITELIB}/youtube_dl/extractor/bokecc.py
 ${PYSITELIB}/youtube_dl/extractor/bokecc.pyc
 ${PYSITELIB}/youtube_dl/extractor/bokecc.pyo
+${PYSITELIB}/youtube_dl/extractor/bostonglobe.py
+${PYSITELIB}/youtube_dl/extractor/bostonglobe.pyc
+${PYSITELIB}/youtube_dl/extractor/bostonglobe.pyo
 ${PYSITELIB}/youtube_dl/extractor/bpb.py
 ${PYSITELIB}/youtube_dl/extractor/bpb.pyc
 ${PYSITELIB}/youtube_dl/extractor/bpb.pyo
@@ -458,6 +461,9 @@ ${PYSITELIB}/youtube_dl/extractor/discovery.pyo
 ${PYSITELIB}/youtube_dl/extractor/discoverygo.py
 ${PYSITELIB}/youtube_dl/extractor/discoverygo.pyc
 ${PYSITELIB}/youtube_dl/extractor/discoverygo.pyo
+${PYSITELIB}/youtube_dl/extractor/discoverynetworks.py
+${PYSITELIB}/youtube_dl/extractor/discoverynetworks.pyc
+${PYSITELIB}/youtube_dl/extractor/discoverynetworks.pyo
 ${PYSITELIB}/youtube_dl/extractor/disney.py
 ${PYSITELIB}/youtube_dl/extractor/disney.pyc
 ${PYSITELIB}/youtube_dl/extractor/disney.pyo
@@ -1004,6 +1010,9 @@ ${PYSITELIB}/youtube_dl/extractor/matchtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/mdr.py
 ${PYSITELIB}/youtube_dl/extractor/mdr.pyc
 ${PYSITELIB}/youtube_dl/extractor/mdr.pyo
+${PYSITELIB}/youtube_dl/extractor/medialaan.py
+${PYSITELIB}/youtube_dl/extractor/medialaan.pyc
+${PYSITELIB}/youtube_dl/extractor/medialaan.pyo
 ${PYSITELIB}/youtube_dl/extractor/meipai.py
 ${PYSITELIB}/youtube_dl/extractor/meipai.pyc
 ${PYSITELIB}/youtube_dl/extractor/meipai.pyo
@@ -1766,9 +1775,6 @@ ${PYSITELIB}/youtube_dl/extractor/threeqsdn.pyo
 ${PYSITELIB}/youtube_dl/extractor/tinypic.py
 ${PYSITELIB}/youtube_dl/extractor/tinypic.pyc
 ${PYSITELIB}/youtube_dl/extractor/tinypic.pyo
-${PYSITELIB}/youtube_dl/extractor/tlc.py
-${PYSITELIB}/youtube_dl/extractor/tlc.pyc
-${PYSITELIB}/youtube_dl/extractor/tlc.pyo
 ${PYSITELIB}/youtube_dl/extractor/tmz.py
 ${PYSITELIB}/youtube_dl/extractor/tmz.pyc
 ${PYSITELIB}/youtube_dl/extractor/tmz.pyo
@@ -1781,6 +1787,9 @@ ${PYSITELIB}/youtube_dl/extractor/toggle.pyo
 ${PYSITELIB}/youtube_dl/extractor/tonline.py
 ${PYSITELIB}/youtube_dl/extractor/tonline.pyc
 ${PYSITELIB}/youtube_dl/extractor/tonline.pyo
+${PYSITELIB}/youtube_dl/extractor/toongoggles.py
+${PYSITELIB}/youtube_dl/extractor/toongoggles.pyc
+${PYSITELIB}/youtube_dl/extractor/toongoggles.pyo
 ${PYSITELIB}/youtube_dl/extractor/toutv.py
 ${PYSITELIB}/youtube_dl/extractor/toutv.pyc
 ${PYSITELIB}/youtube_dl/extractor/toutv.pyo
