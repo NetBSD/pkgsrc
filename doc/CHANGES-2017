@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1213 2017/03/20 06:03:10 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1214 2017/03/20 10:19:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1475,3 +1475,10 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-ipython_genutils to 0.2.0nb1 [minskim 2017-03-20]
 	Updated editors/nano to 2.7.5 [adam 2017-03-20]
 	Updated databases/gdbm to 1.13 [adam 2017-03-20]
+	Updated devel/p5-Function-Parameters to 1.0706 [mef 2017-03-20]
+	Updated devel/p5-Log-Any-Adapter-Dispatch to 0.08 [mef 2017-03-20]
+	Updated devel/p5-File-ShareDir-ProjectDistDir to 1.000009 [mef 2017-03-20]
+	Updated devel/p5-Dist-Zilla to 6.009 [mef 2017-03-20]
+	Updated devel/p5-Devel-CheckLib to 1.09 [mef 2017-03-20]
+	Updated devel/p5-Data-GUID to 0.049 [mef 2017-03-20]
+	Updated devel/p5-Cache-FastMmap to 1.45 [mef 2017-03-20]
