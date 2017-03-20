@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/18 01:48:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/03/20 02:35:08 minskim Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ipython_genutils/__init__.py
 ${PYSITELIB}/ipython_genutils/__init__.pyo
 ${PYSITELIB}/ipython_genutils/__init__.pyc
