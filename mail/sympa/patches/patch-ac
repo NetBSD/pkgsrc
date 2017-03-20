@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.4 2015/09/26 14:56:10 bouyer Exp $
+$NetBSD: patch-ac,v 1.5 2017/03/20 10:24:02 bouyer Exp $
 
---- src/etc/script/Makefile.in.orig	2015-09-25 10:55:01.000000000 +0200
-+++ src/etc/script/Makefile.in	2015-09-25 15:41:23.000000000 +0200
-@@ -330,7 +330,7 @@
+--- src/etc/script/Makefile.in.orig	2016-06-17 16:54:15.000000000 +0200
++++ src/etc/script/Makefile.in	2017-03-17 18:36:30.000000000 +0100
+@@ -384,7 +384,7 @@
  
  info-am:
  
--install-data-am: install-initSCRIPTS
+-install-data-am: install-initSCRIPTS install-unitsDATA
 +install-data-am:
  
  install-exec-am:
