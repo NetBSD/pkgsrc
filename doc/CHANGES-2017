@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1224 2017/03/20 12:51:44 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1225 2017/03/20 13:01:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-thor to 0.19.4 [taca 2017-03-20]
 	Updated graphics/ImageMagick to 7.0.5.3 [wiz 2017-03-20]
 	Updated graphics/p5-PerlMagick to 7.0.5.3 [wiz 2017-03-20]
+	Updated devel/ruby-tins to 1.13.2 [taca 2017-03-20]
