@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/03/15 14:59:59 taca Exp $
+$NetBSD: distinfo,v 1.7 2017/03/20 14:46:28 taca Exp $
 
-SHA1 (pdf-core-0.6.1.gem) = 1e2868d0969f308e5d0c02c6320f68e8ebe53baa
-RMD160 (pdf-core-0.6.1.gem) = d51cda1bfaff6c452971a4489ac802f7382291a4
-SHA512 (pdf-core-0.6.1.gem) = dc9074658cb4037fc1ab4f51a19bd67396c31ef18ac5c89e94563711eced8a7a6ec642e907564c92453cac08cd7a09f6da6f6da87536475cce8238cef087467a
-Size (pdf-core-0.6.1.gem) = 43008 bytes
+SHA1 (pdf-core-0.7.0.gem) = f5c070c4b6b1c0f531997e162e07cf06c904ad8d
+RMD160 (pdf-core-0.7.0.gem) = 85d856aea796f5cb05f400a35504672df06179c0
+SHA512 (pdf-core-0.7.0.gem) = 042a9f87fbb7021be4c6c6bbcc2fff685855a053d729b764f04bf9552f8f5216a1f6abb718ca5af045d46115939d22a30c0b7b530679584196819d44c4273574
+Size (pdf-core-0.7.0.gem) = 43008 bytes
