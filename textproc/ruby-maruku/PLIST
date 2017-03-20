@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2015/03/13 16:16:12 taca Exp $
-bin/maruku
-bin/marutex
+@comment $NetBSD: PLIST,v 1.11 2017/03/20 15:35:24 taca Exp $
+bin/maruku${RUBY_SUFFIX}
+bin/marutex${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE.txt
 ${GEM_LIBDIR}/bin/maruku
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/lib/maruku/toc.rb
 ${GEM_LIBDIR}/lib/maruku/version.rb
 ${GEM_LIBDIR}/spec/block_docs/abbrev.md
 ${GEM_LIBDIR}/spec/block_docs/abbreviations.md
+${GEM_LIBDIR}/spec/block_docs/abbreviations2.md
 ${GEM_LIBDIR}/spec/block_docs/alt.md
 ${GEM_LIBDIR}/spec/block_docs/amps.md
 ${GEM_LIBDIR}/spec/block_docs/attribute_sanitize.md
@@ -64,11 +65,16 @@ ${GEM_LIBDIR}/spec/block_docs/attributes/att3.md
 ${GEM_LIBDIR}/spec/block_docs/attributes/attributes.md
 ${GEM_LIBDIR}/spec/block_docs/attributes/circular.md
 ${GEM_LIBDIR}/spec/block_docs/attributes/default.md
+${GEM_LIBDIR}/spec/block_docs/atx_headers.md
 ${GEM_LIBDIR}/spec/block_docs/auto_cdata.md
+${GEM_LIBDIR}/spec/block_docs/bad_cites.md
+${GEM_LIBDIR}/spec/block_docs/bad_divrefs.md
 ${GEM_LIBDIR}/spec/block_docs/blank.md
 ${GEM_LIBDIR}/spec/block_docs/blanks_in_code.md
+${GEM_LIBDIR}/spec/block_docs/block_quotes.md
 ${GEM_LIBDIR}/spec/block_docs/bug_def.md
 ${GEM_LIBDIR}/spec/block_docs/bug_table.md
+${GEM_LIBDIR}/spec/block_docs/cites.md
 ${GEM_LIBDIR}/spec/block_docs/code.md
 ${GEM_LIBDIR}/spec/block_docs/code2.md
 ${GEM_LIBDIR}/spec/block_docs/code3.md
@@ -162,6 +168,7 @@ ${GEM_LIBDIR}/spec/block_docs/lists_nested.md
 ${GEM_LIBDIR}/spec/block_docs/lists_nested_blankline.md
 ${GEM_LIBDIR}/spec/block_docs/lists_nested_deep.md
 ${GEM_LIBDIR}/spec/block_docs/lists_ol.md
+${GEM_LIBDIR}/spec/block_docs/lists_ol2.md
 ${GEM_LIBDIR}/spec/block_docs/lists_paraindent.md
 ${GEM_LIBDIR}/spec/block_docs/lists_tab.md
 ${GEM_LIBDIR}/spec/block_docs/loss.md
