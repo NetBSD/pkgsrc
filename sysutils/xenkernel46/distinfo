@@ -1,25 +1,10 @@
-$NetBSD: distinfo,v 1.6 2017/02/14 21:38:34 joerg Exp $
+$NetBSD: distinfo,v 1.7 2017/03/20 18:17:12 bouyer Exp $
 
-SHA1 (xen-4.6.3.tar.gz) = 2aa59d0a05a6c5ac7f336f2069c66a54f95c4349
-RMD160 (xen-4.6.3.tar.gz) = 2798bd888ee001a4829165e55feb705a86af4f74
-SHA512 (xen-4.6.3.tar.gz) = 187a860b40c05139f22b8498a5fae1db173c3110d957147af29a56cb83b7111c9dc4946d65f9dffc847001fc01c5e9bf51886eaa1194bb9cfd0b6dbcd43a2c5c
-Size (xen-4.6.3.tar.gz) = 19707041 bytes
+SHA1 (xen-4.6.5.tar.gz) = af371af662211ee1480167b6c9e35142156f3a8d
+RMD160 (xen-4.6.5.tar.gz) = 3f2468d7d3715d14842ac57b2180118ef48e93fa
+SHA512 (xen-4.6.5.tar.gz) = d3e1b16fa9d695a5fc28ca4375b8de3dfcab480437d4d0151972d9f286528c9f667841e7a6888c918c580371d6984658a8d3b92235553c8c9c052d93154547b5
+Size (xen-4.6.5.tar.gz) = 19712756 bytes
 SHA1 (patch-Config.mk) = a2a104d023cea4e551a3ad40927d4884d6c610bf
-SHA1 (patch-XSA-185) = a2313922aa4dad734b96c80f64fe54eca3c14019
-SHA1 (patch-XSA-186-1) = 71e4a6c4c683891bac50682a3ab69a204fb681ad
-SHA1 (patch-XSA-186-2) = 6094c2efe468e3f31712659be9a71af2cbe8dc1f
-SHA1 (patch-XSA-187-1) = 55ea0c2d9c7d8d9476a5ab97342ff552be4faf56
-SHA1 (patch-XSA-187-2) = f5308fee03a5d73c8aa283eb82cc36a6a3d3bc06
-SHA1 (patch-XSA-191) = adf1b0d6d8a17b6585fd0ecbe0ca77517623e0af
-SHA1 (patch-XSA-192) = b8b289f4af6b2cebeea16246398d2c473a9e90c1
-SHA1 (patch-XSA-193) = 89fdeea8af25de42bbd207df1b2f3dcd3b61778f
-SHA1 (patch-XSA-195) = 0a44b7deda6a17c88e9d1858eeb7c33b0ebaf3f7
-SHA1 (patch-XSA-196-1) = bdcd7673443fbf59aeff8ad019ffbe39758fcaee
-SHA1 (patch-XSA-196-2) = 81b1d46f3ec8a3c5133f6a923fee0ab1b2b1c6a0
-SHA1 (patch-XSA-200) = 37254653e3f9016de0440047465fddce7e9b1874
-SHA1 (patch-XSA-202) = 52cb1da3bb078f6b7574f606b8c9cacdf24f6518
-SHA1 (patch-XSA-203) = 43310c4e95e0070a24e6a847502e057b9e0eefe9
-SHA1 (patch-XSA-204) = 05defb8d99976a712024d35a81f4dde5627107d9
 SHA1 (patch-tools_xentrace_xenalyze.c) = ab973cb7090dc90867dcddf9ab8965f8f2f36c46
 SHA1 (patch-xen_Makefile) = be3f4577a205b23187b91319f91c50720919f70b
 SHA1 (patch-xen_arch_x86_Rules.mk) = 7b0894ba7311edb02118a021671f304cf3872154
