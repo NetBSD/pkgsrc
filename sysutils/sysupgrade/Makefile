@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/12/31 09:39:31 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/03/20 00:25:35 maya Exp $
 
 DISTNAME=	sysupgrade-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/jmmv/sysupgrade/releases/download/sysupgrade-1.5/
 
