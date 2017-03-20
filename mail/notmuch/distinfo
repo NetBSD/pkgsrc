@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.20 2017/03/12 20:51:13 wiz Exp $
+$NetBSD: distinfo,v 1.21 2017/03/20 13:19:26 wiz Exp $
 
-SHA1 (notmuch-0.23.7.tar.gz) = 07eca222977488051cb7fcd3f2238da355c5ec1c
-RMD160 (notmuch-0.23.7.tar.gz) = 681d6bdbbf4db692934d63b4dc3a37cbb221ae6b
-SHA512 (notmuch-0.23.7.tar.gz) = e71da3bd6ce1b344aae79b277b695a4668d4fe1b8838618d6970a0b27df9867bac66a3240473ef31fc30ed8af2b0a558203ed5ffb34da873c991b1ecc6c08522
-Size (notmuch-0.23.7.tar.gz) = 692230 bytes
-SHA1 (patch-Makefile.local) = cab8635a8ff1f2f2e7dc45f2c853f90553c28606
+SHA1 (notmuch-0.24.tar.gz) = 76c890ac3719f78dbcc5c4a434a7383290ce4817
+RMD160 (notmuch-0.24.tar.gz) = be5156827b596ba87f3d1f204903c217655718a8
+SHA512 (notmuch-0.24.tar.gz) = f966b4faf96b165cc04be15a90681fabfe7ce66a0a9255183f9e4542556836adb7acfe8c02033db3ad8af6cb8962d1a64da8cdd03a0485b104a7b40b88b598d5
+Size (notmuch-0.24.tar.gz) = 708243 bytes
+SHA1 (patch-Makefile.global) = 848213d8914c59d2786c74eee71df5c7599c17ec
+SHA1 (patch-Makefile.local) = e5a11e3fd7470f745fccb3086fb864c2068f55a7
 SHA1 (patch-aa) = 90414224b80703587d211c8b56bfba0cbe1377b6
 SHA1 (patch-lib_Makefile.local) = 84ebfe1a57647e590f923d727d206b5f4687e1ce
 SHA1 (patch-util_Makefile.local) = 1dcf152c0aba329e5e309c98042bd14f9a733714
