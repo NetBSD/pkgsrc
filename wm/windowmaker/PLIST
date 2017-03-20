@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/10/16 10:42:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/03/20 12:29:52 adam Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -31,6 +31,7 @@ lib/libWUtil.la
 lib/libwraster.la
 lib/pkgconfig/WINGs.pc
 lib/pkgconfig/WUtil.pc
+lib/pkgconfig/wmlib.pc
 lib/pkgconfig/wrlib.pc
 man/cs/man1/geticonset.1
 man/cs/man1/getstyle.1
