@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/02/05 11:41:06 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/20 14:03:56 tsutsui Exp $
 
-DISTNAME=	faye-websocket-0.10.6
+DISTNAME=	faye-websocket-0.10.7
 CATEGORIES=	www
 
 MAINTAINER=	tsutsui@NetBSD.org
