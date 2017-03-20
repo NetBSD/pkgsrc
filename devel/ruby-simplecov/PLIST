@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/12/12 14:36:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/03/20 12:32:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -61,11 +61,12 @@ ${GEM_LIBDIR}/lib/simplecov/formatter/multi_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/formatter/simple_formatter.rb
 ${GEM_LIBDIR}/lib/simplecov/jruby_fix.rb
 ${GEM_LIBDIR}/lib/simplecov/last_run.rb
-${GEM_LIBDIR}/lib/simplecov/merge_helpers.rb
+${GEM_LIBDIR}/lib/simplecov/load_global_config.rb
 ${GEM_LIBDIR}/lib/simplecov/no_defaults.rb
 ${GEM_LIBDIR}/lib/simplecov/profiles.rb
 ${GEM_LIBDIR}/lib/simplecov/railtie.rb
 ${GEM_LIBDIR}/lib/simplecov/railties/tasks.rake
+${GEM_LIBDIR}/lib/simplecov/raw_coverage.rb
 ${GEM_LIBDIR}/lib/simplecov/result.rb
 ${GEM_LIBDIR}/lib/simplecov/result_merger.rb
 ${GEM_LIBDIR}/lib/simplecov/source_file.rb
@@ -73,6 +74,8 @@ ${GEM_LIBDIR}/lib/simplecov/version.rb
 ${GEM_LIBDIR}/simplecov.gemspec
 ${GEM_LIBDIR}/spec/1_8_fallbacks_spec.rb
 ${GEM_LIBDIR}/spec/command_guesser_spec.rb
+${GEM_LIBDIR}/spec/config_loader_spec.rb
+${GEM_LIBDIR}/spec/configuration_spec.rb
 ${GEM_LIBDIR}/spec/deleted_source_spec.rb
 ${GEM_LIBDIR}/spec/faked_project/Gemfile
 ${GEM_LIBDIR}/spec/faked_project/Rakefile
@@ -104,15 +107,21 @@ ${GEM_LIBDIR}/spec/fixtures/frameworks/rspec_good.rb
 ${GEM_LIBDIR}/spec/fixtures/frameworks/testunit_bad.rb
 ${GEM_LIBDIR}/spec/fixtures/frameworks/testunit_good.rb
 ${GEM_LIBDIR}/spec/fixtures/iso-8859.rb
+${GEM_LIBDIR}/spec/fixtures/never.rb
 ${GEM_LIBDIR}/spec/fixtures/resultset1.rb
 ${GEM_LIBDIR}/spec/fixtures/resultset2.rb
 ${GEM_LIBDIR}/spec/fixtures/sample.rb
+${GEM_LIBDIR}/spec/fixtures/skipped.rb
+${GEM_LIBDIR}/spec/fixtures/skipped_and_executed.rb
 ${GEM_LIBDIR}/spec/fixtures/utf-8.rb
 ${GEM_LIBDIR}/spec/helper.rb
-${GEM_LIBDIR}/spec/merge_helpers_spec.rb
+${GEM_LIBDIR}/spec/last_run_spec.rb
 ${GEM_LIBDIR}/spec/multi_formatter_spec.rb
+${GEM_LIBDIR}/spec/raw_coverage_spec.rb
+${GEM_LIBDIR}/spec/result_merger_spec.rb
 ${GEM_LIBDIR}/spec/result_spec.rb
 ${GEM_LIBDIR}/spec/return_codes_spec.rb
 ${GEM_LIBDIR}/spec/source_file_line_spec.rb
 ${GEM_LIBDIR}/spec/source_file_spec.rb
+${GEM_LIBDIR}/spec/support/fail_rspec_on_ruby_warning.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
