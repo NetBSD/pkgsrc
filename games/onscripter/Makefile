@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2016/02/14 14:49:41 tsutsui Exp $
+# $NetBSD: Makefile,v 1.42 2017/03/20 13:56:08 tsutsui Exp $
 #
 
-DISTNAME=		onscripter-20150820
+DISTNAME=		onscripter-20161102
 CATEGORIES=		games
 MASTER_SITES=		http://onscripter.osdn.jp/
 
