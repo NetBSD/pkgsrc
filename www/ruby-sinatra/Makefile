@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2016/11/19 14:38:04 taca Exp $
+# $NetBSD: Makefile,v 1.20 2017/03/20 16:12:05 taca Exp $
 
-DISTNAME=	sinatra-1.4.7
+DISTNAME=	sinatra-1.4.8
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
