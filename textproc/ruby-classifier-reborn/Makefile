@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/12/13 16:55:48 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/20 15:24:43 taca Exp $
 
-DISTNAME=	classifier-reborn-2.0.4
+DISTNAME=	classifier-reborn-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 
