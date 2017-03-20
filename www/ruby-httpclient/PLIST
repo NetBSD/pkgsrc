@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/12/13 15:37:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/03/20 15:51:33 taca Exp $
 bin/httpclient${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
@@ -53,6 +53,7 @@ ${GEM_LIBDIR}/test/client.key
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/htdigest
 ${GEM_LIBDIR}/test/htpasswd
+${GEM_LIBDIR}/test/jruby_ssl_socket/test_pemutils.rb
 ${GEM_LIBDIR}/test/runner.rb
 ${GEM_LIBDIR}/test/server.cert
 ${GEM_LIBDIR}/test/server.key
