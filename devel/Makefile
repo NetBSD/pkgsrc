@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2386 2017/03/18 23:52:09 minskim Exp $
+# $NetBSD: Makefile,v 1.2387 2017/03/20 12:27:36 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1463,6 +1463,7 @@ SUBDIR+=	p5-Sub-Exporter-ForMethods
 SUBDIR+=	p5-Sub-Exporter-GlobExporter
 SUBDIR+=	p5-Sub-Exporter-Progressive
 SUBDIR+=	p5-Sub-Identify
+SUBDIR+=	p5-Sub-Info
 SUBDIR+=	p5-Sub-Install
 SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Name
@@ -1501,6 +1502,7 @@ SUBDIR+=	p5-Term-ShellUI
 SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Term-Size-Any
 SUBDIR+=	p5-Term-Size-Perl
+SUBDIR+=	p5-Term-Table
 SUBDIR+=	p5-Term-UI
 SUBDIR+=	p5-Test-API
 SUBDIR+=	p5-Test-Aggregate
