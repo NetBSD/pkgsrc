@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/10/17 14:17:27 taca Exp $
+$NetBSD: distinfo,v 1.11 2017/03/20 16:36:16 taca Exp $
 
-SHA1 (jekyll-3.3.0.gem) = 721cd6329a757abcbbca70236b960ec7e9c3eeb5
-RMD160 (jekyll-3.3.0.gem) = aca65ff9c1f710aad7075277a3f37be22dbd4019
-SHA512 (jekyll-3.3.0.gem) = fc46c6f218381a2f39a79c062ec175a6b06f7c8b0560b038508453414b3fa2949ed5f96c0318d6f757e48c32f81e35e05650c17b3fb95db51a57df46f5581792
-Size (jekyll-3.3.0.gem) = 89088 bytes
+SHA1 (jekyll-3.4.2.gem) = 656d85dad7db2595dddd627f0bcf61bb8291df6b
+RMD160 (jekyll-3.4.2.gem) = 5c145362f4e6411d50c322c67c42dd0b39e4ab0a
+SHA512 (jekyll-3.4.2.gem) = 8bc5d0ebf9874131624afbc354a10df900d41b8e48df1081b1fbe1473a49561705e89a5e8e901cb2fe413bcb754e6b886fcf50d5c5f0140167b865ae2389225f
+Size (jekyll-3.4.2.gem) = 91136 bytes
