@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2016/10/17 15:51:29 taca Exp $
+$NetBSD: distinfo,v 1.18 2017/03/20 15:15:31 taca Exp $
 
-SHA1 (capistrano-3.6.1.gem) = 93489d77c714f14c0357370400b6399ae58f1c97
-RMD160 (capistrano-3.6.1.gem) = 3d0e9ad7b4ef4b73f3a7361a9b21677bc4fc824f
-SHA512 (capistrano-3.6.1.gem) = 7749e9d09fafdf0b4c0253de05b5d8882d9ec5763ea4259c723626b094371cc0ff061e6aae07c6d563a278a32201fd433c8344aa1d573dc1625f016ead331c93
-Size (capistrano-3.6.1.gem) = 68096 bytes
+SHA1 (capistrano-3.8.0.gem) = 62e72bff7173772d9ce33de20ef2b02825576196
+RMD160 (capistrano-3.8.0.gem) = 17cd1e20b84020242420102a2fabc10e8365e32b
+SHA512 (capistrano-3.8.0.gem) = 0fc96a98a1ef2fdd23ef5fcbf92df6cefc8f1c7a4a4545124bf721f4e4b251eef46cbad7b0ea31d2f4daf12ace620a7f02b2191c0f61e128ffe58a58831aeec0
+Size (capistrano-3.8.0.gem) = 75264 bytes
