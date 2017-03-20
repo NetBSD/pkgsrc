@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1302 2017/03/20 21:21:09 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1303 2017/03/20 21:24:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1590,3 +1590,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20170320 [leot 2017-03-20]
 	Updated devel/p5-Tree-Simple to 1.30 [mef 2017-03-20]
 	Updated devel/p5-MooseX-Attribute-Chained to 1.0.3 [mef 2017-03-20]
+	Updated devel/p5-Module-Install-RTx to 0.39 [mef 2017-03-20]
