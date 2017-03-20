@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/23 09:35:16 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/03/20 11:36:35 jperkin Exp $
 bin/rustc
 bin/rustdoc
 lib/libarena-${RUST_VERHASH}.${SOEXT}
@@ -9,7 +9,6 @@ lib/libgraphviz-${RUST_VERHASH}.${SOEXT}
 lib/liblog-${RUST_VERHASH}.${SOEXT}
 lib/libproc_macro-${RUST_VERHASH}.${SOEXT}
 lib/libproc_macro_plugin-${RUST_VERHASH}.${SOEXT}
-lib/libproc_macro_tokens-${RUST_VERHASH}.${SOEXT}
 lib/librustc-${RUST_VERHASH}.${SOEXT}
 lib/librustc_back-${RUST_VERHASH}.${SOEXT}
 lib/librustc_borrowck-${RUST_VERHASH}.${SOEXT}
@@ -63,7 +62,6 @@ lib/rustlib/${RUST_ARCH}/lib/libpanic_abort-${RUST_VERHASH}.rlib
 lib/rustlib/${RUST_ARCH}/lib/libpanic_unwind-${RUST_VERHASH}.rlib
 lib/rustlib/${RUST_ARCH}/lib/libproc_macro-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/libproc_macro_plugin-${RUST_VERHASH}.${SOEXT}
-lib/rustlib/${RUST_ARCH}/lib/libproc_macro_tokens-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librand-${RUST_VERHASH}.rlib
 lib/rustlib/${RUST_ARCH}/lib/librustc-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librustc_back-${RUST_VERHASH}.${SOEXT}
@@ -74,6 +72,7 @@ lib/rustlib/${RUST_ARCH}/lib/librustc_const_math-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librustc_data_structures-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librustc_driver-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librustc_errors-${RUST_VERHASH}.${SOEXT}
+lib/rustlib/${RUST_ARCH}/lib/librustc_i128-${RUST_VERHASH}.rlib
 lib/rustlib/${RUST_ARCH}/lib/librustc_incremental-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librustc_lint-${RUST_VERHASH}.${SOEXT}
 lib/rustlib/${RUST_ARCH}/lib/librustc_llvm-${RUST_VERHASH}.${SOEXT}
