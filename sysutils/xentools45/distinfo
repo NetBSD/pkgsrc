@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2016/12/20 10:22:29 bouyer Exp $
+$NetBSD: distinfo,v 1.30 2017/03/20 18:09:21 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -25,6 +25,12 @@ SHA1 (patch-XSA-197-1) = a481196957f8942253cb18e5eef089e491d02652
 SHA1 (patch-XSA-197-2) = f5cf82cf04303f145e3cfea29c4104bc058dd043
 SHA1 (patch-XSA-198) = 5a61b6b4af265ba0b90d5750166924daafe554d7
 SHA1 (patch-XSA-199) = 481c740d36a5b8415275c4b1152bb7e2a45349a1
+SHA1 (patch-XSA-208-1) = a8eac4ac701626014b54480a5c7e382a43f892bb
+SHA1 (patch-XSA-208-2) = 148df8d7fd42f9f885e4381c1073c0a7b5c71816
+SHA1 (patch-XSA-209-1) = a7cfa5bbdb3df5d76b4caa39119c2745a6ecf321
+SHA1 (patch-XSA-209-2) = 6b90313758d1f5a33936d48fc0bcb7c3f3fb84c0
+SHA1 (patch-XSA-211-1) = 432d65327e1ebe3d3317ac5f42f3912bb23d08ca
+SHA1 (patch-XSA-211-2) = a92663c2c18290f5927780d3ed55aec497c58a8c
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
 SHA1 (patch-configure) = 97fa4274e425984d593cd93aea36edc681462b88
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
