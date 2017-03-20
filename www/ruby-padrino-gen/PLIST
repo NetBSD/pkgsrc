@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/19 14:45:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/03/20 16:17:55 taca Exp $
 bin/padrino-gen${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -117,5 +117,6 @@ ${GEM_LIBDIR}/test/test_migration_generator.rb
 ${GEM_LIBDIR}/test/test_model_generator.rb
 ${GEM_LIBDIR}/test/test_plugin_generator.rb
 ${GEM_LIBDIR}/test/test_project_generator.rb
+${GEM_LIBDIR}/test/test_sql_helpers.rb
 ${GEM_LIBDIR}/test/test_task_generator.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
