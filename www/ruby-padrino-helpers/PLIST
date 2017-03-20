@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/19 14:45:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/03/20 16:17:55 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -48,6 +48,7 @@ ${GEM_LIBDIR}/lib/padrino-helpers/translation_helpers.rb
 ${GEM_LIBDIR}/lib/padrino/core_ext/output_safety.rb
 ${GEM_LIBDIR}/lib/padrino/rendering.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/erb_template.rb
+${GEM_LIBDIR}/lib/padrino/rendering/erubi_template.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/erubis_template.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/haml_template.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/slim_template.rb
