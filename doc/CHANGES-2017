@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1251 2017/03/20 14:46:55 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1252 2017/03/20 14:49:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1529,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/ruby-domain_name to 0.5.20170223 [taca 2017-03-20]
 	Updated net/ruby-net-ldap to 0.16.0 [taca 2017-03-20]
 	Updated print/ruby-pdf-core to 0.7.0 [taca 2017-03-20]
+	Updated fonts/ruby-ttfunk to 1.5.0 [taca 2017-03-20]
