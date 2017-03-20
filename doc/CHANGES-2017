@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1222 2017/03/20 12:49:09 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1223 2017/03/20 12:51:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1492,3 +1492,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-sexp-processor to 4.8.0 [taca 2017-03-20]
 	Updated devel/ruby-simplecov to 0.14.1 [taca 2017-03-20]
 	Updated devel/ruby-thor to 0.19.4 [taca 2017-03-20]
+	Updated graphics/ImageMagick to 7.0.5.3 [wiz 2017-03-20]
