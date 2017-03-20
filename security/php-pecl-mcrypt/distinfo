@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/20 16:44:17 taca Exp $
+
+SHA1 (php-mcrypt/mcrypt-1.0.1.tgz) = 9c365f1c07e0fb8ce99231f0b662ba64d4a5494b
+RMD160 (php-mcrypt/mcrypt-1.0.1.tgz) = 5887bb08d105d8a82d4c5360d1811103947f163e
+SHA512 (php-mcrypt/mcrypt-1.0.1.tgz) = 1677202715499a41ac6999089257a059106e58cbac06ca8a7dd2e9edd28be5a4118234dd7468110e9e3d7f9de5d099367848fe84bcd06716ea56645c9015c578
+Size (php-mcrypt/mcrypt-1.0.1.tgz) = 33782 bytes
