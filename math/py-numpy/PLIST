@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2017/01/22 14:43:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/03/20 13:50:01 wiz Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -467,7 +467,9 @@ ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo.f
 ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo_fixed.f90
 ${PYSITELIB}/numpy/f2py/tests/src/mixed/foo_free.f90
 ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_both.f90
+${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_compound.f90
 ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_integer.f90
+${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_non_compound.f90
 ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_real.f90
 ${PYSITELIB}/numpy/f2py/tests/src/regression/inout.f90
 ${PYSITELIB}/numpy/f2py/tests/src/size/foo.f90
