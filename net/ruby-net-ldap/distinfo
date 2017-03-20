@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/10/17 14:40:50 taca Exp $
+$NetBSD: distinfo,v 1.9 2017/03/20 14:37:37 taca Exp $
 
-SHA1 (net-ldap-0.15.0.gem) = 6242fa6d8614b18c50765be0a2943a0c14ebe38f
-RMD160 (net-ldap-0.15.0.gem) = 887d26c56c16f2f552a1cb4e4e4530c6e977d114
-SHA512 (net-ldap-0.15.0.gem) = b59d444aff83993596ff9e35e0275620999bd27ad68d15d267ca19e68a62e22c25bb33d1b89ae522ee35f4b09f6984a61fbfb26f8b3e98c461343b06be8a6304
-Size (net-ldap-0.15.0.gem) = 94208 bytes
+SHA1 (net-ldap-0.16.0.gem) = a667aa7dd69c37f37c69f2cf123e9a991fb602ca
+RMD160 (net-ldap-0.16.0.gem) = 2c34e0653c21a2df50f5a9071e1ceefbc0cb8549
+SHA512 (net-ldap-0.16.0.gem) = 5257d379700ac0e1ec8d490ab440b4d18801603db8ee800633cfa47e784006ebdcb9af91e47ed7b9c22f20509c9800275a1fc4d27613a11d27d500cf662ec31c
+Size (net-ldap-0.16.0.gem) = 103936 bytes
