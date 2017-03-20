@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2017/03/17 16:56:47 sborrill Exp $
+$NetBSD: distinfo,v 1.11 2017/03/20 10:49:03 sborrill Exp $
 
 SHA1 (Radicale-1.1.1.tar.gz) = 0358b15a2cf2a0b3f95c9a490f2ff0747fc254c5
 RMD160 (Radicale-1.1.1.tar.gz) = d3d6d8051e7b0d95d72bc5a00af9a82f79240238
 SHA512 (Radicale-1.1.1.tar.gz) = dc251d8fa4d347c2bbcf472b7a2da94d674f858a007fec1d74774cd1f3ae43eb2d5902ed45762638ec49546b8ee1f66446d07b50fc0ff6595deb67ea07f87af2
 Size (Radicale-1.1.1.tar.gz) = 47174 bytes
 SHA1 (patch-config) = de1060a10ace5de77dfc8dd25cfae4d6aefa96ee
-SHA1 (patch-radicale___init__.py) = 9094c5fbe1659b376230d97cf7c8c67a5887ca11
+SHA1 (patch-radicale___init__.py) = 9f5379cb4945cb1c62fd56f86e2e47f62a11885c
 SHA1 (patch-radicale_config.py) = ea1f0984f0744331675b8a5005d934f5c18a7447
