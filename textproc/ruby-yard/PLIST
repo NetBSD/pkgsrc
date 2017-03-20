@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/18 14:50:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/20 15:41:38 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -92,6 +92,7 @@ ${GEM_LIBDIR}/lib/yard/core_ext/string.rb
 ${GEM_LIBDIR}/lib/yard/core_ext/symbol_hash.rb
 ${GEM_LIBDIR}/lib/yard/docstring.rb
 ${GEM_LIBDIR}/lib/yard/docstring_parser.rb
+${GEM_LIBDIR}/lib/yard/gem_index.rb
 ${GEM_LIBDIR}/lib/yard/globals.rb
 ${GEM_LIBDIR}/lib/yard/handlers/base.rb
 ${GEM_LIBDIR}/lib/yard/handlers/c/alias_handler.rb
@@ -171,6 +172,7 @@ ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/statement.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/statement_list.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/legacy/token_list.rb
 ${GEM_LIBDIR}/lib/yard/parser/ruby/ruby_parser.rb
+${GEM_LIBDIR}/lib/yard/parser/ruby/token_resolver.rb
 ${GEM_LIBDIR}/lib/yard/parser/source_parser.rb
 ${GEM_LIBDIR}/lib/yard/rake/yardoc_task.rb
 ${GEM_LIBDIR}/lib/yard/registry.rb
@@ -236,6 +238,7 @@ ${GEM_LIBDIR}/lib/yard/tags/ref_tag.rb
 ${GEM_LIBDIR}/lib/yard/tags/ref_tag_list.rb
 ${GEM_LIBDIR}/lib/yard/tags/tag.rb
 ${GEM_LIBDIR}/lib/yard/tags/tag_format_error.rb
+${GEM_LIBDIR}/lib/yard/tags/types_explainer.rb
 ${GEM_LIBDIR}/lib/yard/templates/engine.rb
 ${GEM_LIBDIR}/lib/yard/templates/erb_cache.rb
 ${GEM_LIBDIR}/lib/yard/templates/helpers/base_helper.rb
@@ -290,6 +293,7 @@ ${GEM_LIBDIR}/spec/core_ext/string_spec.rb
 ${GEM_LIBDIR}/spec/core_ext/symbol_hash_spec.rb
 ${GEM_LIBDIR}/spec/docstring_parser_spec.rb
 ${GEM_LIBDIR}/spec/docstring_spec.rb
+${GEM_LIBDIR}/spec/examples.txt
 ${GEM_LIBDIR}/spec/handlers/alias_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/attribute_handler_spec.rb
 ${GEM_LIBDIR}/spec/handlers/base_spec.rb
@@ -367,6 +371,7 @@ ${GEM_LIBDIR}/spec/parser/ruby/ast_node_spec.rb
 ${GEM_LIBDIR}/spec/parser/ruby/legacy/statement_list_spec.rb
 ${GEM_LIBDIR}/spec/parser/ruby/legacy/token_list_spec.rb
 ${GEM_LIBDIR}/spec/parser/ruby/ruby_parser_spec.rb
+${GEM_LIBDIR}/spec/parser/ruby/token_resolver_spec.rb
 ${GEM_LIBDIR}/spec/parser/source_parser_spec.rb
 ${GEM_LIBDIR}/spec/parser/tag_parsing_spec.rb
 ${GEM_LIBDIR}/spec/rake/yardoc_task_spec.rb
@@ -400,6 +405,7 @@ ${GEM_LIBDIR}/spec/tags/directives_spec.rb
 ${GEM_LIBDIR}/spec/tags/library_spec.rb
 ${GEM_LIBDIR}/spec/tags/overload_tag_spec.rb
 ${GEM_LIBDIR}/spec/tags/ref_tag_list_spec.rb
+${GEM_LIBDIR}/spec/tags/types_explainer_spec.rb
 ${GEM_LIBDIR}/spec/templates/class_spec.rb
 ${GEM_LIBDIR}/spec/templates/constant_spec.rb
 ${GEM_LIBDIR}/spec/templates/engine_spec.rb
@@ -419,6 +425,8 @@ ${GEM_LIBDIR}/spec/templates/examples/method004.html
 ${GEM_LIBDIR}/spec/templates/examples/method004.txt
 ${GEM_LIBDIR}/spec/templates/examples/method005.html
 ${GEM_LIBDIR}/spec/templates/examples/method005.txt
+${GEM_LIBDIR}/spec/templates/examples/method006.html
+${GEM_LIBDIR}/spec/templates/examples/method006.txt
 ${GEM_LIBDIR}/spec/templates/examples/module001.dot
 ${GEM_LIBDIR}/spec/templates/examples/module001.html
 ${GEM_LIBDIR}/spec/templates/examples/module001.txt
