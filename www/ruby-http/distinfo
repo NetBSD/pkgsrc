@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/02/05 01:13:32 tsutsui Exp $
+$NetBSD: distinfo,v 1.13 2017/03/20 15:49:21 taca Exp $
 
-SHA1 (http-2.2.0.gem) = b3937af24d5f7f16024ab23f913c39876dee1fa4
-RMD160 (http-2.2.0.gem) = d8c2f4f44e78ea0f5353faa1da534db13440c381
-SHA512 (http-2.2.0.gem) = 82e3c11f8b5df23e42fea9528aab65d09e130ff12b919a0fda5539054883a29f7f512b0d120beec46e2879840c2525fdd2c8ce97311ba8417dc36947cae062f7
-Size (http-2.2.0.gem) = 66560 bytes
+SHA1 (http-2.2.1.gem) = d919019fccb6d9d572fe226509e75f365a706eb1
+RMD160 (http-2.2.1.gem) = 0459c41a109ed89e620e3108c0dd98b5c802bb68
+SHA512 (http-2.2.1.gem) = e8edf381548c04d0fb2ea0f28104d85eda92d6de6686013190e84127c4ce118fe8b8a562267aed41ad23481ca54e21a215613d7e3d920d6c5ea9f9a3c4a2032c
+Size (http-2.2.1.gem) = 66560 bytes
