@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1215 2017/03/20 10:26:19 bouyer Exp $
+$NetBSD: CHANGES-2017,v 1.1216 2017/03/20 11:18:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1483,3 +1483,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Data-GUID to 0.049 [mef 2017-03-20]
 	Updated devel/p5-Cache-FastMmap to 1.45 [mef 2017-03-20]
 	Updated mail/sympa to 6.2.16 [bouyer 2017-03-20]
+	Updated devel/p5-Log-Dispatch-FileRotate to 1.24 [mef 2017-03-20]
+	Updated devel/p5-Module-Install-ReadmeFromPod to 0.30 [mef 2017-03-20]
