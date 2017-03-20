@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.116 2017/02/28 15:20:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2017/03/20 12:29:52 adam Exp $
 
-DISTNAME=	WindowMaker-0.95.7
-PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	3
+DISTNAME=	WindowMaker-0.95.8
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	x11 wm windowmaker
-MASTER_SITES=	http://windowmaker.info/pub/source/release/
+MASTER_SITES=	http://windowmaker.org/pub/source/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.windowmaker.org/
@@ -15,16 +14,16 @@ BROKEN_GETTEXT_DETECTION=	yes
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		msgfmt pkg-config xgettext
+USE_TOOLS+=		msgfmt perl:run pkg-config xgettext
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--enable-usermenu
 CONFIGURE_ARGS+=	--enable-xinerama
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--with-defsdatadir=${PREFIX}/share/examples/WindowMaker
 CONFIGURE_ARGS+=	--with-gnustepdir=${PREFIX}/share/GNUstep
-#CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ENV+=		LINGUAS="bg ca cs cz da de el es et fi fr gl he hr hu it ja ko nl ms no pl pt ro ru se sk sl sv tr zh_CN zh_TW"
 CONFIGURE_ENV+=		CPP_PATH=${CPP:Q}
-USE_TOOLS+=		perl:run
 REPLACE_PERL+=		util/wkdemenu.pl
 
 INSTALLATION_DIRS=	share/WindowMaker/SoundSets
@@ -35,10 +34,6 @@ INSTALLATION_DIRS+=	share/doc/WindowMaker
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
 CONFIGURE_ENV+=		ac_cv_lib_Xext_XineramaGetInfo=no
-.endif
-
-.if ${MACHINE_ARCH} != "i386"
-CONFIGURE_ENV+=		ac_cv_c_inline_asm=no
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
@@ -52,19 +47,6 @@ EGDIR=			${PREFIX}/share/examples/WindowMaker
 CONF_FILES=
 .for f in WMGLOBAL WMRootMenu WMState WMWindowAttributes WindowMaker
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
-.endfor
-
-# WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
-# to support.  Currently supported options:
-#
-#	vdesktop	enable support for virtual desktop.
-
-WINDOWMAKER_OPTIONS?=	vdesktop
-
-BUILD_DEFS+=		WINDOWMAKER_OPTIONS
-
-.for option in ${WINDOWMAKER_OPTIONS}
-CONFIGURE_ARGS+=	--enable-${option}
 .endfor
 
 SUBST_CLASSES+=		fix-path
@@ -90,8 +72,9 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
@@ -103,4 +86,5 @@ post-install:
 .include "../../x11/libXpm/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
