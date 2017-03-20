@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1268 2017/03/20 15:47:05 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1269 2017/03/20 15:49:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1547,3 +1547,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-yard to 0.9.8 [taca 2017-03-20]
 	Updated time/ruby-timers to 4.1.2 [taca 2017-03-20]
 	Updated www/ruby-css-parser to 1.4.10 [taca 2017-03-20]
+	Updated www/ruby-http to 2.2.1 [taca 2017-03-20]
