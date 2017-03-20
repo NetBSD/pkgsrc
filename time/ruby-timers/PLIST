@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/13 13:28:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/03/20 15:43:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.rubocop.yml
+${GEM_LIBDIR}/.ruby-version
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/AUTHORS.md
 ${GEM_LIBDIR}/CHANGES.md
@@ -16,13 +18,13 @@ ${GEM_LIBDIR}/lib/timers/group.rb
 ${GEM_LIBDIR}/lib/timers/timer.rb
 ${GEM_LIBDIR}/lib/timers/version.rb
 ${GEM_LIBDIR}/lib/timers/wait.rb
-${GEM_LIBDIR}/spec/cancel_spec.rb
-${GEM_LIBDIR}/spec/events_spec.rb
-${GEM_LIBDIR}/spec/every_spec.rb
-${GEM_LIBDIR}/spec/group_spec.rb
-${GEM_LIBDIR}/spec/performance_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/strict_spec.rb
-${GEM_LIBDIR}/spec/timeout_spec.rb
+${GEM_LIBDIR}/spec/timers/cancel_spec.rb
+${GEM_LIBDIR}/spec/timers/events_spec.rb
+${GEM_LIBDIR}/spec/timers/every_spec.rb
+${GEM_LIBDIR}/spec/timers/group_spec.rb
+${GEM_LIBDIR}/spec/timers/performance_spec.rb
+${GEM_LIBDIR}/spec/timers/strict_spec.rb
+${GEM_LIBDIR}/spec/timers/wait_spec.rb
 ${GEM_LIBDIR}/timers.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
