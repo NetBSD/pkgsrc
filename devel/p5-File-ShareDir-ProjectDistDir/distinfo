@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:16 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/03/20 09:54:51 mef Exp $
 
-SHA1 (File-ShareDir-ProjectDistDir-1.000008.tar.gz) = 2f8c67a78090b0a35f2edde3533182888e968c96
-RMD160 (File-ShareDir-ProjectDistDir-1.000008.tar.gz) = 796b8ae24f68761b16c85fc85aea63067b4c9e8c
-SHA512 (File-ShareDir-ProjectDistDir-1.000008.tar.gz) = 20cd450926d1f054c6c6d55392b51370f83d1106048f8661a55c05483d1c16d41f388e99a14209d84dcc20b1bb855a3c305c286216e9fec2062f8bd1f29ff930
-Size (File-ShareDir-ProjectDistDir-1.000008.tar.gz) = 38792 bytes
+SHA1 (File-ShareDir-ProjectDistDir-1.000009.tar.gz) = 98c2b3f207b3e0b3a1e44a1c1e9c1a9325d8e695
+RMD160 (File-ShareDir-ProjectDistDir-1.000009.tar.gz) = c306c3f42769ffe05d35d66b7f2af571e0deb9f9
+SHA512 (File-ShareDir-ProjectDistDir-1.000009.tar.gz) = 23bbb04aaadfc7ac538f635fce73c1b16398105821f2d5b3ec415092ac8b26cef25dd537af9b0454313a7c147fbb11f4510add9cbd32925e02a30f71ca7c9676
+Size (File-ShareDir-ProjectDistDir-1.000009.tar.gz) = 39657 bytes
