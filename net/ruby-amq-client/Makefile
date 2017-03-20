@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2015/12/30 04:22:59 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/03/20 14:42:03 taca Exp $
 
 DISTNAME=	amq-client-1.0.4
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/ruby-amqp/amq-client
+HOMEPAGE=	https://github.com/ruby-amqp/amq-client
 COMMENT=	Fully-featured, low-level AMQP 0.9.1 client
 LICENSE=	mit
 
