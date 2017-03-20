@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1219 2017/03/20 12:27:36 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1220 2017/03/20 12:31:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1489,3 +1489,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-power_assert to 1.0.1 [taca 2017-03-20]
 	Added devel/p5-Term-Table version 0.006 [mef 2017-03-20]
 	Added devel/p5-Sub-Info version 0.002 [mef 2017-03-20]
+	Updated devel/ruby-sexp-processor to 4.8.0 [taca 2017-03-20]
