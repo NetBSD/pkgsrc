@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/13 15:09:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/20 14:46:28 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPLv2
@@ -26,15 +26,6 @@ ${GEM_LIBDIR}/lib/pdf/core/reference.rb
 ${GEM_LIBDIR}/lib/pdf/core/renderer.rb
 ${GEM_LIBDIR}/lib/pdf/core/stream.rb
 ${GEM_LIBDIR}/lib/pdf/core/text.rb
+${GEM_LIBDIR}/lib/pdf/core/utils.rb
 ${GEM_LIBDIR}/pdf-core.gemspec
-${GEM_LIBDIR}/spec/decimal_rounding_spec.rb
-${GEM_LIBDIR}/spec/document_state_spec.rb
-${GEM_LIBDIR}/spec/filters_spec.rb
-${GEM_LIBDIR}/spec/name_tree_spec.rb
-${GEM_LIBDIR}/spec/object_store_spec.rb
-${GEM_LIBDIR}/spec/pdf_object_spec.rb
-${GEM_LIBDIR}/spec/reference_spec.rb
-${GEM_LIBDIR}/spec/spec_helper.rb
-${GEM_LIBDIR}/spec/stream_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
