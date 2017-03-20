@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1304 2017/03/20 21:28:19 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1305 2017/03/20 21:33:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1592,3 +1592,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-MooseX-Attribute-Chained to 1.0.3 [mef 2017-03-20]
 	Updated devel/p5-Module-Install-RTx to 0.39 [mef 2017-03-20]
 	Updated devel/p5-Log-Dispatch to 2.63 [mef 2017-03-20]
+	Updated devel/p5-Test2-Suite to 0.000070 [mef 2017-03-20]
