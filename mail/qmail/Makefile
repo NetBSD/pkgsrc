@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2017/03/10 03:13:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.78 2017/03/20 16:23:19 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -14,6 +14,7 @@ LICENSE=		public-domain
 
 DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
+DEPENDS+=		queue-fix-[0-9]*:../../mail/queue-fix
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
@@ -23,11 +24,8 @@ CONFLICTS+=		mutt<=1.4.2.1nb1
 CONFLICTS+=		netqmail-[0-9]*
 CONFLICTS+=		pulsar<=0.1.1
 
-NOT_FOR_UNPRIVILEGED=	yes
-
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-PKG_DESTDIR_SUPPORT=	destdir
 USE_TOOLS+=		nroff
 
 DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q}${QMAILDIR:Q} > conf-destdir
@@ -110,7 +108,6 @@ SUBST_SED.paths+=	-e 's,@GREP@,${GREP:Q},g'
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
-USERGROUP_PHASE=	pre-install
 PKG_GROUPS=		qmail nofiles
 PKG_USERS+=		alias:nofiles
 PKG_USERS+=		qmaill:nofiles qmaild:nofiles qmailp:nofiles
@@ -120,16 +117,14 @@ PKG_HOME.${user}=	${QMAILDIR}
 .endfor
 PKG_HOME.alias=		${QMAILDIR}/alias
 
-QMAIL_ROOT_ONLY_READABLES=	qmail-clean qmail-getpw qmail-local qmail-popup
-QMAIL_ROOT_ONLY_READABLES+=	qmail-pw2u qmail-remote qmail-rspawn qmail-send
-QMAIL_ROOT_ONLY_READABLES+=	splogger
-QMAIL_ROOT_ONLY_EVERYTHINGS=	qmail-lspawn qmail-newmrh qmail-newu qmail-start
-
-SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 4555
-.for f in ${QMAIL_ROOT_ONLY_READABLES}
+SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 04711
+.for f in qmail-inject qmail-pop3d qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-qread qmail-qstat qmail-showctl qmail-smtpd qmail-tcpok qmail-tcpto
+SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0755
+.endfor
+.for f in qmail-clean qmail-getpw qmail-local qmail-popup qmail-pw2u qmail-remote qmail-rspawn qmail-send splogger
 SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0711
 .endfor
-.for f in ${QMAIL_ROOT_ONLY_EVERYTHINGS}
+.for f in qmail-lspawn qmail-newmrh qmail-newu qmail-start
 SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0700
 .endfor
 
@@ -159,22 +154,6 @@ pre-install:
 	${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
 
 post-install: post-install-viruscan
-	# allow packaging as non-root, fix at install time with SPECIAL_PERMS
-	${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/qmail-queue
-.	for f in ${QMAIL_ROOT_ONLY_READABLES} ${QMAIL_ROOT_ONLY_EVERYTHINGS}
-	  ${CHMOD} 0755 ${DESTDIR}${PREFIX}/bin/${f}
-.	endfor
-	# qmail's installer sets strange permissions, set them back
-.	for i in bin boot
-	  ${CHGRP} ${BINGRP} ${DESTDIR}${QMAILDIR}/${i}
-.	endfor
-.	for i in doc
-	  ${CHGRP} ${SHAREGRP} ${DESTDIR}${QMAILDIR}/${i}
-.	endfor
-.	for i in ${MANDIRS}
-	  ${CHGRP} ${MANGRP} ${DESTDIR}${QMAILDIR}/${i}
-.	endfor
-
 	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR}
 
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${SHAREDIR}/setup
