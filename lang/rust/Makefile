@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/02/23 09:35:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/20 11:36:35 jperkin Exp $
 
-DISTNAME=	rustc-1.15.1-src
+DISTNAME=	rustc-1.16.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
 CATEGORIES=	lang
 MASTER_SITES=	http://static.rust-lang.org/dist/
@@ -82,7 +82,7 @@ CONFIGURE_ARGS+=	--enable-local-rust
 CONFIGURE_ARGS+=	--local-rust-root=${WRKDIR}/rust-${RUST_STAGE0_VER}-${RUST_ARCH}/rustc
 #
 DISTFILES:=		${DEFAULT_DISTFILES}
-RUST_STAGE0_VER=	1.14.0
+RUST_STAGE0_VER=	1.15.1
 #
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386) || make(distinfo) || make (makesum) || make(mdi)
 RUST_ARCH:=		i686-apple-darwin
@@ -131,7 +131,7 @@ OPSYSVARS+=		SOEXT
 SOEXT.Darwin=		dylib
 SOEXT.*=		so
 
-RUST_VERHASH=		570da8f8
+RUST_VERHASH=		63283ac5
 PLIST_SUBST+=		RUST_ARCH=${RUST_ARCH:Q}
 PLIST_SUBST+=		RUST_VERHASH=${RUST_VERHASH:Q}
 PLIST_SUBST+=		SOEXT=${SOEXT:Q}
