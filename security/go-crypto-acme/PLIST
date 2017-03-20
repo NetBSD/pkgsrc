@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/20 22:36:49 bsiegert Exp $
+gopkg/pkg/${GO_PLATFORM}/golang.org/x/crypto/acme.a
+gopkg/pkg/${GO_PLATFORM}/golang.org/x/crypto/acme/autocert.a
+gopkg/src/golang.org/x/crypto/acme/acme.go
+gopkg/src/golang.org/x/crypto/acme/acme_test.go
+gopkg/src/golang.org/x/crypto/acme/autocert/autocert.go
+gopkg/src/golang.org/x/crypto/acme/autocert/autocert_test.go
+gopkg/src/golang.org/x/crypto/acme/autocert/cache.go
+gopkg/src/golang.org/x/crypto/acme/autocert/cache_test.go
+gopkg/src/golang.org/x/crypto/acme/autocert/renewal.go
+gopkg/src/golang.org/x/crypto/acme/autocert/renewal_test.go
+gopkg/src/golang.org/x/crypto/acme/jws.go
+gopkg/src/golang.org/x/crypto/acme/jws_test.go
+gopkg/src/golang.org/x/crypto/acme/types.go
+@pkgdir bin
