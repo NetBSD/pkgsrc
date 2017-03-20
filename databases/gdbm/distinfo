@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2016/05/22 17:24:32 wiz Exp $
+$NetBSD: distinfo,v 1.12 2017/03/20 06:02:26 adam Exp $
 
-SHA1 (gdbm-1.12.tar.gz) = 86513e8871bb376bc014e9e5a2d18a8e0a8ea2f5
-RMD160 (gdbm-1.12.tar.gz) = 5f47e6adfec14b31c3e26c1027684ba4845eef8a
-SHA512 (gdbm-1.12.tar.gz) = 25e03dceed6986f1977d304a5ad059ac6c603a88ad4aa18c831ec42df82d68006f2e04b8a3cc400d0a4970750c78ba24a3f84cdff70de9f278cfd854c059699e
-Size (gdbm-1.12.tar.gz) = 841213 bytes
+SHA1 (gdbm-1.13.tar.gz) = 7f2a8301497bbcac91808b011ca533380914fd21
+RMD160 (gdbm-1.13.tar.gz) = ad3d3258d3ae82eb16237051ea0e981178d6e93e
+SHA512 (gdbm-1.13.tar.gz) = fdb777f5b415b0578ea46b4a6fc70151a04a3568e2f2c8c0219ccad8c0d34abb773d80d5d7a06462ad1a3d6c1f3b5b7ab25f9de4f43ccf05c58db05f9a2906ad
+Size (gdbm-1.13.tar.gz) = 891987 bytes
+SHA1 (patch-src_Makefile.in) = 52b47f3dcd381143d1cdae40f1972bd989dcce1f
