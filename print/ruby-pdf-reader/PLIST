@@ -1,22 +1,21 @@
-@comment $NetBSD: PLIST,v 1.7 2016/03/15 15:01:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/03/20 15:05:43 taca Exp $
 bin/pdf_callbacks${RUBY_SUFFIX}
-bin/pdf_list_callbacks${RUBY_SUFFIX}
 bin/pdf_object${RUBY_SUFFIX}
 bin/pdf_text${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/pdf_callbacks
-${GEM_LIBDIR}/bin/pdf_list_callbacks
 ${GEM_LIBDIR}/bin/pdf_object
 ${GEM_LIBDIR}/bin/pdf_text
 ${GEM_LIBDIR}/examples/callbacks.rb
 ${GEM_LIBDIR}/examples/extract_bates.rb
 ${GEM_LIBDIR}/examples/extract_fonts.rb
 ${GEM_LIBDIR}/examples/extract_images.rb
+${GEM_LIBDIR}/examples/fuzzy_paragraphs.rb
 ${GEM_LIBDIR}/examples/hash.rb
 ${GEM_LIBDIR}/examples/metadata.rb
 ${GEM_LIBDIR}/examples/page_count.rb
@@ -26,7 +25,6 @@ ${GEM_LIBDIR}/examples/version.rb
 ${GEM_LIBDIR}/lib/pdf-reader.rb
 ${GEM_LIBDIR}/lib/pdf/hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader.rb
-${GEM_LIBDIR}/lib/pdf/reader/abstract_strategy.rb
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Bold.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-BoldOblique.afm
 ${GEM_LIBDIR}/lib/pdf/reader/afm/Courier-Oblique.afm
@@ -67,7 +65,7 @@ ${GEM_LIBDIR}/lib/pdf/reader/form_xobject.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyph_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/glyphlist.txt
 ${GEM_LIBDIR}/lib/pdf/reader/lzw.rb
-${GEM_LIBDIR}/lib/pdf/reader/metadata_strategy.rb
+${GEM_LIBDIR}/lib/pdf/reader/null_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_cache.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_hash.rb
 ${GEM_LIBDIR}/lib/pdf/reader/object_stream.rb
@@ -85,10 +83,10 @@ ${GEM_LIBDIR}/lib/pdf/reader/resource_methods.rb
 ${GEM_LIBDIR}/lib/pdf/reader/standard_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/stream.rb
 ${GEM_LIBDIR}/lib/pdf/reader/synchronized_cache.rb
-${GEM_LIBDIR}/lib/pdf/reader/text_receiver.rb
 ${GEM_LIBDIR}/lib/pdf/reader/text_run.rb
 ${GEM_LIBDIR}/lib/pdf/reader/token.rb
 ${GEM_LIBDIR}/lib/pdf/reader/transformation_matrix.rb
+${GEM_LIBDIR}/lib/pdf/reader/unimplemented_security_handler.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/built_in.rb
 ${GEM_LIBDIR}/lib/pdf/reader/width_calculator/composite.rb
