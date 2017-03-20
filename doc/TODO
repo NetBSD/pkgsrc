@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17180 2017/03/20 13:52:06 wiz Exp $
+$NetBSD: TODO,v 1.17181 2017/03/20 13:56:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1321,7 +1321,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-sqlalchemy-migrate-0.10.0
 	o py-suds-0.4.1
 	o py-sybase-0.37
-	o py-test-3.0.7
 	o py-tornado-4.4.1
 	o py-tortoisehg-4.1.1
 	o py-wxWidgets-3.0.0

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1239 2017/03/20 13:52:06 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1240 2017/03/20 13:56:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1509,3 +1509,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated wm/windowmaker to 0.95.8 [adam 2017-03-20]
 	Updated math/py-numpy to 1.12.1 [wiz 2017-03-20]
 	Updated databases/py-psycopg2 to 2.7.1 [wiz 2017-03-20]
+	Updated devel/py-test to 3.0.7 [wiz 2017-03-20]
