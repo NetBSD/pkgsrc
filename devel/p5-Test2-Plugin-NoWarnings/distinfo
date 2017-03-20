@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/11/07 10:43:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/03/20 12:49:00 mef Exp $
 
-SHA1 (Test2-Plugin-NoWarnings-0.04.tar.gz) = 08d1828880b7737f957fc56cf06f584715f3a644
-RMD160 (Test2-Plugin-NoWarnings-0.04.tar.gz) = c68a05a04874ca40dbd1b76ec53fee09845bd9db
-SHA512 (Test2-Plugin-NoWarnings-0.04.tar.gz) = 47f57c5bd5bf78821265c520f8b5736bae4fb254cbef41e270f22b3c50429615e313ef38dfb74201b8b98a85f05c5f4a3e40a7eeb7bc2d9d9937ff081d34465d
-Size (Test2-Plugin-NoWarnings-0.04.tar.gz) = 22939 bytes
+SHA1 (Test2-Plugin-NoWarnings-0.05.tar.gz) = 9bbc8ece9bd5ad6cc9e83d6272b21ff66e13b7bd
+RMD160 (Test2-Plugin-NoWarnings-0.05.tar.gz) = 907bf2f918919c0ed04cea7896afd1feeefb79c3
+SHA512 (Test2-Plugin-NoWarnings-0.05.tar.gz) = 3374f17ce0b930008a3dc29e205ab0275908b329c7079428f8754f27e73fd8961446628fd9e0dc9c8937fc9ddec41a5359b82f0c002a97c897529918885c821d
+Size (Test2-Plugin-NoWarnings-0.05.tar.gz) = 23036 bytes
