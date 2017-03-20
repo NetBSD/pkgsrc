@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.25 2017/01/05 21:19:24 roy Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.26 2017/03/20 00:30:30 roy Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -18,6 +18,34 @@
 #
 #	Possible: curses, ncurses, ncursesw, pdcurses
 #	Default: (depends)
+#
+# === Package-settable variables ===
+#
+# USE_CURSES
+#	This value represents the features the package needs from curses.
+#	If the system curses does not provide those features, then
+#	a more suitable curses is pulled in (normally ncurses).
+#
+#	Possible: wide
+#	For more possible values, see curses.builtin.mk.
+#	Default: (unset)
+#
+# FAKE_NCURSES
+#	Some packages look exclusively for ncurses or ncursesw,
+#	headers and libraries. This really is an error with the package,
+#	but patching it can be both challenging and cumbersome.
+#	Set this to YES to transform these to system curses.
+#
+#	Possible: YES, NO
+#	Default: NO
+#
+# INCOMPAT_CURSES
+#	If no test exists the missing curses feature then set this
+#	to match the platform where system curses isn't suitable.
+#	This can include the case where the system curses compiles fine,
+#	but for some reason fails to work.
+#
+#	Default: (unset)
 #
 # === Variables set by this file ===
 #
