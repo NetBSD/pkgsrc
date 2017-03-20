@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1306 2017/03/20 22:00:06 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1307 2017/03/20 22:54:17 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1594,3 +1594,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Log-Dispatch to 2.63 [mef 2017-03-20]
 	Updated devel/p5-Test2-Suite to 0.000070 [mef 2017-03-20]
 	Added devel/py-intervaltree version 2.1.0 [minskim 2017-03-20]
+	Updated security/go-crypto-acme to 0.0.20170317 [bsiegert 2017-03-20]
