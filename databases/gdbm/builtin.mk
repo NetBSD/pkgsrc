@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2013/11/23 11:29:35 obache Exp $
+# $NetBSD: builtin.mk,v 1.3 2017/03/20 06:02:26 adam Exp $
 
 BUILTIN_PKG:=			gdbm
 BUILTIN_FIND_HEADERS_VAR=	GDBM_H
@@ -56,7 +56,7 @@ USE_BUILTIN.gdbm=	yes
 .      for _dep_ in ${BUILDLINK_API_DEPENDS.gdbm}
 .        if !empty(USE_BUILTIN.gdbm:M[yY][eE][sS])
 USE_BUILTIN.gdbm!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gdbm:Q}; then	\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gdbm}; then	\
 		${ECHO} "yes";						\
 	else								\
 		${ECHO} "no";						\
