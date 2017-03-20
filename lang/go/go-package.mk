@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.9 2017/03/15 19:48:40 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.10 2017/03/20 22:33:21 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -37,7 +37,8 @@
 
 .include "../../lang/go/version.mk"
 
-GO_DIST_BASE?=		${GO_SRCPATH}
+_GO_DIST_BASE!=		basename ${GO_SRCPATH}
+GO_DIST_BASE?=		${_GO_DIST_BASE}
 GO_BUILD_PATTERN?=	${GO_SRCPATH}/...
 
 WRKSRC=			${WRKDIR}/src/${GO_SRCPATH}
@@ -58,8 +59,8 @@ PRINT_PLIST_AWK+=	{ gsub(/${GO_PLATFORM}/, \
 .if !target(post-extract)
 post-extract:
 	${RUN} ${MKDIR} ${WRKSRC}
-	${RUN} ${RM} -fr ${WRKDIR}/`basename ${GO_DIST_BASE}`/.hg
-	${RUN} ${MV} ${WRKDIR}/`basename ${GO_DIST_BASE}`/* ${WRKSRC}
+	${RUN} ${RM} -fr ${WRKDIR}/${GO_DIST_BASE}/.hg
+	${RUN} ${MV} ${WRKDIR}/${GO_DIST_BASE}/* ${WRKSRC}
 .endif
 
 .if !target(do-build)
