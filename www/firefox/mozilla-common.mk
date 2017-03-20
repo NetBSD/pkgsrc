@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.89 2017/03/07 20:45:43 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.90 2017/03/20 10:54:46 szptvlfn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -192,9 +192,6 @@ BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
-# gtk2 needed even if --enable-default-toolkit=cairo-gtk3
-BUILDLINK_API_DEPENDS.gtk2+=  gtk2+>=2.18.3nb1
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
