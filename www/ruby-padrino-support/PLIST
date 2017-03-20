@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/10/19 14:45:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/20 16:17:56 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -6,7 +6,6 @@ ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/padrino-support.rb
-${GEM_LIBDIR}/lib/padrino-support/core_ext/object_space.rb
 ${GEM_LIBDIR}/lib/padrino-support/core_ext/string/colorize.rb
 ${GEM_LIBDIR}/lib/padrino-support/default_inflections.rb
 ${GEM_LIBDIR}/lib/padrino-support/file_set.rb
