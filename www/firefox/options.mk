@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.38 2017/03/07 20:45:43 ryoon Exp $
+# $NetBSD: options.mk,v 1.39 2017/03/20 10:54:46 szptvlfn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 
@@ -31,6 +31,7 @@ PKG_SUGGESTED_OPTIONS.Linux+=	webrtc
 PLIST_VARS+=		gtk3
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
+# gtk2 needed even if --enable-default-toolkit=cairo-gtk3
 BUILDLINK_API_DEPENDS.gtk2+=  gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
 .endif
