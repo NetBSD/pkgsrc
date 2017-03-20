@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2016/10/18 15:36:34 taca Exp $
+# $NetBSD: Makefile,v 1.22 2017/03/20 15:51:33 taca Exp $
 #
 
-DISTNAME=	httpclient-2.8.2.4
+DISTNAME=	httpclient-2.8.3
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
