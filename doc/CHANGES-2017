@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1221 2017/03/20 12:33:12 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1222 2017/03/20 12:49:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Sub-Info version 0.002 [mef 2017-03-20]
 	Updated devel/ruby-sexp-processor to 4.8.0 [taca 2017-03-20]
 	Updated devel/ruby-simplecov to 0.14.1 [taca 2017-03-20]
+	Updated devel/ruby-thor to 0.19.4 [taca 2017-03-20]
