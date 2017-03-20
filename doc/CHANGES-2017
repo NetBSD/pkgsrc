@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1216 2017/03/20 11:18:16 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1217 2017/03/20 11:36:43 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1485,3 +1485,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/sympa to 6.2.16 [bouyer 2017-03-20]
 	Updated devel/p5-Log-Dispatch-FileRotate to 1.24 [mef 2017-03-20]
 	Updated devel/p5-Module-Install-ReadmeFromPod to 0.30 [mef 2017-03-20]
+	Updated lang/rust to 1.16.0 [jperkin 2017-03-20]
