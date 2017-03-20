@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.6 2014/05/30 21:35:04 schmonz Exp $
+# $NetBSD: INSTALL,v 1.7 2017/03/20 16:23:19 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
@@ -54,6 +54,9 @@ EOF
 	;;
 
 POST-INSTALL)
+	if ! [ -d ${QMAIL_QUEUE_DIR} ] || ! [ -d ${QMAIL_QUEUE_DIR}/info ]; then
+		${PREFIX}/bin/queue-fix ${QMAIL_QUEUE_DIR}
+	fi
 	if ! [ -z ${QMAIL_QUEUE_EXTRA} ]; then
 		${CAT} <<EOF
 ===========================================================================
