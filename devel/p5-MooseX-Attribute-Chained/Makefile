@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 19:23:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/03/20 21:20:58 mef Exp $
 #
 
-DISTNAME=	MooseX-Attribute-Chained-1.0.2
+DISTNAME=	MooseX-Attribute-Chained-1.0.3
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -19,6 +18,8 @@ PERL5_PACKLIST=		auto/MooseX/Attribute/Chained/.packlist
 
 DEPENDS+=		p5-Moose>=0:../../devel/p5-Moose
 DEPENDS+=		p5-Try-Tiny>=0:../../devel/p5-Try-Tiny
+# for make test
+BUILD_DEPENDS+=		p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
