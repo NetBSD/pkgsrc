@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/20 21:59:04 minskim Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/intervaltree/__init__.py
+${PYSITELIB}/intervaltree/__init__.pyo
+${PYSITELIB}/intervaltree/__init__.pyc
+${PYSITELIB}/intervaltree/interval.pyo
+${PYSITELIB}/intervaltree/interval.pyc
+${PYSITELIB}/intervaltree/intervaltree.pyo
+${PYSITELIB}/intervaltree/intervaltree.pyc
+${PYSITELIB}/intervaltree/node.pyo
+${PYSITELIB}/intervaltree/node.pyc
+${PYSITELIB}/intervaltree/interval.py
+${PYSITELIB}/intervaltree/intervaltree.py
+${PYSITELIB}/intervaltree/node.py
