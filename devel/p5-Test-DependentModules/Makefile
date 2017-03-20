@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 19:23:36 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/03/20 09:16:46 mef Exp $
 
 DISTNAME=	Test-DependentModules-0.26
 PKGNAME=	p5-${DISTNAME}
@@ -25,7 +25,10 @@ BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 BUILD_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
 BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
+BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 BUILD_DEPENDS+=	p5-File-Copy-Recursive-[0-9]*:../../sysutils/p5-File-Copy-Recursive
+BUILD_DEPENDS+=	p5-Specio-[0-9]*:../../devel/p5-Specio
+BUILD_DEPENDS+=	p5-Params-ValidationCompiler-[0-9]*:../../devel/p5-Params-ValidationCompiler
 
 PERL5_PACKLIST=	auto/Test/DependentModules/.packlist
 USE_LANGUAGES=	# none
