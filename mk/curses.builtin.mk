@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.15 2017/03/20 00:10:06 roy Exp $
+# $NetBSD: curses.builtin.mk,v 1.16 2017/03/20 10:03:27 roy Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -6,49 +6,26 @@ BUILTIN_FIND_LIBS:=				curses
 BUILTIN_FIND_HEADERS_VAR:=			H_CURSES
 BUILTIN_FIND_HEADERS.H_CURSES=			curses.h
 
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_GETSYX
-BUILTIN_FIND_FILES.H_CURSES_GETSYX=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_GETSYX=		getsyx
+# Functions and defines to search for.
+# These are valid USE_CURSES options and will determine whether the
+# package can use the builtin curses or not.
+#
+BUILTIN_TEST_CURSES_FUNCS=	chgat getsyx halfdelay putwin
+BUILTIN_TEST_CURSES_FUNCS+=	resize_term resizeterm set_escdelay syncok
+BUILTIN_TEST_CURSES_FUNCS+=	wgetnstr wsyncup mvwchgat
+BUILTIN_TEST_CURSES_DEFINES=	WA_NORMAL
 
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_HALFDELAY
-BUILTIN_FIND_FILES.H_CURSES_HALFDELAY=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_HALFDELAY=		halfdelay
+.for func in ${BUILTIN_TEST_CURSES_FUNCS}
+BUILTIN_FIND_FILES_VAR+=			H_CURSES_${func:tu}
+BUILTIN_FIND_FILES.H_CURSES_${func:tu}=		${H_CURSES}
+BUILTIN_FIND_GREP.H_CURSES_${func:tu}=		${func}x
+.endfor
 
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_PUTWIN
-BUILTIN_FIND_FILES.H_CURSES_PUTWIN=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_PUTWIN=		putwin
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_RESIZE_TERM
-BUILTIN_FIND_FILES.H_CURSES_RESIZE_TERM=	${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_RESIZE_TERM=		resize_term
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_RESIZETERM
-BUILTIN_FIND_FILES.H_CURSES_RESIZETERM=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_RESIZETERM=		resizeterm
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_SET_ESCDELAY
-BUILTIN_FIND_FILES.H_CURSES_SET_ESCDELAY=	${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_SET_ESCDELAY=	set_escdelay
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_SYNCOK
-BUILTIN_FIND_FILES.H_CURSES_SYNCOK=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_SYNCOK=		syncok
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_WA_NORMAL
-BUILTIN_FIND_FILES.H_CURSES_WA_NORMAL=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_WA_NORMAL=		WA_NORMAL
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_WGETNSTR
-BUILTIN_FIND_FILES.H_CURSES_WGETNSTR=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_WGETNSTR=		wgetnstr
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_WSYNCUP
-BUILTIN_FIND_FILES.H_CURSES_WSYNCUP=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_WSYNCUP=		wsyncup
-
-BUILTIN_FIND_FILES_VAR+=			H_CURSES_MVWCHGAT
-BUILTIN_FIND_FILES.H_CURSES_MVWCHGAT=		${H_CURSES}
-BUILTIN_FIND_GREP.H_CURSES_MVWCHGAT=		mvwchgat
+.for defn in ${BUILTIN_TEST_CURSES_DEFINES}
+BUILTIN_FIND_FILES_VAR+=			H_CURSES_${defn}
+BUILTIN_FIND_FILES.H_CURSES_${defn}=		${H_CURSES}
+BUILTIN_FIND_GREP.H_CURSES_${defn}=		${defn}
+.endfor
 
 .include "buildlink3/bsd.builtin.mk"
 
@@ -92,63 +69,18 @@ USE_BUILTIN.curses!=							\
 # If it is set to chgat, a curses implementation with chgat(3) support
 # is considered good enough.
 .if defined(USE_CURSES) && empty(USE_CURSES:M[yY][eE][sS])
-.  if !empty(USE_CURSES:Mchgat) && !empty(H_CURSES_MVWCHGAT:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.  endif
-# same for getsyx(3)
-.  if !empty(USE_CURSES:Mgetsyx)
-.    if !empty(H_CURSES_GETSYX:M__nonexistent__)
+.  for func in ${BUILTIN_TEST_CURSES_FUNCS}
+.    if !empty(USE_CURSES:M${func}) && \
+	!empty(H_CURSES_${func:tu}:M__nonexistent__)
 USE_BUILTIN.curses=	no
 .    endif
-.  endif
-# same for halfdelay(3)
-.  if !empty(USE_CURSES:Mhalfdelay)
-.    if !empty(H_CURSES_HALFDELAY:M__nonexistent__)
+.  endfor
+.  for defn in ${BUILTIN_TEST_CURSES_DEFINES}
+.    if !empty(USE_CURSES:M${defn}) && \
+	!empty(H_CURSES_${defn}:M__nonexistent__)
 USE_BUILTIN.curses=	no
 .    endif
-.  endif
-# same for putwin(3)
-.  if !empty(USE_CURSES:Mputwin) && !empty(H_CURSES_PUTWIN:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.  endif
-# same for set_escdelay(3)
-.  if !empty(USE_CURSES:Mset_escdelay)
-.    if !empty(H_CURSES_SET_ESCDELAY:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.    endif
-.  endif
-# same for syncok(3)
-.  if !empty(USE_CURSES:Msyncok)
-.    if !empty(H_CURSES_SYNCOK:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.    endif
-.  endif
-# same for resize_term(3)
-.  if !empty(USE_CURSES:Mresize_term)
-.    if !empty(H_CURSES_RESIZE_TERM:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.    endif
-.  endif
-# same for resizeterm(3)
-.  if !empty(USE_CURSES:Mresizeterm)
-.    if !empty(H_CURSES_RESIZETERM:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.    endif
-.  endif
-# same for WA_NORMAL
-.  if !empty(USE_CURSES:MWA_NORMAL)
-.    if !empty(H_CURSES_WA_NORMAL:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.    endif
-.  endif
-# same for wgetnstr(3)
-.  if !empty(USE_CURSES:Mwgetnstr) && !empty(H_CURSES_WGETNSTR:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.  endif
-# same for wsyncup(3)
-.  if !empty(USE_CURSES:Mwsyncup) && !empty(H_CURSES_WSYNCUP:M__nonexistent__)
-USE_BUILTIN.curses=	no
-.  endif
+.  endfor
 # AFAIK there is no way of working out if a system curses library has wide
 # character support. So be safe and say no unless we know for sure.
 .  if !empty(USE_CURSES:Mwide)
