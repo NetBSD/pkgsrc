@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/01/24 09:10:06 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2017/03/20 06:02:26 adam Exp $
 
 BUILDLINK_TREE+=	gdbm
 
@@ -9,6 +9,7 @@ BUILDLINK_API_DEPENDS.gdbm+=	gdbm>=1.8.3
 BUILDLINK_ABI_DEPENDS.gdbm+=	gdbm>=1.10nb3
 BUILDLINK_PKGSRCDIR.gdbm?=	../../databases/gdbm
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .endif # GDBM_BUILDLINK3_MK
 

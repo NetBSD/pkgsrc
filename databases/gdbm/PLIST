@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2014/05/23 20:49:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/03/20 06:02:26 adam Exp $
 bin/gdbm_dump
 bin/gdbm_load
 bin/gdbmtool
@@ -9,6 +9,7 @@ man/man1/gdbm_dump.1
 man/man1/gdbm_load.1
 man/man1/gdbmtool.1
 man/man3/gdbm.3
+share/locale/da/LC_MESSAGES/gdbm.mo
 share/locale/de/LC_MESSAGES/gdbm.mo
 share/locale/eo/LC_MESSAGES/gdbm.mo
 share/locale/fi/LC_MESSAGES/gdbm.mo

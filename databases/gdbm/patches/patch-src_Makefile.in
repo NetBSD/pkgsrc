@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2017/03/20 06:02:26 adam Exp $
+
+Fix parallel build.
+
+--- src/Makefile.in.orig	2017-03-20 05:31:29.000000000 +0000
++++ src/Makefile.in
+@@ -829,7 +829,7 @@ distdir: $(DISTFILES)
+ check-am: all-am
+ check: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) check-am
+-all-am: Makefile $(LIBRARIES) $(LTLIBRARIES) $(PROGRAMS) $(HEADERS)
++all-am: Makefile $(LIBRARIES) $(LTLIBRARIES) .WAIT $(PROGRAMS) $(HEADERS)
+ install-binPROGRAMS: install-libLTLIBRARIES
+ 
+ installdirs:
