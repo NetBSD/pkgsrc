@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/12/04 07:26:55 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/20 13:03:15 taca Exp $
 
-DISTNAME=		cairo-1.15.3
+DISTNAME=		cairo-1.15.5
 CATEGORIES=		graphics
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -13,6 +13,7 @@ LICENSE=		ruby-license OR gnu-gpl-v2
 #	${SETENV} ${TEST_ENV} ${RUBY} test/run-test.rb
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
+
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../lang/ruby/gem.mk"
