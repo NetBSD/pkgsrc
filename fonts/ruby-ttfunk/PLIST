@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/03 13:56:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/03/20 14:48:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/GPLv2
 ${GEM_LIBDIR}/GPLv3
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README.rdoc
-${GEM_LIBDIR}/data/fonts/DejaVuSans.ttf
-${GEM_LIBDIR}/examples/metrics.rb
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/ttfunk.rb
+${GEM_LIBDIR}/lib/ttfunk/collection.rb
 ${GEM_LIBDIR}/lib/ttfunk/directory.rb
 ${GEM_LIBDIR}/lib/ttfunk/encoding/mac_roman.rb
 ${GEM_LIBDIR}/lib/ttfunk/encoding/windows_1252.rb
