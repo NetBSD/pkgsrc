@@ -1,0 +1,153 @@
+$NetBSD: patch-XSA-209-1,v 1.1 2017/03/20 18:09:21 bouyer Exp $
+
+From 8f63265efeb6f92e63f7e749cb26131b68b20df7 Mon Sep 17 00:00:00 2001
+From: Li Qiang <liqiang6-s@360.cn>
+Date: Mon, 13 Feb 2017 15:22:15 +0000
+Subject: [PATCH] cirrus: fix oob access issue (CVE-2017-2615)
+
+When doing bitblt copy in backward mode, we should minus the
+blt width first just like the adding in the forward mode. This
+can avoid the oob access of the front of vga's vram.
+
+This is XSA-208.
+
+upstream-commit-id: 62d4c6bd5263bb8413a06c80144fc678df6dfb64
+
+Signed-off-by: Li Qiang <liqiang6-s@360.cn>
+
+{ kraxel: with backward blits (negative pitch) addr is the topmost
+          address, so check it as-is against vram size ]
+
+Cc: qemu-stable@nongnu.org
+From 52b7f43c8fa185ab856bcaacda7abc9a6fc07f84 Mon Sep 17 00:00:00 2001
+From: Bruce Rogers <brogers@suse.com>
+Date: Tue, 21 Feb 2017 10:54:38 -0800
+Subject: [PATCH 1/2] display: cirrus: ignore source pitch value as needed in
+ blit_is_unsafe
+
+Commit 4299b90 added a check which is too broad, given that the source
+pitch value is not required to be initialized for solid fill operations.
+This patch refines the blit_is_unsafe() check to ignore source pitch in
+that case. After applying the above commit as a security patch, we
+noticed the SLES 11 SP4 guest gui failed to initialize properly.
+
+Signed-off-by: Bruce Rogers <brogers@suse.com>
+Message-id: 20170109203520.5619-1-brogers@suse.com
+Signed-off-by: Gerd Hoffmann <kraxel@redhat.com>
+---
+ hw/display/cirrus_vga.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/hw/display/cirrus_vga.c b/hw/display/cirrus_vga.c
+index 7bf3707..34a6900 100644
+--- qemu-xen/hw/display/cirrus_vga.c.orig
++++ qemu-xen/hw/display/cirrus_vga.c
+@@ -288,7 +288,7 @@ static bool blit_region_is_unsafe(struct CirrusVGAState *s,
+     return false;
+ }
+ 
+-static bool blit_is_unsafe(struct CirrusVGAState *s)
++static bool blit_is_unsafe(struct CirrusVGAState *s, bool dst_only)
+ {
+     /* should be the case, see cirrus_bitblt_start */
+     assert(s->cirrus_blt_width > 0);
+@@ -302,6 +302,9 @@ static bool blit_is_unsafe(struct CirrusVGAState *s)
+                               s->cirrus_blt_dstaddr & s->cirrus_addr_mask)) {
+         return true;
+     }
++    if (dst_only) {
++        return false;
++    }
+     if (blit_region_is_unsafe(s, s->cirrus_blt_srcpitch,
+                               s->cirrus_blt_srcaddr & s->cirrus_addr_mask)) {
+         return true;
+@@ -667,7 +670,7 @@ static int cirrus_bitblt_common_patterncopy(CirrusVGAState * s,
+ 
+     dst = s->vga.vram_ptr + (s->cirrus_blt_dstaddr & s->cirrus_addr_mask);
+ 
+-    if (blit_is_unsafe(s))
++    if (blit_is_unsafe(s, false))
+         return 0;
+ 
+     (*s->cirrus_rop) (s, dst, src,
+@@ -685,7 +688,7 @@ static int cirrus_bitblt_solidfill(CirrusVGAState *s, int blt_rop)
+ {
+     cirrus_fill_t rop_func;
+ 
+-    if (blit_is_unsafe(s)) {
++    if (blit_is_unsafe(s, true)) {
+         return 0;
+     }
+     rop_func = cirrus_fill[rop_to_index[blt_rop]][s->cirrus_blt_pixelwidth - 1];
+@@ -784,7 +787,7 @@ static void cirrus_do_copy(CirrusVGAState *s, int dst, int src, int w, int h)
+ 
+ static int cirrus_bitblt_videotovideo_copy(CirrusVGAState * s)
+ {
+-    if (blit_is_unsafe(s))
++    if (blit_is_unsafe(s, false))
+         return 0;
+ 
+     cirrus_do_copy(s, s->cirrus_blt_dstaddr - s->vga.start_addr,
+-- 
+2.1.4
+
+From 15268f91fbe75b38a851c458aef74e693d646ea5 Mon Sep 17 00:00:00 2001
+From: Gerd Hoffmann <kraxel@redhat.com>
+Date: Tue, 21 Feb 2017 10:54:59 -0800
+Subject: [PATCH 2/2] cirrus: add blit_is_unsafe call to
+ cirrus_bitblt_cputovideo
+
+CIRRUS_BLTMODE_MEMSYSSRC blits do NOT check blit destination
+and blit width, at all.  Oops.  Fix it.
+
+Security impact: high.
+
+The missing blit destination check allows to write to host memory.
+Basically same as CVE-2014-8106 for the other blit variants.
+
+The missing blit width check allows to overflow cirrus_bltbuf,
+with the attractive target cirrus_srcptr (current cirrus_bltbuf write
+position) being located right after cirrus_bltbuf in CirrusVGAState.
+
+Due to cirrus emulation writing cirrus_bltbuf bytewise the attacker
+hasn't full control over cirrus_srcptr though, only one byte can be
+changed.  Once the first byte has been modified further writes land
+elsewhere.
+
+[ This is CVE-2017-2620 / XSA-209  - Ian Jackson ]
+
+Reported-by: Gerd Hoffmann <ghoffman@redhat.com>
+Signed-off-by: Gerd Hoffmann <kraxel@redhat.com>
+---
+ hw/display/cirrus_vga.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/hw/display/cirrus_vga.c b/hw/display/cirrus_vga.c
+index 34a6900..5901250 100644
+--- qemu-xen/hw/display/cirrus_vga.c.orig
++++ qemu-xen/hw/display/cirrus_vga.c
+@@ -865,6 +865,10 @@ static int cirrus_bitblt_cputovideo(CirrusVGAState * s)
+ {
+     int w;
+ 
++    if (blit_is_unsafe(s, true)) {
++        return 0;
++    }
++
+     s->cirrus_blt_mode &= ~CIRRUS_BLTMODE_MEMSYSSRC;
+     s->cirrus_srcptr = &s->cirrus_bltbuf[0];
+     s->cirrus_srcptr_end = &s->cirrus_bltbuf[0];
+@@ -890,6 +894,10 @@ static int cirrus_bitblt_cputovideo(CirrusVGAState * s)
+ 	}
+         s->cirrus_srccounter = s->cirrus_blt_srcpitch * s->cirrus_blt_height;
+     }
++
++    /* the blit_is_unsafe call above should catch this */
++    assert(s->cirrus_blt_srcpitch <= CIRRUS_BLTBUFSIZE);
++
+     s->cirrus_srcptr = s->cirrus_bltbuf;
+     s->cirrus_srcptr_end = s->cirrus_bltbuf + s->cirrus_blt_srcpitch;
+     cirrus_update_memory_access(s);
+-- 
+2.1.4
+
