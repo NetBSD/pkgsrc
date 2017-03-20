@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1269 2017/03/20 15:49:51 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1270 2017/03/20 15:52:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/ruby-timers to 4.1.2 [taca 2017-03-20]
 	Updated www/ruby-css-parser to 1.4.10 [taca 2017-03-20]
 	Updated www/ruby-http to 2.2.1 [taca 2017-03-20]
+	Updated www/ruby-httpclient to 2.8.3 [taca 2017-03-20]
