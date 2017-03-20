@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1300 2017/03/20 20:34:58 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1301 2017/03/20 21:16:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-traitlets to 4.3.2nb1 [minskim 2017-03-20]
 	Added devel/py-cachetools version 2.0.0 [minskim 2017-03-20]
 	Updated net/youtube-dl to 20170320 [leot 2017-03-20]
+	Updated devel/p5-Tree-Simple to 1.30 [mef 2017-03-20]
