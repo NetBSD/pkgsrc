@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/25 02:51:43 maya Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/03/21 14:46:33 maya Exp $
 bin/streamlink
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -114,8 +114,12 @@ ${PYSITELIB}/streamlink/plugins/aftonbladet.pyo
 ${PYSITELIB}/streamlink/plugins/aftonbladet.pyc
 ${PYSITELIB}/streamlink/plugins/alieztv.pyo
 ${PYSITELIB}/streamlink/plugins/alieztv.pyc
+${PYSITELIB}/streamlink/plugins/animelab.pyo
+${PYSITELIB}/streamlink/plugins/animelab.pyc
 ${PYSITELIB}/streamlink/plugins/antenna.pyo
 ${PYSITELIB}/streamlink/plugins/antenna.pyc
+${PYSITELIB}/streamlink/plugins/app17.pyo
+${PYSITELIB}/streamlink/plugins/app17.pyc
 ${PYSITELIB}/streamlink/plugins/ard_live.pyo
 ${PYSITELIB}/streamlink/plugins/ard_live.pyc
 ${PYSITELIB}/streamlink/plugins/ard_mediathek.pyo
@@ -164,6 +168,8 @@ ${PYSITELIB}/streamlink/plugins/cybergame.pyo
 ${PYSITELIB}/streamlink/plugins/cybergame.pyc
 ${PYSITELIB}/streamlink/plugins/dailymotion.pyo
 ${PYSITELIB}/streamlink/plugins/dailymotion.pyc
+${PYSITELIB}/streamlink/plugins/daisuki.pyo
+${PYSITELIB}/streamlink/plugins/daisuki.pyc
 ${PYSITELIB}/streamlink/plugins/dingittv.pyo
 ${PYSITELIB}/streamlink/plugins/dingittv.pyc
 ${PYSITELIB}/streamlink/plugins/disney_de.pyo
@@ -184,6 +190,8 @@ ${PYSITELIB}/streamlink/plugins/dplay.pyo
 ${PYSITELIB}/streamlink/plugins/dplay.pyc
 ${PYSITELIB}/streamlink/plugins/drdk.pyo
 ${PYSITELIB}/streamlink/plugins/drdk.pyc
+${PYSITELIB}/streamlink/plugins/earthcam.pyo
+${PYSITELIB}/streamlink/plugins/earthcam.pyc
 ${PYSITELIB}/streamlink/plugins/eurocom.pyo
 ${PYSITELIB}/streamlink/plugins/eurocom.pyc
 ${PYSITELIB}/streamlink/plugins/euronews.pyo
@@ -196,6 +204,8 @@ ${PYSITELIB}/streamlink/plugins/filmon_us.pyo
 ${PYSITELIB}/streamlink/plugins/filmon_us.pyc
 ${PYSITELIB}/streamlink/plugins/foxtr.pyo
 ${PYSITELIB}/streamlink/plugins/foxtr.pyc
+${PYSITELIB}/streamlink/plugins/funimationnow.pyo
+${PYSITELIB}/streamlink/plugins/funimationnow.pyc
 ${PYSITELIB}/streamlink/plugins/furstream.pyo
 ${PYSITELIB}/streamlink/plugins/furstream.pyc
 ${PYSITELIB}/streamlink/plugins/gaminglive.pyo
@@ -258,6 +268,8 @@ ${PYSITELIB}/streamlink/plugins/openrectv.pyo
 ${PYSITELIB}/streamlink/plugins/openrectv.pyc
 ${PYSITELIB}/streamlink/plugins/orf_tvthek.pyo
 ${PYSITELIB}/streamlink/plugins/orf_tvthek.pyc
+${PYSITELIB}/streamlink/plugins/ovvatv.pyo
+${PYSITELIB}/streamlink/plugins/ovvatv.pyc
 ${PYSITELIB}/streamlink/plugins/pandatv.pyo
 ${PYSITELIB}/streamlink/plugins/pandatv.pyc
 ${PYSITELIB}/streamlink/plugins/periscope.pyo
@@ -286,8 +298,12 @@ ${PYSITELIB}/streamlink/plugins/schoolism.pyo
 ${PYSITELIB}/streamlink/plugins/schoolism.pyc
 ${PYSITELIB}/streamlink/plugins/seemeplay.pyo
 ${PYSITELIB}/streamlink/plugins/seemeplay.pyc
+${PYSITELIB}/streamlink/plugins/seetv.pyo
+${PYSITELIB}/streamlink/plugins/seetv.pyc
 ${PYSITELIB}/streamlink/plugins/servustv.pyo
 ${PYSITELIB}/streamlink/plugins/servustv.pyc
+${PYSITELIB}/streamlink/plugins/showroom.pyo
+${PYSITELIB}/streamlink/plugins/showroom.pyc
 ${PYSITELIB}/streamlink/plugins/speedrunslive.pyo
 ${PYSITELIB}/streamlink/plugins/speedrunslive.pyc
 ${PYSITELIB}/streamlink/plugins/sportal.pyo
@@ -340,6 +356,10 @@ ${PYSITELIB}/streamlink/plugins/tvcatchup.pyo
 ${PYSITELIB}/streamlink/plugins/tvcatchup.pyc
 ${PYSITELIB}/streamlink/plugins/tvplayer.pyo
 ${PYSITELIB}/streamlink/plugins/tvplayer.pyc
+${PYSITELIB}/streamlink/plugins/tvrby.pyo
+${PYSITELIB}/streamlink/plugins/tvrby.pyc
+${PYSITELIB}/streamlink/plugins/tvrplus.pyo
+${PYSITELIB}/streamlink/plugins/tvrplus.pyc
 ${PYSITELIB}/streamlink/plugins/twitch.pyo
 ${PYSITELIB}/streamlink/plugins/twitch.pyc
 ${PYSITELIB}/streamlink/plugins/ustreamtv.pyo
@@ -364,6 +384,8 @@ ${PYSITELIB}/streamlink/plugins/webtv.pyo
 ${PYSITELIB}/streamlink/plugins/webtv.pyc
 ${PYSITELIB}/streamlink/plugins/weeb.pyo
 ${PYSITELIB}/streamlink/plugins/weeb.pyc
+${PYSITELIB}/streamlink/plugins/wwenetwork.pyo
+${PYSITELIB}/streamlink/plugins/wwenetwork.pyc
 ${PYSITELIB}/streamlink/plugins/younow.pyo
 ${PYSITELIB}/streamlink/plugins/younow.pyc
 ${PYSITELIB}/streamlink/plugins/youtube.pyo
@@ -377,7 +399,9 @@ ${PYSITELIB}/streamlink/plugins/afreeca.py
 ${PYSITELIB}/streamlink/plugins/afreecatv.py
 ${PYSITELIB}/streamlink/plugins/aftonbladet.py
 ${PYSITELIB}/streamlink/plugins/alieztv.py
+${PYSITELIB}/streamlink/plugins/animelab.py
 ${PYSITELIB}/streamlink/plugins/antenna.py
+${PYSITELIB}/streamlink/plugins/app17.py
 ${PYSITELIB}/streamlink/plugins/ard_live.py
 ${PYSITELIB}/streamlink/plugins/ard_mediathek.py
 ${PYSITELIB}/streamlink/plugins/artetv.py
@@ -402,6 +426,7 @@ ${PYSITELIB}/streamlink/plugins/connectcast.py
 ${PYSITELIB}/streamlink/plugins/crunchyroll.py
 ${PYSITELIB}/streamlink/plugins/cybergame.py
 ${PYSITELIB}/streamlink/plugins/dailymotion.py
+${PYSITELIB}/streamlink/plugins/daisuki.py
 ${PYSITELIB}/streamlink/plugins/dingittv.py
 ${PYSITELIB}/streamlink/plugins/disney_de.py
 ${PYSITELIB}/streamlink/plugins/dmcloud.py
@@ -412,12 +437,14 @@ ${PYSITELIB}/streamlink/plugins/dommune.py
 ${PYSITELIB}/streamlink/plugins/douyutv.py
 ${PYSITELIB}/streamlink/plugins/dplay.py
 ${PYSITELIB}/streamlink/plugins/drdk.py
+${PYSITELIB}/streamlink/plugins/earthcam.py
 ${PYSITELIB}/streamlink/plugins/eurocom.py
 ${PYSITELIB}/streamlink/plugins/euronews.py
 ${PYSITELIB}/streamlink/plugins/expressen.py
 ${PYSITELIB}/streamlink/plugins/filmon.py
 ${PYSITELIB}/streamlink/plugins/filmon_us.py
 ${PYSITELIB}/streamlink/plugins/foxtr.py
+${PYSITELIB}/streamlink/plugins/funimationnow.py
 ${PYSITELIB}/streamlink/plugins/furstream.py
 ${PYSITELIB}/streamlink/plugins/gaminglive.py
 ${PYSITELIB}/streamlink/plugins/gomexp.py
@@ -449,6 +476,7 @@ ${PYSITELIB}/streamlink/plugins/nrk.py
 ${PYSITELIB}/streamlink/plugins/oldlivestream.py
 ${PYSITELIB}/streamlink/plugins/openrectv.py
 ${PYSITELIB}/streamlink/plugins/orf_tvthek.py
+${PYSITELIB}/streamlink/plugins/ovvatv.py
 ${PYSITELIB}/streamlink/plugins/pandatv.py
 ${PYSITELIB}/streamlink/plugins/periscope.py
 ${PYSITELIB}/streamlink/plugins/picarto.py
@@ -463,7 +491,9 @@ ${PYSITELIB}/streamlink/plugins/rtvs.py
 ${PYSITELIB}/streamlink/plugins/ruv.py
 ${PYSITELIB}/streamlink/plugins/schoolism.py
 ${PYSITELIB}/streamlink/plugins/seemeplay.py
+${PYSITELIB}/streamlink/plugins/seetv.py
 ${PYSITELIB}/streamlink/plugins/servustv.py
+${PYSITELIB}/streamlink/plugins/showroom.py
 ${PYSITELIB}/streamlink/plugins/speedrunslive.py
 ${PYSITELIB}/streamlink/plugins/sportal.py
 ${PYSITELIB}/streamlink/plugins/sportschau.py
@@ -490,6 +520,8 @@ ${PYSITELIB}/streamlink/plugins/tv8.py
 ${PYSITELIB}/streamlink/plugins/tv8cat.py
 ${PYSITELIB}/streamlink/plugins/tvcatchup.py
 ${PYSITELIB}/streamlink/plugins/tvplayer.py
+${PYSITELIB}/streamlink/plugins/tvrby.py
+${PYSITELIB}/streamlink/plugins/tvrplus.py
 ${PYSITELIB}/streamlink/plugins/twitch.py
 ${PYSITELIB}/streamlink/plugins/ustreamtv.py
 ${PYSITELIB}/streamlink/plugins/vaughnlive.py
@@ -502,6 +534,7 @@ ${PYSITELIB}/streamlink/plugins/vidio.py
 ${PYSITELIB}/streamlink/plugins/wattv.py
 ${PYSITELIB}/streamlink/plugins/webtv.py
 ${PYSITELIB}/streamlink/plugins/weeb.py
+${PYSITELIB}/streamlink/plugins/wwenetwork.py
 ${PYSITELIB}/streamlink/plugins/younow.py
 ${PYSITELIB}/streamlink/plugins/youtube.py
 ${PYSITELIB}/streamlink/plugins/zdf_mediathek.py
@@ -514,6 +547,8 @@ ${PYSITELIB}/streamlink/stream/akamaihd.pyo
 ${PYSITELIB}/streamlink/stream/akamaihd.pyc
 ${PYSITELIB}/streamlink/stream/ffmpegmux.pyo
 ${PYSITELIB}/streamlink/stream/ffmpegmux.pyc
+${PYSITELIB}/streamlink/stream/file.pyo
+${PYSITELIB}/streamlink/stream/file.pyc
 ${PYSITELIB}/streamlink/stream/flvconcat.pyo
 ${PYSITELIB}/streamlink/stream/flvconcat.pyc
 ${PYSITELIB}/streamlink/stream/hds.pyo
@@ -538,6 +573,7 @@ ${PYSITELIB}/streamlink/stream/wrappers.pyo
 ${PYSITELIB}/streamlink/stream/wrappers.pyc
 ${PYSITELIB}/streamlink/stream/akamaihd.py
 ${PYSITELIB}/streamlink/stream/ffmpegmux.py
+${PYSITELIB}/streamlink/stream/file.py
 ${PYSITELIB}/streamlink/stream/flvconcat.py
 ${PYSITELIB}/streamlink/stream/hds.py
 ${PYSITELIB}/streamlink/stream/hls.py
