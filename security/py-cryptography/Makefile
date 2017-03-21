@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/03/13 09:42:25 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2017/03/21 16:04:59 wiz Exp $
 
 DISTNAME=	cryptography-1.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -30,8 +30,6 @@ DEPENDS+=	${PYPKGPREFIX}-enum34-[0-9]*:../../devel/py-enum34
 DEPENDS+=	${PYPKGPREFIX}-ipaddress-[0-9]*:../../net/py-ipaddress
 .endif
 
-# two test failures in 1.8.1
-# https://github.com/pyca/cryptography/issues/3445
 do-test:
 	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
