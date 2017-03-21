@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/03/20 17:08:00 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/21 02:37:42 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -97,7 +97,7 @@ PERMFIXFILES=	vendor/oyejorge/less.php/lib/Less/Less.php.combine \
 .if ${PKG_PHP_VERSION} < 71
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.4.0:../../security/php-mcrypt
 .else
-DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=7.0.0:../../security/php-pecl-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 .endif
 
 pre-configure:
