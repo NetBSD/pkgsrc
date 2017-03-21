@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/11/07 00:45:30 christos Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/21 10:26:26 wiz Exp $
 
 DISTNAME=	netatalk-3.1.7
 PKGNAME=        ${DISTNAME:C/-/3-/}
@@ -50,6 +50,7 @@ CONFIGURE_ARGS+=	--with-bdb=${BUILDLINK_PREFIX.db5}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-libevent-header=${BUILDLINK_PREFIX.libevent}/include
 CONFIGURE_ARGS+=	--with-libevent-lib=${BUILDLINK_PREFIX.libevent}/lib
+CONFIGURE_ARGS+=	--without-mysql-config
 CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 # Upstream bug, was supposed to be fixed in 3.0.8?
