@@ -1,4 +1,6 @@
-$NetBSD: CHANGES-2017,v 1.1307 2017/03/20 22:54:17 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.1308 2017/03/21 00:01:38 gdt Exp $
+
+[Now in freeze for 2017Q1.]
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1595,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test2-Suite to 0.000070 [mef 2017-03-20]
 	Added devel/py-intervaltree version 2.1.0 [minskim 2017-03-20]
 	Updated security/go-crypto-acme to 0.0.20170317 [bsiegert 2017-03-20]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2017Q1 branch [gdt 2017-03-21]
