@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/03/19 15:27:13 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/03/21 02:29:38 taca Exp $
 
 DISTNAME=	sass-rails-3.2.6
 PKGREVISION=	2
@@ -11,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_RAILTIES_DEPENDS}
 DEPENDS+=	${RUBY_PKGPREFIX}-sass>=3.1.10:../../www/ruby-sass
-DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=1.3<2:../../textproc/ruby-tilt1
+DEPENDS+=	${RUBY_PKGPREFIX}-tilt1>=1.3<2:../../textproc/ruby-tilt1
 
 RUBY_RAILS_SUPPORTED=	32
 
