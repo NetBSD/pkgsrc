@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/03/21 10:26:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/03/21 20:03:03 hauke Exp $
 
 DISTNAME=	netatalk-3.1.7
 PKGNAME=        ${DISTNAME:C/-/3-/}
@@ -30,7 +30,7 @@ SMF_SRCDIR=		${WRKSRC}/distrib/initscripts
 SMF_METHODS=		netatalk_smf
 SMF_MANIFEST=		netatalk.xml
 
-CONFLICTS=		netatalk22-[0-9]* netatalk-30-[0-9]* netatalk-[0-9]* 
+CONFLICTS=		netatalk22-[0-9]* netatalk-30-[0-9]* netatalk-[0-9]*
 CONFLICTS+=		netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
