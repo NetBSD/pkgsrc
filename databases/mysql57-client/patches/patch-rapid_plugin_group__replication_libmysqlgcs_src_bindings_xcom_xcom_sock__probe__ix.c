@@ -1,6 +1,6 @@
-$NetBSD: patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_sock__probe__ix.c,v 1.1 2017/03/16 15:46:22 maya Exp $
+$NetBSD: patch-rapid_plugin_group__replication_libmysqlgcs_src_bindings_xcom_xcom_sock__probe__ix.c,v 1.2 2017/03/21 15:09:25 maya Exp $
 
-fix -fpermissive errors, ifc_buf is void*
+fix -fpermissive errors on netbsd where ifc_buf is void* and not caddr_t
 
 --- rapid/plugin/group_replication/libmysqlgcs/src/bindings/xcom/xcom/sock_probe_ix.c.orig	2016-11-28 13:32:52.000000000 +0000
 +++ rapid/plugin/group_replication/libmysqlgcs/src/bindings/xcom/xcom/sock_probe_ix.c
