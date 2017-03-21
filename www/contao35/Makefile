@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/03/20 17:03:13 taca Exp $
+# $NetBSD: Makefile,v 1.27 2017/03/21 02:37:42 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -89,7 +89,7 @@ INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR} ${CT_WEBDIR}/system/config
 .if ${PKG_PHP_VERSION} < 71
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.4.0:../../security/php-mcrypt
 .else
-DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=7.0.0:../../security/php-pecl-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.1:../../security/php-pecl-mcrypt
 .endif
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
