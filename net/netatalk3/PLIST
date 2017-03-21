@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/11/07 00:45:30 christos Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/03/21 20:03:03 hauke Exp $
 ${PLIST.ea}bin/ad
 bin/afpldaptest
 bin/afppasswd
@@ -68,6 +68,7 @@ man/man8/cnid_metad.8
 man/man8/netatalk.8
 share/aclocal/netatalk.m4
 share/examples/netatalk/afp.conf
+share/examples/netatalk/dbus-session.conf
 share/examples/netatalk/extmap.conf
 ${PLIST.pam}share/examples/netatalk/netatalk.pam
 @pkgdir libexec/psffilters
