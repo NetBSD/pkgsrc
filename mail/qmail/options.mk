@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.36 2014/11/23 19:08:22 schmonz Exp $
+# $NetBSD: options.mk,v 1.37 2017/03/23 07:24:48 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
-PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex qmail-realrcptto
-PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-netqmail
-PKG_SUPPORTED_OPTIONS+=	qmail-outgoingip qmail-viruscan
+PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex
+PKG_OPTIONS_GROUP.rcpt+=qmail-rcptcheck qmail-realrcptto
+PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-maildiruniq
+PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip qmail-viruscan
 PKG_SUGGESTED_OPTIONS+=	qmail-netqmail
 
 .include "../../mk/bsd.options.mk"
@@ -22,6 +23,13 @@ PATCHFILES+=		${BIGDNS_PATCH}
 SITES.${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
 SITES.${BIGDNS_PATCH}+=	${MASTER_SITE_LOCAL}
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=	-p1
+.endif
+
+.if !empty(PKG_OPTIONS:Mqmail-maildiruniq)
+MAILDIRUNIQ_PATCH=	qmail-1.03-maildir-uniq.patch
+PATCHFILES+=		${MAILDIRUNIQ_PATCH}
+SITES.${MAILDIRUNIQ_PATCH}=	http://www.memoryhole.net/qmail/
+PATCH_DIST_STRIP.${MAILDIRUNIQ_PATCH}=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-netqmail)
@@ -42,6 +50,13 @@ SITES.${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
 # actually http://www.arda.homeunix.net/?ddownload=409
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
 PLIST.qregex=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mqmail-rcptcheck)
+RCPTCHECK_PATCH=	qmail-smtpd.patch
+PATCHFILES+=		${RCPTCHECK_PATCH}
+SITES.${RCPTCHECK_PATCH}=	http://www.soffian.org/downloads/qmail/
+PATCH_DIST_STRIP.${RCPTCHECK_PATCH}=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-realrcptto)
