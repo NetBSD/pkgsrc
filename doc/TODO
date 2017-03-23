@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17185 2017/03/22 12:27:31 wiz Exp $
+$NetBSD: TODO,v 1.17186 2017/03/23 15:31:44 khorben Exp $
 
 Suggested new packages
 ======================
@@ -817,6 +817,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hercules-3.12
 	o hesiod-3.2.1
 	o hevea-2.28
+	o hexchat-2.12.4
 	o heyu-2.9.0
 	o hiawatha-10.4
 	o highlight-3.33
