@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/03/13 11:25:53 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/03/23 19:33:20 leot Exp $
 
 DISTNAME=	sqlmap-1.1.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlmap/}
 
@@ -8,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sqlmap.org/
 COMMENT=	Automatic SQL injection and database takeover tool
 LICENSE=	gnu-gpl-v2
+
+USE_TOOLS+=	bash:run perl:run
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
