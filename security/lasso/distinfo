@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2016/03/14 09:43:42 manu Exp $
+$NetBSD: distinfo,v 1.20 2017/03/23 17:06:58 joerg Exp $
 
 SHA1 (lasso-2.5.1.tar.gz) = fe0e68010bab6e11383003b5cf869c0447ed7a6e
 RMD160 (lasso-2.5.1.tar.gz) = 8cc0506fe8cbac770e952fdb0f067c7e58f5bb43
+SHA512 (lasso-2.5.1.tar.gz) = f20bea62c04f3082d5c423f658bafe1bdde0012321c43092ed5d5a2c3ec7b21ec27d88d9fc630743fd7c99e767d9fd92b98de5d4f7d98c3a9e680717483daae1
 Size (lasso-2.5.1.tar.gz) = 4552152 bytes
 SHA1 (patch-configure) = 8acdd57ba89fea824ea0bc6b0080298b78226678
 SHA1 (patch-configure.ac) = 8cb6a7ad3aec9a7c17892ae4e0493ad3d6a8cde1

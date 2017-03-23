@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/12/12 15:31:26 kamil Exp $
+$NetBSD: distinfo,v 1.2 2017/03/23 17:06:59 joerg Exp $
 
 SHA1 (gdmap-0.8.1.tar.gz) = d97cc7c107dbaf9f3f3ed22ee6cef6172c115295
 RMD160 (gdmap-0.8.1.tar.gz) = 72744f1d25b3409d6609b7afa982669f17f4e8b5
+SHA512 (gdmap-0.8.1.tar.gz) = 3aaf4da393aaafc350703962c05bdc2ecd8f244a9a1d614011d2073dbbd3c6bd01b77e3794068f5fc0ce2e7adb39c75a8856f2df070c7bbb685c03b976df0cf5
 Size (gdmap-0.8.1.tar.gz) = 190823 bytes
 SHA1 (patch-aa) = 55be92ca22eb8f92755bdbe32686337924366c18
 SHA1 (patch-gui_support.c) = 930a280666ab86faab34a83cd4e962a3831618f4
