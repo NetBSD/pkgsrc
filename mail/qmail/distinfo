@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2017/03/20 16:23:19 schmonz Exp $
+$NetBSD: distinfo,v 1.31 2017/03/23 07:24:48 schmonz Exp $
 
 SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
 RMD160 (qmail-1.03.tar.gz) = b851f273f1d365d38efd949b1efcf35768ffa30f
@@ -24,6 +24,10 @@ SHA1 (qregex-20060423.patch) = fe52992254e5d464ce0fa0b68cf15ee744266b83
 RMD160 (qregex-20060423.patch) = f28245fee8bcc38e84816fe379be886376740a0c
 SHA512 (qregex-20060423.patch) = 5b93deee7cce7762a8d25a6b3428c67512b81c64443e05c96cdc20fb3a9fc288a45bcb1e133ad70bd520fc807f011b9c5565f72dfb7925e9e010417eb8260631
 Size (qregex-20060423.patch) = 26745 bytes
+SHA1 (qmail-1.03-maildir-uniq.patch) = 6adeba8b04c1e11ca6a2db5a5d64944c9e184521
+RMD160 (qmail-1.03-maildir-uniq.patch) = 515d8dfc1e455a39f3695d18b5715623bc2e40ff
+SHA512 (qmail-1.03-maildir-uniq.patch) = 66a09cf13e851b1c3045cbe094cf83dbc37712bbd593c0dd2ee5f36cf6eaa055f29f23af16eed3811674ab6fbdec0a383911d2628dfcde5535873ca28b7c961c
+Size (qmail-1.03-maildir-uniq.patch) = 3903 bytes
 SHA1 (qmail-1.03-realrcptto-2006.12.10.patch) = 89e06519df0f52f748afec583e3e2ce33fe5dfb2
 RMD160 (qmail-1.03-realrcptto-2006.12.10.patch) = 0f6ad12dd24accab324097350a90f7717747eb56
 SHA512 (qmail-1.03-realrcptto-2006.12.10.patch) = 96fedb97e5c0871f6de3fe91819353503ec0878a31303496072d2cad97384b0c845c7e5f1e76cb9a90c469916dd1353400b4314cdb5b48747b6ed72c09917721
@@ -40,6 +44,10 @@ SHA1 (qmail-smtpd-viruscan-logging.patch) = ca7105b5561cf280e9e3a465d2d68a16673f
 RMD160 (qmail-smtpd-viruscan-logging.patch) = 79631cb7b5b120f98397011c4fb94726c48b83e4
 SHA512 (qmail-smtpd-viruscan-logging.patch) = 6441dfb5dd8951a765d7172f44420d691976f4aa13c77ef16c459c6457cf32086a730278350bcb801ed4c986cbafa3c7a483c399ed073c02d53ad2ea18781efe
 Size (qmail-smtpd-viruscan-logging.patch) = 2157 bytes
+SHA1 (qmail-smtpd.patch) = 2f14d7a98686ad5f32bdaaa6e201734302352e71
+RMD160 (qmail-smtpd.patch) = a4496ee44f9a4298404c3f75d23dd985f3ff12bb
+SHA512 (qmail-smtpd.patch) = ada4f2ce3972965b02a7acc9a072deeedafd026e19c2c96b8b4059f1f1fab653409f88cd6ee5f1d4a99dd943e018a1cd6296b05d7fd86e83296aa0150227edbe
+Size (qmail-smtpd.patch) = 3716 bytes
 SHA1 (patch-Makefile) = 7ab7c2893393f42d8587a14a2d0c86c09e60061a
 SHA1 (patch-auto__uids.c) = f900b61e047eb8776e5ff2e0381f2a53d49fafad
 SHA1 (patch-auto__uids.h) = 5041dc91e51fc8413c0bf5e83c3d6b423f71cf86
