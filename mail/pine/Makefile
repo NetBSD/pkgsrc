@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2017/01/19 18:52:16 agc Exp $
+# $NetBSD: Makefile,v 1.136 2017/03/23 17:32:39 joerg Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -46,7 +46,7 @@ UNLIMIT_RESOURCES+=	datasize
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pine
-PKG_SUPPORTED_OPTIONS=	ldap fancythreads pinepwd
+PKG_SUPPORTED_OPTIONS=	ldap pinepwd
 PKG_SUGGESTED_OPTIONS=	pinepwd
 
 .include "../../mk/bsd.options.mk"
@@ -55,12 +55,6 @@ PKG_SUGGESTED_OPTIONS=	pinepwd
 .  include "../../databases/openldap-client/buildlink3.mk"
 PINE_LDAPCFLAGS=	LDAPCFLAGS="-DENABLE_LDAP"
 PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
-.endif
-
-.if !empty(PKG_OPTIONS:Mfancythreads)
-PATCH_SITES+=		http://staff.washington.edu/chappa/pine/patches/pine4.64/
-PATCHFILES+=		fancy.patch.gz
-PATCH_DIST_STRIP=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mpinepwd)
