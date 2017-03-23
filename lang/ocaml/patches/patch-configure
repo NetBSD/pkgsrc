@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.20 2016/12/30 11:15:00 jaapb Exp $
+$NetBSD: patch-configure,v 1.21 2017/03/23 18:22:34 jperkin Exp $
 
 All kinds of OS-specific changes to configure
 --- configure.orig	2016-11-04 16:08:24.000000000 +0000
@@ -63,7 +63,15 @@ All kinds of OS-specific changes to configure
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -923,7 +927,6 @@ case "$arch,$nativecc,$system,$model" in
+@@ -888,6 +892,7 @@ case "$target" in
+   x86_64-*-mingw*)              arch=amd64; system=mingw;;
+   aarch64-*-linux*)             arch=arm64; system=linux;;
+   x86_64-*-cygwin*)             arch=amd64; system=cygwin;;
++  x86_64-*-solaris*)            arch=amd64; system=solaris;;
+ esac
+ 
+ # Some platforms exist both in 32-bit and 64-bit variants, not distinguished
+@@ -923,7 +928,6 @@ case "$arch,$nativecc,$system,$model" in
    *,*,nextstep,*)      nativecclinkopts="-posix";;
    *,*,rhapsody,*)      if $arch64; then partialld="ld -r -arch ppc64"; fi;;
    amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
@@ -71,7 +79,7 @@ All kinds of OS-specific changes to configure
    power,gcc*,elf,ppc)   partialld="ld -r -m elf32ppclinux";;
    power,gcc*,elf,ppc64)   partialld="ld -r -m elf64ppc";;
    power,gcc*,elf,ppc64le)   partialld="ld -r -m elf64lppc";;
-@@ -941,8 +944,8 @@ case "$arch,$system" in
+@@ -941,8 +945,8 @@ case "$arch,$system" in
                      fi;;
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
@@ -82,7 +90,7 @@ All kinds of OS-specific changes to configure
    power,elf)      if $arch64; then
                      as="${TOOLPREF}as -a64 -mppc64"
                      aspp="${TOOLPREF}gcc -m64 -c"
-@@ -991,6 +994,7 @@ case "$arch,$system" in
+@@ -991,6 +995,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -90,7 +98,7 @@ All kinds of OS-specific changes to configure
    *) profiling='noprof';;
  esac
  
-@@ -1554,6 +1558,8 @@ fi
+@@ -1554,6 +1559,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -99,7 +107,7 @@ All kinds of OS-specific changes to configure
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1600,6 +1606,7 @@ if test "$x11_include" = "not found"; th
+@@ -1600,6 +1607,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -107,7 +115,7 @@ All kinds of OS-specific changes to configure
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1657,6 +1664,7 @@ if test "$x11_include" = "not found"; th
+@@ -1657,6 +1665,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -115,7 +123,7 @@ All kinds of OS-specific changes to configure
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1678,19 +1686,16 @@ if test "$x11_include" = "not found"; th
+@@ -1678,19 +1687,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
