@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.78 2017/03/20 16:23:19 schmonz Exp $
+# $NetBSD: Makefile,v 1.79 2017/03/23 07:24:48 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -28,8 +28,9 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 
 USE_TOOLS+=		nroff
 
-DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q}${QMAILDIR:Q} > conf-destdir
+DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q}${QMAILDIR:Q} > conf-destdir;
 DJB_BUILD_TARGETS=	man
+INSTALL_TARGET=		setup
 DJB_RESTRICTED=		no
 
 PKG_SYSCONFSUBDIR=	qmail
