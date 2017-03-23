@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1313 2017/03/23 19:33:34 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1314 2017/03/23 20:39:08 tez Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1603,3 +1603,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/qmail to 1.03nb23 [schmonz 2017-03-23]
 	Updated www/contao43 to 4.3.6 [taca 2017-03-23]
 	Updated security/sqlmap to 1.1.3nb1 [leot 2017-03-23]
+	Updated print/ghostscript-gpl to 9.06nb10 [tez 2017-03-23]
