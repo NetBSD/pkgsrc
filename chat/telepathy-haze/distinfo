@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/01/17 18:51:52 wiz Exp $
+$NetBSD: distinfo,v 1.3 2017/03/23 17:06:47 joerg Exp $
 
 SHA1 (telepathy-haze-0.8.0.tar.gz) = e985b4553a5499470df14a0bf60a91fda09bc37d
 RMD160 (telepathy-haze-0.8.0.tar.gz) = de24452c5060dda443a78e5d56d9a88df54b839c
+SHA512 (telepathy-haze-0.8.0.tar.gz) = 2739b37b1f95f0996b423c0883f369e1283363e39cb1b0566e2573f3cebdab0530ffd1d4d515202e300407029227b75b4e8c459167d584000405fda2d070699d
 Size (telepathy-haze-0.8.0.tar.gz) = 580929 bytes
 SHA1 (patch-src_media-stream.c) = e2b709f355c2ae009438f6daa6a499b6e4b2def7
