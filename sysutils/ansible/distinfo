@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2016/02/18 09:24:25 he Exp $
+$NetBSD: distinfo,v 1.12 2017/03/23 17:06:59 joerg Exp $
 
 SHA1 (ansible-1.9.4.tar.gz) = f71f451d96239d08396d20fff2d9b8840426f714
 RMD160 (ansible-1.9.4.tar.gz) = a88a7a1a19a82e6ca17ca77ae8d64a428cf37fe8
+SHA512 (ansible-1.9.4.tar.gz) = 53ef5b3390be620cedc92687c7c9853c42f38547494f9b77056d5ea48ccd8f43d193648a7f4569fcba5afad343a9202b123296ab47c8cd02eecfe455d83b9586
 Size (ansible-1.9.4.tar.gz) = 937120 bytes
 SHA1 (patch-docs_man_man1_ansible) = af150377f41d2feb239111346fc5d3101aa8bcea
 SHA1 (patch-docs_man_man1_ansible-asciidoc) = 6c2b4eae3d8213d8ee0870727003bb128df44f10
