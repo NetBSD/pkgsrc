@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2014/08/30 16:54:16 richard Exp $
+# $NetBSD: options.mk,v 1.3 2017/03/23 17:36:35 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird24
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning mozilla-enigmail
+PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome official-mozilla-branding mozilla-lightning
 PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
 PLIST_VARS+=		branding nobranding debug gnome jemalloc
@@ -44,10 +44,6 @@ XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/gdata-provider.xpi
 XPI_FILES+=		${WRKSRC}/mozilla/dist/xpi-stage/lightning.xpi
 .else
 CONFIGURE_ARGS+=	--disable-calendar
-.endif
-
-.if !empty(PKG_OPTIONS:Mmozilla-enigmail) || make(distinfo)
-.include "enigmail.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
