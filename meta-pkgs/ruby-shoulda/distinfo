@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/05 12:24:50 rodent Exp $
+$NetBSD: distinfo,v 1.2 2017/03/23 17:06:55 joerg Exp $
 
 SHA1 (shoulda-3.5.0.gem) = 473f0a8f5cdcaf298b70cb4dd0c418a853a35058
 RMD160 (shoulda-3.5.0.gem) = ba82ac19dc194930e22ff4867aca675083306aab
+SHA512 (shoulda-3.5.0.gem) = 9f9b4c2fa5968bad0a03c5838ead637e89817f2608dfdf477d84d4cc8bf0a5e9ff905db6aec527fe36495729ec4073bc478500e8a13364824e354bb4ea28297a
 Size (shoulda-3.5.0.gem) = 11264 bytes
