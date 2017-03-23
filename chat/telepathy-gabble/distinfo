@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2015/12/01 12:45:43 jaapb Exp $
+$NetBSD: distinfo,v 1.20 2017/03/23 17:06:47 joerg Exp $
 
 SHA1 (telepathy-gabble-0.18.3.tar.gz) = 1c71c5acf2c506788aa4b1604390f38979d88887
 RMD160 (telepathy-gabble-0.18.3.tar.gz) = a227c369090c2020f510cf050f35e4c12b01fe74
+SHA512 (telepathy-gabble-0.18.3.tar.gz) = 51c7b754779d131c54facf8e373338bd471e6bb589d69cd8f9c0f4450b15d9676c2bbf762b64e9c3bf7067bca0e9accb6c766f2fda0051a26a36eb009d7bd5eb
 Size (telepathy-gabble-0.18.3.tar.gz) = 2793195 bytes
 SHA1 (patch-lib_ext_wocky_wocky_wocky-heartbeat-source_c) = d8f0192f7f34e6fb98150283f5ff05de6313ee4a
 SHA1 (patch-lib_ext_wocky_wocky_wocky-muc.c) = 2c4a5840787f061e8d477cac74d4f5d655ba1513

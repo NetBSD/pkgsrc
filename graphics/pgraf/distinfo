@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/12/20 21:51:38 joerg Exp $
+$NetBSD: distinfo,v 1.6 2017/03/23 17:06:53 joerg Exp $
 
 SHA1 (pgraf-20010131.tar.gz) = 0f1fb3ad580de94eafb364aecc0d7befa8151959
 RMD160 (pgraf-20010131.tar.gz) = d3dd470b25e31cbda94b4f4602f8853f32a5c84b
+SHA512 (pgraf-20010131.tar.gz) = 4bd5ed681791544fb9c39c9580710328c090f522db3bb080531bc4945a90bf9779e8eb663662447d7300983da843fdc5879b3dd104e52bc0062ca7301ec4d47c
 Size (pgraf-20010131.tar.gz) = 70301 bytes
 SHA1 (patch-aa) = f8aaa250906c775c8366580d55560f66a6403d7f
 SHA1 (patch-ab) = 5d93154523125cc532a75a68bc76e05b807b4d66

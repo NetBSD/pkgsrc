@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/12/20 21:57:52 joerg Exp $
+$NetBSD: distinfo,v 1.9 2017/03/23 17:06:49 joerg Exp $
 
 SHA1 (fMSX351.zip) = d28d2bf3bc2a1ae273899c80bbbe9bdf4dd98767
 RMD160 (fMSX351.zip) = be16d466f5ff29265d0faebd186a701a96ba81f6
+SHA512 (fMSX351.zip) = 7d994523ca825ce29cbcf232e1c6dcbef8d0e95031be0ca9d73b886d315af13b152055ff065a8e1baedb9a466d0a51c4b21c76b85dc9146e443f581ce6470555
 Size (fMSX351.zip) = 515112 bytes
 SHA1 (patch-EMULIB_FDIDisk.c) = d74b7d5d1217297cfa54a1085f85ae4a3db9b635
 SHA1 (patch-EMULIB_Floppy.c) = 4b8874cac9c58839bbb107bf8cb8c59915873cac

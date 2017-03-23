@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/01 13:03:05 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2017/03/23 17:06:47 joerg Exp $
 
 SHA1 (telepathy-farstream-0.6.2.tar.gz) = 27d4fb3e31eb7404b5f2ba72f73194fc1d2b704f
 RMD160 (telepathy-farstream-0.6.2.tar.gz) = 9a9dce25f19b099bc9da28c41c8bf0e774759fd7
+SHA512 (telepathy-farstream-0.6.2.tar.gz) = ef9c07df607add411df404f5e2dfbf92afde8387291980e59f9e0b85d6edf0904582f10491316ae01349fe242d44a3579a27663127d5a91cb7b06ad163b6e4a6
 Size (telepathy-farstream-0.6.2.tar.gz) = 601409 bytes

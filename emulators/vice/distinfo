@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.42 2014/05/25 09:44:43 obache Exp $
+$NetBSD: distinfo,v 1.43 2017/03/23 17:06:50 joerg Exp $
 
 SHA1 (vice-2.4.tar.gz) = 719aa96cc72e7578983fadea1a31c21898362bc7
 RMD160 (vice-2.4.tar.gz) = 6ff3b4a410ef70aa135e2245e6855cfa63373e2c
+SHA512 (vice-2.4.tar.gz) = ad197fc35eb80c9738b7f4f551d350dbb4440c7c8103e5d472b7f7ea5106c1356e9d6e3f481552a028a313129ef233833d3147e03f6f00b9890229d5708e3ebb
 Size (vice-2.4.tar.gz) = 13656511 bytes
 SHA1 (patch-aa) = 7ecda5911a2dd0e7ef8676959d9dc021323d393f
 SHA1 (patch-ab) = ab982bb762bebf56eb54859a38fe47b58d31ac67
