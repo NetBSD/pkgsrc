@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/12/20 12:39:08 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2017/03/23 17:06:45 joerg Exp $
 
 SHA1 (xmill-0.9.1.tar.gz) = 491e44ea9a66293af6837db4dc54ed63065c0d67
 RMD160 (xmill-0.9.1.tar.gz) = 7ca0e60b16e609997010a94f2bffd3a5c2ab60ff
+SHA512 (xmill-0.9.1.tar.gz) = 89b72f7cc6b926f727506866c78be2209de75a3d9774ad5fdd0e29a80c1fb29c34484d3b0469d24ff260967ef5391f223c560b7d9d6b47d80f4b9e7e84213df8
 Size (xmill-0.9.1.tar.gz) = 1021363 bytes
 SHA1 (patch-XMill_BaseXNumCompressor.cpp) = 25f7a973c241f5aa7061cdae2dd865bc0cd428d7
 SHA1 (patch-aa) = b4f10f11906bdcc927214823f93ef597c0d4b750
