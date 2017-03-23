@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/07/24 01:48:49 kamil Exp $
+$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
 
 SHA1 (PyODE-1.2.1.tar.gz) = c888699cf6e14151e4b4c5a864f789a01bccb1e1
 RMD160 (PyODE-1.2.1.tar.gz) = ae23ba127a472407aa8fde7e33c5115f3efbacbe
+SHA512 (PyODE-1.2.1.tar.gz) = d716a6f126be0300fb9b2640b697c1ad87c3e6991518699b522cc126f6974c72bad2d07060d7b25a8fec0e91a53408bb779a22ad10a3e49c42c7e0a0261f7ff1
 Size (PyODE-1.2.1.tar.gz) = 233437 bytes

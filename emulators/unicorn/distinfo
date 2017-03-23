@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/12 01:26:39 kamil Exp $
+$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
 
 SHA1 (unicorn-0.9.tar.gz) = 1504c21f28f19ff1f71bcd74043c2284decb1d9f
 RMD160 (unicorn-0.9.tar.gz) = f95fe16ba7900dde5eae502ad8eb55c227436d0f
+SHA512 (unicorn-0.9.tar.gz) = c69bb03b7ba4ebec9aef23b80d1ffe33a30de958a74136ef5933b5fa10a2b2ffddd716fdb1881b78dfdcc5a53fece15c368c661b12d20f80dbf955a66930eb0b
 Size (unicorn-0.9.tar.gz) = 2576109 bytes

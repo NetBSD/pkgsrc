@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/11/24 22:27:06 shattered Exp $
+$NetBSD: distinfo,v 1.5 2017/03/23 17:06:46 joerg Exp $
 
 SHA1 (libdca-0.0.5.tar.bz2) = 3fa5188eaaa2fc83fb9c4196f6695a23cb17f3bc
 RMD160 (libdca-0.0.5.tar.bz2) = 979ef56b7484e6542db035d03258f5fba63b9302
+SHA512 (libdca-0.0.5.tar.bz2) = d9f0ed34efeb3f27af8424fcb3e6df56744c6735854a65b5709c02b42b4513b9c4618dcc19eb44293afa051bd95616651bda5fc3b49dfabe975d0babfb1bc287
 Size (libdca-0.0.5.tar.bz2) = 393291 bytes
 SHA1 (patch-ab) = 7c736fec06ec3ed15bf7c2a4bb5d096469cfce8b
 SHA1 (patch-dtsdec) = 536268aa4009a3a0816ae2442e1be0f81233b0d1

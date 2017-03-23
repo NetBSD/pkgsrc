@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2009/11/15 01:29:33 dholland Exp $
+$NetBSD: distinfo,v 1.13 2017/03/23 17:06:52 joerg Exp $
 
 SHA1 (xgalaga-2.0.34.tar.gz) = 82dcb328af0d9e779c566f4225d7f072b1c17b7d
 RMD160 (xgalaga-2.0.34.tar.gz) = bf2cc91820c1cdb8e02bd35347b309cac27b3ba4
+SHA512 (xgalaga-2.0.34.tar.gz) = 90cdc8a911e7de1d15af65ab100273d39c26a15761e7c3bc977eb3d55920f1a5b962a69d0a494d5c29ea28b724f8c69856955431de420f205fc638e88c3d62b0
 Size (xgalaga-2.0.34.tar.gz) = 314189 bytes
 SHA1 (patch-aa) = 63dc49d79e33ba4eaf596e600cdfaa1d00d70bce
 SHA1 (patch-ab) = 97bd43c07f76278245730bbc9724497ab87e552d

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/02/23 15:39:48 tron Exp $
+$NetBSD: distinfo,v 1.7 2017/03/23 17:07:02 joerg Exp $
 
 SHA1 (xservers-3.3.6.5.tar.bz2) = cac39534a4c5f8969d93ebfcf1352fc695148b69
 RMD160 (xservers-3.3.6.5.tar.bz2) = eb3cc52911ce7ce96cba1a24734086cbf92887d9
+SHA512 (xservers-3.3.6.5.tar.bz2) = ed9e5a494ac4608058c7eaf24f75bb8c80524aff7ace1382f8d81e2a7cfec6f6f90970cdc38f6beef7e0674b7d964b5dbddfac86640152f10e80a4a3c31932af
 Size (xservers-3.3.6.5.tar.bz2) = 15688324 bytes
 SHA1 (patch-aa) = 023c69ba09127bc4de484f0cd372aef3a8ea1ed7
 SHA1 (patch-ab) = 49380b43e031c878297eb32aaf014ac9244b1785

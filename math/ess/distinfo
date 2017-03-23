@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/02/06 09:49:15 markd Exp $
+$NetBSD: distinfo,v 1.6 2017/03/23 17:06:54 joerg Exp $
 
 SHA1 (ess-13.09-1.tgz) = e4ee1155d137ae421137c067994bbb866a8aaee5
 RMD160 (ess-13.09-1.tgz) = e86dd26932de00ee2f224dcc1c8eb0de78e7c2be
+SHA512 (ess-13.09-1.tgz) = 846dccb032cb0780fece51c6647dc3e19d737c8b89a36f3bd0509eea7ea3f75a8d50f05f6d00744dc3253b16e40d1ee38190d9e452f3bcb6545379c059e1f7c5
 Size (ess-13.09-1.tgz) = 3331643 bytes
 SHA1 (patch-aa) = 2e2c39c4c98e37cbbb968d605afd3d98a4199e68
 SHA1 (patch-ab) = 22673b8f70ac9ba952d9e23eb9ca3fcbb18e371b

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/12/13 10:46:40 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2017/03/23 17:06:59 joerg Exp $
 
 SHA1 (libident-0.32.tar.gz) = 4658807b017f21928a64f3442ee3a2b91f48d14e
 RMD160 (libident-0.32.tar.gz) = 45c01b3c54a441b085ea3b8dc451eb8c33b7bd2e
+SHA512 (libident-0.32.tar.gz) = 9e5eff23f5b0ce2e62e3c78e3ffcdbd1fd07d71bad60ff1d2ac3e107643b8641be9a50b4cdfc9cc8f57c7fa3e87b226538e2a57529ac9861cfc4b8cc3ef5fa99
 Size (libident-0.32.tar.gz) = 294241 bytes
 SHA1 (patch-id__open.c) = c90abc705e2ae412b39b2780c35f0ad5e0034bb4
