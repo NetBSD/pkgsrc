@@ -611,9 +611,11 @@ qemu			Use qemu.
 qemu-0			Use qemu-0.x.
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
 qmail-bigdns		Patch to handle oversized responses to MX queries.
+qmail-maildiruniq	Patch to avoid name collisions when PIDs recycle fast.
 qmail-netqmail		Patch collection prepared by respected list members.
 qmail-outgoingip	Patch to force a particular source IP address.
 qmail-qregex		Patch to SMTP-reject customizable patterns.
+qmail-rcptcheck		Patch to SMTP-reject via a script or program.
 qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
