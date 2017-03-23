@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.20 2017/03/13 07:41:53 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q4,v 1.1.2.21 2017/03/23 23:50:58 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-$BRANCH branch:
 
@@ -143,4 +143,7 @@ graphics/gd: security fix
 
 Pullup ticket #5223 - requested by sevan
 security/py-crypto: security patch
+
+Pullup ticket #5224 - requested by khorben
+chat/libpurple: security fix
 
