@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1310 2017/03/22 02:13:31 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1311 2017/03/23 07:24:56 schmonz Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1600,3 +1600,4 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2017Q1 branch [gdt 2017-03-21]
 	Updated multimedia/streamlink to 0.4.0 [maya 2017-03-21]
 	Updated graphics/libimagequant to 2.9.0 [adam 2017-03-22]
+	Updated mail/qmail to 1.03nb23 [schmonz 2017-03-23]
