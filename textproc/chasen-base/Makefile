@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/29 11:06:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2017/03/24 11:44:30 joerg Exp $
 #
 
 DISTNAME=		chasen-${CHASEN_VERSION}
@@ -19,6 +19,7 @@ OWN_DIRS=		${PREFIX}/${CHASEN_DICDIR}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fi
+	${LN} -s ${_OVERRIDE_PATH.depcomp} ${WRKSRC}/depcomp
 
 .include "../../textproc/chasen/Makefile.common"
 .include "../../converters/libiconv/buildlink3.mk"
