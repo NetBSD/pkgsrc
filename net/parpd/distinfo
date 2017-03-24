@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/03/14 21:50:00 roy Exp $
+$NetBSD: distinfo,v 1.8 2017/03/24 16:49:10 roy Exp $
 
-SHA1 (parpd-1.6.tar.xz) = 83d61196ef7988d6b6425017e96bef4c7712b4e3
-RMD160 (parpd-1.6.tar.xz) = 9785e3a67cf335dd126fc2db41581a9c788dd2b6
-SHA512 (parpd-1.6.tar.xz) = b0b241ec18b8964dd4e43c8238c9462a0fe52db8c1ac81ea3a95a15d57fa1707f7c3d7e882f6468cff8f2d3ed4896badce684db74d3316fb49f252a216e8c42b
-Size (parpd-1.6.tar.xz) = 18440 bytes
+SHA1 (parpd-1.7.tar.xz) = 50fab1942ba2ab733a7664ee87d0791bac3e88cc
+RMD160 (parpd-1.7.tar.xz) = d223a80ff5018579e4decf28183e9d448d2fd747
+SHA512 (parpd-1.7.tar.xz) = d682d4ce012e87e0e9b051d96ead61f6dc273a0e193ea45f556e902924a7d02a25b7913af9ed779dced51ce658457f8308e71b34f7bba3adcf4be23973322b40
+Size (parpd-1.7.tar.xz) = 18624 bytes
