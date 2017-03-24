@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/03/14 21:50:00 roy Exp $
+# $NetBSD: Makefile,v 1.13 2017/03/24 16:49:10 roy Exp $
 #
 
-DISTNAME=		parpd-1.6
+DISTNAME=		parpd-1.7
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/parpd/
+MASTER_SITES+=		http://roy.marples.name/downloads/parpd/
 MASTER_SITES+=		http://roy.aydogan.net/parpd/
 EXTRACT_SUFX=		.tar.xz
 
