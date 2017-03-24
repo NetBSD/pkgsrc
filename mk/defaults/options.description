@@ -506,7 +506,6 @@ mpg123-with-fpu		Enable generic fpu code.
 mpg123-x86-dither	Enable runtime selection of optimized x86 dithering (like MMX or 3Dnow).
 mplayer-default-cflags	Enable default optimized CFLAGS.
 mplayer-menu		Enable support for user-defined menus.
-mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-ssse3		Enable SSSE3 support.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
