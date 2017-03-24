@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/03/23 14:57:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/03/24 03:43:24 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -4268,16 +4268,16 @@ ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/CHANGELOG.md
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Cache.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/ConfigurationAnnotation.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/ConfigurationInterface.php
-${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Entity.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Method.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/ParamConverter.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Route.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Security.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Template.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Compiler/AddParamConverterPass.php
-${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Compiler/OptimizerPass.php
+${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Compiler/LegacyPass.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Configuration.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/SensioFrameworkExtraExtension.php
+${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/EventListener/CacheListener.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/EventListener/ControllerListener.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/EventListener/HttpCacheListener.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/EventListener/ParamConverterListener.php
@@ -4286,22 +4286,24 @@ ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/EventListener/SecurityListener
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/EventListener/TemplateListener.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/LICENSE
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/README.md
-${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Request/ArgumentValueResolver/Psr7ServerRequestResolver.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Request/ParamConverter/DateTimeParamConverter.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Request/ParamConverter/DoctrineParamConverter.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Request/ParamConverter/ParamConverterInterface.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Request/ParamConverter/ParamConverterManager.php
+${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Request/ParamConverter/PsrServerRequestParamConverter.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/annotations.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/cache.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/converters.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/psr7.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/routing.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/security.xml
+${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/services.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Resources/config/view.xml
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Routing/AnnotatedRouteControllerLoader.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Security/ExpressionLanguage.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/SensioFrameworkExtraBundle.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Templating/TemplateGuesser.php
+${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/UPGRADE.md
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/composer.json
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/sensiolabs/ansi-to-html/.gitignore
