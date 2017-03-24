@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1315 2017/03/24 03:41:46 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1316 2017/03/24 03:43:52 taca Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1605,3 +1605,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/sqlmap to 1.1.3nb1 [leot 2017-03-23]
 	Updated print/ghostscript-gpl to 9.06nb10 [tez 2017-03-23]
 	Updated net/ntp4 to 4.2.8p10 [taca 2017-03-24]
+	Updated www/contao43 to 4.3.7 [taca 2017-03-24]
