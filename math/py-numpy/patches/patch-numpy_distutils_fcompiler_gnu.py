@@ -1,4 +1,4 @@
-$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.10 2017/03/24 15:12:30 joerg Exp $
+$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.11 2017/03/24 19:22:28 joerg Exp $
 
 Linker needs -shared explictly (at least with GCC 4.7 on SunOS), plus
 any ABI flags as appropriate.
@@ -14,7 +14,7 @@ Do not run a shell command when it is "None".
 -            m = re.search(r'GNU Fortran\s+95.*?([0-9-.]+)', version_string)
 +            m = re.search(r'95.*?([0-9-.]+)', version_string)
              if m:
-+                if version_string.split(".") < ["4", "2"]:
++                if m.group(1).split(".") < ["4", "2"]:
 +                    self.g2c = "f95"
                  return ('gfortran', m.group(1))
              m = re.search(r'GNU Fortran.*?\-?([0-9-.]+)', version_string)
