@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1317 2017/03/24 11:42:09 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.1318 2017/03/24 16:49:27 roy Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1607,3 +1607,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/ntp4 to 4.2.8p10 [taca 2017-03-24]
 	Updated www/contao43 to 4.3.7 [taca 2017-03-24]
 	Updated benchmarks/google-benchmark to 1.1.0nb1 [joerg 2017-03-24]
+	Updated net/parpd to 1.7 [roy 2017-03-24]
