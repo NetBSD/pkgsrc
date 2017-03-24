@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/02/27 10:24:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/24 16:57:36 wiz Exp $
 
 DISTNAME=	todoman-2.1.0
 CATEGORIES=	misc
@@ -26,6 +26,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
+PYTHON_VERSIONS_INCOMPATIBLE=	27
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
