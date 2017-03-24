@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2017/03/23 09:08:21 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/24 08:41:28 abs Exp $
 
-DISTNAME=	yEd-3.15.0.2
+DISTNAME=	yEd-3.17
 PKGNAME=	${DISTNAME:C:E:e:}
 CATEGORIES=	editors
-MASTER_SITES=	http://www.yworks.com/products/yed/demo/
+MASTER_SITES=	https://www.yworks.com/resources/yed/demo/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.yworks.com/en/
 COMMENT=	Graph editor (UML, Flowcharts, BPMN and more)
 LICENSE=	yed-license
-
-BROKEN=		distfile no longer available
 
 RESTRICTED=		Redistribution prohibited
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -26,7 +24,7 @@ USE_JAVA2=	6
 
 YEDDIR=		${PREFIX}/lib/java/yed
 
-INSTALLATION_DIRS=bin lib/java/yed/lib lib/java/yed/icons share/doc/java/yed
+INSTALLATION_DIRS=	bin lib/java/yed/lib lib/java/yed/icons share/doc/java/yed
 
 do-build:
 	${SED} -e "s,@YEDDIR@,${YEDDIR}," ${FILESDIR}/yed.sh > ${WRKSRC}/yed
