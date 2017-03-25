@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/03/25 13:51:50 mef Exp $
+# $NetBSD: Makefile,v 1.7 2017/03/25 14:27:00 mef Exp $
 
 DISTNAME=	ptex
 PKGNAME=	tex-${DISTNAME}-3.2pl41220
@@ -35,8 +35,9 @@ TEX_KANJIMAP_FILES+=	morisawa.map
 
 .include "../../print/texlive/package.mk"
 
-post-extract:
+pre-patch:
 	${CP} -pr ${FILESDIR}/texmf-dist ${WRKSRC}
+	${FIND}   ${WRKSRC}/texmf-dist -type d -name CVS -exec ${RM} -rf '{}' \;
 
 post-install:
 	${LN} -sf eptex ${DESTDIR}${PREFIX}/bin/platex
