@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.187 2017/03/01 13:30:19 ryoon Exp $
+$NetBSD: distinfo,v 1.188 2017/03/26 04:05:40 ryoon Exp $
 
-SHA1 (thunderbird-45.7.1.source.tar.xz) = ad050dbb54f226aafc3b44891b64a74286549d40
-RMD160 (thunderbird-45.7.1.source.tar.xz) = 7d84922d5c6559f33640eee76a007d554b709b35
-SHA512 (thunderbird-45.7.1.source.tar.xz) = aa1231169cfe243a257e6b9088281b85d0cf75207e3b9ebeda7792567a86f6098fb5c74dc397e3eeeb1925d221d2fb1b17df8762afd115eff9ad4d1370a49e56
-Size (thunderbird-45.7.1.source.tar.xz) = 201127704 bytes
+SHA1 (thunderbird-45.8.0.source.tar.xz) = 36fc106885d612966ec3be047f4e7d3fa06dc04a
+RMD160 (thunderbird-45.8.0.source.tar.xz) = 8d4ab2feabee0402fbfe38168c51187b1f26221d
+SHA512 (thunderbird-45.8.0.source.tar.xz) = f8ba08d874fb1a09ac9ba5d4d1f46cefe801783ba4bf82eee682ac2ecc4e231d07033a80e036ad04bda7780c093fb7bc3122a23dc6e19c12f18fb7168dc78deb
+Size (thunderbird-45.8.0.source.tar.xz) = 201199348 bytes
 SHA1 (patch-calendar_lightning_Makefile.in) = 02a1528f2da82f1d4ff4931a7d7dc8227b7fa9f2
 SHA1 (patch-calendar_lightning_build_universal.mk) = 86dc2c6b4f9feb835570111078aa5d08a389d0da
 SHA1 (patch-calendar_providers_gdata_Makefile.in) = 0e90ddc9aecc817b0b150bbc37d23ddec97b093e
@@ -52,7 +52,7 @@ SHA1 (patch-mozilla_intl_hyphenation_glue_hnjalloc.h) = 9159bfaa44bf70c04602a1ac
 SHA1 (patch-mozilla_ipc_chromium_src_base_atomicops.h) = b70f38db87e80de06f061e7ee7664d47b1000f12
 SHA1 (patch-mozilla_ipc_chromium_src_base_file__util__posix.cc) = aff83e28eb7af0f04c68b8336441eaef04bb763c
 SHA1 (patch-mozilla_ipc_chromium_src_base_message__loop.cc) = b4d4e7fd53632751cf4624044815da3a9f20819c
-SHA1 (patch-mozilla_ipc_chromium_src_base_message__pump__libevent.cc) = e7ec8e3f7aae56a47a328f0f3a6708eb85ee07c9
+SHA1 (patch-mozilla_ipc_chromium_src_base_message__pump__libevent.cc) = 71825dd5ab9e8f3055fc276558dc73f5489ade15
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread.h) = a0d0cff52de77a45def4789a7f6f30603c13f07a
 SHA1 (patch-mozilla_ipc_chromium_src_base_platform__thread__posix.cc) = 9998c382302a022ba1027f4346c53dcd4ef0b52f
 SHA1 (patch-mozilla_ipc_chromium_src_base_process__util.h) = 56b13a62b9bb6b4a0b94ed285f33fa5d67c56dc8
