@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/03/25 14:27:00 mef Exp $
+# $NetBSD: Makefile,v 1.8 2017/03/26 15:01:53 mef Exp $
 
 DISTNAME=	ptex
 PKGNAME=	tex-${DISTNAME}-3.2pl41220
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	41220
 
 MAINTAINER=	minskim@NetBSD.org
@@ -34,12 +34,5 @@ TEX_KANJIMAP_FILES+=	morisawa.map
 #TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf-dist
 
 .include "../../print/texlive/package.mk"
-
-pre-patch:
-	${CP} -pr ${FILESDIR}/texmf-dist ${WRKSRC}
-	${FIND}   ${WRKSRC}/texmf-dist -type d -name CVS -exec ${RM} -rf '{}' \;
-
-post-install:
-	${LN} -sf eptex ${DESTDIR}${PREFIX}/bin/platex
 
 .include "../../mk/bsd.pkg.mk"
