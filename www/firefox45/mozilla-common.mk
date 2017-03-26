@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2017/01/01 14:44:03 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.6 2017/03/26 03:53:34 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -180,7 +180,7 @@ CONFIGURE_ARGS+=	--enable-macos-target=10.5
 # problem is stealthy in a networked environment, and obvious in an
 # offline environment.
 #
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
 .PHONY: create-rm-wrapper
