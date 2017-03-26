@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2017/02/08 07:32:01 maya Exp $
+$NetBSD: distinfo,v 1.13 2017/03/26 03:53:34 ryoon Exp $
 
-SHA1 (firefox-45.7.0esr.source.tar.xz) = d995e19d45fe7fbb404f2bbba87f0eb1d6da3b2b
-RMD160 (firefox-45.7.0esr.source.tar.xz) = 2731601efc07ad538e292d9bfb0de3532fc052dd
-SHA512 (firefox-45.7.0esr.source.tar.xz) = 6424101b6958191ce654d0619950dfbf98d4aa6bdd979306a2df8d6d30d3fecf1ab44638061a2b4fb1af85fe972f5ff49400e8eeda30cdcb9087c4b110b97a7d
-Size (firefox-45.7.0esr.source.tar.xz) = 184131284 bytes
+SHA1 (firefox-45.8.0esr.source.tar.xz) = 7b1eb51634f9127ecf5855b487948851b9cc3323
+RMD160 (firefox-45.8.0esr.source.tar.xz) = 5040a829dd9f83e7c120249a8b8ebecb8bc8ed54
+SHA512 (firefox-45.8.0esr.source.tar.xz) = f7b5e0c659b2e824cee7f3784e2d72c562915af91c7e316ec1519305755d2126d91b74c47f96c8b4fc7377710f295545c58b2f989c65c268fc23677ef8cf5c85
+Size (firefox-45.8.0esr.source.tar.xz) = 185229628 bytes
 SHA1 (patch-aa) = c97ef4b107ea917c2a10d1a1fdaf524d794612a0
 SHA1 (patch-ao) = f4244b8e3d89743cb97395913e8916f7121c172e
 SHA1 (patch-as) = d5d7f8250a9cd462f25d529c2a79c59a1bba9db2
@@ -47,7 +47,7 @@ SHA1 (patch-intl_hyphenation_glue_hnjalloc.h) = 4d5e1ff0b7b7da4755fb1dbab1fd6714
 SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 24b63a6e51d9ab27f2788ee02f2ffa7e1c36f29a
 SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 70772ab2a474b7d3d15cf401c636ca843cfe2034
 SHA1 (patch-ipc_chromium_src_base_message__loop.cc) = 16158489773bbcba35e224d30bebace0c93599ae
-SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 2c5ce6290760e0435365dac788d283f9bb78acd9
+SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 8c3d2604df0e05d259e3c2b5d39fb2855ffdf449
 SHA1 (patch-ipc_chromium_src_base_platform__thread.h) = e6d7ac39a8b2a1b232638f7671e8530acfed0b97
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = 6c98bbecde21b8571c71477f351488d9a3da45f3
 SHA1 (patch-ipc_chromium_src_base_process__util.h) = 4b24c3467866a601d68bb83f44e5fd38fb27188d
