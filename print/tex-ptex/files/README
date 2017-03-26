@@ -1,9 +1,0 @@
-Missing files fetched from old texlive,
-tex-ptex-36135/ptex.tar.xz
-is located here.
-And actual necessary files can be retrieved by
-
-tar zvtf ptex.tar.xz texmf-dist/tex/platex/{base,config} |wc
-      44     404    4019
-
-tar zxf ptex.tar.xz texmf-dist/tex/platex/{base,config}
