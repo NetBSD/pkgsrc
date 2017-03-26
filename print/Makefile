@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.681 2017/01/26 06:37:41 markd Exp $
+# $NetBSD: Makefile,v 1.682 2017/03/26 20:08:24 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1014,6 +1014,8 @@ SUBDIR+=	tex-placeins-doc
 SUBDIR+=	tex-placeins-plain
 SUBDIR+=	tex-plain
 SUBDIR+=	tex-plain-doc-doc
+SUBDIR+=	tex-platex
+SUBDIR+=	tex-platex-doc
 SUBDIR+=	tex-plipsum
 SUBDIR+=	tex-plipsum-doc
 SUBDIR+=	tex-plnfss
