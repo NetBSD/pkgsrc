@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1321 2017/03/26 03:55:16 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1322 2017/03/26 03:56:58 ryoon Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1611,3 +1611,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed multimedia/realplayer-codecs [wiz 2017-03-24]
 	Updated www/php-owncloud to 9.1.4 [ryoon 2017-03-26]
 	Updated www/firefox45 to 45.8.0 [ryoon 2017-03-26]
+	Updated www/firefox45-l10n to 45.8.0 [ryoon 2017-03-26]
