@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1325 2017/03/26 04:13:57 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1326 2017/03/26 20:14:26 markd Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1615,3 +1615,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/xulrunner45 to 45.8.0 [ryoon 2017-03-26]
 	Updated mail/thunderbird to 45.8.0 [ryoon 2017-03-26]
 	Updated mail/thunderbird-l10n to 45.8.0 [ryoon 2017-03-26]
+	Added print/tex-platex version 0.0.2016 [markd 2017-03-26]
+	Added print/tex-platex-doc version 0.0.2016 [markd 2017-03-26]
