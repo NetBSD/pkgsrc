@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2016/12/30 11:15:00 jaapb Exp $
+# $NetBSD: Makefile,v 1.107 2017/03/27 11:51:30 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -53,6 +53,11 @@ PLIST_SRC+=	${PKGDIR}/PLIST.prof
       !empty(MACHINE_PLATFORM:MSunOS-*-*)
 PLIST_SRC+=	${PKGDIR}/PLIST.natdynlink
 .  endif
+.endif
+
+# Spacetime profiling is only available for native code on 64-bit targets.
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST_SRC+=	${PKGDIR}/PLIST.raw_spacetime
 .endif
 
 # Common ocaml files.
