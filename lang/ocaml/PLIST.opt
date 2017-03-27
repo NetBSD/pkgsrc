@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.26 2016/12/30 11:15:00 jaapb Exp $
+@comment $NetBSD: PLIST.opt,v 1.27 2017/03/27 11:51:30 jperkin Exp $
 bin/ocamlc.opt
 bin/ocamlcp.opt
 bin/ocamldep.opt
@@ -280,10 +280,6 @@ lib/ocaml/profiling.cmx
 lib/ocaml/queue.cmx
 lib/ocaml/random.cmx
 lib/ocaml/ratio.cmx
-lib/ocaml/raw_spacetime_lib.a
-lib/ocaml/raw_spacetime_lib.cmx
-lib/ocaml/raw_spacetime_lib.cmxa
-lib/ocaml/raw_spacetime_lib.cmxs
 lib/ocaml/scanf.cmx
 lib/ocaml/set.cmx
 lib/ocaml/sort.cmx
