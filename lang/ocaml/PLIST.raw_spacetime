@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST.raw_spacetime,v 1.1 2017/03/27 11:51:30 jperkin Exp $
+lib/ocaml/raw_spacetime_lib.a
+lib/ocaml/raw_spacetime_lib.cma
+lib/ocaml/raw_spacetime_lib.cmi
+lib/ocaml/raw_spacetime_lib.cmx
+lib/ocaml/raw_spacetime_lib.cmxa
+lib/ocaml/raw_spacetime_lib.cmxs
+lib/ocaml/raw_spacetime_lib.mli
