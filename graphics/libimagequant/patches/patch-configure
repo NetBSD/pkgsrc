@@ -1,9 +1,18 @@
-$NetBSD: patch-configure,v 1.2 2017/03/22 02:13:05 adam Exp $
+$NetBSD: patch-configure,v 1.3 2017/03/27 13:14:49 jperkin Exp $
 
 Remove unwanted compiler flags.
 
 --- configure.orig	2017-03-02 01:07:29.000000000 +0000
 +++ configure
+@@ -2,7 +2,7 @@
+ 
+ CONFIG="config.mk"
+ PREFIX="/usr/local"
+-VERSION=$(grep LIQ_VERSION_STRING libimagequant.h | grep -Eo "2\.[0-9.]+")
++VERSION=$(awk -F\" '/LIQ_VERSION_STRING/ {print $2}' libimagequant.h)
+ 
+ DEBUG=
+ SSE=auto
 @@ -128,7 +128,7 @@ cflags "-std=c99 -I."
  
  # DEBUG
