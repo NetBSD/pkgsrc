@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2017/03/27 11:51:30 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.39 2017/03/27 12:51:58 jperkin Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlc.byte
@@ -1225,7 +1225,11 @@ lib/ocaml/std_exit.cmo
 lib/ocaml/std_exit.cmt
 lib/ocaml/std_exit.ml
 lib/ocaml/std_exit.o
+lib/ocaml/std_exit.p.cmx
+lib/ocaml/std_exit.p.o
 lib/ocaml/stdlib.cma
+lib/ocaml/stdlib.p.a
+lib/ocaml/stdlib.p.cmxa
 lib/ocaml/str.cma
 lib/ocaml/str.cmi
 lib/ocaml/str.mli
