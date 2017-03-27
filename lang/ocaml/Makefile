@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2017/03/27 11:51:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.108 2017/03/27 12:54:59 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -34,7 +34,6 @@ BUILD_TARGET+=	opt opt.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
-      empty(MACHINE_PLATFORM:MSunOS-*-x86_64) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-arm) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
