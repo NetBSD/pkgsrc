@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.prof,v 1.10 2016/12/30 11:15:00 jaapb Exp $
+@comment $NetBSD: PLIST.prof,v 1.11 2017/03/27 12:51:58 jperkin Exp $
 lib/ocaml/arg.p.cmt
 lib/ocaml/arg.p.cmx
 lib/ocaml/array.p.cmt
@@ -90,10 +90,6 @@ lib/ocaml/stack.p.cmx
 lib/ocaml/stdLabels.p.cmt
 lib/ocaml/stdLabels.p.cmx
 lib/ocaml/std_exit.p.cmt
-lib/ocaml/std_exit.p.cmx
-lib/ocaml/std_exit.p.o
-lib/ocaml/stdlib.p.a
-lib/ocaml/stdlib.p.cmxa
 lib/ocaml/stream.p.cmt
 lib/ocaml/stream.p.cmx
 lib/ocaml/string.p.cmt
