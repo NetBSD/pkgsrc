@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2016/02/29 05:50:40 mlelstv Exp $
+# $NetBSD: Makefile,v 1.62 2017/03/28 12:50:26 bouyer Exp $
 #
 
 PKGNAME=		amanda-client-${AMANDA_VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		Client part of Amanda, a network backup system
 
