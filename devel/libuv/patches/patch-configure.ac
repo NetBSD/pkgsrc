@@ -1,0 +1,14 @@
+$NetBSD: patch-configure.ac,v 1.1 2017/03/28 18:44:49 maya Exp $
+
+Add feature-test for pthread_condattr_setclock absent in netbsd-6-0
+
+--- configure.ac.orig	2017-02-01 00:38:56.000000000 +0000
++++ configure.ac
+@@ -46,6 +46,7 @@ AC_CHECK_LIB([kvm], [kvm_open])
+ AC_CHECK_LIB([nsl], [gethostbyname])
+ AC_CHECK_LIB([perfstat], [perfstat_cpu])
+ AC_CHECK_LIB([pthread], [pthread_mutex_init])
++AC_CHECK_LIB([pthread], [pthread_condattr_setclock], AC_DEFINE(HAVE_PTHREAD_CONDATTR_SETCLOCK))
+ AC_CHECK_LIB([rt], [clock_gettime])
+ AC_CHECK_LIB([sendfile], [sendfile])
+ AC_CHECK_LIB([socket], [socket])
