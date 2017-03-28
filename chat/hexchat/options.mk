@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/08/16 08:30:14 tnn Exp $
+# $NetBSD: options.mk,v 1.5 2017/03/28 16:18:25 khorben Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 inet6 libcanberra libnotify libpci libproxy
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-dbus
 .include "../../x11/gtk2/buildlink3.mk"
 PLIST.gtk2=		yes
 .else
-CONFIGURE_ARGS+=	--disable-gtkfe --disable-gtktest
+CONFIGURE_ARGS+=	--disable-gtkfe
 .endif
 
 .if empty(PKG_OPTIONS:Minet6)
@@ -101,11 +101,8 @@ CONFIGURE_ARGS+=	--enable-python=no
 
 .if !empty(PKG_OPTIONS:Mtests)
 CONFIGURE_ARGS+=	--enable-glibtest
-.if !empty(PKG_OPTIONS:Mgtk2)
-CONFIGURE_ARGS+=	--enable-gtktest
-.endif
 .else
-CONFIGURE_ARGS+=	--disable-glibtest --disable-gtktest
+CONFIGURE_ARGS+=	--disable-glibtest
 .endif
 
 .if !empty(PKG_OPTIONS:Mthemes)
