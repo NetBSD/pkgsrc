@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1326 2017/03/26 20:14:26 markd Exp $
+$NetBSD: CHANGES-2017,v 1.1327 2017/03/28 11:32:53 markd Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1617,3 +1617,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/thunderbird-l10n to 45.8.0 [ryoon 2017-03-26]
 	Added print/tex-platex version 0.0.2016 [markd 2017-03-26]
 	Added print/tex-platex-doc version 0.0.2016 [markd 2017-03-26]
+	Updated graphics/opencv-contrib-face to 3.2.0 [markd 2017-03-28]
