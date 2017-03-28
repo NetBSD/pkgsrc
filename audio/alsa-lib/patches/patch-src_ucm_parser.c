@@ -1,10 +1,19 @@
-$NetBSD: patch-src_ucm_parser.c,v 1.4 2016/04/15 08:47:50 wiz Exp $
+$NetBSD: patch-src_ucm_parser.c,v 1.5 2017/03/28 09:10:57 jperkin Exp $
 
 * SunOS has no dirent d_type
+* Include limits.h for PATH_MAX.
 
---- src/ucm/parser.c.orig	2013-07-08 12:31:36.000000000 +0000
+--- src/ucm/parser.c.orig	2016-12-20 14:43:20.000000000 +0000
 +++ src/ucm/parser.c
-@@ -1224,9 +1224,17 @@ int uc_mgr_import_master_config(snd_use_
+@@ -32,6 +32,7 @@
+ 
+ #include "ucm_local.h"
+ #include <dirent.h>
++#include <limits.h>
+ 
+ /** The name of the environment variable containing the UCM directory */
+ #define ALSA_CONFIG_UCM_VAR "ALSA_CONFIG_UCM"
+@@ -1368,9 +1369,17 @@ int uc_mgr_import_master_config(snd_use_
  
  static int filename_filter(const struct dirent *dirent)
  {

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2017/02/22 14:48:08 wiz Exp $
+$NetBSD: distinfo,v 1.25 2017/03/28 09:10:56 jperkin Exp $
 
 SHA1 (alsa-lib-1.1.3.tar.bz2) = 8ef0b9725296ac8f24e06f20196f5b2b62ab27a9
 RMD160 (alsa-lib-1.1.3.tar.bz2) = 36fb2c889411e23be1084a432d200d40fb70e920
@@ -21,4 +21,4 @@ SHA1 (patch-src_control_control__hw.c) = 07cfe3abe586b32f6b989403cd162599da07e86
 SHA1 (patch-src_pcm_pcm__mmap.c) = 2d0f05aa53b30cef1ec083aa4f5d559d0a679058
 SHA1 (patch-src_seq_seq__midi__event.c) = 2a5de492d6ca19a0f0c564e8f5a065e5fc57ea5c
 SHA1 (patch-src_shmarea.c) = d6d0876ae7911ff16138bb82a3b1c79e795218cf
-SHA1 (patch-src_ucm_parser.c) = 13dc6b85281d996450c1010cec1bc6e9e87e6b3c
+SHA1 (patch-src_ucm_parser.c) = ebb986cc3048061adcf9fc6bc60a9d3ffd52ceec
