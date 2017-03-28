@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1327 2017/03/28 11:32:53 markd Exp $
+$NetBSD: CHANGES-2017,v 1.1328 2017/03/28 16:21:21 khorben Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1618,3 +1618,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-platex version 0.0.2016 [markd 2017-03-26]
 	Added print/tex-platex-doc version 0.0.2016 [markd 2017-03-26]
 	Updated graphics/opencv-contrib-face to 3.2.0 [markd 2017-03-28]
+	Updated chat/hexchat to 2.12.3 [khorben 2017-03-28]
