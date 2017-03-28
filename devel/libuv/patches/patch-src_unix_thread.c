@@ -1,8 +1,6 @@
-$NetBSD: patch-src_unix_thread.c,v 1.1 2017/03/27 15:34:00 maya Exp $
+$NetBSD: patch-src_unix_thread.c,v 1.2 2017/03/28 18:44:49 maya Exp $
 
-Don't use pthread_condattr_setclock on NetBSD. It's effectively
-a no-op, and doesn't exist on NetBSD<7 leading to undefined refs
-in building cmake.
+Use feature test for pthread_condattr_setclock, absent in netbsd-6-0
 
 --- src/unix/thread.c.orig	2017-02-01 00:38:56.000000000 +0000
 +++ src/unix/thread.c
@@ -11,8 +9,8 @@ in building cmake.
      return -err;
  
 -#if !(defined(__ANDROID__) && defined(HAVE_PTHREAD_COND_TIMEDWAIT_MONOTONIC))
-+#if !(defined(__ANDROID__) && defined(HAVE_PTHREAD_COND_TIMEDWAIT_MONOTONIC)) && \
-+    !(defined(__NetBSD__))
++#if defined(HAVE_PTHREAD_CONDATTR_SETCLOCK) && \
++   (!defined(HAVE_PTHREAD_COND_TIMEDWAIT_MONOTONIC))
    err = pthread_condattr_setclock(&attr, CLOCK_MONOTONIC);
    if (err)
      goto error2;
