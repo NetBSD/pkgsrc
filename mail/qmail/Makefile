@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2017/03/23 07:24:48 schmonz Exp $
+# $NetBSD: Makefile,v 1.80 2017/03/29 13:26:05 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		23
+PKGREVISION=		24
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
