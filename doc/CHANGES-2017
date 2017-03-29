@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1329 2017/03/28 18:45:06 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1330 2017/03/29 13:28:08 schmonz Exp $
 
 [Now in freeze for 2017Q1.]
 
@@ -1620,3 +1620,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/opencv-contrib-face to 3.2.0 [markd 2017-03-28]
 	Updated chat/hexchat to 2.12.3 [khorben 2017-03-28]
 	Updated devel/libuv to 1.11.0nb1 [maya 2017-03-28]
+	Updated mail/qmail to 1.03nb24 [schmonz 2017-03-29]
