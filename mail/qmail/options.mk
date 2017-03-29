@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.37 2017/03/23 07:24:48 schmonz Exp $
+# $NetBSD: options.mk,v 1.38 2017/03/29 13:26:05 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -6,7 +6,7 @@ PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex
 PKG_OPTIONS_GROUP.rcpt+=qmail-rcptcheck qmail-realrcptto
 PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-maildiruniq
 PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip qmail-viruscan
-PKG_SUGGESTED_OPTIONS+=	qmail-netqmail
+PKG_SUGGESTED_OPTIONS+=	qmail-bigdns qmail-netqmail qmail-realrcptto
 
 .include "../../mk/bsd.options.mk"
 
