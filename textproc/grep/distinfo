@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2017/03/30 08:52:54 bouyer Exp $
+$NetBSD: distinfo,v 1.23 2017/03/30 19:23:17 ryoon Exp $
 
-SHA1 (grep-2.27.tar.xz) = ac68dd7d07cd4318ef5545c29c9a37ed2e96aef6
-RMD160 (grep-2.27.tar.xz) = 87db92c2f7dafd88e70e1717e66a17a06d4e8b64
-SHA512 (grep-2.27.tar.xz) = d67f16cc5f931a455d5287badbaf080967da573d290430f440e578a563cff4f4c0c2668f60dbb8bc71eaed289f075957006c10c6827f0da1a49df49efd3f0781
-Size (grep-2.27.tar.xz) = 1360388 bytes
+SHA1 (grep-3.0.tar.xz) = 7b742a6278f28ff056da799c62c1b9e417fe86ba
+RMD160 (grep-3.0.tar.xz) = cd793a2fe55eabc0019018486bd039ca823c2009
+SHA512 (grep-3.0.tar.xz) = 0e9a00df9d492f399230bae0264942edaf64bb926f93edb7922f27b075a86ba0a78698f54996cc522b6261aa01a8ecbeadeb68523d4470a9941f242c3ae24c58
+Size (grep-3.0.tar.xz) = 1375156 bytes
 SHA1 (patch-src_Makefile.am) = c919a396c550f6218db8e015139c69e49217a946
 SHA1 (patch-src_Makefile.in) = f0b0b3a87d1ab0afd831144a6c7e81963735ce41
