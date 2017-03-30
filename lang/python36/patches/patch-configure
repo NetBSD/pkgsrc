@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.4 2017/01/26 09:13:27 adam Exp $
+$NetBSD: patch-configure,v 1.5 2017/03/30 11:42:58 adam Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -9,7 +9,7 @@ Changes for consistency across pkgsrc platforms.
 
 Fix linking on Darwin.
 
---- configure.orig	2016-12-23 02:21:22.000000000 +0000
+--- configure.orig	2017-03-21 06:32:38.000000000 +0000
 +++ configure
 @@ -2928,7 +2928,7 @@ $as_echo_n "checking for python interpre
  	fi
@@ -20,7 +20,7 @@ Fix linking on Darwin.
      fi
      # Used to comment out stuff for rebuilding generated files
      GENERATED_COMMENT='#'
-@@ -3321,7 +3321,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3324,7 +3324,7 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -29,7 +29,7 @@ Fix linking on Darwin.
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5977,7 +5977,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5969,7 +5969,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -38,7 +38,7 @@ Fix linking on Darwin.
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -9196,8 +9196,8 @@ then
+@@ -9188,8 +9188,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -49,7 +49,7 @@ Fix linking on Darwin.
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -9221,9 +9221,9 @@ then
+@@ -9213,9 +9213,9 @@ then
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -62,7 +62,7 @@ Fix linking on Darwin.
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -9262,6 +9262,9 @@ then
+@@ -9254,6 +9254,9 @@ then
  				   ;;
  				esac
  		fi;;
@@ -72,8 +72,8 @@ Fix linking on Darwin.
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -9305,7 +9308,7 @@ then
- 		 fi;;
+@@ -9298,7 +9301,7 @@ then
+ 	Linux-android*) ;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
 -	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -81,7 +81,7 @@ Fix linking on Darwin.
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -9354,7 +9357,7 @@ then
+@@ -9348,7 +9351,7 @@ then
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -90,7 +90,7 @@ Fix linking on Darwin.
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -14882,8 +14885,6 @@ $as_echo "$SOABI" >&6; }
+@@ -14949,8 +14952,6 @@ $as_echo "$SOABI" >&6; }
  
  
  case $ac_sys_system in
@@ -99,7 +99,7 @@ Fix linking on Darwin.
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -14895,11 +14896,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
+@@ -14962,11 +14963,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
  $as_echo "$LDVERSION" >&6; }
  
  
