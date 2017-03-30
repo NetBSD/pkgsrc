@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1340 2017/03/30 14:52:54 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1341 2017/03/30 15:19:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/erlang-esip to 1.0.11 [fhajny 2017-03-30]
 	Updated chat/ejabberd to 17.03 [fhajny 2017-03-30]
 	Removed security/erlang-p1_pam successor security/erlang-epam [fhajny 2017-03-30]
+	Updated net/rabbitmq to 3.6.9 [fhajny 2017-03-30]
