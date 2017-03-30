@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1342 2017/03/30 15:23:58 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1343 2017/03/30 15:37:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1643,3 +1643,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed security/erlang-p1_pam successor security/erlang-epam [fhajny 2017-03-30]
 	Updated net/rabbitmq to 3.6.9 [fhajny 2017-03-30]
 	Updated databases/elasticsearch to 5.3.0 [fhajny 2017-03-30]
+	Updated sysutils/beats to 5.3.0 [fhajny 2017-03-30]
