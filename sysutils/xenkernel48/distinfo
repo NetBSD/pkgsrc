@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2017/03/30 09:15:09 bouyer Exp $
+
+SHA1 (xen48/xen-4.8.0.tar.gz) = c2403899b13e1e8b8da391aceecbfc932d583a88
+RMD160 (xen48/xen-4.8.0.tar.gz) = b79b1e2587caa9c6fe68d2996a4fd42f95c1fe7b
+SHA512 (xen48/xen-4.8.0.tar.gz) = 70b95553f9813573b12e52999a4df8701dec430f23c36a8dc70d25a46bb4bc9234e5b7feb74a04062af4c8d6b6bcfe947d90b2b172416206812e54bac9797454
+Size (xen48/xen-4.8.0.tar.gz) = 22499917 bytes
+SHA1 (patch-Config.mk) = abf55aa58792315e758ee3785a763cfa8c2da68f
+SHA1 (patch-xen_Makefile) = be3f4577a205b23187b91319f91c50720919f70b
+SHA1 (patch-xen_Rules.mk) = 5f33a667bae67c85d997a968c0f8b014b707d13c
+SHA1 (patch-xen_arch_x86_Rules.mk) = e2d148fb308c37c047ca41a678471217b6166977
+SHA1 (patch-xen_arch_x86_boot_build32.mk) = 7fa0d64e88e3be0330dac9a2ddc8b0114fd7d4a5
+SHA1 (patch-xen_tools_symbols.c) = fdc7e4aa7b8db0854987c9d0e60c254bb9f5af4e
