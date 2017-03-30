@@ -1,0 +1,10 @@
+SPF (and related systems) present a challenge to forwarders, since the
+envelope sender address might be seen by the destination as a forgery by
+the forwarding host. Forwarding services must rewrite the envelope
+sender address, while encapsulating the original sender and preventing
+relay attacks by spammers.
+
+The Sender Rewriting Scheme, or SRS, provides a standard for this
+rewriting which makes forwarding compatible with these address
+verification schemes, preserves bounce functionality and is not
+vulnerable to attacks by spammers.

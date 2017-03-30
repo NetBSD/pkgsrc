@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/30 01:55:58 schmonz Exp $
+bin/srs
+include/srs2.h
+lib/libsrs2.la
