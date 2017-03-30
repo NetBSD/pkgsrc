@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:30:31 fhajny Exp $
-lib/erlang/lib/p1_pam-${PKGVERSION}/ebin/epam.beam
-lib/erlang/lib/p1_pam-${PKGVERSION}/ebin/epam_app.beam
-lib/erlang/lib/p1_pam-${PKGVERSION}/ebin/epam_sup.beam
-lib/erlang/lib/p1_pam-${PKGVERSION}/ebin/p1_pam.app
-lib/erlang/lib/p1_pam-${PKGVERSION}/priv/bin/epam
