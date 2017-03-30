@@ -1,0 +1,53 @@
+$NetBSD: patch-bin_arc,v 1.1 2017/03/30 20:14:16 roy Exp $
+
+commit dcf167cba8294310d03c29b2eec82c2aea8aa9b4
+Author: Roy Marples <roy@marples.name>
+Date:   Thu Mar 30 12:20:19 2017 +0100
+
+    arcanist: arc should work with any POSIX shell
+    
+    Summary:
+    Currently arc requires bash for `$BASH_SOURCE[0]` and
+    substring range removal, both of which are bash specific features.
+    
+    This patch gets the same result with `$0` and string prefix removal,
+    both of are are POSIX features and as such all shells should support.
+    
+    Fixes T12477.
+    
+    Test Plan:
+      *  Run `bin/arc` on systems with bash and other shells as `/bin/sh`
+    
+    Reviewers: #blessed_reviewers!
+    
+    Subscribers: epriestley
+    
+    Maniphest Tasks: T12477
+    
+    Differential Revision: https://secure.phabricator.com/D17582
+
+diff --git a/bin/arc b/bin/arc
+index e125698b..96f321a3 100755
+--- bin/arc
++++ bin/arc
+@@ -1,14 +1,16 @@
+-#!/usr/bin/env bash
++#!/bin/sh
+ 
+ # NOTE: This file is a wrapper script instead of a symlink so it will work in
+ # the Git Bash environment in Windows.
+ 
+-# Do bash magic to resolve the real location of this script through aliases,
++# Do shell magic to resolve the real location of this script through aliases,
+ # symlinks, etc.
+-SOURCE="${BASH_SOURCE[0]}";
++SOURCE="$0";
+ while [ -h "$SOURCE" ]; do
+   LINK="$(readlink "$SOURCE")";
+-  if [ "${LINK:0:1}" == "/" ]; then
++  # Test if the first character of $LINK is / by removing it from the front
++  # and testing equality
++  if [ "${LINK#/}" != "$LINK" ]; then
+     # absolute symlink
+     SOURCE="$LINK"
+   else
