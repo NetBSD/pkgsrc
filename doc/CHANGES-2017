@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1346 2017/03/30 16:20:34 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1347 2017/03/30 16:24:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1648,3 +1648,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/sqlite3 to 3.18.0 [adam 2017-03-30]
 	Updated lang/nodejs to 7.8.0 [fhajny 2017-03-30]
 	Updated lang/nodejs6 to 6.10.1 [fhajny 2017-03-30]
+	Updated www/nghttp2 to 1.21.0 [adam 2017-03-30]
+	Updated devel/git to 2.12.2 [adam 2017-03-30]
