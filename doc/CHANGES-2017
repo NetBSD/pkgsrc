@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1335 2017/03/30 11:43:52 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1336 2017/03/30 12:40:39 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1625,3 +1625,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/xenkernel48 version 4.8.0 [bouyer 2017-03-30]
 	Added sysutils/xentools48 version 4.8.0 [bouyer 2017-03-30]
 	Updated lang/python36 to 3.6.1 [adam 2017-03-30]
+	Updated converters/libiconv to 1.14nb3 [jperkin 2017-03-30]
