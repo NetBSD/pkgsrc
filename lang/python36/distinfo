@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2017/01/26 09:45:23 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2017/03/30 11:42:58 adam Exp $
 
-SHA1 (Python-3.6.0.tar.xz) = 18ebf7d726782967d967dc00e3aa08b334fbdd5c
-RMD160 (Python-3.6.0.tar.xz) = 984a38d1eec379ac8921479a86259ca0161734af
-SHA512 (Python-3.6.0.tar.xz) = 9d06bee9172bc0bfd2d280fd1c27ea712f3258cfbfd2e2aeb734d0a6710998d5deeefc5d6e72251750dd9493d35461511ceaa187a29dea700ca238ff6ac1dbb2
-Size (Python-3.6.0.tar.xz) = 16805836 bytes
+SHA1 (Python-3.6.1.tar.xz) = 91d880a2a9fcfc6753cbfa132bf47a47e17e7b16
+RMD160 (Python-3.6.1.tar.xz) = 77e70ec6a07b9c17a99ac1df503f12f3a4c49fce
+SHA512 (Python-3.6.1.tar.xz) = 8605fb7019386fec227d4b06d06f00ae500a8a89df289bfe6141bb56196c75483a60cc0ee553930742b31cefce68add5ccf226e0f27b7b915f5026d597e1ac29
+Size (Python-3.6.1.tar.xz) = 16872064 bytes
 SHA1 (patch-Include_py__curses.h) = 14359f8d0527eff08073c0aea60dfe8961d9255d
 SHA1 (patch-Lib_distutils_command_install.py) = 6fc6f5d918b7581fc62cd0fe55857ee932c3a341
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
@@ -14,5 +14,5 @@ SHA1 (patch-Modules___cursesmodule.c) = 2ab2779e0418a4529987641c254686ba05d28593
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
-SHA1 (patch-configure) = b3b73638ddd72517f4e80193212a38e0cd991157
-SHA1 (patch-setup.py) = 2ac8834ecc4e8bb27e1721e572e06dbfa74fe277
+SHA1 (patch-configure) = b0ed2f58d1b554aa8d81ffdabaae39f3109811d0
+SHA1 (patch-setup.py) = 1e14b84fc5cb21b3fa61755bf574021ba9b2ab81
