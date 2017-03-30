@@ -1,6 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1330 2017/03/29 13:28:08 schmonz Exp $
-
-[Now in freeze for 2017Q1.]
+$NetBSD: CHANGES-2017,v 1.1331 2017/03/30 00:05:54 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1621,3 +1619,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/hexchat to 2.12.3 [khorben 2017-03-28]
 	Updated devel/libuv to 1.11.0nb1 [maya 2017-03-28]
 	Updated mail/qmail to 1.03nb24 [schmonz 2017-03-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q1 branch [gdt 2017-03-30]
