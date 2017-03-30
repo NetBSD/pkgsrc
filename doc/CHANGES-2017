@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1333 2017/03/30 08:09:21 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1334 2017/03/30 09:16:21 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1622,3 +1622,5 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q1 branch [gdt 2017-03-30]
 	Added mail/libsrs2 version 1.0.18 [schmonz 2017-03-30]
 	Updated databases/py-sqlalchemy to 1.1.7 [adam 2017-03-30]
+	Added sysutils/xenkernel48 version 4.8.0 [bouyer 2017-03-30]
+	Added sysutils/xentools48 version 4.8.0 [bouyer 2017-03-30]
