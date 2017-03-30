@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/03/12 21:53:39 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/30 15:54:03 adam Exp $
 
-DISTNAME=	dbfsak-4.6.src
+DISTNAME=	dbfsak-5.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dbfsak/}
