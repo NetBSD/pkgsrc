@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1338 2017/03/30 12:43:36 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.1339 2017/03/30 14:20:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/libiconv to 1.14nb3 [jperkin 2017-03-30]
 	Updated lang/openjdk7 to 1.7.80nb7 [jperkin 2017-03-30]
 	Updated lang/openjdk8 to 1.8.121nb3 [jperkin 2017-03-30]
+	Updated net/syncthing to 0.14.25 [wiz 2017-03-30]
