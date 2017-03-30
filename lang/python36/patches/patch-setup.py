@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.2 2017/01/26 09:45:23 jperkin Exp $
+$NetBSD: patch-setup.py,v 1.3 2017/03/30 11:42:58 adam Exp $
 
 Disable modules, so they can be built as separate packages.
 
---- setup.py.orig	2016-12-23 02:21:22.000000000 +0000
+--- setup.py.orig	2017-03-21 06:32:38.000000000 +0000
 +++ setup.py
 @@ -8,6 +8,7 @@ import importlib.util
  import sysconfig
@@ -47,7 +47,7 @@ Disable modules, so they can be built as separate packages.
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -811,8 +813,7 @@ class PyBuildExt(build_ext):
+@@ -812,8 +814,7 @@ class PyBuildExt(build_ext):
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -57,7 +57,7 @@ Disable modules, so they can be built as separate packages.
                               ]
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
                               search_for_ssl_incs_in
-@@ -823,9 +824,7 @@ class PyBuildExt(build_ext):
+@@ -824,9 +825,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -68,7 +68,7 @@ Disable modules, so they can be built as separate packages.
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -844,7 +843,7 @@ class PyBuildExt(build_ext):
+@@ -845,7 +844,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -77,7 +77,7 @@ Disable modules, so they can be built as separate packages.
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -1241,6 +1240,30 @@ class PyBuildExt(build_ext):
+@@ -1242,6 +1241,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -108,7 +108,7 @@ Disable modules, so they can be built as separate packages.
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1252,7 +1275,7 @@ class PyBuildExt(build_ext):
+@@ -1253,7 +1276,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -117,7 +117,7 @@ Disable modules, so they can be built as separate packages.
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -2058,10 +2081,7 @@ class PyBuildExt(build_ext):
+@@ -2060,10 +2083,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -126,10 +126,10 @@ Disable modules, so they can be built as separate packages.
 -                                                         '_decimal',
 -                                                         'libmpdec'))]
 +            include_dirs = ['Modules/_decimal/libmpdec']
-             libraries = []
+             libraries = self.detect_math_libs()
              sources = [
                '_decimal/_decimal.c',
-@@ -2298,7 +2318,7 @@ def main():
+@@ -2300,7 +2320,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
