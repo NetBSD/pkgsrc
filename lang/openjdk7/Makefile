@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.113 2017/02/12 06:25:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.114 2017/03/30 12:41:42 jperkin Exp $
 
 JDK_MICRO=	80
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20150609
 PKGNAME=	openjdk7-1.7.${JDK_MICRO}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,8 +20,8 @@ DIST_SUBDIR=	openjdk7
 
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
-JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps keytool orbd \
-		policytool rmid rmiregistry servertool tnameserv
+JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps jstack keytool \
+		orbd policytool rmid rmiregistry servertool tnameserv
 
 MAKE_ENV+=		PKGSRC_ZIPEXE=${TOOLS_PATH.zip}
 MAKE_ENV+=		PKGSRC_UNZIP=${TOOLS_PATH.unzip}
