@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2017/03/01 14:19:27 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/03/30 15:23:49 fhajny Exp $
 bin/elasticsearch
 bin/elasticsearch-plugin
 lib/elasticsearch/bin/elasticsearch.in.sh
@@ -9,6 +9,7 @@ lib/elasticsearch/lib/jackson-core-2.8.6.jar
 lib/elasticsearch/lib/jackson-dataformat-cbor-2.8.6.jar
 lib/elasticsearch/lib/jackson-dataformat-smile-2.8.6.jar
 lib/elasticsearch/lib/jackson-dataformat-yaml-2.8.6.jar
+lib/elasticsearch/lib/java-version-checker-${PKGVERSION}.jar
 lib/elasticsearch/lib/jna-4.2.2.jar
 lib/elasticsearch/lib/joda-time-2.9.5.jar
 lib/elasticsearch/lib/jopt-simple-5.0.2.jar
