@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2017/03/30 08:52:54 bouyer Exp $
+
+Make the paths in gegrep & gfgrep absolute so if they are used without
+${PREFIX}/${PKGGNUDIR}bin being in the path, they still work.
+
+--- src/Makefile.in.orig	2016-12-07 08:15:19.000000000 +0100
++++ src/Makefile.in	2017-03-30 10:33:33.000000000 +0200
+@@ -1601,7 +1601,7 @@
+ 	fi &&								\
+ 	sed -e 's|[@]SHELL@|$(SHELL)|g'					\
+ 	    -e "$$edit_substring"					\
+-	    -e "s|[@]grep@|$$grep|g"					\
++	    -e "s|[@]grep@|$(PREFIX)/$(PKGGNUDIR)bin/$$grep|g"		\
+ 	    -e "s|[@]option@|$$option|g" <$(srcdir)/egrep.sh >$@-t
+ 	$(AM_V_at)chmod +x $@-t
+ 	$(AM_V_at)mv $@-t $@
