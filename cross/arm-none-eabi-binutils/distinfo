@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/10/19 12:44:44 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2017/03/30 19:21:26 ryoon Exp $
 
-SHA1 (binutils-2.27.tar.bz2) = 6e472ddae565a2b1447e6f2393809bb8799982cf
-RMD160 (binutils-2.27.tar.bz2) = e6623d3a90578169790417b8dd83e850c0a81910
-SHA512 (binutils-2.27.tar.bz2) = cf276f84935312361a2ca077e04d0b469d23a3aed979d8ba5d92ea590904ffb2c2e7ed12cc842822bfc402836be86f479660cef3791aa62f3753d8a1a6f564cb
-Size (binutils-2.27.tar.bz2) = 26099568 bytes
-SHA1 (patch-bfd_elf32-arm.c) = 8d90dd77cb4925db71def94d2d32cbe3e1cfb69e
+SHA1 (binutils-2.28.tar.bz2) = f8b033731f6baa437d429c60e2623570f1ef9d6b
+RMD160 (binutils-2.28.tar.bz2) = 2d697b066cf764ba5f4a5cb3c7cbb45c26c6dc5b
+SHA512 (binutils-2.28.tar.bz2) = ede2e4e59a800260eea8c14eafbaee94e30abadafd5c419a3370f9f62213cf027d6400a1d4970b6958bd4d220e675dcd483a708107016e7abd5c99d7392ba8fd
+Size (binutils-2.28.tar.bz2) = 26556365 bytes
