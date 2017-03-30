@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/30 01:55:58 schmonz Exp $
+
+SHA1 (libsrs2-1.0.18.tar.gz) = db9452e5207bb573eca4b3409c201f1e0275d300
+RMD160 (libsrs2-1.0.18.tar.gz) = 7efa96f457ebac45178afa84aeaeb28834a1f4e7
+SHA512 (libsrs2-1.0.18.tar.gz) = b9c189caa227487e90566f65430345f09a3d545fc286a3eb0c445aee3a74905c1a9248ce78b36a7cfb6a2936f6cd1efbe99ba7b8df49a613a81c6435396f5422
+Size (libsrs2-1.0.18.tar.gz) = 295748 bytes
