@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1348 2017/03/30 16:40:20 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1349 2017/03/30 19:11:47 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/nghttp2 to 1.21.0 [adam 2017-03-30]
 	Updated devel/git to 2.12.2 [adam 2017-03-30]
 	Updated lang/nodejs4 to 4.8.1 [fhajny 2017-03-30]
+	Updated www/firefox to 52.0.2 [ryoon 2017-03-30]
