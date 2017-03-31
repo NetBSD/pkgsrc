@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.80 2017/03/29 13:26:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.81 2017/03/31 13:52:00 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		24
+PKGREVISION=		25
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -42,6 +42,7 @@ DOCDIR=			${PREFIX}/share/doc/qmail
 EGDIR=			${PREFIX}/share/examples/qmail
 SHAREDIR=		${PREFIX}/share/qmail
 PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX:Q}
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
 FILES_SUBST+=		OPENSSL=${OPENSSL:Q}
@@ -133,7 +134,7 @@ OPSYSVARS+=		DARWINSUFX
 DARWINSUFX.Darwin=	.doc
 DARWINSUFX.*=		# empty
 
-post-extract: post-extract-viruscan
+post-extract: post-extract-srs post-extract-viruscan
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}
 .if ${OPSYS} == "Darwin"
 .	for i in INSTALL SENDMAIL
@@ -154,7 +155,7 @@ pre-install:
 	${LN} -s ${DESTDIR}${QMAIL_QUEUE_DIR}	${DESTDIR}${QMAILDIR}/queue
 	${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
 
-post-install: post-install-viruscan
+post-install: post-install-srs post-install-viruscan
 	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR}
 
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${SHAREDIR}/setup
