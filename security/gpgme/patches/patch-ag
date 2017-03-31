@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.4 2011/08/11 11:15:00 adam Exp $
+$NetBSD: patch-ag,v 1.5 2017/03/31 10:31:57 wiz Exp $
 
---- config.h.in.orig	2010-01-11 11:06:53.000000000 +0000
+--- config.h.in.orig	2016-11-16 12:29:36.000000000 +0000
 +++ config.h.in
-@@ -76,6 +76,9 @@
- /* Define if we have pthread. */
- #undef HAVE_PTHREAD
+@@ -77,6 +77,9 @@
+ /* If available, contains the Python version number currently in use. */
+ #undef HAVE_PYTHON
  
 +/* Define to 1 if you have the <rfuncs.h> header file. */
 +#undef HAVE_RFUNCS_H

@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.11 2014/09/04 08:25:56 wiz Exp $
+$NetBSD: patch-ac,v 1.12 2017/03/31 10:31:57 wiz Exp $
 
---- configure.orig	2014-07-30 09:54:53.000000000 +0000
+--- configure.orig	2016-11-16 12:46:37.000000000 +0000
 +++ configure
-@@ -2710,6 +2710,7 @@ $as_echo "$as_me: creating cache $cache_
+@@ -2784,6 +2784,7 @@ $as_echo "$as_me: creating cache $cache_
  fi
  
  as_fn_append ac_header_list " locale.h"
@@ -10,16 +10,7 @@ $NetBSD: patch-ac,v 1.11 2014/09/04 08:25:56 wiz Exp $
  as_fn_append ac_header_list " sys/select.h"
  as_fn_append ac_header_list " sys/uio.h"
  as_fn_append ac_header_list " argp.h"
-@@ -17195,7 +17196,7 @@ if ${ac_cv_lib_pthread_pthread_create+:}
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
- cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
- 
-@@ -17873,7 +17874,7 @@ main ()
+@@ -21175,7 +21176,7 @@ main ()
    return 0;
  }
  _ACEOF
