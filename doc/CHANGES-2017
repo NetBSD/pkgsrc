@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1354 2017/03/31 07:11:25 tron Exp $
+$NetBSD: CHANGES-2017,v 1.1355 2017/03/31 07:26:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/grep to 3.0 [ryoon 2017-03-30]
 	Added devel/py-cyordereddict version 1.0.0 [minskim 2017-03-31]
 	Updated pkgtools/pkg_rolling-replace to 0.24.3 [tron 2017-03-31]
+	Updated print/ghostscript-agpl to 9.21 [adam 2017-03-31]
