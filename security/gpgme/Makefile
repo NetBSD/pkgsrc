@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2017/03/31 10:31:57 wiz Exp $
 
-DISTNAME=	gpgme-1.6.0
-PKGREVISION=	1
+DISTNAME=	gpgme-1.8.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -49,7 +48,7 @@ BUILDLINK_API_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
 .include "../../devel/librfuncs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.0.2
 .include "../../security/libassuan2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.4
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.17
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 _UNWRAP_FILES=
