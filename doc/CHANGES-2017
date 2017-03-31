@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1353 2017/03/31 01:18:10 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1354 2017/03/31 07:11:25 tron Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1656,3 +1656,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cross/arm-none-eabi-binutils to 2.28 [ryoon 2017-03-30]
 	Updated textproc/grep to 3.0 [ryoon 2017-03-30]
 	Added devel/py-cyordereddict version 1.0.0 [minskim 2017-03-31]
+	Updated pkgtools/pkg_rolling-replace to 0.24.3 [tron 2017-03-31]
