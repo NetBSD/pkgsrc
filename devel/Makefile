@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2389 2017/03/20 21:59:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2390 2017/03/31 01:17:32 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -1786,6 +1786,7 @@ SUBDIR+=	py-coverage
 SUBDIR+=	py-cparser
 SUBDIR+=	py-curses
 SUBDIR+=	py-cursespanel
+SUBDIR+=	py-cyordereddict
 SUBDIR+=	py-cython
 SUBDIR+=	py-d2to1
 SUBDIR+=	py-daemon
