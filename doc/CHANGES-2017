@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1363 2017/03/31 21:19:08 roy Exp $
+$NetBSD: CHANGES-2017,v 1.1364 2017/03/31 23:39:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/re2 to 20170301 [fhajny 2017-03-31]
 	Added net/dnsdist version 1.1.0 [fhajny 2017-03-31]
 	Updated net/dhcpcd to 7.0.0beta1 [roy 2017-03-31]
+	Updated devel/nspr to 4.14 [ryoon 2017-03-31]
