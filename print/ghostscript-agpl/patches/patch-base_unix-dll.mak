@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.8 2016/10/09 17:15:11 adam Exp $
+$NetBSD: patch-base_unix-dll.mak,v 1.1 2017/03/31 07:26:23 adam Exp $
 
 Use correct shared library naming on Darwin.
 Add some rpaths.
