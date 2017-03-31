@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2017/03/31 17:19:23 fhajny Exp $
+
+Avoid in-place sed for better portability.
+
+--- Makefile.orig	2017-03-31 17:05:44.915188459 +0000
++++ Makefile
+@@ -290,11 +290,12 @@ install: obj/libre2.a obj/so/libre2.$(SO
+ 	$(INSTALL) obj/so/libre2.$(SOEXT) $(DESTDIR)$(libdir)/libre2.$(SOEXTVER00)
+ 	ln -sf libre2.$(SOEXTVER00) $(DESTDIR)$(libdir)/libre2.$(SOEXTVER)
+ 	ln -sf libre2.$(SOEXTVER00) $(DESTDIR)$(libdir)/libre2.$(SOEXT)
+-	$(INSTALL_DATA) re2.pc $(DESTDIR)$(libdir)/pkgconfig/re2.pc
+-	$(SED_INPLACE) -e "s#@prefix@#${prefix}#" $(DESTDIR)$(libdir)/pkgconfig/re2.pc
+-	$(SED_INPLACE) -e "s#@exec_prefix@#${exec_prefix}#" $(DESTDIR)$(libdir)/pkgconfig/re2.pc
+-	$(SED_INPLACE) -e "s#@includedir@#${includedir}#" $(DESTDIR)$(libdir)/pkgconfig/re2.pc
+-	$(SED_INPLACE) -e "s#@libdir@#${libdir}#" $(DESTDIR)$(libdir)/pkgconfig/re2.pc
++	sed \
++		-e "s#@prefix@#${prefix}#" \
++		-e "s#@exec_prefix@#${exec_prefix}#" \
++		-e "s#@includedir@#${includedir}#" \
++		-e "s#@libdir@#${libdir}#" \
++		re2.pc > $(DESTDIR)$(libdir)/pkgconfig/re2.pc
+ 
+ testinstall: static-testinstall shared-testinstall
+ 	@echo
