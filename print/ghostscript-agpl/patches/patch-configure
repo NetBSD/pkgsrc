@@ -1,0 +1,39 @@
+$NetBSD: patch-configure,v 1.1 2017/03/31 07:26:23 adam Exp $
+
+Use system zlib for linking.
+Add rpath.
+Use correct install_name with path on Darwin.
+
+--- configure.orig	2017-03-16 10:12:44.000000000 +0000
++++ configure
+@@ -3742,7 +3742,7 @@ CFLAGSAUX_STANDARDTMP="\$(CFLAGS_STANDAR
+ CFLAGSAUX_DEBUGTMP="\$(CFLAGS_DEBUG)"
+ CFLAGSAUX_PROFILETMP="\$(CFLAGS_PROFILE)"
+ LDFLAGSAUXTMP="\$(LDFLAGS)"
+-AUXEXTRALIBSTMP="\$(EXTRALIBS)"
++AUXEXTRALIBSTMP="\$(EXTRALIBS) -lz"
+ 
+ 
+ # purposefully do not include "help" output for this
+@@ -6705,7 +6705,7 @@ fi
+ fi
+ 
+ if test x$with_libpaper != xno; then
+-    LIBS="$LIBS -lpaper"
++    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"
+ 
+ $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
+ 
+@@ -10047,9 +10047,9 @@ else
+       SO_LIB_EXT=".so"
+     ;;
+     Darwin*)
+-      GS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(GS_SONAME_MAJOR_MINOR)"
+-      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(PCL_SONAME_MAJOR_MINOR)"
+-      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(XPS_SONAME_MAJOR_MINOR)"
++      GS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(GS_SONAME_MAJOR_MINOR)"
++      PCL_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(PCL_SONAME_MAJOR_MINOR)"
++      XPS_DYNAMIC_LDFLAGS="-dynamiclib -install_name \$(DESTDIR)\$(libdir)/\$(XPS_SONAME_MAJOR_MINOR)"
+       DYNAMIC_LIBS=""
+       SO_LIB_EXT=".dylib"
+     ;;
