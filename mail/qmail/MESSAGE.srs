@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE.srs,v 1.1 2017/03/31 13:52:00 schmonz Exp $
+
+The Sender Rewriting Scheme patch requires configuration.
+
+Please read ${DOCDIR}/README.srs.
+
+===========================================================================
