@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2015/07/05 18:26:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/03/31 10:31:57 wiz Exp $
 bin/gpgme-config
 bin/gpgme-tool
 include/gpgme.h
 info/gpgme.info
-lib/libgpgme-pthread.la
 lib/libgpgme.la
 share/aclocal/gpgme.m4
 share/common-lisp/source/gpgme/gpgme-package.lisp
