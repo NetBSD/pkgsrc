@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1357 2017/03/31 10:54:57 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1358 2017/03/31 13:52:08 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1660,3 +1660,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/ghostscript-agpl to 9.21 [adam 2017-03-31]
 	Updated security/gpgme to 1.8.0 [wiz 2017-03-31]
 	Updated x11/libdrm to 2.4.76 [wiz 2017-03-31]
+	Updated mail/qmail to 1.03nb25 [schmonz 2017-03-31]
