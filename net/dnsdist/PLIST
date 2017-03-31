@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/03/31 20:49:51 fhajny Exp $
+bin/dnsdist
+man/man1/dnsdist.1
+share/examples/dnsdist/dnsdist.conf
