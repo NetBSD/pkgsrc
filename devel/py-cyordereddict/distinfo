@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/03/31 01:16:18 minskim Exp $
+
+SHA1 (cyordereddict-1.0.0.tar.gz) = 9b8e2e4b0ae4fc8cf66e310446e165929eb7e2d0
+RMD160 (cyordereddict-1.0.0.tar.gz) = 44f493fb1c7f08e92220a4907c5d00cd27c26b73
+SHA512 (cyordereddict-1.0.0.tar.gz) = e2406dadc2d9571bb196c09d29ba25cb5f28fd0b719c79a04e4e858c3212e8cc4bd62921473277752f2c09ac4cebdf97c6f617e7613c072f527ea58f399cd12d
+Size (cyordereddict-1.0.0.tar.gz) = 138200 bytes

@@ -1,0 +1,2 @@
+cyordereddict is a Cython implementation of Python's
+collections.OrderedDict.
