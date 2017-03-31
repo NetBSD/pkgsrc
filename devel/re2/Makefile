@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/01/02 08:05:50 mef Exp $
+# $NetBSD: Makefile,v 1.4 2017/03/31 17:19:23 fhajny Exp $
 
-DISTNAME=	re2-20170101
+DISTNAME=	re2-20170301
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_TAG=	2017-01-01
