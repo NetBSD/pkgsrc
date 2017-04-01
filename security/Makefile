@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2017/03/30 14:53:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.610 2017/04/01 17:02:08 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -26,6 +26,7 @@ SUBDIR+=	asignify
 SUBDIR+=	avcheck
 SUBDIR+=	base
 SUBDIR+=	bcrypt
+SUBDIR+=	bearssl
 SUBDIR+=	beecrypt
 SUBDIR+=	bitstir
 SUBDIR+=	boringssl
