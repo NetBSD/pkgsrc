@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/01 17:01:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/01 17:32:47 agc Exp $
 
 DISTNAME=	bearssl-0.3
 CATEGORIES=	security
@@ -13,7 +13,7 @@ INSTALLATION_DIRS=	bin include lib
 
 do-install:
 	cd ${WRKSRC}/build && \
-		${INSTALL_DATA} brssl ${DESTDIR}${PREFIX}/bin
+		${INSTALL_PROGRAM} brssl ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/inc && \
 		${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include
 	cd ${WRKSRC}/build && \
