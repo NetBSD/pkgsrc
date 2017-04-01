@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/01/27 15:45:05 prlw1 Exp $
+# $NetBSD: Makefile,v 1.4 2017/04/01 05:18:19 adam Exp $
 
-DISTNAME=	swig-3.0.11
+DISTNAME=	swig-3.0.12
 PKGNAME=	${DISTNAME:S/swig/swig3/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
@@ -10,10 +10,9 @@ HOMEPAGE=	http://www.swig.org/
 COMMENT=	Simplified Wrapper and Interface Generator (version 3)
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl:build
-
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		perl:build
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-suffix=3.0
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/3.0
 
