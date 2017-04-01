@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.31 2014/10/12 23:39:17 joerg Exp $
+# $NetBSD: check-files.mk,v 1.32 2017/04/01 20:55:39 rillig Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -329,8 +329,8 @@ ${_CHECK_FILES_ERRMSG.prefix}:						\
 		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_SKIP};	\
 	fi >> ${.TARGET}
 
-# Check ${SYSCONFDIR} for files which are not in the PLIST and are also
-# not copied into place by the INSTALL scripts.
+# Check ${PKG_SYSCONFDIR} for files which are not in the PLIST and are
+# also not copied into place by the INSTALL scripts. 
 #
 ${_CHECK_FILES_ERRMSG.sysconfdir}:					\
 		${_CHECK_FILES_PRE.sysconfdir}				\
