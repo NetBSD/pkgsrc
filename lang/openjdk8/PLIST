@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/08/11 15:34:29 abs Exp $
+@comment $NetBSD: PLIST,v 1.6.6.1 2017/04/01 18:07:19 bsiegert Exp $
 bin/openjdk8-jar
 bin/openjdk8-java
 bin/openjdk8-javac
@@ -7,6 +7,7 @@ bin/openjdk8-javah
 bin/openjdk8-javap
 bin/openjdk8-jcmd
 bin/openjdk8-jps
+bin/openjdk8-jstack
 bin/openjdk8-keytool
 bin/openjdk8-orbd
 bin/openjdk8-policytool

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2017/02/12 06:25:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2017/04/01 18:07:19 bsiegert Exp $
 
 DISTNAME=	openjdk-1.8.121-20170131
 PKGNAME=	openjdk8-1.8.121
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,8 +20,8 @@ DIST_SUBDIR=	openjdk7
 
 JAVA_NAME=	openjdk8
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
-JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps keytool orbd \
-		policytool rmid rmiregistry servertool tnameserv
+JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps jstack keytool \
+		orbd policytool rmid rmiregistry servertool tnameserv
 
 BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
