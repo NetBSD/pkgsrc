@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/07/15 02:50:08 wen Exp $
+$NetBSD: distinfo,v 1.9 2017/04/03 01:08:15 wen Exp $
 
-SHA1 (HTML-Selector-XPath-0.20.tar.gz) = 5c18f1acfdfc87a26fa78df94a8a98aa1677edc7
-RMD160 (HTML-Selector-XPath-0.20.tar.gz) = 3efca4d677c71e572eb696c6a2bff503949d013b
-SHA512 (HTML-Selector-XPath-0.20.tar.gz) = 4dbad0899b7d2ea08f03823149c38a2907364e7959e047d5d958e329b529c9b779ff86725107efad8e65b359857117b6d98f7452b21439d82833552f4d90daae
-Size (HTML-Selector-XPath-0.20.tar.gz) = 28889 bytes
+SHA1 (HTML-Selector-XPath-0.23.tar.gz) = 7f56c23b7dee65f09fc6cd7c1331462807a6a1cc
+RMD160 (HTML-Selector-XPath-0.23.tar.gz) = a28339ed6866cbd9cc824a6cdcbe35a44717cdfb
+SHA512 (HTML-Selector-XPath-0.23.tar.gz) = 877ad6e06b3109c20a0be71e259e5ebc722acf98891a2a05601a23b1a2611f9d4dd80ab0e7c67d67e6f90941bdfa15a3e6ec84188e602eb417cba600b665931f
+Size (HTML-Selector-XPath-0.23.tar.gz) = 29681 bytes
