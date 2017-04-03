@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1373 2017/04/03 01:14:32 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1374 2017/04/03 01:41:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1676,3 +1676,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/bearssl version 0.3 [wiz 2017-04-01]
 	Updated www/p5-HTML-Selector-XPath to 0.23 [wen 2017-04-03]
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.26 [wen 2017-04-03]
+	Updated www/p5-HTTP-Async to 0.33 [wen 2017-04-03]
