@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/03/17 12:40:58 roy Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2017/04/03 16:22:38 spz Exp $
 
 DISTNAME=		arcanist-20170225
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		arcanist
@@ -20,8 +21,6 @@ DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 
 CONFLICTS+=		arc-[0-9]*:../../archivers/arc
 
-REPLACE_BASH+=		bin/arc
-
 SUBST_CLASSES+=		php
 SUBST_MESSAGE.php=	Fixing PHP path
 SUBST_STAGE.php=	post-configure
@@ -40,8 +39,11 @@ ARCANISTDIR=		share/arcanist
 INSTALLATION_DIRS+=	${ARCANISTDIR} bin
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${PREFIX}/${ARCANISTDIR}
-	ln -s ${PREFIX}/${ARCANISTDIR}/bin/arc ${DESTDIR}${PREFIX}/bin/arc
+	cd ${WRKSRC} && \
+		${PAX} -rw * -s',.*\.orig$$,,' \
+		${DESTDIR}${PREFIX}/${ARCANISTDIR}
+	ln -s ${PREFIX}/${ARCANISTDIR}/scripts/arcanist.php \
+		${DESTDIR}${PREFIX}/bin/arc
 
 .include "../../lang/python/application.mk"
 .include "../../lang/php/phpversion.mk"
