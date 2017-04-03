@@ -1,0 +1,4 @@
+This package provides two bits:
+- 'bugzilla' python module for talking to a Bugzilla instance over XMLRPC
+- a command line tool for performing actions from the command line:
+  create or edit bugs, various queries, etc.
