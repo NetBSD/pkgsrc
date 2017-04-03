@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1378 2017/04/03 14:35:20 joerg Exp $
+$NetBSD: CHANGES-2017,v 1.1379 2017/04/03 20:58:26 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1681,3 +1681,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-lexicon to 2.0.5 [fhajny 2017-04-03]
 	Updated databases/py-elasticsearch to 5.3.0 [fhajny 2017-04-03]
 	Added devel/py-bugzilla version 2.1.0 [joerg 2017-04-03]
+	Updated net/haproxy to 1.7.5 [morr 2017-04-03]
