@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1405 2017/04/04 14:08:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1406 2017/04/04 14:08:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1708,3 +1708,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-ParamUnittest version 0.2 [wiz 2017-04-04]
 	Added devel/py-mando version 0.5 [wiz 2017-04-04]
 	Added devel/py-flake8-polyfill version 1.0.1 [wiz 2017-04-04]
+	Added devel/py-test-mock version 1.6.0 [wiz 2017-04-04]
