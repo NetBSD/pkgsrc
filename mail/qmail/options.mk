@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.39 2017/03/31 13:52:00 schmonz Exp $
+# $NetBSD: options.mk,v 1.40 2017/04/04 07:50:18 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -71,7 +71,7 @@ SUBST_CLASSES+=		srsreadme
 SUBST_STAGE.srsreadme=	do-configure
 SUBST_FILES.srsreadme=	README.srs
 SUBST_SED.srsreadme=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
-SPECIAL_PERMS+=		${PREFIX}/bin/srsfilter root qmail 0755
+SPECIAL_PERMS+=		${PREFIX}/bin/srsfilter ${QMAIL_ROOT_USER} ${QMAIL_QMAIL_GROUP} 0755
 PLIST.srs=		yes
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.srs
 post-extract-srs:
