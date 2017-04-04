@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/04/04 14:12:13 wiz Exp $
 
-DISTNAME=	colorama-0.3.2
+DISTNAME=	colorama-0.3.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorama/}
