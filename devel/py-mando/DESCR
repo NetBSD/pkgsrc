@@ -1,0 +1,2 @@
+mando is a wrapper around argparse, and allows you to write complete
+CLI applications in seconds while maintaining all the flexibility.
