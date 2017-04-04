@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/04/04 12:21:26 wiz Exp $
+$NetBSD: distinfo,v 1.8 2017/04/04 14:44:14 wiz Exp $
 
 SHA1 (todoman-3.0.1.tar.gz) = bceee304dc6850799f2b197a55ef4d42d851a046
 RMD160 (todoman-3.0.1.tar.gz) = d6bd77af6a98a9975694ca1d643d208a1a443736
 SHA512 (todoman-3.0.1.tar.gz) = fd17b3f3acac05f6ddbe82c4f663b203985a11b7d9d947752140511d4fe84a51e424a36363407647a7e8056601c68a63c5f6697b6be9c4cb587e3f14f823a92e
 Size (todoman-3.0.1.tar.gz) = 48056 bytes
-SHA1 (patch-setup.cfg) = ba14172ba392200128fa3520da54a04dacaed027
