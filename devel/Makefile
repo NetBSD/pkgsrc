@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2395 2017/04/04 14:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2396 2017/04/04 14:41:59 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1812,6 +1812,7 @@ SUBDIR+=	py-filebytes
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-fixtures
 SUBDIR+=	py-flake8
+SUBDIR+=	py-flake8-import-order
 SUBDIR+=	py-flake8-polyfill
 SUBDIR+=	py-flakes
 SUBDIR+=	py-flexmock
@@ -1856,6 +1857,7 @@ SUBDIR+=	py-jaraco_util
 SUBDIR+=	py-jersey
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
+SUBDIR+=	py-lama
 SUBDIR+=	py-lazy-object-proxy
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
