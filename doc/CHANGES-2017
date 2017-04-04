@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1391 2017/04/04 11:45:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1392 2017/04/04 11:54:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-tabulate version 0.7.7 [wiz 2017-04-04]
 	Added textproc/py-humanize version 0.5.1 [wiz 2017-04-04]
 	Updated misc/todoman to 3.0.1 [wiz 2017-04-04]
+	Updated mail/notmuch to 0.24.1 [wiz 2017-04-04]
