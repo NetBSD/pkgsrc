@@ -1,56 +1,70 @@
-$NetBSD: patch-aa,v 1.2 2014/06/02 14:09:20 schmonz Exp $
+$NetBSD: patch-aa,v 1.3 2017/04/04 08:27:56 schmonz Exp $
 
 Use pkgsrc-preferred tools.
 
---- src/qmqtool.orig	2009-01-24 04:25:44.000000000 +0000
+--- src/qmqtool.orig	2016-06-11 16:26:52.000000000 +0000
 +++ src/qmqtool
 @@ -10,7 +10,7 @@ use Getopt::Std;
  
  my $qmail = '__QMAILDIR__';
- # keep ps dynamic - one nfs homed script can work on any arch
+ # keep ps/bigtodo dynamic - one nfs homed script can work on any arch
 -my $ps = ($^O eq 'solaris') ? '/usr/ucb/ps auxww' : 'ps auxww';
 +my $ps = '@PS@ auxww';
- my $bigtodo=0; # hardly implemented, no demand.
+ my $bigtodo = ( -d "${qmail}/queue/todo/0" ) ? 1 : 0; # more implemented, little demand.
  
- my %opt;
-@@ -161,6 +161,7 @@ if($opt{l}){
- 		}
- 		unless($opt{Q}){
- 			print "you must now start qmail-send: for a LWQ installation, run: svc -u /service/qmail-send\n";
-+			print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend start\n";
- 		}
- 	}else{
- 		syntax();
-@@ -421,6 +422,7 @@ sub check_daemons {
- 				next if(/multilog\s+/); # some log to /var/log/qmail/qmail-send/
- 				die "you must stop qmail-send and qmail-smtpd before this program can continue (PID [$1] running).\n",
- 				    "for a LWQ installation, run: svc -d /service/qmail-send /service/qmail-smtpd\n",
-+				    "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend stop; @RCD_SCRIPTS_DIR@/qmailsmtpd stop\n",
- 				    "others may be able to run: kill -9 `$ps | awk '/qmail-send|qmail-smtpd/ { print \$1 }'`\n";
- 			}
- 		}
-@@ -651,6 +653,7 @@ sub checkqueue {
- 	if($opt{r}){
- 		unless($opt{Q}){
- 			print "you must now start qmail-send: for a LWQ installation, run: svc -u /service/qmail-send\n";
-+			print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend start\n";
- 		}
- 	}
+ 
+@@ -105,10 +105,10 @@ if($opt{l}){
+         }
+     }elsif($opt{B} eq 'r'){
+         my(%owner,%uid,%gid);
+-        $owner{info} = $owner{local} = $owner{remote} = $owner{bounce} = 'qmails';
+-        $owner{mess} = $owner{todo} = $owner{intd} = 'qmailq';
++        $owner{info} = $owner{local} = $owner{remote} = $owner{bounce} = '@QMAIL_SEND_USER@';
++        $owner{mess} = $owner{todo} = $owner{intd} = '@QMAIL_QUEUE_USER@';
+ 
+-        for my $user (qw/qmailq qmails/){
++        for my $user (qw/@QMAIL_QUEUE_USER@ @QMAIL_SEND_USER@/){
+             ($uid{$user},$gid{$user}) = (getpwnam($user))[2,3];
+         }
+ 
+@@ -162,6 +162,7 @@ if($opt{l}){
+         }
+         unless($opt{Q}){
+             print "you must now start qmail-send: for a LWQ installation, run: svc -u /service/qmail-send\n";
++            print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend start\n";
+         }
+     }else{
+         syntax();
+@@ -422,6 +423,7 @@ sub check_daemons {
+                 next if(/multilog\s+/); # some log to /var/log/qmail/qmail-send/
+                 die "you must stop qmail-send and qmail-smtpd before this program can continue (PID [$1] running).\n",
+                     "for a LWQ installation, run: svc -d /service/qmail-send /service/qmail-smtpd\n",
++                    "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend stop; @RCD_SCRIPTS_DIR@/qmailsmtpd stop\n",
+                     "others may be able to run: kill -9 `$ps | awk '/qmail-send|qmail-smtpd/ { print \$1 }'`\n";
+             }
+         }
+@@ -652,6 +654,7 @@ sub checkqueue {
+     if($opt{r}){
+         unless($opt{Q}){
+             print "you must now start qmail-send: for a LWQ installation, run: svc -u /service/qmail-send\n";
++            print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend start\n";
+         }
+     }
  }
-@@ -691,6 +694,7 @@ sub rm_files {
- 	}
- 	if($restart){
- 		print "you must now restart qmail-send: for a LWQ installation, run: svc -du /service/qmail-send\n";
-+		print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend restart\n";
- 	}
+@@ -692,6 +695,7 @@ sub rm_files {
+     }
+     if($restart){
+         print "you must now restart qmail-send: for a LWQ installation, run: svc -du /service/qmail-send\n";
++        print "for a pkgsrc installation, run: @RCD_SCRIPTS_DIR@/qmailsend restart\n";
+     }
  }
  
-@@ -979,7 +983,7 @@ sub find_msgs_bystring {
- 	my @msgs;
- 	# using find|xargs grep is must faster than regex matching in perl (dunno why)
- 	my $last=0;
--	open(GREP, "find ${qmail}/queue/mess/ -type f | xargs grep $opts \"$regex\" /dev/null 2>/dev/null |") || die "could not fork find | xargs grep: $!\n";
-+	open(GREP, "find ${qmail}/queue/mess/ -type f | xargs @GREP@ $opts \"$regex\" /dev/null 2>/dev/null |") || die "could not fork find | xargs @GREP@ $!\n";
- 	# do not count on grep's exit code, because:
- 	#  if a message is removed while grepping, exit code is 2
- 	while(<GREP>){
+@@ -985,7 +989,7 @@ sub find_msgs_bystring {
+     # using find|xargs grep is must faster than regex matching in perl (dunno why)
+     # grep -r isnt portable, dunno if it's safe for huge file lists
+     my $last=0;
+-    open(GREP, "find ${qmail}/queue/mess/ -type f | xargs grep $opts \"$regex\" /dev/null 2>/dev/null |") || die "could not fork find | xargs grep: $!\n";
++    open(GREP, "find ${qmail}/queue/mess/ -type f | xargs @GREP@ $opts \"$regex\" /dev/null 2>/dev/null |") || die "could not fork find | xargs @GREP@ $!\n";
+     # do not count on grep's exit code, because:
+     #  if a message is removed while grepping, exit code is 2
+     while(<GREP>){
