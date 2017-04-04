@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/04 13:07:07 wiz Exp $
+bin/JxrDecApp
+bin/JxrEncApp
+include/jxrgluelib/JXRGlue.h
+include/jxrgluelib/JXRMeta.h
+include/jxrlib/common/include/guiddef.h
+include/jxrlib/common/include/wmsal.h
+include/jxrlib/common/include/wmspecstring.h
+include/jxrlib/common/include/wmspecstrings_adt.h
+include/jxrlib/common/include/wmspecstrings_strict.h
+include/jxrlib/common/include/wmspecstrings_undef.h
+include/jxrlib/image/decode/decode.h
+include/jxrlib/image/encode/encode.h
+include/jxrlib/image/sys/ansi.h
+include/jxrlib/image/sys/common.h
+include/jxrlib/image/sys/perfTimer.h
+include/jxrlib/image/sys/strTransform.h
+include/jxrlib/image/sys/strcodec.h
+include/jxrlib/image/sys/windowsmediaphoto.h
+include/jxrlib/image/sys/xplatform_image.h
+include/jxrlib/image/x86/x86.h
+lib/libjpegxr.a
+lib/libjxrglue.a
+share/doc/jxrlib/JPEGXR_DPK_Spec_1.0.doc
+share/doc/jxrlib/readme.txt

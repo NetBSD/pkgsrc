@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/04 13:07:07 wiz Exp $
+
+SHA1 (jxrlib_1_1.tar.gz) = bf6cfa00087a67491a6ba55d6d96d74e94560430
+RMD160 (jxrlib_1_1.tar.gz) = 31b378cd0de3ce2c1d19fae3927c67046471d07b
+SHA512 (jxrlib_1_1.tar.gz) = c7d87647601e08b2dc18bda26faea80ad5b09c6e8412769cd203ce9e221b2b58425e9d59a506ae8bf61030195bccb51a9d1e893bf2d18e596b0687918b39e2df
+Size (jxrlib_1_1.tar.gz) = 338240 bytes
