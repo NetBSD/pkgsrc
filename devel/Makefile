@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2393 2017/04/04 13:47:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2394 2017/04/04 14:07:40 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1812,6 +1812,7 @@ SUBDIR+=	py-filebytes
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-fixtures
 SUBDIR+=	py-flake8
+SUBDIR+=	py-flake8-polyfill
 SUBDIR+=	py-flakes
 SUBDIR+=	py-flexmock
 SUBDIR+=	py-freezegun
@@ -1984,6 +1985,7 @@ SUBDIR+=	py-sysctl
 SUBDIR+=	py-tabular
 SUBDIR+=	py-test
 SUBDIR+=	py-test-cov
+SUBDIR+=	py-test-mock
 SUBDIR+=	py-test-runner
 SUBDIR+=	py-testresources
 SUBDIR+=	py-testscenarios
