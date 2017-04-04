@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/04 11:34:05 wiz Exp $
+
+SHA1 (humanize-0.5.1.tar.gz) = 8b883f6c712dbc5b866382842e59567cdb3c7240
+RMD160 (humanize-0.5.1.tar.gz) = 7c5a7c9c5ac28eb29b04e80e83506e14bf46f811
+SHA512 (humanize-0.5.1.tar.gz) = 2727268d9fc7b393228f7eb9e71a5c881988ec56e265ddf83613fe57116da3aaad70d2417db4cef8a8c40cb73753eb2c2bd775d3cd25c2de751cb61373f0a551
+Size (humanize-0.5.1.tar.gz) = 14250 bytes
