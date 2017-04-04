@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2390 2017/03/31 01:17:32 minskim Exp $
+# $NetBSD: Makefile,v 1.2391 2017/04/04 13:32:03 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1798,6 +1798,7 @@ SUBDIR+=	py-dialog2
 SUBDIR+=	py-distorm3
 SUBDIR+=	py-distribute
 SUBDIR+=	py-docopt
+SUBDIR+=	py-docstyle
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-enum
