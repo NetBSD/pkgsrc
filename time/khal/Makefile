@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2017/03/07 10:43:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/04/04 13:10:58 wiz Exp $
 
-DISTNAME=		khal-0.9.3
+DISTNAME=		khal-0.9.4
 CATEGORIES=		time net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khal/}
 
