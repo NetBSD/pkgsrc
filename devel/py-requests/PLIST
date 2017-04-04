@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/12/15 11:06:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/04/04 12:42:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -258,6 +258,9 @@ ${PYSITELIB}/requests/packages/urllib3/util/response.pyo
 ${PYSITELIB}/requests/packages/urllib3/util/retry.py
 ${PYSITELIB}/requests/packages/urllib3/util/retry.pyc
 ${PYSITELIB}/requests/packages/urllib3/util/retry.pyo
+${PYSITELIB}/requests/packages/urllib3/util/selectors.py
+${PYSITELIB}/requests/packages/urllib3/util/selectors.pyc
+${PYSITELIB}/requests/packages/urllib3/util/selectors.pyo
 ${PYSITELIB}/requests/packages/urllib3/util/ssl_.py
 ${PYSITELIB}/requests/packages/urllib3/util/ssl_.pyc
 ${PYSITELIB}/requests/packages/urllib3/util/ssl_.pyo
@@ -267,6 +270,9 @@ ${PYSITELIB}/requests/packages/urllib3/util/timeout.pyo
 ${PYSITELIB}/requests/packages/urllib3/util/url.py
 ${PYSITELIB}/requests/packages/urllib3/util/url.pyc
 ${PYSITELIB}/requests/packages/urllib3/util/url.pyo
+${PYSITELIB}/requests/packages/urllib3/util/wait.py
+${PYSITELIB}/requests/packages/urllib3/util/wait.pyc
+${PYSITELIB}/requests/packages/urllib3/util/wait.pyo
 ${PYSITELIB}/requests/sessions.py
 ${PYSITELIB}/requests/sessions.pyc
 ${PYSITELIB}/requests/sessions.pyo
