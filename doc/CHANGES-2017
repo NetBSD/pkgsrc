@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1384 2017/04/04 08:58:30 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1385 2017/04/04 10:44:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/qmail-run to 20170404 [schmonz 2017-04-04]
 	Updated mail/qmqtool to 1.15 [schmonz 2017-04-04]
 	Updated devel/zlib to 1.2.11 [adam 2017-04-04]
+	Updated graphics/guetzli to 1.0.1 [wiz 2017-04-04]
