@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/03/06 21:55:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/04/04 13:10:58 wiz Exp $
 bin/ikhal
 bin/khal
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -81,9 +81,9 @@ ${PYSITELIB}/khal/ui/calendarwidget.pyo
 ${PYSITELIB}/khal/ui/colors.py
 ${PYSITELIB}/khal/ui/colors.pyc
 ${PYSITELIB}/khal/ui/colors.pyo
-${PYSITELIB}/khal/ui/startendeditor.py
-${PYSITELIB}/khal/ui/startendeditor.pyc
-${PYSITELIB}/khal/ui/startendeditor.pyo
+${PYSITELIB}/khal/ui/editor.py
+${PYSITELIB}/khal/ui/editor.pyc
+${PYSITELIB}/khal/ui/editor.pyo
 ${PYSITELIB}/khal/ui/widgets.py
 ${PYSITELIB}/khal/ui/widgets.pyc
 ${PYSITELIB}/khal/ui/widgets.pyo
