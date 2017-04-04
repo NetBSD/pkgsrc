@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/04/04 14:19:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/04 14:33:24 wiz Exp $
 
 DISTNAME=	radon-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/radon/}
 
@@ -21,6 +22,9 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tox-[0-9]*:../../devel/py-tox
 
 USE_LANGUAGES=	# none
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/radon ${DESTDIR}${PREFIX}/bin/radon-${PYVERSSUFFIX}
 
 do-test:
 	${RUN} cd ${WRKSRC}/radon/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} run.py
