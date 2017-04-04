@@ -1,4 +1,13 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.1 2017/03/30 00:07:31 gdt Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.2 2017/04/04 18:13:00 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
+
+Pullup ticket #5236 - requested by sevan
+databases/cdb: remove restriction
+
+Pullup ticket #5237 - requested by sevan
+mail/mess822: remove restriction
+
+Pullup ticket #5238 - requested by sevan
+editors/nvi: bugfix
 
