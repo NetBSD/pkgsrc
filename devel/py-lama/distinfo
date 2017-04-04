@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/04 14:40:14 wiz Exp $
+
+SHA1 (pylama-7.3.3.tar.gz) = fca7b39a3e98474d9e9e675f548bbf13dd3af31b
+RMD160 (pylama-7.3.3.tar.gz) = c7733c353a5a3595262e1fcaf388199401bd7845
+SHA512 (pylama-7.3.3.tar.gz) = e39d8d7111c742b44b9cb2039fb9ddbe9216f7d48c2eea513d80c018c0ca01e8937815fc22dbc9e55076de82f9c6b6c5224b3e592eb28229c38159a1170de864
+Size (pylama-7.3.3.tar.gz) = 27941 bytes
