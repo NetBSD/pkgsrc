@@ -1,0 +1,2 @@
+bin/pep257 @PREFIX@/bin/pep257-@PYVERSSUFFIX@
+bin/pydocstyle @PREFIX@/bin/pydocstyle-@PYVERSSUFFIX@
