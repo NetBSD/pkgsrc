@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.66 2017/02/13 17:44:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.67 2017/04/04 17:12:22 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -146,6 +146,7 @@ share/doc/sqlite3/c3ref/reset_auto_extension.html
 share/doc/sqlite3/c3ref/result_blob.html
 share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/set_authorizer.html
+share/doc/sqlite3/c3ref/set_last_insert_rowid.html
 share/doc/sqlite3/c3ref/sleep.html
 share/doc/sqlite3/c3ref/snapshot.html
 share/doc/sqlite3/c3ref/snapshot_cmp.html
@@ -577,6 +578,7 @@ share/doc/sqlite3/releaselog/3_16_0.html
 share/doc/sqlite3/releaselog/3_16_1.html
 share/doc/sqlite3/releaselog/3_16_2.html
 share/doc/sqlite3/releaselog/3_17_0.html
+share/doc/sqlite3/releaselog/3_18_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
