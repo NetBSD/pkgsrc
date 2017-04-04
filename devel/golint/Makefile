@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/12/04 16:29:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/04 16:16:20 bsiegert Exp $
 
-DISTNAME=		golint-20151230
-PKGREVISION=		5
+DISTNAME=		golint-20170228
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=golang/}
 GITHUB_PROJECT=		lint
-GITHUB_TAG=		32a8716
+GITHUB_TAG=		cb00e56
 
 MAINTAINER=		bsiegert@NetBSD.org
 HOMEPAGE=		https://golang.org/

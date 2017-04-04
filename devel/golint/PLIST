@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/30 14:12:03 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/04/04 16:16:20 bsiegert Exp $
 bin/golint
 gopkg/pkg/${GO_PLATFORM}/github.com/golang/lint.a
 gopkg/src/github.com/golang/lint/CONTRIBUTING.md
@@ -18,6 +18,8 @@ gopkg/src/github.com/golang/lint/testdata/blank-import-main.go
 gopkg/src/github.com/golang/lint/testdata/broken.go
 gopkg/src/github.com/golang/lint/testdata/common-methods.go
 gopkg/src/github.com/golang/lint/testdata/const-block.go
+gopkg/src/github.com/golang/lint/testdata/context.go
+gopkg/src/github.com/golang/lint/testdata/contextkeytypes.go
 gopkg/src/github.com/golang/lint/testdata/else-multi.go
 gopkg/src/github.com/golang/lint/testdata/else.go
 gopkg/src/github.com/golang/lint/testdata/error-return.go
@@ -25,7 +27,6 @@ gopkg/src/github.com/golang/lint/testdata/errorf.go
 gopkg/src/github.com/golang/lint/testdata/errors.go
 gopkg/src/github.com/golang/lint/testdata/import-dot.go
 gopkg/src/github.com/golang/lint/testdata/inc.go
-gopkg/src/github.com/golang/lint/testdata/make.go
 gopkg/src/github.com/golang/lint/testdata/names.go
 gopkg/src/github.com/golang/lint/testdata/pkg-doc1.go
 gopkg/src/github.com/golang/lint/testdata/pkg-doc2.go
