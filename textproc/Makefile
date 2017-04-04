@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.916 2017/04/04 11:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.917 2017/04/04 11:34:15 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -731,6 +731,7 @@ SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
+SUBDIR+=	py-humanize
 SUBDIR+=	py-iniparse
 SUBDIR+=	py-jinja2
 SUBDIR+=	py-jsonlib
