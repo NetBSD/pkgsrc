@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1408 2017/04/04 14:23:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1409 2017/04/04 14:33:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1711,3 +1711,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-test-mock version 1.6.0 [wiz 2017-04-04]
 	Updated comms/py-colorama to 0.3.7 [wiz 2017-04-04]
 	Added devel/py-radon version 1.5.0 [wiz 2017-04-04]
+	Updated devel/py-radon to 1.5.0nb1 [wiz 2017-04-04]
