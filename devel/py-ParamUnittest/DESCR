@@ -1,0 +1,5 @@
+This package allows to create parametrized unit-tests that work
+with the standard unittest package. A parametrized test case is
+automatically converted to multiple test cases. Since they are
+TestCase subclasses, they work with other test suites that recognize
+TestCases.
