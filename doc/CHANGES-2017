@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1387 2017/04/04 11:15:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1388 2017/04/04 11:16:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1690,3 +1690,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/guetzli to 1.0.1 [wiz 2017-04-04]
 	Updated graphics/ImageMagick to 7.0.5.4 [wiz 2017-04-04]
 	Updated graphics/p5-PerlMagick to 7.0.5.4 [wiz 2017-04-04]
+	Updated print/abcm2ps to 8.13.8 [wiz 2017-04-04]
