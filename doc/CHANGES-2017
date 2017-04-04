@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1381 2017/04/04 07:50:24 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.1382 2017/04/04 07:51:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1684,3 +1684,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/haproxy to 1.7.5 [morr 2017-04-03]
 	Updated mail/queue-fix to 1.4nb1 [schmonz 2017-04-04]
 	Updated mail/qmail to 1.03nb26 [schmonz 2017-04-04]
+	Updated mail/qmail-run to 20170404 [schmonz 2017-04-04]
