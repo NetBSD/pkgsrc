@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.1 2014/06/09 23:47:56 schmonz Exp $
+$NetBSD: patch-configure,v 1.2 2017/04/04 08:27:56 schmonz Exp $
 
 Since qmqtool operates directly on a queue structure, it doesn't
 depend on mail/qmail, so ${QMAILDIR} may not exist at build time.
 Patch out overzealous configure checks.
 
---- configure.orig	2009-01-24 04:20:49.000000000 +0000
+--- configure.orig	2016-06-11 16:26:52.000000000 +0000
 +++ configure
-@@ -77,12 +77,12 @@ EOM
+@@ -79,12 +79,12 @@ EOM
  		;;
  	   --qmaildir*)
  			if [ "$arg" ]; then
@@ -24,7 +24,7 @@ Patch out overzealous configure checks.
  			fi
  		;;
  		*)
-@@ -106,14 +106,14 @@ if [ ! -x "$perl" ] ; then
+@@ -117,14 +117,14 @@ if [ ! -x "$perl" ] ; then
  	fi
  fi
  
@@ -46,4 +46,4 @@ Patch out overzealous configure checks.
 +#fi
  
  if [ ! "$prefix" ] && [ ! "$scriptdir" ] && [ ! "$mandir" ] ; then
- 	exscr="`which qmqtool`"
+ 	exscr="`which qmqtool 2>/dev/null`"
