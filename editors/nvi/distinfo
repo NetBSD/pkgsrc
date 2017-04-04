@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2015/11/03 03:32:19 agc Exp $
+$NetBSD: distinfo,v 1.23 2017/04/04 07:53:23 fhajny Exp $
 
 SHA1 (nvi-1.81.6.tar.bz2) = d3445ed69166102735335a2ff60d092d9a9143c6
 RMD160 (nvi-1.81.6.tar.bz2) = 0db8568bea96392d9a027044177c60317c8ade36
@@ -34,9 +34,11 @@ SHA1 (patch-ba) = 57edce2dafc630d7e948a5b528242bdcff334228
 SHA1 (patch-bb) = 5110c239cd1cc82cdd1eaeba6ceedb11ee797b26
 SHA1 (patch-bc) = 6ac8377ae6f2fc513c058c0bf7f5ad18e97141a8
 SHA1 (patch-bd) = 9a04f7a247fe6bf800469e81f7a83ffddd45b4b5
+SHA1 (patch-cl_funcs__termh.c) = 27a974bf865c8006c6929fa20fde44a4cf53182b
+SHA1 (patch-cl_screen__termh.c) = 55d9214a0e1cd740a065ae58defee6f0fa4d4204
 SHA1 (patch-common_conv.c) = efb2dabf226523a493fc1172013adc8021f4c2b9
 SHA1 (patch-common_key.h) = 29f8b89b41b087ff7c2e9a5483fb9e6d2291c750
-SHA1 (patch-common_msg.c) = 73c6e8df0d5c85f4fee1316ea65de9da1876340b
+SHA1 (patch-common_msg.c) = b1c7662b195a7438a73bffee86ab2b10f7fe1487
 SHA1 (patch-dist_Makefile.am) = ebae821ce659df003f5f2043f754e325c0863aff
 SHA1 (patch-dist_config.h.in) = 21568929b165d1e774e59d6c648e0af7b17760da
 SHA1 (patch-dist_configure.in) = c7b70b1a93889f41d949a3ede034f30abc063b7b
