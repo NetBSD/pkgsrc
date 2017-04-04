@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2017/04/04 07:50:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.83 2017/04/04 14:58:06 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -123,9 +123,10 @@ SUBST_SED.groups+=	-e 's,@QMAIL_NOFILES_GROUP@,${QMAIL_NOFILES_GROUP:Q},g'
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
-SUBST_FILES.paths=	README.pkgsrc
+SUBST_FILES.paths=	README.*
 SUBST_SED.paths=	-e 's,@PKGNAME@,${PKGNAME:Q},g'
 SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO:Q},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP:Q},g'
 
 SUBST_CLASSES+=		users
