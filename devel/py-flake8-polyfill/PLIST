@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/04 14:07:09 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flake8_polyfill/__init__.py
+${PYSITELIB}/flake8_polyfill/__init__.pyc
+${PYSITELIB}/flake8_polyfill/__init__.pyo
+${PYSITELIB}/flake8_polyfill/options.py
+${PYSITELIB}/flake8_polyfill/options.pyc
+${PYSITELIB}/flake8_polyfill/options.pyo
+${PYSITELIB}/flake8_polyfill/stdin.py
+${PYSITELIB}/flake8_polyfill/stdin.pyc
+${PYSITELIB}/flake8_polyfill/stdin.pyo
+${PYSITELIB}/flake8_polyfill/version.py
+${PYSITELIB}/flake8_polyfill/version.pyc
+${PYSITELIB}/flake8_polyfill/version.pyo
