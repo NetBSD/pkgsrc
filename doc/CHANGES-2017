@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1409 2017/04/04 14:33:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1410 2017/04/04 14:42:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1712,3 +1712,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/py-colorama to 0.3.7 [wiz 2017-04-04]
 	Added devel/py-radon version 1.5.0 [wiz 2017-04-04]
 	Updated devel/py-radon to 1.5.0nb1 [wiz 2017-04-04]
+	Added devel/py-flake8-import-order version 0.12 [wiz 2017-04-04]
