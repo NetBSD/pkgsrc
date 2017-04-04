@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.760 2017/01/29 11:57:52 adam Exp $
+# $NetBSD: Makefile,v 1.761 2017/04/04 13:08:16 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -167,6 +167,7 @@ SUBDIR+=	gimp-docs-zh_CN
 SUBDIR+=	gimp-exif-browser
 SUBDIR+=	gimp-fix-ca
 SUBDIR+=	gimp-high-pass-filter
+SUBDIR+=	gimp-jxr
 SUBDIR+=	gimp-liquid-rescale
 SUBDIR+=	gimp-rawphoto
 SUBDIR+=	gimp-refocus-it
@@ -253,6 +254,7 @@ SUBDIR+=	jpeginfo
 SUBDIR+=	jpegoptim
 SUBDIR+=	jpegpixi
 SUBDIR+=	jpegquality
+SUBDIR+=	jxrlib
 SUBDIR+=	kamera
 SUBDIR+=	kbarcode
 SUBDIR+=	kcolorchooser
