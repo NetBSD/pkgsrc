@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/04/04 08:27:56 schmonz Exp $
 #
 
-DISTNAME=		qmqtool-1.14
-PKGREVISION=		2
+DISTNAME=		qmqtool-1.15
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}/files/
 EXTRACT_SUFX=		.tgz
@@ -23,15 +22,21 @@ CONFIGURE_ARGS+=	--scriptdir=${PREFIX:Q}/sbin
 BUILD_TARGET=		qmqtool
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKSRC}/src/qmqtool
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	src/qmqtool
 SUBST_SED.paths+=	-e 's,@PS@,${PS},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
 SUBST_SED.paths+=	-e 's,@RCD_SCRIPTS_DIR@,${RCD_SCRIPTS_DIR},g'
-SUBST_STAGE.paths=	pre-configure
+
+SUBST_CLASSES+=		users
+SUBST_STAGE.users=	pre-configure
+SUBST_FILES.users=	src/qmqtool
+SUBST_SED.users=	-e 's,@QMAIL_SEND_USER@,${QMAIL_SEND_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_QUEUE_USER@,${QMAIL_QUEUE_USER:Q},g'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 INSTALLATION_DIRS+=	share/doc/qmqtool share/examples/qmqtool
-BUILD_DEFS+=		QMAILDIR
+BUILD_DEFS+=		QMAILDIR QMAIL_QUEUE_USER QMAIL_SEND_USER
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/qmqtool ${DESTDIR}${PREFIX}/sbin
