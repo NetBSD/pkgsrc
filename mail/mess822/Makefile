@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/01/14 20:49:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.25 2017/04/04 07:32:12 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -15,11 +15,7 @@ DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 USE_TOOLS+=		nroff
 
-# We change conf-home from the default "/usr/local" and don't
-# provide compatibilbity symlinks. We also patch hier.c to respect
-# PKG_SYSCONFDIR and set reasonable modes on directories under
-# ${PREFIX}, and patch strerr_sys.c to build on Mac OS X.
-DJB_RESTRICTED=		YES
+DJB_RESTRICTED=		no
 
 EGDIR=			${PREFIX}/share/examples/mess822
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
