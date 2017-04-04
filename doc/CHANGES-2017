@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1395 2017/04/04 12:57:25 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1396 2017/04/04 13:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1698,3 +1698,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/p5-DateTime-Locale to 1.16 [wiz 2017-04-04]
 	Updated misc/calibre to 2.82.0 [wiz 2017-04-04]
 	Updated devel/py-requests to 2.13.0 [adam 2017-04-04]
+	Added graphics/jxrlib version 1.1 [wiz 2017-04-04]
