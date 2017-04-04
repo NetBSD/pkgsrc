@@ -17,7 +17,7 @@ For qmail to accept and SRS-check your incoming mail:
 
 # echo "srs.$YOURDOMAIN" >> @PKG_SYSCONFDIR@/control/rcpthosts
 # echo "srs.$YOURDOMAIN:srs" >> @PKG_SYSCONFDIR@/control/virtualdomains
-# echo "| srsfilter" > @PKG_SYSCONFDIR@/alias/.qmail-srs-default
+# echo "| @PREFIX@/bin/srsfilter" > @PKG_SYSCONFDIR@/alias/.qmail-srs-default
 
 
 For other MTAs to deliver mail to your SRS subdomain:
