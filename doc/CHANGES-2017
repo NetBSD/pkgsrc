@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1445 2017/04/05 19:17:30 rillig Exp $
+$NetBSD: CHANGES-2017,v 1.1446 2017/04/05 20:11:35 tez Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1756,3 +1756,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-backports_abc to 0.5 [adam 2017-04-05]
 	Updated www/py-tornado to 4.4.3 [adam 2017-04-05]
 	Updated pkgtools/pkglint to 5.4.20 [rillig 2017-04-05]
+	Updated print/ghostscript-gpl to 9.06nb11 [tez 2017-04-05]
