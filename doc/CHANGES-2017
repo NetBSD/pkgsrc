@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1437 2017/04/05 15:55:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1438 2017/04/05 15:56:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1740,3 +1740,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/py-anki2 to 2.0.45 [wiz 2017-04-05]
 	Updated devel/py-cffi to 1.10.0 [wiz 2017-04-05]
 	Updated security/py-oauthlib to 2.0.2 [wiz 2017-04-05]
+	Updated devel/py-setuptools to 34.3.3 [wiz 2017-04-05]
