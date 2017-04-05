@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/04/01 06:13:12 sbd Exp $
+# $NetBSD: Makefile,v 1.8 2017/04/05 12:33:48 fhajny Exp $
 #
 
 DISTNAME=	phoronix-test-suite-${PTS_VERSION}
 PTS_VERSION=	3.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.phoronix-test-suite.com/releases/
 
@@ -13,7 +13,6 @@ COMMENT=	Phoronix Benchmarking Suite
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.2:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.2:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.2:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-pcntl>=5.2:../../devel/php-pcntl
