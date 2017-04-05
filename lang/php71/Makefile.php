@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2016/08/04 14:09:03 jdolecek Exp $
+# $NetBSD: Makefile.php,v 1.2 2017/04/05 12:28:59 fhajny Exp $
 # used by lang/php71/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--without-pear
 #CONFIGURE_ARGS+=	--without-intl
 
 CONFIGURE_ARGS+=	--disable-posix
-CONFIGURE_ARGS+=	--disable-dom
 CONFIGURE_ARGS+=	--disable-opcache
 CONFIGURE_ARGS+=	--disable-pdo
 CONFIGURE_ARGS+=	--disable-json

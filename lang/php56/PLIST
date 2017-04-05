@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/20 01:17:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/04/05 12:28:59 fhajny Exp $
 bin/phar
 bin/phar.phar
 bin/php
@@ -78,6 +78,7 @@ include/php/ext/date/lib/timelib.h
 include/php/ext/date/lib/timelib_config.h
 include/php/ext/date/lib/timelib_structs.h
 include/php/ext/date/php_date.h
+include/php/ext/dom/xml_common.h
 include/php/ext/ereg/php_ereg.h
 include/php/ext/ereg/php_regex.h
 include/php/ext/filter/php_filter.h
