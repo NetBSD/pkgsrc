@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/12/23 12:43:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/04/05 18:23:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -146,6 +146,9 @@ ${PYSITELIB}/tornado/test/gen_test.pyc
 ${PYSITELIB}/tornado/test/gen_test.pyo
 ${PYSITELIB}/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.mo
 ${PYSITELIB}/tornado/test/gettext_translations/fr_FR/LC_MESSAGES/tornado_test.po
+${PYSITELIB}/tornado/test/http1connection_test.py
+${PYSITELIB}/tornado/test/http1connection_test.pyc
+${PYSITELIB}/tornado/test/http1connection_test.pyo
 ${PYSITELIB}/tornado/test/httpclient_test.py
 ${PYSITELIB}/tornado/test/httpclient_test.pyc
 ${PYSITELIB}/tornado/test/httpclient_test.pyo
@@ -234,6 +237,9 @@ ${PYSITELIB}/tornado/test/web_test.pyo
 ${PYSITELIB}/tornado/test/websocket_test.py
 ${PYSITELIB}/tornado/test/websocket_test.pyc
 ${PYSITELIB}/tornado/test/websocket_test.pyo
+${PYSITELIB}/tornado/test/windows_test.py
+${PYSITELIB}/tornado/test/windows_test.pyc
+${PYSITELIB}/tornado/test/windows_test.pyo
 ${PYSITELIB}/tornado/test/wsgi_test.py
 ${PYSITELIB}/tornado/test/wsgi_test.pyc
 ${PYSITELIB}/tornado/test/wsgi_test.pyo
