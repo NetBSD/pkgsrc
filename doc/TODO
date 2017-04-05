@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17204 2017/04/05 03:26:48 mef Exp $
+$NetBSD: TODO,v 1.17205 2017/04/05 06:55:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1036,6 +1036,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeself-2.2.0
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.184
 	o manedit-1.2.1
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
@@ -1162,11 +1163,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.37
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
+	o p5-HTTP-Cookies-6.03
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
+	o p5-List-MoreUtils-0.418
 	o p5-MRO-Compat-0.13
 	o p5-Memoize-Memcached-0.11
+	o p5-Mojolicious-7.29
 	o p5-Moo-2.003002
 	o p5-Net-DNS-1.09
 	o p5-Net-ManageSieve-0.13
@@ -1187,22 +1191,28 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
+	o p5-Parse-RecDescent-1.967015
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Publican-4.3.2
 	o p5-RADIUS-2.30
 	o p5-RT-Authen-ExternalAuth-0.25
+	o p5-Regexp-Common-2017040401
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
+	o p5-Sub-Identify-0.13
 	o p5-Sys-Utmp-1.7
 	o p5-Text-BibTeX-0.80
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-DBI-1.06
 	o p5-WebService-MusicBrainz-1.0.1
 	o p5-X11-Protocol-29
+	o p5-XML-NamespaceSupport-1.12
+	o p5-XML-SAX-Base-1.09
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
+	o p5-libwww-6.25
 	o p5-pcsc-1.4.14
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
