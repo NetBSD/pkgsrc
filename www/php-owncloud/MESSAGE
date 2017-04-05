@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.19 2015/09/27 19:42:57 bouyer Exp $
+$NetBSD: MESSAGE,v 1.20 2017/04/05 12:33:49 fhajny Exp $
 
 To use ownCloud, you will need to perform the following steps.
 
@@ -88,7 +88,6 @@ server {
 6. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=curl.so
-	extension=dom.so
 	extension=gd.so
 	extension=iconv.so
 	extension=json.so
