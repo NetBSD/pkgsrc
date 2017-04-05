@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.3 2017/04/05 19:49:29 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.4 2017/04/05 21:59:35 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -17,9 +17,17 @@ devel/arcanist: dependency fix
 Pullup ticket #5231 - requested by sevan
 devel/scmcvs: bug fix
 
-Pullup ticket #5232 - requested by sevan
-net/powerdns-recursor: bug fix
+Pullup ticket #5233 - requested by sevan
+devel/woboq_codebrowser: build fix
 
 Pullup ticket #5235 - requested by sevan
 mk/check/check-files.mk: documentation fix
+
+Pullup ticket #5242 - requested by wiz
+www/curl: security patch
+
+Pullup ticket #5244 - requested by kim
+net/proftpd-postgresql: security update
+net/proftpd-sqlite; security update
+net/proftpd: security update
 
