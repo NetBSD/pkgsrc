@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2014/06/29 15:23:47 ryoon Exp $
+$NetBSD: MESSAGE,v 1.6 2017/04/05 12:33:49 fhajny Exp $
 
 To use php-tt-rss with nginx 1.6 and php 5.4, you will need to perform
 the following steps.
@@ -49,7 +49,6 @@ the following steps.
 
 9. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
-	extension=dom.so
 	extension=iconv.so
 	extension=json.so
 	extension=mbstring.so
