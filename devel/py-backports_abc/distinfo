@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/11/08 05:01:48 wen Exp $
+$NetBSD: distinfo,v 1.2 2017/04/05 17:58:25 adam Exp $
 
-SHA1 (backports_abc-0.4.tar.gz) = 76060a68d14f9d1a4198e00c3bb3711467ecb1f4
-RMD160 (backports_abc-0.4.tar.gz) = 181e7854379f8022ece3687b49597d9dd99e0bfe
-SHA512 (backports_abc-0.4.tar.gz) = 0b7f9cc1d12db16a0c0eaf658fd874bf9fe09959fab65d1b0104d337fb20cceb2e3e9213be895df5951876846eccac85012c270e34197d625ce128b688e847ae
-Size (backports_abc-0.4.tar.gz) = 5593 bytes
+SHA1 (backports_abc-0.5.tar.gz) = 7f19aefc840301effcd43d9d95e8e59ed8153ea2
+RMD160 (backports_abc-0.5.tar.gz) = 00ed08fcf2537409669dc7fbb89c2fdac4993a46
+SHA512 (backports_abc-0.5.tar.gz) = 5c2bc01bce8d3ed482bf5d8361a20f9afa3edc1c50280f0a01ffb890690b92296fcbfa68f79677fc3ebba851617f339cb6367ccdd0fadf1127a4e3c030784b7d
+Size (backports_abc-0.5.tar.gz) = 9807 bytes
