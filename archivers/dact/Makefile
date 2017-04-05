@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2016/08/12 13:38:51 mef Exp $
+# $NetBSD: Makefile,v 1.24 2017/04/05 15:58:31 adam Exp $
 
-DISTNAME=	dact-0.8.41
+DISTNAME=	dact-0.8.42
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rkeene.org/devel/dact/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.rkeene.org/devel/dact/
+HOMEPAGE=	http://www.rkeene.org/oss/dact/
 COMMENT=	Dynamic adaptive compression tool
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/dact
 
