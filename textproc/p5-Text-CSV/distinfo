@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2017/02/26 12:54:44 wen Exp $
+$NetBSD: distinfo,v 1.13 2017/04/05 13:55:58 wen Exp $
 
-SHA1 (Text-CSV-1.91.tar.gz) = b4ceffe09b4ee408c9c77b5973bd93d59ecbe45c
-RMD160 (Text-CSV-1.91.tar.gz) = 8749815cb1cd287ada7438992e7180c6d1ca8c48
-SHA512 (Text-CSV-1.91.tar.gz) = 1dfd1de9b91390df38788a36423d671d4b3aafc7b5a106b994ced944893b73a90bd0e7ad0ce88f51e81e7ff70c507a1c70fbe9a55c7139860f84f18e060d15d9
-Size (Text-CSV-1.91.tar.gz) = 113028 bytes
+SHA1 (Text-CSV-1.93.tar.gz) = 42a16673227ffc6d06b20a08f2e819cd0731ff8f
+RMD160 (Text-CSV-1.93.tar.gz) = 3d5f7d4fd8348d1ade39f05820abb7171eaed6f4
+SHA512 (Text-CSV-1.93.tar.gz) = 61304d8954c69139677b9b478d7dd49b2efcb2f6bff66ba66c13924e369988ce4f44120f8d42f56afd95d16bfb5e1e47da4894a622db3e1f412256ebdd491391
+Size (Text-CSV-1.93.tar.gz) = 113632 bytes
