@@ -1,9 +1,14 @@
-# $NetBSD: Makefile,v 1.178 2017/02/26 08:37:46 adam Exp $
+# $NetBSD: Makefile,v 1.179 2017/04/05 12:12:58 wiz Exp $
 
 DISTNAME=	curl-7.53.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://curl.haxx.se/download/
 EXTRACT_SUFX=	.tar.bz2
+
+PATCH_SITES=		https://curl.haxx.se/
+PATCHFILES=		CVE-2017-7407.patch
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://curl.haxx.se/
