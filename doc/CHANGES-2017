@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1416 2017/04/05 12:36:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1417 2017/04/05 13:44:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1719,3 +1719,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test-mock to 1.6.0nb1 [wiz 2017-04-05]
 	Updated www/curl to 7.53.1nb1 [wiz 2017-04-05]
 	Removed textproc/php-dom [fhajny 2017-04-05]
+	Updated mail/p5-Email-Sender to 1.300031 [wen 2017-04-05]
