@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.2 2016/10/09 21:42:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2017/04/05 21:54:26 spz Exp $
 
-PKGREVISION= 1
 .include "../../net/proftpd/Makefile.module"
 
 PROFTPD_MOD=	postgresql
