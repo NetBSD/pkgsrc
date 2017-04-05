@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2017/01/12 15:07:38 ryoon Exp $
+$NetBSD: MESSAGE,v 1.2 2017/04/05 12:33:49 fhajny Exp $
 
 To use Nextcloud, you will need to perform the following steps.
 
@@ -88,7 +88,6 @@ server {
 6. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=curl.so
-	extension=dom.so
 	extension=gd.so
 	extension=iconv.so
 	extension=json.so

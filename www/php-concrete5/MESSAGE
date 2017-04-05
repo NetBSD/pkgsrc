@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2015/05/31 02:16:11 ryoon Exp $
+$NetBSD: MESSAGE,v 1.8 2017/04/05 12:33:49 fhajny Exp $
 
 To use concrete5 with nginx, you will need to perform the following steps.
 
@@ -43,7 +43,6 @@ To use concrete5 with nginx, you will need to perform the following steps.
 7. Be sure to have the following lines in ${PREFIX}/etc/php.ini.
 
 	extension=gd.so
-	extension=dom.so
 	extension=pdo.so
 	extension=pdo_mysql.so
 	extension=iconv.so
