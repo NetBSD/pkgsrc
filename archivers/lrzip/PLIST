@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/06/08 14:58:09 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/04/05 17:34:38 adam Exp $
 bin/lrunzip
+bin/lrz
 bin/lrzcat
 bin/lrzip
 bin/lrztar
@@ -8,6 +9,7 @@ include/Lrzip.h
 lib/liblrzip.la
 lib/pkgconfig/lrzip.pc
 man/man1/lrunzip.1
+man/man1/lrz.1
 man/man1/lrzcat.1
 man/man1/lrzip.1
 man/man1/lrztar.1
