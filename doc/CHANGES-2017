@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1413 2017/04/05 09:42:18 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1414 2017/04/05 11:18:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1716,3 +1716,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-lama version 7.3.3 [wiz 2017-04-04]
 	Updated devel/golint to 20170228 [bsiegert 2017-04-04]
 	Updated net/p5-WebService-MusicBrainz to 1.0.1 [wiz 2017-04-05]
+	Updated devel/py-test-mock to 1.6.0nb1 [wiz 2017-04-05]
