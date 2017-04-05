@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1419 2017/04/05 14:06:16 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1420 2017/04/05 15:15:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-Email-Sender to 1.300031 [wen 2017-04-05]
 	Updated textproc/p5-Text-CSV to 1.93 [wen 2017-04-05]
 	Updated textproc/p5-Text-CSV_XS to 1.28 [wen 2017-04-05]
+	Updated www/p5-HTTP-Cookies to 6.03 [wiz 2017-04-05]
