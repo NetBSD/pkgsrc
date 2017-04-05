@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.83 2017/03/12 18:45:33 adam Exp $
+# $NetBSD: Makefile,v 1.84 2017/04/05 17:08:48 adam Exp $
 
-DISTNAME=	Django-1.10.6
+DISTNAME=	Django-1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	http://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
+MASTER_SITES=	http://www.djangoproject.com/m/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
@@ -14,7 +14,7 @@ USE_LANGUAGES=		# empty
 REPLACE_PYTHON=		${WRKSRC}/django/bin/django-admin.py
 REPLACE_PYTHON+=	${WRKSRC}/django/conf/project_template/manage.py-tpl
 
-PYTHON_VERSIONED_DEPENDENCIES=	flup
+DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/django-admin \
