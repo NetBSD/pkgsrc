@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1421 2017/04/05 15:17:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1422 2017/04/05 15:18:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-CSV_XS to 1.28 [wen 2017-04-05]
 	Updated www/p5-HTTP-Cookies to 6.03 [wiz 2017-04-05]
 	Updated devel/p5-List-MoreUtils to 0.418 [wiz 2017-04-05]
+	Updated devel/p5-MRO-Compat to 0.13 [wiz 2017-04-05]
