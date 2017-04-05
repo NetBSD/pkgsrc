@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:25 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/04/05 15:18:36 wiz Exp $
 
-SHA1 (MRO-Compat-0.12.tar.gz) = f3e1a7804ca2878a1b1f633893bfe73750c2001b
-RMD160 (MRO-Compat-0.12.tar.gz) = bc072bc450bebaa40533ad2e4594aab3788146d6
-SHA512 (MRO-Compat-0.12.tar.gz) = 428255bc7a7b73ed8005107109b2294e8f7cf0cbd1543431105ec638582cb32e4cc81f29b06ce90741c1ff656186259fc1a4105247f95fe977e6758c0ccca6ab
-Size (MRO-Compat-0.12.tar.gz) = 24230 bytes
+SHA1 (MRO-Compat-0.13.tar.gz) = aef5c3e2c99286ae8a97f6232a297e42c33e7617
+RMD160 (MRO-Compat-0.13.tar.gz) = 20f2dc8b5d617278ca8f31a983ba12fff741fdea
+SHA512 (MRO-Compat-0.13.tar.gz) = 3311c37c8fc73acaf68bae2b12315a448a87de8f756e817c967cf49b753cf218e8c762ecc44890297afd82193d71b2407060db0bc70720d228b31c0a30de10c1
+Size (MRO-Compat-0.13.tar.gz) = 8711 bytes
