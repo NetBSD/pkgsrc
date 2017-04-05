@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.2 2017/04/04 18:13:00 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.3 2017/04/05 19:49:29 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -10,4 +10,16 @@ mail/mess822: remove restriction
 
 Pullup ticket #5238 - requested by sevan
 editors/nvi: bugfix
+
+Pullup ticket #5230 - requested by sevan
+devel/arcanist: dependency fix
+
+Pullup ticket #5231 - requested by sevan
+devel/scmcvs: bug fix
+
+Pullup ticket #5232 - requested by sevan
+net/powerdns-recursor: bug fix
+
+Pullup ticket #5235 - requested by sevan
+mk/check/check-files.mk: documentation fix
 
