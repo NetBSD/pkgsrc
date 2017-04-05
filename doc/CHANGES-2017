@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1418 2017/04/05 13:57:26 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1419 2017/04/05 14:06:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1721,3 +1721,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed textproc/php-dom [fhajny 2017-04-05]
 	Updated mail/p5-Email-Sender to 1.300031 [wen 2017-04-05]
 	Updated textproc/p5-Text-CSV to 1.93 [wen 2017-04-05]
+	Updated textproc/p5-Text-CSV_XS to 1.28 [wen 2017-04-05]
