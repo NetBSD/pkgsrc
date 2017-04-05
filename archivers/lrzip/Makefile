@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/06/08 14:58:09 wiedi Exp $
+# $NetBSD: Makefile,v 1.6 2017/04/05 17:34:38 adam Exp $
 
-DISTNAME=	lrzip-0.621
+DISTNAME=	lrzip-0.631
 CATEGORIES=	archivers
 MASTER_SITES=	http://ck.kolivas.org/apps/lrzip/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,10 +10,10 @@ HOMEPAGE=	http://ck.kolivas.org/apps/lrzip/
 COMMENT=	Long Range ZIP or Lzma RZIP
 LICENSE=	gnu-gpl-v2
 
-GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bash:run pkg-config pod2man
-USE_LANGUAGES=	c c++
+GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	lrzip.pc.in
 
