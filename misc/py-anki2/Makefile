@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2017/02/27 09:49:27 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/04/05 15:50:10 wiz Exp $
 
-DISTNAME=	anki-2.0.44-source
+DISTNAME=	anki-2.0.45-source
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/:C/-source//}
 CATEGORIES=	misc x11
 MASTER_SITES=	https://apps.ankiweb.net/downloads/current/
@@ -66,7 +66,6 @@ post-extract:
 post-install:
 	rm ${DESTDIR}${PREFIX}/share/anki/Makefile.orig
 	rm ${DESTDIR}${PREFIX}/share/anki/thirdparty/py*/_portaudio.so
-	rm ${DESTDIR}${PREFIX}/share/anki/aqt/forms/#about.py#
 
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
