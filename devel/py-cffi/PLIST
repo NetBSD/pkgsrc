@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/09/12 07:57:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/04/05 15:54:26 wiz Exp $
 ${PYSITELIB}/_cffi_backend.so
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,6 +27,9 @@ ${PYSITELIB}/cffi/commontypes.pyo
 ${PYSITELIB}/cffi/cparser.py
 ${PYSITELIB}/cffi/cparser.pyc
 ${PYSITELIB}/cffi/cparser.pyo
+${PYSITELIB}/cffi/error.py
+${PYSITELIB}/cffi/error.pyc
+${PYSITELIB}/cffi/error.pyo
 ${PYSITELIB}/cffi/ffiplatform.py
 ${PYSITELIB}/cffi/ffiplatform.pyc
 ${PYSITELIB}/cffi/ffiplatform.pyo
