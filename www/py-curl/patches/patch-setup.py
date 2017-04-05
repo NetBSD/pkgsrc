@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.10 2014/04/23 10:32:55 adam Exp $
+$NetBSD: patch-setup.py,v 1.1 2017/04/05 17:56:18 adam Exp $
 
-* add multi python variant support
+Add multi Python variant support.
 
---- setup.py.orig	2014-02-06 09:55:59.000000000 +0000
+--- setup.py.orig	2016-02-04 04:39:06.000000000 +0000
 +++ setup.py
-@@ -392,9 +392,9 @@ def get_data_files():
+@@ -520,9 +520,9 @@ def get_data_files():
      # a list of tuples with (path to install to, a list of local files)
      data_files = []
      if sys.platform == "win32":
@@ -15,4 +15,4 @@ $NetBSD: patch-aa,v 1.10 2014/04/23 10:32:55 adam Exp $
 +        datadir = os.path.join("share", "doc", PACKAGE  + sys.version[0:3])
      #
      files = ["AUTHORS", "ChangeLog", "COPYING-LGPL", "COPYING-MIT",
-         "INSTALL.rst", "README.rst"]
+         "INSTALL.rst", "README.rst", "RELEASE-NOTES.rst"]

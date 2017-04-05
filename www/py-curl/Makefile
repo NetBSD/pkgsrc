@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.52 2017/01/01 16:06:39 adam Exp $
+# $NetBSD: Makefile,v 1.53 2017/04/05 17:56:18 adam Exp $
 
-DISTNAME=	pycurl-7.19.3.1
+DISTNAME=	pycurl-7.43.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
 CATEGORIES=	www python
-MASTER_SITES=	http://pycurl.sourceforge.net/download/
+MASTER_SITES=	http://dl.bintray.com/pycurl/pycurl/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pycurl.sourceforge.net/
+HOMEPAGE=	http://pycurl.io/
 COMMENT=	Python module interface to the cURL library
 LICENSE=	gnu-lgpl-v2.1 OR mit
 
-PYSETUPARGS=	--with-ssl
+PYSETUPARGS=	--with-openssl
 
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.19.0
 .include "../../www/curl/buildlink3.mk"
