@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2016/11/14 14:31:18 wiz Exp $
+$NetBSD: distinfo,v 1.23 2017/04/05 15:54:26 wiz Exp $
 
-SHA1 (cffi-1.9.1.tar.gz) = 16265a4b305d433fb9089b19278502e904b0cb43
-RMD160 (cffi-1.9.1.tar.gz) = 0521145fc517fc308462acb10cba0551a7f6b524
-SHA512 (cffi-1.9.1.tar.gz) = 6e76f181b6b7b760a14ad70338edd104a8b8e2eac5680e336d3868e0bd031a1665608e29a65dc0c56806afb8a8c03811586f151f3acef11e54e60c1bfcf902e3
-Size (cffi-1.9.1.tar.gz) = 407108 bytes
+SHA1 (cffi-1.10.0.tar.gz) = 8484aba03d1e64367d3110c0e36c1ed052b43f12
+RMD160 (cffi-1.10.0.tar.gz) = 8bcdd03716d70fed5a7c25fd0371572356b36aab
+SHA512 (cffi-1.10.0.tar.gz) = 02c9987c44698708dcb7e0aa17637df6b15f81732dc25b03e54563ca5664a817863b87daf7a782a62c7b6150388cdca858ef496a975ab289c86f05e5492465ef
+Size (cffi-1.10.0.tar.gz) = 418131 bytes
 SHA1 (patch-c_malloc__closure.h) = d169a2ebdf899b5b67a714a068749ce25087be8a
