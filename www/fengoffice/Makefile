@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2016/09/11 17:03:28 taca Exp $
+# $NetBSD: Makefile,v 1.38 2017/04/05 12:33:48 fhajny Exp $
 #
 
 DISTNAME=	fengoffice_3.2.2.1
 PKGNAME=	${DISTNAME:S/_/-/:C/.rc$/rc1/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
@@ -18,7 +19,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.1.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.1.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=5.1.0:../../mail/php-imap
 
 PHP_VERSIONS_ACCEPTED=	56

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2017/03/16 00:01:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/04/05 12:33:49 fhajny Exp $
 #
 
 DISTNAME=	nextcloud-11.0.2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://download.nextcloud.com/server/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +13,6 @@ HOMEPAGE=	https://nextcloud.com/
 COMMENT=	File sharing web service server
 LICENSE=	gnu-agpl-v3
 
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.4.0:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.4.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.4.0:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json

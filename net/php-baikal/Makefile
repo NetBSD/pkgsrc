@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/08/22 14:22:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/04/05 12:33:48 fhajny Exp $
 
 DISTNAME=	baikal-0.4.6
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fruux/}
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
@@ -15,7 +16,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.1:../../databases/php-pdo
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.3.1:../../databases/php-pdo_sqlite
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.1:../../textproc/php-dom
 
 WRKSRC=		${WRKDIR}/baikal
 

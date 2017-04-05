@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/11/29 08:53:26 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/05 12:33:48 fhajny Exp $
 
 DISTNAME=	${PHP_PKG_PREFIX}-extensions-${PHP_VERSION}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs www
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -18,7 +19,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-bz2>=${PHP_VERSION}<${NEXT_VERS}:../../archivers/php
 DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=${PHP_VERSION}<${NEXT_VERS}:../../time/php-calendar
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=${PHP_VERSION}<${NEXT_VERS}:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-dba>=${PHP_VERSION}<${NEXT_VERS}:../../databases/php-dba
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=${PHP_VERSION}<${NEXT_VERS}:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-enchant>=${PHP_VERSION}:../../textproc/php-enchant
 DEPENDS+=	${PHP_PKG_PREFIX}-exif>=${PHP_VERSION}<${NEXT_VERS}:../../graphics/php-exif
 DEPENDS+=	${PHP_PKG_PREFIX}-ftp>=${PHP_VERSION}<${NEXT_VERS}:../../net/php-ftp
