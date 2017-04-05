@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2017/04/05 13:06:26 mef Exp $
+# $NetBSD: Makefile.common,v 1.6 2017/04/05 14:22:20 mef Exp $
 #
 # used by security/libpreludedb/Makefile
 # used by security/libpreludedb-mysql/Makefile
@@ -11,7 +11,6 @@ DISTNAME=		libpreludedb-${VERSION}
 VERSION=		0.9.15.3
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/libpreludedb/
-#ASTER_SITES=		https://www.prelude-siem.org/projects/prelude/files
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/download/releases/
