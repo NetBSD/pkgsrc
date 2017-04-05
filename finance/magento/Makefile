@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2016/09/11 17:03:26 taca Exp $
+# $NetBSD: Makefile,v 1.9 2017/04/05 12:33:47 fhajny Exp $
 
 DISTNAME=	magento-1.9.2.2
+PKGREVISION=	1
 CATEGORIES=	www finance
 # Upstream temporarily removed the option to download directly
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
@@ -17,7 +18,6 @@ PATCHFILES=	# none sofar
 EXTRACT_DIR=	${WRKDIR}/magento
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
