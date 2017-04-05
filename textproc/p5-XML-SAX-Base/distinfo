@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:57 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/04/05 15:43:19 wiz Exp $
 
-SHA1 (XML-SAX-Base-1.08.tar.gz) = 5ae6a06e465daa65e1a69d1a6977299084fe9aef
-RMD160 (XML-SAX-Base-1.08.tar.gz) = 1ffa1558e1062aa47a229a2b5c5510ba708eea09
-SHA512 (XML-SAX-Base-1.08.tar.gz) = 2149a4772b10d31b6d0f4f0cf8d07145cdb103de518d3055f09ed921748a5b6c8269c9d7c017e865b8c251a3e930cf752eb33780d5291b4287c003af3b6ff47f
-Size (XML-SAX-Base-1.08.tar.gz) = 28197 bytes
+SHA1 (XML-SAX-Base-1.09.tar.gz) = bf2c97ed35d5de09015d5a6f6ab8a8ee50aedd4a
+RMD160 (XML-SAX-Base-1.09.tar.gz) = db0deffe2536d7e96b00010a8bb87f2d56eac36b
+SHA512 (XML-SAX-Base-1.09.tar.gz) = 72a34fd2b0375222cad3a42a0e2d92f793d7a2ac27d831a8a8d3322fdc75ba246ca53c33cdc0fbade81f3a96ad977ebf5d4cddc6d75d76be79b2e655f316d532
+Size (XML-SAX-Base-1.09.tar.gz) = 28215 bytes
