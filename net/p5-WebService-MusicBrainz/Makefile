@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/03/12 07:42:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/04/05 09:42:06 wiz Exp $
 
-DISTNAME=		WebService-MusicBrainz-1.0
+DISTNAME=		WebService-MusicBrainz-1.0.1
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=WebService/}
