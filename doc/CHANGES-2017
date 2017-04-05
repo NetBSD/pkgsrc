@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1430 2017/04/05 15:39:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1431 2017/04/05 15:42:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Regexp-Common to 2017040401 [wiz 2017-04-05]
 	Updated devel/p5-Sub-Identify to 0.13 [wiz 2017-04-05]
 	Updated textproc/p5-Text-BibTeX to 0.80 [wiz 2017-04-05]
+	Updated textproc/p5-XML-NamespaceSupport to 1.12 [wiz 2017-04-05]
