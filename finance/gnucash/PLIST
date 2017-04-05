@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2016/12/19 10:19:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.63 2017/04/05 16:45:47 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -423,6 +423,7 @@ share/doc/gnucash/ChangeLog.2012
 share/doc/gnucash/ChangeLog.2013
 share/doc/gnucash/ChangeLog.2014
 share/doc/gnucash/ChangeLog.2015
+share/doc/gnucash/ChangeLog.2016
 share/doc/gnucash/DOCUMENTERS
 share/doc/gnucash/HACKING
 share/doc/gnucash/INSTALL
