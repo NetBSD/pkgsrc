@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2016/12/04 05:17:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.185 2017/04/06 14:18:38 gdt Exp $
 
 DOVECOT_VERSION=	1.2
 DOVECOT_SUBVERSION=	.17
@@ -18,6 +18,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 LICENSE=		mit AND gnu-lgpl-v2.1 AND modified-bsd
+
+# This package is eol as of May, 2011.  As of April, 2017, it remains
+# because at least one user reported still using it.
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config rpcgen
