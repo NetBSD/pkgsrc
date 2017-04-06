@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1446 2017/04/05 20:11:35 tez Exp $
+$NetBSD: CHANGES-2017,v 1.1447 2017/04/06 03:12:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1757,3 +1757,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-tornado to 4.4.3 [adam 2017-04-05]
 	Updated pkgtools/pkglint to 5.4.20 [rillig 2017-04-05]
 	Updated print/ghostscript-gpl to 9.06nb11 [tez 2017-04-05]
+	Added www/ruby-loofah version 2.0.3 [minskim 2017-04-06]
