@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/06 03:10:52 minskim Exp $
+
+SHA1 (loofah-2.0.3.gem) = da00db084b21106056c7c09e8608392439db90ec
+RMD160 (loofah-2.0.3.gem) = e350e0c6b4a3d50e10903b8892465c01befff077
+SHA512 (loofah-2.0.3.gem) = 1f08bcfa09bf075b4d84707099cce6bdaa986cd6c79f63fc60c8bee4812c5a31cee1021cd314fc2033842d7b01ffe63f5f6acbf271a0db2ee631cd326520d700
+Size (loofah-2.0.3.gem) = 60416 bytes
