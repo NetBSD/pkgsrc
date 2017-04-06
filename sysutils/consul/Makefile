@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/02/17 15:22:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2017/04/06 19:25:17 fhajny Exp $
 
-DISTNAME=	consul-0.7.5
+DISTNAME=	consul-0.8.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
@@ -13,11 +13,8 @@ EXTRACT_USING=	bsdtar
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-WRKSRC=		${WRKDIR}/src/github.com/hashicorp/consul
-
-.include "../../lang/go/version.mk"
-
-BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
+GO_DIST_BASE=	${DISTNAME}
+GO_SRCPATH=	github.com/hashicorp/consul
 
 USE_LANGUAGES=		c c99
 USE_TOOLS+=		bash gmake
@@ -26,14 +23,11 @@ MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
 
 INSTALLATION_DIRS+=	bin
 
-post-extract:
-	${MKDIR} ${WRKSRC}
-	${MV} ${WRKDIR}/${DISTNAME}/* ${WRKSRC}
-
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} go build -o bin/consul
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/consul ${DESTDIR}${PREFIX}/bin
 
+.include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
