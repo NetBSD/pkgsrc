@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1219 2017/03/03 14:09:18 prlw1 Exp $
+# $NetBSD: Makefile,v 1.1220 2017/04/06 03:11:38 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -775,6 +775,7 @@ SUBDIR+=	ruby-journey
 SUBDIR+=	ruby-jquery-rails
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-liquid
+SUBDIR+=	ruby-loofah
 SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-multipart-post
 SUBDIR+=	ruby-mustermann19
