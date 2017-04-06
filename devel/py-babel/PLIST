@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/12/15 10:41:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/04/06 06:49:18 adam Exp $
 bin/pybabel-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -265,6 +265,7 @@ ${PYSITELIB}/babel/locale-data/es.dat
 ${PYSITELIB}/babel/locale-data/es_419.dat
 ${PYSITELIB}/babel/locale-data/es_AR.dat
 ${PYSITELIB}/babel/locale-data/es_BO.dat
+${PYSITELIB}/babel/locale-data/es_BR.dat
 ${PYSITELIB}/babel/locale-data/es_CL.dat
 ${PYSITELIB}/babel/locale-data/es_CO.dat
 ${PYSITELIB}/babel/locale-data/es_CR.dat
@@ -567,8 +568,11 @@ ${PYSITELIB}/babel/locale-data/ps_AF.dat
 ${PYSITELIB}/babel/locale-data/pt.dat
 ${PYSITELIB}/babel/locale-data/pt_AO.dat
 ${PYSITELIB}/babel/locale-data/pt_BR.dat
+${PYSITELIB}/babel/locale-data/pt_CH.dat
 ${PYSITELIB}/babel/locale-data/pt_CV.dat
+${PYSITELIB}/babel/locale-data/pt_GQ.dat
 ${PYSITELIB}/babel/locale-data/pt_GW.dat
+${PYSITELIB}/babel/locale-data/pt_LU.dat
 ${PYSITELIB}/babel/locale-data/pt_MO.dat
 ${PYSITELIB}/babel/locale-data/pt_MZ.dat
 ${PYSITELIB}/babel/locale-data/pt_PT.dat
@@ -721,6 +725,8 @@ ${PYSITELIB}/babel/locale-data/yi_001.dat
 ${PYSITELIB}/babel/locale-data/yo.dat
 ${PYSITELIB}/babel/locale-data/yo_BJ.dat
 ${PYSITELIB}/babel/locale-data/yo_NG.dat
+${PYSITELIB}/babel/locale-data/yue.dat
+${PYSITELIB}/babel/locale-data/yue_HK.dat
 ${PYSITELIB}/babel/locale-data/zgh.dat
 ${PYSITELIB}/babel/locale-data/zgh_MA.dat
 ${PYSITELIB}/babel/locale-data/zh.dat
