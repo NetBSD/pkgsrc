@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1452 2017/04/06 14:59:32 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1453 2017/04/06 15:01:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Crypt-OpenSSL-Bignum to 0.08 [mef 2017-04-06]
 	Updated lang/nodejs4 to 4.8.2 [fhajny 2017-04-06]
 	Updated lang/nodejs6 to 6.10.2 [fhajny 2017-04-06]
+	Updated net/py-lexicon to 2.0.6 [fhajny 2017-04-06]
