@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1448 2017/04/06 08:59:06 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1449 2017/04/06 13:56:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1761,3 +1761,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-argparse to 1.4.0 [adam 2017-04-06]
 	Updated devel/py-babel to 2.4.0 [adam 2017-04-06]
 	Updated textproc/py-sphinx to 1.5.5 [adam 2017-04-06]
+	Updated security/p5-pcsc to 1.4.14 [mef 2017-04-06]
+	Updated security/p5-Net-OpenSSH to 0.74 [mef 2017-04-06]
+	Updated security/p5-Net-DNS-SEC to 1.03 [mef 2017-04-06]
+	Updated security/p5-Authen-CAS-Client to 0.08 [mef 2017-04-06]
+	Updated security/p5-Authen-TacacsPlus to 0.26 [mef 2017-04-06]
