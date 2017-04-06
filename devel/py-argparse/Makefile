@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2014/01/25 10:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/04/06 06:33:57 adam Exp $
 
-VERSION=	1.2.1
-DISTNAME=	argparse-${VERSION}
-PKGNAME=	${PYPKGPREFIX}-argparse-${VERSION}
+DISTNAME=	argparse-1.4.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://argparse.googlecode.com/files/
-#EXTRACT_SUFX=	.tar.gz
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/argparse/}
 
-MAINTAINER=	gdt@ir.bbn.com
-HOMEPAGE=	http://code.google.com/p/argparse/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ThomasWaldmann/argparse/
 COMMENT=	Easy, declarative interface for creating command line tools
 LICENSE=	apache-2.0
 
