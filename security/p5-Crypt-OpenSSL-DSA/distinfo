@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/01/07 06:37:10 wen Exp $
+$NetBSD: distinfo,v 1.9 2017/04/06 14:18:04 mef Exp $
 
-SHA1 (Crypt-OpenSSL-DSA-0.18.tar.gz) = c0e3e571919c086c09967b8e94d6eb89288de717
-RMD160 (Crypt-OpenSSL-DSA-0.18.tar.gz) = ba9b4cc019cca6a788f631ff9ae8019f7d52c8dc
-SHA512 (Crypt-OpenSSL-DSA-0.18.tar.gz) = 00d7026158a96fcd276aa61ddd5f16b110d223723d9e8823659febdf55be9f1cae7ae0c4c0c7e9314148cc042fb57c0f62b6d34b56e2fa1c41832bf6d72d3b3d
-Size (Crypt-OpenSSL-DSA-0.18.tar.gz) = 9178 bytes
+SHA1 (Crypt-OpenSSL-DSA-0.19.tar.gz) = 007aae6b27635313d7debae15e43dcce02d02035
+RMD160 (Crypt-OpenSSL-DSA-0.19.tar.gz) = 56ba8b5ff35e47a8833a284427d11bb2c0f31e62
+SHA512 (Crypt-OpenSSL-DSA-0.19.tar.gz) = 92306a04dc821b7b5f81331c362c6d478df8c118c1cb62591cf7b369029a67dbdd2798e239cead8f1faf2b79e259e906b70ea8fbc38b457b1eb897468d61c839
+Size (Crypt-OpenSSL-DSA-0.19.tar.gz) = 9244 bytes
