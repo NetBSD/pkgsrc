@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1450 2017/04/06 14:19:18 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1451 2017/04/06 14:58:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/p5-Authen-TacacsPlus to 0.26 [mef 2017-04-06]
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.19 [mef 2017-04-06]
 	Updated security/p5-Crypt-OpenSSL-Bignum to 0.08 [mef 2017-04-06]
+	Updated lang/nodejs4 to 4.8.2 [fhajny 2017-04-06]
