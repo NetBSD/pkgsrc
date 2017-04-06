@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1455 2017/04/06 19:51:25 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1456 2017/04/06 20:00:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-lexicon to 2.0.6 [fhajny 2017-04-06]
 	Updated sysutils/consul to 0.8.0 [fhajny 2017-04-06]
 	Updated security/py-certbot to 0.13.0 [fhajny 2017-04-06]
+	Updated sysutils/liblognorm to 2.0.3 [fhajny 2017-04-06]
