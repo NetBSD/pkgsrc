@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1453 2017/04/06 15:01:15 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1454 2017/04/06 19:25:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1771,3 +1771,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs4 to 4.8.2 [fhajny 2017-04-06]
 	Updated lang/nodejs6 to 6.10.2 [fhajny 2017-04-06]
 	Updated net/py-lexicon to 2.0.6 [fhajny 2017-04-06]
+	Updated sysutils/consul to 0.8.0 [fhajny 2017-04-06]
