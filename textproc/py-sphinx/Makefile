@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2017/01/03 13:23:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2017/04/06 08:51:43 adam Exp $
 
-DISTNAME=	Sphinx-1.5.1
+DISTNAME=	Sphinx-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -33,7 +33,7 @@ do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} run.py
 
 post-extract:
-	${RM} ${WRKSRC}/sphinx/locale/__init__.pyc
+	${RM} ${WRKSRC}/Sphinx.egg-info/*-e
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX} || ${TRUE}
