@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/12/16 13:59:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/04/06 08:51:43 adam Exp $
 bin/sphinx-apidoc${PYVERSSUFFIX}
 bin/sphinx-autogen${PYVERSSUFFIX}
 bin/sphinx-build${PYVERSSUFFIX}
@@ -220,8 +220,6 @@ ${PYSITELIB}/sphinx/io.pyo
 ${PYSITELIB}/sphinx/jinja2glue.py
 ${PYSITELIB}/sphinx/jinja2glue.pyc
 ${PYSITELIB}/sphinx/jinja2glue.pyo
-${PYSITELIB}/sphinx/locale/.DS_Store
-${PYSITELIB}/sphinx/locale/.tx/config
 ${PYSITELIB}/sphinx/locale/__init__.py
 ${PYSITELIB}/sphinx/locale/__init__.pyc
 ${PYSITELIB}/sphinx/locale/__init__.pyo
@@ -358,13 +356,8 @@ ${PYSITELIB}/sphinx/make_mode.pyo
 ${PYSITELIB}/sphinx/parsers.py
 ${PYSITELIB}/sphinx/parsers.pyc
 ${PYSITELIB}/sphinx/parsers.pyo
-${PYSITELIB}/sphinx/pycode/Grammar-py2-sphinx1.2.pickle
-${PYSITELIB}/sphinx/pycode/Grammar-py2-sphinx1.3.pickle
-${PYSITELIB}/sphinx/pycode/Grammar-py2-sphinx1.4.pickle
-${PYSITELIB}/sphinx/pycode/Grammar-py2-sphinx1.5.pickle
 ${PYSITELIB}/sphinx/pycode/Grammar-py2.pickle
 ${PYSITELIB}/sphinx/pycode/Grammar-py2.txt
-${PYSITELIB}/sphinx/pycode/Grammar-py3-sphinx1.4.pickle
 ${PYSITELIB}/sphinx/pycode/Grammar-py3.pickle
 ${PYSITELIB}/sphinx/pycode/Grammar-py3.txt
 ${PYSITELIB}/sphinx/pycode/__init__.py
@@ -385,9 +378,11 @@ ${PYSITELIB}/sphinx/pycode/pgen2/grammar.pyo
 ${PYSITELIB}/sphinx/pycode/pgen2/literals.py
 ${PYSITELIB}/sphinx/pycode/pgen2/literals.pyc
 ${PYSITELIB}/sphinx/pycode/pgen2/literals.pyo
+${PYSITELIB}/sphinx/pycode/pgen2/parse.c
 ${PYSITELIB}/sphinx/pycode/pgen2/parse.py
 ${PYSITELIB}/sphinx/pycode/pgen2/parse.pyc
 ${PYSITELIB}/sphinx/pycode/pgen2/parse.pyo
+${PYSITELIB}/sphinx/pycode/pgen2/parse.pyx
 ${PYSITELIB}/sphinx/pycode/pgen2/pgen.py
 ${PYSITELIB}/sphinx/pycode/pgen2/pgen.pyc
 ${PYSITELIB}/sphinx/pycode/pgen2/pgen.pyo
