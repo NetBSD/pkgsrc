@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1447 2017/04/06 03:12:21 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1448 2017/04/06 08:59:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1758,3 +1758,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated pkgtools/pkglint to 5.4.20 [rillig 2017-04-05]
 	Updated print/ghostscript-gpl to 9.06nb11 [tez 2017-04-05]
 	Added www/ruby-loofah version 2.0.3 [minskim 2017-04-06]
+	Updated devel/py-argparse to 1.4.0 [adam 2017-04-06]
+	Updated devel/py-babel to 2.4.0 [adam 2017-04-06]
+	Updated textproc/py-sphinx to 1.5.5 [adam 2017-04-06]
