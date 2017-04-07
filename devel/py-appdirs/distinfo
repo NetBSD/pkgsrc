@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2017/03/23 17:06:49 joerg Exp $
+$NetBSD: distinfo,v 1.3 2017/04/07 03:31:06 adam Exp $
 
-SHA1 (appdirs-1.4.0.tar.gz) = a23245ad884a605bc845855cbf9e17991bc274ed
-RMD160 (appdirs-1.4.0.tar.gz) = 50000f1b504ed024a976cde1426883b301aa977e
-SHA512 (appdirs-1.4.0.tar.gz) = a16fbad419e593acf1b58a3f8f893d206b3fc1a269757213a34d129e6fc39aa041efacb7964d326b82376373315357c93e85b272f374a096d9a63e73e3ce1dac
-Size (appdirs-1.4.0.tar.gz) = 14358 bytes
+SHA1 (appdirs-1.4.3.tar.gz) = 9ad09395ed489ad66e9688e49087ce1814c64276
+RMD160 (appdirs-1.4.3.tar.gz) = 5c20593d89aa579dc571d533efeeb8ee72eb0d58
+SHA512 (appdirs-1.4.3.tar.gz) = 964db6c9f830c9b23d78f0230c5f574f214f08faf3fd24f10ccc941d23e38de66186461d754f7effb94aa0553c25df4843c9ff5dcd375c992c322550b3d98cce
+Size (appdirs-1.4.3.tar.gz) = 12700 bytes
