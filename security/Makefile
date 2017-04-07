@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2017/04/01 17:02:08 wiz Exp $
+# $NetBSD: Makefile,v 1.611 2017/04/07 00:09:14 mef Exp $
 #
 
 COMMENT=	Security tools
@@ -283,6 +283,7 @@ SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Crypt-URandom
 SUBDIR+=	p5-Crypt-X509
+SUBDIR+=	p5-CryptX
 SUBDIR+=	p5-Dancer-Plugin-Auth-RBAC
 SUBDIR+=	p5-Data-SimplePassword
 SUBDIR+=	p5-Digest
