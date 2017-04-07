@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1460 2017/04/07 03:46:37 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1461 2017/04/07 08:52:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1781,3 +1781,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-pyparsing to 2.2.0 [adam 2017-04-07]
 	Updated net/py-Socks to 1.6.7 [adam 2017-04-07]
 	Updated security/py-certifi to 2017.1.23 [adam 2017-04-07]
+	Updated x11/libdrm to 2.4.77 [wiz 2017-04-07]
