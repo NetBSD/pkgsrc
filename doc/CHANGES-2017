@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1458 2017/04/07 00:09:14 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1459 2017/04/07 00:42:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1776,3 +1776,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/liblognorm to 2.0.3 [fhajny 2017-04-06]
 	Updated sysutils/rsyslog to 8.26.0 [fhajny 2017-04-06]
 	Added security/p5-CryptX version 0.047 [mef 2017-04-07]
+	Updated security/p5-Net-SSH to 2.09.01 [mef 2017-04-07]
