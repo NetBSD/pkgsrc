@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.46 2017/02/23 10:18:06 rin Exp $
+# $NetBSD: Makefile,v 1.47 2017/04/07 13:30:01 ryoon Exp $
 
 DISTNAME=	simh-4.0.0
-PKGNAME=	simh-4.0.0.20161218
-PKGREVISION=	2
+PKGNAME=	simh-4.0.0.20170406
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=simh/}
 GITHUB_PROJECT=	simh
-GITHUB_TAG=	7964e2b72d9cad0309afa7da08dd7e5e2336cd37
+GITHUB_TAG=	2ddb7162f3b7602afac290505c5d3352007cf26d
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://simh.trailing-edge.com/
 COMMENT=	Bob Supniks historical computer simulator
+
+DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 USE_TOOLS+=	gmake
 
@@ -37,13 +38,13 @@ INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
 MAKE_FILE=		makefile
 INCLUDES=		${PREFIX:Q}/include:\
-			${BUILDLINK_PREFIX.SDL_ttf:Q}/include/SDL:\
+			${BUILDLINK_PREFIX.SDL2:Q}/include/SDL2:\
 			${BUILDLINK_PREFIX.libpcap:Q}/include/pcap:\
 			${BUILDLINK_PREFIX.pcre:Q}/include/pcre:\
 			${BUILDLINK_PREFIX.png:Q}/include:\
 			/usr/include
 LIBRARIES=		${PREFIX:Q}/lib:\
-			${BUILDLINK_PREFIX.SDL_ttf:Q}/lib${LIBABISUFFIX}:\
+			${BUILDLINK_PREFIX.SDL2:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.libpcap:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.pcre:Q}/lib${LIBABISUFFIX}:\
 			${BUILDLINK_PREFIX.png:Q}/lib${LIBABISUFFIX}:\
@@ -52,6 +53,9 @@ MAKE_ENV+=		INCLUDES=${INCLUDES:Q}
 MAKE_ENV+=		LIBRARIES=${LIBRARIES:Q}
 MAKE_ENV+=		GCC=${CC:Q}
 MAKE_ENV+=		OS_LDFLAGS=${LDFLAGS:Q} CFLAGS_O=${CFLAGS:Q}
+MAKE_ENV+=		FONTPATH=/usr/pkg/share/fonts/X11/TTF
+
+BUILD_TARGET=		all besm6
 
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
@@ -69,8 +73,8 @@ do-install:
 		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)
 
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
+.include "../../fonts/SDL2_ttf/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
