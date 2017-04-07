@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/02 10:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/07 03:42:13 adam Exp $
 
-DISTNAME=	PySocks-1.5.6
+DISTNAME=	PySocks-1.6.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/PySocks/}
@@ -12,5 +12,5 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
