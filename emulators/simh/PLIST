@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2016/12/18 11:11:28 hans Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/04/07 13:30:01 ryoon Exp $
 bin/simh-altair
 bin/simh-altairz80
 bin/simh-b5500
+bin/simh-besm6
 bin/simh-cdc1700
 bin/simh-eclipse
 bin/simh-gri
@@ -14,6 +15,7 @@ bin/simh-i7094
 bin/simh-ibm1130
 bin/simh-id16
 bin/simh-id32
+bin/simh-imds-225
 bin/simh-isys8010
 bin/simh-isys8020
 bin/simh-isys8024
@@ -43,8 +45,8 @@ bin/simh-vax730
 bin/simh-vax750
 bin/simh-vax780
 bin/simh-vax8600
-share/doc/simh/0readme_39.txt
 share/doc/simh/0readmeAsynchIO.txt
+share/doc/simh/0readme_39.txt
 share/doc/simh/0readme_ethernet.txt
 share/doc/simh/CDC1700-Diagnostics.txt
 share/doc/simh/CDC1700-MSOS.txt
@@ -54,6 +56,7 @@ share/doc/simh/eclipse.txt
 share/doc/simh/haltguide.txt
 share/doc/simh/hp2100_bugfixes.txt
 share/doc/simh/hp2100_diag.txt
+share/doc/simh/hp2100_release.txt
 share/doc/simh/hp3000_diag.txt
 share/doc/simh/hp3000_release.txt
 share/doc/simh/i7094_bug_history.txt
@@ -63,9 +66,9 @@ share/doc/simh/m68k_parse.y.txt
 share/doc/simh/pdp10_bug_history.txt
 share/doc/simh/pdp18b_diag.txt
 share/doc/simh/pdp1_diag.txt
+share/doc/simh/readme-sage.txt
 share/doc/simh/readme1130.txt
 share/doc/simh/readme_s3.txt
-share/doc/simh/readme-sage.txt
 share/doc/simh/readme_update.txt
 share/doc/simh/sds_diag.txt
 share/doc/simh/sigma_bugs.txt
