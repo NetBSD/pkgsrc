@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 14:21:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/04/08 21:25:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,9 +11,6 @@ ${PYSITELIB}/pyasn1_modules/__init__.pyo
 ${PYSITELIB}/pyasn1_modules/pem.py
 ${PYSITELIB}/pyasn1_modules/pem.pyc
 ${PYSITELIB}/pyasn1_modules/pem.pyo
-${PYSITELIB}/pyasn1_modules/pkcs12.py
-${PYSITELIB}/pyasn1_modules/pkcs12.pyc
-${PYSITELIB}/pyasn1_modules/pkcs12.pyo
 ${PYSITELIB}/pyasn1_modules/rfc1155.py
 ${PYSITELIB}/pyasn1_modules/rfc1155.pyc
 ${PYSITELIB}/pyasn1_modules/rfc1155.pyo
