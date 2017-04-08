@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1471 2017/04/08 14:11:42 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1472 2017/04/08 19:18:47 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1794,3 +1794,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-uwsgi to 2.0.15 [adam 2017-04-08]
 	Updated cad/py-gds to 1.1.2 [mef 2017-04-08]
 	Updated cad/klayout to 0.24.10 [mef 2017-04-08]
+	Removed misc/ruby-descendants_tracker [tsutsui 2017-04-08]
