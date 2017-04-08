@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1474 2017/04/08 21:30:14 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1475 2017/04/08 21:45:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1797,3 +1797,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed misc/ruby-descendants_tracker [tsutsui 2017-04-08]
 	Updated www/py-urllib3 to 1.20 [adam 2017-04-08]
 	Updated security/py-asn1-modules to 0.0.8 [adam 2017-04-08]
+	Updated devel/py-txaio to 2.6.2 [adam 2017-04-08]
+	Updated www/py-autobahn to 0.18.1 [adam 2017-04-08]
