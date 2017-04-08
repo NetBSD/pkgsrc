@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/30 15:00:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/04/08 11:25:11 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -40,12 +40,24 @@ ${PYSITELIB}/pyasn1/codec/der/decoder.pyo
 ${PYSITELIB}/pyasn1/codec/der/encoder.py
 ${PYSITELIB}/pyasn1/codec/der/encoder.pyc
 ${PYSITELIB}/pyasn1/codec/der/encoder.pyo
+${PYSITELIB}/pyasn1/codec/native/__init__.py
+${PYSITELIB}/pyasn1/codec/native/__init__.pyc
+${PYSITELIB}/pyasn1/codec/native/__init__.pyo
+${PYSITELIB}/pyasn1/codec/native/decoder.py
+${PYSITELIB}/pyasn1/codec/native/decoder.pyc
+${PYSITELIB}/pyasn1/codec/native/decoder.pyo
+${PYSITELIB}/pyasn1/codec/native/encoder.py
+${PYSITELIB}/pyasn1/codec/native/encoder.pyc
+${PYSITELIB}/pyasn1/codec/native/encoder.pyo
 ${PYSITELIB}/pyasn1/compat/__init__.py
 ${PYSITELIB}/pyasn1/compat/__init__.pyc
 ${PYSITELIB}/pyasn1/compat/__init__.pyo
 ${PYSITELIB}/pyasn1/compat/binary.py
 ${PYSITELIB}/pyasn1/compat/binary.pyc
 ${PYSITELIB}/pyasn1/compat/binary.pyo
+${PYSITELIB}/pyasn1/compat/integer.py
+${PYSITELIB}/pyasn1/compat/integer.pyc
+${PYSITELIB}/pyasn1/compat/integer.pyo
 ${PYSITELIB}/pyasn1/compat/octets.py
 ${PYSITELIB}/pyasn1/compat/octets.pyc
 ${PYSITELIB}/pyasn1/compat/octets.pyo
