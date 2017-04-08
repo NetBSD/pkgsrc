@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.4 2017/04/05 21:59:35 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.5 2017/04/08 19:28:31 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -31,3 +31,14 @@ net/proftpd-postgresql: security update
 net/proftpd-sqlite; security update
 net/proftpd: security update
 
+Pullup ticket #5246 - requested by sevan
+sysutils/collectd: security update
+
+Pullup ticket #5250 - requested by bsiegert
+net/rabbitmq: security update
+
+Pullup ticket #5251 - requested by bsiegert
+devel/golint: build fix
+
+Pullup ticket #5252 - requested by joerg
+www/py-django: security update
