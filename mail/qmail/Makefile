@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.83 2017/04/04 14:58:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.84 2017/04/08 18:22:51 schmonz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		26
+PKGREVISION=		27
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -12,7 +12,6 @@ HOMEPAGE=		http://cr.yp.to/qmail.html
 COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 LICENSE=		public-domain
 
-DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		queue-fix>=1.4nb1:../../mail/queue-fix
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
