@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/02/22 13:19:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/04/08 21:44:55 adam Exp $
 
-SHA1 (autobahn-0.17.1.tar.gz) = 395164a4e9773c6431d3b94b3e9f6a135182282b
-RMD160 (autobahn-0.17.1.tar.gz) = 206ebca32d79d3873dcfa62bfbdae019c534ccd3
-SHA512 (autobahn-0.17.1.tar.gz) = 93e723436f24f82a1be72d955f81fc9958104085137e5ba25970c113cd202ffc8c6a73d81f637890fc795b4b787743f55fbd2806506de7ff2e3d410c2428f9ac
-Size (autobahn-0.17.1.tar.gz) = 189827 bytes
+SHA1 (autobahn-0.18.1.tar.gz) = 38e72ca004edfb0113b9a7154514542f4bbee3bf
+RMD160 (autobahn-0.18.1.tar.gz) = b30a407dbbfbc033220d5534c5db4b3feaf9bf28
+SHA512 (autobahn-0.18.1.tar.gz) = 5fcf3b14b2896da3f4bbed591a7c1935a2d23dd2dec51be24bf2fa0850222fbdf12e46bb36fb0969e9030a188e86f09e6601b2b963df9a57981696245da50424
+Size (autobahn-0.18.1.tar.gz) = 197088 bytes
