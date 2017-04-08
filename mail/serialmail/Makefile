@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/01/02 03:33:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2017/04/08 17:50:33 schmonz Exp $
 #
 
 DISTNAME=		serialmail-0.75
@@ -9,7 +9,6 @@ MASTER_SITES=		http://cr.yp.to/software/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/serialmail.html
 COMMENT=		Tools for passing mail across serial links
-LICENSE=		djb-nonlicense
 
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
