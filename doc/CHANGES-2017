@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1492 2017/04/09 10:46:11 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1493 2017/04/09 11:39:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1824,3 +1824,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Config-Any to 0.30 [wen 2017-04-09]
 	Updated multimedia/intel-vaapi-driver to 1.8.0 [leot 2017-04-09]
 	Updated net/youtube-dl to 20170409 [leot 2017-04-09]
+	Updated archivers/zutils to 1.6 [mef 2017-04-09]
