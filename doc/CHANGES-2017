@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1477 2017/04/09 01:09:30 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1478 2017/04/09 01:28:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1801,3 +1801,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-autobahn to 0.18.1 [adam 2017-04-08]
 	Updated cad/qcad to 3.16.7.0 [mef 2017-04-09]
 	Updated cad/gtkwave to 3.3.80 [mef 2017-04-09]
+	Updated www/mediawiki to 1.18.1 [wen 2017-04-09]
