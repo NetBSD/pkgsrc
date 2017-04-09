@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1480 2017/04/09 03:38:41 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1481 2017/04/09 04:14:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1812,3 +1812,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Log-Any to 1.04.9 [mef 2017-04-09]
 	Updated devel/p5-Devel-Declare to 0.006019 [mef 2017-04-09]
 	Updated devel/p5-POE-Component-Pluggable to 1.28 [mef 2017-04-09]
+	Updated www/ruby-unicorn to 5.3.0 [wen 2017-04-09]
