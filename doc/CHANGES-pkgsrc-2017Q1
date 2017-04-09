@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.5 2017/04/08 19:28:31 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.6 2017/04/09 17:57:59 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -42,3 +42,7 @@ devel/golint: build fix
 
 Pullup ticket #5252 - requested by joerg
 www/py-django: security update
+
+Pullup ticket #5257 - requested by wen
+www/mediawiki: security update
+
