@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/04/04 07:51:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2017/04/09 12:58:46 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20170404
+DISTNAME=		qmail-run-20170409
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,7 +10,6 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures qmail to receive and deliver mail
 LICENSE=		2-clause-bsd
 
-DEPENDS+=		mess822-[0-9]*:../../mail/mess822
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
 
