@@ -1,0 +1,2 @@
+This module encodes non-ASCII text for MIME email message headers
+according to RFC 2047.
