@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/04/09 16:43:03 adam Exp $
 
-DISTNAME=	billiard-3.3.0.18
+DISTNAME=	billiard-3.5.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_PYPI:=b/billiard/}
@@ -10,13 +10,13 @@ HOMEPAGE=	http://github.com/celery/billiard
 COMMENT=	Python multiprocessing fork with improvements and bugfixes
 LICENSE=	modified-bsd
 
-USE_LANGUAGES+=	c
-REPLACE_PYTHON+=	funtests/setup.py funtests/tests/test_multiprocessing.py
-
 .include "../../lang/python/pyversion.mk"
-
-TWO_OR_THREE=	${PYPKGPREFIX:C/([0-9])[0-9]/\1/1}
-PLIST_SUBST+=	PY_VER_MAJ=${TWO_OR_THREE}
+# builds _billiard.so
+.if "${PYPKGPREFIX}" == "py27"
+USE_LANGUAGES=		c
+.else
+USE_LANGUAGES=		# empty
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
