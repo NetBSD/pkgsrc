@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/12/16 12:53:06 mef Exp $
+# $NetBSD: Makefile,v 1.18 2017/04/09 11:45:51 mef Exp $
 
-DISTNAME=	Contextual-Return-0.004010
+DISTNAME=	Contextual-Return-0.004011
 # insert dot between each 3 digits
 PKGNAME=	p5-${DISTNAME:C/([0-9][0-9][0-9])([0-9][0-9][0-9])/\1.\2/}
 CATEGORIES=	devel perl5
