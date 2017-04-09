@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1475 2017/04/08 21:45:24 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1476 2017/04/09 00:23:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1799,3 +1799,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-asn1-modules to 0.0.8 [adam 2017-04-08]
 	Updated devel/py-txaio to 2.6.2 [adam 2017-04-08]
 	Updated www/py-autobahn to 0.18.1 [adam 2017-04-08]
+	Updated cad/qcad to 3.16.7.0 [mef 2017-04-09]
