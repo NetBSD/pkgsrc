@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1495 2017/04/09 12:58:51 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.1496 2017/04/09 15:29:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1827,3 +1827,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/zutils to 1.6 [mef 2017-04-09]
 	Updated devel/p5-Contextual-Return to 0.004.011 [mef 2017-04-09]
 	Updated mail/qmail-run to 20170409 [schmonz 2017-04-09]
+	Updated databases/p5-DBIx-Class-Cursor-Cached to 1.1.4 [wen 2017-04-09]
