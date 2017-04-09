@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2016/06/05 08:14:47 mef Exp $
+$NetBSD: distinfo,v 1.38 2017/04/09 03:28:11 mef Exp $
 
-SHA1 (App-cpanminus-1.7042.tar.gz) = 5966ca7cb89155899afad47b845c13801a555152
-RMD160 (App-cpanminus-1.7042.tar.gz) = c1d0283fce45a183d674284b1bfd9eb5bdd00b13
-SHA512 (App-cpanminus-1.7042.tar.gz) = 2b4662edcfe8604cfa93d73aead893e71fcd4791a07fd5542508840314a36d6ec05967d615e0a94b677ebdcb7ef4796aa4e985757343e7352bbdb8c92c99563b
-Size (App-cpanminus-1.7042.tar.gz) = 317681 bytes
+SHA1 (App-cpanminus-1.7043.tar.gz) = 99253b7016f267abf0b4d0d528c45c3a81f36c9a
+RMD160 (App-cpanminus-1.7043.tar.gz) = 2f321c1a18b2d6fb0f5ad0ce227c9cdbf709926a
+SHA512 (App-cpanminus-1.7043.tar.gz) = a885ec78d5fea49434fbc8b71a503f2f4dc3a60905d54abe330a0a6233b7901e5b4364d0297752973efe6a57cae134d55b0a14781dbfb66e1fcbf4e001be389d
+Size (App-cpanminus-1.7043.tar.gz) = 317984 bytes
