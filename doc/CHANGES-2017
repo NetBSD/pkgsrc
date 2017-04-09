@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1494 2017/04/09 11:46:04 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1495 2017/04/09 12:58:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1826,3 +1826,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20170409 [leot 2017-04-09]
 	Updated archivers/zutils to 1.6 [mef 2017-04-09]
 	Updated devel/p5-Contextual-Return to 0.004.011 [mef 2017-04-09]
+	Updated mail/qmail-run to 20170409 [schmonz 2017-04-09]
