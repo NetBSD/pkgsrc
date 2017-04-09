@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1479 2017/04/09 02:57:38 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1480 2017/04/09 03:38:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1803,3 +1803,12 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/gtkwave to 3.3.80 [mef 2017-04-09]
 	Updated www/mediawiki to 1.18.1 [wen 2017-04-09]
 	Added mail/p5-Email-MIME-RFC2047 version 0.95 [mef 2017-04-09]
+	Updated devel/p5-Clone to 0.39 [mef 2017-04-09]
+	Updated devel/p5-Devel-CheckLib to 1.10 [mef 2017-04-09]
+	Updated devel/p5-App-cpanminus to 1.7043 [mef 2017-04-09]
+	Updated devel/p5-B-Hooks-Parser to 0.19 [mef 2017-04-09]
+	Updated devel/p5-Module-Install to 1.18 [mef 2017-04-09]
+	Updated devel/p5-Module-Build to 0.42220 [mef 2017-04-09]
+	Updated devel/p5-Log-Any to 1.04.9 [mef 2017-04-09]
+	Updated devel/p5-Devel-Declare to 0.006019 [mef 2017-04-09]
+	Updated devel/p5-POE-Component-Pluggable to 1.28 [mef 2017-04-09]
