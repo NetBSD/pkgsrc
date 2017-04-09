@@ -1,7 +1,7 @@
 #!/usr/pkg/bin/ruby
 # -*- coding: utf-8 -*-
 #
-# $NetBSD: update-gemspec.rb,v 1.8 2016/11/19 13:50:19 taca Exp $
+# $NetBSD: update-gemspec.rb,v 1.9 2017/04/09 15:49:50 taca Exp $
 #
 # Copyright (c) 2011, 2012, 2013, 2014, 2015, 2016 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,6 +131,7 @@ class GemSpecUpdater
           if /^([^=]+)=([^=]+)$/ =~ op
             ov = $1
             nv = $2
+            puts "#{ov} => #{nv}"
             if av.include? ov
               av.delete ov
               modified = true
