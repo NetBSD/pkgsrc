@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1478 2017/04/09 01:28:54 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1479 2017/04/09 02:57:38 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1802,3 +1802,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated cad/qcad to 3.16.7.0 [mef 2017-04-09]
 	Updated cad/gtkwave to 3.3.80 [mef 2017-04-09]
 	Updated www/mediawiki to 1.18.1 [wen 2017-04-09]
+	Added mail/p5-Email-MIME-RFC2047 version 0.95 [mef 2017-04-09]
