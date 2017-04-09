@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/06/08 19:23:21 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2017/04/09 02:59:26 mef Exp $
 
 DISTNAME=	POE-1.367
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,9 @@ DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-IO-Pipely>=0.005:../../devel/p5-IO-Pipely
+
+# for make test
+BUILD_DEPENDS+=	p5-Email-MIME-RFC2047-[0-9]*:../../mail/p5-Email-MIME-RFC2047
 
 MAKE_PARAMS+=	--default
 PERL5_PACKLIST=	auto/POE/.packlist
