@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2015/11/03 03:28:09 agc Exp $
+$NetBSD: distinfo,v 1.20 2017/04/09 03:03:46 mef Exp $
 
-SHA1 (Devel-Declare-0.006018.tar.gz) = e9d5653f9f1b3328fa3f708fa6a403523c00eb46
-RMD160 (Devel-Declare-0.006018.tar.gz) = 275a351c908ff7ade31789812c34c2bf855aa72d
-SHA512 (Devel-Declare-0.006018.tar.gz) = 0d85d8f00c566aac63a86a4b8990aad1b1267bfd7cfe7304c106e26d066d75c74b54a7ca6998dcd2fd6a05cf6e9388355baa2a24f520156e1b2a132def823bf1
-Size (Devel-Declare-0.006018.tar.gz) = 44155 bytes
+SHA1 (Devel-Declare-0.006019.tar.gz) = 8b2c005e7666349e11edd4075ffa75d7ea285585
+RMD160 (Devel-Declare-0.006019.tar.gz) = 3c50de82aa92e71c61d3028073295c09d8657f32
+SHA512 (Devel-Declare-0.006019.tar.gz) = 1f3073597c5b27160a9ccd8019c35563982479a8c6303e138d1260706499732aa6c402e835d8b5f06a02ee55294889735500d8a24c2f6f5df9d5ed3111d08fb0
+Size (Devel-Declare-0.006019.tar.gz) = 45174 bytes
 SHA1 (patch-aa) = b96bc8644140eada9b52080c3eb0a4807e167265
