@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.44 2017/03/15 19:38:09 bsiegert Exp $
+$NetBSD: distinfo,v 1.45 2017/04/09 08:23:43 wen Exp $
 
-SHA1 (go1.8.src.tar.gz) = 37945c372140c3a46c2c5b4b9ce382b6c8d88811
-RMD160 (go1.8.src.tar.gz) = 12f2840f1fd321f9d6be4dc066da6392ac30a2c3
-SHA512 (go1.8.src.tar.gz) = 9742dd8ec0364793e44a55207238c7339236a4da3a6e7cbb3b4eca45e957c7c0cb725e7d7430b9a04630285468d32dac686facfc57f3f58885b80bbb3d333ada
-Size (go1.8.src.tar.gz) = 15320083 bytes
+SHA1 (go1.8.1.src.tar.gz) = 0c4b7116bd6b7cdc19bdcf8336c75eae4620907b
+RMD160 (go1.8.1.src.tar.gz) = c0251b667a9c34f9dd180aeb8c4c9dce5832b9eb
+SHA512 (go1.8.1.src.tar.gz) = f01fe7b35ac23101610f6fc169b88dafe2edc49b3b044d5d0aff771b05dcb2c8d2e7a5090ed6dbe67f861e78e792ace32e209ed464399ca02dcd186b13ec8037
+Size (go1.8.1.src.tar.gz) = 15331455 bytes
 SHA1 (patch-lib_time_update.bash) = bcf565b97ae7898a9e5cef7686fe42c69bc0bba1
 SHA1 (patch-misc_io_clangwrap.sh) = cd91c47ba0fe7b6eb8009dd261c0c26c7d581c29
 SHA1 (patch-src_crypto_x509_root__bsd.go) = 0eca1eafa967268ae9b224be4aeda347ebc91901
