@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2016/12/03 03:06:50 wen Exp $
+@comment $NetBSD: PLIST,v 1.30.4.1 2017/04/09 17:55:03 spz Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/.stylelintrc
 share/mediawiki/COPYING
@@ -5242,6 +5242,7 @@ share/mediawiki/includes/specials/SpecialExport.php
 share/mediawiki/includes/specials/SpecialFewestrevisions.php
 share/mediawiki/includes/specials/SpecialFileDuplicateSearch.php
 share/mediawiki/includes/specials/SpecialFilepath.php
+share/mediawiki/includes/specials/SpecialGoToInterwiki.php
 share/mediawiki/includes/specials/SpecialImport.php
 share/mediawiki/includes/specials/SpecialJavaScriptTest.php
 share/mediawiki/includes/specials/SpecialLinkAccounts.php
@@ -5543,6 +5544,7 @@ share/mediawiki/languages/i18n/eml.json
 share/mediawiki/languages/i18n/en-ca.json
 share/mediawiki/languages/i18n/en-gb.json
 share/mediawiki/languages/i18n/en.json
+share/mediawiki/languages/i18n/en.json.rej
 share/mediawiki/languages/i18n/eo.json
 share/mediawiki/languages/i18n/es.json
 share/mediawiki/languages/i18n/et.json
@@ -5722,6 +5724,7 @@ share/mediawiki/languages/i18n/ps.json
 share/mediawiki/languages/i18n/pt-br.json
 share/mediawiki/languages/i18n/pt.json
 share/mediawiki/languages/i18n/qqq.json
+share/mediawiki/languages/i18n/qqq.json.rej
 share/mediawiki/languages/i18n/qu.json
 share/mediawiki/languages/i18n/qug.json
 share/mediawiki/languages/i18n/rgn.json
@@ -6313,6 +6316,7 @@ share/mediawiki/maintenance/archives/patch-rc_user_text-index.sql
 share/mediawiki/maintenance/archives/patch-rd_interwiki.sql
 share/mediawiki/maintenance/archives/patch-recentchanges-utindex.sql
 share/mediawiki/maintenance/archives/patch-redirect.sql
+share/mediawiki/maintenance/archives/patch-rename-ar_usertext_timestamp.sql
 share/mediawiki/maintenance/archives/patch-rename-iwl_prefix.sql
 share/mediawiki/maintenance/archives/patch-rename-user_groups-and_rights.sql
 share/mediawiki/maintenance/archives/patch-rev_deleted.sql
@@ -6529,6 +6533,7 @@ share/mediawiki/maintenance/migrateUserGroup.php
 share/mediawiki/maintenance/minify.php
 share/mediawiki/maintenance/moveBatch.php
 share/mediawiki/maintenance/mssql/archives/patch-add-cl_collation_ext_index.sql
+share/mediawiki/maintenance/mssql/archives/patch-alter-table-oldimage.sql
 share/mediawiki/maintenance/mssql/archives/patch-archive-drop-fks.sql
 share/mediawiki/maintenance/mssql/archives/patch-bot_passwords.sql
 share/mediawiki/maintenance/mssql/archives/patch-categorylinks-constraints.sql
@@ -11378,6 +11383,7 @@ share/mediawiki/tests/phpunit/includes/media/TiffTest.php
 share/mediawiki/tests/phpunit/includes/media/WebPTest.php
 share/mediawiki/tests/phpunit/includes/media/XCFTest.php
 share/mediawiki/tests/phpunit/includes/objectcache/MemcachedBagOStuffTest.php
+share/mediawiki/tests/phpunit/includes/objectcache/ObjectCacheTest.php
 share/mediawiki/tests/phpunit/includes/objectcache/RESTBagOStuffTest.php
 share/mediawiki/tests/phpunit/includes/objectcache/RedisBagOStuffTest.php
 share/mediawiki/tests/phpunit/includes/page/ArticleTablesTest.php
