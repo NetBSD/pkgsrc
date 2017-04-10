@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.12 2017/04/09 12:58:46 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.13 2017/04/10 15:04:56 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -46,10 +46,19 @@ qmailsmtpd_precmd()
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
 	# We want to signal only the tcpserver process responsible for SMTP
 	# service. Use argv0(1) to set procname to "qmailsmtpd".
-	if [ -f /etc/rc.subr ]; then
-		checkyesno qmailsmtpd_log || qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
+	if [ -f /etc/rc.subr ] && ! checkyesno qmailsmtpd_log; then
+		qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailsmtpd_postenv} @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport} ${qmailsmtpd_presmtpd} ${qmailsmtpd_smtpdcmd} ${qmailsmtpd_postsmtpd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailsmtpd_logcmd}"
+	command="@SETENV@ - ${qmailsmtpd_postenv}
+@PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver}
+@PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name}
+${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb
+-c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming`
+-u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
+${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport}
+${qmailsmtpd_presmtpd} ${qmailsmtpd_smtpdcmd} ${qmailsmtpd_postsmtpd}
+2>&1 |
+@PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailsmtpd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
