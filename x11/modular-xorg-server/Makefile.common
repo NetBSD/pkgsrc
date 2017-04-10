@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2017/03/16 11:56:46 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2017/04/10 13:10:19 jperkin Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -98,6 +98,9 @@ PLIST.sparc=		yes
 # Workaround for PR#41556.
 # Avoid to use bsd_kqueue_apm, force to use bsd_apm instead.
 CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
+
+# Avoid picking up epoll on illumos
+CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_create1=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
