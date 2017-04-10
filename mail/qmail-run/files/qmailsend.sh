@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.8 2015/11/25 12:51:30 jperkin Exp $
+# $NetBSD: qmailsend.sh,v 1.9 2017/04/10 15:04:56 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -41,10 +41,12 @@ qmailsend_precmd()
 {
 	# qmail-start(8) starts the various qmail processes, then exits.
 	# qmail-send(8) is the process we want to signal later.
-	if [ -f /etc/rc.subr ]; then
-		checkyesno qmailsend_log || qmailsend_logcmd=${qmailsend_nologcmd}
+	if [ -f /etc/rc.subr ] && ! checkyesno qmailsend_log; then
+		qmailsend_logcmd=${qmailsend_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailsend_postenv} qmail-start '$qmailsend_defaultdelivery' ${qmailsend_logcmd}"
+	command="@SETENV@ - ${qmailsend_postenv}
+qmail-start '$qmailsend_defaultdelivery'
+${qmailsend_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
