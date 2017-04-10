@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/05/01 00:41:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/04/10 10:32:47 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -48,14 +48,12 @@ share/tomcat/lib/tomcat7-websocket.jar
 share/tomcat/lib/websocket-api.jar
 share/tomcat/webapps/ROOT/RELEASE-NOTES.txt
 share/tomcat/webapps/ROOT/WEB-INF/web.xml
-share/tomcat/webapps/ROOT/asf-logo-wide.gif
-share/tomcat/webapps/ROOT/asf-logo.png
+share/tomcat/webapps/ROOT/asf-logo-wide.svg
 share/tomcat/webapps/ROOT/bg-button.png
 share/tomcat/webapps/ROOT/bg-middle.png
 share/tomcat/webapps/ROOT/bg-nav-item.png
 share/tomcat/webapps/ROOT/bg-nav.png
 share/tomcat/webapps/ROOT/bg-upper.png
-share/tomcat/webapps/ROOT/build.xml
 share/tomcat/webapps/ROOT/favicon.ico
 share/tomcat/webapps/ROOT/index.jsp
 share/tomcat/webapps/ROOT/tomcat-power.gif
@@ -150,7 +148,7 @@ share/tomcat/webapps/docs/funcspecs/index.html
 share/tomcat/webapps/docs/funcspecs/mbean-names.html
 share/tomcat/webapps/docs/html-manager-howto.html
 share/tomcat/webapps/docs/images/add.gif
-share/tomcat/webapps/docs/images/asf-logo.gif
+share/tomcat/webapps/docs/images/asf-logo.svg
 share/tomcat/webapps/docs/images/code.gif
 share/tomcat/webapps/docs/images/cors-flowchart.png
 share/tomcat/webapps/docs/images/design.gif
@@ -158,6 +156,7 @@ share/tomcat/webapps/docs/images/docs.gif
 share/tomcat/webapps/docs/images/fix.gif
 share/tomcat/webapps/docs/images/printer.gif
 share/tomcat/webapps/docs/images/tomcat.gif
+share/tomcat/webapps/docs/images/tomcat.png
 share/tomcat/webapps/docs/images/tomcat.svg
 share/tomcat/webapps/docs/images/update.gif
 share/tomcat/webapps/docs/images/void.gif
@@ -171,7 +170,7 @@ share/tomcat/webapps/docs/jspapi/index.html
 share/tomcat/webapps/docs/logging.html
 share/tomcat/webapps/docs/manager-howto.html
 share/tomcat/webapps/docs/maven-jars.html
-share/tomcat/webapps/docs/mbeans-descriptor-howto.html
+share/tomcat/webapps/docs/mbeans-descriptors-howto.html
 share/tomcat/webapps/docs/monitoring.html
 share/tomcat/webapps/docs/proxy-howto.html
 share/tomcat/webapps/docs/realm-howto.html
@@ -595,7 +594,7 @@ share/tomcat/webapps/host-manager/WEB-INF/jsp/403.jsp
 share/tomcat/webapps/host-manager/WEB-INF/jsp/404.jsp
 share/tomcat/webapps/host-manager/WEB-INF/web.xml
 share/tomcat/webapps/host-manager/images/add.gif
-share/tomcat/webapps/host-manager/images/asf-logo.gif
+share/tomcat/webapps/host-manager/images/asf-logo.svg
 share/tomcat/webapps/host-manager/images/code.gif
 share/tomcat/webapps/host-manager/images/design.gif
 share/tomcat/webapps/host-manager/images/docs.gif
@@ -613,7 +612,7 @@ share/tomcat/webapps/manager/WEB-INF/jsp/sessionDetail.jsp
 share/tomcat/webapps/manager/WEB-INF/jsp/sessionsList.jsp
 share/tomcat/webapps/manager/WEB-INF/web.xml
 share/tomcat/webapps/manager/images/add.gif
-share/tomcat/webapps/manager/images/asf-logo.gif
+share/tomcat/webapps/manager/images/asf-logo.svg
 share/tomcat/webapps/manager/images/code.gif
 share/tomcat/webapps/manager/images/design.gif
 share/tomcat/webapps/manager/images/docs.gif
@@ -624,3 +623,4 @@ share/tomcat/webapps/manager/images/void.gif
 share/tomcat/webapps/manager/index.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
+@pkgdir share/tomcat/conf
