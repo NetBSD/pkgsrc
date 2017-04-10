@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.12 2017/01/16 01:50:14 joerg Exp $
+$NetBSD: distinfo,v 1.13 2017/04/10 21:14:45 joerg Exp $
 
-SHA1 (Botan-1.11.33.tgz) = 71f2f4c81af48197e7c6db86bab393396ecf6541
-RMD160 (Botan-1.11.33.tgz) = f0de0fea65fd501747cf1949e47ec2faeb6acaa0
-SHA512 (Botan-1.11.33.tgz) = 49bb4485663897dd07bb7982771befacc50bfabef5806dc802cbd4d39f5d641b08a264824b5b1b96421e810811353deea15e728c5d08ce2932cf0e4602ae099d
-Size (Botan-1.11.33.tgz) = 4329671 bytes
-SHA1 (patch-src_build-data_os_dragonfly.txt) = 2aef3f0c514f6d1e84aae43052d82b3536a1b1c5
-SHA1 (patch-src_build-data_os_netbsd.txt) = e3acd79c182f338542c4c65b20f2443e42a1a488
-SHA1 (patch-src_build-data_os_openbsd.txt) = 2388e859c855409f6ec23e2b149b3eb56c5a0aea
-SHA1 (patch-src_build-data_os_solaris.txt) = d4632d817c401d3942aaabe23719c7496d416b84
+SHA1 (Botan-2.1.0.tgz) = a754303f0fc5dc6e187dc80d1316f9fdb20cde1f
+RMD160 (Botan-2.1.0.tgz) = b736e1820aa4315095248ebdf119a5c6b493616d
+SHA512 (Botan-2.1.0.tgz) = af9ea35baf431500d380a360525e20e67dd17fdeaa442726019d544e9e423c301196cc17b09a3831f956ca9e62d7e99797f129b26fac10a653dd04e3ad1f4f4f
+Size (Botan-2.1.0.tgz) = 5073684 bytes
+SHA1 (patch-src_build-data_os_openbsd.txt) = 4b187abcca4652a780386a6817033e4b6cdeafa8
+SHA1 (patch-src_build-data_os_solaris.txt) = de351e82e261c1f9e8668ecca606f3776cfa9eb2
 SHA1 (patch-src_lib_utils_locking__allocator_info.txt) = 30dd9043e1fa7befdf6933778e5c729fcb88263d
-SHA1 (patch-src_lib_utils_os__utils.cpp) = 28298bc3b98703275dce23d1d7fcd65ff262d05f
+SHA1 (patch-src_lib_utils_os__utils.cpp) = 1b6b545c55995d0786669b1649e0913fbf0b5f3c
