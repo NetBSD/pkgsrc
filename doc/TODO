@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17236 2017/04/09 11:49:17 wiz Exp $
+$NetBSD: TODO,v 1.17237 2017/04/10 20:26:54 joerg Exp $
 
 Suggested new packages
 ======================
@@ -469,7 +469,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o boolean-7.1
 	o bos-2.5
 	o boson-0.13
-	o botan-1.10.15
 	o bottlerocket-0.05b3
 	o bpython-0.15
 	o brasero-3.4.0
