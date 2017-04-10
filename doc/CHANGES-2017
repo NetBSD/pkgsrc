@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1509 2017/04/10 15:05:03 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.1510 2017/04/10 20:26:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1855,3 +1855,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-mxDateTime to 3.2.9 [mef 2017-04-10]
 	Updated fonts/noto-ttf to 20170410 [ryoon 2017-04-10]
 	Updated mail/qmail-run to 20170410 [schmonz 2017-04-10]
+	Updated security/botan to 1.10.16 [joerg 2017-04-10]
