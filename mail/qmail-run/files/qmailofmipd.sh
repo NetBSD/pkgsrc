@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.3 2017/04/09 12:58:46 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.4 2017/04/10 15:04:56 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -44,12 +44,21 @@ cdb_cmd="qmailofmipd_cdb"
 qmailofmipd_precmd()
 {
 	# tcpserver(1) is akin to inetd(8), but runs one service per process.
-	# We want to signal only the tcpserver process responsible for SMTP
+	# We want to signal only the tcpserver process responsible for OFMIP
 	# service. Use argv0(1) to set procname to "qmailofmipd".
-	if [ -f /etc/rc.subr ]; then
-		checkyesno qmailofmipd_log || qmailofmipd_logcmd=${qmailofmipd_nologcmd}
+	if [ -f /etc/rc.subr ] && ! checkyesno qmailofmipd_log; then
+		qmailofmipd_logcmd=${qmailofmipd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailofmipd_postenv} @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailofmipd_tcphost} ${qmailofmipd_tcpport} ${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
+	command="@SETENV@ - ${qmailofmipd_postenv}
+@PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver}
+@PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name}
+${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb
+-c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip`
+-u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
+${qmailofmipd_tcphost} ${qmailofmipd_tcpport}
+${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd}
+2>&1 |
+@PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
