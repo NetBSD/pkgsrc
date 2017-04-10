@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/20 20:39:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/04/10 12:31:05 mef Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mx/BeeBase/BeeBase.py
 ${PYSITELIB}/mx/BeeBase/BeeBase.pyc
@@ -41,6 +41,9 @@ ${PYSITELIB}/mx/BeeBase/mxBeeBase/mxh.h
 ${PYSITELIB}/mx/BeeBase/mxBeeBase/test.py
 ${PYSITELIB}/mx/BeeBase/mxBeeBase/test.pyc
 ${PYSITELIB}/mx/BeeBase/mxBeeBase/test.pyo
+${PYSITELIB}/mx/BeeBase/mxBeeBase/test64bit.py
+${PYSITELIB}/mx/BeeBase/mxBeeBase/test64bit.pyc
+${PYSITELIB}/mx/BeeBase/mxBeeBase/test64bit.pyo
 ${PYSITELIB}/mx/BeeBase/mxBeeBase/testernesto.py
 ${PYSITELIB}/mx/BeeBase/mxBeeBase/testernesto.pyc
 ${PYSITELIB}/mx/BeeBase/mxBeeBase/testernesto.pyo
@@ -136,6 +139,9 @@ ${PYSITELIB}/mx/DateTime/mxDateTime/testcomdates.pyo
 ${PYSITELIB}/mx/DateTime/mxDateTime/testnow.py
 ${PYSITELIB}/mx/DateTime/mxDateTime/testnow.pyc
 ${PYSITELIB}/mx/DateTime/mxDateTime/testnow.pyo
+${PYSITELIB}/mx/DateTime/mxDateTime/testnumpy.py
+${PYSITELIB}/mx/DateTime/mxDateTime/testnumpy.pyc
+${PYSITELIB}/mx/DateTime/mxDateTime/testnumpy.pyo
 ${PYSITELIB}/mx/DateTime/mxDateTime/testpydatetime.py
 ${PYSITELIB}/mx/DateTime/mxDateTime/testpydatetime.pyc
 ${PYSITELIB}/mx/DateTime/mxDateTime/testpydatetime.pyo
