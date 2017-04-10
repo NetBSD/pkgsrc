@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1502 2017/04/10 01:27:22 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1503 2017/04/10 09:01:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1848,3 +1848,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-kombu to 4.0.2 [adam 2017-04-09]
 	Updated net/py-celery to 4.0.2 [adam 2017-04-09]
 	Updated devel/lcov to 1.13 [minskim 2017-04-10]
+	Updated graphics/pngcrush to 1.8.11 [adam 2017-04-10]
