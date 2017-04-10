@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1507 2017/04/10 12:31:16 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1508 2017/04/10 13:24:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1853,3 +1853,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache-tomcat8 to 8.0.43 [ryoon 2017-04-10]
 	Added www/apache-tomcat85 version 8.5.13 [ryoon 2017-04-10]
 	Updated time/py-mxDateTime to 3.2.9 [mef 2017-04-10]
+	Updated fonts/noto-ttf to 20170410 [ryoon 2017-04-10]
