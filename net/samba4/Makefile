@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/04/08 08:56:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2017/04/10 15:27:22 jnemeth Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -50,7 +50,7 @@ FILES_SUBST+=		SMB_PID=${SMB_PID}
 
 # mktemp is useful for the replacement adduser script, but don't require
 # a full dependency since it's not actually needed by samba.
-USE_TOOLS+=		gmake mktemp perl:run
+USE_TOOLS+=		gmake mktemp perl:run pkg-config
 
 REPLACE_PERL=		script/findsmb.in
 
