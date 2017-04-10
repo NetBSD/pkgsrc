@@ -1,9 +1,9 @@
-$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.4 2017/01/16 01:50:14 joerg Exp $
+$NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.5 2017/04/10 21:14:45 joerg Exp $
 
---- src/lib/utils/os_utils.cpp.orig	2016-10-26 13:39:08.000000000 +0000
+--- src/lib/utils/os_utils.cpp.orig	2017-04-05 01:09:22.000000000 +0000
 +++ src/lib/utils/os_utils.cpp
-@@ -19,6 +19,10 @@
-   #include <unistd.h>
+@@ -21,6 +21,10 @@
+   #include <setjmp.h>
  #endif
  
 +#ifdef __sun
@@ -11,11 +11,11 @@ $NetBSD: patch-src_lib_utils_os__utils.cpp,v 1.4 2017/01/16 01:50:14 joerg Exp $
 +#endif
 +
  #if defined(BOTAN_TARGET_OS_IS_WINDOWS) || defined(BOTAN_TARGET_OS_IS_MINGW)
+   #define NOMINMAX 1
    #include <windows.h>
- #endif
-@@ -146,7 +150,21 @@ uint64_t get_system_timestamp_ns()
+@@ -170,7 +174,21 @@ uint64_t OS::get_system_timestamp_ns()
  
- size_t get_memory_locking_limit()
+ size_t OS::get_memory_locking_limit()
     {
 -#if defined(BOTAN_TARGET_OS_HAS_POSIX_MLOCK)
 +#if defined(__sun)
