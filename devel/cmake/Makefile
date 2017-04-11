@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2017/01/16 08:49:42 adam Exp $
+# $NetBSD: Makefile,v 1.131 2017/04/11 20:18:54 adam Exp $
 
 .include "Makefile.version"
 
@@ -69,6 +69,7 @@ BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libuv/buildlink3.mk"
+.include "../../misc/rhash/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
