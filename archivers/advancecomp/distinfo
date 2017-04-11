@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2016/05/30 13:27:04 mef Exp $
+$NetBSD: distinfo,v 1.8 2017/04/11 13:47:08 mef Exp $
 
-SHA1 (advancecomp-1.19.tar.gz) = 894c2db01c9fff40257f929496621bdcea77748b
-RMD160 (advancecomp-1.19.tar.gz) = 1064b5068178f6b65b30821cc19dcc0d241e4934
-SHA512 (advancecomp-1.19.tar.gz) = 9bce761f315e94ea9ebe59273cc810297e6227d914b498501f159f05c3a002236570c2d4248b397c5cdd3cf9a60565bb8d7f1470b079d5f50249031d3c78348d
-Size (advancecomp-1.19.tar.gz) = 1193228 bytes
+SHA1 (advancecomp-1.23.tar.gz) = 0c6d24c4a01eed5e229cb1fda2017fdce0a26fbc
+RMD160 (advancecomp-1.23.tar.gz) = cd99a36ba2d4d428d08e91c566228550f41bd9f5
+SHA512 (advancecomp-1.23.tar.gz) = 2218d8677787d3f72434e2d5dd3f6b21f69de7042c7533ad29625522adedd56d765e70e4749bbfac14973b9b2bb6958db2900e62b26e5242106caf760cbc2236
+Size (advancecomp-1.23.tar.gz) = 1288937 bytes
 SHA1 (patch-aa) = ddc8b6981e1e0b46ac6291aee65d56cdae9f0998
 SHA1 (patch-ab) = 1e6e10943bd2a414d4f704bd94b1de3d1036dd90
 SHA1 (patch-ac) = d08d44224c4351c66c920b26bacc3f749a54d31a
