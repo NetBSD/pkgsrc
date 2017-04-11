@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2016/12/16 13:12:53 mef Exp $
+$NetBSD: distinfo,v 1.14 2017/04/11 13:43:58 mef Exp $
 
-SHA1 (Compress-Bzip2-2.25.tar.gz) = b1ac90c250191f3fb194ada67339a8579728b91c
-RMD160 (Compress-Bzip2-2.25.tar.gz) = 92c8a60814811b368038bc8d59f39722618c6d20
-SHA512 (Compress-Bzip2-2.25.tar.gz) = 7e6c8d3dbd0a883dd4426c235ee99253f022b53a597e7e9ff1a34fe8654f33cef071fc913f2f447ecfcc5605fb0ea49b4a1c30a319942d7fd059d1cc80474b54
-Size (Compress-Bzip2-2.25.tar.gz) = 887076 bytes
+SHA1 (Compress-Bzip2-2.26.tar.gz) = a22eaea6cc9a161493104dff1fe291b37de108f2
+RMD160 (Compress-Bzip2-2.26.tar.gz) = ca790e5e961f3960ccd183d1a9ac28f32c1e3d9d
+SHA512 (Compress-Bzip2-2.26.tar.gz) = be1670303496a9f48989777468234d52276b34e6c0fdb6e99d2199134f353f1ee32e0489a3797ab3a2d4777bb5f03f78dff39f3bf75b8cc511b754da2b7e4959
+Size (Compress-Bzip2-2.26.tar.gz) = 886999 bytes
