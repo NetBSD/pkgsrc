@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1513 2017/04/11 07:12:14 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1514 2017/04/11 13:48:45 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1859,3 +1859,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/rlwrap to 0.43 [leot 2017-04-10]
 	Updated security/botan-devel to 2.1.0 [joerg 2017-04-10]
 	Updated x11/libdrm to 2.4.79 [wiz 2017-04-11]
+	Updated archivers/p5-Compress-Bzip2 to 2.26 [mef 2017-04-11]
+	Updated archivers/advancecomp to 1.23 [mef 2017-04-11]
