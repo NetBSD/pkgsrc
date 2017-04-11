@@ -1,10 +1,10 @@
-$NetBSD: patch-cmake_os_SunOS.cmake,v 1.1 2017/01/03 12:27:27 jperkin Exp $
+$NetBSD: patch-cmake_os_SunOS.cmake,v 1.2 2017/04/11 20:49:15 adam Exp $
 
 Do not attempt to detect ISA, it conflicts with wrappers.
 
---- cmake/os/SunOS.cmake.orig	2016-11-28 13:32:52.000000000 +0000
+--- cmake/os/SunOS.cmake.orig	2017-03-18 07:45:14.000000000 +0000
 +++ cmake/os/SunOS.cmake
-@@ -61,6 +61,7 @@ ADD_DEFINITIONS(-D__EXTENSIONS__)
+@@ -62,6 +62,7 @@ ADD_DEFINITIONS(-D__EXTENSIONS__)
  # http://docs.oracle.com/cd/E19455-01/806-5257/6je9h033k/index.html
  ADD_DEFINITIONS(-D_POSIX_PTHREAD_SEMANTICS -D_REENTRANT -D_PTHREADS)
  
@@ -12,8 +12,8 @@ Do not attempt to detect ISA, it conflicts with wrappers.
  IF (NOT "${CMAKE_C_FLAGS}${CMAKE_CXX_FLAGS}" MATCHES "-m32|-m64")
    EXECUTE_PROCESS(COMMAND isainfo -b
      OUTPUT_VARIABLE ISAINFO_B
-@@ -75,6 +76,7 @@ IF (NOT "${CMAKE_C_FLAGS}${CMAKE_CXX_FLA
-     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m${ISAINFO_B}")
+@@ -86,6 +87,7 @@ ELSE()
+     SET(CMAKE_CXX_LINK_FLAGS "${CMAKE_CXX_LINK_FLAGS} -m64")
    ENDIF()
  ENDIF()
 +ENDIF()

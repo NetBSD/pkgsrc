@@ -1,21 +1,13 @@
-# $NetBSD: options.mk,v 1.1 2016/09/16 06:49:11 adam Exp $
+# $NetBSD: options.mk,v 1.2 2017/04/11 20:49:15 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mysql5
 
 # ndb-cluster does not configure with cmake
-PKG_SUPPORTED_OPTIONS+=	dtrace embedded-server ndb-cluster ssl
+PKG_SUPPORTED_OPTIONS+=	dtrace embedded-server ndb-cluster
 PKG_SUPPORTED_OPTIONS+=	memcached
-PKG_SUGGESTED_OPTIONS+=	embedded-server ssl
+PKG_SUGGESTED_OPTIONS+=	embedded-server
 
 .include "../../mk/bsd.options.mk"
-
-# Enable OpenSSL support
-.if !empty(PKG_OPTIONS:Mssl)
-.	include "../../security/openssl/buildlink3.mk"
-CMAKE_ARGS+=		-DWITH_SSL=system
-.else
-CMAKE_ARGS+=		-DWITH_SSL=no
-.endif
 
 # Enable DTrace support
 .if !empty(PKG_OPTIONS:Mdtrace)
