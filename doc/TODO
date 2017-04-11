@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17238 2017/04/11 07:12:15 wiz Exp $
+$NetBSD: TODO,v 1.17239 2017/04/11 13:48:45 mef Exp $
 
 Suggested new packages
 ======================
@@ -388,7 +388,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20.7 [security]
 	o adplug-2.2.1
-	o advancecomp-1.20
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
