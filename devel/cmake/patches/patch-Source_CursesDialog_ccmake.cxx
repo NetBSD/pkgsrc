@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_CursesDialog_ccmake.cxx,v 1.2 2016/07/28 17:44:43 prlw1 Exp $
+$NetBSD: patch-Source_CursesDialog_ccmake.cxx,v 1.3 2017/04/11 20:18:54 adam Exp $
 
 initscr() error path
 
---- Source/CursesDialog/ccmake.cxx.orig	2016-07-07 14:47:27.000000000 +0000
+--- Source/CursesDialog/ccmake.cxx.orig	2017-04-10 15:23:06.000000000 +0000
 +++ Source/CursesDialog/ccmake.cxx
-@@ -54,7 +54,11 @@ void onsig(int)
+@@ -49,7 +49,11 @@ void onsig(int /*unused*/)
  {
    if (cmCursesForm::CurrentForm) {
      endwin();
@@ -16,8 +16,8 @@ initscr() error path
 +    }
      noecho();             /* Echo off */
      cbreak();             /* nl- or cr not needed */
-     keypad(stdscr, TRUE); /* Use key symbols as
-@@ -130,7 +134,10 @@ int main(int argc, char const* const* ar
+     keypad(stdscr, true); /* Use key symbols as KEY_DOWN */
+@@ -124,7 +128,10 @@ int main(int argc, char const* const* ar
      cmCursesForm::DebugStart();
    }
  
@@ -28,4 +28,4 @@ initscr() error path
 +  }
    noecho();             /* Echo off */
    cbreak();             /* nl- or cr not needed */
-   keypad(stdscr, TRUE); /* Use key symbols as
+   keypad(stdscr, true); /* Use key symbols as KEY_DOWN */
