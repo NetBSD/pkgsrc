@@ -1,21 +1,20 @@
-$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.1 2016/09/16 06:49:11 adam Exp $
+$NetBSD: patch-rapid_plugin_x_CMakeLists.txt,v 1.2 2017/04/11 20:49:15 adam Exp $
 
-Use bundled boost, but system OpenSSL and zlib.
+Use system OpenSSL and zlib.
 Fix mysqlxtest binary linking.
 
---- rapid/plugin/x/CMakeLists.txt.orig	2016-06-30 06:22:11.000000000 +0000
+--- rapid/plugin/x/CMakeLists.txt.orig	2017-03-18 07:45:14.000000000 +0000
 +++ rapid/plugin/x/CMakeLists.txt
-@@ -91,14 +91,14 @@ ELSE()
-     ${CMAKE_CURRENT_SOURCE_DIR}/ngs/include
+@@ -92,14 +92,14 @@ ELSE()
      ${CMAKE_SOURCE_DIR}/include #temporary
      ${CMAKE_CURRENT_SOURCE_DIR}/include/mysql
+     ${CMAKE_CURRENT_BINARY_DIR}/generated
 -    ${SSL_INCLUDE_DIRS}
 -    ${ZLIB_INCLUDE_DIR}
-+    ${BOOST_INCLUDE_DIR}
    )
  
    INCLUDE_DIRECTORIES(SYSTEM
--    ${BOOST_INCLUDE_DIR}
+     ${BOOST_INCLUDE_DIR}
      ${PROTOBUF_INCLUDE_DIRS}
      ${LIBEVENT_INCLUDE_DIR}
 +    ${SSL_INCLUDE_DIRS}
@@ -23,7 +22,7 @@ Fix mysqlxtest binary linking.
    )
  
    IF(XPLUGIN_NO_LITE_PROTOBUF)
-@@ -200,7 +200,10 @@ ELSE()
+@@ -215,7 +215,10 @@ ELSE()
    ENDIF()
  
    TARGET_LINK_LIBRARIES(mysqlxtest mysys strings mysqlclient)
