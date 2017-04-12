@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.915 2017/03/19 15:26:33 taca Exp $
+# $NetBSD: Makefile,v 1.915.2.1 2017/04/12 18:22:20 bsiegert Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -675,7 +675,6 @@ SUBDIR+=	par
 SUBDIR+=	pdfgrep
 SUBDIR+=	pear-Console_Table
 SUBDIR+=	pear-File_Find
-SUBDIR+=	php-dom
 SUBDIR+=	php-enchant
 SUBDIR+=	php-excel
 SUBDIR+=	php-intl
