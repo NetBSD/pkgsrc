@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2016/02/04 11:50:24 leot Exp $
+# $NetBSD: options.mk,v 1.5 2017/04/12 13:03:08 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mupdf
 PKG_SUPPORTED_OPTIONS=	curl glfw
@@ -12,7 +12,6 @@ PLIST_VARS+=		glfw
 #
 .if !empty(PKG_OPTIONS:Mcurl)
 .include "../../www/curl/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .endif
 
 #
@@ -20,6 +19,7 @@ PLIST_VARS+=		glfw
 #
 .if !empty(PKG_OPTIONS:Mglfw)
 PLIST.glfw=	yes
-.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glfw+=	glfw>=3.2.1
 .include "../../graphics/glfw/buildlink3.mk"
 .endif
