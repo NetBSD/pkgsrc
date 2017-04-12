@@ -1,6 +1,18 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.6 2017/04/09 17:57:59 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.7 2017/04/12 14:33:29 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
+
+Pullup ticket #5225 - requested by sevan
+textproc/grep: bugfix
+
+Pullup ticket #5226 - requested by sevan
+converters/libiconv: build fix
+
+Pullup ticket #5228 - requested by sevan
+lang/openjdk8: build fix
+
+Pullup ticket #5229 - requested by sevan
+audio/timidity: bugfix
 
 Pullup ticket #5236 - requested by sevan
 databases/cdb: remove restriction
