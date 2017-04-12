@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1523 2017/04/12 12:57:03 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1524 2017/04/12 13:03:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1877,3 +1877,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-curtsies version 0.2.11 [adam 2017-04-12]
 	Updated devel/bpython to 0.16 [adam 2017-04-12]
 	Updated graphics/glfw to 3.2.1 [leot 2017-04-12]
+	Updated print/mupdf to 1.11 [leot 2017-04-12]
