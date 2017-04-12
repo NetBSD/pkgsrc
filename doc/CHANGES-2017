@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1519 2017/04/11 20:50:05 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1520 2017/04/12 02:49:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1870,3 +1870,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/mysql56-server to 5.6.36 [adam 2017-04-11]
 	Updated databases/mysql57-client to 5.7.18 [adam 2017-04-11]
 	Updated databases/mysql57-server to 5.7.18 [adam 2017-04-11]
+	Updated time/p5-DateTime-Locale to 1.16nb1 [schmonz 2017-04-12]
