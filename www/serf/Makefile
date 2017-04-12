@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/10/30 11:39:14 adam Exp $
+# $NetBSD: Makefile,v 1.36.4.1 2017/04/12 17:29:41 bsiegert Exp $
 
 DISTNAME=	serf-1.3.9
 CATEGORIES=	www
@@ -24,6 +24,10 @@ SCONS_ARGS+=		--install-sandbox=${DESTDIR}
 .include "options.mk"
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
+
+# Upstream distfile incorrectly has world-writable files.
+post-extract:
+	${CHMOD} -R go-w ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons PREFIX=${PREFIX} ${SCONS_ARGS}
