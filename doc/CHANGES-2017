@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1526 2017/04/12 13:17:34 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1527 2017/04/12 13:25:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1880,3 +1880,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/mupdf to 1.11 [leot 2017-04-12]
 	Updated print/zathura-pdf-mupdf to 0.3.1nb4 [leot 2017-04-12]
 	Updated devel/p5-Path-FindDev to 0.5.3 [wen 2017-04-12]
+	Updated www/vimb to 2.12 [leot 2017-04-12]
