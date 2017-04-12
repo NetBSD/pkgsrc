@@ -1,15 +1,17 @@
-$NetBSD: patch-ac,v 1.15 2016/11/28 14:40:42 leot Exp $
+$NetBSD: patch-ac,v 1.16 2017/04/12 13:03:08 leot Exp $
 
 o libtool support 
 o Install target cleanup
+o Also install muthreads library (needed by various tools)
 o Do not force `-O0' flag when building
-o Install MUTOOL_LIB as part of INSTALL_LIBS
+o Get rid of unused VERSION variable and `version:' target (otherwise `git' can
+  be invoked during the building phase)
 o Install only one "mupdf" binary, prefer the featureful one and always
   install it as "mupdf"
 
---- Makefile.orig	2016-11-21 10:21:11.000000000 +0000
+--- Makefile.orig	2017-03-31 14:23:45.000000000 +0000
 +++ Makefile
-@@ -42,26 +42,12 @@ CFLAGS += $(ZLIB_CFLAGS)
+@@ -57,65 +57,51 @@ ALL_DIR += $(OUT)/platform/gl
  
  # --- Commands ---
  
@@ -40,51 +42,9 @@ o Install only one "mupdf" binary, prefer the featureful one and always
 +MKDIR_CMD = mkdir -p $@
 +RM_CMD = rm -f $@
  
- # --- File lists ---
+ # --- Rules ---
  
-@@ -98,13 +84,13 @@ SVG_SRC_HDR := $(wildcard source/svg/*.h
- HTML_SRC_HDR := $(wildcard source/html/*.h)
- GPRF_SRC_HDR := $(wildcard source/gprf/*.h)
- 
--FITZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(FITZ_SRC))))
--PDF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(PDF_SRC))))
--XPS_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(XPS_SRC))))
--SVG_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(SVG_SRC))))
--CBZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(CBZ_SRC))))
--HTML_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(HTML_SRC))))
--GPRF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(GPRF_SRC))))
-+FITZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(FITZ_SRC))))
-+PDF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(PDF_SRC))))
-+XPS_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(XPS_SRC))))
-+SVG_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(SVG_SRC))))
-+CBZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(CBZ_SRC))))
-+HTML_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(HTML_SRC))))
-+GPRF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(GPRF_SRC))))
- 
- $(FITZ_OBJ) : $(FITZ_HDR) $(FITZ_SRC_HDR)
- $(PDF_OBJ) : $(FITZ_HDR) $(PDF_HDR) $(PDF_SRC_HDR)
-@@ -130,7 +116,7 @@ FONT_GEN_SIL := $(subst resources/fonts/
- 
- FONT_BIN := $(FONT_BIN_DROID) $(FONT_BIN_NOTO) $(FONT_BIN_HAN) $(FONT_BIN_URW) $(FONT_BIN_SIL)
- FONT_GEN := $(FONT_GEN_DROID) $(FONT_GEN_NOTO) $(FONT_GEN_HAN) $(FONT_GEN_URW) $(FONT_GEN_SIL)
--FONT_OBJ := $(subst $(GEN)/, $(OUT)/fonts/, $(addsuffix .o, $(basename $(FONT_GEN))))
-+FONT_OBJ := $(subst $(GEN)/, $(OUT)/fonts/, $(addsuffix .lo, $(basename $(FONT_GEN))))
- 
- $(GEN)/%.c : resources/fonts/droid/%.ttf $(FONTDUMP)
- 	$(QUIET_GEN) $(FONTDUMP) $@ $<
-@@ -152,8 +138,8 @@ $(FONT_GEN_SIL) : $(FONT_BIN_SIL)
- 
- # --- Library ---
- 
--MUPDF_LIB = $(OUT)/libmupdf.a
--THIRD_LIB = $(OUT)/libmupdfthird.a
-+MUPDF_LIB = $(OUT)/libmupdf.la
-+THIRD_LIB = $(OUT)/libmupdfthird.la
- 
- MUPDF_OBJ := $(FITZ_OBJ) $(FONT_OBJ) $(PDF_OBJ) $(XPS_OBJ) $(SVG_OBJ) $(CBZ_OBJ) $(HTML_OBJ) $(GPRF_OBJ)
- THIRD_OBJ := $(FREETYPE_OBJ) $(HARFBUZZ_OBJ) $(JBIG2DEC_OBJ) $(JPEG_OBJ) $(JPEGXR_OBJ) $(LURATECH_OBJ) $(MUJS_OBJ) $(OPENJPEG_OBJ) $(ZLIB_OBJ)
-@@ -168,39 +154,39 @@ INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB
- $(ALL_DIR) $(OUT) $(GEN) :
+ $(ALL_DIR) $(OUT) generated :
  	$(MKDIR_CMD)
  
 -$(OUT)/%.a :
@@ -93,33 +53,33 @@ o Install only one "mupdf" binary, prefer the featureful one and always
  	$(AR_CMD)
  	$(RANLIB_CMD)
  
--$(OUT)/%: $(OUT)/%.o
-+$(OUT)/%: $(OUT)/%.lo
+-$(OUT)/%.exe: $(OUT)/%.o | $(ALL_DIR)
++$(OUT)/%.exe: $(OUT)/%.lo | $(ALL_DIR)
  	$(LINK_CMD)
  
--$(OUT)/%.o : source/%.c | $(ALL_DIR)
-+$(OUT)/%.lo : source/%.c | $(ALL_DIR)
+-$(OUT)/%.o : %.c | $(ALL_DIR)
++$(OUT)/%.lo : %.c | $(ALL_DIR)
  	$(CC_CMD)
  
--$(OUT)/%.o : source/%.cpp | $(ALL_DIR)
-+$(OUT)/%.lo : source/%.cpp | $(ALL_DIR)
+-$(OUT)/%.o : %.cpp | $(ALL_DIR)
++$(OUT)/%.lo : %.cpp | $(ALL_DIR)
  	$(CXX_CMD)
  
--$(OUT)/%.o : scripts/%.c | $(OUT)
-+$(OUT)/%.lo : scripts/%.c | $(OUT)
- 	$(CC_CMD)
+-$(OUT)/source/helpers/%.o : source/helpers/%.c | $(ALL_DIR)
++$(OUT)/source/helpers/%.lo : source/helpers/%.c | $(ALL_DIR)
+ 	$(CC_CMD) $(PTHREAD_CFLAGS) -DHAVE_PTHREAD
  
--$(OUT)/fonts/%.o : $(GEN)/%.c | $(ALL_DIR)
+-$(OUT)/generated/%.o : generated/%.c | $(ALL_DIR)
 -	$(CC_CMD) -O0
-+$(OUT)/fonts/%.lo : $(GEN)/%.c | $(ALL_DIR)
++$(OUT)/generated/%.lo : generated/%.c | $(ALL_DIR)
 +	$(CC_CMD)
  
 -$(OUT)/platform/x11/%.o : platform/x11/%.c | $(ALL_DIR)
 +$(OUT)/platform/x11/%.lo : platform/x11/%.c | $(ALL_DIR)
  	$(CC_CMD) $(X11_CFLAGS)
  
--$(OUT)/platform/x11/%.o: platform/x11/%.rc | $(OUT)
-+$(OUT)/platform/x11/%.lo: platform/x11/%.rc | $(OUT)
+-$(OUT)/platform/x11/%.o: platform/x11/%.rc | $(ALL_DIR)
++$(OUT)/platform/x11/%.lo: platform/x11/%.rc | $(ALL_DIR)
  	$(WINDRES_CMD)
  
 -$(OUT)/platform/x11/curl/%.o : platform/x11/%.c | $(ALL_DIR)
@@ -133,118 +93,211 @@ o Install only one "mupdf" binary, prefer the featureful one and always
 -.PRECIOUS : $(OUT)/%.o # Keep intermediates from chained rules
 +.PRECIOUS : $(OUT)/%.lo # Keep intermediates from chained rules
  
- # --- Generated CMap and JavaScript files ---
+ # --- File lists ---
  
-@@ -251,51 +237,53 @@ endif
+@@ -141,14 +127,14 @@ SVG_SRC_HDR := $(wildcard source/svg/*.h
+ HTML_SRC_HDR := $(wildcard source/html/*.h)
+ GPRF_SRC_HDR := $(wildcard source/gprf/*.h)
  
- generate: $(CMAP_GEN) $(FONT_GEN) $(JAVASCRIPT_GEN) $(ADOBECA_GEN) $(NAME_GEN)
+-FITZ_OBJ := $(FITZ_SRC:%.c=$(OUT)/%.o)
+-PDF_OBJ := $(PDF_SRC:%.c=$(OUT)/%.o)
+-XPS_OBJ := $(XPS_SRC:%.c=$(OUT)/%.o)
+-SVG_OBJ := $(SVG_SRC:%.c=$(OUT)/%.o)
+-CBZ_OBJ := $(CBZ_SRC:%.c=$(OUT)/%.o)
+-HTML_OBJ := $(HTML_SRC:%.c=$(OUT)/%.o)
+-GPRF_OBJ := $(GPRF_SRC:%.c=$(OUT)/%.o)
+-THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.o)
++FITZ_OBJ := $(FITZ_SRC:%.c=$(OUT)/%.lo)
++PDF_OBJ := $(PDF_SRC:%.c=$(OUT)/%.lo)
++XPS_OBJ := $(XPS_SRC:%.c=$(OUT)/%.lo)
++SVG_OBJ := $(SVG_SRC:%.c=$(OUT)/%.lo)
++CBZ_OBJ := $(CBZ_SRC:%.c=$(OUT)/%.lo)
++HTML_OBJ := $(HTML_SRC:%.c=$(OUT)/%.lo)
++GPRF_OBJ := $(GPRF_SRC:%.c=$(OUT)/%.lo)
++THREAD_OBJ := $(THREAD_SRC:%.c=$(OUT)/%.lo)
  
--$(OUT)/pdf/pdf-cmap-table.o : $(CMAP_GEN)
--$(OUT)/pdf/pdf-pkcs7.o : $(ADOBECA_GEN)
--$(OUT)/pdf/pdf-js.o : $(JAVASCRIPT_GEN)
--$(OUT)/pdf/pdf-object.o : source/pdf/pdf-name-table.h
--$(OUT)/cmapdump.o : include/mupdf/pdf/cmap.h source/fitz/context.c source/fitz/error.c source/fitz/memory.c source/fitz/output.c source/fitz/string.c source/fitz/buffer.c source/fitz/stream-open.c source/fitz/stream-read.c source/fitz/strtod.c source/fitz/strtof.c source/fitz/ftoa.c source/fitz/printf.c source/fitz/time.c source/pdf/pdf-lex.c source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c source/pdf/pdf-name-table.h
-+$(OUT)/pdf/pdf-cmap-table.lo : $(CMAP_GEN)
-+$(OUT)/pdf/pdf-pkcs7.lo : $(ADOBECA_GEN)
-+$(OUT)/pdf/pdf-js.lo : $(JAVASCRIPT_GEN)
-+$(OUT)/pdf/pdf-object.lo : source/pdf/pdf-name-table.h
-+$(OUT)/cmapdump.lo : include/mupdf/pdf/cmap.h source/fitz/context.c source/fitz/error.c source/fitz/memory.c source/fitz/output.c source/fitz/string.c source/fitz/buffer.c source/fitz/stream-open.c source/fitz/stream-read.c source/fitz/strtod.c source/fitz/strtof.c source/fitz/ftoa.c source/fitz/printf.c source/fitz/time.c source/pdf/pdf-lex.c source/pdf/pdf-cmap.c source/pdf/pdf-cmap-parse.c source/pdf/pdf-name-table.h
+ $(FITZ_OBJ) : $(FITZ_HDR) $(FITZ_SRC_HDR)
+ $(PDF_OBJ) : $(FITZ_HDR) $(PDF_HDR) $(PDF_SRC_HDR)
+@@ -172,7 +158,7 @@ ifneq "$(CROSSCOMPILE)" "yes"
+ $(NAME_GEN) : $(NAMEDUMP_EXE)
+ endif
+ 
+-$(OUT)/source/pdf/pdf-object.o : source/pdf/pdf-name-table.h
++$(OUT)/source/pdf/pdf-object.lo : source/pdf/pdf-name-table.h
+ 
+ generate: $(NAME_GEN)
+ 
+@@ -194,7 +180,7 @@ FONT_GEN_SIL := $(subst resources/fonts/
+ 
+ FONT_BIN := $(FONT_BIN_DROID) $(FONT_BIN_NOTO) $(FONT_BIN_HAN) $(FONT_BIN_URW) $(FONT_BIN_SIL)
+ FONT_GEN := $(FONT_GEN_DROID) $(FONT_GEN_NOTO) $(FONT_GEN_HAN) $(FONT_GEN_URW) $(FONT_GEN_SIL)
+-FONT_OBJ := $(FONT_GEN:%.c=$(OUT)/%.o)
++FONT_OBJ := $(FONT_GEN:%.c=$(OUT)/%.lo)
+ 
+ generated/%.c : resources/fonts/droid/%.ttf $(HEXDUMP_EXE) | generated
+ 	$(QUIET_GEN) $(HEXDUMP_EXE) $@ $<
+@@ -244,7 +230,7 @@ ifneq "$(CROSSCOMPILE)" "yes"
+ $(CMAP_GEN) : $(CMAPDUMP_EXE)
+ endif
+ 
+-$(OUT)/scripts/cmapdump.o : \
++$(OUT)/scripts/cmapdump.lo : \
+ 	$(NAME_GEN) \
+ 	include/mupdf/pdf/cmap.h \
+ 	source/fitz/context.c \
+@@ -264,7 +250,7 @@ $(OUT)/scripts/cmapdump.o : \
+ 	source/pdf/pdf-cmap.c \
+ 	source/pdf/pdf-cmap-parse.c \
+ 
+-$(OUT)/source/pdf/pdf-cmap-table.o : $(CMAP_GEN)
++$(OUT)/source/pdf/pdf-cmap-table.lo : $(CMAP_GEN)
+ 
+ generate: $(CMAP_GEN)
+ 
+@@ -279,7 +265,7 @@ ifneq "$(CROSSCOMPILE)" "yes"
+ $(ADOBECA_GEN) : $(HEXDUMP_EXE)
+ endif
+ 
+-$(OUT)/source/pdf/pdf-pkcs7.o : $(ADOBECA_GEN)
++$(OUT)/source/pdf/pdf-pkcs7.lo : $(ADOBECA_GEN)
+ 
+ generate: $(ADOBECA_GEN)
+ 
+@@ -294,15 +280,15 @@ ifneq "$(CROSSCOMPILE)" "yes"
+ $(JAVASCRIPT_GEN) : $(HEXDUMP_EXE)
+ endif
+ 
+-$(OUT)/source/pdf/pdf-js.o : $(JAVASCRIPT_GEN)
++$(OUT)/source/pdf/pdf-js.lo : $(JAVASCRIPT_GEN)
+ 
+ generate: $(JAVASCRIPT_GEN)
+ 
+ # --- Library ---
+ 
+-MUPDF_LIB = $(OUT)/libmupdf.a
+-THIRD_LIB = $(OUT)/libmupdfthird.a
+-THREAD_LIB = $(OUT)/libmuthreads.a
++MUPDF_LIB = $(OUT)/libmupdf.la
++THIRD_LIB = $(OUT)/libmupdfthird.la
++THREAD_LIB = $(OUT)/libmuthreads.la
+ 
+ MUPDF_OBJ := $(FITZ_OBJ) $(FONT_OBJ) $(PDF_OBJ) $(XPS_OBJ) $(SVG_OBJ) $(CBZ_OBJ) $(HTML_OBJ) $(GPRF_OBJ)
+ THIRD_OBJ := $(FREETYPE_OBJ) $(HARFBUZZ_OBJ) $(JBIG2DEC_OBJ) $(LIBJPEG_OBJ) $(JPEGXR_OBJ) $(LURATECH_OBJ) $(MUJS_OBJ) $(OPENJPEG_OBJ) $(ZLIB_OBJ)
+@@ -312,46 +298,46 @@ $(MUPDF_LIB) : $(MUPDF_OBJ)
+ $(THIRD_LIB) : $(THIRD_OBJ)
+ $(THREAD_LIB) : $(THREAD_OBJ)
+ 
+-INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB)
++INSTALL_LIBS := $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
  
  # --- Tools and Apps ---
  
- MUTOOL := $(OUT)/mutool
--MUTOOL_OBJ := $(addprefix $(OUT)/tools/, mutool.o muconvert.o mudraw.o murun.o)
--MUTOOL_OBJ += $(addprefix $(OUT)/tools/, pdfclean.o pdfcreate.o pdfextract.o pdfinfo.o pdfmerge.o pdfposter.o pdfpages.o pdfshow.o)
-+MUTOOL_OBJ := $(addprefix $(OUT)/tools/, mutool.lo muconvert.lo mudraw.lo murun.lo)
-+MUTOOL_OBJ += $(addprefix $(OUT)/tools/, pdfclean.lo pdfcreate.lo pdfextract.lo pdfinfo.lo pdfmerge.lo pdfposter.lo pdfpages.lo pdfshow.lo)
- $(MUTOOL_OBJ): $(FITZ_HDR) $(PDF_HDR)
--MUTOOL_LIB = $(OUT)/libmutools.a
-+MUTOOL_LIB = $(OUT)/libmutools.la
- $(MUTOOL_LIB) : $(MUTOOL_OBJ)
- $(MUTOOL) : $(MUTOOL_LIB) $(MUPDF_LIB) $(THIRD_LIB)
+ MUTOOL_EXE := $(OUT)/mutool
+ MUTOOL_SRC := source/tools/mutool.c source/tools/muconvert.c source/tools/mudraw.c source/tools/murun.c
+ MUTOOL_SRC += $(wildcard source/tools/pdf*.c)
+-MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.o)
++MUTOOL_OBJ := $(MUTOOL_SRC:%.c=$(OUT)/%.lo)
+ $(MUTOOL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
+ $(MUTOOL_EXE) : $(MUTOOL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
+ 	$(LINK_CMD) $(PTHREAD_LIBS)
+ 
+ MURASTER_EXE := $(OUT)/muraster
+-MURASTER_OBJ := $(OUT)/source/tools/muraster.o
++MURASTER_OBJ := $(OUT)/source/tools/muraster.lo
+ $(MURASTER_OBJ) : $(FITZ_HDR)
+ $(MURASTER_EXE) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(THREAD_LIB)
+ 	$(LINK_CMD) $(PTHREAD_LIBS)
+ 
+ MJSGEN_EXE := $(OUT)/mjsgen
+-MJSGEN_OBJ := $(OUT)/source/tools/mjsgen.o
++MJSGEN_OBJ := $(OUT)/source/tools/mjsgen.lo
+ $(MJSGEN_OBJ) : $(FITZ_HDR) $(PDF_HDR)
+ $(MJSGEN_EXE) : $(MJSGEN_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
  	$(LINK_CMD)
  
-+INSTALL_LIBS += $(MUTOOL_LIB)
-+
- MURASTER := $(OUT)/muraster
--MURASTER_OBJ := $(addprefix $(OUT)/tools/, muraster.o)
-+MURASTER_OBJ := $(addprefix $(OUT)/tools/, muraster.lo)
- $(MURASTER_OBJ): $(FITZ_HDR)
- $(MURASTER) : $(MURASTER_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
- 	$(LINK_CMD)
- 
- MJSGEN := $(OUT)/mjsgen
--MJSGEN_OBJ := $(addprefix $(OUT)/tools/, mjsgen.o)
-+MJSGEN_OBJ := $(addprefix $(OUT)/tools/, mjsgen.lo)
- $(MUTOOL_OBJ): $(FITZ_HDR) $(PDF_HDR)
- $(MJSGEN) : $(MJSGEN_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
- 	$(LINK_CMD)
- 
- MUJSTEST := $(OUT)/mujstest
+ MUJSTEST_EXE := $(OUT)/mujstest
 -MUJSTEST_OBJ := $(addprefix $(OUT)/platform/x11/, jstest_main.o pdfapp.o)
 +MUJSTEST_OBJ := $(addprefix $(OUT)/platform/x11/, jstest_main.lo pdfapp.lo)
  $(MUJSTEST_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUJSTEST) : $(MUJSTEST_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
+ $(MUJSTEST_EXE) : $(MUJSTEST_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
  	$(LINK_CMD)
  
  ifeq "$(HAVE_X11)" "yes"
--MUVIEW_X11 := $(OUT)/mupdf-x11
+-MUVIEW_X11_EXE := $(OUT)/mupdf-x11
 -MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
-+MUVIEW_X11 := $(OUT)/platform/x11/mupdf
++MUVIEW_X11_EXE := $(OUT)/platform/x11/mupdf
 +MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
  $(MUVIEW_X11_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUVIEW_X11) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
+ $(MUVIEW_X11_EXE) : $(MUVIEW_X11_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
  	$(LINK_CMD) $(X11_LIBS)
  
  ifeq "$(HAVE_CURL)" "yes"
--MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
+-MUVIEW_X11_CURL_EXE := $(OUT)/mupdf-x11-curl
 -MUVIEW_X11_CURL_OBJ := $(addprefix $(OUT)/platform/x11/curl/, x11_main.o x11_image.o pdfapp.o curl_stream.o)
-+MUVIEW_X11_CURL := $(OUT)/platform/x11/curl/mupdf
++MUVIEW_X11_CURL_EXE := $(OUT)/platform/x11/curl/mupdf
 +MUVIEW_X11_CURL_OBJ := $(addprefix $(OUT)/platform/x11/curl/, x11_main.lo x11_image.lo pdfapp.lo curl_stream.lo)
  $(MUVIEW_X11_CURL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUVIEW_X11_CURL) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(CURL_LIB)
+ $(MUVIEW_X11_CURL_EXE) : $(MUVIEW_X11_CURL_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(CURL_LIB)
  	$(LINK_CMD) $(X11_LIBS) $(CURL_LIBS) $(SYS_CURL_DEPS)
-@@ -303,8 +291,8 @@ endif
+@@ -359,8 +345,8 @@ endif
  endif
  
  ifeq "$(HAVE_GLFW)" "yes"
--MUVIEW_GLFW := $(OUT)/mupdf-gl
+-MUVIEW_GLFW_EXE := $(OUT)/mupdf-gl
 -MUVIEW_GLFW_OBJ := $(addprefix $(OUT)/platform/gl/, gl-font.o gl-input.o gl-main.o)
-+MUVIEW_GLFW := $(OUT)/platform/gl/mupdf-gl
++MUVIEW_GLFW_EXE := $(OUT)/platform/gl/mupdf-gl
 +MUVIEW_GLFW_OBJ := $(addprefix $(OUT)/platform/gl/, gl-font.lo gl-input.lo gl-main.lo)
  $(MUVIEW_GLFW_OBJ) : $(FITZ_HDR) $(PDF_HDR) platform/gl/gl-app.h
- $(MUVIEW_GLFW) : $(MUVIEW_GLFW_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(GLFW_LIB)
+ $(MUVIEW_GLFW_EXE) : $(MUVIEW_GLFW_OBJ) $(MUPDF_LIB) $(THIRD_LIB) $(GLFW_LIB)
  	$(LINK_CMD) $(GLFW_LIBS)
-@@ -312,16 +300,25 @@ endif
+@@ -368,7 +354,7 @@ endif
  
  ifeq "$(HAVE_WIN32)" "yes"
- MUVIEW_WIN32 := $(OUT)/mupdf
+ MUVIEW_WIN32_EXE := $(OUT)/mupdf
 -MUVIEW_WIN32_OBJ := $(addprefix $(OUT)/platform/x11/, win_main.o pdfapp.o win_res.o)
 +MUVIEW_WIN32_OBJ := $(addprefix $(OUT)/platform/x11/, win_main.lo pdfapp.lo win_res.lo)
  $(MUVIEW_WIN32_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUVIEW_WIN32) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
+ $(MUVIEW_WIN32_EXE) : $(MUVIEW_WIN32_OBJ) $(MUPDF_LIB) $(THIRD_LIB)
  	$(LINK_CMD) $(WIN32_LIBS)
- endif
+@@ -377,11 +363,20 @@ endif
+ MUVIEW_EXE := $(MUVIEW_X11_EXE) $(MUVIEW_WIN32_EXE) $(MUVIEW_GLFW_EXE)
+ MUVIEW_CURL_EXE := $(MUVIEW_X11_CURL_EXE) $(MUVIEW_WIN32_CURL_EXE)
  
--MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32) $(MUVIEW_GLFW)
-+MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32)
- MUVIEW_CURL := $(MUVIEW_X11_CURL) $(MUVIEW_WIN32_CURL)
+-INSTALL_APPS := $(MUTOOL_EXE) $(MUVIEW_EXE)
++INSTALL_APPS := $(MUTOOL_EXE)
+ INSTALL_APPS += $(MURASTER_EXE)
+-INSTALL_APPS += $(MUVIEW_CURL_EXE)
+ INSTALL_APPS += $(MUJSTEST_EXE)
  
--INSTALL_APPS := $(MUTOOL) $(MUVIEW) $(MURASTER) $(MUJSTEST) $(MUVIEW_CURL)
-+INSTALL_APPS := $(MUTOOL) $(MURASTER) $(MUJSTEST)
 +ifeq "$(HAVE_CURL)" "yes"
-+INSTALL_APPS += $(MUVIEW_CURL)
++INSTALL_APPS += $(MUVIEW_CURL_EXE)
 +else ifeq "$(HAVE_X11)" "yes"
-+INSTALL_APPS += $(MUVIEW)
++INSTALL_APPS += $(MUVIEW_EXE)
 +endif
 +
 +ifeq "$(HAVE_GLFW)" "yes"
-+INSTALL_APPS += $(MUVIEW_GLFW)
++INSTALL_APPS += $(MUVIEW_GLFW_EXE)
 +endif
- 
++
  # --- Examples ---
  
-@@ -364,24 +361,26 @@ libs: $(INSTALL_LIBS)
+ examples: $(OUT)/example $(OUT)/multi-threaded
+@@ -393,10 +388,10 @@ $(OUT)/multi-threaded: docs/multi-thread
+ 
+ # --- Update version string header ---
+ 
+-VERSION = $(shell git describe --tags)
+-
+-version:
+-	sed -i~ -e '/FZ_VERSION /s/".*"/"'$(VERSION)'"/' include/mupdf/fitz/version.h
++#VERSION = $(shell git describe --tags)
++#
++#version:
++#	sed -i~ -e '/FZ_VERSION /s/".*"/"'$(VERSION)'"/' include/mupdf/fitz/version.h
+ 
+ # --- Format man pages ---
+ 
+@@ -423,24 +418,26 @@ libs: $(INSTALL_LIBS)
  apps: $(INSTALL_APPS)
  
  install: libs apps
