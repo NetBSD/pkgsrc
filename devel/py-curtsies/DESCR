@@ -1,0 +1,14 @@
+Curtsies is a Python 2.6+ & 3.3+ compatible library for interacting with
+the terminal.
+
+FmtStr objects are strings formatted with colors and styles displayable in
+a terminal with ANSI escape sequences. FSArray objects contain multiple such
+strings with each formatted string on its own row, and can be superimposed
+onto each other to build complex grids of colored and styled characters.
+
+Such grids of characters can be efficiently rendered to the terminal in
+alternate screen mode (no scrollback history, like Vim, top etc.) by
+FullscreenWindow objects or to the normal history-preserving screen by
+CursorAwareWindow objects. User keyboard input events like pressing the up
+arrow key are detected by an Input object. See the Quickstart to get started
+using all of these classes.
