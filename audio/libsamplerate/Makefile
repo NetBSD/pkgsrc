@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2012/09/12 00:24:44 asau Exp $
+# $NetBSD: Makefile,v 1.26 2017/04/12 18:47:39 maya Exp $
 
-DISTNAME=	libsamplerate-0.1.8
+DISTNAME=	libsamplerate-0.1.9
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/SRC/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/SRC/
 COMMENT=	Sample rate converter library
-LICENSE=	gnu-gpl-v2
+LICENSE=	2-clause-bsd
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
