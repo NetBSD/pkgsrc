@@ -23,7 +23,7 @@
     </property_group>
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/default.vcl" />
-      <propval name="listen" type="astring" value="0.0.0.0:8080" />
+      <propval name="listen" type="astring" value="127.0.0.1:8080" />
       <propval name="size" type="astring" value="64M" />
     </property_group>
     <template>
