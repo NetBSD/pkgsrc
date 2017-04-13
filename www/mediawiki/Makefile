@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62.4.1 2017/04/09 17:55:03 spz Exp $
+# $NetBSD: Makefile,v 1.62.4.2 2017/04/13 11:15:40 bsiegert Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	https://releases.wikimedia.org/mediawiki/${VER}/
 
@@ -9,7 +10,6 @@ HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.5.9:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.5.9:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.5.9:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.5.9:../../textproc/php-json
