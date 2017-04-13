@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2017/04/08 12:17:58 spz Exp $
+# $NetBSD: Makefile,v 1.12 2017/04/13 13:08:33 bouyer Exp $
 
 VERSION=	4.6.5
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel46-${VERSION}
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
+MASTER_SITES=	https://downloads.xenproject.org/release/xen/${VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xenproject.org/

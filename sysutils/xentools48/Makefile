@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/30 09:15:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/13 13:08:34 bouyer Exp $
 #
 VERSION=	4.8.0
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -18,7 +18,7 @@ DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools48-${VERSION}
 #PKGREVISION=		2
 CATEGORIES=		sysutils
-MASTER_SITES=		http://bits.xensource.com/oss-xen/release/${VERSION}/
+MASTER_SITES=		https://downloads.xenproject.org/release/xen/${VERSION}/
 
 DISTFILES=		${DISTNAME}.tar.gz
 
