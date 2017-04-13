@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2017/04/10 11:35:40 joerg Exp $
-lib/libboost_numpy.a
-lib/libboost_numpy.so
-lib/libboost_numpy.so.${BOOST_VERSION}
+@comment $NetBSD: PLIST,v 1.4 2017/04/13 18:43:04 joerg Exp $
+${PLIST.py2x}lib/libboost_numpy.a
+${PLIST.py2x}lib/libboost_numpy.so
+${PLIST.py2x}lib/libboost_numpy.so.${BOOST_VERSION}
 ${PLIST.py2x}lib/libboost_python.a
 ${PLIST.py2x}lib/libboost_python.so
 ${PLIST.py2x}lib/libboost_python.so.${BOOST_VERSION}
+${PLIST.py3x}lib/libboost_numpy3.a
+${PLIST.py3x}lib/libboost_numpy3.so
+${PLIST.py3x}lib/libboost_numpy3.so.${BOOST_VERSION}
 ${PLIST.py3x}lib/libboost_python3.a
 ${PLIST.py3x}lib/libboost_python3.so
 ${PLIST.py3x}lib/libboost_python3.so.${BOOST_VERSION}
