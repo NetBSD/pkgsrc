@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 01:12:38 agc Exp $
+$NetBSD: distinfo,v 1.10.12.1 2017/04/13 11:25:37 bsiegert Exp $
 
-SHA1 (libsamplerate-0.1.8.tar.gz) = e5fe82c4786be2fa33ca6bd4897db4868347fe70
-RMD160 (libsamplerate-0.1.8.tar.gz) = 74fe910bbc47cafad391932763afac2a29282ac5
-SHA512 (libsamplerate-0.1.8.tar.gz) = 85d93df24d9d62e7803a5d0ac5d268b2085214adcb160e32fac316b12ee8a0ce36ccfb433a3c0a08f6e3ec418a5962bdb84f8a11262286a9b347436983029a7d
-Size (libsamplerate-0.1.8.tar.gz) = 4303330 bytes
+SHA1 (libsamplerate-0.1.9.tar.gz) = ed60f957a4ff87aa15cbb1f3dbd886fa7e5e9566
+RMD160 (libsamplerate-0.1.9.tar.gz) = ec6f3542b5e43f398ad7e5dfd9dc35902b06d762
+SHA512 (libsamplerate-0.1.9.tar.gz) = 78596657963cbf06785e3e6e1190b093df71da52ca340e75bd8246a962cd79dd1c90fa5527c607cebcb296e2c1ee605015278b274e3b768f2f3fbeb0eadfb728
+Size (libsamplerate-0.1.9.tar.gz) = 4336641 bytes
 SHA1 (patch-examples_audio_out.c) = 7b6cbcdc31e8e7da1d3453f9a59ee910296e4109
