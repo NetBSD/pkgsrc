@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.51 2016/12/05 20:03:29 asau Exp $
+$NetBSD: distinfo,v 1.52 2017/04/13 11:35:31 asau Exp $
 
-SHA1 (sbcl-1.3.12-source.tar.bz2) = 59b22de5815528fbe96d3b965d18c7dd594139ed
-RMD160 (sbcl-1.3.12-source.tar.bz2) = 2aa69851a57a71c32b2638fc4241eed38e10829f
-SHA512 (sbcl-1.3.12-source.tar.bz2) = 2a2969b826dcf9d568204a01546c47af777d5866baa8da809c49ace1655b54cd4c8db1872e322a1d08a4983b0962cc0e2e346816488212709b28867c53233275
-Size (sbcl-1.3.12-source.tar.bz2) = 5795516 bytes
+SHA1 (sbcl-1.3.16-source.tar.bz2) = 16f4fc8c4fbfec5ae9312fe528bb145770f83203
+RMD160 (sbcl-1.3.16-source.tar.bz2) = c8b6fd401be51ad77804015692e95cbbf77ce745
+SHA512 (sbcl-1.3.16-source.tar.bz2) = 6bb0a7c926ba8031c319697b49b85eb58ea262d47237b2e7735738ad6103a759016a269e617931095174066f830e2edc362bf89384a97c3d19807552caf826b4
+Size (sbcl-1.3.16-source.tar.bz2) = 5803184 bytes
 SHA1 (patch-ab) = b087921f7317523fd78396518dfd2cb1c8e6d5f9
 SHA1 (patch-src_runtime_backtrace.c) = ba3d7d152b279652d7074ebc9ba615c9d899f35c
 SHA1 (patch-src_runtime_breakpoint.c) = 019d98692411b5701ce14c023ed3afab71033323
