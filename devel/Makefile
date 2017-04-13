@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2399 2017/04/12 11:44:20 adam Exp $
+# $NetBSD: Makefile,v 1.2400 2017/04/13 06:45:16 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -1763,9 +1763,9 @@ SUBDIR+=	py-binaryornot
 SUBDIR+=	py-blessings
 SUBDIR+=	py-blinker
 SUBDIR+=	py-boost
+SUBDIR+=	py-bugzilla
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-slave
-SUBDIR+=	py-bugzilla
 SUBDIR+=	py-cached-property
 SUBDIR+=	py-cachetools
 SUBDIR+=	py-capstone
