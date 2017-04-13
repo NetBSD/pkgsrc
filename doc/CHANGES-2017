@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1530 2017/04/13 00:42:21 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1531 2017/04/13 01:00:08 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1884,3 +1884,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/adobe-flash-player to 25.0.0.148 [tsutsui 2017-04-12]
 	Updated audio/libsamplerate to 0.1.9 [maya 2017-04-12]
 	Updated devel/deforaos-libsystem to 0.3.1 [khorben 2017-04-13]
+	Updated x11/deforaos-libdesktop to 0.2.2 [khorben 2017-04-13]
