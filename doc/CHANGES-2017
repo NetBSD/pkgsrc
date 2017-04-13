@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1536 2017/04/13 11:10:08 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1537 2017/04/13 11:26:32 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/dovecot2-pigeonhole to 0.4.18 [taca 2017-04-13]
 	Updated devel/nss to 3.30.1 [ryoon 2017-04-13]
 	Updated audio/deforaos-mixer to 0.2.2 [khorben 2017-04-13]
+	Updated comms/deforaos-phone to 0.5.1 [khorben 2017-04-13]
