@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2017/03/30 10:19:42 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2017/04/13 19:03:28 fhajny Exp $
 
-DISTNAME=	p1_utils-1.0.7
+DISTNAME=	p1_utils-1.0.8
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
@@ -10,6 +10,10 @@ COMMENT=	Erlang Utility Modules from ProcessOne
 LICENSE=	apache-2.0
 
 GITHUB_PROJECT=	p1_utils
+
+# Leave a non-versioned symlink in place
+post-install:
+	${LN} -sf ${DISTNAME} ${DESTDIR}${PREFIX}/lib/erlang/lib/p1_utils
 
 .include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"

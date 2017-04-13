@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/03/30 10:19:42 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2017/04/13 19:03:28 fhajny Exp $
 
-SHA1 (p1_utils-1.0.7.tar.gz) = bb64a7c24e9caebe1ce0542c4e2cb6ca86df210d
-RMD160 (p1_utils-1.0.7.tar.gz) = f2a660d1d914b775897d582eb8ae5ff107a7dc6a
-SHA512 (p1_utils-1.0.7.tar.gz) = 1a60ef061d543e688f22bbccafdd7d0aa749c23646546a55702eee5f8d6c8fa80f0c3b3a0b1054ea0b00bd76eb094473554fafd8d48f4785975e73e9c7dd4fee
-Size (p1_utils-1.0.7.tar.gz) = 46312 bytes
+SHA1 (p1_utils-1.0.8.tar.gz) = 0ec986938e93492cbeb81e2acf71b1014dac581e
+RMD160 (p1_utils-1.0.8.tar.gz) = cbba7c25965d752d197af8490f9dfa623b9143be
+SHA512 (p1_utils-1.0.8.tar.gz) = 675439bf8872bc79a603032683eb322636b4c8687ac18d4bde2cd526bd86539c342024ef8aed5717083d9638f69f409bfd2f255d49267f528f67c42d7ad1e43f
+Size (p1_utils-1.0.8.tar.gz) = 53349 bytes
