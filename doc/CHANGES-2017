@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1540 2017/04/13 14:17:19 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1541 2017/04/13 14:19:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1905,3 +1905,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-CPAN-Perl-Releases to 3.12 [mef 2017-04-13]
 	Updated devel/p5-CPANPLUS to 0.9166 [mef 2017-04-13]
 	Updated devel/p5-Class-InsideOut to 1.14 [mef 2017-04-13]
+	Updated lang/php70 to 7.0.18 [taca 2017-04-13]
