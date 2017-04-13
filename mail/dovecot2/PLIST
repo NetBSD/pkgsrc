@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2017/03/18 07:14:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.52.2.1 2017/04/13 15:04:31 bsiegert Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -150,6 +150,7 @@ include/dovecot/hex-dec.h
 include/dovecot/hmac-cram-md5.h
 include/dovecot/hmac.h
 include/dovecot/home-expand.h
+include/dovecot/hook-build.h
 include/dovecot/hostpid.h
 include/dovecot/http-auth.h
 include/dovecot/http-client-private.h
@@ -538,9 +539,11 @@ include/dovecot/userdb-vpopmail.h
 include/dovecot/userdb.h
 include/dovecot/utc-mktime.h
 include/dovecot/utc-offset.h
+include/dovecot/var-expand-private.h
 include/dovecot/var-expand.h
 include/dovecot/wildcard-match.h
 include/dovecot/write-full.h
+lib/dovecot/auth/lib20_auth_var_expand_crypt.la
 lib/dovecot/auth/libauthdb_imap.la
 lib/dovecot/doveadm/lib10_doveadm_acl_plugin.la
 lib/dovecot/doveadm/lib10_doveadm_expire_plugin.la
@@ -570,6 +573,7 @@ lib/dovecot/lib20_mailbox_alias_plugin.la
 lib/dovecot/lib20_push_notification_plugin.la
 lib/dovecot/lib20_quota_clone_plugin.la
 lib/dovecot/lib20_replication_plugin.la
+lib/dovecot/lib20_var_expand_crypt.la
 lib/dovecot/lib20_virtual_plugin.la
 lib/dovecot/lib20_zlib_plugin.la
 lib/dovecot/lib21_fts_squat_plugin.la
