@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/02/20 02:10:07 khorben Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/04/13 11:26:18 khorben Exp $
 bin/gprs
 bin/phone
 bin/phonectl
@@ -42,6 +42,7 @@ share/doc/Phone/phone.conf
 share/doc/Phone/pppd-chat_gprs
 share/doc/Phone/pppd-peers_gprs
 share/doc/Phone/pppd-peers_phone
+share/doc/Phone/ussd.conf
 share/icons/hicolor/16x16/apps/phone-drafts.png
 share/icons/hicolor/16x16/apps/phone-gprs.png
 share/icons/hicolor/16x16/apps/phone-inbox.png
