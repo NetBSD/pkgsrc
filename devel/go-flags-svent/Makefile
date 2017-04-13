@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/12/04 16:29:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/13 15:12:04 bsiegert Exp $
 
 DISTNAME=	go-flags-svent-0.0.20141123
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=svent/}
 GITHUB_PROJECT=	go-flags
