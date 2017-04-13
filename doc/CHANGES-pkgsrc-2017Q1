@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.8 2017/04/13 12:11:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.9 2017/04/13 15:30:04 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -80,4 +80,11 @@ net/bind910: security fix
 
 Pullup ticket #5273 - requested by taca
 net/bind99: security fix
+
+Pullup ticket #5274 - requested by taca
+mail/dovecot2: security fix
+mail/dovecot2-sqlite: security fix
+
+Pullup ticket #5275 - requested by taca
+mail/dovecot2-pigeonhole: point update
 
