@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.7 2017/04/12 14:33:29 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.8 2017/04/13 12:11:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -57,4 +57,27 @@ www/py-django: security update
 
 Pullup ticket #5257 - requested by wen
 www/mediawiki: security update
+
+Pullup ticket #5241 - requested by sevan
+www/serf: build fix
+
+Pullup ticket #5247 - requested by sevan
+pkgtools/pkglint: bugfix
+
+Pullup ticket #5243 - requested by sevan
+lang/php56: build fix
+lang/php70: build fix
+lang/php71: build fix
+
+Pullup ticket #5269 - requested by sevan
+multimedia/adobe-flash-player: security fix
+
+Pullup ticket #5270 - requested by maya
+audio/libsamplerate: security fix
+
+Pullup ticket #5272 - requested by taca
+net/bind910: security fix
+
+Pullup ticket #5273 - requested by taca
+net/bind99: security fix
 
