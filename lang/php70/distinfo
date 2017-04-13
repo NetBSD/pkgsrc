@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.31 2017/04/05 12:28:59 fhajny Exp $
+$NetBSD: distinfo,v 1.32 2017/04/13 14:19:19 taca Exp $
 
-SHA1 (php-7.0.17.tar.bz2) = 6c20436c50fdf342891f836f2864a43fdbe0bf71
-RMD160 (php-7.0.17.tar.bz2) = 2f4dd83e4d4253aaad45fa5f28cd973815382edb
-SHA512 (php-7.0.17.tar.bz2) = a50e53915cb4af59d90cf5a754f74bc307bf0de7904297eb8364d85418399203b6f81ddff23e4c68d36bfe8c4ce8ae1d511ec3cad21872c5113acc0f494b43d7
-Size (php-7.0.17.tar.bz2) = 15326542 bytes
+SHA1 (php-7.0.18.tar.bz2) = b1959c8134f6bb241799d8eb840a2b892108c72a
+RMD160 (php-7.0.18.tar.bz2) = 54e2d897642d51976d24abf7c862b7ec6165fa05
+SHA512 (php-7.0.18.tar.bz2) = eccd9d68578373bb27aeb2d3b6d1a202e428bd622daaa069e1d526a81f2a406bf9d1852d73fbf9dc7a4488f514ab50f4a6c87ee6b4ac172c6f2b7f214b1dea56
+Size (php-7.0.18.tar.bz2) = 15328539 bytes
 SHA1 (patch-acinclude.m4) = 81a8f33a536500978ea5a9aa2d2875c61c843e56
 SHA1 (patch-configure) = a129e19ef87338f6e53ccc967c40ddcde7c7357c
 SHA1 (patch-ext_gd_config.m4) = bde93678626592cdcee619189bfc6532d0913a76
