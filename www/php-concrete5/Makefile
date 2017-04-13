@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2016/12/23 23:02:13 joerg Exp $
+# $NetBSD: Makefile,v 1.15.4.1 2017/04/13 11:15:40 bsiegert Exp $
 #
 
 DISTNAME=	concrete5.7.5.6
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.concrete5.org/download_file/-/view/85780/
 EXTRACT_SUFX=	.zip
@@ -13,7 +14,6 @@ COMMENT=	Open sourece Content Management System
 LICENSE=	mit
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.3.3:../../databases/php-pdo_mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.3:../../textproc/php-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.3:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.3:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.3:../../security/php-mcrypt

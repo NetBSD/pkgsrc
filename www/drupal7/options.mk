@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2012/12/20 12:45:58 taca Exp $
+# $NetBSD: options.mk,v 1.3.36.1 2017/04/13 11:15:39 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
 PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite
 
-PKG_SUPPORTED_OPTIONS=	drupal-xmlservices apache unicode
-PKG_SUGGESTED_OPTIONS=	mysql drupal-xmlservices apache
+PKG_SUPPORTED_OPTIONS=	apache unicode
+PKG_SUGGESTED_OPTIONS=	mysql apache
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,14 +25,6 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.2.7:../../databases/php-pdo_mysql
 ### Use SQLite for storing Drupal data
 ###
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_sqlite>=5.2.7:../../databases/php-pdo_sqlite
-.endif
-
-###
-### Enable XML-based services such as the Blogger API, Jabber and RSS
-### syndication.
-###
-.if !empty(PKG_OPTIONS:Mdrupal-xmlservices)
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.2.7:../../textproc/php-dom
 .endif
 
 ###
