@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1533 2017/04/13 01:54:28 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1534 2017/04/13 02:03:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1888,3 +1888,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/deforaos-keyboard to 0.3.1 [khorben 2017-04-13]
 	Updated net/bind910 to 9.10.4pl8 [taca 2017-04-13]
 	Updated net/bind99 to 9.9.9pl8 [taca 2017-04-13]
+	Updated mail/dovecot2 to 2.2.29.1 [taca 2017-04-13]
+	Updated mail/dovecot2-antispam-plugin to 20130429nb4 [taca 2017-04-13]
+	Updated mail/dovecot2-gssapi to 2.2.29.1 [taca 2017-04-13]
+	Updated mail/dovecot2-ldap to 2.2.29.1 [taca 2017-04-13]
+	Updated mail/dovecot2-mysql to 2.2.29.1 [taca 2017-04-13]
+	Updated mail/dovecot2-pgsql to 2.2.29.1 [taca 2017-04-13]
+	Updated mail/dovecot2-sqlite to 2.2.29.1 [taca 2017-04-13]
+	Updated mail/dovecot2-pigeonhole to 0.4.18 [taca 2017-04-13]
