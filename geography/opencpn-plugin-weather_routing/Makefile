@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.10 2017/02/12 06:25:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2017/04/14 16:35:21 bouyer Exp $
 #
 
-VERSION=	20160716
+VERSION=	20170414
 DISTNAME=	weather_routing_pi-${VERSION}
 PKGNAME=	opencpn-plugin-weather_routing-${VERSION}
 PKGREVISION=	4
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=seandepagnier/}
 GITHUB_PROJECT=	weather_routing_pi
-GITHUB_TAG=	7a016521e0a1e1ca4e97016dad8d0d16f09da912
+GITHUB_TAG=	d65c968479af4fee78aa28b4b3f2c54660597eac
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://opencpn.org/ocpn/weather_routing_plugin
-COMMENT=	Concise ChartPlotter/Navigator - developement version
-LICENSE=	gnu-gpl-v2
+COMMENT=	creates optimized weather routes using grib data in OpenCPN
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gettext
