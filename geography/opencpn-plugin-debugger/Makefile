@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/04/14 16:22:51 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2017/04/14 16:42:24 bouyer Exp $
 #
 
 VERSION=	20170414
@@ -11,7 +11,7 @@ GITHUB_PROJECT=	ocpndebugger_pi
 GITHUB_TAG=	f2cea39ffcbf61c84e2d6066b155d866eaebff0f
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	https://github.com/nohal/ocpndebugger_pi
+HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/debugger.html
 COMMENT=	Shows the messages on OpenCPN's plugin interface
 LICENSE=	gnu-gpl-v2
 
