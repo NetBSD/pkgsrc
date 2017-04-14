@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/04/14 16:35:21 bouyer Exp $
+# $NetBSD: Makefile,v 1.12 2017/04/14 16:42:25 bouyer Exp $
 #
 
 VERSION=	20170414
@@ -11,7 +11,7 @@ GITHUB_PROJECT=	weather_routing_pi
 GITHUB_TAG=	d65c968479af4fee78aa28b4b3f2c54660597eac
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://opencpn.org/ocpn/weather_routing_plugin
+HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/weatherroute.html
 COMMENT=	creates optimized weather routes using grib data in OpenCPN
 LICENSE=	gnu-gpl-v3
 
