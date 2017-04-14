@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.919 2017/04/14 12:23:09 leot Exp $
+# $NetBSD: Makefile,v 1.920 2017/04/14 13:50:10 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -705,6 +705,7 @@ SUBDIR+=	py-X2
 SUBDIR+=	py-acora
 SUBDIR+=	py-alabaster
 SUBDIR+=	py-anyjson
+SUBDIR+=	py-babelfish
 SUBDIR+=	py-biplist
 SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
