@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1574 2017/04/14 18:43:56 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1575 2017/04/14 19:10:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1949,3 +1949,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/opencpn-plugin-watchdog to 20170414 [bouyer 2017-04-14]
 	Updated geography/opencpn-plugin-weather_routing to 20170414 [bouyer 2017-04-14]
 	Added geography/opencpn-plugin-statusbar version 20170414 [bouyer 2017-04-14]
+	Updated textproc/subliminal to 2.0.5nb1 [leot 2017-04-14]
