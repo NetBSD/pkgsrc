@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/04/09 11:45:51 mef Exp $
+$NetBSD: distinfo,v 1.9 2017/04/14 15:03:20 mef Exp $
 
-SHA1 (Contextual-Return-0.004011.tar.gz) = 7037f582c3d74b78fc0737c36f0d93b3d2fef466
-RMD160 (Contextual-Return-0.004011.tar.gz) = b2e0fc7a2a333545dd956afcfb22ad1bd78517ec
-SHA512 (Contextual-Return-0.004011.tar.gz) = b38ac9766e84b88c64f2d6e70ff8aa1acec78aab74ccb1b75240b1e980281daf6ca8a503da39c8c853910fe727822d769c6aa7866d73c497c06f84bf4345c4de
-Size (Contextual-Return-0.004011.tar.gz) = 40882 bytes
+SHA1 (Contextual-Return-0.004012.tar.gz) = bff578c2370bcbf609188fa1ee8b2677424d0f20
+RMD160 (Contextual-Return-0.004012.tar.gz) = 72b0446648d9da3216c44f65226a48ec25100bfd
+SHA512 (Contextual-Return-0.004012.tar.gz) = 50742adf6744ff7c0d1e543b0130a73dcf8594a39ef5454d44c93251328cf404829e3364ba9c1a2ce22f176d2fa03e9bfb98ce57e35fd6c48419ab9c970f8c1e
+Size (Contextual-Return-0.004012.tar.gz) = 40941 bytes
