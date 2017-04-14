@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2017/03/31 21:18:12 roy Exp $
+# $NetBSD: Makefile,v 1.64 2017/04/14 10:05:26 roy Exp $
 #
 
-DISTNAME=		dhcpcd-7.0.0-beta1
+DISTNAME=		dhcpcd-7.0.0-beta3
 PKGNAME=		${DISTNAME:S/-beta/beta/}
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
