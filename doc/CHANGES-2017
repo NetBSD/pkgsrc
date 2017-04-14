@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1554 2017/04/14 13:04:20 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1555 2017/04/14 13:05:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1918,3 +1918,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-jsbeautifier version 1.6.12 [leot 2017-04-14]
 	Added devel/py-kaitaistruct version 0.7 [leot 2017-04-14]
 	Updated devel/py-construct to 2.8.11 [leot 2017-04-14]
+	Updated devel/py-ruamel-yaml to 0.14.6 [leot 2017-04-14]
