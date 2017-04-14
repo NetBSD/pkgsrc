@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2403 2017/04/14 12:31:38 leot Exp $
+# $NetBSD: Makefile,v 1.2404 2017/04/14 13:53:54 leot Exp $
 #
 
 COMMENT=	Development utilities
@@ -1804,6 +1804,7 @@ SUBDIR+=	py-distribute
 SUBDIR+=	py-docopt
 SUBDIR+=	py-docstyle
 SUBDIR+=	py-doctor
+SUBDIR+=	py-dogpile-cache
 SUBDIR+=	py-dulwich
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-enum
