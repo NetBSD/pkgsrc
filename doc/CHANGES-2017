@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1563 2017/04/14 13:56:23 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1564 2017/04/14 13:58:59 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1927,3 +1927,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-babelfish version 0.5.5 [leot 2017-04-14]
 	Added devel/py-dogpile-cache version 0.6.2 [leot 2017-04-14]
 	Added multimedia/py-enzyme version 0.4.1 [leot 2017-04-14]
+	Added textproc/py-pysrt version 1.1.1 [leot 2017-04-14]
