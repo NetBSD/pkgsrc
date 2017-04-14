@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1565 2017/04/14 14:01:47 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1566 2017/04/14 14:07:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added multimedia/py-enzyme version 0.4.1 [leot 2017-04-14]
 	Added textproc/py-pysrt version 1.1.1 [leot 2017-04-14]
 	Added archivers/py-rarfile version 3.0 [leot 2017-04-14]
+	Added devel/py-stevedore version 1.21.0 [leot 2017-04-14]
