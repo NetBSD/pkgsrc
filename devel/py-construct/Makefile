@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2016/06/01 12:30:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/04/14 13:04:08 leot Exp $
 
-DISTNAME=	construct-2.5.2
+DISTNAME=	construct-2.8.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/construct/}
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://pypi.python.org/pypi/construct
+HOMEPAGE=	http://construct.readthedocs.io/
 COMMENT=	Powerful declarative parser for binary data
 LICENSE=	mit
 
