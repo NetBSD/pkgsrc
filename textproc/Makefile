@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.922 2017/04/14 14:09:40 leot Exp $
+# $NetBSD: Makefile,v 1.923 2017/04/14 14:13:49 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -729,6 +729,7 @@ SUBDIR+=	py-feedparser
 SUBDIR+=	py-ftfy
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gnosis-utils
+SUBDIR+=	py-guessit
 SUBDIR+=	py-html2text
 SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
