@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/14 14:17:45 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/04/14 19:10:23 leot Exp $
 bin/subliminal-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -94,6 +94,8 @@ ${PYSITELIB}/subliminal/subtitles/__init__.py
 ${PYSITELIB}/subliminal/subtitles/__init__.pyc
 ${PYSITELIB}/subliminal/subtitles/__init__.pyo
 ${PYSITELIB}/subliminal/subtitles/subrip.py
+${PYSITELIB}/subliminal/subtitles/subrip.pyc
+${PYSITELIB}/subliminal/subtitles/subrip.pyo
 ${PYSITELIB}/subliminal/utils.py
 ${PYSITELIB}/subliminal/utils.pyc
 ${PYSITELIB}/subliminal/utils.pyo
