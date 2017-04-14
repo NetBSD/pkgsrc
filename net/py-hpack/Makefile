@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/06/01 12:34:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/04/14 13:08:15 leot Exp $
 
-DISTNAME=	hpack-2.1.0
+DISTNAME=	hpack-3.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hpack/}
