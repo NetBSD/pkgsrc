@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.923 2017/04/14 14:13:49 leot Exp $
+# $NetBSD: Makefile,v 1.924 2017/04/14 14:18:29 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -888,6 +888,7 @@ SUBDIR+=	sphinxsearch
 SUBDIR+=	stardic
 SUBDIR+=	sub2srt
 SUBDIR+=	sublib
+SUBDIR+=	subliminal
 SUBDIR+=	subtitleripper
 SUBDIR+=	suikyo
 SUBDIR+=	suikyo-conv-table
