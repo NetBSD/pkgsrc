@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/04/05 11:18:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/04/14 07:13:51 wiz Exp $
 
 DISTNAME=	pytest-mock-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,6 +12,7 @@ COMMENT=	Thin-wrapper around the mock package for easier use with py.test
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 
 .include "../../lang/python/pyversion.mk"
 
