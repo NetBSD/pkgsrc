@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1569 2017/04/14 14:18:56 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1570 2017/04/14 15:15:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1933,3 +1933,12 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-rebulk version 0.8.2 [leot 2017-04-14]
 	Added textproc/py-guessit version 2.1.2 [leot 2017-04-14]
 	Added textproc/subliminal version 2.0.5 [leot 2017-04-14]
+	Updated devel/p5-Class-Load to 0.24 [mef 2017-04-14]
+	Updated devel/p5-Class-Load-XS to 0.10 [mef 2017-04-14]
+	Updated devel/p5-Clone-PP to 1.07 [mef 2017-04-14]
+	Updated devel/p5-Config-AutoConf to 0.314 [mef 2017-04-14]
+	Updated devel/p5-Contextual-Return to 0.004.012 [mef 2017-04-14]
+	Updated devel/p5-File-HomeDir to 1.00.2 [mef 2017-04-14]
+	Updated devel/p5-List-MoreUtils to 0.419 [mef 2017-04-14]
+	Updated devel/p5-Module-Starter to 1.720 [mef 2017-04-14]
+	Updated devel/p5-Path-IsDev to 1.001003 [mef 2017-04-14]
