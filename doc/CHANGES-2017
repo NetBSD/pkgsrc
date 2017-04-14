@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1560 2017/04/14 13:25:11 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1561 2017/04/14 13:52:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1924,3 +1924,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-hyperframe to 5.0.0 [leot 2017-04-14]
 	Updated net/mitmproxy to 2.0.1 [leot 2017-04-14]
 	Updated www/py-gunicorn to 19.7.1 [adam 2017-04-14]
+	Added textproc/py-babelfish version 0.5.5 [leot 2017-04-14]
