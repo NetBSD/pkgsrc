@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 13:55:35 leot Exp $
+
+SHA1 (enzyme-0.4.1.tar.gz) = 7f798c481d292fe3a9f7d0a07a8cd661e9c6d8af
+RMD160 (enzyme-0.4.1.tar.gz) = dc0b969024ea5ddfaf86e8ff49d441f17a7c8fa2
+SHA512 (enzyme-0.4.1.tar.gz) = 62a85c076a7eb320249a507dcc9dd26572e3a9b9643e0a960ed114a80c75213e6e5028a726fbcdd0c2c46c53af980a69828a54a66af9a17af3210273376395b3
+Size (enzyme-0.4.1.tar.gz) = 47953 bytes
