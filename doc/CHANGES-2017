@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1547 2017/04/14 07:03:51 tron Exp $
+$NetBSD: CHANGES-2017,v 1.1548 2017/04/14 08:02:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1911,3 +1911,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/erlang-p1_utils to 1.0.8 [fhajny 2017-04-13]
 	Updated chat/ejabberd to 17.04 [fhajny 2017-04-13]
 	Updated mail/mutt to 1.8.1 [tron 2017-04-14]
+	Added devel/ruby-activesupport42 version 4.2.8 [minskim 2017-04-14]
