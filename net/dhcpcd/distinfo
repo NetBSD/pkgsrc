@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.61 2017/03/31 21:09:27 roy Exp $
+$NetBSD: distinfo,v 1.62 2017/04/14 10:05:26 roy Exp $
 
-SHA1 (dhcpcd-7.0.0-beta1.tar.xz) = f4dfb63b164a7b0558dc78a4d2389a0c96a10092
-RMD160 (dhcpcd-7.0.0-beta1.tar.xz) = 0204f80962a5e39e0a48d397eafc3df92b06f3f3
-SHA512 (dhcpcd-7.0.0-beta1.tar.xz) = 4852d8353dbfee286f801a348ce4fbd5165438e604438c6bcb9b21eeabdf1d8e2a87678c82085fc40358c6f63b4214beac8ffa3ba963c1759e4e96ec651ebe5d
-Size (dhcpcd-7.0.0-beta1.tar.xz) = 200224 bytes
+SHA1 (dhcpcd-7.0.0-beta3.tar.xz) = b922b87949fb51e4b32d5d1ed442d05ee228b7c4
+RMD160 (dhcpcd-7.0.0-beta3.tar.xz) = b7327ae9754fc385d5502a7faa3a0bd91443bc74
+SHA512 (dhcpcd-7.0.0-beta3.tar.xz) = b71154fa2596826e23820df984992e8786a6b89588648db60e9340a383b67fdb555307e9a47b7c33097ed4191fdb911e443c6bf9fc76b0194770e66e2de64b95
+Size (dhcpcd-7.0.0-beta3.tar.xz) = 203440 bytes
