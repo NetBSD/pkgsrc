@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.9 2017/04/13 15:30:04 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.10 2017/04/14 11:15:38 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -87,4 +87,7 @@ mail/dovecot2-sqlite: security fix
 
 Pullup ticket #5275 - requested by taca
 mail/dovecot2-pigeonhole: point update
+
+Pullup ticket #5245 - requested by sevan
+security/p5-Authen-TacacsPlus: build fix
 
