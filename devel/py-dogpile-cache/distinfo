@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 13:53:25 leot Exp $
+
+SHA1 (dogpile.cache-0.6.2.tar.gz) = dc4340534e8400d2911400b1901a45c0cfb7c70d
+RMD160 (dogpile.cache-0.6.2.tar.gz) = 933f8d80e4613e15f43c09b11eaf2b20060bd217
+SHA512 (dogpile.cache-0.6.2.tar.gz) = 5882e0a355db0bec9c1a0836034481d39008051ff42f48c85679ac70a42c6366d1bcbd01ecd3ca868d7ad725197e626e52b004d62269827e2605a4ecd491ce99
+Size (dogpile.cache-0.6.2.tar.gz) = 329762 bytes
