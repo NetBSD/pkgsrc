@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1553 2017/04/14 12:31:56 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1554 2017/04/14 13:04:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1917,3 +1917,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-editorconfig-core version 0.12.1 [leot 2017-04-14]
 	Added textproc/py-jsbeautifier version 1.6.12 [leot 2017-04-14]
 	Added devel/py-kaitaistruct version 0.7 [leot 2017-04-14]
+	Updated devel/py-construct to 2.8.11 [leot 2017-04-14]
