@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.918 2017/04/05 12:34:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.919 2017/04/14 12:23:09 leot Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -733,6 +733,7 @@ SUBDIR+=	py-html5lib
 SUBDIR+=	py-humanize
 SUBDIR+=	py-iniparse
 SUBDIR+=	py-jinja2
+SUBDIR+=	py-jsbeautifier
 SUBDIR+=	py-jsonlib
 SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-jsonrpclib
