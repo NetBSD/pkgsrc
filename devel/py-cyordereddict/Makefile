@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/31 01:16:18 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/14 00:40:29 minskim Exp $
 
 DISTNAME=	cyordereddict-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,14 @@ COMMENT=	Cython implementation of Python's collections.OrderedDict
 LICENSE=	mit
 
 USE_LANGUAGES=	c
+
+PLIST_VARS+=	python2
+
+.include "../../lang/python/pyversion.mk"
+
+.if !empty(PYVERSSUFFIX:M2.*)
+PLIST.python2=	yes
+.endif
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
