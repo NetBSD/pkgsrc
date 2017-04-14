@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1545 2017/04/13 19:05:01 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1546 2017/04/14 07:00:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1910,3 +1910,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/erlang-iconv to 1.0.4 [fhajny 2017-04-13]
 	Updated misc/erlang-p1_utils to 1.0.8 [fhajny 2017-04-13]
 	Updated chat/ejabberd to 17.04 [fhajny 2017-04-13]
+	Updated mail/mutt to 1.8.0nb2 [tron 2017-04-14]
