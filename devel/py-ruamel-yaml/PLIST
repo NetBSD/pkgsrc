@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/16 13:52:54 nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/04/14 13:05:06 leot Exp $
 ${PYSITELIB}/_ruamel_yaml.so
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PLIST.py2x}${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/ruamel/yaml/__init__.py
 ${PYSITELIB}/ruamel/yaml/__init__.pyc
@@ -46,15 +46,12 @@ ${PYSITELIB}/ruamel/yaml/loader.pyo
 ${PYSITELIB}/ruamel/yaml/main.py
 ${PYSITELIB}/ruamel/yaml/main.pyc
 ${PYSITELIB}/ruamel/yaml/main.pyo
-${PYSITELIB}/ruamel/yaml/make_win_whl.py
-${PYSITELIB}/ruamel/yaml/make_win_whl.pyc
-${PYSITELIB}/ruamel/yaml/make_win_whl.pyo
 ${PYSITELIB}/ruamel/yaml/nodes.py
 ${PYSITELIB}/ruamel/yaml/nodes.pyc
 ${PYSITELIB}/ruamel/yaml/nodes.pyo
-${PYSITELIB}/ruamel/yaml/parser_.py
-${PYSITELIB}/ruamel/yaml/parser_.pyc
-${PYSITELIB}/ruamel/yaml/parser_.pyo
+${PYSITELIB}/ruamel/yaml/parser.py
+${PYSITELIB}/ruamel/yaml/parser.pyc
+${PYSITELIB}/ruamel/yaml/parser.pyo
 ${PYSITELIB}/ruamel/yaml/reader.py
 ${PYSITELIB}/ruamel/yaml/reader.pyc
 ${PYSITELIB}/ruamel/yaml/reader.pyo
@@ -64,6 +61,9 @@ ${PYSITELIB}/ruamel/yaml/representer.pyo
 ${PYSITELIB}/ruamel/yaml/resolver.py
 ${PYSITELIB}/ruamel/yaml/resolver.pyc
 ${PYSITELIB}/ruamel/yaml/resolver.pyo
+${PYSITELIB}/ruamel/yaml/scalarint.py
+${PYSITELIB}/ruamel/yaml/scalarint.pyc
+${PYSITELIB}/ruamel/yaml/scalarint.pyo
 ${PYSITELIB}/ruamel/yaml/scalarstring.py
 ${PYSITELIB}/ruamel/yaml/scalarstring.pyc
 ${PYSITELIB}/ruamel/yaml/scalarstring.pyo
@@ -73,6 +73,12 @@ ${PYSITELIB}/ruamel/yaml/scanner.pyo
 ${PYSITELIB}/ruamel/yaml/serializer.py
 ${PYSITELIB}/ruamel/yaml/serializer.pyc
 ${PYSITELIB}/ruamel/yaml/serializer.pyo
+${PYSITELIB}/ruamel/yaml/timestamp.py
+${PYSITELIB}/ruamel/yaml/timestamp.pyc
+${PYSITELIB}/ruamel/yaml/timestamp.pyo
 ${PYSITELIB}/ruamel/yaml/tokens.py
 ${PYSITELIB}/ruamel/yaml/tokens.pyc
 ${PYSITELIB}/ruamel/yaml/tokens.pyo
+${PYSITELIB}/ruamel/yaml/util.py
+${PYSITELIB}/ruamel/yaml/util.pyc
+${PYSITELIB}/ruamel/yaml/util.pyo
