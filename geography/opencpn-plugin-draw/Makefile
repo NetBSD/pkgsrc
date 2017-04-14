@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/04/14 16:28:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.10 2017/04/14 16:42:24 bouyer Exp $
 #
 
 VERSION=	1.3.31
@@ -11,7 +11,7 @@ GITHUB_PROJECT=	ocpn_draw_pi
 GITHUB_TAG=	0ec00a16785bbaa786f99f19ac9f8a6a5558e500
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://opencpn.org/ocpn/Plugins_external_odraw
+HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/draw.html
 COMMENT=	place georeferenced objects/items on the OpenCPN interface
 LICENSE=	gnu-gpl-v2
 
