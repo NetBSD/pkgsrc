@@ -1,17 +1,16 @@
-$NetBSD: distinfo,v 1.10 2016/06/16 15:52:56 bouyer Exp $
+$NetBSD: distinfo,v 1.11 2017/04/14 16:20:15 bouyer Exp $
 
-SHA1 (OpenCPN-4.4.0-ec4fb21cf1f8f0a8e6bd6768a235699fc76848a2.zip) = fe8ca6924a1c73f25eea75b8c353f7fb162fc101
-RMD160 (OpenCPN-4.4.0-ec4fb21cf1f8f0a8e6bd6768a235699fc76848a2.zip) = 625a0749673dd7353c1fa66254018e3e886abb5b
-SHA512 (OpenCPN-4.4.0-ec4fb21cf1f8f0a8e6bd6768a235699fc76848a2.zip) = 0c3cc19be09ee1c4c8a4abf634715252f5248d3b714930d17d304737080c64188dc1601a3ae751cb52e2a94b27ce8d48f968a80e410ef6386d95661baec44ed2
-Size (OpenCPN-4.4.0-ec4fb21cf1f8f0a8e6bd6768a235699fc76848a2.zip) = 43115502 bytes
-SHA1 (patch-CMakeLists.txt) = c61ed69c19d98bc5407cd28857b21d5158c9c1f9
+SHA1 (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = e977ab8292c2ec5836eea2dce7257f60d0d4ad52
+RMD160 (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = eb840b5d694f17ae12caa7d08134986d6d143acf
+SHA512 (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = 8ef95ee173084d91d54651c13e155112df88ce87c32d5124695da0a4507a2650f3e0094cea3287a750c8f90fd9f6240d8ab4faf665d9b15cbbcebcc131ea8efa
+Size (OpenCPN-4.6.1-89f78e06c52683faac51c30baa1f25fee7ed6c97.zip) = 55864452 bytes
+SHA1 (patch-CMakeLists.txt) = 90c44c4bcc55c360a0553193c975223e8bf6ad25
 SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a
 SHA1 (patch-plugins_chartdldr_pi_CMakeLists.txt) = 52962f6feac45a766fc2dff08d2802e946ccfc85
 SHA1 (patch-plugins_chartdldr_pi_cmake_PluginConfigure.cmake) = 29fbfaee37e2a932b923df6ff7541dad37e14d65
 SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = 76a6198e58f81c129f15fa6671da180c263c231e
 SHA1 (patch-plugins_demo_pi_sample_CMakeLists.txt) = 6fde2dae588e0d8250bd1e0d60a465fb20d9a599
 SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = 49f997c27aa4710721d36945a681854579112a49
-SHA1 (patch-plugins_grib_pi_src_GribUIDialog.cpp) = 7cc1efa50569eff2d398bfc476a0b5f929bb6c3b
 SHA1 (patch-plugins_wmm_pi_CMakeLists.txt) = 88339a61dd4b78b823bbd34bd1b02863d150f046
 SHA1 (patch-plugins_wmm_pi_cmake_PluginConfigure.cmake) = f1c91cfa744ed76d938bfb5bdb4116df9f45604a
 SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
