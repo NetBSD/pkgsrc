@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 14:01:02 leot Exp $
+
+SHA1 (rarfile-3.0.tar.gz) = 97adfdd73a0b04d4a5d51481ebcdab9470c51685
+RMD160 (rarfile-3.0.tar.gz) = 20b4ae5564bd532fa9755a2834020324f9a47db8
+SHA512 (rarfile-3.0.tar.gz) = b0b816bf09fe455e4d8d35b447c30e7810468a6927555164a1b513d4161f3fd4e77a37439620bd935c3a12e46b1e5eda3e35d7d281899d2f9fd26b6e989aa6e4
+Size (rarfile-3.0.tar.gz) = 110665 bytes
