@@ -1,0 +1,3 @@
+bin/csscapture @PREFIX@/bin/csscapture-@PYVERSSUFFIX@
+bin/csscombine @PREFIX@/bin/csscombine-@PYVERSSUFFIX@
+bin/cssparse @PREFIX@/bin/cssparse-@PYVERSSUFFIX@
