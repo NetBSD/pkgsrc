@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2017/04/14 14:17:45 leot Exp $
+$NetBSD: distinfo,v 1.2 2017/04/14 19:10:23 leot Exp $
 
 SHA1 (subliminal-2.0.5.tar.gz) = a74f7be06afda4ce53563a13ce7d685fa4f1148f
 RMD160 (subliminal-2.0.5.tar.gz) = 0e9426ac4681cdf0e8a8f7742f4fada2f228d91c
 SHA512 (subliminal-2.0.5.tar.gz) = 56bc0e87496d5bc361430c4ee396b20374da697014203bdc4dda12341918e67c98aec579e44bd467898dbbf11f31e9de47ece17a0d78339f2bc700e3e6c8dd40
 Size (subliminal-2.0.5.tar.gz) = 51247 bytes
 SHA1 (patch-subliminal_subtitles_____init____.py) = 253b44d1421f51bc91abdbf960dbf759517e3f28
-SHA1 (patch-subliminal_subtitles_subrip.py) = f1ee205dce7cc566377d0a43b80974c7ef2432d8
+SHA1 (patch-subliminal_subtitles_subrip.py) = 4e44270d77605812537a7549195c8667b083cf0e
