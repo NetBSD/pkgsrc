@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/04/13 14:35:53 hauke Exp $
+# $NetBSD: Makefile,v 1.8 2017/04/14 09:15:57 hauke Exp $
 
 DISTNAME=	netatalk-2.2.5
 PKGNAME=        ${DISTNAME:C/-/22-/}
@@ -31,9 +31,6 @@ CONF_FILES+=	${EGDIR}/afpd.conf ${PKG_SYSCONFDIR}/afpd.conf
 CONF_FILES+=	${EGDIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf
 CONF_FILES+=	${EGDIR}/netatalk.conf ${PKG_SYSCONFDIR}/netatalk.conf
 CONF_FILES+=	${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
-
-CONFLICTS=		netatalk3-[0-9]* netatalk30-[0-9]* netatalk-[0-9]*
-CONFLICTS+=		netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
