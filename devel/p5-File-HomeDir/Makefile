@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/06/08 19:22:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/04/14 15:05:45 mef Exp $
 
-DISTNAME=	File-HomeDir-1.00
-PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+DISTNAME=	File-HomeDir-1.002
+PKGNAME=	p5-File-HomeDir-1.00.2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
@@ -12,7 +11,6 @@ COMMENT=	Get the home directory for yourself or other users
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
-PERL5_MODULE_TYPE=	Module::Install::Bundled
 PERL5_PACKLIST=		auto/File/HomeDir/.packlist
 
 .include "../../mk/bsd.prefs.mk"
