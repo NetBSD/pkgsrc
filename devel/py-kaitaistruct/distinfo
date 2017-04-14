@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 12:31:06 leot Exp $
+
+SHA1 (kaitaistruct-0.7.tar.gz) = db62dd67e265828f854876a098a95ff1f46fe2b8
+RMD160 (kaitaistruct-0.7.tar.gz) = 7cd1497e942f83dd85f6d234f52605c82b45456b
+SHA512 (kaitaistruct-0.7.tar.gz) = 1ee2e5d1e1de6a85dcaea684bee639f6b08bc0f06b8357fe388c339287388136638d11d301319a344364dc9cf98d3247fb6fc2d8332d9aaee6ee828e5650b447
+Size (kaitaistruct-0.7.tar.gz) = 5117 bytes
