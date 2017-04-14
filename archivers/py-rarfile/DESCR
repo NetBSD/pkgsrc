@@ -1,0 +1,14 @@
+This is Python module for RAR archive reading. The interface is made as zipfile
+like as possible. Licensed under ISC license.
+
+Features:
+
+ * Supports both RAR3 and RAR5 format archives.
+ * Supports multi volume archives.
+ * Supports Unicode filenames.
+ * Supports password-protected archives.
+ * Supports archive and file comments.
+ * Archive parsing and non-compressed files are handled in pure Python code.
+ * Compressed files are extracted by executing external tool: either unrar from
+   RARLAB or bsdtar from libarchive.
+ * Works with both Python 2.7 and 3.x.
