@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1568 2017/04/14 14:14:10 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1569 2017/04/14 14:18:56 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1932,3 +1932,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-stevedore version 1.21.0 [leot 2017-04-14]
 	Added textproc/py-rebulk version 0.8.2 [leot 2017-04-14]
 	Added textproc/py-guessit version 2.1.2 [leot 2017-04-14]
+	Added textproc/subliminal version 2.0.5 [leot 2017-04-14]
