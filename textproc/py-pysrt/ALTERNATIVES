@@ -1,0 +1,1 @@
+bin/srt @PREFIX@/bin/srt-@PYVERSSUFFIX@
