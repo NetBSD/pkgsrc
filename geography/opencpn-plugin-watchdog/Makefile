@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/04/14 16:32:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/14 16:42:24 bouyer Exp $
 #
 
 VERSION=	20170414
@@ -11,7 +11,7 @@ GITHUB_PROJECT=	watchdog_pi
 GITHUB_TAG=	d804ee6ca83727c780150373077f2ffb517b7858
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://opencpn.org/ocpn/Plugins_external_watchdog
+HOMEPAGE=	https://opencpn.org/OpenCPN/plugins/watchdog.html
 COMMENT=	implements various configurable alarms in OpenCPN
 LICENSE=	gnu-gpl-v3
 
