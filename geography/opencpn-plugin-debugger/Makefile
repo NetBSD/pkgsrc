@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2017/02/12 06:25:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/04/14 16:22:51 bouyer Exp $
 #
 
-VERSION=	20160224
+VERSION=	20170414
 #PKGREVISION=	2
 DISTNAME=	ocpndebugger_pi-${VERSION}
 PKGNAME=	opencpn-plugin-debugger-${VERSION}
-PKGREVISION=	2
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=nohal/}
 GITHUB_PROJECT=	ocpndebugger_pi
-GITHUB_TAG=	cabe866ac37933150cd410604c6e61fbf2278816
+GITHUB_TAG=	f2cea39ffcbf61c84e2d6066b155d866eaebff0f
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	https://github.com/nohal/ocpndebugger_pi
-COMMENT=	Shows the messages on the plugin interface
+COMMENT=	Shows the messages on OpenCPN's plugin interface
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
