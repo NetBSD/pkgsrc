@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/14 13:49:34 leot Exp $
+
+SHA1 (babelfish-0.5.5.tar.gz) = 7abfff7353ed3a72165e8169477969d235068ae8
+RMD160 (babelfish-0.5.5.tar.gz) = 3b0649b386f5b222ac2b7baef211ad7b364d25ae
+SHA512 (babelfish-0.5.5.tar.gz) = 71504dd0203ad85a6a69107d67df3bd5ae4193515e74c05b346a8bd0aab425fc1534d54d1c74b14e48580ee5e76f04705e35c2d359fbe46254bee37e41cb4bfa
+Size (babelfish-0.5.5.tar.gz) = 90398 bytes
