@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/02/16 13:47:31 leot Exp $
+$NetBSD: distinfo,v 1.2 2017/04/14 13:09:08 leot Exp $
 
-SHA1 (hyperframe-3.2.0.tar.gz) = affd9adc447fd2ae0a9749c843198d7fa1ee8101
-RMD160 (hyperframe-3.2.0.tar.gz) = 19b01ef7471430588388b7c69110271e7c0b3b9f
-SHA512 (hyperframe-3.2.0.tar.gz) = eee13a61b54555cd870cc576d07d33387cb61a5234be4b6a7c1ce1bd64636ac7b29f2ec982bebded639b9425c9733169c10f8f5ab06643d0d1b4b40085f27df4
-Size (hyperframe-3.2.0.tar.gz) = 16177 bytes
+SHA1 (hyperframe-5.0.0.tar.gz) = 0bca7c689924963f9803fb62d498c3662eb9748a
+RMD160 (hyperframe-5.0.0.tar.gz) = e214396f14f9f5641611e73b7e62151356687772
+SHA512 (hyperframe-5.0.0.tar.gz) = cb971bfc35938c3b76410432a7b3a677e25e44372fe3005351191e4bbb0fd11564f0e60765d22a96b565e7cc2ac80ea65447673bff2bee36e502bcca89a76491
+Size (hyperframe-5.0.0.tar.gz) = 17691 bytes
