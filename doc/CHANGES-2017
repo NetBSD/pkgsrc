@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1572 2017/04/14 16:36:22 bouyer Exp $
+$NetBSD: CHANGES-2017,v 1.1573 2017/04/14 16:40:26 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1948,3 +1948,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/opencpn-pluging-draw to 1.3.31 [bouyer 2017-04-14]
 	Updated geography/opencpn-pluging-watchdog to 20170414 [bouyer 2017-04-14]
 	Updated geography/opencpn-pluging-weather_routing to 20170414 [bouyer 2017-04-14]
+	Added geography/opencpn-plugin-statusbar version 20170414 [bouyer 2017-04-14]
