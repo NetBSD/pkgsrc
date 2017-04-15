@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1578 2017/04/15 09:50:28 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1579 2017/04/15 15:10:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-defusedxml to 0.5.0 [adam 2017-04-14]
 	Updated multimedia/ffmpeg3 to 3.3 [adam 2017-04-15]
 	Updated audio/opencore-amr to 0.1.5 [adam 2017-04-15]
+	Updated time/ruby-tzinfo03 to 0.3.53 [taca 2017-04-15]
