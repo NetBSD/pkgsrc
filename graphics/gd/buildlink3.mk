@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2017/02/28 15:19:59 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2017/04/15 15:50:42 kim Exp $
 
 BUILDLINK_TREE+=	gd
 
@@ -14,6 +14,10 @@ BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 pkgbase := gd
 .include "../../mk/pkg-build-options.mk"
 
+.if !empty(PKG_BUILD_OPTIONS.gd:Mtiff)
+.include "../../graphics/tiff/buildlink3.mk"
+.endif
+
 .if !empty(PKG_BUILD_OPTIONS.gd:Mx11)
 .include "../../x11/libXpm/buildlink3.mk"
 .endif
@@ -23,7 +27,6 @@ pkgbase := gd
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .endif # GD_BUILDLINK3_MK
