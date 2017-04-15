@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2017/04/15 15:48:12 kim Exp $
+# $NetBSD: options.mk,v 1.2 2017/04/15 15:56:00 kim Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libwebp
 PKG_SUPPORTED_OPTIONS=	tiff
+PKG_SUGGESTED_OPTIONS=	tiff
 
 .include "../../mk/bsd.options.mk"
 
