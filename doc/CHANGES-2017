@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1576 2017/04/14 21:17:19 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1577 2017/04/15 09:27:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1952,3 +1952,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/subliminal to 2.0.5nb1 [leot 2017-04-14]
 	Updated www/py-mod_wsgi to 4.5.15 [adam 2017-04-14]
 	Updated textproc/py-defusedxml to 0.5.0 [adam 2017-04-14]
+	Updated multimedia/ffmpeg3 to 3.3 [adam 2017-04-15]
