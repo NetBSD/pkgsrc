@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.5 2017/01/01 22:36:34 leot Exp $
+# $NetBSD: options.mk,v 1.6 2017/04/15 09:26:47 adam Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
-PKG_SUPPORTED_OPTIONS=	ass doc ebur128 fdk-aac fontconfig freetype \
+PKG_SUPPORTED_OPTIONS=	ass doc fdk-aac fontconfig freetype \
 			gnutls lame libvpx opencore-amr openssl opus theora \
 			vorbis x264 x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
@@ -26,14 +26,6 @@ PKG_SUGGESTED_OPTIONS+=	vaapi
 .endif
 
 .include "../../mk/bsd.options.mk"
-
-# EBU R128 audio loudness normalization
-.if !empty(PKG_OPTIONS:Mebur128)
-CONFIGURE_ARGS+=	--enable-libebur128
-.include "../../audio/libebur128/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-libebur128
-.endif
 
 # Fontconfig
 .if !empty(PKG_OPTIONS:Mfontconfig)
