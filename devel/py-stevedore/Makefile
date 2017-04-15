@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/14 14:05:56 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/15 12:30:07 leot Exp $
 
 DISTNAME=	stevedore-1.21.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ DEPENDS+=	${PYPKGPREFIX}-pbr>=2.0.0:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_INCOMPATIBLE=	34
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
