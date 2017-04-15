@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/02/28 14:40:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2017/04/15 15:48:12 kim Exp $
 
 DISTNAME=	libwebp-0.6.0
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://downloads.webmproject.org/releases/webp/
 
@@ -8,6 +9,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://developers.google.com/speed/webp/
 COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
+
+.include "options.mk"
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -29,6 +32,5 @@ PKGCONFIG_OVERRIDE+=	src/libwebp.pc.in
 
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
