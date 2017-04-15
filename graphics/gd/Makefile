@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.114 2017/02/28 15:19:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.115 2017/04/15 15:50:42 kim Exp $
 
 DISTNAME=	libgd-2.2.4
-#PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/libgd/gd/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=libgd/}
 EXTRACT_SUFX=	.tar.xz
@@ -25,7 +24,6 @@ CONFIGURE_ARGS+=	--with-fontconfig=${BUILDLINK_PREFIX.fontconfig}
 CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
-CONFIGURE_ARGS+=	--with-tiff=${BUILDLINK_PREFIX.tiff}
 CONFIGURE_ARGS+=	--with-webp=${BUILDLINK_PREFIX.libwebp}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 REPLACE_PERL+=		src/bdftogd
@@ -37,7 +35,6 @@ PTHREAD_AUTO_VARS=	yes
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
