@@ -1,9 +1,17 @@
-# $NetBSD: options.mk,v 1.5 2016/08/02 18:29:21 adam Exp $
+# $NetBSD: options.mk,v 1.6 2017/04/15 15:50:42 kim Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gd
-PKG_SUPPORTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	tiff x11
+PKG_SUGGESTED_OPTIONS=	tiff
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mtiff)
+.include "../../graphics/tiff/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-tiff=${BUILDLINK_PREFIX.tiff}
+.else
+CONFIGURE_ARGS+=	--without-tiff
+.endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../x11/libXpm/buildlink3.mk"
