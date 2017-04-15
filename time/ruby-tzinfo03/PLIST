@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/11/01 17:09:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/04/15 15:10:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -197,6 +197,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Port_of_Spain.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Porto_Acre.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Porto_Velho.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Puerto_Rico.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Punta_Arenas.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Rainy_River.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Rankin_Inlet.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Recife.rb
@@ -252,6 +253,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Aqtau.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Aqtobe.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ashgabat.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ashkhabad.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Atyrau.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Baghdad.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Bahrain.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Baku.rb
@@ -272,6 +274,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Dhaka.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Dili.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Dubai.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Dushanbe.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Famagusta.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Gaza.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Harbin.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Hebron.rb
@@ -477,6 +480,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Rome.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Samara.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/San_Marino.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Sarajevo.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Saratov.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Simferopol.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Skopje.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Sofia.rb
