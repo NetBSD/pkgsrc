@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:49:51 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/04/15 15:16:17 taca Exp $
 
-SHA1 (thread_safe-0.3.5.gem) = c8d37f72d2c0f7949c89f62a47ad2daebf1f5311
-RMD160 (thread_safe-0.3.5.gem) = 94b3b2b7b427dae928dbea5e5f8edb5bc11d56db
-SHA512 (thread_safe-0.3.5.gem) = 35749e7e9f6a95115d86bbd7bd5cae92f64dbddc36caf5d5ab8bc23db75ade51c31b6b9ef5afac4cfc744cfa624a002468fc0727eff33b69aa80f7bb383df471
-Size (thread_safe-0.3.5.gem) = 120832 bytes
+SHA1 (thread_safe-0.3.6.gem) = 5a60162d065d0f479d61ba0a11734b44f5f7ef19
+RMD160 (thread_safe-0.3.6.gem) = 87759067eeee663151b225d9551196ece567507a
+SHA512 (thread_safe-0.3.6.gem) = a11808576392c068e1cb31faad706be2b1bbfa4837c655c2ab1d5a235b62b25ece62065de6b65bd25496fa827ed89eb0796b90467107df255825e01316ff1805
+Size (thread_safe-0.3.6.gem) = 120832 bytes
