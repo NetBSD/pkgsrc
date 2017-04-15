@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/13 14:41:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/04/15 15:16:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
@@ -34,14 +35,20 @@ ${GEM_LIBDIR}/lib/thread_safe/util/volatile.rb
 ${GEM_LIBDIR}/lib/thread_safe/util/volatile_tuple.rb
 ${GEM_LIBDIR}/lib/thread_safe/util/xor_shift_random.rb
 ${GEM_LIBDIR}/lib/thread_safe/version.rb
+${GEM_LIBDIR}/spec/.gitignore
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/src/thread_safe/SecurityManager.java
+${GEM_LIBDIR}/spec/support/.gitignore
+${GEM_LIBDIR}/spec/support/threads.rb
+${GEM_LIBDIR}/spec/support/threadsafe_test.rb
+${GEM_LIBDIR}/spec/thread_safe/.gitignore
+${GEM_LIBDIR}/spec/thread_safe/array_spec.rb
+${GEM_LIBDIR}/spec/thread_safe/cache_loops_spec.rb
+${GEM_LIBDIR}/spec/thread_safe/cache_spec.rb
+${GEM_LIBDIR}/spec/thread_safe/hash_spec.rb
+${GEM_LIBDIR}/spec/thread_safe/no_unsafe_spec.rb
+${GEM_LIBDIR}/spec/thread_safe/synchronized_delegator_spec.rb
 ${GEM_LIBDIR}/tasks/update_doc.rake
-${GEM_LIBDIR}/test/src/thread_safe/SecurityManager.java
-${GEM_LIBDIR}/test/test_array.rb
-${GEM_LIBDIR}/test/test_cache.rb
-${GEM_LIBDIR}/test/test_cache_loops.rb
-${GEM_LIBDIR}/test/test_hash.rb
-${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/test_synchronized_delegator.rb
 ${GEM_LIBDIR}/thread_safe.gemspec
 ${GEM_LIBDIR}/yard-template/default/fulldoc/html/css/common.css
 ${GEM_LIBDIR}/yard-template/default/layout/html/footer.erb
