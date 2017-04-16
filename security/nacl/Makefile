@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2014/08/12 05:00:34 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.22.1 2017/04/16 14:34:06 bsiegert Exp $
 
 DISTNAME=	nacl-20110221
 CATEGORIES=	security
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	https://hyperelliptic.org/nacl/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://hyperelliptic.org/nacl/
+HOMEPAGE=	https://nacl.cr.yp.to
 COMMENT=	Secure, usable, fast networking and cryptography library
 LICENSE=	djb-nonlicense
 
