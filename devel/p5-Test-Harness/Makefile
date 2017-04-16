@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2017/03/20 13:51:22 mef Exp $
+# $NetBSD: Makefile,v 1.54 2017/04/16 15:24:30 mef Exp $
 
-DISTNAME=	Test-Harness-3.38
+DISTNAME=	Test-Harness-3.39
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}
