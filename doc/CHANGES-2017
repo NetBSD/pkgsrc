@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1589 2017/04/16 10:32:57 cheusov Exp $
+$NetBSD: CHANGES-2017,v 1.1590 2017/04/16 15:48:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1966,3 +1966,16 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/py-Pillow to 4.1.0 [adam 2017-04-16]
 	Updated audio/mpg123 to 1.24.0 [adam 2017-04-16]
 	Updated textproc/jrep to 1.0.1 [cheusov 2017-04-16]
+	Updated devel/p5-Test-Harness to 3.39 [mef 2017-04-16]
+	Updated devel/p5-Test-NoTabs to 2.00 [mef 2017-04-16]
+	Updated devel/p5-Test-Output to 1.03.1 [mef 2017-04-16]
+	Updated devel/p5-Test-Script to 1.18 [mef 2017-04-16]
+	Updated devel/p5-Test-Simple to 1.302083 [mef 2017-04-16]
+	Updated devel/p5-Test-Without-Module to 0.20 [mef 2017-04-16]
+	Updated devel/p5-Search-Elasticsearch to 5.02 [mef 2017-04-16]
+	Updated devel/p5-Sub-Identify to 0.14 [mef 2017-04-16]
+	Updated devel/p5-Sub-Uplevel to 0.2800 [mef 2017-04-16]
+	Updated devel/p5-Term-ProgressBar to 2.18 [mef 2017-04-16]
+	Updated devel/p5-PPI-XS to 0.904 [mef 2017-04-16]
+	Updated devel/p5-Parse-Method-Signatures to 1.003019 [mef 2017-04-16]
+	Updated devel/p5-PerlIO-utf8_strict to 0.007 [mef 2017-04-16]
