@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/07/03 16:37:56 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2017/04/16 10:31:36 cheusov Exp $
 
-SHA1 (jrep-0.6.1.tar.gz) = f26e1f7a61bccab1c0844804abfd0fb5ced8db6e
-RMD160 (jrep-0.6.1.tar.gz) = eebe4edf42d26a60a72f1d39d9c87e0bc5908b16
-SHA512 (jrep-0.6.1.tar.gz) = 3394d68ffc5c155adb259ccb114295bdae0e09bade370e19077bb68a4af80be4e3010b8444117a2834905557ded2bbb78f1f7714e7ba8b4ed4bedbf052c16e99
-Size (jrep-0.6.1.tar.gz) = 21839 bytes
+SHA1 (jrep-1.0.1.tar.gz) = 4546121cc4ce0e7c8bba5401fe6af4d8f5c64794
+RMD160 (jrep-1.0.1.tar.gz) = 3427df4fde82098934a441c690867527b838ad07
+SHA512 (jrep-1.0.1.tar.gz) = 3fe3831888e1d99c0f041faeed6529853304a6f40e816117c041d7b9ad0806d2fee65bdbc76f8e7f1252e8d47d054dc5390b13f69dc467041378dfa1aa384d2b
+Size (jrep-1.0.1.tar.gz) = 22118 bytes
