@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1585 2017/04/15 22:32:08 kim Exp $
+$NetBSD: CHANGES-2017,v 1.1586 2017/04/16 02:50:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1961,3 +1961,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/mediawiki to 1.28.1nb1 [taca 2017-04-15]
 	Updated www/wordpress to 4.7.3nb1 [taca 2017-04-15]
 	Updated misc/screen to 4.5.1 [kim 2017-04-15]
+	Updated sysutils/open-vm-tools to 10.1.5 [ryoon 2017-04-16]
