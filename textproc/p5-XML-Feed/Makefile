@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/06/08 19:24:43 wiz Exp $
+# $NetBSD: Makefile,v 1.24.8.1 2017/04/16 15:11:12 bsiegert Exp $
 
 DISTNAME=		XML-Feed-0.53
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=XML/}
 
@@ -16,15 +16,14 @@ DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Format-Mail-[0-9]*:../../time/p5-DateTime-Format-Mail
 DEPENDS+=		p5-DateTime-Format-W3CDTF-[0-9]*:../../time/p5-DateTime-Format-W3CDTF
 DEPENDS+=		p5-Feed-Find-[0-9]*:../../textproc/p5-Feed-Find
+DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 #DEPENDS+=		{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=		p5-URI-Fetch-[0-9]*:../../www/p5-URI-Fetch
 DEPENDS+=		p5-XML-Atom>=0.38:../../textproc/p5-XML-Atom
 DEPENDS+=		p5-XML-LibXML>=1.66:../../textproc/p5-XML-LibXML
 DEPENDS+=		p5-XML-RSS>=1.47:../../textproc/p5-XML-RSS
-
-BUILD_DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
-BUILD_DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 
 MAKE_ENV+=		PERL_EXTUTILS_AUTOINSTALL=--defaultdeps
 PERL5_PACKLIST=		auto/XML/Feed/.packlist
