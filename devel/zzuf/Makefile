@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/02/23 18:28:51 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2017/04/16 21:46:12 khorben Exp $
 #
 
-DISTNAME=	zzuf-0.13
+DISTNAME=	zzuf-0.15
 CATEGORIES=	devel security
-MASTER_SITES=	http://caca.zoy.org/files/zzuf/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=samhocevar/zzuf/releases/download/v${DISTNAME:C:zzuf-::}/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://caca.zoy.org/wiki/zzuf/
