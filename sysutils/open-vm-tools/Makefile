@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.68 2017/02/20 09:19:27 tnn Exp $
+# $NetBSD: Makefile,v 1.69 2017/04/16 02:49:50 ryoon Exp $
 
-DISTNAME=	open-vm-tools-10.1.0-4449150
-PKGNAME=	open-vm-tools-10.1.0
-PKGREVISION=	3
+DISTNAME=	open-vm-tools-10.1.5-5055683
+PKGNAME=	open-vm-tools-10.1.5
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/vmware/open-vm-tools/files/590760/
+MASTER_SITES=	https://github.com/vmware/open-vm-tools/releases/download/stable-10.1.5/
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	https://github.com/vmware/open-vm-tools
@@ -12,8 +11,6 @@ COMMENT=	Open source VMware tools
 LICENSE=	gnu-lgpl-v2.1
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
-
-WRKSRC=		${WRKDIR}/${DISTNAME}/open-vm-tools
 
 GCC_REQD+=	4.8
 CXXFLAGS+=	-std=gnu++11
