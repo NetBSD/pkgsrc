@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.174 2016/12/29 23:16:26 maya Exp $
+# $NetBSD: gcc.mk,v 1.174.2.1 2017/04/16 14:56:21 bsiegert Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -120,11 +120,11 @@ _GCC3_PATTERNS=	2.95.[4-9]* 2.95.[1-9][0-9]* 2.9[6-9] 2.9[6-9].*	\
 # _GCC34_PATTERNS matches N s.t. 3.4 <= N < 4.
 _GCC34_PATTERNS= 3.[4-9] 3.[4-9].* 3.[1-9][0-9]*
 
-# _GCC44_PATTERNS matches N s.t. 4.4 <= N < 4.5.
-_GCC44_PATTERNS= 4.4 4.4.*
+# _GCC44_PATTERNS matches N s.t. 4.0 <= N < 4.5.
+_GCC44_PATTERNS= 4.[0-4] 4.[0-4].*
 
 # _GCC48_PATTERNS matches N s.t. 4.5 <= N < 4.9.
-_GCC48_PATTERNS= 4.[5678] 4.[5678].*
+_GCC48_PATTERNS= 4.[5-8] 4.[5-8].*
 
 # _GCC49_PATTERNS matches N s.t. 4.9 <= N < 4.10.
 _GCC49_PATTERNS= 4.9 4.9.*
