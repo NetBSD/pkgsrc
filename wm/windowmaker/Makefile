@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2017/03/20 12:29:52 adam Exp $
+# $NetBSD: Makefile,v 1.117.2.1 2017/04/16 15:38:10 bsiegert Exp $
 
 DISTNAME=	WindowMaker-0.95.8
 PKGNAME=	${DISTNAME:tl}
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt perl:run pkg-config xgettext
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-magick
 CONFIGURE_ARGS+=	--enable-pango
 CONFIGURE_ARGS+=	--enable-usermenu
 CONFIGURE_ARGS+=	--enable-xinerama
