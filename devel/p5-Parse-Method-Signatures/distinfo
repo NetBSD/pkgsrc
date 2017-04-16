@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/07/24 06:46:25 wen Exp $
+$NetBSD: distinfo,v 1.10 2017/04/16 13:31:18 mef Exp $
 
-SHA1 (Parse-Method-Signatures-1.003017.tar.gz) = 46a08ce0d64bd20638a54527f42bcb6070f8255f
-RMD160 (Parse-Method-Signatures-1.003017.tar.gz) = cf7a37b380e7f2f1f38f34b4b6f1f3cf08809166
-SHA512 (Parse-Method-Signatures-1.003017.tar.gz) = 823ef6d17d18ded1cb70cd4b1039c68560b7c8c5be1ae621d8abbddd9fe6415663a0840d7df837375f58c6010f563fce33d58d802ad2d1f4b082b1c81939bef3
-Size (Parse-Method-Signatures-1.003017.tar.gz) = 43468 bytes
+SHA1 (Parse-Method-Signatures-1.003019.tar.gz) = a6c63a96ac564170fd87b5e55f7186cc37b772b4
+RMD160 (Parse-Method-Signatures-1.003019.tar.gz) = c10f5270d00c66714f31f878562bde531ac0240f
+SHA512 (Parse-Method-Signatures-1.003019.tar.gz) = 88caed3b2ed92b5d2bc972acc843a31a26f4c76fc6d9782a05176964e4148b5e79e54010b371bf84988e804eb973937b7b591c2b5d50d0ec3be5d91fd3af51ec
+Size (Parse-Method-Signatures-1.003019.tar.gz) = 43561 bytes
