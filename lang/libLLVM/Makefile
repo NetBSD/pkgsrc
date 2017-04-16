@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/03/24 11:43:52 joerg Exp $
+# $NetBSD: Makefile,v 1.20.2.1 2017/04/16 15:09:24 bsiegert Exp $
 
 DISTNAME=	llvm-4.0.0.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -137,9 +137,9 @@ post-install:
 		${PREFIX}/lib/libLLVM/${LLVM_LIBNAME}	\
 		${DESTDIR}${PREFIX}/lib/libLLVM/${LLVM_LIBNAME}
 .else
-	${LN} -s ${LLVM_LIBNAME}	\
+	${LN} -sf ${LLVM_LIBNAME}	\
 		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM.${SOEXT}
-	${LN} -s ${LLVM_LIBNAME}	\
+	${LN} -sf ${LLVM_LIBNAME}	\
 		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-${PKGVERSION_NOREV}.${SOEXT}
 .endif
 
