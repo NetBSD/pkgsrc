@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/01/28 04:57:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.54.2.1 2017/04/16 15:36:15 bsiegert Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -135,8 +135,6 @@ SUBST_FILES.confs+=	docs/conf/extra/httpd-ssl.conf
 SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"
 SUBST_SED.confs+=	-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g"
 SUBST_SED.confs+=	-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g"
-SUBST_SED.confs+=	-e "s|logs/|${VARBASE}/log/httpd/|g"
-SUBST_SED.confs+=	-e 's|/var/log/httpd/foo\.log|logs/foo.log/|g'
 SUBST_SED.confs+=	-e 's|^\(User[	 ]\).*|\1${APACHE_USER}|g'
 SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
 SUBST_SED.confs+=	-e 's|^Listen \(.*\)|Listen 0.0.0.0:\1|g'
