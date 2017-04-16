@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/04/05 15:35:09 wiz Exp $
+$NetBSD: distinfo,v 1.8 2017/04/16 15:38:00 mef Exp $
 
-SHA1 (Sub-Identify-0.13.tar.gz) = f837b8d923d2173885e83ee5fa3ec53b1c2e1560
-RMD160 (Sub-Identify-0.13.tar.gz) = d196c2206c09c5b102bc38806f4ceec75931be2f
-SHA512 (Sub-Identify-0.13.tar.gz) = 16655ea9324202e578ab44139816d61ef961d61c97e2393c19337692670a3f7a27d8dacb7db7b1130ed762f3b6dfc98fe39fe379b546b32576c19bdfa7df70a0
-Size (Sub-Identify-0.13.tar.gz) = 54681 bytes
+SHA1 (Sub-Identify-0.14.tar.gz) = 18f5f9819f5566d3470d60bd2d9baae97bc9f33f
+RMD160 (Sub-Identify-0.14.tar.gz) = b985f1a87583b3bf6fd48b292f39bd474f7b49c0
+SHA512 (Sub-Identify-0.14.tar.gz) = f69f542c84c5c3ca1f1c7f5f58fd2cf19279a65229f43117c31f24ab0e49d5f329bef2bc00f22252fd2e52b4e17f16b279dac438920668e046e59f2e22e52c14
+Size (Sub-Identify-0.14.tar.gz) = 53135 bytes
