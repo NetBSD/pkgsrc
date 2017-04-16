@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.175 2017/04/10 12:22:07 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.176 2017/04/16 23:12:37 khorben Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -316,13 +316,11 @@ CWRAPPERS_APPEND.cc+=	-std=gnu99
 .endif
 
 .if ${OPSYS} == "NetBSD"
-_FORTIFY_CFLAGS.gcc=	-D_FORTIFY_SOURCE=2
 _MKPIE_CFLAGS.gcc=	-fPIC
 # XXX for executables it should be:
 #_MKPIE_CFLAGS.gcc=	-fPIE
 # XXX for libraries a sink wrapper around gcc is required and used instead
 #_MKPIE_LDFLAGS.gcc=	-pie
-_RELRO_LDFLAGS.gcc=	-Wl,-z,relro -Wl,-z,now
 .endif
 
 .if ${OPSYS} == "SunOS"
@@ -337,14 +335,28 @@ CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.gcc}
 # CWRAPPERS_APPEND.ld+=	${_MKPIE_LDFLAGS.gcc}
 .endif
 
+# The user can choose the level of FORTIFY.
+.if ${PKGSRC_USE_FORTIFY} == "weak"
+_FORTIFY_CFLAGS=	-D_FORTIFY_SOURCE=1
+.else
+_FORTIFY_CFLAGS=	-D_FORTIFY_SOURCE=2
+.endif
+
 .if ${_PKGSRC_USE_FORTIFY} == "yes"
-_GCC_CFLAGS+=		${_FORTIFY_CFLAGS.gcc}
-CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS.gcc}
+_GCC_CFLAGS+=		${_FORTIFY_CFLAGS}
+CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS}
+.endif
+
+# The user can choose the level of RELRO.
+.if ${PKGSRC_USE_RELRO} == "partial"
+_RELRO_LDFLAGS=		-Wl,-z,relro
+.else
+_RELRO_LDFLAGS=		-Wl,-z,relro -Wl,-z,now
 .endif
 
 .if ${_PKGSRC_USE_RELRO} == "yes"
-_GCC_LDFLAGS+=		${_RELRO_LDFLAGS.gcc}
-CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS.gcc}
+_GCC_LDFLAGS+=		${_RELRO_LDFLAGS}
+CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS}
 .endif
  
 # The user can choose the level of stack smashing protection.
