@@ -1,0 +1,26 @@
+$NetBSD: patch-configure,v 1.1 2017/04/16 21:46:12 khorben Exp $
+
+Build fix for NetBSD, where:
+* <alloca.h> does not exist but alloca(3) is available in <stdlib.h> instead
+* <sys/select.h> is not automatically visible
+
+--- configure.orig	2016-05-03 06:12:05.000000000 +0000
++++ configure
+@@ -12561,7 +12561,7 @@ fi
+ 
+ done
+ 
+-for ac_header in malloc.h dlfcn.h regex.h sys/cdefs.h sys/socket.h
++for ac_header in alloca.h malloc.h dlfcn.h regex.h sys/cdefs.h sys/socket.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+@@ -12587,7 +12587,7 @@ fi
+ 
+ done
+ 
+-for ac_header in sys/mman.h sys/wait.h sys/resource.h sys/time.h
++for ac_header in sys/mman.h sys/wait.h sys/resource.h sys/select.h sys/time.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
