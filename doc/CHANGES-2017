@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1590 2017/04/16 15:48:25 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1591 2017/04/16 19:49:58 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-PPI-XS to 0.904 [mef 2017-04-16]
 	Updated devel/p5-Parse-Method-Signatures to 1.003019 [mef 2017-04-16]
 	Updated devel/p5-PerlIO-utf8_strict to 0.007 [mef 2017-04-16]
+	Updated misc/raspberrypi-userland to 20170109nb1 [nick 2017-04-16]
