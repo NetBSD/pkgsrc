@@ -323,8 +323,6 @@ func (gd *GlobalData) InitVartypes() {
 		usr("WCALC_CGIDIR", lkNone, BtPrefixPathname)
 		usr("WCALC_CGIPATH", lkNone, BtPathname) // URL path
 		usr("WDM_MANAGERS", lkShell, BtIdentifier)
-		usr("WINDOWMAKER_OPTIONS", lkShell, enum("gnome kde openlook lite"))
-		usr("WINDOWMAKER_THEMES", lkShell, BtPkgName)
 		usr("X10_PORT", lkNone, BtPathname)
 		usr("XAW_TYPE", lkNone, enum("standard 3d xpm neXtaw"))
 		usr("XLOCK_DEFAULT_MODE", lkNone, BtIdentifier)
