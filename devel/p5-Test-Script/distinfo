@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/03/20 14:00:55 mef Exp $
+$NetBSD: distinfo,v 1.11 2017/04/16 15:31:26 mef Exp $
 
-SHA1 (Test-Script-1.16.tar.gz) = 53d934909c4a9e2842d6b74f6cefaa9862a3ec62
-RMD160 (Test-Script-1.16.tar.gz) = 26bcec5cf78b3fb2d902c652594ac601c40e97c4
-SHA512 (Test-Script-1.16.tar.gz) = 92af15cb6909dc59466abfd3061d667230c6e9a69970fc62df3e68c2c7e4d93d0ac3c26d1cdcdec92a5a414078921bcdd8827f8e05ac1241f36f81f5efbb4133
-Size (Test-Script-1.16.tar.gz) = 23247 bytes
+SHA1 (Test-Script-1.18.tar.gz) = 5bd1762187df8f96899691399a4415451a142634
+RMD160 (Test-Script-1.18.tar.gz) = 4460e9742b7265ac29fb6bf8c4d246f527a12ee3
+SHA512 (Test-Script-1.18.tar.gz) = c89e1dd68ca275744ac12811f0d66d42f8fd76766cc515e11e0df2a82beb8cc052253e19b04f5bc86d45e3a9a2a1d6afd5cd4707e8a97f3a9d4c1dd28e4a72b4
+Size (Test-Script-1.18.tar.gz) = 23092 bytes
