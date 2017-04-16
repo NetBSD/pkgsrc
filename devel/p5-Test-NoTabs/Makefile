@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/04/16 15:28:00 mef Exp $
 
-DISTNAME=	Test-NoTabs-1.4
+DISTNAME=	Test-NoTabs-2.00
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -13,7 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/NoTabs/.packlist
-PERL5_MODULE_TYPE=	Module::Install
 
 # Garbage (recursive directory ? exists after patch ?)
 post-patch:
