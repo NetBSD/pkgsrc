@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/02/28 15:20:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2017/04/16 08:11:16 adam Exp $
 
-DISTNAME=	Pillow-4.0.0
+DISTNAME=	Pillow-4.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
 
@@ -11,22 +10,11 @@ HOMEPAGE=	http://python-pillow.org/
 COMMENT=	Python Imaging Library (Fork)
 LICENSE=	hpnd
 
+USE_TOOLS+=	pkg-config
+
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
 
 DEPENDS+=	${PYPKGPREFIX}-olefile-*:../../devel/py-olefile
-
-SUBST_CLASSES+=		fix-path
-SUBST_MESSAGE.fix-path=	Fixing paths.
-SUBST_STAGE.fix-path=	pre-configure
-SUBST_FILES.fix-path=	setup.py
-SUBST_SED.fix-path=	-e 's,/usr/pkg,${PREFIX},'
-SUBST_SED.fix-path+=	-e 's,JPEG_ROOT = None,JPEG_ROOT = _lib_include("${BUILDLINK_PREFIX.jpeg}"),'
-SUBST_SED.fix-path+=	-e 's,JPEG2K_ROOT = None,JPEG2K_ROOT = _lib_include("${BUILDLINK_PREFIX.openjpeg}"),'
-SUBST_SED.fix-path+=	-e 's,ZLIB_ROOT = None,ZLIB_ROOT = _lib_include("${BUILDLINK_PREFIX.zlib}"),'
-SUBST_SED.fix-path+=	-e 's,IMAGEQUANT_ROOT = None,IMAGEQUANT_ROOT = _lib_include("${BUILDLINK_PREFIX.libimagequant}"),'
-SUBST_SED.fix-path+=	-e 's,TIFF_ROOT = None,TIFF_ROOT = _lib_include("${BUILDLINK_PREFIX.tiff}"),'
-SUBST_SED.fix-path+=	-e 's,FREETYPE_ROOT = None,FREETYPE_ROOT = _lib_include("${BUILDLINK_PREFIX.freetype2}"),'
-SUBST_SED.fix-path+=	-e 's,LCMS_ROOT = None,LCMS_ROOT = _lib_include("${BUILDLINK_PREFIX.lcms2}"),'
 
 # XXX: (automatically) testing Pillow fails because it is builded on a
 # separate directory (build/lib.*/PIL/). Manually cp(1) all the files to PIL/
