@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.1 2016/01/15 11:19:06 fhajny Exp $
+# $NetBSD: module.mk,v 1.1.10.1 2017/04/16 15:17:54 bsiegert Exp $
 #
 # Simple Erlang module package framework
 #
@@ -11,6 +11,9 @@ USE_TOOLS+=	gmake pax
 
 REBAR?=		${PREFIX}/bin/rebar
 MAKE_FLAGS+=	REBAR=${REBAR}
+
+# Used by some Erlang packages to use system deps
+MAKE_ENV+=	USE_GLOBAL_DEPS=true
 
 ERL_MOD_NAME?=		${DISTNAME:C/-.*//}
 ERL_MOD_DIR?=		lib/erlang/lib/${ERL_MOD_NAME}-${PKGVERSION_NOREV}
