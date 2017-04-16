@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1587 2017/04/16 07:22:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1588 2017/04/16 08:13:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1963,3 +1963,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/screen to 4.5.1 [kim 2017-04-15]
 	Updated sysutils/open-vm-tools to 10.1.5 [ryoon 2017-04-16]
 	Updated security/gnupg21 to 2.1.20 [wiz 2017-04-16]
+	Updated graphics/py-Pillow to 4.1.0 [adam 2017-04-16]
+	Updated audio/mpg123 to 1.24.0 [adam 2017-04-16]
