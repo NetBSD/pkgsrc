@@ -1,11 +1,11 @@
-$NetBSD: patch-setup.py,v 1.10 2017/01/29 12:46:45 adam Exp $
+$NetBSD: patch-setup.py,v 1.11 2017/04/16 08:11:17 adam Exp $
 
 * Prevent to detect optional tkinter.
 * Disable demo programs.
 
---- setup.py.orig	2017-01-02 11:47:11.000000000 +0000
+--- setup.py.orig	2017-04-04 18:14:25.000000000 +0000
 +++ setup.py
-@@ -99,11 +99,7 @@ def _read(file):
+@@ -95,11 +95,7 @@ def _read(file):
          return fp.read()
  
  
@@ -17,8 +17,8 @@ $NetBSD: patch-setup.py,v 1.10 2017/01/29 12:46:45 adam Exp $
 +_tkinter = None
  
  NAME = 'Pillow'
- PILLOW_VERSION = '4.0.0'
-@@ -771,7 +767,6 @@ try:
+ PILLOW_VERSION = '4.1.0'
+@@ -736,7 +732,6 @@ try:
            ext_modules=[Extension("PIL._imaging", ["_imaging.c"])],
            include_package_data=True,
            packages=find_packages(),
