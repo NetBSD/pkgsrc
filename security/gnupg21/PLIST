@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/04 07:12:35 maya Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/04/16 07:21:48 wiz Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -48,6 +48,7 @@ share/doc/gnupg/OpenPGP
 share/doc/gnupg/README
 share/doc/gnupg/TRANSLATE
 share/doc/gnupg/examples/README
+share/doc/gnupg/examples/debug.prf
 share/doc/gnupg/examples/gpgconf.conf
 share/doc/gnupg/examples/pwpattern.list
 share/doc/gnupg/examples/scd-event
@@ -60,6 +61,7 @@ share/doc/gnupg/examples/systemd-user/gpg-agent-ssh.socket
 share/doc/gnupg/examples/systemd-user/gpg-agent.service
 share/doc/gnupg/examples/systemd-user/gpg-agent.socket
 share/doc/gnupg/examples/trustlist.txt
+share/doc/gnupg/examples/vsnfd.prf
 share/gnupg/dirmngr-conf.skel
 share/gnupg/distsigkey.gpg
 share/gnupg/gpg-conf.skel
