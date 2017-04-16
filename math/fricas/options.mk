@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/08/10 08:13:45 asau Exp $
+# $NetBSD: options.mk,v 1.6.14.1 2017/04/16 15:15:50 bsiegert Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--with-lisp=ecl
 
 # Fix suffix for "fast load" files:
 PLIST_SUBST+=	FASL=${FASL:Q}
+
+PRINT_PLIST_AWK+=	{gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}")}
 
 # Generalize "fast load" files
 PRINT_PLIST_AWK+=	{gsub(/\.${FASL}$$/, ".$${FASL}");}
