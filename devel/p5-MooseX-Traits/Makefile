@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/06/08 19:23:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/04/16 13:37:55 mef Exp $
 
 DISTNAME=	MooseX-Traits-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,7 @@ BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 BUILD_DEPENDS+= p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+= p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
+BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 
 USE_LANGUAGES=		# empty
