@@ -1,0 +1,28 @@
+$NetBSD: patch-config.h.in,v 1.1 2017/04/16 21:46:12 khorben Exp $
+
+Build fix for NetBSD, where:
+* <alloca.h> does not exist but alloca(3) is available in <stdlib.h> instead
+* <sys/select.h> is not automatically visible
+
+--- config.h.in.orig	2017-04-16 21:19:47.000000000 +0000
++++ config.h.in
+@@ -138,6 +138,9 @@
+ /* Define to 1 if you have the <mach/task.h> header file. */
+ #undef HAVE_MACH_TASK_H
+ 
++/* Define to 1 if you have the <alloca.h> header file. */
++#undef HAVE_ALLOCA_H
++
+ /* Define to 1 if you have the <malloc.h> header file. */
+ #undef HAVE_MALLOC_H
+ 
+@@ -252,6 +255,9 @@
+ /* Define to 1 if you have the <sys/resource.h> header file. */
+ #undef HAVE_SYS_RESOURCE_H
+ 
++/* Define to 1 if you have the <sys/select.h> header file. */
++#undef HAVE_SYS_SELECT_H
++
+ /* Define to 1 if you have the <sys/socket.h> header file. */
+ #undef HAVE_SYS_SOCKET_H
+ 
