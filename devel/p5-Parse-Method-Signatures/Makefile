@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/07/24 06:46:25 wen Exp $
+# $NetBSD: Makefile,v 1.20 2017/04/16 13:31:18 mef Exp $
 #
 
-DISTNAME=	Parse-Method-Signatures-1.003017
+DISTNAME=	Parse-Method-Signatures-1.003019
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
@@ -21,6 +21,7 @@ DEPENDS+=	p5-namespace-clean>=0.10:../../devel/p5-namespace-clean
 
 # For test target
 BUILD_DEPENDS+=	p5-Class-Tiny-[0-9]*:../../devel/p5-Class-Tiny
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-aliased-[0-9]*:../../devel/p5-aliased
