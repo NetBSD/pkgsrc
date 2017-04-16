@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2017/01/12 16:02:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2017/04/16 15:28:16 bsiegert Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 
 COMMENT=	Client for the Let's Encrypt CA
@@ -16,10 +17,10 @@ PYTHON_VERSIONS_ACCEPTED=	27
 .include "Makefile.common"
 
 DEPENDS+=	${PYPKGPREFIX}-acme-${PKGVERSION_NOREV}{nb*,}:../../security/py-acme
+DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.7:../../security/py-cryptography
-DEPENDS+=	${PYPKGPREFIX}-dialog>=3.2.2rc1:../../devel/py-dialog2
 DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL-[0-9]*:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-parsedatetime>=2.0:../../time/py-parsedatetime
