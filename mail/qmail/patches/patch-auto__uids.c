@@ -1,8 +1,8 @@
-$NetBSD: patch-auto__uids.c,v 1.1 2017/03/10 03:13:29 schmonz Exp $
+$NetBSD: patch-auto__uids.c,v 1.1.2.1 2017/04/17 16:08:22 bsiegert Exp $
 
 Look up user/group IDs at runtime. Based on Paul Fox's getpwnam.patch.
 
---- auto_uids.c.orig	2017-03-10 01:13:38.000000000 +0000
+--- auto_uids.c.orig	2017-04-04 06:28:23.000000000 +0000
 +++ auto_uids.c
 @@ -0,0 +1,52 @@
 +#include <pwd.h>
@@ -43,16 +43,16 @@ Look up user/group IDs at runtime. Based on Paul Fox's getpwnam.patch.
 +  if (ids[id] >= 0) return ids[id];
 +
 +  switch(id) {
-+  case ID_OWNER:   ids[id] = name2uid("root"); break;
-+  case ID_ALIAS:   ids[id] = name2uid("alias"); break;
-+  case ID_DAEMON:  ids[id] = name2uid("qmaild"); break;
-+  case ID_LOG:     ids[id] = name2uid("qmaill"); break;
-+  case ID_PW:      ids[id] = name2uid("qmailp"); break;
-+  case ID_QUEUE:   ids[id] = name2uid("qmailq"); break;
-+  case ID_REMOTE:  ids[id] = name2uid("qmailr"); break;
-+  case ID_SEND:    ids[id] = name2uid("qmails"); break;
-+  case ID_QMAIL:   ids[id] = name2gid("qmail"); break;
-+  case ID_NOFILES: ids[id] = name2gid("nofiles"); break;
++  case ID_OWNER:   ids[id] = name2uid("@QMAIL_ROOT_USER@"); break;
++  case ID_ALIAS:   ids[id] = name2uid("@QMAIL_ALIAS_USER@"); break;
++  case ID_DAEMON:  ids[id] = name2uid("@QMAIL_DAEMON_USER@"); break;
++  case ID_LOG:     ids[id] = name2uid("@QMAIL_LOG_USER@"); break;
++  case ID_PASSWD:  ids[id] = name2uid("@QMAIL_PASSWD_USER@"); break;
++  case ID_QUEUE:   ids[id] = name2uid("@QMAIL_QUEUE_USER@"); break;
++  case ID_REMOTE:  ids[id] = name2uid("@QMAIL_REMOTE_USER@"); break;
++  case ID_SEND:    ids[id] = name2uid("@QMAIL_SEND_USER@"); break;
++  case ID_QMAIL:   ids[id] = name2gid("@QMAIL_QMAIL_GROUP@"); break;
++  case ID_NOFILES: ids[id] = name2gid("@QMAIL_NOFILES_GROUP@"); break;
 +  default: _exit(113);
 +  }
 +  return ids[id];

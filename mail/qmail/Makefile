@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.80 2017/03/29 13:26:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.80.2.1 2017/04/17 16:08:22 bsiegert Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
-PKGREVISION=		24
+PKGREVISION=		27
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -12,9 +12,8 @@ HOMEPAGE=		http://cr.yp.to/qmail.html
 COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 LICENSE=		public-domain
 
-DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=		queue-fix-[0-9]*:../../mail/queue-fix
+DEPENDS+=		queue-fix>=1.4nb1:../../mail/queue-fix
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
@@ -29,6 +28,16 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_TOOLS+=		nroff
 
 DJB_CONFIG_CMDS=	${ECHO} ${DESTDIR:Q}${QMAILDIR:Q} > conf-destdir;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_ALIAS_USER:Q}     > conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_DAEMON_USER:Q}   >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_LOG_USER:Q}      >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_ROOT_USER:Q}     >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_PASSWD_USER:Q}   >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_QUEUE_USER:Q}    >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_REMOTE_USER:Q}   >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_SEND_USER:Q}     >> conf-users;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_QMAIL_GROUP:Q}    > conf-groups;
+DJB_CONFIG_CMDS+=	${ECHO} ${QMAIL_NOFILES_GROUP:Q} >> conf-groups;
 DJB_BUILD_TARGETS=	man
 INSTALL_TARGET=		setup
 DJB_RESTRICTED=		no
@@ -42,6 +51,7 @@ DOCDIR=			${PREFIX}/share/doc/qmail
 EGDIR=			${PREFIX}/share/examples/qmail
 SHAREDIR=		${PREFIX}/share/qmail
 PLIST_SUBST+=		DARWINSUFX=${DARWINSUFX:Q}
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
 FILES_SUBST+=		OPENSSL=${OPENSSL:Q}
@@ -65,6 +75,10 @@ INSTALLATION_DIRS+=	${EGDIR}/users
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		QMAILDIR QMAIL_QUEUE_DIR QMAIL_QUEUE_EXTRA
+BUILD_DEFS+=		QMAIL_ALIAS_USER QMAIL_DAEMON_USER QMAIL_LOG_USER
+BUILD_DEFS+=		QMAIL_ROOT_USER QMAIL_PASSWD_USER QMAIL_QUEUE_USER
+BUILD_DEFS+=		QMAIL_REMOTE_USER QMAIL_SEND_USER
+BUILD_DEFS+=		QMAIL_QMAIL_GROUP QMAIL_NOFILES_GROUP
 
 .if !empty(QMAIL_QUEUE_DIR:M${QMAILDIR}/*)
 PKG_FAIL_REASON+=	"QMAIL_QUEUE_DIR must not be under ${QMAILDIR}"
@@ -100,40 +114,63 @@ SUBST_FILES.destdir=	Makefile
 SUBST_SED.destdir=	-e 's|\(^load inst.*\.o\) auto_qmail\.o\(.*\)|\1 auto_destdir.o\2|g'
 SUBST_SED.destdir+=	-e 's|\(^	\./load inst.*\) auto_qmail\.o\(.*\)|\1 auto_destdir.o\2|g'
 
+SUBST_CLASSES+=		groups
+SUBST_STAGE.groups=	do-configure
+SUBST_FILES.groups=	auto_uids.c
+SUBST_SED.groups=	-e 's,@QMAIL_QMAIL_GROUP@,${QMAIL_QMAIL_GROUP:Q},g'
+SUBST_SED.groups+=	-e 's,@QMAIL_NOFILES_GROUP@,${QMAIL_NOFILES_GROUP:Q},g'
+
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
-SUBST_FILES.paths=	README.pkgsrc
+SUBST_FILES.paths=	README.*
 SUBST_SED.paths=	-e 's,@PKGNAME@,${PKGNAME:Q},g'
 SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO:Q},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP:Q},g'
+
+SUBST_CLASSES+=		users
+SUBST_STAGE.users=	do-configure
+SUBST_FILES.users=	auto_uids.c
+SUBST_SED.users=	-e 's,@QMAIL_ROOT_USER@,${QMAIL_ROOT_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_ALIAS_USER@,${QMAIL_ALIAS_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_DAEMON_USER@,${QMAIL_DAEMON_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_LOG_USER@,${QMAIL_LOG_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_PASSWD_USER@,${QMAIL_PASSWD_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_QUEUE_USER@,${QMAIL_QUEUE_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_REMOTE_USER@,${QMAIL_REMOTE_USER:Q},g'
+SUBST_SED.users+=	-e 's,@QMAIL_SEND_USER@,${QMAIL_SEND_USER:Q},g'
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
-PKG_GROUPS=		qmail nofiles
-PKG_USERS+=		alias:nofiles
-PKG_USERS+=		qmaill:nofiles qmaild:nofiles qmailp:nofiles
-PKG_USERS+=		qmailq:qmail qmailr:qmail qmails:qmail
+PKG_GROUPS=		${QMAIL_QMAIL_GROUP} ${QMAIL_NOFILES_GROUP}
+PKG_USERS+=		${QMAIL_ALIAS_USER}:${QMAIL_NOFILES_GROUP}
+PKG_USERS+=		${QMAIL_DAEMON_USER}:${QMAIL_NOFILES_GROUP}
+PKG_USERS+=		${QMAIL_LOG_USER}:${QMAIL_NOFILES_GROUP}
+PKG_USERS+=		${QMAIL_PASSWD_USER}:${QMAIL_NOFILES_GROUP}
+PKG_USERS+=		${QMAIL_QUEUE_USER}:${QMAIL_QMAIL_GROUP}
+PKG_USERS+=		${QMAIL_REMOTE_USER}:${QMAIL_QMAIL_GROUP}
+PKG_USERS+=		${QMAIL_SEND_USER}:${QMAIL_QMAIL_GROUP}
 .for user in ${PKG_USERS:C/\:.*//}
 PKG_HOME.${user}=	${QMAILDIR}
 .endfor
 PKG_HOME.alias=		${QMAILDIR}/alias
 
-SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 04711
+SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue ${QMAIL_QUEUE_USER} ${QMAIL_QMAIL_GROUP} 04711
 .for f in qmail-inject qmail-pop3d qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-qread qmail-qstat qmail-showctl qmail-smtpd qmail-tcpok qmail-tcpto
-SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0755
+SPECIAL_PERMS+=		${PREFIX}/bin/${f} ${QMAIL_ROOT_USER} ${QMAIL_QMAIL_GROUP} 0755
 .endfor
 .for f in qmail-clean qmail-getpw qmail-local qmail-popup qmail-pw2u qmail-remote qmail-rspawn qmail-send splogger
-SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0711
+SPECIAL_PERMS+=		${PREFIX}/bin/${f} ${QMAIL_ROOT_USER} ${QMAIL_QMAIL_GROUP} 0711
 .endfor
 .for f in qmail-lspawn qmail-newmrh qmail-newu qmail-start
-SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0700
+SPECIAL_PERMS+=		${PREFIX}/bin/${f} ${QMAIL_ROOT_USER} ${QMAIL_QMAIL_GROUP} 0700
 .endfor
 
 OPSYSVARS+=		DARWINSUFX
 DARWINSUFX.Darwin=	.doc
 DARWINSUFX.*=		# empty
 
-post-extract: post-extract-viruscan
+post-extract: post-extract-srs post-extract-viruscan
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}
 .if ${OPSYS} == "Darwin"
 .	for i in INSTALL SENDMAIL
@@ -154,7 +191,7 @@ pre-install:
 	${LN} -s ${DESTDIR}${QMAIL_QUEUE_DIR}	${DESTDIR}${QMAILDIR}/queue
 	${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
 
-post-install: post-install-viruscan
+post-install: post-install-srs post-install-viruscan
 	${INSTALL_DATA} ${WRKSRC}/README.pkgsrc ${DESTDIR}${DOCDIR}
 
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${SHAREDIR}/setup
