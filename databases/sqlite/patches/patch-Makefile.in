@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.1 2015/03/16 11:56:32 jperkin Exp $
+$NetBSD: patch-Makefile.in,v 1.1.18.1 2017/04/17 16:36:04 bsiegert Exp $
 
-Honour LDFLAGS for bl3.
+* Honour LDFLAGS for bl3.
+* Avoid a warning while generating config.h.
 
 --- Makefile.in.orig	2005-04-23 22:43:23.000000000 +0000
 +++ Makefile.in
@@ -13,3 +14,13 @@ Honour LDFLAGS for bl3.
  LTINSTALL = $(LIBTOOL) --mode=install $(INSTALL)
  
  # Compiler options needed for programs that use the TCL library.
+@@ -268,7 +268,8 @@ parse.c:	$(TOP)/src/parse.y lemon@BUILD_
+ # configure the config.h file.
+ #
+ config.h:	
+-	echo '#include <stdio.h>' >temp.c
++	echo '#include <stdlib.h>' >temp.c
++	echo '#include <stdio.h>' >>temp.c
+ 	echo 'int main(){printf(' >>temp.c
+ 	echo '"#define SQLITE_PTR_SZ %d",sizeof(char*));' >>temp.c
+ 	echo 'exit(0);}' >>temp.c
