@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.38 2017/03/29 13:26:05 schmonz Exp $
+# $NetBSD: options.mk,v 1.38.2.1 2017/04/17 16:08:22 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
 PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex
 PKG_OPTIONS_GROUP.rcpt+=qmail-rcptcheck qmail-realrcptto
 PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-maildiruniq
-PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip qmail-viruscan
+PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip
+PKG_SUPPORTED_OPTIONS+=	qmail-srs qmail-viruscan
 PKG_SUGGESTED_OPTIONS+=	qmail-bigdns qmail-netqmail qmail-realrcptto
 
 .include "../../mk/bsd.options.mk"
@@ -40,6 +41,48 @@ DISTNAME=		netqmail-1.06
 OUTGOINGIP_PATCH=	outgoingip.patch
 PATCHFILES+=		${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
+.endif
+
+PLIST_VARS+=		srs
+.PHONY: post-extract-srs post-install-srs
+.if !empty(PKG_OPTIONS:Mqmail-srs)
+.  include "../../mail/libsrs2/buildlink3.mk"
+SRS_PATCH=		qmail-srs-0.8.patch
+PATCHFILES+=		${SRS_PATCH}
+SITES.${SRS_PATCH}=	http://www.mco2.com.br/opensource/download/qmail/
+PATCH_DIST_STRIP.${SRS_PATCH}=	-p1
+.  if !empty(PKG_OPTIONS:Mqmail-netqmail)
+PATCH_DIST_STRIP.${SRS_PATCH}+=	-l
+SUBST_CLASSES+=		srsnetq1 srsnetq2
+SUBST_STAGE.srsnetq1=	pre-patch
+SUBST_STAGE.srsnetq2=	post-patch
+SUBST_FILES.srsnetq1=	Makefile
+SUBST_FILES.srsnetq2=	Makefile
+SUBST_SED.srsnetq1=	-e 's|^auto_split.o env.a$$|auto_split.o|'
+SUBST_SED.srsnetq2=	-e 's|^auto_split.o$$|auto_split.o env.a|'
+SUBST_SED.srsnetq1+=	-e 's|^	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o env.a$$|	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o|'
+SUBST_SED.srsnetq2+=	-e 's|^	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o \\$$|	substdio.a error.a str.a fs.a auto_qmail.o auto_split.o env.a \\|'
+.  endif
+SUBST_CLASSES+=		srsinclude
+SUBST_STAGE.srsinclude=	do-configure
+SUBST_FILES.srsinclude=	srs.c
+SUBST_SED.srsinclude=	-e 's|/usr/local/include/srs2.h|srs2.h|'
+SUBST_CLASSES+=		srsreadme
+SUBST_STAGE.srsreadme=	do-configure
+SUBST_FILES.srsreadme=	README.srs
+SUBST_SED.srsreadme=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
+SPECIAL_PERMS+=		${PREFIX}/bin/srsfilter ${QMAIL_ROOT_USER} ${QMAIL_QMAIL_GROUP} 0755
+PLIST.srs=		yes
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.srs
+post-extract-srs:
+	${CP} ${FILESDIR}/README.srs ${WRKSRC}
+post-install-srs:
+	${INSTALL_DATA} ${WRKSRC}/README.srs ${DESTDIR}${DOCDIR}
+.else
+post-extract-srs:
+	${DO_NADA}
+post-install-srs:
+	${DO_NADA}
 .endif
 
 PLIST_VARS+=		qregex

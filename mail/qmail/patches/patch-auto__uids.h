@@ -1,4 +1,4 @@
-$NetBSD: patch-auto__uids.h,v 1.1 2017/03/10 03:13:29 schmonz Exp $
+$NetBSD: patch-auto__uids.h,v 1.1.2.1 2017/04/17 16:08:22 bsiegert Exp $
 
 Look up user/group IDs at runtime. Based on Paul Fox's getpwnam.patch.
 
@@ -20,7 +20,7 @@ Look up user/group IDs at runtime. Based on Paul Fox's getpwnam.patch.
 +#define ID_ALIAS   1
 +#define ID_DAEMON  2
 +#define ID_LOG     3
-+#define ID_PW      4
++#define ID_PASSWD  4
 +#define ID_QUEUE   5
 +#define ID_REMOTE  6
 +#define ID_SEND    7
@@ -33,7 +33,7 @@ Look up user/group IDs at runtime. Based on Paul Fox's getpwnam.patch.
 +#define auto_uida qm_id(ID_ALIAS)
 +#define auto_uidd qm_id(ID_DAEMON)
 +#define auto_uidl qm_id(ID_LOG)
-+#define auto_uidp qm_id(ID_PW)
++#define auto_uidp qm_id(ID_PASSWD)
 +#define auto_uidq qm_id(ID_QUEUE)
 +#define auto_uidr qm_id(ID_REMOTE)
 +#define auto_uids qm_id(ID_SEND)
