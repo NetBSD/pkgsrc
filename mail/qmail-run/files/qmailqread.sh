@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailqread.sh,v 1.8 2015/11/25 12:51:30 jperkin Exp $
+# $NetBSD: qmailqread.sh,v 1.8.12.1 2017/04/17 16:12:20 bsiegert Exp $
 #
 # @PKGNAME@ script to control a service providing local non-root
 # users access to see the queue. Adapted from a script by Steinar Haug.
@@ -30,7 +30,7 @@ qmailqread_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailqread_log || qmailqread_logcmd=${qmailqread_nologcmd}
 	fi
-	command="@SETENV@ - @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} -R -1 -u `@ID@ -u qmails` -g `@ID@ -g qmails` 127.0.0.1 20025 @PREFIX@/bin/qmail-qread 2>&1 | @PREFIX@/bin/setuidgid qmaill ${qmailqread_logcmd}"
+	command="@SETENV@ - @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} -R -1 -u `@ID@ -u @QMAIL_SEND_USER@` -g `@ID@ -g @QMAIL_SEND_USER@` 127.0.0.1 20025 @PREFIX@/bin/qmail-qread 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailqread_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
