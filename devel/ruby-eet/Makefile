@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/09/08 15:19:16 joerg Exp $
+# $NetBSD: Makefile,v 1.16.6.1 2017/04/17 14:54:45 bsiegert Exp $
 
 DISTNAME=	ruby-eet-0.1.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -10,8 +10,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://code-monkey.de/pages/ruby-eet
 COMMENT=	Ruby module to read and write EET files
 LICENSE=	mit
-
-RUBY_VERSIONS_ACCEPTED= 18
 
 RUBY_RDOC_REQD=	2.0.0
 USE_RAKE=	YES
