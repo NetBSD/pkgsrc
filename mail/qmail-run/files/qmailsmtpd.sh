@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.10.12.1 2017/04/17 16:12:20 bsiegert Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.10.12.2 2017/04/17 16:15:17 bsiegert Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -18,6 +18,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_datalimit:="146800640"}
 : ${qmailsmtpd_pretcpserver:=""}
 : ${qmailsmtpd_presmtpd:=""}
+: ${qmailsmtpd_smtpdcmd:="@PREFIX@/bin/qmail-smtpd"}
 : ${qmailsmtpd_postsmtpd:=""}
 : ${qmailsmtpd_log:="YES"}
 : ${qmailsmtpd_logcmd:="logger -t nb${name} -p mail.info"}
@@ -48,7 +49,7 @@ qmailsmtpd_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailsmtpd_log || qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailsmtpd_postenv} @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport} ${qmailsmtpd_presmtpd} @PREFIX@/bin/qmail-smtpd ${qmailsmtpd_postsmtpd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailsmtpd_logcmd}"
+	command="@SETENV@ - ${qmailsmtpd_postenv} @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport} ${qmailsmtpd_presmtpd} ${qmailsmtpd_smtpdcmd} ${qmailsmtpd_postsmtpd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailsmtpd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
