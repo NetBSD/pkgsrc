@@ -1,0 +1,60 @@
+ Configuring SRS
+ ===============
+
+You've applied a Sender Rewriting Scheme patch to your qmail installation.
+It is documented more fully by its author here:
+
+<URL:http://www.mco2.com.br/opensource/qmail/srs/>
+
+
+For qmail to SRS-rewrite your outgoing mail:
+
+# echo "srs.$YOURDOMAIN" > @PKG_SYSCONFDIR@/control/srs_domain
+# echo "$SECRET" > @PKG_SYSCONFDIR@/control/srs_secrets
+
+
+For qmail to accept and SRS-check your incoming mail:
+
+# echo "srs.$YOURDOMAIN" >> @PKG_SYSCONFDIR@/control/rcpthosts
+# echo "srs.$YOURDOMAIN:srs" >> @PKG_SYSCONFDIR@/control/virtualdomains
+# echo "| @PREFIX@/bin/srsfilter" > @PKG_SYSCONFDIR@/alias/.qmail-srs-default
+
+
+For other MTAs to deliver mail to your SRS subdomain:
+
+- Create a DNS MX record for "srs.$YOURDOMAIN" pointing to your qmail host.
+
+
+Optional configuration parameters:
+
+Maximum permitted age of a rewritten address, in days (libsrs2 defaults to 21):
+# echo 7 > @PKG_SYSCONFDIR@/control/srs_maxage
+
+Length of generated hash in a rewritten address (longer is more secure):
+# echo 4 > @PKG_SYSCONFDIR@/control/srs_hashlength
+
+Minimum length of hash to require when checking an address (can be shorter):
+# echo 4 > @PKG_SYSCONFDIR@/control/srs_hashmin
+
+Separator to appear after SRS[01] in rewritten addresses (-, +, or =):
+# echo = > @PKG_SYSCONFDIR@/control/srs_separator
+
+Skip rcpthosts check and SRS-rewrite all forwarding (1 to enable):
+# echo 0 > @PKG_SYSCONFDIR@/control/srs_alwaysrewrite
+
+
+Environment variables:
+
+With this patch, by default, qmail-inject rewrites the envelope
+sender if and only if EXT and HOST are set.
+
+To always rewrite, even if EXT and HOST are not set, set QMAILINJECT_FORCE_SRS.
+
+To never rewrite, even if EXT and HOST are set, set QMAILINJECT_SKIP_SRS.
+
+
+More about SRS:
+
+- <URL:http://www.openspf.org/SRS>
+- <URL:http://www.libsrs2.org/>
+- <URL:http://wooledge.org/~greg/qmail-srs.html>

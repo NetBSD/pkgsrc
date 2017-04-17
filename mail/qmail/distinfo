@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2017/03/23 07:24:48 schmonz Exp $
+$NetBSD: distinfo,v 1.31.2.1 2017/04/17 16:08:22 bsiegert Exp $
 
 SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
 RMD160 (qmail-1.03.tar.gz) = b851f273f1d365d38efd949b1efcf35768ffa30f
@@ -48,9 +48,13 @@ SHA1 (qmail-smtpd.patch) = 2f14d7a98686ad5f32bdaaa6e201734302352e71
 RMD160 (qmail-smtpd.patch) = a4496ee44f9a4298404c3f75d23dd985f3ff12bb
 SHA512 (qmail-smtpd.patch) = ada4f2ce3972965b02a7acc9a072deeedafd026e19c2c96b8b4059f1f1fab653409f88cd6ee5f1d4a99dd943e018a1cd6296b05d7fd86e83296aa0150227edbe
 Size (qmail-smtpd.patch) = 3716 bytes
+SHA1 (qmail-srs-0.8.patch) = 44d6075fe22d698b21a9045b0cce7f607bc86eee
+RMD160 (qmail-srs-0.8.patch) = cf86dc7874dc116b31bf933f18615c75cfc4c0c4
+SHA512 (qmail-srs-0.8.patch) = a2a6c26a02d1c607f4ed4f73d6c8b57ed6a6c31126f20b073e9cd2258ca43c0da98a67de254df30e07e3887c90239cba0ccf3f45d535f4c66017217da1732f9b
+Size (qmail-srs-0.8.patch) = 25412 bytes
 SHA1 (patch-Makefile) = 7ab7c2893393f42d8587a14a2d0c86c09e60061a
-SHA1 (patch-auto__uids.c) = f900b61e047eb8776e5ff2e0381f2a53d49fafad
-SHA1 (patch-auto__uids.h) = 5041dc91e51fc8413c0bf5e83c3d6b423f71cf86
+SHA1 (patch-auto__uids.c) = df4e83de90bfe7845d5e12abd4309258e4eb36b1
+SHA1 (patch-auto__uids.h) = f38c649b05e5540e6e1035edca8b9ac980d9af0b
 SHA1 (patch-hier.c) = 7578a0977f168e337748773d63e57504bf7bf075
 SHA1 (patch-pkgsrc__user__destdir__fake__chown.c) = 3897b81327ca5c59503199d08dd6ed5cdc6a531a
 SHA1 (patch-pkgsrc__user__destdir__fake__uids.h) = 139f6cf38c1b928265a16bd3335b8ce6d7563f96

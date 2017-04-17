@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/05/30 21:35:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.16.24.1 2017/04/17 16:08:22 bsiegert Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -42,6 +42,7 @@ bin/qreceipt
 bin/qsmhook
 bin/sendmail
 bin/splogger
+${PLIST.srs}bin/srsfilter
 bin/tcp-env
 ${PLIST.tls}bin/update_tmprsadh
 man/man1/bouncesaying.1
@@ -112,6 +113,7 @@ share/doc/qmail/PIC.relaybad
 share/doc/qmail/PIC.relaygood
 share/doc/qmail/PIC.rem2local
 share/doc/qmail/README.pkgsrc
+${PLIST.srs}share/doc/qmail/README.srs
 ${PLIST.qregex}share/doc/qmail/README.qregex
 share/doc/qmail/REMOVE.binmail
 share/doc/qmail/REMOVE.sendmail
