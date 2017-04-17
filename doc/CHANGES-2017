@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1592 2017/04/16 21:47:23 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1593 2017/04/17 07:28:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-PerlIO-utf8_strict to 0.007 [mef 2017-04-16]
 	Updated misc/raspberrypi-userland to 20170109nb1 [nick 2017-04-16]
 	Updated devel/zzuf to 0.15 [khorben 2017-04-16]
+	Updated x11/libdrm to 2.4.80 [wiz 2017-04-17]
