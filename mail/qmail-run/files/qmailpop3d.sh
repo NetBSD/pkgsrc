@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.10.12.1 2017/04/17 16:12:20 bsiegert Exp $
+# $NetBSD: qmailpop3d.sh,v 1.10.12.2 2017/04/17 16:15:17 bsiegert Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -17,6 +17,7 @@ name="qmailpop3d"
 : ${qmailpop3d_datalimit:="146800640"}
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_prepop3d:=""}
+: ${qmailpop3d_pop3dcmd:="@PREFIX@/bin/qmail-pop3d"}
 : ${qmailpop3d_checkpassword:="@PREFIX@/bin/checkpassword"}
 : ${qmailpop3d_maildirname:="Maildir"}
 : ${qmailpop3d_log:="YES"}
@@ -48,7 +49,7 @@ qmailpop3d_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailpop3d_log || qmailpop3d_logcmd=${qmailpop3d_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailpop3d_postenv} @PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3` ${qmailpop3d_tcphost} ${qmailpop3d_tcpport} @PREFIX@/bin/qmail-popup `@HEAD@ -1 @PKG_SYSCONFDIR@/control/me` ${qmailpop3d_checkpassword} ${qmailpop3d_prepop3d} @PREFIX@/bin/qmail-pop3d ${qmailpop3d_maildirname} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailpop3d_logcmd}"
+	command="@SETENV@ - ${qmailpop3d_postenv} @PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3` ${qmailpop3d_tcphost} ${qmailpop3d_tcpport} @PREFIX@/bin/qmail-popup `@HEAD@ -1 @PKG_SYSCONFDIR@/control/me` ${qmailpop3d_checkpassword} ${qmailpop3d_prepop3d} ${qmailpop3d_pop3dcmd} ${qmailpop3d_maildirname} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailpop3d_logcmd}"
 	command_args="&"
 	rc_flags=""
 }

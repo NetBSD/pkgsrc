@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.1.2.1 2017/04/17 16:12:20 bsiegert Exp $
+# $NetBSD: qmailofmipd.sh,v 1.1.2.2 2017/04/17 16:15:17 bsiegert Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -18,6 +18,7 @@ name="qmailofmipd"
 : ${qmailofmipd_datalimit:="146800640"}
 : ${qmailofmipd_pretcpserver:=""}
 : ${qmailofmipd_preofmipd:=""}
+: ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
 : ${qmailofmipd_logcmd:="logger -t nb${name} -p mail.info"}
@@ -48,7 +49,7 @@ qmailofmipd_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailofmipd_log || qmailofmipd_logcmd=${qmailofmipd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailofmipd_postenv} @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailofmipd_tcphost} ${qmailofmipd_tcpport} ${qmailofmipd_preofmipd} @PREFIX@/bin/ofmipd ${qmailofmipd_postofmipd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
+	command="@SETENV@ - ${qmailofmipd_postenv} @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailofmipd_tcphost} ${qmailofmipd_tcpport} ${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
