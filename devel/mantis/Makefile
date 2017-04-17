@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2016/09/11 17:03:25 taca Exp $
+# $NetBSD: Makefile,v 1.48.6.1 2017/04/17 15:52:46 bsiegert Exp $
 
 DISTNAME=	mantisbt-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
@@ -52,6 +52,10 @@ INSTALLATION_DIRS+=	share/doc/mantis ${EGDIR} ${MANTIS_HOME}
 
 post-extract:
 	${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
+
+# Get rid of patch leftovers
+post-patch:
+	${RM} ${WRKSRC}/*.orig
 
 do-install:
 	cd ${WRKSRC}/doc && \
