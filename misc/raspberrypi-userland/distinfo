@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.8 2017/01/12 05:49:54 skrll Exp $
+$NetBSD: distinfo,v 1.8.2.1 2017/04/17 16:21:33 bsiegert Exp $
 
 SHA1 (userland-20170109-734d76b0675685e9ec9148694f2cc00f58e5ebc0.tar.gz) = 6d5db24f38e40a2aed866c8b96cd88074a4dc93b
 RMD160 (userland-20170109-734d76b0675685e9ec9148694f2cc00f58e5ebc0.tar.gz) = 0ac98329e36095fad45017d972eb0a14b7f3b30b
 SHA512 (userland-20170109-734d76b0675685e9ec9148694f2cc00f58e5ebc0.tar.gz) = 937591729ee19ee56722b354565163b07a23ba76d211c3bf5f340789e8fef334f18066448d59e4acd1147abfb7bd7c4c1a7fba6917a4072a59e2c17afd774e73
 Size (userland-20170109-734d76b0675685e9ec9148694f2cc00f58e5ebc0.tar.gz) = 32917687 bytes
 SHA1 (patch-host__applications_linux_apps_dtmerge_dtmerge.c) = 732dc54db48d43b97d558cd938617418bc0c3655
+SHA1 (patch-host__applications_linux_apps_dtoverlay_dtoverlay__main.c) = e6605a31f65b49b8993af3eff91aa523ae8acff6
 SHA1 (patch-host__applications_linux_apps_tvservice_tvservice.c) = 2cc304252c102d46603f6649eb959984e9d44b1f
 SHA1 (patch-interface_vchiq__arm_vchiq__lib.c) = a9535aa96ba3374f2a559899c6baff9ddc935f3f
 SHA1 (patch-interface_vcos_CMakeLists.txt) = f96c052af9c1d10f3f386efc1b5d0006559e4e67
