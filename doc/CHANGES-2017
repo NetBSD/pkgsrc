@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1596 2017/04/17 08:48:01 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1597 2017/04/17 09:52:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1985,3 +1985,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libmp4v2 to 1.6.1nb4 [wiz 2017-04-17]
 	Updated multimedia/fuppes to 0.660nb33 [wiz 2017-04-17]
 	Removed multimedia/mpeg4ip successor multimedia/libmp4v2 [wiz 2017-04-17]
+	Updated misc/fzy to 0.9 [leot 2017-04-17]
