@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1594 2017/04/17 08:41:06 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1595 2017/04/17 08:41:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1983,3 +1983,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/zzuf to 0.15 [khorben 2017-04-16]
 	Updated x11/libdrm to 2.4.80 [wiz 2017-04-17]
 	Updated multimedia/libmp4v2 to 1.6.1nb4 [wiz 2017-04-17]
+	Updated multimedia/fuppes to 0.660nb33 [wiz 2017-04-17]
