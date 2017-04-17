@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1597 2017/04/17 09:52:16 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1598 2017/04/17 09:58:59 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/fuppes to 0.660nb33 [wiz 2017-04-17]
 	Removed multimedia/mpeg4ip successor multimedia/libmp4v2 [wiz 2017-04-17]
 	Updated misc/fzy to 0.9 [leot 2017-04-17]
+	Updated devel/mantis to 1.3.1nb2 [maya 2017-04-17]
