@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.11 2017/04/16 15:40:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.12 2017/04/17 16:37:17 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -154,4 +154,46 @@ www/apache24: build fix
 
 Pullup ticket #5288 - requested by sevan
 wm/windowmaker: build fix
+
+Pullup ticket #5258 - requested by sevan
+chat/gajim: build fix
+
+Pullup ticket #5263 - requested by sevan
+security/gnutls: build fix
+
+Pullup ticket #5290 - requested by sevan
+www/nginx: option name change
+
+Pullup ticket #5291 - requested by sevan
+emulators/qemu: build fix
+
+Pullup ticket #5289 - requested by sevan
+devel/ruby-eet: build fix
+
+Pullup ticket #5300 - requested by maya
+devel/mantis: security fix
+
+Pullup ticket #5296 - requested by schmonz
+mail/queue-fix: bugfix
+
+Pullup ticket #5297 - requested by schmonz
+mk/default: prerequisites for qmail pull-up
+
+Pullup ticket #5254 - requested by schmonz
+mail/qmail: build fix
+
+Pullup ticket #5255 - requested by schmonz
+mail/qmail-run: bugfix
+
+Pullup ticket #5256 - requested by schmonz
+mail/qmail-run: bugfix
+
+Pullup ticket #5298 - requested by sevan
+mk/wrapper: bugfix
+
+Pullup ticket #5299 - requested by sevan
+misc/raspberrypi-userland: bugfix
+
+Pullup ticket #5301 - requested by sevan
+databases/sqlite: build fix
 
