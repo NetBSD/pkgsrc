@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/03/20 12:23:39 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/17 12:50:24 mef Exp $
 
 DISTNAME=	Term-Table-0.006
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/E/EX/EXODIST/
 COMMENT=	Format a header and rows into a table
 LICENSE=	${PERL5_LICENSE}
+
+# for make test
+BUILD_DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=	p5-Importer-[0-9]*:../../devel/p5-Importer
 
 PERL5_PACKLIST=	auto/Term/Table/.packlist
 
