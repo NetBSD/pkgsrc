@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.1 2017/01/09 04:58:09 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.1.2.1 2017/04/17 16:12:20 bsiegert Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -21,7 +21,7 @@ name="qmailofmipd"
 : ${qmailofmipd_postofmipd:=""}
 : ${qmailofmipd_log:="YES"}
 : ${qmailofmipd_logcmd:="logger -t nb${name} -p mail.info"}
-: ${qmailofmipd_nologcmd:="/usr/pkg/bin/multilog -*"}
+: ${qmailofmipd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -31,7 +31,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/concurrencyofmip"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-command="/usr/pkg/bin/tcpserver"
+command="@PREFIX@/bin/tcpserver"
 procname=${name}
 start_precmd="qmailofmipd_precmd"
 extra_commands="stat pause cont cdb"
@@ -48,7 +48,7 @@ qmailofmipd_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailofmipd_log || qmailofmipd_logcmd=${qmailofmipd_nologcmd}
 	fi
-	command="/usr/bin/env - ${qmailofmipd_postenv} /usr/pkg/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver} /usr/pkg/bin/argv0 /usr/pkg/bin/tcpserver ${name} ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb -c `/usr/bin/head -1 @PKG_SYSCONFDIR@/control/concurrencyofmip` -u `/usr/bin/id -u qmaild` -g `/usr/bin/id -g qmaild` ${qmailofmipd_tcphost} ${qmailofmipd_tcpport} ${qmailofmipd_preofmipd} /usr/pkg/bin/ofmipd ${qmailofmipd_postofmipd} 2>&1 | /usr/pkg/bin/setuidgid qmaill ${qmailofmipd_logcmd}"
+	command="@SETENV@ - ${qmailofmipd_postenv} @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip` -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@` ${qmailofmipd_tcphost} ${qmailofmipd_tcpport} ${qmailofmipd_preofmipd} @PREFIX@/bin/ofmipd ${qmailofmipd_postofmipd} 2>&1 | @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
@@ -81,7 +81,7 @@ qmailofmipd_cont()
 qmailofmipd_cdb()
 {
 	echo "Reloading @PKG_SYSCONFDIR@/tcp.ofmip."
-	/usr/pkg/bin/tcprules @PKG_SYSCONFDIR@/tcp.ofmip.cdb @PKG_SYSCONFDIR@/tcp.ofmip.tmp < @PKG_SYSCONFDIR@/tcp.ofmip
+	@PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.ofmip.cdb @PKG_SYSCONFDIR@/tcp.ofmip.tmp < @PKG_SYSCONFDIR@/tcp.ofmip
 	/bin/chmod 644 @PKG_SYSCONFDIR@/tcp.ofmip.cdb
 }
 
