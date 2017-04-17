@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.17 2017/02/27 05:19:29 adam Exp $
+$NetBSD: patch-configure,v 1.17.2.1 2017/04/17 14:51:06 bsiegert Exp $
 
 Don't use gld on SunOS
 Use ncursesw6-config; define NCURSES_WIDECHAR to fix building on Darwin (at least).
@@ -21,8 +21,8 @@ avoid bad substitution
    else
 -    curses_inc_list="$($pkg_config --cflags ncursesw 2>/dev/null):-I/usr/include/ncursesw:"
 -    curses_lib_list="$($pkg_config --libs ncursesw 2>/dev/null):-lncursesw:-lcursesw"
-+    curses_inc_list="$(/dist/pkg/bin/ncursesw6-config --cflags 2>/dev/null):-I/usr/include/ncursesw:"
-+    curses_lib_list="$(/dist/pkg/bin/ncursesw6-config --libs 2>/dev/null):-lncursesw:-lcursesw"
++    curses_inc_list="$(@PREFIX@/bin/ncursesw6-config --cflags 2>/dev/null):-I/usr/include/ncursesw:"
++    curses_lib_list="$(@PREFIX@/bin/ncursesw6-config --libs 2>/dev/null):-lncursesw:-lcursesw"
    fi
    curses_found=no
    cat > $TMPC << EOF
