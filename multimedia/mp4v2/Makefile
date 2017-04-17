@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/03 22:26:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/17 08:48:01 wiz Exp $
 
 DISTNAME=		mp4v2-2.0.0
 CATEGORIES=		multimedia
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.google.com/p/mp4v2/
 COMMENT=		Library for reading and modifying mp4 files
 LICENSE=		mpl-1.1
-
-CONFLICTS+=		mpeg4ip<1.5.0.1 libmp4v2-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
