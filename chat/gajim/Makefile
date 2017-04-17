@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/02/12 06:25:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2017/04/17 14:39:44 bsiegert Exp $
 
 DISTNAME=	gajim-0.15
 PKGREVISION=	16
@@ -12,7 +12,6 @@ COMMENT=	Jabber client written in PyGTK
 LICENSE=	gnu-gpl-v3
 
 DEPENDS=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
 DEPENDS=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2

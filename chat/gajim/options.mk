@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2017/01/01 14:43:25 wiz Exp $
+# $NetBSD: options.mk,v 1.8.2.1 2017/04/17 14:39:44 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
-PKG_SUPPORTED_OPTIONS=	avahi gnome gnome-keyring ssl
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUPPORTED_OPTIONS=	avahi dbus gnome gnome-keyring ssl
+PKG_SUGGESTED_OPTIONS=	dbus ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -26,4 +26,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-ORBit via py-gnome2
 # gnome-keyring
 .if !empty(PKG_OPTIONS:Mgnome-keyring)
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
+.endif
+
+# dbus
+.if !empty(PKG_OPTIONS:Mdbus)
+DEPENDS=	${PYPKGPREFIX}-dbus>=0.81:../../sysutils/py-dbus
 .endif
