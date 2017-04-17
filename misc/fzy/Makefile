@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/01/01 16:03:37 leot Exp $
+# $NetBSD: Makefile,v 1.3 2017/04/17 09:51:54 leot Exp $
 
-DISTNAME=	fzy-0.8
+DISTNAME=	fzy-0.9
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jhawthorn/}
 
