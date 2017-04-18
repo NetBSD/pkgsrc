@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/19 12:32:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/04/18 15:39:19 fhajny Exp $
 ${PYSITELIB}/concurrent/__init__.py
 ${PYSITELIB}/concurrent/__init__.pyc
 ${PYSITELIB}/concurrent/__init__.pyo
@@ -18,5 +18,4 @@ ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
