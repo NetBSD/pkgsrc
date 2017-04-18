@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1601 2017/04/18 02:06:49 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1602 2017/04/18 13:31:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1990,3 +1990,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-itex2MML to 1.5.5 [minskim 2017-04-18]
 	Updated textproc/xhtmldiff to 1.2.2nb3 [minskim 2017-04-18]
 	Added devel/ruby-activemodel42 version 4.2.8 [minskim 2017-04-18]
+	Updated comms/minicom to 2.7.1 [wiz 2017-04-18]
