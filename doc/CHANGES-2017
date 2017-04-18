@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1606 2017/04/18 15:39:27 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1607 2017/04/18 15:47:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-cassandra-driver to 3.9.0 [fhajny 2017-04-18]
 	Updated net/py-lexicon to 2.0.7 [fhajny 2017-04-18]
 	Updated devel/py-futures to 3.1.1 [fhajny 2017-04-18]
+	Updated sysutils/consul to 0.8.1 [fhajny 2017-04-18]
