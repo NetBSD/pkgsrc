@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/25 06:56:57 asau Exp $
+# $NetBSD: Makefile,v 1.10 2017/04/18 00:44:27 minskim Exp $
 
 DISTNAME=	itexToMML
 PKGNAME=	${RUBY_PKGPREFIX}-itex2MML-${ITEX2MML_VERSION}
@@ -13,14 +13,14 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2 OR mpl-1.0
 
 BUILD_DEPENDS+=	swig>=1.3:../../devel/swig
 
-ITEX2MML_VERSION=	1.4.5
+ITEX2MML_VERSION=	1.5.5
 
 USE_TOOLS+=		bison flex gmake
 WRKSRC=			${WRKDIR}/${DISTNAME}/itex-src
 BUILD_TARGET=		ruby
 INSTALL_TARGET=		install_ruby
 
-INSTALLATION_DIRS+=	${RUBY_VENDORARCHLIB}
+INSTALLATION_DIRS+=	${RUBY_SITEARCHLIB}
 MAKE_ENV+=		RUBY=${RUBY:Q}
 
 .include "../../lang/ruby/modules.mk"
