@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/08/13 00:50:13 wen Exp $
+# $NetBSD: Makefile,v 1.36 2017/04/18 14:02:10 mef Exp $
 
 DISTNAME=	GraphViz-2.22
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 # This is for the 'test' target
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+BUILD_DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
 
 USE_TOOLS+=	pax
 
