@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1603 2017/04/18 13:51:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1604 2017/04/18 15:31:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1992,3 +1992,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-activemodel42 version 4.2.8 [minskim 2017-04-18]
 	Updated comms/minicom to 2.7.1 [wiz 2017-04-18]
 	Updated misc/calibre to 2.83.0 [wiz 2017-04-18]
+	Updated databases/py-cassandra-driver to 3.9.0 [fhajny 2017-04-18]
