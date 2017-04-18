@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1604 2017/04/18 15:31:45 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1605 2017/04/18 15:35:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/minicom to 2.7.1 [wiz 2017-04-18]
 	Updated misc/calibre to 2.83.0 [wiz 2017-04-18]
 	Updated databases/py-cassandra-driver to 3.9.0 [fhajny 2017-04-18]
+	Updated net/py-lexicon to 2.0.7 [fhajny 2017-04-18]
