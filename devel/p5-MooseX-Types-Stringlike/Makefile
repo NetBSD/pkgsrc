@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 19:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/18 13:57:14 mef Exp $
 #
 
 DISTNAME=	MooseX-Types-Stringlike-0.003
@@ -13,6 +13,8 @@ COMMENT=	Commonly-used type constraints that do not ship with Moose by default
 LICENSE=	apache-2.0
 
 DEPENDS+=	p5-MooseX-Types-[0-9]*:../../devel/p5-MooseX-Types
+# for make test
+BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MooseX/Types/Stringlike/.packlist
