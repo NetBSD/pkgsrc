@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2017/04/18 00:56:31 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2017/04/18 01:16:54 minskim Exp $
 
 DISTNAME=	xhtmldiff-1.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://theinternetco.net/projects/ruby/
 # necessary since it will be overwritten by gem.mk
