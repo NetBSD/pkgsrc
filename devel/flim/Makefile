@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/12/12 11:42:49 hauke Exp $
+# $NetBSD: Makefile,v 1.39 2017/04/18 16:26:45 jperkin Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -45,7 +45,7 @@ post-build:
 
 do-install: plist
 	cd ${WRKSRC};							\
-	grep -v '^@' ${PLIST} | grep -E '/site-(|packages/)lisp/flim/' | \
+	${GREP} -v '^@' ${PLIST} | ${EGREP} '/site-(packages/)?lisp/flim/' | \
 	while read file; do						\
 		file=$$( basename $$file );				\
 		${INSTALL_DATA} $$file					\
