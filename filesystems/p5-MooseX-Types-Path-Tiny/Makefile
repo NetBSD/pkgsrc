@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 19:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/18 14:00:57 mef Exp $
 #
 
 DISTNAME=	MooseX-Types-Path-Tiny-0.011
@@ -18,6 +18,7 @@ DEPENDS+=	p5-MooseX-Types-Stringlike-[0-9]*:../../devel/p5-MooseX-Types-Stringli
 DEPENDS+=	p5-Path-Tiny-[0-9]*:../../filesystems/p5-Path-Tiny
 # for make test
 BUILD_DEPENDS+=	p5-File-pushd-[0-9]*:../../devel/p5-File-pushd
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_MODULE_TYPE=	Module::Build::Tiny
 USE_LANGUAGES=	# empty
