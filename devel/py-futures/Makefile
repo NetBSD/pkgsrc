@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/01/01 14:43:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/04/18 15:39:19 fhajny Exp $
 
-DISTNAME=	futures-3.0.5
+DISTNAME=	futures-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/futures/}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PYPI:=f/futures/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/agronholm/pythonfutures
 COMMENT=	Library brings asynchronous computations from Python 3.x
-LICENSE=	modified-bsd
+LICENSE=	python-software-foundation
 
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # included in 3+
 
