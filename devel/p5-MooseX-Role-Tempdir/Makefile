@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/07/15 11:41:11 wen Exp $
+# $NetBSD: Makefile,v 1.6 2017/04/18 13:55:45 mef Exp $
 #
 
 DISTNAME=	MooseX-Role-Tempdir-0.100
@@ -14,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 # for make test
 BUILD_DEPENDS+=	p5-MooseX-Role-Parameterized-[0-9]*:../../devel/p5-MooseX-Role-Parameterized
 BUILD_DEPENDS+= p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 PERL5_PACKLIST=	auto/MooseX/Role/Tempdir/.packlist
 USE_LANGUAGES=	# none
