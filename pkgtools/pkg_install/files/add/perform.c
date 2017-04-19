@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.108 2015/12/27 12:36:42 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.109 2017/04/19 21:42:50 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.108 2015/12/27 12:36:42 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.109 2017/04/19 21:42:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -50,6 +50,7 @@ __RCSID("$NetBSD: perform.c,v 1.108 2015/12/27 12:36:42 joerg Exp $");
 #if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
+#include <limits.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -827,8 +828,7 @@ extract_files(struct pkg_task *pkg)
 out:
 	if (!NoRecord)
 		pkgdb_close();
-	archive_write_close(writer);
-	archive_write_finish(writer);
+	archive_write_free(writer);
 
 	return r;
 }
@@ -1373,9 +1373,7 @@ check_license(struct pkg_task *pkg)
 static int
 pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 {
-#ifndef BOOTSTRAP
 	char *archive_name;
-#endif
 	int status, invalid_sig;
 	struct pkg_task *pkg;
 
@@ -1383,26 +1381,19 @@ pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 
 	status = -1;
 
-#ifdef BOOTSTRAP
-	pkg->archive = archive_read_new();
-	archive_read_support_compression_all(pkg->archive);
-	archive_read_support_format_all(pkg->archive);
-	if (archive_read_open_filename(pkg->archive, pkgpath, 1024)) {
-		warnx("no pkg found for '%s', sorry.", pkgpath);
-		archive_read_free(pkg->archive);
-		goto clean_find_archive;
-	}
-#else
 	pkg->archive = find_archive(pkgpath, top_level, &archive_name);
 	if (pkg->archive == NULL) {
 		warnx("no pkg found for '%s', sorry.", pkgpath);
 		goto clean_find_archive;
 	}
 
+#ifndef BOOTSTRAP
 	invalid_sig = pkg_verify_signature(archive_name, &pkg->archive, &pkg->entry,
 	    &pkg->pkgname);
-	free(archive_name);
+#else
+	invalid_sig = 0;
 #endif
+	free(archive_name);
 
 	if (pkg->archive == NULL)
 		goto clean_memory;
@@ -1572,7 +1563,7 @@ clean_memory:
 	free_plist(&pkg->plist);
 	free_meta_data(pkg);
 	if (pkg->archive)
-		archive_read_finish(pkg->archive);
+		archive_read_free(pkg->archive);
 	free(pkg->other_version);
 	free(pkg->pkgname);
 clean_find_archive:
