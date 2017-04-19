@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.924 2017/04/14 14:18:29 leot Exp $
+# $NetBSD: Makefile,v 1.925 2017/04/19 06:13:43 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -846,6 +846,7 @@ SUBDIR+=	ruby-nqxml
 SUBDIR+=	ruby-oniguruma
 SUBDIR+=	ruby-plist
 SUBDIR+=	ruby-pure-hyperestraier
+SUBDIR+=	ruby-rails-dom-testing
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-redcarpet
 SUBDIR+=	ruby-redcloth
