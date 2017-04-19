@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/12/04 20:39:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/04/19 13:32:12 wiz Exp $
 bin/sndfile-cmp
 bin/sndfile-concat
 bin/sndfile-convert
@@ -8,7 +8,6 @@ bin/sndfile-interleave
 bin/sndfile-metadata-get
 bin/sndfile-metadata-set
 bin/sndfile-play
-bin/sndfile-regtest
 bin/sndfile-salvage
 include/sndfile.h
 include/sndfile.hh
@@ -28,7 +27,6 @@ share/doc/libsndfile/FAQ.html
 share/doc/libsndfile/api.html
 share/doc/libsndfile/bugs.html
 share/doc/libsndfile/command.html
-share/doc/libsndfile/dither.html
 share/doc/libsndfile/embedded_files.html
 share/doc/libsndfile/index.html
 share/doc/libsndfile/libsndfile.css
