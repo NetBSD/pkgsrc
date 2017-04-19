@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1223 2017/04/19 06:49:07 minskim Exp $
+# $NetBSD: Makefile,v 1.1224 2017/04/19 22:37:00 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -735,6 +735,7 @@ SUBDIR+=	raggle
 SUBDIR+=	ramaze
 SUBDIR+=	rekonq
 SUBDIR+=	ruby-actionpack32
+SUBDIR+=	ruby-actionview42
 SUBDIR+=	ruby-activeresource32
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-capybara
