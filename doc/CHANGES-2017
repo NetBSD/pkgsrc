@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1653 2017/04/19 21:10:22 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1654 2017/04/19 21:43:11 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/waf to 1.9.9 [wiz 2017-04-19]
 	Updated net/wireshark to 2.2.6 [wiz 2017-04-19]
 	Updated emulators/mame to 0.184 [wiz 2017-04-19]
+	Updated pkgtools/pkg_install to 20170419nb1 [joerg 2017-04-19]
