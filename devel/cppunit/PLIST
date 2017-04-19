@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2013/08/15 10:26:32 gsutre Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/04/19 12:20:08 wiz Exp $
 bin/DllPlugInTester
-bin/cppunit-config
 include/cppunit/AdditionalMessage.h
 include/cppunit/Asserter.h
 include/cppunit/BriefTestProgressListener.h
@@ -62,28 +61,24 @@ include/cppunit/plugin/PlugInManager.h
 include/cppunit/plugin/PlugInParameters.h
 include/cppunit/plugin/TestPlugIn.h
 include/cppunit/plugin/TestPlugInDefaultImpl.h
-include/cppunit/portability/CppUnitDeque.h
-include/cppunit/portability/CppUnitMap.h
-include/cppunit/portability/CppUnitSet.h
-include/cppunit/portability/CppUnitStack.h
-include/cppunit/portability/CppUnitVector.h
 include/cppunit/portability/FloatingPoint.h
 include/cppunit/portability/Stream.h
 include/cppunit/tools/Algorithm.h
+include/cppunit/tools/StringHelper.h
 include/cppunit/tools/StringTools.h
 include/cppunit/tools/XmlDocument.h
 include/cppunit/tools/XmlElement.h
-include/cppunit/ui/mfc/MfcTestRunner.h
-include/cppunit/ui/mfc/TestRunner.h
-include/cppunit/ui/qt/Config.h
-include/cppunit/ui/qt/QtTestRunner.h
-include/cppunit/ui/qt/TestRunner.h
 include/cppunit/ui/text/TestRunner.h
 include/cppunit/ui/text/TextTestRunner.h
 lib/libcppunit.la
 lib/pkgconfig/cppunit.pc
-man/man1/cppunit-config.1
-share/aclocal/cppunit.m4
+share/doc/cppunit/AUTHORS
+share/doc/cppunit/BUGS
+share/doc/cppunit/CodingGuideLines.txt
+share/doc/cppunit/FAQ
+share/doc/cppunit/INSTALL
+share/doc/cppunit/INSTALL-WIN32.txt
+share/doc/cppunit/INSTALL-unix
 ${PLIST.doc}share/doc/cppunit/html/FAQ
 ${PLIST.doc}share/doc/cppunit/html/_additional_message_8cpp.html
 ${PLIST.doc}share/doc/cppunit/html/_additional_message_8cpp__incl.map
