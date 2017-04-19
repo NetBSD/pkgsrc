@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/10/21 12:53:27 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/04/19 11:24:36 jperkin Exp $
 # used by databases/apache-cassandra/Makefile
 # used by databases/apache-cassandra2/Makefile
 #
@@ -7,7 +7,7 @@ DISTNAME=	apache-cassandra-${CASSANDRA_VER}
 CATEGORIES=	databases
 DISTFILES=	${DISTNAME}-bin${EXTRACT_SUFX}
 
-MAINTAINER=	tonnerre@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cassandra.apache.org/
 COMMENT=	Highly scalable, distributed structured key-value store
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2016/09/08 15:19:18 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2017/04/19 11:24:38 jperkin Exp $
 
 DISTNAME=		puppet-3.8.7
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
-MAINTAINER=		tonnerre@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/08/30 16:58:14 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2017/04/19 11:24:37 jperkin Exp $
 #
 
 #
@@ -12,7 +12,7 @@ MASTER_SITES=		http://www.mico.org/
 HOMEPAGE=		http://www.mico.org/
 WRKSRC=			${WRKDIR}/mico
 
-MAINTAINER=		tonnerre@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		High performance and rubustness CORBA ORB
 
 USE_TOOLS+=		gmake msgfmt intltool

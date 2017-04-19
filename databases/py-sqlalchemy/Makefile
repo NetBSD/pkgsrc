@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2017/04/05 15:47:28 adam Exp $
+# $NetBSD: Makefile,v 1.27 2017/04/19 11:24:37 jperkin Exp $
 
 DISTNAME=	SQLAlchemy-1.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy/}
 
-MAINTAINER=	tonnerre@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sqlalchemy.org/
 COMMENT=	Python SQL toolkit and Object Relational Mapper
 LICENSE=	mit
