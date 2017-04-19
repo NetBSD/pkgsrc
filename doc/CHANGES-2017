@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1613 2017/04/19 06:49:34 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1614 2017/04/19 10:28:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2002,3 +2002,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/ruby-rails-dom-testing version 1.0.8 [minskim 2017-04-19]
 	Updated mail/mutt to 1.8.2 [tron 2017-04-19]
 	Added www/ruby-rails-html-sanitizer version 1.0.3 [minskim 2017-04-19]
+	Updated www/curl to 7.54.0 [wiz 2017-04-19]
