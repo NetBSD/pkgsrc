@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17273 2017/04/19 13:57:41 wiz Exp $
+$NetBSD: TODO,v 1.17274 2017/04/19 15:58:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1301,7 +1301,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-jaraco_util-11.0
 	o py-jdcal-1.2
 	o py-keybinder-0.3.1
-	o py-mercurial-4.1.2
 	o py-mezzanine-4.2.2
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
