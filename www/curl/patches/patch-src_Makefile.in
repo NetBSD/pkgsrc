@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2017/04/19 16:37:32 ryoon Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2017/04/19 20:31:54 wiz Exp $
+
+https://github.com/curl/curl/issues/1432
 
 --- src/Makefile.in.orig	2017-04-18 11:42:47.000000000 +0000
 +++ src/Makefile.in
