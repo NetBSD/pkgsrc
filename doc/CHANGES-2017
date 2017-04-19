@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1621 2017/04/19 12:28:47 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1622 2017/04/19 13:28:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2014,3 +2014,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/fossil to 2.2 [joerg 2017-04-19]
 	Updated time/khal to 0.9.5 [wiz 2017-04-19]
 	Updated www/libmicrohttpd to 0.9.53 [wiz 2017-04-19]
+	Updated net/libnice to 0.1.14 [wiz 2017-04-19]
