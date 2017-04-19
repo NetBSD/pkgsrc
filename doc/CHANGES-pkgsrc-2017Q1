@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.12 2017/04/17 16:37:17 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.13 2017/04/19 18:57:03 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -196,4 +196,16 @@ misc/raspberrypi-userland: bugfix
 
 Pullup ticket #5301 - requested by sevan
 databases/sqlite: build fix
+
+Pullup ticket #5290 (second part) - requested by sevan
+www/nginx: build fix
+
+Pullup ticket #5317 - requested by sevan
+comms/minicom: security fix
+
+Pullup ticket #5323 - requested by sevan
+print/ghostscript-gpl: security fix
+
+Pullup ticket #5276 - requested by sevan
+wm/fluxbox: build fix
 
