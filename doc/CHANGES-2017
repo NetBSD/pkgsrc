@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1618 2017/04/19 12:23:44 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1619 2017/04/19 12:25:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2007,3 +2007,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/cppunit to 1.14.0 [wiz 2017-04-19]
 	Updated sysutils/dbus to 1.10.18 [wiz 2017-04-19]
 	Updated time/khal to 0.9.5 [wiz 2017-04-19]
+	Updated www/libmicrohttpd to 0.9.53 [wiz 2017-04-19]
