@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1615 2017/04/19 12:15:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1616 2017/04/19 12:20:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2004,3 +2004,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/ruby-rails-html-sanitizer version 1.0.3 [minskim 2017-04-19]
 	Updated www/curl to 7.54.0 [wiz 2017-04-19]
 	Updated devel/afl to 2.41b [wiz 2017-04-19]
+	Updated devel/cppunit to 1.14.0 [wiz 2017-04-19]
