@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/02/05 12:40:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/04/19 17:24:16 wiz Exp $
 bin/chardetect-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,9 +14,6 @@ ${PYSITELIB}/chardet/big5freq.pyo
 ${PYSITELIB}/chardet/big5prober.py
 ${PYSITELIB}/chardet/big5prober.pyc
 ${PYSITELIB}/chardet/big5prober.pyo
-${PYSITELIB}/chardet/chardetect.py
-${PYSITELIB}/chardet/chardetect.pyc
-${PYSITELIB}/chardet/chardetect.pyo
 ${PYSITELIB}/chardet/chardistribution.py
 ${PYSITELIB}/chardet/chardistribution.pyc
 ${PYSITELIB}/chardet/chardistribution.pyo
@@ -26,18 +23,24 @@ ${PYSITELIB}/chardet/charsetgroupprober.pyo
 ${PYSITELIB}/chardet/charsetprober.py
 ${PYSITELIB}/chardet/charsetprober.pyc
 ${PYSITELIB}/chardet/charsetprober.pyo
+${PYSITELIB}/chardet/cli/__init__.py
+${PYSITELIB}/chardet/cli/__init__.pyc
+${PYSITELIB}/chardet/cli/__init__.pyo
+${PYSITELIB}/chardet/cli/chardetect.py
+${PYSITELIB}/chardet/cli/chardetect.pyc
+${PYSITELIB}/chardet/cli/chardetect.pyo
 ${PYSITELIB}/chardet/codingstatemachine.py
 ${PYSITELIB}/chardet/codingstatemachine.pyc
 ${PYSITELIB}/chardet/codingstatemachine.pyo
 ${PYSITELIB}/chardet/compat.py
 ${PYSITELIB}/chardet/compat.pyc
 ${PYSITELIB}/chardet/compat.pyo
-${PYSITELIB}/chardet/constants.py
-${PYSITELIB}/chardet/constants.pyc
-${PYSITELIB}/chardet/constants.pyo
 ${PYSITELIB}/chardet/cp949prober.py
 ${PYSITELIB}/chardet/cp949prober.pyc
 ${PYSITELIB}/chardet/cp949prober.pyo
+${PYSITELIB}/chardet/enums.py
+${PYSITELIB}/chardet/enums.pyc
+${PYSITELIB}/chardet/enums.pyo
 ${PYSITELIB}/chardet/escprober.py
 ${PYSITELIB}/chardet/escprober.pyc
 ${PYSITELIB}/chardet/escprober.pyo
@@ -92,6 +95,9 @@ ${PYSITELIB}/chardet/langhungarianmodel.pyo
 ${PYSITELIB}/chardet/langthaimodel.py
 ${PYSITELIB}/chardet/langthaimodel.pyc
 ${PYSITELIB}/chardet/langthaimodel.pyo
+${PYSITELIB}/chardet/langturkishmodel.py
+${PYSITELIB}/chardet/langturkishmodel.pyc
+${PYSITELIB}/chardet/langturkishmodel.pyo
 ${PYSITELIB}/chardet/latin1prober.py
 ${PYSITELIB}/chardet/latin1prober.pyc
 ${PYSITELIB}/chardet/latin1prober.pyo
@@ -119,3 +125,6 @@ ${PYSITELIB}/chardet/universaldetector.pyo
 ${PYSITELIB}/chardet/utf8prober.py
 ${PYSITELIB}/chardet/utf8prober.pyc
 ${PYSITELIB}/chardet/utf8prober.pyo
+${PYSITELIB}/chardet/version.py
+${PYSITELIB}/chardet/version.pyc
+${PYSITELIB}/chardet/version.pyo
