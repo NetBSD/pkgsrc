@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1636 2017/04/19 13:56:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1637 2017/04/19 13:57:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Tie-Cycle to 1.224 [wiz 2017-04-19]
 	Updated time/p5-Time-HiRes to 1.9742 [wiz 2017-04-19]
 	Updated textproc/p5-Unicode-LineBreak to 2017.004 [wiz 2017-04-19]
+	Updated www/p5-libwww to 6.26 [wiz 2017-04-19]
