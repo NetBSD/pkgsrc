@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/02 11:09:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/04/19 15:58:12 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -23,6 +23,7 @@ INSTALLATION_DIRS+=	share/doc/mercurial
 
 .include "Makefile.version"
 
+# https://bz.mercurial-scm.org/show_bug.cgi?id=5542
 do-test:
 	cd ${WRKSRC} && make tests PYTHON=${PYTHONBIN}
 
