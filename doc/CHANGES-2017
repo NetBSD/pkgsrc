@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1651 2017/04/19 18:38:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1652 2017/04/19 18:50:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2044,3 +2044,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ragel to 6.10 [wiz 2017-04-19]
 	Updated net/syncthing to 0.14.26 [wiz 2017-04-19]
 	Updated devel/waf to 1.9.9 [wiz 2017-04-19]
+	Updated net/wireshark to 2.2.6 [wiz 2017-04-19]
