@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/06/08 14:50:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/04/19 13:28:05 wiz Exp $
 bin/sdp-example
 bin/simple-example
 bin/stunbdc
@@ -36,7 +36,6 @@ share/gtk-doc/html/libnice/ch04.html
 share/gtk-doc/html/libnice/ch05.html
 share/gtk-doc/html/libnice/home.png
 share/gtk-doc/html/libnice/index.html
-share/gtk-doc/html/libnice/index.sgml
 share/gtk-doc/html/libnice/ix03.html
 share/gtk-doc/html/libnice/ix04.html
 share/gtk-doc/html/libnice/ix05.html
@@ -47,6 +46,7 @@ share/gtk-doc/html/libnice/ix09.html
 share/gtk-doc/html/libnice/ix10.html
 share/gtk-doc/html/libnice/ix11.html
 share/gtk-doc/html/libnice/ix12.html
+share/gtk-doc/html/libnice/ix13.html
 share/gtk-doc/html/libnice/left-insensitive.png
 share/gtk-doc/html/libnice/left.png
 share/gtk-doc/html/libnice/libnice-Bind.html
@@ -67,6 +67,7 @@ share/gtk-doc/html/libnice/pt03.html
 share/gtk-doc/html/libnice/pt04.html
 share/gtk-doc/html/libnice/right-insensitive.png
 share/gtk-doc/html/libnice/right.png
+share/gtk-doc/html/libnice/states.png
 share/gtk-doc/html/libnice/style.css
 share/gtk-doc/html/libnice/up-insensitive.png
 share/gtk-doc/html/libnice/up.png
