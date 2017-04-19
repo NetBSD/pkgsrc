@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2016/04/01 10:35:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/04/19 11:24:39 jperkin Exp $
 
 DISTNAME=	tdl-1.5.2
 PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://www.rpcurnow.force9.co.uk/tdl/
 
-MAINTAINER=	tonnerre@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rpcurnow.force9.co.uk/tdl/
 COMMENT=	Todo list manager with tons of features
 

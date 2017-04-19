@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/01/01 16:06:06 adam Exp $
+# $NetBSD: Makefile,v 1.34 2017/04/19 11:24:37 jperkin Exp $
 #
 
 DISTNAME=		libcassandra-20101010
@@ -6,7 +6,7 @@ PKGREVISION=		23
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.ancient-solutions.com/pub/bsdprojects/NetBSD/packages/distfiles/
 
-MAINTAINER=		tonnerre@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://github.com/posulliv/libcassandra/
 LICENSE=		modified-bsd
 
