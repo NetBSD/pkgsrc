@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.68 2016/03/22 23:24:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.68.10.1 2017/04/19 18:33:38 bsiegert Exp $
 
-DISTNAME=	minicom-2.7
-PKGREVISION=	1
+DISTNAME=	minicom-2.7.1
 CATEGORIES=	comms
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/file/3977/
+MASTER_SITES=	https://alioth.debian.org/frs/download.php/file/4215/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://alioth.debian.org/projects/minicom/
+HOMEPAGE=	https://alioth.debian.org/projects/minicom/
 COMMENT=	MS-DOS Telix serial communication program "workalike"
 LICENSE=	gnu-gpl-v2
 
