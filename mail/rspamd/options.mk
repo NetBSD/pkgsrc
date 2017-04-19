@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/03/20 14:15:16 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2017/04/19 18:31:30 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rspamd
 
@@ -15,4 +15,3 @@ CMAKE_ARGS+=	-DENABLE_GD=ON
 .else
 CMAKE_ARGS+=	-DENABLE_GD=OFF
 .endif
-
