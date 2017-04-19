@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2013/11/29 16:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/04/19 12:20:08 wiz Exp $
 
-DISTNAME=	cppunit-1.13.2
+DISTNAME=	cppunit-1.14.0
 CATEGORIES=	devel
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 
@@ -15,12 +15,6 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	cppunit.pc.in
-
-SUBST_CLASSES+=		rpath
-SUBST_SED.rpath=	-e s';-L@libdir@;${COMPILER_RPATH_FLAG}@libdir@ -L@libdir@;g'
-SUBST_FILES.rpath=	cppunit-config.in
-SUBST_STAGE.rpath=	pre-configure
-SUBST_MESSAGE.rpath=	Adding rpath to cppunit-config.
 
 .include "options.mk"
 
