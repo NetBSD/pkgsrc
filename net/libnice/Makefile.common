@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1 2015/07/14 09:16:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/04/19 13:28:05 wiz Exp $
 #
 # used by net/libnice/Makefile
 # used by net/gst-plugins1-libnice/Makefile
 
-DISTNAME=	libnice-0.1.13
+DISTNAME=	libnice-0.1.14
 CATEGORIES=	net devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -34,5 +34,7 @@ _WRAP_EXTRA_ARGS.CC+=	-Wunused-but-set-variable
 CWRAPPERS_APPEND.cc+=	-Wunused-but-set-variable
 .endif
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../net/gupnp-igd/buildlink3.mk"
