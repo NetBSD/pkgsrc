@@ -1,0 +1,26 @@
+$NetBSD: patch-bin_rt.in,v 1.1 2017/04/19 06:34:10 spz Exp $
+
+Properly escape braces to make it compatible with Perl >=5.24.
+
+--- bin/rt.in.orig	2013-05-22 19:03:04.000000000 +0000
++++ bin/rt.in
+@@ -1531,15 +1531,15 @@ sub vsplit {
+                 }
+                 push @words, $s;
+             }
+-            elsif ( $a =~ /^q{/ ) {
++            elsif ( $a =~ /^q\{/ ) {
+                 my $s = $a;
+-                while ( $a !~ /}$/ ) {
++                while ( $a !~ /\}$/ ) {
+                     ( $a, $b ) =
+                       split /\s*,\s*/, $b, 2;
+                     $s .= ',' . $a;
+                 }
+-                $s =~ s/^q{/'/;
+-                $s =~ s/}/'/;
++                $s =~ s/^q\{/'/;
++                $s =~ s/\}/'/;
+                 push @words, $s;
+             }
+             else {
