@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.16 2014/12/30 15:13:20 wiz Exp $	*/
+/*	$NetBSD: build.c,v 1.17 2017/04/19 21:42:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: build.c,v 1.16 2014/12/30 15:13:20 wiz Exp $");
+__RCSID("$NetBSD: build.c,v 1.17 2017/04/19 21:42:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -233,6 +233,7 @@ make_dist(const char *pkg, const char *suffix, const package_t *plist)
 	
 	archive = archive_write_new();
 	archive_write_set_format_pax_restricted(archive);
+	archive_write_set_options(archive, "hdrcharset=BINARY");
 	if ((resolver = archive_entry_linkresolver_new()) == NULL)
 		errx(2, "cannot create link resolver");
 	archive_entry_linkresolver_set_strategy(resolver,
@@ -250,20 +251,18 @@ make_dist(const char *pkg, const char *suffix, const package_t *plist)
 	}
 
 	if (strcmp(CompressionType, "bzip2") == 0)
-		archive_write_set_compression_bzip2(archive);
+		archive_write_add_filter_bzip2(archive);
 	else if (strcmp(CompressionType, "gzip") == 0)
-		archive_write_set_compression_gzip(archive);
+		archive_write_add_filter_gzip(archive);
 	else if (strcmp(CompressionType, "xz") == 0)
-		archive_write_set_compression_xz(archive);
-	else if (strcmp(CompressionType, "none") == 0)
-		archive_write_set_compression_none(archive);
-	else
+		archive_write_add_filter_xz(archive);
+	else if (strcmp(CompressionType, "none") != 0)
 		errx(1, "Unspported compression type for -F: %s",
 		    CompressionType);
 
 	archive_name = xasprintf("%s.%s", pkg, suffix);
 
-	if (archive_write_open_file(archive, archive_name))
+	if (archive_write_open_filename(archive, archive_name))
 		errx(2, "cannot create archive: %s", archive_error_string(archive));
 
 	free(archive_name);
@@ -324,9 +323,8 @@ make_dist(const char *pkg, const char *suffix, const package_t *plist)
 
 	archive_entry_linkresolver_free(resolver);
 
-	if (archive_write_close(archive))
+	if (archive_write_free(archive))
 		errx(2, "cannot finish archive: %s", archive_error_string(archive));
-	archive_write_finish(archive);
 
 	free(initial_cwd);
 }

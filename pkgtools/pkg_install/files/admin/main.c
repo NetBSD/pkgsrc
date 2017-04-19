@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.64 2015/01/02 14:26:16 wiz Exp $	*/
+/*	$NetBSD: main.c,v 1.65 2017/04/19 21:42:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.64 2015/01/02 14:26:16 wiz Exp $");
+__RCSID("$NetBSD: main.c,v 1.65 2017/04/19 21:42:50 joerg Exp $");
 
 /*-
  * Copyright (c) 1999-2009 The NetBSD Foundation, Inc.
@@ -608,8 +608,8 @@ main(int argc, char *argv[])
 			if (pkg_full_signature_check(archive_name, &pkg))
 				rc = 1;
 			free(archive_name);
-			if (!pkg)
-				archive_read_finish(pkg);
+			if (pkg != NULL)
+				archive_read_free(pkg);
 		}
 		return rc;
 	} else if (strcasecmp(argv[0], "x509-sign-package") == 0) {
