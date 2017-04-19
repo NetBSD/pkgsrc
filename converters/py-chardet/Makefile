@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/01/03 13:23:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2017/04/19 17:24:16 wiz Exp $
 
-DISTNAME=	chardet-2.3.0
-PKGREVISION=	1
+DISTNAME=	chardet-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	converters python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/chardet/}
@@ -11,7 +10,10 @@ HOMEPAGE=	http://pypi.python.org/pypi/chardet
 COMMENT=	Character encoding auto-detection in Python
 LICENSE=	gnu-lgpl-v2.1
 
-REPLACE_PYTHON=		chardet/chardetect.py
+# TEST_DEPENDS; however, no tests found
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
+BUILD_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/chardetect ${DESTDIR}${PREFIX}/bin/chardetect-${PYVERSSUFFIX} || ${TRUE}
