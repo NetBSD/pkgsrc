@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/19 06:48:13 minskim Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/rails-html-sanitizer.rb
+${GEM_LIBDIR}/lib/rails/html/sanitizer.rb
+${GEM_LIBDIR}/lib/rails/html/sanitizer/version.rb
+${GEM_LIBDIR}/lib/rails/html/scrubbers.rb
+${GEM_LIBDIR}/test/sanitizer_test.rb
+${GEM_LIBDIR}/test/scrubbers_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
