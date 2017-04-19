@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1622 2017/04/19 13:28:15 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1623 2017/04/19 13:32:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2015,3 +2015,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/khal to 0.9.5 [wiz 2017-04-19]
 	Updated www/libmicrohttpd to 0.9.53 [wiz 2017-04-19]
 	Updated net/libnice to 0.1.14 [wiz 2017-04-19]
+	Updated audio/libsndfile to 1.0.28 [wiz 2017-04-19]
