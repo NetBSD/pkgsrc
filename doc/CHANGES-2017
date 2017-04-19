@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1629 2017/04/19 13:47:32 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1630 2017/04/19 13:49:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTML-Tree to 5.04 [wiz 2017-04-19]
 	Updated security/p5-IO-Socket-SSL to 2.048 [wiz 2017-04-19]
 	Updated mail/p5-MIME-Charset to 1.012.2 [wiz 2017-04-19]
+	Updated www/p5-Mojolicious to 7.30 [wiz 2017-04-19]
