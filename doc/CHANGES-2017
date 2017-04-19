@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1645 2017/04/19 17:29:38 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1646 2017/04/19 17:30:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2038,3 +2038,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.7.0 [wiz 2017-04-19]
 	Updated devel/py-pbr to 2.1.0 [wiz 2017-04-19]
 	Updated devel/py-setuptools to 35.0.0 [wiz 2017-04-19]
+	Updated devel/py-setuptools_scm to 1.15.5 [wiz 2017-04-19]
