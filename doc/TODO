@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17263 2017/04/19 13:44:55 wiz Exp $
+$NetBSD: TODO,v 1.17264 2017/04/19 13:46:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
-	o p5-IO-Socket-SSL-2.048
 	o p5-IP-Country-3.03
 	o p5-MIME-Charset-1.012.2
 	o p5-MIME-tools-5.509
