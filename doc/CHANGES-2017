@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1624 2017/04/19 13:39:49 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1625 2017/04/19 13:41:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2017,3 +2017,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/libnice to 0.1.14 [wiz 2017-04-19]
 	Updated audio/libsndfile to 1.0.28 [wiz 2017-04-19]
 	Updated textproc/miller to 5.1.0 [wiz 2017-04-19]
+	Updated www/p5-CGI to 4.36 [wiz 2017-04-19]
