@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1643 2017/04/19 17:27:26 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1644 2017/04/19 17:28:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/py-chardet to 3.0.2 [wiz 2017-04-19]
 	Updated devel/py-dulwich to 0.17.2 [wiz 2017-04-19]
 	Updated devel/py-hypothesis to 3.7.0 [wiz 2017-04-19]
+	Updated devel/py-pbr to 2.1.0 [wiz 2017-04-19]
