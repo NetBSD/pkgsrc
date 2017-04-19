@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/01/31 08:08:19 wiz Exp $
+$NetBSD: distinfo,v 1.6 2017/04/19 12:09:16 mef Exp $
 
-SHA1 (Data-Printer-0.38.tar.gz) = 78af66c104c8d279e4f008497f2afb7af23a34b9
-RMD160 (Data-Printer-0.38.tar.gz) = 5c45806c36819ee0080d996f23d9f7010b5477db
-SHA512 (Data-Printer-0.38.tar.gz) = 79c9b867c518c73b3f8ff350e7652a66f0de2ade58d7e857023cc20b25dcdbebc9121d51ae355167f11a334c863d3b1ebce39c00a133929053492fcf185c953e
-Size (Data-Printer-0.38.tar.gz) = 58371 bytes
+SHA1 (Data-Printer-0.39.tar.gz) = 4497e05445d629968567690d854f930099d499ac
+RMD160 (Data-Printer-0.39.tar.gz) = 28d657a74f3d524123cc0e7ec9232fce74522070
+SHA512 (Data-Printer-0.39.tar.gz) = 4110f4a8c0f1516df14e418ba4b5b2b6a30790cbf838f81a9dec862f62355cf3035f482ccd0d118bb3d16f28dd381d518c23d65b95d045444438b9721062eb9c
+Size (Data-Printer-0.39.tar.gz) = 58687 bytes
