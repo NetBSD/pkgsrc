@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17250 2017/04/18 13:51:35 wiz Exp $
+$NetBSD: TODO,v 1.17251 2017/04/19 12:13:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1139,7 +1139,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openoffice3-3.3
 	o openslp-2.0.0
 	o opensmtpd-6.0.0
-	o openssh-7.4p1
+	o openssh-7.5p1
 	o openssl-1.1.0
 	o openvas-libraries-8.0.8
 	o openvpn-2.4.0 [pkg/52044]
@@ -1157,14 +1157,17 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Clone-0.39
 	o p5-Clone-PP-1.07
 	o p5-DBD-DB2-1.85
+	o p5-DBD-postgresql-3.6.0
 	o p5-Data-Printer-0.39
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
+	o p5-HTML-Tree-5.04
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
+	o p5-IO-Socket-SSL-2.048
 	o p5-IP-Country-3.03
 	o p5-MIME-Charset-1.012.2
 	o p5-MIME-tools-5.509
@@ -1199,7 +1202,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sys-Utmp-1.7
 	o p5-Template-Toolkit-2.27
 	o p5-Text-Hunspell-2.14
+	o p5-Tie-Cycle-1.224
 	o p5-Tie-DBI-1.06
+	o p5-Time-HiRes-1.9742
 	o p5-Unicode-LineBreak-2017.004
 	o p5-X11-Protocol-29
 	o p5-eBay-API-0.29
@@ -1542,7 +1547,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
-	o tor-browser-6.5
+	o tor-browser-6.5.1
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
