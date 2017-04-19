@@ -1,4 +1,4 @@
-/* $NetBSD: defs.h,v 1.10 2012/02/21 18:32:14 wiz Exp $ */
+/* $NetBSD: defs.h,v 1.11 2017/04/19 21:42:50 joerg Exp $ */
 
 /*-
  * Copyright (c) 1999,2000,2009 The NetBSD Foundation, Inc.
@@ -37,6 +37,9 @@
 #include <nbcompat.h>
 #if HAVE_ERR_H
 #include <err.h>
+#endif
+#if HAVE_INTTYPES_H
+#include <inttypes.h>
 #endif
 #if HAVE_STDLIB_H
 #include <stdlib.h>
