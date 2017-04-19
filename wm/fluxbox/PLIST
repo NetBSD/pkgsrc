@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/02/23 00:29:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22.2.1 2017/04/19 18:56:24 bsiegert Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -54,6 +54,7 @@ ${PLIST.nls}share/fluxbox/nls/fr_CH.ISO-8859-15/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/fr_CH.UTF-8/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/fr_FR.ISO-8859-15/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/fr_FR.UTF-8/fluxbox.cat
+${PLIST.nls}share/fluxbox/nls/he_IL.UTF-8/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/it_IT.ISO-8859-1/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/it_IT.UTF-8/fluxbox.cat
 ${PLIST.nls}share/fluxbox/nls/ja_JP.UTF-8/fluxbox.cat
