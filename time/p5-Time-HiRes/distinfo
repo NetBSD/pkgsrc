@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2016/11/28 13:08:40 wiz Exp $
+$NetBSD: distinfo,v 1.29 2017/04/19 13:54:53 wiz Exp $
 
-SHA1 (Time-HiRes-1.9741.tar.gz) = 8861e84be105d0ad538af769d5b582372699496e
-RMD160 (Time-HiRes-1.9741.tar.gz) = 928c89a7fb55e23740498054d1aff5e30b424fb7
-SHA512 (Time-HiRes-1.9741.tar.gz) = 6e8bb0179cdec3ec26c36becfa5a2567029a321cd6ef9e126344a0f6d929fd5d1fb2ce319db4b03aa922ad2ef42006e15ef1438fff9393b3770a27e237b2d05b
-Size (Time-HiRes-1.9741.tar.gz) = 106448 bytes
+SHA1 (Time-HiRes-1.9742.tar.gz) = 32190f6338c22abb03ea42bdfef9e7abef0c63ad
+RMD160 (Time-HiRes-1.9742.tar.gz) = c9efb33c1db738df7098fdeb94514986fac59542
+SHA512 (Time-HiRes-1.9742.tar.gz) = 5a68a35654864aad6937d3cd4c3901084e7d709fa02702ca099835fcb4b7651444bcda979c8a46e98e0ff5bc948bc882b558df44d5951e35ebf173e8b8fa95ae
+Size (Time-HiRes-1.9742.tar.gz) = 106535 bytes
