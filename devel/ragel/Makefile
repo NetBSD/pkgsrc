@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/03/27 03:50:55 rodent Exp $
+# $NetBSD: Makefile,v 1.9 2017/04/19 18:32:47 wiz Exp $
 
-DISTNAME=	ragel-6.9
+DISTNAME=	ragel-6.10
 CATEGORIES=	devel
 MASTER_SITES=	http://www.colm.net/files/ragel/
 
