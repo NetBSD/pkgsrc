@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/01/01 16:06:10 adam Exp $
+# $NetBSD: Makefile,v 1.56 2017/04/19 11:24:37 jperkin Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_APACHE:=thrift/${THRIFT_VERSION}/}
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	tonnerre@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://incubator.apache.org/thrift/
 COMMENT=	Cross-language data serialization library
 LICENSE=	apache-2.0
