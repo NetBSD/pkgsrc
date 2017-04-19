@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.62 2014/12/30 15:13:20 wiz Exp $	*/
+/*	$NetBSD: perform.c,v 1.63 2017/04/19 21:42:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,13 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if HAVE_SYS_QUEUE_H
-#include <sys/queue.h>
-#endif
-#if HAVE_SYS_WAIT_H
-#include <sys/wait.h>
-#endif
-__RCSID("$NetBSD: perform.c,v 1.62 2014/12/30 15:13:20 wiz Exp $");
+__RCSID("$NetBSD: perform.c,v 1.63 2017/04/19 21:42:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -73,6 +67,12 @@ __RCSID("$NetBSD: perform.c,v 1.62 2014/12/30 15:13:20 wiz Exp $");
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
 #endif
+#if HAVE_SYS_QUEUE_H
+#include <sys/queue.h>
+#endif
+#if HAVE_SYS_WAIT_H
+#include <sys/wait.h>
+#endif
 
 #ifndef BOOTSTRAP
 #include <archive.h>
@@ -81,22 +81,13 @@ __RCSID("$NetBSD: perform.c,v 1.62 2014/12/30 15:13:20 wiz Exp $");
 #if HAVE_ERR_H
 #include <err.h>
 #endif
-#if HAVE_ERRNO_H
-#include <errno.h>
-#endif
-#if HAVE_FCNTL_H
-#include <fcntl.h>
-#endif
-#if HAVE_SIGNAL_H
-#include <signal.h>
-#endif
-#if HAVE_DIRENT_H
-#include <dirent.h>
-#endif
-#if HAVE_CTYPE_H
 #include <ctype.h>
-#endif
+#include <dirent.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <limits.h>
 #include <stddef.h>
+#include <signal.h>
 
 #define	LOAD_CONTENTS		(1 << 0)
 #define	LOAD_COMMENT		(1 << 1)
@@ -358,7 +349,7 @@ pkg_do(const char *pkg)
 		free(pkgname);
 
 		meta = read_meta_data_from_archive(archive, entry);
-		archive_read_finish(archive);
+		archive_read_free(archive);
 		if (!IS_URL(pkg))
 			binpkgfile = pkg;
 #endif

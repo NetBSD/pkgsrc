@@ -1,4 +1,4 @@
-/*	$NetBSD: gpgsig.c,v 1.5 2016/07/06 21:00:04 agc Exp $	*/
+/*	$NetBSD: gpgsig.c,v 1.6 2017/04/19 21:42:50 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: gpgsig.c,v 1.5 2016/07/06 21:00:04 agc Exp $");
+__RCSID("$NetBSD: gpgsig.c,v 1.6 2017/04/19 21:42:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -50,8 +50,9 @@ __RCSID("$NetBSD: gpgsig.c,v 1.5 2016/07/06 21:00:04 agc Exp $");
 #include <stdlib.h>
 #endif
 
+#include <netpgp/verify.h>
+
 #include "lib.h"
-#include "netpgpverify/verify.h"
 
 int
 gpg_verify(const char *content, size_t len, const char *keyring,
@@ -62,17 +63,19 @@ gpg_verify(const char *content, size_t len, const char *keyring,
 	static const char hdr1[] = "-----BEGIN PGP SIGNED MESSAGE-----\n";
 	static const char hdr2[] = "Hash: SHA512\n\n";
 	ssize_t buflen;
-	char *buf;
+	char *allocated_buf;
+	const char *buf;
 
 	/*
 	 * If there is a detached signature we need to construct a format that
 	 * netpgp can parse, otherwise use as-is.
 	 */
 	if (sig_len) {
-		buf = xasprintf("%s%s%s%s", hdr1, hdr2, content, sig);
+		buf = allocated_buf = xasprintf("%s%s%s%s", hdr1, hdr2, content, sig);
 		buflen = strlen(buf);
 	} else {
 		buf = content;
+		allocated_buf = NULL;
 		buflen = len;
 	}
 
@@ -88,8 +91,7 @@ gpg_verify(const char *content, size_t len, const char *keyring,
 
 	pgpv_close(pgp);
 
-	if (sig_len)
-		free(buf);
+	free(allocated_buf);
 
 	return 0;
 }
