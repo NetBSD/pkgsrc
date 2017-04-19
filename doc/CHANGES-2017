@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1633 2017/04/19 13:52:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1634 2017/04/19 13:53:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2026,3 +2026,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/p5-MIME-tools to 5.509 [wiz 2017-04-19]
 	Updated devel/p5-Params-ValidationCompiler to 0.24 [wiz 2017-04-19]
 	Updated www/p5-Template-Toolkit to 2.27 [wiz 2017-04-19]
+	Updated devel/p5-Tie-Cycle to 1.224 [wiz 2017-04-19]
