@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17265 2017/04/19 13:47:32 wiz Exp $
+$NetBSD: TODO,v 1.17266 2017/04/19 13:49:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1156,7 +1156,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IP-Country-3.03
 	o p5-MIME-tools-5.509
 	o p5-Memoize-Memcached-0.11
-	o p5-Mojolicious-7.30
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
