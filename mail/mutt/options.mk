@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2017/03/07 20:42:28 elric Exp $
+# $NetBSD: options.mk,v 1.29 2017/04/20 08:59:24 jperkin Exp $
 
 # Global and legacy options
 
@@ -18,10 +18,10 @@ PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 ###
 ### GSSAPI
 ###
-
+CONFIGURE_ENV+=		ac_cv_path_KRB5CFGPATH=${KRB5_CONFIG}
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+= --with-gss=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
 .endif
 
 ### curses
