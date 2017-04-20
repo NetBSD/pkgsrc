@@ -1,0 +1,2 @@
+librdkafka is a C library implementation of the Apache Kafka protocol,
+containing both Producer and Consumer support.
