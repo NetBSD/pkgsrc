@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.67 2016/11/17 15:10:07 taca Exp $
+$NetBSD: distinfo,v 1.67.4.1 2017/04/20 18:27:26 bsiegert Exp $
 
 SHA1 (squirrelmail-webmail-1.4.23pre14605.tar.bz2) = b0301f777ac5e71b08cd8d718358ce0f3417a21d
 RMD160 (squirrelmail-webmail-1.4.23pre14605.tar.bz2) = ee9c4d6bd6975f0134797cfc383821368a140542
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = 4ba7ea0a85308816b9dc77c0af3c927359ed1275
 SHA1 (patch-ab) = 30bf68c730f20e817fbe81d18bc2a95899ee3fd0
 SHA1 (patch-ai) = 1c08904ecf074ff3ba7e6042becc0f0771388b9f
 SHA1 (patch-ca) = d2e41316b8ecd97b49842eff548219e40e9b163a
+SHA1 (patch-class_deliver_Deliver__SendMail.class.php) = 0358ce2445fee73261075226e794054d6ada0150
