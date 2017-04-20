@@ -1,9 +1,9 @@
-$NetBSD: patch-base_unix-dll.mak,v 1.1 2017/03/31 07:26:23 adam Exp $
+$NetBSD: patch-base_unix-dll.mak,v 1.2 2017/04/20 09:20:55 jperkin Exp $
 
 Use correct shared library naming on Darwin.
 Add some rpaths.
 
---- base/unix-dll.mak.orig	2016-09-26 10:41:28.000000000 +0000
+--- base/unix-dll.mak.orig	2017-03-16 10:12:02.000000000 +0000
 +++ base/unix-dll.mak
 @@ -91,10 +91,10 @@ GPDL_SONAME_MAJOR_MINOR=$(GPDL_SONAME_BA
  
@@ -25,12 +25,12 @@ Add some rpaths.
  $(GSSOC_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
  	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
 -	-L$(BINDIR) -l$(GS_SO_BASE)
-+	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE)
++	-L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE)
  
  $(GSSOX_XE): gs-so-links-subtarget $(PSSRC)$(SOC_LOADER) $(UNIX_DLL_MAK) $(MAKEDIRS)
  	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
 -	-L$(BINDIR) -l$(GS_SO_BASE) $(SOC_LIBS)
-+	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE) $(SOC_LIBS)
++	-L$(BINDIR) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -l$(GS_SO_BASE) $(SOC_LIBS)
  
  $(PCLSOC_XE): gpcl6-so-links-subtarget $(PLSRC)$(REALMAIN_SRC).c $(UNIX_DLL_MAK) $(MAKEDIRS)
  	$(GLCC) -g -o $(PCLSOC_XE) $(PLSRC)$(REALMAIN_SRC).c -L$(BINDIR) -l$(PCL_SO_BASE)
