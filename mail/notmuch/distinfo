@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2017/04/04 11:54:10 wiz Exp $
+$NetBSD: distinfo,v 1.23 2017/04/20 09:06:34 jperkin Exp $
 
 SHA1 (notmuch-0.24.1.tar.gz) = 761bb1391a0d174b5819efabca582d3fba1f57cf
 RMD160 (notmuch-0.24.1.tar.gz) = 847bc5011131b4c34f3dfbd12dfb58fcd9a2ce1c
@@ -8,4 +8,5 @@ SHA1 (patch-Makefile.global) = 848213d8914c59d2786c74eee71df5c7599c17ec
 SHA1 (patch-Makefile.local) = e5a11e3fd7470f745fccb3086fb864c2068f55a7
 SHA1 (patch-aa) = 90414224b80703587d211c8b56bfba0cbe1377b6
 SHA1 (patch-lib_Makefile.local) = 84ebfe1a57647e590f923d727d206b5f4687e1ce
+SHA1 (patch-lib_notmuch-private.h) = 24e608eb28c682e5f47c98c74f1bb3c2d62ac092
 SHA1 (patch-util_Makefile.local) = 1dcf152c0aba329e5e309c98042bd14f9a733714
