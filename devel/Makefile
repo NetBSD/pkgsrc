@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2406 2017/04/18 02:06:21 minskim Exp $
+# $NetBSD: Makefile,v 1.2407 2017/04/20 08:02:26 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -571,6 +571,7 @@ SUBDIR+=	libphutil
 SUBDIR+=	libportlib
 SUBDIR+=	libproplist
 SUBDIR+=	libpthread_dbg
+SUBDIR+=	librdkafka
 SUBDIR+=	librelp
 SUBDIR+=	librfuncs
 SUBDIR+=	librlog
