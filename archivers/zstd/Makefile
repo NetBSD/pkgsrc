@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/04/11 14:23:34 mef Exp $
+# $NetBSD: Makefile,v 1.7 2017/04/20 13:45:52 jperkin Exp $
 
 DISTNAME=	zstd-1.1.4
 CATEGORIES=	archivers
@@ -13,8 +13,10 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c c++
 MAKE_FLAGS=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 MAKE_JOBS_SAFE=	no
 
 PKGCONFIG_OVERRIDE+=	lib/libzstd.pc.in
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
