@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1655 2017/04/19 22:37:40 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1656 2017/04/20 08:01:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2048,3 +2048,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/mame to 0.184 [wiz 2017-04-19]
 	Updated pkgtools/pkg_install to 20170419nb1 [joerg 2017-04-19]
 	Added www/ruby-actionview42 version 4.2.8 [minskim 2017-04-19]
+	Added devel/librdkafka version 0.9.5 [fhajny 2017-04-20]
