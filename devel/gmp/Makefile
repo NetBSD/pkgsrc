@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2017/01/19 18:52:06 agc Exp $
+# $NetBSD: Makefile,v 1.82 2017/04/20 22:37:57 szptvlfn Exp $
 
 DISTNAME=	gmp-6.1.2
 CATEGORIES=	devel math
@@ -46,7 +46,7 @@ ABI=			o32
 GCC_REQD+=		3.0
 .endif
 
-.if ${MACHINE_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 # XXX SunOS should work, but currently bombs in mpn/fat.c
 .  if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS" || !empty(PKGSRC_COMPILER:Msunpro)
 # don't use x86 assembly (it doesn't build)
@@ -58,7 +58,6 @@ PKG_SUGGESTED_OPTIONS=	gmp-fat
 .    include "../../mk/bsd.options.mk"
 ###
 ### Support for a "fat" binary on i386, with CPU autodetection.
-### XXX this option should be provided for amd64 too!
 ###
 ### XXX	Currently, the 'mmx' and 'simd' options imply the same thing,
 ###	as cpu detection is done at runtime.  Is there a more elegant
