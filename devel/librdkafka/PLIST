@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/20 08:01:18 fhajny Exp $
+include/librdkafka/rdkafka.h
+include/librdkafka/rdkafkacpp.h
+lib/librdkafka++.a
+lib/librdkafka++.so
+lib/librdkafka++.so.1
+lib/librdkafka.a
+lib/librdkafka.so
+lib/librdkafka.so.1
+lib/pkgconfig/rdkafka++.pc
+lib/pkgconfig/rdkafka.pc
