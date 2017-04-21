@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2016/10/26 14:28:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2017/04/21 09:14:01 fhajny Exp $
 
-DISTNAME=	peewee-2.8.5
+DISTNAME=	peewee-2.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=coleifer/}
@@ -15,12 +15,28 @@ GITHUB_PROJECT=	peewee
 USE_LANGUAGES=	c
 USE_TOOLS+=	bash
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+FILES_SUBST+=	PKGMANDIR=${PKGMANDIR}
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 REPLACE_BASH+=		playhouse/berkeley_build.sh
 REPLACE_PYTHON+=	pwiz.py
 
 PYDISTUTILSPKG=		yes
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+post-build:
+	cd ${WRKSRC}/docs && ${BUILD_MAKE_CMD} man
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/pskel \
+		${DESTDIR}${PREFIX}/bin/pskel${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/pwiz.py \
+		${DESTDIR}${PREFIX}/bin/pwiz${PYVERSSUFFIX}
+	${INSTALL_MAN} ${WRKSRC}/docs/_build/man/peewee.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/peewee${PYVERSSUFFIX}.1
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../lang/python/application.mk"
