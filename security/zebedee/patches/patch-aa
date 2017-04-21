@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
+$NetBSD: patch-aa,v 1.11 2017/04/21 13:22:00 jperkin Exp $
 
 --- Makefile.orig	2005-09-06 05:59:53.000000000 +0000
 +++ Makefile
@@ -116,7 +116,7 @@ $NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
 +CFLAGS += $(OPTIM) $(DEFINES) -I. $(GMPINC) $(BFINC) $(ZINC) $(BZINC)
  
 -LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS)
-+LDFLAGS=  $(PTHREAD_LDFLAGS)
++LDFLAGS +=  $(PTHREAD_LDFLAGS)
 +LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS) $(PTHREAD_LIBS)
  
  OBJS = zebedee.o sha_func.o huge.o $(GETOPTOBJ) $(SERVICEOBJ)
