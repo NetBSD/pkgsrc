@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/01/30 14:12:59 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/21 14:37:15 mef Exp $
 
-DISTNAME=	Data-ObjectDriver-0.14
+DISTNAME=	Data-ObjectDriver-0.15
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
