@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1660 2017/04/21 09:14:10 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1661 2017/04/21 11:55:46 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/ruby-actionpack42 version 4.2.8 [minskim 2017-04-20]
 	Added databases/ruby-activerecord42 version 4.2.8 [minskim 2017-04-21]
 	Updated databases/py-peewee to 2.9.2 [fhajny 2017-04-21]
+	Updated misc/tmux to 2.4 [fhajny 2017-04-21]
