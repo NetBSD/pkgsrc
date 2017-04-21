@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/21 22:53:47 khorben Exp $
+$NetBSD: distinfo,v 1.2 2017/04/21 23:09:57 khorben Exp $
 
-SHA1 (skype4pidgin-1.2.2.tar.gz) = 80c08de8b632a0632a681a361c4f0bafa6df205b
-RMD160 (skype4pidgin-1.2.2.tar.gz) = a02b7aae2a5a23327056a082f9206728ca732cce
-SHA512 (skype4pidgin-1.2.2.tar.gz) = 4a042e70e6ae1b5f4c5047589d9298d74653513dbb6556d4f786ee5c528e8bbfaf7f9934653fa16a9a3e43197bcbcb168e64e090ccb5ed05a761334a6d88f59d
-Size (skype4pidgin-1.2.2.tar.gz) = 410637 bytes
+SHA1 (skype4pidgin-1.3.tar.gz) = 2fc17f986b5d957c0268914b53ed51cc67a550e7
+RMD160 (skype4pidgin-1.3.tar.gz) = 0122ff7831ec1b915ce985c406069f4f965b41f7
+SHA512 (skype4pidgin-1.3.tar.gz) = de81ff386f7e244c5f846dd15c73e995e0ae380563ce55fd4137cec293bbf754f5440d9dfa8e5fd1e360a298f7f58b619094348fda30d73a44e5a96db821686f
+Size (skype4pidgin-1.3.tar.gz) = 413634 bytes
