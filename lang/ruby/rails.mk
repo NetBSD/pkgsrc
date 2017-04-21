@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.56 2017/04/14 05:34:33 minskim Exp $
+# $NetBSD: rails.mk,v 1.57 2017/04/21 21:23:59 minskim Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -116,6 +116,7 @@ RUBY_RAILS32_ACTIONMAILER=	../../mail/ruby-actionmailer32
 RUBY_RAILS32_RAILTIES=		../../devel/ruby-railties32
 RUBY_RAILS32_RAILS=		../../www/ruby-rails32
 
+RUBY_RAILS42_ACTIVEJOB=		../../devel/ruby-activejob42
 RUBY_RAILS42_ACTIVESUPPORT=	../../devel/ruby-activesupport42
 RUBY_RAILS42_ACTIVEMODEL=	../../devel/ruby-activemodel42
 RUBY_RAILS42_ACTIONPACK=	../../www/ruby-actionpack42
@@ -134,6 +135,8 @@ RUBY_ACTIONPACK_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionpack${_RAILS_DEP}:${RUBY_RAILS42_ACTIONPACK}
 RUBY_ACTIONVIEW_DEPENDS= \
 	${RUBY_PKGPREFIX}-actionview${_RAILS_DEP}:${RUBY_RAILS42_ACTIONVIEW}
+RUBY_ACTIVEJOB_DEPENDS= \
+	${RUBY_PKGPREFIX}-activejob{_RAILS_DEP}:${RUBY_RAILS42_ACTIVEJOB}
 RUBY_ACTIVERECORD_DEPENDS= \
 	${RUBY_PKGPREFIX}-activerecord${_RAILS_DEP}:${RUBY_RAILS42_ACTIVERECORD}
 RUBY_ACTIONMAILER_DEPENDS= \
