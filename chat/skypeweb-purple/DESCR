@@ -1,0 +1,7 @@
+Skype is an instant messaging app that provides online text message and
+video chat services. Users may transmit both text and video messages and
+may exchange digital documents such as images, text, and video. Skype
+allows video conference calls.
+
+This package contains a libpurple protocol plugin that adds support for
+Skype (WebRTC).
