@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1658 2017/04/20 22:00:33 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1659 2017/04/21 00:13:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2051,3 +2051,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/librdkafka version 0.9.5 [fhajny 2017-04-20]
 	Updated graphics/feh to 2.18.3 [szptvlfn 2017-04-20]
 	Added www/ruby-actionpack42 version 4.2.8 [minskim 2017-04-20]
+	Added databases/ruby-activerecord42 version 4.2.8 [minskim 2017-04-21]
