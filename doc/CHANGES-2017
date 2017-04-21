@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1667 2017/04/21 21:24:31 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1668 2017/04/21 22:55:21 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2064,3 +2064,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Data-ObjectDriver to 0.15 [mef 2017-04-21]
 	Added devel/ruby-globalid version 0.4.0 [minskim 2017-04-21]
 	Added devel/ruby-activejob42 version 4.2.8 [minskim 2017-04-21]
+	Added chat/skypeweb-purple version 1.2.2 [khorben 2017-04-21]
