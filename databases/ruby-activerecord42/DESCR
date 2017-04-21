@@ -1,0 +1,8 @@
+= Active Record -- Object-relational mapping put on rails
+
+Active Record connects classes to relational database tables to establish an
+almost zero-configuration persistence layer for applications. The library
+provides a base class that, when subclassed, sets up a mapping between the new
+class and an existing table in the database. In context of an application,
+these classes are commonly referred to as *models*. Models can also be
+connected to other models; this is done by defining *associations*.
