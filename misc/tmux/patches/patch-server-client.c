@@ -1,9 +1,8 @@
-$NetBSD: patch-server-client.c,v 1.4 2016/05/09 12:39:05 fhajny Exp $
+$NetBSD: patch-server-client.c,v 1.5 2017/04/21 11:55:37 fhajny Exp $
 
-* SunOS errno support needs the right include.
 * timersub is missing on Solaris10
 
---- server-client.c.orig	2016-04-04 00:16:53.000000000 +0000
+--- server-client.c.orig	2017-04-20 10:29:06.000000000 +0000
 +++ server-client.c
 @@ -30,6 +30,18 @@
  
@@ -21,6 +20,6 @@ $NetBSD: patch-server-client.c,v 1.4 2016/05/09 12:39:05 fhajny Exp $
 +    } while (0)
 +#endif
 +
- void		server_client_free(int, short, void *);
- void		server_client_check_focus(struct window_pane *);
- void		server_client_check_resize(struct window_pane *);
+ static void	server_client_free(int, short, void *);
+ static void	server_client_check_focus(struct window_pane *);
+ static void	server_client_check_resize(struct window_pane *);
