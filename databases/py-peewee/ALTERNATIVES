@@ -1,0 +1,3 @@
+bin/pskel @PREFIX@/bin/pskel@PYVERSSUFFIX@
+bin/pwiz @PREFIX@/bin/pwiz@PYVERSSUFFIX@
+@PKGMANDIR@/man1/peewee.1 @PREFIX@/@PKGMANDIR@/man1/peewee@PYVERSSUFFIX@.1
