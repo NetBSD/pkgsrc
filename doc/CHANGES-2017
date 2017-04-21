@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1664 2017/04/21 12:49:18 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1665 2017/04/21 14:41:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2060,3 +2060,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-CPAN-FindDependencies to 2.47 [mef 2017-04-21]
 	Updated devel/p5-Test-File to 1.44.3 [mef 2017-04-21]
 	Updated devel/librelp to 1.2.13 [fhajny 2017-04-21]
+	Updated devel/p5-Contextual-Return to 0.004.014 [mef 2017-04-21]
+	Updated devel/p5-Data-ObjectDriver to 0.15 [mef 2017-04-21]
