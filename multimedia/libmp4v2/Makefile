@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/04/17 08:48:01 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/04/21 14:48:41 wiz Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	USENASM=no
 # the "bootstrap" script checks too much, and isn't useful anyway
 #CONFIGURE_SCRIPT=	bootstrap
+
+GCC_REQD=		5.4
 
 # libmp4v2 has config.{guess,sub} also in common/video/iso-mpeg4
 # (unused by libmp4v2 build)
