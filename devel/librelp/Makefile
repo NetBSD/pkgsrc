@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/02/13 18:33:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/21 12:49:10 fhajny Exp $
 
-DISTNAME=	librelp-1.2.12
+DISTNAME=	librelp-1.2.13
 CATEGORIES=	devel
 MASTER_SITES=	http://download.rsyslog.com/librelp/
 
@@ -12,6 +12,10 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+CONFIGURE_ARGS.SunOS+=	ac_cv_func_epoll_create1=no
+CONFIGURE_ARGS.SunOS+=	ac_cv_func_epoll_create=no
+CONFIGURE_ARGS.SunOS+=	ac_cv_header_sys_epoll_h=no
 
 PKGCONFIG_OVERRIDE+=	relp.pc.in
 
