@@ -1,0 +1,12 @@
+A Global ID is an app wide URI that uniquely identifies a model
+instance.  This is helpful when you need a single identifier to
+reference different classes of objects.  One example is job
+scheduling. We need to reference a model object rather than serialize
+the object itself. We can pass a Global ID that can be used to locate
+the model when it's time to perform the job. The job scheduler doesn't
+need to know the details of model naming and IDs, just that it has a
+global identifier that references a model.  Another example is a
+drop-down list of options, consisting of both Users and
+Groups. Normally we'd need to come up with our own ad hoc scheme to
+reference them. With Global IDs, we have a universal identifier that
+works for objects of both classes.
