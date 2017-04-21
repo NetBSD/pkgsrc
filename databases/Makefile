@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.524 2017/03/14 13:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.525 2017/04/21 00:13:01 minskim Exp $
 
 COMMENT=	Databases
 
@@ -396,6 +396,7 @@ SUBDIR+=	ruby-activeldap
 SUBDIR+=	ruby-activerecord-cassandra
 SUBDIR+=	ruby-activerecord-odbc
 SUBDIR+=	ruby-activerecord32
+SUBDIR+=	ruby-activerecord42
 SUBDIR+=	ruby-arel
 SUBDIR+=	ruby-arel30
 SUBDIR+=	ruby-awesome_nested_set
