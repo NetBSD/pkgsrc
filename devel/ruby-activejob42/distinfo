@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/21 21:20:33 minskim Exp $
+
+SHA1 (activejob-4.2.8.gem) = 5743c76b7ebcb91e93c6ed1af3bf97e5888253fa
+RMD160 (activejob-4.2.8.gem) = 66abbebf9b2068a7d29047b4fe2eeab9f937617a
+SHA512 (activejob-4.2.8.gem) = 9076f3b43b1d14dc7658831a594e9bddfd267ce4d7b11bcfcec8364b5179a8747de001d67844c3324258379b531994db5050dc1228bdb4f7c843b5915c81bad4
+Size (activejob-4.2.8.gem) = 19456 bytes
