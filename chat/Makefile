@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.187 2016/02/24 02:30:34 khorben Exp $
+# $NetBSD: Makefile,v 1.188 2017/04/21 22:54:50 khorben Exp $
 #
 
 COMMENT=	Communication programs
@@ -120,6 +120,7 @@ SUBDIR+=	silc-client
 SUBDIR+=	silc-client-icb
 SUBDIR+=	silc-server
 SUBDIR+=	sirc
+SUBDIR+=	skypeweb-purple
 SUBDIR+=	smirk
 SUBDIR+=	spectrum
 SUBDIR+=	swift
