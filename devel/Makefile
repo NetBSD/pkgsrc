@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2408 2017/04/21 21:08:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2409 2017/04/21 21:23:59 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2066,6 +2066,7 @@ SUBDIR+=	rt4
 SUBDIR+=	rubigen
 SUBDIR+=	ruby-SDL
 SUBDIR+=	ruby-abstract
+SUBDIR+=	ruby-activejob42
 SUBDIR+=	ruby-activemodel32
 SUBDIR+=	ruby-activemodel42
 SUBDIR+=	ruby-activesupport32
