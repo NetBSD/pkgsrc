@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/04/21 22:53:47 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/21 23:09:57 khorben Exp $
 
-DISTNAME=	skype4pidgin-1.2.2
-PKGNAME=	skypeweb-purple-1.2.2
+DISTNAME=	skype4pidgin-1.3
+PKGNAME=	skypeweb-purple-1.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=EionRobb/skype4pidgin/archive/${DISTNAME:C:skype4pidgin-::}/}
 
