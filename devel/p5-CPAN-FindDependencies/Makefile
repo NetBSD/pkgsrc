@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/10/11 13:36:13 mef Exp $
+# $NetBSD: Makefile,v 1.18 2017/04/21 12:16:53 mef Exp $
 
-DISTNAME=	CPAN-FindDependencies-2.46
+DISTNAME=	CPAN-FindDependencies-2.47
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
