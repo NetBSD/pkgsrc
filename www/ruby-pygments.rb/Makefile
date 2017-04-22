@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/03/20 15:54:41 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/04/22 17:19:47 taca Exp $
 
-DISTNAME=	pygments.rb-1.1.1
+DISTNAME=	pygments.rb-1.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
