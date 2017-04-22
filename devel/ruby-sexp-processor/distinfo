@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2017/03/20 12:30:58 taca Exp $
+$NetBSD: distinfo,v 1.20 2017/04/22 16:30:43 taca Exp $
 
-SHA1 (sexp_processor-4.8.0.gem) = 32a23ef273e6042dfd11051e00d3f870b47b890d
-RMD160 (sexp_processor-4.8.0.gem) = dce2080d909425b113c17f826884a47dcc4bc841
-SHA512 (sexp_processor-4.8.0.gem) = 041f4ca8603359ff37c408ca0f6bcce39145928f7ac5dd3d59a50142fb4ca8c41f91ecde9a5d15ac6d06ee5be302b609a5091bd6a7be5ad81f861685567a588b
-Size (sexp_processor-4.8.0.gem) = 39936 bytes
+SHA1 (sexp_processor-4.9.0.gem) = 4919b386a77045d8271a4192420f86d1d80429fa
+RMD160 (sexp_processor-4.9.0.gem) = 58008a44dfc42bc545e5779edd8637cdaf6de7a5
+SHA512 (sexp_processor-4.9.0.gem) = f73b71fa436b73db3adb590f3273904474f2a8575377c0ea9184c2dbe8068b3c673f74657e949666fc04d2028efc22f81c14488a5484c66e2b6810afdbbcc531
+Size (sexp_processor-4.9.0.gem) = 40448 bytes
