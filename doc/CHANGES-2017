@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1721 2017/04/22 17:53:34 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1722 2017/04/22 18:04:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2133,3 +2133,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed textproc/ruby-eruby [taca 2017-04-22]
 	Removed security/libprelude-ruby [taca 2017-04-22]
 	Removed net/dnsdoctor [taca 2017-04-22]
+	Removed textproc/suikyo [taca 2017-04-22]
+	Removed textproc/ruby-suikyo [taca 2017-04-22]
+	Removed textproc/suikyo-elisp [taca 2017-04-22]
+	Removed textproc/suikyo-conv-table [taca 2017-04-22]
+	Removed textproc/suikyo-docs [taca 2017-04-22]
