@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.124 2017/04/15 17:38:48 riastradh Exp $
+$NetBSD: distinfo,v 1.125 2017/04/22 20:18:09 adam Exp $
 
-SHA1 (qemu-2.8.1.tar.bz2) = 224289c5e568e400920363820a0647e2aca569e7
-RMD160 (qemu-2.8.1.tar.bz2) = 93f71138d19c871195c9e0b1a7ba66275773f93a
-SHA512 (qemu-2.8.1.tar.bz2) = 0397b4029cdcb77ed053c44b3579a3f34894038e6fc6b4aa88de14515f5a78bf2f41c5e865f37111529f567c85d2f1c4deefae47dde54f76eac79410e5b2bdda
-Size (qemu-2.8.1.tar.bz2) = 28366270 bytes
-SHA1 (patch-Makefile.objs) = f40deeed5482a24369e898411bb611be418dc3ca
+SHA1 (qemu-2.9.0.tar.xz) = 5cc63c6cababaaa7d0685e8b32bacf5022873ebc
+RMD160 (qemu-2.9.0.tar.xz) = 700e714204258cbb1cb9831e47e3d8cde4b67d20
+SHA512 (qemu-2.9.0.tar.xz) = a5259b888ac336db559f4483a9c50ad434fb82aedce37d9be957e79f696736509af1841489ee10e7362ef1506f3a04786c483a2e37d342b2bec46f0a726fb60f
+Size (qemu-2.9.0.tar.xz) = 22830688 bytes
+SHA1 (patch-Makefile.objs) = 8a538c5a55bfb7c3556b77a0eac2f055b0cf8692
 SHA1 (patch-configure) = 4d6e0737cfbd9efcd02ab43c219fed0f0a1a55a9
 SHA1 (patch-default-configs_pci.mak) = 2162550a68de514c8fe9e255df88f8a0a07ee6c7
 SHA1 (patch-disas_libvixl_vixl_a64_disasm-a64.cc) = 0660a0c2d37c332fcd1e00edb2dc3c52fe179cc9
@@ -20,7 +20,4 @@ SHA1 (patch-hw_ppc_mac__oldworld.c) = b71667ab281dc23c9d971dc8754eeefc879bd1d7
 SHA1 (patch-memory.c) = 9f94de7799ef80931fb1de572e5603894f3fb328
 SHA1 (patch-scripts_qemu-binfmt-conf.sh) = a59c227e5891efe201eb2b8af15fb0832a1b20d0
 SHA1 (patch-slirp_tcp__subr.c) = f011c9dc58282e61b26017547a9884f30a6e6154
-SHA1 (patch-target-i386_bpt__helper.c) = c2aacda7cabb4dcc507e260c0d74a976733a2114
-SHA1 (patch-target-i386_helper.h) = af5316b8796f1d9bf70becea9f09245ec0e6e36c
-SHA1 (patch-target-i386_translate.c) = 837c8f348cfd6e027a6292df7d95381020f90825
 SHA1 (patch-tests_Makefile.include) = 42345d697cb2e324dccf1d68bd8d61e8001c6162
