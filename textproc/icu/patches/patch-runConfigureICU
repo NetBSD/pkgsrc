@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.15 2015/08/31 15:26:19 sevan Exp $
+$NetBSD: patch-runConfigureICU,v 1.1 2017/04/22 20:11:45 adam Exp $
 
-Add support for DragonFlyBSD & Bitrig
+Add support for DragonFlyBSD and Bitrig.
 
 --- runConfigureICU.orig	Fri Mar 27 21:17:48 2015
 +++ runConfigureICU

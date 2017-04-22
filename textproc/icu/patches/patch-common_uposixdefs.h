@@ -1,8 +1,8 @@
-$NetBSD: patch-common_uposixdefs.h,v 1.2 2014/07/18 10:28:11 ryoon Exp $
+$NetBSD: patch-common_uposixdefs.h,v 1.3 2017/04/22 20:11:45 adam Exp $
 
---- common/uposixdefs.h.orig	2013-10-04 20:49:24.000000000 +0000
+--- common/uposixdefs.h.orig	2017-03-09 02:12:45.000000000 +0000
 +++ common/uposixdefs.h
-@@ -42,8 +42,10 @@
+@@ -44,8 +44,10 @@
       * and define _XOPEN_SOURCE to different values depending on __STDC_VERSION__.
       * In C++ source code (e.g., putil.cpp), __STDC_VERSION__ is not defined at all.
       */
@@ -13,15 +13,23 @@ $NetBSD: patch-common_uposixdefs.h,v 1.2 2014/07/18 10:28:11 ryoon Exp $
  
  /*
   * Make sure things like readlink and such functions work.
-@@ -52,9 +54,11 @@
+@@ -54,9 +56,11 @@
   *
   * z/OS needs this definition for timeval and to get usleep.
   */
 +#if !defined(__sun) && !defined(_SCO_DS)
- #if !defined(_XOPEN_SOURCE_EXTENDED)
+ #if !defined(_XOPEN_SOURCE_EXTENDED) && defined(__TOS_MVS__)
  #   define _XOPEN_SOURCE_EXTENDED 1
  #endif
 +#endif
  
- /*
-  * There is an issue with turning on _XOPEN_SOURCE_EXTENDED on certain platforms.
+ /**
+  * Solaris says:
+@@ -68,4 +72,7 @@
+ #   define _STDC_C99
+ #endif
+ 
++#if defined(__cplusplus) && defined(__NetBSD__)
++#define _ISOC99_SOURCE
++#endif
+ #endif  /* __UPOSIXDEFS_H__ */
