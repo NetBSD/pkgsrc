@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.27 2017/03/30 15:23:49 fhajny Exp $
+$NetBSD: distinfo,v 1.28 2017/04/22 17:20:54 fhajny Exp $
 
-SHA1 (elasticsearch-5.3.0.tar.gz) = 9273fdecb2251755887f1234d6cfcc91e44a384d
-RMD160 (elasticsearch-5.3.0.tar.gz) = b062c8a3a7ceed7a1b84e339f39cce1672a7519f
-SHA512 (elasticsearch-5.3.0.tar.gz) = 343c4f9d752ff0fec2836620f758f3b02ac88aff0dcec979094ba20b869bf897df5a464a204e265a3e153c725aa87a4ca9a31597509196a3f2a2340d073c895e
-Size (elasticsearch-5.3.0.tar.gz) = 33696963 bytes
+SHA1 (elasticsearch-5.3.1.tar.gz) = 26100fb2b2c824530f29a7cc6148e2315e1a1fe3
+RMD160 (elasticsearch-5.3.1.tar.gz) = 27b75e3701aa2af847f959754844a4530245c77a
+SHA512 (elasticsearch-5.3.1.tar.gz) = 048323cd7278a521dde8e618e1b24850cebbe7e88cd46f7aae6ffa5a705031bac871ca62cf817d5493d15de204f82a2db0cf2c36b1a45f4259db5ee8c928bdf4
+Size (elasticsearch-5.3.1.tar.gz) = 33702280 bytes
 SHA1 (patch-bin_elasticsearch) = 5360818fb870c0005e23f0fb247efa247a909f47
 SHA1 (patch-bin_elasticsearch-plugin) = 56db071765b91a4846e1529b5fe8be2c549b449d
 SHA1 (patch-config_elasticsearch.yml) = 8a59f9123b8bc1c40d17131dc51c361fa210c17c
