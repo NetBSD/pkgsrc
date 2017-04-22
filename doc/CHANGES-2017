@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1703 2017/04/22 16:48:32 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1704 2017/04/22 16:57:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2105,3 +2105,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/ruby-airbrussh to 1.2.0 [taca 2017-04-22]
 	Updated sysutils/capistrano to 3.8.1 [taca 2017-04-22]
 	Updated sysutils/ruby-childprocess to 0.6.3 [taca 2017-04-22]
+	Updated www/ruby-capybara to 2.13.0 [taca 2017-04-22]
