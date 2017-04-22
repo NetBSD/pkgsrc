@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/10/17 14:27:37 taca Exp $
+# $NetBSD: Makefile,v 1.15 2017/04/22 18:27:04 taca Exp $
 
 DISTNAME=	ruby-progressbar-1.8.1
 PKGNAME=	${DISTNAME:S/ruby-/${RUBY_PKGPREFIX}-/}
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/jfelchner/ruby-progressbar
 COMMENT=	Text Progress Bar Library for Ruby
 LICENSE=	mit
 
-RUBY_VERSIONS_ACCEPTED=	18 21 22 23
+RUBY_VERSIONS_ACCEPTED=	23 22 21
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
