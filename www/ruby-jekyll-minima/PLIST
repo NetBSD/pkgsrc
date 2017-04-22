@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/22 17:09:17 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/_includes/disqus_comments.html
+${GEM_LIBDIR}/_includes/footer.html
+${GEM_LIBDIR}/_includes/google-analytics.html
+${GEM_LIBDIR}/_includes/head.html
+${GEM_LIBDIR}/_includes/header.html
+${GEM_LIBDIR}/_includes/icon-github.html
+${GEM_LIBDIR}/_includes/icon-github.svg
+${GEM_LIBDIR}/_includes/icon-twitter.html
+${GEM_LIBDIR}/_includes/icon-twitter.svg
+${GEM_LIBDIR}/_layouts/default.html
+${GEM_LIBDIR}/_layouts/home.html
+${GEM_LIBDIR}/_layouts/page.html
+${GEM_LIBDIR}/_layouts/post.html
+${GEM_LIBDIR}/_sass/minima.scss
+${GEM_LIBDIR}/_sass/minima/_base.scss
+${GEM_LIBDIR}/_sass/minima/_layout.scss
+${GEM_LIBDIR}/_sass/minima/_syntax-highlighting.scss
+${GEM_LIBDIR}/assets/main.scss
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
