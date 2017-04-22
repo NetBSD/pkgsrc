@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1154 2017/03/31 20:50:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.1155 2017/04/22 17:52:37 taca Exp $
 #
 
 COMMENT=	Networking tools
@@ -107,7 +107,6 @@ SUBDIR+=	dlint
 SUBDIR+=	dnscap
 SUBDIR+=	dnscheck
 SUBDIR+=	dnsdist
-SUBDIR+=	dnsdoctor
 SUBDIR+=	dnsmasq
 SUBDIR+=	dnstop
 SUBDIR+=	dnstracer
