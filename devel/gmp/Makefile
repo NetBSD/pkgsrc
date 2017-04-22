@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2017/04/22 07:01:07 adam Exp $
+# $NetBSD: Makefile,v 1.84 2017/04/22 08:23:17 jperkin Exp $
 
 DISTNAME=	gmp-6.1.2
 CATEGORIES=	devel math
@@ -47,8 +47,7 @@ GCC_REQD+=		3.0
 .endif
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-# XXX SunOS should work, but currently bombs in mpn/fat.c
-.  if ${OPSYS} == "SunOS" || !empty(PKGSRC_COMPILER:Msunpro)
+.  if !empty(PKGSRC_COMPILER:Msunpro)
 # don't use x86 assembly (it doesn't build)
 CONFIGURE_ENV+=		MPN_PATH="generic"
 .  else
