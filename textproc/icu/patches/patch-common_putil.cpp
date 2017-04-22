@@ -1,8 +1,8 @@
-$NetBSD: patch-common_putil.cpp,v 1.2 2015/10/09 23:15:34 ryoon Exp $
+$NetBSD: patch-common_putil.cpp,v 1.3 2017/04/22 20:11:45 adam Exp $
 
---- common/putil.cpp.orig	2015-10-08 03:53:44.000000000 +0000
+--- common/putil.cpp.orig	2017-04-10 14:22:16.000000000 +0000
 +++ common/putil.cpp
-@@ -117,6 +117,14 @@
+@@ -136,6 +140,14 @@ using namespace Microsoft::WRL::Wrappers
  #endif
  
  /*

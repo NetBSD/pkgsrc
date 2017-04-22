@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 2016/12/04 04:11:33 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2017/04/22 20:11:45 adam Exp $
 
 Add linker flags for finding the libraries to pkg-config files.
 Avoid using programs which need elevated privileges during the build.
