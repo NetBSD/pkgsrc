@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.801 2017/01/25 11:39:49 wiz Exp $
+# $NetBSD: Makefile,v 1.802 2017/04/22 17:40:39 taca Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -264,7 +264,6 @@ SUBDIR+=	kde4-l10n-wa
 SUBDIR+=	kde4-l10n-zh_CN
 SUBDIR+=	kde4-l10n-zh_TW
 SUBDIR+=	kdebase3
-SUBDIR+=	kdebindings-ruby
 SUBDIR+=	kded
 SUBDIR+=	kdelibdocs3
 SUBDIR+=	kdelibs3
