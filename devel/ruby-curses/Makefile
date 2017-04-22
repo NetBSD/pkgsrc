@@ -1,34 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2016/09/08 15:19:16 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2017/04/22 18:20:14 taca Exp $
 #
 
-DISTNAME=		${RUBY_DISTNAME}
-PKGREVISION=		2
-PKGNAME=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_FULL}
-RUBY_EXTNAME=		curses
-CATEGORIES=		devel ruby
-MASTER_SITES=		${MASTER_SITE_RUBY}
+DISTNAME=	curses-1.2.2
+CATEGORIES=	devel
 
-MAINTAINER=		taca@NetBSD.org
-HOMEPAGE=		${RUBY_HOMEPAGE}
-COMMENT=		Ruby extension to curses library
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/ruby/curses
+COMMENT=	Ruby binding for curses, ncurses, and PDCurses
+LICENSE=	2-clause-bsd
 
-USE_RUBY_EXTCONF=	yes
-EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/curses
-WRKSRC=			${RUBY_WRKSRC}/ext/curses
-
-CURSES_EXAMPLES=	hello.rb rain.rb view.rb view2.rb
-REPLACE_RUBY=		${CURSES_EXAMPLES}
-INSTALLATION_DIRS=	${RUBY_EG}/curses
-
-RUBY_VERSIONS_ACCEPTED= 18
-
-post-install:
-.for f in ${CURSES_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_EG}/curses
-.endfor
-
-.include "../../lang/ruby/modules.mk"
-.include "../../lang/ruby/Makefile.common"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
