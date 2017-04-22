@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2017/04/19 12:23:34 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2017/04/22 14:30:58 joerg Exp $
 
 DISTNAME=	fossil-src-2.2
 PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	devel scm
-MASTER_SITES=	http://fossil-scm.org/xfer/uv/download/
+MASTER_SITES=	https://www.fossil-scm.org/index.html/uv/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fossil-scm.org/
