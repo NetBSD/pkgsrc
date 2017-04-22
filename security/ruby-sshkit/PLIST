@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/03/20 15:10:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/04/22 16:43:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -72,6 +72,9 @@ ${GEM_LIBDIR}/test/unit/formatters/test_custom.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_dot.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_pretty.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_simple_text.rb
+${GEM_LIBDIR}/test/unit/runners/test_group.rb
+${GEM_LIBDIR}/test/unit/runners/test_parallel.rb
+${GEM_LIBDIR}/test/unit/runners/test_sequential.rb
 ${GEM_LIBDIR}/test/unit/test_color.rb
 ${GEM_LIBDIR}/test/unit/test_command.rb
 ${GEM_LIBDIR}/test/unit/test_command_map.rb
