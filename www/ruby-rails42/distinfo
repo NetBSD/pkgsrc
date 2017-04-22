@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/22 10:44:40 minskim Exp $
+
+SHA1 (rails-4.2.8.gem) = 4e0e486fee35547a7d00f3149634513e8fc2a7e9
+RMD160 (rails-4.2.8.gem) = d908aa1b8aab049475bc0ef81cd7b124dcff93da
+SHA512 (rails-4.2.8.gem) = 43f7961f50b500990318b8dd89ef833bf7d6ab22fcd6dc9657a4cf3f4c9a6105af0a55b4c9c3a811f150a4a3e6fd3f42f82812209c0707a60f3ca1bc46aaa61d
+Size (rails-4.2.8.gem) = 1475584 bytes
