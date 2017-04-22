@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.14 2014/06/08 08:32:10 obache Exp $
+$NetBSD: patch-icudefs.mk.in,v 1.1 2017/04/22 20:11:45 adam Exp $
 
 --- icudefs.mk.in.orig	2013-10-04 20:54:58.000000000 +0000
 +++ icudefs.mk.in
