@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1714 2017/04/22 17:29:50 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1715 2017/04/22 17:39:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2123,3 +2123,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/elasticsearch to 5.3.1 [fhajny 2017-04-22]
 	Removed audio/amarok-kde3 [taca 2017-04-22]
 	Removed emulators/kenigma [taca 2017-04-22]
+	Removed inputmethod/prime-el [taca 2017-04-22]
+	Removed inputmethod/scim-prime [taca 2017-04-22]
+	Removed inputmethod/prime [taca 2017-04-22]
+	Removed inputmethod/prime-dict [taca 2017-04-22]
