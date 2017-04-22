@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.538 2016/07/20 11:53:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.539 2017/04/22 17:26:57 taca Exp $
 #
 
 COMMENT=	Audio tools
@@ -27,7 +27,6 @@ SUBDIR+=	alsa-plugins-pulse
 SUBDIR+=	alsa-utils
 SUBDIR+=	amaroc
 SUBDIR+=	amarok
-SUBDIR+=	amarok-kde3
 SUBDIR+=	amp
 SUBDIR+=	ampache
 SUBDIR+=	applerecords
