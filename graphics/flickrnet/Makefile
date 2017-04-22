@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/12/04 05:17:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/04/22 21:03:38 adam Exp $
 
 DISTNAME=	FlickrNet-3.17.0
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=samjudson/}
 GITHUB_PROJECT=	flickr-net
