@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1225 2017/04/20 22:00:05 minskim Exp $
+# $NetBSD: Makefile,v 1.1226 2017/04/22 10:46:18 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -810,6 +810,7 @@ SUBDIR+=	ruby-rack15
 SUBDIR+=	ruby-rails-deprecated_sanitizer
 SUBDIR+=	ruby-rails-html-sanitizer
 SUBDIR+=	ruby-rails32
+SUBDIR+=	ruby-rails42
 SUBDIR+=	ruby-raindrops
 SUBDIR+=	ruby-rest-client
 SUBDIR+=	ruby-rouge
