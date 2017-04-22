@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1229 2017/04/22 17:10:22 taca Exp $
+# $NetBSD: Makefile,v 1.1230 2017/04/22 17:43:30 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -20,7 +20,6 @@ SUBDIR+=	ap-geoip2
 SUBDIR+=	ap-mono
 SUBDIR+=	ap-php
 SUBDIR+=	ap-rpaf
-SUBDIR+=	ap-ruby
 SUBDIR+=	ap-scgi
 SUBDIR+=	ap2-auth-external
 SUBDIR+=	ap2-auth-mellon
