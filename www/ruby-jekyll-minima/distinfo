@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/22 17:09:17 taca Exp $
+
+SHA1 (minima-2.1.1.gem) = 216f18df17b42f1242bb54a30cd66890036b1021
+RMD160 (minima-2.1.1.gem) = 16f90e7799a3631a3518dbcf5320351cdeaabe49
+SHA512 (minima-2.1.1.gem) = c6537dd290c7bc3ba9f8acc5d3ab42a6f7cc004247bf0c344fff459efdae08c6f220b9653b88fbd3a637403c774a0fa81fdcc694e878c6a42cf9a2f515de6b3d
+Size (minima-2.1.1.gem) = 14336 bytes
