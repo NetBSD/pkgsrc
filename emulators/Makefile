@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.249 2017/03/08 20:07:21 hauke Exp $
+# $NetBSD: Makefile,v 1.250 2017/04/22 17:29:02 taca Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -84,7 +84,6 @@ SUBDIR+=	hercules
 SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
 SUBDIR+=	kegs
-SUBDIR+=	kenigma
 SUBDIR+=	keystone
 SUBDIR+=	klh10
 SUBDIR+=	libdsk
