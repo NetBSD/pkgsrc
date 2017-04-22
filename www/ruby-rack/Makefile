@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/06/22 13:59:29 taca Exp $
+# $NetBSD: Makefile,v 1.20 2017/04/22 16:16:29 taca Exp $
 
-DISTNAME=	rack-1.6.4
+DISTNAME=	rack-1.6.5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
