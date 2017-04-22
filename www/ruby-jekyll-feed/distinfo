@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/22 17:05:48 taca Exp $
+
+SHA1 (jekyll-feed-0.9.2.gem) = ebce057b7cfa24a7fbab01e54f5eef3fc0f67a8b
+RMD160 (jekyll-feed-0.9.2.gem) = 9584e392ceac3a33546fb3dbaa56b02d48e98060
+SHA512 (jekyll-feed-0.9.2.gem) = 7babd976a507f0b0c13f251f3b46119566daf632295c747da5fba8b60fc9482789557cd55b9e913dc99e267957ec9c47a1aec030d1df93d0872ab378957c8363
+Size (jekyll-feed-0.9.2.gem) = 15872 bytes
