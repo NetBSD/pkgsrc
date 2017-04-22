@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1691 2017/04/22 16:27:59 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1692 2017/04/22 16:30:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2093,3 +2093,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-octokit to 4.7.0 [taca 2017-04-22]
 	Updated devel/ruby-parser to 3.9.0 [taca 2017-04-22]
 	Updated devel/ruby-parslet to 1.8.0 [taca 2017-04-22]
+	Updated devel/ruby-pkg-config to 1.1.9 [taca 2017-04-22]
