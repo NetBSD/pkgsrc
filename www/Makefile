@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1227 2017/04/22 12:29:05 adam Exp $
+# $NetBSD: Makefile,v 1.1228 2017/04/22 17:06:36 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -771,6 +771,7 @@ SUBDIR+=	ruby-innate
 SUBDIR+=	ruby-jekyll
 SUBDIR+=	ruby-jekyll-archives
 SUBDIR+=	ruby-jekyll-coffeescript
+SUBDIR+=	ruby-jekyll-feed
 SUBDIR+=	ruby-jekyll-gist
 SUBDIR+=	ruby-jekyll-paginate
 SUBDIR+=	ruby-jekyll-sass-converter
