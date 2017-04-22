@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2017/04/07 00:09:14 mef Exp $
+# $NetBSD: Makefile,v 1.612 2017/04/22 17:49:19 taca Exp $
 #
 
 COMMENT=	Security tools
@@ -168,7 +168,6 @@ SUBDIR+=	libprelude
 SUBDIR+=	libprelude-lua
 SUBDIR+=	libprelude-perl
 SUBDIR+=	libprelude-python
-SUBDIR+=	libprelude-ruby
 SUBDIR+=	libpreludedb
 SUBDIR+=	libpreludedb-mysql
 SUBDIR+=	libpreludedb-perl
