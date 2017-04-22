@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2016/12/04 05:17:11 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2017/04/22 21:03:15 adam Exp $
 
 BUILDLINK_TREE+=	yaz
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	yaz
 YAZ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.yaz+=	yaz>=2.0
-BUILDLINK_ABI_DEPENDS.yaz+=	yaz>=5.16.0nb1
+BUILDLINK_ABI_DEPENDS.yaz+=	yaz>=5.16.0nb2
 BUILDLINK_PKGSRCDIR.yaz?=	../../net/yaz
 
 .include "../../converters/libiconv/buildlink3.mk"
