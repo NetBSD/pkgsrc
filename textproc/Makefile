@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.926 2017/04/22 17:46:43 taca Exp $
+# $NetBSD: Makefile,v 1.927 2017/04/22 18:01:17 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -855,7 +855,6 @@ SUBDIR+=	ruby-safe_yaml
 SUBDIR+=	ruby-sary
 SUBDIR+=	ruby-simple-rss
 SUBDIR+=	ruby-stringex
-SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-text
 SUBDIR+=	ruby-textpow
@@ -890,10 +889,6 @@ SUBDIR+=	sub2srt
 SUBDIR+=	sublib
 SUBDIR+=	subliminal
 SUBDIR+=	subtitleripper
-SUBDIR+=	suikyo
-SUBDIR+=	suikyo-conv-table
-SUBDIR+=	suikyo-docs
-SUBDIR+=	suikyo-elisp
 SUBDIR+=	swath
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
