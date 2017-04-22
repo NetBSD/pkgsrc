@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.481 2017/04/08 19:17:40 tsutsui Exp $
+# $NetBSD: Makefile,v 1.482 2017/04/22 18:08:22 taca Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -331,7 +331,6 @@ SUBDIR+=	ruby-systemu
 SUBDIR+=	ruby-thread_safe
 SUBDIR+=	ruby-transaction-simple
 SUBDIR+=	ruby-typed-array
-SUBDIR+=	rubygems
 SUBDIR+=	rump
 SUBDIR+=	sch
 SUBDIR+=	sci
