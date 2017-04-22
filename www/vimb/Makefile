@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2017/04/12 13:25:11 leot Exp $
+# $NetBSD: Makefile,v 1.13 2017/04/22 21:04:03 adam Exp $
 
 DISTNAME=	vimb-2.12
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fanglingsu/}
 
