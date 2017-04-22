@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1701 2017/04/22 16:46:05 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1702 2017/04/22 16:47:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2103,3 +2103,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/ruby-addressable to 2.5.1 [taca 2017-04-22]
 	Updated security/ruby-sshkit to 1.13.1 [taca 2017-04-22]
 	Updated security/ruby-airbrussh to 1.2.0 [taca 2017-04-22]
+	Updated sysutils/capistrano to 3.8.1 [taca 2017-04-22]
