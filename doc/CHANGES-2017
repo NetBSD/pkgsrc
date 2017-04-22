@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1695 2017/04/22 16:34:04 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1696 2017/04/22 16:38:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-sexp-processor to 4.9.0 [taca 2017-04-22]
 	Updated devel/ruby-term-ansicolor to 1.6.0 [taca 2017-04-22]
 	Updated graphics/ruby-mini-magick to 4.7.0 [taca 2017-04-22]
+	Updated misc/ruby-bundler to 1.14.6 [taca 2017-04-22]
