@@ -1,25 +1,33 @@
-# $NetBSD: Makefile,v 1.2 2017/02/17 17:09:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/04/22 07:29:53 adam Exp $
 
-DISTNAME=	amath-1.6.2
-PKGREVISION=	1
+DISTNAME=	amath-1.8.0
 CATEGORIES=	math
-MASTER_SITES=	http://suyai.innolan.net/
+MASTER_SITES=	https://amath.innolan.net/
+MASTER_SITES+=	http://suyai.innolan.net/
 
-MAINTAINER=	cs@innolan.dk
-HOMEPAGE=	http://amath.innolan.net/
+MAINTAINER=	cs@innolan.net
+HOMEPAGE=	https://amath.innolan.net/
 COMMENT=	Simple command line calculator
 LICENSE=	2-clause-bsd
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=man
+CONFIGURE_ARGS+=	--with-libm
+CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
+CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
+CONFIGURE_ARGS+=	LDFLAGS=${LDFLAGS:Q}
 
-INSTALLATION_DIRS=	bin
-BINNAME=		amath
+BUILD_TARGET=		static
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${BINNAME} ${DESTDIR}${PREFIX}/bin/${BINNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/amath ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/amath.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 do-test:
-	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ./${BINNAME} test
+	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ./amath test
 
 .include "../../mk/bsd.pkg.mk"
