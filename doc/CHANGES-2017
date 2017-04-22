@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1676 2017/04/22 07:16:38 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1677 2017/04/22 07:30:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Term-Table to 0.008 [mef 2017-04-22]
 	Updated devel/p5-Data-ObjectDriver to 0.15 [mef 2017-04-22]
 	Updated www/midori to 0.5.11nb12 [maya 2017-04-22]
+	Updated math/amath to 1.8.0 [adam 2017-04-22]
