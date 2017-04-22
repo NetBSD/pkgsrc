@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2016/10/17 15:10:54 taca Exp $
+$NetBSD: distinfo,v 1.14 2017/04/22 16:41:13 taca Exp $
 
-SHA1 (sprockets-3.7.0.gem) = 259e995d1b3507430d7bbdec10270923e56a1962
-RMD160 (sprockets-3.7.0.gem) = 1d46448993800bf53eeda1fca17be1c32d5f76c8
-SHA512 (sprockets-3.7.0.gem) = b659a6ed92b290adbcf7dd94efd0efc6e53f2c87da786461f2773c1b8e29c3d6056d4a6675d815d6b0e0847274bfa5a75c8c1c9f251a915bfa724cc02f4ad15d
-Size (sprockets-3.7.0.gem) = 72192 bytes
+SHA1 (sprockets-3.7.1.gem) = a77e6717f9534c72207fa7de0a14eed95f01a0d0
+RMD160 (sprockets-3.7.1.gem) = 03cb0d280a71384fd730325532a09df8c1c51b7c
+SHA512 (sprockets-3.7.1.gem) = 2982c08b4f89e62d559a39311566b1016c720b1b4774e5e65c8bdab5c3717710ca0994d108c5f81a06ef1f7481aa29424b6827925bf6a6f92b9b9c97701a9563
+Size (sprockets-3.7.1.gem) = 72704 bytes
