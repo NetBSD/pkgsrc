@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1688 2017/04/22 16:23:23 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1689 2017/04/22 16:25:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2090,3 +2090,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-rack to 1.6.5 [taca 2017-04-22]
 	Updated databases/ruby-sequel to 4.45.0 [taca 2017-04-22]
 	Updated devel/ruby-logging to 2.2.2 [taca 2017-04-22]
+	Updated devel/ruby-octokit to 4.7.0 [taca 2017-04-22]
