@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2017/04/19 13:28:38 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/04/22 21:03:49 adam Exp $
 
 PKGNAME=	gst-plugins1-${DISTNAME}
+PKGREVISION=	1
 COMMENT+=	(gstreamer plugin)
 
 CONFIGURE_ARGS+= --with-gstreamer
