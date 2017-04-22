@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2017/04/05 14:22:20 mef Exp $
+# $NetBSD: Makefile.common,v 1.11 2017/04/22 17:51:16 taca Exp $
 #
 # used by security/libprelude/Makefile
 # used by security/libprelude-lua/Makefile
 # used by security/libprelude-perl/Makefile
 # used by security/libprelude-python/Makefile
-# used by security/libprelude-ruby/Makefile
 
 DISTNAME=		libprelude-${VERSION}
 VERSION=		0.9.24.1
