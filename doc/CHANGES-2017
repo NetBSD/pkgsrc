@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1723 2017/04/22 18:06:43 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1724 2017/04/22 18:09:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed textproc/suikyo-conv-table [taca 2017-04-22]
 	Removed textproc/suikyo-docs [taca 2017-04-22]
 	Removed devel/ruby-rcov [taca 2017-04-22]
+	Removed misc/rubygems [taca 2017-04-22]
