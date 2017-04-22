@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1720 2017/04/22 17:50:10 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1721 2017/04/22 17:53:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2132,3 +2132,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/ap-ruby [taca 2017-04-22]
 	Removed textproc/ruby-eruby [taca 2017-04-22]
 	Removed security/libprelude-ruby [taca 2017-04-22]
+	Removed net/dnsdoctor [taca 2017-04-22]
