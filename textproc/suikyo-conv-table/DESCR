@@ -1,4 +1,0 @@
-Suikyo is a Romaji Hiragana conversion library based on
-DFA (Deterministic finate state) automaton.
-
-This package contains conversion table of suikyo
