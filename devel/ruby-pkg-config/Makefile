@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2016/01/11 23:48:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2017/04/22 16:29:27 taca Exp $
 
-DISTNAME=	pkg-config-1.1.7
-PKGREVISION=	1
+DISTNAME=	pkg-config-1.1.9
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/ruby-gnome2/pkg-config
+HOMEPAGE=	https://github.com/ruby-gnome2/pkg-config
 COMMENT=	Pure Ruby implementation of pkg-config
 LICENSE=	gnu-lgpl-v2.1
 
