@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2016/12/04 05:17:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2017/04/22 21:03:26 adam Exp $
 #
 
 DISTNAME=	msynctool-0.22
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	comms
 MASTER_SITES=	http://www.opensync.org/download/releases/0.22/
 EXTRACT_SUFX=	.tar.bz2
