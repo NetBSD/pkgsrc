@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1715 2017/04/22 17:39:18 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1716 2017/04/22 17:41:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2127,3 +2127,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed inputmethod/scim-prime [taca 2017-04-22]
 	Removed inputmethod/prime [taca 2017-04-22]
 	Removed inputmethod/prime-dict [taca 2017-04-22]
+	Removed x11/kdebindings-ruby [taca 2017-04-22]
