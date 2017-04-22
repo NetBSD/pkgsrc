@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/03/15 14:38:07 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/04/22 16:39:31 taca Exp $
 #
 
-DISTNAME=	rainbow-2.1.0
+DISTNAME=	rainbow-2.2.2
 CATEGORIES=	misc
 
 MAINTAINER=	tsutsui@NetBSD.org
