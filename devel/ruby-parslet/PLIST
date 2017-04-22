@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/23 07:19:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/04/22 16:27:32 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/HISTORY.txt
 ${GEM_LIBDIR}/LICENSE
@@ -14,7 +14,6 @@ ${GEM_LIBDIR}/example/documentation.rb
 ${GEM_LIBDIR}/example/email_parser.rb
 ${GEM_LIBDIR}/example/empty.rb
 ${GEM_LIBDIR}/example/erb.rb
-${GEM_LIBDIR}/example/ignore.rb
 ${GEM_LIBDIR}/example/ip_address.rb
 ${GEM_LIBDIR}/example/json.rb
 ${GEM_LIBDIR}/example/local.rb
@@ -74,6 +73,7 @@ ${GEM_LIBDIR}/lib/parslet/atoms/context.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/dsl.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/dynamic.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/entity.rb
+${GEM_LIBDIR}/lib/parslet/atoms/ignored.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/infix.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/lookahead.rb
 ${GEM_LIBDIR}/lib/parslet/atoms/named.rb
@@ -117,6 +117,7 @@ ${GEM_LIBDIR}/spec/parslet/atoms/capture_spec.rb
 ${GEM_LIBDIR}/spec/parslet/atoms/combinations_spec.rb
 ${GEM_LIBDIR}/spec/parslet/atoms/dsl_spec.rb
 ${GEM_LIBDIR}/spec/parslet/atoms/entity_spec.rb
+${GEM_LIBDIR}/spec/parslet/atoms/ignored_spec.rb
 ${GEM_LIBDIR}/spec/parslet/atoms/infix_spec.rb
 ${GEM_LIBDIR}/spec/parslet/atoms/lookahead_spec.rb
 ${GEM_LIBDIR}/spec/parslet/atoms/named_spec.rb

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/11/23 07:19:24 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/04/22 16:27:32 taca Exp $
 
-DISTNAME=	parslet-1.7.1
+DISTNAME=	parslet-1.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
