@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.68 2017/02/12 06:25:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2017/04/22 21:03:50 adam Exp $
 #
 
 DISTNAME=	logjam-4.5.3
-PKGREVISION=	59
+PKGREVISION=	60
 CATEGORIES=	net
 MASTER_SITES=	http://logjam.danga.com/download/
 EXTRACT_SUFX=	.tar.bz2

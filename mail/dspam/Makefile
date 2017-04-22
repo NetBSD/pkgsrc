@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2016/12/04 05:17:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2017/04/22 21:03:42 adam Exp $
 
 DISTNAME=	dspam-3.10.2
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dspam/}
 

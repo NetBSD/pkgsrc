@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2017/02/12 06:24:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.50 2017/04/22 21:03:33 adam Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner17-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/esr//}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	devel www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2017/03/31 10:32:15 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2017/04/22 21:03:14 adam Exp $
 
 DISTNAME=	totem-pl-parser-3.4.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem-pl-parser/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
