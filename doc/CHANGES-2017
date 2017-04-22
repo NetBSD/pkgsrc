@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1682 2017/04/22 16:06:18 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1683 2017/04/22 16:08:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/ruby-rails42 version 4.2.8 [minskim 2017-04-22]
 	Added www/py-django-kronos version 1.0 [adam 2017-04-22]
 	Updated net/bind910 to 9.10.5 [taca 2017-04-22]
+	Updated net/bind99 to 9.9.10 [taca 2017-04-22]
