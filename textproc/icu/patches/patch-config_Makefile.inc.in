@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2010/12/07 17:58:13 adam Exp $
+$NetBSD: patch-config_Makefile.inc.in,v 1.1 2017/04/22 20:11:45 adam Exp $
 
 --- config/Makefile.inc.in.orig	2010-12-07 11:22:10.000000000 +0000
 +++ config/Makefile.inc.in
