@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1698 2017/04/22 16:41:38 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1699 2017/04/22 16:42:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/ruby-bundler to 1.14.6 [taca 2017-04-22]
 	Updated misc/ruby-rainbow to 2.2.2 [taca 2017-04-22]
 	Updated misc/ruby-sprockets to 3.7.1 [taca 2017-04-22]
+	Updated net/ruby-addressable to 2.5.1 [taca 2017-04-22]
