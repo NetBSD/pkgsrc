@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/03/20 16:17:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/04/22 17:15:11 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -106,6 +106,7 @@ ${GEM_LIBDIR}/test/fixtures/render_app/app.rb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_deep.slim
+${GEM_LIBDIR}/test/fixtures/render_app/views/_foo.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/_partial_block_slim.slim
@@ -127,6 +128,8 @@ ${GEM_LIBDIR}/test/fixtures/render_app/views/double_capture_slim.slim
 ${GEM_LIBDIR}/test/fixtures/render_app/views/erb/test.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/explicit_engine.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/haml/test.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/index.haml
+${GEM_LIBDIR}/test/fixtures/render_app/views/layouts/application.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_erb.erb
 ${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_haml.haml
 ${GEM_LIBDIR}/test/fixtures/render_app/views/render_block_slim.slim
