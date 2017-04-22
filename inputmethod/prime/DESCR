@@ -1,8 +1,0 @@
-PRIME is Japanese PRedictive Input Method Editor.
-
-PRIME predicts user's input words using the knowledge of natural language and
-the history of user's operations, and reduces the cost of typing by the user.
-For example, if a user wants to input "application" and types "ap" as the
-beginning characters of the word, PRIME might predict some candidate words like
-"apple", "application", "appointment", etc...  And then the user can input
-"application" easily by selecting the word from the candidate words by PRIME.
