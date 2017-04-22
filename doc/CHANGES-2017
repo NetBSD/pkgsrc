@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1680 2017/04/22 10:46:52 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1681 2017/04/22 12:30:51 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2082,3 +2082,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/amath to 1.8.0 [adam 2017-04-22]
 	Added devel/ruby-railties42 version 4.2.8 [minskim 2017-04-22]
 	Added www/ruby-rails42 version 4.2.8 [minskim 2017-04-22]
+	Added www/py-django-kronos version 1.0 [adam 2017-04-22]
