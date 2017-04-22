@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2017/03/19 17:00:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/04/22 16:25:55 taca Exp $
 bin/ruby_parse${RUBY_SUFFIX}
 bin/ruby_parse_extract_error${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -9,7 +9,10 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/ruby_parse
 ${GEM_LIBDIR}/bin/ruby_parse_extract_error
+${GEM_LIBDIR}/compare/normalize.rb
 ${GEM_LIBDIR}/lib/.document
+${GEM_LIBDIR}/lib/rp_extensions.rb
+${GEM_LIBDIR}/lib/rp_stringscanner.rb
 ${GEM_LIBDIR}/lib/ruby18_parser.rb
 ${GEM_LIBDIR}/lib/ruby18_parser.y
 ${GEM_LIBDIR}/lib/ruby19_parser.rb
@@ -22,6 +25,8 @@ ${GEM_LIBDIR}/lib/ruby22_parser.rb
 ${GEM_LIBDIR}/lib/ruby22_parser.y
 ${GEM_LIBDIR}/lib/ruby23_parser.rb
 ${GEM_LIBDIR}/lib/ruby23_parser.y
+${GEM_LIBDIR}/lib/ruby24_parser.rb
+${GEM_LIBDIR}/lib/ruby24_parser.y
 ${GEM_LIBDIR}/lib/ruby_lexer.rb
 ${GEM_LIBDIR}/lib/ruby_lexer.rex
 ${GEM_LIBDIR}/lib/ruby_lexer.rex.rb
