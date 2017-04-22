@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1679 2017/04/22 10:18:44 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.1680 2017/04/22 10:46:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2081,3 +2081,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-MooseX-Role-Parameterized to 1.10 [mef 2017-04-22]
 	Updated math/amath to 1.8.0 [adam 2017-04-22]
 	Added devel/ruby-railties42 version 4.2.8 [minskim 2017-04-22]
+	Added www/ruby-rails42 version 4.2.8 [minskim 2017-04-22]
