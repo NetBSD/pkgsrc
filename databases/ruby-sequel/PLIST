@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.48 2017/03/11 16:43:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.49 2017/04/22 16:18:39 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -135,6 +135,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.41.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.42.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.43.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.44.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.45.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
@@ -185,6 +186,7 @@ ${GEM_LIBDIR}/lib/sequel/adapters/mysql2.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/odbc.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/odbc/db2.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/odbc/mssql.rb
+${GEM_LIBDIR}/lib/sequel/adapters/odbc/oracle.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/odbc/progress.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/oracle.rb
 ${GEM_LIBDIR}/lib/sequel/adapters/postgres.rb
@@ -247,6 +249,7 @@ ${GEM_LIBDIR}/lib/sequel/dataset/query.rb
 ${GEM_LIBDIR}/lib/sequel/dataset/sql.rb
 ${GEM_LIBDIR}/lib/sequel/deprecated.rb
 ${GEM_LIBDIR}/lib/sequel/exceptions.rb
+${GEM_LIBDIR}/lib/sequel/extensions/_deprecated_identifier_mangling.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/_model_constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/_model_pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
@@ -348,6 +351,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/caching.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/class_table_inheritance.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_conflicts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/column_select.rb
+${GEM_LIBDIR}/lib/sequel/plugins/columns_updated.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/composition.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/csv_serializer.rb
@@ -408,6 +412,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/update_refresh.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/uuid.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validate_associated.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
+${GEM_LIBDIR}/lib/sequel/plugins/validation_contexts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/xml_serializer.rb
 ${GEM_LIBDIR}/lib/sequel/sql.rb
@@ -441,6 +446,8 @@ ${GEM_LIBDIR}/spec/core/version_spec.rb
 ${GEM_LIBDIR}/spec/core_extensions_spec.rb
 ${GEM_LIBDIR}/spec/core_model_spec.rb
 ${GEM_LIBDIR}/spec/core_spec.rb
+${GEM_LIBDIR}/spec/deprecation_helper.rb
+${GEM_LIBDIR}/spec/extensions/_deprecated_identifier_mangling_spec.rb
 ${GEM_LIBDIR}/spec/extensions/accessed_columns_spec.rb
 ${GEM_LIBDIR}/spec/extensions/active_model_spec.rb
 ${GEM_LIBDIR}/spec/extensions/after_initialize_spec.rb
@@ -459,6 +466,7 @@ ${GEM_LIBDIR}/spec/extensions/class_table_inheritance_spec.rb
 ${GEM_LIBDIR}/spec/extensions/column_conflicts_spec.rb
 ${GEM_LIBDIR}/spec/extensions/column_select_spec.rb
 ${GEM_LIBDIR}/spec/extensions/columns_introspection_spec.rb
+${GEM_LIBDIR}/spec/extensions/columns_updated_spec.rb
 ${GEM_LIBDIR}/spec/extensions/composition_spec.rb
 ${GEM_LIBDIR}/spec/extensions/connection_expiration_spec.rb
 ${GEM_LIBDIR}/spec/extensions/connection_validator_spec.rb
@@ -583,6 +591,7 @@ ${GEM_LIBDIR}/spec/extensions/update_refresh_spec.rb
 ${GEM_LIBDIR}/spec/extensions/uuid_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validate_associated_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_class_methods_spec.rb
+${GEM_LIBDIR}/spec/extensions/validation_contexts_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_helpers_spec.rb
 ${GEM_LIBDIR}/spec/extensions/xml_serializer_spec.rb
 ${GEM_LIBDIR}/spec/files/bad_down_migration/001_create_alt_basic.rb
