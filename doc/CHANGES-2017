@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1726 2017/04/22 18:21:30 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1727 2017/04/22 20:18:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2142,3 +2142,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed misc/rubygems [taca 2017-04-22]
 	Removed lang/ruby18 [taca 2017-04-22]
 	Moved devel/ruby-curses-gem to devel/ruby-curses [taca 2017-04-22]
+	Updated textproc/icu to 59.1 [adam 2017-04-22]
+	Updated emulators/qemu to 2.9.0 [adam 2017-04-22]
