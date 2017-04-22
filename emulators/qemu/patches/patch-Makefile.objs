@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile.objs,v 1.2 2016/09/04 09:21:04 ryoon Exp $
+$NetBSD: patch-Makefile.objs,v 1.3 2017/04/22 20:18:10 adam Exp $
 
---- Makefile.objs.orig	2016-09-02 15:34:17.000000000 +0000
+--- Makefile.objs.orig	2017-04-20 14:57:00.000000000 +0000
 +++ Makefile.objs
-@@ -113,8 +113,10 @@ qga-vss-dll-obj-y = qga/
+@@ -110,8 +110,10 @@ qga-vss-dll-obj-y = qga/
  
  ######################################################################
  # contrib
@@ -10,6 +10,6 @@ $NetBSD: patch-Makefile.objs,v 1.2 2016/09/04 09:21:04 ryoon Exp $
  ivshmem-client-obj-y = contrib/ivshmem-client/
  ivshmem-server-obj-y = contrib/ivshmem-server/
 +endif
- 
+ libvhost-user-obj-y = contrib/libvhost-user/
  
  ######################################################################
