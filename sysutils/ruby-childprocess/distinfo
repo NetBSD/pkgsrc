@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/03/15 15:18:26 taca Exp $
+$NetBSD: distinfo,v 1.7 2017/04/22 16:48:00 taca Exp $
 
-SHA1 (childprocess-0.5.9.gem) = dcf487a03be6740dd26009ca0cd0ed1aebc26de6
-RMD160 (childprocess-0.5.9.gem) = 0402a3d94375071344eef2fd867860a61484ff4c
-SHA512 (childprocess-0.5.9.gem) = 5a671e59d19531347438dc149d5309218c7e439cfd0bfcfe201ae8e1099a2608a0170f9a3f3752fb709afc6b68fa3a10dc60d0632af545a9ba71483c7be2c21d
-Size (childprocess-0.5.9.gem) = 29184 bytes
+SHA1 (childprocess-0.6.3.gem) = 48ff7cb90ca10928a1ccd87a84cad0fdeb5f8304
+RMD160 (childprocess-0.6.3.gem) = 6744f8695e56dfb00daa1bc97ff9049acb4db228
+SHA512 (childprocess-0.6.3.gem) = 93d2dbd23dfbaa6eb7eaf1c5791802180aece373aa912e78b1c3652e4e96f0e73ef948e484715863eef95e6af6daa1292944ebe987c331ce0d59ba086c803db5
+Size (childprocess-0.6.3.gem) = 31744 bytes
