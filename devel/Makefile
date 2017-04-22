@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2409 2017/04/21 21:23:59 minskim Exp $
+# $NetBSD: Makefile,v 1.2410 2017/04/22 10:18:13 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -2176,6 +2176,7 @@ SUBDIR+=	ruby-power_assert
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-railties32
+SUBDIR+=	ruby-railties42
 SUBDIR+=	ruby-rake
 SUBDIR+=	ruby-randexp
 SUBDIR+=	ruby-rb-fsevent
