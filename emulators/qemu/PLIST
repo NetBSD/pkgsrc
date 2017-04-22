@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2017/02/27 05:19:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.50 2017/04/22 20:18:09 adam Exp $
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
@@ -15,7 +15,7 @@ ${PLIST.microblazeel}bin/qemu-microblazeel
 ${PLIST.mips}bin/qemu-mips
 ${PLIST.mipsel}bin/qemu-mipsel
 ${PLIST.nbd}bin/qemu-nbd
-${PLIST.or32}bin/qemu-or32
+${PLIST.or1k}bin/qemu-or1k
 ${PLIST.ppc}bin/qemu-ppc
 ${PLIST.ppc64}bin/qemu-ppc64
 ${PLIST.ppc64abi32}bin/qemu-ppc64abi32
@@ -40,7 +40,8 @@ bin/qemu-system-mips64
 bin/qemu-system-mips64el
 bin/qemu-system-mipsel
 bin/qemu-system-moxie
-bin/qemu-system-or32
+bin/qemu-system-nios2
+bin/qemu-system-or1k
 bin/qemu-system-ppc
 bin/qemu-system-ppc64
 bin/qemu-system-ppcemb
@@ -57,11 +58,17 @@ bin/qemu-system-xtensaeb
 ${PLIST.x86_64}bin/qemu-x86_64
 man/man1/qemu-img.1
 man/man1/qemu.1
+man/man7/qemu-ga-ref.7
+man/man7/qemu-qmp-ref.7
 man/man8/qemu-ga.8
 man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
-share/doc/qemu/qmp-commands.txt
+share/doc/qemu/qemu-doc.txt
+share/doc/qemu/qemu-ga-ref.html
+share/doc/qemu/qemu-ga-ref.txt
+share/doc/qemu/qemu-qmp-ref.html
+share/doc/qemu/qemu-qmp-ref.txt
 ${PLIST.gtk}share/locale/bg/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/de_DE/LC_MESSAGES/qemu.mo
 ${PLIST.gtk}share/locale/fr_FR/LC_MESSAGES/qemu.mo
