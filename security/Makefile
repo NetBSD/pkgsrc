@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2017/04/22 17:49:19 taca Exp $
+# $NetBSD: Makefile,v 1.613 2017/04/23 05:40:08 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -421,6 +421,7 @@ SUBDIR+=	py-pbkdf2
 SUBDIR+=	py-prewikka
 SUBDIR+=	py-py-bcrypt
 SUBDIR+=	py-pydeep
+SUBDIR+=	py-requests-kerberos
 SUBDIR+=	py-requests-oauthlib
 SUBDIR+=	py-rsa
 SUBDIR+=	py-service_identity
