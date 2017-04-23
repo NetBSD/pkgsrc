@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1230 2017/04/22 17:43:30 taca Exp $
+# $NetBSD: Makefile,v 1.1231 2017/04/23 03:54:20 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -709,6 +709,7 @@ SUBDIR+=	py-simpletal
 SUBDIR+=	py-sparqlwrapper
 SUBDIR+=	py-static
 SUBDIR+=	py-swish-e
+SUBDIR+=	py-terminado
 SUBDIR+=	py-test-httpbin
 SUBDIR+=	py-tornado
 SUBDIR+=	py-trytond-web-user
