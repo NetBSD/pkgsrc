@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/23 05:23:27 markd Exp $
+
+SHA1 (notebook-5.0.0rc2.tar.gz) = 4912e8bfa85e7fa16702ad3ff977f2eb30f65914
+RMD160 (notebook-5.0.0rc2.tar.gz) = dfc67cdc071a9330068fa93f0e74c648a6577a90
+SHA512 (notebook-5.0.0rc2.tar.gz) = 3af823f048c52a4f09c2d07137df2aee75e15c3880993c4c3de7c45830345874989819fea0ad44a66dcfdb14c3de217d98d3454a878e8936145f8f6b173c15ee
+Size (notebook-5.0.0rc2.tar.gz) = 10947570 bytes
