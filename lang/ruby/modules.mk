@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.37 2016/04/10 16:39:28 joerg Exp $
+# $NetBSD: modules.mk,v 1.38 2017/04/23 14:12:54 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -191,14 +191,6 @@ ruby-simple-install:
 .endif # USE_RUBY_INSTALL
 
 .if defined(USE_RAKE) && empty(USE_RAKE:M[nN][oO])
-
-.if ${RUBY_VER} == "18"
-.if !empty(USE_RAKE:M[Rr][Uu][Nn])
-DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.7:../../devel/ruby-rake
-.else
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.7:../../devel/ruby-rake
-.endif
-.endif
 
 # RAKE
 #	The path to the ``rake'' binary.
