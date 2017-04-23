@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:13:03 markd Exp $
+${PYSITELIB}/entrypoints.py
