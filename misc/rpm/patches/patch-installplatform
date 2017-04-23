@@ -1,0 +1,15 @@
+$NetBSD: patch-installplatform,v 1.1 2017/04/23 08:18:15 adam Exp $
+
+Keep macros in one place across platforms.
+
+--- installplatform.orig	2017-04-23 06:48:59.000000000 +0000
++++ installplatform
+@@ -194,7 +194,7 @@ for ARCH in noarch `grep ^arch_canon $RP
+       LIB=${LIB}64
+   fi
+ 
+-  PPD="${DESTDIR}/${platformdir}/${ARCH}-${OS}"
++  PPD="${DESTDIR}/${platformdir}/${ARCH}"
+   [ -d $PPD ] || mkdir -p $PPD
+ 
+   cat $PLATFORM \

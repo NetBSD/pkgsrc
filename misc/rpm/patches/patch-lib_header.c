@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_header.c,v 1.2 2015/03/15 05:34:56 ryoon Exp $
+$NetBSD: patch-lib_header.c,v 1.3 2017/04/23 08:18:15 adam Exp $
 
 * Detect htonll in configure script.
 
@@ -8,7 +8,7 @@ $NetBSD: patch-lib_header.c,v 1.2 2015/03/15 05:34:56 ryoon Exp $
  #define	ENTRY_IN_REGION(_e)	((_e)->info.offset < 0)
  
  /* Convert a 64bit value to network byte order. */
-+#if !defined(HAVE_HTONLL)
++#if !defined(htonll)
  RPM_GNUC_CONST
  static uint64_t htonll(uint64_t n)
  {
