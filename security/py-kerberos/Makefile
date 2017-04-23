@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/06/09 02:06:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/23 05:35:27 markd Exp $
 
 DISTNAME=	kerberos-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_PYPI:=k/kerberos/}
 
