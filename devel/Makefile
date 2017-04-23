@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2417 2017/04/23 05:04:39 markd Exp $
+# $NetBSD: Makefile,v 1.2418 2017/04/23 05:29:44 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -1812,6 +1812,7 @@ SUBDIR+=	py-dulwich
 SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-enum
 SUBDIR+=	py-enum34
+SUBDIR+=	py-entrypoints
 SUBDIR+=	py-expect
 SUBDIR+=	py-extras
 SUBDIR+=	py-fann2
