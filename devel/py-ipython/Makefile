@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2017/01/03 13:23:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2017/04/23 04:50:51 markd Exp $
 
-DISTNAME=	ipython-3.2.1
+DISTNAME=	ipython-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/ipython/}
 
@@ -11,27 +10,31 @@ HOMEPAGE=	http://ipython.org/
 COMMENT=	Interactive computing environment for Python
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+=	${PYPKGPREFIX}-jsonschema-[0-9]*:../../textproc/py-jsonschema
+.include "../../lang/python/distutils.mk"
+
+.if ${PYPKGPREFIX} == py27
+DEPENDS+=	${PYPKGPREFIX}-backports.shutil_get_terminal_size-[0-9]*:../../devel/py-backports.shutil_get_terminal_size
+DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
+.endif
+
+DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
 DEPENDS+=	${PYPKGPREFIX}-pexpect-[0-9]*:../../devel/py-pexpect
+DEPENDS+=	${PYPKGPREFIX}-prompt_toolkit>=1.0.4:../../devel/py-prompt_toolkit
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=18.5:../../devel/py-setuptools
 DEPENDS+=	${PYPKGPREFIX}-pygments-[0-9]*:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
-DEPENDS+=	${PYPKGPREFIX}-zmq>=14.0.1:../../net/py-zmq
+DEPENDS+=	${PYPKGPREFIX}-pickleshare-[0-9]*:../../databases/py-pickleshare
+DEPENDS+=	${PYPKGPREFIX}-simplegeneric>0.8:../../devel/py-simplegeneric
+DEPENDS+=	${PYPKGPREFIX}-traitlets>=4.2:../../devel/py-traitlets
 
 USE_LANGUAGES=	# none
 
 REPLACE_PYTHON=	*/*/*.py */*/*/*.py
 
 post-install:
-	${MV} ${DESTDIR}${PREFIX}/bin/iptest ${DESTDIR}${PREFIX}/bin/iptest${PYVERSSUFFIX} || ${TRUE}
-	for f in ipcluster ipcontroller ipengine ipython; do \
-		${MV} ${DESTDIR}${PREFIX}/bin/$$f ${DESTDIR}${PREFIX}/bin/$${f}${PYVERSSUFFIX} || ${TRUE}; \
-		${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}${PYVERSSUFFIX}.1 || ${TRUE}; \
-	done
+	${MV} ${DESTDIR}${PREFIX}/bin/iptest ${DESTDIR}${PREFIX}/bin/iptest${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/bin/ipython ${DESTDIR}${PREFIX}/bin/ipython${PYVERSSUFFIX}
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ipython.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ipython${PYVERSSUFFIX}.1
 
-.include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
