@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.128.2.1 2017/04/05 21:16:45 spz Exp $
+$NetBSD: distinfo,v 1.128.2.2 2017/04/23 09:15:48 bsiegert Exp $
 
-SHA1 (CVE-2017-7407.patch) = 46a1e234f2db11032696260630c1e51ecf525002
-RMD160 (CVE-2017-7407.patch) = 21c9a12c15f1774a336c00956348260669a36089
-SHA512 (CVE-2017-7407.patch) = 05ab29bef14abef013f2df9dee9ad5a449a0b24838f1376d4f53db9bb428c3769e264302ac9098563e9a2cc57b56c6fba9805581cae7f4a115d8be9f623714e3
-Size (CVE-2017-7407.patch) = 4652 bytes
-SHA1 (curl-7.53.1.tar.bz2) = ae4a14778ef9ac3aaeaa022243d6e26c0bf1362b
-RMD160 (curl-7.53.1.tar.bz2) = 9b8bee9e4833d65a4531c86a34011817aa1fea36
-SHA512 (curl-7.53.1.tar.bz2) = c668494d0e795f34b00505ca68ab41fbb475a1bccbcac1d0bbacbbbafa40a994472e100be18a0c10f8fa21b5b9bd3f4e66c1e68ff5423b13b82d829cbaefcd52
-Size (curl-7.53.1.tar.bz2) = 2609559 bytes
+SHA1 (curl-7.54.0.tar.bz2) = e1cc251508e98bc5a8b9d5c40d8a4f6e48465d1c
+RMD160 (curl-7.54.0.tar.bz2) = 853ff262182b071c5cf93ffecaf6ee049c3fffc7
+SHA512 (curl-7.54.0.tar.bz2) = 2ed8d32a6803ecddcb587495107d9ebce724d34dae5cad1f8be241e93340e913bb8ce9b69259cb84b3d53c2e672e142c3aad471c4a251bd1d42fc06eb9d8f650
+Size (curl-7.54.0.tar.bz2) = 2602286 bytes
 SHA1 (patch-configure) = 0f065d05cdf9b36e49253481b90ee7c057e87998
 SHA1 (patch-curl-config.in) = d0cc7bb6a5bf0b9257f40dcffce7093cc0098eb7
 SHA1 (patch-lib_hostcheck.c) = 8e772d3f91cdafae17281cc19004269ece0cf308
+SHA1 (patch-src_Makefile.in) = 74a11ec9bfcdba9fb07bd4338fb3025f24bafe0e

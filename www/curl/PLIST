@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2017/02/22 10:29:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.62.2.1 2017/04/23 09:15:48 bsiegert Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -9,6 +9,7 @@ include/curl/easy.h
 include/curl/mprintf.h
 include/curl/multi.h
 include/curl/stdcheaders.h
+include/curl/system.h
 include/curl/typecheck-gcc.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
@@ -291,6 +292,7 @@ man/man3/CURLOPT_STDERR.3
 man/man3/CURLOPT_STREAM_DEPENDS.3
 man/man3/CURLOPT_STREAM_DEPENDS_E.3
 man/man3/CURLOPT_STREAM_WEIGHT.3
+man/man3/CURLOPT_SUPPRESS_CONNECT_HEADERS.3
 man/man3/CURLOPT_TCP_FASTOPEN.3
 man/man3/CURLOPT_TCP_KEEPALIVE.3
 man/man3/CURLOPT_TCP_KEEPIDLE.3

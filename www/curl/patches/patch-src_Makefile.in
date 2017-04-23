@@ -1,0 +1,22 @@
+$NetBSD: patch-src_Makefile.in,v 1.2.2.2 2017/04/23 09:15:48 bsiegert Exp $
+
+--- src/Makefile.in.orig	2017-04-18 11:42:47.000000000 +0000
++++ src/Makefile.in
+@@ -2039,14 +2039,14 @@ uninstall-am: uninstall-binPROGRAMS
+ @HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@$(HUGE): $(MANPAGE) $(README) $(MKHELP)
+ @HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	echo '#include "tool_setup.h"' > $(HUGE)
+ @HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	echo '#ifndef HAVE_LIBZ' >> $(HUGE)
+-@HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	$(NROFF) $< | $(PERL) $(MKHELP) $(README) >> $(HUGE)
++@HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) $(README) >> $(HUGE)
+ @HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	echo '#else' >> $(HUGE)
+-@HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	$(NROFF) $< | $(PERL) $(MKHELP) -c $(README) >> $(HUGE)
++@HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) -c $(README) >> $(HUGE)
+ @HAVE_LIBZ_TRUE@@USE_MANUAL_TRUE@	echo '#endif /* HAVE_LIBZ */' >> $(HUGE)
+ # This generates the tool_hugehelp.c file uncompressed only
+ @HAVE_LIBZ_FALSE@@USE_MANUAL_TRUE@$(HUGE): $(MANPAGE) $(README) mkhelp.pl
+ @HAVE_LIBZ_FALSE@@USE_MANUAL_TRUE@	echo '#include "tool_setup.h"' > $(HUGE)
+-@HAVE_LIBZ_FALSE@@USE_MANUAL_TRUE@	$(NROFF) $< | $(PERL) $(MKHELP) $(README) >> $(HUGE)
++@HAVE_LIBZ_FALSE@@USE_MANUAL_TRUE@	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) $(README) >> $(HUGE)
+ 
+ # built-in manual has been disabled, make a blank file
+ @USE_MANUAL_FALSE@$(HUGE):
