@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 03:53:24 markd Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/terminado/__init__.py
+${PYSITELIB}/terminado/__init__.pyc
+${PYSITELIB}/terminado/__init__.pyo
+${PYSITELIB}/terminado/_static/terminado.js
+${PYSITELIB}/terminado/management.py
+${PYSITELIB}/terminado/management.pyc
+${PYSITELIB}/terminado/management.pyo
+${PYSITELIB}/terminado/tests/__init__.py
+${PYSITELIB}/terminado/tests/__init__.pyc
+${PYSITELIB}/terminado/tests/__init__.pyo
+${PYSITELIB}/terminado/tests/basic_test.py
+${PYSITELIB}/terminado/tests/basic_test.pyc
+${PYSITELIB}/terminado/tests/basic_test.pyo
+${PYSITELIB}/terminado/uimod_embed.js
+${PYSITELIB}/terminado/uimodule.py
+${PYSITELIB}/terminado/uimodule.pyc
+${PYSITELIB}/terminado/uimodule.pyo
+${PYSITELIB}/terminado/websocket.py
+${PYSITELIB}/terminado/websocket.pyc
+${PYSITELIB}/terminado/websocket.pyo
