@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:04:02 markd Exp $
+${PYSITELIB}/testpath/__init__.py
+${PYSITELIB}/testpath/asserts.py
+${PYSITELIB}/testpath/commands.py
+${PYSITELIB}/testpath/env.py
+${PYSITELIB}/testpath/tempdir.py
