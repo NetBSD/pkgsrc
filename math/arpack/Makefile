@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/03/25 21:08:09 joerg Exp $
+# $NetBSD: Makefile,v 1.4.10.1 2017/04/23 10:05:48 bsiegert Exp $
 
 DISTNAME=	arpack96
 PKGNAME=	arpack-96
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.caam.rice.edu/software/ARPACK/SRC/
 DISTFILES=	arpack96.tar.gz patch.tar.gz
