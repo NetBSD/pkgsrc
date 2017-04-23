@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 04:32:41 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/backports/shutil_get_terminal_size/__init__.py
+${PYSITELIB}/backports/shutil_get_terminal_size/__init__.pyc
+${PYSITELIB}/backports/shutil_get_terminal_size/__init__.pyo
+${PYSITELIB}/backports/shutil_get_terminal_size/get_terminal_size.py
+${PYSITELIB}/backports/shutil_get_terminal_size/get_terminal_size.pyc
+${PYSITELIB}/backports/shutil_get_terminal_size/get_terminal_size.pyo
