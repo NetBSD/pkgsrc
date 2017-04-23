@@ -1,4 +1,6 @@
-$NetBSD: patch-misc_fnmatch.c,v 1.2 2015/03/15 05:34:56 ryoon Exp $
+$NetBSD: patch-misc_fnmatch.c,v 1.3 2017/04/23 08:18:15 adam Exp $
+
+Add missing include.
 
 --- misc/fnmatch.c.orig	2014-06-30 08:47:14.000000000 +0000
 +++ misc/fnmatch.c
