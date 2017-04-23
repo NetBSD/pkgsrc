@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1732 2017/04/23 13:04:27 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1733 2017/04/23 14:53:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-notebook version 5.0.0rc2 [markd 2017-04-23]
 	Updated misc/rpm to 4.13.0.1 [adam 2017-04-23]
 	Updated www/ruby-jekyll to 3.4.3nb1 [taca 2017-04-23]
+	Updated www/typo3_62 to 6.2.31 [taca 2017-04-23]
