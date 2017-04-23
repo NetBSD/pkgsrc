@@ -1,19 +1,16 @@
-# $NetBSD: Makefile.common,v 1.32 2015/01/25 15:58:29 taca Exp $
+# $NetBSD: Makefile.common,v 1.33 2017/04/23 14:10:24 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
-# used by devel/ruby-curses/Makefile
 # used by devel/ruby-readline/Makefile
 # used by devel/ruby-mode/Makefile
 # used by devel/ruby-fiddle/Makefile
-# used by lang/ruby18/Makefile
-# used by lang/ruby18-base/Makefile
-# used by lang/ruby193/Makefile
-# used by lang/ruby193-base/Makefile
-# used by lang/ruby200/Makefile
-# used by lang/ruby200-base/Makefile
 # used by lang/ruby21/Makefile
 # used by lang/ruby21-base/Makefile
+# used by lang/ruby22/Makefile
+# used by lang/ruby22-base/Makefile
+# used by lang/ruby23/Makefile
+# used by lang/ruby23-base/Makefile
 # used by textproc/ruby-psych/Makefile
 # used by x11/ruby-tk/Makefile
 #
@@ -23,11 +20,7 @@
 #
 
 # Ruby's license
-.if ${RUBY_VER} == "18"
-LICENSE=		gnu-gpl-v2 OR ruby-license
-.else
 LICENSE=		2-clause-bsd OR ruby-license
-.endif
 
 #
 # Ruby distribution sites.
@@ -37,15 +30,7 @@ RUBY_SITE_SUBDIR=	${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 MASTER_SITE_RUBY?= \
 	http://cache.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.ruby-lang.org/pub/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://www.ibiblio.org/pub/languages/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://xyz.lcs.mit.edu/pub/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://gd.tuwien.ac.at/languages/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.fu-berlin.de/unix/languages/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://ftp.easynet.be/ruby/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://ftp.ntua.gr/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://sunsite.dk/mirrors/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://ruby.cdpa.nsysu.edu.tw/ruby/${RUBY_SITE_SUBDIR}/ \
-	ftp://ftp.chg.ru/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.ring.gr.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.iij.ad.jp/pub/lang/ruby/${RUBY_SITE_SUBDIR}/ \
 	ftp://ftp.idaemons.org/pub/mirror/ftp.ruby-lang.org/ruby/${RUBY_SITE_SUBDIR}/
