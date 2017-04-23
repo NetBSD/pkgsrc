@@ -1,6 +1,7 @@
-$NetBSD: patch-ae,v 1.2 2011/01/29 21:00:45 markd Exp $
+$NetBSD: patch-ae,v 1.2.50.1 2017/04/23 10:32:09 bsiegert Exp $
 
 let <string.h> declare strcasestr() correctly
+Fix fpos_t cast on NetBSD (_pos vs. __pos)
 
 --- include/mpeg4ip.h.orig	2006-08-07 18:27:00.000000000 +0000
 +++ include/mpeg4ip.h
@@ -19,7 +20,17 @@ let <string.h> declare strcasestr() correctly
  #define OPEN_RDWR O_RDWR
  #define OPEN_CREAT O_CREAT 
  #define OPEN_RDONLY O_RDONLY
-@@ -233,7 +225,8 @@ char *strsep(char **strp, const char *de
+@@ -156,6 +148,9 @@ char *strcasestr(const char *haystack, c
+ #ifdef HAVE_FPOS_T___POS
+ #define FPOS_TO_VAR(fpos, typed, var) (var) = (typed)((fpos).__pos)
+ #define VAR_TO_FPOS(fpos, var) (fpos).__pos = (var)
++#elif defined(__NetBSD__)
++#define FPOS_TO_VAR(fpos, typed, var) (var) = (typed)((fpos)._pos)
++#define VAR_TO_FPOS(fpos, var) (fpos)._pos = (var)
+ #else
+ #define FPOS_TO_VAR(fpos, typed, var) (var) = (typed)(fpos)
+ #define VAR_TO_FPOS(fpos, var) (fpos) = (var)
+@@ -233,7 +228,8 @@ char *strsep(char **strp, const char *de
  
  #define ADV_SPACE(a) {while (isspace(*(a)) && (*(a) != '\0'))(a)++;}
  

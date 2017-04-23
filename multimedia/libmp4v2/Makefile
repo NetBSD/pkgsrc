@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/12/03 22:26:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11.36.1 2017/04/23 10:32:09 bsiegert Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		multimedia
 # distfile at sf is corrupt
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mpeg4ip/}
@@ -26,10 +26,13 @@ CONFIGURE_ARGS+=	USENASM=no
 # (unused by libmp4v2 build)
 OVERRIDE_DIRDEPTH=	3
 
-BUILD_DIRS=		lib/mp4v2
-INSTALL_DIRS+=		lib/mp4v2 doc/mp4v2
+# to install mp4* tools
+BUILD_DIRS=		. lib/mp4v2/util
+
+BUILDLINK_TRANSFORM+=   rm:-Werror
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/bootstrapped
 
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
