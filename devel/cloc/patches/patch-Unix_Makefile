@@ -1,0 +1,17 @@
+$NetBSD: patch-Unix_Makefile,v 1.1 2017/04/23 03:29:00 markd Exp $
+
+--- Unix/Makefile.orig	2017-01-14 23:25:40.000000000 +0000
++++ Unix/Makefile
+@@ -26,10 +26,10 @@ endif
+ PACKAGE		= cloc
+ 
+ DESTDIR		=
+-prefix		= /usr
++prefix		= $(PREFIX)
+ exec_prefix	= $(prefix)
+ man_prefix	= $(prefix)/share
+-mandir		= $(man_prefix)/man
++mandir		= $(prefix)/$(PKGMANDIR)
+ bindir		= $(exec_prefix)/bin
+ sharedir	= $(prefix)/share
+ 
