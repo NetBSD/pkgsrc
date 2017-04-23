@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1729 2017/04/22 23:43:33 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1730 2017/04/23 05:27:27 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2147,3 +2147,20 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed lang/ruby18-base [taca 2017-04-22]
 	Updated meta-pkgs/bulk-medium to 20170422 [taca 2017-04-22]
 	Updated devel/py-setuptools to 35.0.1 [wiz 2017-04-22]
+	Added devel/cloc version 1.72 [markd 2017-04-23]
+	Added databases/py-pickleshare version 0.7.4 [markd 2017-04-23]
+	Added devel/py-simplegeneric version 0.8.1 [markd 2017-04-23]
+	Added sysutils/py-ptyprocess version 0.5.1 [markd 2017-04-23]
+	Added www/py-terminado version 0.6 [markd 2017-04-23]
+	Updated www/py-bleach to 2.0.0 [markd 2017-04-23]
+	Added devel/py-jupyter_core version 4.3.0 [markd 2017-04-23]
+	Added devel/py-jupyter_client version 5.0.0 [markd 2017-04-23]
+	Added devel/py-backports.shutil_get_terminal_size version 1.0.0 [markd 2017-04-23]
+	Updated devel/py-ipython to 5.3.0 [markd 2017-04-23]
+	Added devel/py-ipykernel version 4.5.2 [markd 2017-04-23]
+	Added www/py-nbformat version 4.3.0 [markd 2017-04-23]
+	Added devel/py-testpath version 0.3 [markd 2017-04-23]
+	Added textproc/py-pandocfilters version 1.4.1 [markd 2017-04-23]
+	Added devel/py-entrypoints version 0.2.2 [markd 2017-04-23]
+	Added www/py-nbconvert version 5.1.1 [markd 2017-04-23]
+	Added www/py-notebook version 5.0.0rc2 [markd 2017-04-23]
