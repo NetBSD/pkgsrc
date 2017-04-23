@@ -1,0 +1,13 @@
+cloc counts blank lines, comment lines, and physical lines of source
+code in many programming languages, with the following features:
+
+  * Reads user-supplied language comment definition files
+  * Allows results from multiple runs to be summed together by
+    language and by project.
+  * Produces results in a variety of formats: plain text, XML, YAML,
+    CSV.
+  * Counts code within compressed archives (tarballs, Zip files, Java
+    .ear files).
+  * Has numerous troubleshooting options.
+  * Handles file and directory names with spaces and other unusual
+    characters.
