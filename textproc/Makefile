@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.927 2017/04/22 18:01:17 taca Exp $
+# $NetBSD: Makefile,v 1.928 2017/04/23 05:10:29 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -757,6 +757,7 @@ SUBDIR+=	py-mkdocs-bootswatch
 SUBDIR+=	py-natsort
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-openpyxl
+SUBDIR+=	py-pandocfilters
 SUBDIR+=	py-pdf-parser
 SUBDIR+=	py-pdfrw
 SUBDIR+=	py-phonenumbers
