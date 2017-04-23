@@ -1,0 +1,2 @@
+bin/jupyter @PREFIX@/bin/jupyter@PYVERSSUFFIX@
+bin/jupyter-migrate @PREFIX@/bin/jupyter-migrate@PYVERSSUFFIX@
