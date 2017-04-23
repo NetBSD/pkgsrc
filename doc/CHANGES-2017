@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1735 2017/04/23 15:52:48 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1736 2017/04/23 20:11:44 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2164,6 +2164,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-entrypoints version 0.2.2 [markd 2017-04-23]
 	Added www/py-nbconvert version 5.1.1 [markd 2017-04-23]
 	Added www/py-notebook version 5.0.0rc2 [markd 2017-04-23]
+	Added security/py-requests-kerberos version 0.11.0 [markd 2017-04-23]
 	Updated misc/rpm to 4.13.0.1 [adam 2017-04-23]
 	Updated www/ruby-jekyll to 3.4.3nb1 [taca 2017-04-23]
 	Updated www/typo3_62 to 6.2.31 [taca 2017-04-23]
