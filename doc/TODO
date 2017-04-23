@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17287 2017/04/19 21:10:22 wiz Exp $
+$NetBSD: TODO,v 1.17288 2017/04/23 05:27:27 markd Exp $
 
 Suggested new packages
 ======================
@@ -1291,7 +1291,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-hsm-1.1.1
 	o py-httpbin-0.4.1
 	o py-input-pad-1.4.2
-	o py-ipython-5.0
 	o py-isodate-0.5.4
 	o py-jaraco_util-11.0
 	o py-jdcal-1.2
