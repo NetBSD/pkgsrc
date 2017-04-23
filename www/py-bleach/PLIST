@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2016/12/15 11:21:18 adam Exp $
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/requires.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2017/04/23 04:09:15 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/bleach/__init__.py
 ${PYSITELIB}/bleach/__init__.pyc
 ${PYSITELIB}/bleach/__init__.pyo
@@ -14,9 +14,15 @@ ${PYSITELIB}/bleach/callbacks.pyo
 ${PYSITELIB}/bleach/encoding.py
 ${PYSITELIB}/bleach/encoding.pyc
 ${PYSITELIB}/bleach/encoding.pyo
+${PYSITELIB}/bleach/linkifier.py
+${PYSITELIB}/bleach/linkifier.pyc
+${PYSITELIB}/bleach/linkifier.pyo
 ${PYSITELIB}/bleach/sanitizer.py
 ${PYSITELIB}/bleach/sanitizer.pyc
 ${PYSITELIB}/bleach/sanitizer.pyo
+${PYSITELIB}/bleach/utils.py
+${PYSITELIB}/bleach/utils.pyc
+${PYSITELIB}/bleach/utils.pyo
 ${PYSITELIB}/bleach/version.py
 ${PYSITELIB}/bleach/version.pyc
 ${PYSITELIB}/bleach/version.pyo
