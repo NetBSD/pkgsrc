@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17288 2017/04/23 05:27:27 markd Exp $
+$NetBSD: TODO,v 1.17289 2017/04/23 08:19:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -1359,7 +1359,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.11
-	o rpm-4.13
 	o rsnapshot-1.4.2
 	o rt4-4.4.0
 	o rtcw-1.41.3
