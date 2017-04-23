@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2017/01/29 05:31:13 mef Exp $
+# $NetBSD: Makefile,v 1.77.2.1 2017/04/23 09:20:59 bsiegert Exp $
 
 .include "../../shells/zsh/Makefile.common"
 
@@ -31,4 +31,5 @@ SUBST_SED.prefix-fixup+=	-e 's|^\#\!/usr/local/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\! /usr/local/bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\! zsh|\#\! ${PREFIX}/bin/zsh|g'
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
