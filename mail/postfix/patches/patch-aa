@@ -1,10 +1,19 @@
-$NetBSD: patch-aa,v 1.24 2015/09/07 09:47:01 fhajny Exp $
+$NetBSD: patch-aa,v 1.24.14.1 2017/04/23 09:53:05 bsiegert Exp $
 
+Define LD_LIBRARY_PATH in this script as it is not propagated from outside.
 Make this pkgsrc friendly.
 
---- postfix-install.orig	2015-01-29 22:15:30.000000000 +0000
+--- postfix-install.orig	2016-01-03 00:25:23.000000000 +0000
 +++ postfix-install
-@@ -436,26 +436,6 @@ template files main.cf.proto and master.
+@@ -199,6 +199,7 @@ SHELL=/bin/sh
+ IFS=" 	
+ "
+ BACKUP_IFS="$IFS"
++LD_LIBRARY_PATH=`pwd`/lib; export LD_LIBRARY_PATH
+ 
+ # This script uses outputs from Postfix and non-Postfix commands.
+ # Override all LC_* settings and LANG for robustness.
+@@ -447,26 +448,6 @@ template files main.cf.proto and master.
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -c conf -h -d config_directory`}
  
@@ -31,7 +40,7 @@ Make this pkgsrc friendly.
  # In case some systems special-case pathnames beginning with //.
  
  case $install_root in
-@@ -847,13 +827,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
+@@ -869,13 +850,3 @@ bin/postconf -c $CONFIG_DIRECTORY -e \
      "shlib_directory = $shlib_directory" \
      "meta_directory = $meta_directory" \
  || exit 1

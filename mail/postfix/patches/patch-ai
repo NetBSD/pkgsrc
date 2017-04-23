@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.37 2016/11/04 17:10:10 sevan Exp $
+$NetBSD: patch-ai,v 1.37.4.1 2017/04/23 09:53:06 bsiegert Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
@@ -171,6 +171,21 @@ hard-coded per OS per version.  Not yet reported upstream.
 -		fi
  		;;
  ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
+ 		RANLIB=echo
+@@ -671,12 +614,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+ 		esac
+ 		: ${SHLIB_CFLAGS=-fPIC}
+ 		: ${SHLIB_SUFFIX=.dylib}
+-		: ${SHLIB_LD='cc -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup -Wl,-install_name,@rpath/${LIB}'}
++		: ${SHLIB_LD='${CC} -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup -Wl,-install_name,@rpath/${LIB}'}
+ 		: ${SHLIB_RPATH='-Wl,-rpath,${SHLIB_DIR}'}
+                 # In MacOS/X 10.11.x /bin/sh unsets DYLD_LIBRARY_PATH, so we
+                 # have export it into postfix-install indirectly!
+ 		: ${SHLIB_ENV="DYLD_LIBRARY_PATH=`pwd`/lib SHLIB_ENV_VAR=DYLD_LIBRARY_PATH SHLIB_ENV_VAL=`pwd`/lib"}
+-		: ${PLUGIN_LD='cc -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup'}
++		: ${PLUGIN_LD='${CC} -shared -Wl,-flat_namespace -Wl,-undefined,dynamic_lookup'}
+ 		;;
+     dcosx.1*)	SYSTYPE=DCOSX1
  		RANLIB=echo
 @@ -757,8 +700,8 @@ esac
  #
