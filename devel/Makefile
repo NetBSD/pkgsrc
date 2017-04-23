@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2412 2017/04/22 18:20:34 taca Exp $
+# $NetBSD: Makefile,v 1.2413 2017/04/23 03:29:53 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -129,6 +129,7 @@ SUBDIR+=	clisp-pcre
 SUBDIR+=	clisp-syscalls
 SUBDIR+=	clisp-wildcard
 SUBDIR+=	clisp-zlib
+SUBDIR+=	cloc
 SUBDIR+=	cmake
 SUBDIR+=	cmake-fedora
 SUBDIR+=	cmake-mode
