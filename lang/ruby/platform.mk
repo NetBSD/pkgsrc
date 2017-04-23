@@ -1,8 +1,8 @@
-# $NetBSD: platform.mk,v 1.2 2016/11/13 16:03:31 taca Exp $
+# $NetBSD: platform.mk,v 1.3 2017/04/23 14:14:04 taca Exp $
 #
 
 #
-# Common definition for ruby*-base package (except ruby18-base).
+# Common definition for ruby*-base package.
 #
 
 .if !defined(_RUBY_PLATFORM_MK)
