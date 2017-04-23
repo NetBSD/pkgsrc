@@ -1,4 +1,4 @@
-# $NetBSD: gem-vars.mk,v 1.4 2016/11/19 15:36:34 taca Exp $
+# $NetBSD: gem-vars.mk,v 1.5 2017/04/23 14:12:29 taca Exp $
 #
 # This Makefile fragment defines various make(1) variables for Ruby gems
 # support.
@@ -17,15 +17,8 @@ RUBYGEM_ENV?=	LANG=${RUBYGEM_LANG} LC_CTYPE=${RUBYGEM_LANG}
 
 RUBYGEM=	${LOCALBASE}/bin/${RUBYGEM_NAME}
 
-RUBY_GEMS_VERSION?=	${RUBY_GEMS_PKGSRC_VERS}
-
 _RUBYGEMS_MAJOR=	${RUBY_GEMS_VERSION:C/\.[0-9\.]+$//}
 _RUBYGEMS_MINORS=	${RUBY_GEMS_VERSION:C/^([0-9]+)\.*//:C/\..*//}
-
-.if ${RUBY_VER} == "18"
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.1.0:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.0.1:../../misc/rubygems
-.endif # !ruby18
 
 .if ${_RUBYGEMS_MAJOR} >= 2 && ${_RUBYGEMS_MINORS} >= 2 && exists(${RUBYGEM})
 GEM_EXTSDIR_NEEDS_SUBDIR?=	yes
