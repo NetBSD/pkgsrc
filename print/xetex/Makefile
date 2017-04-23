@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/04/22 21:03:54 adam Exp $
+# $NetBSD: Makefile,v 1.59 2017/04/23 09:25:59 wiz Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	xetex-0.99996
@@ -22,6 +22,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+CXXFLAGS+=	-std=c++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
