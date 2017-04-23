@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 05:09:46 markd Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pandocfilters.py
+${PYSITELIB}/pandocfilters.pyc
+${PYSITELIB}/pandocfilters.pyo
