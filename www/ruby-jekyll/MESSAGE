@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2017/04/23 13:04:00 taca Exp $
+
+Note jekyll pkgsrc version dose not depends on ruby-bundler and disables
+bundler execution unless --execute-bundle option is specified to
+`jekyll new`.
+
+===========================================================================
