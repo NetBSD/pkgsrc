@@ -1,0 +1,5 @@
+bin/jupyter-bundlerextension @PREFIX@/bin/jupyter-bundlerextension@PYVERSSUFFIX@
+bin/jupyter-nbextension @PREFIX@/bin/jupyter-nbextension@PYVERSSUFFIX@
+bin/jupyter-notebook @PREFIX@/bin/jupyter-notebook@PYVERSSUFFIX@
+bin/jupyter-serverextension @PREFIX@/bin/jupyter-serverextension@PYVERSSUFFIX@
+bin/less-watch @PREFIX@/bin/less-watch@PYVERSSUFFIX@
