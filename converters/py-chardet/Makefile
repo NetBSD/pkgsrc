@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/04/19 17:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2017/04/23 16:08:02 wiz Exp $
 
 DISTNAME=	chardet-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,9 @@ COMMENT=	Character encoding auto-detection in Python
 LICENSE=	gnu-lgpl-v2.1
 
 # TEST_DEPENDS; however, no tests found
+# https://github.com/chardet/chardet/issues/120
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 BUILD_DEPENDS+=	${PYPKGPREFIX}-hypothesis-[0-9]*:../../devel/py-hypothesis
 BUILD_DEPENDS+=	${PYPKGPREFIX}-py-[0-9]*:../../devel/py-py
 
