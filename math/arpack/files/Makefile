@@ -46,14 +46,17 @@ ARPACK= sgetv0.lo slaqrb.lo sstqrb.lo ssortc.lo ssortr.lo sstatn.lo sstats.lo \
         znaitr.lo znapps.lo znaup2.lo znaupd.lo zneigh.lo zneupd.lo zngets.lo \
         zgetv0.lo zsortc.lo zstatn.lo
 
+UTIL=	cmout.lo cvout.lo dmout.lo dvout.lo icnteq.lo icopy.lo iset.lo \
+	iswap.lo ivout.lo second.lo smout.lo svout.lo zmout.lo zvout.lo
+
 .SUFFIXES:	.f	.lo
 
-.PATH: BLAS LAPACK SRC
+.PATH: BLAS LAPACK SRC UTIL
 
 .f.lo:
 	libtool --mode=compile ${FC} -o $@ -c ${FFLAGS} $<
 
 all: libarpack.la
 
-libarpack.la: ${BLAS} ${LAPACK} ${ARPACK}
-	libtool --mode=link ${FC} -o libarpack.la ${BLAS} ${LAPACK} ${ARPACK} -version-info 1 -rpath ${PREFIX}/lib
+libarpack.la: ${BLAS} ${LAPACK} ${ARPACK} ${UTIL}
+	libtool --mode=link ${FC} -o libarpack.la ${BLAS} ${LAPACK} ${ARPACK} ${UTIL} -version-info 1 -rpath ${PREFIX}/lib
