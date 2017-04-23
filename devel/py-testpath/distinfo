@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/23 05:04:02 markd Exp $
+
+SHA1 (testpath-0.3.tar.gz) = 09337b52d26b02575b311601786a5b80d80b5d15
+RMD160 (testpath-0.3.tar.gz) = 904941b939fcdbae20acda8866bb0baa00fbcaa5
+SHA512 (testpath-0.3.tar.gz) = 71a3266e17616c4df4a4c465151e9d48b89f573e4562132e85982b62446396884a270a32b5d4956aac1f0be1a00096cab9d0dc1718ae8b6312b0436eca683bdf
+Size (testpath-0.3.tar.gz) = 91250 bytes
