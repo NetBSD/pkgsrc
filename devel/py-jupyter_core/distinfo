@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/23 04:23:52 markd Exp $
+
+SHA1 (jupyter_core-4.3.0.tar.gz) = 7ae489bdea8f2d117af5a9b9e1a662d51c99e696
+RMD160 (jupyter_core-4.3.0.tar.gz) = bbecbc5f5cde82a084aa4b523212f3dc8777e956
+SHA512 (jupyter_core-4.3.0.tar.gz) = 8e84cae53e035e3a3d29fe3b64246ce75bed291165db4ae7fcad472e1f1523d740ac168cb97330844548f3df3d7d82cd833886c1b755761b93e01153500961b1
+Size (jupyter_core-4.3.0.tar.gz) = 57998 bytes
