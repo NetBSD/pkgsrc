@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 03:43:15 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/simplegeneric.py
+${PYSITELIB}/simplegeneric.pyc
+${PYSITELIB}/simplegeneric.pyo
