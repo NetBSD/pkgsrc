@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/04/22 07:39:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/04/23 07:03:16 wiz Exp $
 bin/cherryd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -63,6 +63,7 @@ ${PYSITELIB}/cherrypy/_helper.pyo
 ${PYSITELIB}/cherrypy/daemon.py
 ${PYSITELIB}/cherrypy/daemon.pyc
 ${PYSITELIB}/cherrypy/daemon.pyo
+${PYSITELIB}/cherrypy/favicon.ico
 ${PYSITELIB}/cherrypy/lib/__init__.py
 ${PYSITELIB}/cherrypy/lib/__init__.pyc
 ${PYSITELIB}/cherrypy/lib/__init__.pyo
@@ -141,6 +142,10 @@ ${PYSITELIB}/cherrypy/process/wspbus.pyo
 ${PYSITELIB}/cherrypy/scaffold/__init__.py
 ${PYSITELIB}/cherrypy/scaffold/__init__.pyc
 ${PYSITELIB}/cherrypy/scaffold/__init__.pyo
+${PYSITELIB}/cherrypy/scaffold/apache-fcgi.conf
+${PYSITELIB}/cherrypy/scaffold/example.conf
+${PYSITELIB}/cherrypy/scaffold/site.conf
+${PYSITELIB}/cherrypy/scaffold/static/made_with_cherrypy_small.png
 ${PYSITELIB}/cherrypy/test/__init__.py
 ${PYSITELIB}/cherrypy/test/__init__.pyc
 ${PYSITELIB}/cherrypy/test/__init__.pyo
@@ -156,6 +161,8 @@ ${PYSITELIB}/cherrypy/test/benchmark.pyo
 ${PYSITELIB}/cherrypy/test/checkerdemo.py
 ${PYSITELIB}/cherrypy/test/checkerdemo.pyc
 ${PYSITELIB}/cherrypy/test/checkerdemo.pyo
+${PYSITELIB}/cherrypy/test/fastcgi.conf
+${PYSITELIB}/cherrypy/test/fcgi.conf
 ${PYSITELIB}/cherrypy/test/helper.py
 ${PYSITELIB}/cherrypy/test/helper.pyc
 ${PYSITELIB}/cherrypy/test/helper.pyo
@@ -177,6 +184,11 @@ ${PYSITELIB}/cherrypy/test/modwsgi.pyo
 ${PYSITELIB}/cherrypy/test/sessiondemo.py
 ${PYSITELIB}/cherrypy/test/sessiondemo.pyc
 ${PYSITELIB}/cherrypy/test/sessiondemo.pyo
+${PYSITELIB}/cherrypy/test/static/404.html
+${PYSITELIB}/cherrypy/test/static/dirback.jpg
+${PYSITELIB}/cherrypy/test/static/index.html
+${PYSITELIB}/cherrypy/test/style.css
+${PYSITELIB}/cherrypy/test/test.pem
 ${PYSITELIB}/cherrypy/test/test_auth_basic.py
 ${PYSITELIB}/cherrypy/test/test_auth_basic.pyc
 ${PYSITELIB}/cherrypy/test/test_auth_basic.pyo
@@ -294,9 +306,12 @@ ${PYSITELIB}/cherrypy/test/test_xmlrpc.pyo
 ${PYSITELIB}/cherrypy/test/webtest.py
 ${PYSITELIB}/cherrypy/test/webtest.pyc
 ${PYSITELIB}/cherrypy/test/webtest.pyo
+${PYSITELIB}/cherrypy/tutorial/README.rst
 ${PYSITELIB}/cherrypy/tutorial/__init__.py
 ${PYSITELIB}/cherrypy/tutorial/__init__.pyc
 ${PYSITELIB}/cherrypy/tutorial/__init__.pyo
+${PYSITELIB}/cherrypy/tutorial/custom_error.html
+${PYSITELIB}/cherrypy/tutorial/pdf_file.pdf
 ${PYSITELIB}/cherrypy/tutorial/tut01_helloworld.py
 ${PYSITELIB}/cherrypy/tutorial/tut01_helloworld.pyc
 ${PYSITELIB}/cherrypy/tutorial/tut01_helloworld.pyo
@@ -327,3 +342,4 @@ ${PYSITELIB}/cherrypy/tutorial/tut09_files.pyo
 ${PYSITELIB}/cherrypy/tutorial/tut10_http_errors.py
 ${PYSITELIB}/cherrypy/tutorial/tut10_http_errors.pyc
 ${PYSITELIB}/cherrypy/tutorial/tut10_http_errors.pyo
+${PYSITELIB}/cherrypy/tutorial/tutorial.conf
