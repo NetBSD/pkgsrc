@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.173 2017/04/22 18:29:31 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.174 2017/04/23 14:21:23 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 21 22 23
+#		Possible values: 21 22 23
 #		Default: 23
 #
 # RUBY_BUILD_RDOC
@@ -41,7 +41,7 @@
 # RUBY_VERSIONS_ACCEPTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 18 21 22 23
+#		Possible values: 21 22 23
 #		Default: 23 22 21
 #
 # RUBY_NOVERSION
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 18 21 22 23
+#		Possible values: 21 22 23
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -78,7 +78,7 @@
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
 #
-#		Example values: ruby18 ruby21 ruby22 ruby23
+#		Example values: ruby21 ruby22 ruby23
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -107,16 +107,13 @@
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
 #
-#		Possible values: 18 21 22 23
+#		Possible values: 21 22 23
 #
 # RUBY_VERSION
 #	Version of real Ruby's version excluding patchlevel.
 #
 # RUBY_VERSION_FULL
 #	Version of Ruby including patchlevel.
-#
-# RUBY_GEMS_PKGSRC_VERS
-#	Version of rubygems provided by misc/rubygems.
 #
 # RUBY_RDOC_PKGSRC_VERS
 #	Version of rdoc provided by devel/rdoc.
@@ -216,36 +213,26 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(PKGNAME_REQD)
-. if !empty(PKGNAME_REQD:Mruby[0-9][0-9][0-9]-*) || !empty(PKGNAME_REQD:Mruby[0-9][0-9]-*)
-_RUBY_VERSION_REQD:= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
-.  if ${_RUBY_VERSION_REQD} == "18"
-RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9])[0-9]-.*/\1/}
-.  else
-RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
-.  endif
+. if !empty(PKGNAME_REQD:Mruby[0-9][0-9]-*)
+_RUBY_VERSION_REQD:= ${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
+RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9])-.*/\1/}
 . endif
 .endif
 
 # current supported Ruby's version
-RUBY18_VERSION=		1.8.7
 RUBY21_VERSION=		2.1.10
 RUBY22_VERSION=		2.2.7
 RUBY23_VERSION=		2.3.4
 
 # patch level
-RUBY18_PATCHLEVEL=	pl374
 #RUBY21_PATCHLEVEL=	p492
 #RUBY22_PATCHLEVEL=	p470
 #RUBY23_PATCHLEVEL=	p301
 
 # current API compatible version; used for version of shared library
-RUBY18_API_VERSION=	1.8.7
 RUBY21_API_VERSION=	2.1.0
 RUBY22_API_VERSION=	2.2.0
 RUBY23_API_VERSION=	2.3.0
-
-# pkgsrc's rubygems's version
-RUBY_GEMS_PKGSRC_VERS=	2.4.8
 
 # pkgsrc's rdoc's version
 RUBY_RDOC_PKGSRC_VERS=	4.2.2
@@ -254,7 +241,7 @@ RUBY_RDOC_PKGSRC_VERS=	4.2.2
 RUBY_VERSION_DEFAULT?=	23
 
 # supported Ruby's version
-RUBY_VERSIONS_SUPPORTED= 23 22 21 18
+RUBY_VERSIONS_SUPPORTED= 23 22 21
 
 RUBY_VERSIONS_ACCEPTED?= 23 22 21
 RUBY_VERSIONS_INCOMPATIBLE?=
@@ -295,16 +282,7 @@ RUBY_VER:=	${RUBY_VER_MAP.${RUBY_VER}:U${RUBY_VER}}
 
 RUBY_SUFFIX?=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 
-.if ${RUBY_VER} == "18"
-RUBY_VERSION=		${RUBY18_VERSION}
-RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL:S/pl/./}
-RUBY_ABI_VERSION=	${RUBY18_API_VERSION}
-
-RUBY_RDOC_VERSION=	1.0.1
-
-RUBY_SUFFIX=		${RUBY_VER}
-
-.elif ${RUBY_VER} == "21"
+.if ${RUBY_VER} == "21"
 RUBY_VERSION=		${RUBY21_VERSION}
 RUBY_VERSION_FULL=	${RUBY_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
@@ -378,19 +356,18 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
-#	with ${RUBY_NAME}; "ruby18", "ruby21",  and so on.
+#	with ${RUBY_NAME}; "ruby22", "ruby23",  and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
 RUBY_NOVERSION?=	No
 
-# _RUBY_VER_MAJOR, _RUBY_VER_MINOR, _RUBY_VER_TEENY and _RUBY_PATCHLEVEL
+# _RUBY_VER_MAJOR, _RUBY_VER_MINOR
 # is defined from version of Ruby.  It should not be used in packages'
 # Makefile.
 #
 _RUBY_VER_MAJOR=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 _RUBY_VER_MINOR=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
-_RUBY_VER_TEENY=	${RUBY_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
 
 _RUBY_API_MAJOR=	${RUBY_API_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1\2/}
 _RUBY_API_MINOR=	${RUBY_API_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
@@ -399,17 +376,11 @@ RUBY_NAME=		ruby${RUBY_SUFFIX}
 RUBYGEM_NAME=		gem${RUBY_SUFFIX}
 RAKE_NAME=		rake${RUBY_SUFFIX}
 
-RUBY_ENCODING_ARG?=
-
 RUBY_BASE=		${RUBY_NAME}-base
 
 RUBY_PKGPREFIX?=	${RUBY_NAME}
 
-.if ${RUBY_VER} == "18"
-RUBY_VER_DIR=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
-.else 
 RUBY_VER_DIR=		${RUBY_API_VERSION}
-.endif
 
 .if empty(RUBY_NOVERSION:M[nN][oO])
 RUBY_SUFFIX=
@@ -438,11 +409,7 @@ RUBY_STATICLIB?=	${RUBY_SUFFIX}-static.a
 RUBY_SHLIBVER=		${_RUBY_API_MAJOR}.${_RUBY_API_MINOR}
 _RUBY_SHLIBALIAS=	${RUBY_SUFFIX}.${RUBY_SLEXT}.${_RUBY_API_MAJOR}
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-.if ${RUBY_VER} == "18"
-RUBY_SHLIBVER=		${RUBY_SUFFIX}
-.else
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
-.endif
 .elif ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
 .if ${_RUBY_VER_MINOR} == 0
 RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_API_MINOR}
@@ -451,12 +418,8 @@ RUBY_SHLIBVER=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}${_RUBY_API_MINOR}
 .endif
 .elif ${OPSYS} == "Darwin"
 RUBY_SHLIB=		${RUBY_SUFFIX}.${RUBY_SHLIBVER}.${RUBY_SLEXT}
-.if ${RUBY_VER} == "18"
-_RUBY_SHLIBALIAS=	${RUBY_SUFFIX}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_SLEXT}
-.else
 _RUBY_SHLIBALIAS=	.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}.${RUBY_SLEXT}
 RUBY_STATICLIB=		${RUBY_SUFFIX}.${RUBY_API_VERSION}-static.a
-.endif
 .elif ${OPSYS} == "Linux"
 _RUBY_SHLIBALIAS=	${RUBY_SUFFIX}.${RUBY_SLEXT}.${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 .elif ${OPSYS} == "SunOS"
@@ -480,16 +443,7 @@ RUBY_DLEXT=	so
 RUBY_SLEXT=	so
 .endif
 
-#
-# Ruby distribution file, few package need it.
-#
-_RUBY_PATCHLEVEL=	${RUBY_PATCHLEVEL:S/pl/p/:S/pre/preview/}
-
-.if !empty(_RUBY_PATCHLEVEL)
-RUBY_DISTNAME?=		ruby-${RUBY_VERSION}-${_RUBY_PATCHLEVEL}
-.else
 RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
-.endif
 
 #
 # Use pthread library with Ruby
@@ -544,14 +498,6 @@ MAKE_ENV+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 
 MAKEFLAGS+=		RUBY_VER=${RUBY_VER:Q} \
 			RUBY_VERSION_DEFAULT=${RUBY_VERSION_DEFAULT:Q}
-
-#
-# PLIST_VARS for x11/ruby-tk package.
-#
-PLIST_VARS+=		ruby200
-.if ${RUBY_VER} != "18"
-PLIST.ruby200=		yes
-.endif
 
 PLIST_RUBY_DIRS=	RUBY_INC=${RUBY_INC:Q} RUBY_ARCHINC=${RUBY_ARCHINC:Q} \
 			RUBY_LIB_BASE=${RUBY_LIB_BASE:Q} \
