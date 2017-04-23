@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/04/22 07:27:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/04/23 06:58:47 wiz Exp $
 bin/calc-prorate
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/tempora/__init__.pyo
 ${PYSITELIB}/tempora/schedule.py
 ${PYSITELIB}/tempora/schedule.pyc
 ${PYSITELIB}/tempora/schedule.pyo
+${PYSITELIB}/tempora/tests/test_schedule.py
+${PYSITELIB}/tempora/tests/test_schedule.pyc
+${PYSITELIB}/tempora/tests/test_schedule.pyo
 ${PYSITELIB}/tempora/timing.py
 ${PYSITELIB}/tempora/timing.pyc
 ${PYSITELIB}/tempora/timing.pyo
