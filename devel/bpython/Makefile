@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/04/12 12:00:36 adam Exp $
+# $NetBSD: Makefile,v 1.21 2017/04/23 17:23:20 adam Exp $
 
 DISTNAME=	bpython-0.16
 CATEGORIES=	devel
@@ -12,11 +12,12 @@ LICENSE=	mit
 USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
-DEPENDS+=	${PYPKGPREFIX}-greenlet>=0nb4:../../devel/py-greenlet
+DEPENDS+=	${PYPKGPREFIX}-curtsies>=0.1.18:../../devel/py-curtsies
+DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
-DEPENDS+=	${PYPKGPREFIX}-requests>=0nb2:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-six>=0nb2:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9.1:../../devel/py-urwid
 
 .include "../../lang/python/application.mk"
