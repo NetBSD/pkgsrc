@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/23 03:48:20 markd Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/ptyprocess/__init__.py
+${PYSITELIB}/ptyprocess/__init__.pyc
+${PYSITELIB}/ptyprocess/__init__.pyo
+${PYSITELIB}/ptyprocess/_fork_pty.py
+${PYSITELIB}/ptyprocess/_fork_pty.pyc
+${PYSITELIB}/ptyprocess/_fork_pty.pyo
+${PYSITELIB}/ptyprocess/ptyprocess.py
+${PYSITELIB}/ptyprocess/ptyprocess.pyc
+${PYSITELIB}/ptyprocess/ptyprocess.pyo
+${PYSITELIB}/ptyprocess/util.py
+${PYSITELIB}/ptyprocess/util.pyc
+${PYSITELIB}/ptyprocess/util.pyo
