@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.13 2017/04/19 18:57:03 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.14 2017/04/23 10:33:35 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -208,4 +208,31 @@ print/ghostscript-gpl: security fix
 
 Pullup ticket #5276 - requested by sevan
 wm/fluxbox: build fix
+
+Pullup ticket #5333 - requested by maya
+mail/squirrelmail: security fix
+
+Pullup ticket #5327 - requested by wiz
+www/curl: security fix
+
+Pullup ticket #5329 - requested by sevan
+shells/zsh: build fix
+
+Pullup ticket #5355 - requested by sevan
+lang/gcc49: build fix
+
+Pullup ticket #5267 - requested by sevan
+mail/postfix: build fix
+
+Pullup ticket #5280 - requested by sevan
+sysutils/collectd-network: build fix
+
+Pullup ticket #5285 - requested by sevan
+math/arpack: build fix
+
+Pullup ticket #5304 - requested by sevan
+multimedia/gstreamer0.10: build fix
+
+Pullup ticket #5302 - requested by sevan
+multimedia/libmp4v2: build fix
 
