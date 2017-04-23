@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2415 2017/04/23 04:33:47 markd Exp $
+# $NetBSD: Makefile,v 1.2416 2017/04/23 04:56:20 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -1853,6 +1853,7 @@ SUBDIR+=	py-incremental
 SUBDIR+=	py-intervaltree
 SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
+SUBDIR+=	py-ipykernel
 SUBDIR+=	py-ipython
 SUBDIR+=	py-ipython010
 SUBDIR+=	py-ipython013
