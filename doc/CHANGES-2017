@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1730 2017/04/23 05:27:27 markd Exp $
+$NetBSD: CHANGES-2017,v 1.1731 2017/04/23 08:19:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-entrypoints version 0.2.2 [markd 2017-04-23]
 	Added www/py-nbconvert version 5.1.1 [markd 2017-04-23]
 	Added www/py-notebook version 5.0.0rc2 [markd 2017-04-23]
+	Updated misc/rpm to 4.13.0.1 [adam 2017-04-23]
