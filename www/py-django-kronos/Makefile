@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/22 12:29:05 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/04/24 16:23:50 adam Exp $
 
 DISTNAME=	django-kronos-1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=		# empty
 
+DEPENDS+=	${PYPKGPREFIX}-crontab-[0-9]*:../../sysutils/py-crontab
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 .include "../../lang/python/egg.mk"
