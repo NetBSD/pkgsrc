@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2419 2017/04/23 18:00:07 joerg Exp $
+# $NetBSD: Makefile,v 1.2420 2017/04/24 16:38:54 darcy Exp $
 #
 
 COMMENT=	Development utilities
@@ -1815,6 +1815,7 @@ SUBDIR+=	py-enum34
 SUBDIR+=	py-entrypoints
 SUBDIR+=	py-expect
 SUBDIR+=	py-extras
+SUBDIR+=	py-faker
 SUBDIR+=	py-fann2
 SUBDIR+=	py-fastimport
 SUBDIR+=	py-filebytes
