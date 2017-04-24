@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.38 2017/04/11 09:33:30 adam Exp $
+$NetBSD: patch-ai,v 1.39 2017/04/24 20:11:40 fhajny Exp $
 
 1) Add shlib definitions for NetBSD 5; the build system must be
 hard-coded per OS per version.  Not yet reported upstream.
@@ -7,9 +7,9 @@ hard-coded per OS per version.  Not yet reported upstream.
 
 3) Add support for FreeBSD 11 & 12.
 
---- makedefs.orig	2016-08-20 00:08:42.000000000 +0000
+--- makedefs.orig	2017-02-12 15:32:10.000000000 +0000
 +++ makedefs
-@@ -272,6 +272,24 @@ case "$SYSTEM.$RELEASE" in
+@@ -284,6 +284,24 @@ case "$SYSTEM.$RELEASE" in
  		: ${SHLIB_ENV="LD_LIBRARY_PATH=`pwd`/lib"}
  		: ${PLUGIN_LD="${CC} -shared"}
  		;;
@@ -34,7 +34,7 @@ hard-coded per OS per version.  Not yet reported upstream.
   DragonFly.*)	SYSTYPE=DRAGONFLY
  		;;
    OpenBSD.2*)	SYSTYPE=OPENBSD2
-@@ -309,6 +327,12 @@ case "$SYSTEM.$RELEASE" in
+@@ -321,6 +339,12 @@ case "$SYSTEM.$RELEASE" in
     NetBSD.4*)	SYSTYPE=NETBSD4
  		;;
     NetBSD.5*)	SYSTYPE=NETBSD5
@@ -47,7 +47,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
     NetBSD.6*)	SYSTYPE=NETBSD6
  		: ${SHLIB_SUFFIX=.so}
-@@ -389,13 +413,6 @@ case "$SYSTEM.$RELEASE" in
+@@ -409,13 +433,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -61,7 +61,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -437,33 +454,8 @@ case "$SYSTEM.$RELEASE" in
+@@ -457,33 +474,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -95,7 +95,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -524,25 +516,6 @@ EOF
+@@ -544,25 +536,6 @@ EOF
  		: ${PLUGIN_LD="${CC-gcc} -shared"}
  		;;
    Linux.[34].*)	SYSTYPE=LINUX$RELEASE_MAJOR
@@ -121,7 +121,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /usr/lib/* /lib /lib/*
-@@ -563,24 +536,6 @@ EOF
+@@ -583,24 +556,6 @@ EOF
  		;;
       GNU.0*|GNU/kFreeBSD.[567]*)
  		SYSTYPE=GNU0
@@ -146,10 +146,10 @@ hard-coded per OS per version.  Not yet reported upstream.
  		for name in nsl resolv
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -611,25 +566,13 @@ EOF
+@@ -631,26 +586,14 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
- 		CCARGS="$CCARGS -DMISSING_USLEEP"
+ 		CCARGS="$CCARGS -DMISSING_USLEEP -DNO_SNPRINTF"
 -		if [ -f /usr/lib/libdb.a ]; then
 -		    CCARGS="$CCARGS -DHAS_DB"
 -		    SYSLIBS="$SYSLIBS -ldb"
@@ -158,6 +158,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  HP-UX.B.10.*)	SYSTYPE=HPUX10
  		CCARGS="$CCARGS `nm /usr/lib/libc.a 2>/dev/null |
  		    (grep usleep >/dev/null || echo '-DMISSING_USLEEP')`"
+ 		CCARGS="$CCARGS -DNO_SNPRINTF"
 -		if [ -f /usr/lib/libdb.a ]; then
 -		    CCARGS="$CCARGS -DHAS_DB"
 -		    SYSLIBS=-ldb
@@ -172,7 +173,7 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
  ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix543
  		RANLIB=echo
-@@ -671,12 +614,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
+@@ -692,12 +635,12 @@ ReliantUNIX-?.5.43) SYSTYPE=ReliantUnix5
  		esac
  		: ${SHLIB_CFLAGS=-fPIC}
  		: ${SHLIB_SUFFIX=.dylib}
@@ -187,10 +188,10 @@ hard-coded per OS per version.  Not yet reported upstream.
  		;;
      dcosx.1*)	SYSTYPE=DCOSX1
  		RANLIB=echo
-@@ -757,8 +700,8 @@ esac
+@@ -778,8 +721,8 @@ esac
  #
  case "$CCARGS" in
- *-DNO_EAI*) ;;
+ *-DNO_EAI*) CCARGS="$CCARGS "'-DDEF_SMTPUTF8_ENABLE=\"no\"';;
 -	 *) icu_cppflags=`(icu-config --cppflags) 2>/dev/null` && {
 -		icu_ldflags=`(icu-config --ldflags) 2>/dev/null` && {
 +	 *) icu_cppflags=`(pkg-config --cflags icu-i18n) 2>/dev/null` && {
