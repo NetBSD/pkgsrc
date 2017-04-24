@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.1 2017/04/20 08:01:18 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2017/04/24 12:20:37 fhajny Exp $
 
 SHA1 (librdkafka-0.9.5.tar.gz) = 8cc5ba85d18104c644d7bb9e4e64e8c95cd2f100
 RMD160 (librdkafka-0.9.5.tar.gz) = 56343b3724acb09a2df0f7a42830426bea392158
 SHA512 (librdkafka-0.9.5.tar.gz) = 06b2c7e3dd1c8a84322d256f2470804ba0ac205777cf66c0c98222d3f90ed26d6fcae375ee0343558ccf901d7a8d354009f377a435ecd0ce2d02c73848fbc8a4
 Size (librdkafka-0.9.5.tar.gz) = 753196 bytes
-SHA1 (patch-src_rdkafka__broker.c) = 6c123399f7472e2727731e307ff90a52712f7ec3
+SHA1 (patch-Makefile) = 31731833723acada1c53d01a632f8ba726788a5a
+SHA1 (patch-src_rd.h) = 698000dcad93ccaa07e2462e0932967272b2a915
+SHA1 (patch-src_rdendian.h) = 2c01666fa2ad35415180e272223d3be13d91f7f8
+SHA1 (patch-src_rdkafka__broker.c) = 3be69e335317eaa8dea196a5f28856085788c034
+SHA1 (patch-src_rdposix.h) = 72ac80d3ac57a87b3c289b3c7a8698234af9984c
+SHA1 (patch-src_snappy__compat.h) = c728f0e575ccf944d6990aa64cc4ccd926e4e5d4
