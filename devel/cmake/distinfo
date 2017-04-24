@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.97 2017/04/11 20:18:54 adam Exp $
+$NetBSD: distinfo,v 1.98 2017/04/24 22:48:48 maya Exp $
 
 SHA1 (cmake-3.8.0.tar.gz) = 660ec06a46b46dc5d675371a2256ec739f8bb8b7
 RMD160 (cmake-3.8.0.tar.gz) = 30dacd3b01f98fbd47721b201e48e8fe776082da
@@ -7,7 +7,8 @@ Size (cmake-3.8.0.tar.gz) = 7503379 bytes
 SHA1 (patch-CMakeLists.txt) = a0b03f2fad5ea174095c4fe52cea67d94cf46e2d
 SHA1 (patch-Modules_FindCurses.cmake) = 09fcd7adfbc2dfc2cd8af4e047d870a5243d77dc
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
-SHA1 (patch-Source_CursesDialog_ccmake.cxx) = d32233df33f057b1468bc487adb66eaa9ac1a7c9
+SHA1 (patch-Source_CursesDialog_ccmake.cxx) = 1685973706bd2041422e5f8da12634c6c0695714
+SHA1 (patch-Source_cmELF.cxx) = e1629ff181c5757fad098ee1534680bf7e24cb64
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = e4bdf9fc58757e87bf7e3e3e195839eededbc796
 SHA1 (patch-aa) = bab24334e025b7c1bf7caa2e69d6a439cc421ea9
 SHA1 (patch-ab) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
