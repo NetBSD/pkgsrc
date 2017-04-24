@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.190 2017/03/16 15:15:42 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2017/04/24 07:18:59 wiz Exp $
 
 DISTNAME=	libpng-1.6.29
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/}
+MASTER_SITES=	https://ftp-osl.osuosl.org/pub/libpng/src/archive/xz/libpng16/
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=libpng/}
 MASTER_SITES+=	ftp://ftp.fu-berlin.de/unix/graphics/png/src/libpng16/
 EXTRACT_SUFX=	.tar.xz
 
