@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2017/04/24 12:20:37 fhajny Exp $
+
+Do not test as part of build.
+
+--- Makefile.orig	2017-04-12 08:36:34.000000000 +0000
++++ Makefile
+@@ -12,7 +12,7 @@ BUILD_NUMBER ?= 1
+ 
+ .PHONY:
+ 
+-all: mklove-check libs CONFIGURATION.md check
++all: mklove-check libs CONFIGURATION.md
+ 
+ include mklove/Makefile.base
+ 
