@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2017/04/22 20:11:45 adam Exp $
+# $NetBSD: Makefile,v 1.109 2017/04/24 21:20:10 maya Exp $
 
 DISTNAME=	icu4c-59_1-src
 PKGNAME=	${DISTNAME:S/4c//:S/-src//:S/_/./g}
@@ -14,6 +14,7 @@ LICENSE=	mit
 WRKSRC=			${WRKDIR}/icu/source
 USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		gmake
+GCC_REQD+=		4.8
 TEST_TARGET=		check
 UNLIMIT_RESOURCES+=	datasize
 GNU_CONFIGURE=		yes
