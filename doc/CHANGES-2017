@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1737 2017/04/24 07:25:58 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1738 2017/04/24 15:18:33 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/contao35 to 3.5.26 [taca 2017-04-23]
 	Updated devel/py-ruamel-yaml to 0.14.6nb1 [leot 2017-04-23]
 	Updated x11/xf86-video-nouveau to 1.0.15 [wiz 2017-04-24]
+	Updated multimedia/mpv to 0.25.0 [maya 2017-04-24]
