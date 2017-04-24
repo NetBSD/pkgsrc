@@ -1,9 +1,9 @@
-$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.2 2016/12/03 16:30:05 martin Exp $
+$NetBSD: patch-Source_WTF_wtf_Platform.h,v 1.3 2017/04/24 15:40:12 wiz Exp $
 
 Add support for sparc and sparc64, disable ASSEMBLER and YARR_JIT for now
 
---- Source/WTF/wtf/Platform.h.orig	2016-04-10 08:48:36.000000000 +0200
-+++ Source/WTF/wtf/Platform.h	2016-12-02 18:12:33.703875988 +0100
+--- Source/WTF/wtf/Platform.h.orig	2016-04-10 06:48:36.000000000 +0000
++++ Source/WTF/wtf/Platform.h
 @@ -153,6 +153,18 @@
  #define WTF_CPU_BIG_ENDIAN 1
  #endif
@@ -53,4 +53,3 @@ Add support for sparc and sparc64, disable ASSEMBLER and YARR_JIT for now
  
  /* If the Disassembler is enabled, then the Assembler must be enabled as well: */
  #if ENABLE(DISASSEMBLER)
-
