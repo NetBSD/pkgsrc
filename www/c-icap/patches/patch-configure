@@ -1,11 +1,12 @@
-$NetBSD: patch-configure,v 1.7 2017/02/09 00:17:07 joerg Exp $
+$NetBSD: patch-configure,v 1.8 2017/04/24 14:35:01 sborrill Exp $
 
 Detect Berkeley DB.
 Link against librt on NetBSD, too.
+Link-test for shm_* functions.
 
---- configure.orig	2016-09-21 12:09:36.000000000 +0000
-+++ configure
-@@ -13210,12 +13210,11 @@ rm -f core conftest.err conftest.$ac_obj
+--- /pkg_comp/obj/pkgsrc/www/c-icap/default/c_icap-0.4.4/configure.orig	2016-09-21 12:09:36.000000000 +0000
++++ /pkg_comp/obj/pkgsrc/www/c-icap/default/c_icap-0.4.4/configure	2017-04-24 14:23:58.000000000 +0000
+@@ -13210,12 +13210,11 @@
       OLDCFLAGS=$CFLAGS
       OLDLDFLAGS=$LDFLAGS
       OLDLIBS=$LIBS
@@ -20,7 +21,7 @@ Link against librt on NetBSD, too.
             cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  
-@@ -13229,7 +13228,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -13229,7 +13228,7 @@
  
  _ACEOF
  if ac_fn_c_try_link "$LINENO"; then :
@@ -29,7 +30,28 @@ Link against librt on NetBSD, too.
  else
    libdb="no"; echo "no";
  
-@@ -14585,7 +14584,7 @@ if test a"$POSIX_SHARED_MEM" = "a1"; the
+@@ -14546,6 +14545,11 @@
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if posix shared mem works" >&5
+ $as_echo_n "checking if posix shared mem works... " >&6; }
++case "$target_os" in
++linux*|netbsd*)
++	LIBS="-lrt  $LIBS"
++	;;
++esac
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -14566,7 +14570,7 @@
+   return 0;
+ }
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+ 
+ $as_echo "#define HAVE_POSIX_SHARED_MEM 1" >>confdefs.h
+ 
+@@ -14585,7 +14589,7 @@
  # Linux and solaris define the shm_open in -rt library.
  # This library already included in LIBS for solaris
  case "$target_os" in
