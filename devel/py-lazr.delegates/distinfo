@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/25 19:32:11 fhajny Exp $
+
+SHA1 (lazr.delegates-2.0.3.tar.gz) = 0313ff26796be3e1ad3abdaad8f4d2fce00b9518
+RMD160 (lazr.delegates-2.0.3.tar.gz) = bff37c7d355a8d0ea310bdbe5fa175c5c9cc3198
+SHA512 (lazr.delegates-2.0.3.tar.gz) = 36a4fd3aabf25c8dac0daf8bae67bdf938867b33f72926696437b65ab7a450999c0fc9999216125af6f311f783f3f20bfa03ac761f1552f9a8810de9964cfd61
+Size (lazr.delegates-2.0.3.tar.gz) = 14039 bytes
