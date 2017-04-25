@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/25 20:37:06 fhajny Exp $
+
+SHA1 (ddt-1.1.1.tar.gz) = b36d01e9ea431078618d0fc83deda8961c17560f
+RMD160 (ddt-1.1.1.tar.gz) = b9e21e003e8db01040b64b74a6a44ad0725d8d02
+SHA512 (ddt-1.1.1.tar.gz) = 3839ac0448292bde07d676456640cd9466353e8c4481e60cb51e33704c21f92fdf840901430aa7f5276ccf579a7cd70b277fa2ceae03bce183e2422d514897a9
+Size (ddt-1.1.1.tar.gz) = 10021 bytes
