@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/04/25 20:34:04 fhajny Exp $
 
-DISTNAME=	python-mimeparse-0.1.4
+DISTNAME=	python-mimeparse-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-mimeparse/}
@@ -12,5 +12,5 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
