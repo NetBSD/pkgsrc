@@ -1,0 +1,1 @@
+bin/smtpd @PREFIX@/bin/smtpd@PYVERSSUFFIX@
