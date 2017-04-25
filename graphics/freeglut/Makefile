@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/10/01 07:52:57 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/04/25 11:27:00 wiz Exp $
 
 DISTNAME=	freeglut-3.0.0
 CATEGORIES=	graphics
@@ -16,10 +16,6 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE=	freeglut.pc.in
-
-# https://sourceforge.net/p/freeglut/bugs/232/
-post-install:
-	${RM} ${DESTDIR}${PREFIX}/include/GL/glut.h
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
