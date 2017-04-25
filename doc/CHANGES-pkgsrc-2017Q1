@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.14 2017/04/23 10:33:35 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.15 2017/04/25 18:18:40 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -235,4 +235,22 @@ multimedia/gstreamer0.10: build fix
 
 Pullup ticket #5302 - requested by sevan
 multimedia/libmp4v2: build fix
+
+Pullup ticket #5356 - requested by sevan
+math/nickle: build fix
+
+Pullup ticket #5357 - requested by maya
+textproc/icu: security fix (backported)
+
+Pullup ticket #5358 - requested by sevan
+audio/libsamplerate: build fix
+
+Pullup ticket #5359 - requested by sevan
+net/iftop: build fix
+
+Pullup ticket #5360 - requested by sevan
+mk/curses.builtin.mk: bugfix
+
+Pullup ticket #5361 - requested by sevan
+sysutils/ncdu: build fix
 
