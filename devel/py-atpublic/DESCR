@@ -1,0 +1,2 @@
+This is a very simple decorator and function which populates a
+module's __all__ and optionally the module globals.
