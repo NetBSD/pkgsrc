@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.15 2017/04/25 18:18:40 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.16 2017/04/25 18:31:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -253,4 +253,10 @@ mk/curses.builtin.mk: bugfix
 
 Pullup ticket #5361 - requested by sevan
 sysutils/ncdu: build fix
+
+Pullup ticket #5335 - requested by maya
+x11/qt5-qtbase: build fix
+
+Pullup ticket #5364 - requested by sevan
+devel/ocaml-findlib: build fix
 
