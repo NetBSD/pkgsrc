@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1751 2017/04/25 17:23:41 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1752 2017/04/25 17:28:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2186,3 +2186,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-atpublic version 0.5 [fhajny 2017-04-25]
 	Added mail/py-aiosmtpd version 1.0a5 [fhajny 2017-04-25]
 	Added devel/py-ZopeSchema version 4.4.2 [fhajny 2017-04-25]
+	Added devel/py-ZopeI18NMessageid version 4.0.3 [fhajny 2017-04-25]
