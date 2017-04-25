@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/25 19:59:59 fhajny Exp $
+
+SHA1 (lazr.config-2.2.tar.gz) = 3cff3c1e29874ea2fb0fbbc200f7d64b3e564eb1
+RMD160 (lazr.config-2.2.tar.gz) = 54644af80fd87daaf0107f8aaf807c59f1d468e9
+SHA512 (lazr.config-2.2.tar.gz) = bb7b80e247319929318cff9b4d775ae5b4195e17ea5333509bc5397a995027bc668acc818c09c66a6611f207cd040c804186db5702f7daa00f7530dfa131960c
+Size (lazr.config-2.2.tar.gz) = 32037 bytes
