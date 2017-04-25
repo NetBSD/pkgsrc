@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1747 2017/04/25 15:51:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1748 2017/04/25 15:55:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2182,3 +2182,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Dir to 1.16 [mef 2017-04-25]
 	Updated devel/p5-Test-CheckManifest to 1.31 [mef 2017-04-25]
 	Updated www/contao35 to 3.5.27 [taca 2017-04-25]
+	Updated www/contao43 to 4.3.9 [taca 2017-04-25]
