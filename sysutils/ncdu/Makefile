@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/01/03 22:40:43 roy Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2017/04/25 18:06:29 bsiegert Exp $
 
 DISTNAME=	ncdu-1.12
 PKGREVISION=	1
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 FAKE_NCURSES=	yes
+USE_CURSES=	vw_printw
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
