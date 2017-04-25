@@ -1,12 +1,14 @@
-$NetBSD: patch-configure,v 1.8 2015/10/09 23:15:34 ryoon Exp $
+$NetBSD: patch-configure,v 1.9 2017/04/25 08:58:44 maya Exp $
 
 Portability fix.
 Solaris seems to need -std=c99 with recent pkgsrc so keep it.
+don't throw away -std=c++11 on solaris unconditionally, it's
+required.
 Add support for Bitrig.
 
---- configure.orig	2015-10-08 04:00:24.000000000 +0000
+--- configure.orig	2017-04-07 07:40:30.000000000 +0000
 +++ configure
-@@ -5174,7 +5174,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -5175,7 +5175,7 @@ rm -f core conftest.err conftest.$ac_obj
  		*-*-cygwin) icu_cv_host_frag=mh-cygwin-msvc ;;
  		esac
  	fi ;;
@@ -15,7 +17,7 @@ Add support for Bitrig.
  *-*-aix*)
  	if test "$GCC" = yes; then
  		icu_cv_host_frag=mh-aix-gcc
-@@ -5199,6 +5199,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -5200,6 +5200,7 @@ rm -f core conftest.err conftest.$ac_obj
  *-dec-osf*) icu_cv_host_frag=mh-alpha-osf ;;
  *-*-nto*)	icu_cv_host_frag=mh-qnx ;;
  *-ncr-*)	icu_cv_host_frag=mh-mpras ;;
@@ -23,7 +25,7 @@ Add support for Bitrig.
  *) 		icu_cv_host_frag=mh-unknown ;;
  esac
  
-@@ -5736,6 +5737,29 @@ if test "x$plugins" = "xtrue"; then
+@@ -5808,6 +5809,29 @@ if test "x$plugins" = "xtrue"; then
  fi
  
  
@@ -53,7 +55,19 @@ Add support for Bitrig.
  U_ENABLE_DYLOAD=1
  enable=yes
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to enable dynamic loading of plugins. Ignored if plugins disabled." >&5
-@@ -7729,7 +7753,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
+@@ -6021,11 +6045,6 @@ $as_echo "$as_me: Adding CXXFLAGS option
+         else
+             CXXFLAGS="$OLD_CXXFLAGS"
+         fi
+-        case "${host}" in
+-        *-*-solaris*)
+-            CXXFLAGS="$OLD_CXXFLAGS"
+-            ;;
+-        esac
+     fi
+ fi
+ 
+@@ -7776,7 +7795,7 @@ ICUDATA_CHAR=$U_ENDIAN_CHAR
  case "${host}" in
  	*-*-solaris*) 	platform=U_SOLARIS ;;
  	*-*-linux*|*-*-gnu|*-*-k*bsd*-gnu|*-*-kopensolaris*-gnu)        platform=U_LINUX ;;
@@ -62,7 +76,7 @@ Add support for Bitrig.
  	*-*-aix*) 	platform=U_AIX ;;
  	*-*-hpux*) 	platform=U_HPUX ;;
  	*-apple-darwin*|*-apple-rhapsody*)	platform=U_DARWIN ;;
-@@ -7765,13 +7789,13 @@ fi
+@@ -7812,13 +7831,13 @@ fi
  # Now that we're done using CPPFLAGS etc. for tests, we can change it
  # for build.
  
