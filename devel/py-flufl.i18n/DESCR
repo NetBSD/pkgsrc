@@ -1,0 +1,5 @@
+The ``flufl.i18n`` library provides a convenient API for managing
+translation contexts in Python applications. It provides facilities
+not only for single-context applications like command line scripts,
+but also more sophisticated management of multiple-context applications
+such as Internet servers.
