@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/25 20:21:48 fhajny Exp $
+
+SHA1 (flufl.lock-2.4.1.tar.gz) = 40c0a7808e27a077ac28b2f7b6e4dc74511e9292
+RMD160 (flufl.lock-2.4.1.tar.gz) = 352f4dafa3965b8f9b57bbb1e103719f3bed092e
+SHA512 (flufl.lock-2.4.1.tar.gz) = 8f0b2e311538191539f0ba325cc53e1066eea072f521289f801b8c2cf849a689b94185e13e15f586625f62a4f6a771c78f916a806a953610550a03ccc7d6ec2f
+Size (flufl.lock-2.4.1.tar.gz) = 20623 bytes
