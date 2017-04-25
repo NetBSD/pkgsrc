@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2424 2017/04/25 20:15:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.2425 2017/04/25 20:38:11 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1803,6 +1803,7 @@ SUBDIR+=	py-d2to1
 SUBDIR+=	py-daemon
 SUBDIR+=	py-daemonize
 SUBDIR+=	py-darcsver
+SUBDIR+=	py-ddt
 SUBDIR+=	py-decorator
 SUBDIR+=	py-dialog
 SUBDIR+=	py-dialog2
