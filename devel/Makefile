@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2422 2017/04/25 17:48:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.2423 2017/04/25 20:01:01 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1876,6 +1876,8 @@ SUBDIR+=	py-kaitaistruct
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
 SUBDIR+=	py-lama
+SUBDIR+=	py-lazr.config
+SUBDIR+=	py-lazr.delegates
 SUBDIR+=	py-lazy-object-proxy
 SUBDIR+=	py-libevent-rpcgen
 SUBDIR+=	py-libmc
