@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1744 2017/04/25 13:17:50 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1745 2017/04/25 14:01:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2177,3 +2177,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/postfix to 3.2.0 [fhajny 2017-04-24]
 	Updated security/keychain to 2.8.3nb1 [jperkin 2017-04-25]
 	Updated textproc/mdoclint to 1.46 [wiz 2017-04-25]
+	Updated devel/p5-Class-C3 to 0.33 [mef 2017-04-25]
+	Updated devel/p5-Config-Any to 0.32 [mef 2017-04-25]
