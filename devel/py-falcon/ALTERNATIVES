@@ -1,0 +1,2 @@
+bin/falcon-bench @PREFIX@/bin/falcon-bench-@PYVERSSUFFIX@
+bin/falcon-print-routes @PREFIX@/bin/falcon-print-routes-@PYVERSSUFFIX@
