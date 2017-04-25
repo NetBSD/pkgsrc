@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/01/15 23:09:28 tnn Exp $
+$NetBSD: patch-aa,v 1.4.58.1 2017/04/25 17:39:11 bsiegert Exp $
+
+* Fix build issue with Sun Studio.
 
 --- execute.c.orig	2008-03-20 00:21:49.000000000 +0000
 +++ execute.c
