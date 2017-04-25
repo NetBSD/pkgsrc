@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1757 2017/04/25 19:32:22 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1758 2017/04/25 19:50:39 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2192,3 +2192,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/glibmm to 2.50.1 [adam 2017-04-25]
 	Updated multimedia/x265 to 2.4 [adam 2017-04-25]
 	Added devel/py-lazr.delegates version 2.0.3 [fhajny 2017-04-25]
+	Updated chat/weechat to 1.7.1 [maya 2017-04-25]
