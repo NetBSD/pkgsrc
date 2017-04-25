@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/02/12 06:24:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2017/04/25 18:29:40 bsiegert Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -97,6 +97,7 @@ LDFLAGS+=		-ldl
 .  if exists(/usr/lib/libexecinfo.so)
 LDFLAGS+=		-lexecinfo
 .  endif
+LDFLAGS.FreeBSD+=	-lutil
 .endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 LDFLAGS+=		-lkvm	# see patch-src_corelib_io_qlockfile__unix.cpp

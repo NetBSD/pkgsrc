@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2016/12/04 21:46:54 marino Exp $
+$NetBSD: distinfo,v 1.31.4.1 2017/04/25 18:29:40 bsiegert Exp $
 
 SHA1 (qtbase-opensource-src-5.5.1.tar.xz) = 0b651543fa013ae151b7a11f0d0dee092050aa3f
 RMD160 (qtbase-opensource-src-5.5.1.tar.xz) = ce4bccd0703aaf8d904fbecd1f334ef13d698a44
@@ -23,6 +23,7 @@ SHA1 (patch-src_corelib_io_io.pri) = 9a59b621441291f388860b523f80b59730632328
 SHA1 (patch-src_corelib_io_qlockfile__unix.cpp) = f07812f0867bd04dfdea736847a668843a5fe646
 SHA1 (patch-src_corelib_io_qstandardpaths_unix.cpp) = de4b6c6be89524763e40698bcf5e8f413abdb938
 SHA1 (patch-src_corelib_io_qstorageinfo_unix.cpp) = 688de65bf3364cb8c982a7f82c9b67f5ecbebd10
+SHA1 (patch-src_corelib_thread_qwaitcondition__unix.cpp) = 331c3ced6554da7164a6927b0d8052447ae804d0
 SHA1 (patch-src_network_kernel_qhostinfo__unix.cpp) = 0335273353daa7c980ccb4febb6eed11b452e50d
 SHA1 (patch-src_openglextensions_openglextensions.pro) = e79effc1433ddda744b79d7e1f47764fee406580
 SHA1 (patch-src_platformsupport_devicediscovery_devicediscovery.pri) = 2cd24768b41c813d0aee0943f97f913308794611
