@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2017/04/05 12:33:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2017/04/25 15:55:18 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	standard-edition
@@ -23,7 +22,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERSION=	4.3.7
+CT_VERSION=	4.3.9
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
