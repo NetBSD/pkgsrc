@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/25 17:28:13 fhajny Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zope/i18nmessageid/__init__.py
+${PYSITELIB}/zope/i18nmessageid/__init__.pyo
+${PYSITELIB}/zope/i18nmessageid/__init__.pyc
+${PYSITELIB}/zope/i18nmessageid/message.pyo
+${PYSITELIB}/zope/i18nmessageid/message.pyc
+${PYSITELIB}/zope/i18nmessageid/tests.pyo
+${PYSITELIB}/zope/i18nmessageid/tests.pyc
+${PYSITELIB}/zope/i18nmessageid/_zope_i18nmessageid_message.c
+${PYSITELIB}/zope/i18nmessageid/_zope_i18nmessageid_message.so
+${PYSITELIB}/zope/i18nmessageid/message.py
+${PYSITELIB}/zope/i18nmessageid/tests.py

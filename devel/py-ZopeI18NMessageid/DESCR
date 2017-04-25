@@ -1,0 +1,4 @@
+Zope Message Identifiers for internationalization
+
+This package is intended to be independently reusable in any Python
+project. It is maintained by the Zope Toolkit project.
