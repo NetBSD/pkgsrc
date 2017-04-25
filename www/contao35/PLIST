@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/04/23 14:56:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/04/25 15:50:41 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.9/ace.js
@@ -3647,13 +3647,6 @@ ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/lib/swift_required.php
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/lib/swift_required_pear.php
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/phpunit.xml.dist
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/LICENSE
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/Mbstring.php
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/README.md
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/bootstrap.php
-${CT_WEBDIR}/vendor/symfony/polyfill-mbstring/composer.json
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/CHANGELOG.TXT
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/LICENSE.TXT
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/README.TXT
@@ -3695,13 +3688,13 @@ ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/tcpdf_parser.php
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/tools/.htaccess
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/tools/convert_fonts_examples.txt
 ${CT_WEBDIR}/vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php
+${CT_WEBDIR}/vendor/true/punycode/.gitignore
+${CT_WEBDIR}/vendor/true/punycode/.travis.yml
 ${CT_WEBDIR}/vendor/true/punycode/CHANGELOG.md
 ${CT_WEBDIR}/vendor/true/punycode/LICENSE
 ${CT_WEBDIR}/vendor/true/punycode/README.md
 ${CT_WEBDIR}/vendor/true/punycode/composer.json
-${CT_WEBDIR}/vendor/true/punycode/src/Exception/DomainOutOfBoundsException.php
-${CT_WEBDIR}/vendor/true/punycode/src/Exception/LabelOutOfBoundsException.php
-${CT_WEBDIR}/vendor/true/punycode/src/Exception/OutOfBoundsException.php
+${CT_WEBDIR}/vendor/true/punycode/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/true/punycode/src/Punycode.php
 ${CT_DOCDIR}/README
 ${CT_EGDIR}/contao.conf
