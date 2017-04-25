@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2423 2017/04/25 20:01:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.2424 2017/04/25 20:15:03 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1905,6 +1905,7 @@ SUBDIR+=	py-multiprocessing
 SUBDIR+=	py-newt
 SUBDIR+=	py-nose
 SUBDIR+=	py-nose-exclude
+SUBDIR+=	py-nose2
 SUBDIR+=	py-nosexcover
 SUBDIR+=	py-ode
 SUBDIR+=	py-olefile
