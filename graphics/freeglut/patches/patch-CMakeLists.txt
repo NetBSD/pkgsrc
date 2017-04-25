@@ -1,0 +1,20 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/04/25 11:27:00 wiz Exp $
+
+https://github.com/dcnieho/FreeGLUT/commit/a0b77bba49573dab3564ce22a503024098664f04
+
+--- CMakeLists.txt.orig	2015-02-18 04:59:57.000000000 +0000
++++ CMakeLists.txt
+@@ -62,8 +62,12 @@ SET(FREEGLUT_HEADERS
+     include/GL/freeglut.h
+     include/GL/freeglut_ext.h
+     include/GL/freeglut_std.h
+-    include/GL/glut.h
+ )
++IF(FREEGLUT_REPLACE_GLUT)
++    LIST(APPEND FREEGLUT_SRCS
++        include/GL/glut.h
++    )
++ENDIF()
+ SET(FREEGLUT_SRCS
+     ${FREEGLUT_HEADERS}
+     src/fg_callbacks.c
