@@ -1,0 +1,5 @@
+The zope configuration system provides an extensible system for
+supporting various kinds of configurations.
+
+This package is intended to be independently reusable in any Python
+project. It is maintained by the Zope Toolkit project.
