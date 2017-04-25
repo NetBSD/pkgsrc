@@ -1,6 +1,7 @@
-$NetBSD: patch-src_freeglut__joystick.c,v 1.2 2016/10/01 07:47:04 wiz Exp $
+$NetBSD: patch-src_freeglut__joystick.c,v 1.3 2017/04/25 11:42:42 wiz Exp $
 
 Fix usb.h include for NetBSD.
+https://github.com/dcnieho/FreeGLUT/pull/53
 
 --- src/fg_joystick.c.orig	2014-10-20 15:27:04.000000000 +0000
 +++ src/fg_joystick.c
