@@ -1,0 +1,3 @@
+Falcon is a high-performance Python framework for building cloud APIs.
+It encourages the REST architectural style, and tries to do as little
+as possible while remaining highly effective.
