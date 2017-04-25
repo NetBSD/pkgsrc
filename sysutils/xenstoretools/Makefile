@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/01/05 12:44:54 sborrill Exp $
+# $NetBSD: Makefile,v 1.11 2017/04/25 06:49:45 sborrill Exp $
 #
 
 # VERSION is set in xentool46/version.mk
@@ -24,6 +24,10 @@ BUILD_DIRS=		xenstore
 BUILD_TARGET=		clients
 INSTALL_DIRS=		xenstore
 INSTALL_MAKE_FLAGS+=	XENSTORE_XENSTORED=n
+
+.if !exists(/usr/bin/iasl)
+BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
+.endif
 
 GNU_CONFIGURE=		yes
 # configure checks for more components than are required to build the
