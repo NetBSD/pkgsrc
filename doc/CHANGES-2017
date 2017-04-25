@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1754 2017/04/25 17:48:27 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1755 2017/04/25 18:15:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2189,3 +2189,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-ZopeI18NMessageid version 4.0.3 [fhajny 2017-04-25]
 	Updated devel/py-ZopeInterface to 4.4.0 [fhajny 2017-04-25]
 	Added devel/py-ZopeConfiguration version 4.0.3 [fhajny 2017-04-25]
+	Updated devel/glibmm to 2.50.1 [adam 2017-04-25]
