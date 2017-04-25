@@ -1,0 +1,1 @@
+bin/nose2 @PREFIX@/bin/nose2-@PYVERSSUFFIX@
