@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1759 2017/04/25 20:00:10 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1760 2017/04/25 20:14:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2194,3 +2194,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-lazr.delegates version 2.0.3 [fhajny 2017-04-25]
 	Updated chat/weechat to 1.7.1 [maya 2017-04-25]
 	Added devel/py-lazr.config version 2.2 [fhajny 2017-04-25]
+	Added devel/py-nose2 version 0.6.5 [fhajny 2017-04-25]
