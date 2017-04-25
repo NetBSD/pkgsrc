@@ -1,6 +1,7 @@
-$NetBSD: patch-src_x11_fg__joystick__x11.c,v 1.1 2016/10/01 07:47:04 wiz Exp $
+$NetBSD: patch-src_x11_fg__joystick__x11.c,v 1.2 2017/04/25 11:42:42 wiz Exp $
 
 This code does not work on NetBSD, remove wrong ifdefs.
+https://github.com/dcnieho/FreeGLUT/pull/53
 
 --- src/x11/fg_joystick_x11.c.orig	2014-12-02 05:22:12.000000000 +0000
 +++ src/x11/fg_joystick_x11.c
