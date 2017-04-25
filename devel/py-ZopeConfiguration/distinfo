@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/25 17:48:12 fhajny Exp $
+
+SHA1 (zope.configuration-4.0.3.tar.gz) = f698f871eb79b0d15a1e9fb4ad0ad43bdf8fbbbb
+RMD160 (zope.configuration-4.0.3.tar.gz) = bb4863227e559de5a1f042cdbe1b8db215f77296
+SHA512 (zope.configuration-4.0.3.tar.gz) = b4ff914dd25fb8be5cfd61c5bc87448b4ba87adf9ff3bce7ab01fa3b7bf1b19a1b7fc6be252fe0582a238fc071b7a762adaad14aafbd3a2e4f65c08bb7bf63eb
+Size (zope.configuration-4.0.3.tar.gz) = 487610 bytes
