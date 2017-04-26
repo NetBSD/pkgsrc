@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2016/02/26 11:27:16 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.20 2017/04/26 06:12:25 wiz Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -32,6 +32,7 @@
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 USE_LANGUAGES=		c c++
+CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 
