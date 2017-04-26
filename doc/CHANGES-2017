@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1772 2017/04/26 13:46:54 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.1773 2017/04/26 13:59:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2209,3 +2209,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-tox to 2.7.0 [fhajny 2017-04-26]
 	Updated textproc/iso-codes to 3.75 [mef 2017-04-26]
 	Updated devel/doxygen to 1.8.13 [prlw1 2017-04-26]
+	Updated textproc/p5-Text-CSV_XS to 1.29 [mef 2017-04-26]
+	Updated textproc/p5-Text-CSV to 1.94 [mef 2017-04-26]
