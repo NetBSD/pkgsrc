@@ -1,18 +1,17 @@
-$NetBSD: patch-Source_cmELF.cxx,v 1.6 2017/04/24 22:48:48 maya Exp $
+$NetBSD: patch-Source_cmELF.cxx,v 1.7 2017/04/26 18:19:31 maya Exp $
 
-Don't use DT_RUNPATH if it's not defined (netbsd-6)
+cmELF: Provide DT_RUNPATH definition fallback (netbsd-6)
+https://gitlab.kitware.com/cmake/cmake/merge_requests/764
 
 --- Source/cmELF.cxx.orig	2017-04-10 15:23:07.000000000 +0000
 +++ Source/cmELF.cxx
-@@ -675,7 +675,11 @@ cmELF::StringEntry const* cmELFInternalI
- // External class implementation.
- 
- const long cmELF::TagRPath = DT_RPATH;
-+#ifdef DT_RUNPATH
- const long cmELF::TagRunPath = DT_RUNPATH;
-+#else
-+const long cmELF::TagRunPath = 0;
+@@ -44,6 +44,9 @@ typedef struct Elf32_Rela Elf32_Rela;
+ #ifdef _SCO_DS
+ #include <link.h> // For DT_SONAME etc.
+ #endif
++#ifndef DT_RUNPATH
++#define DT_RUNPATH 29
 +#endif
  
- #ifdef DT_MIPS_RLD_MAP_REL
- const long cmELF::TagMipsRldMapRel = DT_MIPS_RLD_MAP_REL;
+ // Low-level byte swapping implementation.
+ template <size_t s>
