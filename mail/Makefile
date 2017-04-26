@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2017/04/25 20:22:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.492 2017/04/26 10:24:39 fhajny Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -288,8 +288,6 @@ SUBDIR+=	pulsar
 SUBDIR+=	py-aiosmtpd
 SUBDIR+=	py-authres
 SUBDIR+=	py-flufl.bounce
-SUBDIR+=	py-flufl.i18n
-SUBDIR+=	py-flufl.lock
 SUBDIR+=	py-libgmail
 SUBDIR+=	py-policyd-spf
 SUBDIR+=	py-sendmail-admin
