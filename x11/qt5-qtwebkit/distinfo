@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.8 2016/07/22 10:14:17 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2017/04/26 10:27:43 wiz Exp $
 
 SHA1 (qtwebkit-opensource-src-5.5.1.tar.xz) = e1e16f3eb48c1ce863b9ab33364e4ac178ae51a7
 RMD160 (qtwebkit-opensource-src-5.5.1.tar.xz) = 0594ec1150f7899d72f57d8ff2f108f3f75faaf9
 SHA512 (qtwebkit-opensource-src-5.5.1.tar.xz) = a44ca088fee7dbf0b10df7e1f6c914f37b31cf7c3b95156c32e5b8373a8de54013cd51cdf5b18b72f165d60c21ce55bceca86b038de68b1eb78ae0cd4bb8228a
 Size (qtwebkit-opensource-src-5.5.1.tar.xz) = 33489924 bytes
+SHA1 (patch-Source_JavaScriptCore_API_JSStringRef.cpp) = 59da586605606158d6affca8a77b1e637401a394
 SHA1 (patch-Source_JavaScriptCore_API_ObjCCallbackFunction.h) = be77c4b19f5f97c12180c1b7d3b72968364f3229
 SHA1 (patch-Source_JavaScriptCore_DerivedSources.pri) = b7a81c85257ddebd7bdff546a6d6720c9a2c5b56
 SHA1 (patch-Source_JavaScriptCore_JavaScriptCore.pri) = ccf64d0df1c61ff5c31c000636f3b64460562314
@@ -21,6 +22,7 @@ SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = 1e4b8
 SHA1 (patch-Source_ThirdParty_leveldb_Target.pri) = c202d901a2af5e9efdf2357c1e062f58c8db321d
 SHA1 (patch-Source_WTF_WTF.pro) = 06883057a69fb95142cf33615a800cd532528e3e
 SHA1 (patch-Source_WTF_wtf_Assertions.cpp) = 9146f5c8a44563328194470e3f1f4ec5150fbe93
+SHA1 (patch-Source_WTF_wtf_Compiler.h) = 09c6f86b65ad93775cf83280a48bb6925ed776b5
 SHA1 (patch-Source_WTF_wtf_InlineASM.h) = 64ea54605fbe787be57f7423e33802def66d6432
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = fb5416d99b959e54cbe1276c42b19ed18c32ad85
 SHA1 (patch-Source_WTF_wtf_NumberOfCores.cpp) = 5f80234f0bc8a66b2f1b4824a8b79b402e707491
@@ -28,6 +30,7 @@ SHA1 (patch-Source_WTF_wtf_Platform.h) = d44960e5a5d171e815f973999c29d88a785cb3d
 SHA1 (patch-Source_WTF_wtf_RAMSize.cpp) = 1c5a9c0aaffdec25cea74b010b9bc8922593b1af
 SHA1 (patch-Source_WTF_wtf_ThreadIdentifierDataPthreads.cpp) = 249308d00b18a8b89e9787f440341e77a1927531
 SHA1 (patch-Source_WTF_wtf_Threading.h) = 92f303cb972335fc9aaf4054cf66d9b6e99c94a5
+SHA1 (patch-Source_WTF_wtf_TypeTraits.h) = 6ea04b8d8de553d7a58354f1d1a3a535b66f6353
 SHA1 (patch-Source_WTF_wtf_text_StringImpl.h) = ab4fc5bef1c01bf21e4a80da8709985dd16d8da0
 SHA1 (patch-Source_WebCore_Target.pri) = 6399c94c0b4f30fc0ce1d25c5056d7381ecb9020
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 011224d015cc46571646ee148bf67758ba4a56b3
@@ -42,6 +45,7 @@ SHA1 (patch-Source_WebKit2_DerivedSources.pri) = 4147fd02d353f90a859e15d8dae70ef
 SHA1 (patch-Source_WebKit2_Platform_CoreIPC_MessageDecoder.cpp) = b83d80adef042141a9047b64f635577151c4e819
 SHA1 (patch-Source_WebKit2_Platform_CoreIPC_MessageDecoder.h) = 8270ff1cc34e738e45d730c56a463e96c0a9ea11
 SHA1 (patch-Source_WebKit2_Platform_unix_SharedMemoryUnix.cpp) = 17a7e91683f7e336d8ec3d4b26a91d4b0a1c4e31
+SHA1 (patch-Source_WebKit2_Shared_API_c_WKString.cpp) = dde4de25714ca66a53f0464f774b330b97a01150
 SHA1 (patch-Source_WebKit2_Target.pri) = ed1b26769f666c1aeb45480666af1f5a0c83e489
 SHA1 (patch-Source_WebKit_WebKit1.pro) = 421885279866c19172eb93597e60c9940128f8de
 SHA1 (patch-Source_WebKit_qt_examples_platformplugin_platformplugin.pro) = 40b2669f06d3fe964f86252e3e16eabe6d8ed508
