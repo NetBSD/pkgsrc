@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1768 2017/04/26 10:16:56 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1769 2017/04/26 12:54:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2203,3 +2203,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-falcon version 1.1.0 [fhajny 2017-04-25]
 	Updated print/a2ps to 4.14nb10 [tez 2017-04-25]
 	Added devel/py-flufl.testing version 0.7 [fhajny 2017-04-26]
+	Updated databases/p5-Parse-Dia-SQL to 0.29 [mef 2017-04-26]
+	Updated databases/p5-SQL-Statement to 1.412 [mef 2017-04-26]
+	Updated databases/p5-Tie-DBI to 1.06 [mef 2017-04-26]
