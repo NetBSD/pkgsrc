@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17294 2017/04/25 17:36:01 fhajny Exp $
+$NetBSD: TODO,v 1.17295 2017/04/26 09:52:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1144,21 +1144,26 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p0f-3.08b
 	o p11-kit-0.23.2
 	o p5-Apache-Gallery-1.0.2
+	o p5-Business-ISBN-3.004
 	o p5-CDDB-2.00
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
 	o p5-FormValidator-Simple-1.00
-	o p5-GD-2.62
+	o p5-GD-2.66
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
+	o p5-HTML-Tree-5.05
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
+	o p5-IPC-Run-0.95
 	o p5-Image-ExifTool-10.50
 	o p5-Memoize-Memcached-0.11
+	o p5-Mojolicious-7.31
+	o p5-Net-HTTP-6.14
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
@@ -1244,7 +1249,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pkg-config-0.29.2
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.9.2
 	o ploticus-examples-230
 	o poco-1.7.5
 	o podcastdl-0.3.3
