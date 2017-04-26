@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1769 2017/04/26 12:54:59 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1770 2017/04/26 13:25:38 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2206,3 +2206,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/p5-Parse-Dia-SQL to 0.29 [mef 2017-04-26]
 	Updated databases/p5-SQL-Statement to 1.412 [mef 2017-04-26]
 	Updated databases/p5-Tie-DBI to 1.06 [mef 2017-04-26]
+	Updated devel/py-tox to 2.7.0 [fhajny 2017-04-26]
