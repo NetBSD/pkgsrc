@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1774 2017/04/26 14:55:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1775 2017/04/26 18:19:50 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2212,3 +2212,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-Text-CSV_XS to 1.29 [mef 2017-04-26]
 	Updated textproc/p5-Text-CSV to 1.94 [mef 2017-04-26]
 	Updated security/scrypt to 1.2.1 [wiz 2017-04-26]
+	Updated devel/cmake to 3.8.0nb1 [maya 2017-04-26]
