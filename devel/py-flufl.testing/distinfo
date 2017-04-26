@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/04/26 10:16:43 fhajny Exp $
+
+SHA1 (flufl.testing-0.7.tar.gz) = 167cc9c1a64f8fd1b37aa3dbf30f2b51a4ca5a73
+RMD160 (flufl.testing-0.7.tar.gz) = f81280a2cd87e322d47deccf54815b764ae5b777
+SHA512 (flufl.testing-0.7.tar.gz) = 281ebef3240f3deb70402097cd84d0b2418e9f18df9a447a1adde8136c03b9442de0f85fa018e0199bdf92316e649be002a9491f09d70114d0aa50d621fbbee6
+Size (flufl.testing-0.7.tar.gz) = 8466 bytes

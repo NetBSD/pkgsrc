@@ -1,0 +1,2 @@
+flake8 extensions for my Python coding style. nose2 plugin supporting
+doctests and pattern matching.

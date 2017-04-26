@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/26 10:16:43 fhajny Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/flufl/testing/__init__.py
+${PYSITELIB}/flufl/testing/__init__.pyo
+${PYSITELIB}/flufl/testing/__init__.pyc
+${PYSITELIB}/flufl/testing/imports.pyo
+${PYSITELIB}/flufl/testing/imports.pyc
+${PYSITELIB}/flufl/testing/nose.pyo
+${PYSITELIB}/flufl/testing/nose.pyc
+${PYSITELIB}/flufl/testing/imports.py
+${PYSITELIB}/flufl/testing/nose.py
