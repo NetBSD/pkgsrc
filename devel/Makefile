@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2426 2017/04/25 20:56:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.2427 2017/04/26 10:19:56 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1832,6 +1832,9 @@ SUBDIR+=	py-flake8-import-order
 SUBDIR+=	py-flake8-polyfill
 SUBDIR+=	py-flakes
 SUBDIR+=	py-flexmock
+SUBDIR+=	py-flufl.i18n
+SUBDIR+=	py-flufl.lock
+SUBDIR+=	py-flufl.testing
 SUBDIR+=	py-freezegun
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
