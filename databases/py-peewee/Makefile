@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/04/21 09:14:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2017/04/26 14:10:48 fhajny Exp $
 
 DISTNAME=	peewee-2.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	bash
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+
+MAKE_FLAGS+=	SPHINXBUILD=sphinx-build${PYVERSSUFFIX}
 
 FILES_SUBST+=	PKGMANDIR=${PKGMANDIR}
 MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
