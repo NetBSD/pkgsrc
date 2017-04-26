@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2016/12/17 03:19:18 mef Exp $
+# $NetBSD: Makefile,v 1.31 2017/04/26 21:28:34 tnn Exp $
 
 DISTNAME=		eagle-lin32-7.7.0
 PKGNAME=		${DISTNAME:S/-lin32//}
+PKGREVISION=		1
 CATEGORIES=		cad
 # Strip microversion from directory name
 MASTER_SITES=		http://web.cadsoft.de/ftp/eagle/program/${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)\.[0-9]/\1/}/
@@ -9,9 +10,9 @@ EXTRACT_SUFX=		.run
 EXTRACT_CMD=		tail +126 $$extract_file | ${TOOLS_PATH.bsdtar} -C ${WRKDIR} -xjf -
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.cadsoft.de/
+HOMEPAGE=		https://www.autodesk.com/products/eagle/overview
 COMMENT=		Easy to use printed circuit board editor
-LICENSE=		eagle-license
+LICENSE=		autodesk-license
 
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
