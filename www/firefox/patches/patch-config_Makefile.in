@@ -1,8 +1,8 @@
-$NetBSD: patch-config_Makefile.in,v 1.10 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-config_Makefile.in,v 1.11 2017/04/27 01:49:47 ryoon Exp $
 
 * Support system libraries
 
---- config/Makefile.in.orig	2016-09-19 16:19:29.000000000 +0000
+--- config/Makefile.in.orig	2016-10-31 20:15:27.000000000 +0000
 +++ config/Makefile.in
 @@ -41,6 +41,8 @@ export:: $(export-preqs)
  	$(PYTHON) -m mozbuild.action.preprocessor $(DEFINES) $(ACDEFINES) \
