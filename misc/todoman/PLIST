@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/04/23 07:01:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/04/27 13:09:30 wiz Exp $
 bin/todo
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/todoman/configuration.py
 ${PYSITELIB}/todoman/configuration.pyc
 ${PYSITELIB}/todoman/configuration.pyo
 ${PYSITELIB}/todoman/confspec.ini
+${PYSITELIB}/todoman/exceptions.py
+${PYSITELIB}/todoman/exceptions.pyc
+${PYSITELIB}/todoman/exceptions.pyo
 ${PYSITELIB}/todoman/formatters.py
 ${PYSITELIB}/todoman/formatters.pyc
 ${PYSITELIB}/todoman/formatters.pyo
