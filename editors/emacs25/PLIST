@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/09/21 09:22:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/04/27 13:27:57 ryoon Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -943,7 +943,6 @@ share/emacs/${PKGVERSION}/etc/refcards/de-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/dired-ref.pdf
 share/emacs/${PKGVERSION}/etc/refcards/dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/emacsver.tex
-share/emacs/${PKGVERSION}/etc/refcards/emacsver.tex.in
 share/emacs/${PKGVERSION}/etc/refcards/fr-dired-ref.pdf
 share/emacs/${PKGVERSION}/etc/refcards/fr-dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-refcard.pdf
@@ -958,13 +957,19 @@ share/emacs/${PKGVERSION}/etc/refcards/gnus-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/orgcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/orgcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/pdflayout.sty
+share/emacs/${PKGVERSION}/etc/refcards/pl-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/pl-refcard.tex
+share/emacs/${PKGVERSION}/etc/refcards/pt-br-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/pt-br-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/refcard.tex
+share/emacs/${PKGVERSION}/etc/refcards/ru-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/ru-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/sk-dired-ref.tex
+share/emacs/${PKGVERSION}/etc/refcards/sk-dired-ref.pdf
+share/emacs/${PKGVERSION}/etc/refcards/sk-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/sk-refcard.tex
+share/emacs/${PKGVERSION}/etc/refcards/sk-survival.pdf
 share/emacs/${PKGVERSION}/etc/refcards/sk-survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/survival.pdf
 share/emacs/${PKGVERSION}/etc/refcards/survival.tex
