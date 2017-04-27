@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1798 2017/04/27 13:22:51 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1799 2017/04/27 13:29:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2237,3 +2237,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/todoman to 3.1.0 [wiz 2017-04-27]
 	Updated devel/p5-IO-Pager to 0.37 [mef 2017-04-27]
 	Updated devel/p5-IPC-Run to 0.95 [mef 2017-04-27]
+	Updated editors/emacs25 to 25.2 [ryoon 2017-04-27]
+	Updated editors/emacs25-nox11 to 25.2 [ryoon 2017-04-27]
