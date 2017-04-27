@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2017/03/31 10:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/04/27 12:25:13 wiz Exp $
 
-DISTNAME=		neomutt-20170306
-PKGREVISION=		1
+DISTNAME=		neomutt-20170421
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_GITHUB:=neomutt/}
 GITHUB_TAG=		${DISTNAME}
@@ -13,9 +12,10 @@ LICENSE=		gnu-gpl-v2 OR gnu-gpl-v3 # or newer
 
 USE_TOOLS+=		autoconf automake autoreconf msgfmt gmake
 
+BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
+
 SPECIAL_PERMS+=		bin/mutt_dotlock ${REAL_ROOT_USER} mail 2551
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-external-dotlock
 CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ARGS+=	--enable-notmuch
