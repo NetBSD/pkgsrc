@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h,v 1.1 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h,v 1.2 2017/04/27 13:32:41 ryoon Exp $
 
---- mozilla/toolkit/components/protobuf/src/google/protobuf/stubs/atomicops.h.orig	2016-04-07 21:33:32.000000000 +0000
+--- mozilla/toolkit/components/protobuf/src/google/protobuf/stubs/atomicops.h.orig	2017-04-14 04:53:29.000000000 +0000
 +++ mozilla/toolkit/components/protobuf/src/google/protobuf/stubs/atomicops.h
-@@ -76,9 +76,15 @@ typedef intptr_t Atomic64;
+@@ -76,6 +76,11 @@ typedef intptr_t Atomic64;
  #endif
  #endif
  
@@ -13,7 +13,11 @@ $NetBSD: patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_ato
 +#else
  // Use AtomicWord for a machine-sized pointer.  It will use the Atomic32 or
  // Atomic64 routines below, depending on your architecture.
+ #if defined(__OpenBSD__) && !defined(GOOGLE_PROTOBUF_ARCH_64_BIT)
+@@ -83,6 +88,7 @@ typedef Atomic32 AtomicWord;
+ #else
  typedef intptr_t AtomicWord;
+ #endif
 +#endif
  
  // Atomically execute:
