@@ -1,0 +1,12 @@
+$NetBSD: patch-media_libtremor_moz.build,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+
+* Support system library
+
+--- media/libtremor/moz.build.orig	2016-05-12 17:13:17.000000000 +0000
++++ media/libtremor/moz.build
+@@ -9,3 +9,5 @@ with Files('*'):
+ 
+ DIRS += ['include/tremor', 'lib']
+ 
++if CONFIG['MOZ_SYSTEM_OGG']:
++    CFLAGS += CONFIG['MOZ_OGG_CFLAGS']

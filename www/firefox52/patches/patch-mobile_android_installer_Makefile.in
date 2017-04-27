@@ -1,0 +1,15 @@
+$NetBSD: patch-mobile_android_installer_Makefile.in,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+
+--- mobile/android/installer/Makefile.in.orig	2016-07-25 20:22:05.000000000 +0000
++++ mobile/android/installer/Makefile.in
+@@ -69,6 +69,10 @@ BINPATH = bin
+ endif
+ DEFINES += -DBINPATH=$(BINPATH)
+ 
++ifdef MOZ_DEBUG
++DEFINES += -DMOZ_DEBUG=1
++endif
++
+ ifdef ENABLE_MARIONETTE
+ DEFINES += -DENABLE_MARIONETTE=1
+ endif

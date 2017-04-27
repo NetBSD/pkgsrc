@@ -1,0 +1,35 @@
+$NetBSD: patch-as,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+
+* Treat DragonFly like FreeBSD.
+* Add system ICU support
+
+--- js/src/old-configure.in.orig	2017-01-16 16:16:52.000000000 +0000
++++ js/src/old-configure.in
+@@ -140,6 +140,9 @@ fi
+ 
+ MOZ_TOOL_VARIABLES
+ 
++AC_PROG_CPP
++AC_PROG_CXXCPP
++
+ dnl Special win32 checks
+ dnl ========================================================
+ 
+@@ -1053,7 +1056,7 @@ dnl Checks for header files.
+ dnl ========================================================
+ AC_HEADER_DIRENT
+ case "$target_os" in
+-freebsd*)
++freebsd*|*-*-dragonfly*)
+ # for stuff like -lXshm
+     CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
+     ;;
+@@ -1184,7 +1187,7 @@ then
+     fi
+ 
+ 	case "$target" in
+-	    *-*-freebsd*)
++	    *-*-freebsd*|*-*-dragonfly*)
+ 			AC_DEFINE(_REENTRANT)
+ 			AC_DEFINE(_THREAD_SAFE)
+ 			dnl -pthread links in -lpthread, so don't specify it explicitly.
