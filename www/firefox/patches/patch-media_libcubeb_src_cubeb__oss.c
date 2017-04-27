@@ -1,10 +1,10 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.8 2016/12/03 09:58:26 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.9 2017/04/27 01:49:47 ryoon Exp $
 
 * Restore OSS audio support code
 
---- media/libcubeb/src/cubeb_oss.c.orig	2016-11-29 13:25:18.814351604 +0000
+--- media/libcubeb/src/cubeb_oss.c.orig	2017-04-23 13:26:11.608534944 +0000
 +++ media/libcubeb/src/cubeb_oss.c
-@@ -0,0 +1,442 @@
+@@ -0,0 +1,445 @@
 +/*
 + * Copyright © 2014 Mozilla Foundation
 + *
@@ -96,10 +96,11 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.8 2016/12/03 09:58:26 ryoon E
 +}
 +
 +static int oss_get_min_latency(cubeb * context, cubeb_stream_params params,
-+                               uint32_t * latency_ms)
++                               uint32_t * latency_frames)
 +{
++  (void)context;
 +  /* 40ms is a big enough number to work ok */
-+  *latency_ms = 40;
++  *latency_frames = 40 * params.rate / 1000;
 +  return CUBEB_OK;
 +}
 +
@@ -242,8 +243,7 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.8 2016/12/03 09:58:26 ryoon E
 +  unsigned int latency_bytes, n_frag;
 +  int frag;
 +  /* fragment size of 1024 is a good choice with good chances to be accepted */
-+  unsigned int frag_size=1024;
-+  unsigned int frag_log=10; /* 2^frag_log = frag_size */
++  unsigned int frag_log=10; /* 2^frag_log = fragment size */
 +  latency_bytes =
 +    latency*stream->params.rate*stream->params.channels*sizeof(uint16_t)/1000;
 +  n_frag = latency_bytes>>frag_log;
@@ -434,7 +434,9 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.8 2016/12/03 09:58:26 ryoon E
 +  .get_max_channel_count = oss_get_max_channel_count,
 +  .get_min_latency = oss_get_min_latency,
 +  .get_preferred_sample_rate = oss_get_preferred_sample_rate,
++  .get_preferred_channel_layout = NULL,
 +  .destroy = oss_destroy,
++  .enumerate_devices = NULL,
 +  .stream_init = oss_stream_init,
 +  .stream_destroy = oss_stream_destroy,
 +  .stream_start = oss_stream_start,
@@ -445,5 +447,6 @@ $NetBSD: patch-media_libcubeb_src_cubeb__oss.c,v 1.8 2016/12/03 09:58:26 ryoon E
 +  .stream_set_panning = oss_stream_set_panning,
 +  .stream_get_current_device = NULL,
 +  .stream_device_destroy = NULL,
-+  .stream_register_device_changed_callback = NULL
++  .stream_register_device_changed_callback = NULL,
++  .register_device_collection_changed = NULL
 +};
