@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1791 2017/04/27 12:44:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1792 2017/04/27 12:46:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2229,3 +2229,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTML-Tree to 5.05 [wiz 2017-04-27]
 	Updated graphics/p5-Image-ExifTool to 10.50 [wiz 2017-04-27]
 	Updated www/p5-Mojolicious to 7.31 [wiz 2017-04-27]
+	Updated www/p5-Net-HTTP to 6.14 [wiz 2017-04-27]
