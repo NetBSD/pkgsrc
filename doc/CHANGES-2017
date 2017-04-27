@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1803 2017/04/27 13:41:16 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1804 2017/04/27 13:58:29 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2243,3 +2243,17 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/thunderbird-l10n to 52.0.1 [ryoon 2017-04-27]
 	Added mail/thunderbird45 version 45.8.0 [ryoon 2017-04-27]
 	Added mail/thunderbird45-l10n version 45.8.0 [ryoon 2017-04-27]
+	Updated security/cy2-anonymous to 2.1.26nb1 [jperkin 2017-04-27]
+	Updated security/cy2-crammd5 to 2.1.26nb1 [jperkin 2017-04-27]
+	Updated security/cy2-digestmd5 to 2.1.26nb4 [jperkin 2017-04-27]
+	Updated security/cy2-gssapi to 2.1.26nb4 [jperkin 2017-04-27]
+	Updated security/cy2-ldapdb to 2.1.26nb4 [jperkin 2017-04-27]
+	Updated security/cy2-login to 2.1.26nb1 [jperkin 2017-04-27]
+	Updated security/cy2-ntlm to 2.1.26nb4 [jperkin 2017-04-27]
+	Updated security/cy2-otp to 2.1.26nb5 [jperkin 2017-04-27]
+	Updated security/cy2-plain to 2.1.26nb1 [jperkin 2017-04-27]
+	Updated security/cy2-saml to 1.4nb3 [jperkin 2017-04-27]
+	Updated security/cy2-scram to 2.1.26nb4 [jperkin 2017-04-27]
+	Updated security/cy2-sql to 2.1.26nb12 [jperkin 2017-04-27]
+	Updated security/cyrus-sasl to 2.1.26nb6 [jperkin 2017-04-27]
+	Updated security/cyrus-saslauthd to 2.1.26nb7 [jperkin 2017-04-27]
