@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1787 2017/04/27 12:37:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1788 2017/04/27 12:40:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2225,3 +2225,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/neomutt to 20170421 [wiz 2017-04-27]
 	Updated print/abcm2ps to 8.13.9 [wiz 2017-04-27]
 	Updated misc/p5-Business-ISBN to 3.004 [wiz 2017-04-27]
+	Updated graphics/p5-GD to 2.66 [wiz 2017-04-27]
