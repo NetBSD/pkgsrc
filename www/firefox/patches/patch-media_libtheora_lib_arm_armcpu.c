@@ -1,8 +1,6 @@
-$NetBSD: patch-media_libtheora_lib_arm_armcpu.c,v 1.1 2014/11/26 14:56:28 ryoon Exp $
+$NetBSD: patch-media_libtheora_lib_arm_armcpu.c,v 1.2 2017/04/27 01:49:47 ryoon Exp $
 
-* NetBSD/evbearmv7hf-el's /proc/cpuinfo return empty, use hardcoded flags.
-
---- media/libtheora/lib/arm/armcpu.c.orig	2014-11-13 22:50:10.000000000 +0000
+--- media/libtheora/lib/arm/armcpu.c.orig	2016-05-12 17:13:17.000000000 +0000
 +++ media/libtheora/lib/arm/armcpu.c
 @@ -107,6 +107,18 @@ ogg_uint32_t oc_cpu_flags_get(void){
    return flags;
