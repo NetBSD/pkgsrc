@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.3 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.4 2017/04/27 13:32:41 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2016-04-07 21:33:24.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2017-04-14 04:53:19.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi
 @@ -7,6 +7,9 @@
  # be found in the AUTHORS file in the root of the source tree.
@@ -12,38 +12,23 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_video__c
    'targets': [
      {
        # Note this library is missing an implementation for the video capture.
-@@ -64,8 +67,32 @@
-             'video_capture_module',
-             '<(webrtc_root)/common.gyp:webrtc_common',
-           ],
--	  'cflags_mozilla': [
--	    '$(NSPR_CFLAGS)',
-+          'conditions': [
-+            ['use_libv4l2==1', {
-+              'defines': [
-+                'HAVE_LIBV4L2',
+@@ -75,6 +78,19 @@
+                 'linux/video_capture_linux.cc',
+                 'linux/video_capture_linux.h',
+               ],
++              'conditions': [
++                ['use_libv4l2==1', {
++                  'defines': [
++                    'HAVE_LIBV4L2',
++                  ],
++                  'cflags_mozilla': [
++                    '$(MOZ_LIBV4L2_CFLAGS)',
++                  ],
++                  'libraries': [
++                    '-lv4l2',
++                  ],
++                }],
 +              ],
-+              'cflags_mozilla': [
-+                '$(MOZ_LIBV4L2_CFLAGS)',
-+              ],
-+              'libraries': [
-+                '-lv4l2',
-+              ],
-+            }],
-+          ],
-+        }],  # linux
-+        ['OS=="mac"', {
-+          'sources': [
-+            'mac/qtkit/video_capture_qtkit.h',
-+            'mac/qtkit/video_capture_qtkit.mm',
-+            'mac/qtkit/video_capture_qtkit_info.h',
-+            'mac/qtkit/video_capture_qtkit_info.mm',
-+            'mac/qtkit/video_capture_qtkit_info_objc.h',
-+            'mac/qtkit/video_capture_qtkit_info_objc.mm',
-+            'mac/qtkit/video_capture_qtkit_objc.h',
-+            'mac/qtkit/video_capture_qtkit_objc.mm',
-+            'mac/qtkit/video_capture_qtkit_utility.h',
-+            'mac/video_capture_mac.mm',
-           ],
-           'conditions': [
-            ['include_v4l2_video_capture==1', {
+             }],  # linux
+             ['OS=="mac"', {
+               'sources': [

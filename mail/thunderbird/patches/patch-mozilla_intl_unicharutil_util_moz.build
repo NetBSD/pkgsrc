@@ -1,0 +1,12 @@
+$NetBSD: patch-mozilla_intl_unicharutil_util_moz.build,v 1.3 2017/04/27 13:32:40 ryoon Exp $
+
+--- mozilla/intl/unicharutil/util/moz.build.orig	2017-04-14 04:53:10.000000000 +0000
++++ mozilla/intl/unicharutil/util/moz.build
+@@ -42,4 +42,7 @@ if CONFIG['_MSC_VER']:
+ if CONFIG['ENABLE_INTL_API']:
+     USE_LIBS += ['icu']
+ 
++if CONFIG['MOZ_SYSTEM_HARFBUZZ']:
++    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
+ DIST_INSTALL = True
