@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/07/09 06:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2017/04/27 20:08:07 schmonz Exp $
 
 DISTNAME=	maildrop-2.5.5
 PKGREVISION=	6
@@ -25,7 +25,8 @@ PKG_SUGGESTED_OPTIONS=	authlib
 
 # These are the users that may invoke maildrop with the "-d user"
 # argument (mailbox delivery mode).
-MAILDROP_TRUSTED_USERS?=	${REAL_ROOT_USER} ${COURIER_USER} qmaild
+MAILDROP_TRUSTED_USERS?=${REAL_ROOT_USER} ${COURIER_USER} ${QMAIL_DAEMON_USER}
+BUILD_DEFS+=		QMAIL_DAEMON_USER
 
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
