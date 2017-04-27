@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2017/03/06 11:53:54 hauke Exp $
+# $NetBSD: Makefile.common,v 1.17 2017/04/27 22:59:54 kamil Exp $
 #
 # used by emulators/suse131_alsa/Makefile
 # used by emulators/suse131_aspell/Makefile
@@ -77,10 +77,10 @@ _SUSE_FTP_SUBDIR=	distribution/${SUSE_VERSION}/repo/oss/suse/
 _SUSE_FTP_SUBDIR_UPD=	update/${SUSE_VERSION}/
 
 MASTER_SITE_SUSE_${SUSE_VERSION}= \
-	http://download.opensuse.org/${_SUSE_FTP_SUBDIR}
+	ftp://mirrors.kernel.org/opensuse/${_SUSE_FTP_SUBDIR}
 
 MASTER_SITE_SUSE_${SUSE_VERSION}_UPD= \
-	http://download.opensuse.org/${_SUSE_FTP_SUBDIR_UPD}
+	ftp://mirrors.kernel.org/opensuse/${_SUSE_FTP_SUBDIR}
 
 MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}/${SUSE_ARCH}/
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}
