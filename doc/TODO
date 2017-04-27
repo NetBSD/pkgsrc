@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17306 2017/04/27 12:51:48 wiz Exp $
+$NetBSD: TODO,v 1.17307 2017/04/27 12:56:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1266,7 +1266,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o prime-1.5.1.3
 	o privoxy-3.0.24
 	o profit-2.5.3
-	o protobuf-3.2.1
 	o psmisc-22.20
 	o pspp-0.10.1
 	o ptlib-2.16.2
@@ -1292,7 +1291,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gnome-menus-3.8.0
 	o py-hsm-1.1.1
 	o py-httpbin-0.4.1
-	o py-hypothesis-3.7.4
 	o py-input-pad-1.4.2
 	o py-isodate-0.5.4
 	o py-jaraco_util-11.0
