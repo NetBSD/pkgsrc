@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2017/03/16 11:41:19 maya Exp $
+# $NetBSD: Makefile,v 1.79 2017/04/27 00:51:09 maya Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
@@ -17,9 +17,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
-CONFIGURE_ARGS+=	--with-terminfo \
-			--with-proxy \
-			--without-ncurses \
+CONFIGURE_ARGS+=	--with-proxy \
 			--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/irssi
