@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2016/09/11 06:11:15 richard Exp $
+# $NetBSD: Makefile,v 1.72 2017/04/27 13:56:47 jperkin Exp $
 
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Simple Authentication and Security Layer
 
 .include "Makefile.common"
