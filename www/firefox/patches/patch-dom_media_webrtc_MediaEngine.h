@@ -1,4 +1,6 @@
-$NetBSD: patch-dom_media_webrtc_MediaEngine.h,v 1.1 2017/04/27 01:49:47 ryoon Exp $
+$NetBSD: patch-dom_media_webrtc_MediaEngine.h,v 1.2 2017/04/27 14:08:34 ryoon Exp $
+
+* Do not mix mozilla::ipc and mozilla::dom::ipc namespaces
 
 --- dom/media/webrtc/MediaEngine.h.orig	2017-04-11 04:15:22.000000000 +0000
 +++ dom/media/webrtc/MediaEngine.h
