@@ -1,32 +1,26 @@
-$NetBSD: patch-mozilla_dom_media_moz.build,v 1.2 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mozilla_dom_media_moz.build,v 1.3 2017/04/27 13:32:40 ryoon Exp $
 
---- mozilla/dom/media/moz.build.orig	2016-04-07 21:33:27.000000000 +0000
+--- mozilla/dom/media/moz.build.orig	2017-04-14 04:53:05.000000000 +0000
 +++ mozilla/dom/media/moz.build
-@@ -319,6 +319,27 @@ if CONFIG['MOZ_GONK_MEDIACODEC']:
- CFLAGS += CONFIG['GSTREAMER_CFLAGS']
- CXXFLAGS += CONFIG['GSTREAMER_CFLAGS']
+@@ -315,6 +315,21 @@ if CONFIG['MOZ_WEBRTC']:
  
-+if CONFIG['MOZ_NATIVE_OGG']:
+ DEFINES['MOZILLA_INTERNAL_API'] = True
+ 
++if CONFIG['MOZ_SYSTEM_OGG']:
 +    CXXFLAGS += CONFIG['MOZ_OGG_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_THEORA']:
++if CONFIG['MOZ_SYSTEM_THEORA']:
 +    CXXFLAGS += CONFIG['MOZ_THEORA_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_VORBIS']:
++if CONFIG['MOZ_SYSTEM_VORBIS']:
 +    CXXFLAGS += CONFIG['MOZ_VORBIS_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_TREMOR']:
++if CONFIG['MOZ_SYSTEM_TREMOR']:
 +    CXXFLAGS += CONFIG['MOZ_TREMOR_CFLAGS']
 +
-+if CONFIG['MOZ_NATIVE_OPUS']:
-+    CXXFLAGS += CONFIG['MOZ_OPUS_CFLAGS']
-+
-+if CONFIG['MOZ_NATIVE_SPEEX']:
-+    CXXFLAGS += CONFIG['MOZ_SPEEX_CFLAGS']
-+
-+if CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
++if CONFIG['MOZ_SYSTEM_SOUNDTOUCH']:
 +    CXXFLAGS += CONFIG['MOZ_SOUNDTOUCH_CFLAGS']
 +
- include('/ipc/chromium/chromium-config.mozbuild')
- 
- # Suppress some GCC warnings being treated as errors:
+ if CONFIG['OS_TARGET'] == 'WINNT':
+     DEFINES['WEBRTC_WIN'] = True
+ else:
