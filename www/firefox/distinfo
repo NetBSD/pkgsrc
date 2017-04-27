@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.278 2017/04/27 01:49:47 ryoon Exp $
+$NetBSD: distinfo,v 1.279 2017/04/27 14:08:34 ryoon Exp $
 
 SHA1 (firefox-53.0.source.tar.xz) = 5a617605f60da87f33bc82eaa46710666f134d84
 RMD160 (firefox-53.0.source.tar.xz) = 470d1214f98c2c75e27e5084c1176eacb8ba1f4b
@@ -26,7 +26,7 @@ SHA1 (patch-dom_media_AudioStream.h) = 26f70000cc4810834204d15b45e1469dd5f23617
 SHA1 (patch-dom_media_CubebUtils.cpp) = 3632cd0dd4b95f53f01050b8898b33fe198916b6
 SHA1 (patch-dom_media_moz.build) = 844dbb94463b8aab11649a5aa11142de0179d86c
 SHA1 (patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp) = 34c89f93b6a849b9daeeed43d4a9a91a2a2080c4
-SHA1 (patch-dom_media_webrtc_MediaEngine.h) = f3b1c71dfa10054d70f8f953263d5cf7adfce8ba
+SHA1 (patch-dom_media_webrtc_MediaEngine.h) = b5f1e65d15e8ce63b29a37db7ea35941014e09d9
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 308548409c2117209ed277a6d2b0a37c2efa5ec7
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 15c01df2fa7f989b533ef769ce77438b5e9bfdb9
 SHA1 (patch-dom_system_OSFileConstants.cpp) = e932ca46cbc78eb8486b9ff704434a962645c6b2
