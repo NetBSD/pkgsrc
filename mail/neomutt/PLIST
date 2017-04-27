@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/11/28 12:26:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/04/27 12:25:13 wiz Exp $
 bin/mutt
 bin/mutt_dotlock
 bin/pgpewrap
@@ -103,9 +103,7 @@ share/doc/mutt/samples/pgp5.rc
 share/doc/mutt/samples/pgp6.rc
 share/doc/mutt/samples/sample.mailcap
 share/doc/mutt/samples/sample.muttrc
-share/doc/mutt/samples/sample.muttrc-sidebar
 share/doc/mutt/samples/sample.muttrc-tlr
-share/doc/mutt/samples/sample.vimrc-sidebar
 share/doc/mutt/samples/smime.rc
 share/doc/mutt/samples/smime_keys_test.pl
 share/doc/mutt/security.html
