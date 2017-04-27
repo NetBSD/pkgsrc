@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.16 2017/04/15 06:32:33 maya Exp $
+# $NetBSD: options.mk,v 1.17 2017/04/27 00:57:03 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.irssi
-PKG_SUPPORTED_OPTIONS=		inet6 ssl perl
-PKG_SUGGESTED_OPTIONS=		inet6 ssl perl
+PKG_SUPPORTED_OPTIONS=		ssl perl
+PKG_SUGGESTED_OPTIONS=		ssl perl
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,12 +20,6 @@ CONFIGURE_ARGS+=	--with-perl
 CONFIGURE_ARGS+=	--with-perl-lib=vendor
 .else
 CONFIGURE_ARGS+=	--with-perl=no
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
