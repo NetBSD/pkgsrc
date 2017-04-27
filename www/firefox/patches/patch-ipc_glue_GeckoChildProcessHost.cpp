@@ -1,9 +1,9 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.12 2017/04/27 01:49:47 ryoon Exp $
 
 * Support Solaris
 * Fix NetBSD linking
 
---- ipc/glue/GeckoChildProcessHost.cpp.orig	2015-01-09 04:38:16.000000000 +0000
+--- ipc/glue/GeckoChildProcessHost.cpp.orig	2017-04-11 04:15:17.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
 @@ -4,7 +4,13 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -19,7 +19,7 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2016/06/16 12:08:21 ryo
  
  #include "base/command_line.h"
  #include "base/string_util.h"
-@@ -533,7 +539,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+@@ -730,7 +736,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    // and passing wstrings from one config to the other is unsafe.  So
    // we split the logic here.
  
@@ -27,8 +27,8 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2016/06/16 12:08:21 ryo
 +#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD) || defined(OS_SOLARIS)
    base::environment_map newEnvVars;
    ChildPrivileges privs = mPrivileges;
-   if (privs == base::PRIVILEGES_DEFAULT) {
-@@ -672,7 +678,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+   if (privs == base::PRIVILEGES_DEFAULT ||
+@@ -865,7 +871,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
    childArgv.push_back(pidstring);
  
  #if defined(MOZ_CRASHREPORTER)
@@ -37,9 +37,9 @@ $NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2016/06/16 12:08:21 ryo
    int childCrashFd, childCrashRemapFd;
    if (!CrashReporter::CreateNotificationPipeForChild(
          &childCrashFd, &childCrashRemapFd))
-@@ -705,7 +711,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
-   childArgv.push_back(childProcessType);
- 
+@@ -901,7 +907,7 @@ GeckoChildProcessHost::PerformAsyncLaunc
+   LaunchAndroidService(childProcessType, childArgv, mFileMap, &process);
+ #else
    base::LaunchApp(childArgv, mFileMap,
 -#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD)
 +#if defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_BSD) || defined(OS_SOLARIS)
