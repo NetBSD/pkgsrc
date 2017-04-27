@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/04/04 11:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/04/27 13:18:57 wiz Exp $
 
 DISTNAME=	notmuch-0.24.1
 CATEGORIES=	mail
@@ -41,6 +41,6 @@ LDFLAGS.SunOS+=	-lnsl
 BUILDLINK_API_DEPENDS.xapian+=	xapian>=1.2.6
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../devel/talloc/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.zlib+=	zlib>=1.2.5.2
+BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.5.2
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
