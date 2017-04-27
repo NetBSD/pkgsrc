@@ -1,10 +1,10 @@
-$NetBSD: patch-config_system-headers,v 1.22 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.23 2017/04/27 01:49:47 ryoon Exp $
 
 * Try to support Video4Linux2
 * Resolve libm undefined error
 * Support system libraries
 
---- config/system-headers.orig	2017-02-23 20:13:58.000000000 +0000
+--- config/system-headers.orig	2017-04-11 04:15:17.000000000 +0000
 +++ config/system-headers
 @@ -624,6 +624,7 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
@@ -30,7 +30,7 @@ $NetBSD: patch-config_system-headers,v 1.22 2017/03/07 20:45:43 ryoon Exp $
  #if MOZ_SYSTEM_HUNSPELL==1
  hunspell.hxx
  #endif
-@@ -1335,3 +1345,17 @@ unicode/utypes.h
+@@ -1337,3 +1347,17 @@ unicode/utypes.h
  libutil.h
  unwind.h
  fenv.h
