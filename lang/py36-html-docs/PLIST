@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/01 15:51:37 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/04/27 08:27:14 leot Exp $
 share/doc/python3.6/.buildinfo
 share/doc/python3.6/_images/hashlib-blake2-tree.png
 share/doc/python3.6/_images/logging_flow.png
@@ -235,7 +235,6 @@ share/doc/python3.6/_sources/library/gettext.txt
 share/doc/python3.6/_sources/library/glob.txt
 share/doc/python3.6/_sources/library/grp.txt
 share/doc/python3.6/_sources/library/gzip.txt
-share/doc/python3.6/_sources/library/hashlib-blake2.txt
 share/doc/python3.6/_sources/library/hashlib.txt
 share/doc/python3.6/_sources/library/heapq.txt
 share/doc/python3.6/_sources/library/hmac.txt
@@ -761,7 +760,6 @@ share/doc/python3.6/library/gettext.html
 share/doc/python3.6/library/glob.html
 share/doc/python3.6/library/grp.html
 share/doc/python3.6/library/gzip.html
-share/doc/python3.6/library/hashlib-blake2.html
 share/doc/python3.6/library/hashlib.html
 share/doc/python3.6/library/heapq.html
 share/doc/python3.6/library/hmac.html
