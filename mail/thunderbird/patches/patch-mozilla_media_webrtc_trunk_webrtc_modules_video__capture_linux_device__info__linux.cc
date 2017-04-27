@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.3 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.4 2017/04/27 13:32:41 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2016-04-07 21:33:24.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2017-04-14 04:53:19.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc
-@@ -25,10 +25,21 @@
+@@ -25,6 +25,9 @@
  #else
  #include <linux/videodev2.h>
  #endif
@@ -12,6 +12,9 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_de
  
  #include "webrtc/system_wrappers/interface/ref_count.h"
  #include "webrtc/system_wrappers/interface/trace.h"
+@@ -34,6 +37,15 @@
+ #define BUF_LEN     ( 1024 * ( EVENT_SIZE + 16 ) )
+ #endif
  
 +#ifdef HAVE_LIBV4L2
 +#define open	v4l2_open
@@ -21,10 +24,11 @@ $NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_video__capture_linux_de
 +#define mmap	v4l2_mmap
 +#define munmap	v4l2_munmap
 +#endif
- 
++
  namespace webrtc
  {
-@@ -136,6 +147,11 @@ int32_t DeviceInfoLinux::GetDeviceName(
+ namespace videocapturemodule
+@@ -274,6 +286,11 @@ int32_t DeviceInfoLinux::GetDeviceName(
      memset(deviceNameUTF8, 0, deviceNameLength);
      memcpy(cameraName, cap.card, sizeof(cap.card));
  
