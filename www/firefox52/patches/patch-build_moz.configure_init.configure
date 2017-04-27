@@ -1,0 +1,37 @@
+$NetBSD: patch-build_moz.configure_init.configure,v 1.1 2017/04/27 01:55:57 ryoon Exp $
+
+--- build/moz.configure/init.configure.orig	2016-10-31 20:15:27.000000000 +0000
++++ build/moz.configure/init.configure
+@@ -170,6 +170,7 @@ option(env='PYTHON', nargs=1, help='Pyth
+ @imports(_from='mozbuild.configure.util', _import='LineIO')
+ @imports(_from='mozbuild.virtualenv', _import='VirtualenvManager')
+ @imports(_from='mozbuild.virtualenv', _import='verify_python_version')
++@imports(_from='__builtin__', _import='KeyError')
+ @imports('distutils.sysconfig')
+ def virtualenv_python(env_python, build_env, mozconfig, help):
+     if help:
+@@ -189,6 +190,12 @@ def virtualenv_python(env_python, build_
+             python = mozconfig['vars']['added']['PYTHON']
+         elif 'PYTHON' in mozconfig['vars']['modified']:
+             python = mozconfig['vars']['modified']['PYTHON'][1]
++        for i in ('env', 'vars'):
++            for j in ('added', 'modified'):
++                try:
++                    del mozconfig[i][j]['PYTHON']
++                except KeyError:
++                    pass
+ 
+     with LineIO(lambda l: log.error(l)) as out:
+         verify_python_version(out)
+@@ -224,7 +231,10 @@ def virtualenv_python(env_python, build_
+     if python != normsep(sys.executable):
+         log.info('Reexecuting in the virtualenv')
+         if env_python:
+-            del os.environ['PYTHON']
++            try:
++                del os.environ['PYTHON']
++            except KeyError:
++                pass
+         # One would prefer to use os.execl, but that's completely borked on
+         # Windows.
+         sys.exit(subprocess.call([python] + sys.argv))
