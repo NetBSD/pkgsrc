@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17304 2017/04/27 12:46:17 wiz Exp $
+$NetBSD: TODO,v 1.17305 2017/04/27 12:47:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
 	o p5-X11-Protocol-29
-	o p5-YAML-Syck-1.30
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
 	o p5-sybperl-2.18
