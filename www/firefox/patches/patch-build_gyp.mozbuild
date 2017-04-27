@@ -1,4 +1,4 @@
-$NetBSD: patch-build_gyp.mozbuild,v 1.4 2016/09/20 20:01:41 ryoon Exp $
+$NetBSD: patch-build_gyp.mozbuild,v 1.5 2017/04/27 01:49:47 ryoon Exp $
 
 Hunk #1:
   Try to add Video4Linux2 support
@@ -12,13 +12,13 @@ Hunk #3:
   MacOS X SDK version should be able to configure with
   ./configure --enable-macos-target=VER
 
---- build/gyp.mozbuild.orig	2016-06-06 20:14:57.000000000 +0000
+--- build/gyp.mozbuild.orig	2017-04-11 04:15:17.000000000 +0000
 +++ build/gyp.mozbuild
-@@ -14,6 +14,7 @@ gyp_vars = {
+@@ -16,6 +16,7 @@ gyp_vars.update({
      'have_ethtool_cmd_speed_hi': 1 if CONFIG['MOZ_WEBRTC_HAVE_ETHTOOL_SPEED_HI'] else 0,
      'include_alsa_audio': 1 if CONFIG['MOZ_ALSA'] else 0,
      'include_pulse_audio': 1 if CONFIG['MOZ_PULSEAUDIO'] else 0,
 +    'use_libv4l2': 1 if CONFIG['MOZ_LIBV4L2_LIBS'] else 0,
      # basic stuff for everything
      'include_internal_video_render': 0,
-     'clang_use_chrome_plugins': 0,
+     'clang': 1 if CONFIG['CLANG_CXX'] else 0,

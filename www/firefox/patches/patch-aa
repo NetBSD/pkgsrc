@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-aa,v 1.51 2017/04/27 01:49:47 ryoon Exp $
 
 * MOZ_ENABLE_PROFILER_SPS is not for users, Disable it
 * Disable libjpeg-turbo check
 * Add system libraries option
 * Add OSS audio support
 
---- old-configure.in.orig	2017-03-04 10:47:32.150192599 +0000
+--- old-configure.in.orig	2017-04-23 15:21:06.933492440 +0000
 +++ old-configure.in
-@@ -2159,11 +2159,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
+@@ -2084,11 +2084,7 @@ if test "$MOZ_SYSTEM_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -20,9 +20,9 @@ $NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
                     MOZ_SYSTEM_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -2894,6 +2890,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -2818,6 +2814,9 @@ if test -n "$MOZ_WEBRTC"; then
+     AC_DEFINE(MOZ_WEBRTC_ASSERT_ALWAYS)
      MOZ_RAW=1
-     MOZ_VPX_ERROR_CONCEALMENT=1
  
 +    dnl with libv4l2 we can support more cameras
 +    PKG_CHECK_MODULES(MOZ_LIBV4L2, libv4l2)
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -2936,7 +2935,7 @@ dnl Use integers over floats for audio o
+@@ -2860,7 +2859,7 @@ dnl Use integers over floats for audio o
  dnl (regarless of the CPU architecture, because audio
  dnl backends for those platforms don't support floats. We also
  dnl use integers on ARM with other OS, because it's more efficient.
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
      MOZ_SAMPLE_TYPE_S16=1
      AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
      AC_SUBST(MOZ_SAMPLE_TYPE_S16)
-@@ -3044,6 +3043,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
+@@ -2968,6 +2967,111 @@ if test -n "$MOZ_OMX_PLUGIN"; then
      fi
  fi
  
@@ -151,7 +151,7 @@ $NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
  dnl system libvpx Support
  dnl ========================================================
  MOZ_ARG_WITH_BOOL(system-libvpx,
-@@ -3208,6 +3312,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
+@@ -3128,6 +3232,67 @@ AC_DEFINE(MOZ_WEBM_ENCODER)
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -219,8 +219,8 @@ $NetBSD: patch-aa,v 1.50 2017/03/07 20:45:43 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5023,6 +5188,27 @@ if test "$USE_FC_FREETYPE"; then
- fi
+@@ -4860,6 +5025,27 @@ dnl ====================================
+ AC_SUBST(MOZ_LINUX_32_SSE2_STARTUP_ERROR)
  
  dnl ========================================================
 +dnl Check for graphite2
