@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2005/10/13 17:01:47 schmonz Exp $
+$NetBSD: patch-aa,v 1.3 2017/04/27 20:27:36 schmonz Exp $
+
+Adjust to more modern Sys::Syslog. Fix typos in error messages.
 
 --- greylist.orig	2005-01-17 08:38:07.000000000 -0500
 +++ greylist
