@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.94 2017/04/09 10:45:53 leot Exp $
+$NetBSD: distinfo,v 1.95 2017/04/27 10:37:58 leot Exp $
 
-SHA1 (youtube-dl-2017.04.09.tar.gz) = adc9394d060b7a4bf319178af21ad8865ec1024a
-RMD160 (youtube-dl-2017.04.09.tar.gz) = 4174764313a0805dda86bf181755ec363d95aa8d
-SHA512 (youtube-dl-2017.04.09.tar.gz) = 813e9258f8f56f40a3facbb9fac19d3fa8fea43c7842225129cf4c8fd744994d45ef46a54146e8fa5ca3a427301fdcdbcd50bf1ba0f2f914d80a1a93af559384
-Size (youtube-dl-2017.04.09.tar.gz) = 2669689 bytes
+SHA1 (youtube-dl-2017.04.26.tar.gz) = 0e1c855758a822b98de115b82016e6e3aeacb0ad
+RMD160 (youtube-dl-2017.04.26.tar.gz) = 696463c5b408b131605503dfef977e8f23bed19f
+SHA512 (youtube-dl-2017.04.26.tar.gz) = 45b6e48828da72d4d014ba1605c94efbf7d082ad8527f49ec1333c4d7c210bcb64e68cbd140f505f318890693ed0b45c351d29344eb2162d00613674e60fbdb3
+Size (youtube-dl-2017.04.26.tar.gz) = 2691549 bytes
 SHA1 (patch-setup.py) = a67074ae7cfe5e77847c2f610337ea553eddb69b
 SHA1 (patch-youtube__dl_postprocessor_ffmpeg.py) = 6c220e67ab138d1c00aa4f2bc02ac84548af7c30
