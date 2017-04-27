@@ -15,6 +15,7 @@ SHA1 (patch-al) = 462059744f7f057f13d6c472d0aff9d012546082
 SHA1 (patch-am) = fcfabcec9e6d0b8e9ada348dc65e8ddb890f96ca
 SHA1 (patch-gcc_doc_c-tree.texi) = 2ba810a99ecd56a03d74818b6e52869cd6edc45e
 SHA1 (patch-gcc_doc_cppopts.texi) = d352618e29983ebff03d82c1d669c4258705fc59
+SHA1 (patch-gcc_doc_gcc.texi) = 0b6ea28f887efc78ebd2f450c3f59ee7eaa15117
 SHA1 (patch-gcc_doc_invoke.texi) = ed61af2e4bee1ed26bd9c5ee8d821828ce477a72
 SHA1 (patch-gcc_doc_sourcebuild.texi) = 0672ec36f2c4ae2dd44154e1553bf1add445e194
 SHA1 (patch-gcc_ginclude_stddef.h) = 867e3ff87f0b8865b37823c42c9b01935b94e5fb
