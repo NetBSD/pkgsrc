@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17310 2017/04/27 13:22:51 mef Exp $
+$NetBSD: TODO,v 1.17311 2017/04/27 13:29:31 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -591,7 +591,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elm-me-2.4.127
 	o elscreen-1.5.3
 	o emacs-muse-3.20
-	o emacs25-25.2
 	o embryo-1.7.10
 	o emerillon-0.1.90
 	o enlightenment-0.21
