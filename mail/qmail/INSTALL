@@ -1,10 +1,12 @@
-# $NetBSD: INSTALL,v 1.7 2017/03/20 16:23:19 schmonz Exp $
+# $NetBSD: INSTALL,v 1.8 2017/04/27 20:35:10 schmonz Exp $
 
 DOCDIR=@DOCDIR@
 EGDIR=@EGDIR@
 OPENSSL=@OPENSSL@
 PKGMANDIR=@PKGMANDIR@
 QMAILDIR=@QMAILDIR@
+QMAIL_DAEMON_USER=@QMAIL_DAEMON_USER@
+QMAIL_QMAIL_GROUP=@QMAIL_QMAIL_GROUP@
 QMAIL_QUEUE_DIR=@QMAIL_QUEUE_DIR@
 QMAIL_QUEUE_EXTRA=@QMAIL_QUEUE_EXTRA@
 
@@ -78,7 +80,7 @@ NOTE: If you don't already have an SSL certificate for qmail:
 
 # ${OPENSSL} req -new -x509 -nodes -days 366 -out ${SERVERCERT} -keyout ${SERVERCERT}
 # chmod 640 ${SERVERCERT}
-# chown qmaild:qmail ${SERVERCERT}
+# chown ${QMAIL_DAEMON_USER}:${QMAIL_QMAIL_GROUP} ${SERVERCERT}
 # ln -s ${SERVERCERT} ${PKG_SYSCONFDIR}/control/clientcert.pem
 # update_tmprsadh
 
