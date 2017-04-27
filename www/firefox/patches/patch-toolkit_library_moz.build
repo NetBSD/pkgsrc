@@ -1,11 +1,11 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.11 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.12 2017/04/27 01:49:47 ryoon Exp $
 
 * Support system libraries
 * Restore OSS support
 
---- toolkit/library/moz.build.orig	2017-02-11 00:39:16.000000000 +0000
+--- toolkit/library/moz.build.orig	2017-04-11 04:15:18.000000000 +0000
 +++ toolkit/library/moz.build
-@@ -215,6 +215,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
+@@ -216,6 +216,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
      ]
  
  OS_LIBS += CONFIG['MOZ_CAIRO_OSLIBS']
@@ -13,7 +13,7 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.11 2017/03/07 20:45:43 ryoon Exp $
  OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
  
  if CONFIG['SERVO_TARGET_DIR']:
-@@ -229,9 +230,30 @@ if CONFIG['MOZ_SYSTEM_JPEG']:
+@@ -230,9 +231,30 @@ if CONFIG['MOZ_SYSTEM_JPEG']:
  if CONFIG['MOZ_SYSTEM_PNG']:
      OS_LIBS += CONFIG['MOZ_PNG_LIBS']
  
@@ -44,7 +44,7 @@ $NetBSD: patch-toolkit_library_moz.build,v 1.11 2017/03/07 20:45:43 ryoon Exp $
  if CONFIG['MOZ_SYSTEM_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -241,8 +263,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
+@@ -242,8 +264,8 @@ if CONFIG['MOZ_SYSTEM_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  

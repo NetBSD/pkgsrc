@@ -1,0 +1,12 @@
+$NetBSD: patch-media_libcubeb_gtest_moz.build,v 1.1 2017/04/27 01:49:47 ryoon Exp $
+
+--- media/libcubeb/gtest/moz.build.orig	2017-04-11 04:15:21.000000000 +0000
++++ media/libcubeb/gtest/moz.build
+@@ -71,7 +71,6 @@ elif CONFIG['OS_TARGET'] == 'OpenBSD':
+         'sndio',
+     ]
+ else:
+-    OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
+     OS_LIBS += CONFIG['MOZ_PULSEAUDIO_LIBS']
+ 
+ if CONFIG['GNU_CXX']:
