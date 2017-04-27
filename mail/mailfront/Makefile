@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/02/21 16:04:04 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2017/04/27 20:18:44 schmonz Exp $
 #
 
 DISTNAME=		mailfront-2.12
@@ -21,9 +21,13 @@ DJB_MAKE_TARGETS=	NO
 DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/include > conf-include;	\
 			${ECHO} ${PREFIX}/lib/${PKGBASE} > conf-modules;
 
+FILES_SUBST+=		QMAIL_DAEMON_USER=${QMAIL_DAEMON_USER:Q}
+FILES_SUBST+=		QMAIL_LOG_USER=${QMAIL_LOG_USER:Q}
 RCD_SCRIPTS=		smtpfront
 INSTALLATION_DIRS=	share/doc/mailfront
 INSTALL_ENV+=		install_prefix=${DESTDIR:Q}
+
+BUILD_DEFS+=		QMAIL_DAEMON_USER QMAIL_LOG_USER
 
 USE_LIBTOOL=		yes
 
