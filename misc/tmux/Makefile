@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2017/04/21 11:55:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.41 2017/04/27 10:29:26 leot Exp $
 
 DISTNAME=	tmux-2.4
 CATEGORIES=	misc
@@ -27,10 +27,6 @@ BUILDLINK_TRANSFORM+=	opt:-D_XPG4_2:-D_XPG6
 .if !empty(MACHINE_PLATFORM:MDarwin-1[0-9]*)
 CPPFLAGS+=	-D__DARWIN_VERS_1050=0
 .endif
-
-# XXX: This will not needed for tmux-2.4 because a different fix
-# XXX: was applied by upstream!
-CPPFLAGS.NetBSD+=	-D_OPENBSD_SOURCE	# for reallocarray(3)
 
 .include "../../devel/libevent/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0.10
