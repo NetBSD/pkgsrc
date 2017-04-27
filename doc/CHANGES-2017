@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1776 2017/04/26 22:28:46 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1777 2017/04/27 01:48:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2214,3 +2214,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/scrypt to 1.2.1 [wiz 2017-04-26]
 	Updated devel/cmake to 3.8.0nb1 [maya 2017-04-26]
 	Updated net/syncthing to 0.14.27 [wiz 2017-04-26]
+	Updated devel/nss to 3.30.2 [ryoon 2017-04-27]
