@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1779 2017/04/27 01:53:19 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1780 2017/04/27 01:57:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/nss to 3.30.2 [ryoon 2017-04-27]
 	Updated www/firefox to 53.0 [ryoon 2017-04-27]
 	Updated www/firefox-l10n to 53.0 [ryoon 2017-04-27]
+	Added www/firefox52 version 52.1.0 [ryoon 2017-04-27]
