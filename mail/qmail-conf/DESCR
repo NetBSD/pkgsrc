@@ -4,10 +4,10 @@ They are like *-conf programs in djbdns.
 With qmail-conf, for example, setting up a minimal SMTP service takes
 the following four steps:
 
-qmail-smtpd-conf qmaild qmaill /var/qmail/service/smtpd
-cd /var/qmail/service/smtpd
-make
-ln -s /var/qmail/service/smtpd /service
+# qmail-smtpd-conf qmaild qmaill /var/qmail/service/smtpd
+# cd /var/qmail/service/smtpd
+# make
+# ln -s /var/qmail/service/smtpd /service
 
 qmail-conf assumes that (recent versions of) daemontools and
 ucspi-tcp have already been installed. It also assumes that svscan
