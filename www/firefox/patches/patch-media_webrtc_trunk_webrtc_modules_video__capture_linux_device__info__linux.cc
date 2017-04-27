@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.11 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__info__linux.cc,v 1.12 2017/04/27 01:49:47 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2017-01-23 16:13:55.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc.orig	2017-04-11 04:15:17.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/device_info_linux.cc
 @@ -25,6 +25,9 @@
  #else
@@ -10,8 +10,8 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_device__in
 +#include <libv4l2.h>
 +#endif
  
- #include "webrtc/system_wrappers/interface/ref_count.h"
- #include "webrtc/system_wrappers/interface/trace.h"
+ #include "webrtc/system_wrappers/include/ref_count.h"
+ #include "webrtc/system_wrappers/include/trace.h"
 @@ -34,6 +37,15 @@
  #define BUF_LEN     ( 1024 * ( EVENT_SIZE + 16 ) )
  #endif
