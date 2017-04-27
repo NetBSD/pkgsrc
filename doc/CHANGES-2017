@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1797 2017/04/27 13:09:45 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1798 2017/04/27 13:22:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2235,3 +2235,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.8.2 [wiz 2017-04-27]
 	Updated devel/py-pbr to 3.0.0 [wiz 2017-04-27]
 	Updated misc/todoman to 3.1.0 [wiz 2017-04-27]
+	Updated devel/p5-IO-Pager to 0.37 [mef 2017-04-27]
+	Updated devel/p5-IPC-Run to 0.95 [mef 2017-04-27]
