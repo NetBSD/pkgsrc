@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1804 2017/04/27 13:58:29 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.1805 2017/04/27 13:58:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2257,3 +2257,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/cy2-sql to 2.1.26nb12 [jperkin 2017-04-27]
 	Updated security/cyrus-sasl to 2.1.26nb6 [jperkin 2017-04-27]
 	Updated security/cyrus-saslauthd to 2.1.26nb7 [jperkin 2017-04-27]
+	Updated devel/waf to 1.9.10 [wiz 2017-04-27]
