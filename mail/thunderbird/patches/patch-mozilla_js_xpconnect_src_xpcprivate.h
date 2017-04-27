@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_xpconnect_src_xpcprivate.h,v 1.2 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mozilla_js_xpconnect_src_xpcprivate.h,v 1.3 2017/04/27 13:32:41 ryoon Exp $
 
---- mozilla/js/xpconnect/src/xpcprivate.h.orig	2016-04-07 21:33:28.000000000 +0000
+--- mozilla/js/xpconnect/src/xpcprivate.h.orig	2017-04-14 04:53:14.000000000 +0000
 +++ mozilla/js/xpconnect/src/xpcprivate.h
-@@ -999,6 +999,8 @@ typedef nsTArray<InterpositionWhitelistP
+@@ -843,6 +843,8 @@ typedef nsTArray<InterpositionWhitelistP
  /***************************************************************************/
  // XPCWrappedNativeScope is one-to-one with a JS global object.
  
@@ -10,4 +10,4 @@ $NetBSD: patch-mozilla_js_xpconnect_src_xpcprivate.h,v 1.2 2016/04/17 18:33:50 r
 +
  class nsIAddonInterposition;
  class nsXPCComponentsBase;
- class XPCWrappedNativeScope : public PRCList
+ class XPCWrappedNativeScope final : public PRCList

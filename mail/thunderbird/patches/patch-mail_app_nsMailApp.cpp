@@ -1,8 +1,8 @@
-$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.1 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mail_app_nsMailApp.cpp,v 1.2 2017/04/27 13:32:40 ryoon Exp $
 
---- mail/app/nsMailApp.cpp.orig	2016-04-07 21:14:22.000000000 +0000
+--- mail/app/nsMailApp.cpp.orig	2017-04-14 04:52:45.000000000 +0000
 +++ mail/app/nsMailApp.cpp
-@@ -15,6 +15,26 @@
+@@ -14,6 +14,26 @@
  #include <sys/resource.h>
  #include <unistd.h>
  #endif
@@ -27,9 +27,9 @@ $NetBSD: patch-mail_app_nsMailApp.cpp,v 1.1 2016/04/17 18:33:50 ryoon Exp $
 +		fprintf(stderr, "warning: setrlimit failed\n");
 +	}
  
- #ifdef XP_MACOSX
- #include "MacQuirks.h"
-@@ -213,6 +233,7 @@ FileExists(const char *path)
+ #include <stdio.h>
+ #include <stdarg.h>
+@@ -261,6 +281,7 @@ FileExists(const char *path)
  static nsresult
  InitXPCOMGlue(const char *argv0, nsIFile **xreDirectory)
  {

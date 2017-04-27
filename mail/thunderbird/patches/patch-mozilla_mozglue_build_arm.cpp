@@ -1,13 +1,13 @@
-$NetBSD: patch-mozilla_mozglue_build_arm.cpp,v 1.1 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: patch-mozilla_mozglue_build_arm.cpp,v 1.2 2017/04/27 13:32:41 ryoon Exp $
 
---- mozilla/mozglue/build/arm.cpp.orig	2016-04-07 21:33:29.000000000 +0000
+--- mozilla/mozglue/build/arm.cpp.orig	2017-04-14 04:53:21.000000000 +0000
 +++ mozilla/mozglue/build/arm.cpp
-@@ -102,10 +102,13 @@ check_neon(void)
- }
- #    endif // !MOZILLA_PRESUME_NEON
+@@ -13,10 +13,13 @@
+ // we don't compile one of these detection methods. The detection code here is
+ // based on the CPU detection in libtheora.
  
--#  elif defined(__linux__) || defined(ANDROID)
-+#  elif defined(__linux__) || defined(ANDROID) || defined(__NetBSD__)
+-#  if defined(__linux__) || defined(ANDROID)
++#  if defined(__linux__) || defined(ANDROID) || defined(__NetBSD__)
  #    include <stdio.h>
  #    include <stdlib.h>
  #    include <string.h>
@@ -17,7 +17,7 @@ $NetBSD: patch-mozilla_mozglue_build_arm.cpp,v 1.1 2016/04/17 18:33:50 ryoon Exp
  
  enum{
    MOZILLA_HAS_EDSP_FLAG=1,
-@@ -114,6 +117,29 @@ enum{
+@@ -25,6 +28,29 @@ enum{
    MOZILLA_HAS_NEON_FLAG=8
  };
  
@@ -47,7 +47,7 @@ $NetBSD: patch-mozilla_mozglue_build_arm.cpp,v 1.1 2016/04/17 18:33:50 ryoon Exp
  static unsigned
  get_arm_cpu_flags(void)
  {
-@@ -178,6 +204,7 @@ get_arm_cpu_flags(void)
+@@ -89,6 +115,7 @@ get_arm_cpu_flags(void)
    }
    return flags;
  }
