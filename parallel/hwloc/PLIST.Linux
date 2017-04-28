@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2017/02/06 03:50:01 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.3 2017/04/28 19:59:49 adam Exp $
 bin/hwloc-gather-topology
 include/hwloc/glibc-sched.h
 include/hwloc/linux-libnuma.h
 include/hwloc/linux.h
-man/man1/hwloc-gather-topology.1
 man/man1/hwloc-dump-hwdata.1
+man/man1/hwloc-gather-topology.1
 sbin/hwloc-dump-hwdata
 share/hwloc/hwloc-dump-hwdata.service
