@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2017/02/06 03:50:01 markd Exp $
+# $NetBSD: Makefile,v 1.21 2017/04/28 19:59:49 adam Exp $
 
-DISTNAME=	hwloc-1.11.4
+DISTNAME=	hwloc-1.11.7
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.11/downloads/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.open-mpi.org/projects/hwloc/
