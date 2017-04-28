@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/04/28 14:49:30 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/meld3/__init__.py
+${PYSITELIB}/meld3/__init__.pyc
+${PYSITELIB}/meld3/__init__.pyo
+${PYSITELIB}/meld3/_compat.py
+${PYSITELIB}/meld3/_compat.pyc
+${PYSITELIB}/meld3/_compat.pyo
+${PYSITELIB}/meld3/meld3.py
+${PYSITELIB}/meld3/meld3.pyc
+${PYSITELIB}/meld3/meld3.pyo
+${PYSITELIB}/meld3/test_meld3.py
+${PYSITELIB}/meld3/test_meld3.pyc
+${PYSITELIB}/meld3/test_meld3.pyo
