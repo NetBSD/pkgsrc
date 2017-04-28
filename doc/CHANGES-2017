@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1808 2017/04/27 21:54:23 alnsn Exp $
+$NetBSD: CHANGES-2017,v 1.1809 2017/04/28 07:57:08 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/openjdk8 to 1.8.131 [ryoon 2017-04-27]
 	Updated multimedia/streamlink to 0.5.0 [maya 2017-04-27]
 	Updated devel/lua-penlight to 1.5.2 [alnsn 2017-04-27]
+	Updated www/eliom to 6.2.0 [jaapb 2017-04-28]
