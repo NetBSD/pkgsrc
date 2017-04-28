@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2016/12/30 11:57:24 jaapb Exp $
+$NetBSD: distinfo,v 1.7 2017/04/28 07:56:53 jaapb Exp $
 
-SHA1 (eliom-6.1.0.tar.gz) = eedc665ea19dff176caacf08fcf05c0f56f771b7
-RMD160 (eliom-6.1.0.tar.gz) = bf93f4e0ba89c13052448bb118fd5393ae1b1914
-SHA512 (eliom-6.1.0.tar.gz) = ab389e8023de952f371209c5fe6863240214af559c4ae883dc9d3dc9f353afcc8e38292974c8c0a05c65213fe7dc0b350580c5c8647bba679a5ec0c44859621e
-Size (eliom-6.1.0.tar.gz) = 722881 bytes
+SHA1 (eliom-6.2.0.tar.gz) = 652dacef947524975efc63253fb806be45a750c3
+RMD160 (eliom-6.2.0.tar.gz) = 1a1b21495cac93c2ad7f207fdd6ad4df819c6600
+SHA512 (eliom-6.2.0.tar.gz) = 02ea52c78470f222297dd9f82218e82427ea2d2d0c9f261d1a9c2decbe7644c0bf583b77b8cef2577d5662d363efd276755f400e7a4c29c89a2265e49ca850db
+Size (eliom-6.2.0.tar.gz) = 724359 bytes
 SHA1 (patch-pkg_build.ml) = 8597e17fc869b7a8e93ee30f551a92c694617dbc
