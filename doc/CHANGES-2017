@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1813 2017/04/28 14:50:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1814 2017/04/28 14:52:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/roundcube-plugin-password to 1.2.5 [taca 2017-04-28]
 	Updated mail/roundcube-plugin-zipdownload to 1.2.5 [taca 2017-04-28]
 	Added www/py-meld3 version 1.0.2 [wiz 2017-04-28]
+	Added sysutils/py-supervisor version 3.3.1 [wiz 2017-04-28]
