@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2017/03/12 13:34:39 taca Exp $
+$NetBSD: distinfo,v 1.5 2017/04/28 13:50:10 taca Exp $
 
-SHA1 (roundcubemail-1.2.4.tar.gz) = e256f4b653cbc838b1c5e684c94eaf8ce92a0a70
-RMD160 (roundcubemail-1.2.4.tar.gz) = 038eb97d9f63cc034f9b9dc5658f8f6b92fe79f4
-SHA512 (roundcubemail-1.2.4.tar.gz) = 2184fcaa6d0041c1cb73adbe8bd1cd9eed2a11b8f3ed9f3c03c951d122c54568ad7312976c405d6d8c6060b903fc45569960861d28aabbddd54c493719120cb2
-Size (roundcubemail-1.2.4.tar.gz) = 3536629 bytes
+SHA1 (roundcubemail-1.2.5.tar.gz) = b73eab099219c06f6d8a1cc73e8906e0d0a01260
+RMD160 (roundcubemail-1.2.5.tar.gz) = e432100b6a3a10bd266eda333509ca772f9db07f
+SHA512 (roundcubemail-1.2.5.tar.gz) = 543003bd99e6d52239f928de56e185651d875517cd2115a66ddfc5d6c69d7e7c2b95e4d2ab05b05111bbfca4e5fab7f02749d1fe7b02f47d2cce832ee6a0cce2
+Size (roundcubemail-1.2.5.tar.gz) = 3536994 bytes
