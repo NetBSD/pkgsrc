@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.html-tidy.org/
 COMMENT=	Fixes and tidies up HTML files
 LICENSE=	mit
 
+GCC_REQD=	4.4
+
 # for man page
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
