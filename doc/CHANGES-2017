@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1809 2017/04/28 07:57:08 jaapb Exp $
+$NetBSD: CHANGES-2017,v 1.1810 2017/04/28 08:55:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/streamlink to 0.5.0 [maya 2017-04-27]
 	Updated devel/lua-penlight to 1.5.2 [alnsn 2017-04-27]
 	Updated www/eliom to 6.2.0 [jaapb 2017-04-28]
+	Updated sysutils/beats to 5.3.2 [fhajny 2017-04-28]
