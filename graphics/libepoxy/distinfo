@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2017/03/18 20:18:39 adam Exp $
+$NetBSD: distinfo,v 1.13.2.1 2017/04/29 18:08:25 bsiegert Exp $
 
 SHA1 (libepoxy-1.4.1.tar.gz) = 8d7007360cd2c24e87eaa322b1dbbb86787ace5e
 RMD160 (libepoxy-1.4.1.tar.gz) = e986fc0c4ffd9d6272938947bc7ccc0a268d0035
@@ -6,4 +6,4 @@ SHA512 (libepoxy-1.4.1.tar.gz) = 6656df4d447bd581b7701931070e03accb5b105426248f2
 Size (libepoxy-1.4.1.tar.gz) = 309759 bytes
 SHA1 (patch-configure.ac) = c4ce423b058975e7322ea782554ecedd449e2249
 SHA1 (patch-src_dispatch__common.c) = 8ab5351f3ef67cc36aacfc43e7f61e6a7bcc179a
-SHA1 (patch-src_dispatch__common.h) = 94a5cd88dd0cae1b0dc936446ca2e00e49ae07c7
+SHA1 (patch-src_dispatch__common.h) = 30dae2c8b8ea2fa6c9fd77d6016ccb97a63027a3
