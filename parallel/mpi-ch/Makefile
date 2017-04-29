@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2016/07/09 06:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2017/04/29 18:18:52 adam Exp $
 
-DISTNAME=	mpich-3.0.4
-PKGREVISION=	4
+DISTNAME=	mpich-3.2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mpich.org/static/tarballs/${PKGVERSION_NOREV}/
 
@@ -23,25 +22,28 @@ USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${MPI_PREFIX}
 CONFIGURE_ARGS+=	--datadir=${MPI_PREFIX}/share/${PKGBASE}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${MPI_PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${MPI_PREFIX}/share/doc/${PKGBASE}/html
-CONFIGURE_ARGS+=	--with-openpa-prefix=${BUILDLINK_PREFIX.openpa}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-hwloc-prefix=${BUILDLINK_PREFIX.hwloc}
+CONFIGURE_ARGS+=	--with-openpa-prefix=${BUILDLINK_PREFIX.openpa}
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
+CONFIGURE_ARGS+=	--with-thread-package=posix
 # Make MPI compiler wrapper usable outside pkgsrc:
 CONFIGURE_ENV+=		WRAPPER_LDFLAGS="-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib"
 CONFIGURE_ENV+=		MPICH_LDFLAGS="-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib"
+
+LDFLAGS+=		-lm
 
 PKG_SYSCONFSUBDIR=	mpich
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${MPI_PREFIX}/lib
 
-CONF_FILES+=		share/${PKGBASE}/examples/mpicc.conf \
+#CONF_FILES+=		share/${PKGBASE}/examples/mpicc.conf \
 			${PKG_SYSCONFDIR}/mpicc.conf
-CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
+#CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 			${PKG_SYSCONFDIR}/mpicxx.conf
-CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
+#CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
 
 # FreeBSD 6 hack:
@@ -56,4 +58,5 @@ TEST_TARGET=	check
 
 .include "../../parallel/hwloc/buildlink3.mk"
 .include "../../parallel/openpa/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
