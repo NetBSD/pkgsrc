@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/01/19 18:52:21 agc Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2017/04/29 11:49:16 bsiegert Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
@@ -33,7 +33,7 @@ LIBS.SunOS+=		-lresolv -lsocket -lnsl
 
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
-.  if !empty(OS_VERSION:M10.*) # MacOS X 10.6.X aka Snow Leopard
+.  if !empty(OS_VERSION:M1[0-9].*) # MacOS X 10.6.X aka Snow Leopard, or later
 LIBS+=		-lresolv
 .  endif
 .endif
