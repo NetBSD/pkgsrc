@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.17 2017/04/27 19:39:06 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.18 2017/04/29 19:32:24 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -265,4 +265,37 @@ print/a2ps: security fix
 
 Pullup ticket #5369 - requested by maya
 chat/weechat: security fix
+
+Pullup ticket #5283 - requested by sevan
+www/webkit-gtk: build fix
+
+Pullup ticket #5305 - requested by sevan
+net/traceroutr-nanog: build fix
+
+Pullup ticket #5306 - requested by sevan
+textproc/xhtmldiff: build fix
+
+Pullup ticket #5307 - requested by sevan
+editors/dasher: build fix
+
+Pullup ticket #5319 - requested by sevan
+devel/rt3: build fix
+
+Pullup ticket #5320 - requested by sevan
+graphics/libepoxy: build fix
+
+Pullup ticket #5318 - requested by sevan
+devel/flim: build fix
+
+Pullup ticket #5321 - requested by sevan
+mail/dovecot2: build fix
+
+Pullup ticket #5321 - requested by sevan
+mail/dovecot2: build fix
+
+Pullup ticket #5322 - requested by sevan
+net/libpcap: build fix
+
+Pullup ticket #5326 - requested by sevan
+devel/py-mercurial: security fix
 
