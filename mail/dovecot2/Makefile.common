@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5.2.1 2017/04/13 15:04:31 bsiegert Exp $
+# $NetBSD: Makefile.common,v 1.5.2.2 2017/04/29 18:50:22 bsiegert Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -38,8 +38,10 @@ CONFIGURE_ARGS+=	--with-sql
 
 TEST_TARGET=	check
 
-# Explicitly disable inotify on illumos, it is provided for Linux compat only.
-CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
+# Explicitly disable epoll/inotify on illumos, dovecot assumes Linux-specific
+# implementation details.
+CONFIGURE_ARGS.SunOS+=	--with-ioloop=poll
+CONFIGURE_ARGS.SunOS+=	--with-notify=none
 
 # Sharing sources between binary and lib triggers libtool bugs
 # mv: rename .deps/auth-stats.Tpo to .deps/auth-stats.Po: No such file or directory
