@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.33 2017/02/02 18:46:39 maya Exp $
+$NetBSD: distinfo,v 1.33.2.1 2017/04/29 18:51:51 bsiegert Exp $
 
 SHA1 (libpcap-1.8.1.tar.gz) = 32d7526dde8f8a2f75baf40c01670602aeef7e39
 RMD160 (libpcap-1.8.1.tar.gz) = 295766ab2646c05c330aa04cabc30c5737200279
 SHA512 (libpcap-1.8.1.tar.gz) = bff5ff53fe53324f423e38eb4062c3fbb9125f86ca90d5e88aca9f0b3da72bc0acc6221c022b0f88cb3f000267580719119824c388da545c6f35117660cbb53b
 Size (libpcap-1.8.1.tar.gz) = 739163 bytes
-SHA1 (patch-ac) = c83749e249d8127267045b323f077d93acff54a7
+SHA1 (patch-ac) = bcbb2a5de2eedf10b7cb38d6b78f68540bf4161c
 SHA1 (patch-ad) = ea818a5fb146488f909483d96d943941ea1873e4
 SHA1 (patch-configure) = 36557d7db9f09467fc9699b96d96c4c49173246b

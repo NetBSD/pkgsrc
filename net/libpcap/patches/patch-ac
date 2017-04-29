@@ -1,11 +1,15 @@
-$NetBSD: patch-ac,v 1.11 2017/02/02 18:46:39 maya Exp $
+$NetBSD: patch-ac,v 1.11.2.1 2017/04/29 18:51:51 bsiegert Exp $
 
 Add libtoolization
+
 Fix manpage installation
 
---- Makefile.in.orig	2015-06-28 01:03:37.000000000 +0000
-+++ Makefile.in
-@@ -43,7 +43,7 @@ VPATH = @srcdir@
+Remove dependencies on VERSION, which trigger unintended implicit rules against
+version.c on case-insensitive file systems.
+
+--- Makefile.in.orig	2016-10-26 11:07:59.000000000 +1100
++++ Makefile.in	2017-04-19 21:01:59.000000000 +1000
+@@ -43,7 +43,7 @@
  #
  
  LD = /usr/bin/ld
@@ -14,7 +18,7 @@ Fix manpage installation
  AR = @AR@
  LN_S = @LN_S@
  MKDEP = @MKDEP@
-@@ -75,7 +75,8 @@ YACC = @YACC@
+@@ -75,7 +75,8 @@
  # Explicitly define compilation rule since SunOS 4's make doesn't like gcc.
  # Also, gcc does not remove the .o before forking 'as', which can be a
  # problem if you don't own the file but can write to the directory.
@@ -24,7 +28,7 @@ Fix manpage installation
  	@rm -f $@
  	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
  
-@@ -86,13 +87,13 @@ CSRC =	pcap.c inet.c fad-helpers.c genco
+@@ -86,13 +87,13 @@
  	etherent.c savefile.c sf-pcap.c sf-pcap-ng.c pcap-common.c \
  	bpf_image.c bpf_dump.c
  GENSRC = scanner.c grammar.c bpf_filter.c version.c
@@ -40,7 +44,7 @@ Fix manpage installation
  PUBHDR = \
  	pcap.h \
  	pcap-bpf.h \
-@@ -358,12 +359,10 @@ EXTRA_DIST = \
+@@ -358,12 +359,10 @@
  	Win32/Prj/wpcap.vcxproj \
  	Win32/Prj/wpcap.vcxproj.filters
  
@@ -56,7 +60,7 @@ Fix manpage installation
  
  shared: libpcap.$(DYEXT)
  
-@@ -452,10 +451,10 @@ scanner.h: scanner.c
+@@ -452,10 +451,10 @@
  		$(MAKE) $(MAKEFLAGS) scanner.c; \
  	fi
  
@@ -69,7 +73,7 @@ Fix manpage installation
  
  grammar.c: $(srcdir)/grammar.y
  	$(YACC) -p pcap_ -o grammar.c -d $<
-@@ -466,19 +465,19 @@ grammar.h: grammar.c
+@@ -466,22 +465,22 @@
  		$(MAKE) $(MAKEFLAGS) grammar.c; \
  	fi
  
@@ -93,8 +97,21 @@ Fix manpage installation
 +strtok_r.lo: $(srcdir)/missing/strtok_r.c
  	$(CC) $(FULL_CFLAGS) -o $@ -c $(srcdir)/missing/strtok_r.c
  
- version.c: $(srcdir)/VERSION $(srcdir)/gen_version_c.sh
-@@ -498,7 +497,7 @@ bpf_filter.c: $(srcdir)/bpf/net/bpf_filt
+-version.c: $(srcdir)/VERSION $(srcdir)/gen_version_c.sh
++version.c: $(srcdir)/gen_version_c.sh
+ 	#
+ 	# Older programs import this if they want to show the
+ 	# libpcap version number, rather than calling
+@@ -490,7 +489,7 @@
+ 	@rm -f $@
+ 	$(srcdir)/gen_version_c.sh $(srcdir)/VERSION $@
+ 
+-pcap_version.h: $(srcdir)/VERSION $(srcdir)/pcap_version.h.in $(srcdir)/gen_version_header.sh
++pcap_version.h: $(srcdir)/pcap_version.h.in $(srcdir)/gen_version_header.sh
+ 	@rm -f $@
+ 	$(srcdir)/gen_version_header.sh $(srcdir)/VERSION $(srcdir)/pcap_version.h.in $@
+ 
+@@ -498,7 +497,7 @@
  	rm -f bpf_filter.c
  	ln -s $(srcdir)/bpf/net/bpf_filter.c bpf_filter.c
  
@@ -103,7 +120,7 @@ Fix manpage installation
  	$(CC) $(FULL_CFLAGS) -c bpf_filter.c
  
  #
-@@ -550,7 +549,7 @@ selpolltest: tests/selpolltest.c libpcap
+@@ -550,7 +549,7 @@
  valgrindtest: tests/valgrindtest.c libpcap.a
  	$(CC) $(FULL_CFLAGS) -I. -L. -o valgrindtest $(srcdir)/tests/valgrindtest.c libpcap.a $(LIBS)
  
@@ -112,7 +129,7 @@ Fix manpage installation
  	[ -d $(DESTDIR)$(libdir) ] || \
  	    (mkdir -p $(DESTDIR)$(libdir); chmod 755 $(DESTDIR)$(libdir))
  	[ -d $(DESTDIR)$(includedir) ] || \
-@@ -565,56 +564,73 @@ install: install-shared install-archive 
+@@ -565,56 +564,73 @@
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@)
  	[ -d $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@ ] || \
  	    (mkdir -p $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@; chmod 755 $(DESTDIR)$(mandir)/man@MAN_MISC_INFO@)
@@ -226,7 +243,7 @@ Fix manpage installation
  	for i in $(MANFILE); do \
  		$(INSTALL_DATA) `echo $$i | sed 's/.manfile.in/.manfile/'` \
  		    $(DESTDIR)$(mandir)/man@MAN_FILE_FORMATS@/`echo $$i | sed 's/.manfile.in/.@MAN_FILE_FORMATS@/'`; done
-@@ -656,15 +672,15 @@ install-shared-shareda: libpcap.shareda
+@@ -656,15 +672,15 @@
  install-shared-none:
  
  install-archive: install-archive-$(DYEXT)
@@ -245,7 +262,7 @@ Fix manpage installation
  install-archive-shareda:
  	#
  	# AIX, however, doesn't, so we don't install the archive
-@@ -672,7 +688,7 @@ install-archive-shareda:
+@@ -672,7 +688,7 @@
  	#
  
  uninstall: uninstall-shared
@@ -254,7 +271,7 @@ Fix manpage installation
  	for i in $(PUBHDR); do \
  		rm -f $(DESTDIR)$(includedir)/$$i; done
  	-rmdir $(DESTDIR)$(includedir)/pcap
-@@ -720,7 +736,7 @@ uninstall-shared-sl:
+@@ -720,7 +736,7 @@
  	rm -f $(DESTDIR)$(libdir)/libpcap.$$MAJOR_VER; \
  	rm -f $(DESTDIR)$(libdir)/libpcap.sl
  uninstall-shared-shareda:
