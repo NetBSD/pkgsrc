@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.65 2017/01/03 02:31:36 wiz Exp $
+# $NetBSD: Makefile.common,v 1.66 2017/04/29 18:31:42 adam Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -9,7 +9,7 @@
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
-BOOST_VERSION=		1.63.0
+BOOST_VERSION=		1.64.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -29,8 +29,6 @@ COMMENT=	Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
 LICENSE=	boost-license
 
 CONFLICTS+=		boost<1.36.0
-
-DIST_SUBDIR=		boost-1.63.0v3
 
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
