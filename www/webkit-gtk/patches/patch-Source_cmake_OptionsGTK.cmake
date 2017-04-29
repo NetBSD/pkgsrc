@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_cmake_OptionsGTK.cmake,v 1.11 2016/09/05 08:06:25 leot Exp $
+$NetBSD: patch-Source_cmake_OptionsGTK.cmake,v 1.11.6.1 2017/04/29 10:58:21 bsiegert Exp $
 
 o Do not require GCC 4.9.0 (should be build *without* IndexedDB support)
 o Do not conflict with CMAKE_MODULE_PATH during the linking phase of
@@ -12,6 +12,7 @@ o Do not conflict with CMAKE_MODULE_PATH during the linking phase of
    [...]
 
 o Disable DatabaseProcess and IndexedDB support.
+o Do not use --version-script on SunOS
 
 --- Source/cmake/OptionsGTK.cmake.orig	2016-08-24 06:45:01.000000000 +0000
 +++ Source/cmake/OptionsGTK.cmake
@@ -29,11 +30,13 @@ o Disable DatabaseProcess and IndexedDB support.
  # Libtool library version, not to be confused with API version.
  # See http://www.gnu.org/software/libtool/manual/html_node/Libtool-versioning.html
  CALCULATE_LIBRARY_VERSIONS_FROM_LIBTOOL_TRIPLE(WEBKIT2 50 10 13)
-@@ -117,7 +110,7 @@ else ()
+@@ -116,8 +109,8 @@ if (DEVELOPER_MODE)
+ else ()
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_MINIBROWSER PUBLIC OFF)
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_API_TESTS PRIVATE OFF)
-     if (NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
+-    if (NOT CMAKE_SYSTEM_NAME MATCHES "Darwin")
 -        set(WebKit2_VERSION_SCRIPT "-Wl,--version-script,${CMAKE_MODULE_PATH}/gtksymbols.filter")
++    if (NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" AND NOT CMAKE_SYSTEM_NAME MATCHES "SunOS")
 +        set(WebKit2_VERSION_SCRIPT "-Wl,--version-script,${CMAKE_SOURCE_DIR}/Source/cmake/gtksymbols.filter")
      endif ()
  endif ()
