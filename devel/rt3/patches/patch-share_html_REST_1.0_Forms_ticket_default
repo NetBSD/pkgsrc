@@ -1,0 +1,25 @@
+$NetBSD: patch-share_html_REST_1.0_Forms_ticket_default,v 1.1.2.2 2017/04/29 11:56:26 bsiegert Exp $
+
+Properly escape braces to make it compatible with Perl >=5.24.
+
+--- share/html/REST/1.0/Forms/ticket/default.orig	2013-05-22 19:03:04.000000000 +0000
++++ share/html/REST/1.0/Forms/ticket/default
+@@ -383,14 +383,14 @@ else {
+                             $s =~ s/\\'/'/g;
+                             push @new, $s;
+                         }
+-                        elsif ( $a =~ /^q{/ ) {
++                        elsif ( $a =~ /^q\{/ ) {
+                             my $s = $a;
+-                            while ( $a !~ /}$/ ) {
++                            while ( $a !~ /\}$/ ) {
+                                 ( $a, $b ) = split /\s*,\s*/, $b, 2;
+                                 $s .= ',' . $a;
+                             }
+-                            $s =~ s/^q{//;
+-                            $s =~ s/}//;
++                            $s =~ s/^q\{//;
++                            $s =~ s/\}//;
+                             push @new, $s;
+                         }
+                         else {

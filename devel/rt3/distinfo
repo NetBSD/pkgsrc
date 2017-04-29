@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2017/03/12 19:55:49 spz Exp $
+$NetBSD: distinfo,v 1.27.2.1 2017/04/29 11:56:26 bsiegert Exp $
 
 SHA1 (rt-3.8.17.tar.gz) = 4765c68f91a0e8e21ed0fd39397cd8e3970ca992
 RMD160 (rt-3.8.17.tar.gz) = 6da8fca56976233417bd47b26e1a7326fde5d2d0
@@ -6,6 +6,7 @@ SHA512 (rt-3.8.17.tar.gz) = 8ea1069c54572393192ef7785aaefa05e321af8d64214d309fad
 Size (rt-3.8.17.tar.gz) = 5728368 bytes
 SHA1 (patch-aa) = 6f78710f4460a25c75afbdf7128c0fe34914927c
 SHA1 (patch-ab) = ee455dd683c84d3a745a29a132e28903ba03144d
+SHA1 (patch-bin_rt.in) = 19464de8c541bb7bd23c5bdb0ffafd1161be3342
 SHA1 (patch-lib_RT.pm) = 6544ae59a8da37b1fe41df69ab459c85e67756d0
 SHA1 (patch-lib_RT_CustomFieldValues_External.pm) = 4404ca98c9e50687323892df1aa95c8b5a6dedd9
 SHA1 (patch-lib_RT_Date.pm) = 09d454c7ee81baa49b7c0452e52df4dba839c78c
@@ -15,6 +16,7 @@ SHA1 (patch-lib_RT_Interface_Web.pm) = 4a53145b10bb2e6c1a3999542f348713bbfcf6ab
 SHA1 (patch-sbin_rt-attributes-viewer) = e1c963800b76282cda4ca46e006f30d9abfc29c9
 SHA1 (patch-sbin_rt-attributes-viewer.in) = 99a15cca9a394b5743edc3929f43593f1384c8da
 SHA1 (patch-share_html_Helpers_CalPopup.html) = 3920ac6448d1d21c7ff32ef67344b19aa53616a4
+SHA1 (patch-share_html_REST_1.0_Forms_ticket_default) = 5cb5e35a02824d4a04005251dfd824a1debf59a1
 SHA1 (patch-share_html_Search_Elements_ResultsRSSView) = 62eeea9f4bea1bb98fd3509748123ecca3256185
 SHA1 (patch-t_approval_admincc.t) = 4fddf5fa844d15e8698e00fe6863daaafa661315
 SHA1 (patch-t_approval_basic.t) = 209303cc34370518a2600e28570627e1dc7e698b
