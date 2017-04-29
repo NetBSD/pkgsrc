@@ -1,0 +1,15 @@
+$NetBSD: patch-src_mpi_romio_configure,v 1.1 2017/04/29 18:18:52 adam Exp $
+
+Portability fix.
+
+--- src/mpi/romio/configure.orig	2017-04-28 20:33:04.000000000 +0000
++++ src/mpi/romio/configure
+@@ -22929,7 +22929,7 @@ if test "${with_aio_lite+set}" = set; th
+   withval=$with_aio_lite; with_aiolite=yes
+ fi
+ 
+-if test "x$with_aiolite" == xyes; then :
++if test "x$with_aiolite" = xyes; then :
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for lio_listio in -laio-lite" >&5
+ $as_echo_n "checking for lio_listio in -laio-lite... " >&6; }
+ if ${ac_cv_lib_aio_lite_lio_listio+:} false; then :
