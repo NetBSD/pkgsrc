@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1825 2017/04/29 08:35:10 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1826 2017/04/29 08:47:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2280,4 +2280,12 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-YAML-LibYAML to 0.64 [wen 2017-04-29]
 	Updated time/p5-DateTime-Format-Natural to 1.05 [wen 2017-04-29]
 	Updated www/p5-Plack to 1.0044 [wen 2017-04-29]
+	Updated textproc/p5-Biblio-EndnoteStyle to 0.06 [mef 2017-04-29]
+	Updated textproc/p5-Data-FormValidator to 4.86 [mef 2017-04-29]
+	Updated textproc/p5-Encode to 2.89 [mef 2017-04-29]
 	Updated audio/p5-Audio-Scan to 0.98 [wen 2017-04-29]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.901 [mef 2017-04-29]
+	Updated textproc/p5-Lingua-EN-Tagger to 0.28 [mef 2017-04-29]
+	Updated textproc/p5-PDF-Create to 1.42 [mef 2017-04-29]
+	Updated textproc/p5-String-Approx to 3.28 [mef 2017-04-29]
+	Updated textproc/p5-String-Compare-ConstantTime to 0.312 [mef 2017-04-29]
