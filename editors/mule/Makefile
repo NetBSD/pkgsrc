@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/07/04 16:18:29 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2017/04/29 01:11:55 tsutsui Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	8
@@ -25,7 +25,7 @@ GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	-g
+CFLAGS+=	-g -fno-builtin-malloc -fno-strict-aliasing
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--${LOWER_OPSYS} --with-x --with-x-toolkit=lucid
 CONFIGURE_ARGS+=	--terminal-face --mcpath --canna-libraries=${PREFIX}/lib
