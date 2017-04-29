@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1826 2017/04/29 08:47:08 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1827 2017/04/29 14:03:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2289,3 +2289,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-PDF-Create to 1.42 [mef 2017-04-29]
 	Updated textproc/p5-String-Approx to 3.28 [mef 2017-04-29]
 	Updated textproc/p5-String-Compare-ConstantTime to 0.312 [mef 2017-04-29]
+	Updated math/p5-Math-FFT to 1.34 [wen 2017-04-29]
