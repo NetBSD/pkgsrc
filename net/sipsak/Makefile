@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2016/03/05 11:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2017/04/29 10:01:07 schwarz Exp $
 
 DISTNAME=	sipsak-0.9.6-1
 PKGNAME=	${DISTNAME:S/-1//}
 PKGREVISION=	7
 CATEGORIES=	net comms
-MASTER_SITES=	http://download.berlios.de/sipsak/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipsak.berlios/}
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://sipsak.org/
+HOMEPAGE=	https://sourceforge.net/projects/sipsak.berlios/
 COMMENT=	Sipsak is a command-line SIP testing utility
 LICENSE=	gnu-gpl-v2
 
