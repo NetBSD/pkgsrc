@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1821 2017/04/29 07:41:21 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1822 2017/04/29 07:49:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2277,3 +2277,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-XML-Compile to 1.56 [wen 2017-04-29]
 	Updated textproc/p5-XML-SemanticDiff to 1.0005 [wen 2017-04-29]
 	Updated textproc/p5-XML-Simple to 2.24 [wen 2017-04-29]
+	Updated textproc/p5-YAML-LibYAML to 0.64 [wen 2017-04-29]
