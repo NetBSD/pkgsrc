@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.240 2017/02/11 16:08:31 tron Exp $
+# $NetBSD: bootstrap,v 1.241 2017/04/29 21:40:40 khorben Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -58,7 +58,7 @@ usage="Usage: $0 "'
     [ --binary-kit <tarball> ]
     [ --binary-macpkg <pkg> ]
     [ --compiler <compiler> ]
-    [ --cwrappers ]
+    [ --cwrappers <auto|yes|no> ]
     [ --full ]
     [ --gzip-binary-kit <tarball> ]
     [ --help ]
@@ -407,7 +407,7 @@ sysconfdir=
 varbase=
 
 compiler=""
-cwrappers=no
+cwrappers=auto
 full=no
 make_jobs=1
 mk_fragment=
@@ -433,7 +433,8 @@ while [ $# -gt 0 ]; do
 	--compiler)	compiler="$2"; shift ;;
 	--abi=*)	abi=`get_optarg "$1"` ;;
 	--abi)		abi="$2"; shift ;;
-	--cwrappers)	cwrappers=yes ;;
+	--cwrappers=*)	cwrappers=`get_optarg "$1"` ;;
+	--cwrappers)	cwrappers="$2"; shift ;;
 	--unprivileged | --ignore-user-check) unprivileged=yes ;;
 	--prefer-pkgsrc=*)
 			prefer_pkgsrc=`get_optarg "$1"` ;;
@@ -1086,8 +1087,8 @@ BOOTSTRAP_MKCONF=${wrkdir}/mk.conf
 cp ${TARGET_MKCONF} ${BOOTSTRAP_MKCONF}
 
 case "$cwrappers" in
-yes)
-	echo "USE_CWRAPPERS=		yes" >> ${TARGET_MKCONF}
+yes|no)
+	echo "USE_CWRAPPERS=		$cwrappers" >> ${TARGET_MKCONF}
 	echo "" >> ${TARGET_MKCONF}
 	;;
 esac
