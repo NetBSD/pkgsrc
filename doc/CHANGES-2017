@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1827 2017/04/29 14:03:50 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1828 2017/04/29 18:33:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2290,3 +2290,12 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/p5-String-Approx to 3.28 [mef 2017-04-29]
 	Updated textproc/p5-String-Compare-ConstantTime to 0.312 [mef 2017-04-29]
 	Updated math/p5-Math-FFT to 1.34 [wen 2017-04-29]
+	Updated www/nghttp2 to 1.22.0 [adam 2017-04-29]
+	Updated parallel/mpi-ch to 3.2 [adam 2017-04-29]
+	Updated devel/boost-jam to 1.64.0 [adam 2017-04-29]
+	Updated devel/boost-headers to 1.64.0 [adam 2017-04-29]
+	Updated devel/boost-libs to 1.64.0 [adam 2017-04-29]
+	Updated devel/boost-docs to 1.64.0 [adam 2017-04-29]
+	Updated devel/boost-build to 1.64.0 [adam 2017-04-29]
+	Updated devel/py-boost to 1.64.0 [adam 2017-04-29]
+	Updated meta-pkgs/boost to 1.64.0 [adam 2017-04-29]
