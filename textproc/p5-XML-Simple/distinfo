@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/02/27 00:42:45 wen Exp $
+$NetBSD: distinfo,v 1.12 2017/04/29 07:40:26 wen Exp $
 
-SHA1 (XML-Simple-2.22.tar.gz) = cffb6e9dcff42961d08f169293969cda11aa8cec
-RMD160 (XML-Simple-2.22.tar.gz) = ccb71a272b81df6a480c729a10208a6ae62dfb78
-SHA512 (XML-Simple-2.22.tar.gz) = b5e5d36726b8a0efcf7200522d802a7f733c883526db2dba64ce23bf7e044d20d9186fac3bb2f2940807a30f746301f690129c4c542341c8a57a735471b5f4d7
-Size (XML-Simple-2.22.tar.gz) = 77937 bytes
+SHA1 (XML-Simple-2.24.tar.gz) = 1b739896f47188bf6cf2aff6931e563606c8bc07
+RMD160 (XML-Simple-2.24.tar.gz) = c816afa58d8ef58bbc675f1fdaba90e8d2f45972
+SHA512 (XML-Simple-2.24.tar.gz) = fd57d1be7fdd884d55d22e478a3f94a111b5fc23167851a2ff15894807877c71a1620d3208693e8a1dfb00b385ac4f011d2b56f239c63d2c9d435701df7b3942
+Size (XML-Simple-2.24.tar.gz) = 77412 bytes
