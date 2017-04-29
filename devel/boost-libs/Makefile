@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.53 2017/04/22 21:03:29 adam Exp $
+# $NetBSD: Makefile,v 1.54 2017/04/29 18:31:42 adam Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
 BOOST_INSTALL_LIBS=	yes
 
-PKGREVISION= 1
 .include "../../meta-pkgs/boost/Makefile.common"
 
 INSTALLATION_DIRS+=	lib
 
 BJAM_ARGS+=		--without-python
-PLIST_VARS+=		context fiber log long_double_math
+PLIST_VARS+=		context fiber log
 
 .if ${OPSYS} == "NetBSD" && ((${MACHINE_ARCH} == "i386") || (!empty(MACHINE_ARCH:Mearm*) && !empty(PKGSRC_COMPILER:Mgcc)))
 BJAM_ARGS+=		pch=off
@@ -45,10 +44,6 @@ PLIST.log=		yes
 BJAM_ARGS+=		--without-fiber
 .else
 PLIST.fiber=		yes
-.endif
-
-.if ${OPSYS} != "NetBSD" && ${OPSYS} != "FreeBSD"
-PLIST.long_double_math=	yes
 .endif
 
 UNLIMIT_RESOURCES+=	stacksize
