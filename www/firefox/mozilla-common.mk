@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.92 2017/04/27 11:19:35 maya Exp $
+# $NetBSD: mozilla-common.mk,v 1.93 2017/04/29 02:45:20 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -6,6 +6,8 @@
 # used by www/seamonkey/Makefile
 
 .include "../../mk/bsd.prefs.mk"
+
+GCC_REQD+=		4.9
 
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
