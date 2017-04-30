@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2017/04/22 21:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.35 2017/04/30 01:21:23 ryoon Exp $
 
 DISTNAME=	libgdata-0.16.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgdata/0.16/}
 EXTRACT_SUFX=	.tar.xz

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2017/01/19 09:10:59 markd Exp $
+# $NetBSD: Makefile,v 1.34 2017/04/30 01:21:52 ryoon Exp $
 
 DISTNAME=	kmousetool-16.12.0
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	KDE mouse manipulation tool
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
