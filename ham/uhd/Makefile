@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2017/02/17 15:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/04/30 01:21:46 ryoon Exp $
 
 DISTNAME=		uhd-3.9.4
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
 #                                                                     3.9.1 -> 003_009_001
