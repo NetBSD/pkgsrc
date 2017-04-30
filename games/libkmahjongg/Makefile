@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2017/01/01 16:06:16 adam Exp $
+# $NetBSD: Makefile,v 1.23 2017/04/30 01:21:40 ryoon Exp $
 
 DISTNAME=	libkmahjongg-${_KDE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	games
 COMMENT=	library for loading and rendering of Mahjongg tilesets
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 16:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/04/30 01:21:20 ryoon Exp $
 
 DISTNAME=	libmwaw-0.3.7
 # next two lines added for 0.3.6-v2, remove after update to usual
 # version number format
 PKGNAME=	${DISTNAME:S/-v/./}
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-v2//}
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmwaw/}

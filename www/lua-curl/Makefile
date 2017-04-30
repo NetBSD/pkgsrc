@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2017/01/01 16:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.16 2017/04/30 01:22:02 ryoon Exp $
 
 DISTNAME=	lua-curl-0.2
 PKGNAME=	${LUA_PKGPREFIX}-curl-0.2
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	www
 MASTER_SITES=	http://luaforge.net/frs/download.php/2634/
 

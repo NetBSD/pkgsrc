@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2017/01/01 16:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.32 2017/04/30 01:22:01 ryoon Exp $
 
 DISTNAME=	ktimer-${_KDE_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	time
 COMMENT=	KDE countdown launcher
 
