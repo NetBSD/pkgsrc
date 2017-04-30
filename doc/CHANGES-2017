@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1828 2017/04/29 18:33:34 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1829 2017/04/30 10:39:42 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2299,3 +2299,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/boost-build to 1.64.0 [adam 2017-04-29]
 	Updated devel/py-boost to 1.64.0 [adam 2017-04-29]
 	Updated meta-pkgs/boost to 1.64.0 [adam 2017-04-29]
+	Updated textproc/jrep to 1.1.0 [cheusov 2017-04-30]
