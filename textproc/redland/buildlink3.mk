@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2017/01/01 16:06:01 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2017/04/30 01:21:25 ryoon Exp $
 
 BUILDLINK_TREE+=	redland
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	redland
 REDLAND_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.redland+=	redland>=1.0.7
-BUILDLINK_ABI_DEPENDS.redland+=	redland>=1.0.17nb6
+BUILDLINK_ABI_DEPENDS.redland+=	redland>=1.0.17nb7
 BUILDLINK_PKGSRCDIR.redland?=	../../textproc/redland
 
 .include "../../security/openssl/buildlink3.mk"

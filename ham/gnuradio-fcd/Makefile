@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2017/03/15 13:42:00 mef Exp $
+# $NetBSD: Makefile,v 1.12 2017/04/30 01:21:45 ryoon Exp $
 
 PKGNAME=	gnuradio-fcd-${VERSION}
+PKGREVISION=	1
 COMMENT=	FanCube support of GNU Radio
 
 .include	"../../ham/gnuradio-core/Makefile.common"

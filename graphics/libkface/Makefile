@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2017/01/01 16:05:58 adam Exp $
+# $NetBSD: Makefile,v 1.33 2017/04/30 01:21:22 ryoon Exp $
 #
 
 PKGNAME=	libkface-4.13.0
-PKGREVISION=	4
+PKGREVISION=	5
 DISTNAME=	digikam-4.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}

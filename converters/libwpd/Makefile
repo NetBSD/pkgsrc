@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/01/01 16:05:56 adam Exp $
+# $NetBSD: Makefile,v 1.39 2017/04/30 01:21:21 ryoon Exp $
 
 DISTNAME=	libwpd-0.10.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 EXTRACT_SUFX=	.tar.bz2

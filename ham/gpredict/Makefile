@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2017/02/12 06:25:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2017/04/30 01:21:46 ryoon Exp $
 
 DISTNAME=	gpredict-1.3
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	ham
 MASTER_SITES=	http://sourceforge.net/projects/gpredict/files/Gpredict/1.3/
 

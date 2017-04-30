@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2017/01/16 13:13:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.53 2017/04/30 01:21:21 ryoon Exp $
 
 COMMENT=		Database connection pooling middleware and API
+PKGREVISION=		1
 
 .include "../../databases/sqlrelay/Makefile.common"
 
