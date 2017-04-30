@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/07/09 06:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2017/04/30 14:37:40 darcy Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -9,7 +9,7 @@ DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \
 			vnc-3.3.2r2_doc.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.uk.research.att.com/vnc/
+HOMEPAGE=		https://www.cl.cam.ac.uk/research/dtg/attarchive/vnc/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
 MAKE_JOBS_SAFE=		no
