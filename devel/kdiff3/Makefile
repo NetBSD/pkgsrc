@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2017/01/01 16:06:09 adam Exp $
+# $NetBSD: Makefile,v 1.48 2017/04/30 01:21:33 ryoon Exp $
 #
 
 DISTNAME=	kdiff3-0.9.98
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kdiff3/}
 
