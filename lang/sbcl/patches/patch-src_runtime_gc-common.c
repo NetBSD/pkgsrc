@@ -1,10 +1,10 @@
-$NetBSD: patch-src_runtime_gc-common.c,v 1.2 2016/12/05 20:03:29 asau Exp $
+$NetBSD: patch-src_runtime_gc-common.c,v 1.3 2017/04/30 17:24:27 asau Exp $
 
---- src/runtime/gc-common.c.orig	2016-11-29 21:07:36.000000000 +0000
+--- src/runtime/gc-common.c.orig	2017-04-28 09:54:14.000000000 +0000
 +++ src/runtime/gc-common.c
-@@ -27,6 +27,10 @@
- 
- #define _GNU_SOURCE /* for ffsl(3) from string.h */
+@@ -25,6 +25,10 @@
+  *   <ftp://ftp.cs.utexas.edu/pub/garbage/bigsurv.ps>.
+  */
  
 +#if defined(__NetBSD__)
 +#define _KERNTYPES
