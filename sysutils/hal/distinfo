@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2017/01/17 15:25:27 wiz Exp $
+$NetBSD: distinfo,v 1.27.2.1 2017/05/01 09:20:17 bsiegert Exp $
 
 SHA1 (hal-0.5.14.tar.bz2) = a6ec098d78112e18e2773afa5f9ed642b00c4c59
 RMD160 (hal-0.5.14.tar.bz2) = 0314dace9512bf49a62bd1556963fc60a6c9caf9
@@ -43,7 +43,7 @@ SHA1 (patch-hald_linux_addons_addon-leds.c) = e56747b39bf5e6e03286fedcb73ef226c0
 SHA1 (patch-hald_linux_addons_addon-macbookpro-backlight.c) = c508a7b9070c319679b8b8e715d29410957ba41a
 SHA1 (patch-hald_linux_addons_addon-omap-backlight.c) = 72ba398a1d661fb726778bf7df7460735fee988f
 SHA1 (patch-hald_linux_addons_addon-rfkill-killswitch.c) = 800fac10408b65b12cd644b93b8612c8b2970da0
-SHA1 (patch-hald_linux_addons_addon-storage.c) = 9949c8768395295f27aebc792b8b8091e988d2d9
+SHA1 (patch-hald_linux_addons_addon-storage.c) = 27c07d3a499aa9fa37938ff3f918dc01c625b5fd
 SHA1 (patch-hald_linux_addons_addon-usb-csr.c) = 34b5be5ff308f9aafcf505b303d36cbc2483d015
 SHA1 (patch-hald_netbsd_devinfo__mass.c) = be1c7bf311e21e9891199d67c0ebf87978bd735f
 SHA1 (patch-na) = 2786db8149a55dbd5ea11419d789f420bac1993c
