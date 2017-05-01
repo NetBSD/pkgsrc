@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/02/10 20:10:15 roy Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2017/05/01 08:56:41 bsiegert Exp $
 
 DISTNAME=	cgit-1.1
 CATEGORIES=	www
@@ -20,6 +20,8 @@ MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake
 MAKE_FLAGS+=		GIT_VER=${GIT_VER}
 BUILD_MAKE_FLAGS+=	CGIT_CONFIG=${PKG_SYSCONFDIR}/cgitrc
+
+MAKE_ENV.SunOS+=	NEEDS_LIBICONV=YesPlease
 
 CGIT_CONFIG=	${PKG_SYSCONFDIR}/cgitrc
 CGIT_CGIBIN=	${PREFIX}/libexec/cgi-bin
@@ -45,6 +47,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/filters/syntax-highlighting.sh \
 		${DESTDIR}${CGIT_FILTERS}/syntax-highlighting.sh
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
