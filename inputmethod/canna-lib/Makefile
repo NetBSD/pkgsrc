@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/10/25 12:17:36 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16.12.1 2017/05/01 08:39:38 bsiegert Exp $
 
 PKGREVISION=	1
 CANNA_MODULE=	lib
@@ -13,11 +13,6 @@ post-patch:
 	@${SED}	-e 's|\(SUBDIRS = lib canna\).*\( misc\)|\1 cmd/forcpp cmd/kpdic dic/phono\2|' \
 		-e 's|\(SGSDIR = \).*|\1 lib canna dic/phono misc doc|'	\
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
-.for f in forcpp kpdic
-	@${MV} ${WRKSRC}/cmd/${f}/Imakefile ${WRKSRC}/cmd/${f}/Imakefile.orig
-	@${SED} -e '/^#define TargetName/a\${.newline}#define DontInstallProgram' ${WRKSRC}/cmd/${f}/Imakefile.orig \
-		> ${WRKSRC}/cmd/${f}/Imakefile
-.endfor
 
 MAKE_ENV+=	AWK=${AWK:Q}
 
@@ -26,5 +21,8 @@ post-extract:
 
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/bin/forcpp ${DESTDIR}${PREFIX}/bin/kpdic
 
 .include "../../mk/bsd.pkg.mk"
