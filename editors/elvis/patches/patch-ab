@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2015/12/29 04:22:33 dholland Exp $
+$NetBSD: patch-ab,v 1.5.10.1 2017/05/01 08:48:09 bsiegert Exp $
 
  - Support passing sysconfdir as a configure option.
  - Honor COMPILER_RPATH_FLAG.
  - Use pkgconfig to find freetype.
 
---- configure.orig	2003-10-20 22:32:25.000000000 -0400
+--- configure.orig	2003-10-21 02:32:25.000000000 +0000
 +++ configure
 @@ -27,6 +27,7 @@ GUI_GNOME=bug
  #	 --bindir=DIR		where to install the executables
@@ -120,7 +120,13 @@ $NetBSD: patch-ab,v 1.5 2015/12/29 04:22:33 dholland Exp $
  cat >config.h <<eof-config
  /* config.h */
  
-@@ -1200,6 +1205,7 @@ s!^PREFIX=.*!PREFIX=$PREFIX!
+@@ -1195,11 +1200,12 @@ eof-generic
+ 
+ esac
+ cat >>$tmp <<eof-all
+-s!^LIBS=.*!LIBS=$GNOMELIBS $XLIBS $LIBS!
++s!^LIBS=.*!LIBS=$LDFLAGS $GNOMELIBS $XLIBS $LIBS!
+ s!^PREFIX=.*!PREFIX=$PREFIX!
  s!^BINDIR=.*!BINDIR=$BINDIR!
  s!^DATADIR=.*!DATADIR=$DATADIR!
  s!^DOCDIR=.*!DOCDIR=$DOCDIR!
