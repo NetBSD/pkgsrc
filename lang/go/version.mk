@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.23 2017/03/15 19:38:09 bsiegert Exp $
+# $NetBSD: version.mk,v 1.23.2.1 2017/05/01 09:55:46 bsiegert Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -13,7 +13,7 @@ GOCHAR=		8
 .elif ${MACHINE_ARCH} == "x86_64"
 GOARCH=		amd64
 GOCHAR=		6
-.elif !empty(MACHINE_ARCH:M*arm)
+.elif !empty(MACHINE_ARCH:M*arm*)
 GOARCH=		arm
 GOCHAR=		5
 .endif
