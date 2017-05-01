@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2017/04/27 10:37:58 leot Exp $
+@comment $NetBSD: PLIST,v 1.41 2017/05/01 09:40:19 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1217,6 +1217,9 @@ ${PYSITELIB}/youtube_dl/extractor/nobelprize.pyo
 ${PYSITELIB}/youtube_dl/extractor/noco.py
 ${PYSITELIB}/youtube_dl/extractor/noco.pyc
 ${PYSITELIB}/youtube_dl/extractor/noco.pyo
+${PYSITELIB}/youtube_dl/extractor/noovo.py
+${PYSITELIB}/youtube_dl/extractor/noovo.pyc
+${PYSITELIB}/youtube_dl/extractor/noovo.pyo
 ${PYSITELIB}/youtube_dl/extractor/normalboots.py
 ${PYSITELIB}/youtube_dl/extractor/normalboots.pyc
 ${PYSITELIB}/youtube_dl/extractor/normalboots.pyo
@@ -2210,6 +2213,9 @@ ${PYSITELIB}/youtube_dl/extractor/youtube.pyo
 ${PYSITELIB}/youtube_dl/extractor/zapiks.py
 ${PYSITELIB}/youtube_dl/extractor/zapiks.pyc
 ${PYSITELIB}/youtube_dl/extractor/zapiks.pyo
+${PYSITELIB}/youtube_dl/extractor/zaq1.py
+${PYSITELIB}/youtube_dl/extractor/zaq1.pyc
+${PYSITELIB}/youtube_dl/extractor/zaq1.pyo
 ${PYSITELIB}/youtube_dl/extractor/zdf.py
 ${PYSITELIB}/youtube_dl/extractor/zdf.pyc
 ${PYSITELIB}/youtube_dl/extractor/zdf.pyo
