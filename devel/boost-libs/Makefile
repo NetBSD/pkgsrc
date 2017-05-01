@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/04/29 18:31:42 adam Exp $
+# $NetBSD: Makefile,v 1.55 2017/05/01 11:54:38 maya Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -31,20 +31,18 @@ BJAM_ARGS+=		--without-log
 PLIST.log=		yes
 .endif
 
-# fiber requires thread_local support, unavailable in older compilers
-# (old darwin, netbsd <6). if fiber becomes necessary, set GCC_REQD
-# on other boost-* packages, too.
+# XXX boost1.64 fiber not building even on netbsd7.99 + gcc5.4
 # fiber requires context, so also disable it where context cannot be built
 # Additionally fiber checks std::timed_mutex.
-.if ((${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-*)) || \
-    !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || \
-    !empty(MACHINE_ARCH:Msparc64) || \
-    (${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang))
+#.if ((${OPSYS} == "Darwin" && ${OS_VERSION:R} < 14) || \
+#    !empty(MACHINE_PLATFORM:MNetBSD-[0-7]*-*)) || \
+#    !empty(MACHINE_ARCH:Malpha) || !empty(MACHINE_ARCH:Mm68k) || \
+#    !empty(MACHINE_ARCH:Msparc64) || \
+#    (${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang))
 BJAM_ARGS+=		--without-fiber
-.else
-PLIST.fiber=		yes
-.endif
+#.else
+#PLIST.fiber=		yes
+#.endif
 
 UNLIMIT_RESOURCES+=	stacksize
 
