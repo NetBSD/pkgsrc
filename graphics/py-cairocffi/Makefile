@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2017/02/12 06:25:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2017/05/01 08:43:41 bsiegert Exp $
 
 DISTNAME=	cairocffi-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/cairocffi/}
 
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-cparser-[0-9]*:../../devel/py-cparser
 
 USE_LANGUAGES=	# none
 
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
