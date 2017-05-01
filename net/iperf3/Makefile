@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/02/28 19:40:07 adam Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2017/05/01 09:44:40 bsiegert Exp $
 
 DISTNAME=	iperf-3.1.6
 PKGNAME=	${DISTNAME:S/iperf/iperf3/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://software.es.net/iperf/
 COMMENT=	TCP and UDP bandwidth performance measurement tool
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c
+USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 # sctp_bindx() is in headers, but unusable
