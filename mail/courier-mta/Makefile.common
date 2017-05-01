@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2012/06/09 11:45:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.14.40.1 2017/05/01 08:43:55 bsiegert Exp $
 #
 # used by mail/courier-imap/Makefile
 # used by mail/courier-maildir/Makefile
@@ -45,4 +45,5 @@ CONFIGURE_ARGS+=	--with-db=db
 
 CONFIGURE_ENV+=		SYSCONFTOOL_PERL=${PERL5:Q}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
