@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
+$NetBSD: patch-aa,v 1.10.10.1 2017/05/01 08:52:47 bsiegert Exp $
 
 --- Makefile.orig	2005-09-06 05:59:53.000000000 +0000
 +++ Makefile
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
  
  # This is a BSD-style install
  
-@@ -87,6 +89,7 @@ INSTALL_linux = install -c
+@@ -87,12 +89,13 @@ INSTALL_linux = install -c
  INSTALL_linux64 = $(INSTALL_linux)
  INSTALL_solaris = /usr/ucb/install -c
  INSTALL_freebsd = install -c
@@ -69,6 +69,13 @@ $NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
  INSTALL_tru64 = installbsd -c
  INSTALL_irix = install -c
  INSTALL_hpux = install -c
+ INSTALL_macosx = install
+ INSTALL_bsdi = install -c
+-INSTALL = $(INSTALL_$(OS))
++INSTALL = $(BSD_INSTALL)
+ 
+ # InnoSetup compiler for Win32 (see http://www.jordanr.dhs.org/)
+ 
 @@ -148,12 +151,14 @@ DEFINES_linux = -DHAVE_PTHREADS
  DEFINES_linux64 = $(DEFINES_linux)
  DEFINES_solaris = -D_REENTRANT -DHAVE_PTHREADS
@@ -116,7 +123,7 @@ $NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
 +CFLAGS += $(OPTIM) $(DEFINES) -I. $(GMPINC) $(BFINC) $(ZINC) $(BZINC)
  
 -LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS)
-+LDFLAGS=  $(PTHREAD_LDFLAGS)
++LDFLAGS +=  $(PTHREAD_LDFLAGS)
 +LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS) $(PTHREAD_LIBS)
  
  OBJS = zebedee.o sha_func.o huge.o $(GETOPTOBJ) $(SERVICEOBJ)

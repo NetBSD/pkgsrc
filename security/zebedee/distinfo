@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2016/04/01 17:11:36 jperkin Exp $
+$NetBSD: distinfo,v 1.13.10.1 2017/05/01 08:52:47 bsiegert Exp $
 
 SHA1 (zebedee-2.5.3.tar.gz) = 54717faade0275929163369942885cc448bc9986
 RMD160 (zebedee-2.5.3.tar.gz) = 2b4bee4c5f66f59628308a6c300b4c9d0c854e30
 SHA512 (zebedee-2.5.3.tar.gz) = 05ce8f7bd57fbb07b746c0754f0cb34b7d76270b9d5430fed7108f2025bff5dae87961d4645415700da4438a1fbfdcd538c84763fcbc77593767466d63f3e5c6
 Size (zebedee-2.5.3.tar.gz) = 176088 bytes
-SHA1 (patch-aa) = 33386527015bd1dcba0729a33ee241199aa69b76
+SHA1 (patch-aa) = 0f94fa69d77e13038f96875fede97a6984cdc9c2
 SHA1 (patch-ab) = d7b800bab4b5e0f242b4e0a8545e3364abc3f95b
 SHA1 (patch-doc__jp_ftpgw.tcl.pod) = d5dd66ba31df3c61bba2c0b983ca1f1106bd9f2a
 SHA1 (patch-doc__jp_zebedee.pod) = d78e9f2ebb13d8ad7256cde8921f3bab3296e9db
