@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/03/19 19:01:48 adam Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2017/05/01 08:31:17 bsiegert Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -83,6 +83,13 @@ REPLACE_PYTHON+=	utils/wciia.py
 
 TEST_TARGET=		check
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+
+# It may be that the Solaris linker is more strict here and they can be removed on
+# all platforms.  Change this to a patch if verified.
+SUBST_CLASSES.SunOS+=	lto
+SUBST_STAGE.lto=	pre-configure
+SUBST_FILES.lto=	tools/lto/lto.exports
+SUBST_SED.lto=		-e '/^LLVM/d'
 
 .include "../../mk/bsd.prefs.mk"
 
