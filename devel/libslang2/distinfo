@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:45 agc Exp $
+$NetBSD: distinfo,v 1.6.12.1 2017/05/01 08:28:25 bsiegert Exp $
 
 SHA1 (slang-2.2.4.tar.bz2) = 34e68a993888d0ae2ebc7bc31b40bc894813a7e2
 RMD160 (slang-2.2.4.tar.bz2) = fc023080f021201a99263d686ab4a8b87bbb575a
 SHA512 (slang-2.2.4.tar.bz2) = aaf0dcea5f1583487732098bd9dfe47f4fd968d81783955f58ed7bbffb852c217cde8999f2a515d77c22d44efc79047fc841eea6fecc48f18b402461ce6a848f
 Size (slang-2.2.4.tar.bz2) = 1427363 bytes
-SHA1 (patch-aa) = 3e962a751d1aeabef1a8216ed32509a71120f748
+SHA1 (patch-aa) = a323b479be021fe229a8f17684a6e3b9ba1323f9
 SHA1 (patch-ab) = 1f5743569c43bcfebb925b275d7032f853a34943
 SHA1 (patch-ac) = 1181b6ce5de5c7c149aa8692dbcded981bda688e
 SHA1 (patch-ad) = 9ab953b8d850832f49f8af9bdb397f474af209eb
