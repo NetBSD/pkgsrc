@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.59 2016/11/10 20:58:46 joerg Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.59.4.1 2017/05/01 09:00:34 bsiegert Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -89,8 +89,7 @@ TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
-.if empty(MACHINE_PLATFORM:MNetBSD-[^0-3].*-386) || \
-	empty(MACHINE_PLATFORM:MNetBSD-[^0-3].*-x86_64)
+.if exists(/usr/sbin/paxctl)
 TOOLS_PLATFORM.paxctl?=		/usr/sbin/paxctl
 .endif
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
