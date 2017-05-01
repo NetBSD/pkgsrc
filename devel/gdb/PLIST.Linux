@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST.Linux,v 1.2 2015/05/03 19:45:09 joerg Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2.16.1 2017/05/01 08:29:56 bsiegert Exp $
 bin/gdbserver
+bin/gcore
+lib/libinproctrace.so
+man/man1/gcore.1
