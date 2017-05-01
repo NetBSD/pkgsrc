@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2017/04/30 01:21:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.110 2017/05/01 04:16:12 ryoon Exp $
 
 VERREL=		5.3.2
 VERRC=		2
@@ -13,9 +13,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.libreoffice.org/
 COMMENT=	Office productivity suite from The Document Foundation
 LICENSE=	gnu-lgpl-v3
-
-# devel/cppunit/buildlink3.mk defined -std=c++11 and build fails
-BUILDLINK_TRANSFORM+=		opt:-std=c++11:-std=gnu++14
 
 SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
