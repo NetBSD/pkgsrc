@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/04/20 12:56:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2017/05/01 00:41:29 maya Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -32,6 +32,7 @@ CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
 CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
