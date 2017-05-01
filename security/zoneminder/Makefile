@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/03/12 07:20:51 maya Exp $
+# $NetBSD: Makefile,v 1.32.2.1 2017/05/01 08:25:51 bsiegert Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -99,6 +99,12 @@ CONFIGURE_ENV+=		ZM_SSL_LIB=openssl
 # Default is "/var/run/zm", but we want to conform to VARBASE.
 CONFIGURE_ENV+=		ZM_RUNDIR=${VARBASE}/run/zm
 CONFIGURE_ENV+=		ZM_SOCKDIR=${VARBASE}/run/zm
+
+#
+# Darwin does have sendfile(), but the API differs from ZoneMinder's
+# expectation.
+#
+CONFIGURE_ARGS.Darwin+=	ac_cv_func_sendfile=no ac_cv_header_sys_sendfile_h=no
 
 .if !empty(PKG_OPTIONS:Mapache)
 .include "../../mk/apache.mk"
