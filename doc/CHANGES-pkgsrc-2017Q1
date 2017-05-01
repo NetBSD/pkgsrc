@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.18 2017/04/29 19:32:24 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.19 2017/05/01 10:05:18 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -298,4 +298,118 @@ net/libpcap: build fix
 
 Pullup ticket #5326 - requested by sevan
 devel/py-mercurial: security fix
+
+Pullup ticket #5325 - requested by sevan
+lang/go: bugfix for NetBSD
+
+Pullup ticket #5331 - requested by sevan
+security/zoneminder: build fix for macOS
+
+Pullup ticket #5332 - requested by sevan
+devel/libslang2: build fix for SunOS
+
+Pullup ticket #5334 - requested by maya
+devel/gdb: build fix for Linux
+
+Pullup ticket #5336 - requested by sevan
+lang/llvm: build fix for SunOS
+
+Pullup ticket #5337 - requested by sevan
+inputmethod/canna-lib: build fix
+
+Pullup ticket #5339 - requested by sevan
+graphics/py-cairocffi: build fix
+
+Pullup ticket #5338 - requested by sevan
+mail/courier-mta: build fix
+
+Pullup ticket #5341 - requested by sevan
+editors/elvis: build fix
+
+Pullup ticket #5342 - requested by sevan
+math/R: build fix
+
+Pullup ticket #5340 - requested by sevan
+audio/festival: build fix
+
+Pullup ticket #5344 - requested by sevan
+security/clamav: build fix
+
+Pullup ticket #5343 - requested by sevan
+security/zebedee: build fix
+
+Pullup ticket #5346 - requested by sevan
+www/cgit: build fix
+
+Pullup ticket #5347 - requested by sevan
+multimedia/libmp4v2: build fix
+
+Pullup ticket #5348 - requested by maya
+mk/tools/tools.NetBSD.mk: bugfix for paxctl
+
+Pullup ticket #5349 - requested by sevan
+www/midori: build fix
+
+Pullup ticket #5366 - requested by sevan
+sysutils/xenstoretools: build fix
+
+Pullup ticket #5367 - requested by sevan
+security/keychain: build fix
+
+Pullup ticket #5368 - requested by sevan
+wm/enlightenment: build fix
+
+Pullup ticket #5371 - requested by sevan
+pkgtools/pkg_comp: build fix
+
+Pullup ticket #5372 - requested by sevan
+mk/check/check-shlibs-elf.awk: bugfix
+
+Pullup ticket #5371 - requested by sevan
+pkgtools/pkg_comp: build fix
+
+Pullup ticket #5371 - requested by sevan
+pkgtools/pkg_comp: build fix
+
+Pullup ticket #5375 - requested by sevan
+print/cups: bugfix
+
+Pullup ticket #5373 - requested by sevan
+sysutils/hal: build fix for Linux
+
+Pullup ticket #5378 - requested by sevan
+audio/portaudio-devel: bugfix
+
+Pullup ticket #5380 - requested by sevan
+archivers/libarchive: build fix for FreeBSD
+
+Pullup ticket #5379 - requested by sevan
+mail/notmuch: build fix
+
+Pullup ticket #5381 - requested by sevan
+security/cyrus-sasl: build fix
+
+Pullup ticket #5382 - requested by sevan
+security/py-kerberos: bugfix
+
+Pullup ticket #5383 - requested by sevan
+databases/leveldb: build fix for NetBSD
+
+Pullup ticket #5386 - requested by sevan
+net/iperf3: build fix
+
+Pullup ticket #5387 - requested by sevan
+lang/perl5: bugfix
+
+Pullup ticket #5389 - requested by sevan
+net/sipsak: build fix
+
+Pullup ticket #5390 - requested by sevan
+lang/oracle-jdk8: build fix for Linux
+
+Pullup ticket #5391 - requested by sevan
+net/vnc: build fix
+
+Pullup ticket #5392 - requested by sevan
+lang/go: build fix
 
