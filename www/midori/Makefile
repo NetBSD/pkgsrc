@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2017/02/28 15:20:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.96.2.1 2017/05/01 09:02:16 bsiegert Exp $
 
 DISTNAME=	midori_0.5.11_all_
 PKGNAME=	${DISTNAME:S/_all_//:S/_/-/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	www
 MASTER_SITES=	http://midori-browser.org/downloads/
 
@@ -18,13 +18,13 @@ HAS_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-zeitgeist
 CMAKE_ARGS+=		-DUSE_ZEITGEIST=OFF
 CMAKE_ARGS+=		-DPREFIX=${PREFIX}
 
-CHECK_PORTABILITY_SKIP+= win32/old/x86-mingw32-opensuse/install.sh
-CHECK_PORTABILITY_SKIP+= win32/makedist/makedist.midori
+CHECK_PORTABILITY_SKIP+=	win32/old/x86-mingw32-opensuse/install.sh
+CHECK_PORTABILITY_SKIP+=	win32/makedist/makedist.midori
 
 BUILD_DEPENDS+=		librsvg>=2.18:../../graphics/librsvg
 
@@ -41,6 +41,8 @@ CONF_FILES+=	${EGDIR}/extensions/adblock/config \
 		${PKG_SYSCONFDIR}/xdg/midori/extensions/adblock/config
 
 CONFIGURE_ENV=	VALAC=${VALAC}
+
+NOT_PAX_MPROTECT_SAFE+=	bin/midori
 
 .include "options.mk"
 
