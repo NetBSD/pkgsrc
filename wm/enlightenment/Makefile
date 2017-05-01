@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2016/07/09 06:39:09 wiz Exp $
+# $NetBSD: Makefile,v 1.66.6.1 2017/05/01 09:07:44 bsiegert Exp $
 
 DISTNAME=	e16-0.16.8.8
 PKGNAME=	${DISTNAME:S/e16/enlightenment/}
@@ -40,7 +40,8 @@ PLIST_VARS+=	libhack
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux" || \
+    ${OPSYS} == "Darwin"
 PLIST.libhack=	yes
 .endif
 
