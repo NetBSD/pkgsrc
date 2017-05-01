@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2017/04/27 13:32:40 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.61 2017/05/01 05:50:08 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -2363,7 +2363,6 @@ lib/thunderbird/chrome/messenger/content/messenger/cloudfile/Hightail/settings.j
 lib/thunderbird/chrome/messenger/content/messenger/cloudfile/Hightail/settings.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/cloudfile/addAccountDialog.js
 lib/thunderbird/chrome/messenger/content/messenger/cloudfile/addAccountDialog.xul
-lib/thunderbird/chrome/messenger/content/messenger/cloudfile/attachment-24.png
 lib/thunderbird/chrome/messenger/content/messenger/cloudfile/emptySettings.xhtml
 lib/thunderbird/chrome/messenger/content/messenger/commandglue.js
 lib/thunderbird/chrome/messenger/content/messenger/composerOverlay.css
@@ -2802,7 +2801,6 @@ lib/thunderbird/chrome/toolkit/content/global/contentAreaUtils.js
 lib/thunderbird/chrome/toolkit/content/global/customizeToolbar.css
 lib/thunderbird/chrome/toolkit/content/global/customizeToolbar.js
 lib/thunderbird/chrome/toolkit/content/global/customizeToolbar.xul
-lib/thunderbird/chrome/toolkit/content/global/devicestorage.properties
 lib/thunderbird/chrome/toolkit/content/global/directionDetector.html
 lib/thunderbird/chrome/toolkit/content/global/editMenuOverlay.js
 lib/thunderbird/chrome/toolkit/content/global/editMenuOverlay.xul
