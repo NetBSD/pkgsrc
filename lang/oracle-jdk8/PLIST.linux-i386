@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.4 2017/03/11 07:36:10 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.4.2.1 2017/05/01 09:53:40 bsiegert Exp $
 bin/oracle8-appletviewer
 bin/oracle8-apt
 bin/oracle8-extcheck
@@ -254,11 +254,12 @@ java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.core/cache/binary/com
 java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.core/cache/binary/com.oracle.jmc.executable.gtk.linux.x86_5.5.1
 java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.core/cache/binary/org.eclipse.rcp_root_4.4.0.v20141007-2301
 java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/.settings/org.eclipse.equinox.p2.artifact.repository.prefs
+java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/.settings/org.eclipse.equinox.p2.metadata.repository.prefs
 java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/.lock
-java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1423497018512.profile.gz
-java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1423497018885.profile.gz
-java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1423497034170.profile.gz
-java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1423497037100.profile.gz
+java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1480011635880.profile.gz
+java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1480011636212.profile.gz
+java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1480011645368.profile.gz
+java/oracle-8/lib/missioncontrol/p2/org.eclipse.equinox.p2.engine/profileRegistry/JMC.profile/1480011647611.profile.gz
 java/oracle-8/lib/missioncontrol/plugins/com.ibm.icu_52.1.0.v201404241930.jar
 java/oracle-8/lib/missioncontrol/plugins/com.jrockit.mc.alert.ja_5.5.1.172852.jar
 java/oracle-8/lib/missioncontrol/plugins/com.jrockit.mc.alert.zh_CN_5.5.1.172852.jar
