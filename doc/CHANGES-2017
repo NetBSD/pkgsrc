@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1843 2017/05/02 11:24:42 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1844 2017/05/02 12:28:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2315,3 +2315,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/rspamd to 1.5.6 [wiz 2017-05-02]
 	Updated net/tor to 0.3.0.6 [wiz 2017-05-02]
 	Updated graphics/ImageMagick to 7.0.5.5 [wiz 2017-05-02]
+	Updated www/nginx to 1.12.0 [fhajny 2017-05-02]
