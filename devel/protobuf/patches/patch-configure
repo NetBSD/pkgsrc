@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2017/05/02 10:49:30 wiz Exp $
+
+--- configure.orig	2017-04-06 00:37:52.000000000 +0000
++++ configure
+@@ -18003,7 +18003,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LDFLAGS=$save_LDFLAGS
+- if test "$have_ld_version_script" == "yes"; then
++ if test "$have_ld_version_script" = "yes"; then
+   HAVE_LD_VERSION_SCRIPT_TRUE=
+   HAVE_LD_VERSION_SCRIPT_FALSE='#'
+ else
