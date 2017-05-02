@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1836 2017/05/02 09:40:10 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1837 2017/05/02 10:26:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2307,3 +2307,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/cups-filters to 1.13.5 [leot 2017-05-01]
 	Updated x11/xkbcomp to 1.4.0 [wiz 2017-05-02]
 	Updated mail/neomutt to 20170428 [wiz 2017-05-02]
+	Updated fonts/harfbuzz to 1.4.6 [wiz 2017-05-02]
