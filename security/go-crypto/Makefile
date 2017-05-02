@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/04/13 15:12:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/02 17:06:30 fhajny Exp $
 
-PKGREVISION=	2
+#PKGREVISION=	#
 
 COMMENT=	Go supplementary cryptography libraries
 
