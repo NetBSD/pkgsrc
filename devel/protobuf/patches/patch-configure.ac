@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.ac,v 1.1 2017/05/02 10:49:30 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2017/05/02 10:51:31 wiz Exp $
+
+Fix unportable test(1) operator.
 
 --- configure.ac.orig	2017-04-06 00:15:19.000000000 +0000
 +++ configure.ac
