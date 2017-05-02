@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1850 2017/05/02 17:07:18 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1851 2017/05/02 18:32:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2323,3 +2323,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/go-sys version 0.0.20170427 [fhajny 2017-05-02]
 	Updated security/go-crypto to 0.0.20170502 [fhajny 2017-05-02]
 	Updated security/go-crypto-acme to 0.0.20170502 [fhajny 2017-05-02]
+	Updated x11/dmenu to 4.7 [leot 2017-05-02]
