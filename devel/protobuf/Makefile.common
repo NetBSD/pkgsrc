@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2017/02/07 13:50:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2017/05/02 10:49:30 wiz Exp $
 #
 # used by devel/protobuf/Makefile
 # used by devel/py-protobuf/Makefile
 
-PROTOBUFVER=	3.2.0
+PROTOBUFVER=	3.3.0
 
 MASTER_SITES=	${MASTER_SITE_GITHUB:=google/}
 GITHUB_PROJECT=	protobuf
