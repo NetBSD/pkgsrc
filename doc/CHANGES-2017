@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1840 2017/05/02 10:49:53 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1841 2017/05/02 11:02:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2311,3 +2311,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/libopenmpt to 0.2.8043 [wiz 2017-05-02]
 	Updated devel/p5-Params-Validate to 1.27 [wiz 2017-05-02]
 	Updated devel/protobuf to 3.3.0 [wiz 2017-05-02]
+	Updated devel/py-setuptools to 35.0.2 [wiz 2017-05-02]
+	Updated mail/rspamd to 1.5.6 [wiz 2017-05-02]
