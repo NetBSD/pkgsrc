@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1857 2017/05/03 09:33:49 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1858 2017/05/03 10:43:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2330,3 +2330,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/salt to 2016.11.4 [sborrill 2017-05-03]
 	Updated textproc/the_silver_searcher to 1.0.3 [leot 2017-05-03]
 	Updated devel/cmake to 3.8.1 [adam 2017-05-03]
+	Updated devel/ivykis to 0.42 [fhajny 2017-05-03]
