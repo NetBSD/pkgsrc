@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2017/03/16 21:59:13 prlw1 Exp $
+# $NetBSD: Makefile,v 1.71 2017/05/03 08:38:43 jperkin Exp $
 
 DISTNAME=	opencv-3.2.0
 CATEGORIES=	graphics devel
@@ -11,7 +11,7 @@ COMMENT=	Library for computer vision problems
 LICENSE=	modified-bsd
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
@@ -29,11 +29,6 @@ REPLACE_PYTHON+=	samples/python/*.py
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
 
 .include "options.mk"
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=		-std=c++11
-.endif
 
 CMAKE_ARGS+=		-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
