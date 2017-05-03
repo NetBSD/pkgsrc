@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/02/12 06:25:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2017/05/03 08:38:42 jperkin Exp $
 
 DISTNAME=	ccgo-0.3.6.5
 PKGREVISION=	2
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnugo>=3.4:../../games/gnugo
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -22,10 +22,6 @@ SUBST_STAGE.ccgo=	pre-configure
 SUBST_FILES.ccgo=	game_setup.cc settings.cc
 SUBST_MESSAGE.ccgo=	Fixing paths to gnugo.
 SUBST_SED.ccgo=		-e 's|/usr/games/gnugo|${LOCALBASE}/bin/gnugo|g'
-
-.include "../../mk/bsd.prefs.mk"
-
-CXXFLAGS+=	-std=c++11
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gconfmm/buildlink3.mk"

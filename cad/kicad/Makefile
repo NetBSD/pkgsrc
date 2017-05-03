@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/04/30 01:21:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2017/05/03 08:38:39 jperkin Exp $
 #
 
 V=		4.0.4
@@ -14,7 +14,7 @@ COMMENT=	Schematic and PCB CAD software (stable branch)
 LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 
 CMAKE_ARGS+=		-DKICAD_REPO_NAME=stable -DKICAD_BUILD_VERSION=${V}
@@ -53,7 +53,6 @@ SUBST_SED.netbsd5=	-e 's/fabsl/fabs/g'
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-Wno-error=non-pod-varargs
 .endif
-CXXFLAGS+=	-std=c++11
 
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"

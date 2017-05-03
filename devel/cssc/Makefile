@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/03/14 14:24:48 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2017/05/03 08:38:40 jperkin Exp $
 #
 
 DISTNAME=	CSSC-1.4.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/cssc/
 COMMENT=	GNU workalike for the source code control system SCCS
 LICENSE=	gnu-gpl-v3
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--enable-binary
 CONFIGURE_ENV+=	CONFIG_DIFF_COMMAND=${TOOLS_DIFF:Q}
@@ -20,11 +20,6 @@ TEST_TARGET=	check
 
 TEXINFO_REQD=	4.0
 INFO_FILES=	yes
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
-.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

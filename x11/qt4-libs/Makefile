@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2017/02/12 06:26:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.116 2017/05/03 08:38:46 jperkin Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 PKGREVISION=	6
@@ -28,9 +28,11 @@ CONFIGURE_ARGS+=	-openssl-linked
 
 CONFIGURE_ARGS+=	-iconv
 
+USE_LANGUAGES+=		c++11
+
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+CXXFLAGS+=	-Wno-c++11-narrowing
 .  if empty(MACHINE_PLATFORM:MDarwin-*-*)
 CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
 .  endif

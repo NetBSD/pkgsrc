@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/03/28 11:29:50 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/05/03 08:38:43 jperkin Exp $
 
 DISTNAME=	opencv_contrib-3.2.0
 PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 DISTFILES=	${DEFAULT_DISTFILES} opencv-${PKGVERSION_NOREV}.zip
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
@@ -28,11 +28,6 @@ PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
 
 CMAKE_ARGS+=	-D WITH_FFMPEG=OFF
 CMAKE_ARGS+=	-D BUILD_DOCS=OFF
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=		-std=c++11
-.endif
 
 # jasper uses SIZE_MAX and friends in its headers.
 CXXFLAGS+=		-D__STDC_LIMIT_MACROS

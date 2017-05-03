@@ -1,21 +1,20 @@
-# $NetBSD: bjam.mk,v 1.17 2016/02/28 23:54:11 minskim Exp $
+# $NetBSD: bjam.mk,v 1.18 2017/05/03 08:38:40 jperkin Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
-
 .include "../../devel/boost-build/toolset.mk"
-.include "../../mk/bsd.prefs.mk"
 
 BJAM=			${BUILDLINK_PREFIX.boost-jam}/bin/bjam
 
-.if !empty(MAKE_JOBS)
-BJAM_ARGS+=		-j${MAKE_JOBS}
-.endif
+BJAM_ARGS+=		${MAKE_JOBS:D-j${MAKE_JOBS}}
 BJAM_ARGS+=		--builddir=${WRKSRC}/build
 BJAM_ARGS+=		--layout=system
 BJAM_ARGS+=		--toolset=${BOOST_TOOLSET}
 BJAM_ARGS+=		--disable-long-double
 BJAM_ARGS+=		${BJAM_BUILD}
 
+# XXX: we can't use USE_LANGUAGES here as it needs to be set before
+# including compiler.mk.  Perhaps we should just enforce c++11?
+#
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mgcc)
@@ -34,7 +33,7 @@ CXXFLAGS+=		-std=c++14
 .if !empty(PKGSRC_COMPILER:Mclang)
 BJAM_ARGS+=		cxxflags=-std=c++11
 CXXFLAGS+=		-std=c++11
-.  if !empty(OPSYS:MDarwin)
+.  if ${OPSYS} == "Darwin"
 BJAM_ARGS+=		cxxflags=-stdlib=libc++ linkflags=-stdlib=libc++
 .  endif
 .endif

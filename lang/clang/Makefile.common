@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2017/03/17 22:38:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.20 2017/05/03 08:38:43 jperkin Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
@@ -17,7 +17,7 @@ PATCHDIR=		${.CURDIR}/../../lang/clang/patches
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
@@ -114,10 +114,6 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 .endif
-
-# At least LLVM 3.9.0 and subprojects don't correctly add C++11 flags
-# automatically.
-CXXFLAGS+=	-std=c++11
 
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build

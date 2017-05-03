@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2017/05/02 13:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.112 2017/05/03 08:38:43 jperkin Exp $
 
 VERREL=		5.3.2
 VERRC=		2
@@ -13,6 +13,8 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.libreoffice.org/
 COMMENT=	Office productivity suite from The Document Foundation
 LICENSE=	gnu-lgpl-v3
+
+USE_LANGUAGES=	c gnu++11
 
 SUBST_CLASSES+=			use-bash
 SUBST_STAGE.use-bash=		pre-configure
@@ -125,8 +127,6 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # dmake is slowly beeing removed from the LibreOffice build process
 # and this option will hopefully become unneeded in the future
 WRAPPER_SKIP_TRANSFORM=yes
-
-USE_LANGUAGES+=		c c++
 
 LDFLAGS+=		-lboost_system
 

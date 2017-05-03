@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2017/02/12 06:24:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2017/05/03 08:38:45 jperkin Exp $
 
 DISTNAME=	gnome-vfsmm-2.26.0
 PKGREVISION=	30
@@ -12,8 +12,7 @@ COMMENT=	C++ bindings for gnome-vfs
 
 #BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 
-USE_LANGUAGES=		c c++
-CXXFLAGS+=		-std=c++11
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 gmake pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2017/01/01 14:44:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/05/03 08:38:45 jperkin Exp $
 # used by www/webkit24-gtk/Makefile
 # used by www/webkit24-gtk3/Makefile
 
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd AND gnu-lgpl-v2
 DISTINFO_FILE=		${.CURDIR}/../../www/webkit24-gtk/distinfo
 PATCHDIR=		${.CURDIR}/../../www/webkit24-gtk/patches
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	automake bison gmake perl:build pkg-config msgfmt
 USE_TOOLS+=	msgmerge xgettext
@@ -66,7 +66,7 @@ CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 CXXFLAGS.SunOS+=	-fpermissive
 
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+CXXFLAGS+=	-Wno-c++11-narrowing
 .endif
 
 .if !empty(MACHINE_PLATFORM:MSunOS-*-x86_64)
