@@ -1,0 +1,13 @@
+$NetBSD: patch-libgfortran_configure,v 1.1 2017/05/03 00:21:03 maya Exp $
+
+--- libgfortran/configure.orig	2015-10-04 22:33:03.000000000 +0000
++++ libgfortran/configure
+@@ -25992,7 +25992,7 @@ $as_echo "#define SUPPORTS_WEAK 1" >>con
+ 
+   fi
+   case "$host" in
+-    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* | *-*-musl* )
++    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* | *-*-musl* | *-*-netbsd* )
+ 
+ $as_echo "#define GTHREAD_USE_WEAK 0" >>confdefs.h
+ 

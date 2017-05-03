@@ -1,0 +1,34 @@
+$NetBSD: patch-gcc_config.gcc,v 1.1 2017/05/03 00:21:03 maya Exp $
+
+--- gcc/config.gcc.orig	2016-12-10 21:07:10.000000000 +0000
++++ gcc/config.gcc
+@@ -765,10 +765,15 @@ case ${target} in
+   target_has_targetcm=yes
+   ;;
+ *-*-netbsd*)
+-  tmake_file="t-slibgcc"
++  tmake_file="t-slibgcc t-netbsd"
+   gas=yes
+   gnu_ld=yes
+   use_gcc_stdint=wrap
++  # cabs/cabsf are renamed to __c99_cabs/cabsf
++  tm_p_file="${tm_p_file} netbsd-protos.h"
++  target_gtfiles="${target_gtfiles} \$(srcdir)/config/netbsd.c"
++  extra_objs="${extra_objs} netbsd.o"
++
+ 
+   # NetBSD 2.0 and later get POSIX threads enabled by default.
+   # Allow them to be explicitly enabled on any other version.
+@@ -1460,10 +1465,12 @@ x86_64-*-freebsd*)
+ i[34567]86-*-netbsdelf*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-stdint.h netbsd-elf.h i386/netbsd-elf.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ x86_64-*-netbsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-stdint.h netbsd-elf.h i386/x86-64.h i386/netbsd64.h"
+ 	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
++	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ i[34567]86-*-openbsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h"
