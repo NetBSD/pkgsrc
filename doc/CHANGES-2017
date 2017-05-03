@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1854 2017/05/03 06:59:30 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1855 2017/05/03 08:45:45 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2327,3 +2327,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/gcc7 version 7.1.0 [maya 2017-05-03]
 	Updated benchmarks/fio to 2.19 [mef 2017-05-03]
 	Updated benchmarks/dnsperf to 2.1.0.0 [mef 2017-05-03]
+	Updated sysutils/salt to 2016.11.4 [sborrill 2017-05-03]
