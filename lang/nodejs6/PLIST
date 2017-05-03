@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/12/08 23:02:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/05/03 11:03:43 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -2707,4 +2707,6 @@ lib/node_modules/npm/scripts/relocate.sh
 lib/node_modules/npm/scripts/update-authors.sh
 man/man1/node.1
 share/doc/node/gdbinit
+share/doc/node/lldb_commands.py
+share/doc/node/lldbinit
 share/systemtap/tapset/node.stp
