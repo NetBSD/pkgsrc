@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2016/11/25 15:39:51 prlw1 Exp $
+# $NetBSD: Makefile,v 1.52 2017/05/03 08:38:41 jperkin Exp $
 
 DISTNAME=	libsigc++-2.10.0
 CATEGORIES=	devel gnome
@@ -10,7 +10,7 @@ HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 gmake perl:build
 GNU_CONFIGURE=		yes
@@ -18,7 +18,6 @@ PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
 CONFLICTS+=		libsigc++2-[0-9]*
 GCC_REQD+=		4.8
-CXXFLAGS+=		-std=c++11
 
 # use something that can extract long filenames in GNU format on NetBSD 1.6.x
 EXTRACT_USING=		bsdtar
