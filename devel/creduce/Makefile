@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/11/18 18:20:05 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2017/05/03 08:38:40 jperkin Exp $
 
 DISTNAME=	creduce-2.5.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	2-clause-bsd
 GNU_CONFIGURE=	yes
 
 USE_TOOLS+=	flex perl:run gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 DEPENDS+=	p5-Exporter-Lite-[0-9]*:../../devel/p5-Exporter-Lite
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
@@ -23,10 +23,6 @@ DEPENDS+=	p5-Sys-CPU-[0-9]*:../../sysutils/p5-Sys-CPU
 DEPENDS+=	p5-Regexp-Common-[0-9]*:../../textproc/p5-Regexp-Common
 
 TEST_TARGET=	check
-
-.include "../../mk/bsd.prefs.mk"
-
-CXXFLAGS+=	-std=c++11
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

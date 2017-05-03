@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/02/12 06:25:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2017/05/03 08:38:42 jperkin Exp $
 #
 
 DISTNAME=	goocanvasmm-0.15.4
@@ -14,8 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config perl
-USE_LANGUAGES=	c c++
-CXXFLAGS+=	-std=c++11
+USE_LANGUAGES=	c c++11
 
 PKGCONFIG_OVERRIDE+=	goocanvas/goocanvasmm.pc.in
 

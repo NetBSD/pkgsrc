@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/03/31 19:41:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.22 2017/05/03 08:38:44 jperkin Exp $
 #
 
 DISTNAME=		pdns-recursor-4.0.4
@@ -13,7 +13,7 @@ COMMENT=		PowerDNS resolver/recursing nameserver
 LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		gmake pkg-config
 
 RCD_SCRIPTS+=		pdns_recursor
@@ -29,7 +29,7 @@ CONF_FILES+=		${EGDIR}/recursor.conf-dist \
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+CXXFLAGS+=	-Wno-c++11-narrowing
 .endif
 
 .include "options.mk"

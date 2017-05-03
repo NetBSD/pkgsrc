@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2017/02/12 06:24:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.61 2017/05/03 08:38:40 jperkin Exp $
 
 DISTNAME=	libgnomemm-2.30.0
 PKGREVISION=	27
@@ -10,8 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnome
 
-USE_LANGUAGES=		c c++
-CXXFLAGS+=		-std=c++11
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 gmake pkg-config

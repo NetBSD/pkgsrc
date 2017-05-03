@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/23 15:17:28 prlw1 Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/03 08:38:44 jperkin Exp $
 
 DISTNAME=	ecap_clamav_adapter-2.0.0
 PKGREVISION=	1
@@ -11,11 +11,9 @@ COMMENT=	eCAP ClamAV adapter
 LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-
-CXXFLAGS+=	-std=c++11
 
 .include "../../security/clamav/buildlink3.mk"
 .include "../../www/libecap/buildlink3.mk"

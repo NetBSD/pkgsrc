@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/02/12 06:24:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.27 2017/05/03 08:38:41 jperkin Exp $
 #
 
 DISTNAME=	libview-0.6.4
@@ -14,8 +14,7 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
-CXXFLAGS+=	-std=c++11
+USE_LANGUAGES=	c c++11
 
 PKGCONFIG_OVERRIDE+=	libview.pc.in
 

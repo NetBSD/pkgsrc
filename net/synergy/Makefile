@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/04/30 01:21:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2017/05/03 08:38:44 jperkin Exp $
 
 DISTNAME=		synergy-1.8.6
 PKGREVISION=		2
@@ -11,7 +11,7 @@ HOMEPAGE=		http://synergy-project.org/
 COMMENT=		Let a user share a mouse and keyboard among computers
 LICENSE=		gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		unzip
 # Main configuration is CMake, but subdirectories are GNU configure.
 # We need to set GNU_CONFIGURE=yes for config.{guess,sub} overrides to kick in.
@@ -56,10 +56,10 @@ do-install:
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CXX+=	-std=c++11 -Wno-switch -Wno-unused	\
+_WRAP_EXTRA_ARGS.CXX+=	-Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare \
 			-Wno-logical-op-parentheses -Wno-null-dereference
-CWRAPPERS_APPEND.cxx+=	-std=c++11 -Wno-switch -Wno-unused	\
+CWRAPPERS_APPEND.cxx+=	-Wno-switch -Wno-unused	\
 			-Wno-deprecated-register -Wno-tautological-compare \
 			-Wno-logical-op-parentheses -Wno-null-dereference
 .endif

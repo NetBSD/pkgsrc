@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/09 20:05:36 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/03 08:38:41 jperkin Exp $
 #
 
 DISTNAME=	open-vcdiff-0.8.3
@@ -13,13 +13,13 @@ LICENSE=	apache-2.0
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++11
 
 AUTO_MKDIRS=	yes
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
+CXXFLAGS+=	-Wno-error=c++11-narrowing
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"

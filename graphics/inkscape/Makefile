@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2017/05/02 13:37:31 wiz Exp $
+# $NetBSD: Makefile,v 1.148 2017/05/03 08:38:42 jperkin Exp $
 
 DISTNAME=	inkscape-0.92.1
 PKGREVISION=	4
@@ -20,10 +20,9 @@ DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 
 EXTRACT_USING=		bsdtar
 GCC_REQD+=		4.5.2
-CXXFLAGS+=		-std=c++11
 
 USE_CMAKE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		intltool msgfmt msgmerge perl:run pkg-config

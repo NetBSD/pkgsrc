@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/04/30 01:21:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2017/05/03 08:38:42 jperkin Exp $
 #
 
 DISTNAME=	merkaartor-0.17.2
@@ -11,7 +11,7 @@ MAINTAINER=	jkunz@NetBSD.org
 HOMEPAGE=	http://www.merkaartor.be/
 COMMENT=	Merkaartor is an OpenStreetMap mapping program
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 QMAKE=			${QTDIR}/bin/qmake
 CONFIGURE_ARGS=		PREFIX=${PREFIX} NODEBUG=1 OSMARENDER=1 PROJ=1 GDAL=1 \
@@ -31,12 +31,6 @@ do-configure:
 	cd ${WRKSRC} && \
 		${QMAKE} ${CONFIGURE_ARGS} Merkaartor.pro && \
 		${MAKE} qmake
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CXX+=	-std=c++11
-CWRAPPERS_APPEND.cxx+=	-std=c++11
-.endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"

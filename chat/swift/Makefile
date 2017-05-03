@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/04/30 01:21:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/05/03 08:38:39 jperkin Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	12
@@ -12,10 +12,8 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	scons>=1.3:../../devel/scons
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
-
-CXXFLAGS+=	-std=c++11
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

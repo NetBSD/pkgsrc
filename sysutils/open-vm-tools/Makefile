@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2017/04/22 21:03:58 adam Exp $
+# $NetBSD: Makefile,v 1.71 2017/05/03 08:38:45 jperkin Exp $
 
 DISTNAME=	open-vm-tools-10.1.5-5055683
 PKGNAME=	open-vm-tools-10.1.5
@@ -14,11 +14,10 @@ LICENSE=	gnu-lgpl-v2.1
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
 GCC_REQD+=	4.8
-CXXFLAGS+=	-std=gnu++11
 BUILDLINK_TRANSFORM.NetBSD+=	rm:-Werror
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c gnu++11
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config autoconf automake
 

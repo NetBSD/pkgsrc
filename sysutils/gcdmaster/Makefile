@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2017/02/12 06:25:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.83 2017/05/03 08:38:44 jperkin Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
@@ -14,11 +14,10 @@ WRKSRC=		${WRKDIR}/cdrdao-${CDRDAO_VER}
 CONFIGURE_ARGS+=	--without-posix-threads
 CONFIGURE_ARGS+=	--with-xdao
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/pixmaps
+USE_LANGUAGES+=		c++11
 USE_TOOLS+=		pkg-config
 INSTALL_DIRS=		xdao
 GCONF_SCHEMAS=		gcdmaster.schemas
-
-CXXFLAGS+=		-std=c++11
 
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"

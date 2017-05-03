@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/02/12 06:25:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/05/03 08:38:41 jperkin Exp $
 #
 
 DISTNAME=	codeblocks_16.01
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}.release
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cbkoders,codesnippets,codestat,dragscroll,envvars,help,keybinder,libfinder,profiler,regex,exporter,symtab
 # wxsmith makes error in build process
@@ -24,11 +24,6 @@ CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cb
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 PKGCONFIG_OVERRIDE+=	codeblocks.pc.in
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
-.endif
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

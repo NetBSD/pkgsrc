@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2017/04/30 01:21:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.59 2017/05/03 08:38:41 jperkin Exp $
 
 DISTNAME=	thrift-${THRIFT_VERSION}
 PKGNAME=	libthrift-${THRIFT_VERSION}
@@ -15,7 +15,7 @@ LICENSE=	apache-2.0
 # No rule to make target 'gen-cpp/Service.cpp', needed by 'Service.lo'.  Stop.
 MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config yacc
@@ -32,7 +32,7 @@ pre-build:
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
+CXXFLAGS+=	-Wno-error=c++11-narrowing
 .endif
 
 .include "options.mk"
@@ -41,5 +41,4 @@ CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
