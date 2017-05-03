@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2017/05/01 12:54:17 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2017/05/03 08:38:45 jperkin Exp $
 
 DISTNAME=	strigi-0.7.8
 PKGREVISION=	18
@@ -11,14 +11,12 @@ HOMEPAGE=	http://strigi.sourceforge.net/
 COMMENT=	Small fast desktop searching program
 LICENSE=	gnu-lgpl-v2
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	gmake pkg-config perl
 USE_CMAKE=	yes
 
 PKGCONFIG_OVERRIDE+=	src/streamanalyzer/libstreamanalyzer.pc.cmake
 PKGCONFIG_OVERRIDE+=	src/streams/libstreams.pc.cmake
-
-CXXFLAGS+=	-std=c++11
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)

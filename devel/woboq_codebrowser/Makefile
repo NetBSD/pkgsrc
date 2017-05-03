@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/11/27 08:51:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/03 08:38:41 jperkin Exp $
 
 DISTNAME=	woboq_codebrowser-2.0.1
 CATEGORIES=	devel lang
@@ -16,7 +16,7 @@ CMAKE_ARGS+=	-DLLVM_CONFIG_EXECUTABLE=${LLVM_CONFIG_PATH:Q} \
 		-DCMAKE_BUILD_TYPE=Release
 
 USE_TOOLS+=	pax
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 INSTALLATION_DIRS+=	bin share/woboq_codebrowser
 
@@ -24,10 +24,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/generator/codebrowser_generator ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/indexgenerator/codebrowser_indexgenerator ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/data && pax -rwpp . ${DESTDIR}${PREFIX}/share/woboq_codebrowser
-
-.include "../../mk/bsd.prefs.mk"
-
-CXXFLAGS+=	-std=c++11
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

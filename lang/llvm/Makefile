@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/05/01 00:41:29 maya Exp $
+# $NetBSD: Makefile,v 1.19 2017/05/03 08:38:43 jperkin Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -21,7 +21,7 @@ HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PYTHON_FOR_BUILD_ONLY=	yes
@@ -102,10 +102,6 @@ SOEXT=		so
 PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
-
-# At least LLVM 3.9.0 and subprojects don't correctly add C++11 flags
-# automatically.
-CXXFLAGS+=	-std=c++11
 
 # needs std::atomic with 64-bit CAS
 .if ${MACHINE_ARCH} == "i386"
