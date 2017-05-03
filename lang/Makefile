@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.458 2017/04/22 18:23:29 taca Exp $
+# $NetBSD: Makefile,v 1.459 2017/05/03 23:37:47 maya Exp $
 #
 
 COMMENT=	Programming languages
@@ -73,6 +73,7 @@ SUBDIR+=	gcc5-libs
 SUBDIR+=	gcc6
 SUBDIR+=	gcc6-aux
 SUBDIR+=	gcc6-libs
+SUBDIR+=	gcc7
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	ghc-bootstrap
