@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1855 2017/05/03 08:45:45 sborrill Exp $
+$NetBSD: CHANGES-2017,v 1.1856 2017/05/03 09:10:18 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated benchmarks/fio to 2.19 [mef 2017-05-03]
 	Updated benchmarks/dnsperf to 2.1.0.0 [mef 2017-05-03]
 	Updated sysutils/salt to 2016.11.4 [sborrill 2017-05-03]
+	Updated textproc/the_silver_searcher to 1.0.3 [leot 2017-05-03]
