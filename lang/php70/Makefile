@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/04/13 14:19:19 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/05/03 11:41:36 maya Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -17,6 +17,11 @@ LIBTOOL_OVERRIDE=	# empty
 PHP_CHECK_INSTALLED=	No
 
 PHP_VERSIONS_ACCEPTED=		70
+
+# PHP bug #74526 - segfaults on build with GCC 4.8.5 i386
+.if ${MACHINE_ARCH} == "i386"
+GCC_REQD+=		4.9
+.endif
 
 .include "Makefile.php"
 
