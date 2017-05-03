@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/02/02 10:09:53 fhajny Exp $
+# $NetBSD: Makefile,v 1.25 2017/05/03 08:38:44 jperkin Exp $
 
 DISTNAME=	zeromq-4.2.1
 CATEGORIES=	net devel
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v3
 GITHUB_PROJECT=	libzmq
 GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c gnu++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 
@@ -23,15 +23,7 @@ PKGCONFIG_OVERRIDE+=	src/libzmq.pc.in
 
 TEST_TARGET=	check
 
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-*)
-CXXFLAGS+=	-std=gnu++0x
-.endif
-
-.if !empty(CC_VERSION:Mclang-*)
-CXXFLAGS+=	-std=gnu++11
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../devel/libuuid/buildlink3.mk"

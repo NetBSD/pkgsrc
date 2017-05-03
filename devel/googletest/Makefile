@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/10/31 16:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/05/03 08:38:40 jperkin Exp $
 
 DISTNAME=	googletest-1.8.0
 CATEGORIES=	devel
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 INSTALLATION_DIRS=	bin
 
 USE_CMAKE=	yes
-USE_LANGUAGES=	c++ c
-CXXFLAGS+=	-std=c++11
+USE_LANGUAGES=	c c++11
 
 .include "../../mk/bsd.pkg.mk"

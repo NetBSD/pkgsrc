@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/07/09 06:38:06 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2017/05/03 08:38:40 jperkin Exp $
 
 DISTNAME=	gconfmm-2.28.3
 PKGREVISION=	18
@@ -10,8 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for gconf
 
-USE_LANGUAGES=		c c++
-CXXFLAGS+=		-std=c++11
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config perl

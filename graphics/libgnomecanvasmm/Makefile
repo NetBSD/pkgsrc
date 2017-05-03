@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2017/02/12 06:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.43 2017/05/03 08:38:42 jperkin Exp $
 
 DISTNAME=	libgnomecanvasmm-2.26.0
 PKGREVISION=	25
@@ -10,8 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnomecanvas
 
-USE_LANGUAGES=		c c++
-CXXFLAGS+=		-std=c++11
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gm4 gmake pkg-config

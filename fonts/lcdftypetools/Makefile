@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/10/27 11:02:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/03 08:38:42 jperkin Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	lcdftypetools-2.105
@@ -18,11 +18,9 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/lcdf-typetools
-
-CXXFLAGS+=	-std=c++11
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub

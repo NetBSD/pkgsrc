@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2017/02/12 06:25:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.37 2017/05/03 08:38:43 jperkin Exp $
 #
 
 DISTNAME=		subtitleeditor-0.30.0
@@ -15,9 +15,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool pkg-config msgfmt
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
-
-CXXFLAGS+=		-std=c++11
+USE_LANGUAGES=		c c++11
 
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.16.3
 .include "../../devel/glibmm/buildlink3.mk"
