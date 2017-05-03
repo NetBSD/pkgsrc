@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1860 2017/05/03 11:19:41 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1861 2017/05/03 11:41:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2331,6 +2331,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/the_silver_searcher to 1.0.3 [leot 2017-05-03]
 	Updated devel/cmake to 3.8.1 [adam 2017-05-03]
 	Updated devel/ivykis to 0.42 [fhajny 2017-05-03]
-	Updated lang/nodejs6 to 6.10.3 [fhajny 2017-05-03]
 	Updated lang/nodejs6 to 6.10.3 [fhajny 2017-05-03]
 	Updated security/libressl to 2.5.4 [maya 2017-05-03]
