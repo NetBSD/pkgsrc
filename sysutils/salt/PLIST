@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/02/03 13:39:00 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/05/03 08:24:57 sborrill Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -635,6 +635,9 @@ ${PYSITELIB}/salt/modules/__init__.pyo
 ${PYSITELIB}/salt/modules/acme.py
 ${PYSITELIB}/salt/modules/acme.pyc
 ${PYSITELIB}/salt/modules/acme.pyo
+${PYSITELIB}/salt/modules/aix_group.py
+${PYSITELIB}/salt/modules/aix_group.pyc
+${PYSITELIB}/salt/modules/aix_group.pyo
 ${PYSITELIB}/salt/modules/aliases.py
 ${PYSITELIB}/salt/modules/aliases.pyc
 ${PYSITELIB}/salt/modules/aliases.pyo
@@ -1355,6 +1358,9 @@ ${PYSITELIB}/salt/modules/openbsdrcctl.pyo
 ${PYSITELIB}/salt/modules/openbsdservice.py
 ${PYSITELIB}/salt/modules/openbsdservice.pyc
 ${PYSITELIB}/salt/modules/openbsdservice.pyo
+${PYSITELIB}/salt/modules/openscap.py
+${PYSITELIB}/salt/modules/openscap.pyc
+${PYSITELIB}/salt/modules/openscap.pyo
 ${PYSITELIB}/salt/modules/openstack_config.py
 ${PYSITELIB}/salt/modules/openstack_config.pyc
 ${PYSITELIB}/salt/modules/openstack_config.pyo
@@ -3627,6 +3633,9 @@ ${PYSITELIB}/salt/utils/parsers.pyo
 ${PYSITELIB}/salt/utils/pkg/__init__.py
 ${PYSITELIB}/salt/utils/pkg/__init__.pyc
 ${PYSITELIB}/salt/utils/pkg/__init__.pyo
+${PYSITELIB}/salt/utils/pkg/deb.py
+${PYSITELIB}/salt/utils/pkg/deb.pyc
+${PYSITELIB}/salt/utils/pkg/deb.pyo
 ${PYSITELIB}/salt/utils/pkg/rpm.py
 ${PYSITELIB}/salt/utils/pkg/rpm.pyc
 ${PYSITELIB}/salt/utils/pkg/rpm.pyo
@@ -3699,6 +3708,9 @@ ${PYSITELIB}/salt/utils/smtp.pyo
 ${PYSITELIB}/salt/utils/stormpath.py
 ${PYSITELIB}/salt/utils/stormpath.pyc
 ${PYSITELIB}/salt/utils/stormpath.pyo
+${PYSITELIB}/salt/utils/stringio.py
+${PYSITELIB}/salt/utils/stringio.pyc
+${PYSITELIB}/salt/utils/stringio.pyo
 ${PYSITELIB}/salt/utils/systemd.py
 ${PYSITELIB}/salt/utils/systemd.pyc
 ${PYSITELIB}/salt/utils/systemd.pyo
