@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/04/30 01:21:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2017/05/03 08:38:39 jperkin Exp $
 #
 
 DISTNAME=	aegis-4.24.2
@@ -14,15 +14,9 @@ LICENSE=	gnu-gpl-v3
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c gnu++0x
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		groff gsoelim msgfmt perl:run yacc patch:run
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !empty(PKGSRC_COMPILER:Mgcc)
-CXXFLAGS+=	-std=gnu++0x
-.endif
 
 AEGIS_USER_UID?=	3
 AEGIS_USER_GID?=	3

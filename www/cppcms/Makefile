@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/04/22 21:04:00 adam Exp $
+# $NetBSD: Makefile,v 1.16 2017/05/03 08:38:45 jperkin Exp $
 
 DISTNAME=	cppcms-1.0.4
 PKGREVISION=	12
@@ -11,17 +11,10 @@ HOMEPAGE=	http://cppcms.com/
 COMMENT=	High performance C++ web development framework
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c gnu++11
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DPYTHON=${PYTHONBIN} -DDISABLE_GCRYPT=yes
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
-.endif
-
-CXXFLAGS.Cygwin+=	-std=gnu++11
 
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 

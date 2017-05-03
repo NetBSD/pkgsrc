@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/19 06:04:30 agc Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/03 08:38:42 jperkin Exp $
 
 DISTNAME=	lepton-1.2.1
 CATEGORIES=	graphics
@@ -12,14 +12,8 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES+=	c c++11
 USE_TOOLS+=	autoconf autoreconf automake gmake makeinfo
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
-.endif
 
 AUTO_MKDIRS=	yes
 
