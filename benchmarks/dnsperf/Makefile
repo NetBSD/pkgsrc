@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/03/05 11:28:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2017/05/03 06:59:13 mef Exp $
 
-DISTNAME=	dnsperf-src-2.0.0.0-1
-PKGNAME=	dnsperf-2.0.0.0
-PKGREVISION=	2
+DISTNAME=	dnsperf-src-2.1.0.0-1
+PKGNAME=	dnsperf-2.1.0.0
 CATEGORIES=	benchmarks net
 MASTER_SITES=	ftp://ftp.nominum.com/pub/nominum/${PKGBASE}/${PKGVERSION_NOREV}/
 
