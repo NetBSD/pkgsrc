@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2017/04/30 01:21:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.127 2017/05/03 08:38:42 jperkin Exp $
 
 DISTNAME=	wesnoth-1.12.6
 PKGREVISION=	6
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_CMAKE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		pkg-config
 USE_TOOLS+=		perl:run msgfmt
 USE_TOOLS+=		bash
@@ -61,11 +61,6 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.*)
 USE_TOOLS+=		gmake
-.endif
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
 .endif
 
 PLIST_VARS+=		icons

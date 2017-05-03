@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2017/02/10 08:41:25 sborrill Exp $
+# $NetBSD: options.mk,v 1.23 2017/05/03 08:38:45 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	ecap inet6 snmp ssl squid-backend-aufs \
@@ -91,7 +91,7 @@ CONFIGURE_ARGS+=	--enable-carp
 CONFIGURE_ARGS+=	--enable-ecap
 USE_TOOLS+=		pkg-config
 CHECK_WRKREF_SKIP+=	sbin/squid
-CXXFLAGS+=		-std=c++11
+USE_LANGUAGES+=		c++11
 .include "../../www/libecap/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ecap
