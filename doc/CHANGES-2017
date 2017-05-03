@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1865 2017/05/03 19:31:02 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1866 2017/05/03 19:35:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2337,3 +2337,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/mysql55-client to 5.5.56 [mef 2017-05-03]
 	Updated databases/mongo-tools to 3.4.4 [fhajny 2017-05-03]
 	Updated devel/py-codestyle to 2.3.1 [adam 2017-05-03]
+	Updated devel/py-py to 1.4.33 [adam 2017-05-03]
