@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1 2017/02/04 12:50:23 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2017/05/03 00:59:46 mef Exp $
 
-SHA1 (fio-2.17.tar.gz) = 52419c2b9b566e279b75bbeaee6ea3915782fe0d
-RMD160 (fio-2.17.tar.gz) = 3a888562c002720f2db15a3885c710ce99149bd1
-SHA512 (fio-2.17.tar.gz) = a5ebf27d6d4e1ef1458e0db08308640ee88b62283a12ae40b9f3629164531b2dac3a172d0357f9a2661faa0a9755e04421415a320402bc1503a2a7d3271eee3a
-Size (fio-2.17.tar.gz) = 664471 bytes
+SHA1 (fio-2.19.tar.gz) = 05c251899d8aedb3f5dfb2cc6976f2d0f2f2c332
+RMD160 (fio-2.19.tar.gz) = c4d059fece80dd40e1401e48dd149850476e3b51
+SHA512 (fio-2.19.tar.gz) = 92515432401638721793d42a20f1b55a75c50a6304a600c1efa8bb426900ab7d29a3cd11b7e65ce5229a933680c0edbae684d58f02874edf3f384fe5ccd0d727
+Size (fio-2.19.tar.gz) = 681650 bytes
 SHA1 (patch-Makefile) = 63b4abb38bd36fa7c65224fbe440938b63cde3c6
