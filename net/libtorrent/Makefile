@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2016/06/27 19:16:02 maya Exp $
+# $NetBSD: Makefile,v 1.57 2017/05/03 08:38:44 jperkin Exp $
 
 DISTNAME=	libtorrent-0.13.6
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://rakshasa.github.io/rtorrent/
 COMMENT=	BitTorrent library written in C++ for *nix
 LICENSE=	gnu-gpl-v2
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
@@ -56,10 +56,6 @@ OPENSSL_LIBS=	-L${BUILDLINK_PREFIX.openssl}/lib \
 
 CONFIGURE_ENV+=	OPENSSL_CFLAGS=${OPENSSL_CFLAGS:Q}
 CONFIGURE_ENV+=	OPENSSL_LIBS=${OPENSSL_LIBS:Q}
-.endif
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"

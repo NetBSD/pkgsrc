@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/04/26 13:16:11 prlw1 Exp $
+# $NetBSD: Makefile,v 1.21 2017/05/03 08:38:39 jperkin Exp $
 
 DISTNAME=	atkmm-2.24.2
 PKGREVISION=	4
@@ -14,13 +14,11 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 CONFLICTS+=	gtkmm<2.22.0
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bsdtar gmake perl pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	atk/atkmm.pc.in
-
-CXXFLAGS+=		-std=c++11
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"

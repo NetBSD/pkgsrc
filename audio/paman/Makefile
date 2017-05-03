@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2017/02/12 06:25:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.44 2017/05/03 08:38:38 jperkin Exp $
 #
 
 DISTNAME=	paman-0.9.4
@@ -12,12 +12,10 @@ COMMENT=	GTK frontend for the PulseAudio sound server
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 USE_TOOLS+=	pkg-config gmake
 
 CONFIGURE_ARGS+=	--disable-lynx
-
-CXXFLAGS+=		-std=c++11
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"

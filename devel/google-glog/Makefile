@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/04/19 11:24:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/05/03 08:38:40 jperkin Exp $
 
 DISTNAME=	glog-0.3.4
 PKGNAME=	google-${DISTNAME}
@@ -15,7 +15,7 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 PKGCONFIG_OVERRIDE+=	libglog.pc.in
 
@@ -23,11 +23,6 @@ PKGCONFIG_OVERRIDE+=	libglog.pc.in
 
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/execinfo.h)
 LIBS+=		-lexecinfo
-.endif
-
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-std=c++11
 .endif
 
 .include "../../devel/googletest/buildlink3.mk"
