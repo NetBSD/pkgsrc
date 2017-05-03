@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2017/04/13 15:12:03 bsiegert Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/03 16:49:54 fhajny Exp $
 
-DISTNAME=	mongo-tools-3.2.4
-PKGREVISION=	5
+DISTNAME=	mongo-tools-3.4.4
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -45,5 +44,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${tool} ${DESTDIR}${PREFIX}/bin/${tool}
 .endfor
 
+.include "../../devel/go-sys/buildlink3.mk"
 .include "../../lang/go/version.mk"
 .include "../../mk/bsd.pkg.mk"
