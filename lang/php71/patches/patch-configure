@@ -1,27 +1,8 @@
-$NetBSD: patch-configure,v 1.2 2017/05/02 03:40:36 maya Exp $
+$NetBSD: patch-configure,v 1.3 2017/05/03 11:45:25 maya Exp $
 
-Disable the use of a global register on i386.
-https://bugs.php.net/bug.php?id=74527
-
-Detect openssl in / too.
-
-Some additional changes.
-
---- configure.orig	2017-04-11 15:37:37.000000000 +0000
+--- configure.orig	2016-04-28 18:12:26.000000000 +0000
 +++ configure
-@@ -5737,10 +5737,7 @@ if test "$ZEND_GCC_GLOBAL_REGS" != "no";
- #else
- # define ZEND_GCC_VERSION 0
- #endif
--#if defined(__GNUC__) && ZEND_GCC_VERSION >= 4008 && defined(i386)
--# define ZEND_VM_FP_GLOBAL_REG "%esi"
--# define ZEND_VM_IP_GLOBAL_REG "%edi"
--#elif defined(__GNUC__) && ZEND_GCC_VERSION >= 4008 && defined(__x86_64__)
-+#if defined(__GNUC__) && ZEND_GCC_VERSION >= 4008 && defined(__x86_64__)
- # define ZEND_VM_FP_GLOBAL_REG "%r14"
- # define ZEND_VM_IP_GLOBAL_REG "%r15"
- #elif defined(__GNUC__) && ZEND_GCC_VERSION >= 4008 && defined(__powerpc64__)
-@@ -6921,27 +6918,6 @@ EOF
+@@ -6930,27 +6930,6 @@ EOF
      ;;
    esac
  
@@ -49,7 +30,7 @@ Some additional changes.
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -18402,7 +18378,7 @@ fi
+@@ -18408,7 +18387,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -58,7 +39,7 @@ Some additional changes.
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -20603,7 +20579,7 @@ $as_echo "yes" >&6; }
+@@ -20572,7 +20551,7 @@ $as_echo "yes" >&6; }
      PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
  
  
@@ -67,7 +48,7 @@ Some additional changes.
  
  
    unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
-@@ -31773,7 +31749,7 @@ fi
+@@ -31742,7 +31721,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -76,7 +57,7 @@ Some additional changes.
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -42665,7 +42641,7 @@ fi
+@@ -42631,7 +42610,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -85,7 +66,7 @@ Some additional changes.
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -93774,7 +93750,7 @@ fi
+@@ -92806,7 +92785,7 @@ fi
      if test "$found_openssl" = "no"; then
  
      if test "$PHP_OPENSSL_DIR" = "yes"; then
@@ -94,7 +75,7 @@ Some additional changes.
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -97400,12 +97376,7 @@ old_CC=$CC
+@@ -96439,12 +96418,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
