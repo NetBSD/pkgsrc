@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/02/04 12:50:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/03 00:59:46 mef Exp $
 
-DISTNAME=	fio-2.17
+DISTNAME=	fio-2.19
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://brick.kernel.dk/snaps/
 
