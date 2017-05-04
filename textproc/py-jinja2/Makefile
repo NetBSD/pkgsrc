@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/05/04 18:11:09 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/05/04 20:23:31 adam Exp $
 
 DISTNAME=	Jinja2-2.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -19,6 +19,15 @@ SUBST_FILES.unicode=	jinja2/*.py
 SUBST_STAGE.unicode=	pre-install
 SUBST_SED.unicode+=	-e "s,u',',g"
 SUBST_SED.unicode+=	-e 's,u",",g'
+
+.include "../../lang/python/pyversion.mk"
+
+# async byte-compilation fails for Python < 3.6
+# see https://github.com/pallets/jinja/issues/643
+PLIST_VARS+=	async
+.if "${PYPKGPREFIX}" == "py36"
+PLIST.async=	yes
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
