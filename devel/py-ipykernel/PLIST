@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 04:55:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/04 20:28:33 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/ipykernel/__init__.py
 ${PYSITELIB}/ipykernel/__init__.pyc
@@ -131,6 +131,9 @@ ${PYSITELIB}/ipykernel/tests/test_connect.pyo
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.py
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyc
 ${PYSITELIB}/ipykernel/tests/test_embed_kernel.pyo
+${PYSITELIB}/ipykernel/tests/test_io.py
+${PYSITELIB}/ipykernel/tests/test_io.pyc
+${PYSITELIB}/ipykernel/tests/test_io.pyo
 ${PYSITELIB}/ipykernel/tests/test_jsonutil.py
 ${PYSITELIB}/ipykernel/tests/test_jsonutil.pyc
 ${PYSITELIB}/ipykernel/tests/test_jsonutil.pyo
@@ -161,3 +164,12 @@ ${PYSITELIB}/ipykernel/tests/utils.pyo
 ${PYSITELIB}/ipykernel/zmqshell.py
 ${PYSITELIB}/ipykernel/zmqshell.pyc
 ${PYSITELIB}/ipykernel/zmqshell.pyo
+${PYSITELIB}/ipykernel_launcher.py
+${PYSITELIB}/ipykernel_launcher.pyc
+${PYSITELIB}/ipykernel_launcher.pyo
+${PLIST.py2x}share/jupyter/kernels/python2/kernel.json
+${PLIST.py2x}share/jupyter/kernels/python2/logo-32x32.png
+${PLIST.py2x}share/jupyter/kernels/python2/logo-64x64.png
+${PLIST.py3x}share/jupyter/kernels/python3/kernel.json
+${PLIST.py3x}share/jupyter/kernels/python3/logo-32x32.png
+${PLIST.py3x}share/jupyter/kernels/python3/logo-64x64.png
