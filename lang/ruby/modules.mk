@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.39 2017/05/04 07:44:41 taca Exp $
+# $NetBSD: modules.mk,v 1.40 2017/05/04 15:09:10 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -18,6 +18,10 @@ PKGNAME?=	${RUBY_PKGPREFIX}-${DISTNAME}
 DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 .else
 .include "../../lang/ruby/buildlink3.mk"
+.endif
+
+.if defined(RUBY_RAILS_SUPPORTED)
+.include "../../lang/ruby/rails.mk"
 .endif
 
 CONFIGURE_ENV+=		RUBY=${RUBY:Q} RDOC=${RDOC:Q}
