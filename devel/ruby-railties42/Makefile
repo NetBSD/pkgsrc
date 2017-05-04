@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/22 10:17:30 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/04 07:37:09 taca Exp $
 
 DISTNAME=	railties-${RUBY_RAILS_VERSION}
 CATEGORIES=	databases
@@ -14,7 +14,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.18.1<2.0:../../devel/ruby-thor
 
 RUBY_RAILS_SUPPORTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
-RUBY_RDOC_REQD=		3.4
 USE_RAKE=		RUN
 OVERRIDE_GEMSPEC+=	rack-ssl>=1.3.2 rdoc>=3.4
 
