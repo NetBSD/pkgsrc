@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/05/04 15:03:59 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/04 15:10:34 taca Exp $
 
 DISTNAME=	awesome_nested_set-2.1.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -15,5 +15,4 @@ RUBY_RAILS_SUPPORTED=	32
 USE_LANGUAGES=	# none
 
 .include "../../lang/ruby/gem.mk"
-.include "../../lang/ruby/rails.mk"
 .include "../../mk/bsd.pkg.mk"
