@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.174 2017/04/23 14:21:23 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.175 2017/05/04 07:47:22 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -115,9 +115,6 @@
 # RUBY_VERSION_FULL
 #	Version of Ruby including patchlevel.
 #
-# RUBY_RDOC_PKGSRC_VERS
-#	Version of rdoc provided by devel/rdoc.
-#
 # RUBY_BASE
 #	Name of ruby base package's name.
 #
@@ -233,9 +230,6 @@ RUBY23_VERSION=		2.3.4
 RUBY21_API_VERSION=	2.1.0
 RUBY22_API_VERSION=	2.2.0
 RUBY23_API_VERSION=	2.3.0
-
-# pkgsrc's rdoc's version
-RUBY_RDOC_PKGSRC_VERS=	4.2.2
 
 #
 RUBY_VERSION_DEFAULT?=	23
