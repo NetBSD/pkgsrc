@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/21 01:07:21 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/04 19:30:51 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/prompt_toolkit/__init__.py
@@ -14,9 +13,6 @@ ${PYSITELIB}/prompt_toolkit/application.pyo
 ${PYSITELIB}/prompt_toolkit/auto_suggest.py
 ${PYSITELIB}/prompt_toolkit/auto_suggest.pyc
 ${PYSITELIB}/prompt_toolkit/auto_suggest.pyo
-${PYSITELIB}/prompt_toolkit/benchmark.py
-${PYSITELIB}/prompt_toolkit/benchmark.pyc
-${PYSITELIB}/prompt_toolkit/benchmark.pyo
 ${PYSITELIB}/prompt_toolkit/buffer.py
 ${PYSITELIB}/prompt_toolkit/buffer.pyc
 ${PYSITELIB}/prompt_toolkit/buffer.pyo
@@ -182,12 +178,12 @@ ${PYSITELIB}/prompt_toolkit/key_binding/bindings/named_commands.pyo
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/scroll.py
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/scroll.pyc
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/scroll.pyo
-${PYSITELIB}/prompt_toolkit/key_binding/bindings/utils.py
-${PYSITELIB}/prompt_toolkit/key_binding/bindings/utils.pyc
-${PYSITELIB}/prompt_toolkit/key_binding/bindings/utils.pyo
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/vi.py
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/vi.pyc
 ${PYSITELIB}/prompt_toolkit/key_binding/bindings/vi.pyo
+${PYSITELIB}/prompt_toolkit/key_binding/defaults.py
+${PYSITELIB}/prompt_toolkit/key_binding/defaults.pyc
+${PYSITELIB}/prompt_toolkit/key_binding/defaults.pyo
 ${PYSITELIB}/prompt_toolkit/key_binding/digraphs.py
 ${PYSITELIB}/prompt_toolkit/key_binding/digraphs.pyc
 ${PYSITELIB}/prompt_toolkit/key_binding/digraphs.pyo
@@ -218,9 +214,6 @@ ${PYSITELIB}/prompt_toolkit/layout/controls.pyo
 ${PYSITELIB}/prompt_toolkit/layout/dimension.py
 ${PYSITELIB}/prompt_toolkit/layout/dimension.pyc
 ${PYSITELIB}/prompt_toolkit/layout/dimension.pyo
-${PYSITELIB}/prompt_toolkit/layout/focus.py
-${PYSITELIB}/prompt_toolkit/layout/focus.pyc
-${PYSITELIB}/prompt_toolkit/layout/focus.pyo
 ${PYSITELIB}/prompt_toolkit/layout/lexers.py
 ${PYSITELIB}/prompt_toolkit/layout/lexers.pyc
 ${PYSITELIB}/prompt_toolkit/layout/lexers.pyo
