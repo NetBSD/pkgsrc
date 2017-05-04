@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/05/04 19:21:35 adam Exp $
+
+SHA1 (libspiro-dist-0.5.20150702.tar.gz) = 2520a0d4c43e9db3d2d137885a8a29633f4b2c5e
+RMD160 (libspiro-dist-0.5.20150702.tar.gz) = 7bc98f9a77cd22262f4c1c1b044c6efe14237304
+SHA512 (libspiro-dist-0.5.20150702.tar.gz) = ae09915b2738cc2448df2cb00831e65fa45e887a7af9631d7361f5d2fca0b800588ea1d7c74c42e0e250835f3a322e64d44a7b18b2fd6641ac61e6adc1f03da8
+Size (libspiro-dist-0.5.20150702.tar.gz) = 411900 bytes
