@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/06/12 10:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/05/04 12:21:45 jperkin Exp $
 
 DISTNAME=	swig-1.3.38
 PKGREVISION=	1
@@ -27,6 +27,7 @@ USE_LIBTOOL=		YES
 INSTALLATION_DIRS+=	share/doc/swig share/examples/swig
 
 CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
+CHECK_WRKREF_SKIP+=		share/examples/swig/*
 
 post-install:
 	cd ${WRKSRC}/Doc/Manual && \
