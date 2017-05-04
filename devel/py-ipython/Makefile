@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/04/23 04:50:51 markd Exp $
+# $NetBSD: Makefile,v 1.20 2017/05/04 20:24:06 adam Exp $
 
 DISTNAME=	ipython-5.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,6 +15,7 @@ LICENSE=	modified-bsd
 .if ${PYPKGPREFIX} == py27
 DEPENDS+=	${PYPKGPREFIX}-backports.shutil_get_terminal_size-[0-9]*:../../devel/py-backports.shutil_get_terminal_size
 DEPENDS+=	${PYPKGPREFIX}-pathlib2-[0-9]*:../../devel/py-pathlib2
+DEPENDS+=	${PYPKGPREFIX}-scandir-[0-9]*:../../devel/py-scandir
 .endif
 
 DEPENDS+=	${PYPKGPREFIX}-decorator-[0-9]*:../../devel/py-decorator
