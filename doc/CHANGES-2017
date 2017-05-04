@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1874 2017/05/04 20:29:53 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1875 2017/05/04 21:20:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-dateutil to 2.6.0 [adam 2017-05-04]
 	Updated devel/py-jupyter_client to 5.0.1 [adam 2017-05-04]
 	Updated devel/py-ipykernel to 4.6.1 [adam 2017-05-04]
+	Updated textproc/py-lxml to 3.7.3 [adam 2017-05-04]
