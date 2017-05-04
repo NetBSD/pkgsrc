@@ -1,7 +1,16 @@
-@comment $NetBSD: PLIST,v 1.7 2016/08/17 15:39:02 richard Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/05/04 19:45:57 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/dateutil/__init__.py
 ${PYSITELIB}/dateutil/__init__.pyc
 ${PYSITELIB}/dateutil/__init__.pyo
+${PYSITELIB}/dateutil/_common.py
+${PYSITELIB}/dateutil/_common.pyc
+${PYSITELIB}/dateutil/_common.pyo
 ${PYSITELIB}/dateutil/easter.py
 ${PYSITELIB}/dateutil/easter.pyc
 ${PYSITELIB}/dateutil/easter.pyo
@@ -36,9 +45,3 @@ ${PYSITELIB}/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.py
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyc
 ${PYSITELIB}/dateutil/zoneinfo/rebuild.pyo
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
