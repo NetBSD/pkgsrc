@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2017/01/17 12:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2017/05/04 21:19:29 adam Exp $
 
-DISTNAME=	lxml-3.7.2
+DISTNAME=	lxml-3.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://lxml.de/files/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lxml/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxml.de/
