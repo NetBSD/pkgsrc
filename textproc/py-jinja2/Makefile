@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/12/15 10:46:08 adam Exp $
+# $NetBSD: Makefile,v 1.21 2017/05/04 18:11:09 adam Exp $
 
-DISTNAME=	Jinja2-2.8
+DISTNAME=	Jinja2-2.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=J/Jinja2/}
@@ -16,9 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
 
 SUBST_CLASSES+=		unicode
 SUBST_FILES.unicode=	jinja2/*.py
+SUBST_STAGE.unicode=	pre-install
 SUBST_SED.unicode+=	-e "s,u',',g"
 SUBST_SED.unicode+=	-e 's,u",",g'
-SUBST_STAGE.unicode=	pre-install
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
