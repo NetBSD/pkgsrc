@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1872 2017/05/04 17:39:16 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1873 2017/05/04 19:25:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2345,3 +2345,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/putty to 0.69 [ryoon 2017-05-04]
 	Updated lang/nodejs to 7.10.0 [fhajny 2017-05-04]
 	Updated lang/gcc7 to 7.1.0nb1 [maya 2017-05-04]
+	Updated textproc/py-jsonschema to 2.6.0 [adam 2017-05-04]
+	Updated textproc/py-jinja2 to 2.9.6 [adam 2017-05-04]
+	Added graphics/libspiro version 0.5.20150702 [adam 2017-05-04]
+	Updated fonts/fontforge to 20161004 [adam 2017-05-04]
