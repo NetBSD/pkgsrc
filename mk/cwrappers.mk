@@ -1,4 +1,4 @@
-# $NetBSD: cwrappers.mk,v 1.27 2016/10/05 12:46:43 joerg Exp $
+# $NetBSD: cwrappers.mk,v 1.28 2017/05/04 18:30:56 joerg Exp $
 #
 # This Makefile fragment implements integration of pkgtools/cwrappers.
 
@@ -67,7 +67,7 @@ generate-cwrappers:
 .for wrappee in as cxx cc cpp f77 imake ld libtool shlibtool
 	${RUN}echo worklog=${WRKLOG:Q} > ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo wrksrc=${WRKSRC:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
-	${RUN}case ${wrappee} in *libtool) ;; *) echo path=${_PATH_ORIG:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}};; esac
+	${RUN}case ${wrappee} in *libtool) ;; *) echo path=${_PATH_COMPONENTS:N${WRAPPER_BINDIR}:ts::Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}};; esac
 	${RUN}echo exec_path=${WRAPPER_BINDIR}/${CWRAPPERS_ALIASES.${wrappee}:[1]} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 	${RUN}echo exec=${CWRAPPERS_WRAPPEE.${wrappee}:Q} >> ${CWRAPPERS_CONFIG_DIR}/${CWRAPPERS_CONFIG.${wrappee}}
 .  for cmd in ${WRAPPER_REORDER_CMDS}
