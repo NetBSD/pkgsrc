@@ -1,0 +1,15 @@
+$NetBSD: patch-fontforgeexe_Makefile.in,v 1.1 2017/05/04 19:23:18 adam Exp $
+
+Fix linking Objective-C code.
+
+--- fontforgeexe/Makefile.in.orig	2017-05-04 17:59:40.000000000 +0000
++++ fontforgeexe/Makefile.in
+@@ -380,7 +380,7 @@ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+ libfontforgeexe_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
+-	$(LIBTOOLFLAGS) --mode=link $(OBJCLD) \
++	$(LIBTOOLFLAGS) --tag=CC --mode=link $(OBJCLD) \
+ 	$(libfontforgeexe_la_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(libfontforgeexe_la_LDFLAGS) $(LDFLAGS) -o $@
+ PROGRAMS = $(bin_PROGRAMS)
