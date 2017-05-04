@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1867 2017/05/04 07:42:49 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1868 2017/05/04 10:43:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2339,3 +2339,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-codestyle to 2.3.1 [adam 2017-05-03]
 	Updated devel/py-py to 1.4.33 [adam 2017-05-03]
 	Removed devel/ruby-rdoc [taca 2017-05-04]
+	Updated www/py-tornado to 4.5.1 [adam 2017-05-04]
+	Updated devel/py-pexpect to 4.2.1 [adam 2017-05-04]
