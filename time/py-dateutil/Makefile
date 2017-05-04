@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/08/17 15:39:02 richard Exp $
+# $NetBSD: Makefile,v 1.17 2017/05/04 19:45:57 adam Exp $
 
-DISTNAME=	python-dateutil-2.5.3
+DISTNAME=	python-dateutil-2.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	time python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-dateutil/}
