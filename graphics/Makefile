@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.761 2017/04/04 13:08:16 wiz Exp $
+# $NetBSD: Makefile,v 1.762 2017/05/04 19:21:35 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -323,6 +323,7 @@ SUBDIR+=	libraw013
 SUBDIR+=	librsvg
 SUBDIR+=	libscigraphica
 SUBDIR+=	libsixel
+SUBDIR+=	libspiro
 SUBDIR+=	libv4l
 SUBDIR+=	libvideogfx
 SUBDIR+=	libwebp
