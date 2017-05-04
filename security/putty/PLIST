@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/29 23:00:31 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/04 12:52:35 ryoon Exp $
+bin/pageant
 bin/plink
 bin/pscp
 bin/psftp
@@ -6,6 +7,7 @@ bin/pterm
 bin/putty
 bin/puttygen
 bin/puttytel
+man/man1/pageant.1
 man/man1/plink.1
 man/man1/pscp.1
 man/man1/psftp.1
