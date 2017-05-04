@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.99 2017/02/12 06:25:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.100 2017/05/04 19:23:18 adam Exp $
 
-DISTNAME=	fontforge-dist-20160404
+DISTNAME=	fontforge-dist-20161004
 PKGNAME=	${DISTNAME:S/-dist-/-/}
-PKGREVISION=	2
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fontforge/}
 GITHUB_PROJECT=	fontforge
-GITHUB_RELEASE=	${PKGVERSION_NOREV}
+GITHUB_RELEASE=	20161005
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.github.io/
@@ -14,7 +13,7 @@ COMMENT=	Postscript font editor
 LICENSE=	modified-bsd
 
 EXTRACT_USING=	bsdtar
-WRKSRC=		${WRKDIR}/fontforge-2.0.20140101
+WRKSRC=		${WRKDIR}/fontforge-2.0.${PKGVERSION_NOREV}
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
@@ -44,7 +43,9 @@ PY_PATCHPLIST=		yes
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libspiro/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/potrace/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

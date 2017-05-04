@@ -1,5 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2016/03/07 04:43:55 dholland Exp $
-#
+# $NetBSD: hacks.mk,v 1.2 2017/05/04 19:23:18 adam Exp $
 
 # On NetBSD 7.x for a while a version of freetype2 that was supposed
 # to have ftttdrv.h was shipped without actually installing that
@@ -16,7 +15,4 @@ buildlink-freetype2-ftttdrv.h:
 	${ECHO_BUILDLINK_MSG} "Hacking around missing ftttdrv.h";	\
 	${ECHO} '#define TT_INTERPRETER_VERSION_35  35' >> "$$dest";	\
 	${ECHO} '#define TT_INTERPRETER_VERSION_38  38' >> "$$dest"
-
 .endif
-
-
