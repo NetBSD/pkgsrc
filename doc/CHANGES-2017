@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1871 2017/05/04 16:40:02 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1872 2017/05/04 17:39:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2344,3 +2344,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/php-nextcloud to 11.0.3 [ryoon 2017-05-04]
 	Updated security/putty to 0.69 [ryoon 2017-05-04]
 	Updated lang/nodejs to 7.10.0 [fhajny 2017-05-04]
+	Updated lang/gcc7 to 7.1.0nb1 [maya 2017-05-04]
