@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2021 2016/08/26 16:51:56 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2022 2017/05/04 18:30:56 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -431,16 +431,8 @@ _PATH_ORIG:=		${PATH}
 MAKEFLAGS+=		_PATH_ORIG=${_PATH_ORIG:Q}
 .endif
 
-.if !empty(PREPEND_PATH:M*)
-# This is very Special.  Because PREPEND_PATH is set with += in reverse order,
-# this command reverses the order again (since bootstrap bmake doesn't
-# yet support the :[-1..1] construct).
-_PATH_CMD= \
-	path=${_PATH_ORIG:Q};						\
-	for i in ${PREPEND_PATH}; do path="$$i:$$path"; done;		\
-	${ECHO} "$$path"
-PATH=	${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
-.endif
+_PATH_COMPONENTS=	${PREPEND_PATH:[-1..1]} ${_PATH_ORIG:C,:, ,}
+PATH=	${_PATH_COMPONENTS:ts:}
 
 ################################################################
 # Many ways to disable a package.
