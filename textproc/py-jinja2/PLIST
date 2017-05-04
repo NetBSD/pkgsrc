@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/12/15 10:44:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/05/04 18:11:09 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -15,6 +15,12 @@ ${PYSITELIB}/jinja2/_compat.pyo
 ${PYSITELIB}/jinja2/_stringdefs.py
 ${PYSITELIB}/jinja2/_stringdefs.pyc
 ${PYSITELIB}/jinja2/_stringdefs.pyo
+${PYSITELIB}/jinja2/asyncfilters.py
+${PYSITELIB}/jinja2/asyncfilters.pyc
+${PYSITELIB}/jinja2/asyncfilters.pyo
+${PYSITELIB}/jinja2/asyncsupport.py
+${PYSITELIB}/jinja2/asyncsupport.pyc
+${PYSITELIB}/jinja2/asyncsupport.pyo
 ${PYSITELIB}/jinja2/bccache.py
 ${PYSITELIB}/jinja2/bccache.pyc
 ${PYSITELIB}/jinja2/bccache.pyo
@@ -42,6 +48,9 @@ ${PYSITELIB}/jinja2/ext.pyo
 ${PYSITELIB}/jinja2/filters.py
 ${PYSITELIB}/jinja2/filters.pyc
 ${PYSITELIB}/jinja2/filters.pyo
+${PYSITELIB}/jinja2/idtracking.py
+${PYSITELIB}/jinja2/idtracking.pyc
+${PYSITELIB}/jinja2/idtracking.pyo
 ${PYSITELIB}/jinja2/lexer.py
 ${PYSITELIB}/jinja2/lexer.pyc
 ${PYSITELIB}/jinja2/lexer.pyo
