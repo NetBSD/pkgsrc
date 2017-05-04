@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1868 2017/05/04 10:43:59 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1869 2017/05/04 12:26:58 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2341,3 +2341,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/ruby-rdoc [taca 2017-05-04]
 	Updated www/py-tornado to 4.5.1 [adam 2017-05-04]
 	Updated devel/py-pexpect to 4.2.1 [adam 2017-05-04]
+	Updated www/php-nextcloud to 11.0.3 [ryoon 2017-05-04]
