@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/05/04 19:53:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/05/04 20:23:31 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -16,11 +16,11 @@ ${PYSITELIB}/jinja2/_stringdefs.py
 ${PYSITELIB}/jinja2/_stringdefs.pyc
 ${PYSITELIB}/jinja2/_stringdefs.pyo
 ${PYSITELIB}/jinja2/asyncfilters.py
-${PLIST.py3x}${PYSITELIB}/jinja2/asyncfilters.pyc
-${PLIST.py3x}${PYSITELIB}/jinja2/asyncfilters.pyo
+${PLIST.async}${PYSITELIB}/jinja2/asyncfilters.pyc
+${PLIST.async}${PYSITELIB}/jinja2/asyncfilters.pyo
 ${PYSITELIB}/jinja2/asyncsupport.py
-${PLIST.py3x}${PYSITELIB}/jinja2/asyncsupport.pyc
-${PLIST.py3x}${PYSITELIB}/jinja2/asyncsupport.pyo
+${PLIST.async}${PYSITELIB}/jinja2/asyncsupport.pyc
+${PLIST.async}${PYSITELIB}/jinja2/asyncsupport.pyo
 ${PYSITELIB}/jinja2/bccache.py
 ${PYSITELIB}/jinja2/bccache.pyc
 ${PYSITELIB}/jinja2/bccache.pyo
