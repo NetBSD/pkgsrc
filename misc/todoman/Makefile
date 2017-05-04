@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/04/27 13:09:30 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/04 22:48:24 wiz Exp $
 
 DISTNAME=	todoman-3.1.0
 CATEGORIES=	misc
@@ -21,6 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-tabulate-[0-9]*:../../textproc/py-tabulate
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 # TEST_DEPENDS
 BUILD_DEPENDS+=	${PYPKGPREFIX}-flake8-[0-9]*:../../devel/py-flake8
