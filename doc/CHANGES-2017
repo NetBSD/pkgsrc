@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1875 2017/05/04 21:20:04 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1876 2017/05/05 00:07:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2354,3 +2354,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-jupyter_client to 5.0.1 [adam 2017-05-04]
 	Updated devel/py-ipykernel to 4.6.1 [adam 2017-05-04]
 	Updated textproc/py-lxml to 3.7.3 [adam 2017-05-04]
+	Added ham/flxmlrpc version 0.1.4 [mef 2017-05-05]
