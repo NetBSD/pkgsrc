@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/03/28 13:13:54 kamil Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/05/05 23:13:05 kamil Exp $
 
 BUILDLINK_TREE+=	lldb
 
 .if !defined(LLDB_BUILDLINK3_MK)
 LLDB_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.lldb+=	lldb>=3.8.0
+BUILDLINK_API_DEPENDS.lldb+=	lldb>=4.0.0
 BUILDLINK_PKGSRCDIR.lldb?=	../../devel/lldb
 
 .include "../../textproc/libxml2/buildlink3.mk"
