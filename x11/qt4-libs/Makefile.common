@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2016/02/25 08:27:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.42 2017/05/05 17:38:00 joerg Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -62,6 +62,8 @@ QMAKE_RANLIB=		${TRUE}
 
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
+
+USE_LANGUAGES+=		c++11
 
 .include "../../mk/compiler.mk"
 
