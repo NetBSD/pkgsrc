@@ -1,26 +1,9 @@
-$NetBSD: distinfo,v 1.5 2017/03/17 22:38:17 adam Exp $
+$NetBSD: distinfo,v 1.6 2017/05/05 23:54:13 kamil Exp $
 
 SHA1 (lldb-4.0.0.src.tar.xz) = da78ed1453a5e62ff058bebf0cd91c8f51ec5504
 RMD160 (lldb-4.0.0.src.tar.xz) = a4f8d036901ae17ca0959dc4cd1064bbbbaa05af
 SHA512 (lldb-4.0.0.src.tar.xz) = 931e8c6e74b66c4ac1c56c9d067309a319aa9a9f4c72d4ed9703be3decefeb8730084ad8c3581e4e31d61cdd4074518d2ed72bacce1e689e087b2f62ad4bb2e8
 Size (lldb-4.0.0.src.tar.xz) = 19122324 bytes
 SHA1 (patch-cmake_modules_LLDBStandalone.cmake) = 8f7d06a4b3a1e996af9af4affd650291c4f01fe5
-SHA1 (patch-include_lldb_Utility_regcclass.h) = 9ed649e8deb5924feaf82a6e675f5c596367b3d6
-SHA1 (patch-include_lldb_Utility_regcname.h) = b67145f0437d3c09adc33a925d49267cd9ba4fd7
-SHA1 (patch-include_lldb_Utility_regengine.inc) = a031c43a63acab80a97cfb7727326d610d4ad9ab
-SHA1 (patch-include_lldb_Utility_regex2.h) = 822a47b1221368ec5442bfbdbc20fe4e370c1a6b
-SHA1 (patch-include_lldb_Utility_regex__impl.h) = 4d99669a756bd662ae28abc8cefe6e1538ef84b6
-SHA1 (patch-include_lldb_Utility_regutils.h) = ea36409f8cd05dcf9b81144cbc136abc5fc3a190
 SHA1 (patch-scripts_Python_finishSwigPythonLLDB.py) = 512819d31de6280ccb143ed2fe5a37ecf58265ea
 SHA1 (patch-scripts_Python_modules_readline_readline.cpp) = 4a030226c47cf7d54ebc727e92e278c163e48bf5
-SHA1 (patch-source_Utility_CMakeLists.txt) = 8cfb4acae81e10fb69d5c520ea7b40c0a42ed64e
-SHA1 (patch-source_Utility_regcomp.c) = bd315000773bab38b6fe6d119420afbcb5b83a59
-SHA1 (patch-source_Utility_regerror.c) = 6bbf8dc3f12e64515d166a475452f3f08d849ad3
-SHA1 (patch-source_Utility_regexec.c) = 6e523b4d00d74fb51d5971d415fd3d0a8323461b
-SHA1 (patch-source_Utility_regfree.c) = a3033a951c2773b5fd1209ee2a60be2e042970ee
-SHA1 (patch-source_Utility_regstrlcpy.c) = 284dc5d06d88e243fb91a1225008319b282d6fdc
-SHA1 (patch-tools_lldb-mi_MICmnBase.cpp) = 32284de30fd5e24ac2a8ca9f58004eab1ed21e60
-SHA1 (patch-tools_lldb-mi_MICmnBase.h) = 079e84091086d77dad3dbf7f232592b1ff80b8f6
-SHA1 (patch-tools_lldb-mi_MIDriver.cpp) = 8ce865888f1f9e3338a7af1fb65050d724e97773
-SHA1 (patch-tools_lldb-mi_MIUtilString.cpp) = 030554c65661c5d2b3a21637bab0746c23345dac
-SHA1 (patch-tools_lldb-mi_MIUtilString.h) = 44e6e22fa521de9bbb92833fdc9c80f1cd7e22bd
