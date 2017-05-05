@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1881 2017/05/05 06:50:29 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1882 2017/05/05 11:04:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2361,3 +2361,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/pkgconf to 1.3.5 [mef 2017-05-05]
 	Updated databases/py-ldap to 2.4.38 [adam 2017-05-05]
 	Updated databases/py-ldap3 to 2.2.3 [adam 2017-05-05]
+	Updated textproc/coccigrep to 1.16 [leot 2017-05-05]
