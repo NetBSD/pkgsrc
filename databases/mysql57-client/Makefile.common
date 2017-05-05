@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2017/04/11 20:49:15 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2017/05/05 16:22:29 jperkin Exp $
 #
 # used by databases/mysql57-client/Makefile
 # used by databases/mysql57-server/Makefile
@@ -122,6 +122,7 @@ CMAKE_ARGS+=		-DWITH_READLINE="system"
 CMAKE_ARGS+=		-DWITH_EDITLINE="system"
 .endif
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../archivers/lz4/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
