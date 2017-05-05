@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2017/05/03 12:37:01 mef Exp $
+# $NetBSD: Makefile.common,v 1.59 2017/05/05 16:22:29 jperkin Exp $
 #
 # used by databases/mysql55-client/Makefile
 # used by databases/mysql55-server/Makefile
@@ -131,6 +131,7 @@ CMAKE_ARGS+=	-DREADLINE_FOUND=system
 .endif
 CMAKE_ARGS+=	-DREADLINE_INCLUDE_DIR=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
