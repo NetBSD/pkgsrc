@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/05/03 08:38:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2017/05/05 18:12:24 joerg Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -34,7 +34,6 @@ CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
 CMAKE_ARGS+=	-DCMAKE_CXX_LINK_FLAGS=${LDFLAGS:Q}
 CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
-CMAKE_ARGS+=	-DLLVM_INCLUDE_TESTS=OFF
 CMAKE_ARGS+=	-DLLVM_INSTALL_UTILS=ON
 CMAKE_ARGS+=	-DLLVM_LINK_LLVM_DYLIB=ON
 
