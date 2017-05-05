@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1880 2017/05/05 01:56:08 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1881 2017/05/05 06:50:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2359,3 +2359,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Deep to 1.127 [mef 2017-05-05]
 	Updated devel/pkg-config to 0.29.2 [mef 2017-05-05]
 	Updated devel/pkgconf to 1.3.5 [mef 2017-05-05]
+	Updated databases/py-ldap to 2.4.38 [adam 2017-05-05]
+	Updated databases/py-ldap3 to 2.2.3 [adam 2017-05-05]
