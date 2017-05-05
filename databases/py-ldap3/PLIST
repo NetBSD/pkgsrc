@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/12/04 21:12:59 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/05 06:50:01 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -58,12 +58,18 @@ ${PYSITELIB}/ldap3/extend/__init__.pyo
 ${PYSITELIB}/ldap3/extend/microsoft/__init__.py
 ${PYSITELIB}/ldap3/extend/microsoft/__init__.pyc
 ${PYSITELIB}/ldap3/extend/microsoft/__init__.pyo
+${PYSITELIB}/ldap3/extend/microsoft/addMembersToGroups.py
+${PYSITELIB}/ldap3/extend/microsoft/addMembersToGroups.pyc
+${PYSITELIB}/ldap3/extend/microsoft/addMembersToGroups.pyo
 ${PYSITELIB}/ldap3/extend/microsoft/dirSync.py
 ${PYSITELIB}/ldap3/extend/microsoft/dirSync.pyc
 ${PYSITELIB}/ldap3/extend/microsoft/dirSync.pyo
 ${PYSITELIB}/ldap3/extend/microsoft/modifyPassword.py
 ${PYSITELIB}/ldap3/extend/microsoft/modifyPassword.pyc
 ${PYSITELIB}/ldap3/extend/microsoft/modifyPassword.pyo
+${PYSITELIB}/ldap3/extend/microsoft/removeMembersFromGroups.py
+${PYSITELIB}/ldap3/extend/microsoft/removeMembersFromGroups.pyc
+${PYSITELIB}/ldap3/extend/microsoft/removeMembersFromGroups.pyo
 ${PYSITELIB}/ldap3/extend/microsoft/unlockAccount.py
 ${PYSITELIB}/ldap3/extend/microsoft/unlockAccount.pyc
 ${PYSITELIB}/ldap3/extend/microsoft/unlockAccount.pyo
@@ -202,6 +208,9 @@ ${PYSITELIB}/ldap3/protocol/rfc4511.pyo
 ${PYSITELIB}/ldap3/protocol/rfc4512.py
 ${PYSITELIB}/ldap3/protocol/rfc4512.pyc
 ${PYSITELIB}/ldap3/protocol/rfc4512.pyo
+${PYSITELIB}/ldap3/protocol/rfc4527.py
+${PYSITELIB}/ldap3/protocol/rfc4527.pyc
+${PYSITELIB}/ldap3/protocol/rfc4527.pyo
 ${PYSITELIB}/ldap3/protocol/sasl/__init__.py
 ${PYSITELIB}/ldap3/protocol/sasl/__init__.pyc
 ${PYSITELIB}/ldap3/protocol/sasl/__init__.pyo
@@ -214,6 +223,9 @@ ${PYSITELIB}/ldap3/protocol/sasl/external.pyo
 ${PYSITELIB}/ldap3/protocol/sasl/kerberos.py
 ${PYSITELIB}/ldap3/protocol/sasl/kerberos.pyc
 ${PYSITELIB}/ldap3/protocol/sasl/kerberos.pyo
+${PYSITELIB}/ldap3/protocol/sasl/plain.py
+${PYSITELIB}/ldap3/protocol/sasl/plain.pyc
+${PYSITELIB}/ldap3/protocol/sasl/plain.pyo
 ${PYSITELIB}/ldap3/protocol/sasl/sasl.py
 ${PYSITELIB}/ldap3/protocol/sasl/sasl.pyc
 ${PYSITELIB}/ldap3/protocol/sasl/sasl.pyo
