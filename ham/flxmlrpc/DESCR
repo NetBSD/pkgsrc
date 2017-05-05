@@ -1,0 +1,8 @@
+This is flxmlrpc, an implementation of the XmlRpc protocol
+written in C++, based upon XmlRpc++0.7 and modified to provide additional XmlRpc
+Variable types.  It is used in fldigi, flrig, flnet, flmsg, flarq, flamp, fllog;
+a suite of programs written for amateur radio emergency communications.
+
+flxmlrpc is designed to make it easy to incorporate xmlrpc client and server
+support into C++ applications. Or use both client and server objects in your
+application for easy peer-to-peer support.
