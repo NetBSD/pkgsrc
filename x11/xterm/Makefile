@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2016/10/09 21:05:16 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2017/05/05 16:28:13 jperkin Exp $
 
 DISTNAME=	xterm-327
 CATEGORIES=	x11
@@ -58,6 +58,7 @@ post-install:
 .include "options.mk"
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
