@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1878 2017/05/05 00:16:07 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1879 2017/05/05 01:19:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2357,3 +2357,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added ham/flxmlrpc version 0.1.4 [mef 2017-05-05]
 	Updated ham/fldigi to 4.0.3 [mef 2017-05-05]
 	Updated devel/p5-Test-Deep to 1.127 [mef 2017-05-05]
+	Updated devel/pkg-config to 0.29.2 [mef 2017-05-05]
