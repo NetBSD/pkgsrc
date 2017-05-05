@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/05 00:05:40 mef Exp $
+include/flxmlrpc/XmlRpc.h
+include/flxmlrpc/XmlRpcBase64.h
+include/flxmlrpc/XmlRpcClient.h
+include/flxmlrpc/XmlRpcDispatch.h
+include/flxmlrpc/XmlRpcException.h
+include/flxmlrpc/XmlRpcMutex.h
+include/flxmlrpc/XmlRpcServer.h
+include/flxmlrpc/XmlRpcServerConnection.h
+include/flxmlrpc/XmlRpcServerMethod.h
+include/flxmlrpc/XmlRpcSocket.h
+include/flxmlrpc/XmlRpcSource.h
+include/flxmlrpc/XmlRpcUtil.h
+include/flxmlrpc/XmlRpcValue.h
+lib/libflxmlrpc.la
+lib/pkgconfig/flxmlrpc.pc
