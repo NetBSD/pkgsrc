@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/05/05 21:46:50 kamil Exp $
+# $NetBSD: Makefile,v 1.22 2017/05/05 23:13:05 kamil Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -8,6 +8,10 @@
 # lang/clang-static-analyzer
 # lang/libLLVM
 # lang/libunwind
+#
+# Always update all */buildlink3.mk to require the latest stable release
+# version in BUILDLINK_API_DEPENDS, as there is no backwards compatibility
+#
 
 DISTNAME=	llvm-4.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
