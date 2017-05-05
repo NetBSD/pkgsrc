@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/08/31 06:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/05/05 01:55:56 mef Exp $
 
-DISTNAME=	pkgconf-1.0.1
+DISTNAME=	pkgconf-1.3.5
 CATEGORIES=	devel
 MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/
-#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	nico@orgrim.net
 HOMEPAGE=	https://github.com/pkgconf/pkgconf
@@ -30,6 +29,6 @@ PKGCONFIG_PATHS+=	${X11BASE}/lib/pkgconfig
 CONFIGURE_ARGS+=	--with-pkg-config-dir='${PKGCONFIG_PATHS:ts::Q}'
 
 post-install:
-	${LN} -s ${PREFIX}/bin/pkgconf ${DESTDIR}${PREFIX}/bin/pkg-config
+	${LN} -s ${DESTDIR}${PREFIX}/bin/pkgconf ${DESTDIR}${PREFIX}/bin/pkg-config
 
 .include "../../mk/bsd.pkg.mk"
