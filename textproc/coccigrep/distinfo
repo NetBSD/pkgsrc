@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:59:26 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/05/05 11:04:15 leot Exp $
 
-SHA1 (coccigrep-1.13.tar.gz) = 32944a4d4db2bbe834728c7e7bab5bb07f09aabf
-RMD160 (coccigrep-1.13.tar.gz) = 875649eda66099f9b88f63ccd20729d41a56bce8
-SHA512 (coccigrep-1.13.tar.gz) = 14b19ce75b2e93f27ea0148ebcbbc08b8763318c12ea0d7c7579bc63e5319d72874c537e1e4bdd6b1f9918a3dd7117d0dd2b389ef98210307609f4511e3843be
-Size (coccigrep-1.13.tar.gz) = 33737 bytes
+SHA1 (coccigrep-1.16.tar.gz) = 4232bd9fec64282f96784bb2f26173b076e19cef
+RMD160 (coccigrep-1.16.tar.gz) = ab9d0093860ed509be22d9fa1faba1a53cd6d5b2
+SHA512 (coccigrep-1.16.tar.gz) = 113c308fd05af6ec8765b719ad4eef9d6c39e123c011aedcd0d3f10782b06f3b94e1c8b5e0c609270441d60ef295ab721a40145cc2fe3ebc11afed348f39b269
+Size (coccigrep-1.16.tar.gz) = 32622 bytes

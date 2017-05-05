@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2017/01/01 14:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/05/05 11:04:15 leot Exp $
 
-DISTNAME=	coccigrep-1.13
+DISTNAME=	coccigrep-1.16
 CATEGORIES=	textproc
-MASTER_SITES=	http://home.regit.org/wp-content/uploads/2011/08/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=regit/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.regit.org/software/coccigrep/
@@ -14,8 +15,6 @@ DEPENDS=	coccinelle-[0-9]*:../../devel/coccinelle
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.12
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/coccigrep.1 \
