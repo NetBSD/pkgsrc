@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/10/13 13:49:43 mef Exp $
+# $NetBSD: Makefile,v 1.37 2017/05/05 00:07:40 mef Exp $
 #
 
 COMMENT=	Wireless communication tools and applications
@@ -9,6 +9,7 @@ SUBDIR+=	cwtext
 SUBDIR+=	dpbox
 SUBDIR+=	fl_logbook
 SUBDIR+=	fldigi
+SUBDIR+=	flxmlrpc
 SUBDIR+=	freedv
 SUBDIR+=	gmfsk
 SUBDIR+=	gnuradio-atsc
