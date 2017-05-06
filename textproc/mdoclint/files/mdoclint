@@ -1,7 +1,7 @@
 #!@PERL5@
 #
 # $OpenBSD: mdoclint,v 1.48 2016/01/24 20:10:48 schwarze Exp $
-# $NetBSD: mdoclint,v 1.64 2017/01/25 09:17:06 wiz Exp $
+# $NetBSD: mdoclint,v 1.64.2.1 2017/05/06 15:12:53 bsiegert Exp $
 #
 # Copyright (c) 2001-2017 Thomas Klausner
 # All rights reserved.
@@ -610,7 +610,7 @@ sub process_line
 		$s->warning("Invalid date found: `$_'") if $opt_d;
 	}
 
-	if (/^\.Bd\b.*-literal\b/o) {
+	if (/^\.Bd\b.*-(?:literal|unfilled)\b/o) {
 		$s->{inliteral} = 1;
 	}
 	if ($s->{inliteral} == 1) {
