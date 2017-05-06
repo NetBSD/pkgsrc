@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1889 2017/05/06 08:22:33 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1890 2017/05/06 13:49:31 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/Hasklig to 1.1 [mef 2017-05-06]
 	Updated graphics/flickrnet to 3.24.0 [mef 2017-05-06]
 	Updated mbone/rtptools to 1.21 [mef 2017-05-06]
+	Updated x11/mlterm to 3.8.1 [tsutsui 2017-05-06]
