@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/20 11:39:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/05/06 01:06:43 mef Exp $
 
-SHA1 (Hasklig-0.9.zip) = 302cbadc039d8b8144d533673322f15ac4fe0244
-RMD160 (Hasklig-0.9.zip) = 9f08b1463e6d92f1978c8161f7e2da46b0580264
-SHA512 (Hasklig-0.9.zip) = 841dfff305221eb0bf298a88b806e2b1b459c4580be1ea31a4932e86a9a2f3bb30ef5bea7396a2695ac742015e9f2cbe867e36ab1073ee2eb6c74777c29467b3
-Size (Hasklig-0.9.zip) = 1201991 bytes
+SHA1 (Hasklig-1.1.zip) = 46726f11c6b8a91f4c3cbf6ef8b0ffb38cfb2c22
+RMD160 (Hasklig-1.1.zip) = 0c50743ebd172b69db9a972c0db95c7ea08bf664
+SHA512 (Hasklig-1.1.zip) = 7621747399c1155faf3f1ba5c73dc4ce829141730fd22c58e97e2f3acf79a45b49dc1cf314af80226dbf3bfbf9a38ceb2de812b46a5d424b6181582429bcc081
+Size (Hasklig-1.1.zip) = 1308041 bytes
