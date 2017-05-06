@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2017/02/04 16:20:12 tsutsui Exp $
+# $NetBSD: options.mk,v 1.14 2017/05/06 13:48:39 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
 PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
@@ -116,6 +116,9 @@ CONFIGURE_ARGS+=	--disable-wnn
 .if !empty(PKG_OPTIONS:Mxft2)
 .include "../../x11/libXft/buildlink3.mk"
 PLIST.xft2=		yes
+CONFIGURE_ARGS+=	--enable-fontconfig
+.else
+CONFIGURE_ARGS+=	--disable-fontconfig
 .endif
 
 .if !empty(PKG_OPTIONS:Mcairo) && !empty(PKG_OPTIONS:Mxft2)
