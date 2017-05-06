@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/05/05 22:56:37 kamil Exp $
+# $NetBSD: Makefile,v 1.9 2017/05/06 01:38:43 kamil Exp $
 
 DISTNAME=	lldb-4.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
