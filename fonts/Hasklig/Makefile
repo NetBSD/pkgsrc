@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/20 11:39:41 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/06 01:06:43 mef Exp $
 
-DISTNAME=	Hasklig-0.9
+DISTNAME=	Hasklig-1.1
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=i-tu/}
 GITHUB_RELEASE=	${DISTNAME:S/Hasklig-//}
