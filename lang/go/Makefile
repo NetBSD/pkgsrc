@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49.2.1 2017/04/29 19:32:54 bsiegert Exp $
+# $NetBSD: Makefile,v 1.49.2.2 2017/05/06 15:19:40 bsiegert Exp $
 
 .include "version.mk"
 
 DISTNAME=	go${GO_VERSION}.src
 PKGNAME=	go-${GO_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 
@@ -83,12 +83,6 @@ PLIST_VARS+=	route
 .if ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PLIST.route=	yes
 .endif
-
-pre-build:
-	cd ${WRKSRC}/src/syscall && \
-		env GOOS=${LOWER_OPSYS:Q} GOARCH=${GOARCH:Q} \
-		${PERL5} mksyscall_solaris.pl \
-		syscall_solaris.go syscall_solaris_amd64.go > zsyscall_solaris_amd64.go
 
 do-build:
 	cd ${WRKSRC}/src && env GOROOT_BOOTSTRAP=${GOROOT_BOOTSTRAP:Q} GOROOT_FINAL=${GOROOT_FINAL:Q} ${BASH} ./make.bash
