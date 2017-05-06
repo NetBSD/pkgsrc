@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/03/17 22:38:17 adam Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/06 01:38:43 kamil Exp $
 
 DISTNAME=	polly-4.0.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 CONFIGURE_DIRS=		${WRKDIR}/build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 
