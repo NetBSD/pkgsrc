@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.118 2017/03/05 14:55:15 wiz Exp $
+# $NetBSD: Makefile,v 1.118.2.1 2017/05/06 15:11:39 bsiegert Exp $
 
-DISTNAME=		tor-0.2.9.10
+DISTNAME=		tor-0.3.0.6
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
@@ -9,12 +9,8 @@ HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 LICENSE=		modified-bsd
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
-# https://trac.torproject.org/projects/tor/ticket/17818
-USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		CPP=${CPP:Q}
@@ -51,6 +47,8 @@ FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
 CHECK_PORTABILITY_SKIP+=contrib/*
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 CFLAGS+=		-c99
