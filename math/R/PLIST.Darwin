@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.4 2016/08/15 09:36:31 jperkin Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.4.6.1 2017/05/06 15:33:36 bsiegert Exp $
 @comment 
 @comment The configure script has explicit check for darwin and sets
 @comment   --with-internal-tzcode=yes
@@ -252,6 +252,7 @@ lib/R/share/zoneinfo/Asia/Aqtau
 lib/R/share/zoneinfo/Asia/Aqtobe
 lib/R/share/zoneinfo/Asia/Ashgabat
 lib/R/share/zoneinfo/Asia/Ashkhabad
+lib/R/share/zoneinfo/Asia/Atyrau
 lib/R/share/zoneinfo/Asia/Baghdad
 lib/R/share/zoneinfo/Asia/Bahrain
 lib/R/share/zoneinfo/Asia/Baku
@@ -272,6 +273,7 @@ lib/R/share/zoneinfo/Asia/Dhaka
 lib/R/share/zoneinfo/Asia/Dili
 lib/R/share/zoneinfo/Asia/Dubai
 lib/R/share/zoneinfo/Asia/Dushanbe
+lib/R/share/zoneinfo/Asia/Famagusta
 lib/R/share/zoneinfo/Asia/Gaza
 lib/R/share/zoneinfo/Asia/Harbin
 lib/R/share/zoneinfo/Asia/Hebron
@@ -337,6 +339,7 @@ lib/R/share/zoneinfo/Asia/Ust-Nera
 lib/R/share/zoneinfo/Asia/Vientiane
 lib/R/share/zoneinfo/Asia/Vladivostok
 lib/R/share/zoneinfo/Asia/Yakutsk
+lib/R/share/zoneinfo/Asia/Yangon
 lib/R/share/zoneinfo/Asia/Yekaterinburg
 lib/R/share/zoneinfo/Asia/Yerevan
 lib/R/share/zoneinfo/Atlantic/Azores
@@ -476,6 +479,7 @@ lib/R/share/zoneinfo/Europe/Rome
 lib/R/share/zoneinfo/Europe/Samara
 lib/R/share/zoneinfo/Europe/San_Marino
 lib/R/share/zoneinfo/Europe/Sarajevo
+lib/R/share/zoneinfo/Europe/Saratov
 lib/R/share/zoneinfo/Europe/Simferopol
 lib/R/share/zoneinfo/Europe/Skopje
 lib/R/share/zoneinfo/Europe/Sofia
