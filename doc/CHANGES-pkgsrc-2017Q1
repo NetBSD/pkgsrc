@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.19 2017/05/01 10:05:18 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.20 2017/05/06 15:44:15 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -412,4 +412,35 @@ net/vnc: build fix
 
 Pullup ticket #5392 - requested by sevan
 lang/go: build fix
+
+Pullup ticket #5399 - requested by sevan
+graphics/tiff: security fix
+
+Pullup ticket #5404 - requested by sevan
+graphics/tiff: security fix
+
+Pullup ticket #5393 - requested by sevan
+net/tor: point update (ensure package remains functional)
+
+Pullup ticket #5394 - requested by sevan
+textproc/mdoclint: bugfix
+
+Pullup ticket #5395 - requested by sevan
+net/xymon: build fix
+
+Pullup ticket #5396 - requested by sevan
+lang/go: bugfix
+
+Pullup ticket #5400 - requested by sevan
+devel/glib2: build fix
+
+Pullup ticket #5401 - requested by sevan
+devel/swig: build fix
+devel/swig2: build fix
+
+Pullup ticket #5402 - requested by sevan
+devel/splint: build fix
+
+Pullup ticket #5403 - requested by sevan
+math/R: build fix for Darwin
 
