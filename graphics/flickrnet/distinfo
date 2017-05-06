@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/12/31 08:55:48 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2017/05/06 04:39:31 mef Exp $
 
-SHA1 (FlickrNet-3.17.0.tar.gz) = a133ab86ec89c3d180fdf6aa660eaba67f16fc1e
-RMD160 (FlickrNet-3.17.0.tar.gz) = 4adeea6dc1204a3e526861cbd8f908861730e60d
-SHA512 (FlickrNet-3.17.0.tar.gz) = b97701e810e19d61107dce03f58653fdbb18e587758a105615d0ceecbf9da9fa18a46ce29fba41a526f5bc533ec3e94bac5a570d6550842a648f33548ea4325d
-Size (FlickrNet-3.17.0.tar.gz) = 750911 bytes
+SHA1 (FlickrNet-3.24.0.tar.gz) = 8e82555c3c9d1780501032d41c8815c40248ada8
+RMD160 (FlickrNet-3.24.0.tar.gz) = e2f13422133a42e257cc65d087713acd5e18eb1b
+SHA512 (FlickrNet-3.24.0.tar.gz) = 6c0625cba6c17dae388b752d5b7e41dc1147eb5dfe738686e7a5c1aa3e6d9c600e1e401fde4249f86735a9de8fec76993d12ce4c9aed43727b8951c74a70e8df
+Size (FlickrNet-3.24.0.tar.gz) = 755984 bytes
 SHA1 (patch-flickrnet.pc) = bb019f00f08f7b05f43a8d2bf37b9e19d0fcbcaa
