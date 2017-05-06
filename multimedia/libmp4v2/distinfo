@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2017/04/26 14:38:30 maya Exp $
+$NetBSD: distinfo,v 1.15 2017/05/06 18:12:00 maya Exp $
 
 SHA1 (mpeg4ip-1.6.1.tar.gz) = 2af97fc0da6a5c0bcb7b433c6715967487b80e38
 RMD160 (mpeg4ip-1.6.1.tar.gz) = ee8375d9581cccbbf685f730bb36f3866eaf12f7
@@ -25,5 +25,21 @@ SHA1 (patch-as) = 4025cd8e0407c851fa7f8d95e4188bd09dc66711
 SHA1 (patch-at) = ce3dfb958e5a5c46e01b8514b412277be01e40d4
 SHA1 (patch-au) = f3eee9942c4f5ad716634edfa9535c8c9fda73ba
 SHA1 (patch-av) = 3b25351b26124c9a546c09d55900fe8df3224f6d
-SHA1 (patch-common_video_iso-mpeg4_src_type__basic.cpp) = 0a83438ab4666a0284879b7fe994a58ba945de47
+SHA1 (patch-common_video_iso-mpeg4_include_basic.hpp) = 457aa492ef05abf0af8a17fea202ae18c28f1cc3
+SHA1 (patch-common_video_iso-mpeg4_src_type__basic.cpp) = 01f8b446af8cd7f012d2837bdbb13d13e4e6ac93
 SHA1 (patch-doc_mp4v2_MP4.3) = e799c63f63cdb1d360077b6f1410a081c1a49c5a
+SHA1 (patch-lib_mp4_ctts.c) = c4d9b1df5b5940e4a0fbed37c0b52d330db9b310
+SHA1 (patch-lib_mp4_funcprotos.h) = 4a6ae557af14ca352bf8b712e52f91243a5f2ed4
+SHA1 (patch-lib_mp4_hinthnti.c) = bbb4f2f7e0b3401668f756252b91109f47382cbf
+SHA1 (patch-lib_mp4_hintudta.c) = d567138632559d1dd9311a2868ebc29416be918b
+SHA1 (patch-lib_mp4_hnti.c) = 21b1abf140368a8ff48b656e5b7c1297e95ac1c9
+SHA1 (patch-lib_mp4_rtp.c) = 903209c21444a788583be1fa27393c909fbbf65c
+SHA1 (patch-lib_mp4_sdp.c) = 9c9e18d84d151ca632c25c9aa52685d476e6435f
+SHA1 (patch-lib_mp4_tref.c) = c67a0a7b6fb5079736ef8f5e5aaa3628badecfdd
+SHA1 (patch-lib_mp4_udta.c) = af025f404668d1bc02861620b79d6a56fbe18295
+SHA1 (patch-lib_mp4v2_atom__standard.cpp) = 27a2bac270ac4a1fd5169d89d312690a4dcb58ab
+SHA1 (patch-lib_mp4v2_mp4atom.cpp) = ad0a1006293d8bea250de695919d8cdc59a7a4fa
+SHA1 (patch-lib_rtp_net__udp.c) = 3250d0ebcc0899ec4521eb20bc83f6e8a8bce3c9
+SHA1 (patch-player_lib_audio_faad_config.c) = 6448e02ed9f95fc94bca986958ac61c0bf0ec752
+SHA1 (patch-player_lib_audio_faad_huffdec.c) = 1106e902c3fe95cb76009613ae6641339580adac
+SHA1 (patch-player_lib_audio_faad_monopred.c) = 0833f17e10f91b69c63c896c15e98471c62f3025
