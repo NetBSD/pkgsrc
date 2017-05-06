@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9.16.1 2017/05/06 15:29:59 bsiegert Exp $
 
 DISTNAME=	swig-2.0.12
 PKGNAME=	${DISTNAME:S/swig-/swig2-/}
@@ -44,6 +44,7 @@ GNU_CONFIGURE=		yes
 INSTALLATION_DIRS+=	share/doc/swig/2.0 share/examples/swig/2.0
 
 CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
+CHECK_WRKREF_SKIP+=		share/examples/swig/*
 
 # configure fails to generate this on NetBSD
 LDFLAGS+=	-lpcre
