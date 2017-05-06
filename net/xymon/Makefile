@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/02/12 06:25:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2017/05/06 15:18:43 bsiegert Exp $
 #
 
 DISTNAME=		xymon-4.3.27
@@ -176,10 +176,10 @@ CFILES2=		critical.cfg critical.cfg.bak
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR.xymon}/${file} ${XYMONUSER} ${XYMONGROUP} 0664
 .endfor
 
-SECCGIFILES=		ackinfo.sh acknowledge.sh criticaleditor.sh
-SECCGIFILES+=		enadis.sh useradm.sh
+SECCGIFILES=		ackinfo.cgi acknowledge.cgi criticaleditor.cgi
+SECCGIFILES+=		enadis.cgi useradm.cgi
 .for file in ${SECCGIFILES}
-SPECIAL_PERMS+=		${SECCGIDIR}/${file} ${XYMONUSER} ${XYMONGROUP} 0400
+SPECIAL_PERMS+=		${SECCGIDIR}/../${file} ${XYMONUSER} ${XYMONGROUP} 0400
 .endfor
 
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM:Q}
