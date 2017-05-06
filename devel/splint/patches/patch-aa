@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/03/03 08:58:23 rillig Exp $
+$NetBSD: patch-aa,v 1.3.66.1 2017/05/06 15:32:43 bsiegert Exp $
 
 Some systems don't have <stdbool.h>.
 
@@ -9,7 +9,7 @@ Some systems don't have <stdbool.h>.
  # include <stdio.h>
  
 -# if !defined (WIN32) &&  !(defined (OS2) && defined (__IBMC__))
-+# if !defined (WIN32) &&  !(defined (OS2) && defined (__IBMC__)) && !(defined(__GNUC__) && (__GNUC__ == 2)) && !(defined(__sun) && !(__STDC_VERSION__ >= 199901L))
++# if (__STDC_VERSION__ >= 199901L)
  /* Microsoft VC++ still doesn't support ISO C99... */
  # include <stdbool.h>
  # endif
