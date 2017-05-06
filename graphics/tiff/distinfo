@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.75 2017/05/05 20:14:05 sevan Exp $
+$NetBSD: distinfo,v 1.76 2017/05/06 20:34:40 he Exp $
 
 SHA1 (tiff-4.0.7.tar.gz) = 2c1b64478e88f93522a42dd5271214a0e5eae648
 RMD160 (tiff-4.0.7.tar.gz) = 582e19c31e7f29d9ed36995dcad7ad68802cbadb
@@ -17,5 +17,6 @@ SHA1 (patch-libtiff_tif_unix.c) = c8312771e567f90de0f77ac8eb66ed5c36e35617
 SHA1 (patch-libtiff_tif_win32.c) = 1ea9dcb6618c40b9de3e8d2a81914355f2111fdc
 SHA1 (patch-libtiff_tiffio.h) = e0efa9e1246e07dbb3a69d626988a18f12ba9d3c
 SHA1 (patch-man_Makefile.in) = ff073529c9d3ab98a03efa7d98c3263c1782482f
+SHA1 (patch-tools_tiff2pdf.c) = ce7a3e77c27ad3cabaa33b5da61cbd1b27f187d1
 SHA1 (patch-tools_tiffcp.c) = 42573d15fc66655a09e9227213b0929238f7e651
 SHA1 (patch-tools_tiffcrop.c) = 1d729028fb8c05de958424234d5cc2808acc9b25
