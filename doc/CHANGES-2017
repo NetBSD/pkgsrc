@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1891 2017/05/06 18:20:17 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1892 2017/05/06 21:04:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2371,3 +2371,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mbone/rtptools to 1.21 [mef 2017-05-06]
 	Updated x11/mlterm to 3.8.1 [tsutsui 2017-05-06]
 	Updated multimedia/libmp4v2 to 1.6.1nb5 [maya 2017-05-06]
+	Updated graphics/tiff to 4.0.7nb5 [sevan 2017-05-06]
+	Updated graphics/tiff to 4.0.7nb6 [he 2017-05-06]
+	Updated graphics/tiff to 4.0.7nb7 [he 2017-05-06]
