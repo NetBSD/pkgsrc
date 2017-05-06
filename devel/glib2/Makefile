@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.231 2016/08/21 21:47:29 prlw1 Exp $
+# $NetBSD: Makefile,v 1.231.6.1 2017/05/06 15:29:10 bsiegert Exp $
 
 .include "Makefile.common"
 
@@ -26,8 +26,8 @@ FILES_SUBST+=		GLIB_SCHEMAS_DIR=${PREFIX}/share/glib-2.0/schemas
 # gtester is the glib unit testing and reporting framework
 # agc doesn't want glib2 to depend on python so we install it
 # in a broken and useless state.
-CHECK_INTERPRETER_SKIP+=	bin/gtester-report
-CHECK_INTERPRETER_SKIP+=	bin/gdbus-codegen
+CHECK_INTERPRETER_SKIP+=	bin/gdbus-codegen bin/gtester-report
+CHECK_WRKREF_SKIP+=		bin/gdbus-codegen bin/gtester-report
 
 # need pcre utf8 + unicode-properties
 BUILDLINK_API_DEPENDS.pcre+=	pcre>=8.31
