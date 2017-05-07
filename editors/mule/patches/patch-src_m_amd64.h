@@ -1,10 +1,10 @@
-$NetBSD: patch-src_m_amd64.h,v 1.2 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-src_m_amd64.h,v 1.3 2017/05/07 06:49:23 tsutsui Exp $
 
 amd64 support.
 
---- src/m/amd64.h.orig	2011-12-24 14:41:29.000000000 +0000
+--- src/m/amd64.h.orig	2017-05-06 21:49:54.000000000 +0000
 +++ src/m/amd64.h
-@@ -0,0 +1,156 @@
+@@ -0,0 +1,161 @@
 +/* machine description file for AMD x86-64.
 +   Copyright (C) 2002 Free Software Foundation, Inc.
 +
@@ -43,6 +43,8 @@ amd64 support.
 +/* Define the number of bits compose Lisp_Object. The default is 32. */
 +
 +#define LISP_OBJECT_BITS 64
++
++#define PNTR_COMPARISON_TYPE unsigned long
 +
 +/* The following line tells the configuration script what sort of 
 +   operating system this machine is likely to run.
@@ -155,6 +157,9 @@ amd64 support.
 +/* Define XPNTR to avoid or'ing with DATA_SEG_BITS */
 +
 +#define XPNTR(a) XUINT (a)
++
++/* Define XMARKBIT to avoid a dumb optimization using sign bit */
++#define XMARKBIT(a) ((a) & MARKBIT)
 +
 +/* #undef START_FILES */ /* XXX */
 +/* #define START_FILES pre-crt0.o /usr/lib64/crt1.o /usr/lib64/crti.o */ /* XXX */

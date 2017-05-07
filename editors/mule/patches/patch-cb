@@ -1,4 +1,4 @@
-$NetBSD: patch-cb,v 1.3 2013/04/21 15:39:59 joerg Exp $
+$NetBSD: patch-cb,v 1.4 2017/05/07 06:49:23 tsutsui Exp $
 
 - use standard headers
 - don't declare own errno
@@ -14,7 +14,15 @@ $NetBSD: patch-cb,v 1.3 2013/04/21 15:39:59 joerg Exp $
  
  #include "lisp.h"
  #include "termchar.h"
-@@ -2047,7 +2049,6 @@ SIGTYPE
+@@ -71,6 +73,7 @@ the Free Software Foundation, 675 Mass A
+ #include "dispextern.h"
+ #endif
+ #include "buffer.h"
++#include "process.h"
+ #include "frame.h"
+ #include "window.h"
+ #include "commands.h"
+@@ -2047,7 +2050,6 @@ SIGTYPE
  window_change_signal ()
  {
    int width, height;
@@ -22,7 +30,7 @@ $NetBSD: patch-cb,v 1.3 2013/04/21 15:39:59 joerg Exp $
    int old_errno = errno;
  
    get_frame_size (&width, &height);
-@@ -2111,9 +2112,7 @@ do_pending_window_change ()
+@@ -2111,9 +2113,7 @@ do_pending_window_change ()
     redisplay.  Since this tries to resize windows, we can't call it
     from a signal handler.  */
  
@@ -33,7 +41,7 @@ $NetBSD: patch-cb,v 1.3 2013/04/21 15:39:59 joerg Exp $
  {
    /* If we can't deal with the change now, queue it for later.  */
    if (delay)
-@@ -2451,7 +2450,7 @@ char *terminal_type;
+@@ -2451,7 +2451,7 @@ char *terminal_type;
  /* Then invoke its decoding routine to set up variables
    in the terminal package */
  
