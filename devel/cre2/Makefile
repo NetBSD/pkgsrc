@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2017/05/03 08:38:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/05/07 03:13:24 mef Exp $
 
-DISTNAME=	cre2
-PKGNAME=	cre2-0.1b6
+VERSION=	0.3.4
+DISTNAME=	cre2-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marcomaggi/}
-GITHUB_TAG=	0.1b6
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/google/re2
