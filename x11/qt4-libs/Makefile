@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2017/05/05 17:38:00 joerg Exp $
+# $NetBSD: Makefile,v 1.118 2017/05/07 21:19:47 joerg Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 PKGREVISION=	6
@@ -27,13 +27,6 @@ CONFIGURE_ARGS+=	-no-sql-sqlite
 CONFIGURE_ARGS+=	-openssl-linked
 
 CONFIGURE_ARGS+=	-iconv
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-c++11-narrowing
-.  if empty(MACHINE_PLATFORM:MDarwin-*-*)
-CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
-.  endif
-.endif
 
 INSTALLATION_DIRS=	lib/pkgconfig
 INSTALLATION_DIRS+=	${QTPREFIX}/bin
