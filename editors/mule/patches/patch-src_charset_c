@@ -1,10 +1,16 @@
-$NetBSD: patch-src_charset_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
+$NetBSD: patch-src_charset_c,v 1.2 2017/05/07 06:49:23 tsutsui Exp $
 
 - use standard headers
 
---- src/charset.c~	1995-07-18 11:35:56.000000000 +0000
+--- src/charset.c.orig	1995-07-18 11:35:56.000000000 +0000
 +++ src/charset.c
-@@ -73,6 +73,7 @@ the Free Software Foundation, 675 Mass A
+@@ -68,11 +68,13 @@ the Free Software Foundation, 675 Mass A
+ 	Bug in charwidth() fixed. */
+ 
+ #include <stdio.h>
++#include <strings.h>
+ 
+ #ifdef emacs
  #include <sys/types.h>
  #include <config.h>
  #else  /* not emacs */
@@ -12,3 +18,26 @@ $NetBSD: patch-src_charset_c,v 1.1 2011/12/24 17:07:07 dholland Exp $
  #define xmalloc (void *)malloc
  #define xrealloc (void *)realloc
  #endif /* emacs */
+@@ -117,10 +119,14 @@ unsigned char lc_table[4][128];
+    but reverse DIRECTION. */
+ unsigned char rev_lc_table[256];
+ 
++int mchar_to_string(unsigned int, unsigned char *);
++void update_mc_table(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, char *, char *);
++
+ /* 93.5.27 by K.Handa
+    Use macro CHARtoSTR (c,str) instead of calling mchar_to_string() directly.
+ */
+ /* 92.1.16 by K.Handa */
++int
+ mchar_to_string (c, str)
+      register unsigned int c;
+      register unsigned char *str;
+@@ -194,6 +200,7 @@ string_to_mchar (str, size)
+ /* end of patch */
+ 
+ /* Add direction, 92.8.2 Y.Niibe */
++void
+ update_mc_table(lc, bytes, clm, type, graphic, final, direction, doc, reg)
+      unsigned char lc, bytes, clm, type, graphic, final, direction;
+      char *doc, *reg;
