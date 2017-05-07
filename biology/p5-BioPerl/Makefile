@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/05/07 13:57:12 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/07 15:09:38 mef Exp $
 
 DISTNAME=	BioPerl-1.007001
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,10 @@ HOMEPAGE=	http://search.cpan.org/~cjfields/BioPerl/Bio/Perl.pm
 COMMENT=	Functional access to BioPerl for people who don't know objects
 LICENSE=	${PERL5_LICENSE}
 
+# for make test
 BUILD_DEPENDS+=	p5-Data-Stag-[0-9]*:../../devel/p5-Data-Stag
+BUILD_DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
+BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Bio/.packlist
