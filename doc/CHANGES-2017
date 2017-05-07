@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1896 2017/05/07 13:59:16 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1897 2017/05/07 16:10:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2379,3 +2379,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/screenfetch to 3.8.0 [mef 2017-05-07]
 	Updated devel/cre2 to 0.3.4 [mef 2017-05-07]
 	Added biology/p5-BioPerl version 1.007001 [mef 2017-05-07]
+	Updated wm/notion to 3.2017050501 [wiz 2017-05-07]
