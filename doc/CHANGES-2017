@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1895 2017/05/07 03:13:35 mef Exp $
+$NetBSD: CHANGES-2017,v 1.1896 2017/05/07 13:59:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/tiff to 4.0.7nb9 [he 2017-05-06]
 	Updated sysutils/screenfetch to 3.8.0 [mef 2017-05-07]
 	Updated devel/cre2 to 0.3.4 [mef 2017-05-07]
+	Added biology/p5-BioPerl version 1.007001 [mef 2017-05-07]
