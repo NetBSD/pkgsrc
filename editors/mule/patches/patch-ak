@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
+$NetBSD: patch-ak,v 1.6 2017/05/07 06:49:23 tsutsui Exp $
 
 - use standard headers
 - don't declare own errno
@@ -14,7 +14,15 @@ $NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
  #undef NULL
  #include "termchar.h"
  #include "termopts.h"
-@@ -100,8 +101,6 @@ the Free Software Foundation, 675 Mass A
+@@ -63,6 +64,7 @@ the Free Software Foundation, 675 Mass A
+ #include "termhooks.h"
+ #endif
+ #include "macros.h"
++#include "process.h"
+ #include "frame.h"
+ #include "window.h"
+ #include "commands.h"
+@@ -100,8 +102,6 @@ the Free Software Foundation, 675 Mass A
  /* Include systime.h after xterm.h to avoid double inclusion of time.h. */
  #include "systime.h"
  
@@ -23,7 +31,7 @@ $NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
  /* Variables for blockinput.h: */
  
  /* Non-zero if interrupt input is blocked right now.  */
-@@ -301,7 +300,7 @@ Lisp_Object Vlast_event_frame;
+@@ -301,7 +301,7 @@ Lisp_Object Vlast_event_frame;
  
  /* The timestamp of the last input event we received from the X server.
     X Windows wants this for selection ownership.  */
@@ -32,7 +40,7 @@ $NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
  
  Lisp_Object Qself_insert_command;
  Lisp_Object Qforward_char;
-@@ -582,8 +581,7 @@ echo_prompt (str)
+@@ -582,8 +582,7 @@ echo_prompt (str)
     C can be a character, which is printed prettily ("M-C-x" and all that
     jazz), or a symbol, whose name is printed.  */
  
@@ -42,7 +50,7 @@ $NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
  {
    extern char *push_key_description ();
  
-@@ -629,7 +627,7 @@ echo_char (c)
+@@ -629,7 +628,7 @@ echo_char (c)
  /* Temporarily add a dash to the end of the echo string if it's not
     empty, so that it serves as a mini-prompt for the very next character.  */
  
@@ -51,7 +59,7 @@ $NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
  {
    if (!immediate_echo && echoptr == echobuf)
      return;
-@@ -3570,7 +3568,7 @@ gobble_input (expected)
+@@ -3570,7 +3569,7 @@ gobble_input (expected)
  /* Put a buffer_switch_event in the buffer
     so that read_key_sequence will notice the new current buffer.  */
  
@@ -60,7 +68,7 @@ $NetBSD: patch-ak,v 1.5 2013/04/21 15:39:59 joerg Exp $
  {
    struct input_event event;
    Lisp_Object tem;
-@@ -5633,7 +5631,6 @@ On such systems, Emacs starts a subshell
+@@ -5633,7 +5632,6 @@ On such systems, Emacs starts a subshell
    int old_height, old_width;
    int width, height;
    struct gcpro gcpro1, gcpro2;
