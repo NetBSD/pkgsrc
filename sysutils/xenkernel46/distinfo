@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2017/04/08 12:17:58 spz Exp $
+$NetBSD: distinfo,v 1.9 2017/05/07 21:21:01 joerg Exp $
 
 SHA1 (xen-4.6.5.tar.gz) = af371af662211ee1480167b6c9e35142156f3a8d
 RMD160 (xen-4.6.5.tar.gz) = 3f2468d7d3715d14842ac57b2180118ef48e93fa
@@ -8,11 +8,15 @@ SHA1 (patch-Config.mk) = a2a104d023cea4e551a3ad40927d4884d6c610bf
 SHA1 (patch-XSA-212) = 4637d51bcbb3b11fb0e22940f824ebacdaa15b4f
 SHA1 (patch-tools_xentrace_xenalyze.c) = ab973cb7090dc90867dcddf9ab8965f8f2f36c46
 SHA1 (patch-xen_Makefile) = be3f4577a205b23187b91319f91c50720919f70b
+SHA1 (patch-xen_arch_arm_xen.lds.S) = df0e4a13b9b3ae863448172bea28b1b92296327b
 SHA1 (patch-xen_arch_x86_Rules.mk) = 7b0894ba7311edb02118a021671f304cf3872154
+SHA1 (patch-xen_arch_x86_alternative.c) = d86b414989b794202adf91735536cde96673439e
 SHA1 (patch-xen_arch_x86_mm.c) = 3c1435fa5db6a0f542e5efe726997f262fa04041
 SHA1 (patch-xen_arch_x86_xen.lds.S) = 58a890c404ca4f86ccfb58cf5a83b07e235034fc
+SHA1 (patch-xen_common_efi_boot.c) = 38e959b686c1d8c2b2dc173edda1a6d40607c63e
 SHA1 (patch-xen_common_page__alloc.c) = c4d606de1cada8cf89b5abd16efada3d58c68a03
 SHA1 (patch-xen_drivers_passthrough_vtd_x86_ats.c) = f72fd4bb2aeeaeb0b167031dfd5498e73666aa4e
 SHA1 (patch-xen_include_asm-x86_current.h) = 8a21577be06383c0c7f53c15ba828f77fb6314ad
 SHA1 (patch-xen_include_asm-x86_spinlock.h) = a78fe84c87632f0524af255f173676732418a75e
+SHA1 (patch-xen_include_xen_init.h) = 40d28d422687eac0c8224508619985f7337edddd
 SHA1 (patch-xen_include_xen_lib.h) = 82a219b7d9c5deaa2b8e0adc774f60395adc4815
