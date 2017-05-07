@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/10/14 17:13:44 leot Exp $
+# $NetBSD: Makefile,v 1.41 2017/05/07 13:59:16 mef Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -29,6 +29,7 @@ SUBDIR+=	mummer
 SUBDIR+=	nut
 SUBDIR+=	openbabel
 SUBDIR+=	p5-Bio-ASN1-EntrezGene
+SUBDIR+=	p5-BioPerl
 SUBDIR+=	pdbalign
 SUBDIR+=	phylip
 SUBDIR+=	plink
