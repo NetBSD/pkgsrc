@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2015/11/02 23:42:53 agc Exp $
+$NetBSD: distinfo,v 1.13 2017/05/07 16:10:35 wiz Exp $
 
-SHA1 (notion-3-2015061300.tar.gz) = 66962dcb6462bf9f2c621530ac845716fafe6a98
-RMD160 (notion-3-2015061300.tar.gz) = 7a894c523b39cc7c20f85779187c95480e5eac8f
-SHA512 (notion-3-2015061300.tar.gz) = 254be12a8ece555d9f6253d99891bb51214379d0c04b6bf9595b7e5bf9493cb5d2fada37438f89621e7157f9e3647e446b5e173847498ee3608081f006b86679
-Size (notion-3-2015061300.tar.gz) = 797057 bytes
+SHA1 (notion-3-2017050501.tar.gz) = 718c806e24533847b45f7163e2adb5f8de2f2766
+RMD160 (notion-3-2017050501.tar.gz) = 448fbf14ce082fc0bd826cbc3be7c750433ca2d3
+SHA512 (notion-3-2017050501.tar.gz) = e75d2e0e5bb2405698593bebd51d19c6820335a46d60f3e07e5bbac696c2fd3e4341fc166d65e90f8ae56fdba0f7be34e33d0fe3058617a3ea2d63636c48d6f6
+Size (notion-3-2017050501.tar.gz) = 795635 bytes
 SHA1 (patch-build_rules.mk) = f8321cea75a1dfb6187ce5229f85cfea7dc5c9a7
 SHA1 (patch-libtu_output.c) = e9e9e77f0c1ff196fefa887a51f647f0dee7df89
 SHA1 (patch-mod__xrandr_Makefile) = 9299bebbd6a1f043a4095abfa19c917e4229456f
