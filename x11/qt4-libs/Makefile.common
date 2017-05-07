@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2017/05/05 17:38:00 joerg Exp $
+# $NetBSD: Makefile.common,v 1.43 2017/05/07 21:19:47 joerg Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -66,6 +66,13 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 USE_LANGUAGES+=		c++11
 
 .include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-c++11-narrowing
+.  if empty(MACHINE_PLATFORM:MDarwin-*-*)
+CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
+.  endif
+.endif
 
 .if ${OPSYS} == "SunOS"
 .  if !empty(CC_VERSION:Mgcc*)
