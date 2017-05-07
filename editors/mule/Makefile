@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2017/04/29 01:11:55 tsutsui Exp $
+# $NetBSD: Makefile,v 1.53 2017/05/07 04:52:43 tsutsui Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	8
@@ -41,6 +41,10 @@ INFO_FILES=	yes
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${GNU_CONFIGURE_INFODIR}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${GNU_CONFIGURE_MANDIR}
+
+# Remove .orig files in the original tar archive
+post-extract:
+	rm -f ${WRKSRC}/lisp/*.orig
 
 # Remove original versions of patched files so that aren't installed.
 post-build:
