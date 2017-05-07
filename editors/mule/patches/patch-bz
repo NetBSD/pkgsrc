@@ -1,6 +1,6 @@
-$NetBSD: patch-bz,v 1.1 2006/01/04 20:35:08 joerg Exp $
+$NetBSD: patch-bz,v 1.2 2017/05/07 06:49:23 tsutsui Exp $
 
---- lib-src/emacsclient.c.orig	2006-01-04 17:44:54.000000000 +0000
+--- lib-src/emacsclient.c.orig	1994-07-27 17:57:35.000000000 +0000
 +++ lib-src/emacsclient.c
 @@ -53,7 +53,6 @@ main (argc, argv)
  #include <errno.h>
@@ -10,3 +10,13 @@ $NetBSD: patch-bz,v 1.1 2006/01/04 20:35:08 joerg Exp $
  
  main (argc, argv)
       int argc;
+@@ -66,9 +65,6 @@ main (argc, argv)
+   char *homedir, *cwd, *str;
+   char string[BUFSIZ];
+ 
+-  char *getenv (), *getwd ();
+-  int geteuid ();
+-
+   if (argc < 2)
+     {
+       fprintf (stderr, "Usage: %s [+linenumber] filename\n", argv[0]);
