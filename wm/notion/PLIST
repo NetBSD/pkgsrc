@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/05/28 06:25:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/05/07 16:10:35 wiz Exp $
 bin/notion
 lib/notion/bin/ion-completefile
 lib/notion/bin/ion-statusd
@@ -47,7 +47,7 @@ man/man1/notion.1
 man/man1/notionflux.1
 share/doc/notion/CHANGELOG
 share/doc/notion/LICENSE
-share/doc/notion/README
+share/doc/notion/README.md
 share/examples/notion/cfg_defaults.lua
 share/examples/notion/cfg_dock.lua
 share/examples/notion/cfg_kludges.lua
@@ -69,6 +69,7 @@ share/examples/notion/contrib/keybindings/cfg_mouse.lua
 share/examples/notion/contrib/keybindings/dans_bindings.lua
 share/examples/notion/contrib/keybindings/emacs_bindings.lua
 share/examples/notion/contrib/keybindings/vim_bindings.lua
+share/examples/notion/contrib/scripts/Makefile
 share/examples/notion/contrib/scripts/app.lua
 share/examples/notion/contrib/scripts/autoprop.lua
 share/examples/notion/contrib/scripts/bookmarks.lua
@@ -104,9 +105,12 @@ share/examples/notion/contrib/scripts/mp.lua
 share/examples/notion/contrib/scripts/mpd.lua
 share/examples/notion/contrib/scripts/named_scratchpad.lua
 share/examples/notion/contrib/scripts/net_client_list.lua
+share/examples/notion/contrib/scripts/notion_rofi.sh
+share/examples/notion/contrib/scripts/notsubtle.lua
 share/examples/notion/contrib/scripts/nowarp_scratchpad.lua
 share/examples/notion/contrib/scripts/panel.lua
 share/examples/notion/contrib/scripts/query_url.lua
+share/examples/notion/contrib/scripts/rofi.lua
 share/examples/notion/contrib/scripts/rss_feed.lua
 share/examples/notion/contrib/scripts/rss_feed_hh.lua
 share/examples/notion/contrib/scripts/schedule.lua
@@ -210,6 +214,7 @@ share/examples/notion/look_newviolet.lua
 share/examples/notion/look_simpleblue.lua
 share/examples/notion/lookcommon_clean.lua
 share/examples/notion/lookcommon_emboss.lua
+share/examples/notion/net_client_list.lua
 share/locale/cs/LC_MESSAGES/notion.mo
 share/locale/de/LC_MESSAGES/notion.mo
 share/locale/fi/LC_MESSAGES/notion.mo
