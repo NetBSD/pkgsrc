@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2017/04/05 17:08:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2017/05/08 04:58:58 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -2995,6 +2995,7 @@ ${PYSITELIB}/django/contrib/postgres/functions.pyo
 ${PYSITELIB}/django/contrib/postgres/indexes.py
 ${PYSITELIB}/django/contrib/postgres/indexes.pyc
 ${PYSITELIB}/django/contrib/postgres/indexes.pyo
+${PYSITELIB}/django/contrib/postgres/jinja2/postgres/widgets/split_array.html
 ${PYSITELIB}/django/contrib/postgres/locale/ar/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/contrib/postgres/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/django/contrib/postgres/locale/be/LC_MESSAGES/django.mo
@@ -3113,6 +3114,7 @@ ${PYSITELIB}/django/contrib/postgres/search.pyo
 ${PYSITELIB}/django/contrib/postgres/signals.py
 ${PYSITELIB}/django/contrib/postgres/signals.pyc
 ${PYSITELIB}/django/contrib/postgres/signals.pyo
+${PYSITELIB}/django/contrib/postgres/templates/postgres/widgets/split_array.html
 ${PYSITELIB}/django/contrib/postgres/utils.py
 ${PYSITELIB}/django/contrib/postgres/utils.pyc
 ${PYSITELIB}/django/contrib/postgres/utils.pyo
