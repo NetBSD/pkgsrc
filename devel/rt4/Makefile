@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/07/09 06:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/05/08 09:07:40 manu Exp $
 
 DISTNAME=	rt-4.2.12
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -122,6 +122,9 @@ DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
 DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
 # GD::Text is a part of p5-GDTextUtil.
 DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
+
+# Graphviz dependencies
+DEPENDS+=	p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
 
 # GPG dependencies
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
