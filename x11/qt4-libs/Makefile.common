@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2017/05/07 21:19:47 joerg Exp $
+# $NetBSD: Makefile.common,v 1.44 2017/05/08 15:36:28 jperkin Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -63,12 +63,13 @@ QMAKE_RANLIB=		${TRUE}
 # avoid creating a .qt directory in the users home directory
 SCRIPTS_ENV+=		HOME=${WRKDIR}
 
-USE_LANGUAGES+=		c++11
-
 .include "../../mk/compiler.mk"
 
+# We can't set USE_LANGUAGES+=c++11 yet because doing so breaks the GCC build
+# in lots of ways, so for now just enable it manually for clang.
+#
 .if !empty(PKGSRC_COMPILER:Mclang)
-CXXFLAGS+=	-Wno-c++11-narrowing
+CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .  if empty(MACHINE_PLATFORM:MDarwin-*-*)
 CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
 .  endif
