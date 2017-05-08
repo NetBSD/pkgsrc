@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.74 2017/03/08 15:26:51 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.75 2017/05/08 17:34:15 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -98,8 +98,11 @@ BUILDLINK_TRANSFORM+=	rm:-mimpure-text
 
 # The native curses implementations are reasonably old and can cause lots of
 # issues with software which assumes newer interfaces, so it's easier to just
-# use pkgsrc curses at this point.
-_INCOMPAT_CURSES=	SunOS-*-*
+# use pkgsrc curses at this point.  Both curses and terminfo should be in sync
+# otherwise it's possible to end up with conflicting buildlink transforms.
+#
+_INCOMPAT_CURSES=		SunOS-*-*
+_OPSYS_PREFER.terminfo?=	pkgsrc
 
 # Solaris has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.
