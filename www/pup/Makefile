@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/04/13 15:12:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/08 08:50:13 leot Exp $
 
 DISTNAME=		pup-0.4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GITHUB:=ericchiang/}
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/src/github.com/ericchiang/pup
 BUILD_DEPENDS+=		go-${GO_VERSION}*:../../lang/go
 
 MAKE_ENV+=		GOPATH=${WRKDIR}:${PREFIX}/gopkg
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/doc/pup
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -29,5 +29,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pup ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/pup/README
 
 .include "../../mk/bsd.pkg.mk"
