@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/01/01 10:40:49 schmonz Exp $
+# $NetBSD: Makefile,v 1.29 2017/05/08 12:02:16 schmonz Exp $
 
 DISTNAME=		xapian-core-${VERSION}
 VERSION=		1.4.2
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 
 TEST_TARGET=		check
 
