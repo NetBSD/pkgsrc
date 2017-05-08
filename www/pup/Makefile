@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/05/08 08:50:13 leot Exp $
+# $NetBSD: Makefile,v 1.4 2017/05/08 10:25:29 leot Exp $
 
 DISTNAME=		pup-0.4.0
 PKGREVISION=		2
@@ -29,6 +29,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pup ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/pup/README
+	${INSTALL_DATA} ${WRKSRC}/README.md ${DESTDIR}${PREFIX}/share/doc/pup
 
 .include "../../mk/bsd.pkg.mk"
