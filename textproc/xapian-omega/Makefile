@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/01/01 10:41:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2017/05/08 12:02:06 schmonz Exp $
 
 DISTNAME=		xapian-omega-${VERSION}
 VERSION=		1.4.2
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++11
 USE_TOOLS+=		perl:run
 
 TEST_TARGET=		check
