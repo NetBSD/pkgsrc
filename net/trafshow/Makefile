@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/08/18 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/05/09 15:32:53 jperkin Exp $
 
 DISTNAME=	trafshow-5.2.3
 PKGREVISION=	3
@@ -38,4 +38,5 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.1
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
