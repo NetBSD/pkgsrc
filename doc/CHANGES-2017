@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1915 2017/05/09 14:47:04 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.1916 2017/05/09 15:29:58 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2400,3 +2400,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/py-beets to 1.4.3 [leot 2017-05-09]
 	Updated net/sniproxy to 0.5.0 [wiedi 2017-05-09]
 	Updated editors/mg2a to 1.11nb2 [jperkin 2017-05-09]
+	Updated editors/nano to 2.8.2 [wiedi 2017-05-09]
