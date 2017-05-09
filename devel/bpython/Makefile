@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/04/23 17:23:20 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/05/09 17:30:59 adam Exp $
 
 DISTNAME=	bpython-0.16
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://bpython-interpreter.org/releases/
 
@@ -11,6 +12,7 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
+DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-curtsies>=0.1.18:../../devel/py-curtsies
 DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
