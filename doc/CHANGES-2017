@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1914 2017/05/09 14:17:46 wiedi Exp $
+$NetBSD: CHANGES-2017,v 1.1915 2017/05/09 14:47:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2399,3 +2399,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/py-jellyfish version 0.5.6 [leot 2017-05-09]
 	Updated audio/py-beets to 1.4.3 [leot 2017-05-09]
 	Updated net/sniproxy to 0.5.0 [wiedi 2017-05-09]
+	Updated editors/mg2a to 1.11nb2 [jperkin 2017-05-09]
