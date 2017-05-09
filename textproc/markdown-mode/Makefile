@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2013/07/30 19:15:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/05/09 05:09:15 pho Exp $
 
 DISTNAME=	markdown-mode
-PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-2.0
+PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}-2.1
 CATEGORIES=	textproc
 MASTER_SITES=	http://jblevins.org/projects/markdown-mode/
-DIST_SUBDIR=	${DISTNAME}-2.0
+DIST_SUBDIR=	${DISTNAME}-2.1
 EXTRACT_SUFX=	.el
 
 MAINTAINER=	minskim@NetBSD.org
