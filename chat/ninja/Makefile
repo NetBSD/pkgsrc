@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 00:02:41 asau Exp $
+# $NetBSD: Makefile,v 1.18 2017/05/09 14:53:26 jperkin Exp $
 #
 
 DISTNAME=	ninja-1.5.8.1
@@ -15,4 +15,5 @@ USE_TOOLS+=	gmake
 
 .include "options.mk"
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
