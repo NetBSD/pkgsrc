@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/11/16 00:37:06 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2017/05/09 16:20:08 jperkin Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	2
@@ -51,5 +51,6 @@ do-install:
 	cd ${BUILD_DIRS}/samples && \
 	${INSTALL_DATA} * ${DESTDIR}${PREFIX}/share/examples/estic
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
