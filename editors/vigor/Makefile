@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/07/09 06:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/05/09 17:40:11 jperkin Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -48,10 +48,6 @@ BDB_ACCEPTED=		db1
 
 CPPFLAGS+=	-DUSE_INTERP_RESULT
 
-.include "../../lang/tcl/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
-
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "DragonFly"
 .if exists(/usr/include/sys/queue.h)
@@ -62,5 +58,9 @@ post-patch:
 .endif
 .endif
 
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
