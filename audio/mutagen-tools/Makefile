@@ -1,20 +1,25 @@
-# $NetBSD: Makefile,v 1.9 2017/01/01 14:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/05/09 13:14:32 leot Exp $
 
-DISTNAME=	mutagen-1.27
-PKGNAME=	mutagen-tools-1.27
+DISTNAME=	mutagen-1.37
+PKGNAME=	${DISTNAME:S/-/-tools-/}
 CATEGORIES=	audio
-MASTER_SITES=	https://bitbucket.org/lazka/mutagen/downloads/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mutagen/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/lazka/mutagen
+HOMEPAGE=	https://github.com/quodlibet/mutagen
 COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+= ${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
+
+SUBST_CLASSES+=			pkgmandir
+SUBST_STAGE.pkgmandir=		pre-configure
+SUBST_FILES.pkgmandir=		setup.py
+SUBST_MESSAGE.pkgmandir=	Fixing man page installation.
+SUBST_SED.pkgmandir=		-e 's,share/man,${PKGMANDIR},'
 
 USE_LANGUAGES=	# none
 PY_NO_EGG=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # string type problems
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
