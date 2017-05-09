@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/01/19 23:15:59 riastradh Exp $
+# $NetBSD: Makefile,v 1.9 2017/05/09 14:24:31 jperkin Exp $
 
 DISTNAME=	mxterm_129
 PKGREVISION=	4
@@ -19,4 +19,5 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
