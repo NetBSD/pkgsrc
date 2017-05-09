@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/09/12 03:54:13 dholland Exp $
+# $NetBSD: Makefile,v 1.16 2017/05/09 14:51:36 jperkin Exp $
 
 DISTNAME=	beav_1.40.orig
 PKGNAME=	beav-1.40.18
@@ -25,4 +25,5 @@ SUBST_STAGE.docpath=	post-build
 SUBST_SED.docpath=	-e 's,/usr/share/doc/,${PREFIX}/share/doc,'
 SUBST_MESSAGE.docpath=	Fixing path in documentation.
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

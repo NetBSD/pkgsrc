@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2016/03/30 10:03:46 jperkin Exp $
+$NetBSD: patch-aa,v 1.5 2017/05/09 14:51:36 jperkin Exp $
 
 Use pkgsrc flags/layout.
 
@@ -8,7 +8,7 @@ Use pkgsrc flags/layout.
  # This is the makefile for BSD UNIX
  #CFLAGS=     -g -DUNIX
 -CFLAGS=     -g -DUNIX -Wall
-+CFLAGS=     -g -DUNIX -DBSD -Wall
++CFLAGS+=    -DUNIX -DBSD -Wall
  CC=gcc
  
  OFILES=		basic.o ebcdic.o fileio.o region.o text.o wangpc.o \
@@ -17,7 +17,7 @@ Use pkgsrc flags/layout.
  
  beav:     $(OFILES)
 -	$(CC) $(CFLAGS) $(OFILES) -lncurses -o beav
-+	$(CC) $(CFLAGS) $(OFILES) -ltermcap -o beav
++	$(CC) $(CFLAGS) $(OFILES) $(LDFLAGS) -ltermcap -o beav
 +
 +install: beav beav.1
 +	$(BSD_INSTALL_PROGRAM) beav ${DESTDIR}$(PREFIX)/bin
