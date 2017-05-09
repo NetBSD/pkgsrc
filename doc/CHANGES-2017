@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1917 2017/05/09 17:21:10 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1918 2017/05/09 18:58:43 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2405,3 +2405,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-OpenSSL to 17.0.0 [adam 2017-05-09]
 	Updated devel/py-requests to 2.14.0 [adam 2017-05-09]
 	Updated www/squidanalyzer to 6.6 [adam 2017-05-09]
+	Updated misc/xdg-utils to 1.1.2 [leot 2017-05-09]
