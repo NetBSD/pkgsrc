@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/04/13 17:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/09 12:37:14 adam Exp $
 
-DISTNAME=	rsa-3.4.1
+DISTNAME=	rsa-3.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stuvel.eu/rsa
 COMMENT=	Pure-Python RSA implementation
 LICENSE=	apache-2.0
+
+USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
 BUILD_DEPENDS+=	${PYPKGPREFIX}-constants-[0-9]*:../../devel/py-constants
