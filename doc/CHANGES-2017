@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1909 2017/05/09 12:37:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1910 2017/05/09 13:14:47 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2394,3 +2394,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-natsort to 5.0.3 [adam 2017-05-09]
 	Updated www/py-httplib2 to 0.10.3 [adam 2017-05-09]
 	Updated security/py-rsa to 3.4.2 [adam 2017-05-09]
+	Updated audio/py-mutagen to 1.37 [leot 2017-05-09]
