@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/07/09 06:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/05/09 11:52:01 jperkin Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	9
@@ -60,12 +60,12 @@ IRC_SERVER=	us.undernet.org
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 lib/sirc/scripts
 
 do-install:
-	cd ${WRKSRC} ; ( \
+	${RUN} cd ${WRKSRC} ; ( \
 		${ECHO} "y" ; \
+		${ECHO} "${CC}" ; \
 		${ECHO} "" ; \
 		${ECHO} "" ; \
-		${ECHO} "" ; \
-		${ECHO} "-O3" ; \
+		${ECHO} "${CFLAGS} ${LDFLAGS}" ; \
 		${ECHO} "" ; \
 		${ECHO} "${PERL5}" ; \
 		${ECHO} "${DESTDIR}${PREFIX}/bin" ; \
@@ -81,4 +81,5 @@ do-install:
 		${ECHO} installing $$i ; \
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${DESTDIR}${PREFIX}/lib/sirc/scripts/$$i ; done
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
