@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/09 13:17:59 leot Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/jellyfish/__init__.py
+${PYSITELIB}/jellyfish/__init__.pyc
+${PYSITELIB}/jellyfish/__init__.pyo
+${PYSITELIB}/jellyfish/_jellyfish.py
+${PYSITELIB}/jellyfish/_jellyfish.pyc
+${PYSITELIB}/jellyfish/_jellyfish.pyo
+${PYSITELIB}/jellyfish/cjellyfish.so
+${PYSITELIB}/jellyfish/compat.py
+${PYSITELIB}/jellyfish/compat.pyc
+${PYSITELIB}/jellyfish/compat.pyo
+${PYSITELIB}/jellyfish/porter.py
+${PYSITELIB}/jellyfish/porter.pyc
+${PYSITELIB}/jellyfish/porter.pyo
+${PYSITELIB}/jellyfish/test.py
+${PYSITELIB}/jellyfish/test.pyc
+${PYSITELIB}/jellyfish/test.pyo
