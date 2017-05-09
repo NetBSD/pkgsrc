@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/01/22 02:04:15 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/05/09 15:29:15 wiedi Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -65,6 +65,7 @@ share/nano/makefile.nanorc
 share/nano/man.nanorc
 share/nano/mgp.nanorc
 share/nano/mutt.nanorc
+share/nano/nanohelp.nanorc
 share/nano/nanorc.nanorc
 share/nano/nftables.nanorc
 share/nano/objc.nanorc
