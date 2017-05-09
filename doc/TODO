@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17328 2017/05/09 14:21:05 mef Exp $
+$NetBSD: TODO,v 1.17329 2017/05/09 14:23:30 mef Exp $
 
 Suggested new packages
 ======================
@@ -596,6 +596,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emacs-muse-3.20
 	o embryo-1.7.10
 	o emerillon-0.1.90
+	o enigma-1.21
 	o enlightenment-0.21
 	o eog-plugins-3.6.1
 	o epic4-2.10.6
