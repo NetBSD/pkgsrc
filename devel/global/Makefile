@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2017/04/22 21:03:30 adam Exp $
+# $NetBSD: Makefile,v 1.65 2017/05/09 16:12:52 jperkin Exp $
 
 DISTNAME=	global-6.5.6
 PKGREVISION=	1
@@ -26,4 +26,5 @@ REPLACE_PYTHON+=	plugin-factory/pygments_parser.py
 .include "options.mk"
 
 .include "../../lang/python/application.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
