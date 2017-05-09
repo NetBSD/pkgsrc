@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/09/13 13:45:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2017/05/09 07:52:14 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -102,3 +102,6 @@ ${PYSITELIB}/ldapurl.pyo
 ${PYSITELIB}/ldif.py
 ${PYSITELIB}/ldif.pyc
 ${PYSITELIB}/ldif.pyo
+${PYSITELIB}/slapdtest.py
+${PYSITELIB}/slapdtest.pyc
+${PYSITELIB}/slapdtest.pyo
