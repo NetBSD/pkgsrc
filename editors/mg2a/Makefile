@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.15 2017/05/09 14:46:55 jperkin Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.wustl.edu/languages/c/unix-c/editors/
 EXTRACT_SUFX=	.tar.Z
@@ -27,4 +27,5 @@ do-install:
 	${INSTALL_MAN} ${FILESDIR}/mg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/mg.rc ${DESTDIR}${PREFIX}/bin/mg.rc
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
