@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2016/02/25 13:19:47 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.31 2017/05/09 14:12:30 jperkin Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -29,16 +29,14 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 USE_TOOLS+=		gzip yacc lex awk
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
-SUBST_CLASSES.Darwin+=	ttylib
-SUBST_CLASSES.Linux+=	ttylib
-SUBST_MESSAGE.ttylib=	Configuring to use ncurses
+SUBST_CLASSES+=		ttylib
+SUBST_MESSAGE.ttylib=	Configuring to use correct termcap library
 SUBST_STAGE.ttylib=	post-patch
 SUBST_FILES.ttylib=	sys/unix/Makefile.src
-SUBST_SED.ttylib=	-e 's,^WINTTYLIB = -ltermlib,WINTTYLIB = -lncurses,'
-
-.include "../../mk/curses.buildlink3.mk"
+SUBST_SED.ttylib=	-e 's!^WINTTYLIB = -ltermlib!WINTTYLIB = -L${BUILDLINK_PREFIX.termcap}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.termcap}/lib -l${BUILDLINK_LIBNAME.termcap}!'
 
 OPSYSVARS+=		NETHACK_OS
 NETHACK_OS.Linux=	SYSV
