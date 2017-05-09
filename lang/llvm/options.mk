@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2016/11/14 20:15:32 ryoon Exp $
+# $NetBSD: options.mk,v 1.3 2017/05/09 12:23:42 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.llvm
 
@@ -8,6 +8,17 @@ LLVM_TARGETS=	AArch64 AMDGPU ARM BPF Hexagon MSP430 Mips NVPTX PowerPC Sparc Sys
 PLIST_VARS+=			${tgt}
 PKG_SUPPORTED_OPTIONS+=		llvm-target-${tgt:tl}
 .endfor
+PKG_SUPPORTED_OPTIONS+=		terminfo
+
+# Terminfo is used for colour output, only enable it by default if terminfo
+# is builtin to avoid unnecessary dependencies which could cause bootstrap
+# issues.
+CHECK_BUILTIN.terminfo:=	yes
+.include "../../mk/terminfo.builtin.mk"
+CHECK_BUILTIN.terminfo:=	no
+.if !empty(USE_BUILTIN.terminfo:M[yY][eE][sS])
+PKG_SUGGESTED_OPTIONS+=		terminfo
+.endif
 
 # Probably safe to assume that only x86 users are interested in
 # cross-compilation for now. This saves some build time for everyone else.
@@ -34,5 +45,11 @@ PLIST.${tgt}=		yes
 LLVM_TARGETS_TO_BUILD+=	${tgt}
 .  endif
 .endfor
+
+.if !empty(PKG_OPTIONS:Mterminfo)
+.include "../../mk/terminfo.buildlink3.mk"
+.else
+CMAKE_ARGS+=	-DLLVM_ENABLE_TERMINFO=OFF
+.endif
 
 CMAKE_ARGS+=	-DLLVM_TARGETS_TO_BUILD="${LLVM_TARGETS_TO_BUILD:ts;}"
