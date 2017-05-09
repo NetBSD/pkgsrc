@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1905 2017/05/09 05:13:21 pho Exp $
+$NetBSD: CHANGES-2017,v 1.1906 2017/05/09 08:14:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2388,3 +2388,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox52 to 52.1.1 [ryoon 2017-05-08]
 	Updated www/firefox52-l10n to 52.1.1 [ryoon 2017-05-08]
 	Updated textproc/markdown-mode to 2.1 [pho 2017-05-09]
+	Updated graphics/py-Pillow to 4.1.1 [adam 2017-05-09]
+	Updated www/py-django-cms to 3.4.3 [adam 2017-05-09]
