@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:32:09 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/05/09 10:53:27 schmonz Exp $
 
 SHA1 (daemond-1.0.tar.gz) = 8262aad555e4869c22edcffcd1232525fef88eb4
 RMD160 (daemond-1.0.tar.gz) = 847d0d780910e332474e74bd24e246171401a5ea
 SHA512 (daemond-1.0.tar.gz) = 4926c80b68890a3471c784eec86c47a4f200aea9fe3a201a5f2115238979b483b3430f74b6d1d29166939a0607b3bdb990650698096e724239008992b489468b
 Size (daemond-1.0.tar.gz) = 1628 bytes
-SHA1 (patch-aa) = 65e4e347b68e90dc29c95b218fd564aa24514bce
+SHA1 (patch-aa) = 81c4c2c7ef60edab592fb3945d80001338fa74ff

@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2009/03/26 19:05:29 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2017/05/09 10:53:27 schmonz Exp $
+
+Fix installation. Honour PKGMANDIR.
 
 --- Makefile.orig	2009-03-26 19:50:47.000000000 +0100
 +++ Makefile
