@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:12:43 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/05/09 13:14:32 leot Exp $
 
-SHA1 (mutagen-1.27.tar.gz) = 4c9b874feb6f1e9dbf6f2c37341dad3a47135640
-RMD160 (mutagen-1.27.tar.gz) = b6d4c5c880b9eba4b0377e04421c840392c20eff
-SHA512 (mutagen-1.27.tar.gz) = ae15fb3f5d77025a60e25a2ed25e23f7d21160d4e63c49fe7d01508440ff1f6b673cf34d8f4facc834824825ad6f4d3ed9830133db5aba339ac1eae46f7f50d5
-Size (mutagen-1.27.tar.gz) = 875720 bytes
-SHA1 (patch-aa) = c1a76e5371b2fdcb3e81af58fd783048577f1f77
+SHA1 (mutagen-1.37.tar.gz) = 973e29c3b27f2b99ac5b18899ef07c2c8c9b035e
+RMD160 (mutagen-1.37.tar.gz) = 8a8bce64ed57d7637a590e163a7e27f329a6a297
+SHA512 (mutagen-1.37.tar.gz) = f1bdd3d56526be718642d6599e7353879dc7e16f3d8758ff0221224310f5952cdc097dd70202be4b93c3a661f83b4f0d3e7730464f077d89614883571b80b180
+Size (mutagen-1.37.tar.gz) = 912600 bytes
+SHA1 (patch-aa) = 2c8e4fea8d9afcfca4f86ae7704b1e84df53c817
