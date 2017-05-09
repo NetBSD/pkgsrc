@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/01/07 21:58:46 zafer Exp $
+# $NetBSD: Makefile,v 1.12 2017/05/09 16:17:39 jperkin Exp $
 #
 
 DISTNAME=		xfrac310
@@ -19,7 +19,6 @@ MAKE_FLAGS+=		BINDIR=${PREFIX}/bin
 MAKE_FLAGS+=		MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_FLAGS+=		SRCDIR=${PREFIX}/share/xfractint
 BUILD_TARGET=		xfractint
-BUILDLINK_TRANSFORM+=	l:ncurses:curses
 
 INSTALLATION_DIRS=	bin $(PKGMANDIR)/man1 share/xfractint
 
@@ -35,5 +34,6 @@ post-wrapper:
 	fi
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
