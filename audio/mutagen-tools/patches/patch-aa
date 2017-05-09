@@ -1,22 +1,32 @@
-$NetBSD: patch-aa,v 1.4 2015/01/06 19:53:14 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2017/05/09 13:14:32 leot Exp $
 
---- setup.py.orig	2014-11-26 13:18:57.000000000 +0000
+Do not install any Python packages. They are provided separatedly by the
+audio/py-mutagen package.
+
+--- setup.py.orig	2017-02-24 13:15:32.000000000 +0000
 +++ setup.py
-@@ -219,7 +219,7 @@ class coverage_cmd(Command):
- 
- 
- if os.name == "posix":
--    data_files = [('share/man/man1', glob.glob("man/*.1"))]
-+    data_files = [(os.getenv("PKGMANDIR") + '/man1', glob.glob("man/*.1"))]
- else:
-     data_files = []
- 
-@@ -255,7 +255,7 @@ if __name__ == "__main__":
+@@ -258,15 +258,15 @@ if __name__ == "__main__":
              'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
              'Topic :: Multimedia :: Sound/Audio',
            ],
--          packages=["mutagen", "mutagen.id3", "mutagen.mp4"],
-+#          packages=["mutagen", "mutagen.id3", "mutagen.mp4"],
+-          packages=[
+-            "mutagen",
+-            "mutagen.id3",
+-            "mutagen.mp4",
+-            "mutagen.asf",
+-            "mutagen.mp3",
+-            "mutagen._senf",
+-            "mutagen._tools",
+-          ],
++#         packages=[
++#           "mutagen",
++#           "mutagen.id3",
++#           "mutagen.mp4",
++#           "mutagen.asf",
++#           "mutagen.mp3",
++#           "mutagen._senf",
++#           "mutagen._tools",
++#         ],
            data_files=data_files,
            scripts=[os.path.join("tools", name) for name in [
              "mid3cp",
