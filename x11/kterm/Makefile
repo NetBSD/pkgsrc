@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2016/03/09 21:50:34 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2017/05/09 14:18:46 jperkin Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	24
@@ -22,8 +22,7 @@ USE_TOOLS+=	m4
 
 SPECIAL_PERMS=	${PREFIX:Q}/bin/kterm ${SETUID_ROOT_PERMS}
 
-.include "../../mk/bsd.prefs.mk"
-
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
