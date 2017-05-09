@@ -1,7 +1,6 @@
-$NetBSD: patch-tests_memdbg.py,v 1.1 2017/01/28 12:09:14 wiz Exp $
+$NetBSD: patch-tests_memdbg.py,v 1.2 2017/05/09 16:49:07 adam Exp $
 
 Fix running test on NetBSD.
-Breaks Linux, but I expect more people to run the tests on NetBSD.
 https://github.com/pyca/pyopenssl/issues/595
 
 --- tests/memdbg.py.orig	2016-02-15 10:25:58.000000000 +0000
@@ -23,7 +22,7 @@ https://github.com/pyca/pyopenssl/issues/595
      #include <stdlib.h>
      #include <execinfo.h>
 -    """, libraries=["crypto"])
-+    """, libraries=["crypto", "execinfo"])
++    """, libraries=["crypto", "execinfo"] if sys.platform.startswith('netbsd') else ["crypto"])
  C = _ffi.dlopen(None)
  
  verbose = False
