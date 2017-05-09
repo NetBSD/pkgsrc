@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/06/04 22:14:22 wiedi Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/09 14:17:07 wiedi Exp $
 
-DISTNAME=	0.4.0
+DISTNAME=	0.5.0
 PKGNAME=	sniproxy-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	https://github.com/dlundquist/sniproxy/archive/

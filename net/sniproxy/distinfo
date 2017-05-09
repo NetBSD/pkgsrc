@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:37 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/05/09 14:17:07 wiedi Exp $
 
-SHA1 (0.4.0.tar.gz) = 92c9010106dff3fb899d8f44ccd16cfb61920870
-RMD160 (0.4.0.tar.gz) = e8f8cb7765eaa2f10279a9090718c3e3d801620a
-SHA512 (0.4.0.tar.gz) = a8f165a87fe0a9564e918d54237b7bb8ef5b5b6ced7d20ca2b52d46afd994925c007ebb955d7a9b2e4b35ece9c88ed585a5bf7c12fdbfd018c002ada9ca8421c
-Size (0.4.0.tar.gz) = 70186 bytes
+SHA1 (0.5.0.tar.gz) = 181d2ce430bac34fbdf691870d089ef0ae92340a
+RMD160 (0.5.0.tar.gz) = 27b10d8ffdbf960b91a319c36246a12609f0cf88
+SHA512 (0.5.0.tar.gz) = 52dbb217193d2b7bf9dea37b13fde395b5c56d0a6627508a245f2807920deb282aae3c1ae7e6b5fa68432990e48998989fd28027b65cb7310f214b29f98e5e5d
+Size (0.5.0.tar.gz) = 72654 bytes
+SHA1 (patch-src_connection.c) = 062fa7fc8f023cc9a4a57e15deaaec13d0547f6f
