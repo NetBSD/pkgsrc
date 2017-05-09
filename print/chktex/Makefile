@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/12/25 19:02:44 markd Exp $
+# $NetBSD: Makefile,v 1.31 2017/05/09 12:24:45 jperkin Exp $
 
 DISTNAME=	chktex-1.7.6
 CATEGORIES=	print
@@ -29,4 +29,5 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 INSTALLATION_DIRS+=	${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
