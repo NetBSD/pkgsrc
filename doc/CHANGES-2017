@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1913 2017/05/09 13:29:38 leot Exp $
+$NetBSD: CHANGES-2017,v 1.1914 2017/05/09 14:17:46 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/mutagen-tools to 1.37 [leot 2017-05-09]
 	Added textproc/py-jellyfish version 0.5.6 [leot 2017-05-09]
 	Updated audio/py-beets to 1.4.3 [leot 2017-05-09]
+	Updated net/sniproxy to 0.5.0 [wiedi 2017-05-09]
