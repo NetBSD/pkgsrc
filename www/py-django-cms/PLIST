@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2017/02/02 07:54:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.30 2017/05/09 08:13:50 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -110,6 +110,9 @@ ${PYSITELIB}/cms/forms/fields.pyo
 ${PYSITELIB}/cms/forms/utils.py
 ${PYSITELIB}/cms/forms/utils.pyc
 ${PYSITELIB}/cms/forms/utils.pyo
+${PYSITELIB}/cms/forms/validators.py
+${PYSITELIB}/cms/forms/validators.pyc
+${PYSITELIB}/cms/forms/validators.pyo
 ${PYSITELIB}/cms/forms/widgets.py
 ${PYSITELIB}/cms/forms/widgets.pyc
 ${PYSITELIB}/cms/forms/widgets.pyo
