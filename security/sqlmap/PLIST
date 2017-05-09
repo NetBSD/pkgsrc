@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/13 11:25:53 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/09 11:39:07 adam Exp $
 bin/sqlmap
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -68,12 +68,13 @@ ${PYSITELIB}/sqlmap/extra/mssqlsig/update.py
 ${PYSITELIB}/sqlmap/extra/mssqlsig/update.pyc
 ${PYSITELIB}/sqlmap/extra/mssqlsig/update.pyo
 ${PYSITELIB}/sqlmap/extra/runcmd/README.txt
-${PYSITELIB}/sqlmap/extra/runcmd/windows/README.txt
-${PYSITELIB}/sqlmap/extra/runcmd/windows/runcmd.sln
-${PYSITELIB}/sqlmap/extra/runcmd/windows/runcmd/runcmd.cpp
-${PYSITELIB}/sqlmap/extra/runcmd/windows/runcmd/runcmd.vcproj
-${PYSITELIB}/sqlmap/extra/runcmd/windows/runcmd/stdafx.cpp
-${PYSITELIB}/sqlmap/extra/runcmd/windows/runcmd/stdafx.h
+${PYSITELIB}/sqlmap/extra/runcmd/runcmd.exe_
+${PYSITELIB}/sqlmap/extra/runcmd/src/README.txt
+${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd.sln
+${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/runcmd.cpp
+${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/runcmd.vcproj
+${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/stdafx.cpp
+${PYSITELIB}/sqlmap/extra/runcmd/src/runcmd/stdafx.h
 ${PYSITELIB}/sqlmap/extra/safe2bin/README.txt
 ${PYSITELIB}/sqlmap/extra/safe2bin/__init__.py
 ${PYSITELIB}/sqlmap/extra/safe2bin/__init__.pyc
@@ -92,6 +93,7 @@ ${PYSITELIB}/sqlmap/extra/shutils/duplicates.pyo
 ${PYSITELIB}/sqlmap/extra/shutils/pep8.sh
 ${PYSITELIB}/sqlmap/extra/shutils/postcommit-hook.sh
 ${PYSITELIB}/sqlmap/extra/shutils/precommit-hook.sh
+${PYSITELIB}/sqlmap/extra/shutils/pydiatra.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pyflakes.sh
 ${PYSITELIB}/sqlmap/extra/shutils/pylint.py
 ${PYSITELIB}/sqlmap/extra/shutils/pylint.pyc
@@ -317,12 +319,6 @@ ${PYSITELIB}/sqlmap/lib/techniques/blind/__init__.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/blind/inference.py
 ${PYSITELIB}/sqlmap/lib/techniques/blind/inference.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/blind/inference.pyo
-${PYSITELIB}/sqlmap/lib/techniques/brute/__init__.py
-${PYSITELIB}/sqlmap/lib/techniques/brute/__init__.pyc
-${PYSITELIB}/sqlmap/lib/techniques/brute/__init__.pyo
-${PYSITELIB}/sqlmap/lib/techniques/brute/use.py
-${PYSITELIB}/sqlmap/lib/techniques/brute/use.pyc
-${PYSITELIB}/sqlmap/lib/techniques/brute/use.pyo
 ${PYSITELIB}/sqlmap/lib/techniques/dns/__init__.py
 ${PYSITELIB}/sqlmap/lib/techniques/dns/__init__.pyc
 ${PYSITELIB}/sqlmap/lib/techniques/dns/__init__.pyo
@@ -353,6 +349,9 @@ ${PYSITELIB}/sqlmap/lib/utils/__init__.pyo
 ${PYSITELIB}/sqlmap/lib/utils/api.py
 ${PYSITELIB}/sqlmap/lib/utils/api.pyc
 ${PYSITELIB}/sqlmap/lib/utils/api.pyo
+${PYSITELIB}/sqlmap/lib/utils/brute.py
+${PYSITELIB}/sqlmap/lib/utils/brute.pyc
+${PYSITELIB}/sqlmap/lib/utils/brute.pyo
 ${PYSITELIB}/sqlmap/lib/utils/crawler.py
 ${PYSITELIB}/sqlmap/lib/utils/crawler.pyc
 ${PYSITELIB}/sqlmap/lib/utils/crawler.pyo
@@ -710,7 +709,6 @@ ${PYSITELIB}/sqlmap/shell/backdoor.asp_
 ${PYSITELIB}/sqlmap/shell/backdoor.aspx_
 ${PYSITELIB}/sqlmap/shell/backdoor.jsp_
 ${PYSITELIB}/sqlmap/shell/backdoor.php_
-${PYSITELIB}/sqlmap/shell/runcmd.exe_
 ${PYSITELIB}/sqlmap/shell/stager.asp_
 ${PYSITELIB}/sqlmap/shell/stager.aspx_
 ${PYSITELIB}/sqlmap/shell/stager.jsp_
@@ -758,6 +756,9 @@ ${PYSITELIB}/sqlmap/tamper/commalesslimit.pyo
 ${PYSITELIB}/sqlmap/tamper/commalessmid.py
 ${PYSITELIB}/sqlmap/tamper/commalessmid.pyc
 ${PYSITELIB}/sqlmap/tamper/commalessmid.pyo
+${PYSITELIB}/sqlmap/tamper/commentbeforeparentheses.py
+${PYSITELIB}/sqlmap/tamper/commentbeforeparentheses.pyc
+${PYSITELIB}/sqlmap/tamper/commentbeforeparentheses.pyo
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.py
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.pyc
 ${PYSITELIB}/sqlmap/tamper/concat2concatws.pyo
