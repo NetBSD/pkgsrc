@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1916 2017/05/09 15:29:58 wiedi Exp $
+$NetBSD: CHANGES-2017,v 1.1917 2017/05/09 17:21:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2401,3 +2401,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/sniproxy to 0.5.0 [wiedi 2017-05-09]
 	Updated editors/mg2a to 1.11nb2 [jperkin 2017-05-09]
 	Updated editors/nano to 2.8.2 [wiedi 2017-05-09]
+	Updated security/py-asn1crypto to 0.22.0 [adam 2017-05-09]
+	Updated security/py-OpenSSL to 17.0.0 [adam 2017-05-09]
+	Updated devel/py-requests to 2.14.0 [adam 2017-05-09]
+	Updated www/squidanalyzer to 6.6 [adam 2017-05-09]
