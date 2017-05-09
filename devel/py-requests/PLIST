@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/04/04 12:42:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/05/09 17:08:39 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,9 +51,6 @@ ${PYSITELIB}/requests/packages/chardet/big5freq.pyo
 ${PYSITELIB}/requests/packages/chardet/big5prober.py
 ${PYSITELIB}/requests/packages/chardet/big5prober.pyc
 ${PYSITELIB}/requests/packages/chardet/big5prober.pyo
-${PYSITELIB}/requests/packages/chardet/chardetect.py
-${PYSITELIB}/requests/packages/chardet/chardetect.pyc
-${PYSITELIB}/requests/packages/chardet/chardetect.pyo
 ${PYSITELIB}/requests/packages/chardet/chardistribution.py
 ${PYSITELIB}/requests/packages/chardet/chardistribution.pyc
 ${PYSITELIB}/requests/packages/chardet/chardistribution.pyo
@@ -63,18 +60,24 @@ ${PYSITELIB}/requests/packages/chardet/charsetgroupprober.pyo
 ${PYSITELIB}/requests/packages/chardet/charsetprober.py
 ${PYSITELIB}/requests/packages/chardet/charsetprober.pyc
 ${PYSITELIB}/requests/packages/chardet/charsetprober.pyo
+${PYSITELIB}/requests/packages/chardet/cli/__init__.py
+${PYSITELIB}/requests/packages/chardet/cli/__init__.pyc
+${PYSITELIB}/requests/packages/chardet/cli/__init__.pyo
+${PYSITELIB}/requests/packages/chardet/cli/chardetect.py
+${PYSITELIB}/requests/packages/chardet/cli/chardetect.pyc
+${PYSITELIB}/requests/packages/chardet/cli/chardetect.pyo
 ${PYSITELIB}/requests/packages/chardet/codingstatemachine.py
 ${PYSITELIB}/requests/packages/chardet/codingstatemachine.pyc
 ${PYSITELIB}/requests/packages/chardet/codingstatemachine.pyo
 ${PYSITELIB}/requests/packages/chardet/compat.py
 ${PYSITELIB}/requests/packages/chardet/compat.pyc
 ${PYSITELIB}/requests/packages/chardet/compat.pyo
-${PYSITELIB}/requests/packages/chardet/constants.py
-${PYSITELIB}/requests/packages/chardet/constants.pyc
-${PYSITELIB}/requests/packages/chardet/constants.pyo
 ${PYSITELIB}/requests/packages/chardet/cp949prober.py
 ${PYSITELIB}/requests/packages/chardet/cp949prober.pyc
 ${PYSITELIB}/requests/packages/chardet/cp949prober.pyo
+${PYSITELIB}/requests/packages/chardet/enums.py
+${PYSITELIB}/requests/packages/chardet/enums.pyc
+${PYSITELIB}/requests/packages/chardet/enums.pyo
 ${PYSITELIB}/requests/packages/chardet/escprober.py
 ${PYSITELIB}/requests/packages/chardet/escprober.pyc
 ${PYSITELIB}/requests/packages/chardet/escprober.pyo
@@ -129,6 +132,9 @@ ${PYSITELIB}/requests/packages/chardet/langhungarianmodel.pyo
 ${PYSITELIB}/requests/packages/chardet/langthaimodel.py
 ${PYSITELIB}/requests/packages/chardet/langthaimodel.pyc
 ${PYSITELIB}/requests/packages/chardet/langthaimodel.pyo
+${PYSITELIB}/requests/packages/chardet/langturkishmodel.py
+${PYSITELIB}/requests/packages/chardet/langturkishmodel.pyc
+${PYSITELIB}/requests/packages/chardet/langturkishmodel.pyo
 ${PYSITELIB}/requests/packages/chardet/latin1prober.py
 ${PYSITELIB}/requests/packages/chardet/latin1prober.pyc
 ${PYSITELIB}/requests/packages/chardet/latin1prober.pyo
@@ -156,6 +162,9 @@ ${PYSITELIB}/requests/packages/chardet/universaldetector.pyo
 ${PYSITELIB}/requests/packages/chardet/utf8prober.py
 ${PYSITELIB}/requests/packages/chardet/utf8prober.pyc
 ${PYSITELIB}/requests/packages/chardet/utf8prober.pyo
+${PYSITELIB}/requests/packages/chardet/version.py
+${PYSITELIB}/requests/packages/chardet/version.pyc
+${PYSITELIB}/requests/packages/chardet/version.pyo
 ${PYSITELIB}/requests/packages/idna/__init__.py
 ${PYSITELIB}/requests/packages/idna/__init__.pyc
 ${PYSITELIB}/requests/packages/idna/__init__.pyo
@@ -192,6 +201,15 @@ ${PYSITELIB}/requests/packages/urllib3/connectionpool.pyo
 ${PYSITELIB}/requests/packages/urllib3/contrib/__init__.py
 ${PYSITELIB}/requests/packages/urllib3/contrib/__init__.pyc
 ${PYSITELIB}/requests/packages/urllib3/contrib/__init__.pyo
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/__init__.py
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/__init__.pyc
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/__init__.pyo
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/bindings.py
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/bindings.pyc
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/bindings.pyo
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/low_level.py
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/low_level.pyc
+${PYSITELIB}/requests/packages/urllib3/contrib/_securetransport/low_level.pyo
 ${PYSITELIB}/requests/packages/urllib3/contrib/appengine.py
 ${PYSITELIB}/requests/packages/urllib3/contrib/appengine.pyc
 ${PYSITELIB}/requests/packages/urllib3/contrib/appengine.pyo
@@ -201,6 +219,9 @@ ${PYSITELIB}/requests/packages/urllib3/contrib/ntlmpool.pyo
 ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.py
 ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.pyc
 ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.pyo
+${PYSITELIB}/requests/packages/urllib3/contrib/securetransport.py
+${PYSITELIB}/requests/packages/urllib3/contrib/securetransport.pyc
+${PYSITELIB}/requests/packages/urllib3/contrib/securetransport.pyo
 ${PYSITELIB}/requests/packages/urllib3/contrib/socks.py
 ${PYSITELIB}/requests/packages/urllib3/contrib/socks.pyc
 ${PYSITELIB}/requests/packages/urllib3/contrib/socks.pyo
