@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:09 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2017/05/09 15:07:42 jperkin Exp $
 #
 
 DISTNAME=		netris-0.52
@@ -33,4 +33,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/robot_desc ${DESTDIR}${PREFIX}/share/doc/netris
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
