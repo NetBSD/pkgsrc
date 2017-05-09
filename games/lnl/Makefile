@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/08/18 07:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/05/09 16:13:12 jperkin Exp $
 
 DISTNAME=	lnl-3.4.19
 PKGREVISION=	2
@@ -17,4 +17,5 @@ USE_LANGUAGES=		c c++
 CHECK_PORTABILITY_SKIP=	sh/*
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
