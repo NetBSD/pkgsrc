@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/04 11:41:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/09 20:10:27 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,8 +13,11 @@ ${PYSITELIB}/tzlocal/darwin.pyc
 ${PYSITELIB}/tzlocal/darwin.pyo
 ${PYSITELIB}/tzlocal/test_data/Harare
 ${PYSITELIB}/tzlocal/test_data/localtime/etc/localtime
+${PYSITELIB}/tzlocal/test_data/symlink_localtime/etc/localtime
+${PYSITELIB}/tzlocal/test_data/symlink_localtime/usr/share/zoneinfo/Africa/Harare
 ${PYSITELIB}/tzlocal/test_data/timezone/etc/timezone
 ${PYSITELIB}/tzlocal/test_data/timezone_setting/etc/conf.d/clock
+${PYSITELIB}/tzlocal/test_data/vardbzoneinfo/var/db/zoneinfo
 ${PYSITELIB}/tzlocal/test_data/zone_setting/etc/sysconfig/clock
 ${PYSITELIB}/tzlocal/tests.py
 ${PYSITELIB}/tzlocal/tests.pyc
