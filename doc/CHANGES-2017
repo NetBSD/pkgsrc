@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1907 2017/05/09 11:54:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1908 2017/05/09 12:34:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-django-cms to 3.4.3 [adam 2017-05-09]
 	Updated security/sqlmap to 1.1.5 [adam 2017-05-09]
 	Updated textproc/py-natsort to 5.0.3 [adam 2017-05-09]
+	Updated www/py-httplib2 to 0.10.3 [adam 2017-05-09]
