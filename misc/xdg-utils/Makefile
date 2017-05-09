@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/09/15 16:16:52 richard Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/09 18:58:29 leot Exp $
 
-DISTNAME=	xdg-utils-1.1.1
-PKGNAME=	${DISTNAME:S/-rc/rc/}
-PKGREVISION=	1
+DISTNAME=	xdg-utils-1.1.2
 CATEGORIES=	misc
 MASTER_SITES=	http://portland.freedesktop.org/download/
 
