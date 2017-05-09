@@ -1,0 +1,26 @@
+$NetBSD: patch-sys_sysv_Makefile,v 1.1 2017/05/09 14:46:55 jperkin Exp $
+
+Sync options with sys/bsd/Makefile, use pkgsrc vars.
+
+--- sys/sysv/Makefile.orig	1988-07-03 17:51:04.000000000 +0000
++++ sys/sysv/Makefile
+@@ -18,8 +18,8 @@ LIBS	= -lcurses
+ #	REGEX		-- create regular expression functions
+ #
+ #CDEFS	=  -DDO_METAKEY
+-CDEFS	=  -DDO_METAKEY -DPREFIXREGION
+-CFLAGS	= -g $(CDEFS)
++CDEFS	=  -DDO_METAKEY -DPREFIXREGION -DSTARTUPFILE=\"mg.rc\" -DNO_BACKUP -DSYMBLINK
++CFLAGS += $(CDEFS)
+ 
+ # Objects which only depend on the "standard" includes
+ OBJS	= basic.o dir.o dired.o file.o line.o match.o paragraph.o \
+@@ -44,7 +44,7 @@ OINCS =	ttydef.h sysdef.h chrdef.h
+ INCS =	def.h
+ 
+ mg:	$(OBJ)
+-	cc $(CFLAGS) -o mg $(OBJ) $(LIBS)
++	cc $(CFLAGS) -o mg $(OBJ) $(LDFLAGS) $(LIBS)
+ 
+ # strip mg once you're satisfied it'll run -- makes it much smaller
+ strip:
