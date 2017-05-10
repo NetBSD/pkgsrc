@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/01/19 18:52:24 agc Exp $
+# $NetBSD: Makefile,v 1.23 2017/05/10 10:45:26 jperkin Exp $
 #
 
 DISTNAME=		lsh-2.0.4
@@ -31,4 +31,5 @@ USE_OLD_DES_API=	yes
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/liboop/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
