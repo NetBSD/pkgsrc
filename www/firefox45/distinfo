@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2017/03/26 03:53:34 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2017/05/10 14:13:26 ryoon Exp $
 
-SHA1 (firefox-45.8.0esr.source.tar.xz) = 7b1eb51634f9127ecf5855b487948851b9cc3323
-RMD160 (firefox-45.8.0esr.source.tar.xz) = 5040a829dd9f83e7c120249a8b8ebecb8bc8ed54
-SHA512 (firefox-45.8.0esr.source.tar.xz) = f7b5e0c659b2e824cee7f3784e2d72c562915af91c7e316ec1519305755d2126d91b74c47f96c8b4fc7377710f295545c58b2f989c65c268fc23677ef8cf5c85
-Size (firefox-45.8.0esr.source.tar.xz) = 185229628 bytes
+SHA1 (firefox-45.9.0esr.source.tar.xz) = bef87fc7c9b1b787e847b8b8744af494774a1d6b
+RMD160 (firefox-45.9.0esr.source.tar.xz) = d20e4dc4c5c7b65b590b9b46e7d46cfc4daf3a05
+SHA512 (firefox-45.9.0esr.source.tar.xz) = 2e4c1f8bca0c59ac93ab918b996e3b6cf25e7279ad5800de256aa220e670c6aaab2036c3ead4020b80e2a0e8cda3ae5fe9b270106646c625ce4fd6ecfd66d9ca
+Size (firefox-45.9.0esr.source.tar.xz) = 184597220 bytes
 SHA1 (patch-aa) = c97ef4b107ea917c2a10d1a1fdaf524d794612a0
 SHA1 (patch-ao) = f4244b8e3d89743cb97395913e8916f7121c172e
 SHA1 (patch-as) = d5d7f8250a9cd462f25d529c2a79c59a1bba9db2
