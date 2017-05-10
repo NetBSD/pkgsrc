@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/04/08 20:10:31 adam Exp $
+# $NetBSD: Makefile,v 1.6 2017/05/10 17:12:16 adam Exp $
 
-DISTNAME=	urllib3-1.20
+DISTNAME=	urllib3-1.21.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI:=u/urllib3/}
@@ -32,8 +32,8 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 
 # four test failures as of 1.14, reported as
 # https://github.com/shazow/urllib3/issues/774
-do-test:
-	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
+#do-test:
+#	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
