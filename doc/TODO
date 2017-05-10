@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17329 2017/05/09 14:23:30 mef Exp $
+$NetBSD: TODO,v 1.17330 2017/05/10 08:37:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1164,6 +1164,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
+	o p5-HTTP-Server-Simple-0.52
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
 	o p5-Memoize-Memcached-0.11
@@ -1194,6 +1195,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
+	o p5-Specio-0.37
 	o p5-Sys-Utmp-1.7
 	o p5-Test-Simple-1.302085
 	o p5-Text-Hunspell-2.14
