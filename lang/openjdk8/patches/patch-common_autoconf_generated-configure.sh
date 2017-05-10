@@ -1,4 +1,4 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.11 2016/10/27 13:06:42 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.12 2017/05/10 13:59:57 ryoon Exp $
 
 BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386)
 
@@ -160,7 +160,7 @@ BOOT_JDK_VERSION part: pkg/51221 (Build error with OpenJDK8 and i386)
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking what is not needed on BSD?" >&5
  $as_echo_n "checking what is not needed on BSD?... " >&6; }
 -    if test "x$OPENJDK_TARGET_OS_VENDOR" = xopenbsd; then
-+    if test "x$OPENJDK_TARGET_OS_VENDOR" = xopenbsd -o "x$OPENJDK_TARGET_OS_VENDOR" = xnetbsd; then
++    if test "x$OPENJDK_TARGET_OS_VENDOR" = xopenbsd -o "x$OPENJDK_TARGET_OS_VENDOR" = xnetbsd -o "x$OPENJDK_TARGET_OS_VENDOR" = xfreebsd; then
 +# XXX revisit this
        ALSA_NOT_NEEDED=yes
        PULSE_NOT_NEEDED=yes
