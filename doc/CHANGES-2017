@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1919 2017/05/09 20:24:33 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1920 2017/05/10 03:50:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2409,3 +2409,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-beautifulsoup4 to 4.6.0 [adam 2017-05-09]
 	Updated time/py-tzlocal to 1.4 [adam 2017-05-09]
 	Added www/py-django-contrib-comments version 1.8.0 [adam 2017-05-09]
+	Updated devel/py-requests to 2.14.1 [adam 2017-05-10]
+	Updated devel/py-hypothesis to 3.8.3 [adam 2017-05-10]
