@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/09/19 13:04:20 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2017/05/10 10:09:21 jperkin Exp $
 #
 
 DISTNAME=	ScrollZ-2.2.3
@@ -27,4 +27,5 @@ SUBST_STAGE.mandir=	pre-configure
 post-install:
 		${CHMOD} -x ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/scrollz.1
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
