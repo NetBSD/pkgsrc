@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2017/04/27 14:44:05 ryoon Exp $
+$NetBSD: distinfo,v 1.47 2017/05/10 14:01:58 ryoon Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -59,7 +59,7 @@ SHA1 (patch-bh) = 6194a7c319a496f8ff7df173912cf87118f26a63
 SHA1 (patch-bi) = 190056b3d4c42986ae0a600668b02711598361b8
 SHA1 (patch-bn) = a50dbe17236a90d60d4bbb852ae447e51a279892
 SHA1 (patch-common_autoconf_boot-jdk.m4) = 530da90ea4062f9d8c208557ff634579b0b19f55
-SHA1 (patch-common_autoconf_generated-configure.sh) = 065821e257ec2a371cb7f377a42f1fdbd2496524
+SHA1 (patch-common_autoconf_generated-configure.sh) = 116f1b37fc737ca30998a28b40ef00f7be95a744
 SHA1 (patch-common_autoconf_spec.gmk.in) = e98bc4c8a09f49c6a26447e6f78abf4709ee694b
 SHA1 (patch-hotspot_agent_src_share_classes_sun_jvm_hotspot_utilities_PlatformInfo.java) = 893f3b7ad0839a75be49ddd0f5eefcff2dbd2928
 SHA1 (patch-hotspot_make_bsd_makefiles_defs.make) = 2d350a9b47883b3101e97cafa987104e2c4c54c4
@@ -109,9 +109,10 @@ SHA1 (patch-jdk_make_CompileLaunchers.gmk) = fc386f8992db579483ad779f1aecfca762a
 SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
 SHA1 (patch-jdk_make_GenerateSources.gmk) = ec1b64805afb6edca637d87529b1d3fa59d20828
 SHA1 (patch-jdk_make_Images.gmk) = e6643dcb25ad5457efe610f6ab7fd0ccc9b5ed41
-SHA1 (patch-jdk_make_lib_Awt2dLibraries.gmk) = ea107ae5e396263489cac9b058bcdd92891baeac
-SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 15ed4c5d01b50ab63447a19883925ac975d8390f
+SHA1 (patch-jdk_make_lib_Awt2dLibraries.gmk) = 519960ee33b748b5d91b101c2d644117a6b18e12
+SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 0afdb43822b01b244d56446ae11d15629eeec285
 SHA1 (patch-jdk_make_lib_NioLibraries.gmk) = 5a1044c444e534d627b46d820d27bb545e65959d
+SHA1 (patch-jdk_make_lib_ServiceabilityLibraries.gmk) = 76eb64f3602f67ccb346df7a0acedf097869ba76
 SHA1 (patch-jdk_make_lib_SoundLibraries.gmk) = b63cf0ebe204acf7264704916df875a31de84393
 SHA1 (patch-jdk_src_share_classes_sun_security_jca_ProviderConfig.java) = b7d53d0c3554eebde8f7180e75259eb25123ce8b
 SHA1 (patch-jdk_src_share_lib_security_java.security-bsd) = 5a64fc1205a5bd2f6586ad65ca21f93dfffb1606

@@ -1,10 +1,19 @@
-$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.2 2016/03/12 07:31:02 tnn Exp $
+$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.3 2017/05/10 14:01:58 ryoon Exp $
 
 GCC support.
 
---- jdk/make/lib/Awt2dLibraries.gmk.orig	2016-02-19 14:48:27.000000000 +0000
+--- jdk/make/lib/Awt2dLibraries.gmk.orig	2017-04-27 09:44:53.000000000 +0000
 +++ jdk/make/lib/Awt2dLibraries.gmk
-@@ -695,7 +695,6 @@ $(eval $(call SetupNativeCompilation,BUI
+@@ -48,6 +48,8 @@ ifneq ($(OPENJDK_TARGET_OS), windows)
+   BUILD_LIBMLIB_LDLIBS += $(LIBM) $(LIBDL)
+ endif
+ 
++LIBICONV := @COMPILER_RPATH_FLAG@@BUILDLINK_PREFIX.iconv@/lib -L@BUILDLINK_PREFIX.iconv@/lib -liconv
++
+ $(eval $(call SetupNativeCompilation,BUILD_LIBMLIB_IMAGE, \
+     LIBRARY := mlib_image, \
+     OUTPUT_DIR := $(INSTALL_LIBRARIES_HERE), \
+@@ -695,7 +697,6 @@ $(eval $(call SetupNativeCompilation,BUI
          $(SHARED_LIBRARY_FLAGS) \
          -I$(JDK_TOPDIR)/src/share/native/sun/java2d \
          -I$(JDK_TOPDIR)/src/share/native/sun/awt/debug, \
@@ -12,7 +21,7 @@ GCC support.
      CFLAGS_windows := -DCMS_IS_WINDOWS_, \
      MAPFILE := $(JDK_TOPDIR)/make/mapfiles/liblcms/mapfile-vers, \
      LDFLAGS := $(LDFLAGS_JDKLIB) \
-@@ -1070,7 +1069,7 @@ else # OPENJDK_TARGET_OS not windows
+@@ -1070,7 +1071,7 @@ else # OPENJDK_TARGET_OS not windows
        JAWT_LIBS += -lawt
      endif
      ifndef BUILD_HEADLESS_ONLY
@@ -21,3 +30,12 @@ GCC support.
      else
        JAWT_LIBS += -lawt_headless
        HEADLESS_CFLAG += -DHEADLESS
+@@ -1276,7 +1277,7 @@ ifndef BUILD_HEADLESS_ONLY
+     # Solaris still uses OPENWIN_LIB ..
+     LIBSPLASHSCREEN_LDFLAGS_SUFFIX += -L$(OPENWIN_LIB)$(OPENJDK_TARGET_CPU_ISADIR) -lX11 -lXext $(LIBM) -lpthread
+   else ifeq ($(OPENJDK_TARGET_OS), bsd)
+-    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib -liconv -pthread
++    LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -L$(PACKAGE_PATH)/lib $(LIBICONV) -pthread
+   else	# .. all other Unixes can use X_LIBS
+     LIBSPLASHSCREEN_LDFLAGS_SUFFIX += $(X_LIBS) -lX11 -lXext $(LIBM) -lpthread
+   endif
