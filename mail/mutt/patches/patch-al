@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.10 2016/08/21 11:39:31 wiz Exp $
+$NetBSD: patch-al,v 1.11 2017/05/10 12:29:13 jperkin Exp $
 
---- configure.orig	2016-08-18 01:56:27.000000000 +0000
+--- configure.orig	2017-04-18 23:07:15.000000000 +0000
 +++ configure
-@@ -8355,7 +8355,7 @@ fi
+@@ -8406,7 +8406,7 @@ fi
  
          old_LIBS="$LIBS"
          LIBS="$LIBS $MUTTLIBS"
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.10 2016/08/21 11:39:31 wiz Exp $
  do
  
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_func declaration" >&5
-@@ -9412,7 +9412,7 @@ fi
+@@ -9463,7 +9463,7 @@ fi
  
  if test x$mutt_cv_setgid = xyes; then
          DOTLOCK_GROUP='mail'
@@ -20,3 +20,20 @@ $NetBSD: patch-al,v 1.10 2016/08/21 11:39:31 wiz Exp $
  else
          DOTLOCK_GROUP=''
          DOTLOCK_PERMISSION=755
+@@ -9772,6 +9772,7 @@ fi
+     case "`$KRB5CFGPATH --version`" in
+       "Kerberos 5 "*)	GSSAPI_IMPL="MIT";;
+       ?eimdal*)		GSSAPI_IMPL="Heimdal";;
++      Solaris*)		GSSAPI_IMPL="Solaris";;
+       *)		GSSAPI_IMPL="Unknown";;
+    esac
+   else
+@@ -10021,7 +10022,7 @@ rm -f confcache
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: GSSAPI libraries not found" >&5
+ $as_echo "GSSAPI libraries not found" >&6; }
+     fi
+-    if test "$GSSAPI_IMPL" = "Heimdal"
++    if test "$GSSAPI_IMPL" = "Heimdal" || test "$GSSAPI_IMPL" = "Solaris"
+     then
+ 
+ $as_echo "#define HAVE_HEIMDAL 1" >>confdefs.h
