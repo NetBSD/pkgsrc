@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2017/05/03 08:38:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2017/05/10 10:45:07 jperkin Exp $
 
 DISTNAME=	libvpx-1.6.1
 CATEGORIES=	multimedia
@@ -80,6 +80,8 @@ CONFIGURE_ARGS+=	--target=ppc32-darwin8-gcc
 CONFIGURE_ARGS+=	--target=x86_64-solaris-gcc
 .  elif ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--target=x86-solaris-gcc
+# Disable libyuv SSE code, it doesn't compile at present.
+CFLAGS+=		-U__SSE2__
 .  endif
 .endif
 
