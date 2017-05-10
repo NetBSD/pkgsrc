@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1926 2017/05/10 17:15:34 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1927 2017/05/10 18:00:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2419,3 +2419,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-m2crypto to 0.26.0 [adam 2017-05-10]
 	Updated www/py-urllib3 to 1.21.1 [adam 2017-05-10]
 	Updated sysutils/consul to 0.8.2 [fhajny 2017-05-10]
+	Updated devel/py-requests to 2.14.2 [adam 2017-05-10]
+	Added devel/py-requests-mock version 1.3.0 [adam 2017-05-10]
+	Updated net/py-apache-libcloud to 2.0.0 [adam 2017-05-10]
