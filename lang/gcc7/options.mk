@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2017/05/03 00:21:03 maya Exp $
+# $NetBSD: options.mk,v 1.2 2017/05/10 15:02:29 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran \
@@ -106,12 +106,6 @@ LANGS+=			obj-c++
 .if !empty(PKG_OPTIONS:Mgcc-objc)
 LANGS+=			objc
 .endif
-
-USE_TOOLS+=		unzip zip:run gmake:run
-CONFIGURE_ARGS+=	--with-system-zlib
-
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../lang/python/application.mk"
 
 .if !empty(PKG_OPTIONS:Mgcc-go)
 LANGS+=			go
