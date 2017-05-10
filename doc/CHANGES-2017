@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1925 2017/05/10 17:12:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1926 2017/05/10 17:15:34 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-typing to 3.6.1 [adam 2017-05-10]
 	Updated security/py-m2crypto to 0.26.0 [adam 2017-05-10]
 	Updated www/py-urllib3 to 1.21.1 [adam 2017-05-10]
+	Updated sysutils/consul to 0.8.2 [fhajny 2017-05-10]
