@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1924 2017/05/10 15:02:38 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.1925 2017/05/10 17:12:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2415,3 +2415,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox45 to 45.9.0 [ryoon 2017-05-10]
 	Updated www/firefox45-l10n to 45.9.0 [ryoon 2017-05-10]
 	Updated lang/gcc7 to 7.1.0nb2 [jperkin 2017-05-10]
+	Updated devel/py-typing to 3.6.1 [adam 2017-05-10]
+	Updated security/py-m2crypto to 0.26.0 [adam 2017-05-10]
+	Updated www/py-urllib3 to 1.21.1 [adam 2017-05-10]
