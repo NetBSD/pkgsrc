@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2017/05/04 17:38:23 maya Exp $
+$NetBSD: distinfo,v 1.3 2017/05/10 15:00:09 jperkin Exp $
 
 SHA1 (gcc-7.1.0.tar.bz2) = 9f1e907f27eadefe7d5f7567c09e17805d9c8837
 RMD160 (gcc-7.1.0.tar.bz2) = a228dc45a09eda91b1a201d234f9013b3009b461
@@ -35,4 +35,5 @@ SHA1 (patch-libsanitizer_configure.tgt) = 0aff54104734b2cb21090e33f9304738946ea5
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 014d442c885b9c51d1a4af05205279c274a9559d
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = 06bba6da02344f76c26eed765a7cb022c035994e
 SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 626fc1f9c035ac5cef30a92d525af4e778835ebf
+SHA1 (patch-libstdc++-v3_libsupc++_new__opa.cc) = 4f5c5e1a2975d13b52736328dcdd6a8bcd3b3b73
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 9784bfa4323f8498b36565d0fea28fce69ffdbb1
