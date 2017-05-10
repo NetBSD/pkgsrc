@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1930 2017/05/10 18:21:34 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1931 2017/05/10 18:24:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2425,3 +2425,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/git to 2.13.0 [adam 2017-05-10]
 	Updated devel/kafka to 0.10.2.1 [fhajny 2017-05-10]
 	Updated security/vault to 0.7.2 [fhajny 2017-05-10]
+	Updated databases/py-peewee to 2.10.0 [fhajny 2017-05-10]
