@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/04/08 20:10:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/05/10 17:12:16 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,15 @@ ${PYSITELIB}/urllib3/connectionpool.pyo
 ${PYSITELIB}/urllib3/contrib/__init__.py
 ${PYSITELIB}/urllib3/contrib/__init__.pyc
 ${PYSITELIB}/urllib3/contrib/__init__.pyo
+${PYSITELIB}/urllib3/contrib/_securetransport/__init__.py
+${PYSITELIB}/urllib3/contrib/_securetransport/__init__.pyc
+${PYSITELIB}/urllib3/contrib/_securetransport/__init__.pyo
+${PYSITELIB}/urllib3/contrib/_securetransport/bindings.py
+${PYSITELIB}/urllib3/contrib/_securetransport/bindings.pyc
+${PYSITELIB}/urllib3/contrib/_securetransport/bindings.pyo
+${PYSITELIB}/urllib3/contrib/_securetransport/low_level.py
+${PYSITELIB}/urllib3/contrib/_securetransport/low_level.pyc
+${PYSITELIB}/urllib3/contrib/_securetransport/low_level.pyo
 ${PYSITELIB}/urllib3/contrib/appengine.py
 ${PYSITELIB}/urllib3/contrib/appengine.pyc
 ${PYSITELIB}/urllib3/contrib/appengine.pyo
@@ -28,6 +37,9 @@ ${PYSITELIB}/urllib3/contrib/ntlmpool.pyo
 ${PYSITELIB}/urllib3/contrib/pyopenssl.py
 ${PYSITELIB}/urllib3/contrib/pyopenssl.pyc
 ${PYSITELIB}/urllib3/contrib/pyopenssl.pyo
+${PYSITELIB}/urllib3/contrib/securetransport.py
+${PYSITELIB}/urllib3/contrib/securetransport.pyc
+${PYSITELIB}/urllib3/contrib/securetransport.pyo
 ${PYSITELIB}/urllib3/contrib/socks.py
 ${PYSITELIB}/urllib3/contrib/socks.pyc
 ${PYSITELIB}/urllib3/contrib/socks.pyo
