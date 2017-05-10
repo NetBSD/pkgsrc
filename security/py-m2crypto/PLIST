@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/02/19 18:54:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/05/10 17:03:42 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -103,10 +103,7 @@ ${PYSITELIB}/M2Crypto/X509.pyo
 ${PYSITELIB}/M2Crypto/__init__.py
 ${PYSITELIB}/M2Crypto/__init__.pyc
 ${PYSITELIB}/M2Crypto/__init__.pyo
-${PYSITELIB}/M2Crypto/__m2crypto.so
-${PYSITELIB}/M2Crypto/_m2crypto.py
-${PYSITELIB}/M2Crypto/_m2crypto.pyc
-${PYSITELIB}/M2Crypto/_m2crypto.pyo
+${PYSITELIB}/M2Crypto/_m2crypto.so
 ${PYSITELIB}/M2Crypto/callback.py
 ${PYSITELIB}/M2Crypto/callback.pyc
 ${PYSITELIB}/M2Crypto/callback.pyo
@@ -119,6 +116,9 @@ ${PYSITELIB}/M2Crypto/httpslib.pyo
 ${PYSITELIB}/M2Crypto/m2.py
 ${PYSITELIB}/M2Crypto/m2.pyc
 ${PYSITELIB}/M2Crypto/m2.pyo
+${PYSITELIB}/M2Crypto/m2crypto.py
+${PYSITELIB}/M2Crypto/m2crypto.pyc
+${PYSITELIB}/M2Crypto/m2crypto.pyo
 ${PYSITELIB}/M2Crypto/m2urllib.py
 ${PYSITELIB}/M2Crypto/m2urllib.pyc
 ${PYSITELIB}/M2Crypto/m2urllib.pyo
