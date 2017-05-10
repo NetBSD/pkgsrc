@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2017/05/03 08:38:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2017/05/10 12:47:06 jperkin Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.28.2
@@ -18,6 +18,9 @@ USE_TOOLS+=		autoconf gmake intltool msgfmt pkg-config
 USE_LANGUAGES=		c c++11
 
 CONFLICTS+=		gnome2-system-monitor-[0-9]*
+
+# Avoiding conflicting -std switches.
+CONFIGURE_ARGS+=	--enable-more-warnings=no
 
 .include "../../mk/bsd.prefs.mk"
 
