@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1935 2017/05/11 09:24:59 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1936 2017/05/11 13:00:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2431,3 +2431,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/elasticsearch to 5.4.0 [fhajny 2017-05-11]
 	Updated sysutils/beats to 5.4.0 [fhajny 2017-05-11]
 	Updated security/py-oauth2client to 4.1.0 [adam 2017-05-11]
+	Updated comms/gammu to 1.38.2 [leot 2017-05-11]
