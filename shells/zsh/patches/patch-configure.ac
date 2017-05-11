@@ -1,13 +1,15 @@
-$NetBSD: patch-configure.ac,v 1.4 2014/01/08 16:30:01 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.5 2017/05/11 13:49:06 jperkin Exp $
 
 Use a compile test, not a run test, for whether various rlimit values
 are equivalent.  A compile test is sufficient because zsh uses these
 values in switch cases, so they must be compile-time, if not
 preprocessor-time, constants.
 
---- configure.ac.orig	2013-11-27 19:00:20.000000000 +0000
+Fix SunOS flags.
+
+--- configure.ac.orig	2016-12-12 21:35:28.000000000 +0000
 +++ configure.ac
-@@ -1837,85 +1837,9 @@ zsh_LIMIT_PRESENT(RLIMIT_NPTS)
+@@ -1920,85 +1920,9 @@ zsh_LIMIT_PRESENT(RLIMIT_NPTS)
  zsh_LIMIT_PRESENT(RLIMIT_SWAP)
  zsh_LIMIT_PRESENT(RLIMIT_KQUEUES)
  
@@ -96,3 +98,12 @@ preprocessor-time, constants.
  
  
  dnl --------------------------------------------
+@@ -2900,7 +2824,7 @@ char *argv[];
+     sunos*)       DLLDFLAGS="${DLLDFLAGS=-assert nodefinitions}" ;;
+     sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G $ldflags}" ;;
+     aix*)         DLLDFLAGS="${DLLDFLAGS=-G -bexpall -lc}" ;;
+-    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-G}" ;;
++    solaris*|sysv4*|esix*) DLLDFLAGS="${DLLDFLAGS=-shared}" ;;
+     darwin*)      DLLDFLAGS="${DLLDFLAGS=-bundle -flat_namespace -undefined suppress}" ;;
+     beos*|haiku*) DLLDFLAGS="${DLLDFLAGS=-nostart}" ;;
+     openbsd*)
