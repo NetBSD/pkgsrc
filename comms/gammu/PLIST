@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/12/09 14:56:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/05/11 13:00:16 leot Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -89,6 +89,7 @@ share/doc/gammu/examples/php/smsd-mysql-list/sms.php
 share/doc/gammu/examples/sms-read.c
 share/doc/gammu/examples/sms-send.c
 share/doc/gammu/examples/smsd.c
+share/doc/gammu/examples/sql/mysql-strict.sql
 share/doc/gammu/examples/sql/mysql.sql
 share/doc/gammu/examples/sql/pgsql.sql
 share/doc/gammu/examples/sql/sqlite.sql
