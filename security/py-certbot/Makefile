@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2017/04/10 10:29:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/11 08:23:35 fhajny Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	security
 
 COMMENT=	Client for the Let's Encrypt CA
@@ -10,14 +9,9 @@ LICENSE=	apache-2.0
 
 EGG_NAME=	${DISTNAME}
 
-# Only supports Python 2.6 and 2.7 so far
-# https://github.com/certbot/certbot#system-requirements
-PYTHON_VERSIONS_ACCEPTED=	27
-
 .include "Makefile.common"
 
 DEPENDS+=	${PYPKGPREFIX}-acme-${PKGVERSION_NOREV}{nb*,}:../../security/py-acme
-DEPENDS+=	${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-configargparse>=0.9.3:../../devel/py-configargparse
 DEPENDS+=	${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=	${PYPKGPREFIX}-cryptography>=0.7:../../security/py-cryptography
@@ -52,6 +46,8 @@ MAKE_DIRS+=		${VARBASE}/letsencrypt/log
 INSTALLATION_DIRS+=	share/examples/certbot
 
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/bin/certbot \
+		${DESTDIR}${PREFIX}/bin/certbot${PYVERSSUFFIX}
 	${INSTALL_DATA} ${WRKSRC}/examples/cli.ini \
 		${DESTDIR}${PREFIX}/share/examples/certbot
 
