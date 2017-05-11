@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:29:11 agc Exp $
+$NetBSD: distinfo,v 1.9 2017/05/11 11:12:44 adam Exp $
 
-SHA1 (msgpack-python-0.4.6.tar.gz) = 58652f2bce9660e1d20deda4fd94a1f540319442
-RMD160 (msgpack-python-0.4.6.tar.gz) = f9a286d0b681bbcd412f867df21b547f0f8c4072
-SHA512 (msgpack-python-0.4.6.tar.gz) = 492246b03035cfb10a99aed59d23a7b10d1fd4cfa044cdec737b4f65fe3f7c30d3c9754389fd5efc2eb41760e4813ac246915ac7a50dc5659e65002a476bb886
-Size (msgpack-python-0.4.6.tar.gz) = 116433 bytes
+SHA1 (msgpack-python-0.4.8.tar.gz) = 59d4af5f0598bd31469cad7df316d70e6b492b1d
+RMD160 (msgpack-python-0.4.8.tar.gz) = e5332d835644ec9f1addecaec91aab0397adcb9b
+SHA512 (msgpack-python-0.4.8.tar.gz) = 59e9c43be6b92e6d10f40999e0902c350137e67a83c43bb15b273eca856a6eb39f24b625b02b40188a9365ce3101f03bfa9aa3dfff56c5c3b551533942183481
+Size (msgpack-python-0.4.8.tar.gz) = 113641 bytes
