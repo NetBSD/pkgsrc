@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2017/02/12 06:26:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2017/05/11 18:16:16 bsiegert Exp $
 #
 
 DISTNAME=	mod_dnssd-0.6
@@ -25,6 +25,14 @@ APACHE_MODULE=		yes
 
 INSTALLATION_DIRS+=	lib/httpd
 
+.include "../../mk/apache.mk"
+
+# Avoid conflicting C99 flags.
+.if ${PKG_APACHE} == "apache24"
+BUILDLINK_TRANSFORM.SunOS+=	rm:-D_XOPEN_SOURCE
+BUILDLINK_TRANSFORM.SunOS+=	rm:-D_XOPEN_SOURCE_EXTENDED=1
+.endif
+
 do-install:
 	cd ${WRKSRC}/src &&						\
 	    libexecdir=`${APXS} -q LIBEXECDIR` &&			\
@@ -32,5 +40,4 @@ do-install:
 	      -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_NAME}.la
 
 .include "../../net/avahi/buildlink3.mk"
-.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
