@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.79 2016/11/18 09:43:39 spz Exp $
+# $NetBSD: license.mk,v 1.80 2017/05/11 12:56:21 jperkin Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -148,7 +148,8 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	x11 \
 	zlib \
 	zpl-2.0 \
-	zpl-2.1
+	zpl-2.1 \
+	zsh
 
 # not approved by OSI, derived from BSD
 DEFAULT_ACCEPTABLE_LICENSES+=	info-zip
