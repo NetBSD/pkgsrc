@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/02/12 06:24:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/05/11 14:33:02 jperkin Exp $
 #
 
 DISTNAME=	libfm-1.2.4
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		intltool pkg-config
+USE_TOOLS+=		intltool msgfmt pkg-config
 
 # needed for correct getgrgid_r() prototype
 CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
