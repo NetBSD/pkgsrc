@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2016/12/25 12:01:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.36 2017/05/11 13:49:06 jperkin Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -9,6 +9,7 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/compctl.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/complete.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/complist.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/computil.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/curses.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/datetime.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/deltochar.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/example.so
@@ -27,8 +28,7 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/sched.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/stat.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/system.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/termcap.so
-${PLIST.dynamic}${PLIST.curses}lib/zsh/${PKGVERSION}/zsh/curses.so
-${PLIST.dynamic}${PLIST.terminfo}lib/zsh/${PKGVERSION}/zsh/terminfo.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/terminfo.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zftp.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zle.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zleparameter.so
