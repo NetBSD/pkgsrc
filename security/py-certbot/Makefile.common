@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2017/04/06 19:51:15 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.10 2017/05/11 08:23:35 fhajny Exp $
 #
 # used by security/py-acme/Makefile
 # used by security/py-certbot/Makefile
 
-DISTNAME=	certbot-0.13.0
+DISTNAME=	certbot-0.14.0
 MASTER_SITES=	${MASTER_SITE_GITHUB:=certbot/}
 
 HOMEPAGE=	https://letsencrypt.org/
