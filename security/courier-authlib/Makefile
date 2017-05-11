@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2016/10/09 21:42:02 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2017/05/11 09:22:36 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -74,7 +74,6 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 POST_INSTALL_TARGETS=	post-install-common post-install-authdaemon
 
 .include "options.mk"
-.include "../../devel/libltdl/buildlink3.mk"
 
 .for file in ${GEN_FILES}
 CONF_FILES_PERMS+=	${EGDIR}/${file}.dist ${PKG_SYSCONFDIR}/${file} \
@@ -104,4 +103,6 @@ post-install-authdaemon:
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authdaemonrc.dist
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authdaemonrc.dist
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

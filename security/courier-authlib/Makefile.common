@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.16 2017/05/11 09:22:36 jperkin Exp $
 #
 # used by mail/courier-mta/Makefile.common
 
@@ -20,10 +20,3 @@ CONFIGURE_ARGS+=	--with-mailuser=${COURIER_USER}
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
 
 CONFIGURE_ARGS.SunOS+=	--with-waitfunc=wait3
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "OpenBSD"
-BUILDLINK_DEPMETHOD.libiconv?=  build
-.include "../../converters/libiconv/buildlink3.mk"
-.endif
