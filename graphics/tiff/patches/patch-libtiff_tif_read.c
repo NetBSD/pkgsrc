@@ -1,4 +1,4 @@
-$NetBSD: patch-libtiff_tif_read.c,v 1.1.2.2 2017/05/06 15:01:21 bsiegert Exp $
+$NetBSD: patch-libtiff_tif_read.c,v 1.1.2.3 2017/05/11 17:47:20 bsiegert Exp $
 
 CVE-2017-7593
 http://bugzilla.maptools.org/show_bug.cgi?id=2651
@@ -7,8 +7,21 @@ https://github.com/vadz/libtiff/commit/d60332057b95
 CVE-2017-7602
 https://github.com/vadz/libtiff/commit/66e7bd59520996740e4df5495a830b42fae48bc4
 
---- libtiff/tif_read.c.orig	2017-05-03 22:31:30.000000000 +0000
+CVE-2016-10266
+http://bugzilla.maptools.org/show_bug.cgi?id=2596
+https://github.com/vadz/libtiff/commit/438274f938e046d33cb0e1230b41da32ffe223e1
+
+--- libtiff/tif_read.c.orig	2016-07-13 13:28:17.000000000 +0000
 +++ libtiff/tif_read.c
+@@ -346,7 +346,7 @@ TIFFReadEncodedStrip(TIFF* tif, uint32 s
+ 	rowsperstrip=td->td_rowsperstrip;
+ 	if (rowsperstrip>td->td_imagelength)
+ 		rowsperstrip=td->td_imagelength;
+-	stripsperplane=((td->td_imagelength+rowsperstrip-1)/rowsperstrip);
++	stripsperplane= TIFFhowmany_32_maxuint_compat(td->td_imagelength, rowsperstrip);
+ 	stripinplane=(strip%stripsperplane);
+ 	plane=(uint16)(strip/stripsperplane);
+ 	rows=td->td_imagelength-stripinplane*rowsperstrip;
 @@ -420,16 +420,25 @@ TIFFReadRawStrip1(TIFF* tif, uint32 stri
  			return ((tmsize_t)(-1));
  		}
