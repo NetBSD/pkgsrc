@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.113 2017/02/12 06:25:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.113.2.1 2017/05/11 18:06:31 bsiegert Exp $
 
 JDK_MICRO=	80
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20150609
 PKGNAME=	openjdk7-1.7.${JDK_MICRO}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -20,8 +20,8 @@ DIST_SUBDIR=	openjdk7
 
 JAVA_NAME=	openjdk7
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
-JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps keytool orbd \
-		policytool rmid rmiregistry servertool tnameserv
+JAVA_WRAPPERS=	jar java javac javadoc javah javap jcmd jps jstack keytool \
+		orbd policytool rmid rmiregistry servertool tnameserv
 
 MAKE_ENV+=		PKGSRC_ZIPEXE=${TOOLS_PATH.zip}
 MAKE_ENV+=		PKGSRC_UNZIP=${TOOLS_PATH.unzip}
@@ -52,7 +52,7 @@ MAKE_ENV+=	ALT_PACKAGE_PATH=${PREFIX}
 MAKE_ENV+=	RHINO_JAR=${WRKDIR}/${RHINO}/js.jar
 
 MAKE_ENV+=	BUILDLINK_PREFIX.iconv=${BUILDLINK_PREFIX.iconv:Q}
-MAKE_ENV+=	ZLIB_LIBS="-L${BUILDLINK_PREFIX.zlib}/lib -lz"
+MAKE_ENV+=	ZLIB_LIBS="-L${BUILDLINK_PREFIX.zlib}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -lz"
 
 MAKE_ENV+=	ALT_PARALLEL_COMPILE_JOBS=${MAKE_JOBS:U1}
 MAKE_ENV+=	HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
