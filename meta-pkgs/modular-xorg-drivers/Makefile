@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2017/03/14 13:26:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2017/05/11 20:55:19 maya Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.19.0
@@ -33,7 +33,8 @@ DEPENDS+=	xf86-video-ark-[0-9]*:../../x11/xf86-video-ark
 DEPENDS+=	xf86-video-ast-[0-9]*:../../x11/xf86-video-ast
 .if !empty(MACHINE_PLATFORM:MNetBSD-7.*-i386) ||	\
     !empty(MACHINE_PLATFORM:MNetBSD-7.*-x86_64) ||	\
-    ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
+    ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" ||	\
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
 DEPENDS+=	xf86-video-ati-[0-9]*:../../x11/xf86-video-ati
 .else
 DEPENDS+=	xf86-video-ati6-[0-9]*:../../x11/xf86-video-ati6
