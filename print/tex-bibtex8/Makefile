@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/11 14:34:39 jperkin Exp $
 #
 
 DISTNAME=	tex-bibtex8-3.71
@@ -39,4 +39,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bibtex ${DESTDIR}${PREFIX}/bin/bibtex8
 	${INSTALL_DATA} ${WRKSRC}/*.csf ${DESTDIR}${PREFIX}/${TEXMFDIR}/bibtex/csf
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
