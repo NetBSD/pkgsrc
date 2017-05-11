@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1932 2017/05/11 08:23:57 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.1933 2017/05/11 08:36:40 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2428,3 +2428,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-peewee to 2.10.0 [fhajny 2017-05-10]
 	Updated security/py-acme to 0.14.0 [fhajny 2017-05-11]
 	Updated security/py-certbot to 0.14.0 [fhajny 2017-05-11]
+	Updated databases/elasticsearch to 5.4.0 [fhajny 2017-05-11]
