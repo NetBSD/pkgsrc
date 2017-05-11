@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2017/04/09 01:26:46 wen Exp $
+@comment $NetBSD: PLIST,v 1.32 2017/05/11 14:13:41 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/.stylelintrc
 share/mediawiki/COPYING
@@ -5544,7 +5544,6 @@ share/mediawiki/languages/i18n/eml.json
 share/mediawiki/languages/i18n/en-ca.json
 share/mediawiki/languages/i18n/en-gb.json
 share/mediawiki/languages/i18n/en.json
-share/mediawiki/languages/i18n/en.json.rej
 share/mediawiki/languages/i18n/eo.json
 share/mediawiki/languages/i18n/es.json
 share/mediawiki/languages/i18n/et.json
@@ -5724,7 +5723,6 @@ share/mediawiki/languages/i18n/ps.json
 share/mediawiki/languages/i18n/pt-br.json
 share/mediawiki/languages/i18n/pt.json
 share/mediawiki/languages/i18n/qqq.json
-share/mediawiki/languages/i18n/qqq.json.rej
 share/mediawiki/languages/i18n/qu.json
 share/mediawiki/languages/i18n/qug.json
 share/mediawiki/languages/i18n/rgn.json
