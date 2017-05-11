@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1937 2017/05/11 13:30:24 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1938 2017/05/11 14:20:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-oauth2client to 4.1.0 [adam 2017-05-11]
 	Updated comms/gammu to 1.38.2 [leot 2017-05-11]
 	Updated devel/py-msgpack to 0.4.8 [adam 2017-05-11]
+	Updated www/mediawiki to 1.28.2 [wen 2017-05-11]
