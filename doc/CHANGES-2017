@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1939 2017/05/11 14:46:26 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1940 2017/05/11 17:36:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-msgpack to 0.4.8 [adam 2017-05-11]
 	Updated www/mediawiki to 1.28.2 [wen 2017-05-11]
 	Updated devel/xulrunner45 to 45.9.0 [ryoon 2017-05-11]
+	Updated time/py-icalendar to 3.11.4 [wiz 2017-05-11]
