@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_tiffcp.c,v 1.2.2.3 2017/05/06 15:08:52 bsiegert Exp $
+$NetBSD: patch-tools_tiffcp.c,v 1.2.2.4 2017/05/11 17:47:20 bsiegert Exp $
 
 CVE-2017-5225
 http://bugzilla.maptools.org/show_bug.cgi?id=2656
@@ -11,6 +11,12 @@ CVE-2016-10093
 http://bugzilla.maptools.org/show_bug.cgi?id=2610
 https://github.com/vadz/libtiff/commit/787c0ee906430b772f33ca50b97b8b5ca070faec
 
+and
+
+CVE-2016-10268
+http://bugzilla.maptools.org/show_bug.cgi?id=2598
+https://github.com/vadz/libtiff/commit/5397a417e61258c69209904e652a1f409ec3b9df
+
 --- tools/tiffcp.c.orig	2016-10-12 01:45:17.000000000 +0000
 +++ tools/tiffcp.c
 @@ -592,7 +592,7 @@ static	copyFunc pickCopyFunc(TIFF*, TIFF
@@ -22,6 +28,15 @@ https://github.com/vadz/libtiff/commit/787c0ee906430b772f33ca50b97b8b5ca070faec
  	uint16 input_compression, input_photometric = PHOTOMETRIC_MINISBLACK;
  	copyFunc cf;
  	uint32 width, length;
+@@ -985,7 +985,7 @@ DECLAREcpFunc(cpDecodedStrips)
+ 		tstrip_t s, ns = TIFFNumberOfStrips(in);
+ 		uint32 row = 0;
+ 		_TIFFmemset(buf, 0, stripsize);
+-		for (s = 0; s < ns; s++) {
++		for (s = 0; s < ns && row < imagelength; s++) {
+ 			tsize_t cc = (row + rowsperstrip > imagelength) ?
+ 			    TIFFVStripSize(in, imagelength - row) : stripsize;
+ 			if (TIFFReadEncodedStrip(in, s, buf, cc) < 0
 @@ -1068,6 +1068,16 @@ DECLAREcpFunc(cpContig2SeparateByRow)
  	register uint32 n;
  	uint32 row;
