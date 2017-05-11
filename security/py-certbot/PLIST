@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2017/04/06 19:51:15 fhajny Exp $
-bin/certbot
+@comment $NetBSD: PLIST,v 1.8 2017/05/11 08:23:35 fhajny Exp $
+bin/certbot${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -69,6 +69,9 @@ ${PYSITELIB}/certbot/hooks.pyo
 ${PYSITELIB}/certbot/interfaces.py
 ${PYSITELIB}/certbot/interfaces.pyc
 ${PYSITELIB}/certbot/interfaces.pyo
+${PYSITELIB}/certbot/lock.py
+${PYSITELIB}/certbot/lock.pyc
+${PYSITELIB}/certbot/lock.pyo
 ${PYSITELIB}/certbot/log.py
 ${PYSITELIB}/certbot/log.pyc
 ${PYSITELIB}/certbot/log.pyo
@@ -198,6 +201,9 @@ ${PYSITELIB}/certbot/tests/errors_test.pyo
 ${PYSITELIB}/certbot/tests/hook_test.py
 ${PYSITELIB}/certbot/tests/hook_test.pyc
 ${PYSITELIB}/certbot/tests/hook_test.pyo
+${PYSITELIB}/certbot/tests/lock_test.py
+${PYSITELIB}/certbot/tests/lock_test.pyc
+${PYSITELIB}/certbot/tests/lock_test.pyo
 ${PYSITELIB}/certbot/tests/log_test.py
 ${PYSITELIB}/certbot/tests/log_test.pyc
 ${PYSITELIB}/certbot/tests/log_test.pyo
@@ -231,7 +237,6 @@ ${PYSITELIB}/certbot/tests/testdata/cli.ini
 ${PYSITELIB}/certbot/tests/testdata/csr-6sans.pem
 ${PYSITELIB}/certbot/tests/testdata/csr-nonames.pem
 ${PYSITELIB}/certbot/tests/testdata/csr-nosans.pem
-${PYSITELIB}/certbot/tests/testdata/csr-san.der
 ${PYSITELIB}/certbot/tests/testdata/csr-san.pem
 ${PYSITELIB}/certbot/tests/testdata/csr.der
 ${PYSITELIB}/certbot/tests/testdata/csr.pem
