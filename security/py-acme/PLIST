@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2017/02/07 14:03:14 wiz Exp $
-bin/jws
+@comment $NetBSD: PLIST,v 1.5 2017/05/11 08:23:35 fhajny Exp $
+bin/jws${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
