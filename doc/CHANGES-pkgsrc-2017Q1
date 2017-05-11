@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.20 2017/05/06 15:44:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.21 2017/05/11 18:45:11 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -443,4 +443,28 @@ devel/splint: build fix
 
 Pullup ticket #5403 - requested by sevan
 math/R: build fix for Darwin
+
+Pullup ticket #5405 - requested by sevan
+mk/tools/tools.Darwin.mk: build fix for Python eggs
+
+Pullup ticket #5406 - requested by sevan
+graphics/tiff: security fix
+
+Pullup ticket #5408 - requested by sevan
+www/py-django-cms: security fix
+
+Pullup ticket #5409 - requested by sevan
+lang/openjdk7: build fix
+
+Pullup ticket #5410 - requested by sevan
+mail/mutt: build fix for SunOS
+
+Pullup ticket #5411 - requested by sevan
+www/ap22-dnssd: build fix for SunOS
+
+Pullup ticket #5407 - requested by sevan
+devel/rt4: build fix
+
+Pullup ticket #5415 - requested by wen
+www/mediawiki: security fix
 
