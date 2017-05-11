@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/07/28 13:58:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/05/11 17:36:28 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -31,6 +31,9 @@ ${PYSITELIB}/icalendar/tests/__init__.pyc
 ${PYSITELIB}/icalendar/tests/__init__.pyo
 ${PYSITELIB}/icalendar/tests/america_new_york.ics
 ${PYSITELIB}/icalendar/tests/encoding.ics
+${PYSITELIB}/icalendar/tests/hypothesis/test_fuzzing.py
+${PYSITELIB}/icalendar/tests/hypothesis/test_fuzzing.pyc
+${PYSITELIB}/icalendar/tests/hypothesis/test_fuzzing.pyo
 ${PYSITELIB}/icalendar/tests/issue_112_missing_tzinfo_on_exdate.ics
 ${PYSITELIB}/icalendar/tests/issue_53_parsing_failure.ics
 ${PYSITELIB}/icalendar/tests/multiple.ics
@@ -76,7 +79,9 @@ ${PYSITELIB}/icalendar/tests/test_unit_tools.py
 ${PYSITELIB}/icalendar/tests/test_unit_tools.pyc
 ${PYSITELIB}/icalendar/tests/test_unit_tools.pyo
 ${PYSITELIB}/icalendar/tests/time.ics
+${PYSITELIB}/icalendar/tests/timezone_same_start.ics
 ${PYSITELIB}/icalendar/tests/timezoned.ics
+${PYSITELIB}/icalendar/tests/x_location.ics
 ${PYSITELIB}/icalendar/timezone_cache.py
 ${PYSITELIB}/icalendar/timezone_cache.pyc
 ${PYSITELIB}/icalendar/timezone_cache.pyo
