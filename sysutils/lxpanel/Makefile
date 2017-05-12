@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/02/12 06:26:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/05/12 10:39:49 jperkin Exp $
 
 DISTNAME=	lxpanel-0.8.2
 PKGREVISION=	4
@@ -16,7 +16,7 @@ DEPENDS+=	lxmenu-data-[0-9]*:../../sysutils/lxmenu-data
 LXDE_CONF=		share/examples/lxpanel
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl pkg-config intltool
+USE_TOOLS+=		intltool msgfmt perl pkg-config
 CONFIGURE_ARGS+=	--with-plugins="deskno, xkb, wnckpager"
 PKGCONFIG_OVERRIDE+=	lxpanel.pc.in
 
