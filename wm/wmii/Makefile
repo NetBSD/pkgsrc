@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/03/15 15:24:24 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2017/05/12 11:59:38 jperkin Exp $
 
 DISTNAME=		wmii-3.6
 PKGREVISION=		4
@@ -34,7 +34,7 @@ CONF_FILES_MODE=	0755
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-LDFLAGS.SunOS+=		-lsocket -lnsl
+LDFLAGS.SunOS+=		-lsocket -lnsl -liconv
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-build
