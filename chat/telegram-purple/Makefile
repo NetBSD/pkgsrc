@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/02/28 15:20:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/05/12 22:29:15 khorben Exp $
 
-DISTNAME=	telegram-purple_1.2.5.orig
-PKGNAME=	telegram-purple-1.2.5
-PKGREVISION=	1
+DISTNAME=	telegram-purple_1.2.6.orig
+PKGNAME=	telegram-purple-1.2.6
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=majn/}
 GITHUB_PROJECT=	telegram-purple
-GITHUB_RELEASE=	v1.2.5
+GITHUB_RELEASE=	v1.2.6
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/majn/telegram-purple/
