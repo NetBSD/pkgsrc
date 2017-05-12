@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/12 00:24:42 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/05/12 11:49:30 jperkin Exp $
 #
 
 DISTNAME=	libifp-1.0.0.2
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c c++
 USE_FEATURES+=	fts_open
 
 CFLAGS.SunOS+=	-fPIC
+LIBS.SunOS+=	-liconv
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
