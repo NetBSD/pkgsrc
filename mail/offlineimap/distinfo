@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 23:27:11 agc Exp $
+$NetBSD: distinfo,v 1.9 2017/05/12 10:07:41 fhajny Exp $
 
-SHA1 (v6.5.6.tar.gz) = cced67060be2922ca3ce056839b2aa1fe6b776a1
-RMD160 (v6.5.6.tar.gz) = 1957addafe7e3362b232457cc59a178ca770d400
-SHA512 (v6.5.6.tar.gz) = 0f460a95816ba3e7266dda48e4193680b0c8d7da0b3f4398d254dab0341badec0a11e1b518494ec1f7aaa93956d9d0a674f7489c5d7300a7968459409243e392
-Size (v6.5.6.tar.gz) = 187803 bytes
-SHA1 (patch-offlineimap_____init____.py) = 417defa34b36f61fae7db467c9c949fa595a908a
+SHA1 (offlineimap-7.1.0.tar.gz) = 4ed18db44de50bf9706f0599c743691900d0550d
+RMD160 (offlineimap-7.1.0.tar.gz) = af35fba263e6460e213b16ae6efb2be984918a9c
+SHA512 (offlineimap-7.1.0.tar.gz) = 9e9d5ea2b58dc212c9b69adb701fb4cd1ac1a7c8af90623dcfba3115ee7e1f63cc8569c352bae8f1fe09eb8c9255c39d0bf947dfb5d683ee4b03c0c822cb192d
+Size (offlineimap-7.1.0.tar.gz) = 698600 bytes
