@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1940 2017/05/11 17:36:39 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1941 2017/05/12 05:14:15 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/mediawiki to 1.28.2 [wen 2017-05-11]
 	Updated devel/xulrunner45 to 45.9.0 [ryoon 2017-05-11]
 	Updated time/py-icalendar to 3.11.4 [wiz 2017-05-11]
+	Updated devel/scmcvs to 1.12.13nb5 [maya 2017-05-12]
