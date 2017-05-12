@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1942 2017/05/12 10:02:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1943 2017/05/12 10:07:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2438,3 +2438,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/py-icalendar to 3.11.4 [wiz 2017-05-11]
 	Updated devel/scmcvs to 1.12.13nb5 [maya 2017-05-12]
 	Added www/py-MechanicalSoup version 0.7.0 [wiz 2017-05-12]
+	Updated mail/offlineimap to 7.1.0 [fhajny 2017-05-12]
