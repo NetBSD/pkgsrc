@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2015/03/15 19:51:05 tnn Exp $
+# $NetBSD: Makefile,v 1.54 2017/05/12 11:55:32 jperkin Exp $
 
 DISTNAME=	pekwm-0.1.17
 CATEGORIES=	wm
@@ -15,6 +15,8 @@ USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+
+LIBS.SunOS+=	-liconv
 
 PKG_SYSCONFSUBDIR=	pekwm
 
