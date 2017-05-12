@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/05/30 15:28:06 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/05/12 10:07:41 fhajny Exp $
 bin/offlineimap
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/offlineimap/CustomConfig.py
@@ -10,6 +10,9 @@ ${PYSITELIB}/offlineimap/__init__.pyo
 ${PYSITELIB}/offlineimap/accounts.py
 ${PYSITELIB}/offlineimap/accounts.pyc
 ${PYSITELIB}/offlineimap/accounts.pyo
+${PYSITELIB}/offlineimap/bundled_imaplib2.py
+${PYSITELIB}/offlineimap/bundled_imaplib2.pyc
+${PYSITELIB}/offlineimap/bundled_imaplib2.pyo
 ${PYSITELIB}/offlineimap/emailutil.py
 ${PYSITELIB}/offlineimap/emailutil.pyc
 ${PYSITELIB}/offlineimap/emailutil.pyo
@@ -46,9 +49,6 @@ ${PYSITELIB}/offlineimap/folder/__init__.pyo
 ${PYSITELIB}/offlineimap/globals.py
 ${PYSITELIB}/offlineimap/globals.pyc
 ${PYSITELIB}/offlineimap/globals.pyo
-${PYSITELIB}/offlineimap/imaplib2.py
-${PYSITELIB}/offlineimap/imaplib2.pyc
-${PYSITELIB}/offlineimap/imaplib2.pyo
 ${PYSITELIB}/offlineimap/imaplibutil.py
 ${PYSITELIB}/offlineimap/imaplibutil.pyc
 ${PYSITELIB}/offlineimap/imaplibutil.pyo
@@ -88,9 +88,6 @@ ${PYSITELIB}/offlineimap/repository/Maildir.pyo
 ${PYSITELIB}/offlineimap/repository/__init__.py
 ${PYSITELIB}/offlineimap/repository/__init__.pyc
 ${PYSITELIB}/offlineimap/repository/__init__.pyo
-${PYSITELIB}/offlineimap/syncmaster.py
-${PYSITELIB}/offlineimap/syncmaster.pyc
-${PYSITELIB}/offlineimap/syncmaster.pyo
 ${PYSITELIB}/offlineimap/threadutil.py
 ${PYSITELIB}/offlineimap/threadutil.pyc
 ${PYSITELIB}/offlineimap/threadutil.pyo
@@ -121,8 +118,14 @@ ${PYSITELIB}/offlineimap/utils/__init__.pyo
 ${PYSITELIB}/offlineimap/utils/const.py
 ${PYSITELIB}/offlineimap/utils/const.pyc
 ${PYSITELIB}/offlineimap/utils/const.pyo
+${PYSITELIB}/offlineimap/utils/distro.py
+${PYSITELIB}/offlineimap/utils/distro.pyc
+${PYSITELIB}/offlineimap/utils/distro.pyo
 ${PYSITELIB}/offlineimap/utils/stacktrace.py
 ${PYSITELIB}/offlineimap/utils/stacktrace.pyc
 ${PYSITELIB}/offlineimap/utils/stacktrace.pyo
+${PYSITELIB}/offlineimap/virtual_imaplib2.py
+${PYSITELIB}/offlineimap/virtual_imaplib2.pyc
+${PYSITELIB}/offlineimap/virtual_imaplib2.pyo
 share/examples/offlineimap/offlineimap.conf
 share/examples/offlineimap/offlineimap.conf.minimal
