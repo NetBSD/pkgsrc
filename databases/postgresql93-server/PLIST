@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/02/11 10:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/05/12 19:37:54 adam Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -253,6 +253,7 @@ share/postgresql/timezone/America/Port_of_Spain
 share/postgresql/timezone/America/Porto_Acre
 share/postgresql/timezone/America/Porto_Velho
 share/postgresql/timezone/America/Puerto_Rico
+share/postgresql/timezone/America/Punta_Arenas
 share/postgresql/timezone/America/Rainy_River
 share/postgresql/timezone/America/Rankin_Inlet
 share/postgresql/timezone/America/Recife
