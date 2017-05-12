@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/03/15 13:42:03 sborrill Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/12 11:42:33 jperkin Exp $
 
 DISTNAME=	e2guardian-3.5.1
 PKGREVISION=	1
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/${E2G_LOG}
 CONFIGURE_ARGS+=	--enable-ntlm
 
+LIBS.SunOS+=		-liconv
+
 .include "options.mk"
 
 CHECK_WRKREF_SKIP= 	sbin/e2guardian
@@ -72,6 +74,7 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
