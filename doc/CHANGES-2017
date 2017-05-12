@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1945 2017/05/12 15:08:48 taca Exp $
+$NetBSD: CHANGES-2017,v 1.1946 2017/05/12 19:44:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -842,11 +842,11 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/mupdf to 1.10anb4 [leot 2017-02-11]
 	Updated multimedia/ffmpeg2 to 2.8.11 [adam 2017-02-11]
 	Updated multimedia/ffmpeg3 to 3.2.4 [adam 2017-02-11]
-	Updated databases/postgresql92 to 9.2.20 [adam 2016-10-29]
-	Updated databases/postgresql93 to 9.3.16 [adam 2016-10-29]
-	Updated databases/postgresql94 to 9.4.11 [adam 2016-10-29]
-	Updated databases/postgresql95 to 9.5.6 [adam 2016-10-29]
-	Updated databases/postgresql96 to 9.6.2 [adam 2016-10-29]
+	Updated databases/postgresql92 to 9.2.20 [adam 2017-02-11]
+	Updated databases/postgresql93 to 9.3.16 [adam 2017-02-11]
+	Updated databases/postgresql94 to 9.4.11 [adam 2017-02-11]
+	Updated databases/postgresql95 to 9.5.6 [adam 2017-02-11]
+	Updated databases/postgresql96 to 9.6.2 [adam 2017-02-11]
 	Updated math/p5-Math-BigInt to 1.999809 [mef 2017-02-11]
 	Updated math/p5-Math-BigInt-GMP to 1.6004 [mef 2017-02-11]
 	Updated math/p5-Math-GMP to 2.14 [mef 2017-02-11]
@@ -2442,3 +2442,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/php70 to 7.0.19 [taca 2017-05-12]
 	Updated lang/php71 to 7.1.5 [taca 2017-05-12]
 	Updated devel/php-xdebug to 2.5.3 [taca 2017-05-12]
+	Updated databases/postgresql92 to 9.2.21 [adam 2017-05-12]
+	Updated databases/postgresql93 to 9.3.17 [adam 2017-05-12]
+	Updated databases/postgresql94 to 9.4.12 [adam 2017-05-12]
+	Updated databases/postgresql95 to 9.5.7 [adam 2017-05-12]
+	Updated databases/postgresql96 to 9.6.3 [adam 2017-05-12]
