@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/02/24 02:29:44 khorben Exp $
+$NetBSD: distinfo,v 1.2 2017/05/12 22:29:15 khorben Exp $
 
-SHA1 (telegram-purple_1.2.5.orig.tar.gz) = 02db9974e55fcb31a422f5dd04f9ae7ab4e78a89
-RMD160 (telegram-purple_1.2.5.orig.tar.gz) = d5758ff69bd9cf9f7697fca5f73963dd1864cfa1
-SHA512 (telegram-purple_1.2.5.orig.tar.gz) = ff8c57c4fdad6ada0b665c6b13daba60aeeaa01656820cd9856b4ebcd31e6db9d9b7c724fb9c6f4eb911c4d600518e83d22e22cb15105c5bcfbe3be5c19d6ae5
-Size (telegram-purple_1.2.5.orig.tar.gz) = 473838 bytes
-SHA1 (patch-configure) = cf16b7d00652ae3eaa399424ad84833cf76fa677
+SHA1 (telegram-purple_1.2.6.orig.tar.gz) = af65e863425900d8e74296709025b799e4917ba5
+RMD160 (telegram-purple_1.2.6.orig.tar.gz) = 3d5668dc35f7fc1a4a3ca4e07e404df5986950ef
+SHA512 (telegram-purple_1.2.6.orig.tar.gz) = 6e9c415ad95e7dbffc2e51139ff97282d80e51e6071c24dc827d37b76f436deaa1155e35dbd258c4da78123021dbace8cd8e472244d66629d011e4b46e9b75a0
+Size (telegram-purple_1.2.6.orig.tar.gz) = 474067 bytes
 SHA1 (patch-tgl_tl-parser_portable__endian.h) = b4c4179fbb29bdbcc368a837d0dc6a6b84e0e23c
