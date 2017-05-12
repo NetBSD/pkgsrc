@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/12/18 23:33:11 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2017/05/12 12:01:01 jperkin Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 PKGREVISION=	14
@@ -46,17 +46,17 @@ CONF_FILES=	${PREFIX}/share/examples/ettercap-NG/etter.conf \
 
 INSTALLATION_DIRS+=	 share/examples/ettercap-NG
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../devel/libnet11/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/share/etter.conf \
 		${DESTDIR}${PREFIX}/share/examples/ettercap-NG
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/libnet11/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
