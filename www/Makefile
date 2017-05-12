@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1238 2017/05/09 20:22:34 adam Exp $
+# $NetBSD: Makefile,v 1.1239 2017/05/12 10:02:37 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -591,6 +591,7 @@ SUBDIR+=	pup
 SUBDIR+=	py-ClientForm
 SUBDIR+=	py-FormEncode
 SUBDIR+=	py-HTMLgen
+SUBDIR+=	py-MechanicalSoup
 SUBDIR+=	py-PasteDeploy
 SUBDIR+=	py-PasteScript
 SUBDIR+=	py-Routes
