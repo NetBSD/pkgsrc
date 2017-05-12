@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/02/17 17:08:14 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/12 11:42:50 jperkin Exp $
 
 DISTNAME=	courier-unicode-1.4
 CATEGORIES=	mail
@@ -18,4 +18,5 @@ GNU_CONFIGURE=	yes
 pre-configure:
 	(cd ${WRKSRC}; autoconf; aclocal; automake)
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
