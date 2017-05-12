@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2017/01/01 14:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/12 20:11:39 leot Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
 DISTNAME=	protobuf-python-${PROTOBUFVER}
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES+=	python
 
@@ -11,12 +12,7 @@ COMMENT=	Python bindings for protobuf
 
 PYSETUPSUBDIR=	python
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gflags
-
-BUILD_DEPENDS+=	${PYPKGPREFIX}-gflags-[0-9]*:../../devel/py-gflags
-BUILD_DEPENDS+=	${PYPKGPREFIX}-google-apputils-[0-9]*:../../devel/py-google-apputils
-BUILD_DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
-BUILD_DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
+DEPENDS+=	${PYPKGPREFIX}-six>=1.9:../../lang/py-six
 
 EGG_NAME=	protobuf-${PKGVERSION_NOREV}
 
