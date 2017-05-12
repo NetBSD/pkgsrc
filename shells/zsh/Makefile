@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2017/05/11 13:49:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.80 2017/05/12 08:38:41 jperkin Exp $
 
 DISTNAME=	zsh-5.3.1
 CATEGORIES=	shells
@@ -23,6 +23,14 @@ CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=        --with-term-lib="${BUILDLINK_LIBNAME.curses} ${BUILDLINK_LIBNAME.terminfo}"
 
 .include "../../mk/bsd.prefs.mk"
+
+# This cannot be detected automatically without a controlling tty, for example
+# when bulk building.
+.if ${OPSYS} == "Interix"
+CONFIGURE_ARGS+=	--without-tcsetpgrp
+.else
+CONFIGURE_ARGS+=	--with-tcsetpgrp
+.endif
 
 .if ${USE_CROSS_COMPILE:U:tl} == "yes"
 # These can't be detected automagically in cross-builds.
