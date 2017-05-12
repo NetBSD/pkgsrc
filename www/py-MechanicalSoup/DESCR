@@ -1,0 +1,4 @@
+A Python library for automating interaction with websites.
+MechanicalSoup automatically stores and sends cookies, follows
+redirects, and can follow links and submit forms. It doesn't do
+Javascript.
