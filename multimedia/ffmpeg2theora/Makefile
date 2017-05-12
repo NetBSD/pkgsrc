@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/01/16 23:45:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/05/12 11:55:46 jperkin Exp $
 
 DISTNAME=	ffmpeg2theora-0.30
 PKGREVISION=	2
@@ -34,8 +34,8 @@ do-install:
 	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
