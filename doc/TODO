@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17332 2017/05/13 09:20:30 wen Exp $
+$NetBSD: TODO,v 1.17333 2017/05/13 22:42:34 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asc-2.6.0
 	o asn1c-0.9.27
 	o aspell-nb-2.0.10
-	o asterisk-13.14.1
 	o asunder-2.8
 	o aterm-1.0.1
 	o aubio-0.4.2
