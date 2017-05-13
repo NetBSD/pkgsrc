@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/08/18 07:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/05/13 01:19:05 wen Exp $
 
-FISHVER=		2.1.2
+FISHVER=		2.5.0
 DISTNAME=		fish-${FISHVER}
-PKGREVISION=		1
 CATEGORIES=		shells
 MASTER_SITES=		http://fishshell.com/files/${FISHVER}/
 
@@ -11,7 +10,9 @@ HOMEPAGE=		http://www.fishshell.com/
 COMMENT=		User friendly command line shell for UNIX-like operating systems
 LICENSE=		gnu-gpl-v2
 
-USE_LANGUAGES+=		c++
+EXTRACT_USING=		gtar
+
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-xsel
