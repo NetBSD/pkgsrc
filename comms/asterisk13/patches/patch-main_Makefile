@@ -1,4 +1,4 @@
-$NetBSD: patch-main_Makefile,v 1.4 2016/07/24 06:35:50 jnemeth Exp $
+$NetBSD: patch-main_Makefile,v 1.5 2017/05/13 22:39:13 jnemeth Exp $
 
 --- main/Makefile.orig	2016-07-21 14:54:02.000000000 +0000
 +++ main/Makefile
@@ -27,14 +27,3 @@ $NetBSD: patch-main_Makefile,v 1.4 2016/07/24 06:35:50 jnemeth Exp $
  endif
  endif
  ifeq ($(PJPROJECT_BUNDLED),yes)
-@@ -365,9 +369,7 @@ endif
- ifneq ($(ASTPJ_LIB).$(ASTPJ_SO_VERSION),.)
- 	rm -f "$(DESTDIR)$(ASTLIBDIR)/$(ASTPJ_LIB).$(ASTPJ_SO_VERSION)"
- endif
--ifneq ($(LDCONFIG),)
--	$(LDCONFIG) $(LDCONFIG_FLAGS) "$(DESTDIR)$(ASTLIBDIR)/"
--endif
-+	rm -f "$(DESTDIR)$(PREFIX)/lib/$(ASTSSL_LIB).$(ASTSSL_SO_VERSION)"
- 
- clean::
- 	rm -f asterisk libasteriskssl.o
