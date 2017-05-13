@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2017/05/12 20:21:27 khorben Exp $
+# $NetBSD: Makefile,v 1.27 2017/05/13 02:34:30 khorben Exp $
 
 MOZILLA_PKG_NAME=	firefox45
+PKGREVISION=	1
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 MOZ_BRANCH=	45.9
 MOZ_BRANCH_MINOR=	.0esr
