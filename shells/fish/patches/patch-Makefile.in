@@ -1,24 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.2 2015/03/06 21:03:20 ryoon Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2017/05/13 01:19:05 wen Exp $
 
 Install configuration files to EGDIR
 
---- Makefile.in.orig	2015-02-16 19:07:12.000000000 +0000
+--- Makefile.in.orig	2017-04-29 23:37:12.000000000 +0000
 +++ Makefile.in
-@@ -600,7 +600,7 @@ install-force: all install-translations
- 		$(INSTALL) -m 755 $$i $(DESTDIR)$(bindir) ; \
+@@ -653,9 +653,9 @@ install-force: all install-translations 
  		true ;\
  	done;
--	$(INSTALL) -m 755 -d $(DESTDIR)$(sysconfdir)/fish
-+	$(INSTALL) -m 755 -d $(DESTDIR)$(EGDIR)/fish
- 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish
- 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/completions
- 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/functions
-@@ -608,7 +608,7 @@ install-force: all install-translations
- 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/tools
- 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/tools/web_config
- 	$(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/tools/web_config/sample_prompts
--	$(INSTALL) -m 644 etc/config.fish                  $(DESTDIR)$(sysconfdir)/fish/
-+	$(INSTALL) -m 644 etc/config.fish                  $(DESTDIR)$(EGDIR)/fish/
- 	$(INSTALL) -m 644 share/config.fish                $(DESTDIR)$(datadir)/fish/
- 	for i in $(COMPLETIONS_DIR_FILES:%='%'); do \
- 		$(INSTALL) -m 644 $$i $(DESTDIR)$(datadir)/fish/completions/; \
+ 	@echo "Creating sysconfdir tree"
+-	$v $(INSTALL) -m 755 -d $(DESTDIR)$(sysconfdir)/fish
+-	$v $(INSTALL) -m 755 -d $(DESTDIR)$(sysconfdir)/fish/conf.d
+-	$v $(INSTALL) -m 644 etc/config.fish $(DESTDIR)$(sysconfdir)/fish/
++	$v $(INSTALL) -m 755 -d $(DESTDIR)$(EGDIR)/fish
++	$v $(INSTALL) -m 755 -d $(DESTDIR)$(EGDIR)/fish/conf.d
++	$v $(INSTALL) -m 644 etc/config.fish $(DESTDIR)$(EGDIR)/
+ 	@echo "Creating datadir tree"
+ 	$v $(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish
+ 	$v $(INSTALL) -m 755 -d $(DESTDIR)$(datadir)/fish/completions
