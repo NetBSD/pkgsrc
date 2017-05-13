@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1952 2017/05/13 01:30:03 wen Exp $
+$NetBSD: CHANGES-2017,v 1.1953 2017/05/13 03:59:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2453,3 +2453,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/p5-Math-BigInt to 1.999811 [wen 2017-05-13]
 	Updated shells/fish to 2.5.0 [wen 2017-05-13]
 	Updated math/p5-Math-Prime-Util to 0.65 [wen 2017-05-13]
+	Updated misc/libreoffice to 5.3.3.2 [ryoon 2017-05-13]
