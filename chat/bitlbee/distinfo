@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.33 2015/11/03 01:20:17 agc Exp $
+$NetBSD: distinfo,v 1.34 2017/05/14 11:39:32 leot Exp $
 
-SHA1 (bitlbee-3.4.1.tar.gz) = b77311b538ec1c584694784f119b99fb6b3f4859
-RMD160 (bitlbee-3.4.1.tar.gz) = 32e0faf3b0a23f812f46752c1d0e96e30aaaf649
-SHA512 (bitlbee-3.4.1.tar.gz) = fad297c7a792c932ba74daf7dc894883037842ae5d39a4c831c6615100580073001806c1af60555aa1c775399e8a484d99a4e601e96c6a075e12546e5d153532
-Size (bitlbee-3.4.1.tar.gz) = 688072 bytes
-SHA1 (patch-irc__channel.c) = 332126961c675c173fd3634fcb26877a3317acd0
+SHA1 (bitlbee-3.5.1.tar.gz) = de0767facdb7729253ae4d6ef6e3637ebd54939a
+RMD160 (bitlbee-3.5.1.tar.gz) = f7c3c6154d3c28cb1e48ccb5f86dbb9141795cea
+SHA512 (bitlbee-3.5.1.tar.gz) = 4eb3b0d3a92910c8dd789cd23338cc6296bf40212c5244fcb27a88ede10e86424ea59c78e719841863701a7fdd8c61819f2775f7b58833e287d9110e49d036f3
+Size (bitlbee-3.5.1.tar.gz) = 680351 bytes
