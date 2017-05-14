@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1962 2017/05/14 16:30:03 he Exp $
+$NetBSD: CHANGES-2017,v 1.1963 2017/05/14 18:00:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2463,3 +2463,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/libetpan to 1.8 [wiz 2017-05-14]
 	Updated ham/fldigi to 4.0.4 [mef 2017-05-14]
 	Updated graphics/ImageMagick to 7.0.5.6 [he 2017-05-14]
+	Updated textproc/mdoclint to 1.49 [wiz 2017-05-14]
