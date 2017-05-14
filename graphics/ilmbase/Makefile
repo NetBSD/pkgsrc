@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/08/22 11:24:25 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/05/14 00:16:36 ryoon Exp $
 
 DISTNAME=	ilmbase-2.2.0
 PKGREVISION=	1
@@ -12,10 +12,11 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		ksh gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 LIBS.SunOS=		-lm
+CONFIG_SHELL=		ksh
 
 PKGCONFIG_OVERRIDE=	IlmBase.pc.in
 PTHREAD_OPTS=		require
