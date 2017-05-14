@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1955 2017/05/13 22:42:34 jnemeth Exp $
+$NetBSD: CHANGES-2017,v 1.1956 2017/05/14 02:38:37 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2456,3 +2456,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/libreoffice to 5.3.3.2 [ryoon 2017-05-13]
 	Updated multimedia/adobe-flash-player to 25.0.0.171 [tsutsui 2017-05-13]
 	Updated comms/asterisk13 to 13.15.0 [jnemeth 2017-05-13]
+	Updated lang/gcc7 to 7.1.0nb3 [maya 2017-05-14]
