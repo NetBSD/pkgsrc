@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2017/05/12 18:10:56 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2017/05/14 02:38:02 maya Exp $
 
 SHA1 (gcc-7.1.0.tar.bz2) = 9f1e907f27eadefe7d5f7567c09e17805d9c8837
 RMD160 (gcc-7.1.0.tar.bz2) = a228dc45a09eda91b1a201d234f9013b3009b461
@@ -22,12 +22,12 @@ SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
 SHA1 (patch-gcc_lto_lto.c) = 825b632e2a7ff5777d4fbfdcf6f0ea3f64c4742b
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
 SHA1 (patch-isl_configure) = 36b37778ee13c0b364fb24d5864d6a9e65b29b7d
-SHA1 (patch-libcilkrts_configure) = 6c2d0f897c4a451d5b4b4fb5b3415d04704c0b0d
+SHA1 (patch-libcilkrts_configure) = ec76313d8103e0c525ebd26e9013ee3ca9e93391
 SHA1 (patch-libcilkrts_runtime_os-unix.c) = b25632587d9fbe8ff38377fe34cb16225355b521
 SHA1 (patch-libdecnumber_decNumber.c) = cec90e49c829bfc6ba1ec605d2fac7daaad62762
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
 SHA1 (patch-libffi_testsuite_libffi.call_float2.c) = 6321dde308579448c27c2b6e1e30633699dd145f
-SHA1 (patch-libgcc_config_i386_cpuinfo.h) = 2c55385a9440d4991eb265f24e98ba68eef266e1
+SHA1 (patch-libgcc_config_i386_cpuinfo.h) = b0ff2ab74f57a1a7368da0805c1d1e06a4eeea6d
 SHA1 (patch-libgcc_crtstuff.c) = e3a3b02a26229992851f195b5701cb1b86c29efe
 SHA1 (patch-libgfortran_configure) = 869a60fd08edecf18a42732dcbf226bad1309394
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
