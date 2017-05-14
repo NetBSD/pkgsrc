@@ -1,5 +1,5 @@
 .\"	$OpenBSD: mdoclint.1,v 1.7 2009/04/13 19:06:38 jmc Exp $
-.\" $NetBSD: mdoclint.1,v 1.16 2017/05/14 18:00:12 wiz Exp $
+.\" $NetBSD: mdoclint.1,v 1.17 2017/05/14 18:04:23 wiz Exp $
 .\"
 .\" Copyright (c) 2001-2013 Thomas Klausner
 .\" All rights reserved.
@@ -33,7 +33,7 @@
 .Nd man page verifier
 .Sh SYNOPSIS
 .Nm
-.Op Fl aDdeFfHhlmnoprSvwXx
+.Op Fl DdeFfHhlmnoprSvwXx
 .Ar
 .Sh DESCRIPTION
 .Nm
@@ -41,18 +41,12 @@ is a man page verifier.
 It tries to automatically find as many common
 errors that occur when writing man pages as possible.
 If no flags are given,
-.Fl aDdeflmnoprSXx
+.Fl DdeflmnoprSXx
 is assumed (that is, everything except
 .Fl FHhvw ) .
 .Pp
 The options are as follows:
 .Bl -tag -width xxxx -compact
-.It Fl a
-Warn about some possible problems in the
-.Sx SEE ALSO
-section, like incorrect order (correct order: first by section
-numbers, then by name), or incorrect or superfluous punctuation
-between or after the cross-references.
 .It Fl D
 Warn about bad casing and architectures in the .Dt macro.
 .It Fl d
