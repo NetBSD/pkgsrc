@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.x11,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+@comment $NetBSD: PLIST.x11,v 1.2 2017/05/15 12:31:38 fhajny Exp $
 include/oce/AIS_AngleDimension.hxx
 include/oce/AIS_AttributeFilter.lxx
 include/oce/AIS_Axis.lxx
@@ -469,6 +469,7 @@ lib/libTKXmlXCAF.so.11
 lib/libTKXmlXCAF.so.11.0.0
 share/oce/src/Shaders/Declarations.glsl
 share/oce/src/Shaders/DeclarationsImpl.glsl
+share/oce/src/Shaders/FILES
 share/oce/src/Shaders/PhongShading.fs
 share/oce/src/Shaders/PhongShading.vs
 share/oce/src/Shaders/RaytraceBase.fs
