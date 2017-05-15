@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 00:56:23 agc Exp $
+$NetBSD: distinfo,v 1.15 2017/05/15 13:53:26 jperkin Exp $
 
 SHA1 (nulibdist-220.tar.gz) = 8b8ca835d4e3e3d8a5e1ae9830fdfd0ed0bb07e3
 RMD160 (nulibdist-220.tar.gz) = a6b0d5bd0d0d413741fd1d46da80ef699f084321
@@ -10,3 +10,4 @@ SHA1 (patch-ac) = 17499d8a0c60e98282fc441723e10a01e2a644ec
 SHA1 (patch-ad) = 3793ac2fb1eb67472091c5a902c56d1483e0dd04
 SHA1 (patch-ae) = fb51aefedecd63dcb8c298111652a1782a70d511
 SHA1 (patch-af) = 7caa9a570f5bec136f555e01ca86a6c4c591a7a3
+SHA1 (patch-nufxlib-220_samples_Makefile.in) = 570f3cb4a263fba2b83cb67dc9856ec6ba5d3401
