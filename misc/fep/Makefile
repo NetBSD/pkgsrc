@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/09/08 14:44:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2017/05/15 08:38:34 jperkin Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0
@@ -30,4 +30,5 @@ pre-build:
 			${MV} -f $${i}.new $${i}; \
 		done
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
