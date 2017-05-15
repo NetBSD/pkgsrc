@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1967 2017/05/15 09:33:15 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1968 2017/05/15 09:33:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2468,3 +2468,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/intel-microcode-netbsd to 20170511 [msaitoh 2017-05-15]
 	Updated devel/jemalloc to 4.5.0 [gson 2017-05-15]
 	Updated textproc/mdoclint to 1.51 [wiz 2017-05-15]
+	Updated www/py-djangorestframework to 3.6.3 [adam 2017-05-15]
