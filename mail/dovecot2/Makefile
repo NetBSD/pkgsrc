@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2016/11/12 11:21:45 adam Exp $
+# $NetBSD: Makefile,v 1.94 2017/05/15 12:31:10 jperkin Exp $
 
 .include "../../mail/dovecot2/Makefile.common"
 
@@ -37,8 +37,6 @@ BUILD_DEFS+=		VARBASE
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-openssl.cnf ${DESTDIR}${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${DESTDIR}${EGDIR}
-
-.include "options.mk"
 
 # Don't compress manual pages as they include each other.
 .undef MANZ
