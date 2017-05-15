@@ -1,0 +1,25 @@
+$NetBSD: patch-configure,v 1.1 2017/05/15 14:52:44 jperkin Exp $
+
+Check for stat64 declaration too.
+
+--- configure.orig	2016-09-23 14:51:16.000000000 +0000
++++ configure
+@@ -4685,6 +4685,10 @@ fi
+ 
+ fi
+ 
++ac_fn_c_check_decl "$LINENO" "stat64" "ac_cv_decl_stat64" "$ac_includes_default
++"
++if test "x$ac_cv_decl_stat64" = xyes; then :
++else
+ ac_fn_c_check_func "$LINENO" "stat64" "ac_cv_func_stat64"
+ if test "x$ac_cv_func_stat64" = xyes; then :
+ 
+@@ -4701,6 +4705,7 @@ $as_echo "#define stat64 stat" >>confdef
+ 
+ 
+ fi
++fi
+ 
+ 
+ ac_fn_c_check_func "$LINENO" "open64" "ac_cv_func_open64"
