@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1965 2017/05/15 06:33:35 msaitoh Exp $
+$NetBSD: CHANGES-2017,v 1.1966 2017/05/15 07:49:50 gson Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/mdoclint to 1.49 [wiz 2017-05-14]
 	Updated textproc/mdoclint to 1.50 [wiz 2017-05-14]
 	Updated sysutils/intel-microcode-netbsd to 20170511 [msaitoh 2017-05-15]
+	Updated devel/jemalloc to 4.5.0 [gson 2017-05-15]
