@@ -1,0 +1,15 @@
+$NetBSD: patch-nufxlib-220_samples_Makefile.in,v 1.1 2017/05/15 13:53:26 jperkin Exp $
+
+Honour LDFLAGS.
+
+--- nufxlib-220/samples/Makefile.in.orig	2007-02-19 22:57:36.000000000 +0000
++++ nufxlib-220/samples/Makefile.in
+@@ -26,7 +26,7 @@ CFLAGS		= @BUILD_FLAGS@ -I. -I.. @DEFS@
+ ALL_SRCS	= Exerciser.c ImgConv.c Launder.c TestBasic.c \
+ 			  TestExtract.c TestSimple.c TestTwirl.c
+ 
+-NUFXLIB		= -L.. -lnufx
++NUFXLIB		= -L.. -lnufx @LDFLAGS@
+ 
+ PRODUCTS	= exerciser imgconv launder test-basic test-extract test-simple \
+ 				test-twirl
