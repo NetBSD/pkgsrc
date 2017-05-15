@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1977 2017/05/15 15:50:29 maya Exp $
+$NetBSD: CHANGES-2017,v 1.1978 2017/05/15 20:05:33 spz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2478,3 +2478,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/yara to 3.5.0 [khorben 2017-05-15]
 	Updated security/py-yara to 3.5.0 [khorben 2017-05-15]
 	Updated www/firefox to 53.0.2nb1 [maya 2017-05-15]
+	Updated graphics/freetype2 to 2.8 [spz 2017-05-14]
+	Updated graphics/gdk-pixbuf2 to 2.36.6 [spz 2017-05-14]
+	Updated archivers/zziplib to 0.13.66 [spz 2017-05-15]
