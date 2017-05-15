@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2017/04/22 21:03:41 adam Exp $
+# $NetBSD: Makefile,v 1.129 2017/05/15 13:04:03 jperkin Exp $
 
 DISTNAME=	balsa-2.4.14
 PKGREVISION=	24
@@ -28,6 +28,8 @@ CONFIGURE_ENV+=		ac_cv_lib_iconv_iconv_open=yes
 
 EGDIR=		${PREFIX}/share/examples/balsa
 CONF_FILES=	${EGDIR}/balsa.soundlist ${PKG_SYSCONFDIR}/sound/events/balsa.soundlist
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
 
 .include "options.mk"
 

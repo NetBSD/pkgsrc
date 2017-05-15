@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.6 2012/12/25 21:07:13 joerg Exp $
+$NetBSD: patch-ag,v 1.7 2017/05/15 13:04:03 jperkin Exp $
 
---- libbalsa/imap/imap-handle.c.orig	2010-08-13 19:15:36.000000000 +0000
+--- libbalsa/imap/imap-handle.c.orig	2012-10-29 22:33:31.000000000 +0000
 +++ libbalsa/imap/imap-handle.c
-@@ -16,11 +16,13 @@
+@@ -16,11 +16,15 @@
   * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  
   * 02111-1307, USA.
   */
@@ -10,7 +10,9 @@ $NetBSD: patch-ag,v 1.6 2012/12/25 21:07:13 joerg Exp $
  
  #define _POSIX_C_SOURCE 199506L
 -#define _XOPEN_SOURCE 500
++#ifndef __sun
 +#define _XOPEN_SOURCE 520
++#endif
  #define _BSD_SOURCE     1
 +#define _NETBSD_SOURCE
 +
