@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2017/01/01 14:44:01 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2017/05/15 18:07:40 dholland Exp $
 
 .include "../../textproc/libxslt/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 
 MAINTAINER=	minskim@NetBSD.org
@@ -18,6 +19,8 @@ NO_CONFIGURE=	yes
 
 MAKE_ENV+=		PYLIBXSLTVERSION=${PKGVERSION}
 
+PYSITEDIR=		${PREFIX}/lib/python${PYVERSSUFFIX}/site-packages
+
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
@@ -25,12 +28,14 @@ SUBST_FILES.setup=	python/setup.py
 SUBST_SED.setup=	-e "s,@LIBICONVDIR@,${BUILDLINK_PREFIX.iconv},g"
 SUBST_SED.setup+=	-e "s,@LIBXML2DIR@,${BUILDLINK_PREFIX.libxml2},g"
 SUBST_SED.setup+=	-e "s,@LIBXSLTDIR@,${BUILDLINK_PREFIX.libxslt},g"
+SUBST_SED.setup+=	-e "s,@PYSHLIBDIR@,${PYSITEDIR},g"
 
 post-extract: setuppy
 .PHONY: setuppy
 setuppy:
 	${CP} ${FILESDIR}/setup.py ${WRKSRC}/python
 
+.include "../../textproc/py-libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=${PKGVERSION}
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../lang/python/extension.mk"
