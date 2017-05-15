@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/04/22 21:03:55 adam Exp $
+# $NetBSD: Makefile,v 1.30 2017/05/15 13:20:45 jperkin Exp $
 
 DISTNAME=	gnupg-2.1.20
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
@@ -32,10 +32,11 @@ TEST_TARGET=		check
 CONFIGURE_ARGS.SunOS+=	ac_cv_func_getaddrinfo=yes
 
 LDFLAGS.Darwin+=	-lresolv
-LDFLAGS.SunOS+=		-lsocket
+LDFLAGS.SunOS+=		-lintl -lsocket
 
 .include "options.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.7
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
