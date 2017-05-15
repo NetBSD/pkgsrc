@@ -1,15 +1,11 @@
-# $NetBSD: Makefile.common,v 1.4 2016/05/26 14:41:48 khorben Exp $
+# $NetBSD: Makefile.common,v 1.5 2017/05/15 15:27:31 khorben Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-DISTNAME=	v3.4.0
+DISTNAME=	v3.5.0
 YAVER=		${DISTNAME:S/v//}
 
-MASTER_SITES=	${MASTER_SITE_GITHUB:=plusvic/yara/archive/}
-
-DIST_SUBDIR=	yara
-
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	https://plusvic.github.io/yara/
+HOMEPAGE=	https://virustotal.github.io/yara/
 LICENSE=	apache-2.0
