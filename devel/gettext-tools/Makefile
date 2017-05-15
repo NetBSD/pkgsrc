@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2016/02/25 12:12:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2017/05/15 14:14:04 wiz Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-tools-/}
+PKGREVISION=	1
 COMMENT=	Tools for providing messages in different languages
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/gettext/distinfo
@@ -37,6 +38,7 @@ BUILDLINK_TRANSFORM.Cygwin+=	rm:-Wl,--disable-auto-import
 CONFIGURE_ENV.AIX+=	ac_cv_header_wctype_h=no
 
 post-install:
+	cd ${WRKSRC}/gettext-tools/its && ${MAKE} install DESTDIR=${DESTDIR}
 	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install DESTDIR=${DESTDIR}
 	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/autopoint.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
