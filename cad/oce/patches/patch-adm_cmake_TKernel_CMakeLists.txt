@@ -1,13 +1,13 @@
-$NetBSD: patch-adm_cmake_TKernel_CMakeLists.txt,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+$NetBSD: patch-adm_cmake_TKernel_CMakeLists.txt,v 1.2 2017/05/15 12:31:38 fhajny Exp $
 
 SunOS needs libresolv here.
 
---- adm/cmake/TKernel/CMakeLists.txt.orig	2014-11-30 05:46:16.000000000 +0000
+--- adm/cmake/TKernel/CMakeLists.txt.orig	2017-05-10 04:51:14.000000000 +0000
 +++ adm/cmake/TKernel/CMakeLists.txt
-@@ -41,6 +41,9 @@ else(WIN32)
+@@ -39,6 +39,9 @@ else(WIN32)
  			set(TOOLKIT_LIBS ${TOOLKIT_LIBS} rt)
- 		endif(NOT CLOCK_GETTIME_IN_LIBC)
- 	endif(NOT APPLE)
+ 		endif(NOT APPLE)
+ 	endif(NOT HAVE_CLOCK_GETTIME)
 +	if(CMAKE_SYSTEM_NAME STREQUAL SunOS)
 +		set(TOOLKIT_LIBS ${TOOLKIT_LIBS} resolv)
 +	endif(CMAKE_SYSTEM_NAME)
