@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2017/05/14 18:04:23 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2017/05/15 09:33:03 wiz Exp $
 
-DISTNAME=	mdoclint-1.50
+DISTNAME=	mdoclint-1.51
 CATEGORIES=	textproc
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -11,8 +11,6 @@ COMMENT=	Tool for verifying man pages
 LICENSE=	2-clause-bsd
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-CONFLICTS=	mdocml<1.6.9
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
