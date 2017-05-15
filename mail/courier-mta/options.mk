@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2012/06/09 11:45:38 adam Exp $
+# $NetBSD: options.mk,v 1.12 2017/05/15 13:07:19 jperkin Exp $
 
 # Global and legacy options
 
@@ -131,7 +131,7 @@ CONF_FILES_PERMS+=	${EGDIR}/ldapaliasrc.dist			\
 				${COURIER_USER} ${COURIER_GROUP} 0640
 .else
 FILES_SUBST+=		COURIERLDAPALIASD=
-CONFIGURE_ARGS+=	--without-ldapaliasd
+CONFIGURE_ARGS+=	--without-ldapaddressbook --without-ldapaliasd
 .endif
 
 ###
