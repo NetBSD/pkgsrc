@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2017/05/14 00:16:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2017/05/15 13:53:42 ryoon Exp $
 
 DISTNAME=	ilmbase-2.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/openexr/
 
@@ -12,11 +12,11 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		ksh gmake
+USE_TOOLS+=		bash gmake
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 LIBS.SunOS=		-lm
-CONFIG_SHELL=		ksh
+CONFIG_SHELL=		bash
 
 PKGCONFIG_OVERRIDE=	IlmBase.pc.in
 PTHREAD_OPTS=		require

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 21:34:03 agc Exp $
+$NetBSD: distinfo,v 1.14 2017/05/15 13:53:42 ryoon Exp $
 
 SHA1 (ilmbase-2.2.0.tar.gz) = 70d864bc704f276942cb10479f2cb98646ce6ad4
 RMD160 (ilmbase-2.2.0.tar.gz) = b1adb0c96eff6b3554ddaf8f8bafe2cba8c114e3
@@ -8,4 +8,4 @@ SHA1 (patch-Iex_IexBaseExc.cpp) = 5bf551e1eacffa8dc3ec1c5643e5bfd5f8fc5701
 SHA1 (patch-Iex_IexThrowErrnoExc.cpp) = 1a4206619320a2a95378b7c2db14fde20b0ffd71
 SHA1 (patch-Imath_ImathFun.h) = 79ab60ada8cecd52e5b16fadbded82492d79a1df
 SHA1 (patch-aa) = 97e7c7347cc6b4f3e11e7d0692c78b7322e06a7f
-SHA1 (patch-ab) = 1e39351d9513e10e3745c188612f9daf41253234
+SHA1 (patch-ab) = 352603443c59184c2cedc8762a406cd58e6ebd23
