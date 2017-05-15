@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2015/12/08 11:13:04 jperkin Exp $
+$NetBSD: patch-aa,v 1.6 2017/05/15 08:40:21 spz Exp $
 
---- zzip/Makefile.in.orig	2010-03-29 19:40:50.000000000 +0000
+--- zzip/Makefile.in.orig	2017-04-23 23:46:28.000000000 +0000
 +++ zzip/Makefile.in
-@@ -775,6 +775,7 @@ install-data-hook : install-zzipHEADERS
+@@ -892,6 +892,7 @@ install-data-hook : install-zzipHEADERS
  	$(DESTDIR)$(includedir)/zzip.h >$(DESTDIR)$(includedir)/zzip-io.h
  
  install-exec-hook:
 +xxx:
  	@ for i in . $(DESTDIR)$(libdir)/libzzip*.so.13 \
-         ; do test -d $$i && continue ; lib=`basename "$$i" .so.13` \
-         ; echo "$(DESTDIR)$(libdir): ln -s $$lib.so.13 $$lib.so.10" \
+         ; do test -d $$i && continue ; test -f $$i || continue \
+         ; lib=`basename "$$i" .so.13` \
