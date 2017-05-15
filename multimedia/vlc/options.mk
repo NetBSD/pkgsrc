@@ -1,9 +1,15 @@
-# $NetBSD: options.mk,v 1.31 2017/03/04 08:26:54 wiz Exp $
+# $NetBSD: options.mk,v 1.32 2017/05/15 11:07:20 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		dbus debug dts faad gnome jack live pulseaudio
 PKG_SUPPORTED_OPTIONS+=		sdl vlc-skins x11
-PKG_SUGGESTED_OPTIONS=		dbus live x11
+PKG_SUGGESTED_OPTIONS=		dbus x11
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "SunOS"
+PKG_SUGGESTED_OPTIONS+=		live
+.endif
 
 ### Add VAAPI if it is available
 .include "../../multimedia/libva/available.mk"
