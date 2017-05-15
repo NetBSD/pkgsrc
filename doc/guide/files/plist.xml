@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.26 2017/02/02 07:22:13 yyamano Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.27 2017/05/15 07:39:42 gson Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -24,7 +24,7 @@
 </programlisting>
      <para>An artificial space has been added between NetBSD and $, this is a
 workaround here to prevent CVS expanding to the filename of the guide. When
-adding the RCS ID the space should be ommited.</para>
+adding the RCS ID the space should be omitted.</para>
   </sect1>
 
   <sect1 id="automatic-plist-generation">
