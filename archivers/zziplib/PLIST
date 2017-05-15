@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2010/05/15 06:37:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/05/15 08:40:21 spz Exp $
 bin/unzip-mem
 bin/unzzip
-bin/unzzipcat
-bin/unzzipcat-mem
-bin/unzzipcat-seeko
-bin/unzzipdir
-bin/unzzipdir-mem
+bin/unzzip-big
+bin/unzzip-mem
+bin/unzzip-mix
 bin/zzcat
 bin/zzdir
 bin/zzxorcat
