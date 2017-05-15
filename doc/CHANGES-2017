@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1975 2017/05/15 15:31:29 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.1976 2017/05/15 15:31:40 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2476,3 +2476,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/ilmbase to 2.2.0nb2 [ryoon 2017-05-15]
 	Updated devel/gettext-tools to 0.19.8.1nb1 [wiz 2017-05-15]
 	Updated security/yara to 3.5.0 [khorben 2017-05-15]
+	Updated security/py-yara to 3.5.0 [khorben 2017-05-15]
