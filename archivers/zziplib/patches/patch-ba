@@ -1,20 +1,25 @@
-$NetBSD: patch-ba,v 1.4 2015/12/08 11:13:04 jperkin Exp $
+$NetBSD: patch-ba,v 1.5 2017/05/15 08:40:21 spz Exp $
 
-Use $as_echo to support escape sequences correctly.
-
---- configure.orig	2010-03-29 19:24:41.000000000 +0000
+--- configure.orig	2017-04-23 23:46:28.000000000 +0000
 +++ configure
-@@ -16257,7 +16257,7 @@ fi
- { $as_echo "$as_me:$LINENO: checking link options" >&5
- $as_echo_n "checking link options... " >&6; }
- ZZIPLIB_LDFLAGS=""
--test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="--export-dynamic"
-+test ".$can_build_shared" != ".no" && ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
- RESOLVES=" # "
- case "$host_os" in mingw*)
-     ZZIPLIB_LDFLAGS="-no-undefined -export-all-symbols -mconsole"
-@@ -20218,24 +20220,24 @@ else
-   { $as_echo "$as_me:$LINENO: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&5
+@@ -13830,13 +13830,14 @@ case "$host_os" in mingw*)
+ ;; *)
+     if test ".$can_build_shared" != ".no" ; then
+       ZZIPLIB_LDFLAGS="-export-dynamic"
+-      if test ".$lt_cv_prog_gnu_ld" == ".yes" ; then
++      if test ".$lt_cv_prog_gnu_ld" = ".yes" ; then
+          ZZIPLIB_LDFLAGS="${wl}--export-dynamic"
+          # TODO: that is for backward compatibility only
+       fi
+     fi
+     RESOLVES=" # "
+ ;; esac
++ZZIPLIB_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ZZIPLIB_LDFLAGS $RESOLVES" >&5
+ $as_echo "$ZZIPLIB_LDFLAGS $RESOLVES" >&6; }
+ 
+@@ -17539,24 +17542,24 @@ else
+   { $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&5
  $as_echo "$as_me: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&6;}
    if test -f $ac_prefix_conf_INP ; then
 -    echo "s/^#undef  *\\([ABCDEFGHIJKLMNOPQRSTUVWXYZ_]\\)/#undef $ac_prefix_conf_UPP""_\\1/" > conftest.prefix
@@ -51,10 +56,10 @@ Use $as_echo to support escape sequences correctly.
 +    $as_echo '/* once:' $ac_prefix_conf_DEF '*/' >>$tmp/pconfig.h
 +    $as_echo "#endif" >>$tmp/pconfig.h
      if cmp -s $ac_prefix_conf_OUT $tmp/pconfig.h 2>/dev/null; then
-       { $as_echo "$as_me:$LINENO: $ac_prefix_conf_OUT is unchanged" >&5
+       { $as_echo "$as_me:${as_lineno-$LINENO}: $ac_prefix_conf_OUT is unchanged" >&5
  $as_echo "$as_me: $ac_prefix_conf_OUT is unchanged" >&6;}
-@@ -20352,24 +20354,24 @@ else
-   { $as_echo "$as_me:$LINENO: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&5
+@@ -17629,24 +17632,24 @@ else
+   { $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&5
  $as_echo "$as_me: creating $ac_prefix_conf_OUT - prefix $ac_prefix_conf_UPP for $ac_prefix_conf_INP defines" >&6;}
    if test -f $ac_prefix_conf_INP ; then
 -    echo "s/^#undef  *\\([ABCDEFGHIJKLMNOPQRSTUVWXYZ_]\\)/#undef $ac_prefix_conf_UPP""_\\1/" > conftest.prefix
@@ -91,5 +96,5 @@ Use $as_echo to support escape sequences correctly.
 +    $as_echo '/* once:' $ac_prefix_conf_DEF '*/' >>$tmp/pconfig.h
 +    $as_echo "#endif" >>$tmp/pconfig.h
      if cmp -s $ac_prefix_conf_OUT $tmp/pconfig.h 2>/dev/null; then
-       { $as_echo "$as_me:$LINENO: $ac_prefix_conf_OUT is unchanged" >&5
+       { $as_echo "$as_me:${as_lineno-$LINENO}: $ac_prefix_conf_OUT is unchanged" >&5
  $as_echo "$as_me: $ac_prefix_conf_OUT is unchanged" >&6;}
