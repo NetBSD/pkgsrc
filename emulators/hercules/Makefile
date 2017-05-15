@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2017/05/15 08:27:23 jperkin Exp $
 
 DISTNAME=		hercules-3.11
 PKGREVISION=		2
@@ -35,6 +35,7 @@ pre-install:
 	${INSTALL_DATA} ${WRKSRC}/hercules.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
 #	${INSTALL_DATA} ${WRKSRC}/zzsa.cnf ${DESTDIR}${PREFIX}/share/examples/hercules/
 
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
