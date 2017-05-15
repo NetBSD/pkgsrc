@@ -1,2 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/06 09:13:27 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/15 15:27:31 khorben Exp $
 ${PYSITELIB}/yara.so
+${PYSITELIB}/yara_python-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/yara_python-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/yara_python-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/yara_python-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/yara_python-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
