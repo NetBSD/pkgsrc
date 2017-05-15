@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/05/13 01:19:05 wen Exp $
+$NetBSD: distinfo,v 1.7 2017/05/15 13:46:47 jperkin Exp $
 
 SHA1 (fish-2.5.0.tar.gz) = ec52debe0a829b9df29f658697523af7c18ee778
 RMD160 (fish-2.5.0.tar.gz) = 7c206d612f4316900dfecfe46b9a3f95411c4d79
@@ -7,3 +7,4 @@ Size (fish-2.5.0.tar.gz) = 3496831 bytes
 SHA1 (patch-Makefile.in) = e2f5722d2e08e644e0813a662b64bbfe811a8ec6
 SHA1 (patch-configure) = 867ad2e2b93aa58fd93db05646efd9c0335c8bb8
 SHA1 (patch-src_builtin.cpp) = b48a52d45ba545a92043e58dc554305670c7fcfc
+SHA1 (patch-src_wutil.cpp) = dbb73cf81d850c4b73598d0c711f68b0d74cabd6
