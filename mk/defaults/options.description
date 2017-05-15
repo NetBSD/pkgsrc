@@ -286,7 +286,7 @@ http2			Add support for HTTP/2.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
 ibus			Enable Intelligent Input Bus support.
-iconv			Use iconv as chracter encoding conversion.
+iconv			Use iconv for character encoding conversion.
 icu			Enable icu support.
 id3			Enable id3 tagging support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
