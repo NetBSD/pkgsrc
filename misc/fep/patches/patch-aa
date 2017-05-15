@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.10 2016/09/08 14:44:44 jperkin Exp $
+$NetBSD: patch-aa,v 1.11 2017/05/15 08:38:34 jperkin Exp $
+
+Use pkgsrc flags.
 
 --- Makefile.orig	1993-06-10 02:51:22.000000000 +0000
 +++ Makefile
-@@ -15,17 +15,30 @@ OBJ	= fep_main.o fep_edit.o fep_hist.o f
+@@ -15,17 +15,20 @@ OBJ	= fep_main.o fep_edit.o fep_hist.o f
  DISTRIBUTION\
  	= Makefile fep.1 $(HEADER) $(SRC) feprc.sample README
  
@@ -19,25 +21,16 @@ $NetBSD: patch-aa,v 1.10 2016/09/08 14:44:44 jperkin Exp $
 +#DEBUG	= -O
  
 -CFLAGS	= $(DEBUG) $(CONFIG)
+-LDFLAGS = -ltermcap
 +CFLAGS	+= $(DEBUG) $(CONFIG)
 +.if exists(/dev/ptmx)
 +CFLAGS	+= -DHAVE_PTMX
 +.endif
-+.if exists(/usr/lib/libtermcap.a)
-+.if exists(/usr/lib/libcompat.a)
-+LDFLAGS = -ltermcap -lcompat
-+.else
- LDFLAGS = -ltermcap
-+.endif
-+.elif exists(/usr/lib/libncurses.a)
-+LDFLAGS = -lncurses
-+.else
-+LDFLAGS = -lcurses
-+.endif
++LDFLAGS += -ltermcap
  
  all: $(TARGET)
  
-@@ -36,8 +49,8 @@ argv: fep_com.c
+@@ -36,8 +39,8 @@ argv: fep_com.c
  	$(CC) -o argv -DMKARGDEBUG fep_util.c
  
  install: $(TARGET)
