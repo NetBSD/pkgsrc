@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.20 2016/09/08 14:44:44 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2017/05/15 08:38:34 jperkin Exp $
 
 SHA1 (fep.tar.gz) = 73fa55337b12dba3b91c9895e2c9adbbdfa9d960
 RMD160 (fep.tar.gz) = 2a8b9eeecd5c76bec5cdb524ae6c650f298ccbde
 SHA512 (fep.tar.gz) = a681743a5f4a8f96f8f445e68e7368e1d8b8130ade9021f64f5b8f00f2f25701d94150462072d7f72c51a58bc831423e22e650766b3408f0abdd0ee50f69e0a3
 Size (fep.tar.gz) = 40137 bytes
-SHA1 (patch-aa) = 17a6fb54130e504c3bb00afdae4b13b0053faf6b
+SHA1 (patch-aa) = 16fcdde2efd0da35447358bfbdc462474eb0db2b
 SHA1 (patch-ab) = 2b6f6cff25a21b374dce4b0162dc06a6d0b6c24f
 SHA1 (patch-ac) = ceebee84f6acbf834d3a38b6f8738dab98b091af
 SHA1 (patch-ad) = 78d5fd59d51542d304d3adcdde3a7ac48790d857
