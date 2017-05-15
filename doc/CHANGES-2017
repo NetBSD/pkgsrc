@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1972 2017/05/15 13:17:16 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1973 2017/05/15 13:54:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2473,3 +2473,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-lexicon to 2.1.4 [fhajny 2017-05-15]
 	Updated cad/oce to 0.18.1 [fhajny 2017-05-15]
 	Updated multimedia/ffmpeg3 to 3.3.1 [adam 2017-05-15]
+	Updated graphics/ilmbase to 2.2.0nb2 [ryoon 2017-05-15]
