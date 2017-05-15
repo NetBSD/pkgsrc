@@ -1,12 +1,11 @@
-$NetBSD: patch-ab,v 1.4 2013/07/31 18:25:28 adam Exp $
+$NetBSD: patch-ab,v 1.5 2017/05/15 13:53:42 ryoon Exp $
 
 Disable ucontext.h detection, which leads to problems on some platforms.
-Shell portabibility fix.
 Disable univeral binary build on Mac OS X.
 
---- configure.orig	2013-06-18 19:55:25.000000000 +0000
+--- configure.orig	2014-08-10 04:37:26.000000000 +0000
 +++ configure
-@@ -16437,7 +16437,7 @@ fi
+@@ -16433,7 +16433,7 @@ fi
  
  
  
@@ -15,7 +14,7 @@ Disable univeral binary build on Mac OS X.
  do
  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
-@@ -17212,7 +17212,7 @@ LIB_SUFFIX=""
+@@ -17208,7 +17208,7 @@ LIB_SUFFIX=""
  lib_suffix_valid="no"
  
  lib_namespace=""
@@ -24,7 +23,7 @@ Disable univeral binary build on Mac OS X.
      cat >>confdefs.h <<_ACEOF
  #define IMATH_INTERNAL_NAMESPACE Imath_${ILMBASE_VERSION_API}
  _ACEOF
-@@ -17233,7 +17233,7 @@ _ACEOF
+@@ -17229,7 +17229,7 @@ _ACEOF
      lib_namespace="${ILMBASE_VERSION_API}"
      LIB_SUFFIX="${ILMBASE_VERSION_API}"
      lib_suffix_valid="yes"
@@ -33,7 +32,7 @@ Disable univeral binary build on Mac OS X.
      cat >>confdefs.h <<_ACEOF
  #define IMATH_INTERNAL_NAMESPACE Imath
  _ACEOF
-@@ -17271,7 +17271,7 @@ _ACEOF
+@@ -17267,7 +17267,7 @@ _ACEOF
  fi
  
  
@@ -42,7 +41,7 @@ Disable univeral binary build on Mac OS X.
  LIB_SUFFIX_DASH="-${LIB_SUFFIX}"
  
   if true; then
-@@ -17306,7 +17306,7 @@ else
+@@ -17302,7 +17302,7 @@ else
  fi
  
  
@@ -51,7 +50,7 @@ Disable univeral binary build on Mac OS X.
      { $as_echo "$as_me:$LINENO: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&5
  $as_echo "$as_me: WARNING: Enabling 'custom user namespace' requires an additional argument, reverting to default" >&2;}
      cat >>confdefs.h <<\_ACEOF
-@@ -17324,7 +17324,7 @@ _ACEOF
+@@ -17320,7 +17320,7 @@ _ACEOF
  
      public_namespace=""
      custom_public_namespace=no
@@ -60,17 +59,12 @@ Disable univeral binary build on Mac OS X.
      cat >>confdefs.h <<\_ACEOF
  #define IMATH_NAMESPACE Imath
  _ACEOF
-@@ -17373,12 +17373,10 @@ else
+@@ -17369,7 +17369,7 @@ else
  fi
  
  
 -  if test "${osx_arch}" != default ; then
--          osx_arch_flags="-arch ${osx_arch// / -arch }"
 +  if false ; then
+           osx_arch_flags="-arch ${osx_arch// / -arch }"
       CXXFLAGS="$CXXFLAGS $osx_arch_flags"
  
-           if test "$enable_dependency_tracking" != no ; then
--        osx_arch_array=( ${osx_arch} )
-         if test ${#osx_arch_array[@]} -gt 1 ; then
-           { { $as_echo "$as_me:$LINENO: error: building multiple OS X architectures requires --disable-dependency-tracking.
- Please re-run configure with these options:
