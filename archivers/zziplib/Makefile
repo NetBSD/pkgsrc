@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/05/15 08:40:21 spz Exp $
 
-DISTNAME=	zziplib-0.13.59
+PKGNAME=        zziplib-${VERSION}
+DISTNAME=	${PKGNAME}
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zziplib/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=gdraheim/}
+GITHUB_PROJECT= zziplib
+GITHUB_TAG=	v${VERSION}
+EXTRACT_SUFX=	.tar.gz
+VERSION=	0.13.66
+
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://zziplib.sourceforge.net/
+HOMEPAGE=	https://github.com/gdraheim/zziplib
 COMMENT=	Library for ZIP archive handling
 
 LICENSE=	gnu-lgpl-v2 OR mpl-1.1
