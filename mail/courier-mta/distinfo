@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 23:27:02 agc Exp $
+$NetBSD: distinfo,v 1.21 2017/05/15 13:06:48 jperkin Exp $
 
 SHA1 (courier-0.68.1.tar.bz2) = fbd7cd0bc88876dc12d02b9404cea95877805ebe
 RMD160 (courier-0.68.1.tar.bz2) = 3f062aae0d34a71055a5ff5ad172ca191ab3f0e4
@@ -21,4 +21,5 @@ SHA1 (patch-ay) = d4b391e76167cd27012f928587d5feb57ea1b4ff
 SHA1 (patch-courier_cdfilters.C) = 1f9169de45355cd9a4ecb7e8ddac30df05d368d0
 SHA1 (patch-courier_cdmsgq.C) = 467479ded922cfff97c4e5876a5234eef3f82b50
 SHA1 (patch-courier_cmlmfetch.C) = 7426b5642271a8bcd4ed442eb6571d191a454d1f
+SHA1 (patch-courier_module.esmtp_esmtpclient.c) = 54f66d60e1d5e444725630ae31c47554ab421609
 SHA1 (patch-courier_webmlmd.H) = 3a66894c376bf84ae5a43f4c6f3dfbb687f9436e
