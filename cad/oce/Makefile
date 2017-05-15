@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 11:00:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/15 12:31:38 fhajny Exp $
 
-DISTNAME=	OCE-0.18
+DISTNAME=	OCE-0.18.1
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tpaviot/}
