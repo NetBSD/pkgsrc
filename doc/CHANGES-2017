@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1984 2017/05/16 12:08:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1985 2017/05/16 12:47:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/oracle-jdk8 to 8.0.131 [ryoon 2017-05-16]
 	Updated lang/oracle-jre8 to 8.0.131 [ryoon 2017-05-16]
 	Updated security/gnupg21 to 2.1.21 [wiz 2017-05-16]
+	Updated print/pdf2djvu to 0.9.5 [ryoon 2017-05-16]
