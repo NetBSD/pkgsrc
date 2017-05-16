@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/01/22 12:35:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/05/16 17:52:18 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/include/_ansi.h
 cross-arm-none-eabi/arm-none-eabi/include/_newlib_version.h
 cross-arm-none-eabi/arm-none-eabi/include/_syslist.h
@@ -7,6 +7,7 @@ cross-arm-none-eabi/arm-none-eabi/include/ar.h
 cross-arm-none-eabi/arm-none-eabi/include/argz.h
 cross-arm-none-eabi/arm-none-eabi/include/assert.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/algorithm
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/any
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/arm-none-eabi/bits/atomic_word.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/arm-none-eabi/bits/basic_file.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/arm-none-eabi/bits/c++allocator.h
@@ -100,13 +101,16 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/basic_string.tc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/boost_concept_check.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/c++0x_warning.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/c++14_warning.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/c++17_warning.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/char_traits.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/codecvt.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/concept_check.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/cpp_type_traits.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/cxxabi_forced.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/cxxabi_init_exception.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/deque.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/enable_special_members.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/exception.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/exception_defines.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/exception_ptr.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/forward_list.h
@@ -120,6 +124,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/hash_bytes.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/hashtable.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/hashtable_policy.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/indirect_array.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/invoke.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/ios_base.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/istream.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/list.tcc
@@ -135,6 +140,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/mask_array.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/memoryfwd.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/move.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/nested_exception.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/node_handle.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/ostream.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/ostream_insert.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/parse_numbers.h
@@ -145,6 +151,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/quoted_string.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/random.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/random.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/range_access.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/refwrap.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/regex.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/regex.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/regex_automaton.h
@@ -163,6 +170,8 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/shared_ptr_base
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/slice_array.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/specfun.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/sstream.tcc
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/std_abs.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/std_function.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/std_mutex.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stl_algo.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stl_algobase.h
@@ -192,6 +201,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stl_vector.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stream_iterator.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/streambuf.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/streambuf_iterator.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/string_view.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stringfwd.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/uniform_int_dist.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/unique_ptr.h
@@ -613,6 +623,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/memory
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/mutex
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/new
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/numeric
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/optional
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/ostream
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/parallel/algo.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/parallel/algobase.h
@@ -701,6 +712,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/stdexcept
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/stdlib.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/streambuf
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/string
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/string_view
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/system_error
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/tgmath.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/thread
@@ -780,6 +792,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/unordered_map
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/unordered_set
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/utility
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/valarray
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/variant
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/vector
 cross-arm-none-eabi/arm-none-eabi/include/complex.h
 cross-arm-none-eabi/arm-none-eabi/include/cpio.h
@@ -992,6 +1005,7 @@ cross-arm-none-eabi/bin/arm-none-eabi-gcc-ar
 cross-arm-none-eabi/bin/arm-none-eabi-gcc-nm
 cross-arm-none-eabi/bin/arm-none-eabi-gcc-ranlib
 cross-arm-none-eabi/bin/arm-none-eabi-gcov
+cross-arm-none-eabi/bin/arm-none-eabi-gcov-dump
 cross-arm-none-eabi/bin/arm-none-eabi-gcov-tool
 cross-arm-none-eabi/info/cpp.info
 cross-arm-none-eabi/info/cppinternals.info
@@ -1015,8 +1029,11 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include-fixed/README
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include-fixed/limits.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include-fixed/syslimits.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/arm_acle.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/arm_cmse.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/arm_fp16.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/arm_neon.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/float.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/gcov.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/iso646.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/mmintrin.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/include/ssp/ssp.h
@@ -1060,6 +1077,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/backend.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/basic-block.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/bb-reorder.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/bitmap.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/brig-builtins.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/builtin-attrs.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/builtin-types.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/builtins.def
@@ -1096,7 +1114,9 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/condition
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/aarch-common-protos.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/aout.h
-cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm-cores.def
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm-cpu.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm-flags.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm-isa.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm-opts.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm-protos.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/config/arm/arm.h
@@ -1143,6 +1163,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/double-in
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/dumpfile.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/dwarf2asm.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/dwarf2out.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/edit-context.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/emit-rtl.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/errors.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/et-forest.h
@@ -1210,7 +1231,8 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hooks.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hosthooks-def.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hosthooks.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hsa-brig-format.h
-cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hsa.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hsa-builtins.def
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hsa-common.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hw-doloop.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/hwint.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/ifcvt.h
@@ -1237,7 +1259,6 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/ipa-utils
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/ira-int.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/ira.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/is-a.h
-cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/java/java-tree.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/langhooks-def.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/langhooks.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/lcm.h
@@ -1258,12 +1279,17 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/machmode.
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/md5.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/mem-stats-traits.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/mem-stats.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/memmodel.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/memory-block.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/mode-classes.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/objc/objc-tree.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/obstack.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/omp-builtins.def
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/omp-expand.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/omp-general.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/omp-grid.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/omp-low.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/omp-offload.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/optabs-libfuncs.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/optabs-query.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/optabs-tree.h
@@ -1275,6 +1301,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/opts.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/output.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/params-enum.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/params-list.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/params-options.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/params.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/params.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/params.list
@@ -1293,6 +1320,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/print-rtl
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/print-tree.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/profile.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/read-md.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/read-rtl-function.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/real.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/realmpfr.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/recog.h
@@ -1310,6 +1338,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/rtl.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/rtl.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/rtlhash.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/rtlhooks-def.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/run-rtl-passes.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/safe-ctype.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sanitizer.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sbitmap.h
@@ -1318,10 +1347,13 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sdbout.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sel-sched-dump.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sel-sched-ir.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sel-sched.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/selftest-rtl.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/selftest.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sese.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/shrink-wrap.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/signop.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sparseset.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/spellcheck-tree.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/spellcheck.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/splay-tree.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sreal.h
@@ -1333,6 +1365,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/stmt.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/stor-layout.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/streamer-hooks.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/stringpool.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/substring-locations.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/symbol-summary.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/symtab.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/sync-builtins.def
@@ -1366,6 +1399,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-dump
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-eh.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-hash-traits.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-hasher.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-if-conv.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-inline.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-into-ssa.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-iterator.h
@@ -1379,6 +1413,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-pret
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-scalar-evolution.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssa-address.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssa-alias.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssa-ccp.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssa-coalesce.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssa-dom.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssa-live.h
@@ -1399,6 +1434,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-ssan
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-stdarg.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-streamer.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-vectorizer.h
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree-vrp.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree.def
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/tree.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/treestruct.def
@@ -1419,6 +1455,7 @@ cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/wide-int.
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/xcoff.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/include/xcoffout.h
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/libcc1plugin.la
+cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/plugin/libcp1plugin.la
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/thumb/crtbegin.o
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/thumb/crtend.o
 cross-arm-none-eabi/lib/gcc/arm-none-eabi/${PKGVERSION}/thumb/crtfastmath.o
@@ -1441,6 +1478,8 @@ cross-arm-none-eabi/libexec/gcc/arm-none-eabi/${PKGVERSION}/plugin/gengtype
 cross-arm-none-eabi/man/man1/arm-none-eabi-cpp.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-g++.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-gcc.1
+cross-arm-none-eabi/man/man1/arm-none-eabi-gcov-dump.1
+cross-arm-none-eabi/man/man1/arm-none-eabi-gcov-tool.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-gcov.1
 cross-arm-none-eabi/man/man7/fsf-funding.7
 cross-arm-none-eabi/man/man7/gfdl.7
