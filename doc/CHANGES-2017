@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1990 2017/05/16 17:53:33 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.1991 2017/05/16 21:10:48 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/calibre to 2.85.1 [wiz 2017-05-16]
 	Updated devel/libmtp to 1.1.13 [wiz 2017-05-16]
 	Updated cross/arm-none-eabi-gcc to 7.1.0 [ryoon 2017-05-16]
+	Updated wm/9wm to 1.4.0 [bsiegert 2017-05-16]
