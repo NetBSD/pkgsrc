@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/05/16 21:54:21 snj Exp $
+
+this test for the system libtomcrypt needs -ltommath.
+
+--- configure.orig	2017-04-25 21:47:13.570580493 -0700
++++ configure	2017-04-25 21:47:30.336185297 -0700
+@@ -5963,7 +5963,7 @@ if ${ac_cv_lib_tomcrypt_register_cipher+
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ltomcrypt  $LIBS"
++LIBS="-ltomcrypt -ltommath $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
