@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1980 2017/05/16 08:37:59 adam Exp $
+$NetBSD: CHANGES-2017,v 1.1981 2017/05/16 09:30:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2483,3 +2483,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated archivers/zziplib to 0.13.66 [spz 2017-05-15]
 	Updated textproc/py-libxslt to 1.1.29nb1 [dholland 2017-05-16]
 	Updated devel/py-freezegun to 0.3.9 [adam 2017-05-16]
+	Updated time/py-parsedatetime to 2.4 [adam 2017-05-16]
