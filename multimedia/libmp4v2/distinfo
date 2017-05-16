@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2017/05/06 18:12:00 maya Exp $
+$NetBSD: distinfo,v 1.16 2017/05/16 09:25:10 jperkin Exp $
 
 SHA1 (mpeg4ip-1.6.1.tar.gz) = 2af97fc0da6a5c0bcb7b433c6715967487b80e38
 RMD160 (mpeg4ip-1.6.1.tar.gz) = ee8375d9581cccbbf685f730bb36f3866eaf12f7
@@ -40,6 +40,8 @@ SHA1 (patch-lib_mp4_udta.c) = af025f404668d1bc02861620b79d6a56fbe18295
 SHA1 (patch-lib_mp4v2_atom__standard.cpp) = 27a2bac270ac4a1fd5169d89d312690a4dcb58ab
 SHA1 (patch-lib_mp4v2_mp4atom.cpp) = ad0a1006293d8bea250de695919d8cdc59a7a4fa
 SHA1 (patch-lib_rtp_net__udp.c) = 3250d0ebcc0899ec4521eb20bc83f6e8a8bce3c9
+SHA1 (patch-lib_utils_config__opts.cpp) = 15a385df3635b9441ceacf898031ce0a94d1cd0e
 SHA1 (patch-player_lib_audio_faad_config.c) = 6448e02ed9f95fc94bca986958ac61c0bf0ec752
 SHA1 (patch-player_lib_audio_faad_huffdec.c) = 1106e902c3fe95cb76009613ae6641339580adac
 SHA1 (patch-player_lib_audio_faad_monopred.c) = 0833f17e10f91b69c63c896c15e98471c62f3025
+SHA1 (patch-player_src_media__utils.cpp) = d11bcfe9ade690e14686e1091b7f5c834068cd3c
