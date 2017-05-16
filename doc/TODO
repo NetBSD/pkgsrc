@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17337 2017/05/16 13:38:22 wiz Exp $
+$NetBSD: TODO,v 1.17338 2017/05/16 13:45:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -480,7 +480,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cal3d-0.11.0
 	o calc-2.11.10.1
 	o calcoo-2.1.0
-	o calibre-2.85.1
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
