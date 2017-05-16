@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1986 2017/05/16 13:27:50 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1987 2017/05/16 13:38:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2490,3 +2490,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/gnupg21 to 2.1.21 [wiz 2017-05-16]
 	Updated print/pdf2djvu to 0.9.5 [ryoon 2017-05-16]
 	Updated textproc/mdoclint to 1.52 [wiz 2017-05-16]
+	Updated devel/waf to 1.9.11 [wiz 2017-05-16]
