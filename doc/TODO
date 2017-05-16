@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17334 2017/05/14 08:49:58 wiz Exp $
+$NetBSD: TODO,v 1.17335 2017/05/16 09:30:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -1305,7 +1305,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-django-photologue-2.7
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
-	o py-freezegun-0.3.9
 	o py-gevent-1.2.1
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
@@ -1325,7 +1324,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-notify-0.3.1
 	o py-numpydoc-0.6.0
 	o py-omniORBpy-3.7
-	o py-parsedatetime-2.4
 	o py-pdf-parser-0.6.4
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
