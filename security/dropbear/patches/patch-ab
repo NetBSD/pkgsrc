@@ -1,16 +1,16 @@
-$NetBSD: patch-ab,v 1.8 2014/01/31 17:32:19 agc Exp $
+$NetBSD: patch-ab,v 1.9 2017/05/16 21:54:21 snj Exp $
 
 comment out the path to the dropbear ssh client
 - this is passed through CFLAGS
 
---- options.h.orig	2009-08-26 13:15:07.000000000 -0700
-+++ options.h	2009-08-26 13:15:14.000000000 -0700
-@@ -232,7 +232,7 @@ etc) slower (perhaps by 50%). Recommende
+--- options.h.orig	2016-07-21 08:17:09.000000000 -0700
++++ options.h	2017-03-18 00:25:05.000000000 -0700
+@@ -305,7 +305,7 @@ Homedir is prepended unless path begins 
  
  /* This is used by the scp binary when used as a client binary. If you're
   * not using the Dropbear client, you'll need to change it */
--#define _PATH_SSH_PROGRAM "/usr/bin/dbclient"
-+/*#define _PATH_SSH_PROGRAM "/usr/bin/dbclient"*/
+-#define DROPBEAR_PATH_SSH_PROGRAM "/usr/bin/dbclient"
++/*#define DROPBEAR_PATH_SSH_PROGRAM "/usr/bin/dbclient"*/
  
  /* Whether to log commands executed by a client. This only logs the 
   * (single) command sent to the server, not what a user did in a 
