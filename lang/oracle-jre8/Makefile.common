@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2017/03/11 07:36:10 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/05/16 11:55:30 ryoon Exp $
 # used by lang/oracle-jre8/Makefile
 # used by lang/oracle-jdk8/Makefile
 
@@ -21,7 +21,7 @@ EMUL_PLATFORMS=		darwin-x86_64 linux-i386 linux-x86_64 solaris-i386 solaris-x86_
 USE_TOOLS+=	pax
 
 # JDK8 Update number
-UPDATE_NUMBER=	121
+UPDATE_NUMBER=	131
 
 .include "../../mk/bsd.prefs.mk"
 
