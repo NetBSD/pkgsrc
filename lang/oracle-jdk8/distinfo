@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.9 2017/03/11 07:36:10 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2017/05/16 11:55:30 ryoon Exp $
 
-SHA1 (jdk-8u121-linux-i586.tar.gz) = ac7c7736d058d0da85849a555a640fbdcbd039e7
-RMD160 (jdk-8u121-linux-i586.tar.gz) = e81edd232cf5f1b94edeffcf062ec06761de3cda
-SHA512 (jdk-8u121-linux-i586.tar.gz) = d900343912034a6d454ce8ca2dc5767551c6d14ed96b1297bcab817a73b43775f449b29f2c97cc7e7821543388eefc0d5d5fa130187e0a73813812e87c8e30e5
-Size (jdk-8u121-linux-i586.tar.gz) = 185735871 bytes
-SHA1 (jdk-8u121-linux-x64.tar.gz) = 11f5925366234506730c095a2fd151d8f1212db7
-RMD160 (jdk-8u121-linux-x64.tar.gz) = 73f9c54df806de1ba592c4764e5144921f8fad3d
-SHA512 (jdk-8u121-linux-x64.tar.gz) = df5d90a87fff6f71246aab1e63412a0b8d50207784da939fdb09ab547a469d121c6c74a7849628fb4d4f3596658eef31fad4026598862f1a5637a15b37b44648
-Size (jdk-8u121-linux-x64.tar.gz) = 183246769 bytes
-SHA1 (jdk-8u121-solaris-x64.tar.gz) = 295b5c495b7e3163edbc32dec2c8231c8659478e
-RMD160 (jdk-8u121-solaris-x64.tar.gz) = 5da99090daf373e87d5ba24dcbd54120d20be308
-SHA512 (jdk-8u121-solaris-x64.tar.gz) = 14983383f94b62396948269a10d662b8adca851706558076c000be3d8352c7c66d3172f9e656e2de230c511d77117944a0cf3114fa467e072ce2f25ad1b7e9fa
-Size (jdk-8u121-solaris-x64.tar.gz) = 101604840 bytes
+SHA1 (jdk-8u131-linux-i586.tar.gz) = 301515c2462f23d2322bd0d509a478261d894195
+RMD160 (jdk-8u131-linux-i586.tar.gz) = a2966724d84b0aa0867c4ecfb48c90e2f07bafa1
+SHA512 (jdk-8u131-linux-i586.tar.gz) = 5f5428ad9a0bcd20533cafc7c28bd260064da2f00719c3b5dc4a970771ffae11b1b9a18bfef39476c448d63d3efb829641a6c22ffb8faa3bbb7b5b3670487d80
+Size (jdk-8u131-linux-i586.tar.gz) = 188105480 bytes
+SHA1 (jdk-8u131-linux-x64.tar.gz) = c2a5582c049beb5c7af6b87a469bc53b759b7b87
+RMD160 (jdk-8u131-linux-x64.tar.gz) = 33bd70416fa961d94ea240aaa47355152a757a8a
+SHA512 (jdk-8u131-linux-x64.tar.gz) = 92c90f19f0184dfd78ac2b98d8ba0cbddcac3b9fb318ca9eeb6f8c1ce62b5b286cae836edb04689ec62fc9ad6ebbfc0c48d0b107b716c24afe44a3ba41fb66f4
+Size (jdk-8u131-linux-x64.tar.gz) = 185540433 bytes
+SHA1 (jdk-8u131-solaris-x64.tar.gz) = 1b7a8dc56dc6ca336eb958096fa4f001817b487f
+RMD160 (jdk-8u131-solaris-x64.tar.gz) = 0871b5e59d9290a936c807cc3241d8f6c544c9a7
+SHA512 (jdk-8u131-solaris-x64.tar.gz) = 7718cc3ff3fec17c289873354f478c15527dee09c2de8e04f5f79a95e9dd2f019d4deb4cf4bafa3b47bffce8b788d64dd94239b22f161b329f18bf176b039402
+Size (jdk-8u131-solaris-x64.tar.gz) = 101664768 bytes
