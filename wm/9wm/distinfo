@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:42:50 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/05/16 21:10:02 bsiegert Exp $
 
-SHA1 (9wm-1.1.shar.gz) = 43a4e28a0665d54331d81d9691abae65927738ac
-RMD160 (9wm-1.1.shar.gz) = d2daa96d1b8dec45d349e49406156629e4b2c50a
-SHA512 (9wm-1.1.shar.gz) = 61114b96896bf16f66af7727d039e9d09d85971f6cffa10cfea1719697bc355d18f56d3813dfefe6cfb8b2bec16683fa541735debdca2dc25b2ddc11363a0714
-Size (9wm-1.1.shar.gz) = 19517 bytes
-SHA1 (patch-aa) = 3e0c11e450876ee882694fb653fa8222ee53340a
+SHA1 (9wm-1.4.0.tar.gz) = 9cc1530cd324a76a1553f82fa585bfd7e457fd1b
+RMD160 (9wm-1.4.0.tar.gz) = 21960a25cc0dfc55e0a61ff1a4de34b56c681120
+SHA512 (9wm-1.4.0.tar.gz) = dc78b28f146fbac0ca4e336c91cc8013b4af49889d8638b6b3f8c15d47c0801e22412eb9f840eb0b3d8888ef8455bf6fa68c0333b47fb212ee3d6ced1673d0a5
+Size (9wm-1.4.0.tar.gz) = 21579 bytes
+SHA1 (patch-Makefile) = 9290c1d1af46c17d7b0f1e83c78a7a915b40b3f8
