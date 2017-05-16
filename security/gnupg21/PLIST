@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/04/16 07:21:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/05/16 12:08:01 wiz Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -62,9 +62,7 @@ share/doc/gnupg/examples/systemd-user/gpg-agent.service
 share/doc/gnupg/examples/systemd-user/gpg-agent.socket
 share/doc/gnupg/examples/trustlist.txt
 share/doc/gnupg/examples/vsnfd.prf
-share/gnupg/dirmngr-conf.skel
 share/gnupg/distsigkey.gpg
-share/gnupg/gpg-conf.skel
 share/gnupg/help.be.txt
 share/gnupg/help.ca.txt
 share/gnupg/help.cs.txt

@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.17 2017/04/20 09:55:28 wiz Exp $
+$NetBSD: distinfo,v 1.18 2017/05/16 12:08:01 wiz Exp $
 
-SHA1 (gnupg-2.1.20.tar.bz2) = 500ddae8e4225ae2e300934090f9b9a427b8def1
-RMD160 (gnupg-2.1.20.tar.bz2) = 6f2448b16d69e81d0f6e82db5250f5acf0217b5f
-SHA512 (gnupg-2.1.20.tar.bz2) = 14a9890bc64e143f87cff121dd298d490d78dbd34e36883e0f25763ff9064e5706a7632893d7c5d0e8e9b8cf9cdb0d378b4ce1715348729f0fc080455b61eca9
-Size (gnupg-2.1.20.tar.bz2) = 6456128 bytes
-SHA1 (patch-g13_sh-dmcrypt.c) = 0680c2a847e7fdf890697c9066a85ced7cdfb5f1
+SHA1 (gnupg-2.1.21.tar.bz2) = 1852c066bc21893bc52026ead78edf50fdf15e13
+RMD160 (gnupg-2.1.21.tar.bz2) = a414f5a86eea9243267e26525287a213208ddab2
+SHA512 (gnupg-2.1.21.tar.bz2) = ddced44c37a220af8371ba36357fc0f23b22b57daec1cba6d4a1a015d345eac7f6060c88b22a5cd457ee364d0ec1f02175644aed1970a97abfa84a3d285bc512
+Size (gnupg-2.1.21.tar.bz2) = 6472887 bytes
