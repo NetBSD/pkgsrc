@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.58 2017/05/15 18:07:40 dholland Exp $
+$NetBSD: distinfo,v 1.59 2017/05/16 13:51:50 dholland Exp $
 
 SHA1 (libxslt-1.1.29.tar.gz) = edcaeabb3555ae44853bdc406ee9521fb65c620d
 RMD160 (libxslt-1.1.29.tar.gz) = 40a5202b3967db6b01cd6c0e722a9e459cac7960
@@ -6,4 +6,3 @@ SHA512 (libxslt-1.1.29.tar.gz) = a1ce555a74a9dabe65e8f64bb66e27e77760fd76940d88f
 Size (libxslt-1.1.29.tar.gz) = 3428524 bytes
 SHA1 (patch-ae) = 40ce3940a93b6a2dc804f62676909d3313e0ea52
 SHA1 (patch-ah) = f92809ab34e53962ec8b62e50ded7a27c89f10f8
-SHA1 (patch-python_setup.py) = 20b257926a8626bce44ca0448d618619a7d69995
