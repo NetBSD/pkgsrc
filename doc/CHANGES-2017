@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1978 2017/05/15 20:05:33 spz Exp $
+$NetBSD: CHANGES-2017,v 1.1979 2017/05/16 02:35:46 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/freetype2 to 2.8 [spz 2017-05-14]
 	Updated graphics/gdk-pixbuf2 to 2.36.6 [spz 2017-05-14]
 	Updated archivers/zziplib to 0.13.66 [spz 2017-05-15]
+	Updated textproc/py-libxslt to 1.1.29nb1 [dholland 2017-05-16]
