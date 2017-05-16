@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2017/05/16 21:10:02 bsiegert Exp $
+
+Correctly install into $PREFIX, remove -Werror (which breaks with clang).
+
+--- Makefile.orig	2017-05-12 22:39:16.000000000 +0000
++++ Makefile
+@@ -1,8 +1,9 @@
+-CFLAGS += -DSHAPE -DCOLOR -Wall -Werror -pedantic
++CFLAGS += -DSHAPE -DCOLOR -Wall -pedantic
+ LDLIBS = -lXext -lX11
+-BIN = $(DESTDIR)/usr/bin/
++PREFIX ?= /usr
++BIN = $(DESTDIR)$(PREFIX)/bin/
+ 
+-MANDIR = $(DESTDIR)/usr/share/man/man1
++MANDIR = $(DESTDIR)$(PREFIX)/share/man/man1
+ MANSUFFIX = 1
+ 
+ all: 9wm

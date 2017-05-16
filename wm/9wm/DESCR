@@ -1,9 +1,3 @@
-                        9wm Version 1.1
-                   Copyright 1994 David Hogan.
-
-What is 9wm?
-============
-
 9wm is an X window manager which attempts to emulate the Plan 9 window
 manager 8-1/2 as far as possible within the constraints imposed by X.
 It provides a simple yet comfortable user interface, without garish
