@@ -1,5 +1,6 @@
 #!/usr/bin/python -u
 #
+# $NetBSD: setup.py,v 1.3 2017/05/16 13:48:05 dholland Exp $
 # Setup script for libxslt
 #
 import sys, os
