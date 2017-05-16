@@ -1,6 +1,6 @@
 #!/usr/bin/python -u
 #
-# $NetBSD: setup.py,v 1.3 2017/05/16 13:48:05 dholland Exp $
+# $NetBSD: setup.py,v 1.4 2017/05/16 13:51:51 dholland Exp $
 # Setup script for libxslt
 #
 import sys, os
@@ -54,7 +54,7 @@ if xml_includes == "":
 iconv_includes="@LIBICONVDIR@/include"
 
 # those are added in the linker search path for libraries
-libdirs = ["@LIBXML2DIR@/lib"]
+libdirs = ["@LIBXML2DIR@/lib", "@PYSHLIBDIR@"]
 
 xml_files = ["libxml2-api.xml", "libxml2-python-api.xml",
              "libxml.c", "libxml.py", "libxml_wrap.h", "types.c",
@@ -133,7 +133,7 @@ descr = "libxml2 package"
 modules = []
 c_files = []
 includes= [xml_includes, iconv_includes]
-libs    = [] + platformLibs
+libs    = ["xml2mod"] + platformLibs
 macros  = []
 if with_threads:
     macros.append(('_REENTRANT','1'))
@@ -162,7 +162,8 @@ if with_xslt == 1:
 extens=[]
 if with_xslt == 1:
     extens.append(Extension('libxsltmod', xslt_c_files, include_dirs=includes,
-			    library_dirs=libdirs, 
+			    library_dirs=libdirs,
+			    runtime_library_dirs=libdirs,
                             libraries=libs, define_macros=macros))
 
 if missing("MANIFEST"):
