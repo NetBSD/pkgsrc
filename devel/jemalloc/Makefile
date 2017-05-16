@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/05/15 07:47:43 gson Exp $
+# $NetBSD: Makefile,v 1.8 2017/05/16 17:08:10 gson Exp $
 
 DISTNAME=	jemalloc-4.5.0
 CATEGORIES=	devel
@@ -28,5 +28,7 @@ REPLACE_PERL=		bin/jeprof.in
 PKGCONFIG_OVERRIDE=	jemalloc.pc.in
 
 BUILD_TARGET=		all dist
+TEST_TARGET=		check
+TEST_ENV=		LD_LIBRARY_PATH=${WRKSRC}/lib
 
 .include "../../mk/bsd.pkg.mk"
