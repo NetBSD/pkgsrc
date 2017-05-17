@@ -1,4 +1,6 @@
-$NetBSD: patch-libavutil_x86_cpu.c,v 1.1 2016/03/05 08:52:23 ryoon Exp $
+$NetBSD: patch-libavutil_x86_cpu.c,v 1.2 2017/05/17 15:28:51 he Exp $
+
+Make a part of the code depend on GCC >= 4.2.
 
 --- libavutil/x86/cpu.c.orig	2016-01-15 16:58:37.000000000 +0000
 +++ libavutil/x86/cpu.c
