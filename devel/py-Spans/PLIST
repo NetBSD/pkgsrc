@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/17 10:46:02 gson Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/spans/__init__.py
+${PYSITELIB}/spans/__init__.pyc
+${PYSITELIB}/spans/__init__.pyo
+${PYSITELIB}/spans/_compat.py
+${PYSITELIB}/spans/_compat.pyc
+${PYSITELIB}/spans/_compat.pyo
+${PYSITELIB}/spans/_utils.py
+${PYSITELIB}/spans/_utils.pyc
+${PYSITELIB}/spans/_utils.pyo
+${PYSITELIB}/spans/settypes.py
+${PYSITELIB}/spans/settypes.pyc
+${PYSITELIB}/spans/settypes.pyo
+${PYSITELIB}/spans/types.py
+${PYSITELIB}/spans/types.pyc
+${PYSITELIB}/spans/types.pyo
