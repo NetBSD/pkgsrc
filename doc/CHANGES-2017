@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.1997 2017/05/17 10:36:28 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.1998 2017/05/17 10:37:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20170514 [wiz 2017-05-17]
 	Updated devel/py-mercurial to 4.2 [wiz 2017-05-17]
 	Updated devel/py-tortoisehg to 4.2 [wiz 2017-05-17]
+	Updated converters/convmv to 2.01 [wiz 2017-05-17]
