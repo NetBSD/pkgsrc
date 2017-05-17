@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2015/11/03 01:43:51 agc Exp $
+$NetBSD: distinfo,v 1.20 2017/05/17 11:07:52 wiz Exp $
 
-SHA1 (JSON-2.90.tar.gz) = 8f0ffe72cbe9e6287d7ecafcf19b31cc297364c2
-RMD160 (JSON-2.90.tar.gz) = 629becc378221dadbd01162c26dabec2ea7550cc
-SHA512 (JSON-2.90.tar.gz) = 72462a468aa37da73d164c91b5123c237c268f87215019fae49b7f212b0a25e0b48cd57b3cf0bd93c9fff6afc553b2417faafc0c319e62cb0cf4b1cf432698e7
-Size (JSON-2.90.tar.gz) = 85333 bytes
+SHA1 (JSON-2.92.tar.gz) = cd0c9c0bac2033d4733723e71990ce9c06cb0b50
+RMD160 (JSON-2.92.tar.gz) = 748af73f7e731f5694b2d3bbd996f2f20bdf79bd
+SHA512 (JSON-2.92.tar.gz) = c1bb781a8fb62c2066fecb10a253598254dad07947fc364b8951d1bb3fbf9bab7c31581961356cadc7f27320c280cb5191e391721b7b5b1ce4c7684c6a259432
+Size (JSON-2.92.tar.gz) = 85192 bytes
