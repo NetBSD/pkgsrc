@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.120 2017/05/14 16:03:23 leot Exp $
+# $NetBSD: Makefile,v 1.121 2017/05/17 07:13:37 adam Exp $
 
-DISTNAME=		tor-0.3.0.6
+DISTNAME=		tor-0.3.0.7
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
@@ -41,8 +41,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/torrc
 
-PRINT_PLIST_AWK+=       /^man\/man/ { $$0 = "$${PLIST.doc}" $$0 }
-PRINT_PLIST_AWK+=       /^share\/doc/ { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/^man\/man/ { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/^share\/doc/ { $$0 = "$${PLIST.doc}" $$0 }
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME.${TOR_USER}}
 FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
