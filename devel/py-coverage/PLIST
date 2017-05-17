@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/11/07 19:12:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/05/17 11:39:58 adam Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PLIST.py2x}bin/coverage2
 ${PLIST.py3x}bin/coverage3
@@ -53,12 +53,15 @@ ${PYSITELIB}/coverage/execfile.pyo
 ${PYSITELIB}/coverage/files.py
 ${PYSITELIB}/coverage/files.pyc
 ${PYSITELIB}/coverage/files.pyo
+${PYSITELIB}/coverage/fullcoverage/encodings.py
+${PYSITELIB}/coverage/fullcoverage/encodings.pyc
+${PYSITELIB}/coverage/fullcoverage/encodings.pyo
 ${PYSITELIB}/coverage/html.py
 ${PYSITELIB}/coverage/html.pyc
 ${PYSITELIB}/coverage/html.pyo
 ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/index.html
-${PYSITELIB}/coverage/htmlfiles/jquery.debounce.min.js
+${PYSITELIB}/coverage/htmlfiles/jquery.ba-throttle-debounce.min.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.hotkeys.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.isonscreen.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.min.js
@@ -70,9 +73,9 @@ ${PYSITELIB}/coverage/htmlfiles/style.css
 ${PYSITELIB}/coverage/misc.py
 ${PYSITELIB}/coverage/misc.pyc
 ${PYSITELIB}/coverage/misc.pyo
-${PYSITELIB}/coverage/monkey.py
-${PYSITELIB}/coverage/monkey.pyc
-${PYSITELIB}/coverage/monkey.pyo
+${PYSITELIB}/coverage/multiproc.py
+${PYSITELIB}/coverage/multiproc.pyc
+${PYSITELIB}/coverage/multiproc.pyo
 ${PYSITELIB}/coverage/parser.py
 ${PYSITELIB}/coverage/parser.pyc
 ${PYSITELIB}/coverage/parser.pyo
@@ -106,9 +109,6 @@ ${PYSITELIB}/coverage/summary.pyo
 ${PYSITELIB}/coverage/templite.py
 ${PYSITELIB}/coverage/templite.pyc
 ${PYSITELIB}/coverage/templite.pyo
-${PYSITELIB}/coverage/test_helpers.py
-${PYSITELIB}/coverage/test_helpers.pyc
-${PYSITELIB}/coverage/test_helpers.pyo
 ${PYSITELIB}/coverage/tracer.so
 ${PYSITELIB}/coverage/version.py
 ${PYSITELIB}/coverage/version.pyc
