@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2008 2017/05/17 11:08:02 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2009 2017/05/17 11:17:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2513,3 +2513,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Specio to 0.37 [wiz 2017-05-17]
 	Updated devel/p5-Test-Simple to 1.302085 [wiz 2017-05-17]
 	Updated converters/p5-JSON to 2.92 [wiz 2017-05-17]
+	Updated misc/todoman to 3.2.0 [wiz 2017-05-17]
