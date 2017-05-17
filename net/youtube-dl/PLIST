@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2017/05/01 09:40:19 leot Exp $
+@comment $NetBSD: PLIST,v 1.42 2017/05/17 08:08:52 wiz Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -1022,6 +1022,9 @@ ${PYSITELIB}/youtube_dl/extractor/mdr.pyo
 ${PYSITELIB}/youtube_dl/extractor/medialaan.py
 ${PYSITELIB}/youtube_dl/extractor/medialaan.pyc
 ${PYSITELIB}/youtube_dl/extractor/medialaan.pyo
+${PYSITELIB}/youtube_dl/extractor/mediaset.py
+${PYSITELIB}/youtube_dl/extractor/mediaset.pyc
+${PYSITELIB}/youtube_dl/extractor/mediaset.pyo
 ${PYSITELIB}/youtube_dl/extractor/medici.py
 ${PYSITELIB}/youtube_dl/extractor/medici.pyc
 ${PYSITELIB}/youtube_dl/extractor/medici.pyo
@@ -1217,6 +1220,9 @@ ${PYSITELIB}/youtube_dl/extractor/nobelprize.pyo
 ${PYSITELIB}/youtube_dl/extractor/noco.py
 ${PYSITELIB}/youtube_dl/extractor/noco.pyc
 ${PYSITELIB}/youtube_dl/extractor/noco.pyo
+${PYSITELIB}/youtube_dl/extractor/nonktube.py
+${PYSITELIB}/youtube_dl/extractor/nonktube.pyc
+${PYSITELIB}/youtube_dl/extractor/nonktube.pyo
 ${PYSITELIB}/youtube_dl/extractor/noovo.py
 ${PYSITELIB}/youtube_dl/extractor/noovo.pyc
 ${PYSITELIB}/youtube_dl/extractor/noovo.pyo
@@ -1937,6 +1943,9 @@ ${PYSITELIB}/youtube_dl/extractor/uol.pyo
 ${PYSITELIB}/youtube_dl/extractor/uplynk.py
 ${PYSITELIB}/youtube_dl/extractor/uplynk.pyc
 ${PYSITELIB}/youtube_dl/extractor/uplynk.pyo
+${PYSITELIB}/youtube_dl/extractor/upskill.py
+${PYSITELIB}/youtube_dl/extractor/upskill.pyc
+${PYSITELIB}/youtube_dl/extractor/upskill.pyo
 ${PYSITELIB}/youtube_dl/extractor/urort.py
 ${PYSITELIB}/youtube_dl/extractor/urort.pyc
 ${PYSITELIB}/youtube_dl/extractor/urort.pyo
