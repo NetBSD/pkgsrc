@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2017/04/27 13:17:52 mef Exp $
+$NetBSD: distinfo,v 1.12 2017/05/17 10:59:04 wiz Exp $
 
-SHA1 (IPC-Run-0.95.tar.gz) = a6adf31a95b9c96a1c16aeb01cee3340f1613835
-RMD160 (IPC-Run-0.95.tar.gz) = 3d30caa88dcab77bffb01ef14726e08540e77281
-SHA512 (IPC-Run-0.95.tar.gz) = c7f3dd709cb2119078e2adc3113d7a99dd6c14ebae4b99e509f7987864017cd90ba9137f060e1d4ae7d31fdf70a10e76c024fa81a56186550a26cb3817d39ef6
-Size (IPC-Run-0.95.tar.gz) = 122032 bytes
+SHA1 (IPC-Run-0.96.tar.gz) = 6ebd990de9e4e8853e499aa958b10e54511d1f9e
+RMD160 (IPC-Run-0.96.tar.gz) = ef9c6daafb87fbd0685487d2ed5ab2b710f3f247
+SHA512 (IPC-Run-0.96.tar.gz) = 8a531a2126c15653ab0230813985cc7c83f2c3467c987757fc1f04c3c9952ee0246bcf743dcc4381351c72989f7271ede16962cca24e030404e414ff000c57a8
+Size (IPC-Run-0.96.tar.gz) = 121644 bytes
 SHA1 (patch-aa) = c078542da7548c3d46cbd6c656cdfb99308ae11c
