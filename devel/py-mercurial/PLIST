@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2017/02/03 14:44:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/05/17 10:30:18 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -211,6 +211,9 @@ ${PYSITELIB}/hgext/share.pyo
 ${PYSITELIB}/hgext/shelve.py
 ${PYSITELIB}/hgext/shelve.pyc
 ${PYSITELIB}/hgext/shelve.pyo
+${PYSITELIB}/hgext/show.py
+${PYSITELIB}/hgext/show.pyc
+${PYSITELIB}/hgext/show.pyo
 ${PYSITELIB}/hgext/strip.py
 ${PYSITELIB}/hgext/strip.pyc
 ${PYSITELIB}/hgext/strip.pyo
@@ -364,6 +367,8 @@ ${PYSITELIB}/mercurial/hbisect.pyo
 ${PYSITELIB}/mercurial/help.py
 ${PYSITELIB}/mercurial/help.pyc
 ${PYSITELIB}/mercurial/help.pyo
+${PYSITELIB}/mercurial/help/bundlespec.txt
+${PYSITELIB}/mercurial/help/color.txt
 ${PYSITELIB}/mercurial/help/common.txt
 ${PYSITELIB}/mercurial/help/config.txt
 ${PYSITELIB}/mercurial/help/dates.txt
@@ -379,11 +384,13 @@ ${PYSITELIB}/mercurial/help/hgignore.txt
 ${PYSITELIB}/mercurial/help/hgrc.5.txt
 ${PYSITELIB}/mercurial/help/hgweb.txt
 ${PYSITELIB}/mercurial/help/internals/bundles.txt
+${PYSITELIB}/mercurial/help/internals/censor.txt
 ${PYSITELIB}/mercurial/help/internals/changegroups.txt
 ${PYSITELIB}/mercurial/help/internals/requirements.txt
 ${PYSITELIB}/mercurial/help/internals/revlogs.txt
 ${PYSITELIB}/mercurial/help/internals/wireprotocol.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
+${PYSITELIB}/mercurial/help/pager.txt
 ${PYSITELIB}/mercurial/help/patterns.txt
 ${PYSITELIB}/mercurial/help/phases.txt
 ${PYSITELIB}/mercurial/help/revisions.txt
@@ -559,6 +566,9 @@ ${PYSITELIB}/mercurial/pvec.pyo
 ${PYSITELIB}/mercurial/pycompat.py
 ${PYSITELIB}/mercurial/pycompat.pyc
 ${PYSITELIB}/mercurial/pycompat.pyo
+${PYSITELIB}/mercurial/rcutil.py
+${PYSITELIB}/mercurial/rcutil.pyc
+${PYSITELIB}/mercurial/rcutil.pyo
 ${PYSITELIB}/mercurial/registrar.py
 ${PYSITELIB}/mercurial/registrar.pyc
 ${PYSITELIB}/mercurial/registrar.pyo
@@ -574,6 +584,9 @@ ${PYSITELIB}/mercurial/revlog.pyo
 ${PYSITELIB}/mercurial/revset.py
 ${PYSITELIB}/mercurial/revset.pyc
 ${PYSITELIB}/mercurial/revset.pyo
+${PYSITELIB}/mercurial/revsetlang.py
+${PYSITELIB}/mercurial/revsetlang.pyc
+${PYSITELIB}/mercurial/revsetlang.pyo
 ${PYSITELIB}/mercurial/scmposix.py
 ${PYSITELIB}/mercurial/scmposix.pyc
 ${PYSITELIB}/mercurial/scmposix.pyo
@@ -595,6 +608,9 @@ ${PYSITELIB}/mercurial/similar.pyo
 ${PYSITELIB}/mercurial/simplemerge.py
 ${PYSITELIB}/mercurial/simplemerge.pyc
 ${PYSITELIB}/mercurial/simplemerge.pyo
+${PYSITELIB}/mercurial/smartset.py
+${PYSITELIB}/mercurial/smartset.pyc
+${PYSITELIB}/mercurial/smartset.pyo
 ${PYSITELIB}/mercurial/sshpeer.py
 ${PYSITELIB}/mercurial/sshpeer.pyc
 ${PYSITELIB}/mercurial/sshpeer.pyo
@@ -679,6 +695,7 @@ ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
 ${PYSITELIB}/mercurial/templates/map-cmdline.phases
+${PYSITELIB}/mercurial/templates/map-cmdline.show
 ${PYSITELIB}/mercurial/templates/map-cmdline.status
 ${PYSITELIB}/mercurial/templates/map-cmdline.xml
 ${PYSITELIB}/mercurial/templates/monoblue/bookmarks.tmpl
@@ -782,6 +799,7 @@ ${PYSITELIB}/mercurial/templates/static/coal-file.png
 ${PYSITELIB}/mercurial/templates/static/coal-folder.png
 ${PYSITELIB}/mercurial/templates/static/excanvas.js
 ${PYSITELIB}/mercurial/templates/static/feed-icon-14x14.png
+${PYSITELIB}/mercurial/templates/static/followlines.js
 ${PYSITELIB}/mercurial/templates/static/hgicon.png
 ${PYSITELIB}/mercurial/templates/static/hglogo.png
 ${PYSITELIB}/mercurial/templates/static/mercurial.js
@@ -796,12 +814,18 @@ ${PYSITELIB}/mercurial/transaction.pyo
 ${PYSITELIB}/mercurial/treediscovery.py
 ${PYSITELIB}/mercurial/treediscovery.pyc
 ${PYSITELIB}/mercurial/treediscovery.pyo
+${PYSITELIB}/mercurial/txnutil.py
+${PYSITELIB}/mercurial/txnutil.pyc
+${PYSITELIB}/mercurial/txnutil.pyo
 ${PYSITELIB}/mercurial/ui.py
 ${PYSITELIB}/mercurial/ui.pyc
 ${PYSITELIB}/mercurial/ui.pyo
 ${PYSITELIB}/mercurial/unionrepo.py
 ${PYSITELIB}/mercurial/unionrepo.pyc
 ${PYSITELIB}/mercurial/unionrepo.pyo
+${PYSITELIB}/mercurial/upgrade.py
+${PYSITELIB}/mercurial/upgrade.pyc
+${PYSITELIB}/mercurial/upgrade.pyo
 ${PYSITELIB}/mercurial/url.py
 ${PYSITELIB}/mercurial/url.pyc
 ${PYSITELIB}/mercurial/url.pyo
@@ -811,6 +835,9 @@ ${PYSITELIB}/mercurial/util.pyo
 ${PYSITELIB}/mercurial/verify.py
 ${PYSITELIB}/mercurial/verify.pyc
 ${PYSITELIB}/mercurial/verify.pyo
+${PYSITELIB}/mercurial/vfs.py
+${PYSITELIB}/mercurial/vfs.pyc
+${PYSITELIB}/mercurial/vfs.pyo
 ${PYSITELIB}/mercurial/win32.py
 ${PYSITELIB}/mercurial/win32.pyc
 ${PYSITELIB}/mercurial/win32.pyo
