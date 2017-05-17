@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/08/28 15:48:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/17 11:39:58 adam Exp $
 
-DISTNAME=	coverage-4.0.2
+DISTNAME=	coverage-4.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
@@ -15,9 +15,6 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-greenlet-[0-9]*:../../devel/py-greenlet
 
 USE_LANGUAGES=	c
-
-post-extract:
-	${CHMOD} +r ${WRKSRC}/coverage.egg-info/*
 
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/bin/coverage
