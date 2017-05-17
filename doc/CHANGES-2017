@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2016 2017/05/17 13:33:15 he Exp $
+$NetBSD: CHANGES-2017,v 1.2017 2017/05/17 14:39:58 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2521,3 +2521,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/libmicrohttpd to 0.9.54 [wiz 2017-05-17]
 	Updated devel/py-hypothesis to 3.8.5 [adam 2017-05-17]
 	Updated graphics/ImageMagick6 to 6.9.8.5 [he 2017-05-17]
+	Updated net/get_iplayer to 3.01 [prlw1 2017-05-17]
