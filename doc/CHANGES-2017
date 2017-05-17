@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2002 2017/05/17 10:59:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2003 2017/05/17 11:01:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2507,3 +2507,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-HTTP-Server-Simple to 0.52 [wiz 2017-05-17]
 	Added devel/py-Spans version 0.5.0 [gson 2017-05-17]
 	Updated devel/p5-IPC-Run to 0.96 [wiz 2017-05-17]
+	Updated net/p5-Net-DNS to 1.10 [wiz 2017-05-17]
