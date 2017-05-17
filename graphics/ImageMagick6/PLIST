@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/12 21:41:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/05/17 13:21:36 he Exp $
 bin/Magick++-config6
 bin/Magick-config6
 bin/MagickCore-config6
@@ -149,7 +149,7 @@ include/ImageMagick-6/wand/pixel-iterator.h
 include/ImageMagick-6/wand/pixel-wand.h
 include/ImageMagick-6/wand/stream.h
 include/ImageMagick-6/wand/wand-view.h
-lib/ImageMagick-6.9.7/config-Q16/configure.xml
+lib/ImageMagick-6.9.8/config-Q16/configure.xml
 lib/libMagick++-6.Q16.la
 lib/libMagickCore-6.Q16.la
 lib/libMagickWand-6.Q16.la
@@ -339,6 +339,7 @@ share/doc/ImageMagick-6/www/Magick++/thumbnail-sample-plain.jpg
 share/doc/ImageMagick-6/www/advanced-unix-installation.html
 share/doc/ImageMagick-6/www/advanced-windows-installation.html
 share/doc/ImageMagick-6/www/animate.html
+share/doc/ImageMagick-6/www/api.html
 share/doc/ImageMagick-6/www/api/Image++.html
 share/doc/ImageMagick-6/www/api/MagickCore/ImageMagick_8h-source.html
 share/doc/ImageMagick-6/www/api/MagickCore/ImageMagick_8h.html
@@ -1111,6 +1112,7 @@ share/doc/ImageMagick-6/www/api/transform.html
 share/doc/ImageMagick-6/www/api/version.html
 share/doc/ImageMagick-6/www/api/wand-view.html
 share/doc/ImageMagick-6/www/architecture.html
+share/doc/ImageMagick-6/www/binary-releases.html
 share/doc/ImageMagick-6/www/changelog.html
 share/doc/ImageMagick-6/www/cipher.html
 share/doc/ImageMagick-6/www/color-management.html
