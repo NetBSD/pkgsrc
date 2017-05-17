@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17346 2017/05/17 10:39:54 wiz Exp $
+$NetBSD: TODO,v 1.17347 2017/05/17 10:41:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -365,6 +365,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o PACK-0.0.4
 	o PAM-0.99.7.1
 	o Pantomime-1.2.2
+	o R-3.4.0
 	o R-DAAG-1.22
 	o R-RPostgreSQL-0.4
 	o R-RandomFields-3.1.8
@@ -458,7 +459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bind-9.11.0
 	o binutils-2.28
 	o bird6-1.5.0
-	o blender-2.78a
+	o blender-2.79
 	o bliz++-0.10
 	o blur6ex-0.3.462
 	o bmkdep-20140112
@@ -1162,6 +1163,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
 	o p5-IPC-Run-0.96
+	o p5-JSON-2.92
 	o p5-Memoize-Memcached-0.11
 	o p5-Net-DNS-1.10
 	o p5-Net-HTTP-6.15
@@ -1390,6 +1392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-review-1.4.0 [wip]
 	o ruby-selenium-webdriver-3.0.5
 	o rump-20131213
+	o rust-1.17
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
 	o sarg-2.2.5
