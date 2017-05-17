@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17351 2017/05/17 11:03:01 wiz Exp $
+$NetBSD: TODO,v 1.17352 2017/05/17 11:04:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1180,7 +1180,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
-	o p5-Params-Validate-1.28
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Publican-4.3.2
