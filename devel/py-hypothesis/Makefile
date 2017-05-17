@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/05/10 03:45:51 adam Exp $
+# $NetBSD: Makefile,v 1.12 2017/05/17 13:01:58 adam Exp $
 
-DISTNAME=	hypothesis-3.8.3
+DISTNAME=	hypothesis-3.8.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
