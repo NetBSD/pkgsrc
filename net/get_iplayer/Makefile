@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/11/18 09:58:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.9 2017/05/17 14:39:38 prlw1 Exp $
 
-DISTNAME=	get_iplayer-2.97
+DISTNAME=	get_iplayer-3.01
 CATEGORIES=	net multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=get-iplayer/}
 
@@ -11,13 +11,10 @@ LICENSE=	gnu-gpl-v3
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
-DEPENDS+=	p5-HTTP-Cookies>=6.0:../../www/p5-HTTP-Cookies
-DEPENDS+=	p5-HTTP-Date>=6.0:../../www/p5-HTTP-Date
+DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
-DEPENDS+=	rtmpdump>=1.8:../../net/rtmpdump
-DEPENDS+=	flvstreamer>=1.8:../../multimedia/flvstreamer
+DEPENDS+=	p5-Mojolicious>=6.0:../../www/p5-Mojolicious
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
@@ -31,7 +28,6 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	get_iplayer
 SUBST_SED.paths=	-e "s:/etc/get_iplayer:${PKG_SYSCONFDIR}:g"
-SUBST_SED.paths+=	-e "s:/usr/share/get_iplayer:${PREFIX}/share/get_iplayer:g"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/get_iplayer ${DESTDIR}${PREFIX}/bin/
