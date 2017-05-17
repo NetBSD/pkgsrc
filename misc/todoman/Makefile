@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2017/05/04 22:48:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/05/17 11:17:35 wiz Exp $
 
-DISTNAME=	todoman-3.1.0
+DISTNAME=	todoman-3.2.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/todoman/}
 
@@ -43,5 +43,5 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
-# needed for "make test"
-#MAKE_ENV+=	LC_ALL=en_US.UTF-8
+# needed due to py-click
+TEST_ENV+=	LC_ALL=en_US.UTF-8
