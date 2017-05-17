@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2431 2017/05/10 17:54:09 adam Exp $
+# $NetBSD: Makefile,v 1.2432 2017/05/17 10:47:28 gson Exp $
 #
 
 COMMENT=	Development utilities
@@ -1745,6 +1745,7 @@ SUBDIR+=	py-InlineEgg
 SUBDIR+=	py-Optik
 SUBDIR+=	py-ParamUnittest
 SUBDIR+=	py-Pyro
+SUBDIR+=	py-Spans
 SUBDIR+=	py-ZopeComponent
 SUBDIR+=	py-ZopeConfiguration
 SUBDIR+=	py-ZopeEvent
