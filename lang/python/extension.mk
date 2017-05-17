@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.49 2016/08/27 20:42:47 wiz Exp $
+# $NetBSD: extension.mk,v 1.50 2017/05/17 11:17:04 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -37,7 +37,7 @@ do-install:
 	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" ${_PYSETUPINSTALLARGS})
 .  if !target(do-test) && !(defined(TEST_TARGET) && !empty(TEST_TARGET))
 do-test:
-	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
+	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} \
 	 ${PYSETUP} ${PYSETUPARGS} ${PYSETUPTESTTARGET} ${PYSETUPTESTARGS})
 .  endif
 
