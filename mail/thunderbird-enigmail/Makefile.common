@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.13 2017/01/01 14:43:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2017/05/17 12:06:26 wiz Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
-DISTNAME=	enigmail-1.9.6.1
+DISTNAME=	enigmail-1.9.7
 CATEGORIES=	mail security
 MASTER_SITES=	http://www.enigmail.net/download/source/
 
