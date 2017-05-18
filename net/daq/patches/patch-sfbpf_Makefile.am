@@ -1,0 +1,16 @@
+$NetBSD: patch-sfbpf_Makefile.am,v 1.1 2017/05/18 18:57:21 nils Exp $
+
+tokdefs.h is created but after checkinf of this file existence.
+Patch from MacPorts waiting to get upstream :
+https://trac.macports.org/ticket/45159
+
+--- sfbpf/Makefile.am.orig	2015-04-01 18:56:48.000000000 +0000
++++ sfbpf/Makefile.am
+@@ -51,6 +51,7 @@ sf_scanner.o: sf_scanner.c tokdefs.h
+ 
+ tokdefs.h: sf_grammar.c
+ sf_grammar.c: $(srcdir)/grammar.y
++	sleep 5
+ 	@rm -f sf_grammar.c tokdefs.h
+ 	$(V_YACC) -d $(srcdir)/grammar.y
+ 	mv y.tab.c sf_grammar.c
