@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2024 2017/05/18 13:32:26 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2025 2017/05/18 13:48:38 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2529,3 +2529,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/gnutls to 3.5.12 [he 2017-05-18]
 	Updated devel/ocaml-js-build-tools to 113.33.04nb3 [jperkin 2017-05-18]
 	Added sysutils/rsyslog-kafka version 8.27.0 [fhajny 2017-05-18]
+	Updated databases/redis to 3.2.9 [fhajny 2017-05-18]
