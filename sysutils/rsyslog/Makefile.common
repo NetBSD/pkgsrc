@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2017/04/06 20:08:37 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.28 2017/05/18 13:27:44 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -13,7 +13,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=		rsyslog-8.26.0
+DISTNAME=		rsyslog-8.27.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -51,4 +51,5 @@ BUILDLINK_DEPMETHOD.libuuid+=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/liblogging/buildlink3.mk"
+BUILDLINK_API_DEPENDS.liblognorm+=	libfastjson>=0.99.3
 .include "../../textproc/libfastjson/buildlink3.mk"
