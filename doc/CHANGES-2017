@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2022 2017/05/18 07:55:18 he Exp $
+$NetBSD: CHANGES-2017,v 1.2023 2017/05/18 12:37:13 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2527,3 +2527,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/libsndfile to 1.0.28nb1 [he 2017-05-17]
 	Updated devel/py-filechunkio to 1.8 [adam 2017-05-18]
 	Updated security/gnutls to 3.5.12 [he 2017-05-18]
+	Updated devel/ocaml-js-build-tools to 113.33.04nb3 [jperkin 2017-05-18]
