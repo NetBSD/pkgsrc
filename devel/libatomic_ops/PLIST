@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/04/16 11:21:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/05/18 20:37:03 adam Exp $
 include/atomic_ops.h
 include/atomic_ops/ao_version.h
 include/atomic_ops/generalize-arithm.h
@@ -69,7 +69,7 @@ lib/pkgconfig/atomic_ops.pc
 share/doc/libatomic_ops/COPYING
 share/doc/libatomic_ops/LICENSING.txt
 share/doc/libatomic_ops/README.md
-share/doc/libatomic_ops/README.txt
+share/doc/libatomic_ops/README_details.txt
 share/doc/libatomic_ops/README_malloc.txt
 share/doc/libatomic_ops/README_stack.txt
 share/doc/libatomic_ops/README_win32.txt
