@@ -1,8 +1,8 @@
-$NetBSD: patch-etckeeper.8,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-etckeeper.8,v 1.2 2017/05/18 21:19:08 schmonz Exp $
 
 Add SUBST_VARS tokens.
 
---- etckeeper.8.orig	2012-06-02 22:14:44.000000000 +0000
+--- etckeeper.8.orig	2014-09-04 19:32:34.000000000 +0000
 +++ etckeeper.8
 @@ -5,21 +5,21 @@ etckeeper \- store /etc in git, mercuria
  .SH SYNOPSIS
@@ -40,12 +40,13 @@ Add SUBST_VARS tokens.
 +@PKG_SYSCONFDIR@/etckeeper.conf is the configuration file.
  
 -/etc/etckeeper also contains directories containing the programs that are
-+PKG_SYSCONFDIR also contains directories containing the programs that are
++@PKG_SYSCONFDIR@ also contains directories containing the programs that are
  run for each of the above commands.
  .SH ENVIRONMENT VARIABLES
- ETCKEEPER_CONF_DIR path to configuration directory instead of default /etc/etckeeper.
+-ETCKEEPER_CONF_DIR path to configuration directory instead of default /etc/etckeeper.
++ETCKEEPER_CONF_DIR path to configuration directory instead of default @PKG_SYSCONFDIR@.
  .SH SEE ALSO
--/usr/share/doc/etckeeper/README.gz
-+@PREFIX@/share/doc/etckeeper/README
+-/usr/share/doc/etckeeper/README.md.gz
++@PREFIX@/share/doc/etckeeper/README.md
  .SH AUTHOR 
  Joey Hess <joey@kitenet.net>
