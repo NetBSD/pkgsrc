@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.33 2016/12/04 15:37:41 bsiegert Exp $
+# $NetBSD: FreeBSD.mk,v 1.34 2017/05/18 01:29:56 khorben Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -61,6 +61,12 @@ SERIAL_DEVICES?=	/dev/cuaa0
 # check for kqueue(2) support
 .if exists(/usr/include/sys/event.h)
 PKG_HAVE_KQUEUE=	# defined
+.endif
+
+# Register support for SSP on x86 architectures
+.if (${MACHINE_ARCH} == "i386") || \
+    (${MACHINE_ARCH} == "x86_64")
+_OPSYS_SUPPORTS_SSP=	yes
 .endif
 
 _OPSYS_SUPPORTS_CWRAPPERS=	yes
