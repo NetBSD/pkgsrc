@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2016/06/20 14:58:46 jaapb Exp $
+$NetBSD: distinfo,v 1.3 2017/05/18 12:36:25 jperkin Exp $
 
 SHA1 (js-build-tools-113.33.04.tar.gz) = ab2efaaad4942f5414831566a07fd8cfdd680d01
 RMD160 (js-build-tools-113.33.04.tar.gz) = c8d03ef1e11d39173f0c9d45b0873ef16bec8639
 SHA512 (js-build-tools-113.33.04.tar.gz) = 232c376d09fef5d6e7a7e4eb72f0123eda8a20ee7f0a64c4db5f237294a3755cb539d4d165cbbbb31d5396a182a2f94543eeb265235b4dd5866682a1ab49536b
 Size (js-build-tools-113.33.04.tar.gz) = 10782 bytes
 SHA1 (patch-Makefile) = 73347a64a29a0fde8ccc0cbae967a954b142ee71
-SHA1 (patch-og_js_ocamlbuild_goodies.ml) = eccdb4d85c6557b778cd1af99b9c3fd046c1eee9
+SHA1 (patch-og_js_ocamlbuild_goodies.ml) = 2915ff0f98011257099a3906054c63662fae108d
