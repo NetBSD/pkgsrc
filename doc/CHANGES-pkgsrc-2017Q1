@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.21 2017/05/11 18:45:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.22 2017/05/18 19:20:23 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -467,4 +467,10 @@ devel/rt4: build fix
 
 Pullup ticket #5415 - requested by wen
 www/mediawiki: security fix
+
+Pullup ticket #5429 - requested by kim
+net/wget: security fix
+
+Pullup tickets #5412 and #5413 - requested by sevan
+lang/opendjk8: build fix for FreeBSD
 
