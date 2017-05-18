@@ -1,13 +1,13 @@
-$NetBSD: patch-post-install.d_50vcs-commit,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-post-install.d_50vcs-commit,v 1.2 2017/05/18 21:19:08 schmonz Exp $
 
 Add SUBST_VARS token.
 
---- post-install.d/50vcs-commit.orig	2011-02-22 20:19:36.000000000 +0000
+--- post-install.d/50vcs-commit.orig	2014-09-04 19:44:52.000000000 +0000
 +++ post-install.d/50vcs-commit
 @@ -1,10 +1,10 @@
  #!/bin/sh
  set -e
- 		
+ 
 -pl="/var/cache/etckeeper/packagelist"
 +pl="@VARBASE@/cache/etckeeper/packagelist"
  
@@ -15,5 +15,5 @@ Add SUBST_VARS token.
 -	message="committing changes in /etc after $HIGHLEVEL_PACKAGE_MANAGER run"
 +	message="committing changes in ${ETCKEEPER_DIR} after $HIGHLEVEL_PACKAGE_MANAGER run"
  
+ 	set +e
  	if [ -e $pl.pre-install ]; then
- 		(

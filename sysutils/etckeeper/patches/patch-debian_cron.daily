@@ -1,8 +1,8 @@
-$NetBSD: patch-debian_cron.daily,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-debian_cron.daily,v 1.2 2017/05/18 21:19:08 schmonz Exp $
 
 Add SUBST_VARS tokens.
 
---- debian/cron.daily.orig	2011-12-05 15:41:29.000000000 +0000
+--- debian/cron.daily.orig	2014-07-02 19:17:18.000000000 +0000
 +++ debian/cron.daily
 @@ -1,10 +1,10 @@
  #!/bin/sh
@@ -15,6 +15,6 @@ Add SUBST_VARS tokens.
  		# avoid autocommit if an install run is in progress
 -		lockfile=/var/cache/etckeeper/packagelist.pre-install
 +		lockfile=@VARBASE@/cache/etckeeper/packagelist.pre-install
- 		if [ -e "$pe" ] && [ -n "$(find "$lockfile" -mtime +1)" ]; then
+ 		if [ -e "$lockfile" ] && [ -n "$(find "$lockfile" -mtime +1)" ]; then
  			rm -f "$lockfile" # stale
  		fi
