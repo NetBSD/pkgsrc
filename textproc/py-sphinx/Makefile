@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2017/04/06 08:51:43 adam Exp $
+# $NetBSD: Makefile,v 1.38 2017/05/18 20:09:05 adam Exp $
 
-DISTNAME=	Sphinx-1.5.5
+DISTNAME=	Sphinx-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -20,8 +20,11 @@ DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
+DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-websupport-[0-9]*:../../textproc/py-sphinxcontrib-websupport
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 # test dependency
+BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 USE_LANGUAGES=	#none
@@ -31,9 +34,6 @@ REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 USE_TOOLS+=	makeinfo
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} run.py
-
-post-extract:
-	${RM} ${WRKSRC}/Sphinx.egg-info/*-e
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/sphinx-apidoc ${DESTDIR}${PREFIX}/bin/sphinx-apidoc${PYVERSSUFFIX} || ${TRUE}
