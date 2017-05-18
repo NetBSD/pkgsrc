@@ -1,19 +1,19 @@
-$NetBSD: patch-Makefile.in,v 1.1 2017/02/14 08:05:30 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2017/05/18 21:44:42 adam Exp $
 
 Use correct tools.
 
---- Makefile.in.orig	2016-07-06 20:44:27.000000000 +0000
+--- Makefile.in.orig	2017-05-02 05:18:51.000000000 +0000
 +++ Makefile.in
-@@ -23,7 +23,7 @@ INTERNAL_CFLAGS = -I$(srcdir) -I.
- ALL_CFLAGS	= $(BUILD_CFLAGS) $(INTERNAL_CFLAGS)
- LDFLAGS		= @LDFLAGS@
- LIBS		= @LIBS@
--PERL		= perl -I$(srcdir)/perllib -I$(srcdir)
+@@ -35,7 +35,7 @@ AR		= @AR@
+ RANLIB		= @RANLIB@
+ STRIP		= @STRIP@
+ 
+-PERL		= perl
 +PERL		= ${PERL5}
+ PERLFLAGS	= -I$(srcdir)/perllib -I$(srcdir)
+ RUNPERL         = $(PERL) $(PERLFLAGS)
  
- XOBJS		= @XOBJS@
- 
-@@ -216,12 +216,12 @@ nsis: nsis/nasm.nsi nsis/arch.nsh nsis/v
+@@ -334,12 +334,12 @@ nsis: nsis/nasm.nsi nsis/arch.nsh nsis/v
  manpages: nasm.1 ndisasm.1
  
  install: nasm$(X) ndisasm$(X)
@@ -31,4 +31,4 @@ Use correct tools.
 +	$(BSD_INSTALL_MAN) $(srcdir)/ndisasm.1 $(INSTALLROOT)$(mandir)/man1/ndisasm.1
  
  clean:
- 	$(RM) -f *.$(O) *.s *.i
+ 	for d in . $(SUBDIRS) $(XSUBDIRS); do \
