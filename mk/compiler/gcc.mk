@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.177 2017/05/04 18:44:12 joerg Exp $
+# $NetBSD: gcc.mk,v 1.178 2017/05/18 08:14:08 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -370,14 +370,6 @@ _SSP_CFLAGS=		-fstack-protector-all
 _SSP_CFLAGS=		-fstack-protector-strong
 .else
 _SSP_CFLAGS=		-fstack-protector
-.endif
-
-.if ${_PKGSRC_USE_SSP} == "yes"
-_WRAP_EXTRA_ARGS.CC+=	${_SSP_CFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.cxx+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
 .endif
 
 # GCC has this annoying behaviour where it advocates in a multi-line

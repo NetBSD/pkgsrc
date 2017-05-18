@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.84 2017/05/03 08:34:23 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.85 2017/05/18 08:14:08 jperkin Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -182,6 +182,16 @@ _WRAP_EXTRA_ARGS.FC+=	${_COMPILER_ABI_FLAG.${ABI}}
 CWRAPPERS_PREPEND.cc+=	${_COMPILER_ABI_FLAG.${ABI}}
 CWRAPPERS_PREPEND.cxx+=	${_COMPILER_ABI_FLAG.${ABI}}
 CWRAPPERS_PREPEND.f77+=	${_COMPILER_ABI_FLAG.${ABI}}
+.endif
+
+# Enable SSP if the user has chosen to and the compiler supports it.
+#
+.if ${_PKGSRC_USE_SSP} == "yes" && defined(_SSP_CFLAGS)
+_WRAP_EXTRA_ARGS.CC+=	${_SSP_CFLAGS}
+_WRAP_EXTRA_ARGS.CXX+=	${_SSP_CFLAGS}
+CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS}
+CWRAPPERS_APPEND.cxx+=	${_SSP_CFLAGS}
+CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
 .endif
 
 # If the languages are not requested, force them not to be available
