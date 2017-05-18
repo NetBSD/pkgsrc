@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/04/05 21:38:32 hiramatsu Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/05/18 18:25:27 adam Exp $
 bin/asadmin${PYVERSSUFFIX}
 bin/bundle_image${PYVERSSUFFIX}
 bin/cfadmin${PYVERSSUFFIX}
@@ -509,6 +509,9 @@ ${PYSITELIB}/boto/emr/step.py
 ${PYSITELIB}/boto/emr/step.pyc
 ${PYSITELIB}/boto/emr/step.pyo
 ${PYSITELIB}/boto/endpoints.json
+${PYSITELIB}/boto/endpoints.py
+${PYSITELIB}/boto/endpoints.pyc
+${PYSITELIB}/boto/endpoints.pyo
 ${PYSITELIB}/boto/exception.py
 ${PYSITELIB}/boto/exception.pyc
 ${PYSITELIB}/boto/exception.pyo
@@ -645,6 +648,15 @@ ${PYSITELIB}/boto/logs/exceptions.pyo
 ${PYSITELIB}/boto/logs/layer1.py
 ${PYSITELIB}/boto/logs/layer1.pyc
 ${PYSITELIB}/boto/logs/layer1.pyo
+${PYSITELIB}/boto/machinelearning/__init__.py
+${PYSITELIB}/boto/machinelearning/__init__.pyc
+${PYSITELIB}/boto/machinelearning/__init__.pyo
+${PYSITELIB}/boto/machinelearning/exceptions.py
+${PYSITELIB}/boto/machinelearning/exceptions.pyc
+${PYSITELIB}/boto/machinelearning/exceptions.pyo
+${PYSITELIB}/boto/machinelearning/layer1.py
+${PYSITELIB}/boto/machinelearning/layer1.pyc
+${PYSITELIB}/boto/machinelearning/layer1.pyo
 ${PYSITELIB}/boto/manage/__init__.py
 ${PYSITELIB}/boto/manage/__init__.pyc
 ${PYSITELIB}/boto/manage/__init__.pyo
@@ -1100,6 +1112,15 @@ ${PYSITELIB}/boto/utils.pyo
 ${PYSITELIB}/boto/vendored/__init__.py
 ${PYSITELIB}/boto/vendored/__init__.pyc
 ${PYSITELIB}/boto/vendored/__init__.pyo
+${PYSITELIB}/boto/vendored/regions/__init__.py
+${PYSITELIB}/boto/vendored/regions/__init__.pyc
+${PYSITELIB}/boto/vendored/regions/__init__.pyo
+${PYSITELIB}/boto/vendored/regions/exceptions.py
+${PYSITELIB}/boto/vendored/regions/exceptions.pyc
+${PYSITELIB}/boto/vendored/regions/exceptions.pyo
+${PYSITELIB}/boto/vendored/regions/regions.py
+${PYSITELIB}/boto/vendored/regions/regions.pyc
+${PYSITELIB}/boto/vendored/regions/regions.pyo
 ${PYSITELIB}/boto/vendored/six.py
 ${PYSITELIB}/boto/vendored/six.pyc
 ${PYSITELIB}/boto/vendored/six.pyo
