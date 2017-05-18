@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2027 2017/05/18 20:10:52 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2028 2017/05/18 20:42:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2535,3 +2535,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/py-boto to 2.46.1 [adam 2017-05-18]
 	Added textproc/py-sphinxcontrib-websupport version 1.0.1 [adam 2017-05-18]
 	Updated textproc/py-sphinx to 1.6.1 [adam 2017-05-18]
+	Updated devel/libatomic_ops to 7.4.6 [adam 2017-05-18]
