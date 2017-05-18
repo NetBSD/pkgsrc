@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2016/07/09 06:38:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/05/18 21:19:08 schmonz Exp $
 #
 
-DISTNAME=	etckeeper_1.3
+DISTNAME=	etckeeper_1.15
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/e/etckeeper/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://joeyh.name/code/etckeeper/
+HOMEPAGE=	http://etckeeper.branchable.com/
 COMMENT=	Store /etc in git, mercurial, bzr or darcs
 LICENSE=	gnu-gpl-v2
 
@@ -64,8 +63,8 @@ do-install:
 				${DESTDIR}${PREFIX}/libexec/etckeeper.daily
 	${INSTALL_MAN} ${WRKSRC}/etckeeper.8 \
 					${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/README \
-			${DESTDIR}${PREFIX}/share/doc/etckeeper/README
+	${INSTALL_DATA} ${WRKSRC}/README.md \
+			${DESTDIR}${PREFIX}/share/doc/etckeeper/README.md
 	${INSTALL_DATA} ${WRKSRC}/bash_completion \
 			${DESTDIR}${PREFIX}/share/bash-completion.d/etckeeper
 
