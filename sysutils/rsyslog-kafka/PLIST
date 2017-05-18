@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/18 13:32:10 fhajny Exp $
+lib/rsyslog/imkafka.la
+lib/rsyslog/omkafka.la
