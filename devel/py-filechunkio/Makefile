@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/05/18 06:53:48 adam Exp $
 
-DISTNAME=	filechunkio-1.6
+DISTNAME=	filechunkio-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=f/filechunkio/}
