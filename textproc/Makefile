@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.929 2017/05/09 13:18:48 leot Exp $
+# $NetBSD: Makefile,v 1.930 2017/05/18 20:02:32 adam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -777,6 +777,7 @@ SUBDIR+=	py-sphinx
 SUBDIR+=	py-sphinx-rtd-theme
 SUBDIR+=	py-sphinx-theme-cloud
 SUBDIR+=	py-sphinxcontrib-newsfeed
+SUBDIR+=	py-sphinxcontrib-websupport
 SUBDIR+=	py-tabulate
 SUBDIR+=	py-textile
 SUBDIR+=	py-tinycss
