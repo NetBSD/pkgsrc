@@ -1,11 +1,29 @@
-$NetBSD: patch-configure,v 1.1 2016/12/05 10:36:46 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2017/05/18 13:27:44 fhajny Exp $
 
 Portability.
 
---- configure.orig	2016-11-13 15:48:32.000000000 +0000
+--- configure.orig	2017-05-15 09:42:02.000000000 +0000
 +++ configure
-@@ -15255,7 +15255,7 @@ if test -d "$srcdir"/.git && ! test -f
-   in_git_src=yes
+@@ -15337,7 +15337,7 @@ $as_echo "#define OS_AIX 1" >>confdefs.h
+ 
+   ;;
+ esac
+- if test x$os_type == xapple; then
++ if test x$os_type = xapple; then
+   OS_APPLE_TRUE=
+   OS_APPLE_FALSE='#'
+ else
+@@ -15345,7 +15345,7 @@ else
+   OS_APPLE_FALSE=
+ fi
+ 
+- if test x$os_type == xlinux; then
++ if test x$os_type = xlinux; then
+   xOS_LINUX_TRUE=
+   xOS_LINUX_FALSE='#'
+ else
+@@ -15353,7 +15353,7 @@ else
+   xOS_LINUX_FALSE=
  fi
  
 - if test x$os_type == xlinux; then
