@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:30 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/05/18 18:12:30 adam Exp $
 
-SHA1 (gperftools-2.4.tar.gz) = 13b904d0d1f220e43e4495f3403ee280c6da26ea
-RMD160 (gperftools-2.4.tar.gz) = 19ce825850b8a3bc50db54fa022390878dd753bb
-SHA512 (gperftools-2.4.tar.gz) = 4f38a53800578ea88f99023772e49847a4e809de206fe5382aac9f8df628b38f5ccf2823f41a762593ef01aaca9aa1eda70e49482ce61511169ab225b6d10407
-Size (gperftools-2.4.tar.gz) = 1346075 bytes
+SHA1 (gperftools-2.5.tar.gz) = 1e7069f23f926df84a541938a8e6078b0aedf218
+RMD160 (gperftools-2.5.tar.gz) = 20506514b0f9d98190dca30da8a219aa67f5d0aa
+SHA512 (gperftools-2.5.tar.gz) = 3e80c0d8816425d65673cf5cff28c6801b0c675501263f830828600f37ac01199fd775c2c51c9ccfa53fd4f9eadc09f7b2c73b31d57161e2cdfee2bd1868afa7
+Size (gperftools-2.5.tar.gz) = 1389081 bytes
 SHA1 (patch-configure) = 612e1dda5ecf65451153e9616f69e0c58add086a
 SHA1 (patch-src_base_atomicops-internals-arm-v6plus.h) = b3aeddd10d2506192551485570c31c0b3ff02432
