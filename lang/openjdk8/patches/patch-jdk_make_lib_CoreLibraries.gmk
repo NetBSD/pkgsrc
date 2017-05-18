@@ -1,10 +1,10 @@
-$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.2 2016/07/19 12:32:15 jperkin Exp $
+$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.2.6.1 2017/05/18 19:02:33 bsiegert Exp $
 
 Ensure we can find zlib.
 
---- jdk/make/lib/CoreLibraries.gmk.orig	2016-05-06 12:11:21.000000000 +0000
+--- jdk/make/lib/CoreLibraries.gmk.orig	2017-04-27 09:44:53.000000000 +0000
 +++ jdk/make/lib/CoreLibraries.gmk
-@@ -231,7 +231,7 @@ $(BUILD_LIBJAVA): $(BUILD_LIBFDLIBM)
+@@ -231,12 +231,14 @@ $(BUILD_LIBJAVA): $(BUILD_LIBFDLIBM)
  
  BUILD_LIBZIP_EXCLUDES :=
  ifeq ($(USE_EXTERNAL_LIBZ), true)
@@ -13,3 +13,19 @@ Ensure we can find zlib.
    LIBZIP_EXCLUDES += zlib-1.2.8
  else
    ZLIB_CPPFLAGS := -I$(JDK_TOPDIR)/src/share/native/java/util/zip/zlib-1.2.8
+ endif
+ 
++LIBICONV := @COMPILER_RPATH_FLAG@@BUILDLINK_PREFIX.iconv@/lib -L@BUILDLINK_PREFIX.iconv@/lib -liconv
++
+ BUILD_LIBZIP_REORDER :=
+ ifeq ($(OPENJDK_TARGET_OS), solaris)
+   ifneq ($(OPENJDK_TARGET_CPU), x86_64)
+@@ -528,7 +530,7 @@ $(eval $(call SetupNativeCompilation,BUI
+     MAPFILE := $(JDK_TOPDIR)/make/mapfiles/libnpt/mapfile-vers, \
+     LDFLAGS := $(LDFLAGS_JDKLIB) \
+         $(call SET_SHARED_LIBRARY_ORIGIN), \
+-    LDFLAGS_bsd := -L$(PACKAGE_PATH)/lib -liconv, \
++    LDFLAGS_bsd := $(LIBICONV), \
+     LDFLAGS_macosx := -liconv, \
+     LDFLAGS_SUFFIX_windows := -export:nptInitialize -export:nptTerminate, \
+     LDFLAGS_SUFFIX_solaris := -lc, \

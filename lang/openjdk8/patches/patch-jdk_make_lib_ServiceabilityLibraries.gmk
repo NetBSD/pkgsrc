@@ -1,0 +1,13 @@
+$NetBSD: patch-jdk_make_lib_ServiceabilityLibraries.gmk,v 1.1.2.2 2017/05/18 19:02:33 bsiegert Exp $
+
+--- jdk/make/lib/ServiceabilityLibraries.gmk.orig	2017-04-27 09:44:53.000000000 +0000
++++ jdk/make/lib/ServiceabilityLibraries.gmk
+@@ -283,7 +283,7 @@ $(eval $(call SetupNativeCompilation,BUI
+     LDFLAGS_SUFFIX_solaris := $(LIBZ) -L $(INSTALL_LIBRARIES_HERE)/jli -ljli $(LIBDL) -lc, \
+     LDFLAGS_SUFFIX_linux := $(LIBZ) -L $(INSTALL_LIBRARIES_HERE)/jli -ljli $(LIBDL), \
+     LDFLAGS_SUFFIX_aix := $(LIBZ) -L$(JDK_OUTPUTDIR)/objs -ljli_static $(LIBDL),\
+-    LDFLAGS_SUFFIX_bsd := -L$(PACKAGE_PATH)/lib -liconv $(LIBZ), \
++    LDFLAGS_SUFFIX_bsd := $(LIBICONV) $(LIBZ), \
+     VERSIONINFO_RESOURCE := $(JDK_TOPDIR)/src/windows/resource/version.rc, \
+     RC_FLAGS := $(RC_FLAGS) \
+         -D "JDK_FNAME=instrument.dll" \
