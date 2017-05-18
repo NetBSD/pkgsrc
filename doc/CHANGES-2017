@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2020 2017/05/17 21:52:24 he Exp $
+$NetBSD: CHANGES-2017,v 1.2021 2017/05/18 06:54:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2525,3 +2525,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/jemalloc to 4.5.0nb1 [gson 2017-05-17]
 	Updated net/syncthing to 0.14.28 [wiz 2017-05-17]
 	Updated audio/libsndfile to 1.0.28nb1 [he 2017-05-17]
+	Updated devel/py-filechunkio to 1.8 [adam 2017-05-18]
