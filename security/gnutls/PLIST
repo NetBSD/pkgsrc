@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2017/02/26 09:19:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2017/05/18 07:54:26 he Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -1079,6 +1079,15 @@ man/man3/gnutls_x509_trust_list_remove_trust_mem.3
 man/man3/gnutls_x509_trust_list_verify_crt.3
 man/man3/gnutls_x509_trust_list_verify_crt2.3
 man/man3/gnutls_x509_trust_list_verify_named_crt.3
+share/doc/gnutls/gnutls-client-server-use-case.png
+share/doc/gnutls/gnutls-handshake-sequence.png
+share/doc/gnutls/gnutls-handshake-state.png
+share/doc/gnutls/gnutls-internals.png
+share/doc/gnutls/gnutls-layers.png
+share/doc/gnutls/gnutls-logo.png
+share/doc/gnutls/gnutls-modauth.png
+share/doc/gnutls/gnutls-x509.png
+share/doc/gnutls/pkcs11-vision.png
 share/examples/gnutls/ex-alert.c
 share/examples/gnutls/ex-cert-select-pkcs11.c
 share/examples/gnutls/ex-cert-select.c
@@ -1121,3 +1130,4 @@ share/locale/sv/LC_MESSAGES/gnutls.mo
 share/locale/uk/LC_MESSAGES/gnutls.mo
 share/locale/vi/LC_MESSAGES/gnutls.mo
 share/locale/zh_CN/LC_MESSAGES/gnutls.mo
+
