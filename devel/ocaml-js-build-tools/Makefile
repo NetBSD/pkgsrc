@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/12/30 11:16:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2017/05/18 12:37:04 jperkin Exp $
 
 VERSION=	113.33.04
 GITHUB_PROJECT=	js-build-tools
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/}
 
