@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/27 08:36:00 sbd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/18 21:19:08 schmonz Exp $
 bin/etckeeper
 libexec/etckeeper.daily
 share/bash-completion.d/etckeeper
-share/doc/etckeeper/README
+share/doc/etckeeper/README.md
 share/examples/etckeeper/commit.d/10vcs-test
 share/examples/etckeeper/commit.d/30bzr-add
 share/examples/etckeeper/commit.d/30darcs-add
