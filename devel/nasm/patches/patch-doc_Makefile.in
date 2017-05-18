@@ -1,9 +1,10 @@
-$NetBSD: patch-doc_Makefile.in,v 1.1 2017/02/14 08:05:30 adam Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.2 2017/05/18 21:44:42 adam Exp $
 
 Use correct paths and tools.
 Do not build nasmdoc.pdf.
+Avoid cp -u, it is not portable.
 
---- doc/Makefile.in.orig	2016-07-06 20:44:04.000000000 +0000
+--- doc/Makefile.in.orig	2017-05-02 05:18:37.000000000 +0000
 +++ doc/Makefile.in
 @@ -9,7 +9,8 @@ prefix		= @prefix@
  exec_prefix	= @exec_prefix@
@@ -20,29 +21,36 @@ Do not build nasmdoc.pdf.
  INSTALL_DATA	= @INSTALL_DATA@
  
 -PERL		= perl -I$(srcdir)
-+PERL		= ${PERL5}
- MAKEINFO	= makeinfo
- TEXI2DVI        = texi2dvi
- TEXI2IPF	= texi2ipf
-@@ -28,7 +29,7 @@ PSTOPDF		= @PSTOPDF@		# BSD/MacOS X util
- PS2PDF          = @PS2PDF@		# Part of GhostScript
++PERL		= ${PERL5} -I$(srcdir)
+ 
+ PDFOPT		= @PDFOPT@
+ 
+@@ -30,7 +31,7 @@ CP_UF		= cp -ufv
+ HTMLAUX		= nasmdoc.css local.css nasmlogw.png
  
  SRCS		= nasmdoc.src inslist.src changes.src version.src
--OUT		= info html nasmdoc.txt nasmdoc.ps nasmdoc.pdf
-+OUT		= info html nasmdoc.txt nasmdoc.ps #nasmdoc.pdf
+-OUT		= html nasmdoc.txt nasmdoc.pdf
++OUT		= html nasmdoc.txt
  
- # exports
- export srcdir
-@@ -105,7 +106,8 @@ spotless: clean
+ .SUFFIXES: .pfa .ph
+ 
+@@ -42,7 +43,7 @@ inslist.src: inslist.pl ../x86/insns.dat
+ .PHONY: html
+ html: $(HTMLAUX)
+ 	mkdir -p html
+-	for f in $(HTMLAUX); do $(CP_UF) "$(srcdir)/$$f" html/; done
++	for f in $(HTMLAUX); do $(CP_F) "$(srcdir)/$$f" html/; done
+ 	$(MAKE) html/nasmdoc0.html
+ 
+ RDSRC = $(PERL) $(srcdir)/rdsrc.pl -I$(srcdir)/
+@@ -81,6 +82,7 @@ spotless: clean
+ 	-$(RM_F) *.hlp nasmdoc.txt *.inf *.pdf *.dvi
  
  install: all
- 	mkdir -p $(INSTALLROOT)$(infodir)
--	$(INSTALL_DATA) info/* $(INSTALLROOT)$(infodir)
 -	mkdir -p $(INSTALLROOT)$(docdir)/html
 -	$(INSTALL_DATA) html/* $(INSTALLROOT)$(docdir)/html
--	$(INSTALL_DATA) nasmdoc.ps nasmdoc.pdf nasmdoc.txt $(INSTALLROOT)$(docdir)
-+	$(BSD_INSTALL_DATA) info/* $(INSTALLROOT)$(infodir)
+-	$(INSTALL_DATA) nasmdoc.pdf nasmdoc.txt $(INSTALLROOT)$(docdir)
 +	$(BSD_INSTALL_DATA_DIR) $(INSTALLROOT)$(docdir)
 +	$(BSD_INSTALL_DATA_DIR) $(INSTALLROOT)$(htmldocdir)
 +	$(BSD_INSTALL_DATA) html/* $(INSTALLROOT)$(htmldocdir)
-+	$(BSD_INSTALL_DATA) nasmdoc.ps nasmdoc.txt $(INSTALLROOT)$(docdir)
++	$(BSD_INSTALL_DATA) nasmdoc.txt $(INSTALLROOT)$(docdir)
