@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2026 2017/05/18 19:01:31 nils Exp $
+$NetBSD: CHANGES-2017,v 1.2027 2017/05/18 20:10:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2531,3 +2531,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/rsyslog-kafka version 8.27.0 [fhajny 2017-05-18]
 	Updated databases/redis to 3.2.9 [fhajny 2017-05-18]
 	Added net/daq version 2.0.6 [nils 2017-05-18]
+	Updated devel/gperftools to 2.5 [adam 2017-05-18]
+	Updated net/py-boto to 2.46.1 [adam 2017-05-18]
+	Added textproc/py-sphinxcontrib-websupport version 1.0.1 [adam 2017-05-18]
+	Updated textproc/py-sphinx to 1.6.1 [adam 2017-05-18]
