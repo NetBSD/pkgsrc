@@ -1,4 +1,4 @@
-# $NetBSD: clang.mk,v 1.16 2017/05/18 01:29:55 khorben Exp $
+# $NetBSD: clang.mk,v 1.17 2017/05/18 08:14:08 jperkin Exp $
 #
 # This is the compiler definition for the clang compiler.
 #
@@ -58,14 +58,6 @@ _COMPILER_RPATH_FLAG=	${_COMPILER_LD_FLAG}${_LINKER_RPATH_FLAG}
 _SSP_CFLAGS=		-fstack-protector-all
 .else
 _SSP_CFLAGS=		-fstack-protector
-.endif
-
-.if ${_PKGSRC_USE_SSP} == "yes"
-_WRAP_EXTRA_ARGS.CC+=	${_SSP_CFLAGS}
-_WRAP_EXTRA_ARGS.CXX+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.cxx+=	${_SSP_CFLAGS}
-CWRAPPERS_APPEND.f77+=	${_SSP_CFLAGS}
 .endif
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
