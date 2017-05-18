@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/05/03 00:59:46 mef Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/18 07:20:22 fhajny Exp $
 
 DISTNAME=	fio-2.19
 CATEGORIES=	benchmarks
@@ -24,6 +24,8 @@ REPLACE_PYTHON+=	tools/hist/fiologparser_hist.py
 REPLACE_PYTHON+=	tools/plot/fio2gnuplot
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+
+TEST_TARGET=		test
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/HOWTO ${DESTDIR}${DOCDIR}
