@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/05/18 21:19:08 schmonz Exp $
 
-SHA1 (etckeeper_1.3.tar.gz) = 8716d5cfc9fc584bf0069932383ec1ca956f4788
-RMD160 (etckeeper_1.3.tar.gz) = 43404007c3d5b727ee2040477245591ab17372ca
-SHA512 (etckeeper_1.3.tar.gz) = 76bdf1e3daaa94d80e0583d9375339d92d8e9f4b592ba8da9043e9c21f1371e08e13e65cc76eb40d0e1abcbcfeb64f230ef9e1c828654055a19df5103d01cc22
-Size (etckeeper_1.3.tar.gz) = 47387 bytes
+SHA1 (etckeeper_1.15.tar.gz) = d0a90b25d6a9e3a78fbfbde404c71c0b847f9369
+RMD160 (etckeeper_1.15.tar.gz) = d732c9a5cf2e1d643bf3aed4edace6665bada586
+SHA512 (etckeeper_1.15.tar.gz) = f2e5f584870fbec3d800bf9a53617770f2fef50d0860bab016ec6614f232948661a611147bca83ad3d304220607a878c1708a988ca580482a5db5e685cf94bd9
+Size (etckeeper_1.15.tar.gz) = 48882 bytes
 SHA1 (patch-bash__completion) = 95936127f98a76b4b7b66ddc170ba6c1e1e4c0d9
-SHA1 (patch-debian_cron.daily) = 5473807c2bcab9931e6324436f1d1ff3363ee3d2
+SHA1 (patch-debian_cron.daily) = b89d63ec32cfa3ab72043f56f4f9aef2ca60fc4f
 SHA1 (patch-etckeeper) = 07a6b61b6c79096065953d22087c32ea5d776f2c
-SHA1 (patch-etckeeper.8) = bb6e59169edac6ae16cebd25c05aa3c2305b3990
-SHA1 (patch-etckeeper.conf) = c246bf082a1b7137c3f50fa43e432ea9c1587464
+SHA1 (patch-etckeeper.8) = 0d8e5ac7e6aab35d507fe5b570934a207f4171ad
+SHA1 (patch-etckeeper.conf) = 46c179e875962e2f89e1c57ced3fa2235d655177
 SHA1 (patch-init.d_40vcs-init) = d267d4e7e2b82353614ed15455c2739e1c8f92d6
 SHA1 (patch-list-installed.d_50list-installed) = b0c9a500fa80c97686f229b8f936de6f1c8de7e0
-SHA1 (patch-post-install.d_50vcs-commit) = c79cd3c5f195cbc4808074557818f5f7d9a4e457
+SHA1 (patch-post-install.d_50vcs-commit) = b19d570b604f7cd2d7cea05965a10f6508b402bf
 SHA1 (patch-pre-install.d_10packagelist) = c2383ef03e2f360c581acb2c4c3ca09bad8cac10
-SHA1 (patch-pre-install.d_50uncommitted-changes) = 908a2cf5a107346a57f3fde1f1076c2ec7f92b9f
+SHA1 (patch-pre-install.d_50uncommitted-changes) = be883cd2fc9272c0df6d990fb1cf32b787d23a9d
 SHA1 (patch-update-ignore.d_01update-ignore) = 3e73493f268da3d40623fcd192d3da911357acee

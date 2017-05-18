@@ -1,26 +1,22 @@
-$NetBSD: patch-pre-install.d_50uncommitted-changes,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-pre-install.d_50uncommitted-changes,v 1.2 2017/05/18 21:19:08 schmonz Exp $
 
 Change '/etc' to ${ETCKEEPER_DIR}.
 
---- pre-install.d/50uncommitted-changes.orig	2011-02-22 20:19:36.000000000 +0000
+--- pre-install.d/50uncommitted-changes.orig	2014-09-04 19:44:32.000000000 +0000
 +++ pre-install.d/50uncommitted-changes
-@@ -13,16 +13,16 @@ fi
+@@ -4,12 +4,12 @@ set -e
  if etckeeper unclean; then
  	if [ "$AVOID_COMMIT_BEFORE_INSTALL" = 1 ]; then
  		echo "" >&2
 -		echo "** etckeeper detected uncommitted changes in /etc prior to $HIGHLEVEL_PACKAGE_MANAGER run" >&2 
-+		echo "** etckeeper detected uncommitted changes in ${ETCKEEPER_DIR} prior to $HIGHLEVEL_PACKAGE_MANAGER run" >&2
++		echo "** etckeeper detected uncommitted changes in ${ETCKEEPER_DIR} prior to $HIGHLEVEL_PACKAGE_MANAGER run" >&2 
  		echo "** Aborting $HIGHLEVEL_PACKAGE_MANAGER run. Manually commit and restart." >&2
  		echo "" >&2
  		exit 1
  	fi
 -	if ! etckeeper commit "saving uncommitted changes in /etc prior to $HIGHLEVEL_PACKAGE_MANAGER run"; then
+-		echo "warning: etckeeper failed to commit changes in /etc using $VCS" >&2
 +	if ! etckeeper commit "saving uncommitted changes in ${ETCKEEPER_DIR} prior to $HIGHLEVEL_PACKAGE_MANAGER run"; then
- 		if [ -e /usr/share/debconf/confmodule ]; then
- 			$0 fail-debconf
- 		else
--			echo "error: etckeeper failed to commit changes in /etc using $VCS"
-+			echo "error: etckeeper failed to commit changes in ${ETCKEEPER_DIR} using $VCS"
- 			exit 1
- 		fi
++		echo "warning: etckeeper failed to commit changes in ${ETCKEEPER_DIR} using $VCS" >&2
  	fi
+ fi
