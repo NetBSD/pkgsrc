@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/01/27 11:33:11 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2017/05/19 11:38:36 fhajny Exp $
 
-DISTNAME=	jo-1.0
+DISTNAME=	jo-1.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jpmens/}
 
@@ -14,5 +14,7 @@ GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	c c99
+
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"
