@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/05/15 13:46:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2017/05/19 15:27:58 fhajny Exp $
 
 FISHVER=		2.5.0
 DISTNAME=		fish-${FISHVER}
@@ -35,6 +35,12 @@ CPPFLAGS+=		-DHAVE_BACKTRACE
 CPPFLAGS+=		-DHAVE_BACKTRACE_SYMBOLS
 CXXFLAGS.NetBSD+=	-fpermissive
 LDFLAGS+=		-lexecinfo
+.endif
+
+# Upstream intentionally omits open.1 on Darwin
+PLIST_VARS+=	open
+.if ${OPSYS} != "Darwin"
+PLIST.open=	yes
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
