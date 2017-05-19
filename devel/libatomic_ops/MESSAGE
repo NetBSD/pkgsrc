@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2011/10/04 18:15:29 bsiegert Exp $
+$NetBSD: MESSAGE,v 1.2 2017/05/19 12:05:51 szptvlfn Exp $
 There are two kinds of entities in:
-				${PREFIX}/include/libatomic_ops/sysdeps
+				${PREFIX}/include/atomic_ops/sysdeps
 
 - Subdirectories corresponding to specific compilers
   (or compiler/OS combinations).
