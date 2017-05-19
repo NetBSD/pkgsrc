@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/06/08 19:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2017/05/19 13:18:19 prlw1 Exp $
 
 DISTNAME=	Net-CUPS-0.61
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,6 @@ PERL5_PACKLIST=	auto/Net/CUPS/.packlist
 
 .include "../../converters/libiconv/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cups+=	cups>=1.2.2<2.0
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
