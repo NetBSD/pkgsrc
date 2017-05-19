@@ -1,0 +1,4 @@
+The package offers support for drawing tree diagrams, and is especially
+suitable for linguistics use. It allows trees to be specified in a simple
+bracket notation, automatically calculates branch sizes, and supports
+both DVI/PostScript and PDF output by use of pict2e facilities.
