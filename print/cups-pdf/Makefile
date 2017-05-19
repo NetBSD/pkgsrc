@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:50 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/05/19 13:18:18 prlw1 Exp $
 
 COMMENT=		PDF backend for CUPS
 
@@ -11,7 +11,7 @@ MASTER_SITES=		${HOMEPAGE}src/
 DISTFILES=		${DISTNAME:S/pdf-/pdf_/}.tar.gz
 LICENSE=		gnu-gpl-v2
 
-DEPENDS+=		cups-[0-9]*:../../print/cups15
+DEPENDS+=		cups-[0-9]*:../../print/cups
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		contrib/cups-pdf-dispatch-0.1/cups-pdf-dispatch

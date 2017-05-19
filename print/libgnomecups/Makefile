@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/03/05 11:27:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2017/05/19 13:18:19 prlw1 Exp $
 #
 
 DISTNAME=	libgnomecups-0.2.3
@@ -19,5 +19,5 @@ PKGCONFIG_OVERRIDE=	libgnomecups-1.0.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
