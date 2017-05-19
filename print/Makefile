@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.682 2017/03/26 20:08:24 markd Exp $
+# $NetBSD: Makefile,v 1.683 2017/05/19 12:35:13 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1062,6 +1062,7 @@ SUBDIR+=	tex-ptex
 SUBDIR+=	tex-ptex-base
 SUBDIR+=	tex-ptex-base-doc
 SUBDIR+=	tex-ptex-doc
+SUBDIR+=	tex-qtree
 SUBDIR+=	tex-r_und_s
 SUBDIR+=	tex-r_und_s-doc
 SUBDIR+=	tex-rcs
