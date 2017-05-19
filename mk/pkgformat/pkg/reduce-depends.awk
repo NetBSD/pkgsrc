@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.3 2014/10/08 10:04:45 jperkin Exp $
+# $NetBSD: reduce-depends.awk,v 1.4 2017/05/19 14:58:51 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,6 +81,9 @@ BEGIN {
 			print "ERROR: [" PROGNAME "] invalid dependency pattern: " ARGV[i] | ERRCAT
 			exit 1
 		}
+		if (pattern_seen[pattern] == 1)
+			continue
+		pattern_seen[pattern] = 1
 		cmd = TEST " -d " dir
 		if (system(cmd) == 0) {
 			cmd = "cd " dir " && " PWD_CMD
