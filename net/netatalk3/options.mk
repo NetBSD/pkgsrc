@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/11/07 00:45:30 christos Exp $
+# $NetBSD: options.mk,v 1.2 2017/05/19 13:18:17 prlw1 Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
 .else
 CONFIGURE_ARGS+=	--disable-cups
