@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2031 2017/05/19 11:38:47 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2032 2017/05/19 12:30:10 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2540,3 +2540,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/crypto++ to 5.6.5 [adam 2017-05-18]
 	Updated devel/nasm to 2.13.01 [adam 2017-05-18]
 	Updated textproc/jo to 1.1 [fhajny 2017-05-19]
+	Added print/tex-qtree version 3.1b [joerg 2017-05-19]
