@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.14 2017/04/12 13:03:08 leot Exp $
+$NetBSD: patch-ab,v 1.15 2017/05/19 18:00:38 fhajny Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Properly recognize glfw support
@@ -60,7 +60,15 @@ o Properly recognize glfw support
  HAVE_PTHREAD := yes
  SYS_PTHREAD_CFLAGS :=
  SYS_PTHREAD_LIBS := -lpthread
-@@ -140,6 +92,14 @@ SYS_X11_CFLAGS := $(shell pkg-config --c
+@@ -132,7 +84,6 @@ SYS_CURL_CFLAGS += $(shell pkg-config --
+ SYS_CURL_DEPS += $(shell pkg-config --libs openssl)
+ endif
+ endif
+-SYS_CURL_DEPS += -lpthread -lrt
+ 
+ ifeq "$(shell pkg-config --exists x11 xext && echo yes)" "yes"
+ HAVE_X11 := yes
+@@ -140,6 +91,14 @@ SYS_X11_CFLAGS := $(shell pkg-config --c
  SYS_X11_LIBS := $(shell pkg-config --libs x11 xext)
  endif
  
@@ -75,7 +83,7 @@ o Properly recognize glfw support
  ifeq "$(shell pkg-config --exists harfbuzz && echo yes)" "yes"
  SYS_HARFBUZZ_CFLAGS := $(shell pkg-config --cflags harfbuzz)
  SYS_HARFBUZZ_LIBS := $(shell pkg-config --libs harfbuzz)
-@@ -159,8 +119,6 @@ SYS_JBIG2DEC_LIBS := -ljbig2dec
+@@ -159,8 +118,6 @@ SYS_JBIG2DEC_LIBS := -ljbig2dec
  SYS_LIBJPEG_LIBS := -ljpeg
  SYS_ZLIB_LIBS := -lz
  
