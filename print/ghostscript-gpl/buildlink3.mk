@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2016/03/05 11:27:53 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2017/05/19 13:18:18 prlw1 Exp $
 
 BUILDLINK_TREE+=	ghostscript-gpl
 
@@ -16,7 +16,7 @@ pkgbase := ghostscript-gpl
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mcups)
-.include "../../print/cups15/buildlink3.mk"
+.include "../../print/cups/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mfontconfig)
