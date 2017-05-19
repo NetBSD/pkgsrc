@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2016/07/08 08:50:55 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2017/05/19 18:11:04 spz Exp $
 
-SHA1 (openvpn-2.3.11.tar.xz) = 48ba3ada2da84be4cf66ffbd35a66d4ce30e0e5b
-RMD160 (openvpn-2.3.11.tar.xz) = cfaf087bfb9d562b6028a225c43000fbe96041ce
-SHA512 (openvpn-2.3.11.tar.xz) = 1fd2798beca074f0a094efbd4a9260f8a62d488afacb023b3f867698e6177bfc02702209e8c7f300ba8c662d292c65dc05d3f2cf615ebb91b90d4798fd3b99cd
-Size (openvpn-2.3.11.tar.xz) = 833496 bytes
+SHA1 (openvpn-2.3.15.tar.xz) = 3f74ee6baab32306c131a6e63f0d77e92d12d4ec
+RMD160 (openvpn-2.3.15.tar.xz) = 5cf7f6ef9ffea3f7c804f37c851f5a693f5f869a
+SHA512 (openvpn-2.3.15.tar.xz) = 749f1ca86923287c7e28dcea182e98b3a78648c0df8cf831f5fe41d859a0d822ba4691eb8587c24ae5078325c87c8397921a3655b2207d5b1fecc177ad560dec
+Size (openvpn-2.3.15.tar.xz) = 863384 bytes
 SHA1 (openvpn-nagios-20130210.tgz) = 8a0fd4e3eba27584aa53c5589c13d4b38af43ba2
 RMD160 (openvpn-nagios-20130210.tgz) = 2a47893ec2db2c280adc7b9fbbea97794ec1a6f4
 SHA512 (openvpn-nagios-20130210.tgz) = 80e565f32379c39eb6c7f3b4744af221ae882ff07dce9dae5bd7feb73b0edcfc7c7ac7f70d23fdcd4f492b66f095f09833deb122449840b36ea606ce91900358
