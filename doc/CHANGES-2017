@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2042 2017/05/20 23:45:31 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.2043 2017/05/20 23:52:55 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2556,3 +2556,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/hplip to 3.17.4 [schnoebe 2017-05-20]
 	Updated www/apache-tomcat7 to 7.0.78 [ryoon 2017-05-20]
 	Updated www/apache-tomcat85 to 8.5.15 [ryoon 2017-05-20]
+	Updated devel/jenkins to 2.61 [ryoon 2017-05-20]
