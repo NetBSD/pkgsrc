@@ -1,21 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2013/11/27 10:10:37 spz Exp $
+$NetBSD: MESSAGE,v 1.8 2017/05/20 06:56:29 spz Exp $
 
 The following program has been installed suid root on your machine:
 
 	${PREFIX}/${INN_PATHBIN}/innbind
 
 ---------------------------------------------------------------------------
-If you are upgrading from 2.4.6 or earlier: this is a major version bump.
+If you are upgrading from 2.5.5 or earlier: this is a major version bump.
 Config files have changed. Read ${PREFIX}/share/doc/inn/NEWS for details.
 
 If this is a first install: ${PREFIX}/share/doc/inn/INSTALL will help you
 getting set up.
----------------------------------------------------------------------------
-If you use tradindexed for overview and are switching from 32bit time_t
-to 64bit time_t (like with a switch from NetBSD 5 to NetBSD 6), note that
-tradindexed overview indices are in a binary format and your innd will
-unceremoniously die when trying to open the master index.
-Recreate your overview using expire -FOx if you encounter this.
 ---------------------------------------------------------------------------
 ===========================================================================
