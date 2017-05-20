@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2017/04/05 12:33:48 fhajny Exp $
+# $NetBSD: options.mk,v 1.5 2017/05/20 18:20:02 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
@@ -39,7 +39,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.2.7:../../converters/php-mbstring
 ###
 .if !empty(PKG_OPTIONS:Mapache)
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2.7:../../www/ap-php
-.	include "../../mk/apache.mk"
+.  include "../../mk/apache.mk"
 WWW_USER?=	${APACHE_USER}
 WWW_GROUP?=	${APACHE_GROUP}
 .else
