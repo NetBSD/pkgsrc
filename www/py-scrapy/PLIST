@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/13 21:25:33 adam Exp $
-bin/scrapy
+@comment $NetBSD: PLIST,v 1.2 2017/05/20 06:25:36 adam Exp $
+bin/scrapy${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/scrapy/VERSION
 ${PYSITELIB}/scrapy/__init__.py
 ${PYSITELIB}/scrapy/__init__.pyc
 ${PYSITELIB}/scrapy/__init__.pyo
+${PYSITELIB}/scrapy/__main__.py
+${PYSITELIB}/scrapy/__main__.pyc
+${PYSITELIB}/scrapy/__main__.pyo
 ${PYSITELIB}/scrapy/_monkeypatches.py
 ${PYSITELIB}/scrapy/_monkeypatches.pyc
 ${PYSITELIB}/scrapy/_monkeypatches.pyo
@@ -254,6 +257,9 @@ ${PYSITELIB}/scrapy/core/downloader/contextfactory.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/__init__.pyo
+${PYSITELIB}/scrapy/core/downloader/handlers/datauri.py
+${PYSITELIB}/scrapy/core/downloader/handlers/datauri.pyc
+${PYSITELIB}/scrapy/core/downloader/handlers/datauri.pyo
 ${PYSITELIB}/scrapy/core/downloader/handlers/file.py
 ${PYSITELIB}/scrapy/core/downloader/handlers/file.pyc
 ${PYSITELIB}/scrapy/core/downloader/handlers/file.pyo
