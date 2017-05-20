@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2017/05/03 08:24:57 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.20 2017/05/20 11:30:27 adam Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -302,9 +302,6 @@ ${PYSITELIB}/salt/cloud/clouds/pyrax.pyo
 ${PYSITELIB}/salt/cloud/clouds/qingcloud.py
 ${PYSITELIB}/salt/cloud/clouds/qingcloud.pyc
 ${PYSITELIB}/salt/cloud/clouds/qingcloud.pyo
-${PYSITELIB}/salt/cloud/clouds/rackspace.py
-${PYSITELIB}/salt/cloud/clouds/rackspace.pyc
-${PYSITELIB}/salt/cloud/clouds/rackspace.pyo
 ${PYSITELIB}/salt/cloud/clouds/saltify.py
 ${PYSITELIB}/salt/cloud/clouds/saltify.pyc
 ${PYSITELIB}/salt/cloud/clouds/saltify.pyo
@@ -3681,9 +3678,6 @@ ${PYSITELIB}/salt/utils/rsax931.pyo
 ${PYSITELIB}/salt/utils/s3.py
 ${PYSITELIB}/salt/utils/s3.pyc
 ${PYSITELIB}/salt/utils/s3.pyo
-${PYSITELIB}/salt/utils/saltminionservice.py
-${PYSITELIB}/salt/utils/saltminionservice.pyc
-${PYSITELIB}/salt/utils/saltminionservice.pyo
 ${PYSITELIB}/salt/utils/sanitizers.py
 ${PYSITELIB}/salt/utils/sanitizers.pyc
 ${PYSITELIB}/salt/utils/sanitizers.pyo
@@ -3774,9 +3768,6 @@ ${PYSITELIB}/salt/utils/win_runas.pyo
 ${PYSITELIB}/salt/utils/winapi.py
 ${PYSITELIB}/salt/utils/winapi.pyc
 ${PYSITELIB}/salt/utils/winapi.pyo
-${PYSITELIB}/salt/utils/winservice.py
-${PYSITELIB}/salt/utils/winservice.pyc
-${PYSITELIB}/salt/utils/winservice.pyo
 ${PYSITELIB}/salt/utils/xdg.py
 ${PYSITELIB}/salt/utils/xdg.pyc
 ${PYSITELIB}/salt/utils/xdg.pyo
