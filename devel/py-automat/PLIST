@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/13 21:13:11 adam Exp $
-bin/automat-visualize
+@comment $NetBSD: PLIST,v 1.2 2017/05/20 06:11:21 adam Exp $
+bin/automat-visualize${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -33,6 +33,9 @@ ${PYSITELIB}/automat/_test/test_discover.pyo
 ${PYSITELIB}/automat/_test/test_methodical.py
 ${PYSITELIB}/automat/_test/test_methodical.pyc
 ${PYSITELIB}/automat/_test/test_methodical.pyo
+${PYSITELIB}/automat/_test/test_trace.py
+${PYSITELIB}/automat/_test/test_trace.pyc
+${PYSITELIB}/automat/_test/test_trace.pyo
 ${PYSITELIB}/automat/_test/test_visualize.py
 ${PYSITELIB}/automat/_test/test_visualize.pyc
 ${PYSITELIB}/automat/_test/test_visualize.pyo
