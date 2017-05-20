@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2017/05/05 15:24:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2017/05/20 11:30:27 adam Exp $
 
-DISTNAME=	salt-2016.11.4
+DISTNAME=	salt-2016.11.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -9,29 +9,31 @@ HOMEPAGE=	http://saltstack.org/
 COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
 
-DEPENDS+= zeromq>=2.1.9:../../net/zeromq
-DEPENDS+= ${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq
-DEPENDS+= ${PYPKGPREFIX}-m2crypto-[0-9]*:../../security/py-m2crypto
-DEPENDS+= ${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
-DEPENDS+= ${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
-DEPENDS+= ${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-DEPENDS+= ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
-DEPENDS+= ${PYPKGPREFIX}-apache-libcloud>=0.14.1:../../net/py-apache-libcloud
-DEPENDS+= ${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
-DEPENDS+= ${PYPKGPREFIX}-tornado>=4.3:../../www/py-tornado
+DEPENDS+=	${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
+DEPENDS+=	${PYPKGPREFIX}-markupsafe-[0-9]*:../../textproc/py-markupsafe
+DEPENDS+=	${PYPKGPREFIX}-msgpack-[0-9]*:../../devel/py-msgpack
+DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
+DEPENDS+=	${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
+DEPENDS+=	${PYPKGPREFIX}-tornado>=4.3:../../www/py-tornado
+# zeromq transport requirements
+DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto
+DEPENDS+=	${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq
+
+.include "../../lang/python/pyversion.mk"
+.if "${PYPKGPREFIX}" == "py27"
+DEPENDS+= ${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
+.endif
 
 BUILD_DEFS+=	VARBASE
 
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-m2crypto
-
-PYSETUPARGS+=	--salt-config-dir=${PKG_SYSCONFDIR}
-PYSETUPARGS+=	--salt-cache-dir=${VARBASE}/cache/salt
-PYSETUPARGS+=	--salt-sock-dir=${VARBASE}/run/salt
 PYSETUPARGS+=	--salt-base-file-roots-dir=${VARBASE}/salt/file-roots
 PYSETUPARGS+=	--salt-base-pillar-roots-dir=${VARBASE}/salt/pillar-roots
 PYSETUPARGS+=	--salt-base-master-roots-dir=${VARBASE}/salt/master-roots
+PYSETUPARGS+=	--salt-cache-dir=${VARBASE}/cache/salt
+PYSETUPARGS+=	--salt-config-dir=${PKG_SYSCONFDIR}
 PYSETUPARGS+=	--salt-logs-dir=${VARBASE}/log/salt
 PYSETUPARGS+=	--salt-pidfile-dir=${VARBASE}/run
+PYSETUPARGS+=	--salt-sock-dir=${VARBASE}/run/salt
 
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 REPLACE_SH=		salt/templates/git/ssh-id-wrapper
@@ -43,7 +45,7 @@ FILES_SUBST+=		PYTHON=${PYTHONBIN:Q}
 PKG_SYSCONFSUBDIR=	salt
 
 EGDIR=			${PREFIX}/share/examples/salt
-INSTALLATION_DIRS+= 	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}
 CONF_FILES+=		${EGDIR}/master ${PKG_SYSCONFDIR}/master
 CONF_FILES+=		${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
 
