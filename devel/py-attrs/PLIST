@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/13 18:57:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/05/20 06:01:46 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -19,6 +19,9 @@ ${PYSITELIB}/attr/_funcs.pyo
 ${PYSITELIB}/attr/_make.py
 ${PYSITELIB}/attr/_make.pyc
 ${PYSITELIB}/attr/_make.pyo
+${PYSITELIB}/attr/converters.py
+${PYSITELIB}/attr/converters.pyc
+${PYSITELIB}/attr/converters.pyo
 ${PYSITELIB}/attr/exceptions.py
 ${PYSITELIB}/attr/exceptions.pyc
 ${PYSITELIB}/attr/exceptions.pyo
