@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/10/21 14:31:30 wen Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/05/20 18:20:02 adam Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -754,11 +754,14 @@ share/drupal/modules/simpletest/tests/theme_test.inc
 share/drupal/modules/simpletest/tests/theme_test.info
 share/drupal/modules/simpletest/tests/theme_test.module
 share/drupal/modules/simpletest/tests/theme_test.template_test.tpl.php
+share/drupal/modules/simpletest/tests/themes/engines/nyan_cat/nyan_cat.engine
 share/drupal/modules/simpletest/tests/themes/test_basetheme/test_basetheme.info
 share/drupal/modules/simpletest/tests/themes/test_subtheme/test_subtheme.info
 share/drupal/modules/simpletest/tests/themes/test_theme/template.php
 share/drupal/modules/simpletest/tests/themes/test_theme/templates/node--1.tpl.php
 share/drupal/modules/simpletest/tests/themes/test_theme/test_theme.info
+share/drupal/modules/simpletest/tests/themes/test_theme_nyan_cat/templates/theme_test_template_test.nyan-cat.html
+share/drupal/modules/simpletest/tests/themes/test_theme_nyan_cat/test_theme_nyan_cat.info
 share/drupal/modules/simpletest/tests/unicode.test
 share/drupal/modules/simpletest/tests/update.test
 share/drupal/modules/simpletest/tests/update_script_test.info
