@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2016/06/08 19:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/05/20 01:39:12 schmonz Exp $
 #
 
-DISTNAME=		ucspi-ssl-0.70
-PKGREVISION=		11
+DISTNAME=		ucspi-ssl-0.99
 CATEGORIES=		net
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		http://www.fehcom.de/ipnet/ucspi-ssl/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.superscript.com/ucspi-ssl/
+HOMEPAGE=		http://www.fehcom.de/ipnet/ucspi-ssl.html
 COMMENT=		Command-line tools for SSL client-server applications
 
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
@@ -27,18 +27,13 @@ SUBST_MESSAGE.paths=	Fixing paths.
 
 PLIST_SRC=		${PKGDIR}/PLIST
 
+DJB_CONFIG_DIR=		${WRKSRC}
 DJB_CONFIG_CMDS=							\
-	${ECHO} ${LOCALBASE}/bin > conf-tcpbin;				\
+	${ECHO} ${PREFIX}/bin > conf-tcpbin;				\
 	${ECHO} > conf-ssl;						\
-	${ECHO} ${PKG_SYSCONFDIR} > conf-cadir;
+	${ECHO} ${SSLDIR} > conf-cadir;
 
 .include "../../mk/bsd.prefs.mk"
-
-# from ../../security/openssl/Makefile
-.if ${OPSYS} == "NetBSD"
-PKG_SYSCONFDIR.ucspi-ssl?=	/etc/openssl
-.endif
-PKG_SYSCONFSUBDIR=	openssl
 
 INSTALLATION_DIRS=	bin share/doc/ucspi-ssl
 
@@ -52,7 +47,7 @@ do-install:
 .	endfor
 
 .	for i in CHANGES TODO UCSPI-SSL
-	  ${INSTALL_DATA} ${WRKSRC}/src/${i} \
+	  ${INSTALL_DATA} ${WRKSRC}/doc/${i} \
 	    ${DESTDIR}${PREFIX}/share/doc/ucspi-ssl
 .	endfor
 
