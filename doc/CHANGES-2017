@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2035 2017/05/20 01:39:19 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2036 2017/05/20 06:26:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2544,3 +2544,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-paramiko to 1.18.2 [he 2017-05-19]
 	Updated sysutils/etckeeper to 1.18.5.1 [schmonz 2017-05-20]
 	Updated net/ucspi-ssl to 0.99 [schmonz 2017-05-20]
+	Updated devel/py-hypothesis to 3.9.0 [adam 2017-05-20]
+	Updated www/py-parsel to 1.2.0 [adam 2017-05-20]
+	Updated devel/py-attrs to 17.1.0 [adam 2017-05-20]
+	Updated devel/py-automat to 0.6.0 [adam 2017-05-20]
+	Updated www/py-scrapy to 1.4.0 [adam 2017-05-20]
