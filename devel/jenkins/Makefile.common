@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2016/10/13 09:37:50 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.3 2017/05/20 23:52:19 ryoon Exp $
 #
 # used by devel/jenkins-lts/Makefile
 # used by devel/jenkins/Makefile
@@ -29,7 +29,6 @@ INSTALLATION_DIRS=	share/jenkins
 MESSAGE_SRC=	${.CURDIR}/../../devel/jenkins/MESSAGE
 
 do-install:
-	${UNZIP_CMD} -d ${DESTDIR}${PREFIX}/share/jenkins ${WRKSRC}/jenkins.war
 	${INSTALL_DATA} ${WRKSRC}/jenkins.war ${DESTDIR}${PREFIX}/share/jenkins
 
 .include "../../mk/java-vm.mk"
