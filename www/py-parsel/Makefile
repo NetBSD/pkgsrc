@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/02/15 23:22:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/20 05:40:35 adam Exp $
 
-DISTNAME=	parsel-1.1.0
+DISTNAME=	parsel-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/parsel/}
