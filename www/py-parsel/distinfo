@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/02/13 21:21:09 adam Exp $
+$NetBSD: distinfo,v 1.2 2017/05/20 05:40:35 adam Exp $
 
-SHA1 (parsel-1.1.0.tar.gz) = 980be253dffa2f3c41bf277f581697062650c3a9
-RMD160 (parsel-1.1.0.tar.gz) = 5e225a5de3676b4734d473abb7115fc3885a9df2
-SHA512 (parsel-1.1.0.tar.gz) = fdc08423cdef31d6e430d1562ce22be47d998e3dcdc1049055500081a0d52f46f670350f731de18e212bec23642e3f005f89f6ae0bfa7d7d0222eda8b969d5ba
-Size (parsel-1.1.0.tar.gz) = 32243 bytes
+SHA1 (parsel-1.2.0.tar.gz) = a58eb9206d9b58e3d533e896bf11176fb358748f
+RMD160 (parsel-1.2.0.tar.gz) = b65851162f3aeca2760b24bb6300e0b5649a840f
+SHA512 (parsel-1.2.0.tar.gz) = 63d4d041c23f929f316a8c2838983048b72cb4f66562fb7a1975cfca2651cb7e0f63e29035ae4daa8f9a28db63af40c51f46be3dd1523afdf8b05bd5c32384ae
+Size (parsel-1.2.0.tar.gz) = 33878 bytes
