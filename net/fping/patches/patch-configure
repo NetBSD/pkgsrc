@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2017/05/20 11:25:50 adam Exp $
+
+Include missing header.
+
+--- configure.orig	2017-05-20 10:15:54.000000000 +0000
++++ configure
+@@ -3098,6 +3098,7 @@ if test "x$enable_ipv6" != "xno"; then :
+            for ac_header in netinet/icmp6.h
+ do :
+   ac_fn_c_check_header_compile "$LINENO" "netinet/icmp6.h" "ac_cv_header_netinet_icmp6_h" "
++      #include <sys/types.h>
+       #include <netinet/in.h>
+ 
+ "
