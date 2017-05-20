@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.25 2016/11/30 18:00:08 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.26 2017/05/20 18:53:26 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -1331,6 +1331,10 @@ share/hplip/ppd/HP/hp-laserjet_m9050_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_e72525-25-30-35-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_e77822-25-30-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_e82540-50-60-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_e87640-50-60-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m129-m134-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m129-m134.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m426_m427-ps.ppd.gz
