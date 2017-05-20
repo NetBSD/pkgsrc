@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2039 2017/05/20 18:21:08 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2040 2017/05/20 18:53:51 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2553,3 +2553,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/salt to 2016.11.5 [adam 2017-05-20]
 	Updated www/moodle to 3.3 [wen 2017-05-20]
 	Updated www/drupal7 to 7.54 [adam 2017-05-20]
+	Updated print/hplip to 3.17.4 [schnoebe 2017-05-20]
