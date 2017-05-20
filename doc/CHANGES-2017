@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2034 2017/05/20 01:05:13 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2035 2017/05/20 01:39:19 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2543,3 +2543,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added print/tex-qtree version 3.1b [joerg 2017-05-19]
 	Updated security/py-paramiko to 1.18.2 [he 2017-05-19]
 	Updated sysutils/etckeeper to 1.18.5.1 [schmonz 2017-05-20]
+	Updated net/ucspi-ssl to 0.99 [schmonz 2017-05-20]
