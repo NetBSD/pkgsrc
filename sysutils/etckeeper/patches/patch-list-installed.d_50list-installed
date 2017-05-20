@@ -1,17 +1,17 @@
-$NetBSD: patch-list-installed.d_50list-installed,v 1.1 2013/05/27 08:36:00 sbd Exp $
+$NetBSD: patch-list-installed.d_50list-installed,v 1.2 2017/05/20 01:05:05 schmonz Exp $
 
 Add pkg_install support.
 
---- list-installed.d/50list-installed.orig	2011-02-22 20:19:36.000000000 +0000
+--- list-installed.d/50list-installed.orig	2016-07-17 23:01:39.000000000 +0000
 +++ list-installed.d/50list-installed
-@@ -2,7 +2,9 @@
- # Output to stdout a *sorted* list of all currently installed 
- # (or removed but still with config-files) packages, in the
- # format "package version\n" (or something similar).
--if [ "$LOWLEVEL_PACKAGE_MANAGER" = dpkg ]; then
-+if [ "$LOWLEVEL_PACKAGE_MANAGER" = pkg_install ]; then
-+	pkg_info -a -I | awk '{print $1}' | sort
-+elif [ "$LOWLEVEL_PACKAGE_MANAGER" = dpkg ]; then
- 	dpkg-query -W -f '${Status}\t${Package} ${Version}\n' | \
- 		egrep '(ok installed|ok config-files)' | cut -f2,3
- elif [ "$LOWLEVEL_PACKAGE_MANAGER" = rpm ]; then
+@@ -10,7 +10,9 @@ else
+ 	# Output to stdout a *sorted* list of all currently installed 
+ 	# (or removed but still with config-files) packages, in the
+ 	# format "package version\n" (or something similar).
+-	if [ "$LOWLEVEL_PACKAGE_MANAGER" = dpkg ]; then
++	if [ "$LOWLEVEL_PACKAGE_MANAGER" = pkg_install ]; then
++		pkg_info -a -I | awk '{print $1}' | sort
++	elif [ "$LOWLEVEL_PACKAGE_MANAGER" = dpkg ]; then
+ 		dpkg-query -W -f '${Status}\t${Package} ${Version} ${Architecture}\n' | \
+ 			egrep '(ok installed|ok config-files)' | cut -f2,3
+ 	elif [ "$LOWLEVEL_PACKAGE_MANAGER" = rpm ]; then
