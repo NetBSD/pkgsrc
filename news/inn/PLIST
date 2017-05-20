@@ -1,20 +1,24 @@
-@comment $NetBSD: PLIST,v 1.25 2014/08/03 17:33:34 spz Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/05/20 06:53:05 spz Exp $
 bin/inews
 bin/rnews
 include/inn/buffer.h
+include/inn/concat.h
 include/inn/confparse.h
 include/inn/dbz.h
 include/inn/defines.h
 include/inn/dispatch.h
+include/inn/fdflag.h
 include/inn/hashtab.h
 include/inn/history.h
 include/inn/innconf.h
 include/inn/inndcomm.h
 include/inn/libinn.h
 include/inn/list.h
+include/inn/macros.h
 include/inn/md5.h
 include/inn/messages.h
 include/inn/mmap.h
+include/inn/network-innbind.h
 include/inn/network.h
 include/inn/newsuser.h
 include/inn/nntp.h
@@ -22,6 +26,11 @@ include/inn/options.h
 include/inn/ov.h
 include/inn/overview.h
 include/inn/paths.h
+include/inn/portable-getaddrinfo.h
+include/inn/portable-getnameinfo.h
+include/inn/portable-macros.h
+include/inn/portable-socket.h
+include/inn/portable-stdbool.h
 include/inn/qio.h
 include/inn/sequence.h
 include/inn/storage.h
@@ -32,13 +41,15 @@ include/inn/utility.h
 include/inn/vector.h
 include/inn/version.h
 include/inn/wire.h
+include/inn/xmalloc.h
+include/inn/xwrite.h
 lib/innreport_inn.pm
 lib/innshellvars
 lib/innshellvars.pl
 lib/innshellvars.tcl
-lib/libinn.a
-lib/libinnhist.a
-lib/libstorage.a
+lib/libinn.la
+lib/libinnhist.la
+lib/libstorage.la
 lib/perl/INN/Config.pm
 lib/perl/INN/Utils/Shlock.pm
 ${INN_PATHBIN}/actmerge
@@ -171,6 +182,7 @@ man/man5/distributions.5
 man/man5/expire.ctl.5
 man/man5/history.5
 man/man5/incoming.conf.5
+man/man5/inn-radius.conf.5
 man/man5/inn.conf.5
 man/man5/innfeed.conf.5
 man/man5/innwatch.ctl.5
@@ -187,7 +199,6 @@ man/man5/nntpsend.ctl.5
 man/man5/nocem.ctl.5
 man/man5/ovdb.5
 man/man5/passwd.nntp.5
-man/man5/inn-radius.conf.5
 man/man5/readers.conf.5
 man/man5/storage.conf.5
 man/man5/subscriptions.5
@@ -295,6 +306,7 @@ share/examples/inn/filter/nnrpd_dynamic.py
 share/examples/inn/filter/startup_innd.pl
 share/examples/inn/history
 share/examples/inn/incoming.conf
+share/examples/inn/inn-radius.conf
 share/examples/inn/inn.conf
 share/examples/inn/innfeed.conf
 share/examples/inn/innreport.conf
@@ -315,11 +327,9 @@ share/examples/inn/nntpsend.ctl
 share/examples/inn/nocem.ctl
 share/examples/inn/ovdb.conf
 share/examples/inn/passwd.nntp
-share/examples/inn/inn-radius.conf
 share/examples/inn/readers.conf
 share/examples/inn/send-uucp.cf
 share/examples/inn/storage.conf
 share/examples/inn/subscriptions
 @pkgdir ${INN_PATHBIN}/filter
-@pkgdir etc/nntp
 @pkgdir etc/inn

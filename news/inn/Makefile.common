@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.7 2014/10/05 16:41:08 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/05/20 06:53:05 spz Exp $
 #
+# used by news/inn/Makefile
 # used by news/newsx/Makefile
 
 INN_PREFIX?=	${PREFIX}
