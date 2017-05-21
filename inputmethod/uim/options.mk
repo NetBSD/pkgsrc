@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2014/12/26 08:43:27 obache Exp $
+# $NetBSD: options.mk,v 1.33 2017/05/21 09:12:34 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna curl eb expat ffi gnome gnome3 gtk gtk3 m17nlib openssl prime sj3 sqlite uim-fep wnn4 xim
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS+=	editline
 PKG_OPTIONS_OPTIONAL_GROUPS=	kde qt
 PKG_OPTIONS_GROUP.kde=	kde kde3
 PKG_OPTIONS_GROUP.qt=	qt qt3
-PKG_SUGGESTED_OPTIONS=	anthy expat gtk prime uim-fep xim
+PKG_SUGGESTED_OPTIONS=	anthy expat gtk gtk3 prime uim-fep xim
 
 # Store installed modules
 UIM_MODULES=		skk tutcode byeoru latin elatin xmload pyload \
