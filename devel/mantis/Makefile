@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2017/04/17 09:57:14 maya Exp $
+# $NetBSD: Makefile,v 1.50 2017/05/21 07:16:49 ryoon Exp $
 
-DISTNAME=	mantisbt-1.3.1
-PKGREVISION=	2
+DISTNAME=	mantisbt-2.4.1
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
@@ -11,7 +10,7 @@ HOMEPAGE=	http://www.mantisbt.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 LICENSE=	gnu-gpl-v2
 
-PHP_VERSIONS_ACCEPTED=	56
+#PHP_VERSIONS_ACCEPTED=	56
 
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 
@@ -52,10 +51,6 @@ INSTALLATION_DIRS+=	share/doc/mantis ${EGDIR} ${MANTIS_HOME}
 
 post-extract:
 	${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
-
-# Get rid of patch leftovers
-post-patch:
-	${RM} ${WRKSRC}/*.orig
 
 do-install:
 	cd ${WRKSRC}/doc && \
