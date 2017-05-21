@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2052 2017/05/21 10:41:32 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2053 2017/05/21 17:31:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2570,3 +2570,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/cups-filters to 1.14.0 [leot 2017-05-21]
 	Updated devel/py-Spans to 0.5.0nb1 [gson 2017-05-21]
 	Updated math/liblinear to 2.11 [adam 2017-05-21]
+	Added sysutils/zabbix version 3.2.6 [adam 2017-05-21]
+	Added sysutils/zabbix-frontend version 3.2.6 [adam 2017-05-21]
