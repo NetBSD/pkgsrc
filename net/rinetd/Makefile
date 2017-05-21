@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/22 10:09:15 sborrill Exp $
+# $NetBSD: Makefile,v 1.17 2017/05/21 06:49:09 jlam Exp $
 #
 
 DISTNAME=		rinetd
@@ -19,7 +19,6 @@ CPPFLAGS+=		-DRINETD_CONF="\"${PKG_SYSCONFDIR}/rinetd.conf\""
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 RCD_SCRIPTS=		rinetd
-RCD_SCRIPT_WRK.rinetd=	${WRKDIR}/rinetd.sh
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	rinetd.8
