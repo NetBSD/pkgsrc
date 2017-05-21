@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2017/02/22 14:20:56 wiz Exp $
+$NetBSD: distinfo,v 1.12 2017/05/21 06:45:39 adam Exp $
 
-SHA1 (testtools-2.2.0.tar.gz) = e571ca7d491ba69e29559c6f8a36265c191faa2b
-RMD160 (testtools-2.2.0.tar.gz) = 8356c7e23afe5daa0fdf9c8f6012272843bdfd0b
-SHA512 (testtools-2.2.0.tar.gz) = f5ba08971975aa1ccf923c4c997ca7b093d00615131f440a9a5aad96d63be5b9e72f3364f3185d523fce9b5a7055bd52f767b54f7f9f17a102c4166efec189c5
-Size (testtools-2.2.0.tar.gz) = 230716 bytes
+SHA1 (testtools-2.3.0.tar.gz) = 5c5bbe2c1bc52077e6debafbc3a8a695d986dbad
+RMD160 (testtools-2.3.0.tar.gz) = bd9c1f31612d7dc7c9fb1bc657167ef1109cec02
+SHA512 (testtools-2.3.0.tar.gz) = 558fe6a1bdce7215f9f6f178f469a2b76948dc7ff0ce27400482a16683474edb81d9bf90ae48b6fcb8df9eb70759341b694aa162ed3d9d4abd372981cdcd8a64
+Size (testtools-2.3.0.tar.gz) = 231559 bytes
