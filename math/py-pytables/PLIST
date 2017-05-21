@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/08/18 20:30:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2017/05/21 07:52:55 adam Exp $
 bin/pt2to3${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
@@ -15,9 +15,6 @@ ${PYSITELIB}/tables/__init__.pyc
 ${PYSITELIB}/tables/__init__.pyo
 ${PYSITELIB}/tables/_comp_bzip2.so
 ${PYSITELIB}/tables/_comp_lzo.so
-${PYSITELIB}/tables/_past.py
-${PYSITELIB}/tables/_past.pyc
-${PYSITELIB}/tables/_past.pyo
 ${PYSITELIB}/tables/array.py
 ${PYSITELIB}/tables/array.pyc
 ${PYSITELIB}/tables/array.pyo
@@ -57,9 +54,6 @@ ${PYSITELIB}/tables/flavor.pyo
 ${PYSITELIB}/tables/group.py
 ${PYSITELIB}/tables/group.pyc
 ${PYSITELIB}/tables/group.pyo
-${PYSITELIB}/tables/hdf5Extension.py
-${PYSITELIB}/tables/hdf5Extension.pyc
-${PYSITELIB}/tables/hdf5Extension.pyo
 ${PYSITELIB}/tables/hdf5extension.so
 ${PYSITELIB}/tables/idxutils.py
 ${PYSITELIB}/tables/idxutils.pyc
@@ -70,9 +64,6 @@ ${PYSITELIB}/tables/index.pyo
 ${PYSITELIB}/tables/indexes.py
 ${PYSITELIB}/tables/indexes.pyc
 ${PYSITELIB}/tables/indexes.pyo
-${PYSITELIB}/tables/indexesExtension.py
-${PYSITELIB}/tables/indexesExtension.pyc
-${PYSITELIB}/tables/indexesExtension.pyo
 ${PYSITELIB}/tables/indexesextension.so
 ${PYSITELIB}/tables/leaf.py
 ${PYSITELIB}/tables/leaf.pyc
@@ -80,13 +71,7 @@ ${PYSITELIB}/tables/leaf.pyo
 ${PYSITELIB}/tables/link.py
 ${PYSITELIB}/tables/link.pyc
 ${PYSITELIB}/tables/link.pyo
-${PYSITELIB}/tables/linkExtension.py
-${PYSITELIB}/tables/linkExtension.pyc
-${PYSITELIB}/tables/linkExtension.pyo
 ${PYSITELIB}/tables/linkextension.so
-${PYSITELIB}/tables/lrucacheExtension.py
-${PYSITELIB}/tables/lrucacheExtension.pyc
-${PYSITELIB}/tables/lrucacheExtension.pyo
 ${PYSITELIB}/tables/lrucacheextension.so
 ${PYSITELIB}/tables/misc/__init__.py
 ${PYSITELIB}/tables/misc/__init__.pyc
@@ -145,9 +130,6 @@ ${PYSITELIB}/tables/scripts/pttree.pyo
 ${PYSITELIB}/tables/table.py
 ${PYSITELIB}/tables/table.pyc
 ${PYSITELIB}/tables/table.pyo
-${PYSITELIB}/tables/tableExtension.py
-${PYSITELIB}/tables/tableExtension.pyc
-${PYSITELIB}/tables/tableExtension.pyo
 ${PYSITELIB}/tables/tableextension.so
 ${PYSITELIB}/tables/tests/Table2_1_lzo_nrv2e_shuffle.h5
 ${PYSITELIB}/tables/tests/Tables_lzo1.h5
@@ -264,6 +246,8 @@ ${PYSITELIB}/tables/tests/test_numpy.pyo
 ${PYSITELIB}/tables/tests/test_queries.py
 ${PYSITELIB}/tables/tests/test_queries.pyc
 ${PYSITELIB}/tables/tests/test_queries.pyo
+${PYSITELIB}/tables/tests/test_ref_array1.mat
+${PYSITELIB}/tables/tests/test_ref_array2.mat
 ${PYSITELIB}/tables/tests/test_szip.h5
 ${PYSITELIB}/tables/tests/test_tables.py
 ${PYSITELIB}/tables/tests/test_tables.pyc
@@ -280,6 +264,9 @@ ${PYSITELIB}/tables/tests/test_tree.pyo
 ${PYSITELIB}/tables/tests/test_types.py
 ${PYSITELIB}/tables/tests/test_types.pyc
 ${PYSITELIB}/tables/tests/test_types.pyo
+${PYSITELIB}/tables/tests/test_utils.py
+${PYSITELIB}/tables/tests/test_utils.pyc
+${PYSITELIB}/tables/tests/test_utils.pyo
 ${PYSITELIB}/tables/tests/test_vlarray.py
 ${PYSITELIB}/tables/tests/test_vlarray.pyc
 ${PYSITELIB}/tables/tests/test_vlarray.pyo
@@ -298,9 +285,6 @@ ${PYSITELIB}/tables/unimplemented.pyo
 ${PYSITELIB}/tables/utils.py
 ${PYSITELIB}/tables/utils.pyc
 ${PYSITELIB}/tables/utils.pyo
-${PYSITELIB}/tables/utilsExtension.py
-${PYSITELIB}/tables/utilsExtension.pyc
-${PYSITELIB}/tables/utilsExtension.pyo
 ${PYSITELIB}/tables/utilsextension.so
 ${PYSITELIB}/tables/vlarray.py
 ${PYSITELIB}/tables/vlarray.pyc
