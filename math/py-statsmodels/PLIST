@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/07/15 07:35:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/21 09:07:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -1513,6 +1513,9 @@ ${PYSITELIB}/statsmodels/stats/tests/results/framing.csv
 ${PYSITELIB}/statsmodels/stats/tests/results/influence_lsdiag_R.json
 ${PYSITELIB}/statsmodels/stats/tests/results/influence_measures_R.csv
 ${PYSITELIB}/statsmodels/stats/tests/results/influence_measures_bool_R.csv
+${PYSITELIB}/statsmodels/stats/tests/results/results_multinomial_proportions.py
+${PYSITELIB}/statsmodels/stats/tests/results/results_multinomial_proportions.pyc
+${PYSITELIB}/statsmodels/stats/tests/results/results_multinomial_proportions.pyo
 ${PYSITELIB}/statsmodels/stats/tests/results/results_panelrobust.py
 ${PYSITELIB}/statsmodels/stats/tests/results/results_panelrobust.pyc
 ${PYSITELIB}/statsmodels/stats/tests/results/results_panelrobust.pyo
@@ -1885,6 +1888,9 @@ ${PYSITELIB}/statsmodels/tsa/statespace/tests/results/results_wpi1_missing_ar3_r
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_dynamic_factor.py
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_dynamic_factor.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_dynamic_factor.pyo
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_impulse_responses.py
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_impulse_responses.pyc
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_impulse_responses.pyo
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_kalman.py
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_kalman.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_kalman.pyo
@@ -1903,6 +1909,12 @@ ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_representation.pyo
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_sarimax.py
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_sarimax.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_sarimax.pyo
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_save.py
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_save.pyc
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_save.pyo
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_simulate.py
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_simulate.pyc
+${PYSITELIB}/statsmodels/tsa/statespace/tests/test_simulate.pyo
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_smoothing.py
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_smoothing.pyc
 ${PYSITELIB}/statsmodels/tsa/statespace/tests/test_smoothing.pyo
