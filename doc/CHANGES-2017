@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2050 2017/05/21 09:44:23 leot Exp $
+$NetBSD: CHANGES-2017,v 1.2051 2017/05/21 10:11:08 gson Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2568,3 +2568,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/py-statsmodels to 0.8.0 [adam 2017-05-21]
 	Updated inputmethod/uim to 1.8.6nb40 [ryoon 2017-05-21]
 	Updated print/cups-filters to 1.14.0 [leot 2017-05-21]
+	Updated devel/py-Spans to 0.5.0nb1 [gson 2017-05-21]
