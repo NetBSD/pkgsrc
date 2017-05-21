@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/01/28 11:34:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/05/21 10:40:28 adam Exp $
 
-DISTNAME=	liblinear-2.1
-PKGREVISION=	1
+DISTNAME=	liblinear-2.11
 CATEGORIES=	math
 MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/liblinear/
 
