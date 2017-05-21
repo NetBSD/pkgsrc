@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2044 2017/05/20 23:54:43 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.2045 2017/05/21 06:43:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2558,3 +2558,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache-tomcat85 to 8.5.15 [ryoon 2017-05-20]
 	Updated devel/jenkins to 2.61 [ryoon 2017-05-20]
 	Updated devel/jenkins-lts to 2.46.2 [ryoon 2017-05-20]
+	Updated devel/p5-Module-CoreList to 5.20170420 [wen 2017-05-21]
