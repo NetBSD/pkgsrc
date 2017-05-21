@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/05/08 09:07:40 manu Exp $
+# $NetBSD: Makefile,v 1.25 2017/05/21 06:45:38 manu Exp $
 
 DISTNAME=	rt-4.2.12
 PKGNAME=	${DISTNAME:S/rt/rt4/}
@@ -52,6 +52,7 @@ DEPENDS+=	p5-HTML-RewriteAttributes>=0.05:../../www/p5-HTML-RewriteAttributes
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-IPC-Run3-[0-9]*:../../devel/p5-IPC-Run3
 DEPENDS+=	p5-JSON-[0-9]*:../../converters/p5-JSON
+DEPENDS+=	p5-JSON-MaybeXS-[0-9]*:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 #DEPENDS+=	{perl>=5.20.0,p5-Locale-Maketext>=1.06}:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Fuzzy-[0-9]*:../../misc/p5-Locale-Maketext-Fuzzy
