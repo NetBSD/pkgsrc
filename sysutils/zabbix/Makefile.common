@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1 2017/05/21 17:30:03 adam Exp $
+# used by sysutils/zabbix/Makefile
+# used by sysutils/zabbix-frontend/Makefile
+
+DISTNAME=	zabbix-3.2.6
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
+
+MAINTAINER?=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.zabbix.com/
+LICENSE=	gnu-gpl-v2
+
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/zabbix/distinfo
+PATCHDIR=	${.CURDIR}/../../sysutils/zabbix/patches
