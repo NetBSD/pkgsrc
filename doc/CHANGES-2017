@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2046 2017/05/21 07:00:21 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2047 2017/05/21 07:17:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2561,3 +2561,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Module-CoreList to 5.20170420 [wen 2017-05-21]
 	Updated devel/py-testtools to 2.3.0 [adam 2017-05-21]
 	Updated devel/py-falcon to 1.2.0 [adam 2017-05-21]
+	Updated devel/mantis to 2.4.1 [ryoon 2017-05-21]
