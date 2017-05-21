@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/04/12 08:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2017/05/21 06:49:09 jlam Exp $
 
 DISTNAME=		isakmpd-20030903
 PKGREVISION=		10
@@ -25,9 +25,7 @@ BUILD_TARGET=		depend all
 MAKE_ENV+=		BINDIR=${PREFIX}/sbin MANDIR=${PREFIX}/${PKGMANDIR}
 
 PKG_SYSCONFSUBDIR=	isakmpd
-
 RCD_SCRIPTS=		isakmpd
-RCD_SCRIPT_WRK.isakmpd=	${WRKDIR}/isakmpd.sh
 
 SUBST_CLASSES+=		ssl
 SUBST_STAGE.ssl=	pre-configure
