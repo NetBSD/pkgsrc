@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/07/15 07:35:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2017/05/21 09:07:37 adam Exp $
 
-SHA1 (statsmodels-0.8.0rc1.tar.gz) = 808bddc2a04e2429c76fb594da05fd2952996292
-RMD160 (statsmodels-0.8.0rc1.tar.gz) = d2547e06657deac9270a9d6c972a4e042b4ffeb3
-SHA512 (statsmodels-0.8.0rc1.tar.gz) = e963c7fc98a8d087df43ef0b6f7807dc25d67713fdf5a74391979604291f194e088ac0669465f6c94da867f58872fcee6cafdfb3ad9d85ce4c903316351734ee
-Size (statsmodels-0.8.0rc1.tar.gz) = 9384625 bytes
+SHA1 (statsmodels-0.8.0.tar.gz) = bbd5241d5edea5ebfcf1d296005c2ce3b8e1106b
+RMD160 (statsmodels-0.8.0.tar.gz) = 9e4226caca648f5398a74776822701c42b09da05
+SHA512 (statsmodels-0.8.0.tar.gz) = 32bb7f36acc16796c445e5f695d958af4525fbbb2d374376fb4a73c972e3796fad05532456cef4aa5ee59d6fce11921174e17bbfc2e05d2488ce1ceac5175239
+Size (statsmodels-0.8.0.tar.gz) = 9464851 bytes
