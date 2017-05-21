@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2017/02/22 14:20:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/05/21 06:45:39 adam Exp $
 
-DISTNAME=	testtools-2.2.0
+DISTNAME=	testtools-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
