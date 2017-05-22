@@ -614,6 +614,7 @@ qmail-outgoingip	Patch to force a particular source IP address.
 qmail-qregex		Patch to SMTP-reject customizable patterns.
 qmail-rcptcheck		Patch to SMTP-reject via a script or program.
 qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
+qmail-remote		Patch to run $QMAILREMOTE instead of "qmail-remote".
 qmail-run-ofmipd	Enable dependency on mess822 for ofmipd service.
 qmail-srs		Patch to implement Sender Rewriting Scheme with libsrs2.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
