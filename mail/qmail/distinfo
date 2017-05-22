@@ -1,9 +1,13 @@
-$NetBSD: distinfo,v 1.33 2017/04/04 07:50:18 schmonz Exp $
+$NetBSD: distinfo,v 1.34 2017/05/22 17:18:32 schmonz Exp $
 
 SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
 RMD160 (qmail-1.03.tar.gz) = b851f273f1d365d38efd949b1efcf35768ffa30f
 SHA512 (qmail-1.03.tar.gz) = f2cc47c3ef4a3595d5953f216811a9b60f505cf8cbfd31ae31a888ee04916936210ef1c23d59e8d280a5f0e1c3794b90ee212b2b0f36361c5eff842598c8aee2
 Size (qmail-1.03.tar.gz) = 220668 bytes
+SHA1 (netqmail-1.06-qmailremote-20170522.patch) = cb120ddb3138b45828c7f7840e0f3414b35b840e
+RMD160 (netqmail-1.06-qmailremote-20170522.patch) = 3529bfb091034682507658d8d9507ab3fbf14882
+SHA512 (netqmail-1.06-qmailremote-20170522.patch) = b61ec03a965f32e7bc66877859fd35929c946e3e565a4b46855bf04c8cd7f34518aae65c757877c5a663d1969c2ddd42666762b32fd73044dc44e534228df942
+Size (netqmail-1.06-qmailremote-20170522.patch) = 2337 bytes
 SHA1 (netqmail-1.06.tar.gz) = 9ee9a603e2ad3d8e1d34b900e19b7a5d275f538b
 RMD160 (netqmail-1.06.tar.gz) = d31598afa862abb35bc1feb8d038ab619b5a17a2
 SHA512 (netqmail-1.06.tar.gz) = de40a6d8fac502bd785010434d99b99f2c0524e10aea3d0f2a0d35c70fce91e991eb1fb8f20a1276eb56d7e73130ea5e2c178f6075d138af47b28d9ca6e6046b
