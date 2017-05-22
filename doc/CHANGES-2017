@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2054 2017/05/22 06:25:57 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2055 2017/05/22 08:10:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2573,3 +2573,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/zabbix version 3.2.6 [adam 2017-05-21]
 	Added sysutils/zabbix-frontend version 3.2.6 [adam 2017-05-21]
 	Updated net/openvpn to 2.3.16 [adam 2017-05-22]
+	Updated graphics/graphite2 to 1.3.10 [he 2017-05-22]
