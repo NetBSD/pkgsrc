@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/04/30 01:21:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/05/22 23:40:42 joerg Exp $
 #
 
 DISTNAME=	sword-1.7.4
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++11
 
 CONFIGURE_ARGS+=	--with-clucene=${BUILDLINK_PREFIX.libclucene}
 
