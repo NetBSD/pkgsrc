@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/05/22 08:49:48 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/22 08:59:12 adam Exp $
 
 DISTNAME=	gts-0.7.6
 CATEGORIES=	graphics
@@ -9,7 +9,6 @@ HOMEPAGE=	http://gts.sourceforge.net/
 COMMENT=	GNU Triangulated Surface Library
 LICENSE=	gnu-gpl-v2
 
-#USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
