@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2015/04/13 23:12:42 rodent Exp $
+# $NetBSD: Makefile,v 1.42 2017/05/22 17:51:12 leot Exp $
 
-DISTNAME=		v3.9
-PKGNAME=		rss2email-3.9
+DISTNAME=		rss2email-3.9
+PKGREVISION=		1
 CATEGORIES=		mail
-MASTER_SITES=		${HOMEPAGE}archive/
-DIST_SUBDIR=		rss2email
+MASTER_SITES=		${MASTER_SITE_GITHUB:=wking/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		https://github.com/wking/rss2email/
@@ -14,8 +14,6 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-feedparser>=5.0.1:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text>=2014.4.5:../../textproc/py-html2text
-
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
