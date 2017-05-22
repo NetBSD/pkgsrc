@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1239 2017/05/12 10:02:37 wiz Exp $
+# $NetBSD: Makefile,v 1.1240 2017/05/22 22:31:09 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -618,6 +618,7 @@ SUBDIR+=	py-django-cmsplugin_gallery
 SUBDIR+=	py-django-contrib-comments
 SUBDIR+=	py-django-easy-thumbnails
 SUBDIR+=	py-django-filer
+SUBDIR+=	py-django-filter
 SUBDIR+=	py-django-formtools
 SUBDIR+=	py-django-inline-ordering
 SUBDIR+=	py-django-kronos
