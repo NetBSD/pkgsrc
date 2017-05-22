@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2017/05/18 13:27:44 fhajny Exp $
+$NetBSD: distinfo,v 1.27 2017/05/22 23:43:00 joerg Exp $
 
 SHA1 (rsyslog-8.27.0.tar.gz) = cdc1aa0744098bf595056d20a2970b2af4dd432b
 RMD160 (rsyslog-8.27.0.tar.gz) = 57737e20ff19af3c667e66564605cc89d152b3f3
@@ -12,6 +12,7 @@ SHA1 (patch-plugins_impstats_impstats.c) = a4eb7b8b9870271204d856c3a9e05fd24cee7
 SHA1 (patch-plugins_imptcp_imptcp.c) = 47f7184acf0279df4117924108f961529b22a21e
 SHA1 (patch-plugins_imuxsock_imuxsock.c) = a3c682d5a2132cd4796893f286193259087223da
 SHA1 (patch-plugins_mmexternal_mmexternal.c) = 498fc31e687e50e6aee821c64e029f9407e902ef
+SHA1 (patch-plugins_omkafka_omkafka.c) = 56d538f7c23a712951c6d3354c3b36bd87add876
 SHA1 (patch-runtime_lookup.c) = 2d824bfb00d93ba2abfb481445ed8b904ecbeae7
 SHA1 (patch-runtime_nsd__ptcp.c) = fcc8bdd5c5068cc0fb2f3b29d53a6bee41c7a437
 SHA1 (patch-tools_rsyslogd.8) = a3c79f551111b7bf5933ca5e0930b1f52875f341
