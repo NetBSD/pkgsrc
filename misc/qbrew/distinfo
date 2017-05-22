@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:49:48 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/05/22 23:40:22 joerg Exp $
 
 SHA1 (qbrew-0.4.1.tar.gz) = 44c82fee8ec93f8c274c87b1b673cd0c44503dea
 RMD160 (qbrew-0.4.1.tar.gz) = 47a87ae2600e16290526d0eaddf401e8edade285
 SHA512 (qbrew-0.4.1.tar.gz) = 9910c9070129b14bb4bd0f2d0356e07f53bbc2d1750e9eece8cbb668ee9eb8bd534fd0641f0cf8be4194f5f470b8b7d193d413c59aa0b69cc6d87d6453f247a4
 Size (qbrew-0.4.1.tar.gz) = 291237 bytes
+SHA1 (patch-src_beerxmlreader.cpp) = fd45cd5b4515fc4654f077ee7130a476119019b6
