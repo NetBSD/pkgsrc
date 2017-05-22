@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2017/05/22 08:49:48 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2017/05/22 08:53:35 adam Exp $
 
 BUILDLINK_TREE+=	gts
 
@@ -9,7 +9,6 @@ BUILDLINK_API_DEPENDS.gts+=	gts>=0.7.6
 BUILDLINK_PKGSRCDIR.gts?=	../../graphics/gts
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/netpbm/buildlink3.mk"
 .endif	# GTS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gts
