@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.280 2017/05/08 15:33:43 ryoon Exp $
+$NetBSD: distinfo,v 1.281 2017/05/22 11:39:12 ryoon Exp $
 
-SHA1 (firefox-53.0.2.source.tar.xz) = 5f3e78c6f3a19d1e0004a8a35b0b2e5959c6905b
-RMD160 (firefox-53.0.2.source.tar.xz) = 682a96e7bccfc58fa861c350d9f28d1d1979a541
-SHA512 (firefox-53.0.2.source.tar.xz) = d56d563db7e1a0faa2de9315b71b479adb9109624d0958224ad2cee331dcbdb4f414380bd91f70ee0b3e543eca812c172eb2d6f6b5620f6dd6f61675f5ac69d8
-Size (firefox-53.0.2.source.tar.xz) = 215124156 bytes
+SHA1 (firefox-53.0.3.source.tar.xz) = c185c345207597480ad169d10e9a770cf241f2da
+RMD160 (firefox-53.0.3.source.tar.xz) = e62d22fec71f1488432611045d47134e0906410a
+SHA512 (firefox-53.0.3.source.tar.xz) = cef5de1e9d6ddf6509a80cd30169fdce701b2fed022979ba5931ccea7b8f77cb644b01984dae028d350e32321cfe2eefc0236c0731bf5a2be12a994fc3fc1118
+Size (firefox-53.0.3.source.tar.xz) = 215253212 bytes
 SHA1 (patch-aa) = 60b2a879dac3f122828042b37aab597b07643a87
 SHA1 (patch-as) = 632ebd35287f8f97d18721d39a0514d4cdbb12cc
 SHA1 (patch-browser_app_nsBrowserApp.cpp) = c89a51efa326824122e6a8ca7af8ff2d6fabc7a8
