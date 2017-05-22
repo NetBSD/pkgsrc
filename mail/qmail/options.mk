@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.40 2017/04/04 07:50:18 schmonz Exp $
+# $NetBSD: options.mk,v 1.41 2017/05/22 17:18:32 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
 PKG_OPTIONS_GROUP.rcpt=	qmail-badrcptto qmail-qregex
 PKG_OPTIONS_GROUP.rcpt+=qmail-rcptcheck qmail-realrcptto
 PKG_SUPPORTED_OPTIONS+=	sasl syncdir tls qmail-bigdns qmail-maildiruniq
-PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip
+PKG_SUPPORTED_OPTIONS+=	qmail-netqmail qmail-outgoingip qmail-remote
 PKG_SUPPORTED_OPTIONS+=	qmail-srs qmail-viruscan
 PKG_SUGGESTED_OPTIONS+=	qmail-bigdns qmail-netqmail qmail-realrcptto
 
@@ -41,6 +41,12 @@ DISTNAME=		netqmail-1.06
 OUTGOINGIP_PATCH=	outgoingip.patch
 PATCHFILES+=		${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
+.endif
+
+.if !empty(PKG_OPTIONS:Mqmail-remote)
+REMOTE_PATCH=		netqmail-1.06-qmailremote-20170522.patch
+PATCHFILES+=		${REMOTE_PATCH}
+SITES.${REMOTE_PATCH}=	https://schmonz.com/2017/05/22/
 .endif
 
 PLIST_VARS+=		srs
