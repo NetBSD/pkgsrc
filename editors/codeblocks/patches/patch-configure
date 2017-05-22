@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/05/22 23:36:11 joerg Exp $
+
+Do not override C++ language version.
+
+--- configure.orig	2017-05-21 19:40:38.893383675 +0000
++++ configure
+@@ -22233,7 +22233,7 @@ esac
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $PIC_FLAGS" >&5
+ $as_echo "$PIC_FLAGS" >&6; }
+ 
+-CPPFLAGS="$CPPFLAGS -ansi -DTIXML_USE_STL"
++CPPFLAGS="$CPPFLAGS -DTIXML_USE_STL"
+ CXXFLAGS="$CXXFLAGS $PCH_FLAGS $PIC_FLAGS -fexceptions"
+ codeblocks_PCH_FLAGS="$PCH_FLAGS"
+ 
