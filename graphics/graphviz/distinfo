@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.57 2017/03/08 14:51:56 wiz Exp $
+$NetBSD: distinfo,v 1.58 2017/05/22 11:19:20 adam Exp $
 
 SHA1 (graphviz-2.40.1.tar.gz) = 8a44d19bcdb50df1bd8e649de472ebf868468888
 RMD160 (graphviz-2.40.1.tar.gz) = 8fc103fc519e07e9db522ec2f748838571c71acf
@@ -10,4 +10,5 @@ SHA1 (patch-configure) = 2e541e065a594093f54e47d5a24972367405bec1
 SHA1 (patch-configure.ac) = c02e7e2ab65cb5df8bcf15c1bbed0e673480bd3f
 SHA1 (patch-lib_gvc_Makefile.in) = f469c2dc53cf9af5b1e86f5da04bf9575685bd41
 SHA1 (patch-plugin_gs_gvloadimage__gs.c) = b5b46a1e7dc52f163526c5b8b7e1b893d5500e3c
+SHA1 (patch-plugin_quartz_Makefile.in) = 1712a43849137c23e94f3eeb2ae9b86938bd4980
 SHA1 (patch-plugin_xlib_gvdevice__xlib.c) = 932c337dcf9cb53d52f24c6c20818038ed169cd0

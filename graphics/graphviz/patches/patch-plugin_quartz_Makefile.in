@@ -1,0 +1,33 @@
+$NetBSD: patch-plugin_quartz_Makefile.in,v 1.1 2017/05/22 11:19:20 adam Exp $
+
+Use libtool tags for obj-c files.
+
+--- plugin/quartz/Makefile.in.orig	2017-05-22 08:57:46.000000000 +0000
++++ plugin/quartz/Makefile.in
+@@ -138,7 +138,7 @@ AM_V_lt = $(am__v_lt_@AM_V@)
+ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ am__v_lt_0 = --silent
+ am__v_lt_1 = 
+-libgvplugin_quartz_la_LINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
++libgvplugin_quartz_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=link $(OBJCLD) $(AM_OBJCFLAGS) \
+ 	$(OBJCFLAGS) $(libgvplugin_quartz_la_LDFLAGS) $(LDFLAGS) -o $@
+ @WITH_QUARTZ_TRUE@@WITH_WIN32_FALSE@am_libgvplugin_quartz_la_rpath =  \
+@@ -188,7 +188,7 @@ am__v_CCLD_0 = @echo "  CCLD    " $@;
+ am__v_CCLD_1 = 
+ OBJCCOMPILE = $(OBJC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCFLAGS) $(OBJCFLAGS)
+-LTOBJCCOMPILE = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) \
++LTOBJCCOMPILE = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
+ 	$(LIBTOOLFLAGS) --mode=compile $(OBJC) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_OBJCFLAGS) $(OBJCFLAGS)
+@@ -197,7 +197,7 @@ am__v_OBJC_ = $(am__v_OBJC_@AM_DEFAULT_V
+ am__v_OBJC_0 = @echo "  OBJC    " $@;
+ am__v_OBJC_1 = 
+ OBJCLD = $(OBJC)
+-OBJCLINK = $(LIBTOOL) $(AM_V_lt) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
++OBJCLINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(OBJCLD) $(AM_OBJCFLAGS) $(OBJCFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ AM_V_OBJCLD = $(am__v_OBJCLD_@AM_V@)
