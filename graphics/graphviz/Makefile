@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.165 2017/03/08 14:51:56 wiz Exp $
+# $NetBSD: Makefile,v 1.166 2017/05/22 11:19:20 adam Exp $
 
 DISTNAME=	graphviz-2.40.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
@@ -23,9 +24,6 @@ CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ARGS+=	--disable-r
-CONFIGURE_ARGS+=	--with-poppler=no
-CONFIGURE_ARGS+=	--with-gts=no
-CONFIGURE_ARGS+=	--with-qt=no
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
@@ -58,6 +56,13 @@ REPLACE_PERL+=		config/config_perl.pl \
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		quartz
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--with-quartz
+PLIST.quartz=		yes
+.endif
+
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-2*)
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
@@ -81,9 +86,10 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 #.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-#.include "../../mk/jpeg.buildlink3.mk"
-#.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/gts/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
