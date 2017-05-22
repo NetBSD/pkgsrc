@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2017/01/26 23:10:35 wiz Exp $
+$NetBSD: distinfo,v 1.65 2017/05/22 16:45:19 jperkin Exp $
 
 SHA1 (Python-2.7.13.tar.xz) = 18a8f30a0356c751b8d0ea6f76e764cab13ee046
 RMD160 (Python-2.7.13.tar.xz) = be09518cdc335314de1c5ebe181690082ce780d7
@@ -8,6 +8,7 @@ SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
+SHA1 (patch-Modules___multiprocessing_multiprocessing.h) = 7ca8fe22ba4bdcde6d39dd50fe2e86c25994c146
 SHA1 (patch-Modules___multiprocessing_semaphore.c) = 03b9c33ef38da383d5f7c2c84c17fe38cdd2911e
 SHA1 (patch-Modules__ssl.c) = 6e68f88ad205106691900f091a897ffe0a4c363c
 SHA1 (patch-Modules_getaddrinfo.c) = aa699d257f1bc98b9a3183a21324053e134409d1
