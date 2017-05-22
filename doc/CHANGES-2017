@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2061 2017/05/22 17:21:31 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2062 2017/05/22 17:51:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2581,3 +2581,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox to 53.0.3 [ryoon 2017-05-22]
 	Updated www/firefox-l10n to 53.0.3 [ryoon 2017-05-22]
 	Updated mail/qmail to 1.03nb28 [schmonz 2017-05-22]
+	Updated mail/rss2email to 3.9nb1 [leot 2017-05-22]
