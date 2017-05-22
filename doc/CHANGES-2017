@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2059 2017/05/22 11:39:53 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.2060 2017/05/22 11:41:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/corebird to 1.5 [ryoon 2017-05-22]
 	Updated sysutils/ansible2 to 2.3.0.0 [jperkin 2017-05-22]
 	Updated www/firefox to 53.0.3 [ryoon 2017-05-22]
+	Updated www/firefox-l10n to 53.0.3 [ryoon 2017-05-22]
