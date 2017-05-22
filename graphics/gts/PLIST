@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/22 08:49:48 adam Exp $
+bin/delaunay
+bin/gts-config
+bin/gts2dxf
+bin/gts2oogl
+bin/gts2stl
+bin/gtscheck
+bin/gtscompare
+bin/gtstemplate
+bin/happrox
+bin/stl2gts
+bin/transform
+include/gts.h
+include/gtsconfig.h
+lib/libgts.la
+lib/pkgconfig/gts.pc
+share/aclocal/gts.m4
