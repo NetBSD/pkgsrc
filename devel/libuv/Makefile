@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/03/28 18:44:49 maya Exp $
+# $NetBSD: Makefile,v 1.15 2017/05/22 14:49:04 maya Exp $
 
 DISTNAME=	libuv-1.11.0
 PKGREVISION=	1
@@ -15,6 +15,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 USE_LIBTOOL=	yes
 USE_TOOLS+=	autoconf automake pkg-config
 GNU_CONFIGURE=	yes
+TEST_TARGET=	check
 
 HEADERS=	uv-aix.h uv-bsd.h uv-darwin.h uv-linux.h uv-sunos.h	\
 		uv-unix.h uv-win.h pthread-barrier.h
