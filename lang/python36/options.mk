@@ -1,11 +1,17 @@
-# $NetBSD: options.mk,v 1.1 2017/01/01 14:34:27 adam Exp $
+# $NetBSD: options.mk,v 1.2 2017/05/23 10:53:56 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.python36
-PKG_SUPPORTED_OPTIONS+=	x11
+PKG_SUPPORTED_OPTIONS=	dtrace x11
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		dtrace
+.if !empty(PKG_OPTIONS:Mdtrace)
+CONFIGURE_ARGS+=	--with-dtrace
+PLIST.dtrace=		yes
+.endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 # Support for native X11 paths as an option
