@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.5 2017/05/23 15:12:57 jperkin Exp $
+
+Don't blanket define _XOPEN_SOURCE on SunOS, patch where required instead.
+
+--- configure.orig	2017-04-05 15:25:13.000000000 +0000
++++ configure
+@@ -23169,7 +23169,7 @@ case $host_os in
+         # ... this opt-in to get sockaddr_in6 and sockaddr_storage...
+         CFLAGS="$CFLAGS -D__EXTENSIONS__"
+         # ... and this opt-in to get file descriptor passing support
+-        CFLAGS="$CFLAGS -D_XOPEN_SOURCE=500"
++        #CFLAGS="$CFLAGS -D_XOPEN_SOURCE=500"
+         ;;
+ esac
+ 
