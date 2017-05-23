@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/05/23 13:11:07 nils Exp $
+
+SHA1 (Carp-1.38.tar.gz) = 6ad4e281ea94c3065c54237b03e1740b879fb6e5
+RMD160 (Carp-1.38.tar.gz) = 6f179dc27242c908339ade0972b8c83a5db16e3a
+SHA512 (Carp-1.38.tar.gz) = da59e6df490599ee8a83b18c9767438d29b18e4fdd291f2a432be6e7610bf312ddb40f1f2d6892787720ae0133e2b50c47d1fde122094e69114165ebd5b98920
+Size (Carp-1.38.tar.gz) = 20582 bytes
