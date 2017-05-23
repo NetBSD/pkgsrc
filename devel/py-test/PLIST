@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/08/22 13:26:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/05/23 08:30:11 adam Exp $
 bin/py.test-${PYVERSSUFFIX}
 bin/pytest-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -29,12 +29,18 @@ ${PYSITELIB}/_pytest/_code/source.pyo
 ${PYSITELIB}/_pytest/_pluggy.py
 ${PYSITELIB}/_pytest/_pluggy.pyc
 ${PYSITELIB}/_pytest/_pluggy.pyo
+${PYSITELIB}/_pytest/_version.py
+${PYSITELIB}/_pytest/_version.pyc
+${PYSITELIB}/_pytest/_version.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
 ${PYSITELIB}/_pytest/assertion/rewrite.py
 ${PYSITELIB}/_pytest/assertion/rewrite.pyc
 ${PYSITELIB}/_pytest/assertion/rewrite.pyo
+${PYSITELIB}/_pytest/assertion/truncate.py
+${PYSITELIB}/_pytest/assertion/truncate.pyc
+${PYSITELIB}/_pytest/assertion/truncate.pyo
 ${PYSITELIB}/_pytest/assertion/util.py
 ${PYSITELIB}/_pytest/assertion/util.pyc
 ${PYSITELIB}/_pytest/assertion/util.pyo
@@ -128,6 +134,9 @@ ${PYSITELIB}/_pytest/vendored_packages/__init__.pyo
 ${PYSITELIB}/_pytest/vendored_packages/pluggy.py
 ${PYSITELIB}/_pytest/vendored_packages/pluggy.pyc
 ${PYSITELIB}/_pytest/vendored_packages/pluggy.pyo
+${PYSITELIB}/_pytest/warnings.py
+${PYSITELIB}/_pytest/warnings.pyc
+${PYSITELIB}/_pytest/warnings.pyo
 ${PYSITELIB}/pytest.py
 ${PYSITELIB}/pytest.pyc
 ${PYSITELIB}/pytest.pyo
