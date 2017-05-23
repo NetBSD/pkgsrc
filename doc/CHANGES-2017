@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2065 2017/05/23 06:46:38 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2066 2017/05/23 08:31:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2585,3 +2585,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-django-filter version 1.0.4 [joerg 2017-05-22]
 	Updated converters/p5-MIME-Base32 to 1.303 [schmonz 2017-05-23]
 	Updated devel/npth to 1.4 [wiz 2017-05-23]
+	Updated devel/py-hypothesis to 3.10.0 [adam 2017-05-23]
+	Updated devel/py-test to 3.1.0 [adam 2017-05-23]
