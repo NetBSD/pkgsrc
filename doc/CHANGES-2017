@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2064 2017/05/23 00:37:09 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2065 2017/05/23 06:46:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/rss2email to 3.9nb1 [leot 2017-05-22]
 	Added www/py-django-filter version 1.0.4 [joerg 2017-05-22]
 	Updated converters/p5-MIME-Base32 to 1.303 [schmonz 2017-05-23]
+	Updated devel/npth to 1.4 [wiz 2017-05-23]
