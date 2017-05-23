@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.pre.in,v 1.1 2017/01/01 14:34:27 adam Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.2 2017/05/23 10:53:56 jperkin Exp $
 
 Use only one optimisation level; needed for PLIST and setuptools compatibility.
 
 Simplify _sysconfigdata to include only platform name.
 
---- Makefile.pre.in.orig	2016-12-23 02:21:21.000000000 +0000
+--- Makefile.pre.in.orig	2017-03-21 06:32:38.000000000 +0000
 +++ Makefile.pre.in
 @@ -96,7 +96,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
  # be able to build extension modules using the directories specified in the
@@ -15,6 +15,15 @@ Simplify _sysconfigdata to include only platform name.
  NO_AS_NEEDED=	@NO_AS_NEEDED@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
+@@ -463,7 +463,7 @@ LIBRARY_OBJS=	\
+ # On some systems, object files that reference DTrace probes need to be modified
+ # in-place by dtrace(1).
+ DTRACE_DEPS = \
+-	Python/ceval.o
++	Python/ceval.o Modules/gcmodule.o
+ # XXX: should gcmodule, etc. be here, too?
+ 
+ #########################################################################
 @@ -871,7 +871,6 @@ Objects/setobject.o: $(srcdir)/Objects/s
  $(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
  	$(PYTHON_FOR_GEN) $(OPCODETARGETGEN) $(OPCODETARGETS_H)
@@ -23,6 +32,22 @@ Simplify _sysconfigdata to include only platform name.
  
  Python/frozen.o: Python/importlib.h Python/importlib_external.h
  
+@@ -879,13 +878,13 @@ Python/frozen.o: Python/importlib.h Pyth
+ # follow our naming conventions. dtrace(1) uses the output filename to generate
+ # an include guard, so we can't use a pipeline to transform its output.
+ Include/pydtrace_probes.h: $(srcdir)/Include/pydtrace.d
+-	$(DTRACE) $(DFLAGS) -o $@ -h -s $<
++	$(DTRACE) $(DFLAGS) -o $@ -h -s $(srcdir)/Include/pydtrace.d
+ 	: sed in-place edit with POSIX-only tools
+ 	sed 's/PYTHON_/PyDTrace_/' $@ > $@.tmp
+ 	mv $@.tmp $@
+ 
+ Python/pydtrace.o: $(srcdir)/Include/pydtrace.d $(DTRACE_DEPS)
+-	$(DTRACE) $(DFLAGS) -o $@ -G -s $< $(DTRACE_DEPS)
++	$(DTRACE) $(DFLAGS) -o $@ -G -s $(srcdir)/Include/pydtrace.d $(DTRACE_DEPS)
+ 
+ Objects/typeobject.o: Objects/typeslots.inc
+ Objects/typeslots.inc: $(srcdir)/Include/typeslots.h $(srcdir)/Objects/typeslots.py
 @@ -1126,7 +1125,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  		if test -n "$(PY3LIBRARY)"; then \
  			$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
