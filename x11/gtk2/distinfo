@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.161 2016/09/13 13:45:52 prlw1 Exp $
+$NetBSD: distinfo,v 1.162 2017/05/23 15:35:21 jperkin Exp $
 
 SHA1 (gtk+-2.24.31.tar.xz) = c3d828135994a52cc9428a60175bd2b294656611
 RMD160 (gtk+-2.24.31.tar.xz) = 71feedd14b1a52eaa070a6cbf26d00e64d41de42
@@ -8,4 +8,5 @@ SHA1 (patch-ab) = 9c82cc60f3825d377a197c876fcc6faa379cbde3
 SHA1 (patch-af) = d59414e24a7da7f8694dbefbd2f0c2c2b60ec5ad
 SHA1 (patch-aj) = 9887573ac7ade9e8f8ee2ead68e279f67836a1a3
 SHA1 (patch-gdk_x11_gdkwindow-x11.c) = 08c05b31da38e16727a2941cdec4c855f2fc7d77
+SHA1 (patch-gtk_gtksearchenginesimple.c) = 3c44b84f2e0d3f7cdfb594bf56370f588d165b14
 SHA1 (patch-gtk_gtktooltips.c) = 593e43bb0aacc0b07c24959f2ac6d84dfd04a780
