@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2017/03/30 11:42:58 adam Exp $
+$NetBSD: distinfo,v 1.9 2017/05/23 10:53:56 jperkin Exp $
 
 SHA1 (Python-3.6.1.tar.xz) = 91d880a2a9fcfc6753cbfa132bf47a47e17e7b16
 RMD160 (Python-3.6.1.tar.xz) = 77e70ec6a07b9c17a99ac1df503f12f3a4c49fce
@@ -9,10 +9,10 @@ SHA1 (patch-Lib_distutils_command_install.py) = 6fc6f5d918b7581fc62cd0fe55857ee9
 SHA1 (patch-Lib_distutils_sysconfig.py) = 6822eafb4dfded86d7f7353831816aeb8119e6cf
 SHA1 (patch-Lib_distutils_unixccompiler.py) = e7aa684fa186de7a01486c3d8bfa177afdd22ef9
 SHA1 (patch-Lib_sysconfig.py) = a4f009ed73ebbd9d9c4bf7e12b7981182ed8fd7c
-SHA1 (patch-Makefile.pre.in) = 99b33ba203eb2c9c626377f1bac03c723d467553
+SHA1 (patch-Makefile.pre.in) = cb93d2cbb9e395a92d144ec45ede91bea744dca9
 SHA1 (patch-Modules___cursesmodule.c) = 2ab2779e0418a4529987641c254686ba05d28593
 SHA1 (patch-Modules_makesetup) = a06786eebffadecedba5e3a50a9785fb47613567
 SHA1 (patch-Modules_nismodule.c) = 1bafe9b06359586d027a77011b103877590d947d
 SHA1 (patch-Python_thread__pthread.h) = fb81eaa604b4ed7c1b64c3f4731d58a8aee257be
-SHA1 (patch-configure) = b0ed2f58d1b554aa8d81ffdabaae39f3109811d0
+SHA1 (patch-configure) = fe9b0213b64313dab4c453a8bd7135db961f6ac4
 SHA1 (patch-setup.py) = 1e14b84fc5cb21b3fa61755bf574021ba9b2ab81

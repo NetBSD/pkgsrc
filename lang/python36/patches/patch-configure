@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.5 2017/03/30 11:42:58 adam Exp $
+$NetBSD: patch-configure,v 1.6 2017/05/23 10:53:56 jperkin Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -90,6 +90,15 @@ Fix linking on Darwin.
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
+@@ -11122,7 +11125,7 @@ if ${ac_cv_dtrace_link+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+               ac_cv_dtrace_link=no
+-            echo 'BEGIN' > conftest.d
++            echo 'BEGIN {}' > conftest.d
+             "$DTRACE" -G -s conftest.d -o conftest.o > /dev/null 2>&1 && \
+                 ac_cv_dtrace_link=yes
+ 
 @@ -14949,8 +14952,6 @@ $as_echo "$SOABI" >&6; }
  
  
