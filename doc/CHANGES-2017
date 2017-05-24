@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2080 2017/05/24 20:09:26 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2081 2017/05/24 20:35:57 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2607,3 +2607,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-attrs to 17.2.0 [adam 2017-05-24]
 	Removed databases/postgresql91 [adam 2017-05-24]
 	Updated devel/lemon to 1.0.3.19.0 [adam 2017-05-24]
+	Updated net/openvpn to 2.4.2 [adam 2017-05-24]
