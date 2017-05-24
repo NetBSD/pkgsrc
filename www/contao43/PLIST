@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/04/25 15:55:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/05/24 15:59:36 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -2665,9 +2665,13 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version410Update.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Database/Version430Update.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/DependencyInjection/ContainerFactory.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/DependencyInjection/ContaoInstallationExtension.php
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Event/ContaoInstallationEvents.php
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Event/InitializeApplicationEvent.php
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/EventListener/InitializeApplicationListener.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/HttpKernel/InstallationKernel.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/InstallTool.php
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/InstallToolUser.php
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/config/listener.yml
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/config/routing.yml
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/config/services.yml
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.cs.xlf
@@ -2678,14 +2682,16 @@ ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messag
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.hu.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.it.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.ja.xlf
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.lv.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.nl.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.ru.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.sl.xlf
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.sr.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.sv.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.tr.xlf
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/translations/messages.zh.xlf
-${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/console.html.twig
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/database.html.twig
+${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/initialize.html.twig
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/layout.html.twig
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/license.html.twig
 ${CT_WEBDIR}/vendor/contao/installation-bundle/src/Resources/views/locked.html.twig
@@ -4344,6 +4350,7 @@ ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/ParamConverter.p
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Route.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Security.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/Configuration/Template.php
+${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Compiler/AddExpressionLanguageProvidersPass.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Compiler/AddParamConverterPass.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Compiler/LegacyPass.php
 ${CT_WEBDIR}/vendor/sensio/framework-extra-bundle/DependencyInjection/Configuration.php
