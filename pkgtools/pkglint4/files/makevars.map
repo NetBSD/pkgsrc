@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.3 2016/10/03 12:25:37 wiz Exp $
+# $NetBSD: makevars.map,v 1.4 2017/05/24 19:51:12 adam Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -543,7 +543,7 @@ PERL5_USE_PACKLIST	YesNo [$package]
 PERL5_PACKLIST		List of Perl5Packlist [m:s,o:sa]
 PERL5_PACKLIST_DIR	Pathname []
 PGSQL_PREFIX		Pathname [$system]
-PGSQL_VERSIONS_ACCEPTED	List of { 91 92 93 94}
+PGSQL_VERSIONS_ACCEPTED	List of {92 93 94 95 96}
 PGSQL_VERSION_DEFAULT	Version [$user]
 PG_LIB_EXT		{ dylib so } [$system]
 PGSQL_TYPE		{ postgresql81-client postgresql80-client } [$system]
