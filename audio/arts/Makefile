@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2016/07/09 06:37:47 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2017/05/24 16:48:39 jperkin Exp $
 
 DISTNAME=	arts-1.5.10
 PKGREVISION=	15
@@ -10,14 +10,7 @@ COMMENT=	Analog Real-Time Synthesizer
 
 REPLACE_SH+=	artsc/artsc-config.in artsc/artsdsp.in
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/compiler.mk"
-.if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
-    !empty(CC_VERSION:Mgcc-4.[6-9].*)
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -std=c99
-.else
-CFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
-.endif
 
 CONFLICTS+=	kdelibs-2*
 
