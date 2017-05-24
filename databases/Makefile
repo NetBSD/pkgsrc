@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.526 2017/04/23 03:39:53 markd Exp $
+# $NetBSD: Makefile,v 1.527 2017/05/24 19:51:12 adam Exp $
 
 COMMENT=	Databases
 
@@ -282,14 +282,6 @@ SUBDIR+=	poco-data-odbc
 SUBDIR+=	poco-data-sqlite
 SUBDIR+=	postgresql-pgbench
 SUBDIR+=	postgresql-postgis2
-SUBDIR+=	postgresql91
-SUBDIR+=	postgresql91-client
-SUBDIR+=	postgresql91-contrib
-SUBDIR+=	postgresql91-docs
-SUBDIR+=	postgresql91-plperl
-SUBDIR+=	postgresql91-plpython
-SUBDIR+=	postgresql91-pltcl
-SUBDIR+=	postgresql91-server
 SUBDIR+=	postgresql92
 SUBDIR+=	postgresql92-client
 SUBDIR+=	postgresql92-contrib
