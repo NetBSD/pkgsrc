@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/11/20 10:20:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/24 11:36:07 adam Exp $
 
-DISTNAME=	incremental-16.10.1
+DISTNAME=	incremental-17.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/incremental/}
