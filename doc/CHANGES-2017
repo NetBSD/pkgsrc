@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2075 2017/05/24 12:59:15 martin Exp $
+$NetBSD: CHANGES-2017,v 1.2076 2017/05/24 15:52:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2599,3 +2599,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/py-distribute [adam 2017-05-24]
 	Updated devel/py-incremental to 17.5.0 [adam 2017-05-24]
 	Updated devel/git-base to 2.13.0nb1 [martin 2017-05-24]
+	Updated net/samba to 3.6.25nb6 [he 2017-05-24]
+	Updated net/samba4 to 4.6.4 [he 2017-05-24]
