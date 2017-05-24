@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2072 2017/05/24 07:44:02 manu Exp $
+$NetBSD: CHANGES-2017,v 1.2073 2017/05/24 08:44:05 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2593,3 +2593,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Carp version 1.38 [nils 2017-05-23]
 	Updated textproc/libxslt to 1.1.29nb2 [tez 2017-05-23]
 	Updated net/nagios-base to 4.3.2 [manu 2017-05-24]
+	Added www/ap-auth-mellon version 0.13.1 [he 2017-05-24]
