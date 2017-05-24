@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/04/03 17:06:08 rodent Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/05/24 07:42:39 manu Exp $
 bin/nagios
 bin/nagiostats
 libexec/nagios/cgi-bin/archivejson.cgi
@@ -32,6 +32,12 @@ share/examples/nagios/objects/templates.cfg-sample
 share/examples/nagios/objects/timeperiods.cfg-sample
 share/examples/nagios/objects/windows.cfg-sample
 share/examples/nagios/resource.cfg-sample
+share/nagios/angularjs/angular-1.3.9/angular.min.js
+share/nagios/angularjs/angular-1.3.9/angular.min.js.map
+share/nagios/angularjs/ui-bootstrap-tpls-0.12.0.min.js
+share/nagios/angularjs/ui-utils-0.2.1/ui-utils.js
+share/nagios/bootstrap-3.3.0/css/bootstrap-theme.min.css
+share/nagios/bootstrap-3.3.0/css/bootstrap.min.css
 share/nagios/config.inc.php
 share/nagios/contexthelp/A1.html
 share/nagios/contexthelp/A2.html
@@ -96,6 +102,12 @@ share/nagios/contexthelp/N4.html
 share/nagios/contexthelp/N5.html
 share/nagios/contexthelp/N6.html
 share/nagios/contexthelp/N7.html
+share/nagios/d3/d3.min.js
+share/nagios/graph-header.html
+share/nagios/histogram-form.html
+share/nagios/histogram-graph.html
+share/nagios/histogram-links.html
+share/nagios/histogram.html
 share/nagios/images/Nagios-clearbg.png
 share/nagios/images/NagiosEnterprises-whitebg-112x46.png
 share/nagios/images/ack.gif
@@ -213,6 +225,9 @@ share/nagios/images/logos/monitor.png
 share/nagios/images/logos/nagios.gd2
 share/nagios/images/logos/nagios.gif
 share/nagios/images/logos/nagiosvrml.png
+share/nagios/images/logos/netbsd.gif
+share/nagios/images/logos/netbsd.jpg
+share/nagios/images/logos/netbsd.png
 share/nagios/images/logos/netbsd40.gd2
 share/nagios/images/logos/netbsd40.gif
 share/nagios/images/logos/netbsd40.jpg
@@ -275,6 +290,9 @@ share/nagios/images/logos/sunlogo.gd2
 share/nagios/images/logos/sunlogo.gif
 share/nagios/images/logos/sunlogo.jpg
 share/nagios/images/logos/sunlogo.png
+share/nagios/images/logos/suse.gif
+share/nagios/images/logos/suse.jpg
+share/nagios/images/logos/suse.png
 share/nagios/images/logos/switch.gd2
 share/nagios/images/logos/switch.gif
 share/nagios/images/logos/switch40.gd2
@@ -314,6 +332,7 @@ share/nagios/images/logos/yellowdog.gif
 share/nagios/images/logos/yellowdog.jpg
 share/nagios/images/logos/yellowdog.png
 share/nagios/images/logrotate.png
+share/nagios/images/menu.png
 share/nagios/images/ndisabled.gif
 share/nagios/images/noack.gif
 share/nagios/images/notes.gif
@@ -352,25 +371,34 @@ share/nagios/images/warning.png
 share/nagios/images/weblogo1.png
 share/nagios/images/zoom1.gif
 share/nagios/images/zoom2.gif
-share/nagios/includes/jquery-1.7.1.min.js
-share/nagios/includes/rss/extlib/Snoopy.class.inc
-share/nagios/includes/rss/rss_cache.inc
-share/nagios/includes/rss/rss_fetch.inc
-share/nagios/includes/rss/rss_parse.inc
-share/nagios/includes/rss/rss_utils.inc
 share/nagios/includes/utils.inc.php
 share/nagios/index.php
+share/nagios/infobox.html
+share/nagios/js/histogram-events.js
+share/nagios/js/histogram-form.js
+share/nagios/js/histogram-graph.js
+share/nagios/js/histogram.js
 share/nagios/js/jquery-1.7.1.min.js
 share/nagios/js/jsonquery.js
+share/nagios/js/map-directive.js
+share/nagios/js/map-form.js
+share/nagios/js/map.js
+share/nagios/js/nag_funcs.js
+share/nagios/js/nagios-decorations.js
+share/nagios/js/nagios-time.js
+share/nagios/js/trends-form.js
+share/nagios/js/trends-graph.js
+share/nagios/js/trends.js
 share/nagios/jsonquery.html
 share/nagios/main.php
+share/nagios/map-directive.html
+share/nagios/map-form.html
+share/nagios/map-links.html
+share/nagios/map-popup.html
+share/nagios/map.php
 share/nagios/robots.txt
-share/nagios/rss-corebanner.php
-share/nagios/rss-corefeed.html
-share/nagios/rss-corefeed.php
-share/nagios/rss-newsfeed.html
-share/nagios/rss-newsfeed.php
 share/nagios/side.php
+share/nagios/spin/spin.min.js
 share/nagios/stylesheets/avail.css
 share/nagios/stylesheets/checksanity.css
 share/nagios/stylesheets/cmd.css
@@ -378,9 +406,13 @@ share/nagios/stylesheets/common.css
 share/nagios/stylesheets/config.css
 share/nagios/stylesheets/extinfo.css
 share/nagios/stylesheets/histogram.css
+share/nagios/stylesheets/histogramgraph.css
 share/nagios/stylesheets/history.css
 share/nagios/stylesheets/jsonquery.css
+share/nagios/stylesheets/map-directive.css
+share/nagios/stylesheets/map.css
 share/nagios/stylesheets/ministatus.css
+share/nagios/stylesheets/nag_funcs.css
 share/nagios/stylesheets/notifications.css
 share/nagios/stylesheets/outages.css
 share/nagios/stylesheets/showlog.css
@@ -389,6 +421,13 @@ share/nagios/stylesheets/statusmap.css
 share/nagios/stylesheets/summary.css
 share/nagios/stylesheets/tac.css
 share/nagios/stylesheets/trends.css
+share/nagios/stylesheets/trendsgraph.css
+share/nagios/trends-form.html
+share/nagios/trends-graph.html
+share/nagios/trends-host-yaxis.html
+share/nagios/trends-links.html
+share/nagios/trends-service-yaxis.html
+share/nagios/trends.html
 @pkgdir share/nagios/ssi
 @pkgdir share/nagios/media
 @pkgdir share/nagios/docs/images
