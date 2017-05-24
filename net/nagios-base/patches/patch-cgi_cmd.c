@@ -1,19 +1,10 @@
-$NetBSD: patch-cgi_cmd.c,v 1.5 2016/02/07 21:52:06 bouyer Exp $
+$NetBSD: patch-cgi_cmd.c,v 1.6 2017/05/24 07:42:39 manu Exp $
 
 Fix build in SunOS.
 64bit time_t workaround.
 
 --- cgi/cmd.c.orig	2014-08-12 17:00:01.000000000 +0200
 +++ cgi/cmd.c	2016-02-07 22:41:29.000000000 +0100
-@@ -1403,7 +1403,7 @@
- 	service *temp_service;
- 	host *temp_host;
- 	hostgroup *temp_hostgroup;
--	comment *temp_comment;
-+	my_comment *temp_comment;
- 	scheduled_downtime *temp_downtime;
- 	servicegroup *temp_servicegroup = NULL;
- 	contact *temp_contact = NULL;
 @@ -1906,7 +1906,7 @@
  	if(!command_name || (strlen(command_name) > 6 && !memcmp("CHANGE", command_name, 6)))
  		return ERROR;

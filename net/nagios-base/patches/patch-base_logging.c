@@ -1,19 +1,11 @@
-$NetBSD: patch-base_logging.c,v 1.3 2016/02/09 10:12:53 bouyer Exp $
+$NetBSD: patch-base_logging.c,v 1.4 2017/05/24 07:42:39 manu Exp $
 
 64bit time_t workaround
 
---- base/logging.c.orig	2014-08-12 17:00:01.000000000 +0200
-+++ base/logging.c	2016-02-07 21:57:26.000000000 +0100
-@@ -184,7 +184,7 @@
- 	strip(buffer);
- 
- 	/* write the buffer to the log file */
--	fprintf(fp, "[%lu] %s\n", log_time, buffer);
-+	fprintf(fp, "[%lu] %s\n", (u_long)log_time, buffer);
- 	fflush(fp);
- 
- #ifdef USE_EVENT_BROKER
-@@ -495,7 +495,7 @@
+--- base/logging.c.orig	2017-05-09 19:03:31.000000000 +0200
++++ base/logging.c	2017-05-21 21:06:50.000000000 +0200
+@@ -532,9 +532,9 @@
+ 		return ERROR;
  
  	/* write the timestamp */
  	gettimeofday(&current_time, NULL);
@@ -22,3 +14,4 @@ $NetBSD: patch-base_logging.c,v 1.3 2016/02/09 10:12:53 bouyer Exp $
  
  	/* write the data */
  	va_start(ap, fmt);
+ 	vfprintf(debug_file_fp, fmt, ap);
