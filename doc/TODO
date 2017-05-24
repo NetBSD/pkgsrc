@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17368 2017/05/24 12:53:17 wiz Exp $
+$NetBSD: TODO,v 1.17369 2017/05/24 15:53:24 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1231,7 +1231,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-memcache-3.0.8
 	o php-ming-0.4.7
 	o php-mrbs-1.5.0
-	o php-nextcloud-12.0
 	o php-orangehrm-3.3.1
 	o php-pdflib-3.0.4 (require pdflib 7 or later)
 	o php-phrasea2-3.8.6 (php-phrasea-3.8.6?)
