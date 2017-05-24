@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2017/04/04 17:12:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.68 2017/05/24 19:41:03 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -233,6 +233,7 @@ share/doc/sqlite3/errlog.html
 share/doc/sqlite3/expridx.html
 share/doc/sqlite3/famous.html
 share/doc/sqlite3/faq.html
+share/doc/sqlite3/fasterthanfs.html
 share/doc/sqlite3/favicon.ico
 share/doc/sqlite3/features.html
 share/doc/sqlite3/fileformat.html
@@ -579,6 +580,7 @@ share/doc/sqlite3/releaselog/3_16_1.html
 share/doc/sqlite3/releaselog/3_16_2.html
 share/doc/sqlite3/releaselog/3_17_0.html
 share/doc/sqlite3/releaselog/3_18_0.html
+share/doc/sqlite3/releaselog/3_19_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
@@ -854,5 +856,6 @@ share/doc/sqlite3/vfs.html
 share/doc/sqlite3/vtab.html
 share/doc/sqlite3/wal.html
 share/doc/sqlite3/whentouse.html
+share/doc/sqlite3/whyc.html
 share/doc/sqlite3/withoutrowid.html
 share/doc/sqlite3/zeroconf.html
