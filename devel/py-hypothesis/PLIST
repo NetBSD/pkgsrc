@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/04/27 12:55:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/05/24 11:28:37 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,6 +51,9 @@ ${PYSITELIB}/hypothesis/extra/numpy.pyo
 ${PYSITELIB}/hypothesis/extra/pytestplugin.py
 ${PYSITELIB}/hypothesis/extra/pytestplugin.pyc
 ${PYSITELIB}/hypothesis/extra/pytestplugin.pyo
+${PYSITELIB}/hypothesis/extra/pytz.py
+${PYSITELIB}/hypothesis/extra/pytz.pyc
+${PYSITELIB}/hypothesis/extra/pytz.pyo
 ${PYSITELIB}/hypothesis/internal/__init__.py
 ${PYSITELIB}/hypothesis/internal/__init__.pyc
 ${PYSITELIB}/hypothesis/internal/__init__.pyo
@@ -105,6 +108,9 @@ ${PYSITELIB}/hypothesis/searchstrategy/__init__.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/collections.py
 ${PYSITELIB}/hypothesis/searchstrategy/collections.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/collections.pyo
+${PYSITELIB}/hypothesis/searchstrategy/datetime.py
+${PYSITELIB}/hypothesis/searchstrategy/datetime.pyc
+${PYSITELIB}/hypothesis/searchstrategy/datetime.pyo
 ${PYSITELIB}/hypothesis/searchstrategy/deferred.py
 ${PYSITELIB}/hypothesis/searchstrategy/deferred.pyc
 ${PYSITELIB}/hypothesis/searchstrategy/deferred.pyo
