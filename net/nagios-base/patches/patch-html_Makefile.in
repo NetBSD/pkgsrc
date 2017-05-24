@@ -1,10 +1,11 @@
-$NetBSD: patch-html_Makefile.in,v 1.4 2016/02/09 10:12:53 bouyer Exp $
+$NetBSD: patch-html_Makefile.in,v 1.5 2017/05/24 07:42:39 manu Exp $
 
 Adjustments to build procedure.
 
---- html/Makefile.in.orig	2014-08-12 17:00:01.000000000 +0200
-+++ html/Makefile.in	2016-02-08 13:16:12.000000000 +0100
-@@ -7,7 +7,7 @@
+--- html/Makefile.in.orig	2017-05-09 19:03:31.000000000 +0200
++++ html/Makefile.in	2017-05-22 09:20:24.000000000 +0200
+@@ -6,9 +6,9 @@
+ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
@@ -13,7 +14,9 @@ Adjustments to build procedure.
  HTMLDIR=@datadir@
  datarootdir=@datarootdir@
  INSTALL=@INSTALL@
-@@ -35,58 +35,58 @@
+ INSTALL_OPTS=@INSTALL_OPTS@
+@@ -43,92 +43,92 @@
+ 
  devclean: distclean
  
  install:
@@ -27,11 +30,7 @@ Adjustments to build procedure.
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/images/logos
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes/rss
--	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/includes/rss/extlib
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/ssi
--	$(INSTALL) -m 664 $(INSTALL_OPTS) robots.txt $(DESTDIR)$(HTMLDIR)
--#	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/media
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/stylesheets
@@ -42,21 +41,72 @@ Adjustments to build procedure.
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/images
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/images/logos
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/includes
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/includes/rss
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/includes/rss/extlib
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/ssi
+ # Directories for new CGI pages
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/angularjs
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/angularjs/angular-1.3.9
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/angularjs/ui-utils-0.2.1
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0/css
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/d3
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(HTMLDIR)/spin
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/angularjs
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/angularjs/angular-1.3.9
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/angularjs/ui-utils-0.2.1
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0/css
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/d3
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(HTMLDIR)/spin
+ # End of directories for new CGI pages
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) robots.txt $(DESTDIR)$(HTMLDIR)
+-#	$(INSTALL) -m 664 $(INSTALL_OPTS) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
 +	$(BSD_INSTALL_DATA) robots.txt $(DESTDIR)$(HTMLDIR)
 +#	$(BSD_INSTALL_DATA) docs/robots.txt $(DESTDIR)$(HTMLDIR)/docs
- # Remove old HTML files (PHP files are used now)
+ # Remove old files
  	rm -f $(DESTDIR)$(HTMLDIR)/index.html
  	rm -f $(DESTDIR)$(HTMLDIR)/main.html
  	rm -f $(DESTDIR)$(HTMLDIR)/side.html
+ 	rm -f $(DESTDIR)$(HTMLDIR)/map.html
+ 	rm -f $(DESTDIR)$(HTMLDIR)/rss-*
+ 	rm -rf $(DESTDIR)$(HTMLDIR)/include/rss
 -	$(INSTALL) -m 664 $(INSTALL_OPTS) jsonquery.html $(DESTDIR)$(HTMLDIR)
--	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-corefeed.html $(DESTDIR)$(HTMLDIR)
--	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-newsfeed.html $(DESTDIR)$(HTMLDIR)
 +	$(BSD_INSTALL_DATA) jsonquery.html $(DESTDIR)$(HTMLDIR)
-+	$(BSD_INSTALL_DATA) rss-corefeed.html $(DESTDIR)$(HTMLDIR)
-+	$(BSD_INSTALL_DATA) rss-newsfeed.html $(DESTDIR)$(HTMLDIR)
+ # New graphical CGI pages
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) graph-header.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) histogram.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) histogram-form.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) histogram-graph.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) histogram-links.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) infobox.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) map.php $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) map-directive.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) map-form.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) map-links.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) map-popup.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) trends.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) trends-form.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) trends-graph.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) trends-host-yaxis.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) trends-links.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) trends-service-yaxis.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) graph-header.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) histogram.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) histogram-form.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) histogram-graph.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) histogram-links.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) infobox.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) map.php $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) map-directive.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) map-form.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) map-links.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) map-popup.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) trends.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) trends-form.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) trends-graph.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) trends-host-yaxis.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) trends-links.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) trends-service-yaxis.html $(DESTDIR)$(HTMLDIR)
+ # End of new graphical CGI pages
  	for file in *.php; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR); done
 +	do $(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR); done
@@ -96,12 +146,24 @@ Adjustments to build procedure.
  	for file in includes/*.*; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes; done
 +	do $(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/includes; done
- 	for file in includes/rss/*.*; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
-+	do $(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/includes/rss; done
- 	for file in includes/rss/extlib/*.*; \
--	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
-+	do $(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR)/includes/rss/extlib; done
+ # Support files for new graphical CGIs
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) angularjs/angular-1.3.9/angular.min.js  $(DESTDIR)$(HTMLDIR)/angularjs/angular-1.3.9
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) angularjs/angular-1.3.9/angular.min.js.map  $(DESTDIR)$(HTMLDIR)/angularjs/angular-1.3.9
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) angularjs/ui-bootstrap-tpls-0.12.0.min.js  $(DESTDIR)$(HTMLDIR)/angularjs
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) angularjs/ui-utils-0.2.1/ui-utils.js   $(DESTDIR)$(HTMLDIR)/angularjs/ui-utils-0.2.1
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) bootstrap-3.3.0/css/bootstrap.min.css $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0/css
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) bootstrap-3.3.0/css/bootstrap-theme.min.css $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0/css
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) d3/d3.min.js $(DESTDIR)$(HTMLDIR)/d3
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) spin/spin.min.js $(DESTDIR)$(HTMLDIR)/spin
++	$(BSD_INSTALL_DATA) angularjs/angular-1.3.9/angular.min.js  $(DESTDIR)$(HTMLDIR)/angularjs/angular-1.3.9
++	$(BSD_INSTALL_DATA) angularjs/angular-1.3.9/angular.min.js.map  $(DESTDIR)$(HTMLDIR)/angularjs/angular-1.3.9
++	$(BSD_INSTALL_DATA) angularjs/ui-bootstrap-tpls-0.12.0.min.js  $(DESTDIR)$(HTMLDIR)/angularjs
++	$(BSD_INSTALL_DATA) angularjs/ui-utils-0.2.1/ui-utils.js   $(DESTDIR)$(HTMLDIR)/angularjs/ui-utils-0.2.1
++	$(BSD_INSTALL_DATA) bootstrap-3.3.0/css/bootstrap.min.css $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0/css
++	$(BSD_INSTALL_DATA) bootstrap-3.3.0/css/bootstrap-theme.min.css $(DESTDIR)$(HTMLDIR)/bootstrap-3.3.0/css
++	$(BSD_INSTALL_DATA) d3/d3.min.js $(DESTDIR)$(HTMLDIR)/d3
++	$(BSD_INSTALL_DATA) spin/spin.min.js $(DESTDIR)$(HTMLDIR)/spin
+ # End of support files for new graphical CGIs
  
  install-unstripped:
  	$(MAKE) install

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.67 2017/02/28 15:20:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.68 2017/05/24 07:42:39 manu Exp $
 #
 
-DISTNAME=		nagios-4.0.8
+DISTNAME=		nagios-4.3.2
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		9
+#PKGREVISION=		1
 CATEGORIES=		net sysutils
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -79,7 +79,6 @@ OWN_DIRS_PERMS+=${NAGIOSDIR}/rw ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0775
 OWN_DIRS_PERMS+=${NAGIOSDIR}/checkresults ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0775
 
 SPECIAL_PERMS+=	${DESTDIR}/${PREFIX}/share/nagios/jsonquery.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0644
-SPECIAL_PERMS+=	${DESTDIR}/${PREFIX}/share/nagios/rss-corefeed.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0644
 SPECIAL_PERMS+=	${DESTDIR}/${PREFIX}/share/nagios/rss-newsfeed.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0644
 
 SUBST_CLASSES+=		files
@@ -102,8 +101,6 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/netbsd40.png \
 	    ${DESTDIR}/${PREFIX}/share/nagios/images/logos/
 	${CHMOD} g-w ${DESTDIR}${PREFIX}/share/nagios/jsonquery.html
-	${CHMOD} g-w ${DESTDIR}${PREFIX}/share/nagios/rss-corefeed.html
-	${CHMOD} g-w ${DESTDIR}${PREFIX}/share/nagios/rss-newsfeed.html
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
