@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17369 2017/05/24 15:53:24 ryoon Exp $
+$NetBSD: TODO,v 1.17370 2017/05/24 15:59:03 taca Exp $
 
 Suggested new packages
 ======================
@@ -1392,6 +1392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-jquery-rails-4.2.1
 	o ruby-ncurses-1.3.1 [where is this package available from?]
 	o ruby-railties-4.2.7.1
+	o ruby-redmine-3.3.3
 	o ruby-review-1.4.0 [wip]
 	o ruby-selenium-webdriver-3.0.5
 	o rump-20131213
@@ -1471,7 +1472,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
 	o subtitleeditor-0.52.1
-	o sudo-1.8.19p2
+	o sudo-1.8.20
 	o superlu-5.1.1
 	o supertux-0.5
 	o supertuxkart-0.9.2
