@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2073 2017/05/24 08:44:05 he Exp $
+$NetBSD: CHANGES-2017,v 1.2074 2017/05/24 11:36:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2594,3 +2594,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/libxslt to 1.1.29nb2 [tez 2017-05-23]
 	Updated net/nagios-base to 4.3.2 [manu 2017-05-24]
 	Added www/ap-auth-mellon version 0.13.1 [he 2017-05-24]
+	Updated www/py-django-treebeard to 4.1.1 [adam 2017-05-24]
+	Updated devel/py-hypothesis to 3.11.0 [adam 2017-05-24]
+	Removed devel/py-distribute [adam 2017-05-24]
+	Updated devel/py-incremental to 17.5.0 [adam 2017-05-24]
