@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.80 2017/05/23 15:12:57 jperkin Exp $
+$NetBSD: distinfo,v 1.81 2017/05/24 08:06:28 jperkin Exp $
 
 SHA1 (dbus-1.10.18.tar.gz) = f3407dc00075c7a81cce502316aaf536f02ebfea
 RMD160 (dbus-1.10.18.tar.gz) = 9fc2aa4c93543983d8b12d1863b4696891afd866
@@ -8,6 +8,6 @@ SHA1 (patch-ak) = ebb0c291297577a9cff246e7bc71412bf6157254
 SHA1 (patch-al) = c70be84ae79698cc4d83087427646bfb0500f194
 SHA1 (patch-am) = ed334bc76911c9db9f5472c58fb762c56255c5b4
 SHA1 (patch-configure) = 9dee6306aa07b60449a0f9f0f1ea3dccbc70dcb4
-SHA1 (patch-dbus_dbus-sysdeps-unix.c) = 39767dd35befe916509ab9eff790aee706caa089
+SHA1 (patch-dbus_dbus-sysdeps-unix.c) = 3dfc60eba7ab9d5a29d2a842ce0baa1b109df716
 SHA1 (patch-dbus_dbus-sysdeps-util-unix.c) = 9c967cdac585220a3e65443dc9642e7d4478567c
 SHA1 (patch-tools_dbus-print-message.c) = 96267d3cff2c5207911615735748ef81604a69ec
