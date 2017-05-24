@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2017/02/23 23:13:42 wiz Exp $
+# $NetBSD: Makefile,v 1.212 2017/05/24 16:10:24 jperkin Exp $
 
 DISTNAME=	netpbm-10.77.02
 CATEGORIES=	graphics
@@ -64,6 +64,21 @@ MAKE_FLAGS.SunOS+=	NETWORKLD="-lsocket -lnsl"
 
 .if ${OS_VARIANT} == "SCOOSR5"
 MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
+.endif
+
+.include "../../mk/compiler.mk"
+
+# Ridiculous but they hardcode it in every file so we have no choice.
+.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[7-9]*)
+SUBST_CLASSES+=		xopen
+SUBST_STAGE.xopen=	pre-configure
+SUBST_FILES.xopen=	*.c */*.c */*/*.c */*/*/*.c */*/*/*/*.c */*/*/*/*/*.c
+SUBST_FILES.xopen+=	lib/util/lexheader
+SUBST_SED.xopen=	-e '/_XOPEN_SOURCE/s/500/600/'
+SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE/s/1$$/600/'
+SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE[^0-9]*\//s/SOURCE/SOURCE 600/'
+SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE$$/s/E$$/E 600/'
+SUBST_SED.xopen+=	-e '/_POSIX_SOURCE.*fdopen/s/_POSIX_SOURCE/_XOPEN_SOURCE 600/'
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 share/netpbm
