@@ -1,8 +1,0 @@
-Distribute is a fork of the Setuptools project.
-The fork has two goals:
--Providing a backward compatible version to replace Setuptools and make all
- distributions that depend on Setuptools work as before, but with less bugs
- and behaviorial issues.
- Distribute supports Python 3.
--Refactoring the code, and releasing it in several distributions. This work
- is being done in the 0.7.x series but not yet released.
