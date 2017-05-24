@@ -1,0 +1,14 @@
+$NetBSD: patch-configure,v 1.1 2017/05/24 20:35:12 adam Exp $
+
+Support net/if_tap.h
+
+--- configure.orig	2017-05-11 00:51:16.000000000 +0000
++++ configure
+@@ -14419,6 +14419,7 @@ for ac_header in  \
+ 	sys/mman.h sys/file.h sys/wait.h \
+ 	unistd.h signal.h libgen.h stropts.h \
+ 	syslog.h pwd.h grp.h \
++	net/if_tap.h \
+ 	sys/sockio.h sys/uio.h linux/sockios.h \
+ 	linux/types.h sys/poll.h sys/epoll.h err.h \
+ 
