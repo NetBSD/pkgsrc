@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2017/05/19 13:29:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.27 2017/05/24 15:19:12 jperkin Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
@@ -73,6 +73,10 @@ CONFIGURE_ENV.HPUX+=	ac_cv_func_fopen64=no
 # used when making a shared object; recompile with -fPIC
 .if !empty(PKGSRC_COMPILER:Mgcc) || !empty(PKGSRC_COMPILER:Mclang)
 CFLAGS+=		-fPIC
+.endif
+
+.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[7-9]*)
+CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 .endif
 
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
