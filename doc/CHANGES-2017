@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2076 2017/05/24 15:52:30 he Exp $
+$NetBSD: CHANGES-2017,v 1.2077 2017/05/24 15:53:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2601,3 +2601,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/git-base to 2.13.0nb1 [martin 2017-05-24]
 	Updated net/samba to 3.6.25nb6 [he 2017-05-24]
 	Updated net/samba4 to 4.6.4 [he 2017-05-24]
+	Updated www/php-nextcloud to 12.0.0 [ryoon 2017-05-24]
