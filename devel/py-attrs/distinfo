@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/05/20 06:01:46 adam Exp $
+$NetBSD: distinfo,v 1.4 2017/05/24 19:41:34 adam Exp $
 
-SHA1 (attrs-17.1.0.tar.gz) = d856db735ebcf3111dae408d2b69afc7d97ff119
-RMD160 (attrs-17.1.0.tar.gz) = 80e50902d23de6bffc96ffdc123f7a2c5f4a44ba
-SHA512 (attrs-17.1.0.tar.gz) = 5d902dfefdcfdc693931e0600833d3bc412d26026fda8691cc8f2652b4e872dfd17ac600a463c11152df11db1c9bbf6e598360d1ead50d9ebf5bae4124921517
-Size (attrs-17.1.0.tar.gz) = 76069 bytes
+SHA1 (attrs-17.2.0.tar.gz) = ca1688772851a6dabc4d41a4aa444cdcd9495ecf
+RMD160 (attrs-17.2.0.tar.gz) = 015436d6b06c7b8394bff62857716a3b4fd998bb
+SHA512 (attrs-17.2.0.tar.gz) = 02243e59ff417deddb330e841d42c0f43d3bea4435f114d3a9a8f4c3bd424c2ef565c630d179db7b3687d22091bf6e619de661171248c0ff0a0e5ec5f9bf7e21
+Size (attrs-17.2.0.tar.gz) = 73733 bytes
