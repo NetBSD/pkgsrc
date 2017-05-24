@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2074 2017/05/24 11:36:58 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2075 2017/05/24 12:59:15 martin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2598,3 +2598,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.11.0 [adam 2017-05-24]
 	Removed devel/py-distribute [adam 2017-05-24]
 	Updated devel/py-incremental to 17.5.0 [adam 2017-05-24]
+	Updated devel/git-base to 2.13.0nb1 [martin 2017-05-24]
