@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2078 2017/05/24 16:00:09 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2079 2017/05/24 19:52:24 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2603,3 +2603,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/samba4 to 4.6.4 [he 2017-05-24]
 	Updated www/php-nextcloud to 12.0.0 [ryoon 2017-05-24]
 	Updated www/contao43 to 4.3.10 [taca 2017-05-24]
+	Updated databases/sqlite3 to 3.19.0 [adam 2017-05-24]
+	Updated devel/py-attrs to 17.2.0 [adam 2017-05-24]
+	Removed databases/postgresql91 [adam 2017-05-24]
