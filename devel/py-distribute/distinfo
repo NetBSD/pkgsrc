@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 03:29:07 agc Exp $
-
-SHA1 (distribute-0.6.49.tar.gz) = a62cfe21bd0e5e2913c5b576f872ca293b9bebca
-RMD160 (distribute-0.6.49.tar.gz) = 0cc5affae454f28a6d14dcbd4e479738180de3c8
-SHA512 (distribute-0.6.49.tar.gz) = 650e4b119fd87c5a09a6bf60f634b7e977f177670e80e93a09861b128990b8e450949483fd6e4c25d7a578f4362bb2b7a03e33ea4d273f275584202e6af0b666
-Size (distribute-0.6.49.tar.gz) = 724005 bytes
-SHA1 (patch-aa) = f71c01fc59d71e731c4e239790acb7968e29e7d9
