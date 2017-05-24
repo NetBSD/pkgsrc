@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2017/05/08 15:36:28 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.45 2017/05/24 14:29:50 jperkin Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -66,13 +66,16 @@ SCRIPTS_ENV+=		HOME=${WRKDIR}
 .include "../../mk/compiler.mk"
 
 # We can't set USE_LANGUAGES+=c++11 yet because doing so breaks the GCC build
-# in lots of ways, so for now just enable it manually for clang.
+# in lots of ways, so for now just enable it manually for clang, and enforce
+# C++98 for GCC as GCC 7 defaults to C++14.
 #
 .if !empty(PKGSRC_COMPILER:Mclang)
 CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
 .  if empty(MACHINE_PLATFORM:MDarwin-*-*)
 CXXFLAGS+=	-D_GLIBCXX_USE_C99_FP_MACROS_DYNAMIC=1
 .  endif
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+CXXFLAGS+=	-std=c++98
 .endif
 
 .if ${OPSYS} == "SunOS"
