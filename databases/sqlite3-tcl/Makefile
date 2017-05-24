@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.85 2017/04/22 21:03:29 adam Exp $
+# $NetBSD: Makefile,v 1.86 2017/05/24 19:41:03 adam Exp $
 
-PKGREVISION= 1
 .include "../../databases/sqlite3/Makefile.common"
 
 PKGNAME=	sqlite3-tcl-${SQLITE3_VERSION}
