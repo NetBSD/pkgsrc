@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/04/22 21:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.33 2017/05/24 16:42:18 jperkin Exp $
 
 DISTNAME=	libsoup-2.54.1
 PKGREVISION=	3
@@ -28,6 +28,8 @@ PKGCONFIG_OVERRIDE+=	libsoup-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	libsoup-gnome-2.4.pc.in
 
 TEST_TARGET=	check
+
+BUILDLINK_TRANSFORM+=	rm:-Werror=missing-include-dirs
 
 # gcc>=4.2 specific -Werror=XXX flags will be added unconditionally.
 .include "../../mk/compiler.mk"
