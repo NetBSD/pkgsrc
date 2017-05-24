@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/04/10 15:27:22 jnemeth Exp $
+# $NetBSD: Makefile,v 1.30 2017/05/24 15:51:32 he Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.6.2
+VERSION=	4.6.4
 CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
