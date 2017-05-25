@@ -1,17 +1,25 @@
-$NetBSD: patch-ac,v 1.8 2012/03/12 04:32:11 joerg Exp $
+$NetBSD: patch-ac,v 1.9 2017/05/25 20:41:27 schmonz Exp $
 
---- Makefile.orig	2006-11-23 19:12:29.000000000 +0000
+DESTDIR support.
+
+--- Makefile.orig	2014-05-15 02:54:21.000000000 +0000
 +++ Makefile
-@@ -1095,9 +1095,9 @@ compile seek_set.c seek.h
- 	./compile seek_set.c
+@@ -965,12 +965,12 @@ libcompile idxthread.c error.h alloc.h s
  
- setup: \
--it man install conf-bin conf-man BIN MAN
--	./install "`head -n 1 conf-bin`" < BIN
--	./install "`head -n 1 conf-man`" < MAN
-+it install conf-bin conf-man conf-destdir BIN MAN
-+	./install "`head -1 conf-destdir``head -n 1 conf-bin`" < BIN
-+	./install "`head -1 conf-destdir``head -n 1 conf-man`" < MAN
+ install: \
+ it man installer conf-bin conf-etc conf-lang conf-lib conf-man BIN ETC LIB MAN
+-	./installer "`head -n 1 conf-bin`" < BIN
+-	./installer "`head -n 1 conf-etc`" < ETC
+-	./installer "`head -n 1 conf-man`" < MAN
+-	./installer "`head -n 1 conf-lib`" < LIB
+-	rm -f "`head -n 1 conf-etc`"/default
+-	ln -sf "`head -n 1 conf-lang`" "`head -n 1 conf-etc`"/default
++	./installer "`head -1 conf-destdir``head -n 1 conf-bin`" < BIN
++	./installer "`head -1 conf-destdir``head -n 1 conf-egdir`" < ETC
++	./installer "`head -1 conf-destdir``head -n 1 conf-man`" < MAN
++	./installer "`head -1 conf-destdir``head -n 1 conf-lib`" < LIB
++	rm -f "`head -1 conf-destdir``head -n 1 conf-egdir`"/default
++	ln -sf "`head -n 1 conf-lang`" "`head -1 conf-destdir``head -n 1 conf-egdir`"/default
  
- sgetopt.0: \
- sgetopt.3
+ installer: \
+ load installer.o getln.a strerr.a substdio.a stralloc.a alloc.a open.a error.a str.a fs.a
