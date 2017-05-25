@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2017/05/09 17:30:59 adam Exp $
+# $NetBSD: Makefile,v 1.23 2017/05/25 06:38:44 adam Exp $
 
 DISTNAME=	bpython-0.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://bpython-interpreter.org/releases/
 
@@ -21,6 +21,9 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9.1:../../devel/py-urwid
+
+# to generate man pages
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
