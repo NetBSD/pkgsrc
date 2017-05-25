@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17371 2017/05/24 20:35:57 adam Exp $
+$NetBSD: TODO,v 1.17372 2017/05/25 20:41:34 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o exaile-3.4.4
 	o exiftool-10.32
 	o exmh-2.8.0
-	o ezmlm-idx-7.2.0 [schmonz]
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
