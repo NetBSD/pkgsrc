@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2017/05/25 20:41:27 schmonz Exp $
+$NetBSD: patch-ETC,v 1.1 2017/05/25 20:44:23 schmonz Exp $
 
 PKG_SYSCONFDIR and CONF_FILES support.
 
