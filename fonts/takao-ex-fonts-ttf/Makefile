@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/07/04 16:18:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/05/25 03:55:24 soda Exp $
 #
 
 DISTNAME=	TakaoExFonts_00201.01
-PKGNAME=	takao-fonts-ttf-002.01.01
+PKGNAME=	takao-ex-fonts-ttf-002.01.01
 CATEGORIES=	fonts japanese
 MASTER_SITES=	https://launchpad.net/takao-fonts/trunk/15.03/+download/
 EXTRACT_SUFX=	.tar.xz

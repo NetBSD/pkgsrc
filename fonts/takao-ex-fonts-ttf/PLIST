@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/07 12:12:59 ryoon Exp $
-share/doc/takao-fonts-ttf/ChangeLog
-share/doc/takao-fonts-ttf/IPA_Font_License_Agreement_v1.0.txt
-share/doc/takao-fonts-ttf/README
-share/doc/takao-fonts-ttf/README.ja
+@comment $NetBSD: PLIST,v 1.2 2017/05/25 03:55:24 soda Exp $
+share/doc/takao-ex-fonts-ttf/ChangeLog
+share/doc/takao-ex-fonts-ttf/IPA_Font_License_Agreement_v1.0.txt
+share/doc/takao-ex-fonts-ttf/README
+share/doc/takao-ex-fonts-ttf/README.ja
 share/fonts/X11/TTF/TakaoExGothic.ttf
 share/fonts/X11/TTF/TakaoExMincho.ttf
