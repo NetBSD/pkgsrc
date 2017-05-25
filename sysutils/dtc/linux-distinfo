@@ -1,0 +1,6 @@
+$NetBSD: linux-distinfo,v 1.1 2017/05/25 21:39:57 jmcneill Exp $
+
+SHA1 (linux-4.11.3.tar.xz) = 75102241132b57fa4e9afcfe8d3a34a500073e1d
+RMD160 (linux-4.11.3.tar.xz) = d1449446ee25e9060390bcaa985c7fff41bc1777
+SHA512 (linux-4.11.3.tar.xz) = 835e65968059c2964ea6dd4239e48d44a21565ff112d63d864b032d947d50f6f4aa8af73852a58ddf1d80c763375adcf9663d8bc4da5155f96f85bfb5a25e606
+Size (linux-4.11.3.tar.xz) = 95543348 bytes
