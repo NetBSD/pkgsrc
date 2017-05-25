@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:17:42 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/05/25 03:17:41 manu Exp $
 
-SHA1 (crudesaml-1.4.tar.gz) = e6da912439f22970ebd3cab781a61195099c1656
-RMD160 (crudesaml-1.4.tar.gz) = 0d9b057b01806e0fae0fb67cd5df6dde8411a0e0
-SHA512 (crudesaml-1.4.tar.gz) = da876c58e522f42c92eac59e969e41a5700a80b3e08c0d76bd8d7e8bbb943ef36ece5f7190eaa6cb58cbd351824105c39f7497b7b6b88603908dedd64ff08b26
-Size (crudesaml-1.4.tar.gz) = 293083 bytes
-SHA1 (patch-saml.c) = 48d48c06efc496458b26699a67c269119909f9a0
+SHA1 (crudesaml-1.8.tar.gz) = d3e65764cc7c27329e5977b871487b00766cc2b8
+RMD160 (crudesaml-1.8.tar.gz) = aea305b89149d964223711db18d1020ec0f9544b
+SHA512 (crudesaml-1.8.tar.gz) = 064338718e1fa355f379dcc00487eb1be18689376ffafe6b0ee03d1c0d9332e4821e51fe9ae05b9a18bd43993e7a23d10b33958168b7ea4871340c697707e2f7
+Size (crudesaml-1.8.tar.gz) = 321688 bytes
