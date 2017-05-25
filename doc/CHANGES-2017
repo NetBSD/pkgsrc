@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2086 2017/05/25 20:41:34 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2087 2017/05/25 21:46:12 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2614,3 +2614,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/go to 1.8.2 [bsiegert 2017-05-25]
 	Updated lang/go to 1.8.3 [bsiegert 2017-05-25]
 	Updated mail/ezmlm-idx to 7.2.2 [schmonz 2017-05-25]
+	Added sysutils/dtb-arm-tegra124 version 4.11.3 [jmcneill 2017-05-25]
+	Added sysutils/dtb-arm64-tegra210 version 4.11.3 [jmcneill 2017-05-25]
