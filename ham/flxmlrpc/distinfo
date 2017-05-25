@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2017/05/19 14:58:02 joerg Exp $
+$NetBSD: distinfo,v 1.3 2017/05/25 10:03:23 joerg Exp $
 
 SHA1 (flxmlrpc-0.1.4.tar.gz) = fc43cd2ebf7740ad09d3e65f534d79330f193631
 RMD160 (flxmlrpc-0.1.4.tar.gz) = dab11324460ff1ae9587740e5805ce6a9a6ad975
 SHA512 (flxmlrpc-0.1.4.tar.gz) = 00f0f508d947129475f1a7c691c11d3ffd6c5cc85ababc503bcb407c1110e04b878bb47de81cd675b05fd882d4e2e038da520acb005542f8f5aa94384a6c5f75
 Size (flxmlrpc-0.1.4.tar.gz) = 769747 bytes
-SHA1 (patch-include_XmlRpcBase64.h) = acce4c01768d4044dc12378db850c5b47d68e7c3
+SHA1 (patch-include_XmlRpcBase64.h) = 2458160158ae33cb0916636e9d9ebd66bf8ee992
