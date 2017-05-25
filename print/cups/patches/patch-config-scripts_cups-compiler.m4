@@ -1,11 +1,13 @@
-$NetBSD: patch-config-scripts_cups-compiler.m4,v 1.2 2015/12/02 21:14:16 leot Exp $
+$NetBSD: patch-config-scripts_cups-compiler.m4,v 1.3 2017/05/25 12:11:55 jperkin Exp $
 
 Some builds of gcc seem to support this for compiling but then fail during
 linking with undefined reference to `__stack_chk_fail_local'
 
---- config-scripts/cups-compiler.m4.orig	2015-06-23 14:48:53.000000000 +0000
+PIE needs to be tested with linking.
+
+--- config-scripts/cups-compiler.m4.orig	2017-03-28 18:26:53.000000000 +0000
 +++ config-scripts/cups-compiler.m4
-@@ -113,12 +113,13 @@ if test -n "$GCC"; then
+@@ -111,12 +111,13 @@ if test -n "$GCC"; then
  	AC_MSG_CHECKING(whether compiler supports -fstack-protector)
  	OLDCFLAGS="$CFLAGS"
  	CFLAGS="$CFLAGS -fstack-protector"
@@ -20,3 +22,21 @@ linking with undefined reference to `__stack_chk_fail_local'
  		fi
  		AC_MSG_RESULT(yes),
  		AC_MSG_RESULT(no))
+@@ -133,7 +134,7 @@ if test -n "$GCC"; then
+ 		case "$uname" in
+ 			Darwin*)
+ 				CFLAGS="$CFLAGS -fPIE -Wl,-pie"
+-				AC_TRY_COMPILE(,,[
++				AC_TRY_LINK(,,[
+ 					PIEFLAGS="-fPIE -Wl,-pie"
+ 					AC_MSG_RESULT(yes)],
+ 					AC_MSG_RESULT(no))
+@@ -141,7 +142,7 @@ if test -n "$GCC"; then
+ 
+ 			*)
+ 				CFLAGS="$CFLAGS -fPIE -pie"
+-				AC_TRY_COMPILE(,,[
++				AC_TRY_LINK(,,[
+ 					PIEFLAGS="-fPIE -pie"
+ 					AC_MSG_RESULT(yes)],
+ 					AC_MSG_RESULT(no))
