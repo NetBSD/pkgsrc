@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2084 2017/05/25 09:08:20 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.2085 2017/05/25 09:27:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2612,3 +2612,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/cy2-saml to 1.8 [manu 2017-05-25]
 	Updated security/pam-saml to 1.8 [manu 2017-05-25]
 	Updated lang/go to 1.8.2 [bsiegert 2017-05-25]
+	Updated lang/go to 1.8.3 [bsiegert 2017-05-25]
