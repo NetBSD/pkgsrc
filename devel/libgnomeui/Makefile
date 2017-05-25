@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2017/02/12 06:24:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.134 2017/05/25 12:58:34 jperkin Exp $
 #
 
 DISTNAME=	libgnomeui-2.24.5
@@ -22,9 +22,19 @@ USE_LIBTOOL=		yes
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-[7-9]*)
+SUBST_CLASSES+=		xopen
+SUBST_STAGE.xopen=	pre-configure
+SUBST_FILES.xopen=	libgnomeui/gnome-file-entry.c libgnomeui/gnome-client.c
+SUBST_FILES.xopen+=	libgnomeui/gnome-dateedit.c
+SUBST_SED.xopen=	-e '/_XOPEN_SOURCE/s/500/600/'
+SUBST_SED.xopen+=	-e '/_XOPEN_SOURCE$$/s/$$/ 600/'
+.endif
+
 # Needed because part of the pc files doesn't get filled in till after
 # configure does its pass
-
 post-configure:
 	${SED} ${PKGCONFIG_OVERRIDE_SED} < ${PKGCONFIG_BASE} > \
 		${PKGCONFIG_BASE}.tmp
