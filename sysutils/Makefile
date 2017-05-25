@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.698 2017/05/21 17:30:03 adam Exp $
+# $NetBSD: Makefile,v 1.699 2017/05/25 21:44:16 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -124,6 +124,8 @@ SUBDIR+=	dmidecode
 SUBDIR+=	dmsdos
 SUBDIR+=	dog
 SUBDIR+=	dptutil
+SUBDIR+=	dtb-arm-tegra124
+SUBDIR+=	dtb-arm64-tegra210
 SUBDIR+=	dtc
 SUBDIR+=	dtpstree
 SUBDIR+=	duplicity
