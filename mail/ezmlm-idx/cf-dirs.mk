@@ -1,0 +1,36 @@
+# $NetBSD: cf-dirs.mk,v 1.1 2017/05/25 20:41:27 schmonz Exp $
+#
+EZMLM_CF_DIRS+=	ch_GB
+EZMLM_CF_DIRS+=	ch_GB/text
+EZMLM_CF_DIRS+=	cs
+EZMLM_CF_DIRS+=	cs/text
+EZMLM_CF_DIRS+=	da
+EZMLM_CF_DIRS+=	da/text
+EZMLM_CF_DIRS+=	de
+EZMLM_CF_DIRS+=	de/text
+EZMLM_CF_DIRS+=	en_US
+EZMLM_CF_DIRS+=	en_US/text
+EZMLM_CF_DIRS+=	es
+EZMLM_CF_DIRS+=	es/text
+EZMLM_CF_DIRS+=	fr
+EZMLM_CF_DIRS+=	fr/text
+EZMLM_CF_DIRS+=	hu
+EZMLM_CF_DIRS+=	hu/text
+EZMLM_CF_DIRS+=	id
+EZMLM_CF_DIRS+=	id/text
+EZMLM_CF_DIRS+=	it
+EZMLM_CF_DIRS+=	it/text
+EZMLM_CF_DIRS+=	ja
+EZMLM_CF_DIRS+=	ja/text
+EZMLM_CF_DIRS+=	nl
+EZMLM_CF_DIRS+=	nl/text
+EZMLM_CF_DIRS+=	pl
+EZMLM_CF_DIRS+=	pl/text
+EZMLM_CF_DIRS+=	pt
+EZMLM_CF_DIRS+=	pt/text
+EZMLM_CF_DIRS+=	pt_BR
+EZMLM_CF_DIRS+=	pt_BR/text
+EZMLM_CF_DIRS+=	ru
+EZMLM_CF_DIRS+=	ru/text
+EZMLM_CF_DIRS+=	sv
+EZMLM_CF_DIRS+=	sv/text

@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2005/07/12 10:58:09 schmonz Exp $
+$NetBSD: patch-ab,v 1.7 2017/05/25 20:41:27 schmonz Exp $
 
---- BIN.orig	2005-07-12 02:52:52.000000000 -0400
-+++ BIN
-@@ -1,7 +1,4 @@
+PKG_SYSCONFDIR and CONF_FILES support.
+
+--- ETC.orig	2014-05-09 22:28:12.000000000 +0000
++++ ETC
+@@ -1,6 +1,4 @@
  d:::755:::
 -c:::644:/:ezmlmglrc:
--c:::644:/:ezmlmrc:
 -c:::644:/:ezmlmsubrc:
- c:::755:/:ezmlm-accept:
- c:::755:/:ezmlm-archive:
- c:::755:/:ezmlm-check:
+ d:::755:/ch_GB::
+ c:::644:/ch_GB/:ezmlmrc:lang/ch_GB/ezmlmrc
+ d:::755:/ch_GB/text::

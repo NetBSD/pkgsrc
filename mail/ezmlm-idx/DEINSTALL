@@ -1,0 +1,10 @@
+# $NetBSD: DEINSTALL,v 1.1 2017/05/25 20:41:27 schmonz Exp $
+
+case "${STAGE}" in
+
+DEINSTALL)
+	cd ${PKG_SYSCONFDIR}
+	${RM} -f default
+
+	;;
+esac

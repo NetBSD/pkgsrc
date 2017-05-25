@@ -1,15 +1,19 @@
-$NetBSD: patch-MAN,v 1.1 2012/03/12 04:32:11 joerg Exp $
+$NetBSD: patch-MAN,v 1.2 2017/05/25 20:41:27 schmonz Exp $
 
---- MAN.orig	2012-03-11 20:13:04.000000000 +0000
+Don't install catpages.
+
+--- MAN.orig	2014-05-09 22:28:13.000000000 +0000
 +++ MAN
-@@ -34,37 +34,3 @@ c:::644:/man5/:ezmlm.5:
+@@ -37,40 +37,3 @@ c:::644:/man5/:ezmlm.5:
  c:::644:/man5/:ezmlmglrc.5:
  c:::644:/man5/:ezmlmrc.5:
  c:::644:/man5/:ezmlmsubrc.5:
 -d:::755:/cat1::
 -c:::644:/cat1/:ezmlm-accept.0:
 -c:::644:/cat1/:ezmlm-archive.0:
+-c:::644:/cat1/:ezmlm-cgi.0:
 -c:::644:/cat1/:ezmlm-check.0:
+-c:::644:/cat1/:ezmlm-checksub.0:
 -c:::644:/cat1/:ezmlm-clean.0:
 -c:::644:/cat1/:ezmlm-confirm.0:
 -c:::644:/cat1/:ezmlm-cron.0:
@@ -17,16 +21,17 @@ $NetBSD: patch-MAN,v 1.1 2012/03/12 04:32:11 joerg Exp $
 -c:::644:/cat1/:ezmlm-get.0:
 -c:::644:/cat1/:ezmlm-glconf.0:
 -c:::644:/cat1/:ezmlm-idx.0:
+-c:::644:/cat1/:ezmlm-import.0:
 -c:::644:/cat1/:ezmlm-issubn.0:
 -c:::644:/cat1/:ezmlm-limit.0:
 -c:::644:/cat1/:ezmlm-list.0:
 -c:::644:/cat1/:ezmlm-make.0:
 -c:::644:/cat1/:ezmlm-manage.0:
--c:::644:/cat1/:ezmlm-mktab.0:
 -c:::644:/cat1/:ezmlm-moderate.0:
 -c:::644:/cat1/:ezmlm-reject.0:
 -c:::644:/cat1/:ezmlm-request.0:
 -c:::644:/cat1/:ezmlm-return.0:
+-c:::644:/cat1/:ezmlm-rmtab.0:
 -c:::644:/cat1/:ezmlm-send.0:
 -c:::644:/cat1/:ezmlm-split.0:
 -c:::644:/cat1/:ezmlm-store.0:
