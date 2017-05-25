@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2017/04/30 01:22:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2017/05/25 13:38:42 jperkin Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
@@ -34,9 +34,15 @@ CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
 
-CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__
+.include "../../mk/compiler.mk"
 
-.include "../../mk/bsd.prefs.mk"
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+.if !empty(CC_VERSION:Mgcc-[7-9]*)
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
+.else
+CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
+.endif
+
 BUILDLINK_API_DEPENDS.apr+=	apr>=1.5.0
 .include "../../devel/apr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.5.3
