@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2016/01/17 14:27:38 wiz Exp $
+$NetBSD: patch-sound_osssound.c,v 1.1 2017/05/26 19:35:48 adam Exp $
+
+Use correct OSS device across platforms.
 
 --- sound/osssound.c.orig	2007-12-21 17:43:10.000000000 +0100
 +++ sound/osssound.c
