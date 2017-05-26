@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2017/01/02 03:40:21 schmonz Exp $
+$NetBSD: patch-leapsecs__read.c,v 1.1 2017/05/26 14:34:43 schmonz Exp $
 
 Fix to the included libtai, brought over from devel/libtai:
 
