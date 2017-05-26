@@ -1,10 +1,10 @@
-$NetBSD: patch-compat_Makefile.in,v 1.2 2016/08/31 09:23:58 wiz Exp $
+$NetBSD: patch-compat_Makefile.in,v 1.3 2017/05/26 13:26:37 maya Exp $
 
 See comment on patch_compat_Makefile.am.
 
---- compat/Makefile.in.orig	2016-05-31 16:56:35.000000000 +0000
+--- compat/Makefile.in.orig	2017-05-24 12:55:21.000000000 +0000
 +++ compat/Makefile.in
-@@ -132,7 +132,7 @@ am__uninstall_files_from_dir = { \
+@@ -135,7 +135,7 @@ am__uninstall_files_from_dir = { \
           $(am__cd) "$$dir" && rm -f $$files; }; \
    }
  am__installdirs = "$(DESTDIR)$(pkglibdir)"
@@ -13,7 +13,7 @@ See comment on patch_compat_Makefile.am.
  libcompat_la_DEPENDENCIES = $(LTLIBOBJS)
  am_libcompat_la_OBJECTS = dummy.lo
  libcompat_la_OBJECTS = $(am_libcompat_la_OBJECTS)
-@@ -983,10 +983,10 @@ top_builddir = @top_builddir@
+@@ -995,10 +995,10 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  vlcdatadir = @vlcdatadir@
  vlclibdir = @vlclibdir@
@@ -26,7 +26,7 @@ See comment on patch_compat_Makefile.am.
  BUILT_SOURCES = dummy.c
  CLEANFILES = dummy.c
  all: $(BUILT_SOURCES)
-@@ -1025,33 +1025,9 @@ $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(
+@@ -1036,33 +1036,9 @@ $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(
  	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
  $(am__aclocal_m4_deps):
  
@@ -63,7 +63,7 @@ See comment on patch_compat_Makefile.am.
  	locs=`for p in $$list; do echo $$p; done | \
  	      sed 's|^[^/]*$$|.|; s|/[^/]*$$||; s|$$|/so_locations|' | \
  	      sort -u`; \
-@@ -1061,7 +1037,7 @@ clean-pkglibLTLIBRARIES:
+@@ -1072,7 +1048,7 @@ clean-pkglibLTLIBRARIES:
  	}
  
  libcompat.la: $(libcompat_la_OBJECTS) $(libcompat_la_DEPENDENCIES) $(EXTRA_libcompat_la_DEPENDENCIES) 
@@ -72,7 +72,7 @@ See comment on patch_compat_Makefile.am.
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -1218,9 +1194,6 @@ check: $(BUILT_SOURCES)
+@@ -1229,9 +1205,6 @@ check: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) check-am
  all-am: Makefile $(LTLIBRARIES)
  installdirs:
@@ -82,7 +82,7 @@ See comment on patch_compat_Makefile.am.
  install: $(BUILT_SOURCES)
  	$(MAKE) $(AM_MAKEFLAGS) install-am
  install-exec: install-exec-am
-@@ -1256,7 +1229,7 @@ maintainer-clean-generic:
+@@ -1267,7 +1240,7 @@ maintainer-clean-generic:
  	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
  clean: clean-am
  
@@ -91,7 +91,7 @@ See comment on patch_compat_Makefile.am.
  	mostlyclean-am
  
  distclean: distclean-am
-@@ -1283,7 +1256,7 @@ install-dvi: install-dvi-am
+@@ -1294,7 +1267,7 @@ install-dvi: install-dvi-am
  
  install-dvi-am:
  
@@ -100,7 +100,7 @@ See comment on patch_compat_Makefile.am.
  
  install-html: install-html-am
  
-@@ -1323,24 +1296,23 @@ ps: ps-am
+@@ -1334,24 +1307,23 @@ ps: ps-am
  
  ps-am:
  
@@ -119,16 +119,13 @@ See comment on patch_compat_Makefile.am.
  	install-exec-am install-html install-html-am install-info \
  	install-info-am install-man install-pdf install-pdf-am \
 -	install-pkglibLTLIBRARIES install-ps install-ps-am \
--	install-strip installcheck installcheck-am installdirs \
--	maintainer-clean maintainer-clean-generic mostlyclean \
--	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
++	install-ps install-ps-am \
+ 	install-strip installcheck installcheck-am installdirs \
+ 	maintainer-clean maintainer-clean-generic mostlyclean \
+ 	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
 -	pdf pdf-am ps ps-am tags tags-am uninstall uninstall-am \
 -	uninstall-pkglibLTLIBRARIES
-+	install-ps install-ps-am install-strip installcheck \
-+	installcheck-am installdirs maintainer-clean \
-+	maintainer-clean-generic mostlyclean mostlyclean-compile \
-+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
-+	tags tags-am uninstall uninstall-am
++	pdf pdf-am ps ps-am tags tags-am uninstall uninstall-am
  
+ .PRECIOUS: Makefile
  
- dummy.c:
