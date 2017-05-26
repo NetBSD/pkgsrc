@@ -1308,7 +1308,7 @@ and you can still use binary packages from someone else.</p>
       <a class="ulink" href="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities" target="_top">vulnerabilities</a>
       file downloaded daily so that
       it remains current.  This may be done by adding an appropriate entry
-      to the root users <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?crontab+5.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
+      to the root users <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?crontab+5.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">crontab</span>(5)</span></a> entry.  For example the entry
       </p>
 <pre class="screen">
 # Download vulnerabilities file
@@ -1337,7 +1337,7 @@ fetch_pkg_vulnerabilities=YES
 check_pkg_vulnerabilities=YES
       </pre>
 <p>
-      see <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?daily.conf+5.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">daily.conf</span>(5)</span></a> and <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?security.conf+5.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">security.conf</span>(5)</span></a> for more details.
+      see <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?daily.conf+5.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">daily.conf</span>(5)</span></a> and <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?security.conf+5.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">security.conf</span>(5)</span></a> for more details.
     </p>
 </div>
 <div class="sect2">
@@ -1528,7 +1528,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     help with this.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
-<p>If you invoke the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command with
+<p>If you invoke the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> command with
 	<code class="varname">PKG_DEBUG_LEVEL=2</code>, then a huge amount of
 	information will be displayed. For example,</p>
 <pre class="screen"><strong class="userinput"><code>make patch PKG_DEBUG_LEVEL=2</code></strong></pre>
@@ -1536,10 +1536,10 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 	including the <span class="quote">&#8220;<span class="quote">patch</span>&#8221;</span> stage.</p>
 </li>
 <li class="listitem">
-<p>If you want to know the value of a certain <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+<p>If you want to know the value of a certain <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
 	definition, then the <code class="varname">VARNAME</code> definition
 	should be used, in conjunction with the show-var
-	target. e.g. to show the expansion of the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
+	target. e.g. to show the expansion of the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
 	variable <code class="varname">LOCALBASE</code>:</p>
 <pre class="screen">
 <code class="prompt">%</code> <strong class="userinput"><code>make show-var VARNAME=LOCALBASE</code></strong>
@@ -1552,11 +1552,11 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
     created yourself (see next section), that you put into
     pkgsrc/packages manually or that is located on a remote FTP
     server, you can use the "bin-install" target. This target will
-    install a binary package - if available - via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>,
+    install a binary package - if available - via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>,
     else do a <span class="command"><strong>make package</strong></span>.  The list of remote FTP
     sites searched is kept in the variable
     <code class="varname">BINPKG_SITES</code>, which defaults to
-    ftp.NetBSD.org. Any flags that should be added to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>
+    ftp.NetBSD.org. Any flags that should be added to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>
     can be put into <code class="varname">BIN_INSTALL_FLAGS</code>.  See
     <code class="filename">pkgsrc/mk/defaults/mk.conf</code> for more
     details.</p>
@@ -1595,7 +1595,7 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <a name="mk.conf"></a><p>The whole pkgsrc system is configured in a single file, usually
 called <code class="filename">mk.conf</code>. In which directory pkgsrc looks for
 that file depends on the installation. On NetBSD, when you use
-<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> from the base system, it is in the directory
+<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> from the base system, it is in the directory
 <code class="filename">/etc/</code>. In all other cases the default location is
 <code class="literal">${PREFIX}/etc/</code>, depending on where you told the
 bootstrap program to install the binary packages.</p>
@@ -1741,7 +1741,7 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
 <p>
 
     For the following command, you must be able to gain root
-    privileges using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a>
+    privileges using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a>
 
 </p>
 <pre class="programlisting">
@@ -1982,7 +1982,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 <a name="building-a-single-binary-package"></a>6.1. Building a single binary package</h2></div></div></div>
 <p>Once you have built and installed a package, you can create
     a <span class="emphasis"><em>binary package</em></span> which can be installed on
-    another system with <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. This saves having to build
+    another system with <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. This saves having to build
     the same package on a group of hosts and wasting CPU time. It also
     provides a simple means for others to install your package, should
     you distribute it.</p>
@@ -2573,7 +2573,7 @@ but downloading the entire directory may not be appropriate.</p>
 <p>The answer here is to do a <span class="command"><strong>make fetch-list</strong></span> in
 <code class="filename">/usr/pkgsrc</code> or one of its subdirectories, carry the
 resulting list to your machine at work/school and use it there.  If you
-don't have a NetBSD-compatible <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ftp+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">ftp</span>(1)</span></a> (like tnftp) at work, don't
+don't have a NetBSD-compatible <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ftp+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">ftp</span>(1)</span></a> (like tnftp) at work, don't
 forget to set <code class="varname">FETCH_CMD</code> to something that fetches a
 URL:</p>
 <p>At home:</p>
@@ -2625,7 +2625,7 @@ the one that corresponds to your release (determine via <span class="command"><s
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="using-sudo-with-pkgsrc"></a>9.12. Using 'sudo' with pkgsrc</h2></div></div></div>
 <p>When installing packages as non-root user and using the just-in-time
-<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a> feature of pkgsrc, it can become annoying to type in the root
+<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a> feature of pkgsrc, it can become annoying to type in the root
 password for each required package installed.  To avoid this, the sudo
 package can be used, which does password caching over a limited time.  To
 use it, install sudo (either as binary package or from
@@ -2699,7 +2699,7 @@ perform a security check before building any package.</p>
 	<code class="varname">CFLAGS</code> variable in your
 	<a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, these flags are passed in
 	environment variables to the <code class="filename">./configure</code>
-	scripts and to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>. Some package authors ignore the
+	scripts and to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>. Some package authors ignore the
 	<code class="varname">CFLAGS</code> from the environment variable by
 	overriding them in the <code class="filename">Makefile</code>s of their
 	package.</p>
@@ -3492,7 +3492,7 @@ converters    games         mbone         print         x11
     Primary location(s) for distribution patch files (see
     <code class="varname">PATCHFILES</code> above) if not found locally.</p></li>
 <li class="listitem"><p><code class="varname">PATCH_DIST_STRIP</code>:
-    an argument to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> that sets the pathname strip count to
+    an argument to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> that sets the pathname strip count to
     help find the correct files to patch. It defaults to
     <span class="command"><strong>-p0</strong></span>.</p></li>
 </ul></div>
@@ -3502,7 +3502,7 @@ converters    games         mbone         print         x11
 <li class="listitem"><p><code class="varname">MAINTAINER</code> is the email
     address of the person who feels responsible for this package,
     and who is most likely to look at problems or questions regarding
-    this package which have been reported with <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a>.
+    this package which have been reported with <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a>.
     Other developers may contact the <code class="varname">MAINTAINER</code>
     before making changes to the package, but are not required to
     do so. When packaging a new program, set <code class="varname">MAINTAINER</code>
@@ -3856,13 +3856,13 @@ monitor_file(...)
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="filename">INSTALL</code></span></dt>
 <dd>
-<p>This shell script is invoked twice by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
+<p>This shell script is invoked twice by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
 	    First time after package extraction and before files are
 	    moved in place, the second time after the files to install
 	    are moved in place. This can be used to do any custom
 	    procedures not possible with @exec commands in
-	    <code class="filename">PLIST</code>. See <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> and
-	    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.  See also <a class="xref" href="#files-and-dirs-outside-prefix" title="15.1. Files and directories outside the installation prefix">Section 15.1, &#8220;Files and directories outside the installation prefix&#8221;</a>.
+	    <code class="filename">PLIST</code>. See <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> and
+	    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.  See also <a class="xref" href="#files-and-dirs-outside-prefix" title="15.1. Files and directories outside the installation prefix">Section 15.1, &#8220;Files and directories outside the installation prefix&#8221;</a>.
 	    Please note that you can modify variables in it easily by using
 	    <code class="varname">FILES_SUBST</code> in the package's
 	    <code class="filename">Makefile</code>:</p>
@@ -3882,8 +3882,8 @@ FILES_SUBST+=  SOMEVAR="somevalue"
 	    this script's responsibility to clean up any additional messy details
 	    around the package's installation, since all pkg_delete knows is how to
 	    delete the files created in the original distribution.
-	    See <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
-	    and <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.
+	    See <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
+	    and <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> for more information.
 	    The same methods to replace variables can be used as for
 	    the <code class="filename">INSTALL</code> file.</p></dd>
 <dt><span class="term"><code class="filename">MESSAGE</code></span></dt>
@@ -4022,13 +4022,13 @@ FILESDIR=${.CURDIR}/../xemacs/files
 </div>
 <p>Pkgsrc consists of many <code class="filename">Makefile</code> fragments,
   each of which forms a well-defined part of the pkgsrc system. Using
-  the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> system as a programming language for a big system
+  the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> system as a programming language for a big system
   like pkgsrc requires some discipline to keep the code correct and
   understandable.</p>
 <p>The basic ingredients for <code class="filename">Makefile</code>
   programming are variables (which are actually macros) and shell
   commands. Among these shell commands may even be more complex ones
-  like <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?awk+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">awk</span>(1)</span></a> programs. To make sure that every shell command runs
+  like <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?awk+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">awk</span>(1)</span></a> programs. To make sure that every shell command runs
   as intended it is necessary to quote all variables correctly when they
   are used.</p>
 <p>This chapter describes some patterns, that appear quite often in
@@ -4042,7 +4042,7 @@ FILESDIR=${.CURDIR}/../xemacs/files
     target of a rule, always write the data to a temporary file first
     and finally rename that file. Otherwise there might occur an error
     in the middle of generating the file, and when the user runs
-    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> for the second time, the file exists and will not be
+    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> for the second time, the file exists and will not be
     regenerated properly. Example:</p>
 <pre class="programlisting">
 wrong:
@@ -4060,11 +4060,11 @@ correct:
     <code class="filename">wrong</code> will exist, although there was an error
     message in the first run. On the other hand, running <span class="command"><strong>make
     correct</strong></span> gives an error message twice, as expected.</p>
-<p>You might remember that <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> sometimes removes
+<p>You might remember that <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> sometimes removes
     <code class="literal">${.TARGET}</code> in case of error, but this only
     happens when it is interrupted, for example by pressing
     <code class="literal">^C</code>. This does <span class="emphasis"><em>not</em></span> happen
-    when one of the commands fails (like <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?false+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">false</span>(1)</span></a> above).</p>
+    when one of the commands fails (like <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?false+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">false</span>(1)</span></a> above).</p>
 </li></ul></div>
 </div>
 <div class="sect1">
@@ -4072,7 +4072,7 @@ correct:
 <a name="makefile.variables"></a>12.2. <code class="filename">Makefile</code> variables</h2></div></div></div>
 <p><code class="filename">Makefile</code> variables contain strings that
     can be processed using the five operators ``='', ``+='', ``?='',
-    ``:='', and ``!='', which are described in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man
+    ``:='', and ``!='', which are described in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man
     page.</p>
 <p>When a variable's value is parsed from a
     <code class="filename">Makefile</code>, the hash character ``#'' and the
@@ -4092,7 +4092,7 @@ correct:
     In the other cases, it is evaluated lazily.</p>
 <p>Some of the modifiers split the string into words and then
     operate on the words, others operate on the string as a whole. When
-    a string is split into words, it is split like in <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
+    a string is split into words, it is split like in <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
 <p>There are several types of variables that should be handled
     differently. Strings and two types of lists.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -4172,7 +4172,7 @@ are just copied.</p>
 <p>Example 2 quotes the string so that the shell interprets it
 correctly. But the echo command may additionally interpret strings with a
 leading dash or those containing backslashes.</p>
-<p>Example 3 can handle arbitrary strings, since <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?printf+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> only
+<p>Example 3 can handle arbitrary strings, since <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?printf+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> only
 interprets the format string, but not the next argument.</p>
 <p>In example 4, the <code class="varname">EXAMPLE_ENV</code> does not
 need to be quoted because the quoting has already been done
@@ -4216,7 +4216,7 @@ install-examples:   # produces a syntax error in the shell
         done
 </pre>
 <p>The shell only sees the text <code class="code">for egfile in ; do</code>, since
-<code class="code">${EGFILES}</code> is replaced with an empty string by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.
+<code class="code">${EGFILES}</code> is replaced with an empty string by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.
 To fix this syntax error, use one of the snippets below.</p>
 <pre class="programlisting">
 EMPTY=          # empty
@@ -4266,7 +4266,7 @@ the following code: <code class="code">${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.<
   <span class="quote">&#8220;<span class="quote">packing list</span>&#8221;</span>, i.e. a list of files that belong to
   the package (relative to the <code class="filename">${PREFIX}</code>
   directory it's been installed in) plus some additional statements
-  - see the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> man page for a full list.
+  - see the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_create+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_create</span>(1)</span></a> man page for a full list.
   This chapter addresses some issues that need attention when
   dealing with the <code class="filename">PLIST</code> file (or files, see
   below!).</p>
@@ -4280,7 +4280,7 @@ the following code: <code class="code">${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.<
 </pre>
 <p>An artificial space has been added between NetBSD and $, this is a
 workaround here to prevent CVS expanding to the filename of the guide. When
-adding the RCS ID the space should be ommited.</p>
+adding the RCS ID the space should be omitted.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -4410,7 +4410,7 @@ adding the RCS ID the space should be ommited.</p>
 <p>To use one or more files as source for the <code class="filename">PLIST</code> used
     in generating the binary package, set the variable
     <code class="varname">PLIST_SRC</code> to the names of that file(s).
-    The files are later concatenated using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?cat+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">cat</span>(1)</span></a>, and the order of things is
+    The files are later concatenated using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?cat+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">cat</span>(1)</span></a>, and the order of things is
     important. The default for <code class="varname">PLIST_SRC</code> is
     <code class="filename">${PKGDIR}/PLIST</code>.</p>
 </div>
@@ -5497,7 +5497,7 @@ options are supported by the package, and any default options settings
 if needed.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem"><p><code class="varname">PKG_OPTIONS_VAR</code> is the name of the
-<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable that the user can set to override the default
+<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable that the user can set to override the default
 options.  It should be set to
 PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em>. Do not set it to
 PKG_OPTIONS.${PKGBASE}, since <code class="varname">PKGBASE</code> is not defined
@@ -5714,36 +5714,8 @@ details.</p>
 <li class="listitem"><p>X11-based packages using imake must set
 	<code class="varname">USE_IMAKE</code> to be installed correctly under
 	<code class="varname">LOCALBASE</code>.</p></li>
-<li class="listitem">
-<p>To determine the prefix of an
-	installed package, the <code class="varname">EVAL_PREFIX</code>
-	definition can be used. It takes pairs in the format
-	<span class="quote">&#8220;<span class="quote">DIRNAME=&lt;package&gt;</span>&#8221;</span>, and the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>
-	variable <code class="varname">DIRNAME</code> will be set to the prefix
-	of the installed package &lt;package&gt;, or
-	<span class="quote">&#8220;<span class="quote">${PREFIX}</span>&#8221;</span> if the package is not
-	installed.</p>
-<p>This is best illustrated by example.</p>
-<p>The following lines are taken from
-	<code class="filename">pkgsrc/wm/scwm/Makefile</code>:</p>
-<pre class="programlisting">
-EVAL_PREFIX+=           GTKDIR=gtk+
-CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
-CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
-CONFIGURE_ARGS+=        --enable-multibyte
-</pre>
-<p>Specific defaults can be defined for the packages
-	evaluated using <code class="varname">EVAL_PREFIX</code>, by using a
-	definition of the form:</p>
-<pre class="programlisting">
-GTKDIR_DEFAULT= ${LOCALBASE}
-</pre>
-<p>where <code class="varname">GTKDIR</code> corresponds
-	to the first definition in
-	the <code class="varname">EVAL_PREFIX</code> pair.</p>
-</li>
 <li class="listitem"><p>Within <code class="filename">${PREFIX}</code>, packages should
-	install files according to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?hier+7.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">hier</span>(7)</span></a>, with the exception that
+	install files according to <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?hier+7.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">hier</span>(7)</span></a>, with the exception that
 	manual pages go into <code class="filename">${PREFIX}/man</code>, not
 	<code class="filename">${PREFIX}/share/man</code>.</p></li>
 </ul></div>
@@ -6024,9 +5996,9 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     <code class="filename">.gz</code> are uncompressed before they are
     applied, files ending in <code class="filename">.orig</code> or
     <code class="filename">.rej</code> are ignored. Any special options to
-    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> can be handed in
+    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> can be handed in
     <code class="varname">PATCH_DIST_ARGS</code>.  See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;<code class="filename">patches/*</code>&#8221;</a> for more details.</p>
-<p>By default <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special args to make
+<p>By default <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special args to make
     it fail if the patches apply with some lines of fuzz. Please
     fix (regen) the patches so that they apply cleanly. The
     rationale behind this is that patches that don't apply cleanly
@@ -6205,7 +6177,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     defined.</p>
 <p>In the <span class="emphasis"><em>install</em></span> phase, the following
     variables are useful. They are all variations of the
-    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?install+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a> command that have the owner, group and
+    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?install+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a> command that have the owner, group and
     permissions preset. <code class="varname">INSTALL</code> is the plain
     install command. The specialized variants, together with their
     intended use, are:</p>
@@ -6251,7 +6223,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 <p>Some other variables are:</p>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">INSTALL_UNSTRIPPED</code></span></dt>
-<dd><p>If set to <code class="literal">yes</code>, do not run <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?strip+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">strip</span>(1)</span></a>
+<dd><p>If set to <code class="literal">yes</code>, do not run <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?strip+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">strip</span>(1)</span></a>
       when installing binaries. Any debugging sections and symbols present in
       binaries will be preserved.
       </p></dd>
@@ -6328,13 +6300,13 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 </dd>
 <dt><span class="term">deinstall</span></dt>
 <dd>
-<p>This target does a <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> in the
+<p>This target does a <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> in the
 	  current directory, effectively de-installing the
 	  package. The following variables can be used to tune the
 	  behaviour:</p>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">PKG_VERBOSE</code></span></dt>
-<dd><p>Add a "-v" to the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> command.</p></dd>
+<dd><p>Add a "-v" to the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> command.</p></dd>
 <dt><span class="term"><code class="varname">DEINSTALLDEPENDS</code></span></dt>
 <dd><p>Remove all packages that require (depend on)
 		the given package.  This can be used to remove any
@@ -6343,7 +6315,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 		DEINSTALLDEPENDS=1</strong></span> is done in
 		<code class="filename">pkgsrc/x11/kde</code>, this is
 		likely to remove whole KDE. Works by adding
-		<span class="quote">&#8220;<span class="quote">-R</span>&#8221;</span> to the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
+		<span class="quote">&#8220;<span class="quote">-R</span>&#8221;</span> to the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a>
 		command line.</p></dd>
 </dl></div>
 </dd>
@@ -6495,7 +6467,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  recommended for advanced users.</p>
 </dd>
 <dt><span class="term">info</span></dt>
-<dd><p>This target invokes <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_info+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a> for the current
+<dd><p>This target invokes <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_info+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a> for the current
 	  package. You can use this to check which version of a
 	  package is installed.</p></dd>
 <dt><span class="term">index</span></dt>
@@ -6611,7 +6583,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <code class="filename">PLIST</code>. On upgrades, it's useful to
 	  diff the output of this command against an already
 	  existing <code class="filename">PLIST</code> file.</p>
-<p>If the package installs files via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a> or
+<p>If the package installs files via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a> or
 	  other methods that don't update file access times, be
 	  sure to add these files manually to your
 	  <code class="filename">PLIST</code>, as the <span class="quote">&#8220;<span class="quote">find
@@ -6638,12 +6610,12 @@ builds)</i></a>).
 <dd>
 <p>Used during bulk-installs to install required
 	  packages. If an up-to-date binary package is available,
-	  it will be installed via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. If not,
+	  it will be installed via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>. If not,
 	  <span class="command"><strong>make bulk-package</strong></span> will be executed,
 	  but the installed binary won't be removed.</p>
 <p>A binary package is considered
 	  <span class="quote">&#8220;<span class="quote">up-to-date</span>&#8221;</span> to be installed via
-	  <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> if:</p>
+	  <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> if:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p>None of the package's files
 	      (<code class="filename">Makefile</code>, ...) were modified
@@ -6828,7 +6800,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     variables in the file pointed to by <code class="varname">MAKECONF</code>,
     which is <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> by default. When you
     want to use those variables in the preprocessor directives of
-    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> (for example <code class="literal">.if</code> or
+    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> (for example <code class="literal">.if</code> or
     <code class="literal">.for</code>), you need to include the file
     <code class="filename">../../mk/bsd.prefs.mk</code> before, which in turn
     loads the user preferences.</p>
@@ -7068,7 +7040,7 @@ ACCEPTABLE_LICENSES+=xv-license
 </pre>
 <p>Please note that the <span class="quote">&#8220;<span class="quote">pre-req-package-name</span>&#8221;</span>
     may include any of the wildcard version numbers recognized by
-    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_info+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a>.</p>
+    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_info+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_info</span>(1)</span></a>.</p>
 <div class="orderedlist"><ol class="orderedlist" type="1">
 <li class="listitem">
 <p>If your package needs another package's binaries or
@@ -7222,7 +7194,7 @@ CONFLICTS=      bar-[0-9]*
     be set in the package Makefile. This will be carried into any
     binary package that is made from this pkgsrc entry. A
     <span class="quote">&#8220;<span class="quote">preserved</span>&#8221;</span> package will
-    not be deleted using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> unless the
+    not be deleted using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_delete+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_delete</span>(1)</span></a> unless the
     <span class="quote">&#8220;<span class="quote">-f</span>&#8221;</span> option is used.</p>
 </div>
 <div class="sect2">
@@ -7355,7 +7327,7 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
     substitution will take place. The patterns are interpreted
     relatively to the <code class="varname">WRKSRC</code> directory.</p>
 <p><code class="varname">SUBST_SED.*</code> is a list of arguments to
-    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sed+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">sed</span>(1)</span></a> that specify the actual substitution. Every sed
+    <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sed+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">sed</span>(1)</span></a> that specify the actual substitution. Every sed
     command should be prefixed with <code class="literal">-e</code>, so that
     all SUBST blocks look uniform.</p>
 <p>There are some more variables, but they are so seldomly
@@ -7554,7 +7526,7 @@ dynamic linker chooses the library with the greater REVISION number.
 </li>
 <li class="listitem">
 <p>When linking shared object (<code class="filename">.so</code>)
-	files, i.e. files that are loaded via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?dlopen+3.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">dlopen</span>(3)</span></a>, NOT
+	files, i.e. files that are loaded via <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?dlopen+3.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">dlopen</span>(3)</span></a>, NOT
 	shared libraries, use <span class="quote">&#8220;<span class="quote">-module
 	-avoid-version</span>&#8221;</span> to prevent them getting version
 	tacked on.</p>
@@ -7564,7 +7536,7 @@ dynamic linker chooses the library with the greater REVISION number.
 <li class="listitem">
 <p>When linking programs that depend on these libraries
 	<span class="emphasis"><em>before</em></span> they are installed, preface
-	the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?cc+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">cc</span>(1)</span></a> or <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ld+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">ld</span>(1)</span></a> line with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
+	the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?cc+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">cc</span>(1)</span></a> or <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ld+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">ld</span>(1)</span></a> line with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
 	--mode=link</span>&#8221;</span>, and it will find the correct
 	libraries (static or shared), but please be aware that
 	libtool will not allow you to specify a relative path in
@@ -7581,8 +7553,8 @@ ${LIBTOOL} --mode=link ${CC} -o <em class="replaceable"><code>someprog</code></e
 <p>and it will do the right thing with the libraries.</p>
 </li>
 <li class="listitem">
-<p>When installing libraries, preface the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?install+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a>
-	or <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?cp+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">cp</span>(1)</span></a> command with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
+<p>When installing libraries, preface the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?install+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">install</span>(1)</span></a>
+	or <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?cp+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">cp</span>(1)</span></a> command with <span class="quote">&#8220;<span class="quote">${LIBTOOL}
 	--mode=install</span>&#8221;</span>, and change the library name to
 	<code class="filename">.la</code>. e.g.</p>
 <pre class="programlisting">
@@ -7590,7 +7562,7 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 </pre>
 <p>This will install the static <code class="filename">.a</code>,
 	shared library, any needed symlinks, and run
-	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ldconfig+8.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">ldconfig</span>(8)</span></a>.</p>
+	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ldconfig+8.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">ldconfig</span>(8)</span></a>.</p>
 </li>
 <li class="listitem"><p>In your <code class="filename">PLIST</code>, include only
 	the <code class="filename">.la</code>
@@ -8642,10 +8614,10 @@ builds)</i></a>.</p>
 <a name="submitting-your-package"></a>21.2. Submitting source packages (for non-NetBSD-developers)</h2></div></div></div>
 <p>First, check that your package is complete, compiles and
 	runs well; see <a class="xref" href="#debug" title="Chapter 20. Debugging">Chapter 20, <i>Debugging</i></a> and the rest of this
-	document. Next, generate an uuencoded gzipped <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a>
+	document. Next, generate an uuencoded gzipped <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?tar+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">tar</span>(1)</span></a>
 	archive that contains all files that make up the package.
 	Finally, send this package to the pkgsrc bug tracking system,
-	either with the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> command, or if you don't have
+	either with the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> command, or if you don't have
 	that, go to the web page
 	<a class="ulink" href="http://www.NetBSD.org/support/send-pr.html" target="_top">http://www.NetBSD.org/support/send-pr.html</a>,
 	which contains some instructions and a link to a form where you
@@ -8801,7 +8773,7 @@ instead of <span class="quote">&#8220;<span class="quote">../../category/package
 <code class="varname">PREV_PKGPATH</code> to the previous category/package
 pathname.  The <code class="varname">PREV_PKGPATH</code> can be used by tools
 for doing an update using pkgsrc building; for example, it can
-search the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_summary+5.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">pkg_summary</span>(5)</span></a> database for <code class="varname">PREV_PKGPATH</code>
+search the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_summary+5.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">pkg_summary</span>(5)</span></a> database for <code class="varname">PREV_PKGPATH</code>
 (if no <code class="varname">SUPERSEDES</code>) and then use the corresponding
 new <code class="varname">PKGPATH</code> for that moved package.  Note that
 it may have multiple matches, so the tool should also check on the
@@ -8837,7 +8809,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm79248400"></a><dl>
+<a name="idm81501488"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8882,7 +8854,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm79248016"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm81501104"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8891,14 +8863,14 @@ do?</a>
 <tr class="answer">
 <td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">MAKEFLAGS</code> are the flags passed
-	to the pkgsrc-internal invocations of <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, while
+	to the pkgsrc-internal invocations of <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, while
 	<code class="varname">MAKE_FLAGS</code> are the flags that are passed to
 	the <code class="varname">MAKE_PROGRAM</code> when building the
 	package. [FIXME: What is .MAKEFLAGS for?]</p></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm79243920"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm81497008"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8907,7 +8879,7 @@ do?</a>
 <tr class="answer">
 <td align="left" valign="top"></td>
 <td align="left" valign="top"><p><code class="varname">MAKE</code> is the path to the
-	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
+	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> program that is used in the pkgsrc
 	infrastructure. <code class="varname">GMAKE</code> is the path to GNU
 	Make, but you need to say <code class="varname">USE_TOOLS+=gmake</code> to
 	use that. <code class="varname">MAKE_PROGRAM</code> is the path to the
@@ -8916,7 +8888,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm79239568"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm81492656"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8934,7 +8906,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79235344"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm81488432"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8947,7 +8919,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79233168"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm81486256"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8963,7 +8935,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79221776"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm81483056"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8976,7 +8948,7 @@ do?</a>
 	assignment operator, although it looks like it.
 	Instead, it is a degenerate form of
 	<code class="code">${LIST:<em class="replaceable"><code>old_string</code></em>=<em class="replaceable"><code>new_string</code></em>}</code>,
-	which is documented in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which is
+	which is documented in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which is
 	commonly used in the form <code class="code">${SRCS:.c=.o}</code>. In the
 	case of <code class="varname">MASTER_SITE_*</code>,
 	<em class="replaceable"><code>old_string</code></em> is the empty string and
@@ -8987,7 +8959,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79214992"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm81476272"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9005,14 +8977,14 @@ do?</a>
 	etc.</p></dd>
 <dt><span class="term"><a class="ulink" href="http://www.NetBSD.org/mailinglists/index.html#pkgsrc-bugs" target="_top">pkgsrc-bugs</a></span></dt>
 <dd><p>All bug reports in category "pkg" sent with
-	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear here. Please do not report your bugs here
+	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear here. Please do not report your bugs here
 	directly; use one of the other mailing
 	lists.</p></dd>
 </dl></div></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79211152"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm81472432"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9060,7 +9032,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79204624"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm81465904"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9921,7 +9893,7 @@ INFO_FILES=     yes
 <a name="example-descr"></a>A.1.2. DESCR</h3></div></div></div>
 <pre class="programlisting">
 GNU version of yacc.  Can make re-entrant parsers, and numerous other
-improvements.  Why you would want this when Berkeley <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?yacc+1.i386+NetBSD-7.0.2"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
+improvements.  Why you would want this when Berkeley <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?yacc+1.i386+NetBSD-7.1"><span class="citerefentry"><span class="refentrytitle">yacc</span>(1)</span></a> is part
 of the NetBSD source tree is beyond me.
 </pre>
 </div>
