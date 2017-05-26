@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:28:06 agc Exp $
+$NetBSD: distinfo,v 1.8 2017/05/26 12:45:15 mef Exp $
 
-SHA1 (Data-Dumper-Concise-2.022.tar.gz) = c9f04ba2f07a24d4d49c934e5fd8f3ab86169552
-RMD160 (Data-Dumper-Concise-2.022.tar.gz) = 648de7d307cd650503dc0e5ad63d4a0cbd3beac3
-SHA512 (Data-Dumper-Concise-2.022.tar.gz) = a3b17d740571db3d1968438830af5aee912f671dbc3692b2708ecb9301bc7770025d48202c3414a8e50cc2b48050f8b27b2a2c9b62d01681f0ce06888c37bd40
-Size (Data-Dumper-Concise-2.022.tar.gz) = 22637 bytes
+SHA1 (Data-Dumper-Concise-2.023.tar.gz) = 1cb0fe8f3bd09e5d46ef57786667fe7879a2a35b
+RMD160 (Data-Dumper-Concise-2.023.tar.gz) = 4d862de78d107318c53d98ddd9a86913fefc683b
+SHA512 (Data-Dumper-Concise-2.023.tar.gz) = cc193bc60228dd3bb1c50d4545ee6a507d80ada27548303bb04fd720504746a2d5a4f32d7c33f52dfaf135a2456e019d794a7d693e2c56df9ea9d0ff385e8cd0
+Size (Data-Dumper-Concise-2.023.tar.gz) = 7867 bytes
