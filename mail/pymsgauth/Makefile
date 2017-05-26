@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2014/05/17 16:10:46 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/05/26 01:35:58 schmonz Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://pyropus.ca/software/pymsgauth/
 COMMENT=		Automatically process qsecretary confirmation requests
+LICENSE=		gnu-gpl-v2
 
 PYMSGAUTH_PROGRAMS=	pymsgauth-*
 DOCS=			BUGS CHANGELOG COPYING pymsgauth.txt
@@ -21,7 +22,8 @@ HTMLDOCDIR=		share/doc/html/pymsgauth
 EGDIR=			share/examples/pymsgauth
 
 NO_BUILD=		yes
-REPLACE_PYTHON=	${PYMSGAUTH_PROGRAMS} *.py
+REPLACE_PYTHON=		${PYMSGAUTH_PROGRAMS} *.py
+PYTHON_VERSIONS_ACCEPTED=	27
 
 FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
 
