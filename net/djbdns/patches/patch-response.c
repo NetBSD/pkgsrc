@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2011/06/09 00:55:41 schmonz Exp $
+$NetBSD: patch-response.c,v 1.1 2017/05/26 15:16:45 schmonz Exp $
 
 Fix the security hole found by Matthew Dempsky.
 
