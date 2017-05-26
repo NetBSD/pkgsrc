@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.17 2015/07/18 11:11:53 adam Exp $
+$NetBSD: patch-aq,v 1.18 2017/05/26 12:09:11 jperkin Exp $
 
 --- configure.orig	2015-05-07 14:14:56.000000000 +0000
 +++ configure
@@ -92,6 +92,15 @@ $NetBSD: patch-aq,v 1.17 2015/07/18 11:11:53 adam Exp $
  		;;
  	    3.4*)
  		canBuildQtXmlPatterns="no"
+@@ -7734,7 +7747,7 @@ case "$XPLATFORM" in
+     *-g++*)
+ 	# Check gcc's version
+ 	case "$(${QMAKE_CONF_COMPILER} -dumpversion)" in
+-	    5*|4*|3.4*)
++	    [4-9]*|3.4*)
+ 		;;
+             3.3*)
+                 canBuildWebKit="no"
 @@ -7981,7 +7994,7 @@ fi
  # env. variable.
  if [ "$PLATFORM_MAC" = "yes" ] && [ "$CFG_MAC_XARCH" != "no" ]; then
