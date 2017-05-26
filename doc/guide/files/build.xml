@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.77 2016/03/29 11:32:58 tnn Exp $ -->
+<!-- $NetBSD: build.xml,v 1.78 2017/05/26 17:59:37 leot Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -85,41 +85,6 @@
 	<para>X11-based packages using imake must set
 	<varname>USE_IMAKE</varname> to be installed correctly under
 	<varname>LOCALBASE</varname>.</para>
-      </listitem>
-
-      <listitem>
-	<para>To determine the prefix of an
-	installed package, the <varname>EVAL_PREFIX</varname>
-	definition can be used. It takes pairs in the format
-	<quote>DIRNAME=&lt;package&gt;</quote>, and the &man.make.1;
-	variable <varname>DIRNAME</varname> will be set to the prefix
-	of the installed package &lt;package&gt;, or
-	<quote>${PREFIX}</quote> if the package is not
-	installed.</para>
-
-	<para>This is best illustrated by example.</para>
-
-	<para>The following lines are taken from
-	<filename>pkgsrc/wm/scwm/Makefile</filename>:</para>
-
-<programlisting>
-EVAL_PREFIX+=           GTKDIR=gtk+
-CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
-CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
-CONFIGURE_ARGS+=        --enable-multibyte
-</programlisting>
-
-	<para>Specific defaults can be defined for the packages
-	evaluated using <varname>EVAL_PREFIX</varname>, by using a
-	definition of the form:</para>
-
-<programlisting>
-GTKDIR_DEFAULT= ${LOCALBASE}
-</programlisting>
-
-	<para>where <varname>GTKDIR</varname> corresponds
-	to the first definition in
-	the <varname>EVAL_PREFIX</varname> pair.</para>
       </listitem>
 
       <listitem>
