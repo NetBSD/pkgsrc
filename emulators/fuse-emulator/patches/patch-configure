@@ -1,15 +1,14 @@
-$NetBSD: patch-configure,v 1.1 2016/01/17 14:27:38 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2017/05/26 19:35:48 adam Exp $
 
-Fix unportable test(1) construct.
+Do not assume GTK requires linking against X11.
 
---- configure.orig	2013-06-14 20:38:14.000000000 +0000
+--- configure.orig	2017-05-26 17:54:18.000000000 +0000
 +++ configure
-@@ -17868,7 +17868,7 @@ if test "$desktopdir" = yes; then
- else
-   DESKTOP_DATADIR="$datadir"
+@@ -15004,7 +15004,6 @@ $as_echo "$as_me: WARNING: GTK+ not foun
+ $as_echo "#define UI_GTK 1" >>confdefs.h
+ 
+     UI=gtk;
+-    LIBS="$LIBS -lX11";
+   fi
  fi
-- if test "$desktopdir" == yes; then
-+ if test "$desktopdir" = yes; then
-   DESKTOP_DATADIR_TRUE=
-   DESKTOP_DATADIR_FALSE='#'
- else
+ 
