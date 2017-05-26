@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2017/01/14 20:49:07 schmonz Exp $
+$NetBSD: distinfo,v 1.10 2017/05/26 14:34:43 schmonz Exp $
 
 SHA1 (mess822-0.58.tar.gz) = ef3380c793c852d40688c108d164234ecf8a5362
 RMD160 (mess822-0.58.tar.gz) = 40fbcb5af92882e133ab3653c6119022180caedb
@@ -8,7 +8,7 @@ SHA1 (mess822-smtp-auth-patch.txt) = 985977608139b0549b96cac417032b1711542162
 RMD160 (mess822-smtp-auth-patch.txt) = 1284dcba571b0593696722e27c8b68292279b7a2
 SHA512 (mess822-smtp-auth-patch.txt) = 6c8c3317fee977f091245f428225b34fc6a229814a6f4fee59249407ae3367afae7feff62c324d93b19b900fac03bbb7f28dff12f36995fc7c20c0ae87afeac3
 Size (mess822-smtp-auth-patch.txt) = 30031 bytes
-SHA1 (patch-aa) = 9333469af2636d97917bfff768954e36a8026733
-SHA1 (patch-ab) = 81ad05a71e8caa01302768c2bd7837c644adbeb3
-SHA1 (patch-ac) = e9325df21f6dd114c0bc9327708c82f8b692c1d5
-SHA1 (patch-ad) = bc5df5f91e8451a0cf414ec1e2de83d1244f119f
+SHA1 (patch-Makefile) = bc5df5f91e8451a0cf414ec1e2de83d1244f119f
+SHA1 (patch-hier.c) = 9333469af2636d97917bfff768954e36a8026733
+SHA1 (patch-leapsecs__read.c) = e9325df21f6dd114c0bc9327708c82f8b692c1d5
+SHA1 (patch-strerr__sys.c) = 81ad05a71e8caa01302768c2bd7837c644adbeb3
