@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2011/06/09 00:55:41 schmonz Exp $
+$NetBSD: patch-hier.c,v 1.1 2017/05/26 15:16:45 schmonz Exp $
 
 PKG_SYSCONFDIR support.
 
