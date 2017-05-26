@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2016/12/15 12:04:20 schmonz Exp $
+$NetBSD: distinfo,v 1.23 2017/05/26 15:16:45 schmonz Exp $
 
 SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
 RMD160 (djbdns-1.05.tar.gz) = a832cbfd93e4ccec6a565492a4ee0b3c1b4b68ed
@@ -28,7 +28,7 @@ SHA1 (0002-dnscache-cache-soa-records.patch) = ac9b6a62c62588205cc4dc71da4e0ad66
 RMD160 (0002-dnscache-cache-soa-records.patch) = 0b58e57bc11b36113c5fef73a64c869895f83889
 SHA512 (0002-dnscache-cache-soa-records.patch) = f65ca7dfc8e85f469f22d72a1c79126c35243dc077abf4b688eb7d057f19456dc8a3665f558a8a3c1908f96fa1838792aa1bc317d2e89f4953020828c05926e6
 Size (0002-dnscache-cache-soa-records.patch) = 2944 bytes
-SHA1 (patch-aa) = 873897ad6b97baff363874a6a79c8da44383c283
-SHA1 (patch-ab) = 874af27489ad4597e213cfe05a7f2f919081db20
-SHA1 (patch-ac) = 4f089b63664b7e4685b77fc55b287860c8c68229
-SHA1 (patch-ad) = 0dffb59090ccb4977c65885f062eb37255ccd0d9
+SHA1 (patch-Makefile) = 0dffb59090ccb4977c65885f062eb37255ccd0d9
+SHA1 (patch-dnscache-conf.c) = 873897ad6b97baff363874a6a79c8da44383c283
+SHA1 (patch-hier.c) = 874af27489ad4597e213cfe05a7f2f919081db20
+SHA1 (patch-response.c) = 4f089b63664b7e4685b77fc55b287860c8c68229
