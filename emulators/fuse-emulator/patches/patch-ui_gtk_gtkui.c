@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2016/01/17 14:27:38 wiz Exp $
+$NetBSD: patch-ui_gtk_gtkui.c,v 1.1 2017/05/26 19:35:48 adam Exp $
+
+Fix for a case when GTK has been compiled with Quartz support.
 
 --- ui/gtk/gtkui.c.orig	2010-12-20 20:17:04.000000000 +0000
 +++ ui/gtk/gtkui.c
