@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2089 2017/05/26 04:28:04 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2090 2017/05/26 09:01:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2618,3 +2618,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/dtb-arm64-tegra210 version 4.11.3 [jmcneill 2017-05-25]
 	Updated mail/pymsgauth to 2.1.0nb6 [schmonz 2017-05-26]
 	Updated net/py-boto to 2.47.0 [adam 2017-05-26]
+	Updated security/py-cryptography_vectors to 1.8.2 [adam 2017-05-26]
