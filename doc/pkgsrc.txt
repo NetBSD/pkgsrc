@@ -3619,7 +3619,7 @@ Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
 An artificial space has been added between NetBSD and $, this is a workaround
 here to prevent CVS expanding to the filename of the guide. When adding the RCS
-ID the space should be ommited.
+ID the space should be omitted.
 
 13.2. Semi-automatic PLIST generation
 
@@ -4774,27 +4774,6 @@ When choosing which of these variables to use, follow the following rules:
 
   * X11-based packages using imake must set USE_IMAKE to be installed correctly
     under LOCALBASE.
-
-  * To determine the prefix of an installed package, the EVAL_PREFIX definition
-    can be used. It takes pairs in the format "DIRNAME=<package>", and the make
-    (1) variable DIRNAME will be set to the prefix of the installed package
-    <package>, or "${PREFIX}" if the package is not installed.
-
-    This is best illustrated by example.
-
-    The following lines are taken from pkgsrc/wm/scwm/Makefile:
-
-    EVAL_PREFIX+=           GTKDIR=gtk+
-    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
-    CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
-    CONFIGURE_ARGS+=        --enable-multibyte
-
-    Specific defaults can be defined for the packages evaluated using
-    EVAL_PREFIX, by using a definition of the form:
-
-    GTKDIR_DEFAULT= ${LOCALBASE}
-
-    where GTKDIR corresponds to the first definition in the EVAL_PREFIX pair.
 
   * Within ${PREFIX}, packages should install files according to hier(7), with
     the exception that manual pages go into ${PREFIX}/man, not ${PREFIX}/share/
