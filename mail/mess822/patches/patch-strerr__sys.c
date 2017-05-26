@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2017/01/02 03:40:21 schmonz Exp $
+$NetBSD: patch-strerr__sys.c,v 1.1 2017/05/26 14:34:43 schmonz Exp $
 
 Initialize strerr_sys to build on Mac OS X (modeled after the patch
 for qmail).
