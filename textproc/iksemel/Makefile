@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/09/19 13:04:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.6 2017/05/26 04:19:59 adam Exp $
 
 DISTNAME=	iksemel-1.4
 PKGREVISION=	3
@@ -17,8 +16,6 @@ USE_TOOLS+=	pkg-config
 INFO_FILES=	yes
 
 PKGCONFIG_OVERRIDE+=	iksemel.pc.in
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
