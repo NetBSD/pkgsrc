@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/06/19 09:16:15 kamil Exp $
+$NetBSD: distinfo,v 1.2 2017/05/27 13:43:00 mef Exp $
 
-SHA1 (xjadeo-0.8.5.tar.gz) = ed72634312e2d1d5b13a4eeef444895c3f3abfc5
-RMD160 (xjadeo-0.8.5.tar.gz) = 7794ace9bb5b84b4b4fa603347c48d482b95541d
-SHA512 (xjadeo-0.8.5.tar.gz) = 124644df6b18518fd7cfabea47cf4b466d41f771891df6805c95a63f18ab9b71ac1568e1d0cdb7df5361f19e742e850fc57ea1239547c00484c15f1a85aa2b18
-Size (xjadeo-0.8.5.tar.gz) = 996023 bytes
-SHA1 (patch-configure.ac) = 59dec1d2b0d1922ef8cde791d7c8ac1f349eaa82
-SHA1 (patch-src_xjadeo_Makefile.am) = 42f6a6af900ef495430cf52dea74f83c7c6ddae6
+SHA1 (xjadeo-0.8.7.tar.gz) = 932d165999ff14b3eeb938571ddf17bb670882dc
+RMD160 (xjadeo-0.8.7.tar.gz) = c582667d97715a1339acd032f70bec40159aa19a
+SHA512 (xjadeo-0.8.7.tar.gz) = a3ea75707a69969e473906bec39b3cda1f66e880600ced8dcb485271ce3b4af7a47181ee229cc070036daf1549333b5017b2d6849227c72a7e3546f04c25df48
+Size (xjadeo-0.8.7.tar.gz) = 996237 bytes
 SHA1 (patch-src_xjadeo_libsofd.c) = 4af37e40a9e2dacae8a9983228a98ed58e1a612f
