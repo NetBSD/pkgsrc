@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.idx,v 1.8 2017/05/25 20:41:27 schmonz Exp $
+@comment $NetBSD: PLIST.idx,v 1.9 2017/05/27 14:15:26 schmonz Exp $
 bin/ezmlm-accept
 bin/ezmlm-archive
-bin/ezmlm-cgi
 bin/ezmlm-check
 bin/ezmlm-checksub
 bin/ezmlm-clean
@@ -26,6 +25,7 @@ ${PLIST.mysql}lib/ezmlm/sub-mysql.so
 ${PLIST.pgsql}lib/ezmlm/sub-pgsql.so
 ${PLIST.sqlite3}lib/ezmlm/sub-sqlite3.so
 lib/ezmlm/sub-std.so
+libexec/cgi-bin/ezmlm-cgi
 man/man1/ezmlm-accept.1
 man/man1/ezmlm-archive.1
 man/man1/ezmlm-cgi.1
@@ -51,4 +51,17 @@ man/man1/ezmlm-tstdig.1
 man/man5/ezmlmglrc.5
 man/man5/ezmlmrc.5
 man/man5/ezmlmsubrc.5
+share/doc/ezmlm-idx/BLURB
+share/doc/ezmlm-idx/CHANGES
+share/doc/ezmlm-idx/CHANGES
+share/doc/ezmlm-idx/DOWNGRADE
+share/doc/ezmlm-idx/FAQ
+share/doc/ezmlm-idx/INSTALL
+share/doc/ezmlm-idx/README
+share/doc/ezmlm-idx/README.mysql
+share/doc/ezmlm-idx/README.pgsql
+share/doc/ezmlm-idx/README.std
+share/doc/ezmlm-idx/THANKS
+share/doc/ezmlm-idx/TODO
+share/doc/ezmlm-idx/UPGRADE
 share/examples/ezmlm-idx/default

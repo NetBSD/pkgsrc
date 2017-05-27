@@ -1,4 +1,4 @@
-# $NetBSD: cf-files.mk,v 1.1 2017/05/25 20:41:27 schmonz Exp $
+# $NetBSD: cf-files.mk,v 1.2 2017/05/27 14:15:26 schmonz Exp $
 #
 EZMLM_CF_FILES+=	ch_GB/ezmlmrc
 EZMLM_CF_FILES+=	ch_GB/text/bottom
@@ -201,6 +201,7 @@ EZMLM_CF_FILES+=	es/text/unsub-bad
 EZMLM_CF_FILES+=	es/text/unsub-confirm
 EZMLM_CF_FILES+=	es/text/unsub-nop
 EZMLM_CF_FILES+=	es/text/unsub-ok
+EZMLM_CF_FILES+=	ezcgi.css
 EZMLM_CF_FILES+=	ezcgirc
 EZMLM_CF_FILES+=	ezmlmglrc
 EZMLM_CF_FILES+=	ezmlmrc

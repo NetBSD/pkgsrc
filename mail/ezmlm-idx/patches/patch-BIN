@@ -1,0 +1,14 @@
+$NetBSD: patch-BIN,v 1.1 2017/05/27 14:15:26 schmonz Exp $
+
+Install CGI program in a hier(7)-like place.
+
+--- BIN.orig	2014-05-15 02:54:21.000000000 +0000
++++ BIN
+@@ -1,7 +1,6 @@
+ d:::755:::
+ c:::755:/:ezmlm-accept:
+ c:::755:/:ezmlm-archive:
+-c:::755:/:ezmlm-cgi:
+ c:::755:/:ezmlm-check:
+ c:::755:/:ezmlm-checksub:
+ c:::755:/:ezmlm-clean:
