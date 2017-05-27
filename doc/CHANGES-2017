@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2098 2017/05/27 14:15:33 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2099 2017/05/27 16:58:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2638,3 +2638,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/nghttp2 to 1.23.0 [adam 2017-05-26]
 	Updated audio/xjadeo to 0.8.7 [mef 2017-05-27]
 	Updated mail/ezmlm-idx to 7.2.2nb1 [schmonz 2017-05-27]
+	Updated mail/mess822 to 0.58nb5 [schmonz 2017-05-27]
