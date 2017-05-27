@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.23 2017/05/25 21:13:09 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.24 2017/05/27 19:03:26 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -476,4 +476,10 @@ lang/opendjk8: build fix for FreeBSD
 
 Pullup ticket #5433 - requested by bsiegert
 lang/go: security update
+
+Pullup ticket #5398 - requested by leot
+net/youtube-dl: bugfix
+
+Pullup ticket #5431 - requested by he
+net/samba4: security fix
 
