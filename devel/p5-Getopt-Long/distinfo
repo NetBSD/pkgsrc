@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.15 2016/06/18 20:23:25 mef Exp $
+$NetBSD: distinfo,v 1.16 2017/05/27 23:37:41 wen Exp $
 
-SHA1 (Getopt-Long-2.49.1.tar.gz) = 5aea4d4b1f4428900f01be8a42c72e943f247e0c
-RMD160 (Getopt-Long-2.49.1.tar.gz) = fdcb697bfbe4ea3e3c88d2b52a68809fd5f37b14
-SHA512 (Getopt-Long-2.49.1.tar.gz) = 3a28eabdc8847e10d82b20f12f59f3797d73ea15245aeaacd678f0b1111ddc024e91c9ca0cf3897116533fb35dc4592e029444dee931844ddbadf90cda375200
-Size (Getopt-Long-2.49.1.tar.gz) = 42731 bytes
+SHA1 (Getopt-Long-2.50.tar.gz) = e25d194a7b2d5c25a4c926b60c4580e640173297
+RMD160 (Getopt-Long-2.50.tar.gz) = 8afcdc2569d02f3e9be026839425f7ff4c86d7d5
+SHA512 (Getopt-Long-2.50.tar.gz) = be4e8e3511d84f7919cd3df9e9aa9540dd522af47fc34bf4560a0212dd3c5d6571369ad502dfb4641918a43f8cecec3faa3d43adacfe706cdf9fe498d1ef0b6d
+Size (Getopt-Long-2.50.tar.gz) = 43031 bytes
 SHA1 (patch-Makefile.PL) = 6be5f0773432d6a28c5f1b43afdcf6fed0fd0b54
