@@ -1,0 +1,9 @@
+$NetBSD: patch-CGIBIN,v 1.1 2017/05/27 14:15:26 schmonz Exp $
+
+Install CGI program in a hier(7)-like place.
+
+--- CGIBIN.orig	2017-05-27 13:49:05.000000000 +0000
++++ CGIBIN
+@@ -0,0 +1,2 @@
++d:::755:::
++c:::755:/:ezmlm-cgi:
