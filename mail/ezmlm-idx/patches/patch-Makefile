@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2017/05/25 20:44:23 schmonz Exp $
+$NetBSD: patch-Makefile,v 1.2 2017/05/27 14:15:26 schmonz Exp $
 
 DESTDIR support.
 
 --- Makefile.orig	2014-05-15 02:54:21.000000000 +0000
 +++ Makefile
-@@ -965,12 +965,12 @@ libcompile idxthread.c error.h alloc.h s
+@@ -965,12 +965,13 @@ libcompile idxthread.c error.h alloc.h s
  
  install: \
  it man installer conf-bin conf-etc conf-lang conf-lib conf-man BIN ETC LIB MAN
@@ -15,6 +15,7 @@ DESTDIR support.
 -	rm -f "`head -n 1 conf-etc`"/default
 -	ln -sf "`head -n 1 conf-lang`" "`head -n 1 conf-etc`"/default
 +	./installer "`head -1 conf-destdir``head -n 1 conf-bin`" < BIN
++	./installer "`head -1 conf-destdir``head -n 1 conf-cgibin`" < CGIBIN
 +	./installer "`head -1 conf-destdir``head -n 1 conf-egdir`" < ETC
 +	./installer "`head -1 conf-destdir``head -n 1 conf-man`" < MAN
 +	./installer "`head -1 conf-destdir``head -n 1 conf-lib`" < LIB
