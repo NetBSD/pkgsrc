@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/08/23 12:49:13 richard Exp $
+# $NetBSD: options.mk,v 1.3.6.1 2017/05/27 19:01:15 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads fam ldap pam winbind # cups # cups option is broken for me.
@@ -81,16 +81,9 @@ PLIST_VARS+=		pam
 .  include "../../mk/pam.buildlink3.mk"
 
 CONFIGURE_ARGS+=	--with-pam
-CONFIGURE_ARGS+=	--with-pam_smbpass
 CONFIGURE_ARGS+=	--with-pammodulesdir=${SMB_PAMMODULES}
 PLIST.pam=		yes
 INSTALLATION_DIRS+=	${EGDIR}/pam_smbpass
-
-.PHONY: samba-pam-smbpass-install
-post-install: samba-pam-smbpass-install
-samba-pam-smbpass-install:
-	${INSTALL_DATA} ${WRKSRC}/source3/pam_smbpass/samples/* \
-		${DESTDIR}${PREFIX}/${EGDIR}/pam_smbpass/
 .else
 CONFIGURE_ARGS+=	--without-pam
 .endif
