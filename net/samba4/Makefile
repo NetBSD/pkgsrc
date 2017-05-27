@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2017/02/12 06:25:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.27.2.1 2017/05/27 19:01:15 bsiegert Exp $
 
 DISTNAME=	samba-${VERSION}
-PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -12,8 +11,8 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.3.11
-CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
+VERSION=	4.6.4
+CONFLICTS+=	ja-samba-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-iso8601-[0-9]*:../../time/py-iso8601
@@ -51,7 +50,7 @@ FILES_SUBST+=		SMB_PID=${SMB_PID}
 
 # mktemp is useful for the replacement adduser script, but don't require
 # a full dependency since it's not actually needed by samba.
-USE_TOOLS+=		gmake mktemp perl:run
+USE_TOOLS+=		gmake mktemp perl:run pkg-config
 
 REPLACE_PERL=		script/findsmb.in
 
@@ -87,10 +86,8 @@ CONFIGURE_ARGS+=	--with-privatelibdir=${SMB_PRIVATELIB}
 CONFIGURE_ARGS+=	--with-privileged-socket-dir=${SMB_PRIVSOCKETS}
 CONFIGURE_ARGS+=	--with-configdir=${SMB_CONFIG}
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-gettext=${BUILDLINK_PREFIX.gettext}
 #CONFIGURE_ARGS+=	--bundled-libraries=com_err
 CONFIGURE_ARGS+=	--enable-gnutls
-CONFIGURE_ARGS+=	--with-system-mitkrb5
 CONFIGURE_ARGS+=	--abi-check-disable
 #CONFIGURE_ARGS+=	--bundled-libraries=!crypto,ldb,ntdb,talloc,tdb,tevent
 .if defined(MAKE_JOBS) && !empty(MAKE_JOBS) && !(defined(MAKE_JOBS_SAFE) && !empty(MAKE_JOBS_SAFE:M[nN][oO]))
@@ -145,7 +142,8 @@ RCD_SCRIPTS+=	samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
-SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
+SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh scripts/findsmb.in
+SUBST_FILES.paths+=	source3/script/findsmb.in
 SUBST_STAGE.paths=	post-patch
 SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g'
 SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
@@ -153,6 +151,7 @@ SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g'
 SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
 SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g'
 SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
 
 SUBST_CLASSES+=		logpath
 SUBST_MESSAGE.logpath=	Fixing log path.
@@ -202,6 +201,4 @@ PY_PATCHPLIST=	yes
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-BUILDLINK_API_DEPENDS.mit-krb5+=	mit-krb5>=1.9.0
-.include "../../security/mit-krb5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

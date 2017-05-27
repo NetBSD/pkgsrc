@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.11 2016/07/07 16:44:14 taca Exp $
+$NetBSD: distinfo,v 1.11.6.1 2017/05/27 19:01:15 bsiegert Exp $
 
-SHA1 (samba-4.3.11.tar.gz) = 44399fdcbcf5eba5f86548781e8aef490264de6b
-RMD160 (samba-4.3.11.tar.gz) = 641234bb6e4f1ef8d65ab3f0c9b90ede41dd2f89
-SHA512 (samba-4.3.11.tar.gz) = 7b9bcdf158c64a26c81e5a03a94a521f238a7573ab31c1252e90f2604ae0d1303c998d3bcda18c4feb9049a659371a3af2bdfcc546b5251314f19a500b6a0b7a
-Size (samba-4.3.11.tar.gz) = 20573432 bytes
+SHA1 (samba-4.6.4.tar.gz) = eabfbb4d4ed17e25feb1aec81187011fca0f5f8a
+RMD160 (samba-4.6.4.tar.gz) = 91b77289adb41b1570e82411795fd8e7bb9a7543
+SHA512 (samba-4.6.4.tar.gz) = c20e6ad35b701816c35959fd242470dd899fb1b0bf02277ebdc87624dc1059199854b8d759374ab8b23f4842aa01347389a34319635091ade5afb5a94810eac1
+Size (samba-4.6.4.tar.gz) = 21108045 bytes
 SHA1 (patch-buildtools_wafsamba_wscript) = 5604936a825675647157331df2333f4237c611f5
 SHA1 (patch-lib_nss__wrapper_nss__wrapper.c) = c692fa33ec17ed4f1dc1e40c1fadf7846d976824
-SHA1 (patch-lib_param_loadparm.h) = d1c9df37bb9969d2788dd70e613067df6bb64f26
+SHA1 (patch-lib_param_loadparm.h) = 0216b69d33d1e17260a446e11bee764116c52b18
 SHA1 (patch-lib_replace_wscript) = b6a042c2c13c0be78d7b64c0ce2efdaf4bbb1f3b
 SHA1 (patch-lib_tevent_wscript) = 9617b9e40d2ffc8d6297390a20ba9bd44147d669
 SHA1 (patch-nsswitch_wscript__build) = e8a6251e031ffa13d6347fade8891f7afd65d3eb
-SHA1 (patch-source3_script_tests_test__smbclient__s3.sh) = 26cd7dc3a5a282f5b80e00b52db6abd722555254
+SHA1 (patch-source3_script_tests_test__smbclient__s3.sh) = 4b4be0691322afc70769602069c8a1bbd81ab639
 SHA1 (patch-source4_scripting_wsript_build) = 6053076427835ac4fe97d93b2ff67d2caccc71f4
 SHA1 (patch-testprogs_blackbox_dbcheck-oldrelease.sh) = 0bd2067b77a1db93e3cb5d80964a7be2b06802ff

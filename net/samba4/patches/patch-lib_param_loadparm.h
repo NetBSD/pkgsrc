@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_param_loadparm.h,v 1.1 2015/09/28 17:37:04 ryoon Exp $
+$NetBSD: patch-lib_param_loadparm.h,v 1.1.12.1 2017/05/27 19:01:15 bsiegert Exp $
 
 * Fix NetBSD build.
 
---- lib/param/loadparm.h.orig	2015-07-21 09:47:48.000000000 +0000
+--- lib/param/loadparm.h.orig	2017-01-11 07:55:14.000000000 +0000
 +++ lib/param/loadparm.h
 @@ -31,6 +31,9 @@
  #define _LOADPARM_H
@@ -11,6 +11,6 @@ $NetBSD: patch-lib_param_loadparm.h,v 1.1 2015/09/28 17:37:04 ryoon Exp $
 +#if defined(__NetBSD__)
 +#include <sys/time.h>
 +#endif
- #include "../lib/util/parmlist.h"
  
- /* the following are used by loadparm for option lists */
+ struct parmlist_entry {
+ 	struct parmlist_entry *prev, *next;
