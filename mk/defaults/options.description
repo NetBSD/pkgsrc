@@ -470,6 +470,7 @@ marble			Enable marble (virtual globe) support.
 mc-charset		Enable charset selection and conversion.
 mecab			Use MeCab as the Japanese Morphological Analzer.
 memcached		Enable memcached support.
+mess822-qmailqueue	Patch to run $QMAILQUEUE instead of "bin/qmail-queue".
 mex			Enable matlab mex support (Linux and Solaris only).
 migemo			Enable migemo (Japanese text search tool/library) support.
 mikmod			Enable MikMod sound library.
