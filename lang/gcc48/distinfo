@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2017/01/22 12:22:46 maya Exp $
+$NetBSD: distinfo,v 1.34 2017/05/28 01:00:20 maya Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -40,7 +40,7 @@ SHA1 (patch-gcc_config_i386_dragonfly.h) = 0d3f785434c02beb9c4561fe59842a970e8f7
 SHA1 (patch-gcc_config_i386_openbsd.h) = df5b85b5957392138f99085bd8ebeb923e37e9e7
 SHA1 (patch-gcc_config_i386_openbsdelf.h) = 74498a1bd7c339c90b847740d3c474ad3ca4a956
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
-SHA1 (patch-gcc_config_netbsd.h) = 086b593cf9f05e654df9e1a527485ca727ec44cc
+SHA1 (patch-gcc_config_netbsd.h) = 922088494d517fdde499d599b442a9b1cf8445a4
 SHA1 (patch-gcc_config_openbsd-libpthread.h) = 5043cf383fb68ff37b0cae22e61a97e26cff899e
 SHA1 (patch-gcc_config_openbsd.h) = 0090d48281c4973a18e8a70b2be9d2e999cca0a6
 SHA1 (patch-gcc_config_openbsd.opt) = 08b01bc4d7e171c3ee2ce5638a5859cff50c8ff8
@@ -95,5 +95,6 @@ SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 626fc1f9c035ac5
 SHA1 (patch-libstdc++-v3_config_os_bsd_openbsd_os__defines.h) = f899b6ddfabdef82ecee3562a946cecd1b995dd0
 SHA1 (patch-libstdc++-v3_configure) = 3821275fa698221d7665ea3c98b0a24f33954a5a
 SHA1 (patch-libstdc++-v3_configure.host) = 7426ea4a9735e5f886f4a3ffb4a9ba62734178c4
+SHA1 (patch-libstdc++-v3_include_bits_basic__string.h) = 7bcae0e92f444b65871c2f3c413e4c6f7d4e10a0
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 9784bfa4323f8498b36565d0fea28fce69ffdbb1
 SHA1 (patch-ltmain.sh) = 86c1511bd8ff133ba208ec8ec7e206d77ce85d01
