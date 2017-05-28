@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2109 2017/05/28 11:23:54 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2110 2017/05/28 11:25:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2649,3 +2649,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/pear to 1.10.4 [taca 2017-05-28]
 	Updated net/pear-Net_Socket to 1.2.2 [taca 2017-05-28]
 	Updated net/pear-Net_SMTP to 1.8.0 [taca 2017-05-28]
+	Updated net/pear-Net_Sieve to 1.4.1 [taca 2017-05-28]
