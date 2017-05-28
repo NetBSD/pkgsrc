@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2017/05/28 11:50:07 maya Exp $
 
-DISTNAME=		dcc-1.3.158
-PKGREVISION=		2
+DISTNAME=		dcc-1.3.159
+#PKGREVISION=		2
 CATEGORIES=		mail
-MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
+MASTER_SITES=		https://www.dcc-servers.net/src/dcc/old/
 EXTRACT_SUFX=		.tar.Z
 
 OWNER=			petar@smokva.net
-HOMEPAGE=		http://www.rhyolite.com/dcc/
+HOMEPAGE=		https://www.dcc-servers.net/dcc/
 COMMENT=		Anti-spam content filter
 LICENSE=		dcc-free-license
 
@@ -17,13 +17,6 @@ DCC_USER?=		dcc
 DCC_GROUP?=		dcc
 DCC_HOME?=		${VARBASE}/dcc
 DCC_RUN?=		${VARBASE}/run/dcc
-
-# dcc already implements $DESTDIR as $installroot but also prepends
-# $installroot to $BINDIR, which bsd.prog.mk subsequently extends to
-# $DESTDIR/$BINDIR, effectively doubling the $DESTDIR prefix.  The
-# following bit of make dances around the issue and avoids adding
-# $DESTDIR when evaluated within a bsd.prog.mk target.
-DCC_DESTDIR=		$${"$${@:Mproginstall-*}"=="":?$${DESTDIR}:}
 
 # expanded in files/dcc*.sh
 FILES_SUBST+=		DCC_HOME=${DCC_HOME}
@@ -66,17 +59,14 @@ CONFIGURE_ARGS+=	--with-rundir=${DCC_RUN}
 CONFIGURE_ARGS+=	--with-uid=${DCC_USER}
 CONFIGURE_ARGS+=	--with-make-cmd=${MAKE_PROGRAM:Q}
 CONFIGURE_ARGS+=	--with-fetch-cmd=${TOOLS_PATH.ftp:Q}
-CONFIGURE_ARGS+=	--with-installroot=\$$\(DCC_DESTDIR\)
-CONFIGURE_ARGS+=	--disable-sys-inst
+CONFIGURE_ARGS+=	--with-installroot=${DESTDIR:Q}
+CONFIGURE_ARGS+=	--enable-pkg-make
 CONFIGURE_ARGS+=	--disable-dccm
 
-USE_BSD_MAKEFILE=	yes
 MAKE_JOBS_SAFE=		no
 
 # PKGSRC_DCC_EGDIR is for homedir/Makefile
 MAKE_ENV+=		PKGSRC_DCC_EGDIR=${DCC_EGDIR}
-MAKE_ENV+=		DCC_DESTDIR=${DCC_DESTDIR:Q}
-MAKE_ENV+=		NO_SUID=yes
 
 BUILD_DEFS+=		VARBASE
 
