@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2017/01/01 14:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2017/05/28 12:48:53 gson Exp $
 
-DISTNAME=	anita-1.40
+DISTNAME=	anita-1.41
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.gson.org/netbsd/anita/download/
 
@@ -22,6 +21,9 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_SED.manpath=	-e 's,man/,${PKGMANDIR}/,g'
+
+do-test:
+	${TRUE}		# There are no unit tests
 
 .include "options.mk"
 .include "../../lang/python/distutils.mk"
