@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2112 2017/05/28 11:33:40 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2113 2017/05/28 11:34:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2652,3 +2652,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/pear-Net_Sieve to 1.4.1 [taca 2017-05-28]
 	Updated math/pear-Math_BigInteger to 1.0.3 [taca 2017-05-28]
 	Updated mail/pear-Mail to 1.4.1 [taca 2017-05-28]
+	Updated mail/pear-Mail_Mime to 1.10.1 [taca 2017-05-28]
