@@ -1,7 +1,8 @@
-$NetBSD: patch-gcc_config_netbsd.h,v 1.1 2016/09/12 22:13:54 maya Exp $
+$NetBSD: patch-gcc_config_netbsd.h,v 1.2 2017/05/28 01:29:42 maya Exp $
 
-when using shared, link against libc
-another unexplained change`
+when using shared, link against libc.
+always link against libgcc.
+another unexplained change.
 
 --- gcc/config/netbsd.h.orig	2014-01-02 22:23:26.000000000 +0000
 +++ gcc/config/netbsd.h
@@ -31,6 +32,15 @@ another unexplained change`
     %{!shared:			\
       %{!symbolic:		\
         %{!p:			\
+@@ -133,7 +138,7 @@ along with GCC; see the file COPYING3.  
+      %{p: -lgcc_p}		\
+      %{pg: -lgcc_p}}"
+ #else
+-#define NETBSD_LIBGCC_SPEC "%{!shared:%{!symbolic: -lgcc}}"
++#define NETBSD_LIBGCC_SPEC "-lgcc"
+ #endif
+ 
+ #undef LIBGCC_SPEC
 @@ -175,3 +180,9 @@ along with GCC; see the file COPYING3.  
  
  #undef WINT_TYPE
