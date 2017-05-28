@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:27:03 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/05/28 11:50:07 maya Exp $
 
-SHA1 (dcc-1.3.158.tar.Z) = 016442e1cf87f50588787cd5632b345bb15e6335
-RMD160 (dcc-1.3.158.tar.Z) = 00676a5fbb52cd3971a764f1b4244296e90c2dba
-SHA512 (dcc-1.3.158.tar.Z) = 24fba5ea713e8df1468644508c323d64b3868685716b7cc02263933476940a807cfc4593432a9195371308c83d4ea93653e89634681d95dcb32f5d65c7274599
-Size (dcc-1.3.158.tar.Z) = 1714175 bytes
-SHA1 (patch-Makefile.inc.in) = 9cd0fb433697d1864dde3314bed08f5a78bf3e7e
-SHA1 (patch-Makefile.inc2.in) = 16e3fdd5933048ea31f90a6e1b2dad2949deb2a3
-SHA1 (patch-configure) = c1a1c536cd2643043f2eb2ede2acc4b9f000f4b4
-SHA1 (patch-homedir_Makefile.in) = f1097124734b848140cd7ea7827b67c7e3855680
+SHA1 (dcc-1.3.159.tar.Z) = 05be2fdca4484434f25afb7d23e0c17b3e074620
+RMD160 (dcc-1.3.159.tar.Z) = f98e75c224f3a5411e1552e2b6fbab7a80547cf9
+SHA512 (dcc-1.3.159.tar.Z) = 5abb938a5a22bb8315d90797551be3eda3a9cdf2e6479e4ae561d3946fd1cc1a0db0562315b8741cc3e70a7e5c61460643cffb77adf4110b81060920362168d7
+Size (dcc-1.3.159.tar.Z) = 1606625 bytes
+SHA1 (patch-Makefile.inc.in) = a58beebf596bf4ef648a7f5e3202869b474d54a5
+SHA1 (patch-configure) = 6510a44febf3004df88e0d67484f0a04d33694c0
+SHA1 (patch-homedir_Makefile.in) = 6d01cb4fe1dd3412a50cc419045e3ffdbd3ec07c
+SHA1 (patch-homedir_fix-map.in) = 620fe1a7e4d0abdac31f466c9d78f817c5424d17
