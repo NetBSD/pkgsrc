@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2017/04/05 12:33:49 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2017/05/28 11:45:42 taca Exp $
 #
 
-DISTNAME=	concrete5.7.5.6
+DISTNAME=	concrete5.7.5.13
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
-PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://www.concrete5.org/download_file/-/view/85780/
+MASTER_SITES=	http://www.concrete5.org/download_file/-/view/93075/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -16,14 +15,10 @@ LICENSE=	mit
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql>=5.3.3:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.3:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.3:../../www/php-curl
-DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.3:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.3:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.3:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.3:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.3:../../converters/php-mbstring
-
-# mcrypt is deprecated and removed in 7.1.x
-PHP_VERSIONS_ACCEPTED=	56 70
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
@@ -35,7 +30,13 @@ BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 C5DIR=			share/concrete5
 INSTALLATION_DIRS=	${C5DIR}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../lang/php/phpversion.mk"
+
+.if ${PKG_PHP_VERSION} == "56" || ${PKG_PHP_VERSION} == "70"
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.3:../../security/php-mcrypt
+.else
+DEPENDS+=	${PHP_PKG_PREFIX}-pecl-mcrypt>=1.0.0:../../security/php-pecl-mcrypt
+.endif
 
 APACHE_USER?=	nginx
 APACHE_GROUP?=	nginx
@@ -61,6 +62,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${C5DIR}/application/files
 	${TOUCH} ${DESTDIR}${PREFIX}/${C5DIR}/application/files/.keep
 
-.include "../../lang/php/phpversion.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
