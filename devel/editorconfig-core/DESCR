@@ -1,0 +1,7 @@
+Editorconfig C library command line client. This library is used by
+editorconfig plugins that are written in C and those that use the
+command line interface to editorconfig. Editorconfig reads .editorconfig
+files that define a coding style for a project. This allows the coding
+style to be set by the project instead of the developer. Then the
+developer does not have to change style between each project, the editor
+knows the coding style of a file that belongs to a certain project.
