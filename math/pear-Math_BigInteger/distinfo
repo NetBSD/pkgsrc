@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:33:41 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/05/28 11:26:12 taca Exp $
 
-SHA1 (pear/Math_BigInteger-1.0.2.tgz) = fcd1879c141cb223dbdb156d7d54e4b8d383a809
-RMD160 (pear/Math_BigInteger-1.0.2.tgz) = 70aed13c19005eeab6c564bcd002984a4c935157
-SHA512 (pear/Math_BigInteger-1.0.2.tgz) = d0a59384fd40b497e058f6412b66167be6e49f625fe509cfd037864d5dae291d76e80694b3c072bffb35fbf27932ddbfb8d0beeda79e045d8642d78d24fd693b
-Size (pear/Math_BigInteger-1.0.2.tgz) = 27854 bytes
+SHA1 (pear/Math_BigInteger-1.0.3.tgz) = cd28e5bb7c457d99fcb6d87e791ad6b1430be59c
+RMD160 (pear/Math_BigInteger-1.0.3.tgz) = 534593246d6f44454a9c505adf9bc292038b2860
+SHA512 (pear/Math_BigInteger-1.0.3.tgz) = c8d6d638a6093b39e0f95e55d4d7488ddda1ad512504a97ce62a78ffae969b0d90925d6252b26230e5664f84b0a6b70fb456a678fbb291ca1a068cc7c539f415
+Size (pear/Math_BigInteger-1.0.3.tgz) = 28009 bytes
