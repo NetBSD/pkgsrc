@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2016/09/30 04:06:07 maya Exp $
+$NetBSD: distinfo,v 1.14 2017/05/28 01:36:11 maya Exp $
 
 SHA1 (gcc-5.4.0.tar.bz2) = 07524df2b4ab9070bad9c49ab668da72237b8115
 RMD160 (gcc-5.4.0.tar.bz2) = 7ae3413ca7e90bb21e65e637c02ddf2b675b45f4
@@ -16,14 +16,14 @@ SHA1 (patch-gcc_config_host-netbsd.c) = 765295f07edb8a68f1910e3a9b4dd2a7dcd491a5
 SHA1 (patch-gcc_config_netbsd-protos.h) = 6d28864b4ccc8c1a63fe28e43601b84b63a00633
 SHA1 (patch-gcc_config_netbsd-stdint.h) = 025fc883101a187e84ed4c0772406720d645d550
 SHA1 (patch-gcc_config_netbsd.c) = 9d1327f926dece6e753093e759b5c8b707747ae1
-SHA1 (patch-gcc_config_netbsd.h) = 47e1b5d09d0529de00163ad70f47278b82a668b3
+SHA1 (patch-gcc_config_netbsd.h) = 5344f188828a0a2e85845e6f94bb372bbb3eb5c8
 SHA1 (patch-gcc_config_t-netbsd) = 802ad5706aa7ca9629f8e237f08fbb1569d28846
 SHA1 (patch-gcc_config_x-netbsd) = 6dc3d78e26df62054ea29f98ca51592858e671e3
 SHA1 (patch-gcc_configure) = d6cc6a0bd257829ca2fd077a852fc447acaa63a0
 SHA1 (patch-gcc_ggc-common.c) = a5d2dba635859f5d680c3f80d7c30b42461c752b
 SHA1 (patch-gcc_lto_lto.c) = 825b632e2a7ff5777d4fbfdcf6f0ea3f64c4742b
 SHA1 (patch-gcc_system.h) = 4c959a6b1c4d524cbdf44cfb80f0e5758ec20783
-SHA1 (patch-libcilkrts_configure) = 72a18f311d78d4b88a55441d76c10ddd85b28360
+SHA1 (patch-libcilkrts_configure) = d52de4f104bd4c7c9f200d7ce45d782cccfe73bf
 SHA1 (patch-libcilkrts_runtime_os-unix.c) = 653c5e3486d09bddae6a384edc2a3b3f2c95f74b
 SHA1 (patch-libdecnumber_decNumber.c) = cec90e49c829bfc6ba1ec605d2fac7daaad62762
 SHA1 (patch-libffi_configure) = bcfbfe8abddc378e2de4a39ad0669583b37e0292
