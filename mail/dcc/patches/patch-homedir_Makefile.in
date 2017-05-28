@@ -1,4 +1,4 @@
-$NetBSD: patch-homedir_Makefile.in,v 1.1 2015/06/05 13:43:20 gdt Exp $
+$NetBSD: patch-homedir_Makefile.in,v 1.2 2017/05/28 11:50:07 maya Exp $
 
 Install configuration files into PKGSRC_DCC_EGDIR.
 
@@ -8,7 +8,7 @@ end up in any of the installed files.
 Also, skip make-dcc_conf (there is nothing to merge) and fix-map (moved
 into rc-files as start_precmd check).
 
---- homedir/Makefile.in.orig	2014-08-06 14:43:42.000000000 +0000
+--- homedir/Makefile.in.orig	2017-01-16 06:22:01.000000000 +0000
 +++ homedir/Makefile.in
 @@ -39,7 +39,7 @@
  DEPTH	=..
@@ -19,9 +19,9 @@ into rc-files as start_precmd check).
  MAP	=$(HD)/map@configsuffix@
  MAPTXT	=$(HD)/map.txt@configsuffix@
  IDS	=$(HD)/ids@configsuffix@
-@@ -60,14 +60,12 @@ DCC_BINDIR=@installroot@@libexecdir@
- all:
- 	@:
+@@ -55,14 +55,12 @@ SSCRIPTS=fix-map
+ DCC_BINDIR=@installroot@@libexecdir@
+ @INCLUDE_INC@
  
 -install:$(HD) $(HD)/log
 +install:$(HD)
