@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2115 2017/05/28 11:46:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2116 2017/05/28 11:50:54 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/pear-Mail_Mime to 1.10.1 [taca 2017-05-28]
 	Updated devel/php-xdebug to 2.5.4 [taca 2017-05-28]
 	Updated www/php-concrete5 to 5.7.5.13 [taca 2017-05-28]
+	Updated mail/dcc to 1.3.159 [maya 2017-05-28]
