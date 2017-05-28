@@ -1,4 +1,4 @@
-$NetBSD: patch-libcilkrts_configure,v 1.1 2016/09/12 22:13:54 maya Exp $
+$NetBSD: patch-libcilkrts_configure,v 1.2 2017/05/28 01:29:42 maya Exp $
 
 --- libcilkrts/configure.orig	2014-08-12 11:06:44.000000000 +0000
 +++ libcilkrts/configure
@@ -7,7 +7,7 @@ $NetBSD: patch-libcilkrts_configure,v 1.1 2016/09/12 22:13:54 maya Exp $
  
  if test $enable_shared = yes; then
 -  link_cilkrts="-lcilkrts %{static: $LIBS}"
-+  link_cilkrts="-rpath ${PREFIX}/gcc6snapshot/lib --as-needed -lgcc_s -lcilkrts %{static $LIBS}"
++  link_cilkrts="-rpath ${PREFIX}/gcc6/lib --as-needed -lgcc_s -lcilkrts %{static: $LIBS}"
  else
    link_cilkrts="-lcilkrts $LIBS"
  fi
