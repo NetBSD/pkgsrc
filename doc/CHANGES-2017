@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2103 2017/05/28 01:30:57 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2104 2017/05/28 01:37:26 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2642,4 +2642,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/dmsdos to 0.9.2.3pre2alt2 [mef 2017-05-27]
 	Updated devel/p5-Getopt-Long to 2.50 [wen 2017-05-27]
 	Updated lang/gcc48 to 4.8.5nb1 [maya 2017-05-28]
-	Updated lang/gcc6 to 6.3.0nb1 [fly 2017-05-28]
+	Updated lang/gcc6 to 6.3.0nb1 [maya 2017-05-28]
+	Updated lang/gcc5 to 5.4.0nb3 [maya 2017-05-28]
