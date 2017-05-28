@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/02/07 07:31:12 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/05/28 11:45:42 taca Exp $
 share/concrete5/LICENSE.TXT
 share/concrete5/application/bootstrap/app.php
 share/concrete5/application/bootstrap/autoload.php
@@ -7,9 +7,13 @@ share/concrete5/application/config/.keep
 share/concrete5/application/files/.keep
 share/concrete5/application/files/index.html
 share/concrete5/application/index.html
+share/concrete5/application/languages/cs_CZ/LC_MESSAGES/messages.mo
 share/concrete5/application/languages/da_DK/LC_MESSAGES/messages.mo
 share/concrete5/application/languages/de_DE/LC_MESSAGES/messages.mo
 share/concrete5/application/languages/el_GR/LC_MESSAGES/messages.mo
+share/concrete5/application/languages/en_GB/LC_MESSAGES/messages.mo
+share/concrete5/application/languages/es_ES/LC_MESSAGES/messages.mo
+share/concrete5/application/languages/es_PE/LC_MESSAGES/messages.mo
 share/concrete5/application/languages/es_PY/LC_MESSAGES/messages.mo
 share/concrete5/application/languages/fi_FI/LC_MESSAGES/messages.mo
 share/concrete5/application/languages/fr_FR/LC_MESSAGES/messages.mo
@@ -412,7 +416,7 @@ share/concrete5/concrete/blocks/topic_list/icon.png
 share/concrete5/concrete/blocks/topic_list/templates/flat_filter.php
 share/concrete5/concrete/blocks/topic_list/view.css
 share/concrete5/concrete/blocks/topic_list/view.php
-share/concrete5/concrete/blocks/video/README
+share/concrete5/concrete/blocks/video/README.md
 share/concrete5/concrete/blocks/video/TODO
 share/concrete5/concrete/blocks/video/add.php
 share/concrete5/concrete/blocks/video/controller.php
@@ -827,6 +831,7 @@ share/concrete5/concrete/css/app.css
 share/concrete5/concrete/css/build/core/account.less
 share/concrete5/concrete/css/build/core/app/animate.less
 share/concrete5/concrete/css/build/core/app/app.less
+share/concrete5/concrete/css/build/core/app/ccm-ui.less
 share/concrete5/concrete/css/build/core/app/components.less
 share/concrete5/concrete/css/build/core/app/dialog.less
 share/concrete5/concrete/css/build/core/app/help.less
@@ -886,6 +891,7 @@ share/concrete5/concrete/css/build/themes/dashboard/update.less
 share/concrete5/concrete/css/build/vendor/bootstrap-editable/bootstrap3-editable.less
 share/concrete5/concrete/css/build/vendor/bootstrap/alerts.less
 share/concrete5/concrete/css/build/vendor/bootstrap/badges.less
+share/concrete5/concrete/css/build/vendor/bootstrap/bootstrap.css
 share/concrete5/concrete/css/build/vendor/bootstrap/bootstrap.less
 share/concrete5/concrete/css/build/vendor/bootstrap/breadcrumbs.less
 share/concrete5/concrete/css/build/vendor/bootstrap/button-groups.less
@@ -2353,6 +2359,7 @@ share/concrete5/concrete/js/build/vendor/bootstrap/transition.js
 share/concrete5/concrete/js/build/vendor/dropzone/dropzone.js
 share/concrete5/concrete/js/build/vendor/dynatree/dynatree.js
 share/concrete5/concrete/js/build/vendor/jquery-awesome-rating/jquery-awesome-rating.js
+share/concrete5/concrete/js/build/vendor/jquery-bootstrap-select-to-button/jquery-bootstrap-select-to-button.js
 share/concrete5/concrete/js/build/vendor/jquery-cookie/jquery-cookie.js
 share/concrete5/concrete/js/build/vendor/jquery-fileupload/javascript-canvas-to-blob.js
 share/concrete5/concrete/js/build/vendor/jquery-fileupload/jquery-fileupload-image.js
@@ -2511,6 +2518,7 @@ share/concrete5/concrete/js/textcounter.js
 share/concrete5/concrete/js/thumbnail-editor-3.swf
 share/concrete5/concrete/js/topics.js
 share/concrete5/concrete/js/translator.js
+share/concrete5/concrete/js/tree.js
 share/concrete5/concrete/js/underscore.js
 share/concrete5/concrete/mail/basic_workflow_notification.php
 share/concrete5/concrete/mail/block_form_submission.php
@@ -2830,6 +2838,10 @@ share/concrete5/concrete/src/Block/BlockType/Set.php
 share/concrete5/concrete/src/Block/CacheSettings.php
 share/concrete5/concrete/src/Block/CoreAreaLayoutCustomStyle.php
 share/concrete5/concrete/src/Block/CustomStyle.php
+share/concrete5/concrete/src/Block/Events/BlockAdd.php
+share/concrete5/concrete/src/Block/Events/BlockDelete.php
+share/concrete5/concrete/src/Block/Events/BlockEdit.php
+share/concrete5/concrete/src/Block/Events/BlockEvent.php
 share/concrete5/concrete/src/Block/View/BlockView.php
 share/concrete5/concrete/src/Block/View/BlockViewTemplate.php
 share/concrete5/concrete/src/Cache/Adapter/DoctrineCacheDriver.php
@@ -2867,6 +2879,7 @@ share/concrete5/concrete/src/Config/SaverInterface.php
 share/concrete5/concrete/src/Console/Application.php
 share/concrete5/concrete/src/Console/Command/ClearCacheCommand.php
 share/concrete5/concrete/src/Console/Command/ConfigCommand.php
+share/concrete5/concrete/src/Console/Command/ExecCommand.php
 share/concrete5/concrete/src/Console/Command/GenerateIDESymbolsCommand.php
 share/concrete5/concrete/src/Console/Command/InstallCommand.php
 share/concrete5/concrete/src/Console/Command/InstallPackageCommand.php
@@ -2976,10 +2989,12 @@ share/concrete5/concrete/src/File/Event/FileWithPassword.php
 share/concrete5/concrete/src/File/Exception/FileException.php
 share/concrete5/concrete/src/File/Exception/FileVersionException.php
 share/concrete5/concrete/src/File/Exception/InvalidDimensionException.php
+share/concrete5/concrete/src/File/Exception/RequestTimeoutException.php
 share/concrete5/concrete/src/File/File.php
 share/concrete5/concrete/src/File/FileList.php
 share/concrete5/concrete/src/File/FileServiceProvider.php
 share/concrete5/concrete/src/File/Image/BasicThumbnailer.php
+share/concrete5/concrete/src/File/Image/Thumbnail/Path/Resolver.php
 share/concrete5/concrete/src/File/Image/Thumbnail/Thumbnail.php
 share/concrete5/concrete/src/File/Image/Thumbnail/Type/Type.php
 share/concrete5/concrete/src/File/Image/Thumbnail/Type/Version.php
@@ -2998,6 +3013,7 @@ share/concrete5/concrete/src/File/Search/Result/Result.php
 share/concrete5/concrete/src/File/Service/Application.php
 share/concrete5/concrete/src/File/Service/File.php
 share/concrete5/concrete/src/File/Service/Mime.php
+share/concrete5/concrete/src/File/Service/Zip.php
 share/concrete5/concrete/src/File/Set/File.php
 share/concrete5/concrete/src/File/Set/SavedSearch.php
 share/concrete5/concrete/src/File/Set/Set.php
@@ -3005,6 +3021,7 @@ share/concrete5/concrete/src/File/Set/SetList.php
 share/concrete5/concrete/src/File/StorageLocation/Configuration/Configuration.php
 share/concrete5/concrete/src/File/StorageLocation/Configuration/ConfigurationInterface.php
 share/concrete5/concrete/src/File/StorageLocation/Configuration/DefaultConfiguration.php
+share/concrete5/concrete/src/File/StorageLocation/Configuration/DeferredConfigurationInterface.php
 share/concrete5/concrete/src/File/StorageLocation/Configuration/LocalConfiguration.php
 share/concrete5/concrete/src/File/StorageLocation/StorageLocation.php
 share/concrete5/concrete/src/File/StorageLocation/Type/Type.php
@@ -3475,6 +3492,7 @@ share/concrete5/concrete/src/Support/Symbol/ClassSymbol/ClassSymbol.php
 share/concrete5/concrete/src/Support/Symbol/ClassSymbol/MethodSymbol/MethodSymbol.php
 share/concrete5/concrete/src/Support/Symbol/MetadataGenerator.php
 share/concrete5/concrete/src/Support/Symbol/SymbolGenerator.php
+share/concrete5/concrete/src/System/Info.php
 share/concrete5/concrete/src/Tools/Console/Doctrine/ConsoleRunner.php
 share/concrete5/concrete/src/Tree/Node/Node.php
 share/concrete5/concrete/src/Tree/Node/NodeType.php
@@ -3513,6 +3531,9 @@ share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20150623000000
 share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20150713000000.php
 share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20150731000000.php
 share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20151221000000.php
+share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20160314000000.php
+share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20160412000000.php
+share/concrete5/concrete/src/Updater/Migrations/Migrations/Version20160615000000.php
 share/concrete5/concrete/src/Updater/RemoteApplicationUpdate.php
 share/concrete5/concrete/src/Updater/RemoteApplicationUpdateFactory.php
 share/concrete5/concrete/src/Updater/Update.php
@@ -3653,6 +3674,7 @@ share/concrete5/concrete/themes/dashboard/core_stack.php
 share/concrete5/concrete/themes/dashboard/dashboard_full.php
 share/concrete5/concrete/themes/dashboard/dashboard_header_four_col.php
 share/concrete5/concrete/themes/dashboard/dashboard_primary_five.php
+share/concrete5/concrete/themes/dashboard/default.php
 share/concrete5/concrete/themes/dashboard/dialog.php
 share/concrete5/concrete/themes/dashboard/elements/footer.php
 share/concrete5/concrete/themes/dashboard/elements/header.php
@@ -3929,16 +3951,16 @@ share/concrete5/concrete/tools/users/search_results_export.php
 share/concrete5/concrete/tools/workflow/categories/page.php
 share/concrete5/concrete/tools/workflow/dialogs/approve_page_preview.php
 share/concrete5/concrete/tools/workflow/dialogs/change_page_permissions.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Element.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Image.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Input.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Link.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Lists.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Table.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Text.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Traits/Helpers.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Traits/Tag.php
-share/concrete5/concrete/vendor/anahkiasen/html-object/src/HtmlObject/Traits/TreeObject.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Element.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Image.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Input.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Link.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Lists.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Table.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Text.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Traits/Helpers.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Traits/Tag.php
+share/concrete5/concrete/vendor/anahkiasen/html-object/src/Traits/TreeObject.php
 share/concrete5/concrete/vendor/autoload.php
 share/concrete5/concrete/vendor/composer/ClassLoader.php
 share/concrete5/concrete/vendor/composer/LICENSE
@@ -3947,6 +3969,7 @@ share/concrete5/concrete/vendor/composer/autoload_files.php
 share/concrete5/concrete/vendor/composer/autoload_namespaces.php
 share/concrete5/concrete/vendor/composer/autoload_psr4.php
 share/concrete5/concrete/vendor/composer/autoload_real.php
+share/concrete5/concrete/vendor/composer/autoload_static.php
 share/concrete5/concrete/vendor/composer/installed.json
 share/concrete5/concrete/vendor/concrete5/doctrine-xml/LICENSE
 share/concrete5/concrete/vendor/concrete5/doctrine-xml/src/Checker.php
@@ -4772,6 +4795,7 @@ share/concrete5/concrete/vendor/filp/whoops/src/deprecated/Zend/Module.php
 share/concrete5/concrete/vendor/filp/whoops/src/deprecated/Zend/RouteNotFoundStrategy.php
 share/concrete5/concrete/vendor/filp/whoops/src/deprecated/Zend/module.config.example.php
 share/concrete5/concrete/vendor/gettext/gettext/LICENSE
+share/concrete5/concrete/vendor/gettext/gettext/src/BaseTranslator.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Extractors/Blade.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Extractors/Extractor.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Extractors/ExtractorInterface.php
@@ -4790,11 +4814,14 @@ share/concrete5/concrete/vendor/gettext/gettext/src/Generators/JsonDictionary.ph
 share/concrete5/concrete/vendor/gettext/gettext/src/Generators/Mo.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Generators/PhpArray.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Generators/Po.php
+share/concrete5/concrete/vendor/gettext/gettext/src/GettextTranslator.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Translation.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Translations.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Translator.php
+share/concrete5/concrete/vendor/gettext/gettext/src/TranslatorInterface.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Utils/FunctionsScanner.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Utils/JsFunctionsScanner.php
+share/concrete5/concrete/vendor/gettext/gettext/src/Utils/ParsedFunction.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Utils/PhpFunctionsScanner.php
 share/concrete5/concrete/vendor/gettext/gettext/src/Utils/StringReader.php
 share/concrete5/concrete/vendor/gettext/gettext/src/autoloader.php
@@ -6034,6 +6061,7 @@ share/concrete5/concrete/vendor/symfony/console/Output/StreamOutput.php
 share/concrete5/concrete/vendor/symfony/console/Question/ChoiceQuestion.php
 share/concrete5/concrete/vendor/symfony/console/Question/ConfirmationQuestion.php
 share/concrete5/concrete/vendor/symfony/console/Question/Question.php
+share/concrete5/concrete/vendor/symfony/console/Resources/bin/hiddeninput.exe
 share/concrete5/concrete/vendor/symfony/console/Shell.php
 share/concrete5/concrete/vendor/symfony/console/Style/OutputStyle.php
 share/concrete5/concrete/vendor/symfony/console/Style/StyleInterface.php
@@ -7394,7 +7422,7 @@ share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapt
 share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapter/Db/queue_sqlite.sql
 share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapter/Db/sqlsrv.sql
 share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapter/Memcacheq.php
-share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapter/Null.php
+share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapter/NullAdapter.php
 share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Adapter/PlatformJobQueue.php
 share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Exception/ConnectionException.php
 share/concrete5/concrete/vendor/zendframework/zend-queue/library/ZendQueue/Exception/DomainException.php
