@@ -1,14 +1,42 @@
-$NetBSD: patch-Makefile.inc.in,v 1.1 2015/06/05 13:43:20 gdt Exp $
+$NetBSD: patch-Makefile.inc.in,v 1.2 2017/05/28 11:50:07 maya Exp $
 
-NO_SYS_INSTALL shouldn't prevent man pages from being installed.
+make will otherwise try to exec ""
 
---- Makefile.inc.in.orig	2014-08-06 14:43:42.000000000 +0000
+--- Makefile.inc.in.orig	2017-02-04 19:18:07.000000000 +0000
 +++ Makefile.inc.in
-@@ -124,7 +124,6 @@ MANOWN	    =$(DCC_OWN)
- MANMODE	    =444
+@@ -52,7 +52,7 @@ clean cleandir:
+ # do not let clean be the default target
+ # and silence gmake "nothing to be done" noise
+ all:
+-	@
++	@:
+ ###########################################################################
+ @endif@
  
- @MAKE_DOT@ifdef NO_SYS_INSTALL
--NOMAN	=no
- SET_BINOWN=
- SET_MANOWN=
- SET_DCCOWN=
+@@ -231,7 +231,7 @@ maninstall:
+ 	  done
+ @endif@
+ @endif@
+-	@
++	@:
+ 
+ $(MANDIR)8:
+ @ifndef@ NOMAN
+@@ -239,7 +239,7 @@ $(MANDIR)8:
+ 	$(INSTALL) -d $(SET_MANOWN) -m 755 $(MANDIR)8
+ @endif@
+ @endif@
+-	@
++	@:
+ 
+ 
+ uninstall delete:deinstall
+@@ -252,7 +252,7 @@ progdelete:
+ @ifdef@ PROG
+ 	rm -f $(BINDIR)/$(PROG)
+ @endif@
+-	@
++	@:
+ 
+ beforedelete:progdelete
+ @ifdef@ SUBDIR
