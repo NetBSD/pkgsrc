@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2016/08/15 19:29:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2017/05/28 02:28:24 maya Exp $
 
 DISTNAME=	binutils-2.26.1
 CATEGORIES=	devel
@@ -48,7 +48,7 @@ PLIST_VARS+=	gprof ld gold SunOS
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != IRIX
+.if ${OPSYS} != "IRIX" && ${OPSYS} != "AIX"
 PLIST.gprof=	yes
 EXTRA_FILES+=	gprof
 .endif
