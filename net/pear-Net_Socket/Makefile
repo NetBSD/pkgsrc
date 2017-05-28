@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2017/03/17 15:49:50 taca Exp $
+# $NetBSD: Makefile,v 1.17 2017/05/28 11:21:33 taca Exp $
 
-DISTNAME=	Net_Socket-1.1.0
+DISTNAME=	Net_Socket-1.2.2
 CATEGORIES+=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	PHP classes to provide Network Socket Interface
+LICENSE=	2-clause-bsd
 
 CONFLICTS=	php-pear-Net_Socket-[0-9]*
 
