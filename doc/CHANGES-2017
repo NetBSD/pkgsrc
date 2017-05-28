@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2106 2017/05/28 07:52:58 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2107 2017/05/28 11:18:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/gcc5 to 5.4.0nb3 [maya 2017-05-28]
 	Updated lang/gcc49 to 4.9.4nb1 [maya 2017-05-28]
 	Updated devel/p5-Devel-Cover to 1.25 [wen 2017-05-28]
+	Updated lang/pear to 1.10.4 [taca 2017-05-28]
