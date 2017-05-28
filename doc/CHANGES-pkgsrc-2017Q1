@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.24 2017/05/27 19:03:26 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.25 2017/05/28 08:32:10 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -483,3 +483,5 @@ net/youtube-dl: bugfix
 Pullup ticket #5431 - requested by he
 net/samba4: security fix
 
+Pullup ticket #5459 - requested by sevan
+graphics/graphite2: security update
