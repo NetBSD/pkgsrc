@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2016/10/04 14:50:07 kamil Exp $
+# $NetBSD: options.mk,v 1.9 2017/05/28 12:48:53 gson Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.py-anita
 PKG_SUPPORTED_OPTIONS=		xen
@@ -25,11 +25,6 @@ DEPENDS+=	qemu>=1.0:../../emulators/qemu
 .endif
 
 .if !empty(PKG_OPTIONS:Mxen)
-# Choose 4.1 because that has been tested (with --vmm xm) and is
-# arguably a reasonable version to recommend to people wanting to
-# install xen to run anita.  (A good case can be made for 4.2, and
-# anyone who has tested it with anita is welcome to change this to
-# 4.2.)
-DEPENDS+=	xenkernel41>=4.1:../../sysutils/xenkernel41
-DEPENDS+=	xentools41>=4.1:../../sysutils/xentools41
+DEPENDS+=	xenkernel42>=4.2:../../sysutils/xenkernel42
+DEPENDS+=	xentools42>=4.2:../../sysutils/xentools42
 .endif
