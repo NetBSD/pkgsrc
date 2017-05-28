@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2017/02/16 14:30:50 gdt Exp $
+# $NetBSD: Makefile,v 1.24 2017/05/28 14:32:49 rumko Exp $
 #
 
 DISTNAME=	ccid-1.4.26
+PKGREVISION=	1
 CATEGORIES=	security
 # Note that the MASTER_SITES URL is not stable with version changes,
 # and one can end up with an old version if DISTNAME is changed but
@@ -25,6 +26,7 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	autoconf automake aclocal autoheader
 USE_TOOLS+=	flex perl
 USE_LANGUAGES=	c c++
+PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ARGS+=        --sharedstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
