@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.1 2017/05/28 19:43:46 nros Exp $
-
+# $NetBSD: Makefile,v 1.2 2017/05/28 19:59:04 nros Exp $
+ 
 DISTNAME=	editorconfig-core-c-0.12.1
 PKGNAME=	${DISTNAME:S/c-//}
 CATEGORIES=	devel
