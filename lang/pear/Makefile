@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2017/03/12 13:19:12 taca Exp $
+# $NetBSD: Makefile,v 1.39 2017/05/28 11:18:08 taca Exp $
 #
 
-DISTNAME=	PEAR-1.10.3
+DISTNAME=	PEAR-1.10.4
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -63,12 +63,12 @@ REPLACE_SH+=		script/pear.sh
 
 INSTALLATION_DIRS+=	share/examples/pear
 
-post-extract:
+pre-patch:
 	${RM} ${WRKSRC}/INSTALL
 	${MKDIR} ${WRKSRC}/install
 	${MKDIR} ${BUNDLE}
 	${CP} ${FILESDIR}/go-pear.php ${WRKSRC}/install
-	${CP} ${FILESDIR}/PEAR.php ${BUNDLE}
+	${CP} ${WRKSRC}/PEAR.php ${BUNDLE}
 
 do-build:
 .for f in ${DISTFILES}
