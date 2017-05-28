@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2434 2017/05/24 11:29:52 adam Exp $
+# $NetBSD: Makefile,v 1.2435 2017/05/28 20:04:02 nros Exp $
 #
 
 COMMENT=	Development utilities
@@ -215,6 +215,7 @@ SUBDIR+=	eclipse
 SUBDIR+=	ecore
 SUBDIR+=	edcommon
 SUBDIR+=	editline
+SUBDIR+=	editorconfig-core
 SUBDIR+=	eet
 SUBDIR+=	eina
 SUBDIR+=	eio
