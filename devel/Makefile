@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2435 2017/05/28 20:04:02 nros Exp $
+# $NetBSD: Makefile,v 1.2436 2017/05/29 10:39:59 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1754,6 +1754,7 @@ SUBDIR+=	py-ZopeEvent
 SUBDIR+=	py-ZopeI18NMessageid
 SUBDIR+=	py-ZopeInterface
 SUBDIR+=	py-ZopeSchema
+SUBDIR+=	py-apipkg
 SUBDIR+=	py-appdirs
 SUBDIR+=	py-argcomplete
 SUBDIR+=	py-argh
@@ -1821,6 +1822,7 @@ SUBDIR+=	py-editorconfig-core
 SUBDIR+=	py-entrypoints
 SUBDIR+=	py-enum
 SUBDIR+=	py-enum34
+SUBDIR+=	py-execnet
 SUBDIR+=	py-expect
 SUBDIR+=	py-extras
 SUBDIR+=	py-faker
@@ -2022,6 +2024,7 @@ SUBDIR+=	py-test
 SUBDIR+=	py-test-cov
 SUBDIR+=	py-test-mock
 SUBDIR+=	py-test-runner
+SUBDIR+=	py-test-xdist
 SUBDIR+=	py-testpath
 SUBDIR+=	py-testresources
 SUBDIR+=	py-testscenarios
