@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2017/04/30 01:21:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2017/05/29 14:44:46 ryoon Exp $
 
-DISTNAME=	mongodb-src-r3.2.10
+DISTNAME=	mongodb-src-r3.4.4
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
-PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
 
@@ -10,6 +9,8 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
 COMMENT=	NoSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
+
+EXTRACT_USING=	bsdtar
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
@@ -31,7 +32,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
 
-GCC_REQD+=	4.8.2
+GCC_REQD+=	5.3.0
 
 CPPFLAGS+=	-fno-jump-tables
 
@@ -81,9 +82,13 @@ SUBST_SED.path=		-e 's|/data/db|${MONGODB_DBPATH}|g'
 SUBST_SED.path+=	-e 's|/etc|${PKG_SYSCONFDIR}|'
 SUBST_VARS.path=	MONGODB_DBPATH MONGODB_LOGPATH
 
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.boost-libs}/lib
+
 MONGODB_MAN_FILES=	bsondump.1 mongo.1 mongod.1 mongodump.1 mongoexport.1	\
 			mongofiles.1 mongoimport.1 mongooplog.1 mongoperf.1	\
 			mongorestore.1 mongos.1 mongosniff.1 mongostat.1 mongotop.1
+
+NOT_PAX_MPROTECT_SAFE+=	bin/mongo
 
 RCD_SCRIPTS=		mongodb
 
@@ -94,10 +99,12 @@ CONF_FILES+=		share/examples/mongodb/mongod.conf \
 
 post-extract:
 	chmod -R g-w ${WRKSRC}
-	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/freebsd \
-		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/dragonfly
-	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/openbsd \
-		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/netbsd
+	cp -r ${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/freebsd \
+		${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/dragonfly
+	cp -r ${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/openbsd \
+		${WRKSRC}/src/third_party/mozjs-45/platform/x86_64/netbsd
+	cp ${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_openbsd.cpp \
+		${WRKSRC}/src/mongo/db/ftdc/ftdc_system_stats_netbsd.cpp
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} core
