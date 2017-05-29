@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2150 2017/05/29 13:57:14 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.2151 2017/05/29 14:40:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2694,3 +2694,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/rabbitmq to 3.6.10 [fhajny 2017-05-29]
 	Updated graphics/tiff to 4.0.8 [he 2017-05-29]
 	Updated chat/jabberd2 to 2.6.0 [gdt 2017-05-29]
+	Updated devel/boost-headers to 1.64.0nb1 [ryoon 2017-05-29]
+	Updated devel/boost-libs to 1.64.0nb1 [ryoon 2017-05-29]
