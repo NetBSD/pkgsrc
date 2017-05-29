@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/05/29 10:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2017/05/29 11:43:36 wiz Exp $
 
 DISTNAME=	par2cmdline-0.7.1
 PKGNAME=	${DISTNAME:S/cmdline//}
@@ -14,7 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-# tests 22-24 fail as of 0.7.1, reported upstream
+# tests 22-24 fail as of 0.7.1
+# https://github.com/Parchive/par2cmdline/issues/102
 TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
