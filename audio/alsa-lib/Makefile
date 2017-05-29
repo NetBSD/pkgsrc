@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2017/02/22 14:48:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2017/05/29 12:42:25 wiz Exp $
 
-DISTNAME=	alsa-lib-1.1.3
+DISTNAME=	alsa-lib-1.1.4
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/lib/
 EXTRACT_SUFX=	.tar.bz2
