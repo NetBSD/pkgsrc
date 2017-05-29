@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2017/05/01 11:54:38 maya Exp $
+# $NetBSD: Makefile,v 1.56 2017/05/29 14:39:28 ryoon Exp $
 
+PKGREVISION=		1
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed
