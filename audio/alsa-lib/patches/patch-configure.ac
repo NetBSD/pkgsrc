@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.ac,v 1.1 2016/04/15 08:47:50 wiz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2017/05/29 12:42:25 wiz Exp $
 
---- configure.ac.orig	2016-02-24 08:33:29.000000000 +0000
+--- configure.ac.orig	2017-05-12 08:01:45.000000000 +0000
 +++ configure.ac
-@@ -665,6 +671,15 @@ AC_OUTPUT(Makefile doc/Makefile doc/pict
- 	  test/Makefile test/lsb/Makefile \
+@@ -687,6 +687,15 @@ AC_OUTPUT(Makefile doc/Makefile doc/pict
+ 	  src/conf/ucm/broxton-rt298/Makefile \
  	  utils/Makefile utils/alsa-lib.spec utils/alsa.pc)
  
 +case $host_os in

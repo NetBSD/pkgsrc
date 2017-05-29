@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/02/22 14:48:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/05/29 12:42:25 wiz Exp $
 bin/aserver
 include/alsa/alisp.h
 include/alsa/asoundef.h
@@ -73,6 +73,7 @@ share/alsa/cards/FWSpeakers.conf
 share/alsa/cards/FireWave.conf
 share/alsa/cards/GUS.conf
 share/alsa/cards/HDA-Intel.conf
+share/alsa/cards/HdmiLpeAudio.conf
 share/alsa/cards/ICE1712.conf
 share/alsa/cards/ICE1724.conf
 share/alsa/cards/ICH-MODEM.conf
@@ -103,6 +104,8 @@ share/alsa/cards/VXPocket440.conf
 share/alsa/cards/YMF744.conf
 share/alsa/cards/aliases.alisp
 share/alsa/cards/aliases.conf
+share/alsa/cards/pistachio-card.conf
+share/alsa/cards/vc4-hdmi.conf
 share/alsa/pcm/center_lfe.conf
 share/alsa/pcm/default.conf
 share/alsa/pcm/dmix.conf
@@ -159,6 +162,10 @@ share/alsa/ucm/VEYRON-I2S/HiFi.conf
 share/alsa/ucm/VEYRON-I2S/VEYRON-I2S.conf
 share/alsa/ucm/broadwell-rt286/HiFi
 share/alsa/ucm/broadwell-rt286/broadwell-rt286.conf
+share/alsa/ucm/broxton-rt298/Hdmi1
+share/alsa/ucm/broxton-rt298/Hdmi2
+share/alsa/ucm/broxton-rt298/HiFi
+share/alsa/ucm/broxton-rt298/broxton-rt298.conf
 share/alsa/ucm/chtrt5645/HiFi.conf
 share/alsa/ucm/chtrt5645/chtrt5645.conf
 share/alsa/ucm/skylake-rt286/Hdmi1
