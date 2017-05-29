@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2147 2017/05/29 12:55:19 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2148 2017/05/29 13:16:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2691,3 +2691,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/libfilezilla to 0.9.2 [wiz 2017-05-29]
 	Updated net/filezilla to 3.25.2 [wiz 2017-05-29]
 	Updated devel/libatomic_ops to 7.6.0 [wiz 2017-05-29]
+	Updated net/rabbitmq to 3.6.10 [fhajny 2017-05-29]
