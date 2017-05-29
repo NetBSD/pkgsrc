@@ -1,11 +1,11 @@
-$NetBSD: patch-src_mongo_db_repl_isself.c,v 1.3 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD: patch-src_mongo_db_repl_isself.c,v 1.4 2017/05/29 14:44:47 ryoon Exp $
 
 * Add NetBSD support.
 
---- src/mongo/db/repl/isself.cpp.orig	2016-01-05 18:31:44.000000000 +0000
+--- src/mongo/db/repl/isself.cpp.orig	2017-04-20 21:43:42.000000000 +0000
 +++ src/mongo/db/repl/isself.cpp
-@@ -48,7 +48,7 @@
- #include "mongo/util/log.h"
+@@ -50,7 +50,7 @@
+ #include "mongo/util/scopeguard.h"
  
  #if defined(__linux__) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__sun) || \
 -    defined(__OpenBSD__)
@@ -13,7 +13,7 @@ $NetBSD: patch-src_mongo_db_repl_isself.c,v 1.3 2016/02/12 03:37:24 ryoon Exp $
  #define FASTPATH_UNIX 1
  #endif
  
-@@ -61,7 +61,7 @@
+@@ -63,7 +63,7 @@
  #include <ifaddrs.h>
  #include <netdb.h>
  
