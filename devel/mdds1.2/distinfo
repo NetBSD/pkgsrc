@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/09/12 07:38:43 wiz Exp $
+$NetBSD: distinfo,v 1.4 2017/05/29 10:24:02 wiz Exp $
 
-SHA1 (mdds-1.2.2.tar.bz2) = 3d2e5fc0e00650cdd3c385ebacacb15bd364ea4f
-RMD160 (mdds-1.2.2.tar.bz2) = 1143b5e78086c3191fd3d37383a42ec916b6854e
-SHA512 (mdds-1.2.2.tar.bz2) = 552cb1b65c03cd18eb679c95821e47c1151e1b3015043de4b3a7bc14d27734772fa4d80fd90ab48998d0bc75385a3d29c4dd7ce826cf84b012685573c623bf01
-Size (mdds-1.2.2.tar.bz2) = 286185 bytes
+SHA1 (mdds-1.2.3.tar.bz2) = f4b8dd11622725eba6ed4238c47cddadc844bf40
+RMD160 (mdds-1.2.3.tar.bz2) = f29291dafee591e7acce9a7408b86e1c22751327
+SHA512 (mdds-1.2.3.tar.bz2) = e5935fd99a53df124532cfc8e46349b2ef9ca79f5f184ca2da941c9a77e66ee40e11478e520bf9cb62e1bcea4b69deab5088265e1b89fda04417130aab227c3d
+Size (mdds-1.2.3.tar.bz2) = 287079 bytes
