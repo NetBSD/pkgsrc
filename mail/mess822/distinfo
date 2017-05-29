@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.11 2017/05/27 16:58:42 schmonz Exp $
+$NetBSD: distinfo,v 1.12 2017/05/29 23:20:54 schmonz Exp $
 
-SHA1 (mess822-0.58-qmailqueue-20170527.patch) = d54e9accb6b9b91f2b6b4beb3f1cfd64f05829b4
-RMD160 (mess822-0.58-qmailqueue-20170527.patch) = 18d184c10ebb6b0724a1a5b738e8ef17a2efadbc
-SHA512 (mess822-0.58-qmailqueue-20170527.patch) = f3c4feaabb36456996f6987198c2ada9a678441e38f078e9dbdaf70c1d812238bcc9db78f95612d51dcab62f3525a47481175ef0c4b1f1714786ea80346edad1
-Size (mess822-0.58-qmailqueue-20170527.patch) = 2144 bytes
 SHA1 (mess822-0.58.tar.gz) = ef3380c793c852d40688c108d164234ecf8a5362
 RMD160 (mess822-0.58.tar.gz) = 40fbcb5af92882e133ab3653c6119022180caedb
 SHA512 (mess822-0.58.tar.gz) = 5fb30f06dfa08f60dc8760f9c5d692e59397ff848441bc94313a079bac8fb53b779133b48abae9b487dff6fbb277d5210a9690a138366bf4d34f052d661be65e
