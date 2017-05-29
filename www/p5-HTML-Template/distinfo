@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 02:47:09 agc Exp $
+$NetBSD: distinfo,v 1.12 2017/05/29 10:57:38 wiz Exp $
 
-SHA1 (HTML-Template-2.95.tar.gz) = 8182e47778ee498214fdfdb035310c627aa939fb
-RMD160 (HTML-Template-2.95.tar.gz) = 0f793b13716af729366df089970b3f15e3aa34d4
-SHA512 (HTML-Template-2.95.tar.gz) = 4b52856c7ac97a6c7985c73492aa5074f90b6b7f89dfb2434487a2cfeb9d521e55afe4e77c33285042e3d391fe6e9fc86a3f58bb6850d94f1331bb7be9809be7
-Size (HTML-Template-2.95.tar.gz) = 91083 bytes
+SHA1 (HTML-Template-2.97.tar.gz) = 0d74e0924df1a981a39113e012a5fbcac2184cd5
+RMD160 (HTML-Template-2.97.tar.gz) = 5c584ac1091fb6dc75a7306f0c740e82dcd2c649
+SHA512 (HTML-Template-2.97.tar.gz) = e1cb68db24db1692c0fb3838739798e5716340e3e78260ee95614af5bf29ee100cc86bbd15a2dda3bb98c7f2ecdf0e3ff8ca7775171a44d9ed347d7f9c850783
+Size (HTML-Template-2.97.tar.gz) = 88236 bytes
