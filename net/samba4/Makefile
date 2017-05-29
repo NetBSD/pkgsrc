@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/05/24 15:51:32 he Exp $
+# $NetBSD: Makefile,v 1.31 2017/05/29 00:24:19 wiedi Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -107,6 +107,9 @@ LDFLAGS+=		${BUILDLINK_LDADD.gettext}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${SMB_PRIVATELIB}
 
 CFLAGS.SunOS+=		-DHAVE_SOLARIS_GETGRENT_R
+
+# workaround https://bugzilla.samba.org/show_bug.cgi?id=12502 for now
+CFLAGS.SunOS+=		-DMSG_NOSIGNAL=0
 
 .include "options.mk"
 
