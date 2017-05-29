@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/02 08:10:33 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/29 14:44:46 ryoon Exp $
 bin/mongo
 bin/mongod
 bin/mongoperf
 bin/mongos
-bin/mongosniff
 man/man1/bsondump.1
 man/man1/mongo.1
 man/man1/mongod.1
