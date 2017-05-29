@@ -1,26 +1,7 @@
-$NetBSD: distinfo,v 1.81 2017/05/07 21:52:16 he Exp $
+$NetBSD: distinfo,v 1.82 2017/05/29 13:44:05 he Exp $
 
-SHA1 (tiff-4.0.7.tar.gz) = 2c1b64478e88f93522a42dd5271214a0e5eae648
-RMD160 (tiff-4.0.7.tar.gz) = 582e19c31e7f29d9ed36995dcad7ad68802cbadb
-SHA512 (tiff-4.0.7.tar.gz) = 941357bdd5f947cdca41a1d31ae14b3fadc174ae5dce7b7981dbe58f61995f575ac2e97a7cc4fcc435184012017bec0920278263490464644f2cdfad9a6c5ddc
-Size (tiff-4.0.7.tar.gz) = 2076392 bytes
+SHA1 (tiff-4.0.8.tar.gz) = 88717c97480a7976c94d23b6d9ed4ac74715267f
+RMD160 (tiff-4.0.8.tar.gz) = 0d8bc26c98035810c73b8f876f76dc48efba7da8
+SHA512 (tiff-4.0.8.tar.gz) = 5d010ec4ce37aca733f7ab7db9f432987b0cd21664bd9d99452a146833c40f0d1e7309d1870b0395e947964134d5cfeb1366181e761fe353ad585803ff3d6be6
+Size (tiff-4.0.8.tar.gz) = 2065574 bytes
 SHA1 (patch-configure) = a0032133f06b6ac92bbf52349fabe83f74ea14a6
-SHA1 (patch-html_man_Makefile.in) = 705604e2a3065da192e7354a4a9cdcd16bd6823d
-SHA1 (patch-libtiff_tif__luv.c) = c2e8ce7474119ffa02d226932ad6c8c2b230062c
-SHA1 (patch-libtiff_tif__pixarlog.c) = ad16681cf3fcb5fded048eb70c0a93f1b6447147
-SHA1 (patch-libtiff_tif__strip.c) = f7dc7b24378d0541a8f3bcc3cad78ea2d6ae14d7
-SHA1 (patch-libtiff_tif_dir.c) = 28c45b95cedeebe005b44b45393d66f61e0ea6f7
-SHA1 (patch-libtiff_tif_dirread.c) = f6d442da817457d7ac801a3005e21c357ac31f8a
-SHA1 (patch-libtiff_tif_dirwrite.c) = 07ccbf8cf210b95d5ca7710cc2982368783b4dcb
-SHA1 (patch-libtiff_tif_getimage.c) = 267b555c8b043d0a835db4d46ef65131776601e6
-SHA1 (patch-libtiff_tif_jpeg.c) = 1049b7b243e9e145886bcac8e68e5e7889337ebc
-SHA1 (patch-libtiff_tif_ojpeg.c) = 1c43555434525157c1783de4802af4508c5113a4
-SHA1 (patch-libtiff_tif_read.c) = d43b10fa74a51da21f44abb7bd0251b88e8a702b
-SHA1 (patch-libtiff_tif_unix.c) = c8312771e567f90de0f77ac8eb66ed5c36e35617
-SHA1 (patch-libtiff_tif_win32.c) = 1ea9dcb6618c40b9de3e8d2a81914355f2111fdc
-SHA1 (patch-libtiff_tiffio.h) = e0efa9e1246e07dbb3a69d626988a18f12ba9d3c
-SHA1 (patch-libtiff_tiffiop.h) = 1100e55483da58037fa3f4168fffdfcbc5407456
-SHA1 (patch-man_Makefile.in) = ff073529c9d3ab98a03efa7d98c3263c1782482f
-SHA1 (patch-tools_tiff2pdf.c) = ce7a3e77c27ad3cabaa33b5da61cbd1b27f187d1
-SHA1 (patch-tools_tiffcp.c) = bd6abd9dc6e044ff04d761d999fabfb0919ba0db
-SHA1 (patch-tools_tiffcrop.c) = 1d729028fb8c05de958424234d5cc2808acc9b25
