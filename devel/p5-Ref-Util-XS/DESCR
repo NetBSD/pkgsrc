@@ -1,0 +1,3 @@
+Ref::Util::XS is the XS implementation of Ref::Util, which provides
+several functions to help identify references in a more convenient
+way than the usual approach of examining the return value of ref.
