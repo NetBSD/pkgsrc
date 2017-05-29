@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2014/03/14 22:40:17 agc Exp $
+# $NetBSD: Makefile,v 1.31.26.1 2017/05/29 18:21:24 bsiegert Exp $
 
-DISTNAME=	dropbear-2013.62
+DISTNAME=	dropbear-2016.74
 CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +11,7 @@ COMMENT=	Small SSH2 server and client, aimed at embedded market
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} --disable-bundled-libtom
 USE_TOOLS+=		gmake
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dropbear
@@ -39,7 +39,7 @@ SUBST_FILES.config=	dropbear.8 dropbearkey.1
 SUBST_SED.config=	-e "s,/etc/dropbear/,"${PKG_SYSCONFDIR:Q}"/dropbear/,g"
 
 # used by dbscp
-CPPFLAGS+=		-D_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
+CPPFLAGS+=		-DDROPBEAR_PATH_SSH_PROGRAM="\"${PREFIX}/bin/dbclient\""
 
 .include "../../x11/xauth/builtin.mk"
 
