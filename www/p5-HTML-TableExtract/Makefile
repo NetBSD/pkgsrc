@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/05/29 11:24:31 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2017/05/29 11:31:13 wiz Exp $
 
 DISTNAME=		HTML-TableExtract-2.15
 PKGNAME=		p5-${DISTNAME}
@@ -15,6 +15,9 @@ DEPENDS+=		p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
 DEPENDS+=		p5-HTML-Element-Extended>=1.16:../../www/p5-HTML-Element-Extended
 
 USE_LANGUAGES=		# empty
+
+# one test failure as of 2.15
+# https://github.com/mojotoad/HTML-TableExtract/issues/2
 
 PERL5_PACKLIST=		auto/HTML-TableExtract/.packlist
 
