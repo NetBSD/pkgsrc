@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6 2017/05/23 10:53:56 jperkin Exp $
+$NetBSD: patch-configure,v 1.7 2017/05/29 23:06:45 he Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -8,6 +8,8 @@ http://bugs.python.org/issue21458
 Changes for consistency across pkgsrc platforms.
 
 Fix linking on Darwin.
+
+Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
 
 --- configure.orig	2017-03-21 06:32:38.000000000 +0000
 +++ configure
@@ -38,6 +40,15 @@ Fix linking on Darwin.
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+@@ -6897,7 +6897,7 @@ UNIVERSAL_ARCH_FLAGS=
+ # tweak BASECFLAGS based on compiler and platform
+ case $GCC in
+ yes)
+-    CFLAGS_NODIST="$CFLAGS_NODIST -std=c99"
++    CFLAGS_NODIST="$CFLAGS_NODIST -std=gnu99"
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
+ $as_echo_n "checking for -Wextra... " >&6; }
 @@ -9188,8 +9188,8 @@ then
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
