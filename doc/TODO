@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17394 2017/05/29 12:35:17 wiz Exp $
+$NetBSD: TODO,v 1.17395 2017/05/29 12:42:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -399,7 +399,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alephone-20150620
 	o alevt-1.6.2
 	o allegro-5.10
-	o alsa-lib-1.1.4
 	o alsa-plugins-1.1.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.4.4 [wip]
