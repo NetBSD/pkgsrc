@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/05/18 20:37:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/05/29 12:55:10 wiz Exp $
 include/atomic_ops.h
 include/atomic_ops/ao_version.h
 include/atomic_ops/generalize-arithm.h
@@ -24,10 +24,12 @@ include/atomic_ops/sysdeps/gcc/hppa.h
 include/atomic_ops/sysdeps/gcc/ia64.h
 include/atomic_ops/sysdeps/gcc/m68k.h
 include/atomic_ops/sysdeps/gcc/mips.h
+include/atomic_ops/sysdeps/gcc/nios2.h
 include/atomic_ops/sysdeps/gcc/powerpc.h
 include/atomic_ops/sysdeps/gcc/s390.h
 include/atomic_ops/sysdeps/gcc/sh.h
 include/atomic_ops/sysdeps/gcc/sparc.h
+include/atomic_ops/sysdeps/gcc/tile.h
 include/atomic_ops/sysdeps/gcc/x86.h
 include/atomic_ops/sysdeps/generic_pthread.h
 include/atomic_ops/sysdeps/hpc/hppa.h
