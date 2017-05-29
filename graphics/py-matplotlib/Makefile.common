@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 2017/05/29 20:59:21 adam Exp $
+# used by graphics/py-matplotlib/Makefile
+# used by graphics/py-matplotlib-gtk2/Makefile
+# used by graphics/py-matplotlib-tk/Makefile
+
+DISTNAME=	matplotlib-2.0.2
+CATEGORIES=	graphics python
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/matplotlib/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://matplotlib.org/
+# LICENSE=	see ${WRKSRC}/LICENSE/LICENSE
+
+DISTINFO_FILE=	${.CURDIR}/../../graphics/py-matplotlib/distinfo
+PATCHDIR=	${.CURDIR}/../../graphics/py-matplotlib/patches
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
+
+# see patch-setup.py
+SUBST_CLASSES+=		mplpkgs
+SUBST_STAGE.mplpkgs=	pre-configure
+SUBST_MESSAGE.mplpkgs=	Selecting mpl packages.
+SUBST_FILES.mplpkgs=	setup.py
+SUBST_VARS.mplpkgs=	MPL_PACKAGES
