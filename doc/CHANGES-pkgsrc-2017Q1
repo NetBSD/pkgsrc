@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.26 2017/05/28 08:45:14 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.27 2017/05/29 19:24:56 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -488,3 +488,22 @@ graphics/graphite2: security update
 
 Pullup ticket #5466 - requested by sevan
 security/libassuan2: build fix for SunOS
+Pullup ticket #5468 - requested by sevan
+security/dropbear: security fix
+
+Pullup ticket #5463 - requested by sevan
+textproc/libxslt: security fix
+
+Pullup ticket #5457 - requested by sevan
+security/crypto++: security fix
+
+Pullup ticket #5452 - requested by sevan
+net/tor: security fix
+
+Pullup ticket #5434 - requested by sevan
+databases/postgresql92: security fix
+databases/postgresql93: security fix
+databases/postgresql94: security fix
+databases/postgresql95: security fix
+databases/postgresql96: security fix
+
