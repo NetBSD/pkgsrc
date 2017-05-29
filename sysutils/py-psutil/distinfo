@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2017/01/01 08:27:18 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2017/05/29 16:02:40 adam Exp $
 
-SHA1 (psutil-release-5.0.1.tar.gz) = 0cfc35492185bc6ebe768c70ed86a4eb32e25e4f
-RMD160 (psutil-release-5.0.1.tar.gz) = 21d6b30480c6f5cf6d3c7c4921f6982f8f2a3920
-SHA512 (psutil-release-5.0.1.tar.gz) = 2cd6a5ce307e46b395f0cb2c9ac1b849485430798a306f105ad7d4e324abce3e21f36de47b84b243134728c5d34d78816c8a96f2c7b0394eb57633ddd3236d5a
-Size (psutil-release-5.0.1.tar.gz) = 1833258 bytes
+SHA1 (psutil-5.2.2.tar.gz) = e22e2f6abdff051d438626f9a59a8782ace1a63e
+RMD160 (psutil-5.2.2.tar.gz) = bdf3d28e5072b936b86056d8da28524b43de734d
+SHA512 (psutil-5.2.2.tar.gz) = df4878d03a6ff98beb611969edd5a4d704ac269d38dc286d84def3ca271936e03367241470f2a192e0d71d0f64fe1f252223b0d67e964918146334a807d1a997
+Size (psutil-5.2.2.tar.gz) = 348413 bytes
