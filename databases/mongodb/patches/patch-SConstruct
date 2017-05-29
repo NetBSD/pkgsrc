@@ -1,9 +1,11 @@
-$NetBSD: patch-SConstruct,v 1.5 2016/10/24 19:25:47 ryoon Exp $
+$NetBSD: patch-SConstruct,v 1.6 2017/05/29 14:44:47 ryoon Exp $
 
 Add support for NetBSD/Dragonfly, fix locations.
---- SConstruct.orig	2016-06-02 14:46:27.000000000 +0000
+Respect LDFLAGS and CXXFLAGS
+
+--- SConstruct.orig	2017-04-20 21:43:42.000000000 +0000
 +++ SConstruct
-@@ -40,8 +40,12 @@ def get_running_os_name():
+@@ -49,8 +49,12 @@ def get_running_os_name():
      running_os = os.sys.platform
      if running_os.startswith('linux'):
          running_os = 'linux'
@@ -16,7 +18,7 @@ Add support for NetBSD/Dragonfly, fix locations.
      elif running_os.startswith('openbsd'):
          running_os = 'openbsd'
      elif running_os == 'sunos5':
-@@ -59,7 +63,7 @@ def env_get_os_name_wrapper(self):
+@@ -68,7 +72,7 @@ def env_get_os_name_wrapper(self):
  
  def is_os_raw(target_os, os_list_to_check):
      okay = False
@@ -25,7 +27,7 @@ Add support for NetBSD/Dragonfly, fix locations.
  
      for p in os_list_to_check:
          if p == 'posix' and target_os in posix_os_list:
-@@ -831,6 +835,7 @@ envDict = dict(BUILD_ROOT=buildDir,
+@@ -892,6 +896,7 @@ envDict = dict(BUILD_ROOT=buildDir,
                 INSTALL_DIR=installDir,
                 CONFIG_HEADER_DEFINES={},
                 LIBDEPS_TAG_EXPANSIONS=[],
@@ -33,7 +35,7 @@ Add support for NetBSD/Dragonfly, fix locations.
                 )
  
  env = Environment(variables=env_vars, **envDict)
-@@ -968,7 +973,9 @@ def CheckForProcessor(context, which_arc
+@@ -1029,7 +1034,9 @@ def CheckForProcessor(context, which_arc
  os_macros = {
      "windows": "_WIN32",
      "solaris": "__sun",
@@ -43,7 +45,7 @@ Add support for NetBSD/Dragonfly, fix locations.
      "openbsd": "__OpenBSD__",
      "osx": "__APPLE__",
      "linux": "__linux__",
-@@ -1233,7 +1240,7 @@ if env['_LIBDEPS'] == '$_LIBDEPS_OBJS':
+@@ -1360,7 +1367,7 @@ elif env['_LIBDEPS'] == '$_LIBDEPS_LIBS'
  
  libdeps.setup_environment(env, emitting_shared=(link_model.startswith("dynamic")))
  
@@ -52,7 +54,7 @@ Add support for NetBSD/Dragonfly, fix locations.
      env['LINK_LIBGROUP_START'] = '-Wl,--start-group'
      env['LINK_LIBGROUP_END'] = '-Wl,--end-group'
      env['LINK_WHOLE_ARCHIVE_START'] = '-Wl,--whole-archive'
-@@ -1261,10 +1268,24 @@ if env.TargetOSIs('linux'):
+@@ -1388,10 +1395,24 @@ if env.TargetOSIs('linux'):
  elif env.TargetOSIs('solaris'):
       env.Append( LIBS=["socket","resolv","lgrp"] )
  
@@ -77,19 +79,30 @@ Add support for NetBSD/Dragonfly, fix locations.
  elif env.TargetOSIs('openbsd'):
      env.Append( LIBS=[ "kvm" ] )
  
-@@ -1432,8 +1453,11 @@ if env.TargetOSIs('posix'):
-         if not has_option("disable-warnings-as-errors"):
-             env.Append( CCFLAGS=["-Werror"] )
+@@ -1570,6 +1591,9 @@ if env.TargetOSIs('posix'):
  
+     env.Append( CXXFLAGS=["-Woverloaded-virtual"] )
+     env.Append( LINKFLAGS=["-pthread"] )
 +    env.Append( CPPDEFINES=["XP_UNIX=1"] )
-     env.Append( CXXFLAGS=["-Wnon-virtual-dtor", "-Woverloaded-virtual"] )
 +    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
-     env.Append( LINKFLAGS=["-fPIC", "-pthread"] )
 +    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
  
      # SERVER-9761: Ensure early detection of missing symbols in dependent libraries at program
      # startup.
-@@ -2406,6 +2430,7 @@ def doConfigure(myenv):
+@@ -2158,9 +2182,9 @@ def doConfigure(myenv):
+     if usingLibStdCxx:
+         def CheckModernLibStdCxx(context):
+             test_body = """
+-            #if !__has_include(<experimental/filesystem>)
+-            #error "libstdc++ from GCC 5.3.0 or newer is required"
+-            #endif
++            //#if !__has_include(<experimental/filesystem>)
++            //#error "libstdc++ from GCC 5.3.0 or newer is required"
++            //#endif
+             """
+ 
+             context.Message('Checking for libstdc++ 5.3.0 or better... ')
+@@ -2764,6 +2788,7 @@ def doConfigure(myenv):
              # permit more than four parameters.
              "BOOST_THREAD_DONT_PROVIDE_VARIADIC_THREAD",
              "BOOST_SYSTEM_NO_DEPRECATED",
@@ -97,7 +110,7 @@ Add support for NetBSD/Dragonfly, fix locations.
          ]
      )
  
-@@ -2472,7 +2497,7 @@ def doConfigure(myenv):
+@@ -2830,7 +2855,7 @@ def doConfigure(myenv):
          myenv.ConfError("Couldn't find SASL header/libraries")
  
      # requires ports devel/libexecinfo to be installed

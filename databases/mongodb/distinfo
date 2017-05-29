@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.17 2016/10/24 19:25:47 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2017/05/29 14:44:46 ryoon Exp $
 
-SHA1 (mongodb-src-r3.2.10.tar.gz) = 1b60e390d7b89aa20f159114fb7c94ecaea132f6
-RMD160 (mongodb-src-r3.2.10.tar.gz) = 24bc6881712d247672b8f02326123fb8ed30bec7
-SHA512 (mongodb-src-r3.2.10.tar.gz) = b9592c7cb0184ae10e1e7092b3fa0fc52b10acef1d7beffb2c2409867e237042d7765cc7191972ded10c278756cde1ff7b23b57fb7efd8363e18f2ce994985e9
-Size (mongodb-src-r3.2.10.tar.gz) = 29062097 bytes
-SHA1 (patch-SConstruct) = 493ae46399e4cb28e85d2c3a06789dc5dad81fb2
-SHA1 (patch-debian_mongod.conf) = d4146b3d62b4472d55609c7f6aaa596f8f893d1f
+SHA1 (mongodb-src-r3.4.4.tar.gz) = 6f9f2d8a3c1c2f4089fd03f8be0b86ff0431d955
+RMD160 (mongodb-src-r3.4.4.tar.gz) = 2a65f380204a92762ceea2be35dbe2c671e106f6
+SHA512 (mongodb-src-r3.4.4.tar.gz) = dbae89b49c363e7258021cd31385e4449bfdfdfd5adfcb1683e4431372731e58ec33bf8f7576d2d52659a52461bd6a32fbc67d5c6e36d52184ec1aabb345d940
+Size (mongodb-src-r3.4.4.tar.gz) = 39867133 bytes
+SHA1 (patch-SConstruct) = 5e920c85dd27f1dd761fe7083074fed0eb1edeae
+SHA1 (patch-debian_mongod.conf) = e5074b5f7ad50560b99d652feab58da764ba542c
 SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
 SHA1 (patch-src_mongo_db_fts_unicode_string.cpp) = 98c5b1b39c07190f08ec9f22ec3002b0a803f72f
-SHA1 (patch-src_mongo_db_repl_isself.c) = 8cb386b7b0a8925908f20ac9b9b18cac796367ba
+SHA1 (patch-src_mongo_db_repl_isself.c) = 82321c918b91ce1a68ce79c14589126aca6baf96
 SHA1 (patch-src_mongo_platform_random.cpp) = 59c31e55fc2dc5a2b82b8f16dacf8736d8354cdb
 SHA1 (patch-src_mongo_platform_stack__locator__dragonfly.cpp) = fb885c491e4de1cfbc2875620d854af726e5b45f
 SHA1 (patch-src_mongo_platform_stack__locator__netbsd.cpp) = 3b09e86b2401555b6ab4c31d14c0693d766119c2
@@ -16,8 +16,11 @@ SHA1 (patch-src_mongo_shell_linenoise__utf8.h) = f975925f56125d48b5124894fa1adf1
 SHA1 (patch-src_mongo_util_intrusive__counter.h) = 9f1af59e1bc86e33bf183a6dda1737007afc7a18
 SHA1 (patch-src_mongo_util_processinfo__dragonfly.cpp) = 62c236ce820dfe81f45625b15e022cca0f2c10ee
 SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 4c746c4c3a79df849994c00a4639662d8a2c799d
-SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = 81107c2d368884dc0d2fddc03862fe58f2035206
-SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = f2b90732fd18048cf7feac44cca54c99a2420a4a
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_dpml__exception.c) = ef3b260e8a49227cbbabf427500b7c70bce15083
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_float128_op__system.h) = 39f6fba82e2870ee4a5d99785033621225a72a16
+SHA1 (patch-src_third__party_IntelRDFPMathLib20U1_LIBRARY_src_bid__functions.h) = d3a85d3a3b33691466c65cdf51c56f221429aea9
+SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = c2ad1041b5c1ff9fac9085d2a8963781f51873a8
+SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = 7ddbb4e3bf4126a1be2195acc82ff859e8130a01
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
 SHA1 (patch-src_third__party_wiredtiger_SConscript) = 9b11a7703f4db845fb38ba996238fe1ca7f24767
 SHA1 (patch-src_third__party_wiredtiger_build__dragonfly_wiredtiger__config.h) = 0b00da401f832d985107dfa5dcc6447db4beec6d
