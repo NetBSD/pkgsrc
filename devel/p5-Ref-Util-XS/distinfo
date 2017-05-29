@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/05/29 11:03:26 wiz Exp $
+
+SHA1 (Ref-Util-XS-0.116.tar.gz) = 18e0bb9e00d355cbea45efbfa4ed0b01925140d7
+RMD160 (Ref-Util-XS-0.116.tar.gz) = 21239a617efe9fc91d3aa6d693edb7673f35d141
+SHA512 (Ref-Util-XS-0.116.tar.gz) = 1fdb0cfcd76cddb3007262b1535cb099e663b2baf86b94956bd0fcd2e86e76fea0b3fff3056cbe0b6096873c94de11e1ca34f9576b2206e2b1225d294de2a621
+Size (Ref-Util-XS-0.116.tar.gz) = 71099 bytes
