@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2151 2017/05/29 14:40:23 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.2152 2017/05/29 14:45:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated chat/jabberd2 to 2.6.0 [gdt 2017-05-29]
 	Updated devel/boost-headers to 1.64.0nb1 [ryoon 2017-05-29]
 	Updated devel/boost-libs to 1.64.0nb1 [ryoon 2017-05-29]
+	Updated databases/mongodb to 3.4.4 [ryoon 2017-05-29]
