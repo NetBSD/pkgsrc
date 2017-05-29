@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2016/07/21 19:24:26 adam Exp $
+# $NetBSD: Makefile,v 1.29 2017/05/29 12:35:06 wiz Exp $
 
-DISTNAME=	vigra-1.11.0-src
+DISTNAME=	vigra-1.11.1-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ukoethe/}
@@ -11,7 +11,7 @@ COMMENT=	Computer vision library
 LICENSE=	mit
 
 GITHUB_PROJECT=	vigra
-GITHUB_RELEASE=	Version-1-11-0
+GITHUB_RELEASE=	Version-1-11-1
 EXTRACT_USING=	bsdtar
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
