@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/05/28 14:32:49 rumko Exp $
+# $NetBSD: Makefile,v 1.25 2017/05/29 12:26:40 gdt Exp $
 #
 
 DISTNAME=	ccid-1.4.26
@@ -26,6 +26,9 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	autoconf automake aclocal autoheader
 USE_TOOLS+=	flex perl
 USE_LANGUAGES=	c c++
+
+# Work around a bug where the rules for parse do not include the
+# PTHREAD vars.  Not yet reported upstream.
 PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ARGS+=        --sharedstatedir=${VARBASE:Q}
