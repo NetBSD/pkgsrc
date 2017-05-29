@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2017/05/29 10:43:42 adam Exp $
+# $NetBSD: Makefile,v 1.31 2017/05/29 13:56:52 wiz Exp $
 
 DISTNAME=	requests-2.16.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -24,7 +24,7 @@ DEPENDS+=	${PYPKGPREFIX}-urllib3>=1.12.1:../../www/py-urllib3
 BUILD_DEPENDS+=	${PYPKGPREFIX}-Socks>=1.5.6:../../net/py-Socks
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test>=2.8.0:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-mock-[0-9]*:../../devel/py-test-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-xdist-[0-9]*:../../devel/py-test-xdist
 
