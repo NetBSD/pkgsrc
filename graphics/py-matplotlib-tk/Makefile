@@ -1,23 +1,13 @@
-# $NetBSD: Makefile,v 1.28 2016/08/03 23:22:14 kamil Exp $
+# $NetBSD: Makefile,v 1.29 2017/05/29 20:59:21 adam Exp $
 
-VERSION=		1.5.2
-DISTNAME=		matplotlib-${VERSION}
-PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-${VERSION}
-CATEGORIES=		graphics python
-MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
-GITHUB_PROJECT=		matplotlib
-GITHUB_TAG=		v${PKGVERSION_NOREV}
+.include "../../graphics/py-matplotlib/Makefile.common"
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://matplotlib.sourceforge.net/
-COMMENT=		Tk frontend for matplotlib
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-/-tk-/}
+COMMENT=	Tk frontend for matplotlib
 
-DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
-USE_TOOLS+=		pkg-config
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
-USE_LANGUAGES=		c c++
+MPL_PACKAGES=	[setupext.Numpy(),setupext.LibAgg(),setupext.BackendTkAgg()]
 
 post-patch:
 	( ${ECHO} "[directories]"; \
@@ -27,7 +17,6 @@ post-patch:
 	${ECHO} "dateutil = False"; \
 	${ECHO} "[gui_support]"; \
 	${ECHO} "gtk = False"; \
-	${ECHO} "gtkagg = False"; \
 	${ECHO} "tkagg = True"; \
 	${ECHO} "wxagg = False"; \
 	${ECHO} "macosx = False" ) > ${WRKSRC}/setup.cfg
@@ -35,22 +24,14 @@ post-patch:
 post-install:
 	${RM} -r ${DESTDIR}/${PREFIX}/${PYSITELIB}/${EGG_INFODIR}
 
-# It needs:
-# devel/py-cycler
-# devel/py-nose
-# devel/py-mock
 do-test:
 	${ECHO} "backend      : TkAgg" > ${WRKSRC}/matplotlibrc
-	${RUN} cd ${WRKSRC} && MPLCONFIGDIR=$PWD \
+	${RUN} cd ${WRKSRC} && MPLCONFIGDIR=${PWD} \
 	MATPLOTLIBDATA=${WRKSRC}/lib/matplotlib/mpl-data \
 	PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} \
 	${PYTHONBIN} -c "import matplotlib; matplotlib.test()"
 
 .include "../../lang/python/egg.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
