@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/02/20 10:01:46 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/05/29 11:07:19 wiz Exp $
 
-SHA1 (requests-toolbelt-0.7.1.tar.gz) = 565fdbb32aa0432609a14d166608973b156e015a
-RMD160 (requests-toolbelt-0.7.1.tar.gz) = d2fc9cef7227845fdd7e6b28a017b3167859c244
-SHA512 (requests-toolbelt-0.7.1.tar.gz) = 2559db13054c4d9b7c459603809a16d8d9a9c1a348369e1bc68e557bae10c41291286112e3b4a71e83b42203d40fa5cbc8441028693eeb986162d212a65f68ac
-Size (requests-toolbelt-0.7.1.tar.gz) = 194670 bytes
+SHA1 (requests-toolbelt-0.8.0.tar.gz) = 67884283e5941c15eb283e3044687e8b3e4f2c3a
+RMD160 (requests-toolbelt-0.8.0.tar.gz) = 47bbee2248f1d0862e27287ecbcbb3c078818122
+SHA512 (requests-toolbelt-0.8.0.tar.gz) = 71a4ed8961b742cb1b5b0deec7f9052a2a177d2ed6e4f13ebe22b56b7f1b6b1bad2736f1640c8b41398b082eddc1c1205f0c446602d979d5bf370fb0e10ecc88
+Size (requests-toolbelt-0.8.0.tar.gz) = 196129 bytes
