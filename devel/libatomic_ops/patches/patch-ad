@@ -1,4 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2014/04/16 11:21:32 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2017/05/29 12:55:10 wiz Exp $
+
+revision 1.2
+date: 2009-01-31 21:05:57 +0100;  author: sketch;  state: Exp;  lines: +2 -2;
+Sun Studio x86 implementation isn't quite good enough yet for e.g.
+pulseaudio, so instead use the generic pthread implementation for now.
 
 --- src/atomic_ops.h.orig	2013-11-10 09:57:12.000000000 +0000
 +++ src/atomic_ops.h
