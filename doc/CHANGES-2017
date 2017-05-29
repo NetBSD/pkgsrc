@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2156 2017/05/29 22:01:23 alnsn Exp $
+$NetBSD: CHANGES-2017,v 1.2157 2017/05/29 23:07:35 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2702,3 +2702,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated comms/asterisk13 to 13.15.1 [jnemeth 2017-05-29]
 	Updated graphics/py-matplotlib to 2.0.2 [adam 2017-05-29]
 	Updated lang/LuaJIT2 to 2.0.5 [alnsn 2017-05-29]
+	Updated lang/python36 to 3.6.1nb1 [he 2017-05-29]
