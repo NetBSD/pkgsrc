@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2123 2017/05/29 10:45:07 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2124 2017/05/29 10:45:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2667,3 +2667,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-execnet version 1.4.1 [adam 2017-05-29]
 	Added devel/py-test-xdist version 1.16.0 [adam 2017-05-29]
 	Updated devel/py-requests to 2.16.5 [adam 2017-05-29]
+	Updated audio/musicpd to 0.20.8 [wiz 2017-05-29]
