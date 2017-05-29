@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2131 2017/05/29 11:07:30 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2132 2017/05/29 11:08:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2675,3 +2675,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/p5-Ref-Util-XS version 0.116 [wiz 2017-05-29]
 	Updated devel/p5-Ref-Util to 0.203 [wiz 2017-05-29]
 	Updated devel/py-requests-toolbelt to 0.8.0 [wiz 2017-05-29]
+	Updated devel/py-pbr to 3.0.1 [wiz 2017-05-29]
