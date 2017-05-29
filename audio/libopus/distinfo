@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2017/05/13 07:51:08 maya Exp $
+$NetBSD: distinfo,v 1.10 2017/05/29 12:10:01 wiz Exp $
 
-SHA1 (opus-1.1.4.tar.gz) = c7ecd67321c0e72c928ffc1013d725fc537e633f
-RMD160 (opus-1.1.4.tar.gz) = a5cb4400e6e41be23d522cfffb04f14e1ac555f1
-SHA512 (opus-1.1.4.tar.gz) = 57f14b9e8037eaa02a4d86535d3bbcceca249310fbc9ef1a452cc19dd442d4cf338d5db241d20605c236e22549df2c8266b7486c5f1666b80c532afd52cb3585
-Size (opus-1.1.4.tar.gz) = 978830 bytes
+SHA1 (opus-1.1.5.tar.gz) = fb6d55cf73059bd916790960c2eeffe83edabafe
+RMD160 (opus-1.1.5.tar.gz) = 13eeb2efbed2ccc34579f6d62c19e8ebf2661f74
+SHA512 (opus-1.1.5.tar.gz) = 20a211caf3c363a77f042abb5c6da0ca186887511b467d3434e927d0e3b8850ac6ee32c671a60c549343d38617fca77cc10ca01a7e9cc864ecc2dcebed95c6bd
+Size (opus-1.1.5.tar.gz) = 978844 bytes
 SHA1 (patch-celt_arm_armcpu.c) = 2698814d7f204c8ff82ac86b4b6d54f32ba0afb7
