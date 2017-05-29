@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.11 2016/05/05 07:03:47 leot Exp $
+# $NetBSD: options.mk,v 1.12 2017/05/29 08:38:16 leot Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
 PKG_SUPPORTED_OPTIONS=	ass doc faac fdk-aac fontconfig freetype gnutls lame \
-			libvpx opencore-amr openssl theora vorbis x264 x265 \
-			xcb xvid
+			libvpx opencore-amr openssl theora vorbis x11 x264 \
+			x265 xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
-			theora vorbis x264 xvid
+			theora vorbis x11 x264 xvid
 
 PLIST_VARS+=		doc
 
@@ -162,7 +162,7 @@ CONFIGURE_ARGS+=	--disable-libx265
 .endif
 
 # VDPAU support
-.if !empty(PKG_OPTIONS:Mvdpau)
+.if !empty(PKG_OPTIONS:Mvdpau) && !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--enable-vdpau
 .include "../../multimedia/libvdpau/buildlink3.mk"
 .else
@@ -170,7 +170,7 @@ CONFIGURE_ARGS+=	--disable-vdpau
 .endif
 
 # VAAPI support
-.if !empty(PKG_OPTIONS:Mvaapi)
+.if !empty(PKG_OPTIONS:Mvaapi) && !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--enable-vaapi
 .include "../../multimedia/libva/buildlink3.mk"
 .else
