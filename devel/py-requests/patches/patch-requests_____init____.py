@@ -1,4 +1,4 @@
-$NetBSD: patch-requests_____init____.py,v 1.1 2017/01/01 08:21:49 ryoon Exp $
+$NetBSD: patch-requests_____init____.py,v 1.2 2017/05/29 10:43:42 adam Exp $
 
 * Add workaround for segfault of security/py-certbot on NetBSD/amd64
   7.0.2 and 7.99.53. It seems that the real root cause is in
@@ -20,12 +20,12 @@ Date:   Tue Nov 15 10:09:11 2016 +0000
 
     Update urllib3 to 1.19
 
---- requests/__init__.py.orig	2016-12-14 11:36:37.000000000 +0000
+--- requests/__init__.py.orig	2017-05-27 23:15:49.000000000 +0000
 +++ requests/__init__.py
-@@ -50,7 +50,7 @@ __copyright__ = 'Copyright 2016 Kenneth 
+@@ -76,7 +76,7 @@ except AssertionError:
  # Attempt to enable urllib3's SNI support, if possible
  try:
-     from .packages.urllib3.contrib import pyopenssl
+     from urllib3.contrib import pyopenssl
 -    pyopenssl.inject_into_urllib3()
 +    #pyopenssl.inject_into_urllib3()
  except ImportError:
