@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/05/29 11:09:45 jperkin Exp $
 #
 
 DISTNAME=	archivemount-0.5.3
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	http://www.cybernoia.de/software/archivemount/
 

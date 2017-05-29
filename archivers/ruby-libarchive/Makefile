@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2017/05/29 11:09:45 jperkin Exp $
 
 DISTNAME=	libarchive-0.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
