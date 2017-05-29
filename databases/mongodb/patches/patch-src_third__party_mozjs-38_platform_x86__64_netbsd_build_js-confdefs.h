@@ -1,7 +1,7 @@
-$NetBSD: patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h,v 1.1 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD: patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h,v 1.2 2017/05/29 14:44:47 ryoon Exp $
 
---- src/third_party/mozjs-38/platform/x86_64/netbsd/build/js-confdefs.h.orig	2016-02-11 12:42:39.272068631 +0000
-+++ src/third_party/mozjs-38/platform/x86_64/netbsd/build/js-confdefs.h
+--- src/third_party/mozjs-45/platform/x86_64/netbsd/build/js-confdefs.h.orig	2016-02-11 12:42:39.272068631 +0000
++++ src/third_party/mozjs-45/platform/x86_64/netbsd/build/js-confdefs.h
 @@ -19,7 +19,6 @@
  #define HAVE_CPUID_H 1
  #define HAVE_DIRENT_H 1
