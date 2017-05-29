@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.5 2016/04/01 11:22:36 jperkin Exp $
+$NetBSD: patch-Makefile,v 1.6 2017/05/29 21:47:31 alnsn Exp $
 
 Fix installation.
 
---- Makefile.orig	2014-03-12 12:10:00.000000000 +0000
+--- Makefile.orig	2017-05-01 18:11:00.000000000 +0000
 +++ Makefile
 @@ -24,7 +24,6 @@ ABIVER=  5.1
  # Change the installation path as needed. This automatically adjusts
@@ -21,23 +21,7 @@ Fix installation.
  INSTALL_PKGCONFIG= $(INSTALL_LIB)/pkgconfig
  
  INSTALL_TNAME= luajit-$(VERSION)
-@@ -48,6 +47,7 @@ INSTALL_TSYMNAME= luajit
- INSTALL_ANAME= libluajit-$(ABIVER).a
- INSTALL_SONAME= libluajit-$(ABIVER).so.$(MAJVER).$(MINVER).$(RELVER)
- INSTALL_SOSHORT= libluajit-$(ABIVER).so
-+INSTALL_SOMAJOR= libluajit-$(ABIVER).so.$(MAJVER)
- INSTALL_DYLIBNAME= libluajit-$(ABIVER).$(MAJVER).$(MINVER).$(RELVER).dylib
- INSTALL_DYLIBSHORT1= libluajit-$(ABIVER).dylib
- INSTALL_DYLIBSHORT2= libluajit-$(ABIVER).$(MAJVER).dylib
-@@ -57,6 +57,7 @@ INSTALL_STATIC= $(INSTALL_LIB)/$(INSTALL
- INSTALL_DYN= $(INSTALL_LIB)/$(INSTALL_SONAME)
- INSTALL_SHORT1= $(INSTALL_LIB)/$(INSTALL_SOSHORT)
- INSTALL_SHORT2= $(INSTALL_LIB)/$(INSTALL_SOSHORT)
-+INSTALL_MAJOR1= $(INSTALL_LIB)/$(INSTALL_SOMAJOR)
- INSTALL_T= $(INSTALL_BIN)/$(INSTALL_TNAME)
- INSTALL_TSYM= $(INSTALL_BIN)/$(INSTALL_TSYMNAME)
- INSTALL_PC= $(INSTALL_PKGCONFIG)/$(INSTALL_PCNAME)
-@@ -73,7 +74,7 @@ SYMLINK= ln -sf
+@@ -74,7 +73,7 @@ SYMLINK= ln -sf
  INSTALL_X= install -m 0755
  INSTALL_F= install -m 0644
  UNINSTALL= $(RM)
@@ -46,11 +30,3 @@ Fix installation.
  SED_PC= sed -e "s|^prefix=.*|prefix=$(PREFIX)|" \
              -e "s|^multilib=.*|multilib=$(MULTILIB)|"
  
-@@ -113,6 +114,7 @@ install: $(INSTALL_DEP)
- 	cd src && test -f $(FILE_SO) && \
- 	  $(INSTALL_X) $(FILE_SO) $(INSTALL_DYN) && \
- 	  $(LDCONFIG) $(INSTALL_LIB) && \
-+	  $(SYMLINK) $(INSTALL_SONAME) $(INSTALL_MAJOR1) && \
- 	  $(SYMLINK) $(INSTALL_SONAME) $(INSTALL_SHORT1) && \
- 	  $(SYMLINK) $(INSTALL_SONAME) $(INSTALL_SHORT2) || :
- 	cd etc && $(INSTALL_F) $(FILE_MAN) $(INSTALL_MAN)
