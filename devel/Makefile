@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2436 2017/05/29 10:39:59 adam Exp $
+# $NetBSD: Makefile,v 1.2437 2017/05/29 11:03:54 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1412,6 +1412,7 @@ SUBDIR+=	p5-RT-Authen-ExternalAuth
 SUBDIR+=	p5-Readonly
 SUBDIR+=	p5-Readonly-XS
 SUBDIR+=	p5-Ref-Util
+SUBDIR+=	p5-Ref-Util-XS
 SUBDIR+=	p5-Regexp-Assemble
 SUBDIR+=	p5-Regexp-MatchContext
 SUBDIR+=	p5-Regexp-Parser
