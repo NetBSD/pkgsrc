@@ -1,24 +1,20 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/05/29 09:24:45 adam Exp $
 
-DISTNAME=	python-memcached-1.54
+DISTNAME=	python-memcached-1.58
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
 CATEGORIES=	devel python
-MASTER_SITES=	ftp://ftp.tummy.com/pub/python-memcached/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-memcached/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.tummy.com/Community/software/python-memcached/
 COMMENT=	Python memcached client
 LICENSE=	python-software-foundation
 
-USE_LANGUAGES=	# none
+DEPENDS+=	${PYPKGPREFIX}-six>=1.4.0:../../lang/py-six
 
-DOCDIR=			${PREFIX}/share/doc/py-memcached
-INSTALLATION_DIRS=	${DOCDIR}
+USE_LANGUAGES=		# none
+
 REPLACE_PYTHON+=	memcache.py
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # not yet ported as of 1.53
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/memcache.html ${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
