@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2154 2017/05/29 20:55:17 jnemeth Exp $
+$NetBSD: CHANGES-2017,v 1.2155 2017/05/29 21:00:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2700,3 +2700,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-sphinx to 1.6.2 [adam 2017-05-29]
 	Updated sysutils/py-psutil to 5.2.2 [adam 2017-05-29]
 	Updated comms/asterisk13 to 13.15.1 [jnemeth 2017-05-29]
+	Updated graphics/py-matplotlib to 2.0.2 [adam 2017-05-29]
