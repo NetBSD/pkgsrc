@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17387 2017/05/29 11:23:00 wiz Exp $
+$NetBSD: TODO,v 1.17388 2017/05/29 11:24:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.37
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
-	o p5-HTML-TableExtract-2.15
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
