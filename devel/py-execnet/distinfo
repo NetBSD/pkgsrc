@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/05/29 10:38:28 adam Exp $
+
+SHA1 (execnet-1.4.1.tar.gz) = 0f13f78a7cc21e08d9e7d1205f66e3eb557b53b4
+RMD160 (execnet-1.4.1.tar.gz) = 7caded55c5decfa619e1e276021a22117ed8dd88
+SHA512 (execnet-1.4.1.tar.gz) = e8c0c32e873f8585ff4d4da3b9cbd40046479370f5653f67a98c9029d4535a619731d1b825332fe4af4dc5ebc9ab11ee879ef45df07f08943b1e1685f2255790
+Size (execnet-1.4.1.tar.gz) = 171041 bytes
