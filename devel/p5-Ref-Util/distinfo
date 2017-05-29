@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2017/02/25 14:06:05 mef Exp $
+$NetBSD: distinfo,v 1.4 2017/05/29 11:05:08 wiz Exp $
 
-SHA1 (Ref-Util-0.113.tar.gz) = c000bd53b9ce834e75de9038b28643e5897bead2
-RMD160 (Ref-Util-0.113.tar.gz) = 41b9bf22d90a2900eb0c973123040e66fa58a30a
-SHA512 (Ref-Util-0.113.tar.gz) = 1116ef8cde964c690b7ba7d32dad9b63429e882bbaa9920f4c47b789c84cbf66499f1a90b41cd6bc8d7afedcb10ea1a08775e3f12e4664055ddb212826db1e24
-Size (Ref-Util-0.113.tar.gz) = 67089 bytes
+SHA1 (Ref-Util-0.203.tar.gz) = a00535e5c4d315e89c88f732698276902080010f
+RMD160 (Ref-Util-0.203.tar.gz) = ef2b6542968fb22d66f08cca6e0331d862de39b4
+SHA512 (Ref-Util-0.203.tar.gz) = bf0b1cde5adf869377aaee3c6a8fa8f40fc852c70f20dafdb3d7f3b7718eb19738a4d53c243e9809b7cff9e2e49a871f0336b4288b96048e91ae48634d12a392
+Size (Ref-Util-0.203.tar.gz) = 26937 bytes
