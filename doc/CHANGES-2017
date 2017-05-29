@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2124 2017/05/29 10:45:49 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2125 2017/05/29 10:55:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2668,3 +2668,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-test-xdist version 1.16.0 [adam 2017-05-29]
 	Updated devel/py-requests to 2.16.5 [adam 2017-05-29]
 	Updated audio/musicpd to 0.20.8 [wiz 2017-05-29]
+	Updated archivers/par2 to 0.7.1 [wiz 2017-05-29]
