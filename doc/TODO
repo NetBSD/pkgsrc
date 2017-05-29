@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17385 2017/05/29 11:15:13 wiz Exp $
+$NetBSD: TODO,v 1.17386 2017/05/29 11:21:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -715,7 +715,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
 	o gliv-1.9.7
-	o global-6.5.7
 	o glom-1.14.2 [GNOME 2.26]
 	o glx-utils-8.3.0
 	o gnet1-1.1.9
@@ -1048,7 +1047,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mcabber-1.0.2
 	o mcollective-2.3.2
 	o mcsim-5.6.5
-	o mdds1.2-1.2.3
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.39.1
 	o megatools-1.9.97

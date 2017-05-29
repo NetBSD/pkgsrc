@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2133 2017/05/29 11:15:13 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2134 2017/05/29 11:21:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-requests-toolbelt to 0.8.0 [wiz 2017-05-29]
 	Updated devel/py-pbr to 3.0.1 [wiz 2017-05-29]
 	Updated print/abcm2ps to 8.13.10 [wiz 2017-05-29]
+	Updated devel/global to 6.5.7 [wiz 2017-05-29]
