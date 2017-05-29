@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2121 2017/05/29 07:50:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2122 2017/05/29 10:24:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2661,3 +2661,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/editorconfig-core version 0.12.1 [nros 2017-05-28]
 	Updated devel/py-hypothesis to 3.11.1 [adam 2017-05-29]
 	Updated security/py-certifi to 2017.4.17 [adam 2017-05-29]
+	Updated devel/mdds1.2 to 1.2.3 [wiz 2017-05-29]
