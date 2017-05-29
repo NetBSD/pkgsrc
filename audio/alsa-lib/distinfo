@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2017/03/28 09:10:56 jperkin Exp $
+$NetBSD: distinfo,v 1.26 2017/05/29 12:42:25 wiz Exp $
 
-SHA1 (alsa-lib-1.1.3.tar.bz2) = 8ef0b9725296ac8f24e06f20196f5b2b62ab27a9
-RMD160 (alsa-lib-1.1.3.tar.bz2) = 36fb2c889411e23be1084a432d200d40fb70e920
-SHA512 (alsa-lib-1.1.3.tar.bz2) = f5dbe2375a8c66af14378314a5238284d4ed63dfc86a750c0c6e8f6cdb6b1ea2d8ef26f870b5d152dc0b77d9b40821cab523f6734902b91583beb08e28c66850
-Size (alsa-lib-1.1.3.tar.bz2) = 962001 bytes
+SHA1 (alsa-lib-1.1.4.tar.bz2) = 3e52a68329f32b465e7793d884caddeb89220a6e
+RMD160 (alsa-lib-1.1.4.tar.bz2) = 534350de373d14b0cccacf0a95a062f194c2c002
+SHA512 (alsa-lib-1.1.4.tar.bz2) = 8dfc5cc8872138b9e7e234934e317d797e100ac99dac86a2a2e4bdcc0d49e8a05b4089b98341051b407750bed93c2713fae5218318e5ce6cc7db2801165a1c10
+Size (alsa-lib-1.1.4.tar.bz2) = 973825 bytes
 SHA1 (patch-ad) = 79a0f048751899247ec12990cd02332b977af248
 SHA1 (patch-ae) = 7ad3a3c3ee4be2c80fa6b0a2ea28563efd399a60
 SHA1 (patch-af) = 257b06f10616c04c2724e30777b027e5e7e443f9
@@ -13,7 +13,7 @@ SHA1 (patch-bg) = b726769272dd214e67f2407ed5a0199189540557
 SHA1 (patch-bi) = 7e74ebe53cc2ab273f5235775e391a6ef28d1006
 SHA1 (patch-bj) = 5b7a36747e57e41eddb05cd1b1d9771a36b0c4f7
 SHA1 (patch-bk) = 55754e4d0ac947c2e7e59b604a21fb5798ae5b39
-SHA1 (patch-configure.ac) = 1c407e8a9d9ea745ab1b79175f6fc0ec6d475acc
+SHA1 (patch-configure.ac) = 897ae894de00857ed58553808ba40e24c0666b15
 SHA1 (patch-include_sound_asound.h) = 04e80f66542473b3b858427972046f2de320f871
 SHA1 (patch-include_type__compat.h) = 3cb245d8ea171f987859e1b5a89b0908c2037492
 SHA1 (patch-src_conf.c) = 432e04179798c54a76f5ce072dd9c0b79221df85
@@ -21,4 +21,3 @@ SHA1 (patch-src_control_control__hw.c) = 07cfe3abe586b32f6b989403cd162599da07e86
 SHA1 (patch-src_pcm_pcm__mmap.c) = 2d0f05aa53b30cef1ec083aa4f5d559d0a679058
 SHA1 (patch-src_seq_seq__midi__event.c) = 2a5de492d6ca19a0f0c564e8f5a065e5fc57ea5c
 SHA1 (patch-src_shmarea.c) = d6d0876ae7911ff16138bb82a3b1c79e795218cf
-SHA1 (patch-src_ucm_parser.c) = ebb986cc3048061adcf9fc6bc60a9d3ffd52ceec
