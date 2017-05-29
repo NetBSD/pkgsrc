@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/03/20 14:34:36 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/05/29 13:16:11 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -19,8 +19,6 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MPL-RabbitMQ
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-MPL2
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/background_gc.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/dtree.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/file_handle_cache.beam
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/file_handle_cache_stats.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/gatherer.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/gm.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/lqueue.beam
@@ -69,6 +67,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_fanout.be
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_headers.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_invalid.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_topic.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_fhc_helpers.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_file.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_framing.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_guid.beam
