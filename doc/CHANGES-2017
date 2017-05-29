@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2137 2017/05/29 11:56:13 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2138 2017/05/29 11:56:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2681,3 +2681,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-service_identity to 17.0.0 [wiz 2017-05-29]
 	Updated www/p5-HTML-TableExtract to 2.15 [wiz 2017-05-29]
 	Updated graphics/ImageMagick to 7.0.5.9 [wiz 2017-05-29]
+	Updated graphics/p5-PerlMagick to 7.0.5.9 [wiz 2017-05-29]
