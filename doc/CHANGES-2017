@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2119 2017/05/28 20:08:05 nros Exp $
+$NetBSD: CHANGES-2017,v 1.2120 2017/05/29 06:54:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2659,3 +2659,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/py-anita to 1.41 [gson 2017-05-28]
 	Added converters/p5-Sereal version 0.330 [mef 2017-05-28]
 	Added devel/editorconfig-core version 0.12.1 [nros 2017-05-28]
+	Updated devel/py-hypothesis to 3.11.1 [adam 2017-05-29]
