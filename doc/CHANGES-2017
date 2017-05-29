@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2125 2017/05/29 10:55:16 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2126 2017/05/29 10:56:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2669,3 +2669,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-requests to 2.16.5 [adam 2017-05-29]
 	Updated audio/musicpd to 0.20.8 [wiz 2017-05-29]
 	Updated archivers/par2 to 0.7.1 [wiz 2017-05-29]
+	Updated databases/p5-DBD-postgresql to 3.6.2 [wiz 2017-05-29]
