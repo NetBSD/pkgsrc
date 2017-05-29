@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2122 2017/05/29 10:24:12 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2123 2017/05/29 10:45:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2662,3 +2662,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-hypothesis to 3.11.1 [adam 2017-05-29]
 	Updated security/py-certifi to 2017.4.17 [adam 2017-05-29]
 	Updated devel/mdds1.2 to 1.2.3 [wiz 2017-05-29]
+	Updated devel/py-memcached to 1.58 [adam 2017-05-29]
+	Added devel/py-apipkg version 1.4 [adam 2017-05-29]
+	Added devel/py-execnet version 1.4.1 [adam 2017-05-29]
+	Added devel/py-test-xdist version 1.16.0 [adam 2017-05-29]
+	Updated devel/py-requests to 2.16.5 [adam 2017-05-29]
