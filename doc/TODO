@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17382 2017/05/29 11:07:30 wiz Exp $
+$NetBSD: TODO,v 1.17383 2017/05/29 11:08:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1310,7 +1310,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-notify-0.3.1
 	o py-numpydoc-0.6.0
 	o py-omniORBpy-3.7
-	o py-pbr-3.0.1
 	o py-pdf-parser-0.6.4
 	o py-pendrell-0.3.7
 	o py-ptt-1.10.2
