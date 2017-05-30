@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.7 2017/05/29 23:06:45 he Exp $
+$NetBSD: patch-configure,v 1.8 2017/05/30 13:36:39 bouyer Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -11,9 +11,11 @@ Fix linking on Darwin.
 
 Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
 
---- configure.orig	2017-03-21 06:32:38.000000000 +0000
-+++ configure
-@@ -2928,7 +2928,7 @@ $as_echo_n "checking for python interpre
+detect netcan/can.h on NetBSD
+
+--- configure.orig	2017-03-21 07:32:38.000000000 +0100
++++ configure	2017-05-30 12:34:22.173986489 +0200
+@@ -2928,7 +2928,7 @@
  	fi
          { $as_echo "$as_me:${as_lineno-$LINENO}: result: $interp" >&5
  $as_echo "$interp" >&6; }
@@ -22,7 +24,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
      fi
      # Used to comment out stuff for rebuilding generated files
      GENERATED_COMMENT='#'
-@@ -3324,7 +3324,7 @@ case $ac_sys_system/$ac_sys_release in
+@@ -3324,7 +3324,7 @@
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -31,7 +33,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5969,7 +5969,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5969,7 +5969,7 @@
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -40,7 +42,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -6897,7 +6897,7 @@ UNIVERSAL_ARCH_FLAGS=
+@@ -6897,7 +6897,7 @@
  # tweak BASECFLAGS based on compiler and platform
  case $GCC in
  yes)
@@ -49,7 +51,16 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  
      { $as_echo "$as_me:${as_lineno-$LINENO}: checking for -Wextra" >&5
  $as_echo_n "checking for -Wextra... " >&6; }
-@@ -9188,8 +9188,8 @@ then
+@@ -8072,7 +8072,7 @@
+ 
+ 
+ # On Linux, can.h and can/raw.h require sys/socket.h
+-for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h
++for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h netcan/can.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
+@@ -9188,8 +9188,8 @@
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -60,7 +71,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -9213,9 +9213,9 @@ then
+@@ -9213,9 +9213,9 @@
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -73,7 +84,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -9254,6 +9254,9 @@ then
+@@ -9254,6 +9254,9 @@
  				   ;;
  				esac
  		fi;;
@@ -83,7 +94,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -9298,7 +9301,7 @@ then
+@@ -9298,7 +9301,7 @@
  	Linux-android*) ;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -92,7 +103,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -9348,7 +9351,7 @@ then
+@@ -9348,7 +9351,7 @@
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -101,7 +112,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -11122,7 +11125,7 @@ if ${ac_cv_dtrace_link+:} false; then :
+@@ -11122,7 +11125,7 @@
    $as_echo_n "(cached) " >&6
  else
                ac_cv_dtrace_link=no
@@ -110,7 +121,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
              "$DTRACE" -G -s conftest.d -o conftest.o > /dev/null 2>&1 && \
                  ac_cv_dtrace_link=yes
  
-@@ -14949,8 +14952,6 @@ $as_echo "$SOABI" >&6; }
+@@ -14949,8 +14952,6 @@
  
  
  case $ac_sys_system in
@@ -119,7 +130,7 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
      *)
  	EXT_SUFFIX=${SHLIB_SUFFIX};;
  esac
-@@ -14962,11 +14963,7 @@ LDVERSION='$(VERSION)$(ABIFLAGS)'
+@@ -14962,11 +14963,7 @@
  $as_echo "$LDVERSION" >&6; }
  
  
@@ -132,3 +143,12 @@ Use gnu99 instead of c99 to avoid "alloca() undefined" problems on macppc.
  
  
  # Check whether right shifting a negative integer extends the sign bit
+@@ -17217,6 +17214,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
