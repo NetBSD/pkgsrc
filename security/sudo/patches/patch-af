@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.33 2016/09/12 17:12:24 taca Exp $
+$NetBSD: patch-af,v 1.34 2017/05/30 16:14:56 maya Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -9,11 +9,11 @@ $NetBSD: patch-af,v 1.33 2016/09/12 17:12:24 taca Exp $
 
 --- configure.ac.orig	2016-06-22 16:36:23.000000000 +0000
 +++ configure.ac
-@@ -439,6 +439,20 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
+@@ -447,6 +447,20 @@ AC_ARG_WITH(csops, [AS_HELP_STRING([--wi
  		;;
  esac])
  
-++AC_ARG_WITH(nbsdops, [AS_HELP_STRING([--with-nbsdops], [add NetBSD standard opt
++AC_ARG_WITH(nbsdops, [AS_HELP_STRING([--with-nbsdops], [add NetBSD standard opt
 +ions])],
 +[case $with_nbsdops in
 +    yes)       echo 'Adding NetBSD standard options'
@@ -30,7 +30,7 @@ $NetBSD: patch-af,v 1.33 2016/09/12 17:12:24 taca Exp $
  AC_ARG_WITH(passwd, [AS_HELP_STRING([--without-passwd], [don't use passwd/shadow file for authentication])],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1951,7 +1965,7 @@ case "$host" in
+@@ -1971,7 +1985,7 @@ case "$host" in
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -38,8 +38,8 @@ $NetBSD: patch-af,v 1.33 2016/09/12 17:12:24 taca Exp $
 +    *-*-linux*|*-*-k*bsd*-gnu|*-*-gnukfreebsd)
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
- 		;;
-@@ -2299,7 +2313,7 @@ SUDO_MAILDIR
+ 		# Check for SECCOMP_SET_MODE_FILTER in linux/seccomp.h
+@@ -2329,7 +2343,7 @@ SUDO_MAILDIR
  if test ${with_logincap-'no'} != "no"; then
      AC_CHECK_HEADERS([login_cap.h], [LOGINCAP_USAGE='[[-c class]] '; LCMAN=1
  	case "$OS" in
@@ -48,7 +48,7 @@ $NetBSD: patch-af,v 1.33 2016/09/12 17:12:24 taca Exp $
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
-@@ -3381,6 +3395,8 @@ if test ${with_kerb5-'no'} != "no"; then
+@@ -3441,6 +3455,8 @@ if test ${with_kerb5-'no'} != "no"; then
  	])
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
      fi
@@ -57,7 +57,7 @@ $NetBSD: patch-af,v 1.33 2016/09/12 17:12:24 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      AC_CHECK_FUNCS([krb5_verify_user krb5_init_secure_context])
-@@ -4220,7 +4236,7 @@ test "$datarootdir" = '${prefix}/share' 
+@@ -4292,7 +4308,7 @@ test "$datarootdir" = '${prefix}/share' 
  test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
