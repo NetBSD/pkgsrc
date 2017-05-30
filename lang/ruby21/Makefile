@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/05/30 15:46:21 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/05/30 15:54:11 taca Exp $
 #
 
 DISTNAME=	# empty
@@ -14,11 +14,11 @@ LICENSE=	2-clause-bsd OR ruby-license
 
 META_PACKAGE=		yes
 
-DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION_FULL}:${RUBY_SRCDIR}
-DEPENDS+= ${RUBY_NAME}-gdbm>=${RUBY_VERSION_FULL}:../../databases/ruby-gdbm
-DEPENDS+= ${RUBY_NAME}-fiddle>=${RUBY_VERSION_FULL}:../../devel/ruby-fiddle
-DEPENDS+= ${RUBY_NAME}-readline>=${RUBY_VERSION_FULL}:../../devel/ruby-readline
-DEPENDS+= ${RUBY_NAME}-tk>=${RUBY_VERSION_FULL}:../../x11/ruby-tk
+DEPENDS+= ${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
+DEPENDS+= ${RUBY_NAME}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
+DEPENDS+= ${RUBY_NAME}-fiddle>=${RUBY_VERSION}:../../devel/ruby-fiddle
+DEPENDS+= ${RUBY_NAME}-readline>=${RUBY_VERSION}:../../devel/ruby-readline
+DEPENDS+= ${RUBY_NAME}-tk>=${RUBY_VERSION}:../../x11/ruby-tk
 
 RUBY_VERSIONS_ACCEPTED=	21
 
