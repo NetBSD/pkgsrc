@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2015/12/05 17:12:13 adam Exp $
+$NetBSD: patch-configure,v 1.2 2017/05/30 14:04:54 bouyer Exp $
 
 MirBSD support
 http://bugs.python.org/issue21458
@@ -7,9 +7,11 @@ Changes for consistency across pkgsrc platforms.
 
 XXX: Not sure what the BLDSHARED changes are about.
 
---- configure.orig	2015-09-13 11:41:26.000000000 +0000
-+++ configure
-@@ -3374,7 +3374,7 @@ case $ac_sys_system/$ac_sys_release in
+detect netcan/can.h on NetBSD
+
+--- configure.orig	2017-01-17 08:57:54.000000000 +0100
++++ configure	2017-05-30 15:40:52.322257152 +0200
+@@ -3462,7 +3462,7 @@
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
    # In addition, Stefan Krah confirms that issue #1244610 exists through
    # OpenBSD 4.6, but is fixed in 4.7.
@@ -18,7 +20,7 @@ XXX: Not sure what the BLDSHARED changes are about.
      define_xopen_source=no
      # OpenBSD undoes our definition of __BSD_VISIBLE if _XOPEN_SOURCE is
      # also defined. This can be overridden by defining _BSD_SOURCE
-@@ -5787,7 +5787,7 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
+@@ -5996,7 +5996,7 @@
  	      PY3LIBRARY=libpython3.so
  	  fi
            ;;
@@ -27,7 +29,16 @@ XXX: Not sure what the BLDSHARED changes are about.
  	  LDLIBRARY='libpython$(LDVERSION).so'
  	  BLDLIBRARY='-L. -lpython$(LDVERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-@@ -8832,8 +8832,8 @@ then
+@@ -7991,7 +7991,7 @@
+ 
+ 
+ # On Linux, can.h and can/raw.h require sys/socket.h
+-for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h
++for ac_header in linux/can.h linux/can/raw.h linux/can/bcm.h netcan/can.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
+@@ -9269,8 +9269,8 @@
  			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -38,7 +49,7 @@ XXX: Not sure what the BLDSHARED changes are about.
  			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
-@@ -8857,9 +8857,9 @@ then
+@@ -9294,9 +9294,9 @@
  				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -51,7 +62,7 @@ XXX: Not sure what the BLDSHARED changes are about.
  			fi
  		else
  			# building for OS X 10.3 and later
-@@ -8898,6 +8898,9 @@ then
+@@ -9335,6 +9335,9 @@
  				   ;;
  				esac
  		fi;;
@@ -61,7 +72,7 @@ XXX: Not sure what the BLDSHARED changes are about.
  	NetBSD*|DragonFly*)
  		LDSHARED='$(CC) -shared'
  		LDCXXSHARED='$(CXX) -shared';;
-@@ -8941,7 +8944,7 @@ then
+@@ -9378,7 +9381,7 @@
  		 fi;;
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
@@ -70,7 +81,7 @@ XXX: Not sure what the BLDSHARED changes are about.
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -8990,7 +8993,7 @@ then
+@@ -9427,7 +9430,7 @@
  	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
  	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
  	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
@@ -79,7 +90,7 @@ XXX: Not sure what the BLDSHARED changes are about.
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
-@@ -14371,8 +14374,6 @@ $as_echo "$SOABI" >&6; }
+@@ -14758,8 +14761,6 @@
  
  
  case $ac_sys_system in
