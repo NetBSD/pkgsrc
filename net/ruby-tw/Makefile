@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/02/05 02:29:41 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19 2017/05/30 15:13:03 taca Exp $
 
 DISTNAME=	tw-1.0.12
 CATEGORIES=	net
@@ -15,8 +15,5 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rainbow>=2.0.0:../../misc/ruby-rainbow
 DEPENDS+=	${RUBY_PKGPREFIX}-twitter>=5.15.0:../../net/ruby-twitter
 DEPENDS+=	${RUBY_PKGPREFIX}-userstream>=1.4.0:../../net/ruby-userstream
 
-RUBY_JSON_REQD=	1.7.0
-
 .include "../../lang/ruby/gem.mk"
-.include "../../lang/ruby/json.mk"
 .include "../../mk/bsd.pkg.mk"
