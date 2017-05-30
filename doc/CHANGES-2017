@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2158 2017/05/29 23:24:55 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2159 2017/05/30 14:29:02 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/LuaJIT2 to 2.0.5 [alnsn 2017-05-29]
 	Updated lang/python36 to 3.6.1nb1 [he 2017-05-29]
 	Updated mail/mess822 to 0.58nb6 [schmonz 2017-05-29]
+	Updated security/py-certbot to 0.14.2 [fhajny 2017-05-30]
