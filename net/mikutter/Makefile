@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.140 2017/04/08 07:44:23 tsutsui Exp $
+# $NetBSD: Makefile,v 1.141 2017/05/30 15:18:31 taca Exp $
 #
 
 DISTNAME=	mikutter.3.5.7
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -34,7 +35,7 @@ USE_TOOLS+=	pax
 
 REPLACE_RUBY=	mikutter.rb devel/makechi.rb
 REPLACE_RUBY_DIRS=	core
-.include "../../lang/ruby/replace.mk"
+OVERRIDE_GEMSPEC+=	json_pure:json>=1.8
 
 INSTALLATION_DIRS+=	bin share/doc/mikutter share/applications share/mikutter
 
@@ -53,7 +54,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
-RUBY_JSON_TYPE=	pure
-RUBY_JSON_REQD=	1.8
-.include "../../lang/ruby/json.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
