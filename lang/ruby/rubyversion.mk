@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.176 2017/05/30 15:33:49 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.177 2017/05/30 15:58:16 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -92,6 +92,9 @@
 # RUBY
 #	Full path of ruby command.
 #
+# RAKE
+#	Full path of rake command.
+#
 # RDOC
 #	Full path of rdoc command.
 #
@@ -110,10 +113,7 @@
 #		Possible values: 21 22 23
 #
 # RUBY_VERSION
-#	Version of real Ruby's version excluding patchlevel.
-#
-# RUBY_VERSION_FULL
-#	Version of Ruby including patchlevel.
+#	Version of Ruby's version.
 #
 # RUBY_BASE
 #	Name of ruby base package's name.
@@ -221,11 +221,6 @@ RUBY21_VERSION=		2.1.10
 RUBY22_VERSION=		2.2.7
 RUBY23_VERSION=		2.3.4
 
-# patch level
-#RUBY21_PATCHLEVEL=	p492
-#RUBY22_PATCHLEVEL=	p470
-#RUBY23_PATCHLEVEL=	p301
-
 # current API compatible version; used for version of shared library
 RUBY21_API_VERSION=	2.1.0
 RUBY22_API_VERSION=	2.2.0
@@ -278,7 +273,6 @@ RUBY_SUFFIX?=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}${_RUBY_VER_TEENY}
 
 .if ${RUBY_VER} == "21"
 RUBY_VERSION=		${RUBY21_VERSION}
-RUBY_VERSION_FULL=	${RUBY_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 
 RUBY_GEMS_VERSION=	2.2.2
@@ -296,7 +290,6 @@ RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
 .elif ${RUBY_VER} == "22"
 RUBY_VERSION=		${RUBY22_VERSION}
-RUBY_VERSION_FULL=	${RUBY_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 
 RUBY_GEMS_VERSION=	2.4.5.2
@@ -315,7 +308,6 @@ RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
 .elif ${RUBY_VER} == "23"
 RUBY_VERSION=		${RUBY23_VERSION}
-RUBY_VERSION_FULL=	${RUBY_VERSION}
 RUBY_ABI_VERSION=	${RUBY_VERSION}
 
 RUBY_GEMS_VERSION=	2.5.2
