@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.8 2017/05/30 13:36:39 bouyer Exp $
+$NetBSD: patch-configure,v 1.9 2017/05/30 13:57:16 wiz Exp $
 
 Simplify _sysconfigdata to include only platform name.
 
@@ -143,12 +143,3 @@ detect netcan/can.h on NetBSD
  
  
  # Check whether right shifting a negative integer extends the sign bit
-@@ -17217,6 +17214,8 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
