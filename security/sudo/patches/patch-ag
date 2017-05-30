@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.24 2016/09/12 17:12:24 taca Exp $
+$NetBSD: patch-ag,v 1.25 2017/05/30 16:14:56 maya Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -7,9 +7,17 @@ $NetBSD: patch-ag,v 1.24 2016/09/12 17:12:24 taca Exp $
   functions (HAVE_KRB5_*).
 * Remove setting sysconfdir to "/etc".
 
---- configure.orig	2016-06-22 16:36:22.000000000 +0000
+--- configure.orig	2017-05-29 20:33:06.000000000 +0000
 +++ configure
-@@ -1562,7 +1562,7 @@ Fine tuning of the installation director
+@@ -865,6 +865,7 @@ with_libpath
+ with_libraries
+ with_efence
+ with_csops
++with_nbsdops
+ with_passwd
+ with_skey
+ with_opie
+@@ -1571,7 +1572,7 @@ Fine tuning of the installation director
    --bindir=DIR            user executables [EPREFIX/bin]
    --sbindir=DIR           system admin executables [EPREFIX/sbin]
    --libexecdir=DIR        program executables [EPREFIX/libexec]
@@ -18,38 +26,39 @@ $NetBSD: patch-ag,v 1.24 2016/09/12 17:12:24 taca Exp $
    --sharedstatedir=DIR    modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR     modifiable single-machine data [PREFIX/var]
    --libdir=DIR            object code libraries [EPREFIX/lib]
-@@ -1661,6 +1661,7 @@ Optional Packages:
+@@ -1674,6 +1675,7 @@ Optional Packages:
    --with-libraries        additional libraries to link with
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
-+  --with-nbsdops          add NetBSD standard options
++  --with-nbsdops          add NetBSD standard opt ions
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey[=DIR]       enable S/Key support
    --with-opie[=DIR]       enable OPIE support
-@@ -4499,6 +4500,22 @@ $as_echo "$as_me: WARNING: Ignoring unkn
- esac
- fi
+@@ -4746,6 +4748,23 @@ fi
  
-+# Check whether --with-nbsdops or --without-nbsdops was given.
-+if test "${with_nbsdops+set}" = set; then
-+  withval="$with_nbsdops"
-+  case $with_nbsdops in
-+    yes)	echo 'Adding NetBSD standard options'
-+		CHECKSIA=false
-+		with_ignore_dot=yes
-+		with_env_editor=yes
-+		with_tty_tickets=yes
-+		;;
-+    no)		;;
-+    *)		echo "Ignoring unknown argument to --with-nbsdops: $with_nbsdops"
-+		;;
+ 
+ 
++# Check whether --with-nbsdops was given.
++if test "${with_nbsdops+set}" = set; then :
++  withval=$with_nbsdops; case $with_nbsdops in
++    yes)       echo 'Adding NetBSD standard options'
++               CHECKSIA=false
++               with_ignore_dot=yes
++               with_env_editor=yes
++               with_tty_tickets=yes
++               ;;
++    no)                ;;
++    *)         echo "Ignoring unknown argument to --with-nbsdops: $with_nbsdops"
++               ;;
 +esac
-+fi;
++fi
 +
- 
- 
++
++
  # Check whether --with-passwd was given.
-@@ -15209,7 +15226,7 @@ fi
+ if test "${with_passwd+set}" = set; then :
+   withval=$with_passwd; case $with_passwd in
+@@ -15770,7 +15789,7 @@ fi
  		: ${mansectsu='1m'}
  		: ${mansectform='4'}
  		;;
@@ -57,8 +66,8 @@ $NetBSD: patch-ag,v 1.24 2016/09/12 17:12:24 taca Exp $
 +    *-*-linux*|*-*-k*bsd*-gnu|*-*-gnukfreebsd)
  		shadow_funcs="getspnam"
  		test -z "$with_pam" && AUTH_EXCL_DEF="PAM"
- 		;;
-@@ -17228,7 +17245,7 @@ if test "x$ac_cv_header_login_cap_h" = x
+ 		# Check for SECCOMP_SET_MODE_FILTER in linux/seccomp.h
+@@ -17995,7 +18014,7 @@ if test "x$ac_cv_header_login_cap_h" = x
  _ACEOF
   LOGINCAP_USAGE='[-c class] '; LCMAN=1
  	case "$OS" in
@@ -67,7 +76,20 @@ $NetBSD: patch-ag,v 1.24 2016/09/12 17:12:24 taca Exp $
  		SUDO_LIBS="${SUDO_LIBS} -lutil"
  		SUDOERS_LIBS="${SUDOERS_LIBS} -lutil"
  		;;
-@@ -21839,6 +21856,8 @@ fi
+@@ -22483,10 +22502,9 @@ if test ${with_pam-"no"} != "no"; then
+     # Check for pam_start() in libpam first, then for pam_appl.h.
+     #
+     found_pam_lib=no
+-    as_ac_Lib=`$as_echo "ac_cv_lib_pam_pam_start$lt_cv_dlopen_libs" | $as_tr_sh`
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for pam_start in -lpam" >&5
++    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pam_start in -lpam" >&5
+ $as_echo_n "checking for pam_start in -lpam... " >&6; }
+-if eval \${$as_ac_Lib+:} false; then :
++if ${ac_cv_lib_pam_pam_start+:} false; then :
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+@@ -23256,6 +23273,8 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
      fi
@@ -76,12 +98,11 @@ $NetBSD: patch-ag,v 1.24 2016/09/12 17:12:24 taca Exp $
      _LIBS="$LIBS"
      LIBS="${LIBS} ${SUDOERS_LIBS}"
      for ac_func in krb5_verify_user krb5_init_secure_context
-@@ -24341,7 +24360,7 @@ test "$datarootdir" = '${prefix}/share' 
+@@ -26426,7 +26445,6 @@ test "$datarootdir" = '${prefix}/share' 
  test "$docdir" = '${datarootdir}/doc/${PACKAGE_TARNAME}' && docdir='$(datarootdir)/doc/$(PACKAGE_TARNAME)'
  test "$localedir" = '${datarootdir}/locale' && localedir='$(datarootdir)/locale'
  test "$localstatedir" = '${prefix}/var' && localstatedir='$(prefix)/var'
 -test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
-+# test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
  
  if test X"$INIT_SCRIPT" != X""; then
      ac_config_files="$ac_config_files init.d/$INIT_SCRIPT"
