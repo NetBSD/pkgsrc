@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.37 2016/11/19 15:35:03 taca Exp $
+# $NetBSD: gem.mk,v 1.38 2017/05/30 16:02:25 taca Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -126,10 +126,6 @@ REPLACE_RUBY_PAT?=	*
 GEM_BUILD?=	gemspec
 
 OVERRIDE_GEMSPEC?=	# default is empty
-
-.if ${GEM_BUILD} == "rake"
-USE_RAKE?=		YES
-.endif
 
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
