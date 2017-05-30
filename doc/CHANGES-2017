@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2161 2017/05/30 15:20:06 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2162 2017/05/30 16:05:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2707,3 +2707,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.14.2 [fhajny 2017-05-30]
 	Updated net/mikutter to 3.5.7nb1 [taca 2017-05-30]
 	Updated www/termtter to 2.2.1nb3 [taca 2017-05-30]
+	Removed devel/ruby-rake [taca 2017-05-30]
