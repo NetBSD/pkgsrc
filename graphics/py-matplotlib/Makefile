@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2017/05/29 20:59:21 adam Exp $
+# $NetBSD: Makefile,v 1.48 2017/05/30 07:20:21 adam Exp $
 
 .include "Makefile.common"
 
@@ -12,12 +12,7 @@ DEPENDS+=	${PYPKGPREFIX}-pyparsing>=1.5.6:../../devel/py-pyparsing
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
-.include "../../lang/python/pyversion.mk"
-.if "${PYPKGPREFIX}" == "py27"
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
-.else
-DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo3
-.endif
+PYTHON_VERSIONED_DEPENDENCIES=	cairo
 
 MPL_PACKAGES=	mpl_packages
 
@@ -45,6 +40,7 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
+.include "../../lang/python/versioned_dependencies.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
