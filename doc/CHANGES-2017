@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2163 2017/05/30 16:15:32 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2164 2017/05/30 16:53:23 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2709,3 +2709,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/termtter to 2.2.1nb3 [taca 2017-05-30]
 	Removed devel/ruby-rake [taca 2017-05-30]
 	Updated security/sudo to 1.8.20p1 [maya 2017-05-30]
+	Updated fonts/fontconfig to 2.12.1nb1 [jperkin 2017-05-30]
