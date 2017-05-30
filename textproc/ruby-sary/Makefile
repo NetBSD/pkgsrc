@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/04/22 18:27:05 taca Exp $
+# $NetBSD: Makefile,v 1.21 2017/05/30 14:22:41 taca Exp $
 #
 
 DISTNAME=	sary-ruby-1.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sary.sourceforge.net/
 COMMENT=	Ruby Binding of Sary
 LICENSE=	gnu-lgpl-v2.1
-
-RUBY_VERSIONS_ACCEPTED= 23 22 21
 
 USE_RUBY_EXTCONF=	yes
 USE_TOOLS+=		pkg-config
