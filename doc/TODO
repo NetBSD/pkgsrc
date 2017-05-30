@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17399 2017/05/29 21:00:53 adam Exp $
+$NetBSD: TODO,v 1.17400 2017/05/30 16:15:32 maya Exp $
 
 Suggested new packages
 ======================
@@ -1459,7 +1459,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stratagus-2.2.5.5
 	o streamtuner-2.2.0
 	o subtitleeditor-0.52.1
-	o sudo-1.8.20
 	o superlu-5.1.1
 	o supertux-0.5
 	o supertuxkart-0.9.2
