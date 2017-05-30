@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2017/04/23 14:10:24 taca Exp $
+# $NetBSD: Makefile.common,v 1.34 2017/05/30 15:46:21 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -55,7 +55,7 @@ PLIST_SUBST+=		RUBY_SHLIBVER=${RUBY_SHLIBVER:Q} \
 
 .if !empty(RUBY_EXTNAME)
 
-PKGNAME?=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION_FULL}
+PKGNAME?=		${RUBY_PKGPREFIX}-${RUBY_EXTNAME}-${RUBY_VERSION}
 DISTINFO_FILE=		${.CURDIR}/${RUBY_SRCDIR}/distinfo
 PATCHDIR=		${.CURDIR}/${RUBY_SRCDIR}/patches
 do-patch:
