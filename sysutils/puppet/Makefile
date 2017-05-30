@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/04/19 11:24:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2017/05/30 15:13:04 taca Exp $
 
 DISTNAME=		puppet-3.8.7
 CATEGORIES=		sysutils
@@ -14,7 +14,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<3:../../databases/ruby-hiera
 
 RUBY_VERSIONS_ACCEPTED=	21
 
-RUBY_JSON_REQD=		0
 OVERRIDE_GEMSPEC=	json_pure:json>0
 
 RUBYGEM_OPTIONS+=	--format-executable
@@ -114,6 +113,5 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/svc/method
 .endif
 
-.include "../../lang/ruby/json.mk"
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
