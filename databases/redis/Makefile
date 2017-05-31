@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2017/05/18 13:48:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.28 2017/05/31 19:29:26 jlam Exp $
 
 DISTNAME=	redis-3.2.9
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.redis.io/releases/
 
@@ -32,7 +33,6 @@ REDIS_DATADIR?=		${VARBASE}/db/redis
 REDIS_LOGDIR?=		${VARBASE}/log/redis
 REDIS_PIDDIR?=		${VARBASE}/run
 
-OWN_DIRS+=		${REDIS_DATADIR} ${REDIS_LOGDIR}
 OWN_DIRS_PERMS+=	${REDIS_DATADIR} ${REDIS_USER} ${REDIS_GROUP} 0770
 OWN_DIRS_PERMS+=	${REDIS_LOGDIR} ${REDIS_USER} ${REDIS_GROUP} 0770
 
