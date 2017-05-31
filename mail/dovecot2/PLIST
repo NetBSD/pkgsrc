@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2017/04/13 01:59:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.54 2017/05/31 11:04:37 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -200,6 +200,7 @@ include/dovecot/imap-seqset.h
 include/dovecot/imap-settings.h
 include/dovecot/imap-state.h
 include/dovecot/imap-status.h
+include/dovecot/imap-sync-private.h
 include/dovecot/imap-sync.h
 include/dovecot/imap-url.h
 include/dovecot/imap-urlauth-backend.h
@@ -888,6 +889,7 @@ share/doc/dovecot/wiki/Plugins.QuotaClone.txt
 share/doc/dovecot/wiki/Plugins.Snarf.txt
 share/doc/dovecot/wiki/Plugins.Stats.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
+share/doc/dovecot/wiki/Plugins.VarExpandCrypt.txt
 share/doc/dovecot/wiki/Plugins.Virtual.txt
 share/doc/dovecot/wiki/Plugins.Welcome.txt
 share/doc/dovecot/wiki/Plugins.Zlib.txt
