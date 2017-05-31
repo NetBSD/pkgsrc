@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.41 2016/10/28 09:21:08 jperkin Exp $
+# $NetBSD: OpenBSD.mk,v 1.42 2017/05/31 22:55:01 jlam Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -51,7 +51,15 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
-_OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
+_OPSYS_SHLIB_TYPE=	${_OPSYS_SHLIB_TYPE_cmd:sh}	# shared library type
+_OPSYS_SHLIB_TYPE_cmd=	\
+	output=`/usr/bin/file /sbin/sysctl`;	\
+	case $$output in			\
+	*ELF*dynamically*)	echo ELF ;;	\
+	*shared*library*)	echo a.out ;;	\
+	*dynamically*)		echo a.out ;;	\
+	*)			echo ELF ;;	\
+	esac
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 .if ${OS_VERSION} >= 3.4
 _PATCH_BACKUP_ARG?=	-V simple -z 	# switch to patch(1) for backup suffix
