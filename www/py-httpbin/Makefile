@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1 2016/01/02 10:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/31 08:36:33 adam Exp $
 
-DISTNAME=	httpbin-0.4.0
+DISTNAME=	httpbin-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httpbin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/httpbin
+HOMEPAGE=	https://github.com/Runscope/httpbin/
 COMMENT=	HTTP Request and Response Service
 LICENSE=	mit
 
