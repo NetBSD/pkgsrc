@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.25 2017/05/30 16:14:56 maya Exp $
+$NetBSD: patch-ag,v 1.26 2017/05/31 02:33:12 maya Exp $
 
 * Add "--with-nbsdops" option, NetBSD standard options.
 * Link with util(3) in the case of DragonFly, too.
@@ -89,6 +89,30 @@ $NetBSD: patch-ag,v 1.25 2017/05/30 16:14:56 maya Exp $
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
+@@ -22510,18 +22528,17 @@ return pam_start ();
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+-  eval "$as_ac_Lib=yes"
++  ac_cv_lib_pam_pam_start=yes
+ else
+-  eval "$as_ac_Lib=no"
++  ac_cv_lib_pam_pam_start=no
+ fi
+ rm -f core conftest.err conftest.$ac_objext \
+     conftest$ac_exeext conftest.$ac_ext
+ LIBS=$ac_check_lib_save_LIBS
+ fi
+-eval ac_res=\$$as_ac_Lib
+-	       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_res" >&5
+-$as_echo "$ac_res" >&6; }
+-if eval test \"x\$"$as_ac_Lib"\" = x"yes"; then :
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pam_pam_start" >&5
++$as_echo "$ac_cv_lib_pam_pam_start" >&6; }
++if test "x$ac_cv_lib_pam_pam_start" = xyes; then :
+   found_pam_lib=yes
+ fi
+ 
 @@ -23256,6 +23273,8 @@ fi
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
  	AUTH_OBJS="$AUTH_OBJS kerb5.lo"
