@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2017/05/31 12:19:16 jym Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/31 21:30:15 jym Exp $
 
 DISTNAME=	pinentry-mac-${PINENTRY_VERSION}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GPGTools/}
 PINENTRY_VERSION=0.9.4
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 EXTRACT_SUFX=	.zip
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/GPGTools/pinentry-mac/
