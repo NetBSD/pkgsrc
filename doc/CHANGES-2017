@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2169 2017/05/31 07:52:37 tron Exp $
+$NetBSD: CHANGES-2017,v 1.2170 2017/05/31 08:59:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2717,3 +2717,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/sxhkd to 0.5.7 [maya 2017-05-31]
 	Updated mail/qmail-run to 20170531 [schmonz 2017-05-31]
 	Updated mail/mutt to 1.8.3 [tron 2017-05-31]
+	Updated devel/py-requests to 2.17.3 [adam 2017-05-31]
+	Updated www/py-werkzeug to 0.12.2 [adam 2017-05-31]
+	Updated www/py-httpbin to 0.5.0 [adam 2017-05-31]
+	Updated security/py-cryptography_vectors to 1.9 [adam 2017-05-31]
