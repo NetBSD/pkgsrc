@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2023 2017/05/31 22:55:01 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2024 2017/05/31 22:56:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -615,6 +615,12 @@ ${.CURDIR}/${WRKDIR_BASENAME}:
 # MAKEFLAGS.su-${.TARGET}
 #	The additional flags that are passed to the make process.
 #
+# PRE_CMD.su-${.TARGET}
+#	Shell command executed before running the command that requires
+#	root privileges.  This may "exit 0" to short-circuit the command
+#	list and skip executing the command that requires the root
+#	privileges.
+#
 
 _ROOT_CMD=	cd ${.CURDIR} &&					\
 		${PKGSRC_SETENV} ${PKGSRC_MAKE_ENV}				\
@@ -626,11 +632,7 @@ _ROOT_CMD=	cd ${.CURDIR} &&					\
 
 .PHONY: su-target
 su-target: .USE
-	${RUN} \
-	case ${PRE_CMD.su-${.TARGET}:Q}"" in				\
-	"")	;;							\
-	*)	${PRE_CMD.su-${.TARGET}} ;;				\
-	esac;								\
+	${RUN}${PRE_CMD.su-${.TARGET}:U${TRUE}};			\
 	if ${_IS_ROOT_CMD}; then					\
 		${_ROOT_CMD};						\
 	else								\
