@@ -1,4 +1,4 @@
-# $NetBSD: linux-dtb.mk,v 1.1 2017/05/25 21:39:57 jmcneill Exp $
+# $NetBSD: linux-dtb.mk,v 1.2 2017/05/31 13:24:31 jmcneill Exp $
 
 LK_VERSION=	4.11.3
 PKGNAME=	dtb-${DTB_ARCH}-${DTB_DEVICE}-${LK_VERSION}
@@ -27,10 +27,11 @@ DTS_ARCH_INC=	${DTS_DIR}/include
 
 do-build:
 .for d in ${DTB_DTS}
-	${CPP} -P -x assembler-with-cpp -I ${DTS_INC} -I ${DTS_ARCH_INC} \
-	    -include ${DTS_DIR}/${d} /dev/null | \
-	    ${DTC} -i ${DTS_INC} -i ${DTS_ARCH_INC} -I dts -O dtb \
-	        -p 1024 -b 0 -o ${DTS_DIR}/${d:C/dts$/dtb/}
+	cd ${DTS_DIR} && \
+	    ${CPP} -P -x assembler-with-cpp -I ${DTS_INC} -I ${DTS_ARCH_INC} \
+	        -include ${DTS_DIR}/${d} /dev/null | \
+	        ${DTC} -i ${DTS_INC} -i ${DTS_ARCH_INC} -I dts -O dtb \
+	            -p 1024 -b 0 -o ${DTS_DIR}/${d:C/dts$/dtb/}
 .endfor
 
 do-install:
