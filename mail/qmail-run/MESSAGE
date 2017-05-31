@@ -1,7 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2017/01/09 04:58:09 schmonz Exp $
+$NetBSD: MESSAGE,v 1.5 2017/05/31 07:08:04 schmonz Exp $
 
 Please read ${PREFIX}/share/doc/qmail-run/README.pkgsrc.
+
+NOTE: qmail-qfilter-queue is deprecated and will be removed in 2017Q3.
+Please migrate to qmail-qfilter-{ofmipd,smtpd}-queue.
 
 To enable qmail for...
 
@@ -24,8 +27,20 @@ Outgoing submissions with SMTP AUTH over TLS:
 POP3 (only for Maildirs):
 - Set qmailpop3d=YES in /etc/rc.conf.
 
-To make the queue visible to local non-root users:
+Local non-root users to see the queue:
 - Set qmailqread=YES in /etc/rc.conf.
 - Change the mailq entry in /etc/mailer.conf to qmail-qread-client.
+
+Filtering incoming messages arriving via SMTP:
+- Set QMAILQUEUE="${PREFIX}/bin/qmail-qfilter-smtpd-queue" in tcp.smtp.
+- Reload the cdb: /etc/rc.d/qmailsmtpd cdb
+- Consult qmail-qfilter(1) and see share/examples/qmail-qfilter.
+- Place executable filters named 'smtpd-*' in ${PKG_SYSCONFDIR}/filters.
+
+Filtering outgoing messages submitted via OFMIP:
+- Set QMAILQUEUE="${PREFIX}/bin/qmail-qfilter-ofmipd-queue" in tcp.ofmip.
+- Reload the cdb: /etc/rc.d/qmailofmipd cdb
+- Consult qmail-qfilter(1) and see share/examples/qmail-qfilter.
+- Place executable filters named 'ofmipd-*' in ${PKG_SYSCONFDIR}/filters.
 
 ===========================================================================
