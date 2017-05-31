@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2017/04/11 14:04:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.36 2017/05/31 07:08:04 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20170411
+DISTNAME=		qmail-run-20170531
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -12,8 +12,7 @@ LICENSE=		2-clause-bsd
 
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-
-CONFLICTS+=		qmail-qfilter-1.5nb1
+DEPENDS+=		qmail-qfilter>1.5nb1:../../mail/qmail-qfilter
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
@@ -24,12 +23,12 @@ FILES_SUBST+=		QMAIL_LOG_USER=${QMAIL_LOG_USER:Q}
 FILES_SUBST+=		QMAIL_SEND_USER=${QMAIL_SEND_USER:Q}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
-MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
+MESSAGE_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE:Q}
 RCD_SCRIPTS=		qmail qmailofmipd qmailpop3d qmailqread qmailsend qmailsmtpd
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
 BUILD_DEFS+=		QMAIL_DAEMON_USER QMAIL_LOG_USER QMAIL_SEND_USER
-BUILD_DEFS+=		QMAIL_QUEUE_EXTRA
+BUILD_DEFS+=		QMAIL_QUEUE_EXTRA PKG_SYSCONFBASE
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -71,9 +70,12 @@ post-extract:
 	done
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-procmail ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qread-client ${DESTDIR}${PREFIX}/bin
+	for f in qmail-procmail qmail-qfilter-queue qmail-qread-client; do \
+	    ${INSTALL_SCRIPT} ${WRKDIR}/$$f ${DESTDIR}${PREFIX}/bin;	\
+	done
+	for f in qmail-qfilter-ofmipd-queue qmail-qfilter-smtpd-queue; do \
+	    ${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${DESTDIR}${PREFIX}/bin/$$f;	\
+	done
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
 		${DESTDIR}${PREFIX}/share/doc/qmail-run
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
