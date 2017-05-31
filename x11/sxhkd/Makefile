@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/06/05 22:45:07 youri Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/31 05:15:47 maya Exp $
 
-DISTNAME=		sxhkd-0.5.5
+DISTNAME=		sxhkd-0.5.7
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GITHUB:=baskerville/}
 GITHUB_TAG=		${PKGVERSION}
