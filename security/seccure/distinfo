@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:18:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/05/31 23:31:13 agc Exp $
 
 SHA1 (seccure-0.4.tar.gz) = 883e335f58cc36279c33493ab219f4940a46dab8
 RMD160 (seccure-0.4.tar.gz) = fc35fdf69372c39b20a67c5341b1e36ce6bf8e9f
 SHA512 (seccure-0.4.tar.gz) = 3372ecc473677a50822de39dfb62c449f1c03fd19c8f0bf72838d6dce452960bd1ca80ac8987c0e1f1874b515c94776ba2f26886150756f00c8bd849cfbfefa7
 Size (seccure-0.4.tar.gz) = 31881 bytes
-SHA1 (patch-aa) = 4813ab5c58779c490a0e96314333b90397df97cd
+SHA1 (patch-aa) = 91c83d4583d28cade721c105e52fd0535b7a0171
 SHA1 (patch-seccure.c) = 61ff85bc1e6d4d7ec59903328ec079d176ba4e92
