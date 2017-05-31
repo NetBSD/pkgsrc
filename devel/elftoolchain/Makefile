@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/05/14 08:29:37 bsiegert Exp $
+# $NetBSD: Makefile,v 1.13 2017/05/31 22:14:43 agc Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -18,7 +18,7 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 MAKE_JOBS_SAFE=	no
 
 USE_BSD_MAKEFILE=	yes
-USE_TOOLS+=		m4
+USE_TOOLS+=		m4 lex
 MAKE_ENV+=		${BSD_MAKE_ENV}
 MAKE_FLAGS+=		MKPROFILE=yes
 
