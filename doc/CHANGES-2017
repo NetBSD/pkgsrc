@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2168 2017/05/31 07:08:12 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2169 2017/05/31 07:52:37 tron Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2716,3 +2716,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated wm/bspwm to 0.9.2 [maya 2017-05-31]
 	Updated x11/sxhkd to 0.5.7 [maya 2017-05-31]
 	Updated mail/qmail-run to 20170531 [schmonz 2017-05-31]
+	Updated mail/mutt to 1.8.3 [tron 2017-05-31]
