@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2173 2017/05/31 10:35:34 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2174 2017/05/31 11:05:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2724,3 +2724,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/openssh to 7.5.1 [jperkin 2017-05-31]
 	Updated net/syncthing to 0.14.29 [wiz 2017-05-31]
 	Updated net/py-lexicon to 2.1.5 [fhajny 2017-05-31]
+	Updated www/nghttp2 to 1.23.1 [adam 2017-05-31]
+	Updated mail/dovecot2 to 2.2.30 [adam 2017-05-31]
