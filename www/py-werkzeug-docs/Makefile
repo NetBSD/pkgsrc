@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.8 2017/01/01 14:44:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2017/05/31 08:24:38 adam Exp $
 
 PKGNAME=	${PYPKGPREFIX}-werkzeug-docs-${DISTNAME:C/[^-]*-//}
-
 COMMENT=	Python WSGI Utility Library (HTML documentation)
 
 NO_CONFIGURE=	yes
 BUILD_TARGET=	documentation
 
-USE_TOOLS+=	pax
-
 INSTALLATION_DIRS+=	${DOCDIR}/html
 
+DOCDIR=		share/doc/${PYPKGPREFIX}-${DISTNAME:tl:C/-[^-]*$//}
+PLIST_SUBST+=	DOCDIR=${DOCDIR}
 PLIST_SRC+=	${WRKDIR}/PLIST
 
 .include "../../www/py-werkzeug/Makefile.common"
@@ -23,10 +22,9 @@ do-install:
 	    && ${FIND} ${DOCDIR}/html -type f -print > ${WRKDIR}/PLIST
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # sphinx detection broken as of 0.9.4
-.include "../../lang/python/pyversion.mk"
 BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
 
 MAKE_FLAGS+=	SPHINXBUILD=${PREFIX}/bin/sphinx-build${PYVERSSUFFIX}
 
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
