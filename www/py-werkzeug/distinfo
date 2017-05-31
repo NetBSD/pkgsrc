@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2017/03/14 13:48:22 kleink Exp $
+$NetBSD: distinfo,v 1.17 2017/05/31 08:24:38 adam Exp $
 
-SHA1 (Werkzeug-0.12.tar.gz) = f48c6c8e6c39d98463630758d787ab70a273d208
-RMD160 (Werkzeug-0.12.tar.gz) = 4f0212865665ab78ae309bdab8f170e2e0aecb0d
-SHA512 (Werkzeug-0.12.tar.gz) = 1d0ff9cbce389e9db3943fbf5c148a449963254950e97cdc93a6f10e1c811c0cbb9c1cebdbc5eb424c49518e15d4c181bc5114e72f426f27b67c6fb0ba49cdaa
-Size (Werkzeug-0.12.tar.gz) = 1182644 bytes
+SHA1 (Werkzeug-0.12.2.tar.gz) = fe5c3e287ae54cfefc25fd3eec800599b8026b49
+RMD160 (Werkzeug-0.12.2.tar.gz) = 939a81e6857500b8627c39e0994256a754b443c9
+SHA512 (Werkzeug-0.12.2.tar.gz) = 9ff45aeb51a71fd5115e8cdee40a7b2fddfa0574c356686050cb1bdced5c6c18f672b601ca2637010c7f59be75c66ee558efb4ea05052c550ec7da3644b88e0a
+Size (Werkzeug-0.12.2.tar.gz) = 1169770 bytes
+SHA1 (patch-docs_conf.py) = bdf45da4ba350a35e423f447eb8dc778670ada21
