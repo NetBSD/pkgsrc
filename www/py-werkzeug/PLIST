@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/03/14 13:48:22 kleink Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/05/31 08:24:38 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -131,8 +131,6 @@ ${PYSITELIB}/werkzeug/wrappers.pyo
 ${PYSITELIB}/werkzeug/wsgi.py
 ${PYSITELIB}/werkzeug/wsgi.pyc
 ${PYSITELIB}/werkzeug/wsgi.pyo
-${DOCDIR}/AUTHORS
-${DOCDIR}/CHANGES
 ${EGDIR}/README
 ${EGDIR}/contrib/README
 ${EGDIR}/contrib/securecookie.py
