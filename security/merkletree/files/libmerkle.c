@@ -38,6 +38,10 @@
 
 #define MERKLETREE_MAX_ROWS	16
 
+#ifndef __UNCONST
+#define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
+#endif
+
 /* a row of digests in a merkle tree */
 typedef struct merkletree_row_t {
 	uint64_t	 outc;		/* # of output bytes */
