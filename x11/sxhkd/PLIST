@@ -1,3 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/05 22:45:07 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/05/31 05:15:47 maya Exp $
 bin/sxhkd
 man/man1/sxhkd.1
+share/doc/sxhkd/examples/background_shell/profile
+share/doc/sxhkd/examples/background_shell/shell
+share/doc/sxhkd/examples/background_shell/sxhkdrc
+share/doc/sxhkd/examples/background_shell/xinitrc
+share/doc/sxhkd/examples/notification/autostart
+share/doc/sxhkd/examples/notification/pam_environment
+share/doc/sxhkd/examples/notification/sxhkd_notify
+share/doc/sxhkd/examples/notification/xinitrc
