@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/05/06 09:02:36 nonaka Exp $
+# $NetBSD: Makefile,v 1.2 2017/05/31 03:59:45 nonaka Exp $
 
-DISTNAME=	iwatch-1.0.3
+DISTNAME=	iwatch-1.0.4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=iij/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
