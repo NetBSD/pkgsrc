@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2172 2017/05/31 09:41:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2173 2017/05/31 10:35:34 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2723,3 +2723,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-cryptography_vectors to 1.9 [adam 2017-05-31]
 	Updated security/openssh to 7.5.1 [jperkin 2017-05-31]
 	Updated net/syncthing to 0.14.29 [wiz 2017-05-31]
+	Updated net/py-lexicon to 2.1.5 [fhajny 2017-05-31]
