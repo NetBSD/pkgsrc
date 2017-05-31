@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2176 2017/05/31 17:32:32 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2177 2017/05/31 18:13:39 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2728,3 +2728,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/dovecot2 to 2.2.30 [adam 2017-05-31]
 	Added security/pinentry-mac version 0.9.4 [jym 2017-05-31]
 	Updated databases/sqlite3 to 3.19.2 [adam 2017-05-31]
+	Updated sysutils/bcmfw to 2.1 [plunky 2017-05-31]
