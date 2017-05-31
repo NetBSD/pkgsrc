@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/05/31 12:19:16 jym Exp $
+
+SHA1 (pinentry-mac-0.9.4.zip) = da2a909ec45e74ad1a6ff2fad34b34e3dcdb8f32
+RMD160 (pinentry-mac-0.9.4.zip) = 9b2e4dc378ebec9f314e1706a5d3d9a358f0e4b2
+SHA512 (pinentry-mac-0.9.4.zip) = 6eaba116eb248a2b444e131c9f9f56f91c028783e37e5b600763f1c02b9162495a557517dfb96883cf4d22d8582907e4615d3491fc8aadaf85eee8b4464067bf
+Size (pinentry-mac-0.9.4.zip) = 312871 bytes
