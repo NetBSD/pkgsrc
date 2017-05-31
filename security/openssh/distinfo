@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.103 2016/12/30 04:43:16 taca Exp $
+$NetBSD: distinfo,v 1.104 2017/05/31 09:30:21 jperkin Exp $
 
-SHA1 (openssh-7.4p1.tar.gz) = 2330bbf82ed08cf3ac70e0acf00186ef3eeb97e0
-RMD160 (openssh-7.4p1.tar.gz) = dff996c9f7ab697a04968fbd8924642253bc0e06
-SHA512 (openssh-7.4p1.tar.gz) = 4f3256f461f01366c5d5e0e45285eec65016e2643b3284b407f48f53d81087bf2c1caf7d5f7530d307a15c91c64de91446e1cba948e8fc68f82098290fe3b292
-Size (openssh-7.4p1.tar.gz) = 1511780 bytes
+SHA1 (openssh-7.5p1.tar.gz) = 5e8f185d00afb4f4f89801e9b0f8b9cee9d87ebd
+RMD160 (openssh-7.5p1.tar.gz) = c1b176a1fe92495d056edda0c5db54efcfb8764a
+SHA512 (openssh-7.5p1.tar.gz) = 58c542e8a110fb4316a68db94abb663fa1c810becd0638d45281df8aeca62c1f705090437a80e788e6c29121769b72a505feced537d3118c933fde01b5285c81
+Size (openssh-7.5p1.tar.gz) = 1510857 bytes
 SHA1 (patch-Makefile.in) = 98960119bda68a663214c8880484552f1207bcfc
 SHA1 (patch-auth-passwd.c) = 5205ca4d15dbcd3f4c574f0a2fb7713ae69af5f7
 SHA1 (patch-auth-rhosts.c) = a5e6131e63b83a7e8a06cd80f22def449d6bc2c4
 SHA1 (patch-auth.c) = cd13f8b31b45d668c5e09eca098b17ec8a7c1039
 SHA1 (patch-auth2.c) = efc1eb6d28cb6ec2bd87723943f3e36c612d93aa
-SHA1 (patch-channels.c) = edcce67664bbbc30a8d10ed2fe58dcece944726c
 SHA1 (patch-clientloop.c) = 4e88fbd14db33f003eb93c30c682a017e102196e
 SHA1 (patch-config.h.in) = 7406f10b568d2b8237ee575922ce712658d90d59
-SHA1 (patch-configure.ac) = d7ba54f34e03fd204eb1a9804fcae7fd16e285e2
+SHA1 (patch-configure.ac) = 8ff27fcf7391722732386a574e3a4d41c4209222
 SHA1 (patch-defines.h) = bd8687a9a2857f3b8d15ae94095f27f9344003c4
 SHA1 (patch-includes.h) = c4a7622af6fbcd098d18d257724dca6aaeea4fda
 SHA1 (patch-loginrec.c) = 28082deb14258fe63cbecad8ac96afc016de439c
