@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17400 2017/05/30 16:15:32 maya Exp $
+$NetBSD: TODO,v 1.17401 2017/05/31 08:59:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -1294,7 +1294,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-hsm-1.1.1
-	o py-httpbin-0.4.1
 	o py-input-pad-1.4.2
 	o py-isodate-0.5.4
 	o py-jaraco_util-11.0
