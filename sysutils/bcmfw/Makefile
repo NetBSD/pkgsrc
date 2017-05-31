@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2016/02/17 10:58:19 plunky Exp $
+# $NetBSD: Makefile,v 1.11 2017/05/31 18:12:47 plunky Exp $
 
-DISTNAME=		bcmfw-2.0
+DISTNAME=		bcmfw-2.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.NetBSD.org/~plunky/
-DISTFILES=		${DISTNAME}.tar.gz		\
-			bluez-firmware-1.2.tar.gz
+MASTER_SITES=		http://github.com/plunky/bcmfw/archive/
+DIST_SUBDIR=		${PKGNAME_NOREV}
+DISTFILES=		v${PKGVERSION_NOREV}.tar.gz
+DISTFILES+=		bluez-firmware-1.2.tar.gz
 SITES.bluez-firmware-1.2.tar.gz= \
 			http://bluez.sourceforge.net/download/
 
 MAINTAINER=		plunky@NetBSD.org
+HOMEPAGE=		https://github.com/plunky/bcmfw
 COMMENT=		Broadcom Bluetooth Firmware Loader
 LICENSE=		bcmfw-license
+
+EXTRACT_USING=		bsdtar
 
 RESTRICTED=		No clear permission to redistribute firmware
 NO_BIN_ON_CDROM=	${RESTRICTED}
