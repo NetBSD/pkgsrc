@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2017/05/31 12:19:16 jym Exp $
+bin/pinentry-mac
+libexec/pinentry-mac.app/Contents/Info.plist
+libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+libexec/pinentry-mac.app/Contents/PkgInfo
+libexec/pinentry-mac.app/Contents/Resources/COPYING
+libexec/pinentry-mac.app/Contents/Resources/English.lproj/Pinentry.nib
+libexec/pinentry-mac.app/Contents/Resources/German.lproj/Pinentry.nib
+libexec/pinentry-mac.app/Contents/Resources/Icon.icns
+libexec/pinentry-mac.app/Contents/Resources/Main.nib
