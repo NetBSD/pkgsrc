@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2022 2017/05/04 18:30:56 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2023 2017/05/31 22:55:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -370,11 +370,6 @@ USE_TOOLS+=								\
 
 # bsd.wrapper.mk
 USE_TOOLS+=	expr
-
-# scripts/shlib-type
-.if ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
-USE_TOOLS+=	file
-.endif
 
 # INSTALL/DEINSTALL script framework
 .include "pkginstall/bsd.pkginstall.mk"
