@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/12/17 23:23:38 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2017/05/31 22:35:42 agc Exp $
 
 DISTNAME=		picoc-2.1
 PKGREVISION=		1
@@ -17,6 +17,8 @@ AUTO_MKDIRS=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/picoc ${DESTDIR}${PREFIX}/bin/picoc
+
+.include "../../devel/editline/buildlink3.mk"
 
 .include "../../mk/readline.buildlink3.mk"
 
