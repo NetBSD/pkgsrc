@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/05/31 05:15:47 maya Exp $
 
-SHA1 (sxhkd-0.5.5.tar.gz) = 953ac57272adca3258ba0609a9f8c9d85450cd21
-RMD160 (sxhkd-0.5.5.tar.gz) = 0cef5d17cd55408102f319ac5d1ef608e112ed9f
-SHA512 (sxhkd-0.5.5.tar.gz) = a0ea812e4cbd63330768349045547f330cdaeec7edc3270af7e7acc4b025f7aa1d2550214db0aef9621ba619e82ee9459ee76b050cc23f780f67ed0f26e9550b
-Size (sxhkd-0.5.5.tar.gz) = 34634 bytes
+SHA1 (sxhkd-0.5.7.tar.gz) = 319437d7a7c4f257f55314981e5cada640632f9b
+RMD160 (sxhkd-0.5.7.tar.gz) = 750a40c0a66515ce66c931b8e9d9cb35ebdebfae
+SHA512 (sxhkd-0.5.7.tar.gz) = b977c79f2f8ef311b1bbe5bab21ae60c5689d1069552368573bc9aad55e58df4abff51ccdcf74b5e7c72cdee6077da67636f45a390f0fffb1a5e34b478579a18
+Size (sxhkd-0.5.7.tar.gz) = 34472 bytes
