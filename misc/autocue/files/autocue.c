@@ -1,7 +1,7 @@
-/* $NetBSD: autocue.c,v 1.4 2015/07/09 09:44:18 jperkin Exp $ */
+/* $NetBSD: autocue.c,v 1.5 2017/05/31 23:05:55 agc Exp $ */
 
 /*
- * Copyright © 2006 Alistair Crooks.  All rights reserved.
+ * Copyright (c) 2006,2017 Alistair Crooks.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -27,20 +27,6 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
-#if defined(HAVE_NBCOMPAT_H)
-#include <nbcompat.h>
-#include <nbcompat/cdefs.h>
-#else
-#include <sys/cdefs.h>
-#endif
-
-#ifndef lint
-__COPYRIGHT("@(#) Copyright © 2006 \
-	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: autocue.c,v 1.4 2015/07/09 09:44:18 jperkin Exp $");
-#endif
-
 #include <err.h>
 #include <signal.h>
 #include <stdio.h>
@@ -84,10 +70,10 @@ sigusr2(int s)
 static void
 showbuffer(char *buf, int cc, int maxcut)
 {
-	static int	cut;
-	char		cmd[BUFSIZ * 20];
+	static int	 cut;
+	char		 cmd[BUFSIZ * 20];
 	FILE		*pp;
-	int		s;
+	int		 s;
 
 	(void) snprintf(cmd, sizeof(cmd), "fmt %d %d | xcb -s %d", FmtGoal, FmtMax, cut);
 	if ((pp = popen(cmd, "w")) == NULL) {
@@ -106,8 +92,8 @@ showbuffer(char *buf, int cc, int maxcut)
 int
 main(int argc, char **argv)
 {
-	char	buf[BUFSIZ * 20];
-	char	line[BUFSIZ];
+	char	 buf[BUFSIZ * 20];
+	char	 line[BUFSIZ];
 	FILE	*fp;
 	int	 maxcut;
 	int	 cc;
