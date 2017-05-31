@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/03/13 09:28:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/05/31 08:50:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -2027,6 +2027,8 @@ ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/smime/SignedValidpathLenConstr
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/smime/SignedValidpre2000UTCnotBeforeDateTest3.eml
 ${PYSITELIB}/cryptography_vectors/x509/PKITS_data/smime/SignedinhibitAnyPolicyTest3.eml
 ${PYSITELIB}/cryptography_vectors/x509/alternate-rsa-sha1-oid.pem
+${PYSITELIB}/cryptography_vectors/x509/badssl-sct.pem
+${PYSITELIB}/cryptography_vectors/x509/bigoid.pem
 ${PYSITELIB}/cryptography_vectors/x509/cryptography.io.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ca_issuers.pem
 ${PYSITELIB}/cryptography_vectors/x509/custom/aia_ocsp.pem
