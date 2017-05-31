@@ -1,13 +1,10 @@
-# $NetBSD: Makefile.common,v 1.17 2017/03/14 13:48:22 kleink Exp $
-
+# $NetBSD: Makefile.common,v 1.18 2017/05/31 08:24:38 adam Exp $
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-0.12
+DISTNAME=	Werkzeug-0.12.2
 CATEGORIES=	www python
-MASTER_SITES=  ${MASTER_SITE_GITHUB:=pallets/}
-GITHUB_PROJECT=${DISTNAME:tl:C/-[^-]*$//}
-WRKSRC=		${WRKDIR}/${DISTNAME:tl}
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/Werkzeug/}
 
 DISTINFO_FILE=	${.CURDIR}/../../www/py-werkzeug/distinfo
 PATCHDIR=	${.CURDIR}/../../www/py-werkzeug/patches
@@ -16,10 +13,5 @@ MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://werkzeug.pocoo.org/
 LICENSE=	modified-bsd
 
-# for test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
-BUILD_DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-
-DOCDIR=		share/doc/${PYPKGPREFIX}-${DISTNAME:tl:C/-[^-]*$//}
-
-PLIST_SUBST+=	DOCDIR=${DOCDIR}
+USE_LANGUAGES=		# none
+USE_TOOLS+=		pax
