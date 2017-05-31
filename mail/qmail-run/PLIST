@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2017/01/09 04:58:09 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/05/31 07:08:04 schmonz Exp $
 bin/qmail-procmail
+bin/qmail-qfilter-ofmipd-queue
 bin/qmail-qfilter-queue
+bin/qmail-qfilter-smtpd-queue
 bin/qmail-qread-client
 share/doc/qmail-run/README.pkgsrc
 share/examples/qmail-run/mailer.conf
