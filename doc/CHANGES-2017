@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2166 2017/05/31 04:01:27 nonaka Exp $
+$NetBSD: CHANGES-2017,v 1.2167 2017/05/31 05:31:16 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2712,3 +2712,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/fontconfig to 2.12.1nb1 [jperkin 2017-05-30]
 	Updated devel/py-lupa to 1.4nb1 [alnsn 2017-05-30]
 	Updated misc/iwatch to 1.0.4 [nonaka 2017-05-31]
+	Updated x11/xinit to 1.3.4nb2 [maya 2017-05-31]
+	Updated wm/bspwm to 0.9.2 [maya 2017-05-31]
+	Updated x11/sxhkd to 0.5.7 [maya 2017-05-31]
