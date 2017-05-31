@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.4 2016/02/24 21:43:39 plunky Exp $
+$NetBSD: distinfo,v 1.5 2017/05/31 18:12:47 plunky Exp $
 
-SHA1 (bcmfw-2.0.tar.gz) = 94f6881e0772333599b6cae0b7938d99d2959187
-RMD160 (bcmfw-2.0.tar.gz) = 14c6d1e5ba4266377a34655c082f3a9b3432469f
-SHA512 (bcmfw-2.0.tar.gz) = 7bab88f4ea5a4fba5eb3cee90c6acc53a7be170d9eaf5dcaadd8fc30a2e941a275760261d326ea2721be854fc0304675f7190615853718be1630f48cb96c6eb7
-Size (bcmfw-2.0.tar.gz) = 11822 bytes
-SHA1 (bluez-firmware-1.2.tar.gz) = 43f98fdd518a2b4371d25015aaafb1d6f3cbde2c
-RMD160 (bluez-firmware-1.2.tar.gz) = 1651dd837c2263cf5d6d5d4da30664cf408b0ba9
-SHA512 (bluez-firmware-1.2.tar.gz) = 15db2f9d38a496882e4cc3754af1e58aa99e1b849f2066c541d76c66a8ffdc5532799fe1fd473cfc158bf5ea86a46687716cbcf83c6dcac0ce66d97d679648dd
-Size (bluez-firmware-1.2.tar.gz) = 370623 bytes
-SHA1 (patch-bcmfw-install.c) = 0712b682fdafe8e4cec833534d55424170a2a8fe
+SHA1 (bcmfw-2.1/bluez-firmware-1.2.tar.gz) = 43f98fdd518a2b4371d25015aaafb1d6f3cbde2c
+RMD160 (bcmfw-2.1/bluez-firmware-1.2.tar.gz) = 1651dd837c2263cf5d6d5d4da30664cf408b0ba9
+SHA512 (bcmfw-2.1/bluez-firmware-1.2.tar.gz) = 15db2f9d38a496882e4cc3754af1e58aa99e1b849f2066c541d76c66a8ffdc5532799fe1fd473cfc158bf5ea86a46687716cbcf83c6dcac0ce66d97d679648dd
+Size (bcmfw-2.1/bluez-firmware-1.2.tar.gz) = 370623 bytes
+SHA1 (bcmfw-2.1/v2.1.tar.gz) = 615874d113fcd134f14dbd095914b76467958e2c
+RMD160 (bcmfw-2.1/v2.1.tar.gz) = 58e1c17d162520803aa85bbc684dbfa2538d90d2
+SHA512 (bcmfw-2.1/v2.1.tar.gz) = fe95528325c54a5c865504fe3ae1ac6bd99539788a94b846660c2fdf5a150d1a5b86e3ea427197f534e1d4c14b564f9a75eafe3674dff75f3bc49f19a46c7c12
+Size (bcmfw-2.1/v2.1.tar.gz) = 12105 bytes
