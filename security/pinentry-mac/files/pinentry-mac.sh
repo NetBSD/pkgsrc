@@ -1,3 +1,3 @@
 #!/bin/sh
 
-open '@PINENTRY_APP_DIR@' $@
+exec '@PINENTRY_APP_DIR@/Contents/MacOS/pinentry-mac'
