@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.390 2017/04/16 23:12:37 khorben Exp $
+# $NetBSD: bsd.prefs.mk,v 1.391 2017/05/31 22:55:01 jlam Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -377,6 +377,9 @@ SHAREMODE?=		${DOCMODE}
 .  include "${_PKGSRC_TOPDIR}/mk/platform/NetBSD.mk"
 PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 .endif
+
+# Set default SHLIB_TYPE to the ${OPSYS}-specific shared library type.
+SHLIB_TYPE?=		${_OPSYS_SHLIB_TYPE}
 
 PKGDIRMODE?=		755
 
