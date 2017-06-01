@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/05/03 08:38:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/01 13:30:25 jlam Exp $
 
 DISTNAME=	llvm-4.0.0.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
@@ -99,7 +99,7 @@ LLVM_MAJOR_MINOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
 PLIST_SUBST+=		LLVM_MAJOR_MINOR=${LLVM_MAJOR_MINOR}
 
 PLIST_VARS+=	notdylib
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SOEXT=		dylib
 LLVM_LIBNAME=	libLLVM.${SOEXT}
 .else

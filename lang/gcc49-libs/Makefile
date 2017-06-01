@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/05/28 01:42:36 maya Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/01 13:30:25 jlam Exp $
 
 GCC_PKGNAME=	gcc49
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -36,7 +36,7 @@ GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
 
 .include "../../mk/bsd.prefs.mk"
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SHLIB_EXT=	dylib
 .else
 SHLIB_EXT=	so

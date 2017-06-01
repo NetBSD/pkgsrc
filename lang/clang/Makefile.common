@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2017/05/05 22:47:00 kamil Exp $
+# $NetBSD: Makefile.common,v 1.22 2017/06/01 13:30:25 jlam Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
@@ -91,7 +91,7 @@ LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
 PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
 
 PLIST_VARS+=	notdylib
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SOEXT=		dylib
 .else
 SOEXT=		so

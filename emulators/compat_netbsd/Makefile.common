@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2017/06/01 13:30:25 jlam Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -98,9 +98,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 # Directly set NATIVE_EXEC_FMT and include the correct emulator.mk file
 # to define EMUL_EXEC_FMT.
 #
-NATIVE_EXEC_FMT=	${_NATIVE_EXEC_FMT_cmd:sh}
-_NATIVE_EXEC_FMT_cmd=	sh ${.CURDIR}/../../mk/scripts/shlib-type	\
-				${_OPSYS_SHLIB_TYPE:Q} ${MAKE:Q}
+NATIVE_EXEC_FMT=	${SHLIB_TYPE}
 
 .include "${PKGSRCDIR}/emulators/${COMPAT_PKG}/emulator.mk"
 
