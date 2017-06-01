@@ -1,0 +1,15 @@
+Cubes is a light-weight Python framework and set of tools for Online Analytical
+Processing (OLAP), multidimensional analysis and browsing of aggregated data.
+
+Features:
+* OLAP and aggregated browsing (default backend is for relational databse -
+  ROLAP)
+* multidimensional analysis
+* logical view of analysed data - how analysts look at data, how they think of
+  data, not not how the data are physically implemented in the data stores
+* hierarchical dimensions (attributes that have hierarchical dependencies, such
+  as category-subcategory or country-region)
+* localizable metadata and data
+* SQL query generator for multidimensional aggregation queries
+* OLAP server - HTTP server based on Flask Blueprint, can be easily integrated
+  into your application.
