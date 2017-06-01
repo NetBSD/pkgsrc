@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2025 2017/06/01 02:15:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2026 2017/06/01 03:41:44 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -309,8 +309,10 @@ OVERRIDE_DIRDEPTH?=	2
 
 # Handle alternative init systems
 #
+.if ${_USE_NEW_PKGINSTALL:Uno} == "no"
 .if ${INIT_SYSTEM} == "smf"
 .  include "smf.mk"
+.endif
 .endif
 
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
