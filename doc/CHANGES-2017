@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2177 2017/05/31 18:13:39 plunky Exp $
+$NetBSD: CHANGES-2017,v 1.2178 2017/06/01 02:04:05 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2729,3 +2729,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added security/pinentry-mac version 0.9.4 [jym 2017-05-31]
 	Updated databases/sqlite3 to 3.19.2 [adam 2017-05-31]
 	Updated sysutils/bcmfw to 2.1 [plunky 2017-05-31]
+	Added pkgtools/pkgtasks version 1.9 [jlam 2017-06-01]
