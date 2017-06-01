@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.33 2017/05/31 22:56:22 jlam Exp $
+# $NetBSD: check-files.mk,v 1.34 2017/06/01 02:15:10 jlam Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -60,7 +60,7 @@ CHECK_FILES_SKIP+=	${PKG_DBDIR}/.*
 CHECK_FILES_SKIP+=	${PREFIX}/emul/linux/proc.*
 CHECK_FILES_SKIP+=	${PREFIX}/emul/linux32/proc.*
 
-# The reference-count meta-data directory used by the pkginstall framework.
+# The reference-count meta-data directory used by the {de,}install scripts.
 CHECK_FILES_SKIP+=	${PKG_DBDIR}.refcount.*
 
 # Some people have their distfiles and binary packages below ${LOCALBASE}.
