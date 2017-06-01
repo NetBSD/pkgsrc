@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/08/20 12:13:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/01 13:30:26 jlam Exp $
 
 DISTNAME=	libhdhomerun_20140121
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	bin lib include/hdhomerun
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SHLIBEXT=	dylib
 .else
 SHLIBEXT=	so
