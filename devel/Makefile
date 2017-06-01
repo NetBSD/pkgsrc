@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2438 2017/05/30 16:03:38 taca Exp $
+# $NetBSD: Makefile,v 1.2439 2017/06/01 12:05:51 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -1800,6 +1800,7 @@ SUBDIR+=	py-construct
 SUBDIR+=	py-cookiecutter
 SUBDIR+=	py-coverage
 SUBDIR+=	py-cparser
+SUBDIR+=	py-cubes
 SUBDIR+=	py-curses
 SUBDIR+=	py-cursespanel
 SUBDIR+=	py-curtsies
@@ -1825,6 +1826,7 @@ SUBDIR+=	py-enum
 SUBDIR+=	py-enum34
 SUBDIR+=	py-execnet
 SUBDIR+=	py-expect
+SUBDIR+=	py-expressions
 SUBDIR+=	py-extras
 SUBDIR+=	py-faker
 SUBDIR+=	py-falcon
@@ -1854,6 +1856,7 @@ SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-gobject3
 SUBDIR+=	py-gobject3-common
 SUBDIR+=	py-google-apputils
+SUBDIR+=	py-grako
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hash
