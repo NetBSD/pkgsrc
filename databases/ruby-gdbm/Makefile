@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/05/30 15:46:21 taca Exp $
+# $NetBSD: Makefile,v 1.34 2017/06/01 22:14:45 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -13,8 +13,9 @@ COMMENT=		Ruby extension to GDBM library
 
 USE_RUBY_EXTCONF=	yes
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
-EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/gdbm
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/gdbm ${RUBY_DISTNAME}/include
 WRKSRC=			${RUBY_WRKSRC}/ext/gdbm
+MAKE_ENV+=		top_srcdir=../..
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
