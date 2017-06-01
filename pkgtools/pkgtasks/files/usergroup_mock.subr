@@ -1,0 +1,317 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	usergroup_mock.subr -- mock user/group functions using text files
+#
+# SYNOPSIS
+#	mock_group_exists <group> [<gid>]
+#	mock_user_exists <user> [<uid>]
+#
+#	mock_groupadd [-g <groupid>] <group>
+#	mock_useradd [-c <descr>] [-d <home>] [-g <group>] [-s <shell>]
+#		[-u <userid>] <user>
+#
+#	mock_usergroup_setup
+#
+# DESCRIPTION
+#	The mock_group_exists and mock_user_exists functions implement the
+#	usergroup-exists API functions with the corresponding names.
+#
+#	The mock_groupadd and mock_useradd functions implement NetBSD- and
+#	Solaris-compatible groupadd(8) and useradd(8) functions with the
+#	corresponding names.
+#
+#	These functions manipulate a group database ${ETC_GROUP} and a
+#	user database ${ETC_PASSWD}, which are plaintext files.
+#
+#	The mock_usergroup_setup function populates ${ETC_GROUP} and
+#	${ETC_PASSWD} with test data, if those variables are set.  The test
+#	data is:
+#
+#		groupA with GID 100
+#		groupB with GID 105
+#		groupC with GID 110
+#		groupD with GID 190
+#		groupE with GID 200
+#		groupF with GID 205
+#		userA with UID 100 in groupA
+#		userB with UID 105 in groupB
+#		userC with UID 110 in groupC
+#
+# ENVIRONMENT
+#	ETC_GROUP
+#		The path to the group database text file.  This MUST be
+#		set for the group functions to work.
+#
+#	ETC_PASSWD
+#		The path to the user database text file.  This MUST be set
+#		for the user functions to work.
+#
+
+__task_usergroup_mock__="yes"
+
+mock_group_exists()
+{
+	local group="$1"
+	local gid="$2"
+	local groupfile="${ETC_GROUP}"
+
+	[ -n "$group" -a -n "$groupfile" ] || return 3
+	[ -f "$groupfile" ] || return 1
+
+	local line save_IFS word1 word3
+	while read line; do
+		save_IFS=$IFS; IFS=:
+		set -o noglob; set -- $line; set +o noglob
+		word1=$1; word3=$3
+		IFS=$save_IFS
+		if [ -z "$gid" ]; then
+			# No matching group ID required.
+			if [ "$group" = "$word1" ]; then
+				# exact group match
+				return 0
+			fi
+		elif [ "$group" = "$word1" ]; then
+			# exact group match, but exact group ID match required
+			if [ "$gid" = "$word3" ]; then
+				# exact group ID match
+				return 0
+			else
+				# group ID doesn't match
+				return 2
+			fi
+		elif [ "$gid" = "$word3" ]; then
+			# exact group ID match, but exact group match required
+			if [ "$group" = "$word1" ]; then
+				# exact group match
+				return 0
+			else
+				# group doesn't match
+				return 2
+			fi
+		fi
+	done < $groupfile
+	# no matching group or group ID
+	return 1
+}
+
+mock_groupadd()
+{
+	: ${CAT:=cat}
+	: ${MV:=mv}
+	: ${RM:=rm}
+
+	local gid=
+	local arg
+	local OPTIND=1
+	while getopts ":g:" arg "$@"; do
+		case $arg in
+		g)	gid=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+	local group="$1"; shift
+
+	[ -n "$group" ] || return 1
+	[ -n "${ETC_GROUP}" ] || return 1
+
+	# Ensure neither $group nor $gid already exist.
+	mock_group_exists "$group" "$gid"
+	[ $? -eq 1 ] || return 1
+
+	local groupfile="${ETC_GROUP}"
+	local groupfile_tmp="$groupfile.tmp.$$"
+
+	# If unset, set $gid to one more than the highest group ID
+	# in the group database.
+	#
+	if [ -z "$gid" -a -f "$groupfile" ]; then
+		gid=0
+		local line save_IFS word3
+		while read line; do
+			save_IFS=$IFS; IFS=:
+			set -o noglob; set -- $line; set +o noglob
+			word3=$3; IFS=$save_IFS
+			[ $word3 -le $gid ] || gid=$word3
+		done < $groupfile
+		gid=$(( $gid + 1 ))
+	fi
+
+	# Append $group:$gid to the group database.
+	{ [ ! -f "$groupfile" ] || ${CAT} "$groupfile"
+	  echo "$group:*:$gid:"
+	} > $groupfile_tmp
+	if ${MV} -f "$groupfile_tmp" "$groupfile"; then
+		return 0
+	fi
+	${RM} -f "$groupfile_tmp"
+	return 1
+}
+
+mock_user_exists()
+{
+	local user="$1"; [ $# -eq 0 ] || shift
+	local uid="$1"; [ $# -eq 0 ] || shift
+
+	[ -n "$user" ] || return 3
+	[ -n "${ETC_PASSWD}" ] || return 3
+
+	local userfile="${ETC_PASSWD}"
+
+	[ -f "$userfile" ] || return 1
+	local line save_IFS word1 word3
+	while read line; do
+		save_IFS=$IFS; IFS=:
+		set -o noglob; set -- $line; set +o noglob
+		word1=$1; word3=$3
+		IFS=$save_IFS
+		if [ -z "$uid" ]; then
+			# No matching user ID required.
+			if [ "$user" = "$word1" ]; then
+				# exact user match
+				return 0
+			fi
+		elif [ "$user" = "$word1" ]; then
+			# exact user match, but exact user ID match required
+			if [ "$uid" = "$word3" ]; then
+				# exact user ID match
+				return 0
+			else
+				# user ID doesn't match
+				return 2
+			fi
+		elif [ "$uid" = "$word3" ]; then
+			# exact user ID match, but exact user match required
+			if [ "$user" = "$word1" ]; then
+				# exact user match
+				return 0
+			else
+				# user doesn't match
+				return 2
+			fi
+		fi
+	done < $userfile
+	# no matching user or user ID
+	return 1
+}
+
+mock_useradd()
+{
+	: ${CAT:=cat}
+	: ${MV:=mv}
+	: ${RM:=rm}
+
+	local descr=
+	local home=
+	local group=
+	local shell=
+	local uid=
+
+	local arg
+	local OPTIND=1
+	while getopts ":c:d:g:s:u:" arg "$@"; do
+		case $arg in
+		c)	descr=${OPTARG} ;;
+		d)	home=${OPTARG} ;;
+		g)	group=${OPTARG} ;;
+		s)	shell=${OPTARG} ;;
+		u)	uid=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+	local user="$1"; shift
+
+	[ -n "$user" ] || return 1
+	[ -n "${ETC_PASSWD}" ] || return 1
+
+	: ${home:=/home/$user}
+	: ${group:=users}
+	: ${shell:=/bin/sh}
+
+	# Ensure neither $user nor $uid already exist.
+	mock_user_exists "$user" "$uid"
+	[ $? -eq 1 ] || return 1
+
+	# Ensure group is preexisting.
+	mock_group_exists "$group" || return 1
+
+	local userfile="${ETC_PASSWD}"
+	local userfile_tmp="$userfile.tmp.$$"
+
+	# If unset, set $uid to one more than the highest user ID
+	# in the user database.
+	#
+	if [ -z "$uid" -a -f "$userfile" ]; then
+		uid=0
+		local line save_IFS word3
+		while read line; do
+			save_IFS=$IFS; IFS=:
+			set -o noglob; set -- $line; set +o noglob
+			word3=$3; IFS=$save_IFS
+			[ $word3 -le $uid ] || uid=$word3
+		done < $userfile
+		uid=$(( $uid + 1 ))
+	fi
+
+	# Append $user:$uid to the user database.
+	{ [ ! -f "$userfile" ] || ${CAT} "$userfile"
+	  echo "$user:*:$uid:$group:$descr:$home:$shell"
+	} > $userfile_tmp
+	if ${MV} -f "$userfile_tmp" "$userfile"; then
+		return 0
+	fi
+	${RM} -f "$userfile_tmp"
+	return 1
+}
+
+mock_usergroup_setup()
+{
+	: ${CAT:=cat}
+
+	if [ -n "${ETC_GROUP}" ]; then
+		${CAT} > ${ETC_GROUP} << EOF
+groupA:*:100:
+groupB:*:105:
+groupC:*:110:
+groupD:*:190:
+groupE:*:200:
+groupF:*:205:
+EOF
+	fi
+	if [ -n "${ETC_PASSWD}" ]; then
+		${CAT} > ${ETC_PASSWD} << EOF
+userA:*:100:100::0:0:package A user:/nonexistent:/bin/sh
+userB:*:105:105::0:0:package B user:/nonexistent:/bin/sh
+userC:*:110:110::0:0:package C user:/nonexistent:/bin/sh
+EOF
+	fi
+}
