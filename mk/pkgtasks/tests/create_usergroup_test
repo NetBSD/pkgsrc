@@ -1,0 +1,169 @@
+#!/usr/bin/env atf-sh
+#
+# $NetBSD: create_usergroup_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
+#
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	LOCALBASE
+#		The location of the installation directory for packages.
+#		The default is "/usr/pkg".
+#
+#	MAKE	The name or path to the BSD make(1) utility.  The default
+#		is "make".
+#
+#	PKGSRCDIR
+#		The location of the pkgsrc source tree.  The default is
+#		"/usr/pkgsrc".
+#
+#	TASK_MODULE_DIR
+#		The location of the pkgtasks modules directory.  The
+#		default is "${LOCALBASE}/share/pkgtasks-1".
+#
+
+setup()
+{
+	cat > Makefile << 'EOF'
+.include "${PKGSRCDIR}/mk/pkgtasks/tests/test.mk"
+.sinclude "mk.conf"
+.include "${PKGSRCDIR}/mk/pkgtasks/usergroup.mk"
+
+all: create-usergroup
+
+pre-cmd: .PHONY
+	${PRE_CMD.su-create-usergroup}; exit 1
+
+.PHONY: su-target
+su-target: .USE
+	${RUN}${PRE_CMD.su-create-usergroup}; ${MAKE} su-${.TARGET}
+EOF
+}
+
+###
+### test1: pre-command check for existent group
+###
+
+atf_test_case test1
+
+test1_head()
+{
+	atf_set "descr" "pre-command check for existent group"
+}
+
+test1_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+
+	cat > mk.conf << 'EOF'
+USERGROUP_PHASE=	build
+PKG_GROUPS=		wheel
+PERL5=			perl
+EOF
+	${MAKE} pre-cmd PKGSRCDIR="${PKGSRCDIR}" ||
+	atf_fail "existent group wasn't found"
+	atf_pass
+}
+
+###
+### test2: pre-command check for nonexistent group
+###
+
+atf_test_case test2
+
+test2_head()
+{
+	atf_set "descr" "pre-command check for nonexistent group"
+}
+
+test2_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+
+	cat > mk.conf << 'EOF'
+USERGROUP_PHASE=	build
+PKG_GROUPS=		nonexistent
+PERL5=			perl
+EOF
+	${MAKE} pre-cmd PKGSRCDIR="${PKGSRCDIR}"
+	[ $? -gt 0 ] || atf_fail "nonexistent group was found"
+	atf_pass
+}
+
+###
+### test3: create-usergroup
+###
+
+atf_test_case test3
+
+test3_head()
+{
+	: ${LOCALBASE:=/usr/pkg}
+	: ${TASK_MODULE_DIR:=${LOCALBASE}/share/pkgtasks-1}
+
+	atf_set "descr" "create-usergroup with existing group & user"
+	atf_set "require.files" "${TASK_MODULE_DIR}/load.subr"
+}
+
+test3_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+
+	cat > mk.conf << 'EOF'
+USERGROUP_PHASE=	build
+PKG_CREATE_USERGROUP=	no
+PKG_GROUPS=		wheel
+PKG_USERS=		root:wheel
+
+PERL5=			perl
+PKGNAME=		test-pkg
+SETENV=			env
+SH=			/bin/sh
+PKG_REFCOUNT_DBDIR=	${.CURDIR}/refcount
+EOF
+	${MAKE} PKGSRCDIR="${PKGSRCDIR}" ||
+	atf_fail "couldn't create groups and users"
+	atf_pass
+}
+
+atf_init_test_cases()
+{
+	atf_add_test_case test1
+	atf_add_test_case test2
+	atf_add_test_case test3
+}
