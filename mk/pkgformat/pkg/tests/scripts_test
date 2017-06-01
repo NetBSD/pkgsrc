@@ -1,0 +1,234 @@
+#!/usr/bin/env atf-sh
+#
+# $NetBSD: scripts_test,v 1.1 2017/06/01 02:09:43 jlam Exp $
+#
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	MAKE	The name or path to the BSD make(1) utility.  The default
+#		is "make".
+#
+#	PKGSRCDIR
+#		The location of the pkgsrc source tree.  The default is
+#		"/usr/pkgsrc".
+#
+
+setup()
+{
+	cat > mk.conf << 'EOF'
+# Definitions used by pkgformat/pkg/*.mk files that are not assigned
+# default values.
+#
+CAT?=		cat
+CHMOD?=		chmod
+MKDIR?=		mkdir -p
+MV?=		mv
+RUN?=		@
+SED?=		sed
+
+# Override any other default definitions so that generated files go into
+# the current directory.
+#
+PKGDIR=		${.CURDIR}
+WRKDIR=		${.CURDIR}
+PKG_DB_TMPDIR=	${.CURDIR}/.pkgdb
+
+# Don't generate a pkgtasks datafile.
+PKGTASKS_DATAFILE=	# empty
+# Generate a sed(1) script from ${FILES_SUBST}.
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+EOF
+}
+
+###
+### test1: no scripts
+###
+
+atf_test_case test1
+
+test1_head()
+{
+	atf_set "descr" "no scripts"
+}
+
+test1_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+	cat > Makefile << 'EOF'
+.include "mk.conf"
+.include "${PKGSRCDIR}/mk/pkgformat/pkg/scripts.mk"
+
+.PHONY: all
+all:
+.if defined(_DEINSTALL_FILE)
+	@echo "_DEINSTALL_FILE = "${_DEINSTALL_FILE:Q}
+.endif
+.if defined(_INSTALL_FILE)
+	@echo "_INSTALL_FILE = "${_INSTALL_FILE:Q}
+.endif
+EOF
+	${MAKE} all PKGSRCDIR="${PKGSRCDIR}" > output
+	if grep -cq "^" output; then
+		cat output
+		atf_fail "variables should not be defined"
+	fi
+	atf_pass
+}
+
+###
+### test2: named template files exist"
+###
+
+atf_test_case test2
+
+test2_head()
+{
+	atf_set "descr" "named template files exist"
+}
+
+test2_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+	echo "### HEADER SCRIPT TEMPLATE ###" > HEADER
+	echo "### DEINSTALL SCRIPT TEMPLATE ###" > DEINSTALL
+	echo "### INSTALL SCRIPT TEMPLATE ###" > INSTALL
+
+	cat > Makefile << 'EOF'
+.include "mk.conf"
+
+HEADER_TEMPLATES+=	${PKGDIR}/HEADER
+DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL
+INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL
+
+.include "${PKGSRCDIR}/mk/pkgformat/pkg/scripts.mk"
+
+.PHONY: all
+all: _pkgformat-generate-install-scripts
+EOF
+	${MAKE} all PKGSRCDIR="${PKGSRCDIR}" || atf_fail "make(1) failed"
+	local count
+
+	count=$( grep -c "### HEADER SCRIPT TEMPLATE ###" .pkgdb/+DEINSTALL )
+	case $count in
+	0)	cat .pkgdb/+DEINSTALL
+		atf_fail "HEADER template was not used in +DEINSTALL" ;;
+	1)	: "success" ;;
+	*)	cat .pkgdb/+DEINSTALL
+		atf_fail "HEADER template used too many times in +DEINSTALL" ;;
+	esac
+
+	count=$( grep -c "### HEADER SCRIPT TEMPLATE ###" .pkgdb/+INSTALL )
+	case $count in
+	0)	cat .pkgdb/+INSTALL
+		atf_fail "HEADER template was not used in +INSTALL" ;;
+	1)	: "success" ;;
+	*)	cat .pkgdb/+INSTALL
+		atf_fail "HEADER template used too many times in +INSTALL" ;;
+	esac
+
+	count=$( grep -c "### DEINSTALL SCRIPT TEMPLATE ###" .pkgdb/+DEINSTALL )
+	case $count in
+	0)	cat .pkgdb/+DEINSTALL
+		atf_fail "DEINSTALL template was not used in +DEINSTALL" ;;
+	1)	: "success" ;;
+	*)	cat .pkgdb/+DEINSTALL
+		atf_fail "DEINSTALL template used too many times in +DEINSTALL" ;;
+	esac
+
+	count=$( grep -c "### INSTALL SCRIPT TEMPLATE ###" .pkgdb/+INSTALL )
+	case $count in
+	0)	cat .pkgdb/+INSTALL
+		atf_fail "INSTALL template was not used in +INSTALL" ;;
+	1)	: "success" ;;
+	*)	cat .pkgdb/+INSTALL
+		atf_fail "INSTALL template used too many times in +INSTALL" ;;
+	esac
+
+	atf_pass
+}
+
+###
+### test3: DEINSTALL_SRC and INSTALL_SRC
+###
+
+atf_test_case test3
+
+test3_head()
+{
+	atf_set "descr" "DEINSTALL_SRC and INSTALL_SRC"
+}
+
+test3_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+	( exec > INSTALL )	# empty INSTALL script
+	cat > Makefile << 'EOF'
+.include "mk.conf"
+
+DEINSTALL_SRC=	# empty
+INSTALL_SRC=	INSTALL
+
+.include "${PKGSRCDIR}/mk/pkgformat/pkg/scripts.mk"
+
+.PHONY: all
+all: _pkgformat-generate-install-scripts
+EOF
+	${MAKE} all PKGSRCDIR="${PKGSRCDIR}" || atf_fail "make(1) failed"
+
+	if [ -f .pkgdb/+DEINSTALL ]; then
+		find .
+		atf_fail "DEINSTALL_SRC is empty but +DEINSTALL script exists."
+	fi
+
+	if cmp INSTALL .pkgdb/+INSTALL; then
+		: "success"
+	else
+		cat .pkgdb/+INSTALL
+		atf_fail "INSTALL script not based solely on INSTALL_SRC"
+	fi
+
+	atf_pass
+}
+
+atf_init_test_cases()
+{
+	atf_add_test_case test1
+	atf_add_test_case test2
+	atf_add_test_case test3
+}

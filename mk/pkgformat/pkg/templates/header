@@ -1,0 +1,148 @@
+#!@SH@
+
+### START: pkgsrc/mk/pkgformat/pkg/templates/header
+#
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# $NetBSD: header,v 1.1 2017/06/01 02:09:43 jlam Exp $
+
+# Package task loader.
+: ${TASK_MODULE_DIR:=@LOCALBASE@/share/pkgtasks-1}
+. "${TASK_MODULE_DIR}/load.subr"
+
+SELF="$0"
+if [ $# -lt 2 ]; then
+	echo 1>&2 "usage: ${SELF} <pkgname> <stage>"
+	exit 127
+fi
+# Script positional parameters.
+PKGNAME="$1"; shift
+STAGE="$1"; shift
+
+###
+# PKGBASE
+#	${PKGNAME} stripped of the the version number.
+#
+# PKGVERSION
+#	The version number of the package, derived from taking
+#	${PKGNAME} and stripping "${PKGBASE}-" from the front.
+#
+# ${PKGNAME} := ${PKGBASE}-${PKGVERSION}
+#
+PKGBASE="@PKGBASE@"
+PKGVERSION=${PKGNAME#${PKGBASE}-}
+
+# Prefix all task messages with "=> ".
+TASK_MSG="=> "
+
+# Variables for programs used by pkgtasks.
+AWK="@AWK@"
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CP="@CP@"
+DATE="@DATE@"
+FIND="@FIND@"
+ID="@ID@"
+LDCONFIG="@LDCONFIG@"
+LN="@LN@"
+LS="@LS@"
+MKDIR="@MKDIR@"
+MKTEMP="@MKTEMP@"
+MV="@MV@"
+PRINTF="@PRINTF@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+SED="@SED@"
+SORT="@SORT@"
+UNAME="@UNAME@"
+
+# Variables for addgroup/adduser programs used by pkgtasks.
+GROUPADD="@GROUPADD@"
+PW="@PW@"
+PWD_MKDB="@PWD_MKDB@"
+USERADD="@USERADD@"
+
+# Variables for programs for use by script templates.
+BASENAME="@BASENAME@"
+CHGRP="@CHGRP@"
+CMP="@CMP@"
+DIRNAME="@DIRNAME@"
+ECHO="@ECHO@"
+ECHO_N="@ECHO_N@"
+EGREP="@EGREP@"
+EXPR="@EXPR@"
+FALSE="@FALSE@"
+GREP="@GREP@"
+GTAR="@GTAR@"
+HEAD="@HEAD@"
+PERL5="@PERL5@"
+PWD_CMD="@PWD_CMD@"
+SETENV="@SETENV@"
+SH="@SH@"
+SU="@SU@"
+TEST="@TEST@"
+TOUCH="@TOUCH@"
+TR="@TR@"
+TRUE="@TRUE@"
+XARGS="@XARGS@"
+
+# Variables for the pkg_install package tools.
+PKG_ADMIN="@PKG_ADMIN@"
+PKG_INFO="@PKG_INFO@"
+
+# Variables for installation prefix references.
+LOCALBASE="@LOCALBASE@"
+X11BASE="@X11BASE@"
+PREFIX="${PKG_PREFIX}"
+
+# Variables for the package configuration directory.
+PKG_SYSCONFBASE="@PKG_SYSCONFBASE@"
+PKG_SYSCONFBASEDIR="@PKG_SYSCONFBASEDIR@"
+PKG_SYSCONFDIR="@PKG_SYSCONFDIR@"
+
+# The current working directory from which the script was invoked.
+CURDIR=$( ${PWD_CMD} )
+
+# Default values for environment variables set by the package tools.
+: ${PKG_PREFIX:=@PREFIX@}
+: ${PKG_METADATA_DIR:=${CURDIR}}
+: ${PKG_DESTDIR:=""}
+: ${PKG_REFCOUNT_DBDIR:=@PKG_REFCOUNT_DBDIR@}
+
+# Default values for environment variables that control whether
+# task actions are executed.
+#
+: ${PKG_CONFIG:=@PKG_CONFIG@}
+: ${PKG_CONFIG_PERMS:=@PKG_CONFIG_PERMS@}
+: ${PKG_CREATE_USERGROUP:=@PKG_CREATE_USERGROUP@}
+: ${PKG_INIT_SCRIPTS:=@PKG_INIT_SCRIPTS@}
+: ${PKG_REGISTER_SHELLS:=@PKG_REGISTER_SHELLS@}
+: ${PKG_UPDATE_FONTS_DB:=@PKG_UPDATE_FONTS_DB@}
+
+### END: pkgsrc/mk/pkgformat/pkg/templates/header
