@@ -1,0 +1,538 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	usergroup_MirBSD -- usergroup implementation for MirBSD
+#
+# SYNOPSIS
+#	platform_groupadd [-g <gid>] <group>
+#
+#	platform_useradd [-c <descr>] [-d <home>] [-g <group>]
+#		[-s <shell>] [-u <uid>] <user>
+#
+# DESCRIPTION
+#	The functions implement a NetBSD/Solaris-compatible groupadd and
+#	useradd.
+#
+# RETURN VALUES
+#	All functions return 0 on success, and return non-zero otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set.
+#
+#	CAT	The name or path to the cat(1) utility.
+#
+#	CHMOD	The name or path to the chmod(1) utility.
+#
+#	CHOWN	The name or path to the chown(8) utility.
+#
+#	ETC_GROUP
+#		The path to the system group database text file.  The
+#		default value is "/etc/group".
+#
+#	ETC_PASSWD
+#		The path to the system user/password database text file.
+#		The default value is "/etc/master.passwd".
+#
+#	MKTEMP	The name or path to the mktemp(1) utility.
+#
+#	MV	The name or path to the mv(1) utility.
+#
+#	PWD_MKDB
+#		The name or path to the pwd_mkdb(8) utility that is used
+#		to regenerate the pwd.db and spwd.db binary databases
+#		from ${ETC_PASSWD}.
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	RMDIR	The name or path to the rmdir(1) utility.
+#
+#	SORT	The name or path to the sort(1) utility.
+#
+
+__task_usergroup_MirBSD__="yes"
+
+task_load echo
+task_load lock
+task_load quote
+
+_platform_group_exists()
+{
+	: ${ETC_GROUP:=/etc/group}
+
+	# parameters
+	local group="$1"
+	local gid="$2"
+	# return values
+	_exists_group=; _exists_gid=; _exists_gid_max=
+
+	local groupfile="${ETC_GROUP}"
+	[ -f "$groupfile" ] || return 1
+
+	local group_to_gid=
+	local gid_found=
+	local gid_max=0
+	local line save_IFS word1 word3
+	while IFS=: read line; do
+		save_IFS=$IFS; IFS=:
+		set -o noglob; set -- $line; set +o noglob
+		word1=$1; word3=$3
+		IFS=$save_IFS
+		if [ "$group" = "$word1" ]; then
+			group_to_gid=$word3
+		fi
+		if [ "$gid" = "$word3" ]; then
+			gid_found="yes"
+		fi
+		if [ $gid_max -lt $word3 ]; then
+			gid_max=$word3
+		fi
+	done < $groupfile
+
+	_exists_gid_max=$gid_max
+	if [ -z "$group_to_gid" ]; then
+		# group not found
+		if [ -z "$gid_found" ]; then
+			# group not found, and group ID not given
+			return 1
+		else
+			# group not found, but group ID found
+			_exists_gid=$gid
+			return 2
+		fi
+	else
+		_exists_group=$group
+		_exists_gid=$group_to_gid
+		if [ -z "$gid" ]; then
+			# group ID not given
+			return 0
+		elif [ -z "$gid_found" ]; then
+			# group found, but group ID not found
+			return 2
+		elif [ "$gid" != "$group_to_gid" ]; then
+			# group found, but group ID doesn't match
+			return 2
+		else
+			# group found, and group ID matches
+			return 0
+		fi
+	fi
+	return 3
+}
+
+_platform_addgroup()
+{
+	: ${CAT:=cat}
+	: ${CHMOD:=chmod}
+	: ${CHOWN:=chown}
+	: ${MKTEMP:=mktemp}
+	: ${MV:=mv}
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+	: ${SORT:=sort}
+
+	: ${ETC_GROUP:=/etc/group}
+
+	# parameters
+	local group="$1"
+	local gid="$2"
+
+	local groupfile temp tmpdir tmpdir_quoted quoted
+	groupfile="${ETC_GROUP}"
+	tmpdir=$( ${MKTEMP} -d "$groupfile.tmp.XXXXXXXXXX" )
+	case $groupfile in
+	/*)	temp="$tmpdir/${groupfile##*/}" ;;
+	*)	temp="$tmpdir/${groupfile}" ;;
+	esac
+	task_quote "$tmpdir"
+	tmpdir_quoted=$quoted
+	__platform_addgroup_dirs__="$__platform_addgroup_dirs__ $quoted"
+
+	local result=1
+	if [ -n "$tmpdir" -a -d "$tmpdir" ]; then
+		local perms="root:wheel"
+		local mode="0644"
+		if { echo "$group:*:$gid:" &&
+		     [ ! -f "$groupfile" ] || ${CAT} "$groupfile"
+		   } > $temp &&
+		   ${CHOWN} $perms "$temp" &&
+		   ${CHMOD} $mode "$temp" &&
+		   ${SORT} -t: -nk3 -o "$temp" -u "$temp" &&
+		   ${MV} -f "$temp" "$groupfile"; then
+			result=0
+		else
+			${RM} -f "$temp"
+		fi
+		${RMDIR} "$tmpdir"
+		__platform_addgroup_dirs__=${__platform_addgroup_dirs__% $tmpdir_quoted}
+	fi
+
+	_platform_addgroup_cleanup
+	return $result
+}
+
+platform_groupadd()
+{
+	: ${ETC_GROUP:=/etc/group}
+
+	# Lower bound of GID range for new groups.
+	local lowgid=700
+
+	local gid=
+	local arg
+	local OPTIND=1
+	while getopts ":g:" arg "$@"; do
+		case $arg in
+		g)	gid=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+	local group="$1"; shift
+
+	[ -n "$group" ] || return 1
+
+	# Lock ${ETC_GROUP} against other tasks.
+	local groupfile="${ETC_GROUP}"
+	local lock lock_quoted quoted
+	lock="$groupfile.lock"
+	task_quote "$lock"
+	lock_quoted=$quoted
+	__platform_groupadd_locks__="$quoted $__platform_groupadd_locks__"
+	task_lock "$lock" || return 1
+
+	local result=0
+
+	# Check if the group and group ID are already in the database.
+	local _exists_group _exists_gid _exists_gid_max
+	_platform_group_exists "$group" "$gid"
+	case $? in
+	0)	# group already exists with matching group ID.
+		result=1 ;;
+	1)	: "fall through and add missing group" ;;
+	*)	result=1 ;;
+	esac
+	if [ $result -eq 0 ]; then
+		# Set gid to the existing or proposed GID of the group.
+		if [ -z "$gid" ]; then
+			if [ -n "$_exists_gid" ]; then
+				gid=$_exists_gid
+			elif [ $_exists_gid_max -lt $lowgid ]; then
+				gid=$lowgid
+			else
+				gid=$(( $_exists_gid_max + 1 ))
+			fi
+		fi
+		# Add the group and group ID to the database.
+		_platform_addgroup "$group" "$gid" || result=1
+	fi
+
+	# Release lock on ${ETC_GROUP}.
+	task_lock -r "$lock"
+	__platform_groupadd_locks__=${__platform_groupadd_locks__#$lock_quoted }
+
+	_platform_groupadd_cleanup
+	return $result
+}
+
+_platform_user_exists()
+{
+	: ${ETC_PASSWD:=/etc/master.passwd}
+
+	# parameters
+	local user="$1"
+	local uid="$2"
+	# return values
+	_exists_user=; _exists_uid=; _exists_uid_max=
+
+	local userfile="${ETC_PASSWD}"
+	[ -f "$userfile" ] || return 1
+
+	local user_to_uid=
+	local uid_found=
+	local uid_max=0
+	local line save_IFS word1 word3
+	while read line; do
+		save_IFS=$IFS; IFS=:
+		set -o noglob; set -- $line; set +o noglob
+		word1=$1; word3=$3
+		IFS=$save_IFS
+		if [ "$user" = "$word1" ]; then
+			user_to_uid=$word3
+		fi
+		if [ "$uid" = "$word3" ]; then
+			uid_found="yes"
+		fi
+		if [ $uid_max -lt $word3 ]; then
+			uid_max=$word3
+		fi
+	done < $userfile
+
+	_exists_uid_max=$uid_max
+	if [ -z "$user_to_uid" ]; then
+		# user not found
+		if [ -z "$uid_found" ]; then
+			# user not found, and user ID not given
+			return 1
+		else
+			# user not found, but user ID found
+			_exists_uid=$uid
+			return 2
+		fi
+	else
+		_exists_user=$user
+		_exists_uid=$user_to_uid
+		if [ -z "$uid" ]; then
+			# user ID not given
+			return 0
+		elif [ -z "$uid_found" ]; then
+			# user found, but user ID not found
+			return 2
+		elif [ "$uid" != "$user_to_uid" ]; then
+			# user found, but user ID doesn't match
+			return 2
+		else
+			# user found, and user ID matches
+			return 0
+		fi
+	fi
+	return 3
+}
+
+_platform_adduser()
+{
+	: ${CAT:=cat}
+	: ${CHMOD:=chmod}
+	: ${CHOWN:=chown}
+	: ${MKTEMP:=mktemp}
+	: ${PWD_MKDB:=pwd_mkdb}
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+	: ${SORT:=sort}
+
+	: ${ETC_PASSWD:=/etc/master.passwd}
+
+	# parameters
+	local user="$1"; local group="$2"; local uid="$3"
+	local descr="$4"; local home="$5"; local shell="$6"
+
+	local userfile temp tmpdir tmpdir_quoted quoted
+	userfile="${ETC_PASSWD}"
+	tmpdir=$( ${MKTEMP} -d "$userfile.tmp.XXXXXXXXXX" ) || return 1
+	case $tmpdir in
+	/*)	temp="$tmpdir/${userfile##*/}" ;;
+	*)	temp="$tmpdir/$userfile" ;;
+	esac
+	task_quote "$tmpdir"
+	tmpdir_quoted=$quoted
+	__platform_adduser_dirs__="$__platform_adduser_dirs__ $quoted"
+
+	local result=1
+	if [ -n "$tmpdir" -a -d "$tmpdir" ]; then
+		local perms="root:wheel"
+		local mode="0600"
+		if { echo "$user:*:$uid:$group::0:0:$descr:$home:$shell" &&
+		     [ ! -f "$userfile" ] || ${CAT} "$userfile"
+		   } > $temp &&
+		   ${CHOWN} $perms "$temp" &&
+		   ${CHMOD} $mode "$temp" &&
+		   ${SORT} -t: -nk3 -o "$temp" -u "$temp" &&
+		   ${PWD_MKDB} -p "$temp"; then
+			result=0
+		else
+			${RM} -f "$temp"
+		fi
+		${RMDIR} "$tmpdir"
+		__platform_adduser_dirs__=${__platform_adduser_dirs__% $tmpdir_quoted}
+	fi
+
+	_platform_adduser_cleanup
+	return $result
+}
+
+platform_useradd()
+{
+	# Lower bound of UID range for new users.
+	local lowuid=700
+
+	local basedir=
+	local descr=
+	local home=
+	local group=
+	local shell=
+	local uid=
+	local arg
+	local OPTIND=1
+	while getopts ":c:d:g:s:u:" arg "$@"; do
+		case $arg in
+		c)	descr=${OPTARG} ;;
+		d)	home=${OPTARG} ;;
+		g)	group=${OPTARG} ;;
+		s)	shell=${OPTARG} ;;
+		u)	uid=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+	local user="$1"; shift
+
+	[ -n "$user" ] || return 1
+
+	: ${basedir:=/home}
+	: ${home:=$basedir/$user}
+	: ${group:=users}
+	: ${shell:=/bin/sh}
+
+	# Lock ${ETC_PASSWD} against other tasks.
+	local userfile="${ETC_PASSWD}"
+	local lock lock_quoted quoted
+	local quoted
+	lock="$userfile.lock"
+	task_quote "$lock"
+	lock_quoted=$quoted
+	__platform_useradd_locks__="$quoted $__platform_useradd_locks__"
+	task_lock "$lock" || return 1
+
+	local result=0
+
+	# Check if the user and user ID are already in the database.
+	local _exists_user _exists_uid _exists_uid_max
+	_platform_user_exists "$user" "$uid"
+	case $? in
+	0)	# user already exists with matching user ID.
+		result=1 ;;
+	1)	: "fall through and add missing user" ;;
+	*)	result=1 ;;
+	esac
+
+	if [ $result -eq 0 ]; then
+		# Set uid to the existing or proposed UID of the user.
+		if [ -z "$uid" ]; then
+			if [ -n "$_exists_uid" ]; then
+				uid=$_exists_uid
+			elif [ $_exists_uid_max -lt $lowuid ]; then
+				uid=$lowuid
+			else
+				uid=$(( $_exists_uid_max + 1 ))
+			fi
+		fi
+		# Get the group ID of the user to be added.
+		case $group in
+		""|*[!0-9]*)
+			# $group is not a GID
+			platform_groupadd "$group"
+			_platform_group_exists "$group" || result=1
+			group=$_exists_gid ;;
+		esac
+	fi
+	if [ $result -eq 0 ]; then
+		# Add the user and user ID to the database.
+		_platform_adduser "$user" "$group" "$uid" \
+			"$descr" "$home" "$shell" || result=1
+	fi
+
+	# Release lock on ${ETC_PASSWD}.
+	task_lock -r "$lock"
+	__platform_useradd_locks__=${__platform_useradd_locks__#$lock_quoted }
+
+	_platform_useradd_cleanup
+	return $result
+}
+
+_platform_addgroup_cleanup()
+{
+	: ${RM:=rm}
+
+	eval set -- $__platform_addgroup_dirs__
+	local dir
+	for dir; do
+		# Sanity check before blowing away $dir.
+		case ${dir##*/} in
+		*.tmp.*)
+			${RM} -fr "$dir" ;;
+		*)	task_echo "!!! WARNING: usergroup: Remove directory $dir" ;;
+		esac
+	done
+	__platform_addgroup_dirs__=
+}
+
+_platform_groupadd_cleanup()
+{
+	eval set -- $__platform_groupadd_locks__
+	local lockfile
+	for lockfile; do
+		task_lock -r "$lockfile"
+	done
+	__platform_groupadd_locks__=
+}
+
+_platform_adduser_cleanup()
+{
+	: ${RM:=rm}
+
+	eval set -- $__platform_adduser_dirs__
+	local dir
+	for dir; do
+		# Sanity check before blowing away $dir.
+		case ${dir##*/} in
+		*.tmp.*)
+			${RM} -fr "$dir" ;;
+		*)	task_echo "!!! WARNING: usergroup: Remove directory $dir" ;;
+		esac
+	done
+	__platform_adduser_dirs__=
+}
+
+_platform_useradd_cleanup()
+{
+	eval set -- $__platform_useradd_locks__
+	local lockfile
+	for lockfile; do
+		task_lock -r "$lockfile"
+	done
+	__platform_useradd_locks__=
+}
+
+__install_tasks_platform_usergroup_MirBSD_init__="_platform_usergroup_init"
+_platform_usergroup_init()
+{
+	task_cleanup_add_hook \
+		_platform_addgroup_cleanup _platform_groupadd_cleanup \
+		_platform_adduser_cleanup _platform_useradd_cleanup
+}
+
+# Static variables for temporary directories that should be removed if an
+# error occurs.
+#
+__platform_addgroup_dirs__=
+__platform_adduser_dirs__=
+
+# Static variables for locks that should be released if an error occurs.
+__platform_groupadd_locks__=
+__platform_useradd_locks__=

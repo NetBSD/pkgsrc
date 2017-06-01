@@ -1,0 +1,93 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	which.subr -- locate a program file in the $PATH environment variable
+#
+# SYNOPSIS
+#	task_which name [...]
+#
+# DESCRIPTION
+#	The task_which function takes a list of names and looks for the
+#	files which would be executed had these names been given as
+#	commands.  Each directory in the $PATH is searched, in order,
+#	for each name.
+#
+# RETURN VALUES
+#	The task_which function returns 0 if all commandss are found,
+#	and >0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	PATH	A colon-separated list of directories to search for
+#		commands.
+#
+
+__task_which__="yes"
+
+task_which()
+{
+	local result=0
+	local command
+	for arg; do
+		if [ -n "$arg" ] && _task_which "$arg"; then
+			echo "$command"
+		else
+			result=1
+		fi
+	done
+	return $result
+}
+
+_task_which()
+{
+	: ${PATH:=/bin:/sbin:/usr/bin:/usr/sbin}
+
+	# Return path to command in $command.
+	command=
+
+	local result=1
+	local cmd="$1"; shift
+	case $cmd in
+	/*)	if [ -x "$cmd" ]; then
+			command="$cmd"
+			result=0
+		fi ;;
+	*)	local save_IFS="$IFS"; IFS=":"; set -- ${PATH}; IFS=$save_IFS
+		for path; do
+			if [ -x "$path/$cmd" ]; then
+				command="$path/$cmd"
+				result=0
+				break
+			fi
+		done ;;
+	esac
+	# POST-CONDITION:
+	# $command is set to the string with the full path to the command.
+	return $result
+}

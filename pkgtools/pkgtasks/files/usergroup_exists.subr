@@ -1,0 +1,245 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	usergroup_exists.subr -- check for the existence of users and groups
+#
+# SYNOPSIS
+#	task_group_exists <group> [<groupid>]
+#	task_user_exists <user> [<userid>]
+#
+# DESCRIPTION
+#	The task_group_exists function checks that a group exists on the
+#	system, and also matches the group ID if it is given.
+#
+#	The task_user_exists function checks that a user exists on the
+#	system, and also matches the user ID if it is given.
+#
+# NOTES
+#	These functions test for the presence of groups and users in a
+#	portable manner by using chgrp(1) and chown(1) to change the
+#	ownership of a temporary file and checking the return values.
+#
+# RETURN VALUES
+#	The task_group_exists function has the following return values:
+#
+#	    0	if <group> exists, and has gid <groupid> if given
+#	    1	if neither <group> nor <groupid> exist
+#	    2	if <group> or <groupid> exist but don't match
+#	    3	if an error occurs
+#
+#	The task_user_exists function has the following return values:
+#
+#	    0	if <user> exists, and has uid <userid> if given
+#	    1	if neither <user> nor <userid> exist
+#	    2	if <user> or <userid> exist but don't match
+#	    3	if an error occurs
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	CHOWN	The name or path to the chown(8) utility.
+#
+#	LS	The name or path to the ls(1) utility.
+#
+#	RM	The name or path to the rm(1) utility.
+#
+
+__task_usergroup_exists__="yes"
+__task_usergroup_exists_init__="_usergroup_exists_init"
+
+task_load cleanup
+task_load createfile
+task_load echo
+task_load maketemp
+
+task_group_exists()
+{
+	: ${CHOWN:=chown}
+	: ${LS:=ls}
+
+	local group="$1"; shift
+	local groupid="$1"; [ $# -eq 0 ] || shift
+
+	[ -n "$group" ] || return 3
+
+	# Check using chown(1) to work properly in an NSS/NIS environment.
+	__group_tmpdir__=$( task_maketemp -dq -t "pkgtasks.group_exists" ) || return 3
+	local testpath="$__group_tmpdir__/group_exists"
+	task_createfile "$testpath"
+
+	local result=0
+	#
+	# Redirect standarrd error below because failing to chgrp(2) is
+	# part of the test and not actually an error.
+	#
+	if ${CHOWN} ":$group" "$testpath" >/dev/null 2>&1; then
+		# group exists
+		if [ -n "$groupid" ]; then
+			${LS} -dln "$testpath" 2>/dev/null |
+			( read __ __ __ gid __; [ "$groupid" = "$gid" ] )
+			if [ $? -gt 0 ]; then
+				# group exists but doesn't match groupid
+				result=2
+			else
+				# group exists and groupid exists and match
+				result=0
+			fi
+		else
+			# group exists and groupid is not set
+			result=0
+		fi
+	elif [ -z "$groupid" ]; then
+		# group doesn't exist and groupid is not set
+		result=1
+	elif ${CHOWN} ":$groupid" "$testpath" >/dev/null 2>&1; then
+		# group doesn't exist
+		${LS} -dl "$testpath" 2>/dev/null |
+		( read __ __ __ name __
+		  #
+		  # If the ls(1) output shows a group name instead of the
+		  # raw GID, then the GID must exist and map to a valid
+		  # group name on the system.
+		  #
+		  [ "$groupid" != "$name" ] )
+		if [ $? -gt 0 ]; then
+			# group doesn't exist, groupid doesn't exist
+			result=1
+		else
+			# group doesn't exist, groupid exists
+			result=2
+		fi
+	else
+		# group doesn't exist and groupid doesn't exist
+		result=1
+	fi
+	_task_group_exists_cleanup
+	return $result
+}
+
+task_user_exists()
+{
+	: ${CHOWN:=chown}
+	: ${LS:=ls}
+
+	local user="$1"; shift
+	local userid="$1"; [ $# -eq 0 ] || shift
+
+	[ -n "$user" ] || return 3
+
+	# Check using chown(1) to work properly in an NSS/NIS environment.
+	__user_tmpdir__=$( task_maketemp -dq -t "pkgtasks.user_exists" ) || return 3
+	local testpath="$__user_tmpdir__/user_exists"
+	task_createfile "$testpath"
+
+	local result=0
+	#
+	# Redirect standarrd error below because failing to chown(2) is
+	# part of the test and not actually an error.
+	#
+	if ${CHOWN} "$user" "$testpath" >/dev/null 2>&1; then
+		# user exists
+		if [ -n "$userid" ]; then
+			${LS} -dln "$testpath" 2>/dev/null |
+			( read __ __ uid __; [ "$userid" = "$uid" ] )
+			if [ $? -gt 0 ]; then
+				# user exists but doesn't match userid
+				result=2
+			else
+				# user exists and userid exists and match
+				result=0
+			fi
+		else
+			# user exists and userid is not set
+			result=0
+		fi
+	elif [ -z "$userid" ]; then
+		# user doesn't exist and userid is not set
+		result=1
+	elif ${CHOWN} "$userid" "$testpath" >/dev/null 2>&1; then
+		# user doesn't exist
+		${LS} -dl "$testpath" 2>/dev/null |
+		( read __ __ name __
+		  #
+		  # If the ls(1) output shows a username instead of the
+		  # raw UID, then the UID must exist and map to a valid
+		  # username on the system.
+		  #
+		  [ "$userid" != "$name" ] )
+		if [ $? -gt 0 ]; then
+			# user doesn't exist, userid doesn't exist
+			result=1
+		else
+			# user doesn't exist, userid exists
+			result=2
+		fi
+	else
+		# user doesn't exist and userid doesn't exist
+		result=1
+	fi
+	_task_user_exists_cleanup
+	return $result
+}
+
+_task_group_exists_cleanup()
+{
+	: ${RM:=rm}
+
+	# Sanity check before blowing away $__group_tmpdir__.
+	case $__group_tmpdir__ in
+	/tmp/*)	${RM} -fr "$__group_tmpdir__" ;;
+	"")	: "skip empty tmpdir" ;;
+	*)	task_echo "!!! WARNING: usergroup_exists: Remove directory $__group_tmpdir__" ;;
+	esac
+	__group_tmpdir__=
+}
+
+_task_user_exists_cleanup()
+{
+	: ${RM:=rm}
+
+	# Sanity check before blowing away $__user_tmpdir__.
+	case $__user_tmpdir__ in
+	/tmp/*)	${RM} -fr "$__user_tmpdir__" ;;
+	"")	: "skip empty tmpdir" ;;
+	*)	task_echo "!!! WARNING: usergroup_exists: Remove directory $__user_tmpdir__" ;;
+	esac
+	__user_tmpdir__=
+}
+
+_usergroup_exists_init()
+{
+	task_cleanup_add_hook \
+		_task_group_exists_cleanup \
+		_task_user_exists_cleanup
+}
+
+# Static variables for temporary directories that should be removed if an
+# error occurs.
+#
+__group_tmpdir__=
+__user_tmpdir__=

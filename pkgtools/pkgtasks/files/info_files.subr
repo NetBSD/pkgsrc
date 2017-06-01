@@ -1,0 +1,248 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	info_files.subr -- GNU info file management for packages
+#
+# SYNOPSIS
+#	task_info_files [-s] add | remove
+#
+# DESCRIPTION
+#	The task_info_files function supports two actions, "add" and
+#	"remove", that will add or remove entries from GNU info files
+#	from index files (the "dir" file in the same diretory as the info
+#	files).
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_info_files function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # INFO: <file> [<infodir>]
+#
+#	If any of the paths to the file or infodir are relative, then they
+#	are assumed to be relative to ${PKG_PREFIX}.
+#
+# RETURN VALUES
+#	Returns 0 if the action is successful for all info files, and >0
+#	if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	INSTALL_INFO
+#		The name or path to the install-info(1) utility that can
+#		add or remove GNU info files from index files.
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	RMDIR	The name or path to the rmdir(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_info_files__="yes"
+__task_info_files_init__="_task_info_files_init"
+
+task_load cleanup
+task_load echo
+task_load makedir
+task_load match
+task_load quote
+
+task_info_files()
+{
+	: ${INSTALL_INFO:=install-info}
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local silent=
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":"; silent="-s" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove)
+		: "valid action" ;;
+	*)	return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local result line_result
+	local index quoted
+
+	result=0
+	local hash tag file infodir
+	while read hash tag file infodir; do
+		# Filter for "# INFO:"
+		case $hash/$tag in
+		"#/INFO:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		# Canonicalize paths.
+		case $file in
+		"")	# skip lines without required args
+			continue ;;
+		[!/]*)	file="$prefix/$file" ;;
+		esac
+		file="${PKG_DESTDIR}$file"
+		case $infodir in
+		"")	infodir=${file%/*} ;;
+		[!/]*)	infodir="$prefix/$infodir" ;;
+		esac
+		infodir="${PKG_DESTDIR}$infodir"
+
+		if [ ! -f "$file" ]; then
+			$echo "${TASK_MSG}! info file missing: $file"
+			result=1
+			continue
+		fi
+
+		index="$infodir/dir"
+		task_quote "$index"
+		__task_info_files_indices__="$__task_info_files_indices__ $quoted"
+
+		line_result=0
+		case $action in
+		add)	# Remove any existing file entry from the "dir" file, even for
+			# the "add" action to guard against a duplicate entry when we
+			# add later.
+			#
+			if [ -f "$index" ]; then
+				${INSTALL_INFO} --delete "$file" "$index" >/dev/null 2>&1
+			fi
+			# Add the file entry to the "dir" file.
+			[ -d "$infodir" ] || task_makedir "$infodir"
+			${INSTALL_INFO} "$file" "$index" || line_result=1
+			if [ $line_result -eq 0 ]; then
+				$echo "${TASK_MSG}> info file registered: $file"
+			else
+				$echo "${TASK_MSG}! info file not registered: $file"
+			fi ;;
+		remove)	if [ -f "$index" ]; then
+				${INSTALL_INFO} --delete "$file" "$index" || line_result=1
+				if [ $line_result -eq 0 ]; then
+					$echo "${TASK_MSG}> info file unregistered: $file"
+				else
+					$echo "${TASK_MSG}! info file not unregistered: $file"
+				fi
+			else
+				$echo "${TASK_MSG}> info file already unregistered: $file"
+			fi ;;
+		esac
+		[ $line_result -eq 0 ] || result=1
+	done
+
+	_task_info_files_cleanup $silent
+	return $result
+}
+
+_task_info_files_cleanup()
+{
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	eval set -- $__task_info_files_indices__
+	local index
+	for index; do
+		[ -f "$index" ] || continue
+		#
+		# Check if the "dir" file has any entries and
+		# remove it if it doesn't.
+		#
+		if task_match -v "[*][ 	][mM]enu:*" < $index |
+		   task_match -q '[*][ 	]*'; then
+			: "entries exist"
+		else
+			${RM} -f "$index"
+			${RMDIR} -p "${index%/*}" 2>/dev/null
+			$echo "${TASK_MSG}> empty dir file removed: $index"
+		fi
+	done
+	__task_info_files_indices__=
+}
+
+_task_info_files_init()
+{
+	task_cleanup_add_hook _task_info_files_cleanup
+}
+
+# Static variable for "dir" indices that should be removed if empty if an
+# error occurs.
+#
+__task_info_files_indices__=

@@ -1,0 +1,65 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	platform.subr -- determine the platform (operating system.
+#
+# SYNOPSIS
+#	task_platform
+#
+# DESCRIPTION
+#	The task_platform function writes the platform to standard output.
+#
+# RETURN VALUES
+#	Returns 0 if the platform can be determined, and >0 if an error
+#	occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	SED	The name or path to the sed(1) utility.
+#
+#	UNAME	The name or path to the uname(1) utility.
+#
+
+__task_platform__="yes"
+
+task_platform()
+{
+	: ${SED:=sed}
+	: ${UNAME:=uname}
+
+	# Take uname(1) output and strip out dashes and slashes.
+	${UNAME} -s | ${SED} -e "s,-,,g" -e "s,/,,g" |
+	( read platform || return 1
+	  case $platform in
+	  [Cc][Yy][Gg][Ww][Ii][Nn]*)
+		echo "Cygwin"; return 0 ;;
+	  *)	echo "$platform"; return 0 ;;
+	  esac
+	  return 1 )
+}

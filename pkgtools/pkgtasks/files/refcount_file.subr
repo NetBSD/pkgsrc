@@ -1,0 +1,502 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	refcount_file.subr -- directory-based reference-count implementation
+#
+# SYNOPSIS
+#	task_refcount_file exists database resource
+#	task_refcount_file add [-t token] database resource
+#	task_refcount_file remove [-t token] database resource
+#	task_refcount_file delete database resource
+#
+#	task_refcount_file prop_exists database resource property
+#	task_refcount_file prop_put database resource property [value ...]
+#	task_refcount_file prop_match database resource property [value ...]
+#	task_refcount_file prop_delete database resource property
+#
+# DESCRIPTION
+#	The functions implement the refcount API functions with the
+#	corresponding names.
+#
+# IMPLEMENTATION
+#	This is a file-based implementation of a reference-counting API
+#	for packages.  The resource being reference-counted is assigned a
+#	directory pathname that "shadows" the resource.  It is populated
+#	with the following files:
+#
+#	${PKGNAME}
+#		This text file represents a reference on the resource by
+#		the package whose full package name is ${PKGNAME}.  Each
+#		line of the file lists the location of the metadata files
+#		for the package, known as the "package metadata directory"
+#		(default "${PKG_DBDIR}/${PKGNAME}").
+#
+#	+OWNER
+#		This text file consists of one line that lists the package
+#		metadata directory of the package that owns the resource.
+#
+#	+PREEXISTING
+#		This text file consists of one line that lists the package
+#		metadata directory of the package that discovered the
+#		resource was pre-existing.
+#
+#	+PERMISSIONS
+#		This text file consists of one line that lists the mode
+#		and permissions of a file resource.  The line is of the
+#		form: "mode owner group", where "mode" is the file mode in
+#		octal form, "owner" is the user ID of the file, and
+#		"group" is the group ID of the file.
+#
+#	There are four directories located under ${PKG_REFCOUNT_DBDIR}
+#	that are databases for resources that are reference-counted by the
+#	packages:
+#
+#	dirs/
+#	files/	The relative paths under these directories shadow the
+#		resource at the same path relative to the root directory.
+#
+#	groups/
+#		The entries of this directory are the names of groups.
+#
+#	users/	The entries of this directory are the names of users.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	MV	The name or path to the mv(1) utility.
+#
+#	PKGNAME
+#		The name of the package manipulating the reference counts.
+#
+#	PKG_DBDIR
+#		The location of the package metadata directory database.
+#		The default is "/var/db/pkg".
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_METADATA_DIR
+#		The absolute path to the location of the meta-data files
+#		of ${PKGNAME}.  The default is "${PKG_DBDIR}/${PKGNAME}".
+#
+#	PKG_REFCOUNT_DBDIR
+#		The location of the directory tree that shadows the
+#		resources that are reference-counted.  The default is
+#		"${PKG_DBDIR}.refcount".
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	RMDIR	The name or path to the rmdir(1) utility.
+#
+
+__task_refcount_file__="yes"
+__task_refcount_file_init__="_task_refcount_file_init"
+
+task_load cleanup
+task_load makedir
+task_load maketemp
+task_load match
+task_load quote
+
+task_refcount_file()
+{
+	[ $# -gt 0 ] || return 127
+	local command="$1"; shift
+
+	local fn
+	case $command in
+	exists|add|remove|delete|prop_exists|prop_put|prop_match|prop_delete)
+		eval fn="_task_refcount_file_$command" ;;
+	*)	return 127 ;;
+	esac
+
+	$fn "$@"
+}
+
+_task_refcount_file_pkg_token()
+{
+	: ${PKGNAME:=${0##*/}}
+	: ${PKG_DBDIR:=/var/db/pkg}
+	: ${PKG_METADATA_DIR:=${PKG_DBDIR}/${PKGNAME}}
+
+	pkg_token=${PKG_METADATA_DIR}
+
+	# POST-CONDITION:
+	# pkg_token is set to the package token unique to the system.
+}
+
+_task_refcount_file_shadowdir()
+{
+	: ${PKG_DBDIR:=/var/db/pkg}
+	: ${PKG_REFCOUNT_DBDIR:=${PKG_DBDIR}.refcount}
+
+	local db="$1"; shift
+	local resource="$1"; shift
+
+	case $resource in
+	/*)	shadowdir="${PKG_REFCOUNT_DBDIR}/$db$resource" ;;
+	*)	shadowdir="${PKG_REFCOUNT_DBDIR}/$db/$resource" ;;
+	esac
+	shadowdir="${PKG_DESTDIR}/$shadowdir"
+
+	# POST-CONDITION:
+	# shadowdir is set to the location of the shadow directory.
+}
+
+_task_refcount_file_exists()
+{
+	local db="$1"; shift
+	local resource="$1"; shift
+
+	local shadowdir
+	_task_refcount_file_shadowdir "$db" "$resource"
+	# shadowdir is now set to the location of the shadow directory.
+
+	set -- "$shadowdir"/*
+	local entry
+	for entry; do
+		case $entry in
+		"$shadowdir/*")
+			: "no references found" ;;
+		"$shadowdir"/+*)
+			: "property file" ;;
+		*)	# package reference found
+			return 0 ;;
+		esac
+	done
+	return 1
+}
+
+_task_refcount_file_delete()
+{
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+
+	local db="$1"; shift
+	local resource="$1"; shift
+
+	local shadowdir
+	_task_refcount_file_shadowdir "$db" "$resource"
+	# shadowdir is now set to the location of the shadow directory.
+
+	# Remove all references and properties.
+	${RM} -f "$shadowdir"/*
+	# Remove the shadow directory.
+	${RMDIR} -p "$shadowdir" 2>/dev/null
+	[ ! -d "$shadowdir" ] || return 1
+}
+
+_task_refcount_file_add()
+{
+	: ${MV:=mv}
+
+	local token=
+	local arg
+	local OPTIND=1
+	while getopts ":t:" arg "$@"; do
+		case $arg in
+		t)	token=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	local db="$1"; shift
+	local resource="$1"; shift
+
+	if [ -z "$token" ]; then
+		local pkg_token
+		_task_refcount_file_pkg_token
+		# pkg_token is now set to the package token unique to the system.
+		token=$pkg_token
+	fi
+
+	local shadowdir
+	_task_refcount_file_shadowdir "$db" "$resource"
+	# shadowdir is now set to the location of the shadow directory.
+	local countfile="$shadowdir/${PKGNAME}"
+
+	task_makedir "$shadowdir" 2>/dev/null
+	[ -d "$shadowdir" ] || return 1
+
+	local result=0
+	local temp temp_quoted quoted
+	temp=$( task_maketemp "$countfile.pkgtasks.XXXXXXXXXX" )
+	if [ -n "$temp" ]; then
+		task_quote "$temp"
+		temp_quoted=$quoted
+		__task_refcount_file_temps__="$__task_refcount_file_temps__ $temp_quoted"
+		{ if [ -f "$countfile" ]; then
+			task_match -sv "$token" < $countfile
+		  fi
+		  echo "$token"
+		} > $temp
+		# rename(2) is atomic
+		if ${MV} -f "$temp" "$countfile"; then
+			__task_refcount_file_temps__=${__task_refcount_file_temps__% $temp_quoted}
+		else
+			result=1
+		fi
+	else
+		# cannot create temporary file
+		result=1
+	fi
+
+	_task_refcount_file_cleanup
+	return $result
+}
+
+_task_refcount_file_remove()
+{
+	: ${MV:=mv}
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+
+	local token=
+	local arg
+	local OPTIND=1
+	while getopts ":t:" arg "$@"; do
+		case $arg in
+		t)	token=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	local db="$1"; shift
+	local resource="$1"; shift
+
+	if [ -z "$token" ]; then
+		local pkg_token
+		_task_refcount_file_pkg_token
+		# pkg_token is now set to the package token unique to the system.
+		token=$pkg_token
+	fi
+
+	local shadowdir
+	_task_refcount_file_shadowdir "$db" "$resource"
+	# shadowdir is now set to the location of the shadow directory.
+	local countfile="$shadowdir/${PKGNAME}"
+
+	local result=0
+	if [ -f "$countfile" ]; then
+		local temp temp_quoted quoted
+		temp=$( task_maketemp "$countfile.pkgtasks.XXXXXXXXXX" )
+		if [ -n "$temp" ]; then
+			task_quote "$temp"
+			temp_quoted=$quoted
+			__task_refcount_file_temps__="$__task_refcount_file_temps__ $temp_quoted"
+			task_match -sv "$token" < $countfile > $temp
+			local remaining=
+			if [ -f "$temp" ]; then
+				local line
+				while read line; do
+					# reference file is non-empty
+					remaining="yes"
+					break
+				done < $temp
+				# rename(2) is atomic
+				if ${MV} -f "$temp" "$countfile"; then
+					__task_refcount_file_temps__=${__task_refcount_file_temps__% $temp_quoted}
+				else
+					result=1
+				fi
+			else
+				# cannot create temporary file
+				result=1
+			fi
+			if [ -z "$remaining" ]; then
+				${RM} -f "$countfile" || result=1
+			fi
+		fi
+	fi
+	# Remove shadow directory if empty.
+	${RMDIR} -p "$shadowdir" 2>/dev/null
+
+	_task_refcount_file_cleanup
+	return $result
+}
+
+_task_refcount_file_propfile()
+{
+	local db="$1"; shift
+	local resource="$1"; shift
+	local property="$1"; shift
+
+	local shadowdir
+	_task_refcount_file_shadowdir "$db" "$resource"
+	# shadowdir is now set to the location of the shadow directory.
+
+	propfile=
+	case $property in
+	owner)	propfile="$shadowdir/+OWNER" ;;
+	preexist)
+		propfile="$shadowdir/+PREEXISTING" ;;
+	permissions)
+		propfile="$shadowdir/+PERMISSIONS" ;;
+	+*)	propfile="$shadowdir/$property" ;;
+	*)	propfile="$shadowdir/+$property" ;;
+	esac
+	# POST-CONDITION:
+	# propfile is set to the location of the property file.
+}
+
+_task_refcount_file_prop_exists()
+{
+	local db="$1"; shift
+	local resource="$1"; shift
+	local property="$1"; shift
+
+	local propfile
+	_task_refcount_file_propfile "$db" "$resource" "$property"
+	# propfile is now set to the location of the property file.
+
+	[ -f "$propfile" ] || return 1
+	return 0
+}
+
+_task_refcount_file_prop_put()
+{
+	: ${MV:=mv}
+
+	local db="$1"; shift
+	local resource="$1"; shift
+	local property="$1"; shift
+
+	local propfile
+	_task_refcount_file_propfile "$db" "$resource" "$property"
+	# propfile is now set to the location of the property file.
+
+	local pkg_token
+	_task_refcount_file_pkg_token
+	# pkg_token is now set to the package token unique to the system.
+
+	local shadowdir="${propfile%/*}"
+	task_makedir "$shadowdir" 2>/dev/null
+	[ -d "$shadowdir" ] || return 1
+
+	local result=0
+	local temp temp_quoted quoted
+	temp=$( task_maketemp "$propfile.pkgtasks.XXXXXXXXXX" )
+	if [ -n "$temp" ]; then
+		task_quote "$temp"
+		temp_quoted=$quoted
+		__task_refcount_file_temps__="$__task_refcount_file_temps__ $temp_quoted"
+		local value
+		if [ $# -gt 0 ]; then
+			value="$@"
+		else
+			value=$pkg_token
+		fi
+		echo "$value" > $temp
+		# rename(2) is atomic
+		if ${MV} -f "$temp" "$propfile"; then
+			__task_refcount_file_temps__=${__task_refcount_file_temps__% $temp_quoted}
+		else
+			result=1
+		fi
+	else
+		# cannot create temporary file
+		result=1
+	fi
+
+	_task_refcount_file_cleanup
+	return $result
+}
+
+_task_refcount_file_prop_match()
+{
+	local db="$1"; shift
+	local resource="$1"; shift
+	local property="$1"; shift
+
+	local propfile
+	_task_refcount_file_propfile "$db" "$resource" "$property"
+	# propfile is now set to the location of the property file.
+
+	local pkg_token
+	_task_refcount_file_pkg_token
+	# pkg_token is now set to the package token unique to the system.
+
+	if [ -f "$propfile" ]; then
+		local pattern
+		if [ $# -gt 0 ]; then
+			pattern="$@"
+		else
+			pattern=$pkg_token
+		fi
+		if task_match -q "$pattern" < $propfile; then
+			return 0
+		fi
+	fi
+	return 1
+}
+
+_task_refcount_file_prop_delete()
+{
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+
+	local db="$1"; shift
+	local resource="$1"; shift
+	local property="$1"; shift
+
+	local propfile
+	_task_refcount_file_propfile "$db" "$resource" "$property"
+	# propfile is now set to the location of the property file.
+
+	local result=0
+	${RM} -f "$propfile"
+	[ ! -f "$propfile" ] || result=1
+
+	# Try to clean up the shadow directory in case it is empty.
+	local shadowdir="${propfile%/*}"
+	${RMDIR} -p "$shadowdir" 2>/dev/null
+	return $result
+}
+
+_task_refcount_file_cleanup()
+{
+	: ${RM:=rm}
+
+	eval set -- $__task_refcount_file_temps__
+	local file
+	for file; do
+		${RM} -f "$file"
+	done
+	__task_refcount_file_temps__=
+}
+
+_task_refcount_file_init()
+{
+	task_cleanup_add_hook _task_refcount_file_cleanup
+}
+
+# Static variable for temporary files that should be removed if an error occurs.
+__task_refcount_file_temps__=

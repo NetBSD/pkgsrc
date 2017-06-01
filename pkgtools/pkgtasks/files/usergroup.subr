@@ -1,0 +1,130 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	usergroup.subr -- adding users and groups to the system
+#
+# SYNOPSIS
+#	task_addgroup <group> [<groupid>]
+#	task_adduser <user> <group> [<userid> [<descr> [<home> [<shell>]]]]
+#
+# DESCRIPTION
+#	The task_addgroup function adds a group to the system with the
+#	matching group ID if it is given.
+#
+#	The task_adduser function adds a user to the system with the
+#	matching user ID if it is given.  The additional parameters to the
+#	task_adduser function can be used to set the group, description,
+#	home directory, and login shell of the user.
+#
+#	These functions are expected to never write to standard output or
+#	to standard error.  The calling script should capture the return
+#	values of these functions.
+#
+#	These functions assume that platform_groupadd and platform_useradd
+#	functions are defined and accept the following subset of options
+#	supported by the NetBSD/Solaris-compatible versions of groupadd(8)
+#	and useradd(8):
+#
+#	    platform_groupadd [-g <gid>] <group>
+#
+#	    platform_useradd [-c <descr>] [-d <home>] [-g <group>]
+#		[-s <shell>] [u <uid>] <user>
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	NOLOGIN
+#		The path to a login shell that is used for accounts that
+#		are not allowed to log in.  The default value is
+#		"/sbin/nologin".
+#
+#	PKGNAME
+#		The name of the package.
+#
+
+__task_usergroup__="yes"
+
+task_load platform
+
+# Load the correct platform_{group,user}add functions.
+case $(task_platform) in
+DragonFly|FreeBSD)
+	task_load usergroup_FreeBSD ;;
+Linux)	task_load usergroup_Linux ;;
+MirBSD)	task_load usergroup_MirBSD ;;
+NetBSD|SunOS)
+	task_load usergroup_NetBSD ;;
+*)	task_load usergroup_NetBSD ;;
+esac
+
+task_addgroup()
+{
+	local group="$1"
+	local groupid="$2"
+
+	[ -n "$group" ] || return 1
+
+	case $groupid in
+	"")	platform_groupadd "$group" >/dev/null ;;
+	*)	platform_groupadd -g "$groupid" "$group" >/dev/null ;;
+	esac
+}
+
+task_adduser()
+{
+	: ${PKGNAME:=${0##*/}}
+
+	local user="$1"; local group="$2"; local userid="$3"
+	local descr="$4"; local home="$5"; local shell="$6"
+
+	[ -n "$user" -a -n "$group" ] || return 1
+
+	local pkgbase="${PKGNAME%-[0-9]*}"
+	local descr_default
+	case $user in
+	$pkgbase)
+		descr_default="$user user" ;;
+	*)	descr_default="$pkgbase $user user" ;;
+	esac
+
+	: ${descr:=$descr_default}
+	: ${home:=/nonexistent}
+	: ${shell:=${NOLOGIN:=/sbin/nologin}}
+
+	case $userid in
+	"")	platform_useradd \
+	  		-c "$descr" -d "$home" -s "$shell" -g "$group" \
+			"$user" >/dev/null ;;
+	*)	platform_useradd \
+	  		-c "$descr" -d "$home" -s "$shell" -g "$group" \
+			-u "$userid" "$user" >/dev/null ;;
+	esac
+}

@@ -1,0 +1,141 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	usergroup_Linux -- usergroup implementation for Linux
+#
+# SYNOPSIS
+#	platform_groupadd [-g <gid>] <group>
+#
+#	platform_useradd [-c <descr>] [-d <home>] [-g <group>]
+#		[-s <shell>] [-u <uid>] <user>
+#
+# DESCRIPTION
+#	The functions implement a NetBSD/Solaris-compatible groupadd and
+#	useradd.
+#
+# RETURN VALUES
+#	All functions return 0 on success, and return non-zero otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	GROUPADD
+#		The name or path to the groupadd(8) utility.
+#
+#	USERADD
+#		The name or path to the useradd(8) utility.
+#
+# NOTES
+#	The useradd(8) utility on Linux is a complete mess.  At least Red
+#	Hat derivatives want to create home directories by default.  They
+#	have support for -M, but no --help.  Other Linux distributions lack
+#	-M support, but some at least have --help.  LSB just wants
+#	useradd(8), but doesn't specify any behavior, so it is useless for
+#	writing portable scripts.
+#
+
+__task_usergroup_Linux__="yes"
+
+task_load match
+task_load quote
+
+platform_groupadd()
+{
+	: ${GROUPADD:=groupadd}
+
+	local gid=
+	local groupadd_args=
+	local arg quoted
+	local OPTIND=1
+	while getopts ":g:" arg "$@"; do
+		case $arg in
+		g)	task_quote "${OPTARG}"
+			groupadd_args="$groupadd_args -$arg $quoted" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	# A <group> argument is required.
+	[ $# -eq 1 ] || return 127
+	local group="$1"; shift
+
+	[ -n "$group" ] || return 1
+
+	# If no GID is specified, then use a GID from the system GID range.
+	if [ -z "$gid" ]; then
+		groupadd_args="$groupadd_args -r"
+	fi
+	task_quote "$group"
+	groupadd_args="$groupadd_args $quoted"
+
+	eval ${GROUPADD} $groupadd_args
+}
+
+platform_useradd()
+{
+	: ${USERADD:=useradd}
+
+	: ${LOGIN_DEFS:=/etc/login.defs}
+
+	local uid=
+	local useradd_args=
+	local arg quoted
+	local OPTIND=1
+	while getopts ":c:d:g:s:u:" arg "$@"; do
+		case $arg in
+		[cdgsu])
+			# valid useradd options for useradd(8)
+			case $arg in u) uid=${OPTARG} ;; esac
+			task_quote "${OPTARG}"
+			useradd_args="$useradd_args -$arg $quoted" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	# A <user> argument is required.
+	[ $# -eq 1 ] || return 127
+	local user="$1"; shift
+
+	[ -n "$user" ] || return 1
+
+	# Don't create the home directory, even if CREATE_HOME is "yes" in
+	# /etc/login.defs.
+	#
+	if [ -f "${LOGIN_DEFS}" ] &&
+	   task_match -qw "CREATE_HOME*[yY][eE][sS]" < ${LOGIN_DEFS}; then
+		useradd_args="$useradd_args -M"
+	fi
+	# If no UID is specified, then use a UID from the system UID range.
+	if [ -z "$uid" ]; then
+		useradd_args="$useradd_args -r"
+	fi
+	task_quote "$user"
+	useradd_args="$useradd_args $quoted"
+
+	eval ${USERADD} $useradd_args
+}

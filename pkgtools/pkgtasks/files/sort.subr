@@ -1,0 +1,94 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	sort.subr -- sort lines from standard input
+#
+# SYNOPSIS
+#	task_sort [-ru]
+#
+# DESCRIPTION
+#	The task_sort function reads lines from standard input until EOF is
+#	reached and writes them to standard output in lexographically-sorted
+#	order.
+#
+#	The options are as follows:
+#
+#	-r	Reverse: sort in reverse order.
+#	-u	Unique: suppress duplicate lines.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	AWK	The name or path to the awk(1) utility.
+#
+
+__task_sort__="yes"
+
+task_sort()
+{
+	: ${AWK:=awk}
+
+	local cmp="<"
+	local uniq=0
+	local arg
+	local OPTIND=1
+	while getopts ":ru" arg "$@"; do
+		case $arg in
+		r)	cmp=">" ;;
+		u)	uniq=1 ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	${AWK} '	{ line[NR] = $0 }
+		END	{ # sort with insertion sort
+			n = 0	# number of duplicates
+			for ( i = 1; i <= NR; i++ ) {
+				value = line[i]
+				j = i - n - 1
+				while ( j > 0 && value '"$cmp"' line[j] ) {
+					j--
+				}
+				if ( '"$uniq"' > 0 && j > 0 && value == line[j] ) {
+					# duplicate of jth value
+					n++
+				} else {
+					for ( k = i - n - 1; k > j; k-- )
+						line[k+1] = line[k]
+					line[j+1] = value
+				}
+			}
+			for ( i = 1; i <= NR - n; i++ )
+				print line[i]
+		}'
+
+}

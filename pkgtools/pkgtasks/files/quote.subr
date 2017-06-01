@@ -1,0 +1,74 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	quote.subr -- quote strings for use with shell eval
+#
+# SYNOPSIS
+#	local quoted
+#	task_quote arg [...]
+#
+# DESCRIPTION
+#	The task_quote function sets a shell variable $quoted to a string
+#	that has all of the original function arguments quoted and
+#	concatenated together.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	SED	The name or path to the sed(1) utility.
+#
+# EXAMPLES
+#	local quoted
+#	task_quote "$arg1" "$arg2" "$arg3"
+#	eval func $quoted
+#
+
+__task_quote__="yes"
+
+task_quote()
+{
+	: ${SED:=sed}
+
+	# Return quoted args in $quoted.
+	quoted=
+
+	local arg
+	for arg; do
+		case $arg in
+		*'!'*|*'*'*|*'?'*|*'['*|*'\'*|*"'"*)
+			arg="'"`echo "$arg" | ${SED} -e "s,','\\\\\\'',g"`"'" ;;
+		*)	arg="'"$arg"'" ;;
+		esac
+		case $quoted in
+		"")	quoted=$arg ;;
+		*)	quoted="$quoted $arg" ;;
+		esac
+	done
+	# POST-CONDITION:
+	# quoted is set to the string with all arguments quoted.
+}

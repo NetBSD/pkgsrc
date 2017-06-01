@@ -1,0 +1,376 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	unittest.subr -- run unit tests and produce TAP output
+#
+# SYNOPSIS
+#	task_requires_root
+#
+#	task_load_test <test_module> ...
+#
+#	task_run_tests [-q] [<n>]
+#
+# DESCRIPTION
+#	The task_requires_root function checks whether the the user is
+#	"root" and sets the "describe" environment variable to a "skip"
+#	directive.
+#
+#	The task_load_test function sources the test module from the
+#	${TASK_TESTS_DIR} directory and passes it all of the remaining
+#	parameters.
+#
+#	The task_run_tests function runs all functions named "test<n>" in
+#	order, starting with "test1", and it produces output in Test
+#	Anything Protocol (TAP) format.
+#
+#	The options are as follows:
+#
+#	-q	Quiet; Close the standard output and standard error before
+#		running the test.  If the "-q" option is not present, then
+#		the standard output and standard error are left open.
+#
+#	<n>	Only run "test<n>".
+#
+#	task_run_tests sets the environment variable ${TEST_CURDIR} to the
+#	location where each test function is run.
+#
+#	A test function must set the "describe" environment variable to
+#	the "TAP test line" description for the test.
+#
+#	If the test_setup and test_teardown functions are present, then
+#	they are called respectively before and after each test function
+#	is called.
+#
+# RETURN VALUES
+#	The task_requires_root function returns 0 if the user is root,
+#	and >0 otherwise.
+#
+#	The task_load_test function returns 0 on success, and >0 if an
+#	error occurs.
+#
+#	The task_run_tests function returns the number of tests that failed
+#	when run.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	ID	The name or path to the id(1) utility.
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	TASK_TESTS_DIR
+#		The path to the directory containing the tests.
+#
+# EXAMPLE
+#
+#	# Load unittest functions.
+#	task_load unittest
+#
+#	# test_setup() is run before each test<n>.
+#	test_setup() {
+#		var="visible in all test functions"
+#	}
+#
+#	test1() {
+#		describe="guaranteed success"
+#		echo "This is visible in the output unless -q is given."
+#		# copied group file is automatically removed after test is run
+#		cp /etc/group .
+#		return 0
+#	}
+#
+#	task_run_tests "$@"
+#
+
+__task_unittest__="yes"
+
+task_load taskfunc	# task_is_function
+task_load maketemp
+task_load say
+
+task_requires_root()
+{
+	: ${ID:=id}
+
+	if [ -z "$__task_uid__" ]; then
+		__task_uid__=$( ${ID} -u )
+	fi
+	if [ "$__task_uid__" != 0 ]; then
+		describe="# skip $describe (requires root)"
+		return 1
+	fi
+	return 0
+}
+
+task_load_test()
+{
+	: ${TASK_TESTS_DIR:=.}
+
+	[ $# -gt 0 ] || return 127
+	local module="$1"; shift
+
+	local found=
+	local test_module_path suffix
+	for suffix in "" ".sh"; do
+		test_module_path="${TASK_TESTS_DIR}/$module$suffix"
+		if [ -f "$test_module_path" ]; then
+			found=yes
+			break
+		fi
+	done
+	if [ -n "$found" ]; then
+		unset found module suffix
+		. "$test_module_path"
+	else
+		echo 1>&2 "Error: Loading test $module failed: $test_module_path"
+		return 1
+	fi
+}
+
+task_run_tests()
+{
+	# If the first parameter is "-s", then short-circuit return 0.
+	case $1 in -s) return 0 ;; esac
+	_task_tap_test "$@" | task_tap_harness
+}
+
+_task_tap_test()
+{
+	local run_args=
+	local arg
+	local OPTIND=1
+	while getopts ":q" arg "$@"; do
+		case $arg in
+		q)	run_args="$run_args -$arg" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	# Remaining arguments are tests to run.
+
+	local setup_fn="test_setup"
+	local teardown_fn="test_teardown"
+
+	task_is_function "$setup_fn" || setup_fn=":"
+	task_is_function "$teardown_fn" || teardown_fn=":"
+
+	local failures=0
+
+	if [ $# -gt 0 ]; then
+		# Explicit list of tests to run.
+		local max=0
+		local number test_fn
+		for number; do
+			test_fn="test$number"
+			task_is_function "$test_fn" || break
+			max=$(( $max + 1 ))
+		done
+		# Write the TAP plan before the test output.
+		echo "1..$max"
+		# Run the tests.
+		for number; do
+			_task_tap_line $run_args $number $setup_fn $teardown_fn ||
+				failures=$(( $failures + 1 ))
+		done
+	else
+		local max=0
+		local number=1
+		local test_fn
+		while : ; do
+			test_fn="test$number"
+			task_is_function "$test_fn" || break
+			max=$number
+			number=$(( $number + 1 ))
+		done
+		# Write the TAP plan before the test output.
+		echo "1..$max"
+		number=1
+		run_args="$run_args -n"
+		# Run the tests.
+		while [ $number -le $max ]; do
+			_task_tap_line $run_args $number $setup_fn $teardown_fn ||
+				failures=$(( $failures + 1 ))
+			number=$(( $number + 1 ))
+		done
+	fi
+	return $failures
+}
+
+_task_tap_line()
+{
+	: ${RM:=rm}
+
+	local quiet=
+	local write_number=
+	local arg
+	local OPTIND=1
+	while getopts ":nq" arg "$@"; do
+		case $arg in
+		n)	write_number="yes" ;;
+		q)	quiet="yes" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -eq 3 ] || return 127
+	local number="$1"
+	local setup_fn="$2"
+	local teardown_fn="$3"
+	shift 3
+
+	local test_fn="test$number"
+	local TEST_CURDIR=$( task_maketemp -d -t "pkgtasks.$test_fn" )
+	( # Redirect fd 6 to standard output.
+	  exec 6>&1
+	  # Close standard output and standard error if quiet.
+	  if [ -n "$quiet" ]; then
+		exec 1>&-
+		exec 2>&-
+	  fi
+
+	  # setup > test > teardown
+	  local describe=
+	  cd "${TEST_CURDIR}" && eval $setup_fn && eval $test_fn
+	  local test_result=$?
+	  eval $teardown_fn
+
+	  local testline
+
+	  # ok or noe ok.
+	  case $test_result in
+	  0)	testline="ok" ;;
+	  *)	testline="not ok"
+	  esac
+
+	  # Append test number.
+	  case $write_number in
+	  "")	: "don't append number" ;;
+	  *)	testline="$testline $number" ;;
+	  esac
+
+	  # Put a dash "-" before $describe if it's missing.
+	  case $describe in
+	  "")	: "testline is unchanged" ;;
+	  "- "*|"#"*)
+	  	testline="$testline $describe" ;;
+	  *)	testline="$testline - $describe" ;;
+	  esac
+
+	  # Write the proper TAP test line.
+	  echo 1>&6 "$testline"
+
+	  return $test_result )
+	local result=$?
+	${RM} -fr "${TEST_CURDIR}"
+	return $result
+}
+
+task_tap_harness()
+{
+	local ws="[ 	]"
+
+	local count=0
+	local fail=0
+	local pass=0
+	local broken=0
+	local fixed=0
+	local skip=0
+
+	local status=
+	local msgtype="none"
+	local line
+	while IFS= read line; do
+		case $line in
+		1..[0-9]*)
+			# TAP plan
+			status="plan"
+			count=${line#1..}
+			msgtype="info" ;;
+		"not ok"|"not ok"$ws*)
+			# failed test
+			status="not_ok"
+			fail=$(( $fail + 1 ))
+			msgtype="error" ;;
+		ok|"ok"$ws*)
+			# passed test
+			status="ok"
+			pass=$(( $pass + 1 ))
+			msgtype="none" ;;
+		esac
+		case $status in
+		ok|not_ok)
+			case $line in
+			*$ws"#"$ws[Ss][Kk][Ii][Pp]|\
+			*$ws"#"$ws[Ss][Kk][Ii][Pp]$ws*)
+				# skip directive; consider as passed
+				pass=$(( $pass + 1 ))
+				skip=$(( $skip + 1 ))
+				msgtype="skip" ;;
+			*$ws"#"$ws[Tt][Oo][Dd][Oo]|\
+			*$ws"#"$ws[Tt][Oo][Dd][Oo]$ws*)
+				# todo directive
+				case $status in
+				ok)	fixed=$(( $fixed + 1 )) ;;
+				not_ok)	broken=$(( $broken + 1 ))
+					fail=$(( fail - 1 )) ;;
+				esac
+				msgtype="warn" ;;
+			esac
+		esac
+		task_say $msgtype "$line"
+	done
+	# summary
+	if [ $skip -gt 0 ]; then
+		task_say skip "# skipped $skip test(s)"
+	fi
+	if [ $fixed -gt 0 ]; then
+		task_say error \
+			"# $fixed known breakage(s) vanished; please update test(s)"
+	fi
+	if [ $broken -gt 0 ]; then
+		task_say warn "# still have $broken known breakage(s)"
+	fi
+	local msg
+	if [ $broken -eq 0 -a $fixed -eq 0 ]; then
+		msg="$count test(s)"
+	else
+		count=$(( $count - $broken - $fixed ))
+		msg="remaining $count test(s)"
+	fi
+	if [ $fail -gt 0 ]; then
+		task_say error "# failed $fail among $msg"
+	else
+		task_say pass "# passed all $msg"
+	fi
+
+	# return the number of failed tests
+	return $fail
+}
+
+# Static variable for the user ID of the user executing the test.
+__task_uid__=

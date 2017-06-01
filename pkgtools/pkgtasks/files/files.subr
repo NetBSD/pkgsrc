@@ -1,0 +1,406 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	files.subr -- config file management for packages
+#
+# SYNOPSIS
+#	task_files [-s] add | remove | perms
+#	task_files check-add | check-remove | check-perms
+#
+# DESCRIPTION
+#	The task_files function supports six actions: "add", "remove",
+#	"perms", "check-add", "check-remove", and "check-perms".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_files function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # FILE: <target> <flags> <source> [<mode> [<user> [<group>]]]
+#
+#	If the target or source paths are relative, then they are assumed
+#	to be relative to ${PKG_PREFIX}.
+#
+#	The third field in each line is set of flags with the following
+#	meaning:
+#
+#	    c	file is copied into place
+#	    f	ignore ${PKG_CONFIG} value
+#	    r	file is an init script (consider ${PKG_INIT_SCRIPTS})
+#	    .   placeholder flag to ensure the field is non-empty
+#
+#	The "add" action copies the source path to the target path if the
+#	target path doesn't exist and sets the permissions on the path if
+#	given.  A reference count for the path will be added for the
+#	package.
+#
+#	The "remove" action removes the target path if it differs from
+#	the source path.  A reference count for the path will be removed
+#	for the package.
+#
+#	The "perms" action sets the mode and permissions on the target if
+#	they are given.
+#
+#	The "check-add" action will check whether the target path exists
+#	or otherwise writes a message to standard output noting the
+#	missing target path.
+#
+#	The "check-remove" action will check whether the target path has
+#	been removed or otherwise writes a message to standard output
+#	noting the target paths still exist.
+#
+#	The "check-perms" action will check whether the target path has
+#	the correct permissions or otherwise writes a message to standard
+#	output noting the target path has incorrect permissions.
+#
+# RETURN VALUES
+#	The "add", "remove", and "perms" actions return 0 if they are
+#	successful for all files, and >0 if an error occurs.
+#
+#	The "check-add", "check-remove", and "check-perms" actions return
+#	>0 if they write informative messages, and return 0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	CP	The name or path to the cp(1) utility.
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_CONFIG
+#		If ${PKG_CONFIG} is a "truthy" value, then the "add" and
+#		"remove" actions are allowed to make changes to the
+#		filesystem as needed.
+#
+#	PKG_CONFIG_PERMS
+#		If ${PKG_CONFIG_PERMS} is a "truthy" value, then the
+#		"perms" action is allowed to make changes to the
+#		filesystem as needed.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_INIT_SCRIPTS
+#		If ${PKG_CONFIG} and ${PKG_INIT_SCRIPTS} are both "truthy"
+#		values, then the "add" and "remove" actions are allowed
+#		to copy and remove files that are flagged as init scripts.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_files__="yes"
+
+task_load compare
+task_load echo
+task_load permissions
+task_load refcount
+task_load truthy
+task_load valid_options
+
+task_files()
+{
+	: ${CP:=cp}
+	: ${RM:=rm}
+
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+
+	: ${PKG_CONFIG:=yes}
+	: ${PKG_CONFIG_PERMS:=yes}
+	: ${PKG_INIT_SCRIPTS:=yes}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+        case $action in
+	add|remove|perms|check-add|check-remove|check-perms)
+		: "valid actions" ;;
+	*)      return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local pkg_config="yes"
+	local pkg_config_perms="yes"
+	local pkg_init_scripts="yes"
+	task_is_truthy "${PKG_CONFIG}" || pkg_config=
+	task_is_truthy "${PKG_CONFIG_PERMS}" || pkg_config_perms=
+	task_is_truthy "${PKG_INIT_SCRIPTS}" || pkg_init_scripts=
+	#
+	# Deprecated: PKG_RCD_SCRIPTS is deprecated, but if it's set, it
+	# overrides ${PKG_INIT_SCRIPTS}.
+	#
+	if [ -n "${PKG_RCD_SCRIPTS}" ]; then
+		if task_is_truthy "${PKG_RCD_SCRIPTS}"; then
+			pkg_init_scripts="yes"
+		else
+			pkg_init_scripts=
+		fi
+	fi
+
+	local result line_result
+	local msg
+	local copy remove changes
+	local refcount
+
+	result=0
+	local d_path
+	local hash tag path flags egfile mode user group
+	while read hash tag path flags egfile mode user group; do
+		# Filter for "# FILE:".
+		case $hash/$tag in
+		"#/FILE:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+		task_valid_options "$flags" "cfr." || continue
+
+		# Canonicalize paths.
+		case $path in
+		"")	# skip lines without any required args
+			continue ;;
+		[!/]*)	path="$prefix/$path" ;;
+		esac
+		d_path="${PKG_DESTDIR}$path"
+		case $egfile in
+		"")	# skip lines without any required args
+			continue ;;
+		[!/]*)	egfile="$prefix/$egfile" ;;
+		esac
+		egfile="${PKG_DESTDIR}$egfile"
+
+		msg=
+		case $mode/$user/$group in
+                //)     msg="$d_path" ;;
+		[!/]*//)
+			msg="$d_path (m=$mode)" ;;
+		[!/]*/[!/]*/)
+			msg="$d_path (m=$mode, o=$user)" ;;
+		[!/]*/[!/]*/[!/]*)
+			msg="$d_path (m=$mode, o=$user, g=$group)" ;;
+		esac
+
+		copy=
+		case $flags in
+		*c*)	copy="seen"
+			case $flags in
+			*f*)	# "f" always implies copy.
+				copy="yes" ;;
+			*r*)	# "r" implies copy if PKG_CONFIG and PKG_INIT_SCRIPTS are both truthy.
+				if [ -n "$pkg_config" -a -n "$pkg_init_scripts" ]; then
+					copy="yes"
+				fi ;;
+			*)	# otherwise, copy if PKG_CONFIG is truthy.
+				if [ -n "$pkg_config" ]; then
+					copy="yes"
+				fi ;;
+			esac ;;
+		esac
+
+		remove=
+		case $flags in
+		*)	remove="seen"
+			case $flags in
+			*f*)	# "f" always implies remove.
+				remove="yes" ;;
+			*r*)	# "r" implies remove if PKG_CONFIG and PKG_INIT_SCRIPTS are both truthy.
+				if [ -n "$pkg_config" -a -n "$pkg_init_scripts" ]; then
+					remove="yes"
+				fi ;;
+			*)	# otherwise, remove if PKG_CONFIG is truthy.
+				if [ -n "$pkg_config" ]; then
+					remove="yes"
+				fi ;;
+			esac ;;
+		esac
+
+		line_result=0
+		changes=
+		case $action in
+		add)	refcount="yes"
+			task_refcount exists files "$path" || refcount=
+			if task_refcount add files "$path"; then
+				if [ -f "$d_path" ]; then
+					# File already exists.
+					if [ -z "$refcount" ]; then
+						task_refcount prop_put files "$path" preexist || line_result=1
+					fi
+					$echo "${TASK_MSG}! file already exists: $d_path"
+				elif [ -f "$egfile" -o -c "$egfile" ]; then
+					# Example file exists.
+					if [ -z "$copy" ]; then
+						: "file is never copied"
+					elif [ "$copy" = "seen" ]; then
+						$echo "${TASK_MSG}! file copy skipped: $d_path"
+					elif ${CP} "$egfile" "$d_path"; then
+						$echo "${TASK_MSG}> file copied: $d_path"
+						changes="$changes copy"
+					else
+						$echo "${TASK_MSG}! file not copied: $d_path"
+						line_result=1
+					fi
+				else
+					$echo "${TASK_MSG}! file not copied: $d_path"
+					line_result=1
+				fi
+			else
+				# add refcount failed; skip to next line
+				$echo "${TASK_MSG}! refcount add failure: files $path"
+				result=1
+				continue
+			fi ;;
+		check-add)
+			if [ -f "$d_path" ]; then
+				: "file already exists"
+			elif [ -z "$copy" ]; then
+				: "file is never copied"
+			elif [ -f "$egfile" -o -c "$egfile" ]; then
+				task_echo "!!! INFO: ${PKGNAME}: Create file: $msg [$egfile]"
+				line_result=1
+			else
+				task_echo "!!! INFO: ${PKGNAME}: Create file: $msg"
+				line_result=1
+			fi ;;
+		esac
+		if [ $line_result -eq 0 ]; then
+			case $mode/$user/$group in
+			//)	: "no permissions to set" ;;
+			*)	case $action in
+				add|perms)
+					task_refcount prop_put files "$path" permissions "$mode" "$user" "$group" || line_result=1
+					if [ ! -f "$d_path" ]; then
+						$echo "${TASK_MSG}! file permissions not set on missing: $msg"
+						if [ "$copy" = "yes" ]; then
+							# The should have been copied; otherwise, it's an error.
+							line_result=1
+						fi
+					elif [ "$action" = "perms" -a -z "$pkg_config_perms" ]; then
+						# "perms" action, but PKG_CONFIG_PERMS is not truthy.
+						$echo "${TASK_MSG}! file permissions skipped: $msg"
+					elif task_set_permissions "$d_path" "$mode" "$user" "$group"; then
+						$echo "${TASK_MSG}> file permissions set: $msg"
+					else
+						$echo "${TASK_MSG}! file permissions not set: $msg"
+						line_result=1
+					fi ;;
+				check-add|check-perms)
+					if [ -f "$d_path" ] &&
+					   task_check_permissions "$d_path" "$mode" "$user" "$group"; then
+					   	: "file has correct permissions"
+					else
+					   	task_echo "!!! INFO: ${PKGNAME}: Set file permissions: $msg"
+						line_result=1
+					fi
+				esac ;;
+			esac
+		fi
+		if [ $line_result -eq 0 ]; then
+			case $action in
+			remove)	if task_refcount remove files "$path"; then
+					if task_refcount exists files "$path"; then
+						: "refcount is not zero"
+					else
+						# no more references.
+						if task_refcount prop_exists dirs "$path" preexist; then
+							: "file is preexisting"
+						elif [ ! -f "$d_path" ]; then
+						   	: "file already removed"
+						elif [ -f "$egfile" -o -c "$egfile" ]; then
+							if task_compare "$d_path" "$egfile"; then
+								if [ "$remove" = "yes" ]; then
+									if ${RM} -f "$d_path"; then
+										$echo "${TASK_MSG}> file removed: $d_path"
+									else
+										line_result=1
+									fi
+								fi
+							else
+								$echo "${TASK_MSG}! file differs from default: $d_path"
+							fi
+						fi
+						if [ -f "$d_path" ]; then
+							$echo "${TASK_MSG}! file not removed: $d_path"
+						fi
+						# delete the reference count
+						task_refcount delete files "$path"
+					fi
+				else
+					# remove refcount failed
+					$echo "${TASK_MSG}! refcount remove failure: files $path"
+					line_result=1
+				fi ;;
+			check-remove)
+				if task_refcount exists files "$path"; then
+					: "refcount is not zero"
+				elif [ ! -f "$d_path" ]; then
+					: "file already removed"
+				elif [ -n "$remove" ]; then
+					task_echo "!!! INFO: ${PKGNAME}: Remove file: $d_path"
+					line_result=1
+				fi
+			esac
+		fi
+		if [ $line_result -gt 0 ]; then
+			# Undo changes if there was an error.
+			case " $changes " in
+			*" copy "*)
+				${RM} -f "$d_path" ;;
+			esac
+		fi
+		[ $line_result -eq 0 ] || result=1
+	done
+	return $result
+}
