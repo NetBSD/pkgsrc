@@ -1,0 +1,148 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	dirwalk.subr -- walk a directory tree using depth-first traversal
+#
+# SYNOPSIS
+#	task_dirwalk [-d | -f] path
+#
+# DESCRIPTION
+#	The task_dirwalk function walks the filesystem starting at the given
+#	path and outputs the contents using depth-first traversal.
+#
+#	The options are as follows:
+#
+#	-d	Only output the directory entries.
+#
+#	-f	Only output non-directory entries (files, symlinks, etc).
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	FIND	The name or path to the find(1) utility.
+#
+
+__task_dirwalk__="yes"
+
+task_load quote
+
+task_dirwalk()
+{
+	: ${FIND:=find}
+
+	local output="all"
+	local arg
+	local OPTIND=1
+	while getopts ":df" arg "$@"; do
+		case $arg in
+		d)	case $output in
+			all)	output="dirs" ;;
+			*)	return 127 ;;
+			esac ;;
+		f)	case $output in
+			all)	output="files" ;;
+			*)	return 127 ;;
+			esac ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	[ -e "$1" ] || return 0
+	if [ ! -d "$1" ]; then
+		case $output in
+		files)	echo "$1" ;;
+		esac
+		return 0
+	fi
+
+	# Use find(1) if it is present.
+	case $output in
+	all)	{ ${FIND} "$1" -print; } 2>/dev/null ;;
+	dirs)	{ ${FIND} "$1" -type d -print; } 2>/dev/null ;;
+	files)	{ ${FIND} "$1" \! -type d -print; } 2>/dev/null ;;
+	esac
+	[ $? -gt 0 ] || return 0
+
+	( cwd=
+	  set -- "$1"
+	  while [ $# -gt 0 ]; do
+	  	# Pop the top entry off the front of the stack and print it.
+		top=$1; shift
+		if [ "$top" = "__EOD__" ]; then
+			cd ..
+			case $cwd in
+			*/*)	cwd=${cwd%/*} ;;
+			*)	cwd= ;;
+			esac
+			continue
+		fi
+		case $cwd in
+		"")	path=$top ;;
+		*)	path="$cwd/$top" ;;
+		esac
+		case $output in
+		all)	echo "$path" ;;
+		dirs)	if [ ! -h "$top" -a -d "$top" ]; then
+				echo "$path"
+			fi ;;
+		files)	if [ ! -h "$top" -a -d "$top" ]; then
+				: "directory"
+			else
+				echo "$path"
+			fi ;;
+		esac
+
+		# Push all entries in the directory onto the stack.
+		if [ ! -h "$top" -a -d "$top" ]; then
+			cd "$top" 2>/dev/null || continue
+			cwd=$path
+			stack=
+			# XXX This expansion could break with too many files.
+			for entry in .* *; do
+				case $entry in
+				.|..)	continue ;;
+				".*"|"*")
+					break ;;
+				esac
+				task_quote "$entry"
+				stack="$stack $quoted"
+			done
+			case $stack in
+			"")	stack="__EOD__" ;;
+			*)	stack="$stack __EOD__" ;;
+			esac
+			task_quote "$@"
+			eval set -- $stack $quoted
+		fi
+	  done )
+}
