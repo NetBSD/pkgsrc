@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/01 12:05:28 adam Exp $
+
+SHA1 (cubes-1.1.tar.gz) = d28d3a88f59542c1a0d3e0e37b96c37cdb5f2fc2
+RMD160 (cubes-1.1.tar.gz) = a01cf288ba56341abae7aba1e61810a686e6ec0b
+SHA512 (cubes-1.1.tar.gz) = cdb5f4949b4d294b465faa885739ff8f9efd5a56dc031b94393455d133b0a282960450cd4349462213c008da0c9f165a285d4d9e5a18eac9dd211be3dadab4f6
+Size (cubes-1.1.tar.gz) = 128742 bytes
