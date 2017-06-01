@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/01 05:43:44 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/01 23:38:29 wiz Exp $
 
 DISTNAME=		pkgtasks-1-1.9
 CATEGORIES=		pkgtools
@@ -16,6 +16,7 @@ USE_TOOLS=		sh
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		POSIX_SHELL=${TOOLS_SH:Q}
+MAKE_JOBS_SAFE=		no
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
