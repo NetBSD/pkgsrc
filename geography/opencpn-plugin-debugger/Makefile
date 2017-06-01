@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/04/14 16:42:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/01 10:26:16 bouyer Exp $
 #
 
 VERSION=	20170414
-#PKGREVISION=	2
+PKGREVISION=	1
 DISTNAME=	ocpndebugger_pi-${VERSION}
 PKGNAME=	opencpn-plugin-debugger-${VERSION}
 CATEGORIES=	geography
