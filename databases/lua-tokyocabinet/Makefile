@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/08/20 18:49:33 sevan Exp $
+# $NetBSD: Makefile,v 1.26 2017/06/01 13:30:24 jlam Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.10
@@ -27,7 +27,7 @@ MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SOEXT= 		dylib
 .else
 SOEXT= 		so

@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.177 2017/05/30 15:58:16 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.178 2017/06/01 13:30:25 jlam Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -422,7 +422,7 @@ RUBY_STATICLIB=		${RUBY_SUFFIX}${_RUBY_API_MAJOR}${_RUBY_API_MINOR}-static.a
 RUBY_SHLIBALIAS=	lib/libruby${_RUBY_SHLIBALIAS}
 .endif
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 RUBY_DLEXT=	bundle
 RUBY_SLEXT=	dylib
 .else

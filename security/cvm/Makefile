@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/01/02 02:20:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2017/06/01 13:30:26 jlam Exp $
 #
 
 DISTNAME=		cvm-0.97
@@ -45,7 +45,7 @@ DJB_CONFIG_CMDS=							\
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 CVM_LIB_EXT=dylib
 .else
 CVM_LIB_EXT=so

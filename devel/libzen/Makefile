@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/07/28 12:31:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/01 13:30:24 jlam Exp $
 
 DISTNAME=	libzen_0.4.31
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -25,7 +25,7 @@ CONFIGURE_DIRS+=	Project/GNU/Library
 
 .include "../../mk/bsd.prefs.mk"
 # Enable shared library
-.if empty(_OPSYS_SHLIB_TYPE:Mnone)
+.if empty(SHLIB_TYPE:Mnone)
 CONFIGURE_ARGS+=	--enable-shared
 .endif
 

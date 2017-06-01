@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/01 13:30:26 jlam Exp $
 
 DISTNAME=	pyenchant-1.6.6
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
@@ -19,7 +19,7 @@ USE_LANGUAGES=	# empty
 .include "../../mk/bsd.prefs.mk"
 
 DLEXT.dylib=	dylib
-DLEXT=		${DLEXT.${_OPSYS_SHLIB_TYPE}:Uso}
+DLEXT=		${DLEXT.${SHLIB_TYPE}:Uso}
 PYENCHANT_LIBRARY_PATH=	${LOCALBASE}/lib/libenchant.${DLEXT}
 
 # fix the path of libenchant with patch-ab.

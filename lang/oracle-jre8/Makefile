@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/19 06:57:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/01 13:30:25 jlam Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.oracle-jre8+=oracle-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -85,7 +85,7 @@ FETCH_MESSAGE+=	"	or ${ARCHIVE}"
 .if defined(EMUL_IS_NATIVE) && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 .  if ${X11_TYPE} == "native"
 X11_LIBDIR=	${X11BASE}/lib${LIBABISUFFIX}
-.    if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.    if ${SHLIB_TYPE} == "dylib"
 X11_LIB=${X11_LIBDIR}/libX11.dylib
 .    else
 X11_LIB=${X11_LIBDIR}/libX11.so.6

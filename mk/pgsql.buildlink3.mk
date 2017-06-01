@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.44 2017/05/24 19:51:12 adam Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.45 2017/06/01 13:30:26 jlam Exp $
 #
 # User-settable variables:
 #
@@ -32,7 +32,7 @@ PGSQL_VERSIONS_ACCEPTED?=	96 95 94 93 92
 _PGSQL_VERSION_${pv}_OK=	yes
 .endfor
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 PG_LIB_EXT=dylib
 .else
 PG_LIB_EXT=so
