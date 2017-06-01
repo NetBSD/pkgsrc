@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/05/29 00:24:19 wiedi Exp $
+# $NetBSD: Makefile,v 1.32 2017/06/01 13:30:26 jlam Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -119,7 +119,7 @@ PLIST_VARS+=		macosx
 PLIST.macosx=		yes
 .endif
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 PLIST_SUBST+=	LIBEXT=dylib
 SAMBA_LIBEXT=	dylib
 .else
