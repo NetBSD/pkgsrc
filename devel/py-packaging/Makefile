@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/02/08 12:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/01 13:31:45 wiz Exp $
 
 DISTNAME=	packaging-16.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # needed for tests, but would introduce dependency cycle
 #BUILD_DEPENDS+=		${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
-BOOTSTRAP_SETUPTOOLS=	yes
+#BOOTSTRAP_SETUPTOOLS=	yes
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
