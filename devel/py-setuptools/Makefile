@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.130 2017/05/02 10:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2017/06/01 13:30:03 wiz Exp $
 
-DISTNAME=	setuptools-35.0.2
+DISTNAME=	setuptools-36.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools/}
@@ -12,9 +12,10 @@ COMMENT=	New Python packaging system
 LICENSE=	python-software-foundation OR zpl-2.0
 
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-DEPENDS+=		${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
-DEPENDS+=		${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
-DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+# included again since 36.0 in vendored version
+#DEPENDS+=		${PYPKGPREFIX}-appdirs-[0-9]*:../../devel/py-appdirs
+#DEPENDS+=		${PYPKGPREFIX}-packaging-[0-9]*:../../devel/py-packaging
+#DEPENDS+=		${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # needed for tests, but would introduce dependency cycle
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
