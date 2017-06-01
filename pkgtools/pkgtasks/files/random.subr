@@ -1,0 +1,151 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	random.subr -- generate random number (badly)
+#
+# SYNOPSIS
+#	task_random [-i [<seed>]]
+#
+#	echo $RANDOM
+#
+# DESCRIPTION
+#	The task_random function sets RANDOM to a random integer from the
+#	range 0..32767.  It should always be called before using the $RANDOM
+#	value.  The seed can be explicitly set in order to ensure a
+#	deterministic sequence of $RANDOM values.
+#
+#	The options are as follows:
+#
+#	-i <seed>
+#		Explicitly initialize with a new seed.  If the seed is not
+#		given, then a new seed is chosen based on the current time.
+#
+#	If the shell already has a built-in implementation for $RANDOM,
+#	then the task_random function simply returns 0.
+#
+# RETURN VALUES
+#	The task_random function returns 0 on success, and >0 if an error
+#	occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	AWK	The name or path to the awk(1) utility.
+#
+#	DATE	The name or path to the date(1) utility.
+#
+# EXAMPLE
+#	for i in 1 2 3 4 5; do
+#		task_random && echo $RANDOM
+#	done
+#
+# BUGS
+#	The pseudorandom number sequence will eventually enter a cycle of
+#	length 209, so task_random should periodically reseeded if a long
+#	sequence of random numbers is needed.
+#
+
+__task_random__="yes"
+__task_random_init__="_random_init"
+
+task_random()
+{
+	: ${AWK:=awk}
+	: ${DATE:=date}
+
+	local randomseed=
+	local arg
+	local OPTIND=1
+	while getopts ":i:" arg "$@"; do
+		case $arg in
+		i)	randomseed=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -eq 0 ] || return 127
+
+	if [ -n "$__task_random_exists__" ]; then
+		#
+		# If the shell already has a $RANDOM implementation, then
+		# setting RANDOM to a value initializes the seed for the
+		# random sequence.
+		#
+		[ -z "$randomseed" ] || RANDOM=$randomseed
+		return 0
+	fi
+
+	local randomseed_init=
+	if [ -n "$randomseed" ]; then
+		#
+		# This function was called with an explicit seed, so the
+		# next time this function is called without an argument,
+		# a new seed must be generated.
+		#
+		randomseed_init="yes"
+	elif [ -z "$randomseed_init" ]; then
+		#
+		# If a random seed has not been initialized, then set the
+		# seed to the time prepended with 1 and appended with a
+		# process PID.  This ensures the it is a number not
+		# beginning with zero and that it differs between multiple
+		# invocations of this function within a short span of time.
+		#
+		randomseed_init="yes"
+		local randomseed_pid
+		( : ) & randomseed_pid=$!
+		wait $randomseed_pid
+		randomseed=$( ${DATE} +"1%H%M%S$randomseed_pid" )
+	else
+		# A random seed was previously generated, so just use
+		# $RANDOM as the next seed.
+		#
+		randomseed=$RANDOM
+	fi
+
+	# Use awk's rand() to generate random numbers; however, the PRNG
+	# for awk needs to be seeded appropriately between invocations.
+	#
+	RANDOM=$( ${AWK} -v SEED=$randomseed -v RAND_MAX=32768 \
+		  'BEGIN { srand(SEED); print int( RAND_MAX * rand() ) } ')
+}
+
+_random_init()
+{
+	# Test for the presence of a $RANDOM implementation when this file is
+	# loaded, so that entropy is not wasted.
+	#
+	case $RANDOM in
+	$RANDOM)
+		__task_random_exists__= ;;
+	*)	__task_random_exists__="yes" ;;
+	esac
+}
+
+# Static variable for whether a builtin $RANDOM exists.
+__task_random_exists__=

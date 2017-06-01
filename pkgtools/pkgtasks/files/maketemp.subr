@@ -1,0 +1,201 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	maketemp.subr -- make unique, temporary files
+#
+# SYNOPSIS
+#	task_maketemp [-dq] [-p tmpdir] [-t prefix] [template ...]
+#
+# DESCRIPTION
+#	The task_maketemp function creates temporary files or directories using
+#	unique names, and prints the names.
+#
+# OPTIONS
+#	The available options are as follows:
+#
+#	-d	Make a directory instead of a file.
+#
+#	-p tmpdir
+#		Specifies the directory in which temporary files are created.
+#		If the "-p tmpdir" option is not specified, then the
+#		directory defaults to ${TMPDIR}, or to /tmp if ${TMPDIR} is
+#		empty.
+#
+#	-q	Fail silently if an error occurs.
+#
+#	-t prefix
+#		Generate a template using an appropriate directory name,
+#		followed by the supplied prefix, followed by ".XXXXXXXX".
+#		Any "X" characters in the supplied prefix are taken
+#		literally, but the trailing "X" characters in the appended
+#		".XXXXXXXX" are replaced by unique values.
+#
+# EXIT STATUS
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	AWK	The name or path to the awk(1) utility.
+#
+#	CHMOD	The name or path to the chmod(1) utility.
+#
+#	MKTEMP	The name or path to the mktemp(1) utility.  task_maketemp
+#		attempts to use this utility first to create the requested
+#		temporary files.
+#
+#	TMPDIR	The default location in which temporary files are created.
+#
+
+__task_maketemp__="yes"
+__task_maketemp_init__="_task_maketemp_init"
+
+task_load cleanup
+task_load createfile
+task_load makedir
+task_load random
+
+task_maketemp()
+{
+	: ${AWK:=awk}
+	: ${CHMOD:=chmod}
+	: ${MKTEMP:=mktemp}
+
+	# Default location in which temporary files and directories are
+	# are created.
+	#
+	local tmpdir="/tmp"
+	[ -z "${TMPDIR}" ] || tmpdir=${TMPDIR}
+
+	local output
+	output=$( { export TMPDIR=$tmpdir && ${MKTEMP} "$@"; } 2>/dev/null )
+	if [ $? -eq 0 ]; then
+		echo "$output"
+		return 0
+	fi
+
+	local result=0
+
+	local filetype="file"
+	local prefix="temp"
+	local quiet=
+	local arg
+	local OPTIND=1
+	while getopts ":dp:qt:" arg "$@"; do
+		case $arg in
+		d)	filetype="dir" ;;
+		p)	tmpdir=${OPTARG} ;;
+		q)	quiet="yes" ;;
+		t)	prefix=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	case $filetype in
+	dir|file)
+		: "valid temporary file type" ;;
+	*)	return 1 ;;
+	esac
+
+	# Explicitly set the creation umask to 077, only allowing r/w/x for
+	# the owner.
+	#
+	__task_maketemp_save_umask__=$( umask ) || return 1
+	umask 077
+
+	[ $# -gt 0 ] || set -- "$tmpdir/$prefix.XXXXXXXX"
+	task_random
+	local template; for template; do echo "$template"; done |
+	${AWK} -v SEED=$RANDOM '
+		BEGIN {
+			chars =       "abcdefghijklmnopqrstuvwxyz"
+			chars = chars "ABCDEFGHIJKLMNOPQRSTUVWXZZY"
+			chars = chars "0123456789"
+			n = split( chars, array, "" )
+			srand(SEED)
+		}
+		{
+			if ( match( $0, "X+$" ) > 0 ) {
+				s = substr( $0, 1, RSTART - 1 )
+				for ( i = 0; i < RLENGTH; i++ )
+					s = s array[ int( n * rand() ) + 1 ]
+				print s
+			} else
+				print
+		}' |
+	( while IFS= read name; do
+		case $filetype in
+		dir)	if task_makedir -m 0700 "$name" 2>/dev/null &&
+			   [ ! -h "$name" -a -d "$name" -a \
+				-r "$name" -a -w "$name" -a -x "$name" -a \
+				-O "$name" ]; then
+				 : "success"
+			elif [ -z "$quiet" ]; then
+				return 1
+			else
+				echo 1>&2 "task_maketemp: error creating directory \`\`$name''"
+				return 1
+			fi ;;
+		file)	if [ ! -e "$name" ] &&
+			   task_createfile -m 0600 "$name" 2>/dev/null &&
+			   [ ! -h "$name" -a -f "$name" -a \
+				-r "$name" -a -w "$name" -a \
+				-O "$name" ]; then
+				: "success"
+			elif [ -z "$quiet" ]; then
+				return 1
+			else
+				echo 1>&2 "task_maketemp: error creating file \`\`$name''"
+				return 1
+			fi ;;
+		esac
+		echo "$name"
+	  done
+	  return 0 )
+	result=$?
+
+	_task_maketemp_cleanup
+	return $result
+}
+
+_task_maketemp_cleanup()
+{
+	if [ -n "$__task_maketemp_save_umask__" ]; then
+		umask $__task_maketemp_save_umask__
+		__task_maketemp_save_umask__=
+	fi
+}
+
+_task_maketemp_init()
+{
+	task_cleanup_add_hook _task_maketemp_cleanup
+}
+
+# Static variable for the current umask before executing task_maketemp.
+__task_maketemp_save_umask__=

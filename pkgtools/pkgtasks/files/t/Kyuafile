@@ -1,0 +1,84 @@
+--[[-----------------------------------------------------------------------
+Copyright (c) 2017 The NetBSD Foundation, Inc.
+All rights reserved.
+
+This code is derived from software contributed to The NetBSD Foundation
+by Johnny C. Lam.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+--]]-----------------------------------------------------------------------
+--[[-----------------------------------------------------------------------
+
+	The following variables will be used if they are set.
+
+	TASK_MODULE_DIR
+		The location where the task modules are found.
+
+	TASK_TESTS_DIR
+		The location where this Kyuafile is found.
+
+--]]-----------------------------------------------------------------------
+
+syntax( 2 )
+
+test_suite( "pkgtasks" )
+
+tap_test_program { name = "t_compare" }
+tap_test_program { name = "t_createfile" }
+tap_test_program { name = "t_directories" }
+tap_test_program { name = "t_dirwalk" }
+tap_test_program { name = "t_echo" }
+tap_test_program { name = "t_files" }
+tap_test_program { name = "t_fonts" }
+tap_test_program { name = "t_groups" }
+tap_test_program { name = "t_info_files" }
+tap_test_program { name = "t_lock" }
+tap_test_program { name = "t_makedir" }
+tap_test_program { name = "t_maketemp" }
+tap_test_program { name = "t_match" }
+tap_test_program { name = "t_ocaml_findlib" }
+tap_test_program { name = "t_permissions" }
+tap_test_program { name = "t_platform" }
+tap_test_program { name = "t_postinstall" }
+tap_test_program { name = "t_postremove" }
+tap_test_program { name = "t_preinstall" }
+tap_test_program { name = "t_preremove" }
+tap_test_program { name = "t_quote" }
+tap_test_program { name = "t_random" }
+tap_test_program { name = "t_refcount" }
+tap_test_program { name = "t_shells" }
+tap_test_program { name = "t_shlibs" }
+tap_test_program { name = "t_sort" }
+tap_test_program { name = "t_taskfunc" }
+tap_test_program { name = "t_tee" }
+tap_test_program { name = "t_truthy" }
+tap_test_program { name = "t_usergroup" }
+tap_test_program { name = "t_usergroup_FreeBSD" }
+tap_test_program { name = "t_usergroup_Linux" }
+tap_test_program { name = "t_usergroup_MirBSD" }
+tap_test_program { name = "t_usergroup_NetBSD" }
+tap_test_program { name = "t_usergroup_exists" }
+tap_test_program { name = "t_usergroup_mock" }
+tap_test_program { name = "t_users" }
+tap_test_program { name = "t_valid_options" }
+tap_test_program { name = "t_version" }
+tap_test_program { name = "t_which" }
