@@ -1,0 +1,243 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	users.subr -- user management for packages
+#
+# SYNOPSIS
+#	task_users [-s] add | remove
+#	task_users check-add | check-remove
+#
+# DESCRIPTION
+#	The task_users function supports four actions: "add", "remove",
+#	"check-add", and "check-remove".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The function reads standard input line by line and looks for
+#	lines of the form:
+#
+#	    # USER: <name>:<group>[:<userid>[:<descr>[:<home>[:<shell>]]]]
+#
+#	Only the user name and group are required; the remaining fields
+#	are optional.
+#
+#	The "add" action creates the user with the given name if it is
+#	missing, with the given user ID, if ${PKG_CREATE_USERGROUP} is
+#	"yes".  A reference count for the user will be added for the
+#	package.
+#
+#	The "remove" action removes a reference count for the user by
+#	the package.  This function shall not remove any user on the
+#	system.
+#
+#	The "check-add" action will check whether the users exist with
+#	the optional user IDs if they are given, or otherwise writes a
+#	message to standard output noting the missing users.
+#
+#	The "check-remove" action will check whether the users have been
+#	removed, or otherwise writes a message to standard output noting
+#	the users still exists.
+#
+# RETURN VALUES
+#	The "add" and "remove" actions return 0 if they are successful
+#	for all users, and >0 if an error occurs.
+#
+#	The "check-add" and "check-remove" actions return >0 if they
+#	write informative messages, and return 0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_CREATE_USERGROUP
+#		If ${PKG_CREATE_USERGROUP} is a "truthy" value, then the
+#		"add" and "remove" actions are allowed to create and
+#		remove users from the system.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_users__="yes"
+__task_users_init__="_task_users_init"
+
+task_load cleanup
+task_load echo
+task_load quote
+task_load refcount
+task_load truthy
+task_load usergroup
+task_load usergroup_exists
+
+task_users()
+{
+	: ${PKGNAME:=${0##*/}}
+	: ${PKG_CREATE_USERGROUP:=yes}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove|check-add|check-remove)
+		: "valid action" ;;
+	*)	return 0 ;;
+	esac
+
+	local create="yes"
+	task_is_truthy "${PKG_CREATE_USERGROUP}" || create=
+
+	local result line_result
+	local save_IFS user group uid descr home shell msg
+
+	result=0
+	local hash tag entry
+	while read hash tag entry; do
+		# Filter for "# USER:".
+		case $hash/$tag in
+		"#/USER:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		save_IFS=$IFS; IFS=:
+		set -o noglob; set -- $entry; set +o noglob
+		user=$1; group=$2	# required
+		uid=$3; descr=$4; home=$5; shell=$6
+		IFS=$save_IFS
+		[ -n "$user" -a -n "$group" ] || continue
+
+		if [ -n "$uid" ]; then
+			msg="$user (uid = $uid)"
+		else
+			msg="$user"
+		fi
+		msg="$msg: $group"
+		[ -z "$home" ] || msg="$msg, $home"
+		[ -z "$shell" ] || msg="$msg, $shell"
+
+		line_result=0
+		case $action in
+		add)	if task_refcount add users "$user"; then
+				task_user_exists "$user" "$uid"
+				case $? in
+				0)	# $user exists and has uid $uid
+					$echo "${TASK_MSG}! user already exists: $msg" ;;
+				1)	# neither $user nor $uid exist
+					if [ -z "$create" ]; then
+						$echo "${TASK_MSG}! user creation skipped: $msg"
+					elif task_adduser "$user" "$group" "$uid" "$descr" "$home" "$shell"; then
+						$echo "${TASK_MSG}> user created: $msg"
+						task_quote "$user"
+						__task_users_error__="$__task_users_error__ $_quoted"
+					else
+						$echo "${TASK_MSG}! user not created: $msg"
+						line_result=1
+					fi ;;
+				2)	$echo "${TASK_MSG}! user conflict: $msg"
+					result=1
+					break ;;
+				*)	$echo "${TASK_MSG}! user not created: $msg"
+					line_result=1 ;;
+				esac
+			else
+				# add refcount failed; skip to next line
+				$echo "${TASK_MSG}! refcount add failure: users $msg"
+				result=1
+				continue
+			fi ;;
+		remove)	if task_refcount remove users "$user"; then
+				if task_refcount exists users "$user"; then
+					: "refcount is not zero"
+				else
+					# delete the reference count
+					task_refcount delete users "$user"
+				fi
+			else
+				# remove refcount failed
+				$echo "${TASK_MSG}! refcount remove failure: users $msg"
+				line_result=1
+			fi ;;
+		check-add)
+			if task_user_exists "$user" "$uid"; then
+				: "user already exists"
+			else
+				task_echo "!!! INFO: ${PKGNAME}: Create user: $msg"
+				line_result=1
+			fi ;;
+		check-remove)
+			if task_user_exists "$user" "$uid"; then
+				task_echo "!!! INFO: ${PKGNAME}: Remove user if unused: $user"
+				line_result=1
+			fi ;;
+		esac
+		[ $line_result -eq 0 ] || result=1
+	done
+
+	# Clear users to remove in case of error if all users added
+	# successfully.
+	#
+	[ $result -gt 0 ] || __task_users_error__=
+
+	return $result
+}
+
+_task_users_cleanup()
+{
+	eval set -- $__task_users_error__
+	local user
+	for user; do
+		if task_user_exists "$user"; then
+			task_echo "!!! ERROR: ${PKGNAME}: User created before error: $user"
+		fi
+	done
+	__task_users_error__=
+}
+
+_task_users_init()
+{
+	task_cleanup_add_hook _task_users_cleanup
+}
+
+# Static variable for users that should be removed if an error occurs.
+__task_users_error__=

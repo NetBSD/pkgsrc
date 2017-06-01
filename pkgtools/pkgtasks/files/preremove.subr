@@ -1,0 +1,90 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	preremove.subr -- pre-removal actions for packages
+#
+# SYNOPSIS
+#	task_preremove <datafile>
+#
+# DESCRIPTION
+#	The task_preremove function performs actions that MUST occur BEFORE
+#	deleting the package files for the removal to be successful:
+#
+#	    o Unregister GNU info files.
+#	    o Remove unmodified configuration files.
+#
+#	The datafile contains lines of the form:
+#
+#	    # <keyword>: <arg> ...
+#
+#	These lines are used as input to the various script functions.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+
+__task_preremove__="yes"
+
+task_load files
+task_load info_files
+task_load sort
+task_load taskfunc
+
+task_preremove()
+{
+	[ $# -gt 0 ] || return 127
+	local datafile="$1"; shift
+
+	[ -f "$datafile" ] || return 1
+
+	local stage="preinstall"
+
+	# Unregistering a GNU info files requires reading the file to find
+	# all nodes listed in the file, so it must be done before the file
+	# is removed.  Any errors in unregistering GNU info files are
+	# non-fatal.
+	#
+	task_info_files -s remove $stage < $datafile
+
+	# Removing a configuration file requires comparing it to the
+	# example file from which it was copied, so it must be done before
+	# the example file is removed.  Any errors in removing
+	# configuration files are non-fatal.
+	#
+	task_files remove $stage < $datafile
+
+	# Run the generic package tasks.
+	if task_sort -r < $datafile | task_function remove $stage; then
+		: "success"
+	else
+		# Errors from the generic package tasks are fatal.
+		return 1
+	fi
+
+	return 0
+}

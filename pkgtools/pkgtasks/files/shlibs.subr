@@ -1,0 +1,179 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	shlibs.subr -- update the shared library cache
+#
+# SYNOPSIS
+#	task_shlibs [-s] add | remove
+#
+# DESCRIPTION
+#	The task_shlibs function supports two actions: "add" and "remove".
+#
+#	Both the "add" and "remove" actions rebuild the system database
+#	of run-time library search paths so that the system can find the
+#	package's shared libraries.
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_shlibs function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # SHLIB: <directory> [...]
+#
+#	The directory paths are all passed as shell positional paramters
+#	to the ${LDCONFIG_ADD_CMD} and ${LDCONFIG_REMOVE_CMD} command
+#	lines.
+#
+#	If any directory paths are relative, then they are assumed to be
+#	relative to ${PKG_PREFIX}.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	LDCONFIG
+#		The name or path to the ldconfig(8) utility.
+#
+#	LDCONFIG_ADD_CMD
+#	LDCONFIG_REMOVE_CMD
+#		The command-line to be invoked to update the system
+#		run-time library paths cache when adding or removing
+#		a package.
+#
+#		Possible: any shell command-line
+#		Default: ${LDCONFIG}
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filessystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_shlibs__="yes"
+
+task_load echo
+task_load quote
+
+task_shlibs()
+{
+	: ${LDCONFIG_ADD_CMD:=_task_shlibs_run}
+	: ${LDCONFIG_REMOVE_CMD:=_task_shlibs_run}
+
+	: ${PKGNAME:=${0##*/}}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove)
+		: "valid actions" ;;
+	*)	return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local quoted paths
+	paths=
+	local hash tag path
+	while read hash tag dirs; do
+		# Filter for "# SHLIB:".
+		case $hash/$tag in
+		"#/SHLIB:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+		case $dirs in
+		"")	# skip lines without any required args
+			continue ;;
+		esac
+		# Canonicalize paths.
+		set -o noglob; set -- $dirs; set +o noglob
+		for path; do
+			case $path in
+			"")	# skip empty pathnames
+				continue ;;
+			[!/]*)	path="$prefix/$path" ;;
+			esac
+			path="${PKG_DESTDIR}$path"
+			task_quote "$path"
+			paths="$paths $quoted"
+		done
+	done
+	[ -n "$paths" ] || return 0
+
+	local result=0
+	case $action in
+	add)	( eval set -- $paths; ${LDCONFIG_ADD_CMD} ) >/dev/null ||
+			result=1 ;;
+	remove)	( eval set -- $paths; ${LDCONFIG_REMOVE_CMD} ) >/dev/null ||
+			result=1 ;;
+	esac
+	if [ $result -eq 0 ]; then
+		$echo "${TASK_MSG}> shared library cache rebuilt"
+	else
+		$echo "${TASK_MSG}! shared library cache not rebuilt"
+	fi
+	return $result
+}
+
+_task_shlibs_run()
+{
+	: ${LDCONFIG:=ldconfig}
+
+	${LDCONFIG}
+}

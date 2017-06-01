@@ -1,0 +1,120 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	refcount.subr -- reference-count API
+#
+# SYNOPSIS
+#	task_refcount exists database resource
+#	task_refcount delete database resource
+#	task_refcount add [-t token] database resource
+#	task_refcount remove [-t token] database resource
+#
+#	task_refcount prop_exists database resource property
+#	task_refcount prop_put database resource property [value ...]
+#	task_refcount prop_match database resource property [value ...]
+#	task_refcount prop_delete database resource property
+#
+# DESCRIPTION
+#	task_refcount exists database resource
+#		Checks whether there is a reference on the resource.
+#
+#	task_refcount delete database resource
+#		Deletes any reference counts and properties on the
+#		resource.
+#
+#	task_refcount add [-t token] database resource
+#	task_refcount remove [-t token] database resource
+#		Adds or removes a reference identified by token on the
+#		resource.
+#
+#	task_refcount prop_exists database resource property
+#		Checks whether a stored value exists for the property on
+#		the resoure for the package.
+#
+#	task_refcount prop_delete database resource property
+#		Removes the property on the resource for the package.
+#
+#	task_refcount prop_put database resource property [value ...]
+#		Stores a value for the property on the resource for the
+#		package.  If no value is given, then the default value for
+#		the property is stored.
+#
+#	task_refcount prop_match database resource property [value ...]
+#		Checks whether the stored value of the property on the
+#		resource for the package matches the given value.  If no
+#		value is given, then the default value for the property
+#		is used.
+#
+# RETURN VALUES
+#	The exists, prop_exists and prop_match commands return 0 on success,
+#	and >0 otherwise.
+#
+#	The remaining commands return 0 on success, and >0 if an error
+#	occurs.
+#
+# EXAMPLES
+#     o Adding a reference count on resource alpha:
+#
+#	if task_refcount exists resource alpha; then
+#		refcount_was_zero=
+#	else
+#		refcount_was_zero="yes"
+#	fi
+#	if task_refcount add resource alpha; then
+#		if resource_exists alpha; then
+#			if [ -n "$refcount_was_zero" ]; then
+#				task_refcount prop_put resource alpha preexist
+#			fi
+#		else
+#			# create resource alpha
+#			...
+#		fi
+#	fi
+#
+#     o Removing a reference count on resource alpha:
+#
+#	if task_refcount remove resource alpha; then
+#		if task_refcount exists resource alpha; then
+#			: "refcount is not zero"
+#		elif task_refcount prop_exists resource alpha preexist; then
+#			: "resource was pre-existing; don't remove"
+#		elif resource_exists alpha; then
+#			# destroy resource alpha
+#			...
+#		fi
+#	fi
+#
+
+__task_refcount__="yes"
+
+task_load refcount_file
+
+task_refcount()
+{
+	task_refcount_file "$@"
+}

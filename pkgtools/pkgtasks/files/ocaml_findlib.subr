@@ -1,0 +1,290 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	ocaml_findlib.subr -- update OCaml findlib search paths
+#
+# SYNOPSIS
+#	task_ocaml_findlib [-s] add | remove
+#	task_ocaml_findlib check-add | check-remove
+#
+# DESCRIPTION
+#	The task_ocaml_findlib function supports four actions: "add",
+#	"remove", "check-add", and "check-remove".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_ocaml_findlib function reads standard input line by line
+#	and looks for lines of the form:
+#
+#	    # FINDLIB: <libdir> [<ldconf>]
+#
+#	If libdir is is a relative path, then it is assumed to be
+#	relative to ${OCAML_SITELIB}.  If ldconf is a relative path, then
+#	it is assumed to be relative to ${PKG_PREFIX}.
+#
+#	The "add" action adds pathnames to the ld.conf file.
+#
+#	The "remove" action removes pathnames from the ld.conf file.
+#
+#	The "check-add" action will check whether pathnames are missing
+#	from the ld.conf file and writes an informative message noting
+#	the missing pathnames.
+#
+#	The "check-remove" action will check whether pathnames are still
+#	present in the ld.conf file and writes an informative message
+#	noting the existing paths.
+#
+# RETURN VALUES
+#	The "add" and "remove" actions return 0 if they are successful
+#	for all paths, and >0 if an error occurs.
+#
+#	The "check-add" and "check-remove" actions return >0 if they
+#	write informative messages, and return 0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	MV	The name or path to the mv(1) utility.
+#
+#	OCAML_SITELIB
+#		The site library search path.  If this path is relative,
+#		then it is relative to ${PKG_PREFIX}.  The default is
+#		"lib/ocaml/site-lib".
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_ocaml_findlib__="yes"
+__task_ocaml_findlib_init__="_task_ocaml_findlib_init"
+
+task_load cleanup
+task_load echo
+task_load lock
+task_load maketemp
+task_load match
+task_load quote
+
+task_ocaml_findlib()
+{
+	: ${MV:=mv}
+
+	: ${OCAML_SITELIB:=lib/ocaml/site-lib}
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove|check-add|check-remove)
+		: "valid actions" ;;
+	*)	return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local sitelib
+	case ${OCAML_SITELIB} in
+	/*)	sitelib=${OCAML_SITELIB} ;;
+	*)	sitelib="$prefix/${OCAML_SITELIB}" ;;
+	esac
+
+	local result line_result
+	local quoted
+	local lock lock_quoted
+	local temp temp_quoted
+
+	result=0
+	local hash tag libdir ldconf
+	while read hash tag libdir ldconf; do
+		# Filter for "# SHELL:".
+		case $hash/$tag in
+		"#/FINDLIB:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		# Canonicalize paths.
+		case $libdir in
+		"")	# skip lines without any required args
+			continue ;;
+		[!/]*)	libdir="$sitelib/$libdir" ;;
+		esac
+		case $ldconf in
+		"")	ldconf="$prefix/lib/ocaml/ld.conf" ;;
+		[!/]*)	ldconf="$prefix/$ldconf" ;;
+		esac
+		ldconf="${PKG_DESTDIR}$ldconf"
+
+		line_result=0
+		case $action in
+		add|remove)
+			lock="$ldconf.lock"
+			task_quote "$lock"
+			lock_quoted=$quoted
+			__task_ocaml_findlib_locks__="$quoted $__task_ocaml_findlib_locks__"
+			task_lock "$lock" || line_result=1
+		esac
+		if [ $line_result -eq 0 ]; then
+			case $action in
+			add)	if [ -f "$ldconf" ] && task_match -qw "$libdir" < $ldconf; then
+					$echo "${TASK_MSG}! path already added: $libdir"
+				else
+					temp=$( task_maketemp "$ldconf.pkgtasks.XXXXXXXXXX" )
+					if [ -n "$temp" ]; then
+						task_quote "$temp"
+						temp_quoted="$quoted"
+						__task_ocaml_findlib_temps__="$__task_ocaml_findlib_temps__ $temp_quoted"
+						if [ ! -f "$ldconf" ]; then
+							echo "$libdir"
+						else
+							task_match -vw "$libdir" < $ldconf
+							echo "$libdir"
+						fi > $temp
+						# rename(2) is atomic.
+						if ${MV} -f "$temp" "$ldconf"; then
+							$echo "${TASK_MSG}> path added: $libdir"
+							__task_ocaml_findlib_temps__=${__task_ocaml_findlib_temps__% $temp_quoted}
+						else
+							$echo "${TASK_MSG}! path not added: $libdir"
+							line_result=1
+						fi
+					else
+						$echo "${TASK_MSG}! cannot create temporary file for $ldconf"
+						line_result=1
+					fi
+				fi ;;
+			remove)	if [ -f "$ldconf" ] && task_match -qw "$libdir" < $ldconf; then
+					temp=$( task_maketemp "$ldconf.pkgtasks.XXXXXXXXXX" )
+					if [ -n "$temp" ]; then
+						task_quote "$temp"
+						temp_quoted="$quoted"
+						__task_ocaml_findlib_temps__="$__task_ocaml_findlib_temps__ $temp_quoted"
+						task_match -vw "$libdir" < $ldconf > $temp
+						# rename(2) is atomic.
+						if ${MV} -f "$temp" "$ldconf"; then
+							$echo "${TASK_MSG}> path removed: $libdir"
+							__task_ocaml_findlib_temps__=${__task_ocaml_findlib_temps__% $temp_quoted}
+						else
+							$echo "${TASK_MSG}! path not removed: $libdir"
+							line_result=1
+						fi
+					else
+						$echo "${TASK_MSG}! cannot create temporary file for $ldconf"
+						line_result=1
+					fi
+				else
+					$echo "${TASK_MSG}> path already removed: $libdir"
+				fi ;;
+			check-add)
+				if [ -f "$ldconf" ] && task_match -qw "$libdir" < $ldconf; then
+				   	: "path already added"
+				else
+					task_echo "!!! INFO: ${PKGNAME}: Add path \"$libdir\" to $ldconf."
+					line_result=1
+				fi ;;
+			check-remove)
+				if [ -f "$ldconf" ] && task_match -qw "$libdir" < $ldconf; then
+					task_echo "!!! INFO: ${PKGNAME}: Remove path \"$libdir\" from $ldconf."
+					line_result=1
+				fi ;;
+			esac
+		fi
+		case $action in
+		add|remove)
+			task_lock -r "$lock"
+			__task_ocaml_findlib_locks__=${__task_ocaml_findlib_locks__#$lock_quoted } ;;
+		esac
+		[ $line_result -eq 0 ] || result=1
+	done
+
+	_task_ocaml_findlib_cleanup
+	return $result
+}
+
+_task_ocaml_findlib_cleanup()
+{
+	: ${RM:=rm}
+
+	eval set -- $__task_ocaml_findlib_temps__
+	local file
+	for file; do
+		${RM} -f "$file"
+	done
+	__task_ocaml_findlib_temps__=
+
+	eval set -- $__task_ocaml_findlib_locks__
+	local lockfile
+	for lockfile; do
+		task_lock -r "$lockfile"
+	done
+	__task_ocaml_findlib_locks__=
+}
+
+_task_ocaml_findlib_init()
+{
+	task_cleanup_add_hook _task_ocaml_findlib_cleanup
+}
+
+# Static variable for temporary files that should be removed if an error occurs.
+__task_ocaml_findlib_temps__=
+# Static variable for locks that should be released if an error occurs.
+__task_ocaml_findlib_locks__=

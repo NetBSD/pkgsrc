@@ -1,0 +1,292 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	shells.subr -- shell database management for packages
+#
+# SYNOPSIS
+#	task_shells [-s] add | remove
+#	task_shells check-add | check-remove
+#
+# DESCRIPTION
+#	The task_shells function supports four actions: "add", "remove",
+#	"check-add", and "check-remove".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_shells function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # SHELL: <shell_path> [<shelldb_path>]
+#
+#	If any of the paths are relative, then they are assumed to be
+#	relative to ${PKG_PREFIX}.
+#
+#	The "add" action adds shell paths to the shell database.
+#
+#	The "remove" action removes shell paths from the shell database.
+#
+#	The "check-add" action will check whether shell paths are missing
+#	from the shell database and writes an informative message noting
+#	the missing shell paths.
+#
+#	The "check-remove" action will check whether shell paths are
+#	still present in the shell database and writes an informative
+#	message noting the existing paths.
+#
+# RETURN VALUES
+#	The "add" and "remove" actions return 0 if they are successful
+#	for all shell paths, and >0 if an error occurs.
+#
+#	The "check-add" and "check-remove" actions return >0 if they
+#	write informative messages, and return 0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	MV	The name or path to the mv(1) utility.
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_REGISTER_SHELLS
+#		If ${PKG_REGISTER_SHELLS} is a "truthy" value, then the
+#		"add" and "remove" actions are allowed to modify the shell
+#		databases as needed.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_shells__="yes"
+__task_shells_init__="_task_shells_init"
+
+task_load cleanup
+task_load echo
+task_load lock
+task_load maketemp
+task_load match
+task_load quote
+task_load truthy
+
+task_shells()
+{
+	: ${MV:=mv}
+
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+
+	: ${PKG_REGISTER_SHELLS:=yes}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove|check-add|check-remove)
+		: "valid actions" ;;
+	*)	return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local register_shells="yes"
+	task_is_truthy "${PKG_REGISTER_SHELLS}" || register_shells=
+
+	local result line_result
+	local quoted
+	local lock lock_quoted
+	local temp temp_quoted
+
+	result=0
+	local hash tag shell shelldb
+	while read hash tag shell shelldb; do
+		# Filter for "# SHELL:".
+		case $hash/$tag in
+		"#/SHELL:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		# Canonicalize paths.
+		case $shell in
+		"")	# skip lines without any required args
+			continue ;;
+		[!/]*)	shell="$prefix/$shell" ;;
+		esac
+		case $shelldb in
+		"")	shelldb="/etc/shells" ;;
+		[!/]*)	shelldb="$prefix/$shelldb" ;;
+		esac
+		shelldb="${PKG_DESTDIR}$shelldb"
+
+		line_result=0
+		case $action in
+		add|remove)
+			lock="$shelldb.lock"
+			task_quote "$lock"
+			lock_quoted=$quoted
+			__task_shells_locks__="$lock_quoted $__task_shells_locks__"
+			task_lock "$lock" || line_result=1 ;;
+		esac
+		if [ $line_result -eq 0 ]; then
+			case $action in
+			add)	if [ -n "$register_shells" ]; then
+					if [ -f "$shelldb" ] && task_match -qw "$shell" < $shelldb; then
+						$echo "${TASK_MSG}! shell already added: $shell"
+					else
+						temp=$( task_maketemp "$shelldb.pkgtasks.XXXXXXXXXX" )
+						if [ -n "$temp" ]; then
+							task_quote "$temp"
+							temp_quoted="$quoted"
+							__task_shells_temps__="$__task_shells_temps__ $temp_quoted"
+							if [ ! -f "$shelldb" ]; then
+								echo "$shell"
+							else
+								task_match -vw "$shell" < $shelldb
+								echo "$shell"
+							fi > $temp
+							# rename(2) is atomic.
+							if ${MV} -f "$temp" "$shelldb"; then
+								$echo "${TASK_MSG}> shell added: $shell"
+								__task_shells_temps__=${__task_shells_temps__% $temp_quoted}
+							else
+								$echo "${TASK_MSG}! shell not added: $shell"
+								line_result=1
+							fi
+						else
+							$echo "${TASK_MSG}! cannot create temporary file for $shelldb"
+							line_result=1
+						fi
+					fi
+				fi ;;
+			remove)	if [ -n "$register_shells" ]; then
+					if [ -f "$shelldb" ] && task_match -qw "$shell" < $shelldb; then
+						temp=$( task_maketemp "$shelldb.pkgtasks.XXXXXXXXXX" )
+						if [ -n "$temp" ]; then
+							task_quote "$temp"
+							temp_quoted="$quoted"
+							__task_shells_temps__="$__task_shells_temps__ $temp_quoted"
+							task_match -vw "$shell" < $shelldb > $temp
+							# rename(2) is atomic.
+							if ${MV} -f "$temp" "$shelldb"; then
+								$echo "${TASK_MSG}> shell removed: $shell"
+								__task_shells_temps__=${__task_shells_temps__% $temp_quoted}
+							else
+								$echo "${TASK_MSG}! shell not removed: $shell"
+								line_result=1
+							fi
+						else
+							$echo "${TASK_MSG}! cannot create temporary file for $shelldb"
+							line_result=1
+						fi
+					else
+						$echo "${TASK_MSG}! shell already removed: $shell"
+					fi
+				fi ;;
+			check-add)
+				if [ -f "$shelldb" ] && task_match -qw "$shell" < $shelldb; then
+				   	: "shell already added"
+				else
+					task_echo "!!! INFO: ${PKGNAME}: Add shell \"$shell\" to $shelldb."
+					line_result=1
+				fi ;;
+			check-remove)
+				if [ -f "$shelldb" ] && task_match -qw "$shell" < $shelldb; then
+					task_echo "!!! INFO: ${PKGNAME}: Remove shell \"$shell\" from $shelldb."
+					line_result=1
+				fi ;;
+			esac
+		fi
+		case $action in
+		add|remove)
+			task_lock -r "$lock"
+			__task_shells_locks__=${__task_shells_locks__#$lock_quoted } ;;
+		esac
+		[ $line_result -eq 0 ] || result=1
+	done
+
+	_task_shells_cleanup
+	return $result
+}
+
+_task_shells_cleanup()
+{
+	: ${RM:=rm}
+
+	eval set -- $__task_shells_temps__
+	local file
+	for file; do
+		${RM} -f "$file"
+	done
+	__task_shells_temps__=
+
+	eval set -- $__task_shells_locks__
+	local lockfile
+	for lockfile; do
+		task_lock -r "$lockfile"
+	done
+	__task_shells_locks__=
+}
+
+_task_shells_init()
+{
+	task_cleanup_add_hook _task_shells_cleanup
+}
+
+# Static variable for temporary files that should be removed in an error occurs.
+__task_shells_temps__=
+# Static variable for locks that should be released if an error occurs.
+__task_shells_locks__=

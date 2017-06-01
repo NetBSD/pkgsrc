@@ -1,0 +1,148 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	taskfunc.subr -- generic package task
+#
+# SYNOPSIS
+#	task_is_function <value>
+#
+#	task_function add | remove [<stage>]
+#	task_function check-add | check-remove [<stage>]
+#
+# DESCRIPTION
+#	task_is_function checks whether <value> is a shell function defined
+#	in the current environment.
+#
+#	task_function supports four actions: "add", "remove", "check-add",
+#	and "check-remove".  The function reads standard input line by line
+#	and looks for lines of the form:
+#
+#	    # TASK: <taskname> [<arg> ...]
+#
+#	<taskname> is the name of the task to invoke, and the remaining
+#	arguments are passed to the standard input of the task function.
+#
+#	The task function is invoked as:
+#
+#	    <taskname> <action> [<stage>]
+#
+#	The task function should return 0 for unknown actions.
+#
+#	The <stage> is an optional parameter that is one of four values:
+#
+#	preinstall	invoked from the preinstall task
+#	preremove	invoked from the preremove task
+#	postinstall	invoked from the postinstall task
+#	postremove	invoked from the postremove task
+#
+# RETURN VALUES
+#	task_is_function returns 0 if the value is a shell function, and >0
+#	otherwise.
+#
+#	task_function returns the return value of the task invoked.
+#
+
+__task_taskfunc__="yes"
+
+task_is_function()
+{
+	type "$1" | while read line; do
+		case $line in
+		*" function") return 0 ;;
+		esac
+		return 1
+	done
+}
+
+task_function()
+{
+	: ${AWK:=awk}
+
+	local arg
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	: "silently accept to match other package tasks" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	[ $# -gt 0 ] || return 127
+	local action="$1"; shift
+	local stage="$1"
+
+	# Use AWK to re-sequence the standard input.
+	${AWK} 'BEGIN {
+			ws = "[[:space:]]"
+			hashtag_re = "^" ws "*#" ws "+TASK:" ws "+"
+		}
+		match( $0, hashtag_re ) > 0 {
+			name = $3
+			if ( length( name ) > 0 ) {
+				sub( hashtag_re name ws "+", "" )
+				n = ( name in max_line ) ? max_line[name] + 1 : 1
+				max_line[name] = n
+				line[name, n] = $0
+				if ( !( name in tasks ) ) {
+					tasks[name] = name
+					n = max_task ? max_task + 1 : 1
+					max_task = n
+					task[n] = name
+				}
+			}
+		}
+		END	{
+			for ( i = 1; i <= max_task; i++ )
+			{
+				name = task[i]
+				print "# FUNCTION: " name
+				for ( j = 1; j <= max_line[name]; j++ ) {
+					print line[name, j]
+				}
+				print "# END"
+			}
+		}
+	' | (
+		local hash tag name task line
+		while read hash tag name; do
+			case $hash/$tag in
+			"#/FUNCTION:")
+				# valid input stream
+				task=$name ;;
+			*)	return 0
+			esac
+			task_is_function "$task" || return 1
+			while read line; do
+				set -- $line; hash="$1"; tag="$2"; name="$3"
+				case $hash/$tag in "#/END") break ;; esac
+				echo "$line"
+			done | $task $action $stage
+		done
+	)
+}

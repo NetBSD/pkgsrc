@@ -1,0 +1,114 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	match.subr -- match lines with a fnmatch(3) glob pattern
+#
+# SYNOPSIS
+#	task_match [-qsvw] pattern
+#
+# DESCRIPTION
+#	The task_match function selects lines from standard input that
+#	match the pattern and writes them to standard output.  The
+#	pattern is a shell-style glob pattern.
+#
+#	The options are as follows:
+#
+#	-q	Quiet; do not write anything to standard output.
+#
+#	-s	Skip selecting empty lines.
+#
+#	-v	Invert the sense of matching, to select non-matching
+#		lines.
+#
+#	-w	Select lines where that match the first "word", from
+#		the beginning of the line to the first whitespace or
+#		the end of the line.
+#
+# RETURN VALUES
+#	Returns 0 if selected lines are found, and >0 otherwise.
+#
+
+__task_match__="yes"
+
+task_match()
+{
+	local quiet=
+	local match="plain"
+	local style="exact"
+	local skip_empty=
+
+	local arg
+	local OPTIND=1
+	while getopts ":qsvw" arg "$@"; do
+		case $arg in
+		q)	quiet="yes" ;;
+		s)	skip_empty="yes" ;;
+		v)	match="reverse" ;;
+		w)	style="word" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+	local pattern="$1"; shift
+
+	# whitespace pattern: <space> & <tab>
+	local ws="[ 	]"
+
+	local result=1
+	local line
+	while IFS= read line; do
+		case $line in
+		$pattern)
+			# exact match
+			result=0
+			case $match in
+			plain)	[ -z "$quiet" ] || break
+				echo "$line" ;;
+			esac ;;
+		$pattern${ws}*)
+			# allow for trailing whitespace and additional words
+			case $style in
+			word)	result=0
+				case $match in
+				plain)	[ -z "$quiet" ] || break
+					echo "$line" ;;
+				esac ;;
+			esac ;;
+		*)	case $match in
+			reverse)
+				[ -z "$quiet" ] || continue
+				case $line in
+				"")	[ -n "$skip_empty" ] || echo "$line" ;;
+				*)	echo "$line" ;;
+				esac ;;
+			esac ;;
+		esac
+	done
+	return $result
+}
