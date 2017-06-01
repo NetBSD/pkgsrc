@@ -1,5 +1,5 @@
 .\"	$OpenBSD: mdoclint.1,v 1.7 2009/04/13 19:06:38 jmc Exp $
-.\" $NetBSD: mdoclint.1,v 1.19 2017/06/01 14:33:28 wiz Exp $
+.\" $NetBSD: mdoclint.1,v 1.20 2017/06/01 14:38:50 wiz Exp $
 .\"
 .\" Copyright (c) 2001-2013 Thomas Klausner
 .\" All rights reserved.
@@ -33,7 +33,7 @@
 .Nd man page verifier
 .Sh SYNOPSIS
 .Nm
-.Op Fl DdeFfhlmnoprSvwx
+.Op Fl DdeFhlmnoprSvwx
 .Ar
 .Sh DESCRIPTION
 .Nm
@@ -41,7 +41,7 @@ is a man page verifier.
 It tries to automatically find as many common
 errors that occur when writing man pages as possible.
 If no flags are given,
-.Fl DdeflmnoprSx
+.Fl DdelmnoprSx
 is assumed (that is, everything except
 .Fl Fhvw ) .
 .Pp
@@ -55,11 +55,6 @@ Warn about bad date strings (in the .Dd macro).
 Warn about unsorted errors (for functions).
 .It Fl F
 Delete whitespace at the end of input lines.
-.It Fl f
-Warn about possible .Fn abuse; its arguments should be put in
-.Sq \&"
-separately, not together and separated by commas.
-Those will be automatically added by mdoc.
 .It Fl h
 Display usage.
 .It Fl l
