@@ -1,0 +1,168 @@
+#!/usr/bin/env atf-sh
+#
+# $NetBSD: files_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
+#
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	MAKE	The name or path to the BSD make(1) utility.  The default
+#		is "make".
+#
+#	PKGSRCDIR
+#		The location of the pkgsrc source tree.  The default is
+#		"/usr/pkgsrc".
+#
+
+setup()
+{
+	cat > Makefile << 'EOF'
+.include "${PKGSRCDIR}/mk/pkgtasks/tests/test.mk"
+.sinclude "mk.conf"
+.include "${PKGSRCDIR}/mk/pkgtasks/files.mk"
+
+all: value
+value: ${_PKGTASKS_DATA.files}
+	${RUN}${CP} ${.ALLSRC:Q} ${.TARGET:Q}
+EOF
+}
+
+###
+### test1
+###
+
+atf_test_case test1
+
+test1_head()
+{
+	atf_set "descr" "pkgsrc/mk/pkgtasks/files.mk"
+}
+
+test1_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+
+	cat > mk.conf << 'EOF'
+FAIL_MSG=		echo
+
+# Use config file directory with a package-specific subdirectory.
+PKG_SYSCONFDIR=		/etc/${PKG_SYSCONFSUBDIR}
+PKG_SYSCONFSUBDIR=	daemon
+PKG_SYSCONFDIR_PERMS=	daemon daemon 0750
+
+CONF_FILES=		${PREFIX}/share/examples/daemon/conf ${PKG_SYSCONFDIR}/conf
+CONF_FILES_PERMS=	${PREFIX}/share/examples/daemon/private-conf \
+			${PKG_SYSCONFDIR}/private-conf daemon daemon 0640
+REQD_FILES=		/dev/null ${PREFIX}/libdata/empty
+REQD_FILES_PERMS=	/dev/null ${PREFIX}/libdata/unwriteable daemon daemon 0440
+
+# init/rc.d.mk would turn "RCD_SCRIPTS=daemond daemon-authd" into the following.
+_INIT_SCRIPTS=		share/examples/rc.d/daemond /etc/rc.d/daemond
+_INIT_SCRIPTS+=		share/examples/rc.d/daemon-authd /etc/rc.d/daemon-authd
+EOF
+	# Expected output is each file path stripped of leading
+	# "${PREFIX}/" and inserted into the following template:
+	#
+	#    # FILE: <target> <flags> <source> [<mode> [<user> [<group>]]]
+	#
+	cat > expected << 'EOF'
+# FILE: /etc/daemon/conf c share/examples/daemon/conf 0644
+# FILE: /etc/daemon/private-conf c share/examples/daemon/private-conf 0640 daemon daemon
+# FILE: libdata/empty cf /dev/null 0644
+# FILE: libdata/unwriteable cf /dev/null 0440 daemon daemon
+# FILE: /etc/rc.d/daemond cr share/examples/rc.d/daemond 0755
+# FILE: /etc/rc.d/daemon-authd cr share/examples/rc.d/daemon-authd 0755
+EOF
+	echo ">>> expected"
+	cat expected
+
+	${MAKE} PKGSRCDIR="${PKGSRCDIR}" || atf_fail "make(1) failed"
+
+	echo ">>> value"
+	cat value
+
+	cmp expected value || atf_fail "expected differs from value"
+	atf_pass
+}
+
+###
+### test2
+###
+
+atf_test_case test2
+
+test2_head()
+{
+	atf_set "descr" "_pkgtasks-files-postinstall-check"
+}
+
+test2_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	# Setup
+	setup
+
+	# Create all of the source files to pass checks.
+	for n in 1 2 3 4 5 6 7 8 9; do
+		( exec > source$n )
+	done
+
+	cat > mk.conf << 'EOF'
+FAIL_MSG=		echo
+
+LOCALBASE=		${.CURDIR}
+DESTDIR=		# empty
+
+CONF_FILES=		source1 target1 source2 target2
+CONF_FILES_PERMS=	source3 target3 u3 g3 0640 \
+			source4 target4 u4 g4 0640
+REQD_FILES=		source5 target5 source6 target7
+REQD_FILES_PERMS=	source8 target8 u8 g8 0400 \
+			source9 target9 u9 g9 0400
+EOF
+	${MAKE} _pkgtasks-files-postinstall-check \
+	  	PKGSRCDIR="${PKGSRCDIR}" > output
+
+	if grep -cq "^" output; then
+	  	cat output
+	  	atf_fail "postinstall checks failed"
+	fi
+	atf_pass
+}
+
+atf_init_test_cases()
+{
+	atf_add_test_case test1
+	atf_add_test_case test2
+}
