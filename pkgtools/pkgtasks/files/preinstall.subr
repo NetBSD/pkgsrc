@@ -1,0 +1,104 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	preinstall.subr -- pre-installation actions for packages
+#
+# SYNOPSIS
+#	task_preinstall <datafile>
+#
+# DESCRIPTION
+#	The task_preinstall function performs actions that MUST occur
+#	successfully BEFORE the package files are installed into their
+#	final location for the installation to be successful:
+#
+#	    o Ensure that all required groups and users exist.
+#	    o Create required directories.
+#
+#	The datafile contains lines of the form:
+#
+#	    # <keyword>: <arg> ...
+#
+#	These lines are used as input to the various script functions.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+
+__task_preinstall__="yes"
+
+task_load directories
+task_load groups
+task_load sort
+task_load taskfunc
+task_load users
+
+task_preinstall()
+{
+	[ $# -gt 0 ] || return 127
+	local datafile="$1"; shift
+
+	[ -f "$datafile" ] || return 1
+
+	local stage="preinstall"
+
+	# Require necessary groups and users before actions that may
+	# set permissions.
+	#
+	task_groups add $stage < $datafile
+	if task_groups check-add $stage < $datafile; then
+		: "groups exist"
+	else
+		# Fatal error: groups are missing.
+		return 1
+	fi
+
+	task_users add $stage < $datafile
+	if task_users check-add $stage < $datafile; then
+		: "users exist"
+	else
+		# Fatal error: users are missing.
+		return 1
+	fi
+
+	# Create directories so that pre-existing directories can be
+	# correctly identified.  Sort the entries prior to creation to
+	# create path components in order.  Any errors in creating
+	# directories are non-fatal.
+	#
+	task_sort < $datafile | task_directories add $stage
+
+	# Run the generic package tasks.
+	if task_function add $stage < $datafile; then
+		: "success"
+	else
+		# Fatal error: failures in generic package tasks.
+		return 1
+	fi
+
+	return 0
+}
