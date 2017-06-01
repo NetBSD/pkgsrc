@@ -1,5 +1,5 @@
 .\"	$OpenBSD: mdoclint.1,v 1.7 2009/04/13 19:06:38 jmc Exp $
-.\" $NetBSD: mdoclint.1,v 1.18 2017/05/16 13:27:39 wiz Exp $
+.\" $NetBSD: mdoclint.1,v 1.19 2017/06/01 14:33:28 wiz Exp $
 .\"
 .\" Copyright (c) 2001-2013 Thomas Klausner
 .\" All rights reserved.
@@ -33,7 +33,7 @@
 .Nd man page verifier
 .Sh SYNOPSIS
 .Nm
-.Op Fl DdeFfhlmnoprSvwXx
+.Op Fl DdeFfhlmnoprSvwx
 .Ar
 .Sh DESCRIPTION
 .Nm
@@ -41,7 +41,7 @@ is a man page verifier.
 It tries to automatically find as many common
 errors that occur when writing man pages as possible.
 If no flags are given,
-.Fl DdeflmnoprSXx
+.Fl DdeflmnoprSx
 is assumed (that is, everything except
 .Fl Fhvw ) .
 .Pp
@@ -92,21 +92,6 @@ Verbose output.
 Display the section name,
 in addition to the relevant line number,
 in warnings.
-.It Fl X
-Warn about explicit mentions of the words
-.Dq FreeBSD ,
-.Dq NetBSD ,
-.Dq DragonFlyBSD ,
-and
-.Dq OpenBSD ,
-which should be replaced by .Fx, .Nx, .Dx, and .Ox respectively.
-Also notices occurrences of
-.Dq \&.Bx Free ,
-.Dq \&.Bx Net ,
-.Dq \&.Bx DragonFly ,
-and
-.Dq \&.Bx Open ,
-for which the same applies.
 .It Fl x
 Warn about cross-references whose target is missing, cross-references
 to itself, or plain bogus cross-references.
@@ -129,7 +114,7 @@ and
 .An Marc Espie
 .Aq Mt espie@OpenBSD.org
 .An Ingo Schwarze
-.Aq Mt schwarze@usta.de
+.Aq Mt schwarze@OpenBSD.org
 .Sh BUGS
 The
 .Fl o
