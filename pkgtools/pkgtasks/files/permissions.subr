@@ -1,0 +1,244 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	permissions.subr -- check and set modes and permissions for packages
+#
+# SYNOPSIS
+#	task_check_permissions path mode [owner [group]]
+#	task_set_permissions path mode [owner [group]]
+#
+#	task_permissions [-s] add
+#	task_permissions check-add
+#
+# DESCRIPTION
+#	The task_check_permissions function checks the mode, owner, and
+#	group of the path.
+#
+#	The task_set_permissions function sets the mode, owner, and group of
+#	the path.
+#
+#	The task_permissions function supports two actions: "check-add" and
+#	"add".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_permissions function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # PERMS: <path> <mode> [<owner>] [<group>]
+#
+#	If the path is relative, then it is assumed to be relative to
+#	${PKG_PREFIX}.
+#
+#	The "check-add" action checks whether the path has the correct mode
+#	and permissions or otherwise writes a message to standard output
+#	noting the path has incorrect permissions.
+#
+#	The "add" action sets the special modes and permissions on the path.
+#
+# RETURN VALUES
+#	The task_check_permissions function returns 0 if the mode and
+#	permissions match, and >0 otherwise.
+#
+#	The task_set_permissions and task_permissions functions return 0 on
+#	success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	CHMOD	The name or path to the chmod(1) utility.
+#
+#	CHOWN	The name or path to the chown(8) utility.
+#
+#	LS	The name or path to the ls(1) utility.
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.  This
+#		variable is only used by task_permissions.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_permissions__="yes"
+
+task_load echo
+
+task_set_permissions()
+{
+	: ${CHMOD:=chmod}
+	: ${CHOWN:=chown}
+
+	local path="$1"; shift
+	local mode="$1"; shift
+	local owner="$1"; [ $# -eq 0 ] || shift
+	local group="$1"; [ $# -eq 0 ] || shift
+
+	local result=0
+	case $owner:$group in
+	:)	;;
+	*)	${CHOWN} "$owner:$group" "$path" || result=1 ;;
+	esac
+	case $mode in
+	"")	;;
+	*)	${CHMOD} "$mode" "$path" || result=1 ;;
+	esac
+	return $result
+}
+
+task_check_permissions()
+{
+	: ${LS:=ls}
+
+	local path="$1"; shift
+	local mode="$1"; shift
+	local owner="$1"; [ $# -eq 0 ] || shift
+	local group="$1"; [ $# -eq 0 ] || shift
+
+	${LS} -dl "$path" 2>/dev/null |
+	( read lsmode __ lsowner lsgroup __
+	  [ -z "$owner" -o "$owner" = "$lsowner" ] || return 1
+	  [ -z "$group" -o "$group" = "$lsgroup" ] || return 1
+	  # Parse the ls(1) long file mode format.
+	  nummode=0
+	  case $lsmode in ?r????????) nummode="$nummode +  400" ;; esac
+	  case $lsmode in ??w???????) nummode="$nummode +  200" ;; esac
+	  case $lsmode in ???x??????) nummode="$nummode +  100" ;; esac
+	  case $lsmode in ???S??????) nummode="$nummode + 4000" ;; esac
+	  case $lsmode in ???s??????) nummode="$nummode + 4100" ;; esac
+	  case $lsmode in ????r?????) nummode="$nummode +   40" ;; esac
+	  case $lsmode in ?????w????) nummode="$nummode +   20" ;; esac
+	  case $lsmode in ??????x???) nummode="$nummode +   10" ;; esac
+	  case $lsmode in ??????S???) nummode="$nummode + 2000" ;; esac
+	  case $lsmode in ??????s???) nummode="$nummode + 2010" ;; esac
+	  case $lsmode in ???????r??) nummode="$nummode +    4" ;; esac
+	  case $lsmode in ????????w?) nummode="$nummode +    2" ;; esac
+	  case $lsmode in ?????????x) nummode="$nummode +    1" ;; esac
+	  case $lsmode in ?????????T) nummode="$nummode + 1000" ;; esac
+	  case $lsmode in ?????????t) nummode="$nummode + 1001" ;; esac
+	  [ $(( $nummode )) -eq $mode ] )
+}
+
+task_permissions()
+{
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+
+	: ${TASK_MSG=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|check-add)
+		: "valid options" ;;
+	*)	return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local result
+	local msg
+
+	result=0
+	local hash tag path mode user group
+	while read hash tag path mode user group; do
+		# Filter for "# PERMS:"
+		case $hash/$tag in
+		"#/PERMS:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		# Canonicalize paths.
+		case $path in
+		"")	# skip lines without required args
+			continue ;;
+		[!/]*)	path="$prefix/$path" ;;
+		esac
+		path="${PKG_DESTDIR}$path"
+
+		msg=
+		case $mode/$user/$group in
+		//)	msg="$path" ;;
+		[!/]*//)
+			msg="$path (m=$mode)" ;;
+		[!/]*/[!/]*/)
+			msg="$path (o=$user, m=$mode)" ;;
+		[!/]*/[!/]*/[!/]*)
+			msg="$path (o=$user, g=$group, m=$mode)" ;;
+		esac
+
+		case "$action" in
+		add)	if [ ! -e "$path" ]; then
+				$echo "${TASK_MSG}! permissions not set on missing: $path"
+				result=1
+			elif task_set_permissions "$path" "$mode" "$user" "$group"; then
+				$echo "${TASK_MSG}> permissions set: $msg"
+			else
+				$echo "${TASK_MSG}! permissions not set: $msg"
+				result=1
+			fi ;;
+		check-add)
+			if [ -e "$path" ] &&
+			   task_check_permissions "$path" "$mode" "$user" "$group"; then
+				: "permissions already correct"
+			else
+				task_echo "!!! INFO: ${PKGNAME}: Set permissions: $msg"
+				result=1
+			fi ;;
+		esac
+	done
+	return $result
+}

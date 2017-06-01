@@ -1,0 +1,233 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	lock.subr -- create or release a lock file
+#
+# SYNOPSIS
+#	task_lock [-nr] lockfile
+#
+# DESCRIPTION
+#	The task_lock function can create or release a lock file on behalf
+#	of a shell script.  The requested lock file is a symlink to a
+#	uniquely-named file.
+#
+#	The options are as follows:
+#
+#	-n	Don't block and fail immediately if the lock could not be
+#		obtained.
+#
+#	-r	Release the existing lock file.
+#
+#	The task_lock function uses the symlink(2) system call via ln(1)
+#	to create the target lock file, which is an atomic operation.  It
+#	writes the name of the symlink target into the requested lock file.
+#
+#	The task_lock function uses the rename(2) system call via mv(1)
+#	to release the target lock file, which is an atomic operation.
+#	Upon success, it deletes the renamed symlink as well as the file
+#	named within the symlink target.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	LN	The name or path to the ln(1) utility.
+#
+#	MV	The name or path to the mv(1) utility.
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	SLEEP	The name or path to the sleep(1) utility.
+#
+# EXAMPLES
+#     o Acquire a lock, waiting until it is created before continuing.
+#
+#	lockfile="/tmp/foo.lock"
+#	if task_lock "$lockfile"; then
+#		# do what required the lock
+#		# ...
+#		# release the lock
+#		task_lock -r "$lockfile"
+#	fi
+#
+#     o Attempt to create a lock, but fail immediately if not created.
+#
+#	lockfile="/tmp/foo.lock"
+#	if task_lock -n "$lockfile"; then
+#		# do what required the lock
+#		# ...
+#		# release the lock
+#		task_lock -r "$lockfile"
+#	else
+#		echo "Lock $lockfile already held by another process."
+#	fi
+#
+# BUGS
+#	The task_lock function should accept an optional timeout parameter.
+#
+
+__task_lock__="yes"
+__task_lock_init__="_task_lock_init"
+
+task_load cleanup
+task_load maketemp
+task_load quote
+
+task_lock()
+{
+	local action="create"
+	local nonblocking=
+	local timeout=
+
+	local arg
+	local OPTIND=1
+	while getopts ":nrw:" arg "$@"; do
+		case $arg in
+		n)	nonblocking="-n" ;;
+		r)	action="release" ;;
+		w)	timeout=${OPTARG} ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -eq 1 ] || return 127
+	local lockfile="$1"; shift
+
+	[ -n "$lockfile" ] || return 1
+
+	case $action in
+	create) _task_lock_create $nonblocking "$lockfile" || return 1 ;;
+	release)
+		_task_lock_release "$lockfile" || return 1 ;;
+	esac
+	return 0
+}
+
+_task_lock_create()
+{
+	: ${LN:=ln}
+	: ${RM:=rm}
+	: ${SLEEP:=sleep}
+
+	local nonblocking=
+	local arg
+	local OPTIND=1
+	while getopts ":n" arg "$@"; do
+		case $arg in
+		n)	nonblocking="yes" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -eq 1 ] || return 1
+	local lockfile="$1"; shift
+
+	local target quoted
+	target=$( task_maketemp "$lockfile.pkgtasks.XXXXXXXXXX" ) || return 1
+	task_quote "$target"
+	__task_lock_temps__="$__task_lock_temps__ $quoted"
+	echo "$target" > $target
+
+	while : ; do
+		# symlink(2) is atomic.
+		#
+		# Redirect standard error so an error message isn't
+		# written every time this symlink(2) is attempted while
+		# we're spinning.
+		#
+		if ${LN} -s "$target" "$lockfile" >/dev/null 2>&1; then
+			# lock created
+			return 0
+		fi
+		# don't spinlock if nonblocking was requested
+		[ -z "$nonblocking" ] || break
+		# sleep for 1s and try to create the lock again
+		${SLEEP} 1
+	done
+	# lock not created
+	_task_lock_cleanup
+	return 1
+}
+
+_task_lock_release()
+{
+	: ${MV:=mv}
+	: ${RM:=rm}
+
+	[ $# -eq 1 ] || return 1
+	local lockfile="$1"; shift
+	[ -n "$lockfile" ] || return 1
+
+	# release a lock
+	local release="$lockfile.release"
+	# rename(2) is atomic.
+	#
+	# Redirect standard error so an error message isn't written every
+	# time this rename(2) is attempted.
+	#
+	if ${MV} -f "$lockfile" "$release" >/dev/null 2>&1; then
+		# lock released
+		if [ -f "$release" ]; then
+			# clean up by deleting the target of the released lock
+			local target
+			while IFS= read target; do
+				case $target in
+				"$lockfile".*)
+					${RM} -f "$target" ;;
+				*)	: "skip invalid lockfile name" ;;
+				esac
+			done < $release
+		fi
+		${RM} -f "$release"
+		return 0
+	fi
+	# lock not released
+	return 1
+}
+
+_task_lock_cleanup()
+{
+	: ${RM:=rm}
+
+	set -o noglob; eval set -- $__task_lock_temps__; set +o noglob
+	local file
+	for file; do
+		${RM} -f "$file"
+	done
+	__task_lock_temps__=
+}
+
+_task_lock_init()
+{
+	task_cleanup_add_hook _task_lock_cleanup
+}
+
+# Static variable for temporary files that should be removed if an error occurs.
+__task_lock_temps__=

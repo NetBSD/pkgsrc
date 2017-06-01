@@ -1,0 +1,388 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	directories.subr -- directory management for packages
+#
+# SYNOPSIS
+#	task_directories [-s] add | remove | perms
+#	task_directories check-add | check-remove | check-perms
+#
+# DESCRIPTION
+#	The task_directories function supports six actions: "add", "remove",
+#	"perms", "check-add", "check-remove", and "check-perms".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_directories function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # DIR: <directory> <flags> [<mode> [<user> [<group>]]]
+#
+#	If directory path is relative, then it is assumed to be relative to
+#	${PKG_PREFIX}.
+#
+#	The third field in each line is set of flags with the following
+#	meaning:
+#
+#	    f	ignore ${PKG_CONFIG} value
+#	    m	directory is created
+#	    o	directory is owned by the package
+#	    .	placeholder flag to ensure the field is non-empty
+#
+#	The "add" action creates the directory and sets the permissions on
+#	the directory if given.  A reference count for the directory will
+#	be added for the package.
+#
+#	The "remove" action removes the directory.  A reference count for
+#	the directory will be removed for the package.
+#
+#	The "perms" action sets the mode and permissions on the directory
+#	if they are given.
+#
+#	The "check-add" action will check whether the directory exists or
+#	otherwise writes a message to standard output noting the missing
+#	directory.
+#
+#	The "check-remove" action will check whether the directory has
+#	been removed or otherwise writes a message to standard output
+#	noting the directory still exist.
+#
+#	The "check-perms" action will check whether the directory has the
+#	correct permissions or otherwise writes a message to standard
+#	output noting the directory has incorrect permissions.
+#
+# RETURN VALUES
+#	The "add", "remove", and "perms" actions return 0 if they are
+#	successful for all directories, and >0 if an error occurs.
+#
+#	The "check-add", "check-remove", and "check-perms" actions return
+#	>0 if they write informative messages, and return 0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_CONFIG
+#		If ${PKG_CONFIG} is a "truthy" value, then the "add" and
+#		"remove" actions are allowed to make changes to the
+#		filesystem as needed.
+#
+#	PKG_CONFIG_PERMS
+#		If ${PKG_CONFIG_PERMS} is a "truthy" value, then the
+#		"perms" action is allowed to make changes to the
+#		filesystem as needed.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	RMDIR	The name or path to the rmdir(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_directories__="yes"
+
+task_load echo
+task_load makedir
+task_load permissions
+task_load refcount
+task_load truthy
+task_load valid_options
+
+task_directories()
+{
+	: ${RMDIR:=rmdir}
+
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+
+	: ${PKG_CONFIG:=yes}
+	: ${PKG_CONFIG_PERMS:=yes}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+        case $action in
+	add|remove|perms|check-add|check-remove|check-perms)
+		: "valid actions" ;;
+	*)      return 0 ;;
+	esac
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local pkg_config="yes"
+	local pkg_config_perms="yes"
+	task_is_truthy "${PKG_CONFIG}" || pkg_config=
+	task_is_truthy "${PKG_CONFIG_PERMS}" || pkg_config_perms=
+
+	local result line_result
+	local msg
+	local owned makedir removedir changes
+	local refcount
+
+	result=0
+	local d_path
+	local hash tag path flags mode user group
+	while read hash tag path flags mode user group; do
+		# Filter for "# DIR:".
+		case $hash/$tag in
+		"#/DIR:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+		task_valid_options "$flags" "fmo." || continue
+
+		# Canonicalize paths.
+		case $path in
+		"")	# skip lines without any required args
+			continue ;;
+		[!/]*)	path="$prefix/$path" ;;
+		esac
+		d_path="${PKG_DESTDIR}$path"
+
+		msg=
+		case $mode/$user/$group in
+                //)	msg="$d_path" ;;
+		[!/]*//)
+			msg="$d_path (m=$mode)" ;;
+		[!/]*/[!/]*/)
+			msg="$d_path (m=$mode, o=$user)" ;;
+		[!/]*/[!/]*/[!/]*)
+			msg="$d_path (m=$mode, o=$user, g=$group)" ;;
+		esac
+
+		# Set owner values if the directory should be owned by this package.
+		owned=
+		dir_msg="directory"
+		case $flags in
+		*o*)	owned="yes"
+			dir_msg="owned directory"
+			if task_refcount prop_exists dirs "$path" owner; then
+				# previous owner detected
+				if task_refcount prop_match dirs "$path" owner; then
+					: "same owner"
+				else
+					# conflicting owners; failure event
+					$echo "${TASK_MSG}! directory owner conflict: $d_path"
+					result=1
+					continue
+				fi
+			fi ;;
+		esac
+
+		makedir=
+		case $flags in
+		*m*)	makedir="seen"
+			case $flags in
+			*f*)	# "f" always implies makedir.
+				makedir="yes" ;;
+			*)	# otherwise, makedir only if PKG_CONFIG is truthy.
+				[ -z "$pkg_config" ] || makedir="yes" ;;
+			esac ;;
+		esac
+
+		removedir=
+		case $flags in
+		*)	removedir="seen"
+			case $flags in
+			*f*)	# "f" always implies removedir.
+				removedir="yes" ;;
+			*)	# otherwise, removedir only if PKG_CONFIG is truthy.
+				[ -z "$pkg_config" ] || removedir="yes" ;;
+			esac ;;
+		esac
+
+		line_result=0
+		changes=
+		case $action in
+		add)	refcount="yes"
+			task_refcount exists dirs "$path" || refcount=
+			if task_refcount add dirs "$path"; then
+				if [ -n "$owned" ]; then
+					# Directory is owned by this package.
+					if task_refcount prop_put dirs "$path" owner; then
+						: "directory owner property added"
+					else
+						line_result=1
+					fi
+				fi
+				if [ $line_result -gt 0 ]; then
+					: "skip directory creation"
+				elif [ -d "$d_path" ]; then
+					# Directory already exists.
+					if [ -z "$refcount" ]; then
+						task_refcount prop_put dirs "$path" preexist || line_result=1
+					fi
+					# Only warn if directory exists if it should be owned.
+					if [ -n "$owned" ]; then
+						$echo "${TASK_MSG}! $dir_msg already exists: $d_path"
+					fi
+				elif [ -z "$makedir" ]; then
+					: "directory is never created"
+				elif [ "$makedir" = "seen" ]; then
+					$echo "${TASK_MSG}! $dir_msg creation skipped: $d_path"
+				elif task_makedir "$d_path"; then
+					$echo "${TASK_MSG}> $dir_msg created: $d_path"
+					changes="$changes create"
+				else
+					$echo "${TASK_MSG}! $dir_msg not created: $d_path"
+					line_result=1
+				fi
+			else
+				# add refcount failed; skip to next line
+				$echo "${TASK_MSG}! refcount add failure: directories $path"
+				result=1
+				continue
+			fi ;;
+		check-add)
+			if [ -d "$d_path" ]; then
+				: "directory already exists"
+			elif [ -n "$makedir" ]; then
+				task_echo "!!! INFO: ${PKGNAME}: Create directory: $msg"
+				line_result=1
+			fi ;;
+		esac
+		if [ $line_result -eq 0 ]; then
+			case $mode/$user/$group in
+			//)	: "no permissions to set" ;;
+			*)	case $action in
+				add|perms)
+					task_refcount prop_put dirs "$path" permissions "$mode" "$user" "$group" || line_result=1
+					if [ ! -d "$d_path" ]; then
+						$echo "${TASK_MSG}! $dir_msg permissions not set on missing: $msg"
+						if [ "$makedir" = "yes" ]; then
+							# The directory should have been created; otherwise,
+							# it's an error.
+							#
+							line_result=1
+						fi
+					elif [ "$action" = "perms" -a -z "$pkg_config_perms" ]; then
+						# "perms" action, but PKG_CONFIG_PERMS is not trutyy.
+						$echo "${TASK_MSG}! $dir_msg permissions skipped: $msg"
+					elif task_set_permissions "$d_path" "$mode" "$user" "$group"; then
+						$echo "${TASK_MSG}> $dir_msg permissions set: $msg"
+					else
+						$echo "${TASK_MSG}! $dir_msg permissions not set: $msg"
+						line_result=1
+					fi ;;
+				check-add|check-perms)
+					if [ -d "$d_path" ] &&
+					   task_check_permissions "$d_path" "$mode" "$user" "$group"; then
+					   	: "directory has correct permissions"
+					else
+					   	task_echo "!!! INFO: ${PKGNAME}: Set directory permissions: $msg"
+						line_result=1
+					fi
+				esac ;;
+			esac
+		fi
+		if [ $line_result -eq 0 ]; then
+			case $action in
+			remove)	if task_refcount remove dirs "$path"; then
+					if task_refcount exists dirs "$path"; then
+						# refcount is not zero
+						if [ -n "$owned" ]; then
+							# owned directory has existing references; failure event.
+							$echo "${TASK_MSG}! directory owned but references exist: $path"
+							line_result=1
+						fi
+					else
+						# no more references
+						if task_refcount prop_exists dirs "$path" preexist; then
+							: "directory is preexisting"
+						elif [ ! -d "$d_path" ]; then
+							: "directory already removed"
+						elif [ "$removedir" = "yes" ]; then
+							${RMDIR} -p "$d_path" 2>/dev/null
+						fi
+						# Only warn if the directory is owned by the package.
+						if [ -n "$owned" ]; then
+							if [ -d "$d_path" ]; then
+								$echo "${TASK_MSG}! $dir_msg not removed: $d_path"
+							else
+								$echo "${TASK_MSG}> $dir_msg removed: $d_path"
+							fi
+						fi
+						# delete the reference count
+						task_refcount delete dirs "$path"
+					fi
+				else
+					# remove refcount failed
+					$echo "${TASK_MSG}! refcount remove failure: directories $path"
+					line_result=1
+				fi ;;
+			check-remove)
+				if task_refcount exists dirs "$path"; then
+					: "refcount is not zero"
+				elif [ ! -d "$d_path" ]; then
+					: "directory already removed"
+				elif [ -n "$removedir" -a -n "$owned" ]; then
+					# Only warn if the directory is owned by the package.
+					task_echo "!!! INFO: ${PKGNAME}: Remove $dir_msg: $d_path"
+					line_result=1
+				fi
+			esac
+		fi
+		if [ $line_result -gt 0 ]; then
+			# Undo changes if there was an error.
+			case " $changes " in
+			*" create "*)
+				${RMDIR} -p "$d_path" 2>/dev/null ;;
+			esac
+		fi
+		[ $line_result -eq 0 ] || result=1
+	done
+	return $result
+}

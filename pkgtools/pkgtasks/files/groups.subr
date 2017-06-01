@@ -1,0 +1,240 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	groups.subr -- group management for packages
+#
+# SYNOPSIS
+#	task_groups [-s] add | remove
+#	task_groups check-add | check-remove
+#
+# DESCRIPTION
+#	The task_groups function supports four actions: "add", "remove",
+#	"check-add", and "check-remove".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_groups function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # GROUP: <name>[:<groupid>]
+#
+#	Only the group is required; the groupid is optional.
+#
+#	The "add" action creates the group with the given name if it is
+#	missing, with the given group ID, if ${PKG_CREATE_USERGROUP} is
+#	"yes".  A reference count for the group will be error for the
+#	package.
+#
+#	The "remove" action removes a reference count for the group by
+#	the package.  This function shall not remove any group on the
+#	system.
+#
+#	The "check-add" action will check whether the groups exist with
+#	the optional group IDs if they are given, or otherwise writes a
+#	message to standard output noting the missing groups.
+#
+#	The "check-remove" action will check whether the groups have been
+#	removed, or otherwise writes a message to standard output noting
+#	the groups still exists.
+#
+# RETURN VALUES
+#	The "add" and "remove" actions return 0 if they are successful
+#	for all groups, and >0 if an error occurs.
+#
+#	The "check-add" and "check-remove" actions return >0 if they
+#	write informative messages, and return 0 otherwise.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_CREATE_USERGROUP
+#		If ${PKG_CREATE_USERGROUP} is a "truthy" value, then the
+#		"add" and "remove" actions are allowed to create and
+#		remove groups from the system.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+
+__task_groups__="yes"
+__task_groups_init__="_task_groups_init"
+
+task_load cleanup
+task_load echo
+task_load quote
+task_load refcount
+task_load truthy
+task_load usergroup
+task_load usergroup_exists
+
+task_groups()
+{
+	: ${PKGNAME:=${0##*/}}
+	: ${PKG_CREATE_USERGROUP:=yes}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove|check-add|check-remove)
+		: "valid action" ;;
+	*)	return 0 ;;
+	esac
+
+	local create="yes"
+	task_is_truthy "${PKG_CREATE_USERGROUP}" || create=
+
+	local result line_result
+	local save_IFS group gid msg
+
+	result=0
+	local hash tag entry
+	while read hash tag entry; do
+		# Filter for "# GROUP:".
+		case $hash/$tag in
+		"#/GROUP:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+
+		save_IFS=$IFS; IFS=:
+		set -o noglob; set -- $entry; set +o noglob
+		group=$1; gid=$2
+		IFS=$save_IFS
+		[ -n "$group" ] || continue
+
+		if [ -n "$gid" ]; then
+			msg="$group (gid = $gid)"
+		else
+			msg="$group"
+		fi
+
+		line_result=0
+		case $action in
+		add)	if task_refcount add groups "$group"; then
+				task_group_exists "$group" "$gid"
+				case $? in
+				0)	# $group exists and has gid $gid
+					$echo "${TASK_MSG}! group already exists: $msg" ;;
+				1)	# neither $group nor $gid exist
+					if [ -z "$create" ]; then
+						$echo "${TASK_MSG}! group creation skipped: $msg"
+					elif task_addgroup "$group" "$gid"; then
+						$echo "${TASK_MSG}> group created: $msg"
+						# Keep track of groups added in case of error later.
+						task_quote "$group"
+						__task_groups_error__="$__task_groups_error__ $_quoted"
+					else
+						$echo "${TASK_MSG}! group not created: $msg"
+						line_result=1
+					fi ;;
+				2)	$echo "${TASK_MSG}! group conflict: $msg"
+					result=1
+					break ;;
+				*)	$echo "${TASK_MSG}! group not created: $msg"
+					line_result=1 ;;
+				esac
+			else
+				# add refcount failed; skip to next line
+				$echo "${TASK_MSG}! refcount add failure: groups $msg"
+				result=1
+				continue
+			fi ;;
+		remove)	if task_refcount remove groups "$group"; then
+				if task_refcount exists groups "$group"; then
+					: "refcount is not zero"
+				else
+					# delete the reference count
+					task_refcount delete groups "$group"
+				fi
+			else
+				# remove refcount failed
+				$echo "${TASK_MSG}! refcount remove failure: groups $msg"
+				line_result=1
+			fi ;;
+		check-add)
+			if task_group_exists "$group" "$gid"; then
+				: "group already exists"
+			else
+				task_echo "!!! INFO: ${PKGNAME}: Create group: $msg"
+				line_result=1
+			fi ;;
+		check-remove)
+			if task_group_exists "$group" "$gid"; then
+				task_echo "!!! INFO: ${PKGNAME}: Remove group if unused: $group"
+				line_result=1
+			fi ;;
+		esac
+		[ $line_result -eq 0 ] || result=1
+	done
+
+	# Clear groups to remove in case of error if all groups added
+	# successfully.
+	#
+	[ $result -gt 0 ] || __task_groups_error__=
+
+	return $result
+}
+
+
+_task_groups_cleanup()
+{
+	eval set -- $__task_groups_error__
+	local group
+	for group; do
+		if task_group_exists "$group"; then
+			task_echo "!!! ERROR: ${PKGNAME}: Group created before error: $group"
+		fi
+	done
+	__task_groups_error__=
+}
+
+_task_groups_init()
+{
+	task_cleanup_add_hook _task_groups_cleanup
+}
+
+# Static variable for groups that should be removed if an error occurs.
+__task_groups_error__=

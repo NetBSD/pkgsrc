@@ -1,0 +1,137 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	postremove.subr -- post-removal actions for packages
+#
+# SYNOPSIS
+#	task_postremove <datafile>
+#
+# DESCRIPTION
+#	The task_postremove function performs actions that SHOULD occur
+#	AFTER deleting the package files:
+#
+#	    o Unregister shells from the system shells database.
+#	    o Update fonts databases.
+#	    o Rebuild the system run-time library search path database.
+#	    o Update OCaml module run-time library search path database.
+#	    o Remove empty directories.
+#	    o Remove unused users.
+#	    o Remove unused groups.
+#
+#	The datafile contains lines of the form:
+#
+#	    # <keyword>: <arg> ...
+#
+#	These lines are used as input to the various script functions.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+
+__task_postremove__="yes"
+
+task_load directories
+task_load files
+task_load fonts
+task_load groups
+task_load info_files
+task_load ocaml_findlib
+task_load shells
+task_load shlibs
+task_load sort
+task_load taskfunc
+task_load users
+
+task_postremove()
+{
+	[ $# -gt 0 ] || return 127
+	local datafile="$1"; shift
+
+	[ -f "$datafile" ] || return 1
+
+	local post_actions=
+	# Remove shells from the system shells database.
+	post_actions="task_shells"
+	# Update font databases.
+	post_actions="$post_actions task_fonts"
+	# Rebuild the system run-time library search path database.
+	post_actions="$post_actions task_shlibs"
+	# Update OCaml module run-time library search path database.
+	post_actions="$post_actions task_ocaml_findlib"
+	# Remove empty directories.
+	post_actions="$post_actions task_directories"
+	# Remove unused users.
+	post_actions="$post_actions task_users"
+	# Remove unused groups.
+	post_actions="$post_actions task_groups"
+	# Run generic package tasks.
+	post_actions="$post_actions task_function"
+
+	# Seed checks with actions from preremove, in order.
+	local post_checks="task_info_files task_files"
+
+	local result=0
+	local stage="preinstall"
+
+	local post_fn silent
+	for post_fn in $post_actions; do
+		case $post_fn in
+		task_directories|\
+		task_groups|\
+		task_shells|\
+		task_users)
+			# These tasks should be verbose since they touch
+			# system files and directories.
+			silent= ;;
+		*)	silent="-s" ;;
+		esac
+		case $post_fn in
+		task_directories)
+			# Reverse-sort data lines for this task.
+			task_sort -r < $datafile | $post_fn $silent remove $stage ;;
+		*)	$post_fn $silent remove $stage < $datafile ;;
+		esac
+		[ $? -eq 0 ] || result=1
+		post_checks="$post_checks $post_fn"
+	done
+
+	# Run all checks after all post-removal actions have completed
+	# and write messages to standard output for any checks that don't
+	# pass.
+	#
+	for post_fn in $post_checks; do
+		case $post_fn in
+		task_directories)
+			# Reverse-sort data lines for this task.
+			task_sort -r < $datafile | $post_fn check-remove $stage ;;
+		*)	$post_fn check-remove $stage < $datafile ;;
+		esac
+	done
+
+	return $result
+}

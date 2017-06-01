@@ -1,0 +1,134 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	makedir.subr -- make a directory hierarchy
+#
+# SYNOPSIS
+#	task_makedir [-m mode] <directory> ...
+#
+# DESCRIPTION
+#	The task_makedir function creates the directories in the order
+#	specified.  If the intermediate directories do not exist, then they
+#	are created as well.
+#
+#	The options are as follows:
+#
+#	-i	Always create intermediate directories as separate steps.
+#		If this option is not given, then by default, the function
+#		will attempt to use "mkdir -p" to create the intermediate
+#		directories.
+#
+#	-m	Set the permissions of the final created directory to
+#		the specified mode.
+#
+# RETURN VALUES
+#	Returns 0 on success, and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	CHMOD	The name or path to the chmod(1) utility.
+#
+#	MKDIR	The name or path to the mkdir(1) utility.
+#
+
+__task_makedir__="yes"
+
+task_makedir()
+{
+	: ${CHMOD:=chmod}
+	: ${MKDIR:=mkdir}
+
+	local execute="yes"
+	local intermediate=
+	local mode=
+	local opts="-p"	# always create intermediate directories
+
+	local arg
+	local OPTIND=1
+	while getopts ":im:n" arg "$@"; do
+		case $arg in
+		i)	intermediate="yes" ;;
+		m)	mode=${OPTARG}
+			opts="$opts -m $mode" ;;
+		n)	execute= ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	# Attempt to do "mkdir -p" if "-i" was not given.
+	if [ -z "$intermediate" ]; then
+		case $execute in
+		"")	: "fall through" ;;
+		*)	{ ${MKDIR} ${opts# } "$@"; } 2>/dev/null
+			[ $? -gt 0 ] || return 0 ;;
+		esac
+	fi
+
+	local path=
+	local prev="/"	# seed with / to prevent attempting "mkdir /"
+	local save_IFS
+	local dir component
+	for dir; do
+		[ -n "$dir" ] || return 1
+		save_IFS=$IFS; IFS=/
+		set -o noglob; set -- $dir; set +o noglob
+		IFS=$save_IFS
+		while [ $# -gt 0 ]; do
+			component=$1; shift
+			case $component in
+			"")	case $path in
+				"")	path="/" ;;
+				*)	: "path unchanged" ;;
+				esac ;;
+			*)	case $path in
+				"")	path="$component" ;;
+				*/)	path="$path$component" ;;
+				*)	path="$path/$component" ;;
+				esac ;;
+			esac
+			if [ "$path" != "$prev" ]; then
+				case $execute in
+				"")	echo "${MKDIR} \"$path\"" ;;
+				*)	if [ ! -d "$path" ]; then
+						${MKDIR} "$path" 2>/dev/null
+						[ -d "$path" ] || return 1
+					fi
+				esac
+				prev=$path
+			fi
+		done
+		if [ -n "$mode" ]; then
+			case $execute in
+			"")	echo "${CHMOD} \"$mode\" \"$dir\"" ;;
+			*)	${CHMOD} "$mode" "$dir" || return 1 ;;
+			esac
+		fi
+	done
+}

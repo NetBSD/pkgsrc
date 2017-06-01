@@ -1,0 +1,431 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	fonts.subr -- X11 font directory management for packages
+#
+# SYNOPSIS
+#	task_fonts [-s] add | remove
+#
+# DESCRIPTION
+#	The task_fonts function supports two actions: "add" and "remove".
+#
+#	The available options are as follows:
+#
+#	-s	Silent; don't write to standard output.
+#
+#	The task_fonts function reads standard input line by line and
+#	looks for lines of the form:
+#
+#	    # FONTS: <fontdir> <fonttype> [<encodings_dir>]
+#
+#	<encodings_dir> is an optional argument containing the location
+#	to the X11 font encoding information files and is used for the
+#	"x11" font type.
+#
+#	If any of the paths are relative, then it is assumed to be
+#	relative to ${PKG_PREFIX}.
+#
+#	Both the "add" and "remove" actions regenerate the index files
+#	for X11 fonts directories.
+#
+# RETURN VALUES
+#	Returns 0 if reindexing is successful for all font directories,
+#	and >0 if an error occurs.
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	MKFONTDIR
+#		The name or path to the mkfontdir(1) utility.
+#
+#	MKFONTSCALE
+#		The name or path to the mkfontscale(1) utility.
+#
+#	PKGNAME
+#		The name of the package.
+#
+#	PKG_DESTDIR
+#		A "destdir" prefix that is prepended to all filesystem
+#		paths.  The default value is the empty string.
+#
+#	PKG_PREFIX
+#		The installation prefix of the package.  The default is
+#		"/usr/pkg".
+#
+#	PKG_UPDATE_FONTS_DB
+#		If ${PKG_UPDATE_FONTS_DB} is a "truthy" value, then the
+#		"add" and "remove" actions are allowed to update the font
+#		indices files.
+#
+#	RM	The name or path to the rm(1) utility.
+#
+#	RMDIR	The name or path to the rmdir(1) utility.
+#
+#	TASK_MSG
+#		String prepended to all normal message written to
+#		standard output.
+#
+#	TTMKFDIR
+#		The name or path to the ttmkfdir(1) utility.
+#
+#	X11_ENCODINGSDIR
+#		The directory containing font-encoding information files.
+#
+
+__task_fonts__="yes"
+__task_fonts_init__="_task_fonts_init"
+
+task_load cleanup
+task_load echo
+task_load dirwalk
+task_load quote
+task_load truthy
+task_load which
+
+task_fonts()
+{
+	: ${PKG_PREFIX:=/usr/pkg}
+	: ${PKGNAME:=${0##*/}}
+
+	: ${PKG_UPDATE_FONTS_DB:=yes}
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local silent=
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":"; silent="-s" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local action="$1"; shift
+	case $action in
+	add|remove)
+		: "valid actions" ;;
+	*)	return 0 ;;
+	esac
+
+	# Skip actions if ${PKG_UPDATE_FONTS_DB} isn't truthy.
+	local update_fonts="yes"
+	task_is_truthy "${PKG_UPDATE_FONTS_DB}" || update_fonts=
+
+	# Guard against ${PKG_PREFIX} == "/".
+	local prefix
+	case ${PKG_PREFIX}/ in
+	//)	prefix= ;;
+	*)	prefix=${PKG_PREFIX} ;;
+	esac
+
+	local result line_result
+	local quoted
+
+	result=0
+	local hash tag fontdir fonttype
+	while read hash tag fontdir fonttype encodings_dir; do
+		# Filter for "# FONTS:".
+		case $hash/$tag in
+		"#/FONTS:")
+			: "use this line" ;;
+		*)	continue ;;
+		esac
+		case $fonttype in
+		"")	# skip lines without required args
+			continue ;;
+		esac
+		# Canonicalize paths.
+		case $fontdir in
+		"")	# skip lines without required args
+			continue ;;
+		[!/]*)	fontdir="$prefix/$fontdir" ;;
+		esac
+		fontdir="${PKG_DESTDIR}$fontdir"
+		case $encodings_dir in
+		"")	encodings_dir=${X11_ENCODINGSDIR} ;;
+		[!/]*)	encodings_dir="$prefix/$encodings_dir" ;;
+		esac
+		encodings_dir="${PKG_DESTDIR}$encodings_dir"
+
+		if [ ! -d "$fontdir" ]; then
+			$echo "${TASK_MSG}! fonts directory missing: $fontdir"
+			result=1
+			continue
+		fi
+
+		task_quote "$fontdir"
+		__task_fonts_dirs__="$__task_fonts_dirs__ $quoted"
+
+		line_result=0
+
+		# Generate font index for the directory.
+		if [ -n "$update_fonts" ]; then
+			case $fonttype in
+			[Tt][Tt][Ff])
+				_task_fonts_index_ttf $silent "$fontdir" || line_result=1 ;;
+			[Tt][Yy][Pp][Ee]1)
+				_task_fonts_index_type1 $silent "$fontdir" || line_result=1 ;;
+			[Xx]11)
+				_task_fonts_index_x11 $silent "$fontdir" "$encodings_dir" || line_result=1 ;;
+			esac
+		fi
+		if [ -n "$update_fonts" -a $line_result -eq 0 ]; then
+			$echo "${TASK_MSG}> fonts index rebuilt: $fontdir"
+		else
+			$echo "${TASK_MSG}! fonts index not rebuilt: $fontdir"
+		fi
+
+		[ $line_result -eq 0 ] || result=1
+	done
+
+	_task_fonts_cleanup $silent
+	return $result
+}
+
+_task_fonts_index_ttf()
+{
+	: ${MKFONTSCALE:=mkfontscale}
+	: ${TTMKFDIR:=ttmkfdir}
+
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local silent=
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":"; silent="-s" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local fontdir="$1"; shift
+	local command=
+
+	# Cache mkfontscale(1) location.
+	if [ -z "$__task_fonts_mkfontscale__" ]; then
+		__task_fonts_mkfontscale__=$( task_which "${MKFONTSCALE}" )
+		[ -n "$__task_fonts_mkfontscale__" ] ||
+			__task_fonts_mkfontscale__="missing"
+	fi
+	if [ "$__task_fonts_mkfontscale__" != "missing" ]; then
+		command=$__task_fonts_mkfontscale__
+	else
+		# Cache ttmkfdir(1) location.
+		if [ -z "$__task_fonts_ttmkfdir__" ]; then
+			__task_fonts_ttmkfdir__=$( task_which "${TTMKFDIR}" )
+			[ -n "$__task_fonts_ttmkfdir__" ] ||
+				__task_fonts_ttmkfdir__="missing"
+		fi
+		if [ "$__task_fonts_ttmkfdir__" != "missing" ]; then
+			command=$__task_fonts_ttmkfdir__
+		elif [ -n "${MKFONTSCALE}" ]; then
+			command=${MKFONTSCALE}
+		elif [ -n "${TTMKFDIR}" ]; then
+			command=${TTMKFDIR}
+		else
+			$echo "${TASK_MSG}! ttf-indexing command missing"
+			return 1
+		fi
+	fi
+	( cd "$fontdir" && $command >/dev/null )
+	# TTF font directories also require X11 indexing.
+	_task_fonts_index_x11 $silent "$fontdir"
+	return 0
+}
+
+_task_fonts_index_type1()
+{
+	: ${MKFONTSCALE:=mkfontscale}
+	: ${TYPE1INST:=type1inst}
+
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local silent=
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":"; silent="-s" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local fontdir="$1"; shift
+	local command=
+
+	# Cache mkfontscale(1) location.
+	if [ -z "$__task_fonts_mkfontscale__" ]; then
+		__task_fonts_mkfontscale__=$( task_which "${MKFONTSCALE}" )
+		[ -n "$__task_fonts_mkfontscale__" ] ||
+			__task_fonts_mkfontscale__="missing"
+	fi
+	if [ "$__task_fonts_mkfontscale__" != "missing" ]; then
+		command=$__task_fonts_mkfontscale__
+	else
+		# Cache type1inst(1) location.
+		if [ -z "$__task_fonts_type1inst__" ]; then
+			__task_fonts_type1inst__=$( task_which "${TYPE1INST}" )
+			[ -n "$__task_fonts_type1inst__" ] ||
+				__task_fonts_type1inst__="missing"
+		fi
+		if [ "$__task_fonts_type1inst__" != "missing" ]; then
+			command=$__task_fonts_type1inst__
+		elif [ -n "${MKFONTSCALE}" ]; then
+			command=${MKFONTSCALE}
+		elif [ -n "${TYPE1INST}" ]; then
+			command=${TTMKFDIR}
+		else
+			$echo "${TASK_MSG}! type1-indexing command missing"
+			return 1
+		fi
+	fi
+	( cd "$fontdir" && $command >/dev/null )
+	# Type1 font directories also require X11 indexing.
+	_task_fonts_index_x11 $silent "$fontdir"
+	return 0
+}
+
+_task_fonts_index_x11()
+{
+	: ${MKFONTDIR:=mkfontdir}
+
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":"; ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -gt 0 ] || return 127
+
+	local fontdir="$1"; shift
+	local encodings_dir="$1"
+	local command=
+
+	# Cache mkfontdir(1) location.
+	if [ -z "$__task_fonts_mkfontdir__" ]; then
+		__task_fonts_mkfontdir__=$( task_which "${MKFONTDIR}" )
+		[ -n "$__task_fonts_mkfontdir__" ] ||
+			__task_fonts_mkfontdir__="missing"
+	fi
+	if [ "$__task_fonts_mkfontdir__" != "missing" ]; then
+		command=$__task_fonts_mkfontdir__
+	elif [ -n "${MKFONTDIR}" ]; then
+		command=${MKFONTDIR}
+	else
+		$echo "${TASK_MSG}! x11-indexing command missing"
+		return 1
+	fi
+	if [ -n "$encodings_dir" ]; then
+		( cd "$fontdir" && $command -e "$encodings_dir" >/dev/null )
+	else
+		( cd "$fontdir" && $command >/dev/null )
+	fi
+	return 0
+}
+
+_task_fonts_cleanup()
+{
+	: ${RM:=rm}
+	: ${RMDIR:=rmdir}
+
+	: ${TASK_MSG:=""}
+
+	local arg
+	local echo="task_echo"
+	local OPTIND=1
+	while getopts ":s" arg "$@"; do
+		case $arg in
+		s)	echo=":"; ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+
+	eval set -- $__task_fonts_dirs__
+	local fontdir
+	for fontdir; do
+		[ -d "$fontdir" ] || continue
+		# Remove log file from Type1 font scaling.
+		[ ! -f "$fontdir/type1inst.log" ] ||
+			${RM} -f "$fontdir/type1inst.log"
+		# Remove directories that have no font files remaining.
+		task_dirwalk -f "$fontdir" |
+		while IFS= read fontfile; do
+			case $fontfile in
+			*/encodings.dir|*/fonts.dir|*/fonts.scale|*/Fontmap*)
+				: "skip index files" ;;
+			*)	# font found
+				return 0 ;;
+			esac
+			# no fonts found
+			return 1
+		done
+		if [ $? -gt 0 ]; then
+			${RM} -f \
+				"$fontdir/encodings.dir" \
+				"$fontdir/fonts.dir" \
+				"$fontdir/fonts.scale" \
+				"$fontdir/Fontmap"*
+			${RMDIR} -p "$fontdir" 2>/dev/null
+			$echo "${TASK_MSG}> empty fonts directory removed: $fontdir"
+		fi
+	done
+	__task_fonts_dirs__=
+}
+
+_task_fonts_init()
+{
+	task_cleanup_add_hook _task_fonts_cleanup
+}
+
+# Static variable for directories that should be pruned if they are empty
+# if an error occors.
+#
+__task_fonts_dirs__=
+
+# Static variables for the paths to indexing utilities.
+__task_fonts_mkfontdir__=
+__task_fonts_mkfontscale__=
+__task_fonts_ttmkfdir__=
+__task_fonts_type1inst__=
