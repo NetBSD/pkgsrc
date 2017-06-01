@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1242 2017/05/30 12:15:13 he Exp $
+# $NetBSD: Makefile,v 1.1243 2017/06/01 03:58:38 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -13,6 +13,7 @@ SUBDIR+=	album_themes
 SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-auth-kerb
+SUBDIR+=	ap-auth-mellon
 SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-authnz-crowd
 SUBDIR+=	ap-fastcgi
