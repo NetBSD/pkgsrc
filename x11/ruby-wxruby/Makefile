@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/02/12 06:26:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2017/06/01 12:51:14 taca Exp $
 #
 
 DISTNAME=	wxruby-2.0.1
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=4.2.0:../../textproc/ruby-redcloth
 
 BUILD_TARGET=		default html_docs
 USE_RAKE=		YES
-RAKE=			rake -I "./lib"
+RAKE=			${RAKE_NAME} -I "./lib"
 USE_LANGUAGES=		c++
 USE_TOOLS=		pax
 REPLACE_RUBY_DIRS=	samples
