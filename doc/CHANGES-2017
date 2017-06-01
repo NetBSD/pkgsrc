@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2180 2017/06/01 04:41:41 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2181 2017/06/01 07:16:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2738,3 +2738,7 @@ Changes to the packages collection and infrastructure in 2017:
 		generate +INSTALL/+DEINSTALL scripts for binary packages.
 		[jlam 2017-06-01]
 	Updated databases/ruby-cassandra to 0.23.0nb1 [taca 2017-06-01]
+	Updated devel/py-pep8 to 1.7.0 [adam 2017-06-01]
+	Updated mail/dovecot2 to 2.2.30.1 [adam 2017-06-01]
+	Updated devel/py-test to 3.1.1 [adam 2017-06-01]
+	Updated databases/py-ldap to 2.4.39 [adam 2017-06-01]
