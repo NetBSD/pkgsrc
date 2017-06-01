@@ -1,0 +1,15 @@
+pkgtasks is a shell script library to ease writing POSIX-compliant shell
+scripts to handle common tasks during installation or removal of a
+package, e.g.,
+
+  * creating groups and users needed by the package
+
+  * creating and removing directories with special permissions and
+    ownership,
+
+  * copying example config files to their final locations during package
+    installation, and removing them during package removal if they don't
+    differ from the example ones,
+
+  * reminding the user of files that may be customized after package
+    installation.
