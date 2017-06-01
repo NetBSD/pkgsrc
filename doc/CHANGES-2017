@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2182 2017/06/01 12:07:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2183 2017/06/01 12:27:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2746,3 +2746,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-grako version 3.99.9 [adam 2017-06-01]
 	Added devel/py-expressions version 0.2.3 [adam 2017-06-01]
 	Added devel/py-cubes version 1.1 [adam 2017-06-01]
+	Updated x11/xkeyboard-config to 2.21 [wiz 2017-06-01]
