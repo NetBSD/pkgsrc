@@ -1,0 +1,535 @@
+# Copyright (c) 2017 The NetBSD Foundation, Inc.
+# All rights reserved.
+#
+# This code is derived from software contributed to The NetBSD Foundation
+# by Johnny C. Lam.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+# NAME
+#	version.subr -- compare version strings
+#
+# SYNOPSIS
+#	echo ${TASK_VERSION}
+#
+#	task_version_check <check_version> [* | < | <= | = | => | >] <version> ...
+#
+#	task_version_compare [-v] <version1> <version2>
+#
+# DESCRIPTION
+#	${TASK_VERSION} is the version number of the installed task modules.
+#
+#	The task_version_check function checks whether <check_version>
+#	satisfies the constraints specified in the remaining parameters.
+#	The remaining parameters are contraints of pairs of an operator and
+#	a version number, and the constraints must all be met for a
+#	successful version check.
+#
+#	The task_version_compare function compares the two version strings.
+#
+#	A version string has the following form:
+#
+#		<swver>[+<pkgver>]
+#
+#	<swver> represents the version of the software and SHOULD be
+#	identical to the version string used by the maintainer of the
+#	software.
+#
+#	<pkgver> is a version that is independent of the version of the
+#	software, and is used to differentiate two version strings with the
+#	same <swver>.
+#
+#	Both <swver> and <pkgver> are an alternating sequence of numeric and
+#	non-numeric components.  Each component MAY contain any
+#	printable-ASCII character except for '/' (slash, ASCII 47), '-'
+#	(dash, ASCII 45), and '+' (plus, ASCII 43).
+#
+#	The magic string "nb" MAY be used as a synonym for '+', used to
+#	separate <swver> and <pkgver> in a version string.
+#
+# ALGORITHM
+#	The comparison algorithm is to compare corresponding components of
+#	the two version strings, beginning with the leftmost components, and
+#	to compare the next pair of components if the current ones match.
+#	If the components are numeric, then do a numeric comparison;
+#	otherwise, do a string comparison.
+#
+#	There are magic strings that may be found in version numbers, listed
+#	below in sorting order from lowest to highest:
+#
+#	    ~[string]	Tilde (ASCII 126) string; sorts before a release
+#			version.  The string after the '~' is optional.
+#
+#	    alpha	Equates to "alpha version" and is a synonym for
+#			"~alpha".
+#
+#	    beta	Equates to "beta version" and is a synonym for
+#			"~beta".
+#
+#	    rc		Equates to "release candidate" and is a synonym for
+#			"~rc".
+#
+#	    pre		Equates to "pre-release" and is a synonym for a
+#			release candidate.
+#
+#	    .		Period (ASCII 46); the usual separator between
+#			numeric components.
+#
+#	    _		Underscore (ASCII 95); a synonym for '.' (period).
+#
+#	    pl		Equates to "patch level" and is a synonym for '.'
+#			(period).
+#
+#	Additionally, single alphabetic characters sort in the same place as
+#	their numeric counterparts, so "1.2e" and "1.2.5" are equivalent with
+#	respect to their sorting order.
+#
+#	An empty string for the version number is the "null" version and sorts
+#	as less than all other version numbers.
+#
+# RETURN VALUES
+#	The task_version_check function returns 0 if all of the contraints
+#	are met, and >0 if they are not.
+#
+#	The task_version_compare function has the following return values:
+#
+#	    0	if <version1> is less than <version2>
+#	    1	if <version1> equals <version2>
+#	    2	if <version1> is greater than <version2>
+#
+# ENVIRONMENT
+#	The following variables are used if they are set:
+#
+#	AWK	The name or path to the awk(1) utility.
+#
+
+__task_version__="yes"
+
+# The version of the installed task modules.
+TASK_VERSION=@TASK_VERSION@
+
+task_version_check()
+{
+	[ $# -ge 3 ] || return 127
+	local check_version="$1"; shift
+
+	local cmp_result
+	local operator=
+	local version=
+	for version; do
+		if [ -z "$operator" ]; then
+			operator=$version
+			continue
+		fi
+		task_version_compare "$check_version" "$version"
+		cmp_result=$?
+		case $operator in
+		"*")	# any
+			case $cmp_result in
+			0|1|2)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		"<")	# less than
+			case $cmp_result in
+			0)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		"<=")	# less than or equal to
+			case $cmp_result in
+			0|1)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		"=")	# equal to
+			case $cmp_result in
+			1)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		"!=")	# not equal to
+			case $cmp_result in
+			0|2)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		">=")	# greater than or equal to
+			case $cmp_result in
+			1|2)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		">")	# greater than
+			case $cmp_result in
+			2)	: "match" ;;
+			*)	return 1 ;;
+			esac ;;
+		esac
+		operator=
+	done
+	[ -z "$operator" ] || return 127
+	return 0
+}
+
+task_version_compare()
+{
+	# Returns 0 if version1 < version2.
+	# Returns 1 if version1 = version2.
+	# Returns 2 if version1 > version2.
+
+	# Decompose each version string into <swver> and <pkgver> components.
+
+	local verbose=
+	local arg
+	local OPTIND=1
+	while getopts ":v" arg "$@"; do
+		case $arg in
+		v)	verbose="-v" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -eq 2 ] || return 127
+	local version1="$1"; shift
+	local version2="$1"; shift
+
+	local swver1 pkgver1
+	local swver2 pkgver2
+
+	case $version1 in
+	*"+"*)	swver1=${version1%+*}
+		pkgver1=${version1#$swver1+} ;;
+	*"nb"*)	swver1=${version1%nb*}
+		pkgver1=${version1#${swver1}nb} ;;
+	*)	swver1=$version1
+		pkgver1= ;;
+	esac
+	case $version2 in
+	*"+"*)	swver2=${version2%+*}
+		pkgver2=${version2#$swver2+} ;;
+	*"nb"*)	swver2=${version2%nb*}
+		pkgver2=${version2#${swver2}nb} ;;
+	*)	swver2=$version2
+		pkgver2= ;;
+	esac
+
+	[ -z "$verbose" ] || echo "> compare \"$version1\" vs. \"$version2\""
+
+	# Compare $swver1 and $swver2.
+	_task_version_compare $verbose "$swver1" "$swver2"
+	local result=$?
+	case $result in
+	1)	: "fall through to <pkgver> comparison" ;;
+	*)	return $result ;;
+	esac
+
+	# Compare $pkgver1 and $pkgver2.
+	_task_version_compare $verbose "$pkgver1" "$pkgver2"
+}
+
+_task_version_compare()
+{
+	# Returns 0 if version1 < version2.
+	# Returns 1 if version1 = version2.
+	# Returns 2 if version1 > version2.
+	# Returns >2 if an error occurs.
+
+	local echo=":"
+	local arg
+	local OPTIND=1
+	while getopts ":v" arg "$@"; do
+		case $arg in
+		v)	echo="echo" ;;
+		*)	return 127 ;;
+		esac
+	done
+	shift $(( ${OPTIND} - 1 ))
+	[ $# -eq 2 ] || return 127
+	local version1="$1"; shift
+	local version2="$1"; shift
+
+	# Verify version strings.
+	case $version1 in
+	*"/"*|*"-"*|*"+"*)
+		return 3 ;;
+	esac
+	case $version2 in
+	*"/"*|*"-"*|*"+"*)
+		return 3 ;;
+	esac
+
+	$echo "  > compare: \"$version1\" vs. \"$version2\""
+
+	# Same versions.
+	if [ "$version1" = "$version2" ]; then
+		$echo "    > equal"; return 1
+	fi
+
+	# Null versions.
+	if [ -z "$version1" ]; then
+		$echo "    > less than"; return 0
+	fi
+	if [ -z "$version2" ]; then
+		$echo "    > more than"; return 2
+	fi
+
+	# Break down version numbers for comparisions.
+	#
+	# A version number is a sequence of numbers separated by non-numeric
+	# strings.
+	#
+	# Always start version comparisons with a non-numeric string.
+	case $version1 in
+	[0-9]*)	version1=".$version1" ;;
+	*)	version1="$version1" ;;
+	esac
+	case $version2 in
+	[0-9]*)	version2=".$version2" ;;
+	*)	version2="$version2" ;;
+	esac
+
+	local number1 str1 value1 tilde1 substr1
+	local number2 str2 value2 tilde2 substr2
+	local mode="string"
+
+	while : ; do
+		case $mode in
+		number)	# Set number<n> to the numeric component before the next
+			# non-numeric string, and set version<n> to the remaining
+			# version after the leading numeric component.
+			#
+			number1=${version1%%[!0-9]*}
+			case $version1 in
+			*[!0-9]*)	version1=${version1#$number1} ;;
+			*)		version1= ;;
+			esac
+			number2=${version2%%[!0-9]*}
+			case $version2 in
+			*[!0-9]*)	version2=${version2#$number2} ;;
+			*)		version2= ;;
+			esac
+			$echo "    > \"$number1 | $version1\" vs. \"$number2 | $version2\""
+			if [ -z "$number1" -a -z "$number2" ]; then
+				# Both version numbers terminate.
+				break
+			elif [ -z "$number1" ]; then
+				$echo "    > less than"; return 0
+			elif [ -z "$number2" ]; then
+				$echo "    > more than"; return 2
+			elif [ $number1 -lt $number2 ]; then
+				$echo "    > less than"; return 0
+			elif [ $number1 -gt $number2 ]; then
+				$echo "    > more than"; return 2
+			fi
+			mode="string"
+			;;
+		string)	# Set str<n> to the non-numeric string before the next
+			# numeric component, and set version<n> to the remaining
+			# version after the leading non-numeric string.
+			#
+			str1=${version1%%[0-9]*}
+			case $version1 in
+			*[0-9]*)	version1=${version1#$str1} ;;
+			*)		version1= ;;
+			esac
+			str2=${version2%%[0-9]*}
+			case $version2 in
+			*[0-9]*)	version2=${version2#$str2} ;;
+			*)		version2= ;;
+			esac
+			#
+			# Alphabetic characters sort in the same place as their
+			# numeric counterparts, e.g., 1.2e = 1.2.5.  Set str<n>
+			# to a dot "." and push the numeric counterpart back
+			# onto the front of version<n>.
+			#
+			case $str1 in
+			[A-Za-z])
+				case $str1 in
+				[Aa])	value1=1 ;;	[Nn])	value1=14 ;;
+				[Bb])	value1=2 ;;	[Oo])	value1=15 ;;
+				[Cc])	value1=3 ;;	[Pp])	value1=16 ;;
+				[Dd])	value1=4 ;;	[Qq])	value1=17 ;;
+				[Ee])	value1=5 ;;	[Rr])	value1=18 ;;
+				[Ff])	value1=6 ;;	[Ss])	value1=19 ;;
+				[Gg])	value1=7 ;;	[Tt])	value1=20 ;;
+				[Hh])	value1=8 ;;	[Uu])	value1=21 ;;
+				[Ii])	value1=9 ;;	[Vv])	value1=22 ;;
+				[Jj])	value1=10 ;;	[Ww])	value1=23 ;;
+				[Kk])	value1=11 ;;	[Xx])	value1=24 ;;
+				[Ll])	value1=12 ;;	[Yy])	value1=25 ;;
+				[Mm])	value1=13 ;;	[Zz])	value1=26 ;;
+				esac
+				case $version1 in
+				"")	version1="$value1" ;;
+				*)	version1="$value1.$version1" ;;
+				esac
+				str1="."
+				;;
+			esac
+			case $str2 in
+			[A-Za-z])
+				case $str2 in
+				[Aa])	value2=1 ;;	[Nn])	value2=14 ;;
+				[Bb])	value2=2 ;;	[Oo])	value2=15 ;;
+				[Cc])	value2=3 ;;	[Pp])	value2=16 ;;
+				[Dd])	value2=4 ;;	[Qq])	value2=17 ;;
+				[Ee])	value2=5 ;;	[Rr])	value2=18 ;;
+				[Ff])	value2=6 ;;	[Ss])	value2=19 ;;
+				[Gg])	value2=7 ;;	[Tt])	value2=20 ;;
+				[Hh])	value2=8 ;;	[Uu])	value2=21 ;;
+				[Ii])	value2=9 ;;	[Vv])	value2=22 ;;
+				[Jj])	value2=10 ;;	[Ww])	value2=23 ;;
+				[Kk])	value2=11 ;;	[Xx])	value2=24 ;;
+				[Ll])	value2=12 ;;	[Yy])	value2=25 ;;
+				[Mm])	value2=13 ;;	[Zz])	value2=26 ;;
+				esac
+				case $version2 in
+				"")	version2="$value2" ;;
+				*)	version2="$value2.$version2" ;;
+				esac
+				str2="."
+				;;
+			esac
+			#
+			# Some magic values that sort before a release version.
+			#
+			case $str1 in
+			alpha|beta|rc)
+				str1="~$str1" ;;
+			pre)	str1="~rc" ;;	# synonym for "rc"
+			esac
+			case $str2 in
+			alpha|beta|rc)
+				str2="~$str2" ;;
+			pre)	str2="~rc" ;;	# synonym for "rc"
+			esac
+			#
+			# Early short-circuit comparisons.
+			#
+			case $str1/$str2 in
+			"~"*/[!~]*)
+				$echo "    > less than"; return 0 ;;
+			[!~]*/"~"*)
+				$echo "    > more than"; return 2 ;;
+			"~"*/"~"*|[!~]*/[!~]*)
+				: "fall through to string comparison" ;;
+			esac
+			# Compare successive substrings separated by '~'.
+			while : ; do
+				# Set substr<n> to the string before the next '~'
+				# character, and set str<n> to the remaining string
+				# starting from the next '~' character.
+				#
+				case $str1 in
+				"~"*)	tilde1="~"; str1=${str1#~} ;;
+				*)	tilde1= ;;
+				esac
+				case $str1 in
+				*"~"*)	substr1=${str1%%~*}
+					str1=${str1#$substr1} ;;
+				*)	substr1=$str1
+					str1= ;;
+				esac
+				substr1="$tilde1$substr1"
+				case $str2 in
+				"~"*)	tilde2="~"; str2=${str2#~} ;;
+				*)	tilde2= ;;
+				esac
+				case $str2 in
+				*"~"*)	substr2=${str2%%~*}
+					str2=${str2#$substr2} ;;
+				*)	substr2=$str2
+					str2= ;;
+				esac
+				substr2="$tilde2$substr2"
+				#
+				# Assign numerical values to the strings for
+				# comparison.  We can't do a straight string
+				# comparison because some of the strings are
+				# magic tokens.
+				#
+				case $substr1 in
+				~*)		value1=100 ;;
+				"")		value1=400 ;;
+				[.]|_|pl)	value1=500 ;;
+				*)		value1=1000 ;;
+				esac
+				case $substr2 in
+				~*)		value2=100 ;;
+				"")		value2=400 ;;
+				[.]|_|pl)	value2=500 ;;
+				*)		value2=1000 ;;
+				esac
+				$echo "    > \"$substr1 ($value1) / $str1 | $version1\" vs. \"$substr2 ($value2) / $str2 | $version2\""
+				if [ $value1 -eq 1000 -a $value2 -eq 1000 ] ||
+				   [ $value1 -eq 100 -a $value2 -eq 100 ]; then
+					# Non-empty string comparisons.
+					if _task_string_compare "$substr1" "<" "$substr2"; then
+						$echo "    > less than"; return 0
+					elif _task_string_compare "$substr1" ">" "$substr2"; then
+						$echo "    > more than"; return 2
+					fi
+				elif [ $value1 -eq 400 -a $value2 -eq 400 ]; then
+					# Both version numbers terminate.
+					break
+				elif [ $value1 -lt $value2 ]; then
+					$echo "    > less than"; return 0
+				elif [ $value1 -gt $value2 ]; then
+					$echo "    > more than"; return 2
+				fi
+			done
+			mode="number"
+			;;
+		esac
+	done
+	$echo "    > equal"; return 1
+}
+
+_task_string_compare()
+{
+	: ${AWK:=awk}
+
+	[ $# -eq 3 ] || return 127
+
+	local str1="$1"; shift
+	local op="$1"; shift
+	local str2="$1"; shift
+
+	case $op in
+	'<'|'>'|'='|'!=')
+		test "$str1" "$op" "$str2" 2>/dev/null ;;
+	'<=')	test "$str1" "<" "$str2" 2>/dev/null &&
+		test "$str1" "=" "$str2" 2>/dev/null ;;
+	'>=')	test "$str1" ">" "$str2" 2>/dev/null &&
+		test "$str1" "=" "$str2" 2>/dev/null ;;
+	*)	# invalid operator
+		return 127 ;;
+	esac
+	local result=$?
+	case $result in
+	0|1)	return $result ;;
+	*)	# Fall back to using awk(1) for lexographic comparison.
+		# Convert operator to the AWK-equivalent if needed.
+		case $op in
+		'=')	op="==" ;;
+		*)	: "other operators are the same in AWK" ;;
+		esac
+		${AWK} -v STR1="$str1" -v STR2="$str2" \
+			'BEGIN { exit ( (STR1 '"$op"' STR2) ? 0 : 1 ) }' ;;
+	esac
+}
