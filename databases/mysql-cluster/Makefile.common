@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2017/05/05 16:22:28 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.13 2017/06/01 13:30:24 jlam Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -120,7 +120,7 @@ SUBST_FILES.fixpaths+=	${DESTDIR}${PREFIX}/share/doc/mysql/INFO_BIN
 SUBST_SED.fixpaths=	-e "s,${WRAPPER_BINDIR}/gcc,${CCPATH},g"
 SUBST_SED.fixpaths+=	-e "s,${WRAPPER_BINDIR}/g++,${CXXPATH},g"
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SOEXT="dylib"
 .else
 SOEXT="so"
