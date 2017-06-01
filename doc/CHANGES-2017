@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2179 2017/06/01 02:23:09 jlam Exp $
+$NetBSD: CHANGES-2017,v 1.2180 2017/06/01 04:41:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2737,3 +2737,4 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: Added "pkgformat/pkg/scripts.mk framework to
 		generate +INSTALL/+DEINSTALL scripts for binary packages.
 		[jlam 2017-06-01]
+	Updated databases/ruby-cassandra to 0.23.0nb1 [taca 2017-06-01]
