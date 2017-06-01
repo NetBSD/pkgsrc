@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/05/08 17:23:29 christos Exp $
+# $NetBSD: Makefile,v 1.26 2017/06/01 13:30:25 jlam Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -68,7 +68,7 @@ FETCH_MESSAGE+=	"As sun-jre-jce is enabled UnlimitedJCEPolicyJDK7.zip is also ne
 .if defined(EMUL_IS_NATIVE) && ${OPSYS} != "SunOS"
 .  if ${X11_TYPE} == "native"
 X11_LIBDIR=	${X11BASE}/lib${LIBABISUFFIX}
-.    if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.    if ${SHLIB_TYPE} == "dylib"
 X11_LIB=${X11_LIBDIR}/libX11.dylib
 .    else
 X11_LIB=${X11_LIBDIR}/libX11.so.6

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 22:06:42 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/01 13:30:25 jlam Exp $
 
 DISTNAME=	llvm-${PKGVERSION_NOREV}.src
 PKGNAME=	libLLVM34-3.4.2
@@ -69,7 +69,7 @@ CWRAPPERS_APPEND.cxx+=	-Wno-error=absolute-value
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 PLIST_SUBST+=		SOEXT="dylib"
 .else
 PLIST_SUBST+=		SOEXT="so"

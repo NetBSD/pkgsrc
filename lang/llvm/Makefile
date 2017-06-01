@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/05/05 23:13:05 kamil Exp $
+# $NetBSD: Makefile,v 1.23 2017/06/01 13:30:25 jlam Exp $
 #
 # when updating this, please also update:
 # devel/include-what-you-use
@@ -77,7 +77,7 @@ SUBST_SED.lto=		-e '/^LLVM/d'
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=	notdylib
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+.if ${SHLIB_TYPE} == "dylib"
 SOEXT=		dylib
 .else
 SOEXT=		so
