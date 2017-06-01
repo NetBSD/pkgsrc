@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/01 12:04:38 adam Exp $
+
+SHA1 (grako-3.99.9.zip) = b8751e9e40b8f51aae7316b80d2bed65e56ddbd4
+RMD160 (grako-3.99.9.zip) = 151edb61fd019d98734cf959b1ea28178fce3ba8
+SHA512 (grako-3.99.9.zip) = 1251a669cafc37021405f63005eab974fc1d9acab04f14ef16132411c1c36e540a3a092ae58a6ca5c3f46d3e040d2402cb287cc1fc56aa422eb5200555f29a74
+Size (grako-3.99.9.zip) = 159278 bytes
