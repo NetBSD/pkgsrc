@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/11/24 14:07:50 taca Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/01 04:36:56 taca Exp $
 
 DISTNAME=	dm-types-1.2.2
 PKGREVISION=	1
@@ -16,8 +16,5 @@ DEPENDS+=	${RUBY_PKGPREFIX}-multi_json>=1.0<2:../../textproc/ruby-multi_json
 DEPENDS+=	${RUBY_PKGPREFIX}-stringex>=1.4<2:../../textproc/ruby-stringex
 DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1<3:../../devel/ruby-uuidtools
 
-RUBY_JSON_REQD=		1.6
-
 .include "../../lang/ruby/gem.mk"
-.include "../../lang/ruby/json.mk"
 .include "../../mk/bsd.pkg.mk"
