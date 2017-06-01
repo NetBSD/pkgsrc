@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2188 2017/06/01 17:16:44 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2189 2017/06/01 20:48:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2752,3 +2752,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/mdoclint to 1.53 [wiz 2017-06-01]
 	Updated textproc/mdoclint to 1.54 [wiz 2017-06-01]
 	Updated textproc/py-openpyxl to 2.4.8 [adam 2017-06-01]
+	Updated devel/cmake to 3.8.2 [adam 2017-06-01]
