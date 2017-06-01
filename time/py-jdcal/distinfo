@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:31:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/01 13:27:04 adam Exp $
 
-SHA1 (jdcal-1.0.tar.gz) = 261a41bb5c2953bad26bccc348a059bd418c93da
-RMD160 (jdcal-1.0.tar.gz) = 5b543fd94aea46168e0acd89e00a0a5683e2a3eb
-SHA512 (jdcal-1.0.tar.gz) = 5e9f865a3c9a123a56d084c9ddd325cfe6c246e1a9162bb8f000abaf7cdf376b1e38f7c2a97f14a13d2f4b3f3de4e7e3773a903f905685ce76f541b50134a408
-Size (jdcal-1.0.tar.gz) = 5677 bytes
+SHA1 (jdcal-1.3.tar.gz) = f9195602e4cba270aa7f48afc50231b32c4eaef2
+RMD160 (jdcal-1.3.tar.gz) = 3c15c2f8a5b3e3b4485725be0219118057ed6f78
+SHA512 (jdcal-1.3.tar.gz) = 4b872ed6c76df92362063597e85d41716fae676fed477745703ae73e5e07b8bd69a3fa43119ed904a9179110726e1063500b78f71239fee155a007d33e23ca54
+Size (jdcal-1.3.tar.gz) = 7433 bytes
