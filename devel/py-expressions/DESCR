@@ -1,0 +1,10 @@
+Arithmetic expression parser library. Embed customized expression evaluation
+into your application or library. Example uses:
+* Safely process an expression entered through a web application, for example
+  some formula to be plotted. The library allows safe translation of such
+  expression without exposing any application's internals
+* precompiler that checks for allowed and denied identifiers in an expression
+* have a common expression language through your application regardless of the
+  backend languages
+* compile arithmetic expression to any other expression tree (semantic), for
+  example SQLAlchemy expression objects
