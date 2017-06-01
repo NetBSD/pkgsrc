@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.69 2016/06/17 08:53:42 jaapb Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.70 2017/06/01 13:29:18 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -843,11 +843,6 @@ ${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
-# SHLIB_TYPE
-#	The type of shared library supported by the platform.
-#
-#	Default value: ${_OPSYS_SHLIB_TYPE}
-#
 # LDCONFIG_ADD_CMD
 # LDCONFIG_REMOVE_CMD
 #	Command-line to be invoked to update the system run-time library
@@ -855,11 +850,6 @@ ${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
 #
 #	Default value: ${LDCONFIG}
 #
-SHLIB_TYPE=		${_SHLIB_TYPE_cmd:sh}
-_SHLIB_TYPE_cmd=							\
-	sh ${.CURDIR}/../../mk/scripts/shlib-type			\
-		${_OPSYS_SHLIB_TYPE:Q} ${PKG_INFO_CMD:Q}
-
 LDCONFIG_ADD_CMD?=		${_LDCONFIG_ADD_CMD.${OPSYS}}
 LDCONFIG_REMOVE_CMD?=		${_LDCONFIG_REMOVE_CMD.${OPSYS}}
 _LDCONFIG_ADD_CMD.${OPSYS}?=	${LDCONFIG}
