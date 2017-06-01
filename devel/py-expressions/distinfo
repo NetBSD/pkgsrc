@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/01 12:05:09 adam Exp $
+
+SHA1 (expressions-0.2.3.tar.gz) = be6d5316c631a0b59d806b1bd56f7568fe1cad31
+RMD160 (expressions-0.2.3.tar.gz) = 857f87779c7b0b559c174d7920246448c57a824c
+SHA512 (expressions-0.2.3.tar.gz) = 987b4bb6606b9e9014d0bc16bf4634aa4e056c5982bd23d9600e296a6042461a510355c913c731f3249a6654299df9e8afadc285272764f7453846dbc5e8a26a
+Size (expressions-0.2.3.tar.gz) = 5476 bytes
