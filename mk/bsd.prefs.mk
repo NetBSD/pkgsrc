@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.391 2017/05/31 22:55:01 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.392 2017/06/01 02:15:10 jlam Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -686,10 +686,12 @@ PREPEND_PATH+=		${X11BASE}/bin
 .endif
 PREPEND_PATH+=		${LOCALBASE}/bin
 
+.if ${_USE_NEW_PKGINSTALL:Uno} == "no"
 # Support alternative init systems.
 #
 INIT_SYSTEM?=		rc.d
 _BUILD_DEFS+=		INIT_SYSTEM
+.endif
 
 _PKGSRC_MKPIE=	no
 .if (${PKGSRC_MKPIE:tl} == "yes") && \
@@ -737,6 +739,11 @@ _USE_CWRAPPERS=		no
 
 # System features framework
 .include "features/features-vars.mk"
+
+.if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+# Init services framework
+.include "init/bsd.init-vars.mk"
+.endif
 
 # Package system format definitions
 .include "pkgformat/bsd.pkgformat-vars.mk"
