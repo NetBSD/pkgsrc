@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2178 2017/06/01 02:04:05 jlam Exp $
+$NetBSD: CHANGES-2017,v 1.2179 2017/06/01 02:23:09 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2730,3 +2730,10 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/sqlite3 to 3.19.2 [adam 2017-05-31]
 	Updated sysutils/bcmfw to 2.1 [plunky 2017-05-31]
 	Added pkgtools/pkgtasks version 1.9 [jlam 2017-06-01]
+	mk/bsd.pkg.mk: Added "pkgtasks" framework to generate data files
+		for install/deinstall scripts. [jlam 2017-06-01]
+	mk/bsd.pkg.mk: Added "init" framework to manage different init
+		script systems (currently rc.d and SMF) [jlam 2017-06-01]
+	mk/bsd.pkg.mk: Added "pkgformat/pkg/scripts.mk framework to
+		generate +INSTALL/+DEINSTALL scripts for binary packages.
+		[jlam 2017-06-01]
