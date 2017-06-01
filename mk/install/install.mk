@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.69 2016/07/26 08:41:36 jperkin Exp $
+# $NetBSD: install.mk,v 1.70 2017/06/01 02:15:10 jlam Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -179,7 +179,9 @@ _INSTALL_ALL_TARGETS+=		plist
 _INSTALL_ALL_TARGETS+=		install-strip-debug
 .endif
 _INSTALL_ALL_TARGETS+=		install-doc-handling
+.if ${_USE_NEW_PKGINSTALL:Uno} == "no"
 _INSTALL_ALL_TARGETS+=		install-script-data
+.endif
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		check-files-post
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build.mk,v 1.11 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.build.mk,v 1.12 2017/06/01 02:15:10 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to building sources for a package.
@@ -36,7 +36,11 @@ _COOKIE.test=	${WRKDIR}/.test_done
 build:
 	@${DO_NADA}
 .  elif defined(_PKGSRC_BARRIER)
+.    if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+build: configure build-cookie
+.    else
 build: configure build-cookie pkginstall
+.    endif
 .  else
 build: barrier
 .  endif

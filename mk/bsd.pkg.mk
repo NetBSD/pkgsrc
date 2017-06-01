@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2024 2017/05/31 22:56:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2025 2017/06/01 02:15:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -371,8 +371,16 @@ USE_TOOLS+=								\
 # bsd.wrapper.mk
 USE_TOOLS+=	expr
 
+.if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+# Init services framework
+.include "init/bsd.init.mk"
+
+# Package tasks framework
+.include "pkgtasks/bsd.pkgtasks.mk"
+.else
 # INSTALL/DEINSTALL script framework
 .include "pkginstall/bsd.pkginstall.mk"
+.endif
 
 # Locking
 .include "internal/locking.mk"

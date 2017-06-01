@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.13 2016/04/10 15:58:03 joerg Exp $
+# $NetBSD: metadata.mk,v 1.14 2017/06/01 02:15:10 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -311,6 +311,25 @@ ${_SIZE_ALL_FILE}: ${_RDEPENDS_FILE} ${_SIZE_PKG_FILE}
 
 ######################################################################
 ###
+### +DEINSTALL/+INSTALL - Package deinstall and install scripts
+###
+### These are the scripts invoked by pkg_add(1) and pkg_delete(1)
+### as part of the package installation or removal process.
+###
+### Include scripts.mk to pull in the definitions for the following
+### variables:
+###
+###	_DEINSTALL_FILE (undefined if not required)
+###	_INSTALL_FILE (undefined if not required)
+###
+### This will also add these files to _METADATA_TARGETS.
+###
+.if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+.include "${PKGSRCDIR}/mk/pkgformat/pkg/scripts.mk"
+.endif
+
+######################################################################
+###
 ### +CONTENTS - Package manifest file
 ###
 ### This file contains the list of files and checksums, along with
@@ -339,12 +358,18 @@ _PKG_CREATE_ARGS+=	${PKG_PRESERVE:D	-n ${_PRESERVE_FILE}}
 _PKG_CREATE_ARGS+=				-S ${_SIZE_ALL_FILE}
 _PKG_CREATE_ARGS+=				-s ${_SIZE_PKG_FILE}
 _PKG_CREATE_ARGS+=	${CONFLICTS:D		-C ${CONFLICTS:Q}}
+.if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+_PKG_CREATE_ARGS+=	${_INSTALL_FILE:D	-i ${_INSTALL_FILE:Q}}
+_PKG_CREATE_ARGS+=	${_DEINSTALL_FILE:D	-k ${_DEINSTALL_FILE:Q}}
+.else
 _PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:sh}}
 _PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:sh}}
+.endif
 
 _PKG_ARGS_INSTALL+=	${_PKG_CREATE_ARGS}
 _PKG_ARGS_INSTALL+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
 
+.if ${_USE_NEW_PKGINSTALL:Uno} == "no"
 _DEINSTALL_ARG_cmd=	if ${TEST} -f ${DEINSTALL_FILE}; then		\
 				${ECHO} "-k "${DEINSTALL_FILE:Q};	\
 			else						\
@@ -355,12 +380,19 @@ _INSTALL_ARG_cmd=	if ${TEST} -f ${INSTALL_FILE}; then		\
 			else						\
 				${ECHO};				\
 			fi
+.endif
 
 _CONTENTS_TARGETS+=	${_BUILD_INFO_FILE}
 _CONTENTS_TARGETS+=	${_BUILD_VERSION_FILE}
 _CONTENTS_TARGETS+=	${_COMMENT_FILE}
+.if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+_CONTENTS_TARGETS+=	${_DEINSTALL_FILE}
+.endif
 _CONTENTS_TARGETS+=	${_DEPENDS_FILE}
 _CONTENTS_TARGETS+=	${_DESCR_FILE}
+.if ${_USE_NEW_PKGINSTALL:Uno} != "no"
+_CONTENTS_TARGETS+=	${_INSTALL_FILE}
+.endif
 _CONTENTS_TARGETS+=	${_MESSAGE_FILE}
 _CONTENTS_TARGETS+=	${_DEPENDS_PLIST}
 _CONTENTS_TARGETS+=	${_PRESERVE_FILE}
@@ -383,7 +415,9 @@ ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
 ###	+COMMENT
 ###	+CONTENTS
 ###	+DESC
+###	+DEINSTALL (if required)
 ###	+DISPLAY
+###	+INSTALL (if required)
 ###	+PRESERVE
 ###	+SIZE_ALL
 ###	+SIZE_PKG
