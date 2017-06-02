@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2015/11/03 23:27:07 agc Exp $
+$NetBSD: distinfo,v 1.45 2017/06/02 05:35:21 taca Exp $
 
 SHA1 (imap-2007f.tar.Z) = 1c9935e5a261baec85dadcbc0c514b66fa3ce0a5
 RMD160 (imap-2007f.tar.Z) = 14f40284e9e164c0ed7677f1e5d8e3309c7c58c1
@@ -36,4 +36,7 @@ SHA1 (patch-be) = 73afbc9f3c65d3adce37a3f1ee7f55e0ec665a54
 SHA1 (patch-bf) = 63c582e88bd6286295d5d9639bafec355278d537
 SHA1 (patch-bg) = c95483ed73d7c6015df99967c0509cf0ea67d28f
 SHA1 (patch-bh) = c43dc5df9fb61ea44b5195fc15c697e5f540dfae
+SHA1 (patch-src_c-client_mail.c) = fca90d3a5a8770b8728bdef6aec2623d16c12b6d
+SHA1 (patch-src_c-client_misc.c) = d22ca95fb333b5234c66440faf5d6e30a148bad1
+SHA1 (patch-src_c-client_misc.h) = 5cf51d186b04ebb45c79b8042bbdcb01716dd2ce
 SHA1 (patch-src_mlock_Makefile) = 6bf652f597ad21dffa44e01d6cb89525eeaf7fc9
