@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.version,v 1.13 2016/02/07 08:42:59 adam Exp $
+# $NetBSD: Makefile.version,v 1.14 2017/06/02 08:29:56 adam Exp $
 # used by databases/openldap/Makefile
 # used by databases/openldap/Makefile.common
 # used by databases/openldap-docs/Makefile
 
-OPENLDAP_VERSION=	2.4.44
+OPENLDAP_VERSION=	2.4.45
