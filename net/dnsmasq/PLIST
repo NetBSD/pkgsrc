@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/03/11 14:05:07 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/02 08:37:49 adam Exp $
 man/man8/dnsmasq.8
 sbin/dnsmasq
-share/examples/dnsmasq/dnsmasq.conf.example
 ${PLIST.dbus}share/examples/dnsmasq/dnsmasq-dbus.conf
+share/examples/dnsmasq/dnsmasq.conf.example
