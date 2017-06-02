@@ -1,11 +1,11 @@
-$NetBSD: patch-config_pam_Makefile.in,v 1.1 2016/11/07 00:41:57 christos Exp $
+$NetBSD: patch-config_pam_Makefile.in,v 1.2 2017/06/02 12:19:07 szptvlfn Exp $
 
 Do not mess with the base system, we install the pam config to 
 examples/netatalk instead.
 
---- config/pam/Makefile.in.orig	2014-08-29 06:33:35.000000000 -0400
-+++ config/pam/Makefile.in	2016-11-06 09:23:14.358979157 -0500
-@@ -397,25 +397,9 @@
+--- config/pam/Makefile.in.orig	2017-01-23 01:23:45.000000000 +0900
++++ config/pam/Makefile.in	2017-06-02 19:34:25.557582142 +0900
+@@ -440,25 +440,9 @@
  	-rm -rf .libs _libs
  install-pamDATA: $(pam_DATA)
  	@$(NORMAL_INSTALL)
@@ -28,6 +28,6 @@ examples/netatalk instead.
 -	@list='$(pam_DATA)'; test -n "$(pamdir)" || list=; \
 -	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 -	dir='$(DESTDIR)$(pamdir)'; $(am__uninstall_files_from_dir)
- tags: TAGS
- TAGS:
+ tags TAGS:
  
+ ctags CTAGS:
