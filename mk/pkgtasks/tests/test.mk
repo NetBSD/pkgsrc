@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.1 2017/06/01 02:06:05 jlam Exp $
+# $NetBSD: test.mk,v 1.2 2017/06/02 16:11:24 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -47,14 +47,6 @@ SH?=			/bin/sh
 STEP_MSG?=		${ECHO} ">>>"
 TEST?=			test
 VARBASE?=		/var
-
-_PKGTASKS_NEEDARGS=							\
-	needargs() {							\
-		if ${TEST} $$3 -lt $$2; then				\
-			${FAIL_MSG} "$$1 must have a multiple of $$2 words. Rest: $$4"; \
-			return 1;					\
-		fi;							\
-	}
 
 # Override any other default definitions so that generated files go into
 # the current directory.
