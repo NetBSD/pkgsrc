@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2190 2017/06/02 05:35:53 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2191 2017/06/02 08:39:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2754,3 +2754,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/py-openpyxl to 2.4.8 [adam 2017-06-01]
 	Updated devel/cmake to 3.8.2 [adam 2017-06-01]
 	Updated mail/imap-uw to 2007fnb4 [taca 2017-06-02]
+	Updated www/squid3 to 3.5.26 [adam 2017-06-02]
+	Updated databases/openldap to 2.4.45 [adam 2017-06-02]
+	Updated www/py-django to 1.11.2 [adam 2017-06-02]
+	Updated net/dnsmasq to 2.77 [adam 2017-06-02]
