@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkgtasks.mk,v 1.1 2017/06/01 02:06:04 jlam Exp $
+# $NetBSD: bsd.pkgtasks.mk,v 1.2 2017/06/02 19:13:26 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -92,7 +92,7 @@ FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:tl:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:tl:Q}
 
 # FILES_SUBST
-#	Package-settable varibable that lists "variable=value" pairs
+#	Package-settable variable that lists "variable=value" pairs
 #	that is turned into a sed(1) script for substituting
 #	"@variable@" with "value".
 #
