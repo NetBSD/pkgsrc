@@ -1,6 +1,6 @@
 #!/usr/bin/env atf-sh
 #
-# $NetBSD: pkgtasks_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
+# $NetBSD: pkgtasks_test,v 1.2 2017/06/02 16:12:26 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,14 +77,15 @@ test1_body()
 
 	cat > mk.conf << 'EOF'
 MAKE_DIRS+=	dir
-CONF_FILES+=	source target
+CONF_FILES+=	source ${PKG_SYSCONFDIR}/target
 PKG_GROUPS+=	g1
 PKG_USERS+=	u1:g1
 EOF
 	# Expected output.
 	cat > expected << 'EOF'
 # DIR: dir m
-# FILE: target c source 0644
+# DIR: /etc m
+# FILE: /etc/target c source 0644
 # GROUP: g1
 # USER: u1:g1:::/nonexistent:/sbin/nologin
 EOF
@@ -120,7 +121,7 @@ test2_body()
 
 	cat > mk.conf << 'EOF'
 MAKE_DIRS+=	dir
-CONF_FILES+=	source target
+CONF_FILES+=	source ${PKG_SYSCONFDIR}/target
 PKG_GROUPS+=	g1
 PKG_USERS+=	u1:g1
 EOF
