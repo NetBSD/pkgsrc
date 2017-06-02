@@ -1,6 +1,6 @@
 #!/usr/bin/env atf-sh
 #
-# $NetBSD: files_test,v 1.1 2017/06/01 02:06:05 jlam Exp $
+# $NetBSD: files_test,v 1.2 2017/06/02 16:12:26 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -161,8 +161,98 @@ EOF
 	atf_pass
 }
 
+###
+### test3
+###
+
+atf_test_case test3
+
+test3_head()
+{
+	atf_set "descr" "PKG_SYSCONFSUBDIR triggers MAKE_DIRS_PERMS"
+}
+
+test3_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	# Setup
+	setup
+
+	cat > mk.conf << 'EOF'
+PKG_SYSCONFSUBDIR=	pkgname
+PKG_SYSCONFDIR_PERMS=	root wheel 0755
+EOF
+	echo "/etc/pkgname root wheel 0755" > expected
+	${MAKE} show-var VARNAME=MAKE_DIRS_PERMS \
+		PKGSRCDIR="${PKGSRCDIR}" > value
+	cmp expected value ||
+		atf_fail "PKG_SYSCONFSUBDIR not in MAKE_DIRS_PERMS"
+	atf_pass
+}
+
+###
+### test4
+###
+
+atf_test_case test4
+
+test4_head()
+{
+	atf_set "descr" "CONF_FILES into PKG_SYSCONFDIR triggers MAKE_DIRS"
+}
+
+test4_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	# Setup
+	setup
+
+	cat > mk.conf << 'EOF'
+CONF_FILES+=	source ${PKG_SYSCONFDIR}/target
+EOF
+	echo "/etc" > expected
+	${MAKE} show-var VARNAME=MAKE_DIRS PKGSRCDIR="${PKGSRCDIR}" > value
+	cmp expected value || atf_fail "PKG_SYSCONFDIR not in MAKE_DIRS"
+	atf_pass
+}
+
+###
+### test5
+###
+
+atf_test_case test5
+
+test5_head()
+{
+	atf_set "descr" "CONF_FILES outside of PKG_SYSCONFDIR"
+}
+
+test5_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	# Setup
+	setup
+
+	cat > mk.conf << 'EOF'
+CONF_FILES+=	source target
+EOF
+	echo > expected
+	${MAKE} show-var VARNAME=MAKE_DIRS PKGSRCDIR="${PKGSRCDIR}" > value
+	cmp expected value || atf_fail "MAKE_DIRS not empty"
+	atf_pass
+}
+
 atf_init_test_cases()
 {
 	atf_add_test_case test1
 	atf_add_test_case test2
+	atf_add_test_case test3
+	atf_add_test_case test4
+	atf_add_test_case test5
 }
