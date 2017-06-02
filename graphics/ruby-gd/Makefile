@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/02/28 15:20:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.49 2017/06/02 04:16:35 taca Exp $
 
 DISTNAME=	ruby-gd-0.8.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
@@ -10,7 +10,7 @@ HOMEPAGE=	# http://rubyforge.org/projects/ruby-gd/
 COMMENT=	Ruby extension to drive the GD library
 LICENSE=	ruby-license
 
-GEM_CLEANBUILD=	Makefile *.o GD.${RUBY_DLEXT} mkmf.log .RUBYARCHDIR.time
+GEM_CLEANBUILD=	Makefile *.o GD.${RUBY_DLEXT} mkmf.log .*.time
 
 CONFIGURE_ARGS+=	--with-gd-dir=${BUILDLINK_PREFIX.gd:Q}
 CONFIGURE_ARGS+=	--with-jpeg
