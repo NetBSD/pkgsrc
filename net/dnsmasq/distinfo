@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.32 2017/03/21 09:18:15 fhajny Exp $
+$NetBSD: distinfo,v 1.33 2017/06/02 08:37:49 adam Exp $
 
-SHA1 (dnsmasq-2.76.tar.gz) = 3cb264e2505a06705203d616883db5ee6ac00026
-RMD160 (dnsmasq-2.76.tar.gz) = ad7c271b90c8aaeb6f642eb63539cc5c52d7f9a7
-SHA512 (dnsmasq-2.76.tar.gz) = c22627a8d864671096d3b3428ec4f879b513e1f1e7f79be3ab89444c56234e748fbfa6b6b4f9e521984fea95d363f4aa2ca6243f0dfc12ffb74bed0648ae21c5
-Size (dnsmasq-2.76.tar.gz) = 697191 bytes
-SHA1 (patch-dnsmasq.conf.example) = 2974c722a26400915037259c79899e8a3e95bf8f
+SHA1 (dnsmasq-2.77.tar.xz) = 7afdb6bb017d67576cd3603c69070235a9dce57c
+RMD160 (dnsmasq-2.77.tar.xz) = eb47de3dca460f972d6641285db11707fcde3cd8
+SHA512 (dnsmasq-2.77.tar.xz) = 6ca98a71a8fdfd606e29c58b34dadfa63148c39f931570cca67a287e044d52c6ec2f8acbf5620ada3312e9db3a2fd63877188d829c070beaa730607e3309e768
+Size (dnsmasq-2.77.tar.xz) = 487244 bytes
 SHA1 (patch-src_bpf.c) = 05dc64c016c608e6b963ce9ee80c28e872a88f9e
