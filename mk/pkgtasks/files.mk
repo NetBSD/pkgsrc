@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.2 2017/06/02 16:11:47 jlam Exp $
+# $NetBSD: files.mk,v 1.3 2017/06/02 16:12:25 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -138,6 +138,23 @@ PKG_FAIL_REASON+=	${_var_:Q}" must have a multiple of 5 words."
 PKG_FAIL_REASON+=       ${t:Q}" is listed more than once: "${_FILES.${t}:Q}
 .  endif
 .endfor
+
+# Hook into directories.mk to create ${PKG_SYSCONFDIR} in the package
+# tasks.
+#
+# The following variables used are set within bsd.pkg.mk:
+#
+#	PKG_SYSCONFDIR
+#	PKG_SYSCONFDIR_PERMS
+#	PKG_SYSCONFSUBDIR
+#
+.if defined(PKG_SYSCONFSUBDIR) && !empty(PKG_SYSCONFSUBDIR)
+# Always create ${PKG_SYSCONFDIR} if ${PKG_SYSCONFSUBDIR} is non-empty.
+MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR_PERMS}
+.elif !empty(_ALL_FILES.files:M${PKG_SYSCONFDIR}/*)
+# Create ${PKG_SYSCONFDIR} if any target files are in that directory.
+MAKE_DIRS+=		${PKG_SYSCONFDIR}
+.endif
 
 _PKGTASKS_DATA.files=	${_PKGTASKS_DIR}/files
 _PKGTASKS_DATAFILES+=	${_PKGTASKS_DATA.files}
