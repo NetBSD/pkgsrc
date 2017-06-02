@@ -1,6 +1,6 @@
 #!/usr/bin/env atf-sh
 #
-# $NetBSD: scripts_test,v 1.1 2017/06/01 02:09:43 jlam Exp $
+# $NetBSD: scripts_test,v 1.2 2017/06/02 19:13:44 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -181,14 +181,14 @@ EOF
 }
 
 ###
-### test3: DEINSTALL_SRC and INSTALL_SRC
+### test3: set DEINSTALL_SRC and INSTALL_SRC
 ###
 
 atf_test_case test3
 
 test3_head()
 {
-	atf_set "descr" "DEINSTALL_SRC and INSTALL_SRC"
+	atf_set "descr" "set DEINSTALL_SRC and INSTALL_SRC"
 }
 
 test3_body()
@@ -226,9 +226,43 @@ EOF
 	atf_pass
 }
 
+###
+### test4
+###
+
+atf_test_case test4
+
+test4_head()
+{
+	atf_set "descr" "*_TEMPLATES trigger USE_PKGTASKS"
+}
+
+test4_body()
+{
+	: ${MAKE:=make}
+	: ${PKGSRCDIR:=/usr/pkgsrc}
+
+	setup
+	cat > Makefile << 'EOF'
+.include "mk.conf"
+
+INSTALL_TEMPLATES+=	fragment.tmpl
+
+.include "${PKGSRCDIR}/mk/pkgformat/pkg/scripts.mk"
+
+.PHONY: all
+all:
+	@echo ${USE_PKGTASKS:Q}
+EOF
+	${MAKE} all PKGSRCDIR="${PKGSRCDIR}" > output
+	grep "yes" output || atf_fail "USE_PKGTASKS is not yes"
+	atf_pass
+}
+
 atf_init_test_cases()
 {
 	atf_add_test_case test1
 	atf_add_test_case test2
 	atf_add_test_case test3
+	atf_add_test_case test4
 }
