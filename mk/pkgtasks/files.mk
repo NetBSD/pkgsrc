@@ -1,4 +1,4 @@
-# $NetBSD: files.mk,v 1.1 2017/06/01 02:06:04 jlam Exp $
+# $NetBSD: files.mk,v 1.2 2017/06/02 16:11:47 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -111,30 +111,28 @@ __INIT_SCRIPTS_PERMS=	${_INIT_SCRIPTS_PERMS:S|^${PREFIX}/||g}
 # that no target file is listed in more than one variable.
 #
 _ALL_FILES.files=	# empty
-.if !empty(_VALID.files)
-.  for _var_ in CONF_FILES REQD_FILES _INIT_SCRIPTS
-.    if empty(${_var_}) || empty(${_var_}:C/.*/2/:M*:S/2 2//gW)
+.for _var_ in CONF_FILES REQD_FILES _INIT_SCRIPTS
+.  if empty(${_var_}) || empty(${_var_}:C/.*/2/:M*:S/2 2//gW)
 # ${_var_} has a multiple of 2 words.
-.      for s t in ${${_var_}}
+.    for s t in ${${_var_}}
 _FILES.${t}+=		${_var_}
 _ALL_FILES.files+=	${t}
-.      endfor
-.    else
+.    endfor
+.  else
 PKG_FAIL_REASON+=	${_var_:Q}" must have a multiple of 2 words."
-.    endif
-.  endfor
-.  for _var_ in CONF_FILES_PERMS REQD_FILES_PERMS _INIT_SCRIPT_PERMS
-.    if empty(${_var_}) || empty(${_var_}:C/.*/5/:M*:S/5 5 5 5 5//gW)
+.  endif
+.endfor
+.for _var_ in CONF_FILES_PERMS REQD_FILES_PERMS _INIT_SCRIPT_PERMS
+.  if empty(${_var_}) || empty(${_var_}:C/.*/5/:M*:S/5 5 5 5 5//gW)
 # ${_var_} has a multiple of 5 words.
-.      for s t o g m in ${${_var_}}
+.    for s t o g m in ${${_var_}}
 _FILES.${t}+=		${_var_}
 _ALL_FILES.files+=	${t}
-.      endfor
-.    else
+.    endfor
+.  else
 PKG_FAIL_REASON+=	${_var_:Q}" must have a multiple of 5 words."
-.    endif
-.  endfor
-.endif
+.  endif
+.endfor
 .for t in ${_ALL_FILES.files:O:u}
 .  if ${_FILES.${t}:[#]} != 1
 PKG_FAIL_REASON+=       ${t:Q}" is listed more than once: "${_FILES.${t}:Q}
