@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.version,v 1.15 2017/01/29 06:09:51 tsutsui Exp $
+# $NetBSD: Makefile.version,v 1.15.2.1 2017/06/02 19:54:50 bsiegert Exp $
 #
 # used by graphics/gdk-pixbuf2/Makefile
 # used by graphics/gdk-pixbuf2-jasper/Makefile
 # used by graphics/gdk-pixbuf2-xlib/Makefile
 
-PIXBUF2_VERSION=	2.36.4
+PIXBUF2_VERSION=	2.36.6
 MSITE_VERSION=		${PIXBUF2_VERSION:R}
