@@ -1,4 +1,4 @@
-# $NetBSD: scripts.mk,v 1.1 2017/06/01 02:09:43 jlam Exp $
+# $NetBSD: scripts.mk,v 1.2 2017/06/02 19:13:44 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,6 +81,7 @@ _FOOTER_TMPL?=		${PKGSRCDIR}/mk/pkgformat/pkg/templates/footer
 #
 .if ( "${USE_PKGTASKS:tl}" == "yes" ) || !empty(HEADER_TEMPLATES) ||	\
     !empty(DEINSTALL_TEMPLATES) || !empty(INSTALL_TEMPLATES)
+USE_PKGTASKS=		yes	# script templates use pkgtasks
 DEINSTALL_SRC?=		${_HEADER_TMPL} ${HEADER_TEMPLATES}		\
 			${DEINSTALL_TEMPLATES} ${_DEINSTALL_TMPL}	\
 			${_FOOTER_TMPL} ${PKGTASKS_DATAFILE}
