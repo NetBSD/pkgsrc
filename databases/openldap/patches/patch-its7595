@@ -1,4 +1,4 @@
-$NetBSD: patch-its7595,v 1.1 2015/09/14 16:32:26 manu Exp $
+$NetBSD: patch-its7595,v 1.2 2017/06/02 08:29:56 adam Exp $
 
 ECDH support from upstream
 
@@ -19,10 +19,9 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
 
 --- doc/guide/admin/tls.sdf.orig
 +++ doc/guide/admin/tls.sdf
-@@ -200,8 +200,20 @@
- >	openssl dhparam [-dsaparam] -out <filename> <numbits>
+@@ -203,6 +203,18 @@
  
- This directive is ignored with GnuTLS and Mozilla NSS.
+ This directive is ignored with Mozilla NSS.
  
 +H4: TLSECName <name>
 +
@@ -39,12 +38,10 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  H4: TLSVerifyClient { never | allow | try | demand }
  
  This directive specifies what checks to perform on client certificates
- in an incoming TLS session, if any. This option is set to {{EX:never}}
 --- doc/man/man5/slapd-config.5.orig
 +++ doc/man/man5/slapd-config.5
-@@ -917,8 +917,15 @@
- from the default, otherwise no certificate exchanges or verification will
- be done. When using GnuTLS or Mozilla NSS these parameters are always generated randomly
+@@ -922,6 +922,13 @@
+ When using Mozilla NSS these parameters are always generated randomly
  so this directive is ignored.
  .TP
 +.B olcTLSECName: <name>
@@ -57,13 +54,11 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  .B olcTLSProtocolMin: <major>[.<minor>]
  Specifies minimum SSL/TLS protocol version that will be negotiated.
  If the server doesn't support at least that version,
- the SSL handshake will fail.
 --- doc/man/man5/slapd.conf.5.orig
 +++ doc/man/man5/slapd.conf.5
-@@ -1148,8 +1148,15 @@
- from the default, otherwise no certificate exchanges or verification will
- be done. When using GnuTLS these parameters are always generated randomly so
- this directive is ignored.  This directive is ignored when using Mozilla NSS.
+@@ -1153,6 +1153,13 @@
+ When using Mozilla NSS these parameters are always generated randomly
+ so this directive is ignored.
  .TP
 +.B TLSECName <name>
 +Specify the name of a curve to use for Elliptic curve Diffie-Hellman
@@ -75,11 +70,9 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  .B TLSProtocolMin <major>[.<minor>]
  Specifies minimum SSL/TLS protocol version that will be negotiated.
  If the server doesn't support at least that version,
- the SSL handshake will fail.
 --- include/ldap.h.orig
 +++ include/ldap.h
-@@ -157,8 +157,9 @@
- #define LDAP_OPT_X_TLS_DHFILE		0x600e
+@@ -158,6 +158,7 @@
  #define LDAP_OPT_X_TLS_NEWCTX		0x600f
  #define LDAP_OPT_X_TLS_CRLFILE		0x6010	/* GNUtls only */
  #define LDAP_OPT_X_TLS_PACKAGE		0x6011
@@ -87,11 +80,9 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  
  #define LDAP_OPT_X_TLS_NEVER	0
  #define LDAP_OPT_X_TLS_HARD		1
- #define LDAP_OPT_X_TLS_DEMAND	2
 --- libraries/libldap/ldap-int.h.orig
 +++ libraries/libldap/ldap-int.h
-@@ -164,8 +164,9 @@
- 	char		*lt_cacertdir;
+@@ -165,6 +165,7 @@
  	char		*lt_ciphersuite;
  	char		*lt_crlfile;
  	char		*lt_randfile;	/* OpenSSL only */
@@ -99,9 +90,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  	int		lt_protocol_min;
  };
  #endif
- 
-@@ -249,8 +250,9 @@
- 	struct ldaptls ldo_tls_info;
+@@ -250,6 +251,7 @@
  #define ldo_tls_certfile	ldo_tls_info.lt_certfile
  #define ldo_tls_keyfile	ldo_tls_info.lt_keyfile
  #define ldo_tls_dhfile	ldo_tls_info.lt_dhfile
@@ -109,11 +98,9 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  #define ldo_tls_cacertfile	ldo_tls_info.lt_cacertfile
  #define ldo_tls_cacertdir	ldo_tls_info.lt_cacertdir
  #define ldo_tls_ciphersuite	ldo_tls_info.lt_ciphersuite
- #define ldo_tls_protocol_min	ldo_tls_info.lt_protocol_min
 --- libraries/libldap/tls2.c.orig
 +++ libraries/libldap/tls2.c
-@@ -117,8 +117,12 @@
- 	if ( lo->ldo_tls_dhfile ) {
+@@ -118,6 +118,10 @@
  		LDAP_FREE( lo->ldo_tls_dhfile );
  		lo->ldo_tls_dhfile = NULL;
  	}
@@ -124,9 +111,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  	if ( lo->ldo_tls_cacertfile ) {
  		LDAP_FREE( lo->ldo_tls_cacertfile );
  		lo->ldo_tls_cacertfile = NULL;
- 	}
-@@ -231,8 +235,12 @@
- 	if ( lts.lt_dhfile ) {
+@@ -232,6 +236,10 @@
  		lts.lt_dhfile = LDAP_STRDUP( lts.lt_dhfile );
  		__atoe( lts.lt_dhfile );
  	}
@@ -137,9 +122,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  #endif
  	lo->ldo_tls_ctx = ti->ti_ctx_new( lo );
  	if ( lo->ldo_tls_ctx == NULL ) {
- 		Debug( LDAP_DEBUG_ANY,
-@@ -256,8 +264,9 @@
- 	LDAP_FREE( lts.lt_keyfile );
+@@ -257,6 +265,7 @@
  	LDAP_FREE( lts.lt_crlfile );
  	LDAP_FREE( lts.lt_cacertdir );
  	LDAP_FREE( lts.lt_dhfile );
@@ -147,9 +130,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  #endif
  	return rc;
  }
- 
-@@ -633,8 +642,12 @@
- 	case LDAP_OPT_X_TLS_DHFILE:
+@@ -634,6 +643,10 @@
  		*(char **)arg = lo->ldo_tls_dhfile ?
  			LDAP_STRDUP( lo->ldo_tls_dhfile ) : NULL;
  		break;
@@ -160,9 +141,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  	case LDAP_OPT_X_TLS_CRLFILE:	/* GnuTLS only */
  		*(char **)arg = lo->ldo_tls_crlfile ?
  			LDAP_STRDUP( lo->ldo_tls_crlfile ) : NULL;
- 		break;
-@@ -752,8 +765,12 @@
- 	case LDAP_OPT_X_TLS_DHFILE:
+@@ -753,6 +766,10 @@
  		if ( lo->ldo_tls_dhfile ) LDAP_FREE( lo->ldo_tls_dhfile );
  		lo->ldo_tls_dhfile = arg ? LDAP_STRDUP( (char *) arg ) : NULL;
  		return 0;
@@ -173,11 +152,9 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  	case LDAP_OPT_X_TLS_CRLFILE:	/* GnuTLS only */
  		if ( lo->ldo_tls_crlfile ) LDAP_FREE( lo->ldo_tls_crlfile );
  		lo->ldo_tls_crlfile = arg ? LDAP_STRDUP( (char *) arg ) : NULL;
- 		return 0;
 --- libraries/libldap/tls_o.c.orig
 +++ libraries/libldap/tls_o.c
-@@ -295,12 +295,11 @@
- 		tlso_report_error();
+@@ -327,10 +327,9 @@
  		return -1;
  	}
  
@@ -190,9 +167,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  
  		if (( bio=BIO_new_file( lt->lt_dhfile,"r" )) == NULL ) {
  			Debug( LDAP_DEBUG_ANY,
- 				"TLS: could not use DH parameters file `%s'.\n",
-@@ -317,8 +316,40 @@
- 			return -1;
+@@ -349,6 +348,38 @@
  		}
  		BIO_free( bio );
  		SSL_CTX_set_tmp_dh( ctx, dh );
@@ -231,11 +206,9 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  	}
  
  	if ( tlso_opt_trace ) {
- 		SSL_CTX_set_info_callback( ctx, tlso_info_cb );
 --- servers/slapd/bconfig.c.orig
 +++ servers/slapd/bconfig.c
-@@ -193,8 +193,9 @@
- 	CFG_SYNTAX,
+@@ -194,6 +194,7 @@
  	CFG_ACL_ADD,
  	CFG_SYNC_SUBENTRY,
  	CFG_LTHREADS,
@@ -243,9 +216,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  
  	CFG_LAST
  };
- 
-@@ -737,8 +738,16 @@
- 		ARG_IGNORED, NULL,
+@@ -738,6 +739,14 @@
  #endif
  		"( OLcfgGlAt:77 NAME 'olcTLSDHParamFile' "
  			"SYNTAX OMsDirectoryString SINGLE-VALUE )", NULL, NULL },
@@ -260,9 +231,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  	{ "TLSProtocolMin",	NULL, 2, 2, 0,
  #ifdef HAVE_TLS
  		CFG_TLS_PROTOCOL_MIN|ARG_STRING|ARG_MAGIC, &config_tls_config,
- #else
-@@ -818,9 +827,9 @@
- 		 "olcTCPBuffer $ "
+@@ -819,7 +828,7 @@
  		 "olcThreads $ olcTimeLimit $ olcTLSCACertificateFile $ "
  		 "olcTLSCACertificatePath $ olcTLSCertificateFile $ "
  		 "olcTLSCertificateKeyFile $ olcTLSCipherSuite $ olcTLSCRLCheck $ "
@@ -271,9 +240,7 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  		 "olcTLSCRLFile $ olcTLSProtocolMin $ olcToolThreads $ olcWriteTimeout $ "
  		 "olcObjectIdentifier $ olcAttributeTypes $ olcObjectClasses $ "
  		 "olcDitContentRules $ olcLdapSyntaxes ) )", Cft_Global },
- 	{ "( OLcfgGlOc:2 "
-@@ -3823,8 +3832,9 @@
- 	case CFG_TLS_CERT_KEY:	flag = LDAP_OPT_X_TLS_KEYFILE;		break;
+@@ -3824,6 +3833,7 @@
  	case CFG_TLS_CA_PATH:	flag = LDAP_OPT_X_TLS_CACERTDIR;	break;
  	case CFG_TLS_CA_FILE:	flag = LDAP_OPT_X_TLS_CACERTFILE;	break;
  	case CFG_TLS_DH_FILE:	flag = LDAP_OPT_X_TLS_DHFILE;	break;
@@ -281,4 +248,3 @@ Subject: [PATCH] ITS#7595 don't try to use EC if OpenSSL lacks it
  #ifdef HAVE_GNUTLS
  	case CFG_TLS_CRL_FILE:	flag = LDAP_OPT_X_TLS_CRLFILE;	break;
  #endif
- 	default:		Debug(LDAP_DEBUG_ANY, "%s: "
