@@ -123,7 +123,7 @@ t/run_tests: t/run_tests.sh
 pkgtests_SCRIPTS += t/t_compare
 CLEANFILES += t/t_compare
 EXTRA_DIST += t/t_compare.sh
-t/t_compare: t/t_compare.sh $(builddir)/t/build_test
+t/t_compare: t/t_compare.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_compare" source="$(srcdir)/t/t_compare.sh"; \
 	$(BUILD_TEST)
@@ -131,7 +131,7 @@ t/t_compare: t/t_compare.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_createfile
 CLEANFILES += t/t_createfile
 EXTRA_DIST += t/t_createfile.sh
-t/t_createfile: t/t_createfile.sh $(builddir)/t/build_test
+t/t_createfile: t/t_createfile.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_createfile" source="$(srcdir)/t/t_createfile.sh"; \
 	$(BUILD_TEST)
@@ -139,7 +139,7 @@ t/t_createfile: t/t_createfile.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_directories
 CLEANFILES += t/t_directories
 EXTRA_DIST += t/t_directories.sh
-t/t_directories: t/t_directories.sh $(builddir)/t/build_test
+t/t_directories: t/t_directories.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_directories" source="$(srcdir)/t/t_directories.sh"; \
 	$(BUILD_TEST)
@@ -147,7 +147,7 @@ t/t_directories: t/t_directories.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_dirwalk
 CLEANFILES += t/t_dirwalk
 EXTRA_DIST += t/t_dirwalk.sh
-t/t_dirwalk: t/t_dirwalk.sh $(builddir)/t/build_test
+t/t_dirwalk: t/t_dirwalk.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_dirwalk" source="$(srcdir)/t/t_dirwalk.sh"; \
 	$(BUILD_TEST)
@@ -155,7 +155,7 @@ t/t_dirwalk: t/t_dirwalk.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_echo
 CLEANFILES += t/t_echo
 EXTRA_DIST += t/t_echo.sh
-t/t_echo: t/t_echo.sh $(builddir)/t/build_test
+t/t_echo: t/t_echo.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_echo" source="$(srcdir)/t/t_echo.sh"; \
 	$(BUILD_TEST)
@@ -163,7 +163,7 @@ t/t_echo: t/t_echo.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_files
 CLEANFILES += t/t_files
 EXTRA_DIST += t/t_files.sh
-t/t_files: t/t_files.sh $(builddir)/t/build_test
+t/t_files: t/t_files.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_files" source="$(srcdir)/t/t_files.sh"; \
 	$(BUILD_TEST)
@@ -171,7 +171,7 @@ t/t_files: t/t_files.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_fonts
 CLEANFILES += t/t_fonts
 EXTRA_DIST += t/t_fonts.sh
-t/t_fonts: t/t_fonts.sh $(builddir)/t/build_test
+t/t_fonts: t/t_fonts.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_fonts" source="$(srcdir)/t/t_fonts.sh"; \
 	$(BUILD_TEST)
@@ -179,7 +179,7 @@ t/t_fonts: t/t_fonts.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_groups
 CLEANFILES += t/t_groups
 EXTRA_DIST += t/t_groups.sh
-t/t_groups: t/t_groups.sh $(builddir)/t/build_test
+t/t_groups: t/t_groups.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_groups" source="$(srcdir)/t/t_groups.sh"; \
 	$(BUILD_TEST)
@@ -187,7 +187,7 @@ t/t_groups: t/t_groups.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_info_files
 CLEANFILES += t/t_info_files
 EXTRA_DIST += t/t_info_files.sh
-t/t_info_files: t/t_info_files.sh $(builddir)/t/build_test
+t/t_info_files: t/t_info_files.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_info_files" source="$(srcdir)/t/t_info_files.sh"; \
 	$(BUILD_TEST)
@@ -195,7 +195,7 @@ t/t_info_files: t/t_info_files.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_lock
 CLEANFILES += t/t_lock
 EXTRA_DIST += t/t_lock.sh
-t/t_lock: t/t_lock.sh $(builddir)/t/build_test
+t/t_lock: t/t_lock.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_lock" source="$(srcdir)/t/t_lock.sh"; \
 	$(BUILD_TEST)
@@ -203,7 +203,7 @@ t/t_lock: t/t_lock.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_makedir
 CLEANFILES += t/t_makedir
 EXTRA_DIST += t/t_makedir.sh
-t/t_makedir: t/t_makedir.sh $(builddir)/t/build_test
+t/t_makedir: t/t_makedir.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_makedir" source="$(srcdir)/t/t_makedir.sh"; \
 	$(BUILD_TEST)
@@ -211,7 +211,7 @@ t/t_makedir: t/t_makedir.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_maketemp
 CLEANFILES += t/t_maketemp
 EXTRA_DIST += t/t_maketemp.sh
-t/t_maketemp: t/t_maketemp.sh $(builddir)/t/build_test
+t/t_maketemp: t/t_maketemp.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_maketemp" source="$(srcdir)/t/t_maketemp.sh"; \
 	$(BUILD_TEST)
@@ -219,7 +219,7 @@ t/t_maketemp: t/t_maketemp.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_match
 CLEANFILES += t/t_match
 EXTRA_DIST += t/t_match.sh
-t/t_match: t/t_match.sh $(builddir)/t/build_test
+t/t_match: t/t_match.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_match" source="$(srcdir)/t/t_match.sh"; \
 	$(BUILD_TEST)
@@ -227,7 +227,7 @@ t/t_match: t/t_match.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_ocaml_findlib
 CLEANFILES += t/t_ocaml_findlib
 EXTRA_DIST += t/t_ocaml_findlib.sh
-t/t_ocaml_findlib: t/t_ocaml_findlib.sh $(builddir)/t/build_test
+t/t_ocaml_findlib: t/t_ocaml_findlib.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_ocaml_findlib" source="$(srcdir)/t/t_ocaml_findlib.sh"; \
 	$(BUILD_TEST)
@@ -235,7 +235,7 @@ t/t_ocaml_findlib: t/t_ocaml_findlib.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_permissions
 CLEANFILES += t/t_permissions
 EXTRA_DIST += t/t_permissions.sh
-t/t_permissions: t/t_permissions.sh $(builddir)/t/build_test
+t/t_permissions: t/t_permissions.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_permissions" source="$(srcdir)/t/t_permissions.sh"; \
 	$(BUILD_TEST)
@@ -243,7 +243,7 @@ t/t_permissions: t/t_permissions.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_platform
 CLEANFILES += t/t_platform
 EXTRA_DIST += t/t_platform.sh
-t/t_platform: t/t_platform.sh $(builddir)/t/build_test
+t/t_platform: t/t_platform.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_platform" source="$(srcdir)/t/t_platform.sh"; \
 	$(BUILD_TEST)
@@ -251,7 +251,7 @@ t/t_platform: t/t_platform.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_postinstall
 CLEANFILES += t/t_postinstall
 EXTRA_DIST += t/t_postinstall.sh
-t/t_postinstall: t/t_postinstall.sh $(builddir)/t/build_test
+t/t_postinstall: t/t_postinstall.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_postinstall" source="$(srcdir)/t/t_postinstall.sh"; \
 	$(BUILD_TEST)
@@ -259,7 +259,7 @@ t/t_postinstall: t/t_postinstall.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_postremove
 CLEANFILES += t/t_postremove
 EXTRA_DIST += t/t_postremove.sh
-t/t_postremove: t/t_postremove.sh $(builddir)/t/build_test
+t/t_postremove: t/t_postremove.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_postremove" source="$(srcdir)/t/t_postremove.sh"; \
 	$(BUILD_TEST)
@@ -267,7 +267,7 @@ t/t_postremove: t/t_postremove.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_preinstall
 CLEANFILES += t/t_preinstall
 EXTRA_DIST += t/t_preinstall.sh
-t/t_preinstall: t/t_preinstall.sh $(builddir)/t/build_test
+t/t_preinstall: t/t_preinstall.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_preinstall" source="$(srcdir)/t/t_preinstall.sh"; \
 	$(BUILD_TEST)
@@ -275,7 +275,7 @@ t/t_preinstall: t/t_preinstall.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_preremove
 CLEANFILES += t/t_preremove
 EXTRA_DIST += t/t_preremove.sh
-t/t_preremove: t/t_preremove.sh $(builddir)/t/build_test
+t/t_preremove: t/t_preremove.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_preremove" source="$(srcdir)/t/t_preremove.sh"; \
 	$(BUILD_TEST)
@@ -283,7 +283,7 @@ t/t_preremove: t/t_preremove.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_quote
 CLEANFILES += t/t_quote
 EXTRA_DIST += t/t_quote.sh
-t/t_quote: t/t_quote.sh $(builddir)/t/build_test
+t/t_quote: t/t_quote.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_quote" source="$(srcdir)/t/t_quote.sh"; \
 	$(BUILD_TEST)
@@ -291,7 +291,7 @@ t/t_quote: t/t_quote.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_random
 CLEANFILES += t/t_random
 EXTRA_DIST += t/t_random.sh
-t/t_random: t/t_random.sh $(builddir)/t/build_test
+t/t_random: t/t_random.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_random" source="$(srcdir)/t/t_random.sh"; \
 	$(BUILD_TEST)
@@ -299,7 +299,7 @@ t/t_random: t/t_random.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_refcount
 CLEANFILES += t/t_refcount
 EXTRA_DIST += t/t_refcount.sh
-t/t_refcount: t/t_refcount.sh $(builddir)/t/build_test
+t/t_refcount: t/t_refcount.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_refcount" source="$(srcdir)/t/t_refcount.sh"; \
 	$(BUILD_TEST)
@@ -307,7 +307,7 @@ t/t_refcount: t/t_refcount.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_shells
 CLEANFILES += t/t_shells
 EXTRA_DIST += t/t_shells.sh
-t/t_shells: t/t_shells.sh $(builddir)/t/build_test
+t/t_shells: t/t_shells.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_shells" source="$(srcdir)/t/t_shells.sh"; \
 	$(BUILD_TEST)
@@ -315,7 +315,7 @@ t/t_shells: t/t_shells.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_shlibs
 CLEANFILES += t/t_shlibs
 EXTRA_DIST += t/t_shlibs.sh
-t/t_shlibs: t/t_shlibs.sh $(builddir)/t/build_test
+t/t_shlibs: t/t_shlibs.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_shlibs" source="$(srcdir)/t/t_shlibs.sh"; \
 	$(BUILD_TEST)
@@ -323,7 +323,7 @@ t/t_shlibs: t/t_shlibs.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_sort
 CLEANFILES += t/t_sort
 EXTRA_DIST += t/t_sort.sh
-t/t_sort: t/t_sort.sh $(builddir)/t/build_test
+t/t_sort: t/t_sort.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_sort" source="$(srcdir)/t/t_sort.sh"; \
 	$(BUILD_TEST)
@@ -331,7 +331,7 @@ t/t_sort: t/t_sort.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_taskfunc
 CLEANFILES += t/t_taskfunc
 EXTRA_DIST += t/t_taskfunc.sh
-t/t_taskfunc: t/t_taskfunc.sh $(builddir)/t/build_test
+t/t_taskfunc: t/t_taskfunc.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_taskfunc" source="$(srcdir)/t/t_taskfunc.sh"; \
 	$(BUILD_TEST)
@@ -339,7 +339,7 @@ t/t_taskfunc: t/t_taskfunc.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_tee
 CLEANFILES += t/t_tee
 EXTRA_DIST += t/t_tee.sh
-t/t_tee: t/t_tee.sh $(builddir)/t/build_test
+t/t_tee: t/t_tee.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_tee" source="$(srcdir)/t/t_tee.sh"; \
 	$(BUILD_TEST)
@@ -347,7 +347,7 @@ t/t_tee: t/t_tee.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_truthy
 CLEANFILES += t/t_truthy
 EXTRA_DIST += t/t_truthy.sh
-t/t_truthy: t/t_truthy.sh $(builddir)/t/build_test
+t/t_truthy: t/t_truthy.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_truthy" source="$(srcdir)/t/t_truthy.sh"; \
 	$(BUILD_TEST)
@@ -355,7 +355,7 @@ t/t_truthy: t/t_truthy.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup
 CLEANFILES += t/t_usergroup
 EXTRA_DIST += t/t_usergroup.sh
-t/t_usergroup: t/t_usergroup.sh $(builddir)/t/build_test
+t/t_usergroup: t/t_usergroup.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup" source="$(srcdir)/t/t_usergroup.sh"; \
 	$(BUILD_TEST)
@@ -363,7 +363,7 @@ t/t_usergroup: t/t_usergroup.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup_FreeBSD
 CLEANFILES += t/t_usergroup_FreeBSD
 EXTRA_DIST += t/t_usergroup_FreeBSD.sh
-t/t_usergroup_FreeBSD: t/t_usergroup_FreeBSD.sh $(builddir)/t/build_test
+t/t_usergroup_FreeBSD: t/t_usergroup_FreeBSD.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup_FreeBSD" source="$(srcdir)/t/t_usergroup_FreeBSD.sh"; \
 	$(BUILD_TEST)
@@ -371,7 +371,7 @@ t/t_usergroup_FreeBSD: t/t_usergroup_FreeBSD.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup_Linux
 CLEANFILES += t/t_usergroup_Linux
 EXTRA_DIST += t/t_usergroup_Linux.sh
-t/t_usergroup_Linux: t/t_usergroup_Linux.sh $(builddir)/t/build_test
+t/t_usergroup_Linux: t/t_usergroup_Linux.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup_Linux" source="$(srcdir)/t/t_usergroup_Linux.sh"; \
 	$(BUILD_TEST)
@@ -379,7 +379,7 @@ t/t_usergroup_Linux: t/t_usergroup_Linux.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup_MirBSD
 CLEANFILES += t/t_usergroup_MirBSD
 EXTRA_DIST += t/t_usergroup_MirBSD.sh
-t/t_usergroup_MirBSD: t/t_usergroup_MirBSD.sh $(builddir)/t/build_test
+t/t_usergroup_MirBSD: t/t_usergroup_MirBSD.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup_MirBSD" source="$(srcdir)/t/t_usergroup_MirBSD.sh"; \
 	$(BUILD_TEST)
@@ -387,7 +387,7 @@ t/t_usergroup_MirBSD: t/t_usergroup_MirBSD.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup_NetBSD
 CLEANFILES += t/t_usergroup_NetBSD
 EXTRA_DIST += t/t_usergroup_NetBSD.sh
-t/t_usergroup_NetBSD: t/t_usergroup_NetBSD.sh $(builddir)/t/build_test
+t/t_usergroup_NetBSD: t/t_usergroup_NetBSD.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup_NetBSD" source="$(srcdir)/t/t_usergroup_NetBSD.sh"; \
 	$(BUILD_TEST)
@@ -395,7 +395,7 @@ t/t_usergroup_NetBSD: t/t_usergroup_NetBSD.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup_exists
 CLEANFILES += t/t_usergroup_exists
 EXTRA_DIST += t/t_usergroup_exists.sh
-t/t_usergroup_exists: t/t_usergroup_exists.sh $(builddir)/t/build_test
+t/t_usergroup_exists: t/t_usergroup_exists.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup_exists" source="$(srcdir)/t/t_usergroup_exists.sh"; \
 	$(BUILD_TEST)
@@ -403,7 +403,7 @@ t/t_usergroup_exists: t/t_usergroup_exists.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_usergroup_mock
 CLEANFILES += t/t_usergroup_mock
 EXTRA_DIST += t/t_usergroup_mock.sh
-t/t_usergroup_mock: t/t_usergroup_mock.sh $(builddir)/t/build_test
+t/t_usergroup_mock: t/t_usergroup_mock.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_usergroup_mock" source="$(srcdir)/t/t_usergroup_mock.sh"; \
 	$(BUILD_TEST)
@@ -411,7 +411,7 @@ t/t_usergroup_mock: t/t_usergroup_mock.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_users
 CLEANFILES += t/t_users
 EXTRA_DIST += t/t_users.sh
-t/t_users: t/t_users.sh $(builddir)/t/build_test
+t/t_users: t/t_users.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_users" source="$(srcdir)/t/t_users.sh"; \
 	$(BUILD_TEST)
@@ -419,7 +419,7 @@ t/t_users: t/t_users.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_valid_options
 CLEANFILES += t/t_valid_options
 EXTRA_DIST += t/t_valid_options.sh
-t/t_valid_options: t/t_valid_options.sh $(builddir)/t/build_test
+t/t_valid_options: t/t_valid_options.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_valid_options" source="$(srcdir)/t/t_valid_options.sh"; \
 	$(BUILD_TEST)
@@ -427,7 +427,7 @@ t/t_valid_options: t/t_valid_options.sh $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_version
 CLEANFILES += t/t_version
 EXTRA_DIST += t/t_version.sh
-t/t_version: t/t_version.sh version.subr $(builddir)/t/build_test
+t/t_version: t/t_version.sh version.subr t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_version" source="$(srcdir)/t/t_version.sh"; \
 	$(BUILD_TEST)
@@ -435,7 +435,7 @@ t/t_version: t/t_version.sh version.subr $(builddir)/t/build_test
 pkgtests_SCRIPTS += t/t_which
 CLEANFILES += t/t_which
 EXTRA_DIST += t/t_which.sh
-t/t_which: t/t_which.sh $(builddir)/t/build_test
+t/t_which: t/t_which.sh t/build_test
 	-$(MKDIR_P) $(builddir)/t
 	$(AM_V_GEN)target="$(builddir)/t/t_which" source="$(srcdir)/t/t_which.sh"; \
 	$(BUILD_TEST)

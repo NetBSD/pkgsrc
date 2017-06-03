@@ -286,7 +286,8 @@ task_files()
 					elif [ "$copy" = "seen" ]; then
 						$echo "${TASK_MSG}! file copy skipped: $d_path"
 					elif ${CP} "$egfile" "$d_path"; then
-						$echo "${TASK_MSG}> file copied: $d_path"
+						# Defer writing output until after permissions are set.
+						#$echo "${TASK_MSG}> file copied: $d_path"
 						changes="$changes copy"
 					else
 						$echo "${TASK_MSG}! file not copied: $d_path"
@@ -317,22 +318,35 @@ task_files()
 		esac
 		if [ $line_result -eq 0 ]; then
 			case $mode/$user/$group in
-			//)	: "no permissions to set" ;;
+			//)	case " $changes " in
+				*" copy "*)
+					$echo "${TASK_MSG}> file copied: $d_path" ;;
+				*)	: "no permissions to set" ;;
+				esac ;;
 			*)	case $action in
 				add|perms)
 					task_refcount prop_put files "$path" permissions "$mode" "$user" "$group" || line_result=1
 					if [ ! -f "$d_path" ]; then
 						$echo "${TASK_MSG}! file permissions not set on missing: $msg"
 						if [ "$copy" = "yes" ]; then
-							# The should have been copied; otherwise, it's an error.
+							# The file should have been copied; otherwise, it's an error.
 							line_result=1
 						fi
 					elif [ "$action" = "perms" -a -z "$pkg_config_perms" ]; then
 						# "perms" action, but PKG_CONFIG_PERMS is not truthy.
 						$echo "${TASK_MSG}! file permissions skipped: $msg"
 					elif task_set_permissions "$d_path" "$mode" "$user" "$group"; then
-						$echo "${TASK_MSG}> file permissions set: $msg"
+						case " $changes " in
+						*" copy "*)
+							$echo "${TASK_MSG}> file copied: $msg" ;;
+						*)	$echo "${TASK_MSG}> file permissions set: $msg" ;;
+						esac
 					else
+						case " $changes " in
+						*" copy "*)
+							$echo "${TASK_MSG}> file copied: $d_path" ;;
+						*)	: "no file was copied" ;;
+						esac
 						$echo "${TASK_MSG}! file permissions not set: $msg"
 						line_result=1
 					fi ;;
