@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2016/12/15 23:57:33 joerg Exp $
+$NetBSD: distinfo,v 1.7.4.1 2017/06/03 18:33:37 bsiegert Exp $
 
 SHA1 (mozjs17.0.0.tar.gz) = 7805174898c34e5d3c3b256117af9944ba825c89
 RMD160 (mozjs17.0.0.tar.gz) = 2fa3a891da2a7a09019f67c1555c03bcdc51e6c5
@@ -18,5 +18,6 @@ SHA1 (patch-js_src_jsmath.cpp) = 04b0081e5abc1de3df5bdfc78db3971fe77da3d4
 SHA1 (patch-js_src_jsopcode.cpp) = 47d5c742b9d91af1d035f61fd38d491233c1ee87
 SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = f2b12fa554ec319b5848b1cc13ec17ef967b08d7
 SHA1 (patch-js_src_methodjit_TrampolineMIPS.cpp) = d162f8e9a903bd55cf7c92c345a169a8ec050d10
+SHA1 (patch-js_src_shell_jsoptparse.cpp) = d4a8d85c5da316c00409601403fad88dac7882df
 SHA1 (patch-mfbt_double-conversion_utils.h) = d4f2a7c1eb7aa72a147c7f1f4147dfb5fe38ac92
 SHA1 (patch-ml) = fdb4452a613f7ca185cd6b936538bec9ef97c4c1
