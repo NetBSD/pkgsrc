@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/05/26 17:40:44 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/06/03 07:54:07 maya Exp $
 
 DISTNAME=	libepoxy-1.4.2
 CATEGORIES=	graphics
@@ -33,16 +33,13 @@ CONFIGURE_ARGS+=	--enable-glx=yes
 PLIST.glx=	yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.  if ${OPSYS} == "Darwin"
+
 CONFIGURE_ARGS+=	--enable-egl=${MESALIB_SUPPORTS_EGL}
-.    if ${X11_TYPE} == "modular"
-CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.dylib\"
-.    endif
-.  else # ! Darwin
-CONFIGURE_ARGS+=	--enable-egl=${MESALIB_SUPPORTS_EGL}
-.    if !empty(MESALIB_SUPPORTS_EGL:Myes)
+.  if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
-.    endif
+.  endif
+.  if ${OPSYS} == "Darwin" && ${X11_TYPE} == "modular"
+CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.dylib\"
 .  endif
 .else # ! x11
 CONFIGURE_ARGS+=	--enable-glx=no
