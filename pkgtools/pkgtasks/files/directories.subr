@@ -274,7 +274,8 @@ task_directories()
 				elif [ "$makedir" = "seen" ]; then
 					$echo "${TASK_MSG}! $dir_msg creation skipped: $d_path"
 				elif task_makedir "$d_path"; then
-					$echo "${TASK_MSG}> $dir_msg created: $d_path"
+					# Defer writing output until permissions are set.
+					#$echo "${TASK_MSG}> $dir_msg created: $d_path"
 					changes="$changes create"
 				else
 					$echo "${TASK_MSG}! $dir_msg not created: $d_path"
@@ -296,7 +297,11 @@ task_directories()
 		esac
 		if [ $line_result -eq 0 ]; then
 			case $mode/$user/$group in
-			//)	: "no permissions to set" ;;
+			//)	case " $changes " in
+				*" create "*)
+					$echo "${TASK_MSG}> $dir_msg created: $d_path" ;;
+				*)	: "no permissions to set" ;;
+				esac ;;
 			*)	case $action in
 				add|perms)
 					task_refcount prop_put dirs "$path" permissions "$mode" "$user" "$group" || line_result=1
@@ -312,8 +317,17 @@ task_directories()
 						# "perms" action, but PKG_CONFIG_PERMS is not trutyy.
 						$echo "${TASK_MSG}! $dir_msg permissions skipped: $msg"
 					elif task_set_permissions "$d_path" "$mode" "$user" "$group"; then
-						$echo "${TASK_MSG}> $dir_msg permissions set: $msg"
+						case " $changes " in
+						*" create "*)
+							$echo "${TASK_MSG}> $dir_msg created: $msg" ;;
+						*)	$echo "${TASK_MSG}> $dir_msg permissions set: $msg" ;;
+						esac
 					else
+						case " $changes " in
+						*" create "*)
+							$echo "${TASK_MSG}> $dir_msg created: $d_path" ;;
+						*)	: "no directory was created" ;;
+						esac
 						$echo "${TASK_MSG}! $dir_msg permissions not set: $msg"
 						line_result=1
 					fi ;;
