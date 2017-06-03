@@ -26,7 +26,7 @@ dnl ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 dnl POSSIBILITY OF SUCH DAMAGE.
 dnl
 
-AC_INIT([pkgtasks-1], [1.9], [jlam@NetBSD.org])
+AC_INIT([pkgtasks-1], [1.10], [jlam@NetBSD.org])
 
 
 AC_CONFIG_AUX_DIR([build-aux])
