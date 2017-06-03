@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:17:50 agc Exp $
+$NetBSD: distinfo,v 1.5.12.1 2017/06/03 18:03:48 bsiegert Exp $
 
 SHA1 (crypt-1.17.tar.bz2) = 9c746822c84e4276e432b64964f94d1d5ddd13ad
 RMD160 (crypt-1.17.tar.bz2) = 742d72d82fea2e6a9865d8c682c10cbaba69ea2f
@@ -8,3 +8,4 @@ SHA1 (patch-aa) = a2385cf0543a19b1555d4370a10c012c5141b48a
 SHA1 (patch-ab) = c0eb1522dd02c2811deebfa353433e81e71a8928
 SHA1 (patch-ac) = 871a713512b20199b502876d2523e8bf619c5e85
 SHA1 (patch-src_headers_tomcrypt__macros.h) = 4aa1e0773a11c32fca83e7de82e12d44fdbb8202
+SHA1 (patch-src_pk_rsa_rsa__verify__hash.c) = 0bc2467fa3fc0a372baafbfea4c7b328422f8adb
