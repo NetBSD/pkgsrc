@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/06/01 23:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/03 23:54:53 jlam Exp $
 
-DISTNAME=		pkgtasks-1-1.9
+DISTNAME=		pkgtasks-1-1.10
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
