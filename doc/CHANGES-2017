@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2194 2017/06/03 03:06:27 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2195 2017/06/03 23:56:09 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/netatalk3 to 3.1.11 [szptvlfn 2017-06-02]
 	Added sysutils/dtb-arm-vexpress version 4.11.3 [jmcneill 2017-06-02]
 	Updated www/ruby-rack to 1.6.8 [taca 2017-06-03]
+	Updated pkgtools/pkgtasks to 1.10 [jlam 2017-06-03]
