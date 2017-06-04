@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2202 2017/06/04 14:38:10 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2203 2017/06/04 14:49:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2769,3 +2769,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-CGI-Emulate-PSGI to 0.23 [wen 2017-06-04]
 	Added www/ruby-rack16 version 1.6.8 [taca 2017-06-04]
 	Updated devel/p5-Module-CoreList to 5.20170531 [wen 2017-06-04]
+	Updated misc/ruby-sprockets to 3.7.1nb1 [taca 2017-06-04]
+	Updated www/ruby-actionpack42 to 4.2.8nb1 [taca 2017-06-04]
+	Updated www/ruby-innate to 2015.10.28nb1 [taca 2017-06-04]
+	Updated www/ruby-puma to 2.16.0nb1 [taca 2017-06-04]
