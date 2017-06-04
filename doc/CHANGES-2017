@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2195 2017/06/03 23:56:09 jlam Exp $
+$NetBSD: CHANGES-2017,v 1.2196 2017/06/04 02:24:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2762,3 +2762,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/dtb-arm-vexpress version 4.11.3 [jmcneill 2017-06-02]
 	Updated www/ruby-rack to 1.6.8 [taca 2017-06-03]
 	Updated pkgtools/pkgtasks to 1.10 [jlam 2017-06-03]
+	Updated devel/p5-Date-Manip to 6.59 [wen 2017-06-04]
