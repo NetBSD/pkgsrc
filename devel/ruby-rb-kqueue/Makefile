@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/01/09 15:52:33 taca Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/04 16:11:29 taca Exp $
 
-DISTNAME=	rb-kqueue-0.2.4
+DISTNAME=	rb-kqueue-0.2.5
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/01/09 15:52:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/04 16:11:29 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -21,4 +22,6 @@ ${GEM_LIBDIR}/lib/rb-kqueue/watcher/signal.rb
 ${GEM_LIBDIR}/lib/rb-kqueue/watcher/socket_read_write.rb
 ${GEM_LIBDIR}/lib/rb-kqueue/watcher/timer.rb
 ${GEM_LIBDIR}/rb-kqueue.gemspec
+${GEM_LIBDIR}/spec/kqueue_queue_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
