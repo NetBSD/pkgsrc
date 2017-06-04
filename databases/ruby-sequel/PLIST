@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2017/04/22 16:18:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.50 2017/06/04 15:03:09 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -136,6 +136,8 @@ ${GEM_LIBDIR}/doc/release_notes/4.42.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.43.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.44.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.45.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.46.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.47.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.7.0.txt
@@ -254,6 +256,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/_model_constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/_model_pg_row.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/_pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/arbitrary_servers.rb
+${GEM_LIBDIR}/lib/sequel/extensions/auto_literal_strings.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/blank.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/columns_introspection.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/connection_expiration.rb
@@ -325,6 +328,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/symbol_as.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/symbol_as_refinement.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/thread_local_timezones.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/to_dot.rb
+${GEM_LIBDIR}/lib/sequel/extensions/virtual_row_method_block.rb
 ${GEM_LIBDIR}/lib/sequel/model.rb
 ${GEM_LIBDIR}/lib/sequel/model/associations.rb
 ${GEM_LIBDIR}/lib/sequel/model/base.rb
@@ -356,11 +360,13 @@ ${GEM_LIBDIR}/lib/sequel/plugins/composition.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/constraint_validations.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/csv_serializer.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dataset_associations.rb
+${GEM_LIBDIR}/lib/sequel/plugins/def_dataset_method.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/defaults_setter.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/delay_add_association.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/dirty.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/eager_each.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/error_splitter.rb
+${GEM_LIBDIR}/lib/sequel/plugins/finder.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/force_encoding.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/hook_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/identifier_columns.rb
@@ -414,6 +420,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/validate_associated.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_contexts.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
+${GEM_LIBDIR}/lib/sequel/plugins/whitelist_security.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/xml_serializer.rb
 ${GEM_LIBDIR}/lib/sequel/sql.rb
 ${GEM_LIBDIR}/lib/sequel/timezones.rb
@@ -455,6 +462,7 @@ ${GEM_LIBDIR}/spec/extensions/arbitrary_servers_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_dependencies_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_pks_spec.rb
 ${GEM_LIBDIR}/spec/extensions/association_proxies_spec.rb
+${GEM_LIBDIR}/spec/extensions/auto_literal_strings_spec.rb
 ${GEM_LIBDIR}/spec/extensions/auto_validations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/before_after_save_spec.rb
 ${GEM_LIBDIR}/spec/extensions/blacklist_security_spec.rb
@@ -478,6 +486,7 @@ ${GEM_LIBDIR}/spec/extensions/current_datetime_timestamp_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_associations_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dataset_source_alias_spec.rb
 ${GEM_LIBDIR}/spec/extensions/date_arithmetic_spec.rb
+${GEM_LIBDIR}/spec/extensions/def_dataset_method_spec.rb
 ${GEM_LIBDIR}/spec/extensions/defaults_setter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/delay_add_association_spec.rb
 ${GEM_LIBDIR}/spec/extensions/dirty_spec.rb
@@ -488,6 +497,7 @@ ${GEM_LIBDIR}/spec/extensions/error_splitter_spec.rb
 ${GEM_LIBDIR}/spec/extensions/error_sql_spec.rb
 ${GEM_LIBDIR}/spec/extensions/eval_inspect_spec.rb
 ${GEM_LIBDIR}/spec/extensions/filter_having_spec.rb
+${GEM_LIBDIR}/spec/extensions/finder_spec.rb
 ${GEM_LIBDIR}/spec/extensions/force_encoding_spec.rb
 ${GEM_LIBDIR}/spec/extensions/freeze_datasets_spec.rb
 ${GEM_LIBDIR}/spec/extensions/from_block_spec.rb
@@ -593,6 +603,7 @@ ${GEM_LIBDIR}/spec/extensions/validate_associated_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_contexts_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_helpers_spec.rb
+${GEM_LIBDIR}/spec/extensions/whitelist_security_spec.rb
 ${GEM_LIBDIR}/spec/extensions/xml_serializer_spec.rb
 ${GEM_LIBDIR}/spec/files/bad_down_migration/001_create_alt_basic.rb
 ${GEM_LIBDIR}/spec/files/bad_down_migration/002_create_alt_advanced.rb
