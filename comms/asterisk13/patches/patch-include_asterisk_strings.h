@@ -1,8 +1,8 @@
-$NetBSD: patch-include_asterisk_strings.h,v 1.1.1.1 2015/12/05 23:29:10 jnemeth Exp $
+$NetBSD: patch-include_asterisk_strings.h,v 1.2 2017/06/04 07:51:27 jnemeth Exp $
 
---- include/asterisk/strings.h.orig	2015-10-09 21:48:48.000000000 +0000
+--- include/asterisk/strings.h.orig	2017-05-30 17:44:16.000000000 +0000
 +++ include/asterisk/strings.h
-@@ -1159,7 +1159,7 @@ char *ast_tech_to_upper(char *dev_str),
+@@ -1168,7 +1168,7 @@ char *ast_tech_to_upper(char *dev_str),
  	}
  
  	for (pos = dev_str; *pos && *pos != '/'; pos++) {
@@ -11,12 +11,12 @@ $NetBSD: patch-include_asterisk_strings.h,v 1.1.1.1 2015/12/05 23:29:10 jnemeth 
  	}
  	return dev_str;
  }
-@@ -1218,7 +1218,7 @@ static force_inline int attribute_pure a
- 	int hash = 5381;
+@@ -1244,7 +1244,7 @@ static force_inline int attribute_pure a
+ 	unsigned int hash = 5381;
  
  	while (*str) {
--		hash = hash * 33 ^ tolower(*str++);
+-		hash = hash * 33 ^ (unsigned char) tolower(*str++);
 +		hash = hash * 33 ^ tolower((unsigned char)*str++);
  	}
  
- 	return abs(hash);
+ 	return ast_str_hash_restrict(hash);
