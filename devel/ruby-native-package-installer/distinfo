@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/04 15:04:58 taca Exp $
+
+SHA1 (native-package-installer-1.0.3.gem) = 75d83d6e6cb6fe3eb4bafc8b8cbd9cd451070672
+RMD160 (native-package-installer-1.0.3.gem) = 594de625c9aefbac363c093e8f5c10e5c60a24dc
+SHA512 (native-package-installer-1.0.3.gem) = 752c5f38d3b5a10c4cad09fa4ded65e9f7964c319474dd74582874b26462089d42178ba81d3bc5b36d82811ebc59adbbc2fc8086eaf3a244ea00ce0a424502a6
+Size (native-package-installer-1.0.3.gem) = 22528 bytes
