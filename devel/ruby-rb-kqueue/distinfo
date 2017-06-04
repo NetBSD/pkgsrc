@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/09 15:52:33 taca Exp $
+$NetBSD: distinfo,v 1.2 2017/06/04 16:11:29 taca Exp $
 
-SHA1 (rb-kqueue-0.2.4.gem) = 2e72ccedad2011480bd466ba04d8861842d0573c
-RMD160 (rb-kqueue-0.2.4.gem) = 81a580db6dc6f321d033bac058c49d7e54428d82
-SHA512 (rb-kqueue-0.2.4.gem) = 23abc6582a8d96376dc3e572e341ff2a510f5cd033bae0ec04d434bac7c57c89ec50663c5920a6df9a057675ce26704e7d10f5b447bde0afb7f4e38ca66253c2
-Size (rb-kqueue-0.2.4.gem) = 16384 bytes
+SHA1 (rb-kqueue-0.2.5.gem) = 7038671d979987af69b3d5d42df3e53d7a2261ae
+RMD160 (rb-kqueue-0.2.5.gem) = c760de0d94685ff4482effd77c2e4030dd0f9924
+SHA512 (rb-kqueue-0.2.5.gem) = bf90eda5108c64bff144a46c3b1b7380290708e394c675c59552840d471fd1d4a92e7f55ea1450b44b9a79594c7b305371ab374bb853701fef86b32919b3cd45
+Size (rb-kqueue-0.2.5.gem) = 18944 bytes
