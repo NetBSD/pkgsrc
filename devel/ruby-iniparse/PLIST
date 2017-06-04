@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/04 15:54:12 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/iniparse.gemspec
+${GEM_LIBDIR}/lib/iniparse.rb
+${GEM_LIBDIR}/lib/iniparse/document.rb
+${GEM_LIBDIR}/lib/iniparse/generator.rb
+${GEM_LIBDIR}/lib/iniparse/line_collection.rb
+${GEM_LIBDIR}/lib/iniparse/lines.rb
+${GEM_LIBDIR}/lib/iniparse/parser.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

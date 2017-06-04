@@ -1,0 +1,18 @@
+IniParse is a pure Ruby library for parsing
+
+INI[http://en.wikipedia.org/wiki/INI_file] configuration and data files.
+
+=== Main features
+
+* Support for duplicate options.  While not common, some INI files contain an
+  option more than once.  IniParse does not overwrite previous options, but
+  allows you to access all of the duplicate values.
+
+* Preservation of white space and blank lines.  When writing back to your INI
+  file, line indents, white space and comments (and their indents) are
+  preserved.  Only trailing white space (which has no significance in INI
+  files) will be removed.
+
+* Preservation of section and option ordering.  Sections and options are kept
+  in the same order they are in the original document ensuring that nothing
+  gets mangled when writing back to the file.
