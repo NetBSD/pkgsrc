@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2222 2017/06/04 16:51:23 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2223 2017/06/04 19:23:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2800,3 +2800,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-rb-kqueue to 0.2.5 [taca 2017-06-04]
 	Updated devel/ruby-rgl to 0.5.3 [taca 2017-06-04]
 	Renamed textproc/xhtmldiff to textproc/ruby-xhtmldiff [taca 2017-06-04]
+	Updated textproc/py-lxml to 3.8.0 [adam 2017-06-04]
+	Updated textproc/py-m2r to 0.1.6 [adam 2017-06-04]
