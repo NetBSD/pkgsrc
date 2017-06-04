@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2017/05/29 11:00:17 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/06/04 02:49:37 jklos Exp $
 
-DISTNAME=	JSON-2.93
+DISTNAME=	JSON-2.94
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=JSON/}
