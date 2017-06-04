@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkgtasks.mk,v 1.3 2017/06/02 19:13:34 jlam Exp $
+# $NetBSD: bsd.pkgtasks.mk,v 1.4 2017/06/04 00:03:43 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -142,7 +142,7 @@ USE_PKGTASKS=		no
 .include "${PKGSRCDIR}/mk/pkgtasks/usergroup.mk"
 
 # Add a dependency on pkgtasks if package tasks are needed.
-_PKGTASKS_DEPENDS=	pkgtasks-1>=1.9:../../pkgtools/pkgtasks
+_PKGTASKS_DEPENDS=	pkgtasks-1>=1.10:../../pkgtools/pkgtasks
 DEPENDS+=		${"${USE_PKGTASKS:tl}" == "yes":?${_PKGTASKS_DEPENDS}:}
 TASK_MODULE_DIR?=	${LOCALBASE}/share/pkgtasks-1
 
