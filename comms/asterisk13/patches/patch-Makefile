@@ -1,8 +1,8 @@
-$NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
+$NetBSD: patch-Makefile,v 1.4 2017/06/04 07:51:27 jnemeth Exp $
 
---- Makefile.orig	2016-04-20 10:46:18.000000000 +0000
+--- Makefile.orig	2017-05-30 17:44:16.000000000 +0000
 +++ Makefile
-@@ -135,7 +135,7 @@ DEBUG=-g3
+@@ -139,7 +139,7 @@ DEBUG=-g3
  
  # Asterisk.conf is located in ASTETCDIR or by using the -C flag
  # when starting Asterisk
@@ -11,7 +11,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  AGI_DIR=$(ASTDATADIR)/agi-bin
  
  # If you use Apache, you may determine by a grep 'DocumentRoot' of your httpd.conf file
-@@ -172,6 +172,9 @@ DAHDI_UDEV_HOOK_DIR = /usr/share/dahdi/s
+@@ -176,6 +176,9 @@ DAHDI_UDEV_HOOK_DIR = /usr/share/dahdi/s
  # supported run:
  # menuselect/menuselect --help
  
@@ -21,7 +21,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  
  MOD_SUBDIR_CFLAGS="-I$(ASTTOPDIR)/include"
  OTHER_SUBDIR_CFLAGS="-I$(ASTTOPDIR)/include"
-@@ -211,10 +214,6 @@ ifeq ($(AST_DEVMODE),yes)
+@@ -210,10 +213,6 @@ ifeq ($(AST_DEVMODE),yes)
    ADDL_TARGETS+=validate-docs
  endif
  
@@ -32,7 +32,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  ifeq ($(OSARCH),FreeBSD)
    # -V is understood by BSD Make, not by GNU make.
    BSDVERSION=$(shell make -V OSVERSION -f /usr/share/mk/bsd.port.subdir.mk)
-@@ -342,10 +341,10 @@ makeopts: configure
+@@ -336,10 +335,10 @@ makeopts: configure
  	@echo "****"
  	@exit 1
  
@@ -44,16 +44,16 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
 +	menuselect/menuselect --check-deps $@ $(GLOBAL_MAKEOPTS) $(USER_MAKEOPTS)
  endif
  
- $(MOD_SUBDIRS_EMBED_LDSCRIPT):
-@@ -445,7 +444,6 @@ dist-clean: distclean
+ $(MOD_SUBDIRS_MENUSELECT_TREE):
+@@ -412,7 +411,6 @@ dist-clean: distclean
  
  distclean: $(SUBDIRS_DIST_CLEAN) _clean
  	@$(MAKE) -C menuselect dist-clean
 -	@$(MAKE) -C sounds dist-clean
  	rm -f menuselect.makeopts makeopts menuselect-tree menuselect.makedeps
- 	rm -f makeopts.embed_rules
  	rm -f config.log config.status config.cache
-@@ -561,7 +559,7 @@ update:
+ 	rm -rf autom4te.cache
+@@ -527,7 +525,7 @@ update:
  
  NEWHEADERS=$(notdir $(wildcard include/asterisk/*.h))
  OLDHEADERS=$(filter-out $(NEWHEADERS) $(notdir $(DESTDIR)$(ASTHEADERDIR)),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
@@ -62,7 +62,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  	"$(ASTSPOOLDIR)" "$(ASTSPOOLDIR)/dictate" "$(ASTSPOOLDIR)/meetme" \
  	"$(ASTSPOOLDIR)/monitor" "$(ASTSPOOLDIR)/system" "$(ASTSPOOLDIR)/tmp" \
  	"$(ASTSPOOLDIR)/voicemail" "$(ASTSPOOLDIR)/recording" \
-@@ -688,7 +686,7 @@ upgrade: bininstall
+@@ -731,7 +729,7 @@ upgrade: bininstall
  #  (2) the extension to strip off
  define INSTALL_CONFIGS
  	@for x in configs/$(1)/*$(2); do \
@@ -71,7 +71,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  		if [ -f "$${dst}" ]; then \
  			if [ "$(OVERWRITE)" = "y" ]; then \
  				if cmp -s "$${dst}" "$$x" ; then \
-@@ -717,24 +715,24 @@ define INSTALL_CONFIGS
+@@ -760,24 +758,24 @@ define INSTALL_CONFIGS
  			-e 's|^astrundir.*$$|astrundir => $(ASTVARRUNDIR)|' \
  			-e 's|^astlogdir.*$$|astlogdir => $(ASTLOGDIR)|' \
  			-e 's|^astsbindir.*$$|astsbindir => $(ASTSBINDIR)|' \
@@ -102,7 +102,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  	done
  
  samples: adsi
-@@ -767,7 +765,7 @@ basic-pbx:
+@@ -810,7 +808,7 @@ basic-pbx:
  webvmail:
  	@[ -d "$(DESTDIR)$(HTTP_DOCSDIR)/" ] || ( printf "http docs directory not found.\nUpdate assignment of variable HTTP_DOCSDIR in Makefile!\n" && exit 1 )
  	@[ -d "$(DESTDIR)$(HTTP_CGIDIR)" ] || ( printf "cgi-bin directory not found.\nUpdate assignment of variable HTTP_CGIDIR in Makefile!\n" && exit 1 )
@@ -111,7 +111,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  	$(INSTALL) -d "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk"
  	for x in images/*.gif; do \
  		$(INSTALL) -m 644 $$x "$(DESTDIR)$(HTTP_DOCSDIR)/_asterisk/"; \
-@@ -817,11 +815,11 @@ endif
+@@ -860,11 +858,11 @@ endif
  endif
  
  install-logrotate:
@@ -126,7 +126,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  	rm -f contrib/scripts/asterisk.logrotate.tmp
  
  config:
-@@ -932,7 +930,7 @@ uninstall-all: _uninstall
+@@ -976,7 +974,7 @@ uninstall-all: _uninstall
  	rm -rf "$(DESTDIR)$(ASTVARLIBDIR)"
  	rm -rf "$(DESTDIR)$(ASTDATADIR)"
  	rm -rf "$(DESTDIR)$(ASTSPOOLDIR)"
@@ -135,7 +135,7 @@ $NetBSD: patch-Makefile,v 1.3 2016/05/06 07:41:06 jnemeth Exp $
  	rm -rf "$(DESTDIR)$(ASTLOGDIR)"
  
  menuconfig: menuselect
-@@ -1021,6 +1019,7 @@ check-alembic: makeopts
+@@ -1064,6 +1062,7 @@ check-alembic: makeopts
  	@ALEMBIC=$(ALEMBIC) build_tools/make_check_alembic config cdr voicemail >&2
  
  .PHONY: menuselect
