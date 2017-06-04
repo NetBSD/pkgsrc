@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/08/01 16:45:13 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/04 15:48:06 taca Exp $
 
-DISTNAME=	contracts-0.14.0
+DISTNAME=	contracts-0.16.0
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://github.com/egonSchiele/contracts.ruby
+HOMEPAGE=	https://github.com/egonSchiele/contracts.ruby
 COMMENT=	Contracts for Ruby
 LICENSE=	2-clause-bsd
 
