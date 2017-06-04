@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/04 16:49:35 taca Exp $
+bin/xhtmldiff${RUBY_SUFFIX}
+${GEM_HOME}/cache/xhtmldiff-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/bin/xhtmldiff
+${GEM_LIBDIR}/examples/a.html
+${GEM_LIBDIR}/examples/b.html
+${GEM_LIBDIR}/examples/example.css
+${GEM_LIBDIR}/lib/xhtmldiff.rb
+${GEM_LIBDIR}/setup.rb
+${GEM_HOME}/specifications/xhtmldiff-${PKGVERSION}.gemspec
