@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2197 2017/06/04 07:21:28 wen Exp $
+$NetBSD: CHANGES-2017,v 1.2198 2017/06/04 07:55:11 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2764,3 +2764,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated pkgtools/pkgtasks to 1.10 [jlam 2017-06-03]
 	Updated devel/p5-Date-Manip to 6.59 [wen 2017-06-04]
 	Updated devel/p5-Type-Tiny to 1.002000 [wen 2017-06-04]
+	Updated comms/asterisk13 to 13.16.0 [jnemeth 2017-06-04]
