@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2219 2017/06/04 16:06:28 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2220 2017/06/04 16:11:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2797,3 +2797,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-minitest to 5.10.2 [taca 2017-06-04]
 	Updated devel/ruby-pkg-config to 1.2.3 [taca 2017-06-04]
 	Updated devel/ruby-power_assert to 1.0.2 [taca 2017-06-04]
+	Updated devel/ruby-rb-kqueue to 0.2.5 [taca 2017-06-04]
