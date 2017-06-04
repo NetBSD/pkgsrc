@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/21 01:18:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/04 15:46:52 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/ara-player-data.rb
@@ -27,6 +28,7 @@ ${GEM_LIBDIR}/examples/vector.rb
 ${GEM_LIBDIR}/lib/bit-struct.rb
 ${GEM_LIBDIR}/lib/bit-struct/bit-struct.rb
 ${GEM_LIBDIR}/lib/bit-struct/char-field.rb
+${GEM_LIBDIR}/lib/bit-struct/field.rb
 ${GEM_LIBDIR}/lib/bit-struct/fields.rb
 ${GEM_LIBDIR}/lib/bit-struct/float-field.rb
 ${GEM_LIBDIR}/lib/bit-struct/hex-octet-field.rb
