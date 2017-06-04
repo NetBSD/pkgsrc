@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/08/01 16:45:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/04 15:48:06 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -50,6 +50,7 @@ ${GEM_LIBDIR}/features/builtin_contracts/set_of.feature
 ${GEM_LIBDIR}/features/builtin_contracts/xor.feature
 ${GEM_LIBDIR}/features/support/env.rb
 ${GEM_LIBDIR}/lib/contracts.rb
+${GEM_LIBDIR}/lib/contracts/attrs.rb
 ${GEM_LIBDIR}/lib/contracts/builtin_contracts.rb
 ${GEM_LIBDIR}/lib/contracts/call_with.rb
 ${GEM_LIBDIR}/lib/contracts/core.rb
@@ -70,10 +71,12 @@ ${GEM_LIBDIR}/script/cucumber
 ${GEM_LIBDIR}/script/docs-release
 ${GEM_LIBDIR}/script/docs-staging
 ${GEM_LIBDIR}/script/rubocop.rb
+${GEM_LIBDIR}/spec/attrs_spec.rb
 ${GEM_LIBDIR}/spec/builtin_contracts_spec.rb
 ${GEM_LIBDIR}/spec/contracts_spec.rb
 ${GEM_LIBDIR}/spec/fixtures/fixtures.rb
 ${GEM_LIBDIR}/spec/invariants_spec.rb
+${GEM_LIBDIR}/spec/methods_spec.rb
 ${GEM_LIBDIR}/spec/module_spec.rb
 ${GEM_LIBDIR}/spec/override_validators_spec.rb
 ${GEM_LIBDIR}/spec/ruby_version_specific/contracts_spec_1.9.rb
