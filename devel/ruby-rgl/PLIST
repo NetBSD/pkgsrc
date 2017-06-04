@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/09 15:00:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/04 16:13:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/Gemfile
@@ -89,7 +89,6 @@ ${GEM_LIBDIR}/lib/rgl/dijkstra_visitor.rb
 ${GEM_LIBDIR}/lib/rgl/dot.rb
 ${GEM_LIBDIR}/lib/rgl/edge_properties_map.rb
 ${GEM_LIBDIR}/lib/rgl/edmonds_karp.rb
-${GEM_LIBDIR}/lib/rgl/enumerable_ext.rb
 ${GEM_LIBDIR}/lib/rgl/graph_iterator.rb
 ${GEM_LIBDIR}/lib/rgl/graph_visitor.rb
 ${GEM_LIBDIR}/lib/rgl/graph_wrapper.rb
