@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/02/21 01:18:13 minskim Exp $
+$NetBSD: distinfo,v 1.2 2017/06/04 15:46:52 taca Exp $
 
-SHA1 (bit-struct-0.15.0.gem) = 206032b90fa513a4915f9266a71f95e7c972effb
-RMD160 (bit-struct-0.15.0.gem) = ea4eabab03741245e57e24f8364ea739e18fc311
-SHA512 (bit-struct-0.15.0.gem) = f2bb466908c056d552c323ba0543ff698d94e5f49e35246d2497021a11151d2ab5355844eab338c87b021e8198729d0767d9d87b59ab012e9b296b15b838cfd3
-Size (bit-struct-0.15.0.gem) = 30720 bytes
+SHA1 (bit-struct-0.16.gem) = 8e16704d7662484ae7f061c8a3be0db33309138a
+RMD160 (bit-struct-0.16.gem) = 8e3d5f9a1fb1432c790da249a8da7924e67c8e83
+SHA512 (bit-struct-0.16.gem) = 8c31592d53daea5f283f8309a52c22c96c519d51c4e3c1657b36e83b802899aafe95eab9b88d9ec692e84207fc6bc952a1f1ff1354fc2b99fc327d58934bec8d
+Size (bit-struct-0.16.gem) = 31232 bytes

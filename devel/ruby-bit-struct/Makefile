@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/02/21 01:18:13 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/04 15:46:52 taca Exp $
 
-DISTNAME=	bit-struct-0.15.0
+DISTNAME=	bit-struct-0.16
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
