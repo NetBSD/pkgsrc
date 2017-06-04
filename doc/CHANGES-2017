@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2218 2017/06/04 15:57:13 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2219 2017/06/04 16:06:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2796,3 +2796,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-iniparse version 1.4.3 [taca 2017-06-04]
 	Updated devel/ruby-minitest to 5.10.2 [taca 2017-06-04]
 	Updated devel/ruby-pkg-config to 1.2.3 [taca 2017-06-04]
+	Updated devel/ruby-power_assert to 1.0.2 [taca 2017-06-04]
