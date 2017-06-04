@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2213 2017/06/04 15:47:16 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2214 2017/06/04 15:48:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-padrino-mailer to 0.14.1.1 [taca 2017-06-04]
 	Updated www/ruby-padrino to 0.14.1.1 [taca 2017-06-04]
 	Updated devel/ruby-bit-struct to 0.16 [taca 2017-06-04]
+	Updated devel/ruby-contracts to 0.16.0 [taca 2017-06-04]
