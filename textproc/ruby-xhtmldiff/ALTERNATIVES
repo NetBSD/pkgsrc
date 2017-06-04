@@ -1,0 +1,1 @@
+bin/xhtmldiff @PREFIX@/bin/xhtmldiff20@RUBY_SUFFIX@
