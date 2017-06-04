@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.930 2017/05/18 20:02:32 adam Exp $
+# $NetBSD: Makefile,v 1.931 2017/06/04 16:50:10 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -867,6 +867,7 @@ SUBDIR+=	ruby-toml
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-will-paginate
+SUBDIR+=	ruby-xhtmldiff
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xpath
 SUBDIR+=	ruby-xslt
@@ -935,7 +936,6 @@ SUBDIR+=	xerces-c
 SUBDIR+=	xerces-j
 SUBDIR+=	xfce4-dict
 SUBDIR+=	xhtml
-SUBDIR+=	xhtmldiff
 SUBDIR+=	xml-coreutils
 SUBDIR+=	xml2
 SUBDIR+=	xml2doc
