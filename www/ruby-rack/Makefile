@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/06/04 15:10:09 taca Exp $
+# $NetBSD: Makefile,v 1.23 2017/06/04 15:15:39 taca Exp $
 
 DISTNAME=	rack-2.0.3
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rack/rack20/}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
