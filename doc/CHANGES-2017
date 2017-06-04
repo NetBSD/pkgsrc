@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2208 2017/06/04 15:10:43 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2209 2017/06/04 15:18:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-native-package-installer version 1.0.3 [taca 2017-06-04]
 	Updated www/ruby-capybara to 2.14.0 [taca 2017-06-04]
 	Updated www/ruby-rack to 2.0.3 [taca 2017-06-04]
+	Updated www/ruby-rack-protection to 2.0.0 [taca 2017-06-04]
