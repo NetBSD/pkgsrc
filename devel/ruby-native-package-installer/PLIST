@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/04 15:04:58 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/doc/text/gpl-3.txt
+${GEM_LIBDIR}/doc/text/lgpl-3.txt
+${GEM_LIBDIR}/doc/text/news.md
+${GEM_LIBDIR}/lib/native-package-installer.rb
+${GEM_LIBDIR}/lib/native-package-installer/executable-finder.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/alt-linux.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/arch-linux.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/debian.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/fedora.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/freebsd.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/homebrew.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/macports.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/msys2.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/redhat.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/suse.rb
+${GEM_LIBDIR}/lib/native-package-installer/platform/unknown.rb
+${GEM_LIBDIR}/lib/native-package-installer/version.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-executable-finder.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
