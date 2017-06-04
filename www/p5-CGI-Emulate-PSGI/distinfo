@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/07/24 00:44:05 wen Exp $
+$NetBSD: distinfo,v 1.9 2017/06/04 08:38:08 wen Exp $
 
-SHA1 (CGI-Emulate-PSGI-0.22.tar.gz) = 41f24c483076cbf801f195643066cd3613a57320
-RMD160 (CGI-Emulate-PSGI-0.22.tar.gz) = 87247273569c9e5e4930ab9b867cbc7289c5c5bc
-SHA512 (CGI-Emulate-PSGI-0.22.tar.gz) = a0adf28a49f71702439258cd0bbf510c322b7856b18f01d977613e6d8aeab43daf2f956f67c1491e19945b79f40d8229fb928653864de35faed4c13284b70401
-Size (CGI-Emulate-PSGI-0.22.tar.gz) = 14658 bytes
+SHA1 (CGI-Emulate-PSGI-0.23.tar.gz) = 8a96b025c9993c6b3880b88c6dc108df9f38363e
+RMD160 (CGI-Emulate-PSGI-0.23.tar.gz) = d53fefc82fa2c2e618c6455d8bbd5ad99d6b5684
+SHA512 (CGI-Emulate-PSGI-0.23.tar.gz) = 0e1017175ccab53ef50993c9884990dc85c7cdb30744f4bac2df4486a63fd5fd24e7f4b0e473d39b1f2b4dfdcf12756016edbc39e0fb725c6c610c21e6a7f96a
+Size (CGI-Emulate-PSGI-0.23.tar.gz) = 15713 bytes
