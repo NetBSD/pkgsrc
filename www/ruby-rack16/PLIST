@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/04 14:17:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/04 14:37:01 taca Exp $
 bin/rackup16${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -111,6 +111,7 @@ ${GEM_LIBDIR}/test/multipart/filename_and_modification_param
 ${GEM_LIBDIR}/test/multipart/filename_and_no_name
 ${GEM_LIBDIR}/test/multipart/filename_with_escaped_quotes
 ${GEM_LIBDIR}/test/multipart/filename_with_escaped_quotes_and_modification_param
+${GEM_LIBDIR}/test/multipart/filename_with_null_byte
 ${GEM_LIBDIR}/test/multipart/filename_with_percent_escaped_quotes
 ${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages
 ${GEM_LIBDIR}/test/multipart/filename_with_unescaped_percentages2
