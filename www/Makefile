@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1243 2017/06/01 03:58:38 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1244 2017/06/04 14:18:39 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -821,6 +821,7 @@ SUBDIR+=	ruby-rack-ssl
 SUBDIR+=	ruby-rack-test
 SUBDIR+=	ruby-rack14
 SUBDIR+=	ruby-rack15
+SUBDIR+=	ruby-rack16
 SUBDIR+=	ruby-rails-deprecated_sanitizer
 SUBDIR+=	ruby-rails-html-sanitizer
 SUBDIR+=	ruby-rails32
