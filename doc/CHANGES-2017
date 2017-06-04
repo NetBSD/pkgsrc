@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2201 2017/06/04 14:19:48 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2202 2017/06/04 14:38:10 wen Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2768,3 +2768,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/p5-CGI-Compile to 0.22 [wen 2017-06-04]
 	Updated www/p5-CGI-Emulate-PSGI to 0.23 [wen 2017-06-04]
 	Added www/ruby-rack16 version 1.6.8 [taca 2017-06-04]
+	Updated devel/p5-Module-CoreList to 5.20170531 [wen 2017-06-04]
