@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/06/08 19:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/05 14:24:26 ryoon Exp $
 #
 
 DISTNAME=	umph-0.2.5
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://umph.googlecode.com/files/
 
