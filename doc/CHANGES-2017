@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2228 2017/06/05 11:40:41 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2229 2017/06/05 13:39:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2810,3 +2810,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/git to 2.13.1 [adam 2017-06-05]
 	Updated devel/gdb to 8.0 [maya 2017-06-05]
 	Added devel/gdb7 to 7.11nb3 [maya 2017-06-05]
+	Updated www/contao43 to 4.3.11 [taca 2017-06-05]
