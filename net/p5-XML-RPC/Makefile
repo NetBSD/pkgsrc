@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/01/24 13:39:42 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/05 14:24:25 ryoon Exp $
 
 DISTNAME=	XML-RPC-0.9
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DA/DAAN/
 
