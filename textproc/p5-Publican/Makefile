@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 19:24:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/05 14:24:44 ryoon Exp $
 #
 
 DISTNAME=	Publican-v4.3.1
 PKGNAME=	p5-${DISTNAME:S/v//1}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	https://fedorahosted.org/releases/p/u/publican/
 
