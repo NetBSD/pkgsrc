@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2240 2017/06/05 14:32:47 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2241 2017/06/05 14:33:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2827,3 +2827,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/ruby-mail to 2.6.5 [taca 2017-06-05]
 	Updated math/ruby-gsl to 2.1.0.3 [taca 2017-06-05]
 	Updated misc/ruby-bundler to 1.15.1 [taca 2017-06-05]
+	Updated misc/ruby-mini_portile2 to 2.2.0 [taca 2017-06-05]
