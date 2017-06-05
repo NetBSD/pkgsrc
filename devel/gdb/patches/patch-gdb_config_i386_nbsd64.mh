@@ -1,0 +1,15 @@
+$NetBSD: patch-gdb_config_i386_nbsd64.mh,v 1.1 2017/06/05 11:38:51 maya Exp $
+
+Missing files, otherwise we die on undefined references.
+Also trying to add bsd-kvm stuff again
+
+--- gdb/config/i386/nbsd64.mh.orig	2017-06-04 15:54:54.000000000 +0000
++++ gdb/config/i386/nbsd64.mh
+@@ -1,3 +1,6 @@
+ # Host: NetBSD/amd64
+ NATDEPFILES= fork-child.o inf-ptrace.o \
+-	nbsd-nat.o amd64-nat.o x86-bsd-nat.o amd64-bsd-nat.o amd64-nbsd-nat.o
++	nbsd-nat.o amd64-nat.o x86-bsd-nat.o amd64-bsd-nat.o amd64-nbsd-nat.o \
++	x86-nat.o x86-dregs.o bsd-kvm.o
++
++LOADLIBES= -lkvm
