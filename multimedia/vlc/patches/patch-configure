@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.8.2.2 2017/06/05 09:11:04 bsiegert Exp $
+
+Remove bogus Solaris exclusion.
+
+--- configure.orig	2016-05-31 16:56:33.000000000 +0000
++++ configure
+@@ -26281,7 +26281,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_sse_inline" >&5
+ $as_echo "$ac_cv_sse_inline" >&6; }
+ 
+-  if test "${ac_cv_sse_inline}" != "no" -a "${SYS}" != "solaris"; then :
++  if test "${ac_cv_sse_inline}" != "no"; then :
+ 
+ 
+ $as_echo "#define CAN_COMPILE_SSE 1" >>confdefs.h
+@@ -26324,7 +26324,7 @@ rm -f core conftest.err conftest.$ac_obj
+ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_sse2_inline" >&5
+ $as_echo "$ac_cv_sse2_inline" >&6; }
+-  if test "${ac_cv_sse2_inline}" != "no" -a "${SYS}" != "solaris"; then :
++  if test "${ac_cv_sse2_inline}" != "no"; then :
+ 
+ 
+ $as_echo "#define CAN_COMPILE_SSE2 1" >>confdefs.h

@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.201 2017/03/01 09:02:48 wiz Exp $
+# $NetBSD: Makefile,v 1.201.2.1 2017/06/05 09:11:04 bsiegert Exp $
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		6
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/}
 MASTER_SITES+=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.xz
 
-VLC_VERSION=		2.2.4
+VLC_VERSION=		2.2.6
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -24,7 +23,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
-PLIST_VARS+=		x86simd altivec v4l2 oss
+PLIST_VARS+=		altivec cdrom oss v4l2 x86simd
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -62,7 +61,6 @@ CONFIGURE_ARGS+=	--disable-vnc
 CONFIGURE_ARGS+=	--disable-vsxu
 CONFIGURE_ARGS+=	--disable-zvbi
 
-
 CFLAGS+=		-fPIC
 CXXFLAGS+=		-fPIC
 
@@ -83,6 +81,11 @@ CONFIGURE_ARGS+=	--enable-mmx \
 .if ${MACHINE_ARCH} == "powerpc"
 PLIST.altivec=		yes
 CONFIGURE_ARGS+=	--enable-altivec
+.endif
+
+# SunOS cdio interface is unsupported
+.if ${OPSYS} != "SunOS"
+PLIST.cdrom=		yes
 .endif
 
 # Enable when cleanly builds
