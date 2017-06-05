@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2236 2017/06/05 14:24:48 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2237 2017/06/05 14:26:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2823,3 +2823,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-test-unit to 3.2.4 [taca 2017-06-05]
 	Updated devel/ruby-tins to 1.14.0 [taca 2017-06-05]
 	Updated fonts/ruby-ttfunk to 1.5.1 [taca 2017-06-05]
+	Updated graphics/ruby-cairo to 1.15.9 [taca 2017-06-05]
