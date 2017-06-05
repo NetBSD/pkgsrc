@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/11/29 14:50:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/06/05 14:05:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -6,6 +6,7 @@ ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/rspec/expectations.rb
+${GEM_LIBDIR}/lib/rspec/expectations/block_snippet_extractor.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/expectation_target.rb
 ${GEM_LIBDIR}/lib/rspec/expectations/fail_with.rb
