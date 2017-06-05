@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 2015/03/08 15:24:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/06/05 15:21:20 taca Exp $
 bin/ferret-browser${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/ferret_ext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
-${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/RELEASE_CHANGES
 ${GEM_LIBDIR}/RELEASE_NOTES
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/TODO
-${GEM_LIBDIR}/TUTORIAL
+${GEM_LIBDIR}/TUTORIAL.md
 ${GEM_LIBDIR}/bin/ferret-browser
 ${GEM_LIBDIR}/ext/BZLIB_blocksort.c
 ${GEM_LIBDIR}/ext/BZLIB_bzlib.c
@@ -188,7 +188,6 @@ ${GEM_LIBDIR}/lib/ferret/index.rb
 ${GEM_LIBDIR}/lib/ferret/number_tools.rb
 ${GEM_LIBDIR}/lib/ferret/version.rb
 ${GEM_LIBDIR}/lib/ferret_ext.${RUBY_DLEXT}
-${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/long_running/largefile/tc_largefile.rb
 ${GEM_LIBDIR}/test/test_all.rb
 ${GEM_LIBDIR}/test/test_helper.rb
