@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/05 15:30:17 taca Exp $
+
+SHA1 (iso8601-0.9.1.gem) = 86e0fee359d1b7f6fc15f33c525eda05c100d6a1
+RMD160 (iso8601-0.9.1.gem) = 61b8de43851eb52ec8c0d04bed14d6be063c5eb1
+SHA512 (iso8601-0.9.1.gem) = b3d444d84f71c574a28bf14065bfc0da735bf3e12483161f6f1dc9b8c2a18e2c60c51da1f0c1cffb6905ca3444a70d8e69a535733a946fcca2b544032f15b63d
+Size (iso8601-0.9.1.gem) = 27136 bytes
