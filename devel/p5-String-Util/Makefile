@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/09/19 09:07:38 mef Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:36 ryoon Exp $
 
 DISTNAME=	String-Util-1.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIKO/
 
