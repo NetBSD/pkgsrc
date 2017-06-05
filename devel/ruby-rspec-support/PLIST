@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/10/09 15:02:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/06/05 14:04:42 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Changelog.md
 ${GEM_LIBDIR}/LICENSE.md
@@ -18,6 +18,10 @@ ${GEM_LIBDIR}/lib/rspec/support/object_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/support/recursive_const_methods.rb
 ${GEM_LIBDIR}/lib/rspec/support/reentrant_mutex.rb
 ${GEM_LIBDIR}/lib/rspec/support/ruby_features.rb
+${GEM_LIBDIR}/lib/rspec/support/source.rb
+${GEM_LIBDIR}/lib/rspec/support/source/location.rb
+${GEM_LIBDIR}/lib/rspec/support/source/node.rb
+${GEM_LIBDIR}/lib/rspec/support/source/token.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/deprecation_helpers.rb
 ${GEM_LIBDIR}/lib/rspec/support/spec/formatting_support.rb
