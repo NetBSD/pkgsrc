@@ -1,16 +1,16 @@
-$NetBSD: patch-MANIFEST,v 1.1 2017/04/28 22:59:48 sevan Exp $
+$NetBSD: patch-MANIFEST,v 1.2 2017/06/05 13:41:22 ryoon Exp $
 
 [perl #131211] fixup File::Glob degenerate matching
 https://research.swtch.com/glob
 https://perl5.git.perl.org/perl.git/commit/33252c318625f3c6c89b816ee88481940e3e6f95
 
---- MANIFEST.orig	2017-04-28 18:35:00.000000000 +0000
+--- MANIFEST.orig	2017-05-30 09:57:56.000000000 +0000
 +++ MANIFEST
-@@ -3706,6 +3706,7 @@ ext/File-Glob/t/case.t		See if File::Glo
+@@ -3948,6 +3948,7 @@ ext/File-Glob/t/basic.t		See if File::Gl
+ ext/File-Glob/t/case.t		See if File::Glob works
  ext/File-Glob/t/global.t	See if File::Glob works
- ext/File-Glob/TODO		File::Glob extension todo list
  ext/File-Glob/t/rt114984.t	See if File::Glob works
 +ext/File-Glob/t/rt131211.t	See if File::Glob works
  ext/File-Glob/t/taint.t		See if File::Glob works
  ext/File-Glob/t/threads.t	See if File::Glob + threads works
- ext/GDBM_File/GDBM_File.pm	GDBM extension Perl module
+ ext/File-Glob/TODO		File::Glob extension todo list
