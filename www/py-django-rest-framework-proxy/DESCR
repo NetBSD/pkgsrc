@@ -1,0 +1,8 @@
+Provides views to redirect incoming request to another API server.
+
+Features:
+* Masquerade paths
+* HTTP Basic Auth (between your API and backend API)
+* Token Auth
+* Supported methods: GET/POST/PUT/PATCH
+* File uploads

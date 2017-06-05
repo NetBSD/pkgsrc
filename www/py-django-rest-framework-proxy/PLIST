@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/05 15:23:01 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/rest_framework_proxy/__init__.py
+${PYSITELIB}/rest_framework_proxy/__init__.pyc
+${PYSITELIB}/rest_framework_proxy/__init__.pyo
+${PYSITELIB}/rest_framework_proxy/adapters.py
+${PYSITELIB}/rest_framework_proxy/adapters.pyc
+${PYSITELIB}/rest_framework_proxy/adapters.pyo
+${PYSITELIB}/rest_framework_proxy/models.py
+${PYSITELIB}/rest_framework_proxy/models.pyc
+${PYSITELIB}/rest_framework_proxy/models.pyo
+${PYSITELIB}/rest_framework_proxy/settings.py
+${PYSITELIB}/rest_framework_proxy/settings.pyc
+${PYSITELIB}/rest_framework_proxy/settings.pyo
+${PYSITELIB}/rest_framework_proxy/utils.py
+${PYSITELIB}/rest_framework_proxy/utils.pyc
+${PYSITELIB}/rest_framework_proxy/utils.pyo
+${PYSITELIB}/rest_framework_proxy/views.py
+${PYSITELIB}/rest_framework_proxy/views.pyc
+${PYSITELIB}/rest_framework_proxy/views.pyo
