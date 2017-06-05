@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/08/24 00:26:51 wen Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/05 14:25:01 ryoon Exp $
 
 DISTNAME=	Convert-NLS_DATE_FORMAT-0.06
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 
