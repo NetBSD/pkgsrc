@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2245 2017/06/05 14:50:54 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2246 2017/06/05 15:15:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2832,3 +2832,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/ruby-amq-protocol to 2.2.0 [taca 2017-06-05]
 	Updated net/ruby-dnsruby to 1.60.1 [taca 2017-06-05]
 	Updated net/ruby-domain_name to 0.5.20170404 [taca 2017-06-05]
+	Added net/ruby-proxifier version 1.0.3 [taca 2017-06-05]
+	Updated security/ruby-oauth to 0.5.3 [taca 2017-06-05]
