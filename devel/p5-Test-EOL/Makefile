@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/09/20 12:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:42 ryoon Exp $
 
 DISTNAME=	Test-EOL-1.6
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FR/FREW/
 
