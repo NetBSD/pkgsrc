@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2017/01/28 12:47:45 wen Exp $
+# $NetBSD: Makefile,v 1.39 2017/06/05 14:24:39 ryoon Exp $
 
 DISTNAME=	Filter-1.57
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Filter/}
 
