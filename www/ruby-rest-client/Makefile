@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/03/20 16:01:31 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/05 15:35:29 taca Exp $
 
-DISTNAME=	rest-client-2.0.1
+DISTNAME=	rest-client-2.0.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
