@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2262 2017/06/05 20:22:37 leot Exp $
+$NetBSD: CHANGES-2017,v 1.2263 2017/06/05 20:37:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2850,3 +2850,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/php-libawl to 0.57 [taca 2017-06-05]
 	Updated devel/p5-File-Path to 2.13 [bsiegert 2017-06-05]
 	Updated textproc/the_silver_searcher to 2.0.0 [leot 2017-06-05]
+	Updated net/youtube-dl to 20170605 [leot 2017-06-05]
