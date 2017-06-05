@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:59 ryoon Exp $
 #
 
 DISTNAME=	Geo-Gpx-0.26
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 

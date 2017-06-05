@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2016/08/16 12:40:20 mef Exp $
+# $NetBSD: Makefile,v 1.20 2017/06/05 14:24:17 ryoon Exp $
 #
 
 DISTNAME=	Geo-IPfree-1.151940
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 
