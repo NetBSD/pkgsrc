@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2016/06/08 19:24:07 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2017/06/05 14:24:15 ryoon Exp $
 
 DISTNAME=	xmltv-0.5.56
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
 EXTRACT_SUFX=	.tar.bz2
