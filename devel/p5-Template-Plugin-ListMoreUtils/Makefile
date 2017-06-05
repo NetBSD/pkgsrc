@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 19:23:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/05 14:23:38 ryoon Exp $
 #
 
 DISTNAME=	Template-Plugin-ListMoreUtils-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
