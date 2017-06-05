@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2017/05/17 08:08:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2017/06/05 20:37:21 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -728,9 +728,6 @@ ${PYSITELIB}/youtube_dl/extractor/go90.pyo
 ${PYSITELIB}/youtube_dl/extractor/godtube.py
 ${PYSITELIB}/youtube_dl/extractor/godtube.pyc
 ${PYSITELIB}/youtube_dl/extractor/godtube.pyo
-${PYSITELIB}/youtube_dl/extractor/godtv.py
-${PYSITELIB}/youtube_dl/extractor/godtv.pyc
-${PYSITELIB}/youtube_dl/extractor/godtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/golem.py
 ${PYSITELIB}/youtube_dl/extractor/golem.pyc
 ${PYSITELIB}/youtube_dl/extractor/golem.pyo
