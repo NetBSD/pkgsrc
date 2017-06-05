@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:24:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/06/05 14:25:09 ryoon Exp $
 #
 
 DISTNAME=	Apache2-AuthCookieDBI-2.17
-PKGREVISION=	3
+PKGREVISION=	4
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache2/}

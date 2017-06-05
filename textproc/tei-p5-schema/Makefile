@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/25 06:57:03 asau Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:25:01 ryoon Exp $
 #
 
 DISTNAME=	tei-p5-schema-1.2.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tei/}
 EXTRACT_SUFX=	.zip
