@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2249 2017/06/05 15:24:25 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2250 2017/06/05 15:27:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2809,7 +2809,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-functools32 version 3.2.3.2 [adam 2017-06-05]
 	Updated devel/git to 2.13.1 [adam 2017-06-05]
 	Updated devel/gdb to 8.0 [maya 2017-06-05]
-	Added devel/gdb7 to 7.11nb3 [maya 2017-06-05]
+	Added devel/gdb7 version 7.11nb3 [maya 2017-06-05]
 	Updated www/contao43 to 4.3.11 [taca 2017-06-05]
 	Updated lang/perl5 to 5.26.0 [ryoon 2017-06-05]
 	Updated devel/ruby-rspec-support to 3.6.0 [taca 2017-06-05]
@@ -2837,3 +2837,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-ferret to 0.11.8.7 [taca 2017-06-05]
 	Updated textproc/ruby-nokogiri to 1.8.0 [taca 2017-06-05]
 	Updated textproc/ruby-plist to 3.3.0 [taca 2017-06-05]
+	Added www/py-django-rest-framework-proxy version 1.6.0 [adam 2017-06-05]
