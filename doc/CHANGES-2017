@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2250 2017/06/05 15:27:13 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2251 2017/06/05 15:27:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-nokogiri to 1.8.0 [taca 2017-06-05]
 	Updated textproc/ruby-plist to 3.3.0 [taca 2017-06-05]
 	Added www/py-django-rest-framework-proxy version 1.6.0 [adam 2017-06-05]
+	Updated textproc/ruby-yard to 0.9.9 [taca 2017-06-05]
