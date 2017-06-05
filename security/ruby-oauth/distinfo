@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/03/15 15:15:49 taca Exp $
+$NetBSD: distinfo,v 1.11 2017/06/05 15:15:01 taca Exp $
 
-SHA1 (oauth-0.5.1.gem) = 7f46a6840f84f6622e71895386c8b7a74f65ed9a
-RMD160 (oauth-0.5.1.gem) = 1ad850b8133b2ec8793de579c9ea0484e2eeb242
-SHA512 (oauth-0.5.1.gem) = 8afa43c4cb8c606c37dd63c6a687f2aea54875fa67b8bcef04e529af9013625c86194e52aa53b54ff0bd2e4a0d64f00a044715c6672bc0529287586015702144
-Size (oauth-0.5.1.gem) = 43520 bytes
+SHA1 (oauth-0.5.3.gem) = 1d90a35c0687e701f50139108781ba06c6d52f4c
+RMD160 (oauth-0.5.3.gem) = 903e5de9bff54c732b803d06a7877c9ee61ad1c8
+SHA512 (oauth-0.5.3.gem) = d0a094f035ac6c6eba9b33a4c9358575c13f2a3214633c63ee5e45b4b2dc516bf0b812207953da064f6d262eb954b73e2014ccfeac04fc13dead1df78dfdc26d
+Size (oauth-0.5.3.gem) = 28672 bytes
