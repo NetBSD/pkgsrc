@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2017/03/20 15:41:38 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/05 15:27:28 taca Exp $
 
-DISTNAME=	yard-0.9.8
+DISTNAME=	yard-0.9.9
 CATEGORIES=	ruby textproc
 
 MAINTAINER=	rodent@NetBSD.org

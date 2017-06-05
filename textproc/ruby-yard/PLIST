@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/03/20 15:41:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/06/05 15:27:28 taca Exp $
 bin/yard${RUBY_SUFFIX}
 bin/yardoc${RUBY_SUFFIX}
 bin/yri${RUBY_SUFFIX}
@@ -363,6 +363,7 @@ ${GEM_LIBDIR}/spec/parser/examples/array.c.txt
 ${GEM_LIBDIR}/spec/parser/examples/example1.rb.txt
 ${GEM_LIBDIR}/spec/parser/examples/extrafile.c.txt
 ${GEM_LIBDIR}/spec/parser/examples/multifile.c.txt
+${GEM_LIBDIR}/spec/parser/examples/namespace.cpp.txt
 ${GEM_LIBDIR}/spec/parser/examples/override.c.txt
 ${GEM_LIBDIR}/spec/parser/examples/parse_in_order_001.rb.txt
 ${GEM_LIBDIR}/spec/parser/examples/parse_in_order_002.rb.txt
