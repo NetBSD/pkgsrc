@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/05 07:27:02 adam Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/functools32/__init__.py
+${PYSITELIB}/functools32/__init__.pyc
+${PYSITELIB}/functools32/__init__.pyo
+${PYSITELIB}/functools32/_dummy_thread32.py
+${PYSITELIB}/functools32/_dummy_thread32.pyc
+${PYSITELIB}/functools32/_dummy_thread32.pyo
+${PYSITELIB}/functools32/functools32.py
+${PYSITELIB}/functools32/functools32.pyc
+${PYSITELIB}/functools32/functools32.pyo
+${PYSITELIB}/functools32/reprlib32.py
+${PYSITELIB}/functools32/reprlib32.pyc
+${PYSITELIB}/functools32/reprlib32.pyo
