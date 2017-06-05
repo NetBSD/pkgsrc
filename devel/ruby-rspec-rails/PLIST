@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2016/10/09 15:06:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2017/06/05 14:08:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/lib/generators/rspec/observer/observer_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/observer/templates/observer_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/request/request_generator.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/scaffold_generator.rb
+${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/api_controller_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/controller_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/edit_spec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/scaffold/templates/index_spec.rb
