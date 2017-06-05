@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2015/03/08 15:24:55 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/05 15:21:20 taca Exp $
 
-DISTNAME=	ferret-0.11.8.6
+DISTNAME=	ferret-0.11.8.7
 CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
