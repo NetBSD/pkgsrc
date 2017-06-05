@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2016/06/07 17:55:51 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/05 16:01:56 taca Exp $
 #
 
 DISTNAME=	libawl-${LIBAWL_VERSION}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
-LIBAWL_VERSION=	0.56
 CATEGORIES=	devel
-MASTER_SITES=	-https://gitlab.com/davical-project/awl/repository/archive.tar.gz?ref=r${LIBAWL_VERSION}
+MASTER_SITES=	-https://gitlab.com/davical-project/awl/repository/archive.tar.gz?ref=${GITLAB_TAG}
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://gitlab.com/davical-project/awl
@@ -19,7 +18,12 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 
 INSTALLATION_DIRS=	${LIBAWLDIR} ${LIBAWLDIR}/inc ${LIBAWLDIR}/dba
 
-WRKSRC=		${WRKDIR}/awl-r0.56-9abf998ba0179b9995747c7cc1a848b39cff0b3b
+LIBAWL_VERSION=	0.57
+GITLAB_TAG=	r${LIBAWL_VERSION}
+GITLAB_REV=	4c75c662e8605ed54ba4b8e65e4c3a8cc773052f
+
+pre-patch:
+	${MV} ${WRKDIR}/awl-${GITLAB_TAG}-${GITLAB_REV} ${WRKSRC}
 
 do-install:
 	cd ${WRKSRC}/dba;					\
