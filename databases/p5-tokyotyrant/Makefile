@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2016/07/10 10:12:22 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2017/06/05 14:22:33 ryoon Exp $
 #
 
 DISTNAME=	tokyotyrant-perl-1.16
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	databases perl5
 MASTER_SITES=	${HOMEPAGE:S/perldoc/perlpkg/}
 
