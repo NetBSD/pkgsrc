@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/06/08 19:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2017/06/05 14:23:53 ryoon Exp $
 
 DISTNAME=	enum-1.11
 PKGNAME=	p5-${DISTNAME}0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=enum/}
 
