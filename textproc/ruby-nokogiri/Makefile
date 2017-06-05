@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2017/03/20 15:36:43 taca Exp $
+# $NetBSD: Makefile,v 1.36 2017/06/05 15:22:56 taca Exp $
 
-DISTNAME=	nokogiri-1.7.1
+DISTNAME=	nokogiri-1.8.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	http://nokogiri.org/
 COMMENT=	HTML, XML, SAX, and Reader parser with XPath and CSS selector support
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.1.0:../../misc/ruby-mini_portile2
+DEPENDS+=	${RUBY_PKGPREFIX}-mini_portile2>=2.2.0:../../misc/ruby-mini_portile2
 
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		pkg-config
