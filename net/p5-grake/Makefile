@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 19:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/05 14:24:25 ryoon Exp $
 #
 
 DISTNAME=	grake-0.1.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net www
 MASTER_SITES=	http://grake.googlecode.com/files/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/02/19 12:50:52 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/05 14:24:47 ryoon Exp $
 
 DISTNAME=		Swim-0.1.46
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IN/INGY/}
 
