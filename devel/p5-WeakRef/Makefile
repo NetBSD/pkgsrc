@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/06/08 19:23:45 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2017/06/05 14:23:51 ryoon Exp $
 
 DISTNAME=	WeakRef-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/LUKKA/}
 
