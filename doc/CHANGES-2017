@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2257 2017/06/05 15:35:52 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2258 2017/06/05 15:40:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-http-form_data to 1.0.3 [taca 2017-06-05]
 	Updated www/ruby-raindrops to 0.18.0 [taca 2017-06-05]
 	Updated www/ruby-rest-client to 2.0.2 [taca 2017-06-05]
+	Updated www/ruby-sass to 3.4.24 [taca 2017-06-05]
