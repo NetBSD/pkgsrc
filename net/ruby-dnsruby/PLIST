@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/01/02 12:42:32 wen Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/06/05 14:49:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -51,6 +51,8 @@ ${GEM_LIBDIR}/lib/dnsruby/resolver.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/A.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/AAAA.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/AFSDB.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/APL.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/CAA.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/CERT.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/DHCID.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/DLV.rb
@@ -84,6 +86,7 @@ ${GEM_LIBDIR}/lib/dnsruby/resource/SPF.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/SRV.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/SSHFP.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/TKEY.rb
+${GEM_LIBDIR}/lib/dnsruby/resource/TLSA.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/TSIG.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/TXT.rb
 ${GEM_LIBDIR}/lib/dnsruby/resource/X25.rb
@@ -102,8 +105,10 @@ ${GEM_LIBDIR}/lib/dnsruby/zone_reader.rb
 ${GEM_LIBDIR}/lib/dnsruby/zone_transfer.rb
 ${GEM_LIBDIR}/test/custom.txt
 ${GEM_LIBDIR}/test/resolv.conf
+${GEM_LIBDIR}/test/run-tests-individually
 ${GEM_LIBDIR}/test/spec_helper.rb
 ${GEM_LIBDIR}/test/tc_axfr.rb
+${GEM_LIBDIR}/test/tc_caa.rb
 ${GEM_LIBDIR}/test/tc_cache.rb
 ${GEM_LIBDIR}/test/tc_dlv.rb
 ${GEM_LIBDIR}/test/tc_dns.rb
@@ -149,6 +154,7 @@ ${GEM_LIBDIR}/test/tc_sshfp.rb
 ${GEM_LIBDIR}/test/tc_tcp.rb
 ${GEM_LIBDIR}/test/tc_tcp_pipelining.rb
 ${GEM_LIBDIR}/test/tc_tkey.rb
+${GEM_LIBDIR}/test/tc_tlsa.rb
 ${GEM_LIBDIR}/test/tc_tsig.rb
 ${GEM_LIBDIR}/test/tc_update.rb
 ${GEM_LIBDIR}/test/tc_validator.rb

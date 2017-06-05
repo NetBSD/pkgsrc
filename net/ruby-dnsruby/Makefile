@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/01/02 12:42:32 wen Exp $
+# $NetBSD: Makefile,v 1.20 2017/06/05 14:49:26 taca Exp $
 
-DISTNAME=	dnsruby-1.60.0
+DISTNAME=	dnsruby-1.60.1
 CATEGORIES=	net
 
 MAINTAINER=	pettai@NetBSD.org
