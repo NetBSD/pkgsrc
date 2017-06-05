@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 19:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/05 14:22:46 ryoon Exp $
 #
 
 DISTNAME=	Config-Properties-1.80
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
