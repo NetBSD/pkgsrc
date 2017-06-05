@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/05 14:52:55 taca Exp $
+bin/pirb${RUBY_SUFFIX}
+bin/pruby${RUBY_SUFFIX}
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/bin/pirb
+${GEM_LIBDIR}/bin/pruby
+${GEM_LIBDIR}/lib/proxifier.rb
+${GEM_LIBDIR}/lib/proxifier/env.rb
+${GEM_LIBDIR}/lib/proxifier/errors.rb
+${GEM_LIBDIR}/lib/proxifier/proxies/http.rb
+${GEM_LIBDIR}/lib/proxifier/proxies/socks.rb
+${GEM_LIBDIR}/lib/proxifier/proxies/socks4.rb
+${GEM_LIBDIR}/lib/proxifier/proxies/socks4a.rb
+${GEM_LIBDIR}/lib/proxifier/proxy.rb
+${GEM_LIBDIR}/lib/proxifier/version.rb
+${GEM_LIBDIR}/lib/uri/socks.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
