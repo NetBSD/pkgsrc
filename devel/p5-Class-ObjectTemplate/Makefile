@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2016/06/08 19:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/05 14:22:43 ryoon Exp $
 
 DISTNAME=	Class-ObjectTemplate-0.7
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 

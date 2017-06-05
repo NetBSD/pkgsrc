@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/06/08 19:22:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/05 14:22:36 ryoon Exp $
 
 DISTNAME=	Array-Diff-0.07
 PKGNAME=	p5-${DISTNAME:S/05002/05.002/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Array/}
 
