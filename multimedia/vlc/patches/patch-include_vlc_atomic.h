@@ -1,7 +1,7 @@
-$NetBSD: patch-include_vlc_atomic.h,v 1.1.12.1 2017/06/05 09:01:01 bsiegert Exp $
+$NetBSD: patch-include_vlc_atomic.h,v 1.1.12.2 2017/06/05 09:11:04 bsiegert Exp $
 
-clang ships everything we need, just use <atomic> instead of the
-vlc_atomic.h #ifdef maze.
+C++11 ships everything we need, just use <atomic> instead
+of the vlc_atomic.h #ifdef maze.
 
 --- include/vlc_atomic.h.orig	2015-02-02 19:42:28.000000000 +0000
 +++ include/vlc_atomic.h
@@ -9,7 +9,7 @@ vlc_atomic.h #ifdef maze.
  /*** Native C11 atomics ***/
  #  include <stdatomic.h>
  
-+#elif defined(__cplusplus) && defined(__clang__)
++#elif defined(__cplusplus) && (__cplusplus >= 201103L)
 +#include <atomic>
 +using std::atomic_uint_least32_t;
 +using std::atomic_uintptr_t;
