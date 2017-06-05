@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:03 ryoon Exp $
 
 DISTNAME=	Getopt-Tabular-0.3
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Getopt/}
 

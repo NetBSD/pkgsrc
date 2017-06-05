@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2016/06/08 19:22:41 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2017/06/05 14:22:43 ryoon Exp $
 
 DISTNAME=	Class-Loader-2.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 
