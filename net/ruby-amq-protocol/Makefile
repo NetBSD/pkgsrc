@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2017/03/20 14:31:33 taca Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/05 14:48:30 taca Exp $
 
-DISTNAME=	amq-protocol-2.1.0
+DISTNAME=	amq-protocol-2.2.0
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
