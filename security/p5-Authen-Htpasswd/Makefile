@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/06/08 19:24:18 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/05 14:24:27 ryoon Exp $
 #
 
 DISTNAME=	Authen-Htpasswd-0.171
 PKGNAME=	p5-${DISTNAME:S/161/16.1/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Authen/}
 

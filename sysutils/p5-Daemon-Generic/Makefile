@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/01/30 14:18:15 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/05 14:24:35 ryoon Exp $
 
 DISTNAME=	Daemon-Generic-0.84
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/M/MU/MUIR/modules/
 
