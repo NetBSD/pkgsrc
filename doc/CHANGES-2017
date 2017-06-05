@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2243 2017/06/05 14:48:52 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2244 2017/06/05 14:49:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2830,3 +2830,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/ruby-mini_portile2 to 2.2.0 [taca 2017-06-05]
 	Updated misc/ruby-ohai to 13.1.0 [taca 2017-06-05]
 	Updated net/ruby-amq-protocol to 2.2.0 [taca 2017-06-05]
+	Updated net/ruby-dnsruby to 1.60.1 [taca 2017-06-05]
