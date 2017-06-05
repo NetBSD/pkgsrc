@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/05/24 15:59:36 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/05 13:39:25 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
-GITHUB_PROJECT=	standard-edition
+GITHUB_PROJECT=	managed-edition
 GITHUB_RELEASE=	${CT_VERSION}
 
 MAINTAINER=	taca@NetBSD.org
@@ -22,32 +22,21 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.4.0:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.0:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERSION=	4.3.10
+CT_VERSION=	4.3.11
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
-EG_CONFIG=	app/config/config.yml app/config/config_dev.yml \
-		app/config/config_prod.yml app/config/config_test.yml \
-		app/config/routing.yml \
-		app/config/routing_dev.yml app/config/security.yml
-# app/config/parameters.yml.dist 
 EG_DATA=	app/config
 
 RESTRICT_DIRS=	app/config var/cache var/logs
 
 CONF_FILES+=	${CT_EGDIR}/contao.conf ${PKG_SYSCONFDIR}/contao.conf
 
-.for f in ${EG_CONFIG}
-CONF_FILES+=	${CT_EGDIR}/${f} ${CT_WEBDIR}/${f}
-.endfor
-
 .for d in ${RESTRICT_DIRS}
 OWN_DIRS_PERMS+= ${CT_WEBDIR}/${d} ${APACHE_USER} ${APACHE_GROUP} 0770
 .endfor
 
-WWW_FILES=	CHANGELOG.md README.md app/AppCache.php app/AppKernel.php \
-		app/autoload.php assets bin/console \
-		composer.json composer.lock vendor web
+WWW_FILES=	README.md assets composer.json composer.lock vendor web
 
 INSTALLATION_DIRS+=	${CT_DOCDIR} ${CT_EGDIR}/app/config \
 			 ${CT_WEBDIR}/app/config
@@ -63,7 +52,8 @@ REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php= \
-	bin/console vendor/bin/doctrine-dbal vendor/bin/lessc \
+	vendor/contao/manager-bundle/bin/contao-console \
+	vendor/bin/doctrine-dbal vendor/bin/lessc \
 	vendor/bin/minifycss vendor/bin/minifyjs vendor/bin/pscss \
 	vendor/bin/security-checker vendor/doctrine/dbal/bin/doctrine-dbal \
 	vendor/jeremykendall/php-domain-parser/bin/parse \
@@ -105,10 +95,6 @@ pre-configure:
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
-	${INSTALL_DATA} ${WRKSRC}/app/config/parameters.yml.dist \
-		${DESTDIR}${PREFIX}/${CT_WEBDIR}/app/config
-	cd ${WRKSRC}/${EG_DATA}; \
-		${INSTALL_DATA} *.yml ${DESTDIR}${PREFIX}/${CT_EGDIR}/app/config
 	${INSTALL_DATA} ${WRKDIR}/contao.conf ${DESTDIR}${PREFIX}/${CT_EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/README \
 		${DESTDIR}${PREFIX}/${CT_DOCDIR}
