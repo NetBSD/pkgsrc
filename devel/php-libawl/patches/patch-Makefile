@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2017/06/05 16:01:56 taca Exp $
+
+Do not try to build doc.
+
+--- Makefile.orig	2017-01-23 22:12:05.000000000 +0000
++++ Makefile
+@@ -10,7 +10,7 @@ snapshot : gitrev = $(shell git rev-pars
+ snapshot : version = $(majorversion)-git$(gitrev)
+ snapshot : issnapshot = 1
+ 
+-all: built-docs inc/AWLUtilities.php
++all: inc/AWLUtilities.php
+ 
+ built-docs: docs/phpdoc.ini inc/*.php
+ 	apigen generate --title=AWL --todo --tree --deprecated -s inc -d docs/api || phpdoc -c docs/phpdoc.ini || echo "WARNING: the docs could not be built"
