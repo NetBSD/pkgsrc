@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2260 2017/06/05 16:02:21 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2261 2017/06/05 19:04:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2848,3 +2848,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-sass to 3.4.24 [taca 2017-06-05]
 	Updated databases/ruby-dm-serializer to 1.2.2nb2 [taca 2017-06-05]
 	Updated devel/php-libawl to 0.57 [taca 2017-06-05]
+	Updated devel/p5-File-Path to 2.13 [bsiegert 2017-06-05]
