@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 19:23:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/05 14:23:38 ryoon Exp $
 #
 
 DISTNAME=	Template-Plugin-HashMerge-0.01
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 

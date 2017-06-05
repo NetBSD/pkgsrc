@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:24 ryoon Exp $
 #
 
 DISTNAME=	Object-Accessor-0.48
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
 

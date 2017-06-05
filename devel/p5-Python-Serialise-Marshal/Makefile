@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 19:23:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/05 14:23:31 ryoon Exp $
 #
 
 DISTNAME=	Python-Serialise-Marshal-0.02
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Python/}
 

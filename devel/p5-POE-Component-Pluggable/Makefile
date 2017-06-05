@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2017/04/09 03:34:43 mef Exp $
+# $NetBSD: Makefile,v 1.18 2017/06/05 14:23:25 ryoon Exp $
 
 DISTNAME=	POE-Component-Pluggable-1.28
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
