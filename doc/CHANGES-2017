@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2261 2017/06/05 19:04:20 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.2262 2017/06/05 20:22:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/ruby-dm-serializer to 1.2.2nb2 [taca 2017-06-05]
 	Updated devel/php-libawl to 0.57 [taca 2017-06-05]
 	Updated devel/p5-File-Path to 2.13 [bsiegert 2017-06-05]
+	Updated textproc/the_silver_searcher to 2.0.0 [leot 2017-06-05]
