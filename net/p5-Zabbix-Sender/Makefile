@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 19:24:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/05 14:24:25 ryoon Exp $
 #
 
 DISTNAME=	Zabbix-Sender-0.03
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Zabbix/}
 CATEGORIES=	net perl5
 
