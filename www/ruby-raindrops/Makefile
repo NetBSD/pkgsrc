@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2016/10/18 16:05:07 taca Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/05 15:34:33 taca Exp $
 
-DISTNAME=	raindrops-0.17.0
+DISTNAME=	raindrops-0.18.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc@NetBSD.org
