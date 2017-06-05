@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2016/07/23 23:56:48 wen Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/05 14:25:28 ryoon Exp $
 #
 
 DISTNAME=	ParallelUserAgent-2.62
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
 MASTER_SITES=  	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSOUTH/}

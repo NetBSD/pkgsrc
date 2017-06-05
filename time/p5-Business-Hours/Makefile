@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/08/25 00:04:58 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/05 14:25:01 ryoon Exp $
 
 DISTNAME=	Business-Hours-0.12
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RU/RUZ/}
 

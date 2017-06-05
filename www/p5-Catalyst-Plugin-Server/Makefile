@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2016/06/08 19:24:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/05 14:25:14 ryoon Exp $
 
 DISTNAME=	Catalyst-Plugin-Server-0.28
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 

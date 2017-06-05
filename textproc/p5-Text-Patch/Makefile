@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 19:24:39 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/05 14:24:51 ryoon Exp $
 
 DISTNAME=	Text-Patch-1.8
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 

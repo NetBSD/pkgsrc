@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/02/02 12:39:46 mef Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/05 14:25:21 ryoon Exp $
 
 DISTNAME=	HTTP-Entity-Parser-0.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 

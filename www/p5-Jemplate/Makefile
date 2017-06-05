@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2016/06/08 19:25:08 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2017/06/05 14:25:24 ryoon Exp $
 
 DISTNAME=	Jemplate-0.261
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RK/RKRIMEN/}
 
