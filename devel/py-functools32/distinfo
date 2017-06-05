@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/05 07:27:02 adam Exp $
+
+SHA1 (functools32-3.2.3-2.tar.gz) = a520082a56af52c7af8d2d1390856bf1a0d755df
+RMD160 (functools32-3.2.3-2.tar.gz) = f96924aa207ac835157f734a785216f57cdb123a
+SHA512 (functools32-3.2.3-2.tar.gz) = ad944019f4aefde292b6872bfe06862d01920a2f44adf8740c36ed51d16d879be7638591aaddf9dac4ec83b6f05bbf81972d5f32854abedcce3dde080459f7f7
+Size (functools32-3.2.3-2.tar.gz) = 31171 bytes
