@@ -1,0 +1,32 @@
+$NetBSD: patch-Makefile.in,v 1.1 2017/06/05 10:41:28 maya Exp $
+
+Do not install bfd and opcodes. Conflicts with devel/binutils.
+
+--- Makefile.in.orig	2016-02-24 09:57:08.000000000 +0000
++++ Makefile.in
+@@ -1596,7 +1596,6 @@ do-install-info:
+ 
+ .PHONY: install-info-host
+ 
+-install-info-host: maybe-install-info-bfd
+ install-info-host: maybe-install-info-opcodes
+ install-info-host: maybe-install-info-binutils
+ install-info-host: maybe-install-info-bison
+@@ -2482,8 +2481,6 @@ install:
+ 
+ .PHONY: install-host-nogcc
+ install-host-nogcc:  \
+-    maybe-install-bfd \
+-    maybe-install-opcodes \
+     maybe-install-binutils \
+     maybe-install-bison \
+     maybe-install-cgen \
+@@ -2530,8 +2527,6 @@ install-host-nogcc:  \
+ 
+ .PHONY: install-host
+ install-host:  \
+-    maybe-install-bfd \
+-    maybe-install-opcodes \
+     maybe-install-binutils \
+     maybe-install-bison \
+     maybe-install-cgen \
