@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2247 2017/06/05 15:21:56 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2248 2017/06/05 15:23:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2835,3 +2835,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/ruby-proxifier version 1.0.3 [taca 2017-06-05]
 	Updated security/ruby-oauth to 0.5.3 [taca 2017-06-05]
 	Updated textproc/ruby-ferret to 0.11.8.7 [taca 2017-06-05]
+	Updated textproc/ruby-nokogiri to 1.8.0 [taca 2017-06-05]
