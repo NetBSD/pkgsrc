@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.29 2017/06/03 18:34:10 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.30 2017/06/05 09:21:37 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -533,4 +533,25 @@ textproc/aspell: bugfix
 
 Pullup ticket #5465 - requested by sevan
 lang/spidermonkey17: bugfix
+
+Pullup ticket #5469 - requested by he
+lang/python36: macppc build fix
+
+Pullup ticket #5443 - requested by sevan
+multimedia/vlc: build fix
+
+Pullup ticket #5444 - requested by sevan
+multimedia/vlc: build fix
+
+Pullup ticket #5467 - requested by sevan
+multimedia/vlc: security fix
+
+Pullup ticket #5416 - requested by sevan
+sysutils/libfm: build fix
+
+Pullup ticket #5417 - requested by sevan
+x11/matchbox-panel: SunOS build fix
+
+Pullup ticket #5418 - requested by sevan
+meta-pkgs/modular-xorg-drivers: build fix
 
