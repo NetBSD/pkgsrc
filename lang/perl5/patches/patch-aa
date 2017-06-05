@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.37 2015/06/11 13:44:23 adam Exp $
+$NetBSD: patch-aa,v 1.38 2017/06/05 13:41:22 ryoon Exp $
 
 * $Is{NetBSD} and $Is{Interix} are unified into $Is{BSD}.
 * Ignore installed packlist when creating new packlist.
 
---- cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm.orig	2015-05-16 12:23:24.000000000 +0000
+--- cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm.orig	2017-04-19 13:37:05.000000000 +0000
 +++ cpan/ExtUtils-MakeMaker/lib/ExtUtils/MM_Unix.pm
-@@ -29,8 +29,6 @@ BEGIN {
+@@ -28,8 +28,6 @@ BEGIN {
      $Is{VMS}     = $^O eq 'VMS';
      $Is{OSF}     = $^O eq 'dec_osf';
      $Is{IRIX}    = $^O eq 'irix';
@@ -14,16 +14,16 @@ $NetBSD: patch-aa,v 1.37 2015/06/11 13:44:23 adam Exp $
      $Is{SunOS4}  = $^O eq 'sunos';
      $Is{Solaris} = $^O eq 'solaris';
      $Is{SunOS}   = $Is{SunOS4} || $Is{Solaris};
-@@ -955,7 +953,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+@@ -1022,7 +1020,7 @@ sub xs_make_dynamic_lib {
+     push(@m,"	\$(RM_F) \$\@\n");
  
      my $libs = '$(LDLOADLIBS)';
- 
 -    if (($Is{NetBSD} || $Is{Interix} || $Is{Android}) && $Config{'useshrplib'} eq 'true') {
 +    if ($Is{BSD} && $Config{'useshrplib'} eq 'true') {
- 	# Use nothing on static perl platforms, and to the flags needed
- 	# to link against the shared libperl library on shared perl
- 	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2159,7 +2157,7 @@ pure_vendor_install :: all
+         # Use nothing on static perl platforms, and to the flags needed
+         # to link against the shared libperl library on shared perl
+         # platforms.  We peek at lddlflags to see if we need -Wl,-R
+@@ -2264,7 +2262,7 @@ pure_vendor_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
  };
      push @m,
