@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/03/20 15:41:38 taca Exp $
+$NetBSD: distinfo,v 1.6 2017/06/05 15:27:28 taca Exp $
 
-SHA1 (yard-0.9.8.gem) = b436117dc63e8ad9f11ced5f510f680f9762db28
-RMD160 (yard-0.9.8.gem) = 98eeb0210909f930b2e8e14ee1b5d098f5d745db
-SHA512 (yard-0.9.8.gem) = e27aaae008b92cc40a4be327c03b721884443ac6ecdeba7066ad1377c5a0037f56e0495eda4c1a83948308af124d6d2029d829a97e09b8629c7af5710c06c94c
-Size (yard-0.9.8.gem) = 616448 bytes
+SHA1 (yard-0.9.9.gem) = 1b9570cfa9157c6712d78e9c419a04d76c5bf664
+RMD160 (yard-0.9.9.gem) = 2c38a0d7ccc10633345b62d7a88f693bc7ba33b1
+SHA512 (yard-0.9.9.gem) = f71722c24a411ff049b90bb7c299568bd1585c3ec3a0a33a932a06da33ddc82b8dce0a4758ad85b38827bd4f90164abca068ab8a317afc0ba8f6080f2f7507c8
+Size (yard-0.9.9.gem) = 617472 bytes
