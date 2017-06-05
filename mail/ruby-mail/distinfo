@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/10/15 13:59:37 taca Exp $
+$NetBSD: distinfo,v 1.12 2017/06/05 14:26:51 taca Exp $
 
-SHA1 (mail-2.6.4.gem) = 1b33d3a34d6f951adc48d74b43dff54ce28197be
-RMD160 (mail-2.6.4.gem) = bc37685f16e4637043bfe8b705b2b44bfdfe8989
-SHA512 (mail-2.6.4.gem) = b47d77d165af83336bdd885a71d5e9047c024f7f027059ccb739cfe8ffaafae3c70cd21147e82b0f178efba34c4078ca4c29489808630147e992661aaf0c846f
-Size (mail-2.6.4.gem) = 352256 bytes
+SHA1 (mail-2.6.5.gem) = 8efbc67a798e382b4edbd7f1ad9d7a0d492008e6
+RMD160 (mail-2.6.5.gem) = 5f58e5b910fedca07179d5d0f2ffcffb2b8972ea
+SHA512 (mail-2.6.5.gem) = 6a1092f883eb9cfe2547b0b31a57efde09ef216954fcc11cabe4a55014cc546d84fa37f611535837f0ce812d1d8d775eb4b5ba262f51c9653d0521328ce24e73
+Size (mail-2.6.5.gem) = 352256 bytes
