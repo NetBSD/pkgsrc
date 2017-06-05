@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/10/09 15:03:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/06/05 14:05:15 taca Exp $
 bin/rspec${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
@@ -42,6 +42,7 @@ ${GEM_LIBDIR}/lib/rspec/core/formatters/profile_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/progress_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/protocol.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/snippet_extractor.rb
+${GEM_LIBDIR}/lib/rspec/core/formatters/syntax_highlighter.rb
 ${GEM_LIBDIR}/lib/rspec/core/hooks.rb
 ${GEM_LIBDIR}/lib/rspec/core/invocations.rb
 ${GEM_LIBDIR}/lib/rspec/core/memoized_helpers.rb
@@ -56,6 +57,7 @@ ${GEM_LIBDIR}/lib/rspec/core/mocking_adapters/rspec.rb
 ${GEM_LIBDIR}/lib/rspec/core/notifications.rb
 ${GEM_LIBDIR}/lib/rspec/core/option_parser.rb
 ${GEM_LIBDIR}/lib/rspec/core/ordering.rb
+${GEM_LIBDIR}/lib/rspec/core/output_wrapper.rb
 ${GEM_LIBDIR}/lib/rspec/core/pending.rb
 ${GEM_LIBDIR}/lib/rspec/core/profiler.rb
 ${GEM_LIBDIR}/lib/rspec/core/project_initializer.rb
@@ -70,11 +72,6 @@ ${GEM_LIBDIR}/lib/rspec/core/set.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_context.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/core/shell_escape.rb
-${GEM_LIBDIR}/lib/rspec/core/source.rb
-${GEM_LIBDIR}/lib/rspec/core/source/location.rb
-${GEM_LIBDIR}/lib/rspec/core/source/node.rb
-${GEM_LIBDIR}/lib/rspec/core/source/syntax_highlighter.rb
-${GEM_LIBDIR}/lib/rspec/core/source/token.rb
 ${GEM_LIBDIR}/lib/rspec/core/test_unit_assertions_adapter.rb
 ${GEM_LIBDIR}/lib/rspec/core/version.rb
 ${GEM_LIBDIR}/lib/rspec/core/warnings.rb
