@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/02/16 01:36:31 wiedi Exp $
+# $NetBSD: Makefile,v 1.31.26.1 2017/06/05 09:17:40 bsiegert Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -23,11 +23,13 @@ CONFIGURE_ARGS+=	--enable-nls
 
 CFLAGS.SunOS+=		-Du_int64_t=uint64_t
 
+MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
+
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS=		apm
-.if ${OPSYS} == "DragonFly" || \
-    ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64"
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS" || \
+    (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
 # Nada
 .else
 PLIST.apm=		yes

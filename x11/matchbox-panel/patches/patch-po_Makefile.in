@@ -1,0 +1,28 @@
+$NetBSD: patch-po_Makefile.in,v 1.1.2.2 2017/06/05 09:17:40 bsiegert Exp $
+
+Use PKGLOCALEDIR.
+
+--- po/Makefile.in.orig	2005-04-11 09:18:54.000000000 +0000
++++ po/Makefile.in
+@@ -324,15 +324,15 @@ update.po: matchbox.pot
+ 	done
+ 
+ install-data-local:  $(CATALOGS)
+-	$(mkinstalldirs) $(DESTDIR)$(datadir)/locale
+-	chmod 755 $(DESTDIR)$(datadir)/locale 
++	$(mkinstalldirs) $(DESTDIR)$(PREFIX)/$(PKGLOCALEDIR)/locale
++	chmod 755 $(DESTDIR)$(PREFIX)/$(PKGLOCALEDIR)/locale 
+ 	for n in $(CATALOGS) __DuMmY ; do \
+ 		if test "$$n" -a "$$n" != "__DuMmY" ; then \
+ 			l=`basename $$n .mo`; \
+-			$(mkinstalldirs) $(DESTDIR)$(datadir)/locale/$$l/LC_MESSAGES; \
+-			chmod 755 $(DESTDIR)$(datadir)/locale/$$l; \
+-			chmod 755 $(DESTDIR)$(datadir)/locale/$$l/LC_MESSAGES; \
+-			$(INSTALL_DATA) -m 644 $$n $(DESTDIR)$(datadir)/locale/$$l/LC_MESSAGES/matchbox-panel.mo; \
++			$(mkinstalldirs) $(DESTDIR)$(PREFIX)/$(PKGLOCALEDIR)/locale/$$l/LC_MESSAGES; \
++			chmod 755 $(DESTDIR)$(PREFIX)/$(PKGLOCALEDIR)/locale/$$l; \
++			chmod 755 $(DESTDIR)$(PREFIX)/$(PKGLOCALEDIR)/locale/$$l/LC_MESSAGES; \
++			$(INSTALL_DATA) -m 644 $$n $(DESTDIR)$(PREFIX)/$(PKGLOCALEDIR)/locale/$$l/LC_MESSAGES/matchbox-panel.mo; \
+ 		fi; \
+ 	done
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
