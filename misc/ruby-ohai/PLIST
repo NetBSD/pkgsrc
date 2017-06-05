@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2017/02/12 05:11:57 mef Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/06/05 14:43:01 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -23,8 +23,10 @@ ${GEM_LIBDIR}/lib/ohai/mash.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/command.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/constant_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/dmi_decode.rb
+${GEM_LIBDIR}/lib/ohai/mixin/do_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/ec2_metadata.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/gce_metadata.rb
+${GEM_LIBDIR}/lib/ohai/mixin/http_helper.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/network_constants.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/os.rb
 ${GEM_LIBDIR}/lib/ohai/mixin/seconds_to_human.rb
@@ -46,11 +48,9 @@ ${GEM_LIBDIR}/lib/ohai/plugins/bsd/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/c.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/chef.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/cloud.rb
-${GEM_LIBDIR}/lib/ohai/plugins/cloud_v2.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/command.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/filesystem.rb
-${GEM_LIBDIR}/lib/ohai/plugins/darwin/filesystem2.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/hardware.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/darwin/network.rb
@@ -89,7 +89,6 @@ ${GEM_LIBDIR}/lib/ohai/plugins/linode.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/block_device.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/filesystem.rb
-${GEM_LIBDIR}/lib/ohai/plugins/linux/filesystem2.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/fips.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/hostnamectl.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/lsb.rb
@@ -107,7 +106,6 @@ ${GEM_LIBDIR}/lib/ohai/plugins/netbsd/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/netbsd/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/netbsd/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/network.rb
-${GEM_LIBDIR}/lib/ohai/plugins/network_listeners.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/nodejs.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ohai.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/ohai_time.rb
@@ -132,12 +130,6 @@ ${GEM_LIBDIR}/lib/ohai/plugins/rust.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/scala.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/shard.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/shells.rb
-${GEM_LIBDIR}/lib/ohai/plugins/sigar/cpu.rb
-${GEM_LIBDIR}/lib/ohai/plugins/sigar/filesystem.rb
-${GEM_LIBDIR}/lib/ohai/plugins/sigar/memory.rb
-${GEM_LIBDIR}/lib/ohai/plugins/sigar/network.rb
-${GEM_LIBDIR}/lib/ohai/plugins/sigar/network_route.rb
-${GEM_LIBDIR}/lib/ohai/plugins/sigar/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/softlayer.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/solaris2/cpu.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/solaris2/dmi.rb
@@ -235,9 +227,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/bsd/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/c_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/chef_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/cloud_spec.rb
-${GEM_LIBDIR}/spec/unit/plugins/cloud_v2_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/darwin/cpu_spec.rb
-${GEM_LIBDIR}/spec/unit/plugins/darwin/filesystem2_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/darwin/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/darwin/hardware_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/darwin/hardware_system_profiler_output.rb
@@ -274,7 +264,6 @@ ${GEM_LIBDIR}/spec/unit/plugins/kernel_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linode_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/block_device_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/cpu_spec.rb
-${GEM_LIBDIR}/spec/unit/plugins/linux/filesystem2_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/filesystem_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/fips_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/hostname_spec.rb
@@ -317,7 +306,6 @@ ${GEM_LIBDIR}/spec/unit/plugins/rust_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/scala_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/shard_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/shells_spec.rb
-${GEM_LIBDIR}/spec/unit/plugins/sigar/network_route_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/softlayer_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/solaris2/cpu_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/solaris2/dmi_spec.rb
