@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2255 2017/06/05 15:33:49 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2256 2017/06/05 15:34:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added time/ruby-iso8601 version 0.9.1 [taca 2017-06-05]
 	Updated www/ruby-http to 2.2.2 [taca 2017-06-05]
 	Updated www/ruby-http-form_data to 1.0.3 [taca 2017-06-05]
+	Updated www/ruby-raindrops to 0.18.0 [taca 2017-06-05]
