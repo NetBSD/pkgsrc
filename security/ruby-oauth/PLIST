@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/03/15 15:15:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/06/05 15:15:01 taca Exp $
 bin/oauth${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
@@ -7,6 +7,12 @@ ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/oauth
 ${GEM_LIBDIR}/lib/oauth.rb
 ${GEM_LIBDIR}/lib/oauth/cli.rb
+${GEM_LIBDIR}/lib/oauth/cli/authorize_command.rb
+${GEM_LIBDIR}/lib/oauth/cli/base_command.rb
+${GEM_LIBDIR}/lib/oauth/cli/help_command.rb
+${GEM_LIBDIR}/lib/oauth/cli/query_command.rb
+${GEM_LIBDIR}/lib/oauth/cli/sign_command.rb
+${GEM_LIBDIR}/lib/oauth/cli/version_command.rb
 ${GEM_LIBDIR}/lib/oauth/client.rb
 ${GEM_LIBDIR}/lib/oauth/client/action_controller_request.rb
 ${GEM_LIBDIR}/lib/oauth/client/em_http.rb
@@ -45,32 +51,4 @@ ${GEM_LIBDIR}/lib/oauth/tokens/request_token.rb
 ${GEM_LIBDIR}/lib/oauth/tokens/server_token.rb
 ${GEM_LIBDIR}/lib/oauth/tokens/token.rb
 ${GEM_LIBDIR}/lib/oauth/version.rb
-${GEM_LIBDIR}/test/cases/oauth_case.rb
-${GEM_LIBDIR}/test/cases/spec/1_0-final/test_construct_request_url.rb
-${GEM_LIBDIR}/test/cases/spec/1_0-final/test_normalize_request_parameters.rb
-${GEM_LIBDIR}/test/cases/spec/1_0-final/test_parameter_encodings.rb
-${GEM_LIBDIR}/test/cases/spec/1_0-final/test_signature_base_strings.rb
-${GEM_LIBDIR}/test/integration/consumer_test.rb
-${GEM_LIBDIR}/test/test_access_token.rb
-${GEM_LIBDIR}/test/test_action_controller_request_proxy.rb
-${GEM_LIBDIR}/test/test_consumer.rb
-${GEM_LIBDIR}/test/test_curb_request_proxy.rb
-${GEM_LIBDIR}/test/test_em_http_client.rb
-${GEM_LIBDIR}/test/test_em_http_request_proxy.rb
-${GEM_LIBDIR}/test/test_helper.rb
-${GEM_LIBDIR}/test/test_hmac_sha1.rb
-${GEM_LIBDIR}/test/test_net_http_client.rb
-${GEM_LIBDIR}/test/test_net_http_request_proxy.rb
-${GEM_LIBDIR}/test/test_oauth_helper.rb
-${GEM_LIBDIR}/test/test_rack_request_proxy.rb
-${GEM_LIBDIR}/test/test_request_token.rb
-${GEM_LIBDIR}/test/test_rest_client_request_proxy.rb
-${GEM_LIBDIR}/test/test_rsa_sha1.rb
-${GEM_LIBDIR}/test/test_server.rb
-${GEM_LIBDIR}/test/test_signature.rb
-${GEM_LIBDIR}/test/test_signature_base.rb
-${GEM_LIBDIR}/test/test_signature_hmac_sha1.rb
-${GEM_LIBDIR}/test/test_signature_plain_text.rb
-${GEM_LIBDIR}/test/test_token.rb
-${GEM_LIBDIR}/test/test_typhoeus_request_proxy.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
