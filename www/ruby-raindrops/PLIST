@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/10/18 16:05:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/05 15:34:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/raindrops_ext.${RUBY_DLEXT}
@@ -26,10 +26,10 @@ ${GEM_LIBDIR}/examples/yahns.conf.rb
 ${GEM_LIBDIR}/examples/zbatery.conf.rb
 ${GEM_LIBDIR}/ext/raindrops/extconf.rb
 ${GEM_LIBDIR}/ext/raindrops/linux_inet_diag.c
-${GEM_LIBDIR}/ext/raindrops/linux_tcp_info.c
 ${GEM_LIBDIR}/ext/raindrops/my_fileno.h
 ${GEM_LIBDIR}/ext/raindrops/raindrops.c
 ${GEM_LIBDIR}/ext/raindrops/raindrops_atomic.h
+${GEM_LIBDIR}/ext/raindrops/tcp_info.c
 ${GEM_LIBDIR}/lib/raindrops.rb
 ${GEM_LIBDIR}/lib/raindrops/aggregate.rb
 ${GEM_LIBDIR}/lib/raindrops/aggregate/last_data_recv.rb
@@ -54,12 +54,12 @@ ${GEM_LIBDIR}/test/test_linux_all_tcp_listen_stats.rb
 ${GEM_LIBDIR}/test/test_linux_all_tcp_listen_stats_leak.rb
 ${GEM_LIBDIR}/test/test_linux_ipv6.rb
 ${GEM_LIBDIR}/test/test_linux_middleware.rb
-${GEM_LIBDIR}/test/test_linux_tcp_info.rb
 ${GEM_LIBDIR}/test/test_middleware.rb
 ${GEM_LIBDIR}/test/test_middleware_unicorn.rb
 ${GEM_LIBDIR}/test/test_middleware_unicorn_ipv6.rb
 ${GEM_LIBDIR}/test/test_raindrops.rb
 ${GEM_LIBDIR}/test/test_raindrops_gc.rb
 ${GEM_LIBDIR}/test/test_struct.rb
+${GEM_LIBDIR}/test/test_tcp_info.rb
 ${GEM_LIBDIR}/test/test_watcher.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
