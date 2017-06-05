@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.18 2014/01/01 11:52:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2017/06/05 04:45:40 adam Exp $
 
 BUILDLINK_TREE+=	libspectrum
 
 .if !defined(LIBSPECTRUM_BUILDLINK3_MK)
 LIBSPECTRUM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libspectrum+=		libspectrum>=0.2.2
+BUILDLINK_API_DEPENDS.libspectrum+=	libspectrum>=0.2.2
 BUILDLINK_ABI_DEPENDS.libspectrum+=	libspectrum>=1.1.1nb1
 BUILDLINK_PKGSRCDIR.libspectrum?=	../../emulators/libspectrum
 
