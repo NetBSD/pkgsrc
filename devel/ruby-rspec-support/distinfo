@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/10/09 15:02:13 taca Exp $
+$NetBSD: distinfo,v 1.8 2017/06/05 14:04:42 taca Exp $
 
-SHA1 (rspec-support-3.5.0.gem) = 5e838acc7759ea59f62e8d72a1bbcc088eb7c7e4
-RMD160 (rspec-support-3.5.0.gem) = ba89856ba4df38fdfe57abb276261145e745264b
-SHA512 (rspec-support-3.5.0.gem) = cfe68664fdc31b099dfe6ba02d9e0507a50206a67c28e91dd0366c4f78ebdd4a928a2f1c7cf58aca3c5e261c3fe2d8acfb372efc1c2fde342ca52c05a9025bbe
-Size (rspec-support-3.5.0.gem) = 33280 bytes
+SHA1 (rspec-support-3.6.0.gem) = ca28847543f347976f98f220f577281a1b9a2a3e
+RMD160 (rspec-support-3.6.0.gem) = 9cdc85b046149073358e163f7ed65e4e98d300f8
+SHA512 (rspec-support-3.6.0.gem) = 49ae5720093bb3d3323a7f313cbce9ac177ef21c3bb71a5a68f1152783252c10dbbf6ea10f51a08aa8073846b1819e7bce9a0711137cb255f7f29c996bd19b20
+Size (rspec-support-3.6.0.gem) = 35328 bytes
