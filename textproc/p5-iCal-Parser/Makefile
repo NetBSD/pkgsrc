@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2016/07/24 20:04:10 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/05 14:25:00 ryoon Exp $
 #
 
 DISTNAME=	iCal-Parser-1.20
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=    2
+PKGREVISION=    3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RF/RFRANKEL/
 
