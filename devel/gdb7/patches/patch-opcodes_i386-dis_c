@@ -1,0 +1,13 @@
+$NetBSD: patch-opcodes_i386-dis_c,v 1.1 2017/06/05 10:41:28 maya Exp $
+
+--- opcodes/i386-dis.c.orig	2015-02-19 11:58:08.000000000 +0000
++++ opcodes/i386-dis.c
+@@ -13586,7 +13586,7 @@ dofloat (int sizeflag)
+ static void
+ oappend_maybe_intel (const char *s)
+ {
+-  oappend (s + intel_syntax);
++  oappend (s[(short)intel_syntax]);
+ }
+ 
+ static void
