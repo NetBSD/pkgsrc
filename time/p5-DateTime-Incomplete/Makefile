@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/09/17 02:34:23 mef Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/05 14:25:04 ryoon Exp $
 
 DISTNAME=	DateTime-Incomplete-0.08
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	time perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/F/FG/FGLOCK/
 
