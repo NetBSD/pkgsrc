@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2017/02/12 06:25:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.35 2017/06/05 14:22:30 ryoon Exp $
 
 DISTNAME=	RRD-Simple-1.44
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	perl5 databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RRD/}
 

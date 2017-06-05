@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/02/07 09:22:18 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/05 14:22:45 ryoon Exp $
 
 DISTNAME=	Config-File-1.50
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 #PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/G/GW/GWOLF/

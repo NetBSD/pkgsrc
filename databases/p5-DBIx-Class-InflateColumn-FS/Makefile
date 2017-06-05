@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 19:22:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/05 14:22:27 ryoon Exp $
 
 DISTNAME=	DBIx-Class-InflateColumn-FS-0.01007
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 

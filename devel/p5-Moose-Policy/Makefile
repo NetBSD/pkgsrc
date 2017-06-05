@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2016/08/26 23:20:44 mef Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/05 14:23:18 ryoon Exp $
 #
 
 DISTNAME=	Moose-Policy-0.05
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 

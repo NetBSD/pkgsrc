@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/11/19 06:49:44 wen Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/05 14:23:19 ryoon Exp $
 #
 
 DISTNAME=	MooseX-App-1.37
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 

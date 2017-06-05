@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2017/05/08 15:33:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.81 2017/06/05 14:22:18 ryoon Exp $
 
 DISTNAME=		${IRSSI_DISTNAME}
 CATEGORIES=		chat
-PKGREVISION=		1
+PKGREVISION=		2
 EXTRACT_SUFX=		${IRSSI_EXTRACT_SUFX}
 
 MAINTAINER=		maya@NetBSD.org

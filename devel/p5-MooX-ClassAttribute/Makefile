@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/07/20 13:45:39 mef Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/05 14:23:17 ryoon Exp $
 
 DISTNAME=	MooX-ClassAttribute-0.011
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/T/TO/TOBYINK/
 
