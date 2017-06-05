@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2017/03/20 14:36:11 taca Exp $
+# $NetBSD: Makefile,v 1.16 2017/06/05 14:50:32 taca Exp $
 
-DISTNAME=	domain_name-0.5.20170223
+DISTNAME=	domain_name-0.5.20170404
 CATEGORIES=	net
 
 MAINTAINER=	minskim@NetBSD.org
