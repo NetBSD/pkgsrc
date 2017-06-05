@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2016/09/19 01:06:54 mef Exp $
+# $NetBSD: Makefile,v 1.29 2017/06/05 14:25:10 ryoon Exp $
 
 DISTNAME=		CGI-FormBuilder-3.10
 PKGNAME=		p5-${DISTNAME}00
+PKGREVISION=		1
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 

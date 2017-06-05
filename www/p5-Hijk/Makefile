@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2017/01/24 01:38:31 wen Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/05 14:25:23 ryoon Exp $
 
 DISTNAME=	Hijk-0.27
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GU/GUGOD/
 
