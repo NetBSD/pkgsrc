@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2258 2017/06/05 15:40:22 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2259 2017/06/05 16:00:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2846,3 +2846,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-raindrops to 0.18.0 [taca 2017-06-05]
 	Updated www/ruby-rest-client to 2.0.2 [taca 2017-06-05]
 	Updated www/ruby-sass to 3.4.24 [taca 2017-06-05]
+	Updated databases/ruby-dm-serializer to 1.2.2nb2 [taca 2017-06-05]
