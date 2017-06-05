@@ -1,17 +1,15 @@
-$NetBSD: patch-src_cares__wrap.cc,v 1.1 2015/04/30 15:04:56 ryoon Exp $
+$NetBSD: patch-src_cares__wrap.cc,v 1.2 2017/06/05 21:14:04 fhajny Exp $
 
 NetBSD has no AI_V4MAPPED.
 
---- src/cares_wrap.cc.orig	2015-03-31 22:13:01.000000000 +0000
+--- src/cares_wrap.cc.orig	2017-05-30 17:32:13.000000000 +0000
 +++ src/cares_wrap.cc
-@@ -1301,8 +1301,10 @@ static void Initialize(Handle<Object> ta
-               Integer::New(env->isolate(), AF_UNSPEC));
-   target->Set(FIXED_ONE_BYTE_STRING(env->isolate(), "AI_ADDRCONFIG"),
-               Integer::New(env->isolate(), AI_ADDRCONFIG));
-+#if defined(AI_V4MAPPED)
-   target->Set(FIXED_ONE_BYTE_STRING(env->isolate(), "AI_V4MAPPED"),
-               Integer::New(env->isolate(), AI_V4MAPPED));
-+#endif
+@@ -47,7 +47,7 @@
+ # include <arpa/nameser.h>
+ #endif
  
-   Local<FunctionTemplate> aiw =
-       FunctionTemplate::New(env->isolate(), NewGetAddrInfoReqWrap);
+-#if defined(__OpenBSD__)
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ # define AI_V4MAPPED 0
+ #endif
+ 
