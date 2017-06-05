@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2017/03/12 14:44:47 taca Exp $
+$NetBSD: distinfo,v 1.24 2017/06/05 14:17:43 taca Exp $
 
-SHA1 (test-unit-3.2.3.gem) = 284eae1119c682116735a334de00b3584a17ae03
-RMD160 (test-unit-3.2.3.gem) = 54434fc71478cb02d7f5ddbda572d9de40c9ca17
-SHA512 (test-unit-3.2.3.gem) = cdc927a60106e2f7c0afe33035da3240878fcc0edc0a7520be83cca30929cd6ecf64d1aa8e0243d40d55124e97f71781a63fb6a22e79160794a71fdce31d917d
-Size (test-unit-3.2.3.gem) = 125952 bytes
+SHA1 (test-unit-3.2.4.gem) = be52f44a725b156e9d8a0a4662452c706ab262e4
+RMD160 (test-unit-3.2.4.gem) = a9cee42930c894a99fa5596349c0193d56d37206
+SHA512 (test-unit-3.2.4.gem) = e2ff209c9aef1b01c14a9dcea0c07d22fdc302cb42d68ffa8dd98d64dc444252ee746c3f3a2ad6ff4651c176d84d1b862e037a8a140c078b7f142a624115d3c7
+Size (test-unit-3.2.4.gem) = 128000 bytes
