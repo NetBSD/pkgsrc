@@ -1,18 +1,19 @@
-$NetBSD: patch-Rakefile,v 1.2 2017/04/14 21:35:34 minskim Exp $
+$NetBSD: patch-Rakefile,v 1.3 2017/06/05 16:06:57 taca Exp $
 
 * Require modern task rule from rdoc.
+* Drop task for release.
 
 --- Rakefile.orig	2007-03-23 11:32:09.000000000 +0000
 +++ Rakefile
-@@ -1,13 +1,13 @@
+@@ -1,13 +1,11 @@
  require "rbconfig"
  require "rake/clean"
  require "rake/testtask"
 -require "rake/rdoctask"
 +require "rdoc/task"
  require "rake/packagetask"
- require "rake/contrib/compositepublisher"
- require "rake/contrib/sshpublisher"
+-require "rake/contrib/compositepublisher"
+-require "rake/contrib/sshpublisher"
  
 -require "rake/configuretask"
 -require "rake/extensiontask"
@@ -21,7 +22,7 @@ $NetBSD: patch-Rakefile,v 1.2 2017/04/14 21:35:34 minskim Exp $
  
  PKG_NAME = "ruby-eet"
  PKG_VERSION = File.read("lib/eet.rb").
-@@ -43,6 +43,9 @@ task :pre_ext => [:configure] do
+@@ -43,6 +41,9 @@ task :pre_ext => [:configure] do
  
  	cflags = [
  		ext.env[:cflags],
@@ -31,7 +32,7 @@ $NetBSD: patch-Rakefile,v 1.2 2017/04/14 21:35:34 minskim Exp $
  		config.eet.cflags
  	]
  
-@@ -52,11 +55,11 @@ end
+@@ -52,11 +53,11 @@ end
  task :install => [:ext] do |t|
  	destdir = ENV["DESTDIR"] || ""
  
@@ -45,3 +46,18 @@ $NetBSD: patch-Rakefile,v 1.2 2017/04/14 21:35:34 minskim Exp $
  	FileUtils::Verbose.mkdir_p(ddir) unless File.directory?(ddir)
  	FileUtils::Verbose.install("lib/eet.rb", ddir, :mode => 0644)
  end
+@@ -87,14 +88,3 @@ Rake::PackageTask.new(PKG_NAME, PKG_VERS
+ 	t.need_tar_gz = true
+ 	t.package_files = PKG_FILES
+ end
+-
+-task :publish => [:rdoc, :package] do
+-	p = Rake::CompositePublisher.new
+-	p.add(Rake::SshFreshDirPublisher.new("code-monkey.de",
+-	                                     "public_docs/" +
+-	                                     PKG_NAME, "doc"))
+-	p.add(Rake::SshFilePublisher.new("code-monkey.de",
+-	                                 ".", "pkg",
+-	                                 "#{PKG_NAME}-#{PKG_VERSION}.tar.gz"))
+-	p.upload
+-end
