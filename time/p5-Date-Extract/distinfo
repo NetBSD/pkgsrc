@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2016/11/19 14:12:49 wen Exp $
+$NetBSD: distinfo,v 1.5 2017/06/06 14:45:48 ryoon Exp $
 
 SHA1 (Date-Extract-0.06.tar.gz) = 097efec343ed78cbe4d2a70efc401cf42046f33f
 RMD160 (Date-Extract-0.06.tar.gz) = 22c2eb2651d6e4baa5893594829215a4672662e7
 SHA512 (Date-Extract-0.06.tar.gz) = f50bb1e968eab9a5ee5bd1383af1599aabc7af9f9c375e3d366857f1cbf6a6912e8eff99eece2096b09a475c9eb671eeaeb8e4b76c0d865cb452ce8b0a85c448
 Size (Date-Extract-0.06.tar.gz) = 32730 bytes
+SHA1 (patch-Makefile.PL) = d93ee31b229845b33547daf64857c48243ab5ff6
