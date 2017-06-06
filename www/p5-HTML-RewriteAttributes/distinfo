@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:08 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/06/06 15:12:04 ryoon Exp $
 
 SHA1 (HTML-RewriteAttributes-0.05.tar.gz) = b393e19b0fb745c857e3e6e8e3d4db6066a6b8e8
 RMD160 (HTML-RewriteAttributes-0.05.tar.gz) = a907753f828956fb11f8eade4eb4554e1a51744d
 SHA512 (HTML-RewriteAttributes-0.05.tar.gz) = 6a654dd2767010781f7fd145110dda4ebe71ed82aa6fea5932fa301b23f885d928c7dc0cea562ab5c5cd4f0881dadd590c4a4ae052285fcd261ac4ee9d25eb70
 Size (HTML-RewriteAttributes-0.05.tar.gz) = 27696 bytes
+SHA1 (patch-Makefile.PL) = da718e3880c3b0350fa8c9a4232e65bb52eb17a3
