@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17404 2017/06/05 11:40:41 maya Exp $
+$NetBSD: TODO,v 1.17405 2017/06/06 07:30:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -754,6 +754,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
 	o gnumeric-1.2.26
+	o gnuplot-5.2
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -977,6 +978,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o liblzo-2.09
 	o libmcs-0.7.2
 	o libmediawiki-4.14.0
+	o libmicrohttpd-0.9.55
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
@@ -1110,6 +1112,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o ng-spice-26
+	o nodejs-8.0.0
 	o nqp-2016.02
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1151,6 +1154,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
+	o p5-DateTime-1.4300
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
@@ -1159,7 +1163,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
+	o p5-JSON-2.94
 	o p5-Memoize-Memcached-0.11
+	o p5-Mojolicious-7.32
+	o p5-Net-HTTP-6.16
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
 	o p5-Netdisco-2.033001
@@ -1467,6 +1474,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
+	o syncthing-0.14.29
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
@@ -1507,6 +1515,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tin-2.4.1
 	o tkhylafax-3.2
 	o tkpasman-2.2b
+	o tmux-2.5
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
@@ -1572,7 +1581,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-2.0
-	o wine-devel-2.8
+	o wine-devel-2.9
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
