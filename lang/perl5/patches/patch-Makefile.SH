@@ -1,15 +1,14 @@
-$NetBSD: patch-Makefile.SH,v 1.5 2016/06/14 11:47:21 jperkin Exp $
+$NetBSD: patch-Makefile.SH,v 1.6 2017/06/06 12:37:50 jperkin Exp $
 
-Do not generate DTrace objects for objects which do not contain DTrace probes.
+Fix DTrace object generation.
 
---- Makefile.SH.orig	2016-05-08 13:28:35.000000000 +0000
+--- Makefile.SH.orig	2017-05-30 09:57:56.000000000 +0000
 +++ Makefile.SH
-@@ -396,7 +396,7 @@ DTRACE_H = $dtrace_h
+@@ -270,6 +270,7 @@ LNS = $lns
+ # NOTE: some systems don't grok "cp -f". XXX Configure test needed?
+ CPS = $cp
+ RMS = rm -f
++ECHO = $echo
+ ranlib = $ranlib
  
- DTRACE_PERLLIB_O = $dtrace_perllib_o # "dtrace -G" output for perllib_objs
- DTRACE_MINI_O    = $dtrace_mini_o    # "dtrace -G" output for common and mini
--DTRACE_MAIN_O    = $dtrace_main_o    # "dtrace -G" output for perlmain.o
-+#DTRACE_MAIN_O    = $dtrace_main_o    # "dtrace -G" output for perlmain.o
- 
- FIRSTMAKEFILE = $firstmakefile
- 
+ # The following are mentioned only to make metaconfig include the

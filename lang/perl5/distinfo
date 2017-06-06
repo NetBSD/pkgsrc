@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.142 2017/06/05 18:58:44 bsiegert Exp $
+$NetBSD: distinfo,v 1.143 2017/06/06 12:37:50 jperkin Exp $
 
 SHA1 (perl-5.26.0.tar.bz2) = 2ca1b28f2c3ed4cc3b74be89d150ed0377f0336a
 RMD160 (perl-5.26.0.tar.bz2) = a853a1ec299d7c6ba8239e8ed444ee6d922b8938
@@ -6,7 +6,7 @@ SHA512 (perl-5.26.0.tar.bz2) = 1e3849c0fbf3a1903f83f86470d44f55f0f22136a1bdeb829
 Size (perl-5.26.0.tar.bz2) = 14708010 bytes
 SHA1 (patch-Configure) = 13455c1b32b0f602b339787af4ddcd481f9c2dd5
 SHA1 (patch-MANIFEST) = b27b0e1754fe2c4484931219fa17c562db88d41a
-SHA1 (patch-Makefile.SH) = 32ffc30831b0af49f90119510021037b066367dc
+SHA1 (patch-Makefile.SH) = e9353181a286f52303d09cb4ce0b2c04ec104217
 SHA1 (patch-aa) = 3a2b39c9eb903e68ef7d03ae448c51c147c19aa1
 SHA1 (patch-ab) = c899b7221a78e74cc9b1480834baba047dd19f38
 SHA1 (patch-ac) = 4baa8f80695687abb53d4f4e1830cf86db5b2bf7
@@ -20,7 +20,6 @@ SHA1 (patch-dist_Carp_lib_Carp.pm) = fb628ee983462cec9303ceea09852378ec654ecf
 SHA1 (patch-ext_Errno_Errno__pm.PL) = 4f135e267da17de38f8f1e7e03d5209bfd09a323
 SHA1 (patch-ext_File-Glob_bsd_glob.c) = e43252b55f04bb1cd69d48e8155aa110532c9fbe
 SHA1 (patch-ext_File-Glob_t_rt131211.t) = 9aeddad078cdc920e64ed2e73f952be341745d7e
-SHA1 (patch-ext_XS-APItest_Makefile.PL) = 7094aa4cb021c1f29054a40c4f5f4c15c59f13de
 SHA1 (patch-hints_cygwin.sh) = 1b21d927d6b7379754c4cd64a2b05d3632c35470
 SHA1 (patch-hints_netbsd.sh) = 0d549a48800372d75fe34b783529a78cba90f646
 SHA1 (patch-hints_sco.sh) = 8d43cdc0632799e1cdb5dc6fdb968052a9ae4216
