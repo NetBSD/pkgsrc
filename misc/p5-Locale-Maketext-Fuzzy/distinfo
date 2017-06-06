@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 23:49:46 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/06/06 15:14:28 ryoon Exp $
 
 SHA1 (Locale-Maketext-Fuzzy-0.11.tar.gz) = 5e3c3b53ca8ecf28feb4c2fac3e5b60c245f795d
 RMD160 (Locale-Maketext-Fuzzy-0.11.tar.gz) = d3b1221b9ddeeb172d431041d995a99f9b464855
 SHA512 (Locale-Maketext-Fuzzy-0.11.tar.gz) = 81a199c120a812604e106f083a6380dd15d61afd81ac5299d1a0d70b5f44743184234d3fc7c9c0c420a3fa0c1caf3e55d1427441cfec6df979291b67836d3c98
 Size (Locale-Maketext-Fuzzy-0.11.tar.gz) = 29793 bytes
+SHA1 (patch-Makefile.PL) = c24e24ba1eb0ea8a9daea451feced6dcc26203f6
