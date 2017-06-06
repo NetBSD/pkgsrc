@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:08 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/07 00:25:39 ryoon Exp $
 
 SHA1 (Declare-Constraints-Simple-0.03.tar.gz) = ff668b68046d721f896428d0a622e64d92fdbae2
 RMD160 (Declare-Constraints-Simple-0.03.tar.gz) = f6ad718179a001ec5919ec1dfd9d4042578a6e35
 SHA512 (Declare-Constraints-Simple-0.03.tar.gz) = acf34e8ce62b5abbd59b03d67bf91474565a32048aab84440c5895c2acde2561dab773c124e9b26ef6f25c87804ec38db73e0eb08ed9626cabdd86cb5f38de7a
 Size (Declare-Constraints-Simple-0.03.tar.gz) = 30336 bytes
+SHA1 (patch-Makefile.PL) = fd795223e3891a63969c582414209cb372db39dc

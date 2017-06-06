@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/10/01 12:47:20 wen Exp $
+$NetBSD: distinfo,v 1.2 2017/06/07 00:00:24 ryoon Exp $
 
 SHA1 (HTTP-MultiPartParser-0.01.tar.gz) = 47235dee07fe65507030bfdcf0a0cb7b7ebe5537
 RMD160 (HTTP-MultiPartParser-0.01.tar.gz) = f7b390936f223791581368a3ff446ca41f07c0b9
 SHA512 (HTTP-MultiPartParser-0.01.tar.gz) = 3a0d6c3fd89a91c8c8a02e852b84990d2af01ba2651baa8c933df6fdbd5cd16fcb0ad8d157437aa10e1101b93f24c8d7513817545ffb91d0f88af079f9d0425f
 Size (HTTP-MultiPartParser-0.01.tar.gz) = 29701 bytes
+SHA1 (patch-Makefile.PL) = 14932aa56222c9d6b548cd0cc294fcb1d18a214d
