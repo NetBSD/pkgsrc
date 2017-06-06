@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:54 agc Exp $
+$NetBSD: distinfo,v 1.9 2017/06/07 00:34:15 ryoon Exp $
 
 SHA1 (Algorithm-Dependency-1.110.tar.gz) = 341eb6e5319790068c86a4862826e2a4ba749b1d
 RMD160 (Algorithm-Dependency-1.110.tar.gz) = 56995f5f6e7c4116fa11b1c9e1e0198ee85393f6
 SHA512 (Algorithm-Dependency-1.110.tar.gz) = f10b80bdf0b5db2fdb8d8fb86454a1c2e93682c00504cd594f39820ca720a4d506689ca22777613e13a724b01d3f47f73643659807f3de2747202786cc1ea8d0
 Size (Algorithm-Dependency-1.110.tar.gz) = 40530 bytes
+SHA1 (patch-Makefile.PL) = 5b906f309a4c20763d86680c5bed8a0c6869e040
