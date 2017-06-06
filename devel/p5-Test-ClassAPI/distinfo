@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:28:49 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/06/07 00:32:18 ryoon Exp $
 
 SHA1 (Test-ClassAPI-1.06.tar.gz) = 92c08ddded5b73e83e9355dd69f7d7902e320fb6
 RMD160 (Test-ClassAPI-1.06.tar.gz) = b0391f8ed30be0655f818e43121bbcca19da736e
 SHA512 (Test-ClassAPI-1.06.tar.gz) = f84385b8b83db52243513c86422775e448eaa3a0353a48e38c5fc4f6b5487ae59655c4a12745297f0c4416c1388b48e83c39065614a629f1343bf8693bddaa77
 Size (Test-ClassAPI-1.06.tar.gz) = 29225 bytes
+SHA1 (patch-Makefile.PL) = 2acda80ef5c031c27927077dcd31fd06832b0aa1

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2016/07/09 07:05:56 wen Exp $
+$NetBSD: distinfo,v 1.11 2017/06/07 00:01:33 ryoon Exp $
 
 SHA1 (Starlet-0.30.tar.gz) = 31bee234b1f3f15ded8db4fac2ab744296d429d3
 RMD160 (Starlet-0.30.tar.gz) = 1fa18408286e2f770e51fb29406ac81b4cd94608
 SHA512 (Starlet-0.30.tar.gz) = 24ee9c3ea6a0f90cef1f9a4c8657b03133fc64fedc70ffc590b34e45105f7e36cb3be869319e6d42a84dfae23ea6085fe06881d2dd7e88f04ba53619c80eeba1
 Size (Starlet-0.30.tar.gz) = 110843 bytes
+SHA1 (patch-Makefile.PL) = ac9882a37254bcc4d1601862a0a645c3b98b388b
