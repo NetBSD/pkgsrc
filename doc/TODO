@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17406 2017/06/06 07:34:50 wiz Exp $
+$NetBSD: TODO,v 1.17407 2017/06/06 09:41:29 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1533,7 +1533,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tin-2.4.1
 	o tkhylafax-3.2
 	o tkpasman-2.2b
-	o tmux-2.5
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
