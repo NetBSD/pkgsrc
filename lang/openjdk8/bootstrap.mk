@@ -1,4 +1,4 @@
-# $NetBSD: bootstrap.mk,v 1.9 2016/03/03 22:41:21 tnn Exp $
+# $NetBSD: bootstrap.mk,v 1.10 2017/06/06 03:36:34 ryoon Exp $
 #
 # This file contains a map of available binary bootstrap toolchains
 # and which kit to use for each supported platform.
@@ -23,8 +23,8 @@
 # All binary kits from now on MUST have an accompanying PGP signature from
 # the person who prepared the kit. Unsigned binaries on ftp will be purged.
 
-ONLY_FOR_PLATFORM=	NetBSD-[567].*-i386 NetBSD-[567].*-x86_64
-ONLY_FOR_PLATFORM+=	NetBSD-7.*-sparc64 NetBSD-7.*-earmv[67]hf
+ONLY_FOR_PLATFORM=	NetBSD-[5-9].*-i386 NetBSD-[5-9].*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-[7-9].*-sparc64 NetBSD-[7-9].*-earmv[67]hf
 ONLY_FOR_PLATFORM+=	DragonFly-[34].*-* SunOS-*-* FreeBSD-10.*-x86_64
 
 BOOT.nb5-i386=		bootstrap-jdk-1.7.76-netbsd-5-i386-20150301.tar.xz
@@ -61,22 +61,22 @@ DISTFILES+=		${BOOT.nb6-amd64}
 EXTRACT_ONLY+=		${BOOT.nb6-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || !empty(MACHINE_PLATFORM:MNetBSD-7.*-i386) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-i386) || !empty(MACHINE_PLATFORM:MNetBSD-[7-9].*-i386) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-i386}
 EXTRACT_ONLY+=		${BOOT.nb7-i386}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-7.*-x86_64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-6.99*-x86_64) || !empty(MACHINE_PLATFORM:MNetBSD-[7-9].*-x86_64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-amd64}
 EXTRACT_ONLY+=		${BOOT.nb7-amd64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-7.*-sparc64) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[7-9].*-sparc64) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-sparc64}
 EXTRACT_ONLY+=		${BOOT.nb7-sparc64}
 .endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-7.*-earmv[67]hf) || make(distinfo)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[7-9].*-earmv[67]hf) || make(distinfo)
 DISTFILES+=		${BOOT.nb7-earmv6hf}
 EXTRACT_ONLY+=		${BOOT.nb7-earmv6hf}
 .endif
