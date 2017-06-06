@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/05/21 17:30:04 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/06 09:12:59 adam Exp $
 
 .include "../../sysutils/zabbix/Makefile.common"
 
@@ -21,7 +21,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=5.4.0:../../devel/php-gettext
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=5.4.0:../../databases/php-ldap
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.4.0:../../converters/php-mbstring
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.4.0:../../databases/php-mysqli
+DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.4.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.4.0:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=5.4.0:../../net/php-sockets
 DEPENDS+=	${PHP_PKG_PREFIX}-sysvsem>=5.4.0:../../devel/php-sysvsem
