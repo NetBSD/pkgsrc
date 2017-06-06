@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/02/04 14:10:50 taca Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/06 11:12:05 jperkin Exp $
 
 DISTNAME=	chef-zero-3.2.1
 PKGREVISION=	1
@@ -14,6 +14,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-mixlib-log>=1.6.0:../../devel/ruby-mixlib-log
 DEPENDS+=	${RUBY_PKGPREFIX}-uuidtools>=2.1:../../devel/ruby-uuidtools
 DEPENDS+=	${RUBY_PKGPREFIX}-hashie2>=2.0.5:../../misc/ruby-hashie2
 DEPENDS+=	${RUBY_PKGPREFIX}-rack>=1.5.2:../../www/ruby-rack
+
+RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

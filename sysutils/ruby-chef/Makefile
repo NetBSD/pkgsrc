@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/09/08 15:19:19 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/06 11:12:05 jperkin Exp $
 
 DISTNAME=	chef-12.0.3
 CATEGORIES=	sysutils
@@ -25,7 +25,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-diff-lcs>=1.2.5<2.0:../../textproc/ruby-diff-lcs
 DEPENDS+=	${RUBY_PKGPREFIX}-plist>=3.1.0:../../textproc/ruby-plist
 DEPENDS+=	${RUBY_PKGPREFIX}-erubis>=2.7.0<3.0:../../www/ruby-erubis
 
-RUBY_VERSIONS_ACCEPTED=	21
+RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack via sysutils/ruby-chef-zero
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
