@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/06/06 14:38:05 ryoon Exp $
 
 SHA1 (Params-Classify-0.013.tar.gz) = 00bcfc849ca40a2136366760641ff5650dd7950f
 RMD160 (Params-Classify-0.013.tar.gz) = 2e971e5358080f11a20af0c4a8015d5ad932d888
 SHA512 (Params-Classify-0.013.tar.gz) = 8638d0d952854770049a8cf382ce02f6164025ad7224588d41be02f504947cb9d309d95c33d8fc1c2e3b5de6dfdbeac7fdaf9cd16dd6ba0a3d546c7a002e65e6
 Size (Params-Classify-0.013.tar.gz) = 21014 bytes
+SHA1 (patch-lib_Params_Classify.xs) = fb2c032c97f1b99bffa4be5e37076df9425f348a
