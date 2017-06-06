@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17405 2017/06/06 07:30:28 wiz Exp $
+$NetBSD: TODO,v 1.17406 2017/06/06 07:34:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,6 +357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-7.0.5.10
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
@@ -391,6 +392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o aegis-4.25
 	o aewm++-1.1.5
 	o afbinit-1.0.1
+	o afl-2.42b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o aide-0.16
@@ -399,6 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alephone-20150620
 	o alevt-1.6.2
 	o allegro-5.10
+	o alsa-lib-1.1.4.1
 	o alsa-plugins-1.1.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.4.4 [wip]
@@ -512,6 +515,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clusterssh-4.05
 	o clutter-1.24
 	o clutter-gst-3.0.2
+	o colordiff-1.0.18
 	o colorize-0.3.4
 	o colortail-0.3.3
 	o compiz-0.8.10
@@ -960,6 +964,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
+	o libgcrypt-1.7.7
 	o libgdiplus-4.2
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
@@ -993,6 +998,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libthai-0.1.24
 	o libthrift-0.9.3
 	o libtrace-3.0.22
+	o libuv-1.12.0
 	o libv4l-0.8.5
 	o libva-1.8.2
 	o libvirt-2.3
@@ -1041,6 +1047,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbuffer-20160228
 	o mcabber-1.0.2
 	o mcollective-2.3.2
+	o mcookie-2.30
 	o mcsim-5.6.5
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.39.1
@@ -1084,6 +1091,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpdas-0.4.1
 	o mserv-devel-0.41
 	o msgpack-1.4.1 [pkg/51083]
+	o mtr-0.92
 	o multitail-6.4.2
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1113,6 +1121,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o newmail-1.0.2
 	o ng-spice-26
 	o nodejs-8.0.0
+	o notmuch-0.24.2
+	o npth-1.5
 	o nqp-2016.02
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
@@ -1154,7 +1164,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Chart-3.2
 	o p5-DBD-DB2-1.85
+	o p5-Date-Manip-6.59
 	o p5-DateTime-1.4300
+	o p5-DateTime-TimeZone-2.13
 	o p5-FormValidator-Simple-1.00
 	o p5-GStreamer-0.20
 	o p5-GraphViz2-2.37
@@ -1164,6 +1176,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Heap-1.04
 	o p5-IP-Country-3.03
 	o p5-JSON-2.94
+	o p5-List-SomeUtils-0.54
+	o p5-List-SomeUtils-XS-0.53
 	o p5-Memoize-Memcached-0.11
 	o p5-Mojolicious-7.32
 	o p5-Net-HTTP-6.16
@@ -1189,11 +1203,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Publican-4.3.2
 	o p5-RADIUS-2.30
 	o p5-RT-Authen-ExternalAuth-0.25
+	o p5-Regexp-Common-2017060201
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SVG-Graph-0.0402
 	o p5-SVN-Simple-0.312
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Hunspell-2.14
+	o p5-Type-Tiny-1.002000
+	o p5-WebService-MusicBrainz-1.0.2
 	o p5-X11-Protocol-29
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
@@ -1205,6 +1222,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-saml-1.5
 	o pam-yubico-2.21
 	o pan-0.140
+	o par2-0.7.2
 	o paragui-1.1.8
 	o pari-2.9.2
 	o parrot-7.11.0
@@ -1289,6 +1307,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-buildbot-slave-0.9.1
 	o py-cassa-1.11.0
 	o py-creole-1.1.1
+	o py-cryptography-1.9
 	o py-cups-1.9.73
 	o py-daemon-2.1.1
 	o py-datapkg-0.9
@@ -1474,7 +1493,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
-	o syncthing-0.14.29
 	o sysinfo-4.2.2
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
 	o systrace-1.6e
@@ -1582,6 +1600,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-2.0
 	o wine-devel-2.9
+	o wireshark-2.2.7
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
@@ -1589,7 +1608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o worker-3.8.3
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20170527
+	o x264-devel-20170603
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
@@ -1634,6 +1653,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xsc-1.6
 	o xscorch-0.2.1
 	o xsd-3.3.0
+	o xterm-328
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
