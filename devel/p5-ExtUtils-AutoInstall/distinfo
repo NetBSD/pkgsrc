@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2016/09/15 13:12:26 mef Exp $
+$NetBSD: distinfo,v 1.6 2017/06/07 00:36:24 ryoon Exp $
 
 SHA1 (ExtUtils-AutoInstall-0.64.tar.gz) = fe885c3be641c3a0f12b0b610984ddb7cc4d5ba5
 RMD160 (ExtUtils-AutoInstall-0.64.tar.gz) = c9d61bff0466d0486c7e5cac4211a19b8e96b681
 SHA512 (ExtUtils-AutoInstall-0.64.tar.gz) = 18f8d58673ea5c0f9654b2c39297e974c6e464250af63e569fbe5966ce7a59cb2ec0ea1190b84cb47bf061eb90fd9307b52ead38491f3220fc301fff342bf860
 Size (ExtUtils-AutoInstall-0.64.tar.gz) = 25886 bytes
+SHA1 (patch-Makefile.PL) = 5801aa689ecba18bbe246c506066e80d9d7d5d6f
