@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2016/10/09 20:57:05 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2017/06/06 20:37:15 wiz Exp $
 
 VERSION=	2.5
 DISTNAME=	signing-party_${VERSION}.orig
 PKGNAME=	caff-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -17,7 +18,6 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake pod2man
 USE_TOOLS+=	perl:run
 
-DEPENDS+=	gnupg>=1.3.92:../../security/gnupg
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-Net-IDN-Encode-[0-9]*:../../textproc/p5-Net-IDN-Encode
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
@@ -35,6 +35,8 @@ SUBST_FILES.paths=	caff/caff keylookup/keylookup.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/caff share/examples/caff
+
+.include "options.mk"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/caff/caff ${DESTDIR}${PREFIX}/bin
