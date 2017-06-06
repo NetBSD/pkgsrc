@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:00 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/06/06 15:19:11 ryoon Exp $
 
 SHA1 (Class-Accessor-Lite-0.08.tar.gz) = 37e8e28580986fa3bd011eb1073170d02ceef8b5
 RMD160 (Class-Accessor-Lite-0.08.tar.gz) = 3393c7b45c47fbc64a89bc6e1fe9da3515ee82ae
 SHA512 (Class-Accessor-Lite-0.08.tar.gz) = e23afed2c0c7eb887d23c80dca1b8b0cc42d38c86f8fcceb87d384b10403e0d74d3ae3b41a9654f4fcb58462ec138f0266a0b7e94d389ecb91d271600c6e293b
 Size (Class-Accessor-Lite-0.08.tar.gz) = 30014 bytes
+SHA1 (patch-Makefile.PL) = ea61907c286449409b591be4cbe280a7dac73ed0
