@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/04/22 21:03:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/07 22:57:02 jlam Exp $
 
 DISTNAME=	kyua-0.13
 PKGREVISION=	2
@@ -34,13 +34,16 @@ PKG_SYSCONFSUBDIR=	kyua
 .  include "../../devel/atf/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-atf
 PLIST_SUBST+=		TESTS=
+
+post-install: post-install-tests
 .else
 CONFIGURE_ARGS+=	--without-atf
-PLIST_SUBST+=		TESTS=@comment
+PLIST_SUBST+=		TESTS="@comment "
 .endif
 PRINT_PLIST_AWK+=	{ sub("^tests/", "$${TESTS}tests/"); }
 
-post-install:
+.PHONY: post-install-tests
+post-install-tests:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/tests
 	${INSTALL_DATA} ${WRKSRC}/examples/Kyuafile.top \
 	    ${DESTDIR}${PREFIX}/tests/Kyuafile
