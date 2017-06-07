@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.931 2017/06/04 16:50:10 taca Exp $
+# $NetBSD: Makefile,v 1.932 2017/06/07 09:54:17 he Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -741,6 +741,7 @@ SUBDIR+=	py-jsonlib
 SUBDIR+=	py-jsonlib3
 SUBDIR+=	py-jsonrpclib
 SUBDIR+=	py-jsonschema
+SUBDIR+=	py-jxmlease
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
 SUBDIR+=	py-loremipsum
