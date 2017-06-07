@@ -1,5 +1,5 @@
 .\"	$OpenBSD: mdoclint.1,v 1.7 2009/04/13 19:06:38 jmc Exp $
-.\" $NetBSD: mdoclint.1,v 1.20 2017/06/01 14:38:50 wiz Exp $
+.\" $NetBSD: mdoclint.1,v 1.21 2017/06/07 19:09:55 wiz Exp $
 .\"
 .\" Copyright (c) 2001-2013 Thomas Klausner
 .\" All rights reserved.
@@ -33,7 +33,7 @@
 .Nd man page verifier
 .Sh SYNOPSIS
 .Nm
-.Op Fl DdeFhlmnoprSvwx
+.Op Fl DdeFhlmoprSvwx
 .Ar
 .Sh DESCRIPTION
 .Nm
@@ -41,7 +41,7 @@ is a man page verifier.
 It tries to automatically find as many common
 errors that occur when writing man pages as possible.
 If no flags are given,
-.Fl DdelmnoprSx
+.Fl DdelmoprSx
 is assumed (that is, everything except
 .Fl Fhvw ) .
 .Pp
@@ -63,9 +63,6 @@ Warn about unknown libraries used as arguments to Lb.
 Warn if man page is not in
 .Xr mdoc 7
 format.
-.It Fl n
-Warn when the .Nd macro's argument ends in a dot, that is
-.Sq \&. .
 .It Fl o
 Warn when the .Os macro has an argument (it shouldn't have one at
 least in the base system, because on
