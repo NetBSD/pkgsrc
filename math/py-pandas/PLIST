@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/05/21 08:54:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/06/07 08:13:56 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -327,9 +327,6 @@ ${PYSITELIB}/pandas/io/api.pyo
 ${PYSITELIB}/pandas/io/clipboard/__init__.py
 ${PYSITELIB}/pandas/io/clipboard/__init__.pyc
 ${PYSITELIB}/pandas/io/clipboard/__init__.pyo
-${PYSITELIB}/pandas/io/clipboard/clipboard.py
-${PYSITELIB}/pandas/io/clipboard/clipboard.pyc
-${PYSITELIB}/pandas/io/clipboard/clipboard.pyo
 ${PYSITELIB}/pandas/io/clipboard/clipboards.py
 ${PYSITELIB}/pandas/io/clipboard/clipboards.pyc
 ${PYSITELIB}/pandas/io/clipboard/clipboards.pyo
@@ -339,6 +336,9 @@ ${PYSITELIB}/pandas/io/clipboard/exceptions.pyo
 ${PYSITELIB}/pandas/io/clipboard/windows.py
 ${PYSITELIB}/pandas/io/clipboard/windows.pyc
 ${PYSITELIB}/pandas/io/clipboard/windows.pyo
+${PYSITELIB}/pandas/io/clipboards.py
+${PYSITELIB}/pandas/io/clipboards.pyc
+${PYSITELIB}/pandas/io/clipboards.pyo
 ${PYSITELIB}/pandas/io/common.py
 ${PYSITELIB}/pandas/io/common.pyc
 ${PYSITELIB}/pandas/io/common.pyo
@@ -657,6 +657,9 @@ ${PYSITELIB}/pandas/tests/groupby/test_bin_groupby.pyo
 ${PYSITELIB}/pandas/tests/groupby/test_categorical.py
 ${PYSITELIB}/pandas/tests/groupby/test_categorical.pyc
 ${PYSITELIB}/pandas/tests/groupby/test_categorical.pyo
+${PYSITELIB}/pandas/tests/groupby/test_counting.py
+${PYSITELIB}/pandas/tests/groupby/test_counting.pyc
+${PYSITELIB}/pandas/tests/groupby/test_counting.pyo
 ${PYSITELIB}/pandas/tests/groupby/test_filters.py
 ${PYSITELIB}/pandas/tests/groupby/test_filters.pyc
 ${PYSITELIB}/pandas/tests/groupby/test_filters.pyo
@@ -1139,6 +1142,8 @@ ${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv.bz2
 ${PYSITELIB}/pandas/tests/io/parser/data/salaries.csv.gz
 ${PYSITELIB}/pandas/tests/io/parser/data/sauron.SHIFT_JIS.csv
+${PYSITELIB}/pandas/tests/io/parser/data/tar_csv.tar
+${PYSITELIB}/pandas/tests/io/parser/data/tar_csv.tar.gz
 ${PYSITELIB}/pandas/tests/io/parser/data/test1.csv
 ${PYSITELIB}/pandas/tests/io/parser/data/test1.csv.bz2
 ${PYSITELIB}/pandas/tests/io/parser/data/test1.csv.gz
