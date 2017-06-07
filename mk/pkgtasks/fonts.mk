@@ -1,4 +1,4 @@
-# $NetBSD: fonts.mk,v 1.1 2017/06/01 02:06:04 jlam Exp $
+# $NetBSD: fonts.mk,v 1.2 2017/06/07 20:24:27 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,7 +77,7 @@ USE_TOOLS+=		mkfontscale:run
 FILES_SUBST+=		MKFONTSCALE=${TOOLS_PATH.mkfontscale:Q}
 .  else
 USE_TOOLS+=		type1inst:run
-FILES_SUBST+=		TTMKFDIR=${TOOLS_PATH.type1inst:Q}
+FILES_SUBST+=		TYPE1INST=${TOOLS_PATH.type1inst:Q}
 .  endif
 _FONTS_DIRS.x11+=	${FONTS_DIRS.type1}
 .endif
