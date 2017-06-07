@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/09/13 10:03:32 he Exp $
+$NetBSD: distinfo,v 1.5 2017/06/07 10:25:30 he Exp $
 
-SHA1 (junos-eznc-2.0.0.tar.gz) = f5949674e50d01a3968f4c52ba1fbc9738d11d03
-RMD160 (junos-eznc-2.0.0.tar.gz) = 1cf4d30bf95d73f6256387ed31a8c4f3e5a61aab
-SHA512 (junos-eznc-2.0.0.tar.gz) = 106838c651f19492b14d1b7f4d035b3fa3a0bae33337ad18ae979d270c5a4b8e55da3697af70006f13e71c34ad045ad223a3a181eacc8a5612ad447adda29031
-Size (junos-eznc-2.0.0.tar.gz) = 78935 bytes
+SHA1 (junos-eznc-2.1.3.tar.gz) = 80df631b31a868ad28d732ebfc90a9d7857a8e39
+RMD160 (junos-eznc-2.1.3.tar.gz) = ab94f121c037f37d634b5b032e967dfd6bc67eaf
+SHA512 (junos-eznc-2.1.3.tar.gz) = 7c56f8203fcbd8e8654e60d384f295a60b6eac1f8cbc91e0f769c6b7afe746edd5c432c01df227ae30650e74bd49554d1a0a397b38d003c523b49e6595d2edbf
+Size (junos-eznc-2.1.3.tar.gz) = 104231 bytes
