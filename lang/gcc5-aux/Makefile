@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/01/19 18:52:13 agc Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/07 23:19:05 khorben Exp $
 #
 
 PKGNAME=	gcc5-aux-${SNAPSHOT}
@@ -16,6 +16,8 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 LANGS=		c ada c++
 USE_TOOLS+=	gmake sed:run perl makeinfo bzip2 patch pod2man tar
 APPLY_DIFFS=	core ada cxx
+
+NOT_PAX_MPROTECT_SAFE+=	gcc5-aux/bin/gnatmake
 
 .include "Makefile.version"
 .include "../../mk/bsd.prefs.mk"
