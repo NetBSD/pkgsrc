@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2016/10/04 07:11:02 he Exp $
+$NetBSD: distinfo,v 1.9 2017/06/07 10:21:34 he Exp $
 
-SHA1 (ncclient-0.5.2.tar.gz) = 620976be68e16a0cc6135736d7e68d1142ae86df
-RMD160 (ncclient-0.5.2.tar.gz) = 47d103556e0e88882c7fb115a5b345d22ed1aa96
-SHA512 (ncclient-0.5.2.tar.gz) = 2b5052d3bb2dbf64d731ae8b2c362b11f4e339c8734dd2a43f1737ec0d72f3aa983662b93f9b017f29fd7b4f39b23e458dab9f9e76bf534c426ed25b2d022e19
-Size (ncclient-0.5.2.tar.gz) = 61456 bytes
-SHA1 (patch-README.rst) = 16839b8a90f2d10cf34a6793c509e24cea57e3ef
+SHA1 (ncclient-0.5.3.tar.gz) = b8a1770320b20aedb9c6b94764f19a66ec50bdbb
+RMD160 (ncclient-0.5.3.tar.gz) = c6bb226f5d73a7c580f65e61d1f939cecaa83a16
+SHA512 (ncclient-0.5.3.tar.gz) = 5d0e5a06b8da0142d305896f5180e3768e741d269ab58c3c6012216fae5f0fcef4ff30bfa3053a5e560d3f311d9e26b2de11e0262c6896460cd76786b0712c82
+Size (ncclient-0.5.3.tar.gz) = 63151 bytes
+SHA1 (patch-README.rst) = d053d8371219f04ff3ff9cf8e43dcbadf8dd7761
