@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1157 2017/06/05 14:53:24 taca Exp $
+# $NetBSD: Makefile,v 1.1158 2017/06/07 09:44:05 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -652,6 +652,7 @@ SUBDIR+=	py-ptt
 SUBDIR+=	py-py3dns
 SUBDIR+=	py-pydns
 SUBDIR+=	py-s3cmd
+SUBDIR+=	py-scp
 SUBDIR+=	py-simplesoap
 SUBDIR+=	py-smb
 SUBDIR+=	py-soaplib
