@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:31:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/06/07 18:07:50 mrg Exp $
 
 SHA1 (Data-ICal-DateTime-0.81.tar.gz) = 77f9893432c201184cb6c99e6a583ca96386afaf
 RMD160 (Data-ICal-DateTime-0.81.tar.gz) = 29bed7a6ff2c7fd9fa390955c41d6a6259209efd
 SHA512 (Data-ICal-DateTime-0.81.tar.gz) = 1dadad3e68830b561a6fb380f37c96dee9639ad8de4bd0f00d22fe31c44e93adf21cb2434fdd13aac8159a8319168ab275370a0e123f0613852a90d0feeaf840
 Size (Data-ICal-DateTime-0.81.tar.gz) = 41000 bytes
+SHA1 (patch-Makefile.PL) = fb10e9002bc503ff2652f18a2222fa0310533c32
