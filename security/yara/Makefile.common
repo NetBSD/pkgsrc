@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.8 2017/06/07 20:27:37 khorben Exp $
+# $NetBSD: Makefile.common,v 1.9 2017/06/07 20:46:34 wiz Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-DISTNAME=	v3.6.1
-YAVER=		${DISTNAME:S/v//}
+VERSION=	3.6.1
+GITHUB_TAG=	v${VERSION}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://virustotal.github.io/yara/

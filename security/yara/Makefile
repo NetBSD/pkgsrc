@@ -1,15 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2017/05/15 15:27:31 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/07 20:46:34 wiz Exp $
 
-PKGNAME=	yara-${YAVER}
+DISTNAME=	yara-${VERSION}
 CATEGORIES=	security
-
-MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/yara/archive/}
-
-DIST_SUBDIR=	yara
+MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/}
 
 COMMENT=        Pattern matching swiss knife for malware researchers
 
-WRKSRC=		${WRKDIR}/yara-${YAVER}
 USE_TOOLS+=	pkg-config automake autoreconf
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=          yes
