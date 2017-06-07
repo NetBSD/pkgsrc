@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2269 2017/06/07 09:14:39 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2270 2017/06/07 09:45:43 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/py-pandas to 0.20.2 [adam 2017-06-07]
 	Updated multimedia/ffmpeg3 to 3.3.2 [adam 2017-06-07]
 	Updated mail/dovecot2 to 2.2.30.2 [adam 2017-06-07]
+	Added net/py-scp version 0.10.2 [he 2017-06-07]
