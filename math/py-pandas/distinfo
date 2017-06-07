@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2017/05/21 08:54:33 adam Exp $
+$NetBSD: distinfo,v 1.12 2017/06/07 08:13:56 adam Exp $
 
-SHA1 (pandas-0.20.1.tar.gz) = 9eb65e02ec41401084a00377b07792fcfd7eb83e
-RMD160 (pandas-0.20.1.tar.gz) = b3b9543c6cdfdcd31e9f03a235a49eab0ea1f946
-SHA512 (pandas-0.20.1.tar.gz) = d477a815914c825efd6430f7eb19f3f9115c1c4ab03000ca6d4f64023f7b5f53eff512792fea2d8b33c7febb3667fc3a3de55f11eeb453f285cae40e6b473707
-Size (pandas-0.20.1.tar.gz) = 10307434 bytes
+SHA1 (pandas-0.20.2.tar.gz) = f26ffa20c500b15a75b25ac0a7a02ccfb2209a37
+RMD160 (pandas-0.20.2.tar.gz) = b949317a7d01c3f97c5af5714ab5e105c58cc23f
+SHA512 (pandas-0.20.2.tar.gz) = d7de58b36ac143a1b210736ed070080621c25bb09a4554c85e783e1a638d22d15455bc35591a0d28119fd3187a1eba68371e98028da0e09cad25c251505d803d
+Size (pandas-0.20.2.tar.gz) = 10334432 bytes
