@@ -1,4 +1,4 @@
-# $NetBSD: scripts.mk,v 1.3 2017/06/07 20:24:01 jlam Exp $
+# $NetBSD: scripts.mk,v 1.4 2017/06/07 20:24:09 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -169,8 +169,8 @@ FILES_SUBST+=	TRUE=${TRUE:Q}
 FILES_SUBST+=	XARGS=${XARGS:Q}
 
 # Variables for the pkg_install package tools.
-FILES_SUBST+=	PKG_ADMIN=${PKG_ADMIN:Q}
-FILES_SUBST+=	PKG_INFO=${PKG_INFO:Q}
+FILES_SUBST+=	PKG_ADMIN=${PKG_ADMIN_CMD:Q}
+FILES_SUBST+=	PKG_INFO=${PKG_INFO_CMD:Q}
 
 # Variables for installation prefix references.
 FILES_SUBST+=	CROSSBASE=${CROSSBASE:Q}
