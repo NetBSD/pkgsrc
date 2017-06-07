@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2017/06/07 20:11:42 khorben Exp $
+# $NetBSD: Makefile.common,v 1.8 2017/06/07 20:27:37 khorben Exp $
 #
 # used by security/yara/Makefile
 # used by security/py-yara/Makefile
 
-DISTNAME=	v3.6.0
+DISTNAME=	v3.6.1
 YAVER=		${DISTNAME:S/v//}
 
 MAINTAINER=	khorben@defora.org
