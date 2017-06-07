@@ -1,0 +1,13 @@
+$NetBSD: patch-src_desc_merge__822,v 1.1 2017/06/07 14:45:31 ryoon Exp $
+
+* Fix build with Perl 5.26.0
+
+--- src/desc/merge_822.orig	2008-03-31 11:43:59.000000000 +0000
++++ src/desc/merge_822
+@@ -1,4 +1,6 @@
+ #!/usr/bin/perl -w
++use FindBin;
++use lib $FindBin::Bin;
+ use PARI::822;
+ 
+ PARI::822::read(\%funcs,$_,1)

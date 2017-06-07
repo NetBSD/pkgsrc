@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:59:42 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/06/07 14:46:58 ryoon Exp $
 
 SHA1 (Convert-PEM-0.08.tar.gz) = eaee6c317cb8d4002604dacea45ea0d3349398f5
 RMD160 (Convert-PEM-0.08.tar.gz) = 9bb9713bc5dde93422ff05089d849dc51ad7191b
 SHA512 (Convert-PEM-0.08.tar.gz) = d5e4342b40d01d534ec5f81ab009af185f795267c1bce792d26739ab07078a618093c720230ac2b6cf10c4b5ae1c282c94afa5b9db2eef6fd66e684d2080c273
 Size (Convert-PEM-0.08.tar.gz) = 54089 bytes
+SHA1 (patch-Makefile.PL) = c5c76d1477da41c694066f5e8c059e79d7c8b4ef

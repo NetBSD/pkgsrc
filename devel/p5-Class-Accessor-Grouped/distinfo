@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 03:28:00 agc Exp $
+$NetBSD: distinfo,v 1.17 2017/06/07 14:42:23 ryoon Exp $
 
 SHA1 (Class-Accessor-Grouped-0.10012.tar.gz) = d0efafd95c34746c12ead9dd3dd585e39f612f98
 RMD160 (Class-Accessor-Grouped-0.10012.tar.gz) = d4537b6deda7fb397f66a68cc84017103821133f
 SHA512 (Class-Accessor-Grouped-0.10012.tar.gz) = 195c4b1f9897b50753231ab6c893987a3e49e6283713175d612843651428c8cb2eb791a5385e25607a1db189861811efade33f94ef33c36cd41624e793ca20d1
 Size (Class-Accessor-Grouped-0.10012.tar.gz) = 47830 bytes
+SHA1 (patch-Makefile.PL) = f855f14babf4dd0ff934d306e49eb44aef48d430

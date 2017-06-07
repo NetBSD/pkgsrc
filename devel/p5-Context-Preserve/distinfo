@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:05 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/07 14:42:25 ryoon Exp $
 
 SHA1 (Context-Preserve-0.01.tar.gz) = 0cf4e0bfd6ef3967b6671ff1ed93d51536d53806
 RMD160 (Context-Preserve-0.01.tar.gz) = 7823a552765028d885c1ab00473965d81de6b6ef
 SHA512 (Context-Preserve-0.01.tar.gz) = f579fdb935fb3d73375d1420db4f2357fae8a9feb350f5967f17dfe67074c02a5567180151fff6387324d995782a720e704cb0f5f5332623e88730117c3fe160
 Size (Context-Preserve-0.01.tar.gz) = 13158 bytes
+SHA1 (patch-Makefile.PL) = 2cb49750775a52f0cd026c767e01ac24ede270b0

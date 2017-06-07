@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:28:01 agc Exp $
+$NetBSD: distinfo,v 1.13 2017/06/07 14:42:24 ryoon Exp $
 
 SHA1 (Class-Autouse-2.01.tar.gz) = 875dadc0c92d617f1f38089240bf07b1b360d8ae
 RMD160 (Class-Autouse-2.01.tar.gz) = 532bd1d71a0c1f096307199fc9dcb526d8a5fecf
 SHA512 (Class-Autouse-2.01.tar.gz) = 68b23ac3a004d91e0cb77bed5c166a058128cd15d432dd278b477acbe33ee7f91b8b6e25245198a51f3b5679024ce4657d803b581745fb42bef4ba9bdbb416fd
 Size (Class-Autouse-2.01.tar.gz) = 52719 bytes
+SHA1 (patch-Makefile.PL) = 1d81d8fabef6b830665c9fd1fbd0dfd7f65a6de4
