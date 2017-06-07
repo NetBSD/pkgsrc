@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/07 09:53:42 he Exp $
+
+SHA1 (jxmlease-1.0.1.tar.gz) = 39468bea77b1197f5df80e4460654436b2d11c89
+RMD160 (jxmlease-1.0.1.tar.gz) = ccb2ba0177803e3887fb68cce6b23c34941158ae
+SHA512 (jxmlease-1.0.1.tar.gz) = 2915ddfddebe804fcd71d43752e2a32cc7795e83147d412a71fc7d1e6ff5a6c4638101c53579289c69c41b1f0da9afb90ac0287c46db47d8b20f345a1a456ed6
+Size (jxmlease-1.0.1.tar.gz) = 49228 bytes
