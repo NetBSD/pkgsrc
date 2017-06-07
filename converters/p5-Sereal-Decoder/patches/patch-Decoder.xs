@@ -1,4 +1,4 @@
-$NetBSD: patch-Decoder.xs,v 1.1 2017/06/07 14:33:23 ryoon Exp $
+$NetBSD: patch-Decoder.xs,v 1.2 2017/06/07 23:53:58 ryoon Exp $
 
 * Fix build with Perl 5.26.0
   Like devel/p5-Params-Classify/patches/patch-lib_Params_Classify.xs
@@ -60,7 +60,7 @@ $NetBSD: patch-Decoder.xs,v 1.1 2017/06/07 14:33:23 ryoon Exp $
  
 -    pushop->op_sibling = cvop;
 -    lastargop->op_sibling = NULL;
-+    OpLASTSIB_set(pushop, cvop);
++    OpMORESIB_set(pushop, cvop);
 +    OpLASTSIB_set(lastargop, NULL);
      op_free(entersubop);
      newop = newUNOP(OP_NULL, 0, firstargop);
