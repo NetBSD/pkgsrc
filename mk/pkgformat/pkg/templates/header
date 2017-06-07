@@ -29,7 +29,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $NetBSD: header,v 1.1 2017/06/01 02:09:43 jlam Exp $
+# $NetBSD: header,v 1.2 2017/06/07 20:24:01 jlam Exp $
 
 # Package task loader.
 : ${TASK_MODULE_DIR:=@LOCALBASE@/share/pkgtasks-1}
@@ -117,6 +117,7 @@ PKG_ADMIN="@PKG_ADMIN@"
 PKG_INFO="@PKG_INFO@"
 
 # Variables for installation prefix references.
+CROSSBASE="@CROSSBASE@"
 LOCALBASE="@LOCALBASE@"
 X11BASE="@X11BASE@"
 PREFIX="${PKG_PREFIX}"
@@ -125,6 +126,9 @@ PREFIX="${PKG_PREFIX}"
 PKG_SYSCONFBASE="@PKG_SYSCONFBASE@"
 PKG_SYSCONFBASEDIR="@PKG_SYSCONFBASEDIR@"
 PKG_SYSCONFDIR="@PKG_SYSCONFDIR@"
+
+# Variables for the local state directory.
+VARBASE="@VARBASE@"
 
 # The current working directory from which the script was invoked.
 CURDIR=$( ${PWD_CMD} )
