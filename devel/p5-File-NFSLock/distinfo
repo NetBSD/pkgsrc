@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:16 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/06/07 23:49:25 ryoon Exp $
 
 SHA1 (File-NFSLock-1.27.tar.gz) = 8a91392ce493dbe348f1acaae2ae87e9878fc14d
 RMD160 (File-NFSLock-1.27.tar.gz) = 8492cb314ccb893463906637118ac275163dd8c2
 SHA512 (File-NFSLock-1.27.tar.gz) = 06e6fe786691e3d07ed13761e4272906e2a170bfdcee15b185a6cd4cf78dfb1e40ad12c0a9733d7b071348c815e862f49865fe47bcf03ac8b8bda4a7316e5b0c
 Size (File-NFSLock-1.27.tar.gz) = 21518 bytes
+SHA1 (patch-File-NFSLock.spec.PL) = 11e9e2b8222442d5c8d5dd1efd195a288c7664fd
