@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 01:59:52 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/06/07 14:46:58 ryoon Exp $
 
 SHA1 (Text-RecordParser-1.6.5.tar.gz) = 9c06d8bac11890cb7c8ac13705ed10228fc33634
 RMD160 (Text-RecordParser-1.6.5.tar.gz) = b62b9adfd9e38323ceb5b3c9f9bd7e542864cbb2
 SHA512 (Text-RecordParser-1.6.5.tar.gz) = a05e2c7a1a26ff1776dc00dd1d5eb92b41e03177a1eee8aa0ffde9c03368f918e67d7d4f8eb54483704cf9f276a954a91cbd12ce04172bd1a6e0844d3b289258
 Size (Text-RecordParser-1.6.5.tar.gz) = 83653 bytes
+SHA1 (patch-Makefile.PL) = 89bd6e350ca98bef8291e68bae95830e0b35d80d

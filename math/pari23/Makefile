@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/09 06:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/07 14:45:31 ryoon Exp $
 
 DISTNAME=	pari-2.3.5
 PKGREVISION=	20
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl
 USE_LANGUAGES+=		c c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}

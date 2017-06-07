@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/01/24 01:38:31 wen Exp $
+$NetBSD: distinfo,v 1.6 2017/06/07 14:51:18 ryoon Exp $
 
 SHA1 (Hijk-0.27.tar.gz) = b1b06db881e2bf39a5e20243b282e61a783d06da
 RMD160 (Hijk-0.27.tar.gz) = 52442411871361fceb9a937cd5493526213c979f
 SHA512 (Hijk-0.27.tar.gz) = cc97667208793eca2cdb248a7c2d19cfcd96f5e2da831ff16ebb900af9eab079e627b293064053753d3feab76f40f92d5aa636eddffcda6826280b07f23eccbc
 Size (Hijk-0.27.tar.gz) = 44245 bytes
+SHA1 (patch-Makefile.PL) = bb288f5cf9a38c62899b045fef71139874207bab
