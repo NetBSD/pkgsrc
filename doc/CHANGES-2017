@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2278 2017/06/07 20:27:51 khorben Exp $
+$NetBSD: CHANGES-2017,v 1.2279 2017/06/07 20:28:02 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/yara to 3.6.0 [khorben 2017-06-07]
 	Updated security/py-yara to 3.6.0 [khorben 2017-06-07]
 	Updated security/yara to 3.6.1 [khorben 2017-06-07]
+	Updated security/py-yara to 3.6.1 [khorben 2017-06-07]
