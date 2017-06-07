@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2267 2017/06/06 20:41:06 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2268 2017/06/07 04:41:22 snj Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2855,3 +2855,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/tmux to 2.5 [fhajny 2017-06-06]
 	Updated security/caff to 2.5nb1 [wiz 2017-06-06]
 	Updated security/p5-GnuPG-Interface to 0.52nb4 [wiz 2017-06-06]
+	Updated chat/irssi to 1.0.3 [snj 2017-06-07]
