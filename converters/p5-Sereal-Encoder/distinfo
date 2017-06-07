@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/12/15 01:53:34 wiedi Exp $
+$NetBSD: distinfo,v 1.8 2017/06/07 14:33:24 ryoon Exp $
 
 SHA1 (Sereal-Encoder-3.014.tar.gz) = 8cda51758cd1d22aa307efe8c85423511a12884a
 RMD160 (Sereal-Encoder-3.014.tar.gz) = bef412b1dd0fa8510decd5a048d8bbaf922999cf
 SHA512 (Sereal-Encoder-3.014.tar.gz) = 4891cb9189abe77012d14ba778156806f9d1708bce73015ce4d1d06ce4aa62abd0f9af4f98a64c547e55fa2298770f45aa2b0b99cc00e8e0f6a022df84bb41b8
 Size (Sereal-Encoder-3.014.tar.gz) = 377995 bytes
+SHA1 (patch-Encoder.xs) = 4a0265facb06f768cf73db8f78782b117d37b00c
 SHA1 (patch-snappy_csnappy__internal__userspace.h) = 604f36231909881d4c424c06cd0b6065b4912006

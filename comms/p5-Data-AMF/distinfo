@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:34:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/07 14:31:37 ryoon Exp $
 
 SHA1 (Data-AMF-0.09.tar.gz) = fb2462b288e1c48ecc37d2aa6c3d426fd1e6d942
 RMD160 (Data-AMF-0.09.tar.gz) = 5121572c73e654f82156ef9653a040a4d98ae761
 SHA512 (Data-AMF-0.09.tar.gz) = 18d1dcf19b6f2fdaecb27ef6683137e83fdb040fa99c096ecd643bbe09adda260e94b83113d2e1e86f916dcfccc74186fb0adc4fcb967134ae682645292c70d6
 Size (Data-AMF-0.09.tar.gz) = 129205 bytes
+SHA1 (patch-Makefile.PL) = 8fcb91781eec1788845e1297e3af74f827b76cdf
