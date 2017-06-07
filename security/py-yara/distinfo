@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2017/06/07 20:27:37 khorben Exp $
+$NetBSD: distinfo,v 1.8 2017/06/07 20:46:34 wiz Exp $
 
-SHA1 (yara-python/v3.6.1.tar.gz) = 30d6005070099b40845e8e6417de5fc4c80c57a2
-RMD160 (yara-python/v3.6.1.tar.gz) = 04245acacd2f20b71c612cca5efefdf5b28cd2df
-SHA512 (yara-python/v3.6.1.tar.gz) = ccd0bd402ffc7d8686a9f2cef283c2c8cf58511235bff700188214f226911b5b0af6f5b1c1e8a3000531c0e35489cd8c7670b2208ce9372e4ecbab00d2479fa2
-Size (yara-python/v3.6.1.tar.gz) = 29543 bytes
+SHA1 (yara-python-3.6.1.tar.gz) = 30d6005070099b40845e8e6417de5fc4c80c57a2
+RMD160 (yara-python-3.6.1.tar.gz) = 04245acacd2f20b71c612cca5efefdf5b28cd2df
+SHA512 (yara-python-3.6.1.tar.gz) = ccd0bd402ffc7d8686a9f2cef283c2c8cf58511235bff700188214f226911b5b0af6f5b1c1e8a3000531c0e35489cd8c7670b2208ce9372e4ecbab00d2479fa2
+Size (yara-python-3.6.1.tar.gz) = 29543 bytes
