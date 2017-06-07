@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2017/06/07 09:53:42 he Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/07 10:23:16 he Exp $
 #
 
 DISTNAME=	jxmlease-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jxmlease/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
