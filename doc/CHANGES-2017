@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2268 2017/06/07 04:41:22 snj Exp $
+$NetBSD: CHANGES-2017,v 1.2269 2017/06/07 09:14:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2856,3 +2856,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/caff to 2.5nb1 [wiz 2017-06-06]
 	Updated security/p5-GnuPG-Interface to 0.52nb4 [wiz 2017-06-06]
 	Updated chat/irssi to 1.0.3 [snj 2017-06-07]
+	Added math/py-bottleneck version 1.2.1 [adam 2017-06-07]
+	Updated math/py-pandas to 0.20.2 [adam 2017-06-07]
+	Updated multimedia/ffmpeg3 to 3.3.2 [adam 2017-06-07]
+	Updated mail/dovecot2 to 2.2.30.2 [adam 2017-06-07]
