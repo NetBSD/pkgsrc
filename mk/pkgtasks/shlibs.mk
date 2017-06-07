@@ -1,4 +1,4 @@
-# $NetBSD: shlibs.mk,v 1.1 2017/06/01 02:06:04 jlam Exp $
+# $NetBSD: shlibs.mk,v 1.2 2017/06/07 20:24:19 jlam Exp $
 #
 # Copyright (c) 2017 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,6 +37,19 @@
 #
 _USER_VARS.pkgtasks+=	RUN_LDCONFIG
 RUN_LDCONFIG?=		${"${SHLIB_TYPE}" == "a.out":?yes:no}
+
+# LDCONFIG_ADD_CMD
+# LDCONFIG_REMOVE_CMD
+#	Command-lines to be invoked to update the library search paths
+#	cache when adding or removing a package.
+#
+#	Possible: any valid shell command-line
+#	Default: empty
+#
+LDCONFIG_ADD_CMD?=	# empty
+LDCONFIG_REMOVE_CMD?=	# empty
+FILES_SUBST+=		LDCONFIG_ADD_CMD=${LDCONFIG_ADD_CMD:Q}
+FILES_SUBST+=		LDCONFIG_REMOVE_CMD=${LDCONFIG_REMOVE_CMD:Q}
 
 # Trigger pkgtasks dependency if needed.
 .if "${RUN_LDCONFIG:tl}" == "yes"
