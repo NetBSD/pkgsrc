@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/07 14:46:58 ryoon Exp $
 
 SHA1 (String-CamelCase-0.02.tar.gz) = 39878678c5d85d34a9d7c63830f184cac23db43f
 RMD160 (String-CamelCase-0.02.tar.gz) = 97112ef1cd5dce694a4d8cd5cdb906804f4d58d4
 SHA512 (String-CamelCase-0.02.tar.gz) = 51532369a5c8a0d231298a51ecf7a60d303dd896d2bd065f6fa984bd0fcbdfdc8220b205cc808a7e6e78195ab18d410a6ddca8e0f23f1eb23aff75acef089afd
 Size (String-CamelCase-0.02.tar.gz) = 8250 bytes
+SHA1 (patch-Makefile.PL) = 3e5b5eea84c7f560864be203c87aee4d3b1debb4
