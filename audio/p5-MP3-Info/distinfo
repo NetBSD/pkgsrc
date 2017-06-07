@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:12:45 agc Exp $
+$NetBSD: distinfo,v 1.9 2017/06/07 14:27:11 ryoon Exp $
 
 SHA1 (MP3-Info-1.24.tar.gz) = 19f7101703c07db3a3fbe9aed4726134d41bcdb9
 RMD160 (MP3-Info-1.24.tar.gz) = b6e97e7061892a955fc51e8d1467d579dbfb970b
 SHA512 (MP3-Info-1.24.tar.gz) = 5cefb01b369921d49a5db9b5456e29054b993d8ef083dfa3a66b3a10b1a409162f7329f8dcf5ed96966651de5de093f4e5325f545559622d034e39ad33589701
 Size (MP3-Info-1.24.tar.gz) = 126350 bytes
+SHA1 (patch-Makefile.PL) = 64a7e0020f61ba43adb6f0918f88be1a7385d2ce
