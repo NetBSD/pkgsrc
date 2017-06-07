@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2271 2017/06/07 09:54:59 he Exp $
+$NetBSD: CHANGES-2017,v 1.2272 2017/06/07 10:22:19 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/dovecot2 to 2.2.30.2 [adam 2017-06-07]
 	Added net/py-scp version 0.10.2 [he 2017-06-07]
 	Added textproc/py-jxmlease version 1.0.1 [he 2017-06-07]
+	Updated net/py-ncclient to 0.5.3 [he 2017-06-07]
