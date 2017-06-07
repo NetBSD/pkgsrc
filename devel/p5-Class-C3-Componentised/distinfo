@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:28:01 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/06/07 14:42:24 ryoon Exp $
 
 SHA1 (Class-C3-Componentised-1.001000.tar.gz) = 7865738314ba3a5cbe0df8b5114be4f71e52f7f9
 RMD160 (Class-C3-Componentised-1.001000.tar.gz) = 3515628dc29b83846e8ac0a24d3b566b61ffa05f
 SHA512 (Class-C3-Componentised-1.001000.tar.gz) = 860b7cd09b1add6f252fddc0934e9f542231be90a57cf36afcab55684aca2fdb667777248c3583ad955ce0b76db44297515f56194ed2ec444dd8c801a01b5713
 Size (Class-C3-Componentised-1.001000.tar.gz) = 24335 bytes
+SHA1 (patch-Makefile.PL) = b392b36a8ce8daff355e2143fbc0f1b6514f55c8
