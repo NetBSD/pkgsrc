@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:28:03 agc Exp $
+$NetBSD: distinfo,v 1.8 2017/06/07 14:42:24 ryoon Exp $
 
 SHA1 (Class-ReturnValue-0.55.tar.gz) = b2e1e7dbd51df5bcbbbb6f71b54144f2bbaaff15
 RMD160 (Class-ReturnValue-0.55.tar.gz) = ec6763e569980e4b0bec90256a5e037d420cc3e1
 SHA512 (Class-ReturnValue-0.55.tar.gz) = 27aecf99a7db6c943c5300048a4e51aa7646fc83d2a6494f24a68fc76755a9e565099fa830e7f745b76c9ab1b2a8c5ac2a90cf3b22f250245413923bf03b315c
 Size (Class-ReturnValue-0.55.tar.gz) = 14339 bytes
+SHA1 (patch-Makefile.PL) = e89de898472dc34191710a92ce9ff21c8dc0d1bd
