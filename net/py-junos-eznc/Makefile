@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/06/07 10:25:30 he Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/08 08:38:35 wiz Exp $
 
 DISTNAME=	junos-eznc-2.1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	${PYPKGPREFIX}-jxmlease-[0-9]*:../../textproc/py-jxmlease
 DEPENDS+=	${PYPKGPREFIX}-netaddr-[0-9]*:../../net/py-netaddr
 DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
+
+PYTHON_VERSIONS_ACCEPTED=	27 # py-scp
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
