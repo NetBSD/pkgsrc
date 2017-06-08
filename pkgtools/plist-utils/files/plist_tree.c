@@ -1,4 +1,4 @@
-/* $NetBSD: plist_tree.c,v 1.1 2016/10/01 18:37:15 kamil Exp $ */
+/* $NetBSD: plist_tree.c,v 1.2 2017/06/08 18:14:51 adam Exp $ */
 
 /*-
  * Copyright (c) 2016 The NetBSD Foundation, Inc.
@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$NetBSD: plist_tree.c,v 1.1 2016/10/01 18:37:15 kamil Exp $");
+__RCSID("$NetBSD: plist_tree.c,v 1.2 2017/06/08 18:14:51 adam Exp $");
 
 #include <sys/param.h>
 #include <sys/types.h>
@@ -139,10 +139,10 @@ get_key(const char *entry)
 
 	/* 1. Strip all ${PLIST.option}-like strings */
 	ret = regexec(&plist_tree_singleton.plist_regex_options, entry,
-	              __arraycount(rm), rm, 0);
+	              sizeof(rm)/sizeof(rm[0]), rm, 0);
 	if (!ret) { /* Something found! */
 		/* Set pointer just after the matched string */
-		for(i = 0; i < __arraycount(rm); i++) {
+		for(i = 0; i < sizeof(rm)/sizeof(rm[0]); i++) {
 			if (rm[i].rm_so == -1)
 				break;
 
