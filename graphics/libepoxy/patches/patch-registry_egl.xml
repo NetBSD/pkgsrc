@@ -1,0 +1,20 @@
+$NetBSD: patch-registry_egl.xml,v 1.1 2017/06/08 12:37:33 adam Exp $
+
+Define EGL_CAST if missing.
+
+--- registry/egl.xml.orig	2017-06-06 09:55:43.000000000 +0000
++++ registry/egl.xml
+@@ -88,6 +88,13 @@
+     EGLint iStride;
+ };</type>
+         <type>typedef void (<apientry/> *<name>EGLDEBUGPROCKHR</name>)(EGLenum error,const char *command,EGLint messageType,EGLLabelKHR threadLabel,EGLLabelKHR objectLabel,const char* message);</type>
++        <type>#if !defined(EGL_CAST)
++#if defined(__cplusplus)
++#define EGL_CAST(type, value) (static_cast&lt;type&gt;(value))
++#else
++#define EGL_CAST(type, value) ((type) (value))
++#endif
++#endif</type>
+     </types>
+ 
+     <!-- SECTION: EGL enumerant (token) definitions. -->
