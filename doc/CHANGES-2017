@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2286 2017/06/08 14:53:36 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2287 2017/06/08 19:07:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2877,3 +2877,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/mdoclint to 1.56 [wiz 2017-06-08]
 	Updated www/libproxy to 0.4.15 [adam 2017-06-08]
 	Updated lang/php70 to 7.0.20 [taca 2017-06-08]
+	Updated converters/py-chardet to 3.0.4 [adam 2017-06-08]
