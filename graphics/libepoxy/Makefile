@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2017/06/03 07:54:07 maya Exp $
+# $NetBSD: Makefile,v 1.23 2017/06/08 04:31:34 adam Exp $
 
-DISTNAME=	libepoxy-1.4.2
+DISTNAME=	libepoxy-1.4.3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -18,40 +18,11 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	epoxy.pc.in
 PYTHON_FOR_BUILD_ONLY=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=		egl glx
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libepoxy
-PKG_SUPPORTED_OPTIONS=	x11
-PKG_SUGGESTED_OPTIONS=	x11
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mx11)
-CONFIGURE_ARGS+=	--enable-glx=yes
-PLIST.glx=	yes
-.include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-
-CONFIGURE_ARGS+=	--enable-egl=${MESALIB_SUPPORTS_EGL}
-.  if !empty(MESALIB_SUPPORTS_EGL:Myes)
-PLIST.egl=	yes
-.  endif
-.  if ${OPSYS} == "Darwin" && ${X11_TYPE} == "modular"
-CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.dylib\"
-.  endif
-.else # ! x11
-CONFIGURE_ARGS+=	--enable-glx=no
-CONFIGURE_ARGS+=	--enable-egl=no
-.  if !(${OPSYS} == "Darwin" && ${X11_TYPE} == "native")
-PKG_FAIL_REASON+=	"The x11 option must be enabled on this platform/configuration."
-.  endif
-.endif
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
-.include "../../lang/python/tool.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
+.include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
