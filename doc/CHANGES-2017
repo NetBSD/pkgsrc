@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2285 2017/06/08 11:29:24 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2286 2017/06/08 14:53:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/git-base to 2.13.1nb1 [wiz 2017-06-08]
 	Updated textproc/mdoclint to 1.56 [wiz 2017-06-08]
 	Updated www/libproxy to 0.4.15 [adam 2017-06-08]
+	Updated lang/php70 to 7.0.20 [taca 2017-06-08]
