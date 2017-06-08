@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2016/06/26 12:03:53 kamil Exp $
+$NetBSD: distinfo,v 1.20 2017/06/08 11:27:05 adam Exp $
 
-SHA1 (libproxy-0.4.13.tar.gz) = fadd9e3c9c418496b0836527c89ac6d84f0e37c9
-RMD160 (libproxy-0.4.13.tar.gz) = 497000d2c9276e10b17a00f5326f1eeb05df388d
-SHA512 (libproxy-0.4.13.tar.gz) = babbe5e9326cb2bfdf4504662533b314f72c3475687f8b57c235614698cb18e0ed31752b834cb1d33cc94ecd3af6589684b2846e73830f0be3557c465a1f1c42
-Size (libproxy-0.4.13.tar.gz) = 89296 bytes
+SHA1 (libproxy-0.4.15.tar.gz) = 2dc0fc31cad78ce3d7a5ceb8fa8df07010f5c13e
+RMD160 (libproxy-0.4.15.tar.gz) = 4818e264398035b10b1cd015d429bff8b637daba
+SHA512 (libproxy-0.4.15.tar.gz) = 8f68bd56e44aeb3f553f4657bef82a5d14302780508dafa32454d6f724b724c884ceed6042f8df53a081d26ea0b05598cf35eab44823257c47c5ef8afb36442b
+Size (libproxy-0.4.15.tar.gz) = 93084 bytes
 SHA1 (patch-libproxy_CMakeLists.txt) = fc283f97eebf0ef0cfbd81341a7db311755ab2ec
+SHA1 (patch-libproxy_get-pac-test.cpp) = 2b625dca29c031d334581a2756a2a9777e39c3f9
