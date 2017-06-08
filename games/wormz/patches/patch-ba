@@ -1,7 +1,10 @@
-$NetBSD: patch-ba,v 1.1 2005/06/14 16:33:13 jmmv Exp $
+$NetBSD: patch-ba,v 1.2 2017/06/08 14:06:38 joerg Exp $
 
---- Xlib/XlibImage.cc.orig	2005-06-14 17:01:14.191898576 +0200
-+++ Xlib/XlibImage.cc	2005-06-14 17:01:32.255152544 +0200
+Avoid missing prototypes.
+Check buffer for the error value, pointers are not signed.
+
+--- Xlib/XlibImage.cc.orig	1997-09-09 13:24:11.000000000 +0000
++++ Xlib/XlibImage.cc
 @@ -2,6 +2,7 @@
  #include <X11/Xutil.h>
  #include <sys/ipc.h>
@@ -10,3 +13,12 @@ $NetBSD: patch-ba,v 1.1 2005/06/14 16:33:13 jmmv Exp $
  #include "Utils.hh"
  
  static bool DontUseShm = FALSE;
+@@ -173,7 +174,7 @@ XSHMBuffer::XSHMBuffer(XDrawable* mainw)
+ 	 "can't create shared memory ID");
+   buffer = (Pixel_t *) shmat(shminfo.shmid, 0, 0);
+   shminfo.shmaddr = (char *) buffer;
+-  if (buffer < 0) {
++  if (buffer == (void *)-1) {
+     shmctl(shminfo.shmid, IPC_RMID, 0);
+     Die("can't map shared memory");
+   }
