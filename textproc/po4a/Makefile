@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/08/18 12:52:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2017/06/08 11:55:33 schmonz Exp $
 
 DISTNAME=		po4a-0.48
 CATEGORIES=		textproc
@@ -7,6 +7,7 @@ MASTER_SITES=		https://alioth.debian.org/frs/download.php/file/4176/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://po4a.alioth.debian.org/
 COMMENT=		Tool for using gettext where it was not intended to be used
+LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 DEPENDS+=		p5-SGMLS-[0-9]*:../../textproc/p5-SGMLS
