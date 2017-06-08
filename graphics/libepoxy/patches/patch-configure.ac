@@ -1,6 +1,5 @@
-$NetBSD: patch-configure.ac,v 1.6 2017/02/18 02:37:11 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.7 2017/06/08 04:31:34 adam Exp $
 
-Override EGL detection.
 On Darwin, build GLX only for X11 configuration.
 
 --- configure.ac.orig	2017-02-06 16:00:20.000000000 +0000
@@ -14,59 +13,3 @@ On Darwin, build GLX only for X11 configuration.
              [android*], [build_glx=no],
              [build_glx=yes])
    ],
-@@ -87,11 +87,38 @@ AS_CASE([$enable_glx],
-   [AC_MSG_ERROR([Invalid value "$enable_glx" for option "--enable-glx"])]
- ])
- 
-+AC_ARG_ENABLE([egl],
-+              [AC_HELP_STRING([--enable-egl=@<:@auto,yes,no@:>@], [Enable EGL support @<:@default=auto@:>@])],
-+              [enable_egl=$enableval],
-+              [enable_egl=auto])
-+
-+# EGL can be used on different platforms, so we expose a
-+# configure time switch to enable or disable it; in case
-+# the "auto" default value is set, we only enable EGL
-+# support on Linux and Unix
-+AS_CASE([$enable_egl],
-+  [auto], [
-+    AS_CASE([$host_os],
-+            [mingw*], [build_egl=no],
-+            [darwin*], [build_egl=no],
-+            [build_egl=yes])
-+  ],
-+
-+  [yes], [
-+    build_egl=yes
-+  ],
-+
-+  [no], [
-+    build_egl=no
-+  ],
-+
-+  [AC_MSG_ERROR([Invalid value "$enable_egl" for option "--enable-egl"])]
-+])
-+
- # The remaining platform specific API for GL/GLES are enabled
- # depending on the platform we're building for
- AS_CASE([$host_os],
-   [mingw*], [
--    build_egl=no
-     build_wgl=yes
-     has_znow=yes
-     # On windows, the DLL has to have all of its functions
-@@ -107,7 +134,6 @@ AS_CASE([$host_os],
-   ],
- 
-   [darwin*], [
--    build_egl=no
-     build_wgl=no
-     build_apple=yes
-     has_znow=no
-@@ -115,7 +141,6 @@ AS_CASE([$host_os],
-   ],
- 
-   [
--    build_egl=yes
-     build_wgl=no
-     has_znow=yes
-     # On platforms with dlopen, we load everything dynamically and
