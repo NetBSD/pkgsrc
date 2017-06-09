@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.74 2017/06/09 17:04:18 khorben Exp $
+# $NetBSD: Linux.mk,v 1.75 2017/06/09 17:21:53 khorben Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -121,6 +121,12 @@ _OPSYS_MAX_CMDLEN_CMD?=	/usr/bin/getconf ARG_MAX
 
 # Register support for FORTIFY (with GCC)
 _OPSYS_SUPPORTS_FORTIFY=yes
+
+# Register support for RELRO on supported architectures (with GCC)
+.if (${MACHINE_ARCH} == "i386") || \
+    (${MACHINE_ARCH} == "x86_64")
+_OPSYS_SUPPORTS_RELRO=	yes
+.endif
 
 # Register support for SSP on x86 architectures
 .if (${MACHINE_ARCH} == "i386") || \
