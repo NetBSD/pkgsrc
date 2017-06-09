@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/06/05 14:24:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/09 17:02:44 ryoon Exp $
 
 DISTNAME=	CAM-PDF-1.60
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/CAM-PDF/
 COMMENT=	Perl 5 PDF manipulation library
 LICENSE=	${PERL5_LICENSE}
 
-USE_TOOLS+=	csh:run
+# Workaround for WRKREF error
+#USE_TOOLS+=	csh:run
 
 REPLACE_CSH=	bin/asciify
 
