@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/10 16:28:22 taca Exp $
+
+SHA1 (net-telnet-0.1.1.gem) = c03ff1049fa135da019959d488c612ed754e6380
+RMD160 (net-telnet-0.1.1.gem) = b9243098fc72081cfcbad5afc9d2cd302960ae96
+SHA512 (net-telnet-0.1.1.gem) = d3b80e296a530173bf4741bbc98c03b89b920833b9254714bfb013f532106feb4cd82b81316fdc557b027cd3a0514a6be95a9d0a22d5dea340e801f7628edce2
+Size (net-telnet-0.1.1.gem) = 16896 bytes
