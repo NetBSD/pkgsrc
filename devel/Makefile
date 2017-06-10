@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2444 2017/06/10 15:13:29 kamil Exp $
+# $NetBSD: Makefile,v 1.2445 2017/06/10 16:03:07 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2149,6 +2149,7 @@ SUBDIR+=	ruby-getopt
 SUBDIR+=	ruby-gettext
 SUBDIR+=	ruby-gettext-activerecord
 SUBDIR+=	ruby-gettext-rails
+SUBDIR+=	ruby-gettext-setup
 SUBDIR+=	ruby-gettext_i18n_rails
 SUBDIR+=	ruby-globalid
 SUBDIR+=	ruby-gnome2-atk
