@@ -1,0 +1,3 @@
+RSpec tests for your servers configured by Puppet, Chef or anything else.
+
+You can see the details of serverspec on serverspec.org.
