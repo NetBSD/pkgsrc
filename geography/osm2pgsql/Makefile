@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/04/30 01:21:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/10 20:00:41 wiedi Exp $
 
-DISTNAME=	osm2pgsql-0.88.1
-PKGREVISION=	5
+DISTNAME=	osm2pgsql-0.92.1
 CATEGORIES=	geography
 MASTER_SITES=	${MASTER_SITE_GITHUB:=openstreetmap/}
 GITHUB_TAG=	${PKGVERSION_NOREV}
@@ -11,29 +10,21 @@ HOMEPAGE=	https://github.com/openstreetmap/osm2pgsql/
 COMMENT=	OpenStreetMap data to PostgreSQL converter
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/osm2pgsql-${PKGVERSION_NOREV}
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake autoconf aclocal automake
-GNU_CONFIGURE=	yes
 
-CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--with-bzip2=${BUILDLINK_PREFIX.bzip2}
-CONFIGURE_ARGS+=	--with-proj=${BUILDLINK_PREFIX.proj}
-CONFIGURE_ARGS+=	--with-protobuf-c=${BUILDLINK_PREFIX.protobuf-c}
-CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
+CONFIGURE_DIRS=	${WRKDIR}/build
+CMAKE_ARG_PATH=	${WRKSRC}
 
-.include "../../mk/bsd.prefs.mk"
+post-extract:
+	${RUN} mkdir -p ${WRKDIR}/build
 
-pre-configure:
-	cd ${WRKSRC} && aclocal && ./autogen.sh
-
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/protobuf-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

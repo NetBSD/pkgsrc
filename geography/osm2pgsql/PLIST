@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/06/10 01:48:49 wiedi Exp $
-bin/nodecachefilereader
+@comment $NetBSD: PLIST,v 1.2 2017/06/10 20:00:41 wiedi Exp $
 bin/osm2pgsql
-man/man1/nodecachefilereader.1
 man/man1/osm2pgsql.1
-share/osm2pgsql/900913.sql
 share/osm2pgsql/default.style
+share/osm2pgsql/empty.style

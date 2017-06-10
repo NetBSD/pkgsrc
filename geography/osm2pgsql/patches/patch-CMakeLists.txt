@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2017/06/10 20:00:42 wiedi Exp $
+
+fix man path
+
+--- CMakeLists.txt.orig	2017-04-13 20:58:25.000000000 +0000
++++ CMakeLists.txt
+@@ -252,5 +252,5 @@ endif()
+ #############################################################
+ 
+ install(TARGETS osm2pgsql DESTINATION bin)
+-install(FILES docs/osm2pgsql.1 DESTINATION share/man/man1)
++install(FILES docs/osm2pgsql.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ install(FILES default.style empty.style DESTINATION share/osm2pgsql)
