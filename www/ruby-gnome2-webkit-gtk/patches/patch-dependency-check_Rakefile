@@ -1,0 +1,25 @@
+$NetBSD: patch-dependency-check_Rakefile,v 1.1 2017/06/10 08:27:20 tsutsui Exp $
+
+- ignore native-package-installer dependency checks
+  (pkgsrc will handle dependencies internally)
+
+--- dependency-check/Rakefile.orig	2017-06-10 05:15:13.000000000 +0000
++++ dependency-check/Rakefile
+@@ -29,11 +29,11 @@ end
+ namespace :dependency do
+   desc "Check dependency"
+   task :check do
+-    unless PKGConfig.check_version?("webkitgtk-3.0")
+-      unless NativePackageInstaller.install(:debian => "libwebkitgtk-3.0-dev",
+-                                            :msys2 => "webkitgtk3")
+-        exit(false)
+-      end
+-    end
++#    unless PKGConfig.check_version?("webkitgtk-3.0")
++#      unless NativePackageInstaller.install(:debian => "libwebkitgtk-3.0-dev",
++#                                            :msys2 => "webkitgtk3")
++#        exit(false)
++#      end
++#    end
+   end
+ end
