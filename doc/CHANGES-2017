@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2291 2017/06/10 07:32:49 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.2292 2017/06/10 07:56:29 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2882,3 +2882,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.28 [mef 2017-06-10]
 	Updated devel/p5-File-Path to 2.14 [mef 2017-06-10]
 	Updated multimedia/clutter-gst to 3.0.24 [tsutsui 2017-06-10]
+	Updated devel/ruby-delayer-deferred to 2.0.0 [tsutsui 2017-06-10]
