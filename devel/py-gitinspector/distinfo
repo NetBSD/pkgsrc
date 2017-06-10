@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/10 15:12:48 kamil Exp $
+
+SHA1 (gitinspector-0.4.4.tar.gz) = e6707181ef7decd7080c3c537a0dcbdccdf38aaa
+RMD160 (gitinspector-0.4.4.tar.gz) = 902c23710f116ac60bde99153a8e4165c7785cce
+SHA512 (gitinspector-0.4.4.tar.gz) = 6e453a97f7b0bda73e376499268d9a46aa4ff1f8bb65092314a6d32031b0292056152b4e0e3781fbbe3aa6150373679bf78a8c83410882921ab40ce6d356fadb
+Size (gitinspector-0.4.4.tar.gz) = 312201 bytes
