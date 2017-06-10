@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/10 16:35:17 taca Exp $
+
+SHA1 (fuzzyurl-0.9.0.gem) = 6be2f1a801e23361d5ff49f6a1b94c2847716e79
+RMD160 (fuzzyurl-0.9.0.gem) = 76bb47fba8f497f96006335be66eea51df71414c
+SHA512 (fuzzyurl-0.9.0.gem) = b4b92f86b017bf2aac532e90fd78f3c9f82122b231cedeb48a46dfe7e2bf8a7d5ad8cd32e62180428b20cd7145096434f1083b538a0843b45b1a3c2ae76a0bd4
+Size (fuzzyurl-0.9.0.gem) = 8704 bytes
