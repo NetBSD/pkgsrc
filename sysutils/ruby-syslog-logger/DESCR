@@ -1,0 +1,12 @@
+Logger::Syslog is a Logger replacement that logs to syslog. It is almost drop-in
+with a few caveats. You can add Logger::Syslog to your Rails production
+environment to aggregate logs between multiple machines.
+
+NOTE! You can only set the Logger::Syslog program name and facility when you initialize
+Logger::Syslog for the first time. This is a limitation of the way Logger::Syslog
+uses syslog (and in some ways, a limitation of the way syslog(3) works).
+Attempts to change Logger::Syslog's program name or facility after the first initialization
+will be ignored.
+
+This particular Logger::Syslog improves the original by correctly mapping Rails log severities to
+the Syslog counterparts.  It also adds the ability to select a syslog facility other than "user."
