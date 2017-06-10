@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 00:08:43 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/06/10 20:00:41 wiedi Exp $
 
-SHA1 (osm2pgsql-0.88.1.tar.gz) = 8dcdb563de23a641c94855b50bf020c799b6a869
-RMD160 (osm2pgsql-0.88.1.tar.gz) = 8d8ce268e00a015112ec3385dd93b7160032da83
-SHA512 (osm2pgsql-0.88.1.tar.gz) = fe98afdeab9fa966bacc1b5886dc10494f2d58e0c8d26be1c732e782b583c1285689506c412d16b70cdd5b3e4146204f52201283ef54a0746fcf99f76cbe1fd5
-Size (osm2pgsql-0.88.1.tar.gz) = 2140606 bytes
-SHA1 (patch-middle-pgsql.cpp) = 71146a00bdfd486ae0b7ed74566270b4671175b7
+SHA1 (osm2pgsql-0.92.1.tar.gz) = d41e562fe8ef8cc95edd369d6a65a87c200775ec
+RMD160 (osm2pgsql-0.92.1.tar.gz) = 78d3b6a1bde7b6c6de280a999b01245e4d1f17f9
+SHA512 (osm2pgsql-0.92.1.tar.gz) = 92cda662a633600d89ba7c3f902c446450236f22a971a976da3b35d7c867bd6c2447f088685a962b5a3ba9b3071a41c24349f053e329004546012b0c0552fbf5
+Size (osm2pgsql-0.92.1.tar.gz) = 1364504 bytes
+SHA1 (patch-CMakeLists.txt) = a33fcf5b935c515a82817fe233a9d9bb6b9e7372
