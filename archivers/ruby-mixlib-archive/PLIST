@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:44:27 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/mixlib/archive.rb
+${GEM_LIBDIR}/lib/mixlib/archive/tar.rb
+${GEM_LIBDIR}/lib/mixlib/archive/version.rb
+${GEM_LIBDIR}/mixlib-archive.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
