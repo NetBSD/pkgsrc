@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/10 16:08:06 taca Exp $
+
+SHA1 (syslog-logger-1.6.8.gem) = 9b5873533bfedaac7a8c1dc1865dd4c43ea13619
+RMD160 (syslog-logger-1.6.8.gem) = a292df72ae85c5d796cbdd25e5f16cf5b6e2b96b
+SHA512 (syslog-logger-1.6.8.gem) = e7bff30d61925fc53e0a4c01d723f5da4bce5dc87b7f62a22f805be4955239c75f1208d334e07f42fbbc15ea2ccc5950b5333cd00b085566942d6e931092dce8
+Size (syslog-logger-1.6.8.gem) = 9216 bytes
