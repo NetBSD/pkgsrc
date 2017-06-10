@@ -1,0 +1,6 @@
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/lib/syslog-formatter.rb
+${GEM_LIBDIR}/lib/syslog-logger.rb
+${GEM_LIBDIR}/test/test_syslog_logger.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
