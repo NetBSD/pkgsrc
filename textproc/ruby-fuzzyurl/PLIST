@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:35:17 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/lib/fuzzyurl.rb
+${GEM_LIBDIR}/lib/fuzzyurl/fields.rb
+${GEM_LIBDIR}/lib/fuzzyurl/match.rb
+${GEM_LIBDIR}/lib/fuzzyurl/protocols.rb
+${GEM_LIBDIR}/lib/fuzzyurl/strings.rb
+${GEM_LIBDIR}/lib/fuzzyurl/version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
