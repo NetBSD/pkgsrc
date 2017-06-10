@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2014/03/10 17:03:30 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2017/06/10 19:14:00 adam Exp $
+
+Install into correct directory.
 
 --- Makefile.in.orig	2014-03-10 13:47:51.000000000 +0000
 +++ Makefile.in
