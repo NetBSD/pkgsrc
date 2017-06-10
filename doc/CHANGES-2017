@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2306 2017/06/10 16:29:14 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2307 2017/06/10 16:38:13 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/ruby-rspec-its version 1.2.0 [taca 2017-06-10]
 	Added devel/ruby-rspec_junit_formatter version 0.2.3 [taca 2017-06-10]
 	Added net/ruby-net-telnet version 0.1.1 [taca 2017-06-10]
+	Updated sysutils/znapzend to 0.17.0 [wiedi 2017-06-10]
