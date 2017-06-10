@@ -6,7 +6,7 @@
 		<single_instance/>
 
 		<dependency name='milestone' grouping='require_all' restart_on='none' type='service'>
-			<service_fmri value='svc:/milestone/sysconfig' />
+			<service_fmri value='svc:/milestone/multi-user' />
 		</dependency>
 
 		<method_context><method_credential user='root'/></method_context>

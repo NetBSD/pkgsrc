@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2016/12/06 00:11:52 wiedi Exp $
+$NetBSD: distinfo,v 1.12 2017/06/10 16:37:41 wiedi Exp $
 
-SHA1 (znapzend-0.16.0.tar.gz) = 87d3137d00c334b427ca03267528a3989038613d
-RMD160 (znapzend-0.16.0.tar.gz) = 22d6c5e4923ed72c928c640107a648036ef6c14a
-SHA512 (znapzend-0.16.0.tar.gz) = dbd04d1e5b6ea9643b3a31bdf269ebb4abdf99ebaa77972525402c8a97f7f83f2f49bb7e2d1cf8c48fc4f37d4b0cacad781b04dad371a47c085bd01a95fa0e1c
-Size (znapzend-0.16.0.tar.gz) = 149965 bytes
+SHA1 (znapzend-0.17.0.tar.gz) = 77463270d24ef7a3a4658c614b5a9fef618308e8
+RMD160 (znapzend-0.17.0.tar.gz) = 7bb64b5bf103693c5dfd30b8d4973fd5718eed3a
+SHA512 (znapzend-0.17.0.tar.gz) = 51b5076cee4ba73f6e681f8e2aafd4b7f1aea29534dc6a12a895ff902a98410f452ee1d33b4061fa39e40fff0bcdb302c6928534810d1c76a47ea5a7bd13643d
+Size (znapzend-0.17.0.tar.gz) = 151268 bytes
 SHA1 (patch-Makefile.in) = 5ddb527ada8d3657f806d0731dd24856dde35cc7
