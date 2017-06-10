@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.69 2017/05/31 17:31:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.70 2017/06/10 19:14:00 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -303,6 +303,11 @@ share/doc/sqlite3/images/cpu-usage.jpg
 share/doc/sqlite3/images/dan1.jpg
 share/doc/sqlite3/images/direct1b.gif
 share/doc/sqlite3/images/drh1.jpg
+share/doc/sqlite3/images/faster-read-blobapi.jpg
+share/doc/sqlite3/images/faster-read-mmap.jpg
+share/doc/sqlite3/images/faster-read-sql.jpg
+share/doc/sqlite3/images/faster-write-safe.jpg
+share/doc/sqlite3/images/faster-write-unsafe.jpg
 share/doc/sqlite3/images/fileformat/db_connection.gif
 share/doc/sqlite3/images/fileformat/examplepop.gif
 share/doc/sqlite3/images/fileformat/fileio_diagrams.odg
@@ -583,6 +588,7 @@ share/doc/sqlite3/releaselog/3_18_0.html
 share/doc/sqlite3/releaselog/3_19_0.html
 share/doc/sqlite3/releaselog/3_19_1.html
 share/doc/sqlite3/releaselog/3_19_2.html
+share/doc/sqlite3/releaselog/3_19_3.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
