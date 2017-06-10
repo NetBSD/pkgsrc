@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/24 05:03:23 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/10 08:27:20 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/dependency-check/Rakefile
 ${GEM_LIBDIR}/lib/clutter-gst.rb
 ${GEM_LIBDIR}/lib/clutter-gst/version.rb
 ${GEM_LIBDIR}/lib/clutter-gstreamer.rb
