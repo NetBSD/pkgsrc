@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2301 2017/06/10 16:14:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2302 2017/06/10 16:17:37 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2913,3 +2913,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated editors/nano to 2.8.4 [wiedi 2017-06-10]
 	Added sysutils/ruby-syslog-logger version 1.6.8 [taca 2017-06-10]
 	Updated textproc/ruby-will-paginate to 3.1.6 [taca 2017-06-10]
+	Updated www/goaccess to 1.2 [wiedi 2017-06-10]
