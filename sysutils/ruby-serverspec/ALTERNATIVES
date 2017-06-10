@@ -1,0 +1,1 @@
+bin/serverspec-init @PREFIX@/bin/serverspec-init@RUBY_SUFFIX@
