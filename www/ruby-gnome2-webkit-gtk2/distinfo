@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/01/29 07:54:21 tsutsui Exp $
+$NetBSD: distinfo,v 1.6 2017/06/10 08:27:20 tsutsui Exp $
 
-SHA1 (webkit-gtk2-3.1.1.gem) = 6018abd8bd6e5b888ffb1d5e777cec201b62f5b4
-RMD160 (webkit-gtk2-3.1.1.gem) = ff51a9c3d6fe7644a7e1789d4cc5a804863372a3
-SHA512 (webkit-gtk2-3.1.1.gem) = 969b86bf670718e078bab67ed490d28619919d0013d594b7c1e96f2dbf97e826ccd5d98acd113160c729cc3f8c747d49a42d6c970c0b2fa46aa6813adeb9b2b6
-Size (webkit-gtk2-3.1.1.gem) = 6656 bytes
+SHA1 (webkit-gtk2-3.1.6.gem) = b372f18934d2aa232ce39a630d75c2efd0efb8f5
+RMD160 (webkit-gtk2-3.1.6.gem) = d461f8769abe9a4073611219c953a8ee2a4be5f3
+SHA512 (webkit-gtk2-3.1.6.gem) = 20d9b81e21b709c3fcf39e87960966e0a81e4d7cec43be3f0f17c140cd05e74267f94a71ae4932209df18ea41b42f442eab79843c8f5ea473d62dff20200716f
+Size (webkit-gtk2-3.1.6.gem) = 6656 bytes
