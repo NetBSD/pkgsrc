@@ -1,0 +1,16 @@
+$NetBSD: patch-Gemfile,v 1.1 2017/06/10 09:45:33 tsutsui Exp $
+
+- use delayer-deferred 2.0.x for upstream ticket #995
+  https://dev.mikutter.hachune.net/issues/995
+
+--- Gemfile.orig	2017-06-10 02:41:13.000000000 +0000
++++ Gemfile
+@@ -16,7 +16,7 @@ group :default do
+   gem 'typed-array', '~> 0.1'
+   gem 'delayer', '~> 0.0'
+   gem 'pluggaloid', '>= 1.1.1', '< 2.0'
+-  gem 'delayer-deferred', '>= 1.0.4', '< 2.0'
++  gem 'delayer-deferred', '>= 2.0', '< 3.0'
+   gem 'twitter-text', '1.14.2'
+ end
+ 
