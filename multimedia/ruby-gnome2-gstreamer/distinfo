@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2017/01/29 07:54:20 tsutsui Exp $
+$NetBSD: distinfo,v 1.6 2017/06/10 08:40:18 tsutsui Exp $
 
-SHA1 (gstreamer-3.1.1.gem) = 876323ccc945377e1542701c3659762bef9359d6
-RMD160 (gstreamer-3.1.1.gem) = 897f6f0b854dec6de8d8f4dcc840c2fe8fb445eb
-SHA512 (gstreamer-3.1.1.gem) = ab9222db3fb8e247d17ad6c85ca664eb23180bb9faf875f25ecbff62d194779cc8aaafc1b0334ff5dda82831122da702c4b7f223d593436b9e5eeb3e286a3c60
-Size (gstreamer-3.1.1.gem) = 21504 bytes
+SHA1 (gstreamer-3.1.6.gem) = 9ba601e01479eb0d44e8e385a54a3131e2292006
+RMD160 (gstreamer-3.1.6.gem) = 8a4586bf9cb700623518e413afc17a294c743363
+SHA512 (gstreamer-3.1.6.gem) = bebc7a4e0466192c25ddd6b74e7fcd01f462d64813aab95d33f8b2545c666804d225585cf1311e3f1c788824913d17fc2a3853457d909a6fb59d79962a6b73e8
+Size (gstreamer-3.1.6.gem) = 21504 bytes
