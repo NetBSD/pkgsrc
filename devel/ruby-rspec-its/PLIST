@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:21:53 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Changelog.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/cucumber.yml
+${GEM_LIBDIR}/features/its.feature
+${GEM_LIBDIR}/features/step_definitions/additional_cli_steps.rb
+${GEM_LIBDIR}/features/support/env.rb
+${GEM_LIBDIR}/lib/rspec/its.rb
+${GEM_LIBDIR}/lib/rspec/its/version.rb
+${GEM_LIBDIR}/rspec-its.gemspec
+${GEM_LIBDIR}/script/test_all
+${GEM_LIBDIR}/spec/rspec/its_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
