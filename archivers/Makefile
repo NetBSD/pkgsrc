@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2017/04/14 14:01:30 leot Exp $
+# $NetBSD: Makefile,v 1.154 2017/06/10 16:45:16 taca Exp $
 #
 
 COMMENT=	Archivers
@@ -98,6 +98,7 @@ SUBDIR+=	ruby-bz2
 SUBDIR+=	ruby-libarchive
 SUBDIR+=	ruby-minitar
 SUBDIR+=	ruby-minitar-cli
+SUBDIR+=	ruby-mixlib-archive
 SUBDIR+=	ruby-xz
 SUBDIR+=	ruby-zip
 SUBDIR+=	rzip
