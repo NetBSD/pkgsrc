@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2304 2017/06/10 16:23:21 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2305 2017/06/10 16:26:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2916,3 +2916,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/goaccess to 1.2 [wiedi 2017-06-10]
 	Updated textproc/ruby-xpath to 2.1.0 [taca 2017-06-10]
 	Added devel/ruby-rspec-its version 1.2.0 [taca 2017-06-10]
+	Added devel/ruby-rspec_junit_formatter version 0.2.3 [taca 2017-06-10]
