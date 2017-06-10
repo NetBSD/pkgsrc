@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/06/04 15:08:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/06/10 15:59:37 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/selectors.erb
 ${GEM_LIBDIR}/.yard/templates_custom/default/class/html/setup.rb
@@ -44,6 +44,7 @@ ${GEM_LIBDIR}/lib/capybara/rspec/matcher_proxies.rb
 ${GEM_LIBDIR}/lib/capybara/rspec/matchers.rb
 ${GEM_LIBDIR}/lib/capybara/selector.rb
 ${GEM_LIBDIR}/lib/capybara/selector/css.rb
+${GEM_LIBDIR}/lib/capybara/selector/expression_filter.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filter.rb
 ${GEM_LIBDIR}/lib/capybara/selector/filter_set.rb
 ${GEM_LIBDIR}/lib/capybara/selector/selector.rb
@@ -168,6 +169,7 @@ ${GEM_LIBDIR}/lib/capybara/window.rb
 ${GEM_LIBDIR}/spec/basic_node_spec.rb
 ${GEM_LIBDIR}/spec/capybara_spec.rb
 ${GEM_LIBDIR}/spec/dsl_spec.rb
+${GEM_LIBDIR}/spec/filter_set_spec.rb
 ${GEM_LIBDIR}/spec/fixtures/capybara.csv
 ${GEM_LIBDIR}/spec/fixtures/selenium_driver_rspec_failure.rb
 ${GEM_LIBDIR}/spec/fixtures/selenium_driver_rspec_success.rb
