@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.85 2017/05/18 08:14:08 jperkin Exp $
+# $NetBSD: compiler.mk,v 1.86 2017/06/10 11:32:32 kamil Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -77,6 +77,12 @@ USE_LANGUAGES?=	c
 .if !empty(USE_LANGUAGES:Mc99)
 USE_LANGUAGES+=	c
 .endif
+
+.for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x
+.  if !empty(USE_LANGUAGES:M${_version_})
+USE_LANGUAGES+=		c++
+.  endif
+.endfor
 
 COMPILER_USE_SYMLINKS?=	yes
 
@@ -168,7 +174,6 @@ ${_var_}:=	${${_var_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//:T} ${${_var_}:C/^/_asdf_
 _CXX_VERSION_REQD=
 .for _version_ in gnu++14 c++14 gnu++11 c++11 gnu++0x c++0x
 .  if empty(_CXX_VERSION_REQD) && !empty(USE_LANGUAGES:M${_version_})
-USE_LANGUAGES+=		c++
 _CXX_VERSION_REQD=	${_version_}
 _WRAP_EXTRA_ARGS.CXX+=	-std=${_CXX_VERSION_REQD}
 CWRAPPERS_PREPEND.cxx+=	-std=${_CXX_VERSION_REQD}
