@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2016/10/09 15:43:30 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/06/10 08:27:20 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/dependency-check/Rakefile
 ${GEM_LIBDIR}/lib/gdk_pixbuf2.rb
 ${GEM_LIBDIR}/lib/gdk_pixbuf2/deprecated.rb
 ${GEM_LIBDIR}/lib/gdk_pixbuf2/loader.rb
