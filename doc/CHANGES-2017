@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2309 2017/06/10 16:45:36 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2310 2017/06/10 19:24:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2923,3 +2923,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/ruby-specinfra version 2.68.0 [taca 2017-06-10]
 	Added sysutils/ruby-serverspec version 2.39.1 [taca 2017-06-10]
 	Added archivers/ruby-mixlib-archive version 0.4.1 [taca 2017-06-10]
+	Updated databases/sqlite3 to 3.19.3 [adam 2017-06-10]
+	Updated devel/py-hypothesis to 3.11.2 [adam 2017-06-10]
+	Updated devel/py-test to 3.1.2 [adam 2017-06-10]
