@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2289 2017/06/10 05:10:57 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2290 2017/06/10 05:13:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2880,3 +2880,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated converters/py-chardet to 3.0.4 [adam 2017-06-08]
 	Updated lang/php71 to 7.1.6 [taca 2017-06-09]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.28 [mef 2017-06-10]
+	Updated devel/p5-File-Path to 2.14 [mef 2017-06-10]
