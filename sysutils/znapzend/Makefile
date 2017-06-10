@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2016/12/06 00:11:52 wiedi Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/10 16:37:41 wiedi Exp $
 
-DISTNAME=	znapzend-0.16.0
+DISTNAME=	znapzend-0.17.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
 
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl gmake
 
-TEST_TARGET=	test
+TEST_TARGET=	check
 
 DEPENDS+=	p5-Mojolicious>=6.46:../../www/p5-Mojolicious
 DEPENDS+=	p5-Mojo-IOLoop-ForkCall>=0.17:../../devel/p5-Mojo-IOLoop-ForkCall
