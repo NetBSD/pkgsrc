@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/10 16:25:12 taca Exp $
+
+SHA1 (rspec_junit_formatter-0.2.3.gem) = 9a65e112c9e70a06d83cf1f94dd632f9687cb75b
+RMD160 (rspec_junit_formatter-0.2.3.gem) = 83e24c73fb11e9ad7ccd8d625797dbc017d7778e
+SHA512 (rspec_junit_formatter-0.2.3.gem) = fe01f7e1039ed033df250b8a2b65ee2c3eb6141a81891d544a1b9bcde3ea7235a5880895d966aef158d322ee4acf46452f6a7e066d71380c32e7c5895ab4989b
+Size (rspec_junit_formatter-0.2.3.gem) = 11264 bytes
