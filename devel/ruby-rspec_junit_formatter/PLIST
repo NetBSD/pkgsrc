@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/10 16:25:12 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/lib/rspec_junit_formatter.rb
+${GEM_LIBDIR}/lib/rspec_junit_formatter/rspec2.rb
+${GEM_LIBDIR}/lib/rspec_junit_formatter/rspec3.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
