@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2017/06/04 15:08:16 taca Exp $
+$NetBSD: distinfo,v 1.9 2017/06/10 15:59:37 taca Exp $
 
-SHA1 (capybara-2.14.0.gem) = a798eb9318d6b9e15ad12eb5fefd0045d37c5840
-RMD160 (capybara-2.14.0.gem) = 1e8c4f1c3b01e8ea72dc98392a944a1ef6d1d851
-SHA512 (capybara-2.14.0.gem) = 423cff1e11a3c2739822ef41c36db89169e9f35628f2e569c90580103926da4a831ae5df56bed636628ea75895f106d924be6ccd73a078257ed86b08d9e7c506
-Size (capybara-2.14.0.gem) = 262144 bytes
+SHA1 (capybara-2.14.2.gem) = 1b22114944ea0c1c749f848d72ac8421ebbafa39
+RMD160 (capybara-2.14.2.gem) = 1dab3ee3e0e21bf775da202e0f2d35efd54aaaab
+SHA512 (capybara-2.14.2.gem) = 988bb29c117329ddf81ad9f086f527647bc044a9dbd2102f7b3fdacc76f2b1a799c4441b59c65cd716eb9ceebf67856305dda07328d58b73271f3e7ea8858771
+Size (capybara-2.14.2.gem) = 265728 bytes
