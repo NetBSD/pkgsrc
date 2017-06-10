@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2297 2017/06/10 15:57:38 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2298 2017/06/10 16:03:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-gitinspector version 0.4.4 [kamil 2017-06-10]
 	Updated mail/ruby-mail to 2.6.6 [taca 2017-06-10]
 	Updated mail/ruby-mail25 to 2.5.5 [taca 2017-06-10]
+	Added devel/ruby-gettext-setup version 0.25 [taca 2017-06-10]
