@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/04/16 17:41:03 tsutsui Exp $
+# $NetBSD: Makefile,v 1.28 2017/06/10 08:27:19 tsutsui Exp $
 #
 
 DISTNAME=		glib2-${VERSION}
@@ -9,7 +9,8 @@ CATEGORIES=		devel
 CONFLICTS+=		ruby-gnome2-glib-[0-9]*
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-glib-[0-9]*
 
-DEPENDS+=		${RUBY_PKGPREFIX}-pkg-config-[0-9]*:../../devel/ruby-pkg-config
+DEPENDS+=		${RUBY_PKGPREFIX}-native-package-installer>=1.0.3:../../devel/ruby-native-package-installer
+DEPENDS+=		${RUBY_PKGPREFIX}-pkg-config>=1.2.2:../../devel/ruby-pkg-config
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"

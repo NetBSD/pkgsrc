@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/24 05:03:23 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/10 08:27:20 tsutsui Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/dependency-check/Rakefile
 ${GEM_LIBDIR}/lib/gdk3.rb
 ${GEM_LIBDIR}/lib/gdk3/atom.rb
 ${GEM_LIBDIR}/lib/gdk3/cairo.rb
 ${GEM_LIBDIR}/lib/gdk3/color.rb
 ${GEM_LIBDIR}/lib/gdk3/cursor.rb
 ${GEM_LIBDIR}/lib/gdk3/deprecated.rb
+${GEM_LIBDIR}/lib/gdk3/event-readers.rb
 ${GEM_LIBDIR}/lib/gdk3/event.rb
 ${GEM_LIBDIR}/lib/gdk3/loader.rb
 ${GEM_LIBDIR}/lib/gdk3/rectangle.rb
@@ -14,6 +17,7 @@ ${GEM_LIBDIR}/lib/gdk3/rgba.rb
 ${GEM_LIBDIR}/lib/gdk3/screen.rb
 ${GEM_LIBDIR}/lib/gdk3/window-attr.rb
 ${GEM_LIBDIR}/lib/gdk3/window.rb
+${GEM_LIBDIR}/lib/gdk3/x11-loader.rb
 ${GEM_LIBDIR}/test/fixture/ruby-gnome2-logo.png
 ${GEM_LIBDIR}/test/gdk-test-utils.rb
 ${GEM_LIBDIR}/test/run-test.rb
