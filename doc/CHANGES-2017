@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2312 2017/06/10 22:03:08 wiedi Exp $
+$NetBSD: CHANGES-2017,v 1.2313 2017/06/10 22:04:55 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2928,3 +2928,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-test to 3.1.2 [adam 2017-06-10]
 	Updated geography/osm2pgsql to 0.92.1 [wiedi 2017-06-10]
 	Updated devel/slibtool to 0.5.13 [wiedi 2017-06-10]
+	Updated www/SOGo3 to 3.2.9 [wiedi 2017-06-10]
