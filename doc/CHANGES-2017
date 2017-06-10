@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2294 2017/06/10 09:46:22 tsutsui Exp $
+$NetBSD: CHANGES-2017,v 1.2295 2017/06/10 15:15:49 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2906,3 +2906,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.1.6 [tsutsui 2017-06-10]
 	Updated x11/ruby-gnome2-vte to 3.1.6 [tsutsui 2017-06-10]
 	Updated net/mikutter to 3.5.8 [tsutsui 2017-06-10]
+	Added devel/py-gitinspector version 0.4.4 [kamil 2017-06-10]
