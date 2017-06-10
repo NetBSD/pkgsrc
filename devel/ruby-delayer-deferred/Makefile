@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/08/05 15:58:32 tsutsui Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/10 07:55:56 tsutsui Exp $
 
-DISTNAME=	delayer-deferred-1.0.4
+DISTNAME=	delayer-deferred-2.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
