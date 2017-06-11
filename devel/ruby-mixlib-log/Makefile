@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2014/06/03 13:14:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/11 15:01:14 taca Exp $
 
-DISTNAME=	mixlib-log-1.6.0
+DISTNAME=	mixlib-log-1.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/opscode/mixlib-log
+HOMEPAGE=	https://github.com/chef/mixlib-log
 COMMENT=	Mixin for simple class-based loggers
 LICENSE=	apache-2.0
 
