@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2313 2017/06/10 22:04:55 wiedi Exp $
+$NetBSD: CHANGES-2017,v 1.2314 2017/06/11 04:41:52 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated geography/osm2pgsql to 0.92.1 [wiedi 2017-06-10]
 	Updated devel/slibtool to 0.5.13 [wiedi 2017-06-10]
 	Updated www/SOGo3 to 3.2.9 [wiedi 2017-06-10]
+	Updated textproc/libxml2 to 2.9.4nb3 [maya 2017-06-11]
