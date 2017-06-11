@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2017/06/10 08:27:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/11 05:51:41 tsutsui Exp $
 #
 
 DISTNAME=		clutter-gstreamer-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
 COMMENT=		Ruby binding of Clutter-GStreamer
 CATEGORIES=		graphics
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter>=${VERSION}:../../graphics/ruby-gnome2-clutter
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
