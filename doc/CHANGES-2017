@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2317 2017/06/11 14:53:38 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2318 2017/06/11 14:57:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2933,3 +2933,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added sysutils/dtb-arm-exynos5422 version 4.11.3 [jmcneill 2017-06-11]
 	Updated devel/ruby-mixlib-authentication to 1.4.1 [taca 2017-06-11]
 	Updated devel/ruby-mixlib-cli to 1.7.0 [taca 2017-06-11]
+	Updated devel/ruby-mixlib-config to 2.2.4 [taca 2017-06-11]
