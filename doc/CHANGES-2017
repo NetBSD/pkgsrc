@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2320 2017/06/11 15:22:02 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2321 2017/06/11 19:35:16 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2936,3 +2936,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-mixlib-config to 2.2.4 [taca 2017-06-11]
 	Updated devel/ruby-mixlib-log to 1.7.1 [taca 2017-06-11]
 	Updated devel/ruby-mixlib-shellout to 2.2.7 [taca 2017-06-11]
+	Updated pkgtools/cwrappers to 20170611 [joerg 2017-06-11]
