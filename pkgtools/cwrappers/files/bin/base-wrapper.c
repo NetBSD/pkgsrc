@@ -1,7 +1,7 @@
-/* $NetBSD: base-wrapper.c,v 1.4 2017/01/12 14:56:35 joerg Exp $ */
+/* $NetBSD: base-wrapper.c,v 1.5 2017/06/11 19:34:43 joerg Exp $ */
 
 /*-
- * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2007, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * This code was developed as part of Google's Summer of Code 2007 program.
@@ -128,6 +128,11 @@ main(int argc, char **argv)
 		goto skip_transforms;
 #endif
 
+#if defined(WRAPPER_LD)
+	operation_mode_ld(&args);
+#else
+	operation_mode_cc(&args);
+#endif
 	arglist_apply_config(&args);
 #if defined(WRAPPER_LD)
 	normalise_ld(&args);
