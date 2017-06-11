@@ -1,7 +1,7 @@
-/* $NetBSD: normalise-cc.c,v 1.4 2016/09/15 17:08:14 joerg Exp $ */
+/* $NetBSD: normalise-cc.c,v 1.5 2017/06/11 19:34:43 joerg Exp $ */
 
 /*-
- * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -58,6 +58,34 @@ normalise_path_list(struct arglist *args, struct argument *arg,
 	arg2 = argument_new(concat(prefix, val));
 	TAILQ_INSERT_AFTER(args, arg, arg2, link);
 	arg = arg2;
+}
+
+void
+operation_mode_cc(struct arglist *args)
+{
+	struct argument *arg;
+
+	current_operation_mode = mode_link_executable;
+	TAILQ_FOREACH(arg, args, link) {
+		if (arg->val[0] != '-')
+			continue;
+		if (strcmp(arg->val, "-E") == 0) {
+			current_operation_mode = mode_preprocess;
+			continue;
+		}
+		if (strcmp(arg->val, "-S") == 0) {
+			current_operation_mode = mode_assemble;
+			continue;
+		}
+		if (strcmp(arg->val, "-c") == 0) {
+			current_operation_mode = mode_compile;
+			continue;
+		}
+		if (strcmp(arg->val, "-shared") == 0) {
+			current_operation_mode = mode_link_shared;
+			continue;
+		}
+	}
 }
 
 void
