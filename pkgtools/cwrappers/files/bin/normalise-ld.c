@@ -1,7 +1,7 @@
-/* $NetBSD: normalise-ld.c,v 1.2 2015/04/19 14:30:07 jperkin Exp $ */
+/* $NetBSD: normalise-ld.c,v 1.3 2017/06/11 19:34:43 joerg Exp $ */
 
 /*-
- * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,6 +34,23 @@
 #include <stdlib.h>
 #include <string.h>
 #include "common.h"
+
+void
+operation_mode_ld(struct arglist *args)
+{
+	struct argument *arg;
+
+	current_operation_mode = mode_link_executable;
+	TAILQ_FOREACH(arg, args, link) {
+		if (arg->val[0] != '-')
+			continue;
+		if (strcmp(arg->val, "-shared") == 0 ||
+		    strcmp(arg->val, "-Bshareable") == 0) {
+			current_operation_mode = mode_link_shared;
+			continue;
+		}
+	}
+}
 
 void
 normalise_ld(struct arglist *args)
