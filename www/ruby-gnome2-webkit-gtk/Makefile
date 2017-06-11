@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2016/04/16 17:41:04 tsutsui Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/11 05:51:41 tsutsui Exp $
 #
 
 DISTNAME=		webkit-gtk-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
 COMMENT=		Ruby binding of WebKitGTK+
 CATEGORIES=		www
+
+MAINTAINER=		tsutsui@NetBSD.org
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk3>=${VERSION}:../../x11/ruby-gnome2-gtk3
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=${VERSION}:../../devel/ruby-gnome2-gobject-introspection
