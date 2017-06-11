@@ -1,4 +1,4 @@
-$NetBSD: normalise-ld.txt,v 1.1 2014/09/17 12:40:56 joerg Exp $
+$NetBSD: normalise-ld.txt,v 1.2 2017/06/11 19:34:44 joerg Exp $
 
 The first phase of wrapper processing for ld-ish wrappers is argument
 normalisation.  This simplifies processing in latter steps.
@@ -19,3 +19,6 @@ to the form "-rpath foo".
 "/lib([a-zA-Z0-9_-])*\.s[ol](\.[0-9][^/]*)$ are replaced by "-Ldir -l\1"
 with "dir" being the base name of the argument.  This is not done for
 arguments to -o, --dynamic-linker or -Wl,--dynamic-linker.
+
+If "-shared" or "-Bshareable" is present, the operation mode is considered
+to be link-shared, otherwise the output mode is link-executable.
