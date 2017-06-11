@@ -1,7 +1,7 @@
-/* $NetBSD: common.c,v 1.6 2016/12/09 22:25:28 joerg Exp $ */
+/* $NetBSD: common.c,v 1.7 2017/06/11 19:34:43 joerg Exp $ */
 
 /*-
- * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2009, 2017 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -49,9 +49,18 @@ char *exec_path;
 char *exec_name;
 char *wrksrc;
 int debug;
+enum operation_mode current_operation_mode = mode_unknown;
 
 static struct arglist prepend_args = TAILQ_HEAD_INITIALIZER(prepend_args);
 static struct arglist append_args = TAILQ_HEAD_INITIALIZER(append_args);
+static struct arglist prepend_executable_args =
+   TAILQ_HEAD_INITIALIZER(prepend_executable_args);
+static struct arglist append_executable_args =
+   TAILQ_HEAD_INITIALIZER(append_executable_args);
+static struct arglist prepend_shared_args =
+   TAILQ_HEAD_INITIALIZER(prepend_shared_args);
+static struct arglist append_shared_args =
+   TAILQ_HEAD_INITIALIZER(append_shared_args);
 struct argument *prepend_after;
 
 const char library_name_chars[] =
@@ -135,25 +144,52 @@ arglist_from_argc(struct arglist *args, int argc, char **argv)
 	}
 }
 
-void
-arglist_apply_config(struct arglist *args)
+static void
+arglist_prepend_list(struct arglist *args, struct arglist *prepends)
 {
 	struct argument *arg, *arg2;
 
 	if (prepend_after) {
-		TAILQ_FOREACH(arg, &prepend_args, link) {
+		TAILQ_FOREACH(arg, prepends, link) {
 			arg2 = argument_copy(arg->val);
 			TAILQ_INSERT_AFTER(args, prepend_after, arg2, link);
 		}
 	} else {
-		TAILQ_FOREACH_REVERSE(arg, &prepend_args, arglist, link) {
+		TAILQ_FOREACH_REVERSE(arg, prepends, arglist, link) {
 			arg2 = argument_copy(arg->val);
 			TAILQ_INSERT_HEAD(args, arg2, link);
 		}
 	}
-	TAILQ_FOREACH(arg, &append_args, link) {
+}
+
+static void
+arglist_append_list(struct arglist *args, struct arglist *appends)
+{
+	struct argument *arg, *arg2;
+
+	TAILQ_FOREACH(arg, appends, link) {
 		arg2 = argument_copy(arg->val);
 		TAILQ_INSERT_TAIL(args, arg2, link);
+	}
+}
+
+void
+arglist_apply_config(struct arglist *args)
+{
+	arglist_prepend_list(args, &prepend_args);
+	arglist_append_list(args, &append_args);
+
+	switch (current_operation_mode) {
+	default:
+		break;
+	case mode_link_executable:
+		arglist_prepend_list(args, &prepend_executable_args);
+		arglist_append_list(args, &append_executable_args);
+		break;
+	case mode_link_shared:
+		arglist_prepend_list(args, &prepend_shared_args);
+		arglist_append_list(args, &prepend_shared_args);
+		break;
 	}
 }
 
@@ -232,6 +268,26 @@ parse_config(const char *wrapper)
 			struct argument *arg;
 			arg = argument_copy(line + 7);
 			TAILQ_INSERT_TAIL(&append_args, arg, link);
+		}
+		if (strncmp(line, "prepend_executable=", 19) == 0) {
+			struct argument *arg;
+			arg = argument_copy(line + 19);
+			TAILQ_INSERT_TAIL(&prepend_executable_args, arg, link);
+		}
+		if (strncmp(line, "append_executable=", 18) == 0) {
+			struct argument *arg;
+			arg = argument_copy(line + 18);
+			TAILQ_INSERT_TAIL(&append_executable_args, arg, link);
+		}
+		if (strncmp(line, "prepend_shared=", 15) == 0) {
+			struct argument *arg;
+			arg = argument_copy(line + 15);
+			TAILQ_INSERT_TAIL(&prepend_shared_args, arg, link);
+		}
+		if (strncmp(line, "append_shared=", 14) == 0) {
+			struct argument *arg;
+			arg = argument_copy(line + 14);
+			TAILQ_INSERT_TAIL(&append_shared_args, arg, link);
 		}
 		if (strncmp(line, "wrksrc=", 7) == 0) {
 			free(wrksrc);

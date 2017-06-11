@@ -1,4 +1,4 @@
-$NetBSD: configuration.txt,v 1.2 2014/11/27 20:36:43 joerg Exp $
+$NetBSD: configuration.txt,v 1.3 2017/06/11 19:34:44 joerg Exp $
 
 The configuration of the wrapper framework depends on two variables.
 The environment variable CWRAPPERS_CONFIG_DIR points to a directory
@@ -22,7 +22,21 @@ transform: Specify a transformation rule.  See generic-transform.txt for
 the details.
 
 prepend: Prepend an option directly after logging the original command.
-The options are inserted in the order of the config file.
+The options are inserted in the order of the config file. In libtool mode,
+the options are inserted after the first argument, if that argument itself is
+not an option.
 
 append: Append an option directly after logging the original command.
 The options are inserted in the order of the config file.
+
+prepend_executable: Like prepend, but applied only if the operation mode is
+link-executable.
+
+append_executable: Like append, but applied only if the operation mode is
+link-executable.
+
+prepend_shared: Like prepend, but applied only if the operation mode is
+link-shared.
+
+append_shared: Like append, but applied only if the operation mode is
+link-shared.
