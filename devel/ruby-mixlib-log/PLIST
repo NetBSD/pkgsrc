@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:14:02 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/11 15:01:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/NOTICE
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/mixlib/log.rb
 ${GEM_LIBDIR}/lib/mixlib/log/formatter.rb
