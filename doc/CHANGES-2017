@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2315 2017/06/11 11:14:55 jmcneill Exp $
+$NetBSD: CHANGES-2017,v 1.2316 2017/06/11 14:48:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/SOGo3 to 3.2.9 [wiedi 2017-06-10]
 	Updated textproc/libxml2 to 2.9.4nb3 [maya 2017-06-11]
 	Added sysutils/dtb-arm-exynos5422 version 4.11.3 [jmcneill 2017-06-11]
+	Updated devel/ruby-mixlib-authentication to 1.4.1 [taca 2017-06-11]
