@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2017/04/08 08:56:27 ryoon Exp $
+# $NetBSD: options.mk,v 1.5 2017/06/11 05:26:45 dogcow Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba4
 PKG_SUPPORTED_OPTIONS=	ads fam ldap pam winbind # cups # cups option is broken for me.
@@ -96,6 +96,7 @@ PLIST_VARS+=		winbind
 .if !empty(PKG_OPTIONS:Mwinbind)
 CONFIGURE_ARGS+=	--with-winbind
 PLIST.winbind=		yes
+WINBINDD_RCD_SCRIPT=	winbindd
 .else
 CONFIGURE_ARGS+=	--without-winbind
 .endif
