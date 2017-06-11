@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.30 2017/06/05 09:21:37 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.31 2017/06/11 18:49:22 spz Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -555,3 +555,5 @@ x11/matchbox-panel: SunOS build fix
 Pullup ticket #5418 - requested by sevan
 meta-pkgs/modular-xorg-drivers: build fix
 
+Pullup ticket #5474 - requested by bsiegert
+devel/p5-File-Path; security update
