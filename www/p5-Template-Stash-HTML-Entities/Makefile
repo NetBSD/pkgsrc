@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:25:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 08:33:11 maya Exp $
 
 DISTNAME=	Template-Stash-HTML-Entities-1.3.1
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,8 @@ DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 
 USE_LANGUAGES=	#
 
-PERL5_PACKLIST= auto/Template/Stash/HTML/Entities/.packlist
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=	auto/Template/Stash/HTML/Entities/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
