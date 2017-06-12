@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:25:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 07:59:53 maya Exp $
 #
 
 DISTNAME=	Apache2-AuthCASSimple-0.10
@@ -12,8 +12,9 @@ HOMEPAGE=	http://search.cpan.org/dist/Apache2-AuthCASSimple/
 COMMENT=	Apache2 module to authenticate through a CAS server
 #LICENSE=	artistic OR gnu-gpl-v2
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Apache2/AuthCASSimple/.packlist
+USE_LANGUAGES=		# empty
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=		auto/Apache2/AuthCASSimple/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 DEPENDS+=	p5-Apache-Session-Wrapper-[0-9]*:../../www/p5-Apache-Session-Wrapper
