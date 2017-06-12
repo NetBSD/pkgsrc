@@ -1,0 +1,1 @@
+bin/chef-zero @PREFIX@/bin/chef-zero@RUBY_SUFFIX@
