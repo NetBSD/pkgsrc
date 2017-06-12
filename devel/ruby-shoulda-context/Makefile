@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/07/16 08:37:20 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/12 15:44:27 taca Exp $
 
-DISTNAME=	shoulda-context-1.2.1
+DISTNAME=	shoulda-context-1.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel ruby
 
