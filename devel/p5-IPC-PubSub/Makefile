@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:23:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 12:36:23 maya Exp $
 #
 
 DISTNAME=	IPC-PubSub-0.29
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/IPC-PubSub/
 COMMENT=	Perl 5 module providing interprocess publish/subscribe channels
 
 USE_LANGUAGES=	# empty
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/IPC/PubSub/.packlist
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
