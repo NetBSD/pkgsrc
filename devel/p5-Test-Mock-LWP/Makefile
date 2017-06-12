@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:23:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 07:21:35 maya Exp $
 #
 
 DISTNAME=	Test-Mock-LWP-0.08
@@ -13,6 +13,7 @@ COMMENT=	Perl 5 package providing easy mocking of LWP packages
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Test/Mock/LWP/.packlist
 
 DEPENDS+=	p5-Test-MockObject>=1.08:../../devel/p5-Test-MockObject
