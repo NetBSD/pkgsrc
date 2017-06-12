@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:25:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 08:10:27 maya Exp $
 
 DISTNAME=	Catalyst-Plugin-RequireSSL-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Catalyst-Runtime>=5.23:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
 
-USE_LANGUAGES=	# empty
-PERL5_PACKLIST=	auto/Catalyst/Plugin/RequireSSL/.packlist
+USE_LANGUAGES=		# empty
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=		auto/Catalyst/Plugin/RequireSSL/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
