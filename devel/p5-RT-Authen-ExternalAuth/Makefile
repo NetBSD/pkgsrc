@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/05 14:23:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/12 08:38:07 maya Exp $
 
 DISTNAME=	RT-Authen-ExternalAuth-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Net-SSLeay-[0-9]*:../../security/p5-Net-SSLeay
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/RT/Authen/ExternalAuth/.packlist
 
 .include "../../lang/perl5/module.mk"
