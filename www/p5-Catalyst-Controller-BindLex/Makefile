@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:25:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 08:06:25 maya Exp $
 
 DISTNAME=	Catalyst-Controller-BindLex-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,8 @@ DEPENDS+=       p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 DEPENDS+=	p5-PadWalker>0:../../devel/p5-PadWalker
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/Controller/BindLex/.packlist
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=	auto/Catalyst/Controller/BindLex/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
