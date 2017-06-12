@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/12 12:37:28 maya Exp $
 
 DISTNAME=	Module-Install-AuthorRequires-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Module/Install/AuthorRequires/.packlist
 USE_LANGUAGES=	# none
 
