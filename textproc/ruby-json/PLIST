@@ -1,19 +1,15 @@
-@comment $NetBSD: PLIST,v 1.20 2015/03/08 15:17:21 taca Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/06/12 16:34:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/json/ext/generator.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/json/ext/parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/COPYING-json-jruby
-${GEM_LIBDIR}/GPL
+${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/Gemfile
-${GEM_LIBDIR}/README-json-jruby.markdown
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README-json-jruby.md
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/data/example.json
 ${GEM_LIBDIR}/data/index.html
@@ -71,7 +67,7 @@ ${GEM_LIBDIR}/lib/json/pure.rb
 ${GEM_LIBDIR}/lib/json/pure/generator.rb
 ${GEM_LIBDIR}/lib/json/pure/parser.rb
 ${GEM_LIBDIR}/lib/json/version.rb
-${GEM_LIBDIR}/tests/fixtures/fail1.json
+${GEM_LIBDIR}/references/rfc7159.txt
 ${GEM_LIBDIR}/tests/fixtures/fail10.json
 ${GEM_LIBDIR}/tests/fixtures/fail11.json
 ${GEM_LIBDIR}/tests/fixtures/fail12.json
@@ -95,6 +91,7 @@ ${GEM_LIBDIR}/tests/fixtures/fail6.json
 ${GEM_LIBDIR}/tests/fixtures/fail7.json
 ${GEM_LIBDIR}/tests/fixtures/fail8.json
 ${GEM_LIBDIR}/tests/fixtures/fail9.json
+${GEM_LIBDIR}/tests/fixtures/obsolete_fail1.json
 ${GEM_LIBDIR}/tests/fixtures/pass1.json
 ${GEM_LIBDIR}/tests/fixtures/pass15.json
 ${GEM_LIBDIR}/tests/fixtures/pass16.json
@@ -102,15 +99,17 @@ ${GEM_LIBDIR}/tests/fixtures/pass17.json
 ${GEM_LIBDIR}/tests/fixtures/pass2.json
 ${GEM_LIBDIR}/tests/fixtures/pass26.json
 ${GEM_LIBDIR}/tests/fixtures/pass3.json
-${GEM_LIBDIR}/tests/setup_variant.rb
-${GEM_LIBDIR}/tests/test_json.rb
-${GEM_LIBDIR}/tests/test_json_addition.rb
-${GEM_LIBDIR}/tests/test_json_encoding.rb
-${GEM_LIBDIR}/tests/test_json_fixtures.rb
-${GEM_LIBDIR}/tests/test_json_generate.rb
-${GEM_LIBDIR}/tests/test_json_generic_object.rb
-${GEM_LIBDIR}/tests/test_json_string_matching.rb
-${GEM_LIBDIR}/tests/test_json_unicode.rb
+${GEM_LIBDIR}/tests/json_addition_test.rb
+${GEM_LIBDIR}/tests/json_common_interface_test.rb
+${GEM_LIBDIR}/tests/json_encoding_test.rb
+${GEM_LIBDIR}/tests/json_ext_parser_test.rb
+${GEM_LIBDIR}/tests/json_fixtures_test.rb
+${GEM_LIBDIR}/tests/json_generator_test.rb
+${GEM_LIBDIR}/tests/json_generic_object_test.rb
+${GEM_LIBDIR}/tests/json_parser_test.rb
+${GEM_LIBDIR}/tests/json_string_matching_test.rb
+${GEM_LIBDIR}/tests/test_helper.rb
+${GEM_LIBDIR}/tools/diff.sh
 ${GEM_LIBDIR}/tools/fuzz.rb
 ${GEM_LIBDIR}/tools/server.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
