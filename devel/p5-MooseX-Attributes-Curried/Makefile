@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:23:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/12 12:40:54 maya Exp $
 #
 
 DISTNAME=	MooseX-Attributes-Curried-0.03
@@ -13,6 +13,7 @@ COMMENT=	Perl 5 module to define curried versions of "has" in Moose
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/MooseX/Attributes/Curried/.packlist
 
 DEPENDS+=	p5-Moose>=0.84:../../devel/p5-Moose
