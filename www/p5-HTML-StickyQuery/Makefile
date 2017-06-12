@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/06/05 14:25:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2017/06/12 08:13:52 maya Exp $
 #
 
 DISTNAME=		HTML-StickyQuery-0.13
@@ -15,6 +15,7 @@ LICENSE=		${PERL5_LICENSE}
 DEPENDS+=		p5-HTML-Parser>=3.34:../../www/p5-HTML-Parser
 DEPENDS+=		p5-URI>=1.27:../../www/p5-URI
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/HTML/StickyQuery/.packlist
 
 .include "../../lang/perl5/module.mk"
