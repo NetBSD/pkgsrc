@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/06/05 14:25:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2017/06/12 08:32:37 maya Exp $
 
 DISTNAME=		Template-Generate-0.04
 PKGNAME=		p5-${DISTNAME}
@@ -26,6 +26,7 @@ DEPENDS+=	p5-XML-Parser>=2.30:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-RSS>=0.9:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-XML-XPath>=1.08:../../textproc/p5-XML-XPath
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Template/Generate/.packlist
 
 .include "../../lang/perl5/module.mk"

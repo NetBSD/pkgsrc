@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:25:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/12 08:28:55 maya Exp $
 
 DISTNAME=	Plack-Middleware-File-Sass-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,8 @@ COMMENT=	Sass support for all Plack frameworks
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Plack/Middleware/File/Sass/.packlist
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=	auto/Plack/Middleware/File/Sass/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 DEPENDS+=	p5-Plack-[0-9]*:../../www/p5-Plack
