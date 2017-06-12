@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/06/05 14:24:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2017/06/12 07:45:46 maya Exp $
 
 DISTNAME=	XML-Atom-0.41
 PKGNAME=	p5-${DISTNAME}
@@ -25,6 +25,7 @@ DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 # Feed and API Auto-discovery
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/XML/Atom/.packlist
 
 .include "../../lang/perl5/module.mk"
