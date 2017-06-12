@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:23:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 07:23:50 maya Exp $
 #
 
 DISTNAME=	Test-Script-Run-0.08
@@ -14,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Test/Script/Run/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
