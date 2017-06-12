@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/01/06 14:40:03 taca Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/12 17:10:23 taca Exp $
 
 DISTNAME=	test-unit-notify-1.0.4
 PKGREVISION=	1
@@ -13,7 +13,7 @@ USE_LANGUAGES=	# empty
 
 .include "../../lang/ruby/rubyversion.mk"
 
-.if ${RUBY_VER} == "200" || ${RUBY_VER} == "21"
+.if ${RUBY_VER} == "21"
 DEPENDS+=	${RUBY_PKGPREFIX}-test-unit>=2.4.9:../../devel/ruby-test-unit
 .endif
 
