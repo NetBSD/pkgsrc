@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:25:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 08:14:30 maya Exp $
 
 DISTNAME=	HTTP-Parser-XS-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,9 @@ HOMEPAGE=	http://search.cpan.org/dist/HTTP-Parser-XS/
 COMMENT=	Perl 5 module providing a fast, primitive HTTP request parser
 LICENSE=	${PERL5_LICENSE}
 
-USE_LANGUAGES=	c
-PERL5_PACKLIST= auto/HTTP/Parser/XS/.packlist
+USE_LANGUAGES=		c
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=		auto/HTTP/Parser/XS/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 .include "../../lang/perl5/module.mk"
