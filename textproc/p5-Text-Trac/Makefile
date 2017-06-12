@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:24:52 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 07:45:04 maya Exp $
 
 DISTNAME=	Text-Trac-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -23,6 +23,7 @@ BUILD_DEPENDS+=	p5-Test-Base-[0-9]*:../../devel/p5-Test-Base
 REPLACE_PERL=	script/trac2html
 
 USE_LANGUAGES=		# empty
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Text/Trac/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 

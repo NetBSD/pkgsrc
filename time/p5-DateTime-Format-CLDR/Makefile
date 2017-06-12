@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/05 14:25:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/12 07:50:28 maya Exp $
 
 DISTNAME=	DateTime-Format-CLDR-1.18
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,8 @@ LICENSE=	${PERL5_LICENSE}
 BUILD_DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 BUILD_DEPENDS+=	p5-DateTime-Incomplete-[0-9]*:../../time/p5-DateTime-Incomplete
 
-PERL5_PACKLIST= auto/DateTime/Format/CLDR/.packlist
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=	auto/DateTime/Format/CLDR/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
