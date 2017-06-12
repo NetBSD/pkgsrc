@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2017/01/02 11:45:29 wen Exp $
+$NetBSD: distinfo,v 1.6 2017/06/12 10:17:39 adam Exp $
 
-SHA1 (Flask-0.12.tar.gz) = 73722d79e479d5f6b09bbb7b746c34a99b81b05c
-RMD160 (Flask-0.12.tar.gz) = 9356ad43ed9f7736ae5da5066be7396a39053f76
-SHA512 (Flask-0.12.tar.gz) = b8e9e005a850fcba413ad151998768ea0facb68f05855a1934cc6e4de1438cb59a4dd1bc74d2b04d52b3e837afa0a7785e98ae6c5af363a894c2be64773113f0
-Size (Flask-0.12.tar.gz) = 531923 bytes
+SHA1 (Flask-0.12.2.tar.gz) = 8193757ded6a4f0e7c9a3ce291bf3ae3a1d402c5
+RMD160 (Flask-0.12.2.tar.gz) = d62ed9207085d74a6583a5a3b2b47700c7bef00b
+SHA512 (Flask-0.12.2.tar.gz) = c00bb807e8fbc943e23a3721acf5b04320e7a58d658bca46bdf83a345b4c4d5729accae338505e134f01bc908adec9555fd94e8c87ef6f0367e6037215c06319
+Size (Flask-0.12.2.tar.gz) = 548510 bytes
 SHA1 (patch-setup.py) = f8eb610f7e620355862d0d8edb818636f7e6d3c3
