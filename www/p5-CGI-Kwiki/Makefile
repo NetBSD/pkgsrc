@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/06/05 14:25:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/12 07:59:09 maya Exp $
 #
 
 DISTNAME=	CGI-Kwiki-0.18
@@ -15,6 +15,7 @@ LICENSE=	${PERL5_LICENSE}
 #DEPENDS+=	{perl>=5.10.0,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 #DEPENDS+=	{perl>=5.10.0,p5-Locale-Maketext>=1.08}:../../misc/p5-Locale-Maketext
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/CGI-Kwiki/.packlist
 
 .include "../../mk/bsd.prefs.mk"
