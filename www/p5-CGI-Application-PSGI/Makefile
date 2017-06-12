@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2017/06/05 14:25:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/12 07:58:21 maya Exp $
 
 DISTNAME=	CGI-Application-PSGI-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,8 @@ COMMENT=	Perl 5 module PSGI adapter for CGI::Application
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/CGI/Application/PSGI/.packlist
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=	auto/CGI/Application/PSGI/.packlist
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 BUILD_DEPENDS+=	p5-Test-TCP-[0-9]*:../../net/p5-Test-TCP
