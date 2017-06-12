@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/05 14:23:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/12 07:20:58 maya Exp $
 
 DISTNAME=		Test-Continuous-0.76
 PKGNAME=		p5-${DISTNAME}
@@ -23,6 +23,7 @@ BUILD_DEPENDS+=		p5-YAML>=0.77:../../textproc/p5-YAML
 #BUILD_DEPENDS+=	p5-Test-Class>=0.5:../../devel/p5-Test-Class
 #BUILD_DEPENDS+=	p5-Test-Exception>=0.4:../../devel/p5-Test-Exception
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 REPLACE_PERL+=		bin/autoprove
 PERL5_PACKLIST=		auto/Test/Continuous/.packlist
 
