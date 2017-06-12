@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:22:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/12 12:17:45 maya Exp $
 
 DISTNAME=	DBIx-Class-InflateColumn-IP-0.02003
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	DBIx::Class component to auto-create NetAddr::IP objects from columns
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/DBIx/Class/InflateColumn/IP/.packlist
 
 DEPENDS+=	p5-DBIx-Class>=0.07005:../../databases/p5-DBIx-Class
