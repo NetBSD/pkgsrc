@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/05 14:22:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/12 12:21:18 maya Exp $
 
 DISTNAME=	AnyEvent-RabbitMQ-1.18
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,7 @@ DEPENDS+=	p5-XML-LibXML>=2:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-Devel-GlobalDestruction>=0.12:../../devel/p5-Devel-GlobalDestruction
 
 EXTRACT_USING=	gtar
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/AnyEvent/RabbitMQ/.packlist
 
 .include "../../lang/perl5/module.mk"
