@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/06/05 14:24:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/12 07:42:05 maya Exp $
 #
 
 DISTNAME=	Syntax-Highlight-Engine-Kate-0.10
@@ -22,6 +22,7 @@ BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 BUILD_DEPENDS+=	p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Syntax/Highlight/Engine/Kate/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
