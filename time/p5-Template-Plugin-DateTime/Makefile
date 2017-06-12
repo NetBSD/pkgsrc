@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:25:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 07:51:55 maya Exp $
 #
 
 DISTNAME=	Template-Plugin-DateTime-0.06002
@@ -16,6 +16,7 @@ DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-Strptime-[0-9]*:../../time/p5-DateTime-Format-Strptime
 DEPENDS+=	p5-Template-Toolkit>=2:../../www/p5-Template-Toolkit
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Template/Plugin/DateTime/.packlist
 
 .include "../../lang/perl5/module.mk"
