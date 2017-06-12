@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/06/05 14:25:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2017/06/12 08:12:14 maya Exp $
 
 DISTNAME=	Catalyst-View-Mason-0.19
 PKGNAME=	p5-${DISTNAME}
@@ -18,7 +18,8 @@ DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 #DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 
 USE_LANGUAGES=	# empty
-PERL5_PACKLIST= auto/Catalyst/View/Mason/.packlist
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
+PERL5_PACKLIST=	auto/Catalyst/View/Mason/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
