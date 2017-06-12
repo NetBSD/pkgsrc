@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:24:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 07:41:33 maya Exp $
 
 DISTNAME=	String-BufferStack-1.16
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Perl 5 module for nested buffers for templating systems
 LICENSE=	artistic
 
 USE_LANGUAGES=		# empty
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/String/BufferStack/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
