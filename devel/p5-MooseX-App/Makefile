@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:23:19 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/12 12:40:17 maya Exp $
 #
 
 DISTNAME=	MooseX-App-1.37
@@ -26,6 +26,7 @@ BUILD_DEPENDS+= p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 BUILD_DEPENDS+= p5-Text-WagnerFischer-[0-9]*:../../textproc/p5-Text-WagnerFischer
 BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/MooseX/App/.packlist
 USE_LANGUAGES=	# none
 
