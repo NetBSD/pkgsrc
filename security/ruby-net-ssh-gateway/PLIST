@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2013/02/11 02:08:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/12 16:06:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.ruby-version
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.txt
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE.txt
-${GEM_LIBDIR}/Manifest
-${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/gem-public_cert.pem
 ${GEM_LIBDIR}/lib/net/ssh/gateway.rb
+${GEM_LIBDIR}/lib/net/ssh/gateway/version.rb
 ${GEM_LIBDIR}/net-ssh-gateway.gemspec
-${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/test/gateway_test.rb
+${GEM_LIBDIR}/net-ssh-public_cert.pem
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
