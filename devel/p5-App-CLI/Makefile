@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2017/06/05 14:22:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2017/06/12 12:21:52 maya Exp $
 
 DISTNAME=	App-CLI-0.313
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/App/CLI/.packlist
 
 #IC5.8.8DEPENDS+=       p5-Getopt-Long>=2.35:../../devel/p5-Getopt-Long
