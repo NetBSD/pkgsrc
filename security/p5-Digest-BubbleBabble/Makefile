@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/06/05 14:24:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.23 2017/06/12 07:40:28 maya Exp $
 
 DISTNAME=	Digest-BubbleBabble-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 #DEPENDS+=	{perl>=5.7.3,p5-Digest-MD5-[0-9]*}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Digest/BubbleBabble/.packlist
 
 .include "../../lang/perl5/module.mk"
