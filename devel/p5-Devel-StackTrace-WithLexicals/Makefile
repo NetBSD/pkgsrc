@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:22:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 12:33:08 maya Exp $
 
 DISTNAME=	Devel-StackTrace-WithLexicals-2.01
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,7 @@ DEPENDS+=	p5-Devel-StackTrace>=1.2200:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-PadWalker>=1.9.2:../../devel/p5-PadWalker
 
 USE_LANGUAGES=		# empty
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Devel/StackTrace/WithLexicals/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
