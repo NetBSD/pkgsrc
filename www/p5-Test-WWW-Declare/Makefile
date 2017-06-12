@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:25:32 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/12 08:34:01 maya Exp $
 
 DISTNAME=	Test-WWW-Declare-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Perl 5 module for declarative testing of web app
 LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/Test/WWW/Declare/.packlist
 
 BUILD_DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
