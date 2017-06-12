@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/01 13:05:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/06/12 15:21:19 taca Exp $
 bin/hiera${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COPYING
@@ -28,7 +28,25 @@ ${GEM_LIBDIR}/spec/unit/config_spec.rb
 ${GEM_LIBDIR}/spec/unit/console_logger_spec.rb
 ${GEM_LIBDIR}/spec/unit/fallback_logger_spec.rb
 ${GEM_LIBDIR}/spec/unit/filecache_spec.rb
+${GEM_LIBDIR}/spec/unit/fixtures/badconfig/config/hiera.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/badconfig/data/common.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/config/hiera.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/config/hiera_iplm_hiera.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/config/hiera_iplm_hiera_bad.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/bad_interpolation.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/complex.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/dotted_keys.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/empty_interpolation.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/frontend.json
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/niltest.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/recursive.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/role.json
+${GEM_LIBDIR}/spec/unit/fixtures/interpolate/data/weird_keys.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/override/config/hiera.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/override/data/alternate.yaml
+${GEM_LIBDIR}/spec/unit/fixtures/override/data/common.yaml
 ${GEM_LIBDIR}/spec/unit/hiera_spec.rb
+${GEM_LIBDIR}/spec/unit/interpolate_spec.rb
 ${GEM_LIBDIR}/spec/unit/puppet_logger_spec.rb
 ${GEM_LIBDIR}/spec/unit/util_spec.rb
 ${GEM_LIBDIR}/spec/unit/version_spec.rb
