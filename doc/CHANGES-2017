@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2333 2017/06/12 15:50:37 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2334 2017/06/12 16:05:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2959,3 +2959,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/ruby-hiera to 3.3.1 [taca 2017-06-12]
 	Updated devel/ruby-shoulda-context to 1.2.2 [taca 2017-06-12]
 	Updated devel/ruby-stomp to 1.4.4 [taca 2017-06-12]
+	Updated security/ruby-net-ssh to 4.1.0 [taca 2017-06-12]
