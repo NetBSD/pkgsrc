@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/05/30 15:13:04 taca Exp $
+# $NetBSD: Makefile,v 1.31 2017/06/12 14:54:53 taca Exp $
 
-DISTNAME=		puppet-3.8.7
+DISTNAME=		puppet-4.10.1
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -9,10 +9,10 @@ HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<3:../../sysutils/ruby-facter
-DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<3:../../databases/ruby-hiera
-
-RUBY_VERSIONS_ACCEPTED=	21
+DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<4:../../sysutils/ruby-facter
+DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<4:../../databases/ruby-hiera
+DEPENDS+=	${RUBY_PKGPREFIX}-gettext-setup<1:../../devel/ruby-gettext-setup
+#DEPENDS+=	${RUBY_PKGPREFIX}-locale>=0:../../devel/ruby-locale
 
 OVERRIDE_GEMSPEC=	json_pure:json>0
 
@@ -89,8 +89,10 @@ CONF_FILES+=		${EGDIR}/svc/puppetmasterd.xml ${VARBASE}/svc/manifest/puppetmaste
 PLIST.sunos=		yes
 .endif
 
+pre-configure:
+	cd ${WRKSRC}/bin && ${CHMOD} ${BINMODE} puppet
+
 pre-build:
-	cd ${WRKSRC} && ${FIND} . -type f -exec ${CHMOD} g-w {} \;
 	cd ${WRKSRC} && \
 		${FIND} lib/puppet spec -type f -exec ${CHMOD} -x {} \;
 	cd ${WRKSRC} && ${RUBY} -Ilib bin/puppet agent			\

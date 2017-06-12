@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2013/04/10 21:10:55 tonnerre Exp $
+$NetBSD: patch-ac,v 1.7 2017/06/12 14:54:53 taca Exp $
 
 NetBSD also has its init scripts in /etc/rc.d.
 
---- lib/puppet/provider/service/init.rb.orig	2013-04-01 00:44:50.000000000 +0000
+--- lib/puppet/provider/service/init.rb.orig	2017-06-07 10:34:56.000000000 +0000
 +++ lib/puppet/provider/service/init.rb
 @@ -9,7 +9,7 @@ Puppet::Type.type(:service).provide :ini
        ["/etc/rc.d", "/usr/local/etc/rc.d"]
@@ -11,5 +11,5 @@ NetBSD also has its init scripts in /etc/rc.d.
 -    when "Archlinux"
 +    when "Archlinux", "NetBSD"
        "/etc/rc.d"
-     else
-       "/etc/init.d"
+     when "AIX"
+       "/etc/rc.d/init.d"
