@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/05 14:23:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/12 12:36:56 maya Exp $
 #
 
 DISTNAME=	List-Pairwise-1.03
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/~tdrugeon/List-Pairwise/
 COMMENT=	(Perl Module) List::Pairwise - map/grep arrays and hashes pairwise
 LICENSE=	${PERL5_LICENSE}
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/List/Pairwise/.packlist
 USE_LANGUAGES=	# none
 
