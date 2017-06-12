@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2017/06/05 14:23:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2017/06/12 13:27:36 maya Exp $
 
 DISTNAME=	PPI-1.220
 PKGNAME=	p5-${DISTNAME}
@@ -30,6 +30,7 @@ BUILD_DEPENDS+=	p5-Test-Object>=0.07:../../devel/p5-Test-Object
 BUILD_DEPENDS+=	p5-Test-SubCalls>=1.07:../../devel/p5-Test-SubCalls
 
 USE_LANGUAGES=		# empty
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/PPI/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
