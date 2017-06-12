@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/10/09 15:10:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/06/12 15:50:11 taca Exp $
 bin/catstomp${RUBY_SUFFIX}
 bin/stompcat${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -18,6 +18,9 @@ ${GEM_LIBDIR}/adhoc/stomp_adhoc_common.rb
 ${GEM_LIBDIR}/bin/catstomp
 ${GEM_LIBDIR}/bin/stompcat
 ${GEM_LIBDIR}/examples/amqdurasub.rb
+${GEM_LIBDIR}/examples/artemis/artlogger.rb
+${GEM_LIBDIR}/examples/artemis/cliwaiter_not_reliable.rb
+${GEM_LIBDIR}/examples/artemis/cliwaiter_reliable.rb
 ${GEM_LIBDIR}/examples/client11_ex1.rb
 ${GEM_LIBDIR}/examples/client11_putget1.rb
 ${GEM_LIBDIR}/examples/conn11_ex1.rb
@@ -78,6 +81,7 @@ ${GEM_LIBDIR}/spec/message_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/stomp.gemspec
 ${GEM_LIBDIR}/test/.gitignore
+${GEM_LIBDIR}/test/MultiBrokerUnitTestExample.sh
 ${GEM_LIBDIR}/test/funcs.sh
 ${GEM_LIBDIR}/test/test_anonymous.rb
 ${GEM_LIBDIR}/test/test_client.rb
