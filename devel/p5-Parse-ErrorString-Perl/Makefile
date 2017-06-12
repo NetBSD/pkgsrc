@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/06/05 14:23:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/12 08:40:49 maya Exp $
 #
 
 DISTNAME=	Parse-ErrorString-Perl-0.22
@@ -17,6 +17,7 @@ DEPENDS+=	p5-Pod-POM-[0-9]*:../../textproc/p5-Pod-POM
 
 BUILD_DEPENDS+=	p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 
+MAKE_ENV+=		PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=		auto/Parse/ErrorString/Perl/.packlist
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/06/05 14:23:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2017/06/12 08:41:47 maya Exp $
 
 DISTNAME=	SVN-Mirror-0.75
 PKGNAME=	p5-${DISTNAME}
@@ -21,6 +21,7 @@ DEPENDS+=	p5-TimeDate>0:../../time/p5-TimeDate
 
 PERL5_PACKLIST=		auto/SVN/Mirror/.packlist
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skip
 
 .include "../../lang/perl5/module.mk"
