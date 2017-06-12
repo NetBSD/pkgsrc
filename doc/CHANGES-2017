@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2335 2017/06/12 16:07:25 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2336 2017/06/12 16:35:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2961,3 +2961,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/ruby-stomp to 1.4.4 [taca 2017-06-12]
 	Updated security/ruby-net-ssh to 4.1.0 [taca 2017-06-12]
 	Updated security/ruby-net-ssh-gateway to 2.0.0 [taca 2017-06-12]
+	Updated textproc/ruby-json to 2.1.0 [taca 2017-06-12]
+	Updated textproc/ruby-json-pure to 2.1.0 [taca 2017-06-12]
