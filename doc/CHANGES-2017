@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2325 2017/06/12 12:08:56 abs Exp $
+$NetBSD: CHANGES-2017,v 1.2326 2017/06/12 13:55:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2942,3 +2942,12 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-flask to 0.12.2 [adam 2017-06-12]
 	Updated devel/py-hypothesis to 3.11.3 [adam 2017-06-12]
 	Updated databases/sql-workbench to 122 [abs 2017-06-12]
+	Updated devel/p5-Glib-Object-Introspection to 0.043 [mef 2017-06-12]
+	Updated devel/p5-IO-Pager to 0.39 [mef 2017-06-12]
+	Updated devel/p5-IPC-Cmd to 0.98 [mef 2017-06-12]
+	Updated devel/p5-Inline-C to 0.78 [mef 2017-06-12]
+	Updated devel/p5-List-SomeUtils to 0.54 [mef 2017-06-12]
+	Updated devel/p5-List-SomeUtils-XS to 0.53 [mef 2017-06-12]
+	Updated devel/p5-Log-Dispatch-FileRotate to 1.26 [mef 2017-06-12]
+	Updated devel/p5-Type-Tiny to 1.002001 [mef 2017-06-12]
+	Updated devel/p5-MetaCPAN-Client to 2.016000 [mef 2017-06-12]
