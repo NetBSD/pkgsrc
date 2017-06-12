@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2017/01/24 20:31:14 hauke Exp $
+# $NetBSD: Makefile.common,v 1.24 2017/06/12 09:34:12 hauke Exp $
 #
 # used by editors/xemacs-nox11/Makefile
 # used by editors/xemacs/Makefile
@@ -48,7 +48,7 @@ CFLAGS+=		-Dunix
 # Use terminfo on NetBSD-6 and newer.
 # We cannot use terminfo.*.mk as XEmacs enforces a link to termcap,
 # but this is fine for us.
-.if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD") && exists(/usr/include/term.h)
 CPPFLAGS+=	-DTERMINFO
 .endif
 
