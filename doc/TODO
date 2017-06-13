@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17410 2017/06/12 13:55:26 mef Exp $
+$NetBSD: TODO,v 1.17411 2017/06/13 06:33:54 spz Exp $
 
 Suggested new packages
 ======================
@@ -884,7 +884,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o imp-6.2.12
 	o inform-6.32.1
 	o ingo-3.2.8
-	o inn-2.6.0
 	o input-pad-1.4.2
 	o inspircd-2.0.23
 	o instiki-0.13
