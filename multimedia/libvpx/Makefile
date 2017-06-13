@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2017/05/10 10:45:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.70 2017/06/13 17:32:07 joerg Exp $
 
 DISTNAME=	libvpx-1.6.1
 CATEGORIES=	multimedia
@@ -93,7 +93,7 @@ SUBST_STAGE.clang=	pre-configure
 SUBST_FILES.clang=	build/make/Makefile
 SUBST_MESSAGE.clang=	Disabling clang integrated assembler
 # Test for whether clang supports -fno-integrated-as instead of -no-integrated-as
-CLANG_INTEGRATED_AS!=  if ${CCPATH} --version -fno-integrated-as > /dev/null 2>&1; then ${ECHO} "-fno-integrated-as"; else ${ECHO} "-no-integrated-as"; fi
+CLANG_INTEGRATED_AS!=  if ${CCPATH:Utrue} --version -fno-integrated-as > /dev/null 2>&1; then ${ECHO} "-fno-integrated-as"; else ${ECHO} "-no-integrated-as"; fi
 SUBST_SED.clang=	-e 's/-DINLINE_ASM/-DINLINE_ASM ${CLANG_INTEGRATED_AS}/'
 .  endif
 .endif
