@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/10 20:00:41 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/13 19:00:50 wiedi Exp $
 
 DISTNAME=	osm2pgsql-0.92.1
 CATEGORIES=	geography
@@ -20,6 +20,7 @@ CMAKE_ARG_PATH=	${WRKSRC}
 post-extract:
 	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../geography/geos/buildlink3.mk"
 .include "../../geography/proj/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
