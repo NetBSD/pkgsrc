@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2017/06/05 14:23:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2017/06/13 07:01:42 maya Exp $
 
 DISTNAME=	Moose-2.2004
 PKGNAME=	p5-${DISTNAME}
@@ -75,7 +75,9 @@ BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 #BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 # for make test
 BUILD_DEPENDS+=		p5-Module-Metadata>=1.000023:../../devel/p5-Module-Metadata
-BUILD_DEPENDS+=		p5-Test-DependentModules-[0-9]*:../../devel/p5-Test-DependentModules
+# circular test dependency: p5-MetaCPAN-Client => p5-Type-Tiny => p5-Moose
+# => p5-Test-DependentModules => p5-MetaCPAN-Client
+#BUILD_DEPENDS+=		p5-Test-DependentModules-[0-9]*:../../devel/p5-Test-DependentModules
 
 
 USE_LANGUAGES=		c
