@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.32 2017/06/13 19:15:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.33 2017/06/13 19:35:55 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -567,4 +567,10 @@ security/sudo: security fix
 
 Pullup ticket #5476 - requested by khorben
 www/firefox45: security fix
+
+Pullup ticket #5471 - requested by sevan
+fonts/fontconfig: bugfix
+
+Pullup ticket #5472 - requested by sevan
+security/libksba: bugfix
 
