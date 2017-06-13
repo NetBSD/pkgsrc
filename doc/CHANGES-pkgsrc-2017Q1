@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.31 2017/06/11 18:49:22 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.32 2017/06/13 19:15:01 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -557,3 +557,14 @@ meta-pkgs/modular-xorg-drivers: build fix
 
 Pullup ticket #5474 - requested by bsiegert
 devel/p5-File-Path; security update
+
+Pullup ticket #5475 - requested by khorben
+security/py-yara: security fix
+security/yara: security fix
+
+Pullup ticket #5477 - requested by sevan
+security/sudo: security fix
+
+Pullup ticket #5476 - requested by khorben
+www/firefox45: security fix
+
