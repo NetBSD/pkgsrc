@@ -1,7 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/06/06 08:57:18 pettai Exp $
+# $NetBSD: Makefile,v 1.2.16.1 2017/06/13 18:41:37 bsiegert Exp $
 
 PKGNAME=	yara-${YAVER}
 CATEGORIES=	security
+
+MASTER_SITES=	${MASTER_SITE_GITHUB:=VirusTotal/yara/archive/}
+
+DIST_SUBDIR=	yara
 
 COMMENT=        Pattern matching swiss knife for malware researchers
 
