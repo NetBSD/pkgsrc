@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2337 2017/06/12 19:33:10 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2338 2017/06/13 06:09:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2964,3 +2964,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-json to 2.1.0 [taca 2017-06-12]
 	Updated textproc/ruby-json-pure to 2.1.0 [taca 2017-06-12]
 	Updated databases/percona-toolkit to 3.0.3 [fhajny 2017-06-12]
+	Updated sysutils/consul to 0.8.4 [fhajny 2017-06-13]
