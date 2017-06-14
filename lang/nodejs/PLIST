@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2017/06/05 21:14:04 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.48 2017/06/14 12:59:14 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -22,6 +22,7 @@ include/node/uv-darwin.h
 include/node/uv-errno.h
 include/node/uv-linux.h
 include/node/uv-os390.h
+include/node/uv-posix.h
 include/node/uv-sunos.h
 include/node/uv-threadpool.h
 include/node/uv-unix.h
@@ -235,6 +236,7 @@ lib/node_modules/npm/lib/config/load-prefix.js
 lib/node_modules/npm/lib/config/load-uid.js
 lib/node_modules/npm/lib/config/nerf-dart.js
 lib/node_modules/npm/lib/config/pacote.js
+lib/node_modules/npm/lib/config/reg-client.js
 lib/node_modules/npm/lib/config/set-credentials-by-uri.js
 lib/node_modules/npm/lib/config/set-user.js
 lib/node_modules/npm/lib/dedupe.js
@@ -1203,7 +1205,6 @@ lib/node_modules/npm/node_modules/npm-install-checks/LICENSE
 lib/node_modules/npm/node_modules/npm-install-checks/README.md
 lib/node_modules/npm/node_modules/npm-install-checks/index.js
 lib/node_modules/npm/node_modules/npm-install-checks/package.json
-lib/node_modules/npm/node_modules/npm-package-arg/CHANGELOG.md
 lib/node_modules/npm/node_modules/npm-package-arg/LICENSE
 lib/node_modules/npm/node_modules/npm-package-arg/README.md
 lib/node_modules/npm/node_modules/npm-package-arg/npa.js
@@ -1247,8 +1248,6 @@ lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream
 lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/package.json
 lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/readme.md
 lib/node_modules/npm/node_modules/npm-registry-client/package.json
-lib/node_modules/npm/node_modules/npm-user-validate/.npmignore
-lib/node_modules/npm/node_modules/npm-user-validate/.travis.yml
 lib/node_modules/npm/node_modules/npm-user-validate/LICENSE
 lib/node_modules/npm/node_modules/npm-user-validate/README.md
 lib/node_modules/npm/node_modules/npm-user-validate/npm-user-validate.js
@@ -1810,10 +1809,6 @@ lib/node_modules/npm/node_modules/readable-stream/lib/_stream_writable.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/BufferList.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/stream-browser.js
 lib/node_modules/npm/node_modules/readable-stream/lib/internal/streams/stream.js
-lib/node_modules/npm/node_modules/readable-stream/node_modules/buffer-shims/index.js
-lib/node_modules/npm/node_modules/readable-stream/node_modules/buffer-shims/license.md
-lib/node_modules/npm/node_modules/readable-stream/node_modules/buffer-shims/package.json
-lib/node_modules/npm/node_modules/readable-stream/node_modules/buffer-shims/readme.md
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/LICENSE
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/README.md
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/float.patch
@@ -2435,7 +2430,6 @@ lib/node_modules/npm/node_modules/rimraf/rimraf.js
 lib/node_modules/npm/node_modules/safe-buffer/.travis.yml
 lib/node_modules/npm/node_modules/safe-buffer/LICENSE
 lib/node_modules/npm/node_modules/safe-buffer/README.md
-lib/node_modules/npm/node_modules/safe-buffer/browser.js
 lib/node_modules/npm/node_modules/safe-buffer/index.js
 lib/node_modules/npm/node_modules/safe-buffer/package.json
 lib/node_modules/npm/node_modules/safe-buffer/test.js

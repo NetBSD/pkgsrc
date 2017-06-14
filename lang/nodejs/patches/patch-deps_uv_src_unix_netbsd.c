@@ -1,8 +1,8 @@
-$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.4 2016/04/13 09:37:35 ryoon Exp $
+$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.5 2017/06/14 12:59:14 fhajny Exp $
 
---- deps/uv/src/unix/netbsd.c.orig	2016-04-05 21:52:30.000000000 +0000
+--- deps/uv/src/unix/netbsd.c.orig	2017-06-08 10:31:21.000000000 +0000
 +++ deps/uv/src/unix/netbsd.c
-@@ -43,6 +43,11 @@
+@@ -40,6 +40,11 @@
  #include <unistd.h>
  #include <time.h>
  
@@ -11,10 +11,10 @@ $NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.4 2016/04/13 09:37:35 ryoon Exp $
 +# include <sys/param.h>
 +#endif
 +
- #undef NANOSEC
- #define NANOSEC ((uint64_t) 1e9)
+ static char *process_title;
  
-@@ -90,7 +95,11 @@ int uv_exepath(char* buffer, size_t* siz
+ 
+@@ -77,7 +82,11 @@ int uv_exepath(char* buffer, size_t* siz
    mib[0] = CTL_KERN;
    mib[1] = KERN_PROC_ARGS;
    mib[2] = mypid;
