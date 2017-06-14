@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2017/03/05 09:06:46 leot Exp $
+@comment $NetBSD: PLIST,v 1.26 2017/06/14 09:26:29 adam Exp $
 bin/ncat
 ${PLIST.ndiff}bin/ndiff
 bin/nmap
@@ -464,6 +464,7 @@ ${PLIST.lua}share/nmap/scripts/broadcast-ms-sql-discover.nse
 ${PLIST.lua}share/nmap/scripts/broadcast-netbios-master-browser.nse
 ${PLIST.lua}share/nmap/scripts/broadcast-networker-discover.nse
 ${PLIST.lua}share/nmap/scripts/broadcast-novell-locate.nse
+${PLIST.lua}share/nmap/scripts/broadcast-ospf2-discover.nse
 ${PLIST.lua}share/nmap/scripts/broadcast-pc-anywhere.nse
 ${PLIST.lua}share/nmap/scripts/broadcast-pc-duo.nse
 ${PLIST.lua}share/nmap/scripts/broadcast-pim-discovery.nse
@@ -484,6 +485,8 @@ ${PLIST.lua}share/nmap/scripts/cassandra-brute.nse
 ${PLIST.lua}share/nmap/scripts/cassandra-info.nse
 ${PLIST.lua}share/nmap/scripts/cccam-version.nse
 ${PLIST.lua}share/nmap/scripts/cics-enum.nse
+${PLIST.lua}share/nmap/scripts/cics-info.nse
+${PLIST.lua}share/nmap/scripts/cics-user-brute.nse
 ${PLIST.lua}share/nmap/scripts/cics-user-enum.nse
 ${PLIST.lua}share/nmap/scripts/citrix-brute-xml.nse
 ${PLIST.lua}share/nmap/scripts/citrix-enum-apps-xml.nse
@@ -587,6 +590,7 @@ ${PLIST.lua}share/nmap/scripts/http-cisco-anyconnect.nse
 ${PLIST.lua}share/nmap/scripts/http-coldfusion-subzero.nse
 ${PLIST.lua}share/nmap/scripts/http-comments-displayer.nse
 ${PLIST.lua}share/nmap/scripts/http-config-backup.nse
+${PLIST.lua}share/nmap/scripts/http-cookie-flags.nse
 ${PLIST.lua}share/nmap/scripts/http-cors.nse
 ${PLIST.lua}share/nmap/scripts/http-cross-domain-policy.nse
 ${PLIST.lua}share/nmap/scripts/http-csrf.nse
@@ -644,6 +648,7 @@ ${PLIST.lua}share/nmap/scripts/http-rfi-spider.nse
 ${PLIST.lua}share/nmap/scripts/http-robots.txt.nse
 ${PLIST.lua}share/nmap/scripts/http-robtex-reverse-ip.nse
 ${PLIST.lua}share/nmap/scripts/http-robtex-shared-ns.nse
+${PLIST.lua}share/nmap/scripts/http-security-headers.nse
 ${PLIST.lua}share/nmap/scripts/http-server-header.nse
 ${PLIST.lua}share/nmap/scripts/http-shellshock.nse
 ${PLIST.lua}share/nmap/scripts/http-sitemap-generator.nse
@@ -682,6 +687,9 @@ ${PLIST.lua}share/nmap/scripts/http-vuln-cve2014-3704.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-cve2014-8877.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-cve2015-1427.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-cve2015-1635.nse
+${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-1001000.nse
+${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-5638.nse
+${PLIST.lua}share/nmap/scripts/http-vuln-cve2017-5689.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-misfortune-cookie.nse
 ${PLIST.lua}share/nmap/scripts/http-vuln-wnr1000-creds.nse
 ${PLIST.lua}share/nmap/scripts/http-waf-detect.nse
@@ -698,6 +706,7 @@ ${PLIST.lua}share/nmap/scripts/ike-version.nse
 ${PLIST.lua}share/nmap/scripts/imap-brute.nse
 ${PLIST.lua}share/nmap/scripts/imap-capabilities.nse
 ${PLIST.lua}share/nmap/scripts/imap-ntlm-info.nse
+${PLIST.lua}share/nmap/scripts/impress-remote-discover.nse
 ${PLIST.lua}share/nmap/scripts/informix-brute.nse
 ${PLIST.lua}share/nmap/scripts/informix-query.nse
 ${PLIST.lua}share/nmap/scripts/informix-tables.nse
@@ -863,6 +872,7 @@ ${PLIST.lua}share/nmap/scripts/sip-enum-users.nse
 ${PLIST.lua}share/nmap/scripts/sip-methods.nse
 ${PLIST.lua}share/nmap/scripts/skypev2-version.nse
 ${PLIST.lua}share/nmap/scripts/smb-brute.nse
+${PLIST.lua}share/nmap/scripts/smb-double-pulsar-backdoor.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-domains.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-groups.nse
 ${PLIST.lua}share/nmap/scripts/smb-enum-processes.nse
@@ -879,12 +889,14 @@ ${PLIST.lua}share/nmap/scripts/smb-security-mode.nse
 ${PLIST.lua}share/nmap/scripts/smb-server-stats.nse
 ${PLIST.lua}share/nmap/scripts/smb-system-info.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-conficker.nse
+${PLIST.lua}share/nmap/scripts/smb-vuln-cve-2017-7494.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-cve2009-3103.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms06-025.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms07-029.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms08-067.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms10-054.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-ms10-061.nse
+${PLIST.lua}share/nmap/scripts/smb-vuln-ms17-010.nse
 ${PLIST.lua}share/nmap/scripts/smb-vuln-regsvc-dos.nse
 ${PLIST.lua}share/nmap/scripts/smbv2-enabled.nse
 ${PLIST.lua}share/nmap/scripts/smtp-brute.nse
@@ -948,6 +960,7 @@ ${PLIST.lua}share/nmap/scripts/telnet-encryption.nse
 ${PLIST.lua}share/nmap/scripts/telnet-ntlm-info.nse
 ${PLIST.lua}share/nmap/scripts/tftp-enum.nse
 ${PLIST.lua}share/nmap/scripts/tls-nextprotoneg.nse
+${PLIST.lua}share/nmap/scripts/tls-ticketbleed.nse
 ${PLIST.lua}share/nmap/scripts/tn3270-screen.nse
 ${PLIST.lua}share/nmap/scripts/tor-consensus-checker.nse
 ${PLIST.lua}share/nmap/scripts/traceroute-geolocation.nse
@@ -960,6 +973,7 @@ ${PLIST.lua}share/nmap/scripts/url-snarf.nse
 ${PLIST.lua}share/nmap/scripts/ventrilo-info.nse
 ${PLIST.lua}share/nmap/scripts/versant-info.nse
 ${PLIST.lua}share/nmap/scripts/vmauthd-brute.nse
+${PLIST.lua}share/nmap/scripts/vmware-version.nse
 ${PLIST.lua}share/nmap/scripts/vnc-brute.nse
 ${PLIST.lua}share/nmap/scripts/vnc-info.nse
 ${PLIST.lua}share/nmap/scripts/vnc-title.nse
