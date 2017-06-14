@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/12/09 10:05:57 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/14 10:24:15 fhajny Exp $
 include/libbson-1.0/bcon.h
 include/libbson-1.0/bson-atomic.h
 include/libbson-1.0/bson-clock.h
@@ -27,6 +27,7 @@ include/libbson-1.0/bson-writer.h
 include/libbson-1.0/bson.h
 lib/libbson-1.0.la
 lib/pkgconfig/libbson-1.0.pc
+man/man3/bson_api.3
 man/man3/bson_append_array.3
 man/man3/bson_append_array_begin.3
 man/man3/bson_append_array_end.3
@@ -70,6 +71,7 @@ man/man3/bson_copy_to.3
 man/man3/bson_copy_to_excluding.3
 man/man3/bson_count_keys.3
 man/man3/bson_creating.3
+man/man3/bson_cross_platform_notes.3
 man/man3/bson_decimal128_from_string.3
 man/man3/bson_decimal128_t.3
 man/man3/bson_decimal128_to_string.3
@@ -86,6 +88,7 @@ man/man3/bson_get_micro_version.3
 man/man3/bson_get_minor_version.3
 man/man3/bson_get_monotonic_time.3
 man/man3/bson_get_version.3
+man/man3/bson_guides.3
 man/man3/bson_has_field.3
 man/man3/bson_index.3
 man/man3/bson_init.3
@@ -185,6 +188,7 @@ man/man3/bson_reader_tell.3
 man/man3/bson_realloc.3
 man/man3/bson_realloc_ctx.3
 man/man3/bson_realloc_func.3
+man/man3/bson_reference.3
 man/man3/bson_reinit.3
 man/man3/bson_reserve_buffer.3
 man/man3/bson_set_error.3
@@ -211,6 +215,7 @@ man/man3/bson_strnlen.3
 man/man3/bson_subtype_t.3
 man/man3/bson_t.3
 man/man3/bson_threading.3
+man/man3/bson_tutorial.3
 man/man3/bson_type_t.3
 man/man3/bson_uint32_to_string.3
 man/man3/bson_unichar_t.3
