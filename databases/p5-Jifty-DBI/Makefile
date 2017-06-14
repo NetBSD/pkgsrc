@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/06/05 14:22:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2017/06/14 15:48:56 jperkin Exp $
 
 DISTNAME=	Jifty-DBI-0.78
 PKGNAME=	p5-${DISTNAME}
@@ -40,6 +40,8 @@ DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
