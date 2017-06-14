@@ -1,4 +1,4 @@
-# $NetBSD: deinstall,v 1.4 2016/04/12 15:52:29 jaapb Exp $
+# $NetBSD: deinstall,v 1.5 2017/06/14 16:23:09 prlw1 Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -13,6 +13,11 @@ DEINSTALL)
 	#
 	${TEST} ! -x ./+INFO_FILES ||
 		./+INFO_FILES REMOVE ${PKG_METADATA_DIR}
+	#
+	# Remove any icon theme caches.
+	#
+	${TEST} ! -x ./+ICON_THEMES ||
+		./+ICON_THEMES REMOVE ${PKG_METADATA_DIR}
 	#
 	# Remove shells from /etc/shells.
 	#
@@ -34,6 +39,11 @@ POST-DEINSTALL)
 	#
 	${TEST} ! -x ./+FONTS ||
 		./+FONTS ${PKG_METADATA_DIR}
+	#
+	# Update any icon theme caches.
+	#
+	${TEST} ! -x ./+ICON_THEMES ||
+		./+ICON_THEMES UPDATE ${PKG_METADATA_DIR}
 	#
 	# Rebuild the system run-time library search path database.
 	#

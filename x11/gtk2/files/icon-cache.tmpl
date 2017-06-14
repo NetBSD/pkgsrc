@@ -1,19 +1,19 @@
-# $NetBSD: icon-cache.tmpl,v 1.1 2007/01/26 00:55:01 markd Exp $
+# $NetBSD: icon-cache.tmpl,v 1.2 2017/06/14 16:23:09 prlw1 Exp $
 #
 # Rebuild the icon cache.
 #
 
 GTK_UPDATE_ICON_CACHE="@GTK_UPDATE_ICON_CACHE@"
 ICON_THEME_DIR="@ICON_THEME_DIR@"
+LS="@LS@"
 
 case ${STAGE} in
 POST-INSTALL)
 	${TEST} -d ${ICON_THEME_DIR} && \
-	${GTK_UPDATE_ICON_CACHE} -f -t ${ICON_THEME_DIR} >/dev/null 2>&1 || \
-		${TRUE}
-	;;
-DEINSTALL)
-	${RM} -f ${ICON_THEME_DIR}/icon-theme.cache
+	${LS} ${ICON_THEME_DIR} | while read theme; do
+		${TEST} -f ${ICON_THEME_DIR}/${theme}/index.theme && \
+		${GTK_UPDATE_ICON_CACHE} -q -f -t ${ICON_THEME_DIR}/${theme}
+	done
 	;;
 *)
 	;;

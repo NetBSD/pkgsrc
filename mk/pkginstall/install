@@ -1,4 +1,4 @@
-# $NetBSD: install,v 1.4 2016/04/12 15:52:29 jaapb Exp $
+# $NetBSD: install,v 1.5 2017/06/14 16:23:09 prlw1 Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -46,6 +46,12 @@ POST-INSTALL)
 	#
 	${TEST} ! -x ./+FONTS ||
 		./+FONTS ${PKG_METADATA_DIR}
+
+	#
+	# Update any icon theme caches.
+	#
+	${TEST} ! -x ./+ICON_THEMES ||
+		./+ICON_THEMES UPDATE ${PKG_METADATA_DIR}
 
 	# Check for any missing bits after we're finished installing.
 	#
