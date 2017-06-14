@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2016/07/09 06:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2017/06/14 16:23:09 prlw1 Exp $
 
 DISTNAME=		gnome-icon-theme-3.12.0
 PKGREVISION=		1
@@ -27,11 +27,7 @@ PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
 # the current pkgsrc version.
 BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${LOCALBASE}/bin/gtk-update-icon-cache"
-FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons/gnome"
-INSTALL_TEMPLATES+=	../../graphics/gnome-icon-theme/files/icon-cache.tmpl
-DEINSTALL_TEMPLATES+=	../../graphics/gnome-icon-theme/files/icon-cache.tmpl
-PRINT_PLIST_AWK+=	/^share\/icons\/gnome\/icon-theme.cache$$/ { next; }
+ICON_THEMES=	yes
 
 post-install:
 	${LOCALBASE}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 16 -h 16 -o ${DESTDIR}${PREFIX}/share/icons/gnome/16x16/places/start-here.png
