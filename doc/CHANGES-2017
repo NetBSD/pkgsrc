@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2369 2017/06/14 13:27:09 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2370 2017/06/14 13:29:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2996,3 +2996,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/wxGTK28 to 2.8.12nb13 [jperkin 2017-06-14]
 	Updated www/p5-Mojolicious to 7.33 [wiz 2017-06-14]
 	Updated audio/p5-MusicBrainz-DiscID to 0.04 [wiz 2017-06-14]
+	Updated security/hitch to 1.4.6 [fhajny 2017-06-14]
