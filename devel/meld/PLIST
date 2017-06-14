@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2017/02/20 10:33:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2017/06/14 14:03:54 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
@@ -133,9 +133,6 @@ ${PYSITELIB}/meld/ui/util.pyo
 ${PYSITELIB}/meld/ui/vcdialogs.py
 ${PYSITELIB}/meld/ui/vcdialogs.pyc
 ${PYSITELIB}/meld/ui/vcdialogs.pyo
-${PYSITELIB}/meld/ui/wraplabel.py
-${PYSITELIB}/meld/ui/wraplabel.pyc
-${PYSITELIB}/meld/ui/wraplabel.pyo
 ${PYSITELIB}/meld/undo.py
 ${PYSITELIB}/meld/undo.pyc
 ${PYSITELIB}/meld/undo.pyo
@@ -327,6 +324,7 @@ share/locale/sr/LC_MESSAGES/meld.mo
 share/locale/sr@latin/LC_MESSAGES/meld.mo
 share/locale/sv/LC_MESSAGES/meld.mo
 share/locale/tr/LC_MESSAGES/meld.mo
+share/locale/uk/LC_MESSAGES/meld.mo
 share/locale/vi/LC_MESSAGES/meld.mo
 share/locale/zh_CN/LC_MESSAGES/meld.mo
 share/locale/zh_TW/LC_MESSAGES/meld.mo
