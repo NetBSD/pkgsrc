@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2365 2017/06/14 13:16:18 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2366 2017/06/14 13:19:35 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2992,3 +2992,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/p5-Image-ExifTool to 10.55 [wiz 2017-06-14]
 	Updated time/p5-DateTime to 1.4300 [wiz 2017-06-14]
 	Updated security/py-certbot to 0.15.0 [fhajny 2017-06-14]
+	Updated x11/p5-Wx to 0.9932 [jperkin 2017-06-14]
