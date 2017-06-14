@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17411 2017/06/13 06:33:54 spz Exp $
+$NetBSD: TODO,v 1.17412 2017/06/14 12:13:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1122,7 +1122,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o netramet-50
 	o newmail-1.0.2
 	o ng-spice-26
-	o nodejs-8.0.0
+	o nodejs-8.1.0
 	o notmuch-0.24.2
 	o npth-1.5
 	o nqp-2016.02
@@ -1177,11 +1177,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Gtk2-1.223
 	o p5-HTTP-Server-EV-0.69
 	o p5-Heap-1.04
+	o p5-IO-Socket-SSL-2.049
 	o p5-IP-Country-3.03
 	o p5-Image-ExifTool-10.55
 	o p5-JSON-2.94
 	o p5-Memoize-Memcached-0.11
 	o p5-Mojolicious-7.33
+	o p5-MusicBrainz-DiscID-0.04
 	o p5-Net-HTTP-6.16
 	o p5-Net-ManageSieve-0.13
 	o p5-NetPacket-1.6.0
@@ -1200,6 +1202,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-Nopaste-0.08
 	o p5-Padre-Plugin-SpellCheck-1.33
 	o p5-Padre-Plugin-XS-0.12
+	o p5-Params-Validate-1.29
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Publican-4.3.2
@@ -1523,7 +1526,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tellico-2.3.11
 	o tetrinetx-1.40c
 	o tex2page-20130325
-	o texlive-2014
+	o texlive-2017
 	o texstudio-2.12.2
 	o texworks-0.4.6
 	o tfmxplay-1.1.6
