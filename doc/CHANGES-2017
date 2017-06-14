@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2358 2017/06/14 12:15:54 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2359 2017/06/14 12:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2985,3 +2985,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/firefox-l10n to 54.0 [ryoon 2017-06-14]
 	Updated devel/afl to 2.42b [wiz 2017-06-14]
 	Updated devel/waf to 1.9.12 [wiz 2017-06-14]
+	Updated x11/xterm to 328 [wiz 2017-06-14]
