@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2017/05/17 11:02:50 wiz Exp $
+$NetBSD: distinfo,v 1.11 2017/06/14 13:31:16 wiz Exp $
 
-SHA1 (Net-HTTP-6.15.tar.gz) = e79791d4d7979cfea5e40f498823c633cc6f78d5
-RMD160 (Net-HTTP-6.15.tar.gz) = 4c0df46399720d647fbbc5ec3780258d5a955cab
-SHA512 (Net-HTTP-6.15.tar.gz) = 10d539a1aaeb2e5850d3a626bd3989824d76f512d5165e934bd0b0d57220ba80aab872e3c36f2d9ef9e1e49e74d2cde31b335ae616b3b299cfd6acea061e3347
-Size (Net-HTTP-6.15.tar.gz) = 34262 bytes
+SHA1 (Net-HTTP-6.16.tar.gz) = c3fb9e806ce8dfce7d3a0bf45ee17a520a5834c0
+RMD160 (Net-HTTP-6.16.tar.gz) = a24280912d8773f102ebd4baa78843d4f51859d4
+SHA512 (Net-HTTP-6.16.tar.gz) = 467a536c4ecc5caeeebe2a0523cc311515c39df53d604d8dc9ad78fbe01c8cc5b24bf483884d2aa2a168bc213ddfe964d679474a1be860f10d87283806c0a496
+Size (Net-HTTP-6.16.tar.gz) = 34458 bytes
