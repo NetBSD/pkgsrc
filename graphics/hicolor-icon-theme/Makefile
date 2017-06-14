@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2017/06/14 16:23:09 prlw1 Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/14 16:25:17 prlw1 Exp $
 
 DISTNAME=	hicolor-icon-theme-0.13
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://icon-theme.freedesktop.org/releases/
 
