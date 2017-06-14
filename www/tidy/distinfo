@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.22 2017/02/20 09:31:53 wiz Exp $
+$NetBSD: distinfo,v 1.23 2017/06/14 07:37:30 adam Exp $
 
-SHA1 (tidy-html5-5.2.0.tar.gz) = c1571eafa928390feee9e03445bf806127852288
-RMD160 (tidy-html5-5.2.0.tar.gz) = 60688847dcfdaa2070d3ad7274daa78392856875
-SHA512 (tidy-html5-5.2.0.tar.gz) = 9ab4c085235ff01988fa86c43fdcd5870eee077e4bcbaee5ca9b9679f363f476b39243b749ea66e5eb8a08c41d7a8346166b73e71f0b3239b955d20211f3b253
-Size (tidy-html5-5.2.0.tar.gz) = 529016 bytes
+SHA1 (tidy-html5-5.4.0.tar.gz) = 579aea11a90040261f34ce63c27494e2082d3e95
+RMD160 (tidy-html5-5.4.0.tar.gz) = 12453c46afb16448995176ac43133a707f51177f
+SHA512 (tidy-html5-5.4.0.tar.gz) = d92c89f2ef371499f9c3de6f9389783d2449433b4da1f5a29e2eb81b7a7db8dd9f68e220cdde092d446e9bd779bcbc30f84bda79013526540f29d00f438cb402
+Size (tidy-html5-5.4.0.tar.gz) = 522844 bytes
