@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2355 2017/06/14 11:30:08 ryoon Exp $
+$NetBSD: CHANGES-2017,v 1.2356 2017/06/14 11:37:05 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/mongo-c-driver to 1.6.3 [fhajny 2017-06-14]
 	Updated devel/nss to 3.31 [ryoon 2017-06-14]
 	Updated www/firefox to 54.0 [ryoon 2017-06-14]
+	Updated www/firefox-l10n to 54.0 [ryoon 2017-06-14]
