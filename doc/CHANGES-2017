@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2346 2017/06/14 04:21:47 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2347 2017/06/14 07:13:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2973,3 +2973,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/qore to 0.8.12.10 [nros 2017-06-13]
 	Updated security/bearssl to 0.4 [agc 2017-06-13]
 	Updated cad/gtkwave to 3.3.81 [mef 2017-06-14]
+	Updated www/curl to 7.54.1 [adam 2017-06-14]
