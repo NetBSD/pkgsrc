@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.34 2017/06/01 02:15:10 jlam Exp $
+# $NetBSD: check-files.mk,v 1.35 2017/06/14 16:23:09 prlw1 Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -99,6 +99,11 @@ CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.scale
     (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*)) || \
     (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
 CHECK_FILES_SKIP+=	${PREFIX}/.*/fonts.cache-1
+.endif
+
+# Mutable icon theme cache files
+.if !empty(ICON_THEMES:M[Yy][Ee][Ss])
+CHECK_FILES_SKIP+=	${PREFIX}/share/icons/.*/icon-theme.cache
 .endif
 
 # Mutable charset.alias file

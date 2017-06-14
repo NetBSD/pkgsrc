@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.4 2016/02/02 08:02:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.5 2017/06/14 16:23:09 prlw1 Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5284,7 +5284,12 @@ sub checkfile_PLIST($) {
 "Otherwise, this warning is harmless.");
 				}
 
-			} elsif (substr($text, 0, 6) eq "share/" && $pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
+			} elsif ($text =~ m"^share/icons/[^/]+/.+$") {
+				if (defined($pkgctx_vardef) && !exists($pkgctx_vardef->{"ICON_THEMES"})) {
+					$line->log_warning("Packages that install icon theme files should set ICON_THEMES.");
+				}
+
+			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor(?:$|/)") {
 				my $f = "../../graphics/hicolor-icon-theme/buildlink3.mk";
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
 					$line->log_error("Please .include \"$f\" in the Makefile");
