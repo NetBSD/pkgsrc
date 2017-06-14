@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_ycbcr_yuv__row__arm.S,v 1.3 2016/11/03 22:46:43 joerg Exp $
+$NetBSD: patch-gfx_ycbcr_yuv__row__arm.S,v 1.4 2017/06/14 11:28:44 ryoon Exp $
 
 * Copy from yuv_row_arm.s to process it with pre-processor
 
---- gfx/ycbcr/yuv_row_arm.S.orig	2016-05-12 17:13:08.000000000 +0000
+--- gfx/ycbcr/yuv_row_arm.S.orig	2017-06-12 20:07:14.598490411 +0000
 +++ gfx/ycbcr/yuv_row_arm.S
 @@ -2,6 +2,12 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this
