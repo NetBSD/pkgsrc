@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.34 2017/05/16 13:38:13 wiz Exp $
+$NetBSD: distinfo,v 1.35 2017/06/14 12:15:43 wiz Exp $
 
-SHA1 (waf-1.9.11.tar.bz2) = 292433d30ed09cf2787bbe3fc53d5fbe3d5f59f0
-RMD160 (waf-1.9.11.tar.bz2) = c15793469fd21adf5b3e401f80ca36c8d121fc0f
-SHA512 (waf-1.9.11.tar.bz2) = d4a59fff71955169ca2ca7212e99fa2393d7acecb99bd9936342329ff1316dfcf6c9fe949106bc5698e4ecb80b98cd5d96067b69249b467b76b6c936c8232c13
-Size (waf-1.9.11.tar.bz2) = 623323 bytes
+SHA1 (waf-1.9.12.tar.bz2) = 5b4e5b3bd1d57dd6a5eeff460c33cf1c58ad2c08
+RMD160 (waf-1.9.12.tar.bz2) = c90a869cd66c4331b0e92e61f62384114adbf3fd
+SHA512 (waf-1.9.12.tar.bz2) = 6f7c47f8d852ad5a130fc10709462b89166ec6153327edd5b61fbeab117e34d3ac5ecc6bb7bc700fb20cf01b0c2f0c14f5ddf2ba81a75602f5d71b8137828c66
+Size (waf-1.9.12.tar.bz2) = 626193 bytes
