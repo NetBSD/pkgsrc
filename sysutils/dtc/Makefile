@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/09/19 21:12:34 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/14 06:29:36 maya Exp $
 
 DISTNAME=	dtc-1.4.2
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://devicetree.org/
 COMMENT=	Device Tree Compiler (dtc)
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake bison bash:run
+USE_TOOLS+=	gmake bison flex bash:run
 
 REPLACE_BASH+=	dtdiff
 
