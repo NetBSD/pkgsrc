@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/05/11 08:23:35 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/06/14 13:16:08 fhajny Exp $
 bin/certbot${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -99,6 +99,24 @@ ${PYSITELIB}/certbot/plugins/disco.pyo
 ${PYSITELIB}/certbot/plugins/disco_test.py
 ${PYSITELIB}/certbot/plugins/disco_test.pyc
 ${PYSITELIB}/certbot/plugins/disco_test.pyo
+${PYSITELIB}/certbot/plugins/dns_common.py
+${PYSITELIB}/certbot/plugins/dns_common.pyc
+${PYSITELIB}/certbot/plugins/dns_common.pyo
+${PYSITELIB}/certbot/plugins/dns_common_lexicon.py
+${PYSITELIB}/certbot/plugins/dns_common_lexicon.pyc
+${PYSITELIB}/certbot/plugins/dns_common_lexicon.pyo
+${PYSITELIB}/certbot/plugins/dns_common_lexicon_test.py
+${PYSITELIB}/certbot/plugins/dns_common_lexicon_test.pyc
+${PYSITELIB}/certbot/plugins/dns_common_lexicon_test.pyo
+${PYSITELIB}/certbot/plugins/dns_common_test.py
+${PYSITELIB}/certbot/plugins/dns_common_test.pyc
+${PYSITELIB}/certbot/plugins/dns_common_test.pyo
+${PYSITELIB}/certbot/plugins/dns_test_common.py
+${PYSITELIB}/certbot/plugins/dns_test_common.pyc
+${PYSITELIB}/certbot/plugins/dns_test_common.pyo
+${PYSITELIB}/certbot/plugins/dns_test_common_lexicon.py
+${PYSITELIB}/certbot/plugins/dns_test_common_lexicon.pyc
+${PYSITELIB}/certbot/plugins/dns_test_common_lexicon.pyo
 ${PYSITELIB}/certbot/plugins/manual.py
 ${PYSITELIB}/certbot/plugins/manual.pyc
 ${PYSITELIB}/certbot/plugins/manual.pyo
@@ -244,6 +262,7 @@ ${PYSITELIB}/certbot/tests/testdata/dsa512_key.pem
 ${PYSITELIB}/certbot/tests/testdata/dsa_cert.pem
 ${PYSITELIB}/certbot/tests/testdata/matching_cert.pem
 ${PYSITELIB}/certbot/tests/testdata/os-release
+${PYSITELIB}/certbot/tests/testdata/rsa2048_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa256_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key_2.pem
@@ -253,6 +272,9 @@ ${PYSITELIB}/certbot/tests/testdata/sample-archive/fullchain1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-archive/privkey1.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ancient.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal.conf
+${PYSITELIB}/certbot/tests/testdata/self_signed_cert.pem
+${PYSITELIB}/certbot/tests/testdata/self_signed_cert_bad.pem
+${PYSITELIB}/certbot/tests/testdata/self_signed_fullchain.pem
 ${PYSITELIB}/certbot/tests/testdata/webrootconftest.ini
 ${PYSITELIB}/certbot/tests/util.py
 ${PYSITELIB}/certbot/tests/util.pyc
