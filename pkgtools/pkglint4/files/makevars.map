@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.4 2017/05/24 19:51:12 adam Exp $
+# $NetBSD: makevars.map,v 1.5 2017/06/14 16:23:09 prlw1 Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -384,6 +384,7 @@ GNU_CONFIGURE_PREFIX	Pathname [m:s]
 HAS_CONFIGURE		Yes [m:s,c:s]
 HEADER_TEMPLATES	List of Pathname [$package_list]
 HOMEPAGE		URL [$package]
+ICON_THEMES		Yes
 IGNORE_PKG.*		Yes [*:sp]
 INCOMPAT_CURSES		InternalList of PlatformTriple [m:as]
 INCOMPAT_ICONV		InternalList of PlatformTriple
