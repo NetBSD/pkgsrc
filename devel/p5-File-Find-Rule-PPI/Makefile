@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:22:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/14 16:11:19 jperkin Exp $
 
 DISTNAME=	File-Find-Rule-PPI-1.06
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	p5-PPI>=1.00:../../devel/p5-PPI
 DEPENDS+=	p5-Params-Util>=0.10:../../devel/p5-Params-Util
 
 PERL5_PACKLIST=		auto/File/Find/Rule/PPI/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
