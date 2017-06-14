@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2360 2017/06/14 12:32:05 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2361 2017/06/14 12:59:25 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2987,3 +2987,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/waf to 1.9.12 [wiz 2017-06-14]
 	Updated x11/xterm to 328 [wiz 2017-06-14]
 	Updated time/p5-DateTime-TimeZone to 2.13 [wiz 2017-06-14]
+	Updated lang/nodejs to 8.1.1 [fhajny 2017-06-14]
