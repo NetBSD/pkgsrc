@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2349 2017/06/14 09:29:36 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2350 2017/06/14 09:32:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2976,3 +2976,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/curl to 7.54.1 [adam 2017-06-14]
 	Updated www/tidy to 5.4.0 [adam 2017-06-14]
 	Updated net/nmap to 7.50 [adam 2017-06-14]
+	Updated graphics/ImageMagick to 7.0.6.0 [he 2017-06-14]
