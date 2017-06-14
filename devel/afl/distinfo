@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.56 2017/04/19 12:15:33 wiz Exp $
+$NetBSD: distinfo,v 1.57 2017/06/14 12:14:56 wiz Exp $
 
-SHA1 (afl-2.41b.tgz) = 42ac68c3ab655f5a5ba37bb894e795ecb440d52e
-RMD160 (afl-2.41b.tgz) = 170b4c304f698d6461fb9572962f8b58fc6649bd
-SHA512 (afl-2.41b.tgz) = e1af6e6c4dedcc3f7f17857bf45a2efeb64bdc51633003c5bd700c51eb30c72f1f4e7fed5f6570ec98ccbd22b54dbcf08cc3faec4d28004fe0fa863a4d7ea90f
-Size (afl-2.41b.tgz) = 832153 bytes
+SHA1 (afl-2.42b.tgz) = 3508a3e1ceb703909f06b10ca6db4b4626dfa4d8
+RMD160 (afl-2.42b.tgz) = 87aa200bb437651aaa33b346f164207bdf3579f3
+SHA512 (afl-2.42b.tgz) = a78b835e8562fa840b8edf249a4b6b9cfeb0617b8379a4be85da98e9cff76cb8eab5ba470a22bda0f4d6c98d5f2d0bf8289bd4fbf078ee0b5fdd61f78f2bbb18
+Size (afl-2.42b.tgz) = 832234 bytes
