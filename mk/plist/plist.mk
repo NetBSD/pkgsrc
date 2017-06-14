@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.49 2015/07/04 16:18:38 joerg Exp $
+# $NetBSD: plist.mk,v 1.50 2017/06/14 16:23:09 prlw1 Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -282,6 +282,12 @@ INFO_FILES_cmd=								\
 	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |	\
 	${AWK} '($$0 !~ "-[0-9]*(\\.gz)?$$") { print }'
 .endif
+
+ICON_THEMES_cmd=							\
+	${CAT} ${PLIST} |						\
+	${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} -F /			\
+	'$$0 ~ "^share/icons/[^/]+/.*$$" { print $$3 }' |		\
+	${SORT} -u
 
 ######################################################################
 ### plist-clean (PRIVATE)
