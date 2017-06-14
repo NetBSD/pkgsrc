@@ -1,10 +1,10 @@
-$NetBSD: patch-toolkit_moz.configure,v 1.2 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-toolkit_moz.configure,v 1.3 2017/06/14 11:28:44 ryoon Exp $
 
 * Enable widevide CDM for NetBSD
 
---- toolkit/moz.configure.orig	2017-01-23 16:13:54.000000000 +0000
+--- toolkit/moz.configure.orig	2017-06-05 20:45:23.000000000 +0000
 +++ toolkit/moz.configure
-@@ -338,6 +338,26 @@ add_old_configure_assignment('FT2_LIBS',
+@@ -343,6 +343,26 @@ add_old_configure_assignment('FT2_LIBS',
  add_old_configure_assignment('FT2_CFLAGS',
                               delayed_getattr(ft2_info, 'cflags'))
  
@@ -23,7 +23,7 @@ $NetBSD: patch-toolkit_moz.configure,v 1.2 2017/03/07 20:45:43 ryoon Exp $
 +option('--with-system-harfbuzz',
 +       help="Use system harfbuzz (located with pkgconfig)")
 +
-+system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.4.1',
++system_harfbuzz = pkg_check_modules('MOZ_HARFBUZZ', 'harfbuzz >= 1.4.3',
 +                                    when='--with-system-harfbuzz')
 +
 +set_config('MOZ_SYSTEM_HARFBUZZ', depends_if(system_harfbuzz)(lambda _: True))
