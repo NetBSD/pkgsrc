@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2017/06/05 14:22:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/14 13:27:00 wiz Exp $
 
-DISTNAME=	MusicBrainz-DiscID-0.03
+DISTNAME=	MusicBrainz-DiscID-0.04
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MusicBrainz/}
 
@@ -15,7 +14,7 @@ DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
 PERL5_PACKLIST=		auto/MusicBrainz/DiscID/.packlist
 
-PERL5_MODULE_TYPE=	Module::Build
+EXTRACT_USING=	bsdtar
 USE_TOOLS+=	pkg-config
 
 .include "../../audio/libdiscid/buildlink3.mk"
