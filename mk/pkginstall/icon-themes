@@ -1,0 +1,103 @@
+# $NetBSD: icon-themes,v 1.1 2017/06/14 16:23:09 prlw1 Exp $
+#
+# Generate an +ICON_THEMES script that handles the icon theme cache for
+# the package.
+#
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+ICON_THEMES)
+	${CAT} > ./+ICON_THEMES << 'EOF'
+#!@SH@
+#
+# +ICON_THEMES - icon theme cache management script
+#
+# Usage: ./+ICON_THEMES ADD|REMOVE [metadatadir]
+#
+# This script supports two actions, UPDATE and REMOVE, that will update or
+# remove cache files for icon themes from the package associated with
+# <metadatadir>.
+#
+# Lines starting with "# ICON_THEME: " are data read by this script that
+# name the icon theme and directory containing the "index.theme".
+#
+#	# ICON_THEME: hicolor
+#	# ICON_THEME: gnome
+#
+# For each ICON_THEME entry, if the path is relative, that it is taken to be
+# relative to ${PKG_PREFIX}/share/icons.
+#
+
+ECHO="@ECHO@"
+GREP="@GREP@"
+INSTALL_INFO="@INSTALL_INFO@"
+MKDIR="@MKDIR@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+RMDIR="@RMDIR@"
+SED="@SED@"
+SORT="@SORT@"
+TEST="@TEST@"
+GTK2_UPDATE_ICON_CACHE="@GTK2_UPDATE_ICON_CACHE@"
+GTK3_UPDATE_ICON_CACHE="@GTK3_UPDATE_ICON_CACHE@"
+: ${GTK_UPDATE_ICON_CACHE=@TRUE@}
+
+SELF=$0
+ACTION=$1
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
+
+for _t in ${GTK3_UPDATE_ICON_CACHE} ${GTK2_UPDATE_ICON_CACHE}; do
+	if ${TEST} -x $_t; then
+		GTK_UPDATE_ICON_CACHE=$_t;
+		break;
+	fi
+done
+
+update_icon_cache()
+{
+	_dir="$1"
+	if ${TEST} ! -f "$_dir/index.theme"; then
+		:
+	else
+		${GTK_UPDATE_ICON_CACHE}  -f -q "$_dir"
+	fi
+}
+
+exitcode=0
+case $ACTION in
+UPDATE)
+	${SED} -n "/^\# ICON_THEME: /{s/^\# ICON_THEME: //;p;}" ${SELF} | \
+	${SORT} -u |
+	while read theme; do
+		case $theme in
+		"")	continue ;;
+		[!/]*)	theme="${PKG_PREFIX}/share/icons/$theme" ;;
+		esac
+
+		update_icon_cache $theme
+	done
+	;;
+
+REMOVE)
+	${SED} -n "/^\# ICON_THEME: /{s/^\# ICON_THEME: //;p;}" ${SELF} | \
+	${SORT} -u |
+	while read theme; do
+		case $theme in
+		"")	continue ;;
+		[!/]*)	theme="${PKG_PREFIX}/share/icons/$theme" ;;
+		esac
+
+		${RM} -f "$theme/icon-theme.cache"
+	done
+	;;
+esac
+exit $exitcode
+
+EOF
+	${SED} -n "/^\# ICON_THEME: /p" ${SELF} >> ./+ICON_THEMES
+	${CHMOD} +x ./+ICON_THEMES
+	;;
+esac
+

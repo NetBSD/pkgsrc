@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.32 2016/07/25 21:57:23 wiz Exp $
+# $NetBSD: print-plist.mk,v 1.33 2017/06/14 16:23:09 prlw1 Exp $
 
 ###
 ### Automatic PLIST generation
@@ -42,6 +42,9 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.scale/)
     (defined(FONTS_DIRS.type1) && !empty(FONTS_DIRS.type1:M*)) || \
     (defined(FONTS_DIRS.x11) && !empty(FONTS_DIRS.x11:M*))
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^.*\/fonts\.cache-1/)
+.endif
+.if defined(ICON_THEMES)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^share\/icons\/*\/icon-theme\.cache$$/)
 .endif
 
 # List the content of $PREFIX and emit "@pkgdir " statements for
