@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2367 2017/06/14 13:22:01 jperkin Exp $
+$NetBSD: CHANGES-2017,v 1.2368 2017/06/14 13:24:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2994,3 +2994,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/py-certbot to 0.15.0 [fhajny 2017-06-14]
 	Updated x11/p5-Wx to 0.9932 [jperkin 2017-06-14]
 	Updated x11/wxGTK28 to 2.8.12nb13 [jperkin 2017-06-14]
+	Updated www/p5-Mojolicious to 7.33 [wiz 2017-06-14]
