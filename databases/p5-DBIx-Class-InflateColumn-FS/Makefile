@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/05 14:22:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/14 15:47:54 jperkin Exp $
 
 DISTNAME=	DBIx-Class-InflateColumn-FS-0.01007
 PKGNAME=	p5-${DISTNAME}
@@ -21,6 +21,8 @@ DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 # For test really
 BUILD_DEPENDS+= p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 BUILD_DEPENDS+= p5-DBICx-TestDatabase-[0-9]*:../../databases/p5-DBICx-TestDatabase
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
