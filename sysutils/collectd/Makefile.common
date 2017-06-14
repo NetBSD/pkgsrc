@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2017/01/25 14:10:18 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.15 2017/06/14 13:42:53 fhajny Exp $
 #
 # used by sysutils/collectd/Makefile
 # used by sysutils/collectd-amqp/Makefile
@@ -16,7 +16,7 @@
 # used by sysutils/p5-collectd/Makefile
 # used by sysutils/py-collectd/Makefile
 
-DISTNAME=	collectd-5.7.1
+DISTNAME=	collectd-5.7.2
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=	sysutils
 EXTRACT_SUFX=	.tar.bz2
