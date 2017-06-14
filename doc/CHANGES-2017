@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2372 2017/06/14 13:32:49 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2373 2017/06/14 13:33:47 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -2999,3 +2999,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/hitch to 1.4.6 [fhajny 2017-06-14]
 	Updated www/p5-Net-HTTP to 6.16 [wiz 2017-06-14]
 	Updated devel/p5-Params-Validate to 1.29 [wiz 2017-06-14]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07047 [jperkin 2017-06-14]
