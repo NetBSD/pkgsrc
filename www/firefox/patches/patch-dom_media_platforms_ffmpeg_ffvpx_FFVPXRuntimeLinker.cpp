@@ -1,6 +1,6 @@
-$NetBSD: patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp,v 1.1 2017/03/07 20:45:43 ryoon Exp $
+$NetBSD: patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp,v 1.2 2017/06/14 11:28:44 ryoon Exp $
 
---- dom/media/platforms/ffmpeg/ffvpx/FFVPXRuntimeLinker.cpp.orig	2016-10-14 08:14:07.000000000 +0000
+--- dom/media/platforms/ffmpeg/ffvpx/FFVPXRuntimeLinker.cpp.orig	2017-06-05 20:45:19.000000000 +0000
 +++ dom/media/platforms/ffmpeg/ffvpx/FFVPXRuntimeLinker.cpp
 @@ -11,9 +11,13 @@
  #include "prmem.h"
@@ -14,9 +14,9 @@ $NetBSD: patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp,v 1.1 201
  #include "soundtouch/SoundTouch.h"
 +#endif
  
- namespace mozilla
- {
-@@ -51,6 +55,12 @@ FFVPXRuntimeLinker::Init()
+ namespace mozilla {
+ 
+@@ -50,6 +54,12 @@ FFVPXRuntimeLinker::Init()
  
    sLinkStatus = LinkStatus_FAILED;
  
@@ -29,7 +29,7 @@ $NetBSD: patch-dom_media_platforms_ffmpeg_ffvpx_FFVPXRuntimeLinker.cpp,v 1.1 201
    // We retrieve the path of the lgpllibs library as this is where mozavcodec
    // and mozavutil libs are located.
    char* lgpllibsname = PR_GetLibraryName(nullptr, "lgpllibs");
-@@ -61,6 +71,7 @@ FFVPXRuntimeLinker::Init()
+@@ -60,6 +70,7 @@ FFVPXRuntimeLinker::Init()
      PR_GetLibraryFilePathname(lgpllibsname,
                                (PRFuncPtr)&soundtouch::SoundTouch::getVersionId);
    PR_FreeLibraryName(lgpllibsname);

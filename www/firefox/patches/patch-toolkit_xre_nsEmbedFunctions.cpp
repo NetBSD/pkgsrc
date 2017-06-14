@@ -1,10 +1,10 @@
-$NetBSD: patch-toolkit_xre_nsEmbedFunctions.cpp,v 1.6 2016/06/16 12:08:21 ryoon Exp $
+$NetBSD: patch-toolkit_xre_nsEmbedFunctions.cpp,v 1.7 2017/06/14 11:28:44 ryoon Exp $
 
 * Support Solaris
 
---- toolkit/xre/nsEmbedFunctions.cpp.orig	2013-05-11 19:19:55.000000000 +0000
+--- toolkit/xre/nsEmbedFunctions.cpp.orig	2017-06-05 20:45:23.000000000 +0000
 +++ toolkit/xre/nsEmbedFunctions.cpp
-@@ -239,7 +239,7 @@ XRE_SetRemoteExceptionHandler(const char
+@@ -285,7 +285,7 @@ XRE_SetRemoteExceptionHandler(const char
  {
  #if defined(XP_WIN) || defined(XP_MACOSX)
    return CrashReporter::SetRemoteExceptionHandler(nsDependentCString(aPipe));
@@ -13,7 +13,7 @@ $NetBSD: patch-toolkit_xre_nsEmbedFunctions.cpp,v 1.6 2016/06/16 12:08:21 ryoon 
    return CrashReporter::SetRemoteExceptionHandler();
  #else
  #  error "OOP crash reporter unsupported on this platform"
-@@ -351,7 +351,7 @@ XRE_InitChildProcess(int aArgc,
+@@ -504,7 +504,7 @@ XRE_InitChildProcess(int aArgc,
      // Bug 684322 will add better visibility into this condition
      NS_WARNING("Could not setup crash reporting\n");
    }
@@ -21,4 +21,4 @@ $NetBSD: patch-toolkit_xre_nsEmbedFunctions.cpp,v 1.6 2016/06/16 12:08:21 ryoon 
 +#  elif defined(OS_LINUX) || defined(OS_SOLARIS)
    // on POSIX, |crashReporterArg| is "true" if crash reporting is
    // enabled, false otherwise
-   if (0 != strcmp("false", crashReporterArg) && 
+   if (0 != strcmp("false", crashReporterArg) &&
