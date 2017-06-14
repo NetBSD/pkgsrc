@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/04/13 17:48:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/14 13:42:53 fhajny Exp $
 
 COLLECTD_PACKAGE=	network
-PKGREVISION=		1
 
 COMMENT=		Statistics collection daemon - network plugin
 
