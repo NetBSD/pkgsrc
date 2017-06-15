@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2394 2017/06/15 02:00:11 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2395 2017/06/15 07:04:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3022,3 +3022,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/p5-Net-CUPS to 0.64 [wiz 2017-06-14]
 	Updated net/bind910 to 9.10.5pl1 [taca 2017-06-15]
 	Updated net/bind99 to 9.9.10pl1 [taca 2017-06-15]
+	Updated devel/py-requests to 2.18.1 [adam 2017-06-15]
+	Updated math/py-numpy to 1.13.0 [adam 2017-06-15]
