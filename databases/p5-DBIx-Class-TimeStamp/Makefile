@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2017/06/05 14:22:27 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2017/06/15 11:52:41 jperkin Exp $
 
 DISTNAME=	DBIx-Class-TimeStamp-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,8 @@ BUILD_DEPENDS+=	p5-Time-Warp-[0-9]*:../../time/p5-Time-Warp
 DEPENDS+=	p5-DBIx-Class>=0.08009:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBIx-Class-DynamicDefault>=0.03:../../databases/p5-DBIx-Class-DynamicDefault
 DEPENDS+=	p5-DateTime>=0.5500:../../time/p5-DateTime
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
