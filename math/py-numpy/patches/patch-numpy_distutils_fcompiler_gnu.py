@@ -1,11 +1,12 @@
-$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.11 2017/03/24 19:22:28 joerg Exp $
+$NetBSD: patch-numpy_distutils_fcompiler_gnu.py,v 1.12 2017/06/15 07:02:53 adam Exp $
 
 Linker needs -shared explictly (at least with GCC 4.7 on SunOS), plus
 any ABI flags as appropriate.
 On OS X, do not use '-bundle' and 'dynamic_lookup' (to avoid Python.framework).
+Do not use -funroll-loops compiler flag.
 Do not run a shell command when it is "None".
 
---- numpy/distutils/fcompiler/gnu.py.orig	2017-03-18 15:29:25.000000000 +0000
+--- numpy/distutils/fcompiler/gnu.py.orig	2017-06-07 15:26:35.000000000 +0000
 +++ numpy/distutils/fcompiler/gnu.py
 @@ -57,8 +57,10 @@ class GnuFCompiler(FCompiler):
                      return ('gfortran', m.group(1))
@@ -37,7 +38,15 @@ Do not run a shell command when it is "None".
          else:
              opt.append("-shared")
          if sys.platform.startswith('sunos'):
-@@ -270,7 +272,7 @@ class Gnu95FCompiler(GnuFCompiler):
+@@ -215,7 +217,6 @@ class GnuFCompiler(FCompiler):
+             opt = ['-O2']
+         else:
+             opt = ['-O3']
+-        opt.append('-funroll-loops')
+         return opt
+ 
+     def _c_arch_flags(self):
+@@ -270,7 +271,7 @@ class Gnu95FCompiler(GnuFCompiler):
                            "-fno-second-underscore"] + _EXTRAFLAGS,
          'compiler_fix' : [None, "-Wall",  "-g","-ffixed-form",
                            "-fno-second-underscore"] + _EXTRAFLAGS,
@@ -46,12 +55,12 @@ Do not run a shell command when it is "None".
          'archiver'     : ["ar", "-cr"],
          'ranlib'       : ["ranlib"],
          'linker_exe'   : [None, "-Wall"]
-@@ -283,7 +285,7 @@ class Gnu95FCompiler(GnuFCompiler):
+@@ -283,7 +284,7 @@ class Gnu95FCompiler(GnuFCompiler):
  
      def _universal_flags(self, cmd):
          """Return a list of -arch flags for every supported architecture."""
 -        if not sys.platform == 'darwin':
-+        if not sys.platform == 'darwin' or cmd==None:
++        if not sys.platform == 'darwin' or cmd is None:
              return []
          arch_flags = []
          # get arches the C compiler gets.
