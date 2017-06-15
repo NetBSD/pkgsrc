@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/04/30 01:21:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/15 14:54:44 fhajny Exp $
 
 DISTNAME=	ntopng-2.4-stable
 PKGNAME=	ntopng-2.4
@@ -26,6 +26,14 @@ SUBST_MESSAGE.fix-vers=	Setting package version.
 SUBST_FILES.fix-vers=	configure.seed
 SUBST_SED.fix-vers=	-e 's,@VERSION@,${PKGVERSION},g'
 SUBST_SED.fix-vers+=	-e 's,@SHORT_VERSION@,${PKGVERSION_NOREV},g'
+
+# Portable types
+CFLAGS.SunOS+=		-Du_int8_t=uint8_t
+CFLAGS.SunOS+=		-Du_int16_t=uint16_t
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t
+CFLAGS.SunOS+=		-Du_int64_t=uint64_t
+
+LDFLAGS.SunOS+=		-lresolv
 
 pre-configure:
 	cd ${WRKSRC} && cp configure.seed configure.ac && autoreconf -fiv
