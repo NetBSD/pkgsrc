@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/03/04 19:10:32 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/15 18:01:34 bsiegert Exp $
 bin/google_accounts_daemon
 bin/google_clock_skew_daemon
 bin/google_instance_setup
@@ -7,12 +7,12 @@ bin/google_metadata_script_runner
 bin/google_network_setup
 bin/optimize_local_ssd
 bin/set_multiqueue
-${PYSITELIB}/google_compute_engine-2.3.4-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/google_compute_engine-2.3.4-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/google_compute_engine-2.3.4-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/google_compute_engine-2.3.4-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/google_compute_engine-2.3.4-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/google_compute_engine-2.3.4-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/google_compute_engine-2.3.7-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/google_compute_engine-2.3.7-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/google_compute_engine-2.3.7-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/google_compute_engine-2.3.7-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/google_compute_engine-2.3.7-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/google_compute_engine-2.3.7-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/google_compute_engine/__init__.py
 ${PYSITELIB}/google_compute_engine/__init__.pyo
 ${PYSITELIB}/google_compute_engine/__init__.pyc
