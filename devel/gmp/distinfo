@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.53 2017/06/15 04:11:50 msaitoh Exp $
+$NetBSD: distinfo,v 1.54 2017/06/15 04:12:32 msaitoh Exp $
 
 SHA1 (gmp-6.1.2.tar.bz2) = 366ded6a44cd108ba6b3f5b9a252eab3f3a95cdf
 RMD160 (gmp-6.1.2.tar.bz2) = 03b905b4d7f243705b72b2d7595ce40df716020a
@@ -6,4 +6,4 @@ SHA512 (gmp-6.1.2.tar.bz2) = 268db88447174617f5746d9a6ba2b105940cc1a5e73155eb23b
 Size (gmp-6.1.2.tar.bz2) = 2386766 bytes
 SHA1 (patch-aa) = dec275cbd5886a70f7cf0def1dedf01e7e4a49e9
 SHA1 (patch-ac) = 6f7de0a285bec2c2645479d3090dc0276580f3d8
-SHA1 (patch-acinclude.m4) = 7c8522c0c16f576c2f20794f0f2cac5df0066737
+SHA1 (patch-acinclude.m4) = c5229e932b5a23b99e904879dd906fbca9f924f8
