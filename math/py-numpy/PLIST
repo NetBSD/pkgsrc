@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/03/20 13:50:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/06/15 07:02:53 adam Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -473,6 +473,7 @@ ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_non_compound.f90
 ${PYSITELIB}/numpy/f2py/tests/src/parameter/constant_real.f90
 ${PYSITELIB}/numpy/f2py/tests/src/regression/inout.f90
 ${PYSITELIB}/numpy/f2py/tests/src/size/foo.f90
+${PYSITELIB}/numpy/f2py/tests/src/string/char.f90
 ${PYSITELIB}/numpy/f2py/tests/test_array_from_pyobj.py
 ${PYSITELIB}/numpy/f2py/tests/test_assumed_shape.py
 ${PYSITELIB}/numpy/f2py/tests/test_callback.py
@@ -486,6 +487,7 @@ ${PYSITELIB}/numpy/f2py/tests/test_return_integer.py
 ${PYSITELIB}/numpy/f2py/tests/test_return_logical.py
 ${PYSITELIB}/numpy/f2py/tests/test_return_real.py
 ${PYSITELIB}/numpy/f2py/tests/test_size.py
+${PYSITELIB}/numpy/f2py/tests/test_string.py
 ${PYSITELIB}/numpy/f2py/tests/util.py
 ${PYSITELIB}/numpy/f2py/use_rules.py
 ${PYSITELIB}/numpy/f2py/use_rules.pyc
@@ -544,6 +546,9 @@ ${PYSITELIB}/numpy/lib/index_tricks.pyo
 ${PYSITELIB}/numpy/lib/info.py
 ${PYSITELIB}/numpy/lib/info.pyc
 ${PYSITELIB}/numpy/lib/info.pyo
+${PYSITELIB}/numpy/lib/mixins.py
+${PYSITELIB}/numpy/lib/mixins.pyc
+${PYSITELIB}/numpy/lib/mixins.pyo
 ${PYSITELIB}/numpy/lib/nanfunctions.py
 ${PYSITELIB}/numpy/lib/nanfunctions.pyc
 ${PYSITELIB}/numpy/lib/nanfunctions.pyo
@@ -585,6 +590,7 @@ ${PYSITELIB}/numpy/lib/tests/test_format.py
 ${PYSITELIB}/numpy/lib/tests/test_function_base.py
 ${PYSITELIB}/numpy/lib/tests/test_index_tricks.py
 ${PYSITELIB}/numpy/lib/tests/test_io.py
+${PYSITELIB}/numpy/lib/tests/test_mixins.py
 ${PYSITELIB}/numpy/lib/tests/test_nanfunctions.py
 ${PYSITELIB}/numpy/lib/tests/test_packbits.py
 ${PYSITELIB}/numpy/lib/tests/test_polynomial.py
@@ -648,6 +654,7 @@ ${PYSITELIB}/numpy/ma/setup.py
 ${PYSITELIB}/numpy/ma/setup.pyc
 ${PYSITELIB}/numpy/ma/setup.pyo
 ${PYSITELIB}/numpy/ma/tests/test_core.py
+${PYSITELIB}/numpy/ma/tests/test_deprecations.py
 ${PYSITELIB}/numpy/ma/tests/test_extras.py
 ${PYSITELIB}/numpy/ma/tests/test_mrecords.py
 ${PYSITELIB}/numpy/ma/tests/test_old_ma.py
