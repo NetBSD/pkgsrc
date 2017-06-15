@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2401 2017/06/15 14:23:10 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2402 2017/06/15 18:02:13 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3030,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-List-SomeUtils-XS to 0.53 [mef 2017-06-15]
 	Updated devel/p5-Log-Dispatch to 2.65 [mef 2017-06-15]
 	Updated devel/p5-Module-Build to 0.42240 [mef 2017-06-15]
+	Updated sysutils/py-google-compute-engine to 20170523 [bsiegert 2017-06-15]
