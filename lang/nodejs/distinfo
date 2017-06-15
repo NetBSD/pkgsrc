@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.97 2017/06/14 12:59:14 fhajny Exp $
+$NetBSD: distinfo,v 1.98 2017/06/15 18:16:56 fhajny Exp $
 
-SHA1 (node-v8.1.1.tar.gz) = 1dc82caaa7f9ade7e5669a06a8ccf5a1d172fcdd
-RMD160 (node-v8.1.1.tar.gz) = 733e769f22db0281548752d8b18abd9393f857a4
-SHA512 (node-v8.1.1.tar.gz) = 603b4ee2d34fc4b15e1140b0a11cee907e44ee3351b43fc37b5472af60c295ec759887684d410d0b9f2771ea12f04de5de36b373a3b413d94cd26a8362f51a18
-Size (node-v8.1.1.tar.gz) = 29933457 bytes
+SHA1 (node-v8.1.2.tar.gz) = e80d3e6ae766349a925911f0a8e5533827c58673
+RMD160 (node-v8.1.2.tar.gz) = e10a7c60e0db80fa771df123dd47f5844d9372cd
+SHA512 (node-v8.1.2.tar.gz) = fbf68c15936dcf89eb3460977200ab2948a752655d58f1b90fc3729aab3c6514cb9c7e4a1312866719be7f9451a23ff11845536f0c70790ce05b14e11185644e
+Size (node-v8.1.2.tar.gz) = 29934001 bytes
 SHA1 (patch-common.gypi) = 5b3a50617358637a6f910de28bb5a14f037317a6
 SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 78d6ddd37ae30e869e0da666a78baad86a638c50
