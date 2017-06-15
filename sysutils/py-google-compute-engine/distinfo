@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/03/04 19:10:32 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2017/06/15 18:01:34 bsiegert Exp $
 
-SHA1 (compute-image-packages/google-compute-engine-20170302-20170302.tar.gz) = c572bfb38914fc1dba42eb3f372a263b11430938
-RMD160 (compute-image-packages/google-compute-engine-20170302-20170302.tar.gz) = 936db55b9db465df5b9d52c4838a7125c12d43eb
-SHA512 (compute-image-packages/google-compute-engine-20170302-20170302.tar.gz) = 34df74ba9913f4a59360c7d4b7f970194b8537ac9307031de074e695818ee893f0f5039e076b7b5216c7e3c0494cd24c395f7fa2cc00aac760745636e595e9ab
-Size (compute-image-packages/google-compute-engine-20170302-20170302.tar.gz) = 103857 bytes
+SHA1 (compute-image-packages/google-compute-engine-20170523-20170523.tar.gz) = 89c17557132507a06b927095b21a24d2276da6ab
+RMD160 (compute-image-packages/google-compute-engine-20170523-20170523.tar.gz) = 896289a112cd1203654a2dd6bf7bb5276e380218
+SHA512 (compute-image-packages/google-compute-engine-20170523-20170523.tar.gz) = f72f46b962ef58b5d89a7eff0aff0abc3bb41fe33fd5fff0d8c2b2c08110f73316ed7fb0b6c9ea9c0c9a24760877a2b3da8facca81c15a47829b7a1af6bb2fd0
+Size (compute-image-packages/google-compute-engine-20170523-20170523.tar.gz) = 103974 bytes
