@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/15 18:37:31 nils Exp $
+bin/pulledpork
+share/doc/pulledpork/LICENSE
+share/doc/pulledpork/README.CATEGORIES
+share/doc/pulledpork/README.CHANGES
+share/doc/pulledpork/README.RULESET
+share/doc/pulledpork/README.SHAREDOBJECTS
+share/doc/pulledpork/README.md
+share/examples/pulledpork/disablesid.conf
+share/examples/pulledpork/dropsid.conf
+share/examples/pulledpork/enablesid.conf
+share/examples/pulledpork/modifysid.conf
+share/examples/pulledpork/pulledpork.conf
+share/pulledpork/oink-conv.pl
+@pkgdir share/pulledpork/contrib
+@pkgdir etc/pulledpork
