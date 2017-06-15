@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2396 2017/06/15 07:16:08 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2397 2017/06/15 11:50:44 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3025,3 +3025,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-requests to 2.18.1 [adam 2017-06-15]
 	Updated math/py-numpy to 1.13.0 [adam 2017-06-15]
 	Updated net/powerdns-recursor to 4.0.5 [fhajny 2017-06-15]
+	Updated editors/p5-Padre to 1.00 [jperkin 2017-06-15]
