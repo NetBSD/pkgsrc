@@ -1,0 +1,19 @@
+PulledPork is a script for Snort and Suricata rule management.
+
+Features and Capabilities :
+- Automated downloading, parsing, state modification and rule
+  modification for all of your snort rulesets.
+- Checksum verification for all major rule downloads
+- Automatic generation of updated sid-msg.map file
+- Capability to include your local.rules in sid-msg.map file
+- Capability to pull rules tarballs from custom urls
+- Complete Shared Object support
+- Complete IP Reputation List support
+- Capability to download multiple disparate rulesets at once
+- Maintains accurate changelog
+- Capability to HUP processes after rules download and process
+- Aids in tuning of rulesets
+- Verbose output so that you know EXACTLY what is happening
+- Minimal Perl Module dependencies
+- Support for Suricata, and ETOpen/ETPro rulesets
+- A sweet smokey flavor throughout the pork!
