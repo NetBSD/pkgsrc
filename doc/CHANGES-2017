@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2398 2017/06/15 14:10:27 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2399 2017/06/15 14:13:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3027,3 +3027,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/powerdns-recursor to 4.0.5 [fhajny 2017-06-15]
 	Updated editors/p5-Padre to 1.00 [jperkin 2017-06-15]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.30 [mef 2017-06-15]
+	Updated devel/p5-List-SomeUtils-XS to 0.53 [mef 2017-06-15]
