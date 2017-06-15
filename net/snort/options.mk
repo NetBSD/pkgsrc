@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/09/12 13:16:38 obache Exp $
+# $NetBSD: options.mk,v 1.8 2017/06/15 18:27:50 nils Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snort
 
@@ -13,9 +13,6 @@ PKG_SUGGESTED_OPTIONS=	inet6
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	flex
 PKG_OPTIONS_GROUP.flex=		snort-flexresp snort-flexresp2
-
-PKG_OPTIONS_OPTIONAL_GROUPS+=	database
-PKG_OPTIONS_GROUP.database=	mysql pgsql
 
 .include "../../mk/bsd.options.mk"
 
@@ -79,23 +76,6 @@ CONFIGURE_ARGS+=	--enable-gre
 ###
 .if !empty(PKG_OPTIONS:Msnmp)
 CONFIGURE_ARGS+=	--with-snmp
-.endif
-
-###
-### Support MySQL for snort logging
-###
-.if !empty(PKG_OPTIONS:Mmysql)
-.include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
-LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
-.endif
-
-###
-### Support PostgreSQL for snort logging
-###
-.if !empty(PKG_OPTIONS:Mpgsql)
-.include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX:Q}
 .endif
 
 ###
