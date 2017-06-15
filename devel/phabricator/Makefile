@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/03/18 13:48:48 roy Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/15 20:52:23 maya Exp $
 
 DISTNAME=		phabricator-20170316
 PKGREVISION=		2
@@ -77,6 +77,8 @@ CHECK_INTERPRETER_SKIP+=${PHABRICATOR_DIR}/externals/wordlist/password.lst
 
 CHMOD_FILES=		conf LICENSE NOTICE README.md externals resources src \
 			support webroot scripts/__init_script__.php scripts/fpm/warmup.php
+
+PHP_VERSIONS_ACCEPTED=	71
 
 post-extract:
 			cd ${WRKSRC} && \
