@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2017/04/27 12:12:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/15 18:04:37 fhajny Exp $
 bin/lexicon
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -42,6 +42,8 @@ ${PYSITELIB}/lexicon/providers/dnspod.pyo
 ${PYSITELIB}/lexicon/providers/dnspod.pyc
 ${PYSITELIB}/lexicon/providers/easydns.pyo
 ${PYSITELIB}/lexicon/providers/easydns.pyc
+${PYSITELIB}/lexicon/providers/gandi.pyo
+${PYSITELIB}/lexicon/providers/gandi.pyc
 ${PYSITELIB}/lexicon/providers/glesys.pyo
 ${PYSITELIB}/lexicon/providers/glesys.pyc
 ${PYSITELIB}/lexicon/providers/luadns.pyo
@@ -52,6 +54,8 @@ ${PYSITELIB}/lexicon/providers/namesilo.pyo
 ${PYSITELIB}/lexicon/providers/namesilo.pyc
 ${PYSITELIB}/lexicon/providers/nsone.pyo
 ${PYSITELIB}/lexicon/providers/nsone.pyc
+${PYSITELIB}/lexicon/providers/ovh.pyo
+${PYSITELIB}/lexicon/providers/ovh.pyc
 ${PYSITELIB}/lexicon/providers/pointhq.pyo
 ${PYSITELIB}/lexicon/providers/pointhq.pyc
 ${PYSITELIB}/lexicon/providers/powerdns.pyo
@@ -75,11 +79,13 @@ ${PYSITELIB}/lexicon/providers/dnsmadeeasy.py
 ${PYSITELIB}/lexicon/providers/dnspark.py
 ${PYSITELIB}/lexicon/providers/dnspod.py
 ${PYSITELIB}/lexicon/providers/easydns.py
+${PYSITELIB}/lexicon/providers/gandi.py
 ${PYSITELIB}/lexicon/providers/glesys.py
 ${PYSITELIB}/lexicon/providers/luadns.py
 ${PYSITELIB}/lexicon/providers/memset.py
 ${PYSITELIB}/lexicon/providers/namesilo.py
 ${PYSITELIB}/lexicon/providers/nsone.py
+${PYSITELIB}/lexicon/providers/ovh.py
 ${PYSITELIB}/lexicon/providers/pointhq.py
 ${PYSITELIB}/lexicon/providers/powerdns.py
 ${PYSITELIB}/lexicon/providers/rage4.py
