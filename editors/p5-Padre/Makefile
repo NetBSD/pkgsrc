@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2017/06/05 14:23:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.48 2017/06/15 11:50:34 jperkin Exp $
 
-DISTNAME=	Padre-0.96
+DISTNAME=	Padre-1.00
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	24
 CATEGORIES=	editors perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Padre/}
 
@@ -11,7 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Padre/
 COMMENT=	Perl Application Development and Refactoring Environment
 LICENSE=	${PERL5_LICENSE}
 
-MAKE_JOBS_SAFE=		no
+MAKE_JOBS_SAFE=	no
 
 USE_LANGUAGES+=	c c++
 REPLACE_PERL+=	share/templates/*.t
@@ -102,6 +101,8 @@ PERL5_REQD+=	5.14.2
 
 PERL5_PACKLIST=		auto/Padre/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 #pre-configure:
 #	cd ${WRKSRC} && find `pwd` -name "*.orig" -type f | xargs rm
