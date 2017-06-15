@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 14:23:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2017/06/15 11:40:10 jperkin Exp $
 
 DISTNAME=	Object-Signature-1.07
 PKGNAME=	p5-${DISTNAME}
@@ -20,6 +20,8 @@ DEPENDS+=	p5-ExtUtils-AutoInstall>=0.63:../../devel/p5-ExtUtils-AutoInstall
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Object/Signature/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
