@@ -1,8 +1,8 @@
-$NetBSD: patch-include_ntop__includes.h,v 1.1 2016/04/08 16:59:07 adam Exp $
+$NetBSD: patch-include_ntop__includes.h,v 1.2 2017/06/15 14:54:45 fhajny Exp $
 
-Add NetBSD support.
+Add NetBSD and SunOS support.
 
---- include/ntop_includes.h.orig	2016-04-04 12:57:38.000000000 +0000
+--- include/ntop_includes.h.orig	2016-06-27 19:31:18.000000000 +0000
 +++ include/ntop_includes.h
 @@ -43,7 +43,7 @@
  #include <arpa/inet.h>
@@ -13,3 +13,13 @@ Add NetBSD support.
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <netinet/in.h>
+@@ -51,6 +51,9 @@
+ #include <net/if_arp.h>
+ #include <netinet/if_ether.h>
+ #include <netinet/in_systm.h>
++#elif defined(__sun)
++#include <netinet/in_systm.h>
++#include <sys/sockio.h>
+ #else
+ #include <net/ethernet.h>
+ #endif
