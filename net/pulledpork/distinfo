@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/15 18:37:31 nils Exp $
+
+SHA1 (pulledpork-0.7.2.tar.gz) = 76d0fd0f8a84922d30eaed25930ec39b7030d17b
+RMD160 (pulledpork-0.7.2.tar.gz) = 021d71baa64c09f3524edb01b63bccc60ba77aa4
+SHA512 (pulledpork-0.7.2.tar.gz) = b227378dc298fdd2e422c459aad156dd58d7c3bb7eec8f0514501eecd80ab75b9bd7c476efcf8185ac2ee648a0f8bed91d9be9156fcf802585a35dc3c6468c67
+Size (pulledpork-0.7.2.tar.gz) = 41740 bytes
