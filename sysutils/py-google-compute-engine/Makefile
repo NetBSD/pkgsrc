@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2017/04/13 18:43:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/15 18:01:34 bsiegert Exp $
 
 GITHUB_PROJECT=	compute-image-packages
-GITHUB_TAG=	20170302
+GITHUB_TAG=	20170523
 DISTNAME=	google-compute-engine-${GITHUB_TAG}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=GoogleCloudPlatform/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
