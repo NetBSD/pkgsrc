@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2406 2017/06/15 18:41:14 nils Exp $
+$NetBSD: CHANGES-2017,v 1.2407 2017/06/15 22:15:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3035,3 +3035,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/nodejs to 8.1.2 [fhajny 2017-06-15]
 	Updated net/snort to 2.9.9.0 [nils 2017-06-15]
 	Added net/pulledpork version 0.7.2 [nils 2017-06-15]
+	Updated multimedia/libaacs to 0.9.0 [adam 2017-06-15]
+	Updated multimedia/libbluray to 1.0.1 [adam 2017-06-15]
