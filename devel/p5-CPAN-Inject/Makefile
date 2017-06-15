@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2017/06/05 14:22:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/15 11:55:41 jperkin Exp $
 
 DISTNAME=	CPAN-Inject-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,8 @@ BUILD_DEPENDS+=	p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/CPAN/Inject/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
