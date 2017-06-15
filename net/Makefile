@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1159 2017/06/10 16:28:51 taca Exp $
+# $NetBSD: Makefile,v 1.1160 2017/06/15 18:39:20 nils Exp $
 #
 
 COMMENT=	Networking tools
@@ -604,6 +604,7 @@ SUBDIR+=	proxytunnel
 SUBDIR+=	publicfile
 SUBDIR+=	publicfile-run
 SUBDIR+=	puf
+SUBDIR+=	pulledpork
 SUBDIR+=	pure-ftpd
 SUBDIR+=	pxe
 SUBDIR+=	py-GeoIP
