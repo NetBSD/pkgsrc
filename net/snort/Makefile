@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.55 2017/01/19 18:52:21 agc Exp $
+# $NetBSD: Makefile,v 1.56 2017/06/15 18:27:50 nils Exp $
 #
 
-DISTNAME=		snort-2.8.5.1
-PKGREVISION=		9
+DISTNAME=		snort-2.9.9.0
 CATEGORIES=		net security
-MASTER_SITES=		http://www.snort.org/dl/
-MASTER_SITES+=		http://www.snort.org/dl/current/
-MASTER_SITES+=		http://www.snort.org/dl/old/
+MASTER_SITES=		https://www.snort.org/downloads/archive/snort/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
 COMMENT=		The Open Source Network Intrusion Detection System
-
 LICENSE=		gnu-gpl-v2
+
+DEPENDS+=		daq>=2.0.0:../../net/daq
 
 CONFLICTS+=		snort-mysql-[0-9]*
 CONFLICTS+=		snort-pgsql-[0-9]*
@@ -30,58 +28,66 @@ EGDIR=			${PREFIX}/share/examples/snort
 PKG_GROUPS=		${SNORT_GROUP}
 PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}
 PKG_GROUPS_VARS+=	SNORT_GROUP
-PKG_USERS_VARS+=	SNORT_USER
-FILES_SUBST+=		SNORT_USER=${SNORT_USER:Q} SNORT_GROUP=${SNORT_GROUP:Q}
+PKG_USERS_VARS=		SNORT_USER
+FILES_SUBST+=		SNORT_USER=${SNORT_USER} SNORT_GROUP=${SNORT_GROUP}
 BUILD_DEFS+=		VARBASE
 MAKE_JOBS_SAFE=		NO
 OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
 DOC_FILES=		BUGS INSTALL NEWS PROBLEMS README TODO USAGE WISHLIST
+OWN_DIRS=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/rules
+OWN_DIRS+=		${PKG_SYSCONFDIR}/so_rules ${PKG_SYSCONFDIR}/preproc_rules
+OWN_DIRS+=		${PREFIX}/lib ${PREFIX}/lib/snort_dynamicrules
+INSTALLATION_DIRS+=	${EGDIR}/rules 
+AUTO_MKDIRS=		yes
 
-CONF_FILES=		${EGDIR}/snort.conf.default \
+CONF_FILES=		${EGDIR}/attribute_table.dtd \
+			${PKG_SYSCONFDIR}/attribute_table.dtd
+CONF_FILES+=		${EGDIR}/classification.config \
+			${PKG_SYSCONFDIR}/classification.config
+CONF_FILES+=		${EGDIR}/file_magic.conf \
+			${PKG_SYSCONFDIR}/file_magic.conf
+CONF_FILES+=		${EGDIR}/gen-msg.map \
+			${PKG_SYSCONFDIR}/gen-msg.map
+CONF_FILES+=		${EGDIR}/reference.config \
+			${PKG_SYSCONFDIR}/reference.config
+CONF_FILES+=		${EGDIR}/snort.conf.default \
 			${PKG_SYSCONFDIR}/snort.conf
 CONF_FILES+=		${EGDIR}/threshold.conf \
 			${PKG_SYSCONFDIR}/threshold.conf
-CONF_FILES+=		${EGDIR}/classification.config \
-			${PKG_SYSCONFDIR}/classification.config
-CONF_FILES+=		${EGDIR}/reference.config \
-			${PKG_SYSCONFDIR}/reference.config
-CONF_FILES+=		${EGDIR}/gen-msg.map \
-			${PKG_SYSCONFDIR}/gen-msg.map
 CONF_FILES+=		${EGDIR}/generators \
 			${PKG_SYSCONFDIR}/generators
-CONF_FILES+=		${EGDIR}/sid-msg.map \
-			${PKG_SYSCONFDIR}/sid-msg.map
 CONF_FILES+=		${EGDIR}/unicode.map \
 			${PKG_SYSCONFDIR}/unicode.map
+CONF_FILES+=		${EGDIR}/rules/black_list.rules \
+			${PKG_SYSCONFDIR}/rules/black_list.rules
+CONF_FILES+=		${EGDIR}/rules/white_list.rules \
+			${PKG_SYSCONFDIR}/rules/white_list.rules
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/snort.conf src/snort.c
-SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.paths+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_SED.paths=	-e "s|/usr/local|${PREFIX}|g"
+SUBST_SED.paths+=	-e "s|../rules|rules|g"
+SUBST_SED.paths+=	-e "s|../so_rules|so_rules|g"
+SUBST_SED.paths+=	-e "s|../preproc_rules|preproc_rules|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
 SUBST_CLASSES+=		installp
 SUBST_STAGE.installp=	post-extract
-SUBST_FILES.installp=	src/dynamic-preprocessors/ssl/Makefile.in
-SUBST_SED.installp=	-e "s|@INSTALL@|${INSTALL} -c|g"
-SUBST_MESSAGE.installp=	Fixing INSTALL options.
-
-SUBST_CLASSES+=		install
-SUBST_STAGE.install=	post-configure
-SUBST_FILES.install=	src/dynamic-preprocessors/ftptelnet/Makefile
-SUBST_FILES.install+=	src/dynamic-preprocessors/smtp/Makefile
-SUBST_FILES.install+=	src/dynamic-preprocessors/ssh/Makefile
-SUBST_FILES.install+=	src/dynamic-preprocessors/dcerpc/Makefile
-SUBST_FILES.install+=	src/dynamic-preprocessors/dns/Makefile
-SUBST_SED.install=	-e "s|-o root -g wheel||g"
-SUBST_MESSAGE.install=	Fixing install scripts.
+SUBST_FILES.installp=	src/dynamic-preprocessors/Makefile.in
+SUBST_SED.installp=	-e "s|exec_prefix)|exec_prefix)/share/snort|g"
+SUBST_MESSAGE.installp=	Fixing preprocessors install path.
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--disable-static-daq
+CONFIGURE_ARGS+=	--enable-sourcefire
+CONFIGURE_ARGS+=	--with-daq-includes=${BUILDLINK_PREFIX.daq}/include
+CONFIGURE_ARGS+=	--with-daq-libraries=${BUILDLINK_PREFIX.daq}/lib
 CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
+CONFIGURE_ARGS+=	--disable-so_with_static_lib
 
 pre-build:
 	${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default
@@ -92,21 +98,24 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/*.config \
 			${WRKSRC}/etc/*.map \
 			${WRKSRC}/etc/threshold.conf \
+			${WRKSRC}/etc/attribute_table.dtd \
+			${WRKSRC}/etc/file_magic.conf \
 			${WRKSRC}/etc/snort.conf.default ${DESTDIR}${EGDIR}/
 	${INSTALL_DATA} ${WRKSRC}/doc/generators ${DESTDIR}${EGDIR}
 
-.	for i in ${DOC_FILES}
-		${INSTALL_DATA}	${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/snort/
-.	endfor
+.for i in ${DOC_FILES}
+	${INSTALL_DATA}	${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/snort/
+.endfor
 
-	${INSTALL_DATA} ${WRKSRC}/doc/README.* ${DESTDIR}${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.tex ${DESTDIR}${PREFIX}/share/doc/snort/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${WRKSRC}/doc/README.* \
+			${WRKSRC}/doc/*.tex \
+			${WRKSRC}/doc/*.pdf ${DESTDIR}${PREFIX}/share/doc/snort/
+	${INSTALL_DATA} ${FILESDIR}/black_list.rules \
+			${FILESDIR}/white_list.rules ${DESTDIR}${EGDIR}/rules/
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
-	${INSTALL_DATA} ${WRKSRC}/schemas/create_* \
-		${DESTDIR}${PREFIX}/share/doc/snort/schemas
-
+.include "../../net/daq/buildlink3.mk"
+.include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
