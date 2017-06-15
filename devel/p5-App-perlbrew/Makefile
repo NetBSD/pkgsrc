@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2017/06/05 14:22:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2017/06/15 11:56:48 jperkin Exp $
 
 DISTNAME=	App-perlbrew-0.78
 PKGNAME=	p5-${DISTNAME}
@@ -32,6 +32,8 @@ BUILD_DEPENDS+=	p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl
 PERL5_PACKLIST=		auto/App/perlbrew/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
