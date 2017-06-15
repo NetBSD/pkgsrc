@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2017/03/18 18:18:45 adam Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/15 22:14:39 adam Exp $
 
-DISTNAME=	libbluray-1.0.0
+DISTNAME=	libbluray-1.0.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libbluray/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +13,13 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-bdjava
+CONFIGURE_ARGS+=	--disable-bdjava-jar
 CONFIGURE_ARGS+=	--disable-optimizations
 PKGCONFIG_OVERRIDE+=	src/libbluray.pc.in
+
+# provide jni_md.h for other architectures
+post-extract:
+	ln -s ${WRKSRC}/jni/linux/jni_md.h ${WRKSRC}/jni/jni_md.h
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
