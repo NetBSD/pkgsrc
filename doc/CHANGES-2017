@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2408 2017/06/16 05:40:01 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2409 2017/06/16 06:29:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3038,3 +3038,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libaacs to 0.9.0 [adam 2017-06-15]
 	Updated multimedia/libbluray to 1.0.1 [adam 2017-06-15]
 	Updated multimedia/x264-devel to 20170615 [adam 2017-06-16]
+	Updated lang/nodejs to 8.1.2 [fhajny 2017-06-16]
