@@ -1,8 +1,10 @@
-$NetBSD: patch-ba,v 1.5 2016/01/24 14:34:11 ryoon Exp $
+$NetBSD: patch-encoder_analyse.c,v 1.1 2017/06/16 05:39:23 adam Exp $
 
---- encoder/analyse.c.orig	2016-01-23 21:45:04.000000000 +0000
+Use logf() instead of log2f.
+
+--- encoder/analyse.c.orig	2017-06-15 20:45:03.000000000 +0000
 +++ encoder/analyse.c
-@@ -322,7 +322,7 @@ int x264_analyse_init_costs( x264_t *h )
+@@ -306,7 +306,7 @@ int x264_analyse_init_costs( x264_t *h )
  
      logs[0] = 0.718f;
      for( int i = 1; i <= 2*4*2048; i++ )
