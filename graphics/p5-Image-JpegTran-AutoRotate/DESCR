@@ -1,0 +1,5 @@
+Transforms JPEG files so that orientation becomes 1.
+
+This is the same operation as "exifautotran", but with no dependencies
+on command-line programs; instead, we use the excellent Image::JpegTran
+and Image::ExifTool CPAN modules.

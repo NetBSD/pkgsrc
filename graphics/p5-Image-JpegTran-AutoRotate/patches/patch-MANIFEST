@@ -1,0 +1,13 @@
+$NetBSD: patch-MANIFEST,v 1.1 2017/06/16 18:13:00 schmonz Exp $
+
+Use pkgsrc Devel::CheckLib.
+
+--- MANIFEST.orig	2016-07-27 11:11:28.000000000 +0000
++++ MANIFEST
+@@ -1,6 +1,5 @@
+ Changes
+ Image-JpegTran/Changes
+-Image-JpegTran/inc/Devel/CheckLib.pm
+ Image-JpegTran/jinclude.h
+ Image-JpegTran/jpegint.h
+ Image-JpegTran/JpegTran.xs
