@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2017/01/23 15:28:27 adam Exp $
+# $NetBSD: Makefile,v 1.62 2017/06/16 05:39:23 adam Exp $
 
-SNAPSHOT_DATE=	20170122
+SNAPSHOT_DATE=	20170615
 
 DISTNAME=	x264-snapshot-${SNAPSHOT_DATE}-2245
 PKGNAME=	x264-devel-${SNAPSHOT_DATE}
@@ -34,14 +34,14 @@ GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .    endif
 .  else
-BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
+BUILD_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
 .  endif
 .elif ${MACHINE_ARCH} == "x86_64"
 .  if ${OPSYS} == "SunOS" || (${OPSYS} == "NetBSD" && \
 	(!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*)))
 CONFIGURE_ARGS+=	--disable-asm
 .  else
-BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
+BUILD_DEPENDS+=		nasm>=2.13.0:../../devel/nasm
 .  endif
 .endif
 
