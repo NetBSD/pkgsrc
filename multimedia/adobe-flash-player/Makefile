@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2017/05/13 04:11:46 tsutsui Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/16 16:53:55 tsutsui Exp $
 
-FLASH_VERSION=		25.0.0.171
+FLASH_VERSION=		26.0.0.131
 DISTNAME=		flash_player_npapi_linux.${FLASH_ARCH}
 PKGNAME=		adobe-flash-player-${FLASH_VERSION}
 DIST_SUBDIR=		${PKGNAME_NOREV}
 CATEGORIES=		multimedia www
-MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/pdc/${FLASH_VERSION}/
+MASTER_SITES=		https://fpdownload.macromedia.com/get/flashplayer/pdc/${FLASH_VERSION}/
 
 MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://www.adobe.com/products/flashplayer.html
