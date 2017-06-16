@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2014/04/10 05:39:14 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2017/06/16 05:39:23 adam Exp $
 
 BUILDLINK_TREE+=	x264-devel
 
@@ -22,7 +22,7 @@ X264_DEVEL_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.x264-devel?=	x264-devel>=20140303 # X264 BUILD 142
 BUILDLINK_PKGSRCDIR.x264-devel?=	../../multimedia/x264-devel
 pkgbase:= x264-devel
-.  include "../../mk/pkg-build-options.mk"
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.x264-devel:Mthreads)
 .  include "../../mk/pthread.buildlink3.mk"
