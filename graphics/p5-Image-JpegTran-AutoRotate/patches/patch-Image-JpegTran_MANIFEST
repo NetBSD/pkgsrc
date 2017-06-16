@@ -1,0 +1,12 @@
+$NetBSD: patch-Image-JpegTran_MANIFEST,v 1.1 2017/06/16 18:13:00 schmonz Exp $
+
+Use pkgsrc Devel::CheckLib.
+
+--- Image-JpegTran/MANIFEST.orig	2010-07-17 13:23:06.000000000 +0000
++++ Image-JpegTran/MANIFEST
+@@ -1,5 +1,4 @@
+ Changes
+-inc/Devel/CheckLib.pm
+ jinclude.h
+ jpegint.h
+ JpegTran.xs
