@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.24 2016/08/28 06:42:27 richard Exp $
+$NetBSD: patch-Makefile,v 1.1 2017/06/16 05:39:23 adam Exp $
 
-add rule for .lo:.S needed by aarch64
+Add rule for .lo:.S needed by aarch64
 
---- Makefile.orig	2016-03-07 21:45:04.000000000 +0000
+--- Makefile.orig	2017-06-15 20:45:03.000000000 +0000
 +++ Makefile
 @@ -34,7 +34,7 @@ OBJS =
  OBJSO =
@@ -112,8 +112,8 @@ add rule for .lo:.S needed by aarch64
  
  %.dll.o: %.rc x264.h
  	$(RC) $(RCFLAGS)$@ -DDLL $<
-@@ -281,8 +282,7 @@ distclean: clean
- 	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def conftest*
+@@ -282,8 +283,7 @@ distclean: clean
+ 	rm -rf conftest*
  
  install-cli: cli
 -	$(INSTALL) -d $(DESTDIR)$(bindir)
@@ -122,7 +122,7 @@ add rule for .lo:.S needed by aarch64
  
  install-lib-dev:
  	$(INSTALL) -d $(DESTDIR)$(includedir)
-@@ -293,8 +293,7 @@ install-lib-dev:
+@@ -294,8 +294,7 @@ install-lib-dev:
  	$(INSTALL) -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
