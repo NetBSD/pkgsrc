@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2409 2017/06/16 06:29:05 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2410 2017/06/16 07:18:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3039,3 +3039,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated multimedia/libbluray to 1.0.1 [adam 2017-06-15]
 	Updated multimedia/x264-devel to 20170615 [adam 2017-06-16]
 	Updated lang/nodejs to 8.1.2 [fhajny 2017-06-16]
+	Updated devel/py-setuptools_scm to 1.15.6 [adam 2017-06-16]
+	Updated www/py-django-countries to 4.6.1 [adam 2017-06-16]
