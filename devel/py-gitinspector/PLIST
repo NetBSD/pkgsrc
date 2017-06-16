@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/10 15:12:48 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/16 21:03:58 kamil Exp $
 bin/gitinspector-${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/not-zip-safe
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/gitinspector/__init__.py
 ${PYSITELIB}/gitinspector/__init__.pyc
 ${PYSITELIB}/gitinspector/__init__.pyo
