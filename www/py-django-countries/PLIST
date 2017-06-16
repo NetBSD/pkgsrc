@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/06/12 06:48:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/16 07:17:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -51,6 +51,8 @@ ${PYSITELIB}/django_countries/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/hr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/hr/LC_MESSAGES/django.po
+${PYSITELIB}/django_countries/locale/hu/LC_MESSAGES/django.mo
+${PYSITELIB}/django_countries/locale/hu/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/it/LC_MESSAGES/django.mo
 ${PYSITELIB}/django_countries/locale/it/LC_MESSAGES/django.po
 ${PYSITELIB}/django_countries/locale/ja/LC_MESSAGES/django.mo
@@ -92,6 +94,9 @@ ${PYSITELIB}/django_countries/models.pyo
 ${PYSITELIB}/django_countries/serializer_fields.py
 ${PYSITELIB}/django_countries/serializer_fields.pyc
 ${PYSITELIB}/django_countries/serializer_fields.pyo
+${PYSITELIB}/django_countries/serializers.py
+${PYSITELIB}/django_countries/serializers.pyc
+${PYSITELIB}/django_countries/serializers.pyo
 ${PYSITELIB}/django_countries/static/flags/__.gif
 ${PYSITELIB}/django_countries/static/flags/ad.gif
 ${PYSITELIB}/django_countries/static/flags/ae.gif
