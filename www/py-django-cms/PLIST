@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2017/05/09 08:13:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2017/06/16 15:09:13 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -769,6 +769,7 @@ ${PYSITELIB}/cms/static/cms/js/modules/cms.structureboard.js
 ${PYSITELIB}/cms/static/cms/js/modules/cms.toolbar.js
 ${PYSITELIB}/cms/static/cms/js/modules/cms.tooltip.js
 ${PYSITELIB}/cms/static/cms/js/modules/cms.wizards.js
+${PYSITELIB}/cms/static/cms/js/modules/dropdown.js
 ${PYSITELIB}/cms/static/cms/js/modules/get-dist-path.js
 ${PYSITELIB}/cms/static/cms/js/modules/jquery.noconflict.post.js
 ${PYSITELIB}/cms/static/cms/js/modules/jquery.noconflict.pre.js
@@ -857,6 +858,7 @@ ${PYSITELIB}/cms/static/cms/sass/components/_button.scss
 ${PYSITELIB}/cms/static/cms/sass/components/_clipboard.scss
 ${PYSITELIB}/cms/static/cms/sass/components/_content.scss
 ${PYSITELIB}/cms/static/cms/sass/components/_dialog.scss
+${PYSITELIB}/cms/static/cms/sass/components/_dropdown.scss
 ${PYSITELIB}/cms/static/cms/sass/components/_general.scss
 ${PYSITELIB}/cms/static/cms/sass/components/_hovertooltip.scss
 ${PYSITELIB}/cms/static/cms/sass/components/_iconography.scss
@@ -921,6 +923,8 @@ ${PYSITELIB}/cms/templates/cms/toolbar/items/button.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/button_list.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/button_modal.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/button_sideframe.html
+${PYSITELIB}/cms/templates/cms/toolbar/items/dropdown.html
+${PYSITELIB}/cms/templates/cms/toolbar/items/dropdown_button.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/item_ajax.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/item_link.html
 ${PYSITELIB}/cms/templates/cms/toolbar/items/item_modal.html
@@ -1078,6 +1082,12 @@ ${PYSITELIB}/cms/test_utils/project/fakemlng/migrations/__init__.pyo
 ${PYSITELIB}/cms/test_utils/project/fakemlng/models.py
 ${PYSITELIB}/cms/test_utils/project/fakemlng/models.pyc
 ${PYSITELIB}/cms/test_utils/project/fakemlng/models.pyo
+${PYSITELIB}/cms/test_utils/project/fourth_cms_urls_for_apphook_tests.py
+${PYSITELIB}/cms/test_utils/project/fourth_cms_urls_for_apphook_tests.pyc
+${PYSITELIB}/cms/test_utils/project/fourth_cms_urls_for_apphook_tests.pyo
+${PYSITELIB}/cms/test_utils/project/fourth_urls_for_apphook_tests.py
+${PYSITELIB}/cms/test_utils/project/fourth_urls_for_apphook_tests.pyc
+${PYSITELIB}/cms/test_utils/project/fourth_urls_for_apphook_tests.pyo
 ${PYSITELIB}/cms/test_utils/project/models.py
 ${PYSITELIB}/cms/test_utils/project/models.pyc
 ${PYSITELIB}/cms/test_utils/project/models.pyo
