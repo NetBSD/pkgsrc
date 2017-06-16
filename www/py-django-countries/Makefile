@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/06/12 06:48:20 adam Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/16 07:17:58 adam Exp $
 
-DISTNAME=	django-countries-4.5
+DISTNAME=	django-countries-4.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-countries/}
