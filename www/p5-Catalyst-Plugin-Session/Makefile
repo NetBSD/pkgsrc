@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/06/05 14:25:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2017/06/16 09:48:19 jperkin Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-0.40
 PKGNAME=	p5-${DISTNAME}
@@ -40,6 +40,8 @@ SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Catalyst/Plugin/Session/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
