@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.9 2017/04/10 15:04:56 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.10 2017/06/17 05:58:39 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -44,7 +44,7 @@ qmailsend_precmd()
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailsend_log; then
 		qmailsend_logcmd=${qmailsend_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailsend_postenv}
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailsend_postenv}
 qmail-start '$qmailsend_defaultdelivery'
 ${qmailsend_logcmd}"
 	command_args="&"

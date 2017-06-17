@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.4 2017/04/10 15:04:56 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.5 2017/06/17 05:58:39 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -15,8 +15,9 @@ name="qmailofmipd"
 : ${qmailofmipd_tcpflags:="-vRl0"}
 : ${qmailofmipd_tcphost:="127.0.0.1"}
 : ${qmailofmipd_tcpport:="26"}
-: ${qmailofmipd_datalimit:="146800640"}
+: ${qmailofmipd_datalimit:="180000000"}
 : ${qmailofmipd_pretcpserver:=""}
+: ${qmailofmipd_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${qmailofmipd_preofmipd:=""}
 : ${qmailofmipd_ofmipdcmd:="@PREFIX@/bin/ofmipd"}
 : ${qmailofmipd_postofmipd:=""}
@@ -32,7 +33,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/concurrencyofmip"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.ofmip.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-command="@PREFIX@/bin/tcpserver"
+command="${qmailofmipd_tcpserver}"
 procname=${name}
 start_precmd="qmailofmipd_precmd"
 extra_commands="stat pause cont cdb"
@@ -43,22 +44,22 @@ cdb_cmd="qmailofmipd_cdb"
 
 qmailofmipd_precmd()
 {
-	# tcpserver(1) is akin to inetd(8), but runs one service per process.
-	# We want to signal only the tcpserver process responsible for OFMIP
-	# service. Use argv0(1) to set procname to "qmailofmipd".
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailofmipd_log; then
 		qmailofmipd_logcmd=${qmailofmipd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailofmipd_postenv}
+	# tcpserver(1) is akin to inetd(8), but runs one service per process.
+	# We want to signal only the tcpserver process responsible for this
+	# service. Use argv0(1) to set procname to "qmailofmipd".
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailofmipd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailofmipd_datalimit} ${qmailofmipd_pretcpserver}
-@PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name}
+@PREFIX@/bin/argv0 ${qmailofmipd_tcpserver} ${name}
 ${qmailofmipd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.ofmip.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyofmip`
 -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
 ${qmailofmipd_tcphost} ${qmailofmipd_tcpport}
 ${qmailofmipd_preofmipd} ${qmailofmipd_ofmipdcmd} ${qmailofmipd_postofmipd}
 2>&1 |
-@PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
+@PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailofmipd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }

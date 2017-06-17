@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.4 2017/01/09 04:58:09 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.5 2017/06/17 05:58:39 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control qmail
 # services. Usage resembles the qmailctl script from "Life with qmail".
@@ -70,7 +70,7 @@ doqueue -- schedules queued messages for immediate delivery
 HELP
 }
 
-COMMAND_LIST="qmailsend qmailsmtpd qmailofmipd qmailpop3d"
+COMMAND_LIST="qmailsend qmailqread qmailsmtpd qmailofmipd qmailpop3d"
 
 name="qmail"
 start_cmd="forward_commands"
