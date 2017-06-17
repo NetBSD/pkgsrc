@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.35 2015/03/20 17:53:14 tnn Exp $
+# $NetBSD: ccache.mk,v 1.36 2017/06/17 01:44:54 kamil Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,6 +48,11 @@
 #	default, they are stored inside WRKDIR, so they are lost after
 #	a "make clean".
 #
+# CCACHE_LOGFILE
+#       If set to a file path, ccache will write information on what it is
+#       doing to the specified file. This is useful for tracking down
+#       problems.
+#
 # === Package-settable variables ===
 #
 # IGNORE_CCACHE
@@ -60,7 +65,7 @@
 COMPILER_CCACHE_MK=	defined
 
 _VARGROUPS+=		ccache
-_USER_VARS.ccache=	CCACHE_BASE CCACHE_DIR
+_USER_VARS.ccache=	CCACHE_BASE CCACHE_DIR CCACHE_LOGFILE
 _PKG_VARS.ccache=	IGNORE_CCACHE
 
 .include "../bsd.fast.prefs.mk"
@@ -140,6 +145,10 @@ TOOL_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
 #
 PKGSRC_MAKE_ENV+=	CCACHE_COMPILERCHECK=echo\ ${CC_VERSION_STRING:Q}
 PKGSRC_MAKE_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
+PKGSRC_MAKE_ENV+=	CCACHE_PATH=${CCPATH:H}:${CXXPATH:H}:${CPPATH:H}
+.ifdef CCACHE_LOGFILE
+PKGSRC_MAKE_ENV+=	CCACHE_LOGFILE=${CCACHE_LOGFILE:Q}
+.endif
 
 # Create symlinks for the compiler into ${WRKDIR}.
 .  for _var_ in ${_CCACHE_VARS}
