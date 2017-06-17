@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2421 2017/06/17 13:39:20 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2422 2017/06/17 13:55:13 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3059,3 +3059,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Parse-Yapp to 1.06 [mef 2017-06-17]
 	Updated devel/p5-MooseX-Types-Structured to 0.36 [mef 2017-06-17]
 	Updated devel/p5-MooseX-App to 1.38 [mef 2017-06-17]
+	Updated mail/pymsgauth to 2.1.0nb7 [schmonz 2017-06-17]
