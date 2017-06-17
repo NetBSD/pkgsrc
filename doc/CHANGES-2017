@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2415 2017/06/17 05:09:01 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2416 2017/06/17 05:58:46 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3046,3 +3046,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added graphics/p5-Image-JpegTran-AutoRotate version 0.03 [schmonz 2017-06-16]
 	Updated www/thoth to 0.2.1nb5 [taca 2017-06-17]
 	Updated www/thoth-delicious to 0.1.0nb4 [taca 2017-06-17]
+	Updated mail/qmail-run to 20170617 [schmonz 2017-06-17]
