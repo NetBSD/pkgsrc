@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2017/05/02 12:31:43 fhajny Exp $
+$NetBSD: distinfo,v 1.26 2017/06/17 19:54:47 joerg Exp $
 
 SHA1 (array-var-nginx-module-0.04.tar.gz) = 1fd3bdd05c2d1d7667ed6f7baa612ddf7f630df3
 RMD160 (array-var-nginx-module-0.04.tar.gz) = a751a2ce87dcfb88d072779097b4df9f42a415e4
@@ -47,3 +47,4 @@ Size (set-misc-nginx-module-0.30.tar.gz) = 28584 bytes
 SHA1 (patch-auto_install) = 3b3a0f9f4c005b707664554fa57a58c9e3b7de60
 SHA1 (patch-conf_nginx.conf) = ee9fbc3838cc006f6e1cddddadf6603f4941d171
 SHA1 (patch-src_event_modules_ngx__eventport__module.c) = c8e919f48d68bd5bffc4ad11d9c79dc6da3a0de2
+SHA1 (patch-src_os_unix_ngx__udp__sendmsg__chain.c) = c9a4f15a9752deb934f713d6b319c61593ad0247
