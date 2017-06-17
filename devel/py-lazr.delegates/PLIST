@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/25 19:32:11 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/17 19:38:10 joerg Exp $
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -16,8 +16,8 @@ ${PYSITELIB}/lazr/delegates/_passthrough.pyo
 ${PYSITELIB}/lazr/delegates/_passthrough.pyc
 ${PYSITELIB}/lazr/delegates/_python2.pyo
 ${PYSITELIB}/lazr/delegates/_python2.pyc
-${PYSITELIB}/lazr/delegates/_python3.pyo
-${PYSITELIB}/lazr/delegates/_python3.pyc
+${PLIST.python3}${PYSITELIB}/lazr/delegates/_python3.pyo
+${PLIST.python3}${PYSITELIB}/lazr/delegates/_python3.pyc
 ${PYSITELIB}/lazr/delegates/_delegates.py
 ${PYSITELIB}/lazr/delegates/_passthrough.py
 ${PYSITELIB}/lazr/delegates/_python2.py
