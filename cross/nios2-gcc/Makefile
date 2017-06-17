@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/09 06:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2017/06/17 19:36:46 joerg Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-gcc-${PKG_VERSION}
 PKG_VERSION=		4.7.3
@@ -15,6 +15,9 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
 USE_GNU_CONFIGURE_HOST=	no
 WRKSRC=			${WRKDIR}/gcc-nios2
+
+# libcpp wants to directly grep in the output
+OVERRIDE_DIRDEPTH.depcomp= -1
 
 CONFIGURE_ARGS+=	--enable-languages=c
 #CONFIGURE_ARGS+=	--disable-multilib
