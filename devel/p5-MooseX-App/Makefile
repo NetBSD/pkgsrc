@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2017/06/12 12:40:17 maya Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/17 13:39:11 mef Exp $
 #
 
-DISTNAME=	MooseX-App-1.37
+DISTNAME=	MooseX-App-1.38
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
@@ -26,7 +25,6 @@ BUILD_DEPENDS+= p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 BUILD_DEPENDS+= p5-Text-WagnerFischer-[0-9]*:../../textproc/p5-Text-WagnerFischer
 BUILD_DEPENDS+= p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
-MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 PERL5_PACKLIST=	auto/MooseX/App/.packlist
 USE_LANGUAGES=	# none
 
