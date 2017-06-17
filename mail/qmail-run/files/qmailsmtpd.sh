@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.13 2017/04/10 15:04:56 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.14 2017/06/17 05:58:39 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -15,8 +15,9 @@ name="qmailsmtpd"
 : ${qmailsmtpd_tcpflags:="-vRl0"}
 : ${qmailsmtpd_tcphost:="0"}
 : ${qmailsmtpd_tcpport:="25"}
-: ${qmailsmtpd_datalimit:="146800640"}
+: ${qmailsmtpd_datalimit:="180000000"}
 : ${qmailsmtpd_pretcpserver:=""}
+: ${qmailsmtpd_tcpserver:="@PREFIX@/bin/tcpserver"}
 : ${qmailsmtpd_presmtpd:=""}
 : ${qmailsmtpd_smtpdcmd:="@PREFIX@/bin/qmail-smtpd"}
 : ${qmailsmtpd_postsmtpd:=""}
@@ -32,7 +33,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.smtp.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-command="@PREFIX@/bin/tcpserver"
+command="${qmailsmtpd_tcpserver}"
 procname=${name}
 start_precmd="qmailsmtpd_precmd"
 extra_commands="stat pause cont cdb"
@@ -43,22 +44,22 @@ cdb_cmd="qmailsmtpd_cdb"
 
 qmailsmtpd_precmd()
 {
-	# tcpserver(1) is akin to inetd(8), but runs one service per process.
-	# We want to signal only the tcpserver process responsible for SMTP
-	# service. Use argv0(1) to set procname to "qmailsmtpd".
 	if [ -f /etc/rc.subr ] && ! checkyesno qmailsmtpd_log; then
 		qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailsmtpd_postenv}
+	# tcpserver(1) is akin to inetd(8), but runs one service per process.
+	# We want to signal only the tcpserver process responsible for this
+	# service. Use argv0(1) to set procname to "qmailsmtpd".
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${qmailsmtpd_postenv}
 @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver}
-@PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name}
+@PREFIX@/bin/argv0 ${qmailsmtpd_tcpserver} ${name}
 ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb
 -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming`
 -u `@ID@ -u @QMAIL_DAEMON_USER@` -g `@ID@ -g @QMAIL_DAEMON_USER@`
 ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport}
 ${qmailsmtpd_presmtpd} ${qmailsmtpd_smtpdcmd} ${qmailsmtpd_postsmtpd}
 2>&1 |
-@PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailsmtpd_logcmd}"
+@PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @QMAIL_LOG_USER@ ${qmailsmtpd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
