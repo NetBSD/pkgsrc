@@ -1,12 +1,12 @@
-$NetBSD: patch-ag,v 1.37 2016/11/04 17:10:10 sevan Exp $
+$NetBSD: patch-ag,v 1.38 2017/06/17 08:02:22 taca Exp $
 
-* Add support for NetBSD 7.
+* Add support for NetBSD 8.
 * Only define HAS_DB if it hasn't been defined.
 * Add support for FreeBSD 11 and 12.
 
---- src/util/sys_defs.h.orig	2016-05-15 16:39:11.000000000 +0000
+--- src/util/sys_defs.h.orig	2017-02-02 01:31:15.000000000 +0000
 +++ src/util/sys_defs.h
-@@ -26,6 +26,7 @@
+@@ -30,12 +30,13 @@
  #if defined(FREEBSD2) || defined(FREEBSD3) || defined(FREEBSD4) \
      || defined(FREEBSD5) || defined(FREEBSD6) || defined(FREEBSD7) \
      || defined(FREEBSD8) || defined(FREEBSD9) || defined(FREEBSD10) \
@@ -14,7 +14,14 @@ $NetBSD: patch-ag,v 1.37 2016/11/04 17:10:10 sevan Exp $
      || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
      || defined(OPENBSD5) || defined(OPENBSD6) \
-@@ -45,7 +46,9 @@
+     || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
+     || defined(NETBSD4) || defined(NETBSD5) || defined(NETBSD6) \
+-    || defined(NETBSD7) \
++    || defined(NETBSD7) || defined(NETBSD8) \
+     || defined(EKKOBSD1) || defined(DRAGONFLY)
+ #define SUPPORTED
+ #include <sys/param.h>
+@@ -48,7 +49,9 @@
  #define DEF_MAILBOX_LOCK "flock, dotlock"
  #define HAS_SUN_LEN
  #define HAS_FSYNC
@@ -24,7 +31,7 @@ $NetBSD: patch-ag,v 1.37 2016/11/04 17:10:10 sevan Exp $
  #define HAS_SA_LEN
  #define NATIVE_DB_TYPE	"hash"
  #if (defined(__NetBSD_Version__) && __NetBSD_Version__ >= 104250000)
-@@ -1268,6 +1271,8 @@ extern int h_errno;
+@@ -1250,6 +1253,8 @@ extern int h_errno;
  #define DEF_SMTP_CACHE_DEMAND	0
  #endif
  
