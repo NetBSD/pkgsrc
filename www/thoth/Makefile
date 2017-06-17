@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2015/03/01 15:38:47 taca Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/17 05:07:11 taca Exp $
 
 DISTNAME=	thoth-0.2.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# Web site has gone: http://thothblog.org/
+HOMEPAGE=	https://github.com/rgrove/thoth
 COMMENT=	Minimalistic blog engine
 LICENSE=	modified-bsd
 
@@ -24,9 +24,8 @@ RUBYGEM_OPTIONS+=	--format-executable
 
 OVERRIDE_GEMSPEC+= \
 	builder>=2.1.2 configuration>=0.0.5 json-pure>=1.1.3 redcloth>=4.0.3 \
-	ramaze>=2008.06 sequel>=2.5.0 thin>=0.8.2 erubis>=2.7.0
-RUBY_JSON_REQD=	1.1.3
-RUBY_JSON_TYPE=	pure
+	ramaze>=2008.06 sequel>=2.5.0 thin>=0.8.2 erubis>=2.7.0 \
+	json_pure:json>=1.1.3
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
