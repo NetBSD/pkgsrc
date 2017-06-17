@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/03/01 15:39:43 taca Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/17 05:08:29 taca Exp $
 
 DISTNAME=	thoth_delicious-0.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,9 +12,8 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${RUBY_PKGPREFIX}-thoth>=0.1.0:../../www/thoth
 
-OVERRIDE_GEMSPEC+=	json-pure>=1.1.2 thoth>=0.1.0
-RUBY_JSON_REQD=	1.1.2
-RUBY_JSON_TYPE=	pure
+OVERRIDE_GEMSPEC+=	thoth>=0.1.0
+OVERRIDE_GEMSPEC+=	json_pure:json>=1.1.2
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
