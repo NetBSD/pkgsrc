@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 14:24:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2017/06/17 03:49:04 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.99
@@ -53,5 +53,6 @@ do-install:
 .	endfor
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
