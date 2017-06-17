@@ -1,0 +1,17 @@
+$NetBSD: patch-pymsgauth-tag,v 1.1 2017/06/17 13:55:06 schmonz Exp $
+
+Add pymsgauth-tag, a Unix filter that takes an RFC822 mail message on stdin
+and prints it to stdout, adding a pymsgauth token in the header if needed.
+
+--- pymsgauth-tag.orig	2017-05-31 01:57:20.000000000 +0000
++++ pymsgauth-tag
+@@ -0,0 +1,9 @@
++#!/usr/bin/python
++
++from pymsgauth import *
++
++import cStringIO
++import sys
++
++msg = tokenize_message_if_needed (cStringIO.StringIO (sys.stdin.read ()))
++sys.stdout.write (msg)
