@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2017/04/30 01:21:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2017/06/17 19:44:22 joerg Exp $
 
 DISTNAME=	kopete-16.12.0
 PKGREVISION=	3
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/16.12.0/src/}
 MAKE_JOBS_SAFE=	no
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
+
+USE_LANGUAGES+=	c++11
 
 CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
 
