@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2017/05/26 01:35:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/17 13:55:06 schmonz Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -28,6 +28,9 @@ PYTHON_VERSIONS_ACCEPTED=	27
 FILES_SUBST+=		SHAREDIR=${SHAREDIR:Q}
 
 INSTALLATION_DIRS=	${SHAREDIR} ${DOCDIR} ${HTMLDOCDIR} ${EGDIR} bin
+
+pre-install:
+	cd ${WRKSRC} && ${RM} -f *.orig
 
 do-install:
 	for f in ${REPLACE_PYTHON}; do \
