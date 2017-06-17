@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/08/21 21:29:46 markd Exp $
+$NetBSD: distinfo,v 1.3 2017/06/17 19:55:24 joerg Exp $
 
 SHA1 (plasma-framework-5.25.0.tar.xz) = 6e332e5ae81251b7ea7ed038437ae8a3c0aabcdc
 RMD160 (plasma-framework-5.25.0.tar.xz) = 6dd5a5846d21b169798e8488f8aca1d9914a1470
 SHA512 (plasma-framework-5.25.0.tar.xz) = a7bc0ce0ba0c7bec5fbdb64a831cb7b0d3928b568a19b165a80d4b5885dcff8fd054a271a20fea4d970d65faca08b8e4f67e408bc6a01173372052bbc7ea7908
 Size (plasma-framework-5.25.0.tar.xz) = 4487024 bytes
+SHA1 (patch-autotests_CMakeLists.txt) = e9fe4d77a7abadd69c1f03e2b3c4899f258ace7f
