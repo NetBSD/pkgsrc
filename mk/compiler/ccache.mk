@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.36 2017/06/17 01:44:54 kamil Exp $
+# $NetBSD: ccache.mk,v 1.37 2017/06/17 02:47:20 kamil Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -145,7 +145,7 @@ TOOL_DEPENDS+=	ccache-[0-9]*:../../devel/ccache
 #
 PKGSRC_MAKE_ENV+=	CCACHE_COMPILERCHECK=echo\ ${CC_VERSION_STRING:Q}
 PKGSRC_MAKE_ENV+=	CCACHE_DIR=${CCACHE_DIR:Q}
-PKGSRC_MAKE_ENV+=	CCACHE_PATH=${CCPATH:H}:${CXXPATH:H}:${CPPATH:H}
+PKGSRC_MAKE_ENV+=	CCACHE_PATH=${CCPATH:H}:${CXXPATH:H}:${CPPPATH:H}
 .ifdef CCACHE_LOGFILE
 PKGSRC_MAKE_ENV+=	CCACHE_LOGFILE=${CCACHE_LOGFILE:Q}
 .endif
