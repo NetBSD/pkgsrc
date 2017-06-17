@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/24 16:38:54 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/17 19:37:12 joerg Exp $
 
 VERS=		  0.7.11
 DISTNAME=	  Faker-${VERS}
@@ -13,5 +13,14 @@ LICENSE=	mit
 
 DEPENDS += ${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/pyversion.mk"
+
+PLIST_VARS+=	python2 python3
+.if !empty(PYVERSSUFFIX:M2.*)
+PLIST.python2=	yes
+.elif !empty(PYVERSSUFFIX:M3.*)
+PLIST.python3=	yes
+.endif
+
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
