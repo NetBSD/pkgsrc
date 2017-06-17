@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/11 06:59:18 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/17 19:37:39 joerg Exp $
 
 DISTNAME=	grako-3.99.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://bitbucket.org/neogeny/grako/
 COMMENT=	Grammar compiler
 LICENSE=	modified-bsd
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 USE_LANGUAGES=		c
 
