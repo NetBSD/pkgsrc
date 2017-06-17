@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/04/13 13:08:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/17 19:53:10 joerg Exp $
 
 VERSION=	4.8.0
 DISTNAME=	xen-${VERSION}
@@ -39,8 +39,9 @@ EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=address-of-packed-member \
 		-Wno-error=initializer-overrides \
 		-Wno-error=tautological-compare
-.endif
+.elif !empty(PKGSRC_COMPILER:Mgcc)
 EXTRA_CFLAGS+=	 -falign-functions=16
+.endif
 
 MAKE_ENV+=	EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 
