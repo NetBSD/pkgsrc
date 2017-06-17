@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/25 19:32:11 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/17 19:38:10 joerg Exp $
 #
 
 DISTNAME=	lazr.delegates-2.0.3
@@ -20,6 +20,13 @@ DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 
 PYSETUPTESTTARGET=	nosetests
+
+.include "../../lang/python/pyversion.mk"
+
+PLIST_VARS+=	python3
+.if !empty(PYVERSSUFFIX:M3.*)
+PLIST.python3=	yes
+.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
