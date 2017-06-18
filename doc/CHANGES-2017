@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2447 2017/06/18 22:23:10 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2448 2017/06/18 22:30:09 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xfce4-thunar to 1.6.11 [youri 2017-06-18]
 	Updated x11/xfce4-tumbler to 0.1.32 [youri 2017-06-18]
 	Updated devel/xfce4-conf to 4.13.1 [youri 2017-06-18]
+	Updated x11/xfce4-panel to 4.13.0 [youri 2017-06-18]
