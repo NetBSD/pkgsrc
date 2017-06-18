@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2451 2017/06/18 22:48:34 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2452 2017/06/18 22:57:10 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3090,3 +3090,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xfce4-session to 4.13.0 [youri 2017-06-18]
 	Updated x11/xfce4-settings to 4.13.0 [youri 2017-06-18]
 	Updated x11/xfce4-desktop to 4.13.1 [youri 2017-06-18]
+	Updated wm/xfce4-wm to 4.13.0 [youri 2017-06-18]
