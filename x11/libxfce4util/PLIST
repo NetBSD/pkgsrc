@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/04/21 08:56:43 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.16 2017/06/18 21:22:08 youri Exp $
 include/xfce4/libxfce4util/libxfce4util-config.h
 include/xfce4/libxfce4util/libxfce4util.h
 include/xfce4/libxfce4util/xfce-debug.h
@@ -17,7 +17,6 @@ lib/pkgconfig/libxfce4util-1.0.pc
 sbin/xfce4-kiosk-query
 share/gtk-doc/html/libxfce4util/home.png
 share/gtk-doc/html/libxfce4util/index.html
-share/gtk-doc/html/libxfce4util/index.sgml
 share/gtk-doc/html/libxfce4util/left-insensitive.png
 share/gtk-doc/html/libxfce4util/left.png
 share/gtk-doc/html/libxfce4util/libxfce4util-File-Utilities.html
