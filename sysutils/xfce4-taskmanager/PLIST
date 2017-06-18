@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:41 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/18 23:22:27 youri Exp $
 bin/xfce4-taskmanager
 share/applications/xfce4-taskmanager.desktop
+share/icons/hicolor/16x16/apps/xc_crosshair.png
+share/icons/hicolor/24x24/actions/xc_crosshair.png
+share/icons/hicolor/scalable/actions/xc_crosshair.svg
 share/locale/ar/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/ast/LC_MESSAGES/xfce4-taskmanager.mo
 share/locale/be/LC_MESSAGES/xfce4-taskmanager.mo
