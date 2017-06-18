@@ -1,6 +1,7 @@
-$NetBSD: patch-src_task-manager-bsd.c,v 1.2 2016/01/28 12:47:00 martin Exp $
+$NetBSD: patch-src_task-manager-bsd.c,v 1.3 2017/06/18 23:22:27 youri Exp $
 
 Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
+
 --- src/task-manager-bsd.c.orig	2014-12-23 21:40:14.000000000 +0100
 +++ src/task-manager-bsd.c	2016-01-28 13:44:44.128899084 +0100
 @@ -16,6 +16,7 @@

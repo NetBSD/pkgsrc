@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2017/02/12 06:26:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/18 23:22:27 youri Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-taskmanager-1.1.0
+DISTNAME=	xfce4-taskmanager-1.2.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-taskmanager/1.1/
+MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-taskmanager/1.2/
 
 HOMEPAGE=	http://goodies.xfce.org/projects/applications/xfce4-taskmanager
 COMMENT=	Xfce task manager
-
-MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-taskmanager/1.1/
 
 # patch needs libkvm.
 .include "../../mk/bsd.prefs.mk"
@@ -18,6 +15,7 @@ MASTER_SITES=	http://archive.xfce.org/src/apps/xfce4-taskmanager/1.1/
 LDFLAGS+=	-lkvm
 .endif
 
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
