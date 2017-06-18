@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2017/03/20 13:56:42 mef Exp $
+$NetBSD: distinfo,v 1.7 2017/06/18 03:37:30 mef Exp $
 
-SHA1 (Test-Kwalitee-1.25.tar.gz) = b5d27a61086d20224586903ffa8acd6694e43ec6
-RMD160 (Test-Kwalitee-1.25.tar.gz) = 266e3621ce7181e50efde137bd56290dd8ed8a58
-SHA512 (Test-Kwalitee-1.25.tar.gz) = 89d1deea4045f373f15df0cdd2dec5131966bc4093035be5985af15122e9ae57e0c5c3edf8e95874f621dfc586956c348c300ddcf0943af7cb06e6cef2db9380
-Size (Test-Kwalitee-1.25.tar.gz) = 33924 bytes
+SHA1 (Test-Kwalitee-1.26.tar.gz) = 482b2a50aa44805cadca05bc52862694c3c3e768
+RMD160 (Test-Kwalitee-1.26.tar.gz) = 28e416c81bd9e6003cc3716abcf732893e550f8d
+SHA512 (Test-Kwalitee-1.26.tar.gz) = 65e6e65d2b4c6e0b33cbb79ff492a8aa4a6e3e6b3f48cdc23c0fc33b02f1ba84b641bbd15f6e0e733753fba14a1aee826af5f0d7c81f57aa9137aab8d5162985
+Size (Test-Kwalitee-1.26.tar.gz) = 34338 bytes
