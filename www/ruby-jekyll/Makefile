@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/04/23 13:04:00 taca Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/18 13:48:54 taca Exp $
 
 DISTNAME=	jekyll-3.4.3
 PKGREVISION=	1
@@ -25,7 +25,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-feed>=0.9.2:../../www/ruby-jekyll-feed
 RUBYGEM_OPTIONS+=	--format-executable
 
 # restricted by ruby-jekyll-watch through ruby-dep and ruby-listen
-RUBY_VERSIONS_ACCEPTED= 22 23
+RUBY_VERSIONS_ACCEPTED= 22 23 24
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
