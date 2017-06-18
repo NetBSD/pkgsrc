@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/06/29 10:38:00 youri Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/06/18 20:39:29 youri Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-open
@@ -27,8 +27,30 @@ include/exo-1/exo/exo-utils.h
 include/exo-1/exo/exo-wrap-table.h
 include/exo-1/exo/exo-xsession-client.h
 include/exo-1/exo/exo.h
+include/exo-2/exo/exo-binding.h
+include/exo-2/exo/exo-cell-renderer-icon.h
+include/exo-2/exo/exo-config.h
+include/exo-2/exo/exo-enum-types.h
+include/exo-2/exo/exo-execute.h
+include/exo-2/exo/exo-gdk-pixbuf-extensions.h
+include/exo-2/exo/exo-gobject-extensions.h
+include/exo-2/exo/exo-gtk-extensions.h
+include/exo-2/exo/exo-icon-chooser-dialog.h
+include/exo-2/exo/exo-icon-chooser-model.h
+include/exo-2/exo/exo-icon-view.h
+include/exo-2/exo/exo-job.h
+include/exo-2/exo/exo-simple-job.h
+include/exo-2/exo/exo-string.h
+include/exo-2/exo/exo-thumbnail-preview.h
+include/exo-2/exo/exo-thumbnail.h
+include/exo-2/exo/exo-toolbars-model.h
+include/exo-2/exo/exo-tree-view.h
+include/exo-2/exo/exo-utils.h
+include/exo-2/exo/exo.h
 lib/libexo-1.la
+lib/libexo-2.la
 lib/pkgconfig/exo-1.pc
+lib/pkgconfig/exo-2.pc
 lib/xfce4/exo-1/exo-compose-mail-1
 lib/xfce4/exo-1/exo-helper-1
 man/man1/exo-csource.1
@@ -54,6 +76,7 @@ share/gtk-doc/html/exo-1/ExoTreeView.html
 share/gtk-doc/html/exo-1/ExoWrapTable.html
 share/gtk-doc/html/exo-1/ExoXsessionClient.html
 share/gtk-doc/html/exo-1/ch01.html
+share/gtk-doc/html/exo-1/ch02.html
 share/gtk-doc/html/exo-1/exo-1.devhelp2
 share/gtk-doc/html/exo-1/exo-Binding-Properties-Functions.html
 share/gtk-doc/html/exo-1/exo-Executing-Applications.html
@@ -80,8 +103,7 @@ share/gtk-doc/html/exo-1/exo-widgets.html
 share/gtk-doc/html/exo-1/exo-wrap-table.png
 share/gtk-doc/html/exo-1/home.png
 share/gtk-doc/html/exo-1/index.html
-share/gtk-doc/html/exo-1/index.sgml
-share/gtk-doc/html/exo-1/ix01.html
+share/gtk-doc/html/exo-1/ix13.html
 share/gtk-doc/html/exo-1/left-insensitive.png
 share/gtk-doc/html/exo-1/left.png
 share/gtk-doc/html/exo-1/right-insensitive.png
@@ -91,8 +113,7 @@ share/gtk-doc/html/exo-1/up-insensitive.png
 share/gtk-doc/html/exo-1/up.png
 share/icons/hicolor/24x24/apps/preferences-desktop-default-applications.png
 share/icons/hicolor/48x48/apps/preferences-desktop-default-applications.png
-share/icons/hicolor/48x48/categories/applications-internet.png
-share/icons/hicolor/48x48/categories/applications-other.png
+share/locale/am/LC_MESSAGES/exo-1.mo
 share/locale/ar/LC_MESSAGES/exo-1.mo
 share/locale/ast/LC_MESSAGES/exo-1.mo
 share/locale/be/LC_MESSAGES/exo-1.mo

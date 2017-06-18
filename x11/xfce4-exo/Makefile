@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.46 2017/02/12 06:25:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.47 2017/06/18 20:39:29 youri Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-VERSION=	0.10.7
+VERSION=	0.11.3
 DISTNAME=	exo-${VERSION}
 PKGNAME=	xfce4-exo-${VERSION}
 CATEGORIES=	x11
-MASTER_SITES=	http://archive.xfce.org/src/xfce/exo/0.10/
+MASTER_SITES=	http://archive.xfce.org/src/xfce/exo/0.11/
 
 HOMEPAGE=	http://docs.xfce.org/xfce/exo/start
 COMMENT=	Xfce extension library
 
-USE_TOOLS+=		perl:run
-REPLACE_PERL=		exo-helper/helpers/exo-compose-mail-1
+USE_TOOLS+=	perl:run
+REPLACE_PERL=	exo-helper/helpers/exo-compose-mail-1
 
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 
