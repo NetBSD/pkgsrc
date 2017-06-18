@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.30 2017/03/12 07:20:51 maya Exp $
+# $NetBSD: Makefile,v 1.31 2017/06/18 15:27:24 taca Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=1.1.3.1
-PKGREVISION=	5
+PKGNAME=	${PHP_PKG_PREFIX}-davical-${DAVICAL_VERSION}
 CATEGORIES=	www
-MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=r${DAVICAL_VERSION}
+MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=${GITLAB_TAG}
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://www.davical.org/
 COMMENT=	Simple CalDAV server using a PostgreSQL backend
-
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
+
+DAVICAL_VERSION=1.1.5
+GITLAB_TAG=	r${DAVICAL_VERSION}
+GITLAB_REV=	7ccc7c449176475891ec50d5524928628df6f8d1
 
 DAVICALDIR=	${PREFIX}/share/davical
 EGDIR=		${PREFIX}/share/examples/davical
@@ -23,7 +25,7 @@ BUILD_DEFS=	APACHE_USER APACHE_GROUP PGUSER PGGROUP
 DAVICAL_USER?=	${PGUSER}
 DAVICAL_GROUP?=	${PGGROUP}
 
-USE_TOOLS=	gmake pax msgfmt perl:build
+USE_TOOLS=	gmake pax msgfmt perl
 
 PAXDIRS=	htdocs inc dba po scripts
 
@@ -60,7 +62,7 @@ CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 			${PKG_SYSCONFDIR}/config.php		\
 			${APACHE_USER} ${APACHE_GROUP} 0640
 
-REPLACE_PERL=		dba/update-davical-database
+REPLACE_PERL=		dba/update-davical-database scripts/davical-cli
 
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
@@ -87,6 +89,7 @@ SUBST_FILES.inc-path=	davical.conf inc/always.php.in
 SUBST_FILES.inc-path+=	scripts/po/rebuild-translations.sh
 SUBST_FILES.inc-path+=	dba/create-database.sh
 SUBST_SED.inc-path+=	-e "s|@LIBAWLPATH@|${PREFIX}/${LIBAWLDIR}|g"
+SUBST_SED.inc-path+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.inc-path=	Fixing AWL include path.
 
 SUBST_CLASSES+=		examples
@@ -101,9 +104,8 @@ SUBST_FILES.files=	davical.conf
 SUBST_SED.files+=	-e "s|@DAVICALDIR@|${DAVICALDIR}|g"
 SUBST_MESSAGE.files=	Fixing DAViCal configuration file for Apache.
 
-post-extract:
-	${MV} ${WRKDIR}/davical-r${DAVICAL_VERSION}-* \
-		${WRKDIR}/davical-${DAVICAL_VERSION}
+pre-patch:
+	${MV} ${WRKDIR}/davical-${GITLAB_TAG}-${GITLAB_REV} ${WRKSRC}
 	${CP} ${FILESDIR}/davical.conf ${WRKSRC}/davical.conf
 
 pre-install:
