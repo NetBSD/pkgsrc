@@ -1,0 +1,15 @@
+$NetBSD: patch-garcon-gtk_Makefile.am,v 1.1 2017/06/18 21:04:43 youri Exp $
+
+Change examples path.
+
+--- garcon-gtk/Makefile.am.orig	2017-05-01 05:18:06.000000000 +0000
++++ garcon-gtk/Makefile.am
+@@ -22,7 +22,7 @@ AM_CPPFLAGS = \
+ 	-DGARCON_COMPILATION \
+ 	-DGARCON_VERSION_API=\"$(GARCON_VERSION_API)\" \
+ 	-DG_LOG_DOMAIN=\"garcon\" \
+-	-DSYSCONFIGDIR=\"$(sysconfdir)/xdg\" \
++	-DSYSCONFIGDIR=\"$(datadir)/examples/xfce4\" \
+ 	$(PLATFORM_CFLAGS)
+ 
+ lib_LTLIBRARIES = \
