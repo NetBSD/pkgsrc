@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/05/23 21:36:30 jym Exp $
+$NetBSD: patch-ac,v 1.2 2017/06/18 15:27:24 taca Exp $
+
+Honor PKG_SYSCONFDIR.
 
 --- dba/update-davical-database.orig	2010-03-09 02:51:21.000000000 +0000
 +++ dba/update-davical-database
