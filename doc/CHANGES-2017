@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2442 2017/06/18 21:03:21 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2443 2017/06/18 21:14:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/wordpress to 4.8 [morr 2017-06-18]
 	Updated x11/xfce4-exo to 0.11.3 [youri 2017-06-18]
 	Updated x11/xfce4-garcon to 0.6.1 [youri 2017-06-18]
+	Updated x11/libxfce4ui to 4.13.1 [youri 2017-06-18]
