@@ -276,6 +276,7 @@ gtksourceview2		Enable gtksourceview2 support.
 gtkspell		Enable gtkspell support.
 gtkwave-tcl		Enable tcl for gtkwave.
 guile			Enable support for GUILE.
+gvfs                    Enable GVFS support.
 gzip			Enable compression using gzip.
 hal			Support for the freedesktop.org Hardware Abstraction Layer.
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
