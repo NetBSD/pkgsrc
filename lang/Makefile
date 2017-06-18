@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.459 2017/05/03 23:37:47 maya Exp $
+# $NetBSD: Makefile,v 1.460 2017/06/18 13:46:51 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -211,6 +211,8 @@ SUBDIR+=	ruby22
 SUBDIR+=	ruby22-base
 SUBDIR+=	ruby23
 SUBDIR+=	ruby23-base
+SUBDIR+=	ruby24
+SUBDIR+=	ruby24-base
 SUBDIR+=	runawk
 SUBDIR+=	rust
 SUBDIR+=	sablevm
