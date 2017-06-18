@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/06 11:12:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/18 13:48:54 taca Exp $
 
 DISTNAME=	padrino-contrib-0.2.0
 CATEGORIES=	www
@@ -10,7 +10,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=0.12.3:../../www/ruby-padrino-core
 
-RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack via www/ruby-padrino-core
+RUBY_VERSIONS_ACCEPTED=	22 23 24	# www/ruby-rack via www/ruby-padrino-core
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

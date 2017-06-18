@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/06/05 14:43:01 taca Exp $
+# $NetBSD: Makefile,v 1.19 2017/06/18 13:48:53 taca Exp $
 
 DISTNAME=	ohai-13.1.0
 CATEGORIES=	misc
@@ -19,6 +19,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-plist>=3.1<4:../../textproc/ruby-plist
 DEPENDS+=	${RUBY_PKGPREFIX}-ipaddress>=0.8.0:../../net/ruby-ipaddress
 DEPENDS+=	${RUBY_PKGPREFIX}-wmi-lite>=1.0<2:../../devel/ruby-wmi-lite
 DEPENDS+=	${RUBY_PKGPREFIX}-chef-config<14:../../sysutils/ruby-chef-config
+
+RUBY_VERSIONS_ACCEPTED=	23 24
 
 RUBYGEM_OPTIONS+=	--format-executable
 

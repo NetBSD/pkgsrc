@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/03/20 16:26:56 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/18 13:48:53 taca Exp $
 
 DISTNAME=	squib-0.13.2
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=andymeneely/}
@@ -21,8 +21,9 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg>=3.1.1:../../graphics/ruby-gnome2-rsvg
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gobject-introspection>=3.1.1:../../devel/ruby-gnome2-gobject-introspection
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gio>=3.1.1:../../devel/ruby-gnome2-gio
 
-RUBY_VERSIONS_ACCEPTED=	22 23
+RUBY_VERSIONS_ACCEPTED=	22 23 24
 RUBYGEM_OPTIONS+=	--format-executable
+
 OVERRIDE_GEMSPEC+=	roo>=2.7.0
 OVERRIDE_GEMSPEC+=	gio2>=3.1.1
 OVERRIDE_GEMSPEC+=	pango>=3.1.1
