@@ -1,6 +1,7 @@
-$NetBSD: patch-xfce4-settings-manager_Makefile.in,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+$NetBSD: patch-xfce4-settings-manager_Makefile.in,v 1.2 2017/06/18 22:41:54 youri Exp $
 
 Adjust config path.
+
 --- xfce4-settings-manager/Makefile.in.orig	2015-02-28 19:10:30.000000000 +0000
 +++ xfce4-settings-manager/Makefile.in
 @@ -489,7 +489,7 @@ xfce4_settings_manager_LDADD = \
