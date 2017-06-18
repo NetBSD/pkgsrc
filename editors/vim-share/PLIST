@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2017/03/06 06:07:53 snj Exp $
+@comment $NetBSD: PLIST,v 1.32 2017/06/18 17:46:59 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -28,6 +28,8 @@ share/vim/${VIM_SUBDIR}/autoload/phpcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/python3complete.vim
 share/vim/${VIM_SUBDIR}/autoload/pythoncomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/rubycomplete.vim
+share/vim/${VIM_SUBDIR}/autoload/rust.vim
+share/vim/${VIM_SUBDIR}/autoload/rustfmt.vim
 share/vim/${VIM_SUBDIR}/autoload/spellfile.vim
 share/vim/${VIM_SUBDIR}/autoload/sqlcomplete.vim
 share/vim/${VIM_SUBDIR}/autoload/syntaxcomplete.vim
@@ -73,6 +75,7 @@ share/vim/${VIM_SUBDIR}/compiler/README.txt
 share/vim/${VIM_SUBDIR}/compiler/ant.vim
 share/vim/${VIM_SUBDIR}/compiler/bcc.vim
 share/vim/${VIM_SUBDIR}/compiler/bdf.vim
+share/vim/${VIM_SUBDIR}/compiler/cargo.vim
 share/vim/${VIM_SUBDIR}/compiler/checkstyle.vim
 share/vim/${VIM_SUBDIR}/compiler/context.vim
 share/vim/${VIM_SUBDIR}/compiler/cs.vim
@@ -123,6 +126,7 @@ share/vim/${VIM_SUBDIR}/compiler/rspec.vim
 share/vim/${VIM_SUBDIR}/compiler/rst.vim
 share/vim/${VIM_SUBDIR}/compiler/ruby.vim
 share/vim/${VIM_SUBDIR}/compiler/rubyunit.vim
+share/vim/${VIM_SUBDIR}/compiler/rustc.vim
 share/vim/${VIM_SUBDIR}/compiler/sass.vim
 share/vim/${VIM_SUBDIR}/compiler/se.vim
 share/vim/${VIM_SUBDIR}/compiler/splint.vim
@@ -150,6 +154,7 @@ share/vim/${VIM_SUBDIR}/doc/farsi.txt
 share/vim/${VIM_SUBDIR}/doc/filetype.txt
 share/vim/${VIM_SUBDIR}/doc/fold.txt
 share/vim/${VIM_SUBDIR}/doc/ft_ada.txt
+share/vim/${VIM_SUBDIR}/doc/ft_rust.txt
 share/vim/${VIM_SUBDIR}/doc/ft_sql.txt
 share/vim/${VIM_SUBDIR}/doc/gui.txt
 share/vim/${VIM_SUBDIR}/doc/gui_w32.txt
@@ -430,7 +435,9 @@ share/vim/${VIM_SUBDIR}/ftplugin/rpl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rrst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/rst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/ruby.vim
+share/vim/${VIM_SUBDIR}/ftplugin/rust.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sass.vim
+share/vim/${VIM_SUBDIR}/ftplugin/sbt.vim
 share/vim/${VIM_SUBDIR}/ftplugin/scala.vim
 share/vim/${VIM_SUBDIR}/ftplugin/scheme.vim
 share/vim/${VIM_SUBDIR}/ftplugin/screen.vim
@@ -571,6 +578,8 @@ share/vim/${VIM_SUBDIR}/indent/rpl.vim
 share/vim/${VIM_SUBDIR}/indent/rrst.vim
 share/vim/${VIM_SUBDIR}/indent/rst.vim
 share/vim/${VIM_SUBDIR}/indent/ruby.vim
+share/vim/${VIM_SUBDIR}/indent/rust.vim
+share/vim/${VIM_SUBDIR}/indent/sas.vim
 share/vim/${VIM_SUBDIR}/indent/sass.vim
 share/vim/${VIM_SUBDIR}/indent/scala.vim
 share/vim/${VIM_SUBDIR}/indent/scheme.vim
@@ -1126,10 +1135,12 @@ share/vim/${VIM_SUBDIR}/syntax/rrst.vim
 share/vim/${VIM_SUBDIR}/syntax/rst.vim
 share/vim/${VIM_SUBDIR}/syntax/rtf.vim
 share/vim/${VIM_SUBDIR}/syntax/ruby.vim
+share/vim/${VIM_SUBDIR}/syntax/rust.vim
 share/vim/${VIM_SUBDIR}/syntax/samba.vim
 share/vim/${VIM_SUBDIR}/syntax/sas.vim
 share/vim/${VIM_SUBDIR}/syntax/sass.vim
 share/vim/${VIM_SUBDIR}/syntax/sather.vim
+share/vim/${VIM_SUBDIR}/syntax/sbt.vim
 share/vim/${VIM_SUBDIR}/syntax/scala.vim
 share/vim/${VIM_SUBDIR}/syntax/scheme.vim
 share/vim/${VIM_SUBDIR}/syntax/scilab.vim
