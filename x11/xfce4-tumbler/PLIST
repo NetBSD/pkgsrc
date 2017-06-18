@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/18 21:50:43 youri Exp $
 include/tumbler-1/tumbler/tumbler-abstract-thumbnailer.h
 include/tumbler-1/tumbler/tumbler-cache-plugin.h
 include/tumbler-1/tumbler/tumbler-cache.h
@@ -41,7 +41,6 @@ share/gtk-doc/html/tumbler/extension-api.html
 share/gtk-doc/html/tumbler/extension-tutorial.html
 share/gtk-doc/html/tumbler/home.png
 share/gtk-doc/html/tumbler/index.html
-share/gtk-doc/html/tumbler/index.sgml
 share/gtk-doc/html/tumbler/left-insensitive.png
 share/gtk-doc/html/tumbler/left.png
 share/gtk-doc/html/tumbler/miscellaneous.html
