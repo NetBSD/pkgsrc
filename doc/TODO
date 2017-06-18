@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17447 2017/06/18 22:37:51 youri Exp $
+$NetBSD: TODO,v 1.17448 2017/06/18 22:48:34 youri Exp $
 
 Suggested new packages
 ======================
@@ -1596,7 +1596,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xf86-video-geode-2.11.9 [wip]
 	o xf86-video-glide-1.2.2
 	o xf86-video-sisusb-0.9.4
-	o xfce4-desktop-4.13.0
 	o xfig-3.2.5c
 	o xforms-1.2.4
 	o xfs-1.1.1 [wip]
