@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2438 2017/06/18 16:15:38 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2439 2017/06/18 17:49:54 morr Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3077,3 +3077,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/ruby-pg to 0.21.0 [taca 2017-06-18]
 	Added www/contao44 version 4.4.0 [taca 2017-06-18]
 	Removed www/contao43 [taca 2017-06-18]
+	Updated editors/vim-share to 8.0.0646 [morr 2017-06-18]
