@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/06 11:12:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/18 13:48:53 taca Exp $
 
 DISTNAME=	rack-openid-1.4.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-ruby-openid>=2.1.8:../../security/ruby-ruby-openid
 
 USE_LANGUAGES=	# none
 
-RUBY_VERSIONS_ACCEPTED=	22 23	# www/ruby-rack
+RUBY_VERSIONS_ACCEPTED=	22 23 24	# www/ruby-rack
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/06/04 15:15:39 taca Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/18 13:48:54 taca Exp $
 
 DISTNAME=	rack-2.0.3
 CATEGORIES=	www
@@ -9,7 +9,7 @@ COMMENT=	Modular Ruby webserver interface
 LICENSE=	mit
 
 # Rack 2.0.3 requires Ruby 2.2.2 or later 
-RUBY_VERSIONS_ACCEPTED=	22 23
+RUBY_VERSIONS_ACCEPTED=	23 22 24
 OVERRIDE_GEMSPEC=	:executables rackup=rackup20 \
 			:files bin/rackup=bin/rackup20
 RUBYGEM_OPTIONS+=	--format-executable
