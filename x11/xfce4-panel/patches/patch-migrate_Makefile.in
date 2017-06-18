@@ -1,6 +1,7 @@
-$NetBSD: patch-migrate_Makefile.in,v 1.1 2015/04/21 08:56:44 jperkin Exp $
+$NetBSD: patch-migrate_Makefile.in,v 1.2 2017/06/18 22:29:54 youri Exp $
 
 Adjust config path.
+
 --- migrate/Makefile.in.orig	2012-04-28 20:31:39.000000000 +0000
 +++ migrate/Makefile.in
 @@ -375,7 +375,7 @@ INCLUDES = \
