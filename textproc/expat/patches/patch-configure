@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/06/18 06:01:33 spz Exp $
+
+--- configure.orig	2017-06-17 18:21:24.000000000 +0000
++++ configure
+@@ -16989,8 +16989,8 @@ fi
+ 
+ if test "x${enable_xml_context}" != "xno"; then :
+ 
+-  if test "x${enable_xml_context}" == "xyes" \
+-      -o "x${enable_xml_context}" == "x"; then :
++  if test "x${enable_xml_context}" = "xyes" \
++      -o "x${enable_xml_context}" = "x"; then :
+ 
+     enable_xml_context=1024
+ 
