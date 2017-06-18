@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:45 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/18 23:16:23 youri Exp $
 bin/xfce4-screenshooter
 lib/xfce4/panel/plugins/libscreenshooterplugin.la
 man/man1/xfce4-screenshooter.1
@@ -23,6 +23,7 @@ share/locale/eu/LC_MESSAGES/xfce4-screenshooter.mo
 share/locale/fi/LC_MESSAGES/xfce4-screenshooter.mo
 share/locale/fr/LC_MESSAGES/xfce4-screenshooter.mo
 share/locale/gl/LC_MESSAGES/xfce4-screenshooter.mo
+share/locale/he/LC_MESSAGES/xfce4-screenshooter.mo
 share/locale/hr/LC_MESSAGES/xfce4-screenshooter.mo
 share/locale/hu/LC_MESSAGES/xfce4-screenshooter.mo
 share/locale/id/LC_MESSAGES/xfce4-screenshooter.mo
