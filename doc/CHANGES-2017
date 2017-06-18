@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2434 2017/06/18 14:08:52 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2435 2017/06/18 15:28:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3073,3 +3073,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added lang/ruby24 version 2.4.1 [taca 2017-06-18]
 	Added x11/ruby-tk-gem version 0.1.2 [taca 2017-06-18]
 	Updated devel/ruby-mode to 2.4.1 [taca 2017-06-18]
+	Updated www/davical to 1.1.5 [taca 2017-06-18]
