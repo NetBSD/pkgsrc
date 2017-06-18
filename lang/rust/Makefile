@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/03/20 11:36:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/18 09:21:56 ryoon Exp $
 
 DISTNAME=	rustc-1.16.0-src
 PKGNAME=	${DISTNAME:S/rustc/rust/:S/-src//}
@@ -67,10 +67,11 @@ BUILDLINK_TRANSFORM.NetBSD+=	rm:-Wl,--enable-new-dtags
 #
 # Can't use pkgsrc llvm on SunOS at the moment due to a relocation error.
 #
-.if ${OPSYS} != "SunOS"
-.  include "../../lang/llvm/buildlink3.mk"
-CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
-.endif
+## llvm 4.0 breaks lang/rust build. Use internal llvm instead.
+#.if ${OPSYS} != "SunOS"
+#.  include "../../lang/llvm/buildlink3.mk"
+#CONFIGURE_ARGS+=	--llvm-root=${BUILDLINK_PREFIX.llvm}
+#.endif
 
 #
 # Rust unfortunately requires itself to build.  On platforms which aren't
