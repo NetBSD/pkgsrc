@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2017/06/16 18:13:00 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2017/06/18 04:04:00 schmonz Exp $
 
-SHA1 (Image-JpegTran-AutoRotate-0.03.tar.gz) = 59110a122864f974b50cb31c4e724a01ab152e13
-RMD160 (Image-JpegTran-AutoRotate-0.03.tar.gz) = 4985e2e482c075ed521698ad25e49c52db2b8ad2
-SHA512 (Image-JpegTran-AutoRotate-0.03.tar.gz) = 8a3c2fdd860a9386ed0ba811df695e7d801adf51f718d23d45f52d0d4e8c925505eeafb1249988312249e48f77242508378be7f8e7875441ba0df2d87c0ceb24
-Size (Image-JpegTran-AutoRotate-0.03.tar.gz) = 122259 bytes
+SHA1 (Image-JpegTran-AutoRotate-0.04.tar.gz) = 74964aacf6381784a79476e66ebb3f6ff04e0a77
+RMD160 (Image-JpegTran-AutoRotate-0.04.tar.gz) = bc03b74e1a83bc38821edc2cc2791eab293997b8
+SHA512 (Image-JpegTran-AutoRotate-0.04.tar.gz) = 81eb71fc886206a0cd6978d8ca87ecbc42a33c763d310112a9b223dcfa149c09b2bcf396fc6f7cf1ff43f2b107ade411cad85a60f116a16c495fe68ddccb2760
+Size (Image-JpegTran-AutoRotate-0.04.tar.gz) = 120117 bytes
 SHA1 (patch-Image-JpegTran_MANIFEST) = 61f2a9a2702077f0a6607b5ec68326601ca6a1f4
 SHA1 (patch-Image-JpegTran_Makefile.PL) = c85b575e229115f8bfe2c6bc92a82f2d5985d8db
 SHA1 (patch-MANIFEST) = 551875ea481d366c665111e319701f98bda2ad6c
