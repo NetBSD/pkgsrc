@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/12 18:47:37 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/18 23:52:43 youri Exp $
 bin/xfdashboard
 bin/xfdashboard-settings
 include/xfdashboard/libxfdashboard/action-button.h
@@ -19,6 +19,7 @@ include/xfdashboard/libxfdashboard/click-action.h
 include/xfdashboard/libxfdashboard/collapse-box.h
 include/xfdashboard/libxfdashboard/compat.h
 include/xfdashboard/libxfdashboard/css-selector.h
+include/xfdashboard/libxfdashboard/debug.h
 include/xfdashboard/libxfdashboard/desktop-app-info.h
 include/xfdashboard/libxfdashboard/drag-action.h
 include/xfdashboard/libxfdashboard/drop-action.h
@@ -28,13 +29,19 @@ include/xfdashboard/libxfdashboard/fill-box-layout.h
 include/xfdashboard/libxfdashboard/focus-manager.h
 include/xfdashboard/libxfdashboard/focusable.h
 include/xfdashboard/libxfdashboard/image-content.h
+include/xfdashboard/libxfdashboard/label.h
 include/xfdashboard/libxfdashboard/libxfdashboard.h
+include/xfdashboard/libxfdashboard/live-window-simple.h
 include/xfdashboard/libxfdashboard/live-window.h
 include/xfdashboard/libxfdashboard/live-workspace.h
 include/xfdashboard/libxfdashboard/model.h
 include/xfdashboard/libxfdashboard/outline-effect.h
 include/xfdashboard/libxfdashboard/plugin.h
 include/xfdashboard/libxfdashboard/plugins-manager.h
+include/xfdashboard/libxfdashboard/popup-menu-item-button.h
+include/xfdashboard/libxfdashboard/popup-menu-item-separator.h
+include/xfdashboard/libxfdashboard/popup-menu-item.h
+include/xfdashboard/libxfdashboard/popup-menu.h
 include/xfdashboard/libxfdashboard/quicklaunch.h
 include/xfdashboard/libxfdashboard/scaled-table-layout.h
 include/xfdashboard/libxfdashboard/scrollbar.h
@@ -59,10 +66,15 @@ include/xfdashboard/libxfdashboard/view-manager.h
 include/xfdashboard/libxfdashboard/view-selector.h
 include/xfdashboard/libxfdashboard/view.h
 include/xfdashboard/libxfdashboard/viewpad.h
+include/xfdashboard/libxfdashboard/window-content-x11.h
 include/xfdashboard/libxfdashboard/window-content.h
+include/xfdashboard/libxfdashboard/window-tracker-monitor-x11.h
 include/xfdashboard/libxfdashboard/window-tracker-monitor.h
+include/xfdashboard/libxfdashboard/window-tracker-window-x11.h
 include/xfdashboard/libxfdashboard/window-tracker-window.h
+include/xfdashboard/libxfdashboard/window-tracker-workspace-x11.h
 include/xfdashboard/libxfdashboard/window-tracker-workspace.h
+include/xfdashboard/libxfdashboard/window-tracker-x11.h
 include/xfdashboard/libxfdashboard/window-tracker.h
 include/xfdashboard/libxfdashboard/windows-view.h
 include/xfdashboard/libxfdashboard/workspace-selector.h
@@ -71,6 +83,7 @@ lib/pkgconfig/libxfdashboard.pc
 lib/xfdashboard/plugins/clock-view.la
 lib/xfdashboard/plugins/gnome-shell-search-provider.la
 lib/xfdashboard/plugins/hot-corner.la
+lib/xfdashboard/plugins/middle-click-window-close.la
 share/appdata/xfdashboard.appdata.xml
 share/applications/xfdashboard-settings.desktop
 share/applications/xfdashboard.desktop
@@ -84,6 +97,8 @@ share/icons/hicolor/32x32/apps/xfdashboard.png
 share/icons/hicolor/48x48/apps/xfdashboard.png
 share/icons/hicolor/64x64/apps/xfdashboard.png
 share/icons/hicolor/96x96/apps/xfdashboard.png
+share/locale/ca/LC_MESSAGES/xfdashboard.mo
+share/locale/el/LC_MESSAGES/xfdashboard.mo
 share/locale/es/LC_MESSAGES/xfdashboard.mo
 share/locale/fr/LC_MESSAGES/xfdashboard.mo
 share/locale/he/LC_MESSAGES/xfdashboard.mo
