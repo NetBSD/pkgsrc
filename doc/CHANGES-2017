@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2454 2017/06/18 23:07:39 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2455 2017/06/18 23:11:40 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3093,3 +3093,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated wm/xfce4-wm to 4.13.0 [youri 2017-06-18]
 	Updated graphics/ristretto to 0.8.2 [youri 2017-06-18]
 	Updated textproc/xfce4-dict to 0.8.0 [youri 2017-06-18]
+	Updated x11/xfce4-notifyd to 0.3.6 [youri 2017-06-18]
