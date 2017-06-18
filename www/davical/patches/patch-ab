@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2011/10/13 15:57:03 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2017/06/18 15:27:24 taca Exp $
+
+Handle for pkgsrc path.
 
 --- inc/always.php.in.orig	2011-09-25 09:04:29.000000000 +0000
 +++ inc/always.php.in

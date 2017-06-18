@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.2 2011/10/13 15:57:03 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2017/06/18 15:27:24 taca Exp $
 
---- scripts/po/rebuild-translations.sh.orig	2011-09-11 11:46:40.000000000 +0000
+Handle for pkgsrc path.
+
+--- scripts/po/rebuild-translations.sh.orig	2017-01-23 22:04:46.000000000 +0000
 +++ scripts/po/rebuild-translations.sh
-@@ -10,7 +10,7 @@
- PODIR="po"
- LOCALEDIR="locale"
- APPLICATION="davical"
--AWL_LOCATION="../awl"
-+AWL_LOCATION="@LIBAWLPATH@"
+@@ -9,7 +9,7 @@
  
- if [ ! -d "${AWL_LOCATION}" ]; then
-   AWL_LOCATION="`find .. -type d -name 'awl-*.*'`"
+ PODIR="po"
+ 
+-awldirs="../awl
++awldirs="@LIBAWLPATH@"
+ `find .. -type d -name 'awl-*.*'`
+ /usr/share/awl
+ /usr/share/php/awl
