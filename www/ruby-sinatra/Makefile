@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2017/06/05 03:29:38 taca Exp $
+# $NetBSD: Makefile,v 1.23 2017/06/18 13:48:54 taca Exp $
 
 DISTNAME=	sinatra-2.0.0
 CATEGORIES=	www
@@ -13,7 +13,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-rack-protection>=2.0.0:../../www/ruby-rack-protectio
 DEPENDS+=	${RUBY_PKGPREFIX}-mustermann>=1.0<2:../../www/ruby-mustermann
 DEPENDS+=	${RUBY_PKGPREFIX}-tilt>=2.0<3:../../textproc/ruby-tilt
 
-RUBY_VERSIONS_ACCEPTED=	23 22
+RUBY_VERSIONS_ACCEPTED=	23 22 24
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
