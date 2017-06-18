@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2440 2017/06/18 18:03:03 morr Exp $
+$NetBSD: CHANGES-2017,v 1.2441 2017/06/18 20:39:45 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3079,3 +3079,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed www/contao43 [taca 2017-06-18]
 	Updated editors/vim-share to 8.0.0646 [morr 2017-06-18]
 	Updated www/wordpress to 4.8 [morr 2017-06-18]
+	Updated x11/xfce4-exo to 0.11.3 [youri 2017-06-18]
