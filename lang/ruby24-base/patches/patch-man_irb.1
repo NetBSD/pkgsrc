@@ -1,0 +1,22 @@
+$NetBSD: patch-man_irb.1,v 1.1 2017/06/18 13:45:11 taca Exp $
+
+* Fix mdoc markup.
+
+--- man/irb.1.orig	2016-09-26 12:39:18.000000000 +0000
++++ man/irb.1
+@@ -159,11 +159,12 @@ Personal irb initialization.
+ .Pp
+ .Sh REPORTING BUGS
+ .Bl -bullet
+-.Li Security vulnerabilities should be reported via an email to
++.It
++Security vulnerabilities should be reported via an email to
+ .Aq security@ruby-lang.org .
+ Reported problems will be published after being fixed.
+-.Pp
+-.Li And you can report other bugs and feature requests via the
++.It
++You can report other bugs and feature requests via the
+ Ruby Issue Tracking System
+ .Pq Lk https://bugs.ruby-lang.org/ .
+ Do not report security vulnerabilities
