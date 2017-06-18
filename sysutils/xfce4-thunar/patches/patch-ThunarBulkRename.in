@@ -1,6 +1,7 @@
-$NetBSD: patch-ThunarBulkRename.in,v 1.2 2015/06/04 16:04:04 youri Exp $
+$NetBSD: patch-ThunarBulkRename.in,v 1.3 2017/06/18 21:40:45 youri Exp $
 
 Look for the right thunar binary.
+
 --- ThunarBulkRename.in.orig	2015-05-22 13:25:36.000000000 +0000
 +++ ThunarBulkRename.in
 @@ -20,6 +20,6 @@
