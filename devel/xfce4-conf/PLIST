@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/21 08:56:37 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/18 22:22:55 youri Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
@@ -14,7 +14,6 @@ share/gtk-doc/html/xfconf/ch02.html
 share/gtk-doc/html/xfconf/ch03.html
 share/gtk-doc/html/xfconf/home.png
 share/gtk-doc/html/xfconf/index.html
-share/gtk-doc/html/xfconf/index.sgml
 share/gtk-doc/html/xfconf/left-insensitive.png
 share/gtk-doc/html/xfconf/left.png
 share/gtk-doc/html/xfconf/right-insensitive.png
