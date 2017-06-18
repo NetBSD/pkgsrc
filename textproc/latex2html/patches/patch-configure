@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2017/06/18 09:08:22 dholland Exp $
+
+Fix broken build with perl 5.26.
+
+--- configure~	2016-04-19 16:52:35.000000000 +0000
++++ configure
+@@ -1158,7 +1158,7 @@ interpval="$ac_cv_sys_interpreter"
+ 
+ echo "launching proprietary configuration..."
+ 
+-$PERL $srcdir/config/config.pl \
++$PERL -I. $srcdir/config/config.pl \
+   HASHBANG=$ac_cv_sys_interpreter \
+   OLDCONFIG=$with_oldconfig \
+   EXTRAPATH=$with_extrapath \
