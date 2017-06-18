@@ -1,0 +1,12 @@
+# $NetBSD: DEINSTALL,v 1.1 2017/06/18 16:12:54 taca Exp $
+
+CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	# remove symbolic links and caches.
+	rm -f ${CT_WEBDIR}/system/logs
+	rm -f ${CT_WEBDIR}/system/thems/flexible
+	rm -fr ${CT_WEBDIR}/var/cache
+	;;
+esac
