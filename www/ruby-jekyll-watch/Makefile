@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/01/09 15:04:44 taca Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/18 13:48:54 taca Exp $
 
 DISTNAME=	jekyll-watch-1.5.0
 PKGREVISION=	1
@@ -10,7 +10,7 @@ COMMENT=	Rebuild your Jekyll site when a file changes
 LICENSE=	mit
 
 # restricted by ruby-dep and ruby-listen
-RUBY_VERSIONS_ACCEPTED= 22 23
+RUBY_VERSIONS_ACCEPTED= 22 23 24
 
 DEPENDS+=	${RUBY_PKGPREFIX}-listen>=3.0<4:../../sysutils/ruby-listen
 
