@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17455 2017/06/19 20:22:31 wiz Exp $
+$NetBSD: TODO,v 1.17456 2017/06/19 20:24:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1632,7 +1632,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xsc-1.6
 	o xscorch-0.2.1
 	o xsd-3.3.0
-	o xterm-329
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
