@@ -1,4 +1,4 @@
-# $NetBSD: tools.OSF1.mk,v 1.18 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.OSF1.mk,v 1.19 2017/06/19 06:25:45 maya Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
 #
@@ -24,7 +24,7 @@ TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
 TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.file?=		/usr/bin/file
-TOOLS_PLATFORM.fgrep?=		/usr/bin/grep -F
+TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
