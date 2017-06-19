@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2472 2017/06/19 20:31:36 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2473 2017/06/19 20:40:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/syncthing to 0.14.30 [wiz 2017-06-19]
 	Updated textproc/miller to 5.2.0 [wiz 2017-06-19]
 	Updated print/abcm2ps to 8.13.11 [wiz 2017-06-19]
+	Updated devel/apr to 1.6.2 [wiz 2017-06-19]
