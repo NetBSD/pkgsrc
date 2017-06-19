@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/06/18 21:13:47 youri Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/19 12:31:40 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -29,6 +29,7 @@ MAKE_DIRS+=	${XFCE4_EGBASE}/xfconf/xfce-perchannel-xml \
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/xfce4-conf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
