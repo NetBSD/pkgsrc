@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2460 2017/06/19 08:23:37 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2461 2017/06/19 12:07:58 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3099,3 +3099,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xfce4-dashboard to 0.7.2 [youri 2017-06-18]
 	Updated devel/py-hypothesis to 3.11.4 [adam 2017-06-19]
 	Updated multimedia/ffmpeg2 to 2.8.12 [adam 2017-06-19]
+	Updated databases/mysql55-client to 5.5.56nb1 [jperkin 2017-06-19]
