@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2017/03/22 02:13:05 adam Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/19 20:14:45 adam Exp $
 
-DISTNAME=	libimagequant-2.9.0
+DISTNAME=	libimagequant-2.9.1
 CATEGORIES=	graphics
 MASTER_SITES+=	${MASTER_SITE_GITHUB:=ImageOptim/}
 
@@ -14,7 +14,6 @@ GITHUB_TAG=	${PKGVERSION_NOREV}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-sse
 CONFIGURE_ARGS+=	--prefix="${PREFIX}"
 CONFIGURE_ARGS+=	--without-openmp
 BUILD_TARGET=		shared
@@ -26,6 +25,8 @@ REPLACE_SH=		configure
 
 .if ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--enable-sse
+.else
+CONFIGURE_ARGS+=	--disable-sse
 .endif
 
 do-install:
