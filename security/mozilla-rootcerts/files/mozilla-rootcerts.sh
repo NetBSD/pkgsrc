@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.16 2017/06/19 00:32:37 gdt Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.17 2017/06/19 00:37:48 gdt Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -23,7 +23,6 @@ self="@LOCALBASE@/sbin/mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
 certdir=${SSLDIR}/certs
 destdir=
-conffile="@SSLDIR@/openssl.cnf"
 
 usage()
 {
@@ -188,19 +187,6 @@ extract)
 	}'
 	;;
 install)
-	# \todo This is attempting to work around a warning from
-	# openssl being run without a config file.  Hoever, that's
-	# behavior in openssl and/or the base system, which if it
-	# needs fixing should be fixed there.  Touching the config
-	# file is problematic because it is a further violation of the
-	# notion that packages install files under PREFIX and only
-	# touch their own config files.  It is further problematic
-	# because it changes the modification date on config files
-	# which exist.
-	if [ `uname -s` = "NetBSD" ]; then
-		# quell warnings for a missing config file
-		touch $destdir$conffile
-	fi
 	# Insist on e.g. /etc/openssl/certs existing.
 	if [ ! -d $destdir$certdir ]; then
 		${ECHO} 1>&2 "ERROR: $destdir$certdir does not exist, aborting."
