@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.113 2017/03/04 13:07:16 mef Exp $
+# $NetBSD: Makefile,v 1.114 2017/06/19 21:10:00 wiz Exp $
 
-DISTNAME=	gnuplot-5.0.5
+DISTNAME=	gnuplot-5.0.6
 API_VERSION=	${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 CATEGORIES+=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnuplot/}
