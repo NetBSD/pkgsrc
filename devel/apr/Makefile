@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2017/06/19 20:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2017/06/19 20:52:46 wiz Exp $
+#
+# Take care, changelogs often include "PR 12345" strings
+# which cause GNATS indigestion.
 
 DISTNAME=	apr-1.6.2
 CATEGORIES=	devel
