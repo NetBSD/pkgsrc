@@ -1,25 +1,32 @@
-# $NetBSD: Makefile,v 1.12 2016/03/05 11:28:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/19 18:41:39 maya Exp $
 #
 
-DISTNAME=	encfs-1.2.0-2
-PKGNAME=	fuse-${DISTNAME:S/-2/.2/}
-PKGREVISION=	5
+DISTNAME=	encfs-1.9.1
+PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=encfs/}
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vgough/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.arg0.net/encfs
 COMMENT=	FUSE Encrypted Filesystem
+LICENSE=	gnu-gpl-v3
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-2//}
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoconf gmake pkg-config
+GITHUB_PROJECT=	encfs
+GITHUB_TAG=	v${PKGVERSION_NOREV}
+
+
+USE_TOOLS+=	autoconf cmake pkg-config
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
+CONFIGURE_DIRS=	${WRKDIR}/build
+CMAKE_ARG_PATH=	${WRKSRC}
 
-.include "../../devel/librlog/buildlink3.mk"
+TEST_TARGET=	test
+
+post-extract:
+	${RUN} mkdir -p ${WRKDIR}/build
+
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
