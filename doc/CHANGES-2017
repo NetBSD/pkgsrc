@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2466 2017/06/19 20:11:52 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2467 2017/06/19 20:15:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3105,3 +3105,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/apache24 to 2.4.26 [adam 2017-06-19]
 	Updated devel/py-mercurial to 4.2.1 [wiz 2017-06-19]
 	Updated devel/py-tortoisehg to 4.2.1 [wiz 2017-06-19]
+	Updated graphics/libimagequant to 2.9.1 [adam 2017-06-19]
