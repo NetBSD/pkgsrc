@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.15 2017/06/19 00:20:15 gdt Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.16 2017/06/19 00:32:37 gdt Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -201,6 +201,7 @@ install)
 		# quell warnings for a missing config file
 		touch $destdir$conffile
 	fi
+	# Insist on e.g. /etc/openssl/certs existing.
 	if [ ! -d $destdir$certdir ]; then
 		${ECHO} 1>&2 "ERROR: $destdir$certdir does not exist, aborting."
 		exit 1
@@ -217,18 +218,17 @@ install)
 	$self extract
 	$self rehash
 	set +e
-
-	# \todo Explain the point of the next check.  After directory
-	# rationalization, it is checking the same directory that was
-	# just populated.
-	if [ -d $destdir$certdir ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$certdir already exists, aborting."
+	# \todo Explain why if we are willing to write
+	# ca-certificates.crt, we are not willing to remove and
+	# re-create it.  Arguably install should be idempotent without
+	# error.
+	if [ -e $destdir$certdir/ca-certificates.crt ]; then
+		${ECHO} 1>&2 "ERROR: $destdir$certdir/ca-certificates.crt already exists, aborting."
 		exit 1
 	fi
 	set -e
 	# \todo Explain the purpose of the ca-certificates file, and
 	# specifically if it is for openssl itself, propgrams using
 	# openssl, gnutls, or something else.
-	$MKDIR $destdir$certdir
 	cat $destdir$certdir/*.pem > $destdir$certdir/ca-certificates.crt
 esac
