@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.13 2017/03/15 18:52:56 jperkin Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.14 2017/06/19 00:10:21 gdt Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -21,9 +21,9 @@
 
 self="@LOCALBASE@/sbin/mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
-certdir="/etc/ssl/certs"
+certdir=${SSLDIR}/certs
 destdir=
-conffile="/etc/openssl/openssl.cnf"
+conffile="@SSLDIR@/openssl.cnf"
 
 usage()
 {
@@ -192,13 +192,13 @@ install)
 		# quell warnings for a missing config file
 		touch $destdir$conffile
 	fi
-	if [ ! -d $destdir$SSLDIR ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR does not exist, aborting."
+	if [ ! -d $destdir$certdir ]; then
+		${ECHO} 1>&2 "ERROR: $destdir$certdir does not exist, aborting."
 		exit 1
 	fi
-	cd $destdir$SSLDIR
+	cd $destdir$certdir
 	if [ -n "`${LS}`" ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR already contains certificates, aborting."
+		${ECHO} 1>&2 "ERROR: $destdir$certdir already contains certificates, aborting."
 		exit 1
 	fi
 	set -e
@@ -211,5 +211,5 @@ install)
 	fi
 	set -e
 	$MKDIR $destdir$certdir
-	cat $destdir$SSLDIR/*.pem > $destdir$certdir/ca-certificates.crt
+	cat $destdir$certdir/*.pem > $destdir$certdir/ca-certificates.crt
 esac
