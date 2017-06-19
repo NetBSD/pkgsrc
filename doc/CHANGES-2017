@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2468 2017/06/19 20:22:31 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2469 2017/06/19 20:24:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3107,3 +3107,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-tortoisehg to 4.2.1 [wiz 2017-06-19]
 	Updated graphics/libimagequant to 2.9.1 [adam 2017-06-19]
 	Updated net/wireshark to 2.2.7 [wiz 2017-06-19]
+	Updated x11/xterm to 329 [wiz 2017-06-19]
