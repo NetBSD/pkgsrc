@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.14 2017/06/19 00:10:21 gdt Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.15 2017/06/19 00:20:15 gdt Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -188,6 +188,15 @@ extract)
 	}'
 	;;
 install)
+	# \todo This is attempting to work around a warning from
+	# openssl being run without a config file.  Hoever, that's
+	# behavior in openssl and/or the base system, which if it
+	# needs fixing should be fixed there.  Touching the config
+	# file is problematic because it is a further violation of the
+	# notion that packages install files under PREFIX and only
+	# touch their own config files.  It is further problematic
+	# because it changes the modification date on config files
+	# which exist.
 	if [ `uname -s` = "NetBSD" ]; then
 		# quell warnings for a missing config file
 		touch $destdir$conffile
@@ -198,6 +207,9 @@ install)
 	fi
 	cd $destdir$certdir
 	if [ -n "`${LS}`" ]; then
+		# \todo Explain why this must fail if the user has
+		# installed certificates from other than the mozilla
+		# default root set.
 		${ECHO} 1>&2 "ERROR: $destdir$certdir already contains certificates, aborting."
 		exit 1
 	fi
@@ -205,11 +217,18 @@ install)
 	$self extract
 	$self rehash
 	set +e
+
+	# \todo Explain the point of the next check.  After directory
+	# rationalization, it is checking the same directory that was
+	# just populated.
 	if [ -d $destdir$certdir ]; then
 		${ECHO} 1>&2 "ERROR: $destdir$certdir already exists, aborting."
 		exit 1
 	fi
 	set -e
+	# \todo Explain the purpose of the ca-certificates file, and
+	# specifically if it is for openssl itself, propgrams using
+	# openssl, gnutls, or something else.
 	$MKDIR $destdir$certdir
 	cat $destdir$certdir/*.pem > $destdir$certdir/ca-certificates.crt
 esac
