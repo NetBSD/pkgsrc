@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17450 2017/06/19 08:02:21 leot Exp $
+$NetBSD: TODO,v 1.17451 2017/06/19 08:23:37 adam Exp $
 
 Suggested new packages
 ======================
@@ -651,7 +651,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
-	o ffmpeg2-2.8.12
 	o filerunner-14.06.18.10
 	o filezilla-3.26.1
 	o fillets-ng-0.7.4
