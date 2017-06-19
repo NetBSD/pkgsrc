@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2017/05/17 11:23:06 wiz Exp $
+$NetBSD: distinfo,v 1.18 2017/06/19 20:50:27 wiz Exp $
 
-SHA1 (zope.interface-4.4.1.tar.gz) = 208c18c08adc3395580722d6ae157c849cfde72d
-RMD160 (zope.interface-4.4.1.tar.gz) = 801180e784ce314af6ffcbbafcb36b138901496a
-SHA512 (zope.interface-4.4.1.tar.gz) = 62e9b86a1dde4468914945bf988e20d3eafecbb1235aab466984bfc7cfbde8b5f7a0d79774828134482fc0814880008cf26ee0bb0c1e5a6cb0b609ba5d9a9106
-Size (zope.interface-4.4.1.tar.gz) = 149139 bytes
+SHA1 (zope.interface-4.4.2.tar.gz) = e840f723ca00af379265b66bcaef6b89ab1c219c
+RMD160 (zope.interface-4.4.2.tar.gz) = e80013cb4a55e3edc855cc45254cb3047c8a5deb
+SHA512 (zope.interface-4.4.2.tar.gz) = 11b95cf358e3151860a0f8a5d3d151cc4dad582aea39b5268e67b683f14343938b66315051d0ffae48d1890ec4c4a0dfcb16de912aae5fcb78ab128668735c2a
+Size (zope.interface-4.4.2.tar.gz) = 150150 bytes
