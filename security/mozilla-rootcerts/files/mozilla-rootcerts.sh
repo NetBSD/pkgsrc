@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.17 2017/06/19 00:37:48 gdt Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.18 2017/06/19 00:39:53 gdt Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -213,8 +213,9 @@ install)
 		exit 1
 	fi
 	set -e
-	# \todo Explain the purpose of the ca-certificates file, and
-	# specifically if it is for openssl itself, propgrams using
-	# openssl, gnutls, or something else.
+	# \todo This is appparently for users of gnutls, but it is not
+	# clear where it should be and why.  In particular, this file
+	# should perhaps be created at package build time and be
+	# managed by pkgsrc.
 	cat $destdir$certdir/*.pem > $destdir$certdir/ca-certificates.crt
 esac
