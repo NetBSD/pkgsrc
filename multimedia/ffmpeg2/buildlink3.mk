@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2017/01/16 23:45:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2017/06/19 08:22:47 adam Exp $
 
 BUILDLINK_TREE+=	ffmpeg2
 
@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.ffmpeg2+=	ffmpeg2>=2.8.10nb1
 BUILDLINK_PKGSRCDIR.ffmpeg2?=	../../multimedia/ffmpeg2
 
 pkgbase := ffmpeg2
-.  include "../../mk/pkg-build-options.mk"
+.include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
 
