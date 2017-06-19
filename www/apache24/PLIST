@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/07/05 16:13:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/06/19 20:01:10 adam Exp $
 bin/ab
 bin/apxs
 bin/dbmmanage
@@ -613,34 +613,42 @@ share/httpd/manual/handler.html.tr.utf8
 share/httpd/manual/handler.html.zh-cn.utf8
 share/httpd/manual/howto/access.html
 share/httpd/manual/howto/access.html.en
+share/httpd/manual/howto/access.html.es
 share/httpd/manual/howto/access.html.fr
 share/httpd/manual/howto/auth.html
 share/httpd/manual/howto/auth.html.en
+share/httpd/manual/howto/auth.html.es
 share/httpd/manual/howto/auth.html.fr
 share/httpd/manual/howto/auth.html.ja.utf8
 share/httpd/manual/howto/auth.html.ko.euc-kr
 share/httpd/manual/howto/auth.html.tr.utf8
 share/httpd/manual/howto/cgi.html
 share/httpd/manual/howto/cgi.html.en
+share/httpd/manual/howto/cgi.html.es
 share/httpd/manual/howto/cgi.html.fr
 share/httpd/manual/howto/cgi.html.ja.utf8
 share/httpd/manual/howto/cgi.html.ko.euc-kr
 share/httpd/manual/howto/htaccess.html
 share/httpd/manual/howto/htaccess.html.en
+share/httpd/manual/howto/htaccess.html.es
 share/httpd/manual/howto/htaccess.html.fr
 share/httpd/manual/howto/htaccess.html.ja.utf8
 share/httpd/manual/howto/htaccess.html.ko.euc-kr
 share/httpd/manual/howto/htaccess.html.pt-br
 share/httpd/manual/howto/http2.html
 share/httpd/manual/howto/http2.html.en
+share/httpd/manual/howto/http2.html.es
+share/httpd/manual/howto/http2.html.fr
 share/httpd/manual/howto/index.html
 share/httpd/manual/howto/index.html.en
+share/httpd/manual/howto/index.html.es
 share/httpd/manual/howto/index.html.fr
 share/httpd/manual/howto/index.html.ja.utf8
 share/httpd/manual/howto/index.html.ko.euc-kr
 share/httpd/manual/howto/index.html.zh-cn.utf8
 share/httpd/manual/howto/public_html.html
 share/httpd/manual/howto/public_html.html.en
+share/httpd/manual/howto/public_html.html.es
 share/httpd/manual/howto/public_html.html.fr
 share/httpd/manual/howto/public_html.html.ja.utf8
 share/httpd/manual/howto/public_html.html.ko.euc-kr
@@ -764,6 +772,7 @@ share/httpd/manual/mod/core.html.ja.utf8
 share/httpd/manual/mod/core.html.tr.utf8
 share/httpd/manual/mod/directive-dict.html
 share/httpd/manual/mod/directive-dict.html.en
+share/httpd/manual/mod/directive-dict.html.es
 share/httpd/manual/mod/directive-dict.html.fr
 share/httpd/manual/mod/directive-dict.html.ja.utf8
 share/httpd/manual/mod/directive-dict.html.ko.euc-kr
@@ -888,6 +897,8 @@ share/httpd/manual/mod/mod_autoindex.html.fr
 share/httpd/manual/mod/mod_autoindex.html.ja.utf8
 share/httpd/manual/mod/mod_autoindex.html.ko.euc-kr
 share/httpd/manual/mod/mod_autoindex.html.tr.utf8
+share/httpd/manual/mod/mod_brotli.html
+share/httpd/manual/mod/mod_brotli.html.en
 share/httpd/manual/mod/mod_buffer.html
 share/httpd/manual/mod/mod_buffer.html.en
 share/httpd/manual/mod/mod_buffer.html.fr
