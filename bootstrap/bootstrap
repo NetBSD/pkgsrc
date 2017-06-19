@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.241 2017/04/29 21:40:40 khorben Exp $
+# $NetBSD: bootstrap,v 1.242 2017/06/19 06:30:48 maya Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -782,6 +782,7 @@ OSF1)
 	need_sed=yes
 	need_ksh=yes
 	set_opsys=no
+	machine_arch=`uname -p`
 	;;
 QNX)
 	root_group=root
