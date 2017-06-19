@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2013/12/01 09:45:49 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/06/19 20:40:38 wiz Exp $
 bin/apr-1-config
 include/apr-1/apr.h
 include/apr-1/apr_allocator.h
 include/apr-1/apr_atomic.h
+include/apr-1/apr_cstr.h
 include/apr-1/apr_dso.h
 include/apr-1/apr_env.h
 include/apr-1/apr_errno.h
@@ -18,6 +19,7 @@ include/apr-1/apr_inherit.h
 include/apr-1/apr_lib.h
 include/apr-1/apr_mmap.h
 include/apr-1/apr_network_io.h
+include/apr-1/apr_perms_set.h
 include/apr-1/apr_poll.h
 include/apr-1/apr_pools.h
 include/apr-1/apr_portable.h
@@ -41,7 +43,9 @@ include/apr-1/apr_want.h
 lib/apr.exp
 lib/libapr-1.la
 lib/pkgconfig/apr-1.pc
+libexec/apr/apr_common.m4
 libexec/apr/apr_rules.mk
+libexec/apr/find_apr.m4
 libexec/apr/libtool
 libexec/apr/make_exports.awk
 libexec/apr/make_var_export.awk
