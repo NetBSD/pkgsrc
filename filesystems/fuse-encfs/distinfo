@@ -1,15 +1,10 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:15:00 agc Exp $
+$NetBSD: distinfo,v 1.6 2017/06/19 18:41:39 maya Exp $
 
-SHA1 (encfs-1.2.0-2.tgz) = 15e0037ef123ef3967d5c101d10f3643c33bcb68
-RMD160 (encfs-1.2.0-2.tgz) = 979fd6a11137c1acdabd3349302d8cd7e3b6625b
-SHA512 (encfs-1.2.0-2.tgz) = 7513d9892f050705ab19da801253e6b9031824c831b4fb4ae828eb6bd3c132be109b40cbd9393c45be2bef2ceeb7af8c963e0e96aeb2fc8786b3468831aa13dd
-Size (encfs-1.2.0-2.tgz) = 528039 bytes
-SHA1 (patch-aa) = 2e40cf7e222bfc3def5d1aa2c431854e9f59e0e9
-SHA1 (patch-ab) = 680eac660752826503aeed48995ca93b2f280f1a
-SHA1 (patch-ac) = ab7d063f8429f794c0ea81d30e051eb48c35e000
-SHA1 (patch-ad) = 4077b9cbd1bdf1f71029183acce6a8570dbbef7a
-SHA1 (patch-ae) = 48e06c61293a3280825df151df4670db1a3fbcc0
-SHA1 (patch-encfs_Config.cpp) = a868994c763821c40f9169965c5b2a80262a3c7d
-SHA1 (patch-encfs_ConfigVar.cpp) = 9806bc49f63bedd12c598515db854e061ac43895
-SHA1 (patch-encfs_NameIO.cpp) = 1d912b0575fea6d55c19d1d3930fd47c8f538722
-SHA1 (patch-encfs_OpaqueValue.h) = 3274bf118d14a544d775830fef2af51594e9635e
+SHA1 (encfs-1.9.1.tar.gz) = 4af5a44645d0dd37fe329c3ca834b8f18e8352f5
+RMD160 (encfs-1.9.1.tar.gz) = 6d12d47e1e24e849df76ee2aa0b442a1b01ded74
+SHA512 (encfs-1.9.1.tar.gz) = 7ac0d2495d28dbca9e4c23c8c82321cdab6c37e8e37daf88dc9b3fe8d8521a4fa8889e20cdbde1f94fb4c51d3c4b5ea5b30fa6e612258285cc284d61e5d377ea
+Size (encfs-1.9.1.tar.gz) = 455910 bytes
+SHA1 (patch-cmake_FindFUSE.cmake) = 96de3fd60209f7900295beb96bb89c918faad3d1
+SHA1 (patch-encfs_DirNode.cpp) = 7c7ddc2a125e8dfb2373c700a2e5d1c5a69fab39
+SHA1 (patch-encfs_main.cpp) = a61e550a579e103a26b5c83b65604e85bb91ae84
+SHA1 (patch-internal_easylogging++.h) = ad330f9e667dda23db51332e7e94adc107f8c1e8
