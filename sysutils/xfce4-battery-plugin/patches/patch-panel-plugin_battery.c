@@ -1,6 +1,7 @@
-$NetBSD: patch-panel-plugin_battery.c,v 1.1 2015/04/21 08:56:40 jperkin Exp $
+$NetBSD: patch-panel-plugin_battery.c,v 1.2 2017/06/20 21:26:54 youri Exp $
 
 Fix for NetBSD.
+
 --- panel-plugin/battery.c.orig	2012-06-17 20:05:17.000000000 +0000
 +++ panel-plugin/battery.c
 @@ -30,8 +30,16 @@
