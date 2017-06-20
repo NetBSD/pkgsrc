@@ -1,9 +1,9 @@
-$NetBSD: patch-src_fcint.h,v 1.1 2014/07/15 14:48:34 ryoon Exp $
+$NetBSD: patch-src_fcint.h,v 1.2 2017/06/20 11:36:40 wiz Exp $
 
---- src/fcint.h.orig	2014-01-20 08:14:20.000000000 +0000
+--- src/fcint.h.orig	2017-03-01 02:27:14.000000000 +0000
 +++ src/fcint.h
-@@ -68,6 +68,17 @@ extern pfnSHGetFolderPathA pSHGetFolderP
- #  define FC_DIR_SEPARATOR_S       "/"
+@@ -76,6 +76,17 @@ extern pfnSHGetFolderPathA pSHGetFolderP
+ #define FC_PATH_MAX	128
  #endif
  
 +/*
@@ -20,7 +20,7 @@ $NetBSD: patch-src_fcint.h,v 1.1 2014/07/15 14:48:34 ryoon Exp $
  #if __GNUC__ >= 4
  #define FC_UNUSED	__attribute__((unused))
  #else
-@@ -95,7 +106,13 @@ extern pfnSHGetFolderPathA pSHGetFolderP
+@@ -104,7 +115,13 @@ extern pfnSHGetFolderPathA pSHGetFolderP
  #define FC_ABS(a)   ((a) < 0 ? -(a) : (a))
  
  /* slim_internal.h */
