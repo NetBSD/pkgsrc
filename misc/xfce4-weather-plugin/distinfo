@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/06/09 08:18:30 youri Exp $
+$NetBSD: distinfo,v 1.11 2017/06/20 22:13:23 youri Exp $
 
-SHA1 (xfce4-weather-plugin-0.8.7.tar.bz2) = 550e58df28382fcef6be170b7a30358708c4f49a
-RMD160 (xfce4-weather-plugin-0.8.7.tar.bz2) = 4605bccb1c8f6198cf1b937360ef4e8ca08590d2
-SHA512 (xfce4-weather-plugin-0.8.7.tar.bz2) = 681b500cbeead09e61b2d30960853503e90ece6a73871b0a603d32026d7781096e5dac8fc456fb80a9a3a69c65f2ff1e297ffab520e7a7b27a31d5b7627710c8
-Size (xfce4-weather-plugin-0.8.7.tar.bz2) = 2976092 bytes
+SHA1 (xfce4-weather-plugin-0.8.9.tar.bz2) = afd12e45d7a0a1545b944910621a5c5fb0336796
+RMD160 (xfce4-weather-plugin-0.8.9.tar.bz2) = 65d5c67e9c0f15f3b443c85b741d568d9a7c00f9
+SHA512 (xfce4-weather-plugin-0.8.9.tar.bz2) = bcc714bc369f8fe0dbcb2d42e4c99c0208539edf58adcecf5d0fb55ba05e763be9113a8197ed931b99f119ff4e4d54985824c612ba3b613da8b1a7ca717bacfd
+Size (xfce4-weather-plugin-0.8.9.tar.bz2) = 2966504 bytes
