@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2490 2017/06/20 12:40:39 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2491 2017/06/20 13:39:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3132,3 +3132,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/xfce4-thunar-vcs to 0.1.5 [youri 2017-06-20]
 	Updated audio/py-mutagen to 1.38 [adam 2017-06-20]
 	Removed audio/mutagen-tools successor audio/py-mutagen [adam 2017-06-20]
+	Removed lang/ruby21 [taca 2017-06-20]
+	Removed lang/ruby21-base [taca 2017-06-20]
