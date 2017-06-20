@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/07/09 06:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/20 22:07:24 markd Exp $
 
 DISTNAME=	cjk-gs-integrate
-PKGNAME=	tex-${DISTNAME}-20160115.0
-PKGREVISION=	1
-TEXLIVE_REV=	39391
+PKGNAME=	tex-${DISTNAME}-20170505.0
+TEXLIVE_REV=	44207
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cjk-gs-integrate

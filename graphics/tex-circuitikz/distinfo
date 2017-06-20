@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/07/14 11:57:40 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/06/20 22:07:24 markd Exp $
 
-SHA1 (tex-circuitikz-41299/circuitikz.tar.xz) = 6b6e695baca02570be46febb67c203880cf7f525
-RMD160 (tex-circuitikz-41299/circuitikz.tar.xz) = 621e098a82ad313b92b9c4758af196a7d75200d6
-SHA512 (tex-circuitikz-41299/circuitikz.tar.xz) = 1c3f5b29ac9c604357623d6724b8d32113653c591f37876850dee876136845b4de20fc80469b8eac81149a5e53cb24927eae88c89a45e882f955bb8d17f16f7b
-Size (tex-circuitikz-41299/circuitikz.tar.xz) = 31948 bytes
+SHA1 (tex-circuitikz-44488/circuitikz.tar.xz) = abca1b30782845af02c73434b2f2b895d5eeb4ec
+RMD160 (tex-circuitikz-44488/circuitikz.tar.xz) = c2c85c76dd9cc12e69d42ed24a40f62f37299f1f
+SHA512 (tex-circuitikz-44488/circuitikz.tar.xz) = c30e904cf4b827323a91ef94157361564cffed12fb9aabe9fc566ae216fde0d419290c193b4a6f63a7204bd8ad24b3c3564ee9a8f23819cc00cb5318e3ac9bd6
+Size (tex-circuitikz-44488/circuitikz.tar.xz) = 34764 bytes
