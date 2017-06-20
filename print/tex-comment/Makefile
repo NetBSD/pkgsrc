@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/04/22 10:32:44 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/20 22:07:24 markd Exp $
 
 DISTNAME=	comment
-PKGNAME=	tex-${DISTNAME}-3.7
-TEXLIVE_REV=	32778
+PKGNAME=	tex-${DISTNAME}-3.8
+TEXLIVE_REV=	41927
 
 MAINTAINER=	jaapb@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/comment
 COMMENT=	Allows selected environments to be included/excluded
 LICENSE=	gnu-gpl-v2
 
