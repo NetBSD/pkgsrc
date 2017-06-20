@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2501 2017/06/20 21:36:57 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2502 2017/06/20 21:40:40 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated misc/xfce4-calculator-plugin to 0.6.0 [youri 2017-06-20]
 	Updated x11/xfce4-clipman-plugin to 1.4.1 [youri 2017-06-20]
 	Updated time/xfce4-datetime-plugin to 0.7.0 [youri 2017-06-20]
+	Updated sysutils/xfce4-diskperf-plugin to 2.6.1 [youri 2017-06-20]
