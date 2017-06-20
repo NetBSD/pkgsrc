@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2497 2017/06/20 19:07:25 bsiegert Exp $
+$NetBSD: CHANGES-2017,v 1.2498 2017/06/20 21:27:08 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3141,3 +3141,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated audio/mikmod to 3.2.8 [adam 2017-06-20]
 	Updated devel/py-game to 1.9.3 [adam 2017-06-20]
 	Updated devel/MoarVM to 2017.06 [bsiegert 2017-06-20]
+	Updated sysutils/xfce4-battery-plugin to 1.1.0 [youri 2017-06-20]
