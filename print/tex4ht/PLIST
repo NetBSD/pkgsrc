@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 06:55:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/20 20:50:50 markd Exp $
 bin/ht
 bin/htcontext
 bin/htlatex
@@ -10,6 +10,7 @@ bin/htxetex
 bin/mk4ht
 bin/t4ht
 bin/tex4ht
+bin/xhlatex
 share/texmf-dist/scripts/tex4ht/ht.sh
 share/texmf-dist/scripts/tex4ht/htcontext.sh
 share/texmf-dist/scripts/tex4ht/htlatex.sh
@@ -19,3 +20,4 @@ share/texmf-dist/scripts/tex4ht/httexi.sh
 share/texmf-dist/scripts/tex4ht/htxelatex.sh
 share/texmf-dist/scripts/tex4ht/htxetex.sh
 share/texmf-dist/scripts/tex4ht/mk4ht.pl
+share/texmf-dist/scripts/tex4ht/xhlatex.sh
