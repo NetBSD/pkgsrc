@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2487 2017/06/20 11:19:43 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2488 2017/06/20 11:37:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/libcares to 1.13.0 [wiz 2017-06-20]
 	Updated graphics/cairo to 1.14.10 [wiz 2017-06-20]
 	Updated graphics/cairo-gobject to 1.14.10 [wiz 2017-06-20]
+	Updated fonts/fontconfig to 2.12.3 [wiz 2017-06-20]
