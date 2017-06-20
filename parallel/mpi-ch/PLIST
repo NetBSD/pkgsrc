@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2017/04/29 18:18:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2017/06/20 17:24:06 adam Exp $
 bin/hydra_nameserver
 bin/hydra_persist
 bin/hydra_pmi_proxy
@@ -24,15 +24,15 @@ include/mpicxx.h
 ${PLIST.f90}include/mpif.h
 include/mpio.h
 include/mpiof.h
-lib/libfmpich.so
+${PLIST.f90}lib/libfmpich.so
 lib/libmpi.la
 lib/libmpich.so
 lib/libmpichcxx.so
-lib/libmpichf90.so
+${PLIST.f90}lib/libmpichf90.so
 lib/libmpicxx.la
 ${PLIST.f90}lib/libmpifort.la
 lib/libmpl.so
-lib/libopa.so
+${PLIST.f90}lib/libopa.so
 lib/pkgconfig/mpich.pc
 man/man1/hydra_nameserver.1
 man/man1/hydra_persist.1
