@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2016/06/09 09:20:25 youri Exp $
+$NetBSD: distinfo,v 1.14 2017/06/20 21:59:11 youri Exp $
 
-SHA1 (xfce4-netload-plugin-1.2.99.tar.bz2) = 6d951cd2c41e388848ebdffe7659d1630053408c
-RMD160 (xfce4-netload-plugin-1.2.99.tar.bz2) = fc6e11c08ed6a8c9974ccdc11f5ce86452d89bd2
-SHA512 (xfce4-netload-plugin-1.2.99.tar.bz2) = a85fccbb0c1ae85c8b7fbf97e9b5302fccde81dc75d760eef49a8f28e37963ce48c24c8f80c5421aeddc7a20c9ce04732f23cfc8a6549e9b130354cadd41126d
-Size (xfce4-netload-plugin-1.2.99.tar.bz2) = 366110 bytes
+SHA1 (xfce4-netload-plugin-1.3.1.tar.bz2) = 10e4e4612d385bfac7481f00914f8340545a2fb9
+RMD160 (xfce4-netload-plugin-1.3.1.tar.bz2) = 5de936a46714d59136351c910262c72908dab7ce
+SHA512 (xfce4-netload-plugin-1.3.1.tar.bz2) = 34144bf2d95f71276f8b5f4cf417d97d380233805c6fec1b7c559fee5b11468a421d3691230e01d89b40289d5ab22a472dcbef2a7ee0854abd7213e0ef0a3ef9
+Size (xfce4-netload-plugin-1.3.1.tar.bz2) = 367844 bytes
 SHA1 (patch-panel-plugin_net.c) = fbe62641a28154cf9b3ee8c9e5a5ba0c5691f09b
 SHA1 (patch-panel-plugin_net.h) = 5626f945ad552f313f07be857d74fe42604ab963
