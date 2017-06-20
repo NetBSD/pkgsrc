@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2017/02/12 06:26:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2017/06/20 18:58:41 youri Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -36,6 +36,7 @@ SUBST_SED.zoneinfo+=	-e 's|iso3166\.tab|tab/country.tab|g'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
