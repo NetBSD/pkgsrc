@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2488 2017/06/20 11:37:00 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2489 2017/06/20 12:20:57 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/cairo to 1.14.10 [wiz 2017-06-20]
 	Updated graphics/cairo-gobject to 1.14.10 [wiz 2017-06-20]
 	Updated fonts/fontconfig to 2.12.3 [wiz 2017-06-20]
+	Updated sysutils/xfce4-thunar-vcs to 0.1.5 [youri 2017-06-20]
