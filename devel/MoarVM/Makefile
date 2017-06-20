@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/02/05 12:36:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/20 19:06:42 bsiegert Exp $
 
-DISTNAME=	MoarVM-2017.01
+DISTNAME=	MoarVM-2017.06
 CATEGORIES=	devel perl6
 MASTER_SITES=	http://www.moarvm.org/releases/
 

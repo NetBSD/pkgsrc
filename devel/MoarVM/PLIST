@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/02/05 12:36:59 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/20 19:06:42 bsiegert Exp $
 bin/moar
 include/moar/6model/6model.h
 include/moar/6model/bootstrap.h
@@ -19,7 +19,6 @@ include/moar/6model/reprs/HashAttrStore.h
 include/moar/6model/reprs/KnowHOWAttributeREPR.h
 include/moar/6model/reprs/KnowHOWREPR.h
 include/moar/6model/reprs/Lexotic.h
-include/moar/6model/reprs/MVMArray.h
 include/moar/6model/reprs/MVMAsyncTask.h
 include/moar/6model/reprs/MVMCFunction.h
 include/moar/6model/reprs/MVMCallCapture.h
@@ -50,6 +49,7 @@ include/moar/6model/reprs/ReentrantMutex.h
 include/moar/6model/reprs/SCRef.h
 include/moar/6model/reprs/Semaphore.h
 include/moar/6model/reprs/Uninstantiable.h
+include/moar/6model/reprs/VMArray.h
 include/moar/6model/sc.h
 include/moar/6model/serialization.h
 include/moar/bithacks.h
@@ -95,6 +95,7 @@ include/moar/gc/worklist.h
 include/moar/gcc_diag.h
 include/moar/gen/config.h
 include/moar/instrument/crossthreadwrite.h
+include/moar/instrument/line_coverage.h
 include/moar/io/asyncsocket.h
 include/moar/io/asyncsocketudp.h
 include/moar/io/dirops.h
@@ -122,6 +123,7 @@ include/moar/memdebug.h
 include/moar/moar.h
 include/moar/platform/inttypes.h
 include/moar/platform/io.h
+include/moar/platform/memmem.h
 include/moar/platform/mmap.h
 include/moar/platform/setjmp.h
 include/moar/platform/stdint.h
@@ -132,6 +134,7 @@ include/moar/profiler/heapsnapshot.h
 include/moar/profiler/instrument.h
 include/moar/profiler/log.h
 include/moar/profiler/profile.h
+include/moar/profiler/telemeh.h
 include/moar/spesh/args.h
 include/moar/spesh/candidate.h
 include/moar/spesh/codegen.h
@@ -153,6 +156,7 @@ include/moar/strings/latin1.h
 include/moar/strings/nfg.h
 include/moar/strings/normalize.h
 include/moar/strings/ops.h
+include/moar/strings/parse_num.h
 include/moar/strings/unicode.h
 include/moar/strings/unicode_gen.h
 include/moar/strings/unicode_ops.h
