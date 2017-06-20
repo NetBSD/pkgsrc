@@ -1,6 +1,7 @@
-$NetBSD: patch-src_fcobjshash.h,v 1.1 2017/06/20 11:36:40 wiz Exp $
+$NetBSD: patch-src_fcobjshash.h,v 1.2 2017/06/20 11:42:09 wiz Exp $
 
 Fix signature for FC_GPERF_SIZE_T=size_t systems.
+https://bugs.freedesktop.org/show_bug.cgi?id=101514
 
 --- src/fcobjshash.h.orig	2017-02-22 12:37:50.000000000 +0000
 +++ src/fcobjshash.h
