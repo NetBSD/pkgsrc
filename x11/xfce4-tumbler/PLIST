@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2017/06/18 21:50:43 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/20 19:16:01 youri Exp $
 include/tumbler-1/tumbler/tumbler-abstract-thumbnailer.h
 include/tumbler-1/tumbler/tumbler-cache-plugin.h
 include/tumbler-1/tumbler/tumbler-cache.h
@@ -21,10 +21,10 @@ lib/pkgconfig/tumbler-1.pc
 lib/tumbler-1/plugins/cache/tumbler-cache-plugin.so
 lib/tumbler-1/plugins/cache/tumbler-xdg-cache.la
 lib/tumbler-1/plugins/tumbler-cover-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-ffmpeg-thumbnailer.la
+${PLIST.ffmpegthumbnailer}lib/tumbler-1/plugins/tumbler-ffmpeg-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-font-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-jpeg-thumbnailer.la
-lib/tumbler-1/plugins/tumbler-odf-thumbnailer.la
+${PLIST.jpeg}lib/tumbler-1/plugins/tumbler-jpeg-thumbnailer.la
+${PLIST.odf}lib/tumbler-1/plugins/tumbler-odf-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-pixbuf-thumbnailer.la
 lib/tumbler-1/plugins/tumbler-poppler-thumbnailer.la
 lib/tumbler-1/tumblerd
