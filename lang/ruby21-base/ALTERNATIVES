@@ -1,6 +1,0 @@
-bin/erb @PREFIX@/bin/erb@RUBY_SUFFIX@
-bin/gem @PREFIX@/bin/gem@RUBY_SUFFIX@
-bin/irb @PREFIX@/bin/irb@RUBY_SUFFIX@
-bin/rake @PREFIX@/bin/rake@RUBY_SUFFIX@
-bin/ruby @PREFIX@/bin/@RUBY_NAME@
-bin/testrb @PREFIX@/bin/testrb@RUBY_SUFFIX@
