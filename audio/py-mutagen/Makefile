@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2017/05/09 13:14:32 leot Exp $
+# $NetBSD: Makefile,v 1.19 2017/06/20 12:38:42 adam Exp $
 
-DISTNAME=	mutagen-1.37
+DISTNAME=	mutagen-1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_PYPI:=m/mutagen/}
@@ -11,6 +11,12 @@ COMMENT=	Audio metadata handling for Python
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
+
+SUBST_CLASSES+=		manpath
+SUBST_STAGE.manpath=	pre-configure
+SUBST_MESSAGE.manpath=	Fixing man paths.
+SUBST_FILES.manpath=	setup.py
+SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},'
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
