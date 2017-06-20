@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.61 2016/08/03 10:59:00 adam Exp $
+# $NetBSD: Makefile.common,v 1.62 2017/06/20 13:18:08 youri Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -81,4 +81,4 @@ XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
 CONFIGURE_ARGS.Darwin+=	--disable-visibility
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
