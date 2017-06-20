@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/20 21:01:16 markd Exp $
 
-SHA1 (tex-babel-german-35349/babel-german.tar.xz) = 60e65b7e597c5889b3d0d35c5f96541f571a9116
-RMD160 (tex-babel-german-35349/babel-german.tar.xz) = 7500e2d02b666425f8e00cb62984a5c14119a29d
-SHA512 (tex-babel-german-35349/babel-german.tar.xz) = 928ffaf348a4133a0b4ad2ae185ba76acd881c3a4997b86a2ef111a3a045edd2db4c8a8b3acc7e03ca336b730e6eb7057579a5f8b08baca458a86113b0f9cac2
-Size (tex-babel-german-35349/babel-german.tar.xz) = 3448 bytes
+SHA1 (tex-babel-german-42424/babel-german.tar.xz) = 7d074568258b0aaa144cac129ee3893305259e56
+RMD160 (tex-babel-german-42424/babel-german.tar.xz) = 803755dda84ed7a640b9bd27707449abdcca5f89
+SHA512 (tex-babel-german-42424/babel-german.tar.xz) = 8bac7ab5b40833b5e46c7334ecd5a10b2100ee1c0d83f84b8fc437d05aa321d34b6288d4af79e10a605a28bffe88b68df938b605127f72b079aab58ade34eeef
+Size (tex-babel-german-42424/babel-german.tar.xz) = 3612 bytes
