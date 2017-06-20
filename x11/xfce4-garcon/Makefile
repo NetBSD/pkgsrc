@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2017/06/18 21:03:06 youri Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/20 14:50:04 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -22,6 +22,7 @@ MAKE_DIRS+=		${EGDIR} ${EGDIR}/menus ${PKG_SYSCONFDIR}/menus
 CONF_FILES=		${EGDIR}/menus/xfce-applications.menu \
 			${PKG_SYSCONFDIR}/menus/xfce-applications.menu
 
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
