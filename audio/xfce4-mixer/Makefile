@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2017/02/12 06:25:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2017/06/20 18:49:04 youri Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -12,6 +12,7 @@ BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.25
 
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
