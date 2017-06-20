@@ -1,7 +1,16 @@
-$NetBSD: patch-configure,v 1.1 2017/06/18 06:01:33 spz Exp $
+$NetBSD: patch-configure,v 1.2 2017/06/20 18:31:36 spz Exp $
 
 --- configure.orig	2017-06-17 18:21:24.000000000 +0000
 +++ configure
+@@ -16341,7 +16341,7 @@ cat confdefs.h - <<_ACEOF >conftest.$ac_
+   }
+ 
+ _ACEOF
+-if ac_fn_c_try_compile "$LINENO"; then :
++if ac_fn_c_try_link "$LINENO"; then :
+ 
+ 
+ $as_echo "#define HAVE_GETRANDOM 1" >>confdefs.h
 @@ -16989,8 +16989,8 @@ fi
  
  if test "x${enable_xml_context}" != "xno"; then :
