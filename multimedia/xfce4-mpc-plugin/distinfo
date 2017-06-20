@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/06/09 09:27:01 youri Exp $
+$NetBSD: distinfo,v 1.7 2017/06/20 21:57:20 youri Exp $
 
-SHA1 (xfce4-mpc-plugin-0.4.99.tar.bz2) = 77350fef3659c797a9a445605a4670f7f95a07d1
-RMD160 (xfce4-mpc-plugin-0.4.99.tar.bz2) = 81a66d602be10d3735468cb244b6ee8d2051d2d8
-SHA512 (xfce4-mpc-plugin-0.4.99.tar.bz2) = 76ab7e7b1eefd35d7ac7605fec62c6d530c48aba8334dd4e158d063f079306182f5fa49c30fc62db95ef09efa3536e42b4d875a3e814109eb16e3bfe3882407b
-Size (xfce4-mpc-plugin-0.4.99.tar.bz2) = 289887 bytes
+SHA1 (xfce4-mpc-plugin-0.5.0.tar.bz2) = 8d3ea69a64c13462582590f9274ba7c3c2658eb7
+RMD160 (xfce4-mpc-plugin-0.5.0.tar.bz2) = d8081f3701539649f460f167290fd04bf46f9428
+SHA512 (xfce4-mpc-plugin-0.5.0.tar.bz2) = b6cd8c756d952e19bbd0be3a8385b0bdd647960708537a8997589c07e512560856aa78de2ed0c6267810aa7b33c4470facd45048158e373053dc30813e8ebaa1
+Size (xfce4-mpc-plugin-0.5.0.tar.bz2) = 282688 bytes
