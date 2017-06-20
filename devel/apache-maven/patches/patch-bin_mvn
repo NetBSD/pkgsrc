@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_mvn,v 1.4 2017/06/20 11:50:28 jperkin Exp $
+$NetBSD: patch-bin_mvn,v 1.5 2017/06/20 11:52:08 jperkin Exp $
 
 Darwin's java_home needs to be evaluated not set.
 Follow pkgsrc path convention.
@@ -10,7 +10,7 @@ Follow pkgsrc path convention.
               # Apple JDKs
               #
 -             export JAVA_HOME=/usr/libexec/java_home
-+             export JAVA_HOME=`/usr/libexec/java_home`
++             export JAVA_HOME=`/usr/libexec/java_home 2>/dev/null`
             fi
             ;;
  esac
