@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.539 2017/04/22 17:26:57 taca Exp $
+# $NetBSD: Makefile,v 1.540 2017/06/20 12:40:15 adam Exp $
 #
 
 COMMENT=	Audio tools
@@ -340,7 +340,6 @@ SUBDIR+=	muse
 SUBDIR+=	musepack
 SUBDIR+=	musicbrainz
 SUBDIR+=	musicpd
-SUBDIR+=	mutagen-tools
 SUBDIR+=	nas
 SUBDIR+=	nas-auscope
 SUBDIR+=	ncmpc
