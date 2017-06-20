@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/06 18:04:57 wiz Exp $
-share/texmf-dist/makeindex/arsclassica/classic.ist
+@comment $NetBSD: PLIST,v 1.2 2017/06/20 20:56:52 markd Exp $
 share/texmf-dist/tex/latex/arsclassica/arsclassica.sty
