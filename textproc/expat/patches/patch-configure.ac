@@ -1,7 +1,16 @@
-$NetBSD: patch-configure.ac,v 1.1 2017/06/18 06:01:33 spz Exp $
+$NetBSD: patch-configure.ac,v 1.2 2017/06/20 18:31:36 spz Exp $
 
 --- configure.ac.orig	2017-06-17 16:07:38.000000000 +0000
 +++ configure.ac
+@@ -130,7 +130,7 @@ AC_LINK_IFELSE([AC_LANG_SOURCE([
+ 
+ 
+ AC_MSG_CHECKING([for getrandom (Linux 3.17+, glibc 2.25+)])
+-AC_COMPILE_IFELSE([AC_LANG_SOURCE([
++AC_LINK([AC_LANG_SOURCE([
+   #include <stdlib.h>  /* for NULL */
+   #include <sys/random.h>
+   int main() {
 @@ -220,8 +220,8 @@ AS_HELP_STRING([--disable-xml-context],
      [Do not retain context around the current parse point]),
    [enable_xml_context=${enableval}])
