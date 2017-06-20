@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2510 2017/06/20 22:09:20 markd Exp $
+$NetBSD: CHANGES-2017,v 1.2511 2017/06/20 22:13:41 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3231,3 +3231,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/tex-csquotes-doc to 5.2b [markd 2017-06-20]
 	Updated print/tex-cweb to 3.64b [markd 2017-06-20]
 	Updated print/tex-cweb-doc to 3.64b [markd 2017-06-20]
+	Updated misc/xfce4-weather-plugin to 0.8.9 [youri 2017-06-20]
