@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/06/09 09:30:47 youri Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/20 21:49:03 youri Exp $
 lib/xfce4/panel/plugins/libfsguard.la
 share/icons/hicolor/16x16/apps/xfce4-fsguard-plugin-urgent.png
 share/icons/hicolor/16x16/apps/xfce4-fsguard-plugin-warning.png
@@ -50,6 +50,7 @@ share/locale/lv/LC_MESSAGES/xfce4-fsguard-plugin.mo
 share/locale/ms/LC_MESSAGES/xfce4-fsguard-plugin.mo
 share/locale/nb/LC_MESSAGES/xfce4-fsguard-plugin.mo
 share/locale/nl/LC_MESSAGES/xfce4-fsguard-plugin.mo
+share/locale/nn/LC_MESSAGES/xfce4-fsguard-plugin.mo
 share/locale/oc/LC_MESSAGES/xfce4-fsguard-plugin.mo
 share/locale/pa/LC_MESSAGES/xfce4-fsguard-plugin.mo
 share/locale/pl/LC_MESSAGES/xfce4-fsguard-plugin.mo
