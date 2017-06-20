@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/26 04:02:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/20 21:01:16 markd Exp $
+share/texmf-dist/tex/generic/babel-english/UKenglish.ldf
+share/texmf-dist/tex/generic/babel-english/USenglish.ldf
+share/texmf-dist/tex/generic/babel-english/american.ldf
+share/texmf-dist/tex/generic/babel-english/australian.ldf
+share/texmf-dist/tex/generic/babel-english/british.ldf
+share/texmf-dist/tex/generic/babel-english/canadian.ldf
 share/texmf-dist/tex/generic/babel-english/english.ldf
+share/texmf-dist/tex/generic/babel-english/newzealand.ldf

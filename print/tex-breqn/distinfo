@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/06/16 04:06:01 markd Exp $
+$NetBSD: distinfo,v 1.4 2017/06/20 21:01:17 markd Exp $
 
-SHA1 (tex-breqn-38099/breqn.tar.xz) = 1a1b49047a3f1ea1ed78e8ec81b003a55367cbb5
-RMD160 (tex-breqn-38099/breqn.tar.xz) = bd71b9e052c6e71f4ae51d0eac6a2e09006584d3
-SHA512 (tex-breqn-38099/breqn.tar.xz) = 1bb2de5f07a3c39366adc2d6fd84ed12b70b6723de0070d053ca15ac0ed82eaceb3b6febf4757d52d3229e2694f45edeccf83f190462d7adbebcc00edfeb86d4
-Size (tex-breqn-38099/breqn.tar.xz) = 24328 bytes
+SHA1 (tex-breqn-43071/breqn.tar.xz) = a881b2305e04207f303563d9632cbf22d9e3f74c
+RMD160 (tex-breqn-43071/breqn.tar.xz) = 99bc8389406828b8e392766c29946a35011fad5f
+SHA512 (tex-breqn-43071/breqn.tar.xz) = 7455ca46a8cde0889e3c81cf36ea6d07f680b8bd9fddfca57c8a7496942e3d29e6778fb4c0187b16b866ac0dff7602dd74f4a86e073e8fc3d23a56822bb36da9
+Size (tex-breqn-43071/breqn.tar.xz) = 24296 bytes
