@@ -1,17 +1,28 @@
-$NetBSD: patch-Setup.in,v 1.1 2013/10/24 12:08:22 ryoon Exp $
+$NetBSD: patch-Setup.in,v 1.2 2017/06/20 17:00:07 adam Exp $
 
-* Disable video4linux
+Use correct lib for PNG.
+Disable portmidi/porttime.
 
---- Setup.in.orig	2009-07-02 04:41:56.000000000 +0000
+--- Setup.in.orig	2016-05-06 15:05:22.000000000 +0000
 +++ Setup.in
-@@ -34,8 +34,8 @@ _numericsurfarray src/_numericsurfarray.
- _numericsndarray src/_numericsndarray.c $(SDL) $(MIXER) $(DEBUG)
- movie src/movie.c $(SDL) $(SMPEG) $(DEBUG)
+@@ -11,11 +11,9 @@ SDL = -I/usr/include/SDL -D_REENTRANT -l
+ FONT = -lSDL_ttf
+ IMAGE = -lSDL_image
+ MIXER = -lSDL_mixer
+-PNG = -lpng
++PNG = -lpng16
+ JPEG = -ljpeg
+ SCRAP = -lX11
+-PORTMIDI = -lportmidi
+-PORTTIME = -lporttime
+ FREETYPE = -lfreetype
+ #--EndConfig
+ 
+@@ -30,7 +28,6 @@ font src/font.c $(SDL) $(FONT) $(DEBUG)
+ mixer src/mixer.c $(SDL) $(MIXER) $(DEBUG)
+ mixer_music src/music.c $(SDL) $(MIXER) $(DEBUG)
  scrap src/scrap.c $(SDL) $(SCRAP) $(DEBUG)
--_camera src/_camera.c src/camera_v4l2.c src/camera_v4l.c $(SDL) $(DEBUG)
 -pypm src/pypm.c $(SDL) $(PORTMIDI) $(PORTTIME) $(DEBUG)
-+#_camera src/_camera.c src/camera_v4l2.c src/camera_v4l.c $(SDL) $(DEBUG)
-+#pypm src/pypm.c $(SDL) $(PORTMIDI) $(PORTTIME) $(DEBUG)
  
  GFX = src/SDL_gfx/SDL_gfxPrimitives.c 
  #GFX = src/SDL_gfx/SDL_gfxBlitFunc.c src/SDL_gfx/SDL_gfxPrimitives.c 
