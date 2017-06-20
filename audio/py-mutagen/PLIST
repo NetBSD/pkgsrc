@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2017/05/09 13:14:32 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/06/20 12:38:42 adam Exp $
+bin/mid3cp
+bin/mid3iconv
+bin/mid3v2
+bin/moggsplit
+bin/mutagen-inspect
+bin/mutagen-pony
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
@@ -186,3 +192,9 @@ ${PYSITELIB}/mutagen/trueaudio.pyo
 ${PYSITELIB}/mutagen/wavpack.py
 ${PYSITELIB}/mutagen/wavpack.pyc
 ${PYSITELIB}/mutagen/wavpack.pyo
+man/man1/mid3cp.1
+man/man1/mid3iconv.1
+man/man1/mid3v2.1
+man/man1/moggsplit.1
+man/man1/mutagen-inspect.1
+man/man1/mutagen-pony.1
