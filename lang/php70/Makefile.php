@@ -1,7 +1,12 @@
-# $NetBSD: Makefile.php,v 1.3 2017/04/05 12:28:59 fhajny Exp $
+# $NetBSD: Makefile.php,v 1.4 2017/06/20 07:24:08 manu Exp $
 # used by lang/php70/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
+
+# PHP bug #74526 - segfaults on build with GCC 4.8.5 i386
+.if ${MACHINE_ARCH} == "i386"
+GCC_REQD+=              4.9
+.endif
 
 .include "../../lang/php70/Makefile.common"
 
