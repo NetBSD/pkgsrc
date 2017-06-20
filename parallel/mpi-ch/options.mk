@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2017/04/29 18:18:52 adam Exp $
+# $NetBSD: options.mk,v 1.5 2017/06/20 17:24:06 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mpich
 PKG_SUPPORTED_OPTIONS=	debug f90
@@ -17,7 +17,5 @@ USE_LANGUAGES+=		fortran
 CONFIGURE_ARGS+=	--enable-fortran=yes
 PLIST.f90=		yes
 .else
-#USE_LANGUAGES+=		fortran77
-#CONFIGURE_ARGS+=	--enable-fortran=f77
 CONFIGURE_ARGS+=	--enable-fortran=no
 .endif
