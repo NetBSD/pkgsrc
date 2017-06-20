@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/08/07 07:17:36 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/20 20:56:51 markd Exp $
 
 DISTNAME=	academicons.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.7.2
-TEXLIVE_REV=	41439
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.8.0
+TEXLIVE_REV=	44380
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/academicons
