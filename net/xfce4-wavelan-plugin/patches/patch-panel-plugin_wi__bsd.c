@@ -1,7 +1,8 @@
-$NetBSD: patch-panel-plugin_wi__bsd.c,v 1.1 2015/04/21 08:56:39 jperkin Exp $
+$NetBSD: patch-panel-plugin_wi__bsd.c,v 1.2 2017/06/20 22:30:56 youri Exp $
 
-Add NetBSD support.
---- panel-plugin/wi_bsd.c.orig	2012-04-09 16:45:20.000000000 +0000
+Add NetBSD support and fix FreeBSD.
+
+--- panel-plugin/wi_bsd.c.orig	2016-05-01 15:53:40.000000000 +0000
 +++ panel-plugin/wi_bsd.c
 @@ -26,14 +26,9 @@
   * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -57,16 +58,16 @@ Add NetBSD support.
  #endif
  static int _wi_netname(const struct wi_device *, char *, size_t);
  static int _wi_quality(const struct wi_device *, int *);
-@@ -160,7 +145,7 @@ wi_query(struct wi_device *device, struc
- 
+@@ -164,7 +149,7 @@ wi_query(struct wi_device *device, struc
    strlcpy(stats->ws_qunit, "dBm", 4);
+ #endif
    /* check vendor (independent of carrier state) */
 -#if defined(__FreeBSD_kernel__)
 +#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
    if ((result = _wi_vendor(device, stats->ws_vendor, WI_MAXSTRLEN)) != WI_OK)
      return(result);
  #endif
-@@ -294,12 +279,10 @@ _wi_rate(const struct wi_device *device,
+@@ -305,12 +290,10 @@ _wi_rate(const struct wi_device *device,
  }
  #endif
  
@@ -80,7 +81,7 @@ Add NetBSD support.
     /*
      * We use sysctl to get a device description
      */
-@@ -316,59 +299,30 @@ _wi_vendor(const struct wi_device *devic
+@@ -327,59 +310,30 @@ _wi_vendor(const struct wi_device *devic
     dev_number = (int)strtol(c, NULL, 10);
     *c = '\0';
  
@@ -157,7 +158,7 @@ Add NetBSD support.
  static int
  _wi_getval(const struct wi_device *device, struct ieee80211req_scan_result *scan)
  {
-@@ -393,7 +347,9 @@ _wi_getval(const struct wi_device *devic
+@@ -404,7 +358,9 @@ _wi_getval(const struct wi_device *devic
  
     return(WI_OK);
  }
@@ -168,7 +169,7 @@ Add NetBSD support.
  static int
  _wi_getval(const struct wi_device *device, struct wi_req *wr)
  {
-@@ -409,10 +365,11 @@ _wi_getval(const struct wi_device *devic
+@@ -420,10 +376,11 @@ _wi_getval(const struct wi_device *devic
    return(WI_OK);
  }
  #endif
@@ -181,7 +182,7 @@ Add NetBSD support.
     struct ieee80211req ireq;
  
     memset(&ireq, 0, sizeof(ireq));
-@@ -423,7 +380,7 @@ _wi_netname(const struct wi_device *devi
+@@ -434,7 +391,7 @@ _wi_netname(const struct wi_device *devi
     ireq.i_len = len; 
     if (ioctl(device->socket, SIOCG80211, &ireq) < 0) 
        return WI_NOSUCHDEV;
@@ -190,7 +191,7 @@ Add NetBSD support.
    struct wi_req wr;
    int result;
  
-@@ -443,7 +400,7 @@ _wi_netname(const struct wi_device *devi
+@@ -454,7 +411,7 @@ _wi_netname(const struct wi_device *devi
  static int
  _wi_quality(const struct wi_device *device, int *quality)
  {
@@ -199,7 +200,7 @@ Add NetBSD support.
     struct ieee80211req_scan_result req;
     int result;
     bzero(&req, sizeof(req));
-@@ -451,8 +408,16 @@ _wi_quality(const struct wi_device *devi
+@@ -462,8 +419,16 @@ _wi_quality(const struct wi_device *devi
     if((result = _wi_getval(device, &req)) != WI_OK)
        return (result);
  
@@ -218,7 +219,7 @@ Add NetBSD support.
    struct wi_req wr;
    int result;
  
-@@ -475,7 +440,7 @@ _wi_quality(const struct wi_device *devi
+@@ -486,7 +451,7 @@ _wi_quality(const struct wi_device *devi
  static int
  _wi_rate(const struct wi_device *device, int *rate)
  {
@@ -227,7 +228,7 @@ Add NetBSD support.
     struct ieee80211req_scan_result req;
     int result, i, high;
     bzero(&req, sizeof(req));
-@@ -488,7 +453,7 @@ _wi_rate(const struct wi_device *device,
+@@ -499,7 +464,7 @@ _wi_rate(const struct wi_device *device,
           high = req.isr_rates[i] & IEEE80211_RATE_VAL;
     
     *rate = high / 2;
@@ -236,7 +237,7 @@ Add NetBSD support.
    struct wi_req wr;
    int result;
  
-@@ -505,5 +470,4 @@ _wi_rate(const struct wi_device *device,
+@@ -516,5 +481,4 @@ _wi_rate(const struct wi_device *device,
    return(WI_OK);
  }
  
