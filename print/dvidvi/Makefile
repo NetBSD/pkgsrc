@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2016/09/21 08:10:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/20 20:50:49 markd Exp $
 #
 
-DISTNAME=	texlive-20160523-source
+DISTNAME=	texlive-20170524-source
 PKGNAME=	dvidvi-1.1
+PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

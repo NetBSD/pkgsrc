@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2016/06/16 04:11:50 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/20 20:50:51 markd Exp $
 
-DISTNAME=	texlive-20160523-source
+DISTNAME=	texlive-20170524-source
 PKGNAME=	mendexk-2.6f
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org

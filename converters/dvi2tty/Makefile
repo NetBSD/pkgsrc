@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2016/09/23 11:35:18 markd Exp $
+# $NetBSD: Makefile,v 1.18 2017/06/20 20:50:49 markd Exp $
 #
 
-DISTNAME=	texlive-20160523-source
+DISTNAME=	texlive-20170524-source
 PKGNAME=	dvi2tty-6.0.0
+PKGREVISION=	1
 CATEGORIES=	converters
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
