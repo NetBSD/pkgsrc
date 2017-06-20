@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2503 2017/06/20 21:43:30 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2504 2017/06/20 21:49:15 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3147,3 +3147,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/xfce4-datetime-plugin to 0.7.0 [youri 2017-06-20]
 	Updated sysutils/xfce4-diskperf-plugin to 2.6.1 [youri 2017-06-20]
 	Updated x11/xfce4-eyes-plugin to 4.5.0 [youri 2017-06-20]
+	Updated sysutils/xfce4-fsguard-plugin to 1.1.0 [youri 2017-06-20]
