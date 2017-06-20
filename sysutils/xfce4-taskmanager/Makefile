@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/06/18 23:22:27 youri Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/20 15:30:37 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -16,6 +16,8 @@ LDFLAGS+=	-lkvm
 .endif
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
