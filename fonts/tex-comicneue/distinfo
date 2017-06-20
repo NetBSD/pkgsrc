@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/20 22:07:24 markd Exp $
 
-SHA1 (tex-comicneue-37744/comicneue.tar.xz) = 3027584bcd1959ce9c5f0e7783f78199207aabb3
-RMD160 (tex-comicneue-37744/comicneue.tar.xz) = d1b20b02c21b0e24b325c6a86379b45cd5d06d5a
-SHA512 (tex-comicneue-37744/comicneue.tar.xz) = 57764e42d11cdb781bef4469b158453523c7cadb735de67926d65f0c6e78524ef6cf1165bd5c9c34ab6263dab032df99059e681f787f01153f372345aa6bce10
-Size (tex-comicneue-37744/comicneue.tar.xz) = 758420 bytes
+SHA1 (tex-comicneue-42851/comicneue.tar.xz) = 3a8c49050f8c3337608d1140f8c188431981cf37
+RMD160 (tex-comicneue-42851/comicneue.tar.xz) = 933499204394e0e02b84a1ed3b64f08d39489296
+SHA512 (tex-comicneue-42851/comicneue.tar.xz) = eb8bc5196125e68d6394178f4d57407222bf2591a7c6ab96a9b2e4a1b82c7fc744234dcec15d2eb644a8d6ce256bf78d44b7d60b17e58f60e1b753c80a007f17
+Size (tex-comicneue-42851/comicneue.tar.xz) = 758264 bytes
