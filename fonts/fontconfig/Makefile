@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.98 2017/05/30 16:53:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.99 2017/06/20 11:36:40 wiz Exp $
 
-DISTNAME=	fontconfig-2.12.1
-PKGREVISION=	1
+DISTNAME=	fontconfig-2.12.3
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.fontconfig.org/release/
+MASTER_SITES=	https://www.fontconfig.org/release/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fontconfig.org/
+HOMEPAGE=	https://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
 #LICENSE=	x11?
 
