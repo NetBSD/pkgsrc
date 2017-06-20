@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2016/06/16 04:06:19 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/20 20:50:49 markd Exp $
 
-DISTNAME=	texlive-20160523-source
+DISTNAME=	texlive-20170524-source
 PKGNAME=	cjkutils-4.8.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2017/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	rxg@NetBSD.org,hubertf@NetBSD.org
