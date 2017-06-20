@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/20 21:01:17 markd Exp $
 share/texmf-dist/fonts/map/dvips/boondox/boondox.map
 share/texmf-dist/fonts/tfm/public/boondox/BOONDOX-b-cal.tfm
 share/texmf-dist/fonts/tfm/public/boondox/BOONDOX-b-calo.tfm
@@ -8,6 +8,8 @@ share/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-cal.tfm
 share/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-calo.tfm
 share/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-ds.tfm
 share/texmf-dist/fonts/tfm/public/boondox/BOONDOX-r-frak.tfm
+share/texmf-dist/fonts/tfm/public/boondox/BOONDOXUprScr-Bold.tfm
+share/texmf-dist/fonts/tfm/public/boondox/BOONDOXUprScr-Regular.tfm
 share/texmf-dist/fonts/tfm/public/boondox/zxxbf7z.tfm
 share/texmf-dist/fonts/tfm/public/boondox/zxxbf8a.tfm
 share/texmf-dist/fonts/tfm/public/boondox/zxxbl7z.tfm
@@ -22,6 +24,8 @@ share/texmf-dist/fonts/tfm/public/boondox/zxxrl8a.tfm
 share/texmf-dist/fonts/tfm/public/boondox/zxxrow7z.tfm
 share/texmf-dist/fonts/tfm/public/boondox/zxxrw7z.tfm
 share/texmf-dist/fonts/tfm/public/boondox/zxxrw8a.tfm
+share/texmf-dist/fonts/type1/public/boondox/BOONDOXUprScr-Bold.pfb
+share/texmf-dist/fonts/type1/public/boondox/BOONDOXUprScr-Regular.pfb
 share/texmf-dist/fonts/type1/public/boondox/zxxbf8a.pfb
 share/texmf-dist/fonts/type1/public/boondox/zxxbl8a.pfb
 share/texmf-dist/fonts/type1/public/boondox/zxxbw8a.pfb
@@ -40,7 +44,9 @@ share/texmf-dist/tex/latex/boondox/BOONDOX-cal.sty
 share/texmf-dist/tex/latex/boondox/BOONDOX-calo.sty
 share/texmf-dist/tex/latex/boondox/BOONDOX-ds.sty
 share/texmf-dist/tex/latex/boondox/BOONDOX-frak.sty
+share/texmf-dist/tex/latex/boondox/BOONDOX-uprscr.sty
 share/texmf-dist/tex/latex/boondox/uboondox-cal.fd
 share/texmf-dist/tex/latex/boondox/uboondox-calo.fd
 share/texmf-dist/tex/latex/boondox/uboondox-ds.fd
 share/texmf-dist/tex/latex/boondox/uboondox-frak.fd
+share/texmf-dist/tex/latex/boondox/uboondoxuprscr.fd
