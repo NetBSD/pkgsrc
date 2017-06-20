@@ -1,16 +1,19 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/21 08:56:43 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/20 21:34:12 youri Exp $
 bin/xfce4-clipman
 bin/xfce4-clipman-settings
 bin/xfce4-popup-clipman
+bin/xfce4-popup-clipman-actions
 lib/xfce4/panel/plugins/libclipman.la
 share/appdata/xfce4-clipman.appdata.xml
 share/applications/xfce4-clipman.desktop
 share/examples/xfce4/autostart/xfce4-clipman-plugin-autostart.desktop
 share/examples/xfce4/panel/xfce4-clipman-actions.xml
+share/icons/hicolor/16x16/apps/clipman-symbolic.svg
 share/icons/hicolor/16x16/apps/xfce4-clipman-plugin.png
-share/icons/hicolor/22x22/apps/xfce4-clipman-plugin.png
 share/icons/hicolor/24x24/apps/xfce4-clipman-plugin.png
 share/icons/hicolor/32x32/apps/xfce4-clipman-plugin.png
+share/icons/hicolor/48x48/apps/xfce4-clipman-plugin.png
+share/icons/hicolor/64x64/apps/xfce4-clipman-plugin.png
 share/icons/hicolor/scalable/apps/xfce4-clipman-plugin.svg
 share/locale/ar/LC_MESSAGES/xfce4-clipman-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-clipman-plugin.mo
