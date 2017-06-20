@@ -1,6 +1,7 @@
-$NetBSD: patch-panel-plugin_cmdspawn.c,v 1.1 2015/04/21 08:56:40 jperkin Exp $
+$NetBSD: patch-panel-plugin_cmdspawn.c,v 1.2 2017/06/20 21:51:31 youri Exp $
 
 Fix SunOS build.
+
 --- panel-plugin/cmdspawn.c.orig	2012-05-10 02:09:21.000000000 +0000
 +++ panel-plugin/cmdspawn.c
 @@ -12,7 +12,7 @@
