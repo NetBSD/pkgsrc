@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2017/06/20 18:31:36 spz Exp $
+$NetBSD: patch-configure.ac,v 1.3 2017/06/20 18:53:58 spz Exp $
 
 --- configure.ac.orig	2017-06-17 16:07:38.000000000 +0000
 +++ configure.ac
@@ -7,7 +7,7 @@ $NetBSD: patch-configure.ac,v 1.2 2017/06/20 18:31:36 spz Exp $
  
  AC_MSG_CHECKING([for getrandom (Linux 3.17+, glibc 2.25+)])
 -AC_COMPILE_IFELSE([AC_LANG_SOURCE([
-+AC_LINK([AC_LANG_SOURCE([
++AC_LINK_IFELSE([AC_LANG_SOURCE([
    #include <stdlib.h>  /* for NULL */
    #include <sys/random.h>
    int main() {
