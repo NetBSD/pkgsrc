@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2017/03/07 08:22:29 markd Exp $
+$NetBSD: patch-aa,v 1.14 2017/06/20 20:50:50 markd Exp $
 
 Set paths to texmf trees for pkgsrc.
-
-Remove mpost from list of allowed shell_escape_commands
 
 --- texmf.cnf.orig	2014-04-22 21:07:54.000000000 +0000
 +++ texmf.cnf
@@ -76,11 +74,3 @@ Remove mpost from list of allowed shell_escape_commands
  %
  % For reference, here is the old brace-using definition:
  %TEXMFCNF = {$SELFAUTOLOC,$SELFAUTODIR,$SELFAUTOPARENT}{,{/share,}/texmf{-local,}/web2c}
-@@ -568,7 +542,6 @@ extractbb,\
- gregorio,\
- kpsewhich,\
- makeindex,\
--mpost,\
- repstopdf,\
- 
- % we'd like to allow:
