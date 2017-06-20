@@ -1,7 +1,8 @@
-$NetBSD: patch-panel-plugin_fsguard.c,v 1.1 2015/04/21 08:56:40 jperkin Exp $
+$NetBSD: patch-panel-plugin_fsguard.c,v 1.2 2017/06/20 21:49:03 youri Exp $
 
 Fix NetBSD support.
 Add SunOS, OS X and DragonFlyBSD support.
+
 --- panel-plugin/fsguard.c.orig	2012-06-30 09:07:55.000000000 +0000
 +++ panel-plugin/fsguard.c
 @@ -38,13 +38,18 @@
