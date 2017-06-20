@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:26 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/20 22:07:24 markd Exp $
 
 DISTNAME=	cabin.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2016
-TEXLIVE_REV=	39875
+PKGNAME=	tex-${DISTNAME:S/./-/}-2017
+TEXLIVE_REV=	43687
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cabin

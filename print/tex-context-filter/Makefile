@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/07/18 17:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/20 22:07:25 markd Exp $
 
 DISTNAME=	context-filter
-PKGNAME=	tex-${DISTNAME}-2015
-TEXLIVE_REV=	36285
+PKGNAME=	tex-${DISTNAME}-2017
+TEXLIVE_REV=	42326
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/context-filter

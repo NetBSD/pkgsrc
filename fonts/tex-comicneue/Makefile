@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/09/02 11:06:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/20 22:07:24 markd Exp $
 
 DISTNAME=	comicneue
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	37744
+PKGNAME=	tex-${DISTNAME}-1.1
+TEXLIVE_REV=	42851
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/comicneue

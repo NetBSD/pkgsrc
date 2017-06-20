@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/28 11:55:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/20 22:07:25 markd Exp $
 
 DISTNAME=	csbulletin
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.1
+TEXLIVE_REV=	43277
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/csbulletin

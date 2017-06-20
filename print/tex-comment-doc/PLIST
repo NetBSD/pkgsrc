@@ -1,5 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/16 14:28:42 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/20 22:07:25 markd Exp $
+share/texmf-dist/doc/latex/comment/Makefile
 share/texmf-dist/doc/latex/comment/README
-share/texmf-dist/doc/latex/comment/comm_latest.tex
+share/texmf-dist/doc/latex/comment/comm_bug.tex
+share/texmf-dist/doc/latex/comment/comm_test.pdf
+share/texmf-dist/doc/latex/comment/comm_test.tex
+share/texmf-dist/doc/latex/comment/comm_test_ivo.tex
+share/texmf-dist/doc/latex/comment/comm_test_l.tex
 share/texmf-dist/doc/latex/comment/comment.pdf
 share/texmf-dist/doc/latex/comment/comment.tex
+share/texmf-dist/doc/latex/comment/comment_plain.tex
+share/texmf-dist/doc/latex/comment/t1test.pdf
+share/texmf-dist/doc/latex/comment/t1test.tex
+share/texmf-dist/doc/latex/comment/writeup.pdf
+share/texmf-dist/doc/latex/comment/writeup.tex
