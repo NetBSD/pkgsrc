@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/20 20:56:52 markd Exp $
 
 DISTNAME=	allrunes.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.1
-TEXLIVE_REV=	21886
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1.1
+TEXLIVE_REV=	42221
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/allrunes

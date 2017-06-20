@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/08/07 07:17:36 markd Exp $
+$NetBSD: distinfo,v 1.5 2017/06/20 20:56:51 markd Exp $
 
-SHA1 (tex-academicons-41439/academicons.doc.tar.xz) = ace3abe82b53a1517284df8f8c4ad7098cb0b879
-RMD160 (tex-academicons-41439/academicons.doc.tar.xz) = 597c4740206c25c9761bb524514573cc9103c0ca
-SHA512 (tex-academicons-41439/academicons.doc.tar.xz) = 7db7f3ccbba74ba0920d37476021636a31cce32b8f1fd5e7f7daf4115f4ff9e68a926ab0f5c60b28e557bd3abcefa589d7d2ac085586372e363a2fda60865134
-Size (tex-academicons-41439/academicons.doc.tar.xz) = 81244 bytes
+SHA1 (tex-academicons-44380/academicons.doc.tar.xz) = 1d09d4822f686709790f88b13acaa409d40a8819
+RMD160 (tex-academicons-44380/academicons.doc.tar.xz) = de598ca1179ce3f1e3c153583b90d5fa60fbbaa6
+SHA512 (tex-academicons-44380/academicons.doc.tar.xz) = 05cee6973727197bb953a98d156a7902b0215e2d1aa640d42ac9551df18c76b8f8f953d3ab6f1f781288f6e4f9fb1a1844da66e508ab78031f49c2511b33f77b
+Size (tex-academicons-44380/academicons.doc.tar.xz) = 90688 bytes
