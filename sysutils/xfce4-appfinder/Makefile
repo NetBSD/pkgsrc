@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2017/02/12 06:26:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2017/06/20 17:43:40 youri Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -10,6 +10,7 @@ HOMEPAGE=	http://docs.xfce.org/xfce/xfce4-appfinder/start
 COMMENT=	Xfce application finder
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-garcon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
