@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2486 2017/06/20 11:19:25 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2487 2017/06/20 11:19:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3127,3 +3127,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/py-sqlalchemy to 1.1.11 [adam 2017-06-20]
 	Updated net/libcares to 1.13.0 [wiz 2017-06-20]
 	Updated graphics/cairo to 1.14.10 [wiz 2017-06-20]
+	Updated graphics/cairo-gobject to 1.14.10 [wiz 2017-06-20]
