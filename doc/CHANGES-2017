@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2491 2017/06/20 13:39:50 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2492 2017/06/20 13:44:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3134,3 +3134,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed audio/mutagen-tools successor audio/py-mutagen [adam 2017-06-20]
 	Removed lang/ruby21 [taca 2017-06-20]
 	Removed lang/ruby21-base [taca 2017-06-20]
+	Updated meta-pkgs/bulk-medium to 20170620 [taca 2017-06-20]
