@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/07/10 10:35:19 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/21 11:45:57 markd Exp $
 
 DISTNAME=	pdfpages
-PKGNAME=	tex-${DISTNAME}-0.5f
-TEXLIVE_REV=	40638
+PKGNAME=	tex-${DISTNAME}-0.5h
+TEXLIVE_REV=	42973
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pdfpages
