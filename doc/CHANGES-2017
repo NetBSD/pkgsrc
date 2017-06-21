@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2544 2017/06/21 14:28:51 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2545 2017/06/21 14:29:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3459,3 +3459,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/ruby-childprocess to 0.7.0 [taca 2017-06-21]
 	Updated sysutils/ruby-rb-inotify to 0.9.10 [taca 2017-06-21]
 	Updated textproc/ruby-builder to 3.2.3 [taca 2017-06-21]
+	Updated textproc/ruby-haml to 5.0.1 [taca 2017-06-21]
