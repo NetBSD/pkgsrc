@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:44:54 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/06/21 06:13:14 markd Exp $
 
-SHA1 (tex-dozenal-37698/dozenal.doc.tar.xz) = 1920e27b10d82079891639be5adfccd7f26a4bd3
-RMD160 (tex-dozenal-37698/dozenal.doc.tar.xz) = f9d8f980161aa6100df11211048fc2aa4432a8ea
-SHA512 (tex-dozenal-37698/dozenal.doc.tar.xz) = e48b4ee3e7c4e4d1a2c4c29a0498d0432118bde1637cb9506a6a8e6be2fc590577947962ec905588992df4f0af97df3b22f7e3933e2dd20d1b476d6a9beca1bc
-Size (tex-dozenal-37698/dozenal.doc.tar.xz) = 313756 bytes
+SHA1 (tex-dozenal-42608/dozenal.doc.tar.xz) = a5b98bb2f2a8fe9cb927d17dbf24d6235d855df9
+RMD160 (tex-dozenal-42608/dozenal.doc.tar.xz) = 45fc2d259635c2cb798ef049695ab174122de407
+SHA512 (tex-dozenal-42608/dozenal.doc.tar.xz) = 6c6506a7b72e6d402ebaca252aecc1071aa90b7000743dafa4184ef9481b80330fe8a09b7ae97537c4309b8d05a4bbb55000a6893a945ca0fda976bad6976537
+Size (tex-dozenal-42608/dozenal.doc.tar.xz) = 311340 bytes
