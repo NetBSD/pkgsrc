@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 13:03:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 11:45:57 markd Exp $
 
 DISTNAME=	polski.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.3
-TEXLIVE_REV=	19881
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.3.4
+TEXLIVE_REV=	44213
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/polski
