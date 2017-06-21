@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1249 2017/06/18 16:14:58 taca Exp $
+# $NetBSD: Makefile,v 1.1250 2017/06/21 18:32:37 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -689,6 +689,7 @@ SUBDIR+=	py-httpbin
 SUBDIR+=	py-httpie
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-hyperframe
+SUBDIR+=	py-hyperlink
 SUBDIR+=	py-idna
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-landslide
