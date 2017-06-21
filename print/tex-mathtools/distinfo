@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:12 markd Exp $
+$NetBSD: distinfo,v 1.6 2017/06/21 10:14:19 markd Exp $
 
-SHA1 (tex-mathtools-38833/mathtools.tar.xz) = 47bf13d42e618ac46b96ebb8ef587a5acb6109af
-RMD160 (tex-mathtools-38833/mathtools.tar.xz) = 875e717bacd00b4c4219f446d527ff62f06f2975
-SHA512 (tex-mathtools-38833/mathtools.tar.xz) = 524e8215131d999fe4b559d403b7a57b4f878146ff5f81beec068f76e64b612a1c625b900ced06525625024f238f5f857cbe492c1bd269a3179b85ad36103225
-Size (tex-mathtools-38833/mathtools.tar.xz) = 18704 bytes
+SHA1 (tex-mathtools-44504/mathtools.tar.xz) = 72352ce7678064183d2d8a47802d466ea0402c92
+RMD160 (tex-mathtools-44504/mathtools.tar.xz) = f6061dc8aac3e233c45c28c11a564c6ba0194220
+SHA512 (tex-mathtools-44504/mathtools.tar.xz) = f3ce4f1f85ed499730ff2d6f9971c836c96e9c44ebc3b463b61233f4cf134d45564e4b04c7e0465cfbfc33319569a0c083fa9caa2580ddd0f41ed2a013f1208a
+Size (tex-mathtools-44504/mathtools.tar.xz) = 19052 bytes

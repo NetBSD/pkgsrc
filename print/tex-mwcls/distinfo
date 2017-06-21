@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/09/20 13:00:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/06/21 10:14:20 markd Exp $
 
-SHA1 (tex-mwcls-15878/mwcls.tar.xz) = a1d3065398f21aa6f6286a9d900a35d07fcaa1b9
-RMD160 (tex-mwcls-15878/mwcls.tar.xz) = 0bfeea4b990d8efa93af67dbe8d2d9b5d8981907
-SHA512 (tex-mwcls-15878/mwcls.tar.xz) = c1b6af98e1f05fef2337499367da3a62196b277a35255c873c4edb7363c117074bdf10cb2dddafdd23671ac42e1f60c62d7ff9f1739c1257e10f78af311075ca
-Size (tex-mwcls-15878/mwcls.tar.xz) = 11112 bytes
+SHA1 (tex-mwcls-44352/mwcls.tar.xz) = 5f30f51aa35bc67702ddb00ec91a6aa1b9f862fb
+RMD160 (tex-mwcls-44352/mwcls.tar.xz) = fbe7d0fe6032a4bd545684321161b52ed8fd8956
+SHA512 (tex-mwcls-44352/mwcls.tar.xz) = 0fc5b776ab342f5d2d8c5bb5f088bf430fed79e66a5220f59dc463270dbc8e276ba009193d0d84df4a32f5adc0c8180ca3e4af5974677fec4c4a3d4fa32fc610
+Size (tex-mwcls-44352/mwcls.tar.xz) = 11340 bytes

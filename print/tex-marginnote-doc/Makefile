@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/08/07 09:09:39 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/21 10:14:19 markd Exp $
 
 DISTNAME=	marginnote.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
-TEXLIVE_REV=	41382
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2b
+TEXLIVE_REV=	43979
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/marginnote

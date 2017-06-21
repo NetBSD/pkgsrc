@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2016/09/20 13:00:17 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 10:14:20 markd Exp $
 
 DISTNAME=	mwcls
-PKGNAME=	tex-${DISTNAME}-0.74
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-0.75
+TEXLIVE_REV=	44352
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/mwcls
 COMMENT=	Polish-oriented document classes
-LICENSE=	lppl-1.3c
+LICENSE=	lppl-1.2
 
 CONFLICTS+=	teTeX-texmf<=3.0nb56
 
