@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:06:13 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/21 11:45:57 markd Exp $
 
 DISTNAME=	paralist.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.5
-TEXLIVE_REV=	39247
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.7
+TEXLIVE_REV=	43021
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/paralist
 COMMENT=	Documentation for tex-paralist
 LICENSE=	lppl-1.3c
 
