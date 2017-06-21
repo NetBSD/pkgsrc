@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.75 2017/05/08 17:34:15 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.76 2017/06/21 08:20:10 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -113,9 +113,9 @@ _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 
-.if ${MACHINE_ARCH} == "x86_64"
-LIBABISUFFIX=		/amd64
-.endif
+LIBABISUFFIX.sparc64=	/sparcv9
+LIBABISUFFIX.x86_64=	/amd64
+LIBABISUFFIX?=		${LIBABISUFFIX.${MACHINE_ARCH}}
 _OPSYS_SYSTEM_RPATH?=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 _OPSYS_INCLUDE_DIRS?=	/usr/include
