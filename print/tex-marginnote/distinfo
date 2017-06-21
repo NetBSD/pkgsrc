@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/08/07 09:09:39 markd Exp $
+$NetBSD: distinfo,v 1.5 2017/06/21 10:14:19 markd Exp $
 
-SHA1 (tex-marginnote-41382/marginnote.tar.xz) = 40619f3e30c8e1e8d7802fce62160475808a38da
-RMD160 (tex-marginnote-41382/marginnote.tar.xz) = f9295b31af20577822be1302cb47dcb4168fe0b5
-SHA512 (tex-marginnote-41382/marginnote.tar.xz) = 211b8da7413e95e94bc90379ad292070bf3afcce77f11e010cca93d18612577f29a623489c614a0686b24deba2e7158844e0fd575a064ac84529abe7e396a99c
-Size (tex-marginnote-41382/marginnote.tar.xz) = 3304 bytes
+SHA1 (tex-marginnote-43979/marginnote.tar.xz) = becaec207a43902d906448998b57eb3ad1127d17
+RMD160 (tex-marginnote-43979/marginnote.tar.xz) = 79b3793c13099a498cffec189425da4b6abd224d
+SHA512 (tex-marginnote-43979/marginnote.tar.xz) = b2cb945982790b92d6d77336417c97bb52b47210a661d52448bd3829d3d9f41581fc98d01b9fee2f7e3f9965f0620da6e9d8ccd1e0c138ec582c1f324f7a1853
+Size (tex-marginnote-43979/marginnote.tar.xz) = 3404 bytes
