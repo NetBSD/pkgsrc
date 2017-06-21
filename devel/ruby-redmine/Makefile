@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/04/22 21:03:33 adam Exp $
+# $NetBSD: Makefile,v 1.22 2017/06/21 02:13:14 taca Exp $
 
 DISTNAME=	redmine-3.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,7 +14,9 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 .include "../../lang/ruby/rubyversion.mk"
 
-RUBY_VERSIONS_INCOMPATIBLE=	23 # nokogirl version required is broken in 2.3
+# nokogirl version required is broken in Ruby 2.3
+# Ruby 2.4 will be supported by Redmine 3.4.
+RUBY_VERSIONS_ACCEPTED=	22
 
 GEMS_DISTFILES+=	actionmailer-4.2.7.1.gem actionpack-4.2.7.1.gem
 GEMS_DISTFILES+=	actionpack-action_caching-1.1.1.gem
