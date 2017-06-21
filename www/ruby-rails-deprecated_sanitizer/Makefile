@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/21 15:42:11 taca Exp $
 
 DISTNAME=	rails-deprecated_sanitizer-1.0.3
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
