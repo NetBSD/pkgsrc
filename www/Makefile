@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1250 2017/06/21 18:32:37 adam Exp $
+# $NetBSD: Makefile,v 1.1251 2017/06/21 19:10:13 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -598,6 +598,7 @@ SUBDIR+=	py-PasteScript
 SUBDIR+=	py-Routes
 SUBDIR+=	py-URLObject
 SUBDIR+=	py-WebOb
+SUBDIR+=	py-asgiref
 SUBDIR+=	py-autobahn
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
@@ -606,10 +607,12 @@ SUBDIR+=	py-bleach
 SUBDIR+=	py-blosxom
 SUBDIR+=	py-bottle
 SUBDIR+=	py-cfscrape
+SUBDIR+=	py-channels
 SUBDIR+=	py-cheroot
 SUBDIR+=	py-cherrypy
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
+SUBDIR+=	py-daphne
 SUBDIR+=	py-django
 SUBDIR+=	py-django-appconf
 SUBDIR+=	py-django-appmedia
