@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2017/06/15 18:04:37 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/06/21 13:42:18 fhajny Exp $
 bin/lexicon
 ${PYSITELIB}/dns_${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/dns_${EGG_INFODIR}/SOURCES.txt
@@ -46,6 +46,8 @@ ${PYSITELIB}/lexicon/providers/gandi.pyo
 ${PYSITELIB}/lexicon/providers/gandi.pyc
 ${PYSITELIB}/lexicon/providers/glesys.pyo
 ${PYSITELIB}/lexicon/providers/glesys.pyc
+${PYSITELIB}/lexicon/providers/godaddy.pyo
+${PYSITELIB}/lexicon/providers/godaddy.pyc
 ${PYSITELIB}/lexicon/providers/luadns.pyo
 ${PYSITELIB}/lexicon/providers/luadns.pyc
 ${PYSITELIB}/lexicon/providers/memset.pyo
@@ -81,6 +83,7 @@ ${PYSITELIB}/lexicon/providers/dnspod.py
 ${PYSITELIB}/lexicon/providers/easydns.py
 ${PYSITELIB}/lexicon/providers/gandi.py
 ${PYSITELIB}/lexicon/providers/glesys.py
+${PYSITELIB}/lexicon/providers/godaddy.py
 ${PYSITELIB}/lexicon/providers/luadns.py
 ${PYSITELIB}/lexicon/providers/memset.py
 ${PYSITELIB}/lexicon/providers/namesilo.py
