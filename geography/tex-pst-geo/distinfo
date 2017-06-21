@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:08:45 agc Exp $
+$NetBSD: distinfo,v 1.3 2017/06/21 11:45:58 markd Exp $
 
-SHA1 (tex-pst-geo-17751/pst-geo.tar.xz) = c645931b2f487aa63c7f6efa9bf588e5c12954b9
-RMD160 (tex-pst-geo-17751/pst-geo.tar.xz) = d4f8074b109e9b8aa317a98663297ff681384ff7
-SHA512 (tex-pst-geo-17751/pst-geo.tar.xz) = 919f91fdcf8c2d118a89cf54385e518118516e6088423bc80e8a2a7710a74d1844630209bb9b1cbd578dc949673d1505555afa23f5921f6c8a958a70b45d9fe8
-Size (tex-pst-geo-17751/pst-geo.tar.xz) = 24316216 bytes
+SHA1 (tex-pst-geo-44131/pst-geo.tar.xz) = 02cbd7bde0babfc472740d8eea4ac86cc6c6478b
+RMD160 (tex-pst-geo-44131/pst-geo.tar.xz) = d502307627dcdb285d16cac4358e050afabeb4d0
+SHA512 (tex-pst-geo-44131/pst-geo.tar.xz) = 33c5c5692eab73c8848378ba2188a0b0ee0a0f9f24e965f022b243c94eb8195065a36bccbf3845a50dadd574cbbb7194af6005a13274efad5a19969317d13f1b
+Size (tex-pst-geo-44131/pst-geo.tar.xz) = 24297228 bytes

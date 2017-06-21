@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2016/06/16 04:00:47 markd Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/21 11:45:59 markd Exp $
 
 DISTNAME=	pst-plot.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.75
-TEXLIVE_REV=	41242
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.79
+TEXLIVE_REV=	44511
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pst-plot
 COMMENT=	Documentation for tex-pst-plot
 LICENSE=	lppl-1.3c
 
