@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/08/07 09:09:40 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/21 13:25:32 markd Exp $
 
 DISTNAME=	readarray.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
-TEXLIVE_REV=	41652
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
+TEXLIVE_REV=	42467
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/readarray

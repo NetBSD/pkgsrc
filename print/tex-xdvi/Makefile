@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/05/09 20:29:41 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/21 13:25:35 markd Exp $
 
 DISTNAME=	xdvi
-PKGNAME=	tex-${DISTNAME}-22.87
-PKGREVISION=	2
-TEXLIVE_REV=	33736
+PKGNAME=	tex-${DISTNAME}-22.87.03
+TEXLIVE_REV=	44166
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/xdvi

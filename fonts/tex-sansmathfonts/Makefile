@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 13:25:32 markd Exp $
 
 DISTNAME=	sansmathfonts
-PKGNAME=	tex-${DISTNAME}-1
-TEXLIVE_REV=	30173
+PKGNAME=	tex-${DISTNAME}-2017
+TEXLIVE_REV=	43252
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/sansmathfonts
