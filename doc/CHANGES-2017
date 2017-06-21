@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2524 2017/06/21 13:28:17 markd Exp $
+$NetBSD: CHANGES-2017,v 1.2525 2017/06/21 13:29:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3438,3 +3438,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated fonts/tex-xcharter to 1.08 [markd 2017-06-21]
 	Updated fonts/tex-xcharter-doc to 1.08 [markd 2017-06-21]
 	Updated print/tex-xdvi to 22.87.03 [markd 2017-06-21]
+	Updated archivers/unrar to 5.5.5 [wiz 2017-06-21]
