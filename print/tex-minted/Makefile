@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/08/07 09:09:39 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/21 10:14:20 markd Exp $
 
 DISTNAME=	minted
-PKGNAME=	tex-${DISTNAME}-2.4
-TEXLIVE_REV=	41745
+PKGNAME=	tex-${DISTNAME}-2.4.1
+TEXLIVE_REV=	42418
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/minted
