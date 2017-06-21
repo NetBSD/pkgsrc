@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2550 2017/06/21 15:11:36 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2551 2017/06/21 18:44:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3465,3 +3465,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed devel/ruby-dotenv [taca 2017-06-21]
 	Updated mail/squirrelmail to 1.4.23pre14688 [taca 2017-06-21]
 	Updated www/squidGuard to 1.4nb13 [taca 2017-06-21]
+	Added www/py-hyperlink version 17.2.1 [adam 2017-06-21]
+	Updated net/py-twisted to 17.5.0 [adam 2017-06-21]
+	Updated devel/py-txaio to 2.8.0 [adam 2017-06-21]
+	Updated www/py-autobahn to 17.6.1 [adam 2017-06-21]
