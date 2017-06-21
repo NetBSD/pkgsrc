@@ -1,0 +1,10 @@
+Temple is an abstraction and a framework for compiling templates to pure Ruby.
+It's all about making it easier to experiment, implement and optimize template
+languages.  If you're interested in implementing your own template language,
+or anything else related to the internals of a template engine: You've come to
+the right place.
+
+Have a look around, and if you're still wondering: Ask on the mailing list and
+we'll try to do our best.  In fact, it doesn't have to be related to Temple at
+all.  As long as it has something to do with template languages, we're
+interested: <http://groups.google.com/group/guardians-of-the-temple>.
