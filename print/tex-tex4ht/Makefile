@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/08/07 09:09:41 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/21 13:25:33 markd Exp $
 
 DISTNAME=	tex4ht
-PKGNAME=	tex-${DISTNAME}-2016.41726
-TEXLIVE_REV=	41726
+PKGNAME=	tex-${DISTNAME}-2017
+TEXLIVE_REV=	44379
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/tex4ht

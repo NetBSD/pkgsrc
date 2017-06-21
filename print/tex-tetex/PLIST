@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/07/01 10:49:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/06/21 13:25:33 markd Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -6,6 +6,7 @@ bin/dvi2fax
 bin/dvired
 bin/fmtutil
 bin/fmtutil-sys
+bin/fmtutil-user
 bin/kpsepath
 bin/kpsetool
 bin/kpsewhere
@@ -16,6 +17,7 @@ bin/texconfig-sys
 bin/texlinks
 bin/updmap
 bin/updmap-sys
+bin/updmap-user
 share/texmf-dist/dvips/tetex/config.builtin35
 share/texmf-dist/dvips/tetex/config.dfaxhigh
 share/texmf-dist/dvips/tetex/config.dfaxlo

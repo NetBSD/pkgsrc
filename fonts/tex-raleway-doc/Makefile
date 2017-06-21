@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 11:20:00 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/21 13:25:32 markd Exp $
 
 DISTNAME=	raleway.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3
-TEXLIVE_REV=	37394
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.4
+TEXLIVE_REV=	42629
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/raleway
