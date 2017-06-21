@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2017/03/15 18:52:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2017/06/21 18:45:27 bsiegert Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
-PKGREVISION=	2
+PKGREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/052b90b5414f/security/nss/lib/ckfw/builtins/certdata.txt
 DISTFILES=	${CERTDATA}
@@ -21,13 +21,14 @@ CERTDATA=	certdata-${CERTDATA_DATE}.txt
 WRKSRC=		${WRKDIR}
 DATADIR=	${PREFIX}/share/${PKGBASE}
 
+# Set paths depending on whether we depend on builtin or pkgsrc openssl.
 CHECK_BUILTIN.openssl=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl=	no
 .if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
-SSLDIR=		/etc/openssl/certs
+SSLDIR=		/etc/openssl
 .else
-SSLDIR=		${PKG_SYSCONFDIR}/openssl/certs
+SSLDIR=		${PKG_SYSCONFDIR}/openssl
 .endif
 
 CERT_SCRIPT=		mozilla-rootcerts.sh
