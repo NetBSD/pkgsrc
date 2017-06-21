@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/12/29 23:34:43 dholland Exp $
+$NetBSD: distinfo,v 1.6.10.1 2017/06/21 18:55:38 bsiegert Exp $
 
 SHA1 (basic256_0.9.6.71.tgz) = 3a8ee26230d5b14b5f325c3b6e0db511534d785f
 RMD160 (basic256_0.9.6.71.tgz) = 1edd4a2eb153eb9712f8b33e1ff2a64ebf1ba883
 SHA512 (basic256_0.9.6.71.tgz) = cdebc9da6b3835c7b626e0cf1c90019c6cf5091f43e7f17923b03392eac9013d70817fd60fda705ccb8843ea7d649e30eb8ef50593da39e4a75b1b15c4279f21
 Size (basic256_0.9.6.71.tgz) = 7924162 bytes
-SHA1 (patch-Interpreter.cpp) = 23e0c4d7b611dff4366dbd6859d8c4eddf9d31ad
+SHA1 (patch-Interpreter.cpp) = 1b2cbe8ca0b696f932f231e44716d104156ad633
 SHA1 (patch-RunController.cpp) = 7716844575a393900b9cab1e61abd6b18cf5b138
 SHA1 (patch-Variables.h) = a3e777c774c57103506d09e8300867766c2067fd
