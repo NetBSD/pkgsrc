@@ -1,4 +1,4 @@
-$NetBSD: patch-libtiff_tif_dirinfo.c,v 1.2 2017/06/21 02:38:21 pgoyette Exp $
+$NetBSD: patch-libtiff_tif_dirinfo.c,v 1.3 2017/06/21 02:47:45 pgoyette Exp $
 
 fix CVE-2014-8128, CVE-2016-5318, CVE-2015-7554 & CVE-2016-10095
 per http://bugzilla.maptools.org/show_bug.cgi?id=2580
@@ -15,12 +15,6 @@ retrieving revision 1.127
 diff -w -u -b -r1.126 -r1.127
 --- libtiff/tif_dirinfo.c.orig	18 Nov 2016 02:52:13 -0000	1.126
 +++ libtiff/tif_dirinfo.c	1 Jun 2017 12:44:04 -0000	1.127
-@@ -1,4 +1,4 @@
--/* $Id: patch-libtiff_tif_dirinfo.c,v 1.2 2017/06/21 02:38:21 pgoyette Exp $ */
-+/* $Id: patch-libtiff_tif_dirinfo.c,v 1.2 2017/06/21 02:38:21 pgoyette Exp $ */
- 
- /*
-  * Copyright (c) 1988-1997 Sam Leffler
 @@ -956,6 +956,109 @@
  	return 0;
  }
