@@ -1,6 +1,8 @@
-$NetBSD: patch-Interpreter.cpp,v 1.2 2015/06/10 14:58:50 joerg Exp $
+$NetBSD: patch-Interpreter.cpp,v 1.2.16.1 2017/06/21 18:55:38 bsiegert Exp $
 
 Avoid overlap with std::mutex.
+Fix delete use.
+Avoid overlap between std::bind and bind(2).
 
 --- Interpreter.cpp.orig	2012-08-06 14:57:58.000000000 +0000
 +++ Interpreter.cpp
@@ -49,3 +51,12 @@ Avoid overlap with std::mutex.
  				}
  			}
  		}
+@@ -3400,7 +3402,7 @@ Interpreter::execByteCode()
+ 								serv_addr.sin_family = AF_INET;
+ 								serv_addr.sin_addr.s_addr = INADDR_ANY;
+ 								serv_addr.sin_port = htons(port);
+-								if (bind(tempsockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
++								if (::bind(tempsockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
+ 									errornum = ERROR_NETBIND;
+ 									errormessage = strerror(errno);
+ 									tempsockfd = netSockClose(tempsockfd);
