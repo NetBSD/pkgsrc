@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2546 2017/06/21 14:31:28 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2547 2017/06/21 14:32:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3461,3 +3461,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated textproc/ruby-builder to 3.2.3 [taca 2017-06-21]
 	Updated textproc/ruby-haml to 5.0.1 [taca 2017-06-21]
 	Updated www/ruby-capybara to 2.14.3 [taca 2017-06-21]
+	Updated www/thin to 1.7.1 [taca 2017-06-21]
