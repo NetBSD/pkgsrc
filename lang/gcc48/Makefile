@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/06/08 09:52:47 maya Exp $
+# $NetBSD: Makefile,v 1.33 2017/06/21 21:16:35 maya Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -24,7 +24,7 @@ EXTRACT_ONLY=		${DEFAULT_DISTFILES}
 NOT_FOR_PLATFORM=	Interix-*-*
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake makeinfo sed:run
+USE_TOOLS+=		gmake makeinfo gsed
 GNU_CONFIGURE=		yes
 GCC_REQD+=		4.4
 ## Build outside ${WRKSRC}
