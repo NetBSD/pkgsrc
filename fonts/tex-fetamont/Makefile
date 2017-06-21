@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:28 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 06:13:15 markd Exp $
 
 DISTNAME=	fetamont
-PKGNAME=	tex-${DISTNAME}-1.6
-TEXLIVE_REV=	38746
+PKGNAME=	tex-${DISTNAME}-20170415
+TEXLIVE_REV=	43812
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fetamont

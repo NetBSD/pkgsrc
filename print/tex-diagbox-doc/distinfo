@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/20 21:43:59 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/06/21 06:13:14 markd Exp $
 
-SHA1 (tex-diagbox-39862/diagbox.doc.tar.xz) = 19f377eff0959fbcb486c4bba67454fd1ef953fa
-RMD160 (tex-diagbox-39862/diagbox.doc.tar.xz) = 2ce6a1ca2b673de23429a6a2893a1ba520a691e1
-SHA512 (tex-diagbox-39862/diagbox.doc.tar.xz) = c8170f0a92a7eaa57c6add05a60928f185c14d802f5ace40f8510f1ce902c713c492c30edcfeb5a5873105983b889f0ca8ff6e913a744ab0f6eed114bd19ec0d
-Size (tex-diagbox-39862/diagbox.doc.tar.xz) = 209128 bytes
+SHA1 (tex-diagbox-42843/diagbox.doc.tar.xz) = 6a3fbfa43e45e3d08fe595c9237cbb62ba39291e
+RMD160 (tex-diagbox-42843/diagbox.doc.tar.xz) = 96bf306c16b74ef5c37ecfbd95246a441854158a
+SHA512 (tex-diagbox-42843/diagbox.doc.tar.xz) = 0fc808662f680c3fe32cdbd716145b5209069529cd343e4804002e3eda999c5046fb22181112fa34e18e5c5690963c122aab19a4dfa404e76a08f1983fb2dce8
+Size (tex-diagbox-42843/diagbox.doc.tar.xz) = 274452 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 03:57:28 markd Exp $
+$NetBSD: distinfo,v 1.5 2017/06/21 06:13:15 markd Exp $
 
-SHA1 (tex-fetamont-38746/fetamont.tar.xz) = a65091e725af7ed0d59ceca75efa559dec7f4ec6
-RMD160 (tex-fetamont-38746/fetamont.tar.xz) = bb0d2e587e0483955933e96da17ad65bac0c7216
-SHA512 (tex-fetamont-38746/fetamont.tar.xz) = bd778aac2a965ff5493daf2db9685b50444b7e0a4c232fd47ede9efc7a9853731301dd013db8ccc76aabc3242e6d7c0de0b21fed08f3063dc43e16b879e3c433
-Size (tex-fetamont-38746/fetamont.tar.xz) = 2838512 bytes
+SHA1 (tex-fetamont-43812/fetamont.tar.xz) = 54b79bc4520ac76dddea9071e5d3146cb3cc23d0
+RMD160 (tex-fetamont-43812/fetamont.tar.xz) = 060ddfef528133fcf6b3674f89855bd519f4e094
+SHA512 (tex-fetamont-43812/fetamont.tar.xz) = 967e075bec04359ea8e7c28e4ac723b892110fd405be22af9bb3004c934d316232798eefd722cfe8b2ea2b4358159ed9aaf2fe245b4a12e3fd1cbaedffab0577
+Size (tex-fetamont-43812/fetamont.tar.xz) = 3541624 bytes
