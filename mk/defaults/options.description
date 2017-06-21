@@ -616,7 +616,6 @@ qmail-qregex		Patch to SMTP-reject customizable patterns.
 qmail-rcptcheck		Patch to SMTP-reject via a script or program.
 qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
 qmail-remote		Patch to run $QMAILREMOTE instead of "qmail-remote".
-qmail-run-ofmipd	Enable dependency on mess822 for ofmipd service.
 qmail-srs		Patch to implement Sender Rewriting Scheme with libsrs2.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
@@ -801,6 +800,7 @@ w3m-image-imlib		Use imlib as imaging library for W3m.
 w3m-image-imlib2	Use imlib2 as imaging library for W3m.
 w3m-lynx-key		Enable lynx-like key bindings.
 wavpack			Enable wavpack support.
+webdav			Enable WebDAV support.
 webkit-jit		Enable JIT compilation.
 webrtc			Enable web realtime communications API.
 websocket		Websocket protocol support (as specified in RFC6455)
