@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2015/12/13 17:12:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2017/06/21 13:46:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.md
-${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/liquid.rb
 ${GEM_LIBDIR}/lib/liquid/block.rb
@@ -14,18 +14,21 @@ ${GEM_LIBDIR}/lib/liquid/errors.rb
 ${GEM_LIBDIR}/lib/liquid/expression.rb
 ${GEM_LIBDIR}/lib/liquid/extensions.rb
 ${GEM_LIBDIR}/lib/liquid/file_system.rb
+${GEM_LIBDIR}/lib/liquid/forloop_drop.rb
 ${GEM_LIBDIR}/lib/liquid/i18n.rb
 ${GEM_LIBDIR}/lib/liquid/interrupts.rb
 ${GEM_LIBDIR}/lib/liquid/lexer.rb
 ${GEM_LIBDIR}/lib/liquid/locales/en.yml
-${GEM_LIBDIR}/lib/liquid/module_ex.rb
+${GEM_LIBDIR}/lib/liquid/parse_context.rb
 ${GEM_LIBDIR}/lib/liquid/parser.rb
 ${GEM_LIBDIR}/lib/liquid/parser_switching.rb
 ${GEM_LIBDIR}/lib/liquid/profiler.rb
 ${GEM_LIBDIR}/lib/liquid/profiler/hooks.rb
 ${GEM_LIBDIR}/lib/liquid/range_lookup.rb
+${GEM_LIBDIR}/lib/liquid/resource_limits.rb
 ${GEM_LIBDIR}/lib/liquid/standardfilters.rb
 ${GEM_LIBDIR}/lib/liquid/strainer.rb
+${GEM_LIBDIR}/lib/liquid/tablerowloop_drop.rb
 ${GEM_LIBDIR}/lib/liquid/tag.rb
 ${GEM_LIBDIR}/lib/liquid/tags/assign.rb
 ${GEM_LIBDIR}/lib/liquid/tags/break.rb
@@ -44,7 +47,7 @@ ${GEM_LIBDIR}/lib/liquid/tags/raw.rb
 ${GEM_LIBDIR}/lib/liquid/tags/table_row.rb
 ${GEM_LIBDIR}/lib/liquid/tags/unless.rb
 ${GEM_LIBDIR}/lib/liquid/template.rb
-${GEM_LIBDIR}/lib/liquid/token.rb
+${GEM_LIBDIR}/lib/liquid/tokenizer.rb
 ${GEM_LIBDIR}/lib/liquid/utils.rb
 ${GEM_LIBDIR}/lib/liquid/variable.rb
 ${GEM_LIBDIR}/lib/liquid/variable_lookup.rb
@@ -54,6 +57,7 @@ ${GEM_LIBDIR}/test/integration/assign_test.rb
 ${GEM_LIBDIR}/test/integration/blank_test.rb
 ${GEM_LIBDIR}/test/integration/capture_test.rb
 ${GEM_LIBDIR}/test/integration/context_test.rb
+${GEM_LIBDIR}/test/integration/document_test.rb
 ${GEM_LIBDIR}/test/integration/drop_test.rb
 ${GEM_LIBDIR}/test/integration/error_handling_test.rb
 ${GEM_LIBDIR}/test/integration/filter_test.rb
@@ -75,6 +79,7 @@ ${GEM_LIBDIR}/test/integration/tags/statements_test.rb
 ${GEM_LIBDIR}/test/integration/tags/table_row_test.rb
 ${GEM_LIBDIR}/test/integration/tags/unless_else_tag_test.rb
 ${GEM_LIBDIR}/test/integration/template_test.rb
+${GEM_LIBDIR}/test/integration/trim_mode_test.rb
 ${GEM_LIBDIR}/test/integration/variable_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/unit/block_unit_test.rb
@@ -83,7 +88,6 @@ ${GEM_LIBDIR}/test/unit/context_unit_test.rb
 ${GEM_LIBDIR}/test/unit/file_system_unit_test.rb
 ${GEM_LIBDIR}/test/unit/i18n_unit_test.rb
 ${GEM_LIBDIR}/test/unit/lexer_unit_test.rb
-${GEM_LIBDIR}/test/unit/module_ex_unit_test.rb
 ${GEM_LIBDIR}/test/unit/parser_unit_test.rb
 ${GEM_LIBDIR}/test/unit/regexp_unit_test.rb
 ${GEM_LIBDIR}/test/unit/strainer_unit_test.rb
