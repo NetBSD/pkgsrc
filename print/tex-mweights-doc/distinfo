@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/01/20 21:43:59 markd Exp $
+$NetBSD: distinfo,v 1.2 2017/06/21 10:14:21 markd Exp $
 
-SHA1 (tex-mweights-31268/mweights.doc.tar.xz) = fc2ad0e6d58dc986e73c3139b97dd4b05d824c0d
-RMD160 (tex-mweights-31268/mweights.doc.tar.xz) = 9c291ccca2d6e1d99054781ef509dd46dc1c6869
-SHA512 (tex-mweights-31268/mweights.doc.tar.xz) = 939842bfa3c297ce4768ae438a1065ddb7fb7521ec9909e66aa433da4465c29028ffef5cfdfc21ab2338cd4dd9316b6f78331859121f57cecfa39908df26ad4c
-Size (tex-mweights-31268/mweights.doc.tar.xz) = 1256 bytes
+SHA1 (tex-mweights-43647/mweights.doc.tar.xz) = 0084ca368b7f09bb2c1a1b6cbadf1d271c0d9f97
+RMD160 (tex-mweights-43647/mweights.doc.tar.xz) = ac9cec1a333ccd7327d4fdb0e7360bb636ce566c
+SHA512 (tex-mweights-43647/mweights.doc.tar.xz) = 776f877697b1d70201029c7480e835c3453334a790e1e56a06c3e80d3a658a319cafffe950d65c8ad109c945a19a2232ad42ff2d61dedca618952d2d3820080b
+Size (tex-mweights-43647/mweights.doc.tar.xz) = 1252 bytes
