@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2017/04/14 12:10:26 leot Exp $
+$NetBSD: distinfo,v 1.2 2017/06/21 09:41:38 adam Exp $
 
-SHA1 (brotlipy-0.6.0.tar.gz) = 2b7feb0fb726f51eb3ec0c1b6cd385f64186ef86
-RMD160 (brotlipy-0.6.0.tar.gz) = 1a23de5291aa72296922158860fda4577170d939
-SHA512 (brotlipy-0.6.0.tar.gz) = 7fdeebaf50565cd57c98cd60297c50a8482283b9d71a382d0e92068eeec1d3d9dd50735d81ac8b196e54291c9cbe9fd3ef27c939ecdc2a164dc9a08b3f57f35c
-Size (brotlipy-0.6.0.tar.gz) = 437694 bytes
+SHA1 (brotlipy-0.7.0.tar.gz) = ae880c80acc4f10ac86cfadaf98cb5bb579e37b5
+RMD160 (brotlipy-0.7.0.tar.gz) = 5dc61c1902685aa05e263b124840d54e28cecbaa
+SHA512 (brotlipy-0.7.0.tar.gz) = 2a01e5b2d217043f13316afc4f54569c5dff76d31c296d4be563a5851195380ab80a33a3035ca95effdebffb45806fb9a431a181bba6f9af205b7f5576937268
+Size (brotlipy-0.7.0.tar.gz) = 413338 bytes
