@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2017/04/14 12:22:25 leot Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 10:02:18 adam Exp $
 
-DISTNAME=	jsbeautifier-1.6.12
+DISTNAME=	jsbeautifier-1.6.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsbeautifier/}
