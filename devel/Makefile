@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2447 2017/06/10 16:25:55 taca Exp $
+# $NetBSD: Makefile,v 1.2448 2017/06/21 14:49:56 taca Exp $
 #
 
 COMMENT=	Development utilities
@@ -2133,7 +2133,6 @@ SUBDIR+=	ruby-dep
 SUBDIR+=	ruby-deprecated
 SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-docile
-SUBDIR+=	ruby-dotenv
 SUBDIR+=	ruby-eet
 SUBDIR+=	ruby-eventmachine
 SUBDIR+=	ruby-extlib
