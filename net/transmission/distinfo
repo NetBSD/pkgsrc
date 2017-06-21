@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2016/04/15 09:28:39 wiz Exp $
+$NetBSD: distinfo,v 1.9.8.1 2017/06/21 18:51:30 bsiegert Exp $
 
 SHA1 (transmission-2.92.tar.xz) = 2140feba45c4471392033d21b86b6f3ef780d88e
 RMD160 (transmission-2.92.tar.xz) = 6da78ce333fa2ea69aa4954c3b052a818ce7c93e
 SHA512 (transmission-2.92.tar.xz) = 4d99476bee88cedcc4238a0eee64a4089016933cbfc1cfb1cca023ad4ebcfe46375c9e7651a17af4aeaaf1feb19cbd8166aa56ef7992d9e745a7bbcbe8efca11
 Size (transmission-2.92.tar.xz) = 3378116 bytes
 SHA1 (patch-ab) = 796faa7c61762dc3ffe563748e55160c827149d2
+SHA1 (patch-libtransmission_platform-quota.c) = 2d9758d24c4329021e0774ac9f8bb3dd94592965
 SHA1 (patch-qt_qtr.pro) = 8d83709175fb4b9a88c3766b130b39160aeadaa3
