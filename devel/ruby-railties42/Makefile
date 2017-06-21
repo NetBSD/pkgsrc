@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2017/05/04 07:37:09 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/21 13:13:48 taca Exp $
 
-DISTNAME=	railties-${RUBY_RAILS_VERSION}
+DISTNAME=	railties-${RAILS_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,8 +15,15 @@ DEPENDS+=	${RUBY_PKGPREFIX}-thor>=0.18.1<2.0:../../devel/ruby-thor
 
 RUBY_RAILS_SUPPORTED=	42
 RUBY_RAILS_STRICT_DEP=	yes
-USE_RAKE=		RUN
-OVERRIDE_GEMSPEC+=	rack-ssl>=1.3.2 rdoc>=3.4
+RUBYGEM_OPTIONS+=	--format-executable
+RUBYGEM_OPTIONS+=	--format-executable
+OVERRIDE_GEMSPEC+=	rack-ssl>=1.3.2 rdoc>=3.4 \
+			:executables rails=rails42 :files bin/rails=bin/rails42
+
+pre-configure:
+	${TEST} ! -f ${WRKSRC}/bin/rails || \
+		${MV} ${WRKSRC}/bin/rails ${WRKSRC}/bin/rails42
+	${CHMOD} ${BINMODE} ${WRKSRC}/bin/rails42
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
