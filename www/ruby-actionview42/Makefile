@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/04/19 22:36:13 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:21 taca Exp $
 
-DISTNAME=	actionview-${RUBY_RAILS_VERSION}
+DISTNAME=	actionview-${RAILS_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-actionview${RUBY_RAILS}-${RAILS_VERSION}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

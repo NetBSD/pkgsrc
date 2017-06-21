@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/05/04 15:10:34 taca Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/21 13:12:20 taca Exp $
 
 DISTNAME=	awesome_nested_set-2.1.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ HOMEPAGE=	http://github.com/collectiveidea/awesome_nested_set
 COMMENT=	Awesome nested set implementation for Active Record
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activerecord>=3.0.0:${RUBY_RAILS32_ACTIVERECORD}
+DEPENDS+=	${RUBY_ACTIVERECORD_DEPENDS}
 
 RUBY_RAILS_SUPPORTED=	32
 USE_LANGUAGES=	# none
