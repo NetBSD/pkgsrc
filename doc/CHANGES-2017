@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2554 2017/06/21 22:19:26 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2555 2017/06/21 22:22:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added www/py-channels version 1.1.5 [adam 2017-06-21]
 	Updated www/lighttpd to 1.4.45nb2 [schmonz 2017-06-21]
 	Added textproc/ruby-temple version 0.8.0 [taca 2017-06-21]
+	Updated meta-pkgs/bulk-large to 20160621 [taca 2017-06-21]
