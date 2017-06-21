@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 04:52:49 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 13:25:34 markd Exp $
 
 DISTNAME=	texdoc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2014
-TEXLIVE_REV=	34180
+PKGNAME=	tex-${DISTNAME:S/./-/}-2017
+TEXLIVE_REV=	44432
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/texdoc
 COMMENT=	Documentation for tex-texdoc
 LICENSE=	gnu-gpl-v3
 
