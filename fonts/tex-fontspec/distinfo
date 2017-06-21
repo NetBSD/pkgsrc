@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/06/16 03:57:29 markd Exp $
+$NetBSD: distinfo,v 1.11 2017/06/21 06:13:16 markd Exp $
 
-SHA1 (tex-fontspec-41262/fontspec.tar.xz) = 2724d1acd00b4196ef7cdcec088184b190fcd7f0
-RMD160 (tex-fontspec-41262/fontspec.tar.xz) = aa723b5e1b8d7943a9734baea120e2e961d96886
-SHA512 (tex-fontspec-41262/fontspec.tar.xz) = c562e0749820244a3c73399886d86f3a0d2e5967945050dd7860ab1ac73212e9b5a9bd61748539053902191738b74b3f79cb3bc6010a2d07df68b9aa31eb8dd9
-Size (tex-fontspec-41262/fontspec.tar.xz) = 24060 bytes
+SHA1 (tex-fontspec-43661/fontspec.tar.xz) = fa132dbcb3a19eacac799c45629820c919be7574
+RMD160 (tex-fontspec-43661/fontspec.tar.xz) = 0984b8b01310855960443f72ae0785cfb3087130
+SHA512 (tex-fontspec-43661/fontspec.tar.xz) = 20fb4c00a1c6ff562b05595a73d3dfec47454d8a61a362c657925a20ecba63624665b4dce06ed74a68bbc581689d7a9e8b23093538f97b3a8c2933ac6f196f21
+Size (tex-fontspec-43661/fontspec.tar.xz) = 24944 bytes

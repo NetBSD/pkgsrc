@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/21 06:13:15 markd Exp $
 share/texmf-dist/fonts/afm/public/fetamont/ffmb10.afm
 share/texmf-dist/fonts/afm/public/fetamont/ffmb8.afm
 share/texmf-dist/fonts/afm/public/fetamont/ffmb9.afm
@@ -84,8 +84,7 @@ share/texmf-dist/fonts/source/public/fetamont/ffmbo9.mf
 share/texmf-dist/fonts/source/public/fetamont/ffmbw10.mf
 share/texmf-dist/fonts/source/public/fetamont/ffmbwo10.mf
 share/texmf-dist/fonts/source/public/fetamont/ffmc10.mf
-share/texmf-dist/fonts/source/public/fetamont/ffmchars_nonscalable.mf
-share/texmf-dist/fonts/source/public/fetamont/ffmchars_scalable.mf
+share/texmf-dist/fonts/source/public/fetamont/ffmchars_uni.mf
 share/texmf-dist/fonts/source/public/fetamont/ffmco10.mf
 share/texmf-dist/fonts/source/public/fetamont/ffmh10.mf
 share/texmf-dist/fonts/source/public/fetamont/ffmh8.mf
@@ -183,6 +182,7 @@ share/texmf-dist/fonts/type1/public/fetamont/ffmr8.pfb
 share/texmf-dist/fonts/type1/public/fetamont/ffmr9.pfb
 share/texmf-dist/fonts/type1/public/fetamont/ffmw10.pfb
 share/texmf-dist/fonts/type1/public/fetamont/ffmwo10.pfb
+share/texmf-dist/metapost/fetamont/ffmconstructions.mp
 share/texmf-dist/tex/latex/fetamont/T1ffm.fd
 share/texmf-dist/tex/latex/fetamont/T1ffmw.fd
 share/texmf-dist/tex/latex/fetamont/fetamont.sty

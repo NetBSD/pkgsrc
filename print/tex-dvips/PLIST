@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/06/21 06:13:14 markd Exp $
+share/texmf-dist/dvips/base/color.pro
+share/texmf-dist/dvips/base/crop.pro
+share/texmf-dist/dvips/base/finclude.pro
+share/texmf-dist/dvips/base/hps.pro
+share/texmf-dist/dvips/base/resolution400.ps
+share/texmf-dist/dvips/base/special.pro
+share/texmf-dist/dvips/base/tex.pro
+share/texmf-dist/dvips/base/texc.pro
+share/texmf-dist/dvips/base/texps.pro
 share/texmf-dist/dvips/config/alt-rule.pro
 share/texmf-dist/dvips/config/canonex.cfg
 share/texmf-dist/dvips/config/config.bakoma
