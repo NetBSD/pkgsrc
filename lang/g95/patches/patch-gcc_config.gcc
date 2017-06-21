@@ -1,8 +1,9 @@
-$NetBSD: patch-gcc_config.gcc,v 1.4 2016/09/27 20:51:11 maya Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.4.6.1 2017/06/21 18:53:33 bsiegert Exp $
 
 Darwin 64-bit support.
 DragonFly BSD support.
 FreeBSD 10 to 12 support.
+NetBSD/mips64 should default to n32 ABI
 
 --- ../gcc-4.1.2/gcc/config.gcc.orig	2006-10-15 23:12:23.000000000 +0000
 +++ ../gcc-4.1.2/gcc/config.gcc
@@ -65,3 +66,15 @@ FreeBSD 10 to 12 support.
  i[34567]86-*-netbsdelf*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
  	;;
+@@ -1473,6 +1504,11 @@ mips-sgi-irix[56]*)
+ #	fi
+ 	use_fixproto=yes
+ 	;;
++mips64*-*-netbsd*)			# NetBSD/mips64, either endian.
++	target_cpu_default="MASK_ABICALLS"
++	tm_defines="MIPS_ISA_DEFAULT=3 MIPS_ABI_DEFAULT=ABI_N32"
++	tm_file="elfos.h ${tm_file} mips/elf.h netbsd.h netbsd-elf.h mips/netbsd.h"
++	;;
+ mips*-*-netbsd*)			# NetBSD/mips, either endian.
+ 	target_cpu_default="MASK_ABICALLS"
+ 	tm_file="elfos.h ${tm_file} mips/elf.h netbsd.h netbsd-elf.h mips/netbsd.h"
