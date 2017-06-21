@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/09/25 05:46:56 taca Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/21 15:42:10 taca Exp $
 
 DISTNAME=	activeldap-3.2.2
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	taca@NetBSD.org
