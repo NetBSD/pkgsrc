@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/21 13:25:35 markd Exp $
 share/texmf-dist/doc/latex/tools/README.txt
 share/texmf-dist/doc/latex/tools/afterpage.pdf
 share/texmf-dist/doc/latex/tools/array.pdf
@@ -23,7 +23,6 @@ share/texmf-dist/doc/latex/tools/showkeys.pdf
 share/texmf-dist/doc/latex/tools/somedefs.pdf
 share/texmf-dist/doc/latex/tools/tabularx.pdf
 share/texmf-dist/doc/latex/tools/theorem.pdf
-share/texmf-dist/doc/latex/tools/tlb-shellesc-001.pdf
 share/texmf-dist/doc/latex/tools/tools-overview.pdf
 share/texmf-dist/doc/latex/tools/tools-overview.tex
 share/texmf-dist/doc/latex/tools/trace.pdf
