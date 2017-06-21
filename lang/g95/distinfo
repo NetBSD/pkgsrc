@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2016/10/02 23:26:39 maya Exp $
+$NetBSD: distinfo,v 1.28.4.1 2017/06/21 18:53:33 bsiegert Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -12,12 +12,14 @@ SHA1 (patch-ab) = 7429a4da26aa573dcdd94bf417da1e009f95d273
 SHA1 (patch-configure) = 48450808201d4ea5ddb993627c4efeaf43d53bd2
 SHA1 (patch-g95spec.c) = d6f434e715835cd39511c45ed18632c8401b78a2
 SHA1 (patch-gcc_Makefile.in) = cc5cc142a85612ebf2d38513e4b05db0ae795268
-SHA1 (patch-gcc_config.gcc) = ed135c425730d231182e36af840278d307396c6e
+SHA1 (patch-gcc_config.gcc) = 41c7b8c86dc87032159126d33b33ae4d0265fb07
 SHA1 (patch-gcc_config_dragonfly-spec.h) = bf0c97caa314714542cf8cc63fdf0c73bda80511
 SHA1 (patch-gcc_config_dragonfly.h) = 6d46b7b4637a20b36e19a15e1eaffdfff6638de9
 SHA1 (patch-gcc_config_freebsd-spec.h) = 508304b26b592518c3d3f43f466ac0a6542b2704
 SHA1 (patch-gcc_config_i386_dragonfly.h) = 7d60d29b5ae636d69650e8c412a94f7a6045f6d9
 SHA1 (patch-gcc_config_i386_dragonfly64.h) = 9d2d8512a913e58055fa5c1b7d85a109117dcfba
+SHA1 (patch-gcc_config_mips_netbsd.h) = 8888ecaa470e38a82ec56e332658fd32c9e5e86c
+SHA1 (patch-gcc_config_rs600_netbsd.h) = 2e568e48f84024b7182762107c4ee76ee87fe43c
 SHA1 (patch-gcc_config_t-dragonfly) = dd8d5919af737dfb9e3c18be9a41b4e2c6f31155
 SHA1 (patch-gcc_config_t-dragonfly-thread) = ebdb58dacf0dc5d0bf2f1f1707a7c6ab29ee308c
 SHA1 (patch-gcc_ginclude_stddef.h) = 60f51a470e03173803b5e20b1fa4d6882e8d1fe9
