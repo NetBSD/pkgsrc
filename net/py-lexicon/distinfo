@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2017/06/15 18:04:37 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2017/06/21 13:42:18 fhajny Exp $
 
-SHA1 (lexicon-2.1.7.tar.gz) = a195edc2e70d1980e3059812895303d2ac268a35
-RMD160 (lexicon-2.1.7.tar.gz) = 206e271f8d91de39f20205a1a8929baa128af799
-SHA512 (lexicon-2.1.7.tar.gz) = 65cd15dd176c515d06c03ad505d0bf94907a83f6a40f2021f11585aa19a213b5bf46ce5b4c55e2b814c6e9f99a1c07d80484a6d52b76b95a25af88a7d3163ab9
-Size (lexicon-2.1.7.tar.gz) = 218156 bytes
+SHA1 (lexicon-2.1.8.tar.gz) = 0e88354a686ec1431d61248da66bd9131dbe90da
+RMD160 (lexicon-2.1.8.tar.gz) = d7eab0e015e53f68fe42b1fc11b2cd8403f5ca1b
+SHA512 (lexicon-2.1.8.tar.gz) = 5e2ecf272b4d8381d64c1d78b5986a2928dbb45c556280420b2c2e2e596054ee159819f75ba0aba81f5535c1929e2165ed186e48fffadf8bf0502751bff8226a
+Size (lexicon-2.1.8.tar.gz) = 225079 bytes
