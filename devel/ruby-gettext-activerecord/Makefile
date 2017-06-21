@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/06/03 13:48:15 taca Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/21 15:42:10 taca Exp $
 
 DISTNAME=	gettext_activerecord-2.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
