@@ -1,20 +1,13 @@
-# $NetBSD: options.mk,v 1.6 2017/03/12 20:58:20 wiz Exp $
-
-# Global and legacy options
+# $NetBSD: options.mk,v 1.7 2017/06/21 07:10:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme gssapi idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
-PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
-PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
-PKG_SUGGESTED_OPTIONS=	ncursesw gpgme idn mutt-hcache mutt-smtp sasl smime ssl
+PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet
+PKG_SUGGESTED_OPTIONS=	ncursesw gpgme idn mutt-hcache sasl smime ssl
 PKG_SUGGESTED_OPTIONS+=	gssapi
-PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
-PKG_SUGGESTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
-PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
-PKG_SUGGESTED_OPTIONS+=	mutt-sidebar
+PKG_SUGGESTED_OPTIONS+=	mutt-hcache tokyocabinet
 
 .include "../../mk/bsd.options.mk"
 
@@ -125,25 +118,8 @@ CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
 CONFIGURE_ARGS+=	--disable-hcache
 .endif
 
-###
-### Compressed mail boxes
-###
-PLIST_VARS+=		compressed_mbox
-.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
-CONFIGURE_ARGS+=	--enable-compressed
-# add xsltproc to be able to regenerate the documentation
-BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
-BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-.endif
-
-###
-### Internal SMTP relay support
-###
-.if !empty(PKG_OPTIONS:Mmutt-smtp)
-CONFIGURE_ARGS+=	--enable-smtp
-.else
-CONFIGURE_ARGS+=	--disable-smtp
-.endif
+#BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+#BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 ###
 ### Internationalized Domain Names
@@ -172,13 +148,4 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--with-gpgme-prefix=${BUILDLINK_PREFIX.gpgme}
 .else
 CONFIGURE_ARGS+=	--disable-gpgme
-.endif
-
-###
-### sidebar support
-###
-.if !empty(PKG_OPTIONS:Mmutt-sidebar)
-CONFIGURE_ARGS+=	--enable-sidebar
-.else
-CONFIGURE_ARGS+=	--disable-sidebar
 .endif

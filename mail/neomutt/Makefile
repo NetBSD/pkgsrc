@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2017/06/14 16:07:12 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2017/06/21 07:10:56 wiz Exp $
 
 DISTNAME=		neomutt-20170609
 CATEGORIES=		mail
@@ -14,12 +14,8 @@ USE_TOOLS+=		autoconf automake autoreconf msgfmt gmake
 
 BUILD_DEPENDS+=		gettext-tools-[0-9]*:../../devel/gettext-tools
 
-SPECIAL_PERMS+=		bin/mutt_dotlock ${REAL_ROOT_USER} mail 2551
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-external-dotlock
-CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ARGS+=	--enable-notmuch
-CONFIGURE_ARGS+=	--enable-pop
 #CONFIGURE_ARGS+=	CFLAGS="-g -O0"
 
 EGDIR=			${PREFIX}/share/examples/mutt
