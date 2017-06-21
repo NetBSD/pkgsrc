@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:45:18 agc Exp $
+$NetBSD: distinfo,v 1.4 2017/06/21 13:25:32 markd Exp $
 
-SHA1 (tex-sourcesanspro-37379/sourcesanspro.tar.xz) = 9eeb4381f2f994334c815c7032987e5cb5c9840a
-RMD160 (tex-sourcesanspro-37379/sourcesanspro.tar.xz) = 7d625142ce30b5dd514c698bd5aa9cce877e5d28
-SHA512 (tex-sourcesanspro-37379/sourcesanspro.tar.xz) = f8abf09c2672934f01de603acfa1462f8e34a9261f173acfbb2cb6a495cc00396b37fd73ccfaed56865bcc5be26eb08969874bcd79e83ab2963834bd939d0e0d
-Size (tex-sourcesanspro-37379/sourcesanspro.tar.xz) = 3488052 bytes
+SHA1 (tex-sourcesanspro-42852/sourcesanspro.tar.xz) = c9a36345defd13ae9285aab053658664eb86130b
+RMD160 (tex-sourcesanspro-42852/sourcesanspro.tar.xz) = 56dae286a6750b7cd238cdb37fe74eb65986e482
+SHA512 (tex-sourcesanspro-42852/sourcesanspro.tar.xz) = 978429517207c61d9b9343d76d7407685c1fba49d0a2155f391dfcc5e52965edf797ebe8eb67cb0cd983d58fd9c4c4635d5e0a87a073aebc27e37c4194a8997e
+Size (tex-sourcesanspro-42852/sourcesanspro.tar.xz) = 3463260 bytes
