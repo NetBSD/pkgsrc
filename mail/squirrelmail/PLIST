@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2015/09/06 12:04:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.41 2017/06/21 15:07:03 taca Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/data/.htaccess
 share/examples/squirrelmail/data/index.php
@@ -325,6 +325,7 @@ share/squirrelmail/plugins/squirrelspell/js/index.php
 share/squirrelmail/plugins/squirrelspell/js/init.js
 share/squirrelmail/plugins/squirrelspell/modules/.htaccess
 share/squirrelmail/plugins/squirrelspell/modules/WHATISTHIS
+share/squirrelmail/plugins/squirrelspell/modules/change_main_options.mod
 share/squirrelmail/plugins/squirrelspell/modules/check_me.mod
 share/squirrelmail/plugins/squirrelspell/modules/crypto.mod
 share/squirrelmail/plugins/squirrelspell/modules/crypto_badkey.mod
