@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:47:39 agc Exp $
+$NetBSD: distinfo,v 1.11 2017/06/21 15:11:10 taca Exp $
 
 SHA1 (squidGuard-1.4-patch-20091015.tar.gz) = b6ad4c67222463e6bafa002593e947d73929db18
 RMD160 (squidGuard-1.4-patch-20091015.tar.gz) = 08991337d2966d44dbe2a9a131b26fa881e1e807
@@ -16,3 +16,5 @@ SHA1 (squidGuard-1.4_upgrade.patch) = 4ad24b5fe6891450bf4da1a0469f8350715e8cf4
 RMD160 (squidGuard-1.4_upgrade.patch) = 9a4bf9c52cec21ddb12a310c2436974faedb5b70
 SHA512 (squidGuard-1.4_upgrade.patch) = 9f7dc291d1a91b027856b4b9c5a16a46cca4558018e63c4afffef1ab39bd5ed9eefe72871b5a14328681e2aa9053789c8ac01a7b657f9de387581af29cdf93cf
 Size (squidGuard-1.4_upgrade.patch) = 2619 bytes
+SHA1 (patch-samples_babel.ro) = 90a8602b88052084dade6bc5b012804df29540e0
+SHA1 (patch-samples_squidGuard.cgi.in) = 06d0f01d5e8412fc4192e37c265761d49b77d9f7
