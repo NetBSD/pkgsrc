@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2016/08/07 07:17:36 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/21 06:13:15 markd Exp $
 
 DISTNAME=	fbb
-PKGNAME=	tex-${DISTNAME}-1.11
-TEXLIVE_REV=	41408
+PKGNAME=	tex-${DISTNAME}-1.12
+TEXLIVE_REV=	43464
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fbb
 COMMENT=	Free Bembo-like font
-LICENSE=	ofl-v1.1
+LICENSE=	ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	fbb.map
 
