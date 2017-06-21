@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 08:28:42 markd Exp $
 
 DISTNAME=	libertine
-PKGNAME=	tex-${DISTNAME}-5.3.0
-TEXLIVE_REV=	36755
+PKGNAME=	tex-${DISTNAME}-5.3.0.43603
+TEXLIVE_REV=	43603
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/libertine
 COMMENT=	Use of Linux Libertine and Biolinum fonts with LaTeX
-LICENSE=	lppl-1.3c
+LICENSE=	gnu-gpl-v2 AND ofl-v1.1 AND lppl-1.3c
 
 TEX_MAP_FILES+=	libertine.map
 
