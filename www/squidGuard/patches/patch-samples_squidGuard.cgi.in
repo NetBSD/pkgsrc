@@ -1,0 +1,67 @@
+$NetBSD: patch-samples_squidGuard.cgi.in,v 1.1 2017/06/21 15:11:10 taca Exp $
+
+* Apply content of squidGuard-1.4-patch-20150201.
+
+--- samples/squidGuard.cgi.in.orig	2008-12-23 21:08:35.000000000 +0000
++++ samples/squidGuard.cgi.in
+@@ -57,14 +57,15 @@ sub showinaddr($$$$$);
+ #
+ # CONFIGURABLE OPTIONS:
+ #
+-# (Currently: "en", "fr", "de", "es", "nl", "no")
++# (Currently: "en", "fr", "de", "es", "nl", "no", "ru")
+ @supported   = (
+ 		"en (English), ",
+-		"fr (Français), ",
++		"fr (Fran&#231;ais), ",
+ 		"de (Deutsch), ",
+-		"es (Español), ",
++		"es (Espa&#241;ol), ",
+ 		"nl (Nederlands), ",
+-		"no (Norsk)."
++		"no (Norsk), ",
++		"ru (Russian)."
+ 	       );
+ #
+ # Modifiy the values below to reflect you environment
+@@ -142,7 +143,7 @@ sub parsequery($) {
+ }
+ 
+ #
+-# PRINT HTTP STATUS HEARER:
++# PRINT HTTP STATUS HEADER:
+ #
+ sub status($) {
+   my $status = shift;
+@@ -150,7 +151,7 @@ sub status($) {
+ }
+ 
+ #
+-# PRINT HTTP LOCATION HEARER:
++# PRINT HTTP LOCATION HEADER:
+ #
+ sub redirect($) {
+   my $location = shift;
+@@ -249,7 +250,7 @@ sub showinaddr($$$$$) {
+     status("404 Not Found");
+   }
+   if (@names) {
+-    print "Content-type: text/html\n\n";
++    print "Content-type: text/html\n\n\n";
+     print "<!DOCTYPE html PUBLIC \"-//W3C//DTD  HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n";
+     print "<html><head>\n";
+     print "<title>$Babel{Title}</title>\n";
+@@ -317,9 +318,12 @@ if ($targetgroup eq "in-addr") {
+    showinaddr($targetgroup,$protocol,$address,$port,$path);
+ }
+ 
++$url =~ s/</&lt;/g ;
++$url =~ s/>/&gt;/g ;
++
+ status("403 Forbidden");
+ expires(0);
+-print "Content-type: text/html\n\n";
++print "Content-type: text/html\n\n\n";
+ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD  HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n";
+ print "<html><head>\n";
+ print "<title>$Babel{Title}</title>\n";
