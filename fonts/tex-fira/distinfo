@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 03:57:28 markd Exp $
+$NetBSD: distinfo,v 1.6 2017/06/21 06:13:16 markd Exp $
 
-SHA1 (tex-fira-39731/fira.tar.xz) = 74c673da413c6592999f4c254cf0db1555dc6c18
-RMD160 (tex-fira-39731/fira.tar.xz) = 51d4d3e939acdb4bc7a52a1dc382a4f0e4e44845
-SHA512 (tex-fira-39731/fira.tar.xz) = d8d361e2ee373ee763d71aa63667f04367e9c2fa87e4a79b6c3161ae69ea2a11ca55b8398a710e5da1e6774c28fb5b16d4658d8c48d131061c1a51028e91fe37
-Size (tex-fira-39731/fira.tar.xz) = 12121648 bytes
+SHA1 (tex-fira-42501/fira.tar.xz) = f3b9e01f3c140c1d6fdb7055177b5532784608af
+RMD160 (tex-fira-42501/fira.tar.xz) = 801bf4c1c8b44a8820e49d81cd169669a192e36a
+SHA512 (tex-fira-42501/fira.tar.xz) = d36b7be43b843e1ad6efbdf644eab439864583cdd1a54076bfb4f2dc1c3064364dff6f148dd101e93e299c77bcc815fd01e2935e762d8c6e588744595a3def47
+Size (tex-fira-42501/fira.tar.xz) = 13483452 bytes
