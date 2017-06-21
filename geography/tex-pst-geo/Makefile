@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:28:41 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 11:45:58 markd Exp $
 
 DISTNAME=	pst-geo
-PKGNAME=	tex-${DISTNAME}-2.03
-TEXLIVE_REV=	17751
+PKGNAME=	tex-${DISTNAME}-2.06
+TEXLIVE_REV=	44131
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pst-geo
 COMMENT=	Geographical Projections
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-pst-node-[0-9]*:../../graphics/tex-pst-node
 DEPENDS+=	tex-pstricks-[0-9]*:../../graphics/tex-pstricks

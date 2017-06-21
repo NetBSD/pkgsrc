@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:00:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/21 11:46:00 markd Exp $
 share/texmf-dist/doc/generic/pstricks-add/Changes
 share/texmf-dist/doc/generic/pstricks-add/README
 share/texmf-dist/doc/generic/pstricks-add/data/contourN.data
@@ -13,6 +13,9 @@ share/texmf-dist/doc/generic/pstricks-add/data/dotmatrix.data
 share/texmf-dist/doc/generic/pstricks-add/data/matrix.data
 share/texmf-dist/doc/generic/pstricks-add/data/matrix1.data
 share/texmf-dist/doc/generic/pstricks-add/data/matrix2.data
+share/texmf-dist/doc/generic/pstricks-add/data/olympic.eps
+share/texmf-dist/doc/generic/pstricks-add/data/olympic.pdf
+share/texmf-dist/doc/generic/pstricks-add/data/olympic.tex
 share/texmf-dist/doc/generic/pstricks-add/data/pstricks-add-doc.data
 share/texmf-dist/doc/generic/pstricks-add/pstricks-add-doc.bib
 share/texmf-dist/doc/generic/pstricks-add/pstricks-add-doc.pdf

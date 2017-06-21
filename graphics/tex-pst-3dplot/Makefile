@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 04:05:51 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 11:45:58 markd Exp $
 
 DISTNAME=	pst-3dplot
-PKGNAME=	tex-${DISTNAME}-2.01
-TEXLIVE_REV=	35042
+PKGNAME=	tex-${DISTNAME}-2.04
+TEXLIVE_REV=	43703
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pst-3dplot
 COMMENT=	Draw 3D objects in parallel projection, using PSTricks
 LICENSE=	lppl-1.3c
 

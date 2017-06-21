@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/09/20 13:03:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/21 11:45:57 markd Exp $
+share/texmf-dist/doc/latex/polski/README
 share/texmf-dist/doc/latex/polski/conowego.txt
 share/texmf-dist/doc/latex/polski/czytaj.txt
 share/texmf-dist/doc/latex/polski/polski.pdf
-share/texmf-dist/doc/latex/polski/readme.txt
+share/texmf-dist/doc/latex/polski/sample-polski.pdf
 share/texmf-dist/doc/latex/polski/sample-polski.tex
 share/texmf-dist/doc/latex/polski/sample-rysunek.mp
 share/texmf-dist/doc/latex/polski/sample-rysunek1.mps

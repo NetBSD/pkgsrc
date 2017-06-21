@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/04/23 22:32:02 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 11:45:59 markd Exp $
 
 DISTNAME=	pst-tools
-PKGNAME=	tex-${DISTNAME}-0.05
-TEXLIVE_REV=	34067
+PKGNAME=	tex-${DISTNAME}-0.06
+TEXLIVE_REV=	44320
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pst-tools
