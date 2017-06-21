@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/10/15 13:48:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/06/21 13:59:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/Rakefile
@@ -18,6 +18,7 @@ ${GEM_LIBDIR}/lib/mini_magick/tool/display.rb
 ${GEM_LIBDIR}/lib/mini_magick/tool/identify.rb
 ${GEM_LIBDIR}/lib/mini_magick/tool/import.rb
 ${GEM_LIBDIR}/lib/mini_magick/tool/mogrify.rb
+${GEM_LIBDIR}/lib/mini_magick/tool/mogrify_restricted.rb
 ${GEM_LIBDIR}/lib/mini_magick/tool/montage.rb
 ${GEM_LIBDIR}/lib/mini_magick/tool/stream.rb
 ${GEM_LIBDIR}/lib/mini_magick/utilities.rb
