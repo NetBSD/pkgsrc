@@ -1,29 +1,39 @@
-$NetBSD: patch-ac,v 1.2 2015/02/23 18:27:09 joerg Exp $
+$NetBSD: patch-ac,v 1.2.18.1 2017/06/21 18:20:04 bsiegert Exp $
+
+Use system macros if available.
 
 --- bytesex.h.orig	2003-08-31 17:23:48.000000000 +0000
 +++ bytesex.h
-@@ -7,19 +7,18 @@
+@@ -7,11 +7,25 @@
  #ifndef ARS_BYTESEX_H
  #define ARS_BYTESEX_H
  
 -#if 	defined(__i386__) \
--	|| defined(__alpha__) \
--	|| (defined(__mips__) && (defined(MIPSEL) || defined (__MIPSEL__)))
++#ifdef __NetBSD__
 +#include <sys/endian.h>
++#endif
 +
-+#if defined(_BYTE_ORDER) && defined(_LITTLE_ENDIAN) && (_BYTE_ORDER == _LITTLE_ENDIAN)
++#if defined(_BYTE_ORDER) && defined(_LITTLE_ENDIAN) && (_BYTE_ORDER == _LITTLE_ENDIAN - 0)
 +#define BYTE_ORDER_LITTLE_ENDIAN
-+#elif defined(__BYTE_ORDER) && defined(__LITTLE_ENDIAN) && (__BYTE_ORDER == _LITTLE_ENDIAN)
++#elif defined(__BYTE_ORDER) && defined(__LITTLE_ENDIAN) && (__BYTE_ORDER == _LITTLE_ENDIAN - 0)
++#define BYTE_ORDER_LITTLE_ENDIAN
++#elif defined(__BYTE_ORDER__) && defined(__ORDER_LITTLE_ENDIAN__) && (__BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__)
++#define BYTE_ORDER_LITTLE_ENDIAN
++#elif	defined(__i386__) || defined(__LITTLE_ENDIAN__) \
+ 	|| defined(__alpha__) \
+ 	|| (defined(__mips__) && (defined(MIPSEL) || defined (__MIPSEL__)))
  #define BYTE_ORDER_LITTLE_ENDIAN
 -#elif 	defined(__mc68000__) \
--	|| defined (__sparc__) \
--	|| defined (__sparc) \
--	|| defined (__PPC__) \
--	|| defined (__BIG_ENDIAN__) \
--	|| (defined(__mips__) && (defined(MIPSEB) || defined (__MIPSEB__)))
-+#elif defined(_BYTE_ORDER) && defined(_BIG_ENDIAN) && (_BYTE_ORDER == _BIG_ENDIAN)
++#elif defined(_BYTE_ORDER) && defined(_BIG_ENDIAN) && (_BYTE_ORDER == _BIG_ENDIAN - 0)
 +#define BYTE_ORDER_BIG_ENDIAN
-+#elif defined(__BYTE_ORDER) && defined(__BIG_ENDIAN) && (__BYTE_ORDER == _BIG_ENDIAN)
++#elif defined(__BYTE_ORDER) && defined(__BIG_ENDIAN) && (__BYTE_ORDER == _BIG_ENDIAN - 0)
++#define BYTE_ORDER_BIG_ENDIAN
++#elif  defined(__mc68000__) \
+ 	|| defined (__sparc__) \
+ 	|| defined (__sparc) \
+ 	|| defined (__PPC__) \
+@@ -19,7 +33,7 @@
+ 	|| (defined(__mips__) && (defined(MIPSEB) || defined (__MIPSEB__)))
  #define BYTE_ORDER_BIG_ENDIAN
  #else
 -# error can not find the byte order for this architecture, fix bytesex.h

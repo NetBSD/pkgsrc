@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/03/14 18:37:58 pettai Exp $
+$NetBSD: patch-aa,v 1.1.1.1.58.1 2017/06/21 18:20:04 bsiegert Exp $
+
+Use pkgsrc paths.
 
 --- configure.orig	2004-06-04 08:39:10.000000000 +0200
 +++ configure	2010-01-26 23:07:03.000000000 +0100
