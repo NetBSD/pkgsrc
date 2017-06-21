@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.33 2017/06/13 19:35:55 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2017Q1,v 1.1.2.34 2017/06/21 18:56:48 bsiegert Exp $
 
 Changes to packages and infrastructure on the pkgsrc-2017Q1 branch:
 
@@ -573,4 +573,43 @@ fonts/fontconfig: bugfix
 
 Pullup ticket #5472 - requested by sevan
 security/libksba: bugfix
+
+Pullup ticket #5478 - requested by sevan
+textproc/libxml2: security fix
+
+Pullup ticket #5479 - requested by sevan
+net/dnstracer: build fix
+
+Pullup ticket #5480 - requested by sevan
+net/hping3: build fix
+
+Pullup ticket #5481 - requested by sevan
+net/tor: security fix
+
+Pullup ticket #5482 - requested by sevan
+devel/gmp: build fix
+
+Pullup ticket #5484 - requested by sevan
+multimedia/adobe-flash-player: security fix
+
+Pullup ticket #5486 - requested by sevan
+textproc/expat: security fix
+
+Pullup ticket #5483 - requested by sevan
+net/ndpi: SunOS build fix
+
+Pullup ticket #5488 - requested by sevan
+security/mozilla-rootcerts: build fix
+
+Pullup ticket #5489 - requested by sevan
+net/transmission: build fix for Dragonfly
+
+Pullup ticket #5487 - requested by sevan
+www/wordpress: security fix
+
+Pullup ticket #5490 - requested by maya
+lang/g95: build fix
+
+Pullup ticket #5485 - requested by sevan
+lang/basic256: bugfix
 
