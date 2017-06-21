@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/17 17:15:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/21 13:25:33 markd Exp $
 man/man1/allcm.1
 man/man1/allec.1
 man/man1/allneeded.1
 man/man1/dvi2fax.1
 man/man1/dvired.1
 man/man1/fmtutil-sys.1
+man/man1/fmtutil-user.1
 man/man1/fmtutil.1
 man/man1/kpsepath.1
 man/man1/kpsetool.1
@@ -12,6 +13,7 @@ man/man1/kpsewhere.1
 man/man1/kpsexpand.1
 man/man1/texlinks.1
 man/man1/updmap-sys.1
+man/man1/updmap-user.1
 man/man1/updmap.1
 man/man5/fmtutil.cnf.5
 man/man5/updmap.cfg.5
