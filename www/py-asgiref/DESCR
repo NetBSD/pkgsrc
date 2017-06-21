@@ -1,0 +1,4 @@
+Contains various reference ASGI implementations, including:
+* A base channel layer, asgiref.base_layer
+* An in-memory channel layer, asgiref.inmemory
+* WSGI-to-ASGI and ASGI-to-WSGI adapters, in asgiref.wsgi
