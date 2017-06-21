@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/12/13 15:51:17 taca Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/21 15:42:10 taca Exp $
 
 DISTNAME=	rubigen-1.5.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
