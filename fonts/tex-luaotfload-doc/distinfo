@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/08/07 07:17:37 markd Exp $
+$NetBSD: distinfo,v 1.6 2017/06/21 08:28:43 markd Exp $
 
-SHA1 (tex-luaotfload-41515/luaotfload.doc.tar.xz) = 307827feeebd7a07dfc180cd0201be5e7009be50
-RMD160 (tex-luaotfload-41515/luaotfload.doc.tar.xz) = 54968e11c4ed5781cea4b14051fa5b9635225ccb
-SHA512 (tex-luaotfload-41515/luaotfload.doc.tar.xz) = 94a793db300ba06f90718735b7539d80470b7ea37cba506a65d3f14314488ec91892fd96f95cd2f8ab199aa859a7b2aa0ed1081f157b817726e70eb624fcc526
-Size (tex-luaotfload-41515/luaotfload.doc.tar.xz) = 296304 bytes
+SHA1 (tex-luaotfload-43194/luaotfload.doc.tar.xz) = 40de22da707ad55182a2c7b31857fa22a9089366
+RMD160 (tex-luaotfload-43194/luaotfload.doc.tar.xz) = 1cb66cd10d37ec7173ebf7b88f208ce09b34cfd2
+SHA512 (tex-luaotfload-43194/luaotfload.doc.tar.xz) = bbd0f6f3cae8e9b4ef8f4cc315fe45327472da1a9fb9fbf906c86c5789cd7e2d495602472fb8c94b0eba0764f2e7d6525ea710cba0981c2d1e7f43a391aba4ff
+Size (tex-luaotfload-43194/luaotfload.doc.tar.xz) = 282244 bytes

@@ -1,7 +1,23 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/14 12:50:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:43 markd Exp $
 man/man1/luatex.1
 man/man1/texlua.1
 man/man1/texluac.1
-share/texmf-dist/doc/luatex/base/luatexref-env.tex
-share/texmf-dist/doc/luatex/base/luatexref-t.pdf
-share/texmf-dist/doc/luatex/base/luatexref-t.tex
+share/texmf-dist/doc/luatex/base/luatex-backend.tex
+share/texmf-dist/doc/luatex/base/luatex-callbacks.tex
+share/texmf-dist/doc/luatex/base/luatex-contents.tex
+share/texmf-dist/doc/luatex/base/luatex-enhancements.tex
+share/texmf-dist/doc/luatex/base/luatex-fontloader.tex
+share/texmf-dist/doc/luatex/base/luatex-fonts.tex
+share/texmf-dist/doc/luatex/base/luatex-graphics.tex
+share/texmf-dist/doc/luatex/base/luatex-introduction.tex
+share/texmf-dist/doc/luatex/base/luatex-languages.tex
+share/texmf-dist/doc/luatex/base/luatex-logos.tex
+share/texmf-dist/doc/luatex/base/luatex-lua.tex
+share/texmf-dist/doc/luatex/base/luatex-math.tex
+share/texmf-dist/doc/luatex/base/luatex-modifications.tex
+share/texmf-dist/doc/luatex/base/luatex-nodes.tex
+share/texmf-dist/doc/luatex/base/luatex-style.tex
+share/texmf-dist/doc/luatex/base/luatex-tex.tex
+share/texmf-dist/doc/luatex/base/luatex-titlepage.tex
+share/texmf-dist/doc/luatex/base/luatex.pdf
+share/texmf-dist/doc/luatex/base/luatex.tex

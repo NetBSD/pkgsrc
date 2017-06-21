@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/06/16 03:54:43 markd Exp $
+$NetBSD: distinfo,v 1.5 2017/06/21 08:28:41 markd Exp $
 
-SHA1 (tex-l3experimental-41163/l3experimental.tar.xz) = cca262efb9bf204a121840674cd863c2c08d3447
-RMD160 (tex-l3experimental-41163/l3experimental.tar.xz) = 5dc12dbd069ca5d55fdc6e857e0e91a8f5db0086
-SHA512 (tex-l3experimental-41163/l3experimental.tar.xz) = fcfe3d49ecd00a93795d571913559cdebb06a5fc592046de7b0aac2cc85c958e2a6e12be4b10a0f03ba6ace239d22ed57abfac8e7db54375f54d5e777999ae38
-Size (tex-l3experimental-41163/l3experimental.tar.xz) = 36980 bytes
+SHA1 (tex-l3experimental-44483/l3experimental.tar.xz) = 29d591978f393100687e2f9c260e9b2478a1c284
+RMD160 (tex-l3experimental-44483/l3experimental.tar.xz) = 1175831b8325fb40ddc2d03dc828c79c16788d8a
+SHA512 (tex-l3experimental-44483/l3experimental.tar.xz) = 786cbb850a2a70a3a0693c483c52a822437c4121930e0841c469f46526c06609f0fa0fba73b2f8d7f1e956caf9ea267496addb679de58eaa319fa1c58ad909ac
+Size (tex-l3experimental-44483/l3experimental.tar.xz) = 20016 bytes
