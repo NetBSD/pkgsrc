@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/06/12 14:54:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/06/21 13:45:35 taca Exp $
 bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COMMITTERS.md
@@ -1970,6 +1970,7 @@ ${GEM_LIBDIR}/spec/lib/puppet/indirector/indirector_testing/memory.rb
 ${GEM_LIBDIR}/spec/lib/puppet/indirector/indirector_testing/msgpack.rb
 ${GEM_LIBDIR}/spec/lib/puppet/indirector_proxy.rb
 ${GEM_LIBDIR}/spec/lib/puppet/indirector_testing.rb
+${GEM_LIBDIR}/spec/lib/puppet_spec/character_encoding.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/compiler.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/files.rb
 ${GEM_LIBDIR}/spec/lib/puppet_spec/fixtures.rb
@@ -2718,9 +2719,9 @@ ${GEM_LIBDIR}/tasks/memwalk.rake
 ${GEM_LIBDIR}/tasks/parallel.rake
 ${GEM_LIBDIR}/tasks/parser.rake
 ${GEM_LIBDIR}/tasks/yard.rake
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
 ${EGDIR}/puppet.conf
 ${PLIST.sunos}lib/svc/method/svc-puppetd
 ${PLIST.sunos}lib/svc/method/svc-puppetmasterd
 ${PLIST.sunos}${EGDIR}/svc/puppetd.xml
 ${PLIST.sunos}${EGDIR}/svc/puppetmasterd.xml
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
