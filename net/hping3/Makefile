@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/09/06 12:08:06 wiedi Exp $
+# $NetBSD: Makefile,v 1.7.14.1 2017/06/21 18:20:04 bsiegert Exp $
 #
 
 DISTNAME=		hping3-alpha-2
@@ -13,9 +13,8 @@ COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 LICENSE=		gnu-gpl-v2 AND original-bsd
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKSRC}/configure
-SUBST_FILES.paths+=	${WRKSRC}/Makefile.in
-SUBST_STAGE.paths=      post-patch
+SUBST_STAGE.paths=      pre-configure
+SUBST_FILES.paths=	Makefile.in configure
 SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
 
 USE_TOOLS=		gmake
@@ -23,6 +22,8 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		INSTALL_MANPATH=${PKGMANDIR}
+
+CFLAGS.SunOS+=		-Du_int64_t=uint64_t
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 

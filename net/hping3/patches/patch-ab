@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.2 2013/10/20 18:00:57 joerg Exp $
+$NetBSD: patch-ab,v 1.2.28.1 2017/06/21 18:20:04 bsiegert Exp $
 
---- Makefile.in.orig	2004-04-10 01:38:56.000000000 +0200
-+++ Makefile.in	2010-01-26 23:35:22.000000000 +0100
-@@ -50,14 +50,14 @@
+Use pkgsrc flags/paths.
+
+--- Makefile.in.orig	2004-04-09 23:38:56.000000000 +0000
++++ Makefile.in
+@@ -9,7 +9,7 @@
+ CC= gcc
+ AR=/usr/bin/ar
+ RANLIB=/usr/bin/ranlib
+-CCOPT= -O2 -Wall @PCAP_INCLUDE@ @TCL_INC@ @USE_TCL@
++CCOPT= $(CFLAGS) @PCAP_INCLUDE@ @TCL_INC@ @USE_TCL@
+ DEBUG= -g
+ #uncomment the following if you need libpcap based build under linux
+ #(not raccomanded)
+@@ -50,14 +50,14 @@ libars.a: $(ARSOBJ)
  	$(RANLIB) $@
  
  hping3: byteorder.h $(OBJ)

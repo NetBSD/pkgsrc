@@ -1,9 +1,15 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:04 agc Exp $
+$NetBSD: distinfo,v 1.4.12.1 2017/06/21 18:20:04 bsiegert Exp $
 
 SHA1 (hping3-alpha-2.tar.gz) = 4115f74f234730e1bd6470f4ffb0f30e3759e56d
 RMD160 (hping3-alpha-2.tar.gz) = a1e43a2e4be64657dd7aa49a8211692d6b1673c3
 SHA512 (hping3-alpha-2.tar.gz) = c01cb443f201e39268790e2bca744e76e0819d29ce6b23e42116fbc30b9f21d4ab7a45cce14dd78bc23b9e0408d9190ded934d0becda21296a712c074ff3d11b
 Size (hping3-alpha-2.tar.gz) = 573396 bytes
-SHA1 (patch-aa) = 25c2d447d8cc0374a27fa3de4e8bc0c1cfa2ce6c
-SHA1 (patch-ab) = 46aa447ee7efa477a07fe46119524de8b93708f7
-SHA1 (patch-ac) = b0f96f21b8cac82a835dc8d2814eb6a39b132355
+SHA1 (patch-aa) = 00eaef5063c9f6c70604c1aa873529936b854dd9
+SHA1 (patch-ab) = c8da38efbf33cc6fba9d32f3742479c4f1c3fb60
+SHA1 (patch-ac) = 885e260521b5f38d11e42871629caa9c9085c2d6
+SHA1 (patch-ars.c) = 17c677bdce8f58386eef2d234a37159ff2e87dd7
+SHA1 (patch-ars.h) = b06eaf399631a05acdd5d69f2241d092ed82b8c7
+SHA1 (patch-gethostname.c) = ba1fa4747c6001efc794f0b55ab36944abdd8854
+SHA1 (patch-libpcap__stuff.c) = 730224fa5d7e242444a112ae53959f3dfdbb35f0
+SHA1 (patch-sbignum.c) = 0b2fb0053c7189d1fdf96007f84649ae8fb96884
+SHA1 (patch-sendip.c) = e5cba9b45766b6906279f6351ea936d0768627cf
