@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:42 markd Exp $
 share/texmf-dist/doc/latex/base/README.txt
 share/texmf-dist/doc/latex/base/alltt.pdf
 share/texmf-dist/doc/latex/base/bugs.txt
@@ -61,6 +61,7 @@ share/texmf-dist/doc/latex/base/tex2.txt
 share/texmf-dist/doc/latex/base/texpert.txt
 share/texmf-dist/doc/latex/base/tlc2.err
 share/texmf-dist/doc/latex/base/tlc2.pdf
+share/texmf-dist/doc/latex/base/tulm.pdf
 share/texmf-dist/doc/latex/base/usrguide.pdf
 share/texmf-dist/doc/latex/base/usrguide.tex
 share/texmf-dist/doc/latex/base/utf8ienc.pdf
