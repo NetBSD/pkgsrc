@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:02 agc Exp $
+$NetBSD: distinfo,v 1.5 2017/06/21 06:13:14 markd Exp $
 
-SHA1 (tex-dehyph-exptl-34459/dehyph-exptl.doc.tar.xz) = 96aa8e7b9ed8a5eca8f1c1809b13195b2c179031
-RMD160 (tex-dehyph-exptl-34459/dehyph-exptl.doc.tar.xz) = ee6f798b062f2d3104ae155ebcece58173301e18
-SHA512 (tex-dehyph-exptl-34459/dehyph-exptl.doc.tar.xz) = a0173e4c100e3102155257fff465d4b2a0dc098e244ade78176a3509a93048e91f8244f5ecd22b2c7d73643b4360dac02722a1ea3b94eeb5afc65ae260a6bf26
-Size (tex-dehyph-exptl-34459/dehyph-exptl.doc.tar.xz) = 245156 bytes
+SHA1 (tex-dehyph-exptl-43666/dehyph-exptl.doc.tar.xz) = 56e4a710533de6d2545b50c6abedd04959ea3a02
+RMD160 (tex-dehyph-exptl-43666/dehyph-exptl.doc.tar.xz) = 2df9057b8245f81872e26b56ab02e468d09fd766
+SHA512 (tex-dehyph-exptl-43666/dehyph-exptl.doc.tar.xz) = aa9795d1d1e03ab4086ebd0a7ca097840959d49b9b63d7f6ecd8400155b9bd052a28d3dd71355d1c3b28bb510ebb2198fb9bbdd9f5240f57c55cf4a4fb104c05
+Size (tex-dehyph-exptl-43666/dehyph-exptl.doc.tar.xz) = 119424 bytes

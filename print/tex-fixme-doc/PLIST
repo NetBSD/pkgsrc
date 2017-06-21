@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 17:07:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/21 06:13:16 markd Exp $
 share/texmf-dist/doc/latex/fixme/NEWS
-share/texmf-dist/doc/latex/fixme/README
+share/texmf-dist/doc/latex/fixme/README.md
 share/texmf-dist/doc/latex/fixme/THANKS
 share/texmf-dist/doc/latex/fixme/fixme.el
 share/texmf-dist/doc/latex/fixme/fixme.pdf
