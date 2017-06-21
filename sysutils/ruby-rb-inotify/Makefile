@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/03/20 15:21:49 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 14:20:11 taca Exp $
 
-DISTNAME=	rb-inotify-0.9.8
+DISTNAME=	rb-inotify-0.9.10
 CATEGORIES=	sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
