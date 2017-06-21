@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2013/09/11 13:38:19 taca Exp $
-bin/rails
+@comment $NetBSD: PLIST,v 1.6 2017/06/21 13:13:48 taca Exp $
+bin/rails32${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/README.rdoc
-${GEM_LIBDIR}/bin/rails
+${GEM_LIBDIR}/bin/rails32
 ${GEM_LIBDIR}/guides/assets/images/belongs_to.png
 ${GEM_LIBDIR}/guides/assets/images/book_icon.gif
 ${GEM_LIBDIR}/guides/assets/images/bullet.gif
