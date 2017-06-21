@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/11/27 22:55:51 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/06/21 13:33:47 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -7,6 +7,7 @@ include/asterisk/adsi.h
 include/asterisk/ael_structs.h
 include/asterisk/agi.h
 include/asterisk/alaw.h
+include/asterisk/alertpipe.h
 include/asterisk/aoc.h
 include/asterisk/app.h
 include/asterisk/ari.h
@@ -512,6 +513,9 @@ libdata/asterisk/rest-api/playbacks.json
 libdata/asterisk/rest-api/recordings.json
 libdata/asterisk/rest-api/resources.json
 libdata/asterisk/rest-api/sounds.json
+libdata/asterisk/scripts/ast_coredumper
+libdata/asterisk/scripts/ast_logescalator
+libdata/asterisk/scripts/ast_loggrabber
 libdata/asterisk/scripts/refcounter.py
 libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.5
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
@@ -3969,6 +3973,7 @@ share/examples/asterisk/amd.conf
 share/examples/asterisk/app_mysql.conf
 share/examples/asterisk/app_skel.conf
 share/examples/asterisk/ari.conf
+share/examples/asterisk/ast_debug_tools.conf
 share/examples/asterisk/asterisk.adsi
 share/examples/asterisk/asterisk.conf
 share/examples/asterisk/calendar.conf
