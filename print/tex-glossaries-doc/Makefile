@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/08/07 09:09:38 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/21 07:24:06 markd Exp $
 
 DISTNAME=	glossaries.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.25
-TEXLIVE_REV=	41423
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.30
+TEXLIVE_REV=	44564
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/glossaries
