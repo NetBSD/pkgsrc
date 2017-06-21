@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2526 2017/06/21 13:29:37 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2527 2017/06/21 13:33:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3440,3 +3440,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/tex-xdvi to 22.87.03 [markd 2017-06-21]
 	Updated archivers/unrar to 5.5.5 [wiz 2017-06-21]
 	Updated archivers/libunrar to 5.5.5 [wiz 2017-06-21]
+	Added textproc/ruby-stringex1 version 1.5.1 [taca 2017-06-21]
