@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2535 2017/06/21 13:53:34 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2536 2017/06/21 13:56:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3450,3 +3450,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/ruby-liquid to 4.0.0 [taca 2017-06-21]
 	Updated editors/texstudio to 2.12.4 [markd 2017-06-21]
 	Updated www/ruby-jekyll to 3.5.0 [taca 2017-06-21]
+	Updated devel/ruby-fast_gettext to 1.4.1 [taca 2017-06-21]
