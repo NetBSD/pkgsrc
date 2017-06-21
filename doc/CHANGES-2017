@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2517 2017/06/21 00:25:05 tez Exp $
+$NetBSD: CHANGES-2017,v 1.2518 2017/06/21 01:10:25 tez Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3237,3 +3237,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/xfce4-wavelan-plugin to 0.6.0 [youri 2017-06-20]
 	Updated sysutils/xfce4-mount-plugin to 1.1.0 [youri 2017-06-20]
 	Updated textproc/libxml2 to 2.9.4nb4 [tez 2017-06-20]
+	Updated graphics/tiff to 4.0.8nb1 [tez 2017-06-20]
