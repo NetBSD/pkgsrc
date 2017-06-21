@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/06/16 04:06:07 markd Exp $
+$NetBSD: distinfo,v 1.6 2017/06/21 07:24:07 markd Exp $
 
-SHA1 (tex-hyphen-latin-41189/hyphen-latin.tar.xz) = 5dc1a4654e19d54daf353e5bb758e67c1996727c
-RMD160 (tex-hyphen-latin-41189/hyphen-latin.tar.xz) = f3e7f297c2ee9b5370ef8759dfb46bff95dc96aa
-SHA512 (tex-hyphen-latin-41189/hyphen-latin.tar.xz) = 246acfa2f90367c8b5da9b460d4c9b4caccab86a44e73df49ba01c4bd0cd0a481e04305b9e96aa5ad967a6a3778ec6c0707aac64dd195dde7d7c8d68e83fadcc
-Size (tex-hyphen-latin-41189/hyphen-latin.tar.xz) = 14412 bytes
+SHA1 (tex-hyphen-latin-44401/hyphen-latin.tar.xz) = 6216941cea2b16de79df924f16bc3b01368aa292
+RMD160 (tex-hyphen-latin-44401/hyphen-latin.tar.xz) = 9462fc75751cb2b1cb870103b8323e8490913e8d
+SHA512 (tex-hyphen-latin-44401/hyphen-latin.tar.xz) = e7087b2821458752b675aba4e6ee4a146a91162fa8d0ecdb86d46c49ffd441d2f9c1dff0ce3bd8fca74af9c85cb81cb129896dd9afcac55148632975ed24519b
+Size (tex-hyphen-latin-44401/hyphen-latin.tar.xz) = 18440 bytes
