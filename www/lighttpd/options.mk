@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.15 2017/01/16 00:30:46 schmonz Exp $
+# $NetBSD: options.mk,v 1.16 2017/06/21 19:27:36 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lighttpd
-PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi
+PKG_SUPPORTED_OPTIONS=	bzip2 fam gdbm inet6 ldap lua mysql ssl memcached geoip gssapi webdav
 PKG_OPTIONS_LEGACY_OPTS+=	memcache:memcached
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
@@ -113,4 +113,15 @@ PLIST.gssapi=		yes
 .if !empty(PKG_OPTIONS:Mlua)
 .  include "../../lang/lua/buildlink3.mk"
 PLIST.lua=		yes
+.endif
+
+###
+### WebDAV with PROPFIND/PROPPATCH, LOCK/UNLOCK
+###
+.if !empty(PKG_OPTIONS:Mwebdav)
+.  include "../../databases/sqlite3/buildlink3.mk"
+.  include "../../devel/libuuid/buildlink3.mk"
+.  include "../../textproc/libxml2/buildlink3.mk"
+.  include "../../lang/lua/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-webdav-props --with-webdav-locks
 .endif
