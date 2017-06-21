@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2016/08/07 09:09:40 markd Exp $
+# $NetBSD: Makefile,v 1.19 2017/06/21 10:14:21 markd Exp $
 
 DISTNAME=	oberdiek
-PKGNAME=	tex-${DISTNAME}-2016.41346
-TEXLIVE_REV=	41346
+PKGNAME=	tex-${DISTNAME}-2017
+TEXLIVE_REV=	43610
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/oberdiek
 COMMENT=	Bundle of packages submitted by Heiko Oberdiek
 LICENSE=	lppl-1.3c
 

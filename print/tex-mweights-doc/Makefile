@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2017/01/20 21:43:59 markd Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 10:14:21 markd Exp $
 
 DISTNAME=	mweights.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-20130721
-TEXLIVE_REV=	31268
+PKGNAME=	tex-${DISTNAME:S/./-/}-20170330
+TEXLIVE_REV=	43647
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/mweights
