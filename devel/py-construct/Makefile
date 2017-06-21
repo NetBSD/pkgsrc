@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2017/04/14 13:04:08 leot Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 09:49:27 adam Exp $
 
-DISTNAME=	construct-2.8.11
+DISTNAME=	construct-2.8.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=c/construct/}
@@ -12,7 +12,7 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 
-USE_LANGUAGES=	c
+#USE_LANGUAGES=	c
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
