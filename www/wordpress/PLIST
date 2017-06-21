@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2017/03/07 17:39:13 morr Exp $
+@comment $NetBSD: PLIST,v 1.33.2.1 2017/06/21 18:52:40 bsiegert Exp $
 share/doc/wordpress/license.txt
 share/doc/wordpress/readme.html
 share/examples/wordpress/wordpress.conf
@@ -264,6 +264,7 @@ share/wordpress/wp-admin/includes/class-walker-nav-menu-edit.php
 share/wordpress/wp-admin/includes/class-wp-ajax-upgrader-skin.php
 share/wordpress/wp-admin/includes/class-wp-automatic-updater.php
 share/wordpress/wp-admin/includes/class-wp-comments-list-table.php
+share/wordpress/wp-admin/includes/class-wp-community-events.php
 share/wordpress/wp-admin/includes/class-wp-filesystem-base.php
 share/wordpress/wp-admin/includes/class-wp-filesystem-direct.php
 share/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php
@@ -415,6 +416,16 @@ share/wordpress/wp-admin/js/user-suggest.js
 share/wordpress/wp-admin/js/user-suggest.min.js
 share/wordpress/wp-admin/js/widgets.js
 share/wordpress/wp-admin/js/widgets.min.js
+share/wordpress/wp-admin/js/widgets/media-audio-widget.js
+share/wordpress/wp-admin/js/widgets/media-audio-widget.min.js
+share/wordpress/wp-admin/js/widgets/media-image-widget.js
+share/wordpress/wp-admin/js/widgets/media-image-widget.min.js
+share/wordpress/wp-admin/js/widgets/media-video-widget.js
+share/wordpress/wp-admin/js/widgets/media-video-widget.min.js
+share/wordpress/wp-admin/js/widgets/media-widgets.js
+share/wordpress/wp-admin/js/widgets/media-widgets.min.js
+share/wordpress/wp-admin/js/widgets/text-widgets.js
+share/wordpress/wp-admin/js/widgets/text-widgets.min.js
 share/wordpress/wp-admin/js/word-count.js
 share/wordpress/wp-admin/js/word-count.min.js
 share/wordpress/wp-admin/js/wp-fullscreen-stub.js
@@ -1249,7 +1260,6 @@ share/wordpress/wp-includes/js/tinymce/plugins/image/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/image/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/lists/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/lists/plugin.min.js
-share/wordpress/wp-includes/js/tinymce/plugins/media/moxieplayer.swf
 share/wordpress/wp-includes/js/tinymce/plugins/media/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/media/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/paste/plugin.js
@@ -1266,8 +1276,6 @@ share/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpdialogs/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js
-share/wordpress/wp-includes/js/tinymce/plugins/wpembed/plugin.js
-share/wordpress/wp-includes/js/tinymce/plugins/wpembed/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpemoji/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpemoji/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/plugin.js
@@ -1280,14 +1288,11 @@ share/wordpress/wp-includes/js/tinymce/plugins/wpview/plugin.js
 share/wordpress/wp-includes/js/tinymce/plugins/wpview/plugin.min.js
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/content.inline.min.css
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/content.min.css
-share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/readme.md
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce-small.eot
-share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce-small.json
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce-small.svg
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce-small.ttf
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce-small.woff
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.eot
-share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.json
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.svg
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.ttf
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.woff
@@ -1295,7 +1300,6 @@ share/wordpress/wp-includes/js/tinymce/skins/lightgray/img/anchor.gif
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/img/loader.gif
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/img/object.gif
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/img/trans.gif
-share/wordpress/wp-includes/js/tinymce/skins/lightgray/skin.ie7.min.css
 share/wordpress/wp-includes/js/tinymce/skins/lightgray/skin.min.css
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/audio.png
 share/wordpress/wp-includes/js/tinymce/skins/wordpress/images/dashicon-edit.png
@@ -1461,6 +1465,10 @@ share/wordpress/wp-includes/widgets/class-wp-widget-archives.php
 share/wordpress/wp-includes/widgets/class-wp-widget-calendar.php
 share/wordpress/wp-includes/widgets/class-wp-widget-categories.php
 share/wordpress/wp-includes/widgets/class-wp-widget-links.php
+share/wordpress/wp-includes/widgets/class-wp-widget-media-audio.php
+share/wordpress/wp-includes/widgets/class-wp-widget-media-image.php
+share/wordpress/wp-includes/widgets/class-wp-widget-media-video.php
+share/wordpress/wp-includes/widgets/class-wp-widget-media.php
 share/wordpress/wp-includes/widgets/class-wp-widget-meta.php
 share/wordpress/wp-includes/widgets/class-wp-widget-pages.php
 share/wordpress/wp-includes/widgets/class-wp-widget-recent-comments.php
