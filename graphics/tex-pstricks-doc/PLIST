@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/08/07 09:01:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/21 11:45:59 markd Exp $
 share/texmf-dist/doc/generic/pstricks/PSTricks.bib
 share/texmf-dist/doc/generic/pstricks/README
 share/texmf-dist/doc/generic/pstricks/ctandir.sty
@@ -32,6 +32,8 @@ share/texmf-dist/doc/generic/pstricks/pst-news15.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news15.tex
 share/texmf-dist/doc/generic/pstricks/pst-news16.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news16.tex
+share/texmf-dist/doc/generic/pstricks/pst-news17.pdf
+share/texmf-dist/doc/generic/pstricks/pst-news17.tex
 share/texmf-dist/doc/generic/pstricks/pst-user.pdf
 share/texmf-dist/doc/generic/pstricks/pst-user.tgz
 share/texmf-dist/doc/generic/pstricks/pstricks-bug.tex
