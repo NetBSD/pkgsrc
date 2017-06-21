@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:42 markd Exp $
 share/texmf-dist/makeindex/latex/gglo.ist
 share/texmf-dist/makeindex/latex/gind.ist
 share/texmf-dist/tex/latex/base/alltt.sty
@@ -45,7 +45,6 @@ share/texmf-dist/tex/latex/base/inputenc.sty
 share/texmf-dist/tex/latex/base/lablst.tex
 share/texmf-dist/tex/latex/base/latex.ltx
 share/texmf-dist/tex/latex/base/latex209.def
-share/texmf-dist/tex/latex/base/latexbug.tex
 share/texmf-dist/tex/latex/base/latexrelease.sty
 share/texmf-dist/tex/latex/base/latexsym.sty
 share/texmf-dist/tex/latex/base/latin1.def
@@ -144,6 +143,13 @@ share/texmf-dist/tex/latex/base/ts1cmtt.fd
 share/texmf-dist/tex/latex/base/ts1cmvtt.fd
 share/texmf-dist/tex/latex/base/ts1enc.def
 share/texmf-dist/tex/latex/base/ts1enc.dfu
+share/texmf-dist/tex/latex/base/tuenc.def
+share/texmf-dist/tex/latex/base/tulmdh.fd
+share/texmf-dist/tex/latex/base/tulmr.fd
+share/texmf-dist/tex/latex/base/tulmss.fd
+share/texmf-dist/tex/latex/base/tulmssq.fd
+share/texmf-dist/tex/latex/base/tulmtt.fd
+share/texmf-dist/tex/latex/base/tulmvtt.fd
 share/texmf-dist/tex/latex/base/ucmr.fd
 share/texmf-dist/tex/latex/base/ucmss.fd
 share/texmf-dist/tex/latex/base/ucmtt.fd
