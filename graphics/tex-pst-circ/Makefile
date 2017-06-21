@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/06/14 11:26:43 markd Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 11:45:58 markd Exp $
 
 DISTNAME=	pst-circ
-PKGNAME=	tex-${DISTNAME}-2.13
-TEXLIVE_REV=	36865
+PKGNAME=	tex-${DISTNAME}-2.14
+TEXLIVE_REV=	41901
 
 MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/pst-circ
 COMMENT=	PSTricks package for drawing electric circuits
 LICENSE=	lppl-1.3c
 

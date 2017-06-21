@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/21 11:46:00 markd Exp $
 share/texmf-dist/doc/ptex/ptex-base/Changelog_eptex_beforeTL
 share/texmf-dist/doc/ptex/ptex-base/Changelog_ptex
 share/texmf-dist/doc/ptex/ptex-base/LICENSE
+share/texmf-dist/doc/ptex/ptex-base/Makefile
 share/texmf-dist/doc/ptex/ptex-base/README.md
 share/texmf-dist/doc/ptex/ptex-base/README_ptex
 share/texmf-dist/doc/ptex/ptex-base/eptex_resume.pdf
+share/texmf-dist/doc/ptex/ptex-base/eptex_resume.tex
 share/texmf-dist/doc/ptex/ptex-base/eptexdoc.pdf
 share/texmf-dist/doc/ptex/ptex-base/eptexdoc.tex
 share/texmf-dist/doc/ptex/ptex-base/fam256d.tex
