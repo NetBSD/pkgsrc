@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/06/21 13:13:48 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 14:42:55 taca Exp $
 
 DISTNAME=	railties-${RAILS_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-railties${RUBY_RAILS}-${RAILS_VERSION}
@@ -21,7 +21,7 @@ OVERRIDE_GEMSPEC+=	rack-ssl>=1.3.2 rdoc>=3.4 \
 			:executables rails=rails42 :files bin/rails=bin/rails42
 
 pre-configure:
-	${TEST} ! -f ${WRKSRC}/bin/rails || \
+	${TEST} -f ${WRKSRC}/bin/rails42 || \
 		${MV} ${WRKSRC}/bin/rails ${WRKSRC}/bin/rails42
 	${CHMOD} ${BINMODE} ${WRKSRC}/bin/rails42
 
