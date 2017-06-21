@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2016/09/07 04:18:27 mef Exp $
+$NetBSD: distinfo,v 1.3 2017/06/21 13:50:41 markd Exp $
 
-SHA1 (texstudio-2.11.0.tar.gz) = 3d2f8709275562b63b61f52d99c27b6645f29285
-RMD160 (texstudio-2.11.0.tar.gz) = 4f8ecede3c3e2ee67793a9d4ff796f70e8d16b85
-SHA512 (texstudio-2.11.0.tar.gz) = 773010bfa25de17e4deb0ae32325c26b5ff737bea837fba34fde28ec00d8e9a4d2c816d1f431c3c4e5a506354d1ff541e6b74bd36323e0fd3f20f4d389aab3be
-Size (texstudio-2.11.0.tar.gz) = 26263749 bytes
+SHA1 (texstudio-2.12.4.tar.gz) = 4b1afb4d5eb4b53ed59a154764207b2272d9cd3b
+RMD160 (texstudio-2.12.4.tar.gz) = 05aff0c80e19d7aec0386b62b4d9c444fef10e41
+SHA512 (texstudio-2.12.4.tar.gz) = 6e1d114ae87c854231399004504e460d078b9bf26ceb25c7fc592b79d3234f9880f8c021c3ddb2ef26a883dbddc2b94f98f368c976aa16973d3c1a6823a4150d
+Size (texstudio-2.12.4.tar.gz) = 26401510 bytes
