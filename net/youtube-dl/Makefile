@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.112 2017/06/05 20:37:21 leot Exp $
+# $NetBSD: Makefile,v 1.113 2017/06/21 08:28:01 leot Exp $
 
-VERSION_DATE=	2017.06.05
+VERSION_DATE=	2017.06.18
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//:S/.//}
 CATEGORIES=	net
