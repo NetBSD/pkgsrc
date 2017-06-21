@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/07/09 06:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.17.6.1 2017/06/21 18:19:54 bsiegert Exp $
 
 DISTNAME=		dnstracer-1.10
 PKGREVISION=		2
@@ -17,6 +17,8 @@ WRKSRC=			${WRKDIR}/${PKGBASE}
 AUTO_MKDIRS=		yes
 USE_TOOLS+=		gzip tar perl:run pod2man
 
+CFLAGS.SunOS+=		-Du_int16_t=uint16_t -Du_int32_t=uint32_t
+LDFLAGS.Darwin+=	-lresolv
 LDFLAGS.SunOS+=		-lresolv -lsocket -lnsl
 
 # filename is .tar.bz2, but it seems .tar.gz format

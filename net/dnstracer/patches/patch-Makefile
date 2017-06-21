@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1.2.2 2017/06/21 18:19:54 bsiegert Exp $
+
+Use pkgsrc flags.
+
+--- Makefile.orig	2008-06-11 12:51:35.000000000 +0000
++++ Makefile
+@@ -18,7 +18,7 @@ clean:
+ 	-rm dnstracer.o dnstracer dnstracer.8 dnstracer.core
+ 
+ dnstracer: dnstracer.c dnstracer-missing.h
+-	$(CC) -Wall -o dnstracer -DVERSION="${VERSION}" dnstracer.c
++	$(CC) $(CFLAGS) -o dnstracer $(LDFLAGS) -DVERSION="${VERSION}" dnstracer.c
+ 
+ dnstracer.8: dnstracer.pod
+ 	pod2man --release="${MANDATE}" --date="${MANDATE}" \

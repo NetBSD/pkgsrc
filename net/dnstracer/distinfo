@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 00:34:58 agc Exp $
+$NetBSD: distinfo,v 1.7.12.1 2017/06/21 18:19:54 bsiegert Exp $
 
 SHA1 (dnstracer-1.10.tar.bz2) = b08c3b5d90226610931e49144b3e7fdf2d567d8a
 RMD160 (dnstracer-1.10.tar.bz2) = e5ab05ac6464e5aae4f3d7ce460ab7f4a9fbecf0
 SHA512 (dnstracer-1.10.tar.bz2) = 8174f92c5c1b300c1011a24f0cf2f16dc2b52a082729e52d1033a047e20d132d6005b89618ecbbd25cbdc1c95cdc0748cf666bdc56b769b240d8885469bc6e05
 Size (dnstracer-1.10.tar.bz2) = 19169 bytes
+SHA1 (patch-Makefile) = 30ee38e87cdeb7bb1f9ee73714a3d8305f229baa
 SHA1 (patch-dnstracer.c) = a21dbd54c3fd742c8650b95fcb4fd84c6540f537
