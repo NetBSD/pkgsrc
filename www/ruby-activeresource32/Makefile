@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 15:12:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/21 13:12:21 taca Exp $
 
-DISTNAME=	activeresource-${RUBY_RAILS_VERSION}
+DISTNAME=	activeresource-${RAILS_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-activeresource${RUBY_RAILS}-${RAILS_VERSION}
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

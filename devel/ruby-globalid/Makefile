@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/05/04 15:11:25 taca Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/21 13:12:20 taca Exp $
 
 DISTNAME=	globalid-0.4.0
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ HOMEPAGE=	http://www.rubyonrails.org/
 COMMENT=	Reference models by URI
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=4.2.0:${RUBY_RAILS42_ACTIVESUPPORT}
+DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
 
 RUBY_RAILS_SUPPORTED=	42
 
