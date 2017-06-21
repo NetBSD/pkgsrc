@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/21 10:24:19 adam Exp $
 
-DISTNAME=	passlib-1.6.5
+DISTNAME=	passlib-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/passlib/}
