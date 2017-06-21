@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2017/04/30 01:21:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/21 13:33:47 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
 #       to find out the current sound file versions
 
-DISTNAME=	asterisk-14.2.0
-PKGREVISION=	6
+DISTNAME=	asterisk-14.5.0
+#PKGREVISION=	6
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/
 MASTER_SITES+=	http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/
@@ -32,6 +32,9 @@ CONFLICTS+=	asterisk-sounds-extra-[0-9]*
 USE_TOOLS+=		bison gmake perl:run pkg-config tar bash:run
 USE_LANGUAGES=		c c++
 REPLACE_BASH+=		contrib/scripts/astversion
+REPLACE_BASH+=		contrib/scripts/ast_coredumper
+REPLACE_BASH+=		contrib/scripts/ast_logescalator
+REPLACE_BASH+=		contrib/scripts/ast_loggrabber
 REPLACE_PERL+=		agi/DialAnMp3.agi agi/agi-test.agi
 REPLACE_PERL+=		agi/fastagi-test agi/jukebox.agi agi/numeralize
 REPLACE_PERL+=		contrib/scripts/vmail.cgi
@@ -209,30 +212,30 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 .if !empty(PKG_OPTIONS:Masterisk-config)
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
 .  for f in acl.conf adsi.conf agents.conf alarmreceiver.conf alsa.conf	\
-	amd.conf app_mysql.conf app_skel.conf ari.conf asterisk.adsi	\
-	calendar.conf ccss.conf	cdr.conf cdr_adaptive_odbc.conf		\
-	cdr_custom.conf cdr_manager.conf cdr_mysql.conf cdr_odbc.conf	\
-	cdr_pgsql.conf cdr_sqlite3_custom.conf cdr_syslog.conf		\
-	cdr_tds.conf cel.conf cel_custom.conf cel_odbc.conf		\
-	cel_pgsql.conf cel_sqlite3_custom.conf cel_tds.conf		\
-	chan_dahdi.conf chan_mobile.conf cli.conf cli_aliases.conf	\
-	cli_permissions.conf codecs.conf confbridge.conf console.conf	\
-	dbsep.conf dnsmgr.conf dsp.conf dundi.conf enum.conf		\
-	extconfig.conf extensions.ael extensions.conf extensions.lua	\
-	extensions_minivm.conf features.conf festival.conf		\
-	followme.conf func_odbc.conf hep.conf http.conf iax.conf	\
-	iaxprov.conf indications.conf logger.conf manager.conf		\
-	meetme.conf mgcp.conf minivm.conf misdn.conf modules.conf	\
-	motif.conf musiconhold.conf muted.conf ooh323.conf osp.conf	\
-	oss.conf phone.conf phoneprov.conf pjproject.conf pjsip.conf	\
-	pjsip_notify.conf pjsip_wizard.conf queuerules.conf queues.conf	\
-	res_config_mysql.conf res_config_sqlite.conf			\
-	res_config_sqlite3.conf res_corosync.conf res_curl.conf		\
-	res_fax.conf res_ldap.conf res_odbc.conf res_parking.conf	\
-	res_pgsql.conf res_pktccops.conf res_snmp.conf			\
-	res_stun_monitor.conf resolver_unbound.conf rtp.conf say.conf	\
-	sip.conf sip_notify.conf skinny.conf sla.conf smdi.conf		\
-	sorcery.conf ss7.timers stasis.conf statsd.conf			\
+	amd.conf app_mysql.conf app_skel.conf ari.conf			\
+	ast_debug_tools.conf asterisk.adsi calendar.conf ccss.conf	\
+	cdr.conf cdr_adaptive_odbc.conf cdr_custom.conf			\
+	cdr_manager.conf cdr_mysql.conf cdr_odbc.conf cdr_pgsql.conf	\
+	cdr_sqlite3_custom.conf cdr_syslog.conf cdr_tds.conf cel.conf	\
+	cel_custom.conf cel_odbc.conf cel_pgsql.conf			\
+	cel_sqlite3_custom.conf cel_tds.conf chan_dahdi.conf		\
+	chan_mobile.conf cli.conf cli_aliases.conf cli_permissions.conf	\
+	codecs.conf confbridge.conf console.conf dbsep.conf dnsmgr.conf	\
+	dsp.conf dundi.conf enum.conf extconfig.conf extensions.ael	\
+	extensions.conf extensions.lua	extensions_minivm.conf		\
+	features.conf festival.conf followme.conf func_odbc.conf	\
+	hep.conf http.conf iax.conf iaxprov.conf indications.conf	\
+	logger.conf manager.conf meetme.conf mgcp.conf minivm.conf	\
+	misdn.conf modules.conf	motif.conf musiconhold.conf muted.conf	\
+	ooh323.conf osp.conf oss.conf phone.conf phoneprov.conf		\
+	pjproject.conf pjsip.conf pjsip_notify.conf pjsip_wizard.conf	\
+	queuerules.conf queues.conf res_config_mysql.conf		\
+	res_config_sqlite.conf res_config_sqlite3.conf			\
+	res_corosync.conf res_curl.conf	 res_fax.conf res_ldap.conf	\
+	res_odbc.conf res_parking.conf res_pgsql.conf res_pktccops.conf	\
+	res_snmp.conf res_stun_monitor.conf resolver_unbound.conf	\
+	rtp.conf say.conf sip.conf sip_notify.conf skinny.conf sla.conf	\
+	smdi.conf sorcery.conf ss7.timers stasis.conf statsd.conf	\
 	telcordia-1.adsi udptl.conf unistim.conf users.conf		\
 	voicemail.conf vpb.conf xmpp.conf
 CONF_FILES_PERMS+=		${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_USER} ${ASTERISK_GROUP} 0644
