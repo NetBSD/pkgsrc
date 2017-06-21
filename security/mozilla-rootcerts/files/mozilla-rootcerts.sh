@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.13 2017/03/15 18:52:56 jperkin Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.13.2.1 2017/06/21 18:45:27 bsiegert Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -21,9 +21,8 @@
 
 self="@LOCALBASE@/sbin/mozilla-rootcerts"
 certfile="@DATADIR@/certdata.txt"
-certdir="/etc/ssl/certs"
+certdir=${SSLDIR}/certs
 destdir=
-conffile="/etc/openssl/openssl.cnf"
 
 usage()
 {
@@ -188,28 +187,35 @@ extract)
 	}'
 	;;
 install)
-	if [ `uname -s` = "NetBSD" ]; then
-		# quell warnings for a missing config file
-		touch $destdir$conffile
-	fi
-	if [ ! -d $destdir$SSLDIR ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR does not exist, aborting."
+	# Insist on e.g. /etc/openssl/certs existing.
+	if [ ! -d $destdir$certdir ]; then
+		${ECHO} 1>&2 "ERROR: $destdir$certdir does not exist, aborting."
 		exit 1
 	fi
-	cd $destdir$SSLDIR
+	cd $destdir$certdir
 	if [ -n "`${LS}`" ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$SSLDIR already contains certificates, aborting."
+		# \todo Explain why this must fail if the user has
+		# installed certificates from other than the mozilla
+		# default root set.
+		${ECHO} 1>&2 "ERROR: $destdir$certdir already contains certificates, aborting."
 		exit 1
 	fi
 	set -e
 	$self extract
 	$self rehash
 	set +e
-	if [ -d $destdir$certdir ]; then
-		${ECHO} 1>&2 "ERROR: $destdir$certdir already exists, aborting."
+	# \todo Explain why if we are willing to write
+	# ca-certificates.crt, we are not willing to remove and
+	# re-create it.  Arguably install should be idempotent without
+	# error.
+	if [ -e $destdir$certdir/ca-certificates.crt ]; then
+		${ECHO} 1>&2 "ERROR: $destdir$certdir/ca-certificates.crt already exists, aborting."
 		exit 1
 	fi
 	set -e
-	$MKDIR $destdir$certdir
-	cat $destdir$SSLDIR/*.pem > $destdir$certdir/ca-certificates.crt
+	# \todo This is appparently for users of gnutls, but it is not
+	# clear where it should be and why.  In particular, this file
+	# should perhaps be created at package build time and be
+	# managed by pkgsrc.
+	cat $destdir$certdir/*.pem > $destdir$certdir/ca-certificates.crt
 esac
