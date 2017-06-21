@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/01 04:51:15 adam Exp $
+# $NetBSD: Makefile,v 1.2.6.1 2017/06/21 18:39:02 bsiegert Exp $
 
 DISTNAME=	ntopng-2.4-stable
 PKGNAME=	ndpi-1.8.0
@@ -18,6 +18,12 @@ PKGCONFIG_OVERRIDE=	libndpi.pc.in
 
 EXTRACT_ELEMENTS=	${DISTNAME}/nDPI
 WRKSRC=			${WRKDIR}/${DISTNAME}/nDPI
+
+# Portable types
+CFLAGS.SunOS+=		-Du_int8_t=uint8_t
+CFLAGS.SunOS+=		-Du_int16_t=uint16_t
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t
+CFLAGS.SunOS+=		-Du_int64_t=uint64_t
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
