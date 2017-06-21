@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2016/08/07 07:17:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/21 08:28:43 markd Exp $
 share/texmf-dist/scripts/luaotfload/luaotfload-tool.lua
 share/texmf-dist/scripts/luaotfload/mkcharacters
 share/texmf-dist/scripts/luaotfload/mkglyphlist
 share/texmf-dist/scripts/luaotfload/mkimport
 share/texmf-dist/scripts/luaotfload/mkstatus
 share/texmf-dist/scripts/luaotfload/mktests
-share/texmf-dist/tex/luatex/luaotfload/fontloader-2016-06-16.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-2017-02-11.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-gen.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics-nod.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-basics.tex
@@ -25,7 +25,7 @@ share/texmf-dist/tex/luatex/luaotfload/fontloader-font-one.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-onr.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-osd.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-ota.lua
-share/texmf-dist/tex/luatex/luaotfload/fontloader-font-otd.lua
+share/texmf-dist/tex/luatex/luaotfload/fontloader-font-otc.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-oti.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-otj.lua
 share/texmf-dist/tex/luatex/luaotfload/fontloader-font-otl.lua
