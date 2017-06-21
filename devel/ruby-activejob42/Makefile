@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2017/04/21 21:20:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:20 taca Exp $
 
-DISTNAME=	activejob-${RUBY_RAILS_VERSION}
+DISTNAME=	activejob-${RAILS_VERSION}
+PKGNAME=	${RUBY_PKGPREFIX}-activejob${RUBY_RAILS}-${RAILS_VERSION}
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/04/19 00:11:26 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/21 13:12:21 taca Exp $
 
 DISTNAME=	rails-deprecated_sanitizer-1.0.3
 CATEGORIES=	www
@@ -8,7 +8,9 @@ HOMEPAGE=	https://github.com/rails/rails-deprecated_sanitizer
 COMMENT=	Deprecated sanitizer API extracted from Action View
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-activesupport>=4.2.0:../../devel/ruby-activesupport42
+DEPENDS+=	${RUBY_ACTIVESUPPORT_DEPENDS}
+
+RUBY_RAILS_SUPPORTED=	42
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
