@@ -1,0 +1,3 @@
+The package provides commands \makefirstuc that uppercases the
+first letter in its argument, and \xmakefirstuc which expands
+the argument before uppercasing.

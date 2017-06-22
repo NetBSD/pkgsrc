@@ -1,0 +1,10 @@
+This is a fairly complete BibLaTeX style (citations and
+references) for APA (American Psychological Association)
+publications. It implements and automates most of the
+guidelines in the APA 6th edition style guide for citations and
+references with a few (documented) exceptions (which are mainly
+currently impossible to automate in principle for any BibTeX-
+backed system). An example document is also given which
+typesets every citation and reference example in the APA 6th
+edition style guide. This version of the package requires use
+of BibLaTeX v2.4 and biber v3.3 (at least).

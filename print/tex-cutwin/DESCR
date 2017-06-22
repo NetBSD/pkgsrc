@@ -1,0 +1,4 @@
+The package provides facilities to cut windows out of
+paragraphs, and to typeset text or other material in the
+window. The window may be rectangular, or may have other sorts
+of shape.
