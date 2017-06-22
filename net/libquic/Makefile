@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2017/05/31 23:17:26 agc Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/22 16:56:47 agc Exp $
 
 DISTNAME=	libquic-0.0.3
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	agc@NetBSD.org
 COMMENT=	Multiplexed stream transport over UDP
 LICENSE=	modified-bsd
 
-DEPENDS+=		go-[0-9]*:../../lang/go
+BUILD_DEPENDS+=		go-[0-9]*:../../lang/go
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.link=	post-patch
