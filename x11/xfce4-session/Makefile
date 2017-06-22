@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2017/06/18 22:37:33 youri Exp $
+# $NetBSD: Makefile,v 1.60 2017/06/22 09:40:24 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -49,5 +49,4 @@ CONF_FILES+=	${EGDIR}/xinitrc \
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
