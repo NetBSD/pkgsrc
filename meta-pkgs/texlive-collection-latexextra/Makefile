@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2017/06/22 09:37:22 markd Exp $
+# $NetBSD: Makefile,v 1.26 2017/06/22 11:12:26 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44544
@@ -190,7 +190,7 @@ DEPENDS+=	tex-comment-[0-9]*:../../print/tex-comment
 # depend concepts
 DEPENDS+=	tex-concprog-[0-9]*:../../print/tex-concprog
 # depend constants
-# depend continue
+DEPENDS+=	tex-continue-[0-9]*:../../print/tex-continue
 # depend contour
 # depend contracard
 # depend conv-xkv
@@ -219,7 +219,7 @@ DEPENDS+=	tex-cuisine-[0-9]*:../../print/tex-cuisine
 # depend currency
 # depend currfile
 DEPENDS+=	tex-currvita-[0-9]*:../../print/tex-currvita
-# depend cutwin
+DEPENDS+=	tex-cutwin-[0-9]*:../../print/tex-cutwin
 # depend cv
 # depend cv4tw
 # depend cweb-latex
@@ -505,8 +505,8 @@ DEPENDS+=	tex-glossaries-[0-9]*:../../print/tex-glossaries
 # depend guitlogo
 # depend halloweenmath
 # depend handout
-# depend hang
-# depend hanging
+DEPENDS+=	tex-hang-[0-9]*:../../print/tex-hang
+DEPENDS+=	tex-hanging-[0-9]*:../../print/tex-hanging
 # depend hardwrap
 # depend harnon-cv
 # depend harpoon
@@ -585,7 +585,7 @@ DEPENDS+=	tex-layouts-[0-9]*:../../print/tex-layouts
 DEPENDS+=	tex-lazylist-[0-9]*:../../print/tex-lazylist
 # depend lcd
 # depend lcg
-# depend leading
+DEPENDS+=	tex-leading-[0-9]*:../../print/tex-leading
 DEPENDS+=	tex-leaflet-[0-9]*:../../print/tex-leaflet
 DEPENDS+=	tex-leftidx-[0-9]*:../../print/tex-leftidx
 # depend lengthconvert
@@ -662,7 +662,7 @@ DEPENDS+=	tex-media9-[0-9]*:../../print/tex-media9
 # depend menukeys
 # depend method
 # depend metre
-# depend mfirstuc
+DEPENDS+=	tex-mfirstuc-[0-9]*:../../print/tex-mfirstuc
 # depend mftinc
 DEPENDS+=	tex-midpage-[0-9]*:../../print/tex-midpage
 # depend minibox
@@ -1034,7 +1034,7 @@ DEPENDS+=	tex-textmerg-[0-9]*:../../print/tex-textmerg
 DEPENDS+=	tex-textpos-[0-9]*:../../print/tex-textpos
 # depend theoremref
 # depend thinsp
-# depend thmtools
+DEPENDS+=	tex-thmtools-[0-9]*:../../print/tex-thmtools
 # depend threadcol
 DEPENDS+=	tex-threeparttable-[0-9]*:../../print/tex-threeparttable
 # depend threeparttablex
