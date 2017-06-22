@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2017/02/03 09:56:49 maya Exp $
+@comment $NetBSD: PLIST,v 1.6 2017/06/22 17:53:59 gdt Exp $
 ${MYETCDIR}/openssl/certs/02265526.0
 ${MYETCDIR}/openssl/certs/024dc131.0
 ${MYETCDIR}/openssl/certs/03179a64.0
@@ -345,4 +345,4 @@ ${MYETCDIR}/openssl/certs/mozilla-rootcert-9.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-97.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-98.pem
 ${MYETCDIR}/openssl/certs/mozilla-rootcert-99.pem
-etc/ssl/certs/ca-certificates.crt
+${MYETCDIR}/openssl/certs/ca-certificates.crt
