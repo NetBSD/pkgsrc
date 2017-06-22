@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2017/05/01 10:13:29 leot Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/06/22 12:30:25 wiz Exp $
 bin/driverless
 bin/foomatic-rip
 bin/ttfread
@@ -17,6 +17,7 @@ lib/libcupsfilters.la
 lib/libfontembed.la
 lib/pkgconfig/libcupsfilters.pc
 lib/pkgconfig/libfontembed.pc
+libexec/cups-browsed
 libexec/cups/backend/beh
 libexec/cups/backend/driverless
 libexec/cups/backend/implicitclass
@@ -88,7 +89,6 @@ share/doc/cups-filters/NEWS
 share/doc/cups-filters/README
 share/examples/cups-filters/cups-browsed.conf
 share/examples/cups-filters/fonts/conf.d/99pdftoopvp.conf
-share/examples/rc.d/cups-browsed
 share/ppd/cupsfilters/Fuji_Xerox-DocuPrint_CM305_df-PDF.ppd
 share/ppd/cupsfilters/Generic-PDF_Printer-PDF.ppd
 share/ppd/cupsfilters/HP-Color_LaserJet_CM3530_MFP-PDF.ppd
