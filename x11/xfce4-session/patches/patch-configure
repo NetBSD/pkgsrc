@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.2 2015/07/07 14:04:22 youri Exp $
+$NetBSD: patch-configure,v 1.3 2017/06/22 09:40:24 youri Exp $
 
 Add NetBSD backend detection.
+
 --- configure.orig	2015-03-16 07:29:45.000000000 +0000
 +++ configure
 @@ -18208,6 +18208,8 @@ if test x$with_backend = x; then
