@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2017/01/20 22:13:28 markd Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/22 09:37:20 markd Exp $
 
 DISTNAME=	collection-fontsextra
-PKGNAME=	texlive-${DISTNAME}-2016pre3
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41736
+TEXLIVE_REV=	43356
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -26,6 +26,7 @@ DEPENDS+=	tex-antiqua-[0-9]*:../../fonts/tex-antiqua
 DEPENDS+=	tex-antt-[0-9]*:../../fonts/tex-antt
 DEPENDS+=	tex-archaic-[0-9]*:../../fonts/tex-archaic
 DEPENDS+=	tex-arev-[0-9]*:../../fonts/tex-arev
+# depend arimo
 # depend asapsym
 DEPENDS+=	tex-ascii-font-[0-9]*:../../fonts/tex-ascii-font
 DEPENDS+=	tex-aspectratio-[0-9]*:../../fonts/tex-aspectratio
@@ -37,6 +38,7 @@ DEPENDS+=	tex-b1encoding-[0-9]*:../../fonts/tex-b1encoding
 DEPENDS+=	tex-barcodes-[0-9]*:../../fonts/tex-barcodes
 DEPENDS+=	tex-baskervald-[0-9]*:../../fonts/tex-baskervald
 DEPENDS+=	tex-baskervaldx-[0-9]*:../../fonts/tex-baskervaldx
+# depend baskervillef
 DEPENDS+=	tex-bbding-[0-9]*:../../fonts/tex-bbding
 DEPENDS+=	tex-bbm-[0-9]*:../../fonts/tex-bbm
 DEPENDS+=	tex-bbm-macros-[0-9]*:../../print/tex-bbm-macros
@@ -45,6 +47,7 @@ DEPENDS+=	tex-bbold-type1-[0-9]*:../../fonts/tex-bbold-type1
 DEPENDS+=	tex-belleek-[0-9]*:../../fonts/tex-belleek
 DEPENDS+=	tex-bera-[0-9]*:../../fonts/tex-bera
 DEPENDS+=	tex-berenisadf-[0-9]*:../../fonts/tex-berenisadf
+# depend beuron
 DEPENDS+=	tex-bguq-[0-9]*:../../fonts/tex-bguq
 DEPENDS+=	tex-blacklettert1-[0-9]*:../../fonts/tex-blacklettert1
 DEPENDS+=	tex-boisik-[0-9]*:../../fonts/tex-boisik
@@ -78,6 +81,7 @@ DEPENDS+=	tex-comfortaa-[0-9]*:../../fonts/tex-comfortaa
 DEPENDS+=	tex-comicneue-[0-9]*:../../fonts/tex-comicneue
 DEPENDS+=	tex-concmath-fonts-[0-9]*:../../fonts/tex-concmath-fonts
 DEPENDS+=	tex-cookingsymbols-[0-9]*:../../fonts/tex-cookingsymbols
+# depend cormorantgaramond
 DEPENDS+=	tex-countriesofeurope-[0-9]*:../../fonts/tex-countriesofeurope
 DEPENDS+=	tex-courier-scaled-[0-9]*:../../fonts/tex-courier-scaled
 # depend crimson
@@ -127,6 +131,7 @@ DEPENDS+=	tex-fontmfizz-[0-9]*:../../fonts/tex-fontmfizz
 DEPENDS+=	tex-fourier-[0-9]*:../../fonts/tex-fourier
 DEPENDS+=	tex-fouriernc-[0-9]*:../../fonts/tex-fouriernc
 DEPENDS+=	tex-frcursive-[0-9]*:../../fonts/tex-frcursive
+# depend frederika2016
 DEPENDS+=	tex-genealogy-[0-9]*:../../fonts/tex-genealogy
 DEPENDS+=	tex-gentium-tug-[0-9]*:../../fonts/tex-gentium-tug
 DEPENDS+=	tex-gfsartemisia-[0-9]*:../../fonts/tex-gfsartemisia
@@ -138,6 +143,7 @@ DEPENDS+=	tex-gfssolomos-[0-9]*:../../fonts/tex-gfssolomos
 DEPENDS+=	tex-gillcm-[0-9]*:../../fonts/tex-gillcm
 DEPENDS+=	tex-gillius-[0-9]*:../../fonts/tex-gillius
 DEPENDS+=	tex-gnu-freefont-[0-9]*:../../fonts/tex-gnu-freefont
+# depend gofonts
 DEPENDS+=	tex-gothic-[0-9]*:../../fonts/tex-gothic
 DEPENDS+=	tex-greenpoint-[0-9]*:../../fonts/tex-greenpoint
 DEPENDS+=	tex-grotesq-[0-9]*:../../fonts/tex-grotesq
@@ -181,7 +187,9 @@ DEPENDS+=	tex-mdsymbol-[0-9]*:../../fonts/tex-mdsymbol
 DEPENDS+=	tex-merriweather-[0-9]*:../../fonts/tex-merriweather
 # depend miama
 DEPENDS+=	tex-mintspirit-[0-9]*:../../fonts/tex-mintspirit
+# depend missaali
 DEPENDS+=	tex-mnsymbol-[0-9]*:../../fonts/tex-mnsymbol
+# depend montserrat
 DEPENDS+=	tex-mweights-[0-9]*:../../print/tex-mweights
 DEPENDS+=	tex-newpx-[0-9]*:../../fonts/tex-newpx
 DEPENDS+=	tex-newtx-[0-9]*:../../fonts/tex-newtx
@@ -240,15 +248,18 @@ DEPENDS+=	tex-tapir-[0-9]*:../../fonts/tex-tapir
 # depend tempora
 DEPENDS+=	tex-tengwarscript-[0-9]*:../../fonts/tex-tengwarscript
 DEPENDS+=	tex-tfrupee-[0-9]*:../../fonts/tex-tfrupee
+# depend tinos
 DEPENDS+=	tex-tpslifonts-[0-9]*:../../print/tex-tpslifonts
 DEPENDS+=	tex-trajan-[0-9]*:../../fonts/tex-trajan
 DEPENDS+=	tex-txfontsb-[0-9]*:../../fonts/tex-txfontsb
+# depend txuprcal
 DEPENDS+=	tex-typicons-[0-9]*:../../fonts/tex-typicons
 DEPENDS+=	tex-umtypewriter-[0-9]*:../../fonts/tex-umtypewriter
 DEPENDS+=	tex-universa-[0-9]*:../../fonts/tex-universa
 DEPENDS+=	tex-universalis-[0-9]*:../../fonts/tex-universalis
 DEPENDS+=	tex-urwchancal-[0-9]*:../../fonts/tex-urwchancal
 DEPENDS+=	tex-venturisadf-[0-9]*:../../fonts/tex-venturisadf
+# depend uppunctlm
 DEPENDS+=	tex-wsuipa-[0-9]*:../../fonts/tex-wsuipa
 DEPENDS+=	tex-xcharter-[0-9]*:../../fonts/tex-xcharter
 DEPENDS+=	tex-xits-[0-9]*:../../fonts/tex-xits

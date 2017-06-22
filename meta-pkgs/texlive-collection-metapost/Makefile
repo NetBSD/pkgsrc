@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/01/20 23:09:56 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/22 09:37:23 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2016
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	39729
+TEXLIVE_REV=	44297
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -43,6 +43,7 @@ DEPENDS+=	tex-mparrows-[0-9]*:../../graphics/tex-mparrows
 DEPENDS+=	tex-mpattern-[0-9]*:../../graphics/tex-mpattern
 DEPENDS+=	tex-mpcolornames-[0-9]*:../../graphics/tex-mpcolornames
 DEPENDS+=	tex-mpgraphics-[0-9]*:../../graphics/tex-mpgraphics
+# depend mptrees
 DEPENDS+=	tex-piechartmp-[0-9]*:../../graphics/tex-piechartmp
 DEPENDS+=	tex-repere-[0-9]*:../../graphics/tex-repere
 DEPENDS+=	tex-roex-[0-9]*:../../graphics/tex-roex

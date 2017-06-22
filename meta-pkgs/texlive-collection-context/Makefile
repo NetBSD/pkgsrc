@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2016/07/17 22:13:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/22 09:37:20 markd Exp $
 
 DISTNAME=	collection-context
-PKGNAME=	texlive-${DISTNAME}-2016
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36190
+TEXLIVE_REV=	42330
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -20,20 +20,21 @@ DEPENDS+=       tex-context-animation-[0-9]*:../../print/tex-context-animation
 DEPENDS+=       tex-context-annotation-[0-9]*:../../print/tex-context-annotation
 DEPENDS+=       tex-context-bnf-[0-9]*:../../print/tex-context-bnf
 DEPENDS+=       tex-context-chromato-[0-9]*:../../print/tex-context-chromato
+# depend context-cmscbf
+# depend context-cmttbf
 DEPENDS+=       tex-context-construction-plan-[0-9]*:../../print/tex-context-construction-plan
 DEPENDS+=       tex-context-cyrillicnumbers-[0-9]*:../../print/tex-context-cyrillicnumbers
 DEPENDS+=       tex-context-degrade-[0-9]*:../../print/tex-context-degrade
 DEPENDS+=       tex-context-fancybreak-[0-9]*:../../print/tex-context-fancybreak
 DEPENDS+=       tex-context-filter-[0-9]*:../../print/tex-context-filter
-DEPENDS+=       tex-context-fixme-[0-9]*:../../print/tex-context-fixme
 DEPENDS+=       tex-context-french-[0-9]*:../../print/tex-context-french
 DEPENDS+=       tex-context-fullpage-[0-9]*:../../print/tex-context-fullpage
-DEPENDS+=       tex-context-games-[0-9]*:../../print/tex-context-games
 DEPENDS+=       tex-context-gantt-[0-9]*:../../print/tex-context-gantt
 DEPENDS+=       tex-context-gnuplot-[0-9]*:../../print/tex-context-gnuplot
+# depend context-inifile
+# depend context-layout
 DEPENDS+=       tex-context-letter-[0-9]*:../../print/tex-context-letter
 DEPENDS+=       tex-context-lettrine-[0-9]*:../../print/tex-context-lettrine
-DEPENDS+=       tex-context-lilypond-[0-9]*:../../print/tex-context-lilypond
 DEPENDS+=       tex-context-mathsets-[0-9]*:../../print/tex-context-mathsets
 # only a doc package exists
 #DEPENDS+=       tex-context-notes-zh-cn-[0-9]*:../../print/tex-context-notes-zh-cn

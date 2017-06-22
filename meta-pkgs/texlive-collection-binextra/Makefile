@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2016/08/07 10:57:56 markd Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/22 09:37:20 markd Exp $
 
 DISTNAME=	collection-binextra
-PKGNAME=	texlive-${DISTNAME}-2016pre2
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41779
+TEXLIVE_REV=	44515
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -34,6 +34,7 @@ DEPENDS+=	dvi2tty-[0-9]*:../../converters/dvi2tty
 # depend dviasm
 # depend dvicopy
 DEPENDS+=	dvidvi-[0-9]*:../../print/dvidvi
+# depend dviinfox
 DEPENDS+=	dviljk-[0-9]*:../../print/dviljk
 DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 # depend dvipos
@@ -45,7 +46,9 @@ DEPENDS+=	dvipng-[0-9]*:../../graphics/dvipng
 # depend installfont
 DEPENDS+=	lacheck-[0-9]*:../../print/lacheck
 # depend latex-git-log
+# depend latex-papersize
 # depend latex2man
+# depend latex2nemeth
 DEPENDS+=	tex-latexdiff-[0-9]*:../../textproc/tex-latexdiff
 # depend latexfileversion
 DEPENDS+=	latexmk-[0-9]*:../../print/latexmk
