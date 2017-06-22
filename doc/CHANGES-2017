@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2562 2017/06/22 12:30:38 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2563 2017/06/22 12:49:35 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3552,3 +3552,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated meta-pkgs/texlive-collection-publishers to 2017pre2 [markd 2017-06-22]
 	Updated meta-pkgs/texlive-collection-latexextra to 2017pre2 [markd 2017-06-22]
 	Updated print/cups-filters to 1.14.0nb2 [wiz 2017-06-22]
+	Updated devel/libphutil to 20170620 [youri 2017-06-22]
