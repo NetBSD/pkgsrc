@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2017/06/21 19:27:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.62 2017/06/22 12:49:56 schmonz Exp $
 
 DISTNAME=	lighttpd-1.4.45
 CATEGORIES=	www
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_LIBSUBDIR=${PKGBASE}
 CONFIGURE_ARGS+=	--with-pcre
