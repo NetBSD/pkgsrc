@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2564 2017/06/22 12:50:06 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2565 2017/06/22 12:51:01 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3554,3 +3554,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated print/cups-filters to 1.14.0nb2 [wiz 2017-06-22]
 	Updated devel/libphutil to 20170620 [youri 2017-06-22]
 	Updated devel/arcanist to 20170225 [youri 2017-06-22]
+	Updated devel/phabricator to 20170316 [youri 2017-06-22]
