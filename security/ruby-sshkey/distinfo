@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/22 00:56:42 minskim Exp $
+
+SHA1 (sshkey-1.9.0.gem) = fbe3c4ccd3821b5e55953f54b0772c6452a48e5b
+RMD160 (sshkey-1.9.0.gem) = 6ef5710f9f0d8e74d83d0470978562775d5cd420
+SHA512 (sshkey-1.9.0.gem) = d8cebd1341ee70886f868e4f7b4a524b1781a229e80261172b8c9a14ae665cc5e84b98f7b476cd62e57af430247c172a08dcd219956adc95a42caf88aab1b0b7
+Size (sshkey-1.9.0.gem) = 25600 bytes
