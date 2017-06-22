@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2017/06/19 00:37:48 gdt Exp $
+# $NetBSD: Makefile,v 1.30 2017/06/22 00:30:10 gdt Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 PKGREVISION=	5
@@ -21,7 +21,10 @@ CERTDATA=	certdata-${CERTDATA_DATE}.txt
 WRKSRC=		${WRKDIR}
 DATADIR=	${PREFIX}/share/${PKGBASE}
 
-# Set paths depending on whether we depend on builtin or pkgsrc openssl.
+# Set paths depending on whether we depend on builtin or pkgsrc
+# openssl.  \todo Arguably, we should consider installing into both
+# builtin and pkgsrc, if both exist, but this requires much more
+# thought.
 CHECK_BUILTIN.openssl=	yes
 .include "../../security/openssl/builtin.mk"
 CHECK_BUILTIN.openssl=	no
