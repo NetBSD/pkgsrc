@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2017/03/17 12:40:58 roy Exp $
+@comment $NetBSD: PLIST,v 1.5 2017/06/22 12:49:52 youri Exp $
 bin/arc
 share/arcanist/LICENSE
 share/arcanist/NOTICE
@@ -263,7 +263,9 @@ share/arcanist/src/lint/linter/__tests__/text/dos-newline.lint-test
 share/arcanist/src/lint/linter/__tests__/text/empty.lint-test
 share/arcanist/src/lint/linter/__tests__/text/eof-whitespace.lint-test
 share/arcanist/src/lint/linter/__tests__/text/line-wrap.lint-test
-share/arcanist/src/lint/linter/__tests__/text/trailing-whitespace.lint-test
+share/arcanist/src/lint/linter/__tests__/text/trailing-whitespace-1.lint-test
+share/arcanist/src/lint/linter/__tests__/text/trailing-whitespace-2.lint-test
+share/arcanist/src/lint/linter/__tests__/text/trailing-whitespace-3.lint-test
 share/arcanist/src/lint/linter/__tests__/text/variable-dividers.lint-test
 share/arcanist/src/lint/linter/__tests__/xhpast/embedded-tags.lint-test
 share/arcanist/src/lint/linter/__tests__/xhpast/empty.lint-test
