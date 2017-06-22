@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/11/21 11:45:32 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2017/06/22 09:22:03 adam Exp $
 
-SHA1 (requests-file-1.4.1.tar.gz) = 7ad7ecd8279f943477b79d59c9418f968bd44641
-RMD160 (requests-file-1.4.1.tar.gz) = d91c353c3f811fe4ae171e614e780656307f8efc
-SHA512 (requests-file-1.4.1.tar.gz) = 3ca1a365153f1a6b9114cdc0ad6165d22e07e9a29509e0a1a7f35558cff66d506db6e6cc1cad47a4b7695ca12f824607c951acb7da5904ff23073c90c5352f39
-Size (requests-file-1.4.1.tar.gz) = 5856 bytes
+SHA1 (requests-file-1.4.2.tar.gz) = 00ed09095adcd120de5188bcb44abfb1788606f0
+RMD160 (requests-file-1.4.2.tar.gz) = 3a0d093254808df3dff1d4c8c3916da0ccf8a45a
+SHA512 (requests-file-1.4.2.tar.gz) = 6e92f48e89168f84eb9c5d3690dbc05edfdcf9cf7556355466bccf947815ff8752af972ca737d9af36425f590e8f50ac31a7e8c3c429e3c3d9bea26ce5c9da42
+Size (requests-file-1.4.2.tar.gz) = 5161 bytes
