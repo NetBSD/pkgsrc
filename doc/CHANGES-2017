@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2557 2017/06/22 03:05:18 jnemeth Exp $
+$NetBSD: CHANGES-2017,v 1.2558 2017/06/22 09:23:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3478,3 +3478,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added textproc/ruby-temple version 0.8.0 [taca 2017-06-21]
 	Updated meta-pkgs/bulk-large to 20160621 [taca 2017-06-21]
 	Added security/ruby-sshkey version 1.9.0 [minskim 2017-06-22]
+	Updated devel/py-requests-file to 1.4.2 [adam 2017-06-22]
