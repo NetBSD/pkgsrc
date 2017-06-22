@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2017/03/12 13:46:51 taca Exp $
+# $NetBSD: Makefile,v 1.95 2017/06/22 09:44:29 markd Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -69,11 +69,7 @@ SUBDIR+=	texlive-collection-fontsrecommended-doc
 SUBDIR+=	texlive-collection-fontutils
 SUBDIR+=	texlive-collection-formatsextra
 SUBDIR+=	texlive-collection-games
-SUBDIR+=	texlive-collection-genericextra
-SUBDIR+=	texlive-collection-genericrecommended
-SUBDIR+=	texlive-collection-genericrecommended-doc
-SUBDIR+=	texlive-collection-htmlxml
-SUBDIR+=	texlive-collection-langafrican
+SUBDIR+=	texlive-collection-humanities
 SUBDIR+=	texlive-collection-langarabic
 SUBDIR+=	texlive-collection-langchinese
 SUBDIR+=	texlive-collection-langcjk
@@ -84,7 +80,6 @@ SUBDIR+=	texlive-collection-langeuropean
 SUBDIR+=	texlive-collection-langfrench
 SUBDIR+=	texlive-collection-langgerman
 SUBDIR+=	texlive-collection-langgreek
-SUBDIR+=	texlive-collection-langindic
 SUBDIR+=	texlive-collection-langitalian
 SUBDIR+=	texlive-collection-langjapanese
 SUBDIR+=	texlive-collection-langkorean
@@ -97,15 +92,13 @@ SUBDIR+=	texlive-collection-latex-doc
 SUBDIR+=	texlive-collection-latexextra
 SUBDIR+=	texlive-collection-latexrecommended
 SUBDIR+=	texlive-collection-luatex
-SUBDIR+=	texlive-collection-mathextra
+SUBDIR+=	texlive-collection-mathscience
 SUBDIR+=	texlive-collection-metapost
 SUBDIR+=	texlive-collection-music
-SUBDIR+=	texlive-collection-omega
 SUBDIR+=	texlive-collection-pictures
-SUBDIR+=	texlive-collection-plainextra
+SUBDIR+=	texlive-collection-plaingeneric
 SUBDIR+=	texlive-collection-pstricks
 SUBDIR+=	texlive-collection-publishers
-SUBDIR+=	texlive-collection-science
 SUBDIR+=	texlive-collection-xetex
 SUBDIR+=	web-server
 SUBDIR+=	windowmaker-desktop
