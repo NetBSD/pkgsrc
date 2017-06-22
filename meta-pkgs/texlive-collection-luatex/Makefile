@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2016/08/07 11:24:24 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/22 09:37:22 markd Exp $
 
 DISTNAME=	collection-luatex
-PKGNAME=	texlive-${DISTNAME}-2016pre3
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41654
+TEXLIVE_REV=	44500
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -15,6 +15,8 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend checkcites
 # depend chickenize
 # depend cloze
+# depend combofont
+# depend cstypo
 DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend enigma
 # depend interpreter
@@ -24,6 +26,7 @@ DEPENDS+=	tex-ctablestack-[0-9]*:../../print/tex-ctablestack
 # depend luabibentry
 # depend luabidi
 DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
+# depend luahyphenrules
 # depend luaindex
 # depend luainputenc
 # depend luaintro
@@ -32,6 +35,7 @@ DEPENDS+=	tex-luacode-[0-9]*:../../print/tex-luacode
 DEPENDS+=	tex-lualibs-[0-9]*:../../devel/tex-lualibs
 # depend luamplib
 DEPENDS+=	tex-luaotfload-[0-9]*:../../fonts/tex-luaotfload
+# depend luapackageloader
 # depend luasseq
 DEPENDS+=	tex-luatex85-[0-9]*:../../print/tex-luatex85
 DEPENDS+=	tex-luatexbase-[0-9]*:../../devel/tex-luatexbase
