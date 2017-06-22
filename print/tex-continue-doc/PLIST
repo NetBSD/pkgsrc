@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:01 markd Exp $
+share/texmf-dist/doc/latex/continue/README
+share/texmf-dist/doc/latex/continue/continue.pdf
+share/texmf-dist/doc/latex/continue/trycontinue.pdf
+share/texmf-dist/doc/latex/continue/trycontinue.tex

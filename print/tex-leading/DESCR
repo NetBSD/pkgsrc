@@ -1,0 +1,5 @@
+The package defines a command \leading, whose argument is a
+<length> that specifies the nominal distance between
+consecutive baselines of typeset text. The command replaces the
+rather more difficult LaTeX command \linespread{<ratio>}, where
+the leading is specified by reference to the font size.
