@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2016/06/16 04:03:13 markd Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/22 09:37:21 markd Exp $
 
 DISTNAME=	collection-games
-PKGNAME=	texlive-${DISTNAME}-2016pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36348
+TEXLIVE_REV=	42992
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -38,6 +38,7 @@ DEPENDS+=	tex-schwalbe-chess-[0-9]*:../../print/tex-schwalbe-chess
 # depend sgame
 DEPENDS+=	tex-skak-[0-9]*:../../print/tex-skak
 DEPENDS+=	tex-skaknew-[0-9]*:../../print/tex-skaknew
+# depend soup
 # depend sudoku
 # depend sudokubundle
 # depend xq
