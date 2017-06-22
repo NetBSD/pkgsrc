@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:02 markd Exp $
+share/texmf-dist/tex/latex/thmtools/aliasctr.sty
+share/texmf-dist/tex/latex/thmtools/parseargs.sty
+share/texmf-dist/tex/latex/thmtools/thm-amsthm.sty
+share/texmf-dist/tex/latex/thmtools/thm-autoref.sty
+share/texmf-dist/tex/latex/thmtools/thm-beamer.sty
+share/texmf-dist/tex/latex/thmtools/thm-kv.sty
+share/texmf-dist/tex/latex/thmtools/thm-listof.sty
+share/texmf-dist/tex/latex/thmtools/thm-llncs.sty
+share/texmf-dist/tex/latex/thmtools/thm-ntheorem.sty
+share/texmf-dist/tex/latex/thmtools/thm-patch.sty
+share/texmf-dist/tex/latex/thmtools/thm-restate.sty
+share/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
+share/texmf-dist/tex/latex/thmtools/thmdef-shaded.sty
+share/texmf-dist/tex/latex/thmtools/thmdef-thmbox.sty
+share/texmf-dist/tex/latex/thmtools/thmtools.sty
+share/texmf-dist/tex/latex/thmtools/unique.sty
