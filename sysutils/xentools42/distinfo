@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2016/12/20 10:22:29 bouyer Exp $
+$NetBSD: distinfo,v 1.31 2017/06/22 16:09:17 joerg Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -94,6 +94,7 @@ SHA1 (patch-qemu-xen_ioport.c) = b88f7b3f8ea9ea64aefe6048ffd950c6a452c9cf
 SHA1 (patch-qemu-xen_memory.c) = 8c5440055111a5c2b350346b8db06ec15912bc4c
 SHA1 (patch-qemu-xen_pc-bios_optionrom_Makefile) = c3f35cb5f9ab46834351efe683562ddf8f28b9cf
 SHA1 (patch-qemu-xen_qemu-doc.texi) = 843adbe6a37fe5d600b0cf61d6bd78bf527aa4a6
+SHA1 (patch-qemu-xen_scripts_texi2pod.pl) = 0f497f74acedd4a40b4babafca61956d69b2ffc0
 SHA1 (patch-qemu-xen_target-i386_op__helper.c) = a3fd45a03dc739234712bc9f2dba4fb414cced96
 SHA1 (patch-qemu-xen_xen-all.c) = 4c8c8ae1cffc88db7cfa5a56dfef9e0ee35047db
 SHA1 (patch-xentrace_Makefile) = 751b59769254509c5da199c5498d428f9788b7e5
