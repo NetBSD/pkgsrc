@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:02 markd Exp $
+share/texmf-dist/doc/latex/thmtools/COPYING
+share/texmf-dist/doc/latex/thmtools/README
+share/texmf-dist/doc/latex/thmtools/TODO
+share/texmf-dist/doc/latex/thmtools/VERSION.tex
+share/texmf-dist/doc/latex/thmtools/thmtools-manual.tex
+share/texmf-dist/doc/latex/thmtools/thmtools.pdf

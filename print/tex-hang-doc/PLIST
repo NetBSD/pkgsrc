@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:01 markd Exp $
+share/texmf-dist/doc/latex/hang/COPYING
+share/texmf-dist/doc/latex/hang/ChangeLog
+share/texmf-dist/doc/latex/hang/README
+share/texmf-dist/doc/latex/hang/hang.pdf
+share/texmf-dist/doc/latex/hang/hang.tex
+share/texmf-dist/doc/latex/hang/sample.pdf
+share/texmf-dist/doc/latex/hang/sample.tex
