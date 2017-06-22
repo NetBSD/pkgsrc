@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2017/03/17 12:40:58 roy Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/22 12:49:24 youri Exp $
 
-DISTNAME=		libphutil-20170304
+DISTNAME=		libphutil-20170620
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		libphutil
-GITHUB_TAG=		796cb1c2ee274397a8a7bc6c10566fd751619d6d
+GITHUB_TAG=		fa993854745c5fbc575fd27ff476f40c38be7e37
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		https://github.com/phacility/libphutil/
