@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
+$NetBSD: patch-ag,v 1.9 2017/06/22 20:48:04 tnn Exp $
 
---- Configure.orig	2014-10-13 22:31:13.000000000 +0000
+--- Configure.orig	2015-07-07 20:17:04.000000000 +0000
 +++ Configure
-@@ -2966,32 +2966,62 @@ return(0); }
+@@ -3013,32 +3013,66 @@ return(0); }
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 3.0"
  	;;
@@ -48,6 +48,10 @@ $NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="7099000"
 +	;;
++      8.99.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="8099000"
++	;;
        *)
  	echo "Unknown NetBSD release: $LSOF_VSTR"
 -	echo Assuming NetBSD 1.6
@@ -83,7 +87,7 @@ $NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
      then
        grep -q getbootfile ${LSOF_INCLUDE}/util.h
        if test $? -eq 0	# {
-@@ -3390,6 +3420,7 @@ return(0); }
+@@ -3437,6 +3471,7 @@ return(0); }
      fi	# }
      LSOF_TMP2="sys/vnode.h"
      LSOF_NBSD_PTYFS=0
@@ -91,7 +95,7 @@ $NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
      if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
        LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-@@ -3467,7 +3498,25 @@ return(0); }
+@@ -3514,7 +3549,25 @@ return(0); }
  	  fi	# }
  	fi	# }
        fi	# }
@@ -118,7 +122,7 @@ $NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
        then
  	grep -q UVM $LSOF_TMP3
  	if test $? -ne 0	# {
-@@ -3752,6 +3801,28 @@ return(0); }
+@@ -3799,6 +3852,28 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
@@ -147,7 +151,7 @@ $NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
      LSOF_CFGL="$LSOF_CFGL -lkvm"
      LSOF_DIALECT_DIR=n+obsd
      ;;
-@@ -5488,7 +5559,7 @@ fi	# }
+@@ -5535,7 +5610,7 @@ fi	# }
  echo "" >> $LSOF_MKFC
  if test "X$LSOF_DEBUG" = "X"	# {
  then
