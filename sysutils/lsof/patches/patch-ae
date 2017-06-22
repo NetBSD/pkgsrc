@@ -1,14 +1,17 @@
-$NetBSD: patch-ae,v 1.11 2007/08/14 19:59:18 veego Exp $
+$NetBSD: patch-ae,v 1.12 2017/06/22 20:48:04 tnn Exp $
 
---- dialects/n+obsd/dmnt.c.orig	2005-08-08 21:53:31.000000000 +0200
-+++ dialects/n+obsd/dmnt.c	2007-08-11 14:43:05.000000000 +0200
-@@ -45,6 +45,15 @@
+--- dialects/n+obsd/dmnt.c.orig	2005-08-08 19:53:31.000000000 +0000
++++ dialects/n+obsd/dmnt.c
+@@ -45,6 +45,18 @@ static char *rcsid = "$Id: dmnt.c,v 1.12
  #include <sys/statvfs.h>
  #endif  /* defined(NETBSDV) && defined(HASSTATVFS) */
  
 +#if defined(NETBSDV)
 +#include <sys/param.h>
 +
++#if __NetBSD_Version__ >= 899000100
++#define __EXPOSE_MOUNT
++#endif
 +#if __NetBSD_Version__ >= 399002400
 +#include <sys/types.h>
 +#include <sys/mount.h>
@@ -18,7 +21,7 @@ $NetBSD: patch-ae,v 1.11 2007/08/14 19:59:18 veego Exp $
  #include "lsof.h"
  
  
-@@ -94,7 +103,12 @@
+@@ -94,7 +106,12 @@ readmnt()
  	for (; n; n--, mb++) {
  	    if (mb->f_fstypename[0] == '\0')
  		continue;
