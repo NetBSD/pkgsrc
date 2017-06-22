@@ -1,0 +1,8 @@
+The class formats documents in APA style (6th Edition). It
+provides a full set of facilities in three different output
+modes (journal-like appearance, double-spaced manuscript,
+LaTeX-like document), in contrast to the earlier apa6e, which
+only formats double-spaced manuscripts in APA style. The class
+can mask author identity for copies for use in masked peer
+review. The class is a development of the apa class (which is
+no longer maintained).
