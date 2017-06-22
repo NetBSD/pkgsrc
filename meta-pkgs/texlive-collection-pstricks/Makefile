@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/22 09:37:23 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/22 20:48:54 markd Exp $
 
 DISTNAME=	collection-pstricks
 PKGNAME=	texlive-${DISTNAME}-2017pre1
@@ -11,8 +11,7 @@ HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	PSTricks TeX packages
 
 DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
-DEPENDS+=	texlive-collection-genericrecommended-[0-9]*:../../meta-pkgs/texlive-collection-genericrecommended
-#DEPENDS+=	texlive-collection-plaingeneric-[0-9]*:../../meta-pkgs/texlive-collection-plaingeneric
+DEPENDS+=	texlive-collection-plaingeneric-[0-9]*:../../meta-pkgs/texlive-collection-plaingeneric
 
 DEPENDS+=	tex-auto-pst-pdf-[0-9]*:../../graphics/tex-auto-pst-pdf
 DEPENDS+=	tex-bclogo-[0-9]*:../../graphics/tex-bclogo
