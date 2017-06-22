@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2558 2017/06/22 09:23:43 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2559 2017/06/22 09:35:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3479,3 +3479,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated meta-pkgs/bulk-large to 20160621 [taca 2017-06-21]
 	Added security/ruby-sshkey version 1.9.0 [minskim 2017-06-22]
 	Updated devel/py-requests-file to 1.4.2 [adam 2017-06-22]
+	Updated net/py-tldextract to 2.1.0 [adam 2017-06-22]
