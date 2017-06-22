@@ -1,0 +1,7 @@
+The bundle provides several packages for commonly-needed
+support for typesetting theorems. The packages should work with
+kernel theorems (theorems 'out of the box' with LaTeX), and the
+theorem and amsthm packages. Features of the bundle include: a
+key-value interface to \newtheorem; a \listoftheorems command;
+hyperref and autoref compatibility; a mechanism for restating
+entire theorems in a single macro call.
