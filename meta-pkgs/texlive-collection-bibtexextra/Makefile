@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2017/06/22 09:37:20 markd Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/22 11:10:55 markd Exp $
 
 DISTNAME=	collection-bibtexextra
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44385
@@ -28,7 +28,7 @@ DEPENDS+=	tex-amsrefs-[0-9]*:../../print/tex-amsrefs
 DEPENDS+=	tex-biblatex-[0-9]*:../../print/tex-biblatex
 # depend biblatex-abnt
 # depend biblatex-anonymous
-# depend biblatex-apa
+DEPENDS+=	tex-biblatex-apa-[0-9]*:../../print/tex-biblatex-apa
 # depend biblatex-archaeology
 # depend biblatex-arthistory-bonn
 # depend biblatex-bookinarticle
