@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2017/06/15 20:52:23 maya Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/22 12:50:37 youri Exp $
 
 DISTNAME=		phabricator-20170316
-PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
 GITHUB_PROJECT=		phabricator
-GITHUB_TAG=		6f879559707c57006a1a95d839e2e2e6c64a5ff6
+GITHUB_TAG=		cdeba0f85b40e505d9b86fec8e5954507f0ba12e
 
 MAINTAINER=		youri@NetBSD.org
 HOMEPAGE=		http://phabricator.com/
