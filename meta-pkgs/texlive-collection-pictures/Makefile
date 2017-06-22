@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2017/01/20 22:13:28 markd Exp $
+# $NetBSD: Makefile,v 1.13 2017/06/22 09:37:23 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2016pre5
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	41694
+TEXLIVE_REV=	44395
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -18,6 +18,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend asypictureb
 # depend autoarea
 # depend bardiag
+# depend beamerswitch
 # depend binarytree
 # depend blochsphere
 # depend bloques
@@ -28,6 +29,7 @@ DEPENDS+=	tex-asyfig-[0-9]*:../../graphics/tex-asyfig
 # depend braids
 # depend bxeepic
 # depend cachepic
+# depend callouts
 # depend celtic
 # depend chemfig
 # depend combinedgraphics
@@ -61,6 +63,7 @@ DEPENDS+=	tex-ellipse-[0-9]*:../../graphics/tex-ellipse
 # depend gradientframe
 # depend grafcet
 # depend graphviz
+# depend gtrlib-largetrees
 # depend harveyballs
 DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend hf-tikz
@@ -68,10 +71,12 @@ DEPENDS+=	tex-here-[0-9]*:../../print/tex-here
 # depend hvfloat
 # depend knitting
 # depend knittingpattern
+# depend ladder
 # depend lapdf
 # depend latex-make
 # depend lpic
 # depend lroundrect
+# depend luamesh
 # depend makeshape
 # depend mathspic
 # depend miniplot
@@ -110,11 +115,14 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend rviewport
 # depend sa-tikz
 # depend schemabloc
+# depend scsnowman
+# depend scratch
 # depend setdeck
 # depend signchart
 # depend smartdiagram
 # depend spath3
 # depend swimgraf
+# depend table-fct
 DEPENDS+=	tex-texdraw-[0-9]*:../../graphics/tex-texdraw
 # depend ticollege
 # depend tipfr
@@ -125,7 +133,10 @@ DEPENDS+=	tex-tikz-cd-[0-9]*:../../graphics/tex-tikz-cd
 # depend tikz-dimline
 # depend tikz-feynman
 # depend tikz-inet
+# depend tikz-kalender
 # depend tikz-opm
+# depend tikz-optics
+# depend tikz-page
 # depend tikz-palattice
 # depend tikz-qtree
 # depend tikz-timing
@@ -134,6 +145,7 @@ DEPENDS+=	tex-tikzmark-[0-9]*:../../graphics/tex-tikzmark
 DEPENDS+=	tex-tikzorbital-[0-9]*:../../graphics/tex-tikzorbital
 DEPENDS+=	tex-tikzpagenodes-[0-9]*:../../graphics/tex-tikzpagenodes
 DEPENDS+=	tex-tikzpfeile-[0-9]*:../../graphics/tex-tikzpfeile
+# depend tikzpeople
 DEPENDS+=	tex-tikzposter-[0-9]*:../../graphics/tex-tikzposter
 DEPENDS+=	tex-tikzscale-[0-9]*:../../graphics/tex-tikzscale
 DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
