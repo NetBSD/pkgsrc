@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:02 markd Exp $
+share/texmf-dist/doc/latex/mfirstuc/CHANGES
+share/texmf-dist/doc/latex/mfirstuc/README
+share/texmf-dist/doc/latex/mfirstuc/mfirstuc-code.pdf
+share/texmf-dist/doc/latex/mfirstuc/mfirstuc-manual.html
+share/texmf-dist/doc/latex/mfirstuc/mfirstuc-manual.pdf
+share/texmf-dist/doc/latex/mfirstuc/mfirstuc-manual.tex
+share/texmf-dist/doc/latex/mfirstuc/sample-mfirstuc.pdf
+share/texmf-dist/doc/latex/mfirstuc/sample-mfirstuc.tex
