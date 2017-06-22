@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2560 2017/06/22 09:53:02 markd Exp $
+$NetBSD: CHANGES-2017,v 1.2561 2017/06/22 11:14:44 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3530,3 +3530,24 @@ Changes to the packages collection and infrastructure in 2017:
 	Removed meta-pkgs/texlive-collection-omega [markd 2017-06-22]
 	Removed meta-pkgs/texlive-collection-plainextra [markd 2017-06-22]
 	Removed meta-pkgs/texlive-collection-science [markd 2017-06-22]
+	Added print/tex-apa6 version 2.31 [markd 2017-06-22]
+	Added print/tex-apa6-doc version 2.31 [markd 2017-06-22]
+	Added print/tex-biblatex-apa version 7.4 [markd 2017-06-22]
+	Added print/tex-biblatex-apa-doc version 7.4 [markd 2017-06-22]
+	Added print/tex-continue version 0.1 [markd 2017-06-22]
+	Added print/tex-continue-doc version 0.1 [markd 2017-06-22]
+	Added print/tex-cutwin version 0.1 [markd 2017-06-22]
+	Added print/tex-cutwin-doc version 0.1 [markd 2017-06-22]
+	Added print/tex-hang version 2.1 [markd 2017-06-22]
+	Added print/tex-hang-doc version 2.1 [markd 2017-06-22]
+	Added print/tex-hanging version 1.2b [markd 2017-06-22]
+	Added print/tex-hanging-doc version 1.2b [markd 2017-06-22]
+	Added print/tex-leading version 0.3 [markd 2017-06-22]
+	Added print/tex-leading-doc version 0.3 [markd 2017-06-22]
+	Added print/tex-mfirstuc version 2.04 [markd 2017-06-22]
+	Added print/tex-mfirstuc-doc version 2.04 [markd 2017-06-22]
+	Added print/tex-thmtools version 66 [markd 2017-06-22]
+	Added print/tex-thmtools-doc version 66 [markd 2017-06-22]
+	Updated meta-pkgs/texlive-collection-bibtexextra to 2017pre2 [markd 2017-06-22]
+	Updated meta-pkgs/texlive-collection-publishers to 2017pre2 [markd 2017-06-22]
+	Updated meta-pkgs/texlive-collection-latexextra to 2017pre2 [markd 2017-06-22]
