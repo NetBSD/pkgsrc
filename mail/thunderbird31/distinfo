@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2017/03/23 17:35:23 joerg Exp $
+$NetBSD: distinfo,v 1.8 2017/06/22 16:10:39 joerg Exp $
 
 SHA1 (thunderbird-31.7.0.source.tar.bz2) = 90e18f8ecccdaf1ee39493223a7e3ad8b3b7bede
 RMD160 (thunderbird-31.7.0.source.tar.bz2) = eae13adba96477ddaa3fa7732d94accdc8dab57f
@@ -26,6 +26,7 @@ SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = f5545ffcee1b5b02d8e130c
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 7e5f6e195884d7fc629c10aefe13dba768001daf
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = a7385ed3b8a5011651c07a239b2d8a2a99e14624
 SHA1 (patch-ldap_sdks_c-sdk_build.mk) = 171d81697d136abb6e02cb81445cd88fd8580de2
+SHA1 (patch-ldap_sdks_c-sdk_ldap_build_replace.pm) = 4142a4a9b144ef1b5e5577494690640b15ba919d
 SHA1 (patch-mail_components_shell_nsMailGNOMEIntegration.cpp) = 2b086ad7d3e4efa594ef04aac358e5271993bfcb
 SHA1 (patch-mail_installer_package-manifest.in) = 9f79382d6e17a839d3ba90dab4f657a80340141a
 SHA1 (patch-mail_installer_removed-files.in) = 26d69b9b8747f25130af75ea057cf2abc615bfff
