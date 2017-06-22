@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.11 2016/03/12 09:06:29 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.12 2017/06/22 06:11:25 markd Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -656,7 +656,7 @@ sub invalid_version($) {
 
     # We handle {} here, everything else in package_globmatch
     while ( $pkgmatch = shift @todo ) {
-        if ( $pkgmatch =~ /(.*){([^{}]+)}(.*)/ ) {
+        if ( $pkgmatch =~ /(.*)\{([^{}]+)}(.*)/ ) {
             foreach ( split( ',', $2 ) ) {
                 push( @todo, "$1$_$3" );
             }
@@ -1399,7 +1399,7 @@ sub parse_eval_make_false($$) {
             $var = $${vars}{$varname};
             $var = parse_expand_vars( $var, $vars ) if defined $var;
 
-            $match =~ s/([.+])/\\$1/g;
+            $match =~ s/([{.+])/\\$1/g;
             $match =~ s/\*/.*/g;
             $match =~ s/\?/./g;
             $match = '^' . $match . '$';
