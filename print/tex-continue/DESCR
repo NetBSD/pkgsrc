@@ -1,0 +1,5 @@
+The package is an amalgam of Donald Arseneau's fwlw package and
+Luca Merciadri's turnthepage package. For multipage twoside
+documents it puts a `continuation' mark near the foot of each
+odd-numbered page that is followed by another page. The
+position and form of the continuation mark may be altered.

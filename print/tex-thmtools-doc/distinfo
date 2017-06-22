@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/22 10:53:02 markd Exp $
+
+SHA1 (tex-thmtools-33624/thmtools.doc.tar.xz) = 67113c8b3367d7678b37ff022f2c7f0aa1f0eda6
+RMD160 (tex-thmtools-33624/thmtools.doc.tar.xz) = a2d0ac932aa83407489465978b66d50c94540fd5
+SHA512 (tex-thmtools-33624/thmtools.doc.tar.xz) = 3daf8297fc3d36402fca16a979c51c2073f0830f7da4cff203583f5a24b3a7cee1e4bbb373030cdbeb348f73b7dbf9da733912d7fad87d324ee564e920b29c08
+Size (tex-thmtools-33624/thmtools.doc.tar.xz) = 240444 bytes

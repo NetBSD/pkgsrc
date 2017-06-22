@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:01 markd Exp $
+share/texmf-dist/tex/latex/biblatex-apa/american-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/apa.bbx
+share/texmf-dist/tex/latex/biblatex-apa/apa.cbx
+share/texmf-dist/tex/latex/biblatex-apa/apa.dbx
+share/texmf-dist/tex/latex/biblatex-apa/austrian-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/brazilian-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/british-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/danish-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/dutch-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/english-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/french-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/german-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/greek-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/italian-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/naustrian-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/ngerman-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/norsk-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/norwegian-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/nswissgerman-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/nynorsk-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/portuguese-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/slovene-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/spanish-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/swedish-apa.lbx
+share/texmf-dist/tex/latex/biblatex-apa/swissgerman-apa.lbx

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:00 markd Exp $
+share/texmf-dist/tex/latex/apa6/apa6.cls
+share/texmf-dist/tex/latex/apa6/config/APAamerican.txt
+share/texmf-dist/tex/latex/apa6/config/APAbritish.txt
+share/texmf-dist/tex/latex/apa6/config/APAczech.txt
+share/texmf-dist/tex/latex/apa6/config/APAdutch.txt
+share/texmf-dist/tex/latex/apa6/config/APAendfloat.cfg
+share/texmf-dist/tex/latex/apa6/config/APAenglish.txt
+share/texmf-dist/tex/latex/apa6/config/APAgerman.txt
+share/texmf-dist/tex/latex/apa6/config/APAgreek.txt
+share/texmf-dist/tex/latex/apa6/config/APAngerman.txt
+share/texmf-dist/tex/latex/apa6/config/APAturkish.txt

@@ -1,0 +1,8 @@
+The hanging package facilitates the typesetting of hanging
+paragraphs. The package also enables typesetting with hanging
+punctuation, by making punctuation characters active. This
+facility is best suppressed (it can interfere with other
+packages) -- there are package options for suppressing each
+individual punctuation character. 'Real' attempts at hanging
+punction should nowadays use the microtype package, which takes
+advantage of the support offered in recent versions of pdfTeX.
