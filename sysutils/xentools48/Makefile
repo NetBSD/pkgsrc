@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/04/13 13:08:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/22 16:09:53 joerg Exp $
 #
 VERSION=	4.8.0
 VERSION_IPXE=	827dd1bfee67daa683935ce65316f7e0f057fe1c
@@ -281,7 +281,8 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
 		-Wno-error=unused-const-variable \
 		-Wno-error=gnu-designator -Wno-error=uninitialized \
 		-Wno-error=parentheses-equality \
-		-Wno-error=enum-conversion
+		-Wno-error=enum-conversion \
+		-Wno-error=address-of-packed-member
 BUILDLINK_TRANSFORM+=	rm:-falign-jumps=1 rm:-falign-loops=1 \
 			rm:-mpreferred-stack-boundary=2
 .endif
