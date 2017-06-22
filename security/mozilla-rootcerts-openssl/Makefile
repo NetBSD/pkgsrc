@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2017/02/03 09:56:49 maya Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/22 17:53:59 gdt Exp $
 
 PKGNAME=	mozilla-rootcerts-openssl-2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -28,9 +29,6 @@ CHECK_BUILTIN.openssl=	no
 #
 # For native openssl this is in /etc outside of ${PREFIX}. Beware.
 #
-# Update: even for pkgsrc openssl it's in /etc for SSLDIR, as per the
-# mozilla-rootcerts script.
-#
 .if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 PLACE=			/etc
 SET_PREFIX=		yes
@@ -38,6 +36,7 @@ PLIST_SUBST+=		MYETCDIR=etc
 CHECK_FILES_SUPPORTED=	no
 .else
 PLACE=			${MY_PKG_SYSCONFDIR}
+# probably SET_PREFIX should not be set
 SET_PREFIX=		yes
 PLIST_SUBST+=		MYETCDIR=${MY_PKG_SYSCONFDIR:S/^${PREFIX}//}
 .endif
@@ -45,14 +44,12 @@ PLIST_SUBST+=		MYETCDIR=${MY_PKG_SYSCONFDIR:S/^${PREFIX}//}
 NOT_FOR_UNPRIVILEGED=	yes
 
 OPENSSLDIR=		${PLACE}/openssl/certs
-SSLDIR=			/etc/ssl/certs
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${OPENSSLDIR}
-	#${INSTALL_DATA_DIR} ${DESTDIR}${SSLDIR} # must *not* exist
 	cd ${WRKSRC} && ${SCRIPT} -d ${DESTDIR} install
 	${CHMOD} go+r ${DESTDIR}${OPENSSLDIR}/*.pem
-	${CHMOD} go+r ${DESTDIR}${SSLDIR}/*.crt
+	${CHMOD} go+r ${DESTDIR}${OPENSSLDIR}/*.crt
 
 .include "../../mk/bsd.pkg.mk"
 
