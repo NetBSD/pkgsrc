@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2017/06/21 22:21:37 taca Exp $
+# $NetBSD: Makefile,v 1.31 2017/06/22 21:00:05 markd Exp $
 
-DISTNAME=	bulk-large-20160621
+DISTNAME=	bulk-large-20170622
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -121,8 +121,7 @@ BUILD_DEPENDS+=	teTeX-bin>=3:../../print/teTeX3-bin
 BUILD_DEPENDS+=	teTeX-texmf>=3:../../print/teTeX3-texmf
 BUILD_DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-basic
 BUILD_DEPENDS+=	texlive-collection-basic-doc-[0-9]*:../../meta-pkgs/texlive-collection-basic-doc
-BUILD_DEPENDS+=	texlive-collection-genericrecommended-[0-9]*:../../meta-pkgs/texlive-collection-genericrecommended
-BUILD_DEPENDS+=	texlive-collection-genericrecommended-doc-[0-9]*:../../meta-pkgs/texlive-collection-genericrecommended-doc
+BUILD_DEPENDS+=	texlive-collection-plaingeneric-[0-9]*:../../meta-pkgs/texlive-collection-plaingeneric
 BUILD_DEPENDS+=	texlive-collection-latex-[0-9]*:../../meta-pkgs/texlive-collection-latex
 BUILD_DEPENDS+=	texlive-collection-latex-doc-[0-9]*:../../meta-pkgs/texlive-collection-latex-doc
 
