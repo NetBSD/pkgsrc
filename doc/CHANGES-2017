@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2555 2017/06/21 22:22:06 taca Exp $
+$NetBSD: CHANGES-2017,v 1.2556 2017/06/22 00:58:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3476,3 +3476,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/lighttpd to 1.4.45nb2 [schmonz 2017-06-21]
 	Added textproc/ruby-temple version 0.8.0 [taca 2017-06-21]
 	Updated meta-pkgs/bulk-large to 20160621 [taca 2017-06-21]
+	Added security/ruby-sshkey version 1.9.0 [minskim 2017-06-22]
