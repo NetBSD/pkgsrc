@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/22 10:53:01 markd Exp $
+share/texmf-dist/doc/latex/apa6/README
+share/texmf-dist/doc/latex/apa6/apa6.pdf
+share/texmf-dist/doc/latex/apa6/pseudoTeX/TeX2WordForapa6.bas
+share/texmf-dist/doc/latex/apa6/pseudoTeX/apa6.ptex
+share/texmf-dist/doc/latex/apa6/samples/Figure1.pdf
+share/texmf-dist/doc/latex/apa6/samples/bibliography.bib
+share/texmf-dist/doc/latex/apa6/samples/longsample.tex
+share/texmf-dist/doc/latex/apa6/samples/shortsample.tex
