@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/06/16 04:03:15 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/22 09:37:22 markd Exp $
 
 DISTNAME=	collection-langother
-PKGNAME=	texlive-${DISTNAME}-2016
+PKGNAME=	texlive-${DISTNAME}-2017pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	31014
+TEXLIVE_REV=	44414
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -14,29 +14,51 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 
 # amsldoc-vn is documentation only
 DEPENDS+=	tex-aramaic-serto-[0-9]*:../../fonts/tex-aramaic-serto
-DEPENDS+=	tex-babel-bahasa-[0-9]*:../../print/tex-babel-bahasa
+# depend babel-azerbaijani
 DEPENDS+=	tex-babel-esperanto-[0-9]*:../../print/tex-babel-esperanto
 DEPENDS+=	tex-babel-georgian-[0-9]*:../../print/tex-babel-georgian
 DEPENDS+=	tex-babel-hebrew-[0-9]*:../../print/tex-babel-hebrew
+# depend babel-indonesian
 DEPENDS+=	tex-babel-interlingua-[0-9]*:../../print/tex-babel-interlingua
+# depend babel-malay
 DEPENDS+=	tex-babel-sorbian-[0-9]*:../../print/tex-babel-sorbian
 DEPENDS+=	tex-babel-thai-[0-9]*:../../print/tex-babel-thai
 DEPENDS+=	tex-babel-vietnamese-[0-9]*:../../print/tex-babel-vietnamese
+# depend bangtex
+# depend bengali
+# depend burmese
 DEPENDS+=	tex-cjhebrew-[0-9]*:../../fonts/tex-cjhebrew
 DEPENDS+=	tex-ctib-[0-9]*:../../print/tex-ctib
+# depend ebong
+DEPENDS+=	tex-ethiop-[0-9]*:../../print/tex-ethiop
+DEPENDS+=	tex-ethiop-t1-[0-9]*:../../fonts/tex-ethiop-t1
+DEPENDS+=	tex-fc-[0-9]*:../../fonts/tex-fc
 DEPENDS+=	tex-fonts-tlwg-[0-9]*:../../fonts/tex-fonts-tlwg
+DEPENDS+=	tex-hyphen-armenian-[0-9]*:../../print/tex-hyphen-armenian
 DEPENDS+=	tex-hyphen-afrikaans-[0-9]*:../../print/tex-hyphen-afrikaans
 DEPENDS+=	tex-hyphen-coptic-[0-9]*:../../print/tex-hyphen-coptic
 DEPENDS+=	tex-hyphen-esperanto-[0-9]*:../../print/tex-hyphen-esperanto
+DEPENDS+=	tex-hyphen-ethiopic-[0-9]*:../../print/tex-hyphen-ethiopic
 DEPENDS+=	tex-hyphen-georgian-[0-9]*:../../print/tex-hyphen-georgian
+DEPENDS+=	tex-hyphen-indic-[0-9]*:../../print/tex-hyphen-indic
 DEPENDS+=	tex-hyphen-indonesian-[0-9]*:../../print/tex-hyphen-indonesian
 DEPENDS+=	tex-hyphen-interlingua-[0-9]*:../../print/tex-hyphen-interlingua
+DEPENDS+=	tex-hyphen-sanskrit-[0-9]*:../../print/tex-hyphen-sanskrit
 DEPENDS+=	tex-hyphen-thai-[0-9]*:../../print/tex-hyphen-thai
 DEPENDS+=	tex-hyphen-turkmen-[0-9]*:../../print/tex-hyphen-turkmen
+# depend latexbangla
 # lshort-thai is documentation only
 # lshort-vietnamese is documentation only
 # ntheorem-vn is documentation only
+# depend padauk
+# depend sanskrit
+# depend sanskrit-t1
+# depend thaienum
+# depend velthuis
 DEPENDS+=	tex-vntex-[0-9]*:../../print/tex-vntex
+# depend wnri
+# depend wnri-latex
+# depend xetex-devanagari
 
 META_PACKAGE=	yes
 
