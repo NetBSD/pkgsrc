@@ -1,0 +1,6 @@
+The package provides several file hooks (AtBegin, AtEnd, ...)
+for files read by \input, \include and \InputIfFileExists.
+General hooks for all such files (e.g. all \include'd ones) and
+file specific hooks only used for named files are provided; two
+hooks are provided for the end of \included files -- one
+before, and one after the final \clearpage.

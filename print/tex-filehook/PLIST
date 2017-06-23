@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/23 23:13:34 markd Exp $
+share/texmf-dist/tex/latex/filehook/filehook-fink.sty
+share/texmf-dist/tex/latex/filehook/filehook-listings.sty
+share/texmf-dist/tex/latex/filehook/filehook-memoir.sty
+share/texmf-dist/tex/latex/filehook/filehook-scrlfile.sty
+share/texmf-dist/tex/latex/filehook/filehook.sty
+share/texmf-dist/tex/latex/filehook/pgf-filehook.sty
