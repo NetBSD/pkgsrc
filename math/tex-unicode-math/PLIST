@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/23 23:32:12 markd Exp $
+share/texmf-dist/tex/latex/unicode-math/unicode-math-luatex.sty
+share/texmf-dist/tex/latex/unicode-math/unicode-math-table.tex
+share/texmf-dist/tex/latex/unicode-math/unicode-math-xetex.sty
+share/texmf-dist/tex/latex/unicode-math/unicode-math.sty

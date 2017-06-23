@@ -1,0 +1,11 @@
+This package will provide a complete implementation of unicode
+maths for XeLaTeX and LuaLaTeX. Unicode maths is currently
+supported by the following fonts: Cambria Math (Microsoft),
+Minion Math (Johannes Kuster, typoma GmbH) Latin Modern Math
+(Boguslaw Jackowski, Janusz M. Nowacki) TeX Gyre Pagella Math
+(Boguslaw Jackowski, Janusz M. Nowacki) Asana-Math fonts
+(Apostolos Syropolous), Neo Euler (Khaled Hosny), STIX (STI
+Pub), and XITS Math (Khaled Hosny). As well as running XeTeX or
+LuaTeX, this package requires recent versions of the fontspec,
+expl3, xpackages, filehook, ucharcat and lualatex-math
+packages.
