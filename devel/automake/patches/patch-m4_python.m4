@@ -1,6 +1,7 @@
-$NetBSD: patch-m4_python.m4,v 1.3 2017/06/23 08:40:40 wiz Exp $
+$NetBSD: patch-m4_python.m4,v 1.4 2017/06/23 12:52:56 wiz Exp $
 
 AM_PATH_PYTHON: look for python3.6 binary as well.
+http://debbugs.gnu.org/cgi/bugreport.cgi?bug=27458
 
 --- m4/python.m4.orig	2017-06-16 21:01:05.000000000 +0000
 +++ m4/python.m4
