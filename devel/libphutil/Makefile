@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/06/22 12:49:24 youri Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/23 14:05:19 roy Exp $
 
-DISTNAME=		libphutil-20170620
+DISTNAME=		libphutil-20170609
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
+# Track the stable branch
 GITHUB_PROJECT=		libphutil
-GITHUB_TAG=		fa993854745c5fbc575fd27ff476f40c38be7e37
+GITHUB_TAG=		612619d0040b5e13c4e068dce443217abbc10a00
 
-MAINTAINER=		youri@NetBSD.org
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://github.com/phacility/libphutil/
 COMMENT=		Collection of utility classes and functions for PHP
 LICENSE=		apache-2.0
