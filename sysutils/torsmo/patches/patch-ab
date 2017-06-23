@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
+$NetBSD: patch-ab,v 1.2 2017/06/23 19:02:07 kamil Exp $
 
---- netbsd.c.orig	2004-08-25 19:55:57.000000000 +0200
+--- netbsd.c.orig	2004-08-25 17:55:57.000000000 +0000
 +++ netbsd.c
 @@ -9,6 +9,7 @@
  #include <err.h>
@@ -10,7 +10,15 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
  
  #include <kvm.h>
  #include <nlist.h>
-@@ -221,6 +222,33 @@ void update_net_stats() 
+@@ -18,7 +19,6 @@
+ #include <sys/sysctl.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
+-#include <sys/user.h>
+ #include <sys/socket.h>
+ #include <sys/swap.h>
+ #include <sys/sched.h>
+@@ -221,6 +221,33 @@ void update_net_stats() 
      }
  }
  
@@ -44,7 +52,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
  void update_total_processes() 
  {
      /* It's easier to use kvm here than sysctl */
-@@ -302,6 +330,7 @@ void update_cpu_usage() 
+@@ -302,6 +329,7 @@ void update_cpu_usage() 
  }
  
  double get_i2c_info(int fd, int div) {
@@ -52,7 +60,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
      return -1;
  }
  
-@@ -315,24 +344,96 @@ void update_load_average() {
+@@ -315,27 +343,98 @@ void update_load_average() {
  }
  
  double get_acpi_temperature(int fd) {
@@ -153,3 +161,6 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
  }
  
  char* get_acpi_fan() {
+     return "N/A";
+ }
+-
