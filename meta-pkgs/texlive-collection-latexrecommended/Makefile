@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2017/06/22 09:37:22 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/23 23:39:06 markd Exp $
 
 DISTNAME=	collection-latexrecommended
-PKGNAME=	texlive-${DISTNAME}-2017pre1
+PKGNAME=	texlive-${DISTNAME}-2017
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	44177
@@ -28,21 +28,21 @@ DEPENDS+=	tex-extsizes-[0-9]*:../../print/tex-extsizes
 DEPENDS+=	tex-fancybox-[0-9]*:../../print/tex-fancybox
 DEPENDS+=	tex-fancyref-[0-9]*:../../print/tex-fancyref
 DEPENDS+=	tex-fancyvrb-[0-9]*:../../print/tex-fancyvrb
-# depend filehook
+DEPENDS+=	tex-filehook-[0-9]*:../../print/tex-filehook
 DEPENDS+=	tex-float-[0-9]*:../../print/tex-float
 DEPENDS+=	tex-fontspec-[0-9]*:../../fonts/tex-fontspec
 DEPENDS+=	tex-fp-[0-9]*:../../math/tex-fp
 DEPENDS+=	tex-index-[0-9]*:../../print/tex-index
 DEPENDS+=	tex-jknapltx-[0-9]*:../../print/tex-jknapltx
 DEPENDS+=	tex-koma-script-[0-9]*:../../print/tex-koma-script
-# depend latexbug
 DEPENDS+=	tex-l3experimental-[0-9]*:../../devel/tex-l3experimental
 DEPENDS+=	tex-l3kernel-[0-9]*:../../devel/tex-l3kernel
 DEPENDS+=	tex-l3packages-[0-9]*:../../devel/tex-l3packages
+DEPENDS+=	tex-latexbug-[0-9]*:../../devel/tex-latexbug
 DEPENDS+=	tex-lineno-[0-9]*:../../print/tex-lineno
 DEPENDS+=	tex-listings-[0-9]*:../../print/tex-listings
-# depend lwarp
-# depend mathspec
+DEPENDS+=	tex-lwarp-[0-9]*:../../textproc/tex-lwarp
+DEPENDS+=	tex-mathspec-[0-9]*:../../math/tex-mathspec
 DEPENDS+=	tex-mathtools-[0-9]*:../../print/tex-mathtools
 DEPENDS+=	tex-mdwtools-[0-9]*:../../print/tex-mdwtools
 DEPENDS+=	tex-memoir-[0-9]*:../../print/tex-memoir
@@ -66,7 +66,7 @@ DEPENDS+=	tex-textcase-[0-9]*:../../print/tex-textcase
 DEPENDS+=	tex-thumbpdf-[0-9]*:../../print/tex-thumbpdf
 DEPENDS+=	tex-typehtml-[0-9]*:../../print/tex-typehtml
 DEPENDS+=	tex-underscore-[0-9]*:../../print/tex-underscore
-# depend unicode-math
+DEPENDS+=	tex-unicode-math-[0-9]*:../../math/tex-unicode-math
 DEPENDS+=	tex-xcolor-[0-9]*:../../print/tex-xcolor
 DEPENDS+=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 DEPENDS+=	tex-xltxtra-[0-9]*:../../print/tex-xltxtra
