@@ -1,7 +1,16 @@
-$NetBSD: patch-al,v 1.6 2007/11/05 19:06:05 drochner Exp $
+$NetBSD: patch-al,v 1.7 2017/06/23 16:42:05 kamil Exp $
 
---- sysdeps/bsd/procmem.c.orig	2007-04-27 00:27:34.000000000 +0200
+--- sysdeps/bsd/procmem.c.orig	2011-06-01 15:40:47.000000000 +0000
 +++ sysdeps/bsd/procmem.c
+@@ -42,7 +42,7 @@
+ #include <ufs/ufs/inode.h>
+ 
+ #include <sys/ucred.h>
+-#if (!defined __OpenBSD__) && (!defined __bsdi__)
++#if (!defined __OpenBSD__) && (!defined __bsdi__) && (!defined __NetBSD__)
+ #include <sys/user.h>
+ #endif
+ #include <sys/sysctl.h>
 @@ -116,6 +116,9 @@ void
  glibtop_get_proc_mem_p (glibtop *server, glibtop_proc_mem *buf,
  			pid_t pid)
