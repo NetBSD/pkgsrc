@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2567 2017/06/22 13:59:51 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2568 2017/06/23 03:45:24 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3557,3 +3557,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/phabricator to 20170316 [youri 2017-06-22]
 	Updated www/drupal7 to 7.56 [taca 2017-06-22]
 	Updated net/djbdns to 1.05nb11 [schmonz 2017-06-22]
+	Updated security/stunnel to 5.41 [schmonz 2017-06-23]
