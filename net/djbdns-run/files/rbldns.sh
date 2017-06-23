@@ -1,8 +1,8 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rbldns.sh,v 1.5 2015/11/25 12:52:12 jperkin Exp $
+# $NetBSD: rbldns.sh,v 1.6 2017/06/23 15:39:44 schmonz Exp $
 #
-# @PKGNAME@ script to control rbldns (local RBL service)
+# @PKGNAME@ script to control rbldns (local RBL service).
 #
 
 # PROVIDE: rbldns named
@@ -25,27 +25,35 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 rcvar=${name}
-required_files="@PKG_SYSCONFDIR@/rbldns/data.cdb"
+required_files="@PKG_SYSCONFDIR@/${name}/data.cdb"
 command="@PREFIX@/bin/${name}"
 start_precmd="rbldns_precmd"
-extra_commands="reload cdb"
-reload_cmd="rbldns_cdb"; cdb_cmd=${reload_cmd}
+extra_commands="cdb reload"
+cdb_cmd="rbldns_cdb"
+reload_cmd=${cdb_cmd}
 
 rbldns_precmd()
 {
-	if [ -f /etc/rc.subr ]; then
-		checkyesno rbldns_log || rbldns_logcmd=${rbldns_nologcmd}
+	if [ -f /etc/rc.subr ] && ! checkyesno rbldns_log; then
+		rbldns_logcmd=${rbldns_nologcmd}
 	fi
-	command="@SETENV@ - ${rbldns_postenv} ROOT=@PKG_SYSCONFDIR@/rbldns IP=${rbldns_ip} BASE=${rbldns_base} @PREFIX@/bin/envuidgid rbldns @PREFIX@/bin/softlimit -d ${rbldns_datalimit} @PREFIX@/bin/rbldns 2>&1 | @PREFIX@/bin/setuidgid dnslog ${rbldns_logcmd}"
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${rbldns_postenv}
+ROOT=@PKG_SYSCONFDIR@/${name} IP=${rbldns_ip} BASE=${rbldns_base}
+@PREFIX@/bin/envuidgid @DJBDNS_RBL_USER@
+@PREFIX@/bin/softlimit -d ${rbldns_datalimit}
+@PREFIX@/bin/${name}
+2>&1 |
+@PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DJBDNS_LOG_USER@ ${rbldns_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
 
 rbldns_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/rbldns/data."
-	cd @PKG_SYSCONFDIR@/rbldns
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/${name}/data."
+	cd @PKG_SYSCONFDIR@/${name}
 	@PREFIX@/bin/rbldns-data
+	@CHMOD@ 644 data.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
