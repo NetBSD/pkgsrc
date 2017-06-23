@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:16:04 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:29:36 youri Exp $
 bin/mate-system-monitor
+libexec/mate-system-monitor/msm-kill
+libexec/mate-system-monitor/msm-renice
 man/man1/mate-system-monitor.1
 share/appdata/mate-system-monitor.appdata.xml
 share/applications/mate-system-monitor.desktop
@@ -221,7 +223,6 @@ share/locale/as/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ast/LC_MESSAGES/mate-system-monitor.mo
 share/locale/az/LC_MESSAGES/mate-system-monitor.mo
 share/locale/be/LC_MESSAGES/mate-system-monitor.mo
-share/locale/be@latin/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bg/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bn/LC_MESSAGES/mate-system-monitor.mo
 share/locale/bn_IN/LC_MESSAGES/mate-system-monitor.mo
@@ -236,7 +237,6 @@ share/locale/da/LC_MESSAGES/mate-system-monitor.mo
 share/locale/de/LC_MESSAGES/mate-system-monitor.mo
 share/locale/dz/LC_MESSAGES/mate-system-monitor.mo
 share/locale/el/LC_MESSAGES/mate-system-monitor.mo
-share/locale/en@shaw/LC_MESSAGES/mate-system-monitor.mo
 share/locale/en_AU/LC_MESSAGES/mate-system-monitor.mo
 share/locale/en_CA/LC_MESSAGES/mate-system-monitor.mo
 share/locale/en_GB/LC_MESSAGES/mate-system-monitor.mo
@@ -250,6 +250,7 @@ share/locale/fa/LC_MESSAGES/mate-system-monitor.mo
 share/locale/fi/LC_MESSAGES/mate-system-monitor.mo
 share/locale/fr/LC_MESSAGES/mate-system-monitor.mo
 share/locale/fr_CA/LC_MESSAGES/mate-system-monitor.mo
+share/locale/frp/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ga/LC_MESSAGES/mate-system-monitor.mo
 share/locale/gl/LC_MESSAGES/mate-system-monitor.mo
 share/locale/gu/LC_MESSAGES/mate-system-monitor.mo
@@ -268,6 +269,7 @@ share/locale/kk/LC_MESSAGES/mate-system-monitor.mo
 share/locale/kn/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ko/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ku/LC_MESSAGES/mate-system-monitor.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ky/LC_MESSAGES/mate-system-monitor.mo
 share/locale/li/LC_MESSAGES/mate-system-monitor.mo
 share/locale/lt/LC_MESSAGES/mate-system-monitor.mo
@@ -289,6 +291,7 @@ share/locale/oc/LC_MESSAGES/mate-system-monitor.mo
 share/locale/or/LC_MESSAGES/mate-system-monitor.mo
 share/locale/pa/LC_MESSAGES/mate-system-monitor.mo
 share/locale/pl/LC_MESSAGES/mate-system-monitor.mo
+share/locale/pms/LC_MESSAGES/mate-system-monitor.mo
 share/locale/ps/LC_MESSAGES/mate-system-monitor.mo
 share/locale/pt/LC_MESSAGES/mate-system-monitor.mo
 share/locale/pt_BR/LC_MESSAGES/mate-system-monitor.mo
@@ -317,3 +320,4 @@ share/locale/zh_TW/LC_MESSAGES/mate-system-monitor.mo
 share/pixmaps/mate-system-monitor/download.svg
 share/pixmaps/mate-system-monitor/side.png
 share/pixmaps/mate-system-monitor/upload.svg
+share/polkit-1/actions/org.mate.mate-system-monitor.policy
