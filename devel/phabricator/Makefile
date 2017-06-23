@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2017/06/22 12:50:37 youri Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/23 14:05:19 roy Exp $
 
-DISTNAME=		phabricator-20170316
+DISTNAME=		phabricator-20170609
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
+# Track the stable branch
 GITHUB_PROJECT=		phabricator
-GITHUB_TAG=		cdeba0f85b40e505d9b86fec8e5954507f0ba12e
+GITHUB_TAG=		5885704800a97aadf47aee5654ff2647b40fb4ad
 
-MAINTAINER=		youri@NetBSD.org
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://phabricator.com/
 COMMENT=		Open software engineering platform
 LICENSE=		apache-2.0
