@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/23 07:12:19 manu Exp $
+bin/wkhtmltoimage
+bin/wkhtmltopdf
+include/wkhtmltox/image.h
+include/wkhtmltox/pdf.h
+lib/libwkhtmltox.so.0.12.4
+lib/libwkhtmltox.so.0.1
+lib/libwkhtmltox.so.0
