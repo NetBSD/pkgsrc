@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2017/02/12 06:25:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/23 17:20:56 youri Exp $
 
-PKGREVISION= 5
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-media-${MATE_VERSION}
+DISTNAME=	mate-media-${VERSION:R}.1
 CATEGORIES=	multimedia
 
 COMMENT=	MATE media tools for MATE Desktop
@@ -17,10 +16,8 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-media
 
 .include "options.mk"
 
-.include "../../devel/glib2/schemas.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../audio/libmatemixer/buildlink3.mk"
@@ -28,5 +25,4 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/mate-media
 .include "../../x11/mate-panel/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gst-mixer-applet
 CONFIGURE_ARGS+=	--enable-gstmix
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
