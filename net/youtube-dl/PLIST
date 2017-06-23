@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2017/06/05 20:37:21 leot Exp $
+@comment $NetBSD: PLIST,v 1.44 2017/06/23 11:59:10 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -149,6 +149,9 @@ ${PYSITELIB}/youtube_dl/extractor/arkena.pyo
 ${PYSITELIB}/youtube_dl/extractor/arte.py
 ${PYSITELIB}/youtube_dl/extractor/arte.pyc
 ${PYSITELIB}/youtube_dl/extractor/arte.pyo
+${PYSITELIB}/youtube_dl/extractor/asiancrush.py
+${PYSITELIB}/youtube_dl/extractor/asiancrush.pyc
+${PYSITELIB}/youtube_dl/extractor/asiancrush.pyo
 ${PYSITELIB}/youtube_dl/extractor/atresplayer.py
 ${PYSITELIB}/youtube_dl/extractor/atresplayer.pyc
 ${PYSITELIB}/youtube_dl/extractor/atresplayer.pyo
@@ -1538,6 +1541,9 @@ ${PYSITELIB}/youtube_dl/extractor/rutv.pyo
 ${PYSITELIB}/youtube_dl/extractor/ruutu.py
 ${PYSITELIB}/youtube_dl/extractor/ruutu.pyc
 ${PYSITELIB}/youtube_dl/extractor/ruutu.pyo
+${PYSITELIB}/youtube_dl/extractor/ruv.py
+${PYSITELIB}/youtube_dl/extractor/ruv.pyc
+${PYSITELIB}/youtube_dl/extractor/ruv.pyo
 ${PYSITELIB}/youtube_dl/extractor/safari.py
 ${PYSITELIB}/youtube_dl/extractor/safari.pyc
 ${PYSITELIB}/youtube_dl/extractor/safari.pyo
