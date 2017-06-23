@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:21:10 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:32:16 youri Exp $
 bin/pluma
 include/pluma/pluma-app.h
 include/pluma/pluma-commands.h
@@ -6,14 +6,12 @@ include/pluma/pluma-debug.h
 include/pluma/pluma-document.h
 include/pluma/pluma-encodings-combo-box.h
 include/pluma/pluma-encodings.h
-include/pluma/pluma-file-chooser-dialog.h
 include/pluma/pluma-help.h
 include/pluma/pluma-message-bus.h
 include/pluma/pluma-message-type.h
 include/pluma/pluma-message.h
 include/pluma/pluma-notebook.h
 include/pluma/pluma-panel.h
-include/pluma/pluma-plugin.h
 include/pluma/pluma-prefs-manager-app.h
 include/pluma/pluma-prefs-manager.h
 include/pluma/pluma-progress-message-area.h
@@ -23,12 +21,11 @@ include/pluma/pluma-tab.h
 include/pluma/pluma-utils.h
 include/pluma/pluma-view.h
 include/pluma/pluma-window.h
+lib/girepository-1.0/Pluma-1.0.typelib
 lib/pkgconfig/pluma.pc
-lib/pluma/plugin-loaders/libcloader.la
-lib/pluma/plugin-loaders/libpythonloader.la
-lib/pluma/plugins/changecase.pluma-plugin
-lib/pluma/plugins/docinfo.pluma-plugin
-lib/pluma/plugins/externaltools.pluma-plugin
+lib/pluma/plugins/changecase.plugin
+lib/pluma/plugins/docinfo.plugin
+lib/pluma/plugins/externaltools.plugin
 lib/pluma/plugins/externaltools/__init__.py
 lib/pluma/plugins/externaltools/__init__.pyc
 lib/pluma/plugins/externaltools/__init__.pyo
@@ -53,7 +50,7 @@ lib/pluma/plugins/externaltools/manager.pyo
 lib/pluma/plugins/externaltools/outputpanel.py
 lib/pluma/plugins/externaltools/outputpanel.pyc
 lib/pluma/plugins/externaltools/outputpanel.pyo
-lib/pluma/plugins/filebrowser.pluma-plugin
+lib/pluma/plugins/filebrowser.plugin
 lib/pluma/plugins/libchangecase.la
 lib/pluma/plugins/libdocinfo.la
 lib/pluma/plugins/libfilebrowser.la
@@ -63,8 +60,8 @@ lib/pluma/plugins/libspell.la
 lib/pluma/plugins/libtaglist.la
 lib/pluma/plugins/libtime.la
 lib/pluma/plugins/libtrailsave.la
-lib/pluma/plugins/modelines.pluma-plugin
-lib/pluma/plugins/pythonconsole.pluma-plugin
+lib/pluma/plugins/modelines.plugin
+lib/pluma/plugins/pythonconsole.plugin
 lib/pluma/plugins/pythonconsole/__init__.py
 lib/pluma/plugins/pythonconsole/__init__.pyc
 lib/pluma/plugins/pythonconsole/__init__.pyo
@@ -74,7 +71,7 @@ lib/pluma/plugins/pythonconsole/config.pyo
 lib/pluma/plugins/pythonconsole/console.py
 lib/pluma/plugins/pythonconsole/console.pyc
 lib/pluma/plugins/pythonconsole/console.pyo
-lib/pluma/plugins/quickopen.pluma-plugin
+lib/pluma/plugins/quickopen.plugin
 lib/pluma/plugins/quickopen/__init__.py
 lib/pluma/plugins/quickopen/__init__.pyc
 lib/pluma/plugins/quickopen/__init__.pyo
@@ -87,7 +84,7 @@ lib/pluma/plugins/quickopen/virtualdirs.pyo
 lib/pluma/plugins/quickopen/windowhelper.py
 lib/pluma/plugins/quickopen/windowhelper.pyc
 lib/pluma/plugins/quickopen/windowhelper.pyo
-lib/pluma/plugins/snippets.pluma-plugin
+lib/pluma/plugins/snippets.plugin
 lib/pluma/plugins/snippets/Completion.py
 lib/pluma/plugins/snippets/Completion.pyc
 lib/pluma/plugins/snippets/Completion.pyo
@@ -130,15 +127,16 @@ lib/pluma/plugins/snippets/WindowHelper.pyo
 lib/pluma/plugins/snippets/__init__.py
 lib/pluma/plugins/snippets/__init__.pyc
 lib/pluma/plugins/snippets/__init__.pyo
-lib/pluma/plugins/sort.pluma-plugin
-lib/pluma/plugins/spell.pluma-plugin
-lib/pluma/plugins/taglist.pluma-plugin
-lib/pluma/plugins/time.pluma-plugin
-lib/pluma/plugins/trailsave.pluma-plugin
+lib/pluma/plugins/sort.plugin
+lib/pluma/plugins/spell.plugin
+lib/pluma/plugins/taglist.plugin
+lib/pluma/plugins/time.plugin
+lib/pluma/plugins/trailsave.plugin
 libexec/pluma/pluma-bugreport.sh
 man/man1/pluma.1
 share/appdata/pluma.appdata.xml
 share/applications/pluma.desktop
+share/gir-1.0/Pluma-1.0.gir
 share/glib-2.0/schemas/org.mate.pluma.gschema.xml
 share/glib-2.0/schemas/org.mate.pluma.plugins.filebrowser.gschema.xml
 share/glib-2.0/schemas/org.mate.pluma.plugins.spell.gschema.xml
@@ -146,7 +144,6 @@ share/glib-2.0/schemas/org.mate.pluma.plugins.time.gschema.xml
 share/gtk-doc/html/pluma/PlumaMessage.html
 share/gtk-doc/html/pluma/PlumaMessageBus.html
 share/gtk-doc/html/pluma/PlumaMessageType.html
-share/gtk-doc/html/pluma/PlumaPlugin.html
 share/gtk-doc/html/pluma/ch01.html
 share/gtk-doc/html/pluma/home.png
 share/gtk-doc/html/pluma/index.html
@@ -378,7 +375,6 @@ share/locale/as/LC_MESSAGES/pluma.mo
 share/locale/ast/LC_MESSAGES/pluma.mo
 share/locale/az/LC_MESSAGES/pluma.mo
 share/locale/be/LC_MESSAGES/pluma.mo
-share/locale/be@latin/LC_MESSAGES/pluma.mo
 share/locale/bg/LC_MESSAGES/pluma.mo
 share/locale/bn/LC_MESSAGES/pluma.mo
 share/locale/bn_IN/LC_MESSAGES/pluma.mo
@@ -394,7 +390,6 @@ share/locale/da/LC_MESSAGES/pluma.mo
 share/locale/de/LC_MESSAGES/pluma.mo
 share/locale/dz/LC_MESSAGES/pluma.mo
 share/locale/el/LC_MESSAGES/pluma.mo
-share/locale/en@shaw/LC_MESSAGES/pluma.mo
 share/locale/en_AU/LC_MESSAGES/pluma.mo
 share/locale/en_CA/LC_MESSAGES/pluma.mo
 share/locale/en_GB/LC_MESSAGES/pluma.mo
@@ -425,6 +420,7 @@ share/locale/kk/LC_MESSAGES/pluma.mo
 share/locale/kn/LC_MESSAGES/pluma.mo
 share/locale/ko/LC_MESSAGES/pluma.mo
 share/locale/ku/LC_MESSAGES/pluma.mo
+share/locale/ku_IQ/LC_MESSAGES/pluma.mo
 share/locale/ky/LC_MESSAGES/pluma.mo
 share/locale/la/LC_MESSAGES/pluma.mo
 share/locale/lt/LC_MESSAGES/pluma.mo
@@ -446,6 +442,7 @@ share/locale/oc/LC_MESSAGES/pluma.mo
 share/locale/or/LC_MESSAGES/pluma.mo
 share/locale/pa/LC_MESSAGES/pluma.mo
 share/locale/pl/LC_MESSAGES/pluma.mo
+share/locale/pms/LC_MESSAGES/pluma.mo
 share/locale/ps/LC_MESSAGES/pluma.mo
 share/locale/pt/LC_MESSAGES/pluma.mo
 share/locale/pt_BR/LC_MESSAGES/pluma.mo
