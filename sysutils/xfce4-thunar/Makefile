@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2017/06/18 21:40:45 youri Exp $
+# $NetBSD: Makefile,v 1.49 2017/06/23 16:39:54 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -26,6 +26,7 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/uca.xml
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxfce4util/buildlink3.mk"
 .include "../../x11/libxfce4ui/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
