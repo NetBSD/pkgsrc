@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.3 2015/03/19 08:34:53 dholland Exp $
+$NetBSD: patch-am,v 1.4 2017/06/23 22:13:22 kamil Exp $
 
  - Use standard headers.
  - Support NetBSD.
@@ -14,7 +14,7 @@ $NetBSD: patch-am,v 1.3 2015/03/19 08:34:53 dholland Exp $
  #include <unistd.h>
  #include <fcntl.h>
  #include <signal.h>
-@@ -177,6 +178,24 @@
+@@ -177,6 +178,23 @@
  #endif
  
   /*
@@ -23,7 +23,6 @@ $NetBSD: patch-am,v 1.3 2015/03/19 08:34:53 dholland Exp $
 +#if defined(NETBSD1) || defined(NETBSD2)
 +#define SUPPORTED
 +#include <sys/param.h>
-+#include <sys/user.h>
 +#include <sys/sysctl.h>
 +#include <kvm.h>
 +#include <stddef.h>
@@ -39,7 +38,7 @@ $NetBSD: patch-am,v 1.3 2015/03/19 08:34:53 dholland Exp $
    * SunOS 4.x has no /proc, and ptrace() peeking the u area won't give us the
    * process memory segment sizes. Instead we must grope process information
    * from kernel virtual memory. This requires super-user privilege.
-@@ -414,7 +433,7 @@ static int ptrace_attach_wait(pid_t pid)
+@@ -414,7 +432,7 @@ static int ptrace_attach_wait(pid_t pid)
  
  /* call_ptrace - ptrace() with error handling */
  
@@ -48,7 +47,7 @@ $NetBSD: patch-am,v 1.3 2015/03/19 08:34:53 dholland Exp $
  {
      int     result;
  
-@@ -456,7 +475,7 @@ static void read_proc(PROC_INFO *proc, c
+@@ -456,7 +474,7 @@ static void read_proc(PROC_INFO *proc, c
  	      "; did you use GCC with another machine's header files?" : "");
  #else
      int     words[READ_BUFSIZ_WORDS];
@@ -57,7 +56,7 @@ $NetBSD: patch-am,v 1.3 2015/03/19 08:34:53 dholland Exp $
      int     n;
  
      /*
-@@ -469,7 +488,7 @@ static void read_proc(PROC_INFO *proc, c
+@@ -469,7 +487,7 @@ static void read_proc(PROC_INFO *proc, c
  	panic("read_proc: request size %d is not word-aligned", len);
      if (verbose)
  	fprintf(stderr, "read seek to 0x%lx\n", (long) offset);
