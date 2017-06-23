@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2017/04/22 21:04:04 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/23 17:14:51 youri Exp $
 
-PKGREVISION= 6
 PYTHON_VERSIONS_ACCEPTED=	27
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-applets-${MATE_VERSION}
+DISTNAME=	mate-applets-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	MATE panel applets
@@ -46,7 +45,7 @@ REPLACE_PYTHON+=	invest-applet/invest/mate-invest-chart
 .include "../../misc/libmateweather/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
 .include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -55,8 +54,7 @@ REPLACE_PYTHON+=	invest-applet/invest/mate-invest-chart
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtksourceview2/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
