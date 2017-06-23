@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2611 2017/06/23 17:34:07 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2612 2017/06/23 23:40:51 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3602,3 +3602,14 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/mozo to 1.18.0 [youri 2017-06-23]
 	Updated editors/pluma to 1.18.2 [youri 2017-06-23]
 	Updated meta-pkgs/mate to 1.18.0 [youri 2017-06-23]
+	Added print/tex-filehook version 0.5d [markd 2017-06-23]
+	Added print/tex-filehook-doc version 0.5d [markd 2017-06-23]
+	Added devel/tex-latexbug version 1.0a [markd 2017-06-23]
+	Added devel/tex-latexbug-doc version 1.0a [markd 2017-06-23]
+	Added textproc/tex-lwarp version 0.32 [markd 2017-06-23]
+	Added textproc/tex-lwarp-doc version 0.32 [markd 2017-06-23]
+	Added math/tex-mathspec version 0.2b [markd 2017-06-23]
+	Added math/tex-mathspec-doc version 0.2b [markd 2017-06-23]
+	Added math/tex-unicode-math version 0.8d [markd 2017-06-23]
+	Added math/tex-unicode-math-doc version 0.8d [markd 2017-06-23]
+	Updated meta-pkgs/texlive-collection-latexrecommended to 2017 [markd 2017-06-23]
