@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.8 2017/06/22 12:49:52 youri Exp $
+# $NetBSD: Makefile,v 1.9 2017/06/23 14:05:19 roy Exp $
 
-DISTNAME=		arcanist-20170225
+DISTNAME=		arcanist-20170609
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=phacility/}
+# Track the stable branch
 GITHUB_PROJECT=		arcanist
-GITHUB_TAG=		c04f141ab0231e593a513356b3832a30f9404627
+GITHUB_TAG=		0c53a35d30e924f902510eb2e497ae5934209304
 
-MAINTAINER=		youri@NetBSD.org
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://github.com/phacility/arcanist/
 COMMENT=		Command line interface for Phabricator
 LICENSE=		apache-2.0
 
 EXTRACT_USING=		bsdtar
-USE_TOOLS+=		bash bsdtar pax
+USE_TOOLS+=		bsdtar pax
 
 DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
