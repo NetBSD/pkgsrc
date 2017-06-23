@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2017/02/12 06:25:45 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/23 17:31:32 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-utils-${MATE_VERSION}
+DISTNAME=	mate-utils-${VERSION:R}.2
 CATEGORIES=	misc
 
 COMMENT=	Utiltiles for MATE Desktop
+
+USE_LANGUAGES=	c c++
 
 TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 TOOL_DEPENDS+=	libxml2-[0-9]*:../../textproc/libxml2 # for xmllint
@@ -26,8 +27,4 @@ CONFIGURE_ARGS+=	--with-grep=${GREP:Q}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
