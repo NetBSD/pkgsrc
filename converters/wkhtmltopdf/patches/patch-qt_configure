@@ -1,0 +1,37 @@
+$NetBSD: patch-qt_configure,v 1.1 2017/06/23 07:12:19 manu Exp $
+
+Fix == operator in shell script
+
+--- qt/configure.orig	2017-06-20 10:22:29.000000000 +0200
++++ qt/configure	2017-06-20 10:23:03.000000000 +0200
+@@ -3570,9 +3570,9 @@
+ # with the default mkspec. The 10.4u SDK does not support gcc 4.2.
+ if [ "$PLATFORM_MAC" = "yes" ] && [ '!' -z "$CFG_SDK" ]; then
+     # get the darwin version. 10.0.0 and up means snow leopard.
+     VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
+-    if [ "$VERSION" -gt 9 ] && [ `basename "$CFG_SDK"` == "MacOSX10.4u.sdk" ] && [ "$PLATFORM" == "macx-g++" ]; then
++    if [ "$VERSION" -gt 9 ] && [ `basename "$CFG_SDK"` = "MacOSX10.4u.sdk" ] && [ "$PLATFORM" = "macx-g++" ]; then
+         echo
+         echo "WARNING: The 10.4u SDK does not support gcc 4.2. Configure with -platform macx-g++40. "
+         echo
+     fi
+@@ -7202,17 +7202,17 @@
+ 
+ # select Carbon on 10.4 Tiger.
+ if [ "$PLATFORM_MAC" = "yes" ]; then
+     VERSION=`uname -r | tr '.' ' ' | awk '{print $1}'`
+-    if [ "$VERSION" == 8 ]; then
++    if [ "$VERSION" = 8 ]; then
+         CFG_MAC_COCOA="no";
+         CFG_MAC_CARBON="yes";
+     fi
+ fi
+ 
+ # select Carbon when using the 10.4u SDK
+ if [ "$PLATFORM_MAC" = "yes" ] && [ -n "$CFG_SDK" ]; then
+-    if [ `basename "$CFG_SDK"` == "MacOSX10.4u.sdk" ]; then
++    if [ `basename "$CFG_SDK"` = "MacOSX10.4u.sdk" ]; then
+         echo "Carbon on";
+         CFG_MAC_COCOA="no";
+         CFG_MAC_CARBON="yes";
+     fi
