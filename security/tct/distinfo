@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:18:12 agc Exp $
+$NetBSD: distinfo,v 1.10 2017/06/23 22:13:22 kamil Exp $
 
 SHA1 (tct-1.09.tar.gz) = fffb6ae1f389cfdfad95a9a81f6eaba115c9dfc0
 RMD160 (tct-1.09.tar.gz) = ee4ddc286a2564f9b1daaa41f35e3d0fe8d6ea71
@@ -16,7 +16,7 @@ SHA1 (patch-ai) = a706e9265552d4864b765c7700ee80cd61a19edf
 SHA1 (patch-aj) = 736eb7f1cb1c1a3eb7f7ce69019e8f4a61753b40
 SHA1 (patch-ak) = 03cb4b36878386c3200b37a0f9092f80f6813bcd
 SHA1 (patch-al) = e29ba1b2846f63c2847072f6e0c37b58a94a76e9
-SHA1 (patch-am) = 57531cca621df787c4aa59e4a2ddd2d538f3933a
+SHA1 (patch-am) = 3c84ffe20ea0d180801b3286ded407a2045c6b48
 SHA1 (patch-an) = 27c7d503841bcb58ae141f594decc8aff3b72e7d
 SHA1 (patch-ao) = ba87c403613154a091cdbe91c8fa43335d2bfe50
 SHA1 (patch-ap) = 1587d7b4e4da1226a2943a4f98b9fa20bd83c79d
