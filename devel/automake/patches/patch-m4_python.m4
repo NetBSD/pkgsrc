@@ -1,16 +1,15 @@
-$NetBSD: patch-m4_python.m4,v 1.2 2016/04/14 11:28:48 wiz Exp $
+$NetBSD: patch-m4_python.m4,v 1.3 2017/06/23 08:40:40 wiz Exp $
 
-AM_PATH_PYTHON: look for python3.4 and python3.5 binaries as well.
-http://debbugs.gnu.org/cgi/bugreport.cgi?bug=21219
+AM_PATH_PYTHON: look for python3.6 binary as well.
 
---- m4/python.m4.orig	2014-12-30 13:49:41.000000000 +0000
+--- m4/python.m4.orig	2017-06-16 21:01:05.000000000 +0000
 +++ m4/python.m4
-@@ -37,7 +37,7 @@ AC_DEFUN([AM_PATH_PYTHON],
-   dnl Find a Python interpreter.  Python versions prior to 2.0 are not
+@@ -38,7 +38,7 @@ AC_DEFUN([AM_PATH_PYTHON],
    dnl supported. (2.0 was released on October 16, 2000).
+   dnl FIXME: Remove the need to hard-code Python versions here.
    m4_define_default([_AM_PYTHON_INTERPRETER_LIST],
--[python python2 python3 python3.3 python3.2 python3.1 python3.0 python2.7 dnl
-+[python python2 python3 python3.5 python3.4 python3.3 python3.2 python3.1 python3.0 python2.7 dnl
+-[python python2 python3 python3.5 python3.4 python3.3 python3.2 python3.1 python3.0 python2.7 dnl
++[python python2 python3 python3.6 python3.5 python3.4 python3.3 python3.2 python3.1 python3.0 python2.7 dnl
   python2.6 python2.5 python2.4 python2.3 python2.2 python2.1 python2.0])
  
    AC_ARG_VAR([PYTHON], [the Python interpreter])
