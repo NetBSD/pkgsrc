@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:13:18 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:26:18 youri Exp $
 bin/mate-power-manager
 bin/mate-power-preferences
 bin/mate-power-statistics
 libexec/mate-brightness-applet
 libexec/mate-inhibit-applet
+man/man1/mate-power-backlight-helper.1
+man/man1/mate-power-manager.1
+man/man1/mate-power-preferences.1
+man/man1/mate-power-statistics.1
 sbin/mate-power-backlight-helper
 share/applications/mate-power-preferences.desktop
 share/applications/mate-power-statistics.desktop
@@ -281,7 +285,6 @@ share/locale/ar/LC_MESSAGES/mate-power-manager.mo
 share/locale/as/LC_MESSAGES/mate-power-manager.mo
 share/locale/ast/LC_MESSAGES/mate-power-manager.mo
 share/locale/be/LC_MESSAGES/mate-power-manager.mo
-share/locale/be@latin/LC_MESSAGES/mate-power-manager.mo
 share/locale/bg/LC_MESSAGES/mate-power-manager.mo
 share/locale/bn/LC_MESSAGES/mate-power-manager.mo
 share/locale/bn_IN/LC_MESSAGES/mate-power-manager.mo
@@ -295,11 +298,9 @@ share/locale/da/LC_MESSAGES/mate-power-manager.mo
 share/locale/de/LC_MESSAGES/mate-power-manager.mo
 share/locale/dz/LC_MESSAGES/mate-power-manager.mo
 share/locale/el/LC_MESSAGES/mate-power-manager.mo
-share/locale/en@shaw/LC_MESSAGES/mate-power-manager.mo
 share/locale/en_AU/LC_MESSAGES/mate-power-manager.mo
 share/locale/en_CA/LC_MESSAGES/mate-power-manager.mo
 share/locale/en_GB/LC_MESSAGES/mate-power-manager.mo
-share/locale/en_US/LC_MESSAGES/mate-power-manager.mo
 share/locale/es/LC_MESSAGES/mate-power-manager.mo
 share/locale/es_CO/LC_MESSAGES/mate-power-manager.mo
 share/locale/es_MX/LC_MESSAGES/mate-power-manager.mo
@@ -325,6 +326,7 @@ share/locale/kk/LC_MESSAGES/mate-power-manager.mo
 share/locale/kn/LC_MESSAGES/mate-power-manager.mo
 share/locale/ko/LC_MESSAGES/mate-power-manager.mo
 share/locale/ku/LC_MESSAGES/mate-power-manager.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-power-manager.mo
 share/locale/ky/LC_MESSAGES/mate-power-manager.mo
 share/locale/lt/LC_MESSAGES/mate-power-manager.mo
 share/locale/lv/LC_MESSAGES/mate-power-manager.mo
@@ -341,6 +343,7 @@ share/locale/oc/LC_MESSAGES/mate-power-manager.mo
 share/locale/or/LC_MESSAGES/mate-power-manager.mo
 share/locale/pa/LC_MESSAGES/mate-power-manager.mo
 share/locale/pl/LC_MESSAGES/mate-power-manager.mo
+share/locale/pms/LC_MESSAGES/mate-power-manager.mo
 share/locale/pt/LC_MESSAGES/mate-power-manager.mo
 share/locale/pt_BR/LC_MESSAGES/mate-power-manager.mo
 share/locale/ro/LC_MESSAGES/mate-power-manager.mo
