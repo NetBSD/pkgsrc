@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2017/06/23 17:33:51 youri Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/23 20:39:52 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -42,7 +42,7 @@ DEPENDS+=	mate-sensors-applet>=${VERSION}:../../sysutils/mate-sensors-applet
 DEPENDS+=	mate-session-manager>=${VERSION}:../../x11/mate-session-manager
 DEPENDS+=	mate-settings-daemon>=${VERSION}:../../x11/mate-settings-daemon
 DEPENDS+=	mate-system-monitor>=${VERSION}:../../sysutils/mate-system-monitor
-DEPENDS+=	mate-terminal>=${VERSION}:../../x11/mate-terminal
+DEPENDS+=	mate-terminal>=1.14.0nb3:../../x11/mate-terminal
 DEPENDS+=	mate-themes>=${VERSION}:../../graphics/mate-themes
 DEPENDS+=	mate-user-share>=${VERSION}:../../net/mate-user-share
 DEPENDS+=	mate-utils>=${VERSION}:../../misc/mate-utils
