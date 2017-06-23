@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2017/02/12 06:25:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/23 17:30:27 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-themes-3.20.5
+DISTNAME=	mate-themes-3.22.12
 CATEGORIES=	graphics
-MASTER_SITES=	http://pub.mate-desktop.org/releases/themes/3.20/
+MASTER_SITES=	http://pub.mate-desktop.org/releases/themes/3.22/
 
 COMMENT=	Icons and themes for MATE desktop
 
@@ -15,8 +14,4 @@ DEPENDS+=	gtk2-engines-murrine>=0.98.0:../../x11/gtk2-engines-murrine
 CONFIGURE_ARGS+=	--enable-all-themes
 
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gdk-pixbuf2+=	build
-.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.gtk2+=	build
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
