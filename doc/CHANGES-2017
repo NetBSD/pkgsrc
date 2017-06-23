@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2574 2017/06/23 15:39:53 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2575 2017/06/23 15:49:09 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3565,3 +3565,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/youtube-dl to 20170623 [adam 2017-06-23]
 	Updated mail/rspamd to 1.6.1 [wiz 2017-06-23]
 	Updated net/djbdns-run to 20170623 [schmonz 2017-06-23]
+	Updated mail/qmail-run to 20170623 [schmonz 2017-06-23]
