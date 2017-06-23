@@ -1,8 +1,8 @@
-$NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
+$NetBSD: patch-bin_texconfig,v 1.2 2017/06/23 01:56:48 markd Exp $
 
---- bin/texconfig.orig	2012-10-09 17:17:14.000000000 +0000
+--- bin/texconfig.orig	2017-04-23 23:48:00.000000000 +0000
 +++ bin/texconfig
-@@ -91,7 +91,7 @@ echoShowKpseVariable()
+@@ -94,7 +94,7 @@ echoShowKpseVariable()
    for eskv
    do
      var=$eskv
@@ -11,7 +11,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
      echo "$var=$val"
    done
  }
-@@ -123,7 +123,7 @@ echoLocateCfgfile()
+@@ -126,7 +126,7 @@ echoLocateCfgfile()
    for elc
    do
      case $elc in
@@ -20,7 +20,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
        *) elcLoc=`tcfmgr --cmd find --file "$elc"`;;
      esac
      case $elcLoc in
-@@ -190,7 +190,7 @@ setupTmpDir()
+@@ -193,7 +193,7 @@ setupTmpDir()
  setupTexmfmain()
  {
    case $MT_TEXMFMAIN in
@@ -29,7 +29,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
      *) return;;
    esac
  }
-@@ -201,7 +201,7 @@ setupTexmfmain()
+@@ -204,7 +204,7 @@ setupTexmfmain()
  setupTexmfdist()
  {
    case $MT_TEXMFDIST in
@@ -38,7 +38,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
      *) return;;
    esac
  }
-@@ -212,7 +212,7 @@ setupTexmfdist()
+@@ -215,7 +215,7 @@ setupTexmfdist()
  setupTexmfvar()
  {
    case $MT_TEXMVAR in
@@ -47,7 +47,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
      *) return;;
    esac
  }
-@@ -223,7 +223,7 @@ setupTexmfvar()
+@@ -226,7 +226,7 @@ setupTexmfvar()
  setupSystexmf()
  {
    case $MT_SYSTEXMF in
@@ -56,7 +56,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
      *) return;;
    esac
  }
-@@ -478,7 +478,7 @@ listDvipsPapers()
+@@ -481,7 +481,7 @@ listDvipsPapers()
  #
  getFormatsForHyphen()
  {
@@ -65,16 +65,16 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
  }
  
  ###############################################################################
-@@ -607,7 +607,7 @@ TeX Live home page: <http://tug.org/texl
+@@ -608,7 +608,7 @@ TeX Live home page: <http://tug.org/texl
        echo
        echo '============================= font map files ============================='
-       for m in psfonts.map pdftex.map ps2pk.map dvipdfm.map; do
+       for m in psfonts.map pdftex.map ps2pk.map; do
 -        echo "$m: `kpsewhich $m`"
 +        echo "$m: `@KPSEWHICH@ $m`"
        done
        echo
        echo '=========================== kpathsea variables ==========================='
-@@ -703,7 +703,7 @@ Valid PAPER settings:
+@@ -671,7 +671,7 @@ Valid PAPER settings:
              *)
                otherPrinter=true
                otherPrinterName=$2
@@ -83,7 +83,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                case $otherPrinterFile in
                  "")
                    echo "$progname: configuration file \`config.$otherPrinterName' for printer \`$otherPrinterName' not found" >&2
-@@ -736,7 +736,7 @@ Valid PAPER settings:
+@@ -704,7 +704,7 @@ Valid PAPER settings:
                ;;
              *)
                printerName=$2
@@ -92,7 +92,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                case $pFile in
                  "")
                    setupTmpDir
-@@ -773,7 +773,7 @@ Valid PAPER settings:
+@@ -741,7 +741,7 @@ Valid PAPER settings:
                ;;
              *)
                printerName=$2
@@ -101,7 +101,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                case $pFile in
                  "")
                    echo "$progname: configuration file for printer \`$printerName' (config.$printerName) not found" >&2
-@@ -931,7 +931,7 @@ For more information about these \`featu
+@@ -899,7 +899,7 @@ For more information about these \`featu
                ;;
              *)
                tcBatchFontVardir=$3
@@ -110,7 +110,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                if test -n "$tfc"; then
                  if test -w "$tfc"; then
                    configReplace "$tfc" '^VARTEXFONTS' "VARTEXFONTS  = $tcBatchFontVardir"
-@@ -947,7 +947,7 @@ For more information about these \`featu
+@@ -915,7 +915,7 @@ For more information about these \`featu
            esac
            ;;
          rw)
@@ -119,7 +119,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
            if test -z "$MT_VARTEXFONTS"; then
              echo "$progname: failed to set \`font rw'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
              return
-@@ -973,7 +973,7 @@ For more information about these \`featu
+@@ -941,7 +941,7 @@ For more information about these \`featu
            fmgrConfigReplace mktex.cnf '^: ..MT_FEATURES=' ": \${MT_FEATURES=appendonlydir:varfonts}"
            ;;
          ro)
@@ -128,7 +128,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
            if test -z "$MT_VARTEXFONTS"; then
              echo "$progname: failed to set \`font ro'; reason: could not determine VARTEXFONTS variable." >&2; rc=1
              return
-@@ -1024,10 +1024,10 @@ EOM
+@@ -992,10 +992,10 @@ EOM
  
        setupTmpDir
        echo "$progname: analyzing old configuration..." >&2
@@ -142,7 +142,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
  
        if cmp $tmpdir/pre $tmpdir/post >/dev/null 2>&1; then
          echo "$progname: no new/updated formats available ..." >&2
-@@ -1035,9 +1035,9 @@ EOM
+@@ -1003,9 +1003,9 @@ EOM
        echo "$progname: updating formats ..." >&2
          comm -13 $tmpdir/pre $tmpdir/post > $tmpdir/addOrChange
          for i in `awk '{print $1}' $tmpdir/addOrChange`; do
@@ -154,7 +154,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
        fi
        ;;
  
-@@ -1077,7 +1077,7 @@ $formatsForHyphenFmt"
+@@ -1045,7 +1045,7 @@ $formatsForHyphenFmt"
          *)
            if checkElemInList "$tcBatchHyphenFormat" $formatsForHyphen; then
  
@@ -163,7 +163,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
              case $tcBatchHyphenFile in
                "")
                  echo "$progname: could not find hyphen setup file for format \`$tcBatchHyphenFormat'" >&2
-@@ -1134,7 +1134,7 @@ $formatsForHyphenFmt"
+@@ -1102,7 +1102,7 @@ $formatsForHyphenFmt"
                    fi
                    ;;
                esac
@@ -172,7 +172,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
              fi
            else
              echo "$progname: invalid format \`$tcBatchHyphenFormat' specified as argument for \`$progname hyphen'" >&2
-@@ -1152,9 +1152,9 @@ $formatsForHyphenFmt"
+@@ -1120,9 +1120,9 @@ $formatsForHyphenFmt"
      init)
        case $2 in
          "")
@@ -185,7 +185,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
              :
            else
              rc=1
-@@ -1163,7 +1163,7 @@ $formatsForHyphenFmt"
+@@ -1131,7 +1131,7 @@ $formatsForHyphenFmt"
          *)
            shift 1
            for i in "$@"; do
@@ -194,7 +194,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
            done
            ;;
        esac
-@@ -1266,7 +1266,7 @@ Valid PAPER settings:
+@@ -1228,7 +1228,7 @@ Valid PAPER settings:
                  set x `getRes "$tcBatchPdftexMode"`; shift
                  fmgrConfigReplace pdftexconfig.tex 'pdfpkresolution' "\\pdfpkresolution=$1"
                  if $fmgrConfigReplaceChanged; then
@@ -203,7 +203,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                  fi
                else
                  echo "$progname: unknown MODE \`$tcBatchPdftexMode' given as argument for \`$progname pdftex mode'" >&2
-@@ -1285,7 +1285,7 @@ Valid PAPER settings:
+@@ -1247,7 +1247,7 @@ Valid PAPER settings:
                wChanged=$fmgrConfigReplaceChanged
                fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
                if $wChanged || $fmgrConfigReplaceChanged; then
@@ -212,7 +212,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                fi
                ;;
              a4)
-@@ -1294,7 +1294,7 @@ Valid PAPER settings:
+@@ -1256,7 +1256,7 @@ Valid PAPER settings:
                wChanged=$fmgrConfigReplaceChanged
                fmgrConfigReplace pdftexconfig.tex pdfpageheight '\pdfpageheight='"$h"
                if $wChanged || $fmgrConfigReplaceChanged; then
@@ -221,7 +221,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
                fi
                ;;
              "") echo "$help" >&2; rc=1;;
-@@ -1314,7 +1314,7 @@ Valid PAPER settings:
+@@ -1276,7 +1276,7 @@ Valid PAPER settings:
        ;;
  
      rehash)
@@ -230,7 +230,7 @@ $NetBSD: patch-bin_texconfig,v 1.1 2012/10/13 22:29:21 minskim Exp $
        ;;
      
      # 
-@@ -1417,7 +1417,7 @@ Valid PAPER settings:
+@@ -1408,7 +1408,7 @@ Valid PAPER settings:
  ###############################################################################
  tcInteractive()
  {
