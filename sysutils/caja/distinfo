@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2016/06/13 22:31:25 youri Exp $
+$NetBSD: distinfo,v 1.3 2017/06/23 17:06:33 youri Exp $
 
-SHA1 (caja-1.14.1.tar.xz) = db84d1876031974e33db12eb0bea187639a11cc7
-RMD160 (caja-1.14.1.tar.xz) = 0ed65b52f28681e9397e7e9b6c19905f02b572e5
-SHA512 (caja-1.14.1.tar.xz) = a179785c9ec5f322388082f7959df00a7b9014fbdcc3739c9f0b08466e8d404940278c4ac0caf06114176a8f75b2e49e2d11b0db63b5f82409ba52027b60afc7
-Size (caja-1.14.1.tar.xz) = 3611160 bytes
+SHA1 (caja-1.18.3.tar.xz) = 9b591659df514712dadb1be5eab15f106b9ea75d
+RMD160 (caja-1.18.3.tar.xz) = 375e3b84d494ae1d4e6dc36871a6ac59f0bb8698
+SHA512 (caja-1.18.3.tar.xz) = 845f7532fbf701fecc5b0e29036ee4b4d6c65f520d6d7fdbddd05d7e7bcd0f7bbd52c54cb45dbb0bd7a5bbf2ece11e584e5074e4c86954b2730baa469168a566
+Size (caja-1.18.3.tar.xz) = 3526224 bytes
 SHA1 (patch-eel_eel-background.c) = 9d0ed0d9f3c9004f6d9024837538cc26cdb410da
 SHA1 (patch-libcaja-private_caja-global-preferences.c) = 122d62430cf57e274f1e561783ca0f69d0de7d56
 SHA1 (patch-libcaja-private_caja-global-preferences.h) = edac3dc74ad737ed9e5347e8eb5eb83866dcaadf
