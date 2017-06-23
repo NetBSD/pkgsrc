@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:00:48 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:24:14 youri Exp $
 bin/mate-notification-properties
 lib/mate-notification-daemon/engines/libcoco.la
 lib/mate-notification-daemon/engines/libnodoka.la
@@ -21,7 +21,9 @@ share/locale/ar/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/ast/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/be/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/bg/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/bs/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/ca/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/ca@valencia/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/cmn/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/cs/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/cy/LC_MESSAGES/mate-notification-daemon.mo
@@ -33,12 +35,14 @@ share/locale/en_GB/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/eo/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/es/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/es_CL/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/es_CO/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/es_MX/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/et/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/eu/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/fi/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/fr/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/fr_CA/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/frp/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/gl/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/he/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/hi/LC_MESSAGES/mate-notification-daemon.mo
@@ -50,7 +54,9 @@ share/locale/is/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/it/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/ja/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/kk/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/kn/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/ko/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/ky/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/lt/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/lv/LC_MESSAGES/mate-notification-daemon.mo
@@ -80,5 +86,6 @@ share/locale/ur/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/uz/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/vi/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_CN/LC_MESSAGES/mate-notification-daemon.mo
+share/locale/zh_HK/LC_MESSAGES/mate-notification-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/mate-notification-daemon.mo
 share/mate-notification-daemon/mate-notification-properties.ui
