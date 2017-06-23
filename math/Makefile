@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2017/06/07 08:12:47 adam Exp $
+# $NetBSD: Makefile,v 1.338 2017/06/23 23:33:57 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -299,6 +299,10 @@ SUBDIR+=	tex-fp
 SUBDIR+=	tex-fp-doc
 SUBDIR+=	tex-kastrup
 SUBDIR+=	tex-kastrup-doc
+SUBDIR+=	tex-mathspec
+SUBDIR+=	tex-mathspec-doc
+SUBDIR+=	tex-unicode-math
+SUBDIR+=	tex-unicode-math-doc
 SUBDIR+=	texdrive
 SUBDIR+=	tochnog
 SUBDIR+=	udunits
