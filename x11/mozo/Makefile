@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2017/01/01 14:44:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/23 17:31:53 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mozo-${MATE_VERSION}
+DISTNAME=	mozo-${VERSION}
 CATEGORIES=	x11
 
 COMMENT=	Menu editor for MATE
