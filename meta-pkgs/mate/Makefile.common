@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/05/21 19:23:25 youri Exp $
+# $NetBSD: Makefile.common,v 1.2 2017/06/23 17:33:51 youri Exp $
 # used by meta-pkgs/mate/Makefile
 # used by print/atril/Makefile
 # used by sysutils/caja/Makefile
@@ -37,14 +37,16 @@
 # used by x11/mozo/Makefile
 # used by editors/pluma/Makefile
 
-MATE_VERSION=	1.14.0
-MASTER_SITES=	http://pub.mate-desktop.org/releases/1.14/
+VERSION=	1.18.0
+MASTER_SITES+=	http://pub.mate-desktop.org/releases/${VERSION:R}/
 EXTRACT_SUFX=	.tar.xz
-
-MAINTAINER=	youri@NetBSD.org
-HOMEPAGE=	http://www.mate-desktop.org/
-LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
+
+TOOL_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
+TOOL_DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
+
+.include "../../lang/python/pyversion.mk"
+.include "../../x11/gtk3/buildlink3.mk"
