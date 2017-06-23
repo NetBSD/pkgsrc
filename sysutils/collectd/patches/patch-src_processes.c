@@ -1,10 +1,10 @@
-$NetBSD: patch-src_processes.c,v 1.6 2017/02/14 21:23:13 joerg Exp $
+$NetBSD: patch-src_processes.c,v 1.7 2017/06/23 16:52:45 kamil Exp $
 
 Add a port to NetBSD.
 
---- src/processes.c.orig	2017-01-23 07:53:57.000000000 +0000
+--- src/processes.c.orig	2017-06-06 18:13:54.693164693 +0000
 +++ src/processes.c
-@@ -95,14 +95,14 @@
+@@ -95,14 +95,16 @@
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -14,14 +14,16 @@ Add a port to NetBSD.
  #include <sys/param.h>
  #include <sys/proc.h>
  #include <sys/sysctl.h>
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/user.h>
++#endif
  /* #endif HAVE_LIBKVM_GETPROCS && (HAVE_STRUCT_KINFO_PROC_FREEBSD ||
 - * HAVE_STRUCT_KINFO_PROC_OPENBSD) */
 + * HAVE_STRUCT_KINFO_PROC_OPENBSD || HAVE_STRUCT_KINFO_PROC2_NETBSD) */
  
  #elif HAVE_PROCINFO_H
  #include <procinfo.h>
-@@ -244,10 +244,15 @@ static void ps_fill_details(const procst
+@@ -244,10 +246,15 @@ static void ps_fill_details(const procst
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -39,7 +41,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
  static struct procentry64 procentry[MAXPROCENTRY];
-@@ -601,10 +606,21 @@ static int ps_init(void) {
+@@ -601,10 +608,21 @@ static int ps_init(void) {
  /* #endif KERNEL_LINUX */
  
  #elif HAVE_LIBKVM_GETPROCS &&                                                  \
@@ -63,7 +65,7 @@ Add a port to NetBSD.
  
  #elif HAVE_PROCINFO_H
    pagesize = getpagesize();
-@@ -1896,6 +1912,187 @@ static int ps_read(void) {
+@@ -1896,6 +1914,187 @@ static int ps_read(void) {
      ps_submit_proc_list(ps_ptr);
  /* #endif HAVE_LIBKVM_GETPROCS && HAVE_STRUCT_KINFO_PROC_FREEBSD */
  
