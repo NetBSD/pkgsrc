@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2017/06/22 12:50:37 youri Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/06/23 14:05:19 roy Exp $
 share/phabricator/LICENSE
 share/phabricator/NOTICE
 share/phabricator/README.md
@@ -234,8 +234,6 @@ share/phabricator/externals/mimemailparser/LICENSE
 share/phabricator/externals/mimemailparser/MimeMailParser.class.php
 share/phabricator/externals/mimemailparser/README
 share/phabricator/externals/mimemailparser/attachment.class.php
-share/phabricator/externals/octicons/LICENSE
-share/phabricator/externals/octicons/README.md
 share/phabricator/externals/pear-figlet/Text/Figlet.php
 share/phabricator/externals/pear-figlet/docs/README.TXT
 share/phabricator/externals/pear-figlet/docs/examples/hello_world.php
@@ -682,19 +680,6 @@ share/phabricator/resources/builtin/projects/fa-users.png
 share/phabricator/resources/builtin/projects/fa-warning.png
 share/phabricator/resources/builtin/projects/fa-wheelchair.png
 share/phabricator/resources/builtin/projects/fa-windows.png
-share/phabricator/resources/builtin/repo/building.png
-share/phabricator/resources/builtin/repo/cloud.png
-share/phabricator/resources/builtin/repo/code.png
-share/phabricator/resources/builtin/repo/commit.png
-share/phabricator/resources/builtin/repo/database.png
-share/phabricator/resources/builtin/repo/desktop.png
-share/phabricator/resources/builtin/repo/gears.png
-share/phabricator/resources/builtin/repo/globe.png
-share/phabricator/resources/builtin/repo/locked.png
-share/phabricator/resources/builtin/repo/microchip.png
-share/phabricator/resources/builtin/repo/mobile.png
-share/phabricator/resources/builtin/repo/repo.png
-share/phabricator/resources/builtin/repo/servers.png
 share/phabricator/resources/builtin/user0.png
 share/phabricator/resources/builtin/user1.png
 share/phabricator/resources/builtin/user2.png
@@ -1562,7 +1547,7 @@ share/phabricator/resources/sql/autopatches/20170301.subtype.03.taskcol.sql
 share/phabricator/resources/sql/autopatches/20170301.subtype.04.taskdefault.sql
 share/phabricator/resources/sql/autopatches/20170303.people.01.avatar.sql
 share/phabricator/resources/sql/autopatches/20170313.reviewers.01.sql
-share/phabricator/resources/sql/autopatches/${PKGVERSION}.rawfiles.01.php
+share/phabricator/resources/sql/autopatches/20170316.rawfiles.01.php
 share/phabricator/resources/sql/autopatches/20170320.reviewers.01.lastaction.sql
 share/phabricator/resources/sql/autopatches/20170320.reviewers.02.lastcomment.sql
 share/phabricator/resources/sql/autopatches/20170320.reviewers.03.migrate.php
@@ -1590,8 +1575,6 @@ share/phabricator/resources/sql/autopatches/20170524.nuance.02.commandstatus.sql
 share/phabricator/resources/sql/autopatches/20170526.dropdifferentialdrafts.sql
 share/phabricator/resources/sql/autopatches/20170526.milestones.php
 share/phabricator/resources/sql/autopatches/20170528.maniphestdupes.php
-share/phabricator/resources/sql/autopatches/20170612.repository.image.01.sql
-share/phabricator/resources/sql/autopatches/20170614.taskstatus.sql
 share/phabricator/resources/sql/patches/000.project.sql
 share/phabricator/resources/sql/patches/0000.legacy.sql
 share/phabricator/resources/sql/patches/001.maniphest_projects.sql
@@ -3084,7 +3067,6 @@ share/phabricator/src/applications/differential/controller/DifferentialDiffViewC
 share/phabricator/src/applications/differential/controller/DifferentialInlineCommentEditController.php
 share/phabricator/src/applications/differential/controller/DifferentialRevisionCloseDetailsController.php
 share/phabricator/src/applications/differential/controller/DifferentialRevisionEditController.php
-share/phabricator/src/applications/differential/controller/DifferentialRevisionInlinesController.php
 share/phabricator/src/applications/differential/controller/DifferentialRevisionLandController.php
 share/phabricator/src/applications/differential/controller/DifferentialRevisionListController.php
 share/phabricator/src/applications/differential/controller/DifferentialRevisionOperationController.php
@@ -3373,7 +3355,6 @@ share/phabricator/src/applications/diffusion/controller/DiffusionCompareControll
 share/phabricator/src/applications/diffusion/controller/DiffusionController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionDiffController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionExternalController.php
-share/phabricator/src/applications/diffusion/controller/DiffusionGraphController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionHistoryController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionInlineCommentController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionInlineCommentPreviewController.php
@@ -3396,7 +3377,6 @@ share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryEditU
 share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryListController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryManageController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryManagePanelsController.php
-share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryProfilePictureController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryTestAutomationController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryURICredentialController.php
 share/phabricator/src/applications/diffusion/controller/DiffusionRepositoryURIDisableController.php
@@ -3606,7 +3586,6 @@ share/phabricator/src/applications/diffusion/typeahead/DiffusionRepositoryDataso
 share/phabricator/src/applications/diffusion/typeahead/DiffusionRepositoryFunctionDatasource.php
 share/phabricator/src/applications/diffusion/typeahead/DiffusionSymbolDatasource.php
 share/phabricator/src/applications/diffusion/typeahead/DiffusionTaggedRepositoriesFunctionDatasource.php
-share/phabricator/src/applications/diffusion/view/DiffusionBranchListView.php
 share/phabricator/src/applications/diffusion/view/DiffusionBranchTableView.php
 share/phabricator/src/applications/diffusion/view/DiffusionBrowseTableView.php
 share/phabricator/src/applications/diffusion/view/DiffusionCloneURIView.php
@@ -3618,7 +3597,6 @@ share/phabricator/src/applications/diffusion/view/DiffusionHistoryView.php
 share/phabricator/src/applications/diffusion/view/DiffusionPushLogListView.php
 share/phabricator/src/applications/diffusion/view/DiffusionReadmeView.php
 share/phabricator/src/applications/diffusion/view/DiffusionTagListView.php
-share/phabricator/src/applications/diffusion/view/DiffusionTagTableView.php
 share/phabricator/src/applications/diffusion/view/DiffusionView.php
 share/phabricator/src/applications/diffusion/xaction/DiffusionCommitAcceptTransaction.php
 share/phabricator/src/applications/diffusion/xaction/DiffusionCommitActionTransaction.php
@@ -4416,7 +4394,6 @@ share/phabricator/src/applications/maniphest/conduit/ManiphestPrioritySearchCond
 share/phabricator/src/applications/maniphest/conduit/ManiphestQueryConduitAPIMethod.php
 share/phabricator/src/applications/maniphest/conduit/ManiphestQueryStatusesConduitAPIMethod.php
 share/phabricator/src/applications/maniphest/conduit/ManiphestSearchConduitAPIMethod.php
-share/phabricator/src/applications/maniphest/conduit/ManiphestStatusSearchConduitAPIMethod.php
 share/phabricator/src/applications/maniphest/conduit/ManiphestUpdateConduitAPIMethod.php
 share/phabricator/src/applications/maniphest/config/ManiphestPointsConfigOptionType.php
 share/phabricator/src/applications/maniphest/config/ManiphestPriorityConfigOptionType.php
@@ -6870,7 +6847,6 @@ share/phabricator/src/infrastructure/diff/view/PHUIDiffInlineCommentRowScaffold.
 share/phabricator/src/infrastructure/diff/view/PHUIDiffInlineCommentTableScaffold.php
 share/phabricator/src/infrastructure/diff/view/PHUIDiffInlineCommentUndoView.php
 share/phabricator/src/infrastructure/diff/view/PHUIDiffInlineCommentView.php
-share/phabricator/src/infrastructure/diff/view/PHUIDiffInlineThreader.php
 share/phabricator/src/infrastructure/diff/view/PHUIDiffOneUpInlineCommentRowScaffold.php
 share/phabricator/src/infrastructure/diff/view/PHUIDiffRevealIconView.php
 share/phabricator/src/infrastructure/diff/view/PHUIDiffTableOfContentsItemView.php
