@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/03/12 07:20:51 maya Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/23 17:31:04 youri Exp $
 
-PKGREVISION= 4
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-user-share-${MATE_VERSION}
+DISTNAME=	mate-user-share-${VERSION}
 CATEGORIES=	net
 
 COMMENT=	MATE user-leve file shareing
@@ -31,12 +30,10 @@ CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/xdg/autostart/mate-user-share-w
 
 .include "../../sysutils/caja/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
