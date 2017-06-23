@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/21 18:50:03 youri Exp $
+$NetBSD: distinfo,v 1.2 2017/06/23 17:15:36 youri Exp $
 
-SHA1 (mate-backgrounds-1.14.0.tar.xz) = 0dd81659b362862f6da1f48900609a09133053bb
-RMD160 (mate-backgrounds-1.14.0.tar.xz) = 0731e3fa78386ac9c5247e1da1b760748802bf31
-SHA512 (mate-backgrounds-1.14.0.tar.xz) = 01bbe17b6c42626a056e3648bdbaef5b3fac950c7da951641634f543b496b24f5b0777d85269d6905f0b08e636eb50e19a348030b874e6c91208434c042d204f
-Size (mate-backgrounds-1.14.0.tar.xz) = 20889156 bytes
+SHA1 (mate-backgrounds-1.18.0.tar.xz) = b282bd6495175d96c561e8bd468cd0129759978d
+RMD160 (mate-backgrounds-1.18.0.tar.xz) = 8a672e54eacd7381953b04c58bdb392432e193be
+SHA512 (mate-backgrounds-1.18.0.tar.xz) = 489ed3c57f60b471cba6afa8243cd752b534ac1881db30310b603949af7e3bfb3c9fa8d55c37942377cb36c0fc7545d940de2d03c1166e829b128e6c576f587e
+Size (mate-backgrounds-1.18.0.tar.xz) = 20890260 bytes
