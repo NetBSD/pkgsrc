@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2017/06/22 12:50:37 youri Exp $
+$NetBSD: distinfo,v 1.6 2017/06/23 14:05:19 roy Exp $
 
-SHA1 (phabricator-20170316-cdeba0f85b40e505d9b86fec8e5954507f0ba12e.tar.gz) = 9153a11a55a275a1f1a3a1c25da7397e09dd711b
-RMD160 (phabricator-20170316-cdeba0f85b40e505d9b86fec8e5954507f0ba12e.tar.gz) = f0706d0934f82b35cc0b853a70a4d7824a5413d8
-SHA512 (phabricator-20170316-cdeba0f85b40e505d9b86fec8e5954507f0ba12e.tar.gz) = 0935b92bd0dcc064ed02981bbcec7d573ce5c24eb697a920bada74c14e0b82361d015f55310e30b9e615920086f11df857dea6b74de39b6d35f2fb4adfb79ba8
-Size (phabricator-20170316-cdeba0f85b40e505d9b86fec8e5954507f0ba12e.tar.gz) = 8973427 bytes
+SHA1 (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 06344ff016c1bf3874b47d604c6d7519372a782b
+RMD160 (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 857058a1cbc6d8d53d3e9324a0ae4cf63bb3e210
+SHA512 (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 407c35cc9af5818ee14438aa650d9e4f04f5531cd818faa1c7d70d65dd9ad04b02859c64580a15223902f81b406e7f1d9f32e50a418f079e0827903edeb044c9
+Size (phabricator-20170609-5885704800a97aadf47aee5654ff2647b40fb4ad.tar.gz) = 8877762 bytes
 SHA1 (patch-src_applications_differential_render_DifferentialChangesetRenderer.php) = 0067d3f0ee6513396a40c98c231cf53e1179e160
 SHA1 (patch-src_applications_diffusion_controller_DiffusionBrowseController.php) = 41d2e548d594a544fdc24b61af79432e63af1e3d
