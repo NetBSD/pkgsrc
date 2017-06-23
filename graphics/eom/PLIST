@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:20:33 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:10:44 youri Exp $
 bin/eom
 include/eom-2.20/eom/eom-application.h
 include/eom-2.20/eom/eom-clipboard-handler.h
@@ -14,7 +14,6 @@ include/eom-2.20/eom/eom-image.h
 include/eom-2.20/eom/eom-job-queue.h
 include/eom-2.20/eom/eom-jobs.h
 include/eom-2.20/eom/eom-list-store.h
-include/eom-2.20/eom/eom-plugin.h
 include/eom-2.20/eom/eom-properties-dialog.h
 include/eom-2.20/eom/eom-scroll-view.h
 include/eom-2.20/eom/eom-sidebar.h
@@ -24,16 +23,18 @@ include/eom-2.20/eom/eom-thumb-view.h
 include/eom-2.20/eom/eom-thumbnail.h
 include/eom-2.20/eom/eom-transform.h
 include/eom-2.20/eom/eom-window.h
-lib/eom/plugins/fullscreen.eom-plugin
+lib/eom/plugins/fullscreen.plugin
 lib/eom/plugins/libfullscreen.la
 lib/eom/plugins/libreload.la
 lib/eom/plugins/libstatusbar-date.la
-lib/eom/plugins/reload.eom-plugin
-lib/eom/plugins/statusbar-date.eom-plugin
+lib/eom/plugins/reload.plugin
+lib/eom/plugins/statusbar-date.plugin
+lib/girepository-1.0/Eom-1.0.typelib
 lib/pkgconfig/eom.pc
 man/man1/eom.1
 share/appdata/eom.appdata.xml
 share/applications/eom.desktop
+share/eom/eom-3.18.css
 share/eom/eom-image-properties-dialog.ui
 share/eom/eom-multiple-save-as-dialog.ui
 share/eom/eom-preferences-dialog.ui
@@ -57,6 +58,7 @@ share/eom/icons/hicolor/scalable/actions/eom-image-collection.svg
 share/eom/icons/hicolor/scalable/actions/eom-plugin.svg
 share/eom/icons/hicolor/scalable/actions/slideshow-play.svg
 share/eom/pixmaps/thumbnail-frame.png
+share/gir-1.0/Eom-1.0.gir
 share/glib-2.0/schemas/org.mate.eom.enums.xml
 share/glib-2.0/schemas/org.mate.eom.gschema.xml
 share/gtk-doc/html/eom/EomDialog.html
@@ -65,7 +67,6 @@ share/gtk-doc/html/eom/EomFileChooser.html
 share/gtk-doc/html/eom/EomImageSaveInfo.html
 share/gtk-doc/html/eom/EomMetadataReaderJpg.html
 share/gtk-doc/html/eom/EomMetadataReaderPng.html
-share/gtk-doc/html/eom/EomPluginManager.html
 share/gtk-doc/html/eom/EomPreferencesDialog.html
 share/gtk-doc/html/eom/EomPrintImageSetup.html
 share/gtk-doc/html/eom/EomPrintPreview.html
@@ -93,7 +94,6 @@ share/gtk-doc/html/eom/eom-eom-list-store.html
 share/gtk-doc/html/eom/eom-eom-metadata-reader.html
 share/gtk-doc/html/eom/eom-eom-pixbuf-util.html
 share/gtk-doc/html/eom/eom-eom-plugin-engine.html
-share/gtk-doc/html/eom/eom-eom-plugin.html
 share/gtk-doc/html/eom/eom-eom-print.html
 share/gtk-doc/html/eom/eom-eom-properties-dialog.html
 share/gtk-doc/html/eom/eom-eom-save-as-dialog-helper.html
@@ -110,12 +110,14 @@ share/gtk-doc/html/eom/eom-zoom.html
 share/gtk-doc/html/eom/eom.devhelp2
 share/gtk-doc/html/eom/home.png
 share/gtk-doc/html/eom/index.html
-share/gtk-doc/html/eom/index.sgml
+share/gtk-doc/html/eom/left-insensitive.png
 share/gtk-doc/html/eom/left.png
 share/gtk-doc/html/eom/pt01.html
+share/gtk-doc/html/eom/right-insensitive.png
 share/gtk-doc/html/eom/right.png
 share/gtk-doc/html/eom/rn01.html
 share/gtk-doc/html/eom/style.css
+share/gtk-doc/html/eom/up-insensitive.png
 share/gtk-doc/html/eom/up.png
 share/help/C/eom/figures/eom_save_as_window.png
 share/help/C/eom/figures/eom_start_window.png
@@ -254,7 +256,6 @@ share/locale/as/LC_MESSAGES/eom.mo
 share/locale/ast/LC_MESSAGES/eom.mo
 share/locale/az/LC_MESSAGES/eom.mo
 share/locale/be/LC_MESSAGES/eom.mo
-share/locale/be@latin/LC_MESSAGES/eom.mo
 share/locale/bg/LC_MESSAGES/eom.mo
 share/locale/bn/LC_MESSAGES/eom.mo
 share/locale/bn_IN/LC_MESSAGES/eom.mo
@@ -269,11 +270,9 @@ share/locale/da/LC_MESSAGES/eom.mo
 share/locale/de/LC_MESSAGES/eom.mo
 share/locale/dz/LC_MESSAGES/eom.mo
 share/locale/el/LC_MESSAGES/eom.mo
-share/locale/en@shaw/LC_MESSAGES/eom.mo
 share/locale/en_AU/LC_MESSAGES/eom.mo
 share/locale/en_CA/LC_MESSAGES/eom.mo
 share/locale/en_GB/LC_MESSAGES/eom.mo
-share/locale/en_US/LC_MESSAGES/eom.mo
 share/locale/eo/LC_MESSAGES/eom.mo
 share/locale/es/LC_MESSAGES/eom.mo
 share/locale/es_CO/LC_MESSAGES/eom.mo
@@ -284,6 +283,7 @@ share/locale/fa/LC_MESSAGES/eom.mo
 share/locale/fi/LC_MESSAGES/eom.mo
 share/locale/fr/LC_MESSAGES/eom.mo
 share/locale/fr_CA/LC_MESSAGES/eom.mo
+share/locale/frp/LC_MESSAGES/eom.mo
 share/locale/fur/LC_MESSAGES/eom.mo
 share/locale/ga/LC_MESSAGES/eom.mo
 share/locale/gl/LC_MESSAGES/eom.mo
@@ -304,6 +304,7 @@ share/locale/kn/LC_MESSAGES/eom.mo
 share/locale/ko/LC_MESSAGES/eom.mo
 share/locale/ks/LC_MESSAGES/eom.mo
 share/locale/ku/LC_MESSAGES/eom.mo
+share/locale/ku_IQ/LC_MESSAGES/eom.mo
 share/locale/ky/LC_MESSAGES/eom.mo
 share/locale/lt/LC_MESSAGES/eom.mo
 share/locale/lv/LC_MESSAGES/eom.mo
@@ -324,6 +325,7 @@ share/locale/oc/LC_MESSAGES/eom.mo
 share/locale/or/LC_MESSAGES/eom.mo
 share/locale/pa/LC_MESSAGES/eom.mo
 share/locale/pl/LC_MESSAGES/eom.mo
+share/locale/pms/LC_MESSAGES/eom.mo
 share/locale/ps/LC_MESSAGES/eom.mo
 share/locale/pt/LC_MESSAGES/eom.mo
 share/locale/pt_BR/LC_MESSAGES/eom.mo
@@ -345,7 +347,6 @@ share/locale/tr/LC_MESSAGES/eom.mo
 share/locale/ug/LC_MESSAGES/eom.mo
 share/locale/uk/LC_MESSAGES/eom.mo
 share/locale/uz/LC_MESSAGES/eom.mo
-share/locale/uz@cyrillic/LC_MESSAGES/eom.mo
 share/locale/vi/LC_MESSAGES/eom.mo
 share/locale/wa/LC_MESSAGES/eom.mo
 share/locale/xh/LC_MESSAGES/eom.mo
