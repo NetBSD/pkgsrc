@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/06/13 23:10:36 youri Exp $
+$NetBSD: distinfo,v 1.3 2017/06/23 17:13:31 youri Exp $
 
-SHA1 (marco-1.14.2.tar.xz) = dc4770dea2d09b046f027064329b94e6fd53367b
-RMD160 (marco-1.14.2.tar.xz) = a8d22e45113e1fc14b5ad243475aa1d02c509cb4
-SHA512 (marco-1.14.2.tar.xz) = 6ca782f5dbbc01f5df4be901a1a6bf5b23398716e5802118482a0bf98e35f4dc544a6070358a931ca11f2d8b71cbbfb7e8768e0535c6605433a202be348ddf84
-Size (marco-1.14.2.tar.xz) = 1244076 bytes
+SHA1 (marco-1.18.1.tar.xz) = 6c09e95749bd01c46937b99894298f67918f720a
+RMD160 (marco-1.18.1.tar.xz) = 2b2d80a7148963ea8910606e9fa25cb4838e4742
+SHA512 (marco-1.18.1.tar.xz) = d6851c8c1c5bc25993dc72de7e5090736d236942ad37124ef52d0c23cc66faa1e4288273160bb9c1d1c303c99e3e096dcf031b2ea70bde93858627f31034708c
+Size (marco-1.18.1.tar.xz) = 1251108 bytes
 SHA1 (patch-src_compositor_compositor-xrender.c) = 5cb7e98d8e2b1dda2842f422ad2268bb258c35ee
