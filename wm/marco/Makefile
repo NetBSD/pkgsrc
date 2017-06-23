@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/02/12 06:24:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/23 17:13:31 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	marco-1.14.2
+DISTNAME=	marco-${VERSION:R}.1
 CATEGORIES=	wm
 
 COMMENT=	MATE Marco is a fork of GNOME Metacity
@@ -19,20 +18,6 @@ PKGCONFIG_OVERRIDE+=	src/libmarco-private.pc.in
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-.include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libXcursor/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libxkbfile/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXfixes/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
-.include "../../x11/libICE/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
