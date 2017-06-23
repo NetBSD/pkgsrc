@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/22 13:03:21 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:28:29 youri Exp $
 bin/mate-session
 bin/mate-session-inhibit
 bin/mate-session-properties
@@ -25,7 +25,6 @@ share/locale/as/LC_MESSAGES/mate-session-manager.mo
 share/locale/ast/LC_MESSAGES/mate-session-manager.mo
 share/locale/az/LC_MESSAGES/mate-session-manager.mo
 share/locale/be/LC_MESSAGES/mate-session-manager.mo
-share/locale/be@latin/LC_MESSAGES/mate-session-manager.mo
 share/locale/bg/LC_MESSAGES/mate-session-manager.mo
 share/locale/bn/LC_MESSAGES/mate-session-manager.mo
 share/locale/bn_IN/LC_MESSAGES/mate-session-manager.mo
@@ -41,11 +40,9 @@ share/locale/da/LC_MESSAGES/mate-session-manager.mo
 share/locale/de/LC_MESSAGES/mate-session-manager.mo
 share/locale/dz/LC_MESSAGES/mate-session-manager.mo
 share/locale/el/LC_MESSAGES/mate-session-manager.mo
-share/locale/en@shaw/LC_MESSAGES/mate-session-manager.mo
 share/locale/en_AU/LC_MESSAGES/mate-session-manager.mo
 share/locale/en_CA/LC_MESSAGES/mate-session-manager.mo
 share/locale/en_GB/LC_MESSAGES/mate-session-manager.mo
-share/locale/en_US/LC_MESSAGES/mate-session-manager.mo
 share/locale/eo/LC_MESSAGES/mate-session-manager.mo
 share/locale/es/LC_MESSAGES/mate-session-manager.mo
 share/locale/es_AR/LC_MESSAGES/mate-session-manager.mo
@@ -80,12 +77,12 @@ share/locale/kk/LC_MESSAGES/mate-session-manager.mo
 share/locale/kn/LC_MESSAGES/mate-session-manager.mo
 share/locale/ko/LC_MESSAGES/mate-session-manager.mo
 share/locale/ku/LC_MESSAGES/mate-session-manager.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-session-manager.mo
 share/locale/ky/LC_MESSAGES/mate-session-manager.mo
 share/locale/lt/LC_MESSAGES/mate-session-manager.mo
 share/locale/lv/LC_MESSAGES/mate-session-manager.mo
 share/locale/mai/LC_MESSAGES/mate-session-manager.mo
 share/locale/mg/LC_MESSAGES/mate-session-manager.mo
-share/locale/mi/LC_MESSAGES/mate-session-manager.mo
 share/locale/mk/LC_MESSAGES/mate-session-manager.mo
 share/locale/ml/LC_MESSAGES/mate-session-manager.mo
 share/locale/mn/LC_MESSAGES/mate-session-manager.mo
@@ -101,6 +98,7 @@ share/locale/oc/LC_MESSAGES/mate-session-manager.mo
 share/locale/or/LC_MESSAGES/mate-session-manager.mo
 share/locale/pa/LC_MESSAGES/mate-session-manager.mo
 share/locale/pl/LC_MESSAGES/mate-session-manager.mo
+share/locale/pms/LC_MESSAGES/mate-session-manager.mo
 share/locale/ps/LC_MESSAGES/mate-session-manager.mo
 share/locale/pt/LC_MESSAGES/mate-session-manager.mo
 share/locale/pt_BR/LC_MESSAGES/mate-session-manager.mo
@@ -123,7 +121,6 @@ share/locale/ug/LC_MESSAGES/mate-session-manager.mo
 share/locale/uk/LC_MESSAGES/mate-session-manager.mo
 share/locale/ur/LC_MESSAGES/mate-session-manager.mo
 share/locale/uz/LC_MESSAGES/mate-session-manager.mo
-share/locale/uz@cyrillic/LC_MESSAGES/mate-session-manager.mo
 share/locale/vi/LC_MESSAGES/mate-session-manager.mo
 share/locale/wa/LC_MESSAGES/mate-session-manager.mo
 share/locale/xh/LC_MESSAGES/mate-session-manager.mo
