@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2017/02/12 06:26:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2017/06/23 16:48:08 youri Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xarchiver/}
 HOMEPAGE=	http://xarchiver.sourceforge.net/
 COMMENT=	Xfce archiver handler
 
-
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
