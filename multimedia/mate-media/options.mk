@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/05/21 18:58:16 youri Exp $
+# $NetBSD: options.mk,v 1.2 2017/06/23 17:20:56 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-media
 PKG_SUPPORTED_OPTIONS=	pulseaudio
@@ -10,11 +10,6 @@ PLIST_VARS+=	pulse
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libunique/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/mate-desktop/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-pulseaudio
 PLIST.pulse=	yes
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/xdg/autostart
