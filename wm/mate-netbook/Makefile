@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2017/02/12 06:26:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2017/06/23 17:22:36 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-netbook-${MATE_VERSION}
+DISTNAME=	mate-netbook-${VERSION:R}.1
 CATEGORIES=	wm
 
 COMMENT=	Simple window management tool for MATE desktop
@@ -19,9 +18,7 @@ CONF_FILES+=	${PREFIX}/share/examples/mate-netbook/xdg/autostart/mate-maximus-au
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../x11/mate-panel/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libwnck/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
+.include "../../devel/libwnck3/buildlink3.mk"
 .include "../../x11/libfakekey/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
