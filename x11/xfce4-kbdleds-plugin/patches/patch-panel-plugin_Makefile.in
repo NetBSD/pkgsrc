@@ -1,6 +1,7 @@
-$NetBSD: patch-panel-plugin_Makefile.in,v 1.1 2015/07/29 16:30:27 youri Exp $
+$NetBSD: patch-panel-plugin_Makefile.in,v 1.2 2017/06/23 16:49:47 youri Exp $
 
 Adjust panel plugin path to the newer convention.
+
 --- panel-plugin/Makefile.in.orig	2011-10-13 17:39:23.000000000 +0000
 +++ panel-plugin/Makefile.in
 @@ -292,7 +292,7 @@ INCLUDES = \
