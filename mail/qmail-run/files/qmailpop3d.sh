@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.14 2017/06/17 05:58:39 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.15 2017/06/23 15:49:03 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -36,11 +36,12 @@ required_files="${required_files} @PKG_SYSCONFDIR@/tcp.pop3.cdb"
 command="${qmailpop3d_tcpserver}"
 procname=${name}
 start_precmd="qmailpop3d_precmd"
-extra_commands="stat pause cont cdb"
+extra_commands="stat pause cont cdb reload"
 stat_cmd="qmailpop3d_stat"
 pause_cmd="qmailpop3d_pause"
 cont_cmd="qmailpop3d_cont"
 cdb_cmd="qmailpop3d_cdb"
+reload_cmd=${cdb_cmd}
 
 qmailpop3d_precmd()
 {
@@ -92,8 +93,9 @@ qmailpop3d_cont()
 qmailpop3d_cdb()
 {
 	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.pop3."
-	@PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.pop3.cdb @PKG_SYSCONFDIR@/tcp.pop3.tmp < @PKG_SYSCONFDIR@/tcp.pop3
-	@CHMOD@ 644 @PKG_SYSCONFDIR@/tcp.pop3.cdb
+	cd @PKG_SYSCONFDIR@
+	@PREFIX@/bin/tcprules tcp.pop3.cdb tcp.pop3.tmp < tcp.pop3
+	@CHMOD@ 644 tcp.pop3.cdb
 }
 
 if [ -f /etc/rc.subr ]; then

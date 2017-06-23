@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailofmipd.sh,v 1.5 2017/06/17 05:58:39 schmonz Exp $
+# $NetBSD: qmailofmipd.sh,v 1.6 2017/06/23 15:49:03 schmonz Exp $
 #
 # @PKGNAME@ script to control ofmipd (SMTP submission service).
 #
@@ -36,11 +36,12 @@ required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 command="${qmailofmipd_tcpserver}"
 procname=${name}
 start_precmd="qmailofmipd_precmd"
-extra_commands="stat pause cont cdb"
+extra_commands="stat pause cont cdb reload"
 stat_cmd="qmailofmipd_stat"
 pause_cmd="qmailofmipd_pause"
 cont_cmd="qmailofmipd_cont"
 cdb_cmd="qmailofmipd_cdb"
+reload_cmd=${cdb_cmd}
 
 qmailofmipd_precmd()
 {
@@ -72,35 +73,36 @@ qmailofmipd_stat()
 qmailofmipd_pause()
 {
 	if ! statusmsg=`run_rc_command status`; then
-		echo $statusmsg
+		@ECHO@ $statusmsg
 		return 1
 	fi
-	echo "Pausing ${name}."
+	@ECHO@ "Pausing ${name}."
 	kill -STOP $rc_pid
 }
 
 qmailofmipd_cont()
 {
 	if ! statusmsg=`run_rc_command status`; then
-		echo $statusmsg
+		@ECHO@ $statusmsg
 		return 1
 	fi
-	echo "Continuing ${name}."
+	@ECHO@ "Continuing ${name}."
 	kill -CONT $rc_pid
 }
 
 qmailofmipd_cdb()
 {
-	echo "Reloading @PKG_SYSCONFDIR@/tcp.ofmip."
-	@PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.ofmip.cdb @PKG_SYSCONFDIR@/tcp.ofmip.tmp < @PKG_SYSCONFDIR@/tcp.ofmip
-	/bin/chmod 644 @PKG_SYSCONFDIR@/tcp.ofmip.cdb
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.ofmip."
+	cd @PKG_SYSCONFDIR@
+	@PREFIX@/bin/tcprules tcp.ofmip.cdb tcp.ofmip.tmp < tcp.ofmip
+	@CHMOD@ 644 tcp.ofmip.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
 	load_rc_config $name
 	run_rc_command "$1"
 else
-	echo -n " ${name}"
+	@ECHO_N@ " ${name}"
 	qmailofmipd_precmd
 	eval ${command} ${qmailofmipd_flags} ${command_args}
 fi
