@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/06/13 22:41:16 youri Exp $
+$NetBSD: distinfo,v 1.3 2017/06/23 17:09:36 youri Exp $
 
-SHA1 (engrampa-1.14.1.tar.xz) = 1245f5203b37b842cfaf818781b17cd22f1234b1
-RMD160 (engrampa-1.14.1.tar.xz) = a13a6e781e9601890f581c89511c187b26a49d9f
-SHA512 (engrampa-1.14.1.tar.xz) = fea510d95fe483f676f66490706aa919b6a62bc20af9e22893304235ce0a38ff006c66494d548a3207dc4cd241cb785abe77652693d1b600e4ca6c8a0a60d763
-Size (engrampa-1.14.1.tar.xz) = 1417444 bytes
+SHA1 (engrampa-1.18.2.tar.xz) = 14b6f334bb6dde2bf9441b42438fc1e0aa76dee9
+RMD160 (engrampa-1.18.2.tar.xz) = fd07cbf44d94ba827fa3bf00c431187405dff719
+SHA512 (engrampa-1.18.2.tar.xz) = 98769a4388cb6cf524e6d34c4ac13596231cdb7a9795b59c9722ceeead3b090c5b69040318718eacd9debbe3a19d70da04221623aaec04faf1a0f56c4bb059d5
+Size (engrampa-1.18.2.tar.xz) = 1424404 bytes
 SHA1 (patch-src_fr-command-lrzip.c) = 0409d41ab993ca67c71c6896083f848919fc8be8
