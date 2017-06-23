@@ -1,0 +1,6 @@
+The mathspec package provides an interface to typeset
+mathematics in XeLaTeX with arbitrary text fonts using fontspec
+as a backend. The package is under development and later
+versions might to be incompatible with this version, as this
+version is incompatible with earlier versions. The package
+requires at least version 0.9995 of XeTeX.
