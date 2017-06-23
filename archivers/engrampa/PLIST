@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/13 22:41:16 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/23 17:09:36 youri Exp $
 bin/engrampa
 lib/caja/extensions-2.0/libcaja-engrampa.la
 libexec/engrampa-server
@@ -16,15 +16,6 @@ share/engrampa/icons/hicolor/24x24/actions/add-files-to-archive.png
 share/engrampa/icons/hicolor/24x24/actions/add-folder-to-archive.png
 share/engrampa/icons/hicolor/24x24/actions/extract-archive.png
 share/engrampa/packages.match
-share/engrampa/ui/add-options.ui
-share/engrampa/ui/batch-add-files.ui
-share/engrampa/ui/batch-password.ui
-share/engrampa/ui/delete.ui
-share/engrampa/ui/new.ui
-share/engrampa/ui/open-with.ui
-share/engrampa/ui/password.ui
-share/engrampa/ui/properties.ui
-share/engrampa/ui/update.ui
 share/glib-2.0/schemas/org.mate.engrampa.gschema.xml
 share/help/C/engrampa/figures/engrampa_home.png
 share/help/C/engrampa/figures/engrampa_leftarrow.png
@@ -171,7 +162,6 @@ share/locale/as/LC_MESSAGES/engrampa.mo
 share/locale/ast/LC_MESSAGES/engrampa.mo
 share/locale/az/LC_MESSAGES/engrampa.mo
 share/locale/be/LC_MESSAGES/engrampa.mo
-share/locale/be@latin/LC_MESSAGES/engrampa.mo
 share/locale/bg/LC_MESSAGES/engrampa.mo
 share/locale/bn/LC_MESSAGES/engrampa.mo
 share/locale/bn_IN/LC_MESSAGES/engrampa.mo
@@ -186,7 +176,6 @@ share/locale/da/LC_MESSAGES/engrampa.mo
 share/locale/de/LC_MESSAGES/engrampa.mo
 share/locale/dz/LC_MESSAGES/engrampa.mo
 share/locale/el/LC_MESSAGES/engrampa.mo
-share/locale/en@shaw/LC_MESSAGES/engrampa.mo
 share/locale/en_AU/LC_MESSAGES/engrampa.mo
 share/locale/en_CA/LC_MESSAGES/engrampa.mo
 share/locale/en_GB/LC_MESSAGES/engrampa.mo
@@ -221,6 +210,7 @@ share/locale/kk/LC_MESSAGES/engrampa.mo
 share/locale/kn/LC_MESSAGES/engrampa.mo
 share/locale/ko/LC_MESSAGES/engrampa.mo
 share/locale/ku/LC_MESSAGES/engrampa.mo
+share/locale/ku_IQ/LC_MESSAGES/engrampa.mo
 share/locale/ky/LC_MESSAGES/engrampa.mo
 share/locale/lt/LC_MESSAGES/engrampa.mo
 share/locale/lv/LC_MESSAGES/engrampa.mo
@@ -240,6 +230,7 @@ share/locale/oc/LC_MESSAGES/engrampa.mo
 share/locale/or/LC_MESSAGES/engrampa.mo
 share/locale/pa/LC_MESSAGES/engrampa.mo
 share/locale/pl/LC_MESSAGES/engrampa.mo
+share/locale/pms/LC_MESSAGES/engrampa.mo
 share/locale/ps/LC_MESSAGES/engrampa.mo
 share/locale/pt/LC_MESSAGES/engrampa.mo
 share/locale/pt_BR/LC_MESSAGES/engrampa.mo
@@ -251,7 +242,6 @@ share/locale/sk/LC_MESSAGES/engrampa.mo
 share/locale/sl/LC_MESSAGES/engrampa.mo
 share/locale/sq/LC_MESSAGES/engrampa.mo
 share/locale/sr/LC_MESSAGES/engrampa.mo
-share/locale/sr@ije/LC_MESSAGES/engrampa.mo
 share/locale/sr@latin/LC_MESSAGES/engrampa.mo
 share/locale/sv/LC_MESSAGES/engrampa.mo
 share/locale/ta/LC_MESSAGES/engrampa.mo
