@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/02/12 06:25:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/23 16:46:30 youri Exp $
 
 PKGREVISION= 4
 .include "../../meta-pkgs/xfce4/Makefile.common"
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include \
 HOMEPAGE=	http://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin
 COMMENT=	Xfce mail checker plugin for the panel
 
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
 .include "../../x11/xfce4-exo/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
