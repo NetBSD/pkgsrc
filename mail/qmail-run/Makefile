@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2017/06/17 05:58:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.38 2017/06/23 15:49:03 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20170617
+DISTNAME=		qmail-run-20170623
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty

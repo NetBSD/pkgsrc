@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.14 2017/06/17 05:58:39 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.15 2017/06/23 15:49:03 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -36,11 +36,12 @@ required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
 command="${qmailsmtpd_tcpserver}"
 procname=${name}
 start_precmd="qmailsmtpd_precmd"
-extra_commands="stat pause cont cdb"
+extra_commands="stat pause cont cdb reload"
 stat_cmd="qmailsmtpd_stat"
 pause_cmd="qmailsmtpd_pause"
 cont_cmd="qmailsmtpd_cont"
 cdb_cmd="qmailsmtpd_cdb"
+reload_cmd=${cdb_cmd}
 
 qmailsmtpd_precmd()
 {
@@ -92,8 +93,9 @@ qmailsmtpd_cont()
 qmailsmtpd_cdb()
 {
 	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.smtp."
-	@PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.smtp.cdb @PKG_SYSCONFDIR@/tcp.smtp.tmp < @PKG_SYSCONFDIR@/tcp.smtp
-	@CHMOD@ 644 @PKG_SYSCONFDIR@/tcp.smtp.cdb
+	cd @PKG_SYSCONFDIR@
+	@PREFIX@/bin/tcprules tcp.smtp.cdb tcp.smtp.tmp < tcp.smtp
+	@CHMOD@ 644 tcp.smtp.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
