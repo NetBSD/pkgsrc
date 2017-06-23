@@ -1,21 +1,23 @@
-$NetBSD: patch-ab,v 1.1 2006/03/25 17:14:40 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2017/06/23 19:13:15 kamil Exp $
 
---- src/mem.c.orig	2006-03-25 16:59:45.000000000 +0000
+--- src/mem.c.orig	2005-08-10 07:06:16.000000000 +0000
 +++ src/mem.c
-@@ -7,10 +7,10 @@
+@@ -7,10 +7,12 @@
  #include <sys/fcntl.h>
  #include <stdio.h>
  #include <unistd.h>
 -#if !__linux__
 +#if !defined(__linux__)
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <sys/user.h>
++#endif
  #include <kvm.h>
 -#if __FreeBSD__ || __APPLE__
 +#if defined(__FreeBSD__) || defined(__APPLE__) || defined(__DragonFly__)
  #define KVM_NO_FILES O_RDONLY
  #endif
  #endif
-@@ -26,7 +26,7 @@ mem_get_value()
+@@ -26,7 +28,7 @@ mem_get_value()
  {
  	long total=0;
  
@@ -24,7 +26,7 @@ $NetBSD: patch-ab,v 1.1 2006/03/25 17:14:40 joerg Exp $
  	FILE *fd;
  	char var[1024];
  	long val,memtotal,memfree;
-@@ -56,7 +56,7 @@ mem_get_value()
+@@ -56,7 +58,7 @@ mem_get_value()
  	total*=1024;
  
  #else
