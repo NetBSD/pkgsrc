@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2584 2017/06/23 17:13:46 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2585 2017/06/23 17:15:03 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3575,3 +3575,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/libmatekbd to 1.18.2 [youri 2017-06-23]
 	Updated misc/libmateweather to 1.18.1 [youri 2017-06-23]
 	Updated wm/marco to 1.18.1 [youri 2017-06-23]
+	Updated x11/mate-applets to 1.18.1 [youri 2017-06-23]
