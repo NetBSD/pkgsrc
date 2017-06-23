@@ -1,4 +1,4 @@
-$NetBSD: patch-gdb_bsd-kvm.c,v 1.2 2017/06/05 11:38:51 maya Exp $
+$NetBSD: patch-gdb_bsd-kvm.c,v 1.3 2017/06/23 19:49:20 kamil Exp $
 
 need _KMEMUSER to use some headers on netbsd, else vaddr_t
 is undefined.
@@ -13,3 +13,13 @@ is undefined.
  #include "defs.h"
  #include "cli/cli-cmds.h"
  #include "command.h"
+@@ -36,7 +37,9 @@
+ #include "readline/readline.h"
+ #include <sys/param.h>
+ #include <sys/proc.h>
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ #include <sys/user.h>
++#endif
+ 
+ #include "bsd-kvm.h"
+ 
