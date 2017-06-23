@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2577 2017/06/23 17:06:51 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2578 2017/06/23 17:07:41 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3568,3 +3568,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated mail/qmail-run to 20170623 [schmonz 2017-06-23]
 	Updated print/atril to 1.18.0 [youri 2017-06-23]
 	Updated sysutils/caja to 1.18.3 [youri 2017-06-23]
+	Updated sysutils/caja-dropbox to 1.18.0 [youri 2017-06-23]
