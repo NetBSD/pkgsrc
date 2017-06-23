@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/23 23:18:50 markd Exp $
+
+SHA1 (tex-latexbug-44566/latexbug.tar.xz) = 664d40c0853823a9652e6dffaf17f3d8b9a3d377
+RMD160 (tex-latexbug-44566/latexbug.tar.xz) = 4f107485e7b47eaf60c4a948eaffa9019752cb46
+SHA512 (tex-latexbug-44566/latexbug.tar.xz) = f8b2bf7f8980df5134d3edbaa280f0975e47d20dc02e90a1a8c45e00e52601c2753da719df6d8e9831faae20b8043b507888bcbb399be3f7753696980c8df75b
+Size (tex-latexbug-44566/latexbug.tar.xz) = 4532 bytes
