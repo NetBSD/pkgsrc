@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2609 2017/06/23 17:32:04 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2610 2017/06/23 17:32:31 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3600,3 +3600,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/mate-user-share to 1.18.0 [youri 2017-06-23]
 	Updated misc/mate-utils to 1.18.2 [youri 2017-06-23]
 	Updated x11/mozo to 1.18.0 [youri 2017-06-23]
+	Updated editors/pluma to 1.18.2 [youri 2017-06-23]
