@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/13 22:10:34 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/23 17:11:59 youri Exp $
 include/libmatekbd/matekbd-desktop-config.h
 include/libmatekbd/matekbd-indicator-config.h
 include/libmatekbd/matekbd-indicator.h
@@ -20,7 +20,6 @@ share/locale/as/LC_MESSAGES/libmatekbd.mo
 share/locale/ast/LC_MESSAGES/libmatekbd.mo
 share/locale/az/LC_MESSAGES/libmatekbd.mo
 share/locale/be/LC_MESSAGES/libmatekbd.mo
-share/locale/be@latin/LC_MESSAGES/libmatekbd.mo
 share/locale/bg/LC_MESSAGES/libmatekbd.mo
 share/locale/bn/LC_MESSAGES/libmatekbd.mo
 share/locale/bn_IN/LC_MESSAGES/libmatekbd.mo
@@ -39,11 +38,9 @@ share/locale/de/LC_MESSAGES/libmatekbd.mo
 share/locale/de_CH/LC_MESSAGES/libmatekbd.mo
 share/locale/dz/LC_MESSAGES/libmatekbd.mo
 share/locale/el/LC_MESSAGES/libmatekbd.mo
-share/locale/en@shaw/LC_MESSAGES/libmatekbd.mo
 share/locale/en_AU/LC_MESSAGES/libmatekbd.mo
 share/locale/en_CA/LC_MESSAGES/libmatekbd.mo
 share/locale/en_GB/LC_MESSAGES/libmatekbd.mo
-share/locale/en_US/LC_MESSAGES/libmatekbd.mo
 share/locale/eo/LC_MESSAGES/libmatekbd.mo
 share/locale/es/LC_MESSAGES/libmatekbd.mo
 share/locale/es_419/LC_MESSAGES/libmatekbd.mo
