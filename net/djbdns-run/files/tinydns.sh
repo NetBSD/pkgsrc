@@ -1,8 +1,8 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tinydns.sh,v 1.7 2015/11/25 12:52:12 jperkin Exp $
+# $NetBSD: tinydns.sh,v 1.8 2017/06/23 15:39:44 schmonz Exp $
 #
-# @PKGNAME@ script to control tinydns (authoritative DNS service)
+# @PKGNAME@ script to control tinydns (authoritative DNS service).
 #
 
 # PROVIDE: tinydns named
@@ -24,27 +24,35 @@ if [ -f /etc/rc.subr ]; then
 fi
 
 rcvar=${name}
-required_files="@PKG_SYSCONFDIR@/tinydns/data.cdb"
+required_files="@PKG_SYSCONFDIR@/${name}/data.cdb"
 command="@PREFIX@/bin/${name}"
 start_precmd="tinydns_precmd"
-extra_commands="reload cdb"
-reload_cmd="tinydns_cdb"; cdb_cmd=${reload_cmd}
+extra_commands="cdb reload"
+cdb_cmd="tinydns_cdb"
+reload_cmd=${cdb_cmd}
 
 tinydns_precmd()
 {
-	if [ -f /etc/rc.subr ]; then
-		checkyesno tinydns_log || tinydns_logcmd=${tinydns_nologcmd}
+	if [ -f /etc/rc.subr ] && ! checkyesno tinydns_log; then
+		tinydns_logcmd=${tinydns_nologcmd}
 	fi
-	command="@SETENV@ - ${tinydns_postenv} ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @PREFIX@/bin/envuidgid tinydns @PREFIX@/bin/softlimit -d ${tinydns_datalimit} @PREFIX@/bin/tinydns </dev/null 2>&1 | @PREFIX@/bin/setuidgid dnslog ${tinydns_logcmd}"
+	command="@PREFIX@/bin/pgrphack @SETENV@ - ${tinydns_postenv}
+ROOT=@PKG_SYSCONFDIR@/${name} IP=${tinydns_ip}
+@PREFIX@/bin/envuidgid @DJBDNS_TINY_USER@
+@PREFIX@/bin/softlimit -d ${tinydns_datalimit}
+@PREFIX@/bin/${name}
+</dev/null 2>&1 |
+@PREFIX@/bin/pgrphack @PREFIX@/bin/setuidgid @DJBDNS_LOG_USER@ ${tinydns_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
 
 tinydns_cdb()
 {
-	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tinydns/data."
-	cd @PKG_SYSCONFDIR@/tinydns
+	@ECHO@ "Reloading @PKG_SYSCONFDIR@/${name}/data."
+	cd @PKG_SYSCONFDIR@/${name}
 	@PREFIX@/bin/tinydns-data
+	@CHMOD@ 644 data.cdb
 }
 
 if [ -f /etc/rc.subr ]; then
