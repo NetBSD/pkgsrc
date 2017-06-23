@@ -1,0 +1,4 @@
+The package is written in order to help identifying the
+rightful addressee for a bug report. The LaTeX team asks that
+it will be loaded in any test file that is intended to be sent
+to the LaTeX bug database as part of a bug report.
