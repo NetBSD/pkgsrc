@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:21:56 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:31:53 youri Exp $
+bin/mozo
 ${PYSITELIB}/Mozo/MainWindow.py
 ${PYSITELIB}/Mozo/MainWindow.pyc
 ${PYSITELIB}/Mozo/MainWindow.pyo
@@ -14,7 +15,6 @@ ${PYSITELIB}/Mozo/config.pyo
 ${PYSITELIB}/Mozo/util.py
 ${PYSITELIB}/Mozo/util.pyc
 ${PYSITELIB}/Mozo/util.pyo
-bin/mozo
 man/man1/mozo.1
 share/applications/mozo.desktop
 share/icons/hicolor/16x16/apps/mozo.png
@@ -30,12 +30,11 @@ share/locale/ar/LC_MESSAGES/mozo.mo
 share/locale/as/LC_MESSAGES/mozo.mo
 share/locale/ast/LC_MESSAGES/mozo.mo
 share/locale/be/LC_MESSAGES/mozo.mo
-share/locale/be@latin/LC_MESSAGES/mozo.mo
-share/locale/bem/LC_MESSAGES/mozo.mo
 share/locale/bg/LC_MESSAGES/mozo.mo
 share/locale/bn/LC_MESSAGES/mozo.mo
 share/locale/bn_IN/LC_MESSAGES/mozo.mo
 share/locale/br/LC_MESSAGES/mozo.mo
+share/locale/bs/LC_MESSAGES/mozo.mo
 share/locale/ca/LC_MESSAGES/mozo.mo
 share/locale/ca@valencia/LC_MESSAGES/mozo.mo
 share/locale/cmn/LC_MESSAGES/mozo.mo
@@ -46,7 +45,6 @@ share/locale/da/LC_MESSAGES/mozo.mo
 share/locale/de/LC_MESSAGES/mozo.mo
 share/locale/dz/LC_MESSAGES/mozo.mo
 share/locale/el/LC_MESSAGES/mozo.mo
-share/locale/en@shaw/LC_MESSAGES/mozo.mo
 share/locale/en_AU/LC_MESSAGES/mozo.mo
 share/locale/en_CA/LC_MESSAGES/mozo.mo
 share/locale/en_GB/LC_MESSAGES/mozo.mo
@@ -56,6 +54,7 @@ share/locale/es_AR/LC_MESSAGES/mozo.mo
 share/locale/es_CL/LC_MESSAGES/mozo.mo
 share/locale/es_CO/LC_MESSAGES/mozo.mo
 share/locale/es_MX/LC_MESSAGES/mozo.mo
+share/locale/es_VE/LC_MESSAGES/mozo.mo
 share/locale/et/LC_MESSAGES/mozo.mo
 share/locale/eu/LC_MESSAGES/mozo.mo
 share/locale/fa/LC_MESSAGES/mozo.mo
@@ -74,7 +73,6 @@ share/locale/hr/LC_MESSAGES/mozo.mo
 share/locale/hu/LC_MESSAGES/mozo.mo
 share/locale/hy/LC_MESSAGES/mozo.mo
 share/locale/id/LC_MESSAGES/mozo.mo
-share/locale/io/LC_MESSAGES/mozo.mo
 share/locale/is/LC_MESSAGES/mozo.mo
 share/locale/it/LC_MESSAGES/mozo.mo
 share/locale/ja/LC_MESSAGES/mozo.mo
@@ -102,6 +100,7 @@ share/locale/oc/LC_MESSAGES/mozo.mo
 share/locale/or/LC_MESSAGES/mozo.mo
 share/locale/pa/LC_MESSAGES/mozo.mo
 share/locale/pl/LC_MESSAGES/mozo.mo
+share/locale/pms/LC_MESSAGES/mozo.mo
 share/locale/ps/LC_MESSAGES/mozo.mo
 share/locale/pt/LC_MESSAGES/mozo.mo
 share/locale/pt_BR/LC_MESSAGES/mozo.mo
@@ -121,7 +120,6 @@ share/locale/tr/LC_MESSAGES/mozo.mo
 share/locale/ug/LC_MESSAGES/mozo.mo
 share/locale/uk/LC_MESSAGES/mozo.mo
 share/locale/uz/LC_MESSAGES/mozo.mo
-share/locale/uz@cyrillic/LC_MESSAGES/mozo.mo
 share/locale/vi/LC_MESSAGES/mozo.mo
 share/locale/zh_CN/LC_MESSAGES/mozo.mo
 share/locale/zh_HK/LC_MESSAGES/mozo.mo
