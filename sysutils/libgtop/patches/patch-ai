@@ -1,7 +1,16 @@
-$NetBSD: patch-ai,v 1.4 2007/11/05 19:06:04 drochner Exp $
+$NetBSD: patch-ai,v 1.5 2017/06/23 16:42:05 kamil Exp $
 
---- sysdeps/bsd/prockernel.c.orig	2007-04-27 00:27:34.000000000 +0200
+--- sysdeps/bsd/prockernel.c.orig	2011-06-01 15:40:47.000000000 +0000
 +++ sysdeps/bsd/prockernel.c
+@@ -30,7 +30,7 @@
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ #include <sys/proc.h>
+-#if (!defined __OpenBSD__) && (!defined __bsdi__)
++#if (!defined __OpenBSD__) && (!defined __bsdi__) && (!defined __NetBSD__)
+ #include <sys/user.h>
+ #endif
+ #if !defined(__bsdi__) && !(defined(__FreeBSD__) && defined(__alpha__)) && \
 @@ -45,6 +45,7 @@
  #include <osreldate.h>
  #endif
