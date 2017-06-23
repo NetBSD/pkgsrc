@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.684 2017/06/22 11:01:05 markd Exp $
+# $NetBSD: Makefile,v 1.685 2017/06/23 23:15:00 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -601,6 +601,8 @@ SUBDIR+=	tex-figflow
 SUBDIR+=	tex-figflow-doc
 SUBDIR+=	tex-filecontents
 SUBDIR+=	tex-filecontents-doc
+SUBDIR+=	tex-filehook
+SUBDIR+=	tex-filehook-doc
 SUBDIR+=	tex-first-latex-doc-doc
 SUBDIR+=	tex-fix2col
 SUBDIR+=	tex-fix2col-doc
