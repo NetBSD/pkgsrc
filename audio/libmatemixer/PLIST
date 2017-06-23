@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 18:48:22 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 20:39:14 youri Exp $
 include/mate-mixer/libmatemixer/matemixer-app-info.h
 include/mate-mixer/libmatemixer/matemixer-context.h
 include/mate-mixer/libmatemixer/matemixer-device-switch.h
@@ -45,7 +45,10 @@ share/gtk-doc/html/libmatemixer/up.png
 share/locale/am/LC_MESSAGES/libmatemixer.mo
 share/locale/ar/LC_MESSAGES/libmatemixer.mo
 share/locale/be/LC_MESSAGES/libmatemixer.mo
+share/locale/bg/LC_MESSAGES/libmatemixer.mo
+share/locale/bs/LC_MESSAGES/libmatemixer.mo
 share/locale/ca/LC_MESSAGES/libmatemixer.mo
+share/locale/ca@valencia/LC_MESSAGES/libmatemixer.mo
 share/locale/cs/LC_MESSAGES/libmatemixer.mo
 share/locale/cy/LC_MESSAGES/libmatemixer.mo
 share/locale/da/LC_MESSAGES/libmatemixer.mo
@@ -71,12 +74,14 @@ share/locale/it/LC_MESSAGES/libmatemixer.mo
 share/locale/ja/LC_MESSAGES/libmatemixer.mo
 share/locale/jv/LC_MESSAGES/libmatemixer.mo
 share/locale/ko/LC_MESSAGES/libmatemixer.mo
+share/locale/ku_IQ/LC_MESSAGES/libmatemixer.mo
 share/locale/lt/LC_MESSAGES/libmatemixer.mo
 share/locale/ms/LC_MESSAGES/libmatemixer.mo
 share/locale/nb/LC_MESSAGES/libmatemixer.mo
 share/locale/nl/LC_MESSAGES/libmatemixer.mo
 share/locale/oc/LC_MESSAGES/libmatemixer.mo
 share/locale/pl/LC_MESSAGES/libmatemixer.mo
+share/locale/pms/LC_MESSAGES/libmatemixer.mo
 share/locale/pt/LC_MESSAGES/libmatemixer.mo
 share/locale/pt_BR/LC_MESSAGES/libmatemixer.mo
 share/locale/ro/LC_MESSAGES/libmatemixer.mo
@@ -87,5 +92,6 @@ share/locale/sr/LC_MESSAGES/libmatemixer.mo
 share/locale/sv/LC_MESSAGES/libmatemixer.mo
 share/locale/tr/LC_MESSAGES/libmatemixer.mo
 share/locale/uk/LC_MESSAGES/libmatemixer.mo
+share/locale/uz/LC_MESSAGES/libmatemixer.mo
 share/locale/zh_CN/LC_MESSAGES/libmatemixer.mo
 share/locale/zh_TW/LC_MESSAGES/libmatemixer.mo
