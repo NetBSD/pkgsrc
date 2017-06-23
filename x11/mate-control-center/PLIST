@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 18:51:11 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/23 17:17:09 youri Exp $
 bin/mate-about-me
 bin/mate-appearance-properties
 bin/mate-at-properties
@@ -419,7 +419,6 @@ share/locale/as/LC_MESSAGES/mate-control-center.mo
 share/locale/ast/LC_MESSAGES/mate-control-center.mo
 share/locale/az/LC_MESSAGES/mate-control-center.mo
 share/locale/be/LC_MESSAGES/mate-control-center.mo
-share/locale/be@latin/LC_MESSAGES/mate-control-center.mo
 share/locale/bg/LC_MESSAGES/mate-control-center.mo
 share/locale/bn/LC_MESSAGES/mate-control-center.mo
 share/locale/bn_IN/LC_MESSAGES/mate-control-center.mo
@@ -435,7 +434,6 @@ share/locale/da/LC_MESSAGES/mate-control-center.mo
 share/locale/de/LC_MESSAGES/mate-control-center.mo
 share/locale/dz/LC_MESSAGES/mate-control-center.mo
 share/locale/el/LC_MESSAGES/mate-control-center.mo
-share/locale/en@shaw/LC_MESSAGES/mate-control-center.mo
 share/locale/en_AU/LC_MESSAGES/mate-control-center.mo
 share/locale/en_CA/LC_MESSAGES/mate-control-center.mo
 share/locale/en_GB/LC_MESSAGES/mate-control-center.mo
@@ -449,6 +447,7 @@ share/locale/fa/LC_MESSAGES/mate-control-center.mo
 share/locale/fi/LC_MESSAGES/mate-control-center.mo
 share/locale/fr/LC_MESSAGES/mate-control-center.mo
 share/locale/fr_CA/LC_MESSAGES/mate-control-center.mo
+share/locale/frp/LC_MESSAGES/mate-control-center.mo
 share/locale/ga/LC_MESSAGES/mate-control-center.mo
 share/locale/gl/LC_MESSAGES/mate-control-center.mo
 share/locale/gu/LC_MESSAGES/mate-control-center.mo
@@ -467,6 +466,7 @@ share/locale/kk/LC_MESSAGES/mate-control-center.mo
 share/locale/kn/LC_MESSAGES/mate-control-center.mo
 share/locale/ko/LC_MESSAGES/mate-control-center.mo
 share/locale/ku/LC_MESSAGES/mate-control-center.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-control-center.mo
 share/locale/ky/LC_MESSAGES/mate-control-center.mo
 share/locale/lt/LC_MESSAGES/mate-control-center.mo
 share/locale/lv/LC_MESSAGES/mate-control-center.mo
@@ -487,6 +487,7 @@ share/locale/oc/LC_MESSAGES/mate-control-center.mo
 share/locale/or/LC_MESSAGES/mate-control-center.mo
 share/locale/pa/LC_MESSAGES/mate-control-center.mo
 share/locale/pl/LC_MESSAGES/mate-control-center.mo
+share/locale/pms/LC_MESSAGES/mate-control-center.mo
 share/locale/pt/LC_MESSAGES/mate-control-center.mo
 share/locale/pt_BR/LC_MESSAGES/mate-control-center.mo
 share/locale/ro/LC_MESSAGES/mate-control-center.mo
@@ -507,7 +508,6 @@ share/locale/ug/LC_MESSAGES/mate-control-center.mo
 share/locale/uk/LC_MESSAGES/mate-control-center.mo
 share/locale/ur/LC_MESSAGES/mate-control-center.mo
 share/locale/uz/LC_MESSAGES/mate-control-center.mo
-share/locale/uz@cyrillic/LC_MESSAGES/mate-control-center.mo
 share/locale/vi/LC_MESSAGES/mate-control-center.mo
 share/locale/wa/LC_MESSAGES/mate-control-center.mo
 share/locale/xh/LC_MESSAGES/mate-control-center.mo
@@ -578,9 +578,6 @@ share/mate-control-center/ui/mate-keyboard-properties-model-chooser.ui
 share/mate-control-center/ui/mate-keyboard-properties-options-dialog.ui
 share/mate-control-center/ui/mate-mouse-properties.ui
 share/mate-control-center/ui/mate-network-properties.ui
-share/mate/cursor-fonts/cursor-large-white.pcf
-share/mate/cursor-fonts/cursor-large.pcf
-share/mate/cursor-fonts/cursor-white.pcf
 share/mime/packages/mate-theme-package.xml
 share/polkit-1/actions/org.mate.randr.policy
 share/thumbnailers/mate-font-viewer.thumbnailer
