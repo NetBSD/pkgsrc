@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/05/03 08:38:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/23 17:29:36 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-system-monitor-${MATE_VERSION}
+DISTNAME=	mate-system-monitor-${VERSION}
 CATEGORIES=	sysutils
 
 COMMENT=	MATE system monitor
@@ -23,6 +22,5 @@ USE_LANGUAGES=	c c++11
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk3/buildlink3.mk"
 .include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
