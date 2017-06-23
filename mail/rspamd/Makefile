@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2017/05/02 11:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2017/06/23 13:47:05 wiz Exp $
 
-DISTNAME=	rspamd-1.5.6
+DISTNAME=	rspamd-1.6.1
 CATEGORIES=	mail
-MASTER_SITES=	http://www.rspamd.com/downloads/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vstakhov/}
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://www.rspamd.com/
@@ -80,7 +79,9 @@ CONF_FILES+=	${EGDIR}/surbl-whitelist.inc ${PKG_SYSCONFDIR}/surbl-whitelist.inc
 CONF_FILES+=	${EGDIR}/worker-controller.inc ${PKG_SYSCONFDIR}/worker-controller.inc
 CONF_FILES+=	${EGDIR}/worker-fuzzy.inc ${PKG_SYSCONFDIR}/worker-fuzzy.inc
 CONF_FILES+=	${EGDIR}/worker-normal.inc ${PKG_SYSCONFDIR}/worker-normal.inc
+CONF_FILES+=	${EGDIR}/worker-proxy.inc ${PKG_SYSCONFDIR}/worker-proxy.inc
 CONF_FILES+=	${EGDIR}/modules.d/antivirus.conf ${PKG_SYSCONFDIR}/modules.d/antivirus.conf
+CONF_FILES+=	${EGDIR}/modules.d/arc.conf ${PKG_SYSCONFDIR}/modules.d/arc.conf
 CONF_FILES+=	${EGDIR}/modules.d/asn.conf ${PKG_SYSCONFDIR}/modules.d/asn.conf
 CONF_FILES+=	${EGDIR}/modules.d/chartable.conf ${PKG_SYSCONFDIR}/modules.d/chartable.conf
 CONF_FILES+=	${EGDIR}/modules.d/clickhouse.conf ${PKG_SYSCONFDIR}/modules.d/clickhouse.conf
@@ -100,6 +101,7 @@ CONF_FILES+=	${EGDIR}/modules.d/maillist.conf ${PKG_SYSCONFDIR}/modules.d/mailli
 CONF_FILES+=	${EGDIR}/modules.d/metadata_exporter.conf ${PKG_SYSCONFDIR}/modules.d/metadata_exporter.conf
 CONF_FILES+=	${EGDIR}/modules.d/metric_exporter.conf ${PKG_SYSCONFDIR}/modules.d/metric_exporter.conf
 CONF_FILES+=	${EGDIR}/modules.d/mid.conf ${PKG_SYSCONFDIR}/modules.d/mid.conf
+CONF_FILES+=	${EGDIR}/modules.d/milter_headers.conf ${PKG_SYSCONFDIR}/modules.d/milter_headers.conf
 CONF_FILES+=	${EGDIR}/modules.d/mime_types.conf ${PKG_SYSCONFDIR}/modules.d/mime_types.conf
 CONF_FILES+=	${EGDIR}/modules.d/multimap.conf ${PKG_SYSCONFDIR}/modules.d/multimap.conf
 CONF_FILES+=	${EGDIR}/modules.d/mx_check.conf ${PKG_SYSCONFDIR}/modules.d/mx_check.conf
@@ -110,9 +112,9 @@ CONF_FILES+=	${EGDIR}/modules.d/rbl.conf ${PKG_SYSCONFDIR}/modules.d/rbl.conf
 CONF_FILES+=	${EGDIR}/modules.d/redis.conf ${PKG_SYSCONFDIR}/modules.d/redis.conf
 CONF_FILES+=	${EGDIR}/modules.d/regexp.conf ${PKG_SYSCONFDIR}/modules.d/regexp.conf
 CONF_FILES+=	${EGDIR}/modules.d/replies.conf ${PKG_SYSCONFDIR}/modules.d/replies.conf
-CONF_FILES+=	${EGDIR}/modules.d/rmilter_headers.conf ${PKG_SYSCONFDIR}/modules.d/rmilter_headers.conf
 CONF_FILES+=	${EGDIR}/modules.d/rspamd_update.conf ${PKG_SYSCONFDIR}/modules.d/rspamd_update.conf
 CONF_FILES+=	${EGDIR}/modules.d/spamassassin.conf ${PKG_SYSCONFDIR}/modules.d/spamassassin.conf
+CONF_FILES+=	${EGDIR}/modules.d/spamtrap.conf ${PKG_SYSCONFDIR}/modules.d/spamtrap.conf
 CONF_FILES+=	${EGDIR}/modules.d/spf.conf ${PKG_SYSCONFDIR}/modules.d/spf.conf
 CONF_FILES+=	${EGDIR}/modules.d/surbl.conf ${PKG_SYSCONFDIR}/modules.d/surbl.conf
 CONF_FILES+=	${EGDIR}/modules.d/trie.conf ${PKG_SYSCONFDIR}/modules.d/trie.conf
