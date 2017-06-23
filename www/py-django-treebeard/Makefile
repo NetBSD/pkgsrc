@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2017/05/24 11:24:44 adam Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/23 07:42:24 adam Exp $
 
-DISTNAME=	django-treebeard-4.1.1
+DISTNAME=	django-treebeard-4.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-treebeard/}
@@ -12,7 +12,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=		# empty
 
-DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=1.7:../../www/py-django
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
