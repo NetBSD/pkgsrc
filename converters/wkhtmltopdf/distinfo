@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2017/06/23 07:12:19 manu Exp $
+
+SHA1 (wkhtmltox-0.12.4.tar.bz2) = 6a0ca9b01d5e37af3fb451bbd934afff43cf26ae
+RMD160 (wkhtmltox-0.12.4.tar.bz2) = 665abd76618cdfac27585e62caa52b33d09990fa
+SHA512 (wkhtmltox-0.12.4.tar.bz2) = 1526c6138d6276d0f6188737a67848b8ae9c16016c119eb00bbdaf7159464f8799c53ca9a997ea40eea4c2d1cadc35a10607564949fd39a3b7b7e6745a3dbdcb
+Size (wkhtmltox-0.12.4.tar.bz2) = 36355721 bytes
+SHA1 (patch-qt_config.tests_mac_dwarf2.test) = efabd53a31dc69feac1bc2767c801fab5514a447
+SHA1 (patch-qt_configure) = e13eb806e11a88a20650fc62d38d162145eaabae
+SHA1 (patch-qt_mkspecs_netbsd-g++_qmake.conf) = 508b1f25735d3a8f29a1da08a988f608186751bf
