@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2017/04/19 18:31:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/23 13:47:05 wiz Exp $
 bin/rspamadm
 bin/rspamadm-${PKGVERSION}
 bin/rspamc
 bin/rspamc-${PKGVERSION}
 bin/rspamd
-bin/rspamd-${PKGVERSION}
+bin/${PKGNAME}
 bin/rspamd_stats
 lib/rspamd/librspamd-actrie.so
 man/man1/rspamadm.1
@@ -21,6 +21,7 @@ share/examples/rspamd/mid.inc
 share/examples/rspamd/mime_types.inc
 share/examples/rspamd/modules.conf
 share/examples/rspamd/modules.d/antivirus.conf
+share/examples/rspamd/modules.d/arc.conf
 share/examples/rspamd/modules.d/asn.conf
 share/examples/rspamd/modules.d/chartable.conf
 share/examples/rspamd/modules.d/clickhouse.conf
@@ -41,6 +42,7 @@ share/examples/rspamd/modules.d/maillist.conf
 share/examples/rspamd/modules.d/metadata_exporter.conf
 share/examples/rspamd/modules.d/metric_exporter.conf
 share/examples/rspamd/modules.d/mid.conf
+share/examples/rspamd/modules.d/milter_headers.conf
 share/examples/rspamd/modules.d/mime_types.conf
 share/examples/rspamd/modules.d/multimap.conf
 share/examples/rspamd/modules.d/mx_check.conf
@@ -51,9 +53,9 @@ share/examples/rspamd/modules.d/rbl.conf
 share/examples/rspamd/modules.d/redis.conf
 share/examples/rspamd/modules.d/regexp.conf
 share/examples/rspamd/modules.d/replies.conf
-share/examples/rspamd/modules.d/rmilter_headers.conf
 share/examples/rspamd/modules.d/rspamd_update.conf
 share/examples/rspamd/modules.d/spamassassin.conf
+share/examples/rspamd/modules.d/spamtrap.conf
 share/examples/rspamd/modules.d/spf.conf
 share/examples/rspamd/modules.d/surbl.conf
 share/examples/rspamd/modules.d/trie.conf
@@ -64,17 +66,26 @@ share/examples/rspamd/modules.d/whitelist.conf
 share/examples/rspamd/options.inc
 share/examples/rspamd/redirectors.inc
 share/examples/rspamd/rspamd.conf
-share/examples/rspamd/rspamd.systemd.conf
-share/examples/rspamd/rspamd.sysvinit.conf
 share/examples/rspamd/spf_dkim_whitelist.inc
 share/examples/rspamd/statistic.conf
 share/examples/rspamd/surbl-whitelist.inc
 share/examples/rspamd/worker-controller.inc
 share/examples/rspamd/worker-fuzzy.inc
 share/examples/rspamd/worker-normal.inc
+share/examples/rspamd/worker-proxy.inc
 share/rspamd/effective_tld_names.dat
+share/rspamd/lib/auth_results.lua
+share/rspamd/lib/dkim_sign_tools.lua
+share/rspamd/lib/fun.lua
+share/rspamd/lib/global_functions.lua
+share/rspamd/lib/lua_redis.lua
+share/rspamd/lib/lua_util.lua
+share/rspamd/lib/maps.lua
+share/rspamd/lib/meta_functions.lua
 share/rspamd/lua/antivirus.lua
+share/rspamd/lua/arc.lua
 share/rspamd/lua/asn.lua
+share/rspamd/lua/bayes_expiry.lua
 share/rspamd/lua/clickhouse.lua
 share/rspamd/lua/dcc.lua
 share/rspamd/lua/dkim_signing.lua
@@ -86,7 +97,6 @@ share/rspamd/lua/fann_redis.lua
 share/rspamd/lua/fann_scores.lua
 share/rspamd/lua/force_actions.lua
 share/rspamd/lua/forged_recipients.lua
-share/rspamd/lua/fun.lua
 share/rspamd/lua/fuzzy_collect.lua
 share/rspamd/lua/greylist.lua
 share/rspamd/lua/hfilter.lua
@@ -96,6 +106,7 @@ share/rspamd/lua/maillist.lua
 share/rspamd/lua/metadata_exporter.lua
 share/rspamd/lua/metric_exporter.lua
 share/rspamd/lua/mid.lua
+share/rspamd/lua/milter_headers.lua
 share/rspamd/lua/mime_types.lua
 share/rspamd/lua/multimap.lua
 share/rspamd/lua/mx_check.lua
@@ -104,17 +115,16 @@ share/rspamd/lua/phishing.lua
 share/rspamd/lua/ratelimit.lua
 share/rspamd/lua/rbl.lua
 share/rspamd/lua/replies.lua
-share/rspamd/lua/rmilter_headers.lua
 share/rspamd/lua/rspamd_update.lua
 share/rspamd/lua/settings.lua
 share/rspamd/lua/spamassassin.lua
+share/rspamd/lua/spamtrap.lua
 share/rspamd/lua/trie.lua
 share/rspamd/lua/url_redirector.lua
 share/rspamd/lua/url_reputation.lua
 share/rspamd/lua/url_tags.lua
 share/rspamd/lua/whitelist.lua
 share/rspamd/rules/forwarding.lua
-share/rspamd/rules/global_functions.lua
 share/rspamd/rules/headers_checks.lua
 share/rspamd/rules/html.lua
 share/rspamd/rules/http_headers.lua
