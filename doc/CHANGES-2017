@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2595 2017/06/23 17:22:10 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2596 2017/06/23 17:22:48 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3590,3 +3590,4 @@ Changes to the packages collection and infrastructure in 2017:
 >>>>>>> 1.2593
 	Updated multimedia/mate-media to 1.18.1 [youri 2017-06-23]
 	Updated x11/mate-menus to 1.18.0 [youri 2017-06-23]
+	Updated wm/mate-netbook to 1.18.1 [youri 2017-06-23]
