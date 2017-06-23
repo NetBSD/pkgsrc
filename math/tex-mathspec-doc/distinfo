@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/23 23:28:29 markd Exp $
+
+SHA1 (tex-mathspec-42773/mathspec.doc.tar.xz) = 2492484c77a22fa9e226c4fbbda5eac3f0d72443
+RMD160 (tex-mathspec-42773/mathspec.doc.tar.xz) = 706e66388f3fa03b93b17a6e08fcd9cc0d2e7174
+SHA512 (tex-mathspec-42773/mathspec.doc.tar.xz) = b31b7492b89e8d7742fcfe4fb32f99c6ccc799dfcc40e268fbe3a7e6671e45c000346e1622f9a2dafe683f7a32bfb96f31dcfacb398aaaf8fb61fefa4d0de490
+Size (tex-mathspec-42773/mathspec.doc.tar.xz) = 172744 bytes
