@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2016/06/16 08:35:26 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/23 17:21:59 youri Exp $
 include/mate-menus/matemenu-tree.h
-${PLIST.introspection}lib/girepository-1.0/MateMenu-2.0.typelib
 lib/libmate-menu.la
 lib/pkgconfig/libmate-menu.pc
 ${PYSITELIB}/matemenu.la
 share/examples/mate-menus/xdg/menus/mate-applications.menu
 share/examples/mate-menus/xdg/menus/mate-preferences-categories.menu
 share/examples/mate-menus/xdg/menus/mate-settings.menu
-${PLIST.introspection}share/gir-1.0/MateMenu-2.0.gir
 share/locale/af/LC_MESSAGES/mate-menus.mo
 share/locale/am/LC_MESSAGES/mate-menus.mo
 share/locale/an/LC_MESSAGES/mate-menus.mo
@@ -15,11 +13,11 @@ share/locale/ar/LC_MESSAGES/mate-menus.mo
 share/locale/as/LC_MESSAGES/mate-menus.mo
 share/locale/ast/LC_MESSAGES/mate-menus.mo
 share/locale/be/LC_MESSAGES/mate-menus.mo
-share/locale/be@latin/LC_MESSAGES/mate-menus.mo
 share/locale/bg/LC_MESSAGES/mate-menus.mo
 share/locale/bn/LC_MESSAGES/mate-menus.mo
 share/locale/bn_IN/LC_MESSAGES/mate-menus.mo
 share/locale/br/LC_MESSAGES/mate-menus.mo
+share/locale/bs/LC_MESSAGES/mate-menus.mo
 share/locale/ca/LC_MESSAGES/mate-menus.mo
 share/locale/ca@valencia/LC_MESSAGES/mate-menus.mo
 share/locale/cmn/LC_MESSAGES/mate-menus.mo
@@ -28,10 +26,8 @@ share/locale/cs/LC_MESSAGES/mate-menus.mo
 share/locale/cy/LC_MESSAGES/mate-menus.mo
 share/locale/da/LC_MESSAGES/mate-menus.mo
 share/locale/de/LC_MESSAGES/mate-menus.mo
-share/locale/dv/LC_MESSAGES/mate-menus.mo
 share/locale/dz/LC_MESSAGES/mate-menus.mo
 share/locale/el/LC_MESSAGES/mate-menus.mo
-share/locale/en@shaw/LC_MESSAGES/mate-menus.mo
 share/locale/en_AU/LC_MESSAGES/mate-menus.mo
 share/locale/en_CA/LC_MESSAGES/mate-menus.mo
 share/locale/en_GB/LC_MESSAGES/mate-menus.mo
@@ -51,9 +47,7 @@ share/locale/fur/LC_MESSAGES/mate-menus.mo
 share/locale/fy/LC_MESSAGES/mate-menus.mo
 share/locale/ga/LC_MESSAGES/mate-menus.mo
 share/locale/gl/LC_MESSAGES/mate-menus.mo
-share/locale/gn/LC_MESSAGES/mate-menus.mo
 share/locale/gu/LC_MESSAGES/mate-menus.mo
-share/locale/gv/LC_MESSAGES/mate-menus.mo
 share/locale/ha/LC_MESSAGES/mate-menus.mo
 share/locale/he/LC_MESSAGES/mate-menus.mo
 share/locale/hi/LC_MESSAGES/mate-menus.mo
@@ -62,7 +56,6 @@ share/locale/hu/LC_MESSAGES/mate-menus.mo
 share/locale/hy/LC_MESSAGES/mate-menus.mo
 share/locale/id/LC_MESSAGES/mate-menus.mo
 share/locale/ig/LC_MESSAGES/mate-menus.mo
-share/locale/io/LC_MESSAGES/mate-menus.mo
 share/locale/is/LC_MESSAGES/mate-menus.mo
 share/locale/it/LC_MESSAGES/mate-menus.mo
 share/locale/ja/LC_MESSAGES/mate-menus.mo
@@ -114,7 +107,6 @@ share/locale/ug/LC_MESSAGES/mate-menus.mo
 share/locale/uk/LC_MESSAGES/mate-menus.mo
 share/locale/ur/LC_MESSAGES/mate-menus.mo
 share/locale/uz/LC_MESSAGES/mate-menus.mo
-share/locale/uz@cyrillic/LC_MESSAGES/mate-menus.mo
 share/locale/vi/LC_MESSAGES/mate-menus.mo
 share/locale/xh/LC_MESSAGES/mate-menus.mo
 share/locale/yo/LC_MESSAGES/mate-menus.mo
