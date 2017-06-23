@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2017/02/12 06:26:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/23 17:27:04 youri Exp $
 
-PKGREVISION= 3
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	mate-screensaver-1.14.1
+DISTNAME=	mate-screensaver-${VERSION:R}.1
 CATEGORIES=	x11
 
 COMMENT=	Screen saver and locker for the MATE desktop
@@ -71,14 +70,7 @@ post-install:
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../x11/mate-menus/buildlink3.mk"
 .include "../../x11/libmatekbd/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXScrnSaver/buildlink3.mk"
-.include "../../x11/libXxf86misc/buildlink3.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
