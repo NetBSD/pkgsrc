@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:32:38 agc Exp $
+$NetBSD: distinfo,v 1.8 2017/06/23 18:57:13 kamil Exp $
 
 SHA1 (whowatch-1.4.tar.gz) = 0d60c8ddb56b9bf9d2f3e1452832ccb2c862ff0c
 RMD160 (whowatch-1.4.tar.gz) = da2ee1d52e2a1d5292713259e66b4e7dd39b8dfd
@@ -9,4 +9,4 @@ SHA1 (patch-ab) = f66829eaf7d148df10c2ca064ed81bdedf5c9adc
 SHA1 (patch-ac) = 9482d1b1759858a83b1efeaa5fc9dd9ec49043c7
 SHA1 (patch-ad) = 41a9e710b8bbe427c715da5d82e77bf32a2f7a34
 SHA1 (patch-ae) = ebb4f046df6ce950a320216f2d9f5238340a10b1
-SHA1 (patch-proctree.c) = 54bd828dac7f3f6dfd51f869e812e0c5a3a989fd
+SHA1 (patch-proctree.c) = 9357a2b6e9a67c80f413921491a47b1a82f0e0a7
