@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2596 2017/06/23 17:22:48 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2597 2017/06/23 17:24:33 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3583,11 +3583,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated graphics/mate-icon-theme to 1.18.2 [youri 2017-06-23]
 	Updated graphics/mate-icon-theme-faenza to 1.18.1 [youri 2017-06-23]
 	Updated x11/mate-indicator-applet to 1.18.0 [youri 2017-06-23]
-<<<<<<< CHANGES-2017
-	Updated multimedia/mate-media to 1.18.1 [youri 2017-06-23]
-=======
 	Updated net/powerdns to 4.0.4 [fhajny 2017-06-23]
->>>>>>> 1.2593
 	Updated multimedia/mate-media to 1.18.1 [youri 2017-06-23]
 	Updated x11/mate-menus to 1.18.0 [youri 2017-06-23]
 	Updated wm/mate-netbook to 1.18.1 [youri 2017-06-23]
+	Updated sysutils/mate-notification-daemon to 1.18.0 [youri 2017-06-23]
