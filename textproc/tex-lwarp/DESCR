@@ -1,0 +1,11 @@
+The package causes LaTeX to directly produce HTML5 output,
+using external utility programs only for the final conversion
+of text and images. Math may be represented by SVG files or
+MathJax. Documents may be produced by LaTeX, LuaLaTeX, or
+XeLaTeX. A texlua script removes the need for system utilities
+such as make and gawk, and also supports xindy and latexmk.
+Configuration is automatic at the first manual compile. Print
+and HTML versions of each document may coexist, each with its
+own set of auxiliary files. Support files are self-generated on
+request. Assistance is provided for HTML import into EPUB
+conversion software and word processors.

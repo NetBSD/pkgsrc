@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/23 23:23:56 markd Exp $
+share/texmf-dist/doc/latex/lwarp/README.txt
+share/texmf-dist/doc/latex/lwarp/lwarp.pdf
+share/texmf-dist/doc/latex/lwarp/lwarp_tutorial.txt
