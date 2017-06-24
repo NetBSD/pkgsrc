@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2017/03/13 19:42:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2017/06/24 08:19:40 adam Exp $
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
@@ -1127,6 +1127,8 @@ ${PYSITELIB}/scipy/sparse/spfuncs.pyo
 ${PYSITELIB}/scipy/sparse/sputils.py
 ${PYSITELIB}/scipy/sparse/sputils.pyc
 ${PYSITELIB}/scipy/sparse/sputils.pyo
+${PYSITELIB}/scipy/sparse/tests/data/csc_py2.npz
+${PYSITELIB}/scipy/sparse/tests/data/csc_py3.npz
 ${PYSITELIB}/scipy/sparse/tests/test_base.py
 ${PYSITELIB}/scipy/sparse/tests/test_construct.py
 ${PYSITELIB}/scipy/sparse/tests/test_csc.py
