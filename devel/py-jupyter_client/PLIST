@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/04/23 04:27:47 markd Exp $
-bin/jupyter-kernelspec${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.2 2017/06/24 08:17:00 adam Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/jupyter_client/__init__.py
 ${PYSITELIB}/jupyter_client/__init__.pyc
