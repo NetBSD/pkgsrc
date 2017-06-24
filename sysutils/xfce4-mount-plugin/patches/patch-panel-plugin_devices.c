@@ -1,4 +1,4 @@
-$NetBSD: patch-panel-plugin_devices.c,v 1.2 2017/06/20 22:35:59 youri Exp $
+$NetBSD: patch-panel-plugin_devices.c,v 1.3 2017/06/24 14:20:40 youri Exp $
 
 Fix NetBSD build.
 Add SunOS support.
@@ -50,7 +50,16 @@ Add SunOS support.
  /**
   * Return a string containing a size expressed in KB, MB or GB and the unit
   * it is expressed in.
-@@ -468,7 +481,15 @@ disks_new (gboolean include_NFSs, gboole
+@@ -268,6 +281,8 @@ disk_mount (t_disk *pdisk, char *on_moun
+             }
+             else
+                 cmd = g_strconcat ("eject -t ", pdisk->device, NULL);
++#elif __NetBSD__
++	    cmd = g_strconcat ("eject cd", NULL);
+ #else
+             cmd = g_strconcat ("eject -t ", pdisk->device, NULL);
+ #endif
+@@ -468,7 +483,15 @@ disks_new (gboolean include_NFSs, gboole
  {
      GPtrArray * pdisks; /* to be returned */
      t_disk * pdisk;
@@ -66,7 +75,7 @@ Add SunOS support.
      gboolean has_valid_mount_device;
  
      pdisks = g_ptr_array_new();
-@@ -501,23 +522,46 @@ disks_new (gboolean include_NFSs, gboole
+@@ -501,23 +524,46 @@ disks_new (gboolean include_NFSs, gboole
      }
  
  
@@ -113,7 +122,7 @@ Add SunOS support.
              if (!device_or_mountpoint_exists(pdisks, pdisk))
                g_ptr_array_add (pdisks , pdisk);
  
-@@ -525,6 +569,9 @@ disks_new (gboolean include_NFSs, gboole
+@@ -525,6 +571,9 @@ disks_new (gboolean include_NFSs, gboole
  
      } /* end for */
  
@@ -123,7 +132,7 @@ Add SunOS support.
      endfsent(); /* close file */
  
      return pdisks;
-@@ -746,7 +793,11 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -746,7 +795,11 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
  
  #ifdef HAVE_GETMNTENT
      FILE * fmtab = NULL; /* file /etc/mtab */
@@ -135,7 +144,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
      int i, nb_mounted_fs = 0;
  #endif
-@@ -766,7 +817,13 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -766,7 +819,13 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
      pstatfs = g_new0 (struct statfs, 1);
  
      /* open file */
@@ -149,7 +158,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
      /* get mounted fs */
      nb_mounted_fs = getmntinfo(&pstatfs,MNT_WAIT);
-@@ -774,11 +831,19 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -774,11 +833,19 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
  
      /* start looking for mounted devices */
  #ifdef HAVE_GETMNTENT
@@ -169,7 +178,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
      for (i = 0; i < nb_mounted_fs ; i++) {
          DBG (" have entry: %s on %s : type %s", pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, pstatfs[i].f_fstypename );
-@@ -789,13 +854,21 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -789,13 +856,21 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
          /* get pointer on disk from pdisks */
          /* CHANGED to reflect change in disk_search */
  #ifdef HAVE_GETMNTENT
@@ -191,7 +200,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
              exclude = exclude_filesystem (excluded_FSs, pstatfs[i].f_mntonname, pstatfs[i].f_mntfromname);
  #endif
-@@ -806,6 +879,18 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -806,6 +881,18 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
              /* test for mnt_dir==none or neither block device nor NFS or system device */
              if ( exclude ||
  #ifdef HAVE_GETMNTENT
@@ -210,7 +219,7 @@ Add SunOS support.
                g_ascii_strcasecmp(pmntent->mnt_dir, "none") == 0 ||
                g_str_has_prefix(pmntent->mnt_fsname, "gvfs-fuse-daemon") ||
                !(g_str_has_prefix(pmntent->mnt_fsname, "/dev/") ||
-@@ -816,6 +901,7 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -816,6 +903,7 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
                  g_str_has_prefix(pmntent->mnt_type, "shfs")
                ) ||
                g_str_has_prefix(pmntent->mnt_dir, "/sys/")
@@ -218,7 +227,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
                /* TODO: add support for more fs types on BSD */
                g_ascii_strcasecmp(pstatfs[i].f_mntonname, "none") == 0 ||
-@@ -828,8 +914,13 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -828,8 +916,13 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
  
              /* else have valid entry reflecting block device or NFS */
  #ifdef HAVE_GETMNTENT
@@ -232,7 +241,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
              pdisk = disk_new (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname, length);
              pdisk->dc = disk_classify (pstatfs[i].f_mntfromname, pstatfs[i].f_mntonname);
-@@ -839,8 +930,13 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
+@@ -839,8 +932,13 @@ disks_refresh(GPtrArray * pdisks, GPtrAr
  
          /* create new t_mount_info */
  #ifdef HAVE_GETMNTENT
@@ -246,7 +255,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
          mount_info = mount_info_new_from_stat (&pstatfs[i], pstatfs[i].f_fstypename,
                                                 pstatfs[i].f_mntonname);
-@@ -896,7 +992,11 @@ disk_check_mounted (const char *disk)
+@@ -896,7 +994,11 @@ disk_check_mounted (const char *disk)
  {
  #ifdef HAVE_GETMNTENT
      FILE *fmtab = NULL; /* file /etc/mtab */
@@ -258,7 +267,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
      struct statfs * pstatfs = NULL;
      int i, nb_mounted_fs = 0;
-@@ -905,7 +1005,13 @@ disk_check_mounted (const char *disk)
+@@ -905,7 +1007,13 @@ disk_check_mounted (const char *disk)
  
  #ifdef HAVE_GETMNTENT
      /* open file */
@@ -272,7 +281,7 @@ Add SunOS support.
  #elif defined (HAVE_GETMNTINFO)
      /* get mounted fs */
      nb_mounted_fs = getmntinfo(&pstatfs,MNT_WAIT);
-@@ -913,14 +1019,23 @@ disk_check_mounted (const char *disk)
+@@ -913,14 +1021,23 @@ disk_check_mounted (const char *disk)
  
      /* start looking for mounted devices */
  #ifdef HAVE_GETMNTENT
