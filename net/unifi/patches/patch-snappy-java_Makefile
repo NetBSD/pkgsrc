@@ -1,0 +1,17 @@
+$NetBSD: patch-snappy-java_Makefile,v 1.1 2017/06/24 14:16:37 tnn Exp $
+
+It tries to download a distfile with curl. We manage this manually.
+
+--- ../snappy-java-1.0.5.4/Makefile.orig	2014-07-04 05:20:00.000000000 +0000
++++ ../snappy-java-1.0.5.4/Makefile
+@@ -20,9 +20,7 @@ $(SNAPPY_ARCHIVE):
+ 	@mkdir -p $(@D)
+ 	curl -o$@ http://snappy.googlecode.com/files/snappy-$(VERSION).tar.gz
+ 
+-$(SNAPPY_UNPACKED): $(SNAPPY_ARCHIVE)
+-	tar xvfz $< -C $(TARGET)	
+-	touch $@
++$(SNAPPY_UNPACKED):
+ 
+ jni-header: $(SRC)/org/xerial/snappy/SnappyNative.h
+ 
