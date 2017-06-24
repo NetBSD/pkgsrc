@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.121 2016/03/17 14:15:39 jperkin Exp $
+$NetBSD: distinfo,v 1.122 2017/06/24 02:00:53 kamil Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -43,7 +43,7 @@ SHA1 (patch-cb) = d13c59029ef13c89d565431244128044735ddaef
 SHA1 (patch-cc) = ed95490558d4de4a04aa0f45634e44ed0b78fdd8
 SHA1 (patch-dd) = 4c98e62275ce9a632f79f99110e8fb4995e3f017
 SHA1 (patch-ep) = 745f03daf088afdef4d5eff486311a49291eb947
-SHA1 (patch-er) = 04f3746034225a1861e5bcb9d1efd9a6f428f4bc
+SHA1 (patch-er) = 3ea0fa2a64cc4a29558b98c5f03f165b475ed728
 SHA1 (patch-ev) = 551dc4d79b637e15a580eb1dcd2f0930ff1e3dbc
 SHA1 (patch-ew) = f8f95cf602a9d88f620d5546ad58b87d5e6be2a5
 SHA1 (patch-fa) = 1ea4390477d7f68283b68e695bcb2e4b7c18aecc
@@ -68,7 +68,7 @@ SHA1 (patch-kcontrol_access_kcmaccess.cpp) = f7eaec78fa13f2cfb5b97ca84c10f3e403b
 SHA1 (patch-kcontrol_arts_hardwaretab.ui) = 794be317ba42a3660b9f2b6d24565cdc681592fa
 SHA1 (patch-kcontrol_ebrowsing_plugins_ikws_ikwsopts_ui.ui) = 7df8baced10a7c57caa2bc744e17e60b642ef2b0
 SHA1 (patch-kcontrol_info_info__osx.cpp) = 29a2de37107069fa719bd41e019ed3ded4be6537
-SHA1 (patch-kcontrol_kfontinst_kfontinst_GetPid.c) = b56389ec10d4388ba10f01798b0119efbbb72c4c
+SHA1 (patch-kcontrol_kfontinst_kfontinst_GetPid.c) = 4204568b646d840e6a90581983e8d5820214b512
 SHA1 (patch-kcontrol_kio_cache_ui.ui) = 7ff30b98aa9be5b386c8e983bcf54666846e9205
 SHA1 (patch-kcontrol_kio_envvarproxy_ui.ui) = 0d5d6c19fcce2a97c5c96d5d3152fb1591800e0e
 SHA1 (patch-kcontrol_kio_kcookiesmanagementdlg_ui.ui) = 03c28df1e5da70edd97ece70d0fe20b66606cd11
