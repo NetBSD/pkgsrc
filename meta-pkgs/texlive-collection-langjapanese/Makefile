@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/22 09:37:22 markd Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/24 01:02:05 markd Exp $
 
 DISTNAME=	collection-langjapanese
 PKGNAME=	texlive-${DISTNAME}-2017pre2
@@ -28,11 +28,11 @@ DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
 # lshort-japanese is documentation only
 # depend luatexja
-# depend mendex-doc
+# mendex-doc is documentation only
 DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
 DEPENDS+=	tex-platex-[0-9]*:../../print/tex-platex
 # depend platex-tools
-# depend platexcheat
+# platexcheat is documentation only
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
 DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
 DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
@@ -44,7 +44,7 @@ DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
 # depend pxjahyper
 # depend pxrubrica
 # depend uplatex
-# depend uptex
+# uptex is documentation only
 # depend uptex-base
 # depend uptex-fonts
 DEPENDS+=	tex-wadalab-[0-9]*:../../fonts/tex-wadalab
