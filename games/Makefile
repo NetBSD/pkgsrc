@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.407 2016/11/01 21:59:23 wiz Exp $
+# $NetBSD: Makefile,v 1.408 2017/06/24 01:44:03 kamil Exp $
 #
 
 COMMENT=	Games
@@ -374,6 +374,7 @@ SUBDIR+=	xjewel
 SUBDIR+=	xjig
 SUBDIR+=	xjump
 SUBDIR+=	xkobo
+SUBDIR+=	xlennart
 SUBDIR+=	xmahjongg
 SUBDIR+=	xmris
 SUBDIR+=	xnibbles
