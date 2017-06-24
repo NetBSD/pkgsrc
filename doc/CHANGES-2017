@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2615 2017/06/24 06:52:22 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2616 2017/06/24 07:19:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added games/xlennart version 1.1.1 [kamil 2017-06-24]
 	Updated devel/libuv to 1.12.0 [adam 2017-06-24]
 	Added devel/py-uvloop version 0.8.0 [adam 2017-06-24]
+	Added textproc/py-ujson version 1.35 [adam 2017-06-24]
