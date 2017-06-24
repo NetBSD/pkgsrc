@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2622 2017/06/24 15:19:22 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2623 2017/06/24 15:19:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3629,3 +3629,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/unifi version 5.4.16 [tnn 2017-06-24]
 	Updated sysutils/xfce4-mount-plugin to 1.1.0nb1 [youri 2017-06-24]
 	Updated databases/mysql51-server to 5.1.73nb1 [schmonz 2017-06-24]
+	Updated databases/mysql55-server to 5.5.56nb1 [schmonz 2017-06-24]
