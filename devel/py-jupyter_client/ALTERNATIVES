@@ -1,1 +1,0 @@
-bin/jupyter-kernelspec @PREFIX@/bin/jupyter-kernelspec@PYVERSSUFFIX@
