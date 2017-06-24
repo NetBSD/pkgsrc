@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2017/04/23 04:50:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2017/06/24 08:07:14 adam Exp $
 ${PLIST.py2x}bin/iptest2
 ${PLIST.py3x}bin/iptest3
 bin/iptest${PYVERSSUFFIX}
@@ -712,6 +712,9 @@ ${PYSITELIB}/IPython/utils/PyColorize.pyo
 ${PYSITELIB}/IPython/utils/__init__.py
 ${PYSITELIB}/IPython/utils/__init__.pyc
 ${PYSITELIB}/IPython/utils/__init__.pyo
+${PYSITELIB}/IPython/utils/_get_terminal_size.py
+${PYSITELIB}/IPython/utils/_get_terminal_size.pyc
+${PYSITELIB}/IPython/utils/_get_terminal_size.pyo
 ${PYSITELIB}/IPython/utils/_process_cli.py
 ${PYSITELIB}/IPython/utils/_process_cli.pyc
 ${PYSITELIB}/IPython/utils/_process_cli.pyo
