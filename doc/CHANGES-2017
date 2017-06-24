@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2618 2017/06/24 08:20:53 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2619 2017/06/24 13:10:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3625,3 +3625,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/py-ipython to 5.4.1 [adam 2017-06-24]
 	Updated devel/py-jupyter_client to 5.1.0 [adam 2017-06-24]
 	Updated math/py-scipy to 0.19.1 [adam 2017-06-24]
+	Updated www/ikiwiki to 3.20170622 [schmonz 2017-06-24]
