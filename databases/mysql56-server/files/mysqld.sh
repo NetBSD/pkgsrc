@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.3 2014/12/05 17:22:16 schmonz Exp $
+# $NetBSD: mysqld.sh,v 1.4 2017/06/24 15:18:42 schmonz Exp $
 #
 # PROVIDE: mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -74,10 +74,10 @@ mysqld_start()
 	@ECHO@ "Starting ${name}."
 	ulimit -n 4096
 	cd @PREFIX@
-	${command} --user=${mysqld_user} --datadir=${mysqld_datadir} \
+	@PERL5@ -e 'use POSIX qw(setsid); setsid(); { exec (@ARGV) }' ${command} --user=${mysqld_user} --datadir=${mysqld_datadir} \
 		   --pid-file=${mysqld_pidfile} ${mysqld_flags} \
 		   ${thread_flags} \
-		   2>&1 | logger -t nbmysqld_safe \
+		   2>&1 | @PERL5@ -e 'use POSIX qw(setsid); setsid(); { exec (@ARGV) }' @SU@ -m ${mysqld_user} -c 'logger -t nbmysqld_safe' \
 		   &
 }
 
