@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/24 01:43:03 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/24 06:29:00 kamil Exp $
 #
 
 DISTNAME=		xlennart-1.1.1
@@ -7,12 +7,11 @@ MASTER_SITES=		${MASTER_SITE_GITHUB:=Xylemon/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xbill.org/
-COMMENT=		Stop the dreaded systemd virus from infecting computers
+COMMENT=		Stop the dreaded systend virus from infecting computers
 LICENSE=		gnu-gpl-v2
 
 USE_GAMESGROUP=		yes
 
-USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 BUILD_DEFS+=		VARBASE
