@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2617 2017/06/24 07:31:56 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2618 2017/06/24 08:20:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3622,3 +3622,6 @@ Changes to the packages collection and infrastructure in 2017:
 	Added devel/py-uvloop version 0.8.0 [adam 2017-06-24]
 	Added textproc/py-ujson version 1.35 [adam 2017-06-24]
 	Added www/py-websockets version 3.3 [adam 2017-06-24]
+	Updated devel/py-ipython to 5.4.1 [adam 2017-06-24]
+	Updated devel/py-jupyter_client to 5.1.0 [adam 2017-06-24]
+	Updated math/py-scipy to 0.19.1 [adam 2017-06-24]
