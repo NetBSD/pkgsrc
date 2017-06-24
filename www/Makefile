@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1251 2017/06/21 19:10:13 adam Exp $
+# $NetBSD: Makefile,v 1.1252 2017/06/24 07:30:18 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -741,6 +741,7 @@ SUBDIR+=	py-waitress
 SUBDIR+=	py-webassets
 SUBDIR+=	py-webcolors
 SUBDIR+=	py-webpy
+SUBDIR+=	py-websockets
 SUBDIR+=	py-werkzeug
 SUBDIR+=	py-werkzeug-docs
 SUBDIR+=	py-wtforms
