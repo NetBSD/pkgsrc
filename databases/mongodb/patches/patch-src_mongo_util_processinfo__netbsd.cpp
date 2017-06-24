@@ -1,8 +1,8 @@
-$NetBSD: patch-src_mongo_util_processinfo__netbsd.cpp,v 1.1 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD: patch-src_mongo_util_processinfo__netbsd.cpp,v 1.2 2017/06/24 04:24:56 kamil Exp $
 
---- src/mongo/util/processinfo_netbsd.cpp.orig	2016-02-11 22:14:23.486964953 +0000
+--- src/mongo/util/processinfo_netbsd.cpp.orig	2017-06-24 01:47:17.271883765 +0000
 +++ src/mongo/util/processinfo_netbsd.cpp
-@@ -0,0 +1,213 @@
+@@ -0,0 +1,212 @@
 +/*    Copyright 2012 10gen Inc.
 + *
 + *    This program is free software: you can redistribute it and/or  modify
@@ -45,7 +45,6 @@ $NetBSD: patch-src_mongo_util_processinfo__netbsd.cpp,v 1.1 2016/02/12 03:37:24 
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#include <sys/types.h>
-+#include <sys/user.h>
 +#include <sys/vmmeter.h>
 +#include <unistd.h>
 +
