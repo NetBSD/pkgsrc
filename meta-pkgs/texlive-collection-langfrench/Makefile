@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/22 09:37:21 markd Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/24 01:01:38 markd Exp $
 
 DISTNAME=	collection-langfrench
 PKGNAME=	texlive-${DISTNAME}-2017pre1
@@ -25,14 +25,14 @@ DEPENDS+=	tex-babel-french-[0-9]*:../../print/tex-babel-french
 # depend e-french
 # epslatex-fr is documentation only
 # depend facture
-# depend formation-latex-ul
+# formation-latex-ul is documentation only
 # depend frletter
 DEPENDS+=	tex-hyphen-basque-[0-9]*:../../print/tex-hyphen-basque
 DEPENDS+=	tex-hyphen-french-[0-9]*:../../print/tex-hyphen-french
 # impatient-fr is documentation only
 # depend impnattypo
 # l2tabu-french is documentation only
-# depend latex2e-help-texinfo-fr
+# latex2e-help-texinfo-fr is documentation only
 # lshort-french is documentation only
 # depend mafr
 # depend tabvar
@@ -43,7 +43,7 @@ DEPENDS+=	tex-hyphen-french-[0-9]*:../../print/tex-hyphen-french
 # translation-natbib-fr is documentation only
 # translation-tabbing-fr is documentation only
 # depend variations
-# depend visualtikz
+# visualtikz is documentation only
 
 META_PACKAGE=	yes
 
