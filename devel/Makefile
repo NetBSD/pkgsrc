@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2449 2017/06/23 23:20:07 markd Exp $
+# $NetBSD: Makefile,v 1.2450 2017/06/24 06:47:58 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -2053,6 +2053,7 @@ SUBDIR+=	py-unittest2py3k
 SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-uuid
+SUBDIR+=	py-uvloop
 SUBDIR+=	py-vcversioner
 SUBDIR+=	py-vine
 SUBDIR+=	py-virtualenv
