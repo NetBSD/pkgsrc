@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2017/06/14 16:07:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/06/24 21:17:44 wiz Exp $
 bin/mutt
 bin/pgpewrap
 bin/pgpring
@@ -18,14 +18,9 @@ share/doc/mutt/LICENSE.md
 share/doc/mutt/PGP-Notes.txt
 share/doc/mutt/README.SSL
 share/doc/mutt/README.md
-share/doc/mutt/advancedusage.html
-share/doc/mutt/configuration.html
-share/doc/mutt/gettingstarted.html
 share/doc/mutt/hcache-bench/README.md
 share/doc/mutt/hcache-bench/muttrc
 share/doc/mutt/hcache-bench/neomutt-hcache-bench.sh
-share/doc/mutt/index.html
-share/doc/mutt/intro.html
 share/doc/mutt/keybase/LICENSE
 share/doc/mutt/keybase/README.md
 share/doc/mutt/keybase/attachmentView.png
@@ -39,13 +34,8 @@ share/doc/mutt/keybase/pgpverify.sh
 share/doc/mutt/keybase/verify.sh
 share/doc/mutt/lua/test_lua-api_runner.muttrc
 share/doc/mutt/lua/test_lua-api_spec.lua
-share/doc/mutt/manual.html
 share/doc/mutt/manual.txt
-share/doc/mutt/mimesupport.html
-share/doc/mutt/miscellany.html
 share/doc/mutt/neomutt-syntax.vim
-share/doc/mutt/optionalfeatures.html
-share/doc/mutt/reference.html
 share/doc/mutt/samples/Mush.rc
 share/doc/mutt/samples/Pine.rc
 share/doc/mutt/samples/Tin.rc
@@ -78,9 +68,7 @@ share/doc/mutt/samples/sample.muttrc
 share/doc/mutt/samples/sample.muttrc-tlr
 share/doc/mutt/samples/smime.rc
 share/doc/mutt/samples/smime_keys_test.pl
-share/doc/mutt/security.html
 share/doc/mutt/smime-notes.txt
-share/doc/mutt/tuning.html
 share/doc/mutt/vim-keys/README.md
 share/doc/mutt/vim-keys/vim-keys.rc
 share/examples/mutt/Muttrc
