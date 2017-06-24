@@ -1,0 +1,20 @@
+Welcome to XLennart...
+
+Ever get the feeling that nothing is going right? You're a sysadmin, and
+someone's trying to destroy your computers. The little people running around
+the screen are trying to infect your computers with SystenD [TM], a virus
+cleverly designed to resemble a popular init system. Your objective is to click
+the mouse on them, ending the potential threat. If one of the people reaches a
+computer, it will attempt to replace your operating system with the virus it
+carries. It will then attempt to run off the screen with your vital software.
+The game ends when only 1 (or 0) of your computers are being productive.
+Additionally, some computers are connected with network cables. When one
+computer on a network becomes infected, a spark will be sent down the cable,
+and will infect the computer on the other end when it reaches there.
+
+Clicking the button on one of the little people will cause it to cry out in
+pain and melt (id software eat your heart out!), dropping the stolen os if it
+is carrying one. If a computer is running SystenD or is temporarily off, the os
+can be dragged back to the computer (or another computer compatible with that
+os). To extinguish a spark drag the bucket of water from the upper left corner
+onto it.
