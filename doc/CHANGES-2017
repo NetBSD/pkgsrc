@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2612 2017/06/23 23:40:51 markd Exp $
+$NetBSD: CHANGES-2017,v 1.2613 2017/06/24 00:15:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3613,3 +3613,7 @@ Changes to the packages collection and infrastructure in 2017:
 	Added math/tex-unicode-math version 0.8d [markd 2017-06-23]
 	Added math/tex-unicode-math-doc version 0.8d [markd 2017-06-23]
 	Updated meta-pkgs/texlive-collection-latexrecommended to 2017 [markd 2017-06-23]
+	Updated meta-pkgs/texlive-collection-langenglish to 2017 [markd 2017-06-24]
+	Added graphics/tex-mptrees version 17.06 [markd 2017-06-24]
+	Added graphics/tex-mptrees-doc version 17.06 [markd 2017-06-24]
+	Updated meta-pkgs/texlive-collection-metapost to 2017 [markd 2017-06-24]
