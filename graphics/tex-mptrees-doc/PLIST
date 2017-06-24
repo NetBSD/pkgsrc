@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2017/06/24 00:10:08 markd Exp $
+share/texmf-dist/doc/metapost/mptrees/README.md
+share/texmf-dist/doc/metapost/mptrees/mptrees-doc.pdf
+share/texmf-dist/doc/metapost/mptrees/mptrees-doc.tex
