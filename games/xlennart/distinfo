@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/24 01:43:03 kamil Exp $
+
+SHA1 (xlennart-1.1.1.tar.gz) = bc71d2c9358382920e80512eded0fa51d62b0620
+RMD160 (xlennart-1.1.1.tar.gz) = e4eb0cd6b3a8529cba2f58e6e18c7272a4625383
+SHA512 (xlennart-1.1.1.tar.gz) = ebfb23922063a0208ab24b8c23c7a6737a2a158b549e2942f2f89b26a4972db0a12c843e5c761d6887858abc00ed9353dc6c2a816c1a3cc578f959897369a4c1
+Size (xlennart-1.1.1.tar.gz) = 179953 bytes
