@@ -1,0 +1,7 @@
+websockets is a library for developing WebSocket servers and clients in
+Python. It implements RFC 6455 with a focus on correctness and simplicity.
+It passes the Autobahn Testsuite.
+
+Built on top of Python's asynchronous I/O support introduced in PEP 3156,
+it provides an API based on coroutines, making it easy to write highly
+concurrent applications.
