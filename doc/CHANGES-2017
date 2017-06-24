@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2613 2017/06/24 00:15:58 markd Exp $
+$NetBSD: CHANGES-2017,v 1.2614 2017/06/24 01:44:47 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3617,3 +3617,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added graphics/tex-mptrees version 17.06 [markd 2017-06-24]
 	Added graphics/tex-mptrees-doc version 17.06 [markd 2017-06-24]
 	Updated meta-pkgs/texlive-collection-metapost to 2017 [markd 2017-06-24]
+	Added games/xlennart version 1.1.1 [kamil 2017-06-24]
