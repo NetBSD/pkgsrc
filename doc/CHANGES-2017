@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2628 2017/06/25 05:09:26 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2629 2017/06/25 07:09:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/py-renpy to 6.18.3 [adam 2017-06-24]
 	Updated devel/git-base to 2.13.2 [mef 2017-06-25]
 	Updated devel/p5-AnyEvent to 7.14 [mef 2017-06-25]
+	Updated devel/p5-Test-Simple to 1.302086 [wiz 2017-06-25]
