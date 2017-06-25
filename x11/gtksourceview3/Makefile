@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2017/02/12 06:24:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2017/06/25 12:05:59 martin Exp $
 
 DISTNAME=	gtksourceview-3.22.0
 PKGNAME=	${DISTNAME:S/gtksourceview/gtksourceview3/}
@@ -22,12 +22,24 @@ CONFIGURE_ARGS+=	--disable-vala
 
 PKGCONFIG_OVERRIDE+=	gtksourceview-3.0.pc.in
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gtksourceview3
+PKG_SUPPORTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=	introspection
+PLIST_VARS+=		introspection
+
+.include "../../mk/bsd.options.mk"
+
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.48
 .include "../../devel/glib2/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mintrospection)
+PLIST.introspection=	yes
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.42.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--enable-introspection=no
+.endif
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.20
 .include "../../x11/gtk3/buildlink3.mk"
