@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/21 08:56:45 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2017/06/25 23:23:53 youri Exp $
 bin/xfce4-terminal
 man/ar/man1/xfce4-terminal.1
 man/ca/man1/xfce4-terminal.1
@@ -55,6 +55,7 @@ share/locale/kk/LC_MESSAGES/xfce4-terminal.mo
 share/locale/ko/LC_MESSAGES/xfce4-terminal.mo
 share/locale/lt/LC_MESSAGES/xfce4-terminal.mo
 share/locale/lv/LC_MESSAGES/xfce4-terminal.mo
+share/locale/ms/LC_MESSAGES/xfce4-terminal.mo
 share/locale/nb/LC_MESSAGES/xfce4-terminal.mo
 share/locale/nl/LC_MESSAGES/xfce4-terminal.mo
 share/locale/oc/LC_MESSAGES/xfce4-terminal.mo
@@ -66,6 +67,7 @@ share/locale/ro/LC_MESSAGES/xfce4-terminal.mo
 share/locale/ru/LC_MESSAGES/xfce4-terminal.mo
 share/locale/si/LC_MESSAGES/xfce4-terminal.mo
 share/locale/sk/LC_MESSAGES/xfce4-terminal.mo
+share/locale/sl/LC_MESSAGES/xfce4-terminal.mo
 share/locale/sq/LC_MESSAGES/xfce4-terminal.mo
 share/locale/sr/LC_MESSAGES/xfce4-terminal.mo
 share/locale/sv/LC_MESSAGES/xfce4-terminal.mo
