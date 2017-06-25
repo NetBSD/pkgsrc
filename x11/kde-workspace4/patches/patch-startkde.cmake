@@ -1,12 +1,12 @@
-$NetBSD: patch-startkde.cmake,v 1.3 2013/11/07 13:35:56 markd Exp $
+$NetBSD: patch-startkde.cmake,v 1.4 2017/06/25 19:58:04 youri Exp $
 
---- startkde.cmake.orig	2013-03-01 06:32:24.000000000 +0000
+--- startkde.cmake.orig	2015-08-12 07:03:15.000000000 +0000
 +++ startkde.cmake
 @@ -29,6 +29,12 @@ else
    qdbus=qdbus
  fi
  
-+qtbindir=@QTDIR@/bin
++qtbindir=/usr/pkg/qt4/bin
 +case $PATH in
 +  $qtbindir|$qtbindir:*|*:$qtbindir|*:$qtbindir:*) ;;
 +  *) PATH=$qtbindir:$PATH; export PATH;;
