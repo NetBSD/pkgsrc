@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2627 2017/06/25 03:15:34 mef Exp $
+$NetBSD: CHANGES-2017,v 1.2628 2017/06/25 05:09:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3634,3 +3634,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated databases/mysql57-server to 5.7.18nb2 [schmonz 2017-06-24]
 	Updated games/py-renpy to 6.18.3 [adam 2017-06-24]
 	Updated devel/git-base to 2.13.2 [mef 2017-06-25]
+	Updated devel/p5-AnyEvent to 7.14 [mef 2017-06-25]
