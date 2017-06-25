@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.178 2017/05/18 08:14:08 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.179 2017/06/25 01:41:15 joerg Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -20,7 +20,7 @@
 #	When set to "yes", the runtime gcc libraries (libgcc, libstdc++
 #	etc) will be used from pkgsrc rather than the native compiler.
 #
-# GCC_VERSION_SUFIXX
+# GCC_VERSION_SUFFIX
 #	Optional suffix for GCC binaries, i.e. if the installed names are like
 #	/usr/bin/g++-5, /usr/bin/gcc-5 etc.
 
