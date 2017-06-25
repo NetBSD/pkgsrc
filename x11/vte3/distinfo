@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/06/25 23:20:45 youri Exp $
+
+SHA1 (vte-0.38.4.tar.xz) = 2b42d4eb0ce0609ba2d811f9f3e30ad678a6a4e9
+RMD160 (vte-0.38.4.tar.xz) = 7edd9399c93adb113bffaae9d59f3c52d88464fc
+SHA512 (vte-0.38.4.tar.xz) = 4fba2b8fe77da54bcaaf90ca098ce92f3772f762bb68818425c54e8ef1c3950332af1fc519e4807381c206baf949bd309c77ed9d98dc500d06de6efe0710f0d2
+Size (vte-0.38.4.tar.xz) = 1012604 bytes
