@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2631 2017/06/25 08:27:22 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2632 2017/06/25 23:21:02 youri Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3638,3 +3638,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-Test-Simple to 1.302086 [wiz 2017-06-25]
 	Updated devel/p5-Scalar-List-Utils to 1.48 [wiz 2017-06-25]
 	Updated www/py-autobahn to 17.6.2 [adam 2017-06-25]
+	Added x11/vte3 version 0.38.4 [youri 2017-06-25]
