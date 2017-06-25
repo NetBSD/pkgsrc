@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:16:49 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/06/25 23:21:56 youri Exp $
 bin/mate-terminal
 bin/mate-terminal.wrapper
 man/man1/mate-terminal.1
@@ -79,7 +79,6 @@ share/locale/as/LC_MESSAGES/mate-terminal.mo
 share/locale/ast/LC_MESSAGES/mate-terminal.mo
 share/locale/az/LC_MESSAGES/mate-terminal.mo
 share/locale/be/LC_MESSAGES/mate-terminal.mo
-share/locale/be@latin/LC_MESSAGES/mate-terminal.mo
 share/locale/bg/LC_MESSAGES/mate-terminal.mo
 share/locale/bn/LC_MESSAGES/mate-terminal.mo
 share/locale/bn_IN/LC_MESSAGES/mate-terminal.mo
@@ -94,11 +93,9 @@ share/locale/da/LC_MESSAGES/mate-terminal.mo
 share/locale/de/LC_MESSAGES/mate-terminal.mo
 share/locale/dz/LC_MESSAGES/mate-terminal.mo
 share/locale/el/LC_MESSAGES/mate-terminal.mo
-share/locale/en@shaw/LC_MESSAGES/mate-terminal.mo
 share/locale/en_AU/LC_MESSAGES/mate-terminal.mo
 share/locale/en_CA/LC_MESSAGES/mate-terminal.mo
 share/locale/en_GB/LC_MESSAGES/mate-terminal.mo
-share/locale/en_US/LC_MESSAGES/mate-terminal.mo
 share/locale/eo/LC_MESSAGES/mate-terminal.mo
 share/locale/es/LC_MESSAGES/mate-terminal.mo
 share/locale/es_CO/LC_MESSAGES/mate-terminal.mo
@@ -108,6 +105,7 @@ share/locale/eu/LC_MESSAGES/mate-terminal.mo
 share/locale/fa/LC_MESSAGES/mate-terminal.mo
 share/locale/fi/LC_MESSAGES/mate-terminal.mo
 share/locale/fr/LC_MESSAGES/mate-terminal.mo
+share/locale/frp/LC_MESSAGES/mate-terminal.mo
 share/locale/fur/LC_MESSAGES/mate-terminal.mo
 share/locale/ga/LC_MESSAGES/mate-terminal.mo
 share/locale/gl/LC_MESSAGES/mate-terminal.mo
@@ -127,7 +125,9 @@ share/locale/kk/LC_MESSAGES/mate-terminal.mo
 share/locale/kn/LC_MESSAGES/mate-terminal.mo
 share/locale/ko/LC_MESSAGES/mate-terminal.mo
 share/locale/ku/LC_MESSAGES/mate-terminal.mo
+share/locale/ku_IQ/LC_MESSAGES/mate-terminal.mo
 share/locale/ky/LC_MESSAGES/mate-terminal.mo
+share/locale/la/LC_MESSAGES/mate-terminal.mo
 share/locale/lt/LC_MESSAGES/mate-terminal.mo
 share/locale/lv/LC_MESSAGES/mate-terminal.mo
 share/locale/mai/LC_MESSAGES/mate-terminal.mo
@@ -146,6 +146,7 @@ share/locale/oc/LC_MESSAGES/mate-terminal.mo
 share/locale/or/LC_MESSAGES/mate-terminal.mo
 share/locale/pa/LC_MESSAGES/mate-terminal.mo
 share/locale/pl/LC_MESSAGES/mate-terminal.mo
+share/locale/pms/LC_MESSAGES/mate-terminal.mo
 share/locale/ps/LC_MESSAGES/mate-terminal.mo
 share/locale/pt/LC_MESSAGES/mate-terminal.mo
 share/locale/pt_BR/LC_MESSAGES/mate-terminal.mo
