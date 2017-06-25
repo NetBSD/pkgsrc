@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2017/04/20 08:59:24 jperkin Exp $
+# $NetBSD: options.mk,v 1.30 2017/06/25 14:34:25 joerg Exp $
 
 # Global and legacy options
 
@@ -7,10 +7,10 @@ PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	curses wide-curses slang
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 # TODO: add kyoto cabinet and lmdb backend options for header cache
-PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
+PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-compressed-mbox tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	gssapi
 PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
-PKG_SUGGESTED_OPTIONS+= gssapi
+PKG_SUGGESTED_OPTIONS+= gssapi mutt-compressed-mbox
 PKG_OPTIONS_LEGACY_OPTS+=	ncurses:curses ncursesw:wide-curses
 
 .include "../../mk/bsd.options.mk"
@@ -102,6 +102,15 @@ CONFIGURE_ENV+=		BDB_LIB=${BDB_LIBS:S/^-l//:M*:Q}
 .  endif
 .else
 CONFIGURE_ARGS+=	--disable-hcache
+.endif
+
+###
+### Compressed mail boxes
+###
+.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
+CONFIGURE_ARGS+=	--enable-compressed
+.else
+CONFIGURE_ARGS+=	--disable-compressed
 .endif
 
 ###
