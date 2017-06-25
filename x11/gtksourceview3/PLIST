@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/11/25 17:52:04 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.10 2017/06/25 12:05:59 martin Exp $
 include/gtksourceview-3.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
 include/gtksourceview-3.0/gtksourceview/gtksource.h
 include/gtksourceview-3.0/gtksourceview/gtksourceautocleanups.h
@@ -40,10 +40,10 @@ include/gtksourceview-3.0/gtksourceview/gtksourceversion.h
 include/gtksourceview-3.0/gtksourceview/gtksourceview-enumtypes.h
 include/gtksourceview-3.0/gtksourceview/gtksourceview-typebuiltins.h
 include/gtksourceview-3.0/gtksourceview/gtksourceview.h
-lib/girepository-1.0/GtkSource-3.0.typelib
+${PLIST.introspection}lib/girepository-1.0/GtkSource-3.0.typelib
 lib/libgtksourceview-3.0.la
 lib/pkgconfig/gtksourceview-3.0.pc
-share/gir-1.0/GtkSource-3.0.gir
+${PLIST.introspection}share/gir-1.0/GtkSource-3.0.gir
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceBuffer.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceCompletion.html
 share/gtk-doc/html/gtksourceview-3.0/GtkSourceCompletionContext.html
