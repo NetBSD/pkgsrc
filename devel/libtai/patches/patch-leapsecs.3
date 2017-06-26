@@ -1,0 +1,19 @@
+$NetBSD: patch-leapsecs.3,v 1.1 2017/06/26 01:06:08 schmonz Exp $
+
+Respect PKG_SYSCONFDIR.
+
+--- leapsecs.3.orig	1998-10-13 16:52:20.000000000 +0000
++++ leapsecs.3
+@@ -52,10 +52,10 @@ uses a leap-second table read from disk.
+ 
+ .B leapsecs_read
+ reads the leap-second table from
+-.BR /etc/leapsecs.dat .
++.BR @PKG_SYSCONFDIR@/leapsecs.dat .
+ It returns 0 on success, -1 on error.
+ If
+-.B /etc/leapsecs.dat
++.B @PKG_SYSCONFDIR@/leapsecs.dat
+ does not exist,
+ .B leapsecs_read
+ treats it as an empty file.
