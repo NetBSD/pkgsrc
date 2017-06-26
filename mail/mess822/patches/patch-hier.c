@@ -1,4 +1,4 @@
-$NetBSD: patch-hier.c,v 1.1 2017/05/26 14:34:43 schmonz Exp $
+$NetBSD: patch-hier.c,v 1.2 2017/06/26 02:04:35 schmonz Exp $
 
 Install docs following hier(7), don't install catpages, and set
 reasonable permissions.
@@ -35,7 +35,7 @@ reasonable permissions.
  
    c(auto_home,"lib","mess822.a",-1,-1,0644);
    c(auto_home,"include","mess822.h",-1,-1,0644);
-@@ -30,41 +26,23 @@ void hier()
+@@ -30,41 +26,21 @@ void hier()
    c(auto_home,"bin","822received",-1,-1,0755);
    c(auto_home,"bin","822print",-1,-1,0755);
  
@@ -74,6 +74,8 @@ reasonable permissions.
 -  c(auto_home,"man/cat3","mess822_quote.0",-1,-1,0644);
 -  c(auto_home,"man/cat3","mess822_token.0",-1,-1,0644);
 -  c(auto_home,"man/cat3","mess822_when.0",-1,-1,0644);
+-
+-  c("/etc",".","leapsecs.dat",-1,-1,0644);
 +  c(auto_home,"@PKGMANDIR@/man1","iftocc.1",-1,-1,0644);
 +  c(auto_home,"@PKGMANDIR@/man1","new-inject.1",-1,-1,0644);
 +  c(auto_home,"@PKGMANDIR@/man1","822field.1",-1,-1,0644);
@@ -91,7 +93,4 @@ reasonable permissions.
 +  c(auto_home,"@PKGMANDIR@/man3","mess822_quote.3",-1,-1,0644);
 +  c(auto_home,"@PKGMANDIR@/man3","mess822_token.3",-1,-1,0644);
 +  c(auto_home,"@PKGMANDIR@/man3","mess822_when.3",-1,-1,0644);
- 
--  c("/etc",".","leapsecs.dat",-1,-1,0644);
-+  c(auto_home,"share/examples/mess822","leapsecs.dat",-1,-1,0644);
  }
