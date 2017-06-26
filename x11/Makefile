@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.803 2017/06/18 13:52:34 taca Exp $
+# $NetBSD: Makefile,v 1.804 2017/06/26 08:20:25 jperkin Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -532,6 +532,7 @@ SUBDIR+=	videoproto
 SUBDIR+=	viewres
 SUBDIR+=	vte
 SUBDIR+=	vte029
+SUBDIR+=	vte3
 SUBDIR+=	wdm
 SUBDIR+=	wmavgload
 SUBDIR+=	wmfire
