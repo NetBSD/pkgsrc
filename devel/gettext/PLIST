@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.18 2014/08/31 10:24:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2017/06/26 21:22:49 joerg Exp $
+${PLIST.glibc}lib/preloadable_libintl.so
 share/gettext/ABOUT-NLS
 share/gettext/config.rpath
 share/gettext/intl/COPYING.LIB
