@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2017/06/25 19:58:04 youri Exp $
+$NetBSD: distinfo,v 1.19 2017/06/26 11:02:30 markd Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -19,7 +19,7 @@ Size (kde-workspace-4.11.22.tar.xz) = 13553668 bytes
 SHA1 (patch-kcontrol_keyboard_xkb_rules.cpp) = e4569e0671c55e990cbc0913e5abaead046a8e71
 SHA1 (patch-kcontrol_randr_randroutput.cpp) = 6f9e6f18007023941018d2088a585c2ab30a7299
 SHA1 (patch-kdm_config.def) = ac0907cc59c5f0976cdbe152bb7fb0a4592bbe84
-SHA1 (patch-kdm_kcm_main.cpp) = 1e53580285f4201e328f6596544c4a6f807ef751
+SHA1 (patch-kdm_kcm_main.cpp) = bb692c83fa189342105744cc9c3c180b970571b7
 SHA1 (patch-kdm_kfrontend_CMakeLists.txt) = 0b0c541c7305d31e01a45f0a6a7f5ddb2d2e57fe
 SHA1 (patch-kdm_kfrontend_genkdmconf.c) = 28829bb285df6a3d252eb1bf7043cbd44e10500f
 SHA1 (patch-kinfocenter_Modules_nics_nic.cpp) = 0f7e846eac8d694e0ab6018d4f4c571b4e0c84db
@@ -47,4 +47,4 @@ SHA1 (patch-plasma_generic_applets_digital-clock_clock.cpp) = dd052f6c36fbd62dd5
 SHA1 (patch-plasma_generic_dataengines_rss_CMakeLists.txt) = 6a12cb3cb54a8b1899f29e7f50a1171862dce66e
 SHA1 (patch-plasma_generic_dataengines_time_solarsystem.h) = 474bbf3bc9f9bc0c75772f01218c1739d49fd31c
 SHA1 (patch-plasma_generic_dataengines_time_timesource.h) = 85ccf0ed379c94e174880bc239daee60afccc788
-SHA1 (patch-startkde.cmake) = 0068ac6836a668eaee50d3641f64a3ef843f1a34
+SHA1 (patch-startkde.cmake) = 36421affc2af12a50623ecfd4f3b0cb320796634
