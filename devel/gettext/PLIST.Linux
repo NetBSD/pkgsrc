@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2017/06/26 21:07:58 jperkin Exp $
-lib/preloadable_libintl.so
