@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2017/06/25 23:20:45 youri Exp $
+# $NetBSD: Makefile,v 1.2 2017/06/26 14:29:31 youri Exp $
 #
 
 DISTNAME=	vte-0.38.4
@@ -15,7 +15,7 @@ PKGCONFIG_OVERRIDE+=	vte.pc.in
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config bash
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
