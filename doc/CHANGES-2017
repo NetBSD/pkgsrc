@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2634 2017/06/25 23:24:04 youri Exp $
+$NetBSD: CHANGES-2017,v 1.2635 2017/06/26 00:46:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added x11/vte3 version 0.38.4 [youri 2017-06-25]
 	Updated x11/mate-terminal to 1.18.1 [youri 2017-06-25]
 	Updated x11/xfce4-terminal to 0.8.5.1 [youri 2017-06-25]
+	Updated devel/libtai to 0.60nb5 [schmonz 2017-06-26]
