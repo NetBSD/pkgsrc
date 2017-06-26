@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2014/09/01 17:59:12 tron Exp $
+# $NetBSD: Makefile,v 1.84 2017/06/26 21:22:49 joerg Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -25,6 +25,13 @@ TEST_TARGET=		check
 
 BROKEN_GETTEXT_DETECTION=	yes
 USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	glibc
+.if ${OPSYS} == "Linux"
+PLIST.glibc=	yes
+.endif
 
 do-install:
 	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
