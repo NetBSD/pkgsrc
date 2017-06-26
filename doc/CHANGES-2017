@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2636 2017/06/26 02:04:41 schmonz Exp $
+$NetBSD: CHANGES-2017,v 1.2637 2017/06/26 04:52:40 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3643,3 +3643,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated x11/xfce4-terminal to 0.8.5.1 [youri 2017-06-25]
 	Updated devel/libtai to 0.60nb5 [schmonz 2017-06-26]
 	Updated mail/mess822 to 0.58nb7 [schmonz 2017-06-26]
+	Updated devel/libowfat to 0.31 [schmonz 2017-06-26]
