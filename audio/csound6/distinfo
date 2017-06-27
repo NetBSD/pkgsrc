@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/06/17 19:34:21 joerg Exp $
+$NetBSD: distinfo,v 1.7 2017/06/27 20:09:24 joerg Exp $
 
 SHA1 (Csound6.03.2.tar.gz) = 2ff8081c887ef98735197c1ff70bb4955c3eb3ff
 RMD160 (Csound6.03.2.tar.gz) = 00d6407feab8f992b8d309ec6701858087569752
@@ -11,7 +11,6 @@ SHA1 (patch-InOut_libsnd.c) = b460ef3ef7117fd9c194eff3f62a64435243ccc4
 SHA1 (patch-InOut_widgets.cpp) = f73a58a636254d27a3aa6b94ace4f72b978ca9ec
 SHA1 (patch-InOut_winEPS.c) = 5b3182dc79d819145df73426fead54fc28414ff2
 SHA1 (patch-InOut_winFLTK.c) = 0c9b566ae5acfae5dcf7a9d0795976f103d069a5
-SHA1 (patch-Opcodes_chua_ChuaOscillator.cpp) = 2bbad031c9ad3df82f0783a9bb32b2d6267991f0
 SHA1 (patch-Opcodes_cpumeter.c) = 4f5fdcdd1c0eb600be49e977df5214f52de1437b
 SHA1 (patch-Opcodes_wavegde.h) = e1a6d742b28dd9b6b129a993102baf7218efa57c
 SHA1 (patch-Top_csmodule.c) = 0ce136346dfe19d56dc4e882976aa2e66cd17e92
