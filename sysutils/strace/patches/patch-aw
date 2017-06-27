@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.1 2007/04/27 19:45:02 christos Exp $
+$NetBSD: patch-aw,v 1.2 2017/06/27 15:26:05 christos Exp $
 
---- /dev/null	2007-04-26 23:20:40.000000000 -0400
-+++ netbsd/syscalls.print	2007-04-27 14:39:29.000000000 -0400
-@@ -0,0 +1,197 @@
+--- /dev/null 2017-06-27 11:06:52.638920130 -0400
++++ netbsd/syscalls.print	2017-06-27 11:16:21.707414336 -0400
+@@ -0,0 +1,196 @@
 +#
 +# Copyright (c) 2000, Gaël Roualland <gael.roualland@iname.com>
 +# All rights reserved.
@@ -29,7 +29,7 @@ $NetBSD: patch-aw,v 1.1 2007/04/27 19:45:02 christos Exp $
 +# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 +# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 +#
-+#      $Id: patch-aw,v 1.1 2007/04/27 19:45:02 christos Exp $
++#      $Id: patch-aw,v 1.2 2017/06/27 15:26:05 christos Exp $
 +#
 +# Printable syscalls
 +# syntax: syscall [printfunc]
@@ -188,8 +188,7 @@ $NetBSD: patch-aw,v 1.1 2007/04/27 19:45:02 christos Exp $
 +utime
 +utimes
 +vfork
-+wait
-+wait4
++__wait450 sys_wait4
 +waitpid
 +write
 +writev

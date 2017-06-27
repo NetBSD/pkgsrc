@@ -1,8 +1,19 @@
-$NetBSD: patch-at,v 1.1 2007/04/27 19:45:02 christos Exp $
+$NetBSD: patch-at,v 1.2 2017/06/27 15:26:05 christos Exp $
 
---- stream.c.orig	2005-06-01 15:22:07.000000000 -0400
-+++ stream.c	2007-04-27 11:31:51.000000000 -0400
-@@ -50,7 +50,7 @@
+--- stream.c.orig	2006-12-13 14:57:23.000000000 -0500
++++ stream.c	2017-06-27 11:19:20.333389627 -0400
+@@ -41,8 +41,10 @@
+ #include <stropts.h>
+ #endif
+ #ifdef HAVE_SYS_CONF_H
++#if !defined(NETBSD)
+ #include <sys/conf.h>
+ #endif
++#endif
+ #ifdef HAVE_SYS_STREAM_H
+ #include <sys/stream.h>
+ #endif
+@@ -50,7 +52,7 @@
  #include <sys/tihdr.h>
  #endif
  
@@ -11,7 +22,7 @@ $NetBSD: patch-at,v 1.1 2007/04/27 19:45:02 christos Exp $
  
  #ifndef HAVE_STROPTS_H
  #define RS_HIPRI 1
-@@ -370,7 +370,7 @@
+@@ -397,7 +399,7 @@
  }
  #endif
  
@@ -20,7 +31,7 @@ $NetBSD: patch-at,v 1.1 2007/04/27 19:45:02 christos Exp $
  
  static const struct xlat stream_flush_options[] = {
  	{ FLUSHR,	"FLUSHR"	},
-@@ -1298,6 +1298,6 @@
+@@ -1325,6 +1327,6 @@
  	}
  }
  
