@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1 2016/07/01 20:32:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2017/06/27 20:11:00 joerg Exp $
 
 SHA1 (libquic-0.0.3.tar.gz) = ff2e58b2b32a64f9280895c8f34a8c601562ade2
 RMD160 (libquic-0.0.3.tar.gz) = a5225e609fbdbc2e56942b3dcf063359fe5b2e10
 SHA512 (libquic-0.0.3.tar.gz) = a04f5285b2448cd763daa9833574e5977e903975dd20980c80020ee4177df6ff6294ee2c1821d97a8ac34e44aae215178f57b52a12826135f5ee4efc8e74643b
 Size (libquic-0.0.3.tar.gz) = 5848330 bytes
 SHA1 (patch-Makefile) = 5cdfd0daf53e61b5d14f6bc1e60c8f03a72da99d
+SHA1 (patch-boringssl_crypto_aes_aes__test.cc) = 8e4dd8bc2f00e790675c1c6b12bffaac00d0d981
 SHA1 (patch-crypto__bio__bio_test.cc) = 36d61ff4b424ca29b320b3ac132dc1f0bf468f85
 SHA1 (patch-crypto__bio__internal.h) = 39e070e153db2c3a8ba814e1902f8abc96f9a082
 SHA1 (patch-crypto__bio__socket_helper.c) = 91d0321882a2c843f31f202cc66bee10c2e66530
