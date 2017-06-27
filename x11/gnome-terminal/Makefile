@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2017/02/12 06:26:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.75 2017/06/27 20:11:28 joerg Exp $
 
 DISTNAME=		gnome-terminal-2.32.1
 PKGREVISION=		30
@@ -43,6 +43,6 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.13.6
 .include "../../x11/libXft/buildlink3.mk"
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../x11/startup-notification/buildlink3.mk"
-BUILDLINK_API_DEPENDS.vte+=	vte>=0.24.0
+BUILDLINK_API_DEPENDS.vte+=    vte>=0.24.0<0.32
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
