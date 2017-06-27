@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2640 2017/06/27 12:22:53 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2641 2017/06/27 13:01:56 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3645,3 +3645,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/libowfat to 0.31 [schmonz 2017-06-26]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2017Q2 branch [jperkin 2017-06-26]
 	Updated net/mtr to 0.92 [wiz 2017-06-27]
+	Updated net/mtr to 0.92nb1 [maya 2017-06-27]
