@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2641 2017/06/27 13:01:56 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2642 2017/06/27 15:25:28 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3646,3 +3646,4 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2017Q2 branch [jperkin 2017-06-26]
 	Updated net/mtr to 0.92 [wiz 2017-06-27]
 	Updated net/mtr to 0.92nb1 [maya 2017-06-27]
+	Updated lang/ruby24-base to 2.4.1nb1 [jperkin 2017-06-27]
