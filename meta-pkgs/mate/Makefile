@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2017/06/25 23:22:33 youri Exp $
-
-.include "../../meta-pkgs/mate/Makefile.common"
+# $NetBSD: Makefile,v 1.5 2017/06/27 16:16:04 jperkin Exp $
 
 MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://www.mate-desktop.org/
@@ -12,6 +10,8 @@ CATEGORIES=	meta-pkgs
 COMMENT=	Meta-package for MATE desktop environment
 
 META_PACKAGE=	yes
+
+.include "../../meta-pkgs/mate/Makefile.common"
 
 DEPENDS+=	atril>=${VERSION}:../../print/atril
 DEPENDS+=	caja>=${VERSION}:../../sysutils/caja
