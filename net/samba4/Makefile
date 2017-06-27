@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2017/06/01 13:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2017/06/27 13:37:16 fhajny Exp $
 
 DISTNAME=	samba-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.samba.org/pub/samba/stable/
 
@@ -146,15 +147,10 @@ RCD_SCRIPTS+=	samba nmbd smbd ${WINBINDD_RCD_SCRIPT}
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh scripts/findsmb.in
-SUBST_FILES.paths+=	source3/script/findsmb.in
+SUBST_FILES.paths+=	source3/script/findsmb.in source4/heimdal_build/roken.h
 SUBST_STAGE.paths=	post-patch
-SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g'
-SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
-SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g'
-SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
-SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
 SUBST_SED.paths+=	-e 's,@PERL@,${PERL5},g'
+SUBST_VARS.paths=	AWK CAT MKTEMP RM PWD_MKDB SH PERL PKG_SYSCONFBASE
 
 SUBST_CLASSES+=		logpath
 SUBST_MESSAGE.logpath=	Fixing log path.
