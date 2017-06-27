@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 10:02:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2017/06/27 21:45:47 minskim Exp $
 share/texmf-dist/doc/latex/babel/CONTRIB
 share/texmf-dist/doc/latex/babel/FIXES39
 share/texmf-dist/doc/latex/babel/README
 share/texmf-dist/doc/latex/babel/babel.pdf
+share/texmf-dist/doc/latex/babel/locale.zip
