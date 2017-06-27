@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/06/23 14:05:19 roy Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/27 10:35:46 roy Exp $
 
 DISTNAME=		arcanist-20170609
 CATEGORIES=		devel
@@ -11,6 +11,8 @@ MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		https://github.com/phacility/arcanist/
 COMMENT=		Command line interface for Phabricator
 LICENSE=		apache-2.0
+
+PHP_VERSIONS_INCOMPATIBLE=	70
 
 EXTRACT_USING=		bsdtar
 USE_TOOLS+=		bsdtar pax

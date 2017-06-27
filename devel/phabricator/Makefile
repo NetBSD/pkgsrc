@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2017/06/23 14:05:19 roy Exp $
+# $NetBSD: Makefile,v 1.10 2017/06/27 10:35:46 roy Exp $
 
 DISTNAME=		phabricator-20170609
 CATEGORIES=		devel
@@ -11,6 +11,8 @@ MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://phabricator.com/
 COMMENT=		Open software engineering platform
 LICENSE=		apache-2.0
+
+PHP_VERSIONS_INCOMPATIBLE=	70
 
 USE_TOOLS+=		pax bash:run
 EXTRACT_USING=		bsdtar
@@ -77,8 +79,6 @@ CHECK_INTERPRETER_SKIP+=${PHABRICATOR_DIR}/externals/wordlist/password.lst
 
 CHMOD_FILES=		conf LICENSE NOTICE README.md externals resources src \
 			support webroot scripts/__init_script__.php scripts/fpm/warmup.php
-
-PHP_VERSIONS_ACCEPTED=	71
 
 post-extract:
 			cd ${WRKSRC} && \
