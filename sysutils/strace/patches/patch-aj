@@ -1,10 +1,10 @@
-$NetBSD: patch-aj,v 1.5 2011/08/30 10:43:11 christos Exp $
+$NetBSD: patch-aj,v 1.6 2017/06/27 15:26:05 christos Exp $
 
---- /dev/null	2011-08-30 13:38:39.000000000 +0300
-+++ netbsd/ioctlent.sh	2011-08-30 12:45:46.000000000 +0300
-@@ -0,0 +1,126 @@
+--- /dev/null	2017-06-27 11:06:52.222304505 -0400
++++ netbsd/ioctlent.sh	2017-06-27 11:08:32.016631491 -0400
+@@ -0,0 +1,125 @@
 +#!/bin/sh
-+#	$NetBSD: patch-aj,v 1.5 2011/08/30 10:43:11 christos Exp $
++#	$NetBSD: patch-aj,v 1.6 2017/06/27 15:26:05 christos Exp $
 +#
 +# Copyright (c) 1994
 +#	The Regents of the University of California.  All rights reserved.
@@ -66,7 +66,6 @@ $NetBSD: patch-aj,v 1.5 2011/08/30 10:43:11 christos Exp $
 +echo "#include <netinet/ip_mroute.h>"
 +echo "#include <netinet/ip_compat.h>"
 +echo "#include <net80211/ieee80211.h>"
-+echo "#include <netiso/iso.h>"
 +
 +echo "#define debug xxxdebug"	# XXX ip_fil.h
 +) > ioctlent.c
