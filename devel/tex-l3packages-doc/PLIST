@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2016/06/16 03:54:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2017/06/27 21:35:27 minskim Exp $
 share/texmf-dist/doc/latex/l3packages/README.md
 share/texmf-dist/doc/latex/l3packages/l3keys2e/l3keys2e-demo.tex
 share/texmf-dist/doc/latex/l3packages/l3keys2e/l3keys2e.pdf
+share/texmf-dist/doc/latex/l3packages/xfp/xfp.pdf
 share/texmf-dist/doc/latex/l3packages/xfrac/xfrac.pdf
 share/texmf-dist/doc/latex/l3packages/xparse/xparse.pdf
 share/texmf-dist/doc/latex/l3packages/xtemplate/xtemplate.pdf
