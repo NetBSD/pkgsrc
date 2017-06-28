@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2017/06/05 14:24:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2017/06/28 08:27:43 jperkin Exp $
 
 DISTNAME=	Template-Declare-0.47
 PKGNAME=	p5-${DISTNAME}
@@ -22,6 +22,8 @@ DEPENDS+=	p5-String-BufferStack>=1.1:../../textproc/p5-String-BufferStack
 
 BUILD_DEPENDS+=	p5-HTML-Lint-[0-9]*:../../www/p5-HTML-Lint
 BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:25:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/28 08:27:44 jperkin Exp $
 
 DISTNAME=	Kwiki-Simple-Server-HTTP-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	p5-HTTP-Server-Simple-Kwiki-[0-9]*:../../www/p5-HTTP-Server-Simple-Kwi
 DEPENDS+=	p5-Kwiki>=0.37:../../www/p5-Kwiki
 
 PERL5_PACKLIST=		auto/Kwiki/Simple/Server/HTTP/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

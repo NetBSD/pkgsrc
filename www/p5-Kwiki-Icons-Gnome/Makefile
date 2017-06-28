@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/06/05 14:25:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2017/06/28 08:27:42 jperkin Exp $
 
 DISTNAME=	Kwiki-Icons-Gnome-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ COMMENT=	Kwiki GNOME icons plugin
 DEPENDS+=	p5-Kwiki>=0.34:../../www/p5-Kwiki
 
 PERL5_PACKLIST=		auto/Kwiki/Icons/Gnome/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
