@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2017/06/05 14:25:15 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2017/06/28 08:27:41 jperkin Exp $
 
 DISTNAME=	CatalystX-CRUD-Controller-REST-0.005
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	p5-JSON>=2:../../converters/p5-JSON
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/Controller/REST/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2017/06/05 14:24:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2017/06/28 08:27:43 jperkin Exp $
 #
 
 DISTNAME=	RT-Client-REST-0.50
@@ -25,6 +25,8 @@ DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
 BUILD_DEPENDS+=	p5-DateTime-Format-DateParse-[0-9]*:../../time/p5-DateTime-Format-DateParse
 BUILD_DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
 BUILD_DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

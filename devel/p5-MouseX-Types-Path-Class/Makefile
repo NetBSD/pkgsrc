@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/05 14:23:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/28 08:27:44 jperkin Exp $
 #
 
 DISTNAME=		MouseX-Types-Path-Class-0.07
@@ -22,6 +22,7 @@ DEPENDS+=		p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 
 BUILD_DEPENDS+=		p5-Test-UseAllModules-[0-9]*:../../devel/p5-Test-UseAllModules
 
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

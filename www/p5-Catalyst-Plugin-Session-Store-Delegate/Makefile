@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/06/05 14:25:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2017/06/28 08:27:41 jperkin Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-Delegate-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -22,6 +22,8 @@ BUILD_DEPENDS+=	p5-Test-Simple>=1.001010:../../devel/p5-Test-Simple
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Plugin/Session/Store/Delegate/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

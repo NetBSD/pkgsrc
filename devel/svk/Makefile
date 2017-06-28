@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2016/07/09 06:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2017/06/28 08:27:41 jperkin Exp $
 
 DISTNAME=	SVK-v2.2.3
 PKGNAME=	svk-2.2.3
@@ -63,6 +63,8 @@ DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
 
 PERL5_PACKLIST=		auto/SVK/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

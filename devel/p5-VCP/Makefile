@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/06/05 14:23:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2017/06/28 08:27:41 jperkin Exp $
 
 DISTNAME=	VCP-autrijus-snapshot-0.9-${SNAPSHOT_VERS}
 SNAPSHOT_VERS=	20050110
@@ -24,6 +24,8 @@ DEPENDS+=	p5-XML-AutoWriter>=0.38:../../textproc/p5-XML-AutoWriter
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 PERL5_PACKLIST=		auto/VCP/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
