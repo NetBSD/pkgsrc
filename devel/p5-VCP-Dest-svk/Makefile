@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/06/05 14:23:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/28 13:24:29 jperkin Exp $
 
 DISTNAME=	VCP-Dest-svk-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	p5-YAML>=0.62:../../textproc/p5-YAML
 DEPENDS+=	svk>=1.04:../../devel/svk
 
 PERL5_PACKLIST=		auto/VCP/Dest/svk/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
