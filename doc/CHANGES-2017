@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2645 2017/06/28 15:36:26 he Exp $
+$NetBSD: CHANGES-2017,v 1.2646 2017/06/28 18:19:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3650,3 +3650,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/tex-l3packages-doc to 2017nb1 [minskim 2017-06-27]
 	Updated print/tex-babel-doc to 3.10nb1 [minskim 2017-06-27]
 	Updated multimedia/libvpx to 1.6.1nb1 [he 2017-06-28]
+	Updated games/openttd to 1.7.1 [adam 2017-06-28]
