@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/05/23 10:49:21 youri Exp $
+# $NetBSD: Makefile,v 1.3 2017/06/28 15:22:59 jperkin Exp $
 
 DISTNAME=	lxde-common-0.99.1
 CATEGORIES=	x11
@@ -10,7 +10,7 @@ HOMEPAGE=	http://lxde.sourceforge.net/
 COMMENT=	Default configuration settings and scripts for LXDE
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	intltool pkg-config gmake
+USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 DEPENDS+=	dbus>=1:../../sysutils/dbus
 DEPENDS+=	gtk2-engines>=0:../../x11/gtk2-engines
