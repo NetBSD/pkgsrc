@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/10/02 14:03:09 mef Exp $
+# $NetBSD: Makefile,v 1.17 2017/06/28 09:36:20 wiedi Exp $
 #
 
 DISTNAME=		istgt-20141125
@@ -30,6 +30,9 @@ CONF_FILES=	${EG_DIR}/auth.conf ${PKG_SYSCONFDIR}/auth.conf \
 
 RCD_SCRIPTS=	istgt
 INSTALLATION_DIRS+=	bin ${EG_DIR} ${PKGMANDIR}/man1
+
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
+LDFLAGS.SunOS+=		-lsocket -lnsl -fstack-protector
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/istgt ${DESTDIR}${PREFIX}/bin/istgt
