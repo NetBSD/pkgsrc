@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/23 17:30:27 youri Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/28 15:41:48 jperkin Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -14,4 +14,5 @@ DEPENDS+=	gtk2-engines-murrine>=0.98.0:../../x11/gtk2-engines-murrine
 CONFIGURE_ARGS+=	--enable-all-themes
 
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
