@@ -1,4 +1,7 @@
-$NetBSD: patch-configure,v 1.4 2016/08/16 23:53:25 ryoon Exp $
+$NetBSD: patch-configure,v 1.5 2017/06/28 15:35:48 he Exp $
+
+Recognize sparc and powerpc linux (or BSD...) platforms.
+Don't do doxygen.
 
 --- configure.orig	2016-07-21 01:15:41.000000000 +0000
 +++ configure
@@ -8,15 +11,16 @@ $NetBSD: patch-configure,v 1.4 2016/08/16 23:53:25 ryoon Exp $
  ##
  ##  configure
  ##
-@@ -114,6 +114,7 @@ all_platforms="${all_platforms} armv7s-d
+@@ -113,6 +113,8 @@ all_platforms="${all_platforms} armv7s-d
  all_platforms="${all_platforms} armv8-linux-gcc"
  all_platforms="${all_platforms} mips32-linux-gcc"
  all_platforms="${all_platforms} mips64-linux-gcc"
++all_platforms="${all_platforms} powerpc-linux-gcc"
 +all_platforms="${all_platforms} sparc-linux-gcc"
  all_platforms="${all_platforms} sparc-solaris-gcc"
  all_platforms="${all_platforms} x86-android-gcc"
  all_platforms="${all_platforms} x86-darwin8-gcc"
-@@ -181,19 +182,6 @@ if [ "`cd \"${source_path}\" && pwd`" !=
+@@ -175,19 +177,6 @@ if [ "`cd \"${source_path}\" && pwd`" !=
    fi
  fi
  
