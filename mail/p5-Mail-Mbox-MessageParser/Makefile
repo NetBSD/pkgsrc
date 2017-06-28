@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2017/06/05 14:24:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.26 2017/06/28 08:27:41 jperkin Exp $
 
 DISTNAME=	Mail-Mbox-MessageParser-1.5105
 PKGNAME=	p5-${DISTNAME}
@@ -34,6 +34,8 @@ SETTINGS+=	GZIP=${GZIP_CMD}
 
 MAKE_PARAMS+=	--skipdeps ${SETTINGS}
 MAKE_PARAMS+=	</dev/null
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
