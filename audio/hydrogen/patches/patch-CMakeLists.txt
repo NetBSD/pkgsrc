@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.4 2017/06/28 09:44:44 wiedi Exp $
+
+support PKGMANDIR
+--- CMakeLists.txt.orig	2016-11-05 08:22:50.000000000 +0000
++++ CMakeLists.txt
+@@ -358,7 +358,7 @@ ENDIF()
+ IF(NOT MINGW AND NOT APPLE)
+ 	INSTALL(FILES ${CMAKE_SOURCE_DIR}/linux/hydrogen.appdata.xml DESTINATION "${CMAKE_INSTALL_PREFIX}/share/appdata")
+ 	INSTALL(FILES ${CMAKE_SOURCE_DIR}/linux/hydrogen.desktop DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications")
+-	INSTALL(FILES ${CMAKE_SOURCE_DIR}/linux/hydrogen.1 DESTINATION "${CMAKE_INSTALL_PREFIX}/man/man1")
++	INSTALL(FILES ${CMAKE_SOURCE_DIR}/linux/hydrogen.1 DESTINATION ${CMAKE_INSTALL_PREFIX}/${PKGMANDIR}/man1)
+ ENDIF()
+ 
+ #
