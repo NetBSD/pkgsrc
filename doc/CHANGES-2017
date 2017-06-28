@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2644 2017/06/27 21:46:49 minskim Exp $
+$NetBSD: CHANGES-2017,v 1.2645 2017/06/28 15:36:26 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3649,3 +3649,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/ruby24-base to 2.4.1nb1 [jperkin 2017-06-27]
 	Updated devel/tex-l3packages-doc to 2017nb1 [minskim 2017-06-27]
 	Updated print/tex-babel-doc to 3.10nb1 [minskim 2017-06-27]
+	Updated multimedia/libvpx to 1.6.1nb1 [he 2017-06-28]
