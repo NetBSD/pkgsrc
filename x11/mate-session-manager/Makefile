@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2017/06/23 17:28:29 youri Exp $
+# $NetBSD: Makefile,v 1.6 2017/06/28 16:05:43 jperkin Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -21,4 +21,6 @@ DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/xtrans/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
