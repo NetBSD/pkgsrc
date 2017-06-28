@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/11/30 12:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2017/06/28 09:44:43 wiedi Exp $
 
 DISTNAME=	Hydrogen-0.9.7
 PKGNAME=	${DISTNAME:tl}
@@ -30,6 +30,7 @@ CMAKE_ARGS+=	-DWANT_PULSEAUDIO=OFF
 # NetBSD libarchive is old?
 CMAKE_ARGS+=	-DWANT_LIBARCHIVE=OFF
 CMAKE_ARGS+=	-DWANT_LIBTAR=ON
+CMAKE_ARGS+=	-DPKGMANDIR=${PKGMANDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
