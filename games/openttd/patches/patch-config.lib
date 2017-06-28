@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.12 2015/07/03 12:37:44 wiz Exp $
+$NetBSD: patch-config.lib,v 1.1 2017/06/28 18:18:36 adam Exp $
 
 Compile 'strip' test with CFLAGS, so -isysroot can be passed on OSX.
 Correct library detection on NetBSD.
+On Darwin, be able to locate iconv.h inside the SDK.
 
---- config.lib.orig	2015-06-01 18:43:32.000000000 +0000
+--- config.lib.orig	2017-06-13 18:35:00.000000000 +0000
 +++ config.lib
-@@ -2070,7 +2070,7 @@ check_strip() {
+@@ -2095,7 +2095,7 @@ check_strip() {
  	elif [ "$os" = "OSX" ]; then
  		# Most targets have -V in strip, to see if they exists... OSX doesn't.. so execute something
  		echo "int main(int argc, char *argv[]) { }" > strip.test.c
@@ -14,7 +15,7 @@ Correct library detection on NetBSD.
  		check_compiler "host strip" "strip" "$host" "$strip" "$STRIP" "strip" "strip" "3" "strip.test"
  		rm -f strip.test.c strip.test
  	else
-@@ -2628,7 +2628,7 @@ detect_library() {
+@@ -2601,7 +2601,7 @@ detect_library() {
  		if [ -z "$res" ]; then
  			log 2 "  trying /opt/local/include/$4$5... no"
  		fi
@@ -23,3 +24,13 @@ Correct library detection on NetBSD.
  			eval "$2=`ls -1 /usr/pkg/include/$4*.h 2>/dev/null | egrep \"\/$5\$\"`"
  			eval "res=\$$2"
  			if [ -z "$res" ]; then
+@@ -2873,6 +2873,9 @@ detect_iconv() {
+ 		if [ -z "$iconv" ]; then
+ 			iconv=`ls -1 /usr/local/include 2>/dev/null | grep "iconv.h"`
+ 		fi
++		if [ -z "$iconv" ] && [ "$os" = "OSX" ]; then
++			iconv=`xcrun --show-sdk-path`/usr/include/iconv.h
++		fi
+ 	else
+ 		# Make sure it exists
+ 		iconv=`ls $with_iconv/include/iconv.h 2>/dev/null`
