@@ -1,4 +1,4 @@
-$NetBSD: patch-boost_numeric_ublas_storage.hpp,v 1.1 2017/06/27 20:08:59 joerg Exp $
+$NetBSD: patch-boost_numeric_ublas_storage.hpp,v 1.2 2017/06/28 08:27:00 joerg Exp $
 
 --- boost/numeric/ublas/storage.hpp.orig	2017-06-27 09:07:20.588660202 +0000
 +++ boost/numeric/ublas/storage.hpp
@@ -8,6 +8,6 @@ $NetBSD: patch-boost_numeric_ublas_storage.hpp,v 1.1 2017/06/27 20:08:59 joerg E
  
 +#include <boost/serialization/array_wrapper.hpp>
 +
- namespace boost { namespace numeric { namespace ublas {
  
+ namespace boost { namespace numeric { namespace ublas {
  
