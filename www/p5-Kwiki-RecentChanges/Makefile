@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2017/06/05 14:25:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2017/06/28 08:27:42 jperkin Exp $
 
 DISTNAME=	Kwiki-RecentChanges-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ COMMENT=	Kwiki plugin to display recent changes
 DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki
 
 PERL5_PACKLIST=	auto/Kwiki/RecentChanges/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

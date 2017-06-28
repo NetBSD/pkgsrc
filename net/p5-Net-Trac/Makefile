@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:24:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/28 08:27:43 jperkin Exp $
 #
 
 DISTNAME=	Net-Trac-0.16
@@ -23,6 +23,8 @@ DEPENDS+=	p5-Params-Validate-[0-9]*:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Text-CSV-[0-9]*:../../textproc/p5-Text-CSV
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-WWW-Mechanize>=1.52:../../www/p5-WWW-Mechanize
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
