@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2017/01/19 18:52:20 agc Exp $
+# $NetBSD: Makefile,v 1.16 2017/06/28 08:27:44 jperkin Exp $
 #
 VERS=			1.1.2.1
 PKGREVISION=		9
@@ -54,6 +54,8 @@ SUBST_SED.path+=	-e "s|/usr/local/sbin|${PREFIX}/sbin|g"
 SUBST_MESSAGE.path=	Fixing hardcoded path.
 
 PERL5_PACKLIST=		auto/Ocsinventory/Agent/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/lib/Ocsinventory/Agent/Backend/OS/BSD/Pcictl
