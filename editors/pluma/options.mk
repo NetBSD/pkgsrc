@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2017/01/01 14:43:38 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2017/06/28 15:56:22 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pluma
-PKG_SUPPORTED_OPTIONS=	enchant python
-PKG_SUGGESTED_OPTIONS=	enchant python
+PKG_SUPPORTED_OPTIONS=	enchant
+PKG_SUGGESTED_OPTIONS=	enchant
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,6 +17,9 @@ PLIST.enchant=	yes
 CONFIGURE_ARGS+=	--disable-spell
 .endif
 
+# The python option is logically impossible right now.  This option sets python
+# 3.x as being incompatible, yet pluma depends on libpeas which itself sets 2.x
+# as being incompatible, leaving us with no remaining choices.
 .if !empty(PKG_OPTIONS:Mpython)
 CONFIGURE_ARGS+=	--enable-python
 USE_TOOLS+=	bash:run
