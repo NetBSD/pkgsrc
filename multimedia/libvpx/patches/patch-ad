@@ -1,9 +1,11 @@
-$NetBSD: patch-ad,v 1.21 2017/01/16 12:12:59 wiz Exp $
+$NetBSD: patch-ad,v 1.22 2017/06/28 15:35:48 he Exp $
 
 *BSD and qnx are identified as linux.
 Add another SDK path on Mac OS X.
 All sparc cpus can not do unaligned access.
 Detect NetBSD ARMv7 hardfloat toolchain.
+Recognize powerpc as a target ISA, so we don't end up with generic-gnu
+and possibly no libm reference...
 
 --- build/make/configure.sh.orig	2017-01-12 20:27:27.000000000 +0000
 +++ build/make/configure.sh
@@ -22,7 +24,17 @@ Detect NetBSD ARMv7 hardfloat toolchain.
          tgt_isa=armv7
          float_abi=hard
          ;;
-@@ -732,7 +732,7 @@ process_common_toolchain() {
+@@ -697,6 +697,9 @@ process_common_toolchain() {
+       *sparc*)
+         tgt_isa=sparc
+         ;;
++      *powerpc*)
++	tgt_isa=powerpc
++	;;
+     esac
+ 
+     # detect tgt_os
+@@ -732,7 +735,7 @@ process_common_toolchain() {
          [ -z "$tgt_isa" ] && tgt_isa=x86
          tgt_os=win32
          ;;
@@ -31,7 +43,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
          tgt_os=linux
          ;;
        *solaris2.10)
-@@ -775,6 +775,9 @@ process_common_toolchain() {
+@@ -775,6 +778,9 @@ process_common_toolchain() {
      mips*)
        enable_feature mips
        ;;
@@ -41,7 +53,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
    esac
  
    # PIC is probably what we want when building shared libs
-@@ -1382,7 +1385,7 @@ EOF
+@@ -1382,7 +1388,7 @@ EOF
    check_cc <<EOF
  unsigned int e = 'O'<<24 | '2'<<16 | 'B'<<8 | 'E';
  EOF
@@ -50,7 +62,7 @@ Detect NetBSD ARMv7 hardfloat toolchain.
          grep '4f *32 *42 *45' >/dev/null 2>&1 && enable_feature big_endian
  
      # Try to find which inline keywords are supported
-@@ -1399,11 +1402,33 @@ EOF
+@@ -1399,11 +1405,33 @@ EOF
          # bionic includes basic pthread functionality, obviating -lpthread.
          ;;
        *)
