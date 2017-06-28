@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/07/09 06:38:29 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2017/06/28 13:24:29 jperkin Exp $
 
 DISTNAME=	grepmail-5.3033
 PKGREVISION=	9
@@ -16,6 +16,8 @@ DEPENDS+=	p5-Mail-Mbox-MessageParser>=1.4001:../../mail/p5-Mail-Mbox-MessagePars
 
 PERL5_PACKLIST=	auto/grepmail/.packlist
 MAKE_PARAMS+=	< /dev/null
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
