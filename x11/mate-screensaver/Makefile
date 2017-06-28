@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/23 17:27:04 youri Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/28 16:12:09 jperkin Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
@@ -70,6 +70,7 @@ post-install:
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../x11/mate-menus/buildlink3.mk"
 .include "../../x11/libmatekbd/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
