@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2017/06/05 14:24:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2017/06/28 08:27:44 jperkin Exp $
 #
 
 DISTNAME=	Net-Google-Code-0.19
@@ -32,6 +32,8 @@ DEPENDS+=	p5-XML-FeedPP-[0-9]*:../../textproc/p5-XML-FeedPP
 
 # for make test
 BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
