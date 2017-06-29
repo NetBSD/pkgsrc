@@ -4574,11 +4574,10 @@ BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
 	require a Kerberos 5 implementation.</p></li>
 <li class="listitem"><p><code class="filename">motif.buildlink3.mk</code> checks for a
 	system-provided Motif installation or adds a dependency on
-	<a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/lesstif/README.html" target="_top"><code class="filename">x11/lesstif</code></a>, <a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/motif/README.html" target="_top"><code class="filename">x11/motif</code></a> or <a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/openmotif/README.html" target="_top"><code class="filename">x11/openmotif</code></a>.  The user can set
+	<a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/lesstif/README.html" target="_top"><code class="filename">x11/lesstif</code></a> or <a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/x11/motif/README.html" target="_top"><code class="filename">x11/motif</code></a>. The user can set
 	<code class="varname">MOTIF_TYPE</code> to <span class="quote">&#8220;<span class="quote">dt</span>&#8221;</span>,
-	<span class="quote">&#8220;<span class="quote">lesstif</span>&#8221;</span>, <span class="quote">&#8220;<span class="quote">motif</span>&#8221;</span> or
-	<span class="quote">&#8220;<span class="quote">openmotif</span>&#8221;</span> to choose
-	which Motif version will be used.</p></li>
+	<span class="quote">&#8220;<span class="quote">lesstif</span>&#8221;</span> or <span class="quote">&#8220;<span class="quote">motif</span>&#8221;</span>
+	to choose which Motif version will be used.</p></li>
 <li class="listitem"><p><code class="filename">readline.buildlink3.mk</code> checks for a
 	system-provided GNU readline or editline (libedit) installation,
 	or adds a dependency on <a href="http://cdn.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/readline/README.html" target="_top"><code class="filename">devel/readline</code></a>,
@@ -8809,7 +8808,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm81501488"></a><dl>
+<a name="idm80469936"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -8854,7 +8853,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm81501104"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm80469552"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -8870,7 +8869,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm81497008"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm80465456"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -8888,7 +8887,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm81492656"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm80461104"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -8906,7 +8905,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm81488432"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm80456880"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -8919,7 +8918,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm81486256"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm80454704"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -8935,7 +8934,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm81483056"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm80451632"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -8959,7 +8958,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm81476272"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm80444720"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -8984,7 +8983,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm81472432"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm80440880"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9032,7 +9031,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm81465904"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm80434352"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
