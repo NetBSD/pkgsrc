@@ -3851,9 +3851,8 @@ issues:
     implementation.
 
   * motif.buildlink3.mk checks for a system-provided Motif installation or adds
-    a dependency on x11/lesstif, x11/motif or x11/openmotif. The user can set
-    MOTIF_TYPE to "dt", "lesstif", "motif" or "openmotif" to choose which Motif
-    version will be used.
+    a dependency on x11/lesstif or x11/motif. The user can set MOTIF_TYPE to "
+    dt", "lesstif" or "motif" to choose which Motif version will be used.
 
   * readline.buildlink3.mk checks for a system-provided GNU readline or
     editline (libedit) installation, or adds a dependency on devel/readline,
