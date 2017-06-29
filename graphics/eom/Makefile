@@ -1,5 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2017/06/23 17:10:44 youri Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/29 11:10:18 jperkin Exp $
 
+# XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
+# python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
+# from libpeas bl3, so we include it early to ensure a valid version is
+# chosen.  This is not ideal, please fix it properly at some point.
+.include "../../devel/libpeas/buildlink3.mk"
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	eom-${VERSION:R}.2
@@ -17,7 +22,6 @@ BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../devel/libpeas/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
