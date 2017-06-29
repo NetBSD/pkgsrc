@@ -1,7 +1,7 @@
-$NetBSD: patch-commit.d_50vcs-commit,v 1.2 2017/06/17 14:10:59 schmonz Exp $
+$NetBSD: patch-commit.d_50vcs-commit,v 1.3 2017/06/29 17:19:13 schmonz Exp $
 
-Test more carefully for a possibly missing binary, and be silent if
-there's nothing to commit. From Nathan Arthur in private mail.
+Test more carefully for a possibly missing binary. From Nathan Arthur in
+private mail.
 
 --- commit.d/50vcs-commit.orig	2016-07-17 23:01:39.000000000 +0000
 +++ commit.d/50vcs-commit
@@ -20,20 +20,3 @@ there's nothing to commit. From Nathan Arthur in private mail.
  fi
  
  ORIG_USER=$USER
-@@ -85,10 +87,12 @@ if [ "$VCS" = git ] && [ -d .git ]; then
- 			export GIT_COMMITTER_EMAIL
- 		fi
- 	fi
--	if [ -n "$logfile" ]; then
--		git commit $GIT_COMMIT_OPTIONS -F "$logfile"
--	else
--		git commit $GIT_COMMIT_OPTIONS
-+	if ! git diff --cached --quiet; then
-+		if [ -n "$logfile" ]; then
-+			git commit $GIT_COMMIT_OPTIONS -F "$logfile"
-+		else
-+			git commit $GIT_COMMIT_OPTIONS
-+		fi
- 	fi
- elif [ "$VCS" = hg ] && [ -d .hg ]; then
- 	if [ -n "$USER" ]; then
