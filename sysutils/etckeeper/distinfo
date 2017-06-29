@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2017/06/17 14:10:59 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2017/06/29 17:19:13 schmonz Exp $
 
 SHA1 (etckeeper_1.18.5-1.diff.gz) = c43743cdfc6aa6543d95b7f19337d545d9cbe040
 RMD160 (etckeeper_1.18.5-1.diff.gz) = d7708dd7b2879e53ddd98896c7567d00da685286
@@ -9,7 +9,7 @@ RMD160 (etckeeper_1.18.5.orig.tar.gz) = 436b472276c3175cc7157d28d18345d4f4b17bd4
 SHA512 (etckeeper_1.18.5.orig.tar.gz) = bfdd5ffb6ae72ebc5ea8254404280ea1c89de44cfb4c888bc40d1a8504887d198b967f46f1d3952a5a22b0f5969a8f3291e4fc1c37bbd488e4b25682d41364cd
 Size (etckeeper_1.18.5.orig.tar.gz) = 67166 bytes
 SHA1 (patch-bash__completion) = 95936127f98a76b4b7b66ddc170ba6c1e1e4c0d9
-SHA1 (patch-commit.d_50vcs-commit) = 86b150cb5e72aed9f8bb7886c699ea895e770f36
+SHA1 (patch-commit.d_50vcs-commit) = 2776cf73cc1211b4beaf14ce05aeb96ff422a19a
 SHA1 (patch-debian_cron.daily) = b702508cbb4dd42a3ae9f4a0b4be3a763edaf131
 SHA1 (patch-etckeeper) = 07a6b61b6c79096065953d22087c32ea5d776f2c
 SHA1 (patch-etckeeper.8) = 7e72a7889e0478463eb2b304d2cadb44cd97aa52
