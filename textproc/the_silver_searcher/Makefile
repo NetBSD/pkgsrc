@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2017/06/05 20:22:24 leot Exp $
+# $NetBSD: Makefile,v 1.17 2017/06/29 08:58:53 leot Exp $
 
 DISTNAME=	the_silver_searcher-2.0.0
 CATEGORIES=	textproc
@@ -15,5 +15,6 @@ CONFIGURE_ARGS+=	LZMA_LIBS="-L${BUILDLINK_PREFIX.xz}/lib ${COMPILER_RPATH_FLAG}$
 USE_TOOLS+=		pkg-config
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
