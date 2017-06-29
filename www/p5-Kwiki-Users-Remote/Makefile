@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2017/06/05 14:25:26 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2017/06/29 09:01:10 jperkin Exp $
 
 DISTNAME=      	Kwiki-Users-Remote-0.04
 PKGREVISION=	10
@@ -14,6 +14,8 @@ DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki
 DEPENDS+=	p5-Kwiki-UserName>=0.14:../../www/p5-Kwiki-UserName
 
 PERL5_PACKLIST=		auto/Kwiki/Users/Remote/.packlist
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
