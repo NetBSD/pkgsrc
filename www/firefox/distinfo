@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.282 2017/06/14 11:28:44 ryoon Exp $
+$NetBSD: distinfo,v 1.283 2017/06/29 08:07:59 martin Exp $
 
 SHA1 (firefox-54.0.source.tar.xz) = 44e40c77f58e3b203dc60f51c5a02993f6c38ee5
 RMD160 (firefox-54.0.source.tar.xz) = 310f21498bc69939049d3ca881674a40fba8da21
@@ -49,6 +49,8 @@ SHA1 (patch-ipc_chromium_src_base_sys__info__posix.cc) = 5313c4097c278640573c7e1
 SHA1 (patch-ipc_chromium_src_base_time__posix.cc) = ba4e0872490f870e7d2f468e1fe87c33cf9a3500
 SHA1 (patch-ipc_chromium_src_build_build__config.h) = 9e4f15226c494f5015dbea3a0df6af851449ae15
 SHA1 (patch-ipc_chromium_src_chrome_common_transport__dib.h) = 33ea11a8c23f2fefcb318342ac9e94d3885cb3b1
+SHA1 (patch-ipc_glue_CrossProcessSemaphore.h) = 778a569887d8ad082abc2fa2fe89a0a943e84d64
+SHA1 (patch-ipc_glue_CrossProcessSemaphore__posix.cpp) = fc07bb12aa304c184e523072ad496a3863cb7f07
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 37fca99dc5359a7c1403b7674080bd27b0a5eafe
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = f0b554c169643b8447b4f29168d61ea257b18782
 SHA1 (patch-js_src_jit_none_AtomicOperations-sparc.h) = b44992a869d6d08809a9edc28f1ad6f40632d392
