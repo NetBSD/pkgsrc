@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2016/07/09 06:38:32 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2017/06/29 20:28:55 jperkin Exp $
 
 DISTNAME=	sqwebmail-5.5.3
 PKGREVISION=	7
@@ -66,6 +66,7 @@ CONFIGURE_ARGS+=	--with-ispell="${PREFIX}/bin/ispell"
 CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${COURIER_STATEDIR}/tmp
+CONFIGURE_ARGS+=	--without-ldapaddressbook --without-ldapaliasd
 
 CONFIGURE_ENV+=		GZIP=${TOOLS_PATH.gzip}
 CONFIGURE_ENV+=		GPG=${PREFIX}/bin/gpg
