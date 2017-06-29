@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/06/29 11:10:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2017/06/29 19:54:40 jperkin Exp $
 
 # XXX: meta-pkgs/mate/Makefile.common includes pyversion.mk which sets the
 # python version too early and clashes with PYTHON_VERSIONS_INCOMPATIBLE
@@ -19,10 +19,12 @@ PKGCONFIG_OVERRIDE+=	data/pluma.pc.in
 
 CONFIGURE_ARGS+=	--disable-updater # only for OS X and Windows
 
+REPLACE_PYTHON+=	plugins/externaltools/data/switch-c.tool.in
+
 .include "options.mk"
 
 .include "../../devel/glib2/schemas.mk"
-
+.include "../../lang/python/application.mk"
 .include "../../x11/mate-desktop/buildlink3.mk"
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
