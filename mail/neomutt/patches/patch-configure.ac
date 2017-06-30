@@ -1,6 +1,7 @@
-$NetBSD: patch-configure.ac,v 1.1 2017/06/30 10:53:22 jperkin Exp $
+$NetBSD: patch-configure.ac,v 1.2 2017/06/30 10:58:18 wiz Exp $
 
 Handle native Solaris GSSAPI.
+https://github.com/neomutt/neomutt/pull/660
 
 --- configure.ac.orig	2017-06-09 10:52:07.000000000 +0000
 +++ configure.ac
