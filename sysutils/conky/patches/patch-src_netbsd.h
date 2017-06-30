@@ -1,10 +1,10 @@
-$NetBSD: patch-src_netbsd.h,v 1.1.1.1 2012/05/13 08:42:20 imil Exp $
+$NetBSD: patch-src_netbsd.h,v 1.2 2017/06/30 00:23:03 kamil Exp $
 
 Many fixes and addons for conky to work on NetBSD.
 
 --- src/netbsd.h.orig	2010-03-25 17:42:39.000000000 +0000
 +++ src/netbsd.h
-@@ -12,6 +12,8 @@
+@@ -12,10 +12,11 @@
  #include <kvm.h>
  #include <nlist.h>
  
@@ -13,7 +13,11 @@ Many fixes and addons for conky to work on NetBSD.
  #include <sys/time.h>
  #include <sys/sysctl.h>
  #include <sys/types.h>
-@@ -27,10 +29,20 @@
+-#include <sys/user.h>
+ #include <sys/socket.h>
+ #include <sys/swap.h>
+ #include <sys/sched.h>
+@@ -27,10 +28,20 @@
  
  #include <machine/param.h>
  
