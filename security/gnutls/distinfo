@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.125 2017/05/18 07:54:26 he Exp $
+$NetBSD: distinfo,v 1.126 2017/06/30 06:15:44 wiz Exp $
 
-SHA1 (gnutls-3.5.12.tar.xz) = 9f453686bc6b1e6ebc04197158a2bc123c0272df
-RMD160 (gnutls-3.5.12.tar.xz) = ffdd1b7af9376cee94e81fefd929ee6a41cd8fcb
-SHA512 (gnutls-3.5.12.tar.xz) = 8fec23e7e494a2e15e0f938115cae1ba3fee952d634db387f983b01096f68ca4313b23bc4c439d3c7fdd07c861eac4913a7c2343c8704961588ae195886ec90c
-Size (gnutls-3.5.12.tar.xz) = 7212652 bytes
+SHA1 (gnutls-3.5.13.tar.xz) = 0cf738a968faf0461e9709b3ee0f64157ce040b3
+RMD160 (gnutls-3.5.13.tar.xz) = 8d425288302672ae9617e6e827f7d2721a361b95
+SHA512 (gnutls-3.5.13.tar.xz) = e98f23a589042f879936c3f8b474535e695fb7dd68a9e81323668c013241f765c2d3af6c6a072ecf867acc1e551ec46e15bb842144d3a06bdd5d2f4fc3d828a7
+Size (gnutls-3.5.13.tar.xz) = 7226468 bytes
 SHA1 (patch-ae) = 5e020483ac14ef6ccc45a53e351242ab16c860f1
 SHA1 (patch-lib_Makefile.in) = d0e292e632a91a9f19e39bd2c2d205a086ba5588
 SHA1 (patch-lib_accelerated_x86_x86-common.c) = 7a46ef6892b3a06ff4c949a965073c720a2491a4
