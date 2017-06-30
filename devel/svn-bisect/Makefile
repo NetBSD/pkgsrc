@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/11/30 14:24:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2017/06/30 17:57:41 joerg Exp $
 
 DISTNAME=	svn-bisect-1.1
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Infinoid/}
 GITHUB_TAG=	3768ca85fb962e6380564aa5ab11853ec5720abc
@@ -13,6 +14,7 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
+DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
 
 PERL5_PACKLIST=		auto/App/SVN/Bisect/.packlist
 
