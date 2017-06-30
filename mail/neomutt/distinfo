@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2017/06/30 10:58:18 wiz Exp $
+$NetBSD: distinfo,v 1.24 2017/06/30 11:07:26 jperkin Exp $
 
 SHA1 (neomutt-20170609.tar.gz) = fd0e07e95c4a5dc6b21df02ea1c0355acf1fcc17
 RMD160 (neomutt-20170609.tar.gz) = 3b2b696bd48e6a0b846c20b6621fe92dd996d6b3
@@ -6,3 +6,5 @@ SHA512 (neomutt-20170609.tar.gz) = e5ced8e2d5890e828a1603a0c1c8072bbb84499e87b45
 Size (neomutt-20170609.tar.gz) = 2637349 bytes
 SHA1 (patch-configure.ac) = e11fc46e1baad716022954e08556c213544201f5
 SHA1 (patch-m4_gssapi.m4) = 9198e221e8dbed2633fcd45a53167cd19547ad65
+SHA1 (patch-mutt__sasl.h) = e41ebdd0e2f64811da61ef4530dd44d67bc836f2
+SHA1 (patch-resize.c) = d8cf215e23b20ba46361b1edd3fbcc316abb1516
