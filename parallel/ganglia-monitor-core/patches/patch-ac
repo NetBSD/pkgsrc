@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2016/02/16 12:48:18 fhajny Exp $
+$NetBSD: patch-ac,v 1.7 2017/06/30 00:52:44 kamil Exp $
 
 First chunk: update sysctl name for changes in NetBSD.
 
@@ -30,7 +30,15 @@ change, I got around 30 running processes on an idle machine.
  #if __NetBSD_Version__ > 299000000
  #include <sys/statvfs.h>
  #define statfs statvfs
-@@ -134,7 +139,10 @@ cpu_speed_func ( void )
+@@ -21,7 +26,6 @@
+ #endif
+ #include <sys/sysctl.h>
+ #include <sys/time.h>
+-#include <sys/user.h>
+ #include <sys/resource.h>
+ #include <sys/sched.h>
+ #include <sys/stat.h>
+@@ -134,7 +138,10 @@ cpu_speed_func ( void )
  
     cpu_speed = 0;
  
@@ -42,7 +50,7 @@ change, I got around 30 running processes on an idle machine.
     if (sysctlbyname("machdep.est.frequency.target", &cpu_speed, &len, NULL, 0) == -1)
        val.uint32 = 0;
  #endif
-@@ -559,49 +567,56 @@ proc_total_func ( void )
+@@ -559,49 +566,56 @@ proc_total_func ( void )
  g_val_t
  proc_run_func( void )
  {
@@ -127,7 +135,7 @@ change, I got around 30 running processes on an idle machine.
  g_val_t
  mem_free_func ( void )
  {
-@@ -1135,36 +1150,41 @@ get_netbw(double *in_bytes, double *out_
+@@ -1135,36 +1149,41 @@ get_netbw(double *in_bytes, double *out_
  
  	next = buf;
  	while (next < lim) {
@@ -178,7 +186,7 @@ change, I got around 30 running processes on an idle machine.
  
  		/* If we don't have a previous value yet, make a slot. */
  		if (index >= indexes) {
-@@ -1187,25 +1207,25 @@ get_netbw(double *in_bytes, double *out_
+@@ -1187,25 +1206,25 @@ get_netbw(double *in_bytes, double *out_
  		 */
  		if (!seen[index]) {
  			seen[index] = 1;
