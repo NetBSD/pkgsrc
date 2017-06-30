@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2017/06/30 10:53:22 jperkin Exp $
+
+Handle native Solaris GSSAPI.
+
+--- configure.ac.orig	2017-06-09 10:52:07.000000000 +0000
++++ configure.ac
+@@ -494,7 +494,7 @@ if test "$gss_prefix" != "no"; then
+ 		AC_CACHE_SAVE
+ 		AC_MSG_RESULT([GSSAPI libraries not found])
+ 	fi
+-	if test "$GSSAPI_IMPL" = "Heimdal"; then
++	if test "$GSSAPI_IMPL" = "Heimdal" || test "$GSSAPI_IMPL" = "Solaris"; then
+ 		AC_DEFINE(HAVE_HEIMDAL,1,[ Define if your GSSAPI implementation is Heimdal ])
+ 	fi
+ 	CPPFLAGS="$CPPFLAGS $GSSAPI_CFLAGS"
