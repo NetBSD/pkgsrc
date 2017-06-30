@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2017/05/18 07:54:26 he Exp $
+@comment $NetBSD: PLIST,v 1.57 2017/06/30 06:15:44 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -1130,4 +1130,3 @@ share/locale/sv/LC_MESSAGES/gnutls.mo
 share/locale/uk/LC_MESSAGES/gnutls.mo
 share/locale/vi/LC_MESSAGES/gnutls.mo
 share/locale/zh_CN/LC_MESSAGES/gnutls.mo
-
