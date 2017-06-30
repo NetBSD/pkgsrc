@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2017/06/21 07:10:56 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2017/06/30 10:53:22 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.neomutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
@@ -14,10 +14,10 @@ PKG_SUGGESTED_OPTIONS+=	mutt-hcache tokyocabinet
 ###
 ### GSSAPI
 ###
-
+CONFIGURE_ENV+=		ac_cv_path_KRB5CFGPATH=${KRB5_CONFIG}
 .if !empty(PKG_OPTIONS:Mgssapi)
 .  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+= --with-gss=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gss=${KRB5BASE}
 .endif
 
 ###
