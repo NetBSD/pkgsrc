@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2017/02/12 01:29:30 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.21 2017/07/01 09:14:45 maya Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 include/harfbuzz/hb-blob.h
@@ -8,7 +8,7 @@ ${PLIST.coretext}include/harfbuzz/hb-coretext.h
 include/harfbuzz/hb-deprecated.h
 include/harfbuzz/hb-face.h
 include/harfbuzz/hb-font.h
-include/harfbuzz/hb-ft.h
+${PLIST.icu}include/harfbuzz/hb-ft.h
 include/harfbuzz/hb-glib.h
 ${PLIST.icu}include/harfbuzz/hb-icu.h
 include/harfbuzz/hb-ot-font.h
