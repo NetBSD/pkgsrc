@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2017/07/01 16:18:00 schmonz Exp $
+
+--- src/Makefile.in.orig	2006-08-14 19:38:08.000000000 +0000
++++ src/Makefile.in
+@@ -175,7 +175,7 @@ target_alias = @target_alias@
+ INCLUDES = -I$(top_srcdir)/include -I/usr/local/include
+ rioutil_SOURCES = main.c getopt.c getopt1.c main.h getopt.h
+ @MACOSX_FALSE@rioutil_LDADD = -L/usr/local/lib $(top_srcdir)/librioutil/librioutil.la
+-@MACOSX_TRUE@rioutil_LDADD = -L/usr/local/lib $(top_srcdir)/librioutil/librioutil.la -lIOKit
++@MACOSX_TRUE@rioutil_LDADD = -L/usr/local/lib $(top_srcdir)/librioutil/librioutil.la -framework IOKit
+ @MACOSX_TRUE@PREBIND_FLAGS = -prebind
+ rioutil_LDFLAGS = $(PREBIND_FLAGS)
+ rioutil_DEPENDENCIES = $(top_srcdir)/librioutil/librioutil.la
