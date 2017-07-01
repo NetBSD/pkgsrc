@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2017/03/20 10:49:03 sborrill Exp $
+# $NetBSD: Makefile,v 1.20 2017/07/01 05:31:59 darcy Exp $
 
-DISTNAME=	Radicale-1.1.1
-PKGREVISION=	2
+DISTNAME=	Radicale-1.1.4
 CATEGORIES=	net time www
 MASTER_SITES=	${MASTER_SITE_PYPI:=R/Radicale/}
 
@@ -16,6 +15,7 @@ RADICALE_USER?=		www
 RADICALE_GROUP?=	www
 PKG_GROUPS=		${RADICALE_GROUP}
 PKG_USERS=		${RADICALE_USER}:${RADICALE_GROUP}
+CONFLICTS+= Radicale2-[0-9]*
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
