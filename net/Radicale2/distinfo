@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/01 05:57:07 darcy Exp $
+
+SHA1 (Radicale-2.1.1.tar.gz) = e250986f11a946da7e48de189b10da61c93d2427
+RMD160 (Radicale-2.1.1.tar.gz) = c950be03fd5b2edf37f4977bf4e060e544acfe8f
+SHA512 (Radicale-2.1.1.tar.gz) = 3aa5aa6d6d3abfa256ab0f02a932d68daeb91ea857b68376a2bda3dae9dd8951e78a54a0657e4e827186ebb6c0d90165cb876d22ebc988cb66ba2f4617761830
+Size (Radicale-2.1.1.tar.gz) = 70878 bytes
