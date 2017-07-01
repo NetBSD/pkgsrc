@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2017/07/01 16:18:00 schmonz Exp $
+
+--- src/Makefile.am.orig	2006-08-07 15:47:28.000000000 +0000
++++ src/Makefile.am
+@@ -5,7 +5,7 @@ INCLUDES = -I$(top_srcdir)/include -I/us
+ rioutil_SOURCES = main.c getopt.c getopt1.c main.h getopt.h
+ 
+ if MACOSX
+-rioutil_LDADD = -L/usr/local/lib $(top_srcdir)/librioutil/librioutil.la -lIOKit
++rioutil_LDADD = -L/usr/local/lib $(top_srcdir)/librioutil/librioutil.la -framework IOKit
+ PREBIND_FLAGS = -prebind
+ else
+ rioutil_LDADD = -L/usr/local/lib $(top_srcdir)/librioutil/librioutil.la
