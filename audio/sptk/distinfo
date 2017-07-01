@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2016/07/10 12:06:21 mef Exp $
+$NetBSD: distinfo,v 1.8 2017/07/01 11:01:44 wiedi Exp $
 
 SHA1 (SPTK-3.9.tar.gz) = 76eb657d9b7b7005090ec2515d7c02da4fa69b74
 RMD160 (SPTK-3.9.tar.gz) = c19b651e653cf26b49e2220afd8cd435bd255089
@@ -13,4 +13,4 @@ RMD160 (SPTKref-3.9.pdf) = 4f6650ea5e648ebc602e60b1c51b7e334344b17e
 SHA512 (SPTKref-3.9.pdf) = d145adad6cfc78d8e04f546feb6eaf17e27f79a3f03e1af9ff86f213b675e4648d965670e1fa3f62d4101f9bacebf7a710947c70d7f302fe7c694c8f73e6d31c
 Size (SPTKref-3.9.pdf) = 1044287 bytes
 SHA1 (patch-bin_pitch_swipe_swipe.c) = af7013843ddf1a801be32d10c65f8ec525c481c2
-SHA1 (patch-bin_vc_hts__engine__API_HTS__misc.c) = cc4a4ab182e93323280d3b777e3eef4bc55050fa
+SHA1 (patch-bin_vc_hts__engine__API_HTS__misc.c) = 3001b2e7f61b6bef5ac19d721b5c8074286b6486
