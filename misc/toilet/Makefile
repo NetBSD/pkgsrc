@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/10/10 06:37:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2017/07/01 12:42:21 schmonz Exp $
 
 DISTNAME=	toilet-0.3
 CATEGORIES=	misc
@@ -9,7 +9,7 @@ HOMEPAGE=	http://caca.zoy.org/wiki/toilet
 COMMENT=	Free replacement for the FIGlet utility
 # LICENSE=	wtfpl
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 GNU_CONFIGURE=	yes
 
