@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2016/12/30 02:17:49 dholland Exp $
+# $NetBSD: Makefile,v 1.55 2017/07/01 16:23:19 schmonz Exp $
 
 .include "../../textproc/libxml2/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
@@ -20,6 +20,8 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g"
 SUBST_SED.setup+=	-e "/^\"/s,/usr/local/include,${BUILDLINK_PREFIX.iconv}/include,g"
+
+BUILDLINK_TRANSFORM.Darwin+=	opt:-bundle:-dynamiclib
 
 EGG_NAME=	${DISTNAME:S/-/_python-/}
 
