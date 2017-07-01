@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2017/07/01 05:31:59 darcy Exp $
+# $NetBSD: Makefile,v 1.21 2017/07/01 05:38:18 darcy Exp $
 
 DISTNAME=	Radicale-1.1.4
 CATEGORIES=	net time www
@@ -15,7 +15,7 @@ RADICALE_USER?=		www
 RADICALE_GROUP?=	www
 PKG_GROUPS=		${RADICALE_GROUP}
 PKG_USERS=		${RADICALE_USER}:${RADICALE_GROUP}
-CONFLICTS+= Radicale2-[0-9]*
+CONFLICTS+= Radicale-[2-9]*
 
 INSTALLATION_DIRS=	${EGDIR}
 OWN_DIRS=		${PKG_SYSCONFDIR}/radicale
