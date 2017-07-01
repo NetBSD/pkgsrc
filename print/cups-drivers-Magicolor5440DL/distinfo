@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:01:32 agc Exp $
+$NetBSD: distinfo,v 1.8 2017/07/01 22:13:26 joerg Exp $
 
 SHA1 (5440DL_lin64bit_1_2_1.zip) = 130092a9345ec32a2681bacafaeadcc85563f1fa
 RMD160 (5440DL_lin64bit_1_2_1.zip) = a0a5a51eef1a7798d0f8b8d07873bd60ac2cba9b
 SHA512 (5440DL_lin64bit_1_2_1.zip) = 2686c06a18f4f23488a7de9820cc18e4e902805adebe5959b2f6a26e973082468aa6993421efcdbf690651d319b86147e382e15271a2895a3210c240a932f846
 Size (5440DL_lin64bit_1_2_1.zip) = 767491 bytes
 SHA1 (patch-aa) = dc05cf3551ea421ac0b807752e86de27f1fe229e
+SHA1 (patch-src_bmp.c) = 15fe81ab79ba9bcd1ecfcf413122a8e4ad217818
+SHA1 (patch-src_rastertokmlf.c) = c3f3c3e795b91300b0d5e80b3113b8a7541727a6
