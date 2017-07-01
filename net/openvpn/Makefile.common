@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.10 2017/06/26 07:21:21 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2017/07/01 22:12:53 joerg Exp $
 # used by net/openvpn/Makefile
 # used by net/openvpn-acct-wtmpx/Makefile
 # used by net/openvpn-nagios/Makefile
 
 OPENVPN_DISTNAME=	openvpn-2.4.3
-# Remove DIST_SUBDIR on next update
-OPENVPN_DIST_SUBDIR=	openvpn
-OPENVPN_DISTFILE=	${OPENVPN_DIST_SUBDIR}/${OPENVPN_DISTNAME}.tar.xz
+# Remove DIST_SUBDIR on next update, update distinfo of depending packages
+DIST_SUBDIR=		openvpn
+OPENVPN_DISTFILE=	${OPENVPN_DISTNAME}.tar.xz
 OPENVPN_MASTER_SITES=	http://swupdate.openvpn.org/community/releases/
 SITES.${OPENVPN_DISTFILE}=	${OPENVPN_MASTER_SITES}
 
