@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2017/02/03 16:20:18 roy Exp $
+$NetBSD: distinfo,v 1.7 2017/07/01 22:11:39 joerg Exp $
 
 SHA1 (mariadb-5.5.52.tar.gz) = bbedcc0eba7580d1ef16f2dfe4868cf9f31a636d
 RMD160 (mariadb-5.5.52.tar.gz) = fcad9e40ecd29b341a8cdc42afc18aa83b85e60c
@@ -30,6 +30,7 @@ SHA1 (patch-include_violite.h) = 31555632c2f48ae2cf9670f94a8233bfcad25083
 SHA1 (patch-libmysql_CMakeLists.txt) = bca5243b76ea783e5b39e619528b28095aa1392a
 SHA1 (patch-mysys_my__getopt.c) = 76ed2ffb774a7171bb547b3098db148329cbe21d
 SHA1 (patch-mysys_stacktrace.c) = 9f18875126208c30d41f896f0e6edc7000df0c73
+SHA1 (patch-plugin_handler__socket_libhsclient_socket.cpp) = 4fe680a207162c750ca4a6107bfbaa912e93d5d0
 SHA1 (patch-scripts_CMakeLists.txt) = 5e30442df51009fd253b0f3c99526b587b2626ff
 SHA1 (patch-scripts_mysqld_safe.sh) = 5ce94ea8ebce4041fe9ba4753a18b378052aab4d
 SHA1 (patch-sql-common_client__plugin.c) = 507fb154013dc66218f36fe12e8b28eb8774d090
