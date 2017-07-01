@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2017/02/06 01:29:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/07/01 22:12:13 joerg Exp $
 bin/blender
 share/blender/${BLENDERVER}/datafiles/fonts/bmonofont-i18n.ttf.gz
 share/blender/${BLENDERVER}/datafiles/fonts/droidsans.ttf.gz
@@ -540,7 +540,7 @@ share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/uu.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/uuid.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/venv/__init__.py
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/venv/__main__.py
-share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/venv/scripts/posix/activate
+share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/venv/scripts/common/activate
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/venv/scripts/posix/activate.csh
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/venv/scripts/posix/activate.fish
 share/blender/${BLENDERVER}/python/lib/python${PYVERSSUFFIX}/warnings.py
