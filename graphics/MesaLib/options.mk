@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.55 2017/03/22 20:22:31 markd Exp $
+# $NetBSD: options.mk,v 1.56 2017/07/01 06:40:45 maya Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -30,7 +30,7 @@ PLIST_VARS+=	dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 PLIST_VARS+=	gbm vaapi vdpau wayland xatracker
 
 .if !empty(PKG_OPTIONS:Mdri)
-
+GCC_REQD+=		4.8
 CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-egl
 .if ${OPSYS} != "Darwin"
