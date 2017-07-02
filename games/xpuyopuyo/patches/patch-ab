@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2000/08/25 06:22:28 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2017/07/02 14:27:25 seb Exp $
+
+Flags for libmikmod
 
 --- pgame/Makefile.am.orig	Mon Jul 31 04:13:59 2000
 +++ pgame/Makefile.am
