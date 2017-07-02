@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2017/06/23 18:25:12 kamil Exp $
+$NetBSD: distinfo,v 1.23 2017/07/02 09:17:56 taca Exp $
 
 SHA1 (open-vm-tools-10.1.5-5055683.tar.gz) = 6de8e774cd61dde304c6e93a34b4fcdaefb12fc9
 RMD160 (open-vm-tools-10.1.5-5055683.tar.gz) = 54b39bc8ef20bbd948a7a50b0aa2e3b4f28c7477
@@ -36,6 +36,7 @@ SHA1 (patch-lib_guestApp_guestApp.c) = ed916ad0726b8d992319828f8f3a4115d7aba753
 SHA1 (patch-lib_hgfsHelper_hgfsHelperPosix.c) = 9299f0a781d11689b04223a1dfd1c4725912f863
 SHA1 (patch-lib_hgfsUri_hgfsUriPosix.c) = f98eab5cb5885a9c2e258bf072b24d8806b20fd4
 SHA1 (patch-lib_include_sigPosixRegs.h) = 634e12414f004671c1b2855764970e5d16ef4ef8
+SHA1 (patch-lib_include_vm__basic__types.h) = 4dfefc05e2bba336593c74ddac7a4583afa3053a
 SHA1 (patch-lib_include_vmblock__user.h) = 05ed8a0cdd481b759643ea47e27ef6e223a835d8
 SHA1 (patch-lib_include_vmci__sockets.h) = fba82038daf87a08f04ddd541281122f0047e968
 SHA1 (patch-lib_lock_ulSema.c) = 6908d4b453cbdb74100c9419da95a07db532c624
