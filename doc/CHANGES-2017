@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2655 2017/07/01 23:02:34 gdt Exp $
+$NetBSD: CHANGES-2017,v 1.2656 2017/07/02 00:49:45 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3660,3 +3660,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/bind910 to 9.10.5pl2 [taca 2017-07-01]
 	Updated net/bind99 to 9.9.10pl2 [taca 2017-07-01]
 	Updated chat/jabberd2 to 2.6.1 [gdt 2017-07-01]
+	Updated databases/mariadb55-server to 5.5.52nb1 [schmonz 2017-07-01]
