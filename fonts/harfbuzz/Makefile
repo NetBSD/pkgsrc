@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2017/05/02 10:26:06 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2017/07/02 09:15:32 taca Exp $
 
 DISTNAME=	harfbuzz-1.4.6
 CATEGORIES=	fonts
@@ -13,6 +13,7 @@ LICENSE=	mit
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
+GCC_REQD=		4.8
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cairo=no
 CONFIGURE_ARGS+=	--with-graphite2=no

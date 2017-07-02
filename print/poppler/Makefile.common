@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.85 2017/05/22 08:40:10 adam Exp $
+# $NetBSD: Makefile.common,v 1.86 2017/07/02 09:16:01 taca Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-cpp/Makefile
@@ -23,6 +23,7 @@ PATCHDIR=		${.CURDIR}/../../print/poppler/patches
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+GCC_REQD=		4.8
 
 # Don't accidentally find libtiff
 CONFIGURE_ARGS+=	--disable-libtiff
