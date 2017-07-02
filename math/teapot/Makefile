@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2017/02/20 15:03:50 hauke Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/02 11:12:01 wiedi Exp $
 
 DISTNAME=	teapot-2.3.0
 PKGREVISION=	2
@@ -13,6 +13,9 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DENABLE_HELP=NO
+
+CFLAGS.SunOS+=	-D__EXTENSIONS__
+LDFLAGS.SunOS+=	-lnsl
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
