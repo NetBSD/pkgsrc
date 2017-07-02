@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2017/07/02 00:58:17 seb Exp $
+# $NetBSD: Makefile,v 1.48 2017/07/02 14:27:25 seb Exp $
 
-DISTNAME=		xpuyopuyo-0.9.1
-PKGREVISION=		10
+DISTNAME=		xpuyopuyo-0.9.8
+#PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://chaos2.org/xpuyopuyo/
 MASTER_SITES+=		http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/
@@ -9,6 +9,7 @@ MASTER_SITES+=		http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://chaos2.org/xpuyopuyo/
 COMMENT=		Tetris-like puzzle game
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		automake autoconf gmake
 USE_LIBTOOL=		YES
