@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2017/07/02 10:22:37 wiedi Exp $
 
 PKGREVISION= 1
 .include "../../lang/swi-prolog-lite/Makefile.common"
@@ -28,6 +28,8 @@ BUILD_DIRS+=		packages
 INSTALL_DIRS+=		packages
 
 INSTALLATION_DIRS=	bin lib/swi-prolog-${PKGVERSION_NOREV}/include ${PKGMANDIR}/man1
+
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 TEST_TARGET=	check
 
