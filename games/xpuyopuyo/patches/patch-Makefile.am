@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile.am,v 1.1 2017/07/02 14:27:25 seb Exp $
+
+Fix link by reordering libraries
+
+--- Makefile.am.orig	2003-05-26 16:41:57.000000000 +0000
++++ Makefile.am
+@@ -33,13 +33,13 @@ xpuyopuyo_SOURCES=xpuyopuyo.c
+ INCLUDES=-Ipgame -Ipai -Ipnet
+ 
+ 
+-XPP_LIBS		=  $(NET_LIBS) pgame/libxpp_game.a pai/libxpp_ai.a
++XPP_LIBS		=  $(NET_LIBS) pgame/libxpp_game.a # pai/libxpp_ai.a
+ XPP_NET_LIBS		=  pnet/libxpp_net.a	# This must be after interface
+ XPP_SOUND_LIBS		=  $(LIBMIKMOD_LIBS) psound/libxpp_sound.a
+ 
+ 
+ if GTK
+-xpuyopuyo_LDADD=$(XPP_LIBS) pgtk/libxpp_interface.a $(XPP_NET_LIBS) $(XPP_SOUND_LIBS) $(GTK_LIBS) pgame/libxpp_game.a putil/libxpp_util.a
++xpuyopuyo_LDADD=$(XPP_LIBS) pgtk/libxpp_interface.a pai/libxpp_ai.a $(XPP_SOUND_LIBS) $(GTK_LIBS) pgame/libxpp_game.a $(XPP_NET_LIBS) putil/libxpp_util.a
+ endif
+ 
+ 

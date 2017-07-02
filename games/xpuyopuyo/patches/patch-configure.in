@@ -1,0 +1,23 @@
+$NetBSD: patch-configure.in,v 1.1 2017/07/02 14:27:25 seb Exp $
+
+Handle newer autotools.
+
+--- configure.in.orig	2003-05-26 16:49:00.000000000 +0000
++++ configure.in
+@@ -2,14 +2,14 @@ dnl Process this file with autoconf to p
+ AC_PREREQ(2.12)
+ AC_INIT(xpuyopuyo.c)
+ AM_INIT_AUTOMAKE(xpuyopuyo, 0.9.8)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADER(config.h)
+ AM_MAINTAINER_MODE
+ 
+ 
+ dnl Watch out for problems with prefix, datadir
+ dnl
+ test "x$prefix" = "xNONE" && prefix="$ac_default_prefix"
+-test "x$datadir" = 'x${prefix}/share' && datadir="${prefix}/share"
++test "x$datadir" = 'x${datarootdir}' && datadir="${prefix}/share"
+ test "x$mandir" = 'x${prefix}/man' && mandir="${prefix}/man"
+ 
+ 
