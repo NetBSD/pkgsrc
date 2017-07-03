@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:16 agc Exp $
+$NetBSD: distinfo,v 1.7 2017/07/03 11:54:52 wiedi Exp $
 
 SHA1 (nicotine-1.0.8.tar.bz2) = 8549172106c8f59da5a244382cbc5951dfbbc3fa
 RMD160 (nicotine-1.0.8.tar.bz2) = eaf4b0496f563ebf4521954b8d309ad3fcf5376d
 SHA512 (nicotine-1.0.8.tar.bz2) = fe623ec3602ca1f0c581f8857c0356c6692cd0386e9cded446438704a0a22307676e47dbbc1902c7c15e967ae0247f33db2cd8743d8a791cce6879edd124cef4
 Size (nicotine-1.0.8.tar.bz2) = 305645 bytes
+SHA1 (patch-setup.py) = d6028d23c499c3aacf6c24238c18404675b203df

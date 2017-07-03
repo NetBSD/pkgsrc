@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2017/01/01 14:43:50 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2017/07/03 11:54:52 wiedi Exp $
 
 DISTNAME=	nicotine-1.0.8
 PKGREVISION=	16
@@ -16,6 +16,8 @@ DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.99.16:../../x11/py-gtk2
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# empty
 PYTHON_VERSIONS_INCOMPATIBLE=	34 35 36 # py-gtk2
+
+MAKE_ENV+=	PKGLOCALEDIR=$(PKGLOCALEDIR:Q)
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
