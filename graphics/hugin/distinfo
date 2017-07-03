@@ -1,18 +1,19 @@
-$NetBSD: distinfo,v 1.17 2016/11/06 16:08:00 adam Exp $
+$NetBSD: distinfo,v 1.18 2017/07/03 20:48:03 adam Exp $
 
-SHA1 (hugin-2016.2.0.tar.bz2) = 9d28609d973fa72b95b1e2506cf1de7d24578e67
-RMD160 (hugin-2016.2.0.tar.bz2) = 9eaf5f5c3f68a5bbc1a86272488c2821a63db83e
-SHA512 (hugin-2016.2.0.tar.bz2) = 9c652e685d0135afef6418bdf5fce39cec8ef1ec0dbe3a325151957c91495db0a2a3171ee04a28955a638493913c1bc800a90c37347ad17612584646c8a65510
-Size (hugin-2016.2.0.tar.bz2) = 10386216 bytes
-SHA1 (patch-CMakeLists.txt) = e30ad71ef5abe0efcf113278ae85f5d33a0a4ccd
+SHA1 (hugin-2017.0.tar.bz2) = 4ba7f5bf5afdadbea9cf10d15aa14e644ef94ed3
+RMD160 (hugin-2017.0.tar.bz2) = 2a0cf1af75d384abca0a62d80480fc815f63e0bf
+SHA512 (hugin-2017.0.tar.bz2) = bfd39135119fddb559ecec220da36a4c15d96bda7f93e738d8815aafca94685ba879239202e2cc81c87787188ee3b1b6dc5cbe8014aa12e2f95d654591dc1969
+Size (hugin-2017.0.tar.bz2) = 9803272 bytes
+SHA1 (patch-CMakeLists.txt) = 9c7f017d8446e61b2cfffe7969f900c63cb229a1
 SHA1 (patch-CMakeModules_FindPNG.cmake) = 811fd3cf6f819b31129e1560cd8acd1f7ee6defc
 SHA1 (patch-doc_deghosting_mask.pod) = fe5462b10966420b0cf3fab004854d9dab3bfb4f
-SHA1 (patch-src_hugin1_base__wx_StitchingExecutor.cpp) = c30a62b1da413fce9524d7d558ec5bb1f21eb65e
+SHA1 (patch-src_hugin1_base__wx_StitchingExecutor.cpp) = 15b22b2a098bcf644eb07943baa958c09d72a7f6
 SHA1 (patch-src_hugin1_base__wx_platform.cpp) = f0f544438a4818e9bbad9fd0f7fb0af06f1bdf4e
 SHA1 (patch-src_hugin1_base__wx_wxPanoCommand.cpp) = d5bf8f747ae86338e728c472d3dc04bf4c84f182
 SHA1 (patch-src_hugin1_calibrate__lens_LensCalFrame.cpp) = 9b815a681317cb19880e7bb6ef170bc14d01b28b
 SHA1 (patch-src_hugin1_hugin_CPEditorPanel.cpp) = d373c00d4783b3edc1bad5a67339163a0c23d8c5
 SHA1 (patch-src_hugin1_hugin_GLPreviewFrame.cpp) = fda8db4abf3ab10332d4309c90f0ef4f845c76a6
 SHA1 (patch-src_hugin1_ptbatcher_BatchFrame.cpp) = 51ce24f1eb99cc5c0151758299eb1ecc34128171
+SHA1 (patch-src_hugin__script__interface_hsi.i) = b11a52579fd12fdf7c51fef63049d285cb2b52e1
 SHA1 (patch-src_tools_align_image_stack.cpp) = fc2759f0722365d4c5339c5c8bc1eda1a6bf7a71
 SHA1 (patch-src_tools_tca__correct.cpp) = 73a86d3086336f168de5fb1cc02378a3ecc43104
