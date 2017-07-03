@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.617 2017/06/22 00:57:46 minskim Exp $
+# $NetBSD: Makefile,v 1.618 2017/07/03 21:03:29 adam Exp $
 #
 
 COMMENT=	Security tools
@@ -409,6 +409,7 @@ SUBDIR+=	py-lasso
 SUBDIR+=	py-libtaxii
 SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
+SUBDIR+=	py-mohawk
 SUBDIR+=	py-ndg_httpsclient
 SUBDIR+=	py-oath
 SUBDIR+=	py-oauth
