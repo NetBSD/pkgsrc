@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2686 2017/07/03 21:52:21 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2687 2017/07/03 22:20:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3703,3 +3703,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added net/py-awscli version 1.11.115 [adam 2017-07-03]
 	Updated graphics/libimagequant to 2.10.0 [adam 2017-07-03]
 	Updated graphics/py-Pillow to 4.2.0 [adam 2017-07-03]
+	Updated net/tor to 0.3.0.9 [wiz 2017-07-03]
