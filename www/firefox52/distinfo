@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2017/05/08 15:37:55 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2017/07/03 16:26:59 ryoon Exp $
 
-SHA1 (firefox-52.1.1esr.source.tar.xz) = 186cfaae66816ea469afcf9b88dea6230e480e0e
-RMD160 (firefox-52.1.1esr.source.tar.xz) = 446855dd3b11839b35e591772e47903bf5410b0c
-SHA512 (firefox-52.1.1esr.source.tar.xz) = 23f88de0a084341d54aab107bbf71b965a3f5be192ec8681b8b824c7e13d47968a0e56f4acfd2d2c5487c2e4c963e75ea6aeed400add915b3fb6403ee8810374
-Size (firefox-52.1.1esr.source.tar.xz) = 211643688 bytes
+SHA1 (firefox-52.2.1esr.source.tar.xz) = 38396fbc760669533f0a4facaa6ec489ae99f320
+RMD160 (firefox-52.2.1esr.source.tar.xz) = 1904238678469340f519416e87b0de6971996f85
+SHA512 (firefox-52.2.1esr.source.tar.xz) = 1d79e6e4625cf7994f6d6bbdf227e483fc407bcdb20e0296ea604969e701f551b5df32f578d4669cf654b65927328c8eb0f717c7a12399bf1b02a6ac7a0cd1d3
+Size (firefox-52.2.1esr.source.tar.xz) = 212033732 bytes
 SHA1 (patch-aa) = c1084caa275e57b716c3499301f7fc3f99ef5026
 SHA1 (patch-ao) = 8b7125ef3b193fca4d03386142887b2f8d5015c5
 SHA1 (patch-as) = 632ebd35287f8f97d18721d39a0514d4cdbb12cc
@@ -21,7 +21,6 @@ SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598
 SHA1 (patch-config_system-headers) = fd0cb4d2061af1eaa34313370a57720ed693607f
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-dom_base_moz.build) = 5200cbfcf7b781324dca4c55d01bc8559a56aa4c
-SHA1 (patch-dom_filesystem_compat_FileSystemDirectoryReader.h) = 27ca83f35910360ff5f8469c5c43104a079d8217
 SHA1 (patch-dom_media_AudioStream.cpp) = 3d2e3d92849a355c05d7ec0ded61d551ffe0c581
 SHA1 (patch-dom_media_AudioStream.h) = 26f70000cc4810834204d15b45e1469dd5f23617
 SHA1 (patch-dom_media_moz.build) = 844dbb94463b8aab11649a5aa11142de0179d86c
