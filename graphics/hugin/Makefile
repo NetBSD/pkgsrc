@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2017/04/30 01:21:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2017/07/03 20:48:03 adam Exp $
 
-DISTNAME=	hugin-2016.2.0
-PKGREVISION=	6
+DISTNAME=	hugin-2017.0
+PKGNAME=	${DISTNAME}.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,15 +11,20 @@ HOMEPAGE=	http://hugin.sourceforge.net/
 COMMENT=	Panorama photo stitcher
 LICENSE=	gnu-gpl-v2
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+
 DEPENDS+=	enblend-enfuse>=4.0:../../graphics/enblend-enfuse
 DEPENDS+=	p5-Image-ExifTool>=8.15:../../graphics/p5-Image-ExifTool
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt pkg-config
+CONFIGURE_ENV+=		MANDIR=${PKGMANDIR}
 
-CMAKE_ARGS+=		-DBUILD_HSI=OFF
+PY_PATCHPLIST=		yes
+REPLACE_PYTHON+=	src/hugin_script_interface/*.py
+REPLACE_PYTHON+=	src/hugin_script_interface/plugins/*.py
+REPLACE_PYTHON+=	src/hugin_script_interface/plugins-dev/*.py
 
 SUBST_CLASSES+=		apple
 SUBST_MESSAGE.apple=	Avoiding Mac OS X application bundles
@@ -45,7 +50,8 @@ SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
 .include "../../graphics/libpano13/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/vigra/buildlink3.mk"
-#.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
