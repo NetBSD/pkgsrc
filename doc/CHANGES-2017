@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2661 2017/07/03 11:07:35 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2662 2017/07/03 11:49:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3666,3 +3666,4 @@ Changes to the packages collection and infrastructure in 2017:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q2 branch [jperkin 2017-07-03]
 	Updated graphics/png to 1.6.30 [wiz 2017-07-03]
 	Updated net/syncthing to 0.14.31 [wiz 2017-07-03]
+	Updated finance/gnucash to 2.6.17 [wiz 2017-07-03]
