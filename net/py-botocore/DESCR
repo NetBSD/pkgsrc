@@ -1,0 +1,3 @@
+Botocore is a low-level interface to a growing number of Amazon Web Services.
+Botocore serves as the foundation for the AWS-CLI command line utilities.
+It will also play an important role in the boto3.x project.
