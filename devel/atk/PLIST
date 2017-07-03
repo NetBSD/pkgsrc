@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2016/10/21 22:47:59 kamil Exp $
+@comment $NetBSD: PLIST,v 1.43 2017/07/03 18:07:44 prlw1 Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -85,7 +85,7 @@ share/gtk-doc/html/atk/atk-AtkSocket.html
 share/gtk-doc/html/atk/atk-AtkState.html
 share/gtk-doc/html/atk/atk-Versioning-Utilities.html
 share/gtk-doc/html/atk/atk.devhelp2
-share/gtk-doc/html/atk/atkobject.html
+share/gtk-doc/html/atk/base-object.html
 share/gtk-doc/html/atk/data.html
 share/gtk-doc/html/atk/deprecated.html
 share/gtk-doc/html/atk/home.png
@@ -132,6 +132,7 @@ share/locale/eu/LC_MESSAGES/atk10.mo
 share/locale/fa/LC_MESSAGES/atk10.mo
 share/locale/fi/LC_MESSAGES/atk10.mo
 share/locale/fr/LC_MESSAGES/atk10.mo
+share/locale/fur/LC_MESSAGES/atk10.mo
 share/locale/ga/LC_MESSAGES/atk10.mo
 share/locale/gd/LC_MESSAGES/atk10.mo
 share/locale/gl/LC_MESSAGES/atk10.mo
