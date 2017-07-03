@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2017/05/29 16:00:27 adam Exp $
+# $NetBSD: Makefile,v 1.40 2017/07/03 17:43:36 adam Exp $
 
-DISTNAME=	Sphinx-1.6.2
+DISTNAME=	Sphinx-1.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/Sphinx/}
@@ -24,14 +24,16 @@ DEPENDS+=	${PYPKGPREFIX}-sphinxcontrib-websupport-[0-9]*:../../textproc/py-sphin
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 DEPENDS+=	${PYPKGPREFIX}-typing-[0-9]*:../../devel/py-typing
 # test dependency
+BUILD_DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+BUILD_DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 
-USE_LANGUAGES=	#none
+USE_LANGUAGES=		# none
+USE_TOOLS+=		makeinfo
 
 REPLACE_PYTHON+=	sphinx/pycode/pgen2/token.py
 
-USE_TOOLS+=	makeinfo
 do-test:
 	cd ${WRKSRC}/tests && ${PYTHONBIN} run.py
 
