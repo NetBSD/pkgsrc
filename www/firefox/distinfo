@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.285 2017/06/30 16:45:05 tsutsui Exp $
+$NetBSD: distinfo,v 1.286 2017/07/03 12:27:49 ryoon Exp $
 
-SHA1 (firefox-54.0.source.tar.xz) = 44e40c77f58e3b203dc60f51c5a02993f6c38ee5
-RMD160 (firefox-54.0.source.tar.xz) = 310f21498bc69939049d3ca881674a40fba8da21
-SHA512 (firefox-54.0.source.tar.xz) = 0ff6960804e7f6d3e15faeb14b237fee45acae31b4652a6cc5cafa1a1b1eab3537616c3e8ea6d8f3109c87dcc8f86f0df3da2627903b80061c8a62fb11598ed9
-Size (firefox-54.0.source.tar.xz) = 229178564 bytes
+SHA1 (firefox-54.0.1.source.tar.xz) = 1378f3e4f481fb3d6fcc67e20390d932bdff67ae
+RMD160 (firefox-54.0.1.source.tar.xz) = 51b16822922c8368ab26e9f2597e6ed81f98790c
+SHA512 (firefox-54.0.1.source.tar.xz) = 43607c2c0af995a21dc7f0f68b24b7e5bdb3faa5ee06025901c826bfe4d169256ea1c9eb5fcc604c4d6426ced53e80787c12fc07cda014eca09199ef3df783a2
+Size (firefox-54.0.1.source.tar.xz) = 229935420 bytes
 SHA1 (patch-aa) = 3ba9735f6b2da91f9699e54e9390ec90d3cc5577
 SHA1 (patch-browser_app_nsBrowserApp.cpp) = 915f03770ac4a73d7554f213ce3c7f76d7a34cf0
 SHA1 (patch-browser_confvars.sh) = d4f70fd4672416ce5c98181b974f8d8df9a6069f
