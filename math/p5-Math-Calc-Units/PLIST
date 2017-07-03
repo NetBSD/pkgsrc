@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/03 16:22:42 bsiegert Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Compute.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Base.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Base2Metric.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Byte.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Combo.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Date.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Distance.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Metric.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Multi.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Convert/Time.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Grammar.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Grammar.y
+${PERL5_SUB_INSTALLVENDORLIB}/Math/Calc/Units/Rank.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Math/Calc/Units/.packlist
+${PERL5_SUB_INSTALLVENDORBIN}/ucalc
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Math::Calc::Units.3
