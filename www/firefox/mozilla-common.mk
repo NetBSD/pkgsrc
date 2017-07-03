@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.94 2017/05/01 00:13:45 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.95 2017/07/03 12:27:49 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -74,7 +74,12 @@ CONFIGURE_ARGS+=	--enable-url-classifier
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
 
+#.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && ${OPSYS} != "SunOS"
+#BUILD_DEPENDS+=		cargo-[0-9]*:../../devel/cargo
+#CONFIGURE_ARGS+=	--enable-rust
+#.else
 CONFIGURE_ARGS+=	--disable-rust
+#.endif
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
