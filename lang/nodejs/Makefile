@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2017/06/15 18:16:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.102 2017/07/03 15:14:47 fhajny Exp $
 
-DISTNAME=	node-v8.1.2
+DISTNAME=	node-v8.1.3
 
 CONFIGURE_ARGS+=	--with-intl=system-icu
 
