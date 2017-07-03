@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.4 2017/06/19 20:14:45 adam Exp $
+$NetBSD: patch-configure,v 1.5 2017/07/03 21:50:32 adam Exp $
 
 Remove unwanted compiler flags.
 
---- configure.orig	2017-04-05 16:21:29.000000000 +0000
+--- configure.orig	2017-07-02 21:40:53.000000000 +0000
 +++ configure
 @@ -2,7 +2,7 @@
  
@@ -12,8 +12,8 @@ Remove unwanted compiler flags.
 +VERSION=$(awk -F\" '/LIQ_VERSION_STRING/ {print $2}' libimagequant.h)
  
  DEBUG=
- SSE=auto
-@@ -125,7 +125,7 @@ cflags "-std=c99 -I."
+ QUIET=0
+@@ -136,7 +136,7 @@ cflags "-std=c99 -I."
  
  # DEBUG
  if [ -z "$DEBUG" ]; then
@@ -22,7 +22,7 @@ Remove unwanted compiler flags.
      status "Debug" "no"
  else
      cflags "-O1 -g"
-@@ -163,15 +163,9 @@ if [ -n "$OPENMP" ]; then
+@@ -174,15 +174,9 @@ if [ -n "$OPENMP" ]; then
      else
          OPENMPFLAGS="-fopenmp"
      fi
@@ -38,7 +38,7 @@ Remove unwanted compiler flags.
  else
      # silence warnings about omp pragmas
      cflags "-Wno-unknown-pragmas"
-@@ -179,20 +173,10 @@ else
+@@ -190,20 +184,10 @@ else
      status "OpenMP" "no"
  fi
  
