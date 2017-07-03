@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.11 2014/01/25 10:45:50 wiz Exp $
+# $NetBSD: application.mk,v 1.12 2017/07/03 18:13:43 joerg Exp $
 #
 # Replace the #! interpreter for Python scripts.
 #
@@ -19,7 +19,7 @@
 
 .if defined(REPLACE_PYTHON)
 REPLACE_INTERPRETER+=	python
-REPLACE.python.old=	.*python[^ ]*
+REPLACE.python.old=	.*python3\{0,1\}[^ ]*
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	${REPLACE_PYTHON}
 .endif
