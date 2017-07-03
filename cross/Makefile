@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2016/10/19 12:49:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2017/07/03 17:29:37 ryoon Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -47,6 +47,7 @@ SUBDIR+=	nios2-gcc
 SUBDIR+=	nios2-gcc3
 SUBDIR+=	nios2-gcc41
 SUBDIR+=	objconv
+SUBDIR+=	pdp11-aout-binutils
 SUBDIR+=	stlink
 SUBDIR+=	uisp
 
