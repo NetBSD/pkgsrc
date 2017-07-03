@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2017/07/03 20:56:04 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2017/07/03 21:37:29 wiz Exp $
 
 DISTNAME=	pyOpenSSL-17.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,15 +16,9 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.5.2:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 BUILD_DEPENDS+=	${PYPKGPREFIX}-pretend-[0-9]*:../../devel/py-pretend
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-do-test:
-	cd ${WRKSRC} && PYTHONPATH=src py.test-${PYVERSSUFFIX} -v -k "not test_verify_with_time and not test_set_default_verify_paths and not test_set_verify_callback_exception"
-.else
 # https://github.com/pyca/pyopenssl/issues/656
 do-test:
 	cd ${WRKSRC} && PYTHONPATH=src py.test-${PYVERSSUFFIX} -v
-.endif
 
 .include "../../lang/python/egg.mk"
 .include "../../security/openssl/buildlink3.mk"
