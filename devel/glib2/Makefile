@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.233 2017/05/16 11:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.234 2017/07/03 18:47:29 adam Exp $
 
 .include "Makefile.common"
 
@@ -52,6 +52,12 @@ CONFIGURE_ENV+=		LIBELF_LIBS='-lelf'
 .  else
 .  include "../../devel/libelf/buildlink3.mk"
 .  endif
+.endif
+
+PLIST_VARS+=	unix
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} != "Darwin"
+PLIST.unix=	yes
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
