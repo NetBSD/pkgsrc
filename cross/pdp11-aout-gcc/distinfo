@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2017/07/03 17:32:14 ryoon Exp $
+
+SHA1 (gcc-7.1.0.tar.gz) = a6dca81b25a97416211218f725b26f01e8063e05
+RMD160 (gcc-7.1.0.tar.gz) = c4792606231ec48d2aa473afbe3498a310acf1a4
+SHA512 (gcc-7.1.0.tar.gz) = 79fb15f0bb2ce8ac8436075a1b2ec864658b86dd0b4b4ae9930ff450686cf41caa9de20a17763e48bbcb73dddfd71cb9ab2134aaa592a0b2548ff24aba9be782
+Size (gcc-7.1.0.tar.gz) = 108377377 bytes
+SHA1 (patch-contrib_download__prerequisites) = be9b02068b3d4d783e92bee66d480bb2bfe35a84
+SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
+SHA1 (patch-libcc1_configure) = 0368733ddf79b109fcc7146b0baeb37ab31e634a
+SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
+SHA1 (patch-libiberty_Makefile.in) = 7ea2578b5b77cb4adcd4afe3d63739efc68a1540
