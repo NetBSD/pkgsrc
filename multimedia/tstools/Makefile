@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2014/12/21 12:12:42 mef Exp $
+# $NetBSD: Makefile,v 1.7 2017/07/03 11:52:37 wiedi Exp $
 #
 
 DISTNAME=	tstools-1_11
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/_/./}
 CATEGORIES=	multimedia
 MASTER_SITES=	https://tstools.googlecode.com/files/
@@ -16,6 +17,8 @@ MAKE_JOBS_SAFE=		no
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/./}
 USE_TOOLS+=	gmake
+
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 TSPROGS=es2ts \
 	esdots \
