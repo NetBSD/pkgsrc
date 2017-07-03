@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2017/05/01 05:50:08 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.62 2017/07/03 16:37:52 ryoon Exp $
 bin/thunderbird
 lib/thunderbird/application.ini
 lib/thunderbird/blocklist.xml
@@ -3370,7 +3370,6 @@ lib/thunderbird/defaults/pref/mailnews.js
 lib/thunderbird/defaults/pref/mdn.js
 lib/thunderbird/defaults/pref/smime.js
 lib/thunderbird/defaults/pref/thunderbird-branding.js
-lib/thunderbird/defaults/profile/localstore.rdf
 lib/thunderbird/defaults/profile/mimeTypes.rdf
 lib/thunderbird/defaults/profile/prefs.js
 lib/thunderbird/dependentlibs.list
