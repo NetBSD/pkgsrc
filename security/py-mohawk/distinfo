@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/03 21:03:29 adam Exp $
+
+SHA1 (mohawk-0.3.4.tar.gz) = c164f113a0bfbb38f9fc36c25bc5520b27b0b283
+RMD160 (mohawk-0.3.4.tar.gz) = df9a7812085cc06fa7106301d5ce04613d46fbce
+SHA512 (mohawk-0.3.4.tar.gz) = f5a5d99d80e7806f92d5078d4d6a7f0b1fd1d4759a9897cfd178fe1ed07b27831c707dbd9b8b6a735d392845e532f2805e27cfd78e69ea72f22efaac1dafc9a5
+Size (mohawk-0.3.4.tar.gz) = 15616 bytes
