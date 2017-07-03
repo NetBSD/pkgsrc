@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2017/06/13 06:09:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.18 2017/07/03 21:25:03 fhajny Exp $
 
-DISTNAME=	consul-0.8.4
+DISTNAME=	consul-0.8.5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hashicorp/}
 
