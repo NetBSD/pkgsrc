@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.50 2017/05/17 11:17:04 wiz Exp $
+# $NetBSD: extension.mk,v 1.51 2017/07/03 18:14:40 joerg Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -75,4 +75,11 @@ PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
 PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
+.endif
+
+DISTUTILS_BUILDDIR_IN_TEST_ENV?=	no
+
+.if ${DISTUTILS_BUILDDIR_IN_TEST_ENV} == "yes"
+DISTUTILS_BUILDDIR_CMD=	cd ${WRKSRC} && ${PYTHONBIN} ${.CURDIR}/../../lang/python/distutils-builddir.py
+TEST_ENV+=	PYTHONPATH=${DISTUTILS_BUILDDIR_CMD:sh}
 .endif
