@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.220 2017/03/03 08:22:12 prlw1 Exp $
+$NetBSD: distinfo,v 1.221 2017/07/03 17:42:45 prlw1 Exp $
 
-SHA1 (glib-2.50.3.tar.xz) = 3177471fb11fd2fd5abb77ec0675ee0049521009
-RMD160 (glib-2.50.3.tar.xz) = 3bc3bf5ae5d9997520e970c5c5a269538d871889
-SHA512 (glib-2.50.3.tar.xz) = ef35806c15170b6608445f255136c0bebd2d433adf903c2af2865f6a57b4f2fcfc1e4a7cea1a0dac48ff5fe26248fbf7886dba4a8d209506f0a94160df8fb7af
-Size (glib-2.50.3.tar.xz) = 7589284 bytes
+SHA1 (glib-2.52.3.tar.xz) = 9e31cce788d018894e6e0b1350263bc11b41cff8
+RMD160 (glib-2.52.3.tar.xz) = 367e119f257be876718ce135d768705f9f8a56b6
+SHA512 (glib-2.52.3.tar.xz) = a068f2519cfb82de8d4b7f004e7c1f15e841cad4046430a83b02b359d011e0c4077cdff447a1687ed7c68f1a11b4cf66b9ed9fc23ab5f0c7c6be84eb0ddc3017
+Size (glib-2.52.3.tar.xz) = 7679972 bytes
 SHA1 (patch-aa) = d197ded7ca05c2e37396e6c6b185797bd9bb2821
 SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
 SHA1 (patch-ac) = 96e153339675457356f71e35d20375bed669d337
@@ -14,14 +14,14 @@ SHA1 (patch-aha) = ade66edd87a5e76a1256bd8bcdc9bc3dd614885c
 SHA1 (patch-ak) = edf116968bd3c787fea77787add7e0164b6f1ffb
 SHA1 (patch-al) = 4eb4e241488dabe254973f5ada92898af57cd0f5
 SHA1 (patch-am) = 99f54927d76580dfeda2a6b1909e1bea5dbdc293
-SHA1 (patch-an) = ce167f6441480b1c0299350a23e087c6de942018
+SHA1 (patch-an) = 64618bac5556cdcda5b33582618226366a8b43be
 SHA1 (patch-cb) = 56e2a9b2de04c8e528faf7ce778503fa55dcc3ac
 SHA1 (patch-cc) = f3d37cbb483863aab602f9c1209650e3e4795871
 SHA1 (patch-cd) = a8a90eca84a687400a92b0e26fafe4b9b6014ec3
 SHA1 (patch-ck) = 324116cc6fb8dbce8ce8d20f5b237fc469a55cd2
-SHA1 (patch-cl) = 871e1ca59f697eddd6692702fc7d63a2df826afc
+SHA1 (patch-cl) = 18f34d749a8ca5a996a1be0ebd3c8df9dc012839
 SHA1 (patch-cm) = 534af37ae8f2bd667f630142058d4de5ea91be93
-SHA1 (patch-gio_gdbusauthmechanismsha1.c) = dfbd4a85ea842f11e4bb76d39c5509fb8b0d5baa
+SHA1 (patch-gio_gdbusauthmechanismsha1.c) = 39b9e9375bc8832c2c177c8e89228790d9ae9e7b
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182
 SHA1 (patch-gio_inotify_inotify-kernel.c) = 18fc55be06dfa4ebf7128b8d1888aaff3b2b95c0
 SHA1 (patch-glib_gmain.c) = d09ff66e475ee52d37ac0dcb463110f690ce6511
