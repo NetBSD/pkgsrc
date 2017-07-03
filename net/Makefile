@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1163 2017/07/03 21:15:50 adam Exp $
+# $NetBSD: Makefile,v 1.1164 2017/07/03 21:24:14 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -615,6 +615,7 @@ SUBDIR+=	py-Socks
 SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
 SUBDIR+=	py-apache-libcloud
+SUBDIR+=	py-awscli
 SUBDIR+=	py-beanstalkc
 SUBDIR+=	py-bitmessage
 SUBDIR+=	py-boto
