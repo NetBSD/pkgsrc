@@ -1,0 +1,6 @@
+Monitoring::Plugin and its associated Monitoring::Plugin::* modules are
+a family of perl modules to streamline writing Monitoring plugins. The
+main end user modules are Monitoring::Plugin, providing an
+object-oriented interface to the entire Monitoring::Plugin::*
+collection, and Monitoring::Plugin::Functions, providing a simpler
+functional interface to a useful subset of the available functionality.
