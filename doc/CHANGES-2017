@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2680 2017/07/03 17:43:16 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.2681 2017/07/03 18:08:08 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3687,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Added cross/pdp11-aout-binutils version 2.28 [ryoon 2017-07-03]
 	Added cross/pdp11-aout-gcc version 7.1.0 [ryoon 2017-07-03]
 	Updated devel/glib2 to 2.52.3 [prlw1 2017-07-03]
+	Updated devel/atk to 2.24.0 [prlw1 2017-07-03]
