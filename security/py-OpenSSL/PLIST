@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2016/04/20 16:05:57 leot Exp $
+@comment $NetBSD: PLIST,v 1.13 2017/07/03 19:37:52 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/OpenSSL/SSL.py
 ${PYSITELIB}/OpenSSL/SSL.pyc
 ${PYSITELIB}/OpenSSL/SSL.pyo
@@ -11,6 +16,9 @@ ${PYSITELIB}/OpenSSL/_util.pyo
 ${PYSITELIB}/OpenSSL/crypto.py
 ${PYSITELIB}/OpenSSL/crypto.pyc
 ${PYSITELIB}/OpenSSL/crypto.pyo
+${PYSITELIB}/OpenSSL/debug.py
+${PYSITELIB}/OpenSSL/debug.pyc
+${PYSITELIB}/OpenSSL/debug.pyo
 ${PYSITELIB}/OpenSSL/rand.py
 ${PYSITELIB}/OpenSSL/rand.pyc
 ${PYSITELIB}/OpenSSL/rand.pyo
@@ -20,8 +28,3 @@ ${PYSITELIB}/OpenSSL/tsafe.pyo
 ${PYSITELIB}/OpenSSL/version.py
 ${PYSITELIB}/OpenSSL/version.pyc
 ${PYSITELIB}/OpenSSL/version.pyo
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
