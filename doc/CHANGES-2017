@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2660 2017/07/03 11:07:11 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2661 2017/07/03 11:07:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3665,3 +3665,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated games/xpuyopuyo to 0.9.8 [seb 2017-07-02]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2017Q2 branch [jperkin 2017-07-03]
 	Updated graphics/png to 1.6.30 [wiz 2017-07-03]
+	Updated net/syncthing to 0.14.31 [wiz 2017-07-03]
