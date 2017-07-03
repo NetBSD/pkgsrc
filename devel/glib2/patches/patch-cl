@@ -1,10 +1,10 @@
-$NetBSD: patch-cl,v 1.11 2014/09/05 20:49:55 prlw1 Exp $
+$NetBSD: patch-cl,v 1.12 2017/07/03 17:42:45 prlw1 Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
 - Don't install completion data.
 (patch-an)
---- gio/Makefile.am.orig	2014-02-17 18:06:20.000000000 +0000
+--- gio/Makefile.am.orig	2017-06-22 12:53:56.000000000 +0000
 +++ gio/Makefile.am
 @@ -1,6 +1,6 @@
  include $(top_srcdir)/glib.mk
@@ -13,8 +13,8 @@ $NetBSD: patch-cl,v 1.11 2014/09/05 20:49:55 prlw1 Exp $
 +SUBDIRS = 
  
  if OS_UNIX
- SUBDIRS += xdgmime
-@@ -240,7 +240,7 @@ platform_libadd += win32/libgiowin32.la
+ if !OS_COCOA
+@@ -244,7 +244,7 @@ platform_libadd += win32/libgiowin32.la
  platform_deps += win32/libgiowin32.la
  endif
  
@@ -23,8 +23,8 @@ $NetBSD: patch-cl,v 1.11 2014/09/05 20:49:55 prlw1 Exp $
  
  if HAVE_FAM
  SUBDIRS += fam
-@@ -750,14 +750,6 @@ gapplication_LDADD = libgio-2.0.la 			\
- 	$(NULL)
+@@ -898,14 +898,6 @@ gapplication_LDADD = libgio-2.0.la 			\
+ endif
  endif
  
 -completiondir = $(datadir)/bash-completion/completions
