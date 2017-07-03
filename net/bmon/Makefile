@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2017/01/04 01:49:41 roy Exp $
+# $NetBSD: Makefile,v 1.19 2017/07/03 11:53:11 wiedi Exp $
 #
 
 DISTNAME=	bmon-3.8
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CPPFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
