@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2017/07/03 16:29:43 bsiegert Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/Config.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/ExitResult.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/Functions.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/Getopt.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/Performance.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/Range.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Monitoring/Plugin/Threshold.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/Monitoring/Plugin/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::Config.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::ExitResult.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::Functions.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::Getopt.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::Performance.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::Range.3
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/Monitoring::Plugin::Threshold.3
