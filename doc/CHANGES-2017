@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2681 2017/07/03 18:08:08 prlw1 Exp $
+$NetBSD: CHANGES-2017,v 1.2682 2017/07/03 19:11:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3688,3 +3688,5 @@ Changes to the packages collection and infrastructure in 2017:
 	Added cross/pdp11-aout-gcc version 7.1.0 [ryoon 2017-07-03]
 	Updated devel/glib2 to 2.52.3 [prlw1 2017-07-03]
 	Updated devel/atk to 2.24.0 [prlw1 2017-07-03]
+	Updated converters/py-simplejson to 3.11.1 [adam 2017-07-03]
+	Updated textproc/py-sphinx to 1.6.3 [adam 2017-07-03]
