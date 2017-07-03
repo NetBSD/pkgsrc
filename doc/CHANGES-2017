@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2684 2017/07/03 21:25:13 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2685 2017/07/03 21:26:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3696,3 +3696,8 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated www/py-channels to 1.1.6 [adam 2017-07-03]
 	Updated security/py-oauth2client to 4.1.2 [adam 2017-07-03]
 	Updated sysutils/consul to 0.8.5 [fhajny 2017-07-03]
+	Added security/py-mohawk version 0.3.4 [adam 2017-07-03]
+	Added textproc/py-jmespath version 0.9.3 [adam 2017-07-03]
+	Added net/py-botocore version 1.5.78 [adam 2017-07-03]
+	Added net/py-boto3 version 1.4.4 [adam 2017-07-03]
+	Added net/py-awscli version 1.11.115 [adam 2017-07-03]
