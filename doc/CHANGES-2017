@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2721 2017/07/04 20:51:22 kamil Exp $
+$NetBSD: CHANGES-2017,v 1.2722 2017/07/04 21:57:20 maya Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3755,3 +3755,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated net/nagios-plugin-snmp to 2.2.1 [jperkin 2017-07-04]
 	Updated math/ffts to 20170617 [gson 2017-07-04]
 	Updated devel/googletest to 1.8.0nb1 [kamil 2017-07-04]
+	Updated lang/gcc6 to 6.4.0 [maya 2017-07-04]
