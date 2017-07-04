@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2692 2017/07/04 08:52:47 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2693 2017/07/04 08:55:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3710,3 +3710,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/dbus to 1.10.20 [wiz 2017-07-04]
 	Updated time/khal to 0.9.6 [wiz 2017-07-04]
 	Updated x11/xterm to 330 [wiz 2017-07-04]
+	Updated audio/libopus to 1.2.1 [wiz 2017-07-04]
