@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2706 2017/07/04 13:12:09 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2707 2017/07/04 13:19:32 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3729,3 +3729,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/erlang-man to 20.0 [fhajny 2017-07-04]
 	Updated net/exabgp to 3.4.19nb1 [he 2017-07-04]
 	Added net/py-xandikos version 0.0.5 [wiz 2017-07-04]
+	Updated devel/librelp to 1.2.14 [fhajny 2017-07-04]
