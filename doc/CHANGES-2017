@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2708 2017/07/04 13:38:17 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2709 2017/07/04 13:50:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3742,3 +3742,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated sysutils/rsyslog-rabbitmq to 8.28.0 [fhajny 2017-07-04]
 	Updated sysutils/rsyslog-relp to 8.28.0 [fhajny 2017-07-04]
 	Updated sysutils/rsyslog-snmp to 8.28.0 [fhajny 2017-07-04]
+	Updated net/tcpflow to 1.4.5 [jperkin 2017-07-04]
