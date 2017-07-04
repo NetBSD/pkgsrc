@@ -1,0 +1,42 @@
+$NetBSD: patch-configure,v 1.1 2017/07/04 13:50:42 jperkin Exp $
+
+Shell portability.
+
+--- configure.orig	2015-09-23 12:34:56.000000000 +0000
++++ configure
+@@ -5983,7 +5983,7 @@ then
+ $as_echo "$as_me: g++ is really clang++" >&6;}
+    using_clang=yes
+ fi
+-if test x$CXX == "xclang++" ; then
++if test x$CXX = "xclang++" ; then
+    using_clang=yes
+ fi
+ 
+@@ -6000,7 +6000,7 @@ if test x"${mingw}" != "xyes" ; then
+   C_WARNINGS_TO_TEST="$C_WARNINGS_TO_TEST -Wall -Wstrict-prototypes"
+ fi
+ 
+-if test $using_clang == "no" ; then
++if test $using_clang = "no" ; then
+   # -Wstrict-null-sentinel is not supported under clang
+   CXX_WARNINGS_TO_TEST="$CXX_WARNINGS_TO_TEST -Wstrict-null-sentinel"
+ fi
+@@ -6431,7 +6431,7 @@ $as_echo "#define __LINUX__ 1" >>confdef
+      ;;
+ esac
+ 
+-if test x"${mingw}" == "xno" ; then
++if test x"${mingw}" = "xno" ; then
+   # Bring additional directories where things might be found into our
+   # search path. I don't know why autoconf doesn't do this by default
+   for spfx in /usr/local /opt/local /sw /usr/local/ssl /usr/boost/include ; do
+@@ -6453,7 +6453,7 @@ $as_echo "$as_me:  LDFLAGS = ${LDFLAGS} 
+ fi
+ 
+ if test -r /bin/uname.exe ; then
+-  if test "`uname -o`" == "Msys" ; then
++  if test "`uname -o`" = "Msys" ; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: Compiling with Msys. Setting flags appropriately." >&5
+ $as_echo "$as_me: Compiling with Msys. Setting flags appropriately." >&6;}
+     LIBS="$LIBS -lws2_32 -lgdi32"
