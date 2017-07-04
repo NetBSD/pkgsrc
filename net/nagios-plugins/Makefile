@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2016/10/01 18:23:18 bouyer Exp $
+# $NetBSD: Makefile,v 1.45 2017/07/04 19:45:18 jperkin Exp $
 #
 
-PKGREVISION=	4
 CATEGORIES=	net sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,12 +12,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../net/nagios-plugins/Makefile.common"
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_TOOLS+=	msgfmt msgmerge intltool perl:run xgettext
 
 PKG_GROUPS+=	${NAGIOS_GROUP}
-BUILD_DEFS+=	${NAGIOS_GROUP}
 
 CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 		--without-smbclient-command --without-snmpget-command \
@@ -28,13 +24,14 @@ CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_dhcp ${SETUID_ROOT_PERMS}
 
-PLIST_VARS+=	linux sunos NetBSD
-.if ${OPSYS} == "Linux"
-PLIST.linux=	yes
-.elif ${OPSYS} == "SunOS"
-PLIST.sunos=	yes
-.elif ${OPSYS} == "NetBSD"
-PLIST.NetBSD=	yes
+PLIST_VARS+=	ide swap
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
+PLIST.ide=	yes
+.endif
+
+.if ${OPSYS} != "Darwin"
+PLIST.swap=	yes
 .endif
 
 .if ${OPSYS} == "NetBSD"

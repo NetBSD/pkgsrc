@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.4 2015/04/03 17:50:27 rodent Exp $
+$NetBSD: patch-ah,v 1.5 2017/07/04 19:45:18 jperkin Exp $
+
+Unknown patch, please document.
 
 --- plugins-scripts/check_ntp.pl.orig	2014-03-04 21:41:57.000000000 +0000
 +++ plugins-scripts/check_ntp.pl
