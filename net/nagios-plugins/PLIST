@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/04/03 17:50:27 rodent Exp $
+@comment $NetBSD: PLIST,v 1.11 2017/07/04 19:45:18 jperkin Exp $
 libexec/nagios/check_by_ssh
 libexec/nagios/check_clamd
 libexec/nagios/check_dhcp
@@ -11,8 +11,7 @@ libexec/nagios/check_fping
 libexec/nagios/check_ftp
 libexec/nagios/check_http
 libexec/nagios/check_icmp
-${PLIST.linux}libexec/nagios/check_ide_smart
-${PLIST.NetBSD}libexec/nagios/check_ide_smart
+${PLIST.ide}libexec/nagios/check_ide_smart
 libexec/nagios/check_imap
 libexec/nagios/check_ircd
 libexec/nagios/check_jabber
@@ -40,14 +39,13 @@ libexec/nagios/check_smtp
 libexec/nagios/check_spop
 libexec/nagios/check_ssh
 libexec/nagios/check_ssmtp
-libexec/nagios/check_swap
+${PLIST.swap}libexec/nagios/check_swap
 libexec/nagios/check_tcp
 libexec/nagios/check_time
 libexec/nagios/check_udp
 libexec/nagios/check_ups
 libexec/nagios/check_users
 libexec/nagios/negate
-${PLIST.sunos}libexec/nagios/pst3
 libexec/nagios/urlize
 libexec/nagios/utils.pm
 libexec/nagios/utils.sh

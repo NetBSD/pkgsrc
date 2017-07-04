@@ -1,15 +1,16 @@
-$NetBSD: distinfo,v 1.20 2016/10/01 18:23:18 bouyer Exp $
+$NetBSD: distinfo,v 1.21 2017/07/04 19:45:18 jperkin Exp $
 
-SHA1 (nagios-plugins-2.0.3.tar.gz) = 29b6183ab9d796299dc17c395eef493415d1e9d6
-RMD160 (nagios-plugins-2.0.3.tar.gz) = b682b126c78df51f64d9cb8599d2f9dfd411d5f4
-SHA512 (nagios-plugins-2.0.3.tar.gz) = 2753e6f3fc7433a5583fee01e63a65b9ea74155964f2b6e6bf3458e56cb29ea5dbd020f83816044a717b66d6548d203b3a082fba0faedcd629c7a8457bc19b36
-Size (nagios-plugins-2.0.3.tar.gz) = 2659772 bytes
-SHA1 (patch-ad) = 04115d0c41419fccfc2735745dc349f81061fff9
-SHA1 (patch-af) = 8fd2e50ca63f014f88195552884913c7383cb6a1
-SHA1 (patch-ah) = f884e80c1e09fefd5e37f087d95d3b76b9d44ab6
-SHA1 (patch-ai) = 645ebd4ac16a71bd5944fe3850c809cb45bf6a4c
-SHA1 (patch-ak) = 093638669dd5b524d8a9b31d452f1ba737e684b3
-SHA1 (patch-an) = 6ba8dec0eb62cd0097809daf8075248afd448695
-SHA1 (patch-configure) = 8a06bbd0fa0649625ffb1c8e2f4b667714a40fe4
-SHA1 (patch-plugins-root_Makefile.in) = e4352f38bd0085f5c0acd9d058f1aa5d76676fff
-SHA1 (patch-plugins__check_swap.c) = 4a32398b3e8e596b9f67b3ea95a3acce37287b0b
+SHA1 (nagios-plugins-2.2.1.tar.gz) = 0d3fc8876343a906f0dcc2c00850e4ad956a150a
+RMD160 (nagios-plugins-2.2.1.tar.gz) = 39c364ac08854a1829d47562d4add1ae58a49334
+SHA512 (nagios-plugins-2.2.1.tar.gz) = 6ffe313a56a305b382f62abc0f0958d7078f9050e1340f30721d6e6f71944b57b1650e90e6835c35dd7c9f3f4b4cee9f235b8382b0811db30b3729daaafc9bc3
+Size (nagios-plugins-2.2.1.tar.gz) = 2728818 bytes
+SHA1 (patch-ad) = cad52f9d8c5a6b53a1b512238df1590c0fa2177d
+SHA1 (patch-af) = 12ea1194eee95ea15ecc6d7daedd10eb9541ee6e
+SHA1 (patch-ah) = 99b5eb4896262f5aa1de60e9f42c395a59794a6b
+SHA1 (patch-an) = a6adf179db754f98b2da118a8c1101edda026fbc
+SHA1 (patch-configure) = d418b81f06e22b769cd187a77f45f0add605698e
+SHA1 (patch-plugins-root_Makefile.in) = 46e8968df375ca35d453e36c277d4052f125897b
+SHA1 (patch-plugins-scripts_check__breeze.pl) = 57ffda78989fd0d0c0fa26c74b7f53bd083dab4f
+SHA1 (patch-plugins-scripts_check__wave.pl) = 535b008877cad780afa2ed3429ffb84e7da3ec28
+SHA1 (patch-plugins__check_swap.c) = b822de3488ecace977a739ebcfc56229763cd945
+SHA1 (patch-plugins_check__radius.c) = 3f86bac4f7aa52931bad46d9ee4a421c2ee744f3
