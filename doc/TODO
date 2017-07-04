@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17505 2017/07/04 09:27:33 wiz Exp $
+$NetBSD: TODO,v 1.17506 2017/07/04 09:36:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -784,7 +784,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
 	o gromacs-5.1.2
-	o gsl-2.4
 	o gss-1.0.3
 	o gst-plugins1-omx-1.10.0
 	o gstreamer1-1.12.1
