@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2017/07/04 10:06:56 jperkin Exp $
+
+SHA1 (shunit2-2.1.6.tgz) = 9cd0e1834b221c378c2f8a6f0baf10410e53680f
+RMD160 (shunit2-2.1.6.tgz) = f435dc9d2f243931b42e5bf7dcd60e99b7d9f2b9
+SHA512 (shunit2-2.1.6.tgz) = c78cf349d72a9048e4932108a62b2d1873019b9b1909c3fb1bd7e873e7bb62df58c1941d916508dc60ef6ba0261a2bc6ee9e25d654eefdcce997682f2bc748d7
+Size (shunit2-2.1.6.tgz) = 61558 bytes
