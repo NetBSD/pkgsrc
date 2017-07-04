@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/01/22 14:57:41 gson Exp $
+# $NetBSD: Makefile,v 1.2 2017/07/04 19:51:42 gson Exp $
 
-GIT_COMMIT=		fa1780c68593762b1e4bdbc46d83912db3eba27a
+GIT_COMMIT=		fe86885ecafd0d16eb122f3212403d1d5a86e24e
 
 DISTNAME=		${GIT_COMMIT}
-PKGNAME=		ffts-20140106
+PKGNAME=		ffts-20170617
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GITHUB:=anthonix/}/ffts/archive/
 
@@ -14,9 +14,14 @@ LICENSE=		modified-bsd
 
 WRKSRC=			${WRKDIR}/ffts-${GIT_COMMIT}
 
+USE_TOOLS+=		gmake autoconf automake autoheader aclocal
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-sse --enable-single
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../mk/bsd.pkg.mk"
