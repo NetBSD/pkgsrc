@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2693 2017/07/04 08:55:17 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2694 2017/07/04 08:56:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3711,3 +3711,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated time/khal to 0.9.6 [wiz 2017-07-04]
 	Updated x11/xterm to 330 [wiz 2017-07-04]
 	Updated audio/libopus to 1.2.1 [wiz 2017-07-04]
+	Updated devel/p5-File-ShareDir to 1.104 [wiz 2017-07-04]
