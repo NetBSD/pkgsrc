@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2702 2017/07/04 09:42:35 adam Exp $
+$NetBSD: CHANGES-2017,v 1.2703 2017/07/04 10:08:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3723,3 +3723,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated emulators/fuse-emulator to 1.3.7 [adam 2017-07-04]
 	Updated emulators/fuse-emulator-utils to 1.3.2 [adam 2017-07-04]
 	Updated x11/gtk3 to 3.22.16 [adam 2017-07-04]
+	Added devel/shunit2 version 2.1.6 [jperkin 2017-07-04]
