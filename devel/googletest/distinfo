@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/10/31 16:43:17 wiz Exp $
+$NetBSD: distinfo,v 1.8 2017/07/04 20:51:07 kamil Exp $
 
 SHA1 (googletest-1.8.0.tar.gz) = e7e646a6204638fe8e87e165292b8dd9cd4c36ed
 RMD160 (googletest-1.8.0.tar.gz) = b0a9e48874df3291a261ed85a0c0a4d677b01dc1
 SHA512 (googletest-1.8.0.tar.gz) = 1dbece324473e53a83a60601b02c92c089f5d314761351974e097b2cf4d24af4296f9eb8653b6b03b1e363d9c5f793897acae1f0c7ac40149216035c4d395d9d
 Size (googletest-1.8.0.tar.gz) = 1281617 bytes
+SHA1 (patch-googletest_include_gtest_internal_gtest-port-arch.h) = 105ef4b84a5fea957c9cffc0f202829c774136dc
+SHA1 (patch-googletest_include_gtest_internal_gtest-port.h) = 86319a127b60083e07d565dbeb496af17a6f84e4
