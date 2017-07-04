@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2450 2017/06/24 06:47:58 adam Exp $
+# $NetBSD: Makefile,v 1.2451 2017/07/04 10:07:43 jperkin Exp $
 #
 
 COMMENT=	Development utilities
@@ -2291,6 +2291,7 @@ SUBDIR+=	sgb
 SUBDIR+=	sgi-stl
 SUBDIR+=	sgi-stl-docs
 SUBDIR+=	shtk
+SUBDIR+=	shunit2
 SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
 SUBDIR+=	slibtool
