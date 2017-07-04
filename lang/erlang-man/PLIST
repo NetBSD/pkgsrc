@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2017/03/17 14:37:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.22 2017/07/04 11:40:48 fhajny Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -84,7 +84,6 @@ lib/erlang/man/man3/any.3
 lib/erlang/man/man3/application.3
 lib/erlang/man/man3/array.3
 lib/erlang/man/man3/asn1ct.3
-lib/erlang/man/man3/asn1rt.3
 lib/erlang/man/man3/auth.3
 lib/erlang/man/man3/base64.3
 lib/erlang/man/man3/beam_lib.3
@@ -144,7 +143,6 @@ lib/erlang/man/man3/edoc_extract.3
 lib/erlang/man/man3/edoc_layout.3
 lib/erlang/man/man3/edoc_lib.3
 lib/erlang/man/man3/edoc_run.3
-lib/erlang/man/man3/egd.3
 lib/erlang/man/man3/ei.3
 lib/erlang/man/man3/ei_connect.3
 lib/erlang/man/man3/eldap.3
@@ -216,7 +214,6 @@ lib/erlang/man/man3/gl.3
 lib/erlang/man/man3/global.3
 lib/erlang/man/man3/global_group.3
 lib/erlang/man/man3/glu.3
-lib/erlang/man/man3/gs.3
 lib/erlang/man/man3/heart.3
 lib/erlang/man/man3/http_uri.3
 lib/erlang/man/man3/httpc.3
@@ -289,8 +286,6 @@ lib/erlang/man/man3/os.3
 lib/erlang/man/man3/os_mon_mib.3
 lib/erlang/man/man3/os_sup.3
 lib/erlang/man/man3/otp_mib.3
-lib/erlang/man/man3/percept.3
-lib/erlang/man/man3/percept_profile.3
 lib/erlang/man/man3/pg2.3
 lib/erlang/man/man3/pool.3
 lib/erlang/man/man3/prettypr.3
@@ -368,6 +363,7 @@ lib/erlang/man/man3/tags.3
 lib/erlang/man/man3/tftp.3
 lib/erlang/man/man3/timer.3
 lib/erlang/man/man3/ttb.3
+lib/erlang/man/man3/typer.3
 lib/erlang/man/man3/unicode.3
 lib/erlang/man/man3/unix_telnet.3
 lib/erlang/man/man3/user.3
