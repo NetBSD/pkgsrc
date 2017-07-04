@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2689 2017/07/04 08:44:04 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2690 2017/07/04 08:48:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3707,3 +3707,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated security/libgcrypt to 1.7.8 [adam 2017-07-04]
 	Updated net/haproxy to 1.7.7 [adam 2017-07-04]
 	Updated devel/afl to 2.44b [wiz 2017-07-04]
+	Updated sysutils/dbus to 1.10.20 [wiz 2017-07-04]
