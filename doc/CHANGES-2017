@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2696 2017/07/04 09:00:19 wiz Exp $
+$NetBSD: CHANGES-2017,v 1.2697 2017/07/04 09:16:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3714,3 +3714,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated devel/p5-File-ShareDir to 1.104 [wiz 2017-07-04]
 	Updated net/p5-Net-DNS to 1.11 [wiz 2017-07-04]
 	Updated devel/p5-Specio to 0.38 [wiz 2017-07-04]
+	Updated time/py-vdirsyncer to 0.16.0 [wiz 2017-07-04]
