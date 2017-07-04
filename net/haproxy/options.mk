@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2016/11/13 19:37:18 morr Exp $
+# $NetBSD: options.mk,v 1.6 2017/07/04 07:04:17 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.haproxy
 PKG_SUPPORTED_OPTIONS=	pcre ssl deviceatlas lua
@@ -36,12 +36,12 @@ DEVICEATLAS_HOMEPAGE=	https://www.deviceatlas.com/deviceatlas-haproxy-module
 
 BUILD_MAKE_FLAGS+=	USE_DEVICEATLAS=1 DEVICEATLAS_SRC=../${DEVICEATLAS_DISTFILE}
 
-.if !exists(${DISTDIR}/${DEVICEATLAS_DISTFILE}.zip)
-FETCH_MESSAGE= 		"Please fetch ${DEVICEATLAS_DISTFILE}.zip manually from"
+.  if !exists(${DISTDIR}/${DEVICEATLAS_DISTFILE}.zip)
+FETCH_MESSAGE=		"Please fetch ${DEVICEATLAS_DISTFILE}.zip manually from"
 FETCH_MESSAGE+=		"${DEVICEATLAS_HOMEPAGE}"
-FETCH_MESSAGE+= 	"and put into"
-FETCH_MESSAGE+= 	"${DISTDIR}"
-.endif
+FETCH_MESSAGE+=		"and put into"
+FETCH_MESSAGE+=		"${DISTDIR}"
+.  endif
 .endif
 
 ###
