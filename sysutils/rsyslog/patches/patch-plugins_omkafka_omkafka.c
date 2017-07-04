@@ -1,16 +1,19 @@
-$NetBSD: patch-plugins_omkafka_omkafka.c,v 1.1 2017/05/22 23:43:00 joerg Exp $
+$NetBSD: patch-plugins_omkafka_omkafka.c,v 1.2 2017/07/04 13:31:16 fhajny Exp $
 
---- plugins/omkafka/omkafka.c.orig	2017-05-21 19:04:23.931288632 +0000
+Need strings.h for index().
+O_LARGEFILE not defined on at least NetBSD.
+
+--- plugins/omkafka/omkafka.c.orig	2017-06-27 13:40:22.000000000 +0000
 +++ plugins/omkafka/omkafka.c
-@@ -29,6 +29,7 @@
+@@ -25,6 +25,7 @@
+ #include <stdarg.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <strings.h>
+ #include <assert.h>
  #include <errno.h>
  #include <fcntl.h>
- #include <pthread.h>
-+#include <sys/stat.h>
- #include <sys/uio.h>
- #include <librdkafka/rdkafka.h>
- #include "syslogd-types.h"
-@@ -67,6 +68,10 @@ struct kafka_params {
+@@ -76,6 +77,10 @@ struct kafka_params {
  	const char *val;
  };
  
