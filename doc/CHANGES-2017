@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2722 2017/07/04 21:57:20 maya Exp $
+$NetBSD: CHANGES-2017,v 1.2723 2017/07/04 22:42:06 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3756,3 +3756,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated math/ffts to 20170617 [gson 2017-07-04]
 	Updated devel/googletest to 1.8.0nb1 [kamil 2017-07-04]
 	Updated lang/gcc6 to 6.4.0 [maya 2017-07-04]
+	Updated net/lua-copas to 2.0.2 [alnsn 2017-07-04]
