@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2017/02/28 08:17:28 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2017/07/04 14:14:46 fhajny Exp $
 bin/connect-distributed.sh
 bin/connect-standalone.sh
 bin/kafka-acls.sh
@@ -9,6 +9,7 @@ bin/kafka-console-producer.sh
 bin/kafka-consumer-groups.sh
 bin/kafka-consumer-offset-checker.sh
 bin/kafka-consumer-perf-test.sh
+bin/kafka-delete-records.sh
 bin/kafka-mirror-maker.sh
 bin/kafka-preferred-replica-election.sh
 bin/kafka-producer-perf-test.sh
@@ -25,23 +26,23 @@ bin/kafka-verifiable-consumer.sh
 bin/kafka-verifiable-producer.sh
 lib/java/kafka/libs/aopalliance-repackaged-2.5.0-b05.jar
 lib/java/kafka/libs/argparse4j-0.7.0.jar
+lib/java/kafka/libs/commons-lang3-3.5.jar
 lib/java/kafka/libs/connect-api-${PKGVERSION}.jar
 lib/java/kafka/libs/connect-file-${PKGVERSION}.jar
 lib/java/kafka/libs/connect-json-${PKGVERSION}.jar
 lib/java/kafka/libs/connect-runtime-${PKGVERSION}.jar
 lib/java/kafka/libs/connect-transforms-${PKGVERSION}.jar
-lib/java/kafka/libs/guava-18.0.jar
+lib/java/kafka/libs/guava-20.0.jar
 lib/java/kafka/libs/hk2-api-2.5.0-b05.jar
 lib/java/kafka/libs/hk2-locator-2.5.0-b05.jar
 lib/java/kafka/libs/hk2-utils-2.5.0-b05.jar
-lib/java/kafka/libs/jackson-annotations-2.8.0.jar
 lib/java/kafka/libs/jackson-annotations-2.8.5.jar
 lib/java/kafka/libs/jackson-core-2.8.5.jar
 lib/java/kafka/libs/jackson-databind-2.8.5.jar
 lib/java/kafka/libs/jackson-jaxrs-base-2.8.5.jar
 lib/java/kafka/libs/jackson-jaxrs-json-provider-2.8.5.jar
 lib/java/kafka/libs/jackson-module-jaxb-annotations-2.8.5.jar
-lib/java/kafka/libs/javassist-3.20.0-GA.jar
+lib/java/kafka/libs/javassist-3.21.0-GA.jar
 lib/java/kafka/libs/javax.annotation-api-1.2.jar
 lib/java/kafka/libs/javax.inject-1.jar
 lib/java/kafka/libs/javax.inject-2.5.0-b05.jar
@@ -76,18 +77,20 @@ lib/java/kafka/libs/kafka_2.12-${PKGVERSION}-test.jar
 lib/java/kafka/libs/kafka_2.12-${PKGVERSION}.jar
 lib/java/kafka/libs/log4j-1.2.17.jar
 lib/java/kafka/libs/lz4-1.3.0.jar
+lib/java/kafka/libs/maven-artifact-3.5.0.jar
 lib/java/kafka/libs/metrics-core-2.2.0.jar
 lib/java/kafka/libs/osgi-resource-locator-1.0.1.jar
-lib/java/kafka/libs/reflections-0.9.10.jar
+lib/java/kafka/libs/plexus-utils-3.0.24.jar
+lib/java/kafka/libs/reflections-0.9.11.jar
 lib/java/kafka/libs/rocksdbjni-5.0.1.jar
-lib/java/kafka/libs/scala-library-2.12.1.jar
+lib/java/kafka/libs/scala-library-2.12.2.jar
 lib/java/kafka/libs/scala-parser-combinators_2.12-1.0.4.jar
-lib/java/kafka/libs/slf4j-api-1.7.21.jar
-lib/java/kafka/libs/slf4j-log4j12-1.7.21.jar
+lib/java/kafka/libs/slf4j-api-1.7.25.jar
+lib/java/kafka/libs/slf4j-log4j12-1.7.25.jar
 lib/java/kafka/libs/snappy-java-1.1.2.6.jar
 lib/java/kafka/libs/validation-api-1.1.0.Final.jar
 lib/java/kafka/libs/zkclient-0.10.jar
-lib/java/kafka/libs/zookeeper-3.4.9.jar
+lib/java/kafka/libs/zookeeper-3.4.10.jar
 share/examples/kafka/connect-console-sink.properties
 share/examples/kafka/connect-console-source.properties
 share/examples/kafka/connect-distributed.properties
