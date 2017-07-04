@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2017/06/05 14:25:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.46 2017/07/04 09:25:59 wiz Exp $
 
-DISTNAME=	WWW-Mechanize-1.84
+DISTNAME=	WWW-Mechanize-1.85
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
 
@@ -23,11 +22,16 @@ DEPENDS+=	p5-libwww>=5.829:../../www/p5-libwww
 # recommended for HTML::Tree ...
 DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 
+BUILD_DEPENDS+=	p5-PadWalker-[0-9]*:../../devel/p5-PadWalker
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Memory-Cycle-[0-9]*:../../devel/p5-Test-Memory-Cycle
+BUILD_DEPENDS+=	p5-Test-Output-[0-9]*:../../devel/p5-Test-Output
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
+BUILD_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
 BUILD_DEPENDS+=	p5-Test-Taint-[0-9]*:../../devel/p5-Test-Taint
 BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
-BUILD_DEPENDS+=	p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
+BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 # use defaults from Makefile.PL, to avoid user interaction
 # if not set explicitly
