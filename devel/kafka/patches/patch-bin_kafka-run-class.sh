@@ -1,20 +1,20 @@
-$NetBSD: patch-bin_kafka-run-class.sh,v 1.1 2017/02/28 08:17:28 fhajny Exp $
+$NetBSD: patch-bin_kafka-run-class.sh,v 1.2 2017/07/04 14:14:46 fhajny Exp $
 
 Paths.
 
---- bin/kafka-run-class.sh.orig	2017-02-14 17:26:07.000000000 +0000
+--- bin/kafka-run-class.sh.orig	2017-06-22 22:06:18.000000000 +0000
 +++ bin/kafka-run-class.sh
-@@ -47,6 +47,10 @@ should_include_file() {
- 
- base_dir=$(dirname $0)/..
+@@ -20,6 +20,10 @@ then
+   exit 1
+ fi
  
 +if [ "x$JAVA_HOME" = "x" ]; then
 +  JAVA_HOME=@PKG_JAVA_HOME@
 +fi
 +
- if [ -z "$SCALA_VERSION" ]; then
-   SCALA_VERSION=2.10.6
- fi
+ # CYGINW == 1 if Cygwin is detected, else 0.
+ if [[ $(uname -a) =~ "CYGWIN" ]]; then
+   CYGWIN=1
 @@ -55,84 +59,7 @@ if [ -z "$SCALA_BINARY_VERSION" ]; then
    SCALA_BINARY_VERSION=$(echo $SCALA_VERSION | cut -f 1-2 -d '.')
  fi
