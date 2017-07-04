@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/09/07 21:13:44 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.25 2017/07/04 14:35:49 szptvlfn Exp $
 bin/sylpheed
 include/sylpheed/plugin-types.h
 include/sylpheed/plugin.h
@@ -143,6 +143,7 @@ share/sylpheed/manual/ja/sylpheed-23.html
 share/sylpheed/manual/ja/sylpheed-24.html
 share/sylpheed/manual/ja/sylpheed-25.html
 share/sylpheed/manual/ja/sylpheed-26.html
+share/sylpheed/manual/ja/sylpheed-27.html
 share/sylpheed/manual/ja/sylpheed-3.html
 share/sylpheed/manual/ja/sylpheed-4.html
 share/sylpheed/manual/ja/sylpheed-5.html
