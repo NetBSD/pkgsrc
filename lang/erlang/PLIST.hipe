@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.hipe,v 1.4 2015/04/29 09:39:47 fhajny Exp $
+@comment $NetBSD: PLIST.hipe,v 1.5 2017/07/04 11:40:48 fhajny Exp $
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/elf_format.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_adj_list.beam
@@ -15,12 +15,13 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_ra_ls.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_ra_naive.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_ra_postconditions.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_ra_sse2_postconditions.beam
-lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_ra_x87_ls.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_registers.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_specific.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_specific_sse2.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_specific_x87.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_spill_restore.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_sse2.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_subst.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_amd64_x87.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_assemble.beam
@@ -39,6 +40,8 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_ra_naive.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_ra_postconditions.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_registers.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_specific.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_arm_subst.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_bb_weights.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_coalescing_regalloc.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_data_pp.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_graph_coloring_regalloc.beam
@@ -77,9 +80,13 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_ppc_ra_postconditions_fp.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_ppc_registers.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_ppc_specific.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_ppc_specific_fp.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_ppc_subst.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_profile.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_range_split.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_reg_worklists.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_regalloc_loop.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_regalloc_prepass.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_restore_reuse.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_arch.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_arith_32.beam
@@ -107,6 +114,7 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_to_sparc.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_to_x86.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_rtl_varmap.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sdi.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_segment_trees.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_assemble.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_cfg.beam
@@ -128,6 +136,7 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_ra_postconditions_fp.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_registers.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_specific.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_specific_fp.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_sparc_subst.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_spillcost.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_spillmin.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_spillmin_color.beam
@@ -150,11 +159,11 @@ lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_ra_finalise.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_ra_ls.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_ra_naive.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_ra_postconditions.beam
-lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_ra_x87_ls.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_registers.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_specific.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_specific_x87.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_spill_restore.beam
+lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_subst.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/ebin/hipe_x86_x87.beam
 lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_icode_heap_test.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/llvm/elf32_format.hrl
@@ -171,6 +180,7 @@ lib/erlang/lib/hipe-${VERSION.hipe}/main/hipe.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/misc/hipe_data_pp.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/misc/hipe_pack_constants.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/misc/hipe_sdi.erl
+lib/erlang/lib/hipe-${VERSION.hipe}/misc/hipe_segment_trees.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_icode2rtl.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_literals.hrl
 lib/erlang/lib/hipe-${VERSION.hipe}/rtl/hipe_rtl.erl
