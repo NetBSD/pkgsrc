@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2017/06/14 13:44:01 wiz Exp $
+$NetBSD: distinfo,v 1.19 2017/07/04 09:18:34 wiz Exp $
 
-SHA1 (par2cmdline-0.7.2.tar.gz) = 53a9b34f1fa989f7712964a09de1da6c43527510
-RMD160 (par2cmdline-0.7.2.tar.gz) = 8045cd0ba8a9456d4dd02fbbb4e9b52a8b1f6504
-SHA512 (par2cmdline-0.7.2.tar.gz) = ece9157864c9b8f00ce778d0f1b0af4f4b231a975066ad3450cacb6a0b356966a216d1adb319d2e74ade42ecb18c185ead9dbd7f6c62f56f66fb65200e1bf1f8
-Size (par2cmdline-0.7.2.tar.gz) = 3617859 bytes
+SHA1 (par2cmdline-0.7.3.tar.gz) = d2967e7128bcf23ae21cd6d7dc862db10f2f9393
+RMD160 (par2cmdline-0.7.3.tar.gz) = 75520cdbaa2af396d28920179f0ada66ec170d7d
+SHA512 (par2cmdline-0.7.3.tar.gz) = 7e6cb8efd43b704df7466f7801e62dfe7552b37bfaf88a09010edd501fd3fbeecee6458f0380d0999e67b0a1c62ef44326748e6066ba5203b667967f2f4822db
+Size (par2cmdline-0.7.3.tar.gz) = 3617612 bytes
