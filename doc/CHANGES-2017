@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2017,v 1.2704 2017/07/04 11:42:03 fhajny Exp $
+$NetBSD: CHANGES-2017,v 1.2705 2017/07/04 12:53:06 he Exp $
 
 Changes to the packages collection and infrastructure in 2017:
 
@@ -3727,3 +3727,4 @@ Changes to the packages collection and infrastructure in 2017:
 	Updated lang/erlang to 20.0 [fhajny 2017-07-04]
 	Updated lang/erlang-doc to 20.0 [fhajny 2017-07-04]
 	Updated lang/erlang-man to 20.0 [fhajny 2017-07-04]
+	Updated net/exabgp to 3.4.19nb1 [he 2017-07-04]
