@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.17511 2017/07/04 19:49:06 jperkin Exp $
+$NetBSD: TODO,v 1.17512 2017/07/04 19:49:51 jperkin Exp $
 
 Suggested new packages
 ======================
@@ -1092,7 +1092,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mysql-workbench-6.3
 	o nagios-base-4.3.1
 	o nagios-nrpe-3.1.1 [pkg/52028]
-	o nagios-plugin-snmp-2.1.4
 	o nant-0.92
 	o nap-1.5.3
 	o nas-auscope-1.9.4
