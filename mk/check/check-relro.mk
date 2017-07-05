@@ -1,4 +1,4 @@
-# $NetBSD: check-relro.mk,v 1.1 2017/07/04 18:29:24 khorben Exp $
+# $NetBSD: check-relro.mk,v 1.2 2017/07/05 15:49:00 khorben Exp $
 #
 # This file verifies that RELRO was applied accordingly at build-time.
 #
@@ -37,8 +37,8 @@ CHECK_RELRO?=			no
 CHECK_RELRO_SUPPORTED?=	yes
 CHECK_RELRO_SKIP?=		# none
 
-# All binaries.
-_CHECK_RELRO_ERE=		(bin/|sbin/|libexec/)
+# All binaries and shared libraries.
+_CHECK_RELRO_ERE=		(bin/|sbin/|libexec/|\.so$$|lib/lib.*\.so)
 
 _CHECK_RELRO_FILELIST_CMD?=	${SED} -e '/^@/d' ${PLIST} |		\
 	(while read file; do						\
